@@ -1,6 +1,8 @@
 # ChangeLog for sys-kernel/wolk-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.36 2004/03/13 07:31:51 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.37 2004/03/15 13:04:07 aliz Exp $
+
+*wolk-sources-4.11-r1 (12 Mar 2004)
 
   12 Mar 2004; <nerdboy@gentoo.org> wolk-sources-4.10.ebuild, wolk-sources-4.11.ebuild
   wolk-sources-4.10_pre7-r1.ebuild, wolk-sources-4.10_pre7-r2.ebuild,
