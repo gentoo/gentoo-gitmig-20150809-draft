@@ -1,7 +1,6 @@
-# (C) 2002 The TelemetryBox Corporation. http://telemetrybox.biz
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Christoph Lameter, <christoph@lameter.com>, July 15, 2002
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover-data/discover-data-1.2002.05.23-r1.ebuild,v 1.7 2003/09/19 05:45:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover-data/discover-data-1.2002.05.23-r1.ebuild,v 1.8 2003/09/29 21:39:44 mholzer Exp $
 
 S=${WORKDIR}/discover-data-${P}-1
 DESCRIPTION="data for discover. list of pci ids. pnp ids etc."

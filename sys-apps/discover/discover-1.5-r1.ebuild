@@ -1,7 +1,6 @@
-# (C) 2002 The TelemetryBox Corporation. http://telemetrybox.biz
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Christoph Lameter, <christoph@lameter.com>, July 15, 2002
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/discover-1.5-r1.ebuild,v 1.6 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/discover-1.5-r1.ebuild,v 1.7 2003/09/29 21:38:33 mholzer Exp $
 
 DESCRIPTION="Discover hardware and load the appropriate drivers for that hardware."
 HOMEPAGE="http://hackers.progeny.com/discover/"
