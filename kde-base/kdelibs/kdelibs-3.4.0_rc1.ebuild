@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0_rc1.ebuild,v 1.1 2005/02/26 14:01:49 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0_rc1.ebuild,v 1.2 2005/02/26 16:48:23 motaboy Exp $
 inherit kde eutils flag-o-matic
 set-kdedir 3.4
 
@@ -55,6 +55,7 @@ src_compile() {
 
 	myconf="$myconf --with-distribution=Gentoo --enable-libfam --enable-dnotify"
 	myconf="$myconf $(use_with alsa) $(use_enable cups) $(use_with arts)"
+	myconf="$myconf $(use_with tiff) $(use_with jpeg2k jasper) $(use_with openexr)"
 
 	use ssl && myconf="$myconf --with-ssl-dir=/usr" || myconf="$myconf --without-ssl"
 

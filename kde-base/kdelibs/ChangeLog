@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.194 2005/02/26 14:01:49 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.195 2005/02/26 16:48:23 motaboy Exp $
+
+  26 Feb 2005; Simone Gotti <motaboy@gentoo.org> kdelibs-3.4.0_rc1.ebuild:
+  Add configure's options to really enable/disable tiff, jpeg2k(jasper) and
+  openexr support compilation.
 
 *kdelibs-3.4.0_rc1 (26 Feb 2005)
 
