@@ -10,23 +10,23 @@ DESCRIPTION="NetBSD FTP client"
 SRC_URI="ftp://ftp.netbsd.org/pub/NetBSD/misc/lukemftp/${A}"
 
 DEPEND="virtual/glibc
-	>=sys-libs/ncurses-5.1"
+        >=sys-libs/ncurses-5.1"
+
 
 src_compile() {
-	try ./configure --host=$${CHOST} --prefix=/usr --enable-editcomplete --program-prefix=lukemftp
-	try make
+    try ./configure --host=$${CHOST} --prefix=/usr \
+        --enable-editcomplete --program-prefix=lukemftp
+
+    try make
 }
 
 src_install() {
-	newbin src/ftp lukemftp
-	newman src/ftp.1 lukemftp.1
-	dodoc COPYING ChangeLog README* THANKS NEWS
-}
+    newbin src/ftp lukemftp
+    newman src/ftp.1 lukemftp.1
+    dodoc COPYING ChangeLog README* THANKS NEWS
 
-pkg_postinst() {
-  if [ ! -e ${ROOT}usr/bin/ftp ]
-  then
-    ln -s lukemftp ${ROOT}/usr/bin/ftp
-  fi
+    cd ${D}/usr/bin
+    if [ ! -e /usr/bin/ftp ]; then
+        ln -s lukemftp ftp
+    fi
 }
-
