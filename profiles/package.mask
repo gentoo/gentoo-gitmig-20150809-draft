@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <bcowan@gentoo.org> (09 Oct 2002)
+# masked for testing
+=net-mail/sylpheed-claws-0.8.5
+
 # <rphillips@gentoo.org> (08 Oct 2002)
 # version bumped, masked for testing
 =sys-libs/db-4.1.24
