@@ -1,8 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r4.ebuild,v 1.1 2002/08/22 06:39:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r4.ebuild,v 1.2 2002/09/28 18:02:10 raker Exp $
 
 S=${WORKDIR}/${P}
+
 DESCRIPTION="SDL MPEG Player Library"
 SRC_URI="ftp://ftp.lokigames.com/pub/open-source/smpeg/${P}.tar.gz"
 HOMEPAGE="http://www.lokigames.com/development/smpeg.php3"
@@ -14,6 +15,7 @@ KEYWORDS="x86 sparc sparc64"
 DEPEND=">=media-libs/libsdl-1.2.0
 	opengl? ( virtual/opengl virtual/glu )
 	gtk? ( =x11-libs/gtk+-1.2* )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 
@@ -45,19 +47,21 @@ src_compile() {
 	if [ -z "`use opengl`" ] ; then
 		myconf="${myconf} --disable-opengl-player"
 	fi
-	
-	./configure --prefix=/usr \
-		--mandir=/usr/share/man \
-		--host=${CHOST} \
-		${myconf} || die
+
+	export CC=g++
+	export CXX=g++
+
+	econf ${myconf} || die "configure failed"
 		
-	emake CC=g++ || die
+	emake || die "parallel make failed"
+
 }
 
 src_install () {
 
-	make DESTDIR=${D} install || die
+	einstall || die "make install failed"
 
 	dodoc CHANGES COPYING README* TODO
+
 }
 

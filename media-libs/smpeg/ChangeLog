@@ -1,18 +1,20 @@
 # ChangeLog for media-libs/smpeg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.7 2002/08/22 06:39:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.8 2002/09/28 18:02:10 raker Exp $
 
 *smpeg-0.4.4-r4 (22 Aug 2002)
  
+  28 Sep 2002; Nick Hadaway <raker@gentoo.org> smpeg-0.4.4-r4.ebuild :
+  Changed to econf and einstall.  Exported CXX and CC to g++ to solve
+  gcc3 linking problems with other programs.
+
   22 Aug 2002; Matthew Kennedy <mkennedy@gentoo.org>
   smpeg-0.4.4-r4.ebuild, files/digest-smpeg-0.4.4-r4, ChangeLog :
-
   Fixed linker error bug. Resolves bug 4666.
 
 *smpeg-0.4.4-r3 (03 Aug 2002)
  
   03 Aug 2002; Doug Goldstein <cardoe@gentoo.org> smpeg-0.4.4-r3.ebuild :
-
   Fixed gcc-3.1 support. (No ppc KEYWORD yet)
   Bug #5558 Olivier Crete <tester@videotron.ca> posted the patch from Redhat.
   This patch doesn't work for gcc-2.95 systems so we're not applying it for non-gcc-3.x
@@ -23,18 +25,15 @@
   Added ppc to keywords
 
   5 Apr 2002; M.Schlemmer <azarah@gentoo.org> smpeg-0.4.4-r2.ebuild :
-
   gcc-3 fixes by PreZ.
 
   3 Feb 2002; M.Schlemmer <azarah@gentoo.org> smpeg-0.4.4-r2.ebuild :
-
   '--enable-mmx' causes test apps to crash on startup.  Disable this for now.
   Resolves bug #470.  Some form fixes.
 
 *smpeg-0.4.4-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
