@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-qt-engine/gtk-qt-engine-0.6-r1.ebuild,v 1.1 2005/01/15 13:34:23 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-qt-engine/gtk-qt-engine-0.6-r1.ebuild,v 1.2 2005/01/21 20:20:29 motaboy Exp $
 
 inherit gtk-engines2 eutils kde-functions
 
@@ -10,7 +10,6 @@ SRC_URI="http://www.freedesktop.org/~davidsansome/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 IUSE="arts debug"
-SLOT="2"
 KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND="${DEPEND}
@@ -18,6 +17,8 @@ DEPEND="${DEPEND}
 	arts? ( kde-base/arts )"
 
 need-kde 3
+# Set slot after the need-kde. Fixes bug #78455.
+SLOT="2"
 
 src_unpack() {
 	unpack ${A}
