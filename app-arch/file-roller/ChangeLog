@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.83 2004/10/05 10:59:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.84 2004/11/11 18:03:15 obz Exp $
+
+  11 Nov 2004; Mike Gardiner <obz@gentoo.org> file-roller-2.8.0.ebuild:
+  Keyworded ppc for GNOME 2.8
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   file-roller-2.6.1.ebuild:
