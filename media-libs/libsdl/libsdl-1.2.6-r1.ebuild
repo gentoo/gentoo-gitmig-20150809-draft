@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r1.ebuild,v 1.1 2003/09/17 07:58:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.6-r1.ebuild,v 1.2 2003/09/17 08:22:59 msterret Exp $
 
 DESCRIPTION="Simple Direct Media Layer"
 HOMEPAGE="http://www.libsdl.org/"
@@ -24,7 +24,7 @@ RDEPEND=">=media-libs/audiofile-0.1.9
 	aalib? ( media-libs/aalib )
 	opengl? ( virtual/opengl )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4.0.5
+	>=sys-apps/sed-4
 	x86? ( dev-lang/nasm )"
 
 S=${WORKDIR}/SDL-${PV}

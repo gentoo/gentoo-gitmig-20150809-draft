@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.29 2003/09/17 07:58:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.30 2003/09/17 08:22:59 msterret Exp $
+
+  17 Sep 2003; Michael Sterrett <msterret@gentoo.org> libsdl-1.2.6-r1.ebuild:
+  >=sys-apps/sed-4 is close enough
 
 *libsdl-1.2.6-r1 (17 Sep 2003)
 
