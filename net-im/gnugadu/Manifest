@@ -1,4 +1,6 @@
 MD5 d81e233cce18b03d400bdefde9b1e092 gnugadu-2.0.ebuild 1309
-MD5 d888b3c59b3db25b78de020fbe20d424 ChangeLog 1361
+MD5 622d866dbec9e4da6fe88f16ae6838f6 gnugadu-2.0.1.ebuild 1313
+MD5 6772a73b3e54eef734c064b3c255cbbd ChangeLog 1506
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
+MD5 77a7d42d868557224bc39ba437bbead6 files/digest-gnugadu-2.0.1 63
 MD5 5871c30aa0c01d76044d3c2cc0dd5dc7 files/digest-gnugadu-2.0 61
