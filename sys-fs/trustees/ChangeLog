@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/trustees
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/ChangeLog,v 1.3 2003/10/27 20:39:58 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/ChangeLog,v 1.4 2003/10/29 20:08:34 max Exp $
+
+  29 Oct 2003; Max Kalika <max@gentoo.org> trustees-2.10.ebuild:
+  Really fix link error. Move kernel check to pkg_setup(). Add echo of the
+  compile operation. Use CFLAGS during compile.
 
   27 Oct 2003; Max Kalika <max@gentoo.org> trustees-2.10.ebuild:
   Fix linking error.

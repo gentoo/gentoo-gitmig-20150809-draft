@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/trustees-2.10.ebuild,v 1.2 2003/10/27 20:39:58 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/trustees-2.10.ebuild,v 1.3 2003/10/29 20:08:34 max Exp $
 
 DESCRIPTION="Advanced permission management system (ACLs) for Linux."
 HOMEPAGE="http://trustees.sourceforge.net/"
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc
 
 S="${WORKDIR}"
 
-src_unpack() {
+pkg_setup() {
 	[ ! -e "/usr/src/linux/include/linux/trustee_struct.h" ] && {
 		eerror
 		eerror "Your currently linked kernel (/usr/src/linux) hasn't"
@@ -25,16 +25,17 @@ src_unpack() {
 		die "kernel not patched for trustees support"
 	}
 
-	unpack ${A}
-
-	# fix linking error
-	sed -e '0,0i #include <errno.h>' \
-		-i "${S}/set-trustee.c" || die "sed failed"
+	return 0
 }
 
 src_compile() {
-	${CC} -I/usr/src/linux/include \
-		-o "settrustee" "set-trustee.c" || die "compile problem"
+	# Fix linking error.
+	sed -e '0,0i #include <errno.h>' "set-trustee.c" \
+		> settrustee.c || die "sed failed"
+
+	echo "${CC} ${CFLAGS} -I/usr/src/linux/include settrustee.c -o settrustee"
+	${CC} ${CFLAGS} -I/usr/src/linux/include settrustee.c \
+		-o settrustee || die "compile problem"
 }
 
 src_install() {
