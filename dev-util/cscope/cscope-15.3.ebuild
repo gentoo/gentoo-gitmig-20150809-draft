@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.3.ebuild,v 1.16 2003/02/09 13:57:55 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.3.ebuild,v 1.17 2003/02/13 11:48:34 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="CScope - interactively examine a C program"

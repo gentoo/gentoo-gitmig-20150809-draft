@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/patchutils-0.2.18.ebuild,v 1.1 2002/12/17 05:54:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/patchutils-0.2.18.ebuild,v 1.2 2003/02/13 11:59:00 vapier Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="A collection of tools that operate on patch files"

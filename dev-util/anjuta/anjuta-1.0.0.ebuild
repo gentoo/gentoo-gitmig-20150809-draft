@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.0.0.ebuild,v 1.4 2002/11/27 12:34:59 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.0.0.ebuild,v 1.5 2003/02/13 11:46:37 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A versatile Integrated Development Environment (IDE) for C and C++."

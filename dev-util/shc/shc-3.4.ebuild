@@ -1,6 +1,6 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/shc-3.4.ebuild,v 1.2 2003/01/08 00:54:13 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/shc-3.4.ebuild,v 1.3 2003/02/13 12:00:30 vapier Exp $
 
 IUSE=""
 

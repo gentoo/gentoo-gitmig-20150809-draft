@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-0.6.4.ebuild,v 1.4 2002/12/09 04:21:15 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-0.6.4.ebuild,v 1.5 2003/02/13 11:52:55 vapier Exp $
 
 DESCRIPTION="A C++ backend for glade, the GUI designer for Gtk."
 HOMEPAGE="http://home.wtal.de/petig/Gtk/"

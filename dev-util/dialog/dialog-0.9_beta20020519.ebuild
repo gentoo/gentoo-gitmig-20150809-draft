@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-0.9_beta20020519.ebuild,v 1.11 2003/02/10 16:20:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-0.9_beta20020519.ebuild,v 1.12 2003/02/13 11:50:26 vapier Exp $
 
 MY_PV="0.9b-20020519"
 S=${WORKDIR}/dialog-${MY_PV}

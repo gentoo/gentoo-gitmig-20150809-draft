@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.8.0.ebuild,v 1.4 2002/12/09 04:21:13 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.8.0.ebuild,v 1.5 2003/02/13 11:48:22 vapier Exp $
 
 IUSE=""
 

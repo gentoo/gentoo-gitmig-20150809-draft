@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.14.0.ebuild,v 1.6 2003/01/03 19:55:42 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.14.0.ebuild,v 1.7 2003/02/13 11:59:32 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Package Config system that manages compile/link flags for libraries"

@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.1_p1.ebuild,v 1.6 2002/12/09 04:21:13 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.1_p1.ebuild,v 1.7 2003/02/13 11:49:03 vapier Exp $
 
 S=${WORKDIR}/${P/_}
 DESCRIPTION="Concurrent Versions System - source code revision control tools"

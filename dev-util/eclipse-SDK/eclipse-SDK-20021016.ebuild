@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-SDK/eclipse-SDK-20021016.ebuild,v 1.4 2003/01/05 22:23:07 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-SDK/eclipse-SDK-20021016.ebuild,v 1.5 2003/02/13 11:51:06 vapier Exp $
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
