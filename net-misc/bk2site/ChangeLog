@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/bk2site
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bk2site/ChangeLog,v 1.3 2002/04/06 07:28:16 jnelson Exp $
+# $Header:
+
+*bk2site-1.1.8-r1 (6 July 2002)
+
+  6 Jul 2002; phoen][x <phoenix@gentoo.org> ChangeLog bk2site-1.1.8-r1.ebuild:
+  Added KEYWORDS, SLOT, LICENSE.
+
+*bk2site-1.1.8 (6 July 2002)
+
+  6 Jul 2002; phoen][x <phoenix@gentoo.org> ChangeLog bk2site-1.1.8.ebuild:
+  Added KEYWORDS, SLOT, LICENSE.
 
 *bk2site-1.1.8-r1 (5 Apr 2002)
 
