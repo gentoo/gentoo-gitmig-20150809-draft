@@ -3,15 +3,15 @@ Hash: SHA1
 
 MD5 fbea46bf9e7a651a952687e2b1a21337 mythvideo-0.16.ebuild 762
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
-MD5 ba101fac81995018612a3e213366f620 ChangeLog 3819
-MD5 79220b9232f9a6a598390eb0b7190272 mythvideo-0.16.20050120.ebuild 714
+MD5 3d4497b49e316e6a9d7ec09900202f96 ChangeLog 3964
+MD5 64af8df2d620aeac20a8e7ae13c7b98e mythvideo-0.17.ebuild 674
 MD5 266d70fb466366df03737135389fbbff files/mythvideo-0.16-gcc34.patch 266
 MD5 149ad98053d263e3e10aa8af927b3cf8 files/digest-mythvideo-0.16 67
-MD5 ec60e5622ca0bbd7462484325a859b84 files/digest-mythvideo-0.16.20050120 76
+MD5 ce56915ca405ce9fc7961ee9ea3bb8e0 files/digest-mythvideo-0.17 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD4DBQFB72wX5+pdB4IBr0URAk4BAJdVwx2FsvLu+FcRkQnaQOd0YNY1AJ9np9x7
-5Lo8dBE+tEmUouoet1vm1w==
-=HWSX
+iD8DBQFCDF/x5+pdB4IBr0URAobYAJ9hnxYUBoBu4VYqzJWLIhRqU9ke3wCffc4K
+vAA7eUeWBGUbR/rmgkf04b4=
+=SY1+
 -----END PGP SIGNATURE-----
