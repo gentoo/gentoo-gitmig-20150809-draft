@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/celestia-1.3.1.ebuild,v 1.1 2004/04/22 11:12:34 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/celestia-1.3.1.ebuild,v 1.2 2004/06/06 16:20:05 kugelfang Exp $
 
 inherit eutils flag-o-matic kde-functions
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.shatters.net/celestia"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 amd64"
 
 # gnome and kde interfaces are exlcusive
 DEPEND=">=media-libs/glut-3.7-r2

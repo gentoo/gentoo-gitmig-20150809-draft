@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/epix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/ChangeLog,v 1.6 2004/04/22 17:43:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/ChangeLog,v 1.7 2004/06/06 16:21:28 kugelfang Exp $
+
+  06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> epix-0.8.10a-r1.ebuild:
+  Marked stable on amd64.
 
   22 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> epix-0.8.10a-r1.ebuild:
   marked ~amd64

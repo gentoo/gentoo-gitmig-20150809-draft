@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/blas-atlas
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.5 2004/05/13 01:48:32 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.6 2004/06/06 16:18:58 kugelfang Exp $
+
+  06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> blas-atlas-3.6.0.ebuild:
+  Marked stable on amd64.
+
+  06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> blas-atlas-3.6.0.ebuild:
+  Marked stable on amd64.
 
   12 May 2004; George Shapovalov <george@gentoo.org> blas-atlas-3.6.0.ebuild :
   added the fix for g77 issue. Moved atlas3.6.0-shared-libs.patch.bz2 to the mirrors to 
