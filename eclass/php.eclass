@@ -1,17 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.93 2003/12/09 05:02:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.94 2003/12/22 06:44:46 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
-# This EBUILD is totally masked presently. Use it at your own risk.  I know it
-# is severely broken, but I needed to get a copy into CVS to pass around and
-# repoman was complaining at me too much
-
-# TODO LIST
-# * Finish install cleanup
-# * USE flags
-#sys-libs/ncurses
-#--with-ncurses
+# This eclass is the old style of php, that was used before php-core was
+# introduced.
 
 inherit eutils flag-o-matic
 
@@ -370,7 +363,7 @@ php_src_compile() {
 	myconf="${myconf} --with-cdb"
 	
 	# No DEPENDancies
-	mycony="${myconf} --enable-pcntl"
+	myconf="${myconf} --enable-pcntl"
 	myconf="${myconf} --enable-bcmath"
 	myconf="${myconf} --enable-calendar"
 	myconf="${myconf} --enable-dbase"
