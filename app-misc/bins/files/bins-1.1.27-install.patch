@@ -1,0 +1,74 @@
+--- install.sh.old	2004-05-24 08:31:08.000000000 -0500
++++ install.sh	2004-09-29 13:59:04.911944000 -0500
+@@ -23,11 +23,12 @@
+ RC="${RC:-/etc/bins}"
+ GLOBAL_RC="$RC"
+ 
++SHARE="${PREFIX}/share"
+ DESTDIR=`echo "$DESTDIR"|sed 's%/$%%'`
+ PREFIX=$DESTDIR/`echo "$PREFIX"|sed 's%^/%%'`
+ PREFIX=`echo "$PREFIX"|sed 's%/$%%'`
+-RC=$DESTDIR/`echo "$RC"|sed 's%^/%%'`
+-RC=`echo "$RC"|sed 's%/$%%'`
++DESTRC=$DESTDIR/`echo "$RC"|sed 's%^/%%'`
++DESTRC=`echo "$DESTRC"|sed 's%/$%%'`
+ 
+ BIN="$PREFIX/bin"
+ SHARE="$PREFIX/share"
+@@ -58,7 +59,7 @@
+ Press Enter to go on or Crtl-C to stop now...
+ !EoF
+ 
+-read dummy
++#read dummy
+ 
+ install_binaries()
+ {
+@@ -84,20 +85,20 @@
+ 
+ install_config()
+ {
+-  mkdir -p $RC 2>/dev/null || true
+-  if [ -w $RC ]; then
++  mkdir -p $DESTRC 2>/dev/null || true
++  if [ -w $DESTRC ]; then
+     echo "Installing configuration file in $RC"
+-    cp binsrc $RC
++    cp binsrc $DESTRC
+     for T in $templates
+     do
+-      if [ -d "$RC/templates.$T" ]; then
++      if [ -d "$DESTRC/templates.$T" ]; then
+ 	echo "Removing old template.$T in $RC"
+-	rm -Rf "$RC/templates.$T"
++	rm -Rf "$DESTRC/templates.$T"
+       fi
+     done
+-    chmod -R a+r $RC/*
++    chmod -R a+r $DESTRC/*
+   else
+-    echo "Cannot write to $RC."
++    echo "Cannot write to $DESTRC."
+     return 1
+   fi
+ }
+@@ -179,16 +180,9 @@
+ fi
+ 
+ # bash completion
+-if [ -w /etc/bash_completion.d ] ; then
+-  echo "Installing bash completion system wide."
+-  cp -f bash_completion /etc/bash_completion.d/bins
+-else
+-  mkdir ~/.bash_completion 2>/dev/null || true
+-  if [ -w ~/.bash_completion ] ; then
+-    echo "Installing bash completion for user `whoami`."
+-    cp -f bash_completion ~/.bash_completion/bins
+-  fi
+-fi
++echo "Installing bash completion system wide."
++mkdir -p $SHARE/bash-completion
++cp -f bash_completion $SHARE/bash-completion/bins
+ 
+ # I18N files
+ mkdir -p $LOCALE 2>/dev/null || true
