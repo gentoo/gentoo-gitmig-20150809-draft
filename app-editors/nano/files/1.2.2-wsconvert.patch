@@ -67,7 +67,7 @@ diff -ur work.orig/nano-1.2.2/nanorc.sample work/nano-1.2.2/nanorc.sample
 +# set tabconvert 32
 +## Same as tabconverting above, but applied to spaces.
 +## it can be a single character.  183 seems to be a 'good' value.
-+# set tabconvert 32
++# set spaceconvert 32
 +## Finally, you can toggle whitespace converting with this
 +# set wsconvert
 +
@@ -93,7 +93,7 @@ diff -ur work.orig/nano-1.2.2/rcfile.c work/nano-1.2.2/rcfile.c
  #endif
  #ifndef NANO_SMALL
      {"noconvert", NO_CONVERT},
-+    {"wsconvert", WS_CONVERT},
++/*    {"wsconvert", WS_CONVERT},*/
  #endif
      {"nofollow", NOFOLLOW_SYMLINKS},
      {"nohelp", NO_HELP},
