@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/star
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.6 2004/04/27 08:39:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.7 2004/05/10 04:11:06 iluxa Exp $
+
+  09 May 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
+  star-1.5_alpha14.ebuild:
+  Keyword with ~mips
 
   07 Mar 2004; Ilya A. Volynets-Evenbakh <ilya@total-knowledge.com>
   star-1.4.3.ebuild:
