@@ -692,10 +692,6 @@ net-mail/exmh
 #waiting for the unmasking of gnomelibs (gnome2) BaSS 20 Jun 02
 dev-utils/vdkbuilder
 
-#problems with the ppc file BaSS 16/jun/02
-net-misc/mldonkey
-net-p2p/mldonkey
-
 =sys-devel/binutils-2.12.90.0.9
 
 # blizzy@gentoo.org (11 Jul 2002)
