@@ -56,3 +56,4 @@ virtual/lapack		app-sci/lapack-atlas
 virtual/mailx		mail-client/mailx
 virtual/ssh		net-misc/openssh
 virtual/w3m		www-client/w3m
+virtual/pdfviewer		app-text/xpdf

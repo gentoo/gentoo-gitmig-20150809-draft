@@ -63,3 +63,4 @@ virtual/m3			dev-lang/cm3
 virtual/mailx		mail-client/mailx
 virtual/w3m		www-client/w3m
 virtual/gnustep-back    gnustep-base/gnustep-back-xlib
+virtual/pdfviewer		app-text/xpdf

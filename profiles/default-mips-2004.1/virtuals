@@ -56,3 +56,4 @@ x11-libs/xaw			x11-libs/Xaw3d
 sys-apps/reiserfs-utils		sys-apps/reiserfsprogs
 
 virtual/w3m		www-client/w3m
+virtual/pdfviewer		app-text/gv

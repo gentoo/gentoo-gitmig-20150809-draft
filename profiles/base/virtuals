@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.37 2004/10/25 07:49:17 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.38 2004/10/25 07:55:55 usata Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -64,3 +64,4 @@ virtual/winkernel			sys-kernel/win4lin-sources
 virtual/x11					x11-base/xorg-x11
 virtual/xemacs				app-editors/xemacs
 virtual/xft					x11-base/xorg-x11
+virtual/pdfviewer			app-text/xpdf
