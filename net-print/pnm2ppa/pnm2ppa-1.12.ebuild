@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.11 2004/07/15 03:59:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.12 2004/08/08 00:29:38 slarti Exp $
 
 # Note: this also d/ls the hp-ppa-howto and installs it under /usr/share/doc/${P}
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 IUSE="gtk ncurses"
 
 # note: this doesn't depend on virtual/lpr, because it can work on its own,
-# just without queueing etc. since it's not just a driver but a standalone
+# just without queuing etc. since it's not just a driver but a standalone
 # executable.
 DEPEND="gtk? ( x11-libs/gtk+ )
 	ncurses? ( sys-libs/ncurses )"
