@@ -1,12 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r2.ebuild,v 1.11 2002/12/15 12:43:46 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r2.ebuild,v 1.12 2002/12/16 20:52:25 azarah Exp $
 
 IUSE="nls pic build"
 
 inherit eutils flag-o-matic gcc
 
 filter-flags "-fomit-frame-pointer -malign-double"
+
+# Sparc support ...
+replace-flags "-mcpu=ultrasparc" "-mcpu=v8"
+replace-flags "-mcpu=v9" "-mcpu=v8"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -136,6 +140,9 @@ src_compile() {
 	then
 		myconf="${myconf} --enable-kernel=2.4.0"
 	fi
+
+	# This should not be done for: ia64 s390 s390x
+#	use x86 && CFLAGS="${CFLAGS} -freorder-blocks"
 	
 	einfo "Configuring GLIBC..."
 	rm -rf buildhere
