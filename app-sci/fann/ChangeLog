@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/fann
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/fann/ChangeLog,v 1.1 2004/12/04 11:39:21 satya Exp $
+
+*fann-1.2.0 (04 Dec 2004)
+
+  04 Dec 2004; Christian Andreetta <satya@gentoo.org> +metadata.xml,
+  +files/fann-1.2.0-setup.py, +fann-1.2.0.ebuild:
+  initial ebuild
+
