@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/yacc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.6 2003/03/05 23:05:06 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.7 2003/03/15 21:38:37 tuxus Exp $
 
   23 Feb 2003; Guy Martin <gmsoft@gentoo.org> yacc-1.9.1-r1.ebuild :
   Added hppa to keywords.
@@ -8,6 +8,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *yacc-1.9.1-r1 (1 Feb 2002)
+
+  15 Mar 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to KEYWORDS
 
   05 Mar 2003; Will Woods <wwoods@gentoo.org> yacc-1.9.1-r1.ebuild:
   Added alpha to KEYWORDS (skipped ~alpha, yacc is known-good on other distros)
