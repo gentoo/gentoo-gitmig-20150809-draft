@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/mule-base
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-base/ChangeLog,v 1.5 2004/06/24 23:16:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-base/ChangeLog,v 1.6 2004/07/27 22:38:07 rac Exp $
+
+  27 Jul 2004; Robert Coie <rac@gentoo.org> +metadata.xml,
+  mule-base-1.42.ebuild:
+  keywording ppc
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> mule-base-1.42.ebuild:
   Stable on alpha
