@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r3.ebuild,v 1.1 2003/05/11 19:18:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r3.ebuild,v 1.2 2003/05/11 23:29:50 liquidx Exp $
 
 inherit eutils
 
-IUSE="ssl tcpd readline ipv6 gdbm ldap kerberos odbc"
+IUSE="ssl tcpd readline ipv6 gdbm kerberos odbc"
 
 DESCRIPTION="LDAP suite of application and development tools"
 SRC_URI="ftp://ftp.OpenLDAP.org/pub/OpenLDAP/openldap-release/${P}.tgz"
@@ -53,10 +53,6 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-
-	# regenerate ./configure
-	cd ${S}
-	./autogen.sh --help
 
 	# must enable debug for syslog'ing (#16131)
 	myconf="--enable-debug --enable-syslog"
