@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellkam/gkrellkam-0.3.4.ebuild,v 1.8 2003/02/13 17:22:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellkam/gkrellkam-0.3.4.ebuild,v 1.9 2003/02/19 22:12:56 mholzer Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${P}
 DESCRIPTION="a Image-Watcher-Plugin for Gkrellm."
-SRC_URI="mirror://sourceforge/gkrellkam/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 HOMEPAGE="http://gkrellkam.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="=app-admin/gkrellm-1.2*"
 
