@@ -4,11 +4,11 @@ Hash: SHA1
 MD5 d0dad19cea041da8c78c32836e38f5cf ChangeLog 919
 MD5 9c69ff3ce8108c99baa12b2b38780494 metadata.xml 175
 MD5 aa2066593ab0ed6a3db6504e908cace8 unfonts-1.0.ebuild 543
-MD5 fa8f680cdfb92e9263fe083822116e2a files/digest-unfonts-1.0 144
+MD5 e020aeca8efa283fbe5b60cbfdc07930 files/digest-unfonts-1.0 71
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBWltwVWNWqTUmv+0RAsQ4AJwPyx5Wu8NqNkJRTpPjsxOaWiTqoQCggeor
-cQ1Dh45j+JSKQD8lxF1IThA=
-=XBfz
+iD8DBQFBpQBDI1lqEGTUzyQRAvIpAJ0Rgd5xtYgy9P/3fl18kHa8CzT5rACgpQQG
+T40ZmLNPCUva/El4UBUm7mo=
+=HGCf
 -----END PGP SIGNATURE-----
