@@ -22,7 +22,9 @@
 ##   End example
 ##
 
-
+# <spider@gentoo.org> 25 Jul 2002
+# fixes buildproblems for me. please teset
+=sys-devel/perl-5.6.1-r5
 
 # <woodchip@gentoo.org> 24 Jul 2002
 # apparently fatally flawed.
