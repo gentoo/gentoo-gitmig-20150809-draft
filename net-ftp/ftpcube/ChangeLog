@@ -1,8 +1,8 @@
 # ChangeLog for net-ftp/ftpcube
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ChangeLog,v 1.17 2004/01/12 20:39:34 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ChangeLog,v 1.18 2004/01/12 20:53:26 pythonhead Exp $
 
-  12 Jan 2004; Rob Cakebread <pythonhead@gentoo.org> ftpcube-0.4.3.ebuild:
+  12 Jan 2004; Rob Cakebread <pythonhead@gentoo.org> ftpcube-0.4.3-r1.ebuild:
   Fixes crash on connect dialog. bug# 36320
 
   05 May 2003; Alastair Tse <liquidx@gentoo.org> ftpcube-0.4.3.ebuild:
