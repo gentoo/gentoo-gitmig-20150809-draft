@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.1.ebuild,v 1.2 2004/03/15 17:10:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.1.ebuild,v 1.3 2004/03/19 00:20:16 mr_bones_ Exp $
 
 inherit games
 
@@ -14,10 +14,11 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/x11
+RDEPEND="virtual/x11
 	virtual/glut
 	virtual/opengl
-	>=media-libs/libsdl-1.2
+	>=media-libs/libsdl-1.2"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 src_unpack() {
