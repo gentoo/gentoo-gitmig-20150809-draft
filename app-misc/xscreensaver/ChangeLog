@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/xscreensaver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/ChangeLog,v 1.8 2002/06/01 11:16:52 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/ChangeLog,v 1.9 2002/06/02 09:05:26 azarah Exp $
+
+*xscreensaver-4.02-r3 (02 June 2002)
+
+  2 June 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Should resolve bugs #1800, #3206, #3299. Thanks to A. Lucien Meyers for
+  bringing it to my attention, and Ryan Shaw for the fix and related bugs.
 
 *xscreensaver-4.02-r2 (01 June 2002)
 
