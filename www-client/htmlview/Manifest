@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e37397d974d686e097dc4ac56d1b6e9b htmlview-3.0.0.ebuild 900
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 4a2b4362cd62db19fd86baca564a22d0 ChangeLog 430
+MD5 e4894d49fb548bd36e2510ec23984aaa files/digest-htmlview-3.0.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBlJOUVWNWqTUmv+0RAgwxAJ9jx27uAk4SHvgXCAXCrfO28NJN9QCeOLSY
+QbSVBWOx1NtuZiDgeqzLqOM=
+=fLl8
+-----END PGP SIGNATURE-----

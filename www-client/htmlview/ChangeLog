@@ -1,0 +1,11 @@
+# ChangeLog for www-client/htmlview
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/htmlview/ChangeLog,v 1.1 2004/11/12 10:48:52 usata Exp $
+
+*htmlview-3.0.0 (12 Nov 2004)
+
+  12 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +htmlview-3.0.0.ebuild:
+  Initial import. Ebuild submitted by Jose Romildo Malaquias
+  <romildo@uber.com.br>; bug #62737.
+
