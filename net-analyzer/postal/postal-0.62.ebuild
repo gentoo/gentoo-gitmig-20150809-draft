@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/postal/postal-0.62.ebuild,v 1.2 2005/01/08 10:10:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/postal/postal-0.62.ebuild,v 1.3 2005/01/08 16:33:32 hansmi Exp $
 
 DESCRIPTION="SMTP and POP mailserver benchmark - the mad postman. Supports SSL, randomized user accounts and more."
 HOMEPAGE="http://www.coker.com.au/postal/"
@@ -12,7 +12,14 @@ IUSE="ssl"
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )"
 
 src_compile() {
-	econf $(use_enable ssl) || die
+	myconf=
+
+	if use !ssl; then
+		# broken configure, use_enable doesn't work right
+		myconf="${myconf} --disable-ssl"
+	fi
+
+	econf ${myconf} || die
 	emake || die
 }
 
