@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/apache-manual
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/apache-manual/ChangeLog,v 1.17 2004/06/02 03:33:03 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/apache-manual/ChangeLog,v 1.18 2004/06/03 13:14:54 zul Exp $
+
+*apache-manual-2.0.49-r3 (03 Jun 2004)
+
+  03 Jun 2004; Chuck Short <zul@gentoo.org> apache-manual-2.0.49-r1.ebuild,
+  apache-manual-2.0.49-r3.ebuild:
+  Changed path where sed is looking. Closes #52873.
+  Added version for -r3.
 
   02 Jun 2004; Tom Gall <tgall@gentoo.org> apache-manual-2.0.49-r1.ebuild:
   Stable on ppc64

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/apache-manual/apache-manual-2.0.49-r1.ebuild,v 1.18 2004/06/03 13:14:54 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/apache-manual/apache-manual-2.0.49-r3.ebuild,v 1.1 2004/06/03 13:14:54 zul Exp $
 
-MY_VERSION="${PV}-r1"
+MY_VERSION="${PV}-r3"
 
 DESCRIPTION="Configures the apache manual for local viewing"
 HOMEPAGE="http://www.apache.org/"
