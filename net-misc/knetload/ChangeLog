@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knetload
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.18 2004/10/11 22:39:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.19 2004/10/17 12:40:04 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> knetload-2.2.2.ebuild,
+  knetload-2.3.ebuild:
+  stable on amd64.
 
   12 Oct 2004; Carsten Lohrke <carlo@gentoo.org> knetload-2.3.ebuild:
   stable on x86
