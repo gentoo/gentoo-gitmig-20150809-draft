@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/log4cxx
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.5 2004/12/22 15:17:16 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.6 2004/12/23 17:09:36 ka0ttic Exp $
+
+  23 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> log4cxx-0.9.7.ebuild:
+  Don't use use_enable for unicode, as the configure.in doesn't respect
+  --disable-unicode; fixes bug 75448.
 
 *log4cxx-0.9.7 (22 Dec 2004)
 

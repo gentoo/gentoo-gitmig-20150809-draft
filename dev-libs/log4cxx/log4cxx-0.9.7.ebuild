@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.9.7.ebuild,v 1.1 2004/12/22 15:17:16 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.9.7.ebuild,v 1.2 2004/12/23 17:09:36 ka0ttic Exp $
 
 inherit eutils
 
@@ -36,9 +36,10 @@ src_compile() {
 		--enable-html-docs --enable-latex-docs" || \
 		myconf="${myconf} --disable-doxygen --disable-dot --disable-html-docs"
 	use smtp && myconf="${myconf} --with-SMTP=libsmtp"
+	# it's broken, so we must do this rather than use_enable
+	use unicode && myconf="${myconf} --enable-unicode"
 
 	econf \
-		$(use_enable unicode) \
 		$(use_with odbc ODBC) \
 		${myconf} || die "econf failed"
 	emake -j1 || die "emake failed"
