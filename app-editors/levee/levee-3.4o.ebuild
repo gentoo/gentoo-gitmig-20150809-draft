@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/levee-3.4o.ebuild,v 1.4 2002/07/25 19:39:51 kabau Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/levee-3.4o.ebuild,v 1.5 2002/07/25 20:57:17 kabau Exp $
 
 DESCRIPTION="Really tiny vi clone, for things like rescue disks"
 HOMEPAGE="http://www.pell.chi.il.us/~orc/Code/"
@@ -12,7 +12,7 @@ DEPEND="sys-libs/ncurses"
 RDEPEND=""
 
 SLOT="0"
-LICENSE=""
+LICENSE="levee"
 KEYWORDS="x86"
 
 src_unpack () {
