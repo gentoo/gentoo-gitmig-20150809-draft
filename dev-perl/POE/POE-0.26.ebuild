@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.26.ebuild,v 1.4 2004/02/25 00:51:55 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.26.ebuild,v 1.5 2004/05/26 20:03:52 kloeri Exp $
 
 IUSE="gtk tcltk libwww ncurses"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/poe/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 amd64 ~ppc sparc ~alpha"
+KEYWORDS="x86 amd64 ~ppc sparc alpha"
 
 DEPEND="${DEPEND}
 	dev-perl/ExtUtils-AutoInstall
