@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 0f0d055a5125dc5da8f348354976eb15 bobotpp-2.1.4.ebuild 1193
-MD5 52c8aaae095d8383a1b6444b221356e0 bobotpp-2.1.5.ebuild 1194
-MD5 cdb0436a14cacb3a64186ec2a287da3b ChangeLog 794
+MD5 8a30b697e9689f305044cf93f1ed5854 bobotpp-2.1.6.ebuild 1194
+MD5 47944623474a21ef7845929f2f46f426 ChangeLog 939
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 af1adc0f464cb81a7384e051a207ce7e files/digest-bobotpp-2.1.4 65
-MD5 0f94b3501a3f8ed2480a95ab68b89661 files/digest-bobotpp-2.1.5 65
+MD5 50c917808fc70d1bdf66c88c169ef853 files/digest-bobotpp-2.1.6 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB9QJ1I1lqEGTUzyQRAuMsAJ9nP8kNS7MaZRPMHOUlwBIf5lmnPwCZAaZy
-/8lGio/83b2x/ch6P7GXxjA=
-=9vsQ
+iD8DBQFCMfO+I1lqEGTUzyQRAtbPAJwP+rGTtKq5QTUuEBRj/1MZNyHdlwCfRUh9
+g4FFJbxG7y8yNKnbv75g8Qg=
+=lPCH
 -----END PGP SIGNATURE-----

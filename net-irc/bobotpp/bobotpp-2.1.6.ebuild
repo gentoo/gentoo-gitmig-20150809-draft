@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/bobotpp-2.1.5.ebuild,v 1.1 2005/01/24 14:13:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/bobotpp-2.1.6.ebuild,v 1.1 2005/03/11 19:38:32 swegener Exp $
 
 DESCRIPTION="A flexible IRC bot scriptable in scheme"
 HOMEPAGE="http://unknownlamer.org/code/bobot.html"
