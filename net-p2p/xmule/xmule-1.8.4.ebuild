@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.8.4.ebuild,v 1.1 2004/07/17 03:06:26 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.8.4.ebuild,v 1.2 2004/08/16 03:27:53 squinky86 Exp $
 
 DESCRIPTION="wxWindows based client for the eDonkey/eMule/lMule network"
 HOMEPAGE="http://xmule.ws/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ~ppc"
 
 IUSE="nls"
 
