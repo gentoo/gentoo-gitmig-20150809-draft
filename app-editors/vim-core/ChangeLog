@@ -1,12 +1,17 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.9 2002/12/13 10:56:06 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.10 2003/01/21 17:50:39 rphillips Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   12 Nov 2002; Mark Guertin <gerk@gentoo.org> :
   set all builds except 6.1-r3 to -ppc, the -r3 build is now
   ppc (its only one that works on ppc)
+
+*vim-core-6.1-r4 (21 Jan 2003)
+
+  21 Jan 2003; Ryan Phillips <rphillips@gentoo.org> vim-core-6.1-r4.ebuild :
+  Patches 1-300
 
 *vim-core-6.1-r3 (27 Oct 2002)
 
