@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.8.0.20031109-r2.ebuild,v 1.2 2004/05/15 08:56:32 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.8.0.20031109-r2.ebuild,v 1.3 2004/06/04 20:02:45 squinky86 Exp $
 
 DESCRIPTION="(Prelude|Perl) IDS Web Interface"
 HOMEPAGE="http://www.prelude-ids.org"
@@ -22,7 +22,7 @@ RDEPEND="
 	dev-perl/Date-Calc
 	virtual/ghostscript
 	dev-perl/Geo-IP
-	postgresql? ( dev-perl/DBD-Pg )
+	postgres? ( dev-perl/DBD-Pg )
 	mysql? ( dev-perl/DBD-mysql )
 	gd? ( dev-perl/GDGraph )
 "
