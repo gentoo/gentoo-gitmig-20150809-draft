@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.1.2.ebuild,v 1.1 2003/05/10 23:00:15 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.1.2.ebuild,v 1.2 2003/05/10 23:04:43 liquidx Exp $
 
 IUSE="xmms spell"
 
@@ -10,10 +10,10 @@ SRC_URI="http://logjam.danga.com/download/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=x11-libs/gtk+-2
-	>=dev-libs/libxml2-2.0
+	>=dev-libs/libxml2-2.5
 	net-ftp/curl
 	spell? ( app-text/gtkspell )
 	xmms? ( media-sound/xmms )"
