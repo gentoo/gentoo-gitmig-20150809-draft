@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre4.ebuild,v 1.2 2004/04/22 21:49:36 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre4.ebuild,v 1.3 2004/05/24 12:28:07 lanius Exp $
 
 inherit eutils kernel-mod
 
@@ -10,14 +10,6 @@ HOMEPAGE="http://www.lirc.org"
 
 [ "x${LIRC_OPTS}" = x ] && LIRC_OPTS="--with-driver=serial \
 	--with-port=0x3f8 --with-irq=4"
-
-# We have a SMP enabled kernel?
-if [ ! -z "`uname -v | grep SMP`" ]
-then
-	export SMP=1
-else
-	export SMP=0
-fi
 
 # This are the defaults. With this support for all supported remotes
 # will be build.
@@ -61,6 +53,16 @@ SRC_URI="http://lirc.sourceforge.net/software/snapshots/${MY_P}.tar.bz2"
 
 S=${WORKDIR}/${MY_P}
 
+is_SMP() {
+	# We have a SMP enabled kernel?
+	if [ ! -z "`uname -v | grep SMP`" ]
+	then
+		return 0
+	else
+		return 1
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -97,7 +99,7 @@ src_compile() {
 		case ${LIRC_OPTS}
 		in
 		  *"any"*)
-			if [ "${SMP}" = 1 ]; then
+			if is_SMP; then
 				# The parallel driver will not work with SMP kernels
 				# so we need to compile without it
 				emake -C drivers "SUBDIRS=lirc_dev lirc_serial \
@@ -125,7 +127,7 @@ src_install() {
 		in
 		  *"any"*)
 			insinto /lib/modules/${KV}/misc
-			if [ "${SMP}" = 1 ]; then
+			if is_SMP; then
 				for i in lirc_dev lirc_serial \
 					lirc_sir lirc_it87 lirc_i2c lirc_gpio
 				do

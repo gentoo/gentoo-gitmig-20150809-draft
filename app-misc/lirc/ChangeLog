@@ -3,6 +3,10 @@
 # /home/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.21 2004/03/08 14:56:09
 # lanius Exp $
 
+  24 May 2004; Heinrich Wendel <lanius@gentoo.org> lirc-0.6.6-r1.ebuild,
+  lirc-0.7.0_pre2.ebuild, lirc-0.7.0_pre3.ebuild, lirc-0.7.0_pre4.ebuild:
+  fix GREP in global scope, bug #48382
+
   22 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> lirc-0.7.0_pre4.ebuild:
   marked ~amd64. Someone forgot to mark ~amd64 on a version bump.
 
