@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ccze
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.1 2003/06/26 11:29:55 joker Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.2 2004/03/12 06:25:19 mr_bones_ Exp $
+
+  11 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> ccze-0.2.1.ebuild:
+  IUSE, use standard src_compile, error message, header fix
 
 *ccze-0.2.1 (26 June 2003)
 
