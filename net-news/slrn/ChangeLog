@@ -1,6 +1,10 @@
 # ChangeLog for net-news/slrn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.22 2004/07/01 22:39:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.23 2004/07/08 21:05:52 swegener Exp $
+
+  08 Jul 2004; Sven Wegener <swegener@gentoo.org> slrn-0.9.7.4-r1.ebuild,
+  slrn-0.9.7.4.ebuild, slrn-0.9.8.0.ebuild:
+  Made repoman happy, removed unnecessary comments in header.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   slrn-0.9.7.4-r1.ebuild, slrn-0.9.7.4.ebuild, slrn-0.9.8.0.ebuild:

@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/net-news/tin/tin-1.4.5.ebuild,v 1.11 2004/06/25 00:27:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/tin/tin-1.4.5.ebuild,v 1.12 2004/07/08 21:09:21 swegener Exp $
 
 IUSE="ncurses"
 
