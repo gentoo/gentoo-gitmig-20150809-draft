@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.6.ebuild,v 1.5 2003/07/31 03:14:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.7.ebuild,v 1.1 2003/07/31 03:14:45 caleb Exp $
 
 inherit eutils distutils
 
@@ -14,8 +14,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
 DEPEND="virtual/glibc
 	sys-devel/libtool
-	>=x11-libs/qt-3.0.4.1
-	>=dev-lang/python-2.2.1
+	x11-libs/qt
+	dev-lang/python
 	=dev-python/sip-${PV}
 	>=dev-python/qscintilla-1.52"
 
