@@ -1,7 +1,7 @@
-# Copyright 2004 Gentoo Foundation
+# Copyright 2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Michael Tindal <urilith@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.7 2005/01/13 04:36:58 vericgar Exp $
+# Author Michael Tindal <mtindal@gmail.com>
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.8 2005/01/21 00:00:53 trapni Exp $
 ECLASS=depend.apache
 INHERITED="$INHERITED $ECLASS"
 
@@ -19,7 +19,7 @@ INHERITED="$INHERITED $ECLASS"
 ## Stores the version of apache we are going to be ebuilding.  This variable is
 ## set by the need_apache{|1|2} functions.
 ####
-APACHE_VERSION='1'
+APACHE_VERSION='2'
 
 ####
 ## APXS1, APXS2
@@ -82,18 +82,14 @@ APACHE2_MODULESDIR="${APACHE2_BASEDIR}/modules"
 ## APACHE1_DEPEND, APACHE2_DEPEND
 ##
 ## Dependencies for apache 1.x and apache 2.x
+##
+## apache2 must be at least version 2.0.52-r3, this is lowest version
+##     containing our new overall changes -- trapni (Jan 21 2005)
+## apache1 must be at least version 1.3.33-r1, but how to 
+##     define the DEPEND here? (FIXME) -- trapni (Jan 21 2005)
 ####
 APACHE1_DEPEND="=net-www/apache-1*"
-APACHE2_DEPEND="=net-www/apache-2*"
-
-
-####
-## APACHE_DEPEND
-##
-## Dependency magic based on useflags to use the right DEPEND
-####
-
-APACHE_DEPEND="apache2? ( ${APACHE2_DEPEND} ) !apache2? ( ${APACHE1_DEPEND} )"
+APACHE2_DEPEND=">=net-www/apache-2.0.52-r3"
 
 ####
 ## need_apache1
@@ -131,10 +127,10 @@ need_apache() {
 	debug-print-function need_apache
 
 	IUSE="${IUSE} apache2"
-	DEPEND="${DEPEND} ${APACHE_DEPEND}"
 	if useq apache2; then
-		APACHE_VERSION='2'
+		need_apache2
 	else
-		APACHE_VERSION='1'
+		need_apache1
 	fi
 }
+
