@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.149 2004/03/28 22:48:12 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.150 2004/03/30 16:17:44 avenj Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -130,6 +130,7 @@ nocardbus - Disables cardbus support in pcmcia-cs
 nocd - Tells emerge to install all files required to run the application without a CD mounted
 oci8 - Adds Oracle Support
 odbc - Adds ODBC Support (Open DataBase Connectivity)
+offensive - Enables potentially offensive items in packages
 oggvorbis - Adds support for the OggVorbis audio encoding
 opengl - Adds support for OpenGL
 oscar - Enable Oscar (AIM/ICQ) IM protocol support

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.290 2004/03/29 22:26:48 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.291 2004/03/30 16:17:44 avenj Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -115,7 +115,6 @@ games-fps/quake2-icculus:noqmax - Do not build the pretty version (quake max)
 games-fps/quake2-icculus:rogue - Build support for the 'The Reckoning' Mission Pack (xatrix)
 games-fps/quake2-icculus:xatrix - Build support for the 'Ground Zero' Mission Pack (rogue)
 games-fps/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3)
-games-misc/fortune-mod:offensive - Allow fortune to offend you
 games-rpg/nwn:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
 games-server/halflife-metamod:src - use the source, not the binary install
 games-server/halflife-statsme:nocstrike - no counterstrike
@@ -328,7 +327,6 @@ x11-misc/rss-glx:openal - Adds OpenAL (sound) support to certain screensavers
 x11-terms/eterm:escreen - enable built in screen support
 x11-terms/eterm:etwin - enable twin support
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
-x11-themes/gaim-smileys:offensive - Install possibly offensive smiley themes
 x11-wm/fvwm:nosm - Disable support for Session Management (xsm protocol)
 x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png images are to be used)
 x11-wm/fvwm:rplay - Enable rplay support
