@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/gaim-encryption-2.29.ebuild,v 1.11 2004/08/26 07:51:32 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-encryption/gaim-encryption-2.29.ebuild,v 1.12 2004/08/26 14:54:52 rizzo Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -14,6 +14,7 @@ KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ~ia64"
 IUSE=""
 
 DEPEND=">=net-im/gaim-0.80
+		<net-im/gaim-0.82
 		dev-libs/nss"
 
 src_compile() {
