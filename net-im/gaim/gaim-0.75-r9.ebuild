@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r9.ebuild,v 1.2 2004/02/18 20:17:41 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r9.ebuild,v 1.3 2004/03/01 15:49:52 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -15,8 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc ~alpha ~ia64"
 
-DEPEND="=sys-libs/db-1*
-	>=x11-libs/gtk+-2.0
+DEPEND=">=x11-libs/gtk+-2.0
 	>=dev-libs/glib-2.0
 	nas? ( >=media-libs/nas-1.4.1-r1 )
 	sys-devel/gettext

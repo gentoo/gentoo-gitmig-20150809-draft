@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.136 2004/02/26 23:04:30 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.137 2004/03/01 15:49:52 rizzo Exp $
+
+  01 Mar 2004; Don Seiler <rizzo@gentoo.org>; gaim-0.75-r10.ebuild,
+  gaim-0.75-r8.ebuild, gaim-0.75-r9.ebuild:
+  Removing sys-libs/db as a DEPEND. Thanks to Michael Mikhulya for pointing it
+  out.
 
   26 Feb 2004; Don Seiler <rizzo@gentoo.org>; gaim-0.72-r1.ebuild,
   gaim-0.72-r2.ebuild, gaim-0.72.ebuild, gaim-0.74-r2.ebuild,
