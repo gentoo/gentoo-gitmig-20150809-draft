@@ -1,0 +1,26 @@
+#
+# Patch by Mina Naguib <webmaster@topfx.com>
+#
+# This patches gpsd to allow for some high-speed serial settings
+# (such as 115200 for example which is what my Magellan Meridian Gold supports)
+#
+# Tested against gpsdrive versions 2.04 and 2.05
+# Approved by Fritz Ganter (gpsdrive author) - will be included
+# in future gpsdrive release
+#
+--- original/src/gpsd.c	2003-12-27 14:20:37.000000000 -0500
++++ mina/src/gpsd.c	2003-12-27 14:23:25.000000000 -0500
+@@ -314,8 +314,12 @@
+ 	    device_speed = B9600;
+ 	  else if (baud < 38400)
+ 	    device_speed = B19200;
+-	  else
++	  else if (baud < 57600)
+ 	    device_speed = B38400;
++	  else if (baud < 115200)
++	    device_speed = B57600;
++	  else
++	    device_speed = B115200;
+ 	  break;
+ 	case 'c':
+ 	  need_dgps = 1;
