@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/kcdlabel
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdlabel/ChangeLog,v 1.3 2003/06/20 15:00:39 caleb Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdlabel/ChangeLog,v 1.4 2004/03/14 17:20:17 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> kcdlabel-2.11.ebuild,
+  kcdlabel-2.12.ebuild:
+  inherit kde instead of deprecated kde-base
 
 *kcdlabel-2.12 (20 Jun 2003)
 
