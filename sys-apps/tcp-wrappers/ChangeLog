@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/tcp-wrappers
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.6 2002/12/13 11:00:33 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.7 2002/12/16 14:39:38 aliz Exp $
+
+*tcp-wrappers-7.6-r5.ebuild (16 Dec 2002)
+
+  16 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> tcp-wrappers-7.6-r5.ebuild :
+  Added compilation and installation of libwrap.so, closes #12014. 
+  Rewrote parts of ebuild switched to epatch (from eutils) to handle patch files.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
