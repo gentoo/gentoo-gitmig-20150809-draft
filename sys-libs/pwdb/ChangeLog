@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pwdb
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.19 2003/12/21 16:47:52 brad_mssw Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.20 2004/01/22 02:32:41 pebenito Exp $
+
+  21 Jan 2004; Chris PeBenito <pebenito@gentoo.org>
+  files/pwdb-0.62-selinux.patch:
+  Fix selinux patch to not link against attr
 
   21 Dec 2003; Brad House <brad_mssw@gentoo.org> pwdb-0.62.ebuild:
   mark stable on amd64
