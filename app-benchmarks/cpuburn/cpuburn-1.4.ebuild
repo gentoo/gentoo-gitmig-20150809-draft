@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/cpuburn/cpuburn-1.4.ebuild,v 1.10 2005/01/01 12:03:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/cpuburn/cpuburn-1.4.ebuild,v 1.11 2005/03/25 15:19:03 blubb Exp $
 
 MY_P="${PV/./_}"
 DESCRIPTION="designed to heavily load CPU chips [testing purposes]"
@@ -9,12 +9,12 @@ SRC_URI="http://pages.sbcglobal.net/redelm/cpuburn_${MY_P}_tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* x86 ~amd64"
 IUSE=""
 RESTRICT="nostrip"
 
 DEPEND="sys-devel/gcc"
-RDEPEND=""
+RDEPEND="amd64? (>=app-emulation/emul-linux-x86-baselibs-1.0)"
 
 src_unpack() {
 	# for some reason he has it _tar instead of .tar ...
