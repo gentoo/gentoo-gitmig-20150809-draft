@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.4.ebuild,v 1.4 2004/06/25 00:23:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-7.4.ebuild,v 1.5 2004/09/04 02:59:10 eradicator Exp $
 
 IUSE="esd motif guile X gtk ruby alsa"
 
 S="${WORKDIR}/${P/\.*//}"
 DESCRIPTION="Snd is a sound editor"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="nomirror"
 HOMEPAGE="http://snd.sourceforge.net"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc ~sparc"
 
 DEPEND="X? ( virtual/x11 )
 	dev-libs/gsl
