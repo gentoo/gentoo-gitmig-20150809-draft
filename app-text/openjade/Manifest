@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a993064267b870b4f9399ae4bda77037 ChangeLog 5200
 MD5 fe58f8a4a9e5e074b19d85127990eebf openjade-1.3.1-r5.ebuild 3461
-MD5 02f93bd8ad26a301b25758b1ca3a6511 openjade-1.3.1-r6.ebuild 2730
-MD5 d82f3b3907edd96c067a0661088e98d0 openjade-1.3.2-r1.ebuild 2703
+MD5 21190daa8bfd135c4b3a443fb440c590 openjade-1.3.1-r6.ebuild 2724
+MD5 1cb768588541c7506ed25de803117847 openjade-1.3.2-r1.ebuild 2702
 MD5 8b06382cdd39a4055e58476e211925c2 files/digest-openjade-1.3.1-r5 67
 MD5 8b06382cdd39a4055e58476e211925c2 files/digest-openjade-1.3.1-r6 67
 MD5 7aec561045cfe90b07ce666881668288 files/digest-openjade-1.3.2-r1 66
@@ -12,10 +9,3 @@ MD5 7b4fc3abf04cdb88a197065eaf3b4e53 files/openjade-1.3.1.dsssl-catalog 269
 MD5 97ffae1d667ab6f72f6e716bac5f3833 files/openjade-1.3.2-msggen.pl.patch 418
 MD5 7b4fc3abf04cdb88a197065eaf3b4e53 files/openjade-1.3.2.dsssl-catalog 269
 MD5 7b4fc3abf04cdb88a197065eaf3b4e53 files/openjade-1.3.dsssl-catalog 269
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAvyKVHTu7gpaalycRAkbUAKDr8wX7fWQVUFb8kFOO8FTMukWpMACgibSH
-32AEfvDUIoZef28cjC2wmNw=
-=+E2d
------END PGP SIGNATURE-----
