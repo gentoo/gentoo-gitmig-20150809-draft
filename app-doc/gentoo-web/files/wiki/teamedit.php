@@ -19,7 +19,9 @@ while ( $each = each($leaders) ) {
 		break;
 	}
 }
-if ( !$name ) {
+$admin = mysql_query( "select admin from users where uid=$uid" );
+list( $admin ) = mysql_fetch_row( $admin );
+if ( !($name || $admin) ) {
 	print '<p style="color:red;">You aren\'t the leader of that team!</p>';
 	main_footer();
 	exit;
@@ -31,7 +33,7 @@ if ( $summary || $status ) {
 	print '<p style="color:red;">Change(s) committed.</p>';
 }
 
-$info = mysql_query( "select summary,status from teams where gid=$num" );
+$info = mysql_query( "select summary,status from teams where gid=$gid" );
 list( $summary, $status ) = mysql_fetch_row( $info );
 ?>
 

@@ -237,8 +237,8 @@ global $uid, $dbusername, $show_privates, $list; ?>
 		</td>
 	</tr>
 	<tr>
-		<td bgcolor="#e0e0e0"><p><?php if ($uid && $public == 1) { print '<a href="'.$illdoitlink."\">I'll do it</a> | "; } ?><a href="single.php?tid=<?=$tid;?>">details</a> (<?=$followups;?>)</td>
-		<td bgcolor="#e0e0e0" align="right"><p><?php if ( $public ) print 'Posted'; else print 'Owned'; ?> by <a href="devtodo.php?devid=<?=$owner;?>"><b><?=$developer;?></b></a> (team: <?=$team.$branch;?>)</p></td>
+		<td bgcolor="#e0e0e0" align="left"><p><?php if ( $public ) print 'Posted'; else print 'Owned'; ?> by <a href="devtodo.php?devid=<?=$owner;?>"><b><?=$developer;?></b></a> (team: <?=$team.$branch;?>)</p></td>
+		<td bgcolor="#e0e0e0" align="right"><p><?php if ($uid && $public == 1) { print '<a href="'.$illdoitlink."\">I'll do it</a> | "; } ?><a href="single.php?tid=<?=$tid;?>">details</a> (<?=$followups;?>)</td>
 	</tr>
 	</table>
 	</td></tr></table>
