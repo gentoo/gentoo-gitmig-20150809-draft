@@ -43,8 +43,8 @@ prompt_gentoo_precmd () {
 #    space_left=$(( $COLUMNS - $#base_prompt_expanded_no_color - 2 ))
 #    path_prompt="%{$fg_bold[$prompt_adam1_color3]%}%${space_left}<...<%~$prompt_newline%{$fg_bold_white%}"
 #  fi
-  path_prompt="%{$fg_bold[$prompt_gentoo_prompt]%}%1/"
-  PS1="$base_prompt$path_prompt %(0#.#.$) $post_prompt"
+  path_prompt="%{$fg_bold[$prompt_gentoo_prompt]%}%1~"
+  PS1="$base_prompt$path_prompt %# $post_prompt"
   PS2="$base_prompt$path_prompt %_> $post_prompt"
   PS3="$base_prompt$path_prompt ?# $post_prompt"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0_pre4.ebuild,v 1.1 2004/03/12 20:26:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0.ebuild,v 1.1 2004/03/20 21:25:55 usata Exp $
 
 IUSE="maildir ncurses static doc pcre cap"
 
