@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.20 2003/07/24 16:48:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.21 2003/10/04 23:50:42 hillster Exp $
+
+*dialog-0.9_beta20030720 (04 Oct 2003)
+
+  04 Oct 2003; Joel Hill <hillster@gentoo.org> dialog-0.9_beta20030720.ebuild:
+  Version Bump ~arch on all platforms for the time being, closes #26539
 
   15 Jul 2003; Martin Holzer <mholzer@gentoo.org>
   dialog-0.9_beta20020814.ebuild, dialog-0.9_beta20030308-r1.ebuild:
