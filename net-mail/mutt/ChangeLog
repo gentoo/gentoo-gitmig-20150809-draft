@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.12 2002/11/17 13:22:49 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.13 2002/12/07 07:08:38 jmorgan Exp $
 
 *mutt-1.4-r3 (03 Sept 2002) 
+
+  07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> mutt-1.4-r2.ebuild, mutt-1.4-r3.ebuild :
+  Changed sparc64 to sparc keyword
 
   16 Nov 2002; Calum Selkirk <cselkirk@gentoo.org> mutt-1.4-r3.ebuild :
 
