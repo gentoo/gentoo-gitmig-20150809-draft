@@ -1,3 +1,13 @@
-MD5 ee3aa071e6bbcf89b6026fba1d2d92a6 ChangeLog 388
-MD5 85891b7fdd4956aa919b71bc5d70af73 efax-0.9a.ebuild 697
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 75aa5a9df6794401e98b50e6c9f39438 efax-0.9a.ebuild 705
+MD5 296bca23f4981c7ba1e9752a27649b75 ChangeLog 501
 MD5 c2f8bbf4bc4c515277e9266bf7b5b0a8 files/digest-efax-0.9a 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSXG606ebR+OMO78RAs44AJwPfWex+51uLgLTJ6qj3a7jY+HAOwCfXuaP
+GgFsVYj7hiRACpgPwsdgCBE=
+=4Elc
+-----END PGP SIGNATURE-----

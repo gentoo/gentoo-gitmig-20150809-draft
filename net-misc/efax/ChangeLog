@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/efax
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.3 2004/06/24 23:42:54 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.4 2005/03/29 15:17:56 luckyduck Exp $
+
+  29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> efax-0.9a.ebuild:
+  added ~amd64 to KEYWORDS, fixes #82877
 
 *efax-0.9a (25 May 2003)
 
