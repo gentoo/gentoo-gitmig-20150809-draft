@@ -439,6 +439,7 @@ dev-lang/tcl-tk
 # Masking avi-xmms because it will not compile against avifile-0.6, instead
 # xmms has a hacked native support in it now for avi playing against avifile-0.6
 <media-video/avifile-0.6
+>=media-video/avi-xmms-1.2.2-r2
 
 #seemant@gentoo.org 19 Mar 2002
 # Masking gkrellm-seti, because it does not compile with the new gkrellm,
@@ -468,3 +469,10 @@ dev-lang/tcl-tk
 # until we figure out how to use gtk.themes.org or gtk.classic.themes.org
 # frankly I am not sure that this ebuild is necessary
 =x11-libs/old-gtk-themes-1.0
+
+#seemant@gentoo.org 28 Mar 2002
+# I have found an avi plugin to replace avi-xmms after the freeze.
+# However, xmms needs to link against avifile and libstdc++ for this.
+# This reduces the bloat, but it will be better tested once the freeze is over
+=media-sound/xmms-1.2.7-r4
+=media-video/avi4xmms-0.1
