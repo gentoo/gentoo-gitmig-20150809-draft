@@ -1,0 +1,18 @@
+#!/bin/sh
+
+prepallman
+prepallinfo
+prepallstrip
+
+# Move aclocals
+
+foreach i in `find ${D} -name "aclocal" -type d`
+do
+  if [ "$i" != "${D}usr/share/aclocal" ]
+  then
+    mkdir ${D}usr/share/aclocal
+    mv ${D}${i}/* ${D}usr/share/aclocal
+  fi
+done
+
+
