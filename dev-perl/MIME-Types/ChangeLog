@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/MIME-Types
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.1 2004/08/05 21:52:39 agriffis Exp $
+
+*MIME-Types-1.13 (05 Aug 2004)
+
+  05 Aug 2004; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
+  +MIME-Types-1.13.ebuild:
+  Add MIME-Types module in support of cvsweb-3.0.1 (not yet in portage)
+
