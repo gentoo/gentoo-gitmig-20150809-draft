@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gsl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/ChangeLog,v 1.17 2004/07/02 04:42:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/ChangeLog,v 1.18 2004/12/23 20:05:32 corsair Exp $
+
+  23 Dec 2004; Markus Rothe <corsair@gentoo.org> gsl-1.4.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #74046
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gsl-1.3.ebuild,
   gsl-1.4.ebuild:
