@@ -261,3 +261,6 @@ gnome-apps/gnapster
 # Moved, use from app-text instead:
 app-doc/gmanedit
 app-doc/tkinfo
+
+# This really needs some testing
+=net-dialup/ppp-2.4.1-r6
