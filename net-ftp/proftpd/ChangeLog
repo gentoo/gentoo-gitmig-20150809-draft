@@ -1,9 +1,14 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.6 2002/06/21 01:54:08 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.7 2002/06/27 22:37:44 bass Exp $
 
 
 *proftpd-1.2.5-r1 (20 Jun 2002)
+
+  28 Jun 2002; J.Alberto Suárez L. <bass@gentoo.org> proftpd-1.2.5-r1.ebuild:
+
+  Fix bug #3791 In mod_sql_postgres.c line 38: #inlcude <pgsql/libpq-fe.h>
+  is patched to: #include <postgresql/libpq-fe.h>.
 
   20 Jun 2002; Kyle Manna <nitro@gentoo.org> proftpd-1.2.5-r1.ebuild :
 

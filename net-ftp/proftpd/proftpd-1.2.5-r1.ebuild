@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.5-r1.ebuild,v 1.1 2002/06/20 22:23:18 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.5-r1.ebuild,v 1.2 2002/06/27 22:37:44 bass Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An advanced and very configurable FTP server"
@@ -15,6 +15,15 @@ DEPEND="virtual/glibc
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1 )"
+
+src_unpack() {
+
+#Fix bug #3791
+	
+	unpack ${P}.tar.bz2
+    cd ${WORKDIR}/${P}
+    patch contrib/mod_sql_postgres.c < ${FILESDIR}/mod_sql_postgres.c.patch || die "config patch failed"
+}
 
 src_compile() {
 	local modules myconf
