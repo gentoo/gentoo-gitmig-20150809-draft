@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.30.ebuild,v 1.4 2003/09/07 00:33:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.30.ebuild,v 1.5 2003/10/13 16:55:59 aliz Exp $
 
 inherit flag-o-matic eutils
 
@@ -45,8 +45,18 @@ src_compile() {
 			CFLAGS="${CFLAGS}" \
 			|| die
 
+	einfo "building voice"
 	cd voice
 	emake CONFDIR=/etc/mgetty+sendfax \
+		|| make CONFDIR=/etc/mgetty+sendfax \
+			|| die
+
+	cd ${S}
+
+	einfo "building callback"
+	cd callback
+	emake CONFDIR=/etc/mgetty+sendfax \
+		CFLAGS="${CFLAGS}" \
 		|| make CONFDIR=/etc/mgetty+sendfax \
 			|| die
 	cd ${S}
@@ -67,6 +77,22 @@ src_install () {
 		spool=${D}/var/spool \
 		install || die
 
+	einfo "Installing callback"
+	cd callback
+	make prefix=${D}/usr \
+		CONFDIR=${D}/etc/mgetty+sendfax \
+		MAN1DIR=${D}/usr/share/man/man1 \
+		MAN8DIR=${D}/usr/share/man/man8 \
+		VOICE_DIR=${D}/var/spool/voice \
+		SBINDIR=${D}/usr/sbin \
+		BINDIR=${D}/usr/bin \
+		INSTALL="install -c -o bin -g bin" \
+		PHONE_GROUP=root \
+		PHONE_PERMS=755 \
+		install || die
+	cd ${S}
+
+	einfo "installing voice"
 	cd voice
 	make prefix=${D}/usr \
 		CONFDIR=${D}/etc/mgetty+sendfax \
