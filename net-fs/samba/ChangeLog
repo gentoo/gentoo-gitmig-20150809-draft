@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.144 2005/01/14 22:43:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.145 2005/01/14 22:54:12 luckyduck Exp $
+
+  14 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> samba-3.0.10.ebuild:
+  stable on amd64; bug #77734
 
   14 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> samba-3.0.10.ebuild:
   Stable on sparc wrt #77734
