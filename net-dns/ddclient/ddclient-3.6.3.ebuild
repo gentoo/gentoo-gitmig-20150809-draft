@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.6.3.ebuild,v 1.6 2004/08/30 02:19:26 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.6.3.ebuild,v 1.7 2004/10/20 18:42:18 vapier Exp $
 
 inherit eutils
 
@@ -8,9 +8,9 @@ DESCRIPTION="A perl based client for dyndns"
 HOMEPAGE="http://burry.ca:4141/ddclient/"
 SRC_URI="http://members.rogers.com/ddclient/pub/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~mips ~amd64 ~ia64 ~ppc64"
+SLOT="0"
+KEYWORDS="alpha ~amd64 hppa ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl"
@@ -22,12 +22,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${PF}-mss1.diff
 }
 
-src_install () {
-	exeinto /usr/sbin
-	doexe ddclient
+src_install() {
+	dosbin ddclient || die "dosbin"
 	insinto /etc/ddclient
 	doins sample-*
-	dodoc README COPYING COPYRIGHT
+	dodoc README
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/ddclient.rc6 ddclient
 }
