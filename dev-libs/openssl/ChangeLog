@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.107 2005/03/22 08:26:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.108 2005/03/29 13:25:49 usata Exp $
+
+  29 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> openssl-0.9.7d.ebuild,
+  openssl-0.9.7d-r1.ebuild, openssl-0.9.7d-r2.ebuild, openssl-0.9.7e.ebuild,
+  openssl-0.9.7e-r1.ebuild:
+  Install elisp file only if emacs USE flag is set; bug #85944.
 
   22 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   openssl-0.9.7e-r1.ebuild:

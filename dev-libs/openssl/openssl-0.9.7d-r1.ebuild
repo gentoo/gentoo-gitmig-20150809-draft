@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d-r1.ebuild,v 1.12 2005/02/07 00:30:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d-r1.ebuild,v 1.13 2005/03/29 13:25:49 usata Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -236,8 +236,6 @@ src_install() {
 	dodoc CHANGES* FAQ LICENSE NEWS README
 	dodoc doc/*.txt
 	dohtml doc/*
-	insinto /usr/share/emacs/site-lisp
-	doins doc/c-indentation.el
 
 	if use emacs ; then
 		insinto /usr/share/emacs/site-lisp
