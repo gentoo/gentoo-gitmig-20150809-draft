@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.0.ebuild,v 1.3 2004/10/08 12:06:12 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.0.ebuild,v 1.4 2004/10/09 17:47:35 pauldv Exp $
 
 inherit elisp-common libtool python eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://subversion.tigris.org/"
 SLOT="0"
 LICENSE="Apache-1.1"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~alpha ~hppa"
-IUSE="ssl apache2 berkdb python emacs perl java"
+IUSE="ssl apache2 berkdb python emacs perl java jikes"
 
 S=${WORKDIR}/${P/_rc/-rc}
 
@@ -106,6 +106,11 @@ src_compile() {
 	use python && myconf="${myconf} --with-python=/usr/bin/python"
 	use python || myconf="${myconf} --without-python"
 
+	if use java; then
+		use jikes && myconf=${myconf} --with-jikes=yes
+		use jikes || myconf=${myconf} --without-jikes
+	fi
+
 	if use python || use perl; then
 		myconf="${myconf} --with-swig"
 	else
@@ -140,6 +145,9 @@ src_compile() {
 		make swig-pl || die "Perl library building failed"
 	fi
 	if use java; then
+		# ensure that the destination dir exists, else some compilation fails
+		mkdir -p ${S}/subversion/bindings/java/javahl/classes
+		#Compile javahl
 		make JAVACFLAGS="-source 1.3 -encoding iso8859-1" javahl || die "Compilation failed"
 	fi
 
