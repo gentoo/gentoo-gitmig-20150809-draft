@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.29 2003/08/01 03:23:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.30 2003/08/06 01:19:19 agriffis Exp $
+
+*ruby-1.8.0 (05 Aug 2003)
+
+  05 Aug 2003; Aron Griffis <agriffis@gentoo.org> ruby-1.8.0.ebuild:
+  Update to final 1.8.0 release
 
 *ruby-1.8.0_pre2-r3 (31 Jul 2003)
 
