@@ -1,6 +1,4 @@
-MD5 bcb19ed13e4a4ed88c4bc45843faa46c autoprofile-2.07.ebuild 787
-MD5 aa5d5670eab97e5b2ec925303cadef3d autoprofile-2.04.ebuild 962
 MD5 2937a545d1af115df3bb4201c820482d ChangeLog 1270
+MD5 bcb19ed13e4a4ed88c4bc45843faa46c autoprofile-2.07.ebuild 787
 MD5 c1a2d7f113e28668f770c363bd5e761f metadata.xml 224
-MD5 6234e853a543f41c5cbe981bcc3747c2 files/digest-autoprofile-2.04 67
 MD5 24400273a9593ad638ea5f52b4686fcf files/digest-autoprofile-2.07 67
