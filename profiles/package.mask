@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3615 2005/02/13 08:10:31 dragonheart Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3616 2005/02/13 14:23:58 solar Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Ned Ludd <security@gentoo> (13 Feb 2005)
+# Masked by request of the security team. bug 79704
+media-libs/libextractor
 
 # Bryan Østergaard <kloeri@gentoo.org> (12 Feb 2005)
 # Masked waiting for apache module refresh
