@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/ng-spice-rework
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ng-spice-rework/ChangeLog,v 1.1 2003/11/28 21:26:50 plasmaroo Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ng-spice-rework/ChangeLog,v 1.2 2004/02/01 17:48:17 plasmaroo Exp $
+
+*ng-spice-rework-15 (01 Feb 2004)
+
+  01 Feb 2004; <plasmaroo@gentoo.org> ng-spice-rework-15.ebuild:
+  Version bump.
 
 *ng-spice-rework-14 (28 Nov 2003)
 

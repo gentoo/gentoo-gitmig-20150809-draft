@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc. and Tim Yamin <plasmaroo@gentoo.org> <plasmaroo@squirrelsoft.org.uk>
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gwave/gwave-20030804.ebuild,v 1.1 2003/11/28 21:21:03 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gwave/gwave-20030804.ebuild,v 1.2 2004/02/01 17:52:59 plasmaroo Exp $
 
 DESCRIPTION="A waveform viewer analog data, such as SPICE simulations."
 HOMEPAGE="http://www.geda.seul.org/tools/gwave/"
@@ -27,6 +27,6 @@ src_install() {
 
 	make DESTDIR=${D} install || die
 	rm -f doc/Makefile* *.1
-	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO doc/*
+	dodoc AUTHORS INSTALL NEWS README TODO doc/*
 
 }
