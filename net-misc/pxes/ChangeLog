@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pxes
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.12 2004/05/12 10:36:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.13 2004/06/04 12:19:11 dragonheart Exp $
+
+  04 Jun 2004; Daniel Black <dragonheart@gentoo.org> pxes-0.8.ebuild:
+  sys-apps/squashfs-tools dependancy moved to sys-fs
 
   12 May 2004; Chris Gianelloni <wolf31o2@gentoo.org> pxes-0.8.ebuild:
   Moving 0.8 to x86 and closing bug #49884.
