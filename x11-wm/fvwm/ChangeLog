@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.76 2004/07/07 02:08:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.77 2004/07/10 11:11:17 taviso Exp $
+
+*fvwm-2.5.10-r6 (10 Jul 2004)
+
+  10 Jul 2004; Tavis Ormandy <taviso@gentoo.org>
+  +files/fvwm-2.5.10-fvwmbuttonshover.diff, +fvwm-2.5.10-r6.ebuild:
+  adding fvwmbuttons patch from cvs
 
   07 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> fvwm-2.5.10-r3.ebuild:
   Stable on alpha.

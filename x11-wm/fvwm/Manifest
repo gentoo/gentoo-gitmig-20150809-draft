@@ -2,7 +2,8 @@ MD5 fee6ff9d3bda846c84a2650aff370283 fvwm-2.5.7-r5.ebuild 8765
 MD5 f7be9fe31d4c7311d643486221a530a3 fvwm-2.5.10-r5.ebuild 9855
 MD5 9dea6a4c4802ee4b7fadd0b74e176899 fvwm-2.5.8-r6.ebuild 10705
 MD5 5b04edc59a5abc45ff89473f9039d6e8 fvwm-2.5.10-r4.ebuild 9486
-MD5 bf8326cb19f07f1381f9821550ad720b ChangeLog 14125
+MD5 8a49c73867bd32c44315add224fccf93 fvwm-2.5.10-r6.ebuild 9946
+MD5 e57ea2a7798d48c9e7cd894a7fe0996d ChangeLog 14310
 MD5 4833e4d0685ef48988c0c5c4f9c6b377 metadata.xml 527
 MD5 a747110a9b94991131c858edd26e677f fvwm-2.4.18.ebuild 3163
 MD5 23650ab610c9edf0c2e2414aefe7c23a fvwm-2.5.10-r3.ebuild 9287
@@ -26,6 +27,7 @@ MD5 5dc401c9f6a50da0bfa85a025749652a files/fvwm-2.5.8-fvwm-menu-directory-securi
 MD5 0c1b906138bf4e2977e7be1631f949d9 files/digest-fvwm-2.5.10-r3 128
 MD5 0c1b906138bf4e2977e7be1631f949d9 files/digest-fvwm-2.5.10-r4 128
 MD5 856bdf34d1530e03fc3aa2c6b3630ccc files/digest-fvwm-2.5.10-r5 129
+MD5 856bdf34d1530e03fc3aa2c6b3630ccc files/digest-fvwm-2.5.10-r6 129
 MD5 e9263b93f666293d0a1220ea3457efcd files/mini.happy.xpm 425
 MD5 2bdb17132f9d7f352002a1fbace7fca1 files/acinclude.m4 61423
 MD5 4f044a8a47c9f8ea61d54dfa4bd79b70 files/fvwm-2.5.8-fvwm-bug-security.diff 327
@@ -34,5 +36,6 @@ MD5 efd2297324dd0241c2a879beadfabdb7 files/fvwm-2.5.10-mips-compat.diff 2306
 MD5 e52e1c9212c856d5de29c603678dc52e files/digest-fvwm-2.5.7-r5 127
 MD5 c3ea3b9a8c5d7700913a795096e0b51a files/digest-fvwm-2.5.8-r6 127
 MD5 97373a30210df0b93c59e2aac76d17e0 files/fvwm-2.5.8-undermouse.diff 2534
+MD5 ebf71494aad8261811bdca083d90c71c files/fvwm-2.5.10-fvwmbuttonshover.diff 31463
 MD5 933ebc841a6eafebaf9d57b7a99c3b10 files/fvwm-2.5.8-flickeringmoveworkaround.diff 726
 MD5 b20e3c8c23286531b549852ecbed4b74 files/fvwm-2.5.10-post-release.diff 2923

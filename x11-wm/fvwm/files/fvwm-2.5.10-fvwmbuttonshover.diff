@@ -1,0 +1,1242 @@
+diff -u fvwm-2.5.10/modules/FvwmButtons/button.c fvwm/modules/FvwmButtons/button.c
+--- fvwm-2.5.10/modules/FvwmButtons/button.c	2003-06-29 20:53:24.000000000 +0100
++++ fvwm/modules/FvwmButtons/button.c	2004-07-10 10:13:25.000000000 +0100
+@@ -298,6 +298,11 @@
+ 
+ int buttonColorset(button_info *b)
+ {
++  if (b == HoverButton && UberButton->c->flags & b_HoverColorset)
++  {
++    return UberButton->c->hoverColorset;
++  }
++
+   if (b->flags & b_Colorset)
+     return b->colorset;
+   else if (b->flags & b_Container && b->c->flags & b_Colorset)
+Only in fvwm/modules/FvwmButtons: CVS
+Only in fvwm/modules/FvwmButtons: .cvsignore
+diff -u fvwm-2.5.10/modules/FvwmButtons/draw.c fvwm/modules/FvwmButtons/draw.c
+--- fvwm-2.5.10/modules/FvwmButtons/draw.c	2003-06-29 20:53:24.000000000 +0100
++++ fvwm/modules/FvwmButtons/draw.c	2004-07-10 10:13:25.000000000 +0100
+@@ -139,11 +139,6 @@
+   /* At this point iw,ih,ix and iy should be correct. Now all we have to do is
+      place title and iconwin in their proper positions */
+ 
+-  /* For now, use the old routine in icons.h for buttons with icons */
+-  if(b->flags&b_Icon && !(b->flags&b_IconAlpha))
+-  {
+-    ConfigureIconWindow(b, NULL);
+-  }
+   /* For now, hardcoded window centered, title bottom centered, below window */
+   if(buttonSwallowCount(b)==3 && (b->flags & b_Swallow))
+   {
+@@ -188,13 +183,13 @@
+ *** draw can be:
+ *** DRAW_RELIEF: draw only the relief
+ *** DRAW_CLEAN:  draw the relief, the foreground bg if any and if this
+-*** the case draw the title and the icon if b_IconAlpha. This is safe
++*** the case draw the title and the icon if b_Icon. This is safe
+ *** but the button background may be not repaint (if the bg of the button
+ *** come from a parent button).
+-*** DRAW_ALL: as above but draw the title and the icon if b_IconAlpha in
+-*** any case. WARRNING: the title and the icon (b_IconAlpha) must be cleaned:
++*** DRAW_ALL: as above but draw the title and the icon if b_Icon in
++*** any case. WARRNING: the title and the icon (b_Icon) must be cleaned:
+ *** if the button has a bg this is the case, but if the bg of the button
+-*** come from a parent button this is not the case and xft title and alpha
++*** come from a parent button this is not the case and xft title and
+ *** icons will be not draw correctly.
+ *** So DRAW_ALL is ok only when you draw buttons recursively.
+ *** DRAW_FORCE: draw the button and its parent fg bg. Use this only if
+@@ -222,6 +217,9 @@
+ 	Bool clean = False;
+ 	Bool cleaned = False;
+ 	Bool clear_bg = False;
++	unsigned long iconFlag, otherIconFlag;
++	Bool has_title;
++	FvwmPicture *pic;
+ 
+ 	cset = buttonColorset(b);
+ 	if (cset >= 0)
+@@ -246,8 +244,8 @@
+ 
+ 	/* This probably isn't the place for this, but it seems to work here
+ 	 * and not elsewhere, so... */
+-	if((b->flags & b_Swallow) && (buttonSwallowCount(b)==3) &&
+-	   b->IconWin!=None)
++	if ((b->flags & b_Swallow) && (buttonSwallowCount(b) == 3) &&
++		b->IconWin != None)
+ 	{
+ 		XSetWindowBorderWidth(Dpy,b->IconWin,0);
+ 	}
+@@ -357,6 +355,28 @@
+ 	of = f;
+ 	f=abs(f);
+ 
++	iconFlag = b_Icon;
++	otherIconFlag = b_HoverIcon;
++	has_title = (b->flags & b_Title ? True : False);
++	pic = b->icon;
++	if (b == HoverButton)
++	{
++		/* If no HoverIcon is specified, we use Icon (if there is
++		   one). */
++		if (b->flags & b_HoverIcon)
++		{
++			iconFlag = b_HoverIcon;
++			otherIconFlag = b_Icon;
++			pic = b->hovericon;
++		}
++		/* If no HoverTitle is specified, we use Title (if there is
++		   one). */
++		if (b->flags & b_HoverTitle)
++		{
++			has_title = True;
++		}
++	}
++
+ 	if (draw == DRAW_CLEAN)
+ 	{
+ 		clean = True;
+@@ -498,39 +518,60 @@
+ 			if (do_draw)
+ 			{
+ 				cleaned = True;
+-				XFillRectangle(
+-					Dpy,MyWindow,NormalGC,
+-					clip.x,clip.y,clip.width,clip.height);
++				if (b == HoverButton &&
++					UberButton->c->flags & b_HoverColorset)
++				{
++					SetRectangleBackground(Dpy, MyWindow,
++						clip.x, clip.y, clip.width,
++						clip.height,
++						&Colorset[UberButton->c->hoverColorset],
++						Pdepth, NormalGC);
++				}
++				else
++				{
++					XFillRectangle(Dpy, MyWindow, NormalGC,
++						clip.x, clip.y, clip.width,
++						clip.height);
++				}
+ 			}
+ 		}
+ 		else if (clear_bg ||
+ 			 (pev && !buttonBackgroundButton(b,NULL) &&
+ 			  ((b->flags&b_Title && Ffont && Ffont->fftf.fftfont) ||
+-			   (b->flags&b_Icon && b->flags&b_IconAlpha))))
++			   (b->flags&b_Icon))))
+ 		{
+ 			/* some times we need to clear the real bg.
+ 			 * The pev expose rectangle can be bigger than the real
+ 			 * exposed part (as we rectangle flush and pev can
+ 			 * be a fake event) so we need to clear with xft font
+-			 * and icons with alpha */
++			 * and icons. */
+ 			if (do_draw)
+ 			{
+ 				cleaned = True;
+-				XClearArea(
+-					Dpy, MyWindow, clip.x, clip.y,
+-					clip.width, clip.height, False);
++				XClearArea(Dpy, MyWindow, clip.x,
++					clip.y, clip.width, clip.height,
++					False);
++				if (b == HoverButton &&
++					UberButton->c->flags & b_HoverColorset)
++				{
++					SetRectangleBackground(Dpy, MyWindow,
++						clip.x, clip.y, clip.width,
++						clip.height,
++						&Colorset[UberButton->c->hoverColorset],
++						Pdepth, NormalGC);
++				}
+ 			}
+ 		}
+ 	}
+ 
+ 	/* ------------------------------------------------------------------ */
+ 
+-	if(cleaned && (b->flags&b_Title))
++	if (cleaned && (b->flags & (b_Title|b_HoverTitle)))
+ 	{
+ 		DrawTitle(b,MyWindow,NormalGC,pev,False);
+ 	}
+ 
+-	if (!(b->flags&b_Title) && (b->flags & b_Panel) &&
++	if (!has_title && (b->flags & b_Panel) &&
+ 	    (b->panel_flags.panel_indicator))
+ 	{
+ 		XGCValues gcv;
+@@ -612,10 +653,13 @@
+ 		}
+ 	} /* panel indicator */
+ 
+-	/* redraw icons with alpha because there are drawn on the foreground */
+-	if(cleaned && (b->flags&b_Icon) && (b->flags & b_IconAlpha))
++	if (cleaned)
+ 	{
+-		DrawForegroundIcon(b, pev);
++		if (b->flags & iconFlag)
++		{
++			/* draw icon */
++			DrawForegroundIcon(b, pev);
++		}
+ 	}
+ 
+ 	/* relief */
+@@ -633,13 +677,26 @@
+ 	FlocaleFont *Ffont=buttonFont(b);
+ 	int justify=buttonJustify(b);
+ 	int l,i,xpos;
+-	char *s;
++	char *s = NULL;
+ 	int just=justify&b_TitleHoriz; /* Left, center, right */
+ 	XGCValues gcv;
+ 	unsigned long gcm;
+ 	int cset;
+ 	XRectangle clip;
+ 	Region region = None;
++	FvwmPicture *pic = b->icon;
++	unsigned long iconFlag = b_Icon;
++
++	if (b == HoverButton)
++	{
++		/* If no HoverIcon is specified, we use Icon (if there is
++		   one). */
++		if (b->flags & b_HoverIcon)
++		{
++			pic = b->hovericon;
++			iconFlag = b_HoverIcon;
++		}
++	}
+ 
+ 	BH = buttonHeight(b);
+ 
+@@ -647,7 +704,18 @@
+ 
+ 	/* ------------------------------------------------------------------ */
+ 
+-	if(!(b->flags&b_Title) || !Ffont)
++	/* If this is the current hover button but no explicit HoverTitle was
++	   specified, use the Title (if there is one). */
++	if (b == HoverButton && b->flags & b_HoverTitle)
++	{
++		s = b->hoverTitle;
++	}
++	else if (b->flags & b_Title)
++	{
++		s = b->title;
++	}
++
++	if (!s || !Ffont)
+ 	{
+ 		return;
+ 	}
+@@ -676,10 +744,10 @@
+ 	/* If a title is to be shown, truncate it until it fits */
+ 	if(justify&b_Horizontal && !(b->flags & b_Right))
+ 	{
+-		if(b->flags&b_Icon)
++		if (b->flags & iconFlag)
+ 		{
+-			ix+=b->icon->width+buttonXPad(b);
+-			iw-=b->icon->width+buttonXPad(b);
++			ix += pic->width+buttonXPad(b);
++			iw -= pic->width+buttonXPad(b);
+ 		}
+ 		else if ((b->flags & b_Swallow) && buttonSwallowCount(b)==3)
+ 		{
+@@ -688,7 +756,6 @@
+ 		}
+ 	}
+ 
+-	s = b->title;
+ 	l = strlen(s);
+ 	i = FlocaleTextWidth(Ffont,s,l);
+ 
+@@ -740,7 +807,7 @@
+ 		FwinString.x = xpos;
+ 		/* If there is more than the title, put it at the bottom */
+ 		/* Unless stack flag is set, put it to the right of icon */
+-		if((b->flags&b_Icon ||
++		if ((b->flags & iconFlag ||
+ 		    ((buttonSwallowCount(b)==3) && (b->flags&b_Swallow))) &&
+ 		   !(justify&b_Horizontal))
+ 		{
+diff -u fvwm-2.5.10/modules/FvwmButtons/dynamic.c fvwm/modules/FvwmButtons/dynamic.c
+--- fvwm-2.5.10/modules/FvwmButtons/dynamic.c	2002-11-05 12:30:29.000000000 +0000
++++ fvwm/modules/FvwmButtons/dynamic.c	2004-07-10 10:13:25.000000000 +0100
+@@ -73,16 +73,12 @@
+ 
+ static void change_button_title(button_info *b, const char *text)
+ {
+-	if (!(b->flags & b_Title))
+-	{
+-		show_error("Cannot create a title, only change one\n");
+-		return;
+-	}
+ 	if (text == NULL)
+ 	{
+ 		show_error("No title to change specified, unsupported\n");
+ 		return;
+ 	}
++	b->flags |= b_Title;
+ 	free(b->title);
+ 	CopyString(&b->title, text);
+ 	return;
+@@ -92,11 +88,6 @@
+ {
+ 	FvwmPicture *new_icon;
+ 
+-	if (!(b->flags & b_Icon))
+-	{
+-		show_error("Cannot create an icon, only change one\n");
+-		return;
+-	}
+ 	if (file == NULL)
+ 	{
+ 		show_error("No icon to change specified, unsupported\n");
+@@ -107,22 +98,12 @@
+ 		show_error("Cannot load icon %s\n", file);
+ 		return;
+ 	}
++	b->flags |= b_Icon;
+ 	free(b->icon_file);
+ 	PDestroyFvwmPicture(Dpy, b->icon);
+-	DestroyIconWindow(b);
+ 	b->icon = new_icon;
+ 	CopyString(&b->icon_file, file);
+-	CreateIconWindow(b);
+-	if (b->flags&b_IconAlpha)
+-	{
+-		RedrawButton(b, DRAW_FORCE, NULL);
+-	}
+-	else
+-	{
+-		ConfigureIconWindow(b, NULL);
+-		XMapWindow(Dpy, b->IconWin);
+-	}
+-	return;
++	RedrawButton(b, DRAW_FORCE, NULL);
+ }
+ 
+ #if 0
+@@ -250,6 +231,8 @@
+ {
+ 	"Silent", "ChangeButton", "ExpandButtonVars", NULL
+ };
++
++/* TODO: Should probably allow the HoverIcon & HoverTitle to change one day. */
+ static char *button_options[] =
+ {
+ 	"Title", "Icon", NULL
+diff -u fvwm-2.5.10/modules/FvwmButtons/FvwmButtons.c fvwm/modules/FvwmButtons/FvwmButtons.c
+--- fvwm-2.5.10/modules/FvwmButtons/FvwmButtons.c	2004-02-16 10:18:30.000000000 +0000
++++ fvwm/modules/FvwmButtons/FvwmButtons.c	2004-07-10 10:13:25.000000000 +0100
+@@ -67,7 +67,6 @@
+ #include "FvwmButtons.h"
+ #include "misc.h" /* ConstrainSize() */
+ #include "parse.h" /* ParseConfiguration(), parse_window_geometry() */
+-#include "icons.h" /* CreateIconWindow(), ConfigureIconWindow() */
+ #include "draw.h"
+ #include "dynamic.h"
+ 
+@@ -75,6 +74,7 @@
+ #define MW_EVENTS   (ExposureMask |\
+ 		     StructureNotifyMask |\
+ 		     ButtonReleaseMask | ButtonPressMask |\
++		     LeaveWindowMask | PointerMotionMask |\
+ 		     KeyReleaseMask | KeyPressMask | ButtonMotionMask)
+ /* SW_EVENTS are for swallowed windows... */
+ #define SW_EVENTS   (PropertyChangeMask | StructureNotifyMask |\
+@@ -96,7 +96,7 @@
+ void SetButtonSize(button_info*,int,int);
+ /* main */
+ void Loop(void);
+-void RedrawWindow();
++void RedrawWindow(void);
+ void RecursiveLoadData(button_info*,int*,int*);
+ void CreateUberButtonWindow(button_info*,int,int);
+ int My_FNextEvent(Display *dpy, XEvent *event);
+@@ -162,7 +162,9 @@
+ Bool is_transient = 0;
+ Bool is_transient_panel = 0;
+ 
+-button_info *CurrentButton = NULL;
++/* $CurrentButton is set on ButtonPress, $HoverButton is set whenever the
++   mouse is over a button that is redrawn specially. */
++button_info *CurrentButton = NULL, *HoverButton = NULL;
+ Bool is_pointer_in_current_button = False;
+ int fd[2];
+ 
+@@ -842,27 +844,6 @@
+ 
+   CreateUberButtonWindow(UberButton,maxx,maxy);
+ 
+-#ifdef DEBUG_INIT
+-  fprintf(stderr,"OK\n%s: Creating icon windows...",MyName);
+-#endif
+-
+-  i=-1;
+-  ub=UberButton;
+-  while(NextButton(&ub,&b,&i,0))
+-  {
+-    if(b->flags&b_Icon)
+-    {
+-#ifdef DEBUG_INIT
+-      fprintf(stderr,"0x%06x...",(ushort)b);
+-#endif
+-      CreateIconWindow(b);
+-    }
+-  }
+-
+-#ifdef DEBUG_INIT
+-  fprintf(stderr,"OK\n%s: Configuring windows...",MyName);
+-#endif
+-
+   if (!XGetGeometry(
+     Dpy, MyWindow, &root, &x, &y, (unsigned int *)&Width,
+     (unsigned int *)&Height, (unsigned int *)&border_width, &depth))
+@@ -873,8 +854,6 @@
+   SetButtonSize(UberButton,Width,Height);
+   i=-1;
+   ub=UberButton;
+-  while(NextButton(&ub,&b,&i,0))
+-    ConfigureIconWindow(b, NULL);
+ 
+   if (FShapesSupported)
+   {
+@@ -922,6 +901,30 @@
+   return 0;
+ }
+ 
++/* We get LeaveNotify events when the mouse enters a swallowed window of
++   FvwmButtons, but we're not interested in these situations. */
++static Bool reallyLeaveWindow (const int x, const int y,
++		const Window win, const button_info *b)
++{
++	if (x < 0 || x >= Width || y < 0 || y >= Height)
++	{
++		return True;
++	}
++
++	if (b == NULL)
++	{
++		b = select_button(UberButton, x, y);
++	}
++
++	/* TODO: fix situation when mouse enters window overlapping
++	   with a b_Swallow button. */
++	if (b->flags & b_Swallow)
++	{
++		return False;
++	}
++	return True;
++}
++
+ /* -------------------------------- Main Loop -------------------------------*/
+ 
+ /**
+@@ -1075,20 +1078,68 @@
+       }
+       break;
+ 
+-      case MotionNotify:
++	case MotionNotify:
+ 	{
+-	  Bool f = is_pointer_in_current_button;
++		Bool f = is_pointer_in_current_button, redraw_relief = False;
++		if (Event.xmotion.x < 0 || Event.xmotion.x >= Width ||
++			Event.xmotion.y < 0 || Event.xmotion.y >= Height)
++		{
++			/* cursor is outside of FvwmButtons window. */
++			break;
++		}
+ 
+-	  is_pointer_in_current_button =
+-	    (CurrentButton && CurrentButton ==
+-	     select_button(UberButton, Event.xmotion.x, Event.xmotion.y));
+-	  if (CurrentButton && is_pointer_in_current_button != f)
+-	  {
+-	    RedrawButton(b, DRAW_RELIEF, NULL);
+-	  }
++		/* find out which button the cursor is in now. */
++		b = select_button(UberButton, Event.xmotion.x, Event.xmotion.y);
++
++		is_pointer_in_current_button =
++			(CurrentButton && CurrentButton == b);
++		if (CurrentButton && is_pointer_in_current_button != f)
++		{
++			redraw_relief = True;
++		}
++
++		if (b != HoverButton)
++		{
++			if (HoverButton)
++			{
++				button_info *tmp = HoverButton;
++				HoverButton = b;
++				RedrawButton(tmp, DRAW_FORCE, NULL);
++			}
++			if (b->flags & (b_HoverIcon | b_HoverTitle) ||
++				UberButton->c->flags & b_HoverColorset)
++			{
++				HoverButton = b;
++				RedrawButton(b, DRAW_FORCE, NULL);
++				redraw_relief = False;
++			}
++		}
++
++		if (redraw_relief)
++		{
++			RedrawButton(b, DRAW_RELIEF, NULL);
++		}
+ 	}
+ 	break;
+ 
++	case LeaveNotify:
++	{
++		if (reallyLeaveWindow(Event.xcrossing.x, Event.xcrossing.y,
++			Event.xcrossing.window, NULL))
++		{
++			if (HoverButton)
++			{
++				b = HoverButton;
++				HoverButton = NULL;
++				RedrawButton(b, DRAW_FORCE, NULL);
++			}
++			if (CurrentButton)
++			{
++				RedrawButton(b, DRAW_RELIEF, NULL);
++			}
++		}
++		break;
++	}
+       case KeyPress:
+ 	XLookupString(&Event.xkey,buffer,10,&keysym,0);
+ 	if(keysym!=XK_Return && keysym!=XK_KP_Enter && keysym!=XK_Linefeed)
+@@ -1159,8 +1210,11 @@
+       case ButtonRelease:
+ 	if (CurrentButton == NULL || !is_pointer_in_current_button)
+ 	{
+-	  CurrentButton = NULL;
+-	  break;
++		if (CurrentButton)
++			RedrawButton(CurrentButton, DRAW_RELIEF, NULL);
++
++		CurrentButton = NULL;
++		break;
+ 	}
+ 	if (Event.xbutton.window == MyWindow)
+ 	{
+@@ -1502,7 +1556,7 @@
+ **/
+ void RecursiveLoadData(button_info *b,int *maxx,int *maxy)
+ {
+-  int i,j,x=0,y=0;
++  int i, x=0, y=0, ix, iy, tx, ty, hix, hiy, htx, hty;
+   FlocaleFont *Ffont;
+ 
+   if (!b)
+@@ -1665,9 +1719,14 @@
+     b->c->height=y;
+   }
+ 
+-
+-  i=0;
+-  j=0;
++  /* $ix & $iy are dimensions of Icon
++     $tx & $ty are dimensions of Title
++     $hix & $hiy are dimensions of HoverIcon
++     $htx & $hty are dimensions of HoverTitle
++
++     Note that if No HoverIcon is specified, Icon is displayed during hover.
++     Similarly for HoverTitle. */
++  ix = iy = tx = ty = hix = hiy = htx = hty = 0;
+ 
+   /* Load the icon */
+   if(b->flags&b_Icon && LoadIconFile(b->icon_file,&b->icon, buttonColorset(b)))
+@@ -1675,12 +1734,31 @@
+ #ifdef DEBUG_LOADDATA
+     fprintf(stderr,", icon \"%s\"",b->icon_file);
+ #endif
+-    i=b->icon->width;
+-    j=b->icon->height;
++    ix = b->icon->width;
++    iy = b->icon->height;
+   }
+   else
+     b->flags&=~b_Icon;
+ 
++  /* load the hover icon. */
++  if (b->flags & b_HoverIcon &&
++      LoadIconFile(b->hover_icon_file, &b->hovericon, buttonColorset(b)))
++  {
++#ifdef DEBUG_LOADDATA
++    fprintf(stderr,", hover icon \"%s\"", b->hover_icon_file);
++#endif
++
++    hix = b->hovericon->width;
++    hiy = b->hovericon->height;
++  }
++  else
++  {
++    hix = ix;
++    hiy = iy;
++    b->flags&=~b_HoverIcon;
++  }
++
++
+   if(b->flags&b_Title && (Ffont = buttonFont(b)))
+   {
+ #ifdef DEBUG_LOADDATA
+@@ -1688,18 +1766,41 @@
+ #endif
+     if(buttonJustify(b)&b_Horizontal)
+     {
+-      i+=buttonXPad(b)+FlocaleTextWidth(Ffont,b->title,strlen(b->title));
+-      j=max(j,Ffont->height);
++      tx = buttonXPad(b) + FlocaleTextWidth(Ffont, b->title, strlen(b->title));
++      ty = Ffont->height;
++    }
++    else
++    {
++      tx = FlocaleTextWidth(Ffont,b->title,strlen(b->title));
++      ty = Ffont->height;
++    }
++  }
++
++  if (b->flags & b_HoverTitle && (Ffont = buttonFont(b)))
++  {
++#ifdef DEBUG_LOADDATA
++    fprintf(stderr,", title \"%s\"",b->title);
++#endif
++    if (buttonJustify(b) & b_Horizontal)
++    {
++      htx = buttonXPad(b) + FlocaleTextWidth(Ffont, b->hoverTitle,
++	      strlen(b->hoverTitle));
++      hty = Ffont->height;
+     }
+     else
+     {
+-      i=max(i,FlocaleTextWidth(Ffont,b->title,strlen(b->title)));
+-      j+=Ffont->height;
++      htx = FlocaleTextWidth(Ffont,b->hoverTitle,strlen(b->hoverTitle));
++      hty = Ffont->height;
+     }
+   }
++  else
++  {
++    htx = tx;
++    hty = ty;
++  }
+ 
+-  x+=i;
+-  y+=j;
++  x += max(max(ix, tx), max(hix, htx));
++  y += max(iy + ty, hiy + hty);
+ 
+   if(b->flags&b_Size)
+   {
+@@ -2405,21 +2506,6 @@
+ 		}
+ 		else
+ 		{
+-			if (Event == NULL && b->flags&b_Icon)
+-			{
+-				/* FIXME do that only if we have an icon
+-				 * colorset */
+-				DestroyIconWindow(b);
+-				CreateIconWindow(b);
+-				if (b->flags&b_Icon)
+-				{
+-					if (!(b->flags&b_IconAlpha))
+-					{
+-						ConfigureIconWindow(b, NULL);
+-						XMapWindow(Dpy,b->IconWin);
+-					}
+-				}
+-			}
+ 			RedrawButton(b, DRAW_ALL, NULL);
+ 		}
+ 	}
+@@ -2463,32 +2549,12 @@
+ 						b, True);
+ 				}
+ 			}
+-			else if (Event == NULL && b->flags&b_Icon &&
+-				 buttonColorset(b) == colorset)
+-			{
+-				/* FIXME do that only if we have an icon
+-				 * colorset */
+-				DestroyIconWindow(b);
+-				CreateIconWindow(b);
+-				if (b->flags&b_Icon)
+-				{
+-					if (!(b->flags&b_IconAlpha))
+-					{
+-						ConfigureIconWindow(b, NULL);
+-						XMapWindow(Dpy,b->IconWin);
+-					}
+-				}
+-			}
+ 		}
+-
+ 		return;
+ 	}
+ 
+ 	recursive_change_colorset(
+ 		UberButton->c, colorset, Event);
+-
+-
+-	return;
+ }
+ 
+ static void handle_config_info_packet(unsigned long *body)
+diff -u fvwm-2.5.10/modules/FvwmButtons/FvwmButtons.h fvwm/modules/FvwmButtons/FvwmButtons.h
+--- fvwm-2.5.10/modules/FvwmButtons/FvwmButtons.h	2003-08-07 10:34:27.000000000 +0100
++++ fvwm/modules/FvwmButtons/FvwmButtons.h	2004-07-10 10:13:25.000000000 +0100
+@@ -74,7 +74,9 @@
+ #define b_ActionOnPress \
+ 		     0x02000000 /* By default this only done on Popup */
+ #define b_Id         0x04000000 /* Has a user defined id for referencing */
+-#define b_IconAlpha  0x08000000 /* Icon has an alpha chanel */
++#define b_HoverIcon  0x08000000 /* Contains HoverIcon */
++#define b_HoverColorset  0x10000000 /* Use alternate colorset for button on hover*/
++#define b_HoverTitle  0x20000000 /* Use alternate Title text on hover*/
+ 
+ /* Flags for b->swallow */
+ #define b_Count       0x0003 /* Init counter for swallowing */
+@@ -121,6 +123,7 @@
+   char *back_file;         /* b_Back && b_IconBack */
+   char *fore;              /* b_Fore */
+   int colorset;            /* b_Colorset */
++  int hoverColorset;       /* b_HoverColorset */
+   Pixel fc;                /* b_Fore */
+   Pixel bc,hc,sc;          /* b_Back && !b_IconBack */
+   FvwmPicture *backicon;   /* b_Back && b_IconBack */
+@@ -161,15 +164,18 @@
+   byte justify_mask;       /* b_Justify */
+   container_info *c;       /* b_Container */
+   char *title;             /* b_Title */
++  char *hoverTitle;        /* b_HoverTitle */
+   char **action;           /* b_Action */
+   char *icon_file;         /* b_Icon */
++  char *hover_icon_file;   /* b_HoverIcon */
+   char *hangon;            /* b_Hangon || b_Swallow */
+   Pixel fc;                /* b_Fore */
+   Pixel bc,hc,sc;          /* b_Back && !b_IconBack */
+   ushort minx,miny;        /* b_Size */
+   FvwmPicture *icon;       /* b_Icon */
+   FvwmPicture *backicon;   /* b_Back && b_IconBack */
+-  Window IconWin;          /* b_Icon || b_Swallow */
++  FvwmPicture *hovericon;  /* b_HoverIcon */
++  Window IconWin;          /* b_Swallow */
+   Window PanelWin;         /* b_Panel */
+   Window BackIconWin;      /* b_Back && b_IconBack */
+ 
+@@ -233,7 +239,7 @@
+ extern Window Root;
+ extern Window MyWindow;
+ extern char *MyName;
+-extern button_info *UberButton,*CurrentButton;
++extern button_info *UberButton, *CurrentButton, *HoverButton;
+ extern Bool is_pointer_in_current_button;
+ 
+ extern char *imagePath;
+diff -u fvwm-2.5.10/modules/FvwmButtons/icons.c fvwm/modules/FvwmButtons/icons.c
+--- fvwm-2.5.10/modules/FvwmButtons/icons.c	2003-06-29 20:53:24.000000000 +0100
++++ fvwm/modules/FvwmButtons/icons.c	2004-07-10 10:13:25.000000000 +0100
+@@ -58,193 +58,64 @@
+ #include "libs/Colorset.h"
+ #include "libs/Rectangles.h"
+ 
+-/*
+- *
+- * Creates an Icon Window
+- *
+- */
+-void CreateIconWindow(button_info *b)
+-{
+-#ifndef NO_ICONS
+-	unsigned long valuemask;             /* mask for create windows */
+-	XSetWindowAttributes attributes;     /* attributes for create windows */
+-	Pixel bc,fc;
+-	int cset;
+-	FvwmRenderAttributes fra;
+-	Pixmap temp;
+-
+-	if(!(b->flags&b_Icon))
+-	{
+-		return;
+-	}
+-
+-	if(b->IconWin != None)
+-	{
+-		fprintf(stderr,"%s: BUG: Icon window already created "
+-			"for 0x%lx!\n", MyName,(unsigned long)b);
+-		return;
+-	}
+-	if(b->icon->width<1 || b->icon->height<1)
+-	{
+-		fprintf(stderr,"%s: BUG: Illegal iconwindow "
+-			"tried created\n",MyName);
+-		exit(2);
+-	}
+-
+-	cset = buttonColorset(b);
+-	if (b->icon->alpha != None ||
+-	    (cset >= 0 && Colorset[cset].icon_alpha_percent < 100 &&
+-	     !(UberButton->c->flags&b_TransBack)))
+-	{
+-		/* in this case we drawn on the button, with a shaped
+-		 * Buttons we do not load the alpha channel */
+-		b->flags |= b_IconAlpha;
+-		return;
+-	}
+-
+-	cset = buttonColorset(b);
+-	fra.mask = FRAM_DEST_IS_A_WINDOW;
+-	if (cset >= 0)
+-	{
+-		bc = Colorset[cset].bg;
+-		fc = Colorset[cset].fg;
+-		fra.mask |= FRAM_HAVE_ICON_CSET;
+-		fra.colorset = &Colorset[cset];
+-		if (Colorset[cset].icon_alpha_percent < 100)
+-		{
+-			fra.added_alpha_percent = 100;
+-			fra.mask |= FRAM_HAVE_ADDED_ALPHA;
+-		}
+-	}
+-	else
+-	{
+-		bc = buttonBack(b);
+-		fc = buttonFore(b);
+-		fra.mask = 0;
+-	}
+-
+-	valuemask = CWColormap | CWBorderPixel | CWBackPixel |
+-		CWEventMask | CWBackPixmap;
+-	attributes.colormap = Pcmap;
+-	attributes.border_pixel = 0;
+-	attributes.background_pixel = bc;
+-	attributes.background_pixmap = None;
+-	attributes.event_mask = ExposureMask;
+-
+-	b->IconWin=XCreateWindow(
+-		Dpy, MyWindow, 0, 0, b->icon->width, b->icon->height, 0,
+-		Pdepth, InputOutput, Pvisual, valuemask, &attributes);
+-	if (attributes.background_pixel != None)
+-	{
+-		XSetWindowBackground(
+-			Dpy, b->IconWin, attributes.background_pixel);
+-	}
+-
+-	if (FShapesSupported)
+-	{
+-		if (b->icon->mask!=None)
+-		{
+-			FShapeCombineMask(Dpy, b->IconWin, FShapeBounding,
+-					  0, 0, b->icon->mask, FShapeSet);
+-		}
+-	}
+-
+-	if(b->icon->depth != Pdepth)
+-	{
+-		/* bitmap icon */
+-		XGCValues gcv;
+-
+-		gcv.background= bc;
+-		gcv.foreground= fc;
+-		XChangeGC(Dpy,NormalGC,GCForeground | GCBackground,&gcv);
+-
+-		if (FShapesSupported)
+-		{
+-			FShapeCombineMask(Dpy, b->IconWin, FShapeBounding,
+-					  0, 0, b->icon->picture, FShapeSet);
+-		}
+-	}
+-
+-	if (cset >= 0 && Colorset[cset].icon_tint_percent > 0)
+-	{
+-		temp = XCreatePixmap(
+-			Dpy, MyWindow, b->icon->width, b->icon->height, Pdepth);
+-		PGraphicsRenderPicture(
+-			Dpy, MyWindow, b->icon, &fra, temp,
+-			NormalGC, None, None,
+-			0, 0, b->icon->width, b->icon->height,
+-			0, 0, 0, 0, False);
+-		XSetWindowBackgroundPixmap(Dpy, b->IconWin, temp);
+-		XFreePixmap(Dpy,temp);
+-	}
+-	else
+-	{
+-		/* pixmap icon */
+-		XSetWindowBackgroundPixmap(Dpy, b->IconWin, b->icon->picture);
+-	}
+-
+-	return;
+-#endif
+-}
+-
+-void DestroyIconWindow(button_info *b)
+-{
+-#ifndef NO_ICONS
+-	if(!(b->flags&b_Icon) || (b->flags&b_IconAlpha))
+-	{
+-		b->flags &= ~b_IconAlpha;
+-		return;
+-	}
+-	XDestroyWindow(Dpy, b->IconWin);
+-	b->IconWin = None;
+-#endif
+-}
+ 
+ /*
+  *
+  * Combines icon shape masks after a resize
+  *
+  */
+-Bool GetIconWindowPosition(
+-	button_info *b, int *r_x, int *r_y, int *r_w, int *r_h)
++Bool GetIconPosition(button_info *b, unsigned long iconFlag, int *r_x,
++	int *r_y, int *r_w, int *r_h)
+ {
+ #ifdef NO_ICONS
+-	return 0;
++	return False;
+ #else
+-	int x,y,w,h;
++	int x,y,width,height;
+ 	int xoff,yoff;
+ 	int framew,xpad,ypad;
+ 	FlocaleFont *Ffont;
+ 	int BW,BH;
++	FvwmPicture *pic = b->icon;
++	Bool has_title = (b->flags & b_Title ? True : False);
+ 
+-	if(!b || !(b->flags&b_Icon))
+-		return 0;
+-
+-	if(!b->IconWin && !(b->flags&b_IconAlpha))
++	if (iconFlag & b_HoverIcon)
+ 	{
+-		fprintf(stderr,"%s: DEBUG: Tried to configure erroneous "
+-			"iconwindow\n", MyName);
+-		exit(2);
++		/* If no HoverIcon is specified, we use Icon (if there is
++		   one). */
++		if (b->flags & b_HoverIcon)
++		{
++			pic = b->hovericon;
++		}
++		/* If no HoverTitle is specified, we use Title (if there is
++		   one). */
++		if (b->flags & b_HoverTitle)
++		{
++			has_title = True;
++		}
+ 	}
+ 
+ 	buttonInfo(b,&x,&y,&xpad,&ypad,&framew);
+ 	framew=abs(framew);
+ 	Ffont = buttonFont(b);
+ 
+-	w = b->icon->width;
+-	h = b->icon->height;
++	width = pic->width;
++	height = pic->height;
+ 	BW = buttonWidth(b);
+ 	BH = buttonHeight(b);
+ 
+-	w=min(w,BW-2*(xpad+framew));
++	width=min(width,BW-2*(xpad+framew));
+ 
+-	if(b->flags&b_Title && Ffont && !(buttonJustify(b)&b_Horizontal))
+-		h = min(h,BH-2*(ypad+framew)-Ffont->ascent-Ffont->descent);
++	if (has_title == True && Ffont && !(buttonJustify(b)&b_Horizontal))
++	{
++		height = min(height,BH-2*(ypad+framew)-Ffont->ascent-Ffont->descent);
++	}
+ 	else
+-		h = min(h,BH-2*(ypad+framew));
++	{
++		height = min(height,BH-2*(ypad+framew));
++	}
+ 
+ 	if (b->flags & b_Right)
+-		xoff = BW-framew-xpad-w;
++		xoff = BW-framew-xpad-width;
+ 	else if (b->flags & b_Left)
+ 		xoff = framew+xpad;
+ 	else
+@@ -252,15 +123,15 @@
+ 		if(buttonJustify(b)&b_Horizontal)
+ 			xoff=0;
+ 		else
+-			xoff=(BW-w)>>1;
++			xoff=(BW-width)>>1;
+ 		if(xoff < framew+xpad)
+ 			xoff = framew+xpad;
+ 	}
+ 
+-	if(b->flags&b_Title && Ffont && !(buttonJustify(b)&b_Horizontal))
+-		yoff=(BH-(h+Ffont->height))>>1;
++	if (has_title == True && Ffont && !(buttonJustify(b)&b_Horizontal))
++		yoff=(BH-(height+Ffont->height))>>1;
+ 	else
+-		yoff=(BH-h)>>1;
++		yoff=(BH-height)>>1;
+ 
+ 	if(yoff < framew+ypad)
+ 		yoff = framew+ypad;
+@@ -270,10 +141,10 @@
+ 
+ 	*r_x = x;
+ 	*r_y = y;
+-	*r_w = w;
+-	*r_h = h;
++	*r_w = width;
++	*r_h = height;
+ 
+-	return 1;
++	return True;
+ #endif
+ }
+ 
+@@ -284,20 +155,24 @@
+ 	int cset;
+ 	XRectangle clip;
+ 	FvwmRenderAttributes fra;
++	unsigned long iconFlag = b_Icon;
++	unsigned long flag = (b == HoverButton ? b_HoverIcon : b_Icon);
+ 
+-	if (!GetIconWindowPosition(b,&x,&y,&w,&h))
++	FvwmPicture *pic = b->icon;
++	if (b == HoverButton && b->flags & b_HoverIcon)
+ 	{
+-		return;
++		iconFlag = b_HoverIcon;
++		pic = b->hovericon;
+ 	}
+ 
+-	if(w < 1 || h < 1)
++	if (!GetIconPosition(b, flag, &x,&y,&w,&h))
+ 	{
+-		return; /* No need drawing to this */
++		return;
+ 	}
+ 
+-	if (!(b->flags & b_IconAlpha))
++	if(w < 1 || h < 1)
+ 	{
+-		return;
++		return; /* No need drawing to this */
+ 	}
+ 
+ 	clip.x = x;
+@@ -331,50 +206,11 @@
+ 		fra.mask |= FRAM_HAVE_ICON_CSET;
+ 		fra.colorset = &Colorset[cset];
+ 	}
++
+ 	PGraphicsRenderPicture(
+-		Dpy, MyWindow, b->icon, &fra, MyWindow,
++		Dpy, MyWindow, pic, &fra, MyWindow,
+ 		NormalGC, None, None,
+ 		clip.x - x, clip.y - y, clip.width, clip.height,
+ 		clip.x, clip.y, clip.width, clip.height, False);
+ #endif
+ }
+-
+-void ConfigureIconWindow(button_info *b, XEvent *pev)
+-{
+-#ifndef NO_ICONS
+-	int x,y,w,h;
+-
+-	if (!b->IconWin)
+-	{
+-		return;
+-	}
+-	if (!GetIconWindowPosition(b,&x,&y,&w,&h))
+-	{
+-		return;
+-	}
+-	if (!b->IconWin)
+-	{
+-		return;
+-	}
+-
+-	if(w < 1 || h < 1)
+-	{
+-		if (b->IconWin)
+-			XMoveResizeWindow(Dpy, b->IconWin, 2000,2000,1,1);
+-		return; /* No need drawing to this */
+-	}
+-
+-	if (!pev && b->IconWin)
+-	{
+-		XMoveResizeWindow(Dpy, b->IconWin, x,y,w,h);
+-	}
+-
+-	return;
+-
+-	if (!(b->flags & b_IconAlpha))
+-	{
+-		return;
+-	}
+-
+-#endif
+-}
+diff -u fvwm-2.5.10/modules/FvwmButtons/icons.h fvwm/modules/FvwmButtons/icons.h
+--- fvwm-2.5.10/modules/FvwmButtons/icons.h	2003-06-29 20:53:24.000000000 +0100
++++ fvwm/modules/FvwmButtons/icons.h	2004-07-10 10:13:25.000000000 +0100
+@@ -13,7 +13,4 @@
+  *
+  */
+ 
+-void CreateIconWindow(button_info*);
+-void DestroyIconWindow(button_info *b);
+ void DrawForegroundIcon(button_info *b, XEvent *pev);
+-void ConfigureIconWindow(button_info*, XEvent *pev);
+Only in fvwm-2.5.10/modules/FvwmButtons: Makefile.in
+diff -u fvwm-2.5.10/modules/FvwmButtons/parse.c fvwm/modules/FvwmButtons/parse.c
+--- fvwm-2.5.10/modules/FvwmButtons/parse.c	2003-08-25 07:47:08.000000000 +0100
++++ fvwm/modules/FvwmButtons/parse.c	2004-07-10 10:13:25.000000000 +0100
+@@ -751,8 +751,7 @@
+ 
+     default:
+       t=seekright(&s);
+-      fprintf(stderr,"%s: Illegal container option \"%s\"\n",MyName,
+-	      (t)?t:"");
++      fprintf(stderr,"%s: Illegal container option \"%s\"\n",MyName, (t)?t:"");
+       if (t)
+ 	free(t);
+     }
+@@ -803,6 +802,8 @@
+       "colorset",
+       "action",
+       "id",
++      "hovericon",
++      "hovertitle",
+       NULL
+     };
+     s = trimleft(s);
+@@ -937,7 +938,6 @@
+ 	    if (b->icon_file)
+ 	      free(b->icon_file);
+ 	    b->icon_file=t;
+-	    b->IconWin=None;
+ 	    b->flags|=b_Icon;
+ 	  }
+ 	}
+@@ -1251,6 +1251,69 @@
+ 	}
+ 	break;
+ 
++	/* ---------------------------- HoverIcon ------------------------- */
++	case 21: /* HoverIcon */
++		t=seekright(&s);
++		if(t && *t && (t[0] != '-' || t[1] != 0))
++		{
++			if (b->flags & b_Swallow)
++			{
++				fprintf(stderr,"%s: a button can not have a "
++					"hover icon and a swallowed window at "
++					"the same time. Ignoring hover icon.",
++					MyName);
++			}
++			else
++			{
++				if (b->hover_icon_file)
++					free(b->hover_icon_file);
++				b->hover_icon_file = t;
++				b->flags |= b_HoverIcon;
++			}
++		}
++		else
++		{
++			fprintf(stderr,"%s: Missing hover icon argument\n",
++				MyName);
++			if(t)
++			{
++				free(t);
++			}
++		}
++		break;
++
++	/* ------------------------- HoverTitle ------------------------- */
++	case 22: /* HoverTitle */
++		s = trimleft(s);
++		if (*s=='(')
++		{
++			fprintf(stderr,"%s: justification not allowed for "
++				"HoverTitle.\n", MyName);
++		}
++		t = seekright(&s);
++		if(t && *t && (t[0] != '-' || t[1] != 0))
++		{
++			if (b->hoverTitle)
++			{
++				free(b->hoverTitle);
++			}
++			b->hoverTitle = t;
++#ifdef DEBUG_PARSER
++			fprintf(stderr,"PARSE: HoverTitle \"%s\"\n", b->hoverTitle);
++#endif
++			b->flags |= b_HoverTitle;
++		}
++		else
++		{
++			fprintf(stderr,"%s: Missing HoverTitle argument\n",MyName);
++			if (t)
++			{
++				free(t);
++			}
++		}
++		break;
++
++	/* ------------------------- ------------------------- */
+       default:
+ 	t=seekright(&s);
+ 	fprintf(stderr,"%s: Illegal button option \"%s\"\n",MyName,
+@@ -1292,7 +1355,6 @@
+        ((b->icon_file)[0]!='-'||(b->icon_file)[1]!=0))
+     {
+       b->flags|=b_Icon;
+-      b->IconWin=None;
+     }
+     else
+       if(b->icon_file)free(b->icon_file);
+@@ -1370,6 +1432,7 @@
+     "pixmap",
+     "boxsize",
+     "colorset",
++    "hovercolorset",
+     NULL
+   };
+   int i,j,k;
+@@ -1468,6 +1531,20 @@
+       ub->c->flags &= ~b_Colorset;
+     }
+     break;
++  case 13: /* HoverColorset */
++    i = sscanf(s, "%d", &j);
++    if (i > 0)
++    {
++      ub->c->hoverColorset = j;
++      ub->c->flags |= b_HoverColorset;
++      AllocColorset(j);
++    }
++    else
++    {
++      ub->c->flags &= ~b_HoverColorset;
++    }
++    break;
++
+   default:
+     s = trimleft(s);
+     ParseButton(ubb,s);
