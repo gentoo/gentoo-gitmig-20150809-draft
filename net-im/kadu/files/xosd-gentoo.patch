@@ -1,0 +1,38 @@
+--- modules/xosd_notify/xosd_notify.cpp.orig	2005-02-27 16:21:08.000000000 +0100
++++ modules/xosd_notify/xosd_notify.cpp	2005-03-18 11:56:17.521249672 +0100
+@@ -51,7 +51,7 @@
+ 					"NewChat"<<"NewMessage"<<"Error"<<"OtherMessage";
+ 
+ 	int val;
+-	CONST_FOREACH(it, optionPrefixes)
++	FOREACH(it, optionPrefixes)
+ 	{
+ 		config_file.addVariable("XOSD", (*it)+"Position", 4);
+ 		val = config_file.readNumEntry("XOSD", (*it)+"Position");
+@@ -392,7 +392,7 @@
+ 	}
+ 	
+ 	int y_offset = config_file.readNumEntry("XOSD", QString("OffsetY%1").arg(position));
+-	CONST_FOREACH(line, lines[position])
++	FOREACH(line, lines[position])
+ 	{
+ 		xosd_set_vertical_offset((*line).handle, y_offset);
+ 		xosd_hide((*line).handle);
+@@ -456,7 +456,7 @@
+ 	toggled_SetAll(config_file.readBoolEntry("XOSD", "SetAll"));
+ 
+ 	configs.clear();
+-	CONST_FOREACH(prefix, optionPrefixes)
++	FOREACH(prefix, optionPrefixes)
+ 	{
+ 		TestConfig c;
+ 		c.type = *prefix;
+@@ -498,7 +498,7 @@
+ {
+ 	kdebugf();
+ 
+-	CONST_FOREACH(prefix, optionPrefixes)
++	FOREACH(prefix, optionPrefixes)
+ 	{
+ 		TestConfig c = configs[*prefix];
+ 		config_file.writeEntry("XOSD", (*prefix)+"Position", c.position);

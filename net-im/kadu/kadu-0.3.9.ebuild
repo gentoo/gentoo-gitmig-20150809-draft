@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.3.9.ebuild,v 1.3 2004/09/29 11:56:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.3.9.ebuild,v 1.4 2005/03/18 15:11:32 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 
-IUSE="debug alsa arts esd kadu-voice nas oss spell ssl tcltk xmms"
+IUSE="debug alsa arts esd voice nas oss spell ssl tcltk xmms"
 
 DEPEND=">=x11-libs/qt-3.0.1
 	alsa? ( media-libs/alsa-lib virtual/alsa )
@@ -38,7 +38,7 @@ src_compile() {
 
 	# static modules (disable only, do not compile as .so)
 	use ssl || module_config encryption n
-	use kadu-voice || module_config voice n
+	use voice || module_config voice n
 
 	# dynamic modules
 	use alsa || use oss || module_config dsp_sound n
