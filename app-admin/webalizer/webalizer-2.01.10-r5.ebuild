@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r5.ebuild,v 1.9 2004/07/06 23:17:12 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r5.ebuild,v 1.10 2004/07/09 10:53:36 satya Exp $
 
 inherit eutils
 
@@ -26,23 +26,29 @@ DEPEND="=sys-libs/db-1*
 src_unpack() {
 	unpack ${A} ; cd ${S}
 	# fix --enable-dns; our db1 headers are in /usr/include/db1
-#	mv dns_resolv.c dns_resolv.c.orig
-#	sed -e 's%^\(#include \)\(<db.h>\)\(.*\)%\1<db1/db.h>\3%' \
-#		dns_resolv.c.orig > dns_resolv.c
+	#	mv dns_resolv.c dns_resolv.c.orig
+	#	sed -e 's%^\(#include \)\(<db.h>\)\(.*\)%\1<db1/db.h>\3%' \
+	#		dns_resolv.c.orig > dns_resolv.c
 	sed -i -e "s,db_185.h,db.h," configure
 
-	if use geoip ; then
-		( cd ${WORKDIR} && unpack geolizer_${MY_PV}-patch.20040216.tar.bz2 )
+	if use geoip; then
+		cd ${WORKDIR}
 		epatch ${WORKDIR}/geolizer_${MY_PV}-patch/geolizer.patch || die
+	else
+		# pretty printer for numbers
+		cd ${S} && epatch ${FILESDIR}/output.c.patch || die
 	fi
-
-	# pretty printer for numbers
-	epatch ${FILESDIR}/output.c.patch || die
 }
 
 src_compile() {
-	myconf="`use_enable geoip`"
-	econf ${myconf} --enable-dns --with-db=/usr/include/db1/ || die
+	if use geoip; then
+		myconf="`use_enable geoip`"
+	else
+		myconf="--enable-dns"
+	fi
+	myconf="${myconf} --with-db=/usr/include/db1/"
+	einfo "Configuration: ${myconf}"
+	econf ${myconf} || die
 	make || die
 }
 
