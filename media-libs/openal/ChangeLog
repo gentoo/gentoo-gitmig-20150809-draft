@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.12 2004/02/19 15:31:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.13 2004/02/20 23:38:40 wolf31o2 Exp $
+
+  20 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> openal-20040218.ebuild:
+  Fixed dependency for alsa >=alsa-libs-1.0.2.
 
   19 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> openal-20040218.ebuild,
   files/openalrc:
