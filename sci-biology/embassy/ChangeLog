@@ -1,0 +1,24 @@
+# ChangeLog for app-sci/embassy
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/ChangeLog,v 1.1 2004/12/23 23:13:35 ribosome Exp $
+
+*embassy-2.9.0 (23 Dec 2004)
+
+  23 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +embassy-2.9.0.ebuild:
+  Moved from app-sci/embassy to sci-biology/embassy.
+
+  31 Oct 2004; Olivier Fisette <ribosome@gentoo.org> embassy-2.9.0.ebuild:
+  Added to x86.
+
+  04 Sep 2004; Thomas Matthijs <axxo@gentoo.org> embassy-2.9.0.ebuild:
+  fix depend syntax 58347
+
+  21 Jul 2004; David Holm <dholm@gentoo.org> embassy-2.9.0.ebuild:
+  Added to ~ppc.
+
+* embassy-2.9.0 (19 Jul 2004)
+
+  19 Jul 2004; Olivier Fisette <ribosome@gentoo.org>
+  embassy-2.9.0.ebuild, metadata.xml, ChangeLog
+  Initial import.
