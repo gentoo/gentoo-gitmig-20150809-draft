@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/files/autofs.rc9,v 1.1 2004/12/09 07:25:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/files/autofs.rc9,v 1.2 2004/12/09 08:25:48 robbat2 Exp $
 
 # rc file for automount using a Sun-style "master map".
 # We first look for a local /etc/autofs/auto.master, then a YP
@@ -139,9 +139,17 @@ function getmounts()
 start() {
 	ebegin "Starting automounter"
 	# ensure autofs support is loaded
-	grep -q autofs /proc/filesystems || modprobe -q autofs
-	[ $? -ne 0 ] && eend 1 "No autofs support available"
-	# now start working
+	grep -q autofs /proc/filesystems || modprobe -q autofs autofs4
+	if [ $? -ne 0 ]; then
+		eend 1 "No autofs support available"
+		exit 1
+	fi
+	# Check that maps exist
+	if [ -z "$(getmounts)" ]; then
+		eend 1 "No automount maps defined"
+		exit 1
+	fi
+	# Now go
 	getmounts | while read cmd timeout time mnt rest
 	do
 		#FIXME: this works but it really sucks
