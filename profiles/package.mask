@@ -22,10 +22,6 @@
 ##   End example
 ##
 
-# <aliz@gentoo.org> (30 Jul 2002)
-# Masked until we now it wont break things
-=dev-libs/openssl-0.9.6e
-
 # Dan Armak <danarmak@gentoo.org> (30 Jul 2002)
 # masked for testing
 media-video/kxine
