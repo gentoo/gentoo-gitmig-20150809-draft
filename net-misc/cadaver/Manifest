@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6e3061f1393ecb3a21717e7002a61be4 cadaver-0.22.2.ebuild 670
-MD5 1cd90af427c4e3dfaac46d3cfbe93085 ChangeLog 1418
+MD5 561391ecb6aeb992025ff69fae975044 ChangeLog 1524
+MD5 81f98fd8e0e4dedde11dd393cb091da2 cadaver-0.22.2.ebuild 673
 MD5 25df207628326afd1425d1364434fa46 files/digest-cadaver-0.22.2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (Darwin)
-
-iD8DBQFBXO15VWNWqTUmv+0RApb1AKCFx/fEdAiasqYE0c2jiU2FBOFIPgCcD1Dm
-/Exif+oXXFx/5Zo6vhN4ino=
-=v7dF
------END PGP SIGNATURE-----
