@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/yatex-1.71.ebuild,v 1.1 2003/09/12 01:35:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/yatex-1.71.ebuild,v 1.2 2003/10/07 14:36:18 usata Exp $
 
 inherit elisp
 
@@ -14,8 +14,8 @@ KEYWORDS="~x86"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="virtual/emacs
-	cjk? app-i18n/nkf"
+DEPEND="${RDEPEND}
+	cjk? ( app-i18n/nkf )"
 RDEPEND="virtual/emacs"
 
 S=${WORKDIR}/${P/-/}
@@ -29,7 +29,24 @@ src_unpack() {
 
 src_compile() {
 
-	emacs -q -batch -l ./yatexlib.el -e batch-byte-compile *.el  || die
+	local yahtml common lisp yahtmllisp
+	yahtml="yahtml.el"
+	common="yatexlib.el yatexprc.el"
+	lisp="comment.el yatex.el yatexadd.el yatexgen.el
+		yatexenv.el ${common} yatexmth.el
+		yatexhks.el yatexhlp.el yatexm-o.el yatexsec.el
+		yatexhie.el ${yahtml}"
+	yahtmllisp="${yahtml} ${common}"
+
+	emacs -q --no-site-file -batch \
+		-l ${FILESDIR}/lp.el \
+		-l ./yatexlib.el \
+		-e batch-byte-compile ${lisp} || die
+	emacs -q --no-site-file -batch \
+		-l ${FILESDIR}/lp.el \
+		-l ./yatexlib.el \
+		-e bcf-and-exit ${yahtmllisp} || die
+
 	cd docs
 	mv yatexe yatex.info
 	mv yahtmle yahtml.info
