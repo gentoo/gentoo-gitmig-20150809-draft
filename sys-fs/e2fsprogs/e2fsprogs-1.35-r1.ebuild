@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35-r1.ebuild,v 1.5 2004/11/12 03:21:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35-r1.ebuild,v 1.6 2004/11/12 03:36:23 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -11,12 +11,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm hppa amd64 ~ia64 ~ppc64 ~s390"
-IUSE="nls static"
+IUSE="nls static diet"
 
-DEPEND="virtual/libc
+RDEPEND="!diet? ( virtual/libc )
+	diet? ( dev-libs/dietlibc )"
+DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	sys-apps/texinfo"
-RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
@@ -44,6 +45,7 @@ src_compile() {
 	use static \
 		&& myconf="${myconf} --with-ldopts=-static" \
 		|| myconf="${myconf} --enable-dynamic-e2fsck --enable-elf-shlibs"
+	use diet && myconf="${myconf} --with-diet-libc"
 	econf \
 		$(use_enable nls) \
 		${myconf} || die
@@ -110,7 +112,6 @@ src_install() {
 	# There are awk files that don't get installed when doing
 	# a 'make install'.  They are the template files for
 	# /bin/compile_et.
-
 	cd ${S}/$(get_libdir)/et
 	insinto /usr/share/et
 	doins et_c.awk et_h.awk
