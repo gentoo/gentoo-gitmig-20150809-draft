@@ -129,7 +129,7 @@ global $uid, $dbusername, $show_privates, $list; ?>
 					$query = mysql_query( "select leader,gid from teams" );
 					while ( $row = mysql_fetch_array($query) ) {
 						if ( $row['leader'] == $uid ) {
-							$leaderof = team_num_name( $row['gid'] );
+							$leaderof[] = team_num_name( $row['gid'] );
 							break;
 						}
 					}
@@ -137,14 +137,18 @@ global $uid, $dbusername, $show_privates, $list; ?>
 					$query = mysql_query( "select admin from users where uid=$uid" );
 					list( $admin ) = mysql_fetch_row( $query );
 
-					if ( $leaderof ) { ?>
-						<li><a href="teamedit.php">Edit team <?=$leaderof;?></a>
-					<?php }
 					if ( $admin ) { ?>
 						<li><a href="useredit.php">Edit Users</a>
 					<?php } ?>
 			</ul>
-				<? } ?>
+					<?php if ( $leaderof ) { ?>
+			<ul>
+						<?php while ( $each = each($leaderof) ) { ?>
+				<li><a href="teamedit.php">Edit Team <?=$each['value'];?></a>
+						<?php } ?>
+			</ul>
+					<?php }
+				} ?>
 
 			<p style="font-size:x-small;font-weight:bold;">Teams</p>
 			<ul>
