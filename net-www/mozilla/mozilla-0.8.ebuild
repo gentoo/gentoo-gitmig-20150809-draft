@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.8.ebuild,v 1.1 2001/02/16 17:49:05 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.8.ebuild,v 1.2 2001/02/21 20:33:34 pete Exp $
 
 A=mozilla-source-${PV}.tar.gz
 S=${WORKDIR}/mozilla
@@ -17,12 +17,16 @@ DEPEND=">=gnome-base/ORBit-0.5.6
 	>=media-libs/libpng-1.0.7"
 
 src_compile() {
-
     cd ${S}
-    try ./configure --prefix=/opt/mozilla --host=${CHOST} \
-	--with-gtk	-enable-mathml --enable-svg 
+    if [ "${DEBUG}" ]
+    then
+        try ./configure --prefix=/opt/mozilla --host=${CHOST} \
+	    --with-gtk -enable-mathml --enable-svg
+    else
+        try ./configure --prefix=/opt/mozilla --host=${CHOST} \
+	    --with-gtk -enable-mathml --enable-svg --disable-debug
+    fi
     try make
-
 }
 
 src_install () {
