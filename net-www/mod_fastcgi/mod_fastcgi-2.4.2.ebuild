@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_fastcgi/mod_fastcgi-2.4.2.ebuild,v 1.8 2004/10/03 19:28:29 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_fastcgi/mod_fastcgi-2.4.2.ebuild,v 1.9 2005/01/16 11:54:27 mrness Exp $
 
 DESCRIPTION="FastCGI  is a language independent, scalable, open extension to CGI that provides high performance without the limitations of server specific APIs."
 KEYWORDS="x86 ppc ~amd64"
@@ -74,7 +74,7 @@ src_install() {
 		doins ${FILESDIR}/20_mod_fastcgi.conf
 	else
 		exeinto /usr/lib/apache-extramodules
-		doexe .libs/${PN}.so
+		doexe ${PN}.so
 		insinto /etc/apache/conf/addon-modules
 		doins ${FILESDIR}/mod_fastcgi.conf
 	fi

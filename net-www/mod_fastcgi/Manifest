@@ -1,7 +1,17 @@
-MD5 05053a0a0e551ead054737539232bf40 ChangeLog 1133
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cb6063cf3810678d94831864b3fc7118 mod_fastcgi-2.4.2.ebuild 2973
+MD5 335b5123d6a1be940442365a4e446a2d ChangeLog 1252
 MD5 0c1ffc3eff281366ee07df94a66166e6 metadata.xml 160
-MD5 d227af781a08ea5282932c97979f7ba4 mod_fastcgi-2.4.2.ebuild 2982
-MD5 f91641961f208de56af9e453c8cf414c files/20_mod_fastcgi.conf 221
-MD5 e243c356a4eb728bb4372c4f99296d37 files/Makefile-2.4.0 436
 MD5 c28c5986e00f82855ecbd1887f1cd72b files/digest-mod_fastcgi-2.4.2 68
+MD5 f91641961f208de56af9e453c8cf414c files/20_mod_fastcgi.conf 221
 MD5 60fafe97f43e4a2c2a38c4423b6b3958 files/mod_fastcgi.conf 92
+MD5 e243c356a4eb728bb4372c4f99296d37 files/Makefile-2.4.0 436
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB6lX9jiC39V7gKu0RAmyrAJ0S38Wo8hxHh4oDHyJSo7bYe2VJqACfZd10
+o4cauNc7Ce24FTzVEwbbhsM=
+=G4Q1
+-----END PGP SIGNATURE-----
