@@ -1,14 +1,16 @@
 # ChangeLog for dev-util/gnustep-back
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/ChangeLog,v 1.6 2003/02/12 06:42:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/ChangeLog,v 1.7 2003/02/15 01:01:02 raker Exp $
 
 *gnustep-back-0.8.3 (04 Feb 2003)
+
+  14 Feb 2003; Nick Hadaway <raker@gentoo.org> gnustep-back-0.8.3.ebuild :
+  DEPEND update as suggested by Zhen Lin on bug #15687
 
   04 Feb 2003; Nick Hadaway <raker@gentoo.org> gnustep-back-0.8.3.ebuild,
   files/digest-gnustep-back-0.8.3, files/gnustep-back-0.8.3.xft1.patch :
   Make sure /root/GNUstep doesn't exist before compiling otherwise
   you'll get lots of warnings.  Version bump.  Marked unstable.
-
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.8.3.ebuild,v 1.3 2003/02/13 11:53:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.8.3.ebuild,v 1.4 2003/02/15 01:01:02 raker Exp $
 
 inherit base
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
 LICENSE="LGPL"
 SLOT="0"
 KEYWORDS="x86 -ppc -sparc"
-DEPEND=">=dev-util/gnustep-gui-0.8.3
+DEPEND="=dev-util/gnustep-gui-${PV}*
         >=media-libs/tiff-3.5.7
         >=media-libs/jpeg-6b-r2
 	x11-base/xfree"
