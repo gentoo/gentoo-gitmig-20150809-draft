@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.1.0k.ebuild,v 1.1 2005/02/23 16:38:32 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.1.0k.ebuild,v 1.2 2005/02/25 00:43:10 plasmaroo Exp $
 
 DESCRIPTION="Gentoo autokernel script"
 HOMEPAGE="http://www.gentoo.org"
@@ -30,4 +30,13 @@ src_install() {
 
 	doman genkernel.8
 	rm genkernel.8
+}
+
+pkg_postinst() {
+	echo
+	einfo 'Documentation is available in the genkernel manual page'
+	einfo 'as well as the following URL:'
+	echo
+	einfo 'http://www.gentoo.org/doc/en/genkernel.xml'
+	echo
 }
