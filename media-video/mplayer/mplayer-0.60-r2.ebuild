@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r2.ebuild,v 1.2 2002/02/17 15:31:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r2.ebuild,v 1.3 2002/02/24 14:49:14 azarah Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -79,6 +79,7 @@ src_compile() {
 	use sdl           || myconf="${myconf} --disable-sdl"
 	use ggi           || myconf="${myconf} --disable-ggi"
 	use svga          || myconf="${myconf} --disable-svga"
+	use fbcon         && myconf="${myconf} --enable-fbdev"
 	use alsa          || myconf="${myconf} --disable-alsa"
 	use ogg           || myconf="${myconf} --disable-vorbis"
 	use encode        && myconf="${myconf} --enable-mencoder --enable-tv"

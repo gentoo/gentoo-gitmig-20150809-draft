@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.2 2002/02/17 15:30:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.3 2002/02/24 14:49:14 azarah Exp $
+
+  25 Feb 2002; M.Schlemmer <azarah@gentoo.org> mplayer-0.60-r2.ebuild :
+
+  Fix the 'fbcon' USE to actually enable fbdev support.
 
   17 Feb 2002; M.Schlemmer <azarah@gentoo.org> mplayer-0.60-r2.ebuild :
 
