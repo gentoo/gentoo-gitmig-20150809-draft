@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/lineakd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/ChangeLog,v 1.2 2003/03/14 10:17:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/ChangeLog,v 1.3 2003/04/09 03:18:20 seemant Exp $
+
+*lineakd-0.6_alpha2 (08 Apr 2003)
+
+  08 Apr 2003; Seemant Kulleen <seemant@gentoo.org> lineakd-0.6_alpha2.ebuild:
+  Version bump
 
 *lineakd-0.4_pre3 (12 Feb 2003)
 
