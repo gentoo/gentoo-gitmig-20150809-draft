@@ -1,11 +1,16 @@
 # ChangeLog for app-editors/levee
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/ChangeLog,v 1.4 2002/12/13 10:56:06 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/ChangeLog,v 1.5 2003/02/10 11:09:16 seemant Exp $
+
+*levee-3.4o (28 Apr, 2002)
+
+  10 Feb 2003; Seemant Kulleen <seemant@gentoo.org> levee-3.4o.ebuild :
+
+  Changed sed expression delimiters from : to /, closing bug #15006 by Blu3
+  <david+gentoo.org@blue-labs.org>
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*levee-3.4o (28 Apr, 2002)
-
   06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
 

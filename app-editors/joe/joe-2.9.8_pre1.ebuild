@@ -1,6 +1,8 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-2.9.8_pre1.ebuild,v 1.5 2003/01/06 10:41:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-2.9.8_pre1.ebuild,v 1.6 2003/02/10 11:09:16 seemant Exp $
+
+IUSE=""
 
 MY_P=${P/_/-}
 S=${WORKDIR}/${MY_P}
@@ -9,7 +11,7 @@ SRC_URI="mirror://sourceforge/joe-editor/${MY_P}.tgz"
 HOMEPAGE="http://sourceforge.net/projects/joe-editor/"
 
 SLOT="0"
-KEYWORDS="~x86 ppc ~sparc "
+KEYWORDS="~x86 ppc ~sparc"
 LICENSE="GPL-1"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
@@ -17,11 +19,11 @@ DEPEND=">=sys-libs/ncurses-5.2-r2"
 PROVIDE="virtual/editor"
 
 src_compile() {                           
-	econf
+	econf || die
 	make || die
 }
 
 src_install() {                              
-	einstall
+	einstall || die
 	dodoc COPYING INFO LIST README TODO VERSION
 }

@@ -1,13 +1,15 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r3.ebuild,v 1.11 2002/12/09 04:17:39 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r3.ebuild,v 1.12 2003/02/10 11:09:16 seemant Exp $
+
+inherit eutils
 
 IUSE="gpm slang X"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Lightweight text-mode editor"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip
-		 mirror://sourceforge/${PN}/${P}-common.zip"
+	mirror://sourceforge/${PN}/${P}-common.zip"
 HOMEPAGE="http://fte.sourceforge.net"
 
 RDEPEND=">=sys-libs/ncurses-5.2
@@ -21,18 +23,18 @@ TARGETS=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 if [ "`use slang`" ] ; then
-	 TARGETS="${TARGETS} sfte"
+	TARGETS="${TARGETS} sfte"
 fi
 
 if [ "`use X`" ] ; then
-	 TARGETS="${TARGETS} xfte"
+	TARGETS="${TARGETS} xfte"
 fi
 
 if [ "`use gpm`" ] ; then
-	 TARGETS="${TARGETS} vfte"
+	TARGETS="${TARGETS} vfte"
 fi
 
 src_unpack() {
@@ -43,14 +45,14 @@ src_unpack() {
 
 	mv fte fte-20010819
 
-	cd ${S}; patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gentoo.diff
 
 	cp src/fte-unix.mak src/fte-unix.mak.orig
 
-	cat src/fte-unix.mak.orig | \
-	sed "s/@targets@/${TARGETS}/" | \
-	sed "s/@cflags@/${CFLAGS}/" \
-	> src/fte-unix.mak
+	sed -e "s:@targets@:${TARGETS}:" \
+		-e "s:@cflags@:${CFLAGS}:" \
+		src/fte-unix.mak.orig > src/fte-unix.mak
 }
 
 src_compile() {
@@ -78,14 +80,7 @@ src_install () {
 	dodir usr/share/doc/${P}/html
 	cp doc/INDEX doc/*.html ${D}/usr/share/doc/${P}/html
 
-#	if [ -a ${D}/usr/bin/xfte ] ; then
-#		into /usr/X11R6 ;
-#		dobin src/xfte ;
-#		rm ${D}/usr/bin/xfte ;
-#	fi
-	
 	dodir usr/share/fte
 	cp -R config/* ${D}/usr/share/fte
 	rm -rf ${D}/usr/share/fte/CVS
 }
-

@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/joe
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.7 2003/01/06 10:41:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.8 2003/02/10 11:09:16 seemant Exp $
 
 *joe-2.9.8_pre1 (18 Oct 2002)
 
@@ -17,6 +17,11 @@
   whit@transpect.com (Whit Blauvelt) in bug #9295 for informing us.
 
 *joe-2.9.5 (1 Feb 2002)
+
+  10 Feb 2003; Seemant Kulleen <seemant@gentoo.org> joe-2.9.5.ebuild :
+
+  Changed sed expression delimiters to : from /, closing bug #15006 by Blu3
+  <david+gentoo.org@blue-labs.org>
 
   18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> joe-2.9.5.ebuild :
   Updated to mirror://sourceforge in SRC_URI.
