@@ -1,12 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-0.990821-r1.ebuild,v 1.1 2004/09/07 05:23:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-0.990821-r1.ebuild,v 1.2 2004/09/07 19:15:41 robbat2 Exp $
 
 inherit flag-o-matic
 
+MY_P=${P/0.}
+S="${WORKDIR}/${MY_P}"
 DESCRIPTION="use TCP or UDP to retrieve the current time of another machine"
 HOMEPAGE="http://www.freshmeat.net/projects/rdate/"
-SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/network/misc/${P}.tar.gz"
+SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/network/misc/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"

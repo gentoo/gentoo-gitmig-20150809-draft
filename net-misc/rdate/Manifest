@@ -1,20 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 43556e711fd750e4ae1810605000096a rdate-0.990821-r1.ebuild 889
+MD5 c230c93e32698a1eed3d056ed79fe777 ChangeLog 3200
 MD5 6dc24db864531b91dad260466fd9352a rdate-1.4.ebuild 731
-MD5 1a81e4cb1d0f71481817c1af2bbf64ac rdate-0.990821-r2.ebuild 869
-MD5 642e513f58bc48db92aeeb2e1fc64a6d ChangeLog 3055
-MD5 93f375d92bdf69e825b150ba853f3e36 rdate-0.990821.ebuild 651
-MD5 31320ec84600fa3b9fe2d885edc46b48 files/digest-rdate-0.990821-r1 62
-MD5 31320ec84600fa3b9fe2d885edc46b48 files/digest-rdate-0.990821-r2 62
+MD5 3c8c04042a7dcd6c3eb1b424cf68f1f6 rdate-0.990821-r1.ebuild 928
+MD5 df149b91d7555c2bf24a2eebb583b310 rdate-0.990821-r2.ebuild 908
+MD5 7c1ddab6f6615da7960377e8fbf21199 rdate-0.990821.ebuild 690
 MD5 7222ef09db66dfa05f4c3e27c247e8a2 files/digest-rdate-1.4 60
 MD5 31320ec84600fa3b9fe2d885edc46b48 files/digest-rdate-0.990821 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-Comment: .//Manifest 1094534607
-
-iD8DBQFBPUY9PpIsIjIzwiwRAvkoAJ47DdXYiaYTXhh+OW8TjM6cg5g8dACfX0qq
-7q1D7P16gbBM6fPtRNwmMcQ=
-=iUmE
------END PGP SIGNATURE-----
+MD5 31320ec84600fa3b9fe2d885edc46b48 files/digest-rdate-0.990821-r1 62
+MD5 31320ec84600fa3b9fe2d885edc46b48 files/digest-rdate-0.990821-r2 62
