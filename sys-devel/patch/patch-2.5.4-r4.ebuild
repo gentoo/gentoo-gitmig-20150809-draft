@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.4-r4.ebuild,v 1.13 2003/02/07 16:35:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.4-r4.ebuild,v 1.14 2003/02/13 16:34:09 vapier Exp $
 
 
 A=${P}.tar.gz

@@ -1,4 +1,4 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1.ebuild,v 1.1 2002/05/17 15:42:30 prez Exp
 

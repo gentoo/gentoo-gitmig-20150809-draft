@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/gecc-20021102.ebuild,v 1.1 2002/11/16 16:43:06 mjc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/gecc-20021102.ebuild,v 1.2 2003/02/13 16:32:30 vapier Exp $
 
 IUSE=""
 DESCRIPTION="gecc is a tool to speed up compilation of C/C++ sources. It distributes the compilation on a cluster of compilation nodes. It also caches the object files to save some unneeded work."

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.2 2003/01/07 05:13:44 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.3 2003/02/13 16:34:23 vapier Exp $
 
 IUSE=""
 

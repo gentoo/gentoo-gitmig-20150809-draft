@@ -1,6 +1,6 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-0.12.ebuild,v 1.5 2002/11/12 07:59:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-0.12.ebuild,v 1.6 2003/02/13 16:28:41 vapier Exp $
 
 HOMEPAGE="http://distcc.samba.org/"
 SRC_URI="http://distcc.samba.org/ftp/${PN}/${P}.tar.gz"

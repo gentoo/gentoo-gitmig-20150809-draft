@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.16.ebuild,v 1.7 2003/01/07 22:26:28 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.16.ebuild,v 1.8 2003/02/13 16:27:43 vapier Exp $
 
 IUSE="nls bootstrap static build"
 

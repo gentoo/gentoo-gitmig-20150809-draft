@@ -1,6 +1,6 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-1.1-r8.ebuild,v 1.1 2003/02/11 22:42:48 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-1.1-r8.ebuild,v 1.2 2003/02/13 16:29:14 vapier Exp $
 
 inherit eutils
 

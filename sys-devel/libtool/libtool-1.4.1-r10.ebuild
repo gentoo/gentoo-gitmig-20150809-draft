@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.1-r10.ebuild,v 1.5 2003/02/07 20:35:55 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.1-r10.ebuild,v 1.6 2003/02/13 16:33:19 vapier Exp $
 
 IUSE=""
 

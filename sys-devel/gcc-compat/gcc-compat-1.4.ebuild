@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-compat/gcc-compat-1.4.ebuild,v 1.3 2002/12/09 04:37:27 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-compat/gcc-compat-1.4.ebuild,v 1.4 2003/02/13 16:31:41 vapier Exp $
 
 DESCRIPTION="This is a compatability layer for use when upgrading to profile $PV"
 HOMEPAGE="http://www.gentoo.org"
