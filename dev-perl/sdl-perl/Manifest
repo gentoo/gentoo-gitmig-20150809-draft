@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3a42c51270bb9af419d623ca076f01ef ChangeLog 4933
+MD5 45f01bc6f77570405326a98963f5c34c ChangeLog 5034
 MD5 709cd2696c593abb0a2090e0640315f6 metadata.xml 176
-MD5 59f3c74af41c6fa7885ffa66ae9cbe5b sdl-perl-2.1.2-r1.ebuild 957
-MD5 3ffdd41b4145f621877bca3e93ab1a1e sdl-perl-1.20.3.ebuild 657
-MD5 86eae464baf636675d0f37ec51e4b94e sdl-perl-2.1.2.ebuild 771
-MD5 8f817948159607a1ed78a8b839f5ce9b files/digest-sdl-perl-2.1.2-r1 66
+MD5 6495a8af5c27ab06f2b05952f42d6a31 sdl-perl-1.20.3.ebuild 660
+MD5 45596b84268107dacaa3e20a1a4b7b5b sdl-perl-2.1.2-r1.ebuild 957
 MD5 000eb623a9e2ce37c9e3efd665f6e5c2 files/digest-sdl-perl-1.20.3 67
-MD5 8f817948159607a1ed78a8b839f5ce9b files/digest-sdl-perl-2.1.2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByBkctG5z4I8BtQoRAmD4AKCCVDH6QFNRrVraiRFXA5SCGOf3TQCdFicm
-G2KdGRMzTtXAO74q6V7mhK4=
-=mKiv
------END PGP SIGNATURE-----
+MD5 8f817948159607a1ed78a8b839f5ce9b files/digest-sdl-perl-2.1.2-r1 66
