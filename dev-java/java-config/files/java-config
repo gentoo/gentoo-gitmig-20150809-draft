@@ -4,10 +4,28 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.7 2002/04/10 15:46:20 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.8 2002/04/27 12:11:42 pvdabeel Exp $
 
 version=0.2.0
 all_params="$*"
+
+SYSTEM_ARCH=`echo $ARCH |\
+  sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+if [ -z "$SYSTEM_ARCH" ]
+then
+	SYSTEM_ARCH=`uname -m |\
+     sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+fi 
+
+PFORM="i386"
+
+case $SYSTEM_ARCH in
+	ppc)	PFORM="ppc";;
+	i386)	PFORM="i386";;
+	sparc64)PFORM="sparc64";;
+	sparc)  PFORM="arm";;
+	arm)    PFORM="arm";;
+esac
 
 if [ -e /etc/env.d/20java ] ; then
 	oldpath=$PATH
@@ -79,7 +97,7 @@ findpluginpath() {
 
 	# This covers Sun and Blackdown
 
-	rootpath=${JAVA_HOME}/jre/plugin/i386
+	rootpath=${JAVA_HOME}/jre/plugin/${PFORM}
 	
 	if [ $1 == "ns4" ] || [ $1 == "netscape4" ] ; then
 		for i in ${rootpath}/{ns4,netscape4}/javaplugin.so ; do
