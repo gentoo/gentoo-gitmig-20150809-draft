@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.1 2004/08/20 05:53:46 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.2 2004/08/20 06:05:00 langthang Exp $
 
 inherit eutils gnuconfig
 
@@ -96,24 +96,17 @@ src_unpack() {
 		die "recreate configure failed"
 	eend $?
 
-	#cd ${S}/authlib
-	#ebegin "Recreating authlib/configure"
-	#autoconf || \
-        #        die "recreate configure failed"
-	#eend $?
-
 	cd ${S}/maildir
 	ebegin "Recreating maildir/configure"
 	autoconf || \
 		die "recreate configure failed"
 	eend $?
 
-        cd ${S}/bdbobj
-        ebegin "Recreating bdbobj/configure"
-        autoconf || \
-                die "recreate configure failed"
-        eend $?
-	#elibtoolize
+	cd ${S}/bdbobj
+	ebegin "Recreating bdbobj/configure"
+		autoconf || \
+		die "recreate configure failed"
+	eend $?
 }
 src_compile() {
 	vpopmail_setup
