@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/icon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.7 2004/07/31 01:20:54 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.8 2004/09/01 09:34:30 usata Exp $
+
+  01 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> icon-9.4.2.ebuild:
+  Added to ~alpha.
 
 *icon-9.4.2 (30 Jul 2004)
 
