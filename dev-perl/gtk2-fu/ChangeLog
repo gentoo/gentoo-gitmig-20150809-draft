@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/gtk2-fu
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.1 2004/11/26 20:46:35 dams Exp $
+
+*gtk2-fu-0.01 (26 Nov 2004)
+
+  26 Nov 2004; <dams@gentoo.org> +metadata.xml, +gtk2-fu-0.01.ebuild:
+  first pre-release, needed for profuse
+
