@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.2.2-r1.ebuild,v 1.3 2005/02/18 15:11:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.2.2-r1.ebuild,v 1.4 2005/02/20 00:43:12 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -37,7 +37,7 @@ src_compile() {
 
 	# Has problems with -O3 on some systems
 	replace-flags -O[3-9] -O2
-        append-flags -fno-pic
+	append-flags -fno-pic
 
 	econf ${myflags} || die "DOSemu Base Configuration Failed"
 
