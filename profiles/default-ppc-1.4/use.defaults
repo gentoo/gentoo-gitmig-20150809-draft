@@ -9,6 +9,7 @@
 #nls
 #mitshm
 #sse
+xinerama
 gnome-libs	gnome-base/gnome-libs
 directfb	dev-libs/DirectFB
 ungif		media-libs/ungif

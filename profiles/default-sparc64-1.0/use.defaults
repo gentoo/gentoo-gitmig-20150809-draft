@@ -7,6 +7,7 @@ mmx
 #odbc
 #oss
 #sse
+xinerama
 gnome-libs	gnome-base/gnome-libs
 aalib		media-libs/aalib	
 alsa		media-libs/alsa-lib

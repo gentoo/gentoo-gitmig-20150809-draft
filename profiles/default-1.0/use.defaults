@@ -8,6 +8,7 @@ mmx
 #oss
 #sse
 xinerama
+xinerama
 aalib		media-libs/aalib	
 alsa		media-libs/alsa-lib
 arts		kde-base/kdelibs
