@@ -1,2 +1,6 @@
-MD5 b1340b50e9359aee8f8a683f91f2a623 firebird-ss-bin-1.0.3.ebuild 273
+MD5 ec9752f4ebca07dec4db360e71019db4 firebird-ss-bin-1.0.3.ebuild 1752
+MD5 acdb1fcb058791633da7c64c9a4ce3bb ChangeLog 438
+MD5 5a6deb8ea2fdcf9b01fd158f3218e64d files/conf 65
+MD5 a0882fed63a80c35d1ea7041abe107b0 files/init 932
+MD5 7caa57f80334dc876fd2665bab570a99 files/ibmgr 85
 MD5 0e82fc890ca01b96ea601979b67e7193 files/digest-firebird-ss-bin-1.0.3 75

@@ -1,0 +1,38 @@
+#!/sbin/runscript
+#This was heavily copied from the generic-init.d script which comes with the
+#binary version of firebird-ss
+
+depend() {
+	need net
+}
+
+check_config() {
+	[ -z $INTERBASE ] && return 0
+	[ -z $ISC_USER ] && return 0
+	[ -z $ISC_PASSWORD ] && return 0
+	[ -x $INTERBASE/bin/ibmgr ] || return 0
+}
+
+# See how we were called.
+start() {
+	check_config || return 1
+	ebegin "Starting Firebird server"
+	(sudo -u firebird ${INTERBASE}/bin/ibmgr -start -forever -user ${ISC_USER} -password ${ISC_PASSWORD};echo 1>&2) 2>${TEMP}/ibresult
+	result="$(cat ${TEMP}/ibresult)"
+	rm -f ${TEMP}/ibresult
+	if [ "${result/success}" != "${result}" ]; then
+		eend 0
+	else
+		eend 1
+	fi
+}
+stop() {
+	check_config || return 1
+	ebegin "Stopping Firebird server"
+	result="$(sudo -u firebird ${INTERBASE}/bin/ibmgr -shut -user ${ISC_USER} -password ${ISC_PASSWORD} 2>&1)"
+	if [ "${result/completed}" != "${result}" ]; then
+		eend 0
+	else
+		eend 1
+	fi
+}

@@ -1,0 +1,4 @@
+#!/bin/sh
+INTERBASE=/opt/interbase
+export INTERBASE
+exec $INTERBASE/bin/ibmgr.bin $@
