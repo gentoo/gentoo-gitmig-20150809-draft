@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<herd>kde-other</herd>
 <maintainer>
-  <email>kde@gentoo.org</email>
+  <email>absinthe@gentoo.org</email>
 </maintainer>
 </pkgmetadata>

@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/akregator/akregator-1.0_beta3.ebuild,v 1.3 2004/06/25 00:48:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/akregator/akregator-1.0_beta3.ebuild,v 1.4 2004/06/27 21:05:26 absinthe Exp $
 
 inherit kde
-need-kde 3
+need-kde 3.2
 
 DEPEND=">=kde-base/kdelibs-3.2"
 
