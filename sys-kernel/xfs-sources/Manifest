@@ -1,6 +1,7 @@
 MD5 bc1840b22fbca3216cc2d10679c534d7 xfs-sources-2.4.24-r1.ebuild 1073
 MD5 ccb24e8a4128475f97bf020f5b0a952a xfs-sources-2.4.20-r1.ebuild 2193
 MD5 2540889800dda7b38f0c4f61899a5747 xfs-sources-2.4.20.ebuild 2203
+MD5 42fc1c14cc478dc5308b6d731ac71c54 xfs-sources-2.4.24-r3.ebuild 1141
 MD5 7502294f51542ace5d89419433107497 xfs-sources-2.4.20-r3.ebuild 2297
 MD5 6131bc0df38cdb946967ceea9c8ffd0e xfs-sources-2.4.23-r1.ebuild 1257
 MD5 d99799a0531b6a4f1d0c2671de2a3bd8 xfs-sources-2.4.20-r5.ebuild 2517
@@ -9,7 +10,7 @@ MD5 7a1c98a028bb42e5e4cf1f24f4a41e46 xfs-sources-2.4.24-r2.ebuild 1137
 MD5 4980429952168194a39b7656d909137a xfs-sources-2.4.20-r2.ebuild 2202
 MD5 362ccecfa0cb07471317a27e762e7250 xfs-sources-2.4.19-r3.ebuild 2339
 MD5 f02e213426423fa9c483eb893ab9e0e0 xfs-sources-2.4.20-r4.ebuild 2322
-MD5 ce0deb515fe21121f8c19f2d8b64f0c5 ChangeLog 10523
+MD5 adcc336a2e25e7d0a7c26483215dc533 ChangeLog 10674
 MD5 9d0457271fd1f3afdcf4f7ee602d3b34 metadata.xml 414
 MD5 a728d28dca69f5ae16aab56cd2fc6110 files/digest-xfs-sources-2.4.20 139
 MD5 d53055aeb748e8680c3232c405c5ec89 files/digest-xfs-sources-2.4.24 141
@@ -30,3 +31,4 @@ MD5 739cbda7c5acadb95758e2f4d8194699 files/digest-xfs-sources-2.4.20-r5 142
 MD5 f296f6804e8a1b632ff0939c10c66ea5 files/digest-xfs-sources-2.4.23-r1 141
 MD5 24da024c498c1c154d80a7264e3a6fe9 files/digest-xfs-sources-2.4.24-r1 144
 MD5 24da024c498c1c154d80a7264e3a6fe9 files/digest-xfs-sources-2.4.24-r2 144
+MD5 53da61155df6e5a6d0c8f57f0195e78a files/digest-xfs-sources-2.4.24-r3 144

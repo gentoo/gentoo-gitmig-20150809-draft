@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.41 2004/02/18 17:43:13 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.42 2004/02/19 00:45:07 livewire Exp $
+
+*xfs-sources-2.4.24-r3 (18 Feb 2004)
+
+  18 Feb 2004; <livewire@gentoo.org>
+  xfs-sources-2.4.24-r3.ebuild:
+  bumped freeswan
+  fixed devicemapper
 
 *xfs-sources-2.4.24-r2 (18 Feb 2004)
 
