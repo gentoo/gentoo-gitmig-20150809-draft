@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.5.ebuild,v 1.5 2004/06/24 23:16:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.5.ebuild,v 1.6 2004/08/13 22:32:00 kugelfang Exp $
 
 IUSE="ssl"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/openh323/${MY_P}-src.tar.gz"
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-libs/pwlib-1.6.6
@@ -59,6 +59,9 @@ src_unpack() {
 
 	# fix include order (bug #32522)
 	epatch ${FILESDIR}/openh323-${PV}-include-order.diff
+
+	# fix to compile on gcc-3.4 (bug #56951)
+	epatch ${FILESDIR}/${PN}-1.13.2-gcc34.diff
 }
 
 src_compile() {

@@ -1,0 +1,11 @@
+--- include/gkserver.h.old	2004-08-13 16:22:58.136150976 +0200
++++ include/gkserver.h	2004-08-13 16:23:04.049252048 +0200
+@@ -427,7 +427,7 @@
+     H225_RegistrationConfirm & rcf;
+     H225_RegistrationReject  & rrj;
+ 
+-  protected:
++//  protected:
+     virtual Response OnHandlePDU();
+ };
+ 

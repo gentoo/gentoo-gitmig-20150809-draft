@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/openh323
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.45 2004/06/24 23:16:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.46 2004/08/13 22:32:00 kugelfang Exp $
+
+  14 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
+  +files/openh323-1.13.2-gcc34.diff, openh323-1.13.2-r1.ebuild,
+  openh323-1.13.5.ebuild:
+  Fixed BUG #56951. Marked 1.13.2-r1 amd64 and 1.13.5 ~amd64.
 
   10 Jun 2004; Aron Griffis <agriffis@gentoo.org> openh323-1.11.7.ebuild,
   openh323-1.12.0-r1.ebuild, openh323-1.12.2-r1.ebuild,
