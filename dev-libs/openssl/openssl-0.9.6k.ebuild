@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6k.ebuild,v 1.4 2003/11/12 09:20:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6k.ebuild,v 1.5 2003/12/08 16:23:51 gmsoft Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ if [ "$PROFILE_ARCH" = "sparc" -a "`uname -m`" = "sparc64" ]; then
 	SSH_TARGET="linux-sparcv8"
 fi
 
-if [ "`uname -m`" = "parisc64" ]; then
+if [ "`uname -m`" = "parisc" -o "`uname -m`" = "parisc64" ]; then
 	SSH_TARGET="linux-parisc"
 fi
 
