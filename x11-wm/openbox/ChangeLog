@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/openbox
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.27 2003/02/08 00:28:39 mkeadle Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.28 2003/02/12 09:52:21 vapier Exp $
 
 *openbox-2.3.0 (07 Feb 2003)
 
