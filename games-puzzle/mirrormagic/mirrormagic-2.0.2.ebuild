@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/mirrormagic-2.0.2.ebuild,v 1.8 2004/06/24 23:07:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/mirrormagic-2.0.2.ebuild,v 1.9 2004/06/28 23:23:26 mr_bones_ Exp $
 
 inherit flag-o-matic games
 
@@ -25,7 +25,7 @@ src_compile() {
 	replace-flags -march=k6 -march=i586
 
 	local makeopts="X11_PATH=/usr/X11R6 RO_GAME_DIR=${GAMES_DATADIR}/${PN} RW_GAME_DIR=${GAMES_STATEDIR}/${PN}"
-	if use X || [ -z "$(use X)$(use sdl)" ] ; then
+	if use X || ! use sdl ; then
 		make clean || die
 		make ${makeopts} OPTIONS="${CFLAGS}" x11 || die
 		mv mirrormagic{,.x11}
