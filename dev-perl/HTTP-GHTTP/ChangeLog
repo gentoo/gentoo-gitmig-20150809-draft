@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/HTTP-GHTTP
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-GHTTP/ChangeLog,v 1.1 2002/02/01 21:53:27 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-GHTTP/ChangeLog,v 1.2 2002/05/05 16:02:27 seemant Exp $
+
+*HTTP-GHTTP-1.07 (5 May 2002)
+
+  5 May 2002; Seemant Kulleen <seemant@gentoo.org> HTTP-GHTTP-1.07.ebuild
+  files/digest-HTTP-GHTTP-1.07 :
+
+  Version bump and conversion to eclasses.
 
 *HTTP-GHTTP-1.06 (1 Feb 2002)
 

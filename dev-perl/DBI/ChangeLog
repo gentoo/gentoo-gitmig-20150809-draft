@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/DBI
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.1 2002/02/01 21:53:27 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.2 2002/05/05 16:02:26 seemant Exp $
+
+*DBI-1.21 (5 May 2002)
+
+  5 May 2002; Seemant Kulleen <seemant@gentoo.org> DBI-1.21.ebuild
+  files/digest-DBI-1.2.1 :
+
+  Version bump, and conversion to eclasses.
 
 *DBI-1.14 (1 Feb 2002)
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Event
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.1 2002/04/21 23:02:23 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.2 2002/05/05 16:02:27 seemant Exp $
+
+*Event-0.85-r1 (5 May 2002)
+
+  5 May 2002; Seemant Kulleen <seemant@gentoo.org> Event-0.85-r1.ebuild
+  files/digest-Event-0.85-r1 :
+
+  Conversion to eclasses.
 
 *Event-0.85 (21 Apr 2002)
 
