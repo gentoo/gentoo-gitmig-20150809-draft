@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3/w3-4.0_pre47-r1.ebuild,v 1.1 2003/05/19 15:30:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3/w3-4.0_pre47-r1.ebuild,v 1.2 2003/09/06 22:01:26 msterret Exp $
 
-inherit elisp 
+inherit elisp
 
 DESCRIPTION="ull-featured web browser written entirely in Emacs Lisp"
 HOMEPAGE="http://www.cs.indiana.edu/elisp/w3/docs.html"

@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/session/session-2.1c.ebuild,v 1.2 2003/02/13 07:08:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/session/session-2.1c.ebuild,v 1.3 2003/09/06 22:01:25 msterret Exp $
 
-inherit elisp 
+inherit elisp
 
 IUSE=""
 
@@ -23,7 +23,7 @@ src_compile() {
 }
 
 src_install() {
-	elisp-install ${PN} lisp/*.el lisp/*.elc 
+	elisp-install ${PN} lisp/*.el lisp/*.elc
 	elisp-site-file-install ${FILESDIR}/50session-gentoo.el
 	dodoc INSTALL README lisp/ChangeLog
 }

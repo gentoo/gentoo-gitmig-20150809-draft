@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ilisp-5.12.0-r3.ebuild,v 1.1 2003/08/28 21:22:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ilisp-5.12.0-r3.ebuild,v 1.2 2003/09/06 22:01:25 msterret Exp $
 
 inherit elisp
 
@@ -28,7 +28,7 @@ S="${WORKDIR}/${P}+${DEBCVS}"
 
 src_compile() {
 	make EMACS=emacs SHELL=/bin/sh || die
-	cd extra && for i in *.el ; do 
+	cd extra && for i in *.el ; do
 		emacs --batch --no-site-file --eval "(byte-compile-file \"$i\")" *.el
 	done
 	make -C ${S}/docs
@@ -63,7 +63,7 @@ src_install() {
 
  	insinto /usr/share/emacs/site-lisp
 	doins ${FILESDIR}/50ilispclc-gentoo.el
- 	dodoc ACKNOWLEDGMENTS COPYING GETTING-ILISP HISTORY INSTALLATION README Welcome 
+ 	dodoc ACKNOWLEDGMENTS COPYING GETTING-ILISP HISTORY INSTALLATION README Welcome
 }
 
 pkg_postinst() {
@@ -71,7 +71,7 @@ pkg_postinst() {
 	chown -R cl-builder.cl-builder /usr/lib/ilisp
 	/usr/sbin/register-common-lisp-source ${PN}
 	clc-autobuild-library ilisp yes
-	
+
 }
 
 pkg_postrm() {

@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-10.0g.ebuild,v 1.3 2003/05/15 13:41:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-10.0g.ebuild,v 1.4 2003/09/06 22:01:25 msterret Exp $
 
-inherit elisp 
+inherit elisp
 
 IUSE=""
 

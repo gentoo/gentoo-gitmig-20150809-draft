@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.15.ebuild,v 1.1 2003/05/05 16:49:26 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.15.ebuild,v 1.2 2003/09/06 22:01:26 msterret Exp $
 
 inherit elisp
 
@@ -31,7 +31,7 @@ src_compile() {
 		INFODIR=${D}/usr/share/info \
 		LISPDIR=${D}/${SITELISP}/vm \
 		PIXMAPDIR=${D}/${SITELISP}/etc/${PN} \
-		all || die 
+		all || die
 }
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.34.ebuild,v 1.2 2003/02/13 07:03:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.34.ebuild,v 1.3 2003/09/06 22:01:25 msterret Exp $
 
 inherit elisp
 
@@ -29,7 +29,7 @@ src_compile() {
 src_install() {
 	elisp-install ${PN} lisp/*.el lisp/*.elc
 	elisp-site-file-install ${FILESDIR}/50bbdb-gentoo.el
-	
+
 	doinfo texinfo/*.info*
 	dodoc ChangeLog INSTALL README
 }

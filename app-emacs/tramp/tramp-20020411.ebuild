@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-20020411.ebuild,v 1.2 2003/02/13 07:09:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-20020411.ebuild,v 1.3 2003/09/06 22:01:26 msterret Exp $
 
-inherit elisp 
+inherit elisp
 
 IUSE=""
 
@@ -25,7 +25,7 @@ src_install() {
 	elisp-install ${PN} lisp/*.el lisp/*.elc
 	elisp-site-file-install ${FILESDIR}/50tramp-gentoo.el
 
-	dodoc README ChangeLog.orig ChangeLog CONTRIBUTORS 
+	dodoc README ChangeLog.orig ChangeLog CONTRIBUTORS
 	doinfo texi/tramp.info
 }
 
