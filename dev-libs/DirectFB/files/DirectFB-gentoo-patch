@@ -1,8 +1,0 @@
-98c98
-< LIBMPEG3_LIBS = 
----
-> LIBMPEG3_LIBS = /usr/lib
-477c477
-< libidirectfbvideoprovider_libmpeg3.so: idirectfbvideoprovider_libmpeg3.o $(LIBMPEG3_DIR)/$(shell uname --machine)/libmpeg3.a
----
-> libidirectfbvideoprovider_libmpeg3.so: idirectfbvideoprovider_libmpeg3.o $(LIBMPEG3_LIBS)/libmpeg3.a
