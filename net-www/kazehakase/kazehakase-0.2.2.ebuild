@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.2.2.ebuild,v 1.4 2005/01/02 19:15:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.2.2.ebuild,v 1.5 2005/03/01 20:52:32 nakano Exp $
 
 IUSE="migemo estraier thumbnail"
 
@@ -20,6 +20,9 @@ DEPEND=">=net-www/mozilla-1.6
 	migemo? ( || ( app-text/migemo app-text/cmigemo ) )
 	estraier? ( app-text/estraier )
 	thumbnail? ( virtual/ghostscript )"
+
+RDEPEND="${DEPEND}
+	!net-www/kazehakase-cvs"
 
 pkg_setup(){
 	if grep -v gtk2 /var/db/pkg/net-www/mozilla-[[:digit:]]*/USE &> /dev/null
