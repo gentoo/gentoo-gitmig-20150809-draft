@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3c
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 
+  26 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> mp3c-0.29.ebuild:
+  Stable x86, amd64, sparc.
+
   13 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> mp3c-0.29.ebuild:
   Added ~amd64 ~sparc.
 

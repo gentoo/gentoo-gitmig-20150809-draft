@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/mp3c-0.29.ebuild,v 1.4 2004/07/13 08:06:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/mp3c-0.29.ebuild,v 1.5 2004/07/26 22:03:41 eradicator Exp $
 
 IUSE="oggvorbis"
 
@@ -15,12 +15,7 @@ DEPEND="media-sound/lame
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
-
-src_compile() {
-	econf || die "./configure failed"
-	emake || die "make failed"
-}
+KEYWORDS="x86 ~ppc amd64 sparc"
 
 src_install () {
 	make DESTDIR="${D}" install || die
