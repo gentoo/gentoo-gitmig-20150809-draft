@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.16 2003/04/13 22:43:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.17 2003/08/22 03:28:45 spider Exp $
+
+  22 Aug 2003; <spider@gentoo.org> gftp-2.0.15.ebuild :
+  Versionbump. Revamped the dependencies completely. USE="ssl" support
+  USE="-gtk" dependencies added. Now handles gtk and gtk2 dependencies in a
+  nested fashion, disablig gtk gives text frontend Fixed up the deps for
+  textmode. (readline,ncurses and glib-1.2)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
