@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Xmms-Perl/Xmms-Perl-0.12.ebuild,v 1.2 2003/08/07 02:25:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Xmms-Perl/Xmms-Perl-0.12.ebuild,v 1.3 2003/09/06 22:37:58 msterret Exp $
 
 inherit perl-module eutils
 
@@ -12,7 +12,7 @@ LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
-DEPEND="media-sound/xmms 
+DEPEND="media-sound/xmms
 	dev-perl/MP3-Info
 	dev-perl/Term-ReadLine-Perl"
 

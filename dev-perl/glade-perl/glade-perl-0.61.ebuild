@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glade-perl/glade-perl-0.61.ebuild,v 1.1 2003/07/29 15:31:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glade-perl/glade-perl-0.61.ebuild,v 1.2 2003/09/06 22:37:58 msterret Exp $
 
 inherit perl-module
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha"
 
 DEPEND="${DEPEND}
 	   dev-util/glade
-	   dev-perl/gtk-perl 
+	   dev-perl/gtk-perl
 	   dev-perl/XML-Parser
 	   >=dev-perl/Unicode-String-2.07"
 

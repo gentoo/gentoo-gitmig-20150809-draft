@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03-r4.ebuild,v 1.8 2003/06/21 21:36:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03-r4.ebuild,v 1.9 2003/09/06 22:37:58 msterret Exp $
 
 MY_P="${P}ii"
 S=${WORKDIR}/${PN}
@@ -20,7 +20,7 @@ src_unpack() {
 }
 
 src_install () {
-	
+
 	eval `perl '-V:package'`
 	eval `perl '-V:version'`
 	cd ${S}

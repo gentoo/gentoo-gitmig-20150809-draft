@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.3.2-r1.ebuild,v 1.15 2003/06/21 21:36:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.3.2-r1.ebuild,v 1.16 2003/09/06 22:37:58 msterret Exp $
 
 IUSE="opengl"
 
@@ -39,7 +39,7 @@ src_unpack() {
 }
 
 src_install () {
-	
+
 	perl-module_src_install
 
 	mv ${D}/usr/lib/perl5/site_perl/5.6.0/${CHOST%%-*}-linux/PDL/HtmlDocs \
@@ -47,10 +47,10 @@ src_install () {
 
 	mydir=${D}/usr/doc/${P}/html/PDL
 
-	for i in ${mydir}/* ${mydir}/IO/* ${mydir}/Fit/* ${mydir}/Pod/* ${mydir}/Graphics/* 
+	for i in ${mydir}/* ${mydir}/IO/* ${mydir}/Fit/* ${mydir}/Pod/* ${mydir}/Graphics/*
 	do
 		dosed ${i/${D}}
 	done
 
-	dosed /usr/lib/perl5/site_perl/5.6.0/${CHOST%%-*}-linux/PDL/pdldoc.db 
+	dosed /usr/lib/perl5/site_perl/5.6.0/${CHOST%%-*}-linux/PDL/pdldoc.db
 }

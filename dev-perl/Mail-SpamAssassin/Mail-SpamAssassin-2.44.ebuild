@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.44.ebuild,v 1.3 2003/06/21 21:36:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.44.ebuild,v 1.4 2003/09/06 22:37:58 msterret Exp $
 
 inherit perl-module
 
@@ -29,10 +29,10 @@ src_compile() {
 }
 
 src_install () {
-	
+
 	perl-module_src_install
 
-	dodir /etc/init.d /etc/conf.d 
+	dodir /etc/init.d /etc/conf.d
 	cp ${FILESDIR}/spamd.init ${D}/etc/init.d/spamd
 	chmod +x ${D}/etc/init.d/spamd
 	cp ${FILESDIR}/spamd.conf ${D}/etc/conf.d/spamd

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/Inline-0.44.ebuild,v 1.3 2003/06/24 14:55:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/Inline-0.44.ebuild,v 1.4 2003/09/06 22:37:58 msterret Exp $
 
 inherit perl-module
 
@@ -22,13 +22,13 @@ DEPEND="${DEPEND}
 
 src_compile() {
 
-	echo "y" | perl-module_src_compile 
+	echo "y" | perl-module_src_compile
 	perl-module_src_test
 }
 
 
 src_install () {
-	
+
 	perl-module_src_install
 	dohtml DT.html
 }

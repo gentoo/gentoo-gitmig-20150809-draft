@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Gallery/Apache-Gallery-0.6.ebuild,v 1.2 2003/06/21 21:36:35 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Gallery/Apache-Gallery-0.6.ebuild,v 1.3 2003/09/06 22:37:58 msterret Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 amd64 ~ppc ~alpha ~sparc"
 
 
-DEPEND="${DEPEND} 
+DEPEND="${DEPEND}
 	>=dev-perl/libapreq-1.0
 	>=media-libs/imlib2-1.0.6-r1
 	>=dev-perl/mod_perl-1.27-r1
@@ -36,7 +36,7 @@ src_install() {
 
 	insinto /home/httpd/icons
 	doins htdocs/*.png
-	
+
 	insinto /etc/apache/gallery/templates
 	doins templates/*.tpl
 

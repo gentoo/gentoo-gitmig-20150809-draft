@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0.ebuild,v 1.6 2003/07/18 20:14:48 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0.ebuild,v 1.7 2003/09/06 22:37:58 msterret Exp $
 
 IUSE="opengl"
 
@@ -42,7 +42,7 @@ src_unpack() {
 			${FILESDIR}/perldl.conf > ${S}/perldl.conf
 	fi
 	if [ "`use hppa`"  -o "`use amd64`" ]
-	then 
+	then
 	 cd ${S}/Lib/Slatec
 	 cp Makefile.PL Makefile.PL.orig
 	 sed -e "s/mycompiler -c -o/mycompiler -fPIC -c -o/" Makefile.PL.orig > Makefile.PL
@@ -50,7 +50,7 @@ src_unpack() {
 }
 
 src_install () {
-	
+
 	perl-module_src_install
 	mkdir -p ${D}/usr/doc/${P}/html
 	eval `perl '-V:version'`
@@ -60,10 +60,10 @@ src_install () {
 
 	mydir=${D}/usr/doc/${P}/html/PDL
 
-	for i in ${mydir}/* ${mydir}/IO/* ${mydir}/Fit/* ${mydir}/Pod/* ${mydir}/Graphics/* 
+	for i in ${mydir}/* ${mydir}/IO/* ${mydir}/Fit/* ${mydir}/Pod/* ${mydir}/Graphics/*
 	do
 		dosed ${i/${D}}
 	done
 
-	dosed /usr/lib/perl5/site_perl/${PERLVERSION}/${CHOST%%-*}-linux/PDL/pdldoc.db 
+	dosed /usr/lib/perl5/site_perl/${PERLVERSION}/${CHOST%%-*}-linux/PDL/pdldoc.db
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.39.ebuild,v 1.1 2003/08/07 23:04:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.39.ebuild,v 1.2 2003/09/06 22:37:58 msterret Exp $
 
 inherit perl-module
 
@@ -18,7 +18,7 @@ mydoc="TODO"
 
 src_compile() {
 
-	echo "n" | perl-module_src_compile 
+	echo "n" | perl-module_src_compile
 	perl-module_src_test
 }
 

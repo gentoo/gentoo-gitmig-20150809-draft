@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.05-r4.ebuild,v 1.11 2003/06/21 21:36:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.05-r4.ebuild,v 1.12 2003/09/06 22:37:58 msterret Exp $
 
 DESCRIPTION="MakeMaker Perl Module"
 SRC_URI="http://cpan.valueclick.com/modules/by-module/ExtUtils/${P}.tar.gz"
@@ -19,7 +19,7 @@ src_compile() {
 src_install () {
 	perlinfo
 	dodir ${POD_DIR}
-		        
+
 	test -z ${mytargets} && mytargets="install"
 	make \
 		PREFIX=${D}/usr \
@@ -62,12 +62,12 @@ src_install () {
 		cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.site
 		rm -f ${D}/${SITE_LIB}/perllocal.pod
 	fi
-	
+
 	for FILE in `find ${D} -type f -name "*.html" -o -name ".packlist"`; do
     	sed -ie "s:${D}:/:g" ${FILE}
 	done
-	
-	dodoc Change* MANIFEST* README* ${mydoc}								 
+
+	dodoc Change* MANIFEST* README* ${mydoc}
 }
 
 pkg_setup() {
@@ -77,7 +77,7 @@ pkg_setup() {
 
 
 pkg_preinst() {
-	
+
 	perlinfo
 }
 
@@ -87,7 +87,7 @@ pkg_postinst() {
 }
 
 pkg_prerm() {
-	
+
 	updatepod
 }
 
@@ -99,7 +99,7 @@ pkg_postrm() {
 perlinfo() {
 
 	if [ -f /usr/bin/perl ]
-	then 
+	then
 		eval `perl '-V:installarchlib'`
 		eval `perl '-V:installsitearch'`
 		ARCH_LIB=${installarchlib}
@@ -124,7 +124,7 @@ updatepod() {
 		   cat ${FILE} >> ${SITE_LIB}/perllocal.pod
 		   rm -f ${FILE}
 		done
-				   
+
 		#cat ${POD_DIR}/*.pod.arch >> ${ARCH_LIB}/perllocal.pod
 		#cat ${POD_DIR}/*.pod.site >> ${SITE_LIB}/perllocal.pod
 		#rm -f ${POD_DIR}/*.pod.site
