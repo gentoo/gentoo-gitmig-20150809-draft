@@ -4,6 +4,9 @@
 
 *speex-1.0 (28 Mar 2003)
 
+  05 Apr 2003; Jason Wever <weeve@gentoo.org> speex-1.0.ebuild:
+  Added ~sparc to keywords.
+
   28 Mar 2003; Michael Imhof <tantive@gentoo.org> speex-1.0.ebuild :
   User submission from Andy Dustman <andy-gentoo.54e552@dustman.net>.
   Masked it until someone confirms it works as it should.

@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libsamplerate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.4 2003/04/03 22:18:20 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.5 2003/04/06 04:18:06 weeve Exp $
 
 *libsamplerate-0.0.14 (30 Jan 2003)
+
+  05 Apr 2003; Jason Wever <weeve@gentoo.org> libsamplerate-0.0.14.ebuild:
+  Added ~sparc to keywords.
 
   03 Apr 2003; Graham Forest <vladimir@gentoo.org>
   libsamplerate-0.0.14.ebuild:
