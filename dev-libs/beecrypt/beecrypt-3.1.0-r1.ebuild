@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-3.1.0-r1.ebuild,v 1.8 2004/04/11 11:12:03 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-3.1.0-r1.ebuild,v 1.9 2004/04/11 19:29:59 cretin Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Beecrypt is a general-purpose cryptography library."
 HOMEPAGE="http://sourceforge.net/projects/beecrypt"
@@ -33,10 +35,17 @@ src_unpack() {
 }
 
 src_compile() {
+	conf=""
+	arch=`get-flag march`
+	[ -n "$arch" ] && conf="--with-arch=$arch"
+	cpu=`get-flag mcpu`
+	[ -n "$cpu" ] && conf="$conf --with-cpu=$cpu"
+
 	econf \
 		`use_with python` \
 		--enable-shared \
-		--enable-static || die
+		--enable-static \
+		$conf || die
 	emake || die "emake failed"
 }
 
