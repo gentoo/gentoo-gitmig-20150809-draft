@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ebtables
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.1 2004/02/28 09:25:14 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.2 2004/06/19 13:03:52 dholm Exp $
+
+  19 Jun 2004; David Holm <dholm@gentoo.org> ebtables-2.0.6.ebuild:
+  Added to ~ppc.
 
 *ebtables-2.0.6 (28 Feb 2004)
 
