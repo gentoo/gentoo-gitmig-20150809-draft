@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.116 2004/03/26 20:48:17 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.117 2004/03/31 18:04:47 max Exp $
+
+  31 Mar 2004; Max Kalika <max@gentoo.org> files/postfix.rc6:
+  Set $opts properly in init script. Fixes bug #46304.
 
   26 Mar 2004; <tuxus@gentoo.org> postfix-2.0.19.ebuild:
   Added mips to KEYWORDS.
