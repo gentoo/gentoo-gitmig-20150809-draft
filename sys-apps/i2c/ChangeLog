@@ -1,7 +1,11 @@
 # ChangeLog for sys-apps/i2c
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.7 2003/08/14 09:32:40 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.8 2003/10/14 21:02:42 plasmaroo Exp $
 
+  14 Oct 2003; <plasmaroo@gentoo.org> i2c-2.7.0.ebuild, i2c-2.8.0.ebuild,
+  files/i2c-2.8.0-alphaCompile.patch:
+  Added a patch to get the code to compile on Alpha platforms and added ~alpha
+  flag: Bug 31084.
 
 *i2c-2.8.0 (13 Aug 2003)
 

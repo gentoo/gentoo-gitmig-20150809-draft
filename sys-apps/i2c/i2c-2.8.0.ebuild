@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.6 2003/10/03 15:09:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.7 2003/10/14 21:02:42 plasmaroo Exp $
 
 DESCRIPTION="I2C Bus support for 2.4.x kernels"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78/"
@@ -8,7 +8,7 @@ SRC_URI="http://www2.lm-sensors.nu/~lm78/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~alpha ~amd64 ~ppc"
 
 DEPEND=""
 
@@ -75,6 +75,10 @@ src_compile ()  {
 		fi
 	fi
 
+	cd kernel;
+	epatch ${FILESDIR}/i2c-2.8.0-alphaCompile.patch > /dev/null;
+	cd ..;
+
 	if [ ! `emake LINUX=$LINUX clean all` ] ; then
 		eerror "i2c requires the source of a compatible kernel"
 		eerror "version installed in /usr/src/linux"
@@ -101,8 +105,9 @@ pkg_postinst() {
 	einfo
 	einfo "I2C modules installed ..."
 	einfo
-	einfo "IMPORTANT ... if you are installing this package you need to"
-	einfo "IMPORTANT ... *disable* kernel I2C support OR *modularize it*"
-	einfo "IMPORTANT ... if your 2.4.x kernel is patched with such support"
+	ewarn "IMPORTANT ... if you are installing this package you need to"
+	ewarn "IMPORTANT ... *disable* kernel I2C support OR *modularize it*"
+	ewarn "IMPORTANT ... if your 2.4.x kernel is patched with such support"
 	einfo
+	echo
 }
