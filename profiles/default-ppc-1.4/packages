@@ -1,121 +1,43 @@
-# IMPORTANT: In order to parse this new format, you need Portage 1.6 or later!
+### GENTOO/PPC 1.4 PROFILE ###
 
-# OK; you're staring at this file and you have no idea what these stars are
-# for.  Here's the scoop.  An initial "*" marks a package that is part of the
-# official "base" system profile.  If there's a "*", then "emerge system" will
-# use the line in its calculations of what "should" be installed for this
-# profile.  Lines without a "*" prefix will be ignored for profile
-# calculations.
+# Maintained by Pieter Van den Abeele <pvdabeel@gentoo.org>
 
-# Now, this is new: *all* lines (star or no star) will be used as a special
-# package *inclusion* mask.  For example, the line *=sys-devel/gcc-2.95.3-r1
-# will cause Portage to totally ignore all gcc ebuilds other than
-# gcc-2.95.3-r1.  >=, <=, <, > and ~ can be used to offer a bit more
-# flexibility.  For example, >=sys-libs/glibc-2.2.4 will cause emerge to ignore
-# all glibc ebuilds with a version less than 2.2.4.  This allows us to have
-# profile-specific package.mask settings.  *All* lines are used for this
-# masking process, whether they are prefixed with a * or not.  And if a generic
-# dep is used, like "sys-apps/foo", then all versions of foo are included.  If
-# there is no entry, then all versions of an app are included.  The key thing
-# to note is that this file does not need to end up being an exhaustive list
-# of portage packages; just the ones critical to this profile.
+### We no longer maintain lists of what doesn't build on ppc here. 
+### This stuff is marked in the ebuild itself
 
-# So, what happens to /usr/portage/profiles/package.mask?  It's still around,
-# and still useful.  But it should mainly be used for broken ebuilds only.
-# package.mask continues to function as normal, masking out ebuilds from *all*
-# system profiles.
+# core stuff -- all masked correctly on Wed Jul 16 10am 
 
-# Which to use?  Use the profile-specific stuff to "lock down" specific
-# versions of ebuilds.  Gentoo Linux 1.0_rc6 uses certain known-compatible
-# versions of binutils, gcc and glibc, so we lock them down here.  This
-# prevents the user from shooting himself/herself in the foot by installing a
-# wacky version.
-
-# PPC PROFILE
-
-# Looks like a whole bunch of x86 stuff in the ebuild that I'm not sure
-# will work so great on the PPC so it's masked for PPC testing. 
-# Owen - July 0/02
-~net-fs/openafs
-
-# x86 asm in this one, might be fixable at a later date (?) Gerk - june 24 2002
-~media-video/drip
-
-# vnc code (even from vendor) not very ppc happy at all
-# tightvnc works, so masking this for now - Gerk June 26 2002
-~net-misc/vnc
-
-# ebuilds installing precompiled stuff:
-
-~net-www/netscape-communicator
-~net-www/netscape-flash
-~net-www/netscape-navigator
-~net-www/netscape-plugger
-
-# more precompiled and/or x86 only ebuilds
-# not avail for ppc (gerk)
-~app-text/acroread
-~app-emulation/vmware-workstation
-~app-emulation/wine
-~app-emulation/winesetuptk
-~app-emulation/winex
-~dev-java/sun-jdk
-~dev-java/sun-j2ee
-~dev-java/ibm-jre
-~app-emulation/basiliskII
-~sys-apps/yard
-~app-emulation/dosemu
-~app-games/quake3
-~app-games/quake3-cpma
-~app-games/quake3-osp
-~app-emulation/psemu-cdr
-~app-emulation/psemu-cdriso
-~app-emulation/psemu-gpupetemesagl
-~app-emulation/psemu-padjoy
-~app-emulation/psemu-padxwin
-~app-emulation/psemu-peopssoftgpu
-~app-emulation/psemu-peopsspu
-~dev-util/cvsup
-~media-video/realplayer
-
-# temp (to fix) currently x86 only builds 
-# that can be adjusted for ppc (gerk)
-~media-video/ati-gatos
-
-# makes no sense on ppc
-~sys-apps/lilo
-~sys-apps/grub 
-
-# Actual profiled pkgs start here
-*=sys-kernel/linux-headers-2.4.18-r2
-*app-arch/ncompress
+*>=sys-kernel/linux-headers-2.4.18-r2
 *>=sys-apps/baselayout-1.7.9-r1
 *>=sys-apps/portage-2.0.35
 *>=sys-devel/binutils-2.13.90.0.18
 *>=sys-devel/gcc-3.2.1
 *>=sys-libs/glibc-2.3.1-r2
 
-*sys-apps/texinfo
-sys-kernel/ppc-sources
->=sys-apps/sysklogd-1.4.1
-*>=dev-lang/python-2.2-r4
-*virtual/editor
-*sys-apps/hfsutils
-*virtual/bootloader
-*sys-apps/mac-fdisk
+# less critical stuff -- all last checked on Wed Jul 16 11am 
+
+*app-arch/ncompress
+
+>=app-admin/metalog-0.6-r6
+>=app-admin/mon-0.38.20-r6
+>=app-admin/syslog-ng-1.4.12-r6
+
+*app-shells/bash
 *app-shells/sash
+
+>=app-text/dictd-1.5.5-r6
+
+*>=dev-lang/python-2.2-r4
+
 *dev-lang/perl
 *dev-perl/ExtUtils-MakeMaker
-*net-ftp/ftp
-*net-misc/dhcpcd
-net-misc/netkit-telnetd
-*net-misc/rsync
-*net-misc/wget
-*app-shells/bash
+
+>=sys-apps/apmd-3.0.1-r6
+>=sys-apps/at-3.1.8-r6
 *sys-apps/bzip2
-*sys-apps/kbd
 *sys-apps/cpio
 *sys-apps/debianutils
+*>=sys-apps/devfsd-1.3.20
 *sys-apps/diffutils
 *sys-apps/e2fsprogs
 *sys-apps/ed
@@ -124,19 +46,20 @@ net-misc/netkit-telnetd
 *sys-apps/file
 *sys-apps/fileutils
 *sys-apps/findutils
-*sys-apps/slocate
 *sys-apps/gawk
 *sys-apps/grep
 *sys-apps/groff
 *sys-apps/gzip
 *sys-apps/hdparm
+*sys-apps/hfsutils
+*sys-apps/kbd
 *sys-apps/less
-*sys-apps/man
-*sys-apps/man-pages
-*sys-apps/modutils
-*net-misc/iputils
 *sys-apps/net-tools
 *sys-apps/netkit-base
+*sys-apps/mac-fdisk
+*sys-apps/man
+*sys-apps/man-pages
+*sys-apps/pam-login
 *sys-apps/procps
 *sys-apps/psmisc
 sys-apps/raidtools
@@ -145,13 +68,16 @@ sys-apps/reiserfsprogs
 *sys-apps/setserial
 *sys-apps/sh-utils
 *<sys-apps/shadow-5
-*sys-apps/pam-login
-# updated for GLSA
 *>=sys-apps/sharutils-4.2.1-r6
+*sys-apps/slocate
+>=sys-apps/sysklogd-1.4.1
 *sys-apps/tar
+*sys-apps/texinfo
 *sys-apps/textutils
 *sys-apps/util-linux
 *sys-apps/which
+>=sys-apps/xinetd-2.3.3-r6
+
 *sys-devel/autoconf
 *>=sys-devel/automake-1.6.1-r5
 *sys-devel/bc
@@ -162,50 +88,59 @@ sys-apps/reiserfsprogs
 *sys-devel/m4
 *sys-devel/make
 *sys-devel/patch
+
 *sys-libs/cracklib  
 *<sys-libs/db-3.2.10
 *sys-libs/gdbm  
+>=sys-libs/gpm-1.19.3-r5
 *sys-libs/ncurses     
 *>=sys-libs/pam-0.75-r9
 *sys-libs/pwdb      
 *sys-libs/readline  
 *sys-libs/slang
 *sys-libs/zlib
-*>=net-misc/openssh-3.0.1_p1
-*>=sys-apps/devfsd-1.3.20
->=sys-libs/gpm-1.19.3-r5
->=sys-apps/isapnptools-1.23-r6
->=sys-apps/dcron-2.7-r6
->=sys-apps/xinetd-2.3.3-r6
->=net-fs/samba-2.2.2-r6
->=sys-apps/at-3.1.8-r6
->=app-admin/fcron-1.1.1-r6
->=app-admin/metalog-0.6-r6
->=app-admin/mon-0.38.20-r6
->=app-admin/syslog-ng-1.4.12-r6
->=net-www/apache-1.3.20-r6
+
 >=net-analyzer/ucd-snmp-4.1.2-r6
+
+>=net-dialup/ppp-2.4.1-r6
+
+*net-ftp/ftp
 >=net-ftp/oftpd-0.3.6-r6
 >=net-ftp/proftpd-1.2.4-r6
->=net-misc/dhcp-3.0_rc12-r6
->=net-misc/bind-9.1.3-r6
->=net-misc/netkit-timed-0.17-r6
->=net-misc/pdnsd-1.1.6-r6
->=net-mail/exim-3.32-r6
->=net-misc/fakeidentd-1.4-r6
+
+>=net-fs/samba-2.2.2-r6
+>=net-fs/samba-winbind-20010329-r6
+
 >=net-nds/openldap-1.2.12-r6
 >=net-nds/portmap-5b-r6
->=media-sound/alsa-utils-0.5.10-r6
->=net-print/LPRng-3.7.9-r6
 >=net-nds/ypbind-1.7-r6
 >=net-nds/ypserv-1.3.9-r6
->=net-print/cups-1.1.10-r6
-<net-misc/ntp-4.1.71-r6
->=sys-apps/apmd-3.0.1-r6
+
+>=net-mail/exim-3.32-r6
+
+>=net-misc/bind-9.1.3-r6
+*net-misc/dhcpcd
+>=net-misc/dhcp-3.0_rc12-r6
+>=net-misc/fakeidentd-1.4-r6
+*net-misc/iputils
+net-misc/netkit-telnetd
+>=net-misc/netkit-timed-0.17-r6
+*>=net-misc/openssh-3.0.1_p1
+>=net-misc/pdnsd-1.1.6-r6
 >=net-misc/portsentry-1.1-r6
->=sys-apps/noflushd-2.4-r6
->=app-text/dictd-1.5.5-r6
->=net-fs/samba-winbind-20010329-r6
+*net-misc/rsync
+*net-misc/wget
+
+>=net-print/cups-1.1.10-r6
+
+>=net-www/apache-1.3.20-r6
 >=net-www/wwwoffle-2.6d-r6
 >=net-www/squid-2.4.2s-r6
->=net-dialup/ppp-2.4.1-r6
+
+>=media-sound/alsa-utils-0.5.10-r6
+
+*virtual/bootloader
+virtual/cron
+*virtual/editor
+virtual/linux-sources
+*virtual/modutils
