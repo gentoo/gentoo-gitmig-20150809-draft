@@ -1,0 +1,30 @@
+# ChangeLog for sys-apps/trustees
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/ChangeLog,v 1.1 2003/10/14 01:48:12 max Exp $
+
+*trustees-2.10 (13 Oct 2003)
+
+  13 Oct 2003; Max Kalika <max@gentoo.org> metadata.xml, trustees-2.10.ebuild,
+  files/trustees.conf, files/trustees.rc6:
+  Cleanup and mark stable.
+
+  03 Jul 2003; Max Kalika <max@gentoo.org> trustees-2.10.ebuild:
+  Set KEYWORDS to ~x86.
+
+  11 Jun 2003; Max Kalika <max@gentoo.org> trustees-2.10.ebuild,
+  files/trustees.rc6:
+  Start trustees before net.
+
+  23 May 2003; Max Kalika <max@gentoo.org> files/trustees.rc6:
+  Add check for /proc/trustee in startup script.
+
+  22 May 2003; Max Kalika <max@gentoo.org> trustees-2.10.ebuild,
+  files/trustees.conf, files/trustees.rc6:
+  Add startup script and corresponding config file. Remove post-install message
+  about loading permissions on boot.
+
+*trustees-2.10 (08 May 2003)
+
+  08 May 2003; Max Kalika <max@gentoo.org> trustees-2.10.ebuild:
+  Initial version.
+
