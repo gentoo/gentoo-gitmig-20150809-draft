@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.0.4.ebuild,v 1.7 2003/09/06 23:52:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.0.4.ebuild,v 1.8 2003/09/12 20:16:25 liquidx Exp $
 
 inherit gnome2
 
@@ -27,7 +27,6 @@ RDEPEND=">=dev-libs/glib-2.0.6
 	>=gnome-base/gconf-1.2.1
 	>=gnome-base/gnome-vfs-2.0.4
 	>=gnome-base/ORBit2-2.4.1
-	>=gnome-base/bonobo-activation-1.0.3
 	>=gnome-base/gnome-panel-2.0.8
 	>=gnome-base/libgnome-2.0.4
 	>=gnome-base/libgnomecanvas-2.0.4

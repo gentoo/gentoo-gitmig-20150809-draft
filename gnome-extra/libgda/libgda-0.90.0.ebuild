@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.90.0.ebuild,v 1.4 2003/09/08 05:11:17 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.90.0.ebuild,v 1.5 2003/09/12 20:19:07 liquidx Exp $
 
 IUSE="odbc postgres mysql ldap firebird freetds sqlite mdb oci8"
 
@@ -14,7 +14,6 @@ KEYWORDS="~x86 ~ppc"
 
 RDEPEND=">=gnome-base/ORBit2-2.3.91
 	>=dev-libs/glib-2.0.4
-	>=gnome-base/bonobo-activation-0.7.0
 	>=gnome-base/libbonobo-2.0.0
 	>=dev-libs/libxml2-2.4.23
 	>=gnome-base/gconf-1.2.0

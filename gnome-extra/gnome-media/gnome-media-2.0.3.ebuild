@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.0.3.ebuild,v 1.6 2003/02/13 12:18:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.0.3.ebuild,v 1.7 2003/09/12 20:11:32 liquidx Exp $
 
 inherit gnome2
 
@@ -17,7 +17,6 @@ RDEPEND=">=media-sound/esound-0.2.29
 	>=gnome-base/gconf-1.2.1
 	>=gnome-base/ORBit2-2.4.1
 	>=gnome-base/libbonobo-2.0.0
-	>=gnome-base/bonobo-activation-1.0.3
 	>=app-text/scrollkeeper-0.3.11
 	>=gnome-base/gail-0.17
 	media-sound/sox"
