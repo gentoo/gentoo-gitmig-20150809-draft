@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.1.1-r3.ebuild,v 1.19 2004/11/22 04:10:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.1.1-r3.ebuild,v 1.20 2004/11/22 14:16:43 vapier Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 
@@ -46,6 +46,9 @@ src_unpack() {
 		rm -rf ${x}.orig
 	done
 
+	# Fix /usr/lib/libbfd.la
+	elibtoolize --portage --no-uclibc
+
 	gnuconfig_update
 }
 
@@ -69,10 +72,6 @@ src_compile() {
 	# bug #47581 for more information.
 	# Travis Tilley <lv@gentoo.org>
 	has_version "=sys-devel/gcc-3.4*" && strip-flags && replace-flags -O3 -O2
-
-
-	# Fix /usr/lib/libbfd.la
-	elibtoolize --portage
 
 	./configure \
 		--enable-shared \
