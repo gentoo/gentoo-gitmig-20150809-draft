@@ -5,9 +5,9 @@ MD5 dff4b8190b4949efbdbe7c8af52ed6ab mplayer-1.0_pre3-r3.ebuild 11488
 MD5 cfd4ffe9d6dc7cd6a6a5e4a824a6a547 mplayer-1.0_pre2-r1.ebuild 11374
 MD5 84fc15c26e001c02a1e885d027f26567 mplayer-1.0_pre4-r2.ebuild 11723
 MD5 38811af4f8266a879e23a4d9a6169a32 mplayer-1.0_pre3-r5.ebuild 11464
-MD5 f8e6de987a08a445994d17d1b214e04a mplayer-1.0_pre4-r4.ebuild 13115
+MD5 4c823c63fdb298f4d05fdd07a5b7e2ca mplayer-1.0_pre4-r4.ebuild 13147
 MD5 c6d71825427ae32850d7f2da2590947a mplayer-0.92-r1.ebuild 11509
-MD5 4b99e356663f1767e011dd285e0ecb1a ChangeLog 26326
+MD5 966930fb395f7a97577ce38bc03851be ChangeLog 26616
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 eaf3ea2ae5d809504e64eecadac7b404 mplayer-1.0_pre4-r1.ebuild 11453
 MD5 deb1dbbf5879ed31e1b83fb7def5b600 files/digest-mplayer-0.92-r1 355

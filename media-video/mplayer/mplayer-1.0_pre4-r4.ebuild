@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r4.ebuild,v 1.12 2004/06/17 17:08:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r4.ebuild,v 1.13 2004/06/17 17:22:11 seemant Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -10,14 +10,17 @@ IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gno
 #                  as it seems the mplayer guys dont really care to
 #                  make it work without dvd support.
 
+BLUV=1.4
+SVGV=1.9.17
+
 # Handle PREversions as well
 MY_PV="${PV/_/}"
 S="${WORKDIR}/MPlayer-${MY_PV}"
 SRC_URI="mirror://mplayer/releases/MPlayer-${MY_PV}.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
-	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-1.9.17-mplayer.tar.bz2 )
-	gtk? ( mirror://mplayer/Skin/Blue-1.4.tar.bz2 )"
+	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )
+	gtk? ( mirror://mplayer/Skin/Blue-${BLUV}.tar.bz2 )"
 # Only install Skin if GUI should be build (gtk as USE flag)
 DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayerhq.hu/"
@@ -97,9 +100,9 @@ src_unpack() {
 	unpack MPlayer-${MY_PV}.tar.bz2 \
 		font-arial-iso-8859-1.tar.bz2 font-arial-iso-8859-2.tar.bz2
 
-	use svga && unpack svgalib_helper-1.9.17-mplayer.tar.bz2
+	use svga && unpack svgalib_helper-${SVGV}-mplayer.tar.bz2
 
-	use gtk && unpack Blue-1.4.tar.bz2
+	use gtk && unpack Blue-${BLUV}.tar.bz2
 
 	cd ${S}
 

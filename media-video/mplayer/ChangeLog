@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.148 2004/06/17 17:08:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.149 2004/06/17 17:22:11 seemant Exp $
+
+  17 Jun 2004; Seemant Kulleen <seemant@gentoo.org>
+  mplayer-1.0_pre4-r4.ebuild:
+  added two variables: BLUV and SVGV to hold the version numbers of the tarballs
+  for BLUE and svga_helper, respectively. Now, version bumping those two things
+  shouldn't break mplayer's emerge processes.
 
   17 Jun 2004; Seemant Kulleen <seemant@gentoo.org>
   mplayer-1.0_pre4-r4.ebuild:
