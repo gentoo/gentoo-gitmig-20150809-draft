@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.1.ebuild,v 1.1 2003/08/01 08:46:29 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.1.ebuild,v 1.2 2003/08/05 17:18:44 vapier Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -8,8 +8,8 @@
 #	tremor - package not in portage yet - experimental
 
 
-IUSE="arts qt ncurses dvd gtk nls 3dfx svga fbcon esd kde X alsa ggi \ 
-      oggvorbis gnome xv oss sdl aalib slp truetype v4l xvid lirc \
+IUSE="arts qt ncurses dvd gtk nls 3dfx svga fbcon esd kde X alsa ggi
+      oggvorbis gnome xv oss sdl aalib slp truetype v4l xvid lirc
       wxwindows imlib mozilla dvb debug faad xosd matroska"
 
 DESCRIPTION="VideoLAN Client - DVD/video player and more"
