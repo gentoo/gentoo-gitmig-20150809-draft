@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/im-sdk
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-sdk/ChangeLog,v 1.6 2005/01/01 14:31:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-sdk/ChangeLog,v 1.7 2005/03/30 17:24:46 usata Exp $
+
+*im-sdk-12.1_p2002 (30 Mar 2005)
+
+  30 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> +im-sdk-12.1_p2002.ebuild:
+  Version bumped.
 
 *im-sdk-12.0.1_pre1891 (14 Sep 2004)
 *im-sdk-11.4_p1467 (14 Sep 2003)
