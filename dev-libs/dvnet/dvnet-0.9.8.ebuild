@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/dvnet-0.9.8.ebuild,v 1.4 2003/07/17 12:04:30 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/dvnet-0.9.8.ebuild,v 1.5 2003/07/18 07:54:29 pvdabeel Exp $
 
 A=dvnet-${PV}.tar.gz
 S=${WORKDIR}/dvnet-${PV}
@@ -13,18 +13,8 @@ SLOT="0"
 
 IUSE=""
 DEPEND="virtual/glibc
-	dev-libs/dvutil
-	>=sys-apps/sed-4"
+	dev-libs/dvutil"
 RDEPEND=${DEPEND}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	aclocal
-	autoconf
-	automake
-	sed -i 's:$(pkgdatadir:$(DESTDIR)\/$(pkgdatadir:' ${S}/doc/Makefile.am
-}
 
 src_install() {
 	make DESTDIR=${D} prefix=${D}/usr install
