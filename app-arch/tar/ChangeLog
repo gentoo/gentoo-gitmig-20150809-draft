@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/tar
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.9 2004/04/10 07:37:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.10 2004/04/10 08:17:41 mr_bones_ Exp $
+
+*tar-1.13.94 (10 Apr 2004)
+
+  10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> tar-1.13.94.ebuild:
+  version bump; two patches from 1.13.92 were integrated upstream
 
   10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> tar-1.13.25-r3.ebuild,
   tar-1.13.92-r3.ebuild:
