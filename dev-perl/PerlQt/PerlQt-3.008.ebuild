@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.008.ebuild,v 1.2 2003/10/17 15:34:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.008.ebuild,v 1.3 2003/11/07 14:42:05 caleb Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://perlqt.sourceforge.net/"
 SRC_URI="mirror://sourceforge/perlqt/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 
 #if kdebindings is installed compilation is really fast!
