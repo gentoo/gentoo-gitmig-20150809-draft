@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4p.ebuild,v 1.11 2002/12/09 04:37:27 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4p.ebuild,v 1.12 2002/12/12 22:25:48 tuxus Exp $
 
 inherit gnuconfig
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.seindal.dk/gnu/${MY_P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/m4/m4.html"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha mips"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )
