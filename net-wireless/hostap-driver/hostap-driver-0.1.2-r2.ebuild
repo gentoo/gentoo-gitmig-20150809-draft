@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.1.2-r2.ebuild,v 1.5 2004/08/12 18:48:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.1.2-r2.ebuild,v 1.6 2004/11/01 11:49:36 brix Exp $
 
 # pcmcia eclass inherits eutils
-inherit pcmcia eutils
+inherit toolchain-funcs pcmcia eutils
 
 DESCRIPTION="HostAP wireless drivers"
 HOMEPAGE="http://hostap.epitest.fi/"
@@ -27,7 +27,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}.firmware.diff.bz2"
 
 	## set compiler options
-	sed -i -e "s:gcc:${CC}:" ${S}/Makefile
+	sed -i -e "s:gcc:$(tc-getCC):" ${S}/Makefile
 	# sed -i -e "s:-O2:${CFLAGS}:" "${S}/Makefile" # improper CFLAGS could cause unresolved symbols in the modules
 
 	## fix for new coreutils (#31801)

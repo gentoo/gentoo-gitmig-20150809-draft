@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/hostap-driver
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.16 2004/10/26 10:15:24 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.17 2004/11/01 11:49:36 brix Exp $
+
+  01 Nov 2004; Henrik Brix Andersen <brix@gentoo.org>
+  hostap-driver-0.1.1.ebuild, hostap-driver-0.1.2-r1.ebuild,
+  hostap-driver-0.1.2-r2.ebuild, hostap-driver-0.1.2.ebuild,
+  hostap-driver-0.1.3.ebuild, hostap-driver-0.2.4.ebuild,
+  hostap-driver-0.2.5.ebuild:
+  Use tc-getCC() from toolchain-funcs.eclass, fixes bug #69281.
 
   26 Oct 2004; Henrik Brix Andersen <brix@gentoo.org>
   hostap-driver-0.2.5.ebuild:

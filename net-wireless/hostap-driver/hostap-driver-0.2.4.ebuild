@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.2.4.ebuild,v 1.1 2004/09/14 16:22:46 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.2.4.ebuild,v 1.2 2004/11/01 11:49:36 brix Exp $
 
-inherit pcmcia kernel-mod
+inherit toolchain-funcs pcmcia kernel-mod
 
 DESCRIPTION="HostAP wireless drivers"
 HOMEPAGE="http://hostap.epitest.fi/"
@@ -26,7 +26,7 @@ src_unpack() {
 	cd ${S}
 
 	## set compiler options
-	sed -i -e "s:gcc:${CC}:" ${S}/Makefile
+	sed -i -e "s:gcc:$(tc-getCC):" ${S}/Makefile
 
 	## fix for new coreutils (#31801)
 	sed -i -e "s:tail -1:tail -n 1:" ${S}/Makefile

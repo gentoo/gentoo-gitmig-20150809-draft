@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.1.1.ebuild,v 1.6 2004/08/09 22:32:51 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.1.1.ebuild,v 1.7 2004/11/01 11:49:36 brix Exp $
 
-inherit eutils
+inherit toolchain-funcs eutils
 
 DESCRIPTION="HostAP wireless drivers"
 HOMEPAGE="http://hostap.epitest.fi/"
@@ -22,7 +22,7 @@ src_unpack() {
 	cd "${S}"
 
 	## set compiler options
-	sed -i -e "s:gcc:${CC}:" "${S}/Makefile"
+	sed -i -e "s:gcc:$(tc-getCC):" "${S}/Makefile"
 	# sed -i -e "s:-O2:${CFLAGS}:" "${S}/Makefile" # improper CFLAGS could cause unresolved symbols in the modules
 
 	## fix for new coreutils (#31801)
