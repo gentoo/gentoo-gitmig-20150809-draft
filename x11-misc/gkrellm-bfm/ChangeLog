@@ -1,9 +1,0 @@
-# ChangeLog for x11-misc/gkrellm-bfm
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellm-bfm/ChangeLog,v 1.1 2002/02/20 03:16:12 agriffis Exp $
-
-*gkrellm-bfm-0.5.1 (19 Feb 2002)
-
-	19 Feb 2002; Aron Griffis <agriffis@gentoo.org> gkrellm-bfm-0.5.1.ebuild :
-
-	Added ebuild for BubbleFishyMon Gkrellm plug-in from Seemant Kulleen
