@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/showconsole
+# ChangeLog for app-admin/showconsole
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/ChangeLog,v 1.1 2005/03/05 00:38:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/ChangeLog,v 1.2 2005/03/05 13:35:28 swegener Exp $
 
 *showconsole-1.07 (05 Mar 2005)
 
