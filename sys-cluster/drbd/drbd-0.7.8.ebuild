@@ -1,14 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.6.12-r1.ebuild,v 1.4 2005/01/21 01:09:22 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.8.ebuild,v 1.1 2005/01/21 01:09:22 xmerlin Exp $
 
-inherit eutils
+inherit eutils versionator linux-mod
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
+MY_MAJ_PV="$(get_version_component_range 1-2 ${PV})"
 DESCRIPTION="mirror/replicate block-devices across a network-connection"
-SRC_URI="http://www.drbd.org/uploads/media/drbd-${PV}.tar.gz"
+SRC_URI="http://oss.linbit.com/drbd/${MY_MAJ_PV}/${P}.tar.gz"
 HOMEPAGE="http://www.drbd.org"
 
 IUSE=""
@@ -20,60 +21,47 @@ SLOT="0"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-Makefile.vars.patch
-	cd drbd
-	epatch ${FILESDIR}/${PV}-module-Makefile.patch
-	cd ..
-	cd scripts
-	epatch ${FILESDIR}/${PV}-scripts-Makefile.patch
-	cd ${S}
+	epatch ${FILESDIR}/${PN}-${MY_MAJ_PV}-module-Makefile.patch || die
 }
 
 src_compile() {
 	check_KV
+	set_arch_to_kernel
+
 	einfo ""
 	einfo "Your kernel-sources in /usr/src/linux-${KV} must be properly configured"
 	einfo "and match the currently running kernel version ${KV}"
 	einfo "If otherwise -> build will fail."
 	einfo ""
-	cd ${S}
-	cp -R /usr/src/linux-${KV} ${WORKDIR}
-	emake KDIR=/${WORKDIR}/linux-${KV} || die
+
+	emake KDIR=${KERNEL_DIR} || die
 }
 
 src_install() {
-	cd ${S}
 	make PREFIX=${D} install
 
 	# gentoo-ish init-script
-	dodir /etc
 	dodir /etc/init.d
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PV}-init drbd || die
-
-	# config
-	dodir /etc/conf.d
-	insinto /etc/conf.d
-	doins ${FILESDIR}/${PV}-conf.d || die
+	newexe ${FILESDIR}/drbd-0.7-init drbd || die
 
 	# needed by drbd startup script
-	dodir /var/lib/drbd
 	keepdir /var/lib/drbd
 
 	# docs
 	dodoc README ChangeLog COPYING
 	dodoc documentation/NFS-Server-README.txt
+
 	# we put drbd.conf into docs
 	# it doesnt make sense to install a default conf in /etc
 	# put it to the docs
+	rm -f ${D}/etc/drbd.conf
 	dodoc scripts/drbd.conf
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "upgrading module dependencies ... "
-	/sbin/depmod -a -F /lib/modules/${KV}/build/System.map
-	einfo "... done"
+	linux-mod_pkg_postinst
+
 	einfo ""
 	einfo "Please remember to re-emerge drbd when you upgrade your kernel!"
 	einfo ""
@@ -82,5 +70,6 @@ pkg_postinst() {
 	einfo "and edit it to your needs. Helpful commands:"
 	einfo "man 5 drbd.conf"
 	einfo "man 8 drbdsetup"
+	einfo "man 8 drbdadm"
 	einfo ""
 }
