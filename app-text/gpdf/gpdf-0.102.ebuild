@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.102.ebuild,v 1.2 2003/06/13 19:48:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.102.ebuild,v 1.3 2003/06/18 21:05:13 liquidx Exp $
 
 inherit flag-o-matic gnome2
 
@@ -24,6 +24,8 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog COPYING* MAINTAINERS TODO NEWS README"
 
-# This is required to build on alpha but it doesn't actually RUN there
-# yet.
-#use alpha && append-flags -fPIC
+src_compile() {
+	use alpha && append-flags -fPIC
+	gnome2_src_compile
+}
+
