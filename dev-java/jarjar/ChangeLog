@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jarjar
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.1 2005/01/05 20:54:11 luckyduck Exp $
+
+*jarjar-0.4_p20050105 (05 Jan 2005)
+
+  05 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/asm-2.0_alpha-buildfile.patch, +jarjar-0.4_p20050105.ebuild:
+  Initial import. Dependency of #67395.
+

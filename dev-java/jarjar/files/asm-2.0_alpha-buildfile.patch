@@ -1,0 +1,41 @@
+--- build.xml.orig	2005-01-05 21:37:11.710210536 +0100
++++ build.xml	2005-01-05 21:44:50.430474456 +0100
+@@ -20,7 +20,7 @@
+     <property name="compile.extdirs" value=""/>
+ 
+     <property name="version" value="0.4"/>
+-    <property name="jarfile" value="${dist}/jarjar-${version}.jar"/>
++    <property name="jarfile" value="${dist}/jarjar.jar"/>
+ 
+     <property name="test.jar" value="${build}/rejar.jar"/>
+ 
+@@ -88,18 +88,13 @@
+ 
+     <target name="jar" depends="compile" description="Create Jar">
+         <mkdir dir="${dist}"/>
+-        <taskdef name="jarjar" classname="com.tonicsystems.jarjar.JarJarTask" classpathref="path.run"/>
+-        <jarjar jarfile="${jarfile}">
++        <jar jarfile="${jarfile}">
+             <fileset dir="${build}/main"/>
+-            <zipfileset src="${lib}/asm.jar"/>
+-            <zipfileset src="${lib}/gnu-regexp.jar"/>
+-            <rule pattern="org.objectweb.asm.**" result="com.tonicsystems.jarjar.asm.@1"/>
+-            <rule pattern="gnu.**" result="com.tonicsystems.jarjar.@0"/>
+             <manifest>
+                 <attribute name="Main-Class" value="com.tonicsystems.jarjar.Main"/>
+                 <attribute name="Implementation-Version" value="${version}"/>
+             </manifest>
+-        </jarjar>
++        </jar>
+     </target>
+ 
+     <target name="test-rejar" depends="jar">
+@@ -129,7 +124,7 @@
+           Use="true"
+         />
+     </target>
+-
++    
+     <target name="dist" depends="clean,test,javadoc">
+         <!-- TODO -->
+     </target>
