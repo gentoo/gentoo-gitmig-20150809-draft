@@ -3,7 +3,7 @@ MD5 01ecc4acc9c20fc3891bc057a441829e graphviz-1.8.10-r3.ebuild 1960
 MD5 d6160b4c9466ac4453e984cfde9f3f39 graphviz-1.9.ebuild 1101
 MD5 37071ff584f615b3ac066fd4827e5000 graphviz-1.10.ebuild 1099
 MD5 47f4a86ba45ffafdea2d765b42462528 graphviz-1.8.10-r2.ebuild 1261
-MD5 0aa7eb9637ea6004509172a43042a9ce ChangeLog 3112
+MD5 3294d18e44aacf9dc6af92e5da13f3ba ChangeLog 3082
 MD5 1737afe4c207e5a3efb388e1f558850f files/digest-graphviz-1.9 190
 MD5 5e8726d7d859188692efcfe9e9155761 files/gdgen.c.patch 756
 MD5 378952274e1900d18448028732e49690 files/digest-graphviz-1.8.10 68
