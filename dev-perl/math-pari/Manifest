@@ -1,0 +1,5 @@
+MD5 c2c4ec5a0ec34e3f7744f2f8220fbf86 files/digest-math-pari-2.010500 132
+MD5 7a7e062815d9dc583da5d94ad204074d files/digest-pari-2.1.4 63
+MD5 ee951aeeb2122fab2aaf9803097fad76 files/digest-pari-2.1.5 63
+MD5 f487702e24fd7552c8f4a5e0dc54810c ChangeLog 529
+MD5 ab3e1d3369f0f520bbe0fa350949a988 math-pari-2.010500.ebuild 694
