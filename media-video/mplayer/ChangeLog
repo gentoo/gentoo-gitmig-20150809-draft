@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.269 2005/02/06 06:45:55 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.270 2005/02/06 15:28:08 chriswhite Exp $
+
+  07 Feb 2005; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r5.ebuild,
+  mplayer-1.0_pre6.ebuild:
+  Added dga logic to fix bug #80861.
 
   06 Feb 2005; Chris White <chriswhite@gentoo.org> files/mplayer-x11.patch:
   Fixing the patch to work with 71478's issue as well.
