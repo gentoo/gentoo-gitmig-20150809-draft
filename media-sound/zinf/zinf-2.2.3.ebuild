@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.3.ebuild,v 1.6 2003/05/16 19:56:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.3.ebuild,v 1.7 2003/08/10 20:35:23 mholzer Exp $
 
 IUSE="esd X gtk oggvorbis gnome arts"
 
@@ -8,7 +8,7 @@ inherit kde-functions
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An extremely full-featured mp3/vorbis/cd player with ALSA support, previously called FreeAmp"
-SRC_URI="http://telia.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.zinf.org/"
 
 RDEPEND="=dev-libs/glib-1.2*
