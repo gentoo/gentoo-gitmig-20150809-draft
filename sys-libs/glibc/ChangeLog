@@ -1,6 +1,21 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.69 2003/07/18 22:01:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.70 2003/07/24 18:17:59 azarah Exp $
+
+*glibc-2.3.2-r3 (23 Jul 2003)
+
+  23 Jul 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r3.ebuild:
+  Update CVS snapshot, as well as NPTL version to 0.55.  Note that this
+  needs gcc-3.3-r1 and latest binutils (2.14.90.4+) to build with NPTL
+  support.
+
+  23 Jul 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r1.ebuild,
+  glibc-2.3.2-r2.ebuild:
+  From Kumba <kumba@gentoo.org>:
+
+    This is the patch to glibc-2.3.2-r1.ebuild which allows it to build
+    on sparc64.  I modified it so sparc and sparc64 can use the -fcall-used-g6
+    flag, while sparc64-only gets a few more checks added in.
 
   18 Jul 2003; Olivier Crete <tester@gentoo.org> glibc-2.3.2-r2.ebuild:
   Removed all traces of multilib, 64bit libs are installed in lib/
