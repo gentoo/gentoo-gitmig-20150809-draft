@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4a-r3.ebuild,v 1.2 2002/05/08 23:29:54 edolnx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4a-r3.ebuild,v 1.3 2002/05/29 23:24:18 prez Exp $
 
 S=${WORKDIR}/lynx2-8-4
 HOMEPAGE="http://lynx.browser.org/"
@@ -24,7 +24,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use nls && myconf="${myconf} --enable-nls"
-	use ssl && myconf="${myconf} --with-ssl=/usr"
+	use ssl && myconf="${myconf} --with-ssl=yes"
 	use ipv6 && myconf="${myconf} --enable-ipv6"
 
 	./configure --prefix=/usr --mandir=/usr/share/man --datadir=/usr/share \

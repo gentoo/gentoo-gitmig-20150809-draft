@@ -1,9 +1,17 @@
 # ChangeLog for net-www/lynx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.3 2002/05/08 23:29:54 edolnx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.4 2002/05/29 23:24:18 prez Exp $
+
+*lynx-2.8.4a-r3 (29 May 2002)
+
+  29 May 2002; Preston A. Elder <prez@gentoo.org> lynx-2.8.4a-r3.ebuild :
+
+  Fixed the ebuild to just pass --with-ssl=yes, not --with-ssl=/usr.
+  The configure fails to do the right thing with the path version.
 
 *lynx-2.8.4a-r3 (08 May 2002)
-  08 May 2002; Carl Perry <edolnx@gentoo.org> lynx-2.8.4ar3.ebuild :
+
+  08 May 2002; Carl Perry <edolnx@gentoo.org> lynx-2.8.4a-r3.ebuild :
 
   Fixed the alternate SRC_URI link so that it works.  Found during
   ibiblio.org outage yesterday.
