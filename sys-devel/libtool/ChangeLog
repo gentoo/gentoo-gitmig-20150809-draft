@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.37 2004/02/29 17:21:18 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.38 2004/03/01 19:39:08 azarah Exp $
+
+*libtool-1.5.2-r5 (01 Mar 2004)
+
+  01 Mar 2004; Martin Schlemmer <azarah@gentoo.org> libtool-1.4.3-r4.ebuild,
+  libtool-1.5.2-r5.ebuild:
+  Actually remove the correct patch for bug #43244.
 
 *libtool-1.5.2-r4 (29 Feb 2004)
 
