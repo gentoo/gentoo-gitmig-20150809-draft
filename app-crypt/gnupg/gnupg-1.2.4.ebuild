@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.16 2004/04/25 03:43:37 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.17 2004/04/28 22:05:18 avenj Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SLOT="0"
 
 LICENSE="GPL-2 | IDEA GPL-2"
 
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64 ia64 ~mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips"
 IUSE="X ldap nls static caps idea"
 
 RDEPEND="!static? ( ldap? ( net-nds/openldap )
