@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/giftui
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.7 2004/03/13 10:14:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.8 2004/03/25 02:27:13 weeve Exp $
+
+  24 Mar 2004; Jason Wever <weeve@gentoo.org> giftui-0.3.1.ebuild:
+  Added ~sparc keyword.
 
   13 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> giftui-0.1.1.ebuild,
   giftui-0.2.0.ebuild, giftui-0.3.1.ebuild:
