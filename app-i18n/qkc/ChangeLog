@@ -1,8 +1,11 @@
 # ChangeLog for app-i18n/qkc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/qkc/ChangeLog,v 1.5 2003/09/30 13:36:38 usata Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/qkc/ChangeLog,v 1.6 2004/01/18 01:47:36 matsuu Exp $
 
 *qkc-1.00 (27 Nov 2002)
+
+  18 Jan 2004; MATSUU Takuto <matsuu@gentoo.org> qkc-1.00.ebuild:
+  Marked as stable for amd64.
 
   30 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> qkc-1.00.ebuild:
   Marked as stable for ppc, sparc and alpha
