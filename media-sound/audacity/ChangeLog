@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.7 2003/01/31 00:54:56 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.8 2003/02/04 10:50:55 raker Exp $
 
 *audacity-1.1.1-r1 (30 Jan 2003)
+
+  04 Feb 2003; Nick Hadaway <raker@gentoo.org> audacity-1.1.1-r1.ebuild :
+  I have now tested audacity with wxGTK-2.4.0 and it works great.
 
   30 Jan 2003; Nick Hadaway <raker@gentoo.org> audacity-1.1.1-r1.ebuild,
   files/digest-audacity-1.1.1-r1 :

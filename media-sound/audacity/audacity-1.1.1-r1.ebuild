@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.1.1-r1.ebuild,v 1.1 2003/01/31 00:54:56 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.1.1-r1.ebuild,v 1.2 2003/02/04 10:50:55 raker Exp $
 
 IUSE="oggvorbis"
 DESCRIPTION="A free, crossplatform audio editor."
 HOMEPAGE="http://audacity.sourceforge.net/"
 LICENSE="GPL-2"
-DEPEND="=x11-libs/wxGTK-2.2.9*
+DEPEND=">=x11-libs/wxGTK-2.2.9
 	>=app-arch/zip-2.3
 	>=media-sound/mad-0.14
 	>=media-libs/id3lib-3.8.0
