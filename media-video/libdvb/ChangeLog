@@ -1,0 +1,7 @@
+# ChangeLog for media-video/libdvb
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/libdvb/ChangeLog,v 1.1 2003/03/07 14:23:32 lordvan Exp $
+
+*media-video/libdvb-0.2.1 (07 Mar 2003)
+  07 Mar 2003; Thomas Raschbacher <lordvan@gentoo.org>: libdvb-0.2.1.ebuild: 
+  initial ebuild
