@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Id: mpg123-0.59r-r1.ebuild,v 1.2 2002/04/27 11:57:51 seemant Exp $
+# $Id: mpg123-0.59r-r1.ebuild,v 1.3 2002/05/09 23:48:34 blauwers Exp $
 
 S=${WORKDIR}/${P}
 
@@ -14,6 +14,7 @@ DEPEND="virtual/glibc"
 src_unpack () {
 	unpack ${A}
 	cd ${S}
+	patch -p1 < ${FILESDIR}/${P}-sparc.diff
 	cp Makefile Makefile.orig
 	sed -e "s:-O2 -m486:${CFLAGS}:" Makefile.orig > Makefile
 }
@@ -24,14 +25,14 @@ src_compile() {
 
 	SYSTEM_ARCH=`echo $ARCH |\
 		sed -e s/[i]*.86/i386/ \
-			-e s/sun4u/sparc64/ \
+			-e s/sun.*/sparc/ \
 			-e s/arm.*/arm/ \
 			-e s/sa110/arm/`
 
 	if [ -z "$SYSTEM_ARCH" ]
 	then
 		SYSTEM_ARCH=`uname -m |\
-		sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+		sed -e s/[i]*.86/i386/ -e s/arm.*/arm/ -e s/sa110/arm/`
 	fi 
 
 	case $SYSTEM_ARCH in 
@@ -40,7 +41,9 @@ src_compile() {
 	  i386)
 	   MAKESTYLE="-i486";;
 	  sparc64)
-	   ;;
+	   MAKESTYLE="-sparc";;
+	  sparc)
+	   MAKESTYLE="-sparc";;
 	  arm)
 	   ;; 
 	esac
