@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mosml/mosml-2.00.ebuild,v 1.2 2004/01/12 16:46:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mosml/mosml-2.00.ebuild,v 1.3 2004/02/02 18:06:54 plasmaroo Exp $
 
 S="${WORKDIR}/${PN}/src"
 DESCRIPTION="Moscow ML - a lightweight implementation of Standard ML (SML)"
@@ -21,6 +21,7 @@ src_install () {
 
 	make MOSMLHOME=${D}/opt/mosml install || die
 	rm ${D}/opt/mosml/lib/camlrunm # This is a bad symlink
+	echo "#!/opt/mosml/bin/camlrunm" > ${D}/opt/mosml/lib/header
 
 	dodoc  ../README
 	into   /usr/bin
