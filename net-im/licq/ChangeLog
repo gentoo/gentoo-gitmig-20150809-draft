@@ -1,6 +1,7 @@
 # ChangeLog for net-im/licq
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.7 2002/12/26 08:30:41 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.8 2002/12/27 04:16:05 mkennedy Exp $
+
 
 *licq-1.2.0a-r3 (26 Dec 2002)
 
@@ -9,6 +10,11 @@
   files/1.2.0a-gcc3-gentoo.patch :
 
   C++ fix for gcc3. Resolves bug 12623. (Marking ~x86 until tested).
+
+  26 Dec 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  licq-1.2.0a-r3.ebuild, ChangeLog :
+
+  Marked as stable after receiving positive test feedback.
 
 *licq-1.2.0a-r2 (01 Dec 2002)
 

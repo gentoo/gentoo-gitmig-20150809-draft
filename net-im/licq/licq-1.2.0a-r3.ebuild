@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.0a-r3.ebuild,v 1.1 2002/12/26 08:30:41 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.0a-r3.ebuild,v 1.2 2002/12/27 04:16:05 mkennedy Exp $
 
 IUSE="ssl socks5 qt kde"
 
@@ -14,7 +14,7 @@ DEPEND="${DEPEND}
 
 SRC_URI="http://download.sourceforge.net/licq/${P}.tar.bz2"
 SLOT="2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 S=${WORKDIR}/${P}
 
 use kde && inherit kde-base
