@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.102.1.ebuild,v 1.1 2004/04/11 14:45:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.120.0.ebuild,v 1.1 2004/04/29 18:57:15 usata Exp $
 
 IUSE=""
 
 DESCRIPTION="Kita - 2ch client for KDE"
 HOMEPAGE="http://kita.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/kita/8449/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/kita/9291/${P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND="virtual/glibc
 	>=x11-libs/qt-3.1
@@ -36,12 +36,12 @@ src_compile() {
 	addwrite ${QTDIR}/etc
 
 	econf || die
-	cd kita ; emake -j1 || die ; cd -
+	emake -j1 || die
 }
 
 src_install() {
 
-	cd kita ; make DESTDIR=${D} install || die ; cd -
+	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
