@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9.ebuild,v 1.5 2004/01/24 04:38:49 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9.ebuild,v 1.6 2004/01/24 18:45:58 blkdeath Exp $
 
 inherit flag-o-matic
 
@@ -34,7 +34,7 @@ src_compile() {
 	if use ldap; then
 		einfo ldap
 		modules="${modules}:mod_ldap"
-		export LDFLAGS="-lresolv"
+		append-ldflags "-lresolv"
 	fi
 
 	if use ssl; then
