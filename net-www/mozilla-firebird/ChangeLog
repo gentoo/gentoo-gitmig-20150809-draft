@@ -1,6 +1,19 @@
 # ChangeLog for net-www/mozilla-firebird
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.28 2003/12/05 20:01:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.29 2003/12/09 21:29:13 brad Exp $
+
+*mozilla-firebird-0.7-r1 (09 Dec 2003)
+
+  09 Dec 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-0.7-r1.ebuild,
+  files/xremote-client-cvs.patch:
+  Introduce patches to xremote-client for compatibility with Mozilla
+  Thunderbird's URL handler - will be included in a future release of Mozilla
+  Firebird.
+  
+  To set Firebird as Thunderbird's URL handler for http://, make MozillaFirebird
+  the default browser under GNOME, or add:
+  
+  user_pref("network.protocol-handler.app.http", "/usr/bin/MozillaFirebird");
 
   05 Dec 2003; <agriffis@gentoo.org> mozilla-firebird-0.7.ebuild:
   Stable on ia64
