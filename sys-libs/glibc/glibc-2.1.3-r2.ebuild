@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.1.3-r2.ebuild,v 1.1 2000/09/20 22:58:44 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.1.3-r2.ebuild,v 1.2 2000/10/03 16:02:07 achim Exp $
 
 P=glibc-2.1.3
 A="glibc-2.1.3.tar.gz glibc-crypt-2.1.tar.gz 
@@ -13,6 +13,9 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/glibc/glibc-2.1.3.tar.gz
 	ftp://prep.ai.mit.edu/gnu/glibc/glibc-crypt-2.1.tar.gz
 	ftp://prep.ai.mit.edu/gnu/glibc/glibc-linuxthreads-2.1.3.tar.gz
+	ftp://gatekeeper.dec.com/pub/GNU/glibc/glibc-2.1.3.tar.gz
+	ftp://gatekeeper.dec.com/pub/GNU/glibc/glibc-crypt-2.1.tar.gz
+	ftp://gatekeeper.dec.com/pub/GNU/glibc/glibc-linuxthreads-2.1.3.tar.gz
 	ftp://jurix.jura.uni-sb.de/pub/linux/source/libc/glibc/glibc-compat-2.1.2.tar.gz
 	http://security.debian.org/dists/potato/updates/main/source/glibc_2.1.3-13.diff.gz"
 
@@ -44,6 +47,16 @@ src_unpack() {
     # This patch is required to compile with binutils higher than
     # 2.9.5.0.42
     cp ${O}/files/setjmp.S ${S}/sysdeps/i386/elf/setjmp.S
+
+    for i in alpha-dwarf2-dl-machine glibcbug hurd-ldflags \
+	     i386-linux-sys-io-c++ i386-linux-ucontext \
+	     linuxthreads-lock locale-C-ctype-c-big-endian \
+	     localedata-charmap-BIG5_1984 localedata-eo_EO \
+	     localedata-zh_TW.Big5 manual-texinfo4 pthread_create-manpage \
+	     string2-pointer-arith tzdata2000c zic-l
+    do
+        patch -p0 < ${S}/debian/patches/$i.dpatch
+    done
 }
 
 src_install() {
