@@ -4,5 +4,9 @@
 	<longdescription lang="en">
 		The net-zope category contains all Zope (zope.org) related software including third party products and tools.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría net-zope contiene todo el software relacionado con Zope
+		(zope.org) incluyendo herramientas y módulos de terceros.
+	</longdescription>
 </catmetadata>
 
