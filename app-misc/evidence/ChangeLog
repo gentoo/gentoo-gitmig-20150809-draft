@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/evidence
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/ChangeLog,v 1.9 2003/07/18 13:05:12 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/ChangeLog,v 1.10 2003/07/19 19:51:46 raker Exp $
+
+  19 Jul 2003; Nick Hadaway <raker@gentoo.org>:
+  Removed r1
 
 *evidence-0.9.6.20030629_pre1-r1 (18 Jul 2003)
 
