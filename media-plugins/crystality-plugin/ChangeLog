@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/crystality-plugin
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/crystality-plugin/ChangeLog,v 1.1 2003/06/22 03:57:14 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/crystality-plugin/ChangeLog,v 1.2 2003/10/19 19:11:44 mholzer Exp $
+
+  20 Oct 2003; Martin Holzer <mholzer@gentoo.org>
+  crystality-plugin-0.92.ebuild:
+  Adding gcc3 patch. Closes #31480.
 
 *crystality-plugin-0.92 (22 Jun 2003)
 

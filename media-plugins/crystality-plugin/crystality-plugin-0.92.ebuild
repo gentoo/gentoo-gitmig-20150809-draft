@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/crystality-plugin/crystality-plugin-0.92.ebuild,v 1.1 2003/06/22 03:57:14 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/crystality-plugin/crystality-plugin-0.92.ebuild,v 1.2 2003/10/19 19:11:45 mholzer Exp $
 
 DESCRIPTION="Crystality XMMS Plugin tries to patch some of the mp3 format flaws in realtime. It consists of bandwidth extender, harmonic booster, and 3D echo."
 HOMEPAGE="http://xmms.org/plugins_search.html?mode=search&query=crystality"
@@ -16,6 +16,12 @@ DEPEND="media-sound/xmms
 
 S=${WORKDIR}/${P}
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc3.patch
+}
+
 src_compile() {
 	emake || die
 	#make || die
@@ -28,4 +34,3 @@ src_install() {
 	dobin crystality-stdio
 	dodoc README COPYING ChangeLog
 }
-
