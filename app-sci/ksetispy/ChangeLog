@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/ksetispy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ksetispy/ChangeLog,v 1.8 2004/06/29 11:48:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ksetispy/ChangeLog,v 1.9 2004/07/26 17:21:02 pbienst Exp $
+
+*ksetispy-0.6.2 (26 Jul 2004)
+
+  26 Jul 2004; Peter Bienstman <pbienst@gentoo.org> +ksetispy-0.6.2.ebuild:
+  Version bump. Thanks to Elias Probst <elias.probst@gmx.de> for reporting.
 
   29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> ksetispy-0.5.2.ebuild,
   ksetispy-0.5.3.ebuild:
