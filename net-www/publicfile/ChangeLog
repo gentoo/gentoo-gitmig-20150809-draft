@@ -1,6 +1,11 @@
 # ChangeLog for net-www/publicfile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/ChangeLog,v 1.1 2002/05/09 10:27:40 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/ChangeLog,v 1.2 2002/05/09 16:48:03 bangert Exp $
+
+  09 May 2002; Thilo Bangert <bangert@gentoo.org> :
+
+  fixed description in pkg_postinst to reflect /home/public dir
+
 
 *publicfile-0.52 (09 May 2002)
 
