@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <blutgens@sistina.com> 
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha9-r2.ebuild,v 1.1 2002/04/16 19:20:53 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha9-r2.ebuild,v 1.2 2002/05/23 06:50:08 seemant Exp $
 
 S=${WORKDIR}/xcdroast-0.98alpha9
 DESCRIPTION="Menu based front-end to mkisofs and cdrecord"
@@ -11,7 +11,7 @@ SLOT="0"
 
 # WARNING: cdrtools and mkisofs versions hard coded, see below
 
-DEPEND=">=x11-libs/gtk+-1.2.10-r4 
+DEPEND="=x11-libs/gtk+-1.2* 
 	=dev-libs/glib-1.2*
 	>=media-libs/imlib-1.9.10-r1
 	>=media-libs/giflib-3.0

@@ -8,7 +8,7 @@ DESCRIPTION="A GUI for mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen"
 SRC_URI="http://www.abo.fi/~jmunsin/gcombust/${P}.tar.gz"
 HOMEPAGE="http://www.abo.fi/~jmunsin/gcombust/"
 SLOT="0"
-DEPEND=">=x11-libs/gtk+-1.2.10
+DEPEND="=x11-libs/gtk+-1.2*
 	nls? ( sys-devel/gettext )"
 
 src_compile() {

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.2.11.ebuild,v 1.1 2002/03/28 22:04:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.2.11.ebuild,v 1.2 2002/05/23 06:50:08 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Single process stack of various system monitors"
@@ -9,11 +9,11 @@ SRC_URI="http://web.wt.net/~billw/${PN}/${P}.tar.bz2"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )
-	>=x11-libs/gtk+-1.2.10-r4
+	=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.10-r1"
 
 RDEPEND="virtual/glibc
-	>=x11-libs/gtk+-1.2.10-r4
+	=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.10-r1"
 
 src_compile() {

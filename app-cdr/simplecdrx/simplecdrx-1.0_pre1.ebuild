@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.0_pre1.ebuild,v 1.2 2002/02/12 01:23:19 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.0_pre1.ebuild,v 1.3 2002/05/23 06:50:08 seemant Exp $
 
 MY_P="${PN}-`echo ${PV} |sed -e 's:_:-:'`"
 S=${WORKDIR}/${MY_P}
@@ -12,13 +12,13 @@ SLOT="0"
 #todo: add blade encoder
 DEPEND="sys-devel/gcc media-sound/mad app-cdr/cdrtools app-cdr/cdrdao 
 	media-sound/cdparanoia media-sound/lame media-libs/libogg
-	media-sound/mpg123 virtual/x11 >=x11-libs/gtk+-1.2.10-r4 \
+	media-sound/mpg123 virtual/x11 =x11-libs/gtk+-1.2* \
 	dev-libs/glib media-libs/libvorbis
 	media-libs/libao"
 		
 RDEPEND="media-sound/mad app-cdr/cdrtools app-cdr/cdrdao 
 	media-sound/cdparanoia media-sound/lame media-libs/libogg
-	media-sound/mpg123 virtual/x11 >=x11-libs/gtk+-1.2.10-r4 \
+	media-sound/mpg123 virtual/x11 =x11-libs/gtk+-1.2* \
 	dev-libs/glib media-libs/libvorbis
 	media-libs/libao"
 

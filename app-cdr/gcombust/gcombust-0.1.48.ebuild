@@ -2,14 +2,14 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Matthew Kennedy <mbkennedy@ieee.com>
 # Maintainer: Chris Houser <chouser@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.48.ebuild,v 1.2 2002/02/12 01:23:18 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.48.ebuild,v 1.3 2002/05/23 06:50:08 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A GUI for mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen"
 SRC_URI="http://www.abo.fi/~jmunsin/gcombust/${P}.tar.gz"
 HOMEPAGE="http://www.abo.fi/~jmunsin/gcombust/"
 SLOT="0"
-DEPEND=">=x11-libs/gtk+-1.2.10"
+DEPEND="=x11-libs/gtk+-1.2*"
 
 src_compile() {
 	./configure --host=${CHOST} --prefix=/usr || die
