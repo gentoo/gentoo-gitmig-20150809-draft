@@ -1,0 +1,8 @@
+# ChangeLog for games-server/pvpgn
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.1 2004/09/01 04:39:51 vapier Exp $
+
+*pvpgn-1.6.5 (01 Sep 2004)
+
+  01 Sep 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Mihai RUSU #40979.
