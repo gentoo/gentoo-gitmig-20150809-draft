@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/ppc-development-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ChangeLog,v 1.29 2004/03/29 10:53:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ChangeLog,v 1.30 2004/04/12 16:36:22 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
+  ppc-development-sources-2.6.1-r1.ebuild,
+  ppc-development-sources-2.6.1_rc1-r1.ebuild:
+  Add IUSE=
 
 *ppc-development-sources-2.6.4 (29 Mar 2004)
 
@@ -75,6 +80,7 @@
   ppc-development-sources-2.6.1-r1.ebuild:
   set ppc in keywords
 
+*ppc-development-sources-2.6.2_rc1-r1 (23 Jan 2004)
 *ppc-development-sources-2.6.1-r1 (09 Jan 2004)
 
   09 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org>

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21.ebuild,v 1.21 2004/04/11 21:37:13 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21.ebuild,v 1.22 2004/04/12 16:36:22 aliz Exp $
 
 ETYPE="headers"
-inherit kernel
-
+inherit kernel eutils
+IUSE=""
 OKV=${PV/_/-}
 KV="${OKV}"
 S=${WORKDIR}/linux-${OKV}

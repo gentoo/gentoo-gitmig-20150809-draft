@@ -1,10 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/planet-ccrma-sources-2.4.21-r5.ebuild,v 1.2 2004/03/04 18:07:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/planet-ccrma-sources-2.4.21-r5.ebuild,v 1.3 2004/04/12 16:36:22 aliz Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
-inherit kernel rpm
+inherit kernel rpm eutils
+IUSE=""
 
 OKV=2.4.21
 EXTRAVERSION="-1.ll.acpi"

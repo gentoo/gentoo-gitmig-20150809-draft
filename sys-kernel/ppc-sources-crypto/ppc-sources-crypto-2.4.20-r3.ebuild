@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ppc-sources-crypto-2.4.20-r3.ebuild,v 1.1 2004/02/19 00:31:26 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ppc-sources-crypto-2.4.20-r3.ebuild,v 1.2 2004/04/12 16:36:23 aliz Exp $
 
 IUSE="build crypt"
 
@@ -21,6 +21,7 @@ S=${WORKDIR}/linux-ppc-crypto-${KV}
 ETYPE="sources"
 
 #inherit kernel
+inherit eutils
 
 DESCRIPTION="Full cryptoapi enabled sources for the Gentoo Linux PPC kernel"
 SRC_URI="http://perso.wanadoo.fr/olivier.reisch/linux-ppc-crypto/linux-ppc-crypto-${OKV}.tar.bz2"

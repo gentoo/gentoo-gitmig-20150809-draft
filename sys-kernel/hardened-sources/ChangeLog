@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.22 2004/02/19 22:24:21 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.23 2004/04/12 16:36:22 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
+  hardened-sources-2.4.22-r2.ebuild, hardened-sources-2.4.24-r1.ebuild:
+  Add eutils to inherit.
 
 *hardened-sources-2.4.24-r1 (19 Feb 2004)
 

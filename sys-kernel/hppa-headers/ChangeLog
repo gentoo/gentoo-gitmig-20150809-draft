@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/hppa-headers
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/ChangeLog,v 1.9 2003/12/08 22:34:32 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/ChangeLog,v 1.10 2004/04/12 16:36:22 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> hppa-headers-2.4.23_p3.ebuild:
+  Add IUSE=
 
 *hppa-headers-2.4.23_p3 (5 Dec 2003)
 

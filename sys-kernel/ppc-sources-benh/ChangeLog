@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/ppc-sources-benh
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ChangeLog,v 1.15 2004/02/19 10:04:18 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ChangeLog,v 1.16 2004/04/12 16:36:23 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
+  ppc-sources-benh-2.4.22-r5.ebuild:
+  Add eutils to inherit, change patch to epatch, add missing flags to IUSE.
 
 *ppc-sources-benh-2.4.22-r5 (19 Feb 2004)
 

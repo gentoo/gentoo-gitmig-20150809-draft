@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/pac-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/ChangeLog,v 1.3 2004/02/18 23:31:44 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/ChangeLog,v 1.4 2004/04/12 16:36:22 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> pac-sources-2.4.23-r3.ebuild:
+  Add eutils to inherit.
 
 *pac-sources-2.4.23-r3 (18 Feb 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/pac-sources-2.4.23-r3.ebuild,v 1.1 2004/02/18 23:31:44 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pac-sources/pac-sources-2.4.23-r3.ebuild,v 1.2 2004/04/12 16:36:22 aliz Exp $
 
 IUSE="build"
 
@@ -8,7 +8,7 @@ IUSE="build"
 
 ETYPE="sources"
 
-inherit kernel
+inherit kernel eutils
 
 # PACV=Bernhard Rosenkraenzer's release version
 PACV=pac1

@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/uclinux-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.2 2004/03/09 12:20:46 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.3 2004/04/12 16:36:23 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
+  uclinux-sources-2.4.24_p0.ebuild, uclinux-sources-2.6.3_p0.ebuild:
+  Add eutils to inherit, use mirror://
 
 *uclinux-sources-2.6.3_p0 (07 Mar 2004)
 *uclinux-sources-2.4.24_p0 (07 Mar 2004)

@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.25 2004/03/15 13:04:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.26 2004/04/12 16:36:22 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> ck-sources-2.4.24-r1.ebuild,
+  ck-sources-2.6.2-r1.ebuild, ck-sources-2.6.3-r1.ebuild,
+  ck-sources-2.6.3-r2.ebuild:
+  Add eutils to inherit, add IUSE=
 
 *ck-sources-2.6.4-r1 (14 Mar 2004)
 *ck-sources-2.4.25-r1 (14 Mar 2004)

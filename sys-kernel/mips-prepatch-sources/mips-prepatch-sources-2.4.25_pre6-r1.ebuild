@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-prepatch-sources/mips-prepatch-sources-2.4.25_pre6-r1.ebuild,v 1.1 2004/02/18 21:56:26 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-prepatch-sources/mips-prepatch-sources-2.4.25_pre6-r1.ebuild,v 1.2 2004/04/12 16:36:22 aliz Exp $
 
 
 # Version Data
@@ -13,6 +13,7 @@ STABLEVERSION="2.4.24"
 
 # Miscellaneous
 S=${WORKDIR}/linux-${OKV}-${CVSDATE}
+IUSE=""
 
 # Eclass Stuff
 ETYPE="sources"

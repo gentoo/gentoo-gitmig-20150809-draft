@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gaming-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.17 2004/02/18 18:51:04 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.18 2004/04/12 16:36:22 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
+  gaming-sources-2.4.20-r8.ebuild:
+  Add eutils to inherit.
 
 *gaming-sources-2.4.20-r8 (18 Feb 2004)
 

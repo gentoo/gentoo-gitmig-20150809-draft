@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/vanilla-prepatch-sources-2.4.25_rc4.ebuild,v 1.1 2004/02/18 14:07:00 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/vanilla-prepatch-sources-2.4.25_rc4.ebuild,v 1.2 2004/04/12 16:36:23 aliz Exp $
 
 IUSE="build"
 
 ETYPE="sources"
-inherit kernel
+inherit kernel eutils
 
 # OKV=original kernel version, KV=patched kernel version.  
 

@@ -1,13 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/compaq-sources-2.4.9.32.7-r2.ebuild,v 1.1 2004/02/18 18:40:42 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/compaq-sources-2.4.9.32.7-r2.ebuild,v 1.2 2004/04/12 16:36:22 aliz Exp $
 
 ETYPE="sources"
-inherit kernel
+inherit kernel eutils
 OKV=2.4.9
 KV=${OKV}-32.7
 EXTRAVERSION="-compaq-r2"
 S=${WORKDIR}/linux-${KV}
+IUSE=""
 
 # This ebuild installs the sources for the Linux kernel shipped with the
 # latest version of Red Hat Linux for Alpha, maintained by Compaq.

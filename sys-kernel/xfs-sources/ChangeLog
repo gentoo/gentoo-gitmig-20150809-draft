@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.42 2004/02/19 00:45:07 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.43 2004/04/12 16:36:23 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> xfs-sources-2.4.24-r3.ebuild:
+  Add eutils to inherit, add IUSE=
 
 *xfs-sources-2.4.24-r3 (18 Feb 2004)
 

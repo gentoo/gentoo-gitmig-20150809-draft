@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/ia64-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.10 2004/02/27 11:52:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.11 2004/04/12 16:36:22 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> ia64-sources-2.4.22-r2.ebuild,
+  ia64-sources-2.4.24-r1.ebuild:
+  Add eutils to inherit.
 
 *ia64-sources-2.4.24-r1 (18 Feb 2004)
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/ppc-sources-crypto
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ChangeLog,v 1.9 2004/02/19 00:31:26 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ChangeLog,v 1.10 2004/04/12 16:36:23 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
+  ppc-sources-crypto-2.4.20-r3.ebuild:
+  Add eutils to inherit.
 
 *ppc-sources-crypto-2.4.20-r3 (19 Feb 2004)
 

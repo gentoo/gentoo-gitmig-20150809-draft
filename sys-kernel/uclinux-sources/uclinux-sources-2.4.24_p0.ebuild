@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.4.24_p0.ebuild,v 1.1 2004/03/07 04:52:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.4.24_p0.ebuild,v 1.2 2004/04/12 16:36:23 aliz Exp $
 
 IUSE=""
 
 ETYPE="sources"
-inherit kernel
+inherit kernel eutils
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
 
 EXTRAVERSION="uc${PV/*_p/}"
@@ -26,7 +26,7 @@ MY_P=linux-${PV/_p/-uc}
 
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="uCLinux kernel patches for CPUs without MMUs"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v${MMV}/linux-${OKV}.tar.bz2
+SRC_URI="mirror://kernel/v${MMV}/linux-${OKV}.tar.bz2
 	http://www.uclinux.org/pub/uClinux/uClinux-${MMV}.x/${MY_P/linux/${base}}.${patch}.gz"
 
 HOMEPAGE="http://www.uclinux.org/"

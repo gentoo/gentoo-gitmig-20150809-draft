@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.6.3-r1.ebuild,v 1.1 2004/02/18 18:48:56 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.6.3-r1.ebuild,v 1.2 2004/04/12 16:36:23 aliz Exp $
 
 K_NOUSENAME="yes"
 ETYPE="sources"
@@ -11,6 +11,7 @@ OKV="${PV}"
 EXTRAVERSION="-${UML_PATCH//-*-/}"
 KV="${OKV}${EXTRAVERSION}"
 S="${WORKDIR}/linux-${KV}"
+IUSE=""
 
 UNIPATCH_LIST="${DISTDIR}/${UML_PATCH}.bz2"
 

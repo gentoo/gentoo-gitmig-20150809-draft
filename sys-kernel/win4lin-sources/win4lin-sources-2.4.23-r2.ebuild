@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.23-r2.ebuild,v 1.1 2004/02/18 21:12:04 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.23-r2.ebuild,v 1.2 2004/04/12 16:36:23 aliz Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 IUSE=""
 ETYPE="sources"
 
-inherit kernel
+inherit kernel eutils
 
 OKV="2.4.23"
 KV="2.4.23-win4lin"

@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ppc-sources-benh-2.4.22-r5.ebuild,v 1.2 2004/02/29 14:34:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ppc-sources-benh-2.4.22-r5.ebuild,v 1.3 2004/04/12 16:36:23 aliz Exp $
 
-IUSE=""
+IUSE="xfs"
 
 ETYPE="sources"
-inherit kernel
+inherit kernel eutils
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
@@ -32,7 +32,7 @@ src_unpack() {
 	mv linux-${OKV} ${PF} || die
 
 	cd ${PF}
-	patch -p1 < ${WORKDIR}/patch-${OKV}-${MY_R/5/2} || die "patch failed"
+	epatch ${WORKDIR}/patch-${OKV}-${MY_R/5/2} || die "patch failed"
 
 	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to patch do_brk() vulnerability!"
 	epatch ${FILESDIR}/${P}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"

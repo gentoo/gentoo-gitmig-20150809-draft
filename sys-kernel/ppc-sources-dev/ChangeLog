@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ppc-sources-dev
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ChangeLog,v 1.21 2004/02/27 11:52:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ChangeLog,v 1.22 2004/04/12 16:36:23 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> ppc-sources-dev-2.4.19.ebuild,
+  ppc-sources-dev-2.4.20.ebuild, ppc-sources-dev-2.4.22-r1.ebuild,
+  ppc-sources-dev-2.4.22.ebuild, ppc-sources-dev-2.4.24-r1.ebuild,
+  ppc-sources-dev-2.4.24-r2.ebuild:
+  Add eutils to inherit, add IUSE=.
 
 *ppc-sources-dev-2.4.24-r2 (19 Feb 2004)
 

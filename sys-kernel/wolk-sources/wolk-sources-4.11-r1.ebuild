@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.11-r1.ebuild,v 1.1 2004/03/13 07:31:51 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.11-r1.ebuild,v 1.2 2004/04/12 16:36:23 aliz Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
 
-inherit kernel
-
+inherit kernel eutils
+IUSE=""
 OKV=2.4.20
 KV=${OKV}-wolk4.11s
 S=${WORKDIR}/linux-${KV}

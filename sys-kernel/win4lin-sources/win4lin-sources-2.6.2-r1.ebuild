@@ -1,7 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.2-r1.ebuild,v 1.1 2004/02/18 21:12:04 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.2-r1.ebuild,v 1.2 2004/04/12 16:36:23 aliz Exp $
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
+
+inherit eutils
 
 OKV=${PV}
 KV=${PV}-win4lin
@@ -9,6 +11,7 @@ S=${WORKDIR}/linux-${OKV}
 
 ETYPE="sources"
 DESCRIPTION="Full sources for the Development Branch of the Linux kernel"
+IUSE=""
 
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
 	 http://www.netraverse.com/member/downloads/files/mki-adapter26_1_3_3.patch
