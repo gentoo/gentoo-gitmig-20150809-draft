@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.8 2003/02/13 20:40:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.9 2003/03/28 12:23:47 pvdabeel Exp $
 
   13 Feb 2003; Guy Martin <gmsoft@gentoo.org> johntheripper-1.6.ebuild :
   Changed keyword ~hppa to hppa.
@@ -14,6 +14,9 @@
   new
 
 *johntheripper-1.6 (22 May 2002)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> johntheripper-1.6.ebuild :
+  Moved to stable ppc
 
   09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> johntheripper-1.6.ebuild :
 
