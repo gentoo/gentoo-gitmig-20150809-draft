@@ -18,7 +18,10 @@ svga
 tcc
 x86 
 fmod
+#keep and eye on firebird and interbase as pair
 firebird
+interbase
+
 i8x0
 xvmc
 
