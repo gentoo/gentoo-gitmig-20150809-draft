@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/ksimus-boolean
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ksimus-boolean/ChangeLog,v 1.1 2003/04/15 14:45:29 phosphan Exp $
+
+*ksimus-boolean-0.3.6 (15 Apr 2003)
+
+  15 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> ksimus-boolean-0.3.6.ebuild,
+  files/digest-ksimus-boolean-0.3.6, ChangeLog :
+  Initial import. Ebuild submitted by Heinrich Wendel <sysop@heinospage.de>
+  in bug #19286
