@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.11-r1.ebuild,v 1.1 2002/11/07 09:11:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.11-r1.ebuild,v 1.2 2002/11/12 01:06:20 leonardop Exp $
 
 DESCRIPTION="GNOME2 Display Manager"
 HOMEPAGE="http://www.gnome.org/"
@@ -35,7 +35,7 @@ pkg_setup() {
 	if patch -p0 --dry-run < ${FILESDIR}/${PN}-startDM.sh.patch &> /dev/null
 	then
 		einfo "Fixing startDM.sh..."
-		patch -p0 --dry-run < ${FILESDIR}/${PN}-startDM.sh.patch > /dev/null || die
+		patch -p0 < ${FILESDIR}/${PN}-startDM.sh.patch > /dev/null || die
 	fi
 }
 
