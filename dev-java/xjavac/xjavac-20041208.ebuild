@@ -1,11 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/xjavac-20041208.ebuild,v 1.1 2005/01/08 21:11:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/xjavac-20041208.ebuild,v 1.2 2005/02/10 17:23:37 axxo Exp $
 
 inherit java-pkg
 
-DESCRIPTION="The implementation of the javac compiler for IBM JDK 1.4 (needed
-for xerces-2)"
+DESCRIPTION="The implementation of the javac compiler for IBM JDK 1.4 (needed for xerces-2)"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://cvs.apache.org/viewcvs.cgi/xml-xerces/java/tools/src/XJavac.java"
 LICENSE="Apache-2.0"
