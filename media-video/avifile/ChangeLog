@@ -1,6 +1,6 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.44 2003/02/20 07:08:24 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.45 2003/03/25 22:10:28 seemant Exp $
 
 *avifile-0.7.32.20030219 (20 Feb 2003)
 
@@ -45,6 +45,10 @@
   configure+options and go... I still need vidix support!
 
 *avifile-0.7.27.20030122-r1 (30 Jan 2003)
+
+  25 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
+  avifile-0.7.27.20030122-r1.ebuild:
+  freetype USE to truetype USE, which ACTUALLY EXISTS, Sheesh
 
   01 Feb 2003; Nick Hadaway <raker@gentoo.org>
   avifile-0.7.27.20030130-r1.ebuild :

@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.27.20030122-r1.ebuild,v 1.6 2003/02/13 13:23:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.27.20030122-r1.ebuild,v 1.7 2003/03/25 22:10:28 seemant Exp $
 
-IUSE="static freetype xv sdl oss dvd mmx sse 3dnow zlib oggvorbis X qt"
+IUSE="static truetype xv sdl oss dvd mmx sse 3dnow zlib oggvorbis X qt"
 
 inherit libtool eutils
 
@@ -29,7 +29,7 @@ DEPEND=">=media-libs/jpeg-6b
 	>=media-libs/alsa-lib-0.9.0_rc2
 	>=media-sound/esound-0.2.28
 	>=media-libs/audiofile-0.2.3
-	freetype? ( >=media-libs/freetype-2.1 )
+	truetype? ( >=media-libs/freetype-2.1 )
 	xv? ( >=x11-base/xfree-4.2.1 )
 	sdl? ( >=media-libs/libsdl-1.2.2 )
 	dvd? ( >=media-libs/a52dec-0.7 )
@@ -57,7 +57,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-static" \
 		|| myconf="${myconf} --disable-static"
 
-	use freetype \
+	use truetype \
 		&& myconf="${myconf} --enable-freetype2" \
 		|| myconf="${myconf} --disable-freetype2"
 
