@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/bbsload-0.2.8.ebuild,v 1.5 2004/05/06 17:13:53 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/bbsload-0.2.8.ebuild,v 1.6 2004/05/23 15:03:55 pvdabeel Exp $
 
 DESCRIPTION="blackbox load monitor"
 SRC_URI="http://bbtools.windsofstorm.net/sources/${P}.tar.gz"
 HOMEPAGE="http://bbtools.windsofstorm.net/available.phtml#bbsload"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc ppc"
 IUSE=""
 
 DEPEND="virtual/blackbox
