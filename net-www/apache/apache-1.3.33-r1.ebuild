@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.1 2005/01/08 23:37:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.2 2005/01/09 11:35:09 swegener Exp $
 
 inherit eutils fixheadtails
 
@@ -17,7 +17,7 @@ DESCRIPTION="The Apache Web Server"
 HOMEPAGE="http://httpd.apache.org"
 SRC_URI="mirror://apache/httpd/apache_${PV}.tar.gz
 		ssl? ftp://ftp.modssl.org/source/mod_ssl-${mod_ssl_ver}-${PV}.tar.gz
-		lingerd? http://images.iagora.com/media/software/lingerd/lingerd-${lingerd_ver}.tar.gz
+		lingerd? ( http://images.iagora.com/media/software/lingerd/lingerd-${lingerd_ver}.tar.gz )
 		mirror://gentoo/${GENTOO_PATCHNAME}.tar.bz2"
 
 LICENSE="Apache-2.0"
