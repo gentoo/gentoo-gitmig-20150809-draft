@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-2.6.sh,v 1.6 2004/06/18 02:45:41 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-2.6.sh,v 1.7 2004/06/18 03:06:21 solar Exp $
 
 # IMPORTANT NOTE:
 # This script no longer accepts an optional argument.
@@ -121,7 +121,7 @@ fi
 
 # bug #50158
 # if ! which portageq &>/dev/null
-if which portageq &>/dev/null
+if type -path portageq &>/dev/null
 then
 	# Check if the user have 'nptl' in USE, and if so, check if we
 	# have proper linux headers ...
