@@ -1,12 +1,16 @@
 # Copyrigth 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.9-r2.ebuild,v 1.1 2002/06/28 01:54:31 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.9-r2.ebuild,v 1.2 2002/07/09 15:32:23 stroke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X-Chat is a graphical IRC client for UNIX operating systems."
 SRC_URI="http://www.xchat.org/files/source/1.8/${P}.tar.bz2"
 HOMEPAGE="http://www.xchat.org/"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="*"
 
 RDEPEND="=x11-libs/gtk+-1.2*
 	python? ( >=dev-lang/python-2.2-r7 )
