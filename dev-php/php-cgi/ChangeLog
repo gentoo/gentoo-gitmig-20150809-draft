@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.52 2005/01/13 21:46:51 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.53 2005/02/03 19:15:42 cryos Exp $
+
+  03 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org> php-cgi-5.0.3.ebuild:
+  Marked ~amd64.
 
   13 Jan 2005; Guy Martin <gmsoft@gentoo.org> php-cgi-4.3.10.ebuild:
   Stable on hppa.
