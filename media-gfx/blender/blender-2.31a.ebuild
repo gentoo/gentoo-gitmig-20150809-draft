@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.31a.ebuild,v 1.1 2003/12/04 11:15:56 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.31a.ebuild,v 1.2 2003/12/07 08:53:33 brandy Exp $
 
 inherit flag-o-matic
 replace-flags -march=pentium4 -march=pentium3
@@ -80,11 +80,13 @@ src_install() {
 
 	exeinto /usr/lib/${PN}/textures
 	doexe ${S}/release/plugins/texture/*.so
-	exeinto /usr/lib/${PN}/sequence
+	exeinto /usr/lib/${PN}/sequences
 	doexe ${S}/release/plugins/sequence/*.so
 
 	insinto /usr/share/pixmaps
 	doins ${FILESDIR}/${PN}.png
+	insinto /usr/share/applications
+	doins ${FILESDIR}/${PN}.desktop
 
 	dodoc COPYING INSTALL README release_2*
 

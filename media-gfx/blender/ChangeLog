@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.25 2003/12/04 11:15:56 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.26 2003/12/07 08:53:33 brandy Exp $
+
+  07 Dec 2003; Brandy Westcott brandy@gentoo.org blender-2.31a.ebuild:
+  Added blender.desktop file.
 
 *blender-2.31a (05 Dec 2003)
 
