@@ -1,4 +1,6 @@
 MD5 607fcdb13c8cdc66a40b2347181baaed xfce4-clipman-0.1.ebuild 708
-MD5 dd565dd25052e52edc6b17bf5b8615c1 ChangeLog 355
+MD5 b9ffe8e5284b886bd08cbd35814b07c7 xfce4-clipman-0.2.0.ebuild 691
+MD5 96ba72b27b2fc4957b76864d1b58a354 ChangeLog 482
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 05b0640fe033b50eba0c96b5638b2415 files/digest-xfce4-clipman-0.1 76
+MD5 429532a7c373ddcc5ae578896cd467f5 files/digest-xfce4-clipman-0.2.0 78
