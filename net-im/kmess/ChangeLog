@@ -1,6 +1,11 @@
 # ChangeLog for net-im/kmess
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.7 2003/03/16 16:09:18 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.8 2003/05/28 15:14:29 caleb Exp $
+
+*kmess-1.2.1 (28 May 2003)
+
+  28 May 2003; Caleb Tennis <caleb@gentoo.org> kmess-1.2.1.ebuild:
+  version bump, thanks to Isam Bayazidi for ebuild.  Closes bug #20976
 
 *kmess-1.1 (16 Mar 2003)
 
