@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/wasabi
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/wasabi/ChangeLog,v 1.1 2004/06/05 20:26:02 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/wasabi/ChangeLog,v 1.2 2004/06/06 21:46:02 g2boojum Exp $
+
+  06 Jun 2004; Grant Goodyear <g2boojum@gentoo.org> wasabi-0.1.ebuild:
+  Fixed SRC_URI to use mirror://gentoo.  Closes bug # 53163; thanks ciaranm!
 
 *wasabi-0.1 (05 Jun 2004)
 
