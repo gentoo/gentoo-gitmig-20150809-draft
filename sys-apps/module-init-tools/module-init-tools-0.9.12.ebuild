@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.12.ebuild,v 1.1 2003/06/02 09:53:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.12.ebuild,v 1.2 2003/06/18 23:29:49 drobbins Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 IUSE=""
@@ -16,7 +16,7 @@ SRC_URI="mirror://kernel/linux/kernel/people/rusty/modules/${MYP}.tar.bz2
 	mirror://kernel/linux/utils/kernel/modutils/v2.4/modutils-${MODUTILS_PV}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/rusty/modules"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~arm"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~arm"
 LICENSE="GPL-2"
 SLOT="0"
 
