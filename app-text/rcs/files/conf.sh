@@ -1,6 +1,6 @@
 #! /bin/sh
 # Output RCS compile-time configuration.
-Id='$Id: conf.sh,v 1.1 2000/10/04 17:22:38 achim Exp $'
+Id='$Id: conf.sh,v 1.2 2002/06/17 16:49:10 naz Exp $'
 #	Copyright 1990, 1991, 1992, 1993, 1994, 1995 Paul Eggert
 #	Distributed under license by the Free Software Foundation, Inc.
 
@@ -1007,7 +1007,7 @@ main(argc, argv) int argc; char **argv; {
 }
 EOF
 # AIX 3.2.0 read-only mmap updates last-modified time of file!  Check for this.
-sleep 2
+# sleep 2
 cp a.c a.d || exit
 sleep 2
 has_map_fd=? has_mmap=? has_madvise=? mmap_signal=
