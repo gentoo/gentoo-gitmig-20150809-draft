@@ -1,0 +1,11 @@
+# ChangeLog for net-firewall/arptables
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/ChangeLog,v 1.1 2004/02/28 09:33:02 solar Exp $
+
+*arptables-0.0.3 (28 Feb 2004)
+
+  28 Feb 2004; <solar@gentoo.org> arptables-0.0.3.ebuild:
+  Arptables is used to set up, maintain, and inspect the tables of ARP rules in
+  the Linux kernel. It is analogous to iptables, but operates at the ARP layer
+  rather than the IP layer.
+
