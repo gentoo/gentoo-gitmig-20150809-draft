@@ -1,4 +1,6 @@
-MD5 71649770e04eecb12a1fbd28a1718d33 ChangeLog 463
+MD5 8cca79a108b0053a267d94b774c44f3a ChangeLog 582
 MD5 822f58ff10912b1b0423d2d26abac7d8 glob2-0.8.2.ebuild 877
 MD5 be3faa436a456146cab34d1a7ba5e534 metadata.xml 546
+MD5 91c199685dffe659bf54238c3182a48b glob2-0.8.4.ebuild 802
 MD5 67766c04790525af71ebb3123dba9ab6 files/digest-glob2-0.8.2 64
+MD5 e8cc791632e58ca3f01958e42c3f3032 files/digest-glob2-0.8.4 64
