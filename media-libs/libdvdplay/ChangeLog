@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdplay
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/ChangeLog,v 1.3 2003/07/06 19:22:47 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/ChangeLog,v 1.4 2003/07/19 22:28:44 raker Exp $
+
+  19 Jul 2003; Nick Hadaway <raker@gentoo.org> libdvdplay-1.0.1.ebuild:
+  Changed emake to make to avoid possible build problems.
 
   06 Jul 2003; Nick Hadaway <raker@gentoo.org> libdvdplay-1.0.1.ebuild:
   Marked stable for x86
