@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/calendar/calendar-0.9.1.ebuild,v 1.15 2004/10/05 13:34:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/calendar/calendar-0.9.1.ebuild,v 1.16 2005/01/01 14:54:25 eradicator Exp $
 
 DESCRIPTION="Standard unix calendar program for Linux, ported from OpenBSD"
 HOMEPAGE="http://bsdcalendar.sourceforge.net/"

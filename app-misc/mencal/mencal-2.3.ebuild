@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mencal/mencal-2.3.ebuild,v 1.8 2004/12/13 19:29:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mencal/mencal-2.3.ebuild,v 1.9 2005/01/01 15:14:04 eradicator Exp $
 
 DESCRIPTION="A calendar that can be used to track menstruation (or other) cycles conveniently"
 HOMEPAGE="http://www.kyberdigi.cz/projects/mencal/english.html"

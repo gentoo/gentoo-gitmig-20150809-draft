@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/regex-markup/regex-markup-0.9.0.ebuild,v 1.5 2004/07/10 15:40:02 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/regex-markup/regex-markup-0.9.0.ebuild,v 1.6 2005/01/01 15:20:36 eradicator Exp $
 
 DESCRIPTION="A tool to color syslog files as well"
 HOMEPAGE="http://www.student.lu.se/~nbi98oli"

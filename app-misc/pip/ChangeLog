@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/pip
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/ChangeLog,v 1.4 2004/11/29 11:00:04 ka0ttic Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/ChangeLog,v 1.5 2005/01/01 15:19:20 eradicator Exp $
 
   29 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> pip-1.2.ebuild:
   Marked stable on x86.

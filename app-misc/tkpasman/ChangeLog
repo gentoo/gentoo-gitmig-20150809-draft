@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/tkpasman
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/ChangeLog,v 1.4 2004/06/24 22:35:58 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/ChangeLog,v 1.5 2005/01/01 15:26:28 eradicator Exp $
 
   02 Oct 2003; Joel Hill <hillster@gentoo.org> tkpasman-2.2a.ebuild:
   added homepage

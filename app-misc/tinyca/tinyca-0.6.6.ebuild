@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/tinyca-0.6.6.ebuild,v 1.2 2004/12/08 22:37:33 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/tinyca-0.6.6.ebuild,v 1.3 2005/01/01 15:26:02 eradicator Exp $
 
 DESCRIPTION="Simple Perl/Tk GUI to manage a small certification authority"
 HOMEPAGE="http://tinyca.sm-zone.net/"

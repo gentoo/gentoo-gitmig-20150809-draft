@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.4.6.ebuild,v 1.2 2004/12/28 10:49:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.4.6.ebuild,v 1.3 2005/01/01 15:00:36 eradicator Exp $
 
 M=endeavour2-mimetypes
 DESCRIPTION="Powerful file and image browser"

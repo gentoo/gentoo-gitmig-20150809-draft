@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/sl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.6 2004/12/14 03:42:45 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.7 2005/01/01 15:23:37 eradicator Exp $
 
   13 Dec 2004; Jason Wever <weeve@gentoo.org> sl-3.03.ebuild:
   Stable on sparc.

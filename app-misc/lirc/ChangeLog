@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/lirc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.56 2004/12/26 02:51:20 cardoe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.57 2005/01/01 15:12:16 eradicator Exp $
 
   25 Dec 2004; Doug Goldstein <cardoe@gentoo.org> lirc-0.7.0-r1.ebuild:
   compile fix, add libtoolize

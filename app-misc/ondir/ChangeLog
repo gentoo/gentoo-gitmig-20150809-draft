@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/ondir
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ChangeLog,v 1.10 2004/12/27 22:21:39 gongloo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ChangeLog,v 1.11 2005/01/01 15:17:44 eradicator Exp $
 
   27 Dec 2004; <gongloo@gentoo.org> ondir-0.2.2.ebuild:
   Added ~ppc-macos

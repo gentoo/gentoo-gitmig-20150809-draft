@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rolo/rolo-011.ebuild,v 1.10 2004/12/29 15:43:41 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rolo/rolo-011.ebuild,v 1.11 2005/01/01 15:22:15 eradicator Exp $
 
 DESCRIPTION="Text-based contact management software using vCards"
 HOMEPAGE="http://rolo.sourceforge.net/"

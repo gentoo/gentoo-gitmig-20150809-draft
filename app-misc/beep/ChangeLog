@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/beep
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/ChangeLog,v 1.12 2004/10/13 19:24:32 slarti Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/ChangeLog,v 1.13 2005/01/01 14:52:25 eradicator Exp $
 
   13 Oct 2004; Tom Martin <slarti@gentoo.org> :
   Adding shell-tools as herd, myself as maintainer. This package was

@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/splitvt
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.8 2004/10/13 19:26:22 slarti Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.9 2005/01/01 15:24:27 eradicator Exp $
 
   13 Oct 2004; Tom Martin <slarti@gentoo.org> metadata.xml:
   Taking over as maintainer, previously unmaintained. Added shell-tools as herd.

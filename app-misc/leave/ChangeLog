@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/leave
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/leave/ChangeLog,v 1.3 2004/11/19 13:01:45 ka0ttic Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/leave/ChangeLog,v 1.4 2005/01/01 15:10:59 eradicator Exp $
 
   19 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> leave-20041016.ebuild:
   Marked stable on x86.

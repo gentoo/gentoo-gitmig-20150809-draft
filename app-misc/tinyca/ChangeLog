@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/tinyca
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/ChangeLog,v 1.15 2004/12/14 03:50:29 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tinyca/ChangeLog,v 1.16 2005/01/01 15:26:02 eradicator Exp $
 
   13 Dec 2004; Jason Wever <weeve@gentoo.org> tinyca-0.5.4-r1.ebuild:
   Stable on sparc.

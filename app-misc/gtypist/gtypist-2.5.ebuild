@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.5.ebuild,v 1.14 2004/06/28 03:40:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.5.ebuild,v 1.15 2005/01/01 15:06:28 eradicator Exp $
 
 DESCRIPTION="universal typing tutor"
 HOMEPAGE="http://www.gnu.org/software/gtypist/gtypist.html"

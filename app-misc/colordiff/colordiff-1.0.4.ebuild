@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/colordiff-1.0.4.ebuild,v 1.15 2004/10/27 19:27:14 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/colordiff-1.0.4.ebuild,v 1.16 2005/01/01 14:57:00 eradicator Exp $
 
 DESCRIPTION="Colorizes output of diff"
 HOMEPAGE="http://colordiff.sourceforge.net/"

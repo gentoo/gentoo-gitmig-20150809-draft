@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/cdctl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdctl/ChangeLog,v 1.5 2004/10/19 03:33:02 tgall Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdctl/ChangeLog,v 1.6 2005/01/01 14:55:29 eradicator Exp $
 
   18 Oct 2004; Tom Gall <tgall@gentoo.org> cdctl-0.15.ebuild:
   stable on ppc64, bug #64543

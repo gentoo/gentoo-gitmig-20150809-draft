@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/dvorak7min
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorak7min/ChangeLog,v 1.6 2004/10/05 13:34:50 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorak7min/ChangeLog,v 1.7 2005/01/01 14:59:30 eradicator Exp $
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   dvorak7min-1.6.1.ebuild:

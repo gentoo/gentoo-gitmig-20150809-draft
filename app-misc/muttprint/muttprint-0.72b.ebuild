@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.72b.ebuild,v 1.1 2004/12/04 12:18:57 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.72b.ebuild,v 1.2 2005/01/01 15:16:12 eradicator Exp $
 
 inherit eutils
 

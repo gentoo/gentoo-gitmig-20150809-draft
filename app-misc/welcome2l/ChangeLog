@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/welcome2l
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/ChangeLog,v 1.7 2004/12/14 04:04:41 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/ChangeLog,v 1.8 2005/01/01 15:29:23 eradicator Exp $
 
   13 Dec 2004; Jason Wever <weeve@gentoo.org> welcome2l-3.04.ebuild:
   Stable on sparc.

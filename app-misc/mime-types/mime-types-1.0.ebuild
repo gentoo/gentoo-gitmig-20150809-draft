@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/mime-types-1.0.ebuild,v 1.13 2004/08/12 10:27:49 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/mime-types-1.0.ebuild,v 1.14 2005/01/01 15:14:31 eradicator Exp $
 
 DESCRIPTION="Provides mime.types file"
 HOMEPAGE="http://www.gentoo.org/"

@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/openjnlp
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/ChangeLog,v 1.7 2004/11/03 11:57:25 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/ChangeLog,v 1.8 2005/01/01 15:18:11 eradicator Exp $
 
   03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> openjnlp-0.7.1-r1.ebuild:
   depend on app-arch/unzip

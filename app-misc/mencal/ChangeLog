@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/mencal
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mencal/ChangeLog,v 1.5 2004/12/13 19:29:52 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mencal/ChangeLog,v 1.6 2005/01/01 15:14:04 eradicator Exp $
 
   13 Dec 2004; Jason Wever <weeve@gentoo.org> mencal-2.3.ebuild:
   Stable on sparc.

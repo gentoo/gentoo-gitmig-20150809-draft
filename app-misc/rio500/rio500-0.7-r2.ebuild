@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rio500/rio500-0.7-r2.ebuild,v 1.7 2004/10/03 22:08:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rio500/rio500-0.7-r2.ebuild,v 1.8 2005/01/01 15:21:24 eradicator Exp $
 
 DESCRIPTION="Command line tools for transfering mp3s to and from a Rio500"
 HOMEPAGE="http://rio500.sourceforge.net/"

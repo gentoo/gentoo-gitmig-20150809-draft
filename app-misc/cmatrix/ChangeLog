@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/cmatrix
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/ChangeLog,v 1.5 2004/06/24 22:06:04 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/ChangeLog,v 1.6 2005/01/01 14:56:33 eradicator Exp $
 
   29 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> cmatrix-1.2a.ebuild:
   keyworded sparc, thanks to txromeo

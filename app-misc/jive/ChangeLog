@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/jive
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jive/ChangeLog,v 1.8 2004/12/13 19:06:53 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jive/ChangeLog,v 1.9 2005/01/01 15:08:39 eradicator Exp $
 
   13 Dec 2004; Jason Wever <weeve@gentoo.org> jive-1.1.ebuild:
   Stable on sparc.

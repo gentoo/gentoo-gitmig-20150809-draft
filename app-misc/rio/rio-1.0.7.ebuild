@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rio/rio-1.0.7.ebuild,v 1.8 2004/06/28 04:10:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rio/rio-1.0.7.ebuild,v 1.9 2005/01/01 15:21:12 eradicator Exp $
 
 DESCRIPTION="Utility for the Diamond Rio 300 portable MP3 player"
 HOMEPAGE="http://www.world.co.uk/sba/rio.html"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/joymouse/joymouse-0.3.ebuild,v 1.4 2004/07/10 13:15:36 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/joymouse/joymouse-0.3.ebuild,v 1.5 2005/01/01 15:09:28 eradicator Exp $
 
 DESCRIPTION="An application that translates joystick events to mouse events"
 HOMEPAGE="http://sourceforge.net/projects/joymouse-linux"

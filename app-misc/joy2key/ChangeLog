@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/joy2key
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/ChangeLog,v 1.7 2004/07/10 13:29:01 slarti Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/ChangeLog,v 1.8 2005/01/01 15:09:16 eradicator Exp $
 
   10 Jul 2004; Tom Martin <slarti@gentoo.org> joy2key-1.6.ebuild:
   Marked ~amd64.

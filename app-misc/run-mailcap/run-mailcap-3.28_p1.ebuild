@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/run-mailcap-3.28_p1.ebuild,v 1.4 2004/12/23 22:08:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/run-mailcap-3.28_p1.ebuild,v 1.5 2005/01/01 15:22:30 eradicator Exp $
 
 MY_PV="${PV/_p/-}"
 DESCRIPTION="Execute programs via entries in the mailcap file"

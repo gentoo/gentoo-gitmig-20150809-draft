@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/kanatest-0.3.6.ebuild,v 1.5 2004/12/04 20:46:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/kanatest-0.3.6.ebuild,v 1.6 2005/01/01 15:09:40 eradicator Exp $
 
 DESCRIPTION="Visual flashcard tool for memorizing the Japanese Hiragana and Katakana alphabet"
 HOMEPAGE="http://clay.ll.pl/kanatest.html"

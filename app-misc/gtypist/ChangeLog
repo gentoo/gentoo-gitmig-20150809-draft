@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/gtypist
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.9 2004/12/06 13:52:44 josejx Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.10 2005/01/01 15:06:28 eradicator Exp $
 
   07 Dec 2004; Joseph Jezak <josejx@gentoo.org> gtypist-2.7.ebuild:
   Marked ~ppc for bug #73188.

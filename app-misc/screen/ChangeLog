@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/screen
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.81 2004/12/31 02:21:22 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.82 2005/01/01 15:22:58 eradicator Exp $
 
   31 Dec 2004; Sven Wegener <swegener@gentoo.org> files/screenrc:
   Do not use xterm's alternative window buffer by default, it breaks

@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/zisofs-tools
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zisofs-tools/ChangeLog,v 1.17 2004/10/27 21:48:35 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zisofs-tools/ChangeLog,v 1.18 2005/01/01 15:30:34 eradicator Exp $
 
 *zisofs-tools-1.0.6 (27 Oct 2004)
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/regex-markup
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/regex-markup/ChangeLog,v 1.4 2004/07/10 15:40:02 slarti Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/regex-markup/ChangeLog,v 1.5 2005/01/01 15:20:36 eradicator Exp $
 
   10 Jul 2004; Tom Martin <slarti@gentoo.org> regex-markup-0.9.0.ebuild:
   Marked ~amd64.

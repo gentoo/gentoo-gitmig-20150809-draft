@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/rolo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rolo/ChangeLog,v 1.8 2004/12/29 15:43:41 slarti Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rolo/ChangeLog,v 1.9 2005/01/01 15:22:15 eradicator Exp $
 
   29 Dec 2004; Tom Martin <slarti@gentoo.org> rolo-011.ebuild:
   Marked ~amd64, resolves bug 75728.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.18-r2.ebuild,v 1.6 2004/12/23 22:22:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.18-r2.ebuild,v 1.7 2005/01/01 14:58:26 eradicator Exp $
 
 inherit eutils gnuconfig bash-completion flag-o-matic
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/cdspeed-0.3.ebuild,v 1.11 2004/12/13 03:20:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/cdspeed-0.3.ebuild,v 1.12 2005/01/01 14:55:54 eradicator Exp $
 
 DESCRIPTION="Change the speed of your CD drive"
 HOMEPAGE="http://linuxfocus.org/~guido/"

@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/mepl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mepl/ChangeLog,v 1.5 2004/09/05 07:01:50 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mepl/ChangeLog,v 1.6 2005/01/01 15:14:16 eradicator Exp $
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.

@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/digitemp
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/ChangeLog,v 1.5 2004/06/30 12:05:15 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/ChangeLog,v 1.6 2005/01/01 14:58:51 eradicator Exp $
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> digitemp-3.2.0.ebuild,
   digitemp-3.3.1.ebuild:

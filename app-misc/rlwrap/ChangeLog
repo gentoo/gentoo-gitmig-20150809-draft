@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/rlwrap
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.5 2004/11/08 22:54:11 mkennedy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.6 2005/01/01 15:22:02 eradicator Exp $
 
 *rlwrap-0.18 (08 Nov 2004)
 

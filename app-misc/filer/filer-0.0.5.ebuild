@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.5.ebuild,v 1.4 2004/08/10 13:01:46 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.5.ebuild,v 1.5 2005/01/01 15:02:14 eradicator Exp $
 
 DESCRIPTION="Small file-manager written in perl"
 HOMEPAGE="http://public.rz.fh-wolfenbuettel.de/~luedickj/"

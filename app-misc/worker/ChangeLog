@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/worker
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.21 2004/12/14 04:17:13 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.22 2005/01/01 15:30:03 eradicator Exp $
 
   13 Dec 2004; Jason Wever <weeve@gentoo.org> worker-2.8.4.ebuild:
   Stable on sparc.

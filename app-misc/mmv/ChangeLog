@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/mmv
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.12 2004/12/18 10:08:01 blubb Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.13 2005/01/01 15:14:56 eradicator Exp $
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> files/mmv-gcc34.patch:
   fix the gcc-3.4-patch to prevent segfaults; bug #74795

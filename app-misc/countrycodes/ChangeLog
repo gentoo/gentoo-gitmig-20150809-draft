@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/countrycodes
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.12 2004/12/18 11:58:50 blubb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.13 2005/01/01 14:57:26 eradicator Exp $
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> countrycodes-1.0.5.ebuild:
   added ~amd64

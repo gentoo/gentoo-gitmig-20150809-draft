@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/unfoo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.6 2004/12/14 03:58:20 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.7 2005/01/01 15:28:05 eradicator Exp $
 
   13 Dec 2004; Jason Wever <weeve@gentoo.org> unfoo-1.0.4.ebuild:
   Stable on sparc.

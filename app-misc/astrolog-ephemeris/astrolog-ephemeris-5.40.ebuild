@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog-ephemeris/astrolog-ephemeris-5.40.ebuild,v 1.8 2004/12/08 21:42:50 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog-ephemeris/astrolog-ephemeris-5.40.ebuild,v 1.9 2005/01/01 14:51:29 eradicator Exp $
 
 DESCRIPTION="ephemeris files for optional extended accuracy of astrolog's calculations"
 HOMEPAGE="http://www.astrolog.org/astrolog.htm"

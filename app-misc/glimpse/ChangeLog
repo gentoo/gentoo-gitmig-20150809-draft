@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/glimpse
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/ChangeLog,v 1.16 2004/11/21 13:05:01 dragonheart Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/ChangeLog,v 1.17 2005/01/01 15:04:48 eradicator Exp $
 
   21 Nov 2004; Daniel Black <dragonheart@gentoo.org> glimpse-4.17.4.ebuild,
   glimpse-4.18.0.ebuild:

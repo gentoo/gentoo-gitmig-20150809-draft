@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/hilite
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hilite/ChangeLog,v 1.10 2004/12/27 22:17:38 gongloo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hilite/ChangeLog,v 1.11 2005/01/01 15:06:55 eradicator Exp $
 
   27 Dec 2004; <gongloo@gentoo.org> hilite-1.5.ebuild:
   Added ~ppc-macos.
