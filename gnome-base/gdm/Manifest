@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 66449e52d501fad5439c0be4e3b67b84 ChangeLog 11141
-MD5 e83690548500295539f8af6cccca7042 gdm-2.4.4.7-r1.ebuild 3425
-MD5 58d6c1c2d276f82d8e9885171d423a64 gdm-2.6.0.6.ebuild 3278
-MD5 2992cb7ac85946bfd45bc9782f3fe8bc gdm-2.4.1.7-r1.ebuild 5285
-MD5 dc2915a25c81bad057ada9cbc1e65213 gdm-2.2.5.4-r5.ebuild 4428
+MD5 eb5c185ed296f52a4105860d87416f22 ChangeLog 11362
+MD5 ea62033494a3e02a75bd72d3dbd6c986 gdm-2.4.4.7-r1.ebuild 3410
+MD5 21f74f6f1e60858a6874343c9d7cb523 gdm-2.6.0.6.ebuild 3263
+MD5 d979d4d7e5b2ec03f8384d1d8db37f1d gdm-2.4.1.7-r1.ebuild 5270
+MD5 c4d34959dd6c05056e5852277f76d250 gdm-2.2.5.4-r5.ebuild 4413
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 314f19e7e3cc15233899add6c807ffd2 gdm-2.6.0.3.ebuild 3386
-MD5 37f4b4d5cc97d5fb759f07e344c041d2 gdm-2.6.0.4-r1.ebuild 3283
+MD5 a7405d9c839482fff8b76a3312842a59 gdm-2.6.0.3.ebuild 3371
+MD5 d53dd7b184e898d50c7e5cc31bfd7036 gdm-2.6.0.4-r1.ebuild 3268
 MD5 6392095707ae98912a626cb035796255 files/digest-gdm-2.4.1.7-r1 134
 MD5 5f1a2155fb7d9ac84b228d439df56777 files/digest-gdm-2.6.0.4-r1 137
 MD5 25720fd12f8eee788fc5169824a0fe7e files/digest-gdm-2.4.4.7-r1 205
@@ -40,7 +40,7 @@ MD5 114395565e31f41b44d31d731f1478b0 files/2.4.1/security/console.apps/gdmconfig
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB4G49CHk4+ZoBpvsRAn6VAJ9owthHbfBpErVHITxdfDSCc6gWuwCfW8sN
-ERtRlmGHsnBqasYZtWhvJlM=
-=aqz8
+iD8DBQFB4HPbCHk4+ZoBpvsRAtsQAJ9CMeSsvf5+Wdm0D9IGTdBAWxHHkQCgq9SP
+0gwsnBNgd7qSp6/q4CMaIY4=
+=ma6Q
 -----END PGP SIGNATURE-----

@@ -1,16 +1,26 @@
-MD5 40ea32d04f2550a993e7d8815f719df5 gnome-2.6.2-r1.ebuild 4220
-MD5 c584545cb93f626a542bf5699be754a9 gnome-2.8.0-r1.ebuild 3641
-MD5 120db17e47e9dd77091cd528c9f1b90e gnome-2.8.2_pre0.ebuild 3852
-MD5 8a6b244abaa40ac400b8f3390a4920d0 gnome-2.6.ebuild 3762
-MD5 2fe803743f19c25a33184caaba050e9c gnome-1.4-r3.ebuild 545
-MD5 4e5e8619358ff7df9b7699a0aac19406 ChangeLog 20518
-MD5 686568eee2d72b82ea1f76cb4f81d1ee gnome-2.8.1-r1.ebuild 3858
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ea389cfce11daf9a5f017436583a984b ChangeLog 20607
+MD5 e33bd455e6281ced4e912771bfcdfbcc gnome-2.4.2.ebuild 3760
+MD5 481ad58b5efc4813e61fb48fe01e47bc gnome-2.8.0-r1.ebuild 3641
+MD5 b09ac2c1f9d01f4679ecc08b38d48481 gnome-1.4-r3.ebuild 545
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 4495d2bff6b870f43e26ca07f4103a5b gnome-2.4.2.ebuild 3757
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.0-r1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.1-r1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.2_pre0 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.4.2 0
+MD5 bbcad8e9111c379c49493c5de542bb9b gnome-2.8.2_pre0.ebuild 3855
+MD5 d24f162111b009c90e069a2867ef706e gnome-2.8.1-r1.ebuild 3857
+MD5 3351cb877e35db059cee9e728036150f gnome-2.6.ebuild 3765
+MD5 c55062c78cdf2e2072178cbdefafcae5 gnome-2.6.2-r1.ebuild 4220
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.6 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-1.4-r3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.6.2-r1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.2_pre0 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.0-r1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-1.4-r3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.8.1-r1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.4.2 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4HQvCHk4+ZoBpvsRAvNKAJ9P2Pg3ShBQ6PQrntYk9mpDZi3XxQCgmL0a
+OYPdtp+yokAwKBHdF+zuVYw=
+=mBao
+-----END PGP SIGNATURE-----

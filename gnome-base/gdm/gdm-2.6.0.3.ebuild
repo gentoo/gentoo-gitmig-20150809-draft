@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.6.0.3.ebuild,v 1.4 2005/01/08 23:32:40 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.6.0.3.ebuild,v 1.5 2005/01/08 23:57:29 slarti Exp $
 
 inherit gnome2 eutils
 
@@ -15,7 +15,7 @@ IUSE="tcpd xinerama selinux"
 SRC_URI="${SRC_URI}
 	mirror://gentoo/gentoo-gdm-theme.tar.bz2
 	mirror://gentoo/gentoo-gdm-theme-r1.tar.bz2"
-MY_V="`echo ${PV} |cut -b -5`"
+MY_V="${PV%.*}"
 
 RDEPEND=">=sys-libs/pam-0.72
 	>=x11-libs/pango-1.4.1
