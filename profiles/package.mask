@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (03 Feb 2003)
+# Masked for testing. Lots of fixes.
+=sys-apps/portage-2.0.46-r10
+# Testing for UserPriv compile. Works, but breaks a couple ebuilds.
+>=sys-apps/portage-2.0.47_pre1
+
 # <foser@gentoo.org> (30 Jan 2003)
 # GNOME 2.2 RC2 Mask
 >=gnome-base/gnome-2.2_rc2
@@ -88,10 +94,6 @@ media-video/lumiere
 # <vapier@gentoo.org> (22 Jan 2003)
 # package is no longer distributed
 dev-libs/libtomcrypt
-
-# <carpaski@gentoo.org> (12 Jan 2003)
-# Testing for UserPriv compile. Works, but breaks a couple ebuilds.
->=sys-apps/portage-2.0.47_pre1
 
 # <mjc@gentoo.org> (10 Jan 2003)
 # fixed others silly dates
