@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.6.ebuild,v 1.1 2004/12/29 22:57:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.6.ebuild,v 1.2 2005/01/13 17:12:18 liquidx Exp $
 
 inherit distutils flag-o-matic
 
@@ -14,6 +14,12 @@ KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
 IUSE=""
 
 DEPEND="virtual/python"
+
+src_unpack() {
+	unpack ${A}
+	# doesn't play well with -fstack-protector (#63762)
+	rm ${S}/mx/TextTools/Examples/pytag.py
+}
 
 src_compile() {
 	replace-flags "-O[3s]" "-O2"

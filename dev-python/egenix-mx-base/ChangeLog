@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/egenix-mx-base
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.28 2004/12/30 21:28:10 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.29 2005/01/13 17:12:18 liquidx Exp $
+
+  13 Jan 2005; Alastair Tse <liquidx@gentoo.org>
+  egenix-mx-base-2.0.6.ebuild:
+  removing pytag.py as it breaks with -fstack-protector (#63762)
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
