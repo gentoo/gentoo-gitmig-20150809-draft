@@ -10,7 +10,7 @@ DESCRIPTION="Bochs is a pc emulator.
 CDROM drive.
   It also comes with a disk image using dlxlinux."
 SRC_URI="http://prdownloads.sourceforge.net/bochs/${PN}.tar.gz
-	 http://bochs.sourceforge.net/guestos/dlxlinux2.tar.gz"
+	 http://bochs.sourceforge.net/guestos/dlxlinux3.tar.gz"
 HOMEPAGE="http://bochs.sourceforge.net"
 
 #build-time dependencies
@@ -22,11 +22,11 @@ src_unpack() {
     unpack ${PN}.tar.gz
     
     cd $S
-    cp Makefile.in 1
-    sed -e "s:\$(WGET) \$(DLXLINUX_TAR_URL):cp ${DISTDIR}/dlxlinux2.tar.gz .:" \
+    cp Makefile.in Makefile.in.orig
+    sed -e "s:\$(WGET) \$(DLXLINUX_TAR_URL):cp ${DISTDIR}/dlxlinux3.tar.gz .:" \
 	-e 's: $(prefix): $(DESTDIR)$(prefix):g' \
 	-e 's: $(bindir): $(DESTDIR)$(bindir):g' \
-	-e 's: $(BOCHSDIR): $(DESTDIR)$(BOCHSDIR):g' 1 > Makefile.in
+	-e 's: $(BOCHSDIR): $(DESTDIR)$(BOCHSDIR):g' Makefile.in.orig > Makefile.in
         
 }
 
@@ -34,13 +34,10 @@ src_compile() {
 
         ./configure --enable-fpu --enable-cdrom --enable-control-panel \
 	--enable-ne2000 --enable-sb16=linux -enable-slowdown --prefix=/usr \
-	--infodir=/usr/share/info --mandir=/usr/share/man --host=${CHOST} || die
+	--infodir=/usr/share/info --mandir=/usr/share/man --host=${CHOST} --with-x11 || die
 
-#        cp Makefile Makefile.orig
-#        sed -e 's:$(BOCHSDIR)/dlxlinux:$(DESTDIR)$(BOCHSDIR)/dlxlinux:; \
-#s:$(GUNZIP) -c
-#$(DLXLINUX_TAR) | (cd $(BOCHSDIR); tar -xvf -):$(GUNZIP) -c $(DLXLINUX_TAR) |
-#(cd $(DESTDIR)$(BOCHSDIR); tar -xvf -):' Makefile.orig > Makefile
+	# there's an sdl interface now, but since we an only compile 1 interface at a time
+	# i'd rather have xwindows.
 
         emake || die
 }
