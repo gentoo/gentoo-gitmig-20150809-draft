@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.382 2004/05/22 18:11:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.383 2004/05/22 20:08:21 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -121,7 +121,6 @@ dev-lisp/gauche-gtk:glgd - enable GL graph draw
 dev-lisp/sbcl:threads - build SBCL with support for native threads (x86 only)
 dev-ml/lablgl:glut - Enable glut support.
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
-dev-ml/lablgtk:svg - Enable librsvg bindings compilation.
 dev-php/PEAR-HTML_Template_Flexy:javascript - Use the PEAR-HTML_Javascript package
 dev-php/PEAR-Log:pear-db - Use the PEAR-DB package
 dev-php/mod_php:hardenedphp - Apply the hardened PHP patch
@@ -161,7 +160,9 @@ kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages r
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
 kde-base/kdenetwork:wifi - Enable wireless network functions in kde
 media-gfx/blender:fmod - Adds mod support to blender
-media-gfx/fontforge:svg - Enable SVG files and fonts support
+media-gfx/gimageview:mng - Enable mng format support
+media-gfx/gimageview:xine - Enable xine support
+media-gfx/gimageview:mplayer - Enable mplayer support
 media-gfx/gimp:gimpprint - Enable gimp-print printing support
 media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar formats
 media-gfx/maya:bundled-libs - Use the bundled versions of libs rather than system ones (libstdc++, libgcc_s, libqt, and libXm)
