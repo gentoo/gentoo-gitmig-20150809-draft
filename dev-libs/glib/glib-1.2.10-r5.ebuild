@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.19 2004/04/19 22:48:52 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.20 2004/04/24 03:28:24 agriffis Exp $
 
-inherit libtool gnuconfig
+inherit libtool gnuconfig flag-o-matic
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
@@ -44,16 +44,18 @@ src_compile() {
 	# Brad House <brad_mssw@gentoo.org> 1/2/2004
 #	libtoolize -c -f
 
+	# Bug 48839: pam fails to build on ia64
+	# The problem is that it attempts to link a shared object against
+	# libglib.a; this library needs to be built with -fPIC.  Since
+	# this package doesn't contain any significant binaries, build the
+	# whole thing with -fPIC (23 Apr 2004 agriffis)
+	append-flags -fPIC
 
 	econf \
 		--with-threads=posix \
 		--enable-debug=yes || die
 
-	if [ "${ARCH}" = "alpha" -o "${ARCH}" = "amd64" -o "${ARCH}" = "hppa" ] ; then
-		emake CFLAGS="${CFLAGS} -fPIC" || die
-	else
-		emake || die
-	fi
+	emake || die
 }
 
 src_install() {
