@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.181 2005/01/08 10:36:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.182 2005/01/12 04:26:44 eradicator Exp $
+
+*qt-4.0.0_beta1-r2 (11 Jan 2005)
+
+  11 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +qt-4.0.0_beta1-r2.ebuild:
+  Bumping to fix multilib issues after discussion with caleb.
 
 *qt-3.3.3-r2 (08 Jan 2005)
 
