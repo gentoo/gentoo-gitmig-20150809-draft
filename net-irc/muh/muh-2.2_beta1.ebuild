@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/muh-2.2_beta1.ebuild,v 1.2 2004/06/24 23:07:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/muh/muh-2.2_beta1.ebuild,v 1.3 2004/08/08 00:09:39 slarti Exp $
 
 MY_P=${P/_/}
 
-DESCRIPTION="Persistant IRC bouncer"
+DESCRIPTION="Persistent IRC bouncer"
 HOMEPAGE="http://mind.riot.org/muh/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 RESTRICT="nomirror"
