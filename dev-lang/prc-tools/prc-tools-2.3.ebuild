@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.3.ebuild,v 1.6 2004/04/16 02:30:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.3.ebuild,v 1.7 2004/06/01 11:23:21 plasmaroo Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,7 +21,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND=">=app-text/texi2html-1.64"
+IUSE=""
+DEPEND=">=app-text/texi2html-1.64-r1"
 RDEPEND=""
 
 src_unpack() {
