@@ -1,0 +1,10 @@
+# ChangeLog for sys-kernel/hardened-sources
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.1 2003/03/30 23:54:41 method Exp $
+
+*hardened-sources-2.4.20 (30 Mar 2003)
+
+  30 Mar 2003; Joshua Brindle <method@gentoo.org>
+  hardened-sources-2.4.20.ebuild:
+  initial import, only has systrace support
+
