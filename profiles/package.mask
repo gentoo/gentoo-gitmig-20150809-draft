@@ -22,6 +22,11 @@
 ##   End example
 ##
 
+#lostlogic@gentoo.org (03 Jul 2002)
+#new apache ebuild changes a bit how we are handling the group
+#addition, want to make sure i'm not an idiot berfore unmasking
+=net-www/apache-1.3.26-r4
+
 #drobbins@gentoo.org (03 jul 2002)
 #needs some testing on gcc 2.95.3 systems and with gnomemeeting
 =net-libs/openh323-1.9.1
