@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.29 2003/06/26 22:24:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.30 2003/06/29 05:26:01 vapier Exp $
 #
 # devlist: {bass,phoenix,vapier}@gentoo.org
 #
@@ -98,10 +98,38 @@ games_pkg_setup() {
 	enewuser ${GAMES_USER} 35 /bin/false /usr/games ${GAMES_GROUP}
 }
 
+# pkg_postinst function ... create env.d entry and warn about games group
 games_pkg_postinst() {
 	gamesenv
 	echo
 	ewarn "Remember, in order to play games, you have to"
 	ewarn "be in the '${GAMES_GROUP}' group."
 	echo
+}
+
+# some games require cdrom's to install datafiles ...
+# $1: directory to check for on cdrom
+# after function call, cdrom should be in ${GAMES_CD}
+games_get_cd() {
+	export GAMES_CD=${GAMES_CDROM}
+	if [ -z "${GAMES_CD}" ] ; then
+		for mline in `mount | egrep -e '(iso|cdrom)' | awk '{print $3}'` ; do
+			[ -d ${mline}/${1} ] && GAMES_CD=${mline}
+		done
+	fi
+	[ ! -z "${GAMES_CD}" ] && einfo "Using ${GAMES_CD} as the data source"
+}
+# Pass a description of the cd to the function
+games_verify_cd() {
+	if [ -z "${GAMES_CD}" ] ; then
+		echo
+		eerror "You must mount the $* CD first!"
+		echo
+		ewarn "If you do not have the CD, but have the data files"
+		ewarn "mounted somewhere on your filesystem, just export"
+		ewarn "the variable GAMES_CDROM so that it points to the"
+		ewarn "directory containing the files."
+		echo
+		die "You must provide the $* data before running the install"
+	fi
 }
