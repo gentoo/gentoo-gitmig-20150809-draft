@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0.5.ebuild,v 1.3 2004/11/03 23:58:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.0.6.ebuild,v 1.1 2004/11/03 23:58:44 lu_zero Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="http://www.gimp.org/"
 LICENSE="GPL-2"
 
-P_HELP="gimp-help-${PV/\./-}"
+P_HELP="gimp-help-2-0.5" #"gimp-help-${PV/\./-}"
 S_HELP="$WORKDIR/${P_HELP}"
 SRC_URI="mirror://gimp/v2.0/${P}.tar.bz2
 	doc? ( mirror://gimp/help/testing/${P_HELP}.tar.gz )"
