@@ -1,7 +1,15 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.2 2003/06/30 19:27:41 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.3 2003/10/05 21:30:09 karltk Exp $
 
+*eclipse-sdk-2.1.1 (05 Oct 2003)
+
+  05 Oct 2003; Karl Trygve Kalleberg <karltk@gentoo.org>
+  eclipse-sdk-2.1.1.ebuild, files/eclipse:
+  Thanks to the wonderful work of Jesse <yurkjes@iit.edu> and Tom Prado
+  <tprado@charter.net>, we finally have from-source ebuild for the SDK.
+  Fixes #19317.
+  
 *eclipse-sdk-2.1 (30 Jun 2003)
 
   30 Jun 2003; Karl Trygve Kalleberg <karltk@gentoo.org>
