@@ -1,0 +1,4 @@
+#!/bin/bash
+env LD_LIBRARY_PATH=/usr/winex/lib \
+	WINEPREFIX=~/.winex \
+/usr/winex/bin/wine ${*}
