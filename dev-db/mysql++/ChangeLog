@@ -1,7 +1,21 @@
 # ChangeLog for dev-db/mysql++
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.5 2003/04/09 18:37:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.6 2003/05/08 20:31:57 robbat2 Exp $
 
+*mysql++-1.7.9-r1 (08 May 2003)
+
+  08 May 2003; Robin Johnson <robbat2@gentoo.org> : mysql++-1.7.9-r1.ebuild,
+  files/mysql++-1.7.9-gcc_throw.patch,
+  files/mysql++-1.7.9-mysql4-gcc295.patch,
+  files/mysql++-1.7.9-mysql4-gcc3.patch, files/mysql++-gcc-3.2.patch:
+  Import many fixes for MySQL++ so it works with MySQLv4, as well as removing
+  warnings and other bumpf. Also made sure CFLAGS/CXXFLAGS get used in the
+  compile (they were not previously).
+  Moved the include directory to /usr/include/mysql++ due to breakage caused
+  by the large number of files put into it (it overwrote some other headers); 
+  This may break some other code, testing is needed!
+  Bugs #15688, #20635 resolved.
+  
 *mysql++-1.7.9 (11 Dec 2002)
 
   09 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
