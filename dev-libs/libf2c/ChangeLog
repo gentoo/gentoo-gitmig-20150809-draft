@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libf2c
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.14 2004/09/09 12:02:22 tchiwam Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.15 2005/01/10 19:55:03 corsair Exp $
+
+  10 Jan 2005; Markus Rothe <corsair@gentoo.org> libf2c-20021004-r1.ebuild:
+  Stable on ppc64
 
   09 Sep 2004; Philippe Trottier <tchiwam@gentoo.org> libf2c-20021004-r1.ebuild:
   Marked ~ppc64
