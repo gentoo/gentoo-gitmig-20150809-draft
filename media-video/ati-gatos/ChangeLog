@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ati-gatos
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ChangeLog,v 1.1 2002/04/05 21:15:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ChangeLog,v 1.2 2002/06/03 21:24:10 azarah Exp $
+
+*ati-gatos-4.2.0.11-r1 (3 Jun 2002)
+
+  3 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Resolve bug #1947.
 
 *ati-gatos-4.2.0.11 (5 Apr 2002)
 
