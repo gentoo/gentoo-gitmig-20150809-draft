@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.13 2004/01/18 10:21:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.14 2004/02/20 23:41:57 mr_bones_ Exp $
 
 IUSE="nls pic build nptl"
 
@@ -56,7 +56,7 @@ HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
 # failing hppa: ../linuxthreads/sysdeps/pthread/errno-loc.c:39:
 # `pthread_descr' undeclared (first use in this function)
-KEYWORDS="x86 ppc sparc alpha -hppa ~arm mips ia64"
+KEYWORDS="x86 ppc sparc alpha -hppa mips ia64"
 SLOT="2.2"
 LICENSE="LGPL-2"
 
