@@ -1,6 +1,12 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.8 2004/10/21 20:53:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.9 2004/12/27 18:12:09 seemant Exp $
+
+*grisbi-0.5.4 (27 Dec 2004)
+
+  27 Dec 2004; Seemant Kulleen <seemant@gentoo.org> +grisbi-0.5.4.ebuild:
+  version bump thanks to: Guillaume Castagnino <guilc@fr.st>. Sorry about not
+  getting to the previous bump in time.
 
 *grisbi-0.5.2 (21 Oct 2004)
 
