@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/snownews-1.2.3.ebuild,v 1.1 2003/10/08 11:05:34 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/snownews-1.2.3.ebuild,v 1.2 2003/10/08 11:31:36 darkspecter Exp $
 
 DESCRIPTION="Snownews, a text-mode RSS/RDF newsreader"
 HOMEPAGE="http://home.kcore.de/~kiza/software/snownews/"
@@ -8,7 +8,7 @@ SRC_URI="http://home.kcore.de/~kiza/software/snownews/download/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=">=dev-libs/libxml2-2.5.6
