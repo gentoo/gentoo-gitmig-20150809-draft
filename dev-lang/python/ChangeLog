@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.27 2003/06/02 13:03:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.28 2003/07/01 15:15:47 todd Exp $
+
+  01 Jul 2003; Todd Sunderlin <todd@gentoo.org> python-2.2.3.ebuild:
+  set stable on sparc
 
 *python-2.2.3 (02 Jun 2003)
 

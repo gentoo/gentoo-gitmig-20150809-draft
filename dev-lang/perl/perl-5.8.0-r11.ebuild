@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r11.ebuild,v 1.4 2003/06/26 23:34:41 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r11.ebuild,v 1.5 2003/07/01 15:20:00 todd Exp $
 
 inherit eutils flag-o-matic 
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.perl.org/"
 SLOT="0"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~mips ~hppa"
+KEYWORDS="~x86 sparc ~ppc ~alpha ~mips ~hppa"
 IUSE="berkdb doc gdbm threads"
 
 DEPEND="sys-apps/groff
