@@ -1,6 +1,6 @@
-# ChangeLog for dev-libs/libtifiles
+# ChangeLog for sci-libs/libtifiles
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles/ChangeLog,v 1.1 2004/12/28 21:20:15 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles/ChangeLog,v 1.2 2004/12/29 00:22:48 swegener Exp $
 
 *libtifiles-0.6.1 (28 Dec 2004)
 

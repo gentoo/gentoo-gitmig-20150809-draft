@@ -1,6 +1,6 @@
-# ChangeLog for dev-libs/mkl
+# ChangeLog for sci-libs/mkl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.1 2004/12/28 21:45:07 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.2 2004/12/29 00:23:29 swegener Exp $
 
 *mkl-5.2 (28 Dec 2004)
 

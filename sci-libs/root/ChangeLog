@@ -1,6 +1,6 @@
-# ChangeLog for dev-libs/root
+# ChangeLog for sci-libs/root
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/ChangeLog,v 1.1 2004/12/28 23:01:57 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/ChangeLog,v 1.2 2004/12/29 00:25:13 swegener Exp $
 
 *root-3.10.02-r1 (28 Dec 2004)
 

@@ -1,6 +1,6 @@
-# ChangeLog for dev-libs/shapelib
+# ChangeLog for sci-libs/shapelib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/ChangeLog,v 1.1 2004/12/29 00:08:29 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/ChangeLog,v 1.2 2004/12/29 00:25:45 swegener Exp $
 
 *shapelib-1.2.10 (28 Dec 2004)
 
