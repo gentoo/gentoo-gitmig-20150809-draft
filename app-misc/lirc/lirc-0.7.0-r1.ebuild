@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.5 2005/01/01 15:12:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.6 2005/01/20 21:33:51 lanius Exp $
 
 inherit eutils linux-mod
 
@@ -28,7 +28,8 @@ HOMEPAGE="http://www.lirc.org"
 # parallel, pctv, pixelview_bt878,
 # pixelview_pak, pixelview_pro, provideo,
 # realmagic, remotemaster, serial, silitek,
-# sir, slinke, streamzap tekram, winfast_tv2000
+# sir, slinke, streamzap tekram
+# winfast_tv2000 is now leadtek_0010
 
 # This could be usefull too
 
@@ -42,7 +43,7 @@ HOMEPAGE="http://www.lirc.org"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="debug doc streamzap"
-KEYWORDS="~x86 ~ppc ~alpha ~ia64 ~amd64 ~ppc64"
+KEYWORDS="x86 ~ppc ~alpha ~ia64 ~amd64 ~ppc64"
 
 RDEPEND="virtual/libc
 	X11? ( virtual/x11 )"
