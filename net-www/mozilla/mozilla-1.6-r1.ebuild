@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6-r1.ebuild,v 1.1 2004/02/15 17:23:08 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6-r1.ebuild,v 1.2 2004/03/07 17:14:09 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama"
 # Internal USE flags that I do not really want to advertise ...
@@ -51,7 +51,7 @@ case "${ARCH}" in
 		;;
 esac
 
-EMVER="0.83.2"
+EMVER="0.83.3"
 IPCVER="1.0.5"
 
 PATCH_VER="1.0"
@@ -62,12 +62,12 @@ MY_PV2="${MY_PV1/eta}"
 S="${WORKDIR}/mozilla"
 DESCRIPTION="The Mozilla Web Browser"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.bz2
-	crypt? ( mirror://gentoo/enigmail-${EMVER}.tar.gz
+	crypt? ( http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
 			 http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz )"
 #	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
