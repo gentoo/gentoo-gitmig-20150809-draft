@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 0837bac1a379f50d806f66a6cad93333 ChangeLog 759
+MD5 754678c81877b8e077031dbe33931f59 libvisual-plugins-0.1.6.ebuild 833
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 cc40415ccc140d06f76d5e229057ab13 libvisual-plugins-0.1.6.ebuild 833
-MD5 ffbcfb9b5babc9bb2ab28b7527b55cbc ChangeLog 669
 MD5 e341800a9ecd70a1be2bd3dca5e651e3 files/digest-libvisual-plugins-0.1.6 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBXx8HArHZZzCEUG0RAuv/AJwL5aCfKtZIRhrPN2ubGH1U+t7MHwCfWMD1
-ulDTJWGEbPtoOeOQh4LVBL4=
-=pwpj
------END PGP SIGNATURE-----
