@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.1.0.ebuild,v 1.5 2002/10/20 18:49:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.1.0.ebuild,v 1.6 2002/11/10 18:45:31 raker Exp $
 
-IUSE="arts oggvorbis"
+IUSE="oggvorbis"
 
 DESCRIPTION="A free, crossplatform audio editor."
 HOMEPAGE="http://audacity.sourceforge.net/"
@@ -12,8 +12,7 @@ LICENSE="GPL-2"
 DEPEND="~x11-libs/wxGTK-2.2.9
 	oggvorbis? ( media-libs/libvorbis )
 	app-arch/zip
-	media-sound/mad
-	media-libs/libsndfile"
+	media-sound/mad"
 	
 
 SLOT="0"
@@ -29,17 +28,9 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
 	
-	myconf="--with-id3tag --with-libmad"
-	# vorbis breaks 4 me (rigo@home.nl)
-	# use oggvorbis && myconf="${myconf} --without-vorbis"
-	myconf="${myconf} --without-vorbis"
-
-	use arts && myconf="${myconf} --with-arts-soundserver"
-	
-	./configure --prefix=/usr $myconf || die
-	make || die
+	econf || die
+	emake || die
 }
 
 src_install () {
