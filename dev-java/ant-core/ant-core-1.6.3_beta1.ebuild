@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.3_beta1.ebuild,v 1.1 2005/04/03 17:27:50 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.3_beta1.ebuild,v 1.2 2005/04/03 20:29:22 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -54,10 +54,7 @@ src_compile() {
 }
 
 src_install() {
-	cp ${FILESDIR}/${PV}-ant ${S}/src/ant
-
-	exeinto /usr/bin
-	doexe src/ant
+	newbin ${FILESDIR}/${PV/_*}-ant ant || die "failed to install wrapper"
 
 	dodir /usr/share/${PN}/bin
 	for each in antRun runant.pl runant.py complete-ant-cmd.pl ; do
