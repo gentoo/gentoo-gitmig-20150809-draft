@@ -1,6 +1,17 @@
 # ChangeLog for app-misc/xlockmore
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/ChangeLog,v 1.8 2002/06/03 21:55:30 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/ChangeLog,v 1.9 2002/06/10 15:16:38 lostlogic Exp $
+
+*xlockmore-5.04 (10 Jun 2002)
+
+  10 Jun 2002; Brandon Low <lostlogic@gentoo.org> xlockmore-5.04.ebuild :
+
+  New version available fixes a problem some users were having with xlock
+  looking for an image in a redhat subdir and crashing back to X (making
+  it a BIT less effective as a locker).
+  
+  xglock appears to be integrated into xlock now, and xmlock does appear 
+  to build successfully.
 
 *xlockmore-5.03-r5 (24 Apr 2002)
 
