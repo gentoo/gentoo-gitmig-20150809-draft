@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.5.ebuild,v 1.9 2005/03/27 12:23:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.5.ebuild,v 1.10 2005/03/28 15:52:45 gmsoft Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/libsigc/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="1.3"
-KEYWORDS="x86 ppc alpha amd64 sparc ppc64"
+KEYWORDS="x86 ppc alpha amd64 sparc ppc64 hppa"
 IUSE="debug"
 
 DEPEND="virtual/libc"
