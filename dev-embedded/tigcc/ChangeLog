@@ -1,0 +1,11 @@
+# ChangeLog for dev-embedded/tigcc
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.1 2004/09/25 00:57:10 dragonheart Exp $
+
+*tigcc-0.95_beta19-r1 (25 Sep 2004)
+
+  25 Sep 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +tigcc-0.95_beta19-r1.ebuild, +files/a68k-fix.patch:
+  Initial import as per bug #51162. Ebuild by Robert Führicht
+  <the_master_of_disaster@gmx.at>
+
