@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.20 2004/03/02 16:39:07 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.21 2004/03/05 04:10:16 liquidx Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -19,7 +19,7 @@ DESCRIPTION="A really great language"
 SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${MY_PV}.tar.bz2"
 HOMEPAGE="http://www.python.org"
 
-IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc"
+IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc X"
 LICENSE="PSF-2.2"
 SLOT="2.3"
 
@@ -28,7 +28,7 @@ KEYWORDS="x86 ppc sparc hppa amd64 s390"
 
 DEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.3
-	!build? ( 	tcltk? ( >=dev-lang/tk-8.0 )
+	!build? ( 	X? ( tcltk? ( >=dev-lang/tk-8.0 ) )
 				ncurses? ( >=sys-libs/ncurses-5.2 readline? ( >=sys-libs/readline-4.1 ) )
 				berkdb? ( >=sys-libs/db-3.1 )
 				gdbm? ( sys-libs/gdbm )
@@ -69,13 +69,14 @@ src_configure() {
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} dbm bsddb"
 		use readline \
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} readline"
-		use tcltk \
-			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _tkinter"
+		[ -z "use X" -o -z "use tcltk" ] \
+			&& PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _tkinter"
 		use ncurses \
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _curses _curses_panel"
 		use ssl \
 			|| export PYTHON_DISABLE_SSL=1
 		export PYTHON_DISABLE_MODULES
+		echo $PYTHON_DISABLE_MODULES
 	fi
 }
 
