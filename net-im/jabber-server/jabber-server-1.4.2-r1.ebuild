@@ -1,12 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r1.ebuild,v 1.4 2002/10/05 05:39:21 drobbins Exp $
-
-IUSE="ssl"
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r1.ebuild,v 1.5 2002/11/30 02:06:30 vapier Exp $
 
 S="${WORKDIR}/jabber-${PV}"
 DESCRIPTION="Open Source Jabber Server & JUD,AIM,MSN,ICQ,Yahoo and Conference transports"
-HOMEPAGE="http://www.jabber.org"
+HOMEPAGE="http://www.jabber.org/"
 SRC_URI="http://jabberd.jabberstudio.org/downloads/jabber-${PV}.tar.gz
 	 http://jabberd.jabberstudio.org/downloads/conference-0.4.tar.gz	
 	 http://jabberd.jabberstudio.org/downloads/jud-0.4.tar.gz
@@ -15,15 +13,15 @@ SRC_URI="http://jabberd.jabberstudio.org/downloads/jabber-${PV}.tar.gz
          http://www.ibiblio.org/gentoo/distfiles/yahoo-transport-0.8.4.6.tar.gz
 	 http://www.ibiblio.org/gentoo/distfiles/Install_AIM_3.5.1670.exe"
 
-DEPEND=">=dev-libs/pth-1.4.0
-	ssl? ( >=dev-libs/openssl-0.9.6c )"
-
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE="ssl"
+
+DEPEND=">=dev-libs/pth-1.4.0
+	ssl? ( >=dev-libs/openssl-0.9.6c )"
 
 src_unpack() {
-
 	unpack jabber-${PV}.tar.gz
 	cd ${S}
 	tar -xjf ${FILESDIR}/config-1.4.2.tar.bz2
@@ -34,13 +32,10 @@ src_unpack() {
 	unpack yahoo-transport-0.8.4.6.tar.gz
 	cd ${S}/aim-transport
 	cp ${DISTDIR}/Install_AIM_3.5.1670.exe .
-
 }
 
 src_compile() {
-
 	local myconf
-	cd ${S}
 	use ssl && myconf="--enable-ssl"
 
 	mv jabberd/jabberd.c jabberd/jabberd.c.orig
@@ -67,24 +62,20 @@ src_compile() {
         cd ${S}/yahoo-transport
 	CPPFLAGS="$CPPFLAGS -I../jabberd -I../../jabberd" ./autogen.sh || die
 	make || die
-
 }
 
 
 src_install() {
-
         cd ${S}
 	touch error.log
 	touch record.log
         exeinto /etc/init.d ; newexe ${FILESDIR}/jabber.rc6 jabber
-        mkdir -p ${D}/usr/jabber-${PV}
+        dodir/usr/jabber-${PV}
         cp -rf * ${D}/usr/jabber-${PV}/
 	cd ${D}/usr/jabber-${PV}/jabberd
-
 }
 
 pkg_postinst() {
-
 	cd /usr/jabber-${PV}
 	groupadd jabber
 	useradd jabber -s /bin/false -d /usr/jabber-${PV} -g jabber -m	
@@ -98,12 +89,9 @@ pkg_postinst() {
 	einfo "To enable SSL connections, execute ./self-cert.sh in the server's dir"
 	einfo "(Only if compiled with SSL support (ssl in USE)"
 	einfo "Server admins should be added to the "jabber" group"
-
 }
 
 pkg_postrm() {
-
 	userdel jabber
 	groupdel jabber
-
 }
