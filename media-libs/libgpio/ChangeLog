@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/libgpio
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpio/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpio/ChangeLog,v 1.2 2002/07/24 07:21:18 george Exp $
+
+*libgpio-20020507 (8 May 2002)
+
+  8 May 2002; george Shapovalov <george@gentoo.org> libgpio-20020507.ebuild :
+
+  updated version and submitted new source file to chiba  (old source was 
+  removed from ibiblio and no longer avilable, since this is merely a cvs 
+  snapshot on a set day)
+
+  CVS snapshot and updated ebuild are submitted by 
+  Michael M Nazaroff <naz@gentoo.org>
 
 *libgpio-20010607 (1 Feb 2002)
 
