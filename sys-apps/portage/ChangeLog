@@ -1,7 +1,13 @@
 # ChangeLog for sys-apps/portage
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.28 2004/02/10 01:47:51 carpaski Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.29 2004/03/23 23:49:01 mr_bones_ Exp $
 
 # See the gentoo-src Portage ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/portage/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*portage-2.0.50-r2 (23 Mar 2004)
+
+  23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  portage-2.0.50-r2.ebuild:
+  remove arm from KEYWORDS to fix bug #45548
 
