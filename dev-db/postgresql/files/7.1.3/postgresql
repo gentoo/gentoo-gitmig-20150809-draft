@@ -1,7 +1,7 @@
 #!/sbin/runscript
 
 PREFIX="/usr"
-PGDATA="/var/db/pgsql/data"
+PGDATA="/var/db/postgresql/data"
 PGUSER="postgres"
 PATH="/bin:/usr/bin"
 DAEMON="$PREFIX/bin/pg_ctl"
