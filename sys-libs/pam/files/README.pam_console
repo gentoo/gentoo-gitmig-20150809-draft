@@ -1,0 +1,58 @@
+Introduction
+============
+
+pam_console is a module for PAM (Pluggable Authentication Modules) designed to
+give users that log locally in a system ("owning the console" in technical
+terms) privileges that they would not otherwise have, and to take those
+privileges away when they are no longer logged in.
+
+When a user logs in at the console and no other user is currently logged in,
+pam_console will change permissions and ownership of some of the device files,
+to allow, for instance, access to the audio devices, or to the cdrom drives.
+Those permissions are read from a configuration file
+(/etc/security/console.perms).
+
+To know more about pam_console, run 'man pam_console' and 'man console.perms'.
+
+
+Gentoo and pam_console
+======================
+
+In a Gentoo system pam_console is disabled by default, and users are allowed
+to access specific devices if they are member of particular groups (e.g. they
+have to be members of the audio group to access audio devices).
+
+However, Gentoo gives you the possibility to enable pam_console, you just have
+to follow these advices:
+
+1) In /etc/pam.d/system-auth, add the following line:
+
+  session    optional     /lib/security/pam_console.so
+
+   Thus, pam_console will apply permissions from /etc/security/console.perms
+   when you log in.
+   
+2) If you're using devfs, add the following lines in /etc/devfsd.conf:
+
+  REGISTER  .*  CFUNCTION /lib/security/pam_console_apply_devfsd.so\
+                    pam_console_apply_single $devpath
+
+   In this way, permissions from /etc/security/console.perms will be applied
+   also to those devices that are created dynamically.
+
+3) If you're using udev, create a file in /etc/dev.d/default/ ending with
+   '.dev', for instance /etc/dev.d/default/pam_console.dev, containing the
+   following lines:
+
+   #!/bin/sh
+   exec /sbin/pam_console_apply
+ 
+   and make it executable:
+
+  chmod +x /etc/dev.d/default/pam_console.dev
+
+   In this way, pam_console will reevaluate permissions from
+   /etc/security/console.perms each time a device is dynamically created.
+
+4) Tweak /etc/security/console.perms to your own needs.
+
