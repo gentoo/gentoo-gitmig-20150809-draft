@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.5.0.ebuild,v 1.7 2004/06/25 02:20:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.5.0.ebuild,v 1.8 2004/07/20 14:47:39 spock Exp $
 
 IUSE="slang ncurses"
 
@@ -14,7 +14,6 @@ LICENSE="GPL-2"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
 	slang? ( >=sys-libs/slang-1.4.9 )"
-RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}-550"
 
 src_unpack() {
