@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/MIME-Base64-2.20.ebuild,v 1.3 2003/07/02 19:29:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/MIME-Base64-2.20.ebuild,v 1.4 2004/01/07 19:20:43 agriffis Exp $
 
 inherit perl-module
 
@@ -11,4 +11,4 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-category/15_World_Wide_Web_HTML_
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha hppa ~arm"
+KEYWORDS="x86 amd64 ~ppc ~sparc alpha hppa ~arm ia64"
