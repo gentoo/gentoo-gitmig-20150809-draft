@@ -1,6 +1,14 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.4 2002/04/24 18:27:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.5 2002/06/21 16:19:59 seemant Exp $
+
+*tetex-1.0.7-r10 (20 Jun 2002)
+
+  20 Jun 2002; Seemant Kulleen <seemant@gentoo.org> tetex-1.0.7-r10.ebuild
+  files/digest-tetex-1.0.7-r10 :
+
+  Fixed libwww configure option, so it now knows where to look for the
+  headers.  This closes bug #3928 by fatwreckfan@hotmail.com (Mark Trolley)
 
 *tetex-1.0.7-r9 (24 Apr 2002)
 
