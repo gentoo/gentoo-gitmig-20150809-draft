@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmium
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmium/ChangeLog,v 1.1 2004/02/04 02:51:04 dragonheart Exp $
+
+*wmium-1.0.7 (04 Feb 2004)
+
+  04 Feb 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  wmium-1.0.7.ebuild files/digest-wmium-1.0.7:
+  Initial import
