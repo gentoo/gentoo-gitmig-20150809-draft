@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.14 2003/07/31 16:02:09 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.15 2003/07/31 16:09:09 taviso Exp $
 
 inherit gnuconfig
 
@@ -18,9 +18,9 @@ LICENSE="GPL-2 FVWM"
 RDEPEND="readline? ( >=sys-libs/readline-4.1 
 				ncurses? ( >=sys-libs/ncurses-5.3-r1 )
 				!ncurses? ( >=sys-libs/libtermcap-compat-1.2.3 ) )
-		gtk? ( =x11-libs/gtk+-1.2* )
-		imlib? ( >=media-libs/gdk-pixbuf-0.21.0 
-			>=media-libs/imlib-1.9.14-r1 )
+		gtk? ( =x11-libs/gtk+-1.2* 
+				imlib? ( >=media-libs/gdk-pixbuf-0.21.0 
+						>=media-libs/imlib-1.9.14-r1 ) )
 		gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
 		rplay? ( >=media-sound/rplay-3.3.2 )
 		perl? ( >=dev-lang/perl-5.6.1-r10 )	
