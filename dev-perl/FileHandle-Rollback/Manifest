@@ -1,4 +1,6 @@
 MD5 9a8383d0ee6820117edafa7b67508508 ChangeLog 410
 MD5 9a29e0f313153a8055c095bacb84ffe1 FileHandle-Rollback-1.04.ebuild 488
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 9a29e0f313153a8055c095bacb84ffe1 FileHandle-Rollback-1.05.ebuild 488
 MD5 a5ec4133e669d930fa162d5d48fc265f files/digest-FileHandle-Rollback-1.04 74
+MD5 b4114d681b9a3705716ee9d4790e011b files/digest-FileHandle-Rollback-1.05 74
