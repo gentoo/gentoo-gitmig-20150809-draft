@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.26.2.0-r4.ebuild,v 1.1 2004/06/17 14:52:48 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.26.2.0-r4.ebuild,v 1.2 2004/06/18 00:47:17 solar Exp $
 
 # We control what versions of what we download based on the KEYWORDS we
 # are using for the various arches. Thus if we want grsec1 stable we run
@@ -71,8 +71,10 @@ src_unpack() {
 	epatch ${FILESDIR}/2.4.26-CAN-2004-0394.patch
 	# Fix local DoS bug #53804
 	epatch ${FILESDIR}/2.4.26-signal-race.patch
+
 	# i2c integer overflow vulnerability during the allocation of memory
-	epatch ${FILESDIR}/2.4.26-i2cproc_bus_read.patch
+	# epatch ${FILESDIR}/2.4.26-i2cproc_bus_read.patch
+
 	# patch to force randomization to always at least PAGE_SIZE big.
 	epatch ${FILESDIR}/2.4.26-pax-binfmt_elf-page-size.patch
 
