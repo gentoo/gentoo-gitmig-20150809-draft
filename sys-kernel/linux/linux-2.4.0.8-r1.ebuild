@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.8.ebuild,v 1.2 2001/01/13 20:03:23 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.8-r1.ebuild,v 1.1 2001/01/13 20:04:41 achim Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac8
@@ -40,14 +40,36 @@ src_unpack() {
     echo "Applying ReiserFS patch..."
     gzip -dc ${FILESDIR}/${PV}/linux-2.4.0-ac6-reiserfs-3.6.25-maxbytes.diff.gz | patch -p1 
 
+    echo "Applying reiser-nfs patch..."
+    gzip -dc ${FILESDIR}/${PV}/linux-2.4.0-ac8-reiserfs-3.6.25-nfs.diff.gz | patch -p1
 
     mkdir extras
-
+    if [ "`use jfs`" ]
+    then
+	echo "Applying IBM JFS patch..."
+	cd extras
+	mkdir jfs
+	cd jfs
+	unpack jfs-0.1.2-patch.tar.gz
+	cd ${S}
+	patch -p1 < extras/jfs/jfs-common-v0.1.2-patch
+	patch -p1 < extras/jfs/jfs-2.4.0-v0.1.2-patch
+    fi
 	cd ${S}/extras
 	echo "Unpacking LVM..."
     	unpack lvm_0.9.tar.gz
 	echo "Unpacking ALSA drivers..."
 	unpack alsa-driver-0.5.10.tar.bz2
+#	echo "Unpacking NVidia drivers..."
+#	unpack NVIDIA_kernel-0.9-5.tar.gz
+#	cd NVIDIA_kernel-0.9-5
+#	# this is a little fix to make the NVidia drivers compile right with test12
+#	mv nv.c nv.c.orig
+#	echo '#define mem_map_inc_count(p) atomic_inc(&(p->count))' > nv.c
+#	echo '#define mem_map_dec_count(p) atomic_dec(&(p->count))' >> nv.c
+#	cat nv.c.orig >> nv.c
+# This does not work with 2.4.0 daniel can you fix this
+	cd ${S}/extras
 
         #lm_sensors buggy mkpatch.pl in 2.5.4!
 	for x in i2c
@@ -84,12 +106,19 @@ src_compile() {
 #    cd ${S}/lm_sensors-2.5.4
 #    try make
 
+    if [ "`use jfs`" ]
+    then
+	cd ${S}/fs/jfs/utils
+	try make
+    fi
 
     if [ "$PN" = "linux" ]
     then
 	cd ${S}
 	try make bzImage
 	try make modules
+# 		cd ${S}/extras/NVIDIA_kernel-0.9-5
+#		make NVdriver
 
 	cd ${S}/extras/LVM/0.9
 	try ./configure --prefix=/
@@ -110,6 +139,21 @@ src_install() {
 
 	cd ${S}/extras/LVM/0.9
 	make install prefix=${D} MAN8DIR=${D}/usr/man/man8 LIBDIR=${D}/lib
+
+	if [ "`use jfs`" ]
+	then
+  	    cd ${S}/fs/jfs/utils
+	    cp output/* ${D}/sbin
+	    local x
+	    for x in `find -iname *.1`
+ 	    do
+		doman $x
+	    done
+	    for x in `find -iname *.8`
+	    do
+		doman $x
+	    done
+	fi
 
 	dodir /usr/src
 
@@ -137,8 +181,6 @@ src_install() {
 		doins arch/i386/boot/bzImage
 
 		#grab modules
-		# Do we have a bug in modutils ?
-		# Meanwhile we use this quick fix (achim)
 		dodir /lib/modules/${KV}
 		dodir /lib/modules/`uname -r`
 		dodir ${D}/lib/modules/${KV}
@@ -154,6 +196,11 @@ src_install() {
 		insinto /usr/src/linux-${KV}/include/linux
 		cd include
 		doins asound.h asoundid.h asequencer.h ainstr_*.h
+
+		#install nvidia driver
+#		cd ${S}/extras/NVIDIA_kernel-0.9-5
+#		insinto /lib/modules/${KV}/video
+#		doins NVdriver
 
 		#fix symlink
 		cd ${D}/lib/modules/${KV}
