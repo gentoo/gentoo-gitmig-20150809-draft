@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ircservices
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.1 2004/08/14 21:38:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.2 2004/08/14 22:35:49 swegener Exp $
+
+  15 Aug 2004; Sven Wegener <swegener@gentoo.org> files/ircservices.init.d:
+  Fixed init script.
 
 *ircservices-5.0.37 (14 Aug 2004)
 
