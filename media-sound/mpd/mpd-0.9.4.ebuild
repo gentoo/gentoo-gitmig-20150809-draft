@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.9.4.ebuild,v 1.3 2004/03/30 18:19:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.9.4.ebuild,v 1.4 2004/04/20 07:50:56 eradicator Exp $
 
 IUSE="oggvorbis mad"
 
@@ -39,16 +39,20 @@ src_install() {
 	dodoc COPYING ChangeLog INSTALL README TODO UPGRADING
 	dodoc doc/COMMANDS doc/mpdconf.example
 
+	insinto /etc
+	newins doc/mpdconf.example mpd.conf
+
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/mpd.rc6 mpd
-	insinto /etc/conf.d
-	newins ${FILESDIR}/mpd.conf mpd
+
+	dosed 's:^port.*$:port "2100":' /etc/mpd.conf
+	dosed 's:^music_directory.*$:music_directory "/usr/share/mpd/music":' /etc/mpd.conf
+	dosed 's:^playlist_directory.*$:playlist_directory "/usr/share/mpd/playlists":' /etc/mpd.conf
+	dosed 's:^log_file.*$:log_file "/var/log/mpd.log":' /etc/mpd.conf
+	dosed 's:^error_file.*$:error_file "/var/log/mpd.error.log":' /etc/mpd.conf
 }
 
 pkg_postinst() {
 	einfo "libao has issues with the ALSA drivers, please refer to the FAQ"
 	einfo "http://musicpd.sourceforge.net/faq.php"
-	einfo
-	einfo " You need to set PORT, MUSIC_DIR, PLAYLIST_DIR,"
-	einfo " LOG_FILE and ERROR_FILE in /etc/conf.d/mpd"
 }
