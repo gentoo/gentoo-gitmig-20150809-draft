@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/itext/itext-1.02b.ebuild,v 1.1 2004/02/18 04:24:58 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/itext/itext-1.02b.ebuild,v 1.2 2004/02/18 04:56:15 zx Exp $
 
 inherit java-pkg
 
@@ -26,7 +26,9 @@ src_unpack() {
 }
 
 src_compile() {
-	[ -z $J2EE_HOME ] || export J2EE_HOME="/opt/sun-j2ee-1.3.1"
+	[ -z $J2EE_HOME ] && export J2EE_HOME="/opt/sun-j2ee-1.3.1"
+	einfo ${J2EE_HOME}
+	ant download.site
 	local antflags="jarWithXML"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} javadoc"
