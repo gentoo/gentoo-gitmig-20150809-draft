@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1_beta.ebuild,v 1.4 2002/07/29 03:42:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1_beta.ebuild,v 1.5 2002/07/30 00:14:55 azarah Exp $
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 inherit makeedit
@@ -68,7 +68,7 @@ src_unpack() {
 	[ -z "${CC}" ] && CC=gcc
 	if [ "`${CC} -dumpversion | cut -d. -f1,2`" != "2.95" ] ; then
 		# Fix bogus asm (from Mandrake .spec)
-#		patch -p1 < ${FILESDIR}/${P}-asmfixes.patch || die
+		patch -p1 < ${FILESDIR}/mozilla-1.0-asmfixes.patch || die
 
 #		patch -p1 < ${FILESDIR}/${P}-gcc3-java-plugin.patch || die
 
@@ -175,11 +175,11 @@ src_compile() {
 	export BUILD_OPT=1
 
 	# Currently gcc-3.1.1 dont work well if we specify "-march"
-	# and other optimizations
+	# and other optimizations for pentium4.
 	[ -z "${CC}" ] && CC=gcc
 	if [ "`${CC} -dumpversion`" = "3.1.1" ] ; then
-		export CFLAGS=""
-		export CXXFLAGS=""
+		export CFLAGS="${CFLAGS/pentium4/pentium3}"
+		export CXXFLAGS="${CXXFLAGS/pentium4/pentium3}"
 	fi
 
 	# Crashes on start when compiled with -fomit-frame-pointer

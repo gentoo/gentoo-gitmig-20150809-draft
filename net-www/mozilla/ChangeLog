@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.29 2002/07/25 15:39:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.30 2002/07/30 00:14:55 azarah Exp $
+
+*mozilla-1.1_beta (30 Jul 2002)
+
+  30 Jul 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.1_beta :
+  Enable the mozilla-1.0-asm-fixes.patch again, as it fixes some
+  build problems with gcc-3.x.
 
 *mozilla-1.0-r4 (25 Jul 2002)
   25 Jul 2002; Spider <spider@gentoo.org> mozilla-1.0-r4.ebuild:
