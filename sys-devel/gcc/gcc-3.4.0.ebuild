@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0_pre20040416.ebuild,v 1.5 2004/04/24 00:38:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.1 2004/04/26 17:49:45 lv Exp $
 
-IUSE="static nls bootstrap java build X multilib gcj hardened"
+IUSE="static nls bootstrap java build X multilib gcj hardened f77 objc uclibc"
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers, as well as support for pax PIE"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -22,11 +22,7 @@ PIE_VER="8.5.3"
 PIE_BASE_URI="mirror://gentoo/"
 PIE_SSP_PATCH="gcc-3.4.0-v${PIE_VER}-nodefault-pie-ssp.patch"
 PIE_EXCLUSION_PATCH="gcc-3.3.3-v${PIE_VER}-gcc-exclusion.patch"
-
-# Pre-release
-S="${WORKDIR}/gcc-${PV/_pre/-}"
-SRC_URI="ftp://gcc.gnu.org/pub/gcc/prerelease-${PV/_pre/-}/gcc-${PV/_pre/-}.tar.bz2
-	${PIE_BASE_URI}${PIE_SSP_PATCH}
+SRC_URI="${PIE_BASE_URI}${PIE_SSP_PATCH}
 	${PIE_BASE_URI}${PIE_EXCLUSION_PATCH}"
 
 inherit eutils flag-o-matic libtool
@@ -80,11 +76,49 @@ else
 	SLOT="${CCHOST}-${MY_PV}"
 fi
 
+# Patch tarball support ...
+PATCH_VER=
+# Snapshot support ...
+SNAPSHOT=
+# Branch update support ...
+MAIN_BRANCH="${PV}"  # Tarball, etc used ...
+BRANCH_UPDATE=
+
+# poof! like magic!
+if [ -z "${SNAPSHOT}" ]
+then
+	S="${WORKDIR}/${PN}-${MAIN_BRANCH}"
+	SRC_URI="${SRC_URI}
+		ftp://gcc.gnu.org/pub/gcc/releases/${P}/${PN}-${MAIN_BRANCH}.tar.bz2"
+
+	if [ -n "${PATCH_VER}" ]
+	then
+		SRC_URI="${SRC_URI}
+		         mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
+	fi
+
+	if [ -n "${BRANCH_UPDATE}" ]
+	then
+		SRC_URI="${SRC_URI}
+		         mirror://gentoo/${PN}-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2"
+	fi
+else
+	S="${WORKDIR}/gcc-${SNAPSHOT//-}"
+	SRC_URI="${SRC_URI}
+		ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT//-}.tar.bz2"
+fi
+
+# PERL cannot be present at bootstrap, and is used to build the man pages. So..
+# lets include some pre-generated ones, shall we?
+#SRC_URI="${SRC_URI} mirror://gentoo/${P}-manpages.tar.bz2"
+
 # We need the later binutils for support of the new cleanup attribute.
 # 'make check' fails for about 10 tests (if I remember correctly) less
 # if we use later bison.
 DEPEND="virtual/glibc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
+	!amd64? ( hardened? ( >=sys-libs/glibc-2.3.3_pre20040207 ) )
+	( !sys-devel/hardened-gcc )
 	>=sys-devel/binutils-2.14.90.0.8-r1
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
@@ -94,6 +128,7 @@ DEPEND="virtual/glibc
 
 RDEPEND="virtual/glibc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
+	hardened? ( !amd64? ( >=sys-libs/glibc-2.3.3_pre20040207 ) )
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
@@ -133,20 +168,124 @@ version_patch() {
 	epatch ${T}/${1##*/}
 }
 
+glibc_have_ssp() {
+	local my_libc="${ROOT}/lib/libc.so.6"
+
+# Not necessary. lib64 is a symlink to /lib. -- avenj@gentoo.org  3 Apr 04
+#	case "${ARCH}" in
+#		"amd64")
+#			my_libc="${ROOT}/lib64/libc.so.?"
+#			;;
+#	esac
+
+	# Check for the glibc to have the __guard symbols
+	if  [ "$(readelf -s "${my_libc}" 2>/dev/null | \
+	         grep GLOBAL | grep OBJECT | grep '__guard')" ] && \
+	    [ "$(readelf -s "${my_libc}" 2>/dev/null | \
+	         grep GLOBAL | grep FUNC | grep '__stack_smash_handler')" ]
+	then
+		return 0
+	else
+		return 1
+	fi
+}
+
+check_glibc_ssp() {
+	if glibc_have_ssp
+	then
+		if [ -n "${GLIBC_SSP_CHECKED}" ] && \
+		   [ -z "$(readelf -s  "${ROOT}/$(gcc-config -L)/libgcc_s.so" 2>/dev/null | \
+		           grep 'GLOBAL' | grep 'OBJECT' | grep '__guard')" ]
+		then
+			# No need to check again ...
+			return 0
+		fi
+
+		echo
+		ewarn "This sys-libs/glibc has __guard object and __stack_smash_handler functions"
+		ewarn "scanning the system for binaries with __guard - this may take 5-10 minutes"
+		ewarn "Please do not press ctrl-C or ctrl-Z during this period - it will continue"
+		echo
+		if ! bash ${FILESDIR}/scan_libgcc_linked_ssp.sh
+		then
+			echo
+			eerror "Found binaries that are dynamically linked to the libgcc with __guard@@GCC"
+			eerror "You need to compile these binaries without CFLAGS -fstack-protector/hcc -r"
+			echo
+			eerror "Also, you have to make sure that using ccache needs the cache to be flushed"
+			eerror "wipe out /var/tmp/ccache or /root/.ccache.  This will remove possible saved"
+			eerror "-fstack-protector arguments that still may reside in such a compiler cache"
+			echo
+			eerror "When such binaries are found, gcc cannot remove libgcc propolice functions"
+			eerror "leading to gcc -static -fstack-protector breaking, see gentoo bug #25299"
+			echo
+			einfo  "To do a full scan on your system, enter this following command in a shell"
+			einfo  "(Please keep running and remerging broken packages until it do not report"
+			einfo  " any breakage anymore!):"
+			echo
+			einfo  " # ${FILESDIR}/scan_libgcc_linked_ssp.sh"
+			echo
+			die "Binaries with libgcc __guard@GCC dependencies detected!"
+		else
+			echo
+			einfo "No binaries with suspicious libgcc __guard@GCC dependencies detected"
+			echo
+		fi
+	fi
+
+	return 0
+}
+
+update_gcc_for_libc_ssp() {
+	if glibc_have_ssp
+	then
+		einfo "Updating gcc to use SSP from glibc..."
+		sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -D_LIBC_PROVIDES_SSP_|' \
+			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
+	fi
+}
+
 src_unpack() {
+	local release_version="Gentoo Linux ${PVR}"
+
 	ewarn "Do not hold me accountable if GCC 3.4 makes things unstable, wont"
 	ewarn "compile your favorite piece of software, breaks anything C++"
 	ewarn "that you compiled with it after uninstalling gcc 3.4, miscompiles"
 	ewarn "binutils at optimisation levels greater than -O2, eats your cat,"
 	ewarn "humps your leg, or pees on your rug. YOU HAVE BEEN WARNED!!!"
 	ewarn "ALSO DO NOT BOTHER TSENG OR GENTOO-HARDENED ABOUT GCC 3.4"
+	ewarn "While this may be a final release, numerous problems still exist"
 
-	unpack ${A}
-	local release_version="Gentoo Linux ${PVR}"
+	if [ -z "${SNAPSHOT}" ]
+	then
+		unpack ${PN}-${MAIN_BRANCH}.tar.bz2
+
+		if [ -n "${PATCH_VER}" ]
+		then
+			unpack ${P}-patches-${PATCH_VER}.tar.bz2
+		fi
+	else
+		unpack gcc-${SNAPSHOT//-}.tar.bz2
+	fi
 
 	cd ${S}
 	# Fixup libtool to correctly generate .la files with portage
 	elibtoolize --portage --shallow
+
+	# Branch update ...
+	if [ -n "${BRANCH_UPDATE}" ]
+	then
+		epatch ${DISTDIR}/${PN}-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2
+	fi
+
+	# Do bulk patches included in ${P}-patches-${PATCH_VER}.tar.bz2
+	if [ -n "${PATCH_VER}" ]
+	then
+		mkdir -p ${WORKDIR}/patch/exclude
+#		mv -f ${WORKDIR}/patch/{40,41}* ${WORKDIR}/patch/exclude/
+		mv -f ${WORKDIR}/patch/41* ${WORKDIR}/patch/exclude/
+		epatch ${WORKDIR}/patch
+	fi
 
 	echo
 
@@ -167,7 +306,7 @@ src_unpack() {
 		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP -fPIC|' \
 			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
 
-		# will show if default PIE/SSP building was used - make bug reports easier
+		# rebrand to make bug reports easier
 		release_version="${release_version/Gentoo/Gentoo Hardened}"
 	fi
 
@@ -176,6 +315,12 @@ src_unpack() {
 
 	# TODO: on arches where we lack a Scrt1.o (like parisc) we still need unpack, compile and install logic
 	# TODO: for the crt1Snocsu.o provided by a custom gcc-pie-ssp.tgz which can also be included in SRC_URI
+
+	# Install our pre generated manpages if we do not have perl ...
+	#if [ ! -x /usr/bin/perl ]
+	#then
+	#	cd ${S}; unpack ${P}-manpages.tar.bz2
+	#fi
 
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
@@ -188,22 +333,23 @@ src_compile() {
 	local myconf=
 	local gcc_lang=
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		myconf="${myconf} --enable-shared"
-		gcc_lang="c,c++,f77,objc"
+		gcc_lang="c,c++"
+		use f77 && gcc_lang="${gcc_lang},f77"
+		use objc && gcc_lang="${gcc_lang},objc"
+		use java && use gcj && gcc_lang="${gcc_lang},java"
+		# ADA is supported elsewhere, do not enable it here
+		# use ada  && gcc_lang="${gcc_lang},ada"
 	else
 		gcc_lang="c"
 	fi
-	if [ -z "`use nls`" -o "`use build`" ]
+	if ! use nls || use build
 	then
 		myconf="${myconf} --disable-nls"
 	else
 		myconf="${myconf} --enable-nls --without-included-gettext"
-	fi
-	if [ -n "`use java`" -a "`use gcj`" -a -z "`use build`" ]
-	then
-		gcc_lang="${gcc_lang},java"
 	fi
 
 	# Enable building of the gcj Java AWT & Swing X11 backend
@@ -211,7 +357,7 @@ src_compile() {
 	# X11 support is still very experimental but enabling it is
 	# quite innocuous...  [No, gcc is *not* linked to X11...]
 	# <dragon@gentoo.org> (15 May 2003)
-	if [ -n "`use java`" -a "`use gcj`" -a \
+	if [ -n "`use java`" -a -n "`use gcj`" -a \
 	     -n "`use X`" -a -z "`use build`" -a \
 	     -f /usr/X11R6/include/X11/Xlib.h ]
 	then
@@ -219,18 +365,41 @@ src_compile() {
 		myconf="${myconf} --enable-interpreter --enable-java-awt=xlib --with-x"
 	fi
 
-	# Multilib isn't quite working yet...
-	#use amd64 && myconf="${myconf} `use_enable multilib`"
-	myconf="${myconf} --disable-multilib"
+	# Multilib not yet supported
+	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	then
+		einfo "WARNING: Multilib support enabled. This is still experimental."
+		myconf="${myconf} --enable-multilib"
+	else
+		if [ "${ARCH}" = "amd64" ]
+		then
+			einfo "WARNING: Multilib not enabled. You will not be able to build 32bit binaries."
+		fi
+		myconf="${myconf} --disable-multilib"
+	fi
+
+	# Fix linking problem with c++ apps which where linkedi
+	# agains a 3.2.2 libgcc
+	[ "${ARCH}" = "hppa" ] && myconf="${myconf} --enable-sjlj-exceptions"
+
+	use hardened && append-flags -fPIC
 
 	# Default arch support
 	use amd64 && myconf="${myconf} --with-cpu=k8 --with-arch=k8"
+	use ppc64 && myconf="${myconf} --with-cpu=g5 --with-arch=g5"
+	use s390 && myconf="${myconf} --with-cpu=z990 --with-arch=g5"
+	use x86 && myconf="${myconf} --with-cpu=pentium4 --with-arch=i586"
+	use mips && myconf="${myconf} --with-cpu=mips4 --with-arch=mips3"
+	use ppc && myconf="${myconf} --with-cpu=g4 --with-arch=g3"
 
 	# In general gcc does not like optimization, and add -O2 where
-	# it is safe.  This is especially true for gcc-3.3 ...
+	# it is safe.  This is especially true for gcc 3.3 + 3.4
 	export CFLAGS="${CFLAGS/-O?/-O2}"
+	einfo "CFLAGS=\"${CFLAGS}\""
 	export CXXFLAGS="${CXXFLAGS/-O?/-O2}"
+	einfo "CXXFLAGS=\"${CXXFLAGS}\""
 	export GCJFLAGS="${CFLAGS/-O?/-O2}"
+	einfo "GCJFLAGS=\"${GCJFLAGS}\""
 
 	# Build in a separate build tree
 	mkdir -p ${WORKDIR}/build
@@ -264,10 +433,10 @@ src_compile() {
 	touch ${S}/gcc/c-gperf.h
 
 	# Do not make manpages if we do not have perl ...
-	if [ ! -x /usr/bin/perl ]
-	then
-		find ${S} -name '*.[17]' -exec touch {} \; || :
-	fi
+	#if [ ! -x /usr/bin/perl ]
+	#then
+	#	find ${S} -name '*.[17]' -exec touch {} \; || :
+	#fi
 
 	# Setup -j in MAKEOPTS
 	get_number_of_jobs
@@ -295,7 +464,9 @@ src_compile() {
 }
 
 src_install() {
-	# Do allow symlinks in ${LOC}/lib/gcc-lib/${CHOST}/${PV}/include as
+	local x=
+
+	# Dont allow symlinks in ${LOC}/lib/gcc-lib/${CHOST}/${PV}/include as
 	# this can break the build.
 	for x in ${WORKDIR}/build/gcc/include/*
 	do
@@ -434,6 +605,10 @@ src_install() {
 	then
 		rm -f ${D}${LOC}/lib/libiberty.a
 	fi
+	if [ -f "${LIBPATH}/libiberty.a" ]
+	then
+		rm -f ${LIBPATH}/libiberty.a
+	fi
 
 	cd ${S}
 	if [ -z "`use build`" ]
@@ -451,18 +626,24 @@ src_install() {
 		cd ${S}/gcc
 		docinto ${CCHOST}/gcc
 		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS README* SERVICE
-		cd ${S}/libf2c
-		docinto ${CCHOST}/libf2c
-		dodoc ChangeLog* README TODO *.netlib
+		if use f77
+		then
+			cd ${S}/libf2c
+			docinto ${CCHOST}/libf2c
+			dodoc ChangeLog* README TODO *.netlib
+		fi
 		cd ${S}/libffi
 		docinto ${CCHOST}/libffi
 		dodoc ChangeLog* LICENSE README
 		cd ${S}/libiberty
 		docinto ${CCHOST}/libiberty
 		dodoc ChangeLog* COPYING.LIB README
-		cd ${S}/libobjc
-		docinto ${CCHOST}/libobjc
-		dodoc ChangeLog* README* THREADS*
+		if use objc
+		then
+			cd ${S}/libobjc
+			docinto ${CCHOST}/libobjc
+			dodoc ChangeLog* README* THREADS*
+		fi
 		cd ${S}/libstdc++-v3
 		docinto ${CCHOST}/libstdc++-v3
 		dodoc ChangeLog* README
@@ -471,7 +652,7 @@ src_install() {
 		cp -f docs/html/17_intro/[A-Z]* \
 			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
 
-		if [ -n "`use java`" -a "`use gcj`" ]
+		if use java && use gcj
 		then
 			cd ${S}/fastjar
 			docinto ${CCHOST}/fastjar
@@ -497,16 +678,15 @@ src_install() {
 
 	if [ "${ARCH}" = "amd64" ]
 	then
-		# If using multilib, GCC has a bug, where it doesn't know where to find
-		# -lgcc_s when linking while compiling with g++ .  ${LIBPATH} is in
-		# it's path though, so ln the 64bit and 32bit versions of -lgcc_s
-		# to that directory.
-		# gcc 3.4 places libgcc_s.so in lib64 regardless of whether or not
-		# multilib is enabled, so we'll symlink this even when multilib
-		# isn't in USE.
-		ln -sf ${LIBPATH}/../lib64/libgcc_s.so ${D}/${LIBPATH}/libgcc_s.so
+		# GCC 3.4 tries to place libgcc_s in lib64, where it will never be
+		# found. When multilib is enabled, it also places the 32bit version in
+		# lib32. This problem could be handled by a symlink if you only plan on
+		# having one compiler installed at a time, but since these directories
+		# exist outside the versioned directories, versions from gcc 3.3 and
+		# 3.4 will overwrite each other. not good.
+		cp -pfd ${D}/${LIBPATH}/../lib64/libgcc_s* ${D}/${LIBPATH}
 		use multilib && \
-		ln -sf ${LIBPATH}/../lib32/libgcc_s_32.so ${D}/${LIBPATH}/libgcc_s_32.so
+		cp -pfd ${D}/${LIBPATH}/../lib32/libgcc_s* ${D}/${LIBPATH}
 	fi
 }
 
