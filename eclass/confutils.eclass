@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.1 2004/06/27 16:05:26 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.2 2004/07/14 21:24:06 stuart Exp $
 #
 # eclass/confutils.eclass
 #		Utility functions to help with configuring a package
@@ -13,6 +13,13 @@
 # ========================================================================
 
 IUSE="$IUSE shared"
+
+# ========================================================================
+
+# list of USE flags that need deps that aren't yet in Portage
+# this list was originally added for PHP
+
+CONFUTILS_MISSING_DEPS="adabas birdstep qdbm empress empress-bcs frontbase hyperwave-api informix ingres interbase mcve mnogosearch msession msql oci8 oracle7 ovirmos pfpro sapdb"
 
 # ========================================================================
 # confutils_init ()
@@ -76,8 +83,7 @@ confutils_use_conflict () {
 # depends on another USE flag that hasn't been enabled
 #
 # $1	- flag that depends on other flags
-# $2	- error message to show
-# $3 .. - 
+# $2 .. - the flags that must be set for $1 to be valid
 
 confutils_use_depend_all () {
 	if ! useq $1 ; then
@@ -119,8 +125,7 @@ confutils_use_depend_all () {
 # depends on another USE flag that hasn't been enabled
 #
 # $1	- flag that depends on other flags
-# $2	- error message to show
-# $3 .. - 
+# $2 .. - flags that must be set for $1 to be valid
 
 confutils_use_depend_any () {
 	if ! useq $1 ; then
@@ -247,5 +252,30 @@ enable_extension_with () {
 		my_conf="${my_conf} --with-$1$my_shared"
 	else
 		my_conf="${my_conf} --without-$1"
+	fi
+}
+
+# ========================================================================
+# confutils_warn_about_external_deps
+
+confutils_warn_about_missing_deps ()
+{
+	local x
+	local my_found=0
+
+	for x in $CONFUTILS_MISSING_DEPS ; do
+		if useq $x ; then
+			ewarn "USE flag $x enables support for software not in Portage"
+			my_found=1
+		fi
+	done
+
+	if [ "$my_found" = "1" ]; then
+		ewarn
+		ewarn "This ebuild will continue, but if you haven't already installed the"
+		ewarn "software required to satisfy the list above, this package will probably"
+		ewarn "fail to compile."
+		ewarn
+		sleep 5
 	fi
 }
