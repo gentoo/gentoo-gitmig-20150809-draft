@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r1.ebuild,v 1.6 2004/04/28 04:18:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r1.ebuild,v 1.7 2004/05/12 03:48:54 randy Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/nfs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc mips arm hppa ~amd64 ppc64"
+KEYWORDS="~x86 ~ppc ~sparc mips arm hppa ~amd64 ppc64 s390"
 IUSE="tcpd"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )"
