@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.62 2003/02/05 23:54:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.63 2003/02/08 19:52:28 gmsoft Exp $
+
+  08 Feb 2003; Guy Martin <gmsoft@gentoo.orf> :
+  Added hppa to keywords.
 
 *gcc-3.2.2.ebuild (06 Feb 2003)
 
