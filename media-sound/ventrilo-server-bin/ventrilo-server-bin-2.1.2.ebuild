@@ -7,7 +7,7 @@ SRC_URI="ventrilo_srv-2.1.2-Linux-i386.tar.gz"
 
 LICENSE="ventrilo"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 RESTRICT="fetch"
 
 S=${WORKDIR}
