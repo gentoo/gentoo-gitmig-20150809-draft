@@ -1,6 +1,14 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.149 2004/03/22 03:35:02 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.150 2004/03/24 22:56:10 rizzo Exp $
+
+*gaim-0.75-r11 (24 Mar 2004)
+
+  24 Mar 2004; Don Seiler <rizzo@gentoo.org>; gaim-0.75-r11.ebuild,
+  files/gaim-gentoo-branding.patch:
+  Adding some branding in Help -> About. Thanks to Patrick McLean, fixes Bug
+  #45631.  Further directing users to use http://bugs.gentoo.org for help.
+  No need to upgrade.
 
   21 Mar 2004; Don Seiler <rizzo@gentoo.org>; gaim-0.75-r10.ebuild,
   gaim-0.75-r8.ebuild:
