@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-gnome2.eclass,v 1.5 2003/12/29 16:21:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-gnome2.eclass,v 1.6 2004/01/23 07:27:07 usata Exp $
 #
 # This eclass simplifies installation of the various pieces of
 # ruby-gnome2 since they share a very common installation procedure.
@@ -38,7 +38,7 @@ fi
 
 ruby-gnome2_src_compile() {
 	ruby extconf.rb || die "extconf.rb failed"
-	emake || die "emake failed"
+	emake CC=${CC:-gcc} CXX=${CXX:-g++} || die "emake failed"
 }
 
 ruby-gnome2_src_install() {
