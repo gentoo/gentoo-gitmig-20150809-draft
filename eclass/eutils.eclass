@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.18 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.19 2003/02/16 20:12:26 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -157,6 +157,11 @@ epatch() {
 	else
 		if [ ! -d ${EPATCH_SOURCE} ]
 		then
+			if [ -n "$1" -a "${EPATCH_SOURCE}" = "${WORKDIR}/patch" ]
+			then
+				EPATCH_SOURCE="$1"
+			fi
+
 			echo
 			eerror "Cannot find \$EPATCH_SOURCE!  Value for \$EPATCH_SOURCE is:"
 			eerror
@@ -259,7 +264,7 @@ epatch() {
 					fi
 				fi
 				
-				if patch ${popts} --dry-run -f -p${count} < ${PATCH_TARGET} >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/} 2>&1
+				if (cat ${PATCH_TARGET} | patch ${popts} --dry-run -f -p${count}) >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/} 2>&1
 				then
 					draw_line "***** ${x##*/} *****" >	${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real
 					echo >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real
@@ -267,7 +272,7 @@ epatch() {
 					echo >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real
 					draw_line "***** ${x##*/} *****" >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real
 
-					patch ${popts} -p${count} < ${PATCH_TARGET} >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real 2>&1
+					cat ${PATCH_TARGET} | patch ${popts} -p${count} >> ${STDERR_TARGET%/*}/${x##*/}-${STDERR_TARGET##*/}.real 2>&1
 
 					if [ "$?" -ne 0 ]
 					then
