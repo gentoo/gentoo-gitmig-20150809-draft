@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/jpgraph
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/ChangeLog,v 1.12 2005/01/12 22:29:03 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/ChangeLog,v 1.13 2005/02/17 07:33:49 sebastian Exp $
+
+*jpgraph-1.17 (17 Feb 2005)
+
+  17 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  +jpgraph-1.17.ebuild:
+  Version bump, closes bug 54591.
 
   12 Jan 2005; Danny van Dyk <kugelfang@gentoo.org> jpgraph-1.12.2.ebuild:
   Marked ~amd64.
