@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-office/gnumeric/gnumeric-0.65.ebuild,v 1.2 2001/06/06 16:55:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-office/gnumeric/gnumeric-0.65.ebuild,v 1.3 2001/06/09 07:10:17 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -64,13 +64,13 @@ src_compile() {
   else
     myconf="$myconf --without-gda"
   fi
-  try ./configure --host=${CHOST} --prefix=/opt/gnome ${myconf}
+  try ./configure --host=${CHOST} --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome ${myconf}
   cd ${S}
   try make
 }
 
 src_install() {
-  try make prefix=${D}/opt/gnome PREFIX=${D}/usr install
+  try make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome PREFIX=${D}/usr install
   dodoc AUTHORS COPYING *ChangeLog HACKING NEWS README TODO
 
 }

@@ -25,3 +25,4 @@ app-text/sgml2x
 >=media-gfx/autotrace-0.26
 >=x11-base/xfree-4.1.0
 >=sys-devel/autoconf-2.50
+>=gnome-apps/pan-0.9.7

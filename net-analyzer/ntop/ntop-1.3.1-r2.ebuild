@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-1.3.1-r2.ebuild,v 1.3 2001/06/01 14:00:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-1.3.1-r2.ebuild,v 1.4 2001/06/09 07:10:17 achim Exp $
 
 P=ntop-1.3.1
 A="${P}.tar.gz"
@@ -12,8 +12,9 @@ HOMEPAGE="http://www.ntop.org/ntop.html"
 
 DEPEND="virtual/glibc sys-devel/gcc
 	>=sys-libs/gdbm-1.8.0
-	ssl? ( >=dev-libs/openssl-0.9.6 )
-	>=net-libs/libpcap-0.5.2"
+        >=sys-libs/readline-4.1
+        >=net-libs/libpcap-0.5.2
+	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
 RDEPEND="virtual/glibc sys-devel/gcc
 	>=sys-libs/gdbm-1.8.0
@@ -40,7 +41,8 @@ src_compile() {
     #if [ "`use tcpd`" ] ; then
     #    myconf="$myconf --enable-tcpwrap"
     #fi
-     try ./configure --prefix=/usr --sysconfdir=/usr/share --mandir=/usr/share/man --host=${CHOST}  $myconf
+    touch *
+    try ./configure --prefix=/usr --sysconfdir=/usr/share --mandir=/usr/share/man --host=${CHOST}  $myconf
     try make
 
 }
