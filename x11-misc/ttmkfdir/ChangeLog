@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ttmkfdir
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.38 2004/09/04 04:22:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.39 2004/09/25 21:02:41 fmccor Exp $
+
+  25 Sep 2004; Ferris McCormick <fmccor@gentoo.org> ttmkfdir-3.0.9-r2.ebuild:
+  Stable for sparc.  Required for xorg-x11-6.8.0-r1.
 
 *ttmkfdir-3.0.9-r2 (02 Sep 2004)
 
