@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r4.ebuild,v 1.2 2004/05/05 10:19:26 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r4.ebuild,v 1.3 2004/05/05 10:41:56 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -31,6 +31,7 @@ inherit flag-o-matic eutils
 filter-flags "-funroll-loops"
 filter-flags "-fomit-frame-pointer"
 filter-flags "-fprefetch-loop-arrays"
+filter-flags "-fno-default-inline"
 append-flags "-fno-strict-aliasing"
 replace-flags "-O3" "-O2"
 
