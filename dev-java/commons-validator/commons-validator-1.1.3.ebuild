@@ -1,41 +1,43 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.0.2-r3.ebuild,v 1.5 2004/09/10 13:25:36 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.1.3.ebuild,v 1.1 2004/09/10 13:25:36 axxo Exp $
 
 inherit java-pkg
 
 DESCRIPTION="Jakarta component to validate user input, or data input"
 HOMEPAGE="http://jakarta.apache.org/commons/validator/"
-SRC_URI="mirror://apache/jakarta/commons/validator/source/${PN}-${PV}-src.tar.gz"
+SRC_URI="mirror://apache/jakarta/commons/validator/source/${PN}-${PV}-src.tar.gz mirror://gentoo/commons-validator-1.1.3-gentoo-missingfiles.tar.bz2"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-1.4
 	app-arch/zip
 	jikes? ( dev-java/jikes )
-	junit? ( >=junit-3.7 )"
+	junit? ( >=junit-3.8.1 )"
 RDEPEND=">=virtual/jre-1.3
-	>=dev-java/oro-2.0.6
-	>=dev-java/commons-digester-1.0
-	>=dev-java/commons-collections-2.0
-	>=dev-java/commons-logging-1.0
-	>=dev-java/commons-beanutils-1.0
+	>=dev-java/oro-2.0.8
+	>=dev-java/commons-digester-1.5
+	>=dev-java/commons-collections-2.1
+	>=dev-java/commons-logging-1.0.3
+	>=dev-java/commons-beanutils-1.6
 	>=dev-java/xerces-2.6.2-r1"
 LICENSE="Apache-1.1"
 SLOT="0"
 RESTRICT="nomirror"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="doc jikes junit"
-
-S="${WORKDIR}/${P}-src"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	#dirty hack
+	sed -e 's:target name="compile" depends="static":target name="compile" depends="prepare":' -i build.xml
+
 	echo "oro.jar=`java-config --classpath=oro`" >> build.properties
 	echo "commons-digester.jar=`java-config --classpath=commons-digester`" >> build.properties
 	echo "commons-collections.jar=`java-config --classpath=commons-collections`" >> build.properties
 	echo "commons-logging.jar=`java-config --classpath=commons-logging | sed s/.*://`" >> build.properties
-	echo "commons-beanutils.jar=`java-config --classpath=commons-beanutils`" >> build.properties
+	echo "commons-beanutils.jar=`java-config --classpath=commons-beanutils | sed s/.*://`" >> build.properties
 	echo "xerces.jar=`java-config --classpath=xerces-2`" >> build.properties
+	use junit && echo "junit.jar=`java-config --classpath=junit`" >> build.properties
 }
 
 src_compile() {
@@ -44,17 +46,13 @@ src_compile() {
 	use doc && antflags="${antflags} javadoc"
 	use junit && antflags="${antflags} test"
 	ant ${antflags} || die "build failed"
+	jar -cvf ${PN}.jar -C target/classes/ . || die "could not create jar"
 }
 
 src_install() {
-	# Dirty hack
-	mv ${S}/target/conf/MANIFEST.MF ${S}/target/classes/
-	cd ${S}/target/classes
-	zip -qr ../${PN}.jar org
-
 	cd ${S}
-	java-pkg_dojar target/${PN}.jar
+	java-pkg_dojar ${PN}.jar
 	use doc && dohtml -r dist/docs/
 	dohtml PROPOSAL.html STATUS.html
-	dodoc RELEASE-NOTES.txt
+	dodoc LICENSE.txt
 }
