@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.36-r2.ebuild,v 1.1 2002/12/03 12:34:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.36-r2.ebuild,v 1.2 2003/01/05 00:55:10 aliz Exp $
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 
@@ -6,7 +6,7 @@ S="${WORKDIR}/${P}"
 DESCRIPTION="An OSF/Motif(R) clone."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.lesstif.org/"
-
+PROVIDE="virtual/motif"
 LICENSE="LGPL"
 KEYWORDS="~x86 ~ppc"
 SLOT="0"

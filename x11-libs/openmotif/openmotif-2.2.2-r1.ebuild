@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r1.ebuild,v 1.3 2002/12/09 04:41:48 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r1.ebuild,v 1.4 2003/01/05 00:55:10 aliz Exp $
 
 S=${WORKDIR}/openMotif-2.2.2
 
 DESCRIPTION="Open Motif"
 SRC_URI="ftp://ftp.sgi.com/other/motifzone/2.2/src/openMotif-2.2.2.tar.gz"
 HOMEPAGE="http://www.motifzone.org/"
+PROVIDE="virtual/motif"
 
 LICENSE="MOTIF"
 SLOT="0"

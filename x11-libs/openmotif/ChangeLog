@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.7 2002/12/13 11:00:51 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.8 2003/01/05 00:55:10 aliz Exp $
+
+  05 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> openmotif-2.1.30-r1.ebuild, openmotif-2.2.2.ebuild,
+						openmotif-2.2.2-r1.ebuild :
+  Added PROVIDE.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.36.ebuild,v 1.2 2002/11/06 20:22:16 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.36.ebuild,v 1.3 2003/01/05 00:55:10 aliz Exp $
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="LGPL"
 
 DEPEND="virtual/x11"
-
+PROVIDE="virtual/motif"
 KEYWORDS="x86"
 SLOT="0"
 
