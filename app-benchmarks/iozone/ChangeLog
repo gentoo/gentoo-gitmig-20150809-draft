@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/iozone
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.6 2004/06/24 21:28:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.7 2004/07/18 05:56:29 dragonheart Exp $
+
+  18 Jul 2004; Daniel Black <dragonheart@gentoo.org> iozone-3.218.ebuild:
+  x86 stable
 
   22 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org> iozone-3.218.ebuild:
   Keyworded ~sparc wrt #53521
