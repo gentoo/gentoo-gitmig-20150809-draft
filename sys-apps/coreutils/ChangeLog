@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.75 2004/02/03 20:33:43 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.76 2004/02/18 03:17:34 tgall Exp $
+
+  17 Feb 2004; Tom Gall <tgall@gentoo.org> 
+  coreutils-5.0.91-r4.ebuild:
+  Added ppc64 stable keyword
 
   03 Feb 2004; Daniel Robbins <drobbins@gentoo.org> coreutils-5.0.91*.ebuild:
   removed unnecessary append-flags -fPIC from ebuilds.
