@@ -1,16 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a7d3f1e2443cb43d5f11a48ae6adc33a ChangeLog 702
 MD5 b30d745f6e4638d0aa13b563553c350c medusa-0.5.1-r3.ebuild 1468
-MD5 06b66d29c85e531ab0071aaa8ec2bb7a medusa-0.5.1-r4.ebuild 1809
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 dba6931a376c50f5e1e44a6dd6f862c9 files/digest-medusa-0.5.1-r3 64
-MD5 dba6931a376c50f5e1e44a6dd6f862c9 files/digest-medusa-0.5.1-r4 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBcvyXI1lqEGTUzyQRAm3WAKDeLheKqO6829BGasoYfZr4KDMppACglhbl
-D+EW/iS/XxAQGte3AWPyo3A=
-=/77f
------END PGP SIGNATURE-----
