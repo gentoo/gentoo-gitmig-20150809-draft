@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mist/gtk-engines-mist-0.10.ebuild,v 1.6 2004/04/27 20:28:02 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mist/gtk-engines-mist-0.10.ebuild,v 1.7 2004/04/27 21:16:11 agriffis Exp $
 
-inherit gtk-engines2
+inherit gtk-engines2 eutils
 
 MY_P="${P/engines-mist/mist-engine}"
 
