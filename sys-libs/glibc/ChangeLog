@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.241 2004/08/17 16:44:29 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.242 2004/08/18 12:28:43 fmccor Exp $
+
+  18 Aug 2004; Ferris McCormick <fmccor@gentoo.org>
+  glibc-2.3.3.20040420-r1.ebuild:
+  Add 'hardened' to the IUSE list. The ebuild uses it on sparc as an indicator
+  that the compiler was built hardened, and so special care must be taken in the
+  build of the library to avoid SegFaults from the startup routines crt1.o &
+  friends. The main purpose for this change is to emphasize the point for anyone
+  building the library on sparc with hardened gcc; there is no change in
+  functionality.
 
   17 Aug 2004; Luca Barbato <lu_zero@gentoo.org>
   glibc-2.3.4.20040619-r1.ebuild:
