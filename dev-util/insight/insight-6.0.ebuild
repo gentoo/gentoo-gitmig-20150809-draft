@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.0.ebuild,v 1.5 2004/06/25 02:36:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.0.ebuild,v 1.6 2004/11/04 20:30:23 tester Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ SRC_URI="ftp://sources.redhat.com/pub/gdb/releases/${P}.tar.bz2"
 
 INSIGHTDIR="/opt/insight"
 
-src_unpack() {
+disabled_src_unpack() {
 
 	unpack ${A}
 	cd ${S}/gdb

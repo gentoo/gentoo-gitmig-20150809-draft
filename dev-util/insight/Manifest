@@ -1,14 +1,24 @@
-MD5 8961a90d833a0be900936fe44090c411 ChangeLog 1968
-MD5 36cad83782af1af82f293aa3ba8a578f insight-5.1.1.ebuild 848
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0512d64739b78c078dcf18083ceca904 insight-6.1.ebuild 1170
+MD5 99edf3f8f4ddcc0ebd0ad1d25b1aae03 insight-6.0.ebuild 1139
+MD5 e180c77435f249666f4437ad9712b9a8 ChangeLog 2115
+MD5 5cd0c2bc63711e2c2ffaa768a56ac567 metadata.xml 324
 MD5 ca9ebf60ba0063c0bdbefb15248f4828 insight-5.2.1.ebuild 1067
 MD5 80816db3b16c0fdaca656fb3ba9be40c insight-5.3.ebuild 1067
-MD5 c39119aef083b60426be09c324c2c8bc insight-6.0.ebuild 1132
-MD5 992e47ff41b03908a55dc573158de688 insight-6.1.ebuild 1141
-MD5 5cd0c2bc63711e2c2ffaa768a56ac567 metadata.xml 324
-MD5 5a030894bc99706b3fd19213674c4043 files/99insight 70
+MD5 36cad83782af1af82f293aa3ba8a578f insight-5.1.1.ebuild 848
+MD5 f5fdca75e890c339690fc9b2590cca37 files/gdb-6.x-crash.patch 670
+MD5 761285348baf9b36f19392b40d743ec9 files/digest-insight-6.1 66
 MD5 f5a3c86b4aa9d089e9fbcd833ab6137a files/digest-insight-5.1.1 68
 MD5 8d2dfc398ff88058c941ca31d6df1c20 files/digest-insight-5.2.1 68
 MD5 77862f882eb29d60de5030f713ed5774 files/digest-insight-5.3 66
 MD5 e370395b00d90d3b49fe6a31692e52d1 files/digest-insight-6.0 66
-MD5 761285348baf9b36f19392b40d743ec9 files/digest-insight-6.1 66
-MD5 f5fdca75e890c339690fc9b2590cca37 files/gdb-6.x-crash.patch 670
+MD5 5a030894bc99706b3fd19213674c4043 files/99insight 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBipGAwDHaUUJ0mYMRAtEjAJ9J7wmWUQfagWkPUX1FTSrxIr5omgCfSm63
+72+4EdqK8psEe9pjQfEeT+0=
+=ob54
+-----END PGP SIGNATURE-----

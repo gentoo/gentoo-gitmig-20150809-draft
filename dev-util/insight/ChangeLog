@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/insight
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.18 2004/09/07 15:51:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.19 2004/11/04 20:30:23 tester Exp $
+
+  04 Nov 2004; Olivier Crete <tester@gentoo.org> insight-6.0.ebuild,
+  insight-6.1.ebuild:
+  Removed patch because it causes crash. See bug #61411.
 
   07 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> insight-6.1.ebuild:
   Stable on sparc

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.1.ebuild,v 1.8 2004/09/07 15:51:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.1.ebuild,v 1.9 2004/11/04 20:30:23 tester Exp $
 
 inherit eutils
 
@@ -20,11 +20,11 @@ SRC_URI="ftp://sources.redhat.com/pub/gdb/releases/${P}.tar.bz2"
 
 INSIGHTDIR="/opt/insight"
 
-src_unpack() {
+disabled_src_unpack() {
 
 	unpack ${A}
-	cd ${S}/gdb
-	epatch ${FILESDIR}/gdb-6.x-crash.patch
+	cd ${S}
+	epatch ${FILESDIR}/insight-6.1-jimb-copy-section-addr-info.patch
 }
 
 src_compile() {
