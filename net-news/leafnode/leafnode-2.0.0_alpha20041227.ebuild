@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-2.0.0_alpha20041215.ebuild,v 1.2 2004/12/19 01:23:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-2.0.0_alpha20041227.ebuild,v 1.1 2004/12/31 01:25:51 swegener Exp $
 
 inherit flag-o-matic
 
@@ -12,9 +12,10 @@ HOMEPAGE="http://www-dt.e-technik.uni-dortmund.de/~ma/leafnode/beta/"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
-IUSE="ipv6"
+IUSE="ipv6 pam"
 
-DEPEND=">=dev-libs/libpcre-3.9"
+DEPEND=">=dev-libs/libpcre-3.9
+	pam? ( sys-libs/pam )"
 RDEPEND="${DEPEND}
 	virtual/inetd"
 
@@ -29,6 +30,7 @@ src_compile() {
 		--localstatedir=/var \
 		--with-spooldir=/var/spool/news \
 		$(use_with ipv6) \
+		$(use_with pam) \
 		|| die "./configure failed"
 	emake || die "emake failed"
 }
