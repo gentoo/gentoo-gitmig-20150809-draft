@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6-r1.ebuild,v 1.3 2004/05/25 03:46:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6-r2.ebuild,v 1.1 2004/05/26 03:22:30 agriffis Exp $
 
 IUSE="ssl nls slang crypt imap mbox nntp vanilla"
 
@@ -10,7 +10,7 @@ edit_threads_patch="patch-1.5.5.1.cd.edit_threads.9.5-gentoo.bz2"
 compressed_patch="patch-${PV}.rr.compressed.gz"
 nntp_patch="patch-${PV}.vvv.nntp-gentoo.bz2"
 mbox_hook_patch="patch-${PV}.dw.mbox-hook.1"
-maildir_header_cache_patch="mutt-cvs-maildir-header-cache.15"
+maildir_header_cache_patch="mutt-cvs-maildir-header-cache.16"
 
 DESCRIPTION="a small but very powerful text-based mail client"
 HOMEPAGE="http://www.mutt.org"
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	slang? ( >=sys-libs/slang-1.4.2 )
 	!vanilla? (
-		=sys-libs/db-4.1*
+		>=sys-libs/db-4
 		nntp? ( sys-devel/automake sys-devel/autoconf )
 	)"
 
@@ -60,14 +60,7 @@ src_unpack() {
 		epatch ${DISTDIR}/${compressed_patch}
 		epatch ${DISTDIR}/${edit_threads_patch}
 		epatch ${DISTDIR}/${mbox_hook_patch}
-
 		epatch ${DISTDIR}/${maildir_header_cache_patch}
-		# The following sed enables the maildir_header_cache_patch to
-		# use db-4.1 which is marked stable on more platforms.  Using
-		# db-4.1 is enforced in src_compile by setting a configure
-		# cache variable in the environment.
-		sed -i 's/-ldb-4"/-ldb-4.1"/g' configure.in || die "sed failed"
-
 		use nntp && epatch ${DISTDIR}/${nntp_patch}
 
 		# The following steps are necessary for the nntp patch and the
@@ -136,7 +129,6 @@ src_compile() {
 
 		# maildir_header_cache_patch
 		myconf="${myconf} --enable-hcache"
-		export ac_cv_db4=yes
 	fi
 
 	econf ${myconf} || die
