@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.51-r1.ebuild,v 1.10 2004/10/03 21:55:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.51-r1.ebuild,v 1.11 2004/11/01 01:29:47 vapier Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -97,7 +97,7 @@ src_unpack() {
 	sed -i -e "s:/var/www/localhost:${DATADIR}:g" srclib/apr/config.layout
 	sed -i -e "s:/var/www/localhost:${DATADIR}:g" srclib/apr-util/config.layout
 
-	WANT_AUTOCONF_2_5=1 WANT_AUTOCONF=2.5 ./buildconf || die "buildconf failed"
+	WANT_AUTOCONF=2.5 ./buildconf || die "buildconf failed"
 }
 
 src_compile() {
