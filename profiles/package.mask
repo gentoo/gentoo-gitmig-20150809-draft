@@ -441,17 +441,9 @@ gnome-extra/gcalctool
 # new version has some issues with gcc-3.2
 =dev-lisp/gcl-2.4.3
 
-# <blizzy@gentoo.org> (15 Oct 2002)
-# b0rked
-=app-admin/gentoo-stats-0.3
-
 # <aliz@gentoo.org> (14 Oct 2002)
 # sourcefile removed from upstream
 =media-libs/SoQt
-
-# <foser@gentoo.org> (13 Oct 2002)
-# all upstream ftp sites are down
-=dev-java/japhar-0.10
 
 # <foser@gentoo.org> (13 Oct 2002)
 # gtkmm-addons is broken for gcc32
@@ -485,10 +477,6 @@ x11-terms/powershell
 # <danarmak@gentoo.org> (20 Aug 2002)
 # masked for extensive testing
 x11-libs/qt-embedded
-
-# <blizzy@gentoo.org> (14 Aug 2002)
-# masked since there doesn't seem to be a download location
-=net-misc/netstat-nat-1.3
 
 # Chad Huneycutt <chadh@gentoo.org> (31 Jul 2002)
 # new package. needs testing
