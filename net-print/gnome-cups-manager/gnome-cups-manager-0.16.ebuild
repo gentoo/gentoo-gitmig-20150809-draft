@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.16.ebuild,v 1.1 2003/06/24 00:57:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.16.ebuild,v 1.2 2003/07/11 08:59:25 liquidx Exp $
 
 inherit gnome2
 
-DESCRIPTION="A little girl in the woods looking for printers"
-HOMEPAGE="http://foo.bar.com/"
+DESCRIPTION="GNOME CUPS Printer Management Interface"
+HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
