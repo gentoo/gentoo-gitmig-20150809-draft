@@ -4,13 +4,13 @@ Hash: SHA1
 MD5 87c3b02cc409f56ff20b7a47ceedbb89 ChangeLog 1174
 MD5 9f1d9e78085f59f3d4d7a542e17fa706 extutils-parsexs-2.02.ebuild 623
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 f1e10b3ed183399e2c7c689db59971c3 extutils-parsexs-2.08.ebuild 626
+MD5 72d464c58313893256ff4bbcaed61890 extutils-parsexs-2.08.ebuild 626
 MD5 6c9767ee18391dc0389ebe2ea51e468f files/digest-extutils-parsexs-2.02 72
 MD5 4f4928dc4faae48f54f55afe8eec4726 files/digest-extutils-parsexs-2.08 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBevntugEuf3OQ0akRAs7FAKCKfKkp4jH7Tsjwlr7F4qt5WL8ToACZATHt
-WFLjkNBjkTJdutnr7ru1+W8=
-=FC7N
+iD8DBQFBisuaHTu7gpaalycRAofuAJ9BD/ThukVlFPHSk1gqDrx1dwhx+QCgnHEN
+YNalmzfR7j/CQE+Pwb1dzWU=
+=Fe50
 -----END PGP SIGNATURE-----
