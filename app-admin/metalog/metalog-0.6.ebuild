@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry A! <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.6.ebuild,v 1.2 2001/07/11 07:54:18 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.6.ebuild,v 1.3 2001/07/15 18:05:39 achim Exp $
 
 A="${P}.tar.gz"
 S=${WORKDIR}/${P}
@@ -26,14 +26,13 @@ src_unpack() {
 }
 
 src_compile() {
-    try ./configure --prefix=/usr
+    try ./configure --prefix=/usr --mandir=/usr/share/man
     try make
 }
 
 src_install () {
     try make DESTDIR=${D} install
 
-    dodir /etc/metalog
     insinto /etc/metalog
     donewins metalog.conf metalog.conf.sample
 
