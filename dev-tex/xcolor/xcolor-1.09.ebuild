@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xcolor/xcolor-1.09.ebuild,v 1.1 2004/02/21 20:54:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xcolor/xcolor-1.09.ebuild,v 1.2 2004/03/10 20:50:03 usata Exp $
 
 inherit latex-package
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/latex-beamer/${P}.tar.gz"
 
 LICENSE="LPPL-1.2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 

@@ -1,8 +1,11 @@
 # ChangeLog for dev-tex/pgf
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.1 2004/02/21 20:57:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.2 2004/03/10 20:49:00 usata Exp $
 
 *pgf-0.60 (22 Feb 2004)
+
+  11 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> pgf-0.60.ebuild:
+  Marked stable on x86
 
   22 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> pgf-0.60.ebuild:
   Initial import. Ebuild required by dev-tex/latex-beamer. See bug #33244
