@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 896b0d0e01e0ec17d53ae33ddb1b537d coldplug-20040920.ebuild 843
+MD5 53bbb11387ce57e950cf9f6e63d1dea0 ChangeLog 1123
 MD5 075d5a933d6175160a02ddf15bd4f454 metadata.xml 260
-MD5 bf389cf5301ddba637cbd7cb6184522d ChangeLog 982
+MD5 f6700c66b39c8b587cecc2c58c2a27c8 coldplug-20040920.ebuild 842
 MD5 84f35322799b9d850051ed12b17a1f11 files/coldplug.rc 692
 MD5 6038bb8c3af43a0e6f0aa876e4307df6 files/digest-coldplug-20040920 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBWMN/I1lqEGTUzyQRAtRsAJ9Oib9D4QsiUlr5nH9wPPNpNsbWMQCfVC/i
-9yNh7QatSbdPaF3v4tp7DjI=
-=1dpq
------END PGP SIGNATURE-----
