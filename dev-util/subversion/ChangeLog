@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.35 2003/09/28 11:29:59 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.36 2003/10/10 19:18:22 pauldv Exp $
+
+  10 Oct 2003; Paul de Vrieze <pauldv@gentoo.org> subversion-0.24.2-r1.ebuild,
+  subversion-0.25.0.ebuild, subversion-0.26.0.ebuild,
+  subversion-0.28.0.ebuild, subversion-0.30.0.ebuild,
+  files/subversion-db4.patch:
+  Clean up old versions, and add the 0.31.0 version
+
+  02 Oct 2003; Paul de Vrieze <pauldv@gentoo.org> subversion-0.30.0.ebuild:
+  Add a static precompiled svnadmin-pre28 instead of the old dynamic one. This
+  one should work in all cases
 
 *subversion-0.30.0 (27 Sep 2003)
 

@@ -1,13 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.30.0.ebuild,v 1.3 2003/09/30 11:16:12 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.30.0.ebuild,v 1.4 2003/10/10 19:18:22 pauldv Exp $
 
 inherit elisp-common
 
+BACKUP_ADMIN="svnadmin-pre0.28"
+BACKUP_ADMIN_DIR="/usr/lib/subversion/bin"
 DESCRIPTION="A compelling replacement for CVS"
-SRC_URI="http://svn.collab.net/tarballs/${P}.tar.gz"
+SRC_URI="http://svn.collab.net/tarballs/${P}.tar.gz
+	mirror://gentoo/${BACKUP_ADMIN}.bz2"
 HOMEPAGE="http://subversion.tigris.org/"
-BACKUP_ADMIN="/usr/lib/subversion/bin/svnadmin-pre0.28"
 
 SLOT="0"
 LICENSE="Apache-1.1"
@@ -144,15 +146,10 @@ src_install () {
 	do
 		[ -f ${f} ] && dodoc ${f}
 	done
-	if has_version \<dev-util/subversion-0.28; then
-		mkdir -p ${D}`dirname ${BACKUP_ADMIN}`
-		cp -p /usr/bin/svnadmin ${D}${BACKUP_ADMIN}
-	elif [ -x ${BACKUP_ADMIN} ]; then
-		mkdir -p ${D}`dirname ${BACKUP_ADMIN}`
-		cp -p ${BACKUP_ADMIN} ${D}${BACKUP_ADMIN}
-		#touch the file to make sure it is not removed when the old
-		#subversion gets unmerged
-		touch ${D}${BACKUP_ADMIN}
+	if use berkdb; then
+		mkdir -p ${D}`dirname ${BACKUP_ADMIN_DIR}`
+		cp ${DISTDIR}/${BACKUP_ADMIN}.bz2 ${D}${BACKUP_ADMIN_DIR} ||die
+		bunzip2 ${D}${BACKUP_ADMIN_DIR}/${BACKUP_ADMIN}.bz2 ||die
 	fi
 
 	cd ${S}
