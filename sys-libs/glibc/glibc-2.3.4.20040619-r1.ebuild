@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.4 2004/08/06 10:15:15 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.5 2004/08/07 17:53:20 solar Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -463,12 +463,13 @@ do_hardened_fixes() {
 	# use build || use bootstrap || use hardened || <pax/grsec kernel>
 	sed -e 's/^LDFLAGS-rtld += $(relro.*/LDFLAGS-rtld += -Wl,-z,norelro/' -i ${S}/Makeconfig
 
-	# disables building nscd as pie
+	# disables building nscd as pie ; # Why do we have to disable it at all?
 	has_hardened || sed -e 's/^have-fpie.*/have-fpie = no/' -i ${S}/config.make.in
 
+	# People really don't like this. -solar
 	# disable completely relro usage (also for ld.so)
-	has_hardened || sed -e 's/^have-z-relro.*/have-z-relro = no/' -i ${S}/config.make.in
-	has_hardened || sed -e 's/HAVE_Z_RELRO/USE_Z_RELRO/' -i ${S}/config.h.in
+	#has_hardened || sed -e 's/^have-z-relro.*/have-z-relro = no/' -i ${S}/config.make.in
+	#has_hardened || sed -e 's/HAVE_Z_RELRO/USE_Z_RELRO/' -i ${S}/config.h.in
 
 	# Sanity check the forward and backward chunk pointers in the
 	# unlink() macro used by Doug Lea's implementation of malloc(3).
@@ -632,7 +633,7 @@ src_install() {
 	# now, strip everything but the thread libs #46186
 	mkdir ${T}/thread-backup
 	mv ${D}/lib/lib{pthread,thread_db}* ${T}/thread-backup/
-	RESTRICT="" prepallstrip
+	hasq !nostrip && RESTRICT="" prepallstrip
 	mv ${T}/thread-backup/* ${D}/lib/
 
 	# If librt.so is a symlink, change it into linker script (Redhat)

@@ -1,6 +1,6 @@
 /*
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/2.3.3/ssp.c,v 1.2 2004/07/18 04:50:12 dragonheart Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/2.3.3/ssp.c,v 1.3 2004/08/07 17:53:20 solar Exp $
  *
  * This is a modified version of Hiroaki Etoh's stack smashing routines
  * implemented for glibc.
@@ -105,12 +105,17 @@ __guard_setup (void)
 void
 __stack_smash_handler (char func[], int damaged)
 {
-  struct sockaddr_un sock;	/* AF_UNIX address of local logger */
   struct sigaction sa;
   const char message[] = ": stack smashing attack in function ";
-  int bufsz, len, log;
+  int bufsz, len;
   char buf[512];
+#ifndef __dietlibc__
+  struct sockaddr_un sock;	/* AF_UNIX address of local logger */
+  int log;
   extern char *__progname;
+#else
+  static char *__progname = "dietapp";
+#endif
 
   sigset_t mask;
   sigfillset (&mask);
@@ -139,6 +144,7 @@ __stack_smash_handler (char func[], int damaged)
   /* print error message */
   write (STDERR_FILENO, buf + 3, len - 3);
   write (STDERR_FILENO, "()\n", 3);
+#ifndef __dietlibc__
   if ((log = socket (AF_UNIX, SOCK_DGRAM, 0)) != -1)
     {
       /* Send "found" message to the "/dev/log" path */
@@ -147,7 +153,7 @@ __stack_smash_handler (char func[], int damaged)
       sock.sun_path[sizeof (sock.sun_path) - 1] = '\0';
       sendto (log, buf, len, 0, (struct sockaddr *) &sock, sizeof (sock));
     }
-
+#endif
   /* Make sure the default handler is associated with the our signal handler */
 
   memset (&sa, 0, sizeof (struct sigaction));
