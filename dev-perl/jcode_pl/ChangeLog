@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/jcode_pl
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/jcode_pl/ChangeLog,v 1.1 2003/06/30 14:14:10 yakina Exp $
+
+*jcode_pl-2.13 (30 Jun 2003)
+
+  30 Jun 2003; YAMAKURA Makoto <yakina@gentoo.org> jcode_pl-2.13.ebuild,
+  ChangeLog, files/digest-jcode_pl-2.13:
+
+  Initial import. Ebuild submitted by me.
