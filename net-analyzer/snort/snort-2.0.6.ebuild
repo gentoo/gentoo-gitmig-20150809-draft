@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.6.ebuild,v 1.7 2005/01/10 14:33:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.6.ebuild,v 1.8 2005/01/12 02:08:13 weeve Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.snort.org/dl/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc -alpha ~amd64 ~ppc"
+KEYWORDS="x86 -sparc -alpha ~amd64 ~ppc"
 IUSE="ssl postgres mysql prelude flexresp samba"
 # snort 2.0.x does not support snmp yet Bug #26310
 # IUSE="${IUSE} snmp"

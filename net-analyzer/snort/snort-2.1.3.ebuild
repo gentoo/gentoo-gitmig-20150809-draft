@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.3.ebuild,v 1.8 2005/01/10 14:33:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.3.ebuild,v 1.9 2005/01/12 02:08:13 weeve Exp $
 
 inherit eutils gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.snort.org/dl/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc -alpha ~amd64 ~ppc"
+KEYWORDS="x86 -sparc -alpha ~amd64 ~ppc"
 IUSE="ssl postgres mysql flexresp selinux snortsam"
 
 # Local useflag snortsam: patch snort for use with snortsam package.
