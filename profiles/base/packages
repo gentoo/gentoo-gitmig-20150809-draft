@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.18 2004/06/28 19:34:27 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.19 2004/09/10 14:45:59 vapier Exp $
 
 # Gentoo Base Profile
 
@@ -27,7 +27,6 @@
 *app-arch/bzip2
 *app-arch/cpio
 *app-arch/gzip
-*app-arch/sharutils
 *app-arch/tar
 *app-shells/bash
 *app-shells/sash
