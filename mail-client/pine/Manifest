@@ -5,7 +5,7 @@ MD5 7da8508df9aa431dfda960fdde44a83f pine-4.58-r1.ebuild 3448
 MD5 397d860f3f2958549a02f1b36d3b4192 pine-4.58-r3.ebuild 4344
 MD5 73f913108ba77fd176a002f3af752705 ChangeLog 9378
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 72f2be1068bd2fce03cd09b831ed0551 pine-4.60.ebuild 4687
+MD5 43c8d3a251f2ad1bf15b286bb0599d8c pine-4.60.ebuild 4685
 MD5 de52689ee75160c695bf4659ee956845 files/imap-4.7c2-flock_4.60.patch 537
 MD5 c47b08cab6132957eef9c0d61862f951 files/digest-pine-4.50-r4 131
 MD5 da5a30f5086db88f8dd801212f512e77 files/digest-pine-4.58-r1 145
