@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.55 2004/12/07 02:54:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.56 2005/01/11 14:46:31 vapier Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -8,15 +8,15 @@
 # small naming fix by kain
 # moved set_arch_to_ functions to eutils -iggy (20041002)
 
-inherit eutils
+inherit linux-info
 
 ECLASS=kernel
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 
-export CTARGET="${CTARGET:-${CHOST}}"
-if [[ ${CTARGET} = ${CHOST} ]] ; then
+export CTARGET=${CTARGET:-${CHOST}}
+if [[ ${CTARGET} == ${CHOST} ]] ; then
 	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
-		export CTARGET="${CATEGORY/cross-}"
+		export CTARGET=${CATEGORY/cross-}
 	fi
 fi
 
@@ -36,7 +36,7 @@ then
 			virtual/modutils
 			sys-devel/make )"
 	PROVIDE="virtual/linux-sources"
-elif [[ ${CTARGET} = ${CHOST} ]]
+elif [[ ${CTARGET} == ${CHOST} ]]
 then
 	if [ "${ETYPE}" = "headers" ]
 	then
