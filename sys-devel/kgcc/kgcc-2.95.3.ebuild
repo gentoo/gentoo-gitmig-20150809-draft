@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc/kgcc-2.95.3.ebuild,v 1.5 2003/10/11 21:29:59 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc/kgcc-2.95.3.ebuild,v 1.6 2004/05/12 13:06:47 pappy Exp $
 
 IUSE="static"
 
@@ -52,13 +52,12 @@ src_compile() {
 	local myconf=""
 	myconf="${myconf} --enable-languages=c --enable-shared"
 
+	filter-flags -fPIC -fstack-protector
+
 	# gcc does not like optimization
 
 	unset CFLAGS
 	unset CXXFLAGS
-
-	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	has_version "sys-devel/hardened-gcc" && CC="gcc" && export CC="${CC} -yno_propolice"
 
 	${S}/configure --prefix=${LOC} \
 		--mandir=${LOC}/share/man \
