@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.45.ebuild,v 1.4 2003/09/13 20:46:25 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.45.ebuild,v 1.5 2003/11/20 13:24:37 aliz Exp $
 
-inherit perl-module flag-o-matic
+inherit perl-module flag-o-matic gnuconfig
 
 DESCRIPTION="A system to store and display time-series data"
 SRC_URI="http://people.ee.ethz.ch/%7Eoetiker/webtools/${PN}/pub/${P}.tar.gz"
@@ -10,7 +10,7 @@ HOMEPAGE="http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE="tcltk perl"
 
 filter-mfpmath "sse"
@@ -37,6 +37,8 @@ src_compile() {
 	use tcltk \
 		&& myconf="${myconf} --with-tcllib=/usr/lib" \
 		|| myconf="${myconf} --without-tcllib"
+
+	use amd64 && gnuconfig_update
 
 	econf \
 		--datadir=/usr/share \
