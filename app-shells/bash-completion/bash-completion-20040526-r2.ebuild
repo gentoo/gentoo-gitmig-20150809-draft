@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20040526-r1.ebuild,v 1.1 2004/06/12 14:54:16 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20040526-r2.ebuild,v 1.1 2004/06/16 01:02:50 joker Exp $
 
 GENCOMP_VERS="1.0_beta"
 
@@ -29,6 +29,7 @@ src_install() {
 
 	insinto /etc/profile.d
 	doins ${FILESDIR}/bash-completion
+	fperms 755 /etc/profile.d/bash-completion
 
 	dodoc Changelog README
 
