@@ -1,4 +1,4 @@
-MD5 255b1080fbe5786a3beaa690f5f77e67 ChangeLog 942
-MD5 7987a036821146e0efe90969252eeb04 xzip-1.8.2-r2.ebuild 777
-MD5 a10d0477fa1b6c764f14caaf7644037f files/xzip-182-makefile.diff 924
 MD5 091eb8c11c7363e9b1bfdebd1f9dfb3a files/digest-xzip-1.8.2-r2 58
+MD5 a10d0477fa1b6c764f14caaf7644037f files/xzip-182-makefile.diff 924
+MD5 df1908128f156f1250c4d8e801a006c3 xzip-1.8.2-r2.ebuild 779
+MD5 6b70e8475aeec544280c190e9e32a9b9 ChangeLog 948
