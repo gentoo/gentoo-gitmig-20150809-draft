@@ -1,8 +1,15 @@
 # ChangeLog for sys-apps/diffutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.11 2003/01/18 19:33:12 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.12 2003/01/20 00:47:29 azarah Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*diffutils-2.8.4-r2 (20 Jan 2003)
+
+  20 Jan 2003; Martin Schlemmer <azarah@gentoo.org> diffutils-2.8.4-r2.ebuild :
+  Removes waitpid() call after pclose() on piped diff stream, closing
+  bug #11728, thanks to D Wollmann <converter@dalnet-perl.org>
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  Changed sparc ~sparc keywords.
  
 *diffutils-2.8.4-r1 (14 Oct 2002)
 
