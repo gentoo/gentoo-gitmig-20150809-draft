@@ -1,0 +1,22 @@
+diff -ur --new-file ezbounce-1.04a-orig/src/commands.cpp ezbounce-1.04a/src/commands.cpp
+--- ezbounce-1.04a-orig/src/commands.cpp	2003-04-26 18:15:41.000000000 -0500
++++ ezbounce-1.04a/src/commands.cpp	2003-07-01 00:59:51.000000000 -0500
+@@ -1193,7 +1193,7 @@
+     	c = i.next();
+         if (c->checkf(DETACHED))
+         {
+-            char buff[200], timebuff[15];
++            char timebuff[15];
+             if (!hShown)
+             {
+                 cprintf("Current detached sessions for user %s:\n", u->name);
+@@ -1201,8 +1201,7 @@
+                 hShown = 1;
+             }
+             duration(ircproxy_time() - c->detach_time, 0, timebuff, sizeof(timebuff));
+-            sprintf(buff,"%-3d %-20s %-20s %s\n", ++idx, c->uinfo.irc->nick, c->uinfo.server, timebuff);
+-            cprintf(buff);
++            cprintf("%-3d %-20s %-20s %s\n", ++idx, c->uinfo.irc->nick, c->uinfo.server, timebuff);
+         }
+     }
+     if (!hShown)
