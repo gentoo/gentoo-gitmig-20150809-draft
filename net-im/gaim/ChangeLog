@@ -2,6 +2,11 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # $ Header: $
 
+*gaim-0.59-r1 (27 June 2002)
+  27 June 2002; Jays Kwak <jayskwak@gentoo.org> gaim-0.59-r1.ebuild
+
+  Korean encoding patch for v0.59 added.
+
 *gaim-0.59 (26 Jun 2002)
 
   26 Jun 2002; Seemant Kulleen <seemant@gentoo.org> gaim-0.59.ebuild
