@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-4.6.ebuild,v 1.4 2004/02/15 08:04:22 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-4.6.ebuild,v 1.5 2004/04/03 23:35:30 pylon Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.python.org/emacs/python-mode/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 DEPEND="virtual/emacs"
 
