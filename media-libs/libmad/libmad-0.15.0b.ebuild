@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.0b.ebuild,v 1.1 2003/07/17 09:27:33 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.0b.ebuild,v 1.2 2003/07/17 10:27:55 raker Exp $
 
 IUSE="debug"
 
@@ -38,4 +38,8 @@ src_install() {
 	einstall || die
 
 	dodoc CHANGES COPYRIGHT CREDITS README TODO VERSION
+
+	dodir /usr/lib/pkgconfig
+	insinto /usr/lib/pkgconfig
+	doins ${FILESDIR}/mad.pc
 }
