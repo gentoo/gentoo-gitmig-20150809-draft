@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/gtoaster
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/ChangeLog,v 1.10 2003/10/18 19:20:10 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/ChangeLog,v 1.11 2003/11/29 05:08:22 brad_mssw Exp $
+
+  28 Nov 2003; Brad House <brad_mssw@gentoo.org> gtoaster-1.0_beta6.ebuild:
+  mark stable on amd64
 
   18 Oct 2003; Nick Hadaway <raker@gentoo.org> files/configure.in.diff,
   gtoaster-1.0_beta6.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.13 2003/10/18 19:20:48 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.14 2003/11/29 05:08:22 brad_mssw Exp $
 
 IUSE="nls esd gnome oss oggvorbis"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://gnometoaster.rulez.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc amd64"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2 )
@@ -56,8 +56,23 @@ src_compile() {
 	touch configure
 	touch `find . -name \*.m4`
 	touch `find . -name \*.in`
-	export WANT_AUTOCONF_2_5=1
-	export WANT_AUTOMAKE_1_4=1
+
+	if [ "${ARCH}" = "amd64" ]
+	then
+		export WANT_AUTOCONF_2_5=1
+		export WANT_AUTOMAKE_1_6=1
+
+		cd ${S}
+		libtoolize -c -f
+		aclocal
+		autoheader
+		automake -a -c
+		autoconf
+	else
+		export WANT_AUTOCONF_2_5=1
+		export WANT_AUTOMAKE_1_6=1
+
+	fi
 
 	econf ${myconf}
 
