@@ -1,16 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 252e0b2be8a1e5ac25ee88fe8e83e8b4 libsigsegv-2.2.ebuild 797
+MD5 981dd13def1ae95dcabdac19d709f96c ChangeLog 1914
 MD5 48ae2b06c34a5c88d12177082cb7e869 libsigsegv-2.1.ebuild 829
-MD5 e6e67ae175a8267b66cfc8244de84d69 ChangeLog 1811
-MD5 b79888309ed5e46670de384dfbe3562e files/digest-libsigsegv-2.2 66
+MD5 39ee6b9cae3dc2366d14eabd6c1a5e0b metadata.xml 617
+MD5 1728c35fdd41f59f30227c5cb9cedd16 libsigsegv-2.2.ebuild 806
 MD5 ab150e95621479ef341ba173f9182181 files/digest-libsigsegv-2.1 66
 MD5 dda0160f1d6fde7b52e5985e13713ffb files/libsigsegv-2.1-darwin-7.x.patch 3526
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNanKmOfEJZHYOKcRAs74AKDBhhEdULtAhBNfJk73/ozjpXcefQCg16He
-aFSYeSaElhCqFgGn750/Htk=
-=dEPZ
------END PGP SIGNATURE-----
+MD5 b79888309ed5e46670de384dfbe3562e files/digest-libsigsegv-2.2 66
