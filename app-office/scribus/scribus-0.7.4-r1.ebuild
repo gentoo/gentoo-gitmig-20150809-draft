@@ -1,18 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-0.7.4-r1.ebuild,v 1.1 2002/06/12 01:53:04 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-0.7.4-r1.ebuild,v 1.2 2002/08/01 13:09:06 seemant Exp $
 
+S=${WORKDIR}/${P}
 DESCRIPTION="Scribus is a Layout program"
 HOMEPAGE="http://web2.altmuehlnet.de/fschmid"
-LICENSE="GPL"
-
-DEPEND=">=x11-libs/qt-3.0.3 \
-	media-libs/freetype \
-	media-libs/lcms"
-RDEPEND="${DEPEND}"
 SRC_URI="http://web2.altmuehlnet.de/fschmid/${P}.tar.gz"
+
 SLOT="0"
-S=${WORKDIR}/${P}
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND="=x11-libs/qt-3*
+	media-libs/freetype
+	media-libs/lcms"
 
 src_compile() {
 	econf || die "./configure failed"

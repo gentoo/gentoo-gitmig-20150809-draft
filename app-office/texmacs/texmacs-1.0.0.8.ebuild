@@ -7,26 +7,27 @@ DESCRIPTION="GNU TeXmacs is a free GUI scientific editor, inspired by TeX and GN
 SRC_URI="ftp://ftp.texmacs.org/pub/TeXmacs/targz/TeXmacs-${PV}-src.tar.gz
 	 ftp://ftp.texmacs.org/pub/TeXmacs/targz/TeXmacs-600dpi-fonts.tar.gz"
 HOMEPAGE="http://www.texmacs.org/"
-LICENSE=GPL-2
 
-COMMONDEPEND=">=app-text/tetex-1.0.7-r7
-        >=dev-util/guile-1.3.4
-        >=x11-base/xfree-4.2.0-r5"
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
-DEPEND="$COMMONDEPEND sys-devel/gcc sys-devel/make"
+DEPEND=">=app-text/tetex-1.0.7-r7
+	>=dev-util/guile-1.3.4
+	>=x11-base/xfree-4.2.0-r5"
 
-RDEPEND="$COMMONDEPEND app-text/ghostscript"
+RDEPEND="${DEPEND}
+	app-text/ghostscript"
 
 src_install() {
 
-    cd ${S}
-    make DESTDIR=${D} install || die
-    
-    cd ${WORKDIR}
-    dodir /usr/share/texmf
-    cp -r fonts ${D}/usr/share/texmf/
-    
-    cd ${S}
-    dodoc COMPILE COPYING LICENSE
-
+	cd ${S}
+	make DESTDIR=${D} install || die
+	
+	cd ${WORKDIR}
+	dodir /usr/share/texmf
+	cp -r fonts ${D}/usr/share/texmf/
+	
+	cd ${S}
+	dodoc COMPILE COPYING LICENSE
 }

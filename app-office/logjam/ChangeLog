@@ -1,6 +1,10 @@
 # ChangeLog for app-office/logjam
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/logjam/ChangeLog,v 1.1 2002/05/24 07:16:12 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/logjam/ChangeLog,v 1.2 2002/08/01 13:09:06 seemant Exp $
+
+  01 Aug 2002; Seemant Kulleen <seemant@gentoo.org> logjam-3.0.4.ebuild :
+
+  repoman fixes, and made xmms dependency optional based on USE settings.
 
 *logjam-3.0.4 (24 May 2002)
 

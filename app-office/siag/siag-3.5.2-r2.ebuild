@@ -1,11 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/siag/siag-3.5.2-r2.ebuild,v 1.3 2002/08/01 11:58:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/siag/siag-3.5.2-r2.ebuild,v 1.4 2002/08/01 13:09:06 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A free Office package for Linux"
 SRC_URI="ftp://siag.nu/pub/siag/${P}.tar.gz"
 HOMEPAGE="http://siag.nu/"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND="virtual/x11
 	>=dev-libs/gmp-3.1.1
@@ -34,7 +38,6 @@ src_unpack() {
 		    > common/kdeinst.hacked && \
 		mv common/kdeinst.hacked common/kdeinst || die "Hacking of kdeinst failed"
 	fi
-
 }
 
 src_compile() {
@@ -43,9 +46,9 @@ src_compile() {
 #Causes segfaults in 3.5.2 on my system...
 #    if [ "`use guile`" ]
 #    then
-#      myconf="$myconf --with-guile"
+#      myconf="${myconf} --with-guile"
 #    else
-#      myconf="$myconf --without-guile"
+#      myconf="${myconf} --without-guile"
 #    fi
 	./configure --prefix=/usr \
 		    --with-x \
@@ -54,11 +57,10 @@ src_compile() {
 		    --host=${CHOST} \
 		    --with-tcl \
 		    --with-gmp \
-		    $myconf || die "Configure failed"
+		    ${myconf} || die "Configure failed"
 #		--with-t1lib \
 
 	make || die "Make failed"
-
 }
 
 src_install () {
@@ -70,5 +72,5 @@ src_install () {
 
 	make DESTDIR=${D} install || die "Install failed"
 
+	dodoc AUTHORS COPYING ChangeLog FILES NEWS NLS README
 }
-

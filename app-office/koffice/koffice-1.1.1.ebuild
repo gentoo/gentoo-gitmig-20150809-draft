@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.13 2002/08/01 11:58:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.14 2002/08/01 13:09:06 seemant Exp $
 
 inherit kde-base || die
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 	 ftp://ftp.fh-heilbronn.de/pub/mirrors/$SRC_PATH
 	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
 
-
+LICENSE="GPL-2 LGPL-2"
 KEYWORDS="x86 ppc"
 
 DEPEND="$DEPEND
@@ -30,12 +30,13 @@ src_unpack() {
 
 src_compile() {
 
-    myconf="$myconf --enable-all"
-    myconf="$myconf --with-extra-libs=/usr/lib/python2.2/config"
+    myconf="${myconf} --enable-all"
+    myconf="${myconf} --with-extra-libs=/usr/lib/python2.2/config"
     kde_src_compile myconf configure
     export LIBPYTHON="`python-config --libs`"
 
-    #the dir kchar/kdchart cannot be compiled with the -fomit-frame-pointer flag present
+    # the dir kchar/kdchart cannot be compiled with the 
+	# -fomit-frame-pointer flag present
     kde_remove_flag kchart/kdchart -fomit-frame-pointer
 	
     kde_src_compile make

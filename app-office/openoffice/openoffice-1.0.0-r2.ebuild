@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.0-r2.ebuild,v 1.1 2002/07/15 18:51:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.0-r2.ebuild,v 1.2 2002/08/01 13:09:06 seemant Exp $
 
 inherit virtualx
 
@@ -28,6 +28,10 @@ inherit virtualx
 # todo:
 # Some kind of install process.  Works mostly, but the xml registry
 # needs to be updated via a script or some program, not a tarball.
+
+SLOT="0"
+LICENSE="LGPL-2 | SISSL-1.1"
+KEYWORDS="x86"
 
 LOC="/opt"
 #MAIN_VER="`echo ${PV} |sed -e "s:[a-z]::g"`"
