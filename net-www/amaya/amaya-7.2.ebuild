@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-7.2.ebuild,v 1.4 2003/03/30 01:06:17 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-7.2.ebuild,v 1.5 2003/03/30 20:28:35 lu_zero Exp $
 
 inherit libtool
 
@@ -11,22 +11,31 @@ SRC_URI="ftp://ftp.w3.org/pub/amaya/${PN}-src-${PV}.tgz
 	 ftp://ftp.w3.org/pub/amaya/old/${PN}-src-${PV}.tgz"
 HOMEPAGE="http://www.w3.org/Amaya/"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="gtk"
 
-RDEPEND="virtual/motif"
+RDEPEND="virtual/motif
+	( gtk? =x11-libs/gtk+-1.2* )
+	( gtk? =dev-libs/glib-1.2* )"
 
 DEPEND="dev-lang/perl
 	${RDEPEND}"
 
 src_compile() {
+	local myconf=""
 	mkdir ${S}
 	cd ${S}
-
+	if [ -n "`use gtk`" ] 
+	then 
+	    myconf="${myconf} --with-gtk"
+	
+	else 
+	    myconf="${myconf} --without-gtk"
+	fi
 	../configure \
-		--without-gtk \
+		${myconf} \
 		--prefix=/usr \
 		--host=${CHOST}
 	make || die
