@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.103 2005/02/21 16:24:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.104 2005/02/24 01:17:32 dsd Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -165,9 +165,6 @@ universal_unpack() {
 	fi
 	cd ${S}
 
-	# change incorrect install path
-	sed	-ie 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' Makefile
-
 	# remove all backup files
 	find . -iname "*~" -exec rm {} \; 2> /dev/null
 
@@ -185,8 +182,15 @@ universal_unpack() {
 
 unpack_set_extraversion() {
 	cd ${S}
-	sed -ie "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" Makefile
+	sed -i -e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" Makefile
 	cd ${OLDPWD}
+}
+
+# Should be done after patches have been applied
+# Otherwise patches that modify the same area of Makefile will fail
+unpack_fix_install_path() {
+	cd ${S}
+	sed	-i -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' Makefile
 }
 
 # Compile Functions
@@ -804,6 +808,8 @@ kernel-2_src_unpack() {
 
 	[ -z "${K_NOSETEXTRAVERSION}" ] && \
 		unpack_set_extraversion
+
+	unpack_fix_install_path
 
 	kernel_is 2 4 && unpack_2_4
 }
