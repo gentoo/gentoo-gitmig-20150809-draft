@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.30 2004/04/19 03:46:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.31 2004/04/19 06:16:54 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -1066,10 +1066,13 @@ pkg_preinst() {
 
 	# clean out old fonts.* and encodings.dir files, as we
 	# will regenerate them
-	find ${ROOT}/usr/share/fonts/ -type f -name 'fonts.*' \
-		-exec rm -f {} \;
-	find ${ROOT}/usr/share/fonts/ -type f -name 'encodings.dir' \
-		-exec rm -f {} \;
+	for G_FONTDIR in ${G_FONTDIRS}
+	do
+		find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'fonts.*' \
+			-exec rm -f {} \;
+		find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'encodings.dir' \
+			-exec rm -f {} \;
+	done
 
 	# make sure we do not have any stale files lying around
 	# that could break things.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.10 2004/04/19 03:05:56 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r5.ebuild,v 1.11 2004/04/19 06:14:07 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -994,10 +994,13 @@ pkg_preinst() {
 
 	# clean out old fonts.* and encodings.dir files, as we
 	# will regenerate them
-	find ${ROOT}/usr/X11R6/lib/X11/fonts/ -type f -name 'fonts.*' \
-		-exec rm -f {} \;
-	find ${ROOT}/usr/X11R6/lib/X11/fonts/ -type f -name 'encodings.dir' \
-		-exec rm -f {} \;
+	for G_FONTDIR in ${G_FONTDIRS}
+	do
+		find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'fonts.*' \
+			-exec rm -f {} \;
+		find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'encodings.dir' \
+			-exec rm -f {} \;
+	done
 
 	# make sure we do not have any stale files lying round
 	# that could break things.

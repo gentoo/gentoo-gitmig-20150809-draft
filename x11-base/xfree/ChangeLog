@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.324 2004/04/19 04:58:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.325 2004/04/19 06:14:07 spyderous Exp $
+
+  19 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r5.ebuild,
+  xfree-4.3.0-r6.ebuild:
+  Don't remove fonts.* or encodings.dir in dirs not provided by this package
+  (#30698).
 
   19 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
   Add more backwards compatibility things -- symlinks for all former font, doc
