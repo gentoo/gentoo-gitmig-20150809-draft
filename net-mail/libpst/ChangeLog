@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/libpst
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.2 2004/06/24 23:23:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.3 2004/12/04 10:59:48 ka0ttic Exp $
+
+*libpst-0.4.1 (04 Dec 2004)
+
+  04 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> metadata.xml,
+  +files/libpst-0.4.1-gentoo.diff, +libpst-0.4.1.ebuild:
+  Version bump which closes bug 73302; updated metadata.xml to reflect
+  forensics herd.
 
 *libpst-0.3.4 (05 Mar 2004)
 

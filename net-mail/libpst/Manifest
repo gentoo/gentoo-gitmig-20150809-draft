@@ -1,4 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 22a0a82e09a01f50649654e7917d1dc9 libpst-0.4.1.ebuild 844
 MD5 57f77bb0c1a6899ea8e2e15f57dbd0e7 libpst-0.3.4.ebuild 827
-MD5 1d2697c3ff7326adde1fe45f9a25d4ed ChangeLog 342
-MD5 6b6c7b74595f5a5ddf5556b82253d873 metadata.xml 290
+MD5 62995b9cb99757066dcd131c242d9139 ChangeLog 580
+MD5 768a13691288420664ddb9cb57d80098 metadata.xml 163
+MD5 f260c24ce039763570ebfdb471a95da0 files/libpst-0.4.1-gentoo.diff 2866
 MD5 d621aa03d78f16aafbe1997329cdab1c files/digest-libpst-0.3.4 60
+MD5 2963ca6f8a38b54cd58daa16910ecdcd files/digest-libpst-0.4.1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBsZjIEZCkKN40op4RAvgQAKCJfr9VofVToyf9Tra0rCcs/BhdgwCZAZXC
++WIqe5WrtveyUz3eNKR+kSk=
+=s14Y
+-----END PGP SIGNATURE-----

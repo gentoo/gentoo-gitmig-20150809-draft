@@ -1,0 +1,68 @@
+Files libpst_0.4.1.orig/debug.o and libpst_0.4.1/debug.o differ
+Files libpst_0.4.1.orig/getidblock and libpst_0.4.1/getidblock differ
+Files libpst_0.4.1.orig/libpst.o and libpst_0.4.1/libpst.o differ
+Files libpst_0.4.1.orig/libstrfunc.o and libpst_0.4.1/libstrfunc.o differ
+diff -urN libpst_0.4.1.orig/Makefile libpst_0.4.1/Makefile
+--- libpst_0.4.1.orig/Makefile	2004-12-04 04:39:40.815705272 -0500
++++ libpst_0.4.1/Makefile	2004-12-04 04:45:40.340049264 -0500
+@@ -1,27 +1,41 @@
++CC = gcc
++INSTALL = install
++MYFLAGS = -Wall
++PREFIX = /usr
++BINDIR = $(PREFIX)/bin
++INCLUDEDIR = $(PREFIX)/inclue
++LIBDIR = $(PREFIX)/lib
++
+ all: readpst getidblock
+ 
+ libpst.o: libpst.c libpst.h define.h
+-	gcc -c -Wall -Werror libpst.c -g -o libpst.o
++	$(CC) -c libpst.c $(MYFLAGS) $(CFLAGS) -o libpst.o
+ 
+ libstrfunc.o: libstrfunc.c libstrfunc.h
+-	gcc -c -Wall -Werror libstrfunc.c -g -o libstrfunc.o
++	$(CC) -c libstrfunc.c $(MYFLAGS) $(CFLAGS) -o libstrfunc.o
+ 
+ debug.o: debug.c
+-	gcc -c debug.c -Wall -Werror -g -o debug.o
++	$(CC) -c debug.c $(MYFLAGS) $(CFLAGS) -o debug.o
+ 
+ readpst: readpst.c define.h libpst.o timeconv.o libstrfunc.o common.h debug.o
+ #	ccmalloc gcc -Wall -Werror readpst.c -g -o readpst libpst.o timeconv.o libstrfunc.o debug.o
+ #	gcc -Wall -Werror readpst.c -g -o readpst libpst.o timeconv.o libstrfunc.o -lefence
+-	gcc -Wall -Werror readpst.c -g -o readpst libpst.o timeconv.o libstrfunc.o debug.o
++	$(CC) $(MYFLAGS) $(CFLAGS) readpst.c -o readpst libpst.o timeconv.o libstrfunc.o debug.o $(LDFLAGS)
+ 
+ timeconv.o: timeconv.c timeconv.h common.h
+-	gcc -c -Wall -Werror timeconv.c -g -o timeconv.o
++	$(CC) -c timeconv.c $(MYFLAGS) $(CFLAGS) -o timeconv.o
+ 
+ getidblock: getidblock.c define.h libpst.o common.h debug.o
+-	gcc -Wall -Werror getidblock.c -g -o getidblock libpst.o debug.o timeconv.o
++	$(CC) $(MYFLAGS) $(CFLAGS) getidblock.c -o getidblock libpst.o debug.o timeconv.o $(LDFLAGS)
+ 
+ clean: 
+ 	rm -f core readpst libpst.o timeconv.o libstrfunc.o debug.o getidblock *~ 
+ 
+ rebuild: clean all
+ 
++install:
++	$(INSTALL) -d $(DESTDIR)/$(BINDIR) $(DESTDIR)/$(INCLUDEDIR) \
++		$(DESTDIR)/$(LIBDIR)
++	$(INSTALL) readpst getidblock $(DESTDIR)/$(BINDIR)
++	$(INSTALL) -m0644 libpst.h $(DESTDIR)/$(INCLUDEDIR)
++	$(INSTALL) -m0644 libpst.o $(DESTDIR)/$(LIBDIR)
+Files libpst_0.4.1.orig/readpst and libpst_0.4.1/readpst differ
+diff -urN libpst_0.4.1.orig/readpst.c libpst_0.4.1/readpst.c
+--- libpst_0.4.1.orig/readpst.c	2004-12-04 04:39:41.086664080 -0500
++++ libpst_0.4.1/readpst.c	2004-12-04 04:39:40.755714392 -0500
+@@ -718,6 +718,7 @@
+   //return that value
+   char *dir, *out_name, *index;
+   int x;
++  dir = out_name = index = NULL;
+   if (kmail_chdir != NULL && chdir(kmail_chdir)) {
+     x = errno;
+     DIE(("mk_kmail_dir: Cannot change to directory %s: %s\n", dir, strerror(x)));
+Files libpst_0.4.1.orig/timeconv.o and libpst_0.4.1/timeconv.o differ
