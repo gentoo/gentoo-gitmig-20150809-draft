@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/kstreamripper
+# Copyright 2004-2004 Gentoo Technologies, Inc.; Distributed under the GPL
+
+*kstreamripper-0.2 (16 Sep 2004)
+
+  16 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +kstreamripper-0.2.ebuild:
+  Ebuild submitted by Elias Probst <elias.probst@gmx.de> with fixes by Christian
+  Parpart <cparpart@surakware.net>.
