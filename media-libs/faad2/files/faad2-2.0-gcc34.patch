@@ -1,48 +1,10 @@
---- common/mp4v2/mp4property.h.old	2003-06-29 22:41:00.000000000 +0100
-+++ common/mp4v2/mp4property.h	2004-04-23 18:33:37.751587448 +0100
-@@ -58,7 +58,7 @@
- 		return m_name;
- 	}
+--- faad2/common/mp4v2/mp4property.h	2004-04-14 20:53:58.582017392 -0400
++++ faad2/common/mp4v2/mp4property_.h	2004-04-14 20:51:21.955828192 -0400
+@@ -21,6 +21,7 @@
  
--	virtual MP4PropertyType GetType() = NULL; 
-+	virtual MP4PropertyType GetType(const char *name = NULL);
+ #ifndef __MP4_PROPERTY_INCLUDED__
+ #define __MP4_PROPERTY_INCLUDED__
++#define NULL 0
  
- 	bool IsReadOnly() {
- 		return m_readOnly;
-@@ -74,17 +74,18 @@
- 		m_implicit = value;
- 	}
- 
--	virtual u_int32_t GetCount() = NULL;
--	virtual void SetCount(u_int32_t count) = NULL;
-+	virtual u_int32_t GetCount(const char *name = NULL);
-+
-+	virtual void SetCount(u_int32_t count, const char *name = NULL);
- 
- 	virtual void Generate() { /* default is a no-op */ };
- 
--	virtual void Read(MP4File* pFile, u_int32_t index = 0) = NULL;
-+	virtual void Read(MP4File* pFile, u_int32_t index = 0, const char *name = NULL);
- 
--	virtual void Write(MP4File* pFile, u_int32_t index = 0) = NULL;
-+	virtual void Write(MP4File* pFile, u_int32_t index = 0, const char *name = NULL);
- 
- 	virtual void Dump(FILE* pFile, u_int8_t indent,
--		bool dumpImplicits, u_int32_t index = 0) = NULL;
-+		bool dumpImplicits, u_int32_t index = 0, const char *name = NULL);
- 
- 	virtual bool FindProperty(const char* name,
- 		MP4Property** ppProperty, u_int32_t* pIndex = NULL);
---- common/mp4v2/rtphint.h.old	2003-06-29 22:41:00.000000000 +0100
-+++ common/mp4v2/rtphint.h	2004-04-23 18:33:37.751587448 +0100
-@@ -35,8 +35,8 @@
- 		return m_pPacket;
- 	}
- 
--	virtual u_int16_t GetDataSize() = NULL;
--	virtual void GetData(u_int8_t* pDest) = NULL;
-+	virtual u_int16_t GetDataSize(const char *name = NULL);
-+	virtual void GetData(u_int8_t* pDest, const char *name = NULL);
- 
- 	MP4Track* FindTrackFromRefIndex(u_int8_t refIndex);
- 
+ // forward declarations
+ class MP4Atom;
