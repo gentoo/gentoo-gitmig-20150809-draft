@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040817.ebuild,v 1.3 2004/10/07 02:06:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040817.ebuild,v 1.4 2004/11/01 18:21:58 corsair Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 IUSE="alsa arts esd sdl debug oggvorbis mpeg"
 DESCRIPTION="OpenAL, the Open Audio Library, is an open, vendor-neutral, cross-platform API for interactive, primarily spatialized audio"
@@ -11,7 +11,7 @@ HOMEPAGE="http://opensource.creative.com/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc amd64"
+KEYWORDS="x86 sparc ~ppc amd64 ~ppc64"
 
 DEPEND="x86? ( dev-lang/nasm )
 	alsa? ( >=media-libs/alsa-lib-1.0.2 )
@@ -22,6 +22,9 @@ DEPEND="x86? ( dev-lang/nasm )
 	mpeg? ( media-libs/smpeg )"
 
 src_compile() {
+	# Next line needs to be done, to allow compilation on ppc64
+	gnuconfig_update
+
 	local myconf
 
 	use esd && myconf="${myconf} --enable-esd"
