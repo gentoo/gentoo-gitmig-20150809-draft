@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-5.0-r1.ebuild,v 1.3 2002/02/03 21:00:18 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-5.0-r2.ebuild,v 1.1 2002/02/03 21:00:18 danarmak Exp $
 
 P=opera-5.0-dynamic.i386
 A=${P}.tar.gz
@@ -10,7 +10,7 @@ DESCRIPTION="Opera webbrowser"
 SRC_URI="ftp://ftp.opera.com/pub/opera/linux/500/opera-5.0-dynamic.i386.tar.gz"
 HOMEPAGE="http://www.opera.com"
 
-DEPEND=">=x11-libs/qt-2.3.0"
+DEPEND="=x11-libs/qt-2*"
 
 src_install() {
 
