@@ -123,3 +123,5 @@ slotmove =kde-base/qtruby-3.3* 3.3 0
 slotmove =kde-base/qtruby-3.4* 3.4 0
 slotmove =kde-base/korundum-3.3* 3.3 0
 slotmove =kde-base/korundum-3.4* 3.4 0
+slotmove =media-libs/libmusepack-1.1 1.1 0
+slotmove =media-libs/flac-1.2 1.2 0
