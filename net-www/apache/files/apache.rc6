@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/apache.rc6,v 1.11 2003/02/25 21:56:56 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/apache.rc6,v 1.12 2003/07/11 04:29:55 woodchip Exp $
 
 opts="${opts} reload"
 
@@ -19,7 +19,7 @@ start() {
 
 stop() {
 	ebegin "Stopping apache"
-	/usr/sbin/apachectl stop &>/dev/null
+	/usr/sbin/apachectl stop >/dev/null
 	start-stop-daemon -o --quiet --stop --pidfile /var/run/apache.pid
 	eend $?
 }
