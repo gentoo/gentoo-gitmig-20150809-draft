@@ -1,7 +1,12 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.4 2002/08/08 03:23:31 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.5 2002/08/19 00:01:11 spider Exp $
 
+*gnucash-1.6.7 (19 Aug 2002)
+  19 Aug 2002; Spider <spider@gentoo.org> gnucash-1.6.7.ebuild :
+  filter out -fomit-frame-pointer as it fails to build with this
+  update to last version
+  
 *gnucash-1.6.6-r1 (07 Aug 2002)
 
   07 Aug 2002; L. Boshell <leonardop@gentoo.org> gnucash-1.6.6-r1.ebuild:
