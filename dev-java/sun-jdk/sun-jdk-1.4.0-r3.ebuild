@@ -2,10 +2,10 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Daniel Mettler <mettlerd@icu.unizh.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.0-r3.ebuild,v 1.1 2002/06/16 00:24:09 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.0-r3.ebuild,v 1.2 2002/06/16 18:59:35 prez Exp $
 
 At="j2sdk-1_4_0_01-linux-i586.bin"
-S=${WORKDIR}/j2sdk1.4.0
+S=${WORKDIR}/j2sdk1.4.0_01
 SRC_URI=""
 DESCRIPTION="Sun's J2SE Development Kit, version 1.4.0"
 HOMEPAGE="http://java.sun.com/j2se/1.4/download.html"
