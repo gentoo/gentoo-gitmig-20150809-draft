@@ -22,8 +22,10 @@
 ##
 
 # <lordvan@gentoo.org> (14 Dec 2002)
-# changed Version scheme from 305 to 4.0.0
->=net-misc/omniORB-304
+# ##changed Version scheme from 305 to 4.0.0
+# seems to have bug with gcc 3.x at least!
+=net-misc/omniORB-4.0.0
+=dev-python/omniORBpy
 
 # <mkennedy@gentoo.org> (14 Dec 2002)
 # needs to be assimilated with app-emacs/psgml
@@ -446,7 +448,7 @@ x11-terms/powershell
 
 # <spider@gentoo.org> (08 Sep 2002)
 # new ebuild. cvs checkout of galeon <head> (galeon2)
-net-www/galeon-cvs
+#net-www/galeon-cvs
 
 
 # <azarah@gentoo.org> (08 Sep 2002)
