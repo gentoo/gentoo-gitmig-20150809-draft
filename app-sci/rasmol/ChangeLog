@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/rasmol
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/ChangeLog,v 1.13 2004/07/26 15:08:16 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/ChangeLog,v 1.14 2004/07/27 08:11:56 spyderous Exp $
+
+  27 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  rasmol-2.7.2.1.1.ebuild:
+  x86. Considered "production release" upstream now.
 
   26 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> rasmol-2.7.2.1.1.ebuild:
   Marked ~amd64.
