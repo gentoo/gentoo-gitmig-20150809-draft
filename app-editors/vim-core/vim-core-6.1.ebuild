@@ -1,6 +1,6 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/vim-core-6.1.ebuild,v 1.7 2002/12/15 10:44:10 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/vim-core-6.1.ebuild,v 1.8 2003/02/13 07:01:17 vapier Exp $
 
 IUSE="python gpm nls ruby perl"
 

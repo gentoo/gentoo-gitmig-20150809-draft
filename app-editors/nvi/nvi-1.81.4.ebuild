@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.4.ebuild,v 1.11 2003/01/06 10:41:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.4.ebuild,v 1.12 2003/02/13 06:58:07 vapier Exp $
 
 DESCRIPTION="Vi clone"
 SRC_URI="http://www.kotnet.org/~skimo/nvi/devel/${P}.tar.gz"

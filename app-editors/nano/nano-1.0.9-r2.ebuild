@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.9-r2.ebuild,v 1.6 2003/02/11 22:57:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.9-r2.ebuild,v 1.7 2003/02/13 06:57:38 vapier Exp $
 
 DESCRIPTION="clone of Pico with more functions in a smaller size"
 SRC_URI="http://www.nano-editor.org/dist/v1.0/${P}.tar.gz"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-3.1.ebuild,v 1.2 2003/01/27 22:14:44 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-3.1.ebuild,v 1.3 2003/02/13 06:58:41 vapier Exp $
 inherit kde-base
 
 need-kde 3.1
