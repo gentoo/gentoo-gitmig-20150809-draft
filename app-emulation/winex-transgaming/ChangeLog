@@ -1,12 +1,18 @@
 # ChangeLog for app-emulation/winex-transgaming
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-transgaming/ChangeLog,v 1.7 2003/09/09 07:12:55 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-transgaming/ChangeLog,v 1.8 2003/11/19 20:52:26 vapier Exp $
+
+*winex-transgaming-3.2 (19 Nov 2003)
+
+  19 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  New release #33799.
+
+*winex-transgaming-3.1 (18 Jun 2003)
 
   09 Sep 2003; Sergey Kuleshov <svyatogor@gentoo.org>
   winex-transgaming-3.1.ebuild:
   Bumping 3.1 to stable.
 
-*winex-transgaming-3.1 (18 Jun 2003)
   18 Jun 2003; Thomas Raschbacher <lordvan@gentoo.org> winex-transgaming-3.1.ebuild:
   new version
 	
