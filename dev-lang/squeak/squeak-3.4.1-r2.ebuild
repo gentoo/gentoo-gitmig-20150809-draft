@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1-r2.ebuild,v 1.1 2003/12/03 16:55:39 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1-r2.ebuild,v 1.2 2004/01/04 07:10:42 jhhudso Exp $
 
 inherit libtool flag-o-matic eutils
 strip-flags
@@ -43,7 +43,16 @@ src_compile() {
 	use oss && myconf="${myconf} --with-audio=oss"
 	use mmx && myconf="${myconf} --enable-mpg-mmx"
 
+	# fix tail problems
+	cd ${S}/platforms/unix/config
+	mv mkconfig.in mkconfig.in.$$
+	cat mkconfig.in.$$|sed 's/tail -1/tail -n 1/g' > mkconfig.in
+	mv verstamp verstamp.$$
+	cat verstamp.$$|sed 's/tail -1/tail -n 1/g' > verstamp
+	chmod +x verstamp
+
 	cd ${S}
+
 	mkdir build
 	cd build
 	../platforms/unix/config/configure \

@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/squeak
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/ChangeLog,v 1.6 2003/12/03 16:55:39 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/ChangeLog,v 1.7 2004/01/04 07:10:42 jhhudso Exp $
 
 *squeak-3.4.1-r2 (03 Dec 2003)
 
@@ -8,6 +8,10 @@
   list of gcc flags being filtered. Credit goes to dhx <xyx@gmx.at> via bug
   #20498 for telling us.
 
+  04 Jan 2004; Jared Hudson <jhhudso@gentoo.org> : Fixed ebuild so Makefile's
+  use of tail -1 became tail -n 1. Credit goes to Zachary P. Landau 
+  <kapheine@hypa.net> under bug #35698
+	
 *squeak-3.4.1-r1 (11 Oct 2003)
 
   30 Oct 2003; Joshua Kinard <kumba@gentoo.org> squeak-3.4.1-r1.ebuild,
