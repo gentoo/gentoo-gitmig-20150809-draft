@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.50-r4.ebuild,v 1.7 2004/08/09 12:39:59 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.50-r4.ebuild,v 1.8 2004/08/14 21:02:29 langthang Exp $
 
 inherit eutils
 
@@ -25,13 +25,12 @@ S=${WORKDIR}/${PN}${PV}
 
 src_unpack() {
 	unpack ${A}
-	unpack pine-4.50-maildir.patch.gz
 	cd ${S}
 
 	if use mbox ; then
 		epatch ${FILESDIR}/imap-4.7c2-flock.patch
 	else
-		epatch ${FILESDIR}/pine-4.50-maildir.patch
+		epatch ${WORKDIR}/pine-4.50-maildir.patch
 		epatch ${FILESDIR}/imap-4.7c2-flock+maildir.patch
 	fi
 

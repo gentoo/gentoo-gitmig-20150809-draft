@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.58-r3.ebuild,v 1.8 2004/08/09 12:39:59 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.58-r3.ebuild,v 1.9 2004/08/14 21:02:29 langthang Exp $
 
 inherit eutils
 
