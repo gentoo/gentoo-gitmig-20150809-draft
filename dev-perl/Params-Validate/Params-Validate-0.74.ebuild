@@ -12,7 +12,7 @@ HOMEPAGE="http://www.perl.com/CPAN/modules/by-authors/id/D/DR/DROLSKY/"
 SRC_TEST="do"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ~amd64 ~ppc alpha ~sparc"
 
 DEPEND="${DEPEND}
 	dev-perl/Attribute-Handlers"
