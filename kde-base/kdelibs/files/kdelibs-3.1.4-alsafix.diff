@@ -1,0 +1,13 @@
+--- kdelibs/libkmid/configure.in.in	2002/06/09 18:33:06	1.8
++++ kdelibs/libkmid/configure.in.in	2003/11/20 00:17:44	1.8.2.1
+@@ -71,8 +71,8 @@ AC_DEFUN([AC_CHECK_LIBASOUND],
+       #include <alsa/asoundlib.h>
+       #endif
+     ],[
+-      #if (SND_LIB_MAJOR == 0) && (SND_LIB_MINOR == 9)
+-        /* we have ALSA 0.9.x */
++      #if ((SND_LIB_MAJOR == 0) && (SND_LIB_MINOR == 9)) || (SND_LIB_MAJOR == 1)
++        /* we have ALSA 0.9.x or 1.x */
+       #else
+         #error not ALSA 0.9.x
+       #endif

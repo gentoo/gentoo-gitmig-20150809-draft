@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.4.ebuild,v 1.14 2004/01/03 13:51:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.4.ebuild,v 1.15 2004/01/03 14:03:22 caleb Exp $
 inherit kde
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -17,7 +17,7 @@ DEPEND=">=app-arch/bzip2-1.0.1
 	>=dev-libs/libpcre-3.5
 	>=dev-libs/libxml2-2.4.10
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	alsa? ( <=media-libs/alsa-lib-0.9.8 virtual/alsa )
+	alsa? ( media-libs/alsa-lib virtual/alsa )
 	cups? ( >=net-print/cups-1.1.14 )
 	>=media-libs/tiff-3.5.5
 	app-admin/fam
@@ -47,6 +47,7 @@ set-kdedir $PV
 
 src_unpack() {
 	kde_src_unpack
+	epatch ${FILESDIR}/${P}-alsafix.diff
 	kde_sandbox_patch ${S}/kio/misc/kpac
 	use alpha && cd ${S} && epatch ${FILESDIR}/${P}-kjs-alphaev6-gcc3-workaround.patch
 }
