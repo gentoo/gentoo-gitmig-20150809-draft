@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/datavision
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision-bin/ChangeLog,v 1.1 2004/07/30 19:31:35 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision-bin/ChangeLog,v 1.2 2004/08/21 11:14:15 axxo Exp $
+
+*datavision-bin-0.8.1-r1 (21 Aug 2004)
+
+  21 Aug 2004; Thomas Matthijs <axxo@gentoo.org>
+  +datavision-bin-0.8.1-r1.ebuild:
+  fix  60500
 
   30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml:
   move dev-java/datavision dev-java/datavision-bin
