@@ -1,10 +1,15 @@
 # ChangeLog for dev-lang/prc-tools
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/ChangeLog,v 1.2 2003/09/06 03:54:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/ChangeLog,v 1.3 2003/10/29 17:38:35 plasmaroo Exp $
+
+*prc-tools-2.3 (29 Oct 2003)
+
+  29 Oct 2003; <plasmaroo@gentoo.org> prc-tools-2.3.ebuild,
+  files/prc-tools-2.3-compilefix.patch:
+  Version bump.
 
 *prc-tools-2.2 (31 Aug 2003)
 
   31 Aug 2003; <plasmaroo@gentoo.org> prc-tools-2.2.ebuild,
   files/prc-tools-2.2-compilefix.patch:
-  Initial Import
-
+  Initial Import.
