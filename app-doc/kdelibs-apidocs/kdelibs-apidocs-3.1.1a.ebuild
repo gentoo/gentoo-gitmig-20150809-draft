@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/kdelibs-apidocs-3.1.1a.ebuild,v 1.1 2003/04/08 18:02:56 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/kdelibs-apidocs-3.1.1a.ebuild,v 1.2 2003/04/10 15:26:18 hannes Exp $
 
 PN=kdelibs P=$PN-$PV inherit kde kde.org 
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 DEPEND="app-doc/doxygen app-doc/qt-docs"
 RDEPEND=""
 
-PATCHES1="$PATCHES1 ${WORKDIR}/kdelibs-3.1.1a.diff"
+PATCHES1="${WORKDIR}/kdelibs-3.1.1a.diff"
 S=${WORKDIR}/kdelibs-3.1.1
 
 # get locations without messing with deps
