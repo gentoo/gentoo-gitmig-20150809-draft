@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.22 2005/02/04 12:36:40 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.23 2005/02/18 11:15:21 hattya Exp $
+
+*qdbm-1.8.21 (18 Feb 2005)
+
+  18 Feb 2005; Akinori Hattori <hattya@gentoo.org> +qdbm-1.8.21.ebuild:
+  new upstream release.
 
   04 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org> qdbm-1.8.17.ebuild:
   Fixed multilib issues in src_install().
