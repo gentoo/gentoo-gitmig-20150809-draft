@@ -16,4 +16,4 @@ FSCKFIX=no				# Set FSCKFIX to "yes" if you want to add "-y" to the fsck at star
 ARCH=`uname -m`				# Architecture
 NFSSERVER=no				# Set to yes if you want to run an nfsserver
 YP_DOMAIN=""				# Enter your NIS domainname here
-
+DISPLAYMANAGER=""			# Enter your display manager here (xdm,kdm,gdm)
