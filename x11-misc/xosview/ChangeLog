@@ -1,8 +1,11 @@
 # ChangeLog for x11-misc/xosview
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.3 2003/11/21 06:38:52 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.4 2004/03/05 18:23:20 ciaranm Exp $
 
 xosview-1.8.0 (28 Aug 2003)
+
+  05 Mar 2004; Ciaran McCreesh <ciaranm@gentoo.org> xosview-1.8.1.ebuild:
+  Added sparc, thanks to auka in #gentoo-sparc
 
 *xosview-1.8.1 (21 Nov 2003)
 
