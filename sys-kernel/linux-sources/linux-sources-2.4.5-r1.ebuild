@@ -38,7 +38,7 @@ XMLV=0.3
 # Versions of pcmcia-cs
 PCV="3.1.25"
 
-k# Version of XFS
+# Version of XFS
 XFSV=20010530-gentoo
 
 [ "${PN}" = "linux" ] && DESCRIPTION="Linux kernel version ${KV}, including modules, binary tools, libraries and includes"
