@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/formkit
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/formkit/ChangeLog,v 1.1 2004/10/23 12:16:02 satya Exp $
+
+*formkit-0.6.1 (23 Oct 2004)
+
+  23 Oct 2004; Christian Andreetta <satya@gentoo.org> +metadata.xml,
+  +files/0.6.1/setup.py, +formkit-0.6.1.ebuild:
+  initial ebuild
+

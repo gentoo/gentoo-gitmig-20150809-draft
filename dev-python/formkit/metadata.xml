@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+	<email>satya@gentoo.org</email>
+	<name>Christian Andreetta</name>
+</maintainer>
+<longdescription>
+FormKit is a python library to handle server-side www forms. Written for Webware WebKit, it can be used stand-alone as well.
+</longdescription>
+</pkgmetadata>
