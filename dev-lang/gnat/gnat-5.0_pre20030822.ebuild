@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-5.0_pre20030822.ebuild,v 1.1 2003/08/27 15:03:26 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-5.0_pre20030822.ebuild,v 1.2 2003/10/06 00:00:45 dholm Exp $
+
+inherit gnat
 
 DESCRIPTION="GNAT Ada Compiler"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
@@ -19,8 +21,6 @@ GNATBUILD="${WORKDIR}/build"
 GNATDIR="${WORKDIR}/${P}"
 GNATBOOT="${WORKDIR}/boot"
 GNATBOOTINST="${WORKDIR}/gnat-3.15p-i686-pc-linux-gnu-bin"
-
-inherit gnat
 
 src_unpack() {
 	unpack ${A}
