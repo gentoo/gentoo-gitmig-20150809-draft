@@ -1,0 +1,168 @@
+diff -Naur dosfstools-2.10-orig/Makefile dosfstools-2.10/Makefile
+--- dosfstools-2.10-orig/Makefile	2003-05-15 19:00:27.000000000 +0000
++++ dosfstools-2.10/Makefile	2004-06-28 05:00:45.000000000 +0000
+@@ -7,7 +7,7 @@
+ OPTFLAGS = -O2 -fomit-frame-pointer
+ WARNFLAGS = -Wall
+ DEBUGFLAGS = 
+-CFLAGS = $(OPTFLAGS) $(WARNFLAGS) $(DEBUGFLAGS)
++CFLAGS = -D_GNU_SOURCE $(OPTFLAGS) $(WARNFLAGS) $(DEBUGFLAGS)
+ LDFLAGS =
+ 
+ PREFIX = 
+diff -Naur dosfstools-2.10-orig/dosfsck/io.c dosfstools-2.10/dosfsck/io.c
+--- dosfstools-2.10-orig/dosfsck/io.c	2003-06-14 20:03:20.000000000 +0000
++++ dosfstools-2.10/dosfsck/io.c	2004-06-28 04:59:45.000000000 +0000
+@@ -39,32 +39,6 @@
+ 
+ unsigned device_no;
+ 
+-/* Use the _llseek system call directly, because there (once?) was a bug in
+- * the glibc implementation of it. */
+-#include <linux/unistd.h>
+-#if defined __alpha || defined __ia64__ || defined __s390x__ || defined __x86_64__ || defined __ppc64__
+-/* On alpha, the syscall is simply lseek, because it's a 64 bit system. */
+-static loff_t llseek( int fd, loff_t offset, int whence )
+-{
+-    return lseek(fd, offset, whence);
+-}
+-#else
+-# ifndef __NR__llseek
+-# error _llseek system call not present
+-# endif
+-static _syscall5( int, _llseek, uint, fd, ulong, hi, ulong, lo,
+-		  loff_t *, res, uint, wh );
+-
+-static loff_t llseek( int fd, loff_t offset, int whence )
+-{
+-    loff_t actual;
+-
+-    if (_llseek(fd, offset>>32, offset&0xffffffff, &actual, whence) != 0)
+-	return (loff_t)-1;
+-    return actual;
+-}
+-#endif
+-
+ 
+ void fs_open(char *path,int rw)
+ {
+@@ -86,7 +60,7 @@
+     CHANGE *walk;
+     int got;
+ 
+-    if (llseek(fd,pos,0) != pos) pdie("Seek to %lld",pos);
++    if (lseek64(fd,pos,0) != pos) pdie("Seek to %lld",pos);
+     if ((got = read(fd,data,size)) < 0) pdie("Read %d bytes at %lld",size,pos);
+     if (got != size) die("Got %d bytes instead of %d at %lld",got,size,pos);
+     for (walk = changes; walk; walk = walk->next) {
+@@ -106,7 +80,7 @@
+     void *scratch;
+     int okay;
+ 
+-    if (llseek(fd,pos,0) != pos) pdie("Seek to %lld",pos);
++    if (lseek64(fd,pos,0) != pos) pdie("Seek to %lld",pos);
+     scratch = alloc(size);
+     okay = read(fd,scratch,size) == size;
+     free(scratch);
+@@ -121,7 +95,7 @@
+ 
+     if (write_immed) {
+ 	did_change = 1;
+-	if (llseek(fd,pos,0) != pos) pdie("Seek to %lld",pos);
++	if (lseek64(fd,pos,0) != pos) pdie("Seek to %lld",pos);
+ 	if ((did = write(fd,data,size)) == size) return;
+ 	if (did < 0) pdie("Write %d bytes at %lld",size,pos);
+ 	die("Wrote %d bytes instead of %d at %lld",did,size,pos);
+@@ -144,7 +118,7 @@
+     while (changes) {
+ 	this = changes;
+ 	changes = changes->next;
+-	if (llseek(fd,this->pos,0) != this->pos)
++	if (lseek64(fd,this->pos,0) != this->pos)
+ 	    fprintf(stderr,"Seek to %lld failed: %s\n  Did not write %d bytes.\n",
+ 	      this->pos,strerror(errno),this->size);
+ 	else if ((size = write(fd,this->data,this->size)) < 0)
+diff -Naur dosfstools-2.10-orig/mkdosfs/mkdosfs.c dosfstools-2.10/mkdosfs/mkdosfs.c
+--- dosfstools-2.10-orig/mkdosfs/mkdosfs.c	2003-06-14 20:07:08.000000000 +0000
++++ dosfstools-2.10/mkdosfs/mkdosfs.c	2004-06-28 05:00:16.000000000 +0000
+@@ -93,30 +93,6 @@
+ 
+ #endif /* __BIG_ENDIAN */
+ 
+-/* Use the _llseek system call directly, because there (once?) was a bug in
+- * the glibc implementation of it. */
+-#include <linux/unistd.h>
+-#if defined __alpha || defined __ia64__ || defined __s390x__ || defined __x86_64__ || defined __ppc64__
+-/* On alpha, the syscall is simply lseek, because it's a 64 bit system. */
+-static loff_t llseek( int fd, loff_t offset, int whence )
+-{
+-    return lseek(fd, offset, whence);
+-}
+-#else
+-# ifndef __NR__llseek
+-# error _llseek system call not present
+-# endif
+-static _syscall5( int, _llseek, uint, fd, ulong, hi, ulong, lo,
+-		  loff_t *, res, uint, wh );
+-static loff_t llseek( int fd, loff_t offset, int whence )
+-{
+-    loff_t actual;
+-
+-    if (_llseek(fd, offset>>32, offset&0xffffffff, &actual, whence) != 0)
+-	return (loff_t)-1;
+-    return actual;
+-}
+-#endif
+ 
+ /* Constant definitions */
+ 
+@@ -423,7 +399,7 @@
+ {
+   long got;
+ 
+-  if (llseek (dev, (loff_t)current_block * BLOCK_SIZE, SEEK_SET) /* Seek to the correct location */
++  if (lseek64 (dev, (loff_t)current_block * BLOCK_SIZE, SEEK_SET) /* Seek to the correct location */
+       != (loff_t)current_block * BLOCK_SIZE)
+     die ("seek failed during testing for blocks");
+ 
+@@ -542,7 +518,7 @@
+ {
+   char ch;
+ 
+-  if (llseek (fd, offset, SEEK_SET) < 0)
++  if (lseek64 (fd, offset, SEEK_SET) < 0)
+     return FALSE;
+   if (read (fd, &ch, 1) < 1)
+     return FALSE;
+@@ -565,7 +541,7 @@
+     }
+ 
+   /* first try SEEK_END, which should work on most devices nowadays */
+-  if ((low = llseek(fd, 0, SEEK_END)) <= 0) {
++  if ((low = lseek64(fd, 0, SEEK_END)) <= 0) {
+       low = 0;
+       for (high = 1; valid_offset (fd, high); high *= 2)
+ 	  low = high;
+@@ -1310,7 +1286,7 @@
+ #define seekto(pos,errstr)						\
+   do {									\
+     loff_t __pos = (pos);						\
+-    if (llseek (dev, __pos, SEEK_SET) != __pos)				\
++    if (lseek64 (dev, __pos, SEEK_SET) != __pos)			\
+ 	error ("seek to " errstr " failed whilst writing tables");	\
+   } while(0)
+ 
+@@ -1667,11 +1643,11 @@
+ 	die("unable to create %s");
+       /* seek to the intended end-1, and write one byte. this creates a
+        * sparse-as-possible file of appropriate size. */
+-      if (llseek( dev, offset, SEEK_SET ) != offset)
++      if (lseek64( dev, offset, SEEK_SET ) != offset)
+ 	die( "seek failed" );
+       if (write( dev, &null, 1 ) < 0)
+ 	die( "write failed" );
+-      if (llseek( dev, 0, SEEK_SET ) != 0)
++      if (lseek64( dev, 0, SEEK_SET ) != 0)
+ 	die( "seek failed" );
+   }
+   
