@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silky/silky-0.5.0.ebuild,v 1.6 2004/06/24 22:59:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silky/silky-0.5.0.ebuild,v 1.7 2004/07/01 22:19:30 eradicator Exp $
 
 IUSE="debug"
 
@@ -24,7 +24,7 @@ DEPEND="sys-libs/glibc
 	dev-libs/libxml2
 	app-misc/mime-types
 	=net-im/silc-toolkit-0.9.11"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

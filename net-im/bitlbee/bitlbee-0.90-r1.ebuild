@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.90-r1.ebuild,v 1.1 2004/06/26 23:00:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.90-r1.ebuild,v 1.2 2004/07/01 22:17:14 eradicator Exp $
 
 inherit eutils gcc
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64"
 IUSE="debug jabber msn oscar yahoo flood"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-libs/glib-2.0
 	msn? ( net-libs/gnutls )"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnophone/gnophone-0.2.4.ebuild,v 1.7 2004/06/24 22:52:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnophone/gnophone-0.2.4.ebuild,v 1.8 2004/07/01 22:18:03 eradicator Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ DEPEND="media-sound/gsm
 	media-libs/gdk-pixbuf
 	dev-libs/glib
 	media-libs/imlib
-	virtual/glibc"
+	virtual/libc"
 RDEPEND="media-sound/gsm
 	net-libs/iax
 	media-sound/sox
@@ -26,7 +26,7 @@ RDEPEND="media-sound/gsm
 	media-libs/gdk-pixbuf
 	dev-libs/glib
 	media-libs/imlib
-	virtual/glibc"
+	virtual/libc"
 SLOT="0"
 SRC_URI="ftp://ftp.gnophone.com/pub/gnophone/${P}.tar.gz"
 

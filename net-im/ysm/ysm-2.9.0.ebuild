@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ysm/ysm-2.9.0.ebuild,v 1.3 2004/06/24 23:01:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ysm/ysm-2.9.0.ebuild,v 1.4 2004/07/01 22:19:44 eradicator Exp $
 
 MY_PV=${PV//./_}
 DESCRIPTION="A console ICQ client supporting versions 7/8"
@@ -10,8 +10,8 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-DEPEND="virtual/glibc"
-RDEPEND="virtual/glibc"
+DEPEND="virtual/libc"
+RDEPEND="virtual/libc"
 
 S=${WORKDIR}/${PN}v7_${MY_PV}
 

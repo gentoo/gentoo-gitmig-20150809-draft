@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gtalk/gtalk-0.99.10.ebuild,v 1.2 2004/06/24 22:53:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gtalk/gtalk-0.99.10.ebuild,v 1.3 2004/07/01 22:18:29 eradicator Exp $
 
 inherit elisp
 
@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ncurses? ( >=sys-libs/ncurses-5.2 )
 	gtk? ( =x11-libs/gtk+-1* )
 	X? ( virtual/x11 )"
