@@ -1,18 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.32.ebuild,v 1.11 2004/04/26 02:40:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.32.ebuild,v 1.12 2004/04/26 12:47:40 obz Exp $
 
 inherit libtool
 
-IUSE="flash"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="translates PostScript and PDF graphics into other vector formats"
 SRC_URI="http://home.t-online.de/home/helga.glunz/wglunz/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.pstoedit.net/pstoedit"
+LICENSE="GPL-2"
 
 SLOT="0"
-LICENSE="GPL-2"
+IUSE="flash"
 KEYWORDS="x86 ppc"
 
 DEPEND="media-libs/libpng
