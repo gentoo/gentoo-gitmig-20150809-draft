@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.2.6.0.ebuild,v 1.6 2004/06/24 21:51:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.2.6.0.ebuild,v 1.7 2004/12/07 09:32:13 mr_bones_ Exp $
 
 inherit games flag-o-matic
 
@@ -22,45 +22,37 @@ RDEPEND="virtual/x11
 	sys-libs/zlib
 	media-libs/libpng"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	app-arch/unzip"
 
 src_unpack() {
-	unpack ${PN}-${PV}.tar.bz2
-	unpack moviesounds_fq.zip
-	unpack moviepack.zip
+	unpack ${A}
 	set > /tmp/emerge-env.txt
-	cd ${S}
+	cd "${S}"
 	# Uses $SYNC which which conflicts with emerge
 	sed -i \
-		-e 's/$(SYNC)/$(SYNCDISK)/' Makefile.global.in || \
-			die 'sed Makefile.global.in failed'
-}
-
-src_compile() {
+		-e 's/$(SYNC)/$(SYNCDISK)/' Makefile.global.in \
+		|| die 'sed Makefile.global.in failed'
 	filter-flags -fno-exceptions
-	egamesconf || die
-	emake || die
 }
 
 src_install() {
 	# make install for armagetron is non-existant
-	dodir ${GAMES_BINDIR}
-	dodir ${GAMES_LIBDIR}/${PN}
-	dodir ${GAMES_DATADIR}/${PN}
-	dodir /usr/share/fonts
-	cp src/tron/armagetron ${D}/${GAMES_LIBDIR}/${PN} || die "No Armagetron Executable"
+	dodir "${GAMES_LIBDIR}/${PN}" "${GAMES_DATADIR}/${PN}" /usr/share/fonts
+	cp src/tron/armagetron "${D}/${GAMES_LIBDIR}/${PN}" \
+		|| die "cp failed"
 	cp -r arenas models sound textures language config \
-		${D}/${GAMES_DATADIR}/${PN}/ || die "Missing ArmageTRON data"
+		"${D}/${GAMES_DATADIR}/${PN}/" \
+		|| die "cp failed"
 	# maybe convert this to a .png or something
 	#cp tron.ico ${D}/${GAMES_DATADIR}/${PN}
 	dohtml doc
-	newgamesbin ${FILESDIR}/${PN}-0.2.4-r1.sh ${PN} || die "ArmageTRON shell script not found"
-	dosed "s:DATADIR:${GAMES_DATADIR}/${PN}:" ${GAMES_BINDIR}/${PN}
-	dosed "s:BINDIR:${GAMES_LIBDIR}/${PN}:" ${GAMES_BINDIR}/${PN}
-	cp -r ../moviepack ${D}/${GAMES_DATADIR}/${PN}
-	cp -r ../moviesounds ${D}/${GAMES_DATADIR}/${PN}
-	chmod -R a+r ${D}
-	chmod a+rx ${D}/${GAMES_BINDIR}/${PN}
-	chmod a+rx ${D}/${GAMES_LIBDIR}/${PN}/${PN}
+	newgamesbin "${FILESDIR}/${PN}-0.2.4-r1.sh" ${PN} \
+		|| die "newgamesbin failed"
+	sed -i \
+		-e "s:DATADIR:${GAMES_DATADIR}/${PN}:" \
+		-e "s:BINDIR:${GAMES_LIBDIR}/${PN}:" "${D}${GAMES_BINDIR}/${PN}" \
+		|| die "sed failed"
+	cp -r ../moviepack "${D}/${GAMES_DATADIR}/${PN}" || die "cp failed"
+	cp -r ../moviesounds "${D}/${GAMES_DATADIR}/${PN}" || die "cp failed"
+	prepgamesdirs
 }

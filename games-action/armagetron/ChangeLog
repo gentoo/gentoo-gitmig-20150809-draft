@@ -1,6 +1,10 @@
 # ChangeLog for games-action/armagetron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/ChangeLog,v 1.5 2004/06/24 21:51:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/ChangeLog,v 1.6 2004/12/07 09:32:13 mr_bones_ Exp $
+
+  07 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  armagetron-0.2.6.0.ebuild:
+  use more games eclass; tidy
 
   23 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
   add game team to the metadata file in addition to Luke-Jr.
