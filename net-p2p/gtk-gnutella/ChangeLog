@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/gtk-gnutella
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.35 2004/11/28 22:01:50 squinky86 Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.36 2005/01/30 20:46:05 squinky86 Exp $
+
+*gtk-gnutella-0.95-r1 (30 Jan 2005)
+
+  30 Jan 2005; Jon Hood <squinky86@gentoo.org> +files/0.95-gtk2.6.patch,
+  +gtk-gnutella-0.95-r1.ebuild:
+  Add gtk patch, #79125; thanks Jani Alanko <jpalan@utu.fi> and Tim Hentenaar
+  <tth@one.net>.
 
 *gtk-gnutella-0.95 (28 Nov 2004)
 

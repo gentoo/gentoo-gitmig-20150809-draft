@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.94.ebuild,v 1.5 2004/10/04 22:01:32 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.94.ebuild,v 1.6 2005/01/30 20:46:05 squinky86 Exp $
 
 IUSE="gnome gtk2 xml2 nls"
 
