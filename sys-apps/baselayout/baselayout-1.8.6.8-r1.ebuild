@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.5.ebuild,v 1.1 2003/04/07 03:27:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.8-r1.ebuild,v 1.1 2003/05/21 09:01:18 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
 
 IUSE="bootstrap build"
 
-SV="1.4.3.5"
+SV="1.4.3.8p1"
 SVREV=""
 # SysvInit version
 SVIV="2.84"
@@ -94,13 +94,11 @@ src_unpack() {
 
 src_compile() {
 
-	[ -z "${CC}" ] && CC="gcc"
-
 	echo "${ROOT}" > ${T}/ROOT
 
 	cd ${S}/src
 	einfo "Building utilities..."
-	make CC="${CC}" LD="${CC}" \
+	make CC="${CC:-gcc}" LD="${CC:-gcc}" \
 		CFLAGS="${CFLAGS}" || die "problem compiling utilities"
 
 	if [ -z "`use build`" ]
@@ -108,21 +106,27 @@ src_compile() {
 		# Build sysvinit stuff
 		cd ${S2}
 		einfo "Building sysvinit..."
-		emake CC="${CC}" LD="${CC}" \
+		emake CC="${CC:-gcc}" LD="${CC:-gcc}" \
 			LDFLAGS="" || die "problem compiling sysvinit"
 
-		# We let gawk now install filefuncs.so, and that is as a symlink to a 
-		# versioned .so ...
-		if [ -f /usr/include/awk/awk.h -a ! -L ${ROOT}/lib/rcscripts/filefuncs.so ]
+		if [ -z "`use bootstrap`" ]
 		then
-			# Build gawk module
-			cd ${S}/src/filefuncs
-			einfo "Building awk module..."
-			make CC="${CC}" LD="${CC}" || {
-				eerror "Failed to build gawk module.  Make sure you have"
-				eerror "sys-apps/gawk-3.1.1-r1 or later installed"
-				die "problem compiling gawk module"
-			}
+			# We let gawk now install filefuncs.so, and that is as a symlink to a 
+			# versioned .so ...
+			if [ -f /usr/include/awk/awk.h -a ! -L ${ROOT}/lib/rcscripts/filefuncs.so ]
+			then
+				# Build gawk module
+#				cd ${S}/src/filefuncs
+#				einfo "Building awk module..."
+#				make CC="${CC:-gcc}" LD="${CC:-gcc}" || {
+#					eerror "Failed to build gawk module.  Make sure you have"
+#					eerror "sys-apps/gawk-3.1.1-r1 or later installed"
+#					die "problem compiling gawk module"
+#				}
+			
+				eerror "Please install sys-apps/gawk-3.1.1-r2 or later!"
+				die "gawk too old"
+			fi
 		fi
 	fi
 }
@@ -143,6 +147,33 @@ defaltmerge() {
 	fi
 }
 
+# Only do a keepdir on mounts if they are not mounted ...
+keepdir_mount() {
+	local x=
+	local y=
+	local doit=0
+
+	[ -z "$1" ] && return 1
+
+	[ ! -e /proc/mounts ] && return 1
+
+	for y in $*
+	do
+		doit=0
+		
+		for x in $(gawk '{print $2}' /proc/mounts)
+		do
+			[ "${x}" = "${y}" ] && doit=1
+		done
+
+		if [ "${doit}" -eq 0 ]
+		then
+			keepdir "${y}"
+		fi
+	done
+
+	return 0
+}
 
 src_install() {
 
@@ -152,9 +183,9 @@ src_install() {
 	defaltmerge
 	keepdir /sbin /usr/sbin
 
-	keepdir /usr
+	keepdir_mount /usr
 	keepdir /usr/bin
-	keepdir /usr/lib
+	keepdir /lib /usr/lib
 	keepdir /var /var/run /var/lock/subsys /var/state
 	keepdir /var/spool /var/tmp /var/lib/misc
 	keepdir /var/log/news
@@ -167,10 +198,7 @@ src_install() {
 	
 	# If it already exist, do not recreate, else we get
 	# problems when /usr/portage mounted as ro NFS, etc.
-	if [ ! -d "${ROOT}/usr/portage" ]
-	then
-		keepdir /usr/portage
-	fi
+	keepdir_mount /usr/portage
 	
 	#dosym ../src/linux/include/linux /usr/include/linux
 	#dosym ../src/linux/include/asm-i386 /usr/include/asm
@@ -230,11 +258,12 @@ src_install() {
 		[ -f ${foo} ] && doins ${foo}
 	done
 	chmod go-rwx ${D}/etc/shadow
-	keepdir /lib /mnt/floppy /mnt/cdrom
+	keepdir_mount /mnt/floppy /mnt/cdrom
 	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom
 
 	into /
 	dosbin ${S}/sbin/MAKEDEV
+	dosym ../../sbin/MAKEDEV /usr/sbin/MAKEDEV
 	keepdir /lib/dev-state
 	if [ "${altmerge}" -eq "1" ]
 	then
@@ -260,7 +289,9 @@ src_install() {
 	dosym ../../sbin/modules-update /usr/sbin/update-modules
 	# These moved from /etc/init.d/ to /sbin to help newb systems
 	# from breaking
-	dosbin runscript.sh functions.sh rc-daemon.sh rc-help.sh
+	dosbin runscript.sh functions.sh
+	exeinto /lib/rcscripts/sh
+	doexe rc-services.sh rc-daemon.sh rc-help.sh
 
 	dodir /etc/init.d
 	exeinto /etc/init.d
@@ -274,29 +305,24 @@ src_install() {
 	# if 'build' or 'bootstrap' is not in USE.  This will
 	# change if we have sys-apps/gawk-3.1.1-r1 or later in
 	# the build image ...
-	if [ -z "`use build`" -a -z "`use bootstrap`" ]
+	if [ -z "`use build`" ]
 	then
-		# This is for new depscan and rc-envupdate.sh
+		# This is for new depscan.sh and env-update.sh
 		# written in awk
 		into /
 		dosbin depscan.sh
-		dosbin rc-envupdate.sh
+		dosbin env-update.sh
 		insinto /lib/rcscripts/awk
 		for foo in ${S}/src/awk/*.awk
 		do
 			[ -f ${foo} ] && doins ${foo}
 		done
 
-		if [ ! -L ${ROOT}/lib/rcscripts/filefuncs.so ]
-		then
-			exeinto /lib/rcscripts
-			doexe ${S}/src/filefuncs/filefuncs.so
-		fi
-	else
-		# This is the old bash ones
-		into /
-		newsbin depscan.sh.bash depscan.sh
-		newsbin rc-envupdate.sh.bash rc-envupdate.sh
+#		if [ ! -L ${ROOT}/lib/rcscripts/filefuncs.so ]
+#		then
+#			exeinto /lib/rcscripts
+#			doexe ${S}/src/filefuncs/filefuncs.so
+#		fi
 	fi
 
 	# Compat symlinks (some stuff have hardcoded paths)
@@ -335,6 +361,7 @@ src_install() {
 	do
 		[ -f ${foo} ] && doman ${foo}
     done
+	docinto /
 	dodoc ${FILESDIR}/copyright
 	dodoc ${S}/ChangeLog
 
@@ -470,42 +497,42 @@ pkg_postinst() {
 		case ${ARCH} in
 			x86)
 				einfo "Using generic-i386 to make device nodes..."
-				${ROOT}/usr/sbin/MAKEDEV generic-i386
+				${ROOT}/sbin/MAKEDEV generic-i386
 				;;
 			ppc)
 				einfo "Using generic-powerpc to make device nodes..."
-				${ROOT}/usr/sbin/MAKEDEV generic-powerpc
+				${ROOT}/sbin/MAKEDEV generic-powerpc
 				;;
 			sparc)
 				einfo "Using generic-sparc to make device nodes..."
-				${ROOT}/usr/sbin/MAKEDEV generic-sparc
+				${ROOT}/sbin/MAKEDEV generic-sparc
 				;;
 			mips)
 				einfo "Using generic-mips to make device nodes..."
-				${ROOT}/usr/sbin/MAKEDEV generic-mips
+				${ROOT}/sbin/MAKEDEV generic-mips
 				;;
 			arm)
 				einfo "Using generic-arm to make device nodes..."
-				${ROOT}/usr/sbin/MAKEDEV generic-arm
+				${ROOT}/sbin/MAKEDEV generic-arm
 				;;
 			hppa)
 				einfo "Using generic-hppa to make device nodes..."
-				${ROOT}/usr/sbin/MAKEDEV generic-hppa
+				${ROOT}/sbin/MAKEDEV generic-hppa
 				;;
 			*)
 				einfo "Using generic to make device nodes..."
-				${ROOT}/usr/sbin/MAKEDEV generic
+				${ROOT}/sbin/MAKEDEV generic
 				;;
 		esac
 		
-		${ROOT}/usr/sbin/MAKEDEV sg
-		${ROOT}/usr/sbin/MAKEDEV scd
-		${ROOT}/usr/sbin/MAKEDEV rtc 
-		${ROOT}/usr/sbin/MAKEDEV audio
-		${ROOT}/usr/sbin/MAKEDEV hde
-		${ROOT}/usr/sbin/MAKEDEV hdf
-		${ROOT}/usr/sbin/MAKEDEV hdg
-		${ROOT}/usr/sbin/MAKEDEV hdh
+		${ROOT}/sbin/MAKEDEV sg
+		${ROOT}/sbin/MAKEDEV scd
+		${ROOT}/sbin/MAKEDEV rtc 
+		${ROOT}/sbin/MAKEDEV audio
+		${ROOT}/sbin/MAKEDEV hde
+		${ROOT}/sbin/MAKEDEV hdf
+		${ROOT}/sbin/MAKEDEV hdg
+		${ROOT}/sbin/MAKEDEV hdh
 	fi
 	# We create the /boot directory here so that /boot doesn't get deleted when a previous
 	# baselayout is unmerged with /boot unmounted.
@@ -618,6 +645,8 @@ EOF
 	then
 		# Do not return an error if this fails
 		/sbin/init U &>/dev/null || :
+
+		/sbin/depscan.sh &>/dev/null
 
 		# We need to regenerate /etc/modules.conf, else it will fail at next
 		# boot.
