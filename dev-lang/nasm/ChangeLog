@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.14 2003/02/12 05:57:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.15 2003/03/24 22:03:32 agriffis Exp $
+
+*nasm-0.98.36 (24 Mar 2003)
+
+  24 Mar 2003; Aron Griffis <agriffis@gentoo.org> nasm-0.98.35.ebuild,
+  nasm-0.98.36.ebuild:
+  Update to recent version. Thanks to Michael Sterrett for the heads-up in bug
+  #16266
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
