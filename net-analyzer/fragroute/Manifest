@@ -1,4 +1,14 @@
-MD5 61fd1f17940c3449ff98b65ea15a6f10 ChangeLog 866
-MD5 03e01904ac091a8fd1d9318d8adf2f0f fragroute-1.2.ebuild 810
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7f840c76d04a92efe732193fdf076a02 fragroute-1.2.ebuild 799
+MD5 4c0fe2ff64fc76fadaf08cdbba175b79 ChangeLog 958
 MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
 MD5 36fafeafa71dc2dfd15c10be5f698314 files/digest-fragroute-1.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBKzg5T+MN7JbqCpMRAnchAKCN102XoATnZdGCE5qgpIxiPhiMJACfQtMU
+Hmxky0qd1XZtBiU5QuLrdWc=
+=6GRI
+-----END PGP SIGNATURE-----
