@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.17 2002/11/16 20:24:22 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.18 2002/11/25 12:43:41 bcowan Exp $
+
+*sylpheed-0.8.6 (25 Nov 2002)
+
+  25 Nov 2002; Brad Cowan <bcowan@gentoo.org> sylpheed-0.8.6.ebuild,
+  files/digest-sylpheed-0.8.6:
+  
+  Version bump. Totally redid ebuild to work with USE vars, then realized
+  leonardop already did basically the same thing in an -r1 version.
 
 *sylpheed-0.8.5-r1 (16 Nov 2002)
 
@@ -11,21 +19,21 @@
 *sylpheed-0.8.5 (03 Oct 2002)
 
   03 Oct 2002; Brad Cowan <bcowan@gentoo.org> sylpheed-0.8.5.ebuild,
-  files/digest-sylpheed-0.8.5 :
+  files/digest-sylpheed-0.8.5:
   
   Version bump, bugfixes.
 
 *sylpheed-0.8.4 (01 Oct 2002)
 
   01 Oct 2002; Brad Cowan <bcowan@gentoo.org> sylpheed-0.8.4.ebuild,
-  files/digest-sylpheed-0.8.4 :
+  files/digest-sylpheed-0.8.4:
   
   Version bump. Major bugfixes.
 
 *sylpheed-0.8.2 (26 Aug 2002)
 
   26 Aug 2002; Seemant Kulleen <seemant@gentoo.org> sylpheed-0.8.2.ebuild
-  files/digest-sylpheed-0.8.2 :
+  files/digest-sylpheed-0.8.2:
 
   Version bump.
 
@@ -35,14 +43,14 @@
   Added ppc to keywords
 
   25 Jul 2002; Seemant Kulleen <seemant@gentoo.org> sylpheed-0.8.1.ebuild
-  files/digest-sylpheed-0.8.1 :
+  files/digest-sylpheed-0.8.1:
 
   Version bump.
 
 *sylpheed-0.8.0 (14 Jul 2002)
 
   14 Jul 2002; Michael Cohen <mjc@gentoo.org> sylpheed-0.8.0.ebuild
-  files/digest-sylpheed-0.8.0 :
+  files/digest-sylpheed-0.8.0:
   
   Version bump.
 
@@ -50,14 +58,14 @@
 *sylpheed-0.7.8-r1 (29 Jun 2002)
 
   29 Jun 2002; Seemant Kulleen <seemant@gentoo.org> sylpheed-0.7.8-r1.ebuild
-  files/digest-sylpheed-0.7.8-r1 :
+  files/digest-sylpheed-0.7.8-r1:
 
   PROVIDES virtual/sylpheed
 
 *sylpheed-0.7.8 (16 Jun 2002)
 
   16 Jun 2002; Seemant Kulleen <seemant@gentoo.org> sylpheed-0.7.8.ebuild
-  files/digest-sylpheed-0.7.8 :
+  files/digest-sylpheed-0.7.8:
 
   Version bump.
 
@@ -85,24 +93,24 @@
 
 *sylpheed-0.7.4-r1 (15 Apr 2002)
 
-  15 Apr 2002; Seemant Kulleen <seemant@gentoo.org> sylpheed-0.7.4-r1.ebuild :
+  15 Apr 2002; Seemant Kulleen <seemant@gentoo.org> sylpheed-0.7.4-r1.ebuild:
 
   Changed the gpg USE flag to crypt USE flag instead, which is more general
 
 *sylpheed-0.7.4-r1 (05 Apr 2002)
-  05 Apr 2002; Spider  <spider@gentoo.org>
+  05 Apr 2002; Spider  <spider@gentoo.org> :
   per user notice adding jpilot, use pda etc. to ebuild.
 
 *sylpheed-0.7.2 (21 Feb 2002)
 
-  21 Feb 2002; T.Neidt <tod@gentoo.org> ChangeLog, sylpheed-0.7.2.ebuild :
+  21 Feb 2002; T.Neidt <tod@gentoo.org> ChangeLog, sylpheed-0.7.2.ebuild:
 
   Version update. 
   Just a copy of sylpheed-0.7.0.ebuild to sylpheed-0.7.2.ebuild.
 
 *sylpheed-0.7.0 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog:
   
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
