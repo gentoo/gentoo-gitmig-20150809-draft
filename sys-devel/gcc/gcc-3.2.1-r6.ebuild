@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r6.ebuild,v 1.4 2002/12/23 17:49:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r6.ebuild,v 1.5 2003/01/08 19:13:01 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -8,6 +8,10 @@ inherit eutils flag-o-matic libtool
 
 # Compile problems with these (bug #6641 among others)...
 filter-flags "-fno-exceptions -fomit-frame-pointer"
+
+# Some odd problems with -march=k6[-2] (bug #12791)
+replace-flags "-march=k6-2" "-march=i686"
+replace-flags "-march=k6" "-march=i686"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -83,7 +87,7 @@ DESCRIPTION="Modern C/C++ compiler written by the GNU people"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -102,22 +106,16 @@ DEPEND="virtual/glibc
 	          nls? ( sys-devel/gettext ) )"
 			  
 RDEPEND="virtual/glibc
-	>=sys-devel/gcc-config-1.2.3
+	>=sys-devel/gcc-config-1.2.7
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
+PDEPEND=">=sys-devel/gcc-config-1.2.7"
+
 
 # Hack used to patch Makefiles to install into the build dir
 FAKE_ROOT=""
-
-pkg_setup() {
-	echo
-	eerror "This is a very alpha ebuild and changes in here"
-	eerror "are not yet set in stone!  Please do NOT merge"
-	eerror "this if you are not a developer!"
-#	die
-}
 
 src_unpack() {
 	if [ -z "${SNAPSHOT}" ]
@@ -168,6 +166,7 @@ src_unpack() {
 	# installing into ${D}.  We should not patch it in src_install() with
 	# absolute paths, as some modules then gets rebuild with the wrong
 	# paths.  Thus we use $FAKE_ROOT.
+	einfo "Fixing Makefiles..."
 	cd ${S}
 	for x in $(find . -name Makefile.in)
 	do
@@ -179,6 +178,11 @@ src_unpack() {
 		# Fix --bindir=
 		cp ${x} ${x}.orig
 		sed -e 's:bindir = @bindir@:bindir = $(FAKE_ROOT)@bindir@:' \
+			${x}.orig > ${x}
+
+		# Fix --includedir=
+		cp ${x} ${x}.orig
+		sed -e 's:includedir = @includedir@:includedir = $(FAKE_ROOT)@includedir@:' \
 			${x}.orig > ${x}
 
 		# Fix --with-gxx-include-dir=
@@ -239,6 +243,7 @@ src_compile() {
 	addwrite "/dev/zero"
 	${S}/configure --prefix=${LOC} \
 		--bindir=${BINPATH} \
+		--includedir=${LIBPATH}/include \
 		--datadir=${DATAPATH} \
 		--mandir=${DATAPATH}/man \
 		--infodir=${DATAPATH}/info \
@@ -304,6 +309,7 @@ src_install() {
 	S="${WORKDIR}/build" \
 	make prefix=${D}${LOC} \
 		bindir=${D}${BINPATH} \
+		includedir=${D}${LIBPATH}/include \
 		datadir=${D}${DATAPATH} \
 		mandir=${D}${DATAPATH}/man \
 		infodir=${D}${DATAPATH}/info \

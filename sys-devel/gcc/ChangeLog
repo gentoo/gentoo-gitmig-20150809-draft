@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.55 2002/12/28 06:35:46 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.56 2003/01/08 19:13:01 azarah Exp $
+
+  08 Jan 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.1-r6.ebuild :
+  Mark stable for x86.  Do not merge with C[XX]FLAGS="-march=k6[-2]", as
+  it causes problems, bug #12791.
 
 *gcc-3.2.1-r6 (16 Dec 2002)
 
