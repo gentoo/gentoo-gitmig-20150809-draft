@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r4.ebuild,v 1.7 2004/05/27 12:38:09 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.1 2004/06/02 01:32:35 lv Exp $
 
-IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
+IUSE="static nls bootstrap java build X multilib gcj f77 objc pic hardened uclibc n32 n64"
 
 inherit eutils flag-o-matic libtool
 
@@ -37,10 +37,20 @@ do_filter_flags() {
 	replace-flags -O? -O2
 
 	# -mcpu is deprecated, and will actually break the gcc build on
-	# a few archs... use mtune instead
+	# a few archs... so we change it to mtune, and then strip unsupported
+	# flags so we dont break versions of gcc that dont understand mtune.
 	setting="`get-flag mcpu`"
-	[ ! -z "${setting}" ] && replace-flags -mcpu="${setting}" -mtune="${setting}"
-	export GCJFLAGS="${CFLAGS/-O?/-O2}"
+	[ ! -z "${setting}" ] && \
+		replace-flags -mcpu="${setting}" -mtune="${setting}" && \
+		ewarn "-mcpu is deprecated" && \
+		sleep 5
+	strip-unsupported-flags
+
+	# If we use multilib on mips, we shouldn't pass -mabi flag - it breaks
+	# build of non-default-abi libraries.
+	use mips && use multilib && filter-flags "-mabi*"
+
+	export GCJFLAGS="${CFLAGS}"
 }
 
 # Theoretical cross compiler support
@@ -60,15 +70,14 @@ DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
 STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
 # PIE support
-PIE_VER="8.7.6.2"
+PIE_VER="8.7.6.3"
 
 # ProPolice version
 PP_VER="3_4"
-PP_FVER="${PP_VER//_/.}-1"
+PP_FVER="${PP_VER//_/.}-2"
 
 # Patch tarball support ...
-#PATCH_VER="1.0"
-PATCH_VER=
+PATCH_VER="1.1"
 
 # Snapshot support ...
 #SNAPSHOT="2002-08-12"
@@ -76,7 +85,7 @@ SNAPSHOT=
 
 # Branch update support ...
 MAIN_BRANCH="${PV}"  # Tarball, etc used ...
-BRANCH_UPDATE=20040519
+BRANCH_UPDATE=20040601
 
 if [ -z "${SNAPSHOT}" ]
 then
@@ -86,7 +95,7 @@ then
 	if [ -n "${PATCH_VER}" ]
 	then
 		SRC_URI="${SRC_URI}
-		         mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
+		         http://dev.gentoo.org/~lv/${P}-patches-${PATCH_VER}.tar.bz2"
 	fi
 
 	if [ -n "${BRANCH_UPDATE}" ]
@@ -122,7 +131,7 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~amd64 ~mips"
 #KEYWORDS="amd64 ~x86 ~ppc ~sparc ~mips ~ia64 ~ppc64 ~hppa ~alpha ~s390"
 
 # Ok, this is a hairy one again, but lets assume that we
@@ -146,10 +155,12 @@ fi
 # else bootstap will break.
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
+
+# we need at least glibc 2.3.3 20040420-r1 in order for gcc 3.4 not to nuke
+# SSP in glibc.
 DEPEND="virtual/glibc
-	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
-	>=sys-libs/glibc-2.3.3_pre20040207
-	hardened? ( >=sys-libs/glibc-2.3.3_pre20040420-r1 )
+	>=sys-libs/glibc-2.3.3_pre20040420-r1
+	hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
 	( !sys-devel/hardened-gcc )
 	>=sys-devel/binutils-2.14.90.0.8-r1
 	!amd64? ( hardened? ( >=sys-devel/binutils-2.15.90.0.3 ) )
@@ -160,9 +171,8 @@ DEPEND="virtual/glibc
 	          nls? ( sys-devel/gettext ) )"
 
 RDEPEND="virtual/glibc
-	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
-	>=sys-libs/glibc-2.3.3_pre20040207
-	hardened? ( >=sys-libs/glibc-2.3.3_pre20040420-r1 )
+	>=sys-libs/glibc-2.3.3_pre20040420-r1
+	hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
@@ -201,8 +211,29 @@ version_patch() {
 	epatch ${T}/${1##*/}
 }
 
+check_option_validity() {
+	# Must compile for mips64-linux target if we want n32/n64 support
+	case "${CCHOST}" in
+		mips64-*)
+		;;
+		*)
+		    if use n32 || use n64; then
+		     eerror "n32/n64 can only be used when target host is mips64-*-linux-*";
+		     die "Invalid USE flags for CCHOST ($CCHOST)";
+		    fi
+		;;
+	esac
+
+	#cannot have both n32 & n64 without multilib
+	if use n32 && use n64 && ! use multilib; then
+		eerror "Please enable multilib if you want to use both n32 & n64";
+		die "Invalid USE flag combination";
+	fi
+}
+
 glibc_have_ssp() {
-	local my_libc="${ROOT}/lib/libc.so.6"
+	use uclibc || local my_libc="${ROOT}/lib/libc.so.6"
+	use uclibc && local my_libc="${ROOT}/lib/libc.so.0"
 
 # Not necessary. lib64 is a symlink to /lib. -- avenj@gentoo.org  3 Apr 04
 #	case "${ARCH}" in
@@ -281,15 +312,11 @@ update_gcc_for_libc_ssp() {
 src_unpack() {
 	local release_version="Gentoo Linux ${PVR}"
 
-	ewarn "GCC 3.3 compatibility has been removed. It was always broken, and overall"
-	ewarn "a bad way to do things. I added it as a temporary fix until a real one"
-	ewarn "could be implemented, but it breaks on a number of archs."
-	ewarn "It would be a /very/ good idea to keep gcc 3.3.x or 3.2.x installed."
-
 	if [ -n "${PP_VER}" ] && [ "${ARCH}" != "hppa" ]
 	then
 		# the guard check should be very early in the unpack process
-		check_glibc_ssp
+		#check_glibc_ssp
+		:
 	fi
 
 	if [ -z "${SNAPSHOT}" ]
@@ -328,11 +355,25 @@ src_unpack() {
 	if [ -n "${PATCH_VER}" ]
 	then
 		mkdir -p ${WORKDIR}/patch/exclude
-#		mv -f ${WORKDIR}/patch/{40,41}* ${WORKDIR}/patch/exclude/
-		mv -f ${WORKDIR}/patch/41* ${WORKDIR}/patch/exclude/
+		#mv -f ${WORKDIR}/patch/84* ${WORKDIR}/patch/exclude/
 
-		# do not enable it, the pie patches won't apply
-		#use uclibc || mv -f ${WORKDIR}/patch/8?_* ${WORKDIR}/patch/exclude/
+		# for uclibc we rather copy the needed files and patch them
+		mkdir ${S}/libstdc++-v3/config/{locale/uclibc,os/uclibc} || \
+			die "can't create uclibc directories"
+		cp ${S}/libstdc++-v3/config/locale/gnu/* \
+			${S}/libstdc++-v3/config/locale/uclibc/ || die "can't copy uclibc locale"
+		cp ${S}/libstdc++-v3/config/locale/ieee_1003.1-2001/codecvt_specializations.h \
+			${S}/libstdc++-v3/config/locale/uclibc/ || die "can't copy uclibc codecvt"
+		cp ${S}/libstdc++-v3/config/os/gnu-linux/* \
+			${S}/libstdc++-v3/config/os/uclibc/ || die "can't copy uclibc os"
+		cp ${S}/gcc/config/t-linux ${S}/gcc/config/t-linux-uclibc || \
+			die "can't copy t-linux"
+		cp ${S}/gcc/config/cris/t-linux ${S}/gcc/config/cris/t-linux-uclibc || \
+			die "can't copy cris/t-linux"
+		cp ${S}/gcc/config/sh/t-linux ${S}/gcc/config/sh/t-linux-uclibc || \
+			die "can't copy sh/t-linux"
+		cp ${S}/gcc/config/sh/t-sh64 ${S}/gcc/config/sh/t-sh64-uclibc || \
+			die "can't copy sh/t-sh64"
 
 		if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
 		then
@@ -342,6 +383,10 @@ src_unpack() {
 		fi
 
 		epatch ${WORKDIR}/patch
+
+		# the uclibc patches need autoconf to be run
+		cd ${S}/libstdc++-v3; autoconf; cd ${S}
+
 		use uclibc && epatch ${FILESDIR}/3.3.3/gcc-uclibc-3.3-loop.patch
 	elif [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
 	then
@@ -351,11 +396,8 @@ src_unpack() {
 
 	if [ -n "${PIE_VER}" ]
 	then
-		mkdir ${WORKDIR}/piepatch/skip
-		if ! use uclibc
-		then
-			mv ${WORKDIR}/piepatch/upstream/04_* ${WORKDIR}/piepatch/skip
-		fi
+		[ -z "${PATCH_VER}" ] && mv piepatch/upstream/04_* piepatch/
+
 		# corrects startfile/endfile selection and shared/static/pie flag usage
 		epatch ${WORKDIR}/piepatch/upstream
 		# adds non-default pie support (for now only rs6000)
@@ -374,9 +416,7 @@ src_unpack() {
 		cp ${WORKDIR}/gcc/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
 		cp -R ${WORKDIR}/gcc/testsuite/* ${WORKDIR}/${P}/gcc/testsuite/ || die "testsuite not found"
 
-		epatch ${FILESDIR}/3.4.0/gcc-3.4.0-move-propolice-into-glibc.patch
-
-		use uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch
+		[ -n "${PATCH_VER}" ] && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch
 
 		# we apply only the needed parts of protectonly.dif
 		sed -e 's|^CRTSTUFF_CFLAGS = |CRTSTUFF_CFLAGS = -fno-stack-protector-all |' \
@@ -389,8 +429,6 @@ src_unpack() {
 		update_gcc_for_libc_ssp
 	fi
 
-	cd ${WORKDIR}/${P}
-
 	release_version="${release_version}, pie-${PIE_VER}"
 	if  ( use hardened && ( use x86 || use sparc || use amd64 ) )
 	then
@@ -402,28 +440,17 @@ src_unpack() {
 		release_version="${release_version/Gentoo/Gentoo Hardened}"
 	fi
 
-	# corrects text relocations in libiberty.a
-	(use pic || use hardened) && epatch ${FILESDIR}/3.4.0/gcc-3.4-libiberty-pic.patch
-
-	version_patch ${FILESDIR}/3.4.0/gcc-${PV}-r3-gentoo-branding.patch \
+	version_patch ${FILESDIR}/3.4.0/gcc-${PV}-r6-gentoo-branding.patch \
 		"${BRANCH_UPDATE} (${release_version})" || die "Failed Branding"
 
 	# TODO: on arches where we lack a Scrt1.o (like parisc) we still need unpack, compile and install logic
 	# TODO: for the crt1Snocsu.o provided by a custom gcc-pie-ssp.tgz which can also be included in SRC_URI
 
-	# Install our pre generated manpages if we do not have perl ...
-	if [ ! -x /usr/bin/perl ]
-	then
-		cd ${S}; unpack ${P}-manpages.tar.bz2
-		mkdir -p ${WORKDIR}/build
-		cd ${WORKDIR}/build ; unpack ${P}-manpages.tar.bz2
-	fi
-
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
 
 	# disable --as-needed from being compiled into gcc specs
-	# natively when using >=sys-devel/binutils-2.15.90.0.3 this is
+	# natively when using >=sys-devel/binutils-2.15.90.0.1 this is
 	# done to keep our gcc backwards compatible with binutils. 
 	# gcc 3.4.1 cvs has patches that need back porting.. 
 	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
@@ -436,6 +463,8 @@ src_compile() {
 
 	local myconf=
 	local gcc_lang=
+
+	check_option_validity
 
 	if ! use build
 	then
@@ -470,7 +499,7 @@ src_compile() {
 	fi
 
 	# Multilib not yet supported
-	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	if [ -n "`use multilib`" ]
 	then
 		einfo "WARNING: Multilib support enabled. This is still experimental."
 		myconf="${myconf} --enable-multilib"
@@ -490,6 +519,7 @@ src_compile() {
 	# --enable-sjlj-exceptions : currently the unwind stuff seems to work 
 	# for statically linked apps but not dynamic
 	# so use setjmp/longjmp exceptions by default
+	# uclibc uses --enable-clocale=uclibc (autodetected)
 	# --disable-libunwind-exceptions needed till unwind sections get fixed. see ps.m for details
 
 	if ! use uclibc
@@ -497,7 +527,7 @@ src_compile() {
 		# it's getting close to a time where we are going to need USE=glibc, uclibc, bsdlibc -solar
 		myconf="${myconf} --enable-__cxa_atexit --enable-clocale=gnu"
 	else
-		myconf="${myconf} --disable-__cxa_atexit --enable-target-optspace --with-gnu-ld --enable-sjlj-exceptions --enable-clocale=ieee_1003.1-2001"
+		myconf="${myconf} --disable-__cxa_atexit --enable-target-optspace --with-gnu-ld --enable-sjlj-exceptions"
 	fi
 
 	# Default arch support disabled for now...
@@ -505,6 +535,15 @@ src_compile() {
 	#use s390 && myconf="${myconf} --with-arch=nofreakingclue"
 	#use x86 && myconf="${myconf} --with-arch=i586"
 	#use mips && myconf="${myconf} --with-arch=mips3"
+
+	# Add --with-abi flags to enable respective MIPS ABIs
+	case "${CCHOST}" in
+	    mips*)
+		use multilib && myconf="${myconf} --with-abi=32"
+		use n32 && myconf="${myconf} --with-abi=n32"
+		use n64 && myconf="${myconf} --with-abi=n64"
+	    ;;
+	esac
 
 	do_filter_flags
 	einfo "CFLAGS=\"${CFLAGS}\""
@@ -514,6 +553,12 @@ src_compile() {
 	# Build in a separate build tree
 	mkdir -p ${WORKDIR}/build
 	cd ${WORKDIR}/build
+
+	# Install our pre generated manpages if we do not have perl ...
+	if [ ! -x /usr/bin/perl ]
+	then
+		unpack ${P}-manpages.tar.bz2
+	fi
 
 	einfo "Configuring GCC..."
 	addwrite "/dev/zero"
@@ -544,7 +589,7 @@ src_compile() {
 	# Do not make manpages if we do not have perl ...
 	if [ ! -x /usr/bin/perl ]
 	then
-		find ${S} -name '*.[17]' -exec touch {} \; || :
+		find ${WORKDIR}/build -name '*.[17]' -exec touch {} \; || :
 	fi
 
 	# Setup -j in MAKEOPTS
@@ -655,7 +700,7 @@ src_install() {
 
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${D}${LIBPATH}
 
@@ -736,7 +781,7 @@ src_install() {
 	fi
 
 	cd ${S}
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
 		docinto /${CCHOST}
@@ -871,5 +916,11 @@ pkg_postinst() {
 
 		/sbin/fix_libtool_files.sh ${OLD_GCC_VERSION} ${OLD_GCC_CHOST}
 	fi
+
+	ewarn "If you are migrating to gcc 3.4 from a previous compiler, it is"
+	ewarn "HIGHLY suggested you install libstdc++-v3 before uninstalling"
+	ewarn "your old compiler, even if you dont plan on using any binary only"
+	ewarn "applications that would otherwise need it. If you dont, then all"
+	ewarn "c++ applications will break."
 }
 
