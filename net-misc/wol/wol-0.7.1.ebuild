@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wol/wol-0.7.1.ebuild,v 1.2 2005/03/30 15:31:23 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wol/wol-0.7.1.ebuild,v 1.3 2005/03/30 16:10:58 hansmi Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ahh.sourceforge.net/wol/"
 SRC_URI="mirror://sourceforge/ahh/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="debug"
 
 src_unpack() {
