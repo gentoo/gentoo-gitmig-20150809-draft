@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.2.3.ebuild,v 1.9 2004/08/12 19:54:26 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.2.3.ebuild,v 1.10 2004/11/07 15:02:52 usata Exp $
 
 inherit kde-dist
 
 DESCRIPTION="KDE PIM (Personal Information Management) apps: korganizer, kmail, knode..."
 
 KEYWORDS="x86 ppc amd64 sparc hppa"
-IUSE="pda crypt ldap"
+IUSE="pda crypt ldap cjk"
 
 DEPEND="~kde-base/kdenetwork-${PV}
 	pda? ( app-pda/pilot-link dev-libs/libmal )
@@ -16,6 +16,8 @@ DEPEND="~kde-base/kdenetwork-${PV}
 
 src_unpack() {
 	kde_src_unpack
+	cd ${S}
+	use cjk && epatch ${FILESDIR}/kdepim-3.2.3-cjk.diff
 }
 
 src_compile() {

@@ -1,0 +1,166 @@
+diff -ruN kdepim-3.2.2/knode/knarticlewidget.cpp kdepim-3.2.2.cjk/knode/knarticlewidget.cpp
+--- kdepim-3.2.2/knode/knarticlewidget.cpp	2004-04-04 06:14:03.000000000 -0300
++++ kdepim-3.2.2.cjk/knode/knarticlewidget.cpp	2004-06-04 19:33:25.754204504 -0300
+@@ -191,7 +191,7 @@
+   QStringList cs=KGlobal::charsets()->availableEncodingNames();
+   cs.prepend(i18n("Automatic"));
+   a_ctSetCharset->setItems(cs);
+-  a_ctSetCharset->setCurrentItem(0);
++  a_ctSetCharset->setCurrentItem(34);
+   connect(a_ctSetCharset, SIGNAL(activated(const QString&)),
+           this, SLOT(slotSetCharset(const QString&)));
+   a_ctSetCharsetKeyb = new KAction(i18n("Charset"), Key_C, this,
+diff -ruN kdepim-3.2.2/knode/knconfig.cpp kdepim-3.2.2.cjk/knode/knconfig.cpp
+--- kdepim-3.2.2/knode/knconfig.cpp	2003-10-26 06:57:45.000000000 -0400
++++ kdepim-3.2.2.cjk/knode/knconfig.cpp	2004-06-04 19:43:24.030252720 -0300
+@@ -979,7 +979,7 @@
+     c_omposerCharsets=QStringList::split(',',"us-ascii,utf-8,iso-8859-1,iso-8859-2,"
+     "iso-8859-3,iso-8859-4,iso-8859-5,iso-8859-6,iso-8859-7,iso-8859-8,"
+     "iso-8859-9,iso-8859-10,iso-8859-13,iso-8859-14,iso-8859-15,koi8-r,koi8-u,"
+-    "iso-2022-jp,iso-2022-jp-2,iso-2022-kr,euc-jp,euc-kr,Big5,gb2312");
++    "iso-2022-jp,iso-2022-jp-2,iso-2022-kr,euc-jp,euc-kr,Big5,gb2312,gb18030");
+ 
+   c_harset=conf->readEntry("Charset").latin1();
+   if (c_harset.isEmpty()) {
+diff -ruN kdepim-3.2.2/knode/kngroup.cpp kdepim-3.2.2.cjk/knode/kngroup.cpp
+--- kdepim-3.2.2/knode/kngroup.cpp	2003-08-08 06:09:07.000000000 -0300
++++ kdepim-3.2.2.cjk/knode/kngroup.cpp	2004-06-04 20:44:14.870240680 -0300
+@@ -38,7 +38,7 @@
+ KNGroup::KNGroup(KNCollection *p)
+   : KNArticleCollection(p), n_ewCount(0), l_astFetchCount(0), r_eadCount(0),
+     l_astNr(0), m_axFetch(0), d_ynDataFormat(1), f_irstNew(-1), l_ocked(false),
+-    u_seCharset(false), s_tatus(unknown), i_dentity(0)
++    u_seCharset(true), s_tatus(unknown), i_dentity(0)
+ {
+ }
+ 
+@@ -85,7 +85,7 @@
+   f_irstNr = info.readNumEntry("firstMsg",0);
+   l_astNr = info.readNumEntry("lastMsg",0);
+   d_ynDataFormat = info.readNumEntry("dynDataFormat",0);
+-  u_seCharset = info.readBoolEntry("useCharset", false);
++  u_seCharset = info.readBoolEntry("useCharset", true);
+   d_efaultChSet = info.readEntry("defaultChSet").latin1();
+   QString s = info.readEntry("status","unknown");
+   if (s=="readOnly")
+diff -ruN kdepim-3.2.2/knode/kngroupmanager.cpp kdepim-3.2.2.cjk/knode/kngroupmanager.cpp
+--- kdepim-3.2.2/knode/kngroupmanager.cpp	2003-08-08 06:09:07.000000000 -0300
++++ kdepim-3.2.2.cjk/knode/kngroupmanager.cpp	2004-06-04 20:47:44.375391056 -0300
+@@ -115,18 +115,18 @@
+       sepPos1 = line.find(' ');
+ 
+       if (sepPos1==-1) {        // no description
+-        name = QString::fromUtf8(line);
++        name = QString::fromLocal8Bit(line);
+         description = QString::null;
+         status = KNGroup::unknown;
+       } else {
+-        name = QString::fromUtf8(line.left(sepPos1));
++        name = QString::fromLocal8Bit(line.left(sepPos1));
+ 
+         sepPos2 = line.find(' ',sepPos1+1);
+         if (sepPos2==-1) {        // no status
+-          description = QString::fromUtf8(line.right(line.length()-sepPos1-1));
++          description = QString::fromLocal8Bit(line.right(line.length()-sepPos1-1));
+           status = KNGroup::unknown;
+         } else {
+-          description = QString::fromUtf8(line.right(line.length()-sepPos2-1));
++          description = QString::fromLocal8Bit(line.right(line.length()-sepPos2-1));
+           switch (line[sepPos1+1]) {
+             case 'u':   status = KNGroup::unknown;
+                         break;
+@@ -171,7 +171,7 @@
+ 
+   if(f.open(IO_WriteOnly)) {
+     for (KNGroupInfo *i=groups->first(); i; i=groups->next()) {
+-      temp = i->name.utf8();
++      temp = i->name.local8Bit();
+       switch (i->status) {
+         case KNGroup::unknown: temp += " u ";
+                                break;
+@@ -182,7 +182,7 @@
+         case KNGroup::moderated: temp += " m ";
+                                  break;
+       }
+-      temp += i->description.utf8() + "\n";
++      temp += i->description.local8Bit() + "\n";
+       f.writeBlock(temp.data(),temp.length());
+     }
+     f.close();
+diff -ruN kdepim-3.2.2/knode/knnntpclient.cpp kdepim-3.2.2.cjk/knode/knnntpclient.cpp
+--- kdepim-3.2.2/knode/knnntpclient.cpp	2004-01-17 08:55:17.000000000 -0400
++++ kdepim-3.2.2.cjk/knode/knnntpclient.cpp	2004-06-04 22:20:45.024553432 -0300
+@@ -113,7 +113,7 @@
+     } else {
+       s[0] = 0;    // cut string
+ 
+-      name = QString::fromUtf8(line);
++      name = QString::fromLocal8Bit(line);
+ 
+       if (target->subscribed.contains(name)) {
+         target->subscribed.remove(name);    // group names are unique, we wont find it again anyway...
+@@ -182,7 +182,7 @@
+           s++;
+           while (*s == ' ' || *s == '\t') s++;    // go on to the description
+ 
+-          name = QString::fromUtf8(line);
++          name = QString::fromLocal8Bit(line);
+           if (target->codecForDescriptions)          // some countries use local 8 bit characters in the tag line
+             description = target->codecForDescriptions->toUnicode(s);
+           else
+@@ -248,7 +248,7 @@
+ #endif
+     } else {
+       s[0] = 0;    // cut string
+-      name = QString::fromUtf8(line);
++      name = QString::fromLocal8Bit(line);
+ 
+       while (s[1]!=0) s++;   // the last character determines the moderation status
+       switch (s[0]) {
+@@ -284,7 +284,7 @@
+     int rep;
+ 
+     for (KNGroupInfo *group=tmpList.first(); group; group=tmpList.next()) {
+-      if (!sendCommand(cmd+group->name.utf8(),rep))
++      if (!sendCommand(cmd+group->name.local8Bit(),rep))
+         return;
+       if (rep != 215)        // 215 informations follows
+         break;
+@@ -339,7 +339,7 @@
+               .arg(account.server()).arg(target->groupname());
+ 
+   cmd="GROUP ";
+-  cmd+=target->groupname().utf8();
++  cmd+=target->groupname().local8Bit();
+   if (!sendCommandWCheck(cmd,211)) {       // 211 n f l s group selected
+     return;
+   }
+@@ -440,7 +440,7 @@
+     QString groupName = static_cast<KNGroup*>(target->collection())->groupname();
+     if (currentGroup != groupName) {
+       cmd="GROUP ";
+-      cmd+=groupName.utf8();
++      cmd+=groupName.local8Bit();
+       if (!sendCommandWCheck(cmd,211))       // 211 n f l s group selected
+         return;
+       currentGroup = groupName;
+diff -ruN kdepim-3.2.2/libkdenetwork/kmime_headers.cpp kdepim-3.2.2.cjk/libkdenetwork/kmime_headers.cpp
+--- kdepim-3.2.2/libkdenetwork/kmime_headers.cpp	2003-07-28 04:09:53.000000000 -0300
++++ kdepim-3.2.2.cjk/libkdenetwork/kmime_headers.cpp	2004-06-04 22:22:54.000946040 -0300
+@@ -946,14 +946,14 @@
+ 
+ void Newsgroups::fromUnicodeString(const QString &s, const QCString&)
+ {
+-  g_roups=s.utf8();
++  g_roups=s.local8Bit();
+   e_ncCS=cachedCharset("UTF-8");
+ }
+ 
+ 
+ QString Newsgroups::asUnicodeString()
+ {
+-  return QString::fromUtf8(g_roups);
++  return QString::fromLocal8Bit(g_roups);
+ }
+ 
+ 
