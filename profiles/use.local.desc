@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.484 2004/07/15 14:58:54 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.485 2004/07/15 17:18:50 kugelfang Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -144,7 +144,9 @@ dev-java/velocity:j2ee - Add j2ee support
 dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-lang/python:ucs2 - Enable UCS2 for internal unicode support. (don't do this unless you know what it means.)
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
+dev-lang/R:blas - Use the blas library. (virtual/blas)
 dev-lang/R:f2c - Use f2c to translate FORTRAN sources to C sources.
+dev-lang/R:f77 - Use f77 to compile FORTRAN sources.
 dev-lang/tcl:threads - Enable threads as some packages require it.
 dev-lang/tk:threads - Enable threads as some packages require it.
 dev-libs/cyrus-sasl:pam-mysql - Switch to deprecated pam_mysql authentication method
