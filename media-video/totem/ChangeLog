@@ -1,13 +1,15 @@
 # ChangeLog for media-video/totem
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.7 2003/02/04 06:05:17 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.8 2003/02/08 19:52:01 foser Exp $
 
 *totem-0.90.0 (04 Feb 2003)
+
+  08 Feb 2003; foser <foser@gentoo.org> totem-0.90.0.ebuild :
+  Fixed deps (#15204)
 
   04 Feb 2003; Spider <spider@gentoo.org> totem-0.90.0.ebuild : 
   Clean out the dep-if since the new requires beta3 or higher
   new version ;)
-  
 
   16 Jan 2003; foser <foser@gentoo.org> totem-0.13.1.ebuild :
   Added big if statement to not compile with certain buggy xine-lib releases
