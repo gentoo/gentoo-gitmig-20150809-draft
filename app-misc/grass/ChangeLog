@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/grass
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/ChangeLog,v 1.10 2004/03/04 20:31:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/ChangeLog,v 1.11 2004/03/30 06:49:26 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; grass-5.0.3.ebuild:
+  S was broken -- apparently slipped through QA.
 
   04 Mar 2004; Martin Holzer <mholzer@gentoo.org> grass-5.0.2.ebuild,
   grass-5.0.3.ebuild:
