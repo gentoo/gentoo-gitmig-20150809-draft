@@ -1,6 +1,16 @@
-MD5 584479df39ad80396e872fcab3375e6e ChangeLog 1164
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6bcb461d144f8f0d39bc7ae87fce0e96 ChangeLog 1267
 MD5 dc3a8fcabee1d2838a6e32ea8cb5bfad glurp-0.11.2.ebuild 682
 MD5 39ca3cc9726f35001924ecf3baea20d1 metadata.xml 219
-MD5 df4852de5aed8567dcea2ba1d34741cd glurp-0.11.3.ebuild 680
+MD5 8abd9f70b8b3c5e8290505c3f78e28f4 glurp-0.11.3.ebuild 685
 MD5 ac9e071393589dec888716d4cdb12d81 files/digest-glurp-0.11.2 63
 MD5 e89720d903388dd91903baea27dd2aa3 files/digest-glurp-0.11.3 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBosbVArHZZzCEUG0RAp6TAJ4xdS4GXT/6B8SDIobP3HajKtenLgCaA4Th
+DlzgMAW42v4olDz4wslly30=
+=bwsz
+-----END PGP SIGNATURE-----
