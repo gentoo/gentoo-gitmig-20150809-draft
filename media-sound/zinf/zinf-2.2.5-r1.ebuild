@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5-r1.ebuild,v 1.5 2004/07/15 08:24:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5-r1.ebuild,v 1.6 2004/07/15 08:38:34 eradicator Exp $
 
 inherit kde-functions eutils flag-o-matic
 
@@ -46,9 +46,10 @@ src_unpack() {
 	export WANT_AUTOMAKE=1.7
 	export WANT_AUTOCONF=2.5
 
-	ebegin "Running aclocal (${WANT_AUTOMAKE})"
-	aclocal -I m4
-	eend $?
+	#ebegin "Running aclocal (${WANT_AUTOMAKE})"
+	#aclocal -I m4
+	#eend $?
+	touch aclocal.m4
 
 	ebegin "Running automake (${WANT_AUTOMAKE})"
 	automake
