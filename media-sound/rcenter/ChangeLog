@@ -1,0 +1,12 @@
+# ChangeLog for media-sound/rcenter 
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rcenter/ChangeLog,v 1.1 2003/03/25 21:00:38 drobbins Exp $
+
+# Written By Bowyakka (aka Greg Bowyer)
+
+*rcenter-0.6.1 (10 Nov 2002)
+
+  03 Feb 2003; Gregory Bowyer <bowyakka@hotmail.com> rcenter-0.6.1.ebuild :
+  Inital version of the rcenter tool ebuild (a tool for soundblaster remote control.)
+  Added to cvs by drobbins.
+ 
