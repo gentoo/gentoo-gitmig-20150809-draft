@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.04-r1.ebuild,v 1.1 2004/03/18 09:47:06 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.04-r1.ebuild,v 1.2 2004/04/06 16:38:25 zx Exp $
 
 IUSE="doc gnome kde mozilla ssl"
 
@@ -21,6 +21,7 @@ RESTRICT="fetch"
 
 DEPEND=">=dev-java/java-config-1.1.5
 	sys-apps/sed
+	app-arch/unzip
 	doc? ( =dev-java/java-sdk-docs-1.4.2* )"
 
 RDEPEND="sys-libs/lib-compat"
