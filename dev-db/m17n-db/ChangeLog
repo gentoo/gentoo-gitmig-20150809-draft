@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/m17n-db
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.5 2004/06/24 21:56:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.6 2004/07/03 00:31:49 matsuu Exp $
+
+  03 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> m17n-db-1.0.2.ebuild:
+  Added to ~amd64.
 
   18 Jun 2004; David Holm <dholm@gentoo.org> m17n-db-1.0.2.ebuild:
   Added to ~ppc.
