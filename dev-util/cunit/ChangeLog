@@ -1,0 +1,12 @@
+# ChangeLog for dev-util/cunit
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/ChangeLog,v 1.1 2002/04/13 21:29:31 karltk Exp $
+
+*cunit-1.0.0.6 (13 Apr 2002)
+
+  13 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> cunit-1.0.0.6 files/digest-cunit-1.0.0.6 :
+
+  As of now we don't have any light weight unit testing framework for C as it 
+  is for C++ (CppUnit) or Java (JUnit). This intiative is taken to provide 
+  such a platform independent/version independent core framework and the 
+  OS/Environment specific wrappers around them. 
