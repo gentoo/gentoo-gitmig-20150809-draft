@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/selinux-small
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.27 2003/08/02 05:12:40 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.28 2003/09/05 19:20:05 pebenito Exp $
+
+*selinux-small-2003081400 (05 Sep 2003)
+
+  05 Sep 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-small-2003081400.ebuild:
+  Add old API to new API transition package, selinux-small is no longer
+  maintained.
 
   02 Aug 2003; Chris PeBenito <pebenito@gentoo.org>
   selinux-small-2003071106.ebuild:
