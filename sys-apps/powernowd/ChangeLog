@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/powernowd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/powernowd/ChangeLog,v 1.1 2004/04/05 23:50:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powernowd/ChangeLog,v 1.2 2004/04/21 10:00:59 lv Exp $
+
+  21 Apr 2004; Travis Tilley <lv@gentoo.org> powernowd-0.90.ebuild:
+  added ~amd64 keyword
 
 *powernowd-0.90 (05 Apr 2004)
 
