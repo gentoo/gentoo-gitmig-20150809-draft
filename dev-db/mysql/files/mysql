@@ -22,7 +22,7 @@ PATH=/sbin:/usr/sbin:/bin:/usr/bin
 basedir=/usr
 bindir=/usr/bin
 datadir=/var/mysql
-pid_file=/var/mysql/mysqld.pid
+pid_file=/var/run/mysqld.pid
 mysql_daemon_user=root	# Run mysqld as this user.
 export PATH
 
