@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.44 2004/08/24 11:23:13 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.45 2004/08/24 19:25:07 lisa Exp $
+
+  24 Aug 2004; Lisa Seelye <lisa@gentoo.org> anjuta-1.2.2-r1.ebuild,
+  anjuta-1.2.2.ebuild:
+  Fixing the dependency which was changed (but not updated in these ebuilds,
+  foser). closes bug #61304
 
   24 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
   files/anjuta-1.2.2-64bit.patch:
