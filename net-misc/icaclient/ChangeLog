@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.8 2004/06/07 21:55:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.9 2004/06/07 22:01:01 mr_bones_ Exp $
+
+  07 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  icaclient-6.30-r1.ebuild, icaclient-7.0.ebuild:
+  dyn_fetch() -> pkg_nofetch(); tidy
 
   07 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> icaclient-6.30.ebuild:
   clean older ebuild
