@@ -1,9 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.9.9.ebuild,v 1.3 2003/10/27 15:42:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.9.9.ebuild,v 1.4 2004/01/18 14:39:04 mholzer Exp $
 
 DESCRIPTION="system and ISDN information is shown on an external display or in a X11 window."
 SRC_URI="mirror://sourceforge/lcd4linux/${P}.tar.gz"
+RESTRICT="nomirror"
 HOMEPAGE="http://lcd4linux.sourceforge.net/"
 
 SLOT="0"
@@ -31,6 +32,7 @@ src_compile() {
 }
 
 src_install() {
+	CONFIG_PROTECT="${CONFIG_PROTECT} /etc/lcd4linux"
 	einstall
 
 	insinto /etc/lcd4linux
