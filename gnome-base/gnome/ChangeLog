@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.144 2005/03/02 07:49:32 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.145 2005/03/07 07:44:52 leonardop Exp $
+
+*gnome-2.8.3-r1 (07 Mar 2005)
+
+  07 Mar 2005; Leonardo Boshell <leonardop@gentoo.org> gnome-2.8.3-r1.ebuild:
+  Added gnome-speech and dasher to the accessibility section.
 
 *gnome-2.8.3 (02 Mar 2005)
 
@@ -24,7 +29,7 @@
   gnome-2.6.3_pre0.ebuild:
   Remove deps on masked esound and add !mips for epiphany. Fixes bug 75794
 
-  24 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> gnome-2.8.1-r1.ebuild:
+  24 Dec 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> gnome-2.8.1-r1.ebuild:
   Stable on alpha.
 
   22 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> gnome-2.8.1-r1.ebuild:
@@ -33,7 +38,7 @@
   19 Dec 2004; Mike Gardiner <obz@gentoo.org> gnome-2.8.1-r1.ebuild:
   Keyworded x86 and ppc - everyone say hello GNOME 2.8.1
 
-  11 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> gnome-2.8.0-r1.ebuild:
+  11 Dec 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> gnome-2.8.0-r1.ebuild:
   Stable on alpha.
 
   11 Dec 2004; Mike Gardiner <obz@gentoo.org> gnome-2.8.1-r1.ebuild,
@@ -57,7 +62,7 @@
   +gnome-2.8.1.ebuild:
   Added in the meta-tracker for GNOME 2.8.1
 
-  16 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org> gnome-2.8.0-r1.ebuild:
+  16 Nov 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> gnome-2.8.0-r1.ebuild:
   ~alpha keyword.
 
   12 Nov 2004; Mike Gardiner <obz@gentoo.org> gnome-2.8.0-r1.ebuild:
@@ -88,7 +93,7 @@
   18 Sep 2004; foser <foser@gentoo.org> gnome-2.8.0_pre1.ebuild :
   First gnome meta for gnome 2.8, still lacks some minor components & updates (#64135)
 
-  24 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> gnome-2.6.2-r1.ebuild:
+  24 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org> gnome-2.6.2-r1.ebuild:
   Stable on alpha.
 
 *gnome-2.6.3_pre0 (22 Aug 2004)
@@ -128,7 +133,7 @@
   11 Jul 2004; <spider@gentoo.org> gnome-1.4-r3.ebuild:
   added IUSE flag to shut repoman up
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gnome-2.6.ebuild:
+  04 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org> gnome-2.6.ebuild:
   Stable on alpha.
 
   01 Jul 2004; Aron Griffis <agriffis@gentoo.org> gnome-2.6.1_p1.ebuild,
