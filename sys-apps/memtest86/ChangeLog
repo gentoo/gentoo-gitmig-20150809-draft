@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/memtest86
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.21 2004/09/25 03:14:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.22 2004/12/07 15:10:02 solar Exp $
+
+  07 Dec 2004; <solar@gentoo.org> +files/memtest86-3.1a-test-pic.patch,
+  memtest86-3.1a.ebuild:
+  - patched memtest86-3.1a to disable pic on test.c which was causing BREG
+  errors when building. x86 asm guru needed to make the test pic aware someday
 
 *memtest86-3.1a (24 Sep 2004)
 

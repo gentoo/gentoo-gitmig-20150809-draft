@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.1a.ebuild,v 1.1 2004/09/25 03:12:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.1a.ebuild,v 1.2 2004/12/07 15:10:02 solar Exp $
 
 inherit mount-boot eutils
 
@@ -19,8 +19,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# a little fix to make gcc-3.3.x happy
-#	epatch ${FILESDIR}/memtest86-3.0.patch
+	# bug 66630
+	epatch ${FILESDIR}/memtest86-3.1a-test-pic.patch
+
 	sed -i -e '/DISCARD/d' memtest_shared.lds
 
 	if use serial ; then

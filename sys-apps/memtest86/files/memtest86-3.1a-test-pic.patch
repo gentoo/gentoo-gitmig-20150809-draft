@@ -1,0 +1,20 @@
+--- Makefile.orig	2004-11-12 07:52:39.000000000 -0500
++++ Makefile	2004-11-12 07:52:02.000000000 -0500
+@@ -12,7 +12,7 @@
+ #
+ # gcc compiler options, these settings should suffice
+ #
+-CCFLAGS=-Wall -march=i486 -Os -fomit-frame-pointer -fno-builtin -ffreestanding
++CCFLAGS=-Wall -march=i486 -Os -fomit-frame-pointer -fno-builtin -ffreestanding -fno-stack-protector
+ 
+ AS=as -k
+ 
+@@ -26,7 +26,7 @@
+ 	$(CC) -S $(CCFLAGS) -fPIC reloc.c
+ 
+ test.o: test.c test.h defs.h config.h
+-	$(CC) -c $(CCFLAGS) test.c
++	$(CC) -c $(CCFLAGS) -fno-PIC test.c
+ 
+ main.o: main.c test.h defs.h
+ 	$(CC) -c $(CCFLAGS) -fPIC main.c
