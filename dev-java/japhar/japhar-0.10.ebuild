@@ -1,21 +1,18 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/japhar/japhar-0.10.ebuild,v 1.6 2003/02/28 13:18:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/japhar/japhar-0.10.ebuild,v 1.7 2004/03/19 01:15:03 zx Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A Free Java Virtual Machine (JVM)"
 SRC_URI="ftp://ftp.japhar.org/pub/hungry/japhar/source/${P}.tar.gz"
 HOMEPAGE="http://www.japhar.org/"
-
 SLOT="0"
 LICENSE="LGPL-2"
 KEYWORDS="x86"
-
+IUSE=""
 DEPEND="virtual/glibc
-	virtual/x11
-	>=sys-libs/zlib-1.1.3
-	>=dev-libs/nspr-4.1.2"
-RDEPEND="$DEPEND"
+		virtual/x11
+		>=sys-libs/zlib-1.1.3
+		>=dev-libs/nspr-4.1.2"
 
 src_compile() {
 	./configure \
