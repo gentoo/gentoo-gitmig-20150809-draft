@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.22 2003/02/28 04:25:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.23 2003/03/05 14:25:28 agriffis Exp $
+
+*syslog-ng-1.6.0_rc1 (05 Mar 2003)
+
+  05 Mar 2003; Aron Griffis <agriffis@gentoo.org> syslog-ng-1.6.0_rc1.ebuild:
+  Update to latest stable release candidate for bug #14335
 
 *syslog-ng-1.5.26-r1 (27 Feb 2003)
 
