@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.31 2004/02/02 02:58:21 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.32 2004/06/01 12:33:01 foser Exp $
+
+*gthum-2.4.0 (01 Jun 2004)
+
+  01 Jun 2004; foser <foser@gentoo.org> gthumb-2.4.0.ebuild :
+  New release
+  add USE (gphoto2) + dep for gphoto2 support, autodetect(=bad) though
 
   01 Feb 2004; Jon Portnoy <avenj@gentoo.org> gthumb-2.2.1.ebuild :
   AMD64 keywords.

@@ -1,16 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.2.1.ebuild,v 1.3 2004/06/01 12:33:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.4.0.ebuild,v 1.1 2004/06/01 12:33:01 foser Exp $
 
 inherit gnome2
 
-IUSE="jpeg tiff png"
 DESCRIPTION="Image viewer and browser for Gnome"
 HOMEPAGE="http://gthumb.sourceforge.net/"
-
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~amd64"
+
+IUSE="jpeg tiff png gphoto2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~amd64"
+
+# FIXME : configure switches, no autodetection
 
 RDEPEND=">=dev-libs/glib-2.2
 	>=x11-libs/gtk+-2.2
@@ -27,24 +29,12 @@ RDEPEND=">=dev-libs/glib-2.2
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
 	jpeg? ( media-libs/jpeg
-		>=media-libs/libexif-0.5.12 )"
+		>=media-libs/libexif-0.5.12 )
+	gphoto2? ( >=media-libs/libgphoto2-2.1.3 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0
 	app-text/scrollkeeper
-	>=dev-util/intltool-0.21"
+	>=dev-util/intltool-0.29"
 
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
-
-MAKEOPTS="${MAKEOPTS} -j2"
-
-pkg_postinst() {
-
-	gnome2_pkg_postinst
-
-	einfo "Due to a mistake in slotting this package it may be that gthumb-2.0.1"
-	einfo "is shown to be installed alongside this release."
-	einfo "To fix this issue 'emerge -C =gthumb-2.0*' as root, this should"
-	einfo "have no influence on your current installed gthumb."
-
-}
