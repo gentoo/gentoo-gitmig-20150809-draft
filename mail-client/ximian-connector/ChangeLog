@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/ximian-connector
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ChangeLog,v 1.6 2004/08/06 03:08:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ChangeLog,v 1.7 2004/09/05 07:21:26 khai Exp $
+
+  05 Sep 2004; Yi Qiang <khai@gentoo.org> ximian-connector-1.2.2_p1.ebuild,
+  ximian-connector-1.4.5.0.6.1.ebuild, ximian-connector-1.4.6.0.6.1.ebuild:
+  Fixed the variable ${DISTFILES} to the correct ${DISTDIR}
 
 *ximian-connector-1.4.7.2 (05 Aug 2004)
 

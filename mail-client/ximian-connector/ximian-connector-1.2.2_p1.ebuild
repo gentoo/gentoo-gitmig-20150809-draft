@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-1.2.2_p1.ebuild,v 1.6 2004/07/14 16:35:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-1.2.2_p1.ebuild,v 1.7 2004/09/05 07:21:26 khai Exp $
 
 DESCRIPTION="Ximian Connector (An Evolution Plugin to talk to Exchange Servers)"
 HOMEPAGE="http://www.ximian.com"
@@ -33,7 +33,7 @@ DEPEND="app-arch/rpm2targz
 pkg_nofetch() {
 	einfo "This package requires that you download the rpm from:"
 	einfo "http://ximian.com/products/connector/download/download.html"
-	einfo "and place it in ${DISTFILES}."
+	einfo "and place it in ${DISTDIR}."
 	einfo ""
 	einfo "NOTE: x86 users should download the package for redhat-73-i386"
 	einfo "      ppc users should download the package for yellowdog-22-ppc"
