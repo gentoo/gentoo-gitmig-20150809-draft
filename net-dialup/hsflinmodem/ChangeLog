@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/hsflinmodem
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsflinmodem/ChangeLog,v 1.14 2004/11/16 07:00:34 mrness Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsflinmodem/ChangeLog,v 1.15 2005/01/04 18:38:33 mrness Exp $
+
+  04 Jan 2005; Alin Nastac <mrness@gentoo.org>
+  -hsflinmodem-5.03.27.02122600.ebuild,
+  -hsflinmodem-5.03.27.03042700.ebuild,
+  -hsflinmodem-6.03.00.04082400.ebuild, hsflinmodem-6.03.00.04111200.ebuild:
+  Mark stable on x86 and remove obsolete versions.
 
 *hsflinmodem-6.03.00.04111200 (16 Nov 2004)
 
