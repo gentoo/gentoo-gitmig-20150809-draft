@@ -1,14 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r20.ebuild,v 1.1 2003/04/18 18:44:06 seemant Exp $
-
-IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r20.ebuild,v 1.2 2003/06/17 14:55:03 vapier Exp $
 
 inherit libtool flag-o-matic eutils
+filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
-filter-flags "-fforce-addr"
-
-S="${WORKDIR}/${P}"
 DESCRIPTION="X MultiMedia System"
 SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.gz
 	 mmx? ( http://members.jcom.home.ne.jp/jacobi/linux/etc/${P}-mmx.patch.gz )"
@@ -17,6 +13,7 @@ HOMEPAGE="http://www.xmms.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha"
+IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
 DEPEND="app-arch/unzip
 	=x11-libs/gtk+-1.2*
@@ -26,15 +23,12 @@ DEPEND="app-arch/unzip
 	gnome? ( <gnome-base/gnome-panel-1.5.0 )
 	opengl? ( virtual/opengl )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
-	
-
 RDEPEND="${DEPEND}
 	directfb? ( dev-libs/DirectFB )
 	nls? ( dev-util/intltool )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-
 	cd ${S}
 
 	# Patch to allow external programmes to have the "jump to" dialog box
@@ -44,7 +38,7 @@ src_unpack() {
 	epatch ${FILESDIR}/xmms-sigterm.patch
 
 	# The following optimisations are ONLY for x86 platform
-	use x86 && ( \
+	if [ `use x86` ] ; then
 		# For mmx/3dnow enabled CPUs, this patch adds mmx/3dnow optimisations
 		#
 		# ( use mmx || use 3dnow ) && \
@@ -68,17 +62,17 @@ src_unpack() {
 		else
 			use ipv6 && epatch ${FILESDIR}/xmms-ipv6-20020408-nommx.patch
 		fi
-	)
+	fi
 
 	# Patch for mpg123 to convert Japanese character code of MP3 tag info
 	if use cjk; then
 		epatch ${FILESDIR}/${P}-mpg123j.patch
 	fi
 
-	[ ! -f ${S}/config.rpath ] && ( \
+	if [ ! -f ${S}/config.rpath ] ; then
 		touch ${S}/config.rpath
 		chmod +x ${S}/config.rpath
-	)
+	fi
 
 	# We run automake and autoconf here else we get a lot of warning/errors.
 	# I have tested this with gcc-2.95.3 and gcc-3.1.
@@ -97,45 +91,29 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 
-	use gnome \
-		&& myconf="${myconf} --with-gnome" \
-		|| myconf="${myconf} --without-gnome"
-
 	use 3dnow || use mmx \
 		&& myconf="${myconf} --enable-simd" \
 		|| myconf="${myconf} --disable-simd"
 
-	use esd \
-		&& myconf="${myconf} --enable-esd --enable-esdtest" \
-		|| myconf="${myconf} --disable-esd --disable-esdtest"
-
-	use mikmod \
-		&& myconf="${myconf} --enable-mikmod --enable-mikmodtest \
-			--with-libmikmod" \
-		|| myconf="${myconf} --disable-mikmod --disable-mikmodtest \
-			--without-libmikmod"
-
-	use opengl \
-		&& myconf="${myconf} --enable-opengl" \
-		|| myconf="${myconf} --disable-opengl"
-	
-	use oggvorbis \
-		&& myconf="${myconf} --enable-vorbis --enable-oggtest \
-			--enable-vorbistest --with-ogg" \
-		|| myconf="${myconf} --disable-vorbis --disable-oggtest \
-			--disable-vorbistest --without-ogg"
-
 	use xml \
 		|| myconf="${myconf} --disable-cdindex"
-
-	use nls \
-		|| myconf="${myconf} --disable-nls"
-
-	use ipv6 && myconf="${myconf} --enable-ipv6"
 
 	econf \
 		--with-dev-dsp=/dev/sound/dsp \
 		--with-dev-mixer=/dev/sound/mixer \
+		`use_with gnome` \
+		`use_enable oggvorbis vorbis` \
+		`use_enable oggvorbis oggtest` \
+		`use_enable oggvorbis vorbistest` \
+		`use_with oggvorbis ogg` \
+		`use_enable esd` \
+		`use_enable esd esdtest` \
+		`use_enable mikmod` \
+		`use_enable mikmod mikmodtest` \
+		`use_with mikmod libmikmod` \
+		`use_enable opengl` \
+		`use_enable nls` \
+		`use_enable ipv6` \
 		${myconf} || die
 
 	### emake seems to break some compiles, please keep @ make
@@ -165,14 +143,14 @@ src_install() {
 	insinto /etc/X11/wmconfig
 	donewins xmms/xmms.wmconfig xmms
 
-	use gnome && ( \
+	if [ `use gnome` ] ; then
 		insinto /usr/share/gnome/apps/Multimedia
 		doins xmms/xmms.desktop
 		dosed "s:xmms_mini.xpm:mini/xmms_mini.xpm:" \
 			/usr/share/gnome/apps/Multimedia/xmms.desktop
-	) || ( \
+	else
 		rm ${D}/usr/share/man/man1/gnomexmms*
-	)
+	fi
 
 	# causes segfaults for ppc users #10309 and after talking
 	# to xmms dev's, they've punted this from the src tree anyways ...
@@ -180,10 +158,8 @@ src_install() {
 }
 
 pkg_postrm() {
-
 	if [ -x ${ROOT}/usr/bin/xmms ] && [ ! -d ${ROOT}/usr/share/xmms/Skins ]
 	then
 		mkdir -p ${ROOT}/usr/share/xmms/Skins
 	fi
 }
-
