@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.17 2004/04/08 09:32:51 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.18 2004/04/17 18:28:01 gmsoft Exp $
 
 inherit libtool
 
@@ -35,7 +35,7 @@ src_compile() {
 		--with-threads=posix \
 		--enable-debug=yes || die
 
-	if [ "${ARCH}" = "alpha" -o "${ARCH}" = "amd64" ] ; then
+	if [ "${ARCH}" = "alpha" -o "${ARCH}" = "amd64" -o "${ARCH}" = "hppa" ] ; then
 		emake CFLAGS="${CFLAGS} -fPIC" || die
 	else
 		emake || die
