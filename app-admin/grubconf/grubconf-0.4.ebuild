@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconf/grubconf-0.4.ebuild,v 1.1 2003/04/18 13:41:38 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconf/grubconf-0.4.ebuild,v 1.2 2003/04/23 14:19:57 vapier Exp $
 
 inherit gnome2
 
-DESCRIPTION="Grub Conf is a Gnome2 based GRUB configuration editor."
+DESCRIPTION="Gnome2 based GRUB configuration editor"
 HOMEPAGE="http://grubconf.sf.net/"
 SRC_URI="mirror://sourceforge/grubconf/${P}.tar.gz"
 
