@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b32288e366283eba0e1cbffd1b48102f ChangeLog 2109
 MD5 06f4145fae65bfcd6d8b89d7fbee1aad gperf-2.7.2.ebuild 756
-MD5 87ece4d63af4b37da99800f31d0471e5 gperf-3.0.1.ebuild 540
+MD5 d3eabd55bafe4c655f6bc2a64a6b457c gperf-3.0.1.ebuild 542
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 ec1cc9b13d8e32fc5d07f728b58f8fe9 files/digest-gperf-2.7.2 63
 MD5 748cbc76e71cf034e58e6eae1ad118e4 files/digest-gperf-3.0.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiqteHTu7gpaalycRAj1IAJwMsnAwmGTPT0HECnlw+l7M6sQvdgCg4ejm
+cSKwkgUX7cn240p4Sa7dZOE=
+=FMvq
+-----END PGP SIGNATURE-----
