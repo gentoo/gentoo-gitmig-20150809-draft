@@ -3,7 +3,8 @@
 <pkgmetadata>
 <herd>X11</herd>
 <maintainer>
-  <email>x11@gentoo.org</email>
+  <email>eradicator@gentoo.org</email>
+  <name>Jeremy Huddleston</name>
 </maintainer>
 <longdescription>Utility to switch opengl implementations between various providers.</longdescription>
 </pkgmetadata>
