@@ -64,18 +64,6 @@ diff -urN selinux.orig/libsecure/src/Makefile selinux/libsecure/src/Makefile
  
  ARCH := $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/)
  OBJS+= $(patsubst %.c,%.o,$(wildcard arch/$(ARCH)/*.c))
-diff -urN selinux.orig/libsecure/src/xstat_conv.h selinux/libsecure/src/xstat_conv.h
---- selinux.orig/libsecure/src/xstat_conv.h	2003-06-18 08:56:00.000000000 -0500
-+++ selinux/libsecure/src/xstat_conv.h	2003-07-13 15:00:48.000000000 -0500
-@@ -36,7 +36,7 @@
- 
-     case _STAT_VER_LINUX:
-       {
--	struct stat *buf = ubuf;
-+	struct kernel_stat *buf = ubuf;
- 
- 	/* Convert to current kernel version of `struct stat'.  */
- 	buf->st_dev = kbuf->st_dev;
 diff -urN selinux.orig/libsecure/test/Makefile selinux/libsecure/test/Makefile
 --- selinux.orig/libsecure/test/Makefile	2003-04-22 08:24:05.000000000 -0500
 +++ selinux/libsecure/test/Makefile	2003-07-13 15:05:48.000000000 -0500

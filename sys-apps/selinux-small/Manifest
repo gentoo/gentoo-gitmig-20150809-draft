@@ -16,4 +16,4 @@ MD5 ece4a7821d33af42526916fa2725724a files/selinux-small-2003040709-gentoo.diff 
 MD5 2ebe97274132b6318b82fe6e3f185ea1 files/selinux-small-2003040709-newrole.diff 2640
 MD5 16b7e55b13429ce3e437bfc457cc2a8d files/selinux-small-2003040709-newstat.diff 8495
 MD5 3809db44913b783d2b8bb31c8361aa92 files/selinux-small-2003040709-setfiles.diff 2623
-MD5 e755d9cd5ef299b1b33feb5df633764d files/selinux-small-2003071106-gentoo.diff 11301
+MD5 c5b99591882f03bac91b33c928878158 files/selinux-small-2003071106-gentoo.diff 10851
