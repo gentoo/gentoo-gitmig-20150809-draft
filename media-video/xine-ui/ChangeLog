@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.60 2004/06/28 22:49:00 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.61 2004/07/14 20:53:52 chriswhite Exp $
+
+  15 Jul 2004; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Changing herd to media-video.  Added myself as mantainer.
 
   29 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> xine-ui-0.99.1.ebuild:
   Marked ~amd64.
