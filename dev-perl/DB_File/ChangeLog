@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DB_File
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DB_File/ChangeLog,v 1.12 2003/08/01 10:27:45 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DB_File/ChangeLog,v 1.13 2003/08/25 20:05:15 weeve Exp $
+
+  25 Aug 2003; Jason Wever <weeve@gentoo.org> DB_File-1.803-r2.ebuild:
+  Marked stable for sparc to fix bug #6580.
 
   01 Aug 2003; Paul de Vrieze <pauldv@gentoo.org> DB_File-1.803-r2.ebuild:
   Fix dependency. This ebuild depends on db-3.2, and does not work with db-4
