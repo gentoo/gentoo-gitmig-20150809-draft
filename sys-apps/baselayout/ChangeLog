@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.43 2002/11/18 13:45:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.44 2002/11/18 19:51:37 azarah Exp $
+
+*baselayout-1.8.5.3 (18 Nov 2002)
+
+  18 Nov 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.5.3.ebuild :
+
+  Ok, new version again.  Fixes config files containing licenses, and a problem
+  with the awk module on non-x86 arch's.  This should hopefully be the last release
+  for a bit.
 
 *baselayout-1.8.5.2 (18 Nov 2002)
 
