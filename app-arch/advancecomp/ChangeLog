@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/advancecomp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.16 2004/10/05 10:59:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.17 2004/12/17 10:45:42 taviso Exp $
+
+  17 Dec 2004; Tavis Ormandy <taviso@gentoo.org>
+  +files/advancecomp-1.13-64bit.diff,
+  +files/advancecomp-1.13-bzip2-compile-plz-k-thx.diff:
+  bump #44265
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   advancecomp-1.10.ebuild:

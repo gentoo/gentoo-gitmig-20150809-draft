@@ -1,0 +1,56 @@
+--- advancecomp-1.13.orig/file.cc	2004-12-16 23:19:17.778775072 -0200
++++ advancecomp-1.13/file.cc	2004-12-16 23:28:55.382965888 -0200
+@@ -295,7 +295,7 @@
+ {
+ 	ostringstream os;
+ 
+-	unsigned pos = path.rfind('.');
++	string::size_type pos = path.rfind('.');
+ 
+ 	if (pos == string::npos) 
+ 		os << path << ".";
+@@ -312,7 +312,7 @@
+  */
+ string file_dir(const string& path) throw ()
+ {
+-	unsigned pos = path.rfind('/');
++	string::size_type pos = path.rfind('/');
+ 	if (pos == string::npos) {
+ 		return "";
+ 	} else {
+@@ -325,7 +325,7 @@
+  */
+ string file_name(const string& path) throw ()
+ {
+-	unsigned pos = path.rfind('/');
++	string::size_type pos = path.rfind('/');
+ 	if (pos == string::npos) {
+ 		return path;
+ 	} else {
+@@ -338,7 +338,7 @@
+  */
+ string file_basepath(const string& path) throw ()
+ {
+-	unsigned dot = path.rfind('.');
++	string::size_type dot = path.rfind('.');
+ 	if (dot == string::npos)
+ 		return path;
+ 	else
+@@ -351,7 +351,7 @@
+ string file_basename(const string& path) throw ()
+ { 
+ 	string name = file_name(path);
+-	unsigned dot = name.rfind('.');
++	string::size_type dot = name.rfind('.');
+ 	if (dot == string::npos)
+ 		return name;
+ 	else
+@@ -364,7 +364,7 @@
+ string file_ext(const string& path) throw ()
+ { 
+ 	string name = file_name(path);
+-	unsigned dot = name.rfind('.');
++	string::size_type dot = name.rfind('.');
+ 	if (dot == string::npos)
+ 		return "";
+ 	else
