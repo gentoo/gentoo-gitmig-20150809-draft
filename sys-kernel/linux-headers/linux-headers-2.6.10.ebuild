@@ -1,14 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.10.ebuild,v 1.2 2005/02/12 20:23:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.10.ebuild,v 1.3 2005/03/02 18:58:17 vapier Exp $
 
 ETYPE="headers"
-H_SUPPORTEDARCH="alpha amd64 arm hppa ia64 ppc ppc64 s390 sparc x86"
+H_SUPPORTEDARCH="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
 inherit kernel-2
 detect_version
 
 SRC_URI="${KERNEL_URI}"
-KEYWORDS="-* ~amd64 ~sparc ~x86" # Untested, by using this you are agreeing to file bugs to plasmaroo, aren't you? :-)
+KEYWORDS="-* ~amd64 ~arm ~hppa ~ia64 ~sparc ~s390 ~sh ~x86" # Untested, by using this you are agreeing to file bugs to plasmaroo, aren't you? :-)
 
 UNIPATCH_LIST="
 	${FILESDIR}/${PN}-2.6.0-sysctl_h-compat.patch
