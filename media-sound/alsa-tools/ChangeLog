@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.26 2003/07/29 19:57:49 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.27 2003/08/18 11:29:53 g2boojum Exp $
+
+*alsa-tools-0.9.6-r1 (18 Aug 2003)
+
+  18 Aug 2003; Nick Hadaway <raker@gentoo.org> alsa-tools-0.9.6-r1.ebuild:
+  See bug #25775.  Brought the ALSA_TOOLS list up to date and added
+  a small fix0r for a non compiling hdspmixer.
 
   04 Jul 2003; jje <jje@gentoo.org> alsa-tools-0.9.4.ebuild:
   Added alsa-driver to DEPEND. See #23613. Most people follow the instructions
