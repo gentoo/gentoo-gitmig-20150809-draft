@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_layout
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/ChangeLog,v 1.9 2005/01/07 19:06:56 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/ChangeLog,v 1.10 2005/02/17 15:16:02 hollow Exp $
+
+  17 Feb 2005; Benedikt Boehm <hollow@gentoo.org>
+  mod_layout-3.2.1-r1.ebuild, mod_layout-4.0.1a-r1.ebuild:
+  cleanup
 
 *mod_layout-3.2.1-r1 (07 Jan 2005)
 
