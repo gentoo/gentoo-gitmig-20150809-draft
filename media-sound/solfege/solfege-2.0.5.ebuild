@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-2.0.5.ebuild,v 1.1 2004/07/31 01:39:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-2.0.5.ebuild,v 1.2 2004/09/03 18:22:25 eradicator Exp $
 
 inherit python
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 
 RDEPEND=">=dev-lang/python-2.3
 	>=x11-libs/gtk+-2.0
