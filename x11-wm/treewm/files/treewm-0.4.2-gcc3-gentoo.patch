@@ -1,0 +1,127 @@
+diff -ur treewm-0.4.2.orig/treewm/clienttree.h treewm-0.4.2/treewm/clienttree.h
+--- treewm-0.4.2.orig/treewm/clienttree.h	Fri Mar 15 11:16:35 2002
++++ treewm-0.4.2/treewm/clienttree.h	Wed Sep  4 11:12:25 2002
+@@ -11,7 +11,7 @@
+ #include "desktop.h" // because of inline functions
+ #include "manager.h"
+ #include "uehandler.h"
+-#include <hash_map>
++#include <ext/hash_map>
+ #include <regex.h>
+ 
+ struct WatchList {
+@@ -24,7 +24,7 @@
+   WatchList *next;
+ };
+ 
+-typedef hash_map<Window,TWindow *> Wmap;
++typedef __gnu_cxx::hash_map<Window,TWindow *> Wmap;
+ typedef Wmap::value_type WmapPair;
+ typedef Wmap::iterator WmapIter;
+ 
+diff -ur treewm-0.4.2.orig/treewm/resmanager.h treewm-0.4.2/treewm/resmanager.h
+--- treewm-0.4.2.orig/treewm/resmanager.h	Fri Mar 15 11:47:32 2002
++++ treewm-0.4.2/treewm/resmanager.h	Wed Sep  4 11:11:35 2002
+@@ -9,7 +9,7 @@
+ 
+ #include "global.h"
+ #include "client.h"
+-#include <hash_map>
++#include <ext/hash_map>
+ 
+ struct eqstr {
+   bool operator() (const char* s1, const char* s2) const  {
+@@ -17,10 +17,10 @@
+   }
+ };
+ 
+-typedef hash_map<const char *,Info *, hash<const char*>, eqstr> InfoList;
++typedef __gnu_cxx::hash_map<const char *,Info *, __gnu_cxx::hash<const char*>, eqstr> InfoList;
+ typedef InfoList::iterator InfoListIter;
+ 
+-typedef hash_map<const char *,unsigned long, hash<const char*>, eqstr> FlagMap;
++typedef __gnu_cxx::hash_map<const char *,unsigned long, __gnu_cxx::hash<const char*>, eqstr> FlagMap;
+ typedef FlagMap::iterator FlagMapIter;
+ 
+ struct Entry {
+diff -ur treewm-0.4.2.orig/treewm/tile.cc treewm-0.4.2/treewm/tile.cc
+--- treewm-0.4.2.orig/treewm/tile.cc	Sun Sep 16 13:24:45 2001
++++ treewm-0.4.2/treewm/tile.cc	Wed Sep  4 11:37:11 2002
+@@ -86,7 +86,7 @@
+   int workCyclesLeft=maxWorkCycles;
+   int noItemsOnFront=noItemsOnFrontP;
+   int curPosOnFront=0;
+-  stack<pair<int,int> > theStack;
++  std::stack<std::pair<int,int> > theStack;
+   do{
+     if(!front[curPosOnFront].currentlyUsed){
+       //only count this as working cycle if we do reasonable amount of work
+@@ -101,9 +101,9 @@
+         consistentSoFar &= !rectanglesOverlap(rects[i],rects[curRect]);
+       }
+       if(consistentSoFar){
+-        maxDimens[curRect+1].first=max(maxDimens[curRect].first,
++        maxDimens[curRect+1].first=std::max(maxDimens[curRect].first,
+                                        rects[curRect].x+rects[curRect].sizeX);
+-        maxDimens[curRect+1].second=max(maxDimens[curRect].second,
++        maxDimens[curRect+1].second=std::max(maxDimens[curRect].second,
+                                         rects[curRect].y+rects[curRect].sizeY);
+         if(curRect==noRectangles-1){
+           //if we've got this far, then we must have a valid configuration,
+@@ -112,10 +112,10 @@
+           if(bboxArea < lowestArea){
+             lowestArea=bboxArea;
+             //is there any advantage to using a bitwise copy?
+-            copy(rects,rects+noRectangles,bestPlacement);
++            std::copy(rects,rects+noRectangles,bestPlacement);
+           }
+         }else{
+-          theStack.push(make_pair(curPosOnFront,noItemsOnFront));
++          theStack.push(std::make_pair(curPosOnFront,noItemsOnFront));
+           //expand frontier to accomodate the points from this rectangle
+           front[noItemsOnFront++]
+             .set(rects[curRect].x+rects[curRect].sizeX+1,rects[curRect].y,0);
+@@ -158,7 +158,7 @@
+     return false;
+   }
+   //order the rectangles by decreasing area (using STL sort for convenience)
+-  sort(rects,rects+noRectangles);
++  std::sort(rects,rects+noRectangles);
+   RectRec *bestPlacement=new RectRec[5*noRectangles];
+   int lowestBBoxArea=maxX*maxY+1;
+   FrontierRec *front=new FrontierRec[5*2*noRectangles+2];
+@@ -171,7 +171,7 @@
+   delete[] maxDimens;
+   delete[] front;
+   if(lowestBBoxArea<maxX*maxY+1){
+-    copy(bestPlacement,bestPlacement+noRectangles,rects);
++    std::copy(bestPlacement,bestPlacement+noRectangles,rects);
+   }
+   delete[] bestPlacement;
+   return lowestBBoxArea<maxX*maxY+1;
+diff -ur treewm-0.4.2.orig/treewm/uehandler.h treewm-0.4.2/treewm/uehandler.h
+--- treewm-0.4.2.orig/treewm/uehandler.h	Fri Mar 15 11:17:22 2002
++++ treewm-0.4.2/treewm/uehandler.h	Wed Sep  4 11:09:16 2002
+@@ -10,19 +10,19 @@
+ #include "global.h"
+ #include "client.h"
+ #include <regex.h>
+-#include <hash_map>
++#include <ext/hash_map>
+ 
+ 
+ #define RESIZERATIO 8
+ #define RESIZEMIN 48
+ 
+-struct ModList {
++struct  ModList {
+   unsigned int mod;
+   char *cmd;
+   ModList *next;
+ };
+ 
+-typedef hash_map<KeyCode,ModList *> KeyMap;
++typedef __gnu_cxx::hash_map<KeyCode,ModList *> KeyMap;
+ typedef KeyMap::iterator KeyMapIter;
+ 
+ class UEHandler {
