@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2722 2004/02/25 16:52:05 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2723 2004/02/26 14:27:04 mksoft Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -22,6 +22,10 @@
 ##
 ##   End example
 ##
+
+# <mksoft@gentoo.org> (26 Feb 2004)
+# Masked for testing
+>=dev-db/firebird-1.5.0
 
 # <absinthe@gentoo.org> (25 Feb 2004)
 # PropertyFile broken, and who knows what else
