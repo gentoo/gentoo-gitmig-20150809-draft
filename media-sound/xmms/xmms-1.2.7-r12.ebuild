@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r12.ebuild,v 1.4 2002/07/21 21:23:49 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r12.ebuild,v 1.5 2002/07/31 16:43:34 azarah Exp $
 
 inherit libtool
 
@@ -51,6 +51,8 @@ src_unpack() {
 	then
 		# For mmx/3dnow enabled CPUs, this patch adds mmx/3dnow optimisations
 		#
+		# ( use mmx || use 3dnow ) && \
+		# 	cat ${DISTDIR}/${P}-mmx.patch.gz | gunzip -c | patch -p1 || die
 		#
 		# For you guys who favour this kind of USE flag checking ... this
 		# is exactly why I do NOT like it, because the actual
@@ -58,7 +60,8 @@ src_unpack() {
 		# was not in a subshell, it would ALWAYS fail to build if "mmx" or
 		# "3dnow" was not in USE, because of the || die at the end.  So
 		# PLEASE, PLEASE test things with all possible USE flags if you use
-		# this style!!!!
+		# this style!!!!  Then, if in a subshell, it do not detect if the
+		# command fails :/
 		#
 		# Azarah - 30 Jun 2002
 		#
@@ -85,6 +88,7 @@ src_unpack() {
 	# We run automake and autoconf here else we get a lot of warning/errors.
 	# I have tested this with gcc-2.95.3 and gcc-3.1.
 	elibtoolize
+	echo ">>> Reconfiguring..."
 	for x in ${S} ${S}/libxmms
 	do
 		cd ${x}
@@ -111,16 +115,20 @@ src_compile() {
 		|| myopts="${myopts} --disable-esd --disable-esdtest"
 
 	use mikmod \
-		&& myopts="${myopts} --enable-mikmod --enable-mikmodtest --with-libmikmod" \
-		|| myopts="${myopts} --disable-mikmod --disable-mikmodtest --without-libmikmod"
+		&& myopts="${myopts} --enable-mikmod --enable-mikmodtest \
+			--with-libmikmod" \
+		|| myopts="${myopts} --disable-mikmod --disable-mikmodtest \
+			--without-libmikmod"
 
 	use opengl \
 		&& myopts="${myopts} --enable-opengl" \
 		|| myopts="${myopts} --disable-opengl"
 	
 	use oggvorbis \
-		&& myopts="${myopts} --enable-vorbis --enable-oggtest --enable-vorbistest --with-ogg" \
-		|| myopts="${myopts} --disable-vorbis --disable-oggtest --disable-vorbistest --without-ogg"
+		&& myopts="${myopts} --enable-vorbis --enable-oggtest \
+			--enable-vorbistest --with-ogg" \
+		|| myopts="${myopts} --disable-vorbis --disable-oggtest \
+			--disable-vorbistest --without-ogg"
 
 	use xml \
 		|| myopts="${myopts} --disable-cdindex"
