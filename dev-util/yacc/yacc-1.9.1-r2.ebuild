@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r2.ebuild,v 1.4 2004/07/02 05:14:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r2.ebuild,v 1.5 2005/01/13 23:32:46 vapier Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Yacc"
 HOMEPAGE="http://dinosaur.compilertools.net/#yacc"
@@ -10,7 +10,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/devel/compiler-tools/${P}.tar.Z"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
@@ -34,7 +34,7 @@ src_unpack() {
 
 src_compile() {
 	make clean || die
-	make CFLAGS="${CFLAGS}" || die
+	emake -j1 CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
