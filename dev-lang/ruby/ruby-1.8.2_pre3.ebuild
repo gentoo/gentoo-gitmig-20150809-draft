@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre3.ebuild,v 1.1 2004/11/08 04:31:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre3.ebuild,v 1.2 2004/11/08 05:20:36 agriffis Exp $
 
 ONIGURUMA="onigd2_3_2"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
 LICENSE="Ruby"
 SLOT="1.8"
 # please keep sorted
-KEYWORDS="~alpha ~amd64 ~arm ~hppa -ia64 ~mips ~ppc ~ppc-macos ~s390 ~sparc ~x86 ~ppc64"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~s390 ~sparc ~x86 ~ppc64"
 IUSE="socks5 tcltk cjk doc threads"
 
 RDEPEND="virtual/libc
@@ -68,6 +68,11 @@ src_compile() {
 	if [ -n "${RUBY_GC_MALLOC_LIMIT}" ] ; then
 		CFLAGS="${CFLAGS} -DGC_MALLOC_LIMIT=${RUBY_GC_MALLOC_LIMIT}"
 		export CFLAGS
+	fi
+
+	# On ia64 we need to build without optimization #48824
+	if use ia64; then
+		replace-flags '-O*' -O0
 	fi
 
 	econf --program-suffix=${SLOT/./} --enable-shared \

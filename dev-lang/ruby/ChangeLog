@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.100 2004/11/08 04:31:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.101 2004/11/08 05:20:36 agriffis Exp $
+
+  09 Nov 2004; Aron Griffis <agriffis@gentoo.org> ruby-1.8.2_pre3.ebuild:
+  On ia64 we need to build without optimization #48824.  Add ~ia64
 
 *ruby-1.8.2_pre3 (09 Nov 2004)
 
