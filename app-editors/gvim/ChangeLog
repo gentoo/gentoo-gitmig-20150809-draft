@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.19 2003/03/13 22:25:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.20 2003/03/14 07:55:14 seemant Exp $
 
   13 Mar 2003; Seemant Kulleen <seemant@gentoo.org> gvim-6.1-r6.ebuild :
 
@@ -20,7 +20,11 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*gvim-6.1-r6.ebuild (21 Jan 2003)
+*gvim-6.1-r6 (21 Jan 2003)
+
+  13 Mar 2003; Seemant Kulleen <seemant@gentoo.org> gvim-6.1-r6.ebuild:
+  the EGUI_ENABLE variable is actually not needed, the eclass will detect
+  whether it is installing for vim or gvim
 
   21 Jan 2003; Ryan Phillips <rphillips@gentoo.org> files/gvimrc :
   Added modelines=0 to default to high security. Fixes #14088
