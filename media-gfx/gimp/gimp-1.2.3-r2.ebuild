@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r2.ebuild,v 1.7 2002/09/13 17:48:49 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r2.ebuild,v 1.8 2002/09/20 05:04:30 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GIMP"
@@ -110,7 +110,7 @@ src_compile() {
 	fi
 
 	# Doesn't work with -j 4 (hallski)
-	make ${mymake} || die
+	MAKEOPTS="-j1" emake ${mymake} || die
 }
 
 src_install() {
