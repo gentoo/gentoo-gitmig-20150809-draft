@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.33 2004/07/20 06:21:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.34 2004/08/07 23:30:19 solar Exp $
+
+  07 Aug 2004; <solar@gentoo.org> :
+  Made dietlibc propolice/ssp aware on arches sparc/sparc64/x86_64/i386. Also
+  made feeble attempt to version bump to 0.27 but that failed something fierce
 
   19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> dietlibc-0.23.ebuild:
   || die for sparc's make in src_compile().
