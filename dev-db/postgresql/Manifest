@@ -1,4 +1,4 @@
-MD5 6d16efcbac7eb36e1cb7c31b9d95a44b ChangeLog 14124
+MD5 2f0edb8cc72ea4c881f19f54150bea52 ChangeLog 14292
 MD5 7242b7bebfa1e8d11384bfb997ecda5b postgresql-7.3.4-r1.ebuild 8090
 MD5 e1188a1c01977a25f5c3f7e2f415129c postgresql-7.3.5.ebuild 8508
 MD5 b9dfc557b3fc43a1afaef124b996b51d postgresql-7.3.5-r1.ebuild 8589
@@ -6,6 +6,8 @@ MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 105fabcd8accf9c0f533da136c767aa9 postgresql-7.4.1.ebuild 8276
 MD5 418db21605309d5c0322b65bac9cf8c7 postgresql-7.4.1-r1.ebuild 8531
 MD5 ec5c3866f1c807df3d5a001f5fed2ab9 postgresql-7.4.1-r2.ebuild 8652
+MD5 5dced1760ca8ba305cb6e37408e3f26a postgresql-7.3.5-r2.ebuild 8517
+MD5 840055700d7fd5c990c95344d785b034 postgresql-7.4.1-r3.ebuild 8581
 MD5 7b4771ec5dd5bcb3f47495cca2fb3482 files/digest-postgresql-7.3.5 288
 MD5 b0b26f2f466f14fcab3085e2ce726413 files/postgresql.init-7.3.4 1138
 MD5 b0b26f2f466f14fcab3085e2ce726413 files/postgresql.init-7.3.5 1138
@@ -26,3 +28,5 @@ MD5 fb171f76854a5249b2be2773b4336a4a files/postgresql-7.4-gentoo.patch 623
 MD5 acdb60da191b0dc633560407ca7e172b files/postgresql.env-7.3.5 29
 MD5 3f7fdc0edd471b911d75caf118d6b7e2 files/digest-postgresql-7.4.1-r1 288
 MD5 3f7fdc0edd471b911d75caf118d6b7e2 files/digest-postgresql-7.4.1-r2 288
+MD5 3f7fdc0edd471b911d75caf118d6b7e2 files/digest-postgresql-7.4.1-r3 288
+MD5 7b4771ec5dd5bcb3f47495cca2fb3482 files/digest-postgresql-7.3.5-r2 288
