@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cproto/cproto-4.6.ebuild,v 1.6 2004/07/02 05:04:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cproto/cproto-4.6.ebuild,v 1.7 2004/08/25 02:22:24 swegener Exp $
 
 IUSE=""
 
 DESCRIPTION="generate C function prototypes from C source code"
-SRC_URI="http://dl.sourceforge.net/sourceforge/cproto/cproto-4.6.tar.gz"
+SRC_URI="mirror://sourceforge/cproto/cproto-4.6.tar.gz"
 HOMEPAGE="http://cproto.sourceforge.net/"
 
 SLOT="0"

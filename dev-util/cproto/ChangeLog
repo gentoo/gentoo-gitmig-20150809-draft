@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cproto
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cproto/ChangeLog,v 1.7 2004/07/02 05:04:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cproto/ChangeLog,v 1.8 2004/08/25 02:22:24 swegener Exp $
+
+  25 Aug 2004; Sven Wegener <swegener@gentoo.org> cproto-4.6.ebuild:
+  Changed SRC_URI to use mirror:// syntax.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> cproto-4.6-r1.ebuild,
   cproto-4.6.ebuild:
