@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/gift-cvs-0.11.1.ebuild,v 1.1 2003/07/14 20:27:57 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/gift-cvs-0.11.1.ebuild,v 1.2 2003/07/15 18:02:48 lostlogic Exp $
 
 DESCRIPTION="A OpenFT, Gnutella and FastTrack p2p network client"
 HOMEPAGE="http://gift.sourceforge.net"
@@ -51,6 +51,11 @@ src_install() {
 pkg_postinst() {
 	einfo "First of all you need to run giFT-setup with your normal"
 	einfo "user account to create the giFT configuration files."
+	echo
+	einfo "If you encounter bugs in this package, please contact"
+	einfo "us via bugs.gentoo.org rather than attempting to seek"
+	einfo "support from the upstream developer, as this version"
+	einfo "was not designed to be installed by the public at large"
 	echo
 	einfo "FastTrack support is no longer in this build, please"
 	einfo "emerge net-p2p/gift-fasttrack-cvs for FastTrack support"
