@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exmh/exmh-2.5.ebuild,v 1.6 2002/10/24 00:36:22 vapier Exp $
-
-IUSE="crypt"
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exmh/exmh-2.5.ebuild,v 1.7 2002/11/30 19:59:32 vapier Exp $
 
 DESCRIPTION="An X user interface for MH mail"
 SRC_URI="ftp://ftp.scriptics.com/pub/tcl/${PN}/${PN}-${PV}.tar.gz"
@@ -11,6 +9,7 @@ HOMEPAGE="http://beedub.com/exmh/"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc sparc64"
+IUSE="crypt"
 
 DEPEND="net-mail/nmh
 	dev-tcltk/expect
@@ -25,7 +24,7 @@ src_unpack() {
 	cd ${S}
 	for i in *.MASTER; do cp $i ${i%%.MASTER}; done
 	mv exmh.l exmh.1
-    patch -p1 < ${FILESDIR}/exmh-2.5-conf.patch
+	patch -p1 < ${FILESDIR}/exmh-2.5-conf.patch
 	cd misc
 	rm -rf RPM *tar* *gbuffy*
 	for i in *
@@ -52,6 +51,6 @@ src_install() {
 
 	dodoc COPYRIGHT exmh.CHANGES exmh.README misc/*
 
-	mkdir -p ${D}/usr/lib/${PN}-${PV}
+	dodir /usr/lib/${PN}-${PV}
 	install -m 644 lib/* ${D}/usr/lib/${PN}-${PV}
 }
