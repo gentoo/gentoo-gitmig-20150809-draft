@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.30 2004/07/10 16:42:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.31 2004/07/29 04:24:12 tgall Exp $
+
+  28 Jul 2004; Tom Gall <tgall@gentoo.org> lirc-0.7.0_pre6.ebuild:
+  stable on ppc64, bug #55076
 
   03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> lirc-0.7.0_pre4.ebuild:
   Stable on alpha.
