@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/neon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.7 2002/10/18 20:10:44 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.8 2002/10/26 13:03:00 karltk Exp $
+
+*neon-0.23.3 (26 Oct 2002)
+
+  26 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> neon-0.23.3.ebuild files/digest-neon-0.23.3 :
+  New upstream version.
 
 *neon-0.23.2 (18 Oct 2002)
 
