@@ -1,0 +1,19 @@
+Index: runscript.sh
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/sbin/runscript.sh,v
+retrieving revision 1.43
+diff -u -r1.43 runscript.sh
+--- sbin/runscript.sh	15 Nov 2004 18:02:57 -0000	1.43
++++ sbin/runscript.sh	4 Dec 2004 07:06:18 -0000
+@@ -16,11 +16,6 @@
+ 	exit 1
+ fi
+ 
+-if [[ "${0##*/}" = "runscript.sh" ]] ; then
+-	eerror "$0: Do not run this directly"
+-	exit 1
+-fi
+-
+ # State variables
+ svcpause="no"
+ svcrestart="no"

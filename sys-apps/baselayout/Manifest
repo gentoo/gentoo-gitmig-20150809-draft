@@ -1,14 +1,27 @@
-MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
-MD5 5a6e60d4a0e6baf8f051488786595d0c baselayout-1.9.4-r6.ebuild 16833
-MD5 e4016c14aee3294de249fe473b661f73 ChangeLog 43264
-MD5 14278861a1ae53f620f07c07e168ac8c baselayout-1.11.6-r1.ebuild 16524
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e9600007bc7c696f750fd615d77da50b ChangeLog 43492
 MD5 77f352bec7cebc3712fcf33f34f55c8d baselayout-1.11.7.ebuild 16523
-MD5 dd7fbce62822fed1595f11078e23aa32 files/baselayout-1.8.6.13-r1-gcc2.patch 443
-MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
-MD5 adc667ea815b256d6f39259f4134f6df files/sysvinit-2.84-selinux1.patch 3556
+MD5 37aa2ba08d4d2ad1c20deaed1d8f3347 baselayout-1.11.7-r1.ebuild 16591
+MD5 5a6e60d4a0e6baf8f051488786595d0c baselayout-1.9.4-r6.ebuild 16833
+MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
+MD5 14278861a1ae53f620f07c07e168ac8c baselayout-1.11.6-r1.ebuild 16524
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
+MD5 9933f0b4a90470585f9cee5372ac4d02 files/digest-baselayout-1.11.7-r1 69
+MD5 17086158a470fb1a8cf207c8f97f5a6f files/rc-scripts-1.6.7-fix-runscript.patch 493
+MD5 9933f0b4a90470585f9cee5372ac4d02 files/digest-baselayout-1.11.7 69
+MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
+MD5 dd7fbce62822fed1595f11078e23aa32 files/baselayout-1.8.6.13-r1-gcc2.patch 443
+MD5 adc667ea815b256d6f39259f4134f6df files/sysvinit-2.84-selinux1.patch 3556
 MD5 7b2f5e48c4d9056df539620299c20641 files/rc-scripts-1.4.16-splash.patch 11251
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r6 134
 MD5 3d1b5592b9b3398edb36d29422dc0143 files/rc-scripts-1.4.16-livecd.patch 672
 MD5 91e3a9eebc03ba2f2d2226ee4f78a177 files/digest-baselayout-1.11.6-r1 69
-MD5 9933f0b4a90470585f9cee5372ac4d02 files/digest-baselayout-1.11.7 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBsWParoRuSHgZdywRAgD8AJ9hw2mi6hCXPWLMA+sCfAN5BW8fKQCgj/Gx
+EeQ6bmZG5ldN1x1u54ysKf8=
+=boQ0
+-----END PGP SIGNATURE-----
