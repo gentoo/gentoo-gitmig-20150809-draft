@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.0.ebuild,v 1.1 2003/08/04 04:25:09 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-1.0-r1.ebuild,v 1.1 2003/08/13 20:49:54 pebenito Exp $
 
 IUSE=""
 
@@ -23,6 +23,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/checkpolicy-little_endian.diff
 }
 
 src_compile() {
