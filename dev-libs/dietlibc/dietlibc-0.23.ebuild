@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.23.ebuild,v 1.1 2003/09/13 01:07:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.23.ebuild,v 1.2 2003/09/30 00:01:18 weeve Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -29,11 +29,26 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die
+# Added by Jason Wever <weeve@gentoo.org>
+# Fix for bug #27171.
+# dietlibc assumes that if uname -m is sparc64, then gcc is 64 bit
+# but this is not the case on Gentoo currently.
+
+	if [ "${ARCH}" = "sparc" -a "${PROFILE_ARCH}" = "sparc64" ]; then
+		cd ${S}
+		/bin/sparc32 make
+	else
+		emake || die
+	fi
 }
 
 src_install() {
-	make install || die
+	if [ "${ARCH}" = "sparc" -a "${PROFILE_ARCH}" = "sparc64" ]; then
+		cd ${S}
+		/bin/sparc32 make install
+	else
+		make install || die
+	fi
 
 	exeinto /usr/bin
 #	newexe bin-i386/diet-i diet

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.16 2003/09/13 01:07:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.17 2003/09/30 00:01:18 weeve Exp $
+
+  29 Sep 2003; Jason Wever <weeve@gentoo.org> dietlibc-0.22-r2.ebuild,
+  dietlibc-0.23.ebuild:
+  Added sparc64 fix for bug #27171.
 
 *dietlibc-0.23 (12 Sep 2003)
 
