@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.4.1.ebuild,v 1.10 2004/06/25 00:44:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-0.4.1.ebuild,v 1.11 2004/06/27 18:54:22 liquidx Exp $
 
 inherit gnome2 eutils
 
@@ -27,7 +27,6 @@ RDEPEND=">=gnome-base/libgnomeui-2
 	>=dev-libs/glib-2
 	>=dev-libs/openobex-1
 	>=net-wireless/bluez-libs-2
-	>=net-wireless/bluez-sdp-1
 	>=net-wireless/libbtctl-0.3"
 
 DEPEND="${RDEPEND}
@@ -42,4 +41,6 @@ src_unpack() {
 	cd ${S}/libegg/libegg
 	epatch ${FILESDIR}/${P}-gtk24.patch
 	cp ${S}/libegg/libegg/util/eggmarshelers.h ${S}/libegg/libegg/toolbar
+	sed -i -e 's/-lsdp/-lsdp -lbluetooth/' ${S}/acinclude.m4
+	cd ${S}; aclocal; autoconf
 }
