@@ -1,4 +1,4 @@
-MD5 b7216ba0bec6c1dedf761cd7e98d8bfb files/digest-tedia2sql-1.2.8 64
+MD5 f250149e09ca83e6d08d7b72b4e58d44 tedia2sql-1.2.8.ebuild 815
+MD5 841476fe9a40cbf8a004c23d059f6ae2 ChangeLog 387
 MD5 b4240fe6e788b7ed6a160bc21f254664 files/tedia2sql-gentoo.patch 664
-MD5 c0e6e9be69afebbed8136ae1988cc742 ChangeLog 397
-MD5 8ab0207bb5fe4ee31a7304d9c61b3b3a tedia2sql-1.2.8.ebuild 822
+MD5 b7216ba0bec6c1dedf761cd7e98d8bfb files/digest-tedia2sql-1.2.8 64
