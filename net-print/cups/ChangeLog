@@ -1,10 +1,13 @@
 # ChangeLog for net-print/cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.29 2002/12/27 16:58:27 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.30 2002/12/30 12:31:57 lordvan Exp $
 
 *cups-1.1.18 (27 Dec 2002)
-  27 Dec 2002; Thomas Raschbacher <lordvan@lordvan.com>: changed pkg_postinst
+  27 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org> cups-1.1.18.ebuild:
+  changed pkg_postinst
   ~arch masked on all archs
+  30 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org> cups-1.1.18.ebuild:
+  unmasked for x86
 	
 *cups-1.1.18 (20 Dec 2002)
 
