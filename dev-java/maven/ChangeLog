@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/maven
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven/ChangeLog,v 1.1 2003/03/17 10:13:05 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven/ChangeLog,v 1.2 2003/04/23 06:16:50 strider Exp $
+
+*maven-1.0_beta9 (23 Apr 2003)
+
+  23 Apr 2003; Adrian Almenar <strider@gentoo.org> maven-1.0_beta9.ebuild:
+  Added new version ebuild. Updated the new homepage of maven project, now
+  a top level apache project.
 
 *maven-1.0_beta8 (17 Mar 2003)
 
