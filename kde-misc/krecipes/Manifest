@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 05b1b3c5379e9894707bee2699ed3c15 krecipes-0.5_beta.ebuild 547
+MD5 21a2f13c1b35b8f74f36226740790f38 krecipes-0.6_beta.ebuild 547
+MD5 f28220c103b66ade47e8bd74391f5743 ChangeLog 926
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 7a9d3d31026fcf71fd846782eb86fd4d ChangeLog 769
 MD5 04b7fb0d62563d5838b09714d71d79b0 files/digest-krecipes-0.5_beta 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBhCvrI1lqEGTUzyQRAvweAKCSA9WGeVvJtnhDgimvbfj2lAgZOgCfUDya
-Ndevd/icbzHUL9Y14uUiiMU=
-=9uHZ
------END PGP SIGNATURE-----
+MD5 6d3154ba78d1c18998cb8810d2d4c3f6 files/digest-krecipes-0.6_beta 70
