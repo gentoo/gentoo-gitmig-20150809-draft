@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Grant Goodyear <g2boojum@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r3.ebuild,v 1.2 2002/04/17 18:30:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r4.ebuild,v 1.1 2002/04/25 20:26:56 azarah Exp $
 
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
@@ -60,7 +60,10 @@ src_unpack() {
 	cd ${S}
 	#fixes the build system to properly do the transformation
 	#of the binaries (thanks to Mandrake)
-	patch -p1 <${FILESDIR}/gcc3-program-transform.patch || die
+	if build_multiple
+	then
+		patch -p1 <${FILESDIR}/gcc3-program-transform.patch || die
+	fi
 
 	#fixup libtool to correctly generate .la files with portage
 	patch <${FILESDIR}/libtool-1.4.1-portage.patch-v3 || die

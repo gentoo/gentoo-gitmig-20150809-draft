@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.5 2002/04/17 18:30:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.6 2002/04/25 20:26:55 azarah Exp $
+
+*gcc-3.0.4-r4 (25 Apr 2002)
+
+  25 Apr 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.0.4-r4 :
+
+  Only apply the gcc3-program-transform.patch patch if building 
+  a multiple install of gcc.
 
   17 Apr 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.0.4-r3 :
 
