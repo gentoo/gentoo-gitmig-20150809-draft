@@ -1,8 +1,11 @@
 # ChangeLog for app-text/manedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.8 2003/03/15 03:06:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.9 2003/04/13 20:19:33 liquidx Exp $
 
 *manedit-0.5.8 (27 Jan 2003)
+
+  13 Apr 2003; Alastair Tse <liquidx@gentoo.org> manedit-0.5.8.ebuild:
+  change icon installation to /usr/share/pixmaps
 
   15 Mar 2003; Alastair Tse <liquidx@gentoo.org> manedit-0.5.8.ebuild:
   Marking as stable for x86. 0.5.6 breaks with newer gcc.
