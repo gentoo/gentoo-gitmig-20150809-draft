@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Time-Local
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Local/ChangeLog,v 1.1 2003/06/08 02:54:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Local/ChangeLog,v 1.2 2003/07/15 11:01:11 mcummings Exp $
+
+*Time-Local-1.07 (15 Jul 2003)
+
+  15 Jul 2003; Michael Cummings <mcummings@gentoo.org> Time-Local-1.07.ebuild:
+  CPAN Version bump
 
 *Time-Local-1.05 (07 Jun 2003)
 
