@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0.ebuild,v 1.1 2003/01/29 19:43:54 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0.ebuild,v 1.2 2003/02/11 00:00:13 agriffis Exp $
 
 IUSE="sse xmms"
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/${P}
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 RDEPEND="virtual/glibc 
 	>=media-libs/libogg-1.0_rc2
