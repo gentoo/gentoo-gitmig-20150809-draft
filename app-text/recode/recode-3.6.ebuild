@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6.ebuild,v 1.12 2002/12/09 04:17:44 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6.ebuild,v 1.13 2003/02/04 15:53:14 nall Exp $
 
 IUSE="nls"
 
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )"
 
 
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 

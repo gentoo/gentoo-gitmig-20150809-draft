@@ -1,10 +1,13 @@
 # ChangeLog for app-text/recode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.8 2002/12/13 10:56:19 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.9 2003/02/04 15:53:14 nall Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *recode-3.6 (1 Feb 2002)
+
+  04 Feb 2003; Jon Nall <nall@gentoo.org> recode-3.6.ebuild :
+  added ~ppc
 
   20 Sept 2002; Mike Frysinger <vapier@gentoo.org> :
   Updated HOMEPAGE variable
