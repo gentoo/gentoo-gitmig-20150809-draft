@@ -1,0 +1,9 @@
+# ChangeLog for net-zope/groups
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/groups/ChangeLog,v 1.1 2003/03/30 07:48:57 kutsuya Exp $
+
+*groups-0.3.1 (29 Mar 2003)
+
+  29 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> groups-0.3.1.ebuild:
+  Initial import. #17599
+
