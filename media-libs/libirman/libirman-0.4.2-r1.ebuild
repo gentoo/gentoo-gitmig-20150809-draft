@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/libirman-0.4.2-r1.ebuild,v 1.4 2004/09/24 10:02:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/libirman-0.4.2-r1.ebuild,v 1.5 2004/09/24 10:06:36 eradicator Exp $
 
 IUSE=""
 inherit eutils
@@ -21,6 +21,13 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-PICShared.patch
 	epatch ${FILESDIR}/${P}-destdir.patch
+}
+
+src_compile() {
+	econf || die
+
+	# See bug #52586 for -j1 reasons
+	emake -j1 || die
 }
 
 src_install() {
