@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.30 2004/10/21 09:51:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.31 2004/11/06 08:21:27 brad Exp $
+
+*mozilla-thunderbird-0.9 (06 Nov 2004)
+
+  06 Nov 2004; Brad Laue <brad@gentoo.org> +mozilla-thunderbird-0.9.ebuild:
+  New version 0.9, featuring saved search folders, message grouping. See the
+  changelog for more details at
+  http://www.mozilla.org/products/thunderbird/releases/.
 
   21 Oct 2004; Joseph Jezak <josejx@gentoo.org>
   mozilla-thunderbird-0.8.ebuild:
