@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgoodies-animation
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-animation/ChangeLog,v 1.1 2004/12/23 00:24:52 karltk Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-animation/ChangeLog,v 1.2 2005/03/31 00:17:00 compnerd Exp $
+
+  31 Mar 2005; Saleem Abdulrasool <compnerd@gentoo.org> files/build.xml,
+  metadata.xml, jgoodies-animation-1.1.3.ebuild:
+  QA fixes; Compilation fixes
 
 *jgoodies-animation-1.1.3 (23 Dec 2004)
 
