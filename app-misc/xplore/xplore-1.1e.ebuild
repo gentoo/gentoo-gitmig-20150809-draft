@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xplore/xplore-1.1e.ebuild,v 1.7 2003/02/13 09:13:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xplore/xplore-1.1e.ebuild,v 1.8 2003/03/29 23:19:12 liquidx Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="motif file manager for X."
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND="virtual/x11
-	>=x11-libs/openmotif-2.1.30-r1"
+	virtual/motif"
 
 src_compile() {
 	#Fix Xplore.tmpl so installation is to /usr instead of /usr/X11R6
@@ -24,7 +24,8 @@ src_compile() {
 		Xplore.tmpl.orig > Xplore.tmpl
 		
 	xmkmf -a || die "xmkmf Makefile creation failed"
-	emake || die "Parallel make failed."
+    # parallel make fails
+	make || die "make failed"
 }
 
 src_install() {
