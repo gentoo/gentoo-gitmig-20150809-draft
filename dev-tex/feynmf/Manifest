@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 69a949d9e457898c5a0e9300e3bb67f3 feynmf-1.08.ebuild 1020
+MD5 7bb790d70dc220dba6eb669419d51f99 ChangeLog 524
+MD5 e3a083adda5ae417c819f9365fb63f5a feynmf-1.08.ebuild 1025
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 dac24cb7ef96f856f43dedfed845f3df ChangeLog 441
 MD5 ad6433d8aff8cdf752a4b226b8aa2e29 files/digest-feynmf-1.08 63
 MD5 9b2264341880e792b2134733e4f7fd90 files/feynmf-1.08.patch 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBXnJSVWNWqTUmv+0RAr/8AKCkvr2FxatDk2z4y7Uph5nWoyUMGACfSbdU
-8dD+8mhlnRdsbr2jd0uNub4=
-=9oHs
------END PGP SIGNATURE-----
