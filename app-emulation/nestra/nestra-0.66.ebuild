@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/nestra/nestra-0.66.ebuild,v 1.3 2003/07/18 22:59:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/nestra/nestra-0.66.ebuild,v 1.4 2003/08/03 19:54:52 vapier Exp $
 
 inherit games eutils
 
@@ -23,8 +23,8 @@ src_unpack() {
 	cd ${S}
 	epatch ${WORKDIR}/${PATCH}
 	sed -i \
-		's:-O2 ::' \
-		"s:gcc:gcc ${CFLAGS}:" \
+		-e 's:-O2 ::' \
+		-e "s:gcc:gcc ${CFLAGS}:" \
 		Makefile
 }
 
