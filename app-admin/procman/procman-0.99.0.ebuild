@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/procman-0.99.0.ebuild,v 1.11 2003/02/13 05:29:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/procman-0.99.0.ebuild,v 1.12 2003/06/10 13:14:29 liquidx Exp $
 
 DESCRIPTION="Process viewer for GNOME"
 SRC_URI="http://www.personal.psu.edu/users/k/f/kfv101/${PN}/source/${P}.tar.gz"
@@ -11,8 +11,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
 IUSE="nls"
 
-DEPEND=">=gnome-extra/gal-0.13-r1
-	>=gnome-base/libgtop-1.0.12-r1"
+DEPEND="<gnome-extra/gal-1.99
+	=gnome-base/libgtop-1*"
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
