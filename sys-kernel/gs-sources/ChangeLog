@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.13 2003/04/22 10:28:27 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.14 2003/05/02 00:18:48 livewire Exp $
+
+gs-sources-2.4.21_rc1 (01 May 2003)
+
+  01 May 2003; Bob Johnson <livewire@gentoo.org>
+	
+	- added cset-1.1122-to-1.1141.patch
+	- added gcc_optimizations (fixed pfeifer)
+	- added cpu_frequency patch
+	- added genkernel kernel_config
 
 *gs-sources-2.4.21_rc1 (21 April 2003)
 
