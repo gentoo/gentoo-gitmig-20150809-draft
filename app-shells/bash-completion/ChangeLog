@@ -1,48 +1,39 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.8 2002/06/24 21:27:24 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.9 2002/06/28 23:43:54 bangert Exp $
+
+  24 Jun 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020624.ebuild :
+  fixed SLOT
 
 *bash-completion-20020624 (24 Jun 2002)
 
   24 Jun 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020624.ebuild :
-
   version bump
-
 
 *bash-completion-20020621 (19 Jun 2002)
 
   21 Jun 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020621.ebuild :
-
   version bump
 
   20 Jun 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020619.ebuild :
-
   added support for /etc/profile.d/bash-completion
   
-
 *bash-completion-20020619 (19 Jun 2002)
 
   19 Jun 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020619.ebuild :
-
   version bump
-
 
 *bash-completion-20020521 (21 May 2002)
 
   21 May 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020521.ebuild :
-
   version bump - LICENSE & minor fixor
-
 
 *bash-completion-20020427 (27 Apr 2002)
 
   27 Apr 2002; Thilo Bangert <bangert@gentoo.org> bash-completion-20020427.ebuild :
-
   version bump
-
 
 *bash-completion-20020422 (23 Apr 2002)
 
   23 Apr 2002; Thilo Bangert <bangert@gentoo.org> ChangeLog :
-
   initial release ;-)
