@@ -4,10 +4,6 @@
 # based on gcc-config by Martin Schlemmer <azarah@gentoo.org
 # Author:  Heinrich Wendel <lanius@gentoo.org>
 
-source /etc/init.d/functions.sh || {
-    echo "$0: Could not source /etc/init.d/functions.sh!"
-    exit 1
-}
 umask 022
 
 PROFILE_PATH=/usr/@@LIBDIR@@/motif
@@ -47,6 +43,15 @@ USAGE_END
 }
 [[ $# -lt 1 ]] && usage 1
 [[ $# -gt 2 ]] && usage 1
+
+# redefine eerror/einfo to remove baselayout dep
+# to make ppc-macos people happy
+eerror() {
+	echo -e " \e[31;01m*\e[0m $*";
+}
+einfo() {
+	echo -e " \e[32;01m*\e[0m $*";
+}
 
 _check_root() {
 	if [[ "$(id -u)" -ne 0 ]] ; then

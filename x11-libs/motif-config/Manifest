@@ -1,4 +1,4 @@
-MD5 1e443dda30da6151936124a2ea794bf6 motif-config-0.4.ebuild 1239
+MD5 b75e7517ea7205944b487f54df407287 motif-config-0.4.ebuild 1239
 MD5 080e23abb80eed4a483c492dab88af4e motif-config-0.1.ebuild 1240
 MD5 47c57234c7dd988a6c63c12c2f7f21d2 motif-config-0.2-r1.ebuild 1231
 MD5 d6abfe27fc12f000d2632072557360ed motif-config-0.3.ebuild 1228
@@ -10,7 +10,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-motif-config-0.2-r1 0
 MD5 cedbeed369bab9555dd6fda29c8bc4c3 files/motif-config-0.1 6466
 MD5 474ea3ce052f62b920a365f98586b01b files/motif-config-0.2 6298
 MD5 5779611c009207dddfb57fb178e03c46 files/motif-config-0.3 6300
-MD5 daa244d3a7b08259fb872d751c7982f3 files/motif-config-0.4 6530
+MD5 d0c6c16eecaccd8f086236778392183d files/motif-config-0.4 6594
 MD5 beb566e653a0a239409d76dc502c87e1 files/system.mwmrc 4358
 MD5 aaf04376f7011a2f68b7961100f611fb files/Mwm.defaults 536
 MD5 b4cca983e552045606f845e17a00e1d6 files/bitmaps.tbz2 3165
