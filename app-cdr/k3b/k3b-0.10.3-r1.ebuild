@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.10.3-r1.ebuild,v 1.2 2003/12/14 22:09:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.10.3-r1.ebuild,v 1.3 2003/12/14 22:21:07 azarah Exp $
 
 inherit kde
 need-kde 3.1
@@ -35,7 +35,7 @@ I18N="${PN}-i18n-${PV%.*}"
 
 for pkg in ${LANGS}
 do
-	SRC_URI="${SRC_URI} linguas_${pkg}? (mirror://sourceforge/k3b/${I18N}.tar.gz)"
+	SRC_URI="${SRC_URI} linguas_${pkg}? ( mirror://sourceforge/k3b/${I18N}.tar.gz )"
 done
 
 myconf="$myconf --enable-sso"
@@ -53,7 +53,7 @@ src_compile() {
 	local myconf=
 	local _S="${S}"
 
-	if [ -n "${LINGUAS}" ]; then
+	if [ -n "${LINGUAS}" -a -d "${WORKDIR}/${I18N}" ]; then
 		echo "SUBDIRS = ${LINGUAS}" > ${WORKDIR}/${I18N}/po/Makefile.am
 	fi
 
@@ -65,7 +65,7 @@ src_compile() {
 	kde_src_compile configure
 	kde_src_compile make
 
-	if [ -n "${LINGUAS}" ]; then
+	if [ -n "${LINGUAS}" -a -d "${WORKDIR}/${I18N}" ]; then
 		# Build process for K3B-i18n
 		# I think running this in a for-loop is not necessary, 
 		# because there should be only those two directories. 
