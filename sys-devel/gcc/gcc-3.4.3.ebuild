@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.6 2004/11/14 14:13:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.7 2004/11/14 23:14:31 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
@@ -406,6 +406,7 @@ pkg_preinst() {
 
 	if [ ! -f "${WORKDIR}/.chkgccversion" ]
 	then
+		mkdir -p ${WORKDIR}
 		chk_gcc_version
 	fi
 
@@ -422,6 +423,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	gcc_setup_static_vars
 
 	if use multilib && [ "${ARCH}" = "amd64" ]
 	then
@@ -431,7 +433,7 @@ pkg_postinst() {
 		export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
 	fi
 
-	do_gcc_config
+	should_we_gcc_config && do_gcc_config
 
 	# Update libtool linker scripts to reference new gcc version ...
 	if [ "${ROOT}" = "/" ] && \
