@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/aldumb-0.9.2-r1.ebuild,v 1.2 2004/07/13 08:13:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/aldumb-0.9.2-r1.ebuild,v 1.3 2004/09/01 16:51:39 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://dumb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/dumb/dumb-${PV}-fixed.tar.gz"
 
 #-amd64: 0.9.2-r1: dumbplay killed my X session - eradicator
-KEYWORDS="~x86 ~ppc ~alpha ~ia64 -amd64"
+KEYWORDS="x86 ~ppc ~alpha ~ia64 -amd64"
 LICENSE="DUMB-0.9.2"
 SLOT="0"
 
