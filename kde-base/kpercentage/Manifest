@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cb4790a5a03cc423a8fe401b144d88a6 kpercentage-3.4.0_rc1.ebuild 443
-MD5 5761c80ef41b2006de7b9acf3a8f4f87 ChangeLog 1267
+MD5 ae376df7ee71c4f1925147023757d2f7 ChangeLog 1363
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 dc62e5b36cccb8e8db0c514cec9cd8df kpercentage-3.4.0.ebuild 445
+MD5 cb4790a5a03cc423a8fe401b144d88a6 kpercentage-3.4.0_rc1.ebuild 443
+MD5 f6423ecb48b3e6b07b5d67b59dbac3b2 kpercentage-3.4.0.ebuild 451
 MD5 e86b3031f18fffbe826fe58a427e65ba files/digest-kpercentage-3.4.0_rc1 371
 MD5 1392d63258c3b385fd5609f4923caa75 files/digest-kpercentage-3.4.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOv/nUpKYMelfdYERAuYxAKCPmMNCIb61CCF80qvBwTnsLlItRwCfRt+7
-1MQP0eG8DXEkdU6HKrQO4I0=
-=TZAs
------END PGP SIGNATURE-----

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4847e169753e87edb533cece25bd9b7f kdeartwork-meta-3.4.0_rc1.ebuild 1011
-MD5 37948f11610a4e64b4ff3372f3586e5c kdeartwork-meta-3.4.0.ebuild 981
-MD5 5a5d6f1cf4666cd2bed529f8b6b02f1e ChangeLog 1487
+MD5 28a0d0fd0ffe6a17aa20483c154cf4d2 ChangeLog 1587
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.4.0 0
+MD5 4847e169753e87edb533cece25bd9b7f kdeartwork-meta-3.4.0_rc1.ebuild 1011
+MD5 86a6918a9fe21e116b6fcb51203c939d kdeartwork-meta-3.4.0.ebuild 987
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.4.0_rc1 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOw1sUpKYMelfdYERApzXAJ9R/i4ZaBhKWCpoGbdEPEHQPNXqGwCeMXix
-/qjYRNuQQInCD7wAJg64Mnw=
-=EjEp
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeartwork-meta-3.4.0 0
