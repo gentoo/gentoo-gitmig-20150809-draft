@@ -1,7 +1,10 @@
 # ChangeLog for x11-libs/gtkmm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/ChangeLog,v 1.4 2002/04/18 13:26:25 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmm/ChangeLog,v 1.5 2002/05/01 14:35:57 spider Exp $
 
+*gtkmm-1.3.13 (1 May 2002)
+  1 May 2002; Spider <spider@gentoo.org>; gtkmm-1.3.13.ebuild :
+  version update
 
 *gtkmm-1.3.11 (18 Apr 2002)
   18 Apr 2002; Spider <spider@gentoo.org>; gtkmm-1.3.11.ebuild
