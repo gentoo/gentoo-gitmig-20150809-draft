@@ -1,5 +1,5 @@
-MD5 d3b98d76a96c60677d6424bacdf131b5 ChangeLog 1078
+MD5 9f7805031bede081353a493ba689b6a9 ChangeLog 1101
 MD5 01569f2ab7059814a57bf874787c764f gst-player-0.5.0.ebuild 771
-MD5 ec7bac3ab142c5697761c58ebc47611e gst-player-0.5.1.ebuild 724
+MD5 fef10921cc8de1849e35fe71b646fc29 gst-player-0.5.1.ebuild 1048
 MD5 2e532ebdf2222f1f77818ac7c36f792c files/digest-gst-player-0.5.0 68
 MD5 020e9a95c56632cb80cffc3e122cb7b2 files/digest-gst-player-0.5.1 69

@@ -1,8 +1,9 @@
 # ChangeLog for media-video/gst-player
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gst-player/ChangeLog,v 1.8 2003/05/02 20:29:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gst-player/ChangeLog,v 1.9 2003/05/02 22:52:51 liquidx Exp $
 
   02 May 2003; Alastair Tse <liquidx@gentoo.org> gst-player-0.5.1.ebuild:
+  Fix sandbox problems
   bump gstreamer/gst-plugins deps to 0.6.1
 
 *gst-player-0.5.1 (28 Apr 2003)
