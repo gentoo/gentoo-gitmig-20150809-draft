@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xskat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xskat/ChangeLog,v 1.5 2004/06/24 22:23:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xskat/ChangeLog,v 1.6 2004/12/29 00:00:02 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *xskat-4.0 (27 May 2004)
 
@@ -14,6 +17,6 @@
 
 *xskat-3.4 (22 Aug 2002)
 
-  22 Aug 2002; J. Alberto Su·rez LÛpez <bass@gentoo.org> xsaket-3.4.ebuild
+  22 Aug 2002; J. Alberto Su√°rez L√≥pez <bass@gentoo.org> xsaket-3.4.ebuild
   First relase (Stephan_Weber@gmx.de (Stephan Weber))
 

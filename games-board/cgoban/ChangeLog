@@ -1,6 +1,9 @@
 # ChangeLog for games-board/cgoban
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban/ChangeLog,v 1.6 2004/07/01 11:10:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban/ChangeLog,v 1.7 2004/12/28 23:52:25 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> cgoban-1.9.12.ebuild,
   cgoban-1.9.14.ebuild:
@@ -21,7 +24,7 @@
 
 *cgoban-1.9.11 (1 Feb 2002)
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> cgoban-1.9.11.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> cgoban-1.9.11.ebuild :
   Added LICENSE, KEYWORDS.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :

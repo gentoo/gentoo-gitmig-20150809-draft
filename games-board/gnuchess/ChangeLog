@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnuchess
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/ChangeLog,v 1.8 2004/07/01 11:10:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/ChangeLog,v 1.9 2004/12/28 23:55:06 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gnuchess-5.07.ebuild:
   virtual/glibc -> virtual/libc
@@ -30,7 +33,7 @@
 
 *gnuchess-5.04 (18 Apr 2002)
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> gnuchess-5.04.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> gnuchess-5.04.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
   18 Apr 2002; Ryan Phillips <rphillips@gentoo.org> gnuchess-0.54.ebuild :

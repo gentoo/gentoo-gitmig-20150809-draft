@@ -1,6 +1,9 @@
 # ChangeLog for games-board/ggz-gtk-games
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-games/ChangeLog,v 1.6 2004/12/26 23:09:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-games/ChangeLog,v 1.7 2004/12/28 23:53:57 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *ggz-gtk-games-0.0.9 (26 Dec 2004)
 
@@ -22,7 +25,7 @@
 
 *ggz-gtk-games-0.0.5 (13 Apr 2002)
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> ggz-gtk-games-0.0.5.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> ggz-gtk-games-0.0.5.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
   07 May 2002; Spider <spider@gentoo.org> ggz-gtk-games-0.0.5.ebuild :

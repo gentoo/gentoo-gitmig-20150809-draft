@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xboard
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.4 2004/06/24 22:21:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.5 2004/12/28 23:59:26 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *xboard-4.2.7 (05 Jan 2004)
 
@@ -14,7 +17,7 @@
 
 *xboard-4.2.6 (18 Apr 2002)
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> xboard-4.2.6.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> xboard-4.2.6.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
   18 Apr 2002; Ryan Phillips <rphillips@gentoo.org> xboard-4.2.6.ebuild :

@@ -1,6 +1,9 @@
 # ChangeLog for games-board/eboard
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.8 2004/06/24 22:16:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.9 2004/12/28 23:52:53 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> eboard-0.9.5.ebuild:
   Marking stable on amd64 (no bugs in 474 days).
@@ -47,7 +50,7 @@
   30 Sep 2002; Mike Frysinger <vapier@gentoo.org> eboard-0.4.3-gcc3.patch :
   Added a small patch to make eboard compile under gcc3.2
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> eboard-0.4.3.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> eboard-0.4.3.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
   7 May 2002; Spider <spider@gentoo.org> eboard-0.4.3.ebuild :

@@ -1,6 +1,9 @@
 # ChangeLog for games-board/teg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/teg/ChangeLog,v 1.9 2004/09/23 09:07:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/teg/ChangeLog,v 1.10 2004/12/28 23:58:57 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> -teg-0.11.0-r1.ebuild:
   clean older ebuild
@@ -30,23 +33,23 @@
   21 May 2003; Martin Holzer <mholzer@gentoo.org> teg-0.11.0.ebuild:
   Adding libgnomeui as depend. Closes #19050.
 
-  08 Jan 2003; J.Alberto Su醨ez L髉ez <bass@gentoo.org> teg-0.11.0.ebuild:
+  08 Jan 2003; J.Alberto Su谩rez L贸pez <bass@gentoo.org> teg-0.11.0.ebuild:
   New finel version.
 
 *teg-0.10.1 (08 Aug 2002)
-  27 Aug 2002; J.Alberto Su醨ez L髉ez <bass@gentoo.org> teg-0.10.1.ebuild:
+  27 Aug 2002; J.Alberto Su谩rez L贸pez <bass@gentoo.org> teg-0.10.1.ebuild:
   added dev/libxml in DEPEND. Close  #7003
 
-  8 Aug 2002; J.Alberto Su醨ez L髉ez <bass@gentoo.org> teg-0.10.1.ebuild:
+  8 Aug 2002; J.Alberto Su谩rez L贸pez <bass@gentoo.org> teg-0.10.1.ebuild:
   New version. Must fix bug #4729
 
 *teg-0.9.4 (7 May 2002)
 
-  17 jul 2002; Jose Alberto Su醨ez L髉ez <bass@gentoo.org> teg-0.9.4.ebuild :
+  17 jul 2002; Jose Alberto Su谩rez L贸pez <bass@gentoo.org> teg-0.9.4.ebuild :
   Added LICENSE, KEYWORDS.
   7 May 2002; Spider <spider@gentoo.org> teg-0.9.4.ebuild teg-0.9.2.ebuild:
 
-  17 jul 2002; Jose Alberto Su醨ez L髉ez <bass@gentoo.org> teg-0.9.2.ebuild :
+  17 jul 2002; Jose Alberto Su谩rez L贸pez <bass@gentoo.org> teg-0.9.2.ebuild :
   Added LICENSE, KEYWORDS.
    fix sourceforge mirroring.
           
