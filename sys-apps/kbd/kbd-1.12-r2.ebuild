@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r2.ebuild,v 1.7 2004/06/11 13:37:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r2.ebuild,v 1.8 2004/06/16 22:05:42 agriffis Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.cwi.nl/pub/aeb/kbd/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips alpha arm ~hppa amd64 ~ia64 ppc64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE="nls"
 
 DEPEND="virtual/glibc
@@ -19,7 +19,14 @@ DEPEND="virtual/glibc
 PROVIDE="sys-apps/console-tools"
 
 src_unpack() {
-	unpack ${A}
+	local a
+
+	# Workaround problem on JFS filesystems, see bug 42859
+	cd ${WORKDIR}
+	for a in ${A}; do
+		einfo "Unpacking ${a}"
+		gzip -dc ${DISTDIR}/${a} | tar xf -
+	done
 
 	cd ${S}
 	# Fixes makefile so that it uses the CFLAGS from portage (bug #21320).

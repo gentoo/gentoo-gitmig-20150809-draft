@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.08-r5.ebuild,v 1.2 2004/02/23 00:44:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.08-r5.ebuild,v 1.3 2004/06/16 22:05:42 agriffis Exp $
 
 IUSE="nls"
 
@@ -20,7 +20,14 @@ DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
 PROVIDE="sys-apps/console-tools"
 
 src_unpack() {
-	unpack ${A}
+	local a
+
+	# Workaround problem on JFS filesystems, see bug 42859
+	cd ${WORKDIR}
+	for a in ${A}; do
+		einfo "Unpacking ${a}"
+		gzip -dc ${DISTDIR}/${a} | tar xf -
+	done
 
 	cd ${S}
 	# Fixes makefile so that it uses the CFLAGS from portage (bug #21320).
