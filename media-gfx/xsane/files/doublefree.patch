@@ -1,0 +1,22 @@
+--- src/xsane-save.c	2004-09-06 19:08:00.000000000 +0200
++++ src/xsane-save.c.new	2004-12-10 09:49:03.592387322 +0100
+@@ -718,9 +718,6 @@
+ 
+   fflush(outfile);
+ 
+-  fclose(infile);
+-  fclose(outfile);
+-
+   if (size != bytes_sum)
+   {
+     DBG(DBG_info, "copy errro, not complete, %d bytes of %d bytes copied\n", bytes_sum, size);
+@@ -775,6 +772,9 @@
+     gtk_main_iteration();
+   }
+ 
++  fclose(infile);
++  fclose(outfile);
++
+  return (*cancel_save);
+ }
+ 
