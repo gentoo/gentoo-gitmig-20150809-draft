@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.2.1.ebuild,v 1.1 2003/02/04 06:02:09 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.2.1.ebuild,v 1.2 2003/02/09 15:17:51 foser Exp $
 
 inherit libtool
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gtk.org/"
 
 SLOT="2"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND=">=dev-util/pkgconfig-0.14.0
 	doc? ( >=dev-util/gtk-doc-0.9-r2 )"

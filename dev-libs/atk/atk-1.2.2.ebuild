@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.2.2.ebuild,v 1.1 2003/01/21 19:20:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.2.2.ebuild,v 1.2 2003/02/09 15:17:51 foser Exp $
 
 inherit libtool gnome2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://developer.gnome.org/projects/gap/"
 
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc ~alpha"
 
 RDEPEND=">=dev-libs/glib-2"
 
