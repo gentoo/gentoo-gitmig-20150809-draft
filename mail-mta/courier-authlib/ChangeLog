@@ -1,0 +1,10 @@
+# ChangeLog for mail-mta/courier-authlib
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier-authlib/ChangeLog,v 1.1 2004/11/16 07:42:52 swtaylor Exp $
+
+*courier-authlib-0.50.20041113 (16 Nov 2004)
+
+  16 Nov 2004; Scott W Taylor <swtaylor@gentoo.org> +metadata.xml,
+  +courier-authlib-0.50.20041113.ebuild:
+  initial ebuild. masked.
+
