@@ -60,7 +60,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1157 2002/08/03 03:11:53 george Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1158 2002/08/03 07:05:07 christoph Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
@@ -969,3 +969,7 @@ app-cdr/eroaster
 # rphillips@gentoo.org 2 Aug 2002
 # doesn't entirely work yet... but is a start
 =media-gfx/povray-3.50a
+
+# christoph@gentoo.org 2 Aug 2002
+# masked for testing
+=net-misc/udhcp-0.9.7
