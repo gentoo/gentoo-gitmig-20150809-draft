@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/calendar
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/calendar/ChangeLog,v 1.3 2004/01/20 06:41:18 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/calendar/ChangeLog,v 1.4 2004/04/10 09:27:08 mr_bones_ Exp $
+
+  10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> calendar-0.9.1.ebuild:
+  don't assign default to S; IUSE; error check/messages; tidy
 
   15 Jan 2004; Jon Portnoy <avenj@gentoo.org> calendar-0.9.1.ebuild :
   AMD64 keywords.
