@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.0-r1.ebuild,v 1.2 2003/07/12 16:16:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.0-r1.ebuild,v 1.3 2003/08/11 21:01:35 brad Exp $
 
 DESCRIPTION="free good quality fonts gpl'd by URW++"
 SRC_URI="mirror://gentoo/urw-fonts-2.0-29.src.rpm"
@@ -33,7 +33,9 @@ src_install() {
 	cp -f *.afm *.pfb ${D}/usr/share/fonts/default/Type1
 	cp ${S}/fonts/fonts.scale ${D}/usr/share/fonts/default/Type1/
 	mkdir -p ${D}/etc/fonts
-	cp ${FILESDIR}/fonts.conf ${D}/etc/fonts/
+	# Don't add this, it makes no changes not already needed in fonts.conf
+	# Brad Laue <brad@gentoo.org> 08/07/2003
+#	cp ${FILESDIR}/fonts.conf ${D}/etc/fonts/
 }
 
 pkg_postinst() {

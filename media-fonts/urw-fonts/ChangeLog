@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/urw-fonts
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.1 2003/06/02 13:48:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.2 2003/08/11 21:01:35 brad Exp $
+
+  11 Aug 2003; Brad Laue <brad@gentoo.org> urw-fonts-2.0-r1.ebuild:
+  Dont install fonts.conf, not needed.
 
 *urw-fonts-2.0-r1 (02 Jun 2003)
 
