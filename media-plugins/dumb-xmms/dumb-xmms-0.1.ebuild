@@ -1,6 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/dumb-xmms/dumb-xmms-0.1.ebuild,v 1.4 2004/06/24 23:27:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/dumb-xmms/dumb-xmms-0.1.ebuild,v 1.5 2004/07/06 22:36:27 eradicator Exp $
+
+IUSE=""
+
+inherit eutils
 
 DESCRIPTION="Plug-in for accurate, high-quality IT/XM/S3M/MOD playback."
 HOMEPAGE="http://dumb.sourceforge.net/"
@@ -8,13 +12,19 @@ SRC_URI="mirror://sourceforge/dumb/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+# -sparc: 0.1: noise playback - eradicator
+KEYWORDS="x86 ~amd64 -sparc"
 
-IUSE=""
 DEPEND=">=media-sound/xmms-1.2.7-r20
 	>=media-libs/dumb-0.9.2"
 
 S=${WORKDIR}/${PN}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-PIC.patch
+}
 
 src_compile() {
 	emake || die

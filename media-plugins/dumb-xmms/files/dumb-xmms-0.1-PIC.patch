@@ -1,0 +1,12 @@
+diff -Naur dumb-xmms.orig/Makefile.inc dumb-xmms/Makefile.inc
+--- dumb-xmms.orig/Makefile.inc	2003-04-08 09:36:00.000000000 -0700
++++ dumb-xmms/Makefile.inc	2004-07-06 14:24:47.083083262 -0700
+@@ -6,7 +6,7 @@
+ 	$(CC) -o $@ $^ -ldumb -lxmms -shared
+ 
+ $(OBJDIR)/%.o: %.c
+-	$(CC) -c -o $@ $(CFLAGS) $<
++	$(CC) -fPIC -DPIC -c -o $@ $(CFLAGS) $<
+ 
+ $(DEPDIR)/%.d: %.c
+ 	$(CC) -MM $(CFLAGS) $< | sed "s/^$*\.o:/$(OBJDIR)\/$*\.o $(DEPDIR)\/$*\.d:/" > $@
