@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-HMAC/Digest-HMAC-1.01-r1.ebuild,v 1.13 2004/07/14 17:23:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-HMAC/Digest-HMAC-1.01-r1.ebuild,v 1.14 2004/07/22 02:23:11 tgall Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/doc/GAAS/${P}/README"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 amd64 ppc sparc alpha hppa mips ia64"
+KEYWORDS="x86 amd64 ppc sparc alpha hppa mips ia64 ppc64"
 IUSE=""
 
 mydoc="rfc*.txt"

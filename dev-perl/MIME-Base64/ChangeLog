@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-Base64
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/ChangeLog,v 1.23 2004/06/25 00:45:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/ChangeLog,v 1.24 2004/07/22 02:18:50 tgall Exp $
+
+  21 Jul 2004; Tom Gall <tgall@gentoo.org> MIME-Base64-3.01.ebuild:
+  stable on ppc64, bug #57585
 
 *MIME-Base64-3.01 (06 Jun 2004)
 
