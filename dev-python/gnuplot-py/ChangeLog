@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/gnuplot-py
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.1 2003/06/19 22:17:44 liquidx Exp $
+
+*gnuplot-py-1.6 (19 Jun 2003)
+
+  19 Jun 2003; Alastair Tse <liquidx@gentoo.org> gnuplot-py-1.6.ebuild:
+  new ebuild submitted by Chris Bainbridge <chrb@dcs.ed.ac.uk> (#21113)
+
