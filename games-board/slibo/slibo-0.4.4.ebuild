@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/slibo/slibo-0.4.4.ebuild,v 1.6 2004/07/03 21:29:29 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/slibo/slibo-0.4.4.ebuild,v 1.7 2004/08/05 23:33:47 arj Exp $
 
 inherit kde
 
@@ -13,5 +13,5 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="dev-db/sqlite"
+DEPEND="=dev-db/sqlite-2*"
 need-kde 3

@@ -1,6 +1,9 @@
 # ChangeLog for games-board/slibo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/slibo/ChangeLog,v 1.5 2004/07/03 21:29:29 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/slibo/ChangeLog,v 1.6 2004/08/05 23:33:47 arj Exp $
+
+  05 Aug 2004; Anders Rune Jensen <arj@gentoo.org> slibo-0.4.4.ebuild:
+  Depend on version 2 of sqlite.
 
   03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> slibo-0.4.4.ebuild:
   QA: need-kde after R/DEPEND
