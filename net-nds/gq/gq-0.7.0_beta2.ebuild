@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-0.7.0_beta2.ebuild,v 1.5 2004/11/26 08:07:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-0.7.0_beta2.ebuild,v 1.6 2004/12/04 07:16:54 dragonheart Exp $
 
 S=${WORKDIR}/${PN}-${PV/_/}
 DESCRIPTION="GTK-based LDAP client"
@@ -41,7 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} || die "Installation failed"
+	emake DESTDIR=${D} install || die "Installation failed"
 	rm -f ${D}/usr/share/locale/locale.alias
 	dodoc ABOUT-NLS AUTHORS ChangeLog COPYING NEWS README* TODO
 }
