@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.8.1.ebuild,v 1.3 2004/12/09 13:57:15 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.8.1.ebuild,v 1.4 2004/12/09 14:02:48 joem Exp $
 
 inherit eutils gnome2
 
@@ -15,7 +15,7 @@ IUSE="doc"
 RDEPEND=">=x11-libs/gtk+-2.4
 	=gnome-base/libgnomeprint-${PV}*
 	>=gnome-base/libgnomecanvas-2
-	>=x11-themes/gnome-icon-theme-2.8.0"
+	>=x11-themes/gnome-icon-theme-1.1.92"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
