@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>blauwers@gentoo.org</email>
+  <description>Accidental</description>
+</maintainer>
+<longdescription>The NVIDIA Cg Toolkit. In this kit, you will find everything you need to help you take advantage of Cg, a high-level language for graphics programming. Cg will allow you to incorporate the stunning interactive effects into your DirectX and OpenGL applications. The components include: 
+- NVIDIA Cg Compiler Release 1.2 
+- CgFX Runtime 
+- Cg User's Manual 
+- Cg Language Specification</longdescription>
+</pkgmetadata>
