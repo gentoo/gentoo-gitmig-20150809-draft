@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.1.2.ebuild,v 1.6 2004/04/10 13:17:47 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.1.2.ebuild,v 1.7 2004/04/14 07:32:49 aliz Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="A firewall GUI"
 SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
@@ -24,7 +26,6 @@ RDEPEND="$DEPEND"
 # Added by Jason Wever <weeve@gentoo.org>
 # Fix for bug #30256.
 if [ "${ARCH}" = "sparc" ]; then
-	inherit flag-o-matic
 	replace-flags "-O3" "-O2"
 fi
 
