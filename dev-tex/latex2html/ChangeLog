@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex2html
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.6 2003/12/09 21:18:00 usata Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.7 2004/02/09 08:24:49 absinthe Exp $
+
+  09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> latex2html-2002.2.ebuild:
+  added amd64 keyword.
 
   10 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> :
   Fixed digest mismatch (Upstream releases different sources with the
