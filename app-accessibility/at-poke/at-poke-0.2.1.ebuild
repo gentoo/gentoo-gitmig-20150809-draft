@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-poke/at-poke-0.2.1.ebuild,v 1.3 2004/06/24 21:15:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-poke/at-poke-0.2.1.ebuild,v 1.4 2005/01/01 10:31:03 eradicator Exp $
 
 inherit gnome2
 

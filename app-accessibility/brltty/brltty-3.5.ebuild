@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.5.ebuild,v 1.10 2004/10/13 22:55:34 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.5.ebuild,v 1.11 2005/01/01 10:31:26 eradicator Exp $
 
 DESCRIPTION="daemon that provides access to the Linux/Unix console for a blind person"
 HOMEPAGE="http://mielke.cc/brltty/"
