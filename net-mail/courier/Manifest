@@ -1,5 +1,5 @@
-MD5 f9d941a3d89d722278c034c9c1781b2a courier-0.42.2.ebuild 9678
-MD5 1ce29626f9173feed177fa990d5c8120 ChangeLog 3914
+MD5 532857fe2991c61ced0456f47d594ad1 courier-0.42.2.ebuild 9665
+MD5 712c3ea61e9f916ecf7d16b0c6a68252 ChangeLog 3900
 MD5 52f032e570c6f5f9f69b4e4bdfa562a1 files/password.dist 247
 MD5 a546a21f960e4f921e71f614f719a2ce files/bofh 23
 MD5 c90d29ee6fb093c3a57dd6085a8463b3 files/courier-imapd 431

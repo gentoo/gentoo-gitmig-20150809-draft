@@ -14,14 +14,14 @@ HOMEPAGE="http://www.courier-mta.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc -sparc"
-IUSE="gdbm tcltk postgres ldap berkdb mysql pam nls tcltk ipv6 spell fax crypt ssl"
+IUSE="gdbm tcltk postgres ldap berkdb mysql pam nls tcltk ipv6 spell fax crypt"
 
 PROVIDE="virtual/mta
 	 virtual/imapd"
 
 RDEPEND="virtual/glibc
 	>=dev-tcltk/expect-5.33.0
-	ssl? ( >=dev-libs/openssl-0.9.6 )
+	>=dev-libs/openssl-0.9.6
 	crypt? ( >=app-crypt/gnupg-1.0.4 )
 	fax? (	>=media-libs/netpbm-9.12
 		>=app-text/ghostscript-7.05.5
