@@ -1,11 +1,14 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.31 2002/09/17 12:30:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.32 2002/09/17 21:52:15 seemant Exp $
 
 *fluxbox-0.1.12-r1 (17 Sep 2002)
 
   17 Sep 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.12-r1.ebuild
   files/digest-fluxbox-0.1.12-r1 :
+
+  Update: few hours later: Rachel refined the patch a little and added a
+  subtle blurb in the fluxbox manpage as well.  Mucho thanks :)
 
   This revision bump incorporates two patches.  The first is the Vano patch
   from bug #5005 which makes the root menu disappear on left click anywhere.
