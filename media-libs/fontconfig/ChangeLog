@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.57 2004/10/18 18:08:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.58 2004/10/19 10:34:07 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> fontconfig-2.2.3.ebuild:
+  Stable on amd64.
 
   18 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org> fontconfig-2.2.3.ebuild:
   Stable on sparc
