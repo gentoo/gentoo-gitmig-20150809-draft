@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.91.0.3.ebuild,v 1.3 2004/09/05 16:13:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.91.0.3.ebuild,v 1.4 2004/09/05 23:00:16 mr_bones_ Exp $
 
 inherit eutils
 
@@ -15,10 +15,10 @@ LICENSE="skype-eula"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="qt arts esd"
-DEPEND="amd64? ( app-emulation/emul-linux-x86-glibc 
-		app-emulation/emul-linux-x86-xlibs 
+DEPEND="amd64? ( app-emulation/emul-linux-x86-glibc
+		app-emulation/emul-linux-x86-xlibs
 		app-emulation/emul-linux-x86-compat
-		app-emulation/emul-linux-x86-baselibs 
+		app-emulation/emul-linux-x86-baselibs
 		qt? ( app-emulation/emul-linux-x86-qtlibs )
 	)
 	x86? ( qt? ( >=x11-libs/qt-3.2 )
