@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.19 2003/11/02 07:23:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.20 2003/11/03 23:54:35 seemant Exp $
+
+*wget-1.9-r1 (03 Nov 2003)
+
+  03 Nov 2003; Seemant Kulleen <seemant@gentoo.org> wget-1.9-r1.ebuild:
+  added a patch to make ipv6 and ipv4 both work, instead of being mutually
+  exclusive. The patch was written by: ari edelkind
+  <edelkind-gentoo-bugzilla@episec.com> and submitted in bug #31798 by Bernd
+  Wurst <mail@bernd-wurst.de>
 
   01 Nov 2003; Seemant Kulleen <seemant@gentoo.org> wget-1.8.2-r2.ebuild,
   wget-1.8.2-r3.ebuild:
