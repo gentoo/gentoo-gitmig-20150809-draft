@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.55 2005/02/11 05:28:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.56 2005/03/13 00:26:49 agriffis Exp $
+
+  13 Mar 2005; Aron Griffis <agriffis@gentoo.org> strace-4.5.9.ebuild:
+  Stable on alpha and x86
 
 *strace-4.5.9 (11 Feb 2005)
 
