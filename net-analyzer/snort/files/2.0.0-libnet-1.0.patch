@@ -1,0 +1,54 @@
+--- configure.orig	2003-12-16 19:24:37.835720000 -0500
++++ configure	2003-12-16 19:25:58.933391280 -0500
+@@ -6258 +6258 @@
+-   CPPFLAGS="${CPPFLAGS} -DENABLE_RESPONSE `libnet-config --defines --cflags`" LDFLAGS="${LDFLAGS} `libnet-config --libs`"
++   CPPFLAGS="${CPPFLAGS} -DENABLE_RESPONSE `libnet-1.0-config --defines --cflags`" LDFLAGS="${LDFLAGS} `libnet-1.0-config --libs`"
+@@ -6264 +6264 @@
+-  if test `libnet-config --cflags | wc -c` = "1"; then
++  if test `libnet-1.0-config --cflags | wc -c` = "1"; then
+@@ -6269,3 +6269,3 @@
+-  if test `libnet-config --libs | wc -c` = "1"; then
+-    { echo "$as_me:$LINENO: WARNING: libnet-config --libs is broken on your system.  If you" >&5
+-echo "$as_me: WARNING: libnet-config --libs is broken on your system.  If you" >&2;}
++  if test `libnet-1.0-config --libs | wc -c` = "1"; then
++    { echo "$as_me:$LINENO: WARNING: libnet-1.0-config --libs is broken on your system.  If you" >&5
++echo "$as_me: WARNING: libnet-1.0-config --libs is broken on your system.  If you" >&2;}
+@@ -6281 +6281 @@
+-for ac_header in libnet.h
++for ac_header in libnet-1.0.h
+@@ -6414 +6414 @@
+-    libnet_dir=`libnet-config --cflags | cut -dI -f2`
++    libnet_dir=`libnet-1.0-config --cflags | cut -dI -f2`
+@@ -6419 +6419 @@
+-    if test -r $i/libnet.h; then
++    if test -r $i/libnet-1.0.h; then
+@@ -6425 +6425 @@
+-    if eval "grep LIBNET_VERSION $LIBNET_INC_DIR/libnet.h | grep -v 1.0.2a >/dev/null"; then
++    if eval "grep LIBNET_VERSION $LIBNET_INC_DIR/libnet-1.0.h | grep -v 1.0.2a >/dev/null"; then
+@@ -6436 +6436 @@
+-   echo "  ERROR: unable to find" "libnet 1.0.2a (libnet.h)"
++   echo "  ERROR: unable to find" "libnet 1.0.2a (libnet-1.0.h)"
+@@ -6455 +6455 @@
+-   echo "  ERROR: unable to find" "libnet 1.0.2a (libnet.h)"
++   echo "  ERROR: unable to find" "libnet 1.0.2a (libnet-1.0.h)"
+@@ -6468,2 +6468,2 @@
+-echo "$as_me:$LINENO: checking for libnet_build_ip in -lnet" >&5
+-echo $ECHO_N "checking for libnet_build_ip in -lnet... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for libnet_build_ip in -lnet-1.0" >&5
++echo $ECHO_N "checking for libnet_build_ip in -lnet-1.0... $ECHO_C" >&6
+@@ -6474 +6474 @@
+-LIBS="-lnet  $LIBS"
++LIBS="-lnet-1.0  $LIBS"
+@@ -6528 +6528 @@
+-  LIBS="-lnet $LIBS"
++  LIBS="-lnet-1.0 $LIBS"
+--- src/detection-plugins/sp_respond.c.orig	2003-12-16 19:26:32.043357800 -0500
++++ src/detection-plugins/sp_respond.c	2003-12-16 19:26:41.158972016 -0500
+@@ -33 +33 @@
+-#include <libnet.h>
++#include <libnet-1.0.h>
+--- src/detection-plugins/sp_react.c.orig	2003-12-16 19:26:28.034967168 -0500
++++ src/detection-plugins/sp_react.c	2003-12-16 19:26:45.993237096 -0500
+@@ -56 +56 @@
+-#include <libnet.h>
++#include <libnet-1.0.h>

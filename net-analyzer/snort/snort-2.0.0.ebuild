@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.0.ebuild,v 1.7 2003/12/08 07:45:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.0.ebuild,v 1.8 2003/12/17 00:31:21 vapier Exp $
 
 inherit eutils
 
@@ -16,7 +16,8 @@ KEYWORDS="x86 sparc -alpha"
 
 DEPEND="virtual/glibc
 	>=net-libs/libpcap-0.6.2-r1
-	~net-libs/libnet-1.0.2a
+	<net-libs/libnet-1.1
+	>=net-libs/libnet-1.0.2a-r3
 	postgres? ( >=dev-db/postgresql-7.2 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
@@ -39,6 +40,8 @@ src_unpack() {
 	# Following patch contributed in bug #18258
 	#is this needed in 2.0? -Method
 	#use alpha && epatch ${FILESDIR}/${P}-alpha.patch
+
+	epatch ${FILESDIR}/${PV}-libnet-1.0.patch
 
 	sed "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort:" < etc/snort.conf > etc/snort.conf.distrib
 }

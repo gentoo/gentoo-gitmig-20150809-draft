@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.25 2003/12/09 15:07:38 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.26 2003/12/17 00:31:21 vapier Exp $
+
+  16 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Port the libnet-1.0 patch to snort-2.0.0 to help out the sparc peeps.
 
 *snort-2.0.5-r2 (09 Dec 2003)
 
