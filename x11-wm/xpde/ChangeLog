@@ -1,12 +1,17 @@
 # ChangeLog for x11-wm/xpde
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/ChangeLog,v 1.2 2003/02/12 09:53:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpde/ChangeLog,v 1.3 2003/02/17 09:20:10 raker Exp $
+
+*xpde-0.2.0 (17 Feb 2003)
+
+  17 Feb 2003; Nick Hadaway <raker@gentoo.org> xpde-0.2.0.ebuild,
+  files/digest-xpde-0.2.0 :
+  Version bump.  Lots of little changes.
 
 *xpde-0.1.1 (07 Dec 2002)
 
   07 Dec 2002; Seemant Kulleen <seemant@gentoo.org> xpde-0.1.1.ebuild
   ChangeLog files/digest-xpde-0.1.1 :
-
   New desktop environment designed to look and feel like WindowsXP.  Since
   they now have designed their own window manager instead of dressing up
   metacity, it is added into portage.  Be warned that the functionality is
