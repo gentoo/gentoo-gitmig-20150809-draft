@@ -1,26 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.1.0.ebuild,v 1.3 2002/11/28 01:42:43 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.0.5.ebuild,v 1.1 2002/11/28 01:42:43 foser Exp $
 
 IUSE="doc"
 
-inherit gnome2 debug
+inherit gnome2
 
 S=${WORKDIR}/${P}
 DESCRIPTION="the Gnome 2 Canvas library"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 LICENSE="GPL-2 LGPL-2.1" 
 
 
-RDEPEND=">=gnome-base/libglade-2.0.1
-	>=x11-libs/gtk+-2.1
-	>=dev-libs/glib-2.0.6
-	>=x11-libs/pango-1.1
-	>=media-libs/libart_lgpl-2.3.10
-	>=dev-libs/libxslt-1.0.20
-	>=media-libs/freetype-2.0.9
+RDEPEND=">=gnome-base/libglade-2
+	>=x11-libs/gtk+-2.0.3
+	>=x11-libs/pango-1.0.1
+	>=media-libs/libart_lgpl-2.3.8
 	>=sys-devel/gettext-0.10.40
 	>=sys-devel/perl-5.6.1
 	>=sys-apps/gawk-3.1.0

@@ -1,29 +1,27 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.1.0.ebuild,v 1.1 2002/10/27 14:42:12 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.0.6.ebuild,v 1.1 2002/11/28 01:42:41 foser Exp $
 
 IUSE="doc"
 
-inherit gnome2 debug
+inherit gnome2
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Essential Gnome Libraries"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 LICENSE="GPL-2 LGPL-2.1"
 
-RDEPEND=">=dev-libs/libxslt-1.0.21
-	>=dev-libs/glib-2.0.6
+RDEPEND=">=dev-libs/libxslt-1.0.18
+	>=dev-libs/glib-2.0.3
 	>=gnome-base/gconf-1.2.1
-	>=gnome-base/gnome-mime-data-2.0.1
-	>=gnome-base/libbonobo-2.0.0
-	>=gnome-base/gnome-vfs-2.0.4
-	>=media-sound/esound-0.2.29
+	>=gnome-base/libbonobo-2
+	>=gnome-base/gnome-vfs-2
+	>=media-sound/esound-0.2.26
 	>=media-libs/audiofile-0.2.3
-	>=dev-libs/libxml2-2.4.25
-	>=sys-apps/gawk-3.1.0
-	>=sys-devel/perl-5.6.1-r3"
+	>=dev-libs/libxml2-2.4.22
+	>=sys-apps/gawk-3.1.0"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.22
