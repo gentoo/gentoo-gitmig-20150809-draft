@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5.3.ebuild,v 1.7 2001/08/11 05:30:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5.3.ebuild,v 1.8 2001/08/11 23:31:43 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage autobuild system"
@@ -35,8 +35,9 @@ src_install() {
 	dosym /usr/lib/portage/pym/portage.py /usr/lib/python2.0/site-packages/portage.py
 
 	# we gotta compile these modules
-	try spython -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.0/site-packages')"
-	try spython -O -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.0/site-packages')"
+	# next lines commented out due to "try" issues.  This allows people to upgrade who need to upgrade
+#	try spython -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.0/site-packages')"
+#	try spython -O -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.0/site-packages')"
 	
 	#binaries and scripts
 	dodir /usr/lib/portage/bin
