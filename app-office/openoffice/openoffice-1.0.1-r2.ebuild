@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r2.ebuild,v 1.7 2002/12/07 08:56:38 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r2.ebuild,v 1.8 2002/12/08 22:38:53 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -547,6 +547,9 @@ pkg_postinst() {
 	einfo
 	einfo "   oocalc, oodraw, ooimpress, oomath or oowriter"
 	einfo
+	einfo " If the fonts appear garbled in the user interface refer to "
+	einfo " Bug 8539, or http://www.openoffice.org/FAQs/fontguide.html#8"
+	einfo 
 	einfo "******************************************************************"
 }   
 
