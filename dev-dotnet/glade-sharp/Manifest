@@ -1,4 +1,14 @@
-MD5 92a75d4f7300207a5887491838e1fa8f ChangeLog 648
-MD5 8080763a14fdf2f9366720023bdeaabe glade-sharp-1.0.4.ebuild 381
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 98f4663fe6bf65580f95eb8be2b983a3 ChangeLog 745
+MD5 d95823d5e0062c065a544d1046709819 glade-sharp-1.0.4.ebuild 387
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
 MD5 b63c29f6761c048a9d7943713c15c78c files/digest-glade-sharp-1.0.4 147
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCEObY5mJXAu5GbtIRAr3PAJ95J8v5Mh4XvoNZeDhPf/7TQj8dgQCdEgtU
+3O1sSX9E4wtUwYrES7pgMpg=
+=G0DC
+-----END PGP SIGNATURE-----
