@@ -1,6 +1,12 @@
 # ChangeLog for media-video/zapping
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/zapping/ChangeLog,v 1.5 2003/02/12 07:43:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/zapping/ChangeLog,v 1.6 2003/03/21 17:24:16 mholzer Exp $
+
+*zapping-0.6.2-r1 (21 Mar 2003)
+
+  21 Mar 2003; Martin Holzer <mholzer@gentoo.org> zapping-0.6.2-r1.ebuild,
+  zapping-0.6.4-r1.ebuild, zapping-0.6.5.ebuild:
+  Changed SRC_URI to use mirror://sourceforge/
 
 *zapping-0.6.5 (30 Jan 2003)
   30 Jan 2003; Thomas Raschbacher <lordvan@gentoo.org> zapping-0.6.5.ebuild:
