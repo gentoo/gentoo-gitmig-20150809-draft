@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-184.ebuild,v 1.26 2004/06/24 23:23:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-184.ebuild,v 1.27 2004/06/28 22:12:39 agriffis Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ IUSE="truetype Xaw3d"
 
 DEPEND="|| ( x11-base/xorg-x11 >=x11-base/xfree-4.3.0-r6 )
 	sys-apps/utempter
-	Xaw3d? ( x11-libs/Xaw3d )"
+	Xaw3d? ( x11-libs/Xaw3d )
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}; cd ${S}

@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.32 2004/06/26 08:10:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.33 2004/06/28 22:12:39 agriffis Exp $
+
+  28 Jun 2004; Aron Griffis <agriffis@gentoo.org> xterm-184.ebuild:
+  add sed-4 dep
 
   26 Jun 2004; Seemant Kulleen <seemant@gentoo.org> xterm-191.ebuild:
   doh! luit was being always enabled. Fixed now so it's only enabled with the

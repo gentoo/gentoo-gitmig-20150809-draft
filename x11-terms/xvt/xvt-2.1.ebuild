@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1.ebuild,v 1.6 2004/06/24 23:23:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1.ebuild,v 1.7 2004/06/28 22:15:16 agriffis Exp $
 
 inherit ccc eutils flag-o-matic
 
@@ -11,7 +11,8 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 alpha"
 IUSE=""
-DEPEND="virtual/x11"
+DEPEND="virtual/x11
+	>=sys-apps/sed-4"
 S=${WORKDIR}/${PN}-1.0
 
 src_unpack() {
