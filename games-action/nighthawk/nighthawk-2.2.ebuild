@@ -1,27 +1,27 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/nighthawk-2.2.ebuild,v 1.5 2004/06/24 21:57:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/nighthawk-2.2.ebuild,v 1.6 2005/02/25 22:19:31 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="A tribute to one of the most playable and contagious games ever written- Paradroid by Andrew Braybrook"
-HOMEPAGE="http://jsno.arafuraconnect.com.au/proj_linux/nighthawk.html"
+HOMEPAGE="http://night-hawk.sourceforge.net/nighthawk.html"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/games/arcade/${P}-1.tar.gz"
 
-KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="ppc x86"
 IUSE=""
 
 DEPEND="virtual/x11"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/nighthawk.patch
+	cd "${S}"
+	epatch "${FILESDIR}/nighthawk.patch"
 }
 
 src_install () {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	prepgamesdirs
 }
