@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmustux
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.8 2004/04/08 12:12:32 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/ChangeLog,v 1.9 2004/04/09 13:35:54 dholm Exp $
+
+  09 Apr 2004; David Holm <dholm@gentoo.org> libmustux-0.20.0.ebuild,
+  libmustux-0.20.1.ebuild:
+  Added to ~ppc.
 
 *libmustux-0.20.1 (16 Mar 2004)
 
