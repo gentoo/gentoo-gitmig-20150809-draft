@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/adonthell
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.4 2004/06/24 23:14:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.5 2004/12/06 23:22:20 mr_bones_ Exp $
+
+  06 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  adonthell-0.3.3-r1.ebuild:
+  requires oggvorbis; tidy
 
   11 Feb 2004; David Holm <dholm@gentoo.org> adonthell-0.3.3-r1.ebuild:
   Added to ~ppc.
