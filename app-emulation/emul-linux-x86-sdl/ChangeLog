@@ -1,8 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-sdl
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.1 2004/07/15 01:35:48 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.2 2004/07/26 03:46:22 j4rg0n Exp $
 
 *emul-linux-x86-sdl-1.0 (14 Jul 2004)
+
+  25 Jul 2004; Lina Pezzella <j4rg0n@gentoo.org>
+  Fixed Manifest.
 
   14 Jul 2004; Travis Tilley <lv@gentoo.org> +emul-linux-x86-sdl-1.0.ebuild:
   initial import of 32bit SDL 1.2.7, mostly for x86 games and fun stuff like
