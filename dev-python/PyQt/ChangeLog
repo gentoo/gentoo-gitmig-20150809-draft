@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.21 2003/10/03 14:10:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.22 2003/10/23 14:04:21 aliz Exp $
 
 *PyQt-3.8.1 (03 Oct 2003)
 
@@ -56,17 +56,17 @@
   files are like headers for sip-based packages, such as PyQT and PyKDE. This
   closes bug #10060.
 
-*PyQt-3.5 (14 December 2002) Bart Verwilst <verwilst@gentoo.org>
+*PyQt-3.5 (14 Dec 2002) Bart Verwilst <verwilst@gentoo.org>
 
   New version, + changed license to GPL
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*PyQt-3.4 (18 Sept 2002) Sascha Schwabbauer <cybersystem@gentoo.org> :
+*PyQt-3.4 (18 Sep 2002) Sascha Schwabbauer <cybersystem@gentoo.org> :
 
   Added ppc to keywords.
 
-*PyQt-3.4 (17 Sept 2002) Bart Verwilst <verwilst@gentoo.org>
+*PyQt-3.4 (17 Sep 2002) Bart Verwilst <verwilst@gentoo.org>
 
 *PyQt-3.3.2 (25 July 2002) Bart Verwilst <verwilst@gentoo.org>
  
@@ -75,7 +75,7 @@
   Added "-c" flag to build.py, so the compilation time will be 80% less
   from what it was before. More CPU/MEM usage though during compilation!
 
-*PyQt-3.2.4 (5 July 2002) Bart Verwilst <verwilst@gentoo.org>
+*PyQt-3.2.4 (5 Jul 2002) Bart Verwilst <verwilst@gentoo.org>
 
 *PyQt-3.0 (1 Feb 2002)
 
