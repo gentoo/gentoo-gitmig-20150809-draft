@@ -1,0 +1,10 @@
+# ChangeLog for media-video/gpac
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.1 2005/03/30 17:14:02 chriswhite Exp $
+
+*gpac-0.2.1 (31 Mar 2005)
+
+  31 Mar 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +gpac-0.2.1.ebuild:
+  Initial import into the tree.  Closes bug #65149.
+
