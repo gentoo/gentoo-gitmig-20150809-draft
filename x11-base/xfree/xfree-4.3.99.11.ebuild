@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.11.ebuild,v 1.3 2003/09/07 01:57:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.11.ebuild,v 1.4 2003/09/07 07:27:40 msterret Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -199,7 +199,7 @@ src_unpack() {
 	# The 0120 patch is broken, the 0127 may also be broken.
 	mv -f ${PATCH_DIR}/0120*parallel-make* ${PATCH_DIR}/excluded
 	mv -f ${PATCH_DIR}/0127*makefile-fastbuild* ${PATCH_DIR}/excluded
-	
+
 	if use debug
 	then
 		mv -f ${PATCH_DIR}/5901*acecad-debug* ${PATCH_DIR}/excluded
@@ -396,7 +396,7 @@ src_unpack() {
 
 	# Use the xfree Xft2 lib
 	echo "#define SharedLibXft YES" >> config/cf/host.def
-	
+
 	# disable docs if doc not in USE
 	if [ -z "`use doc`" ]
 	then
@@ -694,7 +694,7 @@ src_install() {
 		cp -a ${WORKDIR}/ukr ${D}/usr/X11R6/lib/X11/fonts
 		eend 0
 	fi
-	
+
 	exeinto /etc/X11
 	# new session management script
 	doexe ${FILES_DIR}/chooser.sh
@@ -817,12 +817,12 @@ pkg_preinst() {
 	then
 		rm -rf ${ROOT}/usr/X11R6/lib/X11/XftConfig
 	fi
-	
+
 	if [ -L ${ROOT}/etc/X11/app-defaults ]
 	then
 		rm -f ${ROOT}/etc/X11/app-defaults
 	fi
-	
+
 	if [ ! -L ${ROOT}/usr/X11R6/lib/X11/app-defaults ] && \
 	   [ -d ${ROOT}/usr/X11R6/lib/X11/app-defaults ]
 	then
@@ -830,15 +830,15 @@ pkg_preinst() {
 		then
 			mkdir -p ${ROOT}/etc/X11/app-defaults
 		fi
-		
+
 		mv -f ${ROOT}/usr/X11R6/lib/X11/app-defaults ${ROOT}/etc/X11
 	fi
-	
+
 	if [ -L ${ROOT}/usr/X11R6/lib/X11/xkb ]
 	then
 		rm -f ${ROOT}/usr/X11R6/lib/X11/xkb
 	fi
-	
+
 	if [ ! -L ${ROOT}/etc/X11/xkb ] && \
 	   [ -d ${ROOT}/etc/X11/xkb ]
 	then
@@ -846,7 +846,7 @@ pkg_preinst() {
 		then
 			mkdir -p ${ROOT}/usr/X11R6/lib/X11
 		fi
-		
+
 	    mv -f ${ROOT}/etc/X11/xkb ${ROOT}/usr/X11R6/lib/X11
 	fi
 
@@ -885,7 +885,7 @@ update_XftConfig() {
 			ewarn
 			ewarn "  ${ROOT}etc/X11/XftConfig.bak"
 			echo
-			
+
 			cp -a ${ROOT}/etc/X11/XftConfig \
 				${ROOT}/etc/X11/XftConfig.bak
 			mv -f ${ROOT}/etc/X11/XftConfig.new \
@@ -905,15 +905,15 @@ pkg_postinst() {
 	if [ "${ROOT}" = "/" ]
 	then
 		local x=""
-		
+
 		umask 022
-	
+
 		# This one cause ttmkfdir to segfault :/
 		#rm -f ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large/gbk-0.enc.gz
 
 		# ********************************************************************
 		#  A note about fonts and needed files:
-		#  
+		#
 		#  1)  Create /usr/X11R6/lib/X11/fonts/encodings/encodings.dir
 		#
 		#  2)  Create font.scale for TrueType fonts (need to do this before
@@ -945,7 +945,7 @@ pkg_postinst() {
 			do
 				[ -z "$(ls ${x}/)" ] && continue
 				[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
-		
+
 				# Only generate .scale files if there are truetype
 				# fonts present ...
 				if [ "${x/encodings}" = "${x}" -a \
@@ -959,13 +959,13 @@ pkg_postinst() {
 			done
 			eend 0
 		fi
-			
+
 		ebegin "Generating fonts.dir files..."
 		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
 		do
 			[ -z "$(ls ${x}/)" ] && continue
 			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
-		
+
 			if [ "${x/encodings}" = "${x}" ]
 			then
 				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
@@ -993,7 +993,7 @@ pkg_postinst() {
 			fi
 		done
 		eend 0
-		
+
 		ebegin "Fixing permissions..."
 		find ${ROOT}/usr/X11R6/lib/X11/fonts/ -type f -name 'font.*' \
 			-exec chmod 0644 {} \;
@@ -1044,7 +1044,7 @@ pkg_postinst() {
 		then
 			mkdir -p ${x}
 		fi
-		
+
 		chown root:root ${x}
 		chmod 1777 ${x}
 	done

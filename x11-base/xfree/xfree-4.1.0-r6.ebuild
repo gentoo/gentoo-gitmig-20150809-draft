@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r6.ebuild,v 1.12 2003/03/11 21:11:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r6.ebuild,v 1.13 2003/09/07 07:27:40 msterret Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -25,18 +25,18 @@ DEPEND=">=sys-libs/ncurses-5.1
         >=sys-libs/zlib-1.1.3-r2
 	sys-devel/flex
 	dev-lang/perl"
-	
+
 RDEPEND=">=sys-libs/ncurses-5.1"
 
 PROVIDE="virtual/x11 virtual/opengl"
 # virtual/glu"
 # This has been removed.  Anyone know why exactly ??
-	
+
 
 src_unpack () {
 
 	unpack X${MY_V}src-{1,2,3}.tgz
-	
+
 	cd ${S}
 	cp ${FILESDIR}/${PVR}/site.def config/cf/host.def
 	echo "#define DefaultGcc2i386Opt ${CFLAGS}" >>  config/cf/host.def
@@ -66,16 +66,16 @@ src_install() {
 	tar -xz --no-same-owner -f ${DISTDIR}/truetype.tar.gz
 	dosym /usr/X11R6/lib/libGL.so.1.2 /usr/X11R6/lib/libMesaGL.so
 	dosym /usr/X11R6/bin /usr/bin/X11
-	
+
 	#X installs some /usr/lib/libGL symlinks, pointing to the libGL's in /usr/X11R6/lib.
 	#I don't see the point in this.  Yes, according to LSB, the correct location for libGL is
 	#in /usr/lib, but this is so closely integrated with X itself that /usr/X11R6/lib seems
 	#like the right place.
-	rm -rf ${D}/usr/lib    
-	
+	rm -rf ${D}/usr/lib
+
 	#dosym /usr/X11R6/lib/libGLU.so.1.3 /usr/lib/libMesaGLU.so
 	#We're no longer including libGLU from here.  Packaged separately, from separate sources.
-	
+
 	insinto /etc/env.d
 	doins ${FILESDIR}/${PVR}/10xfree
 	insinto /etc/X11/xinit

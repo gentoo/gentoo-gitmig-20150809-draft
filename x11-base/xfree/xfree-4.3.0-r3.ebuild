@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.45 2003/09/07 00:48:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.46 2003/09/07 07:27:40 msterret Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -131,11 +131,11 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	app-arch/unzip
 	pam? ( >=sys-libs/pam-0.75 )
 	truetype? ( app-arch/cabextract )
-	!x11-libs/xft" 
+	!x11-libs/xft"
 #RDEPEND="$DEPEND"
 # unzip - needed for savage driver (version 1.1.27t)
 # x11-libs/xft -- blocked because of interference with xfree's
- 	
+
 PDEPEND="3dfx? ( >=media-libs/glide-v3-3.10 )"
 
 PROVIDE="virtual/x11
@@ -171,10 +171,10 @@ src_unpack() {
 	fi
 	unpack eurofonts-X11.tar.bz2
 	unpack xfsft-encodings.tar.bz2
-	
+
 	# Remove bum encoding
 	rm -f ${WORKDIR}/usr/X11R6/lib/X11/fonts/encodings/urdunaqsh-0.enc
-	
+
 	# Update the Savage Driver
 	# savage driver 1.1.27t is a .zip and contains a savage directory
 	# (that's why we have to be in drivers, not in savage subdir).
@@ -201,13 +201,13 @@ src_unpack() {
 	tar -zxf ${DISTDIR}/synaptics-${SYNDRV_VER}.tar.gz || die
 	cd ${S}
 	eend 0
-    
+
 #	ebegin "Adding VIA driver"
 #	cd ${WORKDIR}
 #	unpack XFree86-${PV}-drivers-via-${VIADRV_VER}.tar.bz2
 #	cd ${S}
 #	eend 0
-	
+
 #	ebegin "Updating Matrox HAL driver"
 #	unpack mga-${MGADRV_VER}.tgz
 #	touch ${WORKDIR}/mga/HALlib/mgaHALlib.a
@@ -254,9 +254,9 @@ src_unpack() {
 
 	# Various Patches from all over
 	EPATCH_SUFFIX="patch" epatch ${PATCH_DIR}
-	
+
 	unset EPATCH_EXCLUDE
-	
+
 	# Set up Synaptics Makefile
 	cd ${WORKDIR}
 	epatch ${DISTDIR}/XFree86-synaptics-update-${SYNDRV_VER}${SYNUPDATE_VER}.diff
@@ -266,7 +266,7 @@ src_unpack() {
 	# Fix DRI related problems
 	cd ${S}/programs/Xserver/hw/xfree86/
 	epatch ${DISTDIR}/xfree86-dri-resume-v8.patch
-	
+
 	# Update Wacom Driver, hopefully resolving bug #1632
 	# The kernel driver should prob also be updated, this can be
 	# found at:
@@ -280,7 +280,7 @@ src_unpack() {
 			${S}/programs/Xserver/hw/xfree86/input/wacom/xf86Wacom.c || die
 		eend 0
 	fi
-	
+
 	# Unpack the MS fonts
 	if use truetype
 	then
@@ -296,10 +296,10 @@ src_unpack() {
 		done
 		ebegin "Done unpacking Core Fonts"; eend 0
 	fi
-	
+
 	# Fix broken makefiles for -fPIC problem -- see bug #23581
 	mkdir -p ${S}/exports/lib
-	
+
 	ebegin "Setting up config/cf/host.def"
 	cd ${S}; cp ${FILESDIR}/${PV}/site.def config/cf/host.def || die
 	echo "#define XVendorString \"Gentoo Linux (XFree86 ${PV}, revision ${PR})\"" \
@@ -458,7 +458,7 @@ src_unpack() {
 
 	# Use the xfree Xft2 lib
 	echo "#define SharedLibXft YES" >> config/cf/host.def
-	
+
 	# disable docs if doc not in USE
 	if [ -z "`use doc`" ]
 	then
@@ -517,7 +517,7 @@ src_unpack() {
 	bzcat ${DISTDIR}/XFree86-locale.alias.bz2 > nls/locale.alias
 	bzcat ${DISTDIR}/XFree86-locale.dir.bz2 > nls/locale.dir
 	bzcat ${DISTDIR}/XFree86-en_US.UTF-8.old.bz2 > nls/Compose/en_US.UTF-8
-	
+
 	if use doc
 	then
 		# These are not included anymore as they are obsolete
@@ -649,7 +649,7 @@ src_install() {
 
 	# Install example config file
 	newins ${S}/programs/Xserver/hw/xfree86/XF86Config XF86Config.example
-	
+
 	# Install MS fonts.
 	if use truetype
 	then
@@ -730,7 +730,7 @@ src_install() {
 				;;
 		esac
 	done
-	
+
 	# Another hack from Mandrake -- to fix dead + space for the us
 	# international keyboard
 	for i in ${D}/usr/X11R6/lib/X11/locale/*/Compose
@@ -746,7 +746,7 @@ src_install() {
 	dodir /usr/X11R6/lib/X11/fonts/encodings
 	cp -a ${WORKDIR}/usr/X11R6/lib/X11/fonts/encodings/* \
 		${D}/usr/X11R6/lib/X11/fonts/encodings
-	
+
 	for x in ${D}/usr/X11R6/lib/X11/fonts/encodings/{.,large}/*.enc
 	do
 		[ -f "${x}" ] && gzip -9 -f ${x}
@@ -763,7 +763,7 @@ src_install() {
 		cp -a ${WORKDIR}/ukr ${D}/usr/X11R6/lib/X11/fonts
 		eend 0
 	fi
-	
+
 	exeinto /etc/X11
 	# new session management script
 	doexe ${FILESDIR}/${PV}/chooser.sh
@@ -888,12 +888,12 @@ pkg_preinst() {
 	then
 		rm -rf ${ROOT}/usr/X11R6/lib/X11/XftConfig
 	fi
-	
+
 	if [ -L ${ROOT}/etc/X11/app-defaults ]
 	then
 		rm -f ${ROOT}/etc/X11/app-defaults
 	fi
-	
+
 	if [ ! -L ${ROOT}/usr/X11R6/lib/X11/app-defaults ] && \
 	   [ -d ${ROOT}/usr/X11R6/lib/X11/app-defaults ]
 	then
@@ -901,15 +901,15 @@ pkg_preinst() {
 		then
 			mkdir -p ${ROOT}/etc/X11/app-defaults
 		fi
-		
+
 		mv -f ${ROOT}/usr/X11R6/lib/X11/app-defaults ${ROOT}/etc/X11
 	fi
-	
+
 	if [ -L ${ROOT}/usr/X11R6/lib/X11/xkb ]
 	then
 		rm -f ${ROOT}/usr/X11R6/lib/X11/xkb
 	fi
-	
+
 	if [ ! -L ${ROOT}/etc/X11/xkb ] && \
 	   [ -d ${ROOT}/etc/X11/xkb ]
 	then
@@ -917,7 +917,7 @@ pkg_preinst() {
 		then
 			mkdir -p ${ROOT}/usr/X11R6/lib/X11
 		fi
-		
+
 	    mv -f ${ROOT}/etc/X11/xkb ${ROOT}/usr/X11R6/lib/X11
 	fi
 
@@ -956,7 +956,7 @@ update_XftConfig() {
 			ewarn
 			ewarn "  ${ROOT}etc/X11/XftConfig.bak"
 			echo
-			
+
 			cp -a ${ROOT}/etc/X11/XftConfig \
 				${ROOT}/etc/X11/XftConfig.bak
 			mv -f ${ROOT}/etc/X11/XftConfig.new \
@@ -976,15 +976,15 @@ pkg_postinst() {
 	if [ "${ROOT}" = "/" ]
 	then
 		local x=""
-		
+
 		umask 022
-	
+
 		# This one cause ttmkfdir to segfault :/
 		#rm -f ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large/gbk-0.enc.gz
 
 		# ********************************************************************
 		#  A note about fonts and needed files:
-		#  
+		#
 		#  1)  Create /usr/X11R6/lib/X11/fonts/encodings/encodings.dir
 		#
 		#  2)  Create font.scale for TrueType fonts (need to do this before
@@ -1016,7 +1016,7 @@ pkg_postinst() {
 			do
 				[ -z "$(ls ${x}/)" ] && continue
 				[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
-		
+
 				# Only generate .scale files if there are truetype
 				# fonts present ...
 				if [ "${x/encodings}" = "${x}" -a \
@@ -1029,13 +1029,13 @@ pkg_postinst() {
 			done
 			eend 0
 		fi
-			
+
 		ebegin "Generating fonts.dir files..."
 		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
 		do
 			[ -z "$(ls ${x}/)" ] && continue
 			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
-		
+
 			if [ "${x/encodings}" = "${x}" ]
 			then
 				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
@@ -1063,7 +1063,7 @@ pkg_postinst() {
 			fi
 		done
 		eend 0
-		
+
 		ebegin "Fixing permissions..."
 		find ${ROOT}/usr/X11R6/lib/X11/fonts/ -type f -name 'font.*' \
 			-exec chmod 0644 {} \;
@@ -1114,7 +1114,7 @@ pkg_postinst() {
 		then
 			mkdir -p ${x}
 		fi
-		
+
 		chown root:root ${x}
 		chmod 1777 ${x}
 	done
@@ -1144,7 +1144,7 @@ pkg_postinst() {
 	einfo "Any custom cursor sets should be placed in that directory"
 	einfo "This is different from the previous versions of 4.3 and"
 	einfo "the 4.2.99 series."
-	einfo 
+	einfo
 	ewarn "New in this release: if you wish to set system-wide default"
 	ewarn "cursors, please set them in /usr/local/share/cursors/xfree"
 	ewarn "so that future emerges will not overwrite those settingse"

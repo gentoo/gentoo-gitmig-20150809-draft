@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.19 2003/08/03 04:44:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r1.ebuild,v 1.20 2003/09/07 07:27:40 msterret Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -119,7 +119,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	pam? ( >=sys-libs/pam-0.75 )
 	truetype? ( app-arch/cabextract )
 	app-arch/unzip" # needed for savage driver (version 1.1.27t)
-	
+
 RDEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
@@ -136,7 +136,7 @@ PDEPEND=">=x11-libs/xft-2.0.1-r1
 
 PROVIDE="virtual/x11
 	virtual/opengl
-	virtual/glu"	
+	virtual/glu"
 
 #inherit needs to happen *after* DEPEND has been defined to have "newdepend"
 #do the right thing. Otherwise RDEPEND doesn't get set properly.
@@ -153,7 +153,7 @@ src_unpack() {
 	else
 		unpack X${MY_SV}src-{1,2,3,4,5,6,7}.tgz
 	fi
-	
+
 	unpack XFree86-4.2.99.4-patches-${PATCH_VER}.tar.bz2
 
 	if [ "`gcc-version`" = "2.95" ]
@@ -164,13 +164,13 @@ src_unpack() {
 	fi
 	# Various Patches from all over
 	epatch ${WORKDIR}/patch/
-	
+
 	unset EPATCH_EXCLUDE
-	
+
 	# enable the nv driver on ppc
 	if use ppc &> /dev/null
 	then
-		epatch ${FILESDIR}/${PV}-patches/XFree86-${PV}-enable-nv-on-ppc.patch 
+		epatch ${FILESDIR}/${PV}-patches/XFree86-${PV}-enable-nv-on-ppc.patch
 	fi
 
 	# Fix HOME and END keys to work in xterm, bug #15254
@@ -179,14 +179,14 @@ src_unpack() {
 	# Fix DRI related problems
 	cd ${S}/programs/Xserver/hw/xfree86/
 	epatch ${DISTDIR}/xfree86-dri-resume-v8.patch
-	
+
 	# Fix keyboard issue on sparc
 	if use sparc &> /dev/null
 	then
 		cd ${S}
 		epatch ${FILESDIR}/${PV}-patches/XFree86-${PV}-sparc-kb.patch
 	fi
-	
+
 	# Update the Savage Driver
 	# savage driver 1.1.27t is a .zip and contains a savage directory
 	# (that's why we have to be in drivers, not in savage subdir).
@@ -196,7 +196,7 @@ src_unpack() {
 	ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
 		${S}/programs/Xserver/hw/xfree86/drivers/savage
 	eend 0
-    
+
 	# Update the SIS Driver
 	ebegin "Updating SiS driver"
 	cd ${S}/programs/Xserver/hw/xfree86/drivers/sis
@@ -204,7 +204,7 @@ src_unpack() {
 	ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
 		${S}/programs/Xserver/hw/xfree86/drivers/sis
 	eend 0
-    
+
 	# Update Wacom Driver, hopefully resolving bug #1632
 	# The kernel driver should prob also be updated, this can be
 	# found at:
@@ -218,7 +218,7 @@ src_unpack() {
 			${S}/programs/Xserver/hw/xfree86/input/wacom/xf86Wacom.c || die
 		eend 0
 	fi
-	
+
 	# Unpack the MS fonts
 	if [ -n "`use truetype`" ]
 	then
@@ -234,7 +234,7 @@ src_unpack() {
 		done
 		ebegin "Done unpacking Core Fonts"; eend 0
 	fi
-	
+
 	ebegin "Setting up config/cf/host.def"
 	cd ${S}; cp ${FILESDIR}/${PV}/site.def config/cf/host.def || die
 	echo "#define XVendorString \"Gentoo Linux (XFree86 ${PV}, revision ${PR})\"" \
@@ -312,9 +312,9 @@ src_unpack() {
 	fi
 
 	[ "${ARCH}" = "hppa" ] && echo "#define DoLoadableServer NO" >> config/cf/host.def
-	
+
 	echo "#define SharedLibXft NO" >> config/cf/host.def
-	
+
 	eend 0
 
 	# These are not included anymore as they are obsolete
@@ -441,7 +441,7 @@ src_install() {
 
 	# Install example config file
 	newins ${S}/programs/Xserver/hw/xfree86/XF86Config XF86Config.example
-	
+
 	# Install MS fonts.
 	if [ -n "`use truetype`" ]
 	then
@@ -506,7 +506,7 @@ src_install() {
 				;;
 		esac
 	done
-	
+
 	exeinto /etc/X11
 	# new session management script
 	doexe ${FILESDIR}/${PV}/chooser.sh
@@ -609,12 +609,12 @@ pkg_preinst() {
 	then
 		rm -rf ${ROOT}/usr/X11R6/lib/X11/XftConfig
 	fi
-	
+
 	if [ -L ${ROOT}/etc/X11/app-defaults ]
 	then
 		rm -f ${ROOT}/etc/X11/app-defaults
 	fi
-	
+
 	if [ ! -L ${ROOT}/usr/X11R6/lib/X11/app-defaults ] && \
 	   [ -d ${ROOT}/usr/X11R6/lib/X11/app-defaults ]
 	then
@@ -622,15 +622,15 @@ pkg_preinst() {
 		then
 			mkdir -p ${ROOT}/etc/X11/app-defaults
 		fi
-		
+
 		mv -f ${ROOT}/usr/X11R6/lib/X11/app-defaults ${ROOT}/etc/X11
 	fi
-	
+
 	if [ -L ${ROOT}/usr/X11R6/lib/X11/xkb ]
 	then
 		rm -f ${ROOT}/usr/X11R6/lib/X11/xkb
 	fi
-	
+
 	if [ ! -L ${ROOT}/etc/X11/xkb ] && \
 	   [ -d ${ROOT}/etc/X11/xkb ]
 	then
@@ -638,7 +638,7 @@ pkg_preinst() {
 		then
 			mkdir -p ${ROOT}/usr/X11R6/lib/X11
 		fi
-		
+
 	    mv -f ${ROOT}/etc/X11/xkb ${ROOT}/usr/X11R6/lib/X11
 	fi
 
@@ -677,7 +677,7 @@ update_XftConfig() {
 			ewarn
 			ewarn "  ${ROOT}etc/X11/XftConfig.bak"
 			echo
-			
+
 			cp -a ${ROOT}/etc/X11/XftConfig \
 				${ROOT}/etc/X11/XftConfig.bak
 			mv -f ${ROOT}/etc/X11/XftConfig.new \
@@ -697,15 +697,15 @@ pkg_postinst() {
 	if [ "${ROOT}" = "/" ]
 	then
 		local x=""
-		
+
 		umask 022
-	
+
 		# This one cause ttmkfdir to segfault :/
 		#rm -f ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large/gbk-0.enc.gz
 
 		# ********************************************************************
 		#  A note about fonts and needed files:
-		#  
+		#
 		#  1)  Create /usr/X11R6/lib/X11/fonts/encodings/encodings.dir
 		#
 		#  2)  Create font.scale for TrueType fonts (need to do this before
@@ -737,7 +737,7 @@ pkg_postinst() {
 			do
 				[ -z "$(ls ${x}/)" ] && continue
 				[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
-		
+
 				# Only generate .scale files if there are truetype
 				# fonts present ...
 				if [ "${x/encodings}" = "${x}" -a \
@@ -750,13 +750,13 @@ pkg_postinst() {
 			done
 			eend 0
 		fi
-			
+
 		ebegin "Generating fonts.dir files..."
 		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
 		do
 			[ -z "$(ls ${x}/)" ] && continue
 			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
-		
+
 			if [ "${x/encodings}" = "${x}" ]
 			then
 				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
@@ -784,7 +784,7 @@ pkg_postinst() {
 			fi
 		done
 		eend 0
-		
+
 		ebegin "Fixing permissions..."
 		find ${ROOT}/usr/X11R6/lib/X11/fonts/ -type f -name 'font.*' \
 			-exec chmod 0644 {} \;
@@ -832,7 +832,7 @@ pkg_postinst() {
 		then
 			mkdir -p ${x}
 		fi
-		
+
 		chown root:root ${x}
 		chmod 1777 ${x}
 	done

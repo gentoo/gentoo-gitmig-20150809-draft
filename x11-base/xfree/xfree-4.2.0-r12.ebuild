@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.21 2003/03/20 15:25:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.22 2003/09/07 07:27:40 msterret Exp $
 
 IUSE="sse nls mmx 3dnow 3dfx"
 
@@ -52,13 +52,13 @@ DEPEND=">=sys-libs/ncurses-5.1
 	sys-devel/flex
 	dev-lang/perl
 	3dfx? ( >=media-libs/glide-v3-3.10 )"
-	
+
 RDEPEND=">=sys-libs/ncurses-5.1
 	>=x11-base/opengl-update-1.3"
 
 PROVIDE="virtual/x11
 	virtual/opengl
-	virtual/glu"	
+	virtual/glu"
 
 src_unpack () {
 
@@ -165,14 +165,14 @@ src_compile() {
 		ln -s /usr/include/glide3/g3ext.h g3ext.h
 		cd ${S}
 	fi
-	
+
 	# If a user defines the MAKE_OPTS variable in /etc/make.conf instead of
 	# MAKEOPTS, they'll redefine an internal XFree86 Makefile variable and the
 	# xfree build will silently die. This is tricky to track down, so I'm
 	# adding a preemptive fix for this issue by making sure that MAKE_OPTS is
 	# unset. (drobbins, 08 Mar 2003)
 	unset MAKE_OPTS
-	
+
 	emake World || die
 
 	if [ "`use nls`" ]
@@ -196,7 +196,7 @@ src_install() {
 	else
 		make install DESTDIR=${D} || die
 	fi
-	
+
 	make install.man DESTDIR=${D} || die
 
 	if [ "`use nls`" ]
