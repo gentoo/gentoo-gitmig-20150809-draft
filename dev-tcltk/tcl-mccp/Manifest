@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4e65e8696b3ab5240e931d0e8215b03f tcl-mccp-0.6.ebuild 539
+MD5 786a734200a91f7391de5833f2a6e0d2 ChangeLog 460
 MD5 43e377139ff5f3b7415b94a8c8d5260d metadata.xml 158
-MD5 18c9aa7f46f926241a74621bec131529 ChangeLog 373
+MD5 9d52ae7dc663d316e1175e3c26ee9349 tcl-mccp-0.6.ebuild 516
 MD5 1a88dae55f24afca5999b72be2a94d44 files/digest-tcl-mccp-0.6 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBMNazFhz/XBeRBtARAveFAJ91OBcVV18mY1+qm2yYmtUm16SopwCfdTrT
-z3ba1DQFV7bip9Um2UWnp2I=
-=aJRA
------END PGP SIGNATURE-----
