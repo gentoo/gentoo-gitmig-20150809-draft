@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.83 2004/01/28 23:21:59 rphillips Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.84 2004/02/22 16:01:04 agriffis Exp $
+
+  22 Feb 2004; Aron Griffis <agriffis@gentoo.org> vim-6.2-r1.ebuild,
+  vim-6.2-r2.ebuild, vim-6.2-r3.ebuild, vim-6.2-r5.ebuild, vim-6.2-r6.ebuild,
+  vim-6.2.ebuild:
+  Remove arm keywords
 
 *vim-6.2-r6 (28 Jan 2004)
 
