@@ -1,6 +1,20 @@
-MD5 0d8ffe61a67f7b99475844ae12e0da80 ChangeLog 1189
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 746dcfd462eb65b4f22c4d926ffc8ddd coda-server-5.3.19.ebuild 1872
-MD5 49e881e0eadfae1a5910ebce38f0d7f3 metadata.xml 323
+MD5 b8ca5ed46e2a3ca2ea748db3dc0096a1 coda-server-6.0.3.ebuild 1188
+MD5 0d58790296b6f183dfb61bfdb452c050 coda-server-6.0.6.ebuild 1189
+MD5 c86b0a0904435ad5a0eaee43d6521bd0 metadata.xml 258
+MD5 229eb88044f83bd6aeffb55f3ec22472 ChangeLog 1614
 MD5 296b4e177ceef43d26796422bbe2ec15 files/coda-server-5.3.19-gentoo.patch 732
 MD5 105dc17587292e5e2ebb79aa4383cca7 files/coda-server-5.3.19-gentoo2.patch 343
 MD5 c64c09508bed2660cfd97ac95fe466e2 files/digest-coda-server-5.3.19 64
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-coda-server-6.0.3 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-coda-server-6.0.6 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBQJ2KMGnpIbeahxwRAouSAJ434hMl2U7cF9REe4z5NLyOhS3s9gCfehez
+ZBXw8gAUBkfVUwMiPS4g21k=
+=FM1m
+-----END PGP SIGNATURE-----

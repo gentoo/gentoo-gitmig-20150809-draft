@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/coda-server
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-server/ChangeLog,v 1.5 2004/06/24 22:43:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-server/ChangeLog,v 1.6 2004/09/09 18:14:24 griffon26 Exp $
+
+*coda-server-6.0.6 (09 Sep 2004)
+
+  09 Sep 2004; Maurice van der Pot <griffon26@gentoo.org> metadata.xml,
+  +coda-server-6.0.3.ebuild, +coda-server-6.0.6.ebuild:
+  Took over maintenance from Daniel Black <dragonheart@gentoo.org>
+  Prepared coda-server ebuild for removal from portage because it has been
+  superseded by the coda ebuild. For now the new versions of the coda-server
+  ebuild will merge coda as a dependency.
 
   26 Apr 2004; Daniel Black <dragonheart@gentoo.org>
   coda-server-5.3.19.ebuild:
