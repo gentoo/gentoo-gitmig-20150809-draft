@@ -1,9 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.2.2.ebuild,v 1.2 2003/05/15 21:00:28 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.2.2.ebuild,v 1.3 2003/05/17 10:56:35 liquidx Exp $
 
 inherit gnome2 eutils
 
+IUSE=""
 S=${WORKDIR}/${P}
 DESCRIPTION="the Gnome2 session manager"
 HOMEPAGE="http://www.gnome.org/"
@@ -33,6 +34,7 @@ src_unpack() {
 	# This patch is only necessary on 64-bit platforms such as Alpha
 	# but it doesn't hurt elsewhere.
 	epatch ${FILESDIR}/${PN}-2.0.9-64bit.patch || die
+	gnome2_omf_fix
 }
 
 src_install() {
