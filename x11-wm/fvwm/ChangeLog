@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.36 2003/10/18 14:30:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.37 2003/10/20 13:59:19 taviso Exp $
+
+*fvwm-2.5.7-r5 (20 Oct 2003)
+
+  20 Oct 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.7-r5.ebuild:
+  new release of FvwmTabs, with some new configuration options.
 
 *fvwm-2.5.7-r4 (18 Oct 2003)
 
