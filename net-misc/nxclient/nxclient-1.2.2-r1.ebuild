@@ -13,16 +13,16 @@ SLOT="0"
 KEYWORDS="x86 -ppc -sparc -alpha -mips"
 RESTRICT="nostrip"
 
-# this ebuild deals with release 31 of NXClient 1.2.2
-MY_PV="${PV}-31"
+# this ebuild deals with release 42 of NXClient 1.2.2
+MY_PV="${PV}-42"
 SRC_URI="http://www.nomachine.com/download/nxclient/RedHat-9.0/nxclient-${MY_PV}.i386.rpm"
 
 DEPEND=">=media-libs/jpeg-6b-r3
 	>=sys-libs/glibc-2.3.2-r1
 	>=sys-libs/zlib-1.1.4-r1
 	>=x11-base/xfree-4.3.0-r2
-	>=net-misc/nxssh-1.2.2
-	>=net-misc/nxproxy-1.2.2
+	>=net-misc/nxssh-1.2.2-r1
+	>=net-misc/nxproxy-1.2.2-r1
 	>=dev-libs/expat-1.95.6-r1
 	>=media-libs/fontconfig-2.2.0-r2
 	>=media-libs/freetype-2.1.4
@@ -52,7 +52,7 @@ src_install() {
 	doins usr/NX/share/images/*.png
 
 	insinto /etc/env.d
-	doins ${FILESDIR}/${PVR}/50nxclient
+	doins ${FILESDIR}/${PV}/50nxclient
 
 	insinto /usr/kde/3.1/share/applnk/Internet
 	doins "usr/NX/share/applnk/NX Client for Linux/nxclient-admin.desktop"
