@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/desklet-external
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-external/ChangeLog,v 1.1 2003/09/10 11:52:09 obz Exp $
+
+*desklet-external-0.21 (10 Sep 2003)
+
+  10 Sep 2003; Mike Gardiner <obz@gentoo.org> desklet-external-0.21.ebuild:
+  First import
+
