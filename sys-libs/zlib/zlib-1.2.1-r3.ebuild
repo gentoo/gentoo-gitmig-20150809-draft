@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r3.ebuild,v 1.15 2005/01/03 00:30:33 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r3.ebuild,v 1.16 2005/01/03 07:52:34 eradicator Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,6 +14,11 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="build"
 
 RDEPEND="virtual/libc"
+
+pkg_setup() {
+	tc-export CC RANLIB
+	AR="$(tc-getAR) rc"
+}
 
 src_unpack() {
 	unpack ${A}
@@ -34,17 +39,11 @@ src_unpack() {
 }
 
 src_compile() {
-	export CC="$(tc-getCC)" AR="$(tc-getAR) rc" RANLIB="$(tc-getRANLIB)"
-
 	./configure --shared --prefix=/usr --libdir=/$(get_libdir) || die
 	emake || die
 
 	./configure --prefix=/usr --libdir=/$(get_libdir) || die
 	emake || die
-}
-
-src_test() {
-	make test || die
 }
 
 src_install() {
