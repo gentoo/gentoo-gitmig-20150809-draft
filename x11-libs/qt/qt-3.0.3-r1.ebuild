@@ -1,9 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.3-r1.ebuild,v 1.2 2002/04/17 05:04:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.3-r1.ebuild,v 1.3 2002/04/27 21:40:20 seemant Exp $
 
-P=qt-x11-${PV}
 S=${WORKDIR}/qt-x11-free-${PV}
 
 DESCRIPTION="QT version ${PV}"
@@ -28,91 +27,91 @@ export QTDIR=${S}
 
 src_unpack() {
 
-    export QTDIR=${S}
+	export QTDIR=${S}
 
-    unpack ${A}
+	unpack ${A}
 
-    cd ${S}
-    cp configure configure.orig
-    sed -e "s:read acceptance:acceptance=yes:" configure.orig > configure
+	cd ${S}
+	cp configure configure.orig
+	sed -e "s:read acceptance:acceptance=yes:" configure.orig > configure
 
 }
 
 src_compile() {
 
-    export QTDIR=${S}
-    
-    export LDFLAGS="-ldl"
-
-    use nas		&& myconf="${myconf} -system-nas-sound"
-    use gif		&& myconf="${myconf} -qt-gif"
-    use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
-    use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql -I/usr/include/postgresql/libpq -L/usr/lib"
-    use odbc	&& myconf="${myconf} -plugin-sql-odbc"
-    [ -n "$DEBUG" ]	&& myconf="${myconf} -debug" 		|| myconf="${myconf} -release -no-g++-exceptions"
-    
-    # avoid wasting time building things we won't install
-    rm -rf tutorial examples
+	export QTDIR=${S}
 	
-    ./configure -sm -thread -stl -system-zlib -system-libjpeg ${myconf} \
-    	-system-libmng -system-libpng -ldl -lpthread -xft || die
+	export LDFLAGS="-ldl"
 
-    export QTDIR=${S}
+	use nas		&& myconf="${myconf} -system-nas-sound"
+	use gif		&& myconf="${myconf} -qt-gif"
+	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
+	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql -I/usr/include/postgresql/libpq -L/usr/lib"
+	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
+	[ -n "$DEBUG" ]	&& myconf="${myconf} -debug" 		|| myconf="${myconf} -release -no-g++-exceptions"
+	
+	# avoid wasting time building things we won't install
+	rm -rf tutorial examples
+	
+	./configure -sm -thread -stl -system-zlib -system-libjpeg ${myconf} \
+		-system-libmng -system-libpng -ldl -lpthread -xft || die
 
-    emake src-qmake src-moc sub-src sub-tools || die
+	export QTDIR=${S}
+
+	emake src-qmake src-moc sub-src sub-tools || die
 
 }
 
 src_install() {
 
 
-    export QTDIR=${S}
+	export QTDIR=${S}
 
-    cd ${S}
+	cd ${S}
 
-    # binaries
-    into $QTBASE
-    dobin bin/*
+	# binaries
+	into $QTBASE
+	dobin bin/*
 
-    # libraries
-    dolib lib/libqt-mt.so.${PV} lib/libqui.so.1.0.0 lib/libeditor.so.1.0.0
-    cd ${D}$QTBASE/lib
-    for x in libqui.so libeditor.so
-    do
+	# libraries
+	dolib lib/libqt-mt.so.${PV} lib/libqui.so.1.0.0 lib/libeditor.so.1.0.0
+	cd ${D}$QTBASE/lib
+	for x in libqui.so libeditor.so
+	do
 	ln -s $x.1.0.0 $x.1.0
 	ln -s $x.1.0 $x.1
 	ln -s $x.1 $x
-    done
-    ln -s libqt-mt.so.${PV} libqt-mt.so.3.0
-    ln -s libqt-mt.so.3.0 libqt-mt.so.3
-    ln -s libqt-mt.so.3 libqt-mt.so
+	done
+	ln -s libqt-mt.so.${PV} libqt-mt.so.3.0
+	ln -s libqt-mt.so.3.0 libqt-mt.so.3
+	ln -s libqt-mt.so.3 libqt-mt.so
 
-    # includes
-    cd ${S}
-    dodir ${QTBASE}/include/private
-    cp include/* ${D}/${QTBASE}/include/
-    cp include/private/* ${D}/${QTBASE}/include/private/
+	# includes
+	cd ${S}
+	dodir ${QTBASE}/include/private
+	cp include/* ${D}/${QTBASE}/include/
+	cp include/private/* ${D}/${QTBASE}/include/private/
 
-    # misc
-    insinto /etc/env.d
-    doins ${FILESDIR}/{45qt3,50qtdir3}
+	# misc
+	insinto /etc/env.d
+	doins ${FILESDIR}/{45qt3,50qtdir3}
 
-    # misc build reqs
-    dodir ${QTBASE}/mkspecs
-    cp -R ${S}/mkspecs/linux-g++ ${D}/${QTBASE}/mkspecs/
+	# misc build reqs
+	dodir ${QTBASE}/mkspecs
+	cp -R ${S}/mkspecs/linux-g++ ${D}/${QTBASE}/mkspecs/
 
-    sed -e "s:${D}::g" \
-    	-e "s:qt-x11-free-3.0.1::g" \
+	sed -e "s:${D}::g" \
+		-e "s:qt-x11-free-3.0.1::g" \
 	-e "s:${WORKDIR}:${QTBASE}:" \
 	-e "s:/usr/local/qt:${QTBASE}:" \
 	${S}/.qmake.cache > ${D}${QTBASE}/.qmake.cache
 
-    # plugins
-    cd ${S}
-    plugins=`find plugins -name "lib*.so" -print`
-    for x in $plugins; do
-    	insinto ${QTBASE}/`dirname $x`
+	# plugins
+	cd ${S}
+	plugins=`find plugins -name "lib*.so" -print`
+	for x in $plugins; do
+		insinto ${QTBASE}/`dirname $x`
 	doins $x
-    done
+	done
 
 }
