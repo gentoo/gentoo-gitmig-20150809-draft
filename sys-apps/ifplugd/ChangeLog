@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.3 2003/08/06 18:00:32 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.4 2003/11/15 16:47:58 wmertens Exp $
+
+*ifplugd-0.20 (15 Nov 2003)
+
+  15 Nov 2003; Wout Mertens <wmertens@gentoo.org> ifplugd-0.20.ebuild :
+  Version bump, fixing several issues with ifplugd.
+  New config file format, making it easier to read.
+  Many thanks to everyone who helped on bugs #28388 and #30443
 
 *ifplugd-0.15 (17 Mar 2003)
 
