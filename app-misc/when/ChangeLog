@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/when
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.11 2005/03/06 22:24:59 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.12 2005/03/08 15:59:39 ka0ttic Exp $
+
+*when-1.0.23 (08 Mar 2005)
+
+  08 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> -when-1.0.19.ebuild,
+  +when-1.0.23.ebuild:
+  Version bump; tidy old ebuild.
 
   06 Mar 2005; Danny van Dyk <kugelfang@gentoo.org> when-1.0.20.ebuild:
   Marked ~amd64.
