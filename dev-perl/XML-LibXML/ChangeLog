@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-LibXML
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.20 2003/07/12 10:49:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.21 2003/08/20 10:33:59 mcummings Exp $
+
+*XML-LibXML-1.55 (20 Aug 2003)
+
+  20 Aug 2003; Michael Cummings <mcummings@gentoo.org> XML-LibXML-1.55.ebuild:
+  Bug fix. See http://search.cpan.org/src/PHISH/XML-LibXML-1.55/Changes
 
 *XML-LibXML-1.52-r2 (01 Jun 2003)
 
