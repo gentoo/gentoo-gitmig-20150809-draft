@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 26cca527242ae2cc658a70534b03d5b9 pvpgn-1.6.5.ebuild 2341
+MD5 ed88483e63b94771bb6c0ba143ca8707 ChangeLog 507
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 3c8456f79715fb8b848e471e99ca0b7d ChangeLog 347
+MD5 d501aa694a38468a7b78a9c3f669b3b0 pvpgn-1.6.5.ebuild 2435
+MD5 778be818c35e7df1e022398198427172 files/1.6.5-fhs.patch 10322
 MD5 ba5db7daf3b6cfeb5c463b3d8f7ee32b files/digest-pvpgn-1.6.5 134
 MD5 0dea305044e123e1b1ee007331906727 files/init.d.rc 785
-MD5 778be818c35e7df1e022398198427172 files/1.6.5-fhs.patch 10322
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBNVKgHTu7gpaalycRAi4yAKDOZz5+fYtq6bB0LsoiC3fA6Fx9+QCeNbBN
-7+HaA0c+fHu3Nk4RReDs+28=
-=1rTy
------END PGP SIGNATURE-----
