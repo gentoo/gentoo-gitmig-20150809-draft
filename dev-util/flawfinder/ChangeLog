@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/flawfinder
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/flawfinder/ChangeLog,v 1.5 2004/07/15 23:40:23 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/flawfinder/ChangeLog,v 1.6 2004/07/16 18:01:37 aliz Exp $
+
+*flawfinder-1.26 (16 Jul 2004)
+
+  16 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> flawfinder-1.26.ebuild:
+  Version bump, ebuild contributed by Justin Guyett <justin@soze.net>.
 
   15 Jul 2004; <solar@gentoo.org> flawfinder-1.24.ebuild:
   marked stable on x86
