@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.26.ebuild,v 1.3 2004/02/08 20:09:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.26.ebuild,v 1.4 2004/02/12 03:42:42 robbat2 Exp $
 
 inherit eutils
 
@@ -53,6 +53,10 @@ src_unpack() {
 	# (the net result is that "passwd" can be used to change ldap passwords w/
 	#  proper pam support)
 	sed -ie 's/$(SECURITY_LIBS) $(LDIF_LIBS) $(LUTIL_LIBS)/$(LUTIL_LIBS) $(SECURITY_LIBS) $(LDIF_LIBS)/' ${S}/servers/slapd/Makefile.in
+
+	#cd ${S}
+	#epatch ${FILESDIR}/${PN}-2.1.26-perlfix.patch
+	sed -ie '49 a#include <XSUB.h>' ${S}/servers/slapd/back-perl/perl_back.h
 }
 
 src_compile() {
@@ -165,13 +169,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	# make a self-signed ssl cert (if there isn't one there already)
-	if [ ! -e /etc/openldap/ssl/ldap.pem ]
-	then
-		cd /etc/openldap/ssl
-		yes "" | sh gencert.sh
-		chmod 640 ldap.pem
-		chown root:ldap ldap.pem
+	if use ssl; then
+		# make a self-signed ssl cert (if there isn't one there already)
+		if [ ! -e /etc/openldap/ssl/ldap.pem ]
+		then
+			cd /etc/openldap/ssl
+			yes "" | sh gencert.sh
+			chmod 640 ldap.pem
+			chown root:ldap ldap.pem
+		else
+			einfo "An LDAP cert already appears to exist, no creating"
+		fi
 	fi
 
 	# Since moving to running openldap as user ldap there are some
@@ -184,4 +192,15 @@ pkg_postinst() {
 	chown root:ldap /etc/openldap/slapd.conf.default
 	chmod 0640 /etc/openldap/slapd.conf.default
 	chown ldap:ldap /var/lib/openldap-{data,ldbm,slurp}
+
+	# notes from bug 41297
+	ewarn "If you are upgrading from OpenLDAP 2.0, major changes have occured:"
+	ewarn "- bind_anon_dn is now disabled by default for security"
+	ewarn "  add 'allow bind_anon_dn' to your config for the old behavior."
+	ewarn "- Default schemas have changed, you should slapcat your entire DB to"
+	ewarn "  a file, delete your DB, and then slapadd it again."
+	if use ssl; then
+		ewarn "- Self-signed SSL certificates are treated harshly by OpenLDAP 2.1"
+		ewarn "  add 'TLS_REQCERT never' if you want to use them."
+	fi
 }
