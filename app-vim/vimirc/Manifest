@@ -1,4 +1,6 @@
-MD5 17a82f93c392afcc058e8b59ee498072 ChangeLog 284
+MD5 d9aaeb2a2f5d54375eba166c093d4b4a ChangeLog 402
 MD5 9513f1b626172ca312de8d120e5cdb7e vimirc-0.5.1.ebuild 548
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 323c8308a6c74d3eb89da8cf48dd18fb vimirc-0.5.3.ebuild 548
+MD5 52b7a2c2e060435a5f2fd218f07ee6ba files/digest-vimirc-0.5.3 64
 MD5 d36791473feac737752593c43aa26b39 files/digest-vimirc-0.5.1 64
