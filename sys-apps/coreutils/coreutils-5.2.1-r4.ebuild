@@ -1,26 +1,26 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1.ebuild,v 1.15 2004/11/12 15:37:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r4.ebuild,v 1.1 2005/01/09 22:34:17 vapier Exp $
 
 inherit eutils flag-o-matic
 
-PATCH_VER=0.3
-I18N_VER=i18n-0.1
+PATCH_VER=0.9
+I18N_VER=i18n-0.2
 PATCHDIR=${WORKDIR}/patch
 
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 	mirror://gentoo/${P}.tar.bz2
-	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2
-	mirror://gentoo/${P}-${I18N_VER}.patch.gz
-	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2
-	mirror://gentoo/${P}-${I18N_VER}.patch.gz
-	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2"
+	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2
+	mirror://gentoo/${P}-${I18N_VER}.patch.bz2
+	http://dev.gentoo.org/~seemant/distfiles/${P}-patches-${PATCH_VER}.tar.bz2
+	http://dev.gentoo.org/~seemant/distfiles/${P}-${I18N_VER}.patch.bz2
+	http://dev.gentoo.org/~vapier/dist/${P}-patches-${PATCH_VER}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls build acl selinux static uclibc"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
@@ -30,7 +30,7 @@ RDEPEND="selinux? ( sys-libs/libselinux )
 DEPEND="${RDEPEND}
 	virtual/libc
 	>=sys-apps/portage-2.0.49
-	>=sys-devel/automake-1.8.3
+	=sys-devel/automake-1.8*
 	>=sys-devel/autoconf-2.58
 	>=sys-devel/m4-1.4-r1
 	!uclibc? ( sys-apps/help2man )"
@@ -40,20 +40,12 @@ src_unpack() {
 
 	cd ${S}
 
-	# the version of this patch in the patch tarball is broken on amd64
-	cp ${FILESDIR}/003_all_coreutils-gentoo-uname.patch ${PATCHDIR}/generic
-
-	# Mandrake's lsw patch caused issues on ia64 and amd64 with ls
-	# Reported upstream, but we don't apply it for now
-	# mv ${PATCHDIR}/mandrake/019* ${PATCHDIR}/excluded
-	mv ${PATCHDIR}/mandrake/025* ${PATCHDIR}/excluded
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/mandrake
 	epatch ${WORKDIR}/${P}-${I18N_VER}.patch
 
 	# Apply the ACL patches. 
 	# WARNING: These CONFLICT with the SELINUX patches
-	if use acl
-	then
+	if use acl ; then
 		mv ${PATCHDIR}/generic/00{1,2,4}* ${PATCHDIR}/excluded
 		mv ${PATCHDIR}/selinux/001_all_coreutils-noacl* ${PATCHDIR}/excluded
 		EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/acl
@@ -66,25 +58,29 @@ src_unpack() {
 	# do not include su infopage, as it is not valid for the su
 	# from sys-apps/shadow that we are using.
 	# Patch to add processor specific info to the uname output
-
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/generic
-
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/extra
 
 	use selinux && EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/selinux
 
-	# this fixes bug #61735 (which was also a general b0rk-age)
-	epatch ${FILESDIR}/coreutils-5.2.1-unamefix.patch
+	# Sparc32 SMP bug fix -- see bug #46593
+	use sparc && echo -ne "\n\n" >> ${S}/src/pr.c
+
+	# Since we've patched many .c files, the make process will 
+	# try to re-build the manpages by running `./bin --help`.  
+	# When cross-compiling, we can't do that since 'bin' isn't 
+	# a native binary, so let's just install outdated man-pages.
+	[[ ${CTARGET:-${CHOST}} != ${CHOST} ]] && touch man/*.1
 }
 
 src_compile() {
-	if [ -z "`which cvs 2>/dev/null`" ]
-	then
+	if ! type -p cvs > /dev/null ; then
 		# Fix issues with gettext's autopoint if cvs is not installed,
 		# bug #28920.
-			export AUTOPOINT="/bin/true"
+		export AUTOPOINT="/bin/true"
 	fi
 
+	ebegin "Reconfiguring configure scripts (be patient)"
 	export WANT_AUTOMAKE=1.8
 	export WANT_AUTOCONF=2.5
 
@@ -92,51 +88,56 @@ src_compile() {
 	touch aclocal.m4 configure config.hin \
 		Makefile.in */Makefile.in */*/Makefile.in
 
-	ebegin "Reconfiguring configure scripts (be patient)"
-	aclocal -I m4 &>/dev/null || die
-	autoconf || die
-	automake || die
+	aclocal -I m4 || die "aclocal"
+	autoconf || die "autoconf"
+	automake || die "automake"
 	eend $?
 
 	econf \
 		--bindir=/bin \
 		--enable-largefile \
-		`use_enable nls` \
-		`use_enable selinux` || die
+		$(use_enable nls) \
+		$(use_enable selinux) \
+		|| die "econf"
 
-	if use static
-	then
-		emake LDFLAGS=-static || die
-	else
-		emake || die
-	fi
+	use static && append-ldflags -static
+	emake LDFLAGS="${LDFLAGS}" || die "emake"
+}
+
+src_test() {
+	# Non-root tests will fail if the full path isnt
+	# accessible to non-root users
+	chmod a+rx "${WORKDIR}"
+	addwrite /dev/full
+	export RUN_EXPENSIVE_TESTS="yes"
+	#export FETISH_GROUPS="portage wheel"
+	make check || die "make check failed"
 }
 
 src_install() {
-	einstall \
-		bindir=${D}/bin || die
-
-	cd ${D}
-	dodir /usr/bin
-	rm -rf usr/lib
+	make install DESTDIR="${D}" || die
 
 	# add DIRCOLORS
 	insinto /etc
 	doins ${FILESDIR}/DIR_COLORS
 
 	# move non-critical packages into /usr
+	cd "${D}"
+	dodir /usr/bin
 	mv bin/{csplit,expand,factor,fmt,fold,join,md5sum,nl,od} usr/bin
 	mv bin/{paste,pathchk,pinky,pr,printf,sha1sum,shred,sum,tac} usr/bin
-	mv bin/{tail,test,tsort,unexpand,users} usr/bin
-	cd usr/bin
-	ln -s ../../bin/* .
+	mv bin/{tail,test,[,tsort,unexpand,users} usr/bin
+	cd bin
+	local x
+	for x in * ; do
+		dosym /bin/${x} /usr/bin/${x}
+	done
 
-	if ! use build
-	then
+	if ! use build ; then
 		cd ${S}
 		dodoc AUTHORS ChangeLog* NEWS README* THANKS TODO
 	else
-		rm -rf ${D}/usr/share
+		rm -r "${D}"/usr/share
 	fi
 }
 

@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/coreutils
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.116 2004/12/28 20:19:04 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.117 2005/01/09 22:34:17 vapier Exp $
+
+*coreutils-5.2.1-r4 (09 Jan 2005)
+
+  09 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  +coreutils-5.2.1-r4.ebuild:
+  Fix tail -f behavior #57477 by rob holland. Have the progress bar use normal
+  spaces #76903 by Nikolai Weibull. Fix chown --dereference #53750 by Georgi
+  Georgiev. Fix test running #75932 / #76089.
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org>
   coreutils-5.2.1-r2.ebuild:
