@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r6.ebuild,v 1.1 2005/01/18 08:59:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r6.ebuild,v 1.2 2005/01/20 18:19:41 eradicator Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic multilib
 
 MY_P=${P}-4_MLI.src
 S=${WORKDIR}/motif
@@ -97,20 +97,25 @@ src_install() {
 	einfo "Cleaning up X11 stuff"
 	rm -fR ${D}/etc
 	for nib in ${NOINSTBIN}; do
-		f="${D}usr/X11R6/bin/${nib}"; rm "$f" || die "rm $f"
+		f="${D}/usr/X11R6/bin/${nib}"; rm "$f" || die "rm $f"
 	done
 	for nim in ${NOINSTMAN1}; do
 		if useq ppc-macos || useq macos ; then
-			f="${D}usr/X11R6/man/man1/${nim}.1"
+			f="${D}/usr/X11R6/man/man1/${nim}.1"
 		else
-			f="${D}usr/X11R6/man/man1/${nim}.1x"
+			f="${D}/usr/X11R6/man/man1/${nim}.1x"
 		fi
 		 rm "$f" || die "rm $f"
 	done
-	rm -rf "${D}usr/X11R6/lib/X11" || die "rm config"
-	rm -rf "${D}usr/X11R6/lib/bindings" || die "rm bindings"
+	rm -rf "${D}/usr/X11R6/lib/X11" || die "rm config"
+	rm -rf "${D}/usr/X11R6/lib/bindings" || die "rm bindings"
 
-	einfo "Fixing docs"
+	# Install in /usr/lib
+	mv ${D}/usr/X11R6/lib ${D}usr/$(get_libdir)
+
+	dodir /usr/share
+	mv ${D}/usr/X11R6/man ${D}/usr/share
+
 	dodoc README COPYRIGHT.MOTIF RELEASE RELNOTES
 	dodoc BUGREPORT OPENBUGS CLOSEDBUGS
 }
