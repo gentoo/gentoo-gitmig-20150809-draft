@@ -1,6 +1,25 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.109 2004/01/16 19:01:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.110 2004/01/19 03:43:20 caleb Exp $
+
+*kdebase-3.2.0_rc1 (18 Jan 2004)
+
+  18 Jan 2004; Caleb Tennis <caleb@gentoo.org> kdebase-3.0.4-r3.ebuild,
+  kdebase-3.1.2.ebuild, kdebase-3.2.0_beta1-r1.ebuild,
+  kdebase-3.2.0_beta2.ebuild, kdebase-3.2.0_rc1.ebuild,
+  files/3.0.4-r3/kdebase-3.0.4-konsole-qt31.diff,
+  files/3.0.4-r3/kdebase-3.0.4-nspluginviewer-qt31.diff.gz,
+  files/3.0.4-r3/kdebase-3.0.4-xft1.1-fix.diff,
+  files/3.0.4-r3/kdebase-3.0.4-xft_h-fix.diff,
+  files/3.0.4-r3/startkde-3.0.4-r3-gentoo.diff, files/3.1.2/backgroundrc,
+  files/3.1.2/fontconfig-2.2-support.patch, files/3.1.2/kdmrc,
+  files/3.1.2/sftp.patch, files/3.1.2/startkde-3.1.2-gentoo.diff,
+  files/3.2.0_beta1-r1/Xsetup, files/3.2.0_beta1-r1/backgroundrc,
+  files/3.2.0_beta1-r1/kdmrc,
+  files/3.2.0_beta1-r1/startkde-3.2.0_beta1-r1-gentoo.diff,
+  files/3.2.0_rc1/Xsetup, files/3.2.0_rc1/backgroundrc, files/3.2.0_rc1/kdmrc,
+  files/3.2.0_rc1/startkde-3.2.0_rc1-gentoo.diff:
+  New version, removing old versions
 
   16 Jan 2004; Martin Guy <gmsoft@gentoo.org> kdebase-3.1.5.ebuild:
   Marked stable on hppa.
