@@ -21,6 +21,7 @@ myGETTEXT=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-devel/gettext 
 myBINUTILS=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-devel/binutils | sed 's:^\*::'`
 myGCC=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-devel/gcc | sed 's:^\*::'`
 myGLIBC=`cat ${MYPROFILEDIR}/packages | grep -v '^#' | grep sys-libs/glibc | sed 's:^\*::'`
+myTEXINFO=`cat ${MYPROFILEDIR}/packages|grep -v '^#'|grep sys-apps/texinfo |sed 's:^\*::'`
 
 echo "Using $myBASELAYOUT"
 echo "Using $myPORTAGE"
@@ -28,6 +29,7 @@ echo "Using $myBINUTILS"
 echo "Using $myGCC"
 echo "Using $myGETTEXT"
 echo "Using $myGLIBC"
+echo "Using $myTEXINFO"
 
 cleanup() {
 	cp /etc/make.conf.build /etc/make.conf
@@ -70,9 +72,9 @@ export AUTOCLEAN="no"
 #above allows portage to overwrite stuff
 cd /usr/portage
 emerge $myPORTAGE #separate, so that the next command uses the *new* emerge
-emerge $myBASELAYOUT $myGETTEXT $myBINUTILS $myGCC || cleanup 1
+emerge $myBASELAYOUT $myTEXINFO $myGETTEXT $myBINUTILS $myGCC || cleanup 1
 #make.conf has been overwritten, so we explicitly export our original settings
 export USE="$ORIGUSE bootstrap"
-emerge $myGLIBC $myBASELAYOUT $myGETTEXT $myBINUTILS $myGCC || cleanup 1
+emerge $myGLIBC $myBASELAYOUT $myTEXINFO $myGETTEXT $myBINUTILS $myGCC || cleanup 1
 #restore original make.conf
 cleanup 0
