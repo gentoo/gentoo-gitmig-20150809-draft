@@ -63,14 +63,16 @@ static char *MainChunk_text =
 
 static char *keyboard_adb =
 "	Option		\"CustomKeycodes\"\n"
-"	Option		\"XkbModel\"	\"macintosh_old\"\n"
+"	Option		\"XkbModel\"	\"macintosh\"\n"
+"	Option		\"XkbRules\"	\"xfree\"\n"
 "	Option		\"XkbLayout\"	\"us\"\n";
 
 static char *keyboard_adbcom =
 "# Uncomment this if your keyboard no longer works in X and you belive you are\n"
 "# using the depreciated adb keycodes\n"
 "	#Option		\"CustomKeycodes\"\n"
-"	#Option		\"XkbModel\"	\"macintosh_old\"\n"
+"	#Option		\"XkbModel\"	\"macintosh\"\n"
+"	Option		\"XkbRules\"	\"xfree\"\n"
 "	#Option		\"XkbLayout\"	\"us\"\n";
 
 /* Uncomment/fix this for APUS support
