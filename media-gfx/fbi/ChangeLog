@@ -1,7 +1,13 @@
 # ChangeLog for media-gfx/fbi
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/ChangeLog,v 1.7 2003/08/04 06:53:45 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/ChangeLog,v 1.8 2004/01/26 18:15:49 spock Exp $
 
+*fbi-1.29 (26 Jan 2004)
+
+  26 Jan 2004; Michal 'Spock' Januszewski <spock@gentoo.org>
+  fbi-1.21-r1.ebuild, fbi-1.21.ebuild, fbi-1.25.ebuild, fbi-1.29.ebuild,
+  metadata.xml:
+  Version bump, added metadata.xml.
 
 *fbi-1.25 (08 Jan 2003)
 

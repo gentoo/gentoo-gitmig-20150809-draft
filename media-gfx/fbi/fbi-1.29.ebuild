@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.25.ebuild,v 1.7 2004/01/26 18:15:49 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.29.ebuild,v 1.1 2004/01/26 18:15:49 spock Exp $
 
-IUSE=""
+IUSE="png jpeg gif tiff curl lirc"
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="fbi a framebuffer image viewer"
@@ -11,9 +11,15 @@ HOMEPAGE="http://bytesex.org/fbi.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~alpha hppa"
+KEYWORDS="~x86"
 
-DEPEND=">=media-libs/jpeg-6b"
+DEPEND="jpeg? ( >=media-libs/jpeg-6b )
+	png? ( media-libs/libpng )
+	gif? ( media-libs/libungif )
+	tiff? ( media-libs/tiff )
+	curl? ( net-ftp/curl )
+	lirc? ( app-misc/lirc )
+	X? ( virtual/x11 )"
 
 src_compile() {
 	export CFLAGS="${CFLAGS}"
