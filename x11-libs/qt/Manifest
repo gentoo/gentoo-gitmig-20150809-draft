@@ -3,12 +3,11 @@ MD5 17042c3146d3b939079defa0835af1ab qt-3.2.2-r1.ebuild 6291
 MD5 15cb67cf0a0a71f8c86c4aa91714360c qt-2.3.2-r1.ebuild 2285
 MD5 cb5821e5f6b043cf99e56d42245b1573 qt-3.2.1.ebuild 4952
 MD5 913367613ee452605a107179d5fa1c76 qt-3.0.5-r2.ebuild 3907
-MD5 33c4814adca42dcf7586258f369a0a65 qt-3.2.3.ebuild 5105
 MD5 f49850324e16ed3a5f326e3506d8723f qt-3.3.0_beta1.ebuild 5137
 MD5 8ba2f35348af78eaa4cf70cdfef1ba01 qt-3.1.2-r4.ebuild 5347
-MD5 122e6a52427bf43ef2a28e8f318291a4 ChangeLog 18120
+MD5 204d083f6429bee42a6a5370ca365938 ChangeLog 18630
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
-MD5 33c4814adca42dcf7586258f369a0a65 qt-3.2.3-r1.ebuild 5105
+MD5 a7078cbd275c1d1b230335a29f64ee4b qt-3.2.3-r1.ebuild 5104
 MD5 f036a81a9440e146ca67fb23dbb2b535 files/0013-qtabwidget-less_flicker.patch 2785
 MD5 8ffca1b1b7523339af04fd24b4595ce4 files/0001-dnd_optimization.patch 5623
 MD5 5716cdfbdcb04ba8e3a25c7e1c49a9cc files/0026-netwm-fullscreen.patch 8243
@@ -18,7 +17,6 @@ MD5 c7f65a0625242eccf159e2b8ee74976d files/45qt3 109
 MD5 7a287bc7609ad2420f70af6d4c58302f files/50qt2 63
 MD5 65c6cd464a60955c85a85b1dfd487c04 files/0004-qiconview_etc_ctrl_selecting.patch 2207
 MD5 b79277b535797e854be75d1c396de0f2 files/digest-qt-3.2.1 72
-MD5 24486c56d654be71e66b7c01b143c9a9 files/digest-qt-3.2.3 72
 MD5 8fd2bb8fe0c4752252d064ff62257f9a files/0028-fix_sub_popup_crash.patch 302
 MD5 e4054a5914b182318d548c53beea9590 files/0020-designer-deletetabs.patch 3493
 MD5 c6dc1b6fadcb4897d4c7b0a768c2d196 files/qt-3.1.2-r3-qsocket.diff 447
