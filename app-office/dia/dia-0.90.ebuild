@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.90.ebuild,v 1.1 2002/06/20 21:20:50 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.90.ebuild,v 1.2 2002/07/25 19:29:33 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Diagram Creation Program"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/gnome-office/dia.shtml"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 

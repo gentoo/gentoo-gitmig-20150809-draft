@@ -1,11 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2-r1.ebuild,v 1.4 2002/07/11 06:30:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2-r1.ebuild,v 1.5 2002/07/25 19:29:33 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A small personal databases manager for Linux"
 SRC_URI="http://gaby.sourceforge.net/archives/${P}.tar.gz"
 HOMEPAGE="http://gaby.sourceforge.net"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="GPL-2"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	virtual/python

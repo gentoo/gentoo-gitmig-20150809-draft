@@ -1,11 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.6.ebuild,v 1.4 2002/07/11 06:30:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.6.ebuild,v 1.5 2002/07/25 19:29:33 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A personal finance manager"
 SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gnucash.sourceforge.net"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="GPL-2"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	 >=dev-libs/libxml-1.8.10
