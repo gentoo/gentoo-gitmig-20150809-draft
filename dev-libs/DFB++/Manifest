@@ -1,3 +1,6 @@
+MD5 f698cd51f3dd4f72ae8efea493a99bac metadata.xml 219
+MD5 9663530a8be25e33b63b7ac230197bb0 ChangeLog 489
+MD5 0f003ca7c2a96c84bd290ccaae0166ab DFB++-0.9.22.ebuild 549
 MD5 de65b8378f1110cd2ed46d961e16e7f0 DFB++-0.9.20.ebuild 538
-MD5 d471a54d0fab85e0f8b66b0bd1cbb144 ChangeLog 346
 MD5 cca7a367441fc83c50f3da23afaf3ec8 files/digest-DFB++-0.9.20 64
+MD5 97fa809c45af7f730bb051c7a18dca33 files/digest-DFB++-0.9.22 64
