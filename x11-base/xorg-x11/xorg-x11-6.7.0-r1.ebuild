@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.36 2004/09/22 00:33:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.37 2004/09/25 07:49:56 vapier Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -131,7 +131,7 @@ cflag_setup() {
 		# according to ciaranm
 		sparc)	filter-flags "-fomit-frame-pointer" ;;
 		# gcc-3.3.2 causes invalid insn error
-		hppa ) replace-cpu-flags 1.0 2.0 ;;
+		hppa ) replace-cpu-flags 2.0 1.0 ;;
 	esac
 
 	# Recently there has been a lot of stability problem in Gentoo-land.  Many
@@ -256,14 +256,14 @@ host_def_setup() {
 
 			if [ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -le "2" ]
 			then
-				replace-cpu-flags "pentium3" "pentium4"
-				replace-cpu-flags "athlon-tbird" "athlon"
+				replace-cpu-flags pentium4 pentium3
+				replace-cpu-flags athlon athlon-tbird
 			fi
 
 			# Try a fix for #49310, see #50931 for more info. <spyderous>
 			if [ "`is-flag -fomit-frame-pointer`" ]
 			then
-				replace-cpu-flags "i586" "k6" "k6-2" "k6-3"
+				replace-cpu-flags k6 k6-2 k6-3 i586
 			fi
 
 			# Without this, modules breaks with gcc3
