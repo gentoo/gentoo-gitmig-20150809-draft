@@ -1,10 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.20 2003/10/08 06:27:59 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.21 2003/10/29 04:01:01 pebenito Exp $
 
-IUSE="berkdb"
+IUSE="berkdb selinux"
 
 PATCH_LEVEL=""
+
+SELINUX_PATCH="pam-0.75-selinux.diff.bz2"
 
 S="${WORKDIR}/Linux-PAM-${PV}"
 S2="${WORKDIR}/pam"
@@ -23,7 +25,8 @@ DEPEND=">=sys-libs/cracklib-2.7-r3
 	>=sys-devel/autoconf-2.5
 	>=sys-devel/automake-1.6
 	>=sys-devel/flex-2.5.4a-r5
-	berkdb? ( >=sys-libs/db-3.2.9 )"
+	berkdb? ( >=sys-libs/db-3.2.9 )
+	selinux? ( sys-libs/libselinux )"
 
 #inherit needs to be after DEPEND definition to protect RDEPEND
 inherit gcc eutils flag-o-matic
@@ -45,6 +48,8 @@ src_unpack() {
 			epatch ${S2}/patchdir/${x}
 		fi
 	done
+
+	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
 
 	cd ${S}/doc
 	einfo "Unpacking docs..."
