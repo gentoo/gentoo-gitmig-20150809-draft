@@ -1,22 +1,24 @@
 # ChangeLog for gnustep-apps/gridlock
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gridlock/ChangeLog,v 1.3 2004/07/27 17:21:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gridlock/ChangeLog,v 1.4 2004/09/25 19:16:18 fafhrd Exp $
 
-  23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+*gridlock-1.9 (25 Sep 2004)
+
+  25 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org> metadata.xml,
+  +gridlock-1.9.ebuild:
+  Version bump; key'd for ~x86.
+
+  23 Jul 2004; Armando Di Cianno <fafhrd@gentoo.org>
   gridlock-1.6.1.ebuild:
   Changed referenced categories in ebuilds to reflect recent epkgmove changes.
 
 *gridlock-1.6.1 (22 Jul 2004)
 
-  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org> +metadata.xml,
+  22 Jul 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
   +gridlock-1.6.1.ebuild:
   Moved from app-gnustep/gridlock to gnustep-apps/gridlock.
 
-  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
-  gridlock-1.6.1.ebuild:
-  Changing the eclass to gnustep-old
-
-  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  22 Jul 2004; Armando Di Cianno <fafhrd@gentoo.org>
   gridlock-1.6.1.ebuild:
   Changing the eclass to gnustep-old
 
