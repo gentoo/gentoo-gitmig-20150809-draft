@@ -1,0 +1,12 @@
+diff -urP linux-2.4.4-xfs-20010523-gentoo/drivers/md/Makefile linux-2.4.4-xfs-pre-lvm/drivers/md/Makefile
+--- linux-2.4.4-xfs-20010523-gentoo/drivers/md/Makefile	Wed May 23 21:08:52 2001
++++ linux-2.4.4-xfs-pre-lvm/drivers/md/Makefile	Wed May 23 21:09:27 2001
+@@ -6,7 +6,7 @@
+ 
+ export-objs	:= md.o xor.o
+ list-multi	:= lvm-mod.o
+-lvm-mod-objs	:= lvm.o lvm-snap.o lvm-fs.o
++lvm-mod-objs	:= lvm.o lvm-snap.o
+ 
+ # Note: link order is important.  All raid personalities
+ # and xor.o must come before md.o, as they each initialise 
