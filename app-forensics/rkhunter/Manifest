@@ -1,22 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4e7c698399792a05f9e01a30675c6a15 rkhunter-1.1.8-r1.ebuild 2127
-MD5 5c07ac6a297c3ab468e3b35a7e54e044 ChangeLog 5774
+MD5 9a5d55cb67035809ad5062672f49247e ChangeLog 5990
 MD5 f1608c19ea0727ee36b2a692b1f3470b metadata.xml 264
-MD5 fb0f432327bbf900b61b8279ff212339 rkhunter-1.1.8.ebuild 1547
-MD5 519a3cf52148e88d30b35d366235ebfa rkhunter-1.1.9.ebuild 1693
-MD5 f1345147c35da8e7f1f51ede053106e6 files/digest-rkhunter-1.1.8 66
-MD5 2473ff095ea8aa159a379872571b5d43 files/rkhunter.bash-completion 2628
+MD5 023a96c68f424d636a21e1b2cba1f17f rkhunter-1.1.9.ebuild 1697
 MD5 4aace52e301a67ef5b8b23d8d2c5ba46 files/rkhunter.cron 3855
-MD5 a67c10cf68af091e9f17ad100b38ee7c files/rkhunter-1.1.9-specify-logfile.patch 2379
-MD5 46201344c0b062b490ed6e81dcbfc48f files/rkhunter-1.1.8-specify-logfile.patch 1633
-MD5 f1345147c35da8e7f1f51ede053106e6 files/digest-rkhunter-1.1.8-r1 66
 MD5 a8206bcb42fdb2f63d50390afe76a7be files/digest-rkhunter-1.1.9 66
+MD5 2473ff095ea8aa159a379872571b5d43 files/rkhunter.bash-completion 2628
+MD5 a67c10cf68af091e9f17ad100b38ee7c files/rkhunter-1.1.9-specify-logfile.patch 2379
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCBWW5ugEuf3OQ0akRAkXpAJ9SDs4h3Rk4su6WAcyzeCRynm1PCACfd/f5
-KaKsdjJ55ZxaBjrkCRY0cqg=
-=gQgl
+iD8DBQFCDI0mmdTrptrqvGERAuvdAJ9wmCOpeXFNYSPuCFVW/1Wwi7gyVwCgkUmC
+fqEIT81hpuo6/Z1ifK3MR8Y=
+=mePf
 -----END PGP SIGNATURE-----
