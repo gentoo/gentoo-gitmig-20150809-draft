@@ -1,15 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.4.ebuild,v 1.1 2002/07/08 15:52:23 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.4.ebuild,v 1.2 2002/07/09 08:14:28 seemant Exp $
 
-# Maintainer: Desktop Team <desktop@gentoo.org>
-# Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libpng"
 SRC_URI="ftp://swrinde.nde.swri.edu/pub/png/src/${P}.tar.gz"
 HOMEPAGE="http://www.libpng.org/"
 SLOT="1.2"
+LICENSE="as-is"
+KEYWORDS="*"
+
 DEPEND=">=sys-libs/zlib-1.1.4"
 
 src_compile() {
@@ -37,4 +38,15 @@ src_install() {
 	
 	doman *.[35]
 	dodoc ANNOUNCE CHANGES KNOWNBUG LICENSE README TODO Y2KINFO
+}
+
+
+pkg_postinst() {
+	
+	# the libpng authors really screwed around between 1.2.1 and 1.2.3
+
+	if [ -f /usr/lib/libpng.so.3.1.2.1 ]
+	then
+		rm /usr/lib/libpng.so.3.1.2.1
+	fi
 }
