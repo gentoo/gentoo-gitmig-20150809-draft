@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.48 2004/08/22 01:46:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.49 2004/08/31 11:45:30 gmsoft Exp $
+
+*bitchx-1.1-r2 (31 Aug 2004)
+
+  31 Aug 2004; Guy Martin <gmsoft@gentoo.org> +files/fPIC.patch,
+  +bitchx-1.1-r2.ebuild:
+  Added a unconditionnal -fPIC patch (#55238).
 
   22 Aug 2004; Sven Wegener <swegener@gentoo.org> bitchx-1.1-r1.ebuild:
   Updated SRC_URI as upstream download location has changed. Closes bug #61005.
