@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.20 2004/07/05 09:15:27 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.21 2004/07/07 16:14:02 agriffis Exp $
 #
 # Author: Will Woods <wwoods@gentoo.org>
 #
@@ -32,32 +32,44 @@ gnuconfig_update() {
 	else
 		gnuconfig_do_update config.sub config.guess
 	fi
+
+	return $?
 }
 
 # Copy the newest available version of specified files over any old ones in the
 # source dir. This function shouldn't be called directly - use gnuconfig_update
 gnuconfig_do_update() {
-	[ $# -eq 0 ] && die "do not call gnuconfig_do_update(); use gnuconfig_update()"
+	local startdir configsubs_dir target targetlist file
 
-	local configsubs_dir="$(gnuconfig_findnewest)"
-	local target targetlist file
+	if [[ ${1} == /* ]]; then
+		startdir=${1%/}		# remove possible trailing slash
+		shift
+	else
+		startdir=${S}
+	fi
+
+	[ $# -eq 0 ] && die "do not call gnuconfig_do_update; use gnuconfig_update"
+
+	configsubs_dir="$(gnuconfig_findnewest)"
 	einfo "Using GNU config files from ${configsubs_dir}"
 	for file in "$@" ; do
 		if [ ! -r ${configsubs_dir}/${file} ] ; then
 			eerror "Can't read ${configsubs_dir}/${file}, skipping.."
 			continue
 		fi
-		targetlist=`find ${S} -name "${file}"`
+		targetlist=`find "${startdir}" -name "${file}"`
 		if [ -n "$targetlist" ] ; then
-			for target in $targetlist; do
-				einfo " Updating ${target/$S\//}"
-				cp -f ${configsubs_dir}/${file} ${target}
+			for target in "$targetlist"; do
+				einfo " Updating ${target/$startdir\//}"
+				cp -f ${configsubs_dir}/${file} "${target}"
 				eend $?
 			done
 		else
-			ewarn " No ${file} found in ${S}, skipping.."
+			ewarn " No ${file} found in ${startdir}, skipping.."
 		fi
 	done
+
+	return 0
 }
 
 # this searches the standard locations for the newest config.{sub|guess}, and
