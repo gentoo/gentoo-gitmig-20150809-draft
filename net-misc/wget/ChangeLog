@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.8 2002/12/13 11:00:15 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.9 2002/12/20 16:25:14 aliz Exp $
+
+*wget-1.8.2-r2 (20 Dec 2002)
+
+  20 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update - added patch from RedHat.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
