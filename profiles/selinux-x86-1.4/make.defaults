@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # System-wide defaults for the gcc 3.2 Portage system
 
-USE="x86 berkdb crypt encode libwww mmx ncurses nls pam python readline ssl tcpd xml2 zlib selinux"
+USE="x86 berkdb crypt libwww mmx ncurses nls pam python readline selinux ssl tcpd xml2 zlib"
 
 ARCH="x86"
 COMPILER="gcc3"
