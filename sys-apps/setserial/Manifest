@@ -1,14 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 917b7e0530336509a96c2000f22c1d75 ChangeLog 1187
+MD5 e23d74c2192a3308ac0c8cc916c67293 ChangeLog 1502
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 279435915a0914305c6099672f5923a4 setserial-2.17-r2.ebuild 811
-MD5 752580a351299fe15119ebcdaa13b3ea files/digest-setserial-2.17-r2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBmPzOHTu7gpaalycRAqo/AKD3JooV1Gsqh5YMaXvld4rpopgGTgCg1Nnf
-TAU1n3/gVmLfDrnIh4PlOps=
-=CGTn
------END PGP SIGNATURE-----
+MD5 f5906cab88b80916b9681b8ba7b399d5 setserial-2.17-r3.ebuild 967
+MD5 0682f2f5228b0463da3d2405a301c132 files/setserial-2.17-spelling.patch 283
+MD5 33e5a769e532d070876a18ece512dd2f files/setserial-2.17-manpage-updates.patch 1041
+MD5 4a3c53fc994998ba959e123b697d6d97 files/serial 1041
+MD5 752580a351299fe15119ebcdaa13b3ea files/digest-setserial-2.17-r3 65

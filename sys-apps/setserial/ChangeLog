@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/setserial
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/ChangeLog,v 1.9 2004/07/01 21:39:10 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/ChangeLog,v 1.10 2005/02/21 15:53:03 vapier Exp $
+
+*setserial-2.17-r3 (21 Feb 2005)
+
+  21 Feb 2005; Mike Frysinger <vapier@gentoo.org> +files/serial,
+  +files/setserial-2.17-manpage-updates.patch,
+  +files/setserial-2.17-spelling.patch, -setserial-2.17-r2.ebuild,
+  +setserial-2.17-r3.ebuild:
+  Move the init.d script out of baselayout and touchup the manpage #81946.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   setserial-2.17-r2.ebuild:
