@@ -1,9 +1,17 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.54 2005/01/30 19:43:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.55 2005/02/01 15:43:45 cryos Exp $
 
   30 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> uw-imap-2004c.ebuild:
   Stable on alpha, bug 79874.
+
+*uw-imap-2004c-r1 (01 Feb 2005)
+
+  01 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/uw-imap-2004c-amd64-so-fix.patch, +uw-imap-2004c-r1.ebuild:
+  Patched Makefile to build a shared library for amd64, allowing PHP 5 with imap
+  to compile. Also fixed the symlinking of c-client.a for multilib archs, and
+  made the ebuild respect user CFLAGS.
 
   29 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> uw-imap-2004c.ebuild:
   stable on amd64.
