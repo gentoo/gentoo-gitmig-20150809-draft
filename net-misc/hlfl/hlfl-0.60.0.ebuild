@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hlfl/hlfl-0.60.0.ebuild,v 1.9 2004/06/24 23:47:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hlfl/hlfl-0.60.0.ebuild,v 1.10 2004/07/01 21:07:43 squinky86 Exp $
 
 S=${WORKDIR}/${P}
+IUSE=""
 DESCRIPTION="High Level Firewall Language"
 SRC_URI="ftp://ftp.hlfl.org/pub/hlfl/${P}.tar.gz"
 HOMEPAGE="http://www.hlfl.org"
@@ -10,7 +11,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
 SLOT="0"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 

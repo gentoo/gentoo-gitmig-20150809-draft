@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsmlib/gsmlib-1.11_pre030826.ebuild,v 1.3 2004/06/24 23:46:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsmlib/gsmlib-1.11_pre030826.ebuild,v 1.4 2004/07/01 21:04:20 squinky86 Exp $
 
 MY_A=${PN}-pre${PV%_pre*}-${PV#*_pre}
 
@@ -8,7 +8,7 @@ DESCRIPTION="Library and Applications to access GSM mobile phones"
 SRC_URI="http://www.pxh.de/fs/gsmlib/snapshots/${MY_A}.tar.gz"
 HOMEPAGE="http://www.pxh.de/fs/gsmlib/"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 IUSE=""
 SLOT="0"

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iperf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.6 2004/06/24 23:49:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.7 2004/07/01 21:10:39 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> iperf-1.7.0.ebuild:
+  change virtual/glibc to virtual/libc, add IUSE
 
 *iperf-1.7.0 (30 Jul 2003)
 
