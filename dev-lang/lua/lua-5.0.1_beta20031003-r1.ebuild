@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.1_beta20031003-r1.ebuild,v 1.1 2003/12/22 18:37:39 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.1_beta20031003-r1.ebuild,v 1.2 2004/01/03 10:22:10 avenj Exp $
 
 DESCRIPTION="A powerful light-weight programming language designed for extending applications"
 HOMEPAGE="http://www.lua.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.lua.org/ftp/lua-5.0.tar.gz
 	http://www.tecgraf.puc-rio.br/lua/work/lua-5.0-update.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~arm ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~arm ~hppa ~mips ~ppc ~sparc ~x86 ~amd64"
 IUSE="readline"
 DEPEND=">=sys-apps/sed-4
 	sys-apps/findutils"
