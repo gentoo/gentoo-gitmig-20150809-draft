@@ -9,6 +9,7 @@
 #
 # K_NOSETEXTRAVERSION	- if this is set then EXTRAVERSION will not be automatically set within the kernel Makefile
 # K_NOUSENAME		- if this is set then EXTRAVERSION will not include the first part of ${PN} in EXTRAVERSION
+# K_EXTRAEINFO		- this is a new-line seperated list of einfo displays in postinst and can be used to carry additional postinst messages
 # UNIPATCH_LIST		- space delimetered list of patches to be applied to the kernel
 # UNIPATCH_DOCS		- space delimemeted list of docs to be installed to the doc dir
 
@@ -191,6 +192,16 @@ postinst_sources() {
 	einfo "For example, this kernel will require:"
 	einfo "/etc/modules.autoload.d/kernel-${KV_MAJOR}.${KV_MINOR}"
 	echo
+	
+	# if K_EXTRAEINFO is set then lets display it now
+	if [ -n "${K_EXTRAEINFO}" ]
+	then
+		echo ${K_EXTRAEINFO} | fmt |
+		while read -s ELINE
+		do
+			einfo "${ELINE}"
+		done
+	fi
 }
 
 # unipatch
@@ -203,6 +214,7 @@ unipatch() {
 	local UNIPATCH_EXCLUDE
 	local KPATCH_DIR
 	local PATCH_DEPTH
+	local ELINE
 
 	[ -z "${KPATCH_DIR}" ] && KPATCH_DIR="${WORKDIR}/patches/"
 	[ ! -d ${KPATCH_DIR} ] && mkdir -p ${KPATCH_DIR}
@@ -378,6 +390,8 @@ detect_version() {
 		UNIPATCH_LIST="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2 ${UNIPATCH_LIST}"
 		KV=${PV/[-_]*/}${EXTRAVERSION}
 	fi
+	
+	S=${WORKDIR}/linux-${KV}
 }
 
 
