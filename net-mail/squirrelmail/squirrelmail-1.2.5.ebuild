@@ -1,10 +1,10 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Grant Goodyear <g2boojum@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.2.4-r1.ebuild,v 1.1 2002/02/23 15:40:24 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.2.5.ebuild,v 1.1 2002/04/17 17:27:36 g2boojum Exp $
 
 S=${WORKDIR}/${P}
-HTTPD_ROOT="/usr/local/httpd/htdocs"
+HTTPD_ROOT="/home/httpd/htdocs"
 
 DESCRIPTION="Webmail for nuts!"
 
