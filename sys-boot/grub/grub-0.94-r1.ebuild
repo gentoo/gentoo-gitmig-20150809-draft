@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.3 2004/04/07 01:06:09 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.4 2004/04/14 10:28:49 swtaylor Exp $
 
 inherit mount-boot eutils flag-o-matic gcc
 
@@ -45,17 +45,14 @@ src_compile() {
 	### incompatible system.
 	unset CFLAGS
 
-	filter-flags -fstack-protector
 	filter-ldflags -pie
 	append-flags -DNDEBUG
 	[ `gcc-major-version` -eq 3 ] && append-flags -minline-all-stringops
 	use static && append-ldflags -static
 
 	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	if has_version 'sys-devel/hardened-gcc' && [ "$(gcc-getCC)" == "gcc" ] ; then
-		# the configure script has problems with -nostdlib
-		CC="${CC} -yet_exec -yno_propolice"
-	fi
+	has_pie && CC="${CC} `test_flag -yet_exec``test_flag -nopie`"
+	has_ssp && CC="${CC} `test_flag -yno_propolice``test_flag -fno-stack-protector`"
 
 	autoconf || die
 	aclocal || die
