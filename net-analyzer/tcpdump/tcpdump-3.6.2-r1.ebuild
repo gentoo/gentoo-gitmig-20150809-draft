@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.6.2-r1.ebuild,v 1.4 2002/07/18 23:22:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.6.2-r1.ebuild,v 1.5 2002/07/21 20:52:37 owen Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Tool for network monitoring and data acquisition"
@@ -14,7 +14,7 @@ DEPEND=">=net-libs/libpcap-0.6.2
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack ${A}

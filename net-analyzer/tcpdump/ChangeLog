@@ -1,10 +1,14 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.5 2002/07/18 15:01:43 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.6 2002/07/21 20:52:37 owen Exp $
 
 
 
 *tcpdump-3.7.1 (9 May 2002)
+
+  21 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+  Added PPC to KEYWORDS.
+
   18 Jul 2002; Kyle Manna <nitro@gentoo.org tcpdump-3.7.1.ebuild
   tcpdump-3.6.2-r1.ebuild :
   Added KEYWORDS, SLOT, and LICENSE.
