@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sablotron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.18 2003/09/12 16:07:56 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.19 2003/11/12 05:18:07 rajiv Exp $
+
+  11 Nov 2003; Rajiv Aaron Manglani <rajiv@gentoo.org> sablotron-0.97.ebuild:
+  stable on ppc.
 
 *sablotron-1.0 (13 Sep 2003)
 
