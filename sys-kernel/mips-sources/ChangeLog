@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.22 2004/01/19 08:29:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.23 2004/02/01 10:32:30 kumba Exp $
+
+*mips-sources-2.4.22-r8 (01 Feb 2004)
+
+  01 Feb 2004; Joshua Kinard <kumba@gentoo.org> mips-sources-2.4.21-r5.ebuild,
+  mips-sources-2.4.22-r8.ebuild, mips-sources-2.4.23-r4.ebuild:
+  Added patches to allow kernels to work properly on cobalt systems
 
 *mips-sources-2.4.23-r3 (19 Jan 2004)
 
