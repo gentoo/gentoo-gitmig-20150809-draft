@@ -1,0 +1,240 @@
+diff -urpN imlib2-1.1.0/filters/filter_bumpmap.c imlib2-1.1.0/filters/filter_bumpmap.c
+--- imlib2-1.1.0/filters/filter_bumpmap.c	2003-11-02 15:02:22.294572888 +0000
++++ imlib2-1.1.0/filters/filter_bumpmap.c	2003-11-02 15:03:43.319255264 +0000
+@@ -4,9 +4,13 @@
+ 
+ #include "common.h"
+ #include <string.h>
+-#include <X11/Xlib.h>
+-#include <X11/extensions/XShm.h>
+-#include <X11/Xutil.h>
++
++#ifndef X_DISPLAY_MISSING
++#  include <X11/Xlib.h>
++#  include <X11/extensions/XShm.h>
++#  include <X11/Xutil.h>
++#endif
++
+ #include <math.h>
+ #include "image.h"
+ #include "script.h"
+diff -urpN imlib2-1.1.0/filters/filter_colormod.c imlib2-1.1.0/filters/filter_colormod.c
+--- imlib2-1.1.0/filters/filter_colormod.c	2003-11-02 15:02:22.294572888 +0000
++++ imlib2-1.1.0/filters/filter_colormod.c	2003-11-02 15:03:29.122413512 +0000
+@@ -4,9 +4,13 @@
+ 
+ #include "common.h"
+ #include <string.h>
+-#include <X11/Xlib.h>
+-#include <X11/extensions/XShm.h>
+-#include <X11/Xutil.h>
++
++#ifndef X_DISPLAY_MISSING
++#  include <X11/Xlib.h>
++#  include <X11/extensions/XShm.h>
++#  include <X11/Xutil.h>
++#endif
++
+ #include <math.h>
+ #include "image.h"
+ #include "script.h"
+diff -urpN imlib2-1.1.0/filters/filter_test.c imlib2-1.1.0/filters/filter_test.c
+--- imlib2-1.1.0/filters/filter_test.c	2003-11-02 15:02:22.294572888 +0000
++++ imlib2-1.1.0/filters/filter_test.c	2003-11-02 15:04:05.331908832 +0000
+@@ -4,9 +4,13 @@
+ 
+ #include "common.h"
+ #include <string.h>
+-#include <X11/Xlib.h>
+-#include <X11/extensions/XShm.h>
+-#include <X11/Xutil.h>
++
++#ifndef X_DISPLAY_MISSING
++#  include <X11/Xlib.h>
++#  include <X11/extensions/XShm.h>
++#  include <X11/Xutil.h>
++#endif
++
+ #include "image.h"
+ #include "script.h"
+ #include "dynamic_filters.h"
+diff -urpN imlib2-1.1.0/loaders/loader_argb.c imlib2-1.1.0/loaders/loader_argb.c
+--- imlib2-1.1.0/loaders/loader_argb.c	2003-11-02 15:08:47.456019448 +0000
++++ imlib2-1.1.0/loaders/loader_argb.c	2003-11-02 15:09:18.607283736 +0000
+@@ -4,9 +4,13 @@
+ 
+ #include "common.h"
+ #include <string.h>
+-#include <X11/Xlib.h>
+-#include <X11/extensions/XShm.h>
+-#include <X11/Xutil.h>
++
++#ifndef X_DISPLAY_MISSING
++#  include <X11/Xlib.h>
++#  include <X11/extensions/XShm.h>
++#  include <X11/Xutil.h>
++#endif
++
+ #include "image.h"
+ 
+ char                load(ImlibImage * im, ImlibProgressFunction progress,
+diff -urpN imlib2-1.1.0/loaders/loader_bmp.c imlib2-1.1.0/loaders/loader_bmp.c
+--- imlib2-1.1.0/loaders/loader_bmp.c	2003-11-02 15:08:47.456019448 +0000
++++ imlib2-1.1.0/loaders/loader_bmp.c	2003-11-02 15:09:33.062086272 +0000
+@@ -10,9 +10,13 @@
+ #include "common.h"
+ #include <sys/stat.h>
+ #include <string.h>
+-#include <X11/Xlib.h>
+-#include <X11/extensions/XShm.h>
+-#include <X11/Xutil.h>
++
++#ifndef X_DISPLAY_MISSING
++#  include <X11/Xlib.h>
++#  include <X11/extensions/XShm.h>
++#  include <X11/Xutil.h>
++#endif
++
+ #include "image.h"
+ 
+ char                load(ImlibImage * im, ImlibProgressFunction progress,
+diff -urpN imlib2-1.1.0/loaders/loader_gif.c imlib2-1.1.0/loaders/loader_gif.c
+--- imlib2-1.1.0/loaders/loader_gif.c	2003-11-02 15:08:47.455019600 +0000
++++ imlib2-1.1.0/loaders/loader_gif.c	2003-11-02 15:09:48.290771160 +0000
+@@ -8,9 +8,13 @@
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <string.h>
+-#include <X11/Xlib.h>
+-#include <X11/extensions/XShm.h>
+-#include <X11/Xutil.h>
++
++#ifndef X_DISPLAY_MISSING
++#  include <X11/Xlib.h>
++#  include <X11/extensions/XShm.h>
++#  include <X11/Xutil.h>
++#endif
++
+ #include "image.h"
+ #include <gif_lib.h>
+ 
+diff -urpN imlib2-1.1.0/loaders/loader_jpeg.c imlib2-1.1.0/loaders/loader_jpeg.c
+--- imlib2-1.1.0/loaders/loader_jpeg.c	2003-11-02 15:08:47.455019600 +0000
++++ imlib2-1.1.0/loaders/loader_jpeg.c	2003-11-02 15:10:16.886423960 +0000
+@@ -4,9 +4,13 @@
+ 
+ #include "common.h"
+ #include <string.h>
+-#include <X11/Xlib.h>
+-#include <X11/extensions/XShm.h>
+-#include <X11/Xutil.h>
++
++#ifndef X_DISPLAY_MISSING
++#  include <X11/Xlib.h>
++#  include <X11/extensions/XShm.h>
++#  include <X11/Xutil.h>
++#endif
++
+ #include "image.h"
+ #include <jpeglib.h>
+ #include <setjmp.h>
+diff -urpN imlib2-1.1.0/loaders/loader_png.c imlib2-1.1.0/loaders/loader_png.c
+--- imlib2-1.1.0/loaders/loader_png.c	2003-11-02 15:08:47.455019600 +0000
++++ imlib2-1.1.0/loaders/loader_png.c	2003-11-02 15:10:31.836151256 +0000
+@@ -4,9 +4,13 @@
+ 
+ #include "common.h"
+ #include <string.h>
+-#include <X11/Xlib.h>
+-#include <X11/extensions/XShm.h>
+-#include <X11/Xutil.h>
++
++#ifndef X_DISPLAY_MISSING
++#  include <X11/Xlib.h>
++#  include <X11/extensions/XShm.h>
++#  include <X11/Xutil.h>
++#endif
++
+ #include "image.h"
+ #include <png.h>
+ 
+diff -urpN imlib2-1.1.0/loaders/loader_pnm.c imlib2-1.1.0/loaders/loader_pnm.c
+--- imlib2-1.1.0/loaders/loader_pnm.c	2003-11-02 15:08:47.456019448 +0000
++++ imlib2-1.1.0/loaders/loader_pnm.c	2003-11-02 15:10:42.770488984 +0000
+@@ -4,9 +4,13 @@
+ 
+ #include "common.h"
+ #include <string.h>
+-#include <X11/Xlib.h>
+-#include <X11/extensions/XShm.h>
+-#include <X11/Xutil.h>
++
++#ifndef X_DISPLAY_MISSING
++#  include <X11/Xlib.h>
++#  include <X11/extensions/XShm.h>
++#  include <X11/Xutil.h>
++#endif
++
+ #include <ctype.h>
+ #include "image.h"
+ 
+diff -urpN imlib2-1.1.0/loaders/loader_tga.c imlib2-1.1.0/loaders/loader_tga.c
+--- imlib2-1.1.0/loaders/loader_tga.c	2003-11-02 15:08:47.457019296 +0000
++++ imlib2-1.1.0/loaders/loader_tga.c	2003-11-02 15:10:54.655682160 +0000
+@@ -18,9 +18,13 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <sys/stat.h>
+-#include <X11/Xlib.h>
+-#include <X11/extensions/XShm.h>
+-#include <X11/Xutil.h>
++
++#ifndef X_DISPLAY_MISSING
++#  include <X11/Xlib.h>
++#  include <X11/extensions/XShm.h>
++#  include <X11/Xutil.h>
++#endif
++
+ #include "image.h"
+ #include "colormod.h"
+ #include "blend.h"
+diff -urpN imlib2-1.1.0/loaders/loader_tiff.c imlib2-1.1.0/loaders/loader_tiff.c
+--- imlib2-1.1.0/loaders/loader_tiff.c	2003-11-02 15:08:47.455019600 +0000
++++ imlib2-1.1.0/loaders/loader_tiff.c	2003-11-02 15:11:06.845828976 +0000
+@@ -7,9 +7,13 @@
+ 
+ #include "common.h"
+ #include <string.h>
+-#include <X11/Xlib.h>
+-#include <X11/extensions/XShm.h>
+-#include <X11/Xutil.h>
++
++#ifndef X_DISPLAY_MISSING
++#  include <X11/Xlib.h>
++#  include <X11/extensions/XShm.h>
++#  include <X11/Xutil.h>
++#endif
++
+ #include <setjmp.h>
+ #include <stdarg.h>
+ #include <stdio.h>
+diff -urpN imlib2-1.1.0/loaders/loader_xpm.c imlib2-1.1.0/loaders/loader_xpm.c
+--- imlib2-1.1.0/loaders/loader_xpm.c	2003-11-02 15:08:47.456019448 +0000
++++ imlib2-1.1.0/loaders/loader_xpm.c	2003-11-02 15:11:16.452368560 +0000
+@@ -8,9 +8,13 @@
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <string.h>
+-#include <X11/Xlib.h>
+-#include <X11/extensions/XShm.h>
+-#include <X11/Xutil.h>
++
++#ifndef X_DISPLAY_MISSING
++#  include <X11/Xlib.h>
++#  include <X11/extensions/XShm.h>
++#  include <X11/Xutil.h>
++#endif
++
+ #include "image.h"
+ 
+ char                load(ImlibImage * im, ImlibProgressFunction progress,
