@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/jde
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.7 2004/06/24 22:16:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.8 2004/07/27 17:59:23 mkennedy Exp $
+
+*jde-2.3.4_beta5 (27 Jul 2004)
+
+  27 Jul 2004; <mkennedy@gentoo.org> +jde-2.3.4_beta5.ebuild:
+  New upstream version; This is the first JDE port to depend on app-emacs/cedet
+  (which obsoletes app-emacs/speedbar, app-emacs/eieio and app-emacs/semantic).
 
   20 Apr 2004; David Holm <dholm@gentoo.org> jde-2.3.3.ebuild:
   Added to ~ppc.
