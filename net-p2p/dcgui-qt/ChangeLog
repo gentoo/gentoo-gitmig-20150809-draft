@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/dcgui-qt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dcgui-qt/ChangeLog,v 1.18 2004/06/28 17:32:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dcgui-qt/ChangeLog,v 1.19 2004/07/03 22:24:21 gmsoft Exp $
+
+  03 Jul 2004; Guy Martin <gmsoft@gentoo.org> dcgui-qt-0.3.0.ebuild:
+  Marked stable on hppa.
 
   28 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> dcgui-qt-0.3.0.ebuild:
   Unmasked on x86 and amd64.
