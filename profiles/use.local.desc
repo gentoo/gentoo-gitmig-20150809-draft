@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.657 2004/09/30 08:21:56 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.658 2004/09/30 15:15:00 foser Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -260,6 +260,7 @@ games-util/aabrowse:geoip - lookup countries by IP addresses via the GeoIP libra
 games-util/xqf:geoip - Add geoip support
 gnome-base/gnome-panel:eds - Enable Evolution Data Server (EDS) support
 gnome-base/gnome-vfs:hal - Enable Hardware Abstraction Layer (HAL) support
+gnome-base/gnome-vfs:howl - Enable howl support, enables DNS Service Discovery (DNS-SD)
 gnome-base/gnome:hal - Enable Hardware Abstraction Layer (HAL) support
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
 gnome-extra/nautilus-cd-burner:hal - Enable Hardware Abstraction Layer (HAL) support
