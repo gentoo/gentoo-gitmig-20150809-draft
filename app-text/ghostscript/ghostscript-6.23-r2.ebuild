@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-6.23-r2.ebuild,v 1.2 2000/11/01 04:44:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-6.23-r2.ebuild,v 1.3 2000/12/01 21:58:44 achim Exp $
 
 P=ghostscript-6.23
 A="${P}.tar.gz ghostscript-fonts-std-6.0.tar.gz print-4.0.0rc1.tar.gz"
@@ -17,7 +17,7 @@ SRC_URI="http://download.sourceforge.net/ghostscript/${P}.tar.gz
 
 DEPEND=">=sys-apps/bash-2.04
 	>=sys-libs/glibc-2.1.3
-	>=media-libs/libpng-1.0.8
+	>=media-libs/libpng-1.0.7
 	>=x11-base/xfree-4.0.1"
 
 src_unpack() {
