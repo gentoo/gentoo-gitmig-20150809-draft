@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20040901.ebuild,v 1.2 2005/03/01 15:14:41 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20040901.ebuild,v 1.3 2005/03/01 15:45:24 beu Exp $
 
 inherit webapp-apache
 
@@ -63,7 +63,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "now go to your ${HTTPD_ROOT}/{PN},"
+	einfo "now go to your ${HTTPD_ROOT}/${PN},"
 	einfo "copy bin/.htaccess.txt to bin/.htaccess"
 	einfo "and be sure to read"
 	einfo "http://localhost/twiki/bin/view/TWiki/TWikiDocumentation#TWiki_Installation_Guide"
