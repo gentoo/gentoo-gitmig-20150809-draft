@@ -1,0 +1,5 @@
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/make.defaults,v 1.1 2004/03/19 15:19:10 zhen Exp $
+
+FEATURES="sandbox sfperms strict"

@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/make.defaults,v 1.2 2004/03/17 01:25:54 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/make.defaults,v 1.3 2004/03/19 15:19:11 zhen Exp $
 
 ARCH="x86"
 ACCEPT_KEYWORDS="x86"
 GRP_STAGE23_USE="x86 berkdb crypt readline nls ssl tcpd zlib pam pic"
 USE="x86 hardened berkdb crypt readline nls ssl tcpd zlib pam pic"
-FEATURES="sandbox sfperms strict"
