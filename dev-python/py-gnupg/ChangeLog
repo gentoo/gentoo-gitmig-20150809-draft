@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/py-gnupg
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-gnupg/ChangeLog,v 1.1 2003/09/17 08:14:35 liquidx Exp $
+
+*py-gnupg-0.3.2 (17 Sep 2003)
+
+  17 Sep 2003; Alastair Tse <liquidx@gentoo.org> py-gnupg-0.3.2.ebuild:
+  initial commit. thanks to Derek Greentree <derek@leftwise.com> and Rob
+  Cakebread <robc@myrealbox.com>
+
