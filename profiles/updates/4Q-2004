@@ -112,3 +112,4 @@ move app-sci/stellarium sci-astronomy/stellarium
 move app-sci/xephem sci-astronomy/xephem
 move app-sci/calcoo sci-calculators/calcoo
 move app-sci/equate sci-calculators/equate
+move app-sci/fung-calc sci-calculators/fung-calc
