@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.20 2003/06/16 01:23:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.21 2003/06/24 14:48:33 agriffis Exp $
+
+  24 Jun 2003; Aron Griffis <agriffis@gentoo.org> expat-1.95.6-r1.ebuild:
+  Mark stable on alpha
 
 *expat-1.95.6-r1 (17 Mar 2003)
 
