@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-0.8.12.ebuild,v 1.13 2003/09/06 22:04:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-0.8.12.ebuild,v 1.14 2004/02/22 22:49:14 agriffis Exp $
 
 IUSE="ssl"
 
@@ -14,7 +14,7 @@ DEPEND=">=sys-devel/libtool-1.3.5-r2
 
 SLOT="0"
 LICENSE="LGPL-2.1 GPL-2"
-KEYWORDS="x86 sparc  ppc"
+KEYWORDS="x86 sparc ppc"
 
 src_compile() {
 	local myconf
