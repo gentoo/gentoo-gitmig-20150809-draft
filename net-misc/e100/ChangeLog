@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/e100
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/e100/ChangeLog,v 1.18 2004/06/24 23:42:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/e100/ChangeLog,v 1.19 2004/10/02 10:28:57 mholzer Exp $
+
+*e100-3.1.4 (02 Oct 2004)
+
+  02 Oct 2004; Martin Holzer <mholzer@gentoo.org> +e100-3.0.27.ebuild,
+  +e100-3.1.4.ebuild:
+  two ned stable ebuilds
 
   03 Jun 2004; David Holm <dholm@gentoo.org> e100-2.3.43.ebuild:
   Added to ~ppc.
