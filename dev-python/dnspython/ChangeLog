@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dnspython
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.9 2005/01/31 02:12:08 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.10 2005/02/12 11:46:03 kloeri Exp $
+
+  12 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
+  -dnspython-1.3.0.ebuild, -dnspython-1.3.1.ebuild:
+  Remove old versions.
 
 *dnspython-1.3.3 (31 Jan 2005)
 
