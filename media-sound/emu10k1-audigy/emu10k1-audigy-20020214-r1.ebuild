@@ -1,14 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1-audigy/emu10k1-audigy-20020214.ebuild,v 1.4 2002/05/27 17:27:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1-audigy/emu10k1-audigy-20020214-r1.ebuild,v 1.1 2002/07/16 20:18:16 drobbins Exp $
 
 S=${WORKDIR}/emu10k1-audigy
 DESCRIPTION="Drivers, utilities and effects for the SoundBlaster Audigy line of sound cards"
 SRC_URI="mirror://sourceforge/emu10k1/audigy-driver-2002-02-14.tar.gz"
 HOMEPAGE="http://www.sourceforge.net/projects/emu10k1/"
-
 DEPEND="virtual/linux-sources"
 RDEPEND="media-sound/aumix"
+KEYWORDS="x86 -ppc -sparc -sparc64"
+SLOT="$KV"
+LICENSE="GPL-2"
 
 src_unpack()
 {

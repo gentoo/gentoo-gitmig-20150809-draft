@@ -63,7 +63,7 @@ DSPDEV=""
 # example "-M /dev/mixer1"
 MIXERDEV=""
 
-DSPMGR=$BASE_PATH/bin/emu-dspmgr $DSPDEV $MIXERDEV
+DSPMGR=$BASE_PATH/sbin/emu-dspmgr $DSPDEV $MIXERDEV
 
 CONFIG=$BASE_PATH/bin/emu-config $DSPDEV $MIXERDEV
 
