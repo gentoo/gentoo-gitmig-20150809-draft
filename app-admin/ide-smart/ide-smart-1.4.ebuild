@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ide-smart-1.4.ebuild,v 1.24 2005/01/01 11:06:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ide-smart-1.4.ebuild,v 1.25 2005/03/10 05:05:55 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -10,10 +10,10 @@ SRC_URI="http://www.linalco.com/ragnar/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_compile() {
 	emake -j1 \
