@@ -1,0 +1,26 @@
+#!/sbin/runscript
+
+need() {
+    need clock
+}
+
+checkconfig() {
+    if [ ! -e /etc/syslog-ng/syslog-ng.conf ] ; then
+	eerror "You need a /etc/syslog-ng/syslog-ng.conf first"
+	eerror "There is a sample in /usr/share/docs/syslog-ng"
+	return 1
+    fi
+}
+
+start() {
+    checkconfig || return 1
+    ebegin "Starting syslog-ng"
+    start-stop-daemon --start --quiet --exec /usr/sbin/syslog-ng
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping syslog-ng"
+    start-stop-daemon --stop --quiet --pidfile /var/run/syslog-ng.pid
+    eend $?
+}
