@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/opencdk-0.5.5.ebuild,v 1.11 2004/08/15 01:04:01 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/opencdk-0.5.5.ebuild,v 1.12 2004/09/26 05:19:18 tgall Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnutls.org/pub/gnutls/opencdk/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha amd64 ~ppc64 ia64 hppa"
+KEYWORDS="x86 ppc sparc mips alpha amd64 ppc64 ia64 hppa"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/libgcrypt-1.1.94"
