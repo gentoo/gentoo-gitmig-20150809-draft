@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.21 2004/06/28 22:10:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.22 2004/06/29 07:18:15 ciaranm Exp $
+
+  29 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> rxvt-unicode-3.1.ebuild:
+  Put back ~sparc, added ~mips
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> rxvt-unicode-2.4.ebuild,
   rxvt-unicode-2.8.ebuild, rxvt-unicode-2.9.ebuild, rxvt-unicode-3.0.ebuild,
