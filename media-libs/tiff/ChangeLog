@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.6 2003/02/12 18:11:20 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.7 2003/04/06 18:56:50 zwelch Exp $
 
   12 Feb 2003; Guy Martin <gmsoft@gentoo.org> tiff-3.5.7-r1.ebuild :
   Added hppa to keywords.
@@ -8,6 +8,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *tiff-3.5.7-r1 (21 Mar 2002)
+
+  06 Apr 2003; Zach Welch <zwelch@gentoo.org> tiff-3.5.7-r1.ebuild:
+  add arm keyword
 
   21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> tiff-3.5.7-r1.ebuild :
 
