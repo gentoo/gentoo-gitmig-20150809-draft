@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/dosbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosbox/ChangeLog,v 1.3 2003/07/16 02:34:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosbox/ChangeLog,v 1.4 2003/08/08 02:50:35 msterret Exp $
+
+  07 Aug 2003; Michael Sterrett <msterret@gentoo.org> dosbox-0.58.ebuild:
+  tidy ebuild
 
 *dosbox-0.58 (15 Jul 2003)
 
