@@ -2,16 +2,15 @@
 Hash: SHA1
 
 MD5 b76e687b215f136bc9576296151c389d dvdstyler-1.05.ebuild 1416
-MD5 06983fda447bab9ac63162ce2fa685fd metadata.xml 259
-MD5 36e7a3ccc9e7a021b3d2ce53995da61f ChangeLog 372
-MD5 dddf0d0ef243e5f450d0ad9d113ca9f9 files/1.05-configure.patch 279
+MD5 3c40f8c79661f51d37be553c6aff1361 metadata.xml 352
+MD5 dbde5c3974319d588410638bd790f23d ChangeLog 501
 MD5 371cffa55d3999c3330b141722406ca9 files/digest-dvdstyler-1.05 66
 MD5 17b64d2fe1f60d71550a0a8cff941e10 files/1.05-code.patch 3094
 MD5 a9cd7610657a1e958ddbb0c5102256ce files/1.05-AutoMakefile.patch 4996
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBCdP5mdTrptrqvGERArsoAJ9SUBiOxum+HVlPMRmHN74F0ndpIgCePL3k
-tRwTe002iJX68Nr2edPkZwc=
-=Eygm
+iD8DBQFBCfaZmdTrptrqvGERAuCFAJ41lT0IvKqceZjuVquWLUtnXn5b6gCgmHW4
+X2MLA749i4Qg8D8DIfPTkTw=
+=KYQc
 -----END PGP SIGNATURE-----
