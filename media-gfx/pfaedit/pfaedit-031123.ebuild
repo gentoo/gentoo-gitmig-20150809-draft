@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-031123.ebuild,v 1.5 2004/04/15 16:37:30 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-031123.ebuild,v 1.6 2004/04/26 02:31:01 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -25,7 +25,7 @@ src_compile() {
 
 	filter-mfpmath "sse" "387"
 
-	econf ${myconf} --without-freetype-src
+	econf ${myconf} --without-freetype-src || die "econf failed"
 	make || die
 }
 

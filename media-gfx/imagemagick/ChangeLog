@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.61 2004/03/08 04:15:58 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.62 2004/04/26 02:27:18 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> imagemagick-5.5.4.4.ebuild:
+  Add die following econf for bug 48950
 
   07 Mar 2004; Bret Curtis <psi29a@gentoo.org> imagemagick-5.5.3.2.ebuild:
   Bumped mips back to ~mips in KEYWORDS.

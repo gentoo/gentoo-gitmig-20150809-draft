@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.4.4.ebuild,v 1.12 2003/12/09 17:50:52 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.4.4.ebuild,v 1.13 2004/04/26 02:27:18 agriffis Exp $
 
 inherit libtool
 inherit perl-module
@@ -69,7 +69,7 @@ src_compile() {
 		--with-wmf \
 		--with-threads \
 		--with-bzlib \
-		${myconf}
+		${myconf} || die "econf failed"
 	emake || die "compile problem"
 
 	# More perl stuff
