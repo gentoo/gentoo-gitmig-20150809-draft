@@ -1,10 +1,13 @@
 # ChangeLog for app-cdr/bin2iso
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bin2iso/ChangeLog,v 1.9 2003/03/28 11:33:49 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bin2iso/ChangeLog,v 1.10 2003/04/25 22:50:39 taviso Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *bin2iso-19b-r1 (21 Oct 2002)
+
+  25 Apr 2003; Tavis Ormandy <taviso@gentoo.org> bin2iso-19b-r1.ebuild:
+  Marking ~alpha
 
   28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> :
 
