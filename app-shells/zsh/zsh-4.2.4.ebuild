@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.4.ebuild,v 1.1 2005/02/10 08:18:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.4.ebuild,v 1.2 2005/02/15 00:37:36 kito Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
 
 LICENSE="ZSH"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc-macos"
 IUSE="maildir ncurses static doc pcre cap"
 
 RDEPEND="pcre? ( >=dev-libs/libpcre-3.9 )
@@ -41,6 +41,11 @@ src_compile() {
 
 	use static && myconf="${myconf} --disable-dynamic" \
 		&& LDFLAGS="${LDFLAGS} -static"
+
+	if use ppc-macos; then
+		LDFLAGS="${LDFLAGS} -Wl,-x"
+		myconf="${myconf} --enable-libs=-liconv"
+	fi
 
 	econf \
 		--bindir=/bin \
