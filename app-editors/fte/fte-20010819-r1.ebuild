@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819.ebuild,v 1.1 2001/09/18 09:40:22 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r1.ebuild,v 1.1 2001/10/06 15:30:15 danarmak Exp $
 
 S=${WORKDIR}/${P}
 
@@ -71,11 +71,11 @@ src_install () {
    dodir usr/share/doc/${P}/html
    cp doc/INDEX doc/*.html ${D}/usr/share/doc/${P}/html
 
-   if [ -a ${D}/usr/bin/xfte ] ; then
-      into /usr/X11R6 ;
-      dobin src/xfte ;
-      rm ${D}/usr/bin/xfte ;
-   fi
+#   if [ -a ${D}/usr/bin/xfte ] ; then
+#      into /usr/X11R6 ;
+#      dobin src/xfte ;
+#      rm ${D}/usr/bin/xfte ;
+#   fi
    
    dodir usr/share/fte
    cp -R config/* ${D}/usr/share/fte

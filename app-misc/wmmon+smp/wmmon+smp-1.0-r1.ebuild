@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jano (default3) <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wmmon+smp/wmmon+smp-1.0.ebuild,v 1.1 2001/07/18 23:56:15 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wmmon+smp/wmmon+smp-1.0-r1.ebuild,v 1.1 2001/10/06 15:30:15 danarmak Exp $
 
 
 S=${WORKDIR}/wmmon.app
@@ -21,7 +21,7 @@ src_compile() {
 
 src_install () {
 
-	exeinto /usr/X11R6/bin
+	exeinto /usr/bin
 	doexe ${S2}/wmmon
 	dodoc ${S}/README ${S}/COPYING ${S}/INSTALL
 

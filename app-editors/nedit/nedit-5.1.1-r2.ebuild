@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.1.1-r1.ebuild,v 1.1 2001/04/11 02:45:29 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.1.1-r2.ebuild,v 1.1 2001/10/06 15:30:15 danarmak Exp $
 
 A=${P}-src.tar.gz
 S=${WORKDIR}/${P}
@@ -33,7 +33,7 @@ src_compile() {
 
 src_install () {
 
-    into /usr/X11R6
+    into /usr
     dobin source/nc source/nedit
     newman nedit.man nedit.1
     newman nc.man nc.1

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <blutgens@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/xlockmore-5.01.2.ebuild,v 1.5 2001/06/07 14:13:37 blutgens Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/xlockmore-5.01.2-r1.ebuild,v 1.1 2001/10/06 15:30:15 danarmak Exp $
 
 #P=
 A=${P}.tar.gz
@@ -28,9 +28,9 @@ src_compile() {
     myconf="--disable-mesa"
     fi
 
-    try ./configure --prefix=/usr --mandir=${prefix}/X11R6/man/man1 \
-	--host=${CHOST} ${myconf}
-    try make
+    ./configure --prefix=/usr --mandir=${prefix}/man/man1 \
+	--host=${CHOST} ${myconf} || die
+    make || die
     cd xglock/
     make
 
@@ -38,8 +38,8 @@ src_compile() {
 
 src_install () {
 
-    try make prefix=${D}/usr mandir=${D}/usr/X11R6/man/man1 install
-    exeinto /usr/X11R6/bin
+    make prefix=${D}/usr mandir=${D}/usr/man/man1 install || die
+    exeinto /usr/bin
     doexe xmlock/xmlock
     doexe xglock/xglock
     dodoc docs/* README xglock/xglockrc xglock/README.xglock
