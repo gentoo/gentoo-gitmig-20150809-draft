@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-1.5.ebuild,v 1.1 2004/03/20 21:36:23 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-1.5.ebuild,v 1.2 2004/03/31 12:43:56 aliz Exp $
 
 DESCRIPTION="Digital Video (DV) grabber for GNU/Linux"
 HOMEPAGE="http://kino.schirmacher.de/"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 IUSE="jpeg quicktime"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND="sys-libs/libavc1394
 	>=media-libs/libdv-0.98
