@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r11.ebuild,v 1.6 2002/06/02 15:43:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r11.ebuild,v 1.7 2002/06/02 20:04:44 azarah Exp $
 
 FT2_VER=2.0.9
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
@@ -206,9 +206,9 @@ src_install() {
 	doins ${FILESDIR}/${PVR}/lib/*.la
 
 	exeinto /etc/X11
-	#new session management script
+	# new session management script
 	doexe ${FILESDIR}/${PVR}/chooser.sh
-	#new display manager script
+	# new display manager script
 	doexe ${FILESDIR}/${PVR}/startDM.sh
 	exeinto /etc/X11/Sessions
 	doexe ${FILESDIR}/${PVR}/Sessions/*
@@ -245,7 +245,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	#this changed from a directory/file to a symlink
+	# this changed from a directory/file to a symlink
 	if [ ! -L ${ROOT}/usr/X11R6/lib/X11/XftConfig ] && \
 	   [ -f ${ROOT}/usr/X11R6/lib/X11/XftConfig ]
 	then
@@ -257,8 +257,8 @@ pkg_preinst() {
 		mv f ${ROOT}/usr/X11R6/lib/X11/app-defaults ${ROOT}/etc/X11
 	fi
 
-	#clean the dinamic libGL stuff's home to ensure
-	#we dont have stale libs floating around
+	# clean the dinamic libGL stuff's home to ensure
+	# we dont have stale libs floating around
 	if [ -d ${ROOT}/usr/lib/opengl/xfree ]
 	then
 		rm -rf ${ROOT}/usr/lib/opengl/xfree/*
@@ -276,5 +276,12 @@ pkg_postinst() {
 	then
 		/usr/sbin/opengl-update xfree
 	fi
+
+	# add back directories that portage nukes on unmerge
+	if [ ! -d ${ROOT}/var/lib/xdm ]
+	then
+		mkdir -p ${ROOT}/var/lib/xdm
+	fi
+	touch ${ROOT}/var/lib/xdm/.keep
 }
 
