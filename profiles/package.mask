@@ -503,7 +503,9 @@ dev-lang/tcl-tk
 #karltk@gentoo.org 23 Mar 2002
 # has a defect build system that doesn't honor --prefix=${D}
 # see #1279
->=dev-python/pychecker-0.8.0
+# >=dev-python/pychecker-0.8.0
+#jnelson@gentoo.org 28 Apr 2002
+# fixed ebuild to use --root (as all DistUtils should be using)
 
 # Testing this from gnome2 source tree
 >=app-text/scrollkeeper-0.3.4-r4
