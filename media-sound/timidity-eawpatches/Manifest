@@ -1,9 +1,19 @@
-MD5 f37baf48883cb8e2a26cf321f415cb34 ChangeLog 2316
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0abac07c2bfaa9ec23754be71a842ab1 ChangeLog 2438
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 96a7eb921d1155eb234916f55f256666 timidity-eawpatches-12-r4.ebuild 1417
+MD5 61d6566a644eca13ec4b855cfe203acb timidity-eawpatches-12-r4.ebuild 1413
 MD5 795c457b46eefb45cab5ccc15afca6b6 timidity-eawpatches-12-r2.ebuild 1219
 MD5 ef08f0386a706ea25d9ade497e3a6ad6 timidity-eawpatches-12-r3.ebuild 1291
 MD5 0fc3bf4990261c76091fa637ad44583a files/digest-timidity-eawpatches-12-r4 68
 MD5 0fc3bf4990261c76091fa637ad44583a files/digest-timidity-eawpatches-12-r2 68
 MD5 bc4db09d3bca05b826128910ee3ea94f files/timidity-eawpatches-12-gentoo.diff 650
 MD5 0fc3bf4990261c76091fa637ad44583a files/digest-timidity-eawpatches-12-r3 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBoxtMArHZZzCEUG0RAjp3AJ48RbPS+LaXvFgKoUJ8+nkQcYpO9gCcCdNt
+ko1A86H37sx1yRRN+3AEaPg=
+=3mDw
+-----END PGP SIGNATURE-----
