@@ -1,6 +1,15 @@
 # ChangeLog for app-text/cstetex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/ChangeLog,v 1.6 2005/01/01 16:07:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/ChangeLog,v 1.7 2005/01/19 22:48:55 matsuu Exp $
+
+*cstetex-2.0.2-r1 (20 Jan 2005)
+
+  20 Jan 2005; MATSUU Takuto <matsuu@gentoo.org> +files/xdvizilla.patch,
+  +files/xpdf-3.00pl2-CAN-2004-1125.patch,
+  +files/xpdf-3.00pl3-CAN-2005-0064.patch,
+  +files/xpdf-CESA-2004-007-xpdf2-newer.diff, +files/xpdf-goo-sizet.patch,
+  +files/xpdf2-underflow.patch, +cstetex-2.0.2-r1.ebuild:
+  Security bump; Bug #75801
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Corrected metadata.xml to match DTD.
