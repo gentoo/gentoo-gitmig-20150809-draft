@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.0.0.ebuild,v 1.1 2003/10/01 15:12:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.0.0.ebuild,v 1.2 2003/10/01 15:34:49 agriffis Exp $
 
 IUSE="doc"
 
@@ -63,11 +63,11 @@ src_install () {
 		lilypond_datadir=${D}/usr/share/lilypond \
 		local_lilypond_datadir=${D}/usr/share/lilypond/${PV} \
 		|| die "einstall failed"
-		
+
 	dodoc AUTHORS.txt COPYING ChangeLog DEDICATION INSTALL.txt \
 		NEWS.txt README.txt ROADMAP THANKS VERSION \
 		|| die "dodoc failed"
-		
+
 	insinto /usr/share/lilypond/${PV}/buildscripts/out
 	doins buildscripts/out/lilypond-profile \
 		buildscripts/out/lilypond-login \
