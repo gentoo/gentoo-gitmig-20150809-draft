@@ -17,7 +17,7 @@
 +cd ~
 +if [ -e .kde ]; then
 +       if [ ! -L .kde ]; then
-+               /bin/mv .kde .kde.backup
++               /bin/mv -f .kde .kde.backup
 +       else
 +               rm -f .kde
 +       fi

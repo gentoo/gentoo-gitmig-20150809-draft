@@ -3,7 +3,7 @@ MD5 aaabcfdcc4e3968d7cfa579b84cfb928 kdebase-3.2.3-r1.ebuild 3373
 MD5 212bf2c2a704a5229147c98aa5fa49eb kdebase-3.2.0.ebuild 3344
 MD5 1346582446d8d61097aaed2115b05adf kdebase-3.2.2.ebuild 3346
 MD5 f4a78953e1971e84bf6a8652009e98e8 kdebase-3.3.0.ebuild 3429
-MD5 ea160aaa5d8f0b7f2ccccbc580f73849 ChangeLog 27537
+MD5 a2dc27743f3c8a04c3a06483ae7afff3 ChangeLog 27686
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 76529aebe0f8884acc70558112902b72 kdebase-3.1.5.ebuild 3622
 MD5 ffad4f0170b80acc01e931ea21d3d4d4 files/utils.h.diff 343
@@ -40,8 +40,8 @@ MD5 9adecda5cdf6951ea0bcb6515c21a38b files/3.3.0/kdmrc 18202
 MD5 2f1f31f38b93136baeb537500c8cfabc files/3.3.0/backgroundrc 342
 MD5 3403677f5c4e44815c5a97c507d4f117 files/3.3.0/Xsetup 758
 MD5 e0c938e08649001554fc8354fcd0e4e6 files/3.3.0/startkde-3.3.0-gentoo.diff 1504
-MD5 47d8bb8cca72c416c73ec2d8a353d115 files/3.3.1/startkde-3.3.1-gentoo.diff 1541
-MD5 9adecda5cdf6951ea0bcb6515c21a38b files/3.3.1/kdmrc 18202
+MD5 b029faa02a7b77a388eb0370999f8dd7 files/3.3.1/startkde-3.3.1-gentoo.diff 1544
+MD5 928f7208882e2a90d9cb633dcfa9abf9 files/3.3.1/kdmrc 19878
 MD5 2f1f31f38b93136baeb537500c8cfabc files/3.3.1/backgroundrc 342
 MD5 3403677f5c4e44815c5a97c507d4f117 files/3.3.1/Xsetup 758
 MD5 0faaf9eacb170e30dae8818f927b2934 files/3.2.3-r1/startkde-3.2.3-r1-gentoo.diff 1923

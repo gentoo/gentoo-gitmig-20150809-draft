@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.153 2004/10/12 23:44:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.154 2004/10/13 12:43:39 caleb Exp $
+
+  13 Oct 2004; Caleb Tennis <caleb@gentoo.org> files/3.3.1/kdmrc,
+  files/3.3.1/startkde-3.3.1-gentoo.diff:
+  Providing a new kdmrc from bug #61499
 
 *kdebase-3.3.1 (12 Oct 2004)
 
