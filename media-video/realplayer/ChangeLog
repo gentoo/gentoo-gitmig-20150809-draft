@@ -1,6 +1,12 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.28 2005/02/07 21:18:53 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.29 2005/03/13 06:27:10 chriswhite Exp $
+
+*realplayer-10.0.3 (13 Mar 2005)
+
+  13 Mar 2005; Chris White <chriswhite@gentoo.org> +realplayer-10.0.3.ebuild:
+  Fixing bug #40469, which also fixes an (unreported?) security bug. Stable on
+  x86.
 
   08 Feb 2005; Chris White <chriswhite@gentoo.org> realplayer-10.0.2.ebuild:
   Fixing all the 'bump realplayer' bugs.  Also added the language pack logic.
