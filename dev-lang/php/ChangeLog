@@ -1,7 +1,17 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.14 2002/04/12 21:20:16 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.15 2002/04/15 20:12:42 jhhudso Exp $
 
+*php-4.1.2-r7 (15 Apr 2002)
+
+  15 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org> php-4.1.2-r7.ebuild :
+  
+  Fixed php to check for imap with ssl support when compiling the imap
+  extension. Bug #1254
+  Fixed bug where php couldn't find path to javac. Bug #1401
+  Modified the ebuild so it DEPENDs on net-mail/uw-imap instead of
+  the old virtual/imapUW
+	
 *php-4.1.2-r6 (12 Apr 2002) 
   12 Apr 2002; Spider <spider@gentoo.org>
   update -r to force rebuild with updated libpng
