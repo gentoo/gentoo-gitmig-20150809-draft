@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.50 2005/03/10 02:08:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.51 2005/03/20 17:49:04 kloeri Exp $
+
+  20 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> zenity-2.8.2.ebuild:
+  Stable on alpha.
 
   09 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> zenity-2.8.2.ebuild:
   Stable on sparc
