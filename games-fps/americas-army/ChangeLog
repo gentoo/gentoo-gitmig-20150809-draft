@@ -1,6 +1,6 @@
-# ChangeLog for app-games/americas-army
+# ChangeLog for games-fps/americas-army
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.1 2003/09/09 18:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.2 2003/09/10 16:08:01 vapier Exp $
 
   27 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
   americas-army-170.ebuild, americas-army-190.ebuild:
