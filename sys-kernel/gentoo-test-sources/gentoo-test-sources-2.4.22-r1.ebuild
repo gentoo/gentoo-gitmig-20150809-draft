@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-test-sources/gentoo-test-sources-2.4.22-r1.ebuild,v 1.4 2003/11/23 15:50:38 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-test-sources/gentoo-test-sources-2.4.22-r1.ebuild,v 1.5 2003/12/01 22:10:34 iggy Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -34,6 +34,8 @@ src_unpack() {
 	cd linux-${KV}
 
 	bzcat ${DISTDIR}/gentoo-test-sources-${PVR}.patch.bz2 | patch -p1 || die "Failed to patch kernel, please file a bug at bugs.gentoo.org"
+
+	epatch ${FILESDIR}/do_brk_fix.patch
 
 	cd ${S}
 	make mrproper || die "make mrproper failed"
