@@ -1,5 +1,5 @@
-MD5 cf24494f2914a453aaeba6c18121fa21 ChangeLog 1071
-MD5 8524f224e666cec38619954b261185ab gogo-3.10-r1.ebuild 1518
+MD5 c233a2e5c72f4c14bb2170a23ca0577f ChangeLog 1169
+MD5 d4e9106082fcc1e70ef3d028f20e9792 gogo-3.10-r1.ebuild 1586
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 0430e73f78121a38a515d3ce790499f9 files/digest-gogo-3.10-r1 60
 MD5 a67a51f56c8df1bb12c29dcab4ef1242 files/make-work-3.10pl3.patch 282
