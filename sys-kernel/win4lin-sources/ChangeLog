@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/win4lin-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.37 2004/10/21 18:33:36 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.38 2004/11/07 16:58:28 plasmaroo Exp $
+
+*win4lin-sources-2.6.7-r7 (07 Nov 2004)
+
+  07 Nov 2004; <plasmaroo@gentoo.org> -win4lin-sources-2.4.26-r6.ebuild,
+  +win4lin-sources-2.4.26-r7.ebuild, -win4lin-sources-2.6.7-r6.ebuild,
+  +win4lin-sources-2.6.7-r7.ebuild,
+  +files/win4lin-sources-2.4.26.XDRWrapFix.patch,
+  +files/win4lin-sources-2.6.devPtmx.patch:
+  Fixed the 2.4 kNFSd security vulnerability and the 2.6 /dev/ptmx DoS, bug
+  #62524. Also fixed CAN-2004-0814 for 2.4 and 2.6, bug #68421.
 
 *win4lin-sources-2.6.7-r6 (21 Oct 2004)
 
