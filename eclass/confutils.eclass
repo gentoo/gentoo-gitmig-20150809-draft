@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.9 2004/08/07 19:27:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.10 2004/08/13 20:49:36 robbat2 Exp $
 #
 # eclass/confutils.eclass
 #		Utility functions to help with configuring a package
@@ -70,7 +70,7 @@ confutils_use_conflict () {
 		eerror
 		eerror "You must disable these conflicting flags before you can emerge this package."
 		eerror "You can do this by disabling these flags in /etc/portage/package.use:"
-		eerror "    =$CATEGORY/$PN-$PVR: $my_remove"
+		eerror "    =$CATEGORY/$PN-$PVR $my_remove"
 		eerror
 		die "Conflicting USE flags"
 	fi
