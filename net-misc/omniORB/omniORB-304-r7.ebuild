@@ -1,17 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304-r7.ebuild,v 1.7 2003/02/28 16:55:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304-r7.ebuild,v 1.8 2003/03/25 21:02:42 seemant Exp $
 
 S=${WORKDIR}/${PN/ORB/}
 DESCRIPTION="a robust, high-performance CORBA 2 ORB"
+HOMEPAGE="http://www.uk.research.att.com/omniORB/"
 SRC_URI="ftp://ftp.uk.research.att.com/pub/omniORB/omniORB3/${PN}_${PV}.tar.gz
 	 ftp://ftp.uk.research.att.com/pub/omniORB/omniORBpy/${PN}py_1_4.tar.gz
 	 ftp://ftp.uk.research.att.com/pub/omniNotify/omniNotify1/omniNotify11b1.tar.gz
 	 ftp://ftp.uk.research.att.com/pub/omniORB/omniORB3/${PN}_${PV}_bugfixes.patch"
-HOMEPAGE="http://www.uk.research.att.com/omniORB/"
 
-DEPEND="virtual/glibc 
-		dev-lang/python"
+DEPEND="dev-lang/python"
 
 PLT="i586_linux_2.0_glibc2.1"
 KEYWORDS="x86 sparc "
@@ -22,7 +21,7 @@ src_unpack() {
 
 	unpack ${PN}_${PV}.tar.gz
 	cd ${S}
-	patch  -p0< ${DISTDIR}/${PN}_${PV}_bugfixes.patch || die "Patching failed"
+	epatch  ${DISTDIR}/${PN}_${PV}_bugfixes.patch
 	cd ${S}/src/lib
 	unpack ${PN}py_1_4.tar.gz
 	cd ${S}/src/services
