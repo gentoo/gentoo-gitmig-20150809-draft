@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/chemtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.3 2005/02/04 14:08:14 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.4 2005/02/22 05:58:46 phosphan Exp $
+
+*chemtool-1.6.6 (22 Feb 2005)
+
+  22 Feb 2005; Patrick Kursawe <phosphan@gentoo.org> +chemtool-1.6.6.ebuild:
+  Version bump
 
 *chemtool-1.6.4 (04 Feb 2005)
 
