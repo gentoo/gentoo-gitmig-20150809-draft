@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.8.0.ebuild,v 1.8 2003/09/18 21:42:36 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.8.0.ebuild,v 1.9 2003/10/02 08:51:01 kumba Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="Dictionary Client/Server for the DICT protocol"
 HOMEPAGE="http://www.dict.org/"
@@ -12,7 +14,19 @@ KEYWORDS="x86 ppc ~sparc ia64"
 
 DEPEND="virtual/glibc"
 
+src_unpack() {
+	unpack ${A}
+
+	# Patch to fix a gcc-3.3.x multi-line string issue.
+	# Closes Bug #29227
+	epatch ${FILESDIR}/${P}-gcc33-multiline-string-fix.patch
+}
+
 src_compile() {
+
+	# Update config.sub and config.guess so dictd understands the sparc architecture
+	gnuconfig_update
+
 	econf --with-etcdir=/etc/dict || die
 	make || die
 }
