@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3-r1.ebuild,v 1.1 2003/04/23 17:23:35 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3-r1.ebuild,v 1.2 2003/05/05 16:42:03 utx Exp $
 
 inherit flag-o-matic
 
@@ -24,6 +24,17 @@ S=${WORKDIR}/${PN}${PV}
 [ $ARCH = alpha ] && append-flags -fPIC
 
 src_unpack() {
+	ewarn ""
+	ewarn "Your compile WILL fail if you are upgrading from"
+	ewarn "a previous version of tclx."
+	ewarn ""
+	ewarn "emerge unmerge tclx"
+	ewarn "BEFORE upgrading to a newer version"
+	ewarn ""
+	ewarn "You have been warned :)"
+	ewarn ""
+	sleep 5
+
 	unpack ${A} ; cd ${S}
 	patch -p1 < ${FILESDIR}/${P}-makecfg.patch || die
 	patch -p1 < ${FILESDIR}/${P}-argv.patch || die

@@ -1,8 +1,11 @@
 # ChangeLog for dev-tcltk/tclx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.6 2003/04/23 17:23:35 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.7 2003/05/05 16:42:03 utx Exp $
 
 *tclx-8.3-r1 (23 Apr 2003)
+
+  05 May 2003; Stanislav Brabec <utx@gentoo.org> tclx-8.3-r1.ebuild:
+  Added "unmerge before update" warning (bug #19913).
 
   23 Apr 2003; Stanislav Brabec <utx@gentoo.org> tclx-8.3-r1.ebuild:
   Added new ebuild, which builds tclx against tcl/tk 8.4.2 (bug #19555).
