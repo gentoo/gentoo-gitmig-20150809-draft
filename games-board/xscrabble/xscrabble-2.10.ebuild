@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/xscrabble-2.10.ebuild,v 1.3 2004/04/13 09:51:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/xscrabble-2.10.ebuild,v 1.4 2004/04/14 20:23:46 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="An X11 clone of the well-known Scrabble"
 HOMEPAGE="http://freshmeat.net/projects/xscrabble/?topic_id=80"
@@ -22,11 +22,11 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${P}.tgz
 
-	cp ${DISTDIR}/xscrabble_en.tgz .
-	use nls && cp ${DISTDIR}/xscrabble_fr.tgz .
+	cp "${DISTDIR}/xscrabble_en.tgz" .
+	use nls && cp "${DISTDIR}/xscrabble_fr.tgz" .
 
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-path-fixes.patch
+	epatch "${FILESDIR}/${PV}-path-fixes.patch"
 }
 
 src_compile() {
