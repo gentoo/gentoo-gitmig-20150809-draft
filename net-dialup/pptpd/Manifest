@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 56ffb4483ef1f04abd36739069663e02 ChangeLog 1419
+MD5 2a3acb9d28497621c8e123b6fd085ec4 ChangeLog 1559
 MD5 9ab2ee42bf5bf7cf16cfa9a1bfc00d51 metadata.xml 299
 MD5 2f7ef88d4f29a75050c010cc7b2f8be3 pptpd-1.1.2.ebuild 882
 MD5 54a1541dfac5ccfaee7c55b1cc4e3cd4 pptpd-1.1.3.20030409.ebuild 865
 MD5 ae6df295e472e47e7bd7ec16042a4f76 pptpd-1.1.3.ebuild 869
 MD5 b80973cce679b9fec45c47c15dfa94ac pptpd-1.1.4_beta3.ebuild 960
-MD5 222b453bbf5404549631f67b2ef9acad pptpd-1.1.4_beta4.ebuild 1015
+MD5 25ca777f321833002f5f75e79173cc79 pptpd-1.1.4_beta4.ebuild 1250
 MD5 6e1f9956e6ba9a654f94a873131ac040 files/digest-pptpd-1.1.2 63
 MD5 ccaa45fc34133bf6e2fcdae2ae6aaf6d files/digest-pptpd-1.1.3 63
 MD5 44fe01339a2f4fb8bdd39ab2d5520257 files/digest-pptpd-1.1.3.20030409 72
@@ -22,9 +22,9 @@ MD5 1aa6184ca2aca26444923d1f184cc78d files/1.1.3/pptpd.conf 1418
 MD5 e22c7de471773b313e5cb07b236520eb files/1.1.4_beta3/options.pptpd 625
 MD5 d20665267fec5f986fc36eed662c03d1 files/1.1.4_beta3/pptpd.conf 1682
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBK/4bI1lqEGTUzyQRAhC2AKCkGrZLj97g1KteEoph8+NbhOwatQCeJUqS
-4AEE/e5nnX6hSWgtKcd+FxY=
-=vK9t
+iD8DBQFBxUnejtv59x0+BrURAo+4AJ49rsG0bB8Jds4WDSl4nkzhM0TsAwCcDL+F
+74NhZbCuiiNQ+4onybAetHY=
+=CA8e
 -----END PGP SIGNATURE-----

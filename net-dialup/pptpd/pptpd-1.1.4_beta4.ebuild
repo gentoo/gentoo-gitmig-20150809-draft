@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.1.4_beta4.ebuild,v 1.3 2004/07/01 22:09:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.1.4_beta4.ebuild,v 1.4 2004/12/19 09:28:53 mrness Exp $
 
 S=${WORKDIR}/poptop-1.1.4
 DESCRIPTION="Linux Point-to-Point Tunnelling Protocol Server"
@@ -8,15 +8,27 @@ SRC_URI="mirror://sourceforge/poptop/pptpd-1.1.4-b4.tar.gz"
 HOMEPAGE="http://www.poptop.org/"
 
 DEPEND="virtual/libc
+	sys-devel/autoconf
+	sys-devel/automake
 	net-dialup/ppp
 	tcpd? ( sys-apps/tcp-wrappers )"
-RDEPEND="$DEPEND"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="tcpd"
 
+src_unpack() {
+	unpack ${A} ; cd ${S}
+	sed -i "s/^CFLAGS = -O2/CFLAGS = ${CFLAGS}/" Makefile.am || die "sed failed"
+}
+
 src_compile() {
+	ebegin "Updating autotools-generated files"
+	aclocal && \
+		automake -a && \
+		autoconf
+	eend $?
+
 	local myconf
 	use tcpd && myconf="--with-libwrap"
 	econf 	--with-bcrelay \
