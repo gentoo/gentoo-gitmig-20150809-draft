@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.23 2004/09/27 10:45:07 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.24 2004/10/26 14:13:32 vapier Exp $
 
 inherit eutils
 
@@ -82,8 +82,6 @@ src_compile() {
 	mv Makefile Makefile.orig
 	sed -e "s:CFLAGS= -O:CFLAGS= ${CFLAGS}:" Makefile.orig > Makefile
 	cd ..
-
-	export CC=gcc
 
 	emake || die
 }
