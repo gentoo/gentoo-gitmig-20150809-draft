@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.1 2002/02/19 00:36:20 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.2 2002/04/23 21:23:50 azarah Exp $
+
+*cyrus-sasl-1.5.27-r1 (23 Apr 2002)
+
+  23 Apr 2002; Martin Schlemmer <azarah@gentoo.org>:
+
+  Added a libtoolize && aclocal .. hopefully build issues is fixed now.
 
 *cyrus-sasl-1.5.27 (18 Feb 2002)
 
