@@ -35,6 +35,7 @@
 *sys-apps/file
 *sys-apps/fileutils
 *sys-apps/findutils
+*sys-apps/slocate
 *sys-apps/gawk
 *sys-apps/gluelog
 *sys-apps/grep
