@@ -22,6 +22,11 @@
 ##   End example
 ##
 
+# sunflare@gentoo.org (08 Jul 2002)
+# Masking out the old zsnes, since its version numbering scheme is emulation
+# scene based and not UNIX-based; portage wants 1.337 > 1.35.
+=app-emulation/zsnes-1.337-r2
+
 # drobbins@gentoo.org (07 Jul 2002)
 # stuff with deps that are missing; ebuilds have problems so I'm masking them
 net-mail/exmh
