@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.4.0b.ebuild,v 1.3 2003/07/24 17:01:23 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.4.0b.ebuild,v 1.4 2003/12/18 22:23:39 latexer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ncurses based monitor util for your wavelan cards"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
-HOMEPAGE="http://www.jm-music.de/projects.html"
+HOMEPAGE="http://www.janmorgenstern.de/projects-software.html"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
