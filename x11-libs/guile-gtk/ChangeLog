@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/guile-gtk 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.4 2003/02/12 09:23:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.5 2003/07/18 21:07:00 liquidx Exp $
+
+*guile-gtk-1.2.0.31 (18 Jul 2003)
+
+  18 Jul 2003; Alastair Tse <liquidx@gentoo.org> guile-gtk-1.2.0.31.ebuild:
+  version bump. this ver is compat with guile-1.6
 
 *guile-gtk-0.19-r1 (21 Jan 2002)
 
