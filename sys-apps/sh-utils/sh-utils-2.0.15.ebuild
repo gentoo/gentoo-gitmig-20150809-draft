@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.15.ebuild,v 1.10 2003/01/18 19:17:25 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.15.ebuild,v 1.11 2003/02/09 16:46:50 gmsoft Exp $
 
 IUSE="nls static build"
 
@@ -13,7 +13,7 @@ DEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha mips"
+KEYWORDS="x86 ppc sparc alpha mips hppa"
 
 src_unpack() {
 	unpack ${P}.tar.gz
