@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.3.5-r1.ebuild,v 1.1 2004/05/02 01:38:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.3.5-r1.ebuild,v 1.2 2004/05/02 01:58:44 eradicator Exp $
 
 inherit eutils
 
-IUSE=""
+IUSE="X"
 
 MY_PN="Pixie"
 S="${WORKDIR}/${MY_PN}"
@@ -19,8 +19,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
-RDEPEND=""
-DEPEND="sys-devel/automake"
+RDEPEND="media-libs/jpeg
+	 sys-libs/zlib
+	 media-libs/tiff
+	 X? ( virtual/x11 )"
+
+DEPEND="${RDEPEND}
+	sys-devel/automake"
 
 src_unpack() {
 	unpack ${A}
