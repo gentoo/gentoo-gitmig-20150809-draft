@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4.ebuild,v 1.15 2004/10/18 20:22:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4.ebuild,v 1.16 2004/10/18 23:53:47 liquidx Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -163,7 +163,7 @@ src_install() {
 	else
 		use uclibc && rm -rf ${D}/usr/lib/python2.3/{test,bsddb/test}
 		use berkdb || rm -rf ${D}/usr/lib/python2.3/bsddb
-		( use !X || use !tcltk ) || rm -rf ${D}/usr/lib/python2.3/lib-tk
+		( use !X || use !tcltk ) && rm -rf ${D}/usr/lib/python2.3/lib-tk
 	fi
 }
 
