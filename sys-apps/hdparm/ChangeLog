@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.40 2004/06/24 22:09:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.41 2004/08/01 14:43:43 lanius Exp $
+
+*hdparm-5.5-r1 (01 Aug 2004)
+
+  01 Aug 2004; Heinrich Wendel <lanius@gentoo.org> hdparm-5.3-r2.ebuild,
+  hdparm-5.4.ebuild, hdparm-5.5-r1.ebuild, hdparm-5.5.ebuild,
+  files/hdparm-conf.d.3, files/hdparm-init, files/hdparm-init-2,
+  files/hdparm-init-3, files/hdparm-new-init:
+  great enhancements of the init script, see bug #37755, remove old version
 
   01 Jun 2004; Travis Tilley <lv@gentoo.org> hdparm-5.5.ebuild:
   stable on amd64
