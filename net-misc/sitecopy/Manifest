@@ -1,17 +1,30 @@
-MD5 efb313c1297bd9aaf1beba7c82586749 ChangeLog 3768
-MD5 e717add6ac28bce8b34bc08b47893e84 sitecopy-0.10.12-r1.ebuild 976
-MD5 bc03f4c35012bc7b210e9161ba2553c7 sitecopy-0.12.1.ebuild 1122
-MD5 18212cba2a3c3280f21532017a23bcd6 sitecopy-0.13.4-r1.ebuild 1795
-MD5 7d059885e7150cd63f1e4093b815d109 sitecopy-0.13.4.ebuild 1120
-MD5 0bd5f252f1b21dd14d526d06e86b4065 sitecopy-0.13.4-r2.ebuild 1951
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b9b59117fb94bf5781b920623f415f76 ChangeLog 3973
 MD5 f5f1522837a3398846f77d381fda47ec metadata.xml 226
-MD5 8e1c77c6c8e0794425e005715f97b3d2 sitecopy-0.14.1.ebuild 1564
-MD5 587033df0a1cfb59e37e7229cc35b5b3 sitecopy-0.14.2.ebuild 1499
+MD5 3bbc7854d9970468fa600c574754acd0 sitecopy-0.10.12-r1.ebuild 977
+MD5 23d7221e79fb41bc66a1331a25910a50 sitecopy-0.12.1.ebuild 1125
+MD5 c10a3f88d16f4f8362713b2e67da7819 sitecopy-0.13.4-r1.ebuild 1797
+MD5 d3286f6a00ba6935bf983d28040f63d0 sitecopy-0.13.4-r2.ebuild 1951
+MD5 c18e86bcfbcff4453e8fab1e21006828 sitecopy-0.13.4.ebuild 1123
+MD5 2fbf9f996b007377f17c7c9c56347c92 sitecopy-0.14.1.ebuild 1564
+MD5 bbfe5ddadf3db2c87e363c97bceec92b sitecopy-0.14.2.ebuild 1499
+MD5 a720f20b61e73dc8d3212562b8ada8c2 sitecopy-0.14.3.ebuild 1636
 MD5 09b3e7444248285b787fa3635d41aedc files/digest-sitecopy-0.10.12-r1 68
 MD5 3ee0433186f6f3224dff93ab6818a119 files/digest-sitecopy-0.12.1 67
 MD5 2181dd9a02cbcac0257406ff7a30a37b files/digest-sitecopy-0.13.4 67
 MD5 2181dd9a02cbcac0257406ff7a30a37b files/digest-sitecopy-0.13.4-r1 67
 MD5 2181dd9a02cbcac0257406ff7a30a37b files/digest-sitecopy-0.13.4-r2 67
 MD5 4d13e53c5bae73ede477e5e63cfc3aa1 files/digest-sitecopy-0.14.1 67
-MD5 9d2f1b627c2e64ada7b81ea3fa5ee51d files/sitecopy-0.14.1-nls.patch 598
 MD5 288fac1555c5aa6689f3e3e4e9e2c5e9 files/digest-sitecopy-0.14.2 67
+MD5 9d2f1b627c2e64ada7b81ea3fa5ee51d files/sitecopy-0.14.1-nls.patch 598
+MD5 d4ee82cb6aac0ea4d36d55c0194229df files/digest-sitecopy-0.14.3 67
+MD5 1dfe28809075352e0eed13c4a713b728 files/sitecopy-gcc3.4.patch 493
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2vgNFdQwWVoAgN4RAuUNAKCSLtX4vmPaqVC42X70Be+9TUSvkwCaA8V5
+TlSgVgBCN+RmcSErkdTrZSY=
+=94kN
+-----END PGP SIGNATURE-----

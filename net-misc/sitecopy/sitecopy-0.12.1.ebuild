@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.12.1.ebuild,v 1.9 2004/07/15 03:35:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.12.1.ebuild,v 1.10 2005/01/04 20:14:03 chriswhite Exp $
 
 IUSE="ssl xml xml2"
 
