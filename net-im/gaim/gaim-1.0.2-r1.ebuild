@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.0.2-r1.ebuild,v 1.2 2004/11/13 02:29:22 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.0.2-r1.ebuild,v 1.3 2005/01/14 19:25:44 rizzo Exp $
 
 inherit flag-o-matic eutils gcc debug
 
