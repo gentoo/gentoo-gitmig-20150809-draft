@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/gxmame-0.33-r1.ebuild,v 1.1 2003/09/21 04:56:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/gxmame-0.33-r1.ebuild,v 1.2 2004/02/03 21:47:59 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="frontend for XMame using the GTK library"
 HOMEPAGE="http://gxmame.sourceforge.net/"
