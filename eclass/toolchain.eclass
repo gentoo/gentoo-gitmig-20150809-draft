@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.132 2005/03/21 05:48:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.133 2005/03/21 06:01:26 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1040,9 +1040,9 @@ gcc_do_configure() {
 	# When building a stage1 cross-compiler (just C compiler), we have to 
 	# disable a bunch of features or gcc goes boom
 	if is_crosscompile && [[ ${GCC_LANG} == "c" ]] ; then
-		confgcc="${confgcc} --disable-shared --disable-threads --without-headers --enable-sjlj-exceptions"
+		confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
 	else
-		confgcc="${confgcc} $(use_enable !static shared) --enable-threads=posix --disable-sjlj-exceptions"
+		confgcc="${confgcc} $(use_enable !static shared) --enable-threads=posix"
 	fi
 	# __cxa_atexit is "essential for fully standards-compliant handling of
 	# destructors", but apparently requires glibc.
