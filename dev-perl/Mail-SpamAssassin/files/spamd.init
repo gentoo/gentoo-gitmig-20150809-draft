@@ -1,6 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/files/spamd.init,v 1.6 2004/03/04 18:39:14 vapier Exp $
 
 # NB: Config is in /etc/conf.d/spamd.conf
 
@@ -24,5 +25,3 @@ stop() {
 	start-stop-daemon --stop --quiet --pidfile ${pidfile}
 	eend $? "Failed to stop spamd"
 }
-
-# vim:ts=4 noexpandtab ft=sh:
