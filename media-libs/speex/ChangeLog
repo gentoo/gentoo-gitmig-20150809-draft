@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/speex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.29 2004/09/30 00:46:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.30 2004/11/03 09:42:48 phosphan Exp $
+
+  03 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> -speex-1.1.4.ebuild:
+  Removing 1.1.4 because of bug #69743.
 
   24 Sep 2004; kito@gentoo.org speex-1.1.6.ebuild:
   added ~ppc-macos keyword
