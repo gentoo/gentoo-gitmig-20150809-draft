@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.4-r1.ebuild,v 1.2 2003/06/07 01:40:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.4-r1.ebuild,v 1.3 2003/06/12 23:19:38 liquidx Exp $
 
 use kde && inherit kde
 
@@ -55,6 +55,9 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "install failed"
 	dodoc COPYING INSTALL README README.xscreensaver
+
+	# symlink to satisfy kde's kxs*
+	use kde && dosym /usr/share/control-center/screensavers /usr/lib/xscreensaver/config
 }
 
 pkg_postinst() {
