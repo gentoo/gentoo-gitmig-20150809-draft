@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.2 2002/03/21 15:14:22 seemant Exp $
+
+*STLport-4.5 (21 Mar 2002)
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> STLport-4.5.ebuild :
+
+  HTML documentation does not get gzipped any more.
+
 
 *STLport-4.5 (1 Feb 2002)
 

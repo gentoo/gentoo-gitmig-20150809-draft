@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.ebuild,v 1.1 2001/09/15 23:06:03 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.ebuild,v 1.2 2002/03/21 15:14:22 seemant Exp $
 
 S=${WORKDIR}/${P}
 
@@ -29,14 +29,9 @@ src_install () {
 	cp -R ${S}/lib/* ${D}/usr/lib/
 	rm -rf ${D}/usr/lib/obj
 	
-	dodoc ${S}/doc/*
-	dodoc ${S}/etc/*
+	cd ${S}/etc/
+	dodoc ChangeLog* README TODO *.txt
 
-	dodir usr/share/doc/STLport-4.5/html
-	
-	mv ${D}/usr/share/doc/STLport-4.5/*.html.gz \
-	   ${D}/usr/share/doc/STLport-4.5/html/ 
-	   
+	cd ${S}
+	dohtml -r doc
 }
-	
-
