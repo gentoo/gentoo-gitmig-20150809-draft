@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.ebuild,v 1.1 2003/10/25 09:08:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.ebuild,v 1.2 2003/10/27 12:59:54 vapier Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 
 DEPEND="dev-libs/expat
 	>=media-libs/libsdl-1.2.0
-	>=media-libs/paragui-1.0.0
+	>=media-libs/paragui-1.0.4
 	>=dev-libs/libsigc++-1.2.1
 	>=media-libs/sdl-image-1.2.0
 	>=sys-apps/sed-4"
