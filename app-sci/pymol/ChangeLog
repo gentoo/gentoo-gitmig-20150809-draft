@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/pymol
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/ChangeLog,v 1.9 2004/04/19 12:16:46 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pymol/ChangeLog,v 1.10 2004/04/20 14:23:36 phosphan Exp $
+
+*pymol-0.95 (20 Apr 2004)
+
+  20 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> pymol-0.95.ebuild,
+  files/header_order.patch:
+  Version bump. Needed a little patch and a change to the setup2.py call (if it
+  does not find the modules, it will create no python.com)
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> pymol-0.82.ebuild,
   pymol-0.86.ebuild, pymol-0.88.ebuild, pymol-0.90.ebuild:
