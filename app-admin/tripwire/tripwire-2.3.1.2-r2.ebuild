@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r2.ebuild,v 1.3 2005/01/01 11:32:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r2.ebuild,v 1.4 2005/02/22 01:23:33 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -43,8 +43,7 @@ src_compile() {
 	# see #32613, #45823, and others.
 	# 	-taviso@gentoo.org
 	strip-flags
-	replace-flags -O2 -O1
-	append-flags -DCONFIG_DIR='"\"/etc/tripwire\""'
+	append-flags -DCONFIG_DIR='"\"/etc/tripwire\""' -fno-strict-aliasing
 
 	einfo "Preapring build..."
 		rm -f ${S}/configure

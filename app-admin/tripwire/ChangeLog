@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/tripwire
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.14 2005/01/01 11:32:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.15 2005/02/22 01:23:33 taviso Exp $
+
+  22 Feb 2005; Tavis Ormandy <taviso@gentoo.org> tripwire-2.3.1.2-r2.ebuild:
+  cryptlib code is making gcc's strict aliasing break. #82854
+  compile with -fno-strict-aliasing to prevent b0rkage.
+  see http://bugs.gentoo.org/attachment.cgi?id=51827
 
   18 Dec 2004; Tavis Ormandy <taviso@gentoo.org> tripwire-2.3.1.2-r1.ebuild:
   die if no binaries were created.
