@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.34 2004/06/19 16:33:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.35 2004/06/23 20:48:37 anti Exp $
+
+*jedit-4.2_pre14 (23 Jun 2004)
+
+  23 Jun 2004; Ray Russell Reese III <anti@gentoo.org> jedit-4.2_pre14.ebuild:
+  Version bump.
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> jedit-4.1.ebuild:
   Stable on sparc.
