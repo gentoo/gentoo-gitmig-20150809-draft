@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/xboing-2.4-r1.ebuild,v 1.1 2003/09/10 19:29:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/xboing-2.4-r1.ebuild,v 1.2 2003/09/25 22:08:41 zul Exp $
 
 inherit games eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.techrescue.org/xboing/${PN}${PV}.tar.gz
 
 LICENSE="xboing"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc"
 
 DEPEND="virtual/x11"
 
