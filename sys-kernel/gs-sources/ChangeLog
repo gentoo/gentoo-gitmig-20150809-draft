@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.2 2003/01/17 03:49:06 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.3 2003/01/18 06:45:04 livewire Exp $
+
+*gs-sources-2.4.21_pre3-r2 (18 Jan 2003)
+
+  18 Jan 2003: Bob Johnson <livewire@gentoo.org>
+
+	- Newer Nforce2 patch, fixes 80wire detection
+	- Preempt added
+	- Low Latency added
+	- bkbits cset 1.884.1.87 to 1.903 (many many fixes)
+	- pdc202xx ide patches 
 
 *gs-sources-2.4.21_pre3-r1 (16 Jan 2003)
 
