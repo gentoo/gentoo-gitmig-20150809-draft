@@ -1,7 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/multilib/packages,v 1.1 2005/03/07 00:05:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/multilib/packages,v 1.2 2005/03/07 01:42:40 eradicator Exp $
 
 # sys-devel/gcc brings in our 64bit compiler
 -*sys-devel/gcc-sparc64
+
+# Force toolchain versions that have been tested to work and are multilib aware
+*>=sys-apps/portage-2.0.51-r13
+*>=sys-devel/binutils-2.15.92.0.2-r2
+*>=sys-devel/gcc-3.4.3-r1
+*>=sys-libs/glibc-2.3.4.20050125-r1
+*>=sys-devel/gcc-config-1.4.0
+>=sys-devel/distcc-2.18.3-r4
 
