@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1-r2.ebuild,v 1.8 2004/10/09 00:13:59 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/arphicfonts-0.1-r2.ebuild,v 1.9 2004/10/17 11:18:40 absinthe Exp $
 
 inherit font
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.gnu.org/non-gnu/chinese-fonts-truetype/gkai00mp.ttf.gz
 
 SLOT="0"
 LICENSE="Arphic"
-KEYWORDS="~ia64 x86 ppc alpha sparc hppa ~amd64 ~mips ppc64"
+KEYWORDS="~ia64 x86 ppc alpha sparc hppa amd64 ~mips ppc64"
 
 S=${WORKDIR}
 FONT_S="${S}"
