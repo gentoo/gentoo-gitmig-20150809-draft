@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/cracklib
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.61 2004/12/16 02:21:57 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.62 2005/02/11 06:06:41 vapier Exp $
+
+*cracklib-2.8_pre1 (11 Feb 2005)
+
+  11 Feb 2005; Mike Frysinger <vapier@gentoo.org> +cracklib-2.8_pre1.ebuild:
+  Version bump.
 
   15 Dec 2004; Mike Frysinger <vapier@gentoo.org>
   files/cracklib-2.7-libdir.patch, cracklib-2.7-r10.ebuild:

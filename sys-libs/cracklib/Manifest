@@ -1,9 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 94195d85c66a4e162da33810b7770a57 ChangeLog 8246
+MD5 6b5eccc83ad7c8919c0d337672f528b8 ChangeLog 8374
+MD5 ad8a5f26b8dc67aab46b25c5eb21b293 cracklib-2.8_pre1.ebuild 1019
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 a08a4a45ffc3ea664b5d87b1ba300974 cracklib-2.7-r10.ebuild 2855
+MD5 a3c5abcdb18cd4f689b1b75a785e76ec cracklib-2.7-r10.ebuild 2855
 MD5 85783b83e5bfa51190033895cfaf803e files/cracklib-2.7-dec-alpha-compiler.diff 333
 MD5 57ed4f94412bd475a0774c8e0db99712 files/cracklib-2.7-gentoo-new.diff 4235
 MD5 954e8e0d53c6f878366e472a90917356 files/cracklib-2.7-redhat.patch 1224
@@ -13,10 +11,4 @@ MD5 336ab4f8ce8e3a3955ec8722d32076b4 files/cracklib-2.7-gzip.patch 521
 MD5 f27fad03a3939b6e405193b419b645a4 files/digest-cracklib-2.7-r10 63
 MD5 ee8b4f377188b6bb5001fc6e8b81e614 files/cracklib-2.7-libdir.patch 1211
 MD5 e9edfa4c3852810514a42e43e4f66b4e files/cracklib-2.7-parallel-make.patch 1066
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBwPFRroRuSHgZdywRAsAnAJ0eD5Yldaooj+aeY8X3cRtMrohFEQCgjKYb
-2KUGwdf4PgdWCcHwskQElec=
-=n4sq
------END PGP SIGNATURE-----
+MD5 41a9f927353926e62b60ac78e917f83c files/digest-cracklib-2.8_pre1 68
