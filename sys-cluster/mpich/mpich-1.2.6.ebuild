@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.5.2.ebuild,v 1.10 2005/02/21 07:57:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.6.ebuild,v 1.1 2005/02/21 07:57:19 spyderous Exp $
+
+inherit eutils
 
 # Set the MPICH_CONFIGURE_OPTS environment variable to change the signal
 # mpich listens on or any other custom options (#38207).
@@ -13,10 +15,13 @@ SRC_URI="ftp://ftp.mcs.anl.gov/pub/mpi/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc crypt"
 
-DEPEND="virtual/libc"
+DEPEND="virtual/libc
+	sys-devel/autoconf
+	sys-devel/automake
+	sys-devel/libtool"
 RDEPEND="${DEPEND}
 	crypt? ( net-misc/openssh )
 	!crypt? ( net-misc/netkit-rsh )
@@ -32,6 +37,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	grep -FrlZ '$(P) ' . | xargs -0 sed -i -e 's/\$(P)//'
+
+	# Fix broken romio
+	epatch ${FILESDIR}/${PV}-fix-romio-sandbox-breakage.patch
+	cd ${S}/romio
+	rm configure
+	autoreconf --install --verbose
 }
 
 src_compile() {
