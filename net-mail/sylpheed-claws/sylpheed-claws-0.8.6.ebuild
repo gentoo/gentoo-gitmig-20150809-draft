@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.6.ebuild,v 1.2 2002/11/26 13:05:23 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.6.ebuild,v 1.3 2002/11/26 13:26:46 bcowan Exp $
 
 IUSE="nls gnome xface gtkhtml crypt spell imlib ssl ldap ipv6 pda"
 
@@ -54,10 +54,9 @@ src_compile() {
 	    && myconf="${myconf} --enable-imlib" \
 	    || myconf="${myconf} --disable-imlib"
 	    
-	#currently broken
-	#use spell \
-	#    && myconf="${myconf} --enable-aspell" \
-	#    || myconf="${myconf} --disable-aspell"
+	use spell \
+	    && myconf="${myconf} --enable-aspell" \
+	    || myconf="${myconf} --disable-aspell"
 	    
 	use ldap && myconf="${myconf} --enable-ldap"
 	
@@ -75,7 +74,6 @@ src_compile() {
 	
 	econf \
 		--program-suffix=-claws \
-		--disable-aspell \
 		${myconf} || die "./configure failed"
 
 	for i in `find . -name Makefile` ; do
@@ -103,11 +101,4 @@ src_install() {
 		${D}/usr/share/pixmaps/sylpheed-claws.png
 
 	dodoc AUTHORS ChangeLog* INSTALL* NEWS README* TODO*  
-}
-
-pkg_postinst() {
-	    
-	einfo "Warning: Spell checker is currently broken in this"
-	einfo "testing build, if u need that functionality please"
-	einfo "use Gentoo's current marked stable version."
 }	
