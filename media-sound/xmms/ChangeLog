@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.29 2002/10/12 11:30:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.30 2002/10/17 21:08:49 azarah Exp $
+
+*xmms-1.2.7-r14 (17 Oct 2002)
+
+  17 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Add back the patch to link xmms against libstdc++, as some plugins
+  need it.
 
 *xmms-1.2.7-r13 (23 Aug 2002)
 
