@@ -1,7 +1,20 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.11 2003/06/17 03:15:50 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.12 2003/09/14 18:07:06 frogger Exp $
 
+*hardened-sources-2.4.21 (14 Sep 2003)
+
+  14 Sep 2003; Matthew Rickard <frogger@gentoo.org> hardened-sources-2.4.21.ebuild:
+  Updated hardened-sources based on the 2.4.21 Linux kernel.
+  This includes updates to most major components such as:
+    -ck-base-0306300059
+    -selinux-2.4-2003071106
+    -grsecurity-2.0-rc1
+    -Updated IPTables patch-o-matic
+    -Updated SuperFreeS/WAN
+  Thanks to Phil West <pwest@computer.org> for his work in getting this
+  updated patch set ready for the 2.4.21 based kernel.
+  
   16 Jun 2003; Matthew Rickard <frogger@gentoo.org> :
   Initial import of hardened-sources-2.4.20-r4.  This revision
   includes only a few changes, but one of these is an important
