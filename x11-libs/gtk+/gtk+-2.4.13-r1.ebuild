@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.13.ebuild,v 1.1 2004/11/02 00:20:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.13-r1.ebuild,v 1.1 2004/11/21 23:09:22 foser Exp $
 
 inherit libtool flag-o-matic eutils
 
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
 SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2
+	mirror://gentoo/gtk+-2.4-smoothscroll-r1.patch
 	amd64? ( http://dev.gentoo.org/~lv/gtk+-2.4.1-lib64.patch.bz2 )"
 
 LICENSE="LGPL-2"
@@ -41,7 +42,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
 	# add smoothscroll support for usability reasons
 	# http://bugzilla.gnome.org/show_bug.cgi?id=103811
-	epatch ${FILESDIR}/${PN}-2.4-smoothscroll.patch
+	epatch ${DISTDIR}/${PN}-2.4-smoothscroll-r1.patch
 
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
