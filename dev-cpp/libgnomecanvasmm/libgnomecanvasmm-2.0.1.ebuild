@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/libgnomecanvasmm-2.0.1.ebuild,v 1.14 2004/07/19 17:20:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/libgnomecanvasmm-2.0.1.ebuild,v 1.15 2004/08/18 16:20:17 foser Exp $
 
 inherit eutils gnome2
 
@@ -9,8 +9,8 @@ HOMEPAGE="http://gtkmm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gtkmm/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-SLOT="2.0"
-KEYWORDS="~x86 ppc ~sparc hppa amd64"
+SLOT="2"
+KEYWORDS="x86 ppc ~sparc hppa amd64"
 IUSE=""
 
 RDEPEND=">=gnome-base/libgnomecanvas-2

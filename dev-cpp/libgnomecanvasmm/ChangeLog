@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgnomecanvasmm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.19 2004/07/19 17:20:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.20 2004/08/18 16:20:17 foser Exp $
+
+  18 Aug 2004; foser <foser@gentoo.org> libgnomecanvasmm-2.0.1.ebuild :
+  Fix SLOT to be the same as 2.0.0
 
   19 Jul 2004; Lars Weiler <pylon@gentoo.org> libgnomecanvasmm-2.0.1.ebuild:
   Added again stable keyword for ppc. Somehow it got lost. This is necessary for
