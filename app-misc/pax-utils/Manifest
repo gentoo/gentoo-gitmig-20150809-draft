@@ -10,13 +10,13 @@ MD5 3ae400adbdb2b3ad50fc50eee159ac64 metadata.xml 370
 MD5 ca7cfa3bfcc1ac03eaeea155d200883b files/digest-pax-utils-0.0.1 65
 MD5 f938ae80a51e84f9793da50a4bf5bebe files/digest-pax-utils-0.0.2 65
 MD5 9611728e3e53310e58007dd7a0e42272 files/digest-pax-utils-0.0.4 66
-MD5 bfcd9023642e154b71821d9ee8b69adf files/digest-pax-utils-0.0.5 66
+MD5 b077f4af3f1b3998de5f52826b7f0ad1 files/digest-pax-utils-0.0.5 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iQCVAwUBQk4lWp4WFLgrx1GWAQKfnAQAjMroEOhQOb5Ft/aqSHyWEIOQ92st/IPn
-CLlkbAjDC2HVs4KYdJKs0gF1CmZs3KfoHVoUKMFBPXoxrFNteOV9/qdnbGA5DpF5
-yB+ebz5nsAEHVI3vY2vDArPvQshREkKpRQP65/eDuxHf07r7MPBJ/pf0pIVwsifK
-NTCAI78chMk=
-=btuB
+iQCVAwUBQk4mMZ4WFLgrx1GWAQLlawQAokIxcmRtSv+2V9LRbY0MmcrEFidgd3Nn
+PdXKF0yvKXadDyfORRXSpfTHWgG7esNqUVHaKueNeN9m2p3E1XPPz9hMkKEf8sml
+1hR8x+l/9HmBFLuN88uyZlBXInngBFze9Kvm2cqYJ0v1iGoX89Rimq3QvLXGqRgO
+kXZ4WHTzc7Q=
+=qAsa
 -----END PGP SIGNATURE-----
