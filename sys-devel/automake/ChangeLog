@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.57 2004/06/24 22:42:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.58 2004/06/27 02:01:31 solar Exp $
+
+  26 Jun 2004; <solar@gentoo.org> automake-1.8.5-r1.ebuild:
+  update automake-1.8.5-r1 with uclibc logic
 
 *automake-1.8.5-r1 (16 Jun 2004)
 

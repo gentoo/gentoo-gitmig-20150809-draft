@@ -6,8 +6,8 @@ MD5 817a92d1024e99fcb8a188629f2d50e4 automake-1.6.1-r6.ebuild 7879
 MD5 3f3e05f29a625967ea2248b9591d090c automake-1.8.2.ebuild 12387
 MD5 0b3377948969626c1c2185d13333a940 automake-1.6.3.ebuild 8613
 MD5 77886dbcdf1ee43e6ae8dd4311b132b2 automake-1.7.8.ebuild 10548
-MD5 07abe748f58adb4d0fb273d65daf6d83 automake-1.8.5-r1.ebuild 12712
-MD5 200d11011c02f03d982a275c7827ff33 ChangeLog 9399
+MD5 fe4092259a925287391dbfadfbef4be8 automake-1.8.5-r1.ebuild 12982
+MD5 abf6ba14782c3629a058ee46982f19e5 ChangeLog 9502
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 d3bde01a1b4a62d9af439291264d4260 automake-1.8.3.ebuild 12641
 MD5 e93136e02eb000c938f564484d306d76 files/automake-1.7.7-infopage-namechange.patch 592

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5-r1.ebuild,v 1.2 2004/06/24 22:42:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.5-r1.ebuild,v 1.3 2004/06/27 02:01:31 solar Exp $
 
 inherit eutils
 
@@ -64,7 +64,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="1.5"
 KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390"
-IUSE=
+IUSE="uclibc"
 
 DEPEND="dev-lang/perl
 	>=sys-devel/autoconf-2.58"
@@ -363,6 +363,12 @@ src_install() {
 
 	# This is the default macro directory that apps use ..
 	keepdir /usr/share/aclocal
+
+	# remove all config.guess and config.sub files replacing them
+	# w/ a symlink to a specific gnuconfig version
+	use uclibc && for x in $(find ${D}/usr/share -name config.guess -o -name config.sub) ; do
+		rm -f ${x}; ln -sf ../gnuconfig/$(basename ${x}) ${x}
+	done
 }
 
 pkg_preinst() {
