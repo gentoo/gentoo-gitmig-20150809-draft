@@ -1,4 +1,14 @@
-MD5 6bbf7786679854f2431dfb13c55eef5e ChangeLog 581
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 153ac76f3ce6f66c852ee729b7a5a2bd ChangeLog 664
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 5a0a26bb684d38cb0472bb4995be419c rtgraph-0.70.ebuild 836
+MD5 6fb8c92bd6d6a66415b96029004bca78 rtgraph-0.70.ebuild 841
 MD5 72b9c47b878289b2a6c072cfe5046e66 files/digest-rtgraph-0.70 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBi/m3CHk4+ZoBpvsRApONAKC2vqnZmuRWafkrRrl9pyeDfHI+iACeKSdS
+yxl9xW8XEusHT8ulGE1P3GY=
+=vMZj
+-----END PGP SIGNATURE-----
