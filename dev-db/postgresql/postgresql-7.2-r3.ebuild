@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2-r3.ebuild,v 1.4 2002/07/08 08:03:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2-r3.ebuild,v 1.5 2002/07/08 22:39:24 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -74,7 +74,7 @@ src_compile() {
 	fi
 	if [ "`use ssl`" ]
 	then
-		myconf="$myconf --with-openssl=/usr"
+		myconf="$myconf --with-openssl"
 	fi
 	if [ "`use nls`" ]
 	then
@@ -95,6 +95,17 @@ src_compile() {
 
 	emake || die
 
+}
+
+pkg_preinst() {
+	if ! groupmod postgresql ; then
+		groupadd -g 70 postgres || die "problem adding group postgres"
+	fi
+
+	if ! id postgresql; then
+		useradd -g postgres -s /dev/null -d /var/lib/postgresql -c "postgres" postgres
+		assert "problem adding user postgres"
+	fi
 }
 
 src_install () {
@@ -135,7 +146,6 @@ src_install () {
 	einfo ">>> ebuild  /var/db/pkg/dev-db/${P}/${P}.ebuild config"
 	einfo ">>> to setup the initial database environment."
 }
-
 
 pkg_config() {
 

@@ -103,6 +103,17 @@ src_compile() {
 
 }
 
+pkg_preinst() {
+	if ! groupmod postgresql ; then
+		groupadd -g 70 postgres || die "problem adding group postgres"
+	fi
+
+	if ! id postgresql; then
+		useradd -g postgres -s /dev/null -d /var/lib/postgresql -c "postgres" postgres
+		assert "problem adding user postgres"
+	fi
+}
+
 src_install () {
 
 	if [ "`use perl`" ]
