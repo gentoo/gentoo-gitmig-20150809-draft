@@ -20,9 +20,6 @@ app-admin/webconfig
 #untested/not approved stuff, please do not use
 >=sys-apps/portage-1.9
 
-#untested xfs/jfs patch
-=sys-apps/grub-0.90-r4
-
 #still need some testing, especially the XFS.
 >=sys-kernel/linux-sources-2.4.17
 
