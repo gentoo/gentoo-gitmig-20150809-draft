@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.1.ebuild,v 1.4 2004/11/12 20:40:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.1.ebuild,v 1.5 2004/12/27 03:57:10 vapier Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/stratagus/${P}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug doc flac mad mikmod oggvorbis opengl"
 
 RDEPEND="virtual/libc
@@ -20,7 +20,6 @@ RDEPEND="virtual/libc
 	dev-lang/lua
 	media-libs/libpng
 	media-libs/libsdl
-	sys-devel/gcc
 	sys-libs/zlib
 	flac? ( media-libs/flac )
 	mad? ( media-libs/libmad )
@@ -29,6 +28,8 @@ RDEPEND="virtual/libc
 		media-libs/libogg
 		media-libs/libvorbis
 	)"
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )"
 
 S="${WORKDIR}/stratagus-${MY_PV}"
 
@@ -52,5 +53,6 @@ src_install() {
 	dogamesbin stratagus || die "dogamesbin failed"
 	dodoc README
 	dohtml -r doc/*
+	use doc && dohtml -r srcdoc/html/*
 	prepgamesdirs
 }

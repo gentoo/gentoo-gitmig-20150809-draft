@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a64de9d6c6fa3e796c9fb4531bb98ad2 stratagus-2.1.ebuild 1300
 MD5 b97253d52c1f0041b3c624ae4c43a862 ChangeLog 459
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 128ff1ce4ddc946df8b526f561b2abf1 stratagus-2.1.ebuild 1232
 MD5 4b13f331859d7e9dd8475a36fdb70725 files/digest-stratagus-2.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBz4gmroRuSHgZdywRAlTfAJ9FosSUccgL62V+XIe+HQJ2TtOFoACePwj2
+ZcNrgG7juCC2wkHbZf8VPAo=
+=SCTq
+-----END PGP SIGNATURE-----
