@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gnome-icon-theme
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.4 2002/12/13 11:01:03 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.5 2003/01/31 02:16:14 foser Exp $
+
+*gnome-icon-theme-0.1.5 (30 Jan 2003)
+
+  30 Jan 2003; foser <foser@gentoo.org> gnome-icon-theme-0.1.5.ebuild :
+  GNOME 2.2 RC2 commit
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
