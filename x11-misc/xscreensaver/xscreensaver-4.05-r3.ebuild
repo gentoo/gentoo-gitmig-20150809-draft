@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.05-r3.ebuild,v 1.7 2002/10/05 05:39:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.05-r3.ebuild,v 1.8 2002/10/19 21:10:35 cselkirk Exp $
 
 IUSE="pam gtk motif gnome opengl"
 
@@ -8,7 +8,7 @@ DESCRIPTION="a modular screensaver for X11"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
 HOMEPAGE="http://www.jwz.org/xscreensaver/"
 LICENSE="BSD"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc sparc64 ppc"
 SLOT="0"
 
 DEPEND="virtual/x11 sys-devel/bc

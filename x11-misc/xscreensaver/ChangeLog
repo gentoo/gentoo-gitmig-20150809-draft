@@ -1,11 +1,17 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.4 2002/09/29 15:06:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.5 2002/10/19 21:10:35 cselkirk Exp $
+
+
+xscreensaver-4.05-r3 (21 Jul 2002)
+  
+  19 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> xscreensaver-4.05-r3.ebuild :
+
+  Added ppc to KEYWORDS.
 
   29 Sep 2002; Martin Schlemmer <azarah@gentoo.org> pam.d/xscreensaver :
   Update pam.d file to use system-auth.  Bug #5953.
-
-xscreensaver-4.05-r3 (21 Jul 2002)
+  
   21 Jul 2002; Spider <spider@gentoo.org> xscreensaver-4.05-r3.ebuild :
   Dep change solves bug 4743
 
