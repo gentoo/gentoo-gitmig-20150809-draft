@@ -151,7 +151,7 @@ app-editors/kvim
 
 # <seemant@gentoo.org> (05 Aug 2002)
 # masked for testing
-=net-analyzer/rdtool-1.0.39
+=net-analyzer/rrdtool-1.0.39
 
 # <seemant@gentoo.org> (05 Aug 2002)
 # masked for testing custom CFLAGS
