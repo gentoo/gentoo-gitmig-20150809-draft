@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Incfi
+# Copyright 1999-2003 Gentoo Technologies, Inc
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.1 2003/12/13 20:11:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.2 2003/12/13 20:11:45 seemant Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -136,7 +136,7 @@ src_compile() {
 		--disable-sdl \
 		--without-x \
 		`use_enable mmx` || die "libmpeg2 failed to configure"
-	
+
 	emake || make || die "libmpeg2 failed to compile"
 
 	# ffMPEG
