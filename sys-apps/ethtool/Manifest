@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c1e299e51ab9cca3c6b9a6c7c56c96e0 ethtool-2.ebuild 587
-MD5 fed5d342b347a464b61414d43e7df260 ChangeLog 1733
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 ac26630ce6eab9660d2c93d1842e4ab2 ethtool-3.ebuild 594
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 c18b46f6da5a32fda158072793dcce5b ethtool-2.ebuild 586
+MD5 9d6382fc0bd94100295baeff5043f84a ChangeLog 1823
 MD5 b5d0a094f67d9512b27d329dfe294ce2 ethtool-1.8.ebuild 552
+MD5 a3bc02ee4d82e2319bade1d5505b67aa files/digest-ethtool-1.8 62
 MD5 966d55d939d32d2c01231666796eeccb files/digest-ethtool-3 61
 MD5 c1a3131f24e207f5697559ccca02b37b files/digest-ethtool-2 61
-MD5 a3bc02ee4d82e2319bade1d5505b67aa files/digest-ethtool-1.8 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCPAg6ugEuf3OQ0akRAmg9AJ9h6T5cVRP01vjGR+Cgd2sJ4y1fRgCcD86Z
-diquAVupZNA1F0sorx6Ban8=
-=7/lZ
------END PGP SIGNATURE-----
