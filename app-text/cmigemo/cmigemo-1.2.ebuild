@@ -1,17 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.1.013.ebuild,v 1.5 2004/03/11 18:56:56 usata Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.2.ebuild,v 1.1 2004/03/11 18:56:56 usata Exp $
 
 IUSE="emacs"
 
 DESCRIPTION="C/Migemo -- Migemo library implementation in C"
 HOMEPAGE="http://www.kaoriya.net/#CMIGEMO"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://www.kaoriya.net/dist/${P}.tar.bz2"
 
-LICENSE="BSD | LGPL-2.1"
-KEYWORDS="x86 alpha ~sparc ~ppc"
+LICENSE="cmigemo"
+KEYWORDS="~x86 ~alpha"
 SLOT="0"
 S="${WORKDIR}/${P}"
 
@@ -27,8 +25,6 @@ src_unpack() {
 	unpack ${A}
 
 	has_version 'app-editors/vim-core' && epatch ${FILESDIR}/${P}-migemo-dict.diff
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-fflush-gentoo.patch
 
 	touch ${S}/dict/SKK-JISYO.L
 
@@ -69,6 +65,7 @@ pkg_postinst() {
 		einfo "    (setq migemo-dictionary \"/usr/share/migemo/migemo-dict\")"
 		einfo "    (setq migemo-user-dictionary nil)"
 		einfo "    (setq migemo-regex-dictionary nil)"
+		einfo "to use cmigemo instead of migemo under emacs."
 		einfo ""
 	fi
 
