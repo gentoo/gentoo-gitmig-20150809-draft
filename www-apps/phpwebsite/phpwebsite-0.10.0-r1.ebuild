@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-0.10.0-r1.ebuild,v 1.1 2005/02/25 21:05:32 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-0.10.0-r1.ebuild,v 1.2 2005/02/27 11:28:00 kloeri Exp $
 
 inherit webapp
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://phpwebsite.appstate.edu"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}-full.tar.gz
 		http://phpwebsite.appstate.edu/downloads/security/phpws_image_secure_patch.tgz"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc alpha"
 IUSE=""
 RDEPEND="virtual/httpd-php
 	>=dev-db/mysql-3.23.23"
