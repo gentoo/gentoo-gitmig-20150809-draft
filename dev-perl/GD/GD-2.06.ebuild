@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.06.ebuild,v 1.3 2003/03/25 22:09:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.06.ebuild,v 1.4 2003/03/25 22:11:01 seemant Exp $
 
 inherit eutils perl-module
 CATEGORY="dev-perl"
@@ -30,12 +30,15 @@ src_unpack() {
 	use jpeg \
 		&& jpeg="y" \
 		|| jpeg="n"
-	use freetype \
+
+	use truetype \
 		&& freetype="y" \
 		|| freetype="n"
+
 	use X \
 		&& x="y" \
 		|| x="n"
+
 	cp Makefile.PL{,.orig}
 	sed -e "s:GENTOO_JPEG:${jpeg}:" \
 	 -e "s:GENTOO_FREETYPE:${freetype}:" \
