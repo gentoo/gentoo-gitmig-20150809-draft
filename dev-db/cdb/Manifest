@@ -1,4 +1,4 @@
-MD5 e12a5f4b22dc861bd7cc05280295e806 files/digest-cdb-0.75 186
+MD5 ff891e1b953d2b8664532640065735b0 cdb-0.75.ebuild 948
+MD5 8f9f2563b67dc9d1b14dbb2e8ae0caf7 ChangeLog 1083
 MD5 1a3e347b6ebfe24f60f255100a2af4a0 files/cdb-0.75-errno.diff 243
-MD5 4282264b78fd612280817d090be3b008 cdb-0.75.ebuild 949
-MD5 74dfaf77175ebce9d32a2ae0728ff134 ChangeLog 998
+MD5 e12a5f4b22dc861bd7cc05280295e806 files/digest-cdb-0.75 186
