@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/flexbackup-1.2.1.ebuild,v 1.5 2004/06/24 21:30:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/flexbackup-1.2.1.ebuild,v 1.6 2004/10/15 21:30:42 gmsoft Exp $
 
 DESCRIPTION="Flexible backup script using perl"
 HOMEPAGE="http://flexbackup.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 hppa"
 IUSE=""
 
 RDEPEND="dev-lang/perl
