@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-xmlbeans
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.6 2005/01/10 20:02:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.7 2005/03/16 17:52:20 luckyduck Exp $
+
+  16 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  xml-xmlbeans-20041217.ebuild:
+  xml-xmlbeans now makes use of java-pkg_dosrc
 
   10 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
   xml-xmlbeans-20041217.ebuild:

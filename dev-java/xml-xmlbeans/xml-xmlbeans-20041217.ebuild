@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/xml-xmlbeans-20041217.ebuild,v 1.5 2005/01/10 20:02:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/xml-xmlbeans-20041217.ebuild,v 1.6 2005/03/16 17:52:20 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -33,7 +33,7 @@ src_unpack() {
 	cd ${S}/external/lib
 	rm -f jaxen-1.1-beta-2.jar junit.jar
 
-	java-pkg_jar-from jaxen-1.1 jaxen-1.1-beta-2-dev.jar jaxen-1.1-beta-2.jar
+	java-pkg_jar-from jaxen-1.1 jaxen.jar jaxen-1.1-beta-2.jar
 	if has_version dev-java/ant-tasks; then
 		if use junit; then
 			java-pkg_jar-from junit
@@ -51,9 +51,6 @@ src_compile() {
 			antflags="${antflags} random.jar drt.jar drt"
 		fi
 	fi
-	if use source; then
-		antflags="${antflags} sources"
-	fi
 	ant ${antflags} || die "compile failed"
 }
 
@@ -65,7 +62,6 @@ src_install() {
 		java-pkg_dohtml -r build/docs/*
 	fi
 	if use source; then
-		dodir /usr/share/doc/${PF}/source
-		cp build/ar/xbeansrc.zip ${D}/usr/share/doc/${PF}/source
+		java-pkg_dosrc src/*
 	fi
 }
