@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-2.0.ebuild,v 1.5 2002/10/24 23:23:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-2.0.ebuild,v 1.6 2002/11/29 23:59:37 vapier Exp $
 
 IUSE="cups opengl"
 
@@ -13,7 +13,6 @@ IUSE="cups opengl"
 #
 # You can find more branches on 
 # http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/winex/wine/
-
 
 ECVS_SERVER="cvs.winex.sourceforge.net:/cvsroot/winex"
 ECVS_MODULE="wine"
@@ -85,7 +84,7 @@ src_install () {
 
 	# Creates /usr/lib/winex-cvs/.data with fake_windows in it
 	# This is needed for our new winex-cvs wrapper script
-	mkdir ${D}/usr/lib/winex-cvs/.data
+	dodir /usr/lib/winex-cvs/.data
 	pushd ${D}/usr/lib/winex-cvs/.data
 	tar jxvf ${FILESDIR}/${PN}-fake_windows.tar.bz2 
 	popd
@@ -95,7 +94,7 @@ src_install () {
 	cp ${S}/documentation/samples/config ${D}/usr/lib/winex-cvs/.data/config
 	cp ${WORKDIR}/wine/winedefault.reg ${D}/usr/lib/winex-cvs/.data/winedefault.reg
 	# Install the wrapper script
-	mkdir ${D}/usr/bin
+	dodir /usr/bin
 	cp ${FILESDIR}/${PN}-winex ${D}/usr/bin/winex-cvs
 	cp ${FILESDIR}/${PN}-regedit ${D}/usr/bin/regedit-winex-cvs
 
