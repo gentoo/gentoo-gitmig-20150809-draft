@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/mp32ogg-0.11.ebuild,v 1.1 2003/05/12 19:45:57 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/mp32ogg-0.11.ebuild,v 1.2 2003/07/12 20:30:54 aliz Exp $
 
 
 DESCRIPTION="A perl script to convert MP3 files to Ogg Vorbis files."
@@ -13,7 +13,7 @@ LICENSE="Artistic"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="dev-perl/MP3-Info
 	dev-perl/String-ShellQuote"

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/ChangeLog,v 1.4 2003/02/12 07:32:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/ChangeLog,v 1.5 2003/07/12 20:30:55 aliz Exp $
+
+*pd-0.35.0-r1 (13 Feb 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *pd-0.30.0-r1 (25 Sep 2002)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-1.4.0.ebuild,v 1.1 2003/05/08 09:36:42 jje Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-1.4.0.ebuild,v 1.2 2003/07/12 20:31:03 aliz Exp $ 
 
 MY_P=ZynAddSubFX-${PV}
 DESCRIPTION="ZynAddSubFX is a opensource software synthesizer."
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/zynaddsubfx/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.28.ebuild,v 1.1 2003/06/02 22:04:45 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.28.ebuild,v 1.2 2003/07/12 20:30:50 aliz Exp $
 
 IUSE="nls oggvorbis"
 
@@ -18,7 +18,7 @@ DEPEND=">=sys-apps/sed-4.0.5"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
 src_compile() {
 	local myconf

@@ -1,8 +1,8 @@
 # ChangeLog for media-sound/cdtool
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/ChangeLog,v 1.1 2003/04/22 20:51:40 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/ChangeLog,v 1.2 2003/07/12 20:30:47 aliz Exp $
 
-*cdtool-2.1.5 (22 04 2003)
+*cdtool-2.1.5 (22 Apr 2003)
 
   22 04 2003; Jens Hoffrichter <joho@hausboot.org> :
   Initial import.  Ebuild submitted by Jens Hoffrichter <joho@hausboot.org>.

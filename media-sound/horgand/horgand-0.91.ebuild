@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-0.91.ebuild,v 1.1 2003/06/06 22:37:42 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-0.91.ebuild,v 1.2 2003/07/12 20:30:52 aliz Exp $
 
 DESCRIPTION="horgand is an opensource software organ."
 HOMEPAGE="http://personal.telefonica.terra.es/web/soudfontcombi/"
@@ -8,7 +8,7 @@ SRC_URI="http://personal.telefonica.terra.es/web/soudfontcombi/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 

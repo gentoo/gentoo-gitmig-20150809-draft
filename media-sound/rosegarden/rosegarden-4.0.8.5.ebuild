@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.8.5.ebuild,v 1.2 2003/03/27 05:28:19 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.8.5.ebuild,v 1.3 2003/07/12 20:30:57 aliz Exp $
 
 
 DESCRIPTION="MIDI and audio sequencer and notation editor."
@@ -9,7 +9,7 @@ SRC_URI="http://belnet.dl.sourceforge.net/sourceforge/rosegarden/rosegarden-4-0.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 # NOTE: This package may be compiled with aRt instead of alsa, and with no jack or ladspa support,
 # but I don't know how to say that with the IUSE variable.

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.1.ebuild,v 1.1 2003/05/24 09:26:43 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.1.ebuild,v 1.2 2003/07/12 20:30:52 aliz Exp $
 
 DESCRIPTION="IIWU Synth is a software real-time synthesizer based on the
 Soundfont 2 specifications."
@@ -9,7 +9,7 @@ SRC_URI="http://savannah.nongnu.org/download/fluid/stable.pkg/1.0.1/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE="alsa ladcca"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/splay-0.9.5.2.ebuild,v 1.2 2003/02/13 13:19:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/splay-0.9.5.2.ebuild,v 1.3 2003/07/12 20:30:59 aliz Exp $
 
 DESCRIPTION="splay is an audio player, primarily for the console"
 HOMEPAGE="http://splay.sourceforge.net/"
@@ -9,7 +9,7 @@ HOMEPAGE="http://splay.sourceforge.net/"
 SRC_URI="http://splay.sourceforge.net/tgz/splay-0.9.5.2.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="virtual/glibc"

@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/umix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umix/ChangeLog,v 1.7 2003/03/28 14:28:47 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umix/ChangeLog,v 1.8 2003/07/12 20:31:00 aliz Exp $
 
   28 Mar 2003; Patrick Kursawe <phosphan@gentoo.org> umix-1.0.ebuild :
   marked as stable
@@ -10,6 +10,11 @@
   17 Mar 2003; Patrick Kursawe <phosphan@gentoo.org> umix-1.0.ebuild
   files/digest-umix-1.0 :
   New version
+
+*umix-0.9.1-r1 (13 Feb 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *umix-1.83.5-r1.ebuild (16 Aug 2002)
 

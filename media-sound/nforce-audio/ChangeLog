@@ -1,8 +1,8 @@
 # ChangeLog for media-sound/nforce-audio
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/ChangeLog,v 1.2 2003/06/12 05:06:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nforce-audio/ChangeLog,v 1.3 2003/07/12 20:30:55 aliz Exp $
 
-*nforce-audio-1.0.261 (11 Jun 2003)
+*nforce-audio-1.0.0261 (11 Jun 2003)
 
   11 Jun 2003; Daniel Robbins <drobbins@gentoo.org>: updated build that now
   disables SPDIF digital audio output by default, but tells the user how to
@@ -10,6 +10,6 @@
   sound chip will only play back at 48KHz, causing several audio players to
   play back CD audio at the wrong speed.
 
-*nforce-audio-1.0.256 (07 May 2003)
+*nforce-audio-1.0.0256 (07 May 2003)
 
   07 May 2003; Dean Bailey <alron@gentoo.org> :initial ebuild.

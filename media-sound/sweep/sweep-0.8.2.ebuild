@@ -1,6 +1,6 @@
 # Copyright 2002 Paul Thompson
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.2.ebuild,v 1.1 2003/05/09 16:23:38 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.2.ebuild,v 1.2 2003/07/12 20:31:00 aliz Exp $
 
 IUSE="oggvorbis alsa nls"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.metadecks.org/software/sweep/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~mips ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~hppa ~mips ~alpha"
 
 DEPEND=">=media-libs/libsndfile-1.0*
 		>=x11-libs/gtk+-1.2*

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.4.0.ebuild,v 1.1 2003/05/18 13:16:12 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.4.0.ebuild,v 1.2 2003/07/12 20:30:47 aliz Exp $
 
 DESCRIPTION="Common Music: An object oriented music composition environment in LISP/scheme"
 HOMEPAGE="http://www-ccrma.stanford.edu/software/cm/doc/cm.html"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp-ccrma.stanford.edu/pub/Lisp/cm/sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=guile-1.6.4"
 RDEPEND="${DEPEND}"

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.53 2003/07/04 06:53:34 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.54 2003/07/12 20:31:01 aliz Exp $
+
+*xmms-1.2.7-r22 (27 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
   04 Jul 2003; jje <jje@gentoo.org> xmms-1.2.7-r20.ebuild:
   Make the russian and japanese patches exclusive.

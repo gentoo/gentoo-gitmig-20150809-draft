@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sulu/sulu-0.15.ebuild,v 1.3 2003/03/02 08:23:19 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sulu/sulu-0.15.ebuild,v 1.4 2003/07/12 20:30:59 aliz Exp $
 
 DESCRIPTION="Samsung Uproar Linux Utility (sulu)"
 HOMEPAGE="http://www.cs.toronto.edu/~kal/sulu/index.html"
 SRC_URI="http://www.cs.toronto.edu/~kal/sulu/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND=">=dev-libs/libusb-0.1.7
 		>=media-sound/lame-3.93.1

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.1.ebuild,v 1.1 2003/03/06 13:13:45 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.1.ebuild,v 1.2 2003/07/12 20:30:52 aliz Exp $
 
 DESCRIPTION="JACK Rack is an effects "rack" for the JACK low latency audio API."
 HOMEPAGE="http://pkl.net/~node/jack-rack.html"
@@ -8,7 +8,7 @@ SRC_URI="http://pkl.net/~node/software/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE="gnome"
 

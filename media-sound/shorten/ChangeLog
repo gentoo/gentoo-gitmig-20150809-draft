@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/shorten
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shorten/ChangeLog,v 1.4 2003/02/12 07:33:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shorten/ChangeLog,v 1.5 2003/07/12 20:30:58 aliz Exp $
+
+*shorten-3.5.1 (12 Apr 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *shorten-3.5.0 (05 Feb 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.2.1.ebuild,v 1.1 2003/05/12 19:35:30 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.2.1.ebuild,v 1.2 2003/07/12 20:30:52 aliz Exp $
 
 IUSE="gtk2 oss sdl"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.mtek.chalmers.se/~hjormagn/mhwaveedit.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="gtk2? ( >=x11-libs/gtk+-2.0.0 )
 	!gtk2? ( =x11-libs/gtk+-1.2* )

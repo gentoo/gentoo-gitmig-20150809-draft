@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/gnomeradio-1.4.ebuild,v 1.1 2003/02/15 16:11:53 foser Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/gnomeradio-1.4.ebuild,v 1.2 2003/07/12 20:30:52 aliz Exp $ 
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://mfcn.ilo.de/gnomeradio/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=gnome-base/libgnomeui-2
 	>=gnome-base/gconf-1.2"

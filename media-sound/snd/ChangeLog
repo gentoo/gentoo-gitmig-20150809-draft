@@ -1,6 +1,6 @@
-# ChangeLog for media-sound/snd-6
+# ChangeLog for media-sound/snd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.6 2003/06/20 23:48:31 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.7 2003/07/12 20:30:58 aliz Exp $
 
   21 Jun 2003; jje <jje@gentoo.org> snd-6.7.ebuild, snd-6.ebuild:
   Remove snd-6 and move snd-6.7 to stable.

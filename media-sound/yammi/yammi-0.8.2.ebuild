@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.2 2003/06/12 21:12:16 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.3 2003/07/12 20:31:01 aliz Exp $
 
 IUSE="cdr xmms oggvorbis kde"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://yammi.sf.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=x11-libs/qt-3.1.0-r1
 	>=media-libs/id3lib-3.8.2

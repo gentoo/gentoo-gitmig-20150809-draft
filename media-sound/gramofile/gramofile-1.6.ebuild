@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/gramofile-1.6.ebuild,v 1.4 2003/03/22 07:54:28 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/gramofile-1.6.ebuild,v 1.5 2003/07/12 20:30:52 aliz Exp $
 
 DESCRIPTION="Gramofile"
 HOMEPAGE="http://panic.et.tudelft.nl/~costar/gramofile/"
@@ -11,7 +11,7 @@ SRC_URI="http://panic.et.tudelft.nl/~costar/gramofile/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses \
