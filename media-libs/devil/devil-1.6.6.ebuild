@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.6.ebuild,v 1.3 2004/02/21 23:51:56 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.6.ebuild,v 1.4 2004/04/03 23:45:56 spyderous Exp $
 
 inherit libtool
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc ~sparc amd64"
 IUSE="X gif png sdl jpeg tiff opengl"
 
-RDEPEND="X? ( x11-base/xfree )
+RDEPEND="X? ( virtual/x11 )
 	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )
 	sdl? ( media-libs/libsdl )

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvideogfx
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvideogfx/ChangeLog,v 1.2 2003/07/12 18:06:00 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvideogfx/ChangeLog,v 1.3 2004/04/03 23:46:57 spyderous Exp $
+
+  03 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  libvideogfx-1.0.3.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
 *libvideogfx-1.0.3 (27 Jun 2003)
  
