@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.9.7.ebuild,v 1.2 2004/04/28 22:29:55 stuart Exp $
 
 DESCRIPTION="Clearsilver is a fast, powerful, and language-neutral HTML template system."
 HOMEPAGE="http://www.clearsilver.net/"

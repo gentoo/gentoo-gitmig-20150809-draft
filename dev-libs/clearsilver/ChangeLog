@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/clearsilver
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.1 2004/04/25 19:51:43 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.2 2004/04/28 22:29:55 stuart Exp $
+
+  28 Apr 2004; Stuart Herbert <stuart@gentoo.org> clearsilver-0.9.7.ebuild:
+  Fixed the header
 
 *clearsilver-0.9.7 (25 Apr 2004)
 
