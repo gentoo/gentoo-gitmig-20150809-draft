@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/pyrex-0.9.3-r1.ebuild,v 1.2 2005/02/26 13:28:25 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/pyrex-0.9.3-r1.ebuild,v 1.3 2005/04/01 05:07:39 agriffis Exp $
 
 inherit distutils eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.cosc.canterbury.ac.nz/~greg/python/Pyrex/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~mips ~ppc ~sparc x86 ~ppc64"
+KEYWORDS="~amd64 ia64 ~mips ~ppc ~sparc x86 ~ppc64"
 IUSE=""
 
 DEPEND="virtual/python"
