@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jess/jess-6.1.7.ebuild,v 1.2 2004/06/02 22:28:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jess/jess-6.1.7.ebuild,v 1.3 2004/06/03 16:03:39 dholm Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ MY_PN="Jess61p7"
 
 LICENSE="jess"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 RESTRICT="fetch"
 IUSE="doc"
 DEPEND=">=virtual/jre-1.2"

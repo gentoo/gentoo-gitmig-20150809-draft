@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gnu-crypto
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/ChangeLog,v 1.1 2004/04/01 00:03:58 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/ChangeLog,v 1.2 2004/06/03 16:05:08 dholm Exp $
+
+  03 Jun 2004; David Holm <dholm@gentoo.org> gnu-crypto-2.0.1.ebuild:
+  Added to ~ppc.
 
 *gnu-crypto-2.0.1 (01 Apr 2004)
 
