@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.2.6.ebuild,v 1.3 2004/07/17 13:33:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.2.6.ebuild,v 1.4 2004/10/27 08:12:07 phosphan Exp $
 
-inherit eutils
+inherit eutils check-kernel
 
 DESCRIPTION="Klaus Schmidingers Video Disk Recorder"
 HOMEPAGE="http://www.cadsoft.de/people/kls/vdr"
@@ -13,10 +13,18 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="lirc"
 
-DEPEND="media-tv/linuxtv-dvb
-	sys-libs/ncurses
+# media-tv/linuxtv-dvb removed since dvb support is included in 2.6 kernels 		
+DEPEND="sys-libs/ncurses
 	lirc? ( app-misc/lirc )
 	media-libs/jpeg"
+
+pkg_setup() {
+	if is_kernel_2_4; then
+		if ! has_version media-tv/linuxtv-dvb; then
+			eerror "For 2.4 kernels, media-tv/linuxtv-dvb is required"
+		fi
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

@@ -35,3 +35,27 @@
              fi
  
  # Source documentation:
+diff -ru ./config.h ../vdr-1.2.6-new/config.h
+--- ./config.h	2003-11-14 14:29:13.000000000 +0100
++++ ../vdr-1.2.6-new/config.h	2004-10-27 08:48:41.652515906 +0200
+@@ -137,7 +137,7 @@
+   bool Save(void)
+   {
+     bool result = true;
+-    T *l = (T *)First();
++    T *l = (T *)cList<T>::First();
+     cSafeFile f(fileName);
+     if (f.Open()) {
+        while (l) {
+diff -ru ./plugin.c ../vdr-1.2.6-new/plugin.c
+--- ./plugin.c	2003-08-30 16:52:58.000000000 +0200
++++ ../vdr-1.2.6-new/plugin.c	2004-10-27 08:54:26.068755758 +0200
+@@ -162,7 +162,7 @@
+   const char *error = dlerror();
+   if (!error) {
+      void *(*creator)(void);
+-     (void *)creator = dlsym(handle, "VDRPluginCreator");
++     creator = (void *(*)())dlsym(handle, "VDRPluginCreator");
+      if (!(error = dlerror()))
+         plugin = (cPlugin *)creator();
+      }
