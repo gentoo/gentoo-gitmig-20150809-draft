@@ -1,0 +1,14 @@
+# ChangeLog for app-misc/digitemp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/ChangeLog,v 1.1 2003/09/15 14:06:56 seemant Exp $
+
+*digitemp-3.2.0 (15 Sep 2003)
+
+  15 Sep 2003; Seemant Kulleen <seemant@gentoo.org> digitemp-3.2.0.ebuild:
+  New ebuild for digitemp, a program that uses Dallas Semiconductor
+  ibuttons (http://www.ibutton.com/) to log temperatures. It supports
+  networks of sensors, and can produce neat MRTG-like logs.  Ebuild
+  submitted by: mike wakerly <mikew@wakerly.com> in bug #26516.  Please
+  note, that Mike will be maintaining this package indirectly, so he needs
+  to be cc'd on any and all incoming bug reports
+
