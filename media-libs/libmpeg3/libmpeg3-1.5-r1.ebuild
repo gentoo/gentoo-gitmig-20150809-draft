@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5-r1.ebuild,v 1.17 2003/07/26 22:33:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5-r1.ebuild,v 1.18 2003/08/20 16:40:45 tester Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://heroinewarrior.com/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 
 RDEPEND="sys-libs/zlib 
 	media-libs/jpeg"
@@ -23,6 +23,7 @@ filter-flags -fPIC
 filter-flags -fno-common
 [ $ARCH = alpha ] && append-flags -fPIC
 [ $ARCH = hppa ] && append-flags -fPIC
+[ $ARCH = amd64 ] && append-flags -fPIC
 
 src_unpack() {
 	unpack ${A}
