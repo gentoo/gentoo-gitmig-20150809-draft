@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.8 2004/09/04 16:38:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.9 2004/09/07 14:50:30 usata Exp $
+
+  07 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> qemacs-0.3.1.ebuild,
+  +files/qemacs-0.3.1-tty_utf8.patch:
+  Added utf8 patch. Closing bug #62829.
 
   04 Sep 2004; David Holm <dholm@gentoo.org> qemacs-0.3.1.ebuild:
   Added to ~ppc.
