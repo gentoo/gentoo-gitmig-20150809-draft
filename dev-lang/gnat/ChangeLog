@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gnat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.12 2003/09/29 17:07:54 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.13 2003/09/29 22:47:13 dholm Exp $
+
+  30 Sep 2003; David Holm <dholm@gentoo.org> gnat-3.15p-r3.ebuild:
+  Compile gnat with "-O2 -gnatpgn" and without "-fPIC" (for static libs) as
+  suggested by Maxim Reznik <max1@mbank.com.ua>. Validated with acats4gnat 0.7.
 
   29 Sep 2003; David Holm <dholm@gentoo.org> gnat-3.15p-r3.ebuild:
   Fixed a minor build problem on x86.

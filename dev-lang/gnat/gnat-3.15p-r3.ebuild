@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r3.ebuild,v 1.2 2003/09/29 17:07:54 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r3.ebuild,v 1.3 2003/09/29 22:47:13 dholm Exp $
 
 DESCRIPTION="The GNU Ada Toolkit"
 DEPEND="x86? ( >=app-shells/tcsh-6.0 )"
@@ -76,13 +76,13 @@ src_compile() {
 
 	# Compile it by first using the bootstrap compiler and then bootstrapping
 	# our own version. Finally compile the libraries and tools.
-	make CC="gcc" CFLAGS="-O0" LANGUAGES="c ada gcov" || \
+	make CC="gcc" CFLAGS="-O2 -gnatpgn" LANGUAGES="c ada gcov" || \
 		die "Failed while running inital compilation!"
-	make CC="gcc" CFLAGS="-O0" LANGUAGES="c ada gcov" bootstrap || \
+	make CC="gcc" CFLAGS="-O2 -gnatpgn" LANGUAGES="c ada gcov" bootstrap || \
 		die "Died while bootstrapping!"
-	make CC="gcc" CFLAGS="-O0" GNATLIBCFLAGS="-O0" gnatlib-shared || \
-		die "Failed to build the shared version of gnatlib!"
-	make CC="gcc" CFLAGS="-O0" gnattools || \
+	make CC="gcc" CFLAGS="-O2 -gnatpgn" GNATLIBCFLAGS="-O2 -gnatpgn -fPIC" \
+		gnatlib-shared || die "Failed to build the shared version of gnatlib!"
+	make CC="gcc" CFLAGS="-O2 -gnatpgn" gnattools || \
 		die "Failed to build gnattools!"
 }
 
@@ -100,7 +100,7 @@ src_install() {
 	touch "${D}/usr/lib/ada/gcc-lib/${CHOST}/2.8.1/include/float.h"
 
 	# Build and install the static version of gnatlib
-	make CC="gcc" CFLAGS="-O0" GNATLIBCFLAGS="-O0 -fPIC" gnatlib ||
+	make CC="gcc" CFLAGS="-O2 -gnatpgn" GNATLIBCFLAGS="-O2 -gnatpgn" gnatlib ||
 		die "Failed while compiling static gnatlib!"
 	make prefix="${D}/usr" libdir="${D}/usr/lib/ada" \
 		LANGUAGES="c ada gcov" GCC_INSTALL_NAME=gnatgcc install-gnatlib ||
