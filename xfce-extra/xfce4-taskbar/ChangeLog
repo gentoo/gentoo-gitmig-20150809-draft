@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-taskbar
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-taskbar/ChangeLog,v 1.1 2004/09/20 17:06:02 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-taskbar/ChangeLog,v 1.2 2004/10/25 02:57:12 bcowan Exp $
+
+*xfce4-taskbar-0.2.2 (24 Oct 2004)
+
+  24 Oct 2004; Brad Cowan <bcowan@gentoo.org> +xfce4-taskbar-0.2.2.ebuild:
+  Version bump.
 
 *xfce4-taskbar-0.1.0 (20 Sep 2004)
 
