@@ -1,10 +1,14 @@
-MD5 125b6d63f98e067fcb0187d3c326ef1f ChangeLog 1521
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 8db6fe883468023bd543449e7c15f776 weechat-0.0.2.ebuild 580
-MD5 a8cba4fa8204edd65f8b0bf6f67ba49a weechat-0.0.3-r1.ebuild 772
-MD5 12542e58254cd237126f03e76803fe84 weechat-0.0.3.ebuild 661
-MD5 0f739c2e2a9ecb2dcd0f76e4257a5eef weechat-0.0.6.ebuild 1229
-MD5 26ab708340fd29aff65a984428e2cbf3 files/digest-weechat-0.0.2 65
-MD5 ca3fc1c304be62673a329a91d4617805 files/digest-weechat-0.0.3 66
-MD5 ca3fc1c304be62673a329a91d4617805 files/digest-weechat-0.0.3-r1 66
+MD5 8ce22c2a181b1cce19ea65e0e9256a13 ChangeLog 1718
+MD5 416de055518035b19d11982399eb10f6 weechat-0.0.6.ebuild 1233
 MD5 ea0eac7be9fdc8ff8cb7efe77e38eb46 files/digest-weechat-0.0.6 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+UCKAXomK8S72HoRArJfAJ9EgQK4/Z4Ocz1X3i2SUFpM/ypZ8gCcD9ao
+eKp9lnN+inkcYkCelW35eAk=
+=X3lO
+-----END PGP SIGNATURE-----
