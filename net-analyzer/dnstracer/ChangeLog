@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/dnstracer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dnstracer/ChangeLog,v 1.10 2004/07/08 22:49:14 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dnstracer/ChangeLog,v 1.11 2004/07/08 23:36:10 eldad Exp $
+
+*dnstracer-1.8 (09 Jul 2004)
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> +dnstracer-1.8.ebuild:
+  Version bump. Closes #56475. Thanks to Daniel Webert <daniel_webert@web.de>.
 
   09 Jul 2004; Eldad Zack <eldad@gentoo.org> dnstracer-1.6.ebuild,
   dnstracer-1.7.ebuild:
