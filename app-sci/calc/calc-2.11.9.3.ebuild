@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/calc/calc-2.11.9.3.ebuild,v 1.1 2004/03/11 12:49:42 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/calc/calc-2.11.9.3.ebuild,v 1.2 2004/03/13 23:47:19 dholm Exp $
 
 DESCRIPTION="An arbitrary precision C-like arithmetic system"
 HOMEPAGE="http://www.isthe.com/chongo/tech/comp/calc/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
