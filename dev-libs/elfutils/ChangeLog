@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/elfutils
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.40 2004/11/25 10:48:37 dragonheart Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.41 2005/02/09 19:54:10 vapier Exp $
+
+*elfutils-0.97 (09 Feb 2005)
+
+  09 Feb 2005; Mike Frysinger <vapier@gentoo.org> +elfutils-0.97.ebuild:
+  Version bump.
 
   25 Nov 2004; Daniel Black <dragonheart@gentoo.org> elfutils-0.94-r1.ebuild:
   fixed test routine as per bug #72347. Thanks to Sébastien DIAZ
