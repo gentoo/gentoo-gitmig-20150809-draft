@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/amap
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.1 2003/08/03 22:01:50 iggy Exp $
+
+*amap-2.7 (03 Aug 2003)
+
+  03 Aug 2003; <iggy@gentoo.org> amap-2.7.ebuild, metadata.xml:
+  new package fixes bugs 23088, 24452, thanks to Antonio Dolcetta
+  <zagarna@yahoo.com> and Lina Pezzella <Lina.Pezzella@huskymail.uconn.edu>
+
