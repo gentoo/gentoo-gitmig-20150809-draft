@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 2802e057e09dd0be581a7310b547d03f ChangeLog 991
 MD5 5a0f741917cbfc8c37b0deaf3be3ccb6 metadata.xml 679
-MD5 6f51352f3e61f54240730d6dfa15b874 libvncserver-0.7.ebuild 1238
+MD5 add0a3ae6abcc02d2ec68c8ae584d359 libvncserver-0.7.ebuild 1204
 MD5 fddfd497cf7b221c2b3256417d745a7d files/digest-libvncserver-0.7 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB0yYhroRuSHgZdywRAtEOAJ91mNUX/3OhmiRmeKhWcqgACSFPQQCeOsaU
-1/GoowR5mXMQDTk421YoiY4=
-=Yz8d
+iD8DBQFB1F+kroRuSHgZdywRArqoAJ9tj4NUgIA41hHaiD82UKtDKRKhXgCghT+e
+E87iNTbMHWZNQwFmaaxQ4DQ=
+=zowp
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.7.ebuild,v 1.1 2004/12/29 20:01:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.7.ebuild,v 1.2 2004/12/30 20:05:46 vapier Exp $
 
 inherit eutils
 
@@ -23,7 +23,6 @@ src_unpack() {
 	unpack LibVNCServer-${PV}.tar.gz
 	cd ${S}
 	sed -i \
-		-e "/^CFLAGS/s:-g:${CFLAGS}:" \
 		-e '/^SUBDIRS/s:x11vnc::' \
 		Makefile.in || die "sed foo"
 }
