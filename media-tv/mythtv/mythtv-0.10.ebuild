@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.10.ebuild,v 1.1 2003/07/09 00:05:43 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.10.ebuild,v 1.2 2003/07/14 08:56:52 raker Exp $
 
 inherit flag-o-matic
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86"
 
 DEPEND=">=x11-libs/qt-3
 	media-libs/a52dec
-	>=media-tv/xmltv-0.5.14
+	=media-tv/xmltv-0.5.14*
 	media-sound/lame
 	>=media-libs/freetype-2.0
 	>=sys-apps/sed-4
