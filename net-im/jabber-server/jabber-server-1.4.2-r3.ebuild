@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r3.ebuild,v 1.1 2003/05/11 16:18:35 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r3.ebuild,v 1.2 2003/08/12 00:58:00 luke-jr Exp $
 
 S="${WORKDIR}/jabber-${PV}"
 DESCRIPTION="Open Source Jabber Server & JUD,MUC,AIM,MSN,ICQ and Yahoo transports"
@@ -23,9 +23,13 @@ IUSE="ssl ldap"
 IUSE="${IUSE} j-nomsn j-noaim j-noyahoo j-nomuconf j-nojud"
 
 DEPEND="=dev-libs/pth-1.4.0
-	!j-noyahoo? ( =dev-libs/glib-1.2* )
+	!j-noyahoo? ( =dev-libs/glib-1.2* !=sys-libs/glibc-2.3.1 )
 	ssl? ( >=dev-libs/openssl-0.9.6i )
-	ldap? ( =net-nds/openldap-2* )"
+	ldap? ( =net-nds/openldap-2* )
+	!j-nomsn? ( !=sys-libs/glibc-2.3.1 )
+	!j-noaim? ( !=sys-libs/glibc-2.3.1 )
+	!j-nomuconf ? ( !=sys-libs/glibc-2.3.1 )
+	!j-nojud ? ( !=sys-libs/glibc-2.3.1 )"
 
 src_unpack() {
 	unpack jabber-${PV}.tar.gz
