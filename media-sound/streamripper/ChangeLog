@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/streamripper
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/ChangeLog,v 1.15 2004/10/20 05:41:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/ChangeLog,v 1.16 2004/11/01 19:51:16 corsair Exp $
+
+*streamripper-1.60.10 (01 Nov 2004)
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  streamripper-1.60.10.ebuild:
+  Marked ~ppc64; bug #64637
 
   19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> :
   Removed old versions.  Readded ~sparc and ~ppc which were mistakenly removed.
