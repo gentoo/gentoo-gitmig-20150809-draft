@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.29 2004/05/30 10:46:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.30 2004/06/04 08:31:14 dragonheart Exp $
+
+  04 Jun 2004; Daniel Black <dragonheart@gentoo.org> gpgme-0.4.0.ebuild,
+  gpgme-0.4.7.ebuild:
+  Dependancy dev-libs/libgcrypt added to fix bug #52127. Thanks to Wim
+  Uyttebroek <wim.uyttebroek@st.cs.kuleuven.ac.be>
 
 *gpgme-0.4.7 (30 May 2004)
 
