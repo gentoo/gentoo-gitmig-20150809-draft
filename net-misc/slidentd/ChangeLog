@@ -1,0 +1,16 @@
+# ChangeLog for net-misc/slidentd
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47 gbevin Exp
+
+*slidentd-0.0.15 (05 Apr 2002)
+
+  25 Apr 2002; Thilo Bangert <thilo.bangert@gmx.net> slidentd-0.0.15 :
+
+  fixed ucspi-tcp depandency
+
+
+*slidentd-0.0.15 (25 Mar 2002)
+
+  25 Mar 2002; Thilo Bangert <thilo.bangert@gmx.net> ChangeLog :
+
+  initial release ;-)
