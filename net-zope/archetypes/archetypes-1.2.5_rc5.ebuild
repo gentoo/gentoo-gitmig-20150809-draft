@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/archetypes/archetypes-1.2.5_rc5.ebuild,v 1.2 2004/09/12 22:09:46 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/archetypes/archetypes-1.2.5_rc5.ebuild,v 1.3 2004/09/24 20:52:24 batlogg Exp $
 
 inherit zproduct
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.sourceforge.net/projects/${PN}"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 S=${WORKDIR}/${MY_P}
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 SLOT="1.2"
 

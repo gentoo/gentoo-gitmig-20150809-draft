@@ -1,9 +1,9 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.45 2004/09/24 20:34:49 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.46 2004/09/24 20:59:27 batlogg Exp $
 
   24 Sep 2004; Jodok Batlogg <batlogg@gentoo.org>; zope-2.7.2-r2.ebuild:
-  marked stable
+  marked as stable on x86 and ppc
 
   20 Sep 2004; Jodok Batlogg <batlogg@gentoo.org>; zope-2.7.2-r2.ebuild:
   missing /
