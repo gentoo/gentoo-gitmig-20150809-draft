@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.42 2004/10/26 14:40:11 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.43 2004/10/26 15:14:22 brix Exp $
+
+  26 Oct 2004; Henrik Brix Andersen <brix@gentoo.org> -kismet-2.6.2-r1.ebuild,
+  -kismet-2.8.0.ebuild, -kismet-2.8.0a.ebuild, -kismet-2.8.0b-r1.ebuild,
+  -kismet-2.8.1.ebuild, -kismet-2004.02.01.ebuild, -kismet-3.0.1.ebuild:
+  Removed old versions.
 
   26 Oct 2004; Henrik Brix Andersen <brix@gentoo.org>
   +files/kismet-2004.10.1-conf.d, +files/kismet-2004.10.1-init.d,
