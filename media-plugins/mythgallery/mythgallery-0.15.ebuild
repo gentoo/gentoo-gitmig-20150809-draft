@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/mythgallery-0.15.ebuild,v 1.2 2004/06/24 23:33:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/mythgallery-0.15.ebuild,v 1.3 2004/07/15 22:21:44 aliz Exp $
 
 inherit flag-o-matic
 
@@ -15,6 +15,7 @@ IUSE="opengl"
 
 DEPEND=">=sys-apps/sed-4
 	opengl? ( virtual/opengl )
+	media-libs/tiff
 	|| ( >=media-tv/mythtv-${PV}* >=media-tv/mythfrontend-${PV}* )"
 
 src_unpack() {
