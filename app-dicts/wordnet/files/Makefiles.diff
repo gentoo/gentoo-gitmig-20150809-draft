@@ -1,0 +1,65 @@
+diff -r -u WordNet-2.0/Makefile /var/tmp/portage/wordnet-2.0-r1/work/WordNet-2.0/Makefile
+--- WordNet-2.0/Makefile	2003-06-16 09:09:25.000000000 -0700
++++ /var/tmp/portage/wordnet-2.0-r1/work/WordNet-2.0/Makefile	2003-12-04 21:46:36.000000000 -0800
+@@ -118,10 +118,10 @@
+ CC = gcc
+ 
+ # Use this for Solaris
+-LOCAL_LDFLAGS = -R/usr/openwin/lib:/usr/lib:/usr/local/lib
++#LOCAL_LDFLAGS = -R/usr/openwin/lib:/usr/lib:/usr/local/lib
+ 
+ # Use this for Irix and Linux
+-#LOCAL_LDFLAGS = 
++LOCAL_LDFLAGS = -L/usr/X11R6/lib 
+ 
+ # "UNIX" must be defined for things to compile...
+ 
+@@ -178,7 +178,7 @@
+ 
+ # Libraries needed for Linux
+ 
+-#WNB_LIBS = -ltk -ltcl -lX11 -lm -lnsl -ldl -lpthread
++WNB_LIBS = -ltk -ltcl -lX11 -lm -lnsl -ldl -lpthread
+ 
+ ###### Finally, the "make" targets ######
+ 
+diff -r -u WordNet-2.0/include/wnconsts.h /var/tmp/portage/wordnet-2.0-r1/work/WordNet-2.0/include/wnconsts.h
+--- WordNet-2.0/include/wnconsts.h	2003-06-16 08:49:43.000000000 -0700
++++ /var/tmp/portage/wordnet-2.0-r1/work/WordNet-2.0/include/wnconsts.h	2003-12-04 21:45:47.000000000 -0800
+@@ -16,8 +16,8 @@
+ 
+ #ifdef UNIX
+ #define DICTDIR         "/dict"
+-#define DEFAULTPATH	"/usr/local/WordNet-2.0/dict"
+-#define DEFAULTBIN      "/usr/local/WordNet-2.0/bin"
++#define DEFAULTPATH	"/usr/share/wordnet/dict"
++#define DEFAULTBIN      "/usr/bin"
+ #define DATAFILE	"%s/data.%s"
+ #define INDEXFILE	"%s/index.%s"
+ #define SENSEIDXFILE	"%s/index.sense"
+diff -r -u WordNet-2.0/src/include/wnconsts.h /var/tmp/portage/wordnet-2.0-r1/work/WordNet-2.0/src/include/wnconsts.h
+--- WordNet-2.0/src/include/wnconsts.h	2003-06-16 08:49:43.000000000 -0700
++++ /var/tmp/portage/wordnet-2.0-r1/work/WordNet-2.0/src/include/wnconsts.h	2003-12-04 21:45:47.000000000 -0800
+@@ -16,8 +16,8 @@
+ 
+ #ifdef UNIX
+ #define DICTDIR         "/dict"
+-#define DEFAULTPATH	"/usr/local/WordNet-2.0/dict"
+-#define DEFAULTBIN      "/usr/local/WordNet-2.0/bin"
++#define DEFAULTPATH	"/usr/share/wordnet/dict"
++#define DEFAULTBIN      "/usr/bin"
+ #define DATAFILE	"%s/data.%s"
+ #define INDEXFILE	"%s/index.%s"
+ #define SENSEIDXFILE	"%s/index.sense"
+diff -r -u WordNet-2.0/src/wnb/wnb /var/tmp/portage/wordnet-2.0-r1/work/WordNet-2.0/src/wnb/wnb
+--- WordNet-2.0/src/wnb/wnb	2003-08-01 07:20:42.000000000 -0700
++++ /var/tmp/portage/wordnet-2.0-r1/work/WordNet-2.0/src/wnb/wnb	2003-12-04 21:45:47.000000000 -0800
+@@ -97,7 +97,7 @@
+ set labonly 0
+ if {$tcl_platform(platform) == "unix"} {
+    if {[lsearch -exact [array names env] WNHOME] == -1} {
+-	set resourcedir "/usr/local/WordNet-2.0/lib/wnres"
++	set resourcedir "/usr/lib/wnres"
+    } else {
+ 	set resourcedir "$env(WNHOME)/lib/wnres"
+    }
