@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-1.5.ebuild,v 1.1 2003/09/29 19:50:15 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-1.5.ebuild,v 1.2 2003/09/30 03:37:40 tseng Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ObConf is a tool for configuring the Openbox window manager."
@@ -13,6 +13,7 @@ SLOT="0"
 
 DEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libglade-2
+	x11-libs/startup-notification
 	>=x11-wm/openbox-3.0_beta4"
 
 
