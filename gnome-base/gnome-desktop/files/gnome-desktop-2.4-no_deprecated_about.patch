@@ -1,0 +1,44 @@
+diff -uNr gnome-desktop-2.4.1.1/gnome-about/Makefile.am gnome-desktop-2.4.1.1.patched/gnome-about/Makefile.am
+--- gnome-desktop-2.4.1.1/gnome-about/Makefile.am	2003-06-06 15:00:57.000000000 +0200
++++ gnome-desktop-2.4.1.1.patched/gnome-about/Makefile.am	2004-03-21 23:42:39.821531616 +0100
+@@ -6,12 +6,12 @@
+ 	-DGNOME_ICONDIR=\""$(datadir)/pixmaps\""
+ 
+ # Flags to make sure we're not using any deprecated functions
+-DISABLE_DEPRECATED_CFLAGS =					\
+-	-DG_DISABLE_DEPRECATED					\
+-	-DGDK_DISABLE_DEPRECATED				\
+-	-DGTK_DISABLE_DEPRECATED				\
+-	-DGDK_PIXBUF_DISABLE_DEPRECATED				\
+-	-DGNOME_DISABLE_DEPRECATED
++#DISABLE_DEPRECATED_CFLAGS =					\
++#	-DG_DISABLE_DEPRECATED					\
++#	-DGDK_DISABLE_DEPRECATED				\
++#	-DGTK_DISABLE_DEPRECATED				\
++#	-DGDK_PIXBUF_DISABLE_DEPRECATED				\
++#	-DGNOME_DISABLE_DEPRECATED
+ 
+ LDADD = \
+ 	$(GNOME_ABOUT_LIBS)
+diff -uNr gnome-desktop-2.4.1.1/gnome-about/Makefile.in gnome-desktop-2.4.1.1.patched/gnome-about/Makefile.in
+--- gnome-desktop-2.4.1.1/gnome-about/Makefile.in	2003-10-15 15:02:21.000000000 +0200
++++ gnome-desktop-2.4.1.1.patched/gnome-about/Makefile.in	2004-03-21 23:53:57.296539760 +0100
+@@ -155,12 +155,12 @@
+ 
+ 
+ # Flags to make sure we're not using any deprecated functions
+-DISABLE_DEPRECATED_CFLAGS = \
+-	-DG_DISABLE_DEPRECATED					\
+-	-DGDK_DISABLE_DEPRECATED				\
+-	-DGTK_DISABLE_DEPRECATED				\
+-	-DGDK_PIXBUF_DISABLE_DEPRECATED				\
+-	-DGNOME_DISABLE_DEPRECATED
++#DISABLE_DEPRECATED_CFLAGS = \
++#	-DG_DISABLE_DEPRECATED					\
++#	-DGDK_DISABLE_DEPRECATED				\
++#	-DGTK_DISABLE_DEPRECATED				\
++#	-DGDK_PIXBUF_DISABLE_DEPRECATED				\
++#	-DGNOME_DISABLE_DEPRECATED
+ 
+ 
+ LDADD = \

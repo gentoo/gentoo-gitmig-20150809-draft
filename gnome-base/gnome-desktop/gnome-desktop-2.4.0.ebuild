@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.4.0.ebuild,v 1.11 2004/01/30 05:49:32 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.4.0.ebuild,v 1.12 2004/03/21 23:23:31 foser Exp $
 
 inherit gnome2 eutils
 
@@ -37,6 +37,9 @@ src_unpack() {
 	# Set vendor info
 	cd ${S}
 	sed -i 's:GNOME.Org:Gentoo Linux:' configure.in
+
+	#45258
+	epatch ${FILESDIR}/${PN}-2.4-no_deprecated_about.patch
 
 	WANT_AUTOCONF=2.5 autoconf || die
 	WANT_AUTOMAKE=1.4 automake || die
