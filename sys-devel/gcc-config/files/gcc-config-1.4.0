@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.4.0,v 1.6 2005/03/16 23:32:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.4.0,v 1.7 2005/03/16 23:51:35 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -272,7 +272,7 @@ switch_profile() {
 	done
 
 	# Only install cpp if switching to a native one
-	if ! is_cross_compiler ; then
+	if ! is_cross_compiler && [[ ${CTARGET} != *-solaris* ]] ; then
 		${RM} -f "${ROOT}/lib/cpp"
 		${CP} -f "${WRAPPER}" "${ROOT}/lib/cpp"
 	fi
