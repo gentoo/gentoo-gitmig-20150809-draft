@@ -1,0 +1,5 @@
+MD5 915e11fe62f0dd710a4c181df8aba5fa mod_chroot-0.2.ebuild 1339
+MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
+MD5 2b2e81f2a75116f1104047313d3956c8 ChangeLog 440
+MD5 58daeab364d19de74ce44e560e77d075 files/15_mod_chroot.conf 87
+MD5 2f8c0ff8330470476ab8fd9bd4a6c0aa files/digest-mod_chroot-0.2 65
