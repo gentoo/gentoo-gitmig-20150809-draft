@@ -1,0 +1,40 @@
+--- ru.po	Wed Mar 27 06:12:03 2002
++++ ru.po.2	Wed Mar 27 16:18:07 2002
+@@ -624,14 +624,6 @@
+ msgid "Clear popup items"
+ msgstr ""
+ 
+-#: ../src/skipstone-config.c:258
+-msgid "Maximum popup entries: "
+-msgstr "Максимум сообщений: "
+-
+-#: ../src/skipstone-config.c:259
+-msgid "Clear popup items"
+-msgstr "Удалить сообщения"
+-
+ #: ../src/skipstone-config.c:261
+ msgid "Maximum Go menu items: "
+ msgstr "Максимальное количество пунктов меню Вперёд:"
+@@ -1441,22 +1433,6 @@
+ msgid "0.5"
+ msgstr ""
+ 
+-#: ../src/skipstone-print.c:29
+-msgid "0.5"
+-msgstr ""
+-
+-#: ../src/skipstone-print.c:30
+-msgid "0.5"
+-msgstr ""
+-
+-#: ../src/skipstone-print.c:31
+-msgid "0.5"
+-msgstr ""
+-
+-#: ../src/skipstone-print.c:32
+-msgid "Ok"
+-msgstr "Ок"
+-
+ #: ../src/skipstone-print.c:34
+ msgid "Print Error!"
+ msgstr "Ошибка печати!"
