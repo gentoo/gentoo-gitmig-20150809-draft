@@ -59,11 +59,6 @@ media-video/lumiere
 # package is no longer distributed
 dev-libs/libtomcrypt
 
-# <mjc@gentoo.org> (10 Jan 2003)
-# fixed others silly dates
-# masked, I just copied the old ebuild
->=net-www/mozilla-1.3a
-
 # <rendhalver@gentoo.org> (03 Jan 2003)
 # new XEmacs version masking for testing xemacs without sandbox disable
 #>=app-editors/xemacs-21.4.11
