@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.52 2005/01/13 19:27:25 tocharian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.53 2005/01/14 09:02:23 tocharian Exp $
+
+*hardened-dev-sources-2.6.10-r2 (14 Jan 2005)
+
+  14 Jan 2005; Adam Mondl <tocharian@gentoo.org>
+  +hardened-dev-sources-2.6.10-r2.ebuild:
+  Add latest SELinux patch from the NSA. Fixes several security problems and
+  also updates base to -ac9
 
   13 Jan 2005; Adam Mondl <tocharian@gentoo.org>
   hardened-dev-sources-2.6.7-r18.ebuild:
