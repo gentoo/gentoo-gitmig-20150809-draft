@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.52 2004/03/25 08:35:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.53 2004/03/30 10:30:03 kumba Exp $
+
+  30 Mar 2004; Joshua Kinard <kumba@gentoo.org> ruby-1.6.8-r6.ebuild:
+  Marking stable on mips to remove a repoman dep.
 
   25 Mar 2004; Joshua Kinard <kumba@gentoo.org> ruby-1.6.8-r3.ebuild,
   ruby-1.8.0-r1.ebuild, ruby-1.8.0-r5.ebuild:
