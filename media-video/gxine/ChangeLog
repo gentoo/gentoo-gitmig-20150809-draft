@@ -1,6 +1,12 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.21 2004/10/23 05:13:03 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.22 2004/11/06 15:43:13 chriswhite Exp $
+
+*gxine-0.3.3-r1 (07 Nov 2004)
+
+  07 Nov 2004; Chris White <chriswhite@gentoo.org>
+  +files/gxine-0.3.3-http-overflow.patch, +gxine-0.3.3-r1.ebuild:
+  Took care of gxine ebuild for Bug #70055.
 
   23 Oct 2004; Chris White <chriswhite@gentoo.org>
   +files/gxine-0.3.3-Makefile.in.patch, gxine-0.3.3.ebuild:

@@ -1,0 +1,20 @@
+--- src/http.c_old	2004-11-07 00:27:19.271298616 +0900
++++ src/http.c	2004-11-07 00:28:46.266073400 +0900
+@@ -226,7 +226,7 @@
+     
+     if (filename != NULL)
+       *filename = slash + 1;
+-  } else
++  } else if (filename != NULL)
+     *filename = urlbuf + strlen(urlbuf);
+   
+   if (portcolon != NULL)
+@@ -449,7 +449,7 @@
+       }
+     }
+ 
+-    if (this->buf[len] == '\012') {
++    if (this->buf[len] == '\012' || len >= (BUFSIZE -2)) {
+ 
+       this->buf[len] = '\0';
+       len--;
