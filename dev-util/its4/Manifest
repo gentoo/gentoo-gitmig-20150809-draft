@@ -1,4 +1,15 @@
-MD5 542d29d14a9482be9606caf3fa7f3d51 ChangeLog 465
-MD5 56be458a9373287d99e1f96171bf3385 its4-1.1.1.ebuild 1050
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0d7fa35bfec888c439feb81705a25a49 its4-1.1.1.ebuild 1051
+MD5 6bb64a2ffd2220993ed3199bf8b1c0f0 ChangeLog 557
 MD5 0563343e302cd8a70e8f5d48053ccbee metadata.xml 577
 MD5 14b1670fe3d74a8f92704d4eb8a1da52 files/digest-its4-1.1.1 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFBoV9JPpIsIjIzwiwRAuydAKDIM9zfSwoqedKLvJj7vw9XjAs8rQCg7l3y
+urcw3Bz6AUjDHqjuUisOo5M=
+=mpeA
+-----END PGP SIGNATURE-----

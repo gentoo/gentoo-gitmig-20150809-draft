@@ -1,4 +1,15 @@
-MD5 454fe81c671c36d73c11c66e7793bd81 ChangeLog 462
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7f96e35faf102d83b7d3a0dd9a0984e2 pscan-20000721.ebuild 790
+MD5 7d4b6572754c3160709a0f368ae9b094 ChangeLog 558
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
-MD5 cbe840ce5a6827446668d9b75b111a76 pscan-20000721.ebuild 790
 MD5 79eadb4eb3e61751b21c893cdd0a1708 files/digest-pscan-20000721 56
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFBoV9yPpIsIjIzwiwRAhEiAJ0Zl/861RaO1cJpvOlz2FvqQlFALgCgsytk
+7oWOUKDQ77vv1Hx2xcWXw3I=
+=fvxL
+-----END PGP SIGNATURE-----

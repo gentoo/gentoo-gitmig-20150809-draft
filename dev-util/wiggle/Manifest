@@ -1,16 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5e9039fe1ca5b98f0d93c05968365b56 ChangeLog 754
+MD5 43de8897323becfc20cbbb6790640645 wiggle-0.6-r1.ebuild 1398
 MD5 83cd96c784cf922f88261a46569af640 wiggle-0.6.ebuild 1365
+MD5 2ae8367e781e5568de4f7f5699da7e70 ChangeLog 847
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
-MD5 4ed36efc8565f0cfe7005ba22b4e6d64 wiggle-0.6-r1.ebuild 1398
 MD5 097781a88abb09af012392ea63343a56 files/digest-wiggle-0.6 140
 MD5 e63e88bd529fc22cd865bb73590bf043 files/digest-wiggle-0.6-r1 140
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
 
-iD8DBQFA4Ho3HTu7gpaalycRAiDeAKDR1TnYApkpIkQtMk0tyV5goRiHuQCghYgh
-IBRtYb60dqEqE6b+Fp2CN5s=
-=4Jjv
+iD8DBQFBoV++PpIsIjIzwiwRAuKNAJ9gzEI9Aqtj9u/9U71uXPL0z2+IRwCgs0ul
+4qej5+NGjaAnnh92yE6/XmI=
+=Hr6y
 -----END PGP SIGNATURE-----
