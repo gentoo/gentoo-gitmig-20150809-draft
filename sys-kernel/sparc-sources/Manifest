@@ -2,11 +2,9 @@ MD5 6d5b8b7be7849fd5379fc2919d1487ea ChangeLog 7735
 MD5 e7cac4bc6122cba0b5cc51d42137ed51 sparc-sources-2.4.24.ebuild 2146
 MD5 6063408ed75770023cecd6f424ce62e2 sparc-sources-2.4.23-r1.ebuild 2148
 MD5 6706a601c155869440dcb544e3759a04 metadata.xml 381
-MD5 ae17680dc189a9ce61f9ab10a980b836 sparc-sources-2.4.22.ebuild 2241
 MD5 935f3a9c9a5209ad79a0cdbf9ca4b610 files/U1-hme-lockup.patch 263
 MD5 cf32a513759a5ee17efe4c1a30550266 files/digest-sparc-sources-2.4.24 140
 MD5 5456ce66ce5f748d464a2c14a67d4a6c files/digest-sparc-sources-2.4.23-r1 143
-MD5 afd982621a7d4faba455607353e659c9 files/digest-sparc-sources-2.4.22 140
 MD5 25553b42e5daa2638570a8b019a35069 files/generate-asm-sparc 1656
 MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242
 MD5 13f20ae89e814fb87621b471e4d2ca68 files/2.4.19/sparc-asm_offsets.h 23156
