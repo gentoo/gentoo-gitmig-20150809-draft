@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-358-r3.ebuild,v 1.2 2001/11/15 13:55:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-358-r4.ebuild,v 1.1 2001/11/15 13:55:27 achim Exp $
 
 DESCRIPTION="Excellent text file viewer"
 HOMEPAGE="http://www.gnu.org/software/less/less.html"
@@ -12,6 +12,12 @@ SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/less/${P}.tar.gz
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	patch -p0 <${FILESDIR}/${P}-gentoo.diff
+}
 
 src_compile() {
 
