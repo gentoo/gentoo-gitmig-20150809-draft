@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pth
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.24 2005/01/19 20:52:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.25 2005/01/22 09:41:13 swtaylor Exp $
+
+  22 Jan 2005; Scott W Taylor <swtaylor@gentoo.org> pth-2.0.3.ebuild:
+  pth_p.h was being built wrong from other locales. closes bug 78749
 
 *pth-2.0.3 (20 Jan 2005)
 
