@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.21_pre3.ebuild,v 1.2 2003/01/17 03:49:06 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.21_pre3-r1.ebuild,v 1.1 2003/01/17 03:49:06 livewire Exp $
 
 IUSE="build crypt"
 
@@ -19,12 +19,12 @@ ETYPE="sources"
 
 inherit kernel || die
 OKV=2.4.20
-EXTRAVERSION=-pre3-gss
-KV=2.4.21_pre3-gss
+EXTRAVERSION=-pre3-gss-r1
+KV=2.4.21_pre3-gss-r1
 S=${WORKDIR}/linux-${KV}
 
 # Documentation on the patches contained in this kernel will be installed
-# to /usr/share/doc/gs-sources-${PV}/patches.txt.gz
+# to /usr/share/doc/xfs-sources-${PV}/patches.txt.gz
 
 DESCRIPTION="This kernel will hopefully stay up to date and stable for livecd"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2

@@ -1,10 +1,17 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.1 2003/01/15 20:44:43 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.2 2003/01/17 03:49:06 livewire Exp $
+
+*gs-sources-2.4.21_pre3-r1 (16 Jan 2003)
+
+  16 Jan 2003; Bob Johnson <livewire@gentoo.org>
+
+	- Nforce2 support finally (only to ATA100)
+	- asus 3c59x fix
 
 *gs-sources-2.4.21_pre3 (15 Jan 2003)
   
-  15 Jan 2003; Bob Johnson <livewire_@ameritech.net>:
+  15 Jan 2003; Bob Johnson <livewire@gentoo.org>:
   Initial Release Gentoo Stable Sources -gss
   
  	- 2.4.20 patched up to 2.4.21pre3
