@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6111.ebuild,v 1.3 2004/11/07 01:52:37 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629.ebuild,v 1.1 2004/11/07 01:52:37 cyfred Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ S="${WORKDIR}/${NV_PACKAGE}-${PKG_V}"
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* x86 amd64"
+KEYWORDS="-* ~x86 ~amd64"
 RESTRICT="nostrip"
 IUSE="multilib"
 
@@ -42,13 +42,10 @@ PROVIDE="virtual/opengl"
 export _POSIX2_VERSION="199209"
 
 pkg_setup() {
-	# We need xfree-4.2.0-r9 to support the dynamic libGL* stuff
+	# This isn't necessary, true. But its about time people got the idea.
 	if has_version "x11-base/xfree"
 	then
-		if has_version "<x11-base/xfree-4.2.0-r9"
-		then
-			die "Upgrade to xfree 4.2.0-r9 or greater."
-		fi
+		die "Support for x11-base/xfree is deprecated. Upgrade to x11-base/xorg-x11."
 	fi
 	# Provide some information to the users
 	if use amd64 ; then
@@ -68,14 +65,7 @@ src_unpack() {
 
 	# Patchs go below here, add breif description
 
-	cd ${S}
-
-	# nVidia wants us to use nvidia-installer, removing warning.
-	epatch ${FILESDIR}/${PV}/NVIDIA_glx-${PV}-makefile.patch
-	# Use the correct defines to make gtkglext build work
-	epatch ${FILESDIR}/${PV}/NVIDIA_glx-${PV}-defines.patch
-	# Use some more sensible gl headers and make way for new glext.h
-	epatch ${FILESDIR}/${PV}/NVIDIA_glx-${PV}-glheader.patch
+	# None at the moment
 }
 
 src_install() {
@@ -122,7 +112,8 @@ src_install() {
 	# Closing bug #37517 by letting virtual/x11 provide system wide glext.h
 	# 16 July 2004, opengl-update is now supplying glext.h for system wide
 	# compatibility, so we still need to remove this.
-	rm -f usr/include/GL/glext.h
+	# 7 November 2004, Keeping this around for 6629 to see what happens.
+	#rm -f usr/include/GL/glext.h
 
 	# Includes
 	insinto ${NV_ROOT}/include
