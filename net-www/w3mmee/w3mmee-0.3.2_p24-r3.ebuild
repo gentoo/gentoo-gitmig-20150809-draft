@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/w3mmee-0.3.2_p24-r3.ebuild,v 1.4 2004/04/11 23:59:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/w3mmee-0.3.2_p24-r3.ebuild,v 1.5 2004/04/25 15:25:55 usata Exp $
 
-inherit alternatives
+inherit alternatives eutils
 
 IUSE="gpm imlib nls ssl"
 

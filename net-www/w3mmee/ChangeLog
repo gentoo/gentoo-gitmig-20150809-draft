@@ -1,6 +1,11 @@
 # ChangeLog for net-www/w3mmee
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/ChangeLog,v 1.8 2004/04/11 23:59:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/ChangeLog,v 1.9 2004/04/25 15:25:55 usata Exp $
+
+  26 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> w3mmee-0.3.2_p24-r1.ebuild,
+  w3mmee-0.3.2_p24-r2.ebuild, w3mmee-0.3.2_p24-r3.ebuild,
+  w3mmee-0.3.2_p24-r4.ebuild:
+  inherit eutils for epatch. Marked stable on x86. Removed old ebuilds.
 
   11 Apr 2004; Jason Wever <weeve@gentoo.org> w3mmee-0.3.2_p24-r3.ebuild:
   Stable on sparc.
