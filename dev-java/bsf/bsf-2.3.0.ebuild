@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0.ebuild,v 1.2 2004/06/24 22:19:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0.ebuild,v 1.3 2004/06/27 16:50:19 zx Exp $
 
 inherit java-pkg
 
@@ -15,8 +15,6 @@ IUSE="doc jikes"
 RDEPEND="=net-www/tomcat-5*"
 DEPEND="${REPEND}
 	>=dev-java/ant-1.5.4"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	# karltk: this is dirty. should be fixed when we overhaul tomcat
