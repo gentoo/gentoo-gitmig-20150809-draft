@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CGI
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.13 2003/05/02 01:50:00 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.14 2003/06/01 00:50:32 mcummings Exp $
+
+  31 May 2003; Michael Cummings <mcummings@gentoo.org> CGI-2.81.ebuild,
+  CGI-2.93.ebuild:
+  Added missing DEPEND for File-Spec
 
 *CGI-2.93 (01 May 2003)
 
