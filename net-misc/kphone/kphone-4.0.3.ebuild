@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-4.0.3.ebuild,v 1.3 2004/10/11 22:44:25 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-4.0.3.ebuild,v 1.4 2004/10/18 15:40:00 gustavoz Exp $
 
 inherit eutils kde
 
@@ -8,7 +8,7 @@ DESCRIPTION="A SIP user agent for Linux, with which you can initiate VoIP connec
 HOMEPAGE="http://www.wirlab.net/kphone/index.html"
 SRC_URI="http://www.wirlab.net/kphone/${P}.tar.gz"
 
-KEYWORDS="x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="x86 ~amd64 sparc ~ppc"
 LICENSE="GPL-2"
 
 IUSE=""
