@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.244 2004/12/14 19:51:27 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.245 2004/12/19 02:21:52 spyderous Exp $
+
+*xorg-x11-6.8.1.901 (18 Dec 2004)
+
+  18 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  +xorg-x11-6.8.1.901.ebuild:
+  Add 6.8.2 release candidate 1.
 
   14 Dec 2004; Ferris McCormick <fmccor@gentoo.org> xorg-x11-6.8.0-r4.ebuild:
   Add ~sparc keyword in anticipation of impending unmasking.  So far,
