@@ -1,4 +1,14 @@
-MD5 ec4a8d975ac7d2fbff651591d1e38a57 ChangeLog 681
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e73ced19488120bcc386a4c1a828f851 ChangeLog 774
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 fb0d04fbb14914901d6f92eebdbd8476 programming-ruby-0.4.ebuild 618
+MD5 05f420af7f55bf3aca060c7a2c8daa38 programming-ruby-0.4.ebuild 627
 MD5 3c8f85def088244785a02f544710b065 files/digest-programming-ruby-0.4 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB3/mX60LfUIagIAkRAgsYAJ9fT6KFxv7NTnomKWt9Bjhv4Gs1+gCgw3bD
+3zfL87s5RT5JujAP82uHQkM=
+=EKTe
+-----END PGP SIGNATURE-----
