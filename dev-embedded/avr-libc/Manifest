@@ -1,6 +1,6 @@
 MD5 dcb948f44079a726f43c16e938131c79 ChangeLog 1246
 MD5 a9a36f15e55d14e9c0c0ef20c15c9c14 avr-libc-1.0.2-r1.ebuild 911
 MD5 d05677e7bc0cae2e33f6a6736b9aca03 metadata.xml 486
-MD5 1b9787c7b8688d881e5ef9250dd21ccb avr-libc-1.0.4.ebuild 807
+MD5 185f55227fd56b855d63a409aad89cbe avr-libc-1.0.4.ebuild 807
 MD5 0f5ab469ff51578669ef27de6439ba35 files/digest-avr-libc-1.0.2-r1 66
 MD5 d5f4791fa334163b954344c56893891f files/digest-avr-libc-1.0.4 67
