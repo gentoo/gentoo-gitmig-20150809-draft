@@ -1,3 +1,4 @@
-MD5 6ee3c92df1fa84a7fd122e116476ea2d ChangeLog 889
-MD5 335a6affe9123f0e1ab3e290726f8727 diffstat-1.29.ebuild 782
+MD5 7a6eac8b20ad736c9d8491a031963ebc diffstat-1.29.ebuild 866
+MD5 209bc0fa00306ee9c882fe7237c8f224 ChangeLog 1110
+MD5 606bb7607a9bca7d057c43f5c356e43d files/diffstat-1.29-hard-locale.patch 503
 MD5 3b60d99acd06fa78e550d401a9b92877 files/digest-diffstat-1.29 59
