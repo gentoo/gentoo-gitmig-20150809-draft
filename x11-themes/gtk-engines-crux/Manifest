@@ -1,6 +1,7 @@
 MD5 099d704e8d5279498f65199044bd3e1d ChangeLog 704
 MD5 8e4a973f67336cde3b1d8669d17403f0 gtk-engines-crux-1.9.3.ebuild 465
 MD5 090286c5b41ed221160edacdf77c67ca gtk-engines-crux-1.9.5.ebuild 465
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 5853b9e84a008c75d4275de3c772a6d0 gtk-engines-crux-1.9.5-r1.ebuild 592
 MD5 d8f5253f3c82f30f07fd5eda7de1f03a files/digest-gtk-engines-crux-1.9.3 63
 MD5 d244b6c29e412370b498fa574e0300fc files/digest-gtk-engines-crux-1.9.5 63

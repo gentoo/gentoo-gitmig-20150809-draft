@@ -2,6 +2,7 @@ MD5 d5cd45962c0228f41ce1f6ec886557bc ChangeLog 1024
 MD5 4c2269ff4257c84c34c2e36927892a96 gtk-engines-lighthouseblue-0.4.2.ebuild 396
 MD5 510c2223b356c83ad66440cdcd53f178 gtk-engines-lighthouseblue-0.6.2-r1.ebuild 423
 MD5 705c7220b9fa269c603a03fcd44673fd gtk-engines-lighthouseblue-0.6.2-r2.ebuild 423
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 d49b148e33446c129da3e76e4c742b81 gtk-engines-lighthouseblue-0.7.0.ebuild 892
 MD5 e63593434805fe752a3fb5c6e27c9976 files/digest-gtk-engines-lighthouseblue-0.4.2 72
 MD5 8aea2ae73bf8d659830e724839094d13 files/digest-gtk-engines-lighthouseblue-0.6.2-r1 72

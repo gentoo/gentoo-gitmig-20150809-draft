@@ -2,6 +2,7 @@ MD5 0956838be417d0db6c6a17ea26ba43ee ChangeLog 568
 MD5 9886ecdbd46a0bd675163797d3fc5b13 gtk-engines-redmond95-0.12.ebuild 337
 MD5 e1c1af694769fd868df53aff65efd576 gtk-engines-redmond95-1.9.0.ebuild 338
 MD5 aee50a0bcc80492d3814195f6683e202 gtk-engines-redmond95-2.2.0.ebuild 338
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 afb601e772f47c8243a8602c5209a855 files/digest-gtk-engines-redmond95-0.12 73
 MD5 dcfd7367f7588a1a1e8fbaa8d004a586 files/digest-gtk-engines-redmond95-1.9.0 70
 MD5 5fb5f4be6111f8cd2a8e54f12a9e2bfc files/digest-gtk-engines-redmond95-2.2.0 70

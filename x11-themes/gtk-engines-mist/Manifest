@@ -1,6 +1,7 @@
 MD5 2f2d6141086a0ec923674d21dbdad3ea ChangeLog 750
 MD5 5b6d9d44b9e6dd9ad3851a6814097bac gtk-engines-mist-0.8-r1.ebuild 317
 MD5 3756e15be93e828202823624d5032738 gtk-engines-mist-0.8-r2.ebuild 319
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 08e75cfd70f702d3d76f2133fca5f70f gtk-engines-mist-0.10.ebuild 605
 MD5 c6181c0651426d1bef6f31d09daf6c05 files/digest-gtk-engines-mist-0.8-r1 71
 MD5 c6181c0651426d1bef6f31d09daf6c05 files/digest-gtk-engines-mist-0.8-r2 71
