@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r5.ebuild,v 1.1 2002/01/05 14:09:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r6.ebuild,v 1.1 2002/01/09 22:57:19 azarah Exp $
 
 S=${WORKDIR}/teTeX-1.0
 DESCRIPTION="teTeX is a complete TeX distribution"
@@ -35,10 +35,24 @@ src_unpack() {
 
 	mkdir texmf
 	cd texmf
+	echo ">>> Unpacking teTeX-texmf-1.0.2.tar.gz"
 	tar xzf ${DISTDIR}/teTeX-texmf-1.0.2.tar.gz
+	echo ">>> Unpacking ec-ready-mf-tfm.tar.gz"
 	tar xzf ${DISTDIR}/ec-ready-mf-tfm.tar.gz -C ..
+	echo ">>> Unpacking teTeX-french.tar.gz"
 	tar xzf ${DISTDIR}/teTeX-french.tar.gz
 	patch -p0 < ${FILESDIR}/texmf.dif
+
+	# Fix problem where the *.fmt files are not generated due to the LaTeX
+	# source being older than a year.
+        local x
+        for x in `find ${S}/texmf/ -type f -name '*.ini'`
+        do
+                cp ${x} ${x}.orig
+                sed -e '1i \\scrollmode' ${x}.orig > ${x}
+                rm -f ${x}.orig
+        done
+
 }
 
 src_compile() {
@@ -135,8 +149,7 @@ pkg_postinst() {
 
 	if [ $ROOT = "/" ]
 	then
-		export TETEXDIR=/usr
-		export TEXMFMAIN=/usr/share/texmf
+		echo ">>> Configuring teTeX...
 		mktexlsr >/dev/null 2>&1 
 		texlinks >/dev/null 2>&1
 		texconfig init >/dev/null 2>&1
