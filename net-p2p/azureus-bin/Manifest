@@ -3,7 +3,7 @@ MD5 e2e676b9eea8572375c9405e1d6b0232 azureus-bin-2.0.8.0a.ebuild 3258
 MD5 5066de8fec62942f5ab5f9ed5e71134a ChangeLog 979
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 492b5db31f8be8a352cc1eb3adb23ba1 files/digest-azureus-bin-2.0.7.1_pre20040224 299
-MD5 86a25731f6a60ae19315d02a31c4bcb0 files/azureus-bin-2.0.8.0a-gentoo.sh 1776
+MD5 0b7b4678fdb7cc0211a089ce94dfc87f files/azureus-bin-2.0.8.0a-gentoo.sh 1768
 MD5 05e40b9feac40ba41ddb08f80eb60654 files/digest-azureus-bin-2.0.8.0a 224
 MD5 a5ae00888f1b5e4910a2005c77002994 files/azureus-bin-2.0.7.1_pre20040224-gentoo.sh 2505
 MD5 17762081fd25f6928b7bd085fa61d9ee files/azureus-bin-Makefile.patch 402
