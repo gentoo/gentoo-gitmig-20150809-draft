@@ -134,8 +134,7 @@
 /*
  * Additional Block Devices
  */
-#undef  CONFIG_BLK_DEV_LOOP
-#define CONFIG_BLK_DEV_LOOP_MODULE 1
+#define CONFIG_BLK_DEV_LOOP 1
 #undef  CONFIG_BLK_DEV_NBD
 #define CONFIG_BLK_DEV_NBD_MODULE 1
 #define CONFIG_BLK_DEV_MD 1
