@@ -1,7 +1,11 @@
 # ChangeLog for dev-lang/tk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.18 2003/09/30 20:34:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.19 2003/10/21 18:41:52 mholzer Exp $
 
+*tk-8.4.4 (22 Oct 2003)
+
+  22 Oct 2003; Martin Holzer <mholzer@gentoo.org> tk-8.4.4.ebuild:
+  Version bumped.
 
 *tk-8.4.3 (30 Jun 2003)
 
