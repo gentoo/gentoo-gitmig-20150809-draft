@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/phylip/phylip-3.62.ebuild,v 1.2 2004/10/14 14:47:55 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/phylip/phylip-3.62.ebuild,v 1.3 2004/11/03 02:39:14 j4rg0n Exp $
 
 inherit gcc
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://evolution.genetics.washington.edu/pub/${PN}/${P}.tar.gz"
 LICENSE="freedist"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~ppc-macos"
 IUSE=""
 
 DEPEND="virtual/libc

@@ -1,7 +1,10 @@
 # ChangeLog for app-sci/phylip
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/phylip/ChangeLog,v 1.8 2004/10/14 14:47:55 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/phylip/ChangeLog,v 1.9 2004/11/03 02:39:14 j4rg0n Exp $
 
+  2 Nov 2004; Lina Pezzella <j4rg0n@gentoo.org> -phylip-3.62.ebuild:
+  Keyworded ~ppc-macos.
+  
   14 Oct 2004; Olivier Fisette <ribosome@gentoo.org> -phylip-3.61.ebuild,
   phylip-3.62.ebuild:
   Added 3.62 to x86. Removed old version. Use gcc.eclass rather than ${CC}.
