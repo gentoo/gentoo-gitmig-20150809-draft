@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <blizzy@gentoo.org> (03 Aug 2002)
+# masked for testing
+=app-cdr/gtkcdlabel-0.6.8
+
 # Doug Goldstein <cardoe@gentoo.org> (03 Aug 2002)
 # masked for testing
 =net-dialup/hsflinmodem-5.03.03.02072100
@@ -71,7 +75,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1162 2002/08/03 13:41:25 cardoe Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1163 2002/08/03 16:59:52 blizzy Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
