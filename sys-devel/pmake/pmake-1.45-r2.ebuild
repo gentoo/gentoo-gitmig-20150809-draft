@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.1 2002/12/03 09:45:28 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.2 2003/01/07 05:13:44 bcowan Exp $
 
 IUSE=""
 
@@ -12,14 +12,13 @@ S="${WORKDIR}/${P}"
 
 DESCRIPTION="BSD build tool to create programs in parallel"
 HOMEPAGE="http://www.netbsd.org/"
-SRC_URI="http://cvs.gentoo.org/~bcowan/${MY_P}.tar.gz
-	mirror://gentoo/${MY_P}.tar.gz"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 #RDEPEND=""
