@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <sethbc@gentoo.org> (23 Mar 2003)
+# masked due to weird borkage, bombing out at init
+=sys-apps/reiserfsprogs-3.6.5
+
 # <carpaski@gentoo.org> (22 Mar 2003)
 # Masked for testing! WEeeeee...
 =sys-apps/portage-2.0.47-r11
