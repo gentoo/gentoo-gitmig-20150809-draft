@@ -128,3 +128,6 @@ app-admin/va-systemimager-client
 
 # temporary until drobbins takes a look at my fix
 =sys-kernel/linux-sources-2.4.9.9
+
+# have to fix the patches and dependencies
+=app-editors/fte-20010819
