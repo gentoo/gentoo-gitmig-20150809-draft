@@ -1,15 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtk-cpuspeedy/gtk-cpuspeedy-0.3.0.ebuild,v 1.8 2004/06/24 22:09:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtk-cpuspeedy/gtk-cpuspeedy-0.3.0.ebuild,v 1.9 2004/06/30 02:41:30 vapier Exp $
 
-DESCRIPTION="Graphical GTK+-2 frontend for cpuspeedy."
-SRC_URI="mirror://sourceforge/cpuspeedy/${P}.tar.gz"
+DESCRIPTION="Graphical GTK+-2 frontend for cpuspeedy"
 HOMEPAGE="http://cpuspeedy.sourceforge.net/"
-KEYWORDS="x86 ~ppc"
-SLOT="0"
+SRC_URI="mirror://sourceforge/cpuspeedy/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~ppc"
 IUSE=""
-RESTRICT="nomirror"
+
 DEPEND=">=sys-devel/automake-1.4
 	sys-devel/autoconf
 	sys-apps/texinfo
@@ -24,16 +25,15 @@ DEPEND=">=sys-devel/automake-1.4
 	media-libs/freetype
 	sys-libs/zlib
 	dev-libs/expat
-	virtual/glibc
+	virtual/libc
 	>=x11-libs/gtk+-2"
-
 RDEPEND=">=sys-apps/cpuspeedy-0.2
 	dev-libs/atk
 	dev-libs/expat
 	dev-libs/glib
 	media-libs/fontconfig
 	media-libs/freetype
-	virtual/glibc
+	virtual/libc
 	sys-libs/zlib
 	virtual/x11
 	x11-libs/gtk+
