@@ -1,6 +1,6 @@
 MD5 54ac8392e2327922307770858ce907df ChangeLog 631
 MD5 8ea1b10039ad29765928dfafebc2d390 gsmlib-1.10.ebuild 615
-MD5 1cb887e47d1be60998174464b1dd905e gsmlib-1.11_pre030826.ebuild 692
+MD5 f512aa8faa2b9ac1a15f6a83aa5cba52 gsmlib-1.11_pre030826.ebuild 691
 MD5 a53f0ed8435cda3e9150e994afe7a269 metadata.xml 301
 MD5 ca07bc08da15e439dfee58227b2255f5 files/digest-gsmlib-1.10 63
 MD5 9358266ac12314de9a89dc071fbd6485 files/digest-gsmlib-1.11_pre030826 73
