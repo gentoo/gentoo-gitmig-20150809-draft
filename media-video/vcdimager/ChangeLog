@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vcdimager
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.24 2005/01/09 00:50:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.25 2005/02/07 08:47:43 corsair Exp $
+
+  07 Feb 2005; Markus Rothe <corsair@gentoo.org> vcdimager-0.7.20-r1.ebuild,
+  vcdimager-0.7.20-r2.ebuild:
+  Stable on ppc64/added ~ppc64 to KEYWORDS
 
   09 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
   vcdimager-0.7.20-r1.ebuild, vcdimager-0.7.20-r2.ebuild,
