@@ -99,7 +99,7 @@ net-www/netscape-plugger
 *sys-apps/baselayout
 *sys-apps/portage
 *sys-devel/binutils
-*=sys-devel/gcc-2.95.3-r5
+*=sys-devel/gcc-2.95.3-r7
 *~sys-libs/glibc-2.2.5
 
 # Only 2.4.19 is patched for ppc
