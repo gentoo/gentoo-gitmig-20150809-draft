@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.45 2005/02/14 19:14:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.46 2005/02/16 16:58:42 lu_zero Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -52,7 +52,7 @@ LICENSE="LGPL-2"
 	|| SLOT="2.2"
 #-sparc: Compiled fine with 3.4.1-r1, but tar would consistantly bus error when untarring the
 #        samba-1.0.9 tarball.
-KEYWORDS="amd64 ppc64 -hppa ia64 ~ppc ~x86 ~mips -sparc"
+KEYWORDS="amd64 ppc64 -hppa ia64 ppc ~x86 ~mips -sparc"
 IUSE="nls pic build nptl nptlonly erandom hardened multilib debug userlocales nomalloccheck"
 RESTRICT="nostrip multilib-pkg-force" # we'll handle stripping ourself #46186
 
