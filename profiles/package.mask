@@ -77,4 +77,6 @@ app-text/sgml2x
 # incompatible
 >=sys-devel/autoconf-2.50
 
+# untested
+>=sys-devel/libtool-1.4
 
