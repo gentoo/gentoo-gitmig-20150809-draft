@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libosip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.15 2004/10/23 01:44:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.16 2004/10/31 20:47:05 kloeri Exp $
+
+  31 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> libosip-2.0.7.ebuild:
+  ~alpha keyword.
 
   22 Oct 2004; Jason Wever <weeve@gentoo.org> libosip-2.0.7.ebuild:
   Added ~sparc keyword.

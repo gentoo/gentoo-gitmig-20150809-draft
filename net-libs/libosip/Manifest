@@ -1,14 +1,24 @@
-MD5 39117818490d11751251780409a53000 ChangeLog 2287
-MD5 e3730ef1d01b2d33ecadf170e6e08017 libosip-0.8.8-r1.ebuild 787
-MD5 1027b9b2a5503a992450be1e6704438a libosip-0.8.8.ebuild 784
-MD5 28f1c7cffd12a5d0759f74918aafc446 libosip-0.9.6.ebuild 778
-MD5 47f2b91416fca0c9dd42b5eb7799148d libosip-0.9.7.ebuild 543
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3bcf793387de54dacc79cdc0a88d272e ChangeLog 2382
 MD5 cbdc19bf0c2dc057387577da6bfe0403 libosip-2.0.6.ebuild 788
 MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
-MD5 f02e80ab49251daeeabb5e8d89a028a0 libosip-2.0.7.ebuild 779
-MD5 48b9f7631c15a223b207244d5b9fcd7d files/digest-libosip-0.8.8 65
-MD5 48b9f7631c15a223b207244d5b9fcd7d files/digest-libosip-0.8.8-r1 65
+MD5 28f1c7cffd12a5d0759f74918aafc446 libosip-0.9.6.ebuild 778
+MD5 a78afb3719639dd966979353e9ae3920 libosip-2.0.7.ebuild 787
+MD5 e3730ef1d01b2d33ecadf170e6e08017 libosip-0.8.8-r1.ebuild 787
+MD5 47f2b91416fca0c9dd42b5eb7799148d libosip-0.9.7.ebuild 543
+MD5 1027b9b2a5503a992450be1e6704438a libosip-0.8.8.ebuild 784
 MD5 bdae20c3d071939ffd92629f5d3c00f5 files/digest-libosip-0.9.6 65
-MD5 c31b44fd220e0d9aa00d0639d6a9ff9b files/digest-libosip-0.9.7 65
 MD5 8430244c8006c972a588f5f434c2a7ca files/digest-libosip-2.0.6 66
+MD5 c31b44fd220e0d9aa00d0639d6a9ff9b files/digest-libosip-0.9.7 65
+MD5 48b9f7631c15a223b207244d5b9fcd7d files/digest-libosip-0.8.8-r1 65
 MD5 530f11027e1468ee4ccd44d533fc5991 files/digest-libosip-2.0.7 66
+MD5 48b9f7631c15a223b207244d5b9fcd7d files/digest-libosip-0.8.8 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhU9xugEuf3OQ0akRAq+KAJ0WTSK1bwARjGjo8K/ksS4B0FiQ5gCfcjl9
+FQL3rDJmzR4DaVgX0W6ieoM=
+=u6Ai
+-----END PGP SIGNATURE-----
