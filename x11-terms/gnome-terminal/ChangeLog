@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.31 2003/07/01 22:12:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.32 2003/07/11 21:34:55 todd Exp $
+
+  11 Jul 2003; root <root@gentoo.org> gnome-terminal-2.2.1-r1.ebuild:
+  changed keyword to sparc
 
 *gnome-terminal-2.2.2 (03 Jun 2003)
 
