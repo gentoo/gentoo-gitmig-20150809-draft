@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-5.0.27.ebuild,v 1.4 2004/07/28 17:09:57 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-5.0.27.ebuild,v 1.5 2004/07/28 22:31:32 axxo Exp $
 
 inherit eutils
 
@@ -13,10 +13,10 @@ SRC_URI="mirror://apache/jakarta/tomcat-${SLOT}/v${PV}/bin/${JT_P}"
 HOMEPAGE="http://jakarta.apache.org/tomcat"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
 LICENSE="Apache-2.0"
-DEPEND=""
+DEPEND="sys-apps/sed"
 RDEPEND=">=virtual/jdk-1.3
-		sys-apps/sed"
-IUSE="doc"
+		jikes? ( dev-java/jikes )"
+IUSE="doc jikes"
 
 TOMCAT_HOME="/opt/${PN}${SLOT}"
 TOMCAT_NAME="${PN}${SLOT}"
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/gentoo.diff
+	use jikes && epatch ${FILESDIR}/${PV}/jikes.diff
 }
 
 pkg_preinst() {
@@ -46,6 +47,7 @@ src_install() {
 	insinto /etc/conf.d
 	insopts -m0644
 	newins ${FILESDIR}/${PV}/tomcat.conf ${TOMCAT_NAME}
+	use jikes && sed -e "\cCATALINA_OPTScaCATALINA_OPTS=\"-Dbuild.compiler.emacs=true\"" -i ${D}/etc/conf.d/${TOMCAT_NAME}
 
 	insinto /etc/env.d
 	insopts -m0644

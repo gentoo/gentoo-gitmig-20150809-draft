@@ -1,7 +1,7 @@
 --- bin/catalina.sh	2004-05-19 02:25:07.000000000 -0400
 +++ bin/catalina.sh	2004-05-19 02:23:20.128089696 -0400
 @@ -38,6 +38,10 @@
- # $Id: gentoo.diff,v 1.2 2004/07/28 17:09:57 axxo Exp $
+ # $Id: gentoo.diff,v 1.3 2004/07/28 22:31:32 axxo Exp $
  # -----------------------------------------------------------------------------
  
 +# source the appropriate files right away
@@ -11,16 +11,3 @@
  # OS specific support.  $var _must_ be set to either true or false.
  cygwin=false
  os400=false
---- conf/web.xml	2004-06-18 03:10:14.000000000 +0200
-+++ conf/web.xml	2004-07-28 18:51:39.192165664 +0200
-@@ -186,6 +186,10 @@
-     <servlet>
-         <servlet-name>jsp</servlet-name>
-         <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
-+        <!--init-param>
-+            <param-name>compiler</param-name>
-+            <param-value>jikes</param-value>
-+        </init-param-->
-         <init-param>
-             <param-name>fork</param-name>
-             <param-value>false</param-value>
