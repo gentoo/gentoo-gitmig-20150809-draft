@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.4.2.1.ebuild,v 1.3 2004/06/24 22:17:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.4.2.1.ebuild,v 1.4 2004/07/14 16:22:03 agriffis Exp $
 
-IUSE="ssl nls slang mbox cjk vanilla"
+IUSE="cjk imap mbox nls slang ssl vanilla"
 
 inherit eutils flag-o-matic
 
