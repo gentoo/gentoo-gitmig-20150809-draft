@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.18.ebuild,v 1.2 2004/04/07 03:54:03 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.18.ebuild,v 1.3 2004/04/13 21:02:58 agriffis Exp $
 
 IUSE="pam mysql postgres ldap ssl"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.pureftpd.org/"
 
 SLOT="0"
 LICENSE="BSD" # Changed from GPL-2 to BSD 06/09/2003
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~amd64 ia64"
 
 DEPEND="virtual/glibc
 	pam? ( >=sys-libs/pam-0.75 )
