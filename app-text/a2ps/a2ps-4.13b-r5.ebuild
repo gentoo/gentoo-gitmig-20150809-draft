@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.6 2003/09/24 21:35:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.7 2003/09/26 20:40:50 usata Exp $
 
 inherit gnuconfig eutils
 
@@ -22,7 +22,8 @@ LICENSE="GPL-2"
 KEYWORDS="ia64 x86 ppc sparc alpha"
 IUSE="nls tetex cjk"
 
-DEPEND=">=app-text/ghostscript-6.23
+DEPEND=">=dev-util/gperf-2.7.2
+	>=app-text/ghostscript-6.23
 	>=app-text/psutils-1.17
 	cjk? ( >=sys-apps/sed-4 )
 	tetex? ( virtual/tetex )"
@@ -32,7 +33,7 @@ RDEPEND=">=app-text/ghostscript-6.23
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.tar.gz
 	if use alpha; then
 		gnuconfig_update || die "gnuconfig_update failed"
 	fi
