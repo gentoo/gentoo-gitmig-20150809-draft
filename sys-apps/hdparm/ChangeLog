@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.44 2004/08/04 20:58:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.45 2004/08/05 11:22:35 lanius Exp $
 
   04 Aug 2004; <agriffis@gentoo.org> hdparm-5.5-r3.ebuild:
   stable on alpha and ia64
+
+*hdparm-5.5-r4 (05 Aug 2004)
+
+  05 Aug 2004; Heinrich Wendel <lanius@gentoo.org> hdparm-5.5-r3.ebuild,
+  hdparm-5.5-r4.ebuild, files/hdparm-init-5, files/hdparm-init-6:
+  fix another bug with more than one argument, bug #59497
 
 *hdparm-5.5-r3 (04 Aug 2004)
 
