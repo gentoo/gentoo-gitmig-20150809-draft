@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openobex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.4 2003/02/12 06:08:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.5 2003/03/13 01:06:30 george Exp $
+
+*openobex-1.0.0 (12 Mar 2003)
+
+  12 Mar 2003; George Shapovalov <george@gentoo.org> openobex-1.0.0.ebuild :
+  new version (#16059), thanks to Patrik Kullman <patrik.kullman@netsafe.se> for submission
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
