@@ -1,3 +1,4 @@
-MD5 125ee013081b112d56a1d15507d72ef2 ChangeLog 3674
-MD5 544c51b9ac6b95db847b9cd89e888f69 lua-mode-1.26.ebuild 688
+MD5 592ea015bfabb2aaa0e346f1d48e3f43 ChangeLog 384
+MD5 2fabc6129ebc741b1fbcba8e90eceabe lua-mode-1.26.ebuild 774
 MD5 08f5bc31d5db2fbb018155ce81a18812 files/digest-lua-mode-1.26 64
+MD5 5f162ad79174f8ec9eb51309facbf431 files/70lua-mode-gentoo.el 282
