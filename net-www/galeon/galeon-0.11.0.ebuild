@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.11.0.ebuild,v 1.2 2001/06/11 16:58:41 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.11.0.ebuild,v 1.3 2001/06/16 13:33:13 blutgens Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -12,6 +12,7 @@ HOMEPAGE="http://galeon.sourceforge.net"
 DEPEND=">=net-www/mozilla-0.9.1
 	>=gnome-apps/glade-0.6.2
 	>=gnome-base/gnome-core-1.4.0
+   >=gnome-base/ORBit-0.5.8
         >=dev-util/xml-i18n-tools-0.8.4
 	nls? ( sys-devel/gettext )"
 
