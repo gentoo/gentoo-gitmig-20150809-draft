@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/avp-cvs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp-cvs/ChangeLog,v 1.3 2003/11/10 15:39:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp-cvs/ChangeLog,v 1.4 2003/12/30 03:50:52 mr_bones_ Exp $
+
+  29 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  avp-cvs-20031110.ebuild:
+  sed in unpack; make it easier to use live cvs; more error checking/messages
 
 *avp-cvs-20031110 (10 Nov 2003)
 
