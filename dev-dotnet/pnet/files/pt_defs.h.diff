@@ -1,0 +1,15 @@
+--- support/pt_defs.h	2002-06-27 06:49:26.000000000 +0200
++++ support/pt_defs.h	2004-01-06 01:32:05.224303072 +0100
+@@ -69,12 +69,6 @@
+ #define PTHREAD_SIG_CANCEL	(__SIGRTMIN+1)
+ #endif
+ 
+-/*
+- * Determine if we have read-write lock support in pthreads.
+- */
+-#ifdef PTHREAD_RWLOCK_INITIALIZER
+-	#define	IL_HAVE_RWLOCKS
+-#endif
+ 
+ /*
+  * Types that are needed elsewhere.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.2.ebuild,v 1.1 2004/01/03 23:17:04 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.2.ebuild,v 1.2 2004/01/25 16:42:53 scandium Exp $
 
 DESCRIPTION="Portable .NET runtime, compiler, tools"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -14,6 +14,15 @@ IUSE=""
 
 DEPEND=">=dev-util/treecc-0.2.8
 	!dev-dotnet/mono"
+
+src_unpack() {
+	# Small patch to fix compilation on system which have nptl built into glibc
+	unpack ${A}
+	cd ${S}
+	if use nptl; then
+	epatch ${FILESDIR}/pt_defs.h.diff
+	fi
+}
 
 src_compile() {
 	econf || die
