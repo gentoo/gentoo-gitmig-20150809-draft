@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7.20020116.ebuild,v 1.10 2004/08/03 04:48:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7.20020116.ebuild,v 1.11 2004/08/04 05:01:52 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -44,7 +44,7 @@ src_unpack() {
 	# Add a few debian fixes
 	epatch ${FILESDIR}/${PV}-misc-deb-fixes.patch
 	# Add manpages from debian
-	epatch ${WORKDIR}/${P}-manpages.patch
+	epatch ${DISTDIR}/${P}-manpages.patch.bz2
 
 	# Make sure we use glibc tcp.h instead of kernel tcp.h
 	sed -i '/include/s:linux/tcp\.h:netinet/tcp.h:' misc/ss.c || die "sed ss.c failed"
