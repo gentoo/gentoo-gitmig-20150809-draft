@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gnustep-base
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/ChangeLog,v 1.11 2003/03/31 01:38:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/ChangeLog,v 1.12 2003/06/26 21:49:12 raker Exp $
+
+  26 Jun 2003; raker@gentoo.org <raker@gentoo.org> gnustep-base-1.6.0.ebuild:
+  marked stable for x86
 
 *gnustep-base-1.6.0 (31 Mar 2003)
 
