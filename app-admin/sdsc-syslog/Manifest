@@ -1,4 +1,4 @@
-MD5 5d2a28e59512360d8ef97d24d32f9e5c sdsc-syslog-1.0.2.ebuild 2128
-MD5 1371b04b4ab7ebc6492be081a3a1b369 ChangeLog 526
+MD5 ac7c5d4d59ab8359dc823798719a0109 ChangeLog 515
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 9aad56ddcadfdf5ce7a9064b8f746dc9 sdsc-syslog-1.0.2.ebuild 2117
 MD5 074b15001787fa38b9f5936cd10b1c0e files/digest-sdsc-syslog-1.0.2 70

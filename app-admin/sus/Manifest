@@ -1,4 +1,4 @@
-MD5 37ab627480600ea8a18055974761eb3c files/digest-sus-2.0.2 60
+MD5 4d44ae3a0a53fec1e4d23084988a4741 sus-2.0.2.ebuild 1279
+MD5 a022dfc64e37f286ba94f96ce6e58bdd ChangeLog 735
 MD5 e551ecc3164caa7ab831c58f5f7244a5 files/susers.cpp 988
-MD5 22fff1c08c546c3584fc1ca34cd7453b ChangeLog 741
-MD5 981f3354b2cb3f478fafe28ebada486f sus-2.0.2.ebuild 1286
+MD5 37ab627480600ea8a18055974761eb3c files/digest-sus-2.0.2 60
