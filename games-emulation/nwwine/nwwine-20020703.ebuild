@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nwwine/nwwine-20020703.ebuild,v 1.4 2004/07/14 14:36:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nwwine/nwwine-20020703.ebuild,v 1.5 2004/08/29 05:02:26 mr_bones_ Exp $
 
-DESCRIPTION="A special version of wine for the Never Winter Nights toolkit"
+DESCRIPTION="A special version of wine for the Neverwinter Nights toolkit"
 HOMEPAGE="http://www.winehq.com/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
