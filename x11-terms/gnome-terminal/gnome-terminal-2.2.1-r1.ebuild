@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.2.1.ebuild,v 1.8 2003/05/17 16:25:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.2.1-r1.ebuild,v 1.1 2003/05/17 16:25:53 foser Exp $
 
 inherit gnome2 eutils debug
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="The Gnome Terminal"
 
 HOMEPAGE="http://www.gnome.org/"
-KEYWORDS="x86 ~ppc alpha ~sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -36,6 +36,9 @@ src_unpack() {
 	cd ${S}
 	# Use login shell by default (#12900) 
 	epatch ${FILESDIR}/${PN}-2-default_shell.patch
+	# terminal enhancement, inserts a space after a DND URL
+	# patch by Zach Bagnall <yem@y3m.net> in #13801
+	epatch ${FILESDIR}/${PN}-2-dnd_url_add_space.patch
 }
 
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"

@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.27 2003/03/01 14:49:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.28 2003/05/17 16:25:52 foser Exp $
+
+*gnome-terminal-2.2.1-r1 (17 May 2003)
+
+  17 May 2003; foser <foser@gentoo.org> gnome-terminal-2.2.1-r1.ebuild :
+  Added patch to insert a space after a DND URL
+  patch by Zach Bagnall <yem@y3m.net> in #13801
 
   06 Feb 2003; Aron Griffis <agriffis@gentoo.org> gnome-terminal-2.2.1.ebuild :
   Add ~alpha to KEYWORDS
