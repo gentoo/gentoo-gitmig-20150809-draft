@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/mod_perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.19 2003/06/07 06:22:26 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.20 2003/06/10 10:56:43 mcummings Exp $
+
+  10 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  mod_perl-1.27-r2.ebuild:
+  mod-perl-1.27 doesn't work well with apache 2. the lock for apache 1 wasn't
+  carried over to the r2 ebuild - fixed
 
   06 Jun 2003; <rac@gentoo.org> mod_perl-1.99.09.ebuild:
   Add sed-4 dependency, make sed die on failure
