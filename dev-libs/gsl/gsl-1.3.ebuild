@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/gsl-1.3.ebuild,v 1.8 2004/07/02 04:42:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/gsl-1.3.ebuild,v 1.9 2004/07/14 14:28:04 agriffis Exp $
 
 IUSE=""
 
 inherit flag-o-matic
 
-S=${WORKDIR}/${P}
 DESCRIPTION="The GNU Scientific Library"
 SRC_URI="http://mirrors.rcn.net/pub/sourceware/gsl/${P}.tar.gz"
 HOMEPAGE="http://sources.redhat.com/gsl/"

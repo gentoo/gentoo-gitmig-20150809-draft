@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.2.1-r2.ebuild,v 1.13 2004/07/02 21:32:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.2.1-r2.ebuild,v 1.14 2004/07/14 14:28:36 agriffis Exp $
 
 inherit libtool
 
 IUSE=""
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A tool for exporting C libraries into Scheme"
 SRC_URI="http://www.gnucash.org/pub/g-wrap/source/${P}.tar.gz"
 HOMEPAGE="http://www.gnucash.org"
