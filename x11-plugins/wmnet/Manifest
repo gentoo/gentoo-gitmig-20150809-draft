@@ -1,8 +1,18 @@
-MD5 0b246fa7e0a27bae45f180a97a022498 wmnet-1.06-r1.ebuild 914
-MD5 0d4ef0a6cae0d26c8f3decca76f565d2 wmnet-1.06.ebuild 791
-MD5 c2b4d5d149443b15affcff783a58f09a ChangeLog 1563
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3daf42105124e8967634a8d22d1d11fc ChangeLog 1661
 MD5 9c871c5150118eedeea65810da151c07 metadata.xml 696
+MD5 0d4ef0a6cae0d26c8f3decca76f565d2 wmnet-1.06.ebuild 791
+MD5 fd4c9f783575c8e1a4f84caee34a6c7a wmnet-1.06-r1.ebuild 916
+MD5 0a58ec555971a0da33b5d6b2dde9ad1b files/digest-wmnet-1.06 61
 MD5 61ea1e57785b3ca20c4bcd8b9fd2bc29 files/wmnet-1.06-nonx86.patch 478
 MD5 0a58ec555971a0da33b5d6b2dde9ad1b files/digest-wmnet-1.06-r1 61
-MD5 0a58ec555971a0da33b5d6b2dde9ad1b files/digest-wmnet-1.06 61
 MD5 aca3ec5c87de9e90f0883599a92b71f0 files/wmnet-1.06-misc.patch 41624
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB+kOeKRy60XGEcJIRAj45AJ4nvCx3qzVQIpLFxVRU++Syo4K9EwCfZ0fN
+sZ+gyqGOYWa720I/y41qFPc=
+=7UpH
+-----END PGP SIGNATURE-----

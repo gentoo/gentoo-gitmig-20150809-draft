@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnet
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/ChangeLog,v 1.14 2005/01/26 13:40:22 s4t4n Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/ChangeLog,v 1.15 2005/01/28 13:52:20 gustavoz Exp $
+
+  28 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> wmnet-1.06-r1.ebuild:
+  Stable on sparc
 
   26 Jan 2005; Michele Noberasco <s4t4n@gentoo.org> wmnet-1.06-r1.ebuild:
   Stable for x86. Update copyright headers.
