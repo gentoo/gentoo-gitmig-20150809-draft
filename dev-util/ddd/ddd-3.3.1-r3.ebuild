@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r3.ebuild,v 1.2 2002/12/09 04:21:13 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r3.ebuild,v 1.3 2002/12/09 22:53:25 azarah Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.easynet.be/gnu/ddd/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1 FDL-1.1"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="virtual/x11
 	>=sys-devel/gdb-4.16
