@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.4 2003/02/12 06:33:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.5 2003/03/10 22:32:07 agriffis Exp $
 
-*pexpect-0.94.ebuild (27 Oct 2002)
+*pexpect-0.94 (27 Oct 2002)
+
+  10 Mar 2003; Aron Griffis <agriffis@gentoo.org> pexpect-0.94.ebuild:
+  Mark stable on alpha
 
   20 Nov 2002; Jon Nall <nall@gentoo.org> pexpect-0.94.ebuild :
   added ppc to KEYWORDS
