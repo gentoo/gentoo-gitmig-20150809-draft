@@ -1,0 +1,38 @@
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsctrl/files/xmmsctrl.bash-completion,v 1.1 2004/11/04 23:22:33 eradicator Exp $
+# xmmsctrl completion
+
+_xmmsctrl()
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts="launch not cur eject getlength getpos gettime getvol help jump \
+    next pause play playlist playfiles pref prev previous remove repeat \
+    shuffle stop title quit --help equalizer main play_list paused playing \
+    is_equalizer is_main is_play_list is_stream running session dir time \
+    track vol"
+
+    if [ ${COMP_CWORD} -eq 1 ] ; then
+	COMPREPLY=($(compgen -W "${opts}" -- "${cur}"))
+	return 0
+    fi
+
+    case "${prev}" in
+	equalizer|main|play_list)
+	    COMPREPLY=($(compgen -W "0 1" -- "${cur}"))
+	    ;;
+	dir)
+	    COMPREPLY=($(compgen -A directory -- "${cur}"))
+	    ;;
+	not)
+	    COMPREPLY=($(compgen -W "${opts/not}" -- "${cur}"))
+	    ;;
+	*)
+	    COMPREPLY=()
+	    ;;
+    esac
+}
+complete -F _xmmsctrl xmmsctrl
+
+# vim: set ft=sh tw=80 sw=4 et :

@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/xmmsctrl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsctrl/ChangeLog,v 1.15 2004/09/15 19:42:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsctrl/ChangeLog,v 1.16 2004/11/04 23:22:33 eradicator Exp $
+
+*xmmsctrl-1.8 (04 Nov 2004)
+
+  04 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/xmmsctrl-1.8-jump.patch, +files/xmmsctrl.bash-completion,
+  -xmmsctrl-1.6-r1.ebuild, -xmmsctrl-1.6.ebuild, +xmmsctrl-1.8.ebuild:
+  Version bump and added ka0ttic's bash completion code... closes bugs #69814
+  and #70058.
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> xmmsctrl-1.7.ebuild:
   Stable sparc.

@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsctrl/xmmsctrl-1.6.ebuild,v 1.10 2004/09/02 18:18:28 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsctrl/xmmsctrl-1.8.ebuild,v 1.1 2004/11/04 23:22:33 eradicator Exp $
 
-inherit eutils
+IUSE=""
+
+inherit eutils bash-completion
 
 DESCRIPTION="A small program to control xmms from a shell script."
 SRC_URI="http://www.docs.uu.se/~adavid/utils/${P}.tar.gz"
@@ -10,16 +12,14 @@ HOMEPAGE="http://user.it.uu.se/~adavid/utils/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc ~alpha ~hppa"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 
-IUSE=""
-
-DEPEND=">=media-sound/xmms-1.2.7-r16"
+DEPEND="media-sound/xmms"
 
 src_unpack() {
 	unpack ${A} || die
 	cd ${S}
-	epatch ${FILESDIR}/xmmsctrl-jump.patch
+	epatch ${FILESDIR}/${P}-jump.patch
 }
 
 src_compile() {
@@ -29,6 +29,9 @@ src_compile() {
 src_install () {
 	dobin xmmsctrl
 	dodoc README HELP
-	mv samples ${D}/usr/share/doc/${PF}/
-	prepalldocs
+
+	docinto samples
+	dodoc samples/*
+
+	dobashcompletion ${FILESDIR}/${PN}.bash-completion ${PN}
 }

@@ -1,9 +1,19 @@
-MD5 312b20a4b863739d6117271a9c17efbd ChangeLog 1958
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f30042a5147e1c2220528a632e1289a7 ChangeLog 2275
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 b1698e868830a7dc88a88045036eddf9 xmmsctrl-1.6-r1.ebuild 788
-MD5 272d38f5a69313086e623e2b42931825 xmmsctrl-1.6.ebuild 753
 MD5 0993fde26d7701ec1043d6478bffa33b xmmsctrl-1.7.ebuild 792
-MD5 8a895c8a1f15679dd525bd79ce8516f0 files/digest-xmmsctrl-1.6 62
-MD5 8a895c8a1f15679dd525bd79ce8516f0 files/digest-xmmsctrl-1.6-r1 62
+MD5 b59aae52930a4f1747ad9dbc71ecd076 xmmsctrl-1.8.ebuild 806
+MD5 820f89eab5c374f7690d5e6ad325876e files/digest-xmmsctrl-1.8 63
+MD5 a88964c9149258a942cd42e4f39bf448 files/xmmsctrl-1.8-jump.patch 457
 MD5 c7c656137800fdd34067cd2e40c9775e files/digest-xmmsctrl-1.7 62
 MD5 81df994f3cc643315bc3ce5f0b83e848 files/xmmsctrl-jump.patch 374
+MD5 8355a79044d2fc38f92aa608a643e650 files/xmmsctrl.bash-completion 1055
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBirnEArHZZzCEUG0RAmp6AJ9v4kDl/dHTA68Ne/QmvbuvBm8ssgCfUMwu
+ONqNZtmlsx/Jmeh1u7jrzpQ=
+=9vjI
+-----END PGP SIGNATURE-----
