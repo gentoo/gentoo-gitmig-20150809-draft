@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/ucspi-proxy
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ChangeLog,v 1.1 2003/08/11 09:46:58 robbat2 Exp $
+
+*ucspi-proxy-0.95 (11 Aug 2003)
+
+  11 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> ucspi-proxy-0.95.ebuild:
+  Initial commit, thanks to Kalin Kozhuharov <kalin@thinrope.net>, bug #23836
+
