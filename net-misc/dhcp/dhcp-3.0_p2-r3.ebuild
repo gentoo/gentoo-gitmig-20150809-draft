@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r3.ebuild,v 1.3 2004/01/15 01:04:44 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r3.ebuild,v 1.4 2004/01/15 01:15:04 max Exp $
 
 inherit eutils flag-o-matic
 
@@ -111,10 +111,10 @@ pkg_config() {
 
 	if [ ! -d "${CHROOT:=/chroot/dhcp}" ] ; then
 		ebegin "Setting up the chroot directory"
-		mkdir -m 0755 -p "${CHROOT}/"{dev,etc,var/lib,var/run}
+		mkdir -m 0755 -p "${CHROOT}/"{dev,etc,var/lib,var/run/dhcp}
 		cp -R /etc/dhcp "${CHROOT}/etc/"
 		cp -R /var/lib/dhcp "${CHROOT}/var/lib"
-		chown -R dhcp:dhcp "${CHROOT}/var/lib" "${CHROOT}/var/run"
+		chown -R dhcp:dhcp "${CHROOT}/var/lib" "${CHROOT}/var/run/dhcp"
 		eend
 
 		if [ "`grep '^#[[:blank:]]\?CHROOT' /etc/conf.d/dhcp`" ] ; then
