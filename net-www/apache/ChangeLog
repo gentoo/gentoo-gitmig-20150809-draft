@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.277 2004/10/13 16:50:56 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.278 2004/10/14 10:10:54 hardave Exp $
+
+  14 Oct 2004; Hardave Riar <hardave@gentoo.org> apache-2.0.52.ebuild:
+  stable on mips, bug #66807
 
   13 Oct 2004; Olivier Crete <tester@gentoo.org> apache-2.0.52.ebuild:
   Marking stable on x86 wrt security bug #66807
