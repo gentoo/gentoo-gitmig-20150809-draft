@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dirs.eclass,v 1.3 2002/01/16 20:52:39 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dirs.eclass,v 1.4 2002/02/01 11:47:16 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 ECLASS=kde-dirs
 
@@ -58,7 +58,7 @@ need-qt() {
 	QTVER="$1"
 	#newdepend ">=x11-libs/qt-$QTVER"
 	min-qt-ver $QTVER
-	newdepend ">=x11-libs/qt-$selected_version"
+	newdepend "=x11-libs/qt-$selected_version*"
 	set-qtdir $QTVER
 
 }
@@ -125,8 +125,8 @@ min-qt-ver() {
 	debug-print-function $FUNCNAME $*
 
 	case $1 in
-	    2*)	selected_version="2.3.1";;
-	    3*)	selected_version="3.0.1";;
+	    2*)	selected_version="2.3";;
+	    3*)	selected_version="3";;
 	    *)	echo "!!! error: $FUNCNAME() (kde.eclass) called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 
