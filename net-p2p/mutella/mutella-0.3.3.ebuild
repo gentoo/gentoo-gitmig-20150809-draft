@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/mutella-0.3.3.ebuild,v 1.6 2002/11/12 06:51:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/mutella-0.3.3.ebuild,v 1.7 2003/02/13 15:21:24 vapier Exp $
 
 DESCRIPTION="Text-mode gnutella client"
 SRC_URI="mirror://sourceforge/mutella/${P}.tar.gz"
