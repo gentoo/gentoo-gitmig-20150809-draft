@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/darksnow-0.4.4.ebuild,v 1.2 2004/10/19 05:56:39 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/darksnow-0.4.4.ebuild,v 1.3 2004/10/19 06:01:29 chriswhite Exp $
 
 
 DESCRIPTION="Streaming GTK2 Front-End based in Darkice Ice Streamer"
@@ -22,7 +22,11 @@ src_unpack() {
 	cd ${S}
 
 	#fix some makefile issues
-	sed -e "s:^PREFIX=.*:PREFIX=${D}/usr:" -e "s:^INTLPREFIX=.*:INTLPREFIX=${D}/usr:" -e "s:^CFLAGS=:CFLAGS=${CFLAGS} :" -i Makefile
+	sed -i -e "s:^PREFIX=.*:PREFIX=${D}/usr:" \
+	-e "s:^INTLPREFIX=.*:INTLPREFIX=${D}/usr:" \
+	-e "s:^CFLAGS=:CFLAGS=${CFLAGS} :" \
+	Makefile \
+	|| die "could not patch Makefile"
 }
 
 src_compile() {
