@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.7.ebuild,v 1.1 2004/07/22 22:07:08 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.7.ebuild,v 1.2 2004/09/17 00:11:03 solar Exp $
 
 inherit flag-o-matic gcc
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://chpax-${PV}.tar.gz
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc ~ppc64 ~sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64"
 IUSE=""
 
 DEPEND="virtual/libc

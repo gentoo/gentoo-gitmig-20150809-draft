@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/chpax
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.25 2004/07/22 22:07:08 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.26 2004/09/17 00:11:03 solar Exp $
+
+  16 Sep 2004; <solar@gentoo.org> files/pax-conf.d, chpax-0.7.ebuild:
+  marked stable for x86* added sunjdk to exemptions
 
 *chpax-0.7 (22 Jul 2004)
 

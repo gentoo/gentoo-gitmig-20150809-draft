@@ -32,7 +32,7 @@ CHPAX="/sbin/chpax /sbin/paxctl"
 # To do it here, set things ="`eval echo /path/to/{some,binaries}`"
 
 #java=/opt/blackdown-{jdk-*/{,jre/},jre-*/}bin/{java{,_vm,c},keytool,kinit,klist,ktab,orbd,policytool,rmi{d,registry},servertool,tnameserv,*}
-java="/opt/*-{jdk-*/{,jre/},jre-*/}bin/*"
+java="/opt/*-{j{,2s}dk-*/{,jre/},jre-*/}bin/*"
 wine="/usr/lib/wine/bin/{wine{,build,clipsrv,dump,gcc,server,wrap,-{k,p}thread},w{mc,rc,idl}}"
 x11="/usr/X11R6/bin/{XFree86,Xorg}"
 xine="/usr/bin/{g,}xine"
