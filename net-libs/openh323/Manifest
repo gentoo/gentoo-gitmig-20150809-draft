@@ -1,4 +1,4 @@
-MD5 2b489711c97821fed01e1db871510dbb ChangeLog 5876
+MD5 3a88d81df3ad4cb58c3105b7ca7a79e1 ChangeLog 6112
 MD5 5ae9f140fcd4525c88ee9239bd8772a6 metadata.xml 267
 MD5 6189d0cddb3caef14e831710e7e59d45 openh323-1.11.7.ebuild 1838
 MD5 238f71369acba3912e3d958ec6b6f702 openh323-1.12.0-r1.ebuild 2834
@@ -6,7 +6,7 @@ MD5 118dc6363105e93f2d8f256d0278a180 openh323-1.12.2-r1.ebuild 3119
 MD5 6b9b41828b36abdf7046c4b3fbbcb94c openh323-1.12.2-r2.ebuild 3541
 MD5 1640790319d97a0b9934321fb497e6e1 openh323-1.9.10-r1.ebuild 1116
 MD5 54e3e22ba5b272002ac28fdbe07c82ab openh323-1.13.2.ebuild 3721
-MD5 a6d7cec023803fb24233a0d9b0bba743 openh323-1.13.2-r1.ebuild 3830
+MD5 1cb04bebcaf5c3a5035e80ebff6430de openh323-1.13.2-r1.ebuild 3870
 MD5 e9ac1227eaf205c20f84a4fc712e8d66 files/digest-openh323-1.11.7 68
 MD5 238a3a0b91aabce0a61e0dd5c4b9ee68 files/digest-openh323-1.12.0-r1 68
 MD5 2efc1a39c75805caacb974bfa6208dea files/digest-openh323-1.12.2-r1 68

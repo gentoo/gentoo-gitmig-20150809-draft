@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/openh323
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.32 2004/03/19 23:03:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.33 2004/03/25 02:13:48 jhuebel Exp $
+
+  24 Mar 2004; Jason Huebel,,, <jhuebel@gentoo.org> openh323-1.13.2-r1.ebuild:
+  also added ~amd64 to keywords
+
+  24 Mar 2004; Jason Huebel,,, <jhuebel@gentoo.org> openh323-1.13.2-r1.ebuild:
+  added line to append -fPIC to the CPPFLAGS
 
   19 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   openh323-1.13.2-r1.ebuild:
