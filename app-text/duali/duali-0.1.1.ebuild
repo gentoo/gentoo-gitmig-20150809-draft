@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/duali/duali-0.1.1.ebuild,v 1.4 2004/05/12 21:18:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/duali/duali-0.1.1.ebuild,v 1.5 2004/06/06 23:52:28 dragonheart Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/arabeyes/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~sparc alpha ~hppa ~mips"
+KEYWORDS="x86 ~amd64 ~ia64 ~ppc ~sparc alpha ~hppa ~mips"
 
 DEPEND="dev-lang/python"
 PDEPEND="app-dicts/duali-data"
