@@ -1,6 +1,6 @@
-# Copyright 2004 Gentoo Foundation.
+# Copyright 2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2004.3/packages,v 1.1 2004/11/29 00:18:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/packages,v 1.4 2005/01/11 01:24:35 gustavoz Exp $
 
 *>=sys-libs/glibc-2.3.1-r2
 *net-misc/dhcpcd
