@@ -11,7 +11,7 @@ from SetupEngine import *
 from WriteEngine import *
 
 print " "
-print "Gentoo Jabber Server 1.4.1 Configuration Utility (version 0.2)"
+print "Gentoo Jabber Server 1.4.1 Configuration Utility (version 0.4)"
 print " "
 ShowIntro()
 
@@ -20,16 +20,22 @@ while Init == 1:
 	CmdInput = raw_input("Enter your choice: ")
 	if CmdInput == "1":
 		SetupGeneral()
-	elif CmdInput == "2":
+        elif CmdInput == "2":
 		JUDConfig()
 	elif CmdInput == "3":
+		CONConfig()
+	elif CmdInput == "4":
 		AIMConfig()
-        elif CmdInput == "4":
-		ICQConfig()
         elif CmdInput == "5":
-		MSNConfig()
+		ICQConfig()
         elif CmdInput == "6":
-		WriteConfig()
-                Init = 0
+		MSNConfig()
         elif CmdInput == "7":
+		YahooConfig()
+        elif CmdInput == "8":
+		SecurityConfig()
+        elif CmdInput == "9":
+                WriteConfig()
+		Init = 0
+        elif CmdInput == "0":
 		Init = 0

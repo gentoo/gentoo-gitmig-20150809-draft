@@ -30,10 +30,117 @@ def WriteConfig():
                 vcard2jud = """
      <vcard2jud/>"""
 
+        if JUDData['extra_jud'] == 1:
+               extra_jud_1 = """
+        <service type="jud" jid=\"""" + JUDData['jid'] + """\" name=\"""" + JUDData['name'] + """\">
+          <ns>jabber:iq:search</ns>
+          <ns>jabber:iq:register</ns>
+        </service>"""
+               extra_jud_2 = """<service id="jud"> <host>jud.""" + GeneralData['domainname'] + """</host>
+        <load><jud>./jud-0.4/jud.so</jud></load>
+        <jud xmlns="jabber:config:jud">
+        <vCard>
+          <FN>User Directory on """ + GeneralData['domainname'] + """</FN>
+          <DESC>This service provides a simple user directory service.</DESC>
+          <URL>""" + GeneralData['vcard_url'] + """</URL>
+        </vCard>
+        </jud>
+        </service>
+        """
+        else:
+                extra_jud_1 = " "
+                extra_jud_2 = " "
+
+        if CONData['enable_con'] == 1:
+               enable_con_1 = "\n<conference type=\"private\" jid=\"" + CONData['jid'] + "\" name=\"" + CONData['name'] + """\"/>"""
+               enable_con_2 = "\n<service id=\"" + CONData['jid'] + "." + GeneralData['domainname'] + "\">" + """
+        <load><conference>./conference-0.4/conference.so</conference></load>
+          <conference xmlns="jabber:config:conference">
+          <vCard>
+          <FN>Conferencing Service</FN>
+          <DESC>This service is for private chatrooms.</DESC>
+          <URL>""" + GeneralData['vcard_url'] + """</URL>
+          </vCard>
+          <history>20</history>
+          <notice>
+          <join> has joined</join>
+          <leave> has left</leave>
+          <rename> is now known as </rename>
+          </notice>
+          </conference>
+     </service>
+     """
+
+        else:
+                enable_con_1 = " "
+                enable_con_2 = " "
+
+
+        if AIMData['enable_aim'] == 1:
+               enable_aim_1 = """
+        <service type="aim" jid=\"""" + AIMData['jid'] + """\" name=\"""" + AIMData['name'] + """\">
+          <ns>jabber:iq:gateway</ns>
+          <ns>jabber:iq:search</ns>
+          <ns>jabber:iq:register</ns>
+        </service>"""
+               enable_aim_2 = "<service id=" + AIMData['jid'] + "." + GeneralData['domainname'] + """>
+        <aimtrans xmlns='jabber:config:aimtrans'>
+        <vCard>
+          <FN>AIM Transport</FN>
+          <DESC>The AIM Transport</DESC>
+          <URL>""" + GeneralData['vcard_url'] + """</URL>
+        </vCard>
+        </aimtrans>
+        <load>
+          <aim_transport>./aim-transport-0.9.24c/src/aimtrans.so</aim_transport>
+        </load>
+        </service>
+        """
+        else:
+                enable_aim_1 = " "
+                enable_aim_2 = " "
+
+
+        if ICQData['enable_icq'] == 1:
+               enable_icq_1 = """
+        <service type="icq" jid=\"""" + ICQData['jid'] + """\" name=\"""" + ICQData['name'] + """\">
+          <ns>jabber:iq:gateway</ns>
+          <ns>jabber:iq:search</ns>
+          <ns>jabber:iq:register</ns>
+        </service>"""
+               enable_icq_2 = "<service id=" + ICQData['jid'] + "." + GeneralData['domainname'] + """>
+        <!-- <aimtrans xmlns='jabber:config:aimtrans'> ?? -->
+        <icqtrans xmlns="jabber:config:icqtrans">
+        <instructions>Please enter your ICQ number (in the "username" field),
+        nickname, and password. Leave the "username" field blank
+        to create a new ICQ number.</instructions>
+        <search>Search for ICQ users</search>
+        <vCard>
+          <FN>ICQ Transport</FN>
+          <DESC>The ICQ Transport</DESC>
+          <URL>""" + GeneralData['vcard_url'] + """</URL>
+        </vCard>
+        <prime>37</prime>
+        <ports>
+        <min>2000</min>
+        <max>3000</max>
+        </ports>
+        </icqtrans>
+        <load>
+          <icqtrans>./aim-transport-0.9.24c/src/aimtrans.so</icqtrans>
+        </load>
+        </service>
+        """
+        else:
+                enable_icq_1 = " "
+                enable_icq_2 = " "
+
 
         f = open('jabber.xml', 'w')
         f.write("""
 <jabber>
+   <!-- This Jabber Server Configuration File is built with Dr. JabServ,
+        the Jabber Config Tool... -->
 
   <service id="sessions">
 
@@ -81,6 +188,19 @@ def WriteConfig():
       </register>
 
       """ + new_welcome + vcard2jud + """
+
+
+      <browse>
+
+        <service type="jud" jid="users.jabber.org" name="Jabber User Directory">
+          <ns>jabber:iq:search</ns>
+          <ns>jabber:iq:register</ns>
+        </service>
+        """ + extra_jud_1 + enable_con_1 + enable_aim_1 + enable_icq_1 + """
+
+      </browse>
+
+
       </jsm>
 
     <load main="jsm">
@@ -181,6 +301,8 @@ def WriteConfig():
       </karma>
     </dialback>
   </service>
+
+  """ + extra_jud_2 + enable_con_2 + enable_aim_2 + enable_icq_2 + """
 
   <io>
 
