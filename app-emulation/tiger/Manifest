@@ -1,14 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 657e43d6bce80833c77f1915689f44a9 ChangeLog 565
-MD5 ae55a9fd74b17232f506ba9dabea2e52 tiger-0.8.ebuild 606
+MD5 d3e6c0ce94ba44ade6549e0b490d9fb4 tiger-0.8.ebuild 706
+MD5 4d052095c7f6052f822d41acbbcf4af5 ChangeLog 716
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 2562769aeaf65f8fe4470e2aaef79a9a files/digest-tiger-0.8 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA31M1HTu7gpaalycRAtrjAJ9dJ5VOsUi4TX0vwu0vsS62ph4tlwCgoPYE
-HHBQtXy+sjOjWUpocIJSpLA=
-=dvWy
------END PGP SIGNATURE-----
+MD5 c29ab5cc6e1ca0b291613e36b8f57a19 files/tiger-0.8-gcc34.patch 4986

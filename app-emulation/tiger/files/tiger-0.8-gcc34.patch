@@ -1,0 +1,154 @@
+diff -Naur tiger-0.8.orig/cmdinterface.c tiger-0.8/cmdinterface.c
+--- tiger-0.8.orig/cmdinterface.c	2001-02-01 01:23:51.000000000 +0100
++++ tiger-0.8/cmdinterface.c	2004-07-16 20:04:31.370101384 +0200
+@@ -19,6 +19,7 @@
+ #include "core.h"
+ 
+ #include "globinfo.h"
++#include "xspecific.h"
+ 
+ char *varNames[0x15] = {"EXPR", "", "", "", "LIST", "", "MAT", "", "", "", "DATA", "TEXT", "STRING", "GDB",
+                         "FIG", "", "PIC", "", "PRGM", "FUNC", "MAC" };
+@@ -36,11 +37,11 @@
+ 
+ char currDir[128] = "";
+ 
+-int do_command(unsigned char *cmd, unsigned char *arg1);
+-
++/* Declaration of functions */
++void prompt_commands(void);
+ 
+ void cmd_update_progbar(int size) {
+-  static cnt = 0;
++  static int cnt = 0;
+   if((cnt++)&1) {
+     printf(".");
+     fflush(stdout);
+diff -Naur tiger-0.8.orig/cmdinterface.h tiger-0.8/cmdinterface.h
+--- tiger-0.8.orig/cmdinterface.h	2001-02-01 01:23:51.000000000 +0100
++++ tiger-0.8/cmdinterface.h	2004-07-16 20:04:31.373100928 +0200
+@@ -1,4 +1,5 @@
+-
++void load_cfg_file(char *name);
++int do_command(unsigned char *cmd, unsigned char *arg1);
+ extern void cmd_update_progbar(int size);
+ extern void cmd_link_progress(int type, char *name, int size);
+ extern void enter_command(void);
+diff -Naur tiger-0.8.orig/core.h tiger-0.8/core.h
+--- tiger-0.8.orig/core.h	2001-02-01 01:23:51.000000000 +0100
++++ tiger-0.8/core.h	2004-07-16 20:12:18.013160856 +0200
+@@ -112,4 +112,4 @@
+ 0x44, 0x61, 0x6e, 0x20, 0x45, 0x62, 0x6c, 0x65, 0x2e, 0x20, 0x41, 0x6c,
+ 0x6c, 0x20, 0x72, 0x69, 0x67, 0x68, 0x74, 0x73, 0x20, 0x72, 0x65, 0x73,
+ 0x65, 0x72, 0x76, 0x65, 0x64, 0x2e, 0x4e, 0x71
+-};
+\ No newline at end of file
++};
+diff -Naur tiger-0.8.orig/gencpu.c tiger-0.8/gencpu.c
+--- tiger-0.8.orig/gencpu.c	2001-02-01 01:23:51.000000000 +0100
++++ tiger-0.8/gencpu.c	2004-07-16 20:04:31.381099712 +0200
+@@ -1682,7 +1682,7 @@
+     printf("#include \"memory.h\"\n");
+     /*    printf("#include \"custom.h\"\n");    */
+     printf("#include \"newcpu.h\"\n");
+-    printf("#include \"cputbl.h\"\n");
++/*    printf("#include \"cputbl.h\"\n");*/
+     for(opcode=from; opcode < to; opcode++) {
+ 	if (table68k[opcode].mnemo == i_ILLG) {
+ 	    illg++;
+diff -Naur tiger-0.8.orig/hardware.h tiger-0.8/hardware.h
+--- tiger-0.8.orig/hardware.h	2001-02-01 01:23:51.000000000 +0100
++++ tiger-0.8/hardware.h	2004-07-16 20:06:38.277808480 +0200
+@@ -1,3 +1,4 @@
++int link_checkread(void);
+ 
+ extern void update_contrast(void);
+ extern void update_timer(UBYTE arg);
+diff -Naur tiger-0.8.orig/include/newcpu.h tiger-0.8/include/newcpu.h
+--- tiger-0.8.orig/include/newcpu.h	2001-02-01 01:23:51.000000000 +0100
++++ tiger-0.8/include/newcpu.h	2004-07-16 20:04:31.389098496 +0200
+@@ -45,7 +45,7 @@
+ extern struct cputbl smallcputbl[];
+ 
+ extern cpuop_func *cpufunctbl[65536];
+-extern void op_illg(ULONG) REGPARAM;
++extern void op_illg(ULONG);
+ 
+ typedef char flagtype; 
+ 
+diff -Naur tiger-0.8.orig/include/options.h tiger-0.8/include/options.h
+--- tiger-0.8.orig/include/options.h	2001-02-01 01:23:51.000000000 +0100
++++ tiger-0.8/include/options.h	2004-07-16 20:04:31.392098040 +0200
+@@ -1,3 +1,6 @@
++#include <stdio.h>
++#include <string.h>
++
+  /*
+   * UAE - The Un*x Amiga Emulator
+   *
+diff -Naur tiger-0.8.orig/main.c tiger-0.8/main.c
+--- tiger-0.8.orig/main.c	2001-02-01 01:23:51.000000000 +0100
++++ tiger-0.8/main.c	2004-07-16 20:04:31.395097584 +0200
+@@ -14,7 +14,8 @@
+ #include "hardware.h"
+ #include "specific.h"
+ #include "globinfo.h"
+-
++#include "cmdinterface.h"
++#include "keyboard.h"
+ 
+ struct GlobalInformation globInf;
+ 
+diff -Naur tiger-0.8.orig/readcpu.c tiger-0.8/readcpu.c
+--- tiger-0.8.orig/readcpu.c	2001-02-01 01:23:51.000000000 +0100
++++ tiger-0.8/readcpu.c	2004-07-16 20:10:00.749028176 +0200
+@@ -174,10 +174,10 @@
+ 	int srcgather = 0, dstgather = 0;
+ 	int usesrc = 0, usedst = 0;
+ 	int srctype = 0;
+-	int srcpos, dstpos;
++	int srcpos = 0, dstpos = 0;
+ 	
+ 	amodes srcmode = am_unknown, destmode = am_unknown;
+-	int srcreg, destreg;
++	int srcreg = 0, destreg = 0;
+ 	    
+ 	for(i = 0; i < lastbit; i++) 
+ 	    bitcnt[i] = bitval[i] = 0;
+diff -Naur tiger-0.8.orig/xspecific.c tiger-0.8/xspecific.c
+--- tiger-0.8.orig/xspecific.c	2001-02-01 01:23:51.000000000 +0100
++++ tiger-0.8/xspecific.c	2004-07-16 20:04:31.399096976 +0200
+@@ -19,6 +19,8 @@
+ #include <ggi/ggi.h>
+ #include <ggi/keyboard.h>
+ 
++#include "xspecific.h"
++
+ ggi_visual_t v;
+ int using_dbuf;
+ 
+@@ -48,12 +50,10 @@
+ int emuState = 0;
+ 
+ 
+-void set_colors(void);
+ int OpenTigerWin(void);
+ void CloseTigerWin(void);
+ void PutImage(void);
+ int x_to_ti(int key);
+-void update_progbar(int size);
+ 
+ void update_progbar(int size) {
+   cmd_update_progbar(size);
+diff -Naur tiger-0.8.orig/xspecific.h tiger-0.8/xspecific.h
+--- tiger-0.8.orig/xspecific.h	1970-01-01 01:00:00.000000000 +0100
++++ tiger-0.8/xspecific.h	2004-07-16 20:04:31.402096520 +0200
+@@ -0,0 +1,8 @@
++#ifndef __XSPECIFIC_H__
++#define __XSPECIFIC_H__
++
++void update_progbar(int size);
++void set_colors(void);
++
++#endif /* __XSPECIFIC_H__ */
++

@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/tiger
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/tiger/ChangeLog,v 1.4 2004/06/24 22:34:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/tiger/ChangeLog,v 1.5 2004/09/01 10:57:28 sekretarz Exp $
+
+  01 Sep 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/tiger-0.8-gcc34.patch, tiger-0.8.ebuild:
+  Fixed gcc-3.4 compile problems. Bug #57274
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   tiger-0.8.ebuild:
