@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.18 2003/09/24 15:13:22 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.19 2003/10/14 05:08:09 drobbins Exp $
+
+*icc-7.1.030 (13 Oct 2003)
+
+  13 Oct 2003; Daniel Robbins <drobbins@gentoo.org> icc-7.1.030.ebuild:
+  New icc version for people with a premier.intel.com account. ~ on 
+  x86 and ia64.
 
   24 Sep 2003; Jon Portnoy <avenj@gentoo.org> icc-7.1.006.ebuild :
   Fix rpm_unpack call, bug 29484.
