@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.0.ebuild,v 1.5 2004/05/17 15:47:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.0.ebuild,v 1.6 2004/06/03 14:44:29 agriffis Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -80,7 +80,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	if [ `use opengl` ]; then
+	if use opengl; then
 		myconf="--enable-hopengl"
 	fi
 
@@ -107,9 +107,9 @@ src_install () {
 	local mydoc
 
 	# determine what to do with documentation
-	if [ `use doc` ]; then
+	if use doc; then
 		mydoc="html"
-		if [ `use tetex` ]; then
+		if use tetex; then
 			mydoc="${mydoc} ps"
 		fi
 	else
