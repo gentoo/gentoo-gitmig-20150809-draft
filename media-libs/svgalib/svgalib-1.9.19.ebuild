@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18.ebuild,v 1.5 2004/05/12 12:30:06 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19.ebuild,v 1.1 2004/06/23 02:56:28 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,8 +15,12 @@ IUSE="build"
 
 DEPEND="virtual/glibc"
 
+kernel_supports_modules() {
+	grep '^CONFIG_MODULES=y$' /usr/src/linux/.config >& /dev/null
+}
+
 pkg_setup() {
-	use build || check_KV
+	! use build && kernel_supports_modules && check_KV
 }
 
 src_unpack() {
@@ -25,51 +29,60 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.patch
 
-	# Fix a small gcc33 issue
-	epatch ${FILESDIR}/${P}-gcc33.patch
-
 	# Get it to work with kernel 2.6
 	epatch ${FILESDIR}/${P}-linux2.6.patch
 
-	# Disable kernel module support while building stages #38403
-	#use build && 
-	sed -i 's:installmodule ::' Makefile
-	# for now we dont build the module at all #42522
+	# Fix include bug #54198
+	epatch ${FILESDIR}/${PN}-1.9.18-utils-include.patch
+
+	# Have lrmi compile with our $CFLAGS
+	epatch ${FILESDIR}/${PN}-1.9.18-lrmi-gentoo-cflags.patch
 }
 
 src_compile() {
+	filter-flags -fPIC
 
-	filter-flags "-fPIC"
-
-	make OPTIMIZE="${CFLAGS}" static \
-		|| die "Failed to build static libraries!"
+	# First build static
+	make OPTIMIZE="${CFLAGS}" static || die "Failed to build static libraries!"
+	# Have to remove for shared to build ...
 	rm -f src/svgalib_helper.h
-	make OPTIMIZE="${CFLAGS}" shared textutils lrmi utils \
+	# Then build shared ...
+	make OPTIMIZE="${CFLAGS}" shared || die "Failed to build shared libraries!"
+	# Missing in some cases ...
+	ln -s libvga.so.${PV} sharedlib/libvga.so
+	# Build lrmi and tools ...
+	make OPTIMIZE="${CFLAGS}" LDFLAGS="-L../sharedlib" \
+		textutils lrmi utils \
 		|| die "Failed to build libraries and utils!"
 	# Build the gl stuff tpp
 	make OPTIMIZE="${CFLAGS}" -C gl || die "Failed to build gl!"
 	make OPTIMIZE="${CFLAGS}" -C gl libvgagl.so.${PV} \
 		|| die "Failed to build libvgagl.so.${PV}!"
+	# Missing in some cases ...
+	ln -s libvgagl.so.${PV} sharedlib/libvgagl.so
 	rm -f src/svgalib_helper.h
 	make OPTIMIZE="${CFLAGS}" -C src libvga.so.${PV} \
 		|| die "Failed to build libvga.so.${PV}!"
 	cp -a src/libvga.so.${PV} sharedlib/
-	make OPTIMIZE="${CFLAFS}" LDFLAGS='-L ../sharedlib' \
+	# Build threeDKit ...
+	make OPTIMIZE="${CFLAFS}" LDFLAGS='-L../sharedlib' \
 		-C threeDKit lib3dkit.a || die "Failed to build threeDKit!"
+	# Build demo's ...
+	make OPTIMIZE="${CFLAGS} -I../gl" LDFLAGS='-L../sharedlib' \
+		demoprogs || die "Failed to build demoprogs!"
 
-	if ! use build ; then
-		# for now we dont build the module at all #42522
-		if [ 0 -eq 1 ] ; then
-			cd ${S}/kernel/svgalib_helper
+	if ! use build && kernel_supports_modules
+	then
+		cd ${S}/kernel/svgalib_helper
+		if [[ `KV_to_int ${KV}` -lt `KV_to_int 2.6.6` ]] ; then
 			env -u ARCH \
-				make -C /usr/src/linux SUBDIRS=`pwd` clean modules \
-				|| die "Failed to build kernel module!"
-			cd ${S}
+				make -f Makefile.alt INCLUDEDIR="/usr/src/linux/include" \
+					clean modules || die "Failed to build kernel module!"
+		else
+			env -u ARCH make || die "Failed to build kernel module!"
 		fi
+		cd ${S}
 	fi
-
-	make OPTIMIZE="${CFLAGS}" LDFLAGS='-L ../sharedlib' demoprogs \
-		|| die "Failed to build demoprogs!"
 
 	cp Makefile Makefile.orig
 	sed -e 's/\(install: $(INSTALLAOUTLIB) \)installheaders \(.*\)/\1\2/g' \
@@ -82,8 +95,21 @@ src_install() {
 	dodir /etc/svgalib /usr/{include,lib,bin,share/man}
 
 	make TOPDIR=${D} OPTIMIZE="${CFLAGS}" \
-		INCLUDEDIR="/usr/src/linux/include" install installmodule \
-		|| die "Failed to install svgalib!"
+		install || die "Failed to install svgalib!"
+	if ! use build && kernel_supports_modules
+	then
+		cd ${S}/kernel/svgalib_helper
+		if [[ `KV_to_int ${KV}` -lt `KV_to_int 2.6.6` ]] ; then
+			env -u ARCH \
+				make -f Makefile.alt TOPDIR=${D} \
+					INCLUDEDIR="/usr/src/linux/include" \
+					modules_install || die "Failed to install svgalib module!"
+		else
+			insinto /lib/modules/${KV}/kernel/misc
+			doins svgalib_helper.ko
+		fi
+		cd ${S}
+	fi
 
 	insinto /usr/include
 	doins gl/vgagl.h
@@ -113,7 +139,7 @@ src_install() {
 	doexe ${THREED_PROGS}
 
 	cd ${S}
-	dodoc 0-README LICENSE
+	dodoc 0-README
 	cd ${S}/doc
 	dodoc CHANGES DESIGN TODO
 	docinto txt

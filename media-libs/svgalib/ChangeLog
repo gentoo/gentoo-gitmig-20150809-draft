@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.39 2004/06/19 07:12:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.40 2004/06/23 02:56:28 vapier Exp $
+
+*svgalib-1.9.19 (22 Jun 2004)
+
+  22 Jun 2004; Mike Frysinger <vapier@gentoo.org>
+  -files/svgalib-1.9.18-linux2.6.patch, +files/svgalib-1.9.19-gentoo.patch,
+  +files/svgalib-1.9.19-linux2.6.patch, svgalib-1.9.18-r1.ebuild,
+  -svgalib-1.9.18.ebuild, +svgalib-1.9.19.ebuild:
+  Version bumpage and cleanup #54465 by yuntaku@sunny-net.ne.jp.
 
   19 Jun 2004; Mike Frysinger <vapier@gentoo.org>
   +files/svgalib-1.9.18-lrmi-gentoo-cflags.patch,

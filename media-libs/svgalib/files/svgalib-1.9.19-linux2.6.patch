@@ -1,64 +1,7 @@
-diff -urpN svgalib-1.9.18/kernel/svgalib_helper/Makefile svgalib-1.9.18.new/kernel/svgalib_helper/Makefile
---- svgalib-1.9.18/kernel/svgalib_helper/Makefile	2004-02-23 00:47:43.616320424 +0200
-+++ svgalib-1.9.18.new/kernel/svgalib_helper/Makefile	2004-02-23 00:47:58.475061552 +0200
-@@ -13,15 +13,32 @@ EXTRA_CFLAGS := -DSVGALIB_HELPER_MAJOR=$
- 
- ifeq ($(PATCHLEVEL),4)
-   include $(TOPDIR)/Rules.make
-+  OBJEXT := o
-+else
-+  OBJEXT := ko
- endif
- 
- else
- 
--VER    = $(shell uname -r)
-+# Extract version number from headers.
-+VER = $(shell awk -F\" '/REL/ {print $$2}' $(INCLUDEDIR)/linux/version.h 2>/dev/null)
-+
-+# Use version of current running kernel
-+ifeq ($(VER),)
-+  VER = $(shell uname -r)
-+endif
-+
-+PATCHLEVEL := $(shell echo $(VER) | cut -d. -f2)
- KDIR	:= /lib/modules/$(VER)/build
- PWD	:= $(shell pwd)
- TARGET  := svgalib_helper
- 
-+ifeq ($(PATCHLEVEL),4)
-+  OBJEXT := o
-+else
-+  OBJEXT := ko
-+endif
-+
- default:
- 	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules
- 
-@@ -49,4 +66,4 @@ install: modules_install
- 
- modules_install: $(TARGET).o
- 	mkdir -p $(TOPDIR)/lib/modules/$(VER)/kernel/misc
--	install -m 0644 -c $(TARGET).o $(TOPDIR)/lib/modules/$(VER)/kernel/misc
-+	install -m 0644 -c $(TARGET).$(OBJEXT) $(TOPDIR)/lib/modules/$(VER)/kernel/misc
 diff -urpN svgalib-1.9.18/kernel/svgalib_helper/kernel26compat.h svgalib-1.9.18.new/kernel/svgalib_helper/kernel26compat.h
 --- svgalib-1.9.18/kernel/svgalib_helper/kernel26compat.h	2003-10-04 15:42:01.000000000 +0200
 +++ svgalib-1.9.18.new/kernel/svgalib_helper/kernel26compat.h	2004-02-23 00:41:03.176196576 +0200
-@@ -9,9 +12,11 @@
- 
- # define my_io_remap_page_range(vma, start, ofs, len, prot) io_remap_page_range(start,ofs,len,prot)
- 
-+# ifndef IRQ_NONE
- typedef void irqreturn_t;
--# define IRQ_NONE
--# define IRQ_HANDLED
-+#  define IRQ_NONE
-+#  define IRQ_HANDLED
-+# endif
- 
- #else /* Kernel 2.6 */
- 
-@@ -43,9 +43,36 @@ static inline int devfs_unregister_chrde
+@@ -52,6 +52,33 @@ static inline int devfs_unregister_chrde
  }
  #endif
  
@@ -89,17 +32,13 @@ diff -urpN svgalib-1.9.18/kernel/svgalib_helper/kernel26compat.h svgalib-1.9.18.
 +#  define SLH_SYSFS_UNREGISTER
 +#endif
 +
- 
- /* Our main.c really do not like MINOR from 2.6 kernels ... */
--#if (defined MINOR) && (!defined KERNEL_2_6)
-+#if (defined MINOR)
+ #if (defined MINOR)
  # define my_minor(x) MINOR(x)
  #else
- # define my_minor(x) minor(x)
 diff -urpN svgalib-1.9.18/kernel/svgalib_helper/main.c svgalib-1.9.18.new/kernel/svgalib_helper/main.c
 --- svgalib-1.9.18/kernel/svgalib_helper/main.c	2003-10-04 12:34:20.000000000 +0200
 +++ svgalib-1.9.18.new/kernel/svgalib_helper/main.c	2004-02-23 00:42:25.490682872 +0200
-@@ -53,6 +53,10 @@ static int irqs[MAX_NR_DEVICES];
+@@ -51,6 +51,10 @@ static int irqs[MAX_NR_DEVICES];
  static devfs_handle_t devfs_handle;
  #endif
  
@@ -110,7 +49,7 @@ diff -urpN svgalib-1.9.18/kernel/svgalib_helper/main.c svgalib-1.9.18.new/kernel
  static int check_io_range(int port, int device) {
      return 1;
  }
-@@ -502,6 +506,7 @@ int init_module(void)
+@@ -467,6 +471,7 @@ int init_module(void)
  {
      int result, i, j;
      struct pci_dev *dev=NULL;
@@ -171,12 +110,12 @@ diff -urpN svgalib-1.9.18/kernel/svgalib_helper/main.c svgalib-1.9.18.new/kernel
              if((sh_pci_devs[num_devices]=kmalloc(sizeof(struct sh_pci_device),GFP_KERNEL))==NULL) {
                  goto nomem_error;
 @@ -581,6 +589,10 @@ int init_module(void)
-                 }
-             }
-             vga_init_vsync(sh_pci_devs[num_devices]);
+ 			sh_pci_devs[num_devices]->startad=-1;
+ #endif
+ 			sh_pci_devs[num_devices]->opencount=0;
 +
-+            sprintf(name, "svga%d", num_devices);
-+            SLH_SYSFS_ADD_DEVICE(name, num_devices);
++			sprintf(name, "svga%d", num_devices);
++			SLH_SYSFS_ADD_DEVICE(name, num_devices);
 +
              num_devices++;
          }
