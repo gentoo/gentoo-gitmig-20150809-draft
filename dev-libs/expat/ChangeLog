@@ -1,29 +1,30 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.7 2002/09/01 18:48:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.8 2002/11/11 16:14:46 karltk Exp $
+
+*expat-1.95.5 (11 Nov 2002)
+
+  11 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org> expat-1.95.5.ebuild files/digest-expat-1.95.5 :
+  New upstream version.
 
 *expat-1.95.4 (23 Jul 2002)
 
   01 Sep 2002; George Shapovalov <george@gentoo.org> expat-1.95.4.ebuild :
-
   fixed man page install location
 
   08 Aug 2002; Seemant Kulleen <seemant@gentoo.org> expat-1.95.4.ebuild :
-
   Made more FHS compliant.
 
   23 Jul 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
 
   23 Jul 2002; Arcady Genkin <agenkin@thpoon.com> expat-1.95.4.ebuild :
-
   Version bump.
 
 *expat-1.95.3 (10 Jul 2002)
 
   10 Jul 2002; Seemant Kulleen <seemant@gentoo.org> expat-1.95.3.ebuild
   files/digest-expat-1.95.3 :
-
   Version bump.  Also, SRC_URI changed to use sourceforge mirror.  LICENSE,
   SLOT and KEYWORDS added.  Thanks to: gentoo@gonzo.ch (Roman Weber) in bug
   #4797
@@ -31,16 +32,10 @@
 *expat-1.95.2 (25 Mar 2002)
 
   25 Mar 2002; Donny Davies <woodchip@gentoo.org> expat-1.95.2.ebuild :
-
   Update to latest release.  Fixed to install into ${D}, previously it didnt.
   Parallel make is busted, s/emake/make/.  Fixed html docs.
 
 *expat-1.95.1-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+  Added initial ChangeLog.
