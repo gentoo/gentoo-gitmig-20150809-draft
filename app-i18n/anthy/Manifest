@@ -3,7 +3,9 @@ MD5 110027f473a759d42095c0b178b41f19 metadata.xml 846
 MD5 9de87e6c84f6e6715c969bda90a7df1a ChangeLog 1630
 MD5 37faaf1168c495cd077d1cc376cc1537 anthy-4507.ebuild 1925
 MD5 e88d55217b9c935e727fd2b92a9b0e89 anthy-4515.ebuild 1926
+MD5 e2bdbdaedf862f65ebd3aed38f40a9df anthy-4519.ebuild 1729
 MD5 83e271d277525e627be3756f01c7010e files/digest-anthy-4300b 64
 MD5 d91fcb424ec63b588900d2d88a8bcee2 files/50anthy-gentoo.el 99
 MD5 7bbcd511928477630332c6bd34c6e528 files/digest-anthy-4507 63
 MD5 8d9909abec0c2c896ebb184e5f1b2af9 files/digest-anthy-4515 63
+MD5 7cc76494f7d2185070a6b156a13b3f39 files/digest-anthy-4519 63
