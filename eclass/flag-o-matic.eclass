@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.71 2004/10/01 10:00:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.72 2004/10/09 18:28:46 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -10,6 +10,9 @@ INHERITED="$INHERITED $ECLASS"
 # Please leave ${IUSE} in this until portage .51 is stable, otherwise
 # IUSE gets clobbered.
 IUSE="${IUSE} debug"
+
+# need access to emktemp()
+inherit eutils
 
 #
 #### filter-flags <flags> ####
@@ -265,7 +268,7 @@ strip-flags() {
 
 test_flag() {
 	local cc=${CC:-gcc} ; cc=${cc%% *}
-	if ${cc} -S -xc "$@" -o /dev/null /dev/null &>/dev/null; then
+	if ${cc} -S -xc "$@" -o "$(emktemp)" /dev/null &>/dev/null; then
 		printf "%s\n" "$*"
 		return 0
 	fi
@@ -345,10 +348,10 @@ has_m64() {
 	# actually -WORKS-. non-multilib gcc will take both -m32 and -m64!
 	# please dont replace this function with test_flag in some future
 	# clean-up!
-	temp=`mktemp`
+	local temp="$(emktemp)"
 	echo "int main() { return(0); }" > ${temp}.c
-	${CC/ .*/} -m64 -o /dev/null ${temp}.c > /dev/null 2>&1
-	ret=$?
+	${CC/ .*/} -m64 -o "$(emktemp)" ${temp}.c > /dev/null 2>&1
+	local ret=$?
 	rm -f ${temp}.c
 	[ "$ret" != "1" ] && return 0
 	return 1
@@ -359,10 +362,10 @@ has_m32() {
 	# actually -WORKS-. non-multilib gcc will take both -m32 and -m64!
 	# please dont replace this function with test_flag in some future
 	# clean-up!
-	temp=`mktemp`
+	local temp="$(emktemp)"
 	echo "int main() { return(0); }" > ${temp}.c
-	${CC/ .*/} -m32 -o /dev/null ${temp}.c > /dev/null 2>&1
-	ret=$?
+	${CC/ .*/} -m32 -o "$(emktemp)" ${temp}.c > /dev/null 2>&1
+	local ret=$?
 	rm -f ${temp}.c
 	[ "$ret" != "1" ] && return 0
 	return 1
