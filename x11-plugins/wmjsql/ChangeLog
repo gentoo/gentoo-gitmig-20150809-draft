@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmjsql
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmjsql/ChangeLog,v 1.1 2004/07/17 02:07:08 s4t4n Exp $
+
+*wmjsql-0.5 (17 Jul 2004)
+
+  17 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmjsql-0.5.ebuild:
+  Initial import. Thanks to Przemyslaw Maciag. Closes #54558.
+
