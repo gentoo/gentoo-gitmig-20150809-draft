@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/xview-3.2.ebuild,v 1.2 2003/08/01 22:58:04 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/xview-3.2.ebuild,v 1.3 2003/08/01 23:02:33 murphy Exp $
 
 DESCRIPTION="The X Window-System-based Visual/Integrated Environment for Workstations"
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/libs/X/xview/"
@@ -20,7 +20,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/libs/X/xview/${PN}.src.tar.gz
 S=${WORKDIR}/${PN}
 LICENSE="sun-openlook"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~mips ~sparc  ~x86"
+KEYWORDS="~alpha ~arm ~amd64 ~hppa ~ppc ~sparc x86"
 DEPEND="virtual/x11"
 
 src_unpack() {
