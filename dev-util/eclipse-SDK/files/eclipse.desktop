@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Eclipse
-Comment=A Java Development Environment
-Icon=/opt/eclipse/icon.xpm
-Exec=/opt/eclipse/eclipse
-Terminal=false
-Type=Application
-StartupNotify=false
