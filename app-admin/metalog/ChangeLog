@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.27 2004/02/25 03:21:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.28 2004/03/09 23:08:58 agriffis Exp $
+
+  09 Mar 2004; <agriffis@gentoo.org> metalog-0.8_pre20031130.ebuild:
+  stable on alpha and ia64
 
   24 Feb 2004; Guy Martin <gmsoft@gentoo.org> metalog-0.8_pre20031130.ebuild:
   Marked stable on hppa.
