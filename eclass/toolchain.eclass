@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.21 2004/10/03 19:44:59 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.22 2004/10/03 22:11:40 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -1077,12 +1077,9 @@ create_gcc_env_entry() {
 	if [ "$1" == "" ] ; then
 		gcc_envd_file="${D}${gcc_envd_base}"
 		gcc_specs_file="${LIBPATH}/specs"
-	elif [ "$1" == "vanilla" ] ; then
-		gcc_envd_file="${D}${gcc_envd_base}-vanilla"
-		gcc_specs_file="${LIBPATH}/vanilla.specs"
-	elif [ "$1" == "hardened" ] ; then
-		gcc_envd_file="${D}${gcc_envd_base}-hardened"
-		gcc_specs_file="${LIBPATH}/hardened.specs"
+	else
+		gcc_envd_file="${D}${gcc_envd_base}-$1"
+		gcc_specs_file="${LIBPATH}/$1.specs"
 	fi
 
 	echo "PATH=\"${BINPATH}\"" > ${gcc_envd_file}
