@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.18.ebuild,v 1.3 2002/12/14 23:20:49 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.18.ebuild,v 1.4 2003/01/13 02:03:52 raker Exp $
 
 IUSE="tcltk"
 
@@ -24,7 +24,7 @@ src_compile() {
 		--infodir=/usr/share/info \
 		${myconf} \
 		--mandir=${D}/usr/share/man || die "./configure failed"
-	emake || die
+	make || die
 }
 
 src_install () {

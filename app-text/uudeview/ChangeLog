@@ -1,10 +1,13 @@
 # ChangeLog for app-text/uudeview
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.5 2002/12/13 10:56:21 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.6 2003/01/13 02:03:52 raker Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *uudeview-0.5.18.ebuild (08 Nov 2002)
+
+  12 Jan 2003; Nick Hadaway <raker@gentoo.org> uudeview-0.5.18.ebuild :
+  Changed from emake to make.
 
   08 Nov 2002; Hanno Boeck <hanno@gentoo.org> uudeview-0.5.18.ebuild :
   New version.
