@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4.ebuild,v 1.2 2003/02/13 12:38:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r1.ebuild,v 1.1 2003/04/18 14:22:13 malverian Exp $
 
 MY_P=${P/transfig-/transfig.}
 S=${WORKDIR}/${MY_P}
@@ -19,13 +19,14 @@ DEPEND="virtual/x11
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}.patch
+	epatch ${FILESDIR}/${P}.patch
 }
 
 src_compile() {
 	xmkmf || die
 	make Makefiles || die
-	make || die
+
+	emake || die
 }
 
 src_install() {

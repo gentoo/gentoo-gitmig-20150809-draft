@@ -1,7 +1,21 @@
-diff -ru transfig.3.2.4/fig2dev/Imakefile.org transfig.3.2.4/fig2dev/Imakefile
---- transfig.3.2.4/fig2dev/Imakefile.org	2003-01-14 09:04:09.000000000 +0000
-+++ transfig.3.2.4/fig2dev/Imakefile	2003-01-14 09:04:18.000000000 +0000
-@@ -130,7 +130,7 @@
+diff -ru transfig.3.2.4/fig2dev/Imakefile new.transfig/fig2dev/Imakefile
+--- transfig.3.2.4/fig2dev/Imakefile	2002-12-19 12:33:44.000000000 -0500
++++ new.transfig/fig2dev/Imakefile	2003-04-18 10:07:14.000000000 -0400
+@@ -20,7 +20,7 @@
+ XCOMM You should point XFIGLIBDIR to the same directory you did when you compiled
+ XCOMM and installed xfig.
+ 
+-XFIGLIBDIR =	/usr/local/lib/X11/xfig
++XFIGLIBDIR =	/usr/lib/X11/xfig
+ 
+ XCOMM ******
+ XCOMM If your system has the strerror() function (doesn't have sys_errlist) then
+@@ -126,11 +126,11 @@
+ 
+ #ifdef I18N
+ I18N_DEFS = -DI18N 
+-FIG2DEV_LIBDIR = /usr/local/lib/fig2dev
++FIG2DEV_LIBDIR = /usr/lib/X11/fig2dev
  I18N_DEV_DEFS = $(I18N_DEFS) -DFIG2DEV_LIBDIR=\\\"$(FIG2DEV_LIBDIR)\\\"
  
  install::
@@ -10,3 +24,24 @@ diff -ru transfig.3.2.4/fig2dev/Imakefile.org transfig.3.2.4/fig2dev/Imakefile
  	$(INSTALL) -c dev/japanese.ps $(DESTDIR)$(FIG2DEV_LIBDIR)
  	( cd $(DESTDIR)$(FIG2DEV_LIBDIR); \
  	  rm -f ja.ps ja_JP.ps ja_JP.ujis.ps ja_JP.eucJP.ps ja_JP.EUC.ps; \
+diff -ru transfig.3.2.4/fig2dev/Makefile.noimake new.transfig/fig2dev/Makefile.noimake
+--- transfig.3.2.4/fig2dev/Makefile.noimake	2002-12-18 17:58:00.000000000 -0500
++++ new.transfig/fig2dev/Makefile.noimake	2003-04-18 10:07:35.000000000 -0400
+@@ -830,7 +830,7 @@
+ # You should point XFIGLIBDIR to the same directory you did when you compiled
+ # and installed xfig.
+ 
+-XFIGLIBDIR =	/usr/local/lib/X11/xfig
++XFIGLIBDIR =	/usr/lib/X11/xfig
+ 
+ # ******
+ # If your system has the strerror() function (doesn't have sys_errlist) then
+@@ -925,7 +925,7 @@
+ # Comment out the next line if you have any problems with locale not being found
+ 
+ I18N_DEFS = -DI18N
+-FIG2DEV_LIBDIR = /usr/local/lib/fig2dev
++FIG2DEV_LIBDIR = /usr/lib/X11/fig2dev
+ I18N_DEV_DEFS = $(I18N_DEFS) -DFIG2DEV_LIBDIR=\\\"$(FIG2DEV_LIBDIR)\\\"
+ 
+ install::
