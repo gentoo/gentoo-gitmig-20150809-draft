@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.26 2005/02/12 09:07:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.27 2005/02/12 20:58:20 vapier Exp $
 
 GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~lv/GCC/"
 #GCC_MANPAGE_VERSION="none"
@@ -65,9 +65,7 @@ RDEPEND="virtual/libc
 	)"
 
 if [[ ${CATEGORY/cross-} != ${CATEGORY} ]]; then
-	RDEPEND="${RDEPEND}
-	         ${CATEGORY}/binutils
-	         !nocxx? ( >=${CATEGORY}/glibc-2.3.4.20040808-r1 )"
+	RDEPEND="${RDEPEND} ${CATEGORY}/binutils"
 fi
 
 DEPEND="${RDEPEND}
