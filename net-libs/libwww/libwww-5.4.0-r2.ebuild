@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.20 2004/07/11 15:35:03 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.21 2004/07/12 08:44:34 mr_bones_ Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-automake-gentoo.diff	# bug #41959
 	epatch ${FILESDIR}/${P}-disable-ndebug-gentoo.diff	# bug #50483
 
-	if use macos; then 
+	if use macos; then
 		glibtoolize -c -f || die "libtoolize failed"
 	else
 		libtoolize -c -f || die "libtoolize failed"
@@ -46,7 +46,7 @@ src_unpack() {
 }
 
 src_compile() {
-	
+
 	econf \
 		--enable-shared \
 		--enable-static \
@@ -55,10 +55,10 @@ src_compile() {
 		--with-expat \
 		`use_with mysql` \
 		`use_with ssl` \
-		|| die	
+		|| die
 
 	emake check-am || die
-	
+
 	use macos && echo "#undef HAVE_APPKIT_APPKIT_H" >> wwwconf.h
 
 	emake || die
