@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/wterm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/ChangeLog,v 1.2 2002/11/17 22:52:39 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/ChangeLog,v 1.3 2003/01/09 01:56:23 raker Exp $
+
+*wterm-6.2.9-r1 (08 Jan 2002)
+
+  08 Jan 2002; Nick Hadaway <raker@gentoo.org> wterm-6.2.9-r1.ebuild,
+  files/digest-wterm-6.2.9-r1 :
+  New ebuild which fixes man page location and adds some pixmaps and
+  tiffs.
 
 *wterm-6.2.9 (23 Oct 2002)
 
