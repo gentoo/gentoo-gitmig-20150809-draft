@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.4 2002/05/26 16:23:53 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.5 2002/06/10 19:56:29 danarmak Exp $
+
+  10 Jun 2002; Dan Armak <danarmak@gentoo.org> changelog:
+  
+  Add missing svgalib dep, close bug #3104.
 
 *kdeaddons-3.0.1 (24 May 2002)
 
