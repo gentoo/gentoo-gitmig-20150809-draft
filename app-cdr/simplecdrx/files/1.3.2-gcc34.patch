@@ -1,0 +1,95 @@
+diff -bur simplecdrx-1.3.2-orig/src/callbacks.c simplecdrx-1.3.2-new/src/callbacks.c
+--- simplecdrx-1.3.2-orig/src/callbacks.c	2003-12-26 06:04:49.000000000 +0100
++++ simplecdrx-1.3.2-new/src/callbacks.c	2004-11-28 13:04:18.000000000 +0100
+@@ -689,14 +689,14 @@
+ {
+   string filename_, time_total;
+   gchar *temp[2];
+-  char *temp_;
++  gchar *temp_;
+   if (r == -1)
+ 	  return;
+   if (tracks == 1)
+     return;
+   gtk_clist_get_text (GTK_CLIST (get_widget (main_win, "audio_list")), r, 0,
+ 		      &temp[0]);
+-  (gchar *) temp_ = temp[0];
++  temp_ = temp[0];
+   filename_ = temp_;
+ 
+   if (int (filename_.find (".mp3")) != -1
+@@ -946,7 +946,7 @@
+ on_delete_file_clicked (GtkButton * button, gpointer user_data)
+ {
+   gchar *temp_file[2];
+-  char *temp_ = NULL;
++  gchar *temp_ = NULL;
+   string tmp_file, tmp_dir, tmp;
+   int i;
+   if (total_members_file == -1)
+@@ -954,7 +954,7 @@
+ // Initializing localized lists 
+   gtk_clist_get_text (GTK_CLIST (get_widget (main_win, "data_master_list")),
+ 		      r1, 0, &temp_file[0]);
+-  (gchar *) temp_ = temp_file[0];
++  temp_ = temp_file[0];
+   
+   tmp_file = temp_;
+   tmp_dir = current_dir;
+diff -bur simplecdrx-1.3.2-orig/src/datacdops.cpp simplecdrx-1.3.2-new/src/datacdops.cpp
+--- simplecdrx-1.3.2-orig/src/datacdops.cpp	2003-12-26 06:04:49.000000000 +0100
++++ simplecdrx-1.3.2-new/src/datacdops.cpp	2004-11-28 13:06:47.000000000 +0100
+@@ -430,7 +430,7 @@
+ refresh_list()
+ {
+   gchar *temp[2];
+-  char *temp_;
++  gchar *temp_;
+   string tmp, tmp_curr, last_dir;
+   int i = 0;
+ 	int ii = 0;
+@@ -443,7 +443,7 @@
+       gtk_clist_get_text (GTK_CLIST
+ 			  (get_widget (main_win, "dir_master_list")), r, 0,
+ 			  &temp[0]);
+-      (gchar *) temp_ = temp[0];
++      temp_ = temp[0];
+       tmp = temp_;
+       if (tmp != "/" && tmp != "..")
+ 	tmp = current_dir + tmp + "/";
+@@ -778,7 +778,7 @@
+       int count = 1, cont;
+       gchar *temp[2];
+       gboolean overbrn;
+-      char *temp_;
++      gchar *temp_;
+       bool overburn;
+       string tmp, dirname = convert.randName ();
+       dirname = setupData1.tempdiraudio + "/" + dirname;
+@@ -798,7 +798,7 @@
+ 	  r = count - 1;
+ 	  gtk_clist_get_text (GTK_CLIST (get_widget (main_win, "audio_list")),
+ 			      r, 0, &temp[0]);
+-	  (gchar *) temp_ = temp[0];
++	  temp_ = temp[0];
+ 	  tmp = temp_;
+ 	  cont =
+ 	    master_aud.convertTracklist (count, tracks, tmp, setupData1,
+@@ -927,7 +927,7 @@
+ void remove_dir()
+ {  
+ 	gchar *temp_dir[2];
+-  char *temp__;
++  gchar *temp__;
+   string tmp_file, tmp_dir, tmp;
+   int i;
+   if (total_members_dir == -1)
+@@ -935,7 +935,7 @@
+ // Initializing localized lists and clearing file list
+   gtk_clist_get_text (GTK_CLIST (get_widget (main_win, "dir_master_list")),
+ 		      rowtemp, 0, &temp_dir[0]);
+-  (gchar *) temp__ = temp_dir[0];
++  temp__ = temp_dir[0];
+ 
+   tmp_dir = temp__;
+   if (tmp_dir == "/")

@@ -1,12 +1,23 @@
-MD5 5404d3fab7de2c7830427c394f52642a ChangeLog 2951
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 5e27cf83d75e590015fc998ca8f2dc0c simplecdrx-1.2.1.ebuild 1209
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 07733d5a9b2cb9800c874d6cff7d3587 simplecdrx-1.2.2.ebuild 1210
+MD5 6bbaae22f4982eb13af85ed0056a5ce8 ChangeLog 3093
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 666f9441af2e5439f206d91e2caf8a4b simplecdrx-1.3.2.ebuild 1195
 MD5 86087c36ecc80a4755836561d633b2fc simplecdrx-1.3.1.ebuild 1203
-MD5 c4f61a3bc28d407884407eb1dbc1e24f simplecdrx-1.3.2.ebuild 1102
-MD5 f2762ab596bf0fe451bc1e62cf45efcb files/digest-simplecdrx-1.2.1 69
-MD5 79258e2575b29b60451e9674678855f1 files/digest-simplecdrx-1.2.2 69
+MD5 5e27cf83d75e590015fc998ca8f2dc0c simplecdrx-1.2.1.ebuild 1209
 MD5 59d18c2a93cf208a577bcac4b15270ed files/digest-simplecdrx-1.3.1 69
-MD5 45d9721fbc3ab559de8dbe31f84b3fbc files/digest-simplecdrx-1.3.2 69
+MD5 f2762ab596bf0fe451bc1e62cf45efcb files/digest-simplecdrx-1.2.1 69
 MD5 efa005520ba1caa37badc23436faa715 files/simplecdrx.desktop 163
+MD5 79258e2575b29b60451e9674678855f1 files/digest-simplecdrx-1.2.2 69
 MD5 e853699018cfb6e086534751519dfccb files/simplecdrx.png 2533
+MD5 45d9721fbc3ab559de8dbe31f84b3fbc files/digest-simplecdrx-1.3.2 69
+MD5 52c8536196bf51985a2fde08c7921e0a files/1.3.2-gcc34.patch 2843
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBqcKr10xuJSrg3/sRAgL5AJ9rfWQF1TOtn3Fft+vJwkiv0XVDgwCeM7gP
+GSQMjRkrEtqvnTLVNO9NAbk=
+=smcG
+-----END PGP SIGNATURE-----
