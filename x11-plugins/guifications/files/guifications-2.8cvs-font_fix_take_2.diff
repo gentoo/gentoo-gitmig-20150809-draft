@@ -1,0 +1,19 @@
+Index: src/gf_gtk_utils.c
+===================================================================
+RCS file: /cvsroot/guifications/guifications2/src/gf_gtk_utils.c,v
+retrieving revision 1.2
+diff -u -p -r1.2 gf_gtk_utils.c
+--- src/gf_gtk_utils.c	1 Jan 2005 01:06:37 -0000	1.2
++++ src/gf_gtk_utils.c	8 Jan 2005 02:46:21 -0000
+@@ -94,6 +94,12 @@ gf_gtk_theme_get_font() {
+ 
+ 	style = gtk_rc_get_style(style_widget);
+ 
++	if(!pango_font_description_get_family(style->font_desc))
++		pango_font_description_set_family(style->font_desc, "Sans");
++
++	if(pango_font_description_get_size(style->font_desc) <= 0)
++		pango_font_description_set_size(style->font_desc, 10 * PANGO_SCALE);
++
+ 	return style->font_desc;
+ }

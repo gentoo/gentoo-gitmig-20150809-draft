@@ -2,5 +2,9 @@ MD5 b064fa23bab32696c0b4e7e4fa881fe0 ChangeLog 4244
 MD5 ef561a7c4bf0937ca8896c33015ff956 guifications-2.7.ebuild 835
 MD5 4963e54c0bba1b55104563e88ab5046d guifications-2.6.ebuild 834
 MD5 8d08e9a7e45330b731e02aadc8acb6fc metadata.xml 354
+MD5 c8ade3e791f24331edf80afac59634a6 guifications-2.7-r1.ebuild 996
 MD5 d0ea8d9dddea012a994a07427927c68e files/digest-guifications-2.7 69
 MD5 84647f96430d1bc05402a280fa68fded files/digest-guifications-2.6 69
+MD5 d0ea8d9dddea012a994a07427927c68e files/digest-guifications-2.7-r1 69
+MD5 b85a160efb3845b976bd04a204a8a4bb files/gf_notification.diff 745
+MD5 39dbb6d5053a23dc5ff31ee01d49f02d files/guifications-2.8cvs-font_fix_take_2.diff 700
