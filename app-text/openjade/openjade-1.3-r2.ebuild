@@ -1,13 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3-r1.ebuild,v 1.9 2001/06/08 01:08:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3-r2.ebuild,v 1.1 2001/11/10 01:54:29 hallski Exp $
 
-P=openjade-1.3
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Jade is an implemetation of DSSSL - an ISO standard for formatting SGML (and XML) documents"
-SRC_URI="http://download.sourceforge.net/openjade/"${A}
+SRC_URI="http://download.sourceforge.net/openjade/${P}.tar.gz"
 HOMEPAGE="http://openjade.sourceforge.net"
 
 DEPEND="virtual/glibc
@@ -19,20 +17,24 @@ RDEPEND="virtual/glibc
 
 src_compile() {                           
 
-  SGML_PREFIX=/usr/share/sgml
-  try ./configure --host=${CHOST} --prefix=/usr \
-	--enable-http \
-	--enable-default-catalog=/etc/sgml/catalog \
-	--enable-default-search-path=/usr/share/sgml \
-	--datadir=/usr/share/sgml/${P}
-  try make
+	SGML_PREFIX=/usr/share/sgml
+
+	./configure --host=${CHOST} 					\
+		    --prefix=/usr 					\
+		    --enable-http 					\
+		    --enable-default-catalog=/etc/sgml/catalog 		\
+		    --enable-default-search-path=/usr/share/sgml 	\
+		    --datadir=/usr/share/sgml/${P}
+	assert
+ 
+	make || die
 }
 
 src_install() {                               
 
   dodir /usr
   dodir /usr/lib
-  try make prefix=${D}/usr datadir=${D}/usr/share/sgml/${P} install
+  make prefix=${D}/usr datadir=${D}/usr/share/sgml/${P} install || die
   dosym openjade  /usr/bin/jade
   dosym onsgmls   /usr/bin/nsgmls
   dosym osgmlnorm /usr/bin/sgmlnorm
