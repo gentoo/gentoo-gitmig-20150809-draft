@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ifp-line/ifp-line-0.2.3.ebuild,v 1.2 2004/04/14 09:45:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ifp-line/ifp-line-0.2.3.ebuild,v 1.3 2004/04/14 09:45:51 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="iRiver iFP open-source driver"
 HOMEPAGE="http://ifp-driver.sourceforge.net/"
