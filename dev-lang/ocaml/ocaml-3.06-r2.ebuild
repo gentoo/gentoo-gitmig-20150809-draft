@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.06-r2.ebuild,v 1.1 2003/09/09 17:56:01 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.06-r2.ebuild,v 1.2 2003/10/03 00:21:34 agriffis Exp $
 
 inherit flag-o-matic eutils
 filter-flags "-fstack-protector"
@@ -11,7 +11,7 @@ SRC_URI="http://caml.inria.fr/distrib/${P}/${P}.tar.gz"
 
 LICENSE="QPL-1.0 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc alpha"
 IUSE="tcltk"
 
 DEPEND="virtual/glibc

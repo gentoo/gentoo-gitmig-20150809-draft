@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.14 2003/09/11 23:43:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.15 2003/10/03 00:21:34 agriffis Exp $
+
+  02 Oct 2003; Aron Griffis <agriffis@gentoo.org> ocaml-3.06-r2.ebuild,
+  ocaml-3.07_beta2.ebuild:
+  3.06-r2 is stable; 3.07_beta2 is testing on alpha
 
 *ocaml-3.07_beta2 (11 Sep 2003)
 
