@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/otcl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/ChangeLog,v 1.8 2004/06/25 02:07:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/ChangeLog,v 1.9 2004/07/28 00:46:49 robbat2 Exp $
+
+*otcl-1.8-r2 (27 Jul 2004)
+
+  27 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> otcl-1.8-r2.ebuild:
+  bug #57294.
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> otcl-1.8-r1.ebuild:
   Add die following econf for bug 48950
