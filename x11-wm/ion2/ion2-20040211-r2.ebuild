@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ion2-20040211-r2.ebuild,v 1.6 2004/06/24 23:42:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ion2-20040211-r2.ebuild,v 1.7 2004/06/28 02:26:18 agriffis Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/ion2-20040207-20040211.patch
 
-	if [ `use truetype` ]; then
+	if use truetype; then
 		mkdir xftde
 		cp de/{*.c,*.h,Makefile} xftde
 		( cd xftde && epatch ${FILESDIR}/xftde-20040207.patch )

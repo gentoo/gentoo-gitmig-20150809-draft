@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/ion2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.14 2004/06/24 23:42:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.15 2004/06/28 02:26:18 agriffis Exp $
+
+  27 Jun 2004; Aron Griffis <agriffis@gentoo.org> ion2-20040211-r2.ebuild,
+  ion2-20040211-r3.ebuild:
+  QA - fix use invocation
 
 *ion2-20040601 (01 Jun 2004)
 

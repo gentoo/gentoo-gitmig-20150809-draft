@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.14.ebuild,v 1.12 2004/06/24 23:40:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.14.ebuild,v 1.13 2004/06/28 02:25:31 agriffis Exp $
 
 MY_P="${PN}_${PV}.orig"
 S=${WORKDIR}/${MY_P/_/-}
@@ -21,7 +21,7 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	if [ -z "`use motif`" ]
+	if ! use motif
 	then
 		cp Makefile ${T}
 		sed "s:DEFINES += -DMWM_HINTS::" \
