@@ -1,6 +1,6 @@
-# ChangeLog for dev-perlXML-CatalogChangeLog/dev-perlXML-LibXSLTChangeLog
+# ChangeLog for dev-perl/XML-LibXSLT
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.10 2002/12/13 10:56:39 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.11 2002/12/17 19:34:46 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
