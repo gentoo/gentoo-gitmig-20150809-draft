@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.24_rc4.ebuild,v 1.6 2004/07/22 22:34:07 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.24_rc4.ebuild,v 1.7 2004/10/13 18:12:02 kugelfang Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ DEPEND="virtual/libc
 
 SLOT="0"
 LICENSE="MPL-1.1 LGPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 
 S=${WORKDIR}/libical-0.24
 
