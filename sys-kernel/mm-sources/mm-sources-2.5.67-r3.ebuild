@@ -1,11 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.5.66-r2.ebuild,v 1.1 2003/04/01 10:28:59 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.5.67-r3.ebuild,v 1.1 2003/04/14 20:27:28 sethbc Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
+
+inherit eutils 
 
 OKV=${PV}
 if [ "${PR}" != "r0" ]; then 
-	PATCH_URI="http://www.kernel.org/pub/linux/kernel/people/akpm/patches/2.5/${PV}/${PVR/r/mm}/${PVR/r/mm}-1.gz"
+	PATCH_URI="http://www.kernel.org/pub/linux/kernel/people/akpm/patches/2.5/${PV}/${PVR/r/mm}/${PVR/r/mm}.gz"
 fi
 KV=${PVR/r/mm}
 S=${WORKDIR}/linux-${KV}
@@ -41,8 +43,7 @@ src_unpack() {
 	if [ "${PATCH_URI}" ]; then
 		mv linux-${OKV} linux-${KV}
 		cd ${S}
-		zcat ${DISTDIR}/${PVR/r/mm}.gz | patch -p1 -l || \
-			die "akpm patch application failure"
+		epatch ${DISTDIR}/${PVR/r/mm}.gz
 		sed -e "s:^EXTRAVERSION.*$:EXTRAVERSION = -${PR/r/mm}:" \
 			Makefile > Makefile.new
 		mv Makefile.new Makefile
