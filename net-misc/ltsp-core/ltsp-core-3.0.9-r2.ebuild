@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-3.0.9-r2.ebuild,v 1.1 2003/06/26 07:56:50 frame Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-3.0.9-r2.ebuild,v 1.2 2003/07/31 23:01:40 lanius Exp $
 
 
 IUSE="gnome kde"
@@ -203,6 +203,16 @@ modify_gdm_gdm_conf()
 	fi
 }
 
+src_compile() {
+	if [ "`has sandbox ${FEATURES}`" ]; then
+		einfo
+		einfo '!!! You have to add FEATURES="-sandbox" to /etc/make.conf '
+		einfo '              in order to emerge ltsp-core             !!!'
+		einfo
+		die
+	fi
+}
+
 src_install() {
 	local XSERVERS="3dlabs 8514 agx fbdev i128 mach32 mach64 mach8 mono p9000 \
 					s3 s3v svga w32"
@@ -285,6 +295,8 @@ src_install() {
 	for empty_dir in dev oldroot proc root tmp ; do
 		keepdir /opt/ltsp/i386/${empty_dir}
 	done
+
+	rm -f ${D}/opt/ltsp/i386/etc/lts.conf
 }
 
 pkg_postinst() {

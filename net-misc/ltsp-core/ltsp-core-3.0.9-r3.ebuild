@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-3.0.7-r1.ebuild,v 1.4 2003/04/15 14:34:00 frame Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-3.0.9-r3.ebuild,v 1.1 2003/07/31 23:01:40 lanius Exp $
 
 
 IUSE="gnome kde"
@@ -8,9 +8,9 @@ IUSE="gnome kde"
 S=${WORKDIR}/${P}
 DESCRIPTION="LTSP - Linux Terminal Server Project"
 HOMEPAGE="http://www.ltsp.org/"
-SRC_URI="mirror://sourceforge/ltsp/ltsp_core-3.0.7-i386.tgz
-	mirror://sourceforge/ltsp/ltsp_kernel-3.0.5-i386.tgz
-	mirror://sourceforge/ltsp/ltsp_x_core-3.0.1-i386.tgz
+SRC_URI="mirror://sourceforge/ltsp/ltsp_core-3.0.9-i386.tgz
+	mirror://sourceforge/ltsp/ltsp_kernel-3.0.10-i386.tgz
+	mirror://sourceforge/ltsp/ltsp_x_core-3.0.4-i386.tgz
 	mirror://sourceforge/ltsp/ltsp_x_fonts-3.0.0-i386.tgz
 	mirror://sourceforge/ltsp/ltsp_x336_3dlabs-3.0.0-i386.tgz
 	mirror://sourceforge/ltsp/ltsp_x336_8514-3.0.0-i386.tgz
@@ -40,7 +40,7 @@ DEPEND="${RDEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 ltsp_strip_config() {
 	local SOURCE="/"$1
@@ -203,6 +203,16 @@ modify_gdm_gdm_conf()
 	fi
 }
 
+src_compile() {
+	if [ "`has sandbox ${FEATURES}`" ]; then
+		einfo
+		einfo '!!! You have to add FEATURES="-sandbox" to /etc/make.conf '
+		einfo '              in order to emerge ltsp-core             !!!'
+		einfo
+		die
+	fi
+}
+
 src_install() {
 	local XSERVERS="3dlabs 8514 agx fbdev i128 mach32 mach64 mach8 mono p9000 \
 					s3 s3v svga w32"
@@ -285,6 +295,8 @@ src_install() {
 	for empty_dir in dev oldroot proc root tmp ; do
 		keepdir /opt/ltsp/i386/${empty_dir}
 	done
+
+	rm -f ${D}/opt/ltsp/i386/etc/lts.conf
 }
 
 pkg_postinst() {
@@ -321,7 +333,11 @@ pkg_postinst() {
 	einfo " | TFTP FROM XINETD -------------| /etc/init.d/xinetd start -----------------------------| "
 	einfo " |-------------------------------| rc-update add xinetd default (for start at boot) -----| "
 	einfo " |---------------------------------------------------------------------------------------| "
+	einfo " | NFS --------------------------| /etc/init.d/nfs start --------------------------------| "
+	einfo " |-------------------------------| rc-update add nfs default (for start at boot) --------| "
+	einfo " |---------------------------------------------------------------------------------------| "
 	einfo "*******************************************************************************************"
 	einfo " | FOR MORE INFORMATION AND COMPLETE SET OF DOCUMENTATION GO TO WWW.LTSP.ORG  ***********| "
 	einfo "*******************************************************************************************"	
 }
+
