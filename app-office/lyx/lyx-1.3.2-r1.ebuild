@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.2-r1.ebuild,v 1.7 2003/09/29 15:21:15 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.2-r1.ebuild,v 1.8 2003/10/02 11:09:54 obz Exp $
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 HOMEPAGE="http://www.lyx.org/"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.bz2
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc ~alpha"
 IUSE="nls cups qt debug"
 
 DEPEND="virtual/x11
