@@ -1,4 +1,14 @@
-MD5 d52c3abd41b0c26d30860a8f7066bd54 exolabtools-1.0_p20050205.ebuild 961
-MD5 083ce75be5f0ec4dddd8795a3b67ab6a ChangeLog 435
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 653e34bb5ecc5b93e770b4f1038240b4 exolabtools-1.0_p20050205.ebuild 967
+MD5 710778a72631f28dfddd1b63c91c3587 ChangeLog 555
 MD5 8e2b4680eb3eb7e08537642cade5c598 files/digest-exolabtools-1.0_p20050205 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQa14KRy60XGEcJIRAojfAJ0SY5/UquIY8BWPf5UBBSM2D6YWMgCdHowk
+hG1rMF6PHN2k58nR541NcvQ=
+=tuuA
+-----END PGP SIGNATURE-----
