@@ -1,4 +1,14 @@
-MD5 783a99cf64cffd08619bd6290a146060 pup-1.1.ebuild 791
-MD5 f6785587fd13e0dcc56b6221103a39d4 ChangeLog 545
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e296c7884ce4f1611202f9b2763bf46a pup-1.1.ebuild 798
+MD5 49cfe76be1a9c2409a30f8df2122609a ChangeLog 626
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 0eeda866c9a1cba9e650c90825a3a652 files/digest-pup-1.1 137
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCN03pevY57Fted3ERAhrjAJ9Hg8AT+aGbvqIvie4WTuLIfygd1wCgwSeM
+Hvr2GjesvBhig8N28iSIa50=
+=A6Bd
+-----END PGP SIGNATURE-----
