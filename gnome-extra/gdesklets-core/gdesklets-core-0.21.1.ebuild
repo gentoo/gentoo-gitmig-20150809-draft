@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.21.1.ebuild,v 1.1 2003/09/11 15:53:55 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.21.1.ebuild,v 1.2 2003/09/11 23:32:28 msterret Exp $
 
 inherit gnome2
 
@@ -31,18 +31,15 @@ USE_DESTDIR="1"
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README TODO"
 
 src_unpack( ) {
-
 	unpack ${A}
 	cd ${S}
 	# patch to prevent building the External and FontSelector
 	# sensors included here, because we're using the ones
 	# from x11-plugins/
 	epatch ${FILESDIR}/gdesklets-core-0.21-Sensors.patch
-
 }
 
 src_install( ) {
-
 	gnome2_src_install
 	# there are two links that end up pointing inside the
 	# image that we need to fix up here
@@ -53,7 +50,6 @@ src_install( ) {
 	# and install the display navigation desktop
 	insinto /usr/share/applications
 	doins ${FILESDIR}/gdesklets-displays.desktop
-	
 }
 
 pkg_postinst( ) {
@@ -73,6 +69,4 @@ pkg_postinst( ) {
 	ewarn "you may need to re-emerge Displays that complain on"
 	ewarn "startup"
 	echo ""
-
 }
-
