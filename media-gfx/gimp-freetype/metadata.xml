@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>gnome</herd>
+  <herd>gnome</herd>
+    <maintainer>
+    <email>leonardop@gentoo.org</email>
+    <name>Leonardo Boshell</name>
+  </maintainer>
+  <longdescription>
+    GIMP-FreeType is a plug-in for The GIMP that uses the freetype2
+    library to do font rendering. With GIMP version 2.0, GIMP's text
+    rendering has improved a lot and this plug-in became less
+    important.  However there are still some things that only this
+    plug-in can do; so it may still be useful sometimes.
+  </longdescription>
 </pkgmetadata>

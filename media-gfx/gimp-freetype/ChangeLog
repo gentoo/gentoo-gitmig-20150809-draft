@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp-freetype
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/ChangeLog,v 1.13 2004/07/07 21:57:50 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/ChangeLog,v 1.14 2004/08/02 19:36:43 leonardop Exp $
+
+  02 Aug 2004; L. Boshell <leonardop@gentoo.org> gimp-freetype-0.5.ebuild:
+  Updated intltool dependency to be >=0.29. See bug #58786.
 
   07 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> gimp-freetype-0.5.ebuild:
   Marked ~amd64.
