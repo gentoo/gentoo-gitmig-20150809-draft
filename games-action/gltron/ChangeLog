@@ -1,6 +1,6 @@
-# ChangeLog for app-games/gltron
+# ChangeLog for games-action/gltron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/ChangeLog,v 1.2 2003/09/10 20:29:18 vapier Exp $
 
   06 Jun 2003; Martin Holzer <mholzer@gentoo.org> gltron-0.62.ebuild:
   Added sdl-sound to RDPEND. Closes #20158.
