@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/cobalt/2004.2/make.defaults,v 1.6 2004/10/08 16:03:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/cobalt/2004.2/make.defaults,v 1.7 2004/11/03 14:44:04 vapier Exp $
 
 ARCH="mips"
 
@@ -23,6 +23,5 @@ CXXFLAGS=${CFLAGS}
 
 ACCEPT_KEYWORDS="mips"
 
-USE="slang readline gpm berkdb f77 gdbm tcpd pam libwww ssl nls perl python sdl cobalt -n32 -n64 -multilib nomultilib"
-GRP_STAGE23_USE="slang readline gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl cobalt -n32 -n64 -multilib nomultilib"
-
+USE="readline gpm berkdb f77 gdbm tcpd pam libwww ssl nls perl python sdl cobalt -n32 -n64 -multilib nomultilib"
+GRP_STAGE23_USE="readline gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl cobalt -n32 -n64 -multilib nomultilib"
