@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/di/di-3.8.ebuild,v 1.5 2003/08/11 16:21:26 iggy Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/di/di-3.8.ebuild,v 1.6 2003/09/08 08:03:59 msterret Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Disk Information Utility"

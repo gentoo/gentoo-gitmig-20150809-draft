@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.3 2003/09/07 02:55:33 msterret Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.4 2003/09/08 08:02:45 msterret Exp $
 
 # plasmaroo@plasmaroo.squirrelserver.co.uk, datestamp Tue Aug 12, 11:11 PM
 

@@ -1,6 +1,6 @@
-# Copyright 2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/mawk-1.3.3.ebuild,v 1.2 2003/06/21 21:19:40 drobbins Exp $
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/mawk-1.3.3.ebuild,v 1.3 2003/09/08 08:04:44 msterret Exp $
 
 DESCRIPTION="An (often faster than gawk) awk-interpreter."
 SRC_URI="ftp://ftp.whidbey.net/pub/brennan/${P}.tar.gz"
