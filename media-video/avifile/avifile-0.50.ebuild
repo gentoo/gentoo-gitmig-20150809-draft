@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.50.ebuild,v 1.2 2000/12/04 13:20:31 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.50.ebuild,v 1.3 2000/12/11 17:14:14 achim Exp $
 
 A="${P}.tar.gz binaries.zip"
 S=${WORKDIR}/${P}
@@ -11,9 +11,9 @@ SRC_URI="http://divx.euro.ru/${P}.tar.gz
 
 HOMEPAGE="http://divx.euro.ru/"
 
-DEPEND=">=kde-base/qt-x11-2.1.1
+DEPEND=">=x11-libs/qt-x11-2.2.2
 	>=media-video/xmps-0.1.3"
-RDEPEND=">=kde-base/qt-x11-2.1.1
+RDEPEND=">=x11-libs/qt-x11-2.2.2
 	 >=media-libs/libsdl-1.1.5
 	 >=x11-libs/gtk+-1.2.8
 	 >=media-sound/esound-0.2.19"
