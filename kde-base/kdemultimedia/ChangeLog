@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.122 2004/09/03 04:34:20 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.123 2004/09/09 16:33:33 caleb Exp $
+
+  09 Sep 2004; Caleb Tennis <caleb@gentoo.org> -kdemultimedia-3.2.1.ebuild,
+  -kdemultimedia-3.2.2.ebuild:
+  removing old versions, marking 3.3.0 x86 stable
 
   02 Sep 2004; Tom Gall <tgall@gentoo.org> kdemultimedia-3.3.0.ebuild:
   added ~ppc64, bug 62685
