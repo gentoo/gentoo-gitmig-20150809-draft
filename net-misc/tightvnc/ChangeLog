@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.26 2004/02/27 11:20:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.27 2004/03/02 23:52:19 weeve Exp $
+
+  02 Mar 2004; Jason Wever <weeve@gentoo.org> tightvnc-1.2.9-r1.ebuild:
+  Stable on sparc.
 
   27 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> tightvnc-1.2.9-r1.ebuild:
   x86 unmask.
