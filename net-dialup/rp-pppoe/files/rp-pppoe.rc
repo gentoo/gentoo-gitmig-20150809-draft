@@ -9,12 +9,12 @@ depend() {
  
 start() { 
         ebegin "Starting adsl" 
-        start-stop-daemon --start --quiet --exec /usr/sbin/adsl-start --background
+        start-stop-daemon --start --quiet --exec /usr/sbin/adsl-start
         eend $? 
 } 
  
 stop() { 
         ebegin "Stopping adsl" 
-        start-stop-daemon --start --quiet --exec /usr/sbin/adsl-stop --background
+        start-stop-daemon --start --quiet --exec /usr/sbin/adsl-stop
         eend $? 
 }
