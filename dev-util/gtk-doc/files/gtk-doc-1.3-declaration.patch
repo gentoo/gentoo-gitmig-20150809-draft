@@ -1,0 +1,14 @@
+diff -NurdB gtk-doc-1.3-orig/gtk-doc.dcl gtk-doc-1.3/gtk-doc.dcl
+--- gtk-doc-1.3-orig/gtk-doc.dcl	2005-04-05 18:32:15.000000000 -0500
++++ gtk-doc-1.3/gtk-doc.dcl	2005-04-05 18:32:36.000000000 -0500
+@@ -61,8 +61,8 @@
+ 	NAMING
+ 		LCNMSTRT ""
+ 		UCNMSTRT ""
+-		LCNMCHAR ".-_"
+-		UCNMCHAR ".-_"
++		LCNMCHAR ".-_:"
++		UCNMCHAR ".-_:"
+ 		NAMECASE
+ 			GENERAL YES
+ 			ENTITY  NO
