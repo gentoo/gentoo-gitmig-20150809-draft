@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.4.ebuild,v 1.3 2004/10/05 13:34:51 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.6.ebuild,v 1.1 2004/10/07 14:27:26 wolf31o2 Exp $
 
 IUSE="opengl X"
 
@@ -16,8 +16,8 @@ KEYWORDS="x86 ~sparc amd64 ppc ~hppa"
 DEPEND=""
 
 src_install() {
-	use x86 && exeinto /etc/init.d && doexe autoconfig
-	use x86 && use X && dosbin x-setup
+	exeinto /etc/init.d && doexe autoconfig && newexe spind.init spind
+	use X && dosbin x-setup
 	use opengl && dosbin opengl-update openglify
-	dosbin net-setup
+	dosbin net-setup spind
 }
