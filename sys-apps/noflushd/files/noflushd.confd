@@ -1,3 +1,7 @@
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/files/noflushd.confd,v 1.2 2004/01/27 20:52:39 mholzer Exp $
+
 # Config file for /etc/init.d/noflushd
 
 #TIMEOUT=60
