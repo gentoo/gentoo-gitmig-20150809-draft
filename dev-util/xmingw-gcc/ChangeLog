@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/xmingw-gcc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/ChangeLog,v 1.6 2004/06/25 02:51:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/ChangeLog,v 1.7 2004/09/10 15:51:31 cretin Exp $
+
+*xmingw-gcc-3.4.1 (10 Sep 2004)
+
+  10 Sep 2004; Stefan Jones <cretin@gentoo.org>:
+  New version
 
   05 Apr 2004; Stefan Jones <cretin@gentoo.org>:
   Fix compile problem due to missing path, #46776 
