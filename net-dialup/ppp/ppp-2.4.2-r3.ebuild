@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r3.ebuild,v 1.6 2004/09/27 10:55:11 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r3.ebuild,v 1.7 2004/09/27 10:57:14 lanius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -104,6 +104,9 @@ src_install() {
 	dolib.so pppd/plugins/minconn.so
 	dolib.so pppd/plugins/passprompt.so
 	dolib.so pppd/plugins/rp-pppoe/rp-pppoe.so
+	dolib.so pppd/plugins/radius/radius.so
+	dolib.so pppd/plugins/radius/radattr.so
+	dolib.so pppd/plugins/radius/radrealms.so
 	if use atm; then
 		dolib.so pppd/plugins/pppoatm.so
 	fi
@@ -118,6 +121,9 @@ src_install() {
 	dodoc ${FILESDIR}/${PV}/README.mpls
 	dohtml ${FILESDIR}/${PV}/pppoe.html
 
+	doman pppd/plugins/radius/pppd-radius.8
+	doman pppd/plugins/radius/pppd-radattr.8
+
 	dosbin scripts/pon
 	dosbin scripts/poff
 	dosbin scripts/plog
@@ -130,15 +136,7 @@ src_install() {
 	insinto /usr/share/doc/${PF}/scripts
 	doins scripts/*
 
-	# install radius
-	cd pppd/plugins/radius
-	exeinto /usr/$(get_libdir)/ppp/2.4.2
-	doexe radius.so
-	doexe radattr.so
-	doexe radrealms.so
-	doman pppd-radius.8
-	doman pppd-radattr.8
-
+	# install radiusclient
 	cd radiusclient
 	make DESTDIR=${D} install || die
 }
