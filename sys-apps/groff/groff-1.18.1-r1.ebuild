@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r1.ebuild,v 1.3 2003/02/21 02:34:19 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r1.ebuild,v 1.4 2003/02/24 17:58:48 azarah Exp $
 
 IUSE=""
 
@@ -15,7 +15,8 @@ KEYWORDS="x86 ~ppc ~sparc alpha ~mips hppa arm"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	>=sys-apps/texinfo-4.0"
 
 PDEPEND=">=sys-apps/man-1.5k-r1"
 
