@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.20 2004/09/25 19:24:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.21 2004/10/08 10:28:57 eradicator Exp $
+
+  08 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/libebml-0.7.1-shared.patch:
+  multilib fixes in existing versions.  Revbump to build shared library.
 
   25 Sep 2004; Jason Wever <weeve@gentoo.org> libebml-0.6.5.ebuild:
   Stable on sparc.

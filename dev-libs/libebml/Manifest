@@ -1,14 +1,27 @@
-MD5 8654386d0249abe66d66eb6ad90ea87c ChangeLog 3815
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 994ceb062f52de8af1de8e9ce73b83b3 ChangeLog 3988
 MD5 4d4cadb55b24d41d9b6714be2b4e73a4 libebml-0.6.0.ebuild 688
 MD5 ecd9f4c5ab356847fba19d0c248da980 libebml-0.6.3.ebuild 733
 MD5 cb2b159b15aaa5b2e54f4dfcdc679de7 libebml-0.6.4.ebuild 1059
-MD5 53f3518cde239843a6faf83feef99db5 libebml-0.6.5.ebuild 1054
-MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+MD5 cc8895170ad0b9a5d5856c217f2a4ec9 libebml-0.6.5.ebuild 1097
 MD5 be28a87eeb5c19c0afe4468499fd0756 libebml-0.7.0.ebuild 1067
-MD5 3f669ce21439f56026da6ad83a585422 libebml-0.7.1.ebuild 1073
+MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+MD5 6f621d31d5deabc35208b1e448704528 libebml-0.7.1.ebuild 1113
+MD5 31e47d69eafffb3619d2a16b1c8a4dc8 libebml-0.7.1-r1.ebuild 1195
 MD5 178fbe7e5f862e2225559792f6de2159 files/digest-libebml-0.6.0 64
 MD5 325a21d1656821ab9f4f388824a61a6c files/digest-libebml-0.6.3 64
 MD5 dc8f1854a12fdae99bc01ab43674680c files/digest-libebml-0.6.4 64
 MD5 74c7637fdf8fd2cfc27642333c763eb9 files/digest-libebml-0.6.5 64
 MD5 80f94afa7c615d7c39e782c3766177ea files/digest-libebml-0.7.0 65
 MD5 3ff5642e6fac5f3c15a074ae89af2e6c files/digest-libebml-0.7.1 65
+MD5 505ac5c579900c6a541ced0d9cc9442e files/libebml-0.7.1-shared.patch 1880
+MD5 3ff5642e6fac5f3c15a074ae89af2e6c files/digest-libebml-0.7.1-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBZmv0ArHZZzCEUG0RAqUFAKCDnqTd8uuqfp1B0+qoSbGdkbGd3wCfQ6sM
+goDxUigFVRuz3j6H8bmGrbw=
+=r/yk
+-----END PGP SIGNATURE-----

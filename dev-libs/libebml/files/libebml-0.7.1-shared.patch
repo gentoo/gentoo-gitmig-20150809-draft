@@ -1,0 +1,64 @@
+diff -Naur libebml-0.7.1.orig/make/linux/Makefile libebml-0.7.1/make/linux/Makefile
+--- libebml-0.7.1.orig/make/linux/Makefile	2004-07-19 09:39:13.000000000 -0700
++++ libebml-0.7.1/make/linux/Makefile	2004-10-08 03:26:40.522886558 -0700
+@@ -49,6 +49,8 @@
+ 
+ # Names
+ LIBRARY=libebml.a
++LIBRARY_SO=libebml.so
++LIBRARY_SO_VER=libebml.so.0
+ 
+ # source-files
+ sources:=$(wildcard ${SRC_DIR}*$(EXTENSION))
+@@ -61,36 +63,48 @@
+ 
+ # object files; replace .cxx extension with .o
+ objects:=$(patsubst %$(EXTENSION),%.o,$(sources))
++objects_so:=$(patsubst %$(EXTENSION),%.lo,$(sources))
+ 
+ WARNINGFLAGS=-Wall -Wno-unknown-pragmas -ansi -fno-gnu-keywords -Wshadow
+ COMPILEFLAGS=$(WARNINGFLAGS) $(CXXFLAGS) $(CPPFLAGS) $(DEBUGFLAGS) $(INCLUDE)
+ DEPENDFLAGS  = ${CXXFLAGS} ${INCLUDE}
+ 
+-all: $(LIBRARY)
++all: $(LIBRARY) $(LIBRARY_SO)
+ 
+-lib library: $(LIBRARY)
++lib library: $(LIBRARY) $(LIBRARY_SO)
+ 
+ # Build rules
+ %.o: %$(EXTENSION)
+ 	$(CXX) -c $(COMPILEFLAGS) -o $@ $<
+ 
++%.lo: %$(EXTENSION)
++	$(CXX) -c $(COMPILEFLAGS) -fPIC -o $@ $<
++
+ $(LIBRARY): $(objects)
+ 	$(AR) $@ $(objects)
+ 	$(RANLIB) $@
+ 
++$(LIBRARY_SO): $(objects_so)
++	$(CXX) -shared -Wl,-soname,$(LIBRARY_SO_VER) -o $(LIBRARY_SO_VER) $(objects_so)
++	ln -s $(LIBRARY_SO_VER) $(LIBRARY_SO)
++
+ clean:
+ 	rm -f $(objects)
+ 	rm -f $(dependencies)
+ 	rm -f $(LIBRARY)
++	rm -f $(LIBRARY_SO)
++	rm -f $(LIBRARY_SO_VER)
+ 	rm -f CORE
+ 
+ # what are the source dependencies
+ depend: $(sources)
+ 	$(DEPEND) $(DEPENDFLAGS) $(sources)
+ 
+-install: $(LIBRARY)
++install: $(LIBRARY) $(LIBRARY_SO)
+ 	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(libdir)
+ 	$(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY) $(libdir)
++	$(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY_SO_VER) $(libdir)
++	ln -s $(LIBRARY_SO_VER) $(libdir)/$(LIBRARY_SO)
+ 	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(includedir)
+ 	for i in $(INCLUDE_DIR)/*.h; do \
+ 		$(INSTALL) $(INSTALL_OPTS) $$i $(includedir) ; \
