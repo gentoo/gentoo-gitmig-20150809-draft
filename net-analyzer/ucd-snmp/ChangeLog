@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ucd-snmp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.5 2002/06/29 19:27:07 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.6 2002/11/06 05:39:11 blocke Exp $
+
+*ucd-snmp-4.2.6 (06 Nov 2002)
+
+  06 Nov 2002; Bruce A. Locke <blocke@shivan.org> ucd-snmp-4.2.6.ebuild:
+  Version bump and host mib now enabled (bug #7281)
 
 *ucd-snmp-4.2.5 (29 Jun 2002)
 

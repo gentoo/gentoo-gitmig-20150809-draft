@@ -1,16 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.3-r1.ebuild,v 1.6 2002/10/05 05:39:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6.ebuild,v 1.1 2002/11/06 05:39:12 blocke Exp $
 
 IUSE="ssl ipv6 tcpd"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Software for generating and retrieving SNMP data"
-SRC_URI="http://download.sourceforge.net/net-snmp/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/net-snmp/${P}.tar.gz"
 HOMEPAGE="http://net-snmp.sourceforge.net/"
 
 DEPEND="<sys-libs/db-2
-	>=sys-libs/zlib-1.1.3
+	>=sys-libs/zlib-1.1.4
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
@@ -33,6 +33,7 @@ src_compile() {
 		--with-sys-contact="root@Unknown" \
 		--with-logfile=/var/log/snmpd.log \
 		--with-persistent-directory=/var/lib/ucd-snmp \
+		--with-mib-modules=host \
 		--host=${CHOST} ${myconf} || die "bad ./configure"
 
 	emake || die "compile problem"
