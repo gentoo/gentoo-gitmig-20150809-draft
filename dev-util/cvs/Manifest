@@ -1,5 +1,5 @@
-MD5 a3afc2ca7072426cf7a90d090385dfb2 cvs-1.11.17.ebuild 1790
-MD5 a6be400d20b09351352ed0759dcc82f7 ChangeLog 6771
+MD5 ee1d19552b8033095df3afcf06715d3a cvs-1.11.17.ebuild 1782
+MD5 3c51cebd16d86e0fe22953fade0ba19c ChangeLog 6766
 MD5 7164d2a546785fee1e77dac8839fdeaa metadata.xml 224
 MD5 a156ed2cb03477a919f3a5faa80cb2a4 files/cvspserver.xinetd.d 282
 MD5 0c0c93104720c2efffe1046ec8db290f files/digest-cvs-1.11.17 276
