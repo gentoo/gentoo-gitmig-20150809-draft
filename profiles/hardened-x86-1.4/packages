@@ -35,7 +35,11 @@
 *>=sys-apps/baselayout-1.8.6.10-r1
 *>=sys-apps/portage-2.0.49-r3
 *>=sys-devel/binutils-2.13.90.0.6-r2
+
+# we lock the user into the stable version of gcc even when ~arch flags are used.
 *>=sys-devel/gcc-3.2.3-r2
+*<sys-devel/gcc-3.3.0
+
 *>=sys-devel/hardened-gcc-2.4.2
 *>=sys-libs/glibc-2.3.2-r1
 #*>=sys-apps/module-init-utils-0.9.10-r5
@@ -80,7 +84,10 @@ virtual/os-headers
 *sys-apps/sed
 *sys-apps/setserial
 *<sys-apps/shadow-5
-*sys-apps/pam-login
+
+# we use login from shadow when not using pam
+#*sys-apps/pam-login
+
 *sys-apps/sharutils
 *sys-apps/tar
 *>=sys-apps/texinfo-4.2-r1
@@ -99,8 +106,11 @@ virtual/os-headers
 *sys-libs/cracklib  
 *<sys-libs/db-4.1.0
 *>=sys-libs/ncurses-5.2.20020112a
-*>=sys-libs/pam-0.75-r9
-*sys-libs/pwdb      
+
+# more pam stuff we dont want.
+>=sys-libs/pam-0.75-r9
+#*sys-libs/pwdb      
+
 *sys-libs/readline  
 *sys-libs/zlib
 *virtual/ssh

@@ -35,7 +35,10 @@ X		x11-base/xfree
 sdl		media-libs/libsdl
 gpm		sys-libs/gpm
 tcpd		sys-apps/tcp-wrappers
-pam		sys-libs/pam
+
+# we dont want pam by default
+#pam		sys-libs/pam
+
 libwww		net-libs/libwww
 ssl		dev-libs/openssl
 perl		dev-lang/perl
