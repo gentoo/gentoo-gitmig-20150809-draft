@@ -1,14 +1,24 @@
-MD5 5864c67ccdde5bf9a05fe11f99caf0ed ChangeLog 9689
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 67ea298a45e6188862a866b1b8ccea82 ChangeLog 9794
 MD5 0c49ec37fe379dcb78a1e02dcb4671d6 bogofilter-0.13.7.3.ebuild 1892
-MD5 2719f9c1b4d0d4b0538651e37d54722d bogofilter-0.92.2.ebuild 1600
-MD5 a7c1b19ceac6d9797578aba20135c104 bogofilter-0.92.6.ebuild 1583
-MD5 2d548e1c5f9faaa9498fb7b7726cf345 bogofilter-0.17.5.ebuild 1796
 MD5 c30b68bae47c69cd91965e673ddde7e2 bogofilter-0.92.7.ebuild 1586
+MD5 f735dd78b68b8d6a54bcc7c3d27b664d bogofilter-0.92.8.ebuild 1578
+MD5 2d548e1c5f9faaa9498fb7b7726cf345 bogofilter-0.17.5.ebuild 1796
+MD5 2719f9c1b4d0d4b0538651e37d54722d bogofilter-0.92.2.ebuild 1600
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 121a421687dbab544f628586c79dcde8 bogofilter-0.92.8.ebuild 1576
+MD5 a7c1b19ceac6d9797578aba20135c104 bogofilter-0.92.6.ebuild 1583
 MD5 23dea37013aa783a31cd6a713e040752 files/digest-bogofilter-0.13.7.3 71
-MD5 2ee484653f147e4185dcff116e71d08e files/digest-bogofilter-0.92.2 70
-MD5 dd684ba520587a68fbdff3e8469ef06f files/digest-bogofilter-0.92.6 70
 MD5 37aaa6af35d13a8b7afd2b4ece5dd629 files/digest-bogofilter-0.92.7 70
-MD5 7f9cfa2077f941af6777774d82bc1a4b files/digest-bogofilter-0.17.5 70
 MD5 1970df6e6d8dabe53d04a6f120d0b8bb files/digest-bogofilter-0.92.8 70
+MD5 2ee484653f147e4185dcff116e71d08e files/digest-bogofilter-0.92.2 70
+MD5 7f9cfa2077f941af6777774d82bc1a4b files/digest-bogofilter-0.17.5 70
+MD5 dd684ba520587a68fbdff3e8469ef06f files/digest-bogofilter-0.92.6 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBh+8/ArHZZzCEUG0RAjYhAJ98cBhdb7VvscFX1pBf6Ohqa3uJxgCfRyyf
+zzWRjSxMMimftNrPikcSRiM=
+=sRvo
+-----END PGP SIGNATURE-----
