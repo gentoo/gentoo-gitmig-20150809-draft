@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/duali-data
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/duali-data/ChangeLog,v 1.5 2004/06/29 20:18:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/duali-data/ChangeLog,v 1.6 2004/07/30 21:58:15 arj Exp $
+
+  30 Jul 2004; Anders Rune Jensen <arj@gentoo.org> metadata.xml:
+  QA - IUSE fix and {add missing,correct} metatata.xml.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> duali-data-0.1b.ebuild:
   sync IUSE (-X, -gnome)

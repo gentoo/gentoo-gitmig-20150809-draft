@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-de
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de/ChangeLog,v 1.4 2004/06/24 21:32:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de/ChangeLog,v 1.5 2004/07/30 21:58:14 arj Exp $
+
+  30 Jul 2004; Anders Rune Jensen <arj@gentoo.org> +metadata.xml, 
+  QA - IUSE fix and {add missing,correct} metatata.xml.
 
 *aspell-de-0.50.2 (03 Sep 2002)
 
