@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/sqlgui
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/ChangeLog,v 1.2 2002/07/23 02:53:12 rphillips Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlgui/ChangeLog,v 1.3 2002/08/21 20:03:42 danarmak Exp $
+
+*sqlgui-0.4 (21 Aug 2002)
+
+  21 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New version. The core of the app has been separated into dev-db/sqlguipart
+  (a kpart).
 
 *sqlgui-0.3.3 (11 May 2002)
 
