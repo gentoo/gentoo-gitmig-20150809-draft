@@ -1,10 +1,19 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.59 2003/04/20 08:40:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.60 2003/04/27 14:52:39 azarah Exp $
+
+*mplayer-0.90-r1 (27 Apr 2003)
+
+  27 Apr 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90-r1.ebulid,
+  mplayer-0.90-fix-version.patch :
+  - Fix version (still displayed as rc5), bug #19691.
+  - Change DEPEND to only depend and enable faad2 support if 'mpeg' in USE,
+    closing bug #19119.
+  - Add SMB (Samba) support, closing bug #16395.
 
 *mplayer-0.90 (09 Apr 2003)
 
-  20 Apr 2003; Seemant Kulleen <seemant@gentoo.org> mplayer-0.90.ebuild:
+  20 Apr 2003; Seemant Kulleen <seemant@gentoo.org> mplayer-0.90.ebuild :
   Added faad2 and enabling faad in econf -- satisies many requests to be able to
   play the Matrix trailers.
 
