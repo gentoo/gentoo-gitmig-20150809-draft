@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/anygui/anygui-0.1.1-r1.ebuild,v 1.19 2004/06/25 01:26:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anygui/anygui-0.1.1-r1.ebuild,v 1.20 2004/07/03 12:25:27 kloeri Exp $
 
 IUSE="wxwin gtk qt tcltk"
 
@@ -13,9 +13,9 @@ DEPEND=">=dev-lang/python-2.0
 	qt? ( dev-python/PyQt )
 	gtk? ( dev-python/pygtk )
 	tcltk? ( dev-lang/tk )
-	wxwin? ( dev-python/wxPython )"
+	wxwin? ( dev-python/wxpython )"
 
-#Propsed wxwin use variable for wxGTK for wxWindows? ( dev-python/wxPython ) *NOT* official
+#Propsed wxwin use variable for wxGTK for wxWindows? ( dev-python/wxpython ) *NOT* official
 #future:
 #also use variable fltk for fltk? ( dev-python/PyFLTK ) no ebuild for PyFLTK yet
 #java? ( dev-python/jython ) Java Swing (javagui) http://www.jython.org

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/anygui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/anygui/ChangeLog,v 1.10 2004/06/25 01:26:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anygui/ChangeLog,v 1.11 2004/07/03 12:25:27 kloeri Exp $
+
+  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> anygui-0.1.1-r1.ebuild:
+  Change wxPython to wxpython.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,11 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-demo/wxpython-demo-2.4.1.2.ebuild,v 1.2 2004/06/25 01:52:14 agriffis Exp $
-
-# NOTE: rename DOCDIR to "wxpython" (lowercase) when dev-python/wxPython is renamed
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-demo/wxpython-demo-2.4.1.2.ebuild,v 1.3 2004/07/03 12:30:22 kloeri Exp $
 
 MY_P=${P/wxpython-demo/wxPythonDemo}
-DOCDIR="wxPython-${PVR}"
+DOCDIR="wxpython-${PVR}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="wxPython demo files"
 HOMEPAGE="http://www.wxpython.org"
