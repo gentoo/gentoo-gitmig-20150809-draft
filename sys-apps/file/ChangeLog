@@ -1,8 +1,18 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.19 2003/10/09 22:03:05 hillster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.20 2003/10/12 05:52:20 kumba Exp $
+
 
 *file-4.05 (09 Oct 2003)
+
+  12 Oct 2003; Joshua Kinard <kumba@gentoo.org> file-4.05.ebuild,
+  files/file-4.05-mips-gentoo.diff:
+  Added a patch for mips which changes file's output somewhat to allow shared
+  libs to be detected.
+  Also added a sed command to tweak src/patchlevel.h to
+  make file report the proper version. Currently, file-4.05 claims to be
+  file-4.04.
+  Also added ~mips to KEYWORDS (We're still using file-3.41, update time!)
 
   09 Oct 2003; Joel Hill <hillster@gentoo.org> file-4.05.ebuild:
   version bump. marking ~ on all arch's
