@@ -1,12 +1,17 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.13 2003/04/11 21:34:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.14 2003/04/11 21:56:31 agriffis Exp $
 
 *findutils-4.1.7-r4 (11 Apr 2003)
 
   11 Apr 2003; Aron Griffis <agriffis@gentoo.org> findutils-4.1.7-r4.ebuild:
+  Point SRC_URI to mirror://gentoo since alpha.gnu.org is no longer supplying
+  findutils-4.1.x versions.  See bug 18926.
+
+  11 Apr 2003; Aron Griffis <agriffis@gentoo.org> findutils-4.1.7-r4.ebuild:
   Don't install locate/updatedb because they conflict with slocate, which is a
-  better solution. See bug 18729.
+  better solution. See bug 18729.  Thanks to Michael Sterrett for the concepts
+  in the patch.
 
 *findutils-4.1.7-r3 (19 Mar 2003)
 

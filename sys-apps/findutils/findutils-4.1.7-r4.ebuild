@@ -1,18 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r4.ebuild,v 1.1 2003/04/11 21:34:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r4.ebuild,v 1.2 2003/04/11 21:56:31 agriffis Exp $
 
 IUSE="nls build afs selinux"
 
 inherit eutils
 
-S=${WORKDIR}/${P}
-
 DESCRIPTION="GNU utilities to find files"
-SRC_URI="ftp://alpha.gnu.org/gnu/${P}.tar.gz
-	selinux? mirror://gentoo/${P}-2003011510-selinux-gentoo.patch.bz2"
-
 HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
+
+# Note this doesn't point to gnu.org because alpha.gnu.org has quit
+# supplying the development versions.  If it comes back in the future
+# then we might want to redirect the link.  See bug 18729
+SRC_URI="mirror://gentoo/${P}.tar.gz
+	selinux? mirror://gentoo/${P}-2003011510-selinux-gentoo.patch.bz2"
 
 KEYWORDS="~x86 ~hppa ~arm ~alpha"
 SLOT="0"
