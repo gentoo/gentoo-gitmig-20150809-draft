@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/tclspice
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tclspice/ChangeLog,v 1.9 2004/08/07 21:25:16 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tclspice/ChangeLog,v 1.10 2004/10/05 03:35:32 weeve Exp $
+
+  04 Oct 2004; Jason Wever <weeve@gentoo.org> tclspice-0.2.17.ebuild:
+  Added ~sparc keyword.
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> tclspice-0.2.14.ebuild,
   tclspice-0.2.15.ebuild, tclspice-0.2.17.ebuild:
