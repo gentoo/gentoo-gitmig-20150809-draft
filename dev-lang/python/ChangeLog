@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.65 2004/01/04 20:42:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.66 2004/01/06 14:49:51 agriffis Exp $
+
+  06 Jan 2004; Aron Griffis <agriffis@gentoo.org> python-2.2.3-r5.ebuild:
+  Stable on ia64 to enable fix for bug 36954; portage-2.0.49-r20 depends on
+  this revision.
 
   03 Jan 2004; Jason Wever <weeve@gentoo.org> python-2.2.3-r5.ebuild:
   Marked stable on sparc as portage-2.0.49-r20 really depends on this version of

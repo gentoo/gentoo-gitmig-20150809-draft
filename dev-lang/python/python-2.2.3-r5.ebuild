@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.16 2004/01/04 04:12:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.17 2004/01/06 14:49:51 agriffis Exp $
 
 inherit flag-o-matic eutils python
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${PV}.tgz"
 
 HOMEPAGE="http://www.python.org"
 LICENSE="PSF-2.2"
-KEYWORDS="amd64 x86 ~ppc sparc alpha mips hppa ~arm ~ia64 ppc64"
+KEYWORDS="amd64 x86 ~ppc sparc alpha mips hppa ~arm ia64 ppc64"
 
 DEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.3
