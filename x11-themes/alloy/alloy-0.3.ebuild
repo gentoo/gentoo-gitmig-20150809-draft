@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.3.ebuild,v 1.4 2004/03/03 16:33:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.3.ebuild,v 1.5 2004/03/30 10:31:00 mr_bones_ Exp $
 
 inherit kde-base
 need-kde 3.1
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A neat KDE 3.1 style based on the Java Alloy Look&Feel from Incors (http://www.incors.com)."
 HOMEPAGE="http://www.kdelook.org/content/show.php?content=6304"
 SRC_URI="http://www.kdelook.org/content/files/6304-${P}.tar.gz"
@@ -15,8 +14,8 @@ DEPEND="kde-base/kdebase"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 src_compile(){
-	./configure --prefix=$KDEDIR||die
-	emake||die
+	./configure --prefix=$KDEDIR || die
+	emake || die
 }
 
 src_install(){
