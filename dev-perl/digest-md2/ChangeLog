@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/digest-md2
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-md2/ChangeLog,v 1.1 2003/06/24 00:32:03 mcummings Exp $
+
+*digest-md2-2.01 (23 Jun 2003)
+
+  23 Jun 2003; Michael Cummings <mcummings@gentoo.org> digest-md2-2.01.ebuild:
+  Dep for crypt-rsa, dep for net-ssh
+
