@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.1b.ebuild,v 1.11 2004/06/19 14:42:53 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.1b.ebuild,v 1.12 2004/06/24 17:44:45 seemant Exp $
 
 inherit eutils libtool
 
@@ -30,6 +30,7 @@ src_unpack() {
 src_compile() {
 	elibtoolize || die
 	export WANT_AUTOCONF=2.5
+	export WANT_AUTOMAKE=1.4
 
 	local myconf
 	use alpha && myconf="${myconf} --host=alpha-unknown-linux-gnu"
