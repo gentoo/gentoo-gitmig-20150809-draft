@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.33 2003/08/19 22:32:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.34 2003/08/20 07:48:00 coronalvr Exp $
+
+  20 Aug 2003; Alex Veber <coronalvr@gentoo.org> nano-1.2.2.ebuild:
+  fixed up the slang fix.
 
 *nano-1.2.2 (18 Aug 2003)
 
