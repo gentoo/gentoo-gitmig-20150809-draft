@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1ecf851402e2320df2c9035810159e55 ChangeLog 994
+MD5 286064361fbe22178be7769aaf4722b7 ChangeLog 1073
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 2ec0d232447b125f99675aaf766c1594 toolame-02l.ebuild 664
+MD5 dae1d26263992ccbfb3d2cb634b50ac5 toolame-02l.ebuild 664
 MD5 5cc792797a252d3d4d12b9857d393ee8 files/digest-toolame-02l 60
 MD5 03d22f398bef3ac46ba7c7a7910d2d80 files/toolame-02l-gentoo.diff 2153
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxSrSArHZZzCEUG0RAo7OAJ4zF7fMylq+PQAvNkwhYBsKd+DexQCfYabr
-2qUC7eWIit5WGvV4pKjGn34=
-=N23I
------END PGP SIGNATURE-----
