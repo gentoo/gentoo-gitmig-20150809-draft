@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/lhinv
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lhinv/ChangeLog,v 1.5 2004/03/14 10:51:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lhinv/ChangeLog,v 1.6 2004/04/23 14:33:52 stuart Exp $
+
+*lhinv-1.1-r3 (23 Apr 2004)
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org> lhinv-1.1-r3.ebuild:
+  The cgi executable now installs into /var/www/localhost/cgi-bin; see
+  bug #44667
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> lhinv-1.1-r1.ebuild,
   lhinv-1.1-r2.ebuild:
