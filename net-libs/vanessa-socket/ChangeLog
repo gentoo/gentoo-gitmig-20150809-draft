@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/vanessa-socket
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-socket/ChangeLog,v 1.1 2003/03/15 07:44:11 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-socket/ChangeLog,v 1.2 2004/03/19 10:05:34 mr_bones_ Exp $
+
+  19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  vanessa-socket-0.0.5_beta4.ebuild:
+  fix depend (bug #45110); tidy
 
 *vanessa-socket-0.0.5_beta4.ebuild (14 Mar 2003)
 
