@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2_pre8.ebuild,v 1.1 2003/12/30 06:14:15 anti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2_pre8.ebuild,v 1.2 2004/01/01 05:55:02 anti Exp $
 
 MY_PV="42pre8"
 
@@ -21,6 +21,14 @@ S="${WORKDIR}/jEdit"
 
 src_compile() {
 	local antflags
+
+	if [ -z "$JAVA_HOME" ]; then
+		einfo
+		einfo "\$JAVA_HOME not set!"
+		einfo "Please use java-config to configure your JVM and try again."
+		einfo
+		die "\$JAVA_HOME not set."
+	fi
 
 	antflags=""
 	if [ `use jikes` ] ; then
