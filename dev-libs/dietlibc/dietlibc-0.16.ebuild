@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author Achim - modified by Thilo Bangert <bangert@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.6.13.ebuild,v 1.3 2001/06/23 21:34:37 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.16.ebuild,v 1.2 2002/04/27 21:46:44 bangert Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A minimal libc"

@@ -1,7 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Terje Kvernes <terjekv@math.uio.no>
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.4 2002/03/12 16:05:09 tod Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ggz-client-libs/ggz-client-libs-0.0.5.ebuild,v 1.2 2002/04/27 21:46:44 bangert Exp $
+
 S=${WORKDIR}/${P}
 
 DESCRIPTION="The client libraries for GGZ Gaming Zone"
