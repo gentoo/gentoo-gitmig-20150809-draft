@@ -1,21 +1,31 @@
-MD5 7d527fbd218552edf324a082dfe75bdd cups-1.1.22.ebuild 3895
-MD5 867b9e72d88fd881b3e8cafcdc32b800 cups-1.1.23_rc1.ebuild 4112
-MD5 44312919fe8a6c361fd4d36adc37ac61 cups-1.1.20-r5.ebuild 3648
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9feedb7e9cb839e69599bb234da24996 ChangeLog 14128
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 85bc20d893f097ef0f13947179c3838c files/cups-1.1.22-xpdf2-underflow.patch 2301
-MD5 a072271745e21050d873cc0cd2d7b6aa files/digest-cups-1.1.23_rc1 75
-MD5 1219d8139b95119054d7744f6dea85a6 files/str920.patch 5795
-MD5 ff2fde0af36236ae1813438275525fa2 files/cups-1.1.21-xpdf-CESA-2004-007.patch.bz2 966
-MD5 d7e6454c7e8062203b324c5f6a1a2c65 files/cupsd.rc6 515
-MD5 fbd28fb7593c247a7151704df5a253ea files/cups-1.1.20-zero-len-udp-dos.patch 965
+MD5 9e3e1fb857caeb045a32e996e9238da3 cups-1.1.23_rc1.ebuild 4107
+MD5 7d527fbd218552edf324a082dfe75bdd cups-1.1.22.ebuild 3895
+MD5 44312919fe8a6c361fd4d36adc37ac61 cups-1.1.20-r5.ebuild 3648
 MD5 7242b8a2000fe4c5a2b398e6602f7f1c files/cups.pam 234
-MD5 bef8c5e9724acac435ca092c232685f8 files/digest-cups-1.1.22 72
-MD5 baaa1e0bc63f959779998f5e57de6f9d files/digest-cups-1.1.20-r5 72
+MD5 b041836e6ee51876ca7ec86869643018 files/cups.xinetd 368
+MD5 e8608b3605ae84d0f10dbc635d65292a files/cupsd.conf-1.1.18 20538
+MD5 d7e6454c7e8062203b324c5f6a1a2c65 files/cupsd.rc6 515
 MD5 7bce495a238ee9dbebb61496f3b3ae51 files/disable-strip.patch 422
 MD5 152f70bcd644a5da56756b8b82193d10 files/cups-1.1.20-str633.patch 268
-MD5 04f90143ff0dc0329b242a1f955af20e files/cups-1.1.20-xpdf-CESA-2004-007.patch.bz2 968
-MD5 e8608b3605ae84d0f10dbc635d65292a files/cupsd.conf-1.1.18 20538
+MD5 a072271745e21050d873cc0cd2d7b6aa files/digest-cups-1.1.23_rc1 75
+MD5 1219d8139b95119054d7744f6dea85a6 files/str920.patch 5795
+MD5 fbd28fb7593c247a7151704df5a253ea files/cups-1.1.20-zero-len-udp-dos.patch 965
+MD5 bef8c5e9724acac435ca092c232685f8 files/digest-cups-1.1.22 72
 MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
+MD5 baaa1e0bc63f959779998f5e57de6f9d files/digest-cups-1.1.20-r5 72
+MD5 04f90143ff0dc0329b242a1f955af20e files/cups-1.1.20-xpdf-CESA-2004-007.patch.bz2 968
+MD5 ff2fde0af36236ae1813438275525fa2 files/cups-1.1.21-xpdf-CESA-2004-007.patch.bz2 966
 MD5 ef32d65c7ec41690574a92d2436366df files/cups-1.1.20-xpdf2-underflow.patch 2295
-MD5 b041836e6ee51876ca7ec86869643018 files/cups.xinetd 368
+MD5 85bc20d893f097ef0f13947179c3838c files/cups-1.1.22-xpdf2-underflow.patch 2301
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB184NroRuSHgZdywRAmkjAJ4pcQkX3WMebMED4F3urcwQKQJB2QCfS83e
+2EfbAqxBn936BxbDoApVDIM=
+=vqBy
+-----END PGP SIGNATURE-----
