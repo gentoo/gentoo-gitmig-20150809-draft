@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/mutt-vc-query
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mutt-vc-query/ChangeLog,v 1.4 2004/06/01 20:35:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mutt-vc-query/ChangeLog,v 1.5 2004/06/07 07:31:29 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  mutt-vc-query-002.ebuild:
+  x86 stable.
 
   01 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   mutt-vc-query-002.ebuild:
