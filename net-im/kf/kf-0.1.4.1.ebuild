@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kf/kf-0.1.4.1.ebuild,v 1.2 2004/06/12 23:11:46 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kf/kf-0.1.4.1.ebuild,v 1.3 2004/06/19 06:18:28 weeve Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ DEPEND=">=x11-libs/gtk+-2
 	>=net-libs/loudmouth-0.16
 	>=gnome-base/libglade-2
 	spell? ( >=app-text/gtkspell-2.0.4 )"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 src_unpack() {
 	unpack ${A}
