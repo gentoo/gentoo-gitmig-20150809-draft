@@ -11,6 +11,6 @@ done
 
 # include this, so also xterm,kterm,gterm,etc will have default bash settings
 
-if [ "x$SHLVL" != "x1" ]; then # We're not a login shell
-	. /etc/profile
-fi
+#if [ "x$SHLVL" != "x1" ]; then # We're not a login shell
+#	. /etc/profile
+#fi
