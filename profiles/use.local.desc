@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1031 2005/03/23 03:30:51 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1032 2005/03/23 15:35:08 seemant Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -667,18 +667,18 @@ www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g.
 www-client/mozilla-firefox:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 www-client/mozilla-firefox:mozsvg - Enable SVG support in mozilla and firefox
 www-client/mozilla-firefox:mozxmlterm - Enable mozilla's XML-based command-line terminal
-net-www/mozilla:mozaccess - Enable text-to-speech (and eventually to braille), http://mozilla.org/projects/ui/accessibility/
-net-www/mozilla:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
-net-www/mozilla:mozctl - adds in the ctl extension in older versions (1.1 or earlier)
-net-www/mozilla:mozdevelop - Enable features for web developers (e.g. Venkman)
-net-www/mozilla:moznocompose - Disable building of mozilla's web page composer
-net-www/mozilla:moznoirc - Disable building of mozilla's IRC client
-net-www/mozilla:moznomail - Disable building mozilla's mail client
-net-www/mozilla:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
-net-www/mozilla:mozp3p - Enable mozilla's Platform for Privacy Preferences, http://mozilla.org/projects/p3p/
-net-www/mozilla:mozplaintext - Disallow HTML editing for email
-net-www/mozilla:mozsvg - Enable SVG support in mozilla and firefox
-net-www/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
+www-client/mozilla:mozaccess - Enable text-to-speech (and eventually to braille), http://mozilla.org/projects/ui/accessibility/
+www-client/mozilla:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
+www-client/mozilla:mozctl - adds in the ctl extension in older versions (1.1 or earlier)
+www-client/mozilla:mozdevelop - Enable features for web developers (e.g. Venkman)
+www-client/mozilla:moznocompose - Disable building of mozilla's web page composer
+www-client/mozilla:moznoirc - Disable building of mozilla's IRC client
+www-client/mozilla:moznomail - Disable building mozilla's mail client
+www-client/mozilla:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
+www-client/mozilla:mozp3p - Enable mozilla's Platform for Privacy Preferences, http://mozilla.org/projects/p3p/
+www-client/mozilla:mozplaintext - Disallow HTML editing for email
+www-client/mozilla:mozsvg - Enable SVG support in mozilla and firefox
+www-client/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
 net-www/nvu:moznoxft - placeholder until mozilla eclass is modified for nvu
 www-client/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
 sci-astronomy/orsa:cln - Use the Class Library for Numbers for calculations
