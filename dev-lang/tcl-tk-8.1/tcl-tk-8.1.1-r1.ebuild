@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl-tk-8.1/tcl-tk-8.1.1-r1.ebuild,v 1.2 2000/08/16 04:37:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl-tk-8.1/tcl-tk-8.1.1-r1.ebuild,v 1.3 2000/09/15 20:08:48 drobbins Exp $
 
 P=tcl-tk-8.1.1
 
@@ -34,18 +34,18 @@ src_unpack() {
 
 src_compile() {
 	cd ${S1}/unix
-	./configure --host=${CHOST} --prefix=/usr --enable-threads
-	make
+	try ./configure --host=${CHOST} --prefix=/usr --enable-threads
+	try make
 	cd ${S2}/unix
-	./configure --host=${CHOST} --prefix=/usr --with-tcl=${S1}/unix --enable-threads
-	make
+	try ./configure --host=${CHOST} --prefix=/usr --with-tcl=${S1}/unix --enable-threads
+	try make
 }
 
 src_install() {
 	cd ${S1}/unix
-	make INSTALL_ROOT=${D} install
+	try make INSTALL_ROOT=${D} install
 	cd ${S2}/unix
-	make INSTALL_ROOT=${D} install
+	try make INSTALL_ROOT=${D} install
 	strip ${D}/usr/bin/*
 	ln -sf wish8.1 ${D}/usr/bin/wish
 	ln -sf tclsh8.1 ${D}/usr/bin/tclsh

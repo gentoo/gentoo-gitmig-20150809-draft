@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php-4/php-4.0.1-r1.ebuild,v 1.2 2000/08/16 04:37:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php-4/php-4.0.1-r1.ebuild,v 1.3 2000/09/15 20:08:47 drobbins Exp $
 
 P=php-4.0.1
 A="php-4.0.1.tar.gz number4.tar.gz"
@@ -18,14 +18,14 @@ src_compile() {
 #    export CPPFLAGS=$FLAGS
 #    export CXXFLAGS=$FLAGS
     export LD_FLAGS="$LD_FLAGS -ltiff -ljpeg -L/usr/X11R6/lib"
-    ./configure --with-mysql=yes --enable-safe-mode \
+    try ./configure --with-mysql=yes --enable-safe-mode \
 	--enable-sysvsem --enable-sysvshm --with-zlib=yes --enable-bcmath \
 	--with-readline --with-gettext --enable-calendar --with-ldap\
 	--with-gd --with-ttf --with-jpeg-dir=/usr/lib \
 	--with-config-file-path=`/usr/sbin/apxs -q SYSCONFDIR` \
 	--with-apxs="/usr/sbin/apxs -ltiff" --with-exec-dir="/usr/lib/apache/bin" \
 	--enable-versioning --enable-inline-optimization --enable-trans-sid
-    make
+    try make
 }
 
 src_unpack() {
