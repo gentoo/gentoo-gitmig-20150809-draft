@@ -1,7 +1,7 @@
 
 # /etc/crontab
 # 20 Apr 2002; Thilo Bangert <bangert@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/files/crontab,v 1.5 2003/12/12 18:08:41 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/files/crontab,v 1.6 2004/07/18 04:33:20 dragonheart Exp $
 
 # fcron || dcron:
 # This is NOT the system crontab! fcron and dcron do not support a system crontab.
