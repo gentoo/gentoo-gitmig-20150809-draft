@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 35adb14211f3dd80268a91ef278c444b ChangeLog 468
+MD5 8678be9aafa16733104240550e5d7e4a qlogtools-3.1.ebuild 1018
+MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 MD5 2df904dc305771de6a4c777478ec8712 files/digest-qlogtools-3.1 64
 MD5 691cfa100503c2769d798b04b47dba04 files/qlogtools-3.1-errno.patch 348
-MD5 35adb14211f3dd80268a91ef278c444b ChangeLog 468
-MD5 d07a2c9de8ea653738c7caf84473a156 qlogtools-3.1.ebuild 1001
-MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA0+I1HTu7gpaalycRAkk+AKD7bB+g/hFB8S55tDVJMqriNHzhlQCeMG+z
+oziHH4uHDYfFj81U02DpCLk=
+=Ozxj
+-----END PGP SIGNATURE-----

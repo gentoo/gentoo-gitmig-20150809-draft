@@ -1,37 +1,38 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qlogtools/qlogtools-3.1.ebuild,v 1.1 2003/08/01 05:02:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qlogtools/qlogtools-3.1.ebuild,v 1.2 2004/06/19 06:50:16 vapier Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils gcc
+
 DESCRIPTION="Qmail Log processing tools"
-SRC_URI="http://untroubled.org/qlogtools/${P}.tar.gz"
 HOMEPAGE="http://untroubled.org/qlogtools/"
+SRC_URI="http://untroubled.org/qlogtools/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc"
+IUSE=""
 
 DEPEND="virtual/glibc"
 RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	patch -p1 -d ${P} < ${FILESDIR}/qlogtools-3.1-errno.patch
+	EPATCH_OPTS="-p1 -d ${P}" epatch ${FILESDIR}/qlogtools-3.1-errno.patch
 }
 
 src_compile() {
-	cd ${S}
-	echo "${CC} ${CFLAGS}" > conf-cc
-	echo "${CC} ${LDFLAGS}" > conf-ld
+	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(gcc-getCC) ${LDFLAGS}" > conf-ld
 	echo "${D}/usr/bin" > conf-bin
 	echo "${D}/usr/share/man/" > conf-man
 	emake || die
 }
 
-src_install () {
+src_install() {
 	dodir /usr/bin /usr/share/man/
 	./installer || die "Installer failed"
-	dodoc ANNOUNCEMENT COPYING FILES NEWS README TARGETS VERSION
+	dodoc ANNOUNCEMENT FILES NEWS README TARGETS VERSION
 }
 
 pkg_postinst() {
