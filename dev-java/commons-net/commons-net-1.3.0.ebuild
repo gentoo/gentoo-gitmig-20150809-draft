@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.3.0.ebuild,v 1.5 2005/01/10 03:25:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.3.0.ebuild,v 1.6 2005/01/11 17:27:18 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -29,8 +29,13 @@ src_unpack() {
 
 	cd ${S}
 	if ! use junit ; then
-		sed -i 's/depends="compile,test"/depends="compile"/' \
-			build.xml || die "Failed to disable junit"
+			sed -i 's/depends="compile,test"/depends="compile"/' \
+				build.xml || die "Failed to disable junit"
+	else
+		if ! has_version dev-java/ant-tasks; then
+			sed -i 's/depends="compile,test"/depends="compile"/' \
+				build.xml || die "Failed to disable junit"
+		fi
 	fi
 }
 
