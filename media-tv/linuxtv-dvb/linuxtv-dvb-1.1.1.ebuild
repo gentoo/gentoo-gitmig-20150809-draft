@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1.ebuild,v 1.1 2004/08/07 17:53:26 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/linuxtv-dvb-1.1.1.ebuild,v 1.2 2004/08/07 18:27:10 chriswhite Exp $
 
 DESCRIPTION="Standalone DVB driver for Linux kernel 2.4.x"
 HOMEPAGE="http://www.linuxtv.org"
@@ -54,6 +54,11 @@ src_install() {
 	#install the modules
 	insinto /lib/modules/${KV}/misc
 	doins *.${KV_OBJ}
+
+	#install the header files
+	cd ${S}/linux/include/linux/dvb
+	insinto /usr/include/linux/dvb
+	doins *.h
 
 	#note, REAME-2.6 is an alternative method
 	#of installing dvb besides the ebuild.
