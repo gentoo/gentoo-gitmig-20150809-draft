@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/darts
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/ChangeLog,v 1.1 2003/06/20 16:41:55 yakina Exp $
+
+*darts-0.1 (21 Jun 2003)
+
+  21 Jun 2003; YAMAKURA Makoto <yakina@gentoo.org> darts-0.1.ebuild,
+  ChangeLog,Manifest,files/digest-darts-0.1:
+
+  Initial import. Ebuild submitted by MATSUU Takuto <matsuu@7501.net>
+
