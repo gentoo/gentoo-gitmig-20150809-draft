@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-0.6.1.ebuild,v 1.2 2004/09/01 08:08:23 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-0.6.1-r1.ebuild,v 1.1 2004/09/01 08:12:51 axxo Exp $
 
 inherit java-pkg
 
@@ -27,10 +27,10 @@ src_compile() {
 	local antflags="jar"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} docs"
-	ant ${antflags}
+	ant ${antflags} || die "Compilation failed"
 }
 
 src_install() {
-	java-pkg_dojar dist/*.jar
+	java-pkg_dojar dist/*.jar || die "Missing jars"
 	use doc && dohtml -r docs/*
 }
