@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d2f2e9965146149c6a3d5432989d2d94 ChangeLog 6392
-MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
-MD5 3408caad372ca08e789fb597070461ba mplus-fonts-2.2.2.ebuild 722
+MD5 3667704b25a6152a21e0c0357e2fa16e mplus-fonts-2.2.4.ebuild 734
 MD5 3b07e26c5e4c879fc0cf755142f215e2 mplus-fonts-2.2.3.ebuild 728
-MD5 243e34fc978fab7156feb2953a14392b files/digest-mplus-fonts-2.2.2 76
+MD5 3408caad372ca08e789fb597070461ba mplus-fonts-2.2.2.ebuild 722
+MD5 84f3e726a3bf759abd1fff0fffc0c907 ChangeLog 6520
+MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
 MD5 79f420242b150dcc1011d974c7e11ecd files/digest-mplus-fonts-2.2.3 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNVzh60LfUIagIAkRAqkoAJ96GngG35CZ1ARvRdII+ZpCTBEudwCgxrYF
-aGFYQv8MekFnI5+4nknfUo0=
-=jhGR
------END PGP SIGNATURE-----
+MD5 243e34fc978fab7156feb2953a14392b files/digest-mplus-fonts-2.2.2 76
+MD5 f89858a065739e89033a3743de476614 files/digest-mplus-fonts-2.2.4 76
