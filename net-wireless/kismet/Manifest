@@ -1,4 +1,4 @@
-MD5 09da3f9b145fc02643138f82adc75bf7 kismet-2.6.2-r1.ebuild 1870
+MD5 f02cc6e0dcbc812f43375ba05fdeb491 kismet-2.6.2-r1.ebuild 1893
 MD5 417e5dc4cda9b9a6f539e2e19affef63 kismet-2.8.1.ebuild 1996
 MD5 5e97e85ee89a8ba1cf6d760dc81ecdec kismet-2004.02.01.ebuild 2211
 MD5 bc13f48c5aed7ed28e9c9a85f5cce594 kismet-2.8.0b-r1.ebuild 2000
@@ -7,7 +7,7 @@ MD5 76d50714c319030122487f019bfdde6f kismet-2004.04.1.ebuild 2294
 MD5 6dfd1381181aea904924864dde4d5ca0 kismet-2.8.0a.ebuild 1787
 MD5 772423db10537c460ea4814cb349cd5c kismet-2.8.1-r1.ebuild 2142
 MD5 727da5eaccbdf1ed582991dfc734ed06 kismet-2.8.0.ebuild 1785
-MD5 a4c88b52d4722de75d673db1c904265a ChangeLog 4295
+MD5 4ceaebcecfe39e5d2d1bf12f52a3fe4d ChangeLog 4410
 MD5 32831d719499c83f7942f6432ef58278 metadata.xml 252
 MD5 24fc0974b298b5cc6e1fda96283398fb kismet-3.0.1-r1.ebuild 2297
 MD5 ac454f5a5ad0a364c677157a511e534d files/digest-kismet-2.8.0a 133
