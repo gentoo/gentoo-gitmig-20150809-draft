@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dclock
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/ChangeLog,v 1.5 2004/06/24 22:15:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/ChangeLog,v 1.6 2004/09/09 21:28:35 kugelfang Exp $
+
+  09 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> dclock-2.1.2_p5.ebuild:
+  Marked ~amd64.
 
   14 Jun 2004; <pyrania@gentoo.org> dclock-2.1.2_p5.ebuild:
   Added IUSE.
