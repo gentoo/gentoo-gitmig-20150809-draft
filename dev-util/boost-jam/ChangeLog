@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/boost-jam
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-jam/ChangeLog,v 1.7 2004/06/25 02:21:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-jam/ChangeLog,v 1.8 2004/07/04 10:40:25 malc Exp $
+
+*boost-jam-3.1.9-r1 (04 Jul 2004)
+
+  04 Jul 2004; <malc@gentoo.org> +files/boost-jam-3.1.9-amd64.patch,
+  boost-jam-3.1.9-r1.ebuild:
+  Patch for proper amd64 compilation - fixes bug #49545
+  Change ebuild to properly die on dobin if make 'succeeds' but does not make any binaries (as it will if the arch is unsupported)
 
   14 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   files/boost-jam-3.1.9-dir.patch:

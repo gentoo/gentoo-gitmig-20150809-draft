@@ -1,0 +1,13 @@
+--- boost-jam-3.1.9/work/boost-jam-3.1.9/jam.h	2003-10-30 13:55:46.000000000 +0000
++++ boost-jam-3.1.9_malc/work/boost-jam-3.1.9/jam.h	2004-06-07 16:23:57.302534144 +0000
+@@ -455,6 +455,10 @@
+ # define OSPLAT "OSPLAT=IA64"
+ # endif
+ 
++# if defined( __x86_64__ ) 
++# define OSPLAT "OSPLAT=AMD64"
++# endif
++
+ # ifdef __s390__
+ # define OSPLAT "OSPLAT=390"
+ # endif
