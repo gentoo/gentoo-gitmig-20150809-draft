@@ -1,0 +1,30 @@
+diff -urN cyrus-sasl-2.1.14/acconfig.h cyrus-sasl-2.1.14-modified/acconfig.h
+--- cyrus-sasl-2.1.14/acconfig.h	2003-04-15 11:24:04.000000000 -0500
++++ cyrus-sasl-2.1.14-modified/acconfig.h	2003-07-09 00:24:07.000000000 -0500
+@@ -109,6 +109,9 @@
+ /* what flavor of GSSAPI are we using? */
+ #undef HAVE_GSS_C_NT_HOSTBASED_SERVICE
+ 
++/* does GSSAPI provide GSS_C_NT_USER_NAME? */
++#undef HAVE_GSS_C_NT_USER_NAME
++
+ /* do we have gssapi.h or gssapi/gssapi.h? */
+ #undef HAVE_GSSAPI_H
+ 
+diff -urN cyrus-sasl-2.1.14/plugins/gssapi.c cyrus-sasl-2.1.14-modified/plugins/gssapi.c
+--- cyrus-sasl-2.1.14/plugins/gssapi.c	2003-05-30 18:17:48.000000000 -0500
++++ cyrus-sasl-2.1.14-modified/plugins/gssapi.c	2003-07-09 00:27:41.000000000 -0500
+@@ -772,7 +772,12 @@
+ 	    
+ 	    maj_stat = gss_import_name (&min_stat,
+ 					&name_without_realm,
+-					GSS_C_NT_USER_NAME,
++					/* Solaris 8/9 gss_import_name doesn't accept GSS_C_NULL_OID here, so use GSS_C_NT_USER_NAME instead if available. */
++					#ifdef HAVE_GSS_C_NT_USER_NAME
++						GSS_C_NT_USER_NAME,
++					#else
++						GSS_C_NULL_OID,
++					#endif
+ 					&without);
+ 	    
+ 	    if (GSS_ERROR(maj_stat)) {

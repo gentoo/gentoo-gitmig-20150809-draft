@@ -1,0 +1,19 @@
+diff -urN cyrus-sasl-2.1.14/plugins/mysql.c cyrus-sasl-2.1.14-modified/plugins/mysql.c
+--- cyrus-sasl-2.1.14/plugins/mysql.c	2003-05-14 13:46:02.000000000 -0500
++++ cyrus-sasl-2.1.14-modified/plugins/mysql.c	2003-07-09 00:49:42.000000000 -0500
+@@ -323,9 +323,14 @@
+ 	
+ 	if (settings->mysql_verbose)
+ 	    sparams->utils->log(NULL, SASL_LOG_WARN,
+-				"mysql plugin try and connect to %s\n",
++				"mysql plugin trying to connect to %s\n",
+ 				cur_host);
+ 
++	if(mysql_init(&mysql) == NULL) {
++		sparams->utils->log(NULL, SASL_LOG_WARN,
++ 	               "mysql plugin: could not execute mysql_init");
++		goto done;
++	}
+ 	sock = mysql_real_connect(&mysql,cur_host,
+ 				  settings->mysql_user,
+ 			          settings->mysql_passwd,
