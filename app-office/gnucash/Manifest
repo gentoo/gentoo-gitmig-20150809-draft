@@ -1,8 +1,9 @@
-MD5 cc2efa16c589ec2c569a5a466dcd33cd ChangeLog 4072
+MD5 294b5783036e675d2a3df52a9516b294 ChangeLog 4230
 MD5 b8e0eec1a6bcd963f2ce26db9abf9b9f gnucash-1.8.1.ebuild 1455
 MD5 54902cd500c04f0659cd9a7d3438f1cd gnucash-1.8.2.ebuild 1546
 MD5 7d1c851062c5082d57cda39101ca1e8a gnucash-1.6.8.ebuild 1902
 MD5 283f9e5907c2337f6516e9fa81cbc48c gnucash-1.8.2-r1.ebuild 2718
+MD5 313cb3b273a9ccf25a498bfafef5a918 gnucash-1.8.4.ebuild 2646
 MD5 b790010032b6a0c476e8242236f53829 gnucash-1.8.3-r1.ebuild 2720
 MD5 7e5e1bb02bd5c517c2141e43d5189947 gnucash-1.8.3.ebuild 2646
 MD5 e298b9154a60df27ab519e6b88dd4c47 files/digest-gnucash-1.8.1 66
@@ -12,3 +13,4 @@ MD5 8ccd6e0765bb53caad58e8f736b020e9 files/digest-gnucash-1.6.8 67
 MD5 5bb39d9e803ae87681b2b40baa94d919 files/digest-gnucash-1.8.3 137
 MD5 b11b22208604e79d9ab6be4245646e4a files/gnucash-1.8.3-qif-file.patch 440
 MD5 5bb39d9e803ae87681b2b40baa94d919 files/digest-gnucash-1.8.3-r1 137
+MD5 6ccd22f551213649d30be28d42195243 files/digest-gnucash-1.8.4 137
