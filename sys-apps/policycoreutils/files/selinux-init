@@ -1,4 +1,7 @@
 #!/bin/bash
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/files/selinux-init,v 1.2 2003/11/24 06:12:02 pebenito Exp $
 
 mount -n -t proc none /proc
 
@@ -20,9 +23,11 @@ if [ -n ${ENABLED} ]; then
 		POLICYVER=15
 
 	# load the policy if it exists
-	[ -f /etc/security/selinux/policy.${POLICYVER} ] && \
-		/usr/sbin/load_policy /etc/security/selinux/policy.${POLICYVER} || \
+	if [ -f /etc/security/selinux/policy.${POLICYVER} ]; then
+		/usr/sbin/load_policy /etc/security/selinux/policy.${POLICYVER}
+	else
 		echo "Unable to load policy: /etc/security/selinux/policy.${POLICYVER} missing."
+	fi
 fi
 
 exec /sbin/init
