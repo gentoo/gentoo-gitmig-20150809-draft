@@ -454,7 +454,6 @@ app-admin/va-systemimager-client
 =media-sound/grip-2.98.3
 =media-sound/grip-2.98.3-r1
 # untested
->=net-fs/netatalk-1.5
 >=dev-db/unixODBC-2.0.8
 =app-editors/fte-20010819
 #=net-dialup/mgetty-1.1.26
