@@ -21,6 +21,15 @@
 ##   End example
 ##
 
+# <tantive@gentoo.org> (2 Oct 2002)
+# Version bumped, masked due to freeze
+=sys-kernel/usermode-sources-2.4.19-r8
+=sys-kernel/usermode-sources-2.4.19-r7
+=sys-kernel/usermode-sources-2.4.19-r6
+=sys-kernel/usermode-sources-2.4.19-r5
+=sys-kernel/usermode-sources-2.4.19-r4
+=sys-kernel/usermode-sources-2.4.19-r3
+
 # <agenkin@gentoo.org> (2 Oct 2002)
 # Masked pending unfreeze.
 >=net-misc/e100-2.1.15
