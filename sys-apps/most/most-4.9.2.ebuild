@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.9.2.ebuild,v 1.9 2002/10/19 04:06:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/most-4.9.2.ebuild,v 1.10 2002/10/20 18:54:50 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An extremely excellent text file reader"
@@ -12,7 +12,6 @@ SRC_URI="ftp://space.mit.edu/pub/davis/most/${P}.tar.gz"
 
 DEPEND=">=sys-libs/slang-1.4.2
         >=sys-libs/ncurses-5.2-r2"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	./configure \

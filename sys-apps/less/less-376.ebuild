@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-376.ebuild,v 1.9 2002/10/19 03:42:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-376.ebuild,v 1.10 2002/10/20 18:54:50 vapier Exp $
 
 DESCRIPTION="Excellent text file viewer"
 HOMEPAGE="http://www.greenwoodsoftware.com/"
@@ -11,7 +11,6 @@ S=${WORKDIR}/${P}
 SRC_URI="http://www.greenwoodsoftware.com/less/${P}.tar.gz"
 
 DEPEND="virtual/glibc >=sys-libs/ncurses-5.2"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	./configure --host=${CHOST} --prefix=/usr \

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mosix-user/mosix-user-1.8.0.ebuild,v 1.4 2002/10/19 04:06:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mosix-user/mosix-user-1.8.0.ebuild,v 1.5 2002/10/20 18:54:50 vapier Exp $
 
 S=${WORKDIR}/user
 DESCRIPTION="User-land utilities for MOSIX process migration (clustering) software"
@@ -10,7 +10,6 @@ KEYWORDS="~x86 -ppc -sparc -spar64 -alpha"
 SLOT="0"
 LICENSE="as-is"
 DEPEND=">=sys-libs/ncurses-5.2"
-RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	if [ -z "`readlink /usr/src/linux|grep mosix`" ]; then

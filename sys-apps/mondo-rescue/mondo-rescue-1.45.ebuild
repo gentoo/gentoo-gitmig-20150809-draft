@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.45.ebuild,v 1.1 2002/07/31 16:30:54 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.45.ebuild,v 1.2 2002/10/20 18:54:50 vapier Exp $
 
 S=${WORKDIR}/${PN/-rescue/}-${PV}
 DESCRIPTION="a nice backup tool"
@@ -22,7 +22,6 @@ DEPEND=">=app-arch/afio-2.4.7
 	>=sys-apps/buffer-1.19
 	>=sys-apps/syslinux-1.7"
 
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf || die "configure failed"

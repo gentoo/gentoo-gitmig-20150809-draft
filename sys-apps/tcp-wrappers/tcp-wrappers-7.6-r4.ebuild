@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.8 2002/10/19 03:21:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r4.ebuild,v 1.9 2002/10/20 18:54:50 vapier Exp $
 
 MY_P="tcp_wrappers_${PV}"
 PATCH0="${MY_P}.dif"
@@ -14,7 +14,6 @@ KEYWORDS="x86 ppc sparc sparc64 alpha"
 SLOT="0"
 LICENSE="freedist"
 DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

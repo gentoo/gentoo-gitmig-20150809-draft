@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/fxload-20020411.ebuild,v 1.7 2002/10/19 03:42:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/fxload-20020411.ebuild,v 1.8 2002/10/20 18:54:50 vapier Exp $
 
 # source maintainers named it fxload-YYYY_MM_DD instead of fxload-YYYYMMDD
 OLDP="$P"
@@ -16,7 +16,6 @@ LICENSE="GPL-2"
 # fxload needs pcimodules utility provided by pcitutils-2.1.9-r1
 DEPEND="virtual/glibc
 	sys-apps/hotplug"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	# compile fxload program

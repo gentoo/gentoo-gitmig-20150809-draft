@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020401-r1.ebuild,v 1.1 2002/10/19 22:28:27 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020401-r1.ebuild,v 1.2 2002/10/20 18:54:50 vapier Exp $
 
 # source maintainers named it hotplug-YYYY_MM_DD instead of hotplug-YYYYMMDD
 MY_P=`echo ${P}|sed 's/-\(....\)\(..\)\(..\)/-\1_\2_\3/'`
@@ -16,7 +16,6 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc
         >=sys-apps/pciutils-2.1.9
         >=sys-apps/usbutils-0.9"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

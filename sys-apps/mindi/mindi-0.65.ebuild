@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-0.65.ebuild,v 1.1 2002/07/23 22:09:52 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-0.65.ebuild,v 1.2 2002/10/20 18:54:50 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mindi builds boot/root disk images using your existing kernel, modules, tools and libraries"
@@ -18,7 +18,6 @@ DEPEND=">=sys-apps/bzip2-1.0.1
 	>=sys-apps/lilo-22
 	>=app-admin/dosfstools-2.8"
 
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcb/tcb-0.9.7.4.ebuild,v 1.3 2002/10/19 03:21:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcb/tcb-0.9.7.4.ebuild,v 1.4 2002/10/20 18:54:50 vapier Exp $
 
 S=${WORKDIR}/${P}
 
@@ -11,7 +11,6 @@ HOMEPAGE="http://www.openwall.com"
 LICENSE="GPL-2"
 
 DEPEND=">=sys-libs/pam-0.75"
-RDEPEND="${DEPEND}"
 SLOT="0"
 KEYWORDS="x86"
 

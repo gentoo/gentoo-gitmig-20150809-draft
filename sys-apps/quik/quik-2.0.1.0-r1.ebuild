@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quik/quik-2.0.1.0-r1.ebuild,v 1.9 2002/10/19 03:21:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quik/quik-2.0.1.0-r1.ebuild,v 1.10 2002/10/20 18:54:50 vapier Exp $
 
 inherit mount-boot
 
@@ -16,7 +16,6 @@ DEB_URI="ftp://ftp.debian.org/debian/pool/main/q/quik"
 SRC_URI="${DEB_URI}/${MY_P} ${DEB_URI}/${DEB_P}.gz"
 
 DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}"
 KEYWORDS="ppc"
 
 src_unpack() {
