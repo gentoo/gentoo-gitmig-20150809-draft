@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.90.0.ebuild,v 1.3 2004/10/26 09:20:12 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.90.0.ebuild,v 1.4 2004/10/29 00:26:50 fafhrd Exp $
 
 
 inherit eutils gnustep
@@ -122,7 +122,8 @@ pkg_postinst() {
 		einfo "Even though you are not using the GNUstep environment, wmaker.inst will"
 		einfo "  create a 'GNUstep' directory in your home -- it uses this dirctory"
 		einfo "  to store your WindowMaker configuration files."
-		einfo "WPrefs.app can be launched at /usr/lib/GNUstep/Apps/WPrefs.app/WPrefs"
+		einfo "WPrefs.app can be launched at /usr/lib/GNUstep/Applications/WPrefs.app/WPrefs"
+		einfo "  or by simply clicking on it in the WindowMaker default dock."
 	fi
 
 	if use vdesktop ; then
