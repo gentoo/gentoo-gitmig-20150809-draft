@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.2 2003/07/11 15:51:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.3 2003/07/12 12:49:26 aliz Exp $
 
 *reportlab-1.17-r1 (04 Jul 2003)
 
@@ -18,7 +18,7 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
- *ReportLab-1.14 (29 Jun 2002)
+*reportlab-1.14 (29 Jun 2002)
 
  26 Jul 2002; George Shapovalov <george@gentoo.org> ReportLab-1.11.ebuild, ReportLab-1.14.ebuild :
  added KEYWORDS,SLOT,LICENSE

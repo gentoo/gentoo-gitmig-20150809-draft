@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/python-biggles-1.6.3.ebuild,v 1.4 2003/06/22 12:16:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/python-biggles-1.6.3.ebuild,v 1.5 2003/07/12 12:49:26 aliz Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://biggles.sourceforge.net"
 DEPEND="~media-libs/plotutils-2.4.1
         dev-python/Numeric"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 
 mydoc="examples/*"

@@ -1,8 +1,8 @@
 # ChangeLog for dev-python/f2py
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/f2py/ChangeLog,v 1.2 2003/04/22 10:22:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/f2py/ChangeLog,v 1.3 2003/07/12 12:49:25 aliz Exp $
 
-*f2py--2.32.225.1419 (4 Apr 2003)
+*f2py-2.32.225.1419 (4 Apr 2003)
 
   04 Apr 2003; Grant Goodyear <g2boojum@gentoo.org> :
   Initial import.  

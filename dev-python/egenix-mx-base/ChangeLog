@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.9 2003/04/04 23:18:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.10 2003/07/12 12:49:25 aliz Exp $
 
   11 Feb 2003; Bryon Roche <kain@kain.org> egenix-mx-base-2.0.4.ebuild :
 
@@ -30,3 +30,9 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
+
+*egenix-mx-base-2.0.2 (22 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+

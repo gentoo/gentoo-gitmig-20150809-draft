@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/quixote
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.2 2003/05/02 16:39:23 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.3 2003/07/12 12:49:26 aliz Exp $
 
 *quixote-0.6 (02 May 2003)
 
@@ -18,4 +18,9 @@
   That said, I highly recommend that all users who want to use quixote
   use the latest beta, as there have been some significant changes.
   (If it's good enough for LWN, it's good enough for me.)
+
+*quixote-0.5.1 (22 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 

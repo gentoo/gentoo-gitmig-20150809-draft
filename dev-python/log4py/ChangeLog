@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/log4py
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/log4py/ChangeLog,v 1.4 2003/02/12 06:32:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/log4py/ChangeLog,v 1.5 2003/07/12 12:49:26 aliz Exp $
+
+*log4py-1.1 (22 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
