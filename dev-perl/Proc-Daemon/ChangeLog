@@ -1,6 +1,6 @@
-# ChangeLog for dev-perl/FileHandle-rollback
+# ChangeLog for dev-perl/Proc-Daemon
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Daemon/ChangeLog,v 1.1 2003/07/25 14:36:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Daemon/ChangeLog,v 1.2 2003/07/26 07:36:55 vapier Exp $
 
 *Proc-Daemon-0.02 (25 Jul 2003)
 
