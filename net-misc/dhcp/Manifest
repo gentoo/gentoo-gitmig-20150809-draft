@@ -10,7 +10,7 @@ MD5 5fc020f90a14d90c6d6c4703feb750f6 dhcp-3.0_p2-r6.ebuild 4010
 MD5 a4fc0a5a40c8ec22f3301945fc744516 files/conf.dhcpd 381
 MD5 498a3eb0e9deaf705f17fff3834f5b90 files/dhclient.c-3.0-dw-cli-fix.patch 734
 MD5 28ebabb4ad513afb04314634ecd9db25 files/dhcp-3.0pl2-user-option-fix.patch 1519
-MD5 66cba8d85e40bdd4312c9a70b1fe9254 files/dhcp.conf 634
+MD5 0203f009ee3427c47c6962c1352e3de4 files/dhcp.conf 634
 MD5 6fac614e84b5c2856503f0a62d10c1fa files/dhcp.rc6 1100
 MD5 5222ad8424cca071c3dfa8901d9383c3 files/dhcp.rc7 767
 MD5 d6ae01f5dcc87b11d4d96a34e7cc52a3 files/digest-dhcp-3.0_p2-r4 63
@@ -22,9 +22,9 @@ MD5 d6ae01f5dcc87b11d4d96a34e7cc52a3 files/digest-dhcp-3.0_p2-r5 63
 MD5 d6ae01f5dcc87b11d4d96a34e7cc52a3 files/digest-dhcp-3.0_p2-r6 63
 MD5 66becf9870e0293bbd35d1fba770751a files/dhcp-3.0+paranoia.patch 5366
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBCcFkHTu7gpaalycRAremAJ4sglfIkFIVBJ2ouDH27M5fzGLpDACgyRod
-B2RVbdg1pq+OS6uDkH3Z/uM=
-=HSIf
+iD8DBQFBL/RAHTu7gpaalycRAoLLAKDEAfoDzMrIf/uCznXl0kYoXz3zXQCggDFX
+b/58lYMjUuz92V9KgMZCiVI=
+=fbfw
 -----END PGP SIGNATURE-----
