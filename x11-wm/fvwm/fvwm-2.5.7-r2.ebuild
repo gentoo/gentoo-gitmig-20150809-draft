@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.12 2003/09/08 09:21:43 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.13 2003/09/14 10:13:53 taviso Exp $
 
 inherit gnuconfig
 
@@ -260,22 +260,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "FVWM has numerous optional features that are configurable at"
-	einfo "compile time via USE flags, you can see a list of the USE flags"
-	einfo "available with FVWM using this command"
-	einfo
-	einfo "	$ emerge -pv fvwm"
-	echo
-	einfo "If you would like a configurable, themed, well made iconset for use"
-	einfo "with your FVWM configuration, try x11-themes/wm-icons."
-	echo
-	use perl && use tcltk && {
-		einfo "By setting the perl and tcltk USE flags, you have elected to"
-		einfo "install the FvwmTabs module, a configurable tabbing system for"
-		einfo "FVWM, you can read more about it here"
-		einfo
-		einfo "	http://users.tpg.com.au/users/scottie7/fvwmtabs.html"
-		einfo
-		einfo "The example fvwmtabrc has been installed into /usr/share/doc/${PF}"
-	}
+	if use perl; then
+		if use tcltk; then
+			einfo "By setting the perl and tcltk USE flags, you have elected to"
+			einfo "install the FvwmTabs module, a configurable tabbing system"
+			einfo "for FVWM, you can read more about it here"
+			einfo
+			einfo "	http://users.tpg.com.au/users/scottie7/fvwmtabs.html"
+		fi
+	fi
 }

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.29 2003/09/03 11:33:04 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.30 2003/09/14 10:13:53 taviso Exp $
+
+  14 Sep 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.7-r2.ebuild:
+  tweaking postinst messages.
 
   03 Sep 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.7-r2.ebuild:
   fvwm-convert-2.6 is a script to updated .fvwm2rc files, but is currently 
