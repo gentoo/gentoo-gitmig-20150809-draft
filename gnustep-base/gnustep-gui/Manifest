@@ -4,10 +4,10 @@ MD5 ec1df9161d8f1382a12157b4670a1981 gnustep-gui-0.8.5.ebuild 1070
 MD5 6116d8408ca55f6d4a520b0e5a83619d gnustep-gui-0.8.0.ebuild 1033
 MD5 ec2a075a4a96dd9d782e868467c96986 gnustep-gui-0.7.9.ebuild 1033
 MD5 a99822a371283fd3dd2abd1563b08c76 gnustep-gui-0.8.7.ebuild 799
-MD5 67b7164100d235f1b3e2c12f9b691553 gnustep-gui-0.9.5_pre20040928.ebuild 1745
+MD5 ef74a14eda2d8ede77ab162245a52c48 gnustep-gui-0.9.5_pre20040928.ebuild 1738
 MD5 be917ba7298ba3bd936d874774de0a7d gnustep-gui-0.8.5-r1.ebuild 798
 MD5 c52eb56cd951547cce27cfef118b9e7f gnustep-gui-0.9.4_pre20040920.ebuild 1372
-MD5 b3d481ff7e0e2ad1af1714c1ab417975 ChangeLog 3949
+MD5 e5bee44aa5f6d29a08786a76905a05a0 ChangeLog 4098
 MD5 649db105cbe2e9ffcca068143f88926f metadata.xml 1355
 MD5 8596a2332c83364ee72b8555cf3296f0 gnustep-gui-0.9.4.ebuild 1444
 MD5 6f66904f0ad8d980c653d5c0fdf7d81b files/gnustep-gui-0.9.4-camaelon.patch 4029
