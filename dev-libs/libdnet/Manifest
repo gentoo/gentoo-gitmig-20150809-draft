@@ -1,5 +1,5 @@
-MD5 8016e854429ed5da5e2b6aae98e46ab5 ChangeLog 992
+MD5 cd7e7ddf1889756d47d9f7f03bab0a96 ChangeLog 1080
 MD5 53d17c5470074a7a2c18dbe456ddcad7 libdnet-1.4.ebuild 618
-MD5 81a91142bd815a245a9f0bd37e8a856a libdnet-1.7.ebuild 552
+MD5 fc12723573059ed3011918907f7f7f78 libdnet-1.7.ebuild 550
 MD5 26aaa2ed808be5b28e4cf1cdc6641e93 files/digest-libdnet-1.4 63
 MD5 5cbbb4d347762ee426542a70e157e11d files/digest-libdnet-1.7 63
