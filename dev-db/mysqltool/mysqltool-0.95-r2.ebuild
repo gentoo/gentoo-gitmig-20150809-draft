@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r2.ebuild,v 1.1 2003/05/04 11:38:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r2.ebuild,v 1.2 2003/05/05 01:52:45 robbat2 Exp $
 
 inherit perl-module
 
@@ -37,16 +37,23 @@ src_install() {
 	make install || die
 
 	dodoc COPYING Changes MANIFEST README Upgrade
+
+
 	
 	local __apache_server_root__ 
-	__apache_server_root__=`grep "^ServerRoot" /etc/apache2/conf/*.conf -h | cut -d' ' -f2`
+	if [ "`use apache2`" ]; then
+		__apache_server_root__="/etc/apache2"
+	else
+		__apache_server_root__="/etc/apache"
+	fi;
+	__apache_conf_dir__=${__apache_server_root__}/conf
 	local __apache_document_root__
-	__apache_document_root__=`grep "^DocumentRoot" /etc/apache2/conf/*.conf -h | cut -d' ' -f2`
+	__apache_document_root__=`grep "^DocumentRoot" ${__apache_conf_dir__}/*.conf -h | cut -d' ' -f2`
 	local __apache_modules_conf_dir__
 	if [ "`use apache2`" ]; then
-		__apache_modules_conf_dir__="conf/modules.d"
+		__apache_modules_conf_dir__="${__apache_conf_dir__}/modules.d"
 		else
-		__apache_modules_conf_dir__="conf/addon-modules"
+		__apache_modules_conf_dir__="${__apache_conf_dir__}/addon-modules"
 	fi;
 
 	# the cgi and images..
@@ -57,17 +64,17 @@ src_install() {
 	# the config file..
 	local apacheconfbase
 	apacheconfbase=${FILESDIR}/90_mysqltool.conf.m4
-	insinto ${__apache_server_root__}/${__apache_modules_conf_dir__}
+	insinto ${__apache_modules_conf_dir__}
 	cp ${S}/htdocs/mysqltool.conf ${S}/htdocs/mysqltool.pl
 	doins htdocs/mysqltool.pl
-	fowners apache.apache ${__apache_server_root__}/${__apache_modules_conf_dir__}/mysqltool.pl
-	fperms 0600 ${__apache_server_root__}/${__apache_modules_conf_dir__}/mysqltool.pl
-	m4 -D__APACHE_SERVER_ROOT__=${__apache_server_root__} -D__APACHE_DOCUMENT_ROOT__=${__apache_document_root__} -D__APACHE_MODULES_CONF_DIR__=${__apache_modules_conf_dir__} ${apacheconfbase} >${D}/${__apache_server_root__}/${__apache_modules_conf_dir__}/`basename ${apacheconfbase} .m4`
+	fowners apache.apache ${__apache_modules_conf_dir__}/mysqltool.pl
+	fperms 0600 ${__apache_modules_conf_dir__}/mysqltool.pl
+	m4 -D__APACHE_SERVER_ROOT__=${__apache_server_root__} -D__APACHE_DOCUMENT_ROOT__=${__apache_document_root__} -D__APACHE_MODULES_CONF_DIR__=${__apache_modules_conf_dir__} ${apacheconfbase} >${D}/${__apache_modules_conf_dir__}/`basename ${apacheconfbase} .m4`
 
 	# now fix its location in the main cgi..
 	cp ${D}/${__apache_document_root__}/mysqltool/index.cgi \
 		${D}/${__apache_document_root__}/mysqltool/index.cgi.orig
-	sed -e "s:^\(require\).*:\1 '${__apache_server_root__}/${__apache_modules_conf_dir__}/mysqltool.pl';:" \
+	sed -e "s:^\(require\).*:\1 '${__apache_modules_conf_dir__}/mysqltool.pl';:" \
 		${D}/${__apache_document_root__}/mysqltool/index.cgi.orig > \
 		${D}/${__apache_document_root__}/mysqltool/index.cgi
 	rm ${D}/${__apache_document_root__}/mysqltool/index.cgi.orig
@@ -75,9 +82,11 @@ src_install() {
 
 pkg_postinst() {
 	einfo "To have Apache support MySQLTool, please do the following:"
+	local f
 	if [ "`use apache2`" ] ; then
-		einfo "Edit /etc/conf.d/apache2 and add \"-D MYSQLTOOL\""
+		f='2'
 	else
-		einfo "Edit /etc/conf.d/apache and add \"-D MYSQLTOOL\""
+		f=''
 	fi
+	einfo "Edit /etc/conf.d/apache${f} and add \"-D MYSQLTOOL\" to APACHE${f}_OPTS"
 }
