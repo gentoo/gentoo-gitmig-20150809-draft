@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/gcolor2
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.1 2004/09/25 17:26:03 brad Exp $
+
+*gcolor2-0.1 (25 Sep 2004)
+
+  25 Sep 2004; Brad Laue <brad@gentoo.org> +metadata.xml, +gcolor2-0.1.ebuild:
+  Initial import of gcolor2, a GTK+2 rewrite of the 'gcolor' utility.
+
