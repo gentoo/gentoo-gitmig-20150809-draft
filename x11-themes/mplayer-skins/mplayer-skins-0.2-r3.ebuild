@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/mplayer-skins-0.2-r3.ebuild,v 1.2 2003/11/01 20:57:08 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/mplayer-skins-0.2-r3.ebuild,v 1.3 2003/11/14 20:11:43 seemant Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Collection of mplayer themes"
@@ -43,7 +43,7 @@ KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="net-misc/wget"
 RDEPEND="media-video/mplayer
-	 sys-apps/bzip2"
+	 app-arch/bzip2"
 
 src_install () {
 	dodir /usr/share/mplayer/Skin
