@@ -27,3 +27,4 @@ nogroup::-2:
 nobody::65534:
 nofiles:x:200:
 qmail:x:201:
+postfix:x:207:
