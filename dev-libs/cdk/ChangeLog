@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.8 2003/10/27 02:11:57 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.9 2003/11/29 23:00:36 brad_mssw Exp $
+
+  29 Nov 2003; Brad House <brad_mssw@gentoo.org> cdk-4.9.10.20020809.ebuild:
+  mark stable on amd64
 
   26 Oct 2003; Brad House <brad_mssw@gentoo.org> cdk-4.9.10.20020809.ebuild:
   add ~amd64 flags
