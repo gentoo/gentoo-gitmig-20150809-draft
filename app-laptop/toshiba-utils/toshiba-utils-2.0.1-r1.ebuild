@@ -1,15 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/toshiba-utils-2.0.1-r1.ebuild,v 1.1 2004/03/08 05:52:22 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/toshiba-utils-2.0.1-r1.ebuild,v 1.2 2004/04/06 04:07:02 vapier Exp $
+
+inherit eutils
 
 S=${WORKDIR}/toshutils-${PV}
 DESCRIPTION="Toshiba Laptop Utilities"
 HOMEPAGE="http://www.buzzard.org.uk/toshiba/"
 SRC_URI="http://www.buzzard.org.uk/toshiba/toshutils-${PV}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc -sparc"
+SLOT="0"
+KEYWORDS="x86"
 IUSE="X gtk"
 
 DEPEND="gtk? ( =x11-libs/gtk+-1* )"
@@ -28,7 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf
+	econf || die
 	make depend
 	make -C src || die
 }
