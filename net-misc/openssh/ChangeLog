@@ -1,8 +1,14 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.15 2002/07/09 14:36:49 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.16 2002/07/25 12:33:35 carpaski Exp $
 
 *openssh-3.4_p1-r3 (04 July 2002)
+
+	25 Jul 2002; Nicholas Jones <carpaski@gentoo.org> openssh-3.4_p1-r3.ebuild :
+	
+	Bopped Brandon on the head. Added -passwords to the end of --with-md5
+	No version bump as this doesn't affect most people, and those who need it
+	can just rsync and emerge.
 
   09 Jul 2002; Brandon Low <lostlogic@gentoo.org> openssh-3.4_p1-r3.ebuild :
 
@@ -31,9 +37,9 @@
 *openssh-3.4_p1 (26 June 2002)
 
   26 June 2002; Brandon Low <lostlogic@gentoo.org> :
-  New version closes soon to be released security hole, PLEASE upgrade immediately
-  according to the changelogs, this new version closes several possible holes found
-  during a massive audit of the code.
+  New version closes soon to be released security hole, PLEASE upgrade
+	immediately according to the changelogs, this new version closes several
+	possible holes found during a massive audit of the code.
 
 *openssh-3.3_p1 (22 June 2002)
 
