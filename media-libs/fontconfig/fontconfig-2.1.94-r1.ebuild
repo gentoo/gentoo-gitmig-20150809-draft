@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.1.94-r1.ebuild,v 1.1 2003/04/18 01:15:09 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.1.94-r1.ebuild,v 1.2 2003/04/19 14:03:22 foser Exp $
 
 inherit debug eutils
 
@@ -13,7 +13,7 @@ SLOT="1.0"
 KEYWORDS="~x86 ~alpha ~ppc ~sparc ~mips ~hppa ~arm"
 
 # Seems like patches in freetype-2.1.2-r2 fixes bug #10028
-DEPEND=">=media-libs/freetype-2.1.2-r2
+DEPEND=">=media-libs/freetype-2.1.4
 	>=dev-libs/expat-1.95.3
 	>=sys-apps/ed-0.2"
 
