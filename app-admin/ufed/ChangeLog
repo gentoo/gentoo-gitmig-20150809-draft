@@ -1,11 +1,14 @@
 # ChangeLog for app-admin/ufed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ufed/ChangeLog,v 1.1 2002/10/12 08:22:27 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ufed/ChangeLog,v 1.2 2002/10/12 08:33:05 blizzy Exp $
 
 NOTE: This ChangeLog doesn't cover modifications to ufed itself.
 The real ChangeLog can be found at:
 http://gentoo.org/cgi-bin/viewcvs.cgi/gentoo-src/ufed/ChangeLog?rev=HEAD
 
+
+  12 Oct 2002; Maik Schreiber <blizzy@gentoo.org> ufed-0.1.ebuild:
+  Added ~ppc, ~sparc, ~sparc64 and ~alpha to KEYWORDS.
 
 *ufed-0.1 (12 Oct 2002)
 
