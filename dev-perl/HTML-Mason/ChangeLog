@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.4 2002/11/17 06:38:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.5 2002/11/21 13:00:22 mcummings Exp $
+
+*HTML-Mason-1.15-r1 (21 Nov 2002)
+
+  21 Nov 2002; Michael Cummings <mcummings@gentoo.org> ChangeLog,
+  HTML-Mason-1.15-r1, files/digest-HTML-Mason-1.15-r1 :
+
+  Addresses bug 10866 with a rather nasty fix. HTML-Mason wants to delete some
+  previously installed files if it detects them, which violates the sandbox.
+
 
 *HTML-Mason-1.15 (16 Nov 2002)
 
