@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.2-r5.ebuild,v 1.3 2002/07/25 15:35:27 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.2-r5.ebuild,v 1.4 2002/08/01 19:33:53 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GNU info program and utilities"
@@ -11,16 +11,11 @@ KEYWORDS="x86 ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
-if [ "`use build`" ] ; then
-	DEPEND="virtual/glibc"
-else
-	DEPEND="virtual/glibc 
-		>=sys-libs/ncurses-5.2-r2
-		nls? ( sys-devel/gettext )"
-#		>=sys-devel/automake-1.6"
-	RDEPEND="virtual/glibc 
-		>=sys-libs/ncurses-5.2-r2"
-fi
+DEPEND="virtual/glibc 
+	!build? ( >=sys-libs/ncurses-5.2-r2
+	          nls? ( sys-devel/gettext ) )"
+RDEPEND="virtual/glibc 
+	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
 src_unpack() {
 	unpack ${A}
