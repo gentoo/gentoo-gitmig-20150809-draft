@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/open_c-lit/open_c-lit-1.4.ebuild,v 1.2 2004/09/06 22:41:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/open_c-lit/open_c-lit-1.4.ebuild,v 1.3 2004/09/07 17:24:33 mr_bones_ Exp $
 
 MY_PV=${PV//.}
 DESCRIPTION="Open Convert .LIT tool"
@@ -22,7 +22,7 @@ src_unpack() {
 	cd ${S}
 	sed -i "/^CFLAGS=/s:-O2:${CFLAGS}:" */Makefile
 }
-				
+
 src_compile() {
 	cd ${S}/lib
 	emake || die
