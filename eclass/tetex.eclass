@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.23 2004/10/28 11:49:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.24 2004/10/29 15:14:02 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
 # A generic eclass to install tetex distributions.
 
-inherit alternatives eutils flag-o-matic
+inherit eutils flag-o-matic
 
 ECLASS=tetex
 INHERITED="${INHERITED} ${ECLASS}"
-EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
+EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_setup pkg_preinst pkg_postinst
 
 if [ -z "${TETEX_PV}" ] ; then
 	TETEX_PV=${PV}
@@ -43,7 +43,8 @@ DEPEND="!app-text/tetex
 	X? ( virtual/x11 )
 	>=media-libs/libpng-1.2.1
 	sys-libs/ncurses
-	>=net-libs/libwww-5.3.2-r1"
+	>=net-libs/libwww-5.3.2-r1
+	app-text/texi2html"
 RDEPEND="${DEPEND}
 	!app-text/dvipdfm
 	!dev-tex/currvita
@@ -52,6 +53,18 @@ RDEPEND="${DEPEND}
 	>=dev-lang/perl-5.2
 	dev-util/dialog"
 PROVIDE="virtual/tetex"
+
+tetex_pkg_setup() {
+
+	# hundreds of bugs reporting "cannot find -lmysqlclient" :(
+	if ! has_version 'dev-db/mysql' && (libwww-config --libs | grep mysql >/dev/null 2>&1); then
+		eerror
+		eerror "Your libwww was compiled with MySQL but MySQL is missing from system."
+		eerror "Please install MySQL or remerge libwww without mysql USE flag."
+		eerror
+		die "libwww was compiled with mysql but mysql is not installed"
+	fi
+}
 
 tetex_src_unpack() {
 
@@ -116,6 +129,7 @@ tetex_src_compile() {
 		--with-system-pnglib \
 		--without-texinfo \
 		--without-dialog \
+		--without-texi2html \
 		--with-system-zlib \
 		--disable-multiplatform \
 		--with-epsfwin \
@@ -211,19 +225,14 @@ tetex_src_install() {
 			rm -f ${D}/bin/readlink
 			rm -f ${D}/usr/bin/readlink
 
-			#fix for conflicting texi2html perl script:
-			local v
-			v=$(${D}/usr/bin/texi2html --version)
-			mv ${D}/usr/bin/texi2html{,-${v}}
-			mv ${D}/usr/share/man/man1/texi2html{,-${v}}.1
-
 			#add /var/cache/fonts directory
 			dodir /var/cache/fonts
 
 			#fix for lousy upstream permisssions on /usr/share/texmf files
 			#NOTE: do not use fowners, as its not recursive ...
 			einfo "Fixing permissions ..."
-			chown -R root:root ${D}/usr/share/texmf
+			# root group name doesn't exist on Mac OS X
+			chown -R 0:0 ${D}/usr/share/texmf
 			;;
 		link)	# link is for tetex-beta
 			dodir /etc/env.d
@@ -304,10 +313,7 @@ tetex_pkg_preinst() {
 
 tetex_pkg_postinst() {
 
-	if [ -z "$1" ]; then
-		tetex_pkg_postinst all
-		use ppc-macos || alternatives_auto_makesym "/usr/bin/texi2html" "/usr/bin/texi2html-*"	
-	fi
+	tetex_pkg_postinst all
 
 	while [ "$1" ]; do
 	case $1 in
