@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-2.5-r1.ebuild,v 1.1 2004/09/19 08:25:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/poi-2.5-r1.ebuild,v 1.2 2004/10/22 11:35:29 absinthe Exp $
 
 inherit java-pkg eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/jakarta/poi/release/src/${PN}-src-${PV}-final-20040302.
 IUSE="jikes junit"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 DEPEND=">=virtual/jdk-1.2
 		junit? ( dev-java/junit )
 		sys-apps/sed

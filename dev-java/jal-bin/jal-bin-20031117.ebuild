@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jal-bin/jal-bin-20031117.ebuild,v 1.2 2004/10/16 17:18:28 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jal-bin/jal-bin-20031117.ebuild,v 1.3 2004/10/22 11:30:07 absinthe Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="http://vigna.dsi.unimi.it/jal/${P/-bin}-bin.tar.gz"
 HOMEPAGE="http://vigna.dsi.unimi.it/jal/"
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
 
 RDEPEND=">=virtual/jdk-1.4

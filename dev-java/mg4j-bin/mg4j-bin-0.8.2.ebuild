@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j-bin/mg4j-bin-0.8.2.ebuild,v 1.3 2004/10/16 17:30:17 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j-bin/mg4j-bin-0.8.2.ebuild,v 1.4 2004/10/22 11:30:42 absinthe Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="http://mg4j.dsi.unimi.it/${P/-bin}-bin.tar.gz"
 HOMEPAGE="http://mg4j.dsi.unimi.it"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
 
 RDEPEND=">=virtual/jdk-1.4

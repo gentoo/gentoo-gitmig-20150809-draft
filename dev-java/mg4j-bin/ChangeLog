@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/mg4j-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j-bin/ChangeLog,v 1.5 2004/10/16 17:30:17 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j-bin/ChangeLog,v 1.6 2004/10/22 11:30:42 absinthe Exp $
+
+  22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> mg4j-bin-0.8.2-r1.ebuild,
+  mg4j-bin-0.8.2.ebuild:
+  Keywords ~amd64.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> mg4j-bin-0.8.2-r1.ebuild,
   mg4j-bin-0.8.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.8-r2.ebuild,v 1.4 2004/10/16 17:29:18 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.8-r2.ebuild,v 1.5 2004/10/22 11:27:00 absinthe Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="http://jakarta.apache.org/log4j/jakarta-${P}.tar.gz"
 HOMEPAGE="http://jakarta.apache.org"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="jikes doc javamail jmx jms"
 DEPEND=">=virtual/jdk-1.4
 		dev-java/ant-core
