@@ -1,24 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/bogofilter-0.13.7.3.ebuild,v 1.3 2003/09/05 02:24:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/bogofilter-0.13.7.3.ebuild,v 1.4 2003/12/27 08:08:03 seemant Exp $
 
+IUSE=""
+
+S=${WORKDIR}/${P}
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
 SRC_URI="mirror://sourceforge/bogofilter/${P}.tar.gz"
 
-LICENSE="GPL-2"
 SLOT="0"
-
-KEYWORDS="~ppc ~x86 ~sparc ~amd64"
-IUSE=""
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc ~alpha ~hppa ~mips ~arm amd64 ia64"
 
 DEPEND="virtual/glibc
 	>=sys-libs/db-3"
 
-S=${WORKDIR}/${P}
-
 src_compile() {
-	econf
+	econf || die
 	emake || die
 }
 
@@ -31,8 +30,8 @@ src_install() {
 	doins tuning/README.bogotune tuning/bogol.1 tuning/bogotune.1
 
 	exeinto /usr/lib/${PN}/contrib
-	doexe contrib/bogofilter-qfe contrib/bogogrep contrib/mime.get.rfc822 contrib/parmtest.sh
-	doexe contrib/printmaildir.pl contrib/randomtrain contrib/scramble contrib/bogofilter-milter.pl
+	doexe contrib/{bogofilter-qfe,bogogrep,mime.get.rfc822,parmtest.sh}
+	doexe contrib/{printmaildir.pl,randomtrain,scramble,bogofilter-milter.pl}
 	insinto /usr/lib/${PN}/contrib
 	doins contrib/README.randomtrain contrib/bogo.R contrib/trainbogo.sh
 
