@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.16 2004/05/04 02:18:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.17 2004/06/09 17:44:12 agriffis Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -68,7 +68,7 @@ DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 
 
 # get kde and arts paths
-if [ -n "`use kde`" -o -n "`use arts`" ]; then
+if use kde || use arts; then
 	inherit kde-functions
 	set-kdedir 3
 	# $KDEDIR is now set to arts/kdelibs location

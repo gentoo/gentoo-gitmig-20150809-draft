@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realone/realone-1.ebuild,v 1.11 2003/09/11 01:22:29 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realone/realone-1.ebuild,v 1.12 2004/06/09 17:36:58 agriffis Exp $
 
 IUSE="gnome kde"
 
@@ -110,13 +110,13 @@ src_install() {
 	doins Gemini_0_1 RealMediaSDK_6_0 RealPlayer_9_0 RealShared_0_0
 
 	# KDE desktop entry
-	if [ -n "`use kde`" -a -n "${KDEDIR}" ]; then
+	if [ -n "${KDEDIR}" ] && use kde; then
 		insinto ${KDEDIR}/${APPLNK}
 		doins ${FILESDIR}/realone.desktop
 	fi
 
 	# Gnome desktop entry
-	if [ -n "`use gnome`" ]; then
+	if use gnome; then
 		insinto /usr/share/applications
 		doins ${FILESDIR}/realone.desktop
 	fi
@@ -134,7 +134,7 @@ pkg_postinst() {
 	einfo "The RealOne player has been installed into ${INS}."
 	einfo "You can start it by running the wrapper script 'realone'."
 	einfo "Netscape plugin was not installed because it is defunct."
-	if [ ${KDEDIR} ]; then
+	if [ -n "${KDEDIR}" ] && useq kde; then
 		einfo "A KDE desktop entry for RealOne has been installed."
 	fi
 	echo

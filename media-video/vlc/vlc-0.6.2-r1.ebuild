@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.11 2004/05/04 02:18:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.12 2004/06/09 17:44:12 agriffis Exp $
 
 inherit libtool
 
@@ -72,7 +72,7 @@ DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 # the library.
 
 # get kde and arts paths
-if [ -n "`use kde`" -o -n "`use arts`" ]; then
+if use kde || use arts; then
 	inherit kde-functions
 	set-kdedir 3
 	# $KDEDIR is now set to arts/kdelibs location

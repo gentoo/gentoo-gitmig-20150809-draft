@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motioneye/motioneye-1.2.ebuild,v 1.2 2004/04/27 20:58:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motioneye/motioneye-1.2.ebuild,v 1.3 2004/06/09 17:44:59 agriffis Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="X? ( virtual/x11
 src_compile() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-Makefile.diff
-	if [ `use X` ]; then
+	if use X; then
 		export WITHX='yes'
 	else
 		export WITHX='no'

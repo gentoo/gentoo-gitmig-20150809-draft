@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12-r1.ebuild,v 1.9 2004/06/02 02:40:32 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12-r1.ebuild,v 1.10 2004/06/09 17:39:29 agriffis Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -67,7 +67,7 @@ src_compile() {
 	# fix invalid paths in .la files of plugins
 	elibtoolize
 
-	if [ "`use quicktime`" ]; then
+	if use quicktime; then
 		has_version 'media-libs/openquicktime' \
 			&& myconf="${myconf} --with-openqt --without-qt" \
 			|| myconf="${myconf} --without-openqt --with-qt"
