@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/keychain
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.1 2002/02/02 05:25:15 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.2 2002/03/23 07:06:28 drobbins Exp $
+
+*keychain-1.9 (23 Feb 2002)
+
+  23 Feb 2002; Daniel Robbins <drobbins@gentoo.org> : New release
 
 *keychain-1.8 (1 Feb 2002)
 

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/keychain-1.8.ebuild,v 1.1 2002/02/02 05:25:15 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/keychain-1.9.ebuild,v 1.1 2002/03/23 07:06:29 drobbins Exp $
 
 DESCRIPTION="A front-end to ssh-agent"
 HOMEPAGE="http://www.gentoo.org/projects/keychain/"
