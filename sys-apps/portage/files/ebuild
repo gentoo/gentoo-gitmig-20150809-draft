@@ -957,6 +957,7 @@ dyn_package() {
 }
 
 dyn_install() {
+    local ROOT
     trap "abort_image" SIGINT SIGQUIT
     rm -rf ${BUILDDIR}/image
     mkdir ${BUILDDIR}/image
@@ -1299,4 +1300,5 @@ then
 fi
 foo=$(( $foo + 1))
 done
+
 

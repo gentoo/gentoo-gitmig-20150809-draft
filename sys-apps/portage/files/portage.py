@@ -159,7 +159,7 @@ def ververify(myval):
 		#something like .asldfkj_alpha1 which is invalid :)
 		ERRVER=splits[0]+" is not a valid number."
 		return 0
-	valid=["alpha","beta","pre","rc","p"]
+	valid=["alpha","beta","p","rc","pre"]
 	for x in valid:
 		if splits[1][0:len(x)]==x:
 			firpart=x
