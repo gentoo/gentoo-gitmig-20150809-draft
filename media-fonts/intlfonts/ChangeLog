@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/intlfonts
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/ChangeLog,v 1.1 2004/07/10 08:19:58 usata Exp $
+
+*intlfonts-1.2.1 (10 Jul 2004)
+
+  10 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +intlfonts-1.2.1.ebuild:
+  Initial import. Ebuild submitted by José Romildo Malaquias 
+  <romildo@uber.com.br>, closing bug #29800
+
