@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/acml/acml-2.1.0.ebuild,v 1.1 2004/09/22 11:55:27 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/acml/acml-2.1.0.ebuild,v 1.2 2004/09/22 12:37:06 kugelfang Exp $
 
 inherit eutils
 
@@ -17,7 +17,9 @@ IUSE=""
 LICENSE="ACML"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/glibc
+	app-sci/blas-config
+	app-sci/lapack-config"
 PROVIDE="virtual/blas
 	virtual/lapack"
 
