@@ -20,7 +20,7 @@ DEPEND=">=media-libs/alsa-lib-0.9.0
 		qt? ( >=x11-libs/qt-3 )
 	)"
 
-S=${WORKDIR}/alsa_plugin
+S="${WORKDIR}/alsa_plugin"
 
 pkg_nofetch() {
 	einfo "Please visit this page to download the tarball:"
@@ -30,8 +30,8 @@ pkg_nofetch() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-gentoo.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}-gentoo.patch"
 }
 
 src_compile() {
@@ -41,7 +41,8 @@ src_compile() {
 }
 
 src_install() {
-	exeinto ${GAMES_LIBDIR}/mupen64/plugins
+	exeinto "${GAMES_LIBDIR}/mupen64/plugins"
 	doexe mupen64_alsasnd-${PV}.so || die "doexe failed"
 	dodoc README
+	prepgamesdirs
 }

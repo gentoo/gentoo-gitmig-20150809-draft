@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/yabause-0.0.6.ebuild,v 1.1 2004/07/06 01:25:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/yabause-0.0.6.ebuild,v 1.2 2004/09/23 08:54:41 mr_bones_ Exp $
 
 inherit games
 
@@ -20,4 +20,5 @@ DEPEND="media-libs/libsdl
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog TODO README
+	prepgamesdirs
 }
