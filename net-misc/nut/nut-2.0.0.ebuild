@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-2.0.0.ebuild,v 1.2 2004/04/26 18:56:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-2.0.0.ebuild,v 1.3 2004/05/19 02:58:34 robbat2 Exp $
 
 inherit fixheadtails
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.networkupstools.org/"
 SRC_URI="mirror://nut/source/${PV%.*}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 IUSE="cgi"
 
 RDEPEND="cgi? ( =media-libs/libgd-1* )
