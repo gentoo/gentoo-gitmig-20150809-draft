@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r5.ebuild,v 1.3 2003/12/30 18:33:28 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r5.ebuild,v 1.4 2003/12/30 19:00:28 brad_mssw Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -108,7 +108,10 @@ LICENSE="GPL-2 LGPL-2.1"
 # It seems to work if you upgrade from another GCC version on a system
 # that's been up a while though.
 # Brad House <brad_mssw@gentoo.org> 12/30/03
-KEYWORDS="~x86 ~mips ~sparc -amd64 ~hppa ~alpha ~ia64"
+# Update (a few minutes later here) Yep, it affects other arches,
+# marking -*  see http://bugs.gentoo.org/show_bug.cgi?id=36792
+KEYWORDS="-*"
+#KEYWORDS="~x86 ~mips ~sparc ~amd64 ~hppa ~alpha ~ia64"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
