@@ -10,15 +10,12 @@ fi
 export CFLAGS_amd64
 export CFLAGS_x86
 
-if [ -z "${DONTWARNABOUTSYMLINKS}" ]; then
-	for dir in /lib /lib64 /usr/lib /usr/lib64 /usr/X11R6/lib /usr/X11R6/lib64 /usr/qt/*/lib /usr/qt/*/lib64 /usr/kde/*/lib /usr/kde/*/lib64; do
-		if [ -L "${dir}" ]; then
-			ewarn "${dir} is a symlink"
-			#exit 1
-		fi
-	done
-	export DONTWARNABOUTSYMLINKS="true"
-fi
+#for dir in /lib /lib64 /usr/lib /usr/lib64 /usr/X11R6/lib /usr/X11R6/lib64 /usr/qt/*/lib /usr/qt/*/lib64 /usr/kde/*/lib /usr/kde/*/lib64; do
+#	if [ -L "${dir}" ]; then
+#		ewarn "${dir} is a symlink"
+#		#exit 1
+#	fi
+#done
 
 if [ -z "${IWANTTOTRASHMYSYSTEM}" ]; then
 	eerror "The amd64 2005.0 profile is still in active development and"
