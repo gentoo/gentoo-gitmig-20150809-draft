@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/mahjongg3d-0.96.ebuild,v 1.1 2004/06/21 19:00:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/mahjongg3d-0.96.ebuild,v 1.2 2004/06/21 19:22:46 mr_bones_ Exp $
 
 inherit kde games
 
 DESCRIPTION="An implementation of the classical chinese game Mah Jongg with 3D OpenGL graphics"
 HOMEPAGE="http://www.reto-schoelly.de/mahjongg3d/"
-SRC_URI="http://www.reto-schoelly.de/${PN}/${PN}.tar.bz2"
+SRC_URI="http://www.reto-schoelly.de/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -35,7 +35,7 @@ src_compile() {
 }
 
 src_install () {
-	dogamesbin bin/{mahjongg3d,mahjongg3d-install-*} || die "dogamesbin failed"
+	dogamesbin bin/mahjongg3d || die "dogamesbin failed"
 	dodir "${GAMES_DATADIR}/${PN}"
 	cp -r bin/{[a-l]*,t*} "${D}${GAMES_DATADIR}/${PN}" || die "cp failed"
 	dodoc README Changelog

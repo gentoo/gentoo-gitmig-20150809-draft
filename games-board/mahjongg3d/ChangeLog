@@ -1,6 +1,9 @@
 # ChangeLog for games-board/mahjongg3d
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/ChangeLog,v 1.2 2004/06/21 19:00:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/ChangeLog,v 1.3 2004/06/21 19:22:46 mr_bones_ Exp $
+
+  21 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> mahjongg3d-0.96.ebuild:
+  fix typo in SRC_URI
 
 *mahjongg3d-0.96 (21 Jun 2004)
 
