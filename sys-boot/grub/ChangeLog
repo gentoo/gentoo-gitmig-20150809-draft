@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.32 2005/02/04 00:13:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.33 2005/03/05 20:28:13 azarah Exp $
+
+*grub-0.96 (05 Mar 2005)
+
+  05 Mar 2005; Martin Schlemmer <azarah@gentoo.org> +grub-0.96.ebuild:
+  Update version.  Some cleanups.
 
   03 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   grub-0.94-r1.ebuild, grub-0.94-r2.ebuild, grub-0.95.20040823.ebuild:
