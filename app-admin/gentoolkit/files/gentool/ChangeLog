@@ -1,0 +1,6 @@
+2002-04-14 Karl Trygve Kalleberg <karltk@gentoo.org>
+	* Renamed pst-* scripts to gentool-*
+	* Added gentool-bump-revision
+
+2002-03-22 Karl Trygve Kalleberg <karltk@gentoo.org>
+	* Threw away the coverage scripts, replaced with new scripts.
