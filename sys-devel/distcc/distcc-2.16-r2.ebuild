@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.16-r2.ebuild,v 1.4 2004/10/05 16:21:53 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.16-r2.ebuild,v 1.5 2004/11/24 11:58:00 hardave Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -24,7 +24,7 @@ DEPEND=">=sys-apps/portage-2.0.49-r6
 	sys-apps/shadow
 	dev-util/pkgconfig"
 RDEPEND="
-	!arm? ( !mips? ( !s390? (
+	!arm? ( !s390? (
 	gnome? (
 		>=x11-libs/gtk+-2.0.0
 		>=gnome-base/libgnome-2.0.0
@@ -37,7 +37,7 @@ RDEPEND="
 		>=x11-libs/gtk+-2.0.0
 		x11-libs/pango
 	)
-	) ) )
+	) )
 	selinux? ( sec-policy/selinux-distcc )"
 
 src_unpack() {
@@ -54,10 +54,8 @@ src_compile() {
 	#configure script, so we'll just make the distinction here:
 	#gnome takes precedence over gtk if both are specified (gnome pulls
 	#in gtk anyways...)
-	use gtk && ! use gnome && ! use mips && myconf="${myconf} --with-gtk"
-	use gtk && use gnome && ! use mips && myconf="${myconf} --with-gnome"
-	use mips && use gtk || use gnome && ewarn "X support for Mips has been disabled."
-	#Above, mips is excluded due to version issues. 2004-02-20
+	use gtk && ! use gnome && myconf="${myconf} --with-gtk"
+	use gtk && use gnome && myconf="${myconf} --with-gnome"
 
 	[ `gcc-major-version` -eq 2 ] && filter-lfs-flags
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.126 2004/11/15 19:40:58 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.127 2004/11/24 11:58:00 hardave Exp $
+
+  24 Nov 2004; Hardave Riar <hardave@gentoo.org> distcc-2.16-r2.ebuild,
+  distcc-2.18.2.ebuild:
+  Re-enable gnome/gtk support on mips.
 
 *distcc-2.18.2 (15 Nov 2004)
 
