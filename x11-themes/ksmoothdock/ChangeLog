@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/ksmoothdock
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ksmoothdock/ChangeLog,v 1.4 2004/05/12 08:11:46 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ksmoothdock/ChangeLog,v 1.5 2004/06/05 18:04:41 carlo Exp $
+
+*ksmoothdock-3.5 (05 Jun 2004)
+
+  05 Jun 2004; Carsten Lohrke <carlo@gentoo.org> ksmoothdock-3.5.ebuild:
+  bump
 
   07 May 2004; Ciaran McCreesh <ciaranm@gentoo.org> ksmoothdock-3.2.ebuild:
   Added ~sparc, #50363
