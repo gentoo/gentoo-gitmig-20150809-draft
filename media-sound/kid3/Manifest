@@ -1,19 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b17a6002fe25148f7cc952cb58d8ea8d ChangeLog 1838
-MD5 b021594c326badcebce121856cebdba4 kid3-0.4.ebuild 689
-MD5 3d04def006f884868c0cbe9c3c1c1d89 kid3-0.5.ebuild 648
 MD5 15a028c1f8fff178682119240f0189be metadata.xml 181
-MD5 befd953f34b4f39db828edf76972c91b files/digest-kid3-0.4 60
+MD5 b17a6002fe25148f7cc952cb58d8ea8d ChangeLog 1838
+MD5 3d04def006f884868c0cbe9c3c1c1d89 kid3-0.5.ebuild 648
 MD5 3031e9d49aa3af808d9a046e281ab344 files/digest-kid3-0.5 60
-MD5 a12901d96c0d25c91a53e560ad3b540c files/kid3-0.4-configure.patch 3567
-MD5 3c81a9d033c0c38f02e0cd32a5803a0f files/kid3-0.4-gcc34.patch 414
 MD5 a12901d96c0d25c91a53e560ad3b540c files/kid3-0.5-configure.patch 3567
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCGX9hArHZZzCEUG0RAkjwAJ0S7a2biQKQm9NwBFc3kH6db0vUgwCdFpKY
-jKqeFGFUt7n7v++WmIXpbWY=
-=2Sz8
------END PGP SIGNATURE-----
