@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/rasmol
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/ChangeLog,v 1.5 2003/10/09 08:07:29 brandy Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/ChangeLog,v 1.6 2004/03/01 06:04:34 spyderous Exp $
+
+*rasmol-2.7.1.1 (01 Mar 2004)
+
+  01 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; rasmol-2.7.1.1.ebuild,
+  files/rasmol.sh.debian:
+  Version bump to 2.7 series, technically OpenRasMol but it's the continuation
+  of RasMol development.
 
   09 Oct 2003; Brandy Westcott brandy@gentoo.org rasmol-2.6_beta2.ebuild:
   Fixed applying of patch. Closes Bug #30730
