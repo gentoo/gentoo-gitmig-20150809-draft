@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Geert Bevin <gbevin@uwyn.com>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.03.04.ebuild,v 1.2 2002/04/11 02:45:51 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.03.04-r1.ebuild,v 1.1 2002/04/11 13:12:24 gbevin Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="An Object-Oriented Data Analysis Framework"
@@ -27,8 +27,9 @@ src_compile() {
 		linux \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
+		--docdir=/usr/share/doc/${P} \
 		--enable-shared \
-		--enable-rpath \
+		--disable-rpath \
 		--enable-thread \
 		--enable-star \
 		--enable-ttf \
@@ -50,4 +51,7 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
+	
+	dodir /etc/env.d
+	echo "LDPATH=/usr/lib/root" > ${D}/etc/env.d/60root
 }
