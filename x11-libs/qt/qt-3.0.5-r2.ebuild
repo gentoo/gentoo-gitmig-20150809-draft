@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r2.ebuild,v 1.1 2002/08/30 12:32:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r2.ebuild,v 1.2 2002/09/09 07:50:18 danarmak Exp $
 
 S=${WORKDIR}/qt-x11-free-${PV}
 
@@ -48,12 +48,12 @@ src_unpack() {
 	if [ -n "$CXX" ]; then
 	    einfo 'Using environment definition of $CXX'
 	    cp qmake.conf qmake.conf.orig
-	    sed -e "s:= cc:= ${CC}:" qmake.conf.orig > qmake.conf
+	    sed -e "s:= g++:= ${CXX}:" qmake.conf.orig > qmake.conf
 	fi
 	if [ -n "$CC" ]; then
 	    einfo 'Using environment definition of $CC'
 	    cp qmake.conf qmake.conf.orig
-	    sed -e "s:= g++:= ${CXX}:" qmake.conf.orig > qmake.conf
+	    sed -e "s:= cc:= ${CC}:" qmake.conf.orig > qmake.conf
 	fi
 
 }
