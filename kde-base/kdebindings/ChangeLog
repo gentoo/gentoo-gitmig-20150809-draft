@@ -1,6 +1,6 @@
-# ChangeLog for kde-basekdebindingsChangeLog/
+# ChangeLog for kde-base/kdebindings
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.26 2003/02/12 16:40:50 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.27 2003/02/13 20:39:27 vapier Exp $
 
   12 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdebindings-3.0.2.ebuild,
   kdebindings-3.0.3.ebuild, kdebindings-3.1_rc6.ebuild: removed old ebuilds
