@@ -647,3 +647,7 @@ app-cdr/cddump
 # spider@gentoo.org 7 May 2002
 # can somone check I did the right thing?
 =dev-perl/gtk-perl-0.7008-r4.ebuild
+
+# mkennedy@gentoo.org 7 May 2002
+# needs more testing, not quite complete
+=app-editors/xemacs-gamma-21.4.7.ebuild
