@@ -1,13 +1,6 @@
 # ChangeLog for app-portage/basc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.7 2004/12/31 00:31:04 dsd Exp $
-
-*basc-1.5.1 (31 Dec 2004)
-
-  31 Dec 2004; Daniel Drake <dsd@gentoo.org> +basc-1.5.1.ebuild:
-  New version, which checks for user confirmation (the first time) before
-  sending data. Be sure to run a forced update (basc -u) if upgrading from an
-  earlier version
+# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.8 2004/12/31 00:31:43 dsd Exp $
 
 *basc-1.5.1 (31 Dec 2004)
 
