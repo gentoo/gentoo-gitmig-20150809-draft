@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netprofiles-ims
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netprofiles-ims/ChangeLog,v 1.1 2003/10/07 11:13:44 pyrania Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netprofiles-ims/ChangeLog,v 1.2 2004/04/11 14:46:58 pyrania Exp $
+
+  11 Apr 2004; Markus Nigbur <pyrania@gentoo.org>
+  netprofiles-ims-0.1.0134.ebuild:
+  Marking stable.
 
 *netprofiles-ims-0.1.0134 (07 Oct 2003)
 
