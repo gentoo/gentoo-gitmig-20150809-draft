@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2751 2004/03/17 04:34:21 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2752 2004/03/17 23:26:19 aliz Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -22,6 +22,10 @@
 ##
 ##   End example
 ##
+
+# <aliz@gentoo.org> (17 Mar 2004)
+# Security related
+~dev-libs/openssl-0.9.7c
 
 # <avenj@gentoo.org> (15 Mar 2004)
 # Borks with GCC 3.3, apparently.
