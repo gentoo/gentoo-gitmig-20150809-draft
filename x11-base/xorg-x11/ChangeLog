@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.256 2004/12/28 22:43:30 slarti Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.257 2005/01/02 02:21:38 cryos Exp $
+
+  02 Jan 2005; Marcus Hanwell <cryos@gentoo.org> xorg-x11-6.8.1.901.ebuild:
+  Marked ~amd64.
 
   28 Dec 2004; Tom Martin <slarti@gentoo.org> xorg-x11-6.8.0-r4.ebuild:
   Marked ~amd64.
