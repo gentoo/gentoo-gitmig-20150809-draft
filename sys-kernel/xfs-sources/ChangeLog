@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/xfs-sources
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.35 2003/12/06 16:34:59 scox Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.36 2004/01/04 01:22:58 scox Exp $
+
+*xfs-sources-2.4.23 (04 Jan 2004)
+
+  04 Jan 2004; Andrea Luzzardi <scox@gentoo.org>
+  xfs-sources-2.4.23.ebuild:
+  New patchset, updated grsec to 2.0-rc4. Closed bug #37028.
 
 *xfs-sources-2.4.23 (06 Dec 2003)
 
