@@ -1,6 +1,12 @@
 # ChangeLog for app-text/crm114
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.13 2004/10/13 20:26:41 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.14 2004/10/30 18:44:27 slarti Exp $
+
+*crm114-20040924 (30 Oct 2004)
+
+  30 Oct 2004; Tom Martin <slarti@gentoo.org> +crm114-20040924.ebuild:
+  Version bump. Thanks to Antonio Dolcetta <zagarna@yahoo.com> and John
+  Hampton <pacopablo@pacopablo.com> for reporting in bug 66522.
 
   13 Oct 2004; Tom Martin <slarti@gentoo.org> metadata.xml:
   Added to shell-tools herd, thanks Seemant.
