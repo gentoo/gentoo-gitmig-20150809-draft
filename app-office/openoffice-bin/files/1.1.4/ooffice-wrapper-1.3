@@ -86,7 +86,7 @@ fi
 # Default font path.  This is used if SAL_FONTPATH_PRIVATE is not defined.
 
 GENTOO_FONTPATH=""
-for d in `find /usr/share/fonts -type d -maxdepth 1 -mindepth 1` ; do
+for d in `find /usr/share/fonts -maxdepth 1 -mindepth 1 -type d` ; do
     GENTOO_FONTPATH="$GENTOO_FONTPATH;$d"
 done
 

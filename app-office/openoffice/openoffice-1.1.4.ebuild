@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.18 2005/03/28 08:09:41 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.19 2005/03/30 10:15:29 suka Exp $
 
 # Notes:
 #
@@ -26,7 +26,7 @@
 
 inherit eutils flag-o-matic toolchain-funcs
 
-IUSE="curl gnome hardened java kde nptl zlib"
+IUSE="curl hardened java kde nptl zlib"
 
 INSTDIR="/opt/OpenOffice.org"
 S="${WORKDIR}"
@@ -503,49 +503,22 @@ src_install() {
 		dosym ooffice /usr/bin/oo${app}
 	done
 
-	einfo "Installing Menu shortcuts (need \"gnome\" or \"kde\" in USE)..."
-	if use gnome
-	then
-		insinto /usr/share/gnome/apps/OpenOffice.org
-		# Install the files needed for the category
-		doins ${D}${INSTDIR}/share/gnome/net/.directory
-		doins ${D}${INSTDIR}/share/gnome/net/.order
+	einfo "Installing menu shortcuts..."
+	dodir /usr/share
+	cp -a ${D}${INSTDIR}/share/kde/net/share/icons ${D}/usr/share
 
-		# Change this to ooo*.desktop from *.desktop for now, since
-		# otherwise two sets of icons will appear in the GNOME menu.
-		# <brad@gentoo.org> (04 Aug 2003)
-		for x in ${D}${INSTDIR}/share/gnome/net/ooo*.desktop
-		do
-			# We have to handle soffice and setup differently
-			perl -pi -e "s:${INSTDIR}/program/setup:/usr/bin/oosetup:g" ${x}
-			perl -pi -e "s:${INSTDIR}/program/soffice:/usr/bin/ooffice:g" ${x}
-			# Now fix the rest
-			perl -pi -e "s:${INSTDIR}/program/s:/usr/bin/oo:g" ${x}
-			doins ${x}
-		done
-	fi
+	use kde && cp -a ${D}${INSTDIR}/share/kde/net/share/mimelnk ${D}/usr/share
 
-	if use kde
-	then
-		local kdeloc="${D}${INSTDIR}/share/kde/net/"
-
-		insinto /usr/share/applnk/OpenOffice.org\ 1.1
-		# Install the files needed for the category
-		doins ${kdeloc}/.directory
-		dodir /usr/share
-		# Install the icons and mime info
-		cp -a ${D}${INSTDIR}/share/kde/net/share/mimelnk ${D}${INSTDIR}/share/kde/net/share/icons ${D}/usr/share
-
-		for x in ${kdeloc}/*.desktop
-		do
-			# We have to handle soffice and setup differently
-			perl -pi -e "s:${INSTDIR}/program/setup:/usr/bin/oosetup:g" ${x}
-			perl -pi -e "s:${INSTDIR}/program/soffice:/usr/bin/ooffice:g" ${x}
-			# Now fix the rest
-			perl -pi -e "s:${INSTDIR}/program/s:/usr/bin/oo:g" ${x}
-			doins ${x}
-		done
-	fi
+	for x in ${D}${INSTDIR}/share/kde/net/*.desktop; do
+		# We have to handle soffice and setup differently
+		sed -i -e "s:${INSTDIR}/program/setup:/usr/bin/oosetup:g" ${x}
+		sed -i -e "s:${INSTDIR}/program/soffice:/usr/bin/ooffice:g" ${x}
+		# Now fix the rest
+		sed -i -e "s:${INSTDIR}/program/s:/usr/bin/oo:g" ${x}
+		echo "Categories=Application;Office;" >> ${x}
+		domenu ${x}
+		rm ${x}
+	done
 
 	# Remove unneeded stuff
 	rm -rf ${D}${INSTDIR}/share/cde || die
@@ -566,6 +539,9 @@ src_install() {
 }
 
 pkg_postinst() {
+
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 
 	einfo " To start OpenOffice.org, run:"
 	einfo
