@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerpc-utils/powerpc-utils-1.1.3-r7.ebuild,v 1.3 2003/06/23 00:03:41 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerpc-utils/powerpc-utils-1.1.3-r7.ebuild,v 1.4 2003/12/08 23:09:17 spider Exp $
 
 S=${WORKDIR}/${P}
 DEBRV=7
@@ -22,7 +22,7 @@ src_unpack() {
 	cd ${S}
 	cat ${DISTDIR}/powerpc-utils_${PV}-${DEBRV}.diff.gz | gzip -dc | patch -p1 || die
 	cd ${WORKDIR}
-	chown -R 0.0 *
+	chown -R 0:0 *
 	chmod -R a+r-w+X,u+w *
 }
 

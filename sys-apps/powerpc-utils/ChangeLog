@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/powerpc-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.9 2003/03/12 18:28:30 gerk Exp $
+# $Id: ChangeLog,v 1.10 2003/12/08 23:09:17 spider Exp $
+
+  09 Dec 2003; <spider@gentoo.org> powerpc-utils-1.1.3-r7.ebuild,
+  powerpc-utils-1.1.3.ebuild:
+  fixing chown 0.0 to 0:0
 
 *powerpc-utils-1.1.3-r7 (12 Mar 2003)
 
