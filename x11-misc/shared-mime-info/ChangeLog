@@ -1,10 +1,10 @@
 # ChangeLog for x11-misc/shared-mime-info
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.8 2003/08/04 14:53:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.9 2003/08/11 22:54:45 lanius Exp $
 
 *shared-mime-info-0.11 (03 Aug 2003)
 
-  03 Aug 2003; <heino@gentoo.org> shared-mime-info-0.11.ebuild:
+  03 Aug 2003; Heinrich Wendel <lanius@gentoo.org> shared-mime-info-0.11.ebuild:
   version bump
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
