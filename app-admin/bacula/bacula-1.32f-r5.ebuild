@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f-r5.ebuild,v 1.6 2004/06/24 21:23:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f-r5.ebuild,v 1.7 2004/08/05 23:18:35 arj Exp $
 
 MY_P="bacula-1.32f-5"
 S="${WORKDIR}/${MY_P}"
@@ -21,7 +21,7 @@ DEPEND="sys-libs/libtermcap-compat
 	tcpd? >=sys-apps/tcp-wrappers-7.6
 	ssl? >=dev-libs/openssl-0.9.6
 	gnome? gnome-base/gnome-libs
-	sqlite? >=dev-db/sqlite-2.7
+	sqlite? =dev-db/sqlite-2*
 	mysql? >=dev-db/mysql-3.23
 	X? virtual/x11
 	virtual/mta
