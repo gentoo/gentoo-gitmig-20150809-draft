@@ -127,7 +127,7 @@ setup() {
 	if [ "$myforward" != "" ]
 	then
 		echo $myforward > ${mypath}/${mycachedir}/root/servers/\@
-		echo -n "1" > ${mypath}/${mycachedir}/env/FOWARDONLY
+		echo -n "1" > ${mypath}/${mycachedir}/env/FORWARDONLY
 
 		read -p "enter forward-to IP [hit Enter to stop]> " myforward
 		while [ "$myforward" != "" ]

@@ -1,10 +1,11 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.9 2002/12/13 10:59:52 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.10 2003/01/02 19:50:33 mholzer Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *djbdns-1.05-r5 (17 Nov 2002)
+
+  02 Jan 2002; Martin Holzer <mholzer@gentoo.org> files/dnscache-setup :
+  Changed Line 130 FOWARDONLY into FORWARDONLY. Closes #13108.
 
   17 Nov 2002; Jared Hudson <jhhudso@gentoo.org> files/ipv6-fix.diff,
   files/djbdns-1.05-fwd-ipv6.diff : Fixed Bug #8236 & 8236. Added static
