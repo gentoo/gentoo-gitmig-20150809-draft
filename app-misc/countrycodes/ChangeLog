@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/countrycodes
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.1 2004/02/29 22:10:15 humpback Exp $
+
+*countrycodes-1.0.5 (29 Feb 2004)
+
+  29 Feb 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  countrycodes-1.0.5.ebuild:
+  Initial import. Thanks to Petter E. Stokke <gibreel@gibreel.net> in bug  43124
+
