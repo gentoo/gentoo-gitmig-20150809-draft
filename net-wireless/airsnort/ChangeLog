@@ -1,16 +1,21 @@
 # ChangeLog for net-wireless/airsnort
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.4 2002/12/17 19:45:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.5 2003/01/24 05:13:27 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-  31 Oct 2002; Hannes Mehnert <hannes@gentoo.org>:
-  moved to net-wireless
+*airsnort-0.2.1b (24 Jan 2003)
+
+  24 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #14473.
 
 *airsnort-0.2.1a (29 Jun 2002)
 
-  25 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> airsnort-0.2.1a.ebuild :
+  24 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Made pcmcia dependency optional #14263.
 
+  31 Oct 2002; Hannes Mehnert <hannes@gentoo.org>:
+  moved to net-wireless
+
+  25 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> airsnort-0.2.1a.ebuild :
   Changes DEPEND from x11-libs/gtk+-1.2.10-r8 to x11-libs/gtk+-1.2.10-r9
   
   8 Sep 2002; Owen Stampflee <owen@gentoo.org> :
