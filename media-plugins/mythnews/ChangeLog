@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythnews
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnews/ChangeLog,v 1.9 2004/06/24 23:33:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnews/ChangeLog,v 1.10 2004/09/10 19:58:40 aliz Exp $
+
+*mythnews-0.16 (10 Sep 2004)
+
+  10 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> mythnews-0.16.ebuild:
+  Version bump.
 
 *mythnews-0.15 (01 Jun 2004)
 
