@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.55 2003/06/20 18:01:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.56 2003/06/21 10:24:22 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -35,7 +35,7 @@ if [ -z "$SRC_URI" ]; then
 	#mirror://gentoo/${MY_P}-db4.diff.gz 
 fi
 
-IUSE="${IUSE} X cjk crypt curl firebird flash freetds gd gd-bundled gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit png postgres qt snmp spell ssl tiff truetype"
+IUSE="${IUSE} X cjk crypt curl firebird flash freetds gd gd-external gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit png postgres qt snmp spell ssl tiff truetype"
 
 # Berkdb is disabled due to DB4 and changes in PHP4.3.2
 #RDEPEND="${RDEPEND} berkdb? ( >=sys-libs/db-4.1.25 )"
@@ -50,11 +50,8 @@ RDEPEND="
 	curl? ( >=net-ftp/curl-7.10.2 )
 	firebird? ( >=dev-db/firebird-1.0 )
 	freetds? ( >=dev-db/freetds-0.53 )
-	|| (
-		gd-bundled? ( "" )
-		gd? ( media-libs/libgd >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
-		( "" )
-	)
+	gd-external? ( media-libs/libgd >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
+	gd? ( >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	java? ( =virtual/jdk-1.4* dev-java/java-config )
 	jpeg? ( >=media-libs/jpeg-6b )
