@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/squidalyser/squidalyser-0.2.55.ebuild,v 1.1 2004/08/15 18:14:16 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/squidalyser/squidalyser-0.2.55.ebuild,v 1.2 2004/08/15 23:36:31 cyfred Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc alpha ~ppc"
 
-DEPEND="net-www/squid
+DEPEND="www-proxy/squid
 	dev-lang/perl
 	dev-perl/CGI
 	dev-perl/DBI
@@ -28,8 +28,7 @@ DEPEND="net-www/squid
 	dev-perl/GDTextUtil
 	dev-perl/URI
 	dev-db/mysql
-	net-www/apache
-	net-www/squid"
+	net-www/apache"
 
 src_unpack() {
 	unpack ${A}
