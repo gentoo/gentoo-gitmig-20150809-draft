@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.28 2005/01/11 21:17:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.29 2005/01/11 22:25:44 eradicator Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -306,7 +306,7 @@ want_tls() {
 install_locales() {
 	unset LANGUAGE LANG LC_ALL
 	cd ${WORKDIR}/build
-	make PARALLELMFLAGS="${MAKEOPTS}" \
+	make PARALLELMFLAGS="${MAKEOPTS} -j1" \
 		install_root=${D} localedata/install-locales || die
 	[[ ${CTARGET} = ${CHOST} ]] && keepdir /usr/lib/locale/ru_RU/LC_MESSAGES
 }
@@ -689,7 +689,6 @@ src_install() {
 				mv ${D}/lib ${D}/$(get_abi_LIBDIR x86)
 				mv ${D}/usr/lib ${D}/usr/$(get_abi_LIBDIR x86)
 				mkdir ${D}/lib
-				dosym ../$(get_abi_LIBDIR x86)/ld-linux.so.1 /lib/ld-linux.so.1
 				dosym ../$(get_abi_LIBDIR x86)/ld-linux.so.2 /lib/ld-linux.so.2
 				dosed "s:/lib/:/$(get_abi_LIBDIR x86)/:g" /usr/$(get_abi_LIBDIR x86)/libc.so /usr/$(get_abi_LIBDIR x86)/libpthread.so
 			fi
@@ -701,6 +700,9 @@ src_install() {
 	fi
 
 	setup_flags
+
+	# Need to dodir first because it might not exist (bad amd64 profiles)
+	dodir /usr/$(get_libdir)
 
 	# These should not be set, else the
 	# zoneinfo do not always get installed ...
@@ -726,21 +728,21 @@ src_install() {
 	ls  ${T}/thread-backup/*  1>/dev/null 2>&1 && mv -f ${T}/thread-backup/* ${D}/$(alt_libdir)/
 
 	# If librt.so is a symlink, change it into linker script (Redhat)
-	if [ -L "${D}/usr/lib/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]; then
-		local LIBRTSO="`cd ${D}/lib; echo librt.so.*`"
-		local LIBPTHREADSO="`cd ${D}/lib; echo libpthread.so.*`"
+	if [ -L "${D}/usr/$(get_libdir)/librt.so" -a "${LIBRT_LINKERSCRIPT}" = "yes" ]; then
+		local LIBRTSO="`cd ${D}/$(get_libdir); echo librt.so.*`"
+		local LIBPTHREADSO="`cd ${D}/$(get_libdir); echo libpthread.so.*`"
 
-		rm -f ${D}/usr/lib/librt.so
-		cat > ${D}/usr/lib/librt.so <<EOF
+		rm -f ${D}/usr/$(get_libdir)/librt.so
+		cat > ${D}/usr/$(get_libdir)/librt.so <<EOF
 /* GNU ld script
 	librt.so.1 needs libpthread.so.0 to come before libc.so.6*
 	in search scope.  */
 EOF
-		grep "OUTPUT_FORMAT" ${D}/usr/lib/libc.so >> ${D}/usr/lib/librt.so
-		echo "GROUP ( /lib/${LIBPTHREADSO} /lib/${LIBRTSO} )" \
-			>> ${D}/usr/lib/librt.so
+		grep "OUTPUT_FORMAT" ${D}/usr/$(get_libdir)/libc.so >> ${D}/usr/$(get_libdir)/librt.so
+		echo "GROUP ( /$(get_libdir)/${LIBPTHREADSO} /$(get_libdir)/${LIBRTSO} )" \
+			>> ${D}/usr/$(get_libdir)/librt.so
 
-		for x in ${D}/usr/lib/librt.so.[1-9]; do
+		for x in ${D}/usr/$(get_libdir)/librt.so.[1-9]; do
 			[ -L "${x}" ] && rm -f ${x}
 		done
 	fi
@@ -804,17 +806,11 @@ EOF
 	rm -f ${D}/etc/localtime
 
 	# Some things want this, notably ash.
-	# Need to dodir first because it might not exist (bad amd64 profiles)
-	dodir /usr/$(get_libdir)
 	dosym /usr/$(get_libdir)/libbsd-compat.a /usr/$(get_libdir)/libbsd.a
 
 	# This is our new config file for building locales
 	insinto /etc
 	doins ${FILESDIR}/locales.build
-
-	# this test isn't using the correct directory on ppc64
-	# and really it's a worthless test
-	use !ppc64 && must_exist /$(get_libdir)/ libpthread.so.0
 }
 
 fix_lib64_symlinks() {

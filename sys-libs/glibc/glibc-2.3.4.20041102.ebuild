@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.22 2005/01/11 21:17:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.23 2005/01/11 22:25:44 eradicator Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -306,7 +306,7 @@ want_tls() {
 install_locales() {
 	unset LANGUAGE LANG LC_ALL
 	cd ${WORKDIR}/${MYMAINBUILDDIR} || die "${WORKDIR}/${MYMAINBUILDDIR}"
-	make PARALLELMFLAGS="${MAKEOPTS}" \
+	make PARALLELMFLAGS="${MAKEOPTS} -j1" \
 		install_root=${D} localedata/install-locales || die
 	keepdir /usr/lib/locale/ru_RU/LC_MESSAGES
 }
@@ -735,7 +735,6 @@ src_install() {
 				mv ${D}/lib ${D}/$(get_abi_LIBDIR x86)
 				mv ${D}/usr/lib ${D}/usr/$(get_abi_LIBDIR x86)
 				mkdir ${D}/lib
-				dosym ../$(get_abi_LIBDIR x86)/ld-linux.so.1 /lib/ld-linux.so.1
 				dosym ../$(get_abi_LIBDIR x86)/ld-linux.so.2 /lib/ld-linux.so.2
 				dosed "s:/lib/:/$(get_abi_LIBDIR x86)/:g" /usr/$(get_abi_LIBDIR x86)/libc.so /usr/$(get_abi_LIBDIR x86)/libpthread.so
 			fi
@@ -747,6 +746,9 @@ src_install() {
 	fi
 
 	setup_flags
+
+	# Need to dodir first because it might not exist (bad amd64 profiles)
+	dodir /usr/$(get_libdir)
 
 	# These should not be set, else the
 	# zoneinfo do not always get installed ...
@@ -924,8 +926,6 @@ EOF
 	rm -f ${D}/etc/localtime
 
 	# Some things want this, notably ash.
-	# Need to dodir first because it might not exist (bad amd64 profiles)
-	dodir /usr/$(get_libdir)
 	dosym /usr/$(get_libdir)/libbsd-compat.a /usr/$(get_libdir)/libbsd.a
 
 	insinto /etc
@@ -933,8 +933,6 @@ EOF
 	doins ${FILESDIR}/locales.build
 	# example host.conf with multicast dns disabled by default
 	doins ${FILESDIR}/2.3.4/host.conf
-
-	must_exist /$(get_libdir)/ libpthread.so.0
 }
 
 must_exist() {

@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.302 2005/01/11 12:30:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.303 2005/01/11 22:25:44 eradicator Exp $
+
+  11 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  glibc-2.3.4.20040808-r1.ebuild, glibc-2.3.4.20041102.ebuild:
+  A few more multilib fixes and install_locales now uses -j1 as it died on me
+  because of a parallel-make problem.
 
   11 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.4.20040808-r1.ebuild, glibc-2.3.4.20041102.ebuild:
