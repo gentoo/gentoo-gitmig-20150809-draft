@@ -1,6 +1,18 @@
 # ChangeLog for app-misc/rox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/ChangeLog,v 1.27 2004/05/04 17:20:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/ChangeLog,v 1.28 2004/05/08 09:29:49 lanius Exp $
+
+*rox-2.1.2 (08 May 2004)
+
+  08 May 2004; Heinrich Wendel <lanius@gentoo.org> rox-2.1.0.ebuild,
+  rox-2.1.1.ebuild, rox-2.1.2.ebuild:
+  remove old version
+
+*rox-2.1.2 (08 May 2004)
+
+  08 May 2004; Heinrich Wendel <lanius@gentoo.org> rox-2.1.1.ebuild,
+  rox-2.1.2.ebuild:
+  version bump; mark 2.1.1 stable
 
   04 May 2004; Bryan Østergaard <kloeri@gentoo.org> rox-2.1.1.ebuild:
   Stable on alpha.
