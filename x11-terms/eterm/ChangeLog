@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.2 2002/03/27 22:58:22 seemant Exp $
+
+*eterm-0.9.1-r3 (27 Mar 2002)
+
+  27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> eterm-0.9.1-r3.ebuild :
+
+  man page/LFH fixes submitted by Matthew Kennedy.
 
 *eterm-0.9.1-r2 (1 Feb 2002)
 
