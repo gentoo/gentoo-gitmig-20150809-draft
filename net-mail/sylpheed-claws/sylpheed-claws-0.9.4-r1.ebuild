@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.4-r1.ebuild,v 1.2 2003/09/06 15:45:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.4-r1.ebuild,v 1.3 2003/09/06 16:19:25 karltk Exp $
 
 IUSE="nls gnome xface gtkhtml crypt spell imlib ssl ldap ipv6 pda clamav pdflib"
 
@@ -21,9 +21,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
-DEPEND=">=sys-apps/sed-4"
-
-RDEPEND="=x11-libs/gtk+-1.2*
+DEPEND=">=sys-apps/sed-4
+	=x11-libs/gtk+-1.2*
 	app-misc/mime-types
 	pda? ( >=app-pda/jpilot-0.99 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
@@ -36,9 +35,8 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	clamav? ( net-mail/clamav )
 	gtkhtml? ( net-www/dillo )
 	pdflib? ( app-text/ghostscript )
+	nls? ( >=sys-devel/gettext-0.12 )
 	x11-misc/shared-mime-info"
-
-RDEPEND="nls? ( >=sys-devel/gettext-0.12 )"
 
 PROVIDE="virtual/sylpheed"
 
@@ -97,7 +95,7 @@ src_compile() {
 		--enable-spamassassin-plugin \
 		${myconf} || die "./configure failed"
 
-	emake || die
+	make || die
 
 	# build the extra tools
 	cd ${S}/tools
