@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.48-r4.ebuild,v 1.6 2004/04/20 18:52:18 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.48-r4.ebuild,v 1.7 2004/04/24 13:04:20 zul Exp $
 
 inherit flag-o-matic eutils
 
@@ -128,6 +128,7 @@ src_unpack() {
 }
 
 src_compile() {
+	get_number_of_jobs
 	local myconf
 	if use ldap; then
 		if use mips; then
