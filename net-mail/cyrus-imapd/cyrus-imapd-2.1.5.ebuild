@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.5.ebuild,v 1.3 2002/07/22 23:29:28 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.5.ebuild,v 1.4 2002/08/07 04:19:36 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Cyrus IMAP Server"
@@ -8,8 +8,8 @@ HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
 SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 
 LICENSE="as-is"
-SLOT="1"
-KEYWORDS="x86"
+SLOT="0"
+KEYWORDS="x86 -ppc -sparc -sparc64"
 
 PROVIDE="virtual/imapd"
 RDEPEND="virtual/glibc
@@ -68,7 +68,7 @@ src_compile() {
 	# make depends break with -f... in CFLAGS
 	make depend CFLAGS="" || die "make depend problem"
 
-	emake || die "compile problem"
+	make || die "compile problem"
 
 }
 
@@ -166,7 +166,7 @@ pkg_postinst() {
 	einfo "* NOTE: For correct logging add                                 *"
 	einfo "*         local6.* /var/log/imapd.log                           *"
 	einfo "*         auth.debug /var/log/auth.log                          *"
-	einfo "*       to /etc/sylog.conf.                                     *"
+	einfo "*       to /etc/syslog.conf.                                     *"
 	einfo "*****************************************************************"
 
 	if [ "'use ssl'" ]; then
@@ -176,16 +176,5 @@ pkg_postinst() {
 		ewarn "* about installing the needed keys.                             *"
 		ewarn "*****************************************************************"
 	fi
-
-	ewarn "*************************************************"
-	ewarn "* WARNING: Add these services to /etc/services: *"
-	ewarn "*            pop3   110/tcp                     *"
-	ewarn "*            imap   143/tcp                     *"
-	ewarn "*            imsp   406/tcp                     *"
-	ewarn "*            acap   674/tcp                     *"
-	ewarn "*            sieve  2000/tcp                    *"
-	ewarn "*            lmtp   2003/tcp                    *"
-	ewarn "*            fud    4201/udp                    *"
-	ewarn "*************************************************"
 
 }
