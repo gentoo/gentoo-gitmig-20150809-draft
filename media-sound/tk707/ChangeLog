@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/tk707
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/ChangeLog,v 1.1 2005/02/04 03:49:43 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/ChangeLog,v 1.2 2005/02/05 07:42:38 jnc Exp $
+
+*tk707-0.8-r1 (05 Feb 2005)
+
+  05 Feb 2005; Eric Shattow <jnc@gentoo.org> +tk707-0.8-r1.ebuild:
+  Ebuild fixes, no more installing twice (oops).
 
 *tk707-0.8 (03 Feb 2005)
 
