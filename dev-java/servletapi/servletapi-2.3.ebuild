@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.3.ebuild,v 1.5 2004/01/14 04:00:59 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.3.ebuild,v 1.6 2004/01/21 05:45:45 strider Exp $
+
+inherit java-pkg
 
 S=${WORKDIR}/jakarta-servletapi-4
 DESCRIPTION="Servlet API ${PV} from jakarta.apache.org"
@@ -11,8 +13,8 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-1.1"
 SLOT="2.3"
-KEYWORDS="x86"
-IUSE="jikes"
+KEYWORDS="x86 ~sparc ~ppc amd64"
+IUSE="jikes doc"
 
 src_compile() {
 	local myc
@@ -27,7 +29,11 @@ src_compile() {
 src_install () {
 	mv dist/lib/servlet.jar dist/lib/servlet-${PV}.jar
 	dojar dist/lib/servlet-${PV}.jar || die "Unable to install"
-	dohtml -r dist/docs/*
+
+	if [ -n "`use doc`" ] ; then
+		dohtml -r dist/docs/*
+	fi
+
 	dodoc dist/README.txt
 }
 
