@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <liquidx@gentoo.org> (28 Apr 2003)
+# needs testing - new openjade does cell division.
+>=app-text/openjade-1.3.2
+>=app-text/opensp-1.5
 
 # <fava@gentoo.org>, <robbat2@gentoo.org> (24 Apr 2003)
 # work in progress, broken ebuild
