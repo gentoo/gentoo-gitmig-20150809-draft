@@ -1,8 +1,11 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.33 2004/12/11 16:34:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.34 2004/12/17 00:27:54 ka0ttic Exp $
 
-  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  16 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> devtodo-0.1.18-r2.ebuild:
+  Marked stable on x86.
+
+  11 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   devtodo-0.1.18-r1.ebuild:
   Stable on alpha.
 
@@ -50,7 +53,7 @@
   10 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> metadata.xml:
   Updated metadata to reflect new shell-tools herd.
 
-  28 Sep 2004; Bryan �stergaard,,, <kloeri@gentoo.org>
+  28 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
   devtodo-0.1.17-r2.ebuild:
   Stable on alpha, bug 65062.
 
@@ -79,7 +82,7 @@
 
 *devtodo-0.1.17-r2 (22 Aug 2004)
 
-  22 Aug 2004; Bryan �stergaard <kloeri@gentoo.org>
+  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
   +files/devtodo-fix-TERM-sigabrt.patch, +files/devtodo-fix-cd-builtin.patch,
   +devtodo-0.1.17-r2.ebuild:
   Fix bugs 60206 and 60207, patches by Aaron Walker.
@@ -99,7 +102,7 @@
   07 May 2004; Gustavo Zacarias <gustavoz@gentoo.org> devtodo-0.1.17.ebuild:
   Stable on sparc
 
-  04 May 2004; Bryan �stergaard <kloeri@gentoo.org> devtodo-0.1.17.ebuild:
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> devtodo-0.1.17.ebuild:
   Stable on alpha.
 
   09 Apr 2004; Brian Jackson <iggy@gentoo.org> devtodo-0.1.17.ebuild:
