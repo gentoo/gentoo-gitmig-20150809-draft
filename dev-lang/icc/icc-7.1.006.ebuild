@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.1.006.ebuild,v 1.6 2003/09/19 00:25:55 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.1.006.ebuild,v 1.7 2003/09/24 15:13:22 avenj Exp $
 
 inherit rpm
 
@@ -36,8 +36,10 @@ src_unpack() {
 		rm -f intel-*.i386.rpm
 	fi
 
-	rpm_unpack *.rpm
-
+	for x in *.rpm
+	do
+		rpm_unpack $x
+	done
 }
 src_compile() {
 
