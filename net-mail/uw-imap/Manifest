@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cda90d7d3b3a449eeab0e20ab8651e94 ChangeLog 5753
+MD5 375327e3d75de497524fcfe6f1824f7b ChangeLog 5844
 MD5 c4319ef2e1cc3ca5d5d6ae2408c5b70f uw-imap-2002e-r3.ebuild 3356
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 7f6b3d166deb9a5536e6bb3ed0cdb03c uw-imap-2002e.ebuild 2932
-MD5 01d78a5fc51770cf6c3b5134b7d20c2b uw-imap-2002e-r4.ebuild 3190
+MD5 c4ccce0d1a75ddc9cf32e763e2f46cad uw-imap-2002e-r4.ebuild 3185
 MD5 3c8b9095f4bd5afcd95c93a076635c56 uw-imap-2002e-r1.ebuild 3093
 MD5 979bed91d308223958ffe9c988d744ad uw-imap-2002e-r2.ebuild 3108
 MD5 8dd3c14bf6b644035b66eb851612386e uw-imap-2002d-r1.ebuild 2935
@@ -29,7 +29,7 @@ MD5 27b9eec6a66d66ef07109f82da8f10ce files/digest-uw-imap-2002e-r3 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBYH3l10xuJSrg3/sRAloSAJ9hwSEbu32yG2B9u9nS1z/b6+PmSQCdELIx
-U9uv0C1ewJrgAkTAqGgaidk=
-=hnQf
+iD8DBQFBac0m10xuJSrg3/sRApkQAJ9Oc0yKlh+1hNfjOF5i2yOm6Xym0QCfY/1o
+of9Wp4QexebUX3oqB7rYiTw=
+=P8X8
 -----END PGP SIGNATURE-----
