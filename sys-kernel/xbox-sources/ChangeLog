@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/xbox-sources
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.5 2004/07/19 14:02:19 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.6 2004/07/21 11:04:03 plasmaroo Exp $
+
+*xbox-sources-2.6.7-r3 (21 Jul 2004)
+
+  21 Jul 2004; <plasmaroo@gentoo.org> xbox-sources-2.4.26-r3.ebuild,
+  -xbox-sources-2.6.7-r2.ebuild, +xbox-sources-2.6.7-r3.ebuild,
+  +files/xbox-sources-2.4.26.CAN-2004-0394.patch,
+  +files/xbox-sources-2.4.26.CAN-2004-0495.patch,
+  +files/xbox-sources-2.4.26.CAN-2004-0535.patch,
+  +files/xbox-sources-2.4.26.FPULockup-53804.patch,
+  +files/xbox-sources-2.6.7.CAN-2004-0596.patch:
+  Version bump for the CAN-2004-0596 issue; bug #57826. Added missing security
+  fixes for 2.4 which should have been added when this ebuild was initially
+  commited. Fixed header QA issue.
 
   19 Jul 2004; Chris Bainbridge <chrb@gentoo.org>
   xbox-sources-2.6.7-r2.ebuild:
