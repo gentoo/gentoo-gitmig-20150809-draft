@@ -1,7 +1,11 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.4 2002/04/07 06:35:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.5 2002/04/22 20:56:55 azarah Exp $
 
+  22 April 2002; M.Schlemmer <azarah@gentoo.org> am-wrapper.pl :
+
+  Update so that it can work with AC_PREREQ([2.13]) as well as AC_PREREQ(2.13).
+	
 automake-1.5d-r2 (21 March 2002)
 
   7 April 2002; M.Schlemmer <azarah@gentoo.org> :
