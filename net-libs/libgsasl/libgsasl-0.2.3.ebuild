@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/libgsasl-0.2.3.ebuild,v 1.3 2005/01/22 16:07:17 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/libgsasl-0.2.3.ebuild,v 1.4 2005/01/22 16:10:26 slarti Exp $
 
 DESCRIPTION="The GNU SASL library"
 HOMEPAGE="http://www.gnu.org/software/gsasl/"
-SRC_URI="http://josefsson.org/gsasl/releases/${P}.tar.bz2"
+SRC_URI="http://josefsson.org/gsasl/releases/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 # TODO: check http://www.gnu.org/software/gsasl/#dependencies for more
