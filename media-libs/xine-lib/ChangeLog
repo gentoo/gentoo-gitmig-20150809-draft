@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.153 2004/10/21 06:22:42 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.154 2004/11/09 04:18:07 chriswhite Exp $
+
+*xine-lib-1_rc7 (09 Nov 2004)
+
+  09 Nov 2004; Chris White <chriswhite@gentoo.org>
+  +files/xine-lib-1_rc7-2.6.patch,
+  +files/xine-lib-1_rc7-configure-sparc.patch,
+  +files/xine-lib-1_rc7-mmx.patch, +files/xine-lib-1_rc7-pic.patch,
+  +xine-lib-1_rc7.ebuild:
+  Bumped to version 1_rc7. Took out the CFLAGS protection as xine-lib uses
+  custom CFLAGS now. Transitioned patches to new _rc7 format and tested to
+  verify application.
 
   20 Oct 2004; Luca Barbato <lu_zero@gentoo.org> xine-lib-1_rc6.ebuild:
   Made sure the ppc workaround is applied on ppc64 too

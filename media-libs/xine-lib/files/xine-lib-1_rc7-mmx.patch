@@ -1,0 +1,20 @@
+--- configure.old	2004-10-21 04:50:30.189310168 +0900
++++ configure	2004-10-21 04:51:02.455404976 +0900
+@@ -41676,7 +41676,7 @@
+ 
+ 
+     enable_w32dll="yes"
+-    enable_ffmmx="yes"
++    enable_ffmmx="no"
+     no_fpic="yes"
+     ;;
+ 
+@@ -41995,7 +41995,7 @@
+ #define FPM_INTEL 1
+ _ACEOF
+ 
+-	enable_ffmmx="yes"
++	enable_ffmmx="no"
+ 	enable_w32dll="yes"
+ 
+         case "$host_or_hostalias" in
