@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/anaglyph-stereo-quake/anaglyph-stereo-quake-130100-r1.ebuild,v 1.5 2004/06/24 22:40:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/anaglyph-stereo-quake/anaglyph-stereo-quake-130100-r1.ebuild,v 1.6 2004/08/13 12:52:40 kugelfang Exp $
 
 inherit games gcc eutils
 
@@ -34,6 +34,7 @@ src_unpack() {
 	epatch ${FILESDIR}/makefile-cflags.patch
 	epatch ${FILESDIR}/gentoo-paths.patch
 	epatch ${WORKDIR}/${P}-SDL.patch
+	epatch ${FILESDIR}/${P}-amd64.patch
 }
 
 src_compile() {

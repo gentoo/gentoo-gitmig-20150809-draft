@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/anaglyph-stereo-quake
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/anaglyph-stereo-quake/ChangeLog,v 1.4 2004/06/24 22:40:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/anaglyph-stereo-quake/ChangeLog,v 1.5 2004/08/13 12:52:40 kugelfang Exp $
+
+  13 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
+  +files/anaglyph-stereo-quake-130100-amd64.patch,
+  anaglyph-stereo-quake-130100-r1.ebuild:
+  Fixed BUG #53784.
 
 *anaglyph-stereo-quake-130100-r1 (06 Oct 2003)
 
