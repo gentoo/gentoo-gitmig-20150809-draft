@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.13.ebuild,v 1.7 2003/10/09 15:24:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.13.ebuild,v 1.8 2003/10/31 14:02:31 usata Exp $
 
 inherit elisp
 
@@ -13,33 +13,42 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="virtual/emacs
+DEPEND=">=sys-apps/sed-4
+	virtual/emacs
 	virtual/tetex"
 
 S="${WORKDIR}/${P}"
 
+pkg_setup() {
+
+	if ! grep ' Xaw3d' /var/db/pkg/app-editors/emacs*/USE >/dev/null 2>&1 ; then
+		ewarn
+		ewarn "Emacs needs to be compiled with Xaw3d support."
+		ewarn "Please emerge emacs with USE=\"Xaw3d\"."
+		ewarn
+		die "Emacs Xaw3d support must be enabled."
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
-	cd ${S} && sed -e 's,/usr/local/lib/texmf/tex/,/usr/share/texmf/tex/,g' tex.el >tex.el.new \
-		&& mv tex.el.new tex.el || die
+	sed -i 's,/usr/local/lib/texmf/tex/,/usr/share/texmf/tex/,g' ${S}/tex.el || die
 }
 
 src_compile() {
 	make || die
+	cd doc
+	sed -i "/^auctex/s/\(-.\)/\.info\1/g" auctex
+	for i in auctex* ; do
+		mv $i auctex.info${i#auctex}
+	done
 }
 
 src_install() {
-	dodir ${SITELISP}/auctex
-	make lispdir=${D}/${SITELISP} install install-contrib || die
-	# this is insane...
-	pushd ${D}/${SITELISP}
-	sed -e "s,${D}/,,g" tex-site.el >tex-site.el.new && \
-		mv tex-site.el.new tex-site.el || die
-	popd
-	pushd doc
-	dodir /usr/share/info
-	make infodir=${D}/usr/share/info install || die
-	popd
+	dodir ${SITELISP}/${PN}
+	make lispdir=${D}${SITELISP} install install-contrib || die
+	dosed ${SITELISP}/tex-site.el || die
+	doinfo doc/auctex*
 	elisp-site-file-install ${FILESDIR}/50auctex-gentoo.el
 	dodoc ChangeLog CHANGES COPYING INSTALLATION PROBLEMS README
 }
