@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_xslt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/ChangeLog,v 1.14 2005/01/30 05:48:36 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/ChangeLog,v 1.15 2005/02/25 12:35:16 hollow Exp $
+
+  25 Feb 2005; Benedikt Boehm <hollow@gentoo.org> mod_xslt-2.0.4.ebuild:
+  added MOD_DEFINE
 
   30 Jan 2005; Christian Parpart <trapni@gentoo.org> :
   fixed 25_mod_xslt.conf installation
