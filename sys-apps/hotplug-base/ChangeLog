@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hotplug-base
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug-base/ChangeLog,v 1.8 2004/06/28 09:11:49 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug-base/ChangeLog,v 1.9 2004/07/22 21:56:22 tgall Exp $
+
+  22 Jul 2004; Tom Gall <tgall@gentoo.org> hotplug-base-20040401.ebuild:
+  stable on ppc64
 
   28 Jun 2004; Joshua Kinard <kumba@gentoo.org> hotplug-base-20040401.ebuild:
   Marked stable on mips.
