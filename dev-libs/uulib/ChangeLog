@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/uulib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uulib/ChangeLog,v 1.11 2004/08/22 22:03:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uulib/ChangeLog,v 1.12 2004/12/29 22:44:18 ciaranm Exp $
 
-  23 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> uulib-0.5.20.ebuild:
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  23 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> uulib-0.5.20.ebuild:
   Stable on alpha.
 
   19 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> uulib-0.5.20.ebuild:
@@ -20,7 +23,7 @@
   22 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org> uulib-0.5.20.ebuild:
   Keyworded ~sparc wrt #54351
 
-  22 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> uulib-0.5.20.ebuild:
+  22 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> uulib-0.5.20.ebuild:
   Add ~alpha, bug #54351.
 
   19 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> uulib-0.5.20.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.90 2004/12/16 10:23:10 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.91 2004/12/29 22:38:05 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> libxslt-1.1.9-r1.ebuild:
   Stable on amd64.
@@ -82,7 +85,7 @@
   13 Jul 2004; Mike Gardiner <obz@gentoo.org> +libxslt-1.1.8.ebuild:
   New version as requested in bug #56875
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> libxslt-1.1.4.ebuild:
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libxslt-1.1.4.ebuild:
   Stable on alpha.
 
   22 Jun 2004; Tom Gall <tgall@gentoo.org> libxslt-1.1.6.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.69 2004/12/29 03:49:47 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.70 2004/12/29 22:41:02 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   29 Dec 2004; Stefan Knoblich <stkn@gentoo.org> pwlib-1.8.3.ebuild:
   cleanup, SRC_URI changed, include order fix
@@ -30,10 +33,10 @@
   23 Oct 2004; Jason Wever <weeve@gentoo.org> pwlib-1.6.6.ebuild:
   Added ~sparc keyword.
 
-  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> pwlib-1.6.3-r2.ebuild:
+  19 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pwlib-1.6.3-r2.ebuild:
   Stable on alpha.
 
-  14 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> pwlib-1.6.3-r2.ebuild:
+  14 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pwlib-1.6.3-r2.ebuild:
   Add ~alpha keyword.
 
   18 Sep 2004; Jason Wever <weeve@gentoo.org> pwlib-1.6.3-r2.ebuild:
@@ -61,7 +64,7 @@
   14 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> pwlib-1.6.6.ebuild:
   Marked ~amd64.
 
-  07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> pwlib-1.5.2-r3.ebuild:
+  07 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pwlib-1.5.2-r3.ebuild:
   Stable on alpha.
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> pwlib-1.4.11.ebuild,

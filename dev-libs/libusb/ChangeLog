@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.26 2004/10/18 16:49:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.27 2004/12/29 22:36:33 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> libusb-0.1.7-r1.ebuild,
   libusb-0.1.7.ebuild, libusb-0.1.8.ebuild:
@@ -9,7 +12,7 @@
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> libusb-0.1.8.ebuild:
   stable on amd64.
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> libusb-0.1.8.ebuild:
+  10 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> libusb-0.1.8.ebuild:
   Stable on alpha.
 
   03 Oct 2004; Jason Wever <weeve@gentoo.org> libusb-0.1.8.ebuild:
