@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/elfsh
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfsh/ChangeLog,v 1.1 2003/07/08 19:47:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfsh/ChangeLog,v 1.2 2003/08/15 22:29:22 solar Exp $
+
+*elfsh-0.51_beta2 (15 Aug 2003)
+
+  15 Aug 2003; <solar@gentoo.org> elfsh-0.51_beta2.ebuild,
+  files/elfsh-0.51b2.diff:
+  version bump to latest version listed in phrack #61
 
 *elfsh-0.5_beta8 (08 Jul 2003)
 
