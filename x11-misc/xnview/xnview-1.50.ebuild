@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.50.ebuild,v 1.4 2003/06/18 13:22:27 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.50.ebuild,v 1.5 2003/08/25 09:06:34 phosphan Exp $
 
 MY_P=XnView-static
 S=${WORKDIR}/usr
@@ -11,7 +11,7 @@ SRC_URI="x86? ftp://www.zoo-logique.org/xnview/download/${MY_P}.i386.rpm
 
 SLOT="0"
 LICENSE="free-noncomm as-is"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 DEPEND="app-arch/rpm2targz"
 
