@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.ebuild,v 1.2 2005/02/17 12:26:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.ebuild,v 1.3 2005/02/17 20:47:49 dragonheart Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -23,13 +23,12 @@ DEPEND="virtual/libc
 		x86?   ( sys-apps/lm-sensors )
 		amd64? ( sys-apps/lm-sensors )
 	)
-	!ppc64? ( rpm? ( app-arch/rpm
+	rpm? ( app-arch/rpm
 		dev-libs/popt
 		app-arch/bzip2
-		)
-		elf? ( dev-libs/elfutils )
-	)"
-	#ppc64 keyword awaiting bug #82341
+	)
+	elf? ( dev-libs/elfutils )
+	"
 
 RDEPEND="${DEPEND}
 	dev-perl/TermReadKey
