@@ -1,7 +1,8 @@
-# ChangeLog for app-doc/mini-howto-text
+# ChangeLog for app-doc/linuxfromscratch-text
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-text/ChangeLog,v 1.1 2002/04/09 20:59:56 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-text/ChangeLog,v 1.2 2002/12/17 15:51:08 vapier Exp $
 
 *linuxfromscratch-text-3.3 (09 Apr 2002)
-  09 Apr 2002; Spider <spider@gentoo.org>
-  intial package
+
+  09 Apr 2002; Spider <spider@gentoo.org> :
+  initial package

@@ -1,10 +1,9 @@
-# ChangeLog for app-doc/qt-docs
+# ChangeLog for app-doc/root-docs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.1 2002/04/11 10:03:13 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.2 2002/12/17 15:51:43 vapier Exp $
 
 *root-docs-3.03.04 (11 Apr 2002)
 
   11 Apr 2002; G.Bevin <gbevin@gentoo.org> root-docs-3.03.04.ebuild
   files/digest-root-docs-3.03.04 :
-  
   Initial release
