@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc., Emil Skoldberg (see ChangeLog)
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.28-r1.ebuild,v 1.5 2003/10/29 13:22:54 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.28-r1.ebuild,v 1.6 2003/10/29 19:12:47 scandium Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://pike.ida.liu.se/pub/pike/all/${PV}/Pike-v${PV}.tar.gz"
 
 LICENSE="GPL-2 | LGPL-2.1 | MPL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 DEPEND="dev-libs/gmp
 	zlib?	( sys-libs/zlib )
