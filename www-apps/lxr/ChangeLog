@@ -1,6 +1,9 @@
 # ChangeLog for net-www/lxr
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/ChangeLog,v 1.1 2004/08/15 15:08:21 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/ChangeLog,v 1.2 2004/09/03 17:17:20 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> lxr-0.3.1.ebuild:
+  Masked lxr-0.3.1.ebuild stable for ppc
 
 *lxr-0.3.1 (15 Aug 2004)
 

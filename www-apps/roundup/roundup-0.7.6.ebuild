@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-0.7.6.ebuild,v 1.1 2004/08/15 15:36:30 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-0.7.6.ebuild,v 1.2 2004/09/03 17:17:21 pvdabeel Exp $
 
 inherit eutils
 
 DESCRIPTION="Simple-to-use and -install issue-tracking system with command-line, web, and e-mail interfaces."
 SRC_URI="mirror://sourceforge/roundup/${P}.tar.gz"
 HOMEPAGE="http://roundup.sourceforge.net"
-KEYWORDS="x86 sparc ~amd64 ~ppc"
+KEYWORDS="x86 sparc ~amd64 ppc"
 LICENSE="as-is"
 SLOT="0"
 

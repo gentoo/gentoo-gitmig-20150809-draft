@@ -1,6 +1,18 @@
 # ChangeLog for net-www/roundup
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.1 2004/08/15 15:36:30 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.2 2004/09/03 17:17:21 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  roundup-0.5.8.ebuild, roundup-0.6.4.ebuild, roundup-0.7.6.ebuild:
+  Masked roundup-0.7.6.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  roundup-0.5.8.ebuild, roundup-0.6.4.ebuild:
+  Masked roundup-0.6.4.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  roundup-0.5.8.ebuild:
+  Masked roundup-0.5.8.ebuild stable for ppc
 
 *roundup-0.6.4 (15 Aug 2004)
 

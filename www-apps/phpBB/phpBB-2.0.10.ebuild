@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/phpBB-2.0.10.ebuild,v 1.1 2004/08/27 16:02:19 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/phpBB-2.0.10.ebuild,v 1.2 2004/09/03 17:17:21 pvdabeel Exp $
 
 inherit webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.phpbb.com/"
 SRC_URI="mirror://sourceforge/phpbb/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="~x86 ppc ~sparc ~alpha ~amd64"
 
 RDEPEND="virtual/php"
 

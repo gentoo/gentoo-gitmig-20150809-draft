@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/issue-tracker/issue-tracker-4.0.3.ebuild,v 1.1 2004/08/15 15:06:14 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/issue-tracker/issue-tracker-4.0.3.ebuild,v 1.2 2004/09/03 17:17:20 pvdabeel Exp $
 
 inherit webapp-apache
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.issue-tracker.com/"
 SRC_URI="mirror://sourceforge/issue-tracker/issue-tracker-4.0.3.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 IUSE=""
 DEPEND=""
 RDEPEND="virtual/php

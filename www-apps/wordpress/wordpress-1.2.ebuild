@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-1.2.ebuild,v 1.1 2004/08/15 15:56:24 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-1.2.ebuild,v 1.2 2004/09/03 17:17:21 pvdabeel Exp $
 # Mostly ripped off from the squirrelmail ebuild!
 # By Peter Westwood <peter.westwood@ftwr.co.uk>
 
@@ -13,7 +13,7 @@ DESCRIPTION="Wordpress php and mysql based CMS system."
 HOMEPAGE="http://wordpress.org/"
 SRC_URI="mirror://sourceforge/cafelog/${P}-${MY_EXT}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ppc ~sparc"
 IUSE=""
 RDEPEND=">=dev-php/mod_php-4.1
 	 >=dev-db/mysql-3.23.23"

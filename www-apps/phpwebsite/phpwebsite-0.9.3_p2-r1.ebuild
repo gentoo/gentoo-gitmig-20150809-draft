@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-0.9.3_p2-r1.ebuild,v 1.1 2004/08/15 15:32:57 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-0.9.3_p2-r1.ebuild,v 1.2 2004/09/03 17:17:21 pvdabeel Exp $
 
 inherit webapp-apache
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/phpwebsite/${PN}-${MY_PV}-full.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc alpha"
+KEYWORDS="~x86 ppc ~sparc alpha"
 
 DEPEND=">=sys-devel/patch-2.5.9"
 RDEPEND="virtual/php

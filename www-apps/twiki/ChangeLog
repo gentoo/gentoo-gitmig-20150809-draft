@@ -1,6 +1,10 @@
 # ChangeLog for net-www/twiki
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.1 2004/08/15 15:49:56 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.2 2004/09/03 17:17:21 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  twiki-20030201.ebuild:
+  Masked twiki-20030201.ebuild stable for ppc
 
 *twiki-20030201 (15 Aug 2004)
 

@@ -1,6 +1,23 @@
 # ChangeLog for net-www/tikiwiki
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.2 2004/08/30 19:56:57 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.3 2004/09/03 17:17:21 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  tikiwiki-1.8.2-r1.ebuild, tikiwiki-1.8.2.ebuild, tikiwiki-1.8.3.ebuild,
+  tikiwiki-1.8.4.ebuild:
+  Masked tikiwiki-1.8.4.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  tikiwiki-1.8.2-r1.ebuild, tikiwiki-1.8.2.ebuild, tikiwiki-1.8.3.ebuild:
+  Masked tikiwiki-1.8.3.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  tikiwiki-1.8.2-r1.ebuild, tikiwiki-1.8.2.ebuild:
+  Masked tikiwiki-1.8.2.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  tikiwiki-1.8.2-r1.ebuild:
+  Masked tikiwiki-1.8.2-r1.ebuild stable for ppc
 
 *tikiwiki-1.8.4 (30 Aug 2004)
 

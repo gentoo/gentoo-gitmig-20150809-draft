@@ -1,6 +1,14 @@
 # ChangeLog for net-www/bugzilla
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.4 2004/08/30 19:10:43 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.5 2004/09/03 17:17:20 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  bugzilla-2.18.0_rc1.ebuild, bugzilla-2.18.0_rc2.ebuild:
+  Masked bugzilla-2.18.0_rc2.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  bugzilla-2.18.0_rc1.ebuild:
+  Masked bugzilla-2.18.0_rc1.ebuild stable for ppc
 
   30 Aug 2004; Renat Lumpau <rl03@gentoo.org> :
   Recommitting Manifest

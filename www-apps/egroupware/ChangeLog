@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/egroupware
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.7 2004/09/03 09:29:31 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.8 2004/09/03 17:17:20 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  egroupware-1.0.00.004.ebuild:
+  Masked egroupware-1.0.00.004.ebuild stable for ppc
 
   03 Sep 2004; Renat Lumpau <rl03@gentoo.org> -egroupware-0.9.99.008.ebuild,
   -egroupware-0.9.99.015.ebuild, -egroupware-1.0.00.003.ebuild:

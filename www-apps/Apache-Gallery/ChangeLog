@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-Gallery
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.1 2004/08/15 09:37:21 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.2 2004/09/03 17:17:20 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  Apache-Gallery-0.6.ebuild:
+  Masked Apache-Gallery-0.6.ebuild stable for ppc
 
 *Apache-Gallery-0.8 (15 Aug 2004)
 

@@ -1,6 +1,18 @@
 # ChangeLog for app-office/phprojekt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.4 2004/08/30 19:36:46 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.5 2004/09/03 17:17:21 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  phprojekt-4.0-r1.ebuild, phprojekt-4.1.ebuild, phprojekt-4.2.ebuild:
+  Masked phprojekt-4.2.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  phprojekt-4.0-r1.ebuild, phprojekt-4.1.ebuild:
+  Masked phprojekt-4.1.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  phprojekt-4.0-r1.ebuild:
+  Masked phprojekt-4.0-r1.ebuild stable for ppc
 
   30 Aug 2004; Renat Lumpau <rl03@gentoo.org> phprojekt-4.2.ebuild:
   Fixed DEPEND/RDEPEND, removed unneeded src_compile

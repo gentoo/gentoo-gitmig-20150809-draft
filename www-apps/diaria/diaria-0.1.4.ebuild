@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/diaria/diaria-0.1.4.ebuild,v 1.2 2004/08/28 22:51:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/diaria/diaria-0.1.4.ebuild,v 1.3 2004/09/03 17:17:20 pvdabeel Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ SRC_URI="http://rubyforge.org/download.php/208/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 USE_RUBY="any"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 USE_RUBY="any"
 IUSE=""
 DEPEND="virtual/ruby"

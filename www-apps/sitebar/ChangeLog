@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/sitebar
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/ChangeLog,v 1.2 2004/08/30 23:33:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/ChangeLog,v 1.3 2004/09/03 17:17:21 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  sitebar-3.2.6.ebuild:
+  Masked sitebar-3.2.6.ebuild stable for ppc
 
   31 Aug 2004; David Holm <dholm@gentoo.org> sitebar-3.2.6.ebuild:
   Added to ~ppc.

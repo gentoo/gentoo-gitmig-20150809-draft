@@ -1,6 +1,24 @@
 # ChangeLog for dev-php/phpgroupware
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.3 2004/08/30 19:34:48 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.4 2004/09/03 17:17:21 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  phpgroupware-0.9.16.000.ebuild, phpgroupware-0.9.16.001.ebuild,
+  phpgroupware-0.9.16.002-r1.ebuild, phpgroupware-0.9.16.002.ebuild:
+  Masked phpgroupware-0.9.16.002.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  phpgroupware-0.9.16.000.ebuild, phpgroupware-0.9.16.001.ebuild,
+  phpgroupware-0.9.16.002-r1.ebuild:
+  Masked phpgroupware-0.9.16.002-r1.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  phpgroupware-0.9.16.000.ebuild, phpgroupware-0.9.16.001.ebuild:
+  Masked phpgroupware-0.9.16.001.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  phpgroupware-0.9.16.000.ebuild:
+  Masked phpgroupware-0.9.16.000.ebuild stable for ppc
 
   30 Aug 2004; Renat Lumpau <rl03@gentoo.org>
   phpgroupware-0.9.16.002-r1.ebuild:

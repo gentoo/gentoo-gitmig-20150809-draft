@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-1.2.4.ebuild,v 1.2 2004/09/03 01:18:24 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-1.2.4.ebuild,v 1.3 2004/09/03 17:17:21 pvdabeel Exp $
 
 inherit webapp
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.gwdg.de/pub/misc/${PN}/${P}-01.tar.bz2
 	ftp://ftp.otrs.org/pub/${PN}/${P}-01.tar.bz2
 	http://ftp.gwdg.de/pub/misc/${PN}/${P}-01.tar.bz2"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 
 DEPEND="
 	=dev-lang/perl-5*
