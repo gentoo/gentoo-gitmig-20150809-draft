@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.20 2004/04/11 23:37:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.21 2004/04/27 02:43:56 randy Exp $
+
+  26 Apr 2004; Michael McCabe <randy@gentoo.org> bind-tools-9.2.3-r1.ebuild:
+  added s390 keywords
 
   11 Apr 2004; Jason Wever <weeve@gentoo.org> bind-tools-9.2.3-r1.ebuild:
   Stable on sparc.
