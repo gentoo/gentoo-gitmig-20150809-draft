@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.7-r1.ebuild,v 1.3 2004/05/01 12:35:05 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.7-r1.ebuild,v 1.4 2004/06/10 20:37:11 agriffis Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_install () {
 	cd ${S}
 	make DESTDIR=${D} localstatedir=/etc/bincimap prefix=/usr install || die
 	keepdir /var/log/bincimap || die
-	if [ `use ssl` ]; then
+	if use ssl; then
 		keepdir /var/log/bincimap-ssl || die
 	fi
 
@@ -53,7 +53,7 @@ pkg_postinst() {
 	einfo "ln -s /etc/bincimap/service/bincimap /service/bincimap"
 	einfo ""
 
-	if [ `use ssl` ]; then
+	if use ssl; then
 		einfo "If you want to use ssl connections, create the following link: "
 		einfo "ln -s /etc/bincimap/service/bincimaps /service/bincimaps"
 		einfo ""
@@ -68,7 +68,7 @@ pkg_postinst() {
 }
 
 pkg_config() {
-	if [ `use ssl` ]; then
+	if use ssl; then
 		local pemfile=/etc/bincimap/bincimap.pem
 		if [ ! -f $pemfile ]; then
 			echo "Creating a self-signed ssl-cert:"
