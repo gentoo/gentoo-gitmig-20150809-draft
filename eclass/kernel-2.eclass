@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.41 2004/08/22 11:38:02 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.42 2004/08/25 20:44:54 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -487,6 +487,7 @@ unipatch() {
 	done
 
 	# and now, finally, we patch it :)
+	LC_ALL="C"
 	for x in ${KPATCH_DIR}
 	do
 		for i in $(find ${x} -maxdepth 1 -iregex ".*\.patch[0-9]*" -or -iname "*.diff" | sort -n)
@@ -534,6 +535,7 @@ unipatch() {
 			fi
 		done
 	done
+	unset LC_ALL
 }
 
 # custom functions
