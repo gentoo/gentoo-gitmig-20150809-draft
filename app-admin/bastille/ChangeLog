@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/bastille
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.6 2004/03/21 02:10:48 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.7 2004/03/24 01:03:05 battousai Exp $
+
+  23 Mar 2004; Bryan Stine <battousai@gentoo.org>; bastille-2.1.1-r1.ebuild:
+  Changing back to x86-only stable. How repoman and myself missed this
+  disgusting mistake is beyond me.
 
   22 Mar 2004; Bryan Stine <battousai@gentoo.org> bastille-2.1.1-r1.ebuild,
   bastille-2.1.1-r2.ebuild, files/bastille-firewall-imap.patch:
