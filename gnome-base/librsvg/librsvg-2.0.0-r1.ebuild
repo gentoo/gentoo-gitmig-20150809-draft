@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.0.0-r1.ebuild,v 1.5 2002/12/09 04:22:39 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.0.0-r1.ebuild,v 1.6 2003/02/13 12:14:23 vapier Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.0.0.ebuild,v 1.6 2002/10/04 05:33:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.0.0.ebuild,v 1.7 2003/02/13 12:06:30 vapier Exp $
 
 S=${WORKDIR}
 DESCRIPTION="GNOME 2.0 - merge this package to merge the Gnome2 desktop"

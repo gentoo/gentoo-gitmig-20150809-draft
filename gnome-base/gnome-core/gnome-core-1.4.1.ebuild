@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.1.ebuild,v 1.9 2002/12/09 04:22:38 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.1.ebuild,v 1.10 2003/02/13 12:07:49 vapier Exp $
 
 IUSE="kde nls cups"
 
