@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.2.ebuild,v 1.11 2004/03/09 00:33:16 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.2.ebuild,v 1.12 2004/06/15 03:27:17 agriffis Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -98,7 +98,7 @@ PDEPEND=">=dev-lang/perl-${PV}"
 pkg_setup() {
 	# I think this should rather be displayed if you *have* 'threads'
 	# in USE if it could break things ...
-	if [ -n "`use threads`" ]
+	if use threads
 	then
 		ewarn ""
 		ewarn "PLEASE NOTE: You are compiling perl-5.8 with"
@@ -142,7 +142,7 @@ src_compile() {
 	export LC_ALL="C"
 	local myconf=""
 
-	if [ "`use threads`" ]
+	if use threads
 	then
 		einfo "using threads"
 		mythreading="-multi"
@@ -152,28 +152,28 @@ src_compile() {
 		myarch="${CHOST%%-*}-linux"
 	fi
 
-	if [ "`use gdbm`" ]
+	if use gdbm
 	then
 		myconf="${myconf} -Di_gdbm"
 	fi
-	if [ "`use berkdb`" ]
+	if use berkdb
 	then
 		myconf="${myconf} -Di_db -Di_ndbm"
 	else
 		myconf="${myconf} -Ui_db -Ui_ndbm"
 	fi
-	if [ "`use mips`" ]
+	if use mips
 	then
 		# this is needed because gcc 3.3-compiled kernels will hang
 		# the machine trying to run this test - check with `Kumba
 		# <rac@gentoo.org> 2003.06.26
 		myconf="${myconf} -Dd_u32align"
 	fi
-	if [ "`use sparc`" ]
+	if use sparc
 	then
 		myconf="${myconf} -Ud_longdbl"
 	fi
-	if [ "`use sparc64`" ]
+	if use sparc64
 	then
 		myconf="${myconf} -Ud_longdbl"
 	fi
