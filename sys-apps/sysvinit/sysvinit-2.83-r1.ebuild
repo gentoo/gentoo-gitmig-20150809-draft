@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.83-r1.ebuild,v 1.4 2002/07/14 19:20:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.83-r1.ebuild,v 1.5 2002/07/21 21:09:48 gerk Exp $
 
 S=${WORKDIR}/${P}/src
 DESCRIPTION="System initialization stuff"
@@ -10,7 +10,7 @@ RDEPEND="$DEPEND sys-apps/file"
 HOMEPAGE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 
