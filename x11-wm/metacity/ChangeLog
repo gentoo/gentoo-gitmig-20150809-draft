@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.69 2004/07/31 03:08:16 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.70 2004/08/05 18:42:10 gmsoft Exp $
+
+  05 Aug 2004; Guy Martin <gmsoft@gentoo.org> metacity-2.8.1.ebuild:
+  Stable on hppa.
 
   31 Jul 2004; <spider@gentoo.org> metacity-2.8.1.ebuild:
   stable on x86 for gnome 2.6.2
