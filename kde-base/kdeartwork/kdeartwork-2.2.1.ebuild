@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-2.2.1.ebuild,v 1.3 2001/09/19 18:56:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-2.2.1.ebuild,v 1.4 2001/09/19 21:06:44 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="KDE ${PV} - Artwork"
@@ -43,8 +43,9 @@ src_compile() {
 }
 
 src_install() {
+  dodir $KDEDIR/share/apps/kthememgr/Themes
   make install DESTDIR=${D} || die
-  dodoc AUTHORS ChangeLog COPYING README*
+  dodoc README
 }
 
 
