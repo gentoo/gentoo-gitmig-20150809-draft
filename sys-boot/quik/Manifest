@@ -2,7 +2,7 @@ MD5 01235499f2e493b1395e19fa49adea60 quik-2.0.1k.ebuild 1095
 MD5 b4dd8f70ac25092dafaf6c85a8515956 quik-2.0.1.0-r1.ebuild 1697
 MD5 25463552ef415ca3af9e0cde5d2cfbae quik-2.0.1.0-r3.ebuild 2008
 MD5 862676683d74ace0ffb0ba6874944202 quik-2.0.1.0-r2.ebuild 1831
-MD5 813e199cbde396f578bec2d4b5e0bb81 ChangeLog 2063
+MD5 192cffc066e23db1063871fd438588dd ChangeLog 2039
 MD5 52f9d8e98c8931645c57a3de1c36727d metadata.xml 156
 MD5 d82779b77dcea6480025a86ce1a622d7 files/quik-2.0.1.0-gcc-321.patch 493
 MD5 490acba710c1c30fda817d7e8dd9eab3 files/quik-2.0.1.0-fclose-bug.patch 221
