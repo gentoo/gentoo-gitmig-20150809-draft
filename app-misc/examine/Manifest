@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 4f49f4749c2f7a9537da82895fc84e4c ChangeLog 341
-MD5 27ae4ed525904564bc4f0fc4df475ea0 examine-0.0.1.20041016.ebuild 452
+MD5 ad5d4507fb6dcd3e5162833c6481846c examine-0.0.1.20041208.ebuild 452
 MD5 0ab9660b46e555c50f8eca73592fe7f1 metadata.xml 1245
 MD5 a95e41e98dd34c0eec5c08fc5cb0c6de examine-9999.ebuild 442
-MD5 ee4feb20a06f233cdbe184c0ea706786 files/digest-examine-0.0.1.20041016 76
+MD5 e8b7dda6039dcd9ae198897c513e9575 files/digest-examine-0.0.1.20041208 76
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-examine-9999 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBeQAAHTu7gpaalycRAjqBAJ9M9CtK7mRUVrw54C4GfdgrblfzjACgsXgw
-tKfy6xI+gUzU6p4p+aJVKAI=
-=Jcz7
+iD8DBQFBuc/xroRuSHgZdywRAobiAJoCY/RR3GsZyPvV3OA3pYSEcxHaXwCfcJM8
+FyrQO0n9H519PzkcKNtdgR8=
+=WYAj
 -----END PGP SIGNATURE-----
