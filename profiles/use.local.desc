@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.866 2005/01/14 15:09:33 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.867 2005/01/14 20:04:38 wolf31o2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -236,6 +236,7 @@ dev-scheme/bigloo-lib:ipcs - enable ipcs support
 dev-scheme/gauche-gtk:glgd - enable GL graph draw
 dev-tcltk/tkzinc:threads - enable the use of threads
 dev-tex/preview-latex:xemacs - Adds support for XEmacs
+dev-util/catalyst:ccache - Enables ccache support
 dev-util/eric:idl - Enable omniorb support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
