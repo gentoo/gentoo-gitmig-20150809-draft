@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/media-sound/SphinxTrain/SphinxTrain-0.9.1.ebuild,v 1.3 2003/06/12 20:47:57 msterret Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="SphinxTrain - Speech Recognition (Training Module)" 
