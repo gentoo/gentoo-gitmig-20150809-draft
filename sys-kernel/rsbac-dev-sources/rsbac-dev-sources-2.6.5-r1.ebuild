@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/rsbac-dev-sources-2.6.5.ebuild,v 1.1 2004/06/09 12:34:51 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/rsbac-dev-sources-2.6.5-r1.ebuild,v 1.1 2004/06/14 22:24:42 plasmaroo Exp $
 
 IUSE=""
 ETYPE="sources"
@@ -19,7 +19,12 @@ RGPV_SRC="mirror://rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}.tar.bz2 http://
 UNIPATCH_STRICTORDER="yes"
 # exclude 12xx grsec and 13xx selinux patches
 UNIPATCH_EXCLUDE="12 13"
-UNIPATCH_LIST="${DISTDIR}/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}.tar.bz2"
+UNIPATCH_LIST="${DISTDIR}/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}.tar.bz2
+	${FILESDIR}/${PN}.CAN-2004-0075.patch
+	${FILESDIR}/${PN}.CAN-2004-0228.patch
+	${FILESDIR}/${PN}.CAN-2004-0229.patch
+	${FILESDIR}/${PN}.CAN-2004-0427.patch
+	${FILESDIR}/${PN}.FPULockup-53804.patch"
 UNIPATCH_DOCS="${WORKDIR}/patches/rsbac-patches-${KV_MAJOR}.${KV_MINOR}-${RGPV}/0000_README"
 
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/rsbac"
@@ -27,7 +32,6 @@ DESCRIPTION="RSBAC hardened sources for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 
 SRC_URI="${KERNEL_URI} ${RSBAC_SRC} ${RGPV_SRC} ${GPV_SRC}"
 KEYWORDS="~x86"
-
 
 src_unpack() {
 	universal_unpack
