@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnugo
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.9 2004/12/28 23:55:36 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.10 2005/04/03 08:42:31 mr_bones_ Exp $
+
+  03 Apr 2005; Michael Sterrett <mr_bones_@gentoo.org> -gnugo-3.2.ebuild,
+  -gnugo-3.3.22.ebuild, -gnugo-3.4.ebuild, gnugo-3.6.ebuild:
+  clean old versions; tidy
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
