@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/cpufrequtils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufrequtils/ChangeLog,v 1.1 2005/01/22 17:26:18 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufrequtils/ChangeLog,v 1.2 2005/02/28 08:36:46 brix Exp $
+
+*cpufrequtils-0.2 (28 Feb 2005)
+
+  28 Feb 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +cpufrequtils-0.2.ebuild:
+  Version bump.
 
 *cpufrequtils-0.2_pre1 (22 Jan 2005)
 
