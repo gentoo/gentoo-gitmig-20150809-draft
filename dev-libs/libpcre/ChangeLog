@@ -1,8 +1,13 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.14 2003/04/20 18:38:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.15 2003/04/30 13:38:02 pauldv Exp $
 
 *libpcre-4.2 (15 Apr 2003)
+
+  30 Apr 2003; Paul de Vrieze pauldv@gentoo.org libpcre-4.2.ebuild:
+  Corrected problem with libtool that would not allow libpcre-4.2 to install
+  libpcreposix if there was not allready a libpcre installed. Older versions
+  don't seem to have the problem
 
   20 Apr 2003; Martin Holzer <mholzer@gentoo.org> libpcre-3.9-r2.ebuild,
   libpcre-4.2.ebuild:
