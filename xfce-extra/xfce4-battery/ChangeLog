@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-battery
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/ChangeLog,v 1.7 2004/03/09 03:58:42 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/ChangeLog,v 1.8 2004/03/10 16:15:00 agriffis Exp $
+
+  10 Mar 2004; <agriffis@gentoo.org> xfce4-battery-0.2.0.ebuild:
+  stable on alpha
 
   08 Mar 2004; Bret Curtis <psi29a@gentoo.org> xfce4-battery-0.2.0.ebuild:
   Added ~mips to KEYWORDS
