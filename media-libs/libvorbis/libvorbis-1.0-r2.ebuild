@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r2.ebuild,v 1.3 2003/07/18 21:55:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r2.ebuild,v 1.4 2003/08/05 09:58:07 jje Exp $
 
 inherit libtool eutils
 
@@ -19,7 +19,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${PF}-m4.patch || die "Patching failed"
+	epatch ${FILESDIR}/${PN}-m4.patch || die "Patching failed"
 	# Fix a gcc crash.  With the new atexit patch to gcc, it
 	# seems it do not handle -mno-ieee-fp too well.
 	cp configure configure.orig
