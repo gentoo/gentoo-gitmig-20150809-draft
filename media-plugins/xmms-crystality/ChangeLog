@@ -1,0 +1,25 @@
+# ChangeLog for media-plugins/crystality-plugin
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-crystality/ChangeLog,v 1.1 2004/04/09 05:41:12 eradicator Exp $
+
+*xmms-crystality-0.92 (08 Apr 2004)
+
+  08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  xmms-crystality-0.92.ebuild, files/xmms-crystality-0.92-gcc3.patch:
+  package renamed media-plugins/xmms-crystality
+
+  20 Oct 2003; Brandy Westcott brandy@gentoo.org
+  crystality-plugin-0.92.ebuild:
+  Now compiles using CFLAGS
+
+  20 Oct 2003; Martin Holzer <mholzer@gentoo.org>
+  crystality-plugin-0.92.ebuild:
+  Adding gcc3 patch. Closes #31480.
+
+*crystality-plugin-0.92 (22 Jun 2003)
+
+  22 Jun 2003; jje <jje@gentoo.org> crystality-plugin-0.92.ebuild:
+  Initial revision.
+  
+  Submitted by: Susie Edgeworth <arienadean@yahoo.com>
+
