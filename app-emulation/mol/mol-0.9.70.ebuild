@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.70.ebuild,v 1.1 2004/03/21 23:01:54 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.70.ebuild,v 1.2 2004/03/22 01:39:51 dholm Exp $
 
 inherit flag-o-matic
 
 S=${WORKDIR}/${P}
-DESCRIPTION="MOL (Mac-on-Linux) lets PPC users run MacOS (X) under Linux (rsync snapshot)"
+DESCRIPTION="MOL (Mac-on-Linux) lets PPC users run MacOS (X) under Linux"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 HOMEPAGE="http://www.maconlinux.net/"
 
