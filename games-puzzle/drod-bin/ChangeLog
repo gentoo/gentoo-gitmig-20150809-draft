@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/drod-bin
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/ChangeLog,v 1.1 2003/11/19 08:54:00 mr_bones_ Exp $
+
+*drod-bin-1.6.3 (19 Nov 2003)
+
+  19 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> drod-bin-1.6.3.ebuild,
+  files/install.patch:
+  initial commit; ebuild supplied by James Gibson via bug 33207 (modified)
+
