@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 26e0ad492da0ca0e52794716ecdd041c ChangeLog 1840
 MD5 ef0b573869b99d86a2c5f580b7e23b8d bfr-1.5.ebuild 584
-MD5 5bf49dccb84d74121e2aa757b7e9f0a5 bfr-1.6.ebuild 607
-MD5 134493777cb58d53b93ab1350647f673 bfr-1.6-r1.ebuild 610
-MD5 af2be253967789755cee841fb853f709 ChangeLog 1757
 MD5 dd3d9cc0fdfaa622a04cb071b1074feb metadata.xml 262
-MD5 ee28df28437904204ad60a3940eaf065 files/digest-bfr-1.5 59
-MD5 658525eb53ac2fb452588698f6466cab files/digest-bfr-1.6 59
+MD5 5bf49dccb84d74121e2aa757b7e9f0a5 bfr-1.6.ebuild 607
+MD5 de8965f553ee673c9554e5f1bf9744a3 bfr-1.6-r1.ebuild 607
 MD5 658525eb53ac2fb452588698f6466cab files/digest-bfr-1.6-r1 59
+MD5 658525eb53ac2fb452588698f6466cab files/digest-bfr-1.6 59
+MD5 ee28df28437904204ad60a3940eaf065 files/digest-bfr-1.5 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCNcZqCHk4+ZoBpvsRAlVbAJ9zhQFYkmZ8PlsxwiwN7g3RwLp87QCeID8q
+T2wTdPD8n8vDg3QuSPKaB08=
+=Y9jI
+-----END PGP SIGNATURE-----
