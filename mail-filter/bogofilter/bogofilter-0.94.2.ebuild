@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.1.ebuild,v 1.1 2005/03/17 07:57:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.2.ebuild,v 1.1 2005/03/25 02:35:58 tove Exp $
 
 inherit eutils
 
@@ -10,8 +10,8 @@ SRC_URI="mirror://sourceforge/bogofilter/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86" # bug 74046
-KEYWORDS=" ~alpha ~amd64      ~hppa ~ia64       ~ppc ~ppc64 ~sparc ~x86"
+#KEYWORDS="~arm ~ppc64" # missing, see bug #74046
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc gsl"
 
 RDEPEND="virtual/libc
