@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.110 2004/08/19 13:48:17 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.111 2004/08/22 16:32:48 tgall Exp $
+
+  22 Aug 2004; Tom Gall <tgall@gentoo.org> arts-1.3.0.ebiuld:
+  stable on ppc64
 
 *arts-1.3.0 (19 Aug 2004)
 
