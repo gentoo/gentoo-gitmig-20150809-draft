@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.176 2003/11/29 21:08:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.177 2003/11/30 11:16:08 robbat2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -153,6 +153,8 @@ net-mail/exim:exiscan - Patch providing support for content scanning backward-co
 net-mail/exim:exiscan-acl - Patch providing support for content scanning
 net-mail/exim:lmtp - Adds support for lmtp
 net-mail/pine:passfile - Adds support for caching IMAP passwords into a file between sessions
+net-mail/qmail:noauthcram - If you do NOT want AUTHCRAM to be available
+net-mail/qmail:notlsbeforeauth - If you do NOT want to require STARTTLS before offering AUTH
 net-mail/ssmtp:md5sum - Enables MD5 summing for ssmtp
 net-mail/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with a plugin
 net-mail/sylpheed-claws:dillo - Enables support for inline http email viewing with a plugin (which depends on the dillo browser)
