@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gnome-pilot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/ChangeLog,v 1.22 2003/07/12 16:12:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/ChangeLog,v 1.23 2003/07/20 10:51:01 liquidx Exp $
+
+*gnome-pilot-2.0.10 (20 Jul 2003)
+
+  20 Jul 2003; Alastair Tse <liquidx@gentoo.org> gnome-pilot-0.1.65-r3.ebuild,
+  gnome-pilot-2.0.10.ebuild, gnome-pilot-2.0.8.ebuild:
+  version bump. fixes problems with glib-2.2.2
 
 *gnome-pilot-2.0.9 (22 May 2003)
 
