@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2.ebuild,v 1.1 2003/12/03 12:43:30 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.2.ebuild,v 1.2 2003/12/05 15:48:15 torbenh Exp $
 
 inherit virtualx
 
@@ -29,10 +29,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -i "s/HAVE_JACK_JACK_H/HAVE_JACK/" widgets/audioconf.cpp
+	sed -i "/#include <alsa\\/asoundlib.h>/i\\#define ALSA_PCM_OLD_HW_PARAMS_API 1\\" driver/alsaaudio.cpp
 }
 
 src_compile() {
 	local myconf
+	myconf="--disable-suid-build"
 	use ladcca || myconf="${myconf} --disable-ladcca"
 	use jack || myconf="${myconf} --disable-jack"
 	use fluidsynth || myconf="${myconf} --disable-fluidsynth"
