@@ -1,14 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $HEADER: $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/firestarter/firestarter-0.8.2.ebuild,v 1.8 2002/07/06 14:30:28 phoenix Exp $
 
 #MY_P=firestarter-${PV}
 S=${WORKDIR}/${P}
-DESCRIPTION="Gui for firewalls (iptables & ipchains), and a firewall
-monitor."
+DESCRIPTION="Gui for firewalls (iptables & ipchains), and a firewall monitor."
 SRC_URI="mirror://sourceforge/firestarter/${P}.tar.gz"
 HOMEPAGE="http://firestarter.sf.net"
-
+KEYWORDS="x86" 
 LICENSE="GPL-2"
 
 DEPEND="=x11-libs/gtk+-1.2*
