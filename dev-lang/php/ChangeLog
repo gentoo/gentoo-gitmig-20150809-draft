@@ -1,8 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.17 2002/04/16 15:43:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.18 2002/04/26 02:15:31 woodchip Exp $
 
-  16 Apr 2002; Seemant Kulleen
+  25 Apr 2002; Donny Davies <woodchip@gentoo.org> :
+
+  Clarify the pkg_postinst() message.
+
+  16 Apr 2002; Seemant Kulleen <seemant@gentoo.org> :
   
   I caused the gettext bug.  The configure options do not like --with-gettext
   set.  They only like --without-gettext set.  Who knew?
@@ -21,7 +25,9 @@
   the old virtual/imapUW
 	
 *php-4.1.2-r6 (12 Apr 2002) 
+
   12 Apr 2002; Spider <spider@gentoo.org>
+
   update -r to force rebuild with updated libpng
   
 *php-4.1.2-r5 php-4.1.1-r5 (12 Apr 2002)

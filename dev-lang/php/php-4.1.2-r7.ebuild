@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.2-r7.ebuild,v 1.4 2002/04/16 15:40:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.2-r7.ebuild,v 1.5 2002/04/26 02:15:31 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML embedded scripting language"
@@ -170,8 +170,8 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "Execute ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
-	einfo "to have your apache.conf auto-updated for use with this module."
+	einfo "Type: \"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
+	einfo "to have your apache.conf auto-updated for use with the php module."
 	einfo "You should then edit your /etc/conf.d/apache file to suit."
 	einfo
 }
