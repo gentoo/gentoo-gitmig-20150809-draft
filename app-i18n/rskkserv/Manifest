@@ -1,0 +1,7 @@
+MD5 9e51931ffb7992016b0dff1898f551ee rskkserv-2.94.12a.ebuild 1676
+MD5 c90dd470dc467aece7b8ac23c8771009 metadata.xml 174
+MD5 305c0d4701a06029d408e425230e1709 ChangeLog 353
+MD5 7690a6575c70d48d01fe9a0976191d94 files/rskkserv.initd 684
+MD5 e74c6484d631a673a0be239e33f048c5 files/rskkserv-2.94.12a-gentoo.diff 1203
+MD5 1c7ed82f046fc5cc7b8c8682b2f7ccae files/rskkserv-skk-jisyo-extra.diff 1285
+MD5 65b409a9845739f6090df2187be7475d files/digest-rskkserv-2.94.12a 68
