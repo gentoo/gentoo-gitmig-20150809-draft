@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.15.ebuild,v 1.2 2003/08/17 14:52:02 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.15.ebuild,v 1.3 2003/12/08 06:25:15 mr_bones_ Exp $
 
 IUSE="gdbm berkdb ldap mysql kerberos static ssl java pam" # otp krb4
 
@@ -121,7 +121,7 @@ src_install () {
 	echo "gentoo" | ${D}usr/sbin/saslpasswd2 -f ${D}etc/sasl2/sasldb2 -p cyrus
 	${D}usr/sbin/saslpasswd2 -f ${D}etc/sasl2/sasldb2 -d cyrus
 	export LD_LIBRARY_PATH=${LD_OLD}
-	chown root.mail ${D}etc/sasl2/sasldb2
+	chown root:mail ${D}etc/sasl2/sasldb2
 	chmod 0640 ${D}etc/sasl2/sasldb2
 
 	insinto /etc/conf.d ; newins ${FILESDIR}/saslauthd.confd-2.1 saslauthd
