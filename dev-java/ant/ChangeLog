@@ -1,6 +1,17 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.17 2002/11/25 11:57:17 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.18 2002/12/02 00:55:23 strider Exp $
+
+*ant-1.5.1-r3 (01 Dec 2002)
+
+  01 Dec 2002; Adrian Almenar <strider@gentoo.org> ant-1.5.1-r3.ebuild files/digest-ant-1.5.1-r3
+  I have created this ebuild cause building it from sources causes circular
+  dependencies (See bug #10360 and #10364) cause optional.jar doesnt have
+  all classes compiled. KEYWORDS are set only to "~x86". This ebuild should
+  fix some strange errors with ant. If somebody complains about this please
+  let me know. Also ant project changed how them distribute their files so we
+  need to mirror it now (Cant be downloaded automatically from their site).
+  Fixed ebuild to follow policy (Missing IUSE, Missing RDEPEND).
 
 *ant-1.5.1-r2 (18 Nov 2002)
   
