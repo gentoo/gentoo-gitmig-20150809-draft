@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-0.34.0-r1.ebuild,v 1.3 2004/09/07 05:04:14 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-0.34.0-r1.ebuild,v 1.4 2004/10/26 10:14:53 slarti Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/gst/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ppc"
+KEYWORDS="x86 amd64 ppc"
 IUSE=""
 
 RDEPEND="net-misc/openssh
