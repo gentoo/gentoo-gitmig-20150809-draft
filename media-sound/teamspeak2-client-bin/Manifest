@@ -1,4 +1,5 @@
-MD5 7d8bc1b4187d9a6e2e08d18a8a11e1a9 files/digest-teamspeak2-client-bin-2.0.32.60-r1 73
-MD5 a913652aee03ba33bf2daf0273d0f574 files/TeamSpeak 102
 MD5 1379c9722656456218375d93d7c6bd70 teamspeak2-client-bin-2.0.32.60-r1.ebuild 1264
 MD5 69cda96df7e67b4d30419ab76f1c4a77 ChangeLog 729
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 7d8bc1b4187d9a6e2e08d18a8a11e1a9 files/digest-teamspeak2-client-bin-2.0.32.60-r1 73
+MD5 a913652aee03ba33bf2daf0273d0f574 files/TeamSpeak 102
