@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gnutls
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.12 2004/01/04 11:10:21 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.13 2004/02/04 16:57:27 liquidx Exp $
+
+*gnutls-1.0.4 (04 Feb 2004)
+
+  04 Feb 2004; Alastair Tse <liquidx@gentoo.org> gnutls-1.0.4.ebuild:
+  version bump. removed keyword because of major version upgrade. archs should
+  look at marking this ~. added symlink hack to get around breaking apps because
+  of major lib number change, however, the code is still binary compatible.
 
   04 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> gnutls-0.8.10.ebuild,
   gnutls-0.8.12.ebuild:
