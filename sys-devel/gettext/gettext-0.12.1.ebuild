@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.6 2003/11/14 04:37:16 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.7 2003/11/17 18:01:17 agriffis Exp $
 
 inherit eutils
 
@@ -26,6 +26,14 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	use nls || myconf="--disable-nls"
+
+	# Compaq Java segfaults trying to build gettext stuff, and there's
+	# no good way to tell gettext to refrain from building the java
+	# stuff, so... remove compaq-jdk/jre from the PATH
+	if use alpha && [[ $JAVAC == *compaq* ]]; then
+		PATH=$(echo ":${PATH}" | sed 's|:/opt/compaq-j[^:]*||g; s/^://')
+		unset JAVA_HOME CLASSPATH JDK_HOME JAVAC
+	fi
 
 	CXX=${CC} econf \
 		--disable-shared \
