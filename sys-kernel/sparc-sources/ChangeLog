@@ -1,6 +1,16 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.2 2002/07/16 04:45:51 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.3 2002/10/09 09:46:14 seemant Exp $
+
+*sparc-sources-2.4.20_pre10 (09 Oct 2002)
+
+  09 Oct 2002; Seemant Kulleen <seemant@gentoo.org>
+  sparc-sources-2.4.20_pre10.ebuild files/digest-sparc-sources-2.4.20_pre10 :
+
+  Version bump to newest available stable-ish kernel.  This version has many
+  many fixes for sparc architectures.  Additionally, Troy Dack's patch for
+  the framebuffer logos is applied to the kernel source, to allow choice of
+  framebuffer logo.
 
 *sparc-sources-2.2.21_pre3 (12 May 2002)
 
