@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.1.ebuild,v 1.1 2004/11/15 13:46:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.1.ebuild,v 1.2 2004/11/16 21:03:48 lu_zero Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://fabrice.bellard.free.fr/qemu/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ppc -alpha -sparc"
-IUSE="softmmu qemu-fast sdl nptl nptlonly"
+IUSE="softmmu qemu-fast sdl nptl" #nptlonly"
 RESTRICT="nostrip"
 
 DEPEND="virtual/libc
