@@ -69,6 +69,12 @@ sys-devel/prelink
 # 1.0
 >=net-mail/evolution-1.1.90
 >=gnome-extra/gtkhtml-1.1.4
+# <azarah@gentoo.org> (27 Sep 2002)
+# latest gnome-spell (needed by evo-1.2 for spellcheck).
+=app-text/gnome-spell-0.5
+# not compadible with 1.0, or at least not out of the box
+=gnome-extra/gtkhtml-1.1.2
+
 
 # <hannes@gentoo.org> (04 Nov 2002)
 # kde 3.1 rc2: masked permanently
@@ -441,12 +447,6 @@ x11-libs/gtkmm-addons
 # moz (also for galeon-1.2.6)
 # worksforme // Spider
 >=net-www/mozilla-1.0.2
-
-# <azarah@gentoo.org> (27 Sep 2002)
-#latest gnome-spell
-=app-text/gnome-spell-0.5
-#not compadible with 1.0, or at least not out of the box
-=gnome-extra/gtkhtml-1.1.2
 
 # <raker@gentoo.org> (25 Sep 2002)
 # version bump.  ssl and other fixes
