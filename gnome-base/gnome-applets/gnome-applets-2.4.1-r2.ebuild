@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.4.1.ebuild,v 1.1 2003/09/24 16:25:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.4.1-r2.ebuild,v 1.1 2003/12/02 15:33:26 foser Exp $
 
 inherit gnome2
 
 DESCRIPTION="Applets for the Gnome2 Desktop and Panel"
 HOMEPAGE="http://www.gnome.org/"
 
-IUSE="doc apm ipv6"
+IUSE="doc apm acpi ipv6"
 SLOT="2"
 LICENSE="GPL-2 FDL-1.1"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
@@ -22,7 +22,8 @@ RDEPEND=">=x11-libs/gtk+-2.1
 	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2
 	virtual/x11
-	apm? ( sys-apps/apmd )"
+	apm? ( sys-apps/apmd )
+	acpi? ( sys-apps/acpid )"
 	# Virtual/x11 for XKB.h 
 
 DEPEND="${RDEPEND}
@@ -31,23 +32,30 @@ DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
 
 DOCS="AUTHORS ChangeLog COPYING COPYING-DOCS INSTALL NEWS README"
+G2CONF="${G2CONF} $(use_enable ipv6)"
 
 src_unpack() {
-
 	unpack ${A}
 
-	cd ${S}
-	gnome2_omf_fix
+	# http://bugzilla.gnome.org/show_bug.cgi?id=88553
+	# http://www.its.caltech.edu/~dmoore/battstat/
+	if [ -n "`use acpi`" ]; then
+		EPATCH_OPTS="-d ${S}/battstat"
+		epatch ${FILESDIR}/battstat-acpi-events-2.3.90.diff
+	fi
 
+	#
+	cd ${S}/multiload
+	epatch ${FILESDIR}/${P}-multiload_mem_fix.patch
+
+	gnome2_omf_fix
 }
 
-src_install () {
-	use ipv6 \
-		&& G2CONF="${G2CONF} --enable-ipv6" \
-		|| G2CONF="${G2CONF} --disable-ipv6"
 
+
+src_install () {
 	gnome2_src_install
-	for BLERHG in accessx-status battstat cdplayer charpick drivemount geyes gkb-new gtik gweather mailcheck mini-commander mixer modemlights multiload  screen-exec  stickynotes wireless; do
+	for BLERHG  in accessx-status battstat cdplayer charpick drivemount geyes gkb-new gtik gweather mailcheck mini-commander mixer modemlights multiload screen-exec stickynotes wireless; do
 			docinto ${BLERHG}
 			dodoc ${BLERHG}/[ChangeLog,AUTHORS,NEWS,TODO] ${BLERHG}/README*
 	done
