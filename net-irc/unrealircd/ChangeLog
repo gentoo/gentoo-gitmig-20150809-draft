@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.7 2004/03/06 02:22:12 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.8 2004/03/06 12:15:13 zul Exp $
+
+  06 Mar 2004; Chuck Short <zul@gentoo.org> files/mkunrealircd-cert:
+  Updated mkunrealircd-cert script.
 
   05 Mar 2004; Chuck Short <zul@gentoo.org> unrealircd-3.2_rc1.ebuild:
   DPATH and SPATH is hardcoded with the PORTDIR_TMP. Closes #42396.

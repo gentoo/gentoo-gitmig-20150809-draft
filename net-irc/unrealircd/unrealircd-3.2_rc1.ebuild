@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2_rc1.ebuild,v 1.3 2004/03/06 02:22:12 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2_rc1.ebuild,v 1.4 2004/03/06 12:15:13 zul Exp $
 
 MY_P=Unreal3.2-RC1
 DESCRIPTION="aimed to be an advanced (not easy) IRCd"
@@ -100,6 +100,8 @@ src_install() {
 
 	into /etc/unrealircd
 	dodir /etc/unrealircd/tmp
+
+	chown ircd:ircd /etc/unrealircd/tmp
 }
 
 pkg_postinst() {
@@ -115,4 +117,7 @@ pkg_postinst() {
 		einfo "The cert defaults are in /etc/unrealircd/ssl.cnf edit this prior to running."
 		echo
 	fi
+	einfo "Change the permissions of /etc/unrealircd/tmp to your unrealircd"
+	einfo "user."
+	echo
 }
