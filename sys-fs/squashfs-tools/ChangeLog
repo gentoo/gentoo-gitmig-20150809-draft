@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/squashfs-tools
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.2 2004/06/04 08:49:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.3 2004/06/20 06:25:01 solar Exp $
+
+  20 Jun 2004; <solar@gentoo.org> :
+  digest fix
 
 *squashfs-tools-2.0_alpha (04 Jun 2004)
 
