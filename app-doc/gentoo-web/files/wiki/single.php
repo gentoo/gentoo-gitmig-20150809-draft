@@ -179,8 +179,9 @@
 </td></tr></table>
 <?php if ( $theirs ) print '</form>'; ?>
 
-<?php if ( $uid && ($action != 'new_todo' || $new_todo_post_success) ) { ?>
 <table width="90%" border=0 cellpadding=0 cellspacing=0 align="center"><tr><td>
+
+<?php if ( $uid && ($action != 'new_todo' || $new_todo_post_success) ) { ?>
 <div style="float:right;padding:10px 0 5px 5px;">
 	<table width=200 border=0 cellpadding=3 cellspacing=0 bgcolor="#46357c"><tr><td>
 	<table width="100%" border=0 cellpadding=5 cellspacing=0 bgcolor="white"><tr><td>
@@ -194,6 +195,7 @@
 	</td></tr></table>
 	</td></tr></table>
 </div>
+<?php } ?>
 
 <?php
 	// okay, now we get to spit out all the followups.
@@ -205,9 +207,8 @@
 	<p style="margin:15px 5px 5px 5px;">Posted by <b><?=$fuser;?></b> on <b><?=date( "n/j/y", $fup['date'] );?></b></p>
 	<p style="margin:0 5px 5px 15px"><?=$fup['followup'];?></p>
 
-<?php
-	}
-?></tr></td></table><?php
-}
+<?php } ?>
 
-main_footer(); ?>
+</tr></td></table>
+
+<?php main_footer(); ?>
