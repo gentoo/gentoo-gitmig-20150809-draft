@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6.ebuild,v 1.7 2003/09/05 23:40:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6.ebuild,v 1.8 2003/12/06 02:49:08 zul Exp $
 
 IUSE="gtk"
 
@@ -40,7 +40,7 @@ src_install () {
 	dodoc CHANGES COPYING CREDITS README TODO
 
 	einfo "marking the no-display driftnet as setuid root."
-	chown root.wheel ${D}/usr/bin/driftnet
+	chown root:wheel ${D}/usr/bin/driftnet
 	chmod 750 ${D}/usr/bin/driftnet
 	chmod u+s ${D}/usr/bin/driftnet
 }
