@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups-pdf
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.3 2003/08/05 17:54:41 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.4 2003/10/17 10:49:09 lanius Exp $
+
+  17 Oct 2003; Heinrich Wendel <lanius@gentoo.org> cups-pdf-1.0.ebuild,
+  cups-pdf-1.1.ebuild:
+  fixed dep on gs, bug #31072
 
 *cups-pdf-1.1 (05 Aug 2003)
 

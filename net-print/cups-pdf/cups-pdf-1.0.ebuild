@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-1.0.ebuild,v 1.2 2003/07/29 13:48:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-1.0.ebuild,v 1.3 2003/10/17 10:49:09 lanius Exp $
 
 DESCRIPTION="Provides a virtual printer for CUPS to produce PDF files."
 HOMEPAGE="http://cip.physik.uni-wuerzburg.de/~vrbehr/cups-pdf/"
@@ -12,7 +12,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="net-print/cups"
+DEPEND="net-print/cups
+	app-text/ghostscript"
 
 S="${WORKDIR}/${MY_P}"
 
