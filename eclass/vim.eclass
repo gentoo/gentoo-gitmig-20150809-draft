@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.29 2003/05/25 00:38:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.30 2003/06/04 02:17:25 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -113,7 +113,7 @@ vim_src_unpack() {
 }
 
 src_compile() {
-	local myconf
+	local myconf confrule
 
 	# Fix bug #18245: Prevent "make" from the following chain:
 	# (1) Notice configure.in is newer than auto/configure
@@ -122,7 +122,10 @@ src_compile() {
 	# (4) Run ./configure (with wrong args) to remake auto/config.mk
 	sed -i 's/ auto.config.mk:/:/' src/Makefile || die "Makefile sed failed"
 	rm -f src/auto/configure
-	make -C src auto/configure || die "make auto/configure failed"
+	# vim-6.2 changed the name of this rule from auto/configure to autoconf
+	confrule=auto/configure
+	grep -q ^autoconf: src/Makefile && confrule=autoconf
+	make -C src $confrule || die "make $confrule failed"
 
 	# This should fix a sandbox violation.
 	for file in /dev/pty/s*; do
