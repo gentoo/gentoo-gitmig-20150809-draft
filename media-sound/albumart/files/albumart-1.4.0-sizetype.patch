@@ -1,0 +1,23 @@
+
+--- lib/albumart/albumartdialog_qt230.py.orig	2005-02-22 21:24:20.000000000 +0100
++++ lib/albumart/albumartdialog_qt230.py	2005-02-22 21:24:20.000000000 +0100
+@@ -2895,7 +2895,7 @@
+         layout2.addMultiCellWidget(self.artistEdit,0,0,2,3)
+ 
+         self.albumIcon = QPushButton(self.centralWidget(),"albumIcon")
+-#        self.albumIcon.setSizePolicy(QSizePolicy(0,0,0,0,self.albumIcon.sizePolicy().hasHeightForWidth()))
++#        self.albumIcon.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.albumIcon.sizePolicy().hasHeightForWidth()))
+         self.albumIcon.setMinimumSize(QSize(64,64))
+         self.albumIcon.setMaximumSize(QSize(64,64))
+         self.albumIcon.setFlat(0)
+--- lib/albumart/albumartdialog.py.orig	2005-02-22 21:24:20.000000000 +0100
++++ lib/albumart/albumartdialog.py	2005-02-22 21:24:20.000000000 +0100
+@@ -1053,7 +1053,7 @@
+         layout6 = QGridLayout(None,1,1,0,6,"layout6")
+ 
+         self.albumIcon = QPushButton(LayoutWidget,"albumIcon")
+-        self.albumIcon.setSizePolicy(QSizePolicy(0,0,0,0,self.albumIcon.sizePolicy().hasHeightForWidth()))
++        self.albumIcon.setSizePolicy(QSizePolicy(QSizePolicy.Fixed,QSizePolicy.Fixed,0,0,self.albumIcon.sizePolicy().hasHeightForWidth()))
+         self.albumIcon.setMinimumSize(QSize(64,64))
+         self.albumIcon.setMaximumSize(QSize(64,64))
+         self.albumIcon.setFlat(0)

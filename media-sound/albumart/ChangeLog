@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/albumart
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.8 2004/12/29 01:09:17 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.9 2005/02/22 21:01:30 carlo Exp $
+
+*albumart-1.4.0-r1 (22 Feb 2005)
+
+  22 Feb 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/albumart-1.4.0-sizetype.patch, +albumart-1.4.0-r1.ebuild:
+  Pyqt 3.14 compatibility patch
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
