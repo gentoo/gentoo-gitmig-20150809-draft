@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.319 2004/04/27 05:18:52 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.320 2004/04/27 05:22:31 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -138,6 +138,7 @@ kde-base/kdenetwork:wifi - Enable wireless network functions in kde
 media-gfx/blender:fmod - Adds mod support to blender
 media-gfx/gimp:gimpprint - Enable gimp-print printing support
 media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar formats
+media-gfx/maya:maya5-bundled-runtime - Use the versions og libstdc++, libgcc_s, libqt, and libXm provided by maya rather than the system libraries. 
 media-gfx/nvidia-cg-toolkit:glut - enable glut support
 media-gfx/optipng:ext-png - Link with the system libpng, rather than the bundled optimised version.
 media-gfx/optipng:ext-zlib - Link with the system zlib, rather than the bundled version optimised specifically for use with png.
