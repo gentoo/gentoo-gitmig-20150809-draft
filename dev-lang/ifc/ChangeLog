@@ -1,20 +1,27 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.6 2003/02/12 05:56:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.7 2003/03/19 15:58:55 avenj Exp $
+
+  19 March 2003; Jon Portnoy <avenj@gentoo.org> ifc-7.0.064.ebuild :
+
+  Removed if statement to check for preexisting installs prior
+  to displaying ewarn about old packages needing to be recompiled.
+  All users ought to read the warning regardless of whether
+  they've installed it in the past or not.
 
 *ifc-7.0.064 (9 Dec 2002)
 
-  9 Dec 2002   Jon Portnoy <avenj@gentoo.org> icc-7.0.064.ebuild :
+  9 Dec 2002; Jon Portnoy <avenj@gentoo.org> ifc-7.0.064.ebuild :
 
   Latest IFC, ebuild submitted by Daniel Jaeggi (daniel@jaeggi.co.uk)
 
 *ifc-6.0 (13 May 2002)
   
-  13 May 2002  William McArthur <sandymac@gentoo.org> icc-6.0.ebuild :
+  13 May 2002; William McArthur <sandymac@gentoo.org> ifc-6.0.ebuild :
 
   Made some changes to Remco's work to better fit with icc-6.0. Both packages
   are very similar and can use some of the same files.
 
-  10 May 2002 Remco van den Bosch <bosch@muon.xs4all.nl> ifc-6.0.ebuild :
+  10 May 2002; Remco van den Bosch <bosch@muon.xs4all.nl> ifc-6.0.ebuild :
   
   Tweaked icc ebuild to install ifc.
