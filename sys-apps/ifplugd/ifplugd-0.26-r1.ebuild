@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.26.ebuild,v 1.3 2005/03/15 14:27:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.26-r1.ebuild,v 1.1 2005/03/22 13:05:53 ka0ttic Exp $
 
 inherit eutils
 

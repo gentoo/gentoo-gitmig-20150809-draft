@@ -1,5 +1,5 @@
 # -*-sh-*-
-# $Id: gentoo-ifplugd-conf-v3,v 1.1 2003/11/15 16:47:58 wmertens Exp $
+# $Id: gentoo-ifplugd-conf-v3,v 1.2 2005/03/22 13:05:53 ka0ttic Exp $
 
 # This file is part of ifplugd.
 #
@@ -48,7 +48,7 @@ POLL_TIME="1"
 DELAY_UP="0"
 DELAY_DOWN="0"
 API_MODE="auto"
-SHUTDOWN="yes"
+SHUTDOWN="no"
 WAIT_ON_FORK="no"
 MONITOR="no"
 ARGS=""

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.16 2005/03/15 14:27:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.17 2005/03/22 13:05:53 ka0ttic Exp $
+
+*ifplugd-0.26-r1 (22 Mar 2005)
+
+  22 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
+  files/gentoo-ifplugd-conf-v3, -ifplugd-0.26.ebuild,
+  +ifplugd-0.26-r1.ebuild:
+  Revision bump; Default to SHUTDOWN=no in config.
 
   15 Mar 2005; Seemant Kulleen <seemant@gentoo.org> ifplugd-0.25.ebuild,
   ifplugd-0.26.ebuild:
