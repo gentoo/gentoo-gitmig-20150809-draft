@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/bastille
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.13 2005/01/01 10:56:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.14 2005/04/05 18:02:56 battousai Exp $
+
+*bastille-2.1.1-r3 (05 Apr 2005)
+
+  05 Apr 2005; Bryan Stine <battousai@gentoo.org>
+  +files/bastille-2.1.1-hlist-fix.patch, bastille-2.1.1-r1.ebuild,
+  bastille-2.1.1-r2.ebuild, +bastille-2.1.1-r3.ebuild:
+  Added a patch to hopefully fix the left-panel click bug that I've finally
+  been able to track down. This is a one-liner based on Bastille CVS. This
+  hopefully fixes bug #62965.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   bastille-2.1.1-r1.ebuild, bastille-2.1.1-r2.ebuild:
