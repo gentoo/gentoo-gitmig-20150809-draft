@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/Xaw3d
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.18 2004/09/22 06:13:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.19 2004/10/24 12:20:30 usata Exp $
+
+  24 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> Xaw3d-1.5-r1.ebuild:
+  Stable on ppc-macos.
 
   22 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> Xaw3d-1.5-r1.ebuild:
   Added to ~ppc-macos.
