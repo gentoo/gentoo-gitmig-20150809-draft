@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-1.0.1.ebuild,v 1.1 2003/09/19 08:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-1.0.1.ebuild,v 1.2 2003/10/27 14:15:21 aliz Exp $
 
 IUSE="ssl static"
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
 HOMEPAGE="http://www.fwbuilder.org/"
 S=${WORKDIR}/${P}
 
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
