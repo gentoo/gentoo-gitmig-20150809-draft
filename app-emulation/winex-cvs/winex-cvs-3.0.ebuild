@@ -1,8 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-2.2.ebuild,v 1.5 2003/02/13 07:18:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-3.0.ebuild,v 1.1 2003/04/17 13:42:53 mholzer Exp $
 
 IUSE="cups opengl"
+
+inherit eutils
 
 # Dont modify the ECVS_BRANCH setting yourself.
 # Instead, make a backup of this ebuild and rename it to
@@ -17,12 +19,17 @@ IUSE="cups opengl"
 
 ECVS_SERVER="cvs.winex.sourceforge.net:/cvsroot/winex"
 ECVS_MODULE="wine"
-ECVS_BRANCH=${PN/cvs/}${PV/./-}
+ECVS_BRANCH=${PN/cvs/}${PV//./-}
+ECVS_BRANCH=${ECVS_BRANCH/pre/pre-}
+ECVS_BRANCH=${ECVS_BRANCH/_/-}
 ECVS_TOP_DIR="${DISTDIR}/cvs-src/${ECVS_BRANCH}"
 
 inherit cvs
 
 S=${WORKDIR}/${ECVS_MODULE}
+#echo ${ECVS_BRANCH}
+	
+
 DESCRIPTION="WineX is a distribution of Wine with enhanced DirectX for gaming.
 	     This ebuild will fetch the newest cvs sources from the cvs-server."
 HOMEPAGE="http://www.transgaming.com/"
@@ -48,6 +55,9 @@ src_compile() {
 	use opengl && myconf="--enable-opengl" || myconf="--disable-opengl"
 	[ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" || myconf="$myconf --enable-trace --enable-debug"
 
+	# patching winex to not compile wcmd
+	epatch ${FILESDIR}/winex-cvs-3.0_pre1.patch
+
 	# the folks at #winehq were really angry about custom optimization
 	unset CFLAGS
 	unset CXXFLAGS
@@ -71,7 +81,7 @@ src_compile() {
 
 	cd ${S}	
 	make depend all || die "make depend all failed"
-	cd programs && emake || die "emake died"
+	cd programs && gmake || die "emake died"
 }
 
 src_install () {
@@ -91,7 +101,7 @@ src_install () {
 	tar jxvf ${FILESDIR}/${PN}-fake_windows.tar.bz2 
 	popd
 	cp ${S}/documentation/samples/config ${S}/documentation/samples/config.orig
-	sed -e 's/"Path" = "\/c"/"Path" = "\$\{HOME\}\/.winex-cvs\/fake_windows"/' \
+	sed -e 's/.transgaming\/c_drive/.winex-cvs\/fake_windows/' \
 	    ${S}/documentation/samples/config.orig > ${S}/documentation/samples/config
 	cp ${S}/documentation/samples/config ${D}/usr/lib/winex-cvs/.data/config
 	cp ${WORKDIR}/wine/winedefault.reg ${D}/usr/lib/winex-cvs/.data/winedefault.reg
