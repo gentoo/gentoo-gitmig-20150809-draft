@@ -1,0 +1,9 @@
+# ChangeLog for net-zope/zphotoslides
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zphotoslides/ChangeLog,v 1.1 2003/04/11 07:07:47 kutsuya Exp $
+
+*zphotoslides-1.1 (11 Apr 2003)
+
+  11 Apr 2003; Jason Shoemaker <kutsuya@gentoo.org> zphotoslides-1.1.ebuild:
+  Initial import.
+
