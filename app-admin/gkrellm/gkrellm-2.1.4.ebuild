@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.1.ebuild,v 1.3 2002/12/09 04:17:34 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.4.ebuild,v 1.1 2002/12/23 19:19:07 seemant Exp $
 
 DESCRIPTION="Single process stack of various system monitors"
 SRC_URI="http://web.wt.net/~billw/${PN}/${P}.tar.bz2"
@@ -8,10 +8,10 @@ HOMEPAGE="http://www.gkrellm.net/"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc "
-IUSE="gtk nls"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+IUSE="gtk gtk2 nls"
 
-DEPEND="gtk? >=x11-libs/gtk+-2.0.5 : =dev-libs/glib-1.2*"
+DEPEND="gtk2? >=x11-libs/gtk+-2.0.5 : =dev-libs/glib-1.2*"
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
@@ -20,7 +20,7 @@ src_compile() {
 		sed -e "s:enable_nls=1:enable_nls=0:" Makefile.orig > Makefile
 	fi
 	
-	if use gtk
+	if use gtk2 || use gtk
 	then
 		emake || die
 	else
@@ -33,7 +33,7 @@ src_install() {
 	touch .keep
 	dodir /usr/{bin,include,share/man}
 
-	if use gtk
+	if use gtk2 || use gtk
 	then
 		insinto /usr/lib/gkrellm2/themes
 		doins .keep
