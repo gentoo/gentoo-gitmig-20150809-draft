@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_contribs
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_contribs/ChangeLog,v 1.6 2003/02/12 08:49:48 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_contribs/ChangeLog,v 1.7 2004/04/04 22:38:54 zul Exp $
+
+  04 Apr 2004; Chuck Short <zul@gentoo.org> metadata.xml,
+  mod_contribs-1.0.8-r1.ebuild:
+  Updated headers, added metadata.xml.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
