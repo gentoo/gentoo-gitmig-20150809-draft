@@ -1,15 +1,37 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.21 2003/03/21 20:32:45 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.22 2003/04/15 21:00:10 pfeifer Exp $
+
+*gentoo-sources-2.4.20-r3 (15 Apr 2003)
+
+  15 Apr 2003; Jay Pfeifer <pfeifer@gentoo.org> gentoo-sources-2.4.20-r3.ebuild:
+  Package is currently marked unstable (~x86).
+  * Added latest ck (12Apr2003) - thank you Con Kolivas!
+  * Added support for either rmap(default) or aavm (your choice)
+  * Added support for evms 2.0 (user selects 1.2.1 or 2.0). evms 1.2.1 default.
+  * If you are thinking about using evms 2.0 - READ the DOCS!!! <-- Warning!
+  * Added support for nforce2 ide & audio... (thanks alron & alain)
+  * ext3 fixes
+  * jfs fixes - 1.1.1 + xattr & acl
+  * update ntfs to 2.1.2a
+  * grsecurity bumped to 1.9.9f (this contains the ptrace fix)
+  * SuperFreeS/WAN up to 1.9.6.1
+  * updated to ea+acl+nfsacl 0.8.56
+  * Readded missing ciphers from patch-int
+  * Removed safe serial driver from usbdnet
+  * Added bootsplash 3.0.7
+  * Fixed a number of USAGI issues (but some still remain).
+  * Updated adaptec 79xx to 18Mar2003 version (thanks livewire)
+  * Added backported bluetooth support from MH
+  * Added bootsplash 3.0.7
+  * Other things I am forgetting to mention
 
 *gentoo-sources-2.4.20-r2 (19 Mar 2003)
   
   21 Mar 2003; Jay Pfeifer <pfeifer@gentoo.org> gentoo-sources-2.4.20-r2.ebuild:
-  Package is currently marked unstable.
   * Added ebuild note of lack of xfs support (use xfs-sources for xfs)
 
   19 Mar 2003; Jay Pfeifer <pfeifer@gentoo.org> gentoo-sources-2.4.20-r2.ebuild:
-  Package is currently marked unstable.
 
   * Added ptrace security fix.
   * Process priorities are now obeyed. :)
