@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxspace/fluxspace-0.0.3-r1.ebuild,v 1.2 2003/06/12 19:04:18 msterret Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}
