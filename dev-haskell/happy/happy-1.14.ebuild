@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.14.ebuild,v 1.6 2005/01/01 18:04:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.14.ebuild,v 1.7 2005/03/19 13:12:49 kosmikus Exp $
 
 inherit base eutils
 
@@ -12,7 +12,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/ghc"
+DEPEND="virtual/ghc
+	!>=virtual/ghc-6.4"
 RDEPEND=""
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.15.ebuild,v 1.2 2005/03/19 12:36:31 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.15.ebuild,v 1.3 2005/03/19 13:12:49 kosmikus Exp $
 
 inherit base eutils
 
@@ -24,6 +24,9 @@ src_unpack() {
 
 src_compile() {
 	econf || die "configure failed"
+	if has_version '>=dev-lang/ghc-6.4'; then
+		echo "SRC_HC_OPTS += -ignore-package util" >> mk/build.mk
+	fi
 	emake -j1 || die "make failed"
 	if use doc; then
 		emake -j1 html || die "make html failed"
