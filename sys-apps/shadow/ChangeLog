@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.79 2004/11/02 11:23:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.80 2004/11/02 13:53:52 vapier Exp $
+
+  02 Nov 2004; Mike Frysinger <vapier@gentoo.org> shadow-4.0.5.ebuild:
+  Mark arm/hppa/ia64/s390/x86 stable for security, fix duplicate manpage
+  install #69781, and block virtual/login when USE=-pam.
 
   02 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> shadow-4.0.5.ebuild:
   Stable on sparc wrt #69212
