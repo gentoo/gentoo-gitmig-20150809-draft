@@ -1,28 +1,26 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/sdsc-syslog-1.0.2.ebuild,v 1.3 2004/06/24 21:37:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/sdsc-syslog-1.0.2.ebuild,v 1.4 2004/06/25 23:19:26 vapier Exp $
 
 DESCRIPTION="SDSC Secure Syslog provides RFC3080 and RFC3081 logging services"
 HOMEPAGE="http://security.sdsc.edu/software/sdsc-syslog/"
 SRC_URI="mirror://sourceforge/sdscsyslog/sdscsyslogd-${PV}-src.tgz"
-RESTRICT="nomirror"
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86"
-S=${WORKDIR}/sdscsyslogd-${PV}
-
 # beep		= support BEEP (through RoadRunner)
 # debug		= include debug info
 # doc		= include documentation
 # static    = link with RoadRunner statically
 IUSE="beep debug doc static"
+RESTRICT="nomirror"
 
 RDEPEND="beep? ( >=net-libs/roadrunner-0.9.1 )
-	virtual/glibc
+	virtual/libc
 	dev-libs/libxml2
 	sys-libs/zlib
 	>=dev-libs/glib-2"
-
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.15.0
 	doc? ( >=app-doc/doxygen-1.3.2 )
@@ -31,17 +29,17 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	>=sys-devel/automake-1.5
 	>=sys-devel/autoconf-2.52"
-
 PROVIDE="virtual/logger"
 
-use debug && RESTRICT="${RESTRICT} nostrip"
+S=${WORKDIR}/sdscsyslogd-${PV}
 
 src_compile() {
 	local myconf
-	use beep && ( \
-		use static && myconf=`use_enable beep static-rr` \
-			|| myconf=`use_with beep librr` \
-	)
+	if use beep ; then
+		use static \
+			&& myconf=`use_enable beep static-rr` \
+			|| myconf=`use_with beep librr`
+	fi
 
 	econf \
 		${myconf} \
@@ -54,7 +52,9 @@ src_compile() {
 	emake all || die "emake failed"
 
 	# ... and optionally generate HTML documentation
-	use doc && ( emake docs || "emake failed" )
+	if use doc ; then
+		emake docs || die "emake failed"
+	fi
 }
 
 src_install() {
@@ -79,7 +79,6 @@ src_install() {
 
 
 pkg_postinst() {
-
 	einfo "See /etc/syslogd.conf.sample for client configuration and"
 	einfo "/etc/syslogd.conf.sample-loghost for server configuration"
 }
