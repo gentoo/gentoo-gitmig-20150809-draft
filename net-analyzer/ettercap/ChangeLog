@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.5 2002/06/25 03:11:07 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.6 2002/07/23 07:09:04 seemant Exp $
+
+*ettercap-0.6.7 (23 Jul 2002)
+
+  23 Jul 2002; Seemant Kulleen <seemant@gentoo.org> ettercap-0.6.7.ebuild
+  files/digest-ettercap-0.6.7 :
+
+  Version bump, thanks to: kevin@aptbasilicata.it (maurizio) in bug #5383.
 
 *ettercap-0.6.6.6-r1 (24 Jun 2002)
 
