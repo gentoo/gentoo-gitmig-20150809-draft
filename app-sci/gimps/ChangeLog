@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/gimps
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gimps/ChangeLog,v 1.8 2004/11/04 21:34:59 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gimps/ChangeLog,v 1.9 2004/11/18 13:41:39 ribosome Exp $
+
+  18 Nov 2004; Olivier Fisette <ribosome@gentoo.org> -gimps-23.9.ebuild:
+  Removed insecure version. (See GLSA 200411-26.)
 
 *gimps-23.9-r1 (04 Nov 2004)
 

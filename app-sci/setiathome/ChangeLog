@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/setiathome
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.28 2004/11/09 07:53:20 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.29 2004/11/18 13:45:23 ribosome Exp $
+
+*setiathome-3.08-r3 (18 Nov 2004)
+
+  18 Nov 2004; Olivier Fisette <ribosome@gentoo.org>
+  -setiathome-3.08-r3.ebuild:
+  Removed insecure version. (See GLSA 200411-26.)
 
   09 Nov 2004; <SeJo@gentoo.org> setiathome-3.03-r2.ebuild:
   stable on ppc gsla: 69868
