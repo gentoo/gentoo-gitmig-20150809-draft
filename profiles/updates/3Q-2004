@@ -126,3 +126,4 @@ move net-www/online-bookmarks www-apps/online-bookmarks
 move net-www/pcgi www-apps/pcgi
 move net-www/phpBB www-apps/phpBB
 move net-www/phpmp www-apps/phpmp
+move net-www/phpwebsite www-apps/phpwebsite
