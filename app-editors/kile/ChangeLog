@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.34 2004/07/03 21:35:08 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.35 2004/07/04 19:13:46 weeve Exp $
+
+  04 Jul 2004; Jason Wever <weeve@gentoo.org> kile-1.6.3.ebuild:
+  Stable on sparc wrt bug #55438.
 
   03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> -kile-1.6.1.ebuild,
   -kile-1.6.2.ebuild, kile-1.6.3.ebuild:
