@@ -5,7 +5,7 @@ MD5 6855ea6f8378d9cfc98aa0aa50c357b1 ChangeLog 1406
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 11d73c484c3404644c5e4a3769d5f99e daimonin-client-0.95b-r2.ebuild 1169
 MD5 d7763f4b3e679200238510aa9846133c daimonin-client-0.96_beta2.ebuild 1548
-MD5 74d5e74f761fa50e4a6404300ff2bedd daimonin-client-0.96.5_beta3.ebuild 1541
+MD5 f2a10eea3dd01f88c2cf06645d7ed19b daimonin-client-0.96.5_beta3.ebuild 1505
 MD5 f0fea0494c9b50a88620443df60a150e files/0.95b-gcc3.patch 1664
 MD5 49fc669e5a92e2d43091dbcb3f5afec2 files/0.95b-gentoo-paths.patch 2948
 MD5 b7f58f6b5220a09dedb532eb977bd227 files/digest-daimonin-client-0.95b-r2 69
@@ -16,7 +16,7 @@ MD5 1c6ea71495b869335ba165cc4600e07c files/digest-daimonin-client-0.96.5_beta3 8
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBiCbYHTu7gpaalycRAscLAJ0aNEDYi+j80JDMZM2+iYw0YWc0zwCgvc7q
-SzV2KrBuDtlIxm4J9TeRABE=
-=QQKQ
+iD8DBQFBiOHKHTu7gpaalycRAj65AJ9XwouMHKhCUFSlEsbD3jD2VpknyACeK44U
+AkTM6jOccTya5rgBtexCGJQ=
+=U6Yg
 -----END PGP SIGNATURE-----
