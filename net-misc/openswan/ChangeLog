@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.7 2004/06/15 05:36:44 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.8 2004/06/19 13:39:12 pfeifer Exp $
+
+*openswan-2.1.3 (19 Jun 2004)
+
+  19 Jun 2004; Jay Pfeifer <pfeifer@gentoo.org> : openswan-2.1.3.ebuild
+  Version bump. Contains fixes for potential security issues.
+  Info here: http://lists.openswan.org/pipermail/dev/2004-June/000370.html
+  Removing all prior versions.
 
   15 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> openswan-2.1.1.ebuild:
   Marked stable on amd64.
