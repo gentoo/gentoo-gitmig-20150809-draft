@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.5.ebuild,v 1.9 2004/07/04 23:44:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.5.ebuild,v 1.10 2004/07/14 21:30:38 agriffis Exp $
 
-IUSE="${IUSE} apache2"
+IUSE="apache2 debug"
 
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64"
 
