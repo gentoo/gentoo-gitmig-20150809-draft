@@ -16,12 +16,12 @@ MD5 3b7f1d6155d6deff5812264ef6bc4c07 files/bash-completion 724
 MD5 73c3177da25971c1db7bb6482b5d1580 files/digest-bash-completion-20040711 151
 MD5 62c632c282cbbd0b28ba064ec57e2111 files/20050103-gentoo.diff 2060
 MD5 61eddfb92948b070333a59498edf5266 files/20041017-gentoo.diff 2032
-MD5 c44e709c618225287ce479dbd07abd87 files/gentoo-bashcomp-20040108.diff 6578
+MD5 e37d2cf380b26f330f85ab6485302f6b files/gentoo-bashcomp-20040108.diff 3726
 MD5 49e9f0b0674471ff56169ce7d9265fb2 files/digest-bash-completion-20040704-r1 151
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB4I3fEZCkKN40op4RAtGQAJ9imtnoi9SMO/6V13Vi2H8ZrEdmCgCgnV4N
-Cvt3Ep9WlwgQGZiprUaj4Ug=
-=5kot
+iD8DBQFB4JANEZCkKN40op4RAu9KAKCs1wK674802H53ZKtqht3/gfo3tgCguv4C
+fCZWj12l2JEqhSA1ms8QSCw=
+=kPg5
 -----END PGP SIGNATURE-----
