@@ -7,7 +7,7 @@ service cvspserver
 	group		= cvs
 	log_type	= FILE /var/log/cvspserver
 	protocol	= tcp
-	env		= '$HOME=/home/cvsroot'
+	env		= HOME=/home/cvsroot
 	log_on_failure	+= USERID
 	port		= 2401
 	server		= /usr/bin/cvs
