@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.20.1.ebuild,v 1.3 2004/04/20 16:53:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.20.1.ebuild,v 1.4 2004/04/28 16:56:15 eradicator Exp $
 
 inherit eutils
-
-IUSE=""
 
 DESCRIPTION="The Teamspeak Voice Communication Server"
 HOMEPAGE="http://www.teamspeak.org/"
@@ -32,7 +30,7 @@ src_install() {
 
 	insinto /opt/teamspeak2-server/sql
 	doins sqlite_sql/*.sql
-	if [ `use mysql` ] ; then
+	if use mysql; then
 		insinto /opt/teamspeak2-server/mysql_sql
 		doins mysql_sql/*.sql
 	fi

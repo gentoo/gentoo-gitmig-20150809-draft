@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/teamspeak2-server-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/ChangeLog,v 1.7 2004/04/20 16:53:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/ChangeLog,v 1.8 2004/04/28 16:56:15 eradicator Exp $
+
+  28 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  teamspeak2-server-bin-2.0.20.1.ebuild:
+  Removed second IUSE line.
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   teamspeak2-server-bin-2.0.19.40.ebuild,
