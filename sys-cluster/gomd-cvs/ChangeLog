@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/gomd-cvs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gomd-cvs/ChangeLog,v 1.1 2003/07/24 16:23:15 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gomd-cvs/ChangeLog,v 1.2 2003/09/10 04:36:17 msterret Exp $
+
+  09 Sep 2003; Michael Sterrett <msterret@gentoo.org>
+  gomd-cvs-0.0_alpha.ebuild:
+  repoman: fix leading whitespace; trim commented code
 
 *gomd-cvs-0.0_alpha (24 Jul 2003)
 
