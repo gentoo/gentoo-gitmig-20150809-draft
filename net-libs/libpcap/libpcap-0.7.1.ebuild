@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.7.1.ebuild,v 1.1 2002/05/11 22:31:37 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.7.1.ebuild,v 1.2 2002/06/05 04:00:21 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="pcap-Library"
@@ -11,15 +11,15 @@ HOMEPAGE="http://www.tcpdump.org/"
 
 DEPEND="virtual/glibc"
 
+SLOT="0"
+LICENSE="BSD"
+
 src_compile() {
 
 	local myconf
 	use ipv6 && myconf="--enable-ipv6"
 
-	./configure \
-	--prefix=/usr \
-	--mandir=/usr/share/man \
-	--host=${CHOST} ${myconf} || die "bad configure"
+	econf ${myconf} || die "bad configure"
 
 	emake || die "compile problem"
 
@@ -30,12 +30,12 @@ src_compile() {
 
 src_install() {
 
-	make prefix=${D}/usr mandir=${D}/usr/share/man install
+	einstall || die
 
 	insopts -m 755
 	insinto /usr/lib ; doins libpcap.so.0.6
 	dosym /usr/lib/libpcap.so.0.6 /usr/lib/libpcap.so.0
 	dosym /usr/lib/libpcap.so.0.6 /usr/lib/libpcap.so
 
-	dodoc CREDITS CHANGES FILES README* VERSION
+	dodoc CREDITS CHANGES FILES README* VERSION LICENSE
 }
