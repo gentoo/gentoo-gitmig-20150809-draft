@@ -1,10 +1,13 @@
 # ChangeLog for net-analyzer/netselect
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.4 2003/02/12 07:48:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.5 2003/02/27 23:28:02 wwoods Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *netselect-0.3 (11 Jul 2002)
+
+  27 Feb 2003; Will Woods <wwoods@gentoo.org> netselect-0.3.ebuild:
+  Added alpha to KEYWORDS
 
   11 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> netselect-0.3.ebuild :
 
