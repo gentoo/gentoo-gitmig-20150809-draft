@@ -1,5 +1,5 @@
-MD5 f83856f1327feeaaf7b3a380a0d144f7 ChangeLog 1365
-MD5 6d3d70e5c226c2079fb57b5aed77962e pinentry-0.6.9.ebuild 1494
 MD5 29489b49320b4c9c744d3d1da7aeb061 pinentry-0.7.0.ebuild 1550
+MD5 ec856b2921f0a90483389b95de21d256 pinentry-0.6.9.ebuild 1515
+MD5 2d73d9abfea6def7bb219fb77cd8c717 ChangeLog 1481
 MD5 e04ffe05e9f30669f590346558387f72 files/digest-pinentry-0.6.9 66
 MD5 7b470fdc8e2b8af70c2ca683de02b9d2 files/digest-pinentry-0.7.0 66
