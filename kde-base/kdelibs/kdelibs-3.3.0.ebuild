@@ -1,21 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.0_beta2.ebuild,v 1.4 2004/08/16 13:58:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.0.ebuild,v 1.1 2004/08/19 14:06:42 caleb Exp $
 
 inherit kde eutils
 set-kdedir 3.3
 
-MY_PV=3.2.92
-S=${WORKDIR}/${PN}-${MY_PV}
-
 DESCRIPTION="KDE libraries needed by all kde programs"
 HOMEPAGE="http//www.kde.org/"
-SRC_URI="mirror://kde/unstable/${MY_PV}/src/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="mirror://kde/stable/3.3/src/${PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.3"
 KEYWORDS="~x86 ~amd64"
-IUSE="alsa cups ipv6 ssl doc ldap arts"
+IUSE="alsa arts cups doc ipv6 ldap ssl tiff"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
@@ -27,10 +24,10 @@ DEPEND=">=sys-devel/autoconf-2.58
 	>=dev-libs/libpcre-4.2
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	alsa? ( media-libs/alsa-lib virtual/alsa )
-	arts? ( ~kde-base/arts-1.3.0_beta2 )
+	arts? ( ~kde-base/arts-1.3.0 )
 	cups? ( >=net-print/cups-1.1.19 )
 	ldap? ( >=net-nds/openldap-2.1.26 )
-	media-libs/tiff
+	tiff? ( media-libs/tiff )
 	>=app-admin/fam-2.7.0
 	virtual/ghostscript
 	media-libs/libart_lgpl
@@ -40,8 +37,7 @@ DEPEND=">=sys-devel/autoconf-2.58
 RDEPEND="${DEPEND}
 	app-text/sgml-common
 	cups? ( net-print/cups )
-	doc? ( app-doc/doxygen )
-	dev-lang/python"
+	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	kde_src_unpack
@@ -88,7 +84,7 @@ src_install() {
 		echo "PATH=${PREFIX}/bin
 ROOTPATH=${PREFIX}/sbin:${PREFIX}/bin
 LDPATH=${PREFIX}/lib
-CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/47kdepaths-3.3.0 # number goes down with version upgrade
+CONFIG_PROTECT=${PREFIX}/share/config:${PREFIX}/env:${PREFIX}/shutdown" > ${D}/etc/env.d/47kdepaths-3.3.0 # number goes down with version upgrade
 
 		echo "KDEDIR=$PREFIX" > ${D}/etc/env.d/58kdedir-3.3.0 # number goes up with version upgrade
 
