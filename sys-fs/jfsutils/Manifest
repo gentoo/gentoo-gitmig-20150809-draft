@@ -1,4 +1,4 @@
-MD5 7f80dcbed959f8e359d1baa3fab0d8a2 ChangeLog 5454
+MD5 d18f0d3d47e7801cec1130dd5c6f1d59 ChangeLog 5592
 MD5 c59533ed5cccb987047aa8475b1b974e jfsutils-1.1.0-r1.ebuild 824
 MD5 01d709335284e364a4a50ac262299de6 jfsutils-1.1.0-r2.ebuild 821
 MD5 9c074fe5a57bb36dfa3939080f8530a5 jfsutils-1.1.1-r1.ebuild 1019
@@ -6,9 +6,9 @@ MD5 577d7e0811fc25dc073559675277bc00 jfsutils-1.1.1.ebuild 818
 MD5 058900a411b165060de67c2386af57ec jfsutils-1.1.2.ebuild 824
 MD5 20ce632ed8379ad4ee60da75c637ee87 jfsutils-1.1.3.ebuild 954
 MD5 4476bfd9b5411098111b5705673d392f jfsutils-1.1.4.ebuild 959
-MD5 4e08d5f60abf714e79886fc9e6a14104 jfsutils-1.1.5.ebuild 840
+MD5 682d696c75fa5701391fefa10b0137ec jfsutils-1.1.5.ebuild 842
 MD5 ee7bea7bd9cf96e3dbac9aafe14920a5 jfsutils-1.1.6.ebuild 840
-MD5 b1a58833d0b43e4b2f86731f4e808f77 jfsutils-1.1.7.ebuild 840
+MD5 83cd0b3f4ae4741deec2c66b8940e11a jfsutils-1.1.7.ebuild 843
 MD5 11bb989151c2c670d2d486f9b27de9e0 metadata.xml 414
 MD5 9df5c3cda43191d385b965c3e7e4b623 files/digest-jfsutils-1.1.0-r1 66
 MD5 9df5c3cda43191d385b965c3e7e4b623 files/digest-jfsutils-1.1.0-r2 66
