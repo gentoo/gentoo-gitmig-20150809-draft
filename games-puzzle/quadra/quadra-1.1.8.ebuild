@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.2 2004/01/14 05:22:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.3 2004/01/27 09:26:03 mr_bones_ Exp $
 
 inherit games eutils gcc
 
@@ -23,7 +23,6 @@ src_unpack() {
 	cd ${S}
 	[ `gcc-major-version` == 3 ] && epatch ${FILESDIR}/${P}-gcc3.patch
 	epatch ${FILESDIR}/libpng-1.2.5.patch
-	epatch ${FILESDIR}/${PV}-gcc.patch
 	sed -i 's:-pedantic::' config/vars.mk
 	sed -i \
 		-e "/^libgamesdir:=/s:/games:/${PN}:" \
