@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.0.ebuild,v 1.8 2004/05/29 03:46:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.0.ebuild,v 1.9 2004/06/03 22:34:29 agriffis Exp $
 
 inherit gnome2 eutils
 
@@ -63,7 +63,7 @@ src_unpack() {
 	use cups && epatch ${FILESDIR}/${PN}-2-x-printers.patch
 
 	# regenerating only needed with patching
-	if [ `use cups` ] || [ `use gstreamer` ]; then
+	if use cups || use gstreamer; then
 		WANT_AUTOCONF_2_5=1 autoheader || die
 		WANT_AUTOCONF_2_5=1 autoconf || die
 		WANT_AUTOMAKE=1.4 automake || die

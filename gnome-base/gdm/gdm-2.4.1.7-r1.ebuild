@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.7-r1.ebuild,v 1.10 2004/05/14 03:03:21 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.7-r1.ebuild,v 1.11 2004/06/03 22:32:22 agriffis Exp $
 
 inherit eutils gnome2
 
@@ -59,7 +59,7 @@ src_unpack() {
 
 src_compile() {
 	myconf=""
-	if [ `use X` ]; then
+	if use X; then
 		myconf="${myconf} --with-xdmcp=yes"
 		use xinerama \
 			&& myconf="${myconf} --with-xinerama=yes" \

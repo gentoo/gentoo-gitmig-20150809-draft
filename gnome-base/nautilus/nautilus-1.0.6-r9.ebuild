@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.19 2004/02/22 20:48:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.20 2004/06/03 22:34:29 agriffis Exp $
 
 IUSE="nls mozilla"
 
@@ -87,14 +87,14 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	if [ -z "`use nls`" ]
+	if ! use nls
 	then
 		myconf="${myconf} --disable-nls"
 		mkdir intl
 		touch intl/libgettext.h
 	fi
 
-	if [ "`use mozilla`" ]
+	if use mozilla
 	then
 		MOZILLA=${MOZILLA_FIVE_HOME}
 		myconf="${myconf} --with-mozilla-lib-place=$MOZILLA \

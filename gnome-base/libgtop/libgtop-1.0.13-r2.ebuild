@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-1.0.13-r2.ebuild,v 1.15 2004/02/18 13:48:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-1.0.13-r2.ebuild,v 1.16 2004/06/03 22:36:49 agriffis Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_compile() {
 
 	local myconf
 
-	if [ -z "`use nls`" ]
+	if ! use nls
 	then
 		myconf="--disable-nls"
 	fi
