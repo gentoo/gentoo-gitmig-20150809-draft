@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.663 2004/10/02 21:47:18 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.664 2004/10/03 06:52:01 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -560,6 +560,7 @@ sys-devel/gcc:nomultilib - Disables multilib support in gcc
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
+sys-fs/e2fsprogs:diet - Compile and link with dietlibc
 sys-fs/lufs:disablekernelsupport - If you already have a patched lufs kernel, skip the module building part
 sys-fs/lufs:lufsusermount - allow users to mount LUFS filesystems
 sys-kernel/alpha-sources:usagi - adds USAGI (Linux IPv6 Development Project) support
