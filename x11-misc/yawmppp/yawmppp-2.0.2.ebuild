@@ -1,14 +1,14 @@
 # Copyright (c) Vitaly Kushneriuk
 # Distributed under the terms of the GNU General Public License, v2.
 # Maintainer: Vitaly Kushneriuk<vitaly@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/yawmppp/yawmppp-2.0.2.ebuild,v 1.1 2002/01/31 08:52:55 vitaly Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/yawmppp/yawmppp-2.0.2.ebuild,v 1.2 2002/05/23 06:50:20 seemant Exp $
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="Yet Another PPP Window Maker dock applet"
 SRC_URI="ftp://ftp.seul.org/pub/yawmppp/${P}.tar.gz"
 HOMEPAGE="http://yawmppp.seul.org/"
-DEPEND=">=net-dialup/ppp-2.3.11 >=x11-libs/gtk+-1.2.6"
+DEPEND=">=net-dialup/ppp-2.3.11 =x11-libs/gtk+-1.2*"
 #RDEPEND=""
 
 src_compile() {

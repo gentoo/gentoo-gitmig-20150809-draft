@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Craig Joly <joly@ee.ualberta.ca>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.1-r3.ebuild,v 1.1 2002/03/15 15:19:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.1-r3.ebuild,v 1.2 2002/05/23 06:50:19 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="blackbox program execution dialog box"
@@ -9,7 +9,7 @@ SRC_URI="http://bbtools.thelinuxcommunity.org/sources/contrib/${P}.tar.gz"
 HOMEPAGE="http://bbtools.thelinuxcommunity.org/contrib.phtml"
 
 DEPEND="virtual/blackbox
-        >=x11-libs/gtk+-1.2.10-r4"
+        =x11-libs/gtk+-1.2*"
 
 src_unpack() {
 	unpack ${A}
