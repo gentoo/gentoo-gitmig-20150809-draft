@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/fhist
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.9 2004/06/28 05:17:55 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.10 2004/10/21 15:24:44 ka0ttic Exp $
+
+  21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
+  Add metadata (shell-tools)
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> fhist-1.10.ebuild,
   fhist-1.8.ebuild:
