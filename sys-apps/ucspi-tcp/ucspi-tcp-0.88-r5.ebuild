@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r5.ebuild,v 1.6 2003/09/07 00:38:44 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r5.ebuild,v 1.7 2004/02/18 01:45:12 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Collection of tools for managing UNIX services"
+HOMEPAGE="http://cr.yp.to/ucspi-tcp.html"
 SRC_URI="http://cr.yp.to/${PN}/${P}.tar.gz
 	ipv6? ( http://www.fefe.de/ucspi/ucspi-tcp-0.88-ipv6.diff13.bz2 )
 	ssl? ( http://www.nrg4u.com/qmail/ucspi-tcp-ssl-20020705.patch.gz )"
-HOMEPAGE="http://cr.yp.to/ucspi-tcp.html"
 
-SLOT="0"
-KEYWORDS="x86 amd64 sparc ppc alpha"
 LICENSE="as-is"
+SLOT="0"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 IUSE="ssl ipv6"
 
 DEPEND="virtual/glibc
