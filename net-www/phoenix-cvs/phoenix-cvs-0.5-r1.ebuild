@@ -14,7 +14,7 @@ DESCRIPTION="The Phoenix Web Browser"
 #SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/nightly/latest/mozilla-source.tar.bz2"
 HOMEPAGE="http://www.mozilla.org/projects/phoenix/"
 
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc -sparc"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
 IUSE="java gtk2 ipv6"
