@@ -1,6 +1,12 @@
 # ChangeLog for media-radio/cwdaemon
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/cwdaemon/ChangeLog,v 1.5 2004/12/08 23:05:22 killsoft Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/cwdaemon/ChangeLog,v 1.6 2005/01/12 05:45:55 killsoft Exp $
+
+*cwdaemon-0.9.1 (11 Jan 2005)
+
+  11 Jan 2005; Robb Romans <killsoft@gentoo.org> cwdaemon-0.8.ebuild,
+  +cwdaemon-0.9.1.ebuild, cwdaemon-0.9.ebuild:
+  New version fixes a possible security issue
 
 *cwdaemon-0.9 (08 Dec 2004)
 
