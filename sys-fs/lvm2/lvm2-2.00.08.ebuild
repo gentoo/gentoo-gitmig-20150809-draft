@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.00.08.ebuild,v 1.3 2003/12/13 16:21:57 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.00.08.ebuild,v 1.4 2003/12/26 18:23:25 ciaranm Exp $
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
 HOMEPAGE="http://www.sistina.com/products_lvm.htm"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.sistina.com/pub/LVM2/tools/${PN/lvm/LVM}.${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ~sparc"
 
 DEPEND=">=sys-libs/device-mapper-1.00.07"
 RDEPEND="${DEPEND}
