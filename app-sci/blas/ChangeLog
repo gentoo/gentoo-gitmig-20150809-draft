@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/blas
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas/ChangeLog,v 1.4 2003/10/29 01:53:01 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas/ChangeLog,v 1.5 2004/04/16 20:45:58 randy Exp $
+
+  16 Apr 2004; Michael McCabe <randy@gentoo.org> blas-19980702.ebuild:
+  adding s390 keywords
 
 *blas-19940131 (27 Oct 2003)
 
