@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/at
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.14 2004/04/06 21:31:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.15 2004/06/11 12:27:00 kloeri Exp $
+
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> at-3.1.8-r10.ebuild:
+  Stable on alpha.
 
   06 Apr 2004; Aron Griffis <agriffis@gentoo.org> at-3.1.8-r10.ebuild,
   files/at-3.1.8-longuser.patch:
