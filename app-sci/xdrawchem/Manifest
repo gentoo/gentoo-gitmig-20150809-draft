@@ -1,8 +1,18 @@
-MD5 aadfa5068835f6c5f7d5248e6a0e95c4 ChangeLog 5342
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 d0445f2e5cbfd8e996e7b8ee45731a80 xdrawchem-1.7.8.ebuild 968
-MD5 1a29b724a7c2ff5ec7ea7ef012d98070 xdrawchem-1.8.5.ebuild 913
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f53e06081256b7ef577f4a3e705e67fe xdrawchem-1.8.4.ebuild 913
+MD5 d0445f2e5cbfd8e996e7b8ee45731a80 xdrawchem-1.7.8.ebuild 968
+MD5 530f25fbd823310b4e4bcbe27354f002 xdrawchem-1.8.5.ebuild 921
+MD5 d37f021a044cd6aa216e3c04aac9e677 ChangeLog 5457
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 c1a95992761f80fca89f9e195e07af6c files/digest-xdrawchem-1.7.8 64
-MD5 ecf1886c22b230931211ed6f9644ba41 files/digest-xdrawchem-1.8.5 68
 MD5 70263425e975820b388176a7be117d91 files/digest-xdrawchem-1.8.4 68
+MD5 ecf1886c22b230931211ed6f9644ba41 files/digest-xdrawchem-1.8.5 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjlUsZ/iYVBmujdURAtRkAJ4ok/ZRWuYVX8mOD6xZbZp0j6f/PACeLlBG
++e/d5JNH2BvZcXTfGl76rFM=
+=atlg
+-----END PGP SIGNATURE-----
