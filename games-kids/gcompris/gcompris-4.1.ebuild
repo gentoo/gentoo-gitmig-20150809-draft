@@ -20,6 +20,7 @@ DEPEND="virtual/x11
 	>=gnome-base/libgnomecanvas-2.0.2
 	>=dev-libs/glib-2.0
 	=x11-libs/gtk+-2*
+	dev-libs/libassetml
 	dev-libs/libxml2
 	games-board/gnuchess
 	sys-apps/texinfo
