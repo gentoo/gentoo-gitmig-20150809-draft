@@ -1,1 +1,2 @@
 virtual/bootloader			sys-boot/grub
+virtual/linux-sources		sys-kernel/gentoo-sources
