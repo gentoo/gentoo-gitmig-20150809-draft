@@ -1,8 +1,12 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.16 2003/09/12 19:26:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.17 2003/09/21 16:53:04 foser Exp $
 
 *rhythmbox-0.5.3 (09 Sep 2003)
+
+  21 Sep 2003; foser <foser@gentoo.org> rhythmbox-0.5.3.ebuild :
+  Added ORBit2 fix as suggested by TGL <degrenier@easyconnect.fr> in (#28739)
+  Always regenerate orbit stubs
 
   12 Sep 2003; foser <foser@gentoo.org> rhythmbox-0.5.3.ebuild :
   Fix gst-plugins-* deps, they moved
