@@ -12,6 +12,7 @@ if [ ! -f ${HOME}/.pcsx/config ]; then
 
 	ln -s /usr/games/bin/pcsx.bin pcsx
 	ln -s /usr/games/lib/psemu/plugins/* plugins/
+	ln -s /usr/share/games/pcsx .pixmaps
 
 	cd bios
 	if [ -f /usr/games/lib/psemu/bios/scph1001.bin ]; then
