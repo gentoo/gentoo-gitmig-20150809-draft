@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: gentoo-pop3d.rc,v 1.4 2003/02/18 10:20:24 raker Exp $
+# $Id: gentoo-pop3d.rc,v 1.5 2003/05/20 01:40:06 robbat2 Exp $
 #
 # Copyright 1998 - 2000 Double Precision, Inc.
 # See COPYING for distribution information.
@@ -25,6 +25,7 @@ eval `sed -n '/^#/d;/=/p' </etc/courier-imap/pop3d | \
 eval `sed -n '/^#/d;/=/p' </etc/courier-imap/pop3d-ssl | \
 	sed 's/=.*//;s/^/export /;s/$/;/'`
 
+$PRERUN \
 /usr/lib/courier-imap/couriertcpd -address=$ADDRESS \
 	-stderrlogger=/usr/lib/courier-imap/logger \
 	-stderrloggername=pop3d \
