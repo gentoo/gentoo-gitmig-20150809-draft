@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01-r2.ebuild,v 1.7 2005/03/31 20:27:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01-r2.ebuild,v 1.8 2005/04/04 23:51:23 pylon Exp $
 
 inherit eutils gcc gnuconfig versionator
 
 MY_CRYPT_VERS="$(get_version_component_range 1-2 )-encrypt-1.0rc1"
 
 DESCRIPTION="A set of tools for CD recording, including cdrecord"
-HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
+HOMEPAGE="http://cdrecord.berlios.de/old/private/cdrecord.html"
 SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/${P}.tar.bz2
 	crypt? ( http://burbon04.gmxhome.de/linux/files/${PN}-${MY_CRYPT_VERS}.diff.gz )"
 

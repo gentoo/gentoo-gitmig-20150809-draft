@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.ebuild,v 1.15 2005/01/01 12:10:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.ebuild,v 1.16 2005/04/04 23:51:23 pylon Exp $
 
 inherit eutils gcc gnuconfig
 
 DESCRIPTION="A set of tools for CD recording, including cdrecord"
-HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
+HOMEPAGE="http://cdrecord.berlios.de/old/private/cdrecord.html"
 SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/${P}.tar.bz2"
 
 LICENSE="GPL-2 freedist"
