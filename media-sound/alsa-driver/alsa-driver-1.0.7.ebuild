@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7.ebuild,v 1.6 2004/11/19 10:59:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7.ebuild,v 1.7 2004/11/19 23:29:02 eradicator Exp $
 
-IUSE="oss"
+IUSE="oss doc"
 
 inherit kernel-mod flag-o-matic eutils
 
@@ -21,6 +21,7 @@ RDEPEND="virtual/modutils
 	 ~media-sound/alsa-headers-${PV}"
 
 DEPEND="${RDEPEND}
+	sys-devel/patch	
 	virtual/linux-sources
 	>=sys-devel/autoconf-2.50
 	sys-apps/debianutils"
@@ -94,6 +95,14 @@ src_compile() {
 	unset ARCH
 	# -j1 : see bug #71028
 	emake -j1 || die "Parallel Make Failed"
+
+	if use doc; then
+		cd ${S}/scripts
+		emake || die
+
+		cd ${S}/doc/DocBook
+		emake || die
+	fi
 }
 
 
@@ -108,8 +117,15 @@ src_install() {
 	test -e ${D}/etc/init.d/alsasound && rm ${D}/etc/init.d/alsasound
 	test -e ${D}/etc/rc.d/init.d/alsasound && rm ${D}/etc/rc.d/init.d/alsasound
 
-	rm doc/Makefile
-	dodoc CARDS-STATUS INSTALL FAQ README WARNING TODO doc/*
+	dodoc CARDS-STATUS INSTALL FAQ README WARNING TODO
+
+	if use doc; then
+		docinto doc
+		dodoc doc/*
+
+		docinto Documentation
+		dodoc sound/Documentation/*
+	fi
 }
 
 pkg_postinst() {

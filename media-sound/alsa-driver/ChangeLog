@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.103 2004/11/19 10:59:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.104 2004/11/19 23:29:02 eradicator Exp $
+
+  19 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-driver-1.0.7.ebuild:
+  Added IUSE=doc to control installation of documentation.  Closes bug #71730.
 
   19 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/alsa-driver-1.0.7-configure.patch, alsa-driver-1.0.7.ebuild:
