@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.14.ebuild,v 1.1 2003/04/16 12:40:19 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.14.ebuild,v 1.2 2003/04/18 04:57:11 malverian Exp $
 
 IUSE="doc python perl aalib png jpeg tiff gtkhtml"
 
@@ -71,6 +71,11 @@ src_compile() {
 	myconf="${myconf} --disable-print"
 
 	econf ${myconf} || die
+
+
+	# hack for odd make break
+	touch plug-ins/common/${P}.tar.bz2
+
 
 	emake || die
 }
