@@ -1,0 +1,11 @@
+# ChangeLog for games-arcade/moagg
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/ChangeLog,v 1.1 2004/07/25 11:48:22 mr_bones_ Exp $
+
+*moagg-0.12 (25 Jul 2004)
+
+  25 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +files/0.12-Makefile.in.patch, +moagg-0.12.ebuild:
+  Initial commit. Ebuild based on the one provided by Gard Spreemann via bug
+  #58099
+

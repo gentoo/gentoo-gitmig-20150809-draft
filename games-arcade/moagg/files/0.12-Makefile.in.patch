@@ -1,0 +1,31 @@
+--- Makefile.in.orig	2004-07-25 04:35:10.000000000 -0700
++++ Makefile.in	2004-07-25 04:35:42.000000000 -0700
+@@ -163,20 +163,20 @@
+ install: $(TARGETS) install-bin install-man install-doc install-data
+ 
+ install-bin:
+-	install -d $(bindir)
+-	install $(moagg) $(bindir)
++	install -d $(DESTDIR)$(bindir)
++	install $(moagg) $(DESTDIR)$(bindir)
+ 
+ install-doc:
+-	install -d $(datadir)/doc/$(PACKAGE_NAME)
+-	install -m644 doc/*.tex $(datadir)/doc/$(PACKAGE_NAME)
++	install -d $(DESTDIR)$(datadir)/doc/$(PACKAGE_NAME)
++	install -m644 doc/*.tex $(DESTDIR)$(datadir)/doc/$(PACKAGE_NAME)
+ 
+ install-man:
+-	install -d $(mandir)/man6
+-	install -m644 man/man6/moagg.6 $(mandir)/man6
++	install -d $(DESTDIR)$(mandir)/man6
++	install -m644 man/man6/moagg.6 $(DESTDIR)$(mandir)/man6
+ 
+ install-data:
+-	install -d $(datadir)/$(PACKAGE_NAME)
+-	cp -r levels sound cfg gfx $(datadir)/$(PACKAGE_NAME)
++	install -d $(DESTDIR)$(datadir)/$(PACKAGE_NAME)
++	cp -r levels sound cfg gfx $(DESTDIR)$(datadir)/$(PACKAGE_NAME)
+ 
+ #-----------------------------------------------------------------------------
+ .PHONY: uninstall uninstall-bin uninstall-man uninstall-doc uninstall-data
