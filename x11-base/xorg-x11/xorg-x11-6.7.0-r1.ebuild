@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.7 2004/06/14 15:25:25 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.8 2004/06/14 19:57:56 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -161,22 +161,7 @@ PROVIDE="virtual/x11
 
 DESCRIPTION="An X11 implementation maintained by the X.Org Foundation"
 
-pkg_setup() {
-	# Whether to drop in external render, xrender and xft from freedesktop.org
-	# NOTE: The freedesktop versions are the CORRECT upstream versions to use.
-	# WARNING: Remember to add the external stuff to SRC_URI when in use.
-	EXT_XFT_XRENDER="no"
-
-	# Whether to drop in external drivers
-	# NOTE: Remember SRC_URI and DRIVER_VER
-	# For savage, remember app-arch/unzip in DEPEND
-	EXT_SAVAGE="no"
-	EXT_SIS="no"
-
-	FILES_DIR="${WORKDIR}/files"
-	PATCHDIR="${WORKDIR}/patch"
-	EXCLUDED="${PATCHDIR}/excluded"
-
+cflag_setup() {
 	# Set up CFLAGS
 	filter-flags "-funroll-loops"
 
@@ -212,6 +197,26 @@ pkg_setup() {
 	#
 	# <azarah@gentoo.org> (13 Oct 2002)
 	strip-flags
+}
+
+pkg_setup() {
+	# Whether to drop in external render, xrender and xft from freedesktop.org
+	# NOTE: The freedesktop versions are the CORRECT upstream versions to use.
+	# WARNING: Remember to add the external stuff to SRC_URI when in use.
+	EXT_XFT_XRENDER="no"
+
+	# Whether to drop in external drivers
+	# NOTE: Remember SRC_URI and DRIVER_VER
+	# For savage, remember app-arch/unzip in DEPEND
+	EXT_SAVAGE="no"
+	EXT_SIS="no"
+
+	FILES_DIR="${WORKDIR}/files"
+	PATCHDIR="${WORKDIR}/patch"
+	EXCLUDED="${PATCHDIR}/excluded"
+
+	# Set up CFLAG-related things
+	cflag_setup
 
 	# Set up CC variable, we use it later
 	gcc-getCC
@@ -237,158 +242,7 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-
-	# Unpack source and patches
-	ebegin "Unpacking source"
-		unpack X11R${PV}-src1.tar.gz
-		unpack X11R${PV}-src2.tar.gz
-		unpack X11R${PV}-src3.tar.gz
-		unpack X11R${PV}-src4.tar.gz
-		unpack X11R${PV}-src5.tar.gz
-	eend 0
-
-	if use doc
-	then
-		ebegin "Unpacking documentation"
-			unpack X11R${PV}-src6.tar.gz
-			unpack X11R${PV}-src7.tar.gz
-		eend 0
-fi
-
-	ebegin "Unpacking Gentoo files and patches"
-		unpack ${P}-files-${FILES_VER}.tar.bz2 > /dev/null
-		unpack ${P}-patches-${PATCH_VER}.tar.bz2 > /dev/null
-	eend 0
-
-	# Unpack TaD's gentoo cursors
-	ebegin "Unpacking Gentoo cursors"
-		unpack gentoo-cursors-tad-${XCUR_VER}.tar.bz2 > /dev/null
-	eend 0
-
-	# Unpack extra fonts stuff from Mandrake
-	ebegin "Unpacking fonts"
-		if use nls
-		then
-			unpack gemini-koi8-u.tar.bz2 > /dev/null
-		fi
-		unpack eurofonts-X11.tar.bz2 > /dev/null
-		unpack xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 > /dev/null
-	eend 0
-
-	# Remove bum encoding
-	rm -f ${WORKDIR}/usr/share/fonts/encodings/urdunaqsh-0.enc
-
-	# Update the Savage Driver
-	# savage driver 1.1.27t is a .zip and contains a savage directory
-	# (that's why we have to be in drivers, not in savage subdir).
-	# Could be USE flag based
-
-	if [ "${EXT_SAVAGE}" = "yes" ]
-	then
-		ebegin "Updating Savage driver"
-			cd ${S}/programs/Xserver/hw/xfree86/drivers
-			unpack savage-${SAVDRV_VER}.zip > /dev/null
-			ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
-				${S}/programs/Xserver/hw/xfree86/drivers/savage
-			cd ${S}
-		eend 0
-	fi
-
-	if [ "${EXT_SIS}" = "yes" ]
-	then
-		ebegin "Updating SiS driver"
-			cd ${S}/programs/Xserver/hw/xfree86/drivers/sis
-			unpack sis_drv_src_${SISDRV_VER}.tar.gz > /dev/null
-			ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
-			${S}/programs/Xserver/hw/xfree86/drivers/sis
-			cd ${S}
-		eend 0
-	fi
-
-	if [ "${EXT_XFT_XRENDER}" = "yes" ]
-	then
-		ebegin "Adding external Render"
-			cd ${S}/lib
-			unpack render-${RENDER_VER}.tar.gz > /dev/null
-			mv render-${RENDER_VER}/render*.h ../include/extensions/
-			mkdir -p ../doc/hardcopy/render
-			cp render-${RENDER_VER}/{protocol,library} ../doc/hardcopy/render
-		eend 0
-
-		ebegin "Adding external Xrender"
-			mv Xrender Xrender.old
-			unpack libXrender-${XRENDER_VER}.tar.bz2 > /dev/null
-			mv libXrender-${XRENDER_VER} Xrender
-			cp Xrender.old/Imakefile Xrender/Imakefile
-			rm -f Xrender/Makefile*
-			touch Xrender/config.h
-		eend 0
-
-		ebegin "Adding external Xft"
-			mv Xft Xft.old
-			unpack libXft-${XFT_VER}.tar.bz2 > /dev/null
-			mv libXft-${XFT_VER} Xft
-			cp Xft.old/Imakefile Xft/Imakefile
-			cp Xft.old/Xft.man Xft/Xft.man
-			ln -sf ../Xft.old/config Xft/config
-			rm -f Xft/Makefile*
-			touch Xft/config.h
-		eend 0
-		cd ${S}
-	fi
-
-	einfo "Excluding patches..."
-		# These have been applied upstream
-		if [ ! "${EXT_SAVAGE}" = "yes" ]
-		then
-			patch_exclude 1770 1771 1772 1773
-		fi
-
-		# This patch is just plain broken. Results in random failures.
-		patch_exclude 0120*parallel-make
-
-		# Hardened patches (both broken)
-		patch_exclude 9960_all_4.3.0-exec-shield-GNU
-		patch_exclude 9961_all_4.3.0-libGL-exec-shield
-
-		# We dont have an implementation for S/390's yet...
-		if use !s390
-		then
-			patch_exclude 7500
-		fi
-
-		if [ "${EXT_XFT_XRENDER}" = "yes" ]
-		then
-			patch_exclude 1075
-		fi
-
-	#	if use !gatos
-	#	then
-			patch_exclude 9841_all_4.3.0-gatos-mesa
-	#	fi
-
-		if use debug
-		then
-			patch_exclude 5901*acecad-debug
-		fi
-
-		# TDFX_RISKY - 16-bit, 1024x768 or higher on low-memory voodoo3's
-		if [ "`use 3dfx`" -a "${TDFX_RISKY}" = "yes" ]
-		then
-			patch_exclude 5850
-		else
-			patch_exclude 5851
-		fi
-	einfo "Done excluding patches"
-
-	# Bulk patching - based on patch name
-	# Will create excluded stuff once it's needed
-	cd ${WORKDIR}
-	EPATCH_SUFFIX="patch" \
-	epatch ${PATCHDIR}
-	cd ${S}
-
+host_def_setup() {
 	ebegin "Setting up config/cf/host.def"
 		cd ${S}; cp ${FILES_DIR}/site.def config/cf/host.def || die
 		echo "#define XVendorString \"Gentoo Linux (The X.Org Foundation ${PV}, revision ${PR}-${PATCH_VER})\"" \
@@ -649,6 +503,165 @@ fi
 
 	# End the host.def definitions here
 	eend 0
+}
+
+patch_setup() {
+	einfo "Excluding patches..."
+		# These have been applied upstream
+		if [ ! "${EXT_SAVAGE}" = "yes" ]
+		then
+			patch_exclude 1770 1771 1772 1773
+		fi
+
+		# This patch is just plain broken. Results in random failures.
+		patch_exclude 0120*parallel-make
+
+		# Hardened patches (both broken)
+		patch_exclude 9960_all_4.3.0-exec-shield-GNU
+		patch_exclude 9961_all_4.3.0-libGL-exec-shield
+
+		# We dont have an implementation for S/390's yet...
+		if use !s390
+		then
+			patch_exclude 7500
+		fi
+
+		if [ "${EXT_XFT_XRENDER}" = "yes" ]
+		then
+			patch_exclude 1075
+		fi
+
+	#	if use !gatos
+	#	then
+			patch_exclude 9841_all_4.3.0-gatos-mesa
+	#	fi
+
+		if use debug
+		then
+			patch_exclude 5901*acecad-debug
+		fi
+
+		# TDFX_RISKY - 16-bit, 1024x768 or higher on low-memory voodoo3's
+		if [ "`use 3dfx`" -a "${TDFX_RISKY}" = "yes" ]
+		then
+			patch_exclude 5850
+		else
+			patch_exclude 5851
+		fi
+	einfo "Done excluding patches"
+}
+
+src_unpack() {
+
+	# Unpack source and patches
+	ebegin "Unpacking source"
+		unpack X11R${PV}-src1.tar.gz
+		unpack X11R${PV}-src2.tar.gz
+		unpack X11R${PV}-src3.tar.gz
+		unpack X11R${PV}-src4.tar.gz
+		unpack X11R${PV}-src5.tar.gz
+	eend 0
+
+	if use doc
+	then
+		ebegin "Unpacking documentation"
+			unpack X11R${PV}-src6.tar.gz
+			unpack X11R${PV}-src7.tar.gz
+		eend 0
+fi
+
+	ebegin "Unpacking Gentoo files and patches"
+		unpack ${P}-files-${FILES_VER}.tar.bz2 > /dev/null
+		unpack ${P}-patches-${PATCH_VER}.tar.bz2 > /dev/null
+	eend 0
+
+	# Unpack TaD's gentoo cursors
+	ebegin "Unpacking Gentoo cursors"
+		unpack gentoo-cursors-tad-${XCUR_VER}.tar.bz2 > /dev/null
+	eend 0
+
+	# Unpack extra fonts stuff from Mandrake
+	ebegin "Unpacking fonts"
+		if use nls
+		then
+			unpack gemini-koi8-u.tar.bz2 > /dev/null
+		fi
+		unpack eurofonts-X11.tar.bz2 > /dev/null
+		unpack xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 > /dev/null
+	eend 0
+
+	# Remove bum encoding
+	rm -f ${WORKDIR}/usr/share/fonts/encodings/urdunaqsh-0.enc
+
+	# Update the Savage Driver
+	# savage driver 1.1.27t is a .zip and contains a savage directory
+	# (that's why we have to be in drivers, not in savage subdir).
+	# Could be USE flag based
+
+	if [ "${EXT_SAVAGE}" = "yes" ]
+	then
+		ebegin "Updating Savage driver"
+			cd ${S}/programs/Xserver/hw/xfree86/drivers
+			unpack savage-${SAVDRV_VER}.zip > /dev/null
+			ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
+				${S}/programs/Xserver/hw/xfree86/drivers/savage
+			cd ${S}
+		eend 0
+	fi
+
+	if [ "${EXT_SIS}" = "yes" ]
+	then
+		ebegin "Updating SiS driver"
+			cd ${S}/programs/Xserver/hw/xfree86/drivers/sis
+			unpack sis_drv_src_${SISDRV_VER}.tar.gz > /dev/null
+			ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
+			${S}/programs/Xserver/hw/xfree86/drivers/sis
+			cd ${S}
+		eend 0
+	fi
+
+	if [ "${EXT_XFT_XRENDER}" = "yes" ]
+	then
+		ebegin "Adding external Render"
+			cd ${S}/lib
+			unpack render-${RENDER_VER}.tar.gz > /dev/null
+			mv render-${RENDER_VER}/render*.h ../include/extensions/
+			mkdir -p ../doc/hardcopy/render
+			cp render-${RENDER_VER}/{protocol,library} ../doc/hardcopy/render
+		eend 0
+
+		ebegin "Adding external Xrender"
+			mv Xrender Xrender.old
+			unpack libXrender-${XRENDER_VER}.tar.bz2 > /dev/null
+			mv libXrender-${XRENDER_VER} Xrender
+			cp Xrender.old/Imakefile Xrender/Imakefile
+			rm -f Xrender/Makefile*
+			touch Xrender/config.h
+		eend 0
+
+		ebegin "Adding external Xft"
+			mv Xft Xft.old
+			unpack libXft-${XFT_VER}.tar.bz2 > /dev/null
+			mv libXft-${XFT_VER} Xft
+			cp Xft.old/Imakefile Xft/Imakefile
+			cp Xft.old/Xft.man Xft/Xft.man
+			ln -sf ../Xft.old/config Xft/config
+			rm -f Xft/Makefile*
+			touch Xft/config.h
+		eend 0
+		cd ${S}
+	fi
+
+	patch_setup
+
+	# Bulk patching - based on patch name
+	# Will create excluded stuff once it's needed
+	cd ${WORKDIR}
+	EPATCH_SUFFIX="patch" \
+	epatch ${PATCHDIR}
+	cd ${S}
+
+	host_def_setup
 
 	cd ${S}
 	if use doc
@@ -691,6 +704,232 @@ src_compile() {
 
 }
 
+pkgconfig_install() {
+	# upstream still doesn't generate this -- move back into external stuff
+	# once they do
+	# Generate xrender.pc using 'EOF' style here document with no expansion
+	# (adapted from Red Hat)
+	local XRENDER_PC="${D}/usr/X11R6/lib/pkgconfig/xrender.pc"
+	# Note the single quotes, necessary to keep variables unresolved
+	echo 'prefix=/usr/X11R6' >> ${XRENDER_PC}
+	echo 'exec_prefix=${prefix}' >> ${XRENDER_PC}
+	echo 'libdir=${exec_prefix}/lib' >> ${XRENDER_PC}
+	echo 'includedir=${prefix}/include' >> ${XRENDER_PC}
+	echo '' >> ${XRENDER_PC}
+	echo 'Name: Xrender' >> ${XRENDER_PC}
+	echo 'Description: X Render Library' >> ${XRENDER_PC}
+	# Note the DOUBLE quotes here, necessary to resolve this variable
+	echo "Version: ${XRENDER_VER}" >> ${XRENDER_PC}
+	echo 'Cflags: -I${includedir} -I/usr/X11R6/include' >> ${XRENDER_PC}
+	echo 'Libs: -L${libdir} -lXrender  -L/usr/X11R6/lib -lX11' >> ${XRENDER_PC}
+
+	fperms 0644 /usr/X11R6/lib/pkgconfig/xrender.pc
+
+	# This one needs to be in /usr/lib
+	insinto /usr/lib/pkgconfig
+	doins ${D}/usr/X11R6/lib/pkgconfig/{xcursor,xft}.pc
+	# pending upstream fix
+	# if [ "${EXT_XFT_XRENDER}" = "yes" ]
+	# then
+	doins ${D}/usr/X11R6/lib/pkgconfig/xrender.pc
+	# fi
+	# Now remove the invalid xft.pc, and co ...
+	rm -rf ${D}/usr/X11R6/lib/pkgconfig
+}
+
+backward_compat_setup() {
+	# Backwards compatibility for /usr/share move
+	G_FONTDIRS="100dpi 75dpi Speedo TTF Type1 encodings local misc util"
+
+	dodir /usr/X11R6/lib/X11/fonts/
+	for G_FONTDIR in ${G_FONTDIRS}
+	do
+		dosym ${ROOT}/usr/share/fonts/${G_FONTDIR} /usr/X11R6/lib/X11/fonts/${G_FONTDIR}
+	done
+
+	dosym ${ROOT}/usr/share/man /usr/X11R6/man
+	dosym ${ROOT}/usr/share/doc/${PF} /usr/X11R6/lib/X11/doc
+}
+
+compose_files_setup() {
+	# Hack from Mandrake (update ours that just created Compose files for
+	# all locales)
+	for x in $(find ${D}/usr/X11R6/lib/X11/locale/ -mindepth 1 -type d)
+	do
+		# make empty Compose files for some locales
+		# CJK must not have that file (otherwise XIM don't works some times)
+		case `basename ${x}` in
+			C|microsoft-*|iso8859-*|koi8-*)
+				if [ ! -f ${x}/Compose ]
+				then
+					touch ${x}/Compose
+				fi
+				;;
+			ja*|ko*|zh*)
+				if [ -r ${x}/Compose ]
+				then
+					rm -f ${x}/Compose
+				fi
+				;;
+		esac
+	done
+
+	# Another hack from Mandrake -- to fix dead + space for the us
+	# international keyboard
+	for i in ${D}/usr/X11R6/lib/X11/locale/*/Compose
+	do
+		sed -i \
+			-e 's/\(<dead_diaeresis> <space>\).*$/\1 : "\\"" quotedbl/' \
+			-e "s/\(<dead_acute> <space>\).*$/\1 : \"'\" apostrophe/" \
+			${i}
+	done
+}
+
+etc_files_install() {
+	insinto /etc/X11
+
+	# Install example config file
+	newins ${S}/programs/Xserver/hw/xfree86/xorg.conf xorg.conf.example
+
+	exeinto /etc/X11
+	# new session management script
+	doexe ${FILES_DIR}/chooser.sh
+	# new display manager script
+	doexe ${FILES_DIR}/startDM.sh
+	exeinto /etc/X11/Sessions
+	for x in ${FILES_DIR}/Sessions/*
+	do
+		[ -f ${x} ] && doexe ${x}
+	done
+	insinto /etc/env.d
+	doins ${FILES_DIR}/10xorg
+	insinto /etc/X11/xinit
+	doins ${FILES_DIR}/xinitrc
+	exeinto /etc/X11/xdm
+	doexe ${FILES_DIR}/Xsession ${FILES_DIR}/Xsetup_0
+	insinto /etc/X11/fs
+	newins ${FILES_DIR}/xfs.config config
+	if use pam
+	then
+		insinto /etc/pam.d
+		newins ${FILES_DIR}/xdm.pamd xdm
+		# Need to fix console permissions first
+		newins ${FILES_DIR}/xserver.pamd xserver
+	fi
+	exeinto /etc/init.d
+	newexe ${FILES_DIR}/xdm.start xdm
+	newexe ${FILES_DIR}/xfs.start xfs
+	insinto /etc/conf.d
+	newins ${FILES_DIR}/xfs.conf.d xfs
+}
+
+setup_dynamic_libgl() {
+	# next section is to setup the dynamic libGL stuff
+	ebegin "Moving libGL and friends for dynamic switching"
+		dodir /usr/lib/opengl/${PN}/{lib,extensions,include}
+		local x=""
+		for x in ${D}/usr/X11R6/lib/libGL.so* \
+			${D}/usr/X11R6/lib/libGL.la \
+			${D}/usr/X11R6/lib/libGL.a \
+			${D}/usr/X11R6/lib/libMesaGL.so
+		do
+			if [ -f ${x} -o -L ${x} ]
+			then
+				# libGL.a cause problems with tuxracer, etc
+				mv -f ${x} ${D}/usr/lib/opengl/${PN}/lib
+			fi
+		done
+		for x in ${D}/usr/X11R6/lib/modules/extensions/libglx*
+		do
+			if [ -f ${x} -o -L ${x} ]
+			then
+				mv -f ${x} ${D}/usr/lib/opengl/${PN}/extensions
+			fi
+		done
+		for x in ${D}/usr/X11R6/include/GL/{gl.h,glx.h,glxtokens.h}
+		do
+			if [ -f ${x} -o -L ${x} ]
+			then
+				mv -f ${x} ${D}/usr/lib/opengl/${PN}/include
+			fi
+		done
+	eend 0
+}
+
+strip_execs() {
+	einfo "Stripping binaries and libraries..."
+	# This bit I got from Redhat ... strip binaries and drivers ..
+	# NOTE:  We do NOT want to strip the drivers, modules or DRI modules!
+	for x in $(find ${D}/ -type f -perm +0111 -exec file {} \; | \
+	           grep -v ' shared object,' | \
+	           sed -n -e 's/^\(.*\):[  ]*ELF.*, not stripped/\1/p')
+	do
+	if [ -f ${x} ]
+		then
+			# Dont do the modules ...
+			if [ "${x/\/usr\/X11R6\/lib\/modules}" = "${x}" ]
+			then
+				echo "`echo ${x} | sed -e "s|${D}||"`"
+				strip ${x} || :
+			fi
+		fi
+	done
+	# Now do the libraries ...
+	for x in ${D}/usr/{lib,lib/opengl/${PN}/lib}/*.so.* \
+		${D}/usr/X11R6/{lib,lib/X11/locale/lib/common}/*.so.*
+	do
+		if [ -f ${x} ]
+		then
+			echo "`echo ${x} | sed -e "s|${D}||"`"
+			strip --strip-debug ${x} || :
+		fi
+	done
+}
+
+setup_config_files() {
+	# Fix default config files after installing fonts to /usr/share/fonts
+	sed -i "s:/usr/X116/lib/X11/fonts:/usr/share/fonts:g" \
+		${D}/etc/X11/xorg.conf.example
+	sed -i "s:/usr/X116/lib/X11/fonts:/usr/share/fonts:g" \
+		${D}/etc/X11/fs/config
+
+	# Work around upgrade problem where people have
+	# Option "XkbRules" "xfree86" in their config file
+	sed -i "s:^.*Option.*"XkbRules".*$::g" ${D}/etc/X11/xorg.conf.example
+
+	# Fix any installed config files for installing fonts to /usr/share/fonts
+	# This *needs* to be after all other installation so files aren't
+	# overwritten.
+	einfo "Preparing any installed configuration files for font move..."
+	FILES="/etc/X11/xorg.conf
+		/etc/X11/XF86Config
+		/etc/fonts/fonts.conf
+		/etc/fonts/local.conf
+		/etc/X11/fs/config"
+
+	for FILE in ${FILES}
+	do
+		if [ -e ${ROOT}${FILE} ]
+		then
+			DIR="$(dirname ${ROOT}${FILE})"
+			if [ ! -d ${T}${DIR} ]
+			then
+				mkdir -p ${T}${DIR}
+			fi
+			cp ${ROOT}${FILE} ${T}${DIR}
+			# New font paths
+			sed -i "s,/usr/X11R6/lib/X11/fonts,/usr/share/fonts,g" ${T}${FILE}
+			# Work around upgrade problem where people have
+			# Option "XkbRules" "xfree86" in their config file
+			sed -i "s:^.*Option.*"XkbRules".*$::g" ${T}${FILE}
+
+			dodir ${DIR}
+			insinto ${DIR}
+			doins ${T}${FILE}
+		fi
+	done
+}
+
 src_install() {
 
 	unset MAKE_OPTS
@@ -727,36 +966,7 @@ src_install() {
 		sed -i "s:@VERSION@:${XFT_VER}:g" ${D}/usr/X11R6/lib/pkgconfig/xft.pc
 	fi
 
-	# upstream still doesn't generate this -- move back into external stuff
-	# once they do
-	# Generate xrender.pc using 'EOF' style here document with no expansion
-	# (adapted from Red Hat)
-	local XRENDER_PC="${D}/usr/X11R6/lib/pkgconfig/xrender.pc"
-	# Note the single quotes, necessary to keep variables unresolved
-	echo 'prefix=/usr/X11R6' >> ${XRENDER_PC}
-	echo 'exec_prefix=${prefix}' >> ${XRENDER_PC}
-	echo 'libdir=${exec_prefix}/lib' >> ${XRENDER_PC}
-	echo 'includedir=${prefix}/include' >> ${XRENDER_PC}
-	echo '' >> ${XRENDER_PC}
-	echo 'Name: Xrender' >> ${XRENDER_PC}
-	echo 'Description: X Render Library' >> ${XRENDER_PC}
-	# Note the DOUBLE quotes here, necessary to resolve this variable
-	echo "Version: ${XRENDER_VER}" >> ${XRENDER_PC}
-	echo 'Cflags: -I${includedir} -I/usr/X11R6/include' >> ${XRENDER_PC}
-	echo 'Libs: -L${libdir} -lXrender  -L/usr/X11R6/lib -lX11' >> ${XRENDER_PC}
-
-	fperms 0644 /usr/X11R6/lib/pkgconfig/xrender.pc
-
-	# This one needs to be in /usr/lib
-	insinto /usr/lib/pkgconfig
-	doins ${D}/usr/X11R6/lib/pkgconfig/{xcursor,xft}.pc
-# pending upstream fix
-#	if [ "${EXT_XFT_XRENDER}" = "yes" ]
-#	then
-		doins ${D}/usr/X11R6/lib/pkgconfig/xrender.pc
-#	fi
-	# Now remove the invalid xft.pc, and co ...
-	rm -rf ${D}/usr/X11R6/lib/pkgconfig
+	pkgconfig_install
 
 	einfo "Installing man pages..."
 	make install.man DESTDIR=${D} || die
@@ -769,17 +979,7 @@ src_install() {
 		make DESTDIR=${D} install || die
 	fi
 
-	# Backwards compatibility for /usr/share move
-	G_FONTDIRS="100dpi 75dpi Speedo TTF Type1 encodings local misc util"
-
-	dodir /usr/X11R6/lib/X11/fonts/
-	for G_FONTDIR in ${G_FONTDIRS}
-	do
-		dosym ${ROOT}/usr/share/fonts/${G_FONTDIR} /usr/X11R6/lib/X11/fonts/${G_FONTDIR}
-	done
-
-	dosym ${ROOT}/usr/share/man /usr/X11R6/man
-	dosym ${ROOT}/usr/share/doc/${PF} /usr/X11R6/lib/X11/doc
+	backward_compat_setup
 
 	# Fix permissions on locale/common/*.so
 	for x in ${D}/usr/X11R6/lib/X11/locale/lib/common/*.so*
@@ -810,11 +1010,6 @@ src_install() {
 		# config file management. If we find that people really worry about imake
 		# stuff, we may add it.  But for now, we leave the dir unprotected.
 	eend 0
-
-	insinto /etc/X11
-
-	# Install example config file
-	newins ${S}/programs/Xserver/hw/xfree86/xorg.conf xorg.conf.example
 
 	# EURO support
 	ebegin "Euro Support..."
@@ -862,37 +1057,7 @@ src_install() {
 	fperms 755 /usr/X11R6/lib/X11/xkb/geometry/sgi
 	fperms 755 /usr/X11R6/bin/dga
 
-	# Hack from Mandrake (update ours that just created Compose files for
-	# all locales)
-	for x in $(find ${D}/usr/X11R6/lib/X11/locale/ -mindepth 1 -type d)
-	do
-		# make empty Compose files for some locales
-		# CJK must not have that file (otherwise XIM don't works some times)
-		case `basename ${x}` in
-			C|microsoft-*|iso8859-*|koi8-*)
-				if [ ! -f ${x}/Compose ]
-				then
-					touch ${x}/Compose
-				fi
-				;;
-			ja*|ko*|zh*)
-				if [ -r ${x}/Compose ]
-				then
-					rm -f ${x}/Compose
-				fi
-				;;
-		esac
-	done
-
-	# Another hack from Mandrake -- to fix dead + space for the us
-	# international keyboard
-	for i in ${D}/usr/X11R6/lib/X11/locale/*/Compose
-	do
-		sed -i \
-			-e 's/\(<dead_diaeresis> <space>\).*$/\1 : "\\"" quotedbl/' \
-			-e "s/\(<dead_acute> <space>\).*$/\1 : \"'\" apostrophe/" \
-			${i}
-	done
+	compose_files_setup
 
 	# Yet more Mandrake
 	ebegin "Encoding files for xfsft font server..."
@@ -917,102 +1082,18 @@ src_install() {
 		eend 0
 	fi
 
-	exeinto /etc/X11
-	# new session management script
-	doexe ${FILES_DIR}/chooser.sh
-	# new display manager script
-	doexe ${FILES_DIR}/startDM.sh
-	exeinto /etc/X11/Sessions
-	for x in ${FILES_DIR}/Sessions/*
-	do
-		[ -f ${x} ] && doexe ${x}
-	done
-	insinto /etc/env.d
-	doins ${FILES_DIR}/10xorg
-	insinto /etc/X11/xinit
-	doins ${FILES_DIR}/xinitrc
-	exeinto /etc/X11/xdm
-	doexe ${FILES_DIR}/Xsession ${FILES_DIR}/Xsetup_0
-	insinto /etc/X11/fs
-	newins ${FILES_DIR}/xfs.config config
-	if use pam
-	then
-		insinto /etc/pam.d
-		newins ${FILES_DIR}/xdm.pamd xdm
-		# Need to fix console permissions first
-		newins ${FILES_DIR}/xserver.pamd xserver
-	fi
-	exeinto /etc/init.d
-	newexe ${FILES_DIR}/xdm.start xdm
-	newexe ${FILES_DIR}/xfs.start xfs
-	insinto /etc/conf.d
-	newins ${FILES_DIR}/xfs.conf.d xfs
+	etc_files_install
 
 	# we want libGLU.so* in /usr/lib
 	mv ${D}/usr/X11R6/lib/libGLU.* ${D}/usr/lib
 
-	# next section is to setup the dynamic libGL stuff
-	ebegin "Moving libGL and friends for dynamic switching"
-		dodir /usr/lib/opengl/${PN}/{lib,extensions,include}
-		local x=""
-		for x in ${D}/usr/X11R6/lib/libGL.so* \
-			${D}/usr/X11R6/lib/libGL.la \
-			${D}/usr/X11R6/lib/libGL.a \
-			${D}/usr/X11R6/lib/libMesaGL.so
-		do
-			if [ -f ${x} -o -L ${x} ]
-			then
-				# libGL.a cause problems with tuxracer, etc
-				mv -f ${x} ${D}/usr/lib/opengl/${PN}/lib
-			fi
-		done
-		for x in ${D}/usr/X11R6/lib/modules/extensions/libglx*
-		do
-			if [ -f ${x} -o -L ${x} ]
-			then
-				mv -f ${x} ${D}/usr/lib/opengl/${PN}/extensions
-			fi
-		done
-		for x in ${D}/usr/X11R6/include/GL/{gl.h,glx.h,glxtokens.h}
-		do
-			if [ -f ${x} -o -L ${x} ]
-			then
-				mv -f ${x} ${D}/usr/lib/opengl/${PN}/include
-			fi
-		done
-	eend 0
+	setup_dynamic_libgl
 
 	# Make the core cursor the default.  People seem not to like whiteglass
 	# for some reason.
 	dosed 's:whiteglass:core:' /usr/share/cursors/${PN}/default/index.theme
 
-	einfo "Stripping binaries and libraries..."
-	# This bit I got from Redhat ... strip binaries and drivers ..
-	# NOTE:  We do NOT want to strip the drivers, modules or DRI modules!
-	for x in $(find ${D}/ -type f -perm +0111 -exec file {} \; | \
-	           grep -v ' shared object,' | \
-	           sed -n -e 's/^\(.*\):[  ]*ELF.*, not stripped/\1/p')
-	do
-	if [ -f ${x} ]
-		then
-			# Dont do the modules ...
-			if [ "${x/\/usr\/X11R6\/lib\/modules}" = "${x}" ]
-			then
-				echo "`echo ${x} | sed -e "s|${D}||"`"
-				strip ${x} || :
-			fi
-		fi
-	done
-	# Now do the libraries ...
-	for x in ${D}/usr/{lib,lib/opengl/${PN}/lib}/*.so.* \
-		${D}/usr/X11R6/{lib,lib/X11/locale/lib/common}/*.so.*
-	do
-		if [ -f ${x} ]
-		then
-			echo "`echo ${x} | sed -e "s|${D}||"`"
-			strip --strip-debug ${x} || :
-		fi
-	done
+	strip_execs
 
 	# Install TaD's gentoo cursors
 	insinto /usr/share/cursors/${PN}/gentoo/cursors
@@ -1025,60 +1106,27 @@ src_install() {
 	# Remove xterm app-defaults, since we don't install xterm
 	rm ${D}/etc/X11/app-defaults/{UXTerm,XTerm,XTerm-color}
 
-	# Fix default config files after installing fonts to /usr/share/fonts
-	sed -i "s:/usr/X116/lib/X11/fonts:/usr/share/fonts:g" \
-		${D}/etc/X11/xorg.conf.example
-	sed -i "s:/usr/X116/lib/X11/fonts:/usr/share/fonts:g" \
-		${D}/etc/X11/fs/config
-
-	# Work around upgrade problem where people have
-	# Option "XkbRules" "xfree86" in their config file
-	sed -i "s:^.*Option.*"XkbRules".*$::g" ${D}/etc/X11/xorg.conf.example
-
-	# Fix any installed config files for installing fonts to /usr/share/fonts
-	# This *needs* to be after all other installation so files aren't
-	# overwritten.
-	einfo "Preparing any installed configuration files for font move..."
-	FILES="/etc/X11/xorg.conf
-		/etc/X11/XF86Config
-		/etc/fonts/fonts.conf
-		/etc/fonts/local.conf
-		/etc/X11/fs/config"
-
-	for FILE in ${FILES}
-	do
-		if [ -e ${ROOT}${FILE} ]
-		then
-			DIR="$(dirname ${ROOT}${FILE})"
-			if [ ! -d ${T}${DIR} ]
-			then
-				mkdir -p ${T}${DIR}
-			fi
-			cp ${ROOT}${FILE} ${T}${DIR}
-			# New font paths
-			sed -i "s,/usr/X11R6/lib/X11/fonts,/usr/share/fonts,g" ${T}${FILE}
-			# Work around upgrade problem where people have
-			# Option "XkbRules" "xfree86" in their config file
-			sed -i "s:^.*Option.*"XkbRules".*$::g" ${T}${FILE}
-
-			dodir ${DIR}
-			insinto ${DIR}
-			doins ${T}${FILE}
-		fi
-	done
+	setup_config_files
 }
 
 pkg_preinst() {
 
-	# Get rid of deprecated directories so our symlinks in the same location
-	# work -- users shouldn't be placing fonts here so that should be fine,
-	# they should be using ~/.fonts or /usr/share/fonts. <spyderous>
 	for G_FONTDIR in ${G_FONTDIRS}
 	do
+		# Get rid of deprecated directories so our symlinks in the same location
+		# work -- users shouldn't be placing fonts here so that should be fine,
+		# they should be using ~/.fonts or /usr/share/fonts. <spyderous>
 		if [ -d ${ROOT}/usr/X11R6/lib/X11/fonts/${G_FONTDIR} ]
 		then
 			rm -rf ${ROOT}/usr/X11R6/lib/X11/fonts/${G_FONTDIR}
 		fi
+
+		# clean out old fonts.* and encodings.dir files, as we
+		# will regenerate them
+		find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'fonts.*' \
+			-exec rm -f {} \;
+		find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'encodings.dir' \
+			-exec rm -f {} \;
 	done
 
 	if [ -L ${ROOT}/etc/X11/app-defaults ]
@@ -1120,172 +1168,117 @@ pkg_preinst() {
 		rm -rf ${ROOT}/usr/lib/opengl/${PN}/*
 	fi
 
-	# clean out old fonts.* and encodings.dir files, as we
-	# will regenerate them
-	for G_FONTDIR in ${G_FONTDIRS}
-	do
-		find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'fonts.*' \
-			-exec rm -f {} \;
-		find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'encodings.dir' \
-			-exec rm -f {} \;
-	done
-
 	# make sure we do not have any stale files lying around
 	# that could break things.
 	rm -f ${ROOT}/usr/X11R6/lib/libGL*
 }
 
-pkg_postinst() {
+font_setup() {
+	# These cause ttmkfdir to segfault :/
+	rm -f ${ROOT}/usr/share/fonts/encodings/iso8859-6.8x.enc.gz
+	rm -f ${ROOT}/usr/share/fonts/encodings/iso8859-6.16.enc.gz
 
-	env-update
+	# ********************************************************************
+	#  A note about fonts and needed files:
+	#
+	#  1)  Create /usr/share/fonts/encodings/encodings.dir
+	#
+	#  2)  Create fonts.scale for TrueType fonts (need to do this before
+	#      we create fonts.dir files, else fonts.dir files will be
+	#      invalid for TrueType fonts...)
+	#
+	#  3)  Now Generate fonts.dir files.
+	#
+	#  CID fonts is a bit more involved, but as we do not install any,
+	#  thus I am not going to bother.
+	#
+	#  <azarah@gentoo.org> (20 Oct 2002)
+	#
+	# ********************************************************************
 
-	if [ "${ROOT}" = "/" ]
+	ebegin "Generating encodings.dir..."
+		# Create the encodings.dir in /usr/share/fonts/encodings
+		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
+		${ROOT}/usr/X11R6/bin/mkfontdir -n \
+			-e ${ROOT}/usr/share/fonts/encodings \
+			-e ${ROOT}/usr/share/fonts/encodings/large \
+			-- ${ROOT}/usr/share/fonts/encodings
+
+	eend 0
+
+	if [ -x ${ROOT}/usr/X11R6/bin/ttmkfdir ]
 	then
-		local x=""
-
-		umask 022
-
-		# These cause ttmkfdir to segfault :/
-		rm -f ${ROOT}/usr/share/fonts/encodings/iso8859-6.8x.enc.gz
-		rm -f ${ROOT}/usr/share/fonts/encodings/iso8859-6.16.enc.gz
-
-		# ********************************************************************
-		#  A note about fonts and needed files:
-		#
-		#  1)  Create /usr/share/fonts/encodings/encodings.dir
-		#
-		#  2)  Create fonts.scale for TrueType fonts (need to do this before
-		#      we create fonts.dir files, else fonts.dir files will be
-		#      invalid for TrueType fonts...)
-		#
-		#  3)  Now Generate fonts.dir files.
-		#
-		#  CID fonts is a bit more involved, but as we do not install any,
-		#  thus I am not going to bother.
-		#
-		#  <azarah@gentoo.org> (20 Oct 2002)
-		#
-		# ********************************************************************
-
-		ebegin "Generating encodings.dir..."
-			# Create the encodings.dir in /usr/share/fonts/encodings
-			LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
-			${ROOT}/usr/X11R6/bin/mkfontdir -n \
-				-e ${ROOT}/usr/share/fonts/encodings \
-				-e ${ROOT}/usr/share/fonts/encodings/large \
-				-- ${ROOT}/usr/share/fonts/encodings
-		eend 0
-
-		if [ -x ${ROOT}/usr/X11R6/bin/ttmkfdir ]
-		then
-			ebegin "Creating fonts.scale files..."
-				for x in $(find ${ROOT}/usr/share/fonts/* -type d -maxdepth 1)
-				do
-					[ -z "$(ls ${x}/)" ] && continue
-					[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
-
-					# Only generate .scale files if there are truetype
-					# fonts present ...
-					if [ "${x/encodings}" = "${x}" -a \
-					     -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
-					then
-						LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
-						${ROOT}/usr/X11R6/bin/ttmkfdir -x 2 \
-							-e ${ROOT}/usr/share/fonts/encodings/encodings.dir \
-							-o ${x}/fonts.scale -d ${x}
-					fi
-				done
-			eend 0
-		fi
-
-		ebegin "Generating fonts.dir files..."
+		ebegin "Creating fonts.scale files..."
 			for x in $(find ${ROOT}/usr/share/fonts/* -type d -maxdepth 1)
 			do
 				[ -z "$(ls ${x}/)" ] && continue
 				[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
 
-				if [ "${x/encodings}" = "${x}" ]
-				then
-					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
-					${ROOT}/usr/X11R6/bin/mkfontdir \
-						-e ${ROOT}/usr/share/fonts/encodings \
-						-e ${ROOT}/usr/share/fonts/encodings/large \
-						-- ${x}
-				fi
-			done
-		eend 0
-
-		ebegin "Generating Xft cache..."
-			for x in $(find ${ROOT}/usr/share/fonts/* -type d -maxdepth 1)
-			do
-				[ -z "$(ls ${x}/)" ] && continue
-				[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
-
-				# Only generate XftCache files if there are truetype
+				# Only generate .scale files if there are truetype
 				# fonts present ...
 				if [ "${x/encodings}" = "${x}" -a \
 				     -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
 				then
 					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
-					${ROOT}/usr/X11R6/bin/xftcache ${x} &> /dev/null
+					${ROOT}/usr/X11R6/bin/ttmkfdir -x 2 \
+						-e ${ROOT}/usr/share/fonts/encodings/encodings.dir \
+						-o ${x}/fonts.scale -d ${x}
 				fi
 			done
 		eend 0
-
-		ebegin "Fixing permissions..."
-			find ${ROOT}/usr/share/fonts/ -type f -name 'font.*' \
-				-exec chmod 0644 {} \;
-		eend 0
-
-		# danarmak found out that fc-cache should be run AFTER all the above
-		# stuff, as otherwise the cache is invalid, and has to be run again
-		# as root anyway
-		if [ -x ${ROOT}/usr/bin/fc-cache ]
-		then
-			ebegin "Creating FC font cache..."
-				HOME="/root" ${ROOT}/usr/bin/fc-cache -f
-			eend 0
-		fi
-
-		# Switch to the xorg implementation.
-		# Use new opengl-update that will not reset user selected
-		# OpenGL interface ...
-		echo
-		if [ "`${ROOT}/usr/sbin/opengl-update --get-implementation`" = "xfree" ]
-		then
-			${ROOT}/usr/sbin/opengl-update ${PN}
-		else
-			${ROOT}/usr/sbin/opengl-update --use-old ${PN}
-		fi
 	fi
 
-	for x in $(find ${ROOT}/usr/X11R6/lib/X11/locale/ -mindepth 1 -type d)
-	do
-		# Remove old compose files we might have created incorrectly
-		# CJK must not have that file (otherwise XIM don't works some times)
-		case `basename ${x}` in
-			ja*|ko*|zh*)
-				if [ -r "${x}/Compose" ]
-				then
-					rm -f ${x}/Compose
-				fi
-				;;
-		esac
-	done
+	ebegin "Generating fonts.dir files..."
+		for x in $(find ${ROOT}/usr/share/fonts/* -type d -maxdepth 1)
+		do
+			[ -z "$(ls ${x}/)" ] && continue
+			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
 
-	# These need to be owned by root and the correct permissions
-	# (bug #8281)
-	for x in ${ROOT}/tmp/.{ICE,X11}-unix
-	do
-		if [ ! -d ${x} ]
-		then
-			mkdir -p ${x}
-		fi
+			if [ "${x/encodings}" = "${x}" ]
+			then
+				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
+				${ROOT}/usr/X11R6/bin/mkfontdir \
+					-e ${ROOT}/usr/share/fonts/encodings \
+					-e ${ROOT}/usr/share/fonts/encodings/large \
+					-- ${x}
+			fi
+		done
+	eend 0
 
-		chown root:root ${x}
-		chmod 1777 ${x}
-	done
+	ebegin "Generating Xft cache..."
+		for x in $(find ${ROOT}/usr/share/fonts/* -type d -maxdepth 1)
+		do
+			[ -z "$(ls ${x}/)" ] && continue
+			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
 
+			# Only generate XftCache files if there are truetype
+			# fonts present ...
+			if [ "${x/encodings}" = "${x}" -a \
+			     -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
+			then
+				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
+				${ROOT}/usr/X11R6/bin/xftcache ${x} &> /dev/null
+			fi
+		done
+	eend 0
+
+	ebegin "Fixing permissions..."
+		find ${ROOT}/usr/share/fonts/ -type f -name 'font.*' \
+			-exec chmod 0644 {} \;
+	eend 0
+
+	# danarmak found out that fc-cache should be run AFTER all the above
+	# stuff, as otherwise the cache is invalid, and has to be run again
+	# as root anyway
+	if [ -x ${ROOT}/usr/bin/fc-cache ]
+	then
+		ebegin "Creating FC font cache..."
+			HOME="/root" ${ROOT}/usr/bin/fc-cache -f
+		eend 0
+	fi
+}
+
+print_info() {
 	if use 3dfx
 	then
 		echo
@@ -1332,6 +1325,60 @@ pkg_postinst() {
 		echo -ne "\a" ; sleep 1
 	done
 	sleep 10
+}
+
+pkg_postinst() {
+
+	env-update
+
+	if [ "${ROOT}" = "/" ]
+	then
+		local x=""
+
+		umask 022
+
+		font_setup
+
+		# Switch to the xorg implementation.
+		# Use new opengl-update that will not reset user selected
+		# OpenGL interface ...
+		echo
+		if [ "`${ROOT}/usr/sbin/opengl-update --get-implementation`" = "xfree" ]
+		then
+			${ROOT}/usr/sbin/opengl-update ${PN}
+		else
+			${ROOT}/usr/sbin/opengl-update --use-old ${PN}
+		fi
+	fi
+
+	for x in $(find ${ROOT}/usr/X11R6/lib/X11/locale/ -mindepth 1 -type d)
+	do
+		# Remove old compose files we might have created incorrectly
+		# CJK must not have that file (otherwise XIM don't works some times)
+		case `basename ${x}` in
+			ja*|ko*|zh*)
+				if [ -r "${x}/Compose" ]
+				then
+					rm -f ${x}/Compose
+				fi
+				;;
+		esac
+	done
+
+	# These need to be owned by root and the correct permissions
+	# (bug #8281)
+	for x in ${ROOT}/tmp/.{ICE,X11}-unix
+	do
+		if [ ! -d ${x} ]
+		then
+			mkdir -p ${x}
+		fi
+
+		chown root:root ${x}
+		chmod 1777 ${x}
+	done
+
+	print_info
 }
 
 pkg_postrm() {

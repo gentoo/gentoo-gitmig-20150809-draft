@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.54 2004/06/14 15:25:25 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.55 2004/06/14 19:57:56 spyderous Exp $
+
+  14 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.7.0-r1.ebuild:
+  Major refactoring of code. No end-user difference, so no bump.
 
   14 Jun 2004; Ferris McCormick <fmccor@gentoo.org> xorg-x11-6.7.0-r1.ebuild:
   Marked stable for sparc (Bug 53226).
