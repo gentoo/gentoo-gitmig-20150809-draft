@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/zetagrid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/ChangeLog,v 1.7 2003/02/15 12:40:50 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/ChangeLog,v 1.8 2003/02/25 00:15:24 tantive Exp $
+
+*zetagrid-1.0-r5 (25 Feb 2003)
+
+  25 Feb 2003; Michael Imhof <tantive@gentoo.org> :
+  Changed -alpha to alpha. Bumped digest for new client (1.8.2).
 
 *zetagrid-1.0-r4 (15 Feb 2003)
 
