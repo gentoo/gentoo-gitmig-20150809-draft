@@ -1,32 +1,34 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/jdbc3-oracle-9.2.0.3.ebuild,v 1.12 2004/10/20 11:01:44 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-oracle/jdbc2-oracle-9.2.0.4.ebuild,v 1.1 2004/10/20 11:06:00 absinthe Exp $
 
 inherit java-pkg
 
-IUSE="debug doc"
-
-file_main_orig=ojdbc14.jar
-file_main_debug_orig=ojdbc14_g.jar
+file_main_orig=classes12.zip
+file_main_debug_orig=classes12_g.zip
 file_rowset_orig=ocrs12.zip
+file_nls_orig=nls_charset12.zip
 file_doc_orig=javadoc.tar
 
 file_main=${P}-${file_main_orig}
 file_main_debug=${P}-${file_main_debug_orig}
 file_rowset=${P}-${file_rowset_orig}
+file_nls=${P}-${file_nls_orig}
 file_doc=${P}-${file_doc_orig}
 
 S=${WORKDIR}
-DESCRIPTION="JDBC 3.0 Drivers for Oracle"
+DESCRIPTION="JDBC Drivers for Oracle"
+IUSE="debug doc"
+SRC_URI="${file_main} ${file_rowset} ${file_nls}
+	debug? ( ${file_main_debug} )
+	doc? ( ${file_doc} )
+"
 HOMEPAGE="http://otn.oracle.com/software/tech/java/sqlj_jdbc/htdocs/jdbc9201.html"
-SRC_URI="${file_rowset} ${file_main}
-		doc? ( ${file_doc} )
-		debug? ( ${file_main_debug} )"
-KEYWORDS="x86 sparc ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 LICENSE="oracle-jdbc"
-SLOT="2"
+SLOT="6"
 DEPEND=">=app-arch/unzip-5.50-r1"
-RDEPEND=">=virtual/jdk-1.4"
+RDEPEND=">=virtual/jdk-1.2"
 RESTRICT="fetch"
 
 pkg_nofetch() {
@@ -38,11 +40,13 @@ pkg_nofetch() {
 	einfo " 2. Download the appropriate files:"
 	einfo "    - ${file_main_orig}"
 	einfo "    - ${file_rowset_orig}"
+	einfo "    - ${file_nls_orig}"
 	use doc > /dev/null && einfo "    - ${file_doc_orig}"
 	use debug > /dev/null && einfo "    - ${file_main_debug_orig}"
 	einfo " 3. Rename the files:"
 	einfo "    - ${file_main_orig} --> ${file_main}"
 	einfo "    - ${file_rowset_orig} --> ${file_rowset}"
+	einfo "    - ${file_nls_orig} --> ${file_nls}"
 	use doc > /dev/null && einfo "    - ${file_doc_orig} --> ${file_doc}"
 	use debug > /dev/null && einfo "    - ${file_main_debug_orig} --> ${file_main_debug}"
 	einfo " 4. Place the files in ${DISTDIR}"
@@ -53,11 +57,12 @@ pkg_nofetch() {
 src_unpack() {
 	use debug && cp ${DISTDIR}/${file_main_debug} ${S}/${file_main_debug_orig} || cp ${DISTDIR}/${file_main} ${S}/${file_main_orig}
 	cp ${DISTDIR}/${file_rowset} ${S}/${file_rowset_orig}
+	cp ${DISTDIR}/${file_nls} ${S}/${file_nls_orig}
 
 	if use doc; then
 		mkdir ${S}/javadoc
 		cd ${S}/javadoc
-		tar -xf ${DISTDIR}/${file_doc}
+		unzip ${DISTDIR}/${file_doc}
 	fi
 }
 
@@ -66,7 +71,9 @@ src_compile() {
 }
 
 src_install() {
-	use doc && java-pkg_dohtml -r ${S}/javadoc/
+	if use doc ; then
+		java-pkg_dohtml -r ${S}/javadoc/
+	fi
 	java-pkg_dojar ${S}/*.zip
-	java-pkg_dojar ${S}/*.jar
 }
+
