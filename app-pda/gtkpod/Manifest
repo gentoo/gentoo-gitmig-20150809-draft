@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 50b72dc36a1b67c4f473a91cbf985f30 metadata.xml 214
-MD5 3e7705b5d024c25bbbe9eb28cda191e7 gtkpod-0.88.2.ebuild 769
-MD5 d77f1a6a5b659823c4e96b19fb786b30 ChangeLog 3288
 MD5 8269ea9285fc428dcc472692c09a0d5b gtkpod-0.80.2.ebuild 930
+MD5 50b72dc36a1b67c4f473a91cbf985f30 metadata.xml 214
+MD5 df239260270a585786c6282630428575 ChangeLog 3382
+MD5 3e7705b5d024c25bbbe9eb28cda191e7 gtkpod-0.88.2.ebuild 769
 MD5 1b12fd51498e5d2b5d59b000c397118a gtkpod-0.88.1.ebuild 769
-MD5 9545dd2d2b37bb94f54aca514bad13cb gtkpod-0.85.0.ebuild 622
-MD5 74f81179cf2e5095dacc9ecd08805acb files/digest-gtkpod-0.85.0 65
-MD5 7d2e7c7d98ab0dc42b948ecce7f606ba files/digest-gtkpod-0.88.1 65
+MD5 c813fe91135826eccc958e8687133897 gtkpod-0.85.0.ebuild 617
 MD5 f79519e3920b49df9f578cb8798a32c7 files/digest-gtkpod-0.80.2 192
 MD5 480eda685201cdd976991ba8dd75ad43 files/digest-gtkpod-0.88.2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCTXZlmOfEJZHYOKcRAheaAJ45YjxOVa0j6BWicQMrQ5DbSxisMQCfbOOb
-jnnrwEtDcPf/mo6syYsQ5Ls=
-=PBTU
------END PGP SIGNATURE-----
+MD5 7d2e7c7d98ab0dc42b948ecce7f606ba files/digest-gtkpod-0.88.1 65
+MD5 74f81179cf2e5095dacc9ecd08805acb files/digest-gtkpod-0.85.0 65
