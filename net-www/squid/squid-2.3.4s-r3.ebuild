@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r3.ebuild,v 1.1 2001/05/17 13:25:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r3.ebuild,v 1.2 2001/05/18 17:01:25 achim Exp $
 
 P=squid-2.3.STABLE4
 
@@ -47,9 +47,7 @@ src_compile() {
 	--enable-useragent-log \
 	--enable-async-io --enable-icmp
  try make
- cd ${S}/auth_modules/LDAP
- try make
- cd ../PAM
+ cd ${S}/auth_modules/PAM
  try make
  cd ../SMB
  try make
@@ -83,9 +81,9 @@ src_install() {
   cd ..
   dodoc README QUICKSTART CONTRIBUTORS COPYRIGHT COPYING CREDITS
   dodoc ChangeLog TODO
-  cp ${O}/files/squid.conf ${D}/etc/squid
+  cp ${FILESDIR}/squid.conf ${D}/etc/squid
   dodir /etc/rc.d/init.d
-  cp ${O}/files/squid ${D}/etc/rc.d/init.d
+  cp ${FILESDIR}/squid ${D}/etc/rc.d/init.d
 #  rm -r ${D}/var/squid
   dodir /var/log/squid
   dodir /var/cache/squid
