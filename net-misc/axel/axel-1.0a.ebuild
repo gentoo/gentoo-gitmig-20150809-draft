@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-1.0a.ebuild,v 1.1 2002/06/01 02:24:09 stroke Exp $
+# $Header:
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Axel: A light Unix download accelerator"
@@ -8,6 +8,7 @@ HOMEPAGE="http://www.lintux.cx/axel.html"
 SRC_URI="http://www.lintux.cx/downloads/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}"
