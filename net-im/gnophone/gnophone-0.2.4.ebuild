@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnophone/gnophone-0.2.4.ebuild,v 1.8 2004/07/01 22:18:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnophone/gnophone-0.2.4.ebuild,v 1.9 2004/07/15 00:12:45 agriffis Exp $
 
-IUSE=""
+IUSE="esd mozilla"
 
 DESCRIPTION="internet telephone"
 HOMEPAGE="http://www.gnophone.com/"
@@ -29,8 +29,6 @@ RDEPEND="media-sound/gsm
 	virtual/libc"
 SLOT="0"
 SRC_URI="ftp://ftp.gnophone.com/pub/gnophone/${P}.tar.gz"
-
-S=${WORKDIR}/${P}
 
 D_PREFIX=/usr
 
