@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.61 2003/08/10 14:46:09 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.62 2003/08/12 19:41:09 agenkin Exp $
 
   10 Aug 2003; Michael Imhof <tantive@gentoo.org> xine-lib-1_rc0-r1:
   Changed
@@ -15,7 +15,10 @@
 
 *xine-lib-1_rc0-r1 (07 Aug 2003)
 
-  07 Aug2003; Arcady Genkin <agenkin@gentoo.org> :
+  12 Aug 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Added media-libs/speex to dependencies (bug #26186).
+
+  07 Aug 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump to 1-rc0a.
 	
 *xine-lib-1_beta12-r1 (14 Jul 2003)

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc0-r1.ebuild,v 1.2 2003/08/10 14:46:09 tantive Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc0-r1.ebuild,v 1.3 2003/08/12 19:41:09 agenkin Exp $ 
 
 # this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
 # Commenting this out in this ebuild, because CFLAGS and CXXFLAGS are unset
@@ -43,7 +43,8 @@ DEPEND="oggvorbis? ( media-libs/libvorbis )
 	>=media-libs/flac-1.0.4
 	>=media-libs/libsdl-1.1.5
 	>=media-libs/libfame-0.9.0
-	>=media-libs/xvid-0.9.0"
+	>=media-libs/xvid-0.9.0
+	media-libs/speex"
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
@@ -93,16 +94,15 @@ src_compile() {
 	econf ${myconf} || die "Configure failed"
 
 	# since there is no --disable-gnomevfs flag we have to fix config.h by hand
-
-	cp config.h config.h.sed
-
-	if [ ! `use gnome` ] 
+	# Gentoo bug #24409.
+	if [ ! `use gnome` ]
 	then
 		einfo "supposedly not using gnome. disabling gnome-vfs support"
 		cp config.h config.h.sed
 		cat config.h.sed |sed -e s/\#define\ HAVE_GNOME_VFS\ 1/\#undef\ HAVE_GNOME_VFS/g >config.h
 		rm config.h.sed
 	fi
+	
 	emake || die "Parallel make failed"
 }
 
