@@ -1,5 +1,5 @@
-MD5 97578b2f365850d595d96a848086b60d ldapsdk-4.1.7.ebuild 1258
-MD5 5e7200558827696994f668ec7a3c25d4 ChangeLog 422
+MD5 2476c36a616c52dc00686bff7dd8bf0a ldapsdk-4.1.7.ebuild 1259
+MD5 4aaf5cef70a556f16bbd10813ab0b2c0 ChangeLog 527
 MD5 6fb27bdccb1134d8c941a57f72aa0b59 metadata.xml 239
 MD5 fe737a838d4214efd4bc3e2b05730df6 files/ldapsdk-gentoo.patch 5569
 MD5 82c8d76c3b282427a86a22b74777081a files/digest-ldapsdk-4.1.7 74

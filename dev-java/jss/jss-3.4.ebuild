@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-3.4.ebuild,v 1.1 2004/12/18 16:37:30 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-3.4.ebuild,v 1.2 2005/02/04 16:53:18 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/${PN}/releases/${RTM_NAM
 
 LICENSE="MPL-1.1"
 SLOT="3.4"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE=""
 
 S=${WORKDIR}/${P}-src
@@ -50,8 +50,10 @@ src_compile() {
 }
 
 src_install () {
-	cd mozilla/dist/classes*
-	zip -r ../jss34.jar .
-
+	cd ${S}/mozilla/dist/classes*
+	zip -q -r ../jss34.jar .
 	java-pkg_dojar ../jss34.jar
+
+	cd ${S}
+	java-pkg_doso mozilla/dist/Linux*/lib/libjss3.so
 }
