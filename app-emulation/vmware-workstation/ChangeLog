@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.23 2003/09/06 14:37:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.24 2003/09/24 17:41:06 vapier Exp $
+
+*vmware-workstation-4.0.2.5592-r1 (24 Sep 2003)
+
+  24 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  New version of the 2.6.x kernel support.
+
+*vmware-workstation-3.2.1.2242-r1 (24 Sep 2003)
+
+  24 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  New version of the 2.6.x kernel support.
 
   06 Sep 2003; Chris Gianelloni <wolf31o2@gentoo.org>
   files/3.2.1.2237/90vmware, files/3.2.1.2237/VMwareWorkstation.desktop,
