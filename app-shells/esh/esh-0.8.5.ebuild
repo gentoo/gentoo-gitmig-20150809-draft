@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/esh-0.8.5.ebuild,v 1.10 2004/01/30 20:01:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/esh-0.8.5.ebuild,v 1.11 2004/06/02 14:53:16 agriffis Exp $
 
 S=${WORKDIR}/esh
 DESCRIPTION="A UNIX Shell with a simplified Scheme syntax"
@@ -23,8 +23,8 @@ src_compile() {
 		-e "s:-ltermcap::" \
 		Makefile.orig > Makefile
 	# For some reason, this tarball has binary files in it for x86.
-	# So, if we're not x86, make clean first.
-	[ ! `use x86` ] && make clean
+	# Make clean so we can rebuild for our arch and optimization.
+	make clean
 	make || die
 }
 
