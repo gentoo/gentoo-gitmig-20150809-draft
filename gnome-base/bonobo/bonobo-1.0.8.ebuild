@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.8.ebuild,v 1.1 2001/08/20 21:51:57 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.8.ebuild,v 1.2 2001/08/21 11:03:37 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -31,13 +31,13 @@ src_compile() {
   rm -f ${S}/samples/bonobo-class/Bonobo_Sample_Echo.h
   rm -f ${S}/samples/bonobo-class/Bonobo_Sample_Echo-*.c
 
-  try ./configure --host=${CHOST} --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome ${myconf}
-  try pmake
+  ./configure --host=${CHOST} --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome ${myconf} || die
+  make || die # make -j 4 didn't work
 }
 
 src_install() {
 
-  try make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome install
+  make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome install || die
 
   dodoc AUTHORS COPYING* ChangeLog README
   dodoc NEWS TODO
