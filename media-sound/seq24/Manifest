@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 23f54b4cd0f8255abed9bf13c04c28a9 ChangeLog 2489
+MD5 4411b167538d660dd7f043ab4620d5f5 ChangeLog 2622
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 b953bd6387cebd72e824f5302da5cddc seq24-0.5.1.ebuild 612
 MD5 19410b102a0cbcbe37f0a25559bd55ea seq24-0.5.2.ebuild 612
@@ -11,6 +11,7 @@ MD5 1c9420e7b4cd0f3e98030ff9597deb62 seq24-0.6.0_rc3.ebuild 775
 MD5 fd35c1112e9f799b0bfe7a885b77e33e seq24-0.6.0_rc5.ebuild 763
 MD5 5317086333a35a5a5cc0bd35fa412fb6 seq24-0.6.1.ebuild 730
 MD5 3ddb0f5d519fbc18bea0c1937483badd seq24-0.6.2.ebuild 730
+MD5 3a1e0745b00f528a12de0446e63e7f3a seq24-0.6.3.ebuild 737
 MD5 2caa6fcda17108ac9216ffc0f31e7031 files/digest-seq24-0.5.1 63
 MD5 64b991e2ae9b837dd324dd2b17116eaa files/digest-seq24-0.5.2 63
 MD5 11614b7fc35306845045ba3410e424ef files/digest-seq24-0.5.3 63
@@ -19,10 +20,11 @@ MD5 f3e2448adb29a006428cbf4cd2e78a99 files/digest-seq24-0.6.0_rc3 67
 MD5 18689ef6aa38edd0117156432d10be11 files/digest-seq24-0.6.0_rc5 67
 MD5 e45587ae6a375c4e045c4cd103b78c8c files/digest-seq24-0.6.1 63
 MD5 1a8bcb049f72346a46e20eaafa30389b files/digest-seq24-0.6.2 63
+MD5 3d70106fe6008aa4451846d0dc6f43fc files/digest-seq24-0.6.3 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCN6FB+uC/ViVka/0RAum/AJ9cWyWTlXG16sf/F/SG9XIyFGA2KgCeLuiE
-61Q/ygLaxAYn0ju9icBb3u0=
-=vrXY
+iD8DBQFCRWfYFdQwWVoAgN4RAuXNAJ0ejXmR6F2cvaOrbjkMC2o5tAXpmgCg547A
+TEUy0QKCiXFeFRDV4DcahVg=
+=5laG
 -----END PGP SIGNATURE-----
