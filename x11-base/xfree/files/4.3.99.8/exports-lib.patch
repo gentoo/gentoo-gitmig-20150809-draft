@@ -1,0 +1,10 @@
+--- Makefile.old	2003-06-13 12:17:39.000000000 +1000
++++ Makefile	2003-06-13 12:18:11.000000000 +1000
+@@ -86,6 +86,7 @@
+ 	$(MAKE_CMD) $(MFLAGS) BOOTSTRAPSUBDIRS= clean
+ 	$(MAKE_CMD) $(MFLAGS) includes
+ 	$(MAKE_CMD) $(MFLAGS) depend
++	mkdir -p exports/lib
+ 	$(MAKE_CMD) $(MFLAGS) $(WORLDOPTS) World
+ 	@echo ""
+ 	@date

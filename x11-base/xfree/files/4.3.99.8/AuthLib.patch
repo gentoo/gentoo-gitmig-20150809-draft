@@ -1,0 +1,11 @@
+--- Imakefile.old	2003-06-15 00:37:26.000000000 +1000
++++ Imakefile	2003-06-15 00:38:11.000000000 +1000
+@@ -187,7 +187,7 @@
+ #if BuildLBX || GzipFontCompression
+            ZLIB = GzipLibrary
+ #endif
+-             OS = os/LibraryTargetName(os) $(DEPXAUTHLIB) $(DEPXDMCPLIB)
++             OS = os/LibraryTargetName(os) $(DEPXAUTHLIB) $(DEPXDMCPLIB) ../../exports/lib/libXau.a
+         BSDEMUL = $(DEPXBSDLIB)
+ #if DoLoadableServer
+             MFB = mfb/ModuleLibraryTargetName(mfb)

@@ -1,0 +1,13 @@
+--- programs/Xserver/hw/xfree86/input/acecad/Imakefile.old	2003-06-16 23:23:40.000000000 +1000
++++ programs/Xserver/hw/xfree86/input/acecad/Imakefile	2003-06-16 23:24:23.000000000 +1000
+@@ -6,6 +6,10 @@
+ SRCS = acecad.c
+ OBJS = acecad.o
+ 
++#if HasLinuxInput
++DEFINES = -DLINUX_INPUT
++#endif
++
+ DRIVER = acecad
+ 
+ INCLUDES = -I. -I$(XF86COMSRC) -I$(XF86SRC)/loader -I$(XF86OSSRC) \
