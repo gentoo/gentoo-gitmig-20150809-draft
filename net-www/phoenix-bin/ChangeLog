@@ -1,10 +1,12 @@
 # ChangeLog for net-www/phoenix-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.18 2003/03/05 13:03:49 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.19 2003/03/05 13:12:05 phoenix Exp $
 
 *phoenix-bin-0.5 (30 Dec 2002)
 
-  05 Mar 2003; phoen][x <phoenix@gentoo.org> phoenix-bin-0.5.ebuild
+  05 Mar 2003; phoen][x <phoenix@gentoo.org> files/phoenix :
+  Modified the phoenix startup script (see bug #15202 for additional info).
+
   Updated the gtk dependencies. See bug #13112 for further details.
   Thanks to Max Kalika <alkern23@yahoo.com> for the contribution.
 
@@ -12,6 +14,9 @@
   unmasked 0.5 for x86
 	
 *phoenix-bin-0.4-r2 (10 Dec 2002)
+
+  05 Mar 2003; phoen][x <phoenix@gentoo.org> files/phoenix :
+  Modified the phoenix startup script (see bug #15202 for additional info).
 
   10 Dec 2002; phoen][x <phoenix@gentoo.org> phoenix-bin-0.5.ebuild 
   files/digest-phoenix-bin-0.5 :
@@ -21,6 +26,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *phoenix-bin-20021121 (21 Nov 2002)
+
+  05 Mar 2003; phoen][x <phoenix@gentoo.org> files/phoenix :
+  Modified the phoenix startup script (see bug #15202 for additional info).
 
   21 Nov 2002; phoen][x <phoenix@gentoo.org> phoenix-bin-0.5.ebuild,
   files/digest-phoenix-bin-0.5.ebuild :
@@ -37,6 +45,9 @@
 
 *phoenix-bin-0.4-r2 (19 Nov 2002)
 
+  05 Mar 2003; phoen][x <phoenix@gentoo.org> files/phoenix :
+  Modified the phoenix startup script (see bug #15202 for additional info).
+
   19 Nov 2002; phoen][x <phoenix@gentoo.org> phoenix-bin-0.4-r2.ebuild 
   files/digest-phoenix-bin-0.4-r2 :
   Made phoenix mozilla plugin compliant. The new plugin layout for 
@@ -45,6 +56,9 @@
   Check bug #10056 for further details.
 
 *phoenix-bin-0.4-r1 (17 Nov 2002)
+
+  05 Mar 2003; phoen][x <phoenix@gentoo.org> files/phoenix :
+  Modified the phoenix startup script (see bug #15202 for additional info).
 
   17 Nov 2002; phoen][x <phoenix@gentoo.org> files/phoenix :
   Updated the wrapper - phoenix and mozilla should play nice now.
@@ -56,6 +70,9 @@
   contribution. Put this ebuild in the stable profile.
 
 *phoenix-bin-0.4 (31 Oct 2002)
+
+  05 Mar 2003; phoen][x <phoenix@gentoo.org> files/phoenix :
+  Modified the phoenix startup script (see bug #15202 for additional info).
 
   17 Nov 2002; phoen][x <phoenix@gentoo.org> phoenix-bin-0.4.ebuild :
   Put the ebuild into the stable profile.
@@ -72,6 +89,9 @@
   Bumped to new version. Removed the mozilla dependency.
 
 *phoenix-bin-0.3 (27 Oct 2002)
+
+  05 Mar 2003; phoen][x <phoenix@gentoo.org> files/phoenix :
+  Modified the phoenix startup script (see bug #15202 for additional info).
 
   17 Nov 2002; phoen][x <phoenix@gentoo.org> phoenix-bin-0.3.ebuild :
   Put the ebuild into the stable profile.
