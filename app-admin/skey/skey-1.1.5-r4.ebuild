@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r4.ebuild,v 1.1 2004/09/23 10:22:21 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r4.ebuild,v 1.2 2004/09/23 11:16:28 taviso Exp $
 
 inherit flag-o-matic ccc eutils
 
@@ -45,6 +45,13 @@ src_unpack() {
 src_compile() {
 	# skeyprune wont honour @sysconfdir@
 	sed -i 's#/etc/skeykeys#/etc/skey/skeykeys#g' skeyprune.pl skeyprune.8
+
+	# skeyprune uses a case sensitive regex to check for zeroed entries
+	sed -i 's#\(if ( ! /.*/\)#\1i#g' skeyprune.pl
+
+	# skeyinit(1) describes md4 as the default hash algorithm, which 
+	# is no longer the case. #64971
+	sed -i 's#\(md4\) \((the default)\), \(md5\) or \(sha1.\)#\1, \3 \2 or \4#g' skeyinit.1
 
 	econf --sysconfdir=/etc/skey || die
 	emake || die
