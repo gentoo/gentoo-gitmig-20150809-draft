@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xli
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.11 2005/01/03 22:07:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.12 2005/02/05 21:51:24 kloeri Exp $
+
+  05 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> xli-1.17.0.ebuild:
+  ~alpha keyworded, bug 76234.
 
   03 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> xli-1.17.0.ebuild:
   Keyworded ~sparc wrt #76234
