@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.18 2004/04/01 08:19:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.19 2004/04/01 08:32:06 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -308,11 +308,12 @@ php-sapi_src_compile() {
 		fi
 	elif use gd; then
 		myconf="${myconf} --with-gd"
-		myconf="${myconf} `use_enable truetype gd-native-ttf`" 
 		REQUIREPNG=1 REQUIREJPG=1
 	else
 		myconf="${myconf} --without-gd"
 	fi
+	use gd-external || use gd && myconf="${myconf} `use_enable truetype gd-native-ttf`"
+
 	use png && REQUIREPNG=1
 	use jpeg && REQUIREJPG=1
 	use tiff && REQUIRETIFF=1
