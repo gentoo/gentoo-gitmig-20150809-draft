@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.0.ebuild,v 1.3 2003/11/07 09:39:01 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.0.ebuild,v 1.4 2003/11/07 09:43:53 pauldv Exp $
 
 IUSE="kde gnome"
 
@@ -48,6 +48,7 @@ src_install() {
 	addpredict "/share"
 	addpredict "/pspfontcache"
 	addpredict "/usr/bin/soffice"
+	addpredict "/root/.gconfd"
 
 	# Sandbox issues; bug 8063
 	addpredict "/dev/dri"
