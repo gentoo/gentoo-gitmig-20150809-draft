@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noxmms/noxmms-1.2.7.ebuild,v 1.5 2004/09/15 17:17:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noxmms/noxmms-1.2.7.ebuild,v 1.6 2004/10/07 08:49:06 eradicator Exp $
 
 IUSE="oggvorbis esd 3dnow nls"
 
@@ -29,9 +29,9 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make DESTDIR="${D}" install || die
 
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog FAQ NEWS README README.noxmms TODO
+	dodoc AUTHORS ChangeLog FAQ NEWS README README.noxmms TODO
 }
 
 pkg_postinst() {
