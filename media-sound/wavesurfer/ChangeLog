@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/wavesurfer
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavesurfer/ChangeLog,v 1.1 2003/09/28 12:58:37 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavesurfer/ChangeLog,v 1.2 2003/12/18 22:01:51 mholzer Exp $
+
+*wavesurfer-1.5.7 (18 Dec 2003)
+
+  18 Dec 2003; Martin Holzer <mholzer@gentoo.org> wavesurfer-1.5.7.ebuild:
+  Version bumped. Closes 34461
 
 *wavesurfer-1.5.3 (28 Sep 2003)
 
