@@ -7,5 +7,5 @@ MD5 4e49da394d326bcb744c7990bd27d6ac /files/perl-5.8.0-perldoc-emptydirs.patch 4
 MD5 4e99f7529e149661372283c981cf17ff /files/perl-5.8.0-prelink-lpthread.patch 476
 MD5 393b3dff879c892d461901183d3b0055 /files/perl-5.8.0-sockatmark-should-__THROW.patch 402
 MD5 5aa1a011eddb5b13299b63948230db33 /files/stat.t 8884
-MD5 dd6e963ca5aeb07b803b74ffa9ea9540 /perl-5.8.0-r9.ebuild 13382
+MD5 9d35bc77720f2e300adffba40e07b2b6 /perl-5.8.0-r9.ebuild 13382
 MD5 d9bdb180620306023fd35901a2878b62 perl-5.8.0.tar.gz 11023084
