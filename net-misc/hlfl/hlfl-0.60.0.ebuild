@@ -1,13 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Arnaud Launay <asl@launay.org>
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.5 2002/04/29 22:56:53 sandymac Exp
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hlfl/hlfl-0.60.0.ebuild,v 1.2 2002/07/07 07:49:40 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="High Level Firewall Language"
 SRC_URI="ftp://ftp.hlfl.org/pub/hlfl/${P}.tar.gz"
 HOMEPAGE="http://www.hlfl.org"
 LICENSE="GPL-2"
+KEYWORDS="x86"
+SLOT="0"
 
 DEPEND="virtual/glibc"
 

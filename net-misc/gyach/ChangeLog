@@ -1,19 +1,23 @@
 # ChangeLog for net-misc/gyach
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gyach/ChangeLog,v 1.2 2002/05/01 06:03:48 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gyach/ChangeLog,v 1.3 2002/07/07 07:47:11 phoenix Exp $
 
 *gyach-0.7.6 (30 Apr 2002)
 
+  06 Jul 2002; phoen][x <phoenix@gentoo.org> gyach-0.7.6.ebuild :
+  Added KEYWORDS, SLOT.
+
   30 Apr 2002; Matthew Kennedey <mkennedy@gentoo.org> ChangeLog,
   gyach-0.7.6.ebuild, files/digest-gyach-0.7.6 :
-
   Add more to docs (samples.*). Version bump to latest. Added LICENSE,
   DEPEND fix.
 
 *gyach-0.7.5-r1 (4 Feb 2002)
 
-  4 Feb 2002; Matthew Kennedey <mbkennedy@ieee.org> ChangeLog :
-  
+  06 Jul 2002; phoen][x <phoenix@gentoo.org> gyach-0.7.5-r1.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.  
+
+  4 Feb 2002; Matthew Kennedey <mbkennedy@ieee.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
@@ -21,6 +25,11 @@
   can find in the root directory of the portage repository.
 
   4 Feb 2002; Matthew Kennedy <mbkennedy@ieee.org> gyach-0.7.5-r1.ebuild :
-
   Added support for an icon in the gnome desktop if the user has
   gnome in USE.
+
+
+*gyach-0.7.5 (?? ???? ????)
+
+  06 Jul 2002; phoen][x <phoenix@gentoo.org> gyach-0.7.5.ebuild :
+  Added KEYWORDS, LICENSE, SLOT.  

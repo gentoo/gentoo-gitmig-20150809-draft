@@ -2,14 +2,15 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Matthew Kennedy <mbkennedy@ieee.com>
 # Maintainer: Matthew Kennedy <mkennedy@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gyach/gyach-0.7.6.ebuild,v 1.2 2002/05/23 06:50:17 seemant Exp $
-
-LICENSE="GPL-2"
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gyach/gyach-0.7.6.ebuild,v 1.3 2002/07/07 07:47:11 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+-based Yahoo! chat client"
 SRC_URI="http://www4.infi.net/~cpinkham/gyach/code/${P}.tar.gz"
 HOMEPAGE="http://www4.infi.net/~cpinkham/gyach/"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 
 DEPEND="virtual/glibc
 	=x11-libs/gtk+-1.2*"
