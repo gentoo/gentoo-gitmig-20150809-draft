@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <leonardop@gentoo.org> (19 Aug 2002)
+# Masked for, guess what... testing
+=dev-util/guile-1.4.1
+
 # <mcummings@gentoo.org> (18 Aug 2002)
 # The following are masked for testing
 =dev-perl/AxKit-1.6
@@ -55,7 +59,7 @@
 # urgent for fix to perl eclass for 5.6.1 users
 #dev-perl/ExtUtils-MakeMaker
 
-# <styx@gentoo.org> /16 Aug 2002)
+# <styx@gentoo.org> (16 Aug 2002)
 # Masked for testing
 >=sys-apps/quota-3.04
 
