@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailbase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.42 2005/03/06 07:52:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.43 2005/04/06 19:01:01 corsair Exp $
+
+  06 Apr 2005; Markus Rothe <corsair@gentoo.org> mailbase-0.00-r8.ebuild:
+  Stable on ppc64
 
   06 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   mailbase-0.00-r8.ebuild:
