@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.0_rc1.ebuild,v 1.1 2004/12/04 18:47:15 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.0_rc1.ebuild,v 1.2 2004/12/06 11:07:38 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -30,7 +30,7 @@ DEPEND="virtual/libc
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
-	xml2? ( dev-libs/libxml2 )
+	xml2? ( dev-libs/libxml2 dev-libs/libxslt )
 	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/libc
 	app-admin/sudo

@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.156 2004/12/04 18:47:15 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.157 2004/12/06 11:07:38 nakano Exp $
+
+  06 Dec 2004; Masatomo Nakano <nakano@gentoo.org>
+  postgresql-8.0.0_rc1.ebuild:
+  Fixed missing libxslt dependency.
 
 *postgresql-8.0.0_rc1 (04 Dec 2004)
 
