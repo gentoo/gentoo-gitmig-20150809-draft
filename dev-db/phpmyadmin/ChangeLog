@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.25 2003/08/09 11:00:59 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.26 2003/09/11 21:08:03 twp Exp $
+
+*phpmyadmin-2.5.3 (11 Sep 2003)
+
+  11 Sep 2003; Tom Payne <twp@gentoo.org> phpmyadmin-2.5.3.ebuild :
+  Version bump. Use webapp-apache.eclass. Bugs # 27741 & 28129. Thanks Ian Leitch.
 
 *phpmyadmin-2.5.2_p1 (09 Aug 2003)
 
