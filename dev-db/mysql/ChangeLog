@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.9 2002/07/02 17:59:29 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.10 2002/07/07 23:36:23 jnelson Exp $
+
+*mysql-3.23.51-r2 (07 Jul 2002)
+
+  07 Jul 2002; Jon Nelson <jnelson@gentoo.org> mysql-3.23.51-r2.ebuild :
+
+  Attempt to fix problem with mysql compile *not* using provided bdb.
+  Also, add users in preinst, not pkg_setup, as per policy.
 
 *mysql-3.23.51-r1 (02 Jul 2002)
 
