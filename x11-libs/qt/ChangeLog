@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.107 2004/01/05 21:13:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.108 2004/01/07 00:04:56 agriffis Exp $
+
+  06 Jan 2004; <agriffis@gentoo.org> qt-2.3.2-r1.ebuild, qt-3.0.5-r2.ebuild,
+  qt-3.1.2-r3.ebuild, qt-3.1.2-r4.ebuild, qt-3.2.1.ebuild, qt-3.2.2-r1.ebuild,
+  qt-3.2.3.ebuild, qt-3.3.0_beta1.ebuild:
+  Lots of alpha and ia64 keywords changes. Note that 3.3.0_beta1 builds on alpha
+  but not on ia64 yet because it tries to find lib64 dirs (which is the wrong
+  thing to do on ia64). So I omitted the ia64 keyword entirely from 3.3.0_beta1
+  until that can be investigated.
 
   05 Jan 2004; Caleb Tennis <caleb@gentoo.org> qt-3.2.3.ebuild,
   qt-3.3.0_beta1.ebuild:

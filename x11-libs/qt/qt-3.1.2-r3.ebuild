@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r3.ebuild,v 1.11 2003/09/07 00:23:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r3.ebuild,v 1.12 2004/01/07 00:04:56 agriffis Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.bz2"
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
 # WARNING: do not give this ebuild keywords that >=kdelibs-3.1.1, >=kdebase-3.1.1-r1 don't have
-KEYWORDS="x86 ppc sparc alpha amd64"
+KEYWORDS="x86 ppc sparc alpha amd64 ia64"
 IUSE="cups nas postgres opengl mysql odbc gif debug"
 
 DEPEND="virtual/x11
