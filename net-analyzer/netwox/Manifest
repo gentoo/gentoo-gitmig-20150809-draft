@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f2d37e106706eaeb77fa8cae16326777 netwox-5.6.0.ebuild 888
-MD5 983ff6a79ca94b26099bd04be007f9ec ChangeLog 890
+MD5 a1d118dc2b842736028b1e5265bc1399 ChangeLog 977
 MD5 595b8dd3c2b25d617085a633221eecf1 metadata.xml 257
-MD5 1a8dc0f91786f70703bc8d7020ebbf2c netwox-5.9.0.ebuild 895
+MD5 f2d37e106706eaeb77fa8cae16326777 netwox-5.6.0.ebuild 888
+MD5 c3be2223aec8db08826a563c9bb8344d netwox-5.9.0.ebuild 894
 MD5 0bb1f25dabdb18874328e880eef930a3 files/digest-netwox-5.6.0 65
 MD5 93834a182ad80699bc2f58f8f45958fc files/digest-netwox-5.9.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBKhG1T+MN7JbqCpMRAmPsAJ48eptM5CQvla4u5VrqrNruXEeDzwCeM8Z1
-r57tnG28LPE1UCcB8FjV4Vg=
-=6Oq3
------END PGP SIGNATURE-----
