@@ -1,0 +1,77 @@
+diff -Naur xmms-crossfade-0.3.8.orig/crossfade.c xmms-crossfade-0.3.8/crossfade.c
+--- xmms-crossfade-0.3.8.orig/crossfade.c	2004-09-16 09:56:13.000000000 +0200
++++ xmms-crossfade-0.3.8/crossfade.c	2004-12-10 11:20:18.000000000 +0100
+@@ -1501,7 +1501,7 @@
+     
+     /* V0.3.0: New timeout detection */
+     if(!opened) {
+-      gboolean current = get_input_playing();  /* XMMS */
++      gboolean current = bmp_playback_get_playing();  /* XMMS */
+ 
+       /* also see fini() */
+       if(last_close.tv_sec || last_close.tv_usec) {
+diff -Naur xmms-crossfade-0.3.8.orig/crossfade.h xmms-crossfade-0.3.8/crossfade.h
+--- xmms-crossfade-0.3.8.orig/crossfade.h	2004-09-16 09:21:35.000000000 +0200
++++ xmms-crossfade-0.3.8/crossfade.h	2004-12-10 11:19:45.000000000 +0100
+@@ -32,10 +32,10 @@
+ #include <gdk/gdk.h>
+ #include <gtk/gtk.h>
+ 
+-#include <xmms/plugin.h>
+-#include <xmms/xmmsctrl.h>
+-#include <xmms/configfile.h>
+-#include <xmms/util.h>
++#include <bmp/plugin.h>
++#include <bmp/beepctrl.h>
++#include <bmp/configfile.h>
++#include <bmp/util.h>
+ 
+ #include "debug.h"
+ 
+@@ -336,7 +336,7 @@
+ 
+ /* xmms internal prototypes */ /* XMMS */
+ gint     ctrlsocket_get_session_id();
+-gboolean get_input_playing();
++gboolean bmp_playback_get_playing();
+ GList   *get_output_list();
+ GList   *get_effect_list();
+ gint     get_playlist_position();
+diff -Naur xmms-crossfade-0.3.8.orig/interface.c xmms-crossfade-0.3.8/interface.c
+--- xmms-crossfade-0.3.8.orig/interface.c	2004-09-24 10:38:51.000000000 +0200
++++ xmms-crossfade-0.3.8/interface.c	2004-12-10 11:24:24.000000000 +0100
+@@ -3218,14 +3218,14 @@
+   gtk_box_pack_start (GTK_BOX (help_vbox), help_scrolledwindow, TRUE, TRUE, 0);
+   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (help_scrolledwindow), GTK_POLICY_NEVER, GTK_POLICY_ALWAYS);
+ 
+-  help_text = gtk_text_new (NULL, NULL);
+-  gtk_widget_ref (help_text);
+-  gtk_object_set_data_full (GTK_OBJECT (help_win), "help_text", help_text,
+-                            (GtkDestroyNotify) gtk_widget_unref);
+-  gtk_widget_show (help_text);
+-  gtk_container_add (GTK_CONTAINER (help_scrolledwindow), help_text);
+-  gtk_text_insert (GTK_TEXT (help_text), NULL, NULL, NULL,
+-                   "<dummy>\n", -1);
++//  help_text = gtk_text_new (NULL, NULL);
++//  gtk_widget_ref (help_text);
++//  gtk_object_set_data_full (GTK_OBJECT (help_win), "help_text", help_text,
++//                            (GtkDestroyNotify) gtk_widget_unref);
++//  gtk_widget_show (help_text);
++//  gtk_container_add (GTK_CONTAINER (help_scrolledwindow), help_text);
++//  gtk_text_insert (GTK_TEXT (help_text), NULL, NULL, NULL,
++//                   "<dummy>\n", -1);
+ 
+   help_buttonbox = gtk_hbutton_box_new ();
+   gtk_widget_ref (help_buttonbox);
+diff -Naur xmms-crossfade-0.3.8.orig/monitor.c xmms-crossfade-0.3.8/monitor.c
+--- xmms-crossfade-0.3.8.orig/monitor.c	2004-08-05 15:23:46.000000000 +0200
++++ xmms-crossfade-0.3.8/monitor.c	2004-12-10 11:20:06.000000000 +0100
+@@ -234,7 +234,7 @@
+ 
+     /*** Position ***/
+     if(1 || (monitor_position_label && monitor_total_label && monitor_left_label)) {
+-      if(!get_input_playing() || (monitor_closing == CLOSED)) {  /* XMMS */
++      if(!bmp_playback_get_playing() || (monitor_closing == CLOSED)) {  /* XMMS */
+ 	gtk_label_set_text(monitor_position_label, default_position_str);
+ 	gtk_label_set_text(monitor_total_label,    default_total_str);
+ 	gtk_label_set_text(monitor_left_label,     default_left_str);

@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/bmp-crossfade
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-crossfade/ChangeLog,v 1.1 2004/12/19 21:05:53 chainsaw Exp $
+
+*bmp-crossfade-0.3.8 (19 Dec 2004)
+
+  19 Dec 2004; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
+  +files/0.3.8-bmp.patch, +bmp-crossfade-0.3.8.ebuild:
+  Initial commit. Ebuild based on a forum posting by VoVaN.
+
