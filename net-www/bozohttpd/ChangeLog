@@ -1,0 +1,9 @@
+# ChangeLog for net-www/bozohttpd
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/bozohttpd/ChangeLog,v 1.1 2004/06/24 12:15:32 s4t4n Exp $
+
+*bozohttpd-20040218 (24 Jun 2004)
+
+  24 Jun 2004; Michele Noberasco <s4t4n@gentoo.org> bozohttpd-20040218.ebuild:
+  Initial import. Close bug #30573
+
