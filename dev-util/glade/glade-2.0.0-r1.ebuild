@@ -1,18 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.0.0-r1.ebuild,v 1.1 2003/04/22 13:37:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.0.0-r1.ebuild,v 1.2 2003/04/23 16:17:08 vapier Exp $
 
 inherit gnome.org
 
-IUSE="gnome gnomedb"
-
-S=${WORKDIR}/${P}
-DESCRIPTION="Glade is a GUI Builder. This release is for GTK+ 2 and GNOME 2."
+DESCRIPTION="a GUI Builder.  This release is for GTK+ 2 and GNOME 2."
 HOMEPAGE="http://glade.gnome.org/"
 
 SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc"
+IUSE="gnome gnomedb"
 
 DEPEND="=x11-libs/gtk+-2*
 	>=dev-libs/libxml2-2.4.1
@@ -34,20 +32,13 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=""
-	
-	use gnome \
-		&& myconf="--enable-gnome" \
-		|| myconf="--disable-gnome"
-		
 	# note: ./configure --help and configure.in lists
 	# --disable-gnomedb, whereas the code looks for --disable-gnome-db
-	
-	use gnomedb \
-		&& myconf="${myconf} --enable-gnome-db" \
-		|| myconf="${myconf} --disable-gnome-db"
 
-	econf ${myconf}
+	econf \
+		`use_enable gnome` \
+		`use_enable gnomedb gnome-db` \
+		|| die	
 
 	emake || die "Compilation failed"
 }
