@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/wterm-6.2.9.ebuild,v 1.4 2003/06/04 13:48:37 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/wterm-6.2.9.ebuild,v 1.5 2003/09/07 00:24:01 msterret Exp $
 
 DESCRIPTION="A fork of rxvt patched for fast transparency and a NeXT scrollbar"
 HOMEPAGE="http://largo.windowmaker.org/files.php#wterm"
@@ -20,7 +20,7 @@ S="${WORKDIR}/${P}"
 src_compile() {
 
 	local myconf
-	
+
 	myconf="--enable-menubar --enable-graphics"
 
 	econf ${myconf} || die "configure failed"

@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r2.ebuild,v 1.6 2003/02/13 17:33:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r2.ebuild,v 1.7 2003/09/07 00:24:01 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A terminal emulator with transparency support as well as rxvt backwards compatibility"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2" 
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://aterm.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
 DEPEND=">=media-libs/jpeg-6b-r2
-	>=media-libs/libpng-1.0.11 
+	>=media-libs/libpng-1.0.11
 	virtual/x11"
 RDEPEND=$DEPEND
 

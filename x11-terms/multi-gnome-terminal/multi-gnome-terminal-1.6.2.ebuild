@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.6.2.ebuild,v 1.1 2003/04/28 02:44:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.6.2.ebuild,v 1.2 2003/09/07 00:24:01 msterret Exp $
 
 IUSE="nls"
 
@@ -33,7 +33,7 @@ src_compile() {
 
 	local myconf=""
 	use nls || myconf="--disable-nls"
-		
+
 	./configure --host=${CHOST} \
 		    --prefix=/usr \
 		    --mandir=/usr/share/man \

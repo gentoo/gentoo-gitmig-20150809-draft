@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/cxterm-5.2.2.ebuild,v 1.2 2003/02/13 17:34:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/cxterm-5.2.2.ebuild,v 1.3 2003/09/07 00:24:01 msterret Exp $
 
 S="${WORKDIR}/${P}"
 SRC_URI="http://umn.dl.sourceforge.net/sourceforge/cxterm/cxterm-5.2.2.tgz"
@@ -24,9 +24,9 @@ src_compile() {
 	./configure --prefix=/usr \
 				--mandir=/usr/share/man \
 				--infodir=/usr/share/info || die "./configure failed"
-					
+
 	make CFLAGS="${CFLAGS}" || die
-	
+
 }
 
 src_install() {
@@ -35,8 +35,8 @@ src_install() {
 			prefix=${D}/usr \
 			mandir=${D}/usr/share/man \
 			infodir=${D}/usr/share/info \
-			install || die	
-	
+			install || die
+
 	dodoc README-5.2 INSTALL-5.2 Doc/*
 	docinto tutorial-1
 	dodoc Doc/tutorial-1/*
