@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.3.1-r2.ebuild,v 1.5 2004/04/27 23:44:15 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.3.1-r2.ebuild,v 1.6 2004/05/01 21:12:31 pvdabeel Exp $
 
 inherit nsplugins
 
@@ -9,6 +9,7 @@ DESCRIPTION="IBM JRE 1.3.1"
 SRC_URI="${At}"
 HOMEPAGE="http://www6.software.ibm.com/dl/dklx130/dklx130-p"
 DEPEND=">=dev-java/java-config-0.2.5"
+RESTRICT="fetch"
 PROVIDE="virtual/jre-1.3.1
 		virtual/java-scheme-2"
 SLOT="1.3"
