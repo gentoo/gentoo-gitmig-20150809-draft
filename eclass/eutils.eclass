@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.130 2004/12/24 07:16:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.131 2004/12/26 07:09:59 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1260,19 +1260,19 @@ cdrom_get_cds() {
 
 	# now we see if the user gave use CD_ROOT ...
 	# if they did, let's just believe them that it's correct
-	if [ ! -z "${CD_ROOT}" ] ; then
-		export CDROM_ROOT="${CD_ROOT}"
+	if [[ ! -z ${CD_ROOT} ]] ; then
+		export CDROM_ROOT=${CD_ROOT}
 		einfo "Found CD #${CDROM_CURRENT_CD} root at ${CDROM_ROOT}"
 		return
 	fi
 	# do the same for CD_ROOT_X
-	if [ ! -z "${CD_ROOT_1}" ] ; then
+	if [[ ! -z ${CD_ROOT_1} ]] ; then
 		local var=
 		cdcnt=0
-		while [ ${cdcnt} -lt ${CDROM_TOTAL_CDS} ] ; do
+		while [[ ${cdcnt} -lt ${CDROM_TOTAL_CDS} ]] ; do
 			cdcnt=$((cdcnt + 1))
 			var="CD_ROOT_${cdcnt}"
-			if [ -z "${!var}" ] ; then
+			if [[ -z ${!var} ]] ; then
 				eerror "You must either use just the CD_ROOT"
 				eerror "or specify ALL the CD_ROOT_X variables."
 				eerror "In this case, you will need ${CDROM_TOTAL_CDS} CD_ROOT_X variables."
@@ -1285,9 +1285,9 @@ cdrom_get_cds() {
 		return
 	fi
 
-	if [ ${CDROM_TOTAL_CDS} -eq 1 ] ; then
+	if [[ ${CDROM_TOTAL_CDS} -eq 1 ]] ; then
 		einfon "This ebuild will need the "
-		if [ -z "${CDROM_NAME}" ] ; then
+		if [[ -z ${CDROM_NAME} ]] ; then
 			echo "cdrom for ${PN}."
 		else
 			echo "${CDROM_NAME}."
@@ -1301,10 +1301,10 @@ cdrom_get_cds() {
 	else
 		einfo "This package will need access to ${CDROM_TOTAL_CDS} cds."
 		cdcnt=0
-		while [ ${cdcnt} -lt ${CDROM_TOTAL_CDS} ] ; do
+		while [[ ${cdcnt} -lt ${CDROM_TOTAL_CDS} ]] ; do
 			cdcnt=$((cdcnt + 1))
 			var="CDROM_NAME_${cdcnt}"
-			[ ! -z "${!var}" ] && einfo " CD ${cdcnt}: ${!var}"
+			[[ ! -z ${!var} ]] && einfo " CD ${cdcnt}: ${!var}"
 		done
 		echo
 		einfo "If you do not have the CDs, but have the data files"
@@ -1312,7 +1312,7 @@ cdrom_get_cds() {
 		einfo "the following variables so they point to the right place:"
 		einfon ""
 		cdcnt=0
-		while [ ${cdcnt} -lt ${CDROM_TOTAL_CDS} ] ; do
+		while [[ ${cdcnt} -lt ${CDROM_TOTAL_CDS} ]] ; do
 			cdcnt=$((cdcnt + 1))
 			echo -n " CD_ROOT_${cdcnt}"
 		done
@@ -1335,18 +1335,18 @@ cdrom_load_next_cd() {
 	export CDROM_CURRENT_CD=$((CDROM_CURRENT_CD + 1))
 	local var=
 
-	if [ ! -z "${CD_ROOT}" ] ; then
+	if [[ ! -z ${CD_ROOT} ]] ; then
 		einfo "Using same root as before for CD #${CDROM_CURRENT_CD}"
 		return
 	fi
 
 	unset CDROM_ROOT
 	var=CDROM_ROOTS_${CDROM_CURRENT_CD}
-	if [ -z "${!var}" ] ; then
+	if [[ -z ${!var} ]] ; then
 		var="CDROM_CHECK_${CDROM_CURRENT_CD}"
 		cdrom_locate_file_on_cd ${!var}
 	else
-		export CDROM_ROOT="${!var}"
+		export CDROM_ROOT=${!var}
 	fi
 
 	einfo "Found CD #${CDROM_CURRENT_CD} root at ${CDROM_ROOT}"
@@ -1360,29 +1360,29 @@ cdrom_load_next_cd() {
 # (1) the file is found on a mounted cdrom
 # (2) the user hits CTRL+C
 cdrom_locate_file_on_cd() {
-	while [ -z "${CDROM_ROOT}" ] ; do
+	while [[ -z ${CDROM_ROOT} ]] ; do
 		local dir="$(dirname ${@})"
 		local file="$(basename ${@})"
 		local mline=""
 		local showedmsg=0
 
-		for mline in `mount | egrep -e '(iso|cdrom)' | awk '{print $3}'` ; do
-			[ -d "${mline}/${dir}" ] || continue
-			[ ! -z "$(find ${mline}/${dir} -iname ${file} -maxdepth 1)" ] \
+		for mline in $(mount | egrep -e '(iso|cdrom)' | awk '{print $3}') ; do
+			[[ -d ${mline}/${dir} ]] || continue
+			[[ ! -z $(find ${mline}/${dir} -iname ${file} -maxdepth 1) ]] \
 				&& export CDROM_ROOT=${mline}
 		done
 
-		if [ -z "${CDROM_ROOT}" ] ; then
+		if [[ -z ${CDROM_ROOT} ]] ; then
 			echo
-			if [ ${showedmsg} -eq 0 ] ; then
-				if [ ${CDROM_TOTAL_CDS} -eq 1 ] ; then
-					if [ -z "${CDROM_NAME}" ] ; then
+			if [[ ${showedmsg} -eq 0 ]] ; then
+				if [[ ${CDROM_TOTAL_CDS} -eq 1 ]] ; then
+					if [[ -z ${CDROM_NAME} ]] ; then
 						einfo "Please insert the cdrom for ${PN} now !"
 					else
 						einfo "Please insert the ${CDROM_NAME} cdrom now !"
 					fi
 				else
-					if [ -z "${CDROM_NAME_1}" ] ; then
+					if [[ -z ${CDROM_NAME_1} ]] ; then
 						einfo "Please insert cd #${CDROM_CURRENT_CD} for ${PN} now !"
 					else
 						local var="CDROM_NAME_${CDROM_CURRENT_CD}"
