@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b9d5ad423381937b3ce42e70033e2746 ipvsadm-1.24.ebuild 1386
-MD5 e621505b1ed69a84bcc3410c98a59e1f ChangeLog 2925
+MD5 879b6f3ade490fd69d6cf2e2975563c5 ipvsadm-1.24.ebuild 1395
+MD5 a7d59c3d1998f50b0fb12b9e360d50df ChangeLog 3021
 MD5 f8149340999d7088d0b706591237ec73 metadata.xml 332
 MD5 b818e88a27e2ef08d63aa0cefbdf4234 ipvsadm-1.21-r1.ebuild 1322
 MD5 1b3d2656b8219fca2114015a5ed932c9 files/digest-ipvsadm-1.24 63
@@ -11,7 +11,7 @@ MD5 3b3c592fdf57e4760d02989b8ee11562 files/ipvsadm-init 764
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCLzjTgMUyd/cdjWsRAnr9AJ9y/ondB0CAeFDo/ZDwAC0u7qD2+wCdHnee
-ZuPsBkRWJ6uHCxCbWzR8teg=
-=sAxt
+iD8DBQFCMaFnZ/iYVBmujdURApaUAKCGH/ilhroQZrYRqiLn2hfqgd0tAgCfSzXn
+r3OvnhxEOP/QP/hzUrFMUzE=
+=xLOr
 -----END PGP SIGNATURE-----
