@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kde/xmms-kde-3.1_beta1.ebuild,v 1.1 2004/01/25 09:33:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kde/xmms-kde-3.1_beta1.ebuild,v 1.2 2004/03/10 13:26:20 aliz Exp $
 
 inherit kde-base
 
@@ -15,7 +15,8 @@ SRC_URI="http://osdn.dl.sourceforge.net/sourceforge/xmms-kde/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
 DEPEND="xmms? >=media-sound/xmms-1.2.7-r23
-	sdl? >=media-libs/smpeg-0.4.4-r4"
+	sdl? >=media-libs/smpeg-0.4.4-r4
+	sys-devel/autoconf"
 #RDEPEND=""
 
 need-kde 3.1
@@ -25,10 +26,13 @@ need-kde 3.1
 
 src_unpack() {
 	kde_src_unpack
+	epatch ${FILESDIR}/${P}-libsuffix-fix.patch
+	aclocal
+	autoconf
 }
 
 src_compile() {
-	myconf="--enable-final --disable-gtk-test `use_enable xinerama`"
+	myconf="--enable-final --disable-libsuffix --disable-gtk-test `use_enable xinerama`"
 
 	kde_src_compile
 }
