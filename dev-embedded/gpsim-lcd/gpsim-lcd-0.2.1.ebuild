@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-lcd/gpsim-lcd-0.2.1.ebuild,v 1.1 2005/01/03 00:35:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-lcd/gpsim-lcd-0.2.1.ebuild,v 1.2 2005/01/05 08:13:02 dragonheart Exp $
 
-inherit eutils gnuconfig
+inherit eutils
 
 MY_PN="${PN/gpsim-}"
 MY_P="${MY_PN}-${PV}"
@@ -16,18 +16,28 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=">=dev-embedded/gpsim-0.21"
+DEPEND=">=dev-embedded/gpsim-0.21
+	>=sys-devel/automake-1.8
+	>=sys-devel/autoconf-2.59
+	sys-apps/sed"
+
+RDEPEND=">=dev-embedded/gpsim-0.21"
+
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	gnuconfig_update
+src_compile() {
+	sed -i -e 's|  $srcdir/configure|  echo|' autogen.sh
+	einfo "please ignore warning"
+	env WANT_AUTOCONF=2.50 WANT_AUTOMAKE=1.8 ./autogen.sh || "autogen failed"
+	econf || die "configure failed"
+	emake || die "make failed"
 }
 
 src_install() {
 	emake DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
 	cp -ra ${S}/examples ${D}/usr/share/doc/${PF}
+	chown root:root -R ${D}/usr/share/doc/${PF}
 	find ${D}/usr/share/doc/${PF} -name 'Makefile*' -exec rm -f \{} \;
 }
