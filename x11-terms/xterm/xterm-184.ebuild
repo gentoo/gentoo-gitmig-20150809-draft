@@ -1,19 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-184.ebuild,v 1.15 2004/04/11 18:28:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-184.ebuild,v 1.16 2004/04/13 14:22:17 vapier Exp $
 
 inherit eutils
 
-IUSE="truetype Xaw3d"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="Terminal Emulator for X Windows"
 HOMEPAGE="http://dickey.his.com/xterm/"
 SRC_URI="ftp://invisible-island.net/${PN}/${P}.tgz"
 
-SLOT="0"
 LICENSE="X11"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64"
+IUSE="truetype Xaw3d"
 
 DEPEND="x11-base/xorg-x11
 	sys-apps/utempter
@@ -55,6 +53,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install-full || die
-
 	dodoc README* INSTALL*
 }
