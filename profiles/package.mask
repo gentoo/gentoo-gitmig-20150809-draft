@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3262 2004/10/18 18:16:37 robbat2 Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3263 2004/10/18 18:26:13 latexer Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -68,6 +68,7 @@ net-wireless/openwrt-cvs
 sys-kernel/config-kernel
 # Related ebuilds that depped on config-kernel
 sys-fs/submount
+=sys-fs/lufs-0.9.7-r2
 
 # <spyderous@gentoo.org (12 Oct 2004)
 # work in progress
