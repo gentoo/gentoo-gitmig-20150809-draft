@@ -1,0 +1,25 @@
+# ChangeLog for dev-cpp/libpqpp
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/ChangeLog,v 1.1 2004/01/16 16:24:09 nakano Exp $
+
+*libpqpp-4.0-r2 (16 Jan 2004)
+
+  16 Jan 2004; Masatomo Nakano <nakano@gentoo.org> libpqpp-4.0-r1.ebuild,
+  libpqpp-4.0-r2.ebuild, metadata.xml, files/libpqpp-4.0-gentoo.patch:
+  Moved category and renamed package name. And fixed PostgreSQL dirs as -r2.
+
+*libpq++-4.0-r1 (19 Jul 2003)
+
+  19 Jul 2003; jje <jje@gentoo.org> libpq++-4.0-r1.ebuild,
+  files/libpq++-gentoo.patch:
+  Added patch to remove DLLIMPORT defines.
+
+*libpq++-4.0 (16 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+  16 Jun 2003; Masatomo Nakano <nakano@gentoo.org> :
+  Initial import. Thanks to marco <marco@md2.ath.cx>
+  #21737
+
