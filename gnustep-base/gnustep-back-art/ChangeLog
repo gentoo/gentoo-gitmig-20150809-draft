@@ -1,6 +1,19 @@
 # ChangeLog for gnustep-base/gnustep-back-art
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.18 2005/01/10 20:29:01 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.19 2005/03/17 20:54:20 fafhrd Exp $
+
+*gnustep-back-art-0.9.4-r1 (17 Mar 2005)
+
+  17 Mar 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  +files/font-make-fix.patch-0.9.5_pre20050312,
+  +files/gnustep-back-art-0.9.4-ft219-backport.patch.bz2,
+  +gnustep-back-art-0.9.4-r1.ebuild, gnustep-back-art-0.9.4.ebuild,
+  -gnustep-back-art-0.9.5_pre20041203.ebuild,
+  -gnustep-back-art-0.9.5_pre20050106.ebuild,
+  +gnustep-back-art-0.9.5_pre20050312.ebuild:
+  ebuild updates for GNUstep base, libs, and apps across the board; proper
+  versions (to be stabilized, in due time) added where apropos, cvs-pull
+  versions updated where needed
 
   10 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org>
   gnustep-back-art-0.9.4.ebuild:

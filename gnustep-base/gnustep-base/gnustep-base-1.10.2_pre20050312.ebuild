@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.2_pre20050106.ebuild,v 1.1 2005/01/10 16:22:16 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.2_pre20050312.ebuild,v 1.1 2005/03/17 20:52:30 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -24,7 +24,7 @@ LICENSE="GPL-2 LGPL-2.1"
 
 IUSE="${IUSE} doc gcc-libffi"
 DEPEND="${GNUSTEP_CORE_DEPEND}
-	>=gnustep-base/gnustep-make-1.10.1_pre20050106
+	>=gnustep-base/gnustep-make-1.10.1_pre20050312
 	|| (
 		gcc-libffi? ( >=sys-devel/gcc-3.3.2 )
 		>=dev-libs/libffi-3* )
@@ -53,7 +53,7 @@ pkg_setup() {
 
 src_unpack() {
 	cvs_src_unpack ${A}
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/base-user-defaults.patch-1.10.0
+	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/base-user-defaults.patch-${PV}
 	cd ${S}/Source
 }
 

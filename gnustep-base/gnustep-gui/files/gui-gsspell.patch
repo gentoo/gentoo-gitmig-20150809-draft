@@ -1,0 +1,15 @@
+Index: Tools/GNUmakefile.preamble
+===================================================================
+RCS file: /cvsroot/gnustep/gnustep/core/gui/Tools/GNUmakefile.preamble,v
+retrieving revision 1.6
+diff -u -r1.6 GNUmakefile.preamble
+--- Tools/GNUmakefile.preamble	2 Sep 2004 03:27:54 -0000	1.6
++++ Tools/GNUmakefile.preamble	28 Feb 2005 22:35:52 -0000
+@@ -34,6 +34,7 @@
+ gpbs_TOOL_LIBS += -lgnustep-gui $(SYSTEM_LIBS)
+ set_show_service_TOOL_LIBS += -lgnustep-gui $(SYSTEM_LIBS)
+ gopen_TOOL_LIBS += -lgnustep-gui $(SYSTEM_LIBS)
++GSspell_TOOL_LIBS += $(ADDITIONAL_DEPENDS)
+ 
+ # Additional libraries when linking applications
+ # ADDITIONAL_GUI_LIBS +=

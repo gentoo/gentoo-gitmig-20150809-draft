@@ -1,22 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.9.5_pre20050106.ebuild,v 1.1 2005/01/10 16:22:57 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.9.4-r1.ebuild,v 1.1 2005/03/17 20:54:20 fafhrd Exp $
 
-ECVS_CVS_COMMAND="cvs -q"
-ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
-ECVS_USER="anoncvs"
-ECVS_AUTH="ext"
-ECVS_MODULE="gnustep/core/back"
-ECVS_CO_OPTS="-P -D ${PV/*_pre}"
-ECVS_UP_OPTS="-dP -D ${PV/*_pre}"
-ECVS_TOP_DIR="${DISTDIR}/cvs-src/savannah.gnu.org-gnustep"
-inherit gnustep cvs
+inherit gnustep
 
-S=${WORKDIR}/${ECVS_MODULE}
+S=${WORKDIR}/gnustep-back-${PV}
 
 DESCRIPTION="libart_lgpl back-end component for the GNUstep GUI Library."
-HOMEPAGE="http://www.gnustep.org"
 
+HOMEPAGE="http://www.gnustep.org"
+SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-back-${PV}.tar.gz"
 KEYWORDS="~ppc ~x86 ~amd64 ~sparc ~alpha"
 SLOT="0"
 LICENSE="LGPL-2.1"
@@ -25,18 +18,23 @@ PROVIDE="virtual/gnustep-back"
 
 IUSE="${IUSE} opengl xim doc"
 DEPEND="${GNUSTEP_GUI_DEPEND}
+	~gnustep-base/gnustep-gui-0.9.4
 	virtual/xft
-	>=media-libs/freetype-2.1.5
-	<media-libs/freetype-2.1.8
-	=gnustep-base/gnustep-gui-${PV}*
+	~media-libs/freetype-2.1.9
 	opengl? ( virtual/opengl virtual/glu )
 	gnustep-libs/artresources
 	>=gnustep-base/mknfonts-0.5
 	>=media-libs/libart_lgpl-2.3*"
 RDEPEND="${DEPEND}
-${DOC_RDEPEND}"
+	${DOC_RDEPEND}"
 
 egnustep_install_domain "System"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-ft219-backport.patch.bz2
+}
 
 src_compile() {
 	egnustep_env

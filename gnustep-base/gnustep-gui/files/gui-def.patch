@@ -1,0 +1,16 @@
+Index: Source/GNUmakefile.postamble
+===================================================================
+RCS file: /cvsroot/gnustep/gnustep/core/gui/Source/GNUmakefile.postamble,v
+retrieving revision 1.15
+retrieving revision 1.16
+diff -u -r1.15 -r1.16
+--- Source/GNUmakefile.postamble	3 Dec 2003 01:55:36 -0000	1.15
++++ Source/GNUmakefile.postamble	6 Oct 2004 03:34:46 -0000	1.16
+@@ -116,6 +116,6 @@
+ 	rm -f $@
+ 	rm -f _tmp.def
+ 	cat win32-def.top > $@
+-	nm $^ | grep '^........ [T] _' | sed 's/[^_]*_//' > _tmp.def
++	nm $^ | grep '^........ [TR] _' | sed 's/[^_]*_//' > _tmp.def
+ 	cat _tmp.def | grep "_class_name_" >> $@
+ 	rm -rf _tmp.def
