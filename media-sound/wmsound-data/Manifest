@@ -1,6 +1,16 @@
-MD5 821716f20e0b7cd53e0017abcdaeca65 ChangeLog 563
-MD5 c699f693ce8c8d7acecf19bb077d203e metadata.xml 252
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f4a09fd4e24c08a964d1aa75b2dd71fc ChangeLog 670
+MD5 05e0de5fb286479de6e21e109736e715 metadata.xml 252
 MD5 5dc275272b8643f55e600bccf68ca3bc wmsound-data-1.0.0.ebuild 1038
 MD5 6ebb686993e5389ff62acef3947a5a34 files/WMSound 548
 MD5 dfd99abbbed5fb6043f205b03b5a5710 files/digest-wmsound-data-1.0.0 126
 MD5 3ab0a2dfe0b3d5a2b1b3182968a19ed3 files/wmsound-soundset 312
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBHizUI1lqEGTUzyQRAsB+AJsHd/Grhit3Cf325irBzpkigi4rMwCghtsA
+GGmMnbUcqDp1G30DeBZnno0=
+=+qLE
+-----END PGP SIGNATURE-----
