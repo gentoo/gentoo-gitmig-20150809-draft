@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.4-r1.ebuild,v 1.2 2005/01/18 05:43:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.4-r2.ebuild,v 1.1 2005/01/26 23:13:24 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -21,6 +21,8 @@ src_unpack() {
 
 	# Upstream patch to support newer linux #77301
 	epatch "${FILESDIR}"/${PV}-linux26-slab.patch
+	# Upstream patch to fix display on 64bit systems
+	epatch "${FILESDIR}"/${PV}-64bit-display.patch
 
 	# Clean up the makefile
 	# firstly we want to control stripping
@@ -50,7 +52,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "install failed"
+	make install ldconfig="true" DESTDIR="${D}" || die "install failed"
 
 	insinto /usr/include/proc
 	doins proc/*.h || die "doins include"
