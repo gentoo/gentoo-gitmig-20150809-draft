@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.3.ebuild,v 1.7 2004/08/12 19:52:03 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.3.ebuild,v 1.8 2004/08/26 14:43:50 caleb Exp $
 
-inherit kde-dist flag-o-matic
+inherit kde-dist flag-o-matic eutils
 
 DESCRIPTION="KDE multimedia apps: noatun, kscd, artsbuilder..."
 
@@ -23,6 +23,7 @@ DEPEND="~kde-base/kdebase-${PV}
 
 src_unpack() {
 	kde_src_unpack
+	epatch ${FILESDIR}/3.2.3-Makefile-synth.am.diff
 }
 
 src_compile() {

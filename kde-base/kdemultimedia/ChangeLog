@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.119 2004/08/26 14:35:19 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.120 2004/08/26 14:43:50 caleb Exp $
+
+  26 Aug 2004; Caleb Tennis <caleb@gentoo.org> kdemultimedia-3.2.3.ebuild,
+  kdemultimedia-3.3.0.ebuild, files/3.2.3-Makefile-synth.am.diff,
+  files/3.3.0-Makefile-synth.am.diff:
+  Add two other parallel make compilation fixes (Bug #53847)
 
   26 Aug 2004; Caleb Tennis <caleb@gentoo.org> kdemultimedia-3.3.0.ebuild,
   files/3.3.0-Makefile.am.diff:
