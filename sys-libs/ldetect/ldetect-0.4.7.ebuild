@@ -1,6 +1,6 @@
-# Copyright 2002 damien krotkine <dams@gentoo.org>
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect/ldetect-0.4.7.ebuild,v 1.8 2003/09/10 22:43:17 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect/ldetect-0.4.7.ebuild,v 1.9 2003/09/29 21:40:27 mholzer Exp $
 
 ECVS_ANON="no"
 ECVS_USER="anoncvs"
@@ -32,4 +32,3 @@ src_install() {
 	cd ../../ldetect;
 	make prefix=${D}/usr install
 }
-

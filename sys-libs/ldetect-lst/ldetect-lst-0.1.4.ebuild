@@ -1,6 +1,6 @@
-# Copyright 2002 damien krotkine <dams@gentoo.org>
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect-lst/ldetect-lst-0.1.4.ebuild,v 1.8 2003/09/10 04:34:14 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldetect-lst/ldetect-lst-0.1.4.ebuild,v 1.9 2003/09/29 21:41:05 mholzer Exp $
 
 ECVS_ANON="no"
 ECVS_USER="anoncvs"
