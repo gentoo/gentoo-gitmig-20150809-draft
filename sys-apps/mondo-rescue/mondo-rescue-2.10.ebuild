@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-2.10.ebuild,v 1.1 2004/08/12 21:31:57 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-2.10.ebuild,v 1.2 2004/08/13 12:21:56 pfeifer Exp $
 
 inherit libtool
 
@@ -27,6 +27,12 @@ RDEPEND="app-arch/afio
 		>=sys-boot/syslinux-1.52"
 
 S=${WORKDIR}/${PN/-rescue/}-${PV}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	chmod 750 configure
+}
 
 src_compile() {
 	elibtoolize
