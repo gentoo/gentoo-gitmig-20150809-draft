@@ -1,9 +1,19 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.1 2002/02/18 21:34:56 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.2 2002/02/22 15:24:26 tod Exp $
+
+*sylpheed-claws-0.7.2 ( 22 Feb 2002 )
+
+  22 Feb 2002; T.Neidt <tod@gentoo.org> ChangeLog files/digest-sylpheed-claws-0.7.2 sylpheed-claws-0.7.2:
+  
+  Updated version. Simple copy of Karl's 0.7.1 ebuild with Description added.
 
 *sylpheed-claws-0.7.1 ( 18 Feb 2002 )
 
+  22 Feb 2002; T.Neidt <tod@gentoo.org> ChangeLog,  sylpheed-claws-0.7.1:
+
+  Added Description to ebuild.
+  
   18 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog files/digest-sylpheed-claws-0.7.1 sylpheed-claws-0.7.1:
   
   A bleeding-edge fork off the Sylpheed main branch.

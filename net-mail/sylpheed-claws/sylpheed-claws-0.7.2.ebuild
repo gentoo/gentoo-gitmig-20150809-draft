@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.7.1.ebuild,v 1.2 2002/02/22 15:24:26 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.7.2.ebuild,v 1.1 2002/02/22 15:24:26 tod Exp $
 
 S=${WORKDIR}/sylpheed-${PV}claws
 DESCRIPTION="Bleeding edge version of Sylpheed"
