@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.58 2003/06/26 20:12:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.59 2003/06/26 20:24:17 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -60,7 +60,7 @@ RDEPEND="
 	nls? ( sys-devel/gettext )
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
 	pam? ( >=sys-libs/pam-0.75 )
-	pdflib? ( >=media-libs/pdflib-4.0.3 >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
+	pdflib? ( >=media-libs/pdflib-4.0.3 >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 >=media-libs/tiff-3.5.5 )
 	png? ( >=media-libs/libpng-1.2.5 )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	qt? ( >=x11-libs/qt-2.3.0 )
@@ -222,32 +222,33 @@ php_src_compile() {
 	use gdbm && myconf="${myconf} --with-gdbm=/usr"
 	use informix && [ -n "${INFORMIXDIR}" ] && myconf="${myconf} --with-informix=${INFORMIXDIR}"
 	use java && myconf="${myconf} --with-java=${JAVA_HOME}"
-	use jpeg && myconf="${myconf} --with-jpeg --with-jpeg-dir=/usr --enable-exif" || myconf="${myconf} --without-jpeg"
-	use jpeg && LDFLAGS="${LDFLAGS} -ljpeg"
 	use mcal && myconf="${myconf} --with-mcal=/usr"
 	use oci8 && [ -n "${ORACLE_HOME}" ] && myconf="${myconf} --with-oci8=${ORACLE_HOME}"
 	use odbc && myconf="${myconf} --with-unixODBC=/usr"
 	use postgres && myconf="${myconf} --with-pgsql=/usr" || myconf="${myconf} --without-pgsql"
 	use snmp && myconf="${myconf} --with-snmp --enable-ucd-snmp-hack"
-	use tiff && LDFLAGS="${LDFLAGS} -ltiff"
-	use tiff && myconf="${myconf} --with-tiff-dir=/usr" || myconf="${myconf} --without-tiff"
+	use X && myconf="${myconf} --with-xpm-dir=/usr/X11R6" LDFLAGS="${LDFLAGS} -L/usr/X11R6/lib"
 	
-	# This chunk is intended for png, as there are several things that need it
+	# This chunk is intended for png/tiff/jpg, as there are several things that need them, indepentandly!
 	REQUIREPNG=
-	use pdflib && myconf="${myconf} --with-pdflib=/usr --with-png-dir=/usr" 
-	use pdflib && REQUIREPNG=1 
+	REQUIREJPG=
+	REQUIRETIFF=
+	use pdflib && myconf="${myconf} --with-pdflib=/usr" 
+	use pdflib && REQUIREPNG=1 REQUIREJPG=1 REQUIRETIFF=1
 	if [ -n "`use gd-external`" ] ; then
 		myconf="${myconf} --with-gd=/usr"
 		REQUIREPNG=1
 	elif [ -n "`use gd`" ] ; then
 		myconf="${myconf} --with-gd"
 		REQUIREPNG=1
+		REQUIREJPG=1
 	else
 		myconf="${myconf} --without-gd"
 	fi
 	use png || [ -n "${REQUIREPNG}" ] && myconf="${myconf} --with-png-dir=/usr" || myconf="${myconf} --without-png"
-	echo conf:${myconf}
-	
+	use jpeg || [ -n "${REQUIREJPG}" ] && myconf="${myconf} --with-jpeg --with-jpeg-dir=/usr --enable-exif" LDFLAGS="${LDFLAGS} -ljpeg" || myconf="${myconf} --without-jpeg" 
+	use tiff || [ -n "${REQUIRETIFF}" ] && myconf="${myconf} --with-tiff-dir=/usr" LDFLAGS="${LDFLAGS} -ltiff" || myconf="${myconf} --without-tiff"
+
 	#use mysql && myconf="${myconf} --with-mysql=/usr" || myconf="${myconf} --without-mysql"
 	if [ -n "`use mysql`" ] ; then
 		if [ -n "`mysql_config | grep '4.1'`" ] ; then
@@ -286,15 +287,12 @@ php_src_compile() {
 	use imap && use ssl && \
 	if [ -n "`strings ${ROOT}/usr/lib/c-client.a 2>/dev/null | grep ssl_onceonlyinit`" ]; then
 		myconf="${myconf} --with-imap-ssl"
+		einfo "Building IMAP with SSL support."
 	else
 		ewarn "USE=\"imap ssl\" specified but IMAP is built WITHOUT ssl support."
 		ewarn "Skipping IMAP-SSL support."
 	fi
 
-	if [ -n "`use X`" ] ; then
-		myconf="${myconf} --with-xpm-dir=/usr/X11R6"
-		LDFLAGS="${LDFLAGS} -L/usr/X11R6/lib"
-	fi
 	
 	# These were previously optional, but are now included directly as PEAR needs them.
 	# Zlib is needed for XML
