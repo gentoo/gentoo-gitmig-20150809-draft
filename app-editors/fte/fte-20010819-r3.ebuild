@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r3.ebuild,v 1.7 2002/08/14 18:36:00 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r3.ebuild,v 1.8 2002/09/23 07:07:37 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Lightweight text-mode editor"
@@ -18,7 +18,7 @@ DEPEND="${RDEPEND}
 TARGETS=""
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
 if [ "`use slang`" ] ; then
