@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1c8e5ade3b51c51b0aff1f2fd4c28517 alternate-2.6a.ebuild 455
-MD5 21cd86f6ac52d0214a5b8d0428499c49 alternate-2.7.ebuild 454
-MD5 f734a1ed6bbcbd49dcbe7753b5860515 alternate-2.4.ebuild 445
-MD5 4f78dc7544f2b579499bf1f62cece413 ChangeLog 1331
+MD5 9a08e8a38b93a755fed7f6225f3ab388 ChangeLog 1443
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 05581db8fef9b3a6a435f1ce632aa7f1 files/digest-alternate-2.6a 65
+MD5 f734a1ed6bbcbd49dcbe7753b5860515 alternate-2.4.ebuild 445
+MD5 1c2a9c4551c72fcc8074669200e5d655 alternate-2.7.ebuild 452
 MD5 3da12cdf98706416763bcc465a90dce1 files/digest-alternate-2.4 64
+MD5 05581db8fef9b3a6a435f1ce632aa7f1 files/digest-alternate-2.6a 65
 MD5 ad241b7ecbc46d9f722cc1f74f9abbd3 files/digest-alternate-2.7 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBJiW9LLFUmVNQ7rkRAlT0AJ48lG5Sx8EFM+HKlse/elmMIXTnswCfX7kR
+l9GvvBk9HD2Vy/d6a0rkwsg=
+=qt6v
+-----END PGP SIGNATURE-----
