@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.50-r1.ebuild,v 1.1 2004/02/08 04:05:54 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.50-r1.ebuild,v 1.2 2004/02/14 22:05:07 spock Exp $
 
 inherit gcc eutils
 
@@ -17,6 +17,8 @@ IUSE="gtk gnome"
 DEPEND="virtual/glibc
 	dev-libs/libpcre
 	gtk? ( =x11-libs/gtk+-1.2* )"
+
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
