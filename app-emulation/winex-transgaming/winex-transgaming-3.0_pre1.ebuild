@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-transgaming/winex-transgaming-3.0_pre1.ebuild,v 1.1 2003/03/25 10:49:59 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-transgaming/winex-transgaming-3.0_pre1.ebuild,v 1.2 2003/04/06 08:59:29 phoenix Exp $
 
 IUSE="cups opengl"
 
@@ -8,7 +8,7 @@ MY_P="winex3-${PV/pre/pre-}"
 DESCRIPTION="WineX is a distribution of Wine with enhanced DirectX for gaming"
 HOMEPAGE="http://www.transgaming.com/"
 
-SLOT="0"
+SLOT="3"
 KEYWORDS="~x86"
 LICENSE="Aladdin"
 
