@@ -8,8 +8,8 @@ This page contains information about Keychain, an OpenSSH-compatible RSA/DSA key
 application for bash.
 </abstract>
 
-<version>1.1</version>
-<date>07 Sep 2001</date>
+<version>1.2</version>
+<date>09 Sep 2001</date>
 
 <chapter>
 <title>Keychain Intro</title>
@@ -61,7 +61,7 @@ time you really need to reinitialize the long-running <c>ssh-agent</c> process.
 
 <p>
 The most recent release of <c>keychain</c> can be found here:<br/><br/>
-<uri>http://www.ibiblio.org/gentoo/distfiles/keychain-1.1.tar.bz2</uri>
+<uri>http://www.ibiblio.org/gentoo/distfiles/keychain-1.2.tar.bz2</uri>
 </p>
 </body>
 </section>
@@ -93,7 +93,16 @@ unencrypted private keys.
 # ChangeLog for KeyChain; http://www.gentoo.org/projects/keychain
 # Copyright 2001 Gentoo Technologies, Inc.; Distributed under the GPL
 
-*keychain 1.0.1; fixes for calling "pidof"; README; ChangeLog
+*keychain 1.2
+
+  09 Sep 2001; README updates to reflect new changes.
+  
+  09 Sep 2001; Applied great patch from someone who wishes to remain
+  anonymous.  bash 1/zsh/sh compatibility; now only tries to kill *your*
+  ssh-agent processes, version fix, .ssh-agent file creation error 
+  detection.  Thanks! 
+
+*keychain 1.1; fixes for calling "pidof"; README; ChangeLog
 
   07 Sep 2001;
   Addition of README stating that keychain requires bash 2.0 or greater,
@@ -103,7 +112,7 @@ unencrypted private keys.
   Explicitly added /sbin and /usr/sbin to path, and then called "pidof".
   I think that this is a bit more robust.
   
-  06 Sep 2001; from John Ellson &gt;ellson@lucent.com&lt;: 
+  06 Sep 2001; from John Ellson (ellson@lucent.com): 
   "pidof" changed to "/sbin/pidof", since it's probably not in $PATH
  
   06 Sep 2001;
