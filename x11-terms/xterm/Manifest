@@ -4,10 +4,10 @@ MD5 37288ae5949a75dcd71d219ece1de344 xterm-196-r1.ebuild 1637
 MD5 32a785da80adfaa874f82ae27be29b46 xterm-196.ebuild 1360
 MD5 1765e27e1dc3a249bf40d42d1e1a01b8 xterm-197.ebuild 1624
 MD5 a2b3efaad26b861049f01b60d125758e xterm-199.ebuild 1614
-MD5 7f5015487b25c3f85466826e02d8c085 xterm-200.ebuild 1688
-MD5 262f724e0a5b9a083a6fb77ba48e5e12 files/digest-xterm-197 58
-MD5 22861d1a4affc7229c468095a0103257 files/xterm-184-remove-termcap-breakage.patch 377
-MD5 6fae395e470f08203ce93f62fa6e896c files/digest-xterm-199 58
-MD5 7b7d35cfdf6b4601d1079f1aca757ab5 files/digest-xterm-200 58
+MD5 f4e64a3aa3748e75b1b40f88f326fdef xterm-200.ebuild 1679
 MD5 222267de7af1500b6d28efe51a296e1b files/digest-xterm-196 58
 MD5 222267de7af1500b6d28efe51a296e1b files/digest-xterm-196-r1 58
+MD5 262f724e0a5b9a083a6fb77ba48e5e12 files/digest-xterm-197 58
+MD5 6fae395e470f08203ce93f62fa6e896c files/digest-xterm-199 58
+MD5 22861d1a4affc7229c468095a0103257 files/xterm-184-remove-termcap-breakage.patch 377
+MD5 7b7d35cfdf6b4601d1079f1aca757ab5 files/digest-xterm-200 58
