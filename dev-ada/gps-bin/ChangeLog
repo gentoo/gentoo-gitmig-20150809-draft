@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/gps-bin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/ChangeLog,v 1.1 2003/08/10 02:54:02 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/ChangeLog,v 1.2 2003/08/17 21:31:13 dholm Exp $
+
+  17 Aug 2003; David Holm <dholm@gentoo.org> metadata.xml:
+  Added metadata.xml.
 
 *gps-bin-1.2.2.ebuild (09 Aug 2003)
 
