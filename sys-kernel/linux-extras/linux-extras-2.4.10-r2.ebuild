@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-extras/linux-extras-2.4.10-r2.ebuild,v 1.1 2001/10/08 01:47:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-extras/linux-extras-2.4.10-r2.ebuild,v 1.2 2001/10/08 01:50:29 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -110,7 +110,7 @@ src_unpack() {
 	
 	#apply low-latency patch
 	cd ${S}
-	cat 2.4.10-low-latency.patch.gz | gzip -d | patch -p1
+	cat ${DISTDIR}/2.4.10-low-latency.patch.gz | gzip -d | patch -p1
 	
 	echo "Preparing for compilation..."
 	cd ${S}
