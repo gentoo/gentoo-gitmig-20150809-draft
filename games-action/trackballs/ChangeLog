@@ -1,6 +1,12 @@
 # ChangeLog for games-action/trackballs
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/ChangeLog,v 1.9 2004/08/08 11:49:16 mr_bones_ Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/ChangeLog,v 1.10 2005/01/26 01:04:42 mr_bones_ Exp $
+
+*trackballs-1.0.0-r1 (25 Jan 2005)
+
+  25 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/1.0.0-drift.patch, +trackballs-1.0.0-r1.ebuild:
+  patch to fix mouse drifting (bug #79441) - reported by Yasha Davidov
 
   08 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
   -files/0.9.2-destdir-icons.patch, -files/0.9.2-sparkle.patch,

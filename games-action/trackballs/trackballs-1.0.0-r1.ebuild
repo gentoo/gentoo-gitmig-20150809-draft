@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/trackballs-1.0.0.ebuild,v 1.6 2005/01/26 01:04:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/trackballs-1.0.0-r1.ebuild,v 1.1 2005/01/26 01:04:42 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-RDEPEND="virtual/opengl
+DEPEND="virtual/opengl
 	virtual/glu
 	media-libs/libsdl
 	>=dev-util/guile-1.6*
@@ -22,8 +22,6 @@ RDEPEND="virtual/opengl
 	media-libs/sdl-image
 	media-libs/sdl-ttf
 	sys-libs/zlib"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -31,6 +29,7 @@ src_unpack() {
 	sed -i \
 		-e 's/icons//' share/Makefile.in \
 		|| die "sed share/Makefile.in failed"
+	epatch "${FILESDIR}/${PV}-drift.patch"
 }
 
 src_compile() {
