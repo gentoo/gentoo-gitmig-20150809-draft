@@ -3,7 +3,7 @@ MD5 0e77dde2120847ccb980d905cff77bd1 libmpeg2-0.2.1.ebuild 1282
 MD5 d934d630d1aa33687310af33307797ee libmpeg2-0.3.1.ebuild 1379
 MD5 6d5b592df599a4a9763938769c8fc863 libmpeg2-0.3.2_pre20030625.ebuild 1365
 MD5 19d6eac2dab1da0e1585f8379645609c libmpeg2-0.4.0.ebuild 1139
-MD5 de50ed734378d9387686e820281e7605 libmpeg2-0.4.0b.ebuild 1583
+MD5 000b7c2726ebb0f07b9edc43c4186672 libmpeg2-0.4.0b.ebuild 1602
 MD5 2a17e6b990abf2db666678d21accc928 files/digest-libmpeg2-0.2.1 66
 MD5 ee59810a9eb538c8b6e66e5db9d21399 files/digest-libmpeg2-0.3.1 66
 MD5 a127dad465c6dbf851ee95df74166bc0 files/digest-libmpeg2-0.3.2_pre20030625 73
