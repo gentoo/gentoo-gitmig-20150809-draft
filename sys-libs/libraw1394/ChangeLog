@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libraw1394
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.18 2004/10/19 17:51:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.19 2004/12/04 20:00:44 corsair Exp $
+
+  04 Dec 2004; Markus Rothe <corsair@gentoo.org> libraw1394-0.10.1.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #72992
 
   19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   libraw1394-0.10.1.ebuild, libraw1394-0.9.0.ebuild:
