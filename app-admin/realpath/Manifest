@@ -1,5 +1,5 @@
 MD5 d5afad89a9cad0ff78f995bb25589710 realpath-1.9.3.ebuild 654
-MD5 d5afad89a9cad0ff78f995bb25589710 realpath-1.9.10.ebuild 654
-MD5 1f3231240314144a9d7ac5029dcaa5a0 ChangeLog 578
+MD5 c09fcfed07607f3df8c56fc547ed8a8d realpath-1.9.10.ebuild 659
+MD5 dd5e446604ff8d463a072a5f14f56e9e ChangeLog 709
 MD5 71c6c08064dca9cfc27fb3f8c9292789 files/digest-realpath-1.9.10 62
 MD5 ad4ce8882c1d563642c89dcd344e6b4d files/digest-realpath-1.9.3 61
