@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.1 2005/01/26 16:32:31 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.2 2005/02/03 22:00:12 citizen428 Exp $
+
+*redcloth-3.0.2 (03 Feb 2005)
+
+  03 Feb 2005; Michael Kohl <citizen428@gentoo.org> +redcloth-3.0.2.ebuild:
+  Version bump.
 
 *redcloth-3.0.1 (26 Jan 2005)
 

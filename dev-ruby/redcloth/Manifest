@@ -2,13 +2,15 @@
 Hash: SHA1
 
 MD5 e73ce9a8d885605f369398315d2ef4b5 redcloth-3.0.1.ebuild 914
-MD5 6c949246a655bf1aa7011737d88aadcc ChangeLog 405
+MD5 20086e9ad5e9f2e6e2e7a2adc01cc5e3 ChangeLog 529
 MD5 1a24e0b48460c02e20931fceded24e1a metadata.xml 254
+MD5 c4913327a220d4082973bbdbf0fede9f redcloth-3.0.2.ebuild 914
 MD5 21377cbdd036ae765522479d45792805 files/digest-redcloth-3.0.1 65
+MD5 b9838cf4682185a89eca06878760ad48 files/digest-redcloth-3.0.2 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB98Yp/UDVUK2NELYRAkK7AKDWJxC4Ywb++sv4kLziLBt+2/mO8wCfRxo1
-X5G0T6JhuRJL/Z0h3x8PzNQ=
-=Xkgi
+iD8DBQFCAp76/UDVUK2NELYRAoJtAKC0yLbVBALfOLjAkDzAObajU0wxgwCgw4Xb
+fA4ShMq6B6Si7lQsm775d1g=
+=F0Zp
 -----END PGP SIGNATURE-----
