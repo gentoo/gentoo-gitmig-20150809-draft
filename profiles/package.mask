@@ -57,10 +57,6 @@ net-mail/vqadmin
 # Remask this qt
 =x11-libs/qt-3.3.0_beta1
 
-# <aether@gentoo.org> (02 Jan 2004)
-# New java-config with new features and a lot of changed code
-=dev-java/java-config-1.2*
-
 # <carpaski@gentoo.org> (01 Jan 2004)
 # API change. All portage tools that meet this change in API
 # should be masked version-specific and follow immediately underneath.
