@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.1.ebuild,v 1.2 2004/04/28 23:13:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.1.ebuild,v 1.3 2004/05/01 08:27:54 sejo Exp $
 
 IUSE="doc"
 
@@ -20,7 +20,7 @@ PROVIDE="virtual/jdk-1.4.1
 	virtual/java-scheme-2"
 SLOT="1.4"
 LICENSE="IBM-J1.4"
-KEYWORDS="~ppc ppc"
+KEYWORDS="~ppc ~x86"
 
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.5
