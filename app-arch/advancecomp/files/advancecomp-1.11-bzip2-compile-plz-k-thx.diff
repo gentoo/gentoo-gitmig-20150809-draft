@@ -1,0 +1,62 @@
+diff -ruN advancecomp-1.11.orig/compress.cc advancecomp-1.11/compress.cc
+--- advancecomp-1.11.orig/compress.cc	2004-04-02 16:43:52.000000000 +0100
++++ advancecomp-1.11/compress.cc	2004-08-24 22:50:41.000291768 +0100
+@@ -179,14 +179,14 @@
+ }
+ 
+ #if USE_BZIP2
+-bool compress_bzip2(const unsigned char* in_data, unsigned in_size, unsigned char* out_data, unsigned& out_size, int blocksize, int workfactor) {
+-	return BZ2_bzBuffToBuffCompress(out_data,&out_size,const_cast<unsigned char*>(in_data),in_size,blocksize,0,workfactor) == BZ_OK;
++bool compress_bzip2(const char* in_data, unsigned in_size, char* out_data, unsigned& out_size, int blocksize, int workfactor) {
++	return BZ2_bzBuffToBuffCompress(out_data,&out_size,const_cast<char*>(in_data),in_size,blocksize,0,workfactor) == BZ_OK;
+ }
+ 
+-bool decompress_bzip2(const unsigned char* in_data, unsigned in_size, unsigned char* out_data, unsigned out_size) {
++bool decompress_bzip2(const char* in_data, unsigned in_size, char* out_data, unsigned out_size) {
+ 	unsigned size = out_size;
+ 
+-	if (BZ2_bzBuffToBuffDecompress(out_data,&size,const_cast<unsigned char*>(in_data),in_size,0,0)!=BZ_OK)
++	if (BZ2_bzBuffToBuffDecompress(out_data,&size,const_cast< char*>(in_data),in_size,0,0)!=BZ_OK)
+ 		return false;
+ 
+ 	if (size != out_size)
+diff -ruN advancecomp-1.11.orig/compress.h advancecomp-1.11/compress.h
+--- advancecomp-1.11.orig/compress.h	2003-11-02 20:09:41.000000000 +0000
++++ advancecomp-1.11/compress.h	2004-08-24 22:50:41.000291768 +0100
+@@ -40,8 +40,8 @@
+ bool decompress_deflate_zlib(const unsigned char* in_data, unsigned in_size, unsigned char* out_data, unsigned out_size);
+ bool compress_deflate_zlib(const unsigned char* in_data, unsigned in_size, unsigned char* out_data, unsigned& out_size, int compression_level, int strategy, int mem_level);
+ 
+-bool decompress_bzip2(const unsigned char* in_data, unsigned in_size, unsigned char* out_data, unsigned out_size);
+-bool compress_bzip2(const unsigned char* in_data, unsigned in_size, unsigned char* out_data, unsigned& out_size, int blocksize, int workfactor);
++bool decompress_bzip2(const char* in_data, unsigned in_size, char* out_data, unsigned out_size);
++bool compress_bzip2(const char* in_data, unsigned in_size, char* out_data, unsigned& out_size, int blocksize, int workfactor);
+ 
+ bool decompress_rfc1950_zlib(const unsigned char* in_data, unsigned in_size, unsigned char* out_data, unsigned out_size);
+ bool compress_rfc1950_zlib(const unsigned char* in_data, unsigned in_size, unsigned char* out_data, unsigned& out_size, int compression_level, int strategy, int mem_level);
+diff -ruN advancecomp-1.11.orig/stamp-h1 advancecomp-1.11/stamp-h1
+--- advancecomp-1.11.orig/stamp-h1	1970-01-01 01:00:00.000000000 +0100
++++ advancecomp-1.11/stamp-h1	2004-08-24 22:50:41.000291768 +0100
+@@ -0,0 +1 @@
++timestamp for config.h
+diff -ruN advancecomp-1.11.orig/zipsh.cc advancecomp-1.11/zipsh.cc
+--- advancecomp-1.11.orig/zipsh.cc	2004-07-22 21:35:47.000000000 +0100
++++ advancecomp-1.11/zipsh.cc	2004-08-24 22:50:41.001291616 +0100
+@@ -38,7 +38,7 @@
+ 		}
+ #ifdef USE_BZIP2
+ 	} else if (info.compression_method == ZIP_METHOD_BZIP2) {
+-		if (!decompress_bzip2(data,compressed_size_get(),uncompressed_data,uncompressed_size_get())) {
++		if (!decompress_bzip2((char *)data,compressed_size_get(),(char *)uncompressed_data,uncompressed_size_get())) {
+ 			throw error() << "Invalid compressed data on file " << name_get();
+ 		}
+ #endif
+@@ -243,7 +243,7 @@
+ 			c1_met = ZIP_METHOD_BZIP2;
+ 			c1_fla = 0;
+ 
+-			if (!compress_bzip2(uncompressed_data,uncompressed_size_get(),c1_data,c1_size,bzip2_level,bzip2_workfactor)) {
++			if (!compress_bzip2((char *)uncompressed_data,uncompressed_size_get(),(char *)c1_data,c1_size,bzip2_level,bzip2_workfactor)) {
+ 				data_free(c1_data);
+ 				c1_data = 0;
+ 			}
