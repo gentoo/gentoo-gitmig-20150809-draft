@@ -1,0 +1,13 @@
+--- bash_completion.orig	2005-03-28 23:32:38.000000000 -0500
++++ bash_completion	2005-03-28 23:42:13.000000000 -0500
+@@ -2773,8 +2773,8 @@
+ 		return 0
+ 		;;
+ 	+([^IZzjy])f)
+-		ext='tar'
+-		regex=$ext
++		ext='t?(ar.)@(gz|Z|bz?(2))'
++		regex='t\(ar\.\)\(gz\|Z\|bz2\?\)'
+ 		;;
+ 	*[Zz]*f)
+ 		ext='t?(ar.)@(gz|Z)'

@@ -1,6 +1,15 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.111 2005/03/28 12:37:21 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.112 2005/03/29 12:49:53 ka0ttic Exp $
+
+*bash-completion-20050121-r5 (29 Mar 2005)
+
+  29 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> +files/20050121-tar.diff,
+  -bash-completion-20050121-r2.ebuild, -bash-completion-20050121-r3.ebuild,
+  -bash-completion-20050121-r4.ebuild, +bash-completion-20050121-r5.ebuild:
+  Revision bump; updated tar completion so -xf will work with both gzip and
+  bzip2 archives now that tar-1.15.1 is stable. Closes bug 76957. Tidy old
+  ebuilds.
 
 *bash-completion-20050121-r4 (28 Mar 2005)
 

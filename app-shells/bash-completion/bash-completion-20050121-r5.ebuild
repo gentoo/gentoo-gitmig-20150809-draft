@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050121-r4.ebuild,v 1.1 2005/03/28 12:37:21 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050121-r5.ebuild,v 1.1 2005/03/29 12:49:53 ka0ttic Exp $
 
 inherit eutils
 
@@ -28,6 +28,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gentoo.diff
 	epatch ${FILESDIR}/${PV}-muttng.diff
+	epatch ${FILESDIR}/${PV}-tar.diff
 }
 
 src_install() {
