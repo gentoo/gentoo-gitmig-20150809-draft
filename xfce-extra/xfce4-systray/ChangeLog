@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-systray
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systray/ChangeLog,v 1.41 2005/01/06 21:37:28 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systray/ChangeLog,v 1.42 2005/01/17 02:15:06 bcowan Exp $
+
+*xfce4-systray-4.2.0 (16 Jan 2005)
+
+  16 Jan 2005; Brad Cowan <bcowan@gentoo.org> +xfce4-systray-4.2.0.ebuild:
+  4.2 final release of Xfce4.
 
 *xfce4-systray-4.1.99.3-r1 (06 Jan 2005)
 
