@@ -2,6 +2,14 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.7 2002/06/05 02:39:55 lostlogic Exp
 
+  11 Sep 2003; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha14-r2.ebuild:
+  New USE flag 'dvdr'. That will apply a patch to xcdroast that makes use of
+  cdrtools' patch for DVD-writing.
+  
+  Nevertheless xcdroast has full support for cdrecord-ProDVD
+  (http://www.xcdroast.org/xcdr098/README.ProDVD.txt), which has to be
+  installed manually. Maybe I'll automate it with an ebuild later.
+
 *xcdroast-0.98_alpha14-r2 (04 Sep 2003)
 
   04 Sep 2003; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha10-r3.ebuild,
