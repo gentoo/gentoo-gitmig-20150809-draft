@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/cpio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.7 2005/01/01 11:43:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.8 2005/01/04 02:26:12 vapier Exp $
+
+*cpio-2.6 (03 Jan 2005)
+
+  03 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  -files/2.5.90-gnulib.patch, -files/2.5.90-makepath.patch,
+  -files/2.5.90-rili-big-files.patch, +files/2.6-rili-big-files.patch,
+  -cpio-2.5.90.ebuild, +cpio-2.6.ebuild:
+  Version bump.  Magically fixes #74841 by lison.
 
 *cpio-2.5.90 (17 Dec 2004)
 

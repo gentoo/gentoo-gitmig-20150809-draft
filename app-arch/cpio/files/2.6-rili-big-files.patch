@@ -1,4 +1,3 @@
-? big-gigs.patch
 Index: src/extern.h
 ===================================================================
 RCS file: /cvsroot/cpio/cpio/src/extern.h,v

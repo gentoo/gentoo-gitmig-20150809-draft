@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.5.90.ebuild,v 1.2 2005/01/01 11:43:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.6.ebuild,v 1.1 2005/01/04 02:26:12 vapier Exp $
 
 inherit eutils
 
@@ -11,20 +11,19 @@ SRC_URI="mirror://gnu/cpio/${P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sh ~sparc ~x86"
-IUSE=""
+IUSE="nls"
 
 DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-gnulib.patch
-	epatch ${FILESDIR}/${PV}-makepath.patch
 	epatch ${FILESDIR}/${PV}-rili-big-files.patch
 }
 
 src_compile() {
 	econf \
+		$(use_enable nls) \
 		--bindir=/bin \
 		--with-rmt=/usr/sbin/rmt \
 		|| die
