@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-2.20040929.ebuild,v 1.2 2004/12/24 08:40:08 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-2.20041224.ebuild,v 1.1 2004/12/24 08:40:08 lucass Exp $
 
 MY_P="${P/-2./-}"
 DESCRIPTION="Configurable and full featured theme for FVWM, with lots of transparency."
@@ -8,9 +8,9 @@ HOMEPAGE="http://fvwm-crystal.berlios.de/"
 SRC_URI="http://fvwm-crystal.berlios.de/files/files/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE="xmms"
-RDEPEND=">=x11-wm/fvwm-2.5.10
+RDEPEND=">=x11-wm/fvwm-2.5.12
 	app-admin/sudo
 	dev-python/pyxml
 	media-gfx/imagemagick
@@ -49,14 +49,8 @@ pkg_postinst() {
 	einfo "/etc/portage/package.mask, and reemerge fvwm-crystal:"
 	einfo " >=x11-themes/fvwm-crystal-2*"
 	einfo ""
-	einfo "In order to finish installation, copy configuration files"
-	einfo "to your home directory:"
-	einfo " $ mkdir ~/.fvwm/"
-	einfo " $ cp -r /usr/share/${PN}/fvwm/user-preferences/ ~/.fvwm/"
-	einfo " $ echo \"Read /usr/share/${PN}/fvwm/config\" > ~/.fvwm/.fvwm2rc"
+	einfo "After installation, execute following commands:"
 	einfo " $ cp -r /usr/share/${PN}/addons/Xresources-EN ~/.Xresources"
-	einfo ""
-	einfo "If you start X server by command startx, execute additionally:"
 	einfo " $ cp -r /usr/share/${PN}/addons/Xsession ~/.xinitrc"
 	einfo ""
 	einfo "Authors of fvwm-crystal recommend also installing"
