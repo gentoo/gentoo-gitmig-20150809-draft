@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/xpilot-4.5.4.ebuild,v 1.5 2004/06/24 22:00:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/xpilot-4.5.4.ebuild,v 1.6 2005/03/06 15:07:06 kugelfang Exp $
 
 DESCRIPTION="A multi-player 2D client/server space game"
 HOMEPAGE="http://www.xpilot.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://xpilot.org/pub/xpilot/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 
 RDEPEND="virtual/x11"
