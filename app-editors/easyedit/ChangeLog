@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/easyedit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/easyedit/ChangeLog,v 1.5 2004/07/26 14:41:50 alexander Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/easyedit/ChangeLog,v 1.6 2004/09/06 22:53:24 fmccor Exp $
+
+  06 Sep 2004; Ferris McCormick <fmccor@gentoo.org> easyedit-1.4.6.ebuild:
+  Add ~sparc keyword at user request (Bug 63058).  Compiles and seems
+  to work for sparc.
 
   26 Jul 2004; Alexander Plank <alexander@gentoo.org> easyedit-1.4.6.ebuild:
   add macos keyword, bug #58071 (thanks Yuta SATOH)
