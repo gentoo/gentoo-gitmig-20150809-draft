@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1062 2005/04/04 18:51:51 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1063 2005/04/05 13:54:12 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -64,6 +64,7 @@ app-emulation/uade:beepmp - Support for Beep Media Player
 app-emulation/vmware-console:esx - Enable VMware ESX Server documentation instead of GSX server documentation
 app-i18n/anthy-ss:ucs4 - Enable ucs4 support
 app-i18n/anthy:ucs4 - Enable ucs4 support
+app-i18n/atokx2:ext-iiimf - Link with the system IIIMF, rather than the bundled version
 app-i18n/im-ja:anthy - Support for Anthy input method
 app-i18n/im-ja:skk - Support for SKK input method
 app-i18n/scim-cvs:immqt - Enable immodule for Qt support (binary incompatible)
