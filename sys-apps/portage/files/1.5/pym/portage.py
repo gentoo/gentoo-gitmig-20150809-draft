@@ -1583,6 +1583,13 @@ class dblink:
 			if not pkgfiles:
 				return
 		
+		#do prerm script
+		a=doebuild(self.dbdir+"/"+self.pkg+".ebuild","prerm")
+		if a:
+			print "!!! pkg_prerm() script failed; exiting."
+			sys.exit(a)
+
+		#we do this so we don't unmerge the ebuild file by mistake
 		myebuildfile=os.path.normpath(self.dbdir+"/"+self.pkg+".ebuild")
 		if os.path.exists(myebuildfile):
 			if pkgfiles.has_key(myebuildfile):
@@ -1592,12 +1599,23 @@ class dblink:
 		mykeys.sort()
 		mykeys.reverse()
 		
-		#do prerm script
-		a=doebuild(self.dbdir+"/"+self.pkg+".ebuild","prerm")
-		if a:
-			print "!!! pkg_prerm() script failed; exiting."
-			sys.exit(a)
-
+				#do some config file management prep
+		self.protect=[]
+		for x in string.split(settings["CONFIG_PROTECT"]):
+			ppath=os.path.normpath(root+"/"+x)+"/"
+			if os.path.isdir(ppath):
+				self.protect.append(ppath)
+				print ">>> Config file management enabled for",ppath
+			else:
+				print "!!! Config file management disabled for",ppath,"(not found)"
+				print ">>> (This is not necessarily an error)"
+		self.protectmask=[]
+		for x in string.split(settings["CONFIG_PROTECT_MASK"]):
+			ppath=os.path.normpath(root+"/"+x)+"/"
+			if os.path.isdir(ppath):
+				self.protectmask.append(ppath)
+			#if it doesn't exist, silently skip it
+		
 		for obj in mykeys:
 			obj=os.path.normpath(obj)
 			if not os.path.islink(obj):
@@ -1638,8 +1656,36 @@ class dblink:
 				if mymd5 != string.upper(pkgfiles[obj][2]):
 					print "--- !md5  ","obj", obj
 					continue
+				unlinkme=[obj]
+				copyme=""
+				myppath=""
+				for ppath in self.protect:
+					if obj[0:len(ppath)]==ppath:
+						myppath=ppath
+						#config file management
+						for pmpath in self.protectmask:
+							if obj[0:len(pmpath)]==pmpath:
+								#skip, it's in the mask
+								myppath=""
+								break
+						if not myppath:
+							break	
+				pfound=0
+				pmatch=os.path.basename(obj)
+				pdir=os.path.dirname(obj)
+				if myppath:
+					for pfile in os.listdir(pdir):
+							if pfile[0:5]!="._cfg":
+								continue
+							if pfile[10:]!=pmatch:
+								continue
+							pfound=1
+					if pfound:
+						print "--- cfg   ","obj",obj
+						continue
 				os.unlink(obj)
 				print "<<<       ","obj",obj
+			
 			elif pkgfiles[obj][0]=="fif":
 				if not isfifo(obj):
 					print "--- !fif  ","fif", obj
@@ -1705,8 +1751,22 @@ class dblink:
 			if a:
 				print "!!! pkg_preinst() script failed; exiting."
 				sys.exit(a)
-			outfile=open(self.dbdir+"/CONTENTS","w")
-				
+			outfile=open(inforoot+"/CONTENTS","w")
+		
+			#prep for config file management
+			self.protect=[]
+			for x in string.split(settings["CONFIG_PROTECT"]):
+				ppath=os.path.normpath(root+"/"+x)+"/"
+				if os.path.isdir(ppath):
+					self.protect.append(ppath)
+				else:
+					print "!!!",ppath,"not found.  Config file management disabled for this directory."
+			self.protectmask=[]
+			for x in string.split(settings["CONFIG_PROTECT_MASK"]):
+				ppath=os.path.normpath(root+"/"+x)+"/"
+				if os.path.isdir(ppath):
+					self.protectmask.append(ppath)
+				#if it doesn't exist, silently skip it
 		mergestart=mergestart
 		os.chdir(mergestart)
 		cpref=os.path.commonprefix([mergeroot,mergestart])
@@ -1726,7 +1786,7 @@ class dblink:
 						os.unlink(rootfile)
 				try:
 					os.symlink(myto,rootfile)
-					print "<<<",rootfile,"->",myto
+					print ">>>",rootfile,"->",myto
 					outfile.write("sym "+relfile+" -> "+myto+" "+getmtime(rootfile)+"\n")
 				except:
 					print "!!!",rootfile,"->",myto
@@ -1737,7 +1797,7 @@ class dblink:
 					os.mkdir(rootfile)
 					os.chmod(rootfile,mystat[0])
 					os.chown(rootfile,mystat[4],mystat[5])
-					print "<<<",rootfile+"/"
+					print ">>>",rootfile+"/"
 				else:
 					print "---",rootfile+"/"
 				outfile.write("dir "+relfile+"\n")
@@ -1748,43 +1808,100 @@ class dblink:
 				os.chdir(mergestart)
 			elif os.path.isfile(x):
 				mymd5=md5(x)
+				myppath=""
+				rootdir=os.path.dirname(rootfile)
+				for ppath in self.protect:
+					if rootfile[0:len(ppath)]==ppath:
+						myppath=ppath
+						#config file management
+						for pmpath in self.protectmask:
+							if rootfile[0:len(pmpath)]==pmpath:
+								#skip, it's in the mask
+								myppath=""
+								break
+						if not myppath:
+							break	
+				if os.path.exists(rootfile):
+					#config file management
+						#otherwise, we need to do some cfg file management here
+					#let's find the right filename for rootfile
+					if myppath!="":
+						#if the md5's *do* match, just copy it over (fall through to movefile(), below)
+						if mymd5!=md5(rootfile):
+							pnum=-1
+							pmatch=os.path.basename(rootfile)
+							#format:
+							# ._cfg0000_foo
+							# 0123456789012
+							mypfile=""
+							for pfile in os.listdir(rootdir):
+								if pfile[0:5]!="._cfg":
+									continue
+								if pfile[10:]!=pmatch:
+									continue
+								try:
+									newpnum=string.atoi(pfile[5:9])
+									if newpnum>pnum:
+										pnum=newpnum
+									mypfile=pfile
+								except:
+									continue
+							pnum=pnum+1
+							#this next line specifies the normal default rootfile (the next available ._cfgxxxx_ slot
+							rootfile=os.path.normpath(rootdir+"/._cfg"+string.zfill(pnum,4)+"_"+pmatch)
+							#but, we can override rootfile in a special case:
+							#if the last ._cfgxxxx_foo file's md5 matches:
+							if mypfile:
+								pmd5=md5(rootdir+"/"+mypfile)
+								if mymd5==pmd5:
+									rootfile=(rootdir+"/"+mypfile)
+									#then overwrite the last ._cfgxxxx_foo file rather than creating a new one
+									#(for cleanliness)
+				else:
+					#the file we're about to create *doesn't* exist.  If it's in the protection path, we need to
+					#remove any stray ._cfg_ files
+					if myppath:
+						unlinkme=[]
+						pmatch=os.path.basename(rootfile)
+						mypfile=""
+						for pfile in os.listdir(rootdir):
+							if pfile[0:5]!="._cfg":
+								continue
+							if pfile[10:]!=pmatch:
+								continue
+							unlinkme.append(rootdir+"/"+pfile)
+						for ufile in unlinkme:
+							if os.path.isfile(ufile) and not os.path.islink(ufile):
+								os.unlink(ufile)
+								print "<<<",ufile
+						
 				if movefile(x,rootfile):
-					zing="<<<"
+					zing=">>>"
 				else:
 					zing="!!!"
 		
 				print zing+" "+rootfile
-				print "md5",mymd5
-				rootetcprefix=os.path.normpath(root+"/etc/")+"/"
-				if rootfile[0:len(rootetcprefix)]==rootetcprefix:
-					#config file management
-					if os.path.basename(rootfile)[0:6]=="._cfg_":
-						newcfgfile=os.path.dirname(rootfile)+"/"+os.path.basename(rootfile)[6:]
-						if movefile(rootfile,newcfgfile,0):
-							#0=don't unlink original
-							print "cfg",newcfgfile
-						else:
-							print "!!! cfg",newcfgfile
+				#print "md5",mymd5
+									
 				outfile.write("obj "+relfile+" "+mymd5+" "+getmtime(rootfile)+"\n")
 			elif isfifo(x):
 				zing="!!!"
 				if not os.path.exists(rootfile):	
 					if movefile(x,rootfile):
-						zing="<<<"
+						zing=">>>"
 				elif isfifo(rootfile):
 					os.unlink(rootfile)
 					if movefile(x,rootfile):
-						zing="<<<"
+						zing=">>>"
 				print zing+" "+rootfile
 				outfile.write("fif "+relfile+"\n")
 			else:
 				if movefile(x,rootfile):
-					zing="<<<"
+					zing=">>>"
 				else:
 					zing="!!!"
 				print zing+" "+rootfile
 				outfile.write("dev "+relfile+"\n")
-
 		if mergestart==mergeroot:
 			#if we opened it, close it	
 			outfile.close()
