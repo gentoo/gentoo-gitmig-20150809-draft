@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Matthew Kennedy <mkennedy@gentoo.org>
 # Maintainer: Matthew Kennedy <mkennedy@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.0.1.ebuild,v 1.1 2002/05/02 06:09:47 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.0.1.ebuild,v 1.2 2002/05/13 16:25:24 drobbins Exp $
 
 S=${WORKDIR}/xerces-${PV//./_}
 DESCRIPTION="The next generation of high performance, fully compliant XML parsers in the Apache Xerces family"
@@ -10,7 +10,7 @@ SRC_URI="http://xml.apache.org/dist/xerces-j/Xerces-J-src.${PV}.tar.gz
 	http://xml.apache.org/dist/xerces-j/Xerces-J-tools.${PV}.tar.gz"
 HOMEPAGE="http://xml.apache.org/xerces2-j/index.html"
 
-DEPEND="virtual/jdk-1.3"
+DEPEND=">=virtual/jdk-1.3"
 REDEPND=">=virtual/jdk-1.3"
 
 src_unpack() {
