@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3d24aa5d64e62557797d74bbe056b289 ut2004-data-3186.ebuild 5052
+MD5 7a6993419e0fc9dd9c3590ec9d089da1 ChangeLog 398
+MD5 11a7e1491b1ac042ac7216b26b4ad1fb metadata.xml 254
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ut2004-data-3186 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCHExJI1lqEGTUzyQRAsTuAKDPzs7zZQm7hSTHHrlRKi84psejEwCg2ef0
+7wmNLapi9NBSNCaClyZZKmg=
+=Ff9Q
+-----END PGP SIGNATURE-----
