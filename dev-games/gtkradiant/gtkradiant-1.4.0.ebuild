@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.4.0.ebuild,v 1.6 2004/05/01 20:08:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.4.0.ebuild,v 1.7 2004/06/14 13:25:04 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -40,6 +40,7 @@ src_install() {
 	cp -r README license.txt core/* ${Ddir}
 	echo ${PV:2:1} > ${Ddir}/RADIANT_MAJOR
 	echo ${PV:4} > ${Ddir}/RADIANT_MINOR
+	chmod a+x ${Ddir}/openurl.sh
 
 	dogamesbin ${FILESDIR}/{q3map2,radiant}
 	insinto ${dir}/games
