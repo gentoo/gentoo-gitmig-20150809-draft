@@ -4,11 +4,11 @@ MD5 45bd78d7576d540349424ad1bace0538 clamav-0.68.1.ebuild 1514
 MD5 e4f0c0114ff0633ff7bef3591699dfc7 clamav-0.70.ebuild 1528
 MD5 d34a7567290a6fbea4981fad5a189405 clamav-0.71.ebuild 1534
 MD5 654dedb807ed587e7d2f27feca4f1d7c clamav-0.72.ebuild 1534
-MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
 MD5 1bc40ba8c47d3d0493e52d335532a654 clamav-0.73.ebuild 1534
 MD5 705e2c24baf6b7fb23b12d4310217f53 clamav-0.74.ebuild 1535
 MD5 0051fdfcf2659b7b68f072e068f113ba clamav-0.75.ebuild 1534
-MD5 1502ff01d4289cd3bb737811d2093686 clamav-0.75.1.ebuild 1533
+MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
+MD5 4f6e55562389a91ac94ec8001df9b366 clamav-0.75.1.ebuild 1532
 MD5 ad7d45b1be51c06986cb42c53e733d19 files/clamav-milter.README.gentoo 1311
 MD5 e8dcbdecd955708ddc7c79399ffa6276 files/clamd.conf 166
 MD5 51f0c4f6ae446ca5834911b75b1a74a3 files/clamd.rc 1431
