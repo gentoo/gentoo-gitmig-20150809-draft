@@ -48,3 +48,4 @@ virtual/xemacs		app-editors/xemacs
 virtual/xft		x11-base/xfree
 x11-libs/xaw		x11-libs/Xaw3d
 virtual/mpg123		media-sound/mpg123
+virtual/dhcpc		net-misc/dhcpcd
