@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf/hdf-4.2.0-r3.ebuild,v 1.1 2004/05/24 06:59:31 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hdf/hdf-4.2.0-r3.ebuild,v 1.2 2004/06/02 11:36:40 phosphan Exp $
 
 # substitute second dot by "r"
 MY_PV=${PV/./X}
@@ -24,11 +24,17 @@ DEPEND="sys-libs/zlib
 		>=sys-apps/sed-4
 		szip? ( dev-libs/szip )"
 
+pkg_setup() {
+	if ! which &>/dev/null g77; then
+		die "g77 not found, please re-emerge gcc with f77 in your USE flags."
+	fi
+}
+
 src_compile() {
 	local myconf="--enable-production"
 	use szip && myconf="${myconf} --with-szlib=/usr"
 	econf ${myconf} || die "configure failed"
-	make || die "emake failed"
+	make LDFLAGS="-lm" || die "make failed"
 }
 
 src_install() {
