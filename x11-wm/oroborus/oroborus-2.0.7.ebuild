@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.7.ebuild,v 1.7 2003/09/04 06:12:55 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.7.ebuild,v 1.8 2004/03/22 19:50:35 tseng Exp $
 
 DESCRIPTION="Small and fast window manager."
 HOMEPAGE="http://www.dreamind.de/oroborus.shtml"
@@ -9,8 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 IUSE="gnome"
-RDEPEND="virtual/x11"
-DEPEND="${RDEPEND}"
+DEPEND="virtual/x11"
 
 S="${WORKDIR}/${P}"
 
