@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdstyler
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.7 2004/11/21 10:26:16 dragonheart Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.8 2005/01/15 22:51:16 luckyduck Exp $
+
+  15 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> dvdstyler-1.1.ebuild,
+  dvdstyler-1.3_beta.ebuild:
+  changed app-cdr/cdrtools dependency to virtual/cdrtools. see bug #77817.
 
 *dvdstyler-1.3_beta (21 Nov 2004)
 

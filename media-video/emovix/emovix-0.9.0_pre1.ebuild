@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/emovix-0.9.0_pre1.ebuild,v 1.2 2004/09/08 11:52:44 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/emovix-0.9.0_pre1.ebuild,v 1.3 2005/01/15 22:53:00 luckyduck Exp $
 
 MY_P="${P/_/}"
 
@@ -19,7 +19,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="codecs"
 DEPEND=">=dev-lang/perl-5.0
 		sys-apps/gawk
-		app-cdr/cdrtools"
+		virtual/cdrtools"
 
 S="${WORKDIR}/${MY_P}"
 
