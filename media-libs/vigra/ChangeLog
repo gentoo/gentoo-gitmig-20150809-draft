@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/vigra
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.3 2004/11/24 23:11:50 centic Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.4 2005/03/10 19:26:50 luckyduck Exp $
+
+*vigra-1.3.2 (10 Mar 2005)
+
+  10 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +vigra-1.3.2.ebuild:
+  new upstream version. added ~amd64 to KEYWORDS, fixes #80465
 
 *vigra-1.3.0 (25 Nov 2004)
 
