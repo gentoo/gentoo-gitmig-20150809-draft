@@ -4,9 +4,9 @@ Hash: SHA1
 MD5 41d6c0ba999d7b4af929e07368693a3f metadata.xml 261
 MD5 609be93e28d891306f418387b75ce2b7 mod_ssl-2.8.17.ebuild 2182
 MD5 48f150354d6b2e4ca36a0d093cb1a163 mod_ssl-2.8.18.ebuild 2181
-MD5 8453cd038894bcab70c5b9b98a2923c3 ChangeLog 7883
+MD5 d9f339a959f17cb630cadf5c08ee32fd ChangeLog 7969
 MD5 8ca0688117f55aa5bdded72aa78cb6a9 mod_ssl-2.8.22.ebuild 1769
-MD5 8505667d0061d313901ecf057f54497b mod_ssl-2.8.21.ebuild 2450
+MD5 57a374eec3e448726d28e0e8289cd740 mod_ssl-2.8.21.ebuild 2447
 MD5 41fcd0884bdc50fde055a124928bee00 mod_ssl-2.8.20.ebuild 2283
 MD5 5733724945a027232dbf298c455eca94 mod_ssl-2.8.19.ebuild 2284
 MD5 54cbf53816f2c9c80600ea9f37ab02ba files/digest-mod_ssl-2.8.22 73
@@ -23,7 +23,7 @@ MD5 89239995d079a1bd9abc580e2264c71b files/digest-mod_ssl-2.8.19 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCPhirjUHll2nfF60RAmeOAJ0bI/y8AG+YnTHGFiWnGaBWzf3yXwCeK5Vc
-gaN8VeGjK6yRfTlvYrOL7KE=
-=lJ5h
+iD8DBQFCPq9IjUHll2nfF60RAiJAAKCIEoHqwzlsaeUXQ2xMFzMDcLT2jQCgmfFT
+9fLaXWTqtmb6dNyDvzH5ca0=
+=voOE
 -----END PGP SIGNATURE-----

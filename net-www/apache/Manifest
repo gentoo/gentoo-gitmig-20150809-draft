@@ -13,7 +13,7 @@ MD5 2ca94db2eb9cce1b1b8859b2241fcff0 apache-1.3.33-r2.ebuild 8614
 MD5 30eae150ac83b20287102122c37b580a apache-1.3.31.ebuild 6721
 MD5 e3e94e4dbf77fe5e99f3bbcc12ceff91 ChangeLog 56863
 MD5 e265b8c0426359efe22f6c29d7e9be82 apache-2.0.53.ebuild 11915
-MD5 2a90201582fe87ab4a0fff147576c5c2 apache-1.3.33-r1.ebuild 6904
+MD5 ea10362fdc0d3789f1c3d397980e732a apache-1.3.33-r1.ebuild 6905
 MD5 15170badcb6a28012cc4d1e3bfddc126 apache-1.3.32.ebuild 6644
 MD5 f96d59b9c21e284c185a151612dd25c6 apache-2.0.51.ebuild 12808
 MD5 fd46570e4125dd33e0f4853f6755b878 apache-2.0.52.ebuild 12811
@@ -102,7 +102,7 @@ MD5 a63b9472904d3500cf72b370a9ee3200 files/patches/1.3.31-r1/00_gentoo_db4_detec
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCPekfjUHll2nfF60RAi3oAJ95RkEal7mzvOS5xETzX5l0pbJwuQCgs0Mf
-QKyXtLxAsveCyr0ZBxV3wso=
-=MboR
+iD8DBQFCPq/NjUHll2nfF60RAnBkAJoDUBV+h9H7oQ1brvGYjtyJK/fARACfZD1K
+OuO4bRp3b9os/R6PyYXQUjM=
+=AfUZ
 -----END PGP SIGNATURE-----
