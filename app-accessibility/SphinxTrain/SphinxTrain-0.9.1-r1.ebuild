@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/SphinxTrain-0.9.1-r1.ebuild,v 1.2 2004/03/17 22:54:26 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/SphinxTrain-0.9.1-r1.ebuild,v 1.3 2004/03/24 17:17:18 eradicator Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="SphinxTrain - Speech Recognition (Training Module)"
