@@ -1,8 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4.ebuild,v 1.4 2003/05/24 19:14:02 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4.ebuild,v 1.5 2003/06/26 18:20:57 vapier Exp $
 
-IUSE="X jpeg truetype"
 
 MY_P=${P/lib/}
 S=${WORKDIR}/${MY_P}
@@ -12,7 +11,8 @@ HOMEPAGE="http://www.boutell.com/gd/"
 
 SLOT="0"
 LICENSE="as-is | BSD"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa"
+KEYWORDS="x86 ppc sparc hppa"
+IUSE="X jpeg truetype"
 
 DEPEND="media-libs/libpng
 	X? ( virtual/x11 )
@@ -20,7 +20,6 @@ DEPEND="media-libs/libpng
 	truetype? ( =media-libs/freetype-1.3* )"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 
@@ -38,7 +37,6 @@ src_unpack() {
 		&& compopts="${compopts} -DHAVE_LIBJPEG" \
 		&& libsopts="${libsopts} -ljpeg"
 
-	
 	compopts="${compopts} -DHAVE_LIBPNG" \
 	libsopts="${libsopts} -lpng"
 	
@@ -59,17 +57,13 @@ src_unpack() {
 		-e "s:\(COMPILER=\)gcc:\1${CC:-gcc}:" \
 		Makefile.old > Makefile || die
 	fi
-
 }
 
 src_compile() {
-
 	emake || die
-
 }
 
 src_install() {
-	
 	dodir /usr/{bin,lib,include}
 	
 	make \
