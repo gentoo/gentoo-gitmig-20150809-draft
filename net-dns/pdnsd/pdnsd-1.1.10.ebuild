@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.10.ebuild,v 1.4 2004/03/15 23:40:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.10.ebuild,v 1.5 2004/04/03 02:42:42 dragonheart Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ LICENSE="BSD | GPL-2"
 # Should work on  alpha arm hppa i386 ia64 m68k mips mipsel powerpc s390 sparc 
 # REF http://packages.debian.org/cgi-bin/search_packages.pl?searchon=names&version=all&exact=1&keywords=pdnsd
 
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 
 S=${WORKDIR}/${PN}-${PV}
 
@@ -63,10 +63,13 @@ src_install() {
 	enewuser pdnsd -1 /bin/false /var/lib/pdnsd pdnsd
 
 	# Copy cache from prev versions
-	[ -f /var/lib/pdnsd/pdnsd.cache ] && cp /var/lib/pdnsd/pdnsd.cache ${D}/var/cache/pdnsd/pdnsd.cache
+	[ -f ${ROOT}/var/lib/pdnsd/pdnsd.cache ] && \
+		cp ${ROOT}/var/lib/pdnsd/pdnsd.cache ${D}/var/cache/pdnsd/pdnsd.cache
 
-	# Don't clobber existing cache
-	[ -f /var/cache/pdnsd/pdnsd.cache ] && rm ${D}/var/cache/pdnsd/pdnsd.cache
+	# Don't clobber existing cache - copy prev cache so unmerging prev version
+	# doesn't remove the cache.
+	[ -f ${ROOT}/var/cache/pdnsd/pdnsd.cache ] && \
+		cp ${ROOT}/var/cache/pdnsd/pdnsd.cache ${D}/var/cache/pdnsd/pdnsd.cache
 
 	dodoc AUTHORS COPYING* ChangeLog* NEWS README THANKS TODO README.par
 	docinto contrib ; dodoc contrib/{README,dhcp2pdnsd,pdnsd_dhcp.pl}
@@ -75,8 +78,8 @@ src_install() {
 	newdoc doc/pdnsd.conf pdnsd.conf.sample
 
 	# Remind users that the cachedir has moved to /var/cache
-	[ -f /etc/pdnsd/pdnsd.conf ] && \
-		sed -e "s#/var/lib#/var/cache#g" /etc/pdnsd/pdnsd.conf \
+	[ -f ${ROOT}/etc/pdnsd/pdnsd.conf ] && \
+		sed -e "s#/var/lib#/var/cache#g" ${ROOT}/etc/pdnsd/pdnsd.conf \
 		> ${D}/etc/pdnsd/pdnsd.conf
 
 	exeinto /etc/init.d
