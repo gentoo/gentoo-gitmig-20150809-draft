@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.34 2002/12/27 17:42:30 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.35 2002/12/30 19:50:58 rphillips Exp $
+
+*mod_php-4.3.0 (30 Dec 2002)
+
+  30 Dec 2002; Ryan Phillips <rphillips@gentoo.org> : Version bump.
+  Added sed statement to fix the PEAR installer.
 
 *mod_php-4.2.3-r2 (13 Dec 2002)
 
