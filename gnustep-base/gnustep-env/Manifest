@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7b4904f65f200811012daaf649e46203 ChangeLog 1784
-MD5 c603ed4d589dc2091e618436e4de9c78 metadata.xml 371
-MD5 5a1c796670aab0984c3e3837d810dab3 gnustep-env-0.1.4.ebuild 1162
+MD5 1ccad74b33dd4851a113f792a42077a1 ChangeLog 1880
 MD5 1e82c3c29105707ada1b6bce01e6cb0f gnustep-env-0.1.ebuild 563
+MD5 3c9ac8296ead6416ee605f466c715bd0 gnustep-env-0.1.4.ebuild 1168
+MD5 c603ed4d589dc2091e618436e4de9c78 metadata.xml 371
+MD5 766b0cb8343bea6f212694c1fd261335 files/10gnustep 36
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-env-0.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-env-0.1.4 0
 MD5 1588a64b28bc5eb05d1c93571ad340b1 files/gnustep.env-0.1.4 586
 MD5 f814aedb43348b181f1ee9c044efa12c files/gnustep.runscript-0.1.4 1052
-MD5 766b0cb8343bea6f212694c1fd261335 files/10gnustep 36
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBhPGdugEuf3OQ0akRAi8oAJwIzdwI3rDom3XNmArvyWFIfTqwOwCfV3BO
-RcEl4BShq2LmPnmac0it98Q=
-=Etvo
------END PGP SIGNATURE-----
