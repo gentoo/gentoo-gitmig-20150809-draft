@@ -1,6 +1,0 @@
-auth       required   pam_wheel.so use_uid
-auth       sufficient pam_rootok.so
-auth       required   pam_pwdb.so nullok
-account    required   pam_pwdb.so
-password   required   pam_pwdb.so
-session    required   pam_pwdb.so debug

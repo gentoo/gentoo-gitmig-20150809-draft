@@ -1,2 +1,0 @@
-auth       required   pam_pwdb.so
-account    required   pam_pwdb.so
