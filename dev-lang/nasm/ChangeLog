@@ -1,10 +1,16 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.4 2002/05/17 14:27:46 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.5 2002/05/18 19:37:32 danarmak Exp $
+
+*nasm-0.98.31-r1 (18 May 2002)
+
+  18 May 2002; Dan Armak <danarmak@gentoo.org> changelog :
+  
+  Only create ps, pdf etc. docs if USE doc is enabled. Closes bug #2824.
 
 *nasm-0.98.31 (17 May 2002)
 
-  17 May 2002; Dan Armak <danarmak@gentoo.org> nasm-0.98.30.ebuild :
+  17 May 2002; Dan Armak <danarmak@gentoo.org> changelog :
   
   New upstream version, has some minute fixes. Close #2784.
 
