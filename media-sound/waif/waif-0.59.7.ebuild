@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/waif-0.59.7.ebuild,v 1.9 2004/06/25 00:28:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/waif-0.59.7.ebuild,v 1.10 2004/07/19 22:56:52 eradicator Exp $
 
 IUSE="xmms oggvorbis"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.eds.org/~straycat/${P}.tar.gz
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~ppc x86"
+KEYWORDS="~ppc x86 ~sparc ~amd64"
 
 DEPEND="dev-lang/tcl
 	dev-tcltk/expect"
