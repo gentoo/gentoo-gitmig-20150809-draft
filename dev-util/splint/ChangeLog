@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/splint
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/ChangeLog,v 1.5 2003/12/16 20:20:36 lanius Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/ChangeLog,v 1.6 2004/02/02 02:50:47 avenj Exp $
+
+  01 Feb 2004; Jon Portnoy <avenj@gentoo.org> splint-3.1.1.ebuild :
+  AMD64 keywords.
 
   16 Dec 2003; Heinrich Wendel <lanius@gentoo.org> splint-3.1.1.ebuild:
   stable bump
