@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.2.4-r1.ebuild,v 1.3 2002/10/15 20:45:04 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.2.4-r1.ebuild,v 1.4 2002/12/09 04:20:59 manson Exp $
 
 S=${WORKDIR}/ACE_wrappers
 DESCRIPTION="The Adaptive Communications Environment"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cs.wustl.edu/~schmidt/ACE.html"
 
 SLOT="0"
 LICENSE="BSD as-is"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 IUSE="ipv6"
 DEPEND="virtual/glibc"
 

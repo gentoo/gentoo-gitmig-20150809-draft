@@ -1,7 +1,10 @@
 # ChangeLog for dev-libs/libIDL
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/ChangeLog,v 1.4 2002/12/06 22:31:01 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/ChangeLog,v 1.5 2002/12/09 04:21:03 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *libIDL-0.8.0 (05 Jun 2002)
   06 Dec 2002; Martin Holzer <mholzer@gentoo.org> libIDL-0.8.0.ebuild :
   Changes SRC_URI.

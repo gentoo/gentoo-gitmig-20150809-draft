@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.0.20.ebuild,v 1.6 2002/12/01 12:01:39 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.0.20.ebuild,v 1.7 2002/12/09 04:21:04 manson Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 sparc sparc64 ppc alpha"
+KEYWORDS="x86 sparc  ppc alpha"
 
 RDEPEND=">=dev-libs/libxml2-2.4.24"
 

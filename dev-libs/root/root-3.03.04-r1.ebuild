@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.03.04-r1.ebuild,v 1.7 2002/10/24 19:23:11 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.03.04-r1.ebuild,v 1.8 2002/12/09 04:21:04 manson Exp $
 
 IUSE="mysql postgres opengl"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://root.cern.ch/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="virtual/x11
 	>=media-libs/xpm-3.4k

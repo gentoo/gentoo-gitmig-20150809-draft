@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/libole2-0.2.3-r1.ebuild,v 1.8 2002/10/04 05:16:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/libole2-0.2.3-r1.ebuild,v 1.9 2002/12/09 04:21:03 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libole2"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="=dev-libs/glib-1.2*"
 

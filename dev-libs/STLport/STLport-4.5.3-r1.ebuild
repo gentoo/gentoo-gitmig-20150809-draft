@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r1.ebuild,v 1.5 2002/10/04 05:13:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r1.ebuild,v 1.6 2002/12/09 04:20:59 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="C++ STL library"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.stlport.org"
 DEPEND="virtual/glibc"
 
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 LICENSE="as-is"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.7.2.ebuild,v 1.4 2002/10/04 05:14:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.7.2.ebuild,v 1.5 2002/12/09 04:21:03 manson Exp $
 
 DESCRIPTION="The DOM C library for the GNOME project"
 HOMEPAGE="http://phd.cs.unibo.it/gdome2/"
@@ -8,7 +8,7 @@ SRC_URI="http://phd.cs.unibo.it/gdome2/tarball/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LPGL-2.1"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 RDEPEND=">=dev-libs/libxml2-2.4.21
 	>=dev-libs/glib-1.2.10"

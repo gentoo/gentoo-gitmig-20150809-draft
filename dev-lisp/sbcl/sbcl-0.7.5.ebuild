@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Copyright 2002 Marius Bernklev <mariube@unixcore.com>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.7.5.ebuild,v 1.5 2002/10/20 18:42:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.7.5.ebuild,v 1.6 2002/12/09 04:21:04 manson Exp $
 
 DESCRIPTION="Steel Bank Common Lisp"
 HOMEPAGE="http://sbcl.sourceforge.net/"
@@ -16,7 +16,7 @@ SLOT="0"
 # Requires x86-only binary for bootstrapping
 # Krystof promises ppc binary for 0.7.6
 # Sparc is a lost cause.
-KEYWORDS="x86 -ppc -sparc -sparc64" 
+KEYWORDS="x86 -ppc -sparc " 
 PROVIDE="virtual/commonlisp"
 DEPEND=""
 

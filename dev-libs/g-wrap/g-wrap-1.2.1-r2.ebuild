@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.2.1-r2.ebuild,v 1.6 2002/10/04 05:14:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.2.1-r2.ebuild,v 1.7 2002/12/09 04:21:03 manson Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnucash.org"
 
 SLOT="1.2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND=">=dev-util/guile-1.4
 	>=dev-libs/slib-2.4.1"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atlas/atlas-3.2.1-r1.ebuild,v 1.1 2002/10/17 14:16:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atlas/atlas-3.2.1-r1.ebuild,v 1.2 2002/12/09 04:21:02 manson Exp $
 
 S=${WORKDIR}/ATLAS
 DESCRIPTION="Automatically Tuned Linear Algebra Software (BLAS implementation)."
@@ -9,7 +9,7 @@ HOMEPAGE="http://math-atlas.sourceforge.net/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="virtual/glibc"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtrain/libtrain-0.9b.ebuild,v 1.3 2002/08/14 11:52:27 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtrain/libtrain-0.9b.ebuild,v 1.4 2002/12/09 04:21:04 manson Exp $
 
 DESCRIPTION="Library for calculating fastest train routes"
 SRC_URI="http://www.on.rim.or.jp/~katamuki/software/train/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.on.rim.or.jp/~katamuki/software/train/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="virtual/glibc"
 

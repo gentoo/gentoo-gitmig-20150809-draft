@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyq/tinyq-3.0.5.ebuild,v 1.4 2002/10/04 05:17:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyq/tinyq-3.0.5.ebuild,v 1.5 2002/12/09 04:21:04 manson Exp $
 
 DESCRIPTION="Stripped down version of qt ${PV} for console development"
 S=${WORKDIR}/${P}
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.uwyn.com/projects/tinyq"
 
 SLOT="3"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND=">=dev-util/yacc-1.9.1-r1
 	>=sys-devel/flex-2.5.4a-r4"

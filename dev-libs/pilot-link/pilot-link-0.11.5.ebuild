@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/pilot-link-0.11.5.ebuild,v 1.1 2002/11/03 21:11:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/pilot-link-0.11.5.ebuild,v 1.2 2002/12/09 04:21:04 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="suite of tools for moving data between a Palm device and a desktop"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.pilot-link.org/"
 
 SLOT="0"
 LICENSE="GPL-2 | LGPL"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc "
 IUSE="perl java tcltk python pic png readline"
 
 DEPEND="virtual/glibc

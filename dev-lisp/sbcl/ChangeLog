@@ -1,7 +1,10 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.8 2002/10/11 16:15:08 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.9 2002/12/09 04:21:04 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *sbcl-0.7.7 (11 Oct 2002)
 
   11 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> sbcl-0.7.7.ebuild files/digest-sbcl-0.7.7 :

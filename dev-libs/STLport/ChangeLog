@@ -1,7 +1,10 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.6 2002/09/13 17:45:43 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.7 2002/12/09 04:20:59 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *STLport-4.5.3-r2 (13 Sep 2002)
 
   13 Sep 2002; Brandon Low <lostlogic@gentoo.org> STLport-4.5.3-r2.ebuild :

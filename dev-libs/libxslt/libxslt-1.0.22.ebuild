@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.0.22.ebuild,v 1.2 2002/11/08 18:11:34 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.0.22.ebuild,v 1.3 2002/12/09 04:21:04 manson Exp $
 
 inherit libtool gnome.org
 
@@ -10,7 +10,7 @@ DESCRIPTION="XSLT libraries and tools"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~x86 ~sparc ~sparc64 ~ppc ~alpha"
+KEYWORDS="~x86 ~sparc  ~ppc ~alpha"
 
 RDEPEND=">=dev-libs/libxml2-2.4.23
 	python? ( dev-lang/python )"

@@ -1,7 +1,10 @@
 # ChangeLog for dev-libs/aterm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/aterm/ChangeLog,v 1.2 2002/10/19 00:43:46 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/aterm/ChangeLog,v 1.3 2002/12/09 04:20:59 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *aterm-1.6.6 (19 Oct 2002)
 
   19 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> aterm-1.6.7.ebuild files/digest-aterm-1.6.7 :

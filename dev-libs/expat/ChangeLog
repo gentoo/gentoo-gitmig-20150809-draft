@@ -1,7 +1,10 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.9 2002/12/03 06:42:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.10 2002/12/09 04:21:02 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *expat-1.95.5-r1 (02 Dec 2002)
 
   02 Dec 2002; Seemant Kulleen <seemant@gentoo.org> expat-1.95.5-r1.ebuild

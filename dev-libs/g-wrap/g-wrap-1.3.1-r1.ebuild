@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.3.1-r1.ebuild,v 1.6 2002/10/04 05:14:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.3.1-r1.ebuild,v 1.7 2002/12/09 04:21:03 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A tool for exporting C libraries into Scheme"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnucash.org"
 
 SLOT="1.3"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND=">=dev-util/guile-1.4
 	>=dev-libs/slib-2.4.1"

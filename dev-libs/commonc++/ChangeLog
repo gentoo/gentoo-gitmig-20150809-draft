@@ -1,7 +1,10 @@
 # ChangeLog for dev-libs/commonc++
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/ChangeLog,v 1.5 2002/11/06 06:24:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/ChangeLog,v 1.6 2002/12/09 04:21:02 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *commonc++-1.9.7-r1 (03 Oct 2002)
   03 Oct 2002; Matt Keadle <mkeadle@gentoo.org> commonc++-1.9.7-r2:
   Updated to resolv Bug #6115

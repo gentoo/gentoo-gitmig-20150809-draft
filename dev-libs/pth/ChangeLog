@@ -1,7 +1,10 @@
 # ChangeLog for dev-libs/pth
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.3 2002/11/13 20:32:43 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.4 2002/12/09 04:21:04 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *pth-1.4.0 (13 Nov 2002); Bart Verwilst <verwilst@gentoo.org>:
 
   Re-added 1.4.0, and masked 1.4.1, since it b0rks jabber-server :$

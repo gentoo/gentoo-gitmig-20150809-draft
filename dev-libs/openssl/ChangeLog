@@ -1,7 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.15 2002/11/25 17:06:46 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.16 2002/12/09 04:21:04 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *openssl-0.9.6g-r1 (04 Nov 2002)
 
   25 Nov 2002; Nick Hadaway <raker@gentoo.org> openssl-0.9.6g-r1.ebuild :

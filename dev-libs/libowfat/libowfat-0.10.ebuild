@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/libowfat-0.10.ebuild,v 1.6 2002/10/04 20:52:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/libowfat-0.10.ebuild,v 1.7 2002/12/09 04:21:03 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="reimplement libdjb - excellent libraries from Dan Bernstein."
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.fefe.de/libowfat/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND=">=dev-libs/dietlibc-0.16"
 

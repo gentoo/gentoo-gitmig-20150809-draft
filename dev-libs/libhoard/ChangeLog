@@ -1,7 +1,10 @@
 # ChangeLog for dev-libs/libhoard
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhoard/ChangeLog,v 1.1 2002/06/10 02:06:51 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhoard/ChangeLog,v 1.2 2002/12/09 04:21:03 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *libhoard-2.1.0 (09 June 2002)
 
   09 June 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :

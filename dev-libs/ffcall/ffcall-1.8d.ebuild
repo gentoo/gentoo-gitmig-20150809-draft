@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.8d.ebuild,v 1.6 2002/10/31 02:30:56 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.8d.ebuild,v 1.7 2002/12/09 04:21:03 manson Exp $
 
 DESCRIPTION="foreign function call libraries"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/libs/${P}.tar.gz"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/directory/ffcall.html"
 # under GNU LGPL." -ffcall author
 LICENSE="GPL-2 | LGPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="virtual/glibc"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r2.ebuild,v 1.7 2002/10/24 23:23:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r2.ebuild,v 1.8 2002/12/09 04:21:04 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GLib library of C routines"
@@ -9,7 +9,7 @@ HOMEPAGE="http://libsigc.sourceforge.net/"
 
 SLOT="1.0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="virtual/glibc"
 
