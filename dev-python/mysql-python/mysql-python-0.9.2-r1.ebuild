@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-0.9.2.ebuild,v 1.4 2003/04/05 07:20:53 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-0.9.2-r1.ebuild,v 1.1 2003/04/05 07:20:53 lordvan Exp $
 
 S=${WORKDIR}/MySQL-python-${PV}
 DESCRIPTION="MySQL Module for python" 
@@ -21,7 +21,9 @@ inherit distutils
 src_compile() {
     if has_version '>=dev-db/mysql-4.0.10' >& /dev/null
 	then
-	cp ${FILESDIR}/setup.py-0.9.2__mysql4 ${S}/setup.py
+	mv setup.py setup.orig
+	sed -e 's/thread_safe_library = YES/thread_safe_library = NO/' \
+	    setup.orig > setup.py
     fi
     distutils_src_compile
 }
