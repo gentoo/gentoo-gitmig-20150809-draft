@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9-r1.ebuild,v 1.13 2003/07/16 14:41:28 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9-r1.ebuild,v 1.14 2003/09/04 05:16:02 msterret Exp $
 
 inherit libtool eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 	sed -e "s:fam_LDADD =:fam_LDADD = -lrt -lpthread:" Makefile.am.old > Makefile.am
 
 	elibtoolize
-	
+
 	export WANT_AUTOCONF_2_5=1
 	export WANT_AUTOMAKE_1_5=1
 	automake --add-missing
@@ -42,11 +42,11 @@ src_unpack() {
 src_install() {
 	cp fam/fam.conf fam/fam.conf.old
 	sed s:"local_only = false":"local_only = true":g fam/fam.conf.old >fam/fam.conf
-			
+
 	make DESTDIR=${D} install || die
-	     
+
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/fam
-	
+
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS TODO README*
 }

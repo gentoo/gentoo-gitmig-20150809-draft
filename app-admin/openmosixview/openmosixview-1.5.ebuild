@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixview/openmosixview-1.5.ebuild,v 1.1 2003/07/24 17:33:45 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixview/openmosixview-1.5.ebuild,v 1.2 2003/09/04 05:18:45 msterret Exp $
 
 S=${WORKDIR}/openmosixview-${PV}
 DESCRIPTION="cluster-management GUI for OpenMosix"
@@ -19,7 +19,7 @@ KEYWORDS="x86 -ppc -sparc -alpha"
 src_unpack() {
 	cd ${WORKDIR}
 	unpack openmosixview-${PV}.tar.gz
-		
+
 	cat > configuration << EOF
 	# test which version of qt is installed
 	if [ -d /usr/qt/3 ]; then
@@ -31,21 +31,20 @@ EOF
 }
 
 src_compile() {
-    cd ${S}
-    make
+	cd ${S}
+	make
 }
 
 src_install() {
-    dodir /usr/local/bin
+	dodir /usr/local/bin
 
-    make BINDIR=${D}usr/local/bin INITDIR=${D}etc/init.d install || die
+	make BINDIR=${D}usr/local/bin INITDIR=${D}etc/init.d install || die
 
-    dodoc COPYING README
+	dodoc COPYING README
 
-    exeinto /etc/init.d
-    rm ${D}/etc/init.d/openmosixcollector
-    newexe ${FILESDIR}/openmosixcollector.init openmosixcollector
-
+	exeinto /etc/init.d
+	rm ${D}/etc/init.d/openmosixcollector
+	newexe ${FILESDIR}/openmosixcollector.init openmosixcollector
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r1.ebuild,v 1.4 2003/07/12 21:33:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r1.ebuild,v 1.5 2003/09/04 05:20:05 msterret Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ amanda_variable_setup() {
 	#	eval `eval echo ${i}`
 	#	echo "Setting: ${i}"
 	#done;
-	
+
 	# First we set the defaults
 	[ -z "${AMANDA_GROUP_GID}" ] && AMANDA_GROUP_GID=87
 	[ -z "${AMANDA_GROUP_NAME}" ] && AMANDA_GROUP_NAME=amanda
@@ -81,13 +81,13 @@ amanda_variable_setup() {
 	[ -z "${AMANDA_DBMODE}" ] && use berkdb && AMANDA_DBMODE=db
 	[ -z "${AMANDA_DBMODE}" ] && use gdbm && AMANDA_DBMODE=gdbm
 	[ -z "${AMANDA_DBMODE}" ] && AMANDA_DBMODE=text
-	
+
 	# Now pull in the old stuff
 	if [ -f "${ENVDFILE}" ]; then
 		# We don't just source it as we don't want everything in there.
 		eval $(egrep "^AMANDA_" ${ENVDIR}/${ENVDFILE})
 	fi
-	
+
 	# Re-apply the new settings if any
 	[ -n "${currentamanda}" ] && eval `echo "${currentamada}"`
 
@@ -117,7 +117,7 @@ src_compile() {
 
 	einfo "Using '${AMANDA_DBMODE}' style database"
 	myconf="${myconf} --with-db=${AMANDA_DBMODE}"
-	
+
 	einfo "Using ${AMANDA_SERVER_TAPE} for tape server."
 	myconf="${myconf} --with-tape-server=${AMANDA_SERVER_TAPE}"
 	einfo "Using ${AMANDA_SERVER_INDEX} for index server."
@@ -161,17 +161,17 @@ src_compile() {
 	myconf="${myconf} `use_with pic`"
 	# Where to put our files
 	myconf="${myconf} --localstatedir=${AMANDA_USER_HOMEDIR}"
-	
+
 	# Samba support
 	use samba && myconf="${myconf} --with-smbclient=/usr/bin/smbclient" || myconf="${myconf} --without-smbclient"
 
 	econf ${myconf} || die "econf failed!"
 	emake || die "emake failed!"
 
-    # Compile the tapetype program too
+	# Compile the tapetype program too
 	# This is deprecated, use amtapetype instead!
 	# cd tape-src
-	# emake tapetype || die "emake tapetype failed!" 
+	# emake tapetype || die "emake tapetype failed!"
 
 	# Only needed if you we do versioning
 	#dosed "s,/usr/local/bin/perl,/usr/bin/perl," ${S}/contrib/set_prod_link.pl
@@ -183,7 +183,7 @@ src_compile() {
 src_install() {
 	[ ! -f "${TMPENVFILE}" ] && die "Variable setting file (${TMPENVFILE}) should exist!"
 	source ${TMPENVFILE}
-	
+
 	einfo "Doing stock install"
 	make DESTDIR=${D} install || die
 
@@ -223,7 +223,7 @@ src_install() {
 
 	# Depreacted, use amtapetype instead
 	#einfo "Installing tapetype utility"
-    #newsbin tape-src/tapetype tapetype
+	#newsbin tape-src/tapetype tapetype
 
 	# docs
 	einfo "Installing documentation"
@@ -277,7 +277,7 @@ src_install() {
 	newexe ${MYFILESDIR}/amanda-cron amanda
 	# Not excetuable by default
 	fperms 644 ${CRONDIR}/amanda
-	
+
 	insinto /etc/amanda/${AMANDA_CONFIG_NAME}
 	keepdir /etc/amanda
 	keepdir /etc/amanda/${AMANDA_CONFIG_NAME}

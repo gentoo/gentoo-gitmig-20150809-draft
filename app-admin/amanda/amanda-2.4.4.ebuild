@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4.ebuild,v 1.4 2003/07/12 21:33:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4.ebuild,v 1.5 2003/09/04 05:20:05 msterret Exp $
 
-inherit eutils 
+inherit eutils
 DESCRIPTION="The Advanced Maryland Automatic Network Disk Archiver"
 HOMEPAGE="http://www.amanda.org/"
 SRC_URI="mirror://sourceforge/amanda/${P}.tar.gz"
@@ -63,7 +63,7 @@ src_compile() {
 	[ -z "${AMANDA_DBMODE}" ] && AMANDA_DBMODE=text
 	einfo "Using '${AMANDA_DBMODE}' style database"
 	myconf="${myconf} --with-db=${AMANDA_DBMODE}"
-	
+
 	einfo "Using ${AMANDA_SERVER_TAPE} for tape server."
 	myconf="${myconf} --with-tape-server=${AMANDA_SERVER_TAPE}"
 	einfo "Using ${AMANDA_SERVER_INDEX} for index server."
@@ -85,17 +85,17 @@ src_compile() {
 		eerror "AMANDA_PORTS_BOTH."
 		die "Bad port setup!"
 	fi
-	if [ -n "${AMANDA_PORTS_UDP}" ]; then 
-		einfo "Using UDP ports ${AMANDA_PORTS_UDP/,/-}" 
-		myconf="${myconf} --with-udpportrange=${AMANDA_PORTS_UDP}" 
+	if [ -n "${AMANDA_PORTS_UDP}" ]; then
+		einfo "Using UDP ports ${AMANDA_PORTS_UDP/,/-}"
+		myconf="${myconf} --with-udpportrange=${AMANDA_PORTS_UDP}"
 	fi
-	if [ -n "${AMANDA_PORTS_TCP}" ]; then 
-		einfo "Using TCP ports ${AMANDA_PORTS_TCP/,/-}" 
-		myconf="${myconf} --with-tcpportrange=${AMANDA_PORTS_TCP}" 
+	if [ -n "${AMANDA_PORTS_TCP}" ]; then
+		einfo "Using TCP ports ${AMANDA_PORTS_TCP/,/-}"
+		myconf="${myconf} --with-tcpportrange=${AMANDA_PORTS_TCP}"
 	fi
-	if [ -n "${AMANDA_PORTS}" ]; then 
-		einfo "Using ports ${AMANDA_PORTS/,/-}" 
-		myconf="${myconf} --with-portrange=${AMANDA_PORTS}" 
+	if [ -n "${AMANDA_PORTS}" ]; then
+		einfo "Using ports ${AMANDA_PORTS/,/-}"
+		myconf="${myconf} --with-portrange=${AMANDA_PORTS}"
 	fi
 
 	# Extras
@@ -106,7 +106,7 @@ src_compile() {
 	# PIC
 	myconf="${myconf} `use_with pic`"
 	myconf="${myconf} --localstatedir=${AMANDA_USER_HOMEDIR}"
-	
+
 	use samba && myconf="${myconf} --with-smbclient=/usr/bin/smbclient" || myconf="${myconf} --without-smbclient"
 
 	econf ${myconf} || die "econf failed!"
@@ -169,7 +169,7 @@ src_install() {
 	insinto /etc/amanda/example2
 	newins ${S}/example/amanda.conf amanda.conf
 	newins ${S}/example/disklist disklist
-	
+
 	# einfo "Installing Sample Daily Backup Configuration"
 	insinto /etc/amanda/${AMANDA_CONFIG_NAME}
 	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} /etc/amanda

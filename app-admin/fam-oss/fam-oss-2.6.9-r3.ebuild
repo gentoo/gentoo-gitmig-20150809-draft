@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9-r3.ebuild,v 1.3 2003/07/18 18:56:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.9-r3.ebuild,v 1.4 2003/09/04 05:16:02 msterret Exp $
 
 inherit libtool eutils
 
@@ -36,7 +36,7 @@ src_unpack() {
 
 	# This one is old, and automake will install new one
 	rm -rf ${S}/missing
-	
+
 	export WANT_AUTOCONF_2_5=1
 	export WANT_AUTOMAKE_1_5=1
 	aclocal
@@ -48,11 +48,11 @@ src_unpack() {
 src_install() {
 	cp fam/fam.conf fam/fam.conf.old
 	sed s:"local_only = false":"local_only = true":g fam/fam.conf.old >fam/fam.conf
-			
+
 	make DESTDIR=${D} install || die
-	     
+
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/fam
-	
+
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS TODO README*
 }
