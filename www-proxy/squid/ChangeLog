@@ -1,6 +1,10 @@
 # ChangeLog for net-www/squid
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.2 2004/08/16 01:29:20 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.3 2004/08/16 11:30:58 cyfred Exp $
+
+  16 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>; squid-2.5.5-r3.ebuild:
+  Patches introduced for 2.5.5-r3 fix the sasl sedding done in the ebuilds,
+  removing.
 
 *squid-2.5.5-r3 (16 Aug 2004)
 

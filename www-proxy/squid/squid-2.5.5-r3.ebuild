@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.5-r3.ebuild,v 1.1 2004/08/16 01:29:20 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.5-r3.ebuild,v 1.2 2004/08/16 11:30:58 cyfred Exp $
 
 inherit eutils
 
@@ -60,23 +60,7 @@ src_compile() {
 	local basic_modules="getpwnam,YP,NCSA,SMB,MSNT,multi-domain-NTLM,winbind"
 	use ldap && basic_modules="LDAP,${basic_modules}"
 	use pam && basic_modules="PAM,${basic_modules}"
-	if use sasl; then
-		basic_modules="SASL,${basic_modules}"
-		#support for cyrus-sasl-1.x and 2.x; thanks Raker!
-		if [ -f /usr/include/sasl/sasl.h ]; then
-			cd ${S}/helpers/basic_auth/SASL/
-			cp sasl_auth.c sasl_auth.c.orig
-			sed \
-				-e "s:sasl.h:sasl/sasl.h:" \
-				-e "s:NULL, NULL, NULL:NULL, NULL, NULL, NULL, NULL:" \
-				-e "s:strlen(password), \&errstr:strlen(password):" \
-				< sasl_auth.c.orig > sasl_auth.c
-			cp Makefile.in Makefile.in.orig
-			sed -e "s:-lsasl:-lsasl2:" \
-				< Makefile.in.orig > Makefile.in
-			cd ${S}
-		fi
-	fi
+	use sasl && basic_modules="SASL,${basic_modules}"
 
 	local ext_helpers="ip_user,unix_group,wbinfo_group,winbind_group"
 	use ldap && ext_helpers="ldap_group,${ext_helpers}"
