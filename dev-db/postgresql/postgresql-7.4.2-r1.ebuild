@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r1.ebuild,v 1.9 2004/07/05 22:20:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r1.ebuild,v 1.10 2004/07/14 01:23:36 agriffis Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -114,7 +114,7 @@ src_compile() {
 	use ppc && CFLAGS="-pipe -fsigned-char"
 
 	# Detect mips systems properly
-	use mips && gnuconfig_update
+	gnuconfig_update
 
 	./configure --prefix=/usr \
 		--mandir=/usr/share/man \
