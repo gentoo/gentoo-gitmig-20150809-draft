@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-0.2.0.ebuild,v 1.6 2005/01/01 20:39:16 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-0.2.0.ebuild,v 1.7 2005/01/19 01:14:43 vapier Exp $
 
 DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://cairographics.org/snapshots/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE="glitz png"
 
 DEPEND="virtual/x11
@@ -21,10 +21,13 @@ DEPEND="virtual/x11
 	png? ( media-libs/libpng )"
 
 src_compile() {
-	econf `use_enable glitz` `use_enable png` || die
+	econf \
+		$(use_enable glitz) \
+		$(use_enable png) \
+		|| die
 	emake || die
 }
 
 src_install() {
-	make install DESTDIR=${D}
+	make install DESTDIR="${D}" || die
 }
