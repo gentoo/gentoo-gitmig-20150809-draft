@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.0-r3.ebuild,v 1.4 2002/05/08 19:33:36 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.0-r3.ebuild,v 1.5 2002/05/10 14:24:37 bass Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window Maker"
@@ -109,3 +109,12 @@ src_install() {
 	newdoc README README.extra
 }
 
+pkg_postinst() {
+
+    echo
+	echo '######################################################################'
+	echo '# If do you want trans globes and other trans elements do you need   #'
+	echo '# the libxpm (media-libs/xpm). 									   #'
+	echo '######################################################################'
+	}
+			
