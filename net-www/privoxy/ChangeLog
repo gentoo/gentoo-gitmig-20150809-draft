@@ -1,8 +1,11 @@
 # ChangeLog for net-www/privoxy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.7 2003/02/12 08:52:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.8 2003/02/15 08:14:33 gerk Exp $
 
 *privoxy-3.0.0 (14 Dec 2002)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> privoxy-3.0.0.ebuild :
+  set ~ppc in keywords
 
   14 Dec 2002; Seemant Kulleen <seemant@gentoo.org> privoxy-3.0.0.ebuild
   files/digest-privoxy-3.0.0 files/privoxy-3.0.0-gentoo.diff
