@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.24 2003/05/25 07:16:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.25 2003/05/27 19:00:23 rac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -9,6 +9,7 @@ app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-editors/vim:vim-with-x - Enables linking the console vim against X libs to enable some features in xterms
 app-office/gnucash:ofx - Enable OFX support, for importing OFX data files.
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
+dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
