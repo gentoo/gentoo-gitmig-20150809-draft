@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20040508.ebuild,v 1.4 2004/06/24 22:38:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20040508.ebuild,v 1.5 2004/07/15 01:49:09 lv Exp $
 
-inherit games
+inherit games eutils flag-o-matic
 
 DESCRIPTION="SNES (Super Nintendo) emulator that uses x86 assembly"
 HOMEPAGE="http://www.zsnes.com/ http://emuhost.com/ipher/zsnes/"
@@ -10,11 +10,14 @@ SRC_URI="http://ipher.emuhost.com/files/zsnes/ZSNESS_${PV/*2004}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~x86 ~amd64"
 IUSE="opengl"
 
+# we need libsdl for headers on amd64, even though we'll technically be using
+# the 32bit sdl from emul-linux-x86-sdl. 
 RDEPEND="opengl? ( virtual/opengl )
 	>=media-libs/libsdl-1.2.0
+	amd64? ( app-emulation/emul-linux-x86-sdl )
 	sys-libs/zlib
 	media-libs/libpng"
 DEPEND="${RDEPEND}
@@ -23,6 +26,16 @@ DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58"
 
 S="${WORKDIR}"
+
+multilib_check() {
+	if (has_m64 && has_m32) ; then
+		einfo "multilib detected, adding -m32 to CFLAGS. note that opengl"
+		einfo "support probably wont work quite right."
+		append-flags -m32
+	else
+		die "zsnes requires multilib support in gcc. please re-emerge gcc with multilib in USE and try again"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -35,7 +48,8 @@ src_unpack() {
 }
 
 src_compile() {
-	# Do NOT introduce custom ${CFLAGS} - Current choices are the optimal ones
+	use amd64 && multilib_check
+
 	cd src
 	egamesconf \
 		$(use_with opengl) \
