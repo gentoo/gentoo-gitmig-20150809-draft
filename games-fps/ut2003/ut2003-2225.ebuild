@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.8 2003/12/09 21:12:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.9 2003/12/13 16:16:31 wolf31o2 Exp $
 
 inherit games
 
@@ -45,7 +45,7 @@ src_install() {
 		einfo "Copying files from Disk 1..."
 		cp -r ${GAMES_CD}/{Animations,ForceFeedback,Help,KarmaData,Maps,Sounds,Textures,Web} ${Ddir} || die "copying files"
 		cp -r ${GAMES_CD}/System/{editorres,*.{bmp,dat,det,est,frt,ini,int,itt,md5,u,upl,url}} ${Ddir}/System || die "copying files"
-		mkdir -p ${Ddir}/Benchmark/Stuff
+		mkdir -p ${Ddir}/Benchmark/Stuff || dir "creating benchamrk folders"
 		cp -r ${GAMES_CD}/Benchmark/Stuff/* ${Ddir}/Benchmark/Stuff || die "copying benchmark files"
 
 		# Disk 2
@@ -68,7 +68,7 @@ src_install() {
 		einfo "Copying files... this may take a while..."
 		cp -r ${GAMES_CD}/{Animations,ForceFeedback,Help,KarmaData,Maps,Music,Sounds,StaticMeshes,Textures,Web} ${Ddir} || die "copying files"
 		cp -r ${GAMES_CD}/System/{editorres,*.{bmp,dat,det,est,frt,ini,int,itt,md5,u,upl,url}} ${Ddir}/System || die "copying files"
-		mkdir -p ${Ddir}/Benchmark/Stuff
+		mkdir -p ${Ddir}/Benchmark/Stuff || die "creating benchmark folders"
 		cp -r ${GAMES_CD}/Benchmark/Stuff/* ${Ddir}/Benchmark/Stuff || die "copying benchmark files"
 	fi
 
