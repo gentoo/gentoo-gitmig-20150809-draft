@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.13.ebuild,v 1.9 2004/07/01 11:57:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.14-r1.ebuild,v 1.1 2004/08/04 16:40:56 lanius Exp $
 
 inherit eutils
 
@@ -20,12 +20,12 @@ SRC_URI="mirror://sourceforge/ghostscript/${MY_P}.tar.gz
 
 LICENSE="Aladdin"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="X cups cjk gtk"
 
 PROVIDE="virtual/ghostscript"
 
-DEPEND="virtual/libc
+DEPEND="virtual/glibc
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.5
 	>=sys-libs/zlib-1.1.4
@@ -45,7 +45,6 @@ src_unpack() {
 
 	# cups support
 	if use cups; then
-		einfo "hallo"
 		unpack cups-${CUPS_PV}-source.tar.bz2
 		cp -r cups-${CUPS_PV}/pstoraster ${S}
 		cd ${S}/pstoraster
@@ -56,10 +55,8 @@ src_unpack() {
 		epatch pstoraster/gs811-lib.patch
 	fi
 
-	cd ${S}
-
-	# ijs .so patch
-	epatch ${FILESDIR}/gs-8.11-ijs.patch
+	# enable cfax device
+	sed -i -e 's:DEVICE_DEVS7=$(DD)faxg3.dev $(DD)faxg32d.dev $(DD)faxg4.dev:DEVICE_DEVS7=$(DD)faxg3.dev $(DD)faxg32d.dev $(DD)faxg4.dev $(DD)cfax.dev:' ${S}/Makefile.in
 }
 
 src_compile() {
@@ -82,9 +79,9 @@ src_compile() {
 	fi
 
 	# search path fix
-	sed -i -e 's:$(gsdatadir)/lib:/usr/share/ghostscript/8.13/lib:' Makefile
+	sed -i -e 's:$(gsdatadir)/lib:/usr/share/ghostscript/8.14/lib:' Makefile
 	sed -i -e 's:$(gsdir)/fonts:/usr/share/ghostscript/fonts:' Makefile
-	sed -i -e 's:$(gsdatadir)/Resource:/usr/share/ghostscript/8.13/Resource:' Makefile
+	sed -i -e 's:$(gsdatadir)/Resource:/usr/share/ghostscript/8.14/Resource:' Makefile
 
 	make || die "make failed"
 	make so || die "make so failed"
