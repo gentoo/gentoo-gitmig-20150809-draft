@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/files/autofs.rc8,v 1.1 2002/11/18 02:00:18 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/files/autofs.rc8,v 1.2 2002/11/25 07:11:33 bcowan Exp $
 
 # rc file for automount using a Sun-style "master map".
 # We first look for a local /etc/auto.master, then a YP
@@ -10,8 +10,8 @@
 DAEMON=/usr/sbin/automount
 
 depend() {
-	need net ypbind
-	use portmap
+	need localmount	
+	use ypbind nfs
 }
 
 opts="start stop status stats reload restart"
