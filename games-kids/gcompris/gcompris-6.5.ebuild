@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-6.5.ebuild,v 1.1 2005/03/16 09:04:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-6.5.ebuild,v 1.2 2005/03/17 07:01:52 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -58,6 +58,7 @@ src_install() {
 	rm -f "${D}/usr/share/gcompris/boards/followline.xml"
 	# mailing list reports crash
 	rm -f "${D}/usr/share/gcompris/boards/click_on_letter.xml"
+	use editor || rm -f "${D}/usr/share/applications/gcompris-edit.desktop"
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	prepgamesdirs
 }
