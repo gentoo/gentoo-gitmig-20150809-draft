@@ -1,6 +1,6 @@
-# Copyright 2003 Arcady Genkin <agenkin@gentoo.org>
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/mess822-0.58-r1.ebuild,v 1.1 2003/08/08 03:37:35 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/mess822-0.58-r1.ebuild,v 1.2 2003/09/29 21:30:01 mholzer Exp $
 
 DESCRIPTION="Collection of utilities for parsing Internet mail messages."
 SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
@@ -21,8 +21,7 @@ src_unpack() {
 	echo "/usr/" > conf-home
 
 	# fix errno.h problem; bug #26165
-	cp error.h error.h.orig
-	sed 's/^extern int errno;/#include <errno.h>/' < error.h.orig > error.h
+	sed -i 's/^extern int errno;/#include <errno.h>/' error.h
 }
 
 src_compile() {

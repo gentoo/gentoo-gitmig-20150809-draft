@@ -1,6 +1,6 @@
-# Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/tmda-0.82.ebuild,v 1.2 2003/09/05 02:32:14 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/tmda-0.82.ebuild,v 1.3 2003/09/29 21:32:01 mholzer Exp $
 
 DESCRIPTION="Python-based SPAM reduction system"
 HOMEPAGE="http://www.tmda.net/"
