@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xmysqladmin/xmysqladmin-1.0.ebuild,v 1.4 2002/08/01 11:40:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xmysqladmin/xmysqladmin-1.0.ebuild,v 1.5 2002/09/05 16:16:03 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xforms based front end to mysql"
@@ -11,8 +11,7 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86"
 
-DEPEND="virtual/x11
-	virtual/xforms"
+DEPEND="virtual/x11 x11-libs/xforms"
 
 src_unpack() {
 	unpack ${A}

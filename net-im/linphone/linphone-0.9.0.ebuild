@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linphone/linphone-0.9.0.ebuild,v 1.1 2002/08/28 02:28:43 gaarde Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.9.0.ebuild,v 1.1 2002/09/05 16:16:03 drobbins Exp $
 
 # AUTHOR: Paul Belt <gaarde@gentoo.org>
 

@@ -155,7 +155,7 @@ dev-java/sun-j2sdk
 # <seemant@gentoo.org> (27 Aug 2002)
 # masked because there is a FREEZE, and things should be tested!
 dev-util/rats
-net-dialup/linphone
+net-im/linphone
 net-libs/libosip
 dev-perl/CDDB-File
 
