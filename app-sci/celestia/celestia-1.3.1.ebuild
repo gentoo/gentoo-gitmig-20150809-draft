@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/celestia-1.3.1.ebuild,v 1.2 2004/06/06 16:20:05 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/celestia-1.3.1.ebuild,v 1.3 2004/06/18 06:45:13 mr_bones_ Exp $
 
 inherit eutils flag-o-matic kde-functions
 
@@ -57,9 +57,9 @@ src_compile() {
 	filter-flags "-funroll-loops -frerun-loop-opt"
 	addwrite ${QTDIR}/etc/settings
 	# currently celestia's "gtk support" requires gnome
-	if [ -n "$(use kde)" ]; then
+	if  use kde ; then
 	    myconf="$myconf --with-kde --without-gtk"
-	elif [ -n "$(use gnome)" ]; then
+	elif  use gnome ; then
 	    myconf="--without-kde --with-gtk"
 	else
 		myconf="--without-kde --without-gtk"
