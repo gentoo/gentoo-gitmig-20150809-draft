@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.30 2004/08/18 18:55:05 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.31 2004/09/22 14:35:44 latexer Exp $
+
+*mono-1.0.2 (22 Sep 2004)
+
+  22 Sep 2004; <peter@gentoo.org> +mono-1.0.2-r1.ebuild, +mono-1.0.2.ebuild:
+  Bump. Includes both a non-NPTL enabled and NPTL version. NPTL version masked
+  pending a resolution to issues in GC.
 
   18 Aug 2004; Peter Johanson <latexer@gentoo.org> mono-1.0.1-r1.ebuild:
   Explicitly setting the threading implementation. Was sometimes choosing
