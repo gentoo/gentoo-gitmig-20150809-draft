@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.47 2004/07/19 17:27:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.48 2004/07/23 10:49:47 usata Exp $
+
+  23 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> gettext-0.12.1-r1.ebuild:
+  Stable on macos.
 
   20 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> gettext-0.12.1-r1.ebuild:
   Fixed file collision on macos
