@@ -1,8 +1,20 @@
-MD5 1f319923421a8c88302ab36cb4d5bbd8 ChangeLog 2119
-MD5 880bf85de3a322e21ead4d9f996f3a93 fbpanel-3.5.ebuild 647
-MD5 fdcc8b20973e59e8b5c053aa572dc8b4 fbpanel-3.8.ebuild 647
-MD5 380111f714c8f2ff062a821baf931f2f metadata.xml 252
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3f51a10cdbe42777117a8beb923f6c54 fbpanel-3.16.ebuild 733
+MD5 9eb4872b443d38cde08a2146111828f1 ChangeLog 2223
 MD5 1be995792d87457ae932cddede548683 fbpanel-3.8-r1.ebuild 918
-MD5 ed7fc5104dfc3f883d28ab46b2e91de6 files/digest-fbpanel-3.5 59
+MD5 880bf85de3a322e21ead4d9f996f3a93 fbpanel-3.5.ebuild 647
+MD5 380111f714c8f2ff062a821baf931f2f metadata.xml 252
+MD5 fdcc8b20973e59e8b5c053aa572dc8b4 fbpanel-3.8.ebuild 647
 MD5 aa7afad959893ae665e84f884d4cf046 files/digest-fbpanel-3.8 59
 MD5 aa7afad959893ae665e84f884d4cf046 files/digest-fbpanel-3.8-r1 59
+MD5 ed7fc5104dfc3f883d28ab46b2e91de6 files/digest-fbpanel-3.5 59
+MD5 e5637a25270c6dc7b42fedf55adb37cb files/digest-fbpanel-3.16 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjn6sI7fK2cqeyXkRAkOnAJ4r4caSBdEcDhClwuGOz5Y8JdjgdwCgoR4p
+2vZjBPWAnYF8ipvcFU38BVc=
+=XI45
+-----END PGP SIGNATURE-----
