@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/kompose
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kompose/ChangeLog,v 1.1 2004/08/01 21:27:00 carlo Exp $
+
+*kompose-0.3 (01 Aug 2004)
+
+  01 Aug 2004; Carsten Lohrke <carlo@gentoo.org> +kompose-0.3.ebuild:
+  Initial ebuild. Thanks to Alberto Garcia Hierro.
+
