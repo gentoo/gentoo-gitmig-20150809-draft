@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.34.ebuild,v 1.8 2003/03/25 18:00:44 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.34.ebuild,v 1.9 2003/07/22 18:35:01 tester Exp $
 
 IUSE="doc build"
 
@@ -15,7 +15,7 @@ DEPEND="!build? ( dev-lang/perl )
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 -ppc -sparc -alpha"
+KEYWORDS="x86 -ppc -sparc -alpha amd64"
 
 src_unpack() {
 
