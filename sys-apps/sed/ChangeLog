@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.14 2003/01/18 19:19:26 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.15 2003/02/09 02:30:05 gmsoft Exp $
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> sed-4.0.5.ebuild :
+  Added hppa to keywords.
 
 *sed-4.0.5.ebuild (22 Dec 2002)
 
