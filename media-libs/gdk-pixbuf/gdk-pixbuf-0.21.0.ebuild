@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.21.0.ebuild,v 1.2 2002/11/13 12:29:41 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.21.0.ebuild,v 1.3 2002/11/17 22:40:42 foser Exp $
 
 inherit virtualx libtool gnome.org
 
@@ -17,7 +17,7 @@ RDEPEND="media-libs/jpeg
 # We need gnome-libs here, else gnome support do not get compiled into
 # gdk-pixbuf (the GnomeCanvasPixbuf library ) 
 
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
 
 SLOT="0"
