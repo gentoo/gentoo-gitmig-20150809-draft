@@ -1,0 +1,62 @@
+#!/bin/bash
+# Copyright 2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author: Leo Lipelis
+
+# uses $EDITOR value for editor
+# edit three lines below to your liking
+rm_opts="-i"
+mv_opts="-i"
+editor_opts="-d" # vim diff mode
+
+cfg_files=`find /etc -iname '._cfg????_*'`
+
+# returns 1 if the file pair still needs to be looked at
+# or 0 if one of the two files was chosen for deletion and
+# everything is fine
+rm_extra_file() {
+	old=$1
+	new=$2
+	echo
+	echo "1) Upgrade to new $new"
+	echo "2) Keep existing $old"
+	echo "  OR"
+	echo "3) Edit this file pair again"
+	echo -n "Type (1, 2 or 3): "
+	# read and echo 1 char from stdin
+	read -n 1 input
+	echo
+	case $input in
+	1)
+		echo
+		echo "deleting $old ..."
+		rm $rm_opts $old
+		echo "moving $new to $old ..."
+		mv $mv_opts $new $old
+		;;
+	2)
+		echo
+		echo "deleting $new ..."
+		rm $rm_opts $new
+		;;
+	3)
+		echo
+		echo "looking at $old and $new again ..."
+		return 1
+		;;
+	*)
+		echo
+		echo "!!! Please pick a valid choice next time"
+		rm_extra_file $old $new
+		;;
+	esac
+}
+
+for new_full_path in $cfg_files; do
+	file=${new_full_path##*/}
+	old_full_path=${new_full_path%/*}/${file:10}
+	$EDITOR $editor_opts ${old_full_path} ${new_full_path}
+	until rm_extra_file ${old_full_path} ${new_full_path}; do
+		$EDITOR $editor_opts ${old_full_path} ${new_full_path}
+	done
+done

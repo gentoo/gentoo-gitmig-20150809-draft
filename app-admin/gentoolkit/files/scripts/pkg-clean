@@ -1,0 +1,66 @@
+#!/usr/bin/python
+# vim: set ts=4 sw=4:
+# Copyright 2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author: Leo Lipelis
+
+import commands as c
+import re
+import sys
+import string
+import time
+
+# constants for package tuples that are stored in pkg_hash
+PKG_TIME = 0 # number of seconds for ctime function
+PKG = 1 # package full path as accepted by ebuild
+PKG_NAME = 2 # package name as accepted by emerge
+
+(status, pkg_files) = c.getstatusoutput(
+		"find /var/db/pkg -iname '*.ebuild' -printf '%T@ %p\n' | sort -n")
+
+pkg_file_list = pkg_files.splitlines()
+
+pkg_hash = {}
+for time_pkg_pair in pkg_file_list:
+	(pkg_time, pkg) = time_pkg_pair.split()
+	pkg_time = string.atoi(pkg_time)
+	pkg_name = re.match(r'/var/db/pkg/(.*/.*)/.*', pkg).group(1)
+	pkg_core = re.match(r'(.*)-\d.*', pkg_name).group(1)
+	if pkg_hash.has_key(pkg_core):
+		pkg_hash[pkg_core].append((pkg_time, pkg, pkg_name))
+	else:
+		pkg_hash[pkg_core] = [(pkg_time, pkg, pkg_name)]
+
+for pkg_core in pkg_hash.keys():
+	print "Examining %s:" % (pkg_core)
+	if len(pkg_hash[pkg_core]) < 2:
+		continue
+	unmerged_indexes = []
+	while 1:
+		i = 0
+		print "0) Continue"
+		for pkg_tuple in pkg_hash[pkg_core]:
+			if i not in unmerged_indexes:
+				print "%d) %s %s" % (
+						i+1,
+						time.ctime(pkg_tuple[PKG_TIME]),
+						pkg_tuple[PKG_NAME])
+			i = i + 1
+		print "Unmerge: ",
+		index = string.atoi(sys.stdin.readline())
+		if index == 0:
+			break
+		else:
+			index = index - 1
+		ebuild = pkg_hash[pkg_core][index][PKG]
+		print "Unmerge %s? " % (ebuild),
+		confirmed = sys.stdin.readline()
+		if confirmed == "y\n":
+			(status, unmerge_out) = c.getstatusoutput(
+					"ebuild %s unmerge" % (ebuild))
+			print unmerge_out
+			if status != 0:
+				sys.exit(status)
+			unmerged_indexes.append(index)
+		else:
+			print "continuing without unmerging..."

@@ -1,0 +1,309 @@
+#! /usr/bin/python
+#
+# Copyright 2002 Gentoo Technologies, Inc
+# Distributed under the terms of the GNU General Public License v2.0
+# Author Karl Trygve Kalleberg <karltk@gentoo.org>
+#
+# About:
+# lintool checks if a set of ebuilds conforms to the ebuild style guide.
+# This is not (yet) an exhaustive test, so your ebuild might be broken even 
+# if lintool thinks it's okay.
+#
+# Usage: ebuildchecker.py /usr/portage/*/*/*.ebuild
+# Options: 
+#  --no-summary     : Do not show total summary
+#  --show-separate  : Show short summary of tests for each ebuild checked
+#  --show-details   : Show full details of tests for each ebuild checked
+#
+# TODO
+#
+# - New checks:
+#    - presence of all required env vars (HOMEPAGE, SRC_URI, S, DESCRIPTION)
+# - Make HTMLFormatter
+# - Sort errors into errors and warnings
+#
+#
+
+import sys
+import re
+
+class TextFormatter:
+    def section(self, s):
+        print "\n" + "-"*79
+        print " " + s + "\n"
+    def bullet(self, s):
+        print "* " + s
+    def sub(self, s):
+        print "- " + s
+    def subsub(self, s):
+        print " |" + s
+    def div(self, left, right):
+        l = len(left)
+        r = len(right)
+        print left + " " * (79-l-r) + right
+
+class Test:
+    def __init__(self, formatter):
+        self.formatter = formatter
+    def reset(self):
+        self.lines = []
+    def isOK(self):
+        return len(self.lines) == 0
+    def getDesc(self):
+        return self.desc
+    def getStatus(self):
+        if self.isOK(): return "passed"
+        else: return "failed"
+        
+class TestSpaces(Test):
+
+    def __init__(self, formatter):
+        Test.__init__(self, formatter)
+        self.desc = "Testing for illegal spaces at the start of the line"
+        self.re = re.compile("^([ ][ ]*)([a-zA-Z\.].*)")
+        self.lines = []
+
+    def checkLine(self, s):
+        k = self.re.match(s)
+        if k:
+            spcs = k.groups()[0]
+            rest = k.groups()[1]
+            self.lines.append(spcs.replace(" ", "%") + rest)
+
+    def report(self):
+        if len(self.lines):
+            self.formatter.sub("Has illegal spaces (marked by %):")
+            for i in self.lines:
+                self.formatter.subsub(i)
+
+class TestHeaders(Test):
+
+    def __init__(self, formatter):
+        Test.__init__(self,formatter)
+        self.desc = "Testing for malformed headers"
+        self.re = [ re.compile("^(# Copyright 1999-2000 Gentoo Technologies, Inc.)"),
+                    re.compile("^(# /home.*)") ]
+        self.lines = []
+
+    def checkLine(self, s):
+        for i in self.re:
+            k = i.match(s)
+            if k:
+                self.lines.append(k.groups()[0])
+
+    def report(self):
+        if len(self.lines):
+            self.formatter.sub("Has illegal or suspect headers:")
+            for i in self.lines:
+                self.formatter.subsub(i)
+
+class TestTry(Test):
+
+    def __init__(self,formatter):
+        Test.__init__(self,formatter)
+        self.desc = "Testing for occurence of deprecated try"
+        self.re = [ re.compile("^([ \t][ \t]*try.*)"),
+                    re.compile("(.*=.* try .*)") ]
+        self.lines = []
+
+    def checkLine(self, s):
+        for i in self.re:
+            k = i.match(s)
+            if k:
+                self.lines.append(k.groups()[0])
+
+    def report(self):
+        if len(self.lines):
+            self.formatter.sub("Uses try, which is deprecated")
+            for i in self.lines:
+                self.formatter.subsub(i)
+
+class TestA(Test):
+
+    def __init__(self, formatter):
+        Test.__init__(self,formatter)
+        self.desc = "Testing for unnecessary A=${P}.tar.gz"
+        self.re = re.compile("(A=\$\{P\}.tar.gz)")
+        self.lines = []
+
+    def checkLine(self, s):
+        k = self.re.match(s)
+        if k:
+            self.lines.append(k.groups()[0])
+
+    def report(self):
+        if len(self.lines):
+            self.formatter.sub("Contains unnecessary " + self.lines[0])
+        
+class TestDepend(Test):
+
+    def __init__(self, formatter):
+        Test.__init__(self,formatter)
+        self.desc = "Testing for empty DEPEND"
+        self.re = re.compile("DEPEND=\"\"")
+        self.lines = []
+
+    def checkLine(self, s):
+        k = self.re.match(s)
+        if k:
+            self.lines.append("")
+
+    def report(self):
+        if len(self.lines):
+            self.formatter.sub("Is DEPENDS supposed to be empty ?")
+
+class TestHomepage(Test):
+
+    def __init__(self, formatter):
+        Test.__init__(self,formatter)
+        self.desc = "Testing for empty HOMEPAGE"
+        self.re = re.compile("HOMEPAGE=\"\"")
+        self.lines = []
+
+    def checkLine(self, s):
+        k = self.re.match(s)
+        if k:
+            self.lines.append("")
+
+    def report(self):
+        if len(self.lines):
+            self.formatter.sub("Is HOMEPAGE really supposed to be empty ?")
+
+class TestDescription(Test):
+
+    def __init__(self, formatter):
+        Test.__init__(self,formatter)
+        self.desc = "Testing for empty DESCRIPTION"
+        self.re = re.compile("DESCRIPTION=\"\"")
+        self.lines = []
+
+    def checkLine(self, s):
+        k = self.re.match(s)
+        if k:
+            self.lines.append("")
+
+    def report(self):
+        if len(self.lines):
+            self.formatter.sub("DESCRIPTION is empty")
+
+class TestEnvVarPresence(Test):
+
+   def __init__(self, formatter):
+      Test.__init__(self,formatter)
+      self.desc = "Testing for presence of SRC_URI, HOMEPAGE, .."
+      self.re = []
+      self.found = []
+      self.required = ["SRC_URI=", "DESCRIPTION=", "HOMEPAGE=" ]
+      self.desired = [ "# Author:", "# Maintainer:", "DEPEND=", "RDEPEND=", "S="]
+
+      for i in self.required:
+          self.re.append(re.compile("^(" + i + ")"))
+      for i in self.desired:
+          self.re.append(re.compile("^(" + i + ")"))
+      
+   def checkLine(self, s):
+       for i in self.re:
+           k = i.match(s)
+           if k:
+               self.found.append(k.group(1))
+
+   def report(self):
+       for i in self.required:
+           if i not in self.found:
+               self.formatter.sub("Missing " + i)
+       for i in self.desired:
+           if i not in self.found:
+               self.formatter.sub("Missing " + i)
+
+   def isOK(self):
+       warn = error = 0
+       for i in self.required:
+           if i not in self.found:
+               error = 1
+       for i in self.desired:
+           if i not in self.found:
+               warn = 1
+       return (warn + error) == 0
+       
+       
+def extractFilename(path):
+    return path
+
+def runTests(ins):
+    for j in tests:
+        j.reset()
+
+    for i in ins.readlines():
+        for j in tests:
+            j.checkLine(i)
+
+    for j in xrange(len(tests)):
+        if not tests[j].isOK():
+            result[j] += 1
+        
+def showStatus(file):
+    if showFullStatus or showSeparate:
+        formatter.section("Status for " + file)
+        for j in tests:
+            if showSeparate:
+                l = len(j.getDesc())
+                formatter.bullet(j.getDesc() + " " * (70 - l) + ": " + j.getStatus())
+            if showFullStatus:
+                j.report()
+    else:
+        allOK = 1
+        for j in tests:
+            if not j.isOK():
+                allOK = 0
+                break
+        if allOK:
+            formatter.div(file, ": OK")
+        else:
+            formatter.div(file, ": Not OK")
+    
+
+formatter = TextFormatter()
+
+tests = [ TestSpaces(formatter),
+          TestHeaders(formatter),
+          TestTry(formatter),
+          TestA(formatter),
+          TestDepend(formatter),
+          TestHomepage(formatter),
+          TestDescription(formatter),
+          TestEnvVarPresence(formatter) ]
+
+result = range(len(tests))
+
+showSeparate   = 0
+showTotal      = 1
+showFullStatus = 0
+showShort      = 1
+
+for i in xrange(len(result)): result[i] = 0
+
+
+for i in sys.argv[1:]:
+    if len(i) > 2 and i[0:2] == "--":
+        if i == "--show-details":
+            showShort = 0
+            showFullStatus = 1
+        if i == "--show-separate":
+            showShort = 0
+            showSeparate = 1
+        if i == "--no-summary":
+            showTotal = 0
+    else:
+        fn = extractFilename(i)
+        ins = open(i, "r")
+        runTests(ins)
+        if showSeparate or showFullStatus or showShort:
+            showStatus(fn)
+
+if showTotal:
+    print "\n" + "-"*79
+    print " Summary for all ebuilds checked" + " " * 39 + "# fails"
+    print "-"*79
+    for i in xrange(len(tests)):
+        l = len(tests[i].getDesc())
+        print tests[i].getDesc() + " " * (70 - l) + ": " + str(result[i])

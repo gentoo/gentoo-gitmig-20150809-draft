@@ -1,0 +1,8 @@
+#! /bin/sh
+
+. /etc/make.globals
+
+find ${PORTDIR}/ -name "*.ebuild" | \
+	xargs egrep -i "<[a-z]+@[a-z\.]+>" | \
+	awk -f /usr/share/gentoolkit/histogram.awk | \
+	sort -n +1 -r

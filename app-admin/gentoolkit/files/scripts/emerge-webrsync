@@ -1,0 +1,39 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+my $tempRsyncPath = "/var/tmp/emerge-webrsync";
+
+unless(-e $tempRsyncPath)
+{
+	mkdir($tempRsyncPath);
+}
+
+chdir($tempRsyncPath);
+
+my $mytime = time;
+my $flag = 1;
+
+while($flag)
+{
+	my @date = localtime($mytime);
+	my $day = sprintf("%02d", $date[3]);
+	++$date[4];
+	my $month = sprintf("%02d", $date[4]);
+	$date[5] += 1900;
+	my $year = sprintf("%04d", $date[5]);
+	
+	my $file = "portage-".$year.$month.$day.".tar.bz2";
+	my $url = "http://www.gentoo.org/snapshots/$file";
+	print "Trying to get $url...\n";
+	$flag = system "wget $url";
+	if(!$flag)
+	{
+		system "tar xjf $file";
+		unlink($file);
+		system "rsync -av . /usr/";
+	}
+	else { $mytime -= 86400; }
+}
+
+system "rm -rf portage";
