@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/fung-calc/fung-calc-1.3.2b.ebuild,v 1.2 2004/04/18 22:46:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/fung-calc/fung-calc-1.3.2b.ebuild,v 1.3 2004/05/01 10:36:44 centic Exp $
 
-IUSE="kde opengl"
+IUSE="opengl"
 
 DESCRIPTION="Scientific Graphing Calculator"
 HOMEPAGE="http://fung-calc.sourceforge.net/"
@@ -18,12 +18,12 @@ DEPEND=">=sys-libs/zlib-1
 	>=x11-libs/qt-3.1
 	virtual/glibc
 	opengl? ( virtual/opengl )
-	kde? ( >=kde-base/kdebase-3.1 )"
+	>=kde-base/kdebase-3.1"
 
 src_compile() {
 	local myconf
 	use opengl || myconf="${myconf} --disable-glgraph"
-	use kde || myconf="${myconf} --disable-kde-app"
+	# use kde || myconf="${myconf} --disable-kde-app"
 	econf ${myconf} || die "configure failed"
 	emake || die "make failed"
 }
