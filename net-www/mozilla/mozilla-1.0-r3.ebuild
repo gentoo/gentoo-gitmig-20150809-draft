@@ -1,9 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.5 2002/07/25 00:35:01 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.6 2002/07/25 01:16:08 spider Exp $
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
-inherit makeedit
 
 # handle _rc versions
 MY_PV1=${PV/_}
@@ -189,7 +188,7 @@ src_compile() {
 
 	# Crashes on start when compiled with -fomit-frame-pointer
 	CFLAGS="${CFLAGS/-fomit-frame-pointer}"
-	CXXFLAGS="${CXXFLAGS/-fomit-frame-pointer} -Wno-deprecated"
+	CXXFLAGS="${CXXFLAGS/-fomit-frame-pointer}"
 
 	./configure --prefix=/usr/lib/mozilla \
 		--disable-pedantic \
@@ -206,11 +205,10 @@ src_compile() {
 		--with-java-supplement \
 		--with-pthreads \
 		--with-extensions="${myext}" \
-		--enable-optimize="-O3" \
+		--enable-optimize="-Wno-deprecated -O3" \
 		--with-default-mozilla-five-home=/usr/lib/mozilla \
 		${myconf} || die
 
-	edit_makefiles
 	make || die
 
 	# Build the NSS/SSL support
