@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/disc-cover
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/ChangeLog,v 1.8 2003/06/29 16:01:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/ChangeLog,v 1.9 2003/10/15 15:07:39 mholzer Exp $
+
+*disc-cover-1.5.2 (16 Oct 2003)
+
+  16 Oct 2003; Martin Holzer <mholzer@gentoo.org> disc-cover-1.5.2.ebuild:
+  Version bumped. Closes #22881.
 
 *disc-cover-1.4.0 (05 May 2003)
 
