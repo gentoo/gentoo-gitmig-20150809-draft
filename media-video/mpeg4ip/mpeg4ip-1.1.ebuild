@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.1.ebuild,v 1.3 2004/06/05 15:25:52 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.1.ebuild,v 1.4 2004/06/08 22:27:19 tester Exp $
 
 DESCRIPTION="MPEG 4 implementation library"
 
@@ -38,7 +38,7 @@ S="${WORKDIR}/${P}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i -e 's/-Wmissing-prototypes//g' configure
+	sed -i -e 's/-Wmissing-prototypes//g' -e 's/-Werror//g' configure
 
 	cd ${S}/lib/SDLAudio
 	sed -i -e 's:-laudio:-L/usr/X11R6/lib -laudio:' configure
@@ -51,7 +51,7 @@ src_compile() {
 	local myconf
 
 	# mp4live doesnt build, disable it..
-	myconf=" --disable-mp4live --disable-ffmpeg $(use_enable ipv6)
+	myconf=" $(use_enable ipv6)
 			$(use_enable mmx)
 			$(use_enable ppc)
 			$(use_enable nas)

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.9 2004/06/05 15:25:52 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.10 2004/06/08 22:27:19 tester Exp $
+
+  08 Jun 2004; <tester@gentoo.org> mpeg4ip-1.1.ebuild:
+  Removed -Werror because it breaks with some versions of gcc (#51617)
 
   05 Jun 2004; <tester@gentoo.org> mpeg4ip-1.1.ebuild:
   Made xvid, nas, alsa, esd, arts support use flags. Fixed a few bugs (including
