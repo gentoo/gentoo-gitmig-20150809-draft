@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.5 2002/07/16 04:26:15 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.6 2002/10/25 23:22:05 raker Exp $
+
+*cracklib-2.7-r6 (25 Oct 2002)
+
+  25 Oct 2002; Nick Hadaway <raker@gentoo.org> cracklib-2.7-r6.ebuild,
+  files/digest-cracklib-2.7-r6 :
+  Added missing symlink  from libcrack.so.2 -> /usr/lib/libcrack.so.2.7
+  See bug #9611.
 
 *cracklib-2.7-r5 (03 May 2002)
 
@@ -8,25 +15,21 @@
   Added ppc to keywords
 
   03 May 2002; pvdabeel <pvdabeel@gentoo.org> :
-
   stop using precompiled dict files, use DEPEND=miscfiles instead
 
 *cracklib-2.7-r4 (20 Apr 2002)
 
   20 Apr 2002; M.Thibaut <murphy@gentoo.org> :
-
   Add /usr/lib/cracklib_dict.* for sparc platforms.
 
 *cracklib-2.7-r3 (18 Mar 2002)
 
   18 Mar 2002; M.Schlemmer <azarah@gentoo.org> :
-
   Add /usr/lib/cracklib_dict.* for pam/shadow cracklib support.
 
 *cracklib-2.7-r2 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
