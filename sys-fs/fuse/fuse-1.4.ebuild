@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-1.4.ebuild,v 1.7 2005/02/20 14:56:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-1.4.ebuild,v 1.8 2005/03/22 20:40:49 luckyduck Exp $
 
 inherit kernel-mod eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://sourceforge.net/projects/fuse"
 SRC_URI="mirror://sourceforge/fuse/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 S=${WORKDIR}/${MY_P}
 
