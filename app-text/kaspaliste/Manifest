@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 8aa1330b2ef552c8d74708dd84d73d08 metadata.xml 178
+MD5 f4584a1ba5ff9b19e36a8db0e88c98b3 ChangeLog 945
 MD5 8a26667d81fe46ca6f8e44bb4db53f01 kaspaliste-0.94.ebuild 709
 MD5 ebe80b86bdca9e197cff6653387a8764 kaspaliste-0.96.ebuild 713
-MD5 f4584a1ba5ff9b19e36a8db0e88c98b3 ChangeLog 945
-MD5 098d19dbe8e42546a60680b56cced5d4 metadata.xml 184
 MD5 ab3ab65e04a481c7fb64d64c7c733d94 files/digest-kaspaliste-0.94 69
 MD5 3f0461a89ce9b6c776da694a8c844a4a files/digest-kaspaliste-0.96 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCN03hevY57Fted3ERAoCpAJoDh66Sn2Hyw/yTFHdu3OvUEWz9rQCgqAuq
-hobhYnH1Zrk47vcmlS0I3NQ=
-=9Hna
------END PGP SIGNATURE-----

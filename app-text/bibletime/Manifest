@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3f0f05fa03a5f071c522358dea4f5fa1 bibletime-1.4.2_pre1.ebuild 1660
+MD5 7dd41037409fd066de5c5975ba1b7743 metadata.xml 494
 MD5 a57e2f09320e72df86ec3396ea9592d4 ChangeLog 2455
-MD5 f42b0d8e5620646b212b7adb604b8cea metadata.xml 500
+MD5 3f0f05fa03a5f071c522358dea4f5fa1 bibletime-1.4.2_pre1.ebuild 1660
 MD5 e189003108b45c99da2b91c1605a3be1 files/digest-bibletime-1.4.2_pre1 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCQg0a06ebR+OMO78RAtTyAJoD7Fqyaqx9dmF9CrXlaIGsnqnR3wCfbuJt
-YUpXIU2Y9iA4kZEbEOSotKc=
-=cvEd
------END PGP SIGNATURE-----
