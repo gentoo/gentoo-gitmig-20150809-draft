@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.16 2003/11/16 20:18:31 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.17 2003/11/16 21:18:36 lostlogic Exp $
+
+  16 Nov 2003; Brandon Low <lostlogic@gentoo.org>
+  gtk-gnutella-0.91.9.1.ebuild, gtk-gnutella-0.92.ebuild,
+  gtk-gnutella-0.92_rc.ebuild, gtk-gnutella-0.93.ebuild:
+  Move 0.92 to stable
+  Comments and a warning about gtk2 in 0.93
+  Remove unneeded ebuilds
 
 *gtk-gnutella-0.93 (16 Nov 2003)
 

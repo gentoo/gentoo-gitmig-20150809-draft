@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.93.ebuild,v 1.1 2003/11/16 20:18:31 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.93.ebuild,v 1.2 2003/11/16 21:18:36 lostlogic Exp $
 
 IUSE="gnome gtk2 nls"
 
@@ -34,6 +34,8 @@ src_compile() {
 
 #	econf `use_enable gtk2`|| die "Configure failed"
 	patch Configure < ${FILESDIR}/0.93-Configure.patch
+	#FIXME: This should use the commandline defaults modification
+	#stuff, fix this before next build
 	cat << EOF | ./Configure || die "Configure Failed"
 
 
@@ -76,3 +78,12 @@ src_install () {
 		doins ${FILESDIR}/gtk-gnutella.desktop
 	)
 }
+
+pkg_postinst () {
+	if [ `use gtk2` ]; then
+		ewarn "You have enabled the GTK2 build of gtk-gnutella, there"
+		ewarn "is a known bug which causes an invalid assertion if"
+		ewarn "you select passive search"
+	fi
+}
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.92.ebuild,v 1.2 2003/09/07 00:17:35 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.92.ebuild,v 1.3 2003/11/16 21:18:36 lostlogic Exp $
 
 IUSE="gnome"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://gtk-gnutella.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 #DEPEND="( gtk2? ( =dev-libs/glib-2* =x11-libs/gtk+-2* )
 #	      : ( =dev-libs/glib-1.2* =x11-libs/gtk+-1.2* ) )"
