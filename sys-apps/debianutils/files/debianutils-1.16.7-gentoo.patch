@@ -12,7 +12,7 @@ diff -urN debianutils-1.16.7.old/installkernel debianutils-1.16.7/installkernel
      else
 --- debianutils-1.16.7.old/mkboot	2002-10-16 20:20:42.000000000 -0700
 +++ debianutils-1.16.7/mkboot	2003-04-03 16:16:55.000000000 -0800
-@@ -14,7 +14,13 @@
+@@ -14,7 +14,18 @@
  
  # check whether GRUB is installed
  grubcheck () {
@@ -20,7 +20,12 @@ diff -urN debianutils-1.16.7.old/installkernel debianutils-1.16.7/installkernel
 +    # Right way in Gentoo to check, but grub is in system profile,
 +    # so rather check for lilo first....
 +    if [ -x /usr/bin/portageq ] ; then
-+        portageq has_version / "sys-boot/grub" && return 0 || return 1
++        if portageq has_version / "sys-boot/grub" ; then
++            return 0
++        elif portageq has_version / "sys-boot/grub-static" ; then
++            return 0
++        fi
++        return 1
 +    else
 +        return 1
 +    fi
