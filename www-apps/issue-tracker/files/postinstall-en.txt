@@ -1,0 +1,38 @@
+You will need to configure issue-tracker for a particular database
+
+(1) First, you must decide on:
+ - a database username, <it-username>
+ - a database name in the database, <it-dbname>
+
+(2) Next, you must create the database
+
+For MySQL:
+mysqladmin -p -u <it-username> create <it-dbname>
+mysql -p -u <it-username> <it-dbname> \
+      < ${MY_INSTALLDIR}/issue-tracker/setup/schema.mysql
+mysql -p -u <it-username> <it-dbname> \
+      < ${MY_INSTALLDIR}/issue-tracker/setup/data.sql
+mysql -p -u <it-username> <it-dbname> \
+      < ${MY_INSTALLDIR}/issue-tracker/setup/indexes.sql
+
+For PostgreSQL:
+createdb -U <it-username> <it-dbname>
+psql -U <it-username> \
+     < ${MY_INSTALLDIR}/issue-tracker/setup/schema.pgsql
+psql -U <it-username> \
+     < ${MY_INSTALLDIR}/issue-tracker/setup/data.sql
+psql -U <it-username> \
+     < ${MY_INSTALLDIR}/issue-tracker/setup/indexes.sql
+
+(3) Next, you will need to configure issue-tracker
+cp ${MY_INSTALLDIR}/issue-tracker/conf/config.php-default \
+   ${MY_INSTALLDIR}/issue-tracker/conf/config.php"
+
+Edit ${MY_INSTALLDIR}/issue-tracker/conf/config.php
+with name=<it-dbname>, user=<it-username> and the correct db info
+
+Make sure you don't just edit the commented-out example;)
+
+(4) Finally, you must restart the server, log in to the 
+issue-tracker as admin/demo, and change the password in Preferences.
+

@@ -1,0 +1,92 @@
+#!/bin/bash
+
+function die() {
+	echo '***************'
+	echo
+	echo $1
+	echo
+	echo '***************'
+	exit 1
+}
+
+if [ $1 = "start" -o $1 = "install" ]; then
+
+	# default values
+	SUPPORTED_DB="MySQL PostgreSQL"
+	PN="issue-tracker"
+	D_DBNAME="it"
+	D_DBUSER="it"
+	D_DBHOST="localhost"
+	
+	echo "Configuring ${PN}:"
+	echo
+	# config setting
+	select DB_TYPE in ${SUPPORTED_DB}; do [ -z ${DB_TYPE} ] || break; done
+	
+	echo -n "Database name [${D_DBNAME}]: "; read DBNAME
+	if (test -z ${DBNAME}) ; then DBNAME=${D_DBNAME} ; fi
+
+	echo -n "Database host [${D_DBHOST}]: "; read DBHOST
+	if (test -z ${DBHOST}) ; then DBHOST=${D_DBHOST} ; fi
+	echo "IMPORTANT: be sure that the database daemon is running on ${DBHOST}"
+
+	echo -n "Database user name [${D_DBUSER}]: "; read DBUSER
+	if (test -z ${DBUSER}) ; then DBUSER=${D_DBUSER} ; fi
+
+	echo -n "${DBUSER}'s password: "; read DBPASS
+
+	# privileges
+	echo "Configuring your database connection:"
+	echo -n "Please enter login info for user who has grant privileges on ${DBHOST} [$USER]: "; read adminuser
+	if (test -z ${adminuser}) ; then adminuser="$USER" ; fi
+	if [ "${DBHOST}" != "localhost" ]; then
+		echo -n "Client address (at db side) [$(hostname -f)]: "; read clientaddr
+		if (test -z ${clientaddr}) ; then clientaddr="$(hostname -f)" ; fi
+	fi
+	# this will be default for localhost
+	if (test -z ${clientaddr}) ; then clientaddr="${DBHOST}" ; fi
+
+	# if $DBHOST == localhost, don't specify -h argument, so local socket can be used.
+	host=${DBHOST/localhost}
+	
+	case ${DB_TYPE} in
+		"MySQL" ) {
+			mysqladmin -p -u ${adminuser} ${host:+-h ${host}} create ${DBNAME}
+			mysql -u ${adminuser} ${host:+-h ${host}} -p mysql --exec="GRANT SELECT,INSERT,UPDATE,DELETE,INDEX, ALTER,CREATE,DROP,REFERENCES ON ${DBNAME}.* TO ${DBUSER}@${clientaddr} IDENTIFIED BY '${DBPASS}'; FLUSH PRIVILEGES;"  || {
+			echo "Error running query!"
+			echo
+			echo "Please run it manually on ${host}."
+			echo
+			echo "   \$ mysql -u ${adminuser} -p mysql --exec=\"GRANT SELECT,INSERT,UPDATE,DELETE,INDEX, ALTER,CREATE,DROP,REFERENCES ON ${DBNAME}.* TO ${DBUSER}@${clientaddr} IDENTIFIED BY '${DBPASS}'; FLUSH PRIVILEGES;\""
+			echo
+			}
+			DB_TYPE="mysql"
+			DBPORT="3306"
+			mysql -u ${adminuser} ${host:+-h ${host}} -p ${DBNAME} < ${MY_INSTALLDIR}/setup/schema.mysql
+			mysql -u ${adminuser} ${host:+-h ${host}} -p ${DBNAME} < ${MY_INSTALLDIR}/setup/data.sql
+			mysql -u ${adminuser} ${host:+-h ${host}} -p ${DBNAME} < ${MY_INSTALLDIR}/setup/indexes.sql
+			};;
+		"PostgreSQL" ) {
+			DB_TYPE="pgsql"
+			DBPORT="5432"
+	 		createdb -U ${adminuser} ${host:+-h ${host}} ${DBNAME}
+			psql -U ${adminuser} ${host:+-h ${host}} ${DBNAME} < ${MY_INSTALLDIR}/setup/schema.pgsql
+			psql -U ${adminuser} ${host:+-h ${host}} ${DBNAME} < ${MY_INSTALLDIR}/setup/data.sql
+			psql -U ${adminuser} ${host:+-h ${host}} ${DBNAME} < ${MY_INSTALLDIR}/setup/indexes.sql
+			 }
+			 ;;
+	esac
+	echo
+	echo "These and more settings can be found in ${MY_INSTALLDIR}/conf/config.php"
+	echo
+	# editing config file
+	sed -e "s|<type>|${DB_TYPE}|
+			s|<host>|${DBHOST}|
+			s|<port>|${DBPORT}|
+			s|<name>|${DBNAME}|
+			s|<user>|${DBUSER}|
+			s|<pass>|${DBPASS}|			
+			" -i ${MY_INSTALLDIR}/conf/config.php-default
+else
+	echo $1
+fi
