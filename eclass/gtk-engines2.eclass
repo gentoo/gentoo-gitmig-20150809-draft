@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.4 2003/07/18 22:48:15 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.5 2003/08/31 01:55:49 liquidx Exp $
 
 # Author: Alastair Tse <liquidx@gentoo.org>
 # 
@@ -62,11 +62,11 @@ if has_version ">=x11-libs/gtk+-2" || use gtk2; then
 fi
 
 # --- define some deps for binary packages
-if has_version "=x11-libs/gtk+-1.2*" && ! has_version ">=x11-libs/gtk+-2"; then
+if [ -n "${HAS_GTK1}" -a ! -n "${HAS_GTK2}" ]; then
 	newdepend "=x11-libs/gtk+-1.2*"
-elif has_version "=x11-libs/gtk+-1.2*" && has_version ">=x11-libs/gtk+-2"; then
-	newdepend ">=x11-libs/gtk+-1.2"
-elif ! has_version "=x11-libs/gtk+-1.2*" && has_version ">=x11-libs/gtk+-2"; then
+elif [ -n "${HAS_GTK1}" -a -n "${HAS_GTK2}" ]; then
+	newdepend "=x11-libs/gtk+-1.2*" "=x11-libs/gtk+-2*"
+elif [ ! -n "${HAS_GTK1}" -a -n "${HAS_GTK2}" ]; then
 	newdepend ">=x11-libs/gtk+-2"
 fi
 
@@ -76,6 +76,9 @@ fi
 
 if ! has_version "x11-libs/gtk+"; then
 	newdepend "gtk2? ( >=x11-libs/gtk+-2 ) : ( =x11-libs/gtk+-1.2* )"
+	use gtk2 \
+		&& HAS_GTK2=1 \
+		|| HAS_GTK1=1
 fi		
 
 # --- if GTK1_S and GTK2_S is set, then we do both themes,
