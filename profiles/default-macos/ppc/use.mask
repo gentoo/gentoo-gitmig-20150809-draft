@@ -1,10 +1,11 @@
 # Add USE flags that don't work on Mac OS X here
 
-# alsa/gpm will more than likely never compile on os x
+# these will more than likely never compile on os x
 alsa
 gpm
 
-# kde/gnome is still a ways off
+# these are still a ways off
+acl
 arts
 kde
 gnome
