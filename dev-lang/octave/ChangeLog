@@ -1,0 +1,11 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/octave/ChangeLog,v 1.1 2002/02/19 19:15:14 tod Exp $
+
+*octave-2.0.16 (19 Feb 2002)
+
+  19 Feb 2002; T.Neidt <tod@gentoo.org> ChangeLog, octave-2.0.16.ebuild :
+  
+  Initial commit. GNU Octave is a high-level language, primarily intended
+  for numerical computations. It is mostly compatible with Matlab.
+
