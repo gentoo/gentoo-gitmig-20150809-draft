@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta.ebuild,v 1.3 2003/10/06 06:57:18 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta.ebuild,v 1.4 2003/11/05 15:07:21 genone Exp $
 
 MY_P=${P/_beta/-beta}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="a GKrellM2 plugin for hddtemp (which reads the temperature of SMART IDE hard drives)"
+DESCRIPTION="a GKrellM2 plugin for hddtemp (which reads the temperature of SMART capable hard drives)"
 SRC_URI="http://coredump.free.fr/linux/${MY_P}.tar.gz"
 HOMEPAGE="http://coredump.free.fr/linux/harddrive.html"
 
