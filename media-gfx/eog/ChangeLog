@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.2 2002/02/19 21:20:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.3 2002/04/11 01:23:49 spider Exp $
+
+*eog-0.6-r3
+  11 Apr 2002; Spider <spider@gentoo.org eog-0.6-r3.ebuild:
+  Big DEPEND update.
 
   19 Feb 2002; M.Schlemmer <azarah@gentoo.org> eog-0.6-r2.ebuild :
 
