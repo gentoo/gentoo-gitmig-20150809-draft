@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.36 2004/07/03 17:50:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.37 2004/07/04 11:42:58 aliz Exp $
+
+  04 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.11-r2.ebuild:
+  + Fix installation path, initscript and config script. Closing #55978.
+  + Fix dependencies. Closing #55605
+
+  04 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.9-r4.ebuild:
+  + Fix dependencies. Closing #55605
 
   03 Jul 2004; Seemant Kulleen <seemant@gentoo.org> iptables-1.2.11-r2.ebuild:
   sed statement fix, thanks to x1bncwn in #gentoo

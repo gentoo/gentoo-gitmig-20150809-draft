@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r2.ebuild,v 1.2 2004/07/03 17:50:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r2.ebuild,v 1.3 2004/07/04 11:42:58 aliz Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64"
 IUSE="ipv6 static extensions"
-DEPEND="virtual/linux-sources"
+DEPEND="virtual/os-headers
+	extensions? ( virtual/linux-sources )"
 
 pkg_setup() {
 	if use extensions; then
@@ -100,6 +101,7 @@ src_compile() {
 src_install() {
 	if use extensions; then
 		make DESTDIR=${D} ${myconf} \
+			PREFIX= \
 			LIBDIR=/lib \
 			MANDIR=/usr/share/man \
 			INCDIR=/usr/include \
@@ -107,6 +109,7 @@ src_install() {
 			install || die "Please check http://cvs.iptables.org/patch-o-matic-ng/updates/ if your kernel needs to be patched for iptables"
 
 		make DESTDIR=${D} ${myconf} \
+			PREFIX= \
 			LIBDIR=/usr/lib \
 			MANDIR=/usr/share/man \
 			INCDIR=/usr/include \
@@ -131,16 +134,16 @@ src_install() {
 	dodoc COPYING
 	dodir /var/lib/iptables ; keepdir /var/lib/iptables
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PN}-${PV}-r1.init iptables
+	newexe ${FILESDIR}/${PN}-1.2.9-r1.init iptables
 	insinto /etc/conf.d
-	newins ${FILESDIR}/${PN}-${PV}-r1.confd iptables
+	newins ${FILESDIR}/${PN}-1.2.9-r1.confd iptables
 
 	if use ipv6; then
 		dodir /var/lib/ip6tables ; keepdir /var/lib/ip6tables
 		exeinto /etc/init.d
-		newexe ${FILESDIR}/${PN/iptables/ip6tables}-${PV}-r1.init ip6tables
+		newexe ${FILESDIR}/${PN/iptables/ip6tables}-1.2.9-r1.init ip6tables
 		insinto /etc/conf.d
-		newins ${FILESDIR}/${PN/iptables/ip6tables}-${PV}-r1.confd ip6tables
+		newins ${FILESDIR}/${PN/iptables/ip6tables}-1.2.9-r1.confd ip6tables
 	fi
 }
 
