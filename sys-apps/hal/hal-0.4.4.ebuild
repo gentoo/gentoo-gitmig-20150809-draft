@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.2-r1.ebuild,v 1.2 2005/01/08 13:18:18 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.4.ebuild,v 1.1 2005/01/08 13:18:18 foser Exp $
 
 inherit eutils python
 
 DESCRIPTION="Hardware Abstraction Layer"
 HOMEPAGE="http://www.freedesktop.org/Software/hal"
-SRC_URI="http://freedesktop.org/~david/${P}.tar.gz"
+SRC_URI="http://freedesktop.org/~david/dist/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ia64 ~ppc ~ppc64"
-IUSE="debug pcmcia"
+KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~ppc64"
+IUSE="debug pcmcia doc"
 
 RDEPEND=">=dev-libs/glib-2.4
 	>=sys-apps/dbus-0.22-r1
@@ -19,12 +19,14 @@ RDEPEND=">=dev-libs/glib-2.4
 	sys-fs/udev
 	sys-apps/hotplug
 	sys-libs/libcap
+	dev-libs/popt
 	>=sys-apps/util-linux-2.12i
 	sys-kernel/linux26-headers"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	>=dev-util/intltool-0.29"
+	>=dev-util/intltool-0.29
+	doc? ( app-doc/doxygen )"
 
 # dep on a specific util-linux version for 
 # managed mount patches #70873
@@ -36,12 +38,8 @@ src_unpack() {
 	cd ${S}
 	# remove pamconsole option
 	epatch ${FILESDIR}/${PN}-0.4.1-old_storage_policy.patch
-	# fix floppy drives be shown
-	epatch ${FILESDIR}/${PN}-0.4.0-allow-floppy-drives.patch
-	# fix for some odd cdromdrives giving misinformation
-	epatch ${FILESDIR}/${P}-cdrom_media_check.patch
-	# fix possible fstab sync crash
-	epatch ${FILESDIR}/${P}-fstab_sync_crash.patch
+	# support IDE zip drives as floppy
+	epatch ${FILESDIR}/${P}-check_ide_floppy_for_zip_fdi.patch
 
 }
 
@@ -53,8 +51,8 @@ src_compile() {
 		`use_enable pcmcia pcmcia-support` \
 		--enable-fstab-sync \
 		--enable-hotplug-map \
-		--disable-doxygen-docs \
 		--disable-docbook-docs \
+		`use_enable doc doxygen-docs` \
 		--with-pid-file=/var/run/hald/hald.pid \
 		|| die
 
