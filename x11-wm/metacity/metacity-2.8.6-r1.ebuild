@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.8.6-r1.ebuild,v 1.6 2005/01/08 23:22:55 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.8.6-r1.ebuild,v 1.7 2005/01/22 06:47:49 vapier Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 ~ia64 ~mips ~ppc64 ~arm"
+KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64 ~mips ~ppc64 arm"
 IUSE="xinerama"
 
 # not parallel-safe; see bug #14405
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 # Compositor is too unreliable
 G2CONF="${G2CONF} $(use_enable xinerama) --disable-compositor"
 
-DOCS="AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README *txt"
+DOCS="AUTHORS ChangeLog HACKING INSTALL NEWS README *txt"
 
 src_unpack() {
 
