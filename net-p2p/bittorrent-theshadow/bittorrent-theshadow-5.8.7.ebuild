@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/bittorrent-theshadow-5.8.7.ebuild,v 1.7 2004/06/25 00:29:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/bittorrent-theshadow-5.8.7.ebuild,v 1.8 2004/07/03 12:02:49 kloeri Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="X"
 
-RDEPEND="X? ( >=dev-python/wxPython-2.2 )
+RDEPEND="X? ( >=dev-python/wxpython-2.2 )
 		>=dev-lang/python-2.1
 		!virtual/bittorrent"
 DEPEND="${RDEPEND}
