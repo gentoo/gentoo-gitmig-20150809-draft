@@ -1,6 +1,14 @@
 # ChangeLog for net-nds/migrationtools
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/ChangeLog,v 1.10 2004/11/01 01:44:11 robbat2 Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/ChangeLog,v 1.11 2005/01/07 12:24:23 robbat2 Exp $
+
+*migrationtools-44-r2 (07 Jan 2005)
+*migrationtools-45-r1 (07 Jan 2005)
+
+  07 Jan 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/skip-account-objectclass.patch, +migrationtools-44-r2.ebuild,
+  +migrationtools-45-r1.ebuild:
+  Bug #52052, objectclass account fixing.
 
 *migrationtools-46 (31 Oct 2004)
 
