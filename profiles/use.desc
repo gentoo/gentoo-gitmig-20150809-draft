@@ -123,8 +123,7 @@ svga
 tcl
 tcltk
 tcpd
-tetex
-tex
+tetex - Adds support for teTeX
 truetype - Adds support for FreeType and/or FreeType2 fonts
 trusted
 ungif
