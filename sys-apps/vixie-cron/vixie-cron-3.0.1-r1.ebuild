@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-3.0.1-r1.ebuild,v 1.5 2004/02/23 00:53:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-3.0.1-r1.ebuild,v 1.6 2004/06/15 04:26:00 mr_bones_ Exp $
 
 inherit eutils
 
 IUSE=""
 
-S=${WORKDIR}/${P}
 DESCRIPTION="The Vixie cron daemon"
 HOMEPAGE="http://www.vix.com/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"

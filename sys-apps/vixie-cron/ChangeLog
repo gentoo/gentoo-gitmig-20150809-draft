@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.16 2004/06/11 16:45:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.17 2004/06/15 04:26:00 mr_bones_ Exp $
+
+  14 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  vixie-cron-3.0.1-r1.ebuild, vixie-cron-3.0.1-r3.ebuild,
+  vixie-cron-3.0.1-r4.ebuild:
+  don't assign default to S
 
   11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
   vixie-cron-3.0.1-r4.ebuild:
