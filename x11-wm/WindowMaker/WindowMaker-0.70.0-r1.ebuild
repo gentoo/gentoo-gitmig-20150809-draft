@@ -30,7 +30,7 @@ src_compile() {
 		myconf="$myconf --enable-kde"
 	fi
 	if [ "`use nls`" ] ; then
- 		LINGUAS="`ls po/*.po | xargs -i basename {} .po`"
+ 		LINGUAS="`ls po/*.po | sed 's:po/\(.*\)\.po$:\1:'`"
 		export LINGUAS
 	fi
 
