@@ -1,8 +1,11 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.16 2002/11/03 14:51:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.17 2002/11/03 23:55:53 nall Exp $
 
 *metacity-2.4.3 (03 Nov 2002)
+
+  03 Nov 2002; Jon Nall <nall@gentoo.org> metacity-2.4.3.ebuild :
+  Fixed gcc 3.2 patch for PPC version.
 
   03 Nov 2002; foser <foser@gentoo.org> metacity-2.4.3.ebuild :
   New version. Fixed deps, added startup-notification.
