@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.29 2005/03/03 16:53:30 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.30 2005/03/18 07:21:26 vapier Exp $
 
 # Gentoo Base Profile
 
@@ -66,7 +66,6 @@
 *sys-devel/bison
 *sys-devel/flex
 *sys-devel/gcc
-*sys-devel/gettext
 *sys-devel/gnuconfig
 *sys-devel/libtool
 *sys-devel/m4
