@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.74 2003/10/28 13:01:25 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.75 2003/11/04 06:47:35 kumba Exp $
+
+
+*fluxbox-0.9.6_pre9 (25 Sep 2003)
+
+  04 Nov 2003; Joshua Kinard <kumba@gentoo.org> fluxbox-0.9.6_pre9.ebuild:
+  Added ~mips to KEYWORDS
 
   28 Oct 2003; Brandon Hale <tseng@gentoo.org> fluxbox-0.1.14-r2.ebuild:
   Marking 0.1.14 stable on ppc
@@ -11,7 +17,6 @@
   28 Sep 2003; Markus Nigbur <pyrania@gentoo.org> fluxbox-0.1.14-r2.ebuild:
   Added ~amd64 keyword. request by brad@mainstreetsoftworks.com in bug #29806.
 
-*fluxbox-0.9.6_pre9 (25 Sep 2003)
 
   25 Sep 2003; Brandon Hale <tseng@gentoo.org> fluxbox-0.9.0.ebuild,
   fluxbox-0.9.3.ebuild, fluxbox-0.9.4.ebuild, fluxbox-0.9.5.ebuild,
