@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nload
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.14 2004/08/19 02:19:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.15 2004/08/20 13:14:12 kugelfang Exp $
+
+  20 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> nload-0.6.0.ebuild:
+  Marked ~amd64.
 
   18 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> nload-0.6.0.ebuild:
   Stable on sparc
