@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.10.ebuild,v 1.2 2003/10/31 01:01:18 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.10.ebuild,v 1.3 2004/02/10 00:59:36 rac Exp $
 
 inherit eutils
 
