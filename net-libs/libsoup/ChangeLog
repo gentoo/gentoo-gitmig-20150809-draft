@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.35 2004/09/13 21:51:52 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.36 2004/09/30 23:34:27 geoman Exp $
+
+  30 Sep 2004; Stephen P. Becker <geoman@gentoo.org> libsoup-2.2.0.ebuild:
+  added ~mips keyword
 
 *libsoup-2.2.0 (13 Sep 2004)
 
