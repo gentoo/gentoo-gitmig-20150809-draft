@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/code2html-0.9.1.ebuild,v 1.3 2004/01/20 06:49:45 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/code2html-0.9.1.ebuild,v 1.4 2004/05/03 11:57:28 leonardop Exp $
 
 DESCRIPTION="Converts source files to colored HTML output."
 HOMEPAGE="http://www.palfrader.org/code2html/"
@@ -14,8 +14,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=">=dev-lang/perl-5"
-
-S=${WORKDIR}/${P}
 
 src_install () {
 	into /usr
