@@ -1,10 +1,13 @@
 # ChangeLog for dev-libs/libmrproject
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/ChangeLog,v 1.12 2003/02/03 04:06:18 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/ChangeLog,v 1.13 2003/02/04 19:16:41 nall Exp $
 
 
 *libmrproject-0.8 (02 Feb 2003)
   
+  04 Feb 2003; Jon Nall <nall@gentoo.org> libmrproject-0.8.ebuild :
+  added ~ppc
+
   02 Feb 2003; Spider <spider@gentoo.org> libmrproject-0.8.ebuild :
   bumped the version
 
