@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_log_sql
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/ChangeLog,v 1.17 2005/02/17 02:29:43 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/ChangeLog,v 1.18 2005/02/20 23:12:24 hollow Exp $
+
+  21 Feb 2005; Benedikt Boehm <hollow@gentoo.org>
+  files/1.100/10_mod_log_sql.conf:
+  fixed 10_mod_log_sql.conf. fixed #82486
 
 *mod_log_sql-1.98-r1 (17 Feb 2005)
 
