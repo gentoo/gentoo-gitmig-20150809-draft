@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.51 2004/01/30 04:35:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.52 2004/02/01 11:07:10 kumba Exp $
+
+  01 Feb 2004; Joshua Kinard <kumba@gentoo.org>
+  module-init-tools-0.9.15_pre4.ebuild:
+  Bump to mips stable (needed for upcoming stageballs)
 
 *module-init-tools-3.0_pre8 (30 Jan 2004)
                                                                                                                              
