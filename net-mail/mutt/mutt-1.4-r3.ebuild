@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.4-r3.ebuild,v 1.3 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.4-r3.ebuild,v 1.4 2002/10/22 19:01:19 seemant Exp $
 
 IUSE="ssl nls slang cjk"
 
 S=$WORKDIR/${P}
 DESCRIPTION="a small but very powerful text-based mail client"
-SRC_URI="ftp://ftp.mutt.org/pub/mutt/mutt-${PV}i.tar.gz
+SRC_URI="ftp://ftp.mutt.org/mutt/mutt-${PV}i.tar.gz
 	http://www.spinnaker.de/mutt/compressed/patch-${PV}.rr.compressed.1.gz
 	cjk?( http://www.emaillab.org/mutt/1.4/mutt-${PV}i-ja.1.tar.gz )" 
 HOMEPAGE="http://www.mutt.org"

@@ -1,13 +1,17 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.10 2002/09/03 16:53:25 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.11 2002/10/22 19:01:19 seemant Exp $
 
 *mutt-1.4-r3 (03 Sept 2002) 
 
-   03 Sept 2002; Calum Selkirk <cselkirk@gentoo.org> mutt-1.4-r3.ebuild 
-   files/digest-mutt-1.4-r3 :
+  22 Oct 2002; Seemant Kulleen <seemant@gentoo.org> mutt-1.4-r3.ebuild :
 
-   Added the compressed folder patch. This closes bug #7398
+  SRC_URI fix by: jeffthorsett@hotmail.com (Jeff Thorsett) in bug #9503.
+
+  03 Sept 2002; Calum Selkirk <cselkirk@gentoo.org> mutt-1.4-r3.ebuild 
+  files/digest-mutt-1.4-r3 :
+
+  Added the compressed folder patch. This closes bug #7398
 
 *mutt-1.4-r2 (28 Jul 2002) 
 
