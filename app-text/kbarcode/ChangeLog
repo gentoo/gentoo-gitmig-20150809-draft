@@ -1,8 +1,11 @@
 # ChangeLog for app-text/kbarcode
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbarcode/ChangeLog,v 1.15 2004/03/06 23:37:27 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbarcode/ChangeLog,v 1.16 2004/03/07 09:50:49 centic Exp $
 
-  07 Mar 2004; root <centic@gentoo.org> kbarcode-1.7.2.ebuild,
+  07 Mar 2004; Dominik Stadler <centic@gentoo.org> kbarcode-1.7.2.ebuild:
+  Revert previous change, we can use DEPEND in RDEPEND if we need to add stuff.
+
+  07 Mar 2004; Dominik Stadler <centic@gentoo.org> kbarcode-1.7.2.ebuild,
   files/kbarcode-1.7.2-default-parameter.patch:
   Added a patch to compile Version 1.7.2. Closes bug #39208. Also corrected
   ebuild to not redefine DEPEND in RDEPEND and to make use of the use-flag
