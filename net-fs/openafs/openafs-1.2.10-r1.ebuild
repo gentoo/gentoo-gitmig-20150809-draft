@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r1.ebuild,v 1.4 2003/11/21 18:25:30 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r1.ebuild,v 1.5 2003/11/24 17:47:34 rphillips Exp $
 
-inherit check-kernel
+inherit check-kernel fixheadtails
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The AFS 3 scalable distributed file system"
@@ -34,6 +34,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+
+	ht_fix_all
 
 	cd ${S}
 	epatch ${FILESDIR}/openafs-pinstall-execve-1.2.10.patch

@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.28 2003/11/21 18:25:30 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.29 2003/11/24 17:47:34 rphillips Exp $
+
+  24 Nov 2003; <rphillips@gentoo.org> openafs-1.2.10-r1.ebuild:
+  added fixheadtails
 
   21 Nov 2003; <rphillips@gentoo.org> openafs-1.2.10-r1.ebuild,
   openafs-1.2.10.ebuild, files/openafs-pinstall-execve-1.2.10.patch:
@@ -13,7 +16,7 @@
   19 Oct 2003; Ryan Phillips <rphillips@gentoo.org> files/afs.rc.rc6:
   Added Steven Jenkins' init.d script patch
 
-*openafs-1.2.10 (19 aug 2003)
+*openafs-1.2.10-r1 (19 aug 2003)
 
   27 Oct 2003; Ryan Phillips <rphillips@gentoo.org> openafs-1.2.10-r1.ebuild :
   Removed pinstall patch.
