@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.40 2005/03/11 15:03:41 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.41 2005/03/21 00:50:41 stkn Exp $
+
+*asterisk-1.0.7 (21 Mar 2005)
+
+  21 Mar 2005; Stefan Knoblich <stkn@gentoo.org> +asterisk-1.0.7.ebuild:
+  Version bump.
 
   11 Mar 2005; Stefan Knoblich <stkn@gentoo.org> asterisk-1.0.6.ebuild:
   Fixed hardened workaround for gsm codec (closes #84767).
