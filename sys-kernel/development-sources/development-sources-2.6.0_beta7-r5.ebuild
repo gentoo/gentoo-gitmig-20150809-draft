@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta7-r5.ebuild,v 1.1 2003/10/14 04:53:47 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta7-r5.ebuild,v 1.2 2003/10/22 18:17:28 johnm Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 OKV=${PV/_beta/-test}
@@ -10,7 +10,7 @@ PKV=${PKV/-r/-bk}
 PKV=${PKV//${PN}-}
 
 KV=${PV/_beta/-test}
-GPV=1
+GPV=0.1
 
 S=${WORKDIR}/linux-${PKV}
 ETYPE="sources"
@@ -58,6 +58,9 @@ src_unpack() {
 	cd ${WORKDIR}
 	chown -R 0.0 *
 	chmod -R a+r-w+X,u+w *
+
+	echo ">>> Extracted"
+	pause 50
 }
 
 src_compile() {
