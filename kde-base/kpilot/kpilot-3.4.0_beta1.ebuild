@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/kpilot-3.4.0_beta1.ebuild,v 1.1 2005/01/15 02:24:37 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/kpilot-3.4.0_beta1.ebuild,v 1.2 2005/01/18 15:38:49 greg_g Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -28,3 +28,10 @@ KMEXTRACTONLY="
 KMEXTRA="
 	kfile-plugins/palm-databases
 	kontact/plugins/kpilot/" # We add here the kontact's plugin instead of compiling it with kontact because it needs a lot of this programs deps.
+
+src_compile() {
+	# needed to detect pi-notepad.h, used by the kpilot notepad conduit.
+	myconf="${myconf} --with-extra-includes=/usr/include/libpisock"
+
+	kde-meta_src_compile
+}
