@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1018 2005/03/18 16:48:32 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1019 2005/03/18 19:13:17 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -609,6 +609,7 @@ net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:chroot - Enable chrooting support.
 net-misc/openssh:sftplogging - Enables sftplogging patch
 net-misc/pxes:ltsp - Enable support for Linux Terminal Server Project
+net-misc/quagga:bgpclassless - Enable classless prefixes for BGP 
 net-misc/quagga:ospfapi - Enable OSPFAPI support for client applications accessing the OSPF link state database
 net-misc/quagga:tcpmd5 - Enable TCP MD5 checksumming
 net-misc/ssh:openssh - Allow ssh and openssh to be installed side by side
