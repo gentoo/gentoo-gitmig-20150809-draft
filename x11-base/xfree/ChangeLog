@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.360 2004/09/17 17:59:12 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.361 2004/09/18 10:37:56 kloeri Exp $
+
+  18 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> xfree-4.3.0-r7.ebuild:
+  Stable on alpha, bug 64152.
 
   17 Sep 2004; Travis Tilley <lv@gentoo.org> xfree-4.3.0-r5.ebuild,
   xfree-4.3.0-r6.ebuild:
