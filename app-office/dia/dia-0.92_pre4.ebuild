@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.92_pre4.ebuild,v 1.1 2003/10/10 21:30:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.92_pre4.ebuild,v 1.2 2003/10/12 02:11:56 liquidx Exp $
 
 inherit gnome2 python
 
@@ -30,6 +30,16 @@ DEPEND=">=x11-libs/gtk+-2.0.0
 		>=dev-python/pygtk-1.99 )"
 
 G2CONF="${G2CONF} $(use_enable gnome) $(use_with python)"
+src_unpack() {
+
+	unpack ${A}
+
+	# fix b0rked Makefile in Cisco directory
+	einfo "Patching shapes/Cisco/Makefile.in"
+	cd ${S}
+	cp ${FILESDIR}/${PN}-0.91-Cisco-Makefile.in ${S}/shapes/Cisco/Makefile.in || die
+
+}
 
 src_install() {
 
