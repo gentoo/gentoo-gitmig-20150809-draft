@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/polytable
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/polytable/ChangeLog,v 1.5 2004/06/25 02:16:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/polytable/ChangeLog,v 1.6 2004/10/21 12:26:08 kosmikus Exp $
+
+  21 Oct 2004; Andres Loeh <kosmikus@gentoo.org> polytable-0.7.2.ebuild:
+  Stable on x86.
 
   20 May 2004; Ferris McCormick <fmccor@gentoo.org> polytable-0.7.2.ebuild:
   Marked stable for sparc.
