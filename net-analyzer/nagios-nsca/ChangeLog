@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-nsca
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/ChangeLog,v 1.3 2003/01/15 20:01:19 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/ChangeLog,v 1.4 2003/02/10 05:43:24 alron Exp $
+
+*nagios-nsca-2.3	(09 Feb 2003)
+  09 Feb 2003; Dean Bailey <alron@gentoo.org> nagios-nsca-2.3 :
+  Version bump
 
   15 Jan 2003; Dean Bailey <alron@gentoo.org> nagios-nsca-2.2 :
   Changed ~x86 to x86 and added sparc and ppc keywords
