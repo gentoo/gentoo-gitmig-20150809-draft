@@ -1,0 +1,11 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lphdisk/ChangeLog,v 1.1 2002/07/19 04:19:02 chadh Exp $
+
+*lphdisk-0.9.1.ebuild (19 Jul 2002)
+
+  19 Jul 2002; Chad Huneycutt <chadh@gentoo.org> lphdisk-0.9.1.ebuild:
+
+  Initial import.
+  ebuild submitted by Hannes Mehnert <hannes@mehnert.org>
+ree, so the best we can hope (and expect!) to receive is credit.
