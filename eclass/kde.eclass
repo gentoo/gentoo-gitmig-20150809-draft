@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.69 2003/01/31 17:21:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.70 2003/02/13 13:17:10 seemant Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base kde-functions
 ECLASS=kde
@@ -40,7 +40,7 @@ kde_src_unpack() {
 	# makefile regenerate any .cpp and .h files depending on them.
 	cd $S
 	debug-print "$FUNCNAME: Searching for .ui files in $PWD"
-	UIFILES="`find . -name *.ui -print`"
+	UIFILES="`find . -name '*.ui' -print`"
 	debug-print "$FUNCNAME: .ui files found:"
 	debug-print "$UIFILES"
 	# done in two stages, because touch doens't have a silent/force mode
