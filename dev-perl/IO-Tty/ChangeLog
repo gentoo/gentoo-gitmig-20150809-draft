@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/IO-Tty
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.2 2002/07/31 13:17:08 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.3 2002/10/25 14:31:12 mcummings Exp $
+
+*IO-Tty-1.02 (25 Oct 2002)
+
+  25 Oct 2002; <mcummings@gentoo.org> IO-Tty-1.02.ebuild :
+
+  Not sure why were keeping with IO-Tty that was five years old. The newer 
+  version contains additional modules that are required by POE and other modules
+  that use IO.
 
 *IO-Tty-0.04 (11 May 2002)
 
