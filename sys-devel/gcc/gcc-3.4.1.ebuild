@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.3 2004/07/06 21:57:00 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.4 2004/07/08 17:16:35 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc n32 n64"
 
@@ -414,7 +414,6 @@ src_unpack() {
 		use build || ( cd ${S}/libstdc++-v3; autoconf; cd ${S} )
 		#use build && use uclibc && ewarn "uclibc in build stage is not supported yet" && exit 1
 
-		use uclibc && epatch ${FILESDIR}/3.3.3/gcc-uclibc-3.3-loop.patch
 	elif use multilib && [ "${ARCH}" = "amd64" ]
 	then
 		# We need this even if there isnt a patchset
