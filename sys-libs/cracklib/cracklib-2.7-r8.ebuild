@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r8.ebuild,v 1.15 2004/06/24 23:02:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r8.ebuild,v 1.16 2004/08/24 04:07:01 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -9,6 +9,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="Password Checking Library"
 HOMEPAGE="http://www.crypticide.org/users/alecm/"
 SRC_URI="http://www.crypticide.org/users/alecm/security/${MY_P}.tar.gz"
+IUSE=""
 
 LICENSE="CRACKLIB"
 SLOT="0"

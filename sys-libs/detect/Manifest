@@ -1,4 +1,14 @@
-MD5 00784c9dd72815ece31de3e1951b0b91 ChangeLog 423
-MD5 ef7baa3faebddcf24229d9904f84930a detect-0.9.72.ebuild 1009
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 add5ba23c1692923c79ecaf27bfe3411 ChangeLog 560
+MD5 8308205d41ac2bfa210d28cbf2da0ddc detect-0.9.72.ebuild 990
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 8861af0d18236fbf10c7754660853ed1 files/digest-detect-0.9.72 140
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBKr90I1lqEGTUzyQRAuiRAJ9rAtY+eFSWmNpTvTOjxncZn0nSfwCfXmzC
+qClVysMSwkRFfrdGoFQLqwQ=
+=2e1p
+-----END PGP SIGNATURE-----
