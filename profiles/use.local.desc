@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.615 2004/09/15 01:32:48 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.616 2004/09/15 09:40:12 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -66,6 +66,7 @@ app-office/gnucash:ofx - Enable OFX support, for importing OFX data files.
 app-office/gnucash:quotes - Enable Online Stock Quote retrieval.
 app-office/grisbi:print - Enable TeX and printing support
 app-office/imposter:iksemel - Enable externel iksemel parsing support.
+app-office/magicpoint:m17n-lib - Enable m17n-lib (Multilingual Library) support.
 app-office/openoffice-ximian:ooo-kde - Build with KDE instead of GNOME integration
 app-office/pointless:freetype - Enables Freetype font support
 app-pda/gtkpod:mpeg4 - Enable mpeg4ip support, to read Mpeg4 AAC files
@@ -492,13 +493,6 @@ net-www/mozilla:mozsvg - Enable SVG support in mozilla
 net-www/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
 net-www/mozilla:xprint - Enable xprint support in mozilla (also firefox, thunderbird), http://www.mozilla.org/projects/xprint/
 net-www/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
-net-www/w3m-m17n:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
-net-www/w3m-m17n:migemo - Enables migemo support
-net-www/w3m-m17n:nopixbuf - If you do NOT want to link gdk_pixbuf against w3mimgdisplay
-net-www/w3m:async - Enables asynchronous fetch
-net-www/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
-net-www/w3m:lynxkeymap - If you prefer Lynx-like key binding
-net-www/w3m:migemo - Enables migemo support
 sys-apps/busybox:devfs - Remove devfs options that crash busybox systems without devfs unless explicitly requested
 sys-apps/busybox:diet - Compile and link with dietlibc
 sys-apps/busybox:make-busybox-symlinks - Create all the appropriate symlinks in /bin and /sbin
