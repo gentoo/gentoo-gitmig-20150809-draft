@@ -1,5 +1,11 @@
 # ChangeLog for media-libs/gstreamer-plugins
 
+gst-plugins-0.3.4 (29 Jun  2002)
+  29 Jun 2002; Spider <spider@gentoo.org> 
+  Updated with some more deps (optional) 
+
+
+
 * gst-plugins-0.3.4 (26 Apr 2002)
   26 apr 2002; Spider <spider@gentoo.org> gst-plugins-0.3.4.ebuild :
   update configure
