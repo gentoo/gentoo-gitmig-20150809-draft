@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.2.3.ebuild,v 1.6 2003/09/23 15:50:38 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.2.3.ebuild,v 1.7 2004/02/18 13:43:05 agriffis Exp $
 
 IUSE="doc"
 

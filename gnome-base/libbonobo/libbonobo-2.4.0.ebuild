@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.4.0.ebuild,v 1.7 2003/11/15 02:44:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.4.0.ebuild,v 1.8 2004/02/18 13:43:05 agriffis Exp $
 
 inherit gnome2
 
