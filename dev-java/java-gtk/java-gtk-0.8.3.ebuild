@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/java-gtk-0.8.3.ebuild,v 1.1 2004/02/21 19:55:25 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/java-gtk-0.8.3.ebuild,v 1.2 2004/03/01 06:38:45 zx Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,9 @@ HOMEPAGE="http://java-gnome.sourceforge.net/"
 DEPEND="virtual/glibc
 		virtual/jdk
 		>=x11-libs/gtk+-2.2*
-		>=app-text/docbook-sgml-utils-0.6.12"
+		>=app-text/docbook-sgml-utils-0.6.12
+		>=gnome-base/libgnomeui-2.0
+		>=gnome-base/libglade-2.0"
 
 SLOT="0.8"
 IUSE=""
