@@ -1,2 +1,4 @@
-MD5 0d7063c9efa756cef95e620398a967f3 ucspi-ssl-0.50.ebuild 954
+MD5 7b9ec506d237456272a2b912d9b8cec6 ucspi-ssl-0.50.ebuild 917
+MD5 0f31856412533b3ed8f9078526ac1f7e ChangeLog 386
 MD5 b96f687f81d5f2e53b52357bd20516ec files/digest-ucspi-ssl-0.50 65
+MD5 6e8ff4bc92ca237cdbf7946baacdda84 files/ucspi-ssl-0.50-errno.patch 238
