@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.55 2004/11/01 10:42:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.56 2004/11/08 10:25:53 robbat2 Exp $
+
+  08 Nov 2004; Robin H. Johnson <robbat2@gentoo.org> cracklib-2.7-r10.ebuild:
+  r10 stable on x86 for bug #69761.
 
   01 Nov 2004; Joshua Kinard <kumba@gentoo.org> cracklib-2.7-r10.ebuild:
   Marked stable on mips.
