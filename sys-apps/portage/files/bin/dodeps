@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/spython
 from portage import *
 import sys
 import commands

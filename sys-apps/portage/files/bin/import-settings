@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/spython
 import sys,portage
 for x in sys.argv[1:]:
 	mysetting=portage.getsetting(x)

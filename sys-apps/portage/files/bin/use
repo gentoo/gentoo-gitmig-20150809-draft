@@ -1,4 +1,4 @@
-#!/usr/lib/portage/bin/python
+#!/usr/bin/spython
 import string
 import portage
 import sys
