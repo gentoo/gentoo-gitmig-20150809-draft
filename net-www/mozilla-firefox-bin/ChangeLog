@@ -1,6 +1,14 @@
 # ChangeLog for net-www/mozilla-firefox-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/ChangeLog,v 1.26 2004/11/15 01:16:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/ChangeLog,v 1.27 2004/11/18 21:53:15 agriffis Exp $
+
+*mozilla-firefox-bin-1.0_rc1 (18 Nov 2004)
+
+  18 Nov 2004; Aron Griffis <agriffis@gentoo.org>
+  -mozilla-firefox-bin-0.9.3.ebuild, mozilla-firefox-bin-1.0.ebuild,
+  -mozilla-firefox-bin-1.0_pre-r1.ebuild, -mozilla-firefox-bin-1.0_rc1.ebuild:
+  Remove extra virtual/x11. Mark 1.0 stable on x86 and amd64. Trim older
+  versions
 
 *mozilla-firefox-bin-1.0 (14 Nov 2004)
 
