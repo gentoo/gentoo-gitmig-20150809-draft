@@ -1,0 +1,34 @@
+--- ospfd/ospf_lsa.c.orig	2003-10-13 11:02:40.000000000 +0200
++++ ospfd/ospf_lsa.c	2004-03-12 17:22:20.099902466 +0100
+@@ -288,6 +288,10 @@
+ struct ospf_lsa *
+ ospf_lsa_lock (struct ospf_lsa *lsa)
+ {
++#ifdef DEBUG_LSA_LOCKS
++  zlog_info("LSA: lock(lsa = %p, lsa->data = %p, lsa->id = %s, lsa->lock = %d)", lsa, lsa->data, (lsa && (lsa->data))?inet_ntoa(lsa->data->id):"undef", lsa->lock);
++#endif /* DEBUG_LSA_LOCKS */
++
+   lsa->lock++;
+   return lsa;
+ }
+@@ -300,6 +304,20 @@
+   if (!lsa)
+     return;
+   
++#ifdef DEBUG_LSA_LOCKS
++  zlog_info("LSA: unlock(lsa = %p, lsa->data = %p, lsa->id = %s, lsa->lock = %d, lsa->discard = %s)", lsa, (lsa)?lsa->data:"undef", (lsa && (lsa->data))?inet_ntoa(lsa->data->id):"undef", lsa->lock, (CHECK_FLAG (lsa->flags, OSPF_LSA_DISCARD))?"true":"false");
++#endif /* DEBUG_LSA_LOCKS */
++
++#ifndef ORGINAL_BEHAVIOR
++  if (lsa->lock == 0)
++  {
++    int discard = (CHECK_FLAG (lsa->flags, OSPF_LSA_DISCARD));
++
++    zlog_info("LSA: unlock(lsa = %p, lsa->data = %p, lsa->id = %s, lsa->lock = %d, lsa->discard = %s): reference count error! unlocking not locked resource... ignoring!", lsa, lsa->data, (lsa->data)?inet_ntoa(lsa->data->id):"undef", lsa->lock, discard);
++    return;
++  }
++#endif /* ! ORGINAL_BEHAVIOR */
++
+   lsa->lock--;
+ 
+   assert (lsa->lock >= 0);

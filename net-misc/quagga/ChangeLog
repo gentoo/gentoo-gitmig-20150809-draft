@@ -1,0 +1,116 @@
+# ChangeLog for sys-apps/quagga
+# Copyright 2003 DataCore GmbH; Distributed under the GPL v2 
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.1 2004/03/29 12:29:03 amir Exp $
+
+* quagga-0.96.4-r6 (27 Mar 2004)
+
+  27 Mar 2004; Amir Guindehi <amir@datacore.ch> ChangeLog :
+  
+  Added missing IUSE to ebuild.
+
+* quagga-0.96.4-r5 (12 Mar 2004)
+
+  12 Mar 2004; Amir Guindehi <amir@datacore.ch> ChangeLog :
+  
+  Added patch which replaces a assert() in opaque_lsa.c with
+  a error message and a return. This stabilizes ospfd a lot
+  if he hits problems. There is a bug in Quagga which can get
+  triggert in certain cases and is not found. This patch allows
+  ospfd to survive it in many cases.
+
+* quagga-0.96.4-r4 (02 Feb 2004)
+
+  25 Feb 2004; Amir Guindehi <amir@datacore.ch> ChangeLog :
+  
+  Added a missing backslash in files/init/bgpd.conf
+
+  02 Jan 2004; Amir Guindehi <amir@datacore.ch> ChangeLog :
+  
+  Added patch to fix ospfapi ready callbacks when router's opaque
+  capabilities change from ON->OFF->ON. Submitted patch to upstream
+  maintainer and ML.
+
+* quagga-0.96.4-r3 (22 Jan 2004)
+
+  22 Jan 2003; Amir Guindehi <amir@datacore.ch> ChangeLog :
+  
+  Added exports for broken ipforward detection.
+
+* quagga-0.96.4-r2 (11 Nov 2003)
+
+  05 Dez 2003; Amir Guindehi <amir@datacore.ch> ChangeLog :
+  
+  Added removal of stale zebra routes to /etc/init.d/zebra
+
+  11 Nov 2003; Amir Guindehi <amir@datacore.ch> ChangeLog :
+  
+  Fixed location of /usr/lib libraries to /usr/lib/quagga
+
+* quagga-0.96.4-r1 (02 Nov 2003)
+
+  02 Nov 2003; Amir Guindehi <amir@datacore.ch> ChangeLog :
+  
+  Fixed location of /usr/include headers to /usr/include/quagga
+
+* quagga-0.96.4 (02 Nov 2003)
+
+  02 Nov 2003; Amir Guindehi <amir@datacore.ch> ChangeLog :
+  
+  Bumped version number.
+
+* quagga-0.96.3-r6 (01 Nov 2003)
+
+  01 Nov 2003; Amir Guindehi <amir@datacore.ch> ChangeLog :
+  
+  Removed configure.ac patch. Added WANT_AUTOMAKE=1.7 to be sure to
+  use the right automake version.
+
+* quagga-0.96.3-r5 (01 Nov 2003)
+
+  01 Nov 2003; Amir Guindehi <amir@datacore.ch> ChangeLog :
+  
+  Replaced dodir /var/run/quagga through keepdir.
+  Fixed init.d script's pid file location to /var/run/quagga.
+	
+* quagga-0.96.3-r4 (01 Nov 2003)
+
+  01 Nov 2003; Amir Guindehi <amir@datacore.ch> ChangeLog :
+  
+  Added dependency for >=libcap-1.10-r3 needed for libcap support in
+  Quagga. This makes Quagga a lot more secure!
+	
+* quagga-0.96.3-r3 (31 Oct 2003)
+
+  31 Oct 2003; Amir Guindehi <amir@datacore.ch> ChangeLog :
+  
+  Added blocking of zebra-ag-svn, zebra-pj-svn, zebra,
+  quagga-ag-svn-HEAD, quagga-svn-HEAD.
+	
+* quagga-0.96.3-r2 (31 Oct 2003)
+
+  31 Oct 2003; Amir Guindehi <amir@datacore.ch> ChangeLog :
+
+  Replaced user/group creating with enewuser/enewgroup
+  
+* quagga-0.96.3-r1 (22 Oct 2003)
+
+  22 Oct 2003; Amir Guindehi <amir@datacore.ch> ChangeLog :
+  
+  Added header file fix. It fixes lib/Makefile.am to install all needed
+  header files to be able to compile OSPFAPI client like SRRD.
+	
+* quagga-0.96.3 (16 Oct 2003)
+
+  16 Oct 2003; Amir Guindehi <amir@datacore.ch> ChangeLog :
+  
+  Bumped version number. Had to fix configure.ac (BUG46).
+	
+* quagga-0.96.2 (08 Sep 2003)
+
+  08 Sep 2003; Amir Guindehi <amir@datacore.ch> ChangeLog :
+  
+  Created Quagga ebuild. It's derrived from zebra-ag-svn-0.94-r2.
+  Creates /var/run/quagga for Quagga's pid file which needs to be written
+  under the new quagga user. So the directory needs to be owned by that user.
+  Added Quagga user and Quagga & VTY group which the new Quagga needs.
+  Includes OSPFAPI, NET-SNMP, OSPF-TE, OSPF NSSA and Opaque LSA support.

@@ -1,0 +1,47 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/files/init/zebra,v 1.1 2004/03/29 12:29:03 amir Exp $
+
+depend() {
+	need net
+}
+
+checkconfig() {
+        if [ ! -e /etc/quagga/zebra.conf ] ; then
+        	eerror "You need to create /etc/quagga/zebra.conf first."
+        	eerror "An example can be found in /etc/quagga/zebra.conf.sample"
+          return 1
+        fi
+}
+
+cleanup() {
+	stale=`ip route | grep 'proto zebra' | awk '{ print $1 }'`
+	if [ ! -z "$stale" ] ; then
+		einfo "Cleaning up stale zebra routes..."
+	fi
+	for r in $stale; do 
+		ebegin "Removing stale route to $r..."
+		ip route del $r; 
+		eend $?
+	done
+}
+
+start() {
+	checkconfig
+	cleanup
+
+	ebegin "Starting zebra"
+	start-stop-daemon --start --quiet --exec /usr/sbin/zebra \
+	                  -- -d -l 255 -f /etc/quagga/zebra.conf \
+			     --pid_file /var/run/quagga/zebra.pid
+	result=$?
+	eend $result
+}
+
+stop() {
+	ebegin "Stopping zebra"
+	start-stop-daemon --stop --quiet --pidfile /var/run/quagga/zebra.pid
+	result=$?
+	eend $result
+}
