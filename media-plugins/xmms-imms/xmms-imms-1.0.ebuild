@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-1.0.ebuild,v 1.2 2004/01/30 06:03:35 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-1.0.ebuild,v 1.3 2004/02/05 08:22:09 eradicator Exp $
 
 MY_P=${P/xmms-/}
 
@@ -18,22 +18,25 @@ RDEPEND=">=dev-db/sqlite-2.8
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )
 	>=dev-libs/libpcre-4.3"
 
-DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
+DEPEND="$RDEPEND
+	>=sys-devel/autoconf-2.5
+	>=sys-apps/sed-4.0.7"
 
 S=${WORKDIR}/${MY_P}
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-makefile.patch
+
 	WANT_AUTOCONF=2.5
 	autoheader
 	autoconf
-
-	econf || die "configure failed"
-
-	emake || die "make failed"
 }
 
 src_install () {
 	exeinto "`xmms-config --visualization-plugin-dir`"
 	doexe libimms.so || die
-	dodoc ChangeLog INSTALL README
+	dodoc INSTALL LICENSE README
 }
