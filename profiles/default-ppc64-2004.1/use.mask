@@ -27,6 +27,7 @@ X
 vim-with-x
 sqlite
 firebird
+mzscheme
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
