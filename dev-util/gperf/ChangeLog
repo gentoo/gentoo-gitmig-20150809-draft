@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/gperf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.7 2003/09/29 19:10:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.8 2003/11/15 23:33:56 gmsoft Exp $
 
   29 Sep 2003; Aron Griffis <agriffis@gentoo.org> gperf-2.7.2.ebuild:
   Stable on alpha
@@ -11,6 +11,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *gperf-2.7.2 (4/3/2002)
+
+  15 Nov 2003; Guy Martin <gmsoft@gentoo.org> gperf-2.7.2.ebuild :
+  Added hppa to KEYWORDS.
 
   18 Sep 2002; Owen Stampflee <owen@gentoo.org> :
   Added PPC to KEYWORDS.
