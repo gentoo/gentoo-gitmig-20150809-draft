@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-0.70-r1.ebuild,v 1.1 2004/09/04 00:04:42 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-0.70-r1.ebuild,v 1.2 2004/10/05 08:26:20 s4t4n Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="x86 ~sparc ~amd64 ~ppc"
 IUSE="nls"
 
 # fox-1.0.x, fox-1.1.x and fox-1.3.x are inkompatible.
