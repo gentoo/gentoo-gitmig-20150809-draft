@@ -1,7 +1,11 @@
 # ChangeLog for gnome-extra/gnome2-user-docs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/ChangeLog,v 1.2 2002/06/30 03:11:37 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome2-user-docs/ChangeLog,v 1.3 2002/07/29 05:25:20 spider Exp $
 
+*gnome2-user-docs-2.0.0 (29 Jul 2002)
+  29 Jul 2002; Spider <spider@gentoo.org> gnome2-user-docs-2.0.0.ebuild :
+  new version out
+  
 
 gnome2-user-docs-1.93-r1 (30 Jun 2002)
   30 Jun 2002; Spider <spider@gentoo.org> gnome2-user-docs-1.93-r1.ebuild:
