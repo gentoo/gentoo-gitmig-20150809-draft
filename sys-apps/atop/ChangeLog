@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/atop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/atop/ChangeLog,v 1.3 2004/06/30 14:23:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/atop/ChangeLog,v 1.4 2004/12/10 19:47:35 latexer Exp $
+
+*atop-1.13 (10 Dec 2004)
+
+  10 Dec 2004; Peter Johanson <latexer@gentoo.org> +atop-1.13.ebuild:
+  Bump. See bug #52712.
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> atop-1.9.ebuild:
   sync IUSE (missing)
