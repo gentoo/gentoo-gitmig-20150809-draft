@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/jai
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jai/ChangeLog,v 1.1 2003/12/18 21:44:26 lostlogic Exp $
+
+*jai-1.1.2 (18 Dec 2003)
+
+  18 Dec 2003; Brandon Low <lostlogic@gentoo.org> jai-1.1.2.ebuild:
+  Initial Import, this ebuild may be a little funky, but it works for now
+
