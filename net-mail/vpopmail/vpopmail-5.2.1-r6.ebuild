@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r6.ebuild,v 1.2 2003/08/06 09:14:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r6.ebuild,v 1.3 2003/08/06 09:24:54 robbat2 Exp $
 
 IUSE="mysql ipalias"
 
@@ -125,17 +125,6 @@ src_install () {
 	rm -rf ${D}/${VPOP_HOME}/doc
 	dosym /usr/share/doc/${PF}/ ${VPOP_HOME}/doc
 
-	# Create symlink in /usr/bin for executables
-	dodir /usr/bin/
-	einfo "Creating symlinks in /usr/bin"
-	for item in `ls -1 ${D}${VPOP_HOME}/bin`; do 
-		dosym ${VPOP_HOME}bin/${item} /usr/bin/${item} ; 
-	done
-
-	einfo "Locking down vpopmail permissions"
-	# secure things more, i don't want the vpopmail user being able to write this stuff!
-	fowner -R root.root ${VPOP_HOME}/{bin,etc,include}
-
 	# Create /etc/vpopmail.conf
 	if use mysql; then
 		einfo "Installing vpopmail mysql configuration file"
@@ -152,12 +141,20 @@ src_install () {
 	doins ${FILESDIR}/vpopmail.clearopensmtp
 	fperms +x /etc/cron.hourly/vpopmail.clearopensmtp
 
+	einfo "Installing env.d entry"
+	dodir /etc/env.d
+	insinto /etc/env.d
+	doins ${FILESDIR}/99vpopmail
+
 	# Configure b0rked. We'll do this manually
 	echo "-I${VPOP_HOME}/include" > ${D}/${VPOP_HOME}/etc/inc_deps
 	local libs_extra
 	use mysql && libs_extra="-L/usr/lib/mysql -lmysqlclient -lz" || libs_extra=""
 	echo "-L${VPOP_HOME}/lib -lvpopmail ${libs_extra}" > ${D}/${VPOP_HOME}/etc/lib_deps
-
+	
+	einfo "Locking down vpopmail permissions"
+	# secure things more, i don't want the vpopmail user being able to write this stuff!
+	chown -R root.root ${D}${VPOP_HOME}/{bin,etc,include}
 }
 
 pkg_preinst() {
