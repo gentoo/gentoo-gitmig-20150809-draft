@@ -1,6 +1,18 @@
 # ChangeLog for dev-lang/smlnj
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/ChangeLog,v 1.7 2004/06/08 17:33:05 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/ChangeLog,v 1.8 2004/06/10 11:15:38 mattam Exp $
+
+  10 Jun 2004; Matthieu Sozeau <mattam@gentoo.org> smlnj-110.42.ebuild,
+  smlnj-110.43.ebuild, files/smlnj-110.43-gcc33-quirk-fix.patch:
+  Remove non-functionnal 110.4{2,3} ebuilds, add latest working version 110.45
+  and latest stable version 110.0.7. Also change SRC_URI's to gentoo mirrors to
+  fix Manifest/digest bugs. Thanks to Bernd Knochenhauer <bk@zerg.homelinux.net>
+  for help in the testing of these ebuilds. It should fix bugs #43045, #43018, 
+  #30207.
+
+  10 Jun 2004; Matthieu Sozeau <mattam@gentoo.org> smlnj-110.42.ebuild,
+  smlnj-110.43.ebuild, files/smlnj-110.43-gcc33-quirk-fix.patch:
+  change src_postinst to pkg_postinst
 
   08 Jun 2004; Matthieu Sozeau <mattam@gentoo.org> smlnj-110.42.ebuild:
   Fix bug #48509.

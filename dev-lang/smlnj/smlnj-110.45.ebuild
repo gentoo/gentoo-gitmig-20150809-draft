@@ -1,35 +1,37 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.42.ebuild,v 1.6 2004/06/08 21:34:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.45.ebuild,v 1.1 2004/06/10 11:15:38 mattam Exp $
 
-IUSE=""
+inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Standard ML of New Jersey compiler and libraries"
-SRC_URI="ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/config.tgz
-	ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/runtime.tgz
-	ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/boot.x86-unix.tgz
-	ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/ml-lex.tgz
-	ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/ml-yacc.tgz
-	ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/ml-burg.tgz
-	ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/smlnj-lib.tgz
-	ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/cml.tgz
-	ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/eXene.tgz"
+HOMEPAGE="http://www.smlnj.org"
 
-HOMEPAGE="http://cm.bell-labs.com/cm/cs/what/smlnj/"
+SRC_URI="x86? ( mirror://${P}-boot.x86-unix.tgz )
+ppc? ( mirror://${P}-boot.ppc-unix.tgz )
+mirror://${P}-config.tgz
+mirror://${P}-MLRISC.tgz
+mirror://${P}-runtime.tgz
+mirror://${P}-ml-lex.tgz
+mirror://${P}-ml-yacc.tgz
+mirror://${P}-ml-burg.tgz
+mirror://${P}-smlnj-lib.tgz
+mirror://${P}-cml.tgz
+mirror://${P}-eXene.tgz"
 
 LICENSE="BSD"
-KEYWORDS="x86"
-
 SLOT="0"
+KEYWORDS="-* ~ppc ~x86"
+IUSE=""
+
 DEPEND="virtual/glibc"
 
-SMLNJ_DEST="/usr/share/smlnj"
+SMLNJ_DEST="/usr/lib/smlnj"
 SMLNJ_TARGETS="./config/targets"
 
 GEN_POSIX_NAMES_PATCH="15i\n#\n.\nj\nw\nq"
 
-ARCH_BOOT="sml.boot.x86-unix"
+ARCH_BOOT="sml.boot.${ARCH}-unix"
 
 src_unpack() {
 	unpack ${A}
@@ -47,25 +49,37 @@ src_unpack() {
 }
 
 src_compile() {
-	if test "${SMLNJ_HOME}" != ""; then
-		SMLNJ_HOME=""
-	fi
+	SMLNJ_HOME=${WORKDIR}
 
 	cd ${WORKDIR}
 
 	echo "request ml-burg" >> $SMLNJ_TARGETS
-	echo "request cml" >> $SMLNJ_TARGETS
-	echo "request cml-lib" >> $SMLNJ_TARGETS
 	echo "request eXene" >> $SMLNJ_TARGETS
 
 	./config/install.sh || die
 }
 
-src_install () {
-
+src_install() {
 	dodir ${SMLNJ_DEST}
+	cd ${WORKDIR}
 
-	cp -r ${WORKDIR}/{bin,lib} ${D}${SMLNJ_DEST} || die
+	sed -i -e "s/head -1/head -n 1/" bin/.run-sml
+
+	exeinto ${SMLNJ_DEST}/bin
+	doexe bin/{.run-sml,.link-sml,.arch-n-opsys,ml-makedepend,ml-build}
+
+	exeinto ${SMLNJ_DEST}/bin/.run
+	doexe bin/.run/*
+
+	insinto ${SMLNJ_DEST}/bin/.heap
+	doins bin/.heap/*
+
+	for i in ml-lex ml-yacc sml ml-burg
+	  do
+	  dosym .run-sml ${SMLNJ_DEST}/bin/$i
+	done
+
+	cp -Rp ${WORKDIR}/lib ${D}/${SMLNJ_DEST}
 
 	dodir /etc/env.d
 	echo -e SMLNJ_HOME=${SMLNJ_DEST} > ${D}/etc/env.d/10smlnj
@@ -78,9 +92,11 @@ src_install () {
 	dosym ${SMLNJ_DEST}/bin/ml-makedepend /usr/bin
 	dosym ${SMLNJ_DEST}/bin/ml-yacc /usr/bin
 	dosym ${SMLNJ_DEST}/bin/sml /usr/bin
-
 }
 
-src_postint() {
+pkg_postinst()
+{
+	einfo
 	einfo "You need to run env-update to get a working installation"
+	einfo
 }
