@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo/mondo-0.9.ebuild,v 1.7 2004/07/15 02:00:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo/mondo-0.9.ebuild,v 1.8 2005/02/27 12:34:50 brix Exp $
 
 DESCRIPTION="A System Health Monitor"
 HOMEPAGE="http://mondo-daemon.sourceforge.net/"
