@@ -428,7 +428,7 @@ your own custom kernel:
 # <i>cd /usr/src/linux</i>
 # <i>make menuconfig</i>
 # <i>make dep; make clean; make bzImage; make modules; make modules_install</i>
-# <i>mv bzImage bzImage.orig</i> <comment>[if bzImage already exists]</comment>
+# <i>mv /boot/bzImage /boot/bzImage.orig</i> <comment>[if bzImage already exists]</comment>
 # <i>cp /usr/src/linux/arch/i386/boot/bzImage /boot</i>
 </pre>
 <impo>For your kernel to function properly, there are several options that you will
@@ -466,7 +466,7 @@ To merge your logger of choice, type <e>one</e> of the next three lines:
 <body>
 <p>
 To install any additional packages in the Portage tree
-you can just <c>emerge</c> any packages in <path>/usr/portage/</path> 
+you can just <c>emerge</c> any packages in <path>/usr/portage/</path>
 that you'd
 like to install, for example:</p>
 <pre>
