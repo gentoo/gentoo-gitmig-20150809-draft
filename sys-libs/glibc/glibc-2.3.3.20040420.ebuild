@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420.ebuild,v 1.17 2004/07/19 23:21:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420.ebuild,v 1.18 2004/07/20 10:59:02 pappy Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -285,6 +285,25 @@ src_unpack() {
 		if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
 		then
 			epatch ${FILESDIR}/2.3.3/glibc-2.3.3-ssp-gcc34-after-frandom.patch
+		fi
+	fi
+
+	# sparc fails when building the components for the normal crt1.o
+	# with -K PIC automatically via hardened PIE and SSP specs files
+	if ( use sparc && use hardened )
+	then
+		einfo "adding crt1.o bugfix for hardened gcc on sparc glibc"
+		sed -i "s|CPPFLAGS += -DHAVE_INITFINI|CPPFLAGS += -DHAVE_INITFINI -fno-pie -fno-PIE|" \
+			"${WORKDIR}/glibc-2.3.2/csu/Makefile"
+
+		# check if it worked
+		grep -q "CPPFLAGS += -DHAVE_INITFINI -fno-pie -fno-PIE" \
+			"${WORKDIR}/glibc-2.3.2/csu/Makefile"
+
+		if [ $? -ne 0 ]
+		then
+			eerror "sed failure: could not add sparc crt1.o PIC bugfix"
+			exit 1
 		fi
 	fi
 
