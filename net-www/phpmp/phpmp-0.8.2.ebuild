@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.8.2.ebuild,v 1.1 2003/08/03 22:40:53 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.8.2.ebuild,v 1.2 2003/08/03 23:28:49 stuart Exp $
 
 MY_P="phpMp-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -28,7 +28,7 @@ src_compile() {
 
 src_install() {
 	insinto "${PHPMP_DIR}"
-	doins *.{php,dtd}
+	doins *.php
 
 	chown -R "${HTTPD_USER}.${HTTPD_GROUP}" "${D}/${PHPMP_DIR}"
 }
