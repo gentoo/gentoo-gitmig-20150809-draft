@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/multisync
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.6 2004/03/06 16:28:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.7 2004/03/25 07:26:14 mr_bones_ Exp $
+
+  24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  multisync-0.80-r1.ebuild, multisync-0.81.ebuild:
+  don't use the deprecated ? : use syntax
 
   06 Mar 2004; Alastair Tse <liquidx@gentoo.org> multisync-0.81-r1.ebuild:
   added libgnomeui, bluez-* deps and bluetooth USE flag (#43722)
