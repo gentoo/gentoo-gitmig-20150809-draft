@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r12.ebuild,v 1.1 2005/02/04 08:18:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r12.ebuild,v 1.2 2005/02/05 06:24:21 eradicator Exp $
 
 inherit flag-o-matic eutils libtool gnuconfig
 
@@ -42,7 +42,7 @@ DEPEND="${DEPEND}
 	sys-devel/libtool
 	nls? ( dev-util/intltool
 	       dev-lang/perl
-	       sys-devel/gettext )"
+	       >=sys-devel/gettext-0.14.1 )"
 
 # USE flags pull in xmms plugins
 PDEPEND="jack? ( media-plugins/xmms-jack )

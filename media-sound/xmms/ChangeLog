@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.158 2005/02/04 08:18:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.159 2005/02/05 06:24:21 eradicator Exp $
+
+  04 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-1.2.10-r12.ebuild:
+  Setting required gettext version to close bug #80664.
 
 *xmms-1.2.10-r12 (04 Feb 2005)
 
