@@ -78,8 +78,8 @@ dev-java/jaxp
 
 # <spider@gentoo.org> ( 18 Jun 2002)
 # libtool break.
-=net-libs/linc-0.5.0-r2
-=gnome-base/ORBit2-2.4.0-r2 
+#=net-libs/linc-0.5.0-r2
+#=gnome-base/ORBit2-2.4.0-r2 
 
 #testing only (drobbins, 25 Jun 2002)
 #portage 2.0.8 is fast and apparently the most stable Portage 2.x release so far, unmasking:
