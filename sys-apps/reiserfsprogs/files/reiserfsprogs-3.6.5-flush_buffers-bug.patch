@@ -1,0 +1,78 @@
+diff -rup reiserfsprogs-3.6.5.old/include/io.h reiserfsprogs-3.6.5/include/io.h
+--- reiserfsprogs-3.6.5.old/include/io.h	2003-04-01 20:52:39.000000000 +0400
++++ reiserfsprogs-3.6.5/include/io.h	2003-04-01 21:00:59.000000000 +0400
+@@ -5,7 +5,7 @@
+ 
+ struct buffer_head {
+     unsigned long b_blocknr;
+-    unsigned short b_dev;
++    int b_dev;
+     unsigned long b_size;
+     char * b_data;
+     unsigned long b_state;
+@@ -51,7 +51,7 @@ void __wait_on_buffer (struct buffer_hea
+ struct buffer_head * getblk (int dev, unsigned long block, int size);
+ struct buffer_head * reiserfs_getblk (int dev, unsigned long block, int size, int *repeat);
+ 
+-struct buffer_head * find_buffer (unsigned short dev, unsigned long block, unsigned long size);
++struct buffer_head * find_buffer (int dev, unsigned long block, unsigned long size);
+ struct buffer_head * get_hash_table(dev_t dev, unsigned long block, int size);
+ struct buffer_head * bread (int dev, unsigned long block, size_t size);
+ struct buffer_head * reiserfs_bread (int dev, unsigned long block, int size, int *repeat);
+diff -rup reiserfsprogs-3.6.5.old/lib/io.c reiserfsprogs-3.6.5/lib/io.c
+--- reiserfsprogs-3.6.5.old/lib/io.c	2003-04-01 20:52:36.000000000 +0400
++++ reiserfsprogs-3.6.5/lib/io.c	2003-04-01 21:03:08.000000000 +0400
+@@ -102,7 +102,7 @@ static int buffer_writes = 0 ;
+ 
+ 
+ 
+-static void _show_buffers(struct buffer_head **list, unsigned short dev, unsigned long size) {
++static void _show_buffers(struct buffer_head **list, int dev, unsigned long size) {
+     int all = 0;
+     int dirty = 0;
+     int in_use = 0; /* count != 0 */
+@@ -131,7 +131,7 @@ static void _show_buffers(struct buffer_
+ 	    break;
+     }
+ 
+-    printf ("show_buffers (dev %u, size %lu): free %d, count != 0 %d, dirty %d, all %d\n",
++    printf ("show_buffers (dev %d, size %lu): free %d, count != 0 %d, dirty %d, all %d\n",
+ 	dev, size, free, in_use, dirty, all);
+ }
+ 
+@@ -161,7 +161,7 @@ static void insert_into_hash_queue (stru
+ static void remove_from_hash_queue (struct buffer_head * bh)
+ {
+     if (bh->b_hash_next == 0 && bh->b_hash_prev == 0 && bh != g_a_hash_queues[bh->b_blocknr % NR_HASH_QUEUES])
+-	/* (b_dev == 0) ? */
++	/* (b_dev == -1) ? */
+ 	return;
+ 
+     if (bh == g_a_hash_queues[bh->b_blocknr % NR_HASH_QUEUES]) {
+@@ -290,7 +290,7 @@ static int grow_buffers (int size)
+ 	tmp->b_data = getmem (size);
+ 	if (tmp->b_data == 0)
+ 	    die ("grow_buffers: no memory for new buffer data");
+-	tmp->b_dev = 0;
++	tmp->b_dev = -1;
+ 	tmp->b_size = size;
+ 	put_buffer_list_head (&g_free_buffers, tmp);
+     }
+@@ -300,7 +300,7 @@ static int grow_buffers (int size)
+ }
+ 
+ 
+-struct buffer_head * find_buffer (unsigned short dev, unsigned long block, unsigned long size)
++struct buffer_head * find_buffer (int dev, unsigned long block, unsigned long size)
+ {		
+     struct buffer_head * next;
+ 
+@@ -390,7 +390,7 @@ restart:
+ 
+ void flush_buffers (dev_t dev)
+ {
+-    if (!dev)
++    if (dev == -1)
+ 	die ("flush_buffers: device is not specifed");
+     sync_buffers (&Buffer_list_head, dev, 0/*all*/);
+     buffer_soft_limit = BUFFER_SOFT_LIMIT;
