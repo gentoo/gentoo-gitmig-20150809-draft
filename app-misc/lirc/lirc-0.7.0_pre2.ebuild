@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre2.ebuild,v 1.2 2003/10/12 20:19:16 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre2.ebuild,v 1.3 2003/10/22 21:08:47 mholzer Exp $
 
 inherit eutils
 
@@ -69,6 +69,8 @@ src_unpack() {
 }
 
 src_compile() {
+	ewarn "make sure you have IrDA (infrared) support"
+	ewarn "in your kernel or this will fail"
 	#Let portage tell us where to put our modules
 	check_KV
 
