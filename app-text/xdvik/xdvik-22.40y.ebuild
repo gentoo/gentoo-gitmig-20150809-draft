@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.40y.ebuild,v 1.3 2003/09/05 22:37:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.40y.ebuild,v 1.4 2003/09/08 17:02:24 usata Exp $
 
 inherit eutils
 
@@ -18,7 +18,8 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND=">=media-libs/t1lib-1.3
-	virtual/tetex
+	app-text/ptex
+	!app-text/tetex
 	virtual/x11
 	cjk? ( =media-libs/vflib-2* )
 	libwww? ( >=net-libs/libwww-5.3.2-r1 )"
