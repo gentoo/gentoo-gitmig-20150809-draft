@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.42 2004/07/27 21:19:13 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.43 2004/07/28 23:27:02 langthang Exp $
+
+*mailman-2.1.5-r2 (28 Jul 2004)
+
+  28 Jul 2004; Tuan Van <langthang@gentoo.org> +mailman-2.1.5-r2.ebuild:
+  fix bug #58644. Revision bump.
 
   27 Jul 2004; Tuan Van <langthang@gentoo.org> mailman-2.1.5-r1.ebuild:
   switch to enew{group,user}.
