@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/regina-rexx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/ChangeLog,v 1.9 2004/06/24 22:55:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/ChangeLog,v 1.10 2004/10/15 23:00:23 gmsoft Exp $
+
+  16 Oct 2004; Guy Martin <gmsoft@gentoo.org> regina-rexx-3.3.ebuild:
+  Stable on hppa.
 
 *regina-rexx-3.3 (17 May 2004)
 
