@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.14 2005/01/01 18:08:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.15 2005/01/05 20:57:36 luckyduck Exp $
+
+*asm-2.0_alpha (05 Jan 2005)
+
+  05 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +asm-2.0_alpha.ebuild:
+  New version asm-2.0_alpha added.
 
 *asm-1.5.2 (24 Nov 2004)
 
