@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2dbe4d06d6fcfe090824c0e39757441 ChangeLog 738
-MD5 80d57193f0860b9af5ee4d6a4f3d4d9d espresso-ab-1.0.ebuild 669
+MD5 4292c6ba49d9513e6615e95fe3eeb894 ChangeLog 824
+MD5 b65b83bd82f83224c6c573ee21b53b92 espresso-ab-1.0.ebuild 671
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 e920c147f6c630de1432e88e691a7e4b files/digest-espresso-ab-1.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXsXTI1lqEGTUzyQRAkr7AKDb9HOHJ7MfsdO6UMcnNbNVXfYqsQCeNc9j
-O77emnCfT6dR1gV/wPDaYoI=
-=XiBK
------END PGP SIGNATURE-----
