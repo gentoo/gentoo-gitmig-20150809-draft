@@ -1,6 +1,12 @@
 # ChangeLog for games-board/ggz-gtk-games
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-games/ChangeLog,v 1.5 2004/06/24 22:16:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-games/ChangeLog,v 1.6 2004/12/26 23:09:29 vapier Exp $
+
+*ggz-gtk-games-0.0.9 (26 Dec 2004)
+
+  26 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  -ggz-gtk-games-0.0.7.ebuild, +ggz-gtk-games-0.0.9.ebuild:
+  Version bump #69434 by Bryan Duff.
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> ggz-gtk-games-0.0.5.ebuild:
   Add die following econf for bug 48950
