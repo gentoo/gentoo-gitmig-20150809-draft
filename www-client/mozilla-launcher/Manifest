@@ -1,8 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 cb65d08ecd4725dc10e61d8849e34e2a mozilla-launcher-1.22.ebuild 818
-MD5 e0a8fdcc51475020a05fe44d8ff90c61 mozilla-launcher-1.29.ebuild 819
+MD5 d10d4a7bff86dab8374205b48d63d894 mozilla-launcher-1.29.ebuild 856
 MD5 3b6f4c0e7564223f59358731f5e5b555 mozilla-launcher-1.26.ebuild 828
 MD5 a54f3ffc29e06106d0280349836e5ec7 mozilla-launcher-1.28.ebuild 818
 MD5 b14e516647a954e50f11684226c4507c mozilla-launcher-1.23.ebuild 818
@@ -13,10 +10,3 @@ MD5 69a8e91fd85f00a9e76eed8c9e4bc463 files/digest-mozilla-launcher-1.23 68
 MD5 564930b3ec590dc05282a47a74105063 files/digest-mozilla-launcher-1.26 68
 MD5 74b9f3aec58644bae20d62eb78716fa4 files/digest-mozilla-launcher-1.28 68
 MD5 623fbab1ff1ccd749e49b91999712e0a files/digest-mozilla-launcher-1.29 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCQhd4BXaUFmZvwyMRAmpEAKCNcje1q3ygsXuMTrGFt7Rq1dRCkwCcDe54
-TMI9YxYaNTLUfk7DpsmPyJU=
-=7f6S
------END PGP SIGNATURE-----
