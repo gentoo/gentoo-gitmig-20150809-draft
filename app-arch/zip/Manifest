@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e993c65572ea968258ccbc7f9032446e ChangeLog 3788
-MD5 022cfa199497eb6c9738b010af0c3ce3 zip-2.3-r4.ebuild 1100
+MD5 339e803ef23723bd1e5d89bde7dc1dd5 ChangeLog 3882
 MD5 be95da43ccf9816b592b241797c372fa zip-2.3-r2.ebuild 984
 MD5 a3c80560391ef7908418ca7b8fffb5e2 zip-2.3-r3.ebuild 1062
-MD5 0fae982a1638aacea39c862dd7ebbea6 files/digest-zip-2.3-r3 113
-MD5 ceb628bca144581dbeff71136122a8e2 files/zip-CAN-2004-1010.patch 673
+MD5 9933068ff44c059b015fb1a10e0caca3 zip-2.3-r4.ebuild 1098
 MD5 0fae982a1638aacea39c862dd7ebbea6 files/digest-zip-2.3-r2 113
-MD5 0fae982a1638aacea39c862dd7ebbea6 files/digest-zip-2.3-r4 113
+MD5 0fae982a1638aacea39c862dd7ebbea6 files/digest-zip-2.3-r3 113
 MD5 6cf67950f3003a17d048c9a3ce4f243a files/zip-2.3-unix_configure-pic.patch 444
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBjT4sugEuf3OQ0akRAu+YAJ94eGg9lIUq/7OL8hO3UEYkpWrg2QCbBPyd
-5pE7+s6PyugSKO7CHq6rgkg=
-=X/DS
------END PGP SIGNATURE-----
+MD5 0fae982a1638aacea39c862dd7ebbea6 files/digest-zip-2.3-r4 113
+MD5 ceb628bca144581dbeff71136122a8e2 files/zip-CAN-2004-1010.patch 673
