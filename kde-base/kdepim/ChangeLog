@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.43 2003/08/13 12:26:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.44 2003/08/30 10:19:25 liquidx Exp $
+
+  30 Aug 2003; Alastair Tse <liquidx@gentoo.org> kdepim-2.2.2-r1.ebuild,
+  kdepim-3.0.4.ebuild, kdepim-3.0.5b.ebuild, kdepim-3.1.1.ebuild,
+  kdepim-3.1.2-r1.ebuild, kdepim-3.1.2.ebuild, kdepim-3.1.3.ebuild:
+  moved dev-libs/pilot-link to app-pda/pilot-link
 
   13 Aug 2003; Jason Wever <weeve@gentoo.org> kdepim-3.1.3.ebuild:
   Added ~sparc to keywords.
