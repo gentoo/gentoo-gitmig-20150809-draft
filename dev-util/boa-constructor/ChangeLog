@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for dev-util/boa-constructor
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/ChangeLog,v 1.1 2002/03/16 02:42:18 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/ChangeLog,v 1.2 2002/11/06 06:24:58 vapier Exp $
 
 *boa-constructor-0.1.0_alpha (<Mar 15, 2002>)
 
