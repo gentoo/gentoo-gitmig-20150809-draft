@@ -1,7 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c014960f5f6a624e5bf3a3fe7c172867 ChangeLog 3591
 MD5 ae5609d9bd55ed7d9792b7b86da4df6b hppa-dev-sources-2.6.7_p1-r2.ebuild 1180
-MD5 377da3ff78f23fd6567e0209984ebdec ChangeLog 3443
+MD5 05bef7ac2c9a5cdf016c4be6f71d034b hppa-dev-sources-2.6.7_p14.ebuild 1176
 MD5 f1b3ae515c1f32812ecbf25193148a90 metadata.xml 223
 MD5 ce5fc85224c09cf512dc725ee88945e4 files/digest-hppa-dev-sources-2.6.7_p1-r2 129
-MD5 b6e38b41c8a79943df2ab2642149d06f files/CAN-2004-0497.patch 2214
 MD5 c857b174f7e6a6b0ab2e26f9306ad0a0 files/ncr53c8xx.diff 3701
+MD5 b6e38b41c8a79943df2ab2642149d06f files/CAN-2004-0497.patch 2214
 MD5 c91330cc5b4044b6f59696095c2dc0fb files/CAN-2004-0626-death_packet.patch 423
+MD5 2dfffb2597dfa71f526d15fdb55ce4f8 files/digest-hppa-dev-sources-2.6.7_p14 130
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBAgr0HTu7gpaalycRAmgYAJ4qKLB3ZRuTPjOO5QF6HNvqjYrpGACfU/L8
+6ET3XNiocID9UgmUKjp9JoE=
+=BqzK
+-----END PGP SIGNATURE-----
