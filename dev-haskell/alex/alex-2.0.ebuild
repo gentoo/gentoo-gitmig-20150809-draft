@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.ebuild,v 1.1 2003/09/22 12:20:54 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/alex-2.0.ebuild,v 1.2 2004/04/25 23:48:34 agriffis Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -35,7 +35,7 @@ GHCPATH="${PATH}:/opt/ghc/bin"
 src_compile() {
 	# unset SGML_CATALOG_FILES because documentation installation
 	# breaks otherwise ...
-	PATH="${GHCPATH}" SGML_CATALOG_FILES="" econf
+	PATH="${GHCPATH}" SGML_CATALOG_FILES="" econf || die "econf failed"
 	# using make because emake behaved strangely on my machine
 	make || die
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.9 2004/03/23 00:57:02 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.10 2004/04/25 23:49:47 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> haddock-0.4.ebuild,
+  haddock-0.5.ebuild, haddock-0.6-r1.ebuild, haddock-0.6-r2.ebuild,
+  haddock-0.6.ebuild:
+  Add die following econf for bug 48950
 
   23 Mar 2004; Matthieu Sozeau <mattam@gentoo.org> haddock-0.6-r2.ebuild:
   Added ~ppc keyword.
