@@ -1,8 +1,18 @@
-MD5 b1ff81a4fba277b0253de415b815f738 ChangeLog 2023
-MD5 b9fb4fb73146388e1f9fa06913717512 ispell-ru-0.99.6.1-r1.ebuild 778
-MD5 93d2df064f195499b26cd303aefb4ad7 ispell-ru-0.99.6.1.ebuild 761
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ae194730efc60ae807bbe9c2ebe8fb98 ispell-ru-0.99.6.1.ebuild 713
 MD5 486dcfbe8f9cf5df3f4417b5b91446cc ispell-ru-0.99.7.ebuild 773
+MD5 323278a0784bed87120572523804c119 ispell-ru-0.99.6.1-r1.ebuild 734
+MD5 cc58cc12ff41c3268df157f0460bf4db ChangeLog 2216
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
+MD5 d4f61c858d6be0d381a15d697f91df43 files/digest-ispell-ru-0.99.7 69
 MD5 1dd1c7de450fd69537c7df2352870037 files/digest-ispell-ru-0.99.6.1 69
 MD5 1dd1c7de450fd69537c7df2352870037 files/digest-ispell-ru-0.99.6.1-r1 69
-MD5 d4f61c858d6be0d381a15d697f91df43 files/digest-ispell-ru-0.99.7 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpPRaI1lqEGTUzyQRAv9BAKC/KKxUEG475cJ2Po8CwGVWh0Ry5QCglh0J
+MtMOf2IGNeZWGmQE1OszfgE=
+=1sfC
+-----END PGP SIGNATURE-----

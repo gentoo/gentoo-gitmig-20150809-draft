@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/ispell-ru
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ChangeLog,v 1.14 2004/09/04 06:57:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ChangeLog,v 1.15 2004/11/24 20:51:30 swegener Exp $
+
+  24 Nov 2004; Sven Wegener <swegener@gentoo.org>
+  ispell-ru-0.99.6.1-r1.ebuild, ispell-ru-0.99.6.1.ebuild:
+  Fixed SRC_URI to match real file name. Changed SRC_URI to use mirror:// syntax.
 
   03 Sep 2004; Seemant Kulleen <seemant@gentoo.org>
   ispell-ru-0.99.6.1-r1.ebuild:
