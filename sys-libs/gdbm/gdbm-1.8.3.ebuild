@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3.ebuild,v 1.5 2004/03/01 01:32:18 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3.ebuild,v 1.6 2004/03/23 17:16:13 avenj Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -16,16 +16,14 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ppc64"
 
 DEPEND="virtual/glibc
-	berkdb? ( amd64? sys-libs/db : =sys-libs/db-1.85-r1 )"
+	berkdb? (
+	amd64? ( sys-libs/db )
+	!amd64? ( =sys-libs/db-1.85-r1 ) )"
 
 RDEPEND="virtual/glibc"
 
 src_compile() {
-	use alpha && gnuconfig_update
-	use hppa && gnuconfig_update
-	use amd64 && gnuconfig_update
-	use ia64 && gnuconfig_update
-	use ppc64 && gnuconfig_update
+	gnuconfig_update
 
 	if [ ! `is-flag "-fomit-frame-pointer"` ]
 	then

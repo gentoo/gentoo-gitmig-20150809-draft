@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.15 2004/03/01 01:32:18 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.16 2004/03/23 17:16:13 avenj Exp $
+
+  23 Mar 2004; Jon Portnoy <avenj@gentoo.org> gdbm-1.8.3.ebuild,
+  gdbm-1.8.0-r5.ebuild :
+  Updated ebuilds to remove invalid : in DEPEND for amd64 conditionals.
+  Also trashed all the use arch && gnuconfig_update junk in favor of 
+  simply running gnuconfig_update for everybody.
 
   29 Feb 2004; Tom Gall <tgall@gentoo.org> gdbm-1.8.3.ebuild,gdbm-1.8.0-r5.ebuild:
   add gnuconfig_update for ppc64
