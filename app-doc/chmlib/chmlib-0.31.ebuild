@@ -1,19 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.31.ebuild,v 1.3 2003/09/29 17:29:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.31.ebuild,v 1.4 2003/10/07 12:31:54 dholm Exp $
 
 DESCRIPTION="Library for MS CHM (compressed html) file format plus extracting and http server utils"
 HOMEPAGE="http://66.93.236.84/~jedwin/projects/chmlib/"
 SRC_URI="http://66.93.236.84/~jedwin/projects/chmlib/${PF}.tgz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -i "s:gcc-3.2:gcc:" Makefile
 	sed -i "s:/usr/local/:/${D}/usr/:" Makefile
+	if [ "${ARCH}" = "ppc" ]; then
+		# In this case it is safe to take this rather
+		# stupid action =)
+		sed -i "s:__i386__:__powerpc__:" chm_lib.c
+	fi
 }
 
 src_compile() {
