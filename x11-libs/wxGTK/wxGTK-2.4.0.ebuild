@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.0.ebuild,v 1.9 2003/03/26 03:30:48 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.0.ebuild,v 1.10 2003/05/07 13:04:34 liquidx Exp $
 
 DESCRIPTION="GTK+ version of wxWindows, a cross-platform C++ GUI toolkit."
 SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
@@ -50,6 +50,10 @@ src_compile() {
 		&& myconf="${myconf} --enable-static" \
 		|| myconf="${myconf} --disable-static"
 
+	# Note: ODBC support does not work with --enable-unicode
+	#       We only use --enable-unicode (if at all) when we use
+	#       gtk2.
+
 	if [ `use odbc` ] && [ ! `use gtk2` ]; then
 		myconf="${myconf} --with-odbc"
 	elif [ `use odbc` ] && [ `use gtk2` ]; then
@@ -69,8 +73,17 @@ src_compile() {
 		|| myconf="${myconf} --without-opengl"
 
 	myconf="${myconf} --with-x --with-gtk"
-    
-	use gtk2 && myconf="${myconf} --enable-gtk2 --enable-unicode"
+	
+    # here we disable unicode support even thought gtk2 supports it
+	# because too many apps just don't follow the wxWindows guidelines
+	# for unicode support. 
+	#
+	# http://www.wxwindows.org/manuals/2.4.0/wx458.htm#unicode
+	#
+	# ref #20116 - liquidx@gentoo.org (07 May 2003)
+	
+	#use gtk2 && myconf="${myconf} --enable-gtk2 --enable-unicode"
+	use gtk2 && myconf="${myconf} --enable-gtk2"
 
 	econf ${myconf}
 	emake || die "make failed"
