@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.4.0.ebuild,v 1.4 2003/10/18 22:54:00 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.4.0.ebuild,v 1.5 2003/10/21 03:01:34 agriffis Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ DESCRIPTION="the Gnome 2 Canvas library"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha ~sparc ~hppa amd64"
+KEYWORDS="x86 ~ppc alpha ~sparc ~hppa amd64"
 LICENSE="GPL-2 LGPL-2"
 
 RDEPEND=">=gnome-base/libglade-2
