@@ -1,12 +1,22 @@
-MD5 68c63f23d9f36bae38a77e334aac88d6 ChangeLog 4068
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b227352ee17e75699bfbec934b5dcca6 ChangeLog 4177
+MD5 81c1c50375497368a0c76dfeb2abe64a xmail-1.16-r1.ebuild 3584
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 9fe64671f2bd2f30c80e8addfaedc916 xmail-1.20.ebuild 3502
 MD5 e305afd019b5b4dd27ee724c6e967f97 xmail-1.16.ebuild 3253
-MD5 1c1e38f0b095caebf75811d7ad046973 xmail-1.16-r1.ebuild 3588
-MD5 6d054135550a2a3f4a29bdebbaf1ed73 xmail-1.20.ebuild 3503
-MD5 8f93bde743cf3f7a77f27bcf602aa4dc files/xmail.confd 409
-MD5 e00a488aecb141a34c5ec43eac58b9a9 files/15xmail 24
-MD5 5bbd572781bd63319f432d3a74a399cf files/digest-xmail-1.16 62
 MD5 006332f5dceeb1f9e334cbd295a98344 files/xmail.initd 2796
-MD5 722274fd9ffd32da5477fb703d3f657c files/xmailwizard 2299
+MD5 8f93bde743cf3f7a77f27bcf602aa4dc files/xmail.confd 409
 MD5 5bbd572781bd63319f432d3a74a399cf files/digest-xmail-1.16-r1 62
+MD5 e00a488aecb141a34c5ec43eac58b9a9 files/15xmail 24
 MD5 6581875d1cebeca3b8fe46e7474622e1 files/digest-xmail-1.20 62
+MD5 722274fd9ffd32da5477fb703d3f657c files/xmailwizard 2299
+MD5 5bbd572781bd63319f432d3a74a399cf files/digest-xmail-1.16 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBtJNfQlM6RnzZP+IRAsKLAJ9IpkTbi03TETLWo0ns8Xz6m8CmTgCdH4Ry
+HmSgAdCihfqGkgJ4u7lr6pU=
+=VnE3
+-----END PGP SIGNATURE-----
