@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Alexander Papaspyrou <alexander.papaspyrou@udo.edu
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetmonapplet/knetmonapplet-0.9.ebuild,v 1.5 2004/07/15 02:55:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetmonapplet/knetmonapplet-0.9.ebuild,v 1.6 2004/08/29 18:05:23 kugelfang Exp $
 
 inherit kde
 need-kde 3
@@ -11,7 +11,7 @@ SRC_URI="http://ftp.kde.com/Computer_Devices/Networking/Monitoring/KnetmonApplet
 HOMEPAGE="http://perso.club-internet.fr/hftom/knetmonapplet/"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 src_unpack() {

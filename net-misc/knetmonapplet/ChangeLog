@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/knetmonapplet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetmonapplet/ChangeLog,v 1.8 2004/06/24 23:51:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetmonapplet/ChangeLog,v 1.9 2004/08/29 18:05:23 kugelfang Exp $
+
+  29 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> knetmonapplet-0.9.ebuild:
+  Marked ~amd64.
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   knetmonapplet-0.6.6.ebuild, knetmonapplet-0.9.ebuild:
