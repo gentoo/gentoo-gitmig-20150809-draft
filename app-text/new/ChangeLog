@@ -1,6 +1,11 @@
 # ChangeLog for app-text/new
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/new/ChangeLog,v 1.3 2004/06/24 22:45:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/new/ChangeLog,v 1.4 2004/07/18 13:48:34 aliz Exp $
+
+*new-1.3.2 (18 Jul 2004)
+
+  18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump and gcc3 fix, closing #55382.
 
 *new-1.3.1 (30 Oct 2002)
 
