@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.1 2003/03/09 02:41:03 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.2 2003/04/12 06:52:21 jje Exp $
+
+*hydrogen-0.7.6 (12 Apr 2003)
+
+  12 Apr 2003; jje hydrogen-0.7.6.ebuild:
+  Version Bump.
+  
+  Submitted by: Marc Hildebrand
 
 *hydrogen-0.7.4 (09 Mar 2003)
 
