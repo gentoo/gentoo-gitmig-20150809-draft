@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.0-r1.ebuild,v 1.5 2002/12/12 11:35:34 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.0-r1.ebuild,v 1.6 2002/12/23 16:18:54 strider Exp $
 
 IUSE="doc"
 
@@ -20,7 +20,7 @@ PROVIDE="virtual/jre-1.4.0
 	virtual/java-scheme-2"
 LICENSE="IBM-ILNWP"
 SLOT="1.4"
-KEYWORDS="~x86 -ppc -sparc  -alpha"
+KEYWORDS="~x86 -ppc -sparc -alpha"
 
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then
@@ -45,10 +45,14 @@ src_install () {
 	dohtml -a html,htm,HTML -r docs
 	dodoc docs/COPYRIGHT
 
+	if [ "`use mozilla`" ] ; then
+		dodir /usr/lib/mozilla/plugins
+		dosym /opt/${P}/jre/bin/libjavaplugin_oji.so /usr/lib/mozilla/plugins/
+	fi
+
 	set_java_env ${FILESDIR}/${VMHANDLE}
 
-	# Plugin is disabled as it crashes all the time
-	# inst_plugin /opt/${P}/jre/bin/libjavaplugin_oji.so
+
 
 }
-# NOTE: We don't install the plugin, as it always segfaults.
+
