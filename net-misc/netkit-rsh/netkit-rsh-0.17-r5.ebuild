@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r5.ebuild,v 1.6 2004/06/24 23:58:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r5.ebuild,v 1.7 2004/07/15 03:07:53 agriffis Exp $
 
 inherit eutils
 
 IUSE=""
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Netkit's Remote Shell Suite: rexec{,d} rlogin{,d} rsh{,d}"
 SRC_URI="mirror://debian/pool/main/n/${PN}/${PN}_${PV}.orig.tar.gz"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
