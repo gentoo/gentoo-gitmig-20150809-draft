@@ -1,8 +1,13 @@
 # ChangeLog for media-libs/sdl-gfx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.3 2002/08/06 21:25:55 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.4 2002/08/28 05:46:30 seemant Exp $
 
 *sdl-gfx-2.0.3 (5 Jul 2002)
+
+  27 Aug 2002; Seemant Kulleen <seemant@gentoo.org> sdl-gfx-2.0.3 :
+
+  Removed mmx stuff if not in USE -- which means compilation on non-x86
+  Many thanks to: justinb@imsa.edu (Justin Blanchard) in bug #6989.
 
   06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
