@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2934 2004/06/15 06:30:51 phosphan Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2935 2004/06/16 00:58:23 lv Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -142,11 +142,6 @@ app-accessibility/speechd-up
 # <lu_zero@gentoo.org> (257 Apr 2004)
 # Working fine on ppc, but needs -fno-strict-aliasing to behave.
 =sys-devel/gcc-3.3.3_pre20040426
-
-# <npmccallum@gentoo.org> (23 Apr 2004)
-# masked while testing...
->=sys-apps/parted-1.6.9
-dev-python/pyparted
 
 # <foser@gentoo.org> (20 Apr 2004)
 # gnome meta update tracker
