@@ -6,7 +6,20 @@ import string
 import sys
 
 portagedict={}
-os.chdir("/usr/portage")
+portdir=portage.getsetting("PORTDIR")
+dbdir=portage.getsetting("DBDIR")
+currentfile=portage.getsetting("CURRENTFILE")
+
+if not os.path.isdir(portdir):
+	print "Couldn't find",portdir
+	print "Exiting."
+	sys.exit(1)
+if not os.path.isdir(dbdir):
+	print "Couldn't find",dbdir
+	print "Exiting."
+	sys.exit(1)
+os.chdir(portdir)
+	
 for x in portage.categories:
 	for y in os.listdir(os.getcwd()+"/"+x):
 		if not os.path.isdir(os.getcwd()+"/"+x+"/"+y):
@@ -24,7 +37,7 @@ for x in portage.categories:
 
 #format: cat/basepkgname: [ cat/fullpkgname, mysplit ]
 installeddict={}
-os.chdir("/var/db/pkg")
+os.chdir(dbdir)
 for x in os.listdir(os.getcwd()):
 	for y in os.listdir(os.getcwd()+"/"+x):
 		mysplit=portage.pkgsplit(y)
@@ -32,10 +45,9 @@ for x in os.listdir(os.getcwd()):
 			installeddict[x+"/"+mysplit[0]]=[]
 		installeddict[x+"/"+mysplit[0]].append([x+"/"+y,mysplit])
 
-
 #format: cat/basepkgname: [ cat/fullpkgname, mysplit ]
 currentdict={}
-mycurrent=open("/usr/portage/current-packages","r")
+mycurrent=open(currentfile,"r")
 mylines=mycurrent.readlines()
 for x in mylines:
 	if x[:2]!="./":
@@ -48,8 +60,6 @@ for x in mylines:
 	currentdict[mykey].append([myline[0]+"/"+myline[2],mysplit])
 mycurrent.close()
 del mylines
-
-
 
 for mypkg in installeddict.keys():
 	#if there is one installed version, and one recommended version, and they both
@@ -76,38 +86,3 @@ for mypkg in installeddict.keys():
 	else:
 		print " ","(none)"
 	print
-	
-"""
-for x in installed:
-	myebuild="/usr/portage/"+x[0]+"/"+x[2][0]+"/"+x[1]+".ebuild"
-	if x not in current:
-		if not currentdict.has_key(x[0]+"/"+x[2][0]):
-			print "!!!",x[0]+"/"+x[2][0]
-			print
-			continue
-		print "pkg",x[0]+"/"+x[1]+":"
-		mydir="/usr/portage/"+x[0]+"/"+x[2][0]
-		if not os.path.exists(mydir):
-			print mydir,"does not exist."
-			continue
-		for y in os.listdir(mydir):
-			if y[-7:] != ".ebuild":
-				continue
-			mye=portage.pkgsplit(y[:-7])
-			isnew=portage.pkgcmp(mye,x[2])
-			if isnew>0:
-				outstring="new"
-			elif isnew<0:
-				outstring="old"
-			else:
-				outstring="cur"
-			if not currentdict.has_key(x[0]+"/"+mye[0]):
-				outstring="non !!!"
-			else:
-				if currentdict[x[0]+"/"+mye[0]][1]==mye:
-					outstring=outstring+" >>>"
-				else:
-					outstring=outstring+"    "
-			print "   ",outstring,y
-		print
-"""

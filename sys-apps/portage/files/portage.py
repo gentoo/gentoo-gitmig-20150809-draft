@@ -59,6 +59,9 @@ import string,os
 # These values are used to determine which package is
 # newer.
 
+# master category list.  Any new categories should be added to this list to ensure that they all categories are read
+# when we check the portage directory for available ebuilds.
+
 categories=("app-admin", "app-arch", "app-cdr", "app-doc", "app-editors", "app-emulation", "app-games", "app-misc", 
 			"app-office", "app-shells", "app-text", "dev-db", "dev-java", "dev-lang", "dev-libs", "dev-perl", 
 			"dev-python", "dev-util", "gnome-apps", "gnome-base", "gnome-libs", 
@@ -66,6 +69,123 @@ categories=("app-admin", "app-arch", "app-cdr", "app-doc", "app-editors", "app-e
 			"net-analyzer", "net-dialup", "net-fs", "net-ftp", "net-irc", "net-libs", "net-mail", "net-misc", "net-nds", 
 			"net-print", "net-www", "packages", "sys-apps", "sys-devel", "sys-kernel", "sys-libs", "x11-base", "x11-libs", 
 			"x11-terms", "x11-wm")
+
+
+def getsetting(mykey,recdepth=0):
+	"""perform bash-like basic variable expansion, recognizing ${foo} and $bar"""
+	if recdepth>10:
+		return ""
+		#avoid infinite recursion
+	global configdefaults, cdcached
+	global configsettings, cscached
+	if os.environ.has_key(mykey):
+		mystring=os.environ[mykey]
+	elif configsettings.has_key(mykey):
+		mystring=configsettings[mykey]
+	elif configdefaults.has_key(mykey):
+		mystring=configdefaults[mykey]
+	else:
+		return ""
+	if (len(mystring)==0):
+		return ""
+	if mystring[0]=="'":
+		#single-quoted, no expansion
+		return mystring[1:-1]
+	newstring=""
+	pos=0
+	while (pos<len(mystring)):
+		if mystring[pos]=='\\':
+			if (pos+1)>=len(mystring):
+				#we're at the end of the string
+				return "" #error
+			a=mystring[pos+1]
+			pos=pos+2
+			if a=='a':
+				newstring=newstring+chr(007)
+			elif a=='b':
+				newstring=newstring+chr(010)
+			elif a=='e':
+				newstring=newstring+chr(033)
+			elif a=='f':
+				newstring=newstring+chr(012)
+			elif a=='r':
+				newstring=newstring+chr(015)
+			elif a=='t':
+				newstring=newstring+chr(011)
+			elif a=='v':
+				newstring=newstring+chr(013)
+			elif a=="'":
+				newstring=newstring+"'"
+			else:
+				newstring=newstring+mystring[pos-1:pos]
+		elif mystring[pos]=="$":
+			#variable expansion
+			if (pos+1)>=len(mystring):
+				#we're at the end of the string, error
+				return ""
+			if mystring[pos+1]=="{":
+				newpos=pos+1
+				while newpos<len(mystring) and mystring[newpos]!="}":
+					newpos=newpos+1
+				if newpos>=len(mystring):
+					return "" # ending } not found
+				varname=mystring[pos+2:newpos]
+				if len(varname)==0:
+					return "" #zero-length variable, error
+				newstring=newstring+getsetting(varname,recdepth+1)
+				pos=newpos+1
+			else:
+				newpos=pos+1
+				while newpos<len(mystring) and (mystring[newpos] not in string.whitespace):
+					newpos=newpos+1
+				if newpos>=len(mystring):
+					varname=mystring[pos+1:]
+				else:
+					varname=mystring[pos+1:newpos]
+				pos=newpos
+				if len(varname)==0:
+					return "" #zero-length variable, error
+				newstring=newstring+getsetting(varname,recdepth+1)
+				#recurse
+		else:
+			newstring=newstring+mystring[pos]
+			pos=pos+1
+	return newstring
+				
+def getconfig(mycfg):
+	myconfigfile=open(mycfg,"r")
+	myconfiglines=myconfigfile.readlines()
+	myconfigfile.close()
+	myconfigdict={}
+	for x in myconfiglines:
+		#strip whitespace
+		x=string.strip(x)
+		#skip comment or blank line
+		if (len(x)==0):
+			continue
+		if (x[0]=="#"):
+			continue
+		myparts=string.split(x,"=")
+		if myparts<2:
+			continue
+			#invalid line, no equals sign
+		mykey=string.strip(myparts[0])
+		myvalue=string.strip(string.join(myparts[1:],"="))
+		if myvalue[0]=='"':
+			if myvalue[-1]=='"':
+				myvalue=myvalue[1:-1]
+			else:
+				continue
+				#no closing double-quote!
+		elif myvalue[0]=="'":
+			if myvalue[-1]=="'":
+				pass
+			else:
+				continue
+				#no closing single-quote!
+		if len(myvalue)>0:
+			myconfigdict[mykey]=myvalue
+	return myconfigdict
 
 def relparse(myver):
 	number=0
@@ -331,4 +451,5 @@ def ver(myname):
         return myname[len(a[0])+1:]
 
 
-
+configdefaults=getconfig("/etc/make.defaults")
+configsettings=getconfig("/etc/make.conf")

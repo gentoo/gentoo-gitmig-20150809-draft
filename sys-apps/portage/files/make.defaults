@@ -1,0 +1,44 @@
+# Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
+# System-wide defaults for the Portage system
+
+MAINTAINER="yes"
+
+#proxy settings PROXY(both), or HTTP_PROXY/FTP_PROXY
+#PROXY=freebox.gentoo.org:3128
+#HTTP_PROXY=
+#FTP_PROXY=
+
+# Host-type
+CHOST=i686-pc-linux-gnu
+
+# Directory used for the build process 
+BUILD_PREFIX=/tmp/portage
+
+PORTDIR=/usr/portage
+DBDIR=/var/db/pkg
+DISTDIR=${PORTDIR}/distfiles
+PKGDIR=${PORTDIR}/packages
+RPMDIR=${PORTDIR}/rpm
+CURRENTFILE=${PORTDIR}/current-packages
+PLATFORM=$CHOST
+
+# Options passed to make during the build process
+MAKEOPTS="-j2"
+
+# Fetching command (3 tries, passive ftp for firewall compatibility)
+FETCHCOMMAND="/usr/bin/wget -t 1 --passive-ftp \${x} -P \${DISTDIR}"
+# Compile programs with GNOME/SLANG extensions 
+#USE="gnome slang"
+USE="slang"
+
+# C Compiler flags
+CFLAGS="-O2 -mpentium"
+
+# C++ Compiler flags
+CXXFLAGS=${CFLAGS}
+
+#Debug build -- if defined, binaries won't be stripped
+#DEBUG=true
+
+#Package Mode - tbz2 or tgz (what binary package mode)
+PACKAGE=tbz2
