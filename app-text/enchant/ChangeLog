@@ -1,6 +1,10 @@
 # ChangeLog for app-text/enchant
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.8 2003/10/26 19:52:00 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.9 2003/11/02 05:19:57 agriffis Exp $
+
+  02 Nov 2003; Aron Griffis <agriffis@gentoo.org> enchant-1.0.0.ebuild,
+  files/enchant-1.0.0-alpha.patch:
+  Add patch for 64-bit compilation and add ~alpha to KEYWORDS
 
 *enchant-1.1.1 (26 Oct 2003)
 
