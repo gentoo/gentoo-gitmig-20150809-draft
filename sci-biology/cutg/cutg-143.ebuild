@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/cutg-143.ebuild,v 1.1 2004/12/23 21:19:57 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/cutg-143.ebuild,v 1.2 2005/01/01 13:05:19 corsair Exp $
 
 DESCRIPTION="Codon usage tables calculated from GenBank"
 HOMEPAGE="http://www.kazusa.or.jp/codon/"
