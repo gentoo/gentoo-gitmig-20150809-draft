@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.85 2004/08/22 20:23:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.86 2004/08/22 22:54:13 weeve Exp $
+
+  22 Aug 2004; Jason Wever <weeve@gentoo.org> openldap-2.1.30-r1.ebuild:
+  Stable on sparc.
 
 *openldap-2.1.30-r3 (22 Aug 2004)
 
