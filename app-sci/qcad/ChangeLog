@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/qcad
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.8 2003/09/24 10:42:51 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.9 2003/10/02 20:03:31 pyrania Exp $
+
+*qcad-2.0.0.8 (02 Oct 2003)
+
+  02 Oct 2003; Markus Nigbur <pyrania@gentoo.org> qcad-2.0.0.8.ebuild:
+  Bump
 
 *qcad-2.0.0.1 (24 Sep 2003)
 
