@@ -1,8 +1,9 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.10 2004/09/22 19:41:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.11 2004/09/22 19:43:31 ticho Exp $
 
-  22 Sep 2004; Andrej Kacian <ticho@gentoo.org> balsa-2.0.14.ebuild:
+  22 Sep 2004; Andrej Kacian <ticho@gentoo.org> balsa-2.0.15-r1.ebuild,
+  balsa-2.0.15-r2.ebuild:
   Changed =app-crypt/gpgme-0.3.14 RDEPEND to ~app-crypt/gpgme-0.3.14. Closes
   #64969, reported by Antonio <netbix@tiscali.it>
 

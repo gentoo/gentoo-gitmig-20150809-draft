@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.0.15-r1.ebuild,v 1.4 2004/08/08 03:16:07 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.0.15-r1.ebuild,v 1.5 2004/09/22 19:43:31 ticho Exp $
 
 inherit gnome2 eutils
 
@@ -27,7 +27,7 @@ RDEPEND="net-mail/mailbase
 	perl? ( >=dev-libs/libpcre-3.4 )
 	gtkhtml? ( =gnome-extra/libgtkhtml-2* )
 	ldap? ( net-nds/openldap )
-	crypt? ( =app-crypt/gpgme-0.3.14 )"
+	crypt? ( ~app-crypt/gpgme-0.3.14 )"
 
 DEPEND="dev-util/pkgconfig
 	>=app-text/scrollkeeper-0.1.4
