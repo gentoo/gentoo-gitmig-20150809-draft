@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r1.ebuild,v 1.5 2004/09/14 17:55:46 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.1 2004/09/21 23:14:25 lv Exp $
 
 IUSE="static nls bootstrap build nomultilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -58,8 +58,6 @@ ETYPE="gcc-compiler"
 #PIEPATCH_EXCLUDE="upstream/04_all_gcc-3.4.0-v8.7.6.1-pie-arm-uclibc.patch.bz2"
 HARDENED_GCC_WORKS="x86 sparc amd64"
 SPLIT_SPECS="true"
-
-SLOT="3.4"
 
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
@@ -146,12 +144,16 @@ src_unpack() {
 		use n64 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n64only.patch
 	fi
 
+	# hack around some ugly 32bit sse2 wrong-code bugs
+	epatch ${FILESDIR}/3.4.2/gcc34-m32-no-sse2.patch
+	epatch ${FILESDIR}/3.4.2/gcc34-fix-sse2_pinsrw.patch
+
 	if use amd64 && use !nomultilib ; then
 		# this should hack around the GCC_NO_EXECUTABLES bug
 		epatch ${FILESDIR}/3.4.1/gcc-3.4.1-glibc-is-native.patch
 		cd ${S}/libstdc++-v3
 		einfo "running autoreconf..."
-		autoreconf
+		autoreconf 2> /dev/null
 		cd ${S}
 	fi
 }
@@ -376,32 +378,16 @@ src_install() {
 	exeinto /sbin
 	doexe ${FILESDIR}/fix_libtool_files.sh
 
-	# multilib is a headache. we want a versioned 32bit libgcc in /lib32,
-	# but that currently needs to be a symlink to where we -really- keep
-	# our 32bit libraries.
-	if [ -d ${D}/${LIBPATH}/../lib32 ] && use amd64 ; then
-		mkdir -p ${D}/emul/linux/x86/lib/
-		ln -s lib ${D}/emul/linux/x86/lib32
-		ln -s ./emul/linux/x86/lib ${D}/lib32
+	# we dont want these in freaky non-versioned paths that dont ever get used
+	if [ -d ${D}/${LIBPATH}/../$(get_libdir) ] ; then
+		mv ${D}/${LIBPATH}/../$(get_libdir)/* ${D}/${LIBPATH}/
+		rm -rf ${D}/${LIBPATH}/../$(get_libdir)/
 	fi
-
-	if [ "$CHOST" == "$CCHOST" -o "$CCHOST" == "" ] ; then
-		# we want libgcc_s.so in /lib{,32,64}, NOT some funky directory where
-		# it'll never be found.
-		for libgcc_dir in `ls -d ${D}/${LIBPATH}/../lib*` ; do
-			mkdir -p ${D}/$(basename ${libgcc_dir})
-			mv ${libgcc_dir}/* ${D}/$(basename ${libgcc_dir})/
-			rm -rf ${libgcc_dir}
-			add_version_to_shared ${D}/$(basename ${libgcc_dir})/
-		done
-		# it might be here too.
-		if [ -e ${D}/${LIBPATH}/libgcc_s.so ] ; then
-			mkdir -p ${D}/$(get_libdir)/
-			mv ${D}/${LIBPATH}/libgcc_s* ${D}/$(get_libdir)/
-			# we need a libgcc_s.so
-			dosym libgcc_s.so.1 /$(get_libdir)/libgcc_s.so
-			add_version_to_shared ${D}/$(get_libdir)/
-		fi
+	if [ -d ${D}/${LIBPATH}/../$(get_multilibdir) ] ; then
+		local multilibdir=$(get_multilibdir)
+		mv ${D}/${LIBPATH}/../$(get_multilibdir)/* \
+			${D}/${LIBPATH}/${multilibdir/lib}/
+		rm -rf ${D}/${LIBPATH}/../$(get_multilibdir)/
 	fi
 }
 

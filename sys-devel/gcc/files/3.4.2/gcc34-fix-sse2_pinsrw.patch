@@ -1,0 +1,25 @@
+--- gcc-3.4.2.old/gcc/config/i386/i386.md	2004-09-21 17:08:59.654841672 +0000
++++ gcc-3.4.2/gcc/config/i386/i386.md	2004-09-21 17:10:57.386943672 +0000
+@@ -105,6 +105,7 @@
+    (UNSPEC_MFENCE		59)
+    (UNSPEC_LFENCE		60)
+    (UNSPEC_PSADBW		61)
++   (UNSPEC_PINSRW		62)
+    (UNSPEC_ADDSUB		71)
+    (UNSPEC_HADD			72)
+    (UNSPEC_HSUB			73)
+@@ -22095,11 +22096,12 @@
+ 
+ (define_insn "sse2_pinsrw"
+   [(set (match_operand:V8HI 0 "register_operand" "=x")
+-        (vec_merge:V8HI (match_operand:V8HI 1 "register_operand" "0")
++	(unspec:V8HI [(match_operand:V8HI 1 "register_operand" "0")
+ 			(vec_duplicate:V8HI
+ 			 (truncate:HI
+ 			   (match_operand:SI 2 "nonimmediate_operand" "rm")))
+-			(match_operand:SI 3 "const_0_to_255_operand" "N")))]
++			(match_operand:SI 3 "const_0_to_255_operand" "N")]
++			UNSPEC_PINSRW))]
+   "TARGET_SSE2"
+   "pinsrw\t{%3, %2, %0|%0, %2, %3}"
+   [(set_attr "type" "ssecvt")
