@@ -1,7 +1,12 @@
 # ChangeLog for dev-libs/root
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/ChangeLog,v 1.8 2003/02/22 10:39:32 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/ChangeLog,v 1.9 2003/04/25 16:42:46 lu_zero Exp $
 
+*root-3.05.04 (25 Apr 2003)
+
+  25 Feb 2003; Luca Barbato <kain@kain.org> root-3.05.04.ebuild :
+  New version, as suggested by Dmitry Kustov <dimok77@hotmail.com>
+  
 *root-3.03.04-r2 (22 Feb 2003)
 
   22 Feb 2003; Bryon Roche <kain@kain.org> root-3.03.04-r1.ebuild root-3.03.04-r2.ebuild files/digest-root-3.03.04-r2 files/pgsql-no-libpq-int.patch files/root-makefile.patch :

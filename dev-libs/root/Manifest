@@ -1,0 +1,7 @@
+MD5 0fe659f7e9ff0b23096ba8fbc6d1c160 ChangeLog 1298
+MD5 ef87e84c7649785effbee77a6983fcd5 root-3.05.04.ebuild 1649
+MD5 e1f5a9d4e6291559a3a4a754601ae817 root-3.03.04-r2.ebuild 1649
+MD5 053f8a5dbe37435f2b62ee44c79e9523 files/digest-root-3.05.04 73
+MD5 cb6730d3f0de83973de47c6bf1d82cfa files/digest-root-3.03.04-r2 73
+MD5 1ef2792a1fad865173670aa5942bef6c files/pgsql-no-libpq-int.patch 290
+MD5 58ce6f63773b28de747663b7e908e2bb files/root-makefile.patch 742
