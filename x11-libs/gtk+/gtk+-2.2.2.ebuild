@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.2.ebuild,v 1.1 2003/06/10 13:15:35 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.2.ebuild,v 1.2 2003/06/10 15:19:27 lu_zero Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -40,12 +40,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
 	# xft/slighthint stuff from RH
 	cd ${S}; epatch ${FILESDIR}/${PN}-2-xftprefs.patch
-
-	if [ "${ARCH}" == "ppc" ]
-	then
-		einfo "Fixing endianness issue in gdkpixbuf for 24-bit and 15-bit displays"
-		cd ${S}; epatch ${FILESDIR}/${PN}-2.2.1-gdkpixbuf-bigendian.patch
-	fi
 
 	autoconf || die
 }
