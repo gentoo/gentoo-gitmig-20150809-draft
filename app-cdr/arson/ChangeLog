@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/arson
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.36 2004/10/06 20:12:27 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.37 2004/11/25 22:22:24 motaboy Exp $
+
+  25 Nov 2004; Simone Gotti <motaboy@gentoo.org> metadata.xml,
+  +files/arson-0.9.8_beta2-configure-arts.patch, arson-0.9.8_beta2.ebuild:
+  Added a patch to the configure script to honor the arts USE flag. Fixes bug
+  #71816.
 
   06 Oct 2004; Lars Weiler <pylon@gentoo.org> arson-0.9.8_beta2.ebuild:
   Changed dependency from app-cdr/cdrtools to virtual/cdrtools. This resolves

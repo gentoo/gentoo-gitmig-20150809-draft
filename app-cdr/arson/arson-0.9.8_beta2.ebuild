@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.8_beta2.ebuild,v 1.11 2004/10/06 20:12:27 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.8_beta2.ebuild,v 1.12 2004/11/25 22:22:24 motaboy Exp $
 
 inherit kde eutils gcc
 
@@ -29,8 +29,8 @@ DEPEND=">=media-sound/cdparanoia-3.9.8
 need-kde 3
 
 #added base_src_unpack() with conditional fix of code allowing compilation with gcc-3.4.0
-base_src_unpack() {
-	unpack ${A}
+src_unpack() {
+	kde_src_unpack
 	cd ${S}/src/
 
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
@@ -39,6 +39,8 @@ base_src_unpack() {
 		sed -i "s:(font()):(font):" wizard.cpp
 	fi
 	cd ${S}
+
+	use arts || epatch ${FILESDIR}/${P}-configure-arts.patch
 }
 
 src_compile() {
