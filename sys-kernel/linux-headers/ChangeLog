@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.50 2004/03/04 04:12:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.51 2004/03/07 08:06:12 kumba Exp $
+
+  07 Mar 2004; Joshua Kinard <kumba@gentoo.org>
+  linux-headers-2.4.19-r1.ebuild:
+  mips keywords don't belong in linux-headers, removing.
 
   03 Mar 2004; <agriffis@gentoo.org> linux-headers-2.4.23.ebuild:
   Add back -* for bug 43670 even though I don't quite get it yet
