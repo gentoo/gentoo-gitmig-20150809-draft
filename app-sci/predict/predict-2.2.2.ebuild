@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/predict/predict-2.2.2.ebuild,v 1.2 2003/11/11 09:17:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/predict/predict-2.2.2.ebuild,v 1.3 2003/12/08 08:10:21 spyderous Exp $
 
 DESCRIPTION="Satellite tracking and orbital prediction."
 HOMEPAGE="http://www.qsl.net/kd2bd/predict.html"
@@ -138,7 +138,7 @@ src_install() {
 		# the install seems broken so do manually...
 		cd ${S}/clients/gsat-*
 		dodir /usr/lib/gsat/plugins
-		touch ${D}/usr/lib/gsat/plugins/.keep
+		keepdir /usr/lib/gsat/plugins
 		cd src
 		dobin gsat
 		cd ..
