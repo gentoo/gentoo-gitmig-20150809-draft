@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/alsa-oss
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.47 2005/01/23 11:24:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.48 2005/03/09 01:38:14 eradicator Exp $
+
+*alsa-oss-1.0.8-r1 (08 Mar 2005)
+
+  08 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +alsa-oss-1.0.8-r1.ebuild, -alsa-oss-1.0.8.ebuild:
+  Make aoss multilib friendly.  Stable amd64, sparc, x86.
 
 *alsa-oss-1.0.8 (23 Jan 2005)
 
