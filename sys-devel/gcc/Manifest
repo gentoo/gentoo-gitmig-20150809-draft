@@ -1,10 +1,12 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b31b5624f7baa6656575a376c66fba17 ChangeLog 56040
 MD5 ff1e34206f0acd8bf35fdfe97d7416d4 gcc-2.95.3-r8.ebuild 9108
 MD5 f6c84e13f0ffb79fa7856b2f7a3a1e63 gcc-3.0.4-r6.ebuild 8460
-MD5 5c06c7b9c6fd156d3bd1383323c3e2e2 gcc-3.1.1-r2.ebuild 9167
+MD5 8eea19413886aaaf3a83a1740e134c27 gcc-3.1.1-r2.ebuild 9280
 MD5 266937f2b252a7eb23365c4ab57b8784 gcc-3.2.3-r4.ebuild 19686
 MD5 b3e452978a022feb912f3e69ddbe9629 gcc-3.3-r1.ebuild 16505
-MD5 d29cdffef30c767572aa907f01b519e7 gcc-3.3.3-r6.ebuild 25472
 MD5 97944d0b4e2d85c9e9b32d4ee4976028 gcc-3.3.1-r5.ebuild 17724
 MD5 bda7a31ec3047770c20871bb01491e9d gcc-3.3.2-r1.ebuild 17964
 MD5 4b604feddc7b7a38f855ea3bf2f274a3 gcc-3.3.2-r2.ebuild 18117
@@ -17,6 +19,7 @@ MD5 8526848a924efa5ace9996851f65b5f7 gcc-3.3.2.ebuild 17907
 MD5 4687cfc56902e61c0033268784f36281 gcc-3.3.3-r3.ebuild 24689
 MD5 4cbe8013269b821a6dcf5c0700eedb03 gcc-3.3.3-r4.ebuild 25549
 MD5 2e6e466308607f7c94b249323bd1649b gcc-3.3.3-r5.ebuild 25325
+MD5 d29cdffef30c767572aa907f01b519e7 gcc-3.3.3-r6.ebuild 25472
 MD5 1e1619c700dd86d0316a4dc251fc615d gcc-3.3.3.ebuild 22397
 MD5 8720a2d266835b5480835d7be54213f8 gcc-3.3.3_pre20040130.ebuild 21519
 MD5 3aa8ac1b4529b83bc3fd8dcc180cd063 gcc-3.3.3_pre20040215.ebuild 22194
@@ -31,7 +34,10 @@ MD5 80d122265d3062847a4a1b161abe1d26 files/cpp 24
 MD5 0d683280daf95e6bb9712549352a200c files/digest-gcc-3.1.1-r2 140
 MD5 3213bd50acdbbd71ce7dd3e40710e30e files/digest-gcc-2.95.3-r8 64
 MD5 4a4be6eb294e00da7fef14ec597dcf13 files/digest-gcc-3.0.4-r6 128
-MD5 40e6872c09149a81973f01a78c80bbb7 files/digest-gcc-3.2.3-r4 279
+MD5 5a9db19cd5ad6ad16b0f838d525d842a files/digest-gcc-3.3.3-r3 522
+MD5 651abb651e5fdcec7c83354b5742d26d files/digest-gcc-3.4.0-r6 443
+MD5 3fd5a29d44b89f4fb220fccaa968fc05 files/digest-gcc-3.3.3-r6 442
+MD5 8f56750ce25ca30ffebcbdb65de95a1f files/digest-gcc-3.3.3_pre20040426 138
 MD5 f57a9900e4d0edcae7b1e327e263d2f7 files/digest-gcc-3.3 294
 MD5 12d4b0c4fc49fad52850ab007c3c7371 files/digest-gcc-3.3-r1 353
 MD5 d192284727acd002cf658d4c559c2d39 files/digest-gcc-3.3.1-r5 361
@@ -40,28 +46,25 @@ MD5 0d86971219ddd6dcb86f032bc2b93691 files/digest-gcc-3.3.2-r1 361
 MD5 f48105f24e5c714530e66a94aa56d615 files/digest-gcc-3.3.2-r2 361
 MD5 f48105f24e5c714530e66a94aa56d615 files/digest-gcc-3.3.2-r3 361
 MD5 29b68fb9b347114baf405bf67ebca0cd files/digest-gcc-3.3.2-r4 361
-MD5 01c41c9e6857eb40d402f2acb2bd96f9 files/digest-gcc-3.3.2-r5 361
-MD5 41e5a58d926345eb32e6a2ba3ab17031 files/digest-gcc-3.3.2-r6 361
-MD5 e58b6c1f3122b79a5d0d273acc3c008c files/digest-gcc-3.3.2-r7 361
-MD5 35f63854b7b4d5ab1ed1489e517f8e24 files/digest-gcc-3.3.3 361
-MD5 5a9db19cd5ad6ad16b0f838d525d842a files/digest-gcc-3.3.3-r3 522
-MD5 d476dba058ac32b251723e136c6dfa8e files/digest-gcc-3.3.3-r4 526
-MD5 3a68d40d170427ffbfcf181b5099d693 files/digest-gcc-3.3.3-r5 528
-MD5 3fd5a29d44b89f4fb220fccaa968fc05 files/digest-gcc-3.3.3-r6 442
-MD5 ac529391146ca1021405f8ec7a4b0579 files/digest-gcc-3.3.3_pre20040130 138
-MD5 9996ea8d65888808363832ea1571fe0a files/digest-gcc-3.3.3_pre20040215 138
-MD5 9996ea8d65888808363832ea1571fe0a files/digest-gcc-3.3.3_pre20040322 138
-MD5 e962c23dd4396850f0e36424ec5596d7 files/digest-gcc-3.3.3_pre20040408-r1 138
-MD5 8f56750ce25ca30ffebcbdb65de95a1f files/digest-gcc-3.3.3_pre20040426 138
-MD5 651abb651e5fdcec7c83354b5742d26d files/digest-gcc-3.4.0-r6 443
-MD5 84210d636ecb686833a178bfc99c281d files/fix_libtool_files.sh 1737
+MD5 b56b1fa94f82e5c569de7677b8a485e0 files/fix_libtool_files.sh 1738
 MD5 8baffb486c75efe253bd2daa88daa7d6 files/gcc331_use_multilib.amd64.patch 352
 MD5 e3193bdffb435b77a21bfb504ff6f591 files/mkinfodir 7324
-MD5 4474cc05a408e243411df067e1ca4c2d files/scan_libgcc_linked_ssp.sh 868
+MD5 782ac9b8dbc629fe4fdfaa7744cfc004 files/scan_libgcc_linked_ssp.sh 869
+MD5 01c41c9e6857eb40d402f2acb2bd96f9 files/digest-gcc-3.3.2-r5 361
+MD5 41e5a58d926345eb32e6a2ba3ab17031 files/digest-gcc-3.3.2-r6 361
+MD5 40e6872c09149a81973f01a78c80bbb7 files/digest-gcc-3.2.3-r4 279
+MD5 e58b6c1f3122b79a5d0d273acc3c008c files/digest-gcc-3.3.2-r7 361
+MD5 ac529391146ca1021405f8ec7a4b0579 files/digest-gcc-3.3.3_pre20040130 138
+MD5 35f63854b7b4d5ab1ed1489e517f8e24 files/digest-gcc-3.3.3 361
+MD5 9996ea8d65888808363832ea1571fe0a files/digest-gcc-3.3.3_pre20040215 138
+MD5 d476dba058ac32b251723e136c6dfa8e files/digest-gcc-3.3.3-r4 526
+MD5 9996ea8d65888808363832ea1571fe0a files/digest-gcc-3.3.3_pre20040322 138
+MD5 e962c23dd4396850f0e36424ec5596d7 files/digest-gcc-3.3.3_pre20040408-r1 138
+MD5 3a68d40d170427ffbfcf181b5099d693 files/digest-gcc-3.3.3-r5 528
+MD5 33df162e1767e168f4f39442785071af files/3.0/texinfo-4.0-no-ncurses-gentoo.diff 51748
+MD5 9c13e6b0d5770979430b76c578afa22c files/3.0/gcc3-program-transform.patch 9771
 MD5 b1a242694f56184cbcdd40ba25800d50 files/2.95.3/gcc-2.95.3-alpha.diff 14345
 MD5 523970c128b929fe7c7cf36508ebd1d5 files/2.95.3/gcc-2.95.3-new-atexit.diff 13604
-MD5 9c13e6b0d5770979430b76c578afa22c files/3.0/gcc3-program-transform.patch 9771
-MD5 33df162e1767e168f4f39442785071af files/3.0/texinfo-4.0-no-ncurses-gentoo.diff 51748
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
 MD5 5e8f2122ef7f9ce187b0a0d50ac9d24a files/3.2.1/gcc32-arm-disable-mathf.patch 2229
 MD5 044a164462d9392aa67cde6f9fd5c1bc files/3.2.1/gcc32-arm-reload1-fix.patch 932
@@ -85,28 +88,35 @@ MD5 088e0807e677010cafe4e590e8711be1 files/3.3/gcc33-no-multilib-amd64.patch 343
 MD5 453122edf63d75cca3a6c56a6dac45b0 files/3.3/gcc33-propolice-version.patch 570
 MD5 d3e53318166d71a05d2b51bd44502270 files/3.3.1/gcc331-gentoo-branding.patch 874
 MD5 b398b7415b93423ff04952c6e69bdb4d files/3.3.1/gcc331-pp-fixup.patch 407
-MD5 9e7ed6184a1cdcb69db29f1de26c2d18 files/3.3.2/gcc332-altivec-fix.patch 1607
 MD5 d9ae122db2768f8e504dfef256d4991f files/3.3.2/gcc332-gentoo-branding.patch 874
-MD5 ff6d7b5082c5e39fab8a5d8932c1a8b7 files/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch 461
-MD5 308a0e53f03e9cb74b3d12c2633cbee2 files/3.3.3/gcc-uclibc-3.3-loop.patch 433
-MD5 9ba0bd0b103cf9535927ad7c482fe780 files/3.3.3/gcc333-debian-arm-getoff.patch 3501
-MD5 25eda9981106a55c413d1df3d3a87db5 files/3.3.3/gcc333-debian-arm-ldm.patch 3383
+MD5 9e7ed6184a1cdcb69db29f1de26c2d18 files/3.3.2/gcc332-altivec-fix.patch 1607
+MD5 5f465144ef81f1b7c7f6d6abe6e4c59f files/awk/fixlafiles.awk 6285
+MD5 71ad2adafb2cc70631244faca2a85c63 files/awk/scanforssp.awk 5837
 MD5 cd87c02e4896f47bf6029eef0dc29468 files/3.3.3/gcc333-gentoo-branding.patch 874
-MD5 bb0078854a778b2a279cfb15d8933c29 files/3.3.3/gcc333-ssp-3.3.2_1-fixup.patch 2598
 MD5 0e8d94bbc14fbb3fbad1df4f404b39ef files/3.3.3/gcc333-ssp-3.3_7-fixup.patch 2616
 MD5 4b249bff27ab6328436e6289ac9f9cfc files/3.3.3/gcc333_pre20040215-gentoo-branding.patch 839
 MD5 f317331e0b196ca455ca9554479cd8eb files/3.3.3/gcc333_pre20040322-gentoo-branding.patch 817
 MD5 43c60f04779324d74d3aac52224bed95 files/3.3.3/gcc333_pre20040408-gentoo-branding.patch 820
 MD5 3210d5fd70806c44d4426c3dceebd480 files/3.3.3/gcc333_pre20040408-stack-size.patch 653
 MD5 43c60f04779324d74d3aac52224bed95 files/3.3.3/gcc333_pre20040426-gentoo-branding.patch 820
+MD5 9ba0bd0b103cf9535927ad7c482fe780 files/3.3.3/gcc333-debian-arm-getoff.patch 3501
+MD5 25eda9981106a55c413d1df3d3a87db5 files/3.3.3/gcc333-debian-arm-ldm.patch 3383
+MD5 ff6d7b5082c5e39fab8a5d8932c1a8b7 files/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch 461
+MD5 308a0e53f03e9cb74b3d12c2633cbee2 files/3.3.3/gcc-uclibc-3.3-loop.patch 433
+MD5 bb0078854a778b2a279cfb15d8933c29 files/3.3.3/gcc333-ssp-3.3.2_1-fixup.patch 2598
 MD5 66df5567226338b7504bbd3c25cea92c files/3.3.3/gcc-3.3.3-libiberty-pic.patch 370
-MD5 66edf32babf498517ca56fa44c901f26 files/3.4.0/gcc-3.4.0-move-propolice-into-glibc.patch 894
 MD5 06580106a905e8fa2ff23aa190f9d82c files/3.4.0/gcc-3.4.0-r6-gentoo-branding.patch 781
-MD5 17b3190d64e34ed7709d022b326d08ae files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563
 MD5 c7ed491e4bcee6cae89067d4e1c899a8 files/3.4.0/gcc34-ia64-lib64.patch 1395
-MD5 c919e0a2cd429d0121b6133c1b4e41a6 files/3.4.0/gcc34-ice-hack.patch 8605
+MD5 66edf32babf498517ca56fa44c901f26 files/3.4.0/gcc-3.4.0-move-propolice-into-glibc.patch 894
 MD5 31470a0e018eb2cdfe68c71039ede80f files/3.4.0/gcc34-multi32-hack.patch 2445
+MD5 c919e0a2cd429d0121b6133c1b4e41a6 files/3.4.0/gcc34-ice-hack.patch 8605
 MD5 bae93db3186aa0fc25d659b7799ef499 files/3.4.0/gcc34-ppc64-m32-m64-multilib-only.patch 825
+MD5 17b3190d64e34ed7709d022b326d08ae files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563
 MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/reiser4-why-do-you-hate-me.patch 587
-MD5 d622a08b045210fcb67eae879ede8cd2 files/awk/fixlafiles.awk 6284
-MD5 c7e8f50ba67fce8f0c91d293e03ccf1b files/awk/scanforssp.awk 5836
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFAzIqrHTu7gpaalycRAr6YAJ48o0YxCbn6Icb8RMbhVP+F+yzr6gCgx8sj
+/BaB1ScyqR0ZOtsz92dW8+w=
+=6F+A
+-----END PGP SIGNATURE-----
