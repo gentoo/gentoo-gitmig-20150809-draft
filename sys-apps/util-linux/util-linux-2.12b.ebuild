@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12b.ebuild,v 1.3 2004/09/04 20:11:54 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12b.ebuild,v 1.4 2004/09/15 19:15:41 azarah Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,6 +19,7 @@ IUSE="crypt nls static pam selinux uclibc"
 DEPEND="virtual/libc
 	>=sys-apps/sed-4.0.5
 	>=sys-libs/ncurses-5.2-r2
+	>=sys-fs/e2fsprogs-1.34
 	selinux? ( sys-libs/libselinux )
 	pam? ( sys-apps/pam-login )
 	crypt? ( app-crypt/hashalot )"

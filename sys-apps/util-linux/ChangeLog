@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.87 2004/09/04 20:11:54 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.88 2004/09/15 19:15:41 azarah Exp $
+
+  15 Sep 2004; Martin Schlemmer <azarah@gentoo.org> util-linux-2.12b.ebuild:
+  Add >=sys-fs/e2fsprogs-1.34 dependency (blkid_known_fstype in
+  /usr/include/blkid/blkid.h introduced in 1.34).
+  Pointed out by Maximilian Decker <burbon04@gmx.de>.
 
   04 Sep 2004; <solar@gentoo.org> files/util-linux-2.12b-pic.patch,
   util-linux-2.12-r4.ebuild, util-linux-2.12b.ebuild:
