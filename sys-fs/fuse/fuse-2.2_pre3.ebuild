@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.2_pre3.ebuild,v 1.1 2005/01/15 19:32:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.2_pre3.ebuild,v 1.2 2005/01/16 22:54:17 johnm Exp $
 
 inherit linux-mod eutils
 
@@ -12,23 +12,15 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 S=${WORKDIR}/${MY_P}
+
+CONFIG_CHECK="@FUSE_FS:fuse"
 MODULE_NAMES="fuse(fs:${S}/kernel)"
 BUILD_PARAMS="majver=${KV_MAJOR}.${KV_MINOR}
-	fusemoduledir=${ROOT}/lib/modules/${KV_FULL}/fs"
+			  fusemoduledir=${ROOT}/lib/modules/${KV_FULL}/fs"
 BUILD_TARGETS="all"
-
-pkg_setup() {
-	linux-mod_pkg_setup
-
-	if linux_chkconfig_present FUSE_FS
-	then
-		einfo "Not compiling the kernel module as it is already in the kernel"
-		FUSEMOD=""
-	else
-		einfo "Compiling the kernel module as it is not yet in the kernel"
-		FUSEMOD="true"
-	fi
-}
+ECONF_PARAMS="--with-kernel=${KV_DIR}"
+FUSE_FS_ERROR="We have detected FUSE already built into the kernel. \
+			      We will continue, but we wont build the module this time."
 
 src_unpack() {
 	unpack ${A}
@@ -37,17 +29,14 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --disable-kernel-module --disable-example || die "econf failed"
+	einfo "Preparing fuse userland"
+	econf --disable-kernel-module --disable-example || \
+		die "econf failed for fuse userland"
 	emake || die "emake failed"
 
-	if [ -n "${FUSEMOD}" ]
-	then
-		cd kernel
-		econf --with-kernel="${ROOT}${KV_DIR}" || die "econf kernel failed"
-		sed -i 's/.*depmod.*//' Makefile
-		convert_to_m Makefile
-		linux-mod_src_compile
-	fi
+	sed -i 's/.*depmod.*//g' ${S}/kernel/Makefile.in
+	convert_to_m ${S}/kernel/Makefile.in
+	linux-mod_src_compile
 }
 
 src_install() {
@@ -58,15 +47,5 @@ src_install() {
 	docinto example
 	dodoc example/*
 
-	if [ -n "${FUSEMOD}" ]
-	then
-		linux-mod_src_install
-	fi
-}
-
-pkg_postinst() {
-	if [ -n "${FUSEMOD}" ]
-	then
-		linux-mod_pkg_postinst
-	fi
+	linux-mod_src_install
 }

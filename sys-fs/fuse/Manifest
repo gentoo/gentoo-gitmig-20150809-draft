@@ -1,10 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d9443f8a72726d8e779c1a9064122fa7 fuse-1.4.ebuild 1555
 MD5 61f3c8ddc1e887be58825483427d13ff fuse-2.1.ebuild 1250
 MD5 b356b597461b75a9bf7b555c46f3863e ChangeLog 1813
 MD5 6e89ba8198764bfd079a0cfa18dca593 metadata.xml 264
-MD5 43ecf3436a60528ada68a114daf74975 fuse-2.2_pre3.ebuild 1671
+MD5 cf4db735cee0982360608e90a3faa392 fuse-2.2_pre3.ebuild 1470
 MD5 a24d5bc33d0d36527f183fce45e5c78e files/fuse-1.4-kernel-2.6.10.patch 1052
 MD5 86c18e0aa1b9961decf250349afc0fdc files/digest-fuse-1.4 60
 MD5 fd5c3c8819559265b221879ca45deae3 files/digest-fuse-2.1 60
 MD5 c1ef6366ba5892111ddef08887328663 files/fuse-fix-lazy-binding.patch 398
 MD5 1a9d13833510849d37a9ab5a7e34b83c files/digest-fuse-2.2_pre3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB6vChm/TpOlox+n8RAtiLAJwImxvEBVD1DlZXhHLbHdvmSzQV5wCg+UCH
+rEJaC5AexgEgUTDEy7JzmDw=
+=9ldF
+-----END PGP SIGNATURE-----
