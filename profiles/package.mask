@@ -46,9 +46,11 @@ dev-java/jaxp
 
 #drobbins@gentoo.org (03 jul 2002)
 #this is still experimental....
-=net-libs/openh323-1.9.1
-=dev-libs/pwlib-1.3.1
-
+>=net-libs/openh323-1.9.0
+>=dev-libs/pwlib-1.3.0
+#this isn't available for download anymore from openh323.org
+=dev-libs/pwlib-1.2.20
+=dev-libx/openh323-1.8.11
 
 # <owen@gentoo.org> (02 Jul 2002)
 # masked for licencing reasons.
@@ -721,7 +723,7 @@ dev-libs/libmrproject
 >=app-arch/file-roller-1.106
 >=net-irc/xchat-1.9.1
 >=dev-util/glade-1.1.0
->=dev-util/glademm-1.1.0
+#>=dev-util/glademm-1.1.0
 >=dev-util/gob-1.99.3
 
 media-libs/monkey-sound
