@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/arj
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.13 2005/01/01 11:41:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.14 2005/01/01 22:12:53 aliz Exp $
+
+  01 Jan 2005; Daniel Ahlberg <aliz@gentoo.org> arj-3.10.21.ebuild:
+  Borrowed some gcc checking code from openoffice to automatically use gcc-3.3
+  when compiling arj, should close #52311.
 
   15 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> arj-3.10g.ebuild:
   Stable on sparc
