@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/splat/splat-1.1.0.ebuild,v 1.1 2005/02/26 21:19:26 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/splat/splat-1.1.0.ebuild,v 1.2 2005/02/28 01:18:14 xmerlin Exp $
 
-inherit eutils
+inherit toolchain-funcs
 
 DESCRIPTION="SPLAT! is an RF Signal Propagation, Loss, And Terrain analysis tool for the spectrum between 20 MHz and 20 GHz."
 HOMEPAGE="http://www.qsl.net/kd2bd/splat.html"
@@ -15,28 +15,26 @@ IUSE=""
 
 DEPEND="virtual/libc
 	sys-libs/zlib
-	doc? (
-		app-text/ghostscript
-		sys-apps/groff
-		)
+	app-arch/bzip2
 	"
 
+RDEPEND=""
+
 src_compile() {
-	g++ -Wall ${CXXFLAGS} -s -lm -lbz2 itm.cpp splat.cpp -o splat || die
+	local CC=$(tc-getCC) CXX=$(tc-getCXX)
+	local STRIP=""
+
+	if ! has nostrip ${FEATURES} ; then
+		local STRIP="-s"
+	fi
+
+	${CXX} -Wall ${CXXFLAGS} -lm -lbz2 itm.cpp splat.cpp -o splat || die
 
 	cd utils
-	cc -Wall ${CFLAGS} -s citydecoder.c -o citydecoder
-	cc -Wall ${CFLAGS} -s usgs2sdf.c -o usgs2sdf
-	cc -Wall ${CFLAGS} -s -lz fontdata.c -o fontdata
+	${CC} -Wall ${CFLAGS} citydecoder.c -o citydecoder
+	${CC} -Wall ${CFLAGS} usgs2sdf.c -o usgs2sdf
+	${CC} -Wall ${CFLAGS} -lz fontdata.c -o fontdata
 
-	cd ../docs/man
-	groff -e -T ascii -man splat.man > splat.1 2>/dev/null
-
-	if use doc; then
-		groff -man -Tascii -P'-bcou' -man splat.man 1> splat.txt 2>/dev/null
-		groff -e -T ps -man splat.man 1> splat.ps 2>/dev/null
-		ps2pdf splat.ps splat.pdf 2>/dev/null
-	fi
 }
 
 src_install() {
@@ -45,10 +43,8 @@ src_install() {
 
 	# utilities
 	dobin utils/{citydecoder,usgs2sdf,postdownload} || die
-	doman docs/man/${PN}.1 || die
+	newman docs/man/splat.man splat.1
 
 	dodoc CHANGES README utils/fips.txt sample.lrp
-	if use doc; then
-		dodoc docs/man/${PN}.pdf docs/man/${PN}.txt || die
-	fi
+	newdoc utils/README README.UTILS
 }

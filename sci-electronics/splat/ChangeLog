@@ -1,9 +1,13 @@
 # ChangeLog for sci-electronics/splat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/splat/ChangeLog,v 1.1 2005/02/26 21:19:26 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/splat/ChangeLog,v 1.2 2005/02/28 01:18:14 xmerlin Exp $
 
-*splat-1.1.0 (28 Mar 2005)
+  28 Feb 2005; Christian Zoffoli <xmerlin@gentoo.org> splat-1.1.0.ebuild:
+  merged some enhancements thanks to James Rowe <jnrowe@ukfsn.org>, fixed man
+  page
 
-  28 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> +splat-1.1.0.ebuild:
+*splat-1.1.0 (28 Feb 2005)
+
+  28 Feb 2005; Christian Zoffoli <xmerlin@gentoo.org> +splat-1.1.0.ebuild:
   new in portage
 
