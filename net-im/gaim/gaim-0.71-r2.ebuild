@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.71-r2.ebuild,v 1.2 2003/10/28 13:19:21 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.71-r2.ebuild,v 1.3 2003/11/01 08:08:08 lostlogic Exp $
 
 IUSE="nls perl spell nas ssl"
 
@@ -13,7 +13,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND="=sys-libs/db-1*
 	>=x11-libs/gtk+-2.0
