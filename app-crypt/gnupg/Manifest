@@ -1,20 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0cf766ba2c95fb90e87e84748dd949ba ChangeLog 13050
+MD5 c06e156f480d786346a871c102694a7c ChangeLog 13322
+MD5 1d62dab28c4ddd918308194f6dc0dce5 gnupg-1.4.0.ebuild 3064
 MD5 3adff76099e3de476d01abc70260ab0d gnupg-1.2.4.ebuild 4251
 MD5 bf8f03fb22b2f44fd5f6a4395ab001dd metadata.xml 483
 MD5 7558a8b6c29eed0f306317060eb09933 gnupg-1.2.6.ebuild 3598
 MD5 781e0467caebb4c9f05ba3e97f1c9b91 gnupg-1.9.10.ebuild 2859
+MD5 a8d4b32b219641e9b9df83b581a935ba files/digest-gnupg-1.4.0 117
 MD5 7f0e728ae9c6810cb9c61500fdc39fc9 files/digest-gnupg-1.2.4 117
 MD5 c6114a5a40f10aeca63d07b59fed650f files/gnupg-1.2.4-hppa_unaligned_constant.patch 1213
 MD5 cdb57d67164c7a63a167c33426c0a7a3 files/gnupg-1.2.4.ppc64.patch 471
 MD5 c3a43a1e5da266ef33222f721e05fd63 files/digest-gnupg-1.2.6 117
 MD5 8c88d9fdef69bdda173170c5a8abd59e files/digest-gnupg-1.9.10 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBtaf0mdTrptrqvGERAkLDAKCGY1fgI6qVouG/zr366msP1HUxsQCgl70z
-HXAGLDLMfXWLn8GStVu6w28=
-=qyEq
+iD8DBQFBxPNLmdTrptrqvGERAowuAJ49H2R4JU/b/6bdN3OMA6klm+OpSQCeP9I0
+qwXMP8UUS+xslXAfbUfE2CE=
+=cXRJ
 -----END PGP SIGNATURE-----
