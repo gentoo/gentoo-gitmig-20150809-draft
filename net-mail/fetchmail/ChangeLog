@@ -1,11 +1,16 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.24 2003/02/12 08:10:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.25 2003/02/28 01:38:15 seemant Exp $
 
   05 Feb 2003; Aron Griffis <agriffis@gentoo.org> fetchmail-6.2.1-r1.ebuild :
   Mark stable on alpha
 
 *fetchmail-6.2.1-r1 (28 Jan 2003)
+
+  27 Feb 2003; Seemant Kulleen <seemant@gentoo.org> fetchmail-5.9.14.ebuild,
+  fetchmail-6.2.1-r1.ebuild:
+  homepage and SRC_URI update thanks to Brian Bilbrey <bilbrey@orbdesigns.com>
+  in bug #16446
 
   28 Jan 2003; Nick Hadaway <raker@gentoo.org> fetchmail-6.2.1-r1.ebuild,
   files/digest-fetchmail-6.2.1-r1 :
