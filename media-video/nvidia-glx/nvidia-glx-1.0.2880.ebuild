@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.2960-r1.ebuild,v 1.4 2002/07/23 00:05:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.2880.ebuild,v 1.5 2002/07/23 00:05:03 seemant Exp $
 
 NV_V=${PV/1.0./1.0-}
 NV_PACKAGE=NVIDIA_GLX-${NV_V}
@@ -26,9 +26,6 @@ PROVIDE="virtual/opengl"
 DEBUG="yes"
 RESTRICT="nostrip"
 
-SLOT="0"
-LICENSE="NVIDIA"
-KEYWORDS="x86 -ppc -sparc -sparc64"
 
 src_install() {
 	local NV_ROOT="/usr/lib/opengl/nvidia"
@@ -50,10 +47,8 @@ src_install() {
 	dosym libGLcore.so.${PV} ${NV_ROOT}/lib/libGLcore.so
 	dosym libGLcore.so.${PV} ${NV_ROOT}/lib/libGLcore.so.1
 
-	insinto /usr/X11R6/lib
+	insinto usr/X11R6/lib
 	doins usr/X11R6/lib/libXvMCNVIDIA.a
-	exeinto /usr/X11R6/lib
-	doexe usr/X11R6/lib/libXvMCNVIDIA.so.${PV}
 
 	# Includes
 	insinto ${NV_ROOT}/include
@@ -96,7 +91,8 @@ pkg_postinst() {
 	fi
 
 	einfo
-	einfo "To use the Nvidia GLX, run \"opengl-update nvidia\""
+	einfo "Make sure to read documentation in /doc/share/${P}"
+	einfo "before you attempt to tweak your XF86Config file!"
 	einfo
 }
 
