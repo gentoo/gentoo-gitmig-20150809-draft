@@ -5,8 +5,17 @@
 ECLASS=flag-o-matic
 
 #
-#Remove particular flags from C[XX]FLAGS
+#### filter-flags <flag> ####
+# Remove particular flags from C[XX]FLAGS
 #
+#### append-flags <flag> ####
+# Add extra flags to your current C[XX]FLAGS
+#
+#### change-flags <orig.flag> <new.flag> ###
+# Replace a flag by another one
+#
+
+
 filter-flags () {
 
 	for x in $1; do
@@ -16,9 +25,6 @@ filter-flags () {
 
 }
 
-#
-#Add flags to the current C[XX]FLAGS
-#
 append-flags () {
 
 
@@ -27,10 +33,9 @@ append-flags () {
 
 }
 
-max-optim () {
+change-flags () {
 
-	for x in $CFLAGS; do
-		echo $x
-	done
+	CFLAGS="${CFLAGS/${1}/${2}"
+	CXXFLAGS="${CXXFLAGS/${1}/${2}"
 
 }
