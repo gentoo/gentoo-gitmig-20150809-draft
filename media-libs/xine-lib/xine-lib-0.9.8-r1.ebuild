@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
 # Author Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.8-r1.ebuild,v 1.1 2002/03/12 13:01:06 seemant Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.8-r1.ebuild,v 1.2 2002/03/28 22:52:25 seemant Exp $ 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
@@ -17,8 +17,7 @@ DEPEND="virtual/glibc
 	esd? ( media-sound/esound )
 	arts? ( kde-base/kdelibs )
 	alsa? ( media-libs/alsa-lib )
-	ogg? ( media-libs/libogg )
-	vorbis? ( media-libs/libvorbis )
+	ogg? ( media-libs/libogg media-libs/libvorbis )
 	nls? ( sys-devel/gettext )"
 
 
@@ -31,16 +30,18 @@ src_compile() {
 	use esd    || myconf="${myconf} --disable-esd --disable-esdtest"
 #	use aalib  || myconf="${myconf} --disable-aalib --disable-aalibtest" 
 	use arts   || myconf="${myconf} --disable-arts --disable-artstest"
-	use ogg    || myconf="${myconf} --disable-ogg --disable-oggtest"
-	use vorbis || myconf="${myconf} --disable-vorbis --disable-vorbistest"
+	use ogg    ||	
+		myconf="${myconf} --disable-ogg --disable-oggtest --disable-vorbis --disable-vorbistest"
+	
 	use nls    || myconf="${myconf} --disable-nls"
 	 
 	./configure --host=${CHOST} 			\
-		    --prefix=/usr			\
-		    --mandir=/usr/share/man		\
-		    --infodir=/usr/share/info		\		    --sysconfdir=/etc			\
-		    --with-w32-path=/usr/lib/win32	\
-		    ${myconf} || die
+		--prefix=/usr			\
+		--mandir=/usr/share/man		\
+		--infodir=/usr/share/info		\
+		--sysconfdir=/etc			\
+		--with-w32-path=/usr/lib/win32	\
+		${myconf} || die
 		    
 	emake || die
 }
@@ -48,17 +49,14 @@ src_compile() {
 src_install() {
 	
 	make prefix=${D}/usr						\
-	     mandir=${D}/usr/share/man					\
-	     infodir=${D}/usr/share/info				\
-	     docdir=${D}/usr/share/doc/${PF}/html			\
-	     sysconfdir=${D}/etc					\
-	     install || die
+		mandir=${D}/usr/share/man					\
+		infodir=${D}/usr/share/info				\
+		docdir=${D}/usr/share/doc/${PF}/html			\
+		sysconfdir=${D}/etc					\
+		install || die
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
 	cd ${S}/doc
 	dodoc dataflow.dia README*
 
 }
-
-
-
