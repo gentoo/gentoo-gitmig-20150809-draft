@@ -1,11 +1,16 @@
 # ChangeLog for app-admin/ufed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ufed/ChangeLog,v 1.16 2003/05/01 00:15:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ufed/ChangeLog,v 1.17 2003/05/05 03:38:03 fava Exp $
 
 NOTE: This ChangeLog doesn't cover modifications to ufed itself.
 The real ChangeLog can be found at:
 http://cvs.gentoo.org/cgi-bin/viewcvs.cgi/gentoo-src/ufed/ChangeLog?rev=HEAD
 
+*ufed-0.32 (04 May 2003)
+
+  04 May 2003; Fred Van Andel <fava@gentoo.org> ufed-0.31.ebuild,
+  new version committed in stable
+  
 *ufed-0.31 (28 Apr 2003)
 
   30 Apr 2003; Robin Johnson <robbat2@gentoo.org> Manifest,
