@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-odcl/cl-odcl-1.3.4.ebuild,v 1.3 2004/04/21 17:01:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-odcl/cl-odcl-1.3.4.ebuild,v 1.4 2004/06/24 23:47:56 agriffis Exp $
 
 inherit common-lisp eutils
 

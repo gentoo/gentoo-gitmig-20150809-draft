@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-org-davep-dictrepl/cl-org-davep-dictrepl-2.2.ebuild,v 1.1 2004/06/23 15:08:31 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-org-davep-dictrepl/cl-org-davep-dictrepl-2.2.ebuild,v 1.2 2004/06/24 23:48:17 agriffis Exp $
 
 inherit common-lisp
 

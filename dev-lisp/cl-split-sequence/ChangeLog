@@ -1,6 +1,6 @@
 # ChangeLog for dev-lisp/cl-split-sequence
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-split-sequence/ChangeLog,v 1.4 2004/06/23 15:06:07 mkennedy Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-split-sequence/ChangeLog,v 1.5 2004/06/24 23:55:03 agriffis Exp $
 
   23 Jun 2004; <mkennedy@gentoo.org> cl-split-sequence-20011114.1-r1.ebuild:
   Adding ~ppc.

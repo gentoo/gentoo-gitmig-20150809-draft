@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lisp2wish/cl-lisp2wish-20040131.ebuild,v 1.1 2004/05/19 14:57:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lisp2wish/cl-lisp2wish-20040131.ebuild,v 1.2 2004/06/24 23:46:15 agriffis Exp $
 
 inherit common-lisp
 

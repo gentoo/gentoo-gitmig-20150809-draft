@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-regex/cl-regex-1-r1.ebuild,v 1.2 2004/04/21 17:13:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-regex/cl-regex-1-r1.ebuild,v 1.3 2004/06/24 23:51:05 agriffis Exp $
 
 inherit common-lisp eutils
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-quick-arrays/cl-quick-arrays-1.0.ebuild,v 1.3 2003/10/17 04:11:49 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-quick-arrays/cl-quick-arrays-1.0.ebuild,v 1.4 2004/06/24 23:50:54 agriffis Exp $
 
 inherit common-lisp
 

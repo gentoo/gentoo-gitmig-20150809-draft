@@ -1,6 +1,6 @@
 # ChangeLog for dev-lisp/clisp
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.22 2004/06/08 20:01:43 mkennedy Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.23 2004/06/24 23:45:03 agriffis Exp $
 
 *clisp-2.33.2 (08 Jun 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.33.1.ebuild,v 1.1 2004/05/28 07:32:00 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.33.1.ebuild,v 1.2 2004/06/24 23:45:03 agriffis Exp $
 
 inherit flag-o-matic common-lisp-common eutils gcc
 

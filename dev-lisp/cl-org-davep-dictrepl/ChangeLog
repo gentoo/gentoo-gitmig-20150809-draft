@@ -1,6 +1,6 @@
 # ChangeLog for dev-lisp/cl-org-davep-dictrepl
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-org-davep-dictrepl/ChangeLog,v 1.1 2004/06/23 15:08:31 mkennedy Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-org-davep-dictrepl/ChangeLog,v 1.2 2004/06/24 23:48:17 agriffis Exp $
 
 *cl-org-davep-dictrepl-2.2 (23 Jun 2004)
 

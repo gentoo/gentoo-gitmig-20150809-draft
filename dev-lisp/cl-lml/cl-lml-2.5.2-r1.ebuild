@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lml/cl-lml-2.5.2-r1.ebuild,v 1.2 2004/05/09 15:01:25 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lml/cl-lml-2.5.2-r1.ebuild,v 1.3 2004/06/24 23:46:25 agriffis Exp $
 
 inherit common-lisp
 

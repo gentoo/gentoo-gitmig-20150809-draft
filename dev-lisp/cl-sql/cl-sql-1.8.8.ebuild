@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-1.8.8.ebuild,v 1.2 2004/04/21 17:26:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-1.8.8.ebuild,v 1.3 2004/06/24 23:55:14 agriffis Exp $
 
 inherit common-lisp eutils
 

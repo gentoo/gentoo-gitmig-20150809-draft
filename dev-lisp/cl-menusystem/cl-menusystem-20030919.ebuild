@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-menusystem/cl-menusystem-20030919.ebuild,v 1.1 2004/02/15 11:23:04 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-menusystem/cl-menusystem-20030919.ebuild,v 1.2 2004/06/24 23:47:05 agriffis Exp $
 
 inherit common-lisp
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mit-scheme/mit-scheme-7.7.1.ebuild,v 1.2 2004/01/16 00:34:13 hhg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mit-scheme/mit-scheme-7.7.1.ebuild,v 1.3 2004/06/25 00:00:16 agriffis Exp $
 
 MY_P="scheme-${PV}"
 MY_SUF="-ix86-gnu-linux"

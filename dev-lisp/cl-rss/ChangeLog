@@ -1,6 +1,6 @@
 # ChangeLog for dev-lisp/cl-rss
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rss/ChangeLog,v 1.1 2004/05/14 03:22:40 mkennedy Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rss/ChangeLog,v 1.2 2004/06/24 23:54:20 agriffis Exp $
 
 *cl-rss-0.1.1 (13 May 2004)
 

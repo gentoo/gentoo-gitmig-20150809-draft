@@ -1,6 +1,6 @@
 # ChangeLog for dev-lisp/cl-iterate
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-iterate/ChangeLog,v 1.1 2004/05/15 04:21:45 mkennedy Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-iterate/ChangeLog,v 1.2 2004/06/24 23:45:14 agriffis Exp $
 
 *cl-iterate-1.0.4 (14 May 2004)
 

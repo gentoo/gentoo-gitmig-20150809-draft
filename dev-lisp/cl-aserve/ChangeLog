@@ -1,6 +1,6 @@
 # ChangeLog for dev-lisp/cl-aserve
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/ChangeLog,v 1.10 2004/06/22 22:11:29 mkennedy Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/ChangeLog,v 1.11 2004/06/24 23:41:06 agriffis Exp $
 
 *cl-aserve-1.2.35.20040609 (22 Jun 2004)
 

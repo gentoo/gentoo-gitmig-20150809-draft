@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc. and Matthew Kennedy <mkennedy@gentoo.org>
+# Copyright 1999-2004 Gentoo Foundation and Matthew Kennedy <mkennedy@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/lush-0.98.ebuild,v 1.2 2004/04/26 09:31:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/lush-0.98.ebuild,v 1.3 2004/06/25 00:00:06 agriffis Exp $
 
 DESCRIPTION="Lush is the Lisp User Shell.  Lush is designed to be used in situations where one would want to combine the flexibility of a high-level, loosely-typed interpreted language, with the efficiency of a strongly-typed, natively-compiled language, and with the easy integration of code written in C, C++, or other languages."
 HOMEPAGE="http://lush.sourceforge.net/"
