@@ -1,4 +1,14 @@
-MD5 f611365b44c448d690de8d98db7bceaa ChangeLog 867
-MD5 e36b3ef9a589165d5ad80efc6821a828 libdts-0.0.2.ebuild 939
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b93c281ee622ec4bc680cf4ba8dbb263 ChangeLog 970
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 3587b9ab7893edf4d2f29ed0a18b8acb libdts-0.0.2.ebuild 945
 MD5 9d1c5f06b01f4cc5b729407e44de4078 files/digest-libdts-0.0.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBz1vIugEuf3OQ0akRAvRnAKCVHrGOdUi/APtH36I6eIBvFbKYhgCginL2
+vwoqJE01mpken74elUXRDUk=
+=eZjg
+-----END PGP SIGNATURE-----

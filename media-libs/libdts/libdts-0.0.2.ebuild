@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/libdts-0.0.2.ebuild,v 1.7 2004/12/26 10:10:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/libdts-0.0.2.ebuild,v 1.8 2004/12/27 00:47:59 kloeri Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc amd64 hppa ~ppc64"
+KEYWORDS="x86 ~ppc sparc amd64 hppa ~ppc64 ~alpha"
 IUSE="oss debug"
 
 RDEPEND="virtual/libc"
