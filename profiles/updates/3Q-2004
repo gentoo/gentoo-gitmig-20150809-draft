@@ -204,3 +204,5 @@ move dev-libs/bio2jack media-libs/bio2jack
 move sys-fs/linux-ntfs sys-fs/ntfsprogs
 move net-misc/ltsp-core net-misc/ltsp
 move app-xemacs/eterm app-xemacs/xemacs-eterm
+move sys-apps/quota sys-fs/quota
+move sys-apps/quotatool sys-fs/quotatool
