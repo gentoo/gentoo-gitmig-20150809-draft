@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coldplug
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/ChangeLog,v 1.7 2005/01/28 12:20:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coldplug/ChangeLog,v 1.8 2005/02/05 17:19:10 corsair Exp $
+
+  05 Feb 2005; Markus Rothe <corsair@gentoo.org> coldplug-20040920.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   28 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org> files/coldplug.rc:
   Updated coldplug.rc to unpack firmware tarball. This is used by the LiveCD
