@@ -1,23 +1,26 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashsum/hashsum-1.6.ebuild,v 1.1 2004/08/25 11:52:09 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashsum/hashsum-1.6.ebuild,v 1.2 2004/08/28 05:47:08 mr_bones_ Exp $
 
 DESCRIPTION="Command line tool for advanced hashing algorithms"
 HOMEPAGE="http://www.certainkey.com/resources/hashsum.php"
 SRC_URI="http://www.certainkey.com/resources/downloads/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="doc"
-DEPEND="virtual/glibc"
-S=${WORKDIR}/${PN}
+
+DEPEND="virtual/libc"
+
+S="${WORKDIR}/${PN}"
 
 src_compile() {
 	emake || die "emake failed"
 }
 
 src_install() {
-	dobin hashsum
+	dobin hashsum || die "dobin failed"
 	dosym /usr/bin/hashsum /usr/bin/sha256sum
 	dosym /usr/bin/hashsum /usr/bin/sha384sum
 	dosym /usr/bin/hashsum /usr/bin/sha512sum
