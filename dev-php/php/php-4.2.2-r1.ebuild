@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.2 2002/08/26 20:16:51 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.3 2002/08/26 20:50:07 rphillips Exp $
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -32,8 +32,7 @@ DEPEND=">=dev-libs/gmp-3.1.1
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
 	xml2? ( dev-libs/libxml2 )
-	crypt? ( >=dev-libs/libmcrypt-2.4
-	>=app-crypt/mhash-0.8 )
+	crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	flash? ( media-libs/libswf >=media-libs/ming-0.2a )
 	berkdb? ( >=sys-libs/db-3 )
@@ -83,7 +82,7 @@ src_compile() {
 
 	local myconf
 
-	use readline && myconf="${myconf} --with-readline"
+	use readline && myconf="${myconf} --enable-readline"
 	use pam && myconf="${myconf} --with-pam"
 	use nls && myconf="${myconf} --with-gettext" || myconf="${myconf} --without-gettext"
 	use ssl && myconf="${myconf} --with-openssl"
@@ -92,7 +91,7 @@ src_compile() {
 	use snmp && myconf="${myconf} --with-snmp --enable-ucd-snmp-hack"
 	use gdbm && myconf="${myconf} --with-gdbm=/usr"
 	use berkdb && myconf="${myconf} --with-db3=/usr"
-	use mysql && myconf="${myconf} --with-mysql=/usr" || myconf="${myconf} --without-mysql"
+	use mysql && myconf="${myconf} --enable-mysql=/usr" || myconf="${myconf} --without-mysql"
 	use postgres && myconf="${myconf} --with-pgsql=/usr"
 	use odbc && myconf="${myconf} --with-unixODBC=/usr"
 	use ldap &&  myconf="${myconf} --with-ldap" 
@@ -103,7 +102,7 @@ src_compile() {
 
 	# rphillips - should fix #2708
 	if [ "`use pdflib`" ] ; then
-		myconf="${myconf} --with-pdflib=/usr"
+		myconf="${myconf} --enable-pdflib=/usr"
 	else
 		use jpeg && myconf="${myconf} --with-jpeg-dir=/usr/lib"
 		use tiff && myconf="${myconf} --with-tiff-dir=/usr"
@@ -142,7 +141,7 @@ src_compile() {
 	fi
 
 	use xml2 && myconf="${myconf} --with-dom"
-	use crypt && myconf="${myconf} --with-mcrypt --with-mhash"
+	use crypt && myconf="${myconf} --enable-mcrypt=/usr --with-mhash"
 	use java && myconf="${myconf} --with-java=${JDK_HOME}"
 
 	LDFLAGS="$LDFLAGS -ltiff -ljpeg"
