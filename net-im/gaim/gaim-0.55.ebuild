@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.53-r2.ebuild,v 1.1 2002/03/07 09:45:58 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.55.ebuild,v 1.1 2002/03/30 11:20:51 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk AOL Instant Messenger client"

@@ -1,6 +1,12 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.7 2002/03/29 04:55:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.8 2002/03/30 11:20:51 seemant Exp $
+
+*gaim-0.55 (29 Mar 2002)
+
+  29 Mar 2002; Seemant Kulleen <seemant@gentoo.org> gaim-0.55.ebuild :
+
+  Version bump.
 
 *gaim-0.54 (28 Mar 2002)
 
