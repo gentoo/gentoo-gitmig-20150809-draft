@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.22 2005/01/02 09:46:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.23 2005/03/02 01:43:05 vapier Exp $
+
+  01 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/clanlib-0.6.5-DirectFB-update.patch, clanlib-0.6.5-r2.ebuild:
+  Fix building with newer DirectFB #77034 by Andreas Bulling.
 
   02 Jan 2005; Mike Frysinger <vapier@gentoo.org>
   +files/0.7.8-install-opengl-wrap.patch, clanlib-0.7.8-r1.ebuild:
