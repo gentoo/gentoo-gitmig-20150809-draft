@@ -4,7 +4,9 @@ MD5 421861fd0c4c2f490893445650f1c5ef Digest-SHA1-2.01.ebuild 591
 MD5 0d0c420cbcbbdb7565ad665aa94aeef7 Digest-SHA1-2.02.ebuild 598
 MD5 713800536ee10d74bad306edfa9b77ca Digest-SHA1-2.04.ebuild 566
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 b919cb6587a0e885dfd1a875edfb83b9 Digest-SHA1-2.07.ebuild 453
 MD5 e64b5ced8b0bef07d86edf2d57cad583 files/digest-Digest-SHA1-2.01 67
 MD5 e64b5ced8b0bef07d86edf2d57cad583 files/digest-Digest-SHA1-2.01-r1 67
 MD5 5e1fe0943c25c73523fab74a389a6565 files/digest-Digest-SHA1-2.02 67
 MD5 8794e946e987e35cf665d4a96277dc82 files/digest-Digest-SHA1-2.04 67
+MD5 26ff95cfb3c2675e3c843c334a46d2b5 files/digest-Digest-SHA1-2.07 67
