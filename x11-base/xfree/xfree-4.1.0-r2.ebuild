@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r2.ebuild,v 1.1 2001/09/01 04:02:06 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r2.ebuild,v 1.2 2001/09/01 04:08:14 drobbins Exp $
 
 A="X410src-1.tgz X410src-2.tgz X410src-3.tgz truetype.tar.gz"
 S=${WORKDIR}/xc
@@ -16,7 +16,7 @@ SRC_URI="$SRC_PATH0/X410src-1.tgz $SRC_PATH0/X410src-2.tgz $SRC_PATH0/X410src-3.
 
 HOMEPAGE="http://www.xfree.org"
 
-DEPEND=">=sys-libs/ncurses-5.1 >=sys-libs/zlib-1.1.3-r2 >=sys-devel/flex-2.5.4a-r2 sys-devel/perl"
+DEPEND=">=sys-libs/ncurses-5.1 >=sys-libs/zlib-1.1.3-r2 >=sys-devel/flex-2.5.4a-r2 sys-devel/perl sys-devel/flex"
 RDEPEND=">=sys-libs/ncurses-5.1"
 
 PROVIDE="virtual/x11 virtual/opengl virtual/glu"
