@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d428f7773a2ab0a432a82f26d2468b77 lam-mpi-7.0.4-r1.ebuild 1688
-MD5 cde8b4e93c9339eb99fe3ad45941c99b metadata.xml 160
+MD5 68c37de3fa3de0ddd079f187c0d5c864 lam-mpi-7.1.ebuild 1604
+MD5 2d0b0258ec326ef61d5bc1688dcdf9de ChangeLog 5035
 MD5 19b5e3e883ebfa7095e26e7494d3b0f3 lam-mpi-7.0.6.ebuild 1614
-MD5 a224b1842922fc16244dfec507cb469c ChangeLog 4877
+MD5 d428f7773a2ab0a432a82f26d2468b77 lam-mpi-7.0.4-r1.ebuild 1688
 MD5 1bb98aa20ccdef82c22c609922438ca3 lam-mpi-7.0.4.ebuild 1439
-MD5 38b6624ba4098ca823b9d317705ca44c files/digest-lam-mpi-7.0.6 63
+MD5 cde8b4e93c9339eb99fe3ad45941c99b metadata.xml 160
+MD5 8f2271274cdef6f58358e701c71663c9 files/digest-lam-mpi-7.1 61
 MD5 1d7b0bf28395a80f386bf8ea489c69b8 files/digest-lam-mpi-7.0.4 63
 MD5 1d7b0bf28395a80f386bf8ea489c69b8 files/digest-lam-mpi-7.0.4-r1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBTf3DKtJO8LeSoosRAtIjAJ9LWT7/Iw51E4ltNDgib18Qg2aTBgCdHHJv
-lahFuoAEVaRKgSybvauZ+Qo=
-=tCHh
------END PGP SIGNATURE-----
+MD5 38b6624ba4098ca823b9d317705ca44c files/digest-lam-mpi-7.0.6 63
