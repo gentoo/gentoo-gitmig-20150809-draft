@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rkhunter/rkhunter-1.1.5.ebuild,v 1.2 2004/08/15 20:24:40 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rkhunter/rkhunter-1.1.5.ebuild,v 1.3 2004/08/17 11:02:08 solar Exp $
 
 DESCRIPTION="Rootkit Hunter scans for known and unknown rootkits, backdoors, and sniffers."
 HOMEPAGE="http://www.rootkit.nl/"
 SRC_URI="http://downloads.rootkit.nl/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~sparc"
+KEYWORDS="x86 ~ppc ~alpha ~amd64 ~sparc"
 IUSE=""
 S=${WORKDIR}/${PN}
 DEPEND="app-arch/tar

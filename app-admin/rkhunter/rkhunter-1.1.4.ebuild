@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rkhunter/rkhunter-1.1.4.ebuild,v 1.2 2004/08/12 00:02:29 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rkhunter/rkhunter-1.1.4.ebuild,v 1.3 2004/08/17 11:02:08 solar Exp $
 
 DESCRIPTION="Rootkit Hunter scans for known and unknown rootkits, backdoors, and sniffers."
 HOMEPAGE="http://www.rootkit.nl/"
@@ -24,7 +24,7 @@ src_install() {
 	doins *.dat
 	dodir /usr/lib/rkhunter/scripts
 	exeinto /usr/lib/rkhunter/scripts
-	doexe *.pl
+	doexe *.pl check_update.sh
 	insinto /etc
 	doins rkhunter.conf
 	dosed "s:#DBDIR=/usr/local/rkhunter/db:DBDIR=/usr/lib/rkhunter/db\nINSTALLDIR=/usr:g" /etc/rkhunter.conf

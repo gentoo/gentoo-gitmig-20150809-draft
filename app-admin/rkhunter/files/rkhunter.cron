@@ -20,7 +20,8 @@ EMAIL_CMD="| mail -s \"${EMAIL_SUBJECT}\" ${EMAIL_RECIPIENT}"
 
 # set to 1 to recieve only warnings & errors
 # set to 2 to recieve ALL rkhunter output
-EMAIL_VERBOSITY=1
+# set to 3 to recieve rkhunter report
+EMAIL_VERBOSITY=3
 
 ### End Configuration ###
 
@@ -30,8 +31,10 @@ if [ "${ENABLE}" = "yes" ]; then
 	if [ "${SEND_EMAIL}" = "yes" ]; then
 		if [ "${EMAIL_VERBOSITY}" -eq 1 ]; then
 			CMD="${CMD} --quiet ${EMAIL_CMD}"
-		else
+		elif [ "${EMAIL_VERBOSITY}" -eq 2 ]; then
 			CMD="${CMD} ${EMAIL_CMD}"
+		else # default to report-mode
+			CMD="${CMD} --report-mode ${EMAIL_CMD}"
 		fi
 	else
 		CMD="${CMD} &>/dev/null"
