@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# network 1.84 2001/12/01 01:17:50 (David Hinds)
+# network 1.86 2002/07/03 06:44:01 (David Hinds)
 #
 # Initialize or shutdown a PCMCIA ethernet adapter
 #
@@ -42,7 +42,6 @@ else
 fi
 INFO=$O_INFO
 
-match () { case $1 in $2) return 0; ;; *) return 1; ;; esac ; }
 bootp_setup ()
 {
     if match `uname -r` "2.[2-9].*" ; then
@@ -82,7 +81,7 @@ case "$ACTION" in
 	if [ -x /sbin/dhcpcd ] ; then
 	    # This is a version check: I know it looks weird
 	    if /sbin/dhcpcd -XYZZY 2>&1 | grep -q DHCP ; then
-		log "/sbin/dhcpcd $HN $DEVICE >/dev/null 2>&1" || exit 1
+		log "/sbin/dhcpcd -d $HN $DEVICE >/dev/null 2>&1" || exit 1
 	    else
 		# Jump through hoops for lame 0.70-era dhcpcd
 		L=/var/run/dhcp-lock-$DEVICE
@@ -174,12 +173,6 @@ case "$ACTION" in
 
 	[ -n "$IPX_NETNUM" ] && ipx_interface del $DEVICE $IPX_FRAME
 
-	# Remove nameservers
-	if grep -q "# $DEVICE begin" $RESOLV ; then
-	    sed -e "/# $DEVICE begin/,/# $DEVICE end/d"	$RESOLV > $RESOLV.N
-	    mv $RESOLV.N $RESOLV
-	fi
-
 	if is_true $PUMP ; then
 	    log pump -r -i $DEVICE
 	elif is_true $DHCP ; then
@@ -199,6 +192,13 @@ case "$ACTION" in
 	    fi
 	fi
     fi
+
+    # Remove nameservers
+    if grep -q "# $DEVICE begin" $RESOLV ; then
+	sed -e "/# $DEVICE begin/,/# $DEVICE end/d"	$RESOLV > $RESOLV.N
+	mv $RESOLV.N $RESOLV
+    fi
+
     log /sbin/ifconfig $DEVICE down
     ;;
 
