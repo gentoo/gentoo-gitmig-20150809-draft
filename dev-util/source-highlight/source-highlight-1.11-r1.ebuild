@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-1.11.ebuild,v 1.1 2004/10/09 23:31:57 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-1.11-r1.ebuild,v 1.1 2004/10/11 09:40:37 ka0ttic Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/src-highlite/source-highlight.html"
 SRC_URI="ftp://ftp.gnu.org/gnu/src-highlite/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 SLOT="0"
 
 DEPEND="sys-apps/gawk
@@ -28,15 +28,16 @@ src_compile() {
 
 src_install () {
 	dodoc AUTHORS ChangeLog COPYING CREDITS INSTALL \
-		NEWS README THANKS TODO.txt
+		NEWS README THANKS TODO.txt || die
 
 	cd ${S}/src
-	dobin source-highlight cpp2html java2html source-highlight-cgi
+	dobin source-highlight cpp2html java2html source-highlight-cgi \
+		src-hilite-lesspipe.sh || die
 	dodir /usr/share/source-highlight
 	insinto /usr/share/source-highlight
-	doins tags.j2h tags2.j2h
+	doins tags.j2h tags2.j2h || die
 
 	cd ${S}/doc
-	dohtml *.html *.css *.java
-	doman source-highlight.1
+	dohtml *.html *.css *.java || die
+	doman source-highlight.1 || die
 }
