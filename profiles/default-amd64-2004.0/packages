@@ -5,7 +5,6 @@
 *>=sys-devel/gcc-3.2
 *>=sys-libs/glibc-2.2.5
 *virtual/modutils
-=sys-kernel/linux-headers-2.4.21
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
 
