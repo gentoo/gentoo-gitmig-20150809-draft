@@ -1,0 +1,18 @@
+# ChangeLog for app-sci/chessbrain
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/ChangeLog,v 1.1 2003/03/12 16:32:09 tantive Exp $
+
+*chessbrain-20310 (12 Mar 2003)
+
+  12 Mar 2003; Michael Imhof <tantive@gentoo.org>
+  chessbrain-20310.ebuild:
+  Added submitted ebuild and bumped version to 20310 as 20304 can no longer be
+  retrieved. Shoud close #17334.
+
+*ChessBrain-20304 (08 Mar 2003)
+
+  08 Mar 2003; Abhishek Amit <abhishekamit2000@yahoo.com>
+  chessbrain-20304.ebuild files/cb-conf.d files/cb-init.d
+  files/digest-chessbrain-20304 :
+  Initial import.  Ebuild submitted by Abhishek Amit
+  <abhishekamit2000@yahoo.com>. Modeled after setiathome ebuild.
