@@ -1,13 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.3-r2.ebuild,v 1.8 2004/10/19 12:23:45 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.3-r3.ebuild,v 1.1 2004/10/19 12:23:45 absinthe Exp $
+
+inherit eutils
 
 LICENSE="GPL-2"
 DESCRIPTION="An ICQ v8 Client. Supports File Transfer, Chat, Server-Side Contactlist, ..."
 SRC_URI="mirror://sourceforge/sim-icq/${P}-2.tar.gz"
 RESTRICT="nomirror"
 HOMEPAGE="http://sim-icq.sourceforge.net"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 SLOT="0"
 IUSE="ssl kde debug"
 
@@ -21,6 +23,8 @@ RDEPEND="ssl? ( dev-libs/openssl )
 	dev-libs/libxslt"
 
 src_compile() {
+	epatch ${FILESDIR}/${P}-gcc34.diff
+	epatch ${FILESDIR}/${P}-alt-histpreview-apply-fix.diff
 	export WANT_AUTOCONF=2.5
 	export WANT_AUTOMAKE=1.7
 
