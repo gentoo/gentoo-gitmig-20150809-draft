@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/d4x
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.24 2004/10/05 23:52:34 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.25 2004/12/05 15:54:36 pyrania Exp $
+
+*d4x-2.5.0 (05 Dec 2004)
+
+  05 Dec 2004; Markus Nigbur <pyrania@gentoo.org> +d4x-2.5.0.ebuild:
+  Version bump.
 
   05 Oct 2004; Malcolm Lashley <malc@gentoo.org> d4x-2.5.0_rc4.ebuild:
   ~amd64 - bug #66462
