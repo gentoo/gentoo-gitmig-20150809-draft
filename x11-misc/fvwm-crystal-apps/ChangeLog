@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/fvwm-crystal-apps
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fvwm-crystal-apps/ChangeLog,v 1.2 2004/08/15 21:27:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fvwm-crystal-apps/ChangeLog,v 1.3 2004/09/10 19:03:24 lucass Exp $
+
+  10 Sep 2004; Lukasz Strzygowski <lucass@gentoo.org>
+  fvwm-crystal-apps-0.5.ebuild:
+  Stable on x86.
 
   15 Aug 2004; Jason Wever <weeve@gentoo.org> fvwm-crystal-apps-0.5.ebuild:
   Added ~sparc keyword wrt bug #59871.
