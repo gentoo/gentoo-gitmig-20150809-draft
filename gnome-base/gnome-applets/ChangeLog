@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.18 2002/11/30 16:13:19 styx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.19 2002/12/03 15:03:31 nall Exp $
 
   30 Nov 2002; Joachim Blaabjerg <styx@gentoo.org> gnome-applets-2.1.1.ebuild :
 
@@ -12,6 +12,9 @@
   New version, fixed some deps, made it use gnome2 eclass some more
 
 *gnome-applets-2.1.1 (12 Nov 2002)
+
+  03 Dec 2002; Jon Nall <nall@gentoo.org> gnome-applets-2.1.1.ebuild :
+  keyworded ~ppc
 
   12 Nov 2002; foser <foser@gentoo.org> gnome-applets-2.1.1.ebuild :
   GNOME 2.1.2 release
