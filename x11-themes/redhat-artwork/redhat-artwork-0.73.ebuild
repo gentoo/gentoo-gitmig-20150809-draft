@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.73.ebuild,v 1.18 2005/01/15 00:23:48 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.73.ebuild,v 1.19 2005/01/26 15:03:59 greg_g Exp $
 
-inherit eutils rpm
+inherit eutils rpm kde-functions
 
 RH_EXTRAVERSION="1"
 
@@ -49,6 +49,9 @@ src_unpack() {
 }
 
 src_compile() {
+
+	use kde && set-kdedir 3
+
 	export WANT_AUTOMAKE=1.4
 	export WANT_AUTOCONF=2.5
 	# dies is LANG has UTF-8
