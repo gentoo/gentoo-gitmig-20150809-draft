@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: tools@cvs.gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-1.7-r2.ebuild,v 1.3 2001/08/18 02:57:33 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-1.7-r2.ebuild,v 1.4 2001/08/18 03:06:20 chadh Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Super Tiny Editor with wordstar, vi, and emacs key bindings"
@@ -22,6 +22,7 @@ src_compile() {
 }
 
 src_install () {
+	mv e3c e3
 	dodir /usr/bin
 	dobin e3
 	dosym e3 /usr/bin/e3vi
