@@ -1,0 +1,19 @@
+--- src/actions/kz-scrap-bookmark-action.c.orig	Fri Mar 26 09:26:09 2004
++++ src/actions/kz-scrap-bookmark-action.c	Tue Apr  6 06:27:14 2004
+@@ -213,6 +213,7 @@
+ {
+ 	KzBookmark *scrap;
+ 	KzWindow *kz;
++	const gchar *uri;
+ 
+ 	scrap = KZ_SCRAP_BOOKMARK_ACTION(action)->scrap;
+ 	g_return_if_fail(KZ_IS_BOOKMARK(scrap));
+@@ -220,7 +221,7 @@
+ 	kz = KZ_SCRAP_BOOKMARK_ACTION(action)->kz;
+ 	if (!KZ_IS_WINDOW(kz)) return;
+ 
+-	const gchar *uri = kz_bookmark_get_link(scrap);
++	uri = kz_bookmark_get_link(scrap);
+ 
+ 	kz_window_load_url(kz, uri);
+ }

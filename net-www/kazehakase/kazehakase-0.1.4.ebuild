@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.4.ebuild,v 1.2 2004/04/06 12:13:08 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.4.ebuild,v 1.3 2004/04/07 04:13:52 brad Exp $
 
 IUSE=""
 
@@ -39,6 +39,9 @@ pkg_setup(){
 src_compile(){
 	export WANT_AUTOCONF=2.5
 	export WANT_AUTOMAKE=1.6
+
+	epatch ${FILESDIR}/kz-scrap-bookmark-action.gcc2.patch
+	epatch ${FILESDIR}/kz-tab-label.gcc2.patch
 
 	./autogen.sh || die
 	econf || die
