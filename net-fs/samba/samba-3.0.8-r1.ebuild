@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.8-r1.ebuild,v 1.1 2004/11/15 10:12:30 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.8-r1.ebuild,v 1.2 2004/11/18 12:10:10 satya Exp $
 
 inherit eutils flag-o-matic
 #---------------------------------------------------------------------------
@@ -54,6 +54,7 @@ pkg_setup() {
 	ewarn "    quotas:    now disabled by default"
 	ewarn "    winbind:   now disabled by default"
 	ewarn "    libclamav: (oav) don't use clamav daemon, just load libraries when needed"
+	ewarn "/etc/samba/private moved to /var/lib/samba/private"
 	ebeep
 	epause
 }
@@ -318,8 +319,9 @@ src_install() {
 	fi
 	# dirs -----------------------------------------------------------------
 	diropts -m0700
-	dodir /var/lib/samba/private
-	touch ${D}/var/lib/samba/private/.keep
+	local PRIVATE_DST=/var/lib/samba/private
+	dodir ${PRIVATE_DST}
+	touch ${D}${PRIVATE_DST}/.keep
 	diropts -m1777
 	dodir /var/spool/samba
 	touch ${D}/var/spool/samba/.keep
@@ -364,6 +366,13 @@ pkg_postinst() {
 	# touch /etc/samba/smb.conf so that people installing samba just
 	# to mount smb shares don't get annoying warnings all the time..
 	#[ ! -e ${ROOT}/etc/samba/smb.conf ] && touch ${ROOT}/etc/samba/smb.conf
+
+	local PRIVATE_DST=/var/lib/samba/private
+	local PRIVATE_SRC=/etc/samba/private
+	if [[ ! -r ${PRIVATE_DST}/secrets.tdb && -r ${PRIVATE_SRC}/secrets.tdb ]]; then
+		einfo "Copying ${PRIVATE_SRC}/* to ${PRIVATE_DST}/"
+		cp -af ${PRIVATE_SRC}/* ${D}${PRIVATE_DST}/
+	fi
 
 	ewarn ""
 	ewarn "If you are upgrading from a Samba version prior to 3.0.2, and you"

@@ -2,10 +2,10 @@ MD5 3a0e5f78e38031ab57be3863a456d514 samba-3.0.7.ebuild 13924
 MD5 9b192ecc1db0a52318a676e8c03d4ac2 samba-3.0.7-r1.ebuild 15395
 MD5 cd9f3589a14d50054a0b1e4e129602af samba-3.0.6-r4.ebuild 14203
 MD5 fc36819e4e02fa146e936aa31947ad27 samba-3.0.6-r3.ebuild 14226
-MD5 a43f837ad8303a534ca76ea81bf66d53 samba-3.0.8.ebuild 16488
-MD5 62d9d0090688c993002a60808e680e07 ChangeLog 23934
+MD5 826ef7c1a083b2b7f564dc5198072698 samba-3.0.8.ebuild 16812
+MD5 b7f49631c4ca2eb9ea25b879bb522e74 ChangeLog 24101
 MD5 41299f246433a1a55c8fccc77ccd709e metadata.xml 491
-MD5 016874bb1d14c198e3bfde6cff28e4a4 samba-3.0.8-r1.ebuild 16511
+MD5 21a58d7b5372db46109fc8fa7e5bd269 samba-3.0.8-r1.ebuild 16863
 MD5 fcebd975211fecf647f6cecf26ba5c96 files/samba-3.0.4.patch 8086
 MD5 e89b19f1e62e257cbaa23a44a0362a58 files/swat.xinetd 527
 MD5 a7cc90ba23d86b1d90f65645826dde19 files/smbldap_conf.pm 7095
