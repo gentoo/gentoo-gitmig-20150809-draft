@@ -9,5 +9,9 @@
 		La categoría x11-misc contiene aplicaciones mixtas de X11 que no
 		pertenecen a ninguna otra categoría.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie x11-misc enthält verschiedene X11-Applikationen die sich
+		nicht anderweitig einordnen lassen.
+	</longdescription>
 </catmetadata>
 
