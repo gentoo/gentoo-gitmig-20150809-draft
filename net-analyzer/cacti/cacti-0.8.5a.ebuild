@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.5a.ebuild,v 1.5 2004/06/24 21:58:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.5a.ebuild,v 1.6 2004/07/05 11:27:39 eldad Exp $
 
 inherit eutils webapp-apache
 
@@ -38,12 +38,12 @@ src_install() {
 	dodoc docs/{CHANGELOG,CONTRIB}
 	dodoc LICENSE
 
-	rm docs/{INSTALL,UPGRADE,INSTALL-WIN32}.htm
+	#rm docs/{INSTALL,UPGRADE,INSTALL-WIN32}.htm
 	rm docs/{README,CHANGELOG,CONTRIB}
 	rm LICENSE README
 
-	mv docs/manual .
-	rm -fr docs
+	#mv docs/manual .
+	rm -rf docs
 	rm -rf cactid
 
 	edos2unix `find -type f -name '*.php'`
@@ -55,9 +55,8 @@ src_install() {
 
 pkg_postinst() {
 	# check to see if we have a previous version installed
-	minor_inst="$(ls -d /var/db/pkg/net-analyzer/cacti*|head -n 1|cut -d\. -f2)"
-	rel_inst="$(ls -d /var/db/pkg/net-analyzer/cacti*|head -n 1|cut -d\. -f3)"
-	if [ ${minor_inst}${rel_inst} -lt 81 ]
+	ver_installed="$(ls -d /var/db/pkg/net-analyzer/cacti* | sed 's:.*cacti-::')"
+	if [[ ${ver_installed} != ${PV} ]]
 	then
 		einfo
 		einfo "The cacti has been installed to ${INSTALL_DEST}"
@@ -78,7 +77,9 @@ pkg_postinst() {
 		einfo "		\$database_hostname = \"localhost\";"
 		einfo "		\$database_username = \"cactiuser\";"
 		einfo "		\$database_password = \"cacti\";"
-		einfo "6. Point your web browser to:  http://your-server/cacti/"
+		einfo "6. Add this line to your /etc/crontab file:"
+		einfo "   */5 * * * * ${HTTPD_USER} php ${HTTPD_ROOT}${PN}/cmd.php > /dev/null 2>&1"
+		einfo "7. Point your web browser to:  http://your-server/cacti/"
 		einfo " Select \"Upgrade\"."
 		einfo " Make sure to fill in all of the path variables carefully and"
 		einfo " correctly on the following screen."
@@ -88,7 +89,7 @@ pkg_postinst() {
 		einfo " register_argc_argv = On"
 		einfo
 		einfo "Test your upgraded installation.  When all is fine you can"
-		eingo "drop the cacti_old database like so:"
+		einfo "drop the cacti_old database like so:"
 		einfo "  shell> mysqladmin -p drop cacti_old"
 		einfo
 	else
@@ -111,7 +112,9 @@ pkg_postinst() {
 		einfo "		\$database_hostname = \"localhost\";"
 		einfo "		\$database_username = \"cactiuser\";"
 		einfo "		\$database_password = \"cacti\";"
-		einfo "5. Point your web browser to:  http://your-server/cacti/"
+		einfo "5. Add this line to your /etc/crontab file:"
+		einfo "   */5 * * * * ${HTTPD_USER} php ${HTTPD_ROOT}${PN}/cmd.php > /dev/null 2>&1"
+		einfo "6. Point your web browser to:  http://your-server/cacti/"
 		einfo " Make sure to fill in all of the path variables carefully and"
 		einfo " correctly on the following screen."
 		einfo
