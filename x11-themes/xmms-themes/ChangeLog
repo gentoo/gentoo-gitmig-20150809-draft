@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/xmms-themes
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/ChangeLog,v 1.9 2004/02/25 23:18:38 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xmms-themes/ChangeLog,v 1.10 2004/03/26 21:51:24 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-themes-0.0.2.ebuild, xmms-themes-0.0.3.ebuild:
+  Made aliz's QA script happy by removing explicit S and adding explitit IUSE.
 
   26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> xmms-themes-0.0.3.ebuild:
   Stable on sparc.
