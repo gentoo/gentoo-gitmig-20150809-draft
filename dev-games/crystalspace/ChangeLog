@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/crystalspace
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.9 2004/12/25 08:00:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.10 2004/12/28 01:52:02 vapier Exp $
+
+  27 Dec 2004; Mike Frysinger <vapier@gentoo.org> +files/0.98.4-gl.patch,
+  crystalspace-0.98.4.ebuild:
+  Add patch to make GL happy #75702 by Tom Wesley.
 
 *crystalspace-0.98.4 (25 Dec 2004)
 

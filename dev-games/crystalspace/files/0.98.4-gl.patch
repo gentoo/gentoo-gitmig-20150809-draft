@@ -1,0 +1,29 @@
+Some GL header files (like nvidia) define GLcharARB/GLhandleARB 
+differently ... this pisses off newer gcc's :)
+
+C++ ./out/linuxx86/optimize/plugins/video/renderer/opengl/ogl_g3d.o
+In file included from ./plugins/video/canvas/openglcommon/glstates.h:29,
+                 from plugins/video/renderer/opengl/ogl_g3dcom.h:49,
+                 from plugins/video/renderer/opengl/ogl_g3d.h:29,
+                 from plugins/video/renderer/opengl/ogl_g3d.cpp:33:
+./plugins/video/canvas/openglcommon/glextmanager.h:110: error: conflicting declaration 'typedef unsigned int GLhandleARB'
+/usr/X11R6/include/GL/glext.h:2268: error: 'GLhandleARB' has a previous declaration as `typedef long unsigned int GLhandleARB'
+./plugins/video/canvas/openglcommon/glextmanager.h:110: error: declaration of `typedef unsigned int GLhandleARB'
+/usr/X11R6/include/GL/glext.h:2268: error: conflicts with previous declaration `typedef long unsigned int GLhandleARB'
+./plugins/video/canvas/openglcommon/glextmanager.h:110: error: declaration of `typedef unsigned int GLhandleARB'
+/usr/X11R6/include/GL/glext.h:2268: error: conflicts with previous declaration `typedef long unsigned int GLhandleARB'
+
+Patch by Tom Wesley resolves this
+http://bugs.gentoo.org/show_bug.cgi?id=75702
+
+--- CS/plugins/video/canvas/openglcommon/glextmanager.h.orig	2004-12-27 19:38:02.640064016 -0500
++++ CS/plugins/video/canvas/openglcommon/glextmanager.h	2004-12-27 19:38:08.371192752 -0500
+@@ -106,8 +106,6 @@
+ /*
+   Appear in the ARB_shader_objects ext spec.
+  */
+-typedef char GLcharARB;
+-typedef unsigned int GLhandleARB;
+ 
+ #include "iutil/cmdline.h"
+ #include "iutil/objreg.h"

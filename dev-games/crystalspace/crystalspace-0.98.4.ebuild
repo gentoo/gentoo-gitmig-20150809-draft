@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-0.98.4.ebuild,v 1.3 2004/12/26 06:42:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-0.98.4.ebuild,v 1.4 2004/12/28 01:52:02 vapier Exp $
+
+inherit eutils
 
 MY_P="cs${PV:2:2}_00${PV:5:1}"
 DESCRIPTION="portable 3D Game Development Kit written in C++"
@@ -33,6 +35,12 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/CS"
 
 CRYSTAL_PREFIX="/opt/crystal"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-gl.patch #75702
+}
 
 src_compile() {
 	./configure --prefix=${CRYSTAL_PREFIX} || die "configure failed"
