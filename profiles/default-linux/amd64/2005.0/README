@@ -9,6 +9,10 @@ Scripted method:
  3) wget http://dev.gentoo.org/~eradicator/amd64/Makefile-profile_update-2005.0
  4) lynx -source http://dev.gentoo.org/~eradicator/Makefile-profile_update-2005.0.md5sum | md5sum -c -
  5) make -f Makefile-profile_update-2005.0
+ 6) emerge -upv system
+ 7) emerge -uv system
+
+-- If you use the scripted method, ignore the rest of this document --
 
 Do it yourself:
  0) If you currently have USE=-multilib, you need to set multilib in USE and
