@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.4 2004/03/01 05:37:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.5 2004/03/31 18:35:49 eradicator Exp $
+
+  31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> moc-1.1.0.ebuild:
+  Stable x86.  Added inherit eutils and removed explicit S=.
 
   28 Oct 2003; Martin Holzer <mholzer@gentoo.org> moc-1.1.0.ebuild:
   more config through IUSE. Closes #31568.

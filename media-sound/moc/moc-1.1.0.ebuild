@@ -2,9 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /home/cvsroot/gentoo-x86/media-sound/moc/moc-1.1.0.ebuild
 
+inherit eutils
+
 IUSE="oggvorbis mad oss"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Music On Console - ncurses interface for playing audio files"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 RESTRICT="nomirror"
@@ -17,7 +18,7 @@ DEPEND="media-libs/libao
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A}
