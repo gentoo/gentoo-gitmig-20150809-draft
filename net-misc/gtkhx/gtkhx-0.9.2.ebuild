@@ -1,11 +1,11 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Michael M Nazaroff <naz@themoonsofjupiter.net>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkhx/gtkhx-0.9.1.ebuild,v 1.1 2002/02/09 12:43:35 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkhx/gtkhx-0.9.2.ebuild,v 1.1 2002/03/16 17:12:47 verwilst Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a GTK+ Hotline Client based off of Hx"
-SRC_URI="http://gtkhx.sourceforge.net/files/gtkhx-0.9.1.tar.gz"
+SRC_URI="http://gtkhx.sourceforge.net/files/${P}.tar.gz"
 HOMEPAGE="http://gtkhx.sourceforge.net/index.html"
 SLOT="0"
 DEPEND="virtual/glibc
@@ -19,7 +19,7 @@ src_compile() {
                 --host=${CHOST} \
                 --prefix=/usr \
                 --infodir=/usr/share/info \
-                --mandir=/usr/share/man || die "./configure failed"
+                --mandir=/usr/share/man || die 
         emake || die
 }
 
