@@ -1,7 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.82 2003/11/16 23:29:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.83 2003/11/20 00:48:29 drobbins Exp $
 
+  19 Nov 2003; Daniel Robbins <drobbins@gentoo.org> apache-1.3.29-r1.ebuild:
+  unmasking on all arches so we can get out the much-delayed GLSA 200310-03.
+  
   16 Nov 2003; Aron Griffis <agriffis@gentoo.org> apache-2.0.48-r1.ebuild:
   Stable on alpha
 
