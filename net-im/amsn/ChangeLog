@@ -1,6 +1,11 @@
 # ChangeLog for net-im/amsn
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.20 2004/01/04 20:18:55 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.21 2004/02/18 22:52:36 humpback Exp $
+
+*amsn-0.90 (18 Feb 2004)
+
+  18 Feb 2004; Gustavo Felisberto <humpback@gentoo.org>; amsn-0.90.ebuild:
+  Adding version 0.9. Thanks to aq169@netscape.net in bug 41984
 
   04 Jan 2004; Olivier Crete <tester@gentoo.org> files/amsn.desktop:
   Improved .desktop file by Abraham Marin Perez <abraham@alumni.uv.es> from bug
