@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.242 2004/09/01 17:10:57 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.243 2004/09/06 20:28:28 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> apache-2.0.49-r3.ebuild,
+  apache-2.0.49-r4.ebuild, apache-2.0.50.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
   01 Sep 2004; Travis Tilley <lv@gentoo.org> apache-1.3.31-r3.ebuild:
   stable on amd64

@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.194 2004/08/18 16:31:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.195 2004/09/06 20:32:59 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> mozilla-1.6-r1.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
 *mozilla-1.7.2-r1 (18 Aug 2004)
 

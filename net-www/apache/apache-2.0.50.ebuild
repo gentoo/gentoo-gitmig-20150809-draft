@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.50.ebuild,v 1.10 2004/08/21 21:13:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.50.ebuild,v 1.11 2004/09/06 20:28:28 ciaranm Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -114,7 +114,7 @@ src_compile() {
 			eerror "Sorry, LDAP support isn't available yet for MIPS"
 			eerror "Test out OpenLDAP and report it via BugZilla!"
 			eerror "Continuing in 5 seconds"
-			sleep 5s
+			epause 5
 		else
 			einfo "Enabling LDAP"
 			if use static; then

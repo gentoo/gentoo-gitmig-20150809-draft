@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6-r1.ebuild,v 1.15 2004/08/21 21:32:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6-r1.ebuild,v 1.16 2004/09/06 20:32:59 ciaranm Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama"
 # Internal USE flags that I do not really want to advertise ...
@@ -271,7 +271,7 @@ src_compile() {
 		ewarn "may not always compile properly." && \
 		ewarn "Please do not use if you do not know what you're doing!" && \
 		ewarn "" && \
-		sleep 3
+		epause 3
 
 	local myext="default"
 	if use mozxmlterm
