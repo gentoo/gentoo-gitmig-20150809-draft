@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/ppmd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.8 2004/06/24 21:34:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.9 2004/07/18 04:22:42 ferringb Exp $
+
+  17 Jul 2004; Brian Harring <ferringb@gentoo.org> ppmd-9.1.ebuild:
+  removing the gzip rdepend; no clue how that got in there.  Stabling x86 also.
 
   04 May 2004; Bryan Østergaard <kloeri@gentoo.org> ppmd-9.1.ebuild:
   Stable on alpha.
