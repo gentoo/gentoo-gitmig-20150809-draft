@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.8 2004/06/24 21:48:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.9 2004/07/14 02:18:57 lv Exp $
+
+  13 Jul 2004; Travis Tilley <lv@gentoo.org> glibmm-2.4.1.ebuild:
+  stable on amd64
 
   18 Jun 2004; Yi Qiang <khai@gentoo.org> :
   Version bump
