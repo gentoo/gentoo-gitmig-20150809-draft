@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/shc-3.4.ebuild,v 1.7 2004/07/02 05:13:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/shc-3.4.ebuild,v 1.8 2004/07/15 00:08:02 agriffis Exp $
 
 DESCRIPTION="A (shell-) script compiler/scrambler"
 HOMEPAGE="http://www.datsi.fi.upm.es/~frosal"
@@ -9,6 +9,7 @@ SRC_URI="http://www.datsi.fi.upm.es/~frosal/sources/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
+IUSE=""
 
 DEPEND="virtual/libc"
 

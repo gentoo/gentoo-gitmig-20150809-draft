@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r1.ebuild,v 1.27 2004/07/02 05:14:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r1.ebuild,v 1.28 2004/07/15 00:15:31 agriffis Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/devel/compiler-tools/${P}.tar.Z"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ppc ppc64 sparc alpha mips hppa amd64 ia64 s390"
+IUSE=""
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND} >=sys-apps/sed-4"

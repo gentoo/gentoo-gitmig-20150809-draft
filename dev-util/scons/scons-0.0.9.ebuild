@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-0.0.9.ebuild,v 1.6 2004/06/25 02:46:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-0.0.9.ebuild,v 1.7 2004/07/15 00:06:09 agriffis Exp $
 
 MY_P=${PN}-0.09
 S=${WORKDIR}/${MY_P}
@@ -11,6 +11,7 @@ HOMEPAGE="http://www.scons.org"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc"
+IUSE=""
 
 DEPEND=">=dev-lang/python-2.0"
 

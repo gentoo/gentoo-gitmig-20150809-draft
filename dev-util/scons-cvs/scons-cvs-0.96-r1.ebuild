@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons-cvs/scons-cvs-0.96-r1.ebuild,v 1.1 2004/07/09 19:16:39 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons-cvs/scons-cvs-0.96-r1.ebuild,v 1.2 2004/07/15 00:06:37 agriffis Exp $
 
 inherit cvs python distutils
 
@@ -12,6 +12,7 @@ HOMEPAGE="http://www.scons.org"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
+IUSE=""
 
 DEPEND=">=dev-lang/python-2.0
 	!dev-util/scons"
