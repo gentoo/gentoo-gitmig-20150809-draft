@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <spider@gentoo.org> (01 Sep 2003)
+# This one requires more testing. Appears to be buggier than the i
+# previous version
+=media-video/totem-0.99.3
+
+
 # <pylon@gentoo.org> (31 Aug 2003)
 # this mol-snapshot has problems with the audio-driver.  we
 # will resnapshot it later.
