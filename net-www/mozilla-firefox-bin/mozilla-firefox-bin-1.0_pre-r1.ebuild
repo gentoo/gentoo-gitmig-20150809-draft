@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/mozilla-firefox-bin-1.0_pre-r1.ebuild,v 1.1 2004/10/02 05:22:37 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox-bin/mozilla-firefox-bin-1.0_pre-r1.ebuild,v 1.2 2004/10/07 13:13:40 blubb Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/firefox-${MY_PV}-i686-linux-gtk2+xft.tar.gz"
 HOMEPAGE="http://www.mozilla.org/projects/firefox"
 RESTRICT="nostrip"
 
-KEYWORDS="-* x86 ~amd64"
+KEYWORDS="-* x86 amd64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
