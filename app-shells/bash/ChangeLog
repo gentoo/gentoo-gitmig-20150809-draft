@@ -1,16 +1,21 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.4 2003/03/27 11:24:47 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.5 2003/04/27 11:12:10 azarah Exp $
 
-  13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> bash-2.05b-r3.ebuild:
+*bash-2.05b-r4 (27 Apr 2003)
+
+  27 Apr 2003; Martin Schlemmer <azarah@gentoo.org> bash-2.05b-r4.ebuild :
+  Readline is slow with multibyte locale, bug #19762.  Add a patch.
+
+  13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> bash-2.05b-r3.ebuild :
   Marked ppc stable
 
 *bash-2.05b-r3 (11 Mar 2003)
 
-  27 Mar 2003; Christian Birchinger <joker@gentoo.org> bash-2.05b-r3.ebuild:
+  27 Mar 2003; Christian Birchinger <joker@gentoo.org> bash-2.05b-r3.ebuild :
   Added stable sparc keyword
 
-  12 Mar 2003; Martin Holzer <mholzer@gentoo.org> bash-2.05b-r3.ebuild:
+  12 Mar 2003; Martin Holzer <mholzer@gentoo.org> bash-2.05b-r3.ebuild :
   removed dodoc man/*.3 (doesn't exist)
 
   11 Mar 2003; Seemant Kulleen <seemant@gentoo.org> bash-2.05a-r3.ebuild,
