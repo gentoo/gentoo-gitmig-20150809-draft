@@ -1,8 +1,11 @@
 # ChangeLog for app-arch/guitar
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/Changelog,v 1.2 2002/05/20 22:58:06 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/Changelog,v 1.3 2002/05/25 23:23:59 bass Exp $
 
 *guitar-0.1.4 (21 May 2002)
 
   21 May 2002; J.Alberto S.L. <bass@gentoo.org> guitar-0.1.4.ebuild:
 	First relase, gnome USE don't works.
+
+  26 May 2002: J.Alberto S.L. <bass@gentoo.org> guitar-0.1.4.ebuild:
+  	Fixed problem with gnome. Thanks Seemant.
