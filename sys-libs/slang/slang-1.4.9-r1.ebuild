@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r1.ebuild,v 1.2 2004/06/24 23:09:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r1.ebuild,v 1.3 2004/09/01 13:56:07 lv Exp $
 
 inherit gcc eutils
 
@@ -45,14 +45,14 @@ src_compile() {
 
 src_install() {
 	make install install-elf DESTDIR=${D} || die "make install failed"
-	fperms 755 /usr/lib/libslang.so.*
+	fperms 755 /usr/$(get_libdir)/libslang.so.*
 
 	if use unicode ; then
-		for i in ${D}/usr/lib/libslang-utf8* ; do
+		for i in ${D}/usr/$(get_libdir)/libslang-utf8* ; do
 			local libslang=${i/${D}/}
 			dosym ${libslang} ${libslang/-utf8/}
 		done
-		dosym /usr/lib/libslang{-utf8,}.a
+		dosym /usr/$(get_libdir)/libslang{-utf8,}.a
 	fi
 
 	# remove the documentation... we want to install it ourselves
