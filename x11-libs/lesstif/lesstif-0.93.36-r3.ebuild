@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.36-r3.ebuild,v 1.3 2003/03/27 05:28:19 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.36-r3.ebuild,v 1.4 2003/09/06 10:49:12 lanius Exp $
 
 DESCRIPTION="An OSF/Motif(R) clone"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -25,8 +25,8 @@ src_unpack() {
 
 src_compile() {
 	./configure --host=${CHOST} \
-                --prefix=/usr/X11R6 \
-                --sysconfdir=/etc/X11 \
+		--prefix=/usr/X11R6 \
+		--sysconfdir=/etc/X11 \
 		--libdir=/usr/X11R6/lib \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
@@ -35,7 +35,7 @@ src_compile() {
 		--enable-build-20 \
 		--enable-build-21 \
 		--with-x || die "./configure failed"
-	
+
 	emake CFLAGS="${CFLAGS}" || die
 }
 
@@ -45,13 +45,13 @@ src_install() {
 		libdir=${D}/usr/X11R6/lib \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
-		install || die	
-	
+		install || die
+
 	dosym /usr/X11R6/lib/libXm.so.2.0.1 /usr/X11R6/lib/libXm.so.1
 
 	# This comes from x11-base/xfree!
 	rm -f ${D}/usr/lib/X11/config/host.def
-	
+
 	dodir /usr/share
 	mv ${D}/usr/X11R6/man ${D}/usr/share/
 	dodir /usr/share/doc/${P}

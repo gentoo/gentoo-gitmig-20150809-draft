@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.36.ebuild,v 1.6 2003/03/27 05:28:19 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.36.ebuild,v 1.7 2003/09/06 10:49:12 lanius Exp $
 
 DESCRIPTION="An OSF/Motif(R) clone"
 HOMEPAGE="http://www.lesstif.org/"
@@ -37,8 +37,8 @@ src_install() {
 		exec_prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
-		install || die	
-	
+		install || die
+
 	dosym /usr/lib/libXm.so.2.0.1 /usr/lib/libXm.so.1
 
 	dodir /usr/share
