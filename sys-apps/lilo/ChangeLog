@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lilo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.14 2002/12/13 11:00:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.15 2003/01/04 06:14:12 woodchip Exp $
+
+*lilo-22.3.4 (04 Jan 2002)
+
+  04 Jan 2002; Donny Davies <woodchip@gentoo.org> :
+  New testing release.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
