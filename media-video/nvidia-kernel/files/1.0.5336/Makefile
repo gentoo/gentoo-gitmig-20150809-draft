@@ -64,6 +64,10 @@ ifeq ($(shell sh conftest.sh remap_page_range $(INCLUDES)), 4)
   DEFINES += -DREMAP_PAGE_RANGE_4
 endif
 
+ifeq ($(shell sh conftest.sh class_simple $(INCLUDES)), yes)
+  DEFINES += -DHAVE_CLASS_SIMPLE
+endif
+
 DEFINES+=$(EXTRA_DEFINES)
 
 # allow build parameters to be passed in through the environment

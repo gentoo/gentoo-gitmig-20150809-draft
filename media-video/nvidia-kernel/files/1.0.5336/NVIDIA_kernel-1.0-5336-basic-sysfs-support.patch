@@ -1,0 +1,171 @@
+diff -urpN NVIDIA-Linux-x86-1.0-5336/usr/src/nv/Makefile.kbuild NVIDIA-Linux-x86-1.0-5336.sysfs/usr/src/nv/Makefile.kbuild
+--- NVIDIA-Linux-x86-1.0-5336/usr/src/nv/Makefile.kbuild	2004-01-15 05:29:12.000000000 +0200
++++ NVIDIA-Linux-x86-1.0-5336.sysfs/usr/src/nv/Makefile.kbuild	2004-02-01 16:15:55.529582488 +0200
+@@ -146,6 +146,10 @@ ifeq ($(shell sh $(src)/conftest.sh rema
+   EXTRA_CFLAGS += -DREMAP_PAGE_RANGE_4
+ endif
+ 
++ifeq ($(shell sh $(src)/conftest.sh class_simple $(KERNEL_HEADERS)), yes)
++  EXTRA_CFLAGS += -DHAVE_CLASS_SIMPLE
++endif
++  
+ #
+ # NVIDIA binary object file includes .common section.
+ #
+diff -urpN NVIDIA-Linux-x86-1.0-5336/usr/src/nv/built-in.o NVIDIA-Linux-x86-1.0-5336.sysfs/usr/src/nv/built-in.o
+--- NVIDIA-Linux-x86-1.0-5336/usr/src/nv/built-in.o	1970-01-01 02:00:00.000000000 +0200
++++ NVIDIA-Linux-x86-1.0-5336.sysfs/usr/src/nv/built-in.o	2004-02-01 16:11:27.428340072 +0200
+@@ -0,0 +1 @@
++!<arch>
+diff -urpN NVIDIA-Linux-x86-1.0-5336/usr/src/nv/conftest.sh NVIDIA-Linux-x86-1.0-5336.sysfs/usr/src/nv/conftest.sh
+--- NVIDIA-Linux-x86-1.0-5336/usr/src/nv/conftest.sh	2004-01-15 05:29:11.000000000 +0200
++++ NVIDIA-Linux-x86-1.0-5336.sysfs/usr/src/nv/conftest.sh	2004-02-01 16:19:19.079638176 +0200
+@@ -42,6 +42,29 @@ case "$1" in
+         fi
+     ;;
+ 
++    class_simple)
++        shift
++        #
++        # Determine if we have struct class_simple needed for limited sysfs
++        # support in 2.6
++        #
++        echo "#include <linux/device.h>
++        struct class_simple *test_class;
++        int add_test_class() {
++           test_class = class_simple_create(THIS_MODULE, \"test\");
++        }" > conftest.c
++
++        gcc -c conftest.c -o conftest.o $* -D__KERNEL__ > /dev/null 2>&1
++
++        if test -f conftest.o; then
++          echo "yes"
++        else
++          echo "no"
++        fi
++
++        rm -f conftest.{c,o}
++    ;;
++
+     cc_sanity_check)
+         shift
+         #
+diff -urpN NVIDIA-Linux-x86-1.0-5336/usr/src/nv/nv-linux.h NVIDIA-Linux-x86-1.0-5336.sysfs/usr/src/nv/nv-linux.h
+--- NVIDIA-Linux-x86-1.0-5336/usr/src/nv/nv-linux.h	2004-01-15 05:29:11.000000000 +0200
++++ NVIDIA-Linux-x86-1.0-5336.sysfs/usr/src/nv/nv-linux.h	2004-02-01 16:54:14.850032648 +0200
+@@ -448,6 +448,33 @@ typedef struct agp_memory agp_memory;
+ #  endif // defined(KERNEL_2_4)
+ #endif // defined(CONFIG_DEVFS_FS)
+ 
++#if defined(KERNEL_2_6) && defined(HAVE_CLASS_SIMPLE)
++#  define NV_SYSFS_REGISTER						\
++    nvidia_class = class_simple_create(THIS_MODULE, "nvidia");
++
++#  define NV_SYSFS_ADD_CONTROL						\
++     class_simple_device_add(nvidia_class,				\
++                             MKDEV(NV_MAJOR_DEVICE_NUMBER, 255),	\
++                             NULL, "nvidiactl");
++
++#  define NV_SYSFS_ADD_DEVICE(_name, _minor)				\
++     class_simple_device_add(nvidia_class,				\
++                             MKDEV(NV_MAJOR_DEVICE_NUMBER, _minor),	\
++                             &nv_linux_devices[_minor].dev->dev, _name);
++
++#  define NV_SYSFS_REMOVE_DEVICE(i)					\
++            class_simple_device_remove(MKDEV(NV_MAJOR_DEVICE_NUMBER, i));
++
++#  define NV_SYSFS_UNREGISTER						\
++    class_simple_destroy(nvidia_class);
++#else
++#  define NV_SYSFS_REGISTER
++#  define NV_SYSFS_ADD_CONTROL
++#  define NV_SYSFS_ADD_DEVICE(_name, _minor)
++#  define NV_SYSFS_REMOVE_DEVICE(i)
++#  define NV_SYSFS_UNREGISTER
++#endif
++
+ 
+ /*
+  * Linux 2.5 introduced the five argument version of remap_page_range, all
+diff -urpN NVIDIA-Linux-x86-1.0-5336/usr/src/nv/nv.c NVIDIA-Linux-x86-1.0-5336.sysfs/usr/src/nv/nv.c
+--- NVIDIA-Linux-x86-1.0-5336/usr/src/nv/nv.c	2004-01-15 05:29:11.000000000 +0200
++++ NVIDIA-Linux-x86-1.0-5336.sysfs/usr/src/nv/nv.c	2004-02-01 16:58:03.429283320 +0200
+@@ -47,6 +47,10 @@ struct proc_dir_entry *proc_nvidia;
+ devfs_handle_t nv_devfs_handles[NV_MAX_DEVICES+1];
+ #endif
+ 
++#if defined(KERNEL_2_6) && defined(HAVE_CLASS_SIMPLE)
++struct class_simple *nvidia_class;
++#endif
++
+ // #define NV_DBG_MEM 1
+ #undef NV_DBG_MEM
+ 
+@@ -874,23 +878,31 @@ static int __init nvidia_init_module(voi
+     rc = register_chrdev(nv_major, "nvidia", &nv_fops);
+ #endif
+ 
++    NV_SYSFS_REGISTER;
++
+     if (rc < 0)
+     {
+         nv_printf(NV_DBG_ERRORS, "nvidia_init_module: register failed\n");
+         return rc;
+     }
+ 
+-#ifdef CONFIG_DEVFS_FS
++#if defined(CONFIG_DEVFS_FS) || defined(KERNEL_2_6)
+     do
+     {
+         char name[10];
+ 
++# if defined(CONFIG_DEVFS_FS)
+         nv_devfs_handles[0] = NV_DEVFS_REGISTER("nvidiactl", 255);
++# endif
++        NV_SYSFS_ADD_CONTROL;
+ 
+         for (i = 0; i < num_nv_devices; i++)
+         {
+             sprintf(name, "nvidia%d", i);
++# if defined(CONFIG_DEVFS_FS)
+             nv_devfs_handles[i+1] = NV_DEVFS_REGISTER(name, i);
++# endif
++            NV_SYSFS_ADD_DEVICE(name, i);
+         }
+     } while(0);
+ #endif
+@@ -951,6 +963,7 @@ static int __init nvidia_init_module(voi
+ #else
+     unregister_chrdev(nv_major, "nvidia");
+ #endif
++    NV_SYSFS_UNREGISTER;
+     return rc;
+ }
+ 
+@@ -1011,15 +1024,24 @@ static void __exit nvidia_exit_module(vo
+         nv_printf(NV_DBG_ERRORS, "nvidia_exit_module: unregister nv failed\n");
+     }
+ 
+-#ifdef CONFIG_DEVFS_FS
++#if defined(CONFIG_DEVFS_FS) || defined(KERNEL_2_6)
+     do {
+         int i;
++# if defined(CONFIG_DEVFS_FS)
+         NV_DEVFS_REMOVE_CONTROL();
+-        for (i = 0; i < num_nv_devices; i++)
++# endif
++        NV_SYSFS_REMOVE_DEVICE(255);
++        for (i = 0; i < num_nv_devices; i++) {
++# if defined(CONFIG_DEVFS_FS)
+             NV_DEVFS_REMOVE_DEVICE(i);
++# endif
++            NV_SYSFS_REMOVE_DEVICE(i);
++        }
+     } while (0);
+ #endif
+ 
++    NV_SYSFS_UNREGISTER;
++
+ #if NV_ENABLE_MEM_TRACKING
+     nv_list_mem(vm_list);
+     nv_list_mem(km_list);

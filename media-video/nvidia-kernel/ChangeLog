@@ -1,6 +1,14 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.60 2004/02/01 02:47:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.61 2004/02/01 15:13:47 azarah Exp $
+
+*nvidia-kernel-1.0.5336-r1 (01 Feb 2004)
+
+  01 Feb 2004; Martin Schlemmer <azarah@gentoo.org>
+  nvidia-kernel-1.0.5336-r1.ebuild,
+  files/1.0.5336/NVIDIA_kernel-1.0-5336-basic-sysfs-support.patch,
+  files/1.0.5336/Makefile:
+  Add basic sysfs support for 2.6 and udev.  Patch donated by myself.
 
 *nvidia-kernel-1.0.5336 (01 Feb 2004)
 
