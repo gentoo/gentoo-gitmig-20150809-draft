@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.30 2004/10/07 14:57:54 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.31 2004/10/07 18:50:18 eradicator Exp $
+
+  07 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  rp-pppoe-3.5-r2.ebuild:
+  Stable amd64.
 
 *rp-pppoe-3.5-r2 (07 Oct 2004)
 
