@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.3 2005/03/23 21:18:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.4 2005/03/24 23:21:14 vapier Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -1004,6 +1004,7 @@ EOF
 	doins ${FILESDIR}/2.3.4/host.conf
 
 	for x in ls ps date ; do
+		[[ -z $(type -p ${x}) ]] && continue
 		env LD_LIBRARY_PATH="${D}/$(get_libdir)" ${x} > /dev/null \
 			|| die "simple run test (${x}) failed"
 	done
