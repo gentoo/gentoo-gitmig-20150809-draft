@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.0-r1.ebuild,v 1.6 2004/08/07 21:14:48 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.0-r1.ebuild,v 1.7 2004/09/05 23:57:02 ciaranm Exp $
+
+inherit eutils
 
 IUSE="print"
 
@@ -29,9 +31,7 @@ pkg_setup() {
 		einfo "the build with USE=\"print\""
 		einfo
 		echo
-		for TICKER in 1 2 3 4 5; do
-			echo -ne "\a" ; sleep 1
-		done
+		ebeep 5
 	fi
 }
 
