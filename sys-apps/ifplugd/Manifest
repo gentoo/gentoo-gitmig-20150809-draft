@@ -1,8 +1,9 @@
 MD5 b207cdda5e26611f67d0ce2c3388daac ifplugd-0.15.ebuild 1492
 MD5 cb4389f913d92e079fbf6a6fc11635cb ifplugd-0.24.ebuild 1751
+MD5 1ce3184f5f699b3a1547259348c01d70 ifplugd-0.25.ebuild 1751
 MD5 47cfb47c0c5d7d7942f78cdc24db813f ifplugd-0.20.ebuild 1685
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 a87ffca0490fcf630974c9137f716706 ChangeLog 1428
+MD5 5fd16cd5ed55be2d9a2eb16ff71f97b1 ChangeLog 1560
 MD5 09279eb58f1f97596cecaa9f2fe399e1 ifplugd-0.13-r1.ebuild 983
 MD5 46b7e993f02c5071a712a6a137de977a files/gentoo-ifplugd-conf-v3 2250
 MD5 d6c3df70619631dd1f9b148e297a3037 files/ifplugd 901
@@ -12,5 +13,6 @@ MD5 692d07775953a0ee60e6e475db87276c files/digest-ifplugd-0.24 64
 MD5 085ed0911e79c8f6a2f03c4d02602ee8 files/digest-ifplugd-0.20 64
 MD5 de7bbd638b2ad2e71fb89a9cfcf158af files/gentoo-ifplugd-init-v3 2670
 MD5 1b861d571aed96fc06f363f318fa7f98 files/digest-ifplugd-0.13-r1 63
+MD5 fb5b08b163ee5cef2761fa8c851c33c2 files/digest-ifplugd-0.25 64
 MD5 ed84e9ddf90cec9fd2bba39a6aca4652 files/digest-ifplugd-0.15 64
 MD5 e77f99a584be6f9891bfde03da108eca files/gentoo-ifplugd-init-v2 1327
