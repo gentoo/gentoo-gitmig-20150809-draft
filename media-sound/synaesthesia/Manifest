@@ -1,3 +1,5 @@
-MD5 64aa1ca83fe2ad244ac98ddf07e6115d ChangeLog 772
-MD5 71066e62d536818084c5eb09694b036c synaesthesia-2.1.ebuild 846
 MD5 a7c23dfe64d4d66b7748b6948a9ac8e8 files/digest-synaesthesia-2.1 68
+MD5 8406064a7b709f1db47d6ae809de7820 files/digest-synaesthesia-2.2 68
+MD5 de82a2a591989f61e4f026ccf39a801a synaesthesia-2.2.ebuild 858
+MD5 71066e62d536818084c5eb09694b036c synaesthesia-2.1.ebuild 846
+MD5 4cbfa7d2d5f29aa7d4c9c6e4bb2f8f31 ChangeLog 807

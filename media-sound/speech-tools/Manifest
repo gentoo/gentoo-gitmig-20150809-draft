@@ -1,5 +1,5 @@
-MD5 eef98db4b59d0c7c7266c365e96277a6 ChangeLog 488
-MD5 93201d3387ce3973b910311ce75b412d speech-tools-1.2.3.ebuild 2767
 MD5 a143fa8cb76f282bdd72ae3ad821f9c5 files/58speech-tools 34
 MD5 9e4114e8aa7fec642b538553b6018aad files/digest-speech-tools-1.2.3 79
 MD5 19e3325adc92d921d82884fe58485055 files/speech-tools-gcc3.3.diff 25787
+MD5 c0b8282fc1b8f96396c3e575520d5d02 speech-tools-1.2.3.ebuild 1862
+MD5 eef98db4b59d0c7c7266c365e96277a6 ChangeLog 488
