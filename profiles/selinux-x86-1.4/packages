@@ -38,7 +38,7 @@
 *<sys-libs/glibc-2.3.2
 *dev-lang/python
 
-!dev-lang/gpc
+>dev-lang/gpc-2.1
 =sys-kernel/linux-headers-2.4.19
 >=sys-apps/sysklogd-1.4.1
 >=x11-base/xfree-4.1.0-r12
@@ -50,11 +50,9 @@
 *sys-apps/selinux-base-policy
 *>=sys-apps/findutils-4.1.7-r3
 *>=sys-apps/procps-3.1.8
-*>=sys-apps/shadow-4.0.3-r3
-*>=sys-apps/util-linux-2.11z-r1
 *>=sys-apps/tar-1.13.25-r3
 *>=net-misc/openssh-3.5_p1-r1
->=sys-apps/pam-login-3.11
+*>=sys-apps/pam-login-3.11
 
 # (file|sh-|text)utils have been replaced by coreutils
 *>=sys-apps/coreutils-5.0
@@ -99,8 +97,10 @@
 *sys-apps/psmisc
 *sys-apps/sed
 *sys-apps/setserial
+*<sys-apps/shadow-5
 *sys-apps/sharutils
 *>=sys-apps/texinfo-4.2-r1
+*sys-apps/util-linux
 *sys-apps/which
 *sys-devel/autoconf
 *>=sys-devel/automake-1.6.1-r5
