@@ -2,7 +2,7 @@ MD5 06cd93a273cc142f1d330057facc3768 ChangeLog 7558
 MD5 3263d375abba2d098c636efc2b135ea5 metadata.xml 333
 MD5 835665621e3abf39934da974e1f3b4dd mol-0.9.68-r4.ebuild 2209
 MD5 5c4e6a76cf4c933af742de0d1df67e30 mol-0.9.70_rc2-r1.ebuild 3731
-MD5 474bfbfa27e6164d30c1af6f9b18ddd8 mol-0.9.70.ebuild 3740
+MD5 afad572acff8bea54a4d53781a5698b5 mol-0.9.70.ebuild 3841
 MD5 98990df6bb9f196021dea0b77d2d912d files/26-arch-fix.patch 2320
 MD5 d4bc3f0122eb77fbfbfcf584f442049d files/digest-mol-0.9.68-r4 67
 MD5 3944510308e77b92ac85c07708947ad0 files/digest-mol-0.9.70 64

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.70.ebuild,v 1.7 2004/08/19 19:48:28 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.70.ebuild,v 1.8 2004/08/19 23:52:17 pvdabeel Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ppc"
-IUSE="alsa oss fbcon X oldworld sheep debug"
+IUSE="vnc alsa oss fbcon X oldworld sheep debug"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
@@ -19,6 +19,7 @@ DEPEND=""
 RDEPEND="net-misc/dhcp
 	net-firewall/iptables
 	alsa? ( virtual/alsa )
+	vnc? ( net-misc/vnc )
 	X? ( virtual/x11 )"
 
 pkg_setup() {
@@ -60,6 +61,7 @@ src_compile() {
 	use sheep    || sed -i "s:CONFIG_SHEEP=y:# CONFIG_SHEEP is not set:" .config
 	use X        || sed -i "s:CONFIG_X11=y:# CONFIG_X11 is not set:" .config
 	use fbcon    || sed -i "s:CONFIG_FBDEV=y:# CONFIG_FBDEV is not set:" .config
+	use vnc      || sed -i "s:CONFIG_VNC=y:# CONFIG_VNC is not set:" .config
 
 	einfo "The configuration has been altered according to your USE-flags."
 	# reinitialize our changed configuration
