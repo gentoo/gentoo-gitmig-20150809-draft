@@ -1,7 +1,0 @@
-#!/bin/sh
-if [ ! -e /var/run/gpm.pid ]
-then
-	/usr/sbin/gpm
-	sleep 2
-fi
-exec envuidgid daemon /usr/bin/watchpid `cat /var/run/gpm.pid`
