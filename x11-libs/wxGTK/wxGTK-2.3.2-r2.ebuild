@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2-r2.ebuild,v 1.9 2002/08/29 15:37:04 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2-r2.ebuild,v 1.10 2002/09/11 15:11:14 raker Exp $
 
 S=${WORKDIR}/${P}
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND="dev-libs/libunicode
 	media-libs/netpbm
-	gif? ( media-libs/giflib )
+	media-libs/giflib
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	media-libs/tiff
@@ -33,7 +33,7 @@ src_compile() {
 	# Enable useful config options that don't have USE flags
 	# motif is not a supported build environment.  forcing gtk
 	myconf="${myconf} --enable-static --with-zlib --with-unicode \
-		--with-libtiff --with-gtk"
+		--with-libtiff --with-gtk --enable-gif"
 	
 	#Note: pcx image support enabled by default if found.
 	#Also, all wxWindows gui features are enabled by default. If you
@@ -52,10 +52,6 @@ src_compile() {
 	use opengl 	\
 		&& myconf="${myconf} --with-opengl"	\
 		|| myconf="${myconf} --without-opengl"
-
-	use gif 	\
-		&& myconf="${myconf} --enable-gif"	\
-		|| myconf="${myconf} --disable-gif"
 
 	use png 	\
 		&& myconf="${myconf} --with-libpng --enable-pnm"	\
