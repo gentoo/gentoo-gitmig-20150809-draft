@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-0.9.6.ebuild,v 1.1 2003/04/02 07:14:36 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-0.9.6.ebuild,v 1.2 2003/04/24 13:24:17 phosphan Exp $
 
 # I think you want CONFIG_BRIDGE in your kernel to use this ;)
 
@@ -13,7 +13,7 @@ SRC_URI="http://bridge.sourceforge.net/bridge-utils/${P}.tar.gz"
 DEPEND="virtual/glibc"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_compile() {
 	econf --prefix=/ --libdir=/usr/lib --includedir=/usr/include
