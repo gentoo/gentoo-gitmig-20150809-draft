@@ -1,20 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/mod_log_sql-1.96.ebuild,v 1.2 2004/04/30 19:28:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/mod_log_sql-1.96.ebuild,v 1.3 2004/05/03 22:06:37 mr_bones_ Exp $
 
 DESCRIPTION="An Apache module for logging to an SQL (MySQL) database"
 HOMEPAGE="http://www.outoforder.cc/projects/apache/mod_log_sql/"
-
-S=${WORKDIR}/${P}
 SRC_URI="http://www.outoforder.cc/downloads/mod_log_sql/${P}.tar.gz"
-DEPEND=">=dev-db/mysql-3.23.15
-	apache2? ( =net-www/apache-2* ) : ( >=net-www/apache-1* )"
+
 LICENSE="Apache-1.1"
+SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
-SLOT="0"
 
-
+DEPEND=">=dev-db/mysql-3.23.15
+	apache2? ( =net-www/apache-2* )
+	!apache2? ( >=net-www/apache-1* )"
 
 detectapache() {
 	local domsg=
@@ -58,8 +57,6 @@ detectapache() {
 		APACHE_MODULES_CONFIG_DIR=/etc/apache/conf/modules.d
 	fi
 }
-
-
 
 src_compile() {
 	detectapache
