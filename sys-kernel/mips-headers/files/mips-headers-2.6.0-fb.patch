@@ -1,0 +1,11 @@
+diff -Naur linux-2.6.0-orig/include/linux/fb.h linux-2.6.0/include/linux/fb.h
+--- linux-2.6.0-orig/include/linux/fb.h	2003-12-18 03:58:39.000000000 +0100
++++ linux-2.6.0/include/linux/fb.h	2004-01-22 19:12:10.765346576 +0100
+@@ -5,6 +5,7 @@
+ #include <linux/workqueue.h>
+ #include <asm/types.h>
+ #include <asm/io.h>
++#include <asm/atomic.h>
+ 
+ /* Definitions of frame buffers						*/
+ 

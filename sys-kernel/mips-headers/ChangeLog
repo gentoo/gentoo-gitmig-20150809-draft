@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/mips-headers
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.17 2004/04/12 16:36:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.18 2004/06/05 07:58:55 kumba Exp $
+
+*mips-headers-2.6.6 (05 Jun 2004)
+
+  05 Jun 2004; Joshua Kinard <kumba@gentoo.org>
+  +files/mips-headers-2.6.0-fb.patch,
+  +files/mips-headers-2.6.0-sysctl_h-compat.patch,
+  +files/mips-headers-2.6.3-strict-ansi-fix.patch,
+  +files/mips-headers-2.6.6-appCompat.patch, +mips-headers-2.6.6.ebuild:
+  Finally created a 2.6.x headers ebuild for mips...
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> mips-headers-2.4.21-r3.ebuild,
   mips-headers-2.4.22-r1.ebuild:
