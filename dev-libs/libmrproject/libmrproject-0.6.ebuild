@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/libmrproject-0.6.ebuild,v 1.4 2002/10/05 05:39:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/libmrproject-0.6.ebuild,v 1.5 2002/12/09 23:51:04 mholzer Exp $
 
 IUSE="doc nls"
 
@@ -17,7 +17,8 @@ KEYWORDS="x86"
 
 RDEPEND=">=dev-util/pkgconfig-0.12.0
 	>=dev-libs/glib-2.0.3
-	>=dev-libs/libxml2-2.4.19"
+	>=dev-libs/libxml2-2.4.19
+	>=gnome-extra/libgsf-1.4.0"
 
 DEPEND="nls? ( sys-devel/gettext )
 	doc? ( >=dev-util/gtk-doc-0.9-r2 )"
