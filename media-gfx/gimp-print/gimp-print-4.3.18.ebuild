@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.3.18.ebuild,v 1.7 2003/07/29 13:23:10 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.3.18.ebuild,v 1.8 2003/07/31 14:16:38 lanius Exp $
 
 IUSE="nls gtk readline cups foomaticdb ppds"
 
@@ -53,7 +53,7 @@ src_compile() {
 	fi
 	
 	use foomaticdb \
-		&& myconf="${myconf} --with-foomatic" \
+		&& myconf="${myconf} --with-foomatic3" \
 		|| myconf="${myconf} --without-foomatic"
 
 	# --without-translated-ppds enabled \
