@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.89 2004/09/03 00:32:53 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.90 2004/09/14 05:38:14 solar Exp $
+
+*cdrtools-2.01_alpha28-r2 (14 Sep 2004)
+
+  14 Sep 2004; <solar@gentoo.org> +files/cdrtools-2.01-scsi-remote.patch,
+  +cdrtools-2.01_alpha28-r2.ebuild, +cdrtools-2.01_alpha37-r1.ebuild:
+  added scsi-remote patch to fix suid handling. Thankfully we don't install this
+  as suid but as good measure we add the patch from CAN-2004-0806 anyway
 
   03 Sep 2004; Lars Weiler <pylon@gentoo.org> cdrtools-2.01_alpha37.ebuild:
   Replaced dosed in scr_unpack with sed -i as proposed in bug #61566

@@ -1,0 +1,15 @@
+--- cdrecord-2.01/librscg/scsi-remote.c.org	2004-08-30 16:09:33.000000000 -0600
++++ cdrecord-2.01/librscg/scsi-remote.c	2004-08-30 16:11:06.000000000 -0600
+@@ -1071,9 +1071,9 @@
+ 		/*
+ 		 * Become 'locuser' to tell the rsh program the local user id.
+ 		 */
+-		if (getuid() != pw->pw_uid &&
+-		    setuid(pw->pw_uid) == -1) {
+-			errmsg("setuid(%lld) failed.\n",
++		if ((pw->pw_uid) != geteuid() &&
++		    seteuid(pw->pw_uid) == -1) {
++			errmsg("seteuid(%lld) failed.\n",
+ 							(Llong)pw->pw_uid);
+ 			_exit(EX_BAD);
+ 			/* NOTREACHED */
