@@ -1,12 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.1-r1.ebuild,v 1.3 2002/07/11 06:30:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.1-r1.ebuild,v 1.4 2002/07/12 16:25:49 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Scsh is a Unix shell embedded in Scheme"
-SRC_URI="ftp://ftp.scsh.net/pub/scsh/0.6/scsh-${PV}.tar.gz"
+SRC_URI="ftp://ftp.scsh.net/pub/scsh/0.6/${P}.tar.gz"
 HOMEPAGE="http://www.scsh.net/"
-LICENSE="SCSH"
+
+SLOT="0"
+LICENSE="as-is | BSD | GPL"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 
@@ -20,7 +23,7 @@ src_compile() {
 
 src_install() {
 	make prefix=${D} \
-		htmldir=${D}/usr/share/doc/${P}/html \
+		htmldir=${D}/usr/share/doc/${PF}/html \
 		incdir=${D}/usr/include \
 		libdir=${D}/usr/lib \
 		mandir=${D}/usr/share/man/man1 \
@@ -37,11 +40,16 @@ src_install() {
 	# Thus we let scsh install the documentation and then clean up
 	# afterwards.
 
-	mv ${D}/usr/lib/scsh/doc/* ${D}/usr/share/doc/${P}
+	mv ${D}/usr/lib/scsh/doc/* ${D}/usr/share/doc/${PF}
 	rmdir ${D}/usr/lib/scsh/doc
-	find ${D}/usr/share/doc/${P} \( -name \*.ps -o \
+	find ${D}/usr/share/doc/${PF} \( -name \*.ps -o \
 		-name \*.txt -o \
 		-name \*.dvi -o \
 		-name \*.tex \) \
 		-print | xargs gzip
+
+	mv ${D}/usr/share/man/man1/scsh.1 ${S} || die
+	sed "s:${D}::" ${S}/scsh.1 > scsh.1.blah
+	mv scsh.1.blah scsh.1
+	doman ${S}/scsh.1
 }
