@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-java3d-bin/blackdown-java3d-bin-1.3.1.ebuild,v 1.3 2005/01/01 18:10:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-java3d-bin/blackdown-java3d-bin-1.3.1-r1.ebuild,v 1.1 2005/04/02 10:01:13 axxo Exp $
+
+inherit java-pkg
 
 DESCRIPTION="Java 3D Software Development Kit"
 SRC_URI="x86? ( mirror://blackdown.org/java3d/1.3.1/i386/fcs/java3d-sdk-${PV}-linux-i386.bin )
@@ -48,16 +50,17 @@ src_unpack () {
 src_install () {
 	dodoc README-Java3D
 
-	dodir `java-config -O`/jre
-	cp -a jre/lib ${D}/`java-config -O`/jre
-	use doc && cp -a demo ${D}/`java-config -O`/demo
+	java-pkg_dojar jre/lib/ext/*.jar
+	java-pkg_doso jre/lib/i386/*.so
+
+	if use doc; then
+		insinto /usr/share/doc/${PF}
+		doins -r demo /usr/share/doc/${PF}
+	fi
 }
 
 pkg_postinst() {
-	einfo "Note: This package installs into your currently selected JDK!"
-	einfo "Your currently selected JDK path is:"
-	einfo "\t `java-config -O`"
-	einfo
-	einfo "If this is incorrect, please unmerge this package and set your desired"
-	einfo "JDK with java-config"
+	einfo "This ebuild now installs into /opt/${PN} and /usr/share/${PN}"
+	einfo 'To use you need to pass the following to java'
+	einfo "-Djava.library.path=\$(java-config -i ${PN}) -cp \$(java-config -p ${PN})"
 }
