@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.5.3-r2.ebuild,v 1.1 2001/04/30 12:42:20 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.5.3-r2.ebuild,v 1.2 2001/05/02 17:23:46 achim Exp $
 
 A="${P}.tar.gz wget-new-percentage-3.0.tgz"
 S=${WORKDIR}/${P}
@@ -39,7 +39,7 @@ src_compile() {
 src_install() {   
       
     if [ "`use build`" ] ; then
-        dobin wget
+        dobin src/wget
     else                      
         try make prefix=${D}/usr sysconfdir=${D}/etc/wget infodir=${D}/usr/share/info install
 	 	
