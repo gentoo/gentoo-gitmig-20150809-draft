@@ -1,3 +1,0 @@
-1.32f-1-weekofmonth.patch
-1.32f-2-eom-nextvol.patch
-1.32f-4-run-crash.patch

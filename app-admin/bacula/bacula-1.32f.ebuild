@@ -1,14 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f.ebuild,v 1.1 2004/02/03 02:06:48 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f.ebuild,v 1.2 2004/02/11 01:29:09 zul Exp $
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="featureful client/server network backup suite"
 HOMEPAGE="http://www.bacula.org/"
-SRC_URI="mirror://sourceforge/bacula/${P}.tar.gz
-		mirror://sourceforge/bacula/${PV}-1-weekofmonth.patch
-		mirror://sourceforge/bacula/${PV}-2-eom-nextvol.patch
-		mirror://sourceforge/bacula/${PV}-4-run-crash.patch"
+SRC_URI="mirror://sourceforge/bacula/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -33,17 +30,15 @@ RDEPEND="${DEPEND}
 	app-arch/mt-st"
 
 src_unpack() {
-
 	unpack ${A}
-
 	cd ${S}
 
-	einfo "Applying patches from ${FILESDIR}/${PV}/${PV}-patchlist.txt"
+	einfo "Using ${PV}-1-weekofmonth.patch"
+	patch -p0 < ${FILESDIR}/1.32f/${PV}-1-weekofmonth.patch
 
-	for a in `cat ${FILESDIR}/${PV}/${PV}-patchlist.txt`
-	do
-		patch -p0 < ${FILESDIR}/${PV}/$a || die "Patch failed"
-	done
+	einfo "Using ${PV}-2-eom-nextvol.patch"
+	patch -p0 < ${FILESDIR}/1.32f/${PV}-2-eom-nextvol.patch
+
 }
 
 src_compile() {
