@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-db
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.23 2004/12/29 20:38:35 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.24 2005/04/01 16:42:54 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org>
+  foomatic-db-20040302.ebuild:
+  stable on ia64
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
