@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.3 2002/09/07 14:31:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.4 2002/10/20 23:56:48 seemant Exp $
+
+*nvi-1.81.5 (20 Oct 2002)
+
+  20 Oct 2002; Seemant Kulleen <seemant@gentoo.org> nvi-1.81.5.ebuild
+  files/digest-nvi-1.81.5 :
+
+  Version bump, thanks to: ajs@pigpond.com (Andrew Snare) in bug #7502.
 
 *nvi-1.81.4 (1 Feb 2002)
 
