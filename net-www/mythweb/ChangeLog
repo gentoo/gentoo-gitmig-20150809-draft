@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mythweb
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/ChangeLog,v 1.7 2004/02/02 18:00:48 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/ChangeLog,v 1.8 2004/03/23 18:57:36 mholzer Exp $
+
+  23 Mar 2004; Martin Holzer <mholzer@gentoo.org> mythweb-0.10.ebuild:
+  fixing depend qa issue. see 45343.
 
 *mythweb-0.14 (02 Feb 2004)
 

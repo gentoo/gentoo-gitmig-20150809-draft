@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/mythweb-0.10.ebuild,v 1.2 2003/09/06 01:54:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/mythweb-0.10.ebuild,v 1.3 2004/03/23 18:57:36 mholzer Exp $
 
 IUSE="apache2"
 DESCRIPTION="PHP scripts intended to manage MythTV from a web browser."
@@ -13,8 +13,6 @@ KEYWORDS="~x86"
 
 RDEPEND="dev-db/mysql
 	dev-php/mod_php"
-
-DEPEND="${RDEPEND}"
 
 src_install() {
 
