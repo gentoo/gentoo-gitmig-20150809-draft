@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/gentoo-stats-0.4.ebuild,v 1.10 2003/04/09 15:54:04 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/gentoo-stats-0.4.ebuild,v 1.11 2003/07/18 18:56:23 tester Exp $
 
 DESCRIPTION="Gentoo Linux usage statistics client daemon"
 HOMEPAGE="http://stats.gentoo.org"
@@ -9,7 +9,7 @@ SRC_URI="ftp://stats.gentoo.org/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 # devs: please do not change this, it wouldn't make much sense right now
-KEYWORDS="x86 ppc sparc  -alpha hppa arm"
+KEYWORDS="x86 ppc sparc  -alpha hppa arm amd64"
 
 RDEPEND=">=dev-lang/perl-5.6.1
 	dev-perl/libwww-perl
