@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/estraier/estraier-1.2.18.ebuild,v 1.3 2004/08/10 08:09:46 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/estraier/estraier-1.2.18.ebuild,v 1.4 2004/09/07 12:51:58 hattya Exp $
 
 IUSE="debug chasen kakasi zlib"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 RESTRICT="nomirror"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 SLOT="0"
 
 DEPEND=">=dev-db/qdbm-1.8.14
