@@ -1,7 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Don Seiler <rizzo@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/zuul/zuul-1.2.0.ebuild,v 1.3 2003/12/15 20:33:39 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/zuul/zuul-1.2.0.ebuild,v 1.4 2004/02/23 13:05:17 mr_bones_ Exp $
 
 inherit webapp-apache
 
@@ -11,15 +11,15 @@ SRC_URI="mirror://sourceforge/zuul/${P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~alpha"
 DEPEND=""
 RDEPEND=">=mod_php-4.1
 	>=net-p2p/mldonkey-2.5"
 IUSE=""
 
-webapp-detect || NO_WEBSERVER=1
 
 pkg_setup() {
+	webapp-detect || NO_WEBSERVER=1
 	webapp-pkg_setup "${NO_WEBSERVER}"
 	einfo "Installing for ${WEBAPP_SERVER}"
 }

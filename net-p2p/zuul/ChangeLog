@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/zuul
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header $
+
+  23 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> zuul-1.0.0.ebuild,
+  zuul-1.1.2.ebuild, zuul-1.2.0.ebuild:
+  header fix; sparc needs deps first; move webapp-detect into unpack
 
   15 Dec 2003; Stuart Herbert <stuart@gentoo.org> zuul-1.2.0.ebuild:
   Fix for bug #32636
