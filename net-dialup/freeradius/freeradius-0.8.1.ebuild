@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.8.1.ebuild,v 1.1 2002/12/12 00:22:29 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.8.1.ebuild,v 1.2 2002/12/12 00:24:33 rphillips Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ DEPEND="sys-devel/gcc"
 
 src_compile() {
 
-  ./configure --prefix=/usr --sysconfdir=/etc --host=${CHOST} || die
+  ./configure --with-gnu-ld --with-snmp=no --prefix=/usr --sysconfdir=/etc --host=${CHOST} || die
   make all || die
 	
 }
