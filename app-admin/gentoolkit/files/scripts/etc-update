@@ -1,62 +1,246 @@
 #!/bin/bash
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Leo Lipelis
+# Authors: (C) Jochem Kossen 2002, (C) Leo Lipelis 2002
+scriptname=`basename $0`
 
-# uses $EDITOR value for editor
-# edit three lines below to your liking
+# edit the lines below to your liking
+
+# arguments used whenever rm is called
 rm_opts="-i"
+
+# arguments used whenever mv is called
 mv_opts="-i"
-editor_opts="-d" # vim diff mode
 
-cfg_files=`find /etc -iname '._cfg????_*'`
+# arguments used whenever cp is called
+cp_opts="-i"
 
-# returns 1 if the file pair still needs to be looked at
-# or 0 if one of the two files was chosen for deletion and
-# everything is fine
+# pager for use with diff commands (see NOTE_2)
+pager="less -E"
+#pager=""
+
+# vim-users: you CAN use vimdiff for diff_command. (see NOTE_1)
+diff_command="diff -uN %file1 %file2"
+#diff_command="vim -d %file1 %file2"
+
+# vim-users: don't use vimdiff for merging (see NOTE_1)
+merge_command="sdiff -s -o %merged %orig %new"
+
+# EXPLANATION
+#
+# pager:
+#
+# Examples of pager usage:
+#	pager=""		# don't use a pager
+#	pager="less -E"	# less
+#	pager="more"	# more
+#
+#
+# diff_command:
+#
+# Arguments:
+#	%file1	[REQUIRED]
+#	%file2	[REQUIRED]
+#
+# Examples of diff_command:
+#	diff_command="diff -uN %file1 %file2"	# diff
+#	diff_command="vim -d %file1 %file2"		# vimdiff
+#
+#
+# merge_command:
+#
+# Arguments:
+#	%orig	[REQUIRED]
+#   %new    [REQUIRED]
+#	%merged	[REQUIRED]
+#
+# Examples of merge_command:
+#	merge_command="sdiff -s -o %merged %old %new"	# sdiff
+#
+
+# NOTE_1: Editors such as vim/vimdiff are not usable for the merge_command
+# because it is not known what filenames the produced files have (the user can
+# choose while using those programs)
+
+# NOTE_2: Make sure pager is set to "" when using an editor as diff_command!
+
+#
+# Find all "new" configuration files, sort, so that ._cfg_0000 is presented
+# before ._cfg_0001
+#
+cfg_files=`find /etc -iname '._cfg????_*' | sort`
+
+#
+# Ask which one of the given two files to install
+#
 rm_extra_file() {
 	old=$1
 	new=$2
-	echo
-	echo "1) Upgrade to new $new"
-	echo "2) Keep existing $old"
-	echo "  OR"
-	echo "3) Edit this file pair again"
-	echo -n "Type (1, 2 or 3): "
+	
+	show_diff $old $new
+	menu1
+	
 	# read and echo 1 char from stdin
-	read -n 1 input
+	read input
 	echo
 	case $input in
 	1)
-		echo
-		echo "deleting $old ..."
-		rm $rm_opts $old
-		echo "moving $new to $old ..."
+		echo "*** upgrading to $new ..."
 		mv $mv_opts $new $old
 		;;
 	2)
-		echo
-		echo "deleting $new ..."
+		echo "*** keeping $old ..."
 		rm $rm_opts $new
 		;;
 	3)
-		echo
-		echo "looking at $old and $new again ..."
-		return 1
+		merge_files $old $new
+		install_merged_file $old $new
+		;;
+	4)
+		rm_extra_file $old $new
+		;;
+	5)
+		echo "*** skipping ..."
 		;;
 	*)
-		echo
-		echo "!!! Please pick a valid choice next time"
-		rm_extra_file $old $new
+		echo "!!! Please pick a valid choice next time !!!"
+		menu1
 		;;
 	esac
 }
 
+#
+# Show menu1
+#
+menu1() {
+echo
+echo
+echo "1) Upgrade to new $new"
+echo "2) Keep existing $old"
+echo "3) Merge the two files"
+echo "4) Show the difference between the two files again"
+echo "  OR"
+echo "5) Skip (keep all files)"
+echo
+echo -n "Type (1, 2, 3, 4 or 5): "									
+}
+
+#
+# Show menu2
+#
+menu2() {
+echo
+echo
+echo "1) Upgrade to merged file"
+echo "2) Show the difference between original and merged file"
+echo "3) Redo the merge"
+echo "4) Keep original file"
+echo "5) Skip (keep all files)"
+echo "  OR"
+echo "6) Restart $scriptname"
+echo
+echo -n "Type (1, 2, 3, 4, 5 or 6): "
+}
+
+#
+# Install merged file
+#
+install_merged_file() {
+	old=$1
+	merged=$1.merged
+	new=$2
+
+	menu2
+	# read and echo 1 char from stdin
+	read input
+	echo
+	case $input in
+	1)
+		echo "*** upgrading to $merged ..."
+		mv $mv_opts $merged $old
+		rm $rm_opts $new
+		;;
+	2)
+		show_diff $old $merged
+		install_merged_file $old $new
+		;;
+	3)
+		merge_files $old $new
+		install_merged_file $old $new
+		;;
+	4)
+		echo "*** keeping original file ..."
+		rm $rm_opts $merged $new
+		;;
+	5)
+		echo "*** skipping ..."
+		;;
+	6)
+		echo "*** restarting $scriptname ..."
+		echo
+		if [ -e $merged ]; then
+			echo "*** an (old?) merged file exists. It will be removed ..."
+			rm $rm_opts $merged
+		fi
+		rm_extra_file $old $new
+		;;
+	*)
+		echo "!!! Please pick a valid choice next time !!!"
+		menu2
+		;;
+	esac
+}
+
+#
+# Show the difference between two files
+#
+show_diff() {
+	echo
+	if [ "`echo $pager`" ]; then
+		(echo "*** showing difference between $1 and $2" && echo && \
+		`echo $diff_command | sed \
+		-e s@%file1@$1@g \
+		-e s@%file2@$2@g` ) | $pager
+	else
+		echo "*** showing difference between $1 and $2" && echo
+		`echo $diff_command | sed \
+		-e s@%file1@$1@g \
+		-e s@%file2@$2@g`
+	fi
+}
+
+#
+# Merge two files
+#
+merge_files() {
+	old=$1
+	merged=$1.merged
+	new=$2
+
+	echo
+	echo "*** merging $old with $new ..."
+
+	if [ -e $merged ]; then
+		echo
+		echo "*** an (old?) merged file already exists. It will be removed ..."
+		echo
+		rm $rm_opts $merged
+	fi
+	
+	# execute the merge command
+	`echo $merge_command |sed \
+	-e s@%merged@$merged@g \
+	-e s@%orig@$old@g \
+	-e s@%new@$new@g`
+}
+
+#
+# Run the script
+#
 for new_full_path in $cfg_files; do
 	file=${new_full_path##*/}
 	old_full_path=${new_full_path%/*}/${file:10}
-	$EDITOR $editor_opts ${old_full_path} ${new_full_path}
-	until rm_extra_file ${old_full_path} ${new_full_path}; do
-		$EDITOR $editor_opts ${old_full_path} ${new_full_path}
-	done
+
+	rm_extra_file ${old_full_path} ${new_full_path}
 done
+echo "*** script finished ..."
