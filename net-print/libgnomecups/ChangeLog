@@ -1,0 +1,8 @@
+# ChangeLog for net-print/libgnomecups
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.1 2003/06/24 00:52:40 foser Exp $
+
+*libgnomecups-0.1.4 (24 Jun 2003)
+
+  24 Jun 2003; foser <foser@gentoo.org> libgnomecups-0.1.4.ebuild, ChangeLog :
+  Initial commit, cups frontend library
