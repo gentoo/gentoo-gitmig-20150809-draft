@@ -1,6 +1,10 @@
 # ChangeLog for media-video/streamdvd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/ChangeLog,v 1.5 2004/07/23 15:27:54 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/ChangeLog,v 1.6 2004/07/27 00:00:21 mr_bones_ Exp $
+
+  26 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  streamdvd-0.4-r1.ebuild:
+  fix use invocation
 
   23 Jul 2004; Michael Imhof <tantive@gentoo.org> streamdvd-0.4-r1.ebuild:
   Version bumped. Closes #52452, #47807.
