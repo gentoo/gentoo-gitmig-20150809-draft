@@ -1,5 +1,5 @@
 --- tmda-1.0/TMDA/pythonlib/email/Generator.py  2003-07-30 13:32:54.000000000 -0600
-+++ /usr/lib/python2.3/site-packages/TMDA/pythonlib/email/Generator.py  2004-08-14 15:32:21.000000000 -0600
++++ tmda-1.0mp/TMDA/pythonlib/email/Generator.py  2004-08-14 15:32:21.000000000 -0600
 @@ -197,7 +197,14 @@
          if cset is not None:
              payload = cset.body_encode(payload)

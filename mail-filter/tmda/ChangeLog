@@ -1,6 +1,15 @@
 # ChangeLog for mail-filter/tmda
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/ChangeLog,v 1.7 2004/09/22 09:06:12 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/ChangeLog,v 1.8 2004/09/25 19:25:26 ticho Exp $
+
+  25 Sep 2004; Andrej Kacian <ticho@gentoo.org>
+  +files/tmda-1.0-multipart-handling.patch,
+  -files/tmda-1.0.3-multipart-handling.patch, tmda-1.0.3-r1.ebuild,
+  tmda-1.0.3.ebuild, tmda-1.0.ebuild, +tmda-1.0-r1.ebuild:
+  Apply multipart-handling patch to 1.0 as well (1.0-r1). Do not install
+  contrib/getuserinfo-vpopmail.sh, as it doesn't exist. Renamed
+  multipart-handling patch filename and modified it, so it doesn't change
+  files in live system (nasty one, sorry).
 
   22 Sep 2004; Andrej Kacian <ticho@gentoo.org> tmda-0.92.ebuild,
   tmda-1.0.3-r1.ebuild, tmda-1.0.3.ebuild, tmda-1.0.ebuild:

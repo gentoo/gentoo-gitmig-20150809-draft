@@ -1,21 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a5c4a29dcd6cd3b169ab4e4deccec1a6 ChangeLog 6970
-MD5 911e80b3ca747a70aa0c21f7e88c0794 tmda-1.0.3-r1.ebuild 1688
+MD5 75f6abc814c6b93fd4da6b21685e3107 ChangeLog 7444
+MD5 952475b22dac3406d5d71fdd44c6cde2 tmda-1.0-r1.ebuild 1634
+MD5 477c54625aa12fe135542e36d6939d51 tmda-1.0.3-r1.ebuild 1662
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 20739f02e1090e5de1e95ad374601d3f tmda-1.0.ebuild 1527
+MD5 427a0665420e32bc6408c1f67db8f374 tmda-1.0.ebuild 1503
 MD5 0067fa6df94b5c5f0dc272e72ff7d0d0 tmda-0.92.ebuild 1529
-MD5 1449fdc809e9f988a9000cb603e627de tmda-1.0.3.ebuild 1555
+MD5 16661ae384785cab84b49f1edeaf6ea6 tmda-1.0.3.ebuild 1531
 MD5 5953212bfef29b28dc63d4602b7fb9fc files/digest-tmda-1.0 57
+MD5 5953212bfef29b28dc63d4602b7fb9fc files/digest-tmda-1.0-r1 57
 MD5 7bb9e7641e04129bd8f857fb7feb59e3 files/digest-tmda-0.92 58
 MD5 c7e7e04f751268e6e20f08b217c81e47 files/digest-tmda-1.0.3 59
-MD5 95fc93384aae13c11bc76f901580e6ee files/tmda-1.0.3-multipart-handling.patch 940
 MD5 c7e7e04f751268e6e20f08b217c81e47 files/digest-tmda-1.0.3-r1 59
+MD5 644add9bcbc9a3492abd25dfbe1b7a3b files/tmda-1.0-multipart-handling.patch 918
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBUUCS10xuJSrg3/sRAlRZAJ49CU5h5cs0E6yWD5eXii5ITa6obACbBtMW
-AFXxvP60CRCgTPr8nQnW2/U=
-=QyB1
+iD8DBQFBVcYx10xuJSrg3/sRAhupAJ9hG2UaM6v/M3yXGMpPLhUfmnL/TgCfWBls
+XWp/+6YPO2a+PJS5Ihk0jPI=
+=mmcs
 -----END PGP SIGNATURE-----
