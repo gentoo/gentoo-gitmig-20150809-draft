@@ -1,0 +1,25 @@
+#!/sbin/runscript
+# Copyright 2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/files/armyops-ded.rc,v 1.1 2004/09/14 22:40:36 wolf31o2 Exp $
+
+depend() {
+	use net
+	}
+
+start() {
+	ebegin "Starting Americas Army Server"
+	cd /opt/americas-army/System
+	start-stop-daemon --start --chuid games \
+		--background --make-pidfile \
+		--pidfile /var/run/armyopsserver.pid \
+		--exec ./server-bin -- ${SERVERTYPE} ${MAP} log=${LOGFILE} ini=${INIFILE}
+		eend $?
+	}
+
+stop() {
+	ebegin "Stopping Americas Army Server"
+	start-stop-daemon --stop --quiet --pidfile /var/run/armyopsserver.pid
+	rm /var/run/armyopsserver.pid
+	eend $?
+	}

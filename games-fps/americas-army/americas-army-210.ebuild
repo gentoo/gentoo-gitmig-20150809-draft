@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-210.ebuild,v 1.7 2004/07/26 04:39:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-210.ebuild,v 1.8 2004/09/14 22:40:36 wolf31o2 Exp $
 
 inherit games
 
@@ -18,15 +18,14 @@ SLOT="0"
 KEYWORDS="x86 amd64"
 RESTRICT="nostrip nomirror"
 
-# dedicated is unused at this time until I can find some good generic dedicated
-# server scripts to include.
-IUSE="opengl" # dedicated
+IUSE="opengl dedicated"
 
 DEPEND="virtual/libc
 	app-arch/unzip"
 RDEPEND="virtual/libc
 	opengl? ( virtual/opengl )
-	amd64? ( app-emulation/emul-linux-x86-xlibs )"
+	amd64? ( app-emulation/emul-linux-x86-xlibs
+			 app-emulation/emul-linux-x86-nvidia )"
 
 S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/${PN}
@@ -58,9 +57,12 @@ src_install() {
 	exeinto ${dir}
 	doexe bin/armyops || die "doexe failed"
 
-	dogamesbin "${FILESDIR}/armyops"
-	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/armyops
-	dosym ${dir}/armyops ${GAMES_BINDIR}/armyops
+	if use dedicated; then
+		exeinto /etc/init.d ; newexe ${FILESDIR}/armyops-ded.rc armyops-ded
+		insinto /etc/conf.d ; newins ${FILESDIR}/armyops-ded.conf.d armyops-ded
+	fi
+
+	games_make_wrapper armyops ./armyops ${dir}
 
 	prepgamesdirs
 	make_desktop_entry armyops "America's Army" ArmyOps.xpm
@@ -71,4 +73,9 @@ pkg_postinst() {
 	einfo "To play the game run:"
 	einfo " armyops"
 	echo
+	if use dedicated; then
+		einfo "To start a dedicated server, run"
+		einfo "	/etc/init.d/armyops-ded start"
+		echo
+	fi
 }

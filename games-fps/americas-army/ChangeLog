@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/americas-army
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.20 2004/07/26 04:39:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/ChangeLog,v 1.21 2004/09/14 22:40:36 wolf31o2 Exp $
+
+  14 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org> -files/armyops,
+  +files/armyops-ded.conf.d, +files/armyops-ded.rc,
+  -americas-army-200a-r1.ebuild, americas-army-210.ebuild:
+  Removed old versions and added dedicated server init scripts by Bjorn
+  Michaelsen <bmichaelsen@gmx.de>. Closing bug #58581.
 
   25 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   americas-army-210.ebuild:
