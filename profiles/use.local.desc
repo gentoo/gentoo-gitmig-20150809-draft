@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.186 2003/12/14 11:12:17 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.187 2003/12/15 09:18:09 iggy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -204,6 +204,7 @@ sys-apps/parted:noreiserfs - Do not include reiserfs support
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
 sys-apps/tinylogin:uclibc - Compile with uclibc :)
 sys-apps/tpctl:tpctlir - enable support for thinkpad models 760 and 765
+sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-devel/gcc:multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
 sys-devel/gdb:objc - If you want to be able to debug Objective C code.
 sys-devel/oskit:oskit-noassert - Disable assertions in debugging
