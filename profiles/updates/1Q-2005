@@ -173,3 +173,4 @@ move sys-apps/daemontools-scripts sys-process/daemontools-scripts
 move sys-apps/daemontools sys-process/daemontools
 move sys-apps/cronbase sys-process/cronbase
 move sys-apps/dcron sys-process/dcron
+move sys-apps/fcron sys-process/fcron
