@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4.ebuild,v 1.4 2004/06/24 22:54:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4.ebuild,v 1.5 2004/06/25 18:13:57 agriffis Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -71,7 +71,7 @@ src_configure() {
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} dbm bsddb"
 		use readline \
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} readline"
-		[ -z "use X" -o -z "use tcltk" ] \
+		( use !X || use !tcltk ) \
 			&& PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _tkinter"
 		use ncurses \
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _curses _curses_panel"
@@ -93,7 +93,7 @@ src_compile() {
 
 	local myconf
 	#if we are creating a new build image, we remove the dependency on g++
-	if [ "`use build`" -a ! "`use bootstrap`" ]; then
+	if use build && ! use bootstrap; then
 		myconf="--with-cxx=no"
 	fi
 

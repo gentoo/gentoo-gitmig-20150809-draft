@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.2.ebuild,v 1.13 2004/06/24 22:54:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.2.ebuild,v 1.14 2004/06/25 18:13:57 agriffis Exp $
 
 IUSE="readline tcltk berkdb bootstrap"
 
@@ -55,7 +55,7 @@ src_compile() {
 
 	local myopts
 	#if we are creating a new build image, we remove the dependency on g++
-	if [ "`use build`" -a ! "`use bootstrap`" ]
+	if use build && ! use bootstrap
 	then
 		myopts="--with-cxx=no"
 	fi
