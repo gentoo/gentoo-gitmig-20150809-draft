@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icesndcfg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icesndcfg/ChangeLog,v 1.13 2004/11/02 14:25:01 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icesndcfg/ChangeLog,v 1.14 2004/11/02 21:54:25 gustavoz Exp $
+
+  02 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> icesndcfg-1.3.ebuild:
+  Stable on sparc
 
   02 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> icesndcfg-1.3.ebuild:
   Stable for x86
