@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/curl-7.9.7.ebuild,v 1.10 2002/12/09 04:33:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/curl-7.9.7.ebuild,v 1.11 2002/12/23 17:37:42 mholzer Exp $
 
 DESCRIPTION="A Client that groks URLs"
-SRC_URI="http://curl.haxx.se/download/${P}.tar.gz"
+SRC_URI="http://curl.haxx.se/download/${P}.tar.bz2"
 HOMEPAGE="http://curl.haxx.se"
 
 SLOT="0"
@@ -19,6 +19,9 @@ src_compile() {
 	use ssl \
 		&& myconf="--with-ssl" \
 		|| myconf="--without-ssl"
+	use ipv6 \
+		&& myconf="--enable-ipv6" \
+		|| myconf="--disable-ipv6"
 
 	econf ${myconf}
 	emake || die

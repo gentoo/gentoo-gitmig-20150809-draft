@@ -1,18 +1,25 @@
 # ChangeLog for net-ftp/curl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/ChangeLog,v 1.7 2002/12/17 03:44:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/ChangeLog,v 1.8 2002/12/23 17:37:42 mholzer Exp $
+
+*curl-7.10.2 (19 Nov 2002)
+
+  23 Dec 2002; Martin Holzer <mholzer@gentoo.org> curl-7.9.7.ebuild files/digest-curl-7.10.2 Changelog :
+  Changed SRC_URI from .tar.gz to .tar.bz2
 
   17 Dec 2002; Aron Griffis <agriffis@gentoo.org> curl-7.10.2.ebuild :
   Added ~alpha to KEYWORDS
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*curl-7.10.2 (19 Nov 2002)
 
   19 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
   Version bump + more USE flag support
 
 *curl-7.9.7 (17 May 2002)
+
+  23 Dec 2002; Martin Holzer <mholzer@gentoo.org> curl-7.9.7.ebuild files/digest-curl-7.9.7 Changelog :
+  Ipv6 now configured by emerge. Fixed #11214.
+  Changed SRC_URI from .tar.gz to .tar.bz2
 
   06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
