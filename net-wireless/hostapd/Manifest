@@ -3,7 +3,9 @@ MD5 7416e361c8dc181f353a4bd936d7844c hostapd-0.3.0.ebuild 1735
 MD5 73fcafdf3db141b6061f35c727a9e5db hostapd-0.2.4.ebuild 1075
 MD5 b65b3a3d777b7e4d2ed689511da99e76 ChangeLog 1731
 MD5 52a4b928b36a98e530ae455b73f868f5 metadata.xml 462
+MD5 d9fcdafb8919761bdce362f47aec8e95 hostapd-0.3.1.ebuild 1676
 MD5 44285ed8dadd7473eb41d3b67f318120 files/digest-hostapd-0.2.4 65
 MD5 ba14f3282c1fe345b2b9bc3233bc2f6d files/digest-hostapd-0.2.5 65
 MD5 1ba76b2b1bb9b838b8b72d9d99348f46 files/digest-hostapd-0.3.0 149
+MD5 3545835b787224800fe3423a60f29808 files/digest-hostapd-0.3.1 149
 MD5 cf287b50f0ccd832a08fb3031281cd4f files/hostapd.init.d 858
