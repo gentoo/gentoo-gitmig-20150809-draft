@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/larswm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/larswm/ChangeLog,v 1.5 2004/06/19 16:30:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/larswm/ChangeLog,v 1.6 2004/06/22 16:03:03 usata Exp $
+
+*larswm-7.5.1 (23 Jun 2004)
+
+  23 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +larswm-7.5.1.ebuild:
+  Version bumped, thanks to Lars Bernhardsson <lab@fnurt.net> in bug #54247
 
 *larswm-7.5.0 (20 Jun 2004)
 
