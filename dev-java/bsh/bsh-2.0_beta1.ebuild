@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta1.ebuild,v 1.6 2004/06/27 16:53:10 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta1.ebuild,v 1.7 2004/09/17 09:49:04 axxo Exp $
 
 inherit java-pkg
 
 DESCRIPTION="BeanShell is a small, free, embeddable, Java source interpreter with object scripting language features."
-SRC_URI="http://www.beanshell.org/${P/_beta1/b1}.jar"
+SRC_URI="http://www.beanshell.org/${P/_beta1/b1}.jar http://dev.gentoo.org/~axxo/distfiles/beanshell-icon.png"
 HOMEPAGE="http://www.beanshell.org/"
 KEYWORDS="x86 amd64 ~ppc"
 LICENSE="LGPL-2.1"
@@ -30,7 +30,7 @@ src_install() {
 
 	if use gnome || use kde ; then
 		insinto /usr/share/pixmaps
-		doins ${FILESDIR}/beanshell-icon.png
+		doins ${DISTDIR}/beanshell-icon.png
 
 		insinto /usr/share/applications
 		doins ${FILESDIR}/beanshell.desktop
