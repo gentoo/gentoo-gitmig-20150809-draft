@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlweb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.2 2004/06/25 00:03:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.3 2004/08/08 08:53:56 mattam Exp $
+
+  08 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> ocamlweb-1.34.ebuild:
+  Mark stable.
 
 *ocamlweb-1.34 (05 Feb 2004)
 
