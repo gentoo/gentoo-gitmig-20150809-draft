@@ -1,7 +1,14 @@
 # ChangeLog for sys-devel/gcc-mips64
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.1 2003/11/17 02:03:26 kumba Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.2 2004/02/18 10:04:32 kumba Exp $
 
+*gcc-mips64-3.3.3 (18 Feb 2004)
+
+  18 Feb 2004; Joshua Kinard <kumba@gentoo.org> gcc-mips64-3.3.1.ebuild,
+  gcc-mips64-3.3.2.ebuild, gcc-mips64-3.3.3.ebuild,
+  files/gcc-3.3.3-gentoo-branding.patch:
+  New gcc-3.3.3 release (on 20040214) and also includes a 20040217 branch update
+  to match the system compiler.
 
 *gcc-mips64-3.3.2 (16 Nov 2003)
 

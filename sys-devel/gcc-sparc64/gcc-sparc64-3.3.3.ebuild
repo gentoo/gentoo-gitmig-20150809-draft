@@ -1,27 +1,30 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/gcc-mips64-3.3.1.ebuild,v 1.2 2004/02/18 10:04:32 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.3.3.ebuild,v 1.1 2004/02/18 10:03:54 kumba Exp $
 
 
 # Variables 
+inherit eutils
 MYARCH="$(echo ${PN} | cut -d- -f2)"
 TMP_P="${P/-${MYARCH}/}"
 TMP_PN="${PN/-${MYARCH}/}"
 I="/usr"
 S="${WORKDIR}/${P}"
+BRANCH_UPDATE="20040217"
 
-
-DESCRIPTION="Mips64 Kernel Compiler (Experimental)"
+DESCRIPTION="Sparc64 Kernel Compiler (Experimental)"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
-SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${TMP_P}/${TMP_P}.tar.bz2"
+SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${TMP_P}/${TMP_P}.tar.bz2
+	mirror://gentoo/${TMP_P}-branch-update-${BRANCH_UPDATE}.patch.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="~mips"
+KEYWORDS="~sparc"
 
 DEPEND="virtual/glibc
-	>=sys-devel/binutils-2.14.90.0.5
-	>=sys-devel/gcc-config-1.3.1"
+	>=sys-devel/binutils-2.14.90.0.7
+	>=sys-devel/gcc-config-1.3.1
+	!sys-devel/egcs64-sparc"
 
 RDEPEND="virtual/glibc
 	>=sys-devel/gcc-config-1.3.1
@@ -40,15 +43,18 @@ version_patch() {
 }
 
 src_unpack() {
-	unpack ${TMP_P}.tar.bz2
+	unpack ${A}
 	cd ${WORKDIR}
 	ln -s ${TMP_P} ${P}
 	cd ${S}
 
+	# Patch in Branch update
+	epatch ${WORKDIR}/${TMP_P}-branch-update-${BRANCH_UPDATE}.patch
+
 	# Make gcc's version info specific to Gentoo
 	if [ -z "${PP_VER}" ]; then
 		version_patch ${FILESDIR}/${TMP_P}-gentoo-branding.patch \
-			"(Gentoo Linux ${PVR})" || die "Failed Branding"
+			"${BRANCH_UPDATE} (Gentoo Linux ${PVR})" || die "Failed Branding"
 	fi
 }
 
