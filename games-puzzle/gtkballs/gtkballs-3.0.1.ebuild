@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtkballs/gtkballs-3.0.1.ebuild,v 1.1 2003/10/26 06:20:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtkballs/gtkballs-3.0.1.ebuild,v 1.2 2003/12/27 08:06:42 vapier Exp $
 
 inherit games
 
@@ -21,10 +21,11 @@ IUSE="nls"
 
 src_unpack() {
 	unpack ${A}
-
+	cd ${S}
+	sed -i 's:touch Makefile\.in::' configure
 	sed -i \
-		-e 's/__func__/__FUNCTION__/g' ${S}/src/themerc.c || \
-			die "sed src/themerc.c failed"
+		's/__func__/__FUNCTION__/g' src/themerc.c \
+		|| die "sed src/themerc.c failed"
 }
 
 src_compile() {
