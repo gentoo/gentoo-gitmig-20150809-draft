@@ -1,4 +1,7 @@
 #!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/files/snmpd-5.1.rc6,v 1.2 2004/04/10 14:14:56 mholzer Exp $
 
 depend() {
 	use logger
