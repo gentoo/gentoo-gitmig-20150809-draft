@@ -4,11 +4,7 @@ MD5 d66885a4f4fda4d047843a29bc611fa5 metadata.xml 1347
 MD5 b718cc95bf0c5b1776c9273cf4b4f6db ecb-2.21.ebuild 1221
 MD5 e12bf9035feb5fcd4f551feede8645b1 ecb-2.24.ebuild 1222
 MD5 16eb737af1695abe7371fc78c0a863b3 files/digest-ecb-1.96 60
-MD5 9f6fdeeb2bb9e4dfef117f28fe5995de files/ecb.texi-gentoo.patch 251
 MD5 b2fecab970cb3caf89959102b9494cc9 files/ecb-help.el-ecb-1.96-gentoo.diff 1270
-MD5 0a0e7458fb9bcb8ccffce77ab25944a9 files/ecb-help.el-gentoo.patch 1427
-MD5 bf88d754c37fc5df12a996583552816b files/50ecb-gentoo.el 134
-MD5 3888d43ea733def4c7566c06aa442f79 files/ecb-1.90-gentoo.patch 2393
 MD5 af9f327c163294046f2addc281abd91f files/70ecb-gentoo.el 88
 MD5 55d3c6fd5bb0cfbfea6600fc4340226b files/digest-ecb-2.21 60
 MD5 eaf88c4204fa1150d1e9ee41b7c8dd9f files/digest-ecb-2.24 60
