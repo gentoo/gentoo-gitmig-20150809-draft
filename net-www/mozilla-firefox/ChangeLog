@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.68 2004/09/29 14:53:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.69 2004/10/02 06:50:40 brad Exp $
+
+*mozilla-firefox-1.0_pre-r2 (02 Oct 2004)
+
+  02 Oct 2004; Brad Laue <brad@gentoo.org>
+  +mozilla-firefox-1.0_pre-r2.ebuild:
+  Version bump. Moving to x86 stable due to security reasons.
 
 *mozilla-firefox-1.0_pre-r1 (28 Sep 2004)
 
