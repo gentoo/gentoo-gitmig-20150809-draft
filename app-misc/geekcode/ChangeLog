@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/geekcode
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.1 2003/06/05 13:35:04 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.2 2003/06/08 18:40:38 brad Exp $
+
+  08 Jun 2003; Brad Laue <brad@gentoo.org> geekcode-1.7.ebuild:
+  Mark stable on x86
 
 *geekcode-1.7 (05 June 2003)
 

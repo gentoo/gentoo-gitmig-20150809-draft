@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Submitted by: Ferdy <ferdy@ferdyx.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/geekcode-1.7.ebuild,v 1.1 2003/06/05 13:35:04 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/geekcode-1.7.ebuild,v 1.2 2003/06/08 18:40:38 brad Exp $
 
 DESCRIPTION="Geek code generator"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 
