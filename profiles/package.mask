@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <mkeadle@gentoo.org> (22 Apr 2003)
+# new fluxbox dev series. no guarentees.
+>=x11-wm/fluxbox-0.9.0
+
 # <utx@gentoo.org> (17 Apr 2003)
 # new tcl/tk should be quite stable, but requires fixes and updates of other ebuilds
 >=dev-lang/tcl-8.4.0
