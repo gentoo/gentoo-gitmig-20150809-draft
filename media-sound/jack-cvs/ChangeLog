@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/jack-cvs
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/ChangeLog,v 1.1 2003/01/02 09:28:09 raker Exp $
+
+*jack-cvs-0.44 (02 Jan 2003)
+
+  02 Jan 2003; Nick Hadaway <raker@gentoo.org> jack-cvs-0.44.ebuild,
+  files/digest-jack-cvs-0.44 :
+  New ebuild.  Conflicts with jack-audio-connection-kit.  As this
+  is a "live" cvs build it will permanently marked unstable.
