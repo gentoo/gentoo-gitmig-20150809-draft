@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-1.32.ebuild,v 1.1 2003/12/03 05:01:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-1.32.ebuild,v 1.2 2004/06/09 22:14:07 agriffis Exp $
 
 inherit eutils
 
@@ -41,7 +41,7 @@ src_install() {
 	dodir /etc/xinetd.d
 
 	# custom options
-	export USETCPD=$(yesno [ `use tcpd` ])
+	export USETCPD=$(yesno useq tcpd)
 	export JAIL=y
 	export MAKETLS=$(yesno [ ! -e /etc/glftpd-dsa.pem ])
 	export WHICHNETD=x
