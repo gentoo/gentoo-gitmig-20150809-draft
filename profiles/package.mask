@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3069 2004/08/16 23:00:22 lv Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3070 2004/08/17 00:18:27 lv Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -103,6 +103,7 @@ gnome-extra/evolution-data-server
 # Not to be unmasked before all packages of this brand ship out.
 app-emulation/emul-linux-x86-glibc
 app-emulation/emul-linux-x86-compat
+>=app-emulation/emul-linux-x86-baselibs-1.2
 
 # <ciaranm@gentoo.org> (Jul 26 2004)
 # Mask kvim until vim7 is out. See bug #56992 for details.
