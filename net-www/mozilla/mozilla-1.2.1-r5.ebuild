@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r5.ebuild,v 1.8 2003/04/06 03:02:41 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r5.ebuild,v 1.9 2003/04/06 03:06:26 joker Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -751,6 +751,3 @@ pkg_postrm() {
 	fi
 }
 
-# Sparc support ...
-replace-flags "-mcpu=ultrasparc" "-mcpu=v8"
-replace-flags "-mcpu=v9" "-mcpu=v8"
