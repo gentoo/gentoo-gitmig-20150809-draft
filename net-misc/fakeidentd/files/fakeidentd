@@ -1,0 +1,46 @@
+#!/bin/sh
+# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/files/fakeidentd,v 1.1 2001/08/28 22:32:13 lamer Exp $
+
+#RCUPDATE:2 3 4:75:
+
+. /etc/rc.d/config/functions
+
+SERVICE=fakeidentd
+EXE=/usr/sbin/fakeidentd
+PIDFILE=/var/run/fakeidentd.pid
+opts="start stop restart"
+
+# See how we were called.
+
+function start() {
+
+        # Start daemons.
+
+        ebegin "Starting ${SERVICE}..."
+	start-stop-daemon --start --quiet --exec ${EXE}
+	eend $? "Started $SERVICE." "Error Starting ${SERVICE}"
+
+}
+
+function stop() {
+
+        # Stop daemons.
+
+        ebegin "Shutting down ${SERVICE}..."
+		killall -KILL fakeidentd
+	eend $? "Stopped $SERVICE." "Error Stopping ${SERVICE}."
+
+}
+
+function restart () {
+
+	stop
+	start
+
+}
+
+doservice ${@}
+

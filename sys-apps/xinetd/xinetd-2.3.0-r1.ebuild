@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.0-r1.ebuild,v 1.1 2001/08/15 14:27:31 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.0-r1.ebuild,v 1.2 2001/08/28 22:32:13 lamer Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -26,7 +26,7 @@ src_compile() {
   
     try ./configure --with-loadavg --prefix=/usr --mandir=/usr/share/man --host=${CHOST} $myconf
     # Parallel make does not work
-    try make
+    make || die
 
 }
 
