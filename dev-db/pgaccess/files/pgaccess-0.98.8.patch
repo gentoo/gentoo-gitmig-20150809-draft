@@ -1,0 +1,37 @@
+diff -rc pgaccess-0.98.8/Makefile pgaccess-0.98.8.new/Makefile
+*** pgaccess-0.98.8/Makefile	Wed Aug 28 18:11:22 2002
+--- pgaccess-0.98.8.new/Makefile	Tue Feb 25 08:52:15 2003
+***************
+*** 7,21 ****
+  #
+  #-------------------------------------------------------------------------
+  
+! bindir = /usr/bin/X11
+! libdir = /usr/lib/pgaccess
+! wish = /usr/bin/wish
+  
+  pgaccess: 
+  	chmod a+x pgaccess.tcl
+! 	mkdir $(libdir)
+  	cp -R * $(libdir)
+! 	ln -s $(libdir)/pgaccess.tcl $(bindir)/pgaccess
+  
+  all: pgaccess
+  
+--- 7,22 ----
+  #
+  #-------------------------------------------------------------------------
+  
+! bindir := $(prefix)/usr/bin/X11
+! libdir := $(prefix)/usr/lib/pgaccess
+! wish := `which wish`
+  
+  pgaccess: 
+  	chmod a+x pgaccess.tcl
+! 	[ -d $(libdir) ] || mkdir -p $(libdir)
+  	cp -R * $(libdir)
+! 	[ -d $(bindir) ] || mkdir -p $(bindir)
+! 	cd $(bindir) && ln -s ../../lib/pgaccess/pgaccess.tcl $(bindir)/pgaccess
+  
+  all: pgaccess
+  

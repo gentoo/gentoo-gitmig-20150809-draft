@@ -1,0 +1,12 @@
+# ChangeLog for dev-db/pgaccess
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.1 2003/03/18 05:23:54 nakano Exp $
+
+*pgaccess-0.98.8 (18 Mar 2003)
+
+  18 Mar 2003; Masatomo Nakano <nakano@gentoo.org> pgaccess-0.98.8.ebuild,
+  files/pgaccess-0.98.8.patch:
+
+  Initial import.  Ebuild submitted by Dirk Heinrichs 
+  <ext-dirk.heinrichs@nokia.com>.
+
