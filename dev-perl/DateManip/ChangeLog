@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateManip
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.12 2003/09/10 19:10:04 max Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.13 2004/01/18 19:57:13 tuxus Exp $
+
+  18 Jan 2004; <tuxus@gentoo.org> DateManip-5.42a-r1.ebuild:
+  Added ~mips to KEYWORDS.
 
 *DateManip-5.42a-r1 (10 Sep 2003)
 
