@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/diffstat-1.34.ebuild,v 1.1 2004/02/15 09:37:08 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/diffstat-1.34.ebuild,v 1.2 2004/02/15 15:57:41 kumba Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="diffstat reads the output of diff and displays a histogram of the insertions, deletions, and modifications per-file"
@@ -13,11 +15,10 @@ KEYWORDS="~x86 ~sparc ~ppc ~mips"
 
 DEPEND="sys-apps/diffutils"
 
-
-#src_compile() {
-#	econf || die
-#	emake || die
-#}
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-hard-locale.patch
+}
 
 src_install() {
 	dobin diffstat
