@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/i8krellm/i8krellm-2.3.ebuild,v 1.4 2003/09/06 05:45:17 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/i8krellm/i8krellm-2.3.ebuild,v 1.5 2004/03/08 05:28:59 latexer Exp $
 
 IUSE="gtk2"
 
@@ -17,7 +17,7 @@ DEPEND="app-admin/gkrellm
 	x11-libs/gtk+
 	gtk2? ( =x11-libs/gtk+-2*
 		=app-admin/gkrellm-2* )
-	>=sys-apps/i8kutils-1.5"
+	>=app-laptop/i8kutils-1.5"
 
 src_compile() {
 

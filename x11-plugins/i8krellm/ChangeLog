@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/i8krellm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/i8krellm/ChangeLog,v 1.4 2003/10/02 14:09:55 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/i8krellm/ChangeLog,v 1.5 2004/03/08 05:28:59 latexer Exp $
+
+  08 Mar 2004; Peter Johanson <latexer@gentoo.org> i8krellm-2.3.ebuild,
+  i8krellm-2.5.ebuild:
+  i8kutils moved to app-laptop
 
 *i8krellm-2.5 (02 Oct 2003)
 
