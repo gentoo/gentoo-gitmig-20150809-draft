@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.80 2005/04/05 22:17:38 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.81 2005/04/05 22:47:57 mr_bones_ Exp $
+
+  05 Apr 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  syslog-ng-1.6.6.ebuild:
+  Add support for hardened-specified config file
 
   05 Apr 2005; <solar@gentoo.org> +files/syslog-ng.conf.gentoo.hardened:
   - added example hardened syslog-ng conf used by hardened profiles.
