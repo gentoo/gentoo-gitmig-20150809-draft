@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <mr_bones_@gentoo.org> (5 Nov 2003)
+# Temporarily masking until the ebuilds are fixed.
+#
+app-admin/systemimager-client-bin
+app-admin/systemimager-common-bin
+
 # <tberman@gentoo.org> (4 Nov 2003)
 # Unsupported temp. upstream, masking for now.
 #
