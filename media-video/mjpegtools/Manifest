@@ -1,23 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0146a06e44d4b855e471e43099f8a3d4 ChangeLog 15173
 MD5 fe49014257499366bdc6903a9aa33fe5 metadata.xml 311
-MD5 2b1c564990247e3a8205859dd1c2c52f mjpegtools-1.6.1.90-r2.ebuild 1911
-MD5 2e0933d5fbdeab82a7ac0eaa183efce2 mjpegtools-1.6.0-r7.ebuild 2852
-MD5 3e21218e81510d529275ef795634be7e ChangeLog 14667
-MD5 af788cf24679ae25094c71d58008df68 mjpegtools-1.6.2-r3.ebuild 3253
-MD5 60fe66a06badbc2a5e36f508e76d2680 mjpegtools-1.6.2-r1.ebuild 2697
-MD5 0d5f90e8ac4023e403bf79d2e14314cb files/mjpegtools-1.6.0-gcc3.patch 5086
-MD5 6f4bc7cb8bdf27f1ba2d5a69e8fff635 files/mjpegtools-1.6.1.93-fPIC.patch 555
-MD5 cbcc90f9de3aaf0ac12aa6bd1c4db025 files/no-x11-lib-2.patch 469
-MD5 094ac8c3e42a24141ae45bfa0d5d029d files/digest-mjpegtools-1.6.2-r1 69
-MD5 81c49bb48a8d8e3ea4eb360811c01f67 files/no-x11-lib.patch 497
-MD5 6f4bc7cb8bdf27f1ba2d5a69e8fff635 files/mjpegtools-1.6.1.91-fPIC.patch 555
-MD5 abdfec9a9d07b842509b709ba17d69ab files/mjpegtools-1.6.2-nogtk.patch 556
-MD5 961944a5d3c12bdac7baf7d12ea995d7 files/digest-mjpegtools-1.6.0-r7 147
-MD5 0a37dfb174825ed9a9aeee24b8e3da84 files/digest-mjpegtools-1.6.1.90-r2 72
-MD5 6f4bc7cb8bdf27f1ba2d5a69e8fff635 files/mjpegtools-1.6.1.92-fPIC.patch 555
+MD5 58375141c996e1699b3fcec061640f94 mjpegtools-1.6.2-r3.ebuild 3247
 MD5 3150d43b1c44c02265b8481e271093c8 files/altivec-fix-1.6.2.patch 1011
-MD5 a4cae44ea5989aed95d7b8d84aaf0af4 files/mjpegtools-1.6.2-fPIC.patch 9945
-MD5 39b5dadaf6e522165490f099d98b954c files/mjpegtools-1.6.2-dv.patch 634
-MD5 f16b681aebfa408a1ff5b6030c50fad8 files/mjpegtools-1.6.2-gcc34-altivec.patch 3693
-MD5 94b45a7608327840f696deb03ebc5ffc files/1.6.0-r7-ppc.patch 443
-MD5 d67f97f3bd586946968fca9b8d31be85 files/mjpegtools-1.6.2-gcc34.patch 1601
 MD5 094ac8c3e42a24141ae45bfa0d5d029d files/digest-mjpegtools-1.6.2-r3 69
+MD5 a4cae44ea5989aed95d7b8d84aaf0af4 files/mjpegtools-1.6.2-fPIC.patch 9945
+MD5 f16b681aebfa408a1ff5b6030c50fad8 files/mjpegtools-1.6.2-gcc34-altivec.patch 3693
+MD5 d67f97f3bd586946968fca9b8d31be85 files/mjpegtools-1.6.2-gcc34.patch 1601
+MD5 abdfec9a9d07b842509b709ba17d69ab files/mjpegtools-1.6.2-nogtk.patch 556
+MD5 cbcc90f9de3aaf0ac12aa6bd1c4db025 files/no-x11-lib-2.patch 469
+MD5 39b5dadaf6e522165490f099d98b954c files/mjpegtools-1.6.2-dv.patch 634
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCRcRJArHZZzCEUG0RAt07AJ0Unl40STf75qhz03pkC/+C+J3fIgCdFlG3
+WDNilDKtHPS2IQk0/uvYGvI=
+=36b4
+-----END PGP SIGNATURE-----

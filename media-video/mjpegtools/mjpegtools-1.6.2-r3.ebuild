@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.18 2005/03/15 20:03:24 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.19 2005/03/26 20:21:01 eradicator Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -23,7 +23,7 @@ DEPEND="media-libs/jpeg
 	)
 	gtk? ( =x11-libs/gtk+-1.2*
 			=dev-libs/glib-1.2* )
-	avi? ( >=media-video/avifile-0.7.38 )
+	avi? ( media-video/avifile )
 	dv? ( >=media-libs/libdv-0.99 )
 	quicktime? ( virtual/quicktime )
 	sdl? ( >=media-libs/libsdl-1.2.7-r3 )

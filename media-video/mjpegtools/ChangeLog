@@ -1,6 +1,16 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.82 2005/03/15 20:03:24 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.83 2005/03/26 20:21:01 eradicator Exp $
+
+  26 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/1.6.0-r7-ppc.patch, -files/mjpegtools-1.6.0-gcc3.patch,
+  -files/mjpegtools-1.6.1.91-fPIC.patch,
+  -files/mjpegtools-1.6.1.92-fPIC.patch,
+  -files/mjpegtools-1.6.1.93-fPIC.patch, -files/no-x11-lib.patch,
+  -mjpegtools-1.6.0-r7.ebuild, -mjpegtools-1.6.1.90-r2.ebuild,
+  -mjpegtools-1.6.2-r1.ebuild, mjpegtools-1.6.2-r3.ebuild:
+  Removilg older versions. Fixing avifile dependency to accept newer versions
+  as it does compile with them.
 
   15 Mar 2005; Luca Barbato <lu_zero@gentoo.org> mjpegtools-1.6.2-r3.ebuild:
   yet another workaround for gcc
