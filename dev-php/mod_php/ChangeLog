@@ -1,6 +1,6 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.76 2003/05/27 12:55:53 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.77 2003/05/31 21:41:21 robbat2 Exp $
 
 *mod_php-4.3.1-r3 (23 Apr 2003)
 
@@ -72,6 +72,9 @@
   Added permission change to /usr/bin/pear to 755
 
 *mod_php-4.3.1 (18 Feb 2003)
+
+  31 May 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.1.ebuild:
+  Improve the slight java fix with java-config.
 
   22 May 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.1.ebuild:
   Slight fix to the java stuff to forestall problems for the moment.
