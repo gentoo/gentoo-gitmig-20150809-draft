@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorakng/dvorakng-0.6.0.ebuild,v 1.4 2004/06/24 22:09:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorakng/dvorakng-0.6.0.ebuild,v 1.5 2004/07/10 10:53:46 slarti Exp $
 
 DESCRIPTION="Dvorak typing tutor"
 HOMEPAGE="http://freshmeat.net/projects/dvorakng/?topic_id=71%2C861"
@@ -8,7 +8,7 @@ SRC_URI="http://www.free.of.pl/n/nopik/${P}rc1.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 DEPEND="sys-libs/ncurses"
 
