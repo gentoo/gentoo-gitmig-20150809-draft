@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audiocompress
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/ChangeLog,v 1.10 2004/11/23 03:41:51 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/ChangeLog,v 1.11 2005/01/13 22:11:45 fvdpol Exp $
+
+  13 Jan 2005; Frank van de Pol <fvdpol@gentoo.org> audiocompress-1.5.ebuild:
+  Added esound dependency. Closes Bug #77867.
 
   22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   audiocompress-1.5.1.ebuild:

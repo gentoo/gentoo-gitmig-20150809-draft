@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-1.5.ebuild,v 1.5 2004/06/24 23:51:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-1.5.ebuild,v 1.6 2005/01/13 22:11:45 fvdpol Exp $
 
 MY_P="AudioCompress-${PV}"
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="xmms"
 
-DEPEND="xmms? ( media-sound/xmms )"
+DEPEND="xmms? ( media-sound/xmms )
+	media-sound/esound"
 
 S=${WORKDIR}/${MY_P}
 
