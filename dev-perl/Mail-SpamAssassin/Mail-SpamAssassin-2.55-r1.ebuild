@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.55-r1.ebuild,v 1.3 2003/06/18 14:30:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.55-r1.ebuild,v 1.4 2003/06/18 17:24:29 mcummings Exp $
 
 inherit perl-module
 
@@ -18,14 +18,15 @@ DEPEND="dev-perl/Net-DNS
 	dev-perl/PodParser
 	dev-perl/Time-Local"
 
+myconf="INST_PREFIX=/usr SITEPREFIX=\$(PREFIX) INST_SYSCONFDIR=/etc SYSCONFDIR=${D}/etc RUN_RAZOR1_TESTS=n RUN_RAZOR2_TESTS=n"
+mymake="PREFIX=/usr SYSCONFDIR=/etc"
 mydoc="License Changes procmailrc.example sample-nonspam.txt sample-spam.txt"
-myinst="LOCAL_RULES_DIR=${D}/etc/mail/spamassassin"
-myconf="SYSCONFDIR=${D}/etc INST_PREFIX=/usr RUN_RAZOR1_TESTS=n RUN_RAZOR2_TESTS=n"
+
 
 
 src_compile() {
 
-	perl-module_src_prep
+	perl-module_src_compile
 	dodir /etc/mail/spamassassin
 
 }
@@ -39,15 +40,6 @@ src_install () {
 	chmod +x ${D}/etc/init.d/spamd
 	cp ${FILESDIR}/spamd.conf ${D}/etc/conf.d/spamd
 
-	for FILE in `find ${D}usr/share/spamassassin/ -type f -name "*.cf"`; do
-	sed -i -e "s:${D}::g" ${FILE}
-	done
 
-	sed -i -e "s:${D}::g" ${D}/usr/bin/sa-learn
-	sed -i -e "s:${D}::g" ${D}/usr/bin/spamassassin
-	chmod 555 ${D}/usr/bin/spamassassin
-
-	sed -i -e "s:${D}::g" ${D}/usr/bin/spamd 
-	chmod 555 ${D}/usr/bin/spamd
 
 }
