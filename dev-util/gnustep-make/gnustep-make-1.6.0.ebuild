@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.6.0.ebuild,v 1.1 2003/03/31 01:28:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.6.0.ebuild,v 1.2 2003/06/04 13:42:22 joker Exp $
 
 DESCRIPTION="GNUstep makefile package"
 HOMEPAGE="http://www.gnustep.org"
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 	>=media-libs/tiff-3.5.7-r1
 	>=dev-libs/libxml2-2.4.22
 	>=media-libs/audiofile-0.2.3
-	>=x11-wm/WindowMaker-0.80.1"
+	>=x11-wm/windowmaker-0.80.1"
 
 src_compile() {
 	./configure \

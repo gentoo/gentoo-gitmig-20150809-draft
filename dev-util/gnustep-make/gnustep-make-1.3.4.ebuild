@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.3.4.ebuild,v 1.7 2003/02/28 16:54:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.3.4.ebuild,v 1.8 2003/06/04 13:42:22 joker Exp $
 
 DESCRIPTION="GNUstep makefile package (unstable)"
 HOMEPAGE="http://www.gnustep.org"
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc
 	>=dev-libs/openssl-0.9.6d
 	>=media-libs/tiff-3.5.7-r1
 	>=dev-libs/libxml2-2.4.22
-	>=x11-wm/WindowMaker-0.80.1"
+	>=x11-wm/windowmaker-0.80.1"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
 KEYWORDS="x86 sparc "
 SLOT="0"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.5.1.ebuild,v 1.4 2003/02/28 16:54:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.5.1.ebuild,v 1.5 2003/06/04 13:42:22 joker Exp $
 
 IUSE=""
 DESCRIPTION="GNUstep makefile package (unstable)"
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc
 	>=media-libs/tiff-3.5.7-r1
 	>=dev-libs/libxml2-2.4.22
 	>=media-libs/audiofile-0.2.3
-	>=x11-wm/WindowMaker-0.80.1"
+	>=x11-wm/windowmaker-0.80.1"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ~sparc"
 SLOT="0"
