@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/yosucker
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.19 2005/03/09 16:42:35 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.20 2005/03/15 00:47:30 ticho Exp $
+
+  15 Mar 2005; Andrej Kacian <ticho@gentoo.org> yosucker-67.ebuild:
+  Marked stable on x86, because earlier versions are somewhat buggy with
+  current yahoo interface, while this version fixes it. Dale K. Williamson
+  <jadmech1@yahoo.com> has reported it to work flawlessly with several
+  accounts. Bug #84634.
 
 *yosucker-67 (09 Mar 2005)
 
