@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/echat
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/ChangeLog,v 1.1 2003/10/05 21:05:11 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/ChangeLog,v 1.2 2004/01/03 17:46:22 zul Exp $
+
+  03 Jan 2004; Chuck Short <zul@gentoo.org> echat-0.02-r1.ebuild:
+  Header updates
 
 *echat-0.02-r1 (05 Oct 2003)
 
