@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.92 2004/01/26 13:40:43 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.93 2004/02/24 13:50:07 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -12,6 +12,7 @@ ECLASS=kde
 INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.kde.org/"
+IUSE="${IUSE} debug"
 
 DEPEND=">=sys-devel/automake-1.7.0
 	sys-devel/autoconf
@@ -113,7 +114,7 @@ kde_src_compile() {
 				export KDEDIRS="${PREFIX}:${KDEDIR}"
 
 				cd $S
-				./configure ${myconf} || configure_die "died running ./configure, $FUNCNAME:configure"
+				./configure ${myconf} || die "died running ./configure, $FUNCNAME:configure"
 				# Seems ./configure add -O2 by default but hppa don't want that but we need -ffunction-sections
 				if [ "${ARCH}" = "hppa" ]
 				then
@@ -135,39 +136,6 @@ kde_src_compile() {
 	shift
 	done
 
-}
-
-# This function is to give the user a message when configure dies.  The reason is that the
-# nvidia drivers cause opengl linkage issues with Qt, so if someone hasn't set them up properly
-# Qt is badly linked and they think it's a KDE related bug.
-configure_die()
-{
-	echo $@
-
-	eerror
-	eerror	"Your KDE program installation died while running the configure script"
-	eerror
-
-	if [ `has_version media-video/nvidia-glx` ]
-	then
-		eerror	"You're using the nvidia drivers.  If you've changed GL implementations since "
-		eerror  "emerging Qt this will cause problems.  This is easily fixed by switching back "
-		eerror	"by running: \"opengl-update xfree\" or \"opengl-update nvidia\" "
-		eerror  "(whichever your Qt was compiled against), then re-emerging this program "
-	fi	
-
-	if [ -f /usr/lib/gcc-lib/${CHOST}/3.2.3/include/stdio.h ]
-	then
-
-		eerror
-		eerror  "If the error was related to not finding the STL, you have a gcc error"
-		eerror  "that is easily fixed by re-emerging the latest version of gcc"
-		eerror  "See http://forums.gentoo.org/viewtopic.php?p=790048#790048"
-		eerror  "or http://bugs.gentoo.org/show_bug.cgi?id=38634"
-		eerror
-	fi
-
-	die
 }
 
 kde_src_install() {
