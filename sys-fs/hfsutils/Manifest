@@ -3,7 +3,7 @@ MD5 af7f045884615a42633246503dd30dac hfsutils-3.2.6-r1.ebuild 822
 MD5 da15456c6db28a3fa6c41b79309eea95 hfsutils-3.2.6-r2.ebuild 925
 MD5 c51dccf2ae534ee804dadbcb11b57292 hfsutils-3.2.6-r3.ebuild 1074
 MD5 0e5548e59e1c4b679b348ea98cebb72f hfsutils-3.2.6.ebuild 708
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 52f9d8e98c8931645c57a3de1c36727d metadata.xml 156
 MD5 fd9d7c89b89c800cd750f13d4f7385d3 files/digest-hfsutils-3.2.6 66
 MD5 fd9d7c89b89c800cd750f13d4f7385d3 files/digest-hfsutils-3.2.6-r1 66
 MD5 fd9d7c89b89c800cd750f13d4f7385d3 files/digest-hfsutils-3.2.6-r2 66
