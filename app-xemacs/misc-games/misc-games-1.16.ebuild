@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/misc-games/misc-games-1.16.ebuild,v 1.5 2004/06/24 23:16:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/misc-games/misc-games-1.16.ebuild,v 1.6 2004/11/01 20:40:11 corsair Exp $
 
 SLOT="0"
 IUSE=""
@@ -9,7 +9,7 @@ PKG_CAT="standard"
 
 DEPEND="app-xemacs/xemacs-base
 "
-KEYWORDS="x86 ~ppc alpha sparc amd64"
+KEYWORDS="x86 ~ppc alpha sparc amd64 ~ppc64"
 
 inherit xemacs-packages
 
