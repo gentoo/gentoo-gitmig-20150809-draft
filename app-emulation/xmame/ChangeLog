@@ -1,8 +1,13 @@
 # ChangeLog for app-games/xmame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/ChangeLog,v 1.6 2002/07/16 02:56:20 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/ChangeLog,v 1.7 2002/07/24 03:10:38 rphillips Exp $
 
 *xmame-0.60.1-r2 (13 June 2002)
+
+  23 Jul 2002; Ryan Phillips <rphillips@gentoo.org> :
+
+  on x86 platforms -O3 doesn't compile.  I included a sed statement
+  to replace -O3 with -O2.
 
   15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
   Added KEYWORDS.
