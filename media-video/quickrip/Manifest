@@ -3,8 +3,8 @@ MD5 5c053d6115751cf48634310eca2a7a5d files/digest-quickrip-0.5 63
 MD5 64d95478491a51aa3b588ced40dde06c files/digest-quickrip-0.6 63
 MD5 64ab3e2747ea5878a3f7fecce80ba5e8 files/digest-quickrip-0.7 63
 MD5 f9c34caac2bb5a41030d71b5e525b00f ChangeLog 886
-MD5 5afbb305cebb84fd6ede797da20a3d98 quickrip-0.4.ebuild 868
-MD5 e9b6fadf69fccc11055dff51c4444ea0 quickrip-0.5.ebuild 868
-MD5 6ab32f8da07f7d027e8c662dc9cba34c quickrip-0.6.ebuild 873
+MD5 f2907727aab30326619165b3dfe68574 quickrip-0.4.ebuild 845
+MD5 27519817ffa43acc9cb077ba0708b87e quickrip-0.5.ebuild 846
+MD5 7875bf08771d90fb89ec861c1af88692 quickrip-0.6.ebuild 852
 MD5 811c07ba7510a315382249fc3adb44fc metadata.xml 175
-MD5 e6d583a0ad89476f311c41069deb2be0 quickrip-0.7.ebuild 801
+MD5 ddb2b7c00533b05e0ca45b2bf6afe4ee quickrip-0.7.ebuild 792
