@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mod_python
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.12 2004/01/24 21:06:45 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.13 2004/01/28 13:39:11 liquidx Exp $
+
+*mod_python-3.0.4-r1 (28 Jan 2004)
+
+  28 Jan 2004; Alastair Tse <liquidx@gentoo.org> mod_python-3.0.4-r1.ebuild:
+  fix missing mod_python.so, add python postinst pyc/pyo generation (#39627)
 
 *mod_python-2.7.10 (24 Jan 2004)
 
