@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131-r1.ebuild,v 1.6 2004/06/19 20:38:58 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131-r1.ebuild,v 1.7 2004/06/23 01:08:07 humpback Exp $
 
 inherit eutils
 
@@ -53,7 +53,7 @@ src_install() {
 pkg_postinst() {
 	einfo
 	einfo "Please read /usr/share/doc/${PN}-${PVR}/README.Gentoo.gz"
-	einfo "And please notice that now msn-transport comes with a init.d script"
+	einfo "And please notice that now aim-transport comes with a init.d script"
 	einfo "dont forget to add it to your runlevel."
 	einfo
 }
