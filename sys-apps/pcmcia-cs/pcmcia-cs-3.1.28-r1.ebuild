@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Craig Joly <joly@ee.ualberta.ca>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.28-r1.ebuild,v 1.1 2001/08/29 22:53:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.28-r1.ebuild,v 1.2 2001/09/02 19:58:16 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
@@ -48,5 +48,6 @@ src_install () {
 		dodoc BUGS CHANGES COPYING LICENSE MAINTAINERS README README-2.4 SUPPORTED.CARDS doc/*
 	else
 		rm -rf ${D}/usr/share/man
+	fi
 }
 
