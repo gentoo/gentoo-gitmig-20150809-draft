@@ -1,19 +1,29 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c2e21783fe888e52841a1fd6ec437204 ChangeLog 15222
-MD5 86ab4bffe5213f8fbf9760cf893ebc92 kdeaddons-3.2.0.ebuild 966
 MD5 dd06dbac014a7d8b3080a7cba4106c91 kdeaddons-3.2.2.ebuild 1057
-MD5 b2676065f8c89b6a2b9ffef083fac50f kdeaddons-3.2.3.ebuild 988
-MD5 1383da314410eb34f385e26a85bd9421 kdeaddons-3.3.0.ebuild 978
 MD5 5ceb2a1a78884aedfba42ef8b1bb08df kdeaddons-3.3.1.ebuild 985
+MD5 b2676065f8c89b6a2b9ffef083fac50f kdeaddons-3.2.3.ebuild 988
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 b3ed29026df77930dbf1408d53c313d3 kdeaddons-3.3.2.ebuild 983
+MD5 86ab4bffe5213f8fbf9760cf893ebc92 kdeaddons-3.2.0.ebuild 966
+MD5 1383da314410eb34f385e26a85bd9421 kdeaddons-3.3.0.ebuild 978
+MD5 068832a2e98392611d74f251ec331dfb kdeaddons-3.3.2.ebuild 987
 MD5 99fe0bacb362005a8edf989a126c0945 kdeaddons-3.4.0_beta1.ebuild 973
-MD5 22eee0845b6b7a62a9289a761f7632c1 files/digest-kdeaddons-3.2.0 69
 MD5 de8403f5c3e2d4b96c14da3533d5aeb4 files/digest-kdeaddons-3.2.2 69
+MD5 22eee0845b6b7a62a9289a761f7632c1 files/digest-kdeaddons-3.2.0 69
 MD5 e773fdc5e9bf3ab47e4dada5fba0ebbe files/digest-kdeaddons-3.2.3 69
-MD5 e74bd949ead4734b29baa8dfb42ee810 files/digest-kdeaddons-3.3.0 69
-MD5 73f4e27e90b4b9dc9b6f20bcb8076769 files/digest-kdeaddons-3.3.1 69
 MD5 3bec1549e74c6f661045a83198e45290 files/kdeaddons-3.2.0-kvim.diff 363
 MD5 913bd9f1c52d68ec7faa72960464132e files/kdeaddons-3.2.2-gcc34.patch 1256
+MD5 73f4e27e90b4b9dc9b6f20bcb8076769 files/digest-kdeaddons-3.3.1 69
 MD5 913bd9f1c52d68ec7faa72960464132e files/kdeaddons-3.2.3-gcc34.patch 1256
+MD5 e74bd949ead4734b29baa8dfb42ee810 files/digest-kdeaddons-3.3.0 69
 MD5 f510fb4a423935c458f3e01d994b5bd2 files/digest-kdeaddons-3.3.2 69
 MD5 c2733d1929bd4002e8af7f422dce2e74 files/digest-kdeaddons-3.4.0_beta1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB9Zw7roRuSHgZdywRAiYDAJ9c1eKX2UYnOtNTiiElubCAwlsm6gCdEgP5
+vRkE9vMisiTFkMsg1yN/jj0=
+=r6XK
+-----END PGP SIGNATURE-----
