@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/xfsprogs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/ChangeLog,v 1.3 2002/07/21 21:20:08 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/ChangeLog,v 1.4 2002/07/26 17:53:40 phoenix Exp $
+
+
+*xfsprogs-20020330-r1.ebuild (26 July 2002)
+
+  26 Jul 2002; phoen][x <phoenix@gentoo.org>:
+  This package will be compiled with -O1 now.
+  Compiling it with a higher setting, breaks xfs_check in 
+  a gcc-2.95.3 environment. Closes bug #5551.
 
 *xfsprogs-20020330.ebuild (14 July 2002)
 
