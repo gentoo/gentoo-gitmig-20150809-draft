@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.45 2003/01/15 12:46:16 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.46 2003/01/16 01:38:31 mcummings Exp $
+
+*perl-5.8.0-r9 (15 Jan 2003)
+
+  15 Jan 2003; Michael Cummings <mcummings@gentoo.org> perl-5.8.0-r9;
+
+  Major typo corrections that affected the placement of scripts and the man
+  pages. There was a typo introduced into the 5.8 ebuilds early on that was
+  not caught until now that left the location of the man pages blank and that 
+  misset the /usr call for scripts placement from perl modules. This was caught
+  in bugs 13886 and 13920
 
   15 Jan 2003; J Robert Ray <jrray@gentoo.org> libperl_rebuilder : Fixed
   unfortunate typo.
