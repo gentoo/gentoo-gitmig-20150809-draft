@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.5 2003/02/18 09:00:45 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.6 2003/02/28 09:15:04 vapier Exp $
 #
 # Author: Will Woods <wwoods@gentoo.org>
 #
@@ -12,7 +12,7 @@ INHERITED="$INHERITED $ECLASS"
 
 newdepend sys-devel/automake
 
-[ -z "$DESCRIPTION" ] && DESCRIPTION="Based on the ${ECLASS} eclass"
+DESCRIPTION="Based on the ${ECLASS} eclass"
 
 # Copy the newest available config.{guess|sub} on the system over any old 
 # ones in the source dir

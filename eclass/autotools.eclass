@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.8 2003/02/18 09:00:45 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.9 2003/02/28 09:15:04 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -24,7 +24,7 @@
 #    # Copyright 1999-2002 Gentoo Technologies, Inc.
 #    # Distributed under the terms of the GNU General Public License, v2 or later
 #    # Maintainer:  John Doe <john@foo.com>
-#    # $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.8 2003/02/18 09:00:45 carpaski Exp $
+#    # $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.9 2003/02/28 09:15:04 vapier Exp $
 #
 #    # If you need to set the versions different from in here, it *must*
 #    # be done before inherit.eclass is sourced
@@ -81,7 +81,7 @@ INHERITED="$INHERITED $ECLASS"
 [ -z "$ACONFVER" ] && die "!!! You need to set \$ACONFVER *before* inheriting the eclass !!!"
 [ -z "$AMAKEVER" ] && die "!!! You need to set \$AMAKEVER *before* inheriting the eclass !!!"
 
-[ -z "$DESCRIPTION" ] && DESCRIPTION="Based on the $ECLASS eclass"
+DESCRIPTION="Based on the $ECLASS eclass"
 #ASRC_URI="ftp://ftp.gnu.org/gnu/autoconf/autoconf-${ACONFVER}.tar.bz2
 #	ftp://alpha.gnu.org/gnu/autoconf/autoconf-${ACONFVER}.tar.bz2
 #	ftp://ftp.gnu.org/gnu/automake/automake-${AMAKEVER}.tar.bz2
@@ -90,7 +90,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/autoconf/autoconf-${ACONFVER}.tar.bz2
 	ftp://alpha.gnu.org/gnu/autoconf/autoconf-${ACONFVER}.tar.bz2
 	ftp://ftp.gnu.org/gnu/automake/automake-${AMAKEVER}.tar.bz2
 	ftp://alpha.gnu.org/gnu/automake/automake-${AMAKEVER}.tar.bz2"
-	
+
 DEPEND="sys-devel/make
 	sys-devel/perl
 	>=sys-devel/m4-1.4o-r2"

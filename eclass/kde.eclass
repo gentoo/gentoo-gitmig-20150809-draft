@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.73 2003/02/27 17:27:37 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.74 2003/02/28 09:15:04 vapier Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -11,7 +11,7 @@ ECLASS=kde
 INHERITED="$INHERITED $ECLASS"
 IUSE="$IUSE ppc"
 
-[ -z "$DESCRIPTION" ] && DESCRIPTION="Based on the $ECLASS eclass"
+DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.kde.org/"
 
 # deps on the build tools

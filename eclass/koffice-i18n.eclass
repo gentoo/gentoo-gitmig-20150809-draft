@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/koffice-i18n.eclass,v 1.21 2003/02/18 09:00:45 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/koffice-i18n.eclass,v 1.22 2003/02/28 09:15:04 vapier Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 
@@ -30,7 +30,7 @@ esac
 SRC_URI="mirror://kde/$SRC_PATH"
 
 S=${WORKDIR}/${PN}
-[ -z "$DESCRIPTION" ] && DESCRIPTION="KOffice ${PV} - i18n: ${PN}"
+DESCRIPTION="KOffice ${PV} - i18n: ${PN}"
 HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2"
 DEPEND="~app-office/koffice-${PV}"
