@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1.ebuild,v 1.21 2005/02/03 00:19:20 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1.ebuild,v 1.22 2005/02/21 10:44:34 dragonheart Exp $
 
 inherit eutils
 
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha arm hppa amd64 ia64 s390 ppc64"
 IUSE="perl ipv6 ssl tcpd X selinux"
 
-PROVIDE="virtual/snmp"
 DEPEND="virtual/libc
 	<sys-libs/db-2
 	>=sys-libs/zlib-1.1.4
@@ -27,8 +26,7 @@ DEPEND="virtual/libc
 RDEPEND="${DEPEND}
 	dev-perl/TermReadKey
 	perl? ( X? ( dev-perl/perl-tk ) )
-	selinux? ( sec-policy/selinux-snmpd )
-	!virtual/snmp"
+	selinux? ( sec-policy/selinux-snmpd )"
 
 src_unpack() {
 	unpack ${A}
