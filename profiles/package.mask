@@ -259,10 +259,6 @@ app-text/psgml
 # new package, in testing (me and azarah)
 sys-apps/utempter
 
-# <leonardop@gentoo.org> (28 Nov 2002)
-# It may crash your desktop
->=x11-themes/gtk-engines-geramik-0.08-r2
-
 # <bcowan@gentoo.org> (25 Nov 2002)
 # masking until db-4* are unmasked
 # that way emerge -pu world works
