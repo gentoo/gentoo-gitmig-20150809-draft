@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/omake
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.1 2004/09/10 10:38:21 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.2 2004/10/03 20:41:56 kugelfang Exp $
+
+  03 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> omake-0.9.2.ebuild:
+  Marked ~amd64.
 
 *omake-0.9.2 (10 Sep 2004)
 
