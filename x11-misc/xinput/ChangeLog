@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/xinput
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xinput/ChangeLog,v 1.1 2004/06/29 22:35:52 mattam Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xinput/ChangeLog,v 1.2 2004/07/15 01:05:02 agriffis Exp $
 
 *xinput-1.2 (30 Jun 2004)
 
