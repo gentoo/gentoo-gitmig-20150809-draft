@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.974 2005/02/27 22:46:05 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.975 2005/02/27 23:53:24 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -436,7 +436,6 @@ media-video/vlc:live - Enables LIVE.com support
 media-video/vlc:stream - Enables vlc to stream video
 media-video/vlc:utf8 - Enables utf8 support
 media-video/vlc:vlm - New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.
-media-video/vlc:vorbis - Enables vorbis audio codec support
 media-video/winki:css - Enables ripping of encrypted dvds
 net-analyzer/aimsniff:http - Install the WAS (Web AIM Sniff) frontend
 net-analyzer/bwm-ng:html - enable html output
