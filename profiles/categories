@@ -66,6 +66,7 @@ net-wireless
 net-www 
 net-zope
 packages
+sec-policy
 sys-apps 
 sys-cluster
 sys-devel
