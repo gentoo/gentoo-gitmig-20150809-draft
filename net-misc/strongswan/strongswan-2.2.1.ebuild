@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.1.3-r1.ebuild,v 1.6 2004/09/12 06:23:19 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.2.1.ebuild,v 1.1 2004/09/18 02:24:56 pfeifer Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://download.strongswan.org/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~x86 ~ppc"
 IUSE="curl ldap smartcard"
 
 DEPEND="!net-misc/openswan
@@ -95,8 +95,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${P}-r1-gentoo.patch
-	epatch ${FILESDIR}/${P}-gcc34.patch
+	epatch ${FILESDIR}/${P}-gentoo.patch
 
 	cd programs/pluto
 
