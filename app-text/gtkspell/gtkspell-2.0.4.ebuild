@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.4.ebuild,v 1.7 2003/07/02 09:43:09 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.4.ebuild,v 1.8 2003/07/06 12:48:13 gmsoft Exp $
 
 DESCRIPTION="spell library for GTK2"
 SRC_URI="http://${PN}.sourceforge.net/download/${P}.tar.gz"
 HOMEPAGE="http://gtkspell.sourceforge.net/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ppc ~alpha"
+KEYWORDS="~x86 ~sparc ppc ~alpha hppa"
 SLOT="0"
 IUSE="doc"
 

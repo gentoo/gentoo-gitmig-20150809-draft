@@ -1,6 +1,6 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.16 2003/07/02 09:43:09 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.17 2003/07/06 12:48:13 gmsoft Exp $
 
   02 Jul 2003; Alastair Tse <liquidx@gentoo.org> gtkspell-2.0.4.ebuild,
   files/gtkspell-2.0.4-docbookx.patch:
@@ -10,6 +10,9 @@
   set ppc in keywords
 
 *gtkspell-2.0.4 (07 Mar 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> gtkspell-2.0.4.ebuild :
+  Added hppa to KEYWORDS.
 
   22 Apr 2003; Graham Forest <vladimir@gentoo.org> gtkspell-2.0.0-r1.ebuild,
   gtkspell-2.0.2.ebuild, gtkspell-2.0.4.ebuild:
