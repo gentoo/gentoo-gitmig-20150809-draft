@@ -1,12 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/yafc-0.7.9.ebuild,v 1.6 2003/02/13 14:06:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/yafc-1.0.ebuild,v 1.1 2003/06/21 07:27:52 vapier Exp $
 
-IUSE="readline"
+inherit flag-o-matic
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Console ftp client with a lot of nifty features"
-SRC_URI="ftp://ftp.sourceforge.net/pub/sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/yafc/${P}.tar.bz2"
 HOMEPAGE="http://yafc.sourceforge.net/"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1-r4 )"
@@ -14,12 +13,12 @@ RDEPEND=">=net-misc/openssh-3.0"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 ppc sparc"
+IUSE="readline"
 
 src_compile() {
-	use readline || myconf="--without-readline"
-
-	econf ${myconf} || die "./configure failed"
+	append-flags -DHAVE_ERRNO_H
+	econf `use_with readline` || die "./configure failed"
 	emake || die
 }
 
