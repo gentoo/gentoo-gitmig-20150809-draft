@@ -96,8 +96,11 @@ net-www/zope
 =net-www/mozilla-0.9.9
 
 
-# Let's see how this works
-#>=sys-apps/pcmcia-cs-3.1.33
+# New orinoco_cs 0.11a driver -- karltk (01/05/2002)
+#
+# Only tested with the SMC2632W card, should unmask
+# if it works nicely with the other PrismII cards.
+>=sys-apps/pcmcia-cs-3.1.33-r4
 
 # Masing Azarah's new baselayout until several problems are confirmed fixed.
 # 4 Mar 2002, Daniel Robbins
