@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer System Team <system@gentoo.org>
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.7.8.ebuild,v 1.3 2001/10/09 18:23:18 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.7.8.ebuild,v 1.4 2001/10/09 18:30:26 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Extended implementation of the Berkley LPR print spooler"
@@ -10,8 +10,8 @@ SRC_URI="ftp://ftp.lprng.com/pub/LPRng/LPRng/${P}.tgz"
 HOMEPAGE="http://www.lprng.com/"
 
 DEPEND="virtual/glibc
-        nls? ( sys-devel/gettext )
-        !net-print/cups"
+	nls? ( sys-devel/gettext )
+	!net-print/cups"
 RDEPEND="virtual/glibc"
 PROVIDE="virtual/lpr"
 
