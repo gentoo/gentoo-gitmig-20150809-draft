@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/ChangeLog,v 1.7 2005/03/18 16:23:56 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/ChangeLog,v 1.8 2005/03/26 01:09:27 weeve Exp $
+
+  26 Mar 2005; Jason Wever <weeve@gentoo.org> korn-3.4.0.ebuild:
+  Added ~sparc keyword.
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> korn-3.4.0.ebuild:
   Added to ~ppc

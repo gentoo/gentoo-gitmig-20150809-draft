@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkholidays
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkholidays/ChangeLog,v 1.6 2005/03/18 18:27:42 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkholidays/ChangeLog,v 1.7 2005/03/26 00:57:49 weeve Exp $
+
+  26 Mar 2005; Jason Wever <weeve@gentoo.org> libkholidays-3.4.0.ebuild:
+  Added ~sparc keyword.
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> libkholidays-3.4.0.ebuild:
   Added to ~ppc

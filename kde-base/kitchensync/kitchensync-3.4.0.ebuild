@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.4.0.ebuild,v 1.2 2005/03/18 17:43:45 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.4.0.ebuild,v 1.3 2005/03/26 01:16:54 weeve Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="Synchronize Data with KDE"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 IUSE=""
 OLDDEPEND="~kde-base/libkdepim-$PV
 	~kde-base/libkcal-$PV"

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.9 2005/03/18 17:19:10 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.10 2005/03/26 01:31:27 weeve Exp $
+
+  26 Mar 2005; Jason Wever <weeve@gentoo.org>
+  kdeaccessibility-meta-3.4.0.ebuild:
+  Added ~sparc keyword.
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org>
   kdeaccessibility-meta-3.4.0.ebuild:

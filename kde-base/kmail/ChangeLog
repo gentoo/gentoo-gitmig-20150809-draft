@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.8 2005/03/18 16:45:50 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.9 2005/03/26 01:04:48 weeve Exp $
+
+  26 Mar 2005; Jason Wever <weeve@gentoo.org> kmail-3.4.0.ebuild:
+  Added ~sparc keyword.
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> kmail-3.4.0.ebuild:
   Added to ~ppc

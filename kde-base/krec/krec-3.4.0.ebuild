@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krec/krec-3.4.0.ebuild,v 1.3 2005/03/18 16:24:55 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krec/krec-3.4.0.ebuild,v 1.4 2005/03/26 00:39:19 weeve Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE sound recorder"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 IUSE="oggvorbis encode"
 OLDDEPEND="
 	~kde-base/kdemultimedia-arts-$PV
