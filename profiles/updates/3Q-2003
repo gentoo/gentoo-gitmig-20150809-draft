@@ -73,3 +73,4 @@ move dev-libs/coldsync app-pda/coldsync
 move app-misc/jpilot app-pda/jpilot
 move gnome-extra/gnome-pilot app-pda/gnome-pilot
 move gnome-extra/gnome-pilot-conduits app-pda/gnome-pilot-conduits
+move dev-libs/proj app-sci/proj
