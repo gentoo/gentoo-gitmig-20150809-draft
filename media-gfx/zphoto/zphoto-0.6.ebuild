@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/zphoto-0.6.ebuild,v 1.1 2003/07/18 09:49:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/zphoto-0.6.ebuild,v 1.2 2003/09/02 20:43:43 usata Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -18,7 +20,14 @@ DEPEND=">=media-libs/ming-0.2a
 	app-arch/zip
 	>=dev-libs/popt-1.6.3"
 
+src_unpack() {
+
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-gentoo.diff
+}
+
 src_install() {
+
 	einstall || die
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README

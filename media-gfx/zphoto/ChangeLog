@@ -1,8 +1,14 @@
 # ChangeLog for media-gfx/zphoto
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/ChangeLog,v 1.1 2003/07/18 09:49:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/ChangeLog,v 1.2 2003/09/02 20:43:43 usata Exp $
 
 *zphoto-0.6 (18 Jul 2003)
+
+  03 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> zphoto-0.6.ebuild,
+  files/zphoto-0.6-gentoo.diff:
+  Added a patch to build zphoto with avifile-0.7.38.20030710.ebuild.
+  Thanks to the report by D Bandopadhyay <dhruba@codewordt.co.uk>
+  in bug #27770
 
   18 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> zphoto-0.6.ebuild:
   Initial import, ebuild provided by Doudou <leculier@fr.uu.net>

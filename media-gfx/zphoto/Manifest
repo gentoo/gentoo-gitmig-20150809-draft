@@ -1,3 +1,4 @@
-MD5 0f1d300e38340e1e8d3638b6b3ceb019 zphoto-0.6.ebuild 654
-MD5 6e90d2ae20f47e6abbf46ede17128989 ChangeLog 390
+MD5 d1ec26bd90639bfbc600eabb3167d9d2 zphoto-0.6.ebuild 740
+MD5 fc141dc8229ca4d9d831fec83fe6f3eb ChangeLog 642
 MD5 5d667eff255326f09226873397d63c3b files/digest-zphoto-0.6 62
+MD5 33c922e30ef99f1ab12934eee25f48fd files/zphoto-0.6-gentoo.diff 388

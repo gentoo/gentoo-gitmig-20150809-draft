@@ -1,0 +1,14 @@
+diff -urN zphoto-0.6.ORIG/loader.cpp zphoto-0.6/loader.cpp
+--- zphoto-0.6.ORIG/loader.cpp	2003-03-27 19:28:41.000000000 +0900
++++ zphoto-0.6/loader.cpp	2003-09-03 04:40:20.000000000 +0900
+@@ -31,8 +31,8 @@
+ 
+ #ifdef HAVE_AVIFILE
+ 
+-#include <avifile/avifile.h>
+-#include <avifile/avm_output.h>
++#include <avifile.h>
++#include <avm_output.h>
+ 
+ typedef struct {
+     avm::IReadFile* file;
