@@ -1,6 +1,19 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.21 2003/09/19 18:50:17 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.22 2003/09/19 21:49:33 max Exp $
+
+*net-snmp-5.0.9-r1 (19 Sep 2003)
+
+  19 Sep 2003; Max Kalika <max@gentoo.org> net-snmp-5.0.9-r1.ebuild,
+  files/snmpd.conf, files/snmpd.rc6:
+  Major cleanup/rewrite: quote variables where possible; whitespace consistancy;
+  use more ebuild semantics (use_with, use_enable); put config in /etc/snmp
+  instead of /usr/share; add smux support; and new rc6 and corresponding conf
+  file for extra flexibility. Drop unneccessary die() calls. Start with an empty
+  set of SNMPD_FLAGS in snmpd.conf. Add "use logger" to depend() of snmpd.rc6.
+  Drop unneeded --with-cflags, --host, and --enable-shared parameters to econf.
+  Clean up ssl flags. Enable ucd-snmp compatibility and block virtual/snmp.
+  Fixes bugs 5882, 15536, 27177, 27308, and probably 14288.
 
 *net-snmp-5.0.9 (19 Sep 2003)
 
