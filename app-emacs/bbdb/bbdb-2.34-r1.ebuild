@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.34-r1.ebuild,v 1.1 2003/11/08 17:45:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.34-r1.ebuild,v 1.2 2003/12/04 23:58:34 jbms Exp $
 
 inherit elisp
 
-IUSE=""
+IUSE="crypt"
 
 DESCRIPTION="The Big Brother Database"
 HOMEPAGE="http://bbdb.sourceforge.net/"
@@ -15,7 +15,8 @@ LICENSE="GPL-2 as-is"
 SLOT="0"
 KEYWORDS="~x86"
 
-DEPEND="virtual/emacs"
+DEPEND="virtual/emacs
+crypt? app-emacs/mailcrypt"
 
 S="${WORKDIR}/${P}"
 
@@ -31,6 +32,13 @@ src_unpack() {
 	sed -e "0,/^Bng$/d" \
 		bbdb-sort-mailrc.txt > bbdb-sort-mailrc.el
 	cp ${DISTDIR}/{dates,point-at}.el .
+
+	if ! use crypt; then
+		rm ${S}/bits/bbdb-pgp.el
+		einfo "Excluding bits/bbdb-pgp.el because the \`crypt' USE flag was not"
+		einfo "specified."
+	fi
+
 }
 
 src_compile() {
