@@ -1,6 +1,16 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.277 2005/01/20 05:41:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.278 2005/01/20 07:28:10 spyderous Exp $
+
+  19 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.1.902.ebuild:
+  PATCH_VER 0.1.2. (fd.o #1895, #38549) Add
+  2000_all_6.8.0-fb-convert-rgb-to-bgr-when-needed.patch: DIX didn't always
+  convert RGB to BGR. (#38549) Bump 5200_all_6.8.0-newport-accel-v4.patch: The
+  color problem was actually because of fd.o #1895. FILES_VER 0.2. (#76356)
+  Add "redundant" LDPATH=/usr/lib to /etc/env.d/10xorg because nomachine
+  provides a duplicate libX11 with changes that break pretty much everything,
+  and we need to trump it.
 
   19 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -xorg-x11-6.7.0-r2.ebuild, -xorg-x11-6.8.0-r1.ebuild:
