@@ -5,7 +5,7 @@
  #define ERROR_H
  
 -extern int errno;
-+int errno;
++#include <errno.h>
  
  extern int error_intr;
  extern int error_nomem;
