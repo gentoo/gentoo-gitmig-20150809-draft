@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.7.ebuild,v 1.1 2003/03/24 15:38:19 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.7.ebuild,v 1.2 2003/03/25 05:50:46 drobbins Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.realvnc.com/dist/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )"
 RDEPEND="java? ( virtual/jre )"
