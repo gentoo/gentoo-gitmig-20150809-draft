@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/bins
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/ChangeLog,v 1.26 2004/10/19 09:42:51 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/ChangeLog,v 1.27 2004/12/21 15:10:30 mcummings Exp $
+
+*bins-1.1.26-r2 (21 Dec 2004)
+
+  21 Dec 2004; Michael Cummings <mcummings@gentoo.org>
+  +bins-1.1.26-r2.ebuild:
+  Finally getting to bug 57227 - sorry folks
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> bins-1.1.26-r1.ebuild:
   Stable on amd64.
