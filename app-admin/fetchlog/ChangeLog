@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/fetchlog
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/ChangeLog,v 1.1 2003/08/15 12:26:52 phosphan Exp $
+
+*fetchlog-0.94 (15 Aug 2003)
+
+  15 Aug 2003; Patrick Kursawe <phosphan@gentoo.org> fetchlog-0.94.ebuild:
+  Initial import, closing bug 25029. Ebuild committed by
+  Jasmine Chua <jasmine.chua@securecirt.com>
+
