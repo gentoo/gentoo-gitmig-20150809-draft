@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.44 2004/02/17 20:07:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.45 2004/02/17 21:52:41 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> wxGTK-2.4.2.ebuild:
+  stable on ia64
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> wxGTK-2.4.0.ebuild:
   add ~alpha for the sake of dev-python/wxPython-2.4.0.7
