@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.20 2004/09/02 22:49:14 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.21 2004/09/03 21:34:19 slarti Exp $
+
+  03 Sep 2004; Tom Martin <slarti@gentoo.org> loudmouth-0.17.1.ebuild:
+  Marked ~amd64, resolves bug 58323. Thanks to Joe Seeder <seeder@pf.pl> for
+  reporting.
 
 *loudmouth-0.17.1 (03 Sep 2004)
 
