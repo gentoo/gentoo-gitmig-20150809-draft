@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo/bigloo-2.4c.ebuild,v 1.4 2002/10/04 05:18:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo/bigloo-2.4c.ebuild,v 1.5 2003/02/13 10:52:38 vapier Exp $
 
 S=${WORKDIR}/${PN}${PV}
 DESCRIPTION="Bigloo Scheme compiler for x86, sparc, alpha, ppc and JVM"
