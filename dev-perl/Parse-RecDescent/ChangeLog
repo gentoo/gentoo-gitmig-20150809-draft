@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Parse-RecDescent
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/ChangeLog,v 1.1 2002/02/01 21:53:27 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/ChangeLog,v 1.2 2002/03/27 12:40:38 seemant Exp $
+
+*Parse-RecDescent-1.80-r1 (27 Mar 2002)
+
+  27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> Parse-RecDescent-1.80-r1.ebuild :
+
+  Ungzipped HTML documentation.
 
 *Parse-RecDescent-1.80 (1 Feb 2002)
 
