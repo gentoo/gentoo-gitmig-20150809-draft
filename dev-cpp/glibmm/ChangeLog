@@ -1,0 +1,9 @@
+# ChangeLog for dev-cpp/glibmm
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.1 2004/05/09 12:42:20 khai Exp $
+
+*glibmm-2.4.1 (09 May 2004)
+
+  09 May 2004; Yi Qiang <khai@gentoo.org> +glibmm-2.4.1.ebuild:
+  Introduced into portage, dependency of gtkmm-2.4.
+
