@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-1.1.9.ebuild,v 1.2 2003/07/06 12:43:10 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-1.1.9.ebuild,v 1.3 2003/07/09 16:17:45 liquidx Exp $
 
 DESCRIPTION="GNet network library."
 SRC_URI="http://www.gnetlibrary.org/src/${P}.tar.gz"
@@ -11,7 +11,9 @@ LICENSE="LGPL-2"
 KEYWORDS="~x86 ~ppc hppa"
 
 # yes, the >= is correct, this software can use both glib 1.2 and 2.0!
-DEPEND=">=dev-libs/glib-1.2.0"
+RDEPEND=">=dev-libs/glib-1.2.0"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
  
 src_compile() {
 	econf \
