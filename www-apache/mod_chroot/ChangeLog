@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_chroot
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_chroot/ChangeLog,v 1.4 2005/01/29 07:35:35 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_chroot/ChangeLog,v 1.5 2005/02/25 12:01:08 hollow Exp $
+
+  25 Feb 2005; Benedikt Boehm <hollow@gentoo.org> files/15_mod_chroot.conf:
+  fixed module config
 
 *mod_chroot-0.4 (28 Jan 2005)
 
