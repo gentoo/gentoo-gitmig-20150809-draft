@@ -29,7 +29,7 @@ virtual/krb5		app-crypt/mit-krb5
 virtual/bootloader	sys-boot/yaboot
 virtual/editor		app-editors/nano
 virtual/os-headers	sys-kernel/linux-headers
-virtual/modutils 	sys-apps/modutils
+virtual/modutils 	sys-apps/module-init-tools
 virtual/inetd		sys-apps/xinetd
 virtual/antivirus	app-antivirus/clamav
 virtual/aspell-dict	app-dicts/aspell-en
