@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.04.ebuild,v 1.3 2002/08/26 16:47:25 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.04.ebuild,v 1.4 2002/09/07 13:13:01 karltk Exp $
 
 . /usr/portage/eclass/inherit.eclass
 inherit java
@@ -11,7 +11,7 @@ SRC_URI=""
 DESCRIPTION="Sun Java Development Kit 1.3.1"
 HOMEPAGE="http://java.sun.com/j2se/1.3/download-linux.html"
 DEPEND="virtual/glibc
-	>=dev-java/java-config-0.2.2
+	>=dev-java/java-config-0.2.5
 	doc? ( =dev-java/java-sdk-docs-1.3.1* )"
 RDEPEND="$DEPEND"
 PROVIDE="virtual/jre-1.3.1
@@ -48,7 +48,7 @@ src_install () {
 	dodir /opt/${P}/share/
 	cp -a demo src.jar ${D}/opt/${P}/share/
 
-        if [ "`use mozilla`" ] ; then                                           
+	if [ "`use mozilla`" ] ; then                                           
 		dodir /usr/lib/mozilla/plugins                                  
 		dosym /opt/${P}/jre/plugin/i386/ns600/libjavaplugin_oji.so /usr/lib/mozilla/plugins/
 	fi                            
