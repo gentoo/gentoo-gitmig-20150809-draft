@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.2.3.ebuild,v 1.12 2004/06/14 16:55:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.2.3.ebuild,v 1.13 2004/06/25 01:44:53 agriffis Exp $
 
 DESCRIPTION="HTML documentation for Python"
 SRC_URI="http://www.python.org/ftp/python/doc/${PV}/html-${PV}.tar.bz2"

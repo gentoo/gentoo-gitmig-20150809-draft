@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/psyco
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/ChangeLog,v 1.6 2004/05/07 20:37:03 kloeri Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/ChangeLog,v 1.7 2004/06/25 01:36:45 agriffis Exp $
 
   07 May 2004; Bryan Østergaard <kloeri@gentoo.org> psyco-1.0.0_beta1.ebuild:
   Add missing IUSE.

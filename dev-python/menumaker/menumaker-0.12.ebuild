@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/menumaker/menumaker-0.12.ebuild,v 1.5 2004/06/02 01:36:21 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/menumaker/menumaker-0.12.ebuild,v 1.6 2004/06/25 01:34:00 agriffis Exp $
 
 inherit distutils
 

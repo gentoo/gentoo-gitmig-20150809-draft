@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniORBpy/omniORBpy-2.2.ebuild,v 1.3 2004/05/04 11:21:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniORBpy/omniORBpy-2.2.ebuild,v 1.4 2004/06/25 01:35:23 agriffis Exp $
 
 DESCRIPTION="This is omniORBpy 2, a robust high-performance CORBA ORB for Python."
 HOMEPAGE="http://omniorb.sourceforge.net/"

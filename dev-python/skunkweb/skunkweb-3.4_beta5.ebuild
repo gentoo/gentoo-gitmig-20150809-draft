@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/skunkweb-3.4_beta5.ebuild,v 1.4 2004/05/07 21:37:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/skunkweb-3.4_beta5.ebuild,v 1.5 2004/06/25 01:50:12 agriffis Exp $
 
 
 DESCRIPTION="robust Python web application server"

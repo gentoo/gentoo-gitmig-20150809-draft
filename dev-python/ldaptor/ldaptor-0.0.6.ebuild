@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.6.ebuild,v 1.12 2004/05/31 21:37:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.6.ebuild,v 1.13 2004/06/25 01:32:51 agriffis Exp $
 
 DESCRIPTION="set of LDAP utilities for use from the command line"
 HOMEPAGE="http://twistedmatrix.com/users/tv/ldaptor/"

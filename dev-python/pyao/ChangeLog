@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/pyao
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/ChangeLog,v 1.4 2003/08/14 20:17:40 pylon Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/ChangeLog,v 1.5 2004/06/25 01:37:26 agriffis Exp $
 
   14 Aug 2003; Lars Weiler <pylon@gentoo.org> pyao-0.82.ebuild:
   Added keyword ~ppc

@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/pyunit
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyunit/ChangeLog,v 1.5 2003/04/04 02:27:42 liquidx Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyunit/ChangeLog,v 1.6 2004/06/25 01:46:55 agriffis Exp $
 
 *pyunit-1.4.1 (28 Oct 2002)
 

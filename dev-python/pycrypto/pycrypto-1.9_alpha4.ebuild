@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-1.9_alpha4.ebuild,v 1.8 2004/05/04 12:07:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-1.9_alpha4.ebuild,v 1.9 2004/06/25 01:38:38 agriffis Exp $
 
 DESCRIPTION="Python cryptography toolkit."
 HOMEPAGE="http://www.amk.ca/python/code/crypto.html"

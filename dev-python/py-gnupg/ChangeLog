@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/py-gnupg
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-gnupg/ChangeLog,v 1.1 2003/09/17 08:14:35 liquidx Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-gnupg/ChangeLog,v 1.2 2004/06/25 01:39:19 agriffis Exp $
 
 *py-gnupg-0.3.2 (17 Sep 2003)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/wxpython-demo
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-demo/ChangeLog,v 1.3 2003/10/08 17:41:59 pythonhead Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-demo/ChangeLog,v 1.4 2004/06/25 01:52:14 agriffis Exp $
 
 *wxpython-demo-2.4.2.4 (08 Oct 2003)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/orbit-python/orbit-python-1.99.0-r1.ebuild,v 1.4 2004/04/12 09:22:21 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/orbit-python/orbit-python-1.99.0-r1.ebuild,v 1.5 2004/06/25 01:35:44 agriffis Exp $
 
 # This is just a placeholder for >=dev-python/orbit-python-1.99
 # The package has been renamed to pyorbit since 1.99

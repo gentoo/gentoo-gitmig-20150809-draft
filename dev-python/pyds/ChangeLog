@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/pyds
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.11 2004/05/25 08:55:06 kloeri Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.12 2004/06/25 01:38:58 agriffis Exp $
 
 *pyds-0.7.2 (25 May 2004)
 

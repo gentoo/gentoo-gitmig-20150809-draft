@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.3.ebuild,v 1.1 2004/06/12 21:08:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.3.ebuild,v 1.2 2004/06/25 01:28:18 agriffis Exp $
 
 inherit distutils eutils
 

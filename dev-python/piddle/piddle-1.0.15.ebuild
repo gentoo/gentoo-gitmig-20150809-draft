@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/piddle/piddle-1.0.15.ebuild,v 1.2 2004/05/04 11:23:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/piddle/piddle-1.0.15.ebuild,v 1.3 2004/06/25 01:36:14 agriffis Exp $
 
 DESCRIPTION="Cross-media, cross-platform 2D graphics package"
 HOMEPAGE="http://piddle.sourceforge.net/"

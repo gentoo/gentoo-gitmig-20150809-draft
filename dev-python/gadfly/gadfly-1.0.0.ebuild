@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gadfly/gadfly-1.0.0.ebuild,v 1.10 2004/06/03 14:21:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gadfly/gadfly-1.0.0.ebuild,v 1.11 2004/06/25 01:29:59 agriffis Exp $
 
 DESCRIPTION="relational database system implemented in Python"
 HOMEPAGE="http://gadfly.sourceforge.net/"

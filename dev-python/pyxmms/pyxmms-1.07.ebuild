@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/pyxmms-1.07.ebuild,v 1.5 2004/01/26 15:23:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/pyxmms-1.07.ebuild,v 1.6 2004/06/25 01:48:17 agriffis Exp $
 
 inherit distutils
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/pypgsql-2.3.ebuild,v 1.7 2004/05/07 20:27:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/pypgsql-2.3.ebuild,v 1.8 2004/06/25 01:42:28 agriffis Exp $
 
 DESCRIPTION="Python Interface to PostgreSQL"
 HOMEPAGE="http://pypgsql.sourceforge.net/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg-py21/psycopg-py21-1.1.2.ebuild,v 1.6 2004/05/07 20:07:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg-py21/psycopg-py21-1.1.2.ebuild,v 1.7 2004/06/25 01:37:06 agriffis Exp $
 
 P_NEW="${PN%-py21}-${PV}"
 S="${WORKDIR}/${P_NEW}"

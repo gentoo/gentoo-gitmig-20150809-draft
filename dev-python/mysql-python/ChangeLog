@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/mysql-python
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.10 2004/06/12 20:04:48 kloeri Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.11 2004/06/25 01:34:31 agriffis Exp $
 
 *mysql-python-1.0.0 (12 Jun 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah-docs/cheetah-docs-0.9.15_alpha1.ebuild,v 1.2 2004/04/18 08:31:35 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah-docs/cheetah-docs-0.9.15_alpha1.ebuild,v 1.3 2004/06/25 01:27:08 agriffis Exp $
 
 DESCRIPTION="Documentation for Cheetah templates."
 HOMEPAGE="http://www.cheetahtemplate.org/"
