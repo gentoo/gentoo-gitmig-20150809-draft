@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/swh-plugins
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.22 2004/08/28 15:39:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.23 2004/09/28 18:32:05 eradicator Exp $
+
+  28 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  swh-plugins-0.4.7.ebuild:
+  Stable amd64 x86.
 
 *swh-plugins-0.4.7 (28 Aug 2004)
 
