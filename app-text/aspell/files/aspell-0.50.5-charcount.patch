@@ -57,7 +57,7 @@ diff -Nrup aspell-0.50.5.orig/prog/compress.c aspell-0.50.5/prog/compress.c
  	i = getc(stdin);
 -      --i;  
 -      while ((c = getc(stdin)) > 32)
-+      --i;
++      --i; if (i < 0) goto error;
 +      while ((c = getc(stdin)) > 32 && i < BUFSIZE)
  	cur[i++] = (char)c;
 +      if (i >= BUFSIZE) goto error;

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r3.ebuild,v 1.2 2004/08/18 03:45:14 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r4.ebuild,v 1.1 2004/08/18 19:18:39 solar Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -21,7 +21,7 @@ pkg_setup() {
 		CXXFLAGS="-O2 -fsigned-char"
 		CFLAGS=${CXXFLAGS}
 	fi
-	use gpm && LDFLAGS="${LDFLAGS} -lgpm"
+	use gpm && append-ldflags -lgpm
 }
 
 src_unpack() {
