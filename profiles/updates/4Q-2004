@@ -255,3 +255,4 @@ move app-sci/blas sci-libs/blas
 move app-sci/lapack sci-libs/lapack
 move app-sci/blas-config sci-libs/blas-config
 move app-sci/blas-atlas sci-libs/blas-atlas
+move app-sci/blas-reference sci-libs/blas-reference
