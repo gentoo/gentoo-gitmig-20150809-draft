@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.5.0.ebuild,v 1.1 2004/12/19 15:46:03 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.5.0.ebuild,v 1.2 2004/12/26 16:20:02 chainsaw Exp $
 
 inherit flag-o-matic eutils games
 
@@ -11,7 +11,7 @@ IUSE=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 
 DEPEND="dev-lang/tcl
 	dev-libs/libxml2
