@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r2.ebuild,v 1.4 2004/05/22 16:25:11 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r2.ebuild,v 1.5 2004/05/23 16:44:18 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -43,6 +43,7 @@ apache_setup_vars() {
 		fi
 		append-ldflags -l`echo "$db_version"`
 	fi
+	einfo "DATADIR is set to: ${DATADIR}"
 	einfo "USERDIR is set to: $USERDIR"
 	einfo "DB verison detected is $db_version"
 }
@@ -95,6 +96,9 @@ src_unpack() {
 
 	cat ${FILESDIR}/common/apr-config.layout >> srclib/apr/config.layout
 	cat ${FILESDIR}/common/apr-util-config.layout >> srclib/apr-util/config.layout
+
+	sed -i -e "s:/var/www/localhost:${DATADIR}:g" srclib/apr/config.layout
+	sed -i -e "s:/var/www/localhost:${DATADIR}:g" srclib/apr-util/config.layout
 
 	WANT_AUTOCONF_2_5=1 WANT_AUTOCONF=2.5 ./buildconf || die "buildconf failed"
 }
