@@ -1,13 +1,15 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-HiRes/Time-HiRes-01.20.ebuild,v 1.5 2002/07/11 06:30:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-HiRes/Time-HiRes-01.20.ebuild,v 1.6 2002/07/25 04:13:27 seemant Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A Precise Time Perl Module"
 SRC_URI="http://www.cpan.org/modules/by-module/Time/${A}"
+SLOT="0"
 HOMEPAGE="http://www.cpan.org/modules/by-module/Time/${P}.readme"
 
+SLOT="0"
 DEPEND=">=sys-devel/perl-5 virtual/glibc"
 
 src_compile() {

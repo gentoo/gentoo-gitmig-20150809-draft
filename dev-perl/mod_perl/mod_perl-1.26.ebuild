@@ -1,12 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.26.ebuild,v 1.2 2002/07/11 06:30:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.26.ebuild,v 1.3 2002/07/25 04:13:27 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Perl Module for Apache"
 SRC_URI="http://perl.apache.org/dist/${P}.tar.gz"
+SLOT="0"
 HOMEPAGE="http://perl.apache.org"
 
+SLOT="0"
 DEPEND="virtual/glibc >=dev-perl/libwww-perl-5.48 >=net-www/apache-1.3.24-r1"
 
 src_compile() {

@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03-r1.ebuild,v 1.2 2002/07/11 06:30:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03-r1.ebuild,v 1.3 2002/07/25 04:13:27 seemant Exp $
 
 MY_P="${P}ii"
 S=${WORKDIR}/${PN}
 DESCRIPTION="Perl library for parsing the output of nsgmls"
 SRC_URI="http://cpan.perl.org/pub/perl/CPAN/modules/by-module/SGMLS/${MY_P}.tar.gz"
+SLOT="0"
 HOMEPAGE="http://cpan.perl.org/pub/perl/CPAN/modules/by-module/SGMLS/${MY_P}.readme"
 SLOT="0"
 LICENSE="GPL-2"

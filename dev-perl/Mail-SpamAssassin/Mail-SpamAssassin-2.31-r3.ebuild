@@ -1,14 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.31-r3.ebuild,v 1.2 2002/07/07 04:12:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin/Mail-SpamAssassin-2.31-r3.ebuild,v 1.3 2002/07/25 04:13:26 seemant Exp $
 
 inherit perl-module
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Perl Mail::SpamAssassin - A program to filter spam"
 SRC_URI="http://www.spamassassin.org/released/${P}.tar.gz"
+SLOT="0"
 HOMEPAGE="http://www.spamassassin.org"
 
+SLOT="0"
 DEPEND="dev-perl/Net-DNS
 	dev-perl/Time-HiRes"
 
