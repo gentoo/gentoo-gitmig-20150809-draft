@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.6-r4.ebuild,v 1.1 2001/12/13 04:48:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.6-r4.ebuild,v 1.2 2001/12/15 02:19:52 karltk Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
@@ -19,7 +19,7 @@ RDEPEND=">=gnome-base/ORBit-0.5.10-r1
 	x11-libs/gtk+"
 #	gtk?   ( x11-libs/gtk+ )
 #	mozqt? ( x11-libs/qt-x11 )
-#	java?  ( dev-lang/jdk )"
+#	java?  ( virtual/jdk )"
 
 DEPEND="${RDEPEND}
 	virtual/x11

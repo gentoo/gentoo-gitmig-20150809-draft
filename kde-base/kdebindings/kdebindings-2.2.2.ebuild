@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-2.2.2.ebuild,v 1.1 2001/11/22 17:32:27 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-2.2.2.ebuild,v 1.2 2001/12/15 02:19:52 karltk Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist || die
 
@@ -11,7 +11,7 @@ NEWDEPEND=">=kde-base/kdebase-${PV}
 	>=x11-libs/gtk+-1.2.10-r4
 	sys-devel/perl
 	python? ( dev-lang/python )
-	java? (	dev-lang/jdk )
+	java? (	virtual/jdk )
 	>=x11-libs/gtk+-1.2.6
 	>=dev-libs/glib-1.2.6
 	>=kde-base/kdenetwork-${PV}"

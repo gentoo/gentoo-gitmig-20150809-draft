@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r3.ebuild,v 1.3 2001/12/07 19:18:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r3.ebuild,v 1.4 2001/12/15 02:19:52 karltk Exp $
 
 A=${PN}-4.0.6.tar.gz
 S=${WORKDIR}/${PN}-4.0.6
@@ -35,7 +35,7 @@ DEPEND="virtual/glibc
 	imap? ( virtual/imap )
 	flash? ( media-libs/libswf media-libs/ming )
 	xml2? ( dev-libs/libxml2 )
-	java? ( dev-lang/jdk )"
+	java? ( virtual/jdk )"
 
 RDEPEND="virtual/glibc
 	>=dev-libs/gmp-3.1.1
@@ -57,7 +57,7 @@ RDEPEND="virtual/glibc
 	libwww? ( >=net-libs/libwww-5.3.2 )
 	xml2? ( dev-libs/libxml2 )
 	imap? ( virtual/imap )
-	java? ( dev-lang/jdk )"
+	java? ( virtual/jdk )"
 
 src_compile() {
 
