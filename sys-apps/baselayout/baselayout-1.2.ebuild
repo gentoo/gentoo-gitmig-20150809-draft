@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.2.ebuild,v 1.2 2000/08/25 03:08:58 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.2.ebuild,v 1.3 2000/08/25 04:04:47 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -20,29 +20,30 @@ src_install()
 	do
 		dodir /usr/local/${foo}
 	done
-	dodir /usr/man/man8
-	doins ${FILESDIR}/MAKEDEV.8.gz /usr/man/man8
+	doman ${FILESDIR}/MAKEDEV.8
 	dodir /usr/lib
 	dodir /usr/sbin
-	doexe ${FILESDIR}/MAKEDEV /usr/sbin
+	dosbin ${FILESDIR}/MAKEDEV
+	dodir /dev
+	dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
 	dodir /usr/share /usr/bin/ /usr/doc
-	dodoc ${FILESDIR}/copyright.gz ${FILESDIR}/changelog.Debian.gz
+	dodoc ${FILESDIR}/copyright ${FILESDIR}/changelog.Debian
 	dodir /usr/X11R6/lib /usr/src/linux/include/linux
 	dodir /usr/src/linux/include/asm-i386
 	dodir /var /var/run
-	touch /var/run/utmp
+	touch ${D}/var/run/utmp
 	dodir /var/lib/locate /var/lib/pkg /var/spool
 	dodir /root /opt /home/ftp /etc/modules
 	chmod go-rx ${D}/root
 	dodir /tmp
 	chmod 1777 ${D}/tmp
+	insopts -m0644
 	insinto /etc
 	for foo in services passwd shadow nsswitch.conf inetd.conf ld.so.conf pam.conf protocols fstab hosts syslog.conf pwdb.conf filesystems group profile
 	do
-		doins ${FILESDIR}/${foo} /etc
+		doins ${FILESDIR}/${foo}
 	done
 	chmod go-rwx ${D}/etc/shadow
-	dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
 	dodir /dev/pts /lib /proc /mnt/floppy /mnt/cdrom
 	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom
 
@@ -56,9 +57,8 @@ src_install()
 	dodir /etc/rc.d/init.d
 	dodir /etc/rc.d/config
 	cd ${FILESDIR}/rc.d/init.d
-	insinto /etc/rc.d/init.d
-	doins *
-	chmod 0755 ${D}/etc/rc.d/init.d/*
+	exeinto /etc/rc.d/init.d
+	doexe *
 	insinto /etc/rc.d/init.d/extra_scripts
 	cd ${FILESDIR}/rc.d/config
 	insinto /etc/rc.d/config
@@ -69,15 +69,10 @@ src_install()
 	doins inittab
 	into /usr
 	dosbin rc-update
-	exeinto /usr/bin
-	exeopts -m0755
-	doexe colors
+	insinto /usr/bin
+	insopts -m0755
+	doins colors
 	dodoc README.newusers blurb.txt
-}
-
-
-
-
 }
 
 

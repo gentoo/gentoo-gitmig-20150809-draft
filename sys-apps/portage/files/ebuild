@@ -29,12 +29,7 @@ initvars() {
 	EXEDESTTREE=""
 	DOCDESTTREE=""
 	INSOPTIONS="-m0644"
-	if [ -n "$DEBUG" ]
-	then
-		EXEOPTIONS="-m0755"	
-	else
-		EXEOPTIONS="-m0755 -s"
-	fi
+	EXEOPTIONS="-m0755"	
 	LIBOPTIONS="-m0644"
 	MOPREFIX=${PN}
 	KVERS=`uname -r`
@@ -361,14 +356,14 @@ dodoc() {
     do
 	if [ -e ${x} ]
 	then
-	    if [ ! -d ${D}/usr/doc/${PF} ]
+	    if [ ! -d ${D}usr/doc/${PF} ]
 	    then
-		install -d ${D}/usr/doc/${PF}
+		install -d ${D}usr/doc/${PF}
 	    fi
 	    if [ -z ${DOCDESTTREE} ]
 	    then
-		install -m0644 ${x} ${D}/usr/doc/${PF}
-		gzip -9 ${D}/usr/doc/${PF}/${x##*/}
+		install -m0644 ${x} ${D}usr/doc/${PF}
+		gzip -9 ${D}usr/doc/${PF}/${x##*/}
 	    else
 		install -m0644 ${x} ${D}usr/doc/${PF}/${DOCDESTTREE}
 		gzip -9 ${D}usr/doc/${PF}/${DOCDESTTREE}/${x##*/}
@@ -406,18 +401,18 @@ preplib.so() {
 prepinfo() {
   if [ -z "$1" ]
   then
-    rm -f ${D}/usr/info/dir
-    gzip -9 ${D}/usr/info/*
+    rm -f ${D}usr/info/dir
+    gzip -9 ${D}usr/info/*
   else
-    rm -f ${D}/$1/info/dir
-    gzip -9 ${D}/$1/info/*
+    rm -f ${D}$1/info/dir
+    gzip -9 ${D}$1/info/*
   fi
 }
 
 prepman() {
   local x
   local y
-  if [ -z "$1" ] ; then z=${D}/usr/man ; else z=${D}/$1/man ; fi
+  if [ -z "$1" ] ; then z=${D}usr/man ; else z=${D}$1/man ; fi
     for x in ${z}/* 
     do
 	local y
@@ -477,17 +472,17 @@ doinfo() {
 	echo "${0}: at least one argument needed"
 	return
     fi
-    if [ ! -d ${D}/usr/info ]
+    if [ ! -d ${D}usr/info ]
     then
-	install -d ${D}/usr/info
+	install -d ${D}usr/info
     fi
     local x
     for x in "$@"
     do
 	if [ -e ${x} ]
 	then
-	    install -m0644 ${x} ${D}/usr/info
-	    gzip -9 ${D}/usr/info/${x##*/}
+	    install -m0644 ${x} ${D}usr/info
+	    gzip -9 ${D}usr/info/${x##*/}
 	else
 	    echo "${0}: ${x} does not exist"
 	fi
@@ -588,7 +583,7 @@ dobin() {
             if [ -z "$DEBUG" ]
 	    then
 	        local MYVAL
-		MYVAL=`file ${x} | grep "executable"` 
+		MYVAL=`file ${x} | grep "ELF"` 
 	        if [ -n "$MYVAL" ]
 	        then
 		    strip ${x}
@@ -619,7 +614,7 @@ dosbin() {
 	then
             if [ -z "$DEBUG" ]
             then
-	        local MYVAL=`file ${x} | grep "executable"` 
+	        local MYVAL=`file ${x} | grep "ELF"` 
 	        if [ "$MYVAL" ]
 	        then
 		    strip ${x}
@@ -658,12 +653,11 @@ dohard() {
     
 #mkdir
 dodir() {
-    if [ ${#} -ne 1 ]
-    then
-	echo "${0}: one argument needed"
-	return
-    fi
-    install -d ${D}${1}
+    local x
+    for x in "$@"
+    do
+    	install -d ${D}${x}
+    done
 }
 
 fperms() {
@@ -672,7 +666,7 @@ fperms() {
 	echo "${0}: two arguments needed"
 	return
     fi
-    chmod ${1} ${D}/${2}
+    chmod ${1} ${D}${2}
 }
 
 fowners() {
@@ -681,7 +675,7 @@ fowners() {
 	echo "${0}: two arguments needed"
 	return
     fi
-    chown ${1} ${D}/${2}
+    chown ${1} ${D}${2}
 }
 
 
@@ -711,15 +705,21 @@ doins() {
 	install -d ${D}${INSDESTTREE}
     fi
     local x
+    local mysrc
     for x in "$@"
     do
 	if [ -L $x ]
 	then
 	    cp $x ${WORKDIR}
-	    install ${INSOPTIONS} ${WORKDIR}/${x##*/} ${D}${INSDESTTREE}
-	else
-	    install ${INSOPTIONS} ${x} ${D}${INSDESTTREE}
+	    mysrc=${WORKDIR}/`/usr/bin/basename ${x}`
+	elif [ -d $x ]
+	then
+	    echo "doins: warning, skipping directory ${x}"
+            continue
+        else
+	    mysrc=${x}
 	fi
+        install ${INSOPTIONS} ${mysrc} ${D}${INSDESTTREE}
     done
 }
 
@@ -818,7 +818,7 @@ doexe() {
     local mynum=${#}
     if [ ${mynum} -lt 1 ]
     then
-	echo "${0}: at least one argument needed"
+	echo "doexe: at least one argument needed"
 	return
     fi
     if [ ! -d ${D}${EXEDESTTREE} ]
@@ -826,9 +826,25 @@ doexe() {
 	install -d ${D}${EXEDESTTREE}
     fi
     local x
+    local mysrc
     for x in "$@"
     do
-	install ${EXEOPTIONS} ${x} ${D}${EXEDESTTREE}
+	if [ -L ${x} ]
+	then
+		cp ${x} ${T}
+		mysrc=${T}/`/usr/bin/basename ${x}`
+	elif [ -d ${x} ]
+	then
+		echo "doexe: warning, skipping directory ${x}"
+		continue
+	else
+		mysrc=${x}
+	fi
+	install ${EXEOPTIONS} ${mysrc} ${D}${EXEDESTTREE}
+	if [ -n "$DEBUG" ]
+	then
+		strip ${D}${EXEDESTTREE}/`/usr/bin/basename ${x}`
+	fi
     done
 }
 
@@ -913,7 +929,10 @@ dyn_compile() {
 	trap SIGINT SIGQUIT
 	return
     fi
+    if [ -d ${S} ]
+    then
     cd ${S}
+    fi
     src_compile 
     cd ${BUILDDIR}
     touch .compiled
@@ -961,12 +980,15 @@ dyn_install() {
     trap "abort_image" SIGINT SIGQUIT
     rm -rf ${BUILDDIR}/image
     mkdir ${BUILDDIR}/image
+    if [ -d ${S} ]
+    then
     cd ${S}
+    fi
     echo
     echo ">>> Install ${PF} into ${D} category ${CATEGORY}"
     src_install
-    install -d -m0700 ${D}/var/db/pkg/${CATEGORY}/${PF}
-    cp ${STARTDIR}/${EBUILD} ${D}/var/db/pkg/${CATEGORY}/${PF}
+    install -d -m0700 ${D}var/db/pkg/${CATEGORY}/${PF}
+    cp ${STARTDIR}/${EBUILD} ${D}var/db/pkg/${CATEGORY}/${PF}
     echo ">>> Completed installing into ${D}"
     echo
     cd ${BUILDDIR}
@@ -1074,6 +1096,8 @@ dyn_help() {
 	echo "  merge       : merge image into live filesystem, recording files in db"
 	echo "                (auto-fetch/unpack/compile if needed)"
 	echo "  unmerge     : remove package from live filesystem"
+	echo "  package     : create tarball package of type ${PACKAGE}"
+        echo "                (will be stored in ${PKGDIR}/All)"
 	echo "  clean       : clean up all source and temporary files"
 	echo
 	echo "The following settings will be used for the ebuild process:"
