@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-1.1-r10.ebuild,v 1.1 2003/02/17 23:48:23 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-1.1-r10.ebuild,v 1.2 2003/02/18 01:38:26 zwelch Exp $
 
 inherit eutils
 
@@ -65,6 +65,11 @@ pkg_preinst() {
 	id distcc 2> /dev/null && USERFIX=usermod || USERFIX=useradd
 	${USERFIX} -g daemon -s /bin/false -d /dev/null -c "distccd" distcc || \
 		die "Failed to \`${USERFIX} distcc\` user"
+	# stop daemon since script is being updated
+
+	einfo "Stopping distccd..."
+	[ -x /etc/init.d/distccd ] && 
+		/etc/init.d/distccd stop > /dev/null 2>&1
 }
 
 pkg_postinst() {

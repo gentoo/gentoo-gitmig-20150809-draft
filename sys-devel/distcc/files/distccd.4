@@ -8,7 +8,7 @@ depend() {
 }
 
 start() {
-	rm -rf ${DISTCCD_PIDFILE}
+	rm -f ${DISTCCD_PIDFILE}
 	ebegin "Starting distccd"
 	PATH="$(gcc-config --get-bin-path):${PATH}" \
 	    /sbin/start-stop-daemon --start --quiet \
@@ -20,8 +20,8 @@ start() {
 
 stop() {
 	ebegin "Stopping distccd"
-	start-stop-daemon --stop --quiet --pidfile ${DISTCC_PIDFILE}
-	rm -rf ${DISTCC_PIDFILE}
+	start-stop-daemon --stop --quiet --pidfile "${DISTCCD_PIDFILE}"
+	rm -f "${DISTCCD_PIDFILE}"
 	eend $? "Failed to Stop distccd"
 }
 
