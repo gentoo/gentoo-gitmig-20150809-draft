@@ -1033,3 +1033,8 @@ app-cdr/eroaster
 # g2boojum@gentoo.org 16 Jul 2002
 # new net-tools ; needs testing
 =sys-apps/net-tools-1.60-r5
+
+
+# <blizzy@gentoo.org> (19 Jul 2002)
+# new package; needs testing
+net-p2p/dchub
