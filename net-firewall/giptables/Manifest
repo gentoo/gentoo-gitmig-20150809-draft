@@ -1,0 +1,4 @@
+MD5 dd00d47ff5abc99eb82fafcfd5d3b7d3 giptables-1.1.ebuild 2153
+MD5 4efafed5ad73abd96ff8d280621ee253 files/giptables.init 2008
+MD5 419996627a148ab4daeecaa8beea5404 files/replace.sed 123
+MD5 4f4bc7762e6f3adc7df3e21dfc9e6837 files/digest-giptables-1.1 65

@@ -1,0 +1,8 @@
+# ChangeLog for net-firewall/giptables
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/giptables/ChangeLog,v 1.1 2003/07/25 13:33:13 aliz Exp $
+
+*giptables-1.1 (25 Jul 2003)
+
+  25 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Initial import. Ebuild contributed by Meder Bakirov <bakirov@transfer.kg> in #21408.
