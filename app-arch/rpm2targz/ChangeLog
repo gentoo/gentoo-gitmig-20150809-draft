@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.16 2003/08/31 15:31:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.17 2003/08/31 18:52:25 lu_zero Exp $
+
+  31 Aug 2003; Luca Barbato <lu_zero@gentoo.org> rpm2targz-9.0-r1.ebuild:
+  Marked stable for ppc to fix bug #27628.
 
   31 Aug 2003; Jason Wever <weeve@gentoo.org> rpm2targz-9.0-r1.ebuild:
   Marked stable for sparc to fix bug #27628.
