@@ -1,7 +1,17 @@
-MD5 714b97a5eaa2a04660e26e3fd20f50fe openmosixview-1.5.ebuild 1769
-MD5 ebd25fec6a221f29ea330ee18e713b51 openmosixview-1.4-r1.ebuild 2272
-MD5 62c83c8281928d0d41aeab97fa27775c ChangeLog 1257
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
-MD5 d5017d88ab775aaf821cb3e426827008 files/digest-openmosixview-1.4-r1 70
+MD5 62f2d9024c16a467caf3cf0bc6bfa7b1 ChangeLog 1491
+MD5 b5321b1a3ec2a528ecdbf6dfb4503c4c openmosixview-1.5.ebuild 1756
+MD5 55cd42613b8d4d9ea344748f15a680e4 openmosixview-1.4-r1.ebuild 2259
 MD5 36d55cc173a3505d4605028e44916ae9 files/digest-openmosixview-1.5 69
+MD5 d5017d88ab775aaf821cb3e426827008 files/digest-openmosixview-1.4-r1 70
 MD5 40351f8cbabc76e8c9b6860e8d92025a files/openmosixcollector.init 499
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfmbeKtJO8LeSoosRAs/NAJ0VItkw9hrnZn3NEC0FOOpCqmna8QCfVs1+
++/8L29Yb8xLXinIHhaME6Ro=
+=4IUD
+-----END PGP SIGNATURE-----

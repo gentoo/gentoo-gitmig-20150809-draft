@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixview/openmosixview-1.4-r1.ebuild,v 1.2 2004/06/24 22:40:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixview/openmosixview-1.4-r1.ebuild,v 1.3 2004/10/26 15:01:06 tantive Exp $
 
 S=${WORKDIR}/openmosixview-${PV}
 DESCRIPTION="cluster-management GUI for OpenMosix"
@@ -75,7 +75,7 @@ pkg_postinst() {
 	einfo "Start openmosixcollector"
 	einfo "manually (/etc/init.d/openmosixcollector start) or"
 	einfo "automatically using rc-update"
-	einfo "(rc-update add /etc/init.d/openmosixcollector default)."
+	einfo "(rc-update add openmosixcollector default)."
 	einfo
 	einfo "Run openmosixview by simply typing openmosixview."
 	einfo
