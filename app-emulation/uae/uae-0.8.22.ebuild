@@ -1,27 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.8 2003/02/13 07:16:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.9 2003/08/26 09:14:08 msterret Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="An amiga emulator"
 HOMEPAGE="http://www.freiburg.linux.de/~uae/"
-LICENSE="GPL-2"
-DEPEND="X? ( virtual/x11 gtk? ( x11-libs/gtk+ ) ) : ( sys-libs/ncurses svga? ( media-libs/svgalib ) )
-		sdl? media-libs/libsdl"
 SRC_URI="ftp://ftp.freiburg.linux.de/pub/uae/sources/develop/${P}.tar.gz"
-SLOT="0"
+
 KEYWORDS="x86 ~ppc"
+LICENSE="GPL-2"
+SLOT="0"
 IUSE="X gtk svga sdl"
 
+DEPEND="X? ( virtual/x11 gtk? ( x11-libs/gtk+ ) ) : ( sys-libs/ncurses svga? ( media-libs/svgalib ) )
+		sdl? ( media-libs/libsdl )"
+
 src_compile() {
-	local myconf
-	myconf="";
+	local myconf=""
 
 	if [ `use X` ]; then
 		myconf="--with-x --enable-dga --enable-vidmode --with-sdl --with-sdl-sound --with-sdl-gfx"
-
-		use gtk && myconf="$myconf --enable-ui"
-		use gtk || myconf="$myconf --disable-ui"
+		myconf="$myconf `use_enable gtk ui`"
 	else
 		if [ `use svga` ]; then
 			myconf="--with-svgalib";
@@ -36,12 +34,12 @@ src_compile() {
 		--enable-scsi-device \
 		${myconf} || die "./configure failed"
 
-	make || die
+	emake || die "emake failed"
 }
 
 src_install() {
 	dobin uae readdisk
-	mv docs/unix/README docs/README.unix
+	cp docs/unix/README docs/README.unix
 	dodoc docs/*
 
 	insinto /usr/share/uae/amiga-tools
