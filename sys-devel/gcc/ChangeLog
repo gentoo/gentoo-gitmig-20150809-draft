@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.343 2004/11/06 18:45:35 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.344 2004/11/07 22:15:21 lv Exp $
+
+*gcc-3.4.3 (07 Nov 2004)
+
+  07 Nov 2004; Travis Tilley <lv@gentoo.org> -gcc-3.4.2-r3.ebuild,
+  +gcc-3.4.3.ebuild:
+  version bumped. only generate specs-specific gcc configs if hardened gcc is
+  known to work on your arch. updated a few patches from redhat, and added the
+  arm/cross patches to the gcc patch tarball. removed gcc 3.4.2-r3 since the
+  branch update used was made just before the 3.4.3 freeze (dont worry sparc
+  users, this ebuild is keyworded as testing on sparc).
 
   06 Nov 2004; Joshua Kinard <kumba@gentoo.org> gcc-3.4.2-r3.ebuild:
   Marked unstable on sparc (Needs cascaded sparc64/gcc34 testing profile).

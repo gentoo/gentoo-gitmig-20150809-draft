@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r3.ebuild,v 1.11 2004/11/06 18:45:35 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.ebuild,v 1.1 2004/11/07 22:15:22 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
@@ -43,13 +43,13 @@ PDEPEND="sys-devel/gcc-config
 	!nocxx? ( !n32? ( !n64? ( !uclibc? ( !build ( sys-libs/libstdc++-v3 ) ) ) ) )"
 
 GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~lv/GCC/"
-BRANCH_UPDATE="20041025"
-PATCH_VER="1.2"
+#BRANCH_UPDATE="20041025"
+PATCH_VER="1.0"
 PIE_VER="8.7.6.5"
 PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"
-PP_VER="3_4_1"
-PP_FVER="${PP_VER//_/.}-1"
-HTB_VER="1.00"
+PP_VER="3_4_3"
+PP_FVER="${PP_VER//_/.}-0"
+#HTB_VER="1.00"
 SRC_URI="$(get_gcc_src_uri)"
 S="$(gcc_get_s_dir)"
 
@@ -130,11 +130,6 @@ src_unpack() {
 	# misc patches that havent made it into a patch tarball yet
 	epatch ${FILESDIR}/3.4.0/gcc34-reiser4-fix.patch
 	epatch ${FILESDIR}/gcc-spec-env.patch
-	epatch ${FILESDIR}/3.4.2/600-gcc34-arm-ldm-peephole.patch
-	epatch ${FILESDIR}/3.4.2/601-gcc34-arm-ldm.patch
-	epatch ${FILESDIR}/3.4.2/602-sdk-libstdc++-includes.patch
-	epatch ${FILESDIR}/3.4.2/700-pr15068-fix.patch
-	epatch ${FILESDIR}/3.4.2/800-arm-bigendian.patch
 	epatch ${FILESDIR}/3.4.2/810-arm-bigendian-uclibc.patch
 
 	# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
@@ -215,7 +210,7 @@ src_install() {
 	dodir /etc/env.d/gcc
 	create_gcc_env_entry
 
-	if [ "${SPLIT_SPECS}" == "true" ] && use !boundschecking ; then
+	if [ "${SPLIT_SPECS}" == "true" ] && use !boundschecking && hardened_gcc_works; then
 		if use hardened ; then
 			create_gcc_env_entry vanilla
 		else
