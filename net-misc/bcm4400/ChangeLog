@@ -1,7 +1,11 @@
 # ChangeLog for net-misc/bcm4400
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.5 2003/10/02 08:24:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/ChangeLog,v 1.6 2003/12/07 12:08:24 plasmaroo Exp $
 
+*bcm4400-3.0.7 (07 Dec 2003)
+
+  07 Dec 2003; <plasmaroo@gentoo.org> bcm4400-3.0.7.ebuild:
+  Version bump, thanks to Andy Wang for sending bug #35227 along.
 
 *bcm4400-1.0.1 (Jan 18 2003)
 
