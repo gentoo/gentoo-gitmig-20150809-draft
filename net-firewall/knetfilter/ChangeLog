@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/knetfilter
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/knetfilter/ChangeLog,v 1.9 2004/06/24 22:41:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/knetfilter/ChangeLog,v 1.10 2004/07/06 12:21:53 carlo Exp $
+
+  06 Jul 2004; Carsten Lohrke <carlo@gentoo.org> -knetfilter-3.0.2.ebuild,
+  -knetfilter-3.0.3.ebuild, -knetfilter-3.1.0.ebuild, knetfilter-3.1.1.ebuild:
+  removed old ebuilds, QA: newdepend -> R/DEPEND, need-kde
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   knetfilter-3.0.2.ebuild, knetfilter-3.0.3.ebuild, knetfilter-3.1.0.ebuild,
