@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.0-r1.ebuild,v 1.5 2004/07/02 04:24:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.0-r1.ebuild,v 1.6 2004/07/11 17:47:32 kugelfang Exp $
 
-IUSE="atlas X tcltk gnome zlib bzlib pcre"
+IUSE="blas X tcltk gnome zlib bzlib pcre f2c"
 
 DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
 
@@ -19,10 +19,8 @@ DEPEND="virtual/libc
 		zlib? ( >=sys-libs/zlib-1.1.3-r2 )
 		>=media-libs/jpeg-6b-r2
 		>=media-libs/libpng-1.2.1
-		x86? ( atlas? ( dev-libs/atlas ) )
-		sparc? ( atlas? ( dev-libs/atlas ) )
-		~amd64? ( atlas? ( dev-libs/atlas ) )
-		~amd64? ( !f77? ( dev-lang/f2c >=dev-libs/libf2c-20021004-r1 ) )
+		blas? ( virtual/blas )
+		f2c? ( dev-lang/f2c >=dev-libs/libf2c-20021004-r1 )
 		X? ( virtual/x11 )
 		tcltk? ( dev-lang/tk )
 		pcre? ( dev-libs/libpcre )
@@ -42,10 +40,15 @@ LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 
 pkg_setup() {
-	if ! which g77 &>/dev/null && ! which f2c &>/dev/null; then
-			eerror "g77 and f2c not found. Maybe the f77 USE flag was not set when"
-			eerror "you emerged gcc - you could also install f2c"
-		die "need g77 or f2c ."
+	if [ -z "$(which g77 2>/dev/null)" ]; then
+		einfo "Couldn't find g77 Fortran Compiler."
+		if [ -z "$(use f2c)" ]; then
+			eerror "Trying to emerge this packet w/o fortran compiler."
+			eerror "Try again with USE=\"f2c\" emerge dev-lang/R."
+			die "No fortran compiler, no f2c."
+		else
+			einfo "Using f2c to translate fortran sources."
+		fi
 	fi
 }
 
@@ -64,10 +67,10 @@ src_compile() {
 	use bzlib || myconf="${myconf} --with-bzlib"   #default disabled
 	use pcre || myconf="${myconf} --with-pcre"   #default disabled
 
-	#Eventually, we will want to take into account that a user may have
-	#an alternate or additional blas libraries,
-	#i.e. USE variable blas and and virtual/blas
-	use atlas || myconf="${myconf} --without-blas" #default enabled
+	# Using the blas USE flag now instead atlas, as atlas now
+	# has been broken into blas-atlas and lapack-atlas.
+	# Danny van Dyk <kugelfang@gentoo.org> 2004/07/11
+	use blas || myconf="${myconf} --without-blas" #default enabled
 
 	use X || myconf="${myconf} --without-x" #default enabled
 
@@ -87,7 +90,7 @@ src_compile() {
 		--mandir=/usr/share/man \
 		${myconf} || die "./configure failed"
 
-	make || die
+	emake || die
 
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.8.1.ebuild,v 1.8 2004/07/02 04:24:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.8.1.ebuild,v 1.9 2004/07/11 17:47:32 kugelfang Exp $
 
 IUSE="atlas X tcltk gnome"
 
@@ -38,6 +38,14 @@ DEPEND="virtual/libc
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="x86 sparc ppc amd64"
+
+pkg_setup() {
+	if ! which g77 &>/dev/null && ! which f2c &>/dev/null; then
+		eerror "g77 and f2c not found. Maybe the f77 USE flag was not set when"
+		eerror "you emerged gcc - you could also install f2c"
+		die "need g77 or f2c ."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

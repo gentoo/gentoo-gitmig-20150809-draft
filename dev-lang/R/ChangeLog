@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/R
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.26 2004/07/02 04:24:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.27 2004/07/11 17:47:32 kugelfang Exp $
+
+  11 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> R-1.8.1.ebuild,
+  R-1.9.0-r1.ebuild, R-1.9.0.ebuild:
+  Fixed BUG #56616. Tidied up g77/f2c check in >=R-1.9.0. Added f2c USE flag.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> R-1.8.1.ebuild,
   R-1.9.0-r1.ebuild, R-1.9.0.ebuild:
