@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nwwine/nwwine-20030911.ebuild,v 1.4 2004/08/29 05:02:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nwwine/nwwine-20030911.ebuild,v 1.5 2004/10/31 05:10:22 vapier Exp $
 
 inherit eutils
 
@@ -20,7 +20,6 @@ S=${WORKDIR}/nwwine-based-on-${PV}
 DEPEND="sys-devel/gcc
 	sys-devel/flex
 	dev-util/yacc
-	>=sys-apps/sed-4
 	>=sys-libs/ncurses-5.2
 	>=media-libs/freetype-2.0.0
 	X? ( 	virtual/x11 )
