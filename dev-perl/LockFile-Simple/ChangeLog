@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/LockFile-Simple
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LockFile-Simple/ChangeLog,v 1.9 2003/04/03 23:40:56 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LockFile-Simple/ChangeLog,v 1.10 2004/04/15 19:32:23 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org>
+  LockFile-Simple-0.2.5-r1.ebuild:
+  adding s390 keywords
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
