@@ -1,6 +1,12 @@
 # ChangeLog for net-im/centericq
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.32 2003/11/06 20:54:25 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.33 2003/12/01 12:50:59 coronalvr Exp $
+
+*centericq-4.9.9 (01 Dec 2003)
+
+  01 Dec 2003; Alex Veber <coronalvr@gentoo.org> centericq-4.9.8.ebuild,
+  centericq-4.9.9.ebuild:
+  version bump and a move to stable
 
   06 Nov 2003; Alex Veber <coronalvr@gentoo.org> centericq-4.9.8.ebuild:
   Changed the USE flag for fribidi from nls to bidi
