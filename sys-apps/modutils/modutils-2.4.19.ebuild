@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.19.ebuild,v 1.19 2004/06/30 21:22:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.19.ebuild,v 1.20 2004/07/15 01:59:40 agriffis Exp $
 
-S=${WORKDIR}/${P}
 SLOT="0"
 DESCRIPTION="Standard kernel module utilities"
 SRC_URI="mirror://kernel/linux/utils/kernel/${PN}/v2.4/${P}.tar.bz2"

@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.23.ebuild,v 1.12 2004/06/30 21:22:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.23.ebuild,v 1.13 2004/07/15 01:59:40 agriffis Exp $
 
 inherit flag-o-matic
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Standard kernel module utilities"
 SRC_URI="mirror://kernel/linux/utils/kernel/modutils/v2.4/${P}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/modutils/"

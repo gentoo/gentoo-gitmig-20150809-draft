@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nictools/nictools-20030719.ebuild,v 1.7 2004/06/24 22:19:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nictools/nictools-20030719.ebuild,v 1.8 2004/07/15 02:01:40 agriffis Exp $
 
 inherit eutils
 
@@ -17,8 +17,6 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="static"
 DEPEND=""
-
-S=${WORKDIR}/${P}
 
 nictools_grabvar() {
 	gmake VAR="${1}" printvar
