@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.2.ebuild,v 1.3 2004/05/17 14:50:20 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.2.ebuild,v 1.4 2004/06/19 13:09:09 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.snort.org/dl/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc -alpha ~amd64"
+KEYWORDS="x86 ~sparc -alpha ~amd64 ~ppc"
 IUSE="ssl postgres mysql flexresp selinux"
 # snort 2.1.x does not have prelude patches yet
 # IUSE="${IUSE} prelude"
