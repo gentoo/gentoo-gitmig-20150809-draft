@@ -1,8 +1,11 @@
 # ChangeLog for app-i18n/dbskkd-cdb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.5 2003/09/30 13:28:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.6 2003/11/13 04:25:13 matsuu Exp $
 
 *dbskkd-cdb-1.01-r1 (24 Jun 2003)
+
+  13 Nov 2003; MATSUU Takuto <matsuu@gentoo.org> dbskkd-cdb-1.01-r1.ebuild:
+  Add amd64 to KEYWORDS.
 
   30 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> dbskkd-cdb-1.01-r1.ebuild:
   Considered to be stable for alpha, sparc and ppc
