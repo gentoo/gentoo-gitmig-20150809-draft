@@ -3,3 +3,8 @@ default-linux/amd64/2004.3
 # cd /etc/
 # rm make.profile
 # ln -s ../usr/portage/profiles/default-linux/amd64/2004.3 make.profile
+
+Your current profile is subject to removal any time after 2005.07.01.
+If for any reason you require this deprecated profile, please discuss it
+on gentoo-amd64@gentoo.org so the issue blocking your transition can be
+addressed.
