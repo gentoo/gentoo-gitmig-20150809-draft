@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.8 2004/06/04 07:30:53 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.9 2004/06/04 14:30:44 iluxa Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -42,7 +42,7 @@ SRC_URI="http://dev.gentoo.org/~lv/${P}.tar.bz2"
 HOMEPAGE="http://sources.redhat.com/glibc/"
 
 #KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~ia64 ~ppc" # breaks on ~alpha
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~amd64 ~mips"
 
 SLOT="2.2"
 LICENSE="LGPL-2"
@@ -55,7 +55,7 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 	nptl? ( >=sys-devel/gcc-3.3.1-r1 )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	virtual/os-headers
-	nptl? ( =sys-kernel/linux-headers-2.6* )
+	!mips? ( nptl? ( =sys-kernel/linux-headers-2.6* ) )
 	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/os-headers
 	sys-apps/baselayout

@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.168 2004/06/04 07:30:53 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.169 2004/06/04 14:30:44 iluxa Exp $
+
+  04 Jun 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
+  glibc-2.3.4.20040602.ebuild:
+  Mark glibc-2.3.4 as ~mips
 
   03 Jun 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
   +files/2.3.3/mips-addabi.diff, +files/2.3.3/mips-syscall.h.diff,
