@@ -1,4 +1,4 @@
-MD5 583084e7c15f0abf68e9b208bccdc262 ChangeLog 12608
+MD5 4ad5a27465edba8dcb27136a639b8548 gkrellm-2.1.28-r1.ebuild 1765
 MD5 0fa42be870ad22b7ed515ec859cdb908 gkrellm-1.2.13.ebuild 917
 MD5 9ba1a7da42e95f7e34c61a63339cc432 gkrellm-2.1.21.ebuild 1657
 MD5 fa6815c0c292037a32944c2d1707f9f2 gkrellm-2.1.23.ebuild 1658
@@ -7,7 +7,6 @@ MD5 172f286fe5296f61d25ca56097e2ddbe gkrellm-2.1.25.ebuild 1780
 MD5 cad596630ac6a444888ec11ad69c9df3 gkrellm-2.1.26.ebuild 1786
 MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
 MD5 d54178844f72c19db0b47a9db470f50d gkrellm-2.1.27.ebuild 1738
-MD5 4ad5a27465edba8dcb27136a639b8548 gkrellm-2.1.28-r1.ebuild 1765
 MD5 8ab5ecd96d86a6824c28ce015394a529 gkrellm-2.1.28.ebuild 1704
 MD5 6e41c75396a6b0df361a04657fd45ac3 files/digest-gkrellm-1.2.13 67
 MD5 cafab2b9743941916312f01b8f64cffd files/gkrellmd 598
