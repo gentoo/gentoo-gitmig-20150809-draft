@@ -1,4 +1,4 @@
-MD5 c0dc0ae1227cbded14a427af8f6c27a6 dcoprss-3.4.0_beta1.ebuild 407
-MD5 c0dc0ae1227cbded14a427af8f6c27a6 dcoprss-3.4.0_alpha1.ebuild 407
+MD5 a8975b52899cb2a76ad3e54fe142e263 dcoprss-3.4.0_beta1.ebuild 528
+MD5 d81e958f2c6bc33d76e52a075b95a67e ChangeLog 427
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 4af013c3a73d9988c67cfbfcc7fff890 files/digest-dcoprss-3.4.0_beta1 223
-MD5 09cbac9d8b68d5bd4514c50df459e782 files/digest-dcoprss-3.4.0_alpha1 71

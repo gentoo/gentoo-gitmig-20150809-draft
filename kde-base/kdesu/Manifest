@@ -1,4 +1,4 @@
-MD5 2071493520d0e74aa289c4e8fe6c406e kdesu-3.4.0_alpha1.ebuild 361
-MD5 2071493520d0e74aa289c4e8fe6c406e kdesu-3.4.0_beta1.ebuild 361
+MD5 6f4f7157a72e09574c856c4799cb3077 kdesu-3.4.0_beta1.ebuild 366
+MD5 27ecd971e28b915904b3b3c1bbb36a0d ChangeLog 436
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 ec8a5f0c1ed08c8b554530920490e63e files/digest-kdesu-3.4.0_beta1 216
-MD5 99206d9cd7498b2daddb8b1099b0b24b files/digest-kdesu-3.4.0_alpha1 69

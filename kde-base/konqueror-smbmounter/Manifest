@@ -1,4 +1,4 @@
-MD5 89fd1d9df36abb0a9bb50f2e4f04a62c konqueror-smbmounter-3.4.0_beta1.ebuild 518
-MD5 89fd1d9df36abb0a9bb50f2e4f04a62c konqueror-smbmounter-3.4.0_alpha1.ebuild 518
+MD5 d8d879aefc61ce6c1710e9a7afb8b547 konqueror-smbmounter-3.4.0_beta1.ebuild 661
+MD5 8e99bf116e6fa2eb823521365a1734a8 ChangeLog 496
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 723a604383a2fd8238013a8b609a62f3 files/digest-konqueror-smbmounter-3.4.0_beta1 219
-MD5 b47f9ddbd93d3dd0541fa87746a9fa34 files/digest-konqueror-smbmounter-3.4.0_alpha1 70

@@ -1,4 +1,4 @@
-MD5 9a8bc031c72949756e1c4f32733e80f4 kdebase-applnk-3.4.0_beta1.ebuild 397
-MD5 9a8bc031c72949756e1c4f32733e80f4 kdebase-applnk-3.4.0_alpha1.ebuild 397
+MD5 d34e2ce8e2622f3d236dbbfe9a0e911f kdebase-applnk-3.4.0_beta1.ebuild 420
+MD5 d1120a7bb3abaa4aa990765a15cf45c1 ChangeLog 472
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 ec8a5f0c1ed08c8b554530920490e63e files/digest-kdebase-applnk-3.4.0_beta1 216
-MD5 99206d9cd7498b2daddb8b1099b0b24b files/digest-kdebase-applnk-3.4.0_alpha1 69

@@ -1,4 +1,4 @@
-MD5 40bf9f6aeb88e2df318093bb745ca03a kfloppy-3.4.0_beta1.ebuild 311
-MD5 40bf9f6aeb88e2df318093bb745ca03a kfloppy-3.4.0_alpha1.ebuild 311
+MD5 b0e6a26c29868badcec18740f689fe80 kfloppy-3.4.0_beta1.ebuild 418
+MD5 54def055aa922f8bb02fae8b5f5fccbc ChangeLog 444
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 88e740876cecf9b079bcc6622808dbb1 files/digest-kfloppy-3.4.0_beta1 216
-MD5 d329630a6f718e3d3af7fe3acaf81446 files/digest-kfloppy-3.4.0_alpha1 69

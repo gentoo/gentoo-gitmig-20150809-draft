@@ -1,4 +1,4 @@
-MD5 e135531a86cd1665c3978f331b1a11b2 noatun-ffrs-3.4.0_alpha1.ebuild 370
-MD5 e135531a86cd1665c3978f331b1a11b2 noatun-ffrs-3.4.0_beta1.ebuild 370
+MD5 1e9074c8784f4730115faa190a5a1869 noatun-ffrs-3.4.0_beta1.ebuild 525
+MD5 e0116539d51f375da2773229e569c524 ChangeLog 460
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 723a604383a2fd8238013a8b609a62f3 files/digest-noatun-ffrs-3.4.0_beta1 219
-MD5 b47f9ddbd93d3dd0541fa87746a9fa34 files/digest-noatun-ffrs-3.4.0_alpha1 70

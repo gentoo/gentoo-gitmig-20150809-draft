@@ -1,4 +1,4 @@
-MD5 287519bbee50090f9810e46675cebff2 klines-3.4.0_beta1.ebuild 465
-MD5 287519bbee50090f9810e46675cebff2 klines-3.4.0_alpha1.ebuild 465
-MD5 b35124f462cce0e0518bb5468c406f9d files/digest-klines-3.4.0_alpha1 69
+MD5 47c8cc2861110ea8470b017ff2745e90 klines-3.4.0_beta1.ebuild 575
+MD5 23ed5519c0d0adf024e2ddba6144d19f ChangeLog 440
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 039057bfd4af6b157cd2b7b08f08d23d files/digest-klines-3.4.0_beta1 216

@@ -1,4 +1,4 @@
-MD5 370711c82ab061278e4bdceaf10b0c79 ksame-3.4.0_beta1.ebuild 463
-MD5 370711c82ab061278e4bdceaf10b0c79 ksame-3.4.0_alpha1.ebuild 463
+MD5 1b03f9ca2e2e42d63ff6c268140a491a ksame-3.4.0_beta1.ebuild 571
+MD5 2234210ed0bc927647532d034d86f6ce ChangeLog 436
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 039057bfd4af6b157cd2b7b08f08d23d files/digest-ksame-3.4.0_beta1 216
-MD5 b35124f462cce0e0518bb5468c406f9d files/digest-ksame-3.4.0_alpha1 69

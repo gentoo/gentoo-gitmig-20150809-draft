@@ -1,4 +1,4 @@
-MD5 2c01a1cc5bc49cdea865e0f6706cd32f ksvgplugin-3.4.0_beta1.ebuild 451
-MD5 2c01a1cc5bc49cdea865e0f6706cd32f ksvgplugin-3.4.0_alpha1.ebuild 451
-MD5 f85ff1154cc1ce2a3fcc01be1098fca8 files/digest-ksvgplugin-3.4.0_alpha1 72
+MD5 ad8c992200e97f8a5a2a244b0f6c785b ksvgplugin-3.4.0_beta1.ebuild 578
+MD5 5771875acd3b7329121062bf1016f738 ChangeLog 456
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 2ed7b7cff3ca3ea63807d913c938cf52 files/digest-ksvgplugin-3.4.0_beta1 225

@@ -1,4 +1,4 @@
-MD5 0651232c6d804cb2cbff6850423ff545 librss-3.4.0_alpha1.ebuild 260
-MD5 0651232c6d804cb2cbff6850423ff545 librss-3.4.0_beta1.ebuild 260
-MD5 09cbac9d8b68d5bd4514c50df459e782 files/digest-librss-3.4.0_alpha1 71
+MD5 c5a57e0dfb388169db7413a82c14c445 librss-3.4.0_beta1.ebuild 365
+MD5 cce7742ebe9e0773f07d106ee1047634 ChangeLog 440
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 4af013c3a73d9988c67cfbfcc7fff890 files/digest-librss-3.4.0_beta1 223

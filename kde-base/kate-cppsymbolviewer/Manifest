@@ -1,4 +1,4 @@
-MD5 b726c9443d4bb50ffa1dab1e31e7e39b kate-cppsymbolviewer-3.4.0_alpha1.ebuild 526
-MD5 b726c9443d4bb50ffa1dab1e31e7e39b kate-cppsymbolviewer-3.4.0_beta1.ebuild 526
+MD5 68d1515293750c3782ac97c65a682d73 kate-cppsymbolviewer-3.4.0_beta1.ebuild 669
+MD5 122db67fa8d7b3bce5933eddf32027a2 ChangeLog 496
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 723a604383a2fd8238013a8b609a62f3 files/digest-kate-cppsymbolviewer-3.4.0_beta1 219
-MD5 b47f9ddbd93d3dd0541fa87746a9fa34 files/digest-kate-cppsymbolviewer-3.4.0_alpha1 70

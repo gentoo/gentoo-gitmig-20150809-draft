@@ -1,4 +1,4 @@
-MD5 89228ca549e523049a0383e4bffb5a1c kdepim-meta-3.4.0_beta1.ebuild 1880
-MD5 89228ca549e523049a0383e4bffb5a1c kdepim-meta-3.4.0_alpha1.ebuild 1880
+MD5 f63ac1458c05ddac93402791293189a1 kdepim-meta-3.4.0_beta1.ebuild 1995
+MD5 bae12d56b5e9973bd6acfdadb1a77bea ChangeLog 460
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdepim-meta-3.4.0_beta1 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdepim-meta-3.4.0_alpha1 0

@@ -1,4 +1,4 @@
-MD5 ce21f858b10c0d67e63370601957f34a kfilereplace-3.4.0_alpha1.ebuild 277
-MD5 ce21f858b10c0d67e63370601957f34a kfilereplace-3.4.0_beta1.ebuild 277
+MD5 f2c5e62c962eccd07c99454778987538 kfilereplace-3.4.0_beta1.ebuild 416
+MD5 c0e46476e861ad143f486cf30a1a3f97 ChangeLog 464
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 07dc9f44e293d1ac9c7b66b68f28492f files/digest-kfilereplace-3.4.0_beta1 219
-MD5 01932d35a126a5610a6c4a35de90a2b6 files/digest-kfilereplace-3.4.0_alpha1 70

@@ -1,4 +1,4 @@
-MD5 f96404e0f340f069662fdc690ba33da2 kppp-3.4.0_beta1.ebuild 280
-MD5 f96404e0f340f069662fdc690ba33da2 kppp-3.4.0_alpha1.ebuild 280
+MD5 a2910aee062e76aec98e5fe3b38a5a2e kppp-3.4.0_beta1.ebuild 381
+MD5 8cf6eb2c8cd57545a2f985be07ff8c9d ChangeLog 432
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 4af013c3a73d9988c67cfbfcc7fff890 files/digest-kppp-3.4.0_beta1 223
-MD5 09cbac9d8b68d5bd4514c50df459e782 files/digest-kppp-3.4.0_alpha1 71

@@ -1,4 +1,4 @@
-MD5 0a3a9f848189e4f28f43858aae10de47 ksysguard-3.4.0_alpha1.ebuild 359
-MD5 0a3a9f848189e4f28f43858aae10de47 ksysguard-3.4.0_beta1.ebuild 359
-MD5 99206d9cd7498b2daddb8b1099b0b24b files/digest-ksysguard-3.4.0_alpha1 69
+MD5 105defc8bd9af9522399edc48e996065 ChangeLog 452
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 fe98b1217e0292c3f7d9a25b82cf1534 ksysguard-3.4.0_beta1.ebuild 372
 MD5 ec8a5f0c1ed08c8b554530920490e63e files/digest-ksysguard-3.4.0_beta1 216

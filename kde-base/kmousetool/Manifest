@@ -1,4 +1,4 @@
-MD5 26321f761b592f03ab44d2f692c97854 kmousetool-3.4.0_alpha1.ebuild 316
-MD5 26321f761b592f03ab44d2f692c97854 kmousetool-3.4.0_beta1.ebuild 316
+MD5 9bc4a8ca80139a6f204a5e355c24a7f0 kmousetool-3.4.0_beta1.ebuild 449
+MD5 36b130510f324efabf0b842cacbac179 ChangeLog 456
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 c5420b3dc1848daf59305d1f2ff74a83 files/digest-kmousetool-3.4.0_beta1 240
-MD5 66b4de7b06e1e62dd8abc1e60ec1187b files/digest-kmousetool-3.4.0_alpha1 77

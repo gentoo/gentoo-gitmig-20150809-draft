@@ -1,4 +1,4 @@
-MD5 98c1145691cdc27e2a03e8b8a4d1b976 khangman-3.4.0_alpha1.ebuild 440
-MD5 98c1145691cdc27e2a03e8b8a4d1b976 khangman-3.4.0_beta1.ebuild 440
+MD5 19fef78d325ac3d08ec7b94a1143fdd1 khangman-3.4.0_beta1.ebuild 554
+MD5 daedae47f27765368301ed5fd801c576 ChangeLog 448
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 521fc13bde64ce3aa9c5fc4213337476 files/digest-khangman-3.4.0_beta1 212
-MD5 2f8ae5d56e22103d2da191f4da825a5e files/digest-khangman-3.4.0_alpha1 68

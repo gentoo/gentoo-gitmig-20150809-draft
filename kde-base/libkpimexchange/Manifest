@@ -1,4 +1,4 @@
-MD5 efb89b0edb24474a56a33d90335a7f2a libkpimexchange-3.4.0_alpha1.ebuild 821
-MD5 efb89b0edb24474a56a33d90335a7f2a libkpimexchange-3.4.0_beta1.ebuild 821
-MD5 892303ffe022b31a222f9efab549727b files/digest-libkpimexchange-3.4.0_alpha1 68
+MD5 432fc0efcf7bdee8cb290bf40ec41383 ChangeLog 476
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 0501b08f91ef80f10c671280145e65af libkpimexchange-3.4.0_beta1.ebuild 947
 MD5 91d4f5b007e372c77780c153cb54c612 files/digest-libkpimexchange-3.4.0_beta1 213

@@ -1,4 +1,4 @@
-MD5 f8ecf9365d5a0c5d3e671f7c4774bfc9 kwin4-3.4.0_alpha1.ebuild 416
-MD5 f8ecf9365d5a0c5d3e671f7c4774bfc9 kwin4-3.4.0_beta1.ebuild 416
+MD5 67f6596749c8b3f20bc2881b46cf3ec0 kwin4-3.4.0_beta1.ebuild 524
+MD5 30124aa359912906bb2d85daa1216548 ChangeLog 436
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 039057bfd4af6b157cd2b7b08f08d23d files/digest-kwin4-3.4.0_beta1 216
-MD5 b35124f462cce0e0518bb5468c406f9d files/digest-kwin4-3.4.0_alpha1 69

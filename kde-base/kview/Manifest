@@ -1,4 +1,4 @@
-MD5 442b5f7e9b0e30ca32f5cc0b8c8fbc82 kview-3.4.0_alpha1.ebuild 261
-MD5 442b5f7e9b0e30ca32f5cc0b8c8fbc82 kview-3.4.0_beta1.ebuild 261
+MD5 28b501104ff9be3a339d67fab93cf3d6 kview-3.4.0_beta1.ebuild 364
+MD5 a537e7c0e747cc852c50623692c48ce8 ChangeLog 436
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 2ed7b7cff3ca3ea63807d913c938cf52 files/digest-kview-3.4.0_beta1 225
-MD5 f85ff1154cc1ce2a3fcc01be1098fca8 files/digest-kview-3.4.0_alpha1 72

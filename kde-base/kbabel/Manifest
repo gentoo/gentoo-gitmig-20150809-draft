@@ -1,4 +1,4 @@
-MD5 36a64bdcae92e5feb1dd411b1bf0a51e kbabel-3.4.0_beta1.ebuild 301
-MD5 36a64bdcae92e5feb1dd411b1bf0a51e kbabel-3.4.0_alpha1.ebuild 301
+MD5 ea0300ed1e2ea193aa16d9c2da3b03d7 kbabel-3.4.0_beta1.ebuild 406
+MD5 6a8b9efdf1911209e10400b151bc4f5a ChangeLog 440
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 a859d7dcb2c41d449cdccedc9f23f561 files/digest-kbabel-3.4.0_beta1 210
-MD5 6fd89829eb39c6f490ef984b5bb6b1e6 files/digest-kbabel-3.4.0_alpha1 67

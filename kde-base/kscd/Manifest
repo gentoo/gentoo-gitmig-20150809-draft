@@ -1,4 +1,4 @@
-MD5 a1be3ac7948318f9733f15373d66a10c kscd-3.4.0_beta1.ebuild 446
-MD5 a1be3ac7948318f9733f15373d66a10c kscd-3.4.0_alpha1.ebuild 446
-MD5 fc6c88b42efcb16aaa7a7459489c41b2 files/digest-kscd-3.4.0_alpha1 74
+MD5 f033df1e8546cca93d93fcabbb4b51af kscd-3.4.0_beta1.ebuild 738
+MD5 22428d2f2c3dbab96e474f2291ac6fc7 ChangeLog 432
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 43e784a2028b42eff11cfacd5dc9e845 files/digest-kscd-3.4.0_beta1 231

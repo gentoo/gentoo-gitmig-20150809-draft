@@ -1,4 +1,4 @@
-MD5 d31707e3c0ce01814d14134569fba824 kpdf-3.4.0_beta1.ebuild 311
-MD5 d31707e3c0ce01814d14134569fba824 kpdf-3.4.0_alpha1.ebuild 311
-MD5 f85ff1154cc1ce2a3fcc01be1098fca8 files/digest-kpdf-3.4.0_alpha1 72
+MD5 87a7a01624e046fb0ffb72806085e6ee kpdf-3.4.0_beta1.ebuild 412
+MD5 051d30a7c901bd28fd364e5604fdfd6c ChangeLog 432
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 2ed7b7cff3ca3ea63807d913c938cf52 files/digest-kpdf-3.4.0_beta1 225

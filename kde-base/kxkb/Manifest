@@ -1,4 +1,4 @@
-MD5 e0c855b7edf45a5c93f5c42ed6bd78fd kxkb-3.4.0_beta1.ebuild 384
-MD5 e0c855b7edf45a5c93f5c42ed6bd78fd kxkb-3.4.0_alpha1.ebuild 384
+MD5 3fa298ecb492e1a19b94668ef287daed kxkb-3.4.0_beta1.ebuild 387
+MD5 a74153ebc0be0f677cc2c5f8f6b77f45 ChangeLog 432
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 ec8a5f0c1ed08c8b554530920490e63e files/digest-kxkb-3.4.0_beta1 216
-MD5 99206d9cd7498b2daddb8b1099b0b24b files/digest-kxkb-3.4.0_alpha1 69

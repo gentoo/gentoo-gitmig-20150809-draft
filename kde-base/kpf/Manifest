@@ -1,4 +1,4 @@
-MD5 a0625f1e3f2c002320082f7157187b29 kpf-3.4.0_alpha1.ebuild 277
-MD5 a0625f1e3f2c002320082f7157187b29 kpf-3.4.0_beta1.ebuild 277
+MD5 a02d6e64198b2644a742ccebeefa60b7 kpf-3.4.0_beta1.ebuild 376
+MD5 f3ea61edab3988a262c29e67cdae44fc ChangeLog 428
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 4af013c3a73d9988c67cfbfcc7fff890 files/digest-kpf-3.4.0_beta1 223
-MD5 09cbac9d8b68d5bd4514c50df459e782 files/digest-kpf-3.4.0_alpha1 71
