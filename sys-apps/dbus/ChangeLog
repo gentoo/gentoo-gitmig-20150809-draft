@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/dbus
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.1 2003/06/22 01:34:44 seemant Exp $
+
+*dbus-0.11 (21 Jun 2003)
+
+  21 Jun 2003; Seemant Kulleen <seemant@gentoo.org> dbus-0.11.ebuild,
+  files/dbus-0.11-cvs-update.patch:
+  dbus thingy from freedesktop.org -- for upcoming apps like xmms2 etc
+
