@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r1.ebuild,v 1.1 2004/12/31 21:28:41 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r1.ebuild,v 1.2 2005/01/12 06:30:25 lisa Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -51,8 +51,7 @@ src_unpack() {
 	# please put distcc in your package.unmask file.
 	# See bug #75420 for more multilib stuff
 	epatch ${FILESDIR}/distcc-gentoo-multilib.patch
-	einfo "Please report to bug #75420 success or failure of this patch!"
-	ebeep 3
+	einfo "Please report to bug #75420 success or failure of this patch."
 	gnuconfig_update
 }
 
@@ -114,6 +113,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	enewuser distcc 240
 	# handle DISTCC_HOSTS upgrade better
 	local ENVFILE
 	ENVFILE="${ROOT}etc/env.d/02distcc"
@@ -147,11 +147,6 @@ pkg_postinst() {
 
 	einfo "Tips on using distcc with Gentoo can be found at"
 	einfo "http://www.gentoo.org/doc/en/distcc.xml"
-	ewarn "As of distcc-2.11, the only thing you have to do to configure distcc"
-	ewarn "is to set your hosts (see the Guide, above) and to add distcc to"
-	ewarn "the FEATURES line in /etc/make.conf"
-	ewarn "This version includes a new distcc-config. If you encounter problems with it,"
-	ewarn "please report them to our Bugzilla at bugs.gentoo.org"
 	echo ""
 	einfo "To use the distccmon programs with Gentoo you should use this command:"
 	einfo "      DISTCC_DIR=/var/tmp/portage/.distcc distccmon-text N"

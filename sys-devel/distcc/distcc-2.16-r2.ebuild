@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.16-r2.ebuild,v 1.5 2004/11/24 11:58:00 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.16-r2.ebuild,v 1.6 2005/01/12 06:30:25 lisa Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye

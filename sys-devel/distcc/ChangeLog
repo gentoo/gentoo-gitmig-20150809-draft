@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/distcc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.131 2004/12/31 21:28:41 lisa Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.132 2005/01/12 06:30:25 lisa Exp $
+
+  12 Jan 2005; Lisa Seelye <lisa@gentoo.org> -distcc-2.17-r1.ebuild,
+  -distcc-2.18.3.ebuild:
+  Removed 2.18.3-r1 from p.mask and 2.17-r1 from the repository: no point in
+  it, especially since users with ~arch will get 2.18.3 anyways.
 
   31 Dec 2004; Lisa Seelye <lisa@gentoo.org> :
   Added distcc-2.18.3-r1.ebuild with the ABI patch in bug #75420. this release
