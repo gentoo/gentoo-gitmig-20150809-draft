@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.69 2003/12/15 02:09:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.70 2003/12/15 10:06:09 kumba Exp $
+
+  15 Dec 2003; Joshua Kinard <kumba@gentoo.org> db-4.1.25_p1-r3.ebuild:
+  Added ~mips to keywords
 
 *db-4.1.25_p1-r3 (14 Dec 2003)
 
