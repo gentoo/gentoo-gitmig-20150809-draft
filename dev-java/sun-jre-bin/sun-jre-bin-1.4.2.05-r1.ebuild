@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.05-r1.ebuild,v 1.2 2004/09/29 20:59:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.05-r1.ebuild,v 1.3 2005/01/15 22:32:29 compnerd Exp $
 
 inherit java eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Sun's J2SE Platform"
 HOMEPAGE="http://java.sun.com/j2se/1.4.2/"
 SRC_URI=${At}
 SLOT="1.4"
-LICENSE="sun-bcla-java-vm"
+LICENSE="sun-bcla-java-vm-1.4.2"
 KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa"
 RESTRICT="fetch"
 IUSE="gnome kde mozilla"
