@@ -1,4 +1,4 @@
-MD5 dc5e171928ab772c6e3a9e899b023dbf ChangeLog 934
-MD5 8cf27cd5af5048f7ab08846ccf1bc0ef memcached-client-php-0.1.2.ebuild 812
+MD5 59509b48ecddd4c8b10bbad0b6ceabab ChangeLog 1036
+MD5 00bbead700ce5b3c23e990c927848954 memcached-client-php-0.1.2.ebuild 819
 MD5 3e1242c2a95e74eed6fb0021f44f7195 metadata.xml 275
 MD5 c9f59bcee719e7089601c7f174f42e18 files/digest-memcached-client-php-0.1.2 77
