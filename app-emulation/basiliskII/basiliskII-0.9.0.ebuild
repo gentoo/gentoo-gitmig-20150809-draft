@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-0.9.0.ebuild,v 1.4 2002/08/19 17:57:04 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-0.9.0.ebuild,v 1.5 2002/10/01 04:43:35 vapier Exp $
+
+inherit flag-o-matic
 
 ### This package requires a Mac II/Classic ROM, A Mac OS Image
 ### Mac OS 7.5.3r2 is available freely from the Apple Homepage
@@ -28,6 +30,9 @@ SRC_URI="http://iphcip1.physik.uni-mainz.de/~cbauer/BasiliskII_src_31052001.tar.
 
 src_compile() {
 
+	#fpu_x86 doesnt compile properly if -O3 or greater :(
+	replace-flags "-O*" "-O2"
+
 	local myflags
 
 ### Default ./configure options are all =yes by default. we'll check for 
@@ -45,6 +50,12 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		${myflags} || die "BasiliskII ./configure Failed"
+
+	#hack to link against libstdc++ for gcc3.x compatibility
+	cp Makefile Makefile.old
+	sed -e 's:-o $(OBJ_DIR)/gencpu:-lstdc++ -o $(OBJ_DIR)/gencpu:' \
+		Makefile.old > Makefile
+
 	emake || die "BasiliskII Make Failed"
 }
 
