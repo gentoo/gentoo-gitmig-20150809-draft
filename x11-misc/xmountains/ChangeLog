@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xmountains
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.1 2004/04/12 20:07:30 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.2 2004/04/13 13:25:34 dholm Exp $
+
+  13 Apr 2004; David Holm <dholm@gentoo.org> xmountains-2.6.ebuild:
+  Added to ~ppc.
 
 *xmountains-2.6 (12 Apr 2004)
 
