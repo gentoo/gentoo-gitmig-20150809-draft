@@ -57,7 +57,7 @@
 >=sys-apps/pam-login-3.11
 
 # (file|sh-|text)utils have been replaced by coreutils
-*>=sys-apps/coreutils-4.5.10
+*>=sys-apps/coreutils-5.0
 !sys-apps/fileutils
 !sys-apps/sh-utils
 !sys-apps/textutils
