@@ -1,0 +1,16 @@
+# ChangeLog for x11-misc/xnview
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.1 2003/02/12 10:22:51 seemant Exp $
+
+*xnview-1.50 (12 Feb 2003)
+
+  12 Feb 2003; Seemant Kulleen <seemant@gentoo.org> ChangeLog
+  xnview-1.50.ebuild files/digest-xnview-1.50 :
+
+  An image viewer/converter application, freeware, binary only.  I
+  changed the ebuild that Mark Mealman <mmealman@tarsis.org> submitted in
+  bug #13584 to download the rpms instead since they are statically
+  linked with *motif, removing the necessity of restricting the user to a
+  specific version of openmotif (there are binaries for 2.1 and 2.2 and
+  lesstif for the dynamically linked ones).  Also, with the rpm's it is
+  easier to install for ppc or x86.
