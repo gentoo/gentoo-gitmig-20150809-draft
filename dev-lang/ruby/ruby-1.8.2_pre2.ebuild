@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre2.ebuild,v 1.12 2004/09/21 12:19:25 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre2.ebuild,v 1.13 2004/10/03 13:32:40 usata Exp $
 
-ONIGURUMA="onigd2_3_1"
+ONIGURUMA="onigd2_3_2"
 MY_P=${P/_pre/-preview}
 
 inherit flag-o-matic alternatives eutils gnuconfig
@@ -15,7 +15,8 @@ SRC_URI="${SRC_URI}
 
 LICENSE="Ruby"
 SLOT="1.8"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 -ia64 ~s390 macos ppc-macos"
+# please keep sorted
+KEYWORDS="alpha amd64 arm hppa -ia64 mips macos ppc ppc-macos ~s390 sparc x86"
 IUSE="socks5 tcltk cjk doc"
 
 RDEPEND="virtual/libc
