@@ -1,0 +1,10 @@
+--- configure2/main.cpp.old	2003-05-24 10:52:23.000000000 +0200
++++ configure2/main.cpp	2003-05-24 10:53:03.000000000 +0200
+@@ -379,6 +379,7 @@
+ 	args.append( "CONFIG+=" + configs.join( " " ) );
+     if ( !prefix.isEmpty() )
+ 	args.append( "QSA_INSTALL_PREFIX=" + prefix );
++	args.append( "LIBS+=-L../../lib" );
+     if( !execute( args ) )
+ 	warnings++;
+ 
