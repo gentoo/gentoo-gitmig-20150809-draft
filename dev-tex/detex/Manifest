@@ -1,4 +1,4 @@
-MD5 dab2b399b59ec37d22e7c173360029d0 files/digest-detex-2.7 57
-MD5 10754ac303b0d26662a4dfd606591a96 ChangeLog 797
-MD5 ef48e310be53a5964469e49107aa2b0d detex-2.7.ebuild 944
+MD5 73994187f6bcd973826f522093e28d58 detex-2.7.ebuild 938
+MD5 789c49adbd43c4a2cbb1f6a26d35b09c ChangeLog 789
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 dab2b399b59ec37d22e7c173360029d0 files/digest-detex-2.7 57

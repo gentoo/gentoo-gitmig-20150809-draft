@@ -1,5 +1,5 @@
-MD5 971ebe32f2f76adaeeacb22f2ea7ed6d ChangeLog 1110
-MD5 044d1a3aa2279c52477149e2966971ce lgrind-3.67-r1.ebuild 946
+MD5 70f4d4275efec40edccfbaa365589d3a lgrind-3.67-r1.ebuild 939
+MD5 db5c6ba0b19cab379bffc614ff2c3099 ChangeLog 1103
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 9bfe54e8057c2b3b05c871878396d6c3 files/99lgrind 52
 MD5 13c9a4bcc670c1e8eef9a40d0768694c files/digest-lgrind-3.67-r1 57
