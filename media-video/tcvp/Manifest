@@ -1,4 +1,14 @@
-MD5 aca019bc213aebe99e8c5a9f0add2280 ChangeLog 601
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 760d39eefa93642bec5a2ee54d5f5047 ChangeLog 707
 MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
-MD5 f8a4895f130abf41dd504a122aee9301 tcvp-0.2.0.ebuild 1693
+MD5 f5a0970c024d2c8c64093841c9e80b54 tcvp-0.2.0.ebuild 1693
 MD5 f0f7a5d05e5be4ecf1f0a478b739f10a files/digest-tcvp-0.2.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD4DBQFBvtvaArHZZzCEUG0RAkSXAJiHgSoGFM4ewA6jGzNGrvog0O0DAKCI0XHx
+39FnSbOb1hXDUf3Hb+2KPA==
+=Qm3h
+-----END PGP SIGNATURE-----
