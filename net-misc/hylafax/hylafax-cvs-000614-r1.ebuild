@@ -1,13 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-cvs-000614-r1.ebuild,v 1.6 2001/05/29 13:32:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-cvs-000614-r1.ebuild,v 1.7 2002/03/18 07:54:19 gbevin Exp $
 
 P=hylafax-cvs-000614
 A="${P}.tar.bz2 ${P}.patch.gz"
 S=${WORKDIR}/hylafax
 DESCRIPTION="HylaFAX Faxserver"
-SRC_URI="ftp://gentoolinux.sourceforge.net/pub/gentoolinux/current/distfiles/${P}.tar.bz2"
+SRC_URI="ftp://gentoolinux.sourceforge.net/pub/gentoolinux/current/distfiles/${P}.tar.bz2 ftp://gentoolinux.sourceforge.net/pub/gentoolinux/current/distfiles/${P}.patch.gz"
 HOMEPAGE="http://www.hylafax.org"
 
 DEPEND="virtual/glibc
