@@ -1,6 +1,6 @@
 MD5 80f7b6b639ccd4be56c4a3e0c2eeb9ac prelude-manager-0.8.7.ebuild 1873
 MD5 43e3fd05fc5aa752526d29c4a386620b metadata.xml 310
-MD5 fe60b282f1444a77e958b5ed85a4af16 ChangeLog 611
+MD5 259cc35ea34face9811fb3ea85e861f7 ChangeLog 681
 MD5 d212a04ab22cce9080c7ebacfdf148a8 files/gentoo.conf 182
 MD5 6dd98843e1c529f7d5af0d6d4570c5f0 files/gentoo.init 565
 MD5 95094c2ef78a16f2c00850441fc605bc files/digest-prelude-manager-0.8.7 73
