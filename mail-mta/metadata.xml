@@ -4,5 +4,8 @@
 	<longdescription lang="en">
 		The mail-mta category contains mail transport agent packages.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría mail-mta contiene los paquetes de los agentes de transporte
+		de correo electrónico.
+	</longdescription>
 </catmetadata>
-
