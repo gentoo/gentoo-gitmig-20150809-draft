@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.2.99.902.ebuild,v 1.1 2003/02/26 10:28:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.2.99.902.ebuild,v 1.2 2003/02/26 10:30:27 seemant Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -22,7 +22,8 @@ BASE_PV="${PV}"
 S=${WORKDIR}/linux/drm/kernel
 DESCRIPTION="Xfree86 Kernel DRM modules"
 HOMEPAGE="http://www.xfree.org"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+	http://cvs.gentoo.org/~seemant/${P}.tar.bz2"
 
 LICENSE="X11"
 SLOT="0"
