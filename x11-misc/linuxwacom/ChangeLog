@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.7 2004/05/10 22:04:37 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.8 2004/06/06 20:17:30 battousai Exp $
+
+*linuxwacom-0.6.3 (06 Jun 2004)
+
+  06 Jun 2004; Bryan Stine <battousai@gentoo.org>; linuxwacom-0.6.3.ebuild:
+  Bump to version 0.6.3. Closes #53109, thanks to Lee Trager
+  <nukem@users.xeroprj.org>.
 
   10 May 2004; Bryan Stine <battousai@gentoo.org>; linuxwacom-0.6.2.ebuild:
   Got rid of the ? : DEPEND syntax, it's deprecated. Also added a plus to the
