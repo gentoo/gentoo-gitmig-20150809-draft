@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.48 2005/02/28 23:20:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.49 2005/03/18 16:49:44 greg_g Exp $
+
+*amarok-1.2.2 (18 Mar 2005)
+
+  18 Mar 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/amarok-1.2.2-contextbrowser-cpu-fix.patch, +amarok-1.2.2.ebuild:
+  New version (#85284). Correct gstreamer dependencies (#84663). Add support for
+  visualization plugins through libvisual (#82165). Warn that aRts support is
+  deprecated (as requested in bug #85542). Add patch to fix kde bug 101524.
 
 *amarok-1.2.1 (01 Mar 2005)
 
