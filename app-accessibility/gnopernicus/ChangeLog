@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnopernicus
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.12 2004/05/26 01:52:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.13 2004/05/30 22:23:15 leonardop Exp $
+
+  30 May 2004; L. Boshell <leonardop@gentoo.org> gnopernicus-0.8.4.ebuild:
+  Marked stable on x86.
 
   26 May 2004; Guy Martin <gmsoft@gentoo.org> gnopernicus-0.8.1.ebuild:
   Marked stable on hppa.
@@ -15,23 +18,23 @@
 
   23 Apr 2004; L. Boshell <leonardop@gentoo.org> gnopernicus-0.8.1.ebuild:
   Marked stable on x86.
-  
+
 *gnopernicus-0.8.4 (22 Apr 2004)
 
   22 Apr 2004; L. Boshell <leonardop@gentoo.org> gnopernicus-0.8.4.ebuild,
   files/gnopernicus-0.8.4-brltty_fix.patch:
   New release.
-  
+
   20 Apr 2004; Guy Martin <gmsoft@gentoo.org> gnopernicus-0.8.0.ebuild:
   Marked stable on hppa.
 
   20 Apr 2004; L. Boshell <leonardop@gentoo.org> gnopernicus-0.8.0.ebuild,
   gnopernicus-0.8.1.ebuild:
   Added scrollkeeper dependency. Resolves bug #34480.
-  
+
   19 Apr 2004; L. Boshell <leonardop@gentoo.org> gnopernicus-0.8.0.ebuild:
   Marked stable on x86.
-  
+
   12 Apr 2004; Chris Aniszczyk <zx@gentoo.org> gnopernicus-0.7.3.ebuild,
   gnopernicus-0.7.4.ebuild:
   Marking stable on hppa
@@ -41,7 +44,7 @@
   24 Mar 2004; L. Boshell <leonardop@gentoo.org> gnopernicus-0.8.1.ebuild,
   files/gnopernicus-0.8.1-brltty_fix.patch:
   New release. Added support for brltty via the local USE flag `brltty'.
-  
+
   17 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   gnopernicus-0.7.4.ebuild:
   sparc keyword again
@@ -50,11 +53,11 @@
 
   16 Mar 2004; L. Boshell <leonardop@gentoo.org> gnopernicus-0.8.0.ebuild:
   New release.
-  
+
   16 Mar 2004; L. Boshell <leonardop@gentoo.org> gnopernicus-0.7.3.ebuild,
   gnopernicus-0.7.4.ebuild:
   Marking stable on x86.
-  
+
   13 Mar 2004; foser <foser@gentoo.org> metadata.xml :
   Maintainership to gnome-accessibility herd
 
@@ -62,12 +65,12 @@
 
   13 Feb 2004; L. Boshell <leonardop@gentoo.org> gnopernicus-0.7.4.ebuild:
   New release, minor dependencies corrections.
-  
+
 *gnopernicus-0.7.3 (11 Feb 2004)
 
   11 Feb 2004; L. Boshell <leonardop@gentoo.org> gnopernicus-0.7.3.ebuild:
   New release.
-  
+
   10 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org>
   gnopernicus-0.7.1.ebuild:
   set ppc in keywords
