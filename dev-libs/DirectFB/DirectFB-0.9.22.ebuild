@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.22.ebuild,v 1.1 2005/03/02 01:07:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.22.ebuild,v 1.2 2005/03/09 02:33:57 vapier Exp $
 
 inherit eutils 64-bit flag-o-matic gcc
 
@@ -13,13 +13,14 @@ SRC_URI="http://www.directfb.org/download/DirectFB/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 -mips ~ppc -sparc ~x86"
-IUSE="sdl jpeg gif png truetype mpeg mmx sse fusion debug fbcon static"
+IUSE="debug fbcon fusion gif jpeg mmx mpeg png sdl sse static sysfs truetype"
 
 DEPEND="sdl? ( media-libs/libsdl )
 	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	mpeg? ( media-libs/libmpeg3 )
+	sysfs? ( sys-fs/sysfsutils )
 	truetype? ( >=media-libs/freetype-2.0.1 )"
 
 pkg_setup() {
@@ -34,11 +35,13 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	#36924
+	# Make sure i830 is detected
+	# force disable wm97xx #36924
 	sed -i \
-		-e 's:wm97xx_ts=yes:wm97xx_ts=no:' configure \
+		-e 's:^//::' \
+		-e 's:wm97xx_ts=yes:wm97xx_ts=no:' \
+		configure \
 		|| die "sed configure failed"
-
 
 	# This patch enables simd optimisations for amd64. Since mmx and sse are
 	# masked USE flags on amd64 due to their enabling x86 specific asm more
@@ -80,6 +83,7 @@ src_compile() {
 		$(use_enable fusion multi) \
 		$(use_enable debug) \
 		$(use_enable static) \
+		$(use_enable sysfs) \
 		${sdlconf} \
 		--with-gfxdrivers="${vidcards}" \
 		|| die
