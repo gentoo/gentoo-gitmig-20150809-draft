@@ -1,0 +1,9 @@
+# ChangeLog for app-text/opensp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.1 2003/04/28 01:04:54 liquidx Exp $
+
+*opensp-1.5 (28 Apr 2003)
+
+  28 Apr 2003; Alastair Tse <liquidx@gentoo.org> opensp-1.5.ebuild:
+  opensp has just been split out of openjade.
+
