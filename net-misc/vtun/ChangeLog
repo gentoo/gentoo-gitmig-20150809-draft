@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/vtun
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.2 2002/02/05 00:57:47 gbevin Exp
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.20 2004/10/02 15:35:58 swegener Exp $
 
   31 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> :
   Marked ~amd64.
