@@ -1,0 +1,8 @@
+# ChangeLog for media-video/kplayer
+# Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.1 2003/02/02 20:18:11 hannes Exp $
+
+*kplayer-0.1.0 (02 Feb 2003)
+
+  02 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kplayer-0.1.0.ebuild,
+  ChangeLog: Initial ebuild.
