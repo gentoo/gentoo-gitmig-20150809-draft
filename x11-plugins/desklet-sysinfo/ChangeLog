@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-sysinfo
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sysinfo/ChangeLog,v 1.4 2004/01/11 03:35:32 obz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sysinfo/ChangeLog,v 1.5 2004/06/22 20:56:23 kugelfang Exp $
+
+  22 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
+  desklet-sysinfo-0.25.ebuild:
+  Marked ~amd64.
 
 *desklet-sysinfo-0.25 (11 Jan 2004)
 
