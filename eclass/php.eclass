@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.40 2003/06/10 19:30:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.41 2003/06/10 19:45:57 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -71,7 +71,7 @@ RDEPEND="
 	virtual/mta"
 # These will become explicit soon, and not optional
 RDEPEND="${RDEPEND}
-	dev-libs/libxml2 >=dev-libs/libxslt-1.0.30
+	xml2? ( dev-libs/libxml2 >=dev-libs/libxslt-1.0.30 )
     >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.97 dev-libs/expat"
 # These are extra bits we need only at compile time
 DEPEND="${RDEPEND} ${DEPEND}
@@ -135,10 +135,10 @@ php_check_java_config() {
 
 php_src_unpack() {
 	einfo "This ebuild should be very stable at this point."
-	use xml || use xml2 || \
-	( ewarn "You have one of the xml/xml2 USE flags turned off."
-	  ewarn "Previously this disabled XML support in PHP. However"
-	  ewarn "PEAR has a hard dependancy on them, so they are now enabled." )
+	use xml || \
+	( ewarn "You have the xml USE flag turned off Previously this"
+	  ewarn "disabled XML support in PHP. However PEAR has a hard"
+	  ewarn "dependancy on it, so they are now enabled." )
 
 	use java && ewarn "Java support may be somewhat flakey, but it shouldn't break anything."
 	
@@ -280,6 +280,8 @@ php_src_compile() {
 	#use pam && myconf="${myconf} --with-pam"
 	#use pic && myconf="${myconf} --with-pic"
 	myconf="${myconf} `use_with curl` `use_with imap` `use_with ldap` `use_with pam` `use_with pic`"
+	#use xml2 && myconf="${myconf} --with-dom --with-dom-xslt"
+	myconf="${myconf} `use_with xml2 dom` `use_with xml2 dom-xslt`"
 
 	#Waiting for somebody to want Cyrus support :-)
 	#myconf="${myconf} `use_with cyrus`"
@@ -303,9 +305,8 @@ php_src_compile() {
 	fi
 	
 	# These were previously optional, but are now included directly as PEAR needs them.
-	# Zlib is needed for XML+XML2
+	# Zlib is needed for XML
 	myconf="${myconf} --with-zlib --with-zlib-dir=/usr/lib"
-	myconf="${myconf} --with-dom --with-dom-xslt"
 	LIBS="${LIBS} -lxmlparse -lxmltok"
 	myconf="${myconf} --with-sablot=/usr"
 	myconf="${myconf} --enable-xslt" 
