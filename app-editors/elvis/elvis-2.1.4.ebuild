@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.1.4.ebuild,v 1.2 2001/11/10 02:54:28 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/elvis-2.1.4.ebuild,v 1.3 2002/07/11 06:30:11 drobbins Exp $
 
 S=${WORKDIR}/elvis-2.1_4
 DESCRIPTION="A vi/ex clone"

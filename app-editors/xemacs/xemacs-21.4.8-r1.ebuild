@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Matthew Kennedy <mkennedy@gentoo.org>
-# Author: Geert Bevin <gbevin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.8-r1.ebuild,v 1.2 2002/06/26 17:32:50 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.8-r1.ebuild,v 1.3 2002/07/11 06:30:12 drobbins Exp $
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"

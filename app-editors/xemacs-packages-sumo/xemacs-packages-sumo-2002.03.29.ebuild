@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Arcady Genkin <agenkin@thpoon.com>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-packages-sumo/xemacs-packages-sumo-2002.03.29.ebuild,v 1.1 2002/04/01 16:32:20 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-packages-sumo/xemacs-packages-sumo-2002.03.29.ebuild,v 1.2 2002/07/11 06:30:12 drobbins Exp $
 
 DESCRIPTION="The SUMO bundle of ELISP packages for Xemacs"
 HOMEPAGE="http://www.xemacs.org"

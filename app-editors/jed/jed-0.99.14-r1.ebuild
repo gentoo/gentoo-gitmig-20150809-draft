@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Grant Goodyear <g2boojum@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.14-r1.ebuild,v 1.1 2002/01/23 23:37:56 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.14-r1.ebuild,v 1.2 2002/07/11 06:30:12 drobbins Exp $
 
 P0=${PN}-B0.99-14
 S=${WORKDIR}/${P0}

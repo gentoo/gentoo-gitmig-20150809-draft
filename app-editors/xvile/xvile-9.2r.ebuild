@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Jerry A! <jerry@thehutt.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.2r.ebuild,v 1.1 2001/12/19 07:33:18 jerrya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.2r.ebuild,v 1.2 2002/07/11 06:30:12 drobbins Exp $
 
 S=${WORKDIR}/vile-9.2
 DESCRIPTION="VI Like Emacs -- yet another full-featured vi clone"

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20020324.ebuild,v 1.3 2002/05/17 00:50:17 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20020324.ebuild,v 1.4 2002/07/11 06:30:11 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Lightweight text-mode editor"

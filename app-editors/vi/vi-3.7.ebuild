@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Author: Spider <spider@gentoo.org>
-# Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7.ebuild,v 1.2 2002/05/12 19:52:52 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7.ebuild,v 1.3 2002/07/11 06:30:12 drobbins Exp $
 
 MY_P=ex-020403
 S=${WORKDIR}/${MY_P}

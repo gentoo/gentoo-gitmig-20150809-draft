@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.8-r1.ebuild,v 1.2 2002/04/12 02:48:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.8-r1.ebuild,v 1.3 2002/07/11 06:30:12 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="clone of Pico with more functions in a smaller size"
