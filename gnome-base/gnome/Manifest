@@ -12,7 +12,7 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 302cc0860b6f565bd36d86ed3161fe9d gnome-2.8.3_pre0.ebuild 3861
 MD5 d88be27ebac8d585df91e0b244a00e8d gnome-2.8.3-r1.ebuild 3869
 MD5 e5f03efd71d182d6bbcf12d70243d94c gnome-2.8.3.ebuild 3856
-MD5 731a3827bf31219c8860f07f59c31399 gnome-2.10_pre0.ebuild 3845
+MD5 30ee5f0fb8bfb339887611a3839f5e09 gnome-2.10_pre0.ebuild 3882
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-1.4-r3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.6 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.6.2-r1 0
@@ -26,7 +26,7 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnome-2.10_pre0 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCLrzJXjcVihsel0ERAuipAKDvM+LhR2ZCLN47915o1IhLlIAqYQCgikoj
-wGJaMXREQoDeFmcMtOSXax0=
-=+0fT
+iD8DBQFCL2HvXjcVihsel0ERAg22AJ4h0SufR1XF5teQihSj+ZoDziarwwCcDYR7
+T7yygmfV0uXzmOJC05TW32g=
+=low0
 -----END PGP SIGNATURE-----

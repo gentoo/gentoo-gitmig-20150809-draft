@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.10_pre0.ebuild,v 1.1 2005/03/09 09:07:48 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.10_pre0.ebuild,v 1.2 2005/03/09 20:51:16 joem Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -75,6 +75,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=x11-themes/gnome-icon-theme-2.10
 	>=x11-themes/gtk-engines-2.6.2
 	>=x11-themes/gnome-themes-2.10
+	>=x11-themes/gnome-backgrounds-2.10
 
 	>=x11-terms/gnome-terminal-2.10
 	>=gnome-extra/gnome2-user-docs-2.8.1
