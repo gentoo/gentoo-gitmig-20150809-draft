@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.13 2005/03/05 23:33:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.14 2005/03/05 23:45:05 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -301,8 +301,7 @@ toolchain-glibc_src_install() {
 		make PARALLELMFLAGS="${MAKEOPTS} -j1" \
 			install_root=${D} \
 			install || die
-	fi
-	if want_nptl ; then
+	elif use nptlonly ; then
 		cd ${WORKDIR}/build-${ABI}-${CTARGET}-nptl
 		einfo "Installing GLIBC with NPTL..."
 		make PARALLELMFLAGS="${MAKEOPTS} -j1" \
@@ -625,7 +624,7 @@ setup_flags() {
 			else
 				if is-flag "-mcpu=ultrasparc3"; then
 					CTARGET_OPT="sparcv9b-unknown-linux-gnu"
-				elif { is_crosscompile && use nptl; } || is-flag "-mcpu=ultrasparc2" || is-flag "-mcpu=ultrasparc"; then
+				elif { is_crosscompile && want_nptl; } || is-flag "-mcpu=ultrasparc2" || is-flag "-mcpu=ultrasparc"; then
 					CTARGET_OPT="sparcv9-unknown-linux-gnu"
 				fi
 			fi
@@ -722,7 +721,7 @@ want_nptl() {
 				return 0;
 			;;
 			x86)
-				case ${CHOST/-*} in
+				case ${CTARGET/-*} in
 					i486|i586|i686)	return 0 ;;
 				esac
 			;;
@@ -1232,7 +1231,7 @@ src_install() {
 
 		dosed "s:/lib/:/$(get_libdir)/:g" /usr/$(get_libdir)/lib{c,pthread}.so
 
-		if use nptl && want_linuxthreads ; then
+		if want_nptl && want_linuxthreads ; then
 			dosed  "s:/lib/:/$(get_libdir)/:g" /usr/$(get_libdir)/nptl/lib{c,pthread}.so
 		fi
 	fi
