@@ -1,8 +1,12 @@
 # ChangeLog for games-strategy/freecraft
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/ChangeLog,v 1.4 2004/01/22 18:16:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/ChangeLog,v 1.5 2004/04/18 09:03:52 vapier Exp $
 
 *freecraft-1.18-r3 (22 Jan 2004)
+
+  18 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Make sure freecraft and freecraft-fcmp dont clobber each other when
+  freecraft is upgraded #39278 by Arnaud JEANSEN.
 
   22 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
   Stupid wrapper script #38580.

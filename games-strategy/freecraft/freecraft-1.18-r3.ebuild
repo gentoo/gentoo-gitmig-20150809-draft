@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.2 2004/02/20 07:38:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.3 2004/04/18 09:03:52 vapier Exp $
 
 inherit games eutils
 
@@ -12,6 +12,7 @@ SRC_URI="${MY_P}-src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 RESTRICT="fetch"
 
 DEPEND=">=media-libs/libpng-1.2.3
@@ -60,6 +61,16 @@ src_install() {
 	dodoc README
 
 	prepgamesdirs
+
+	# make sure we dont clobber files freecraft and freecraft-fcmp share #39278
+	local fcmpver="`best_version games-strategy/freecraft-fcmp`"
+	if [ ! -z "${fcmpver}" ] ; then
+		cd ${D}/${GAMES_DATADIR}/${PN}/data/ccl
+		for f in `grep ${GAMES_DATADIR}/${PN}/data/ccl/ /var/db/pkg/${fcmpver}/CONTENTS` ; do
+			[ -d "${f}" ] && continue
+			[ -e "${f}" -a -e "${D}/${f}" ] && rm ${D}/${f}
+		done
+	fi
 }
 
 pkg_postinst() {
