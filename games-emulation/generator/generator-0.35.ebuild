@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.5 2004/03/20 09:17:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.6 2004/03/20 11:43:42 mr_bones_ Exp $
 
-inherit eutils gcc flag-o-matic games
+inherit eutils gcc games
 
 DESCRIPTION="Sega Genesis / Mega Drive console emulator"
 HOMEPAGE="http://www.squish.net/generator/"
@@ -40,13 +40,11 @@ src_unpack() {
 			-e "s/-malign-jumps/-falign-jumps/" configure \
 				|| die "sed configure failed"
 	fi
-	epatch "${FILESDIR}/logging.patch"
+	epatch "${FILESDIR}/netbsd-gcc-3.3.patch"
 }
 
 src_compile() {
 	local myconf="--with-gcc=$(gcc-major-version)"
-
-	append-flags "-DNOLOGGING"
 
 	[ "${ARCH}" == "x86" ] \
 		&& myconf="${myconf} --with-raze" \

@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/generator
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.4 2004/03/20 09:17:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.5 2004/03/20 11:43:42 mr_bones_ Exp $
+
+  20 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> generator-0.35.ebuild,
+  files/logging.patch, files/netbsd-gcc-3.3.patch:
+  ripped off the patches from netbsd for generator to get the logging working
+  again.
 
   20 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> generator-0.35.ebuild:
   fix bug #44709 by turning off logging
