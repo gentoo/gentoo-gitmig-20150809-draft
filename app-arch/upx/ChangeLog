@@ -1,6 +1,6 @@
-# ChangeLog for app-misc/upx
+# ChangeLog for app-arch/upx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/ChangeLog,v 1.1 2002/09/21 22:55:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/ChangeLog,v 1.2 2002/12/17 15:43:16 vapier Exp $
 
 *upx-1.23 (21 Sep 2002)
 

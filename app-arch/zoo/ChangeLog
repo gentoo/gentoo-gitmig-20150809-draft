@@ -1,15 +1,14 @@
-# ChangeLog for app-arc/hzoo
+# ChangeLog for app-arch/zoo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zoo/ChangeLog,v 1.4 2002/12/13 10:55:56 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zoo/ChangeLog,v 1.5 2002/12/17 15:46:05 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *zoo-2.10 (09 Jul 2002)
 
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  changed sparc ~sparc keywords
+ 
   14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
-
   Added ppc keyword
 
   09 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> zoo-2.10.ebuild, ChangeLog, files/digest-zoo-2.10.ebuild files/zoo-2.10pl1.patch :
-
   Initial release, thanks to Enrico Morelli for contributing the ebuild!
