@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/loqui
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/ChangeLog,v 1.15 2004/07/17 12:37:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/ChangeLog,v 1.16 2004/09/12 16:09:22 swegener Exp $
+
+*loqui-0.3.8 (12 Sep 2004)
+
+  12 Sep 2004; Sven Wegener <swegener@gentoo.org> +loqui-0.3.8.ebuild:
+  Version bump.
 
 *loqui-0.3.7 (17 Jul 2004)
 
