@@ -1,5 +1,5 @@
 # ChangeLog for app-emulation/gnuboy
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
   19 Dec 2002; Phil Bordelon <sunflare@gentoo.org> gnuboy-1.0.3.ebuild ChangeLog :
   Initial commit.

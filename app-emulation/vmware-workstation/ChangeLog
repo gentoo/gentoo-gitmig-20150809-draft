@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/vmware-workstation
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.10 2003/01/09 11:36:29 mholzer Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.11 2003/02/12 04:03:44 vapier Exp $
 
 *vmware-workstation-3.2.0.2230-r1 (16 Dec 2002)
 
