@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.30 2003/11/15 03:03:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.31 2003/12/12 23:34:37 gmsoft Exp $
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> esound-0.2.32.ebuild:
   Stable on ia64
@@ -18,6 +18,9 @@
   Fix SRC_URI (#29793)
 
 *esound-0.2.32 (06 Sep 2003)
+
+  13 Dec 2003; Guy Martin <gmsoft@gentoo.org> esound-0.2.32.ebuild :
+  Marked stable on hppa.
 
   06 Sep 2003; foser <foser@gentoo.org> esound-0.2.32.ebuild :
   New version, added ipv6 USE for real now, esthetic cleanups
