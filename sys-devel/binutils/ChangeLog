@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.189 2005/03/09 02:37:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.190 2005/03/09 13:43:46 solar Exp $
+
+  09 Mar 2005; <solar@gentoo.org> binutils-2.15.92.0.2-r5.ebuild:
+  - uClibc supports relro now. remove exception from ebuild
 
 *binutils-2.15.92.0.2-r5 (08 Mar 2005)
 
