@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/zapping/zapping-0.6.6.ebuild,v 1.1 2003/03/21 18:42:19 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/zapping/zapping-0.6.6.ebuild,v 1.2 2003/04/02 13:20:14 lordvan Exp $
 
 DESCRIPTION="TV- and VBI- viewer for the Gnome environment"
 SRC_URI="http://telia.dl.sourceforge.net/${PN}/${P}.tar.bz2"
@@ -46,5 +46,8 @@ src_install() {
 
 	rm ${D}/usr/bin/zapzilla
 	dosym /usr/bin/zapping /usr/bin/zapzilla
+	# thx to Andreas Kotowicz <koto@mynetix.de> for mailing me this fix:
+	rm ${D}/usr/bin/zapping_setup_fb
+	dosym /usr/sbin/zapping_setup_fb /usr/bin/zapping_setup_fb
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
