@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r1.ebuild,v 1.14 2004/01/29 02:49:45 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.37.1-r1.ebuild,v 1.15 2004/02/22 01:04:18 brad_mssw Exp $
 
 #remove the trailing ".0" from the tarball version
 S=${WORKDIR}/${P%.1}
@@ -10,7 +10,7 @@ SRC_URI="http://expect.nist.gov/src/${P}.tar.gz"
 HOMEPAGE="http://expect.nist.gov/"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ~mips ~amd64"
+KEYWORDS="x86 ppc sparc alpha ~mips amd64"
 LICENSE="BSD"
 IUSE="X doc"
 
