@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-kde
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kde/ChangeLog,v 1.2 2004/03/10 13:26:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kde/ChangeLog,v 1.3 2004/03/31 17:43:32 eradicator Exp $
+
+  31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-kde-3.1_beta1.ebuild:
+  Stable on x86.
 
   10 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> xmms-kde-3.1_beta1.ebuild:
   Added patch for proper libsuffix handling, needed on amd64. Should close #41399.
