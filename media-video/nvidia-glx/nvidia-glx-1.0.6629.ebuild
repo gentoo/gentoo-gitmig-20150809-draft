@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629.ebuild,v 1.1 2004/11/07 01:52:37 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629.ebuild,v 1.2 2004/11/10 01:02:36 cyfred Exp $
 
 inherit eutils
 
@@ -41,12 +41,17 @@ PDEPEND="amd64? ( multilib? ( >=app-emulation/emul-linux-x86-nvidia-${PV} ) )"
 PROVIDE="virtual/opengl"
 export _POSIX2_VERSION="199209"
 
-pkg_setup() {
+check_xfree() {
 	# This isn't necessary, true. But its about time people got the idea.
 	if has_version "x11-base/xfree"
 	then
-		die "Support for x11-base/xfree is deprecated. Upgrade to x11-base/xorg-x11."
+		eerror "Support for x11-base/xfree is deprecated. Upgrade to x11-base/xorg-x11."
 	fi
+}
+
+pkg_setup() {
+	check_xfree
+
 	# Provide some information to the users
 	if use amd64 ; then
 		einfo
