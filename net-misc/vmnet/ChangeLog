@@ -1,0 +1,7 @@
+# ChangeLog for net-misc/vmnet
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vmnet/ChangeLog,v 1.1 2003/07/28 01:51:26 robbat2 Exp $
+
+  27 Jul 2003; Robin H. Johnson <robbat2@gentoo.org> vmnet-0.4.ebuild:
+  Initial Commit. Based off debian package.
+
