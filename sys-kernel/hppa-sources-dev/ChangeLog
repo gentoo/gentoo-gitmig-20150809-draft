@@ -1,8 +1,11 @@
 # ChangeLog for sys-kernel/hppa-sources-dev
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources-dev/ChangeLog,v 1.4 2003/08/07 01:59:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources-dev/ChangeLog,v 1.5 2003/08/12 16:51:45 gmsoft Exp $
 
 *hppa-sources-dev-2.4.21_p9 (06 Aug 2003)
+
+  12 Aug 2003; Guy Martin <gmsoft@gentoo.org> hppa-sources-dev-2.4.21_p9.ebuild :
+  Added a patch to fix grsec with 64 bit kernels.
 
   06 Aug 2003; Guy Martin <gmsoft@gentoo.org> hppa-sources-dev-2.4.21_p9.ebuild :
   Version bump. Added CryptoApi to the patchset.
