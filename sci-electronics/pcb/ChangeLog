@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/pcb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.6 2005/03/15 13:05:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.7 2005/03/30 20:51:49 gustavoz Exp $
+
+  30 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> pcb-20040903.ebuild:
+  Stable on sparc
 
   15 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> pcb-20050127.ebuild:
   To ~sparc
