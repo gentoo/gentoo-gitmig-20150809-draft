@@ -1,6 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b535dc44d15f22e7f7f42b03690fcbf9 ChangeLog 697
 MD5 1c0612d651b28d1c2592e6a2c6c53136 File-Flat-0.8.ebuild 614
-MD5 918a6a6e782b447ab0b9751c44205b3b ChangeLog 563
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 0df15a1e5e6693171bfba9bc74cea1f2 File-Flat-0.91.ebuild 674
-MD5 7ea4a8b5360aedabcb15a904ef330c39 files/digest-File-Flat-0.91 65
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 2cc381f59d2b051716f08d4e303467cf File-Flat-0.94.ebuild 775
 MD5 0ae089b4507e301fddf90b96313235cd files/digest-File-Flat-0.8 64
+MD5 7ea4a8b5360aedabcb15a904ef330c39 files/digest-File-Flat-0.91 65
+MD5 2f423057fa0dffb2a92b90b5eb3887c4 files/digest-File-Flat-0.94 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBceHttG5z4I8BtQoRAqc6AJ0akUrB56fNj78KOECy9eZdaeiVugCeIqaO
+IdoEYzLVh1OBgPKcR90v8Es=
+=tmdA
+-----END PGP SIGNATURE-----
