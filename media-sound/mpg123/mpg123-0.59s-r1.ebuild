@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r1.ebuild,v 1.2 2003/10/06 04:24:19 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r1.ebuild,v 1.3 2003/11/05 01:03:23 wwoods Exp $
 
 inherit eutils
 
@@ -60,6 +60,8 @@ src_compile() {
 			MAKESTYLE="-sparc";;
 		amd64|x86_64)
 			MAKESTYLE="-x86_64";;
+		alpha)
+			MAKESTYLE="-alpha";;
 		arm)
 			;;
 	esac
