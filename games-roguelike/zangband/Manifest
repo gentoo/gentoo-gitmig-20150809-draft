@@ -1,6 +1,14 @@
-MD5 1689d96938df1b366ab5e913956add0d zangband-2.7.4.ebuild 1690
-MD5 3a1067c628b79df296a773de3be37779 zangband-2.7.4b.ebuild 1709
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1bd6bc392bf6c6d436a67e4e0793b597 ChangeLog 1474
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 6c5f4a9ec14368467d7c50b17e50849f files/digest-zangband-2.7.4 67
+MD5 3a1067c628b79df296a773de3be37779 zangband-2.7.4b.ebuild 1709
 MD5 bde937fbf2d628a95977ed6be5e98d87 files/digest-zangband-2.7.4b 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhHU4HTu7gpaalycRAlDFAJ0WFchgCvHVX7NDpnC18j1xrGRLsQCfYm0V
+Df7Nwo1R2LAOr/WmBbtSP/0=
+=dXsk
+-----END PGP SIGNATURE-----
