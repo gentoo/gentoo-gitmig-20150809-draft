@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/redo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/redo/ChangeLog,v 1.3 2004/09/11 15:36:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/redo/ChangeLog,v 1.4 2004/11/01 11:28:11 usata Exp $
+
+  01 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> redo-1.02.ebuild:
+  Stable on x86. Added to ~alpha and ~ppc-macos.
 
   11 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> redo-1.02.ebuild:
   Added amd64 keyword, closing #63105.
