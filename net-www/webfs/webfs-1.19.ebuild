@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webfs/webfs-1.19.ebuild,v 1.1 2003/06/20 15:56:25 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webfs/webfs-1.19.ebuild,v 1.2 2003/06/20 16:06:02 joker Exp $
 
 IUSE="ssl"
 
@@ -21,13 +21,12 @@ DEPEND="${RDEPEND}"
 
 src_compile() {
 
-	if [ -z "`use ssl`" ]
-	then
-		cp Make.config Make.config.orig
-		sed 's/^\(USE_SSL.*:= \)yes/\1no/' Make.config.orig >Make.config
-	fi
+	local myconf=""
 
-	emake prefix=/usr
+	use ssl \
+		|| myconf="${myconf} USE_SSL=no"
+
+	emake prefix=/usr ${myconf}
 }
 
 src_install() {
