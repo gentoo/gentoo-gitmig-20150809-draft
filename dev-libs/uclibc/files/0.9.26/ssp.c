@@ -1,6 +1,6 @@
 /*
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/files/0.9.26/ssp.c,v 1.1 2004/06/23 02:14:08 solar Exp $
+ * $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/files/0.9.26/ssp.c,v 1.2 2004/10/09 18:28:26 solar Exp $
  *
  * This is a modified version of Hiroaki Etoh's stack smashing routines
  * implemented for glibc.
@@ -76,13 +76,13 @@ __guard_setup (void)
   {
     int fd;
 #ifdef HAVE_DEV_ERANDOM
-    if ((fd = open ("/dev/erandom", O_RDONLY)) == (-1))
+    if ((fd = __libc_open ("/dev/erandom", O_RDONLY)) == (-1))
 #endif
-      fd = open ("/dev/urandom", O_RDONLY);
+      fd = __libc_open ("/dev/urandom", O_RDONLY);
     if (fd != (-1))
       {
-	size = read (fd, (char *) &__guard, sizeof (__guard));
-	close (fd);
+	size = __libc_read (fd, (char *) &__guard, sizeof (__guard));
+	__libc_close (fd);
 	if (size == sizeof (__guard))
 	  return;
       }
@@ -137,15 +137,15 @@ __stack_smash_handler (char func[], int damaged)
     }
 
   /* print error message */
-  write (STDERR_FILENO, buf + 3, len - 3);
-  write (STDERR_FILENO, "()\n", 3);
+  __libc_write (STDERR_FILENO, buf + 3, len - 3);
+  __libc_write (STDERR_FILENO, "()\n", 3);
   if ((log = socket (AF_UNIX, SOCK_DGRAM, 0)) != -1)
     {
       /* Send "found" message to the "/dev/log" path */
       sock.sun_family = AF_UNIX;
       (void) strncpy (sock.sun_path, _PATH_LOG, sizeof (sock.sun_path) - 1);
       sock.sun_path[sizeof (sock.sun_path) - 1] = '\0';
-      sendto (log, buf, len, 0, (struct sockaddr *) &sock, sizeof (sock));
+      __libc_sendto (log, buf, len, 0, (struct sockaddr *) &sock, sizeof (sock));
     }
 
   /* Make sure the default handler is associated with the our signal handler */
@@ -154,7 +154,7 @@ __stack_smash_handler (char func[], int damaged)
   sigfillset (&sa.sa_mask);	/* Block all signals */
   sa.sa_flags = 0;
   sa.sa_handler = SIG_DFL;
-  sigaction (SSP_SIGTYPE, &sa, NULL);
+  __libc_sigaction (SSP_SIGTYPE, &sa, NULL);
   (void) kill (getpid (), SSP_SIGTYPE);
   _exit (127);
 }
