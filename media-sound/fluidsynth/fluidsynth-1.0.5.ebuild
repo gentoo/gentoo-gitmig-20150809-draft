@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.5.ebuild,v 1.1 2004/09/28 20:15:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.5.ebuild,v 1.2 2004/09/28 20:19:01 eradicator Exp $
 
-IUSE="alsa jack sse ladcca"
+IUSE="alsa jack sse ladcca static"
 
 inherit flag-o-matic eutils
 
@@ -30,13 +30,14 @@ asrc_unpack() {
 
 src_compile() {
 	local myconf
-	myconf="--enable-ladspa"
+	myconf="--enable-ladspa `use_enable jack jack-support` `use_enable static`"
+
 	if use alsa; then
 		myconf="${myconf} --enable-alsa `use_enable ladcca`"
 	else
 		myconf="${myconf} --disable-alsa --disable-ladcca"
 	fi
-	use jack || myconf="--disable-jack-support ${myconf}"
+
 	if use sse; then
 		myconf="--enable-SSE ${myconf}"
 		# If your CFLAGS include optimizations for sse, ie:
@@ -48,13 +49,12 @@ src_compile() {
 			filter-flags "-mfpmath=sse"
 		fi
 	fi
+
 	econf ${myconf} || die "./configure failed"
 	emake || die
 }
 
 src_install() {
-	einstall || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS COPYING INSTALL NEWS README THANKS TODO
 }
-
-
