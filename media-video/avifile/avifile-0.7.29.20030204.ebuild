@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.29.20030204.ebuild,v 1.3 2003/02/06 04:31:58 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.29.20030204.ebuild,v 1.4 2003/02/06 19:30:03 latexer Exp $
 
 IUSE="static freetype xv sdl oss dvd mmx sse 3dnow zlib oggvorbis X qt alsa esd"
 
@@ -33,7 +33,7 @@ DEPEND=">=media-libs/divx4linux-20020418
 	esd? ( >=media-sound/esound-0.2.28 )"
 SLOT="0.7"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 src_compile() {
 	local myconf=""
