@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailfront
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/ChangeLog,v 1.14 2004/10/17 11:29:02 dholm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/ChangeLog,v 1.15 2005/02/13 06:37:26 robbat2 Exp $
+
+*mailfront-0.92 (12 Feb 2005)
+
+  12 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> +mailfront-0.92.ebuild:
+  Bug #72214, version bump.
 
   17 Oct 2004; David Holm <dholm@gentoo.org> mailfront-0.88.ebuild:
   Added to ~ppc.
