@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.155 2005/01/23 00:55:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.156 2005/01/31 22:34:34 eradicator Exp $
+
+  31 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-1.2.10-r10.ebuild:
+  Cleanup autotools stuff.
 
 *xmms-1.2.10-r10 (22 Jan 2005)
 

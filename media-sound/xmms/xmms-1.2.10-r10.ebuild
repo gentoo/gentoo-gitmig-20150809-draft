@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r10.ebuild,v 1.3 2005/01/29 07:47:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r10.ebuild,v 1.4 2005/01/31 22:34:34 eradicator Exp $
 
 inherit flag-o-matic eutils libtool gnuconfig
 
-PATCHVER="2.1.7"
+PATCHVER="2.1.8"
 
 PATCHDIR="${WORKDIR}/patches"
 
@@ -61,20 +61,16 @@ src_unpack() {
 	export WANT_AUTOMAKE=1.7
 	export WANT_AUTOCONF=2.5
 
-	cd ${S}
-	libtoolize --force --copy || die "libtoolize --force --copy failed"
-	aclocal || die "aclocal failed"
-	autoheader || die "autoheader failed"
-	automake --gnu --add-missing --include-deps --force-missing --copy || die "automake failed"
-	autoconf || die "autoconf failed"
-
-	cd ${S}/libxmms
-	libtoolize --force --copy || die "libtoolize --force --copy failed"
-	[ ! -f ltmain.sh ] && ln -s ../ltmain.sh
-	aclocal || die "aclocal failed"
-	autoheader || die "autoheader failed"
-	automake --gnu --add-missing --include-deps --force-missing --copy || die "automake failed"
-	autoconf || die "autoconf failed"
+	for dir in . libxmms; do
+		cd ${S}/${dir}
+		rm acinclude.m4
+		libtoolize --force --copy || die "libtoolize --force --copy failed"
+		[ ! -f ltmain.sh ] && ln -s ../ltmain.sh
+		aclocal -I ${PATCHDIR}/m4 || die "aclocal failed"
+		autoheader || die "autoheader failed"
+		automake --gnu --add-missing --include-deps --force-missing --copy || die "automake failed"
+		autoconf || die "autoconf failed"
+	done
 
 	if use nls; then
 		cd ${S}/po
