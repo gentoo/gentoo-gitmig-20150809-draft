@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1.ebuild,v 1.3 2002/12/05 18:08:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1.ebuild,v 1.4 2002/12/05 21:21:51 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -236,11 +236,24 @@ src_compile() {
 
 	if [ -n "`use gtk2`" ]
 	then
-		# Only enable Xft if we have Xft2.0 installed ...
+		local pango_version=""
+
+		# We need Xft2.0 localy installed
 		if (test -x /usr/bin/pkg-config) && (pkg-config xft)
 		then
-			einfo "Building with Xft2.0 support!"
-			myconf="${myconf} --enable-xft"
+			pango_version="`pkg-config --modversion pango | cut -d. -f1,2`"
+			pango_version="`echo ${pango_version} | sed -e 's:\.::g'`"
+
+			# We also need pango-1.1, else Mozilla links to both
+			# Xft1.1 *and* Xft2.0, and segfault...
+			if [ "${pango_version}" -gt "10" ]
+			then
+				einfo "Building with Xft2.0 support!"
+				myconf="${myconf} --enable-xft"
+			else
+				ewarn "Building without Xft2.0 support!"
+				myconf="${myconf} --disable-xft"
+			fi
 		else
 			ewarn "Building without Xft2.0 support!"
 			myconf="${myconf} --disable-xft"

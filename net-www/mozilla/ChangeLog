@@ -1,8 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.62 2002/12/05 18:08:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.63 2002/12/05 21:21:44 azarah Exp $
 
   05 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1.ebuild :
+
+  Add pango-1.1 detection back to Xft detection if 'gtk2' in USE, else
+  mozilla segfaults, as its linked to both Xft1.1 and Xft2.0.
 
   Fix digest again.  Hope mozilla devs dont make changing the tarball a
   habit ..
