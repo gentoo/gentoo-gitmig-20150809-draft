@@ -1,6 +1,19 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.1 2002/02/01 21:53:09 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.2 2002/04/02 18:44:38 verwilst Exp $
+
+*koffice-1.2_pre20020402 (2 April 2002)
+
+  2 April 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
+
+  This Koffice works with KDE/QT 3. It's MUCH better than the 1.x 
+  releases, and IMHO is the first version that's useable for real work,
+  like writing my thesis. Because there isn't an official version out just 
+  yet, this snapshot will be our official koffice version for Gentoo..
+  If you have any problems, just bugreport them to bugs.kde.org, and if 
+  it's a grave bug, and it's fixed in a more current snapshot, tell me, 
+  and i'll consider upgrading this gentoo-snapshot to the one with the 
+  bugfixes. Enjoy!  
 
 *koffice-1.1.1 (1 Feb 2002)
 
