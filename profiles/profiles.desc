@@ -6,8 +6,10 @@
 #arch	profile_directory	status
 #
 x86	default-x86-1.4		stable
-ppc	default-ppc-1.4		stable
+ppc	default-ppc-2004.0	stable
 ppc64	default-ppc64-2004.1	dev
+macos	default-macos-10.3	dev
+macos	default-macos-10.4	dev
 sparc	default-sparc-1.4	stable
 mips	default-mips-1.4	stable
 alpha	default-alpha-1.4	stable
