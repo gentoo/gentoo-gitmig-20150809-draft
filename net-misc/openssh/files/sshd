@@ -13,12 +13,12 @@ EXE=/usr/sbin/sshd
 gen_keys() {
 
   	if [ ! -e /etc/ssh/ssh_host_key ] ; then
-  		  einfo "Generate Hostkey..."
+  		  einfo "Generating Hostkey..."
 		  /usr/bin/ssh-keygen -b 1024 -f /etc/ssh/ssh_host_key -N ''
 		fi
 
 		if [ ! -e /etc/ssh/ssh_host_dsa_key ] ; then
-		  einfo "Generate DSA-Hostkey..."
+		  einfo "Generating DSA-Hostkey..."
 		  /usr/bin/ssh-keygen -d -f /etc/ssh/ssh_host_dsa_key -N ''
         fi
 
@@ -27,32 +27,32 @@ gen_keys() {
 start() {
                 gen_keys
 
-		ebegin "Starting $SERVICE..."
+		ebegin "Starting $SERVICE"
      		start-stop-daemon --start --quiet --exec $EXE
-		eend $? "Started $SERVICE." "Error Starting $SERVICE."
+		eend $? "Started $SERVICE." "Error starting $SERVICE."
 }
 
 stop() {
 
-		ebegin "Stopping $SERVICE..."
+		ebegin "Stopping $SERVICE"
 		start-stop-daemon --stop --quiet --pidfile $PIDFILE --exec $EXE
-		eend $? "Stopped $SERVICE." "Error Stopping $SERVICE."
+		eend $? "Stopped $SERVICE." "Error stopping $SERVICE."
 }
 
 supervise_start() {
 
                 gen_keys
 
-		ebegin "Starting $SERVICE supervised..."
+		ebegin "Starting supervised $SERVICE"
 		/usr/bin/svc -u /etc/supervise/sshd
-		eend $? "Started $SERVICE." "Error Starting $SERVICE supervised."
+		eend $? "Started $SERVICE." "Error starting supervised $SERVICE."
 }
 
 supervise_stop() {
 
-		ebegin "Stopping $SERVICE supervised..."
+		ebegin "Stopping supervised $SERVICE"
 		/usr/bin/svc -d /etc/supervise/sshd
-		eend $? "Stopped $SERVICE." "Error Stopping $SERVICE supervised."
+		eend $? "Stopped $SERVICE." "Error stopping supervised $SERVICE."
 }
 
 restart() {
