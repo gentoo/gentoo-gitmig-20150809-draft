@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.44 2005/01/04 12:23:36 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.45 2005/01/04 17:55:09 plasmaroo Exp $
+
+  04 Jan 2005; <plasmaroo@gentoo.org>
+  files/linux26-headers-2.6.8.1-appCompat.patch:
+  Fixing glibc issues; bug #76626.
 
   04 Jan 2005; <plasmaroo@gentoo.org>
   files/linux26-headers-2.6.8.1-appCompat.patch:

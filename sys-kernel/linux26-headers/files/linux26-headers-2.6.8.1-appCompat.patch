@@ -1802,3 +1802,79 @@ diff -ur linux-2.6.8.1/include/asm-alpha/signal.h linux-2.6.8.1-gentoo/include/a
  
  #ifdef __KERNEL__
  #include <asm/sigcontext.h>
+diff -ur linux-2.6.8.1/include/asm-alpha/bitops.h linux-2.6.8.1-gentoo/include/asm-alpha/bitops.h
+--- linux-2.6.8.1/include/asm-alpha/bitops.h	2004-08-14 11:55:32.000000000 +0100
++++ linux-2.6.8.1-gentoo/include/asm-alpha/bitops.h	2005-01-04 17:37:15.000000000 +0000
+@@ -280,6 +280,7 @@
+ /*
+  * __ffs = Find First set bit in word.  Undefined if no set bit exists.
+  */
++#ifndef __ffs
+ static inline unsigned long __ffs(unsigned long word)
+ {
+ #if defined(__alpha_cix__) && defined(__alpha_fix__)
+@@ -296,6 +297,7 @@
+ 	return qofs*8 + bofs;
+ #endif
+ }
++#endif /* __ffs */
+ 
+ #ifdef __KERNEL__
+ 
+diff -ur linux-2.6.8.1/include/asm-i386/bitops.h linux-2.6.8.1-gentoo/include/asm-i386/bitops.h
+--- linux-2.6.8.1/include/asm-i386/bitops.h	2004-08-14 11:55:35.000000000 +0100
++++ linux-2.6.8.1-gentoo/include/asm-i386/bitops.h	2005-01-04 17:37:24.000000000 +0000
+@@ -358,6 +358,7 @@
+  *
+  * Undefined if no bit exists, so code should check against 0 first.
+  */
++#ifndef __ffs
+ static inline unsigned long __ffs(unsigned long word)
+ {
+ 	__asm__("bsfl %1,%0"
+@@ -365,6 +366,7 @@
+ 		:"rm" (word));
+ 	return word;
+ }
++#endif
+ 
+ /*
+  * fls: find last bit set.
+diff -ur linux-2.6.8.1/include/asm-ia64/bitops.h linux-2.6.8.1-gentoo/include/asm-ia64/bitops.h
+--- linux-2.6.8.1/include/asm-ia64/bitops.h	2004-08-14 11:56:14.000000000 +0100
++++ linux-2.6.8.1-gentoo/include/asm-ia64/bitops.h	2005-01-04 17:36:44.000000000 +0000
+@@ -302,6 +302,7 @@
+  *
+  * Undefined if no bit exists, so code should check against 0 first.
+  */
++#ifndef __ffs
+ static __inline__ unsigned long
+ __ffs (unsigned long x)
+ {
+@@ -310,6 +311,7 @@
+ 	result = ia64_popcnt((x-1) & ~x);
+ 	return result;
+ }
++#endif
+ 
+ #ifdef __KERNEL__
+ 
+diff -ur linux-2.6.8.1/include/asm-sparc64/bitops.h linux-2.6.8.1-gentoo/include/asm-sparc64/bitops.h
+--- linux-2.6.8.1/include/asm-sparc64/bitops.h	2004-08-14 11:54:50.000000000 +0100
++++ linux-2.6.8.1-gentoo/include/asm-sparc64/bitops.h	2005-01-04 17:36:57.000000000 +0000
+@@ -101,6 +101,7 @@
+  *
+  * Undefined if no bit exists, so code should check against 0 first.
+  */
++#ifndef __ffs
+ static __inline__ unsigned long __ffs(unsigned long word)
+ {
+ 	unsigned long result = 0;
+@@ -111,6 +112,7 @@
+ 	}
+ 	return result;
+ }
++#endif
+ 
+ /*
+  * fls: find last bit set.
