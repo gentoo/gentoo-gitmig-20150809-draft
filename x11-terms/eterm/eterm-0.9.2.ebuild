@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2.ebuild,v 1.3 2002/11/04 14:28:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2.ebuild,v 1.4 2002/11/05 03:47:07 vapier Exp $
 
 MY_PN=${PN/et/Et}
 MY_P=${MY_PN}-${PV}
@@ -25,7 +25,6 @@ src_unpack() {
 }
 
 src_compile() {
-	
 	# always disable mmx because binutils 2.11.92+ seems to be broken for this package
 	local myconf="--disable-mmx"
 
@@ -35,15 +34,12 @@ src_compile() {
 		--with-x \
 		--enable-multi-charset \
 		--with-delete=execute \
-		${myconf} || die
+		${myconf}
 		
 	emake || die
-
 }
 
-src_install () {
-
-	cd ${S}
+src_install() {
 	dodir /usr/share/terminfo
 	make \
 		DESTDIR=${D} \
@@ -52,6 +48,4 @@ src_install () {
 
 	dodoc COPYING ChangeLog README ReleaseNotes
 	dodoc bg/README.backgrounds
-	cd ${D}/usr/share/Eterm/themes
-	unpack glass-Eterm-theme.tar.gz
 }
