@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Tree/PEAR-XML_Tree-1.1.ebuild,v 1.3 2003/02/13 11:29:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Tree/PEAR-XML_Tree-1.1.ebuild,v 1.4 2003/09/11 17:04:40 robbat2 Exp $
 
-P=${PN/PEAR-//}-${PV}
+MY_P=${PN/PEAR-//}-${PV}
 
 DESCRIPTION="The XML_Tree package allows one to build XML data structures using a tree representation, without the need for an extension like DOMXML"
 HOMEPAGE="http://pear.php.net/package-info.php?pacid=19"
-SRC_URI="http://pear.php.net/get/${P}.tgz"
+SRC_URI="http://pear.php.net/get/${MY_P}.tgz"
 LICENSE="PHP"
 SLOT="0"
 
@@ -17,7 +17,7 @@ DEPEND=""
 # May be some php compile-time dependancies, but for now...
 RDEPEND="dev-php/mod_php"
 
-S=${WORKDIR}/${P}
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	einfo "Nothing to build"

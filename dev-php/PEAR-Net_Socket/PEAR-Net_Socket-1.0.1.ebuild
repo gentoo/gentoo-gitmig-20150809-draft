@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Socket/PEAR-Net_Socket-1.0.1.ebuild,v 1.7 2003/03/01 05:05:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Socket/PEAR-Net_Socket-1.0.1.ebuild,v 1.8 2003/09/11 17:04:19 robbat2 Exp $
 
-P=${PN/PEAR-//}-${PV}
+MY_P=${PN/PEAR-//}-${PV}
 DESCRIPTION="class interface to TCP sockets"
 HOMEPAGE="http://pear.php.net/package-info.php?pacid=64"
-SRC_URI="http://pear.php.net/get/${P}.tgz"
+SRC_URI="http://pear.php.net/get/${MY_P}.tgz"
 
 LICENSE="PHP"
 SLOT="0"
