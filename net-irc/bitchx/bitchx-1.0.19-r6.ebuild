@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r6.ebuild,v 1.9 2004/02/07 02:32:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r6.ebuild,v 1.10 2004/03/23 23:47:49 zul Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.bitchx.com/pub/BitchX/source/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc hppa ~alpha"
-IUSE="ssl esd gnome xmms ncurses ipv6 gtk cjk"
+IUSE="ssl esd gnome xmms ipv6 gtk cjk"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
@@ -60,10 +60,6 @@ src_compile() {
 	    && myconf="${myconf} --with-gtk" \
 		|| myconf="${myconf} --without-gtk"
 
-	#not tested
-	#use ncurses \
-	#	&& myconf="${myconf} --without-tgetent" \
-	#	|| myconf="${myconf} --with-tgetent"
 
 	# lamer@gentoo.org BROKEN, will not work with our socks
 	# implementations, is looking for a SOCKSConnect function that our

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r5.ebuild,v 1.13 2004/01/02 14:08:51 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r5.ebuild,v 1.14 2004/03/23 23:47:49 zul Exp $
 
 inherit flag-o-matic eutils
 
-IUSE="ssl esd gnome xmms ncurses ipv6 gtk cjk"
+IUSE="ssl esd gnome xmms ipv6 gtk cjk"
 
 MY_P=ircii-pana-${PV/.0./.0c}
 S=${WORKDIR}/BitchX
@@ -28,7 +28,6 @@ replace-flags -O[3-9] -O2
 DEPEND=">=sys-libs/ncurses-5.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	xmms? ( media-sound/xmms )
-	ncurses? ( sys-libs/ncurses )
 	esd? ( >=media-sound/esound-0.2.5
 		>=media-libs/audiofile-0.1.5 )
 	gtk? ( =x11-libs/gtk+-1.2*
@@ -71,10 +70,6 @@ src_compile() {
 		&& myconf="${myconf} --enable-ipv6" \
 		|| myconf="${myconf} --disable-ipv6"
 
-	#not tested
-	#use ncurses \
-	#	&& myconf="${myconf} --without-tgetent" \
-	#	|| myconf="${myconf} --with-tgetent"
 
 	# lamer@gentoo.org BROKEN, will not work with our socks
 	# implementations, is looking for a SOCKSConnect function that our
