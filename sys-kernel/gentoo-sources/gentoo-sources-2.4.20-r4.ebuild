@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r3.ebuild,v 1.1 2003/04/15 21:00:10 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r4.ebuild,v 1.1 2003/05/08 21:32:50 pfeifer Exp $
 
-IUSE="build crypt evms2 aavm"
+IUSE="build crypt evms2 aavm usagi"
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -22,23 +22,18 @@ OKV="2.4.20"
 # Documentation on the patches contained in this kernel will be installed
 # to /usr/share/doc/gentoo-sources-${PV}/patches.txt.gz
 
-DESCRIPTION="Full sources for the Gentoo Linux kernel"
+DESCRIPTION="Full sources for the Gentoo Kernel."
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	mirror://gentoo/patches-${KV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc -sparc -alpha -hppa -mips -arm"
+KEYWORDS="x86 -ppc -sparc -alpha -hppa -mips -arm"
 SLOT="${KV}"
 
 
 src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die "Error moving kernel source tree to linux-${KV}"
-
-	cd ${WORKDIR}/${KV}/jfs || die "${WORKDIR}/${KV}/jfs does not exist"
-	tar xzf jfs-2.4-1.1.1.tar.gz || die "Failed to unpack jfs files."
-	cp -a Documentation ${S} || die "Failed to copy jfs docs to kernel tree."
-	cp -a fs ${S} || die "Failed to copy jfs source to kernel tree."
 
 	cd ${WORKDIR}/${KV}
 
@@ -74,23 +69,21 @@ src_unpack() {
 	# This is the *ratified* evms2 USE flag, enables evms2 support
 	if [ -z "`use evms2`" ]; then
 		einfo "Setting up kernel for EVMS 1.2.1 support(default)."
-		echo
 		for file in 2* ;do
 			einfo "Dropping ${file}..."
 			rm -f ${file}
 		done
 	else
-		einfo "Setting up kernel for EVMS 2.0 support."
+		einfo "Setting up kernel for EVMS 2.0.1 support."
 		ewarn "This is very beta. Please read the 'evms2' doc provided with this kernel."
-		ewarn "It is the install doc from the evms 2.0 tarball."
-		echo
+		ewarn "It is the install doc from the evms 2.0.1 tarball."
 		for file in 1* ;do
 			einfo "Dropping ${file}..."
 			rm -f ${file}
 		done
 	fi
 
-	# This is the crypt USE flag, enables IPSEC & USAGI
+	# This is the crypt USE flag, keeps {USAGI/superfreeswan/patch-int/loop-jari}
 	if [ -z "`use crypt`" ]; then
 		einfo "No Cryptographic support, dropping patches..."
 		for file in 6* 8* ;do
@@ -98,7 +91,23 @@ src_unpack() {
 			rm -f ${file}
 		done
 	else
-		einfo "Cryptographic support enabled..."
+		einfo "Cryptographic patches will be applied"
+	fi
+
+	# This is the usagi USE flag, keeps USAGI, drops {superfreeswan/patch-int/loop-jari}
+	# Using USAGI will also cause you to drop all iptables ipv6 patches
+	if [ -z "`use usagi`" ]; then
+		einfo "Keeping {superfreeswan/patch-int/loop-jari} patches, dropping USAGI"
+		for file in 6* ;do
+			einfo "Dropping ${file}..."
+			rm -f ${file}
+		done
+	else
+		einfo "Keeping USAGI patch, dropping {superfreeswan/patch-int/loop-jari}"
+		for file in *.ipv6 8* ;do
+			einfo "Dropping ${file}..."
+			rm -f ${file}
+		done
 	fi
 
 	kernel_src_unpack
@@ -114,13 +123,11 @@ pkg_postinst() {
 	ewarn "If iptables/netfilter behaves abnormally, such as 'Invalid Argument',"
 	ewarn "you will need to re-emerge iptables to restore proper functionality."
 	echo
-	einfo "Please be warned, you have just installed an unstable"
-	einfo "patchset of the Gentoo Linux kernel sources."
 	einfo "This set contains the ptrace patch as part of grsecurity."
 	echo
-	einfo "If there are issues with it, please report them"
-	einfo "by assigning bugs on bugs.gentoo.org to"
-	einfo "x86-kernel@gentoo.org"
+	einfo "If there are issues with it, please check http://bugs.gentoo.org/"
+	einfo "for an existing bug first. Then create a new bug if you have not found"
+	einfo "one that matches your issue. Assign it to x86-kernel@gentoo.org"
 	echo
 	einfo "Please read the changelog and associated docs for more information."
 }
