@@ -73,18 +73,22 @@ diff -ur linux-2.6.0/include/linux/compiler-gcc2.h linux-2.6.0/include/linux.gen
   * The attribute `pure' is not implemented in GCC versions earlier
 diff -ur linux-2.6.0/include/linux/compiler-gcc3.h linux-2.6.0/include/linux.gentoo/compiler-gcc3.h
 --- linux-2.6.0/include/linux/compiler-gcc3.h	2003-12-27 19:22:38.000000000 +0000
-+++ linux-2.6.0/include/linux.gentoo/compiler-gcc3.h	2003-12-29 20:07:05.000000000 +0000
-@@ -6,7 +6,9 @@
++++ linux-2.6.0/include/linux.gentoo/compiler-gcc3.h	2003-12-30 23:34:55.000000000 +0000
+@@ -3,6 +3,8 @@
+ /* These definitions are for GCC v3.x.  */
+ #include <linux/compiler-gcc.h>
+ 
++#ifdef __KERNEL__
++
  #if __GNUC_MINOR__ >= 1
  # define inline		__inline__ __attribute__((always_inline))
  # define __inline__	__inline__ __attribute__((always_inline))
--# define __inline	__inline__ __attribute__((always_inline))
-+# ifndef __inline
-+#   define __inline	__inline__ __attribute__((always_inline))
-+# endif
+@@ -20,3 +22,5 @@
  #endif
  
- #if __GNUC_MINOR__ > 0
+ #define __attribute_pure__	__attribute__((pure))
++
++#endif /* __KERNEL__ */
 diff -ur linux-2.6.0/include/linux/cpumask.h linux-2.6.0/include/linux.gentoo/cpumask.h
 --- linux-2.6.0/include/linux/cpumask.h	2003-12-27 19:22:38.000000000 +0000
 +++ linux-2.6.0/include/linux.gentoo/cpumask.h	2003-12-27 19:19:31.000000000 +0000
