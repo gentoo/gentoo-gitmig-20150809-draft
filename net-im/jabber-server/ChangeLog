@@ -1,6 +1,11 @@
 # ChangeLog for net-im/jabber-server
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/ChangeLog,v 1.2 2002/05/11 08:13:42 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/ChangeLog,v 1.3 2002/12/03 21:17:37 verwilst Exp $
+
+*jabber-server-1.4.2-r2 (3 Dec 2002) Bart Verwilst <verwilst@gentoo.org>
+
+  Totally overhauled ebuild.. Enjoy :o)
+
 
 *jabber-server-1.4.2-r1 (11 May 2002)
 

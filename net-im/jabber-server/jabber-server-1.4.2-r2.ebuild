@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.18 2002/11/30 02:12:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.19 2002/12/03 21:17:37 verwilst Exp $
 
 JIT_V="1.0.6"
 
@@ -12,18 +12,14 @@ SRC_URI="http://jabberd.jabberstudio.org/downloads/jabber-${PV}.tar.gz
          http://www.ibiblio.org/gentoo/distfiles/msn-transport-stable-20011217.tar.gz
 	 http://yahoo-transport.jabberstudio.org/yahoo-t-2.1.1.tar.gz
 	 http://www.ibiblio.org/gentoo/distfiles/Install_AIM_3.5.1670.exe
-	 http://files.jabberstudio.org/mu-conference/muconference-0.3.tar.gz
-	 mirror://sourceforge/jit/jit-${JIT_V}.tar.gz"
+	 http://files.jabberstudio.org/mu-conference/muconference-0.3.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="ssl"
 
 DEPEND="=dev-libs/pth-1.4.0
-	>=dev-libs/glib-2
-	~dev-libs/libsigc++-1.0.4
-	>=net-libs/libicq2000-0.3.1
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 src_unpack() {
@@ -34,8 +30,6 @@ src_unpack() {
 	unpack aim-transport-stable-20021112.tar.gz
 	unpack yahoo-t-2.1.1.tar.gz
 	unpack muconference-0.3.tar.gz
-	unpack jit-${JIT_V}.tar.gz
-	mv jit-${JIT_V} jit
 	mv ${S}/aim-transport-stable-20021012 ${S}/aim-transport
 	cd ${S}/aim-transport
 	cp ${DISTDIR}/Install_AIM_3.5.1670.exe .
@@ -69,9 +63,6 @@ src_compile() {
         cd ${S}/yahoo-transport-2
         make || die
 
-	cd ${S}/jit
-	./configure --icq || die
-	make || die
 }
 
 src_install() {
@@ -83,7 +74,6 @@ src_install() {
 	touch ${D}/var/spool/jabber/.keep
 	dodir /var/run
 
-        cp ${S}/jit/jabberd/jabberd-icq ${D}/usr/sbin/
 	cp ${S}/jabberd/jabberd ${D}/usr/sbin/
 	cp ${S}/aim-transport/src/aimtrans.so ${D}/usr/lib/jabber/
 	cp ${S}/aim-transport/Install_AIM_3.5.1670.exe ${D}/usr/lib/jabber/
