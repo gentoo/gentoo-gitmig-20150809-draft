@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.0.0.ebuild,v 1.1 2002/06/05 20:41:29 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.0.0.ebuild,v 1.2 2002/07/19 12:57:54 stroke Exp $
 
 inherit gnome2
 
@@ -9,6 +9,7 @@ DESCRIPTION="User Interface part of Lib bonobo"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
+KEYWORDS="x86"
 LICENSE="GPL-2 LGPL-2.1"
 
 RDEPEND=">=dev-libs/glib-2.0.0
