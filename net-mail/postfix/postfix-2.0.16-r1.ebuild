@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.16-r1.ebuild,v 1.9 2003/11/11 03:54:55 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.16-r1.ebuild,v 1.10 2004/01/14 20:38:12 max Exp $
 
 inherit eutils ssl-cert
 
@@ -21,7 +21,7 @@ SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${P}.tar.gz
 
 LICENSE="IPL-1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha"
+KEYWORDS="x86 ~sparc ~ppc ~alpha"
 IUSE="ipv6 pam ldap mysql postgres ssl sasl maildir mbox"
 
 PROVIDE="virtual/mta virtual/mda"
@@ -37,8 +37,10 @@ RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00
 	!virtual/mta"
 
+# Is this still necessary since gentoo sasl looks
+# in /etc/sasl2 for it's config files?
 pkg_setup() {
-	# Prevent mangling the smtpd.conf file
+	# Prevent mangling the smtpd.conf file.
 	if [ ! -L "${ROOT}/usr/lib/sasl2/smtpd.conf" ] ; then
 		if [ -f "${ROOT}/usr/lib/sasl2/smtpd.conf" ] ; then
 			ebegin "Protecting your smtpd.conf file"
@@ -53,7 +55,7 @@ pkg_setup() {
 			fi
 
 			# If both files exist, make sure that we preserve
-			# a copy of each with the ._cfg system
+			# a copy of each with the ._cfg system.
 			if [ -f "${ROOT}/etc/sasl2/smtpd.conf" ] ; then
 				mv "${ROOT}/etc/sasl2/smtpd.conf" \
 					"${ROOT}/etc/sasl2/._cfg0000_smtpd.conf"
@@ -87,6 +89,7 @@ src_unpack() {
 	# Postfix does not get the FQDN if no hostname is configured.
 	epatch "${FILESDIR}/${PN}-2.0.9-get-FQDN.patch"
 
+	# Fix install paths.
 	sed -e "s:/usr/libexec/postfix:/usr/lib/postfix:" \
 		-i src/global/mail_params.h -i conf/main.cf || die "sed failed"
 }
@@ -144,6 +147,9 @@ src_install () {
 		mail_owner="postfix" \
 		setgid_group="postdrop" || die "postfix-install failed"
 
+	# Provide another link for legacy FSH.
+	dosym /usr/sbin/sendmail /usr/lib/sendmail
+
 	# Install an rmail for UUCP, closing bug #19127.
 	dobin auxiliary/rmail/rmail
 
@@ -188,16 +194,11 @@ src_install () {
 	if [ "`use sasl`" ] ; then
 		insinto /etc/sasl2
 		newins "${FILESDIR}/smtp.sasl" smtpd.conf
-		dodir /usr/lib/sasl2
-		dosym /etc/sasl2/smtpd.conf /usr/lib/sasl2/smtpd.conf
 	fi
-
-	keepdir /var/spool/postfix/{active,bounce,corrupt,defer,deferred,flush}
-	keepdir /var/spool/postfix/{hold,incomming,maildrop,pid,private,public}
 }
 
 pkg_postinst() {
-	ebegin "Fixing permissions"
+	ebegin "Fixing queue directories and permissions"
 	"${ROOT}/etc/postfix/post-install" upgrade-permissions
 	eend $?
 	echo

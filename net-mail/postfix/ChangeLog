@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.100 2004/01/11 03:53:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.101 2004/01/14 20:38:12 max Exp $
+
+  14 Jan 2004; Max Kalika <max@gentoo.org> postfix-1.1.11.20020917-r1.ebuild,
+  postfix-1.1.11.20020917.ebuild, postfix-2.0.10-r1.ebuild,
+  postfix-2.0.12-r1.ebuild, postfix-2.0.13-r1.ebuild, postfix-2.0.14.ebuild,
+  postfix-2.0.15-r1.ebuild, postfix-2.0.16-r1.ebuild, postfix-2.0.9.ebuild,
+  files/gentestcrt.sh, files/tls+ipv6-1.4-pf-1.1.11-20020917.patch.bz2:
+  Bump 2.0.16-r1 to stable x86. Add FSH link /usr/sbin/sendmail ->
+  /usr/lib/sendmail. Do not keepdir on the queue directories to minimize bogus
+  errors in the mail log. Only install the sasl conf to /etc/sasl2 as the latest
+  sasl looks there for the config files.
 
   10 Jan 2004; Jason Wever <weeve@gentoo.org> postfix-2.0.11.ebuild:
   Marked stable on sparc.
