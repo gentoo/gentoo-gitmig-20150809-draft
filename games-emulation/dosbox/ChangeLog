@@ -1,12 +1,15 @@
 # ChangeLog for games-emulation/dosbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.4 2003/10/18 07:28:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.5 2003/12/12 06:08:34 vapier Exp $
+
+*dosbox-0.60 (16 Oct 2003)
+
+  12 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add an alsa-1.0.0 patch to fix #35522.
 
   18 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> dosbox-0.60.ebuild:
   removed the depend on ncurses since we don't use the debugger; added
   src_compile
-
-*dosbox-0.60 (16 Oct 2003)
 
   16 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> dosbox-0.60.ebuild:
   version bump
