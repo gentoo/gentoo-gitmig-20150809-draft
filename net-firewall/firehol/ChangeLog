@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.5 2004/05/03 07:35:22 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.6 2004/05/18 18:43:52 centic Exp $
+
+*firehol-1.191 (18 May 2004)
+
+  18 May 2004; Dominik Stadler <centic@gentoo.org> +files/firehol.initrd,
+  +firehol-1.191.ebuild:
+  Add new Version 1.191, should fix Bug 49822 and also Bug 46487 and Bug 33428
 
   03 May 2004; David Holm <dholm@gentoo.org> firehol-1.159-r1.ebuild:
   Added to ~ppc.
