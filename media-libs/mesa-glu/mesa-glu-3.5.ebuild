@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa-glu/mesa-glu-3.5.ebuild,v 1.3 2002/01/13 21:33:42 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa-glu/mesa-glu-3.5.ebuild,v 1.4 2002/01/24 00:41:09 gbevin Exp $
 
 S=${WORKDIR}/Mesa-${PV}
 DESCRIPTION="OpenGL like graphic library for Linux, this package only contains the glu and glut parts"
@@ -46,7 +46,7 @@ src_install() {
 	rm -f ../include/GL/gl.h
 	rm -f ../include/GL/glx.h
 	rm -f ../include/GL/osmesa.h
-	ln -s libGLU.so.1.1.* libMesaGLU.so.3
+	ln -s libGLU.so.1.* libMesaGLU.so.3
 	cd ${S}
 	dodoc docs/*
 }
