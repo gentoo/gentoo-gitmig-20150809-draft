@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.127 2005/03/16 06:35:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.128 2005/03/16 16:26:07 azarah Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1942,7 +1942,7 @@ is_uclibc() {
 }
 
 is_cxx() {
-	gcc-lang-supported cxx || return 1
+	gcc-lang-supported 'c++' || return 1
 	use build && return 1
 	use ! nocxx
 }
