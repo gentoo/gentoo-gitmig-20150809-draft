@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ami/ami-1.2.3.ebuild,v 1.5 2004/11/23 08:42:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ami/ami-1.2.3.ebuild,v 1.6 2004/11/30 20:46:40 swegener Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~sparc"
 
-DEPEND="!gtk2 ( >=media-libs/gdk-pixbuf-0.7.0 )"
+DEPEND="!gtk2? ( >=media-libs/gdk-pixbuf-0.7.0 )"
 
 src_unpack() {
 	unpack ${P}.tar.gz

@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b350a8a30ee06c4ac6eb25269e9da27c ami-1.2.3.ebuild 856
-MD5 cc4fe38e49626c0bb3d2e84d8a6528b9 ChangeLog 2583
+MD5 c5fa272b07c5d5c99e6f29a6d3abefc7 ami-1.2.3.ebuild 860
+MD5 481ecc11657f60ba17b86cc7e6bfc88d ChangeLog 2699
 MD5 10012fc04bd3e933472977d1258d244c metadata.xml 182
 MD5 aa80cdfa7b5f7937a4e3edee51867caa files/digest-ami-1.2.3 117
 MD5 410abe74eafa654075f4429a429d8366 files/ami-1.2.3-imhangul_status.patch 1508
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBpPZ4I1lqEGTUzyQRAh3UAKC0mkmkZbAybbGyU4oFGNt+K4TlogCgl+TC
-bBJg/HgkaS53ooCZMzbXEzw=
-=nVDG
+iD8DBQFBrNxJI1lqEGTUzyQRAnNXAJ4naU1fg2+JJGHRuEezsEtDrFM8owCfTN81
+KM1xvg9y961pGoOiGCNrRXs=
+=cZ3F
 -----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ami
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ami/ChangeLog,v 1.5 2004/08/14 15:16:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ami/ChangeLog,v 1.6 2004/11/30 20:46:40 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> ami-1.2.3.ebuild:
+  Added missing ? after !use in dependency.
 
   15 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> -ami-1.1.0.ebuild,
   -ami-1.2.2.ebuild, ami-1.2.3.ebuild:
