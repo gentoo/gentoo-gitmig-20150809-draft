@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-4.2-r1.ebuild,v 1.5 2004/06/03 20:55:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-4.2-r1.ebuild,v 1.6 2004/06/24 22:51:13 agriffis Exp $
 
 inherit games eutils
 
