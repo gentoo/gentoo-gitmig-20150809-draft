@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.3-r2.ebuild,v 1.1 2001/04/23 19:10:55 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.3-r2.ebuild,v 1.2 2001/04/24 15:51:05 achim Exp $
 
 A="X402src-1.tgz X402src-2.tgz X402src-3.tgz 4.0.2-4.0.3.diff.gz truetype.tar.gz"
 S=${WORKDIR}/xc
@@ -64,7 +64,9 @@ src_install() {
     doins ${FILESDIR}/${PV}/XftConfig
     cd ${D}/usr/X11R6/lib/X11/fonts
     tar xzf ${DISTDIR}/truetype.tar.gz
-    preplib /usr/X11R6
+
+    dosym /usr/X11R6/lib/libGL.so.1.2 /usr/lib/libMesaGL.so.3
+
     insinto /etc/env.d
     doins ${FILESDIR}/10xfree
     insinto /etc/X11/xinit

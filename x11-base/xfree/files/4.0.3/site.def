@@ -4,5 +4,5 @@
 #define ForceNormalLib YES
 #define BuildXinerama YES
 #define SharedLibXau YES
-#define Freetype2Dir /usr
+
 
