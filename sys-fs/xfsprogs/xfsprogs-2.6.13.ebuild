@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.6.13.ebuild,v 1.5 2004/09/22 03:36:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.6.13.ebuild,v 1.6 2004/10/08 00:36:02 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="xfs filesystem utilities"
 HOMEPAGE="http://oss.sgi.com/projects/xfs/"
@@ -11,7 +11,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 mips ppc ~sparc x86"
-IUSE="nls"
+IUSE="nls uclibc"
 
 RDEPEND="virtual/libc
 	sys-fs/e2fsprogs"
@@ -28,6 +28,14 @@ src_unpack() {
 		-e '/^PKG_[[:upper:]]*_DIR/s:= := $(DESTDIR):' \
 		include/builddefs.in \
 		|| die "sed include/builddefs.in failed"
+
+	# mincore does not appear to be part of POSIX or the Single Unix 
+	# Specification. So we patch it out for uclibc builds.
+	epatch ${FILESDIR}/${PV}-uclibc-mincore.patch
+	use uclibc && append-flags -D__UCLIBC__
+
+	epatch ${FILESDIR}/${PV}-configure.patch #65735
+	autoreconf -i || die "autoreconf" 
 }
 
 src_compile() {

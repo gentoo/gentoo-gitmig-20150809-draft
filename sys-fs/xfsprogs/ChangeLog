@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.23 2004/09/22 03:36:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.24 2004/10/08 00:36:02 vapier Exp $
+
+  07 Oct 2004; <solar@gentoo.org> +files/2.6.13-uclibc-mincore.patch,
+  xfsprogs-2.6.13.ebuild:
+  mincore() does not appear to be part of POSIX or the Single Unix
+  Specification. So we patch it out for uclibc builds.
+
+  07 Oct 2004; Mike Frysinger <vapier@gentoo.org> xfsprogs-2.6.13.ebuild,
+  +files/2.6.13-configure.patch:
+  Add patch to fix configure mis-detection #65735 by Marc Bevand.
 
   21 Sep 2004; Mike Frysinger <vapier@gentoo.org> xfsprogs-2.6.13.ebuild:
   Make nls support optional #64862 by Aaron GIpson.
