@@ -1,0 +1,23 @@
+--- gemsvnc.orig	2004-03-26 19:16:41.000000000 +0100
++++ gemsvnc.c	2004-03-27 00:22:26.179380632 +0100
+@@ -1734,6 +1734,12 @@
+ 
+       active = checkForImageUpdates();                           /* check for any changes to the framebuffer and relay them to the remote clients*/
+     } else {
++	if (disconnectAfterFirstClient == FALSE)
++	{							/* fix runforever & deamon-mode not to time out */
++	//printf ("runforever activated\n");
++	}
++	else
++	{							/* #end-patch# (by evrmnd) */ 
+       gettimeofday(&cur, NULL);
+       maxUsecsToConnect -= (cur.tv_usec - prev.tv_usec) +
+                            (cur.tv_sec - prev.tv_sec)*1000000;
+@@ -1743,6 +1749,7 @@
+         fprintf(stderr, "Maximum time to connect reached. Exiting.\n"); /* yes, bellyache about it */
+         XTestDiscard(dpy);                                       /* throw away any pending requests -- who cares anyway? */
+         exit(2);                                                 /* and quit */
++	}							/* #patch# (by evrmnd) */
+       }
+     }
+ 

@@ -1,0 +1,23 @@
+--- gemsvnc.orig	2004-03-26 19:16:41.000000000 +0100
++++ gemsvnc.c	2004-03-27 00:08:32.906057432 +0100
+@@ -1486,7 +1486,19 @@
+   xscreen = DefaultScreen(dpy);                                  /* default screen of selected DISPLAY */
+   window = RootWindow(dpy, xscreen);                             /* root window of that screen */
+   depth = DefaultDepth(dpy, xscreen);                            /* depth in bits per pixel */
+-  depth = 32;                                                    /* FIXME crocked for debug */
++  	if (depth == 32)					/* patch-begin (by evrmd)*/
++	{							/* workaround to work with x-server */
++		depth = 32;					/* running less than 24bpp */
++	}
++	else if (depth == 24)
++		{
++			depth=32;
++		}
++		else
++		{
++		}
++	{
++	}							/* patch-end (by evrmd)*/
+   bpp = depth/8;                                                 /* bytes per pixel */
+   fb_high = DisplayHeight(dpy, xscreen);                         /* how many pixels high is the framebuffer */
+   fb_wide = DisplayWidth(dpy, xscreen);                          /* how many pixels wide is the framebuffer */
