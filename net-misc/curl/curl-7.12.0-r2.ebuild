@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.12.0-r2.ebuild,v 1.2 2004/09/01 04:22:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.12.0-r2.ebuild,v 1.3 2004/09/29 09:01:25 eradicator Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -43,11 +43,11 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 	dodoc LEGAL CHANGES README
 	dodoc docs/FEATURES docs/INSTALL docs/INTERNALS docs/LIBCURL
 	dodoc docs/MANUAL docs/FAQ docs/BUGS docs/CONTRIBUTE
 
 	# backwards compat link
-	dosym libcurl.so.3 /usr/lib/libcurl.so.2
+	dosym libcurl.so.3 /usr/$(get_libdir)/libcurl.so.2
 }
