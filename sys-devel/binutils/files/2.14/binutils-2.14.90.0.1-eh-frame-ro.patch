@@ -1,0 +1,484 @@
+2002-11-22  Jakub Jelinek  <jakub@redhat.com>
+
+	* ldgram.y (sect_constraint): New.
+	(ONLY_IF_RO, ONLY_IF_RW): New tokens.
+	(section): Add sect_constraint.  Pass additional argument
+	to lang_enter_output_section_statement.
+	* mri.c (mri_draw_tree): Pass additional argument to
+	lang_enter_output_section_statement.
+	* emultempl/pe.em (place_orphan): Likewise.
+	(output_prev_sec_find): Disregard output section statements with
+	constraint == -1.
+	* emultempl/mmo.em (output_prev_sec_find): Likewise.
+	(mmo_place_orphan): Pass additional argument to
+	lang_enter_output_section_statement.
+	* emultempl/elf32.em (output_prev_sec_find): Disregard output section
+	statements with constraint == -1.
+	(place_orphan): Pass additional argument to
+	lang_enter_output_section_statement.
+	* ldlang.c (lang_enter_overlay_section): Likewise.
+	(lang_output_section_find_1): New.
+	(lang_output_section_find): Use it.
+	(lang_output_section_statement_lookup_1): New.
+	(lang_output_section_statement_lookup): Use it.
+	(check_section_callback, check_input_sections): New.
+	(map_input_to_output_sections): Check if all input sections
+	are readonly if ONLY_IF_RO or ONLY_IF_RW was seen.
+	(strip_excluded_output_sections): Disregard output section statements
+	with constraint == -1.
+	(lang_record_phdrs): Likewise.
+	(lang_enter_output_section_statement): Add constraint argument.
+	Use lang_output_section_statement_lookup_1.
+	* ldlang.h (lang_output_section_statement_type): Add constraint
+	and all_input_readonly fields.
+	(lang_enter_output_section_statement): Adjust prototype.
+	* ldlex.l (ONLY_IF_RO, ONLY_IF_RW): New tokens.
+	* scripttempl/elf.sc (.eh_frame, .gcc_except_table): Move into text
+	segment if all input sections are readonly.
+
+diff -Naurp binutils-2.13.90.0.20.orig/ld/emultempl/elf32.em binutils-2.13.90.0.20/ld/emultempl/elf32.em
+--- binutils-2.13.90.0.20.orig/ld/emultempl/elf32.em	2003-03-19 12:19:16.000000000 -0500
++++ binutils-2.13.90.0.20/ld/emultempl/elf32.em	2003-05-01 15:52:02.000000000 -0400
+@@ -1056,7 +1056,8 @@ output_rel_find (sec)
+   for (u = lang_output_section_statement.head; u; u = lookup->next)
+     {
+       lookup = &u->output_section_statement;
+-      if (strncmp (".rel", lookup->name, 4) == 0)
++      if (lookup->constraint != -1
++	  && strncmp (".rel", lookup->name, 4) == 0)
+ 	{
+ 	  /* Don't place after .rel.plt as doing so results in wrong
+ 	     dynamic tags.  Also, place allocated reloc sections before
+@@ -1296,7 +1297,7 @@ gld${EMULATION_NAME}_place_orphan (file,
+ 					    (bfd_vma) 0,
+ 					    (etree_type *) NULL,
+ 					    (etree_type *) NULL,
+-					    load_base);
++					    load_base, 0);
+ 
+   lang_add_section (&os->children, s, os, file);
+ 
+diff -Naurp binutils-2.13.90.0.20.orig/ld/emultempl/mmo.em binutils-2.13.90.0.20/ld/emultempl/mmo.em
+--- binutils-2.13.90.0.20.orig/ld/emultempl/mmo.em	2002-12-16 15:22:53.000000000 -0500
++++ binutils-2.13.90.0.20/ld/emultempl/mmo.em	2003-05-01 15:52:02.000000000 -0400
+@@ -56,6 +56,8 @@ output_prev_sec_find (os)
+        u = lookup->next)
+     {
+       lookup = &u->output_section_statement;
++      if (lookup->constraint == -1)
++	continue;
+       if (lookup == os)
+ 	break;
+       if (lookup->bfd_section != NULL
+@@ -141,7 +143,7 @@ mmo_place_orphan (file, s)
+ 					    (bfd_vma) 0,
+ 					    (etree_type *) NULL,
+ 					    (etree_type *) NULL,
+-					    (etree_type *) NULL);
++					    (etree_type *) NULL, 0);
+ 
+   lang_add_section (&os->children, s, os, file);
+ 
+diff -Naurp binutils-2.13.90.0.20.orig/ld/emultempl/pe.em binutils-2.13.90.0.20/ld/emultempl/pe.em
+--- binutils-2.13.90.0.20.orig/ld/emultempl/pe.em	2003-05-01 15:49:44.000000000 -0400
++++ binutils-2.13.90.0.20/ld/emultempl/pe.em	2003-05-01 15:52:02.000000000 -0400
+@@ -1511,6 +1511,8 @@ output_prev_sec_find (os)
+        u = lookup->next)
+     {
+       lookup = &u->output_section_statement;
++      if (lookup->constraint == -1)
++	continue;
+       if (lookup == os)
+ 	return s;
+ 
+@@ -1677,7 +1679,7 @@ gld_${EMULATION_NAME}_place_orphan (file
+ 						(bfd_vma) 0,
+ 						(etree_type *) NULL,
+ 						(etree_type *) NULL,
+-						(etree_type *) NULL);
++						(etree_type *) NULL, 0);
+ 
+       lang_add_section (&add_child, s, os, file);
+ 
+diff -Naurp binutils-2.13.90.0.20.orig/ld/ldgram.y binutils-2.13.90.0.20/ld/ldgram.y
+--- binutils-2.13.90.0.20.orig/ld/ldgram.y	2003-05-01 15:49:45.000000000 -0400
++++ binutils-2.13.90.0.20/ld/ldgram.y	2003-05-01 15:55:29.000000000 -0400
+@@ -143,14 +143,14 @@ static int error_index;
+ %token ORIGIN FILL
+ %token LENGTH CREATE_OBJECT_SYMBOLS INPUT GROUP OUTPUT CONSTRUCTORS
+ %token ALIGNMOD AT PROVIDE
+-%type <token> assign_op atype attributes_opt
++%type <token> assign_op atype attributes_opt sect_constraint
+ %type <name>  filename
+ %token CHIP LIST SECT ABSOLUTE  LOAD NEWLINE ENDWORD ORDER NAMEWORD ASSERT_K
+ %token FORMAT PUBLIC DEFSYMEND BASE ALIAS TRUNCATE REL
+ %token INPUT_SCRIPT INPUT_MRI_SCRIPT INPUT_DEFSYM CASE EXTERN START
+ %token <name> VERS_TAG VERS_IDENTIFIER
+ %token GLOBAL LOCAL VERSIONK INPUT_VERSION_SCRIPT
+-%token KEEP
++%token KEEP ONLY_IF_RO ONLY_IF_RW
+ %token EXCLUDE_FILE
+ %type <versyms> vers_defns
+ %type <versnode> vers_tag
+@@ -828,21 +828,28 @@ opt_at:
+ 	|	{ $$ = 0; }
+ 	;
+ 
++sect_constraint:
++		ONLY_IF_RO { $$ = ONLY_IF_RO; }
++	|	ONLY_IF_RW { $$ = ONLY_IF_RW; }
++	|	{ $$ = 0; }
++	;
++
+ section:	NAME 		{ ldlex_expression(); }
+ 		opt_exp_with_type
+ 		opt_at   	{ ldlex_popstate (); ldlex_script (); }
++		sect_constraint
+ 		'{'
+ 			{
+ 			  lang_enter_output_section_statement($1, $3,
+ 							      sectype,
+-							      0, 0, 0, $4);
++							      0, 0, 0, $4, $6);
+ 			}
+ 		statement_list_opt
+  		'}' { ldlex_popstate (); ldlex_expression (); }
+ 		memspec_opt memspec_at_opt phdr_opt fill_opt
+ 		{
+ 		  ldlex_popstate ();
+-		  lang_leave_output_section_statement ($14, $11, $13, $12);
++		  lang_leave_output_section_statement ($15, $12, $14, $13);
+ 		}
+ 		opt_comma
+ 		{}
+diff -Naurp binutils-2.13.90.0.20.orig/ld/ldlang.c binutils-2.13.90.0.20/ld/ldlang.c
+--- binutils-2.13.90.0.20.orig/ld/ldlang.c	2003-05-01 15:49:45.000000000 -0400
++++ binutils-2.13.90.0.20/ld/ldlang.c	2003-05-01 15:52:02.000000000 -0400
+@@ -72,6 +72,10 @@ static lang_input_statement_type *new_af
+ 	   bfd_boolean));
+ static lang_memory_region_type *lang_memory_default
+   PARAMS ((asection *));
++static lang_output_section_statement_type * lang_output_section_find_1
++  PARAMS ((const char *, int));
++static lang_output_section_statement_type *
++  lang_output_section_statement_lookup_1 PARAMS ((const char *, int));
+ static void lang_map_flags
+   PARAMS ((flagword));
+ static void init_os
+@@ -94,6 +98,9 @@ static lang_statement_union_type *wild_s
+ static void output_section_callback
+   PARAMS ((lang_wild_statement_type *, struct wildcard_list *, asection *,
+ 	   lang_input_statement_type *, PTR));
++static void check_section_callback
++  PARAMS ((lang_wild_statement_type *, struct wildcard_list *, asection *,
++	   lang_input_statement_type *, PTR));
+ static lang_input_statement_type *lookup_name
+   PARAMS ((const char *));
+ static bfd_boolean load_symbols
+@@ -111,6 +118,9 @@ static void lang_reasonable_defaults
+   PARAMS ((void));
+ static void insert_undefined
+   PARAMS ((const char *));
++static void check_input_sections
++  PARAMS ((lang_statement_union_type *,
++	   lang_output_section_statement_type *));
+ static void lang_place_undefineds
+   PARAMS ((void));
+ static void map_input_to_output_sections
+@@ -745,9 +755,10 @@ lang_memory_default (section)
+   return lang_memory_region_lookup ("*default*");
+ }
+ 
+-lang_output_section_statement_type *
+-lang_output_section_find (name)
++static lang_output_section_statement_type *
++lang_output_section_find_1 (name, constraint)
+      const char *const name;
++     int constraint;
+ {
+   lang_statement_union_type *u;
+   lang_output_section_statement_type *lookup;
+@@ -757,7 +768,9 @@ lang_output_section_find (name)
+        u = lookup->next)
+     {
+       lookup = &u->output_section_statement;
+-      if (strcmp (name, lookup->name) == 0)
++      if (strcmp (name, lookup->name) == 0
++	  && lookup->constraint != -1
++	  && (constraint == 0 || constraint == lookup->constraint))
+ 	{
+ 	  return lookup;
+ 	}
+@@ -766,12 +779,20 @@ lang_output_section_find (name)
+ }
+ 
+ lang_output_section_statement_type *
+-lang_output_section_statement_lookup (name)
++lang_output_section_find (name)
++     const char *const name;
++{
++  return lang_output_section_find_1 (name, 0);
++}
++
++static lang_output_section_statement_type *
++lang_output_section_statement_lookup_1 (name, constraint)
+      const char *const name;
++     int constraint;
+ {
+   lang_output_section_statement_type *lookup;
+ 
+-  lookup = lang_output_section_find (name);
++  lookup = lang_output_section_find_1 (name, constraint);
+   if (lookup == (lang_output_section_statement_type *) NULL)
+     {
+ 
+@@ -786,6 +807,7 @@ lang_output_section_statement_lookup (na
+       lookup->next = (lang_statement_union_type *) NULL;
+       lookup->bfd_section = (asection *) NULL;
+       lookup->processed = FALSE;
++      lookup->constraint = constraint;
+       lookup->sectype = normal_section;
+       lookup->addr_tree = (etree_type *) NULL;
+       lang_list_init (&lookup->children);
+@@ -805,6 +827,13 @@ lang_output_section_statement_lookup (na
+   return lookup;
+ }
+ 
++lang_output_section_statement_type *
++lang_output_section_statement_lookup (name)
++     const char *const name;
++{
++  return lang_output_section_statement_lookup_1 (name, 0);
++}
++
+ static void
+ lang_map_flags (flag)
+      flagword flag;
+@@ -1482,6 +1511,31 @@ output_section_callback (ptr, sec, secti
+     }
+ }
+ 
++/* Check if all sections in a wild statement for a particular FILE
++   are readonly.  */
++
++static void
++check_section_callback (ptr, sec, section, file, output)
++     lang_wild_statement_type *ptr ATTRIBUTE_UNUSED;
++     struct wildcard_list *sec ATTRIBUTE_UNUSED;
++     asection *section;
++     lang_input_statement_type *file ATTRIBUTE_UNUSED;
++     PTR output;
++{
++  /* Exclude sections that match UNIQUE_SECTION_LIST.  */
++  if (unique_section_p (bfd_get_section_name (file->the_bfd, section)))
++    return;
++
++  if (section->output_section == NULL)
++    {
++      flagword flags = bfd_get_section_flags (section->owner, section);
++
++      if ((flags & SEC_READONLY) == 0)
++	((lang_output_section_statement_type *) output)->all_input_readonly
++	  = FALSE;
++    }
++}
++
+ /* This is passed a file name which must have been seen already and
+    added to the statement tree.  We will see if it has been opened
+    already and had its symbols read.  If not then we'll read it.  */
+@@ -2151,6 +2205,41 @@ lang_place_undefineds ()
+     }
+ }
+ 
++/* Check for all readonly or some readwrite sections.  */
++
++static void
++check_input_sections (s, output_section_statement)
++     lang_statement_union_type *s;
++     lang_output_section_statement_type *output_section_statement;
++{
++  for (; s != (lang_statement_union_type *) NULL; s = s->header.next)
++    {
++      switch (s->header.type)
++      {
++      case lang_wild_statement_enum:
++	walk_wild (&s->wild_statement, check_section_callback,
++		   output_section_statement);
++	if (! output_section_statement->all_input_readonly)
++	  return;
++	break;
++      case lang_constructors_statement_enum:
++	check_input_sections (constructor_list.head,
++			      output_section_statement);
++	if (! output_section_statement->all_input_readonly)
++	  return;
++	break;
++      case lang_group_statement_enum:
++	check_input_sections (s->group_statement.children.head,
++			      output_section_statement);
++	if (! output_section_statement->all_input_readonly)
++	  return;
++	break;
++      default:
++	break;
++      }
++    }
++}
++
+ /* Open input files and attach to output sections.  */
+ 
+ static void
+@@ -2172,6 +2261,23 @@ map_input_to_output_sections (s, target,
+ 					output_section_statement);
+ 	  break;
+ 	case lang_output_section_statement_enum:
++	  if (s->output_section_statement.constraint)
++	    {
++	      if (s->output_section_statement.constraint == -1)
++		break;
++	      s->output_section_statement.all_input_readonly = TRUE;
++	      check_input_sections (s->output_section_statement.children.head,
++				    &s->output_section_statement);
++	      if ((s->output_section_statement.all_input_readonly
++		   && s->output_section_statement.constraint == ONLY_IF_RW)
++		  || (!s->output_section_statement.all_input_readonly
++		      && s->output_section_statement.constraint == ONLY_IF_RO))
++		{
++		  s->output_section_statement.constraint = -1;
++		  break;
++		}
++	    }
++
+ 	  map_input_to_output_sections (s->output_section_statement.children.head,
+ 					target,
+ 					&s->output_section_statement);
+@@ -2242,6 +2348,8 @@ strip_excluded_output_sections ()
+       asection *s;
+ 
+       os = &u->output_section_statement;
++      if (os->constraint == -1)
++	continue;
+       s = os->bfd_section;
+       if (s != NULL && (s->flags & SEC_EXCLUDE) != 0)
+ 	{
+@@ -4116,7 +4224,7 @@ topower (x)
+ lang_output_section_statement_type *
+ lang_enter_output_section_statement (output_section_statement_name,
+ 				     address_exp, sectype, block_value,
+-				     align, subalign, ebase)
++				     align, subalign, ebase, constraint)
+      const char *output_section_statement_name;
+      etree_type *address_exp;
+      enum section_type sectype;
+@@ -4124,12 +4232,14 @@ lang_enter_output_section_statement (out
+      etree_type *align;
+      etree_type *subalign;
+      etree_type *ebase;
++     int constraint;
+ {
+   lang_output_section_statement_type *os;
+ 
+   current_section =
+    os =
+-    lang_output_section_statement_lookup (output_section_statement_name);
++    lang_output_section_statement_lookup_1 (output_section_statement_name,
++					    constraint);
+ 
+   /* Add this statement to tree.  */
+ #if 0
+@@ -4855,6 +4965,8 @@ lang_record_phdrs ()
+ 	  struct lang_output_section_phdr_list *pl;
+ 
+ 	  os = &u->output_section_statement;
++	  if (os->constraint == -1)
++	    continue;
+ 
+ 	  pl = os->phdrs;
+ 	  if (pl != NULL)
+@@ -4915,7 +5027,8 @@ lang_record_phdrs ()
+     {
+       struct lang_output_section_phdr_list *pl;
+ 
+-      if (u->output_section_statement.bfd_section == NULL)
++      if (u->output_section_statement.constraint == -1
++	  || u->output_section_statement.bfd_section == NULL)
+ 	continue;
+ 
+       for (pl = u->output_section_statement.phdrs;
+@@ -4985,7 +5098,7 @@ lang_enter_overlay_section (name)
+   etree_type *size;
+ 
+   lang_enter_output_section_statement (name, overlay_vma, normal_section,
+-				       0, 0, 0, 0);
++				       0, 0, 0, 0, 0);
+ 
+   /* If this is the first section, then base the VMA of future
+      sections on this one.  This will work correctly even if `.' is
+diff -Naurp binutils-2.13.90.0.20.orig/ld/ldlang.h binutils-2.13.90.0.20/ld/ldlang.h
+--- binutils-2.13.90.0.20.orig/ld/ldlang.h	2003-03-19 12:19:16.000000000 -0500
++++ binutils-2.13.90.0.20/ld/ldlang.h	2003-05-01 15:52:02.000000000 -0400
+@@ -132,6 +132,8 @@ typedef struct lang_output_section_state
+ 
+   int subsection_alignment;	/* alignment of components */
+   int section_alignment;	/* alignment of start of section */
++  int constraint;
++  bfd_boolean all_input_readonly;
+ 
+   union etree_union *load_base;
+ 
+@@ -394,7 +396,7 @@ extern lang_output_section_statement_typ
+ 	   bfd_vma block_value,
+ 	   etree_type *align,
+ 	   etree_type *subalign,
+-	   etree_type *));
++	   etree_type *, int));
+ extern void lang_final
+   PARAMS ((void));
+ extern void lang_process
+diff -Naurp binutils-2.13.90.0.20.orig/ld/ldlex.l binutils-2.13.90.0.20/ld/ldlex.l
+--- binutils-2.13.90.0.20.orig/ld/ldlex.l	2003-05-01 15:49:45.000000000 -0400
++++ binutils-2.13.90.0.20/ld/ldlex.l	2003-05-01 15:52:02.000000000 -0400
+@@ -303,6 +303,8 @@ V_IDENTIFIER [*?.$_a-zA-Z\[\]\-\!\^]([*?
+ <EXPRESSION,BOTH,SCRIPT>"COPY"		{ RTOKEN(COPY);}
+ <EXPRESSION,BOTH,SCRIPT>"INFO"		{ RTOKEN(INFO);}
+ <EXPRESSION,BOTH,SCRIPT>"OVERLAY"	{ RTOKEN(OVERLAY);}
++<EXPRESSION,BOTH,SCRIPT>"ONLY_IF_RO"	{ RTOKEN(ONLY_IF_RO); }
++<EXPRESSION,BOTH,SCRIPT>"ONLY_IF_RW"	{ RTOKEN(ONLY_IF_RW); }
+ <BOTH,SCRIPT>"o"			{ RTOKEN(ORIGIN);}
+ <BOTH,SCRIPT>"org"			{ RTOKEN(ORIGIN);}
+ <BOTH,SCRIPT>"l"			{ RTOKEN( LENGTH);}
+diff -Naurp binutils-2.13.90.0.20.orig/ld/mri.c binutils-2.13.90.0.20/ld/mri.c
+--- binutils-2.13.90.0.20.orig/ld/mri.c	2003-01-21 13:21:34.000000000 -0500
++++ binutils-2.13.90.0.20/ld/mri.c	2003-05-01 15:52:02.000000000 -0400
+@@ -237,7 +237,7 @@ mri_draw_tree ()
+ 	  lang_enter_output_section_statement (p->name, base,
+ 					       p->ok_to_load ? 0 : noload_section,
+ 					       1, align, subalign,
+-					       (etree_type *) NULL);
++					       (etree_type *) NULL, 0);
+ 	  base = 0;
+ 	  tmp = (struct wildcard_list *) xmalloc (sizeof *tmp);
+ 	  tmp->next = NULL;
+diff -Naurp binutils-2.13.90.0.20.orig/ld/scripttempl/elf.sc binutils-2.13.90.0.20/ld/scripttempl/elf.sc
+--- binutils-2.13.90.0.20.orig/ld/scripttempl/elf.sc	2003-05-01 15:49:45.000000000 -0400
++++ binutils-2.13.90.0.20/ld/scripttempl/elf.sc	2003-05-01 15:52:02.000000000 -0400
+@@ -280,6 +280,8 @@ cat <<EOF
+   ${CREATE_SHLIB-${SBSS2}}
+   ${OTHER_READONLY_SECTIONS}
+   .eh_frame_hdr : { *(.eh_frame_hdr) }
++  .eh_frame     ${RELOCATING-0} : ONLY_IF_RO { KEEP (*(.eh_frame)) }
++  .gcc_except_table ${RELOCATING-0} : ONLY_IF_RO { *(.gcc_except_table) }
+ 
+   /* Adjust the address for the data segment.  We want to adjust up to
+      the same address within the page on the next page up.  */
+@@ -312,8 +314,8 @@ cat <<EOF
+   .data1        ${RELOCATING-0} : { *(.data1) }
+   .tdata	${RELOCATING-0} : { *(.tdata${RELOCATING+ .tdata.* .gnu.linkonce.td.*}) }
+   .tbss		${RELOCATING-0} : { *(.tbss${RELOCATING+ .tbss.* .gnu.linkonce.tb.*})${RELOCATING+ *(.tcommon)} }
+-  .eh_frame     ${RELOCATING-0} : { KEEP (*(.eh_frame)) }
+-  .gcc_except_table ${RELOCATING-0} : { *(.gcc_except_table) }
++  .eh_frame     ${RELOCATING-0} : ONLY_IF_RW { KEEP (*(.eh_frame)) }
++  .gcc_except_table ${RELOCATING-0} : ONLY_IF_RW { *(.gcc_except_table) }
+   ${WRITABLE_RODATA+${RODATA}}
+   ${OTHER_READWRITE_SECTIONS}
+   ${TEXT_DYNAMIC-${DYNAMIC}}
