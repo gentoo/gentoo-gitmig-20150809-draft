@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.150-r2.ebuild,v 1.1 2004/07/08 19:12:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.150-r2.ebuild,v 1.2 2004/07/08 19:13:37 eradicator Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_install() {
 	dodir /var
 	dodir /etc/pam.d
 	cp -rp * ${D}/usr/libexec/webmin
-	
+
 	# in webmin-minimal openslp is not present
 	if [ ! -f "${D}/usr/libexec/webmin/openslp/config-gentoo-linux" ] ; then
 		cp ${D}/usr/libexec/webmin/openslp/config \
