@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.679 2004/10/08 15:29:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.680 2004/10/09 18:40:44 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -648,6 +648,7 @@ x11-plugins/wmsysmon:high-ints - Enable support for monitoring 24 interrupts, us
 x11-terms/eterm:escreen - enable built in screen support
 x11-terms/eterm:etwin - enable twin support
 x11-terms/mlterm:uim - Enable uim support
+x11-terms/mrxvt:xgetdefault - Enable resources via X instead of rxvt small version
 x11-terms/rxvt-unicode:xgetdefault - Enable resources via X instead of rxvt small version
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
 x11-wm/enlightenment:nothemes - Don't include the standard E themes
