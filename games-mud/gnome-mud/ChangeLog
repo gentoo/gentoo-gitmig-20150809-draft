@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/gnome-mud
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.5 2003/11/12 21:10:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.6 2003/11/18 18:39:19 mr_bones_ Exp $
+
+  18 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  gnome-mud-0.10.1.ebuild, gnome-mud-0.10.2.ebuild:
+  clean old non-working versions of the ebuild
 
   12 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org>
   gnome-mud-0.10.3.ebuild:
