@@ -1,5 +1,6 @@
-# Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
-# System-wide defaults for the Portage system
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/ppc/make.defaults,v 1.2 2004/03/18 19:21:59 pebenito Exp $
 
 ARCH="ppc"
 CHOST=powerpc-unknown-linux-gnu

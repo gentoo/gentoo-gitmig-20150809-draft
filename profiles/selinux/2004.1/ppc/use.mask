@@ -1,3 +1,7 @@
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/ppc/use.mask,v 1.2 2004/03/18 19:21:59 pebenito Exp $
+
 # this is a list of USE flags
 # that should not be used on PPC
 afs
