@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.96 2004/09/04 02:43:20 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.97 2004/09/09 17:45:57 caleb Exp $
+
+  09 Sep 2004; Caleb Tennis <caleb@gentoo.org> -kdeaddons-3.2.1.ebuild:
+  3.3.0 is x86 stable
 
   03 Sep 2004; Tom Gall <tgall@gentoo.org> kdeaddons-3.3.0.ebuild:
   added ~ppc64, bug #62775
