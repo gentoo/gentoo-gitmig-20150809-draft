@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <robbat2@gentoo.org> (11 Jul 2003)
+# nss_ldap 209 is borked!
+# See bug #23434
+=net-libs/nss_ldap-209
+
 # <rac@gentoo.org> (10 Jul 2003)
 # unstable upstream, still needs some gentoo regression testing also
 =dev-lang/perl-5.8.1*
