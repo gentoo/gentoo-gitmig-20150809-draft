@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.736 2004/11/14 18:58:11 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.737 2004/11/15 22:54:03 nerdboy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -366,7 +366,6 @@ media-libs/openvrml:javascript - Script node JavaScript support
 media-libs/sdif:ftruncate - Enables usage of ftruncate v. truncate
 media-libs/sdif:threads  - Enables posix thread support
 media-libs/sdl-sound:physfs - Enable physfs support
-media-libs/tiff:lzw-tiff - Enable the LZW Compression Toolkit (Unisys license)
 media-libs/tiff:private - Install additional "private" headers
 media-libs/win32codecs:real - Installs the real video codecs
 media-libs/win32codecs:xanim - Installs the xanim video codecs
