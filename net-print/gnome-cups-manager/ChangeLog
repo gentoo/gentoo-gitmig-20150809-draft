@@ -1,6 +1,9 @@
 # ChangeLog for net-print/gnome-cups-manager
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.5 2003/09/12 17:12:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.6 2003/09/17 01:51:06 weeve Exp $
+
+  16 Sep 2003; Jason Wever <weeve@gentoo.org> gnome-cups-manager-0.17.ebuild:
+  Added ~sparc keyword
 
   12 Sep 2003; Aron Griffis <agriffis@gentoo.org>
   gnome-cups-manager-0.17.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-print/libgnomecups
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.5 2003/09/12 17:09:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.6 2003/09/17 01:50:11 weeve Exp $
+
+  16 Sep 2003; Jason Wever <weeve@gentoo.org> libgnomecups-0.1.6.ebuild:
+  Added ~sparc keyword
 
   12 Sep 2003; Aron Griffis <agriffis@gentoo.org> libgnomecups-0.1.6.ebuild:
   Add ~alpha
