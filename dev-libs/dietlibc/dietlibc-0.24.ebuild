@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.24.ebuild,v 1.3 2003/12/06 15:55:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.24.ebuild,v 1.4 2003/12/14 04:11:32 pappy Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
@@ -19,6 +19,10 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${PV}-dirent-prototype.patch
 
+	# depending on glibc to provide guard symbols, does not work with -nostdlib building
+	filter-flags "-fstack-protector"
+	filter-flags "fstack-protector-all"
+
 	sed -i \
 		-e "s:^CFLAGS.*:CFLAGS = ${CFLAGS}:" \
 		-e "s:^prefix.*:prefix=/usr/diet:" \
@@ -30,10 +34,11 @@ src_unpack() {
 
 src_compile() {
 	filter-flags "-fstack-protector"
-# Added by Jason Wever <weeve@gentoo.org>
-# Fix for bug #27171.
-# dietlibc assumes that if uname -m is sparc64, then gcc is 64 bit
-# but this is not the case on Gentoo currently.
+
+	# Added by Jason Wever <weeve@gentoo.org>
+	# Fix for bug #27171.
+	# dietlibc assumes that if uname -m is sparc64, then gcc is 64 bit
+	# but this is not the case on Gentoo currently.
 
 	if [ "${ARCH}" = "sparc" -a "${PROFILE_ARCH}" = "sparc64" ]; then
 		cd ${S}
