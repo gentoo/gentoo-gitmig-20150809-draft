@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4-r2.ebuild,v 1.7 2004/11/09 22:59:15 squash Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4-r2.ebuild,v 1.8 2005/02/20 09:53:08 spyderous Exp $
 
 inherit eutils
 

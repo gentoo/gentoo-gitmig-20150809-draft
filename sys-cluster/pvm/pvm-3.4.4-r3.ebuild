@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4-r3.ebuild,v 1.1 2004/11/09 22:59:15 squash Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4-r3.ebuild,v 1.2 2005/02/20 09:53:08 spyderous Exp $
 
 inherit eutils
 
@@ -24,6 +24,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-x86_64-segfault.patch || die
 
 # setup def files for other archs
+	cp conf/LINUX.def conf/LINUXI386.def
+	cp conf/LINUX.m4 conf/LINUXI386.m4
 	cp conf/LINUX.def conf/LINUXX86_64.def
 	cp conf/LINUX.m4 conf/LINUXX86_64.m4
 	cp conf/LINUX64.def conf/LINUXIA64.def

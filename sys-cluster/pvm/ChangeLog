@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/pvm
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.15 2004/11/09 22:59:15 squash Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.16 2005/02/20 09:53:08 spyderous Exp $
+
+  20 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>; pvm-3.4.4-r3.ebuild:
+  (#82614) We need to copy x86 config files over too. Thanks to gophix on
+  forums for the fix and Ian Whiting <Ian@Titania.co.uk> for pointing it out.
 
   09 Nov 2004; Josh Grebe <squash@gentoo.org> pvm-3.4.4-r3.ebuild:
   Added pvm-3.4.4-r3.ebuild with non-x86 goodies and sparc lovin... bug 69497
