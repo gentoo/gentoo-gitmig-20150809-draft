@@ -1,8 +1,11 @@
 # ChangeLog for app-portage/splat
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/splat/ChangeLog,v 1.2 2003/08/16 05:38:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/splat/ChangeLog,v 1.3 2003/10/01 06:03:51 genone Exp $
 
 *splat-0.06 (15 Aug 2003)
+
+  01 Oct 2003; Marius Mauch <genone@gentoo.org> splat-0.06.ebuild:
+  added ~ppc as per bug 30040, marked stable on x86
 
   15 Aug 2003; Heinrich Wendel <lanius@gentoo.org> splat-0.06.ebuild:
   moved from app-admin to app-portage
