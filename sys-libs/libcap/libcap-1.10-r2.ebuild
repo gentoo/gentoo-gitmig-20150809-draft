@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r2.ebuild,v 1.5 2003/09/07 00:22:30 msterret Exp $
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r2.ebuild,v 1.6 2003/09/08 02:38:54 msterret Exp $
 
 inherit base
 
@@ -14,10 +14,10 @@ IUSE="python"
 
 #patch is in recent 2.2 kernels so it works there
 DEPEND="virtual/glibc
-        virtual/os-headers
-        python? ( >=virtual/python-2.2.1 >=dev-lang/swig-1.3.10 )"
+	virtual/os-headers
+	python? ( >=virtual/python-2.2.1 >=dev-lang/swig-1.3.10 )"
 RDEPEND="python? ( >=virtual/python-2.2.1 )
-		 virtual/glibc"
+	virtual/glibc"
 
 S=${WORKDIR}/${P}
 
