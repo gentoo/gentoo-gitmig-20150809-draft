@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.11 2003/07/28 09:09:52 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.12 2003/07/29 17:51:40 azarah Exp $
+
+*kbd-1.08-r1 (29 Jul 2003)
+
+  29 Jul 2003; Martin Schlemmer <azarah@gentoo.org> kbd-1.08-r1.ebuild:
+  New configure script is even more broken than before - we should not add the
+  prefix to the paths we pass --datadir and --mandir, else it looks for data in
+  /usr/usr/share ...
 
 *kbd-1.08 (28 Jul 2003)
 
