@@ -1,0 +1,9 @@
+# ChangeLog for net-www/thttpd
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/thttpd/ChangeLog,v 1.1 2004/04/23 10:12:04 stuart Exp $
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org>
+  files/thttpd-2.25/thttpd.conf.sample, files/thttpd-2.25/thttpd.confd,
+  files/thttpd-2.25/thttpd.init:
+  Initial import; thanks to Thomas Eckert <eckert.thomas@gmx.net> in bug #36173
+
