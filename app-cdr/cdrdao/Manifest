@@ -6,8 +6,8 @@ MD5 e21496bf5b1e2efcd09be0b16241b165 files/digest-cdrdao-1.1.7 69
 MD5 e21496bf5b1e2efcd09be0b16241b165 files/digest-cdrdao-1.1.7-r1 69
 MD5 a7dc4823c3a7d7582f9b87afdddb51e0 files/cdrdao-1.1.7-r2-mp32dao-gentoo.diff 779
 MD5 e21496bf5b1e2efcd09be0b16241b165 files/digest-cdrdao-1.1.7-r2 69
-MD5 47a36300a8a54aa45a1caf92dd3942a5 cdrdao-1.1.5-r1.ebuild 2547
-MD5 40cec3afc5b6744c474107760a3942cb cdrdao-1.1.7-r1.ebuild 3073
-MD5 3d2b616fe24d4be887c1ac891e12646a cdrdao-1.1.7.ebuild 1923
+MD5 f77f39fce304e0c9ffa5aa0d60a03c36 cdrdao-1.1.5-r1.ebuild 2528
+MD5 ca14740001755f79053995e2e7eeba66 cdrdao-1.1.7-r1.ebuild 2412
+MD5 8202993fb8ee3e5a409f7a4d4bd3d2c5 cdrdao-1.1.7.ebuild 1857
 MD5 5e67fda07b9764bd2b60100191fe94da ChangeLog 2735
-MD5 7f0fffe8853f22a8ff3e96ed9dd1a7bc cdrdao-1.1.7-r2.ebuild 3218
+MD5 59a09dbb3249680522cb8dcaa41df0c7 cdrdao-1.1.7-r2.ebuild 2670
