@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14-r2.ebuild,v 1.1 2003/09/11 02:04:01 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14-r2.ebuild,v 1.2 2003/09/11 16:50:05 robbat2 Exp $
 
-inderit eutils
+inherit eutils
 #to accomodate -laadeedah releases
 NEWP=${P}
 
