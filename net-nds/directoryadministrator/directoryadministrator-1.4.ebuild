@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-nds/directoryadministrator/directoryadministrator-1.4.ebuild,v 1.1 2003/05/31 14:04:44 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/directoryadministrator/directoryadministrator-1.4.ebuild,v 1.2 2003/07/13 16:48:22 aliz Exp $
 
 MY_PN="directory_administrator"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -10,7 +10,7 @@ HOMEPAGE="http://diradmin.open-it.org"
 LICENSE="GPL-2"
 DEPEND=">=gnome-base/gnome-libs-1.2.0
 	>=net-nds/openldap-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 IUSE=""
 
