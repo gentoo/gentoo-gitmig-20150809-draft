@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-2.1.9.ebuild,v 1.1 2004/03/15 17:40:31 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-2.1.9.ebuild,v 1.2 2004/04/27 20:32:54 pvdabeel Exp $
 
 inherit gtk-engines2
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.xfce.org/archive/xfce-4.0.4/src/${MY_P}.tar.gz
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~sparc ~alpha ~hppa ~mips"
+KEYWORDS="~x86 ~amd64 ~ia64 ppc ~sparc ~alpha ~hppa ~mips"
 
 DEPEND=">=x11-libs/gtk+-2"
 

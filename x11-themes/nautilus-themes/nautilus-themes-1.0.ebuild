@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nautilus-themes/nautilus-themes-1.0.ebuild,v 1.6 2004/03/24 19:29:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nautilus-themes/nautilus-themes-1.0.ebuild,v 1.7 2004/04/27 20:43:00 pvdabeel Exp $
 
 DESCRIPTION="Some nice themes for Nautilus"
 S=${WORKDIR}
@@ -25,7 +25,7 @@ RDEPEND="gnome-base/nautilus"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 amd64 sparc"
+KEYWORDS="x86 amd64 sparc ppc"
 IUSE=""
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-1.0.1.ebuild,v 1.8 2004/04/17 12:26:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-1.0.1.ebuild,v 1.9 2004/04/27 20:04:04 pvdabeel Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.linuxpl.org/fvwm-crystal/tarballs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ppc"
 IUSE="xmms"
 
 RDEPEND=">=x11-wm/fvwm-2.5.8
