@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.0.3-r1.ebuild,v 1.1 2001/01/23 15:41:48 achim Exp $
+# Author Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.0.3-r1.ebuild,v 1.2 2001/01/23 15:52:14 achim Exp $
 
 #P=
 A=${P}.tar.gz
