@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc2.ebuild,v 1.12 2003/09/07 00:06:03 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc2.ebuild,v 1.13 2003/12/26 16:42:05 weeve Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -26,7 +26,7 @@ PROVIDE="virtual/alsa"
 
 SLOT="0.9"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc -sparc"
 
 src_unpack() {
 	# Some *broken* Gentoo packages install stuff in /etc/rc.d/init.d
