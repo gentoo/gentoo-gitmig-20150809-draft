@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libsystem
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/readline/ChangeLog,v 1.1 2004/07/11 02:28:56 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/readline/ChangeLog,v 1.2 2004/07/19 12:35:36 usata Exp $
+
+  19 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> readline-2.3.3.ebuild:
+  Removed redundant RDEPEND, fixed install path and modified SRC_URI.
+  Added die to src_compile().
 
 *readline-2.3.3 (11 Jul 2004)
 
