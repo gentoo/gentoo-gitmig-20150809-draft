@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.7.2.ebuild,v 1.2 2003/03/05 09:36:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.7.2.ebuild,v 1.3 2003/04/24 23:12:10 gmsoft Exp $
 
 IUSE="ssl"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.tcpdump.org/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha mips"
+KEYWORDS="x86 ppc sparc alpha mips hppa"
 
 DEPEND=">=net-libs/libpcap-0.6.1
 	ssl? ( >=dev-libs/openssl-0.6.9 )"
