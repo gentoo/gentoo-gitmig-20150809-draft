@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lexer/cl-lexer-1.ebuild,v 1.3 2003/10/06 14:52:26 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lexer/cl-lexer-1.ebuild,v 1.4 2003/10/16 05:47:00 mkennedy Exp $
 
 inherit common-lisp
 
@@ -32,6 +32,15 @@ src_install() {
 	common-lisp-install lexer.lisp packages.lisp lexer.asd
 	common-lisp-system-symlink
 	dodoc license.txt
-	dointo examples
+	docinto examples
 	dodoc example.lisp
+	do-debian-credits
+}
+
+pkg_preinst() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
+}
+
+pkg_postrm() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 }
