@@ -1,4 +1,14 @@
-MD5 44aadb09b5e8874fa84b5d0339161655 ChangeLog 1052
-MD5 2cd6e7dfa02f3e9a7356f1aeb1df0972 crystalspace-cvs-0.97.ebuild 1596
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e31daf83a82c88e97bce63243666478e ChangeLog 1230
 MD5 e4c7a49ca08eb200cfa0a9f9246e2257 metadata.xml 959
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-crystalspace-cvs-0.97 0
+MD5 f3f18101bbaebc7d0fafb02b8f3ab242 crystalspace-cvs-0.99.ebuild 1769
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-crystalspace-cvs-0.99 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzYkgroRuSHgZdywRAughAJsGIkK6CpqSAoWpIRYlYYqPsrU1sQCeM16F
+lk7VvX1zxvWAT98Di6PQTeQ=
+=ssWM
+-----END PGP SIGNATURE-----
