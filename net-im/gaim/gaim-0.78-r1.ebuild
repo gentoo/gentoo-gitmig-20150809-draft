@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.78-r1.ebuild,v 1.1 2004/06/02 20:29:21 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.78-r1.ebuild,v 1.2 2004/06/09 14:09:34 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -26,7 +26,7 @@ DEPEND=">=x11-libs/gtk+-2.0
 	spell? ( >=app-text/gtkspell-2.0.2 )
 	dev-libs/nss
 	gnutls? ( net-libs/gnutls )
-	silc? ( >=net-im/silc-toolkit-0.9.12 )"
+	!mips? ( silc? ( >=net-im/silc-toolkit-0.9.12 ) )"
 PDEPEND="crypt? ( >=net-im/gaim-encryption-2.26 )"
 
 pkg_setup() {
@@ -72,15 +72,19 @@ src_compile() {
 	use nls  || myconf="${myconf} --disable-nls"
 	use nas && myconf="${myconf} --enable-nas" || myconf="${myconf} --disable-nas"
 
-	use gnutls && {
+	if use gnutls ; then
 		myconf="${myconf} --with-gnutls-includes=/usr/include/gnutls"
 		myconf="${myconf} --with-gnutls-libs=/usr/lib"
-	} || myconf="${myconf} --enable-gnutls=no"
+	else
+		myconf="${myconf} --enable-gnutls=no"
+	fi
 
-	use silc && {
-		myconf="${myconf} --with-silc-includes=/usr/include/silc-toolkit"
-		myconf="${myconf} --with-silc-libs=/usr/lib"
-	}
+	if ! use mips ; then
+		if use silc ; then
+			myconf="${myconf} --with-silc-includes=/usr/include/silc-toolkit"
+			myconf="${myconf} --with-silc-libs=/usr/lib"
+		fi
+	fi
 
 	myconf="${myconf} --with-nspr-includes=/usr/include/nspr"
 	myconf="${myconf} --with-nss-includes=/usr/include/nss"
