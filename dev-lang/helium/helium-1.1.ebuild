@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.7 2003/09/11 01:08:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.8 2003/12/02 14:49:30 kosmikus Exp $
 
 DESCRIPTION="Helium (for learning Haskell)"
-HOMEPAGE="http://www.cs.uu.nl/~afie/helium"
-SRC_URI="http://www.cs.uu.nl/~afie/helium/distr/${P}-src.tar.gz
-	 http://www.cs.uu.nl/~afie/helium/distr/Hint.jar"
+HOMEPAGE="http://www.cs.uu.nl/helium"
+SRC_URI="http://www.cs.uu.nl/helium/distr/${P}-src.tar.gz
+	 http://www.cs.uu.nl/helium/distr/Hint.jar"
 
 LICENSE="GPL-2"
 SLOT="0"
