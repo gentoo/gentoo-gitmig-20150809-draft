@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/whoischk
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whoischk/ChangeLog,v 1.1 2003/07/27 20:41:01 lisa Exp $
+
+
+*whoischk-0.2.2 (2003 Jul 27)
+
+  2003 Jul 27 ; Lisa Seelye <lisa@gentoo.org> :
+   Inital entry into Portage, submitted by Maik Schreiber <blizzy@blizzy.de>
+   closes bug #25378
+
