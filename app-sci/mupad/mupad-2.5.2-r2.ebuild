@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/mupad/mupad-2.5.2-r2.ebuild,v 1.6 2004/07/15 03:46:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/mupad/mupad-2.5.2-r2.ebuild,v 1.7 2004/09/09 05:04:14 cardoe Exp $
 
 VER=`echo $PV|awk -F. '{ print $1$2$3 }'`
 URLPATH="ftp://ftp.mupad.de/MuPAD/distrib/unix/"
@@ -25,7 +25,7 @@ fi
 LICENSE="mupad"
 
 SLOT="0"
-KEYWORDS="~x86 -ppc ~amd64"
+KEYWORDS="x86 -ppc ~amd64"
 IUSE="mupad-noscilab"
 DEPEND="virtual/libc"
 RDEPEND=">=dev-lang/tk-8.3"
