@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.1 2002/11/12 21:30:02 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.2 2002/11/12 21:58:56 verwilst Exp $
 
 IUSE="ssl"
 
@@ -26,6 +26,7 @@ src_unpack() {
 	unpack jabber-${PV}.tar.gz
 	cd ${S}
 	patch -p0 < ${FILESDIR}/mio_ssl.c.patch
+	patch -p0 < ${FILESDIR}/
 	tar -xjf ${FILESDIR}/config-1.4.2.tar.bz2
 	unpack msn-transport-stable-20011217.tar.gz
 	unpack aim-transport-stable-20021112.tar.gz
@@ -46,23 +47,24 @@ src_compile() {
 	mv jabberd/jabberd.c jabberd/jabberd.c.orig
 	sed 's:pstrdup(jabberd__runtime,HOME):"/usr/bin":' jabberd/jabberd.c.orig > jabberd/jabberd.c
 	rm -f jabberd/jabberd.c.orig
-	./configure ${myconf} || die
+	./configure --with-pth-includes=../jabberd/pth-1.4.0 ${myconf} || die
 	make || die
 
         cd ${S}/aim-transport
-	./autogen.sh || die
-        make || die
+	./autogen.sh --with-pth-includes=../jabberd/pth-1.4.0 || die
+        make CFLAGS="-Ijabberd/pth-1.4.0 -DAIM_BUILDDATE=\"`date +%Y%m%d`\" -DAIM_BUILDTIME=\"`date +%H%M%S`\" " || die
 
         cd ${S}/msn-transport
-        ./bootstrap || die
-	./configure || die
-	make || die
+	./bootstrap || die
+        ./configure --with-pth-includes=../jabberd/pth-1.4.0 || die
+        make CFLAGS="-Ijabberd/pth-1.4.0" || die
 
 	cd ${S}/mu-conference
+	pass
 
         cd ${S}/yahoo-transport-2
-	CPPFLAGS="$CPPFLAGS -I../jabberd -I../../jabberd" ./autogen.sh || die
-	make || die
+	CPPFLAGS="$CPPFLAGS -I../jabberd -I../../jabberd -I../jabberd/pth-1.4.0" ./autogen.sh || die
+        make || die
 
 }
 
