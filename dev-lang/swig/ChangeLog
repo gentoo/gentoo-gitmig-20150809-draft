@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.15 2003/11/23 10:24:54 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.16 2003/11/23 10:26:50 lanius Exp $
+
+  23 Nov 2003; Heinrich Wendel <lanius@gentoo.org> swig-1.3.10-r1.ebuild,
+  swig-1.3.15.ebuild:
+  cleanups
 
   23 Nov 2003; Heinrich Wendel <lanius@gentoo.org> swig-1.3.19.ebuild:
   stable on x86
