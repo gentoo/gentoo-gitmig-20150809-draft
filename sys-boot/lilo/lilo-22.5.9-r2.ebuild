@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.9-r2.ebuild,v 1.3 2004/08/26 21:35:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.9-r2.ebuild,v 1.4 2004/09/06 18:17:59 ciaranm Exp $
 
 inherit eutils flag-o-matic
 
@@ -179,9 +179,8 @@ pkg_postinst() {
 				ewarn "Running /sbin/dolilo failed!  Please check what the problem is"
 				ewarn "before your next reboot."
 
-				echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-				echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-				sleep 5
+				ebeep 5
+				epause 5
 			fi
 		fi
 		echo
@@ -193,7 +192,7 @@ pkg_postinst() {
 	einfo "Issue 'dolilo' instead of 'lilo' to have a friendly wrapper that"
 	einfo "handles mounting and unmounting /boot for you. It can do more then"
 	einfo "that when asked, edit /etc/conf.d/dolilo to harness it's full potential."
-	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-	sleep 3
+	ebeep 5
+	epause 3
 	echo
 }

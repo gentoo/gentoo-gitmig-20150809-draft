@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/milo/milo-2.4.18.ebuild,v 1.3 2004/06/24 22:35:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/milo/milo-2.4.18.ebuild,v 1.4 2004/09/06 18:20:47 ciaranm Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -157,7 +157,7 @@ src_compile() {
 	for ((i=10;i>0;i--))
 	do
 		echo -en "${BAD}${i} " # removed \a, might annoy some users.
-		sleep 1
+		epause 1
 	done
 	echo ${NORMAL}
 
