@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.1.ebuild,v 1.1 2003/03/03 19:03:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.1.ebuild,v 1.2 2003/03/03 22:06:20 mholzer Exp $
 
 MY_PV="41"
 
@@ -44,7 +44,7 @@ src_install () {
 	cat >${D}/usr/share/jedit/jedit.sh <<-EOF
 		#!/bin/bash
 
-		java -jar /usr/share/jedit/jedit.jar $@
+		java -jar /usr/share/jedit/jedit.jar \$@
 	EOF
 	chmod 755 ${D}/usr/share/jedit/jedit.sh
 
