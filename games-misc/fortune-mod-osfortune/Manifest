@@ -1,4 +1,5 @@
-MD5 032a09c0e4bff4ae715e830218c4c621 fortune-mod-osfortune-1.ebuild 613
-MD5 137a60c090914e493e1d4dd3a2763d25 ChangeLog 628
+MD5 21ef47d0b6d6246210b823944eb057cb ChangeLog 793
+MD5 0dd9fe6e92019223fae20d36874bb90f fortune-mod-osfortune-1.ebuild 718
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 a2745e5218a8c60d529a87e27b7ba1c9 files/spelling.patch 6416
 MD5 31628b4c85297cebb319ed1432e91f0d files/digest-fortune-mod-osfortune-1 59
