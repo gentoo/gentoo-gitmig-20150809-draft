@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/trustees-2.10.ebuild,v 1.7 2004/07/15 03:43:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/trustees-2.10.ebuild,v 1.8 2004/10/28 16:01:11 vapier Exp $
 
-DESCRIPTION="Advanced permission management system (ACLs) for Linux."
+inherit flag-o-matic toolchain-funcs
+
+DESCRIPTION="Advanced permission management system (ACLs) for Linux"
 HOMEPAGE="http://trustees.sourceforge.net/"
 SRC_URI="http://trustees.sourceforge.net/download/${PN}.${PV}.tgz"
 
@@ -16,28 +18,22 @@ DEPEND="virtual/libc
 
 S="${WORKDIR}"
 
-pkg_setup() {
-	[ ! -e "/usr/src/linux/include/linux/trustee_struct.h" ] && {
+src_compile() {
+	if [ ! -e "${ROOT}/usr/src/linux/include/linux/trustee_struct.h" ] ; then
 		eerror
 		eerror "Your currently linked kernel (/usr/src/linux) hasn't"
 		eerror "been patched for trustees support."
 		eerror
 		die "kernel not patched for trustees support"
-	}
+	fi
 
-	return 0
-}
+	append-flags -I${ROOT}/usr/src/linux/include -include errno.h
 
-src_compile() {
-	CFLAGS="${CFLAGS} -I/usr/src/linux/include -include errno.h"
-
-	echo ${CC} ${CFLAGS} set-trustee.c -o settrustee
-	${CC} ${CFLAGS} set-trustee.c -o settrustee || die "compile problem"
+	$(tc-getCC) ${CFLAGS} set-trustee.c -o settrustee || die "compile problem"
 }
 
 src_install() {
-	dosbin settrustee
-
+	dosbin settrustee || die
 	dodoc README
 	newdoc trustee.conf trustee.conf.example
 
