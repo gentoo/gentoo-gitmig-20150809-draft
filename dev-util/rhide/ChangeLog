@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/rhide
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/ChangeLog,v 1.5 2003/02/12 06:46:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/ChangeLog,v 1.6 2003/03/22 21:52:54 azarah Exp $
+
+*rhide-1.5 (22 Mar 2003)
+
+  22 Mar 2003; Martin Schlemmer <azarah@gentoo.org> rhide-1.5 :
+  New version with new hacks.  I really wish these guys would try to get
+  a more sane build system.  Got the beast to work with rhtvision-2.0.1
+  and setedit-0.5.0 ... although setedit's docs currently do not build
+  with texinfo-4.5.  No train smach, as we still have info pages.
 
 *rhide-1.5_pre-r1 (22 Sep 2002)
 
