@@ -1,0 +1,19 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/files/camserv.init,v 1.1 2003/06/19 19:03:50 mkeadle Exp $
+
+depend() {
+    need net
+}
+
+start() {
+	ebegin "Starting camserv"
+	start-stop-daemon --start --quiet --background --exec /usr/bin/camserv
+	eend $? "Failed to start camserv"
+}
+stop() {
+	ebegin "Stopping camserv"
+	start-stop-daemon --stop --oknodo --quiet --exec /usr/bin/camserv
+	eend $? "Failed to stop camserv"
+}

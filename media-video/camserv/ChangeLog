@@ -1,6 +1,12 @@
 # ChangeLog for media-video/camserv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/ChangeLog,v 1.5 2003/02/12 07:36:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/ChangeLog,v 1.6 2003/06/19 19:03:50 mkeadle Exp $
+
+*camserv-0.5.1-r2 (19 Jun 2003)
+
+  19 Jun 2003; mkeadle <mkeadle@gentoo.org> camserv-0.5.1-r2.ebuild,
+  files/camserv.init:
+  adding init script to start/stop camserv. closes bug request #22204.
 
   09 Feb 2003; Jared Hudson <jhhudso@gentoo.org> : Fixed a bug that was
   keeping it from compiling.
