@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesupport/kdesupport-2.1-r1.ebuild,v 1.5 2001/06/24 02:20:30 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesupport/kdesupport-2.1-r1.ebuild,v 1.6 2001/11/10 22:17:56 verwilst Exp $
 
 V=2.1
 A=${PN}-${V}.tar.bz2
@@ -22,14 +22,14 @@ RDEPEND=">=sys-devel/gcc-2.95.2
 
 
 src_compile() {
-    QTBASE=/usr/X11R6/lib/qt
-    try ./configure --prefix=/opt/kde${V} --host=${CHOST} --enable-threads \
-		--without-audiofile --with-qt-dir=$QTBASE
-    try make
+    QTBASE=/usr/lib/qt-x11-2
+    ./configure --prefix=/usr${V} --host=${CHOST} --enable-threads \
+		--without-audiofile --with-qt-dir=$QTBASE || die
+    make || die
 }
 
 src_install() {
-  try make install DESTDIR=${D}
+  make install DESTDIR=${D} || die
   dodoc AUTHORS ChangeLog COPYING README
 }
 
