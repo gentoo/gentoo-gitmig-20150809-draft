@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.6 2003/11/25 01:08:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.7 2003/12/26 14:09:00 weeve Exp $
+
+  26 Dec 2003; Jason Wever <weeve@gentoo.org> lablgtk-1.2.5.ebuild:
+  Marked stable on sparc to fix broken net-misc/unison dependencies.
 
   24 Nov 2003; Jason Wever <weeve@gentoo.org> lablgtk-1.2.3.ebuild,
   lablgtk-1.2.5.ebuild:
