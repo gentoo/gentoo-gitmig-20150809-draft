@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/dlint-1.4.0.ebuild,v 1.11 2004/06/24 22:34:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/dlint-1.4.0.ebuild,v 1.12 2004/07/14 23:23:13 agriffis Exp $
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P}
@@ -10,6 +10,7 @@ HOMEPAGE="http://www.domtools.com/dns/dlint.shtml"
 
 SLOT="0"
 KEYWORDS="x86 sparc "
+IUSE=""
 LICENSE="GPL-2"
 
 DEPEND="net-dns/bind-tools
