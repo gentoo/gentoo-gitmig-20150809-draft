@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/bastille-2.1.1.ebuild,v 1.1 2003/08/02 10:13:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/bastille-2.1.1.ebuild,v 1.2 2003/08/02 10:24:08 seemant Exp $
 
 inherit perl-module
 
@@ -11,7 +11,8 @@ MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_PN}
 DESCRIPTION="Bastille-Linux is a security hardening tool"
 HOMEPAGE="http://bastille-linux.org/"
-SRC_URI="mirror://sourceforge/${PN}-linux/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}-linux/${MY_P}.tar.bz2
+	mirror://gentoo/${P}-gentoo.patch.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -23,7 +24,7 @@ RDEPEND="dev-perl/Curses
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}.patch
+	epatch ${WORKDIR}/${P}-gentoo.patch
 }
 
 src_compile() {
