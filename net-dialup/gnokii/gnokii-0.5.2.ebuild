@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.5.2.ebuild,v 1.2 2003/09/08 07:10:17 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.5.2.ebuild,v 1.3 2003/09/08 11:42:21 msterret Exp $
 
 S=$WORKDIR/${P}
 DESCRIPTION="a client that plugs into your handphone"
@@ -19,13 +19,13 @@ src_compile() {
 	local myconf
 
 	use nls \
-    	    && myconf="--enable-nls" \
-    	    || myconf="--disable-nls"
+		&& myconf="--enable-nls" \
+		|| myconf="--disable-nls"
 	use X \
-    	    && myconf="${myconf} --with-x" \
-    	    || myconf="${myconf} --without-x"
+		&& myconf="${myconf} --with-x" \
+		|| myconf="${myconf} --without-x"
 	econf \
-    	    --prefix=/usr \
+		--prefix=/usr \
 	    --enable-security \
 	    ${myconf} || die
 	make CC="gcc ${CFLAGS}" || die "make failed (myconf=${myconf})"
