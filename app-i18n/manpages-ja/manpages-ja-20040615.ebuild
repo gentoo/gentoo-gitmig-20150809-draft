@@ -1,19 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040415.ebuild,v 1.3 2004/06/19 07:10:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040615.ebuild,v 1.1 2004/06/19 07:10:49 usata Exp $
 
 IUSE=""
 
 MY_P="man-pages-ja-${PV}"
+GENTOO_MAN_P="portage-${P}"
 
 HOMEPAGE="http://www.linux.or.jp/JM/
 	http://www.gentoo.gr.jp/jpmain/translation.xml"
 DESCRIPTION="A collection of manual pages translated into Japanese"
 SRC_URI="http://www.linux.or.jp/JM/${MY_P}.tar.gz
-	http://dev.gentoo.org/~usata/distfiles/portage-${P}.tar.gz"
+	http://dev.gentoo.org/~usata/distfiles/${GENTOO_MAN_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc alpha ~mips ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
@@ -32,6 +33,11 @@ pkg_setup() {
 	fi
 }
 
+src_compile() {
+
+	return
+}
+
 src_install () {
 
 	for x in $(grep '^[^#].*' script/pkgs.list | cut -f1 | sort)
@@ -48,9 +54,9 @@ src_install () {
 	done
 
 	cd ${WORKDIR}/man
-	for y in man[1-9]/*.[1-9]; do
-		einfo install ${y##*/}:  /usr/share/man/ja/${y%%/*}/
-		insinto /usr/share/man/ja/${y%%/*}
+	for y in *.[1-9]; do
+		einfo install ${y}:  /usr/share/man/ja/man${y##*.}/
+		insinto /usr/share/man/ja/man${y##*.}
 		doins $y
 	done
 	cd -

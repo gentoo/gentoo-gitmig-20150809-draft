@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/manpages-ja
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/ChangeLog,v 1.17 2004/05/02 16:13:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/ChangeLog,v 1.18 2004/06/19 07:10:49 usata Exp $
+
+*manpages-ja-20040615 (19 Jun 2004)
+
+  19 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> manpages-ja-20040415.ebuild,
+  manpages-ja-20040615.ebuild:
+  Version bumped. Added dispatch-conf(1) and g-cpan.pl(1)
 
   03 May 2004; Mamoru KOMACHI <usata@gentoo.org> manpages-ja-20040315.ebuild,
   manpages-ja-20040415.ebuild:
