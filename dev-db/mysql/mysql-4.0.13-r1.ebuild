@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.13-r1.ebuild,v 1.1 2003/05/31 21:15:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.13-r1.ebuild,v 1.2 2003/06/11 07:19:52 woodchip Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -79,8 +79,8 @@ src_compile() {
 	use readline || myconf="${myconf} --with-readline"
 
 	use static \
-		&& myconf="${myconf} --with-mysqld-ldflags=-all-static --disable-shared"
-		myconf="${myconf} --enable-shared --enable-static"
+		&& myconf="${myconf} --with-mysqld-ldflags=-all-static --disable-shared" \
+		|| myconf="${myconf} --enable-shared --enable-static"
 
 	myconf="${myconf} `use_with tcpd libwrap`"
 	myconf="${myconf} `use_with innodb`"
@@ -88,6 +88,7 @@ src_compile() {
 	use ssl \
 		&& myconf="${myconf} --with-vio --with-openssl" \
 		|| myconf="${myconf} --without-openssl"
+
 	[ -n "${DEBUGBUILD}" ] \
 		&& myconf="${myconf} --with-debug" \
 		|| myconf="${myconf} --without-debug"
@@ -95,7 +96,7 @@ src_compile() {
 	#glibc-2.3.2_pre fix; bug #16496
 	export CFLAGS="${CFLAGS} -DHAVE_ERRNO_AS_DEFINE=1"
 
-	#bug fix for #15099, should make this api backward compatible, thanks dragon
+	#bug fix for #15099, should make this api backward compatible
 	export CFLAGS="${CFLAGS} -DUSE_OLD_FUNCTIONS"
 
 	#the compiler flags are as per their "official" spec ;)
@@ -141,6 +142,8 @@ src_install() {
 	rm -f ${D}/usr/share/mysql/binary-configure
 	rm -f ${D}/usr/share/mysql/make_binary_distribution
 	rm -f ${D}/usr/share/mysql/mysql-log-rotate
+	rm -f ${D}/usr/share/mysql/{post,pre}install
+	rm -f ${D}/usr/share/mysql/mi_test*
 	rm -f ${D}/usr/share/mysql/*.spec # Redhat gunk
 	rm -f ${D}/usr/share/mysql/*.plist # Apple gunk
 	rm -f ${D}/usr/share/mysql/my-*.cnf # Put them elsewhere
@@ -148,7 +151,7 @@ src_install() {
 	# All of these (ab)use Perl.
 	if ! use perl; then
 		rm -f ${D}/usr/bin/mysql_setpermission
-		rm -f ${D}/usr/share/mysql/sql-bench
+		rm -rf ${D}/usr/share/mysql/sql-bench
 	fi
 
 	dodoc README COPYING COPYING.LIB MIRRORS Docs/manual.*
