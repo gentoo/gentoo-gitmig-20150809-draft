@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.78.1.ebuild,v 1.1 2004/01/14 21:40:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.78.1.ebuild,v 1.2 2004/01/28 22:36:38 vapier Exp $
 
 inherit games flag-o-matic gcc eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 
 LICENSE="xmame"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~ia64 ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha hppa ~ia64 ~amd64"
 IUSE="sdl dga xv alsa esd opengl X 3dfx svga ggi arts joystick icc net"
 
 RDEPEND="sys-libs/zlib
@@ -36,6 +36,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-glx-fix.patch
+	epatch ${FILESDIR}/${PV}-osd_die.patch
 	sed -i 's:JOY_BUTTONS 16:JOY_BUTTONS 32:' src/unix/devices.h || die "setting joybuttons failed" #36818
 
 	#ln -s makefile.unix Makefile
