@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 55446c3dfe0a77ffd34d998774b1dfed ChangeLog 2428
 MD5 a202d56fd3622b28877ec98d87c14273 ace-5.3.ebuild 2036
 MD5 4621efd43833273d01025f6118adef0f ace-5.4.ebuild 2182
-MD5 fdddb2b156146c432e8ed071ac1a6d9d ChangeLog 2335
-MD5 9fc3600f4bf28cdd414e3add1cf96ca0 ace-5.4-r1.ebuild 2509
+MD5 22c3bc48a181192de9d16fb670357ee3 ace-5.4-r1.ebuild 2509
 MD5 b88f6bda8016adf15d1660b3f1e0312e files/digest-ace-5.3 60
 MD5 3e3d835be64fd3d448525a09dec99bba files/digest-ace-5.4 61
 MD5 3e3d835be64fd3d448525a09dec99bba files/digest-ace-5.4-r1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBmKtdKtJO8LeSoosRAl4rAKCNebrDUXWFhGi7JD5GmTkYtTaFbACglN61
-j8Ylkkua7WST+QIyHkiUfy4=
-=cEYC
------END PGP SIGNATURE-----
