@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r5.ebuild,v 1.5 2004/09/29 10:15:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r6.ebuild,v 1.1 2004/09/29 10:15:49 lanius Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -37,7 +37,6 @@ PROVIDE="virtual/ghostscript"
 
 src_unpack() {
 	unpack espgs-${PV}-source.tar.bz2
-	unpack ghostscript-fonts-std-8.11.tar.gz
 
 	cd ${S}
 
@@ -68,7 +67,7 @@ src_unpack() {
 	# search path fix
 	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/7.07/$(get_libdir):"\
 	Makefile.in || die "sed failed"
-	sed -i -e 's:$(gsdir)/fonts:/usr/share/fonts/ghostscript/:' \
+	sed -i -e 's:$(gsdir)/fonts:/usr/share/fonts/default/ghostscript/:' \
 	Makefile.in || die "sed failed"
 
 	# krgb support
