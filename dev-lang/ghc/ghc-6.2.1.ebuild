@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.1.ebuild,v 1.3 2004/05/12 13:42:18 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.1.ebuild,v 1.4 2004/05/13 15:03:56 kosmikus Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -74,7 +74,7 @@ src_unpack() {
 	# mangler doesn't accept its output; yes, the 6.2 version
 	# should do ...
 	cd ${S}
-	bzcat ${FILESDIR}/ghc-6.2.hardened-gcc.patch.bz2 | patch -p1
+	bzcat ${FILESDIR}/ghc-6.2.hardened.patch.bz2 | patch -p1
 }
 
 src_compile() {
@@ -104,8 +104,9 @@ src_compile() {
 
 	# unset SGML_CATALOG_FILES because documentation installation
 	# breaks otherwise ...
+	# (--enable-threaded-rts is no longer needed)
 	PATH="${GHCPATH}" SGML_CATALOG_FILES="" econf \
-		--enable-threaded-rts ${myconf} || die "econf failed"
+		${myconf} || die "econf failed"
 
 	# the build does not seem to work all that
 	# well with parallel make
