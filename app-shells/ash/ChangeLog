@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/ash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.11 2004/10/26 20:29:13 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.12 2004/11/09 16:19:19 ka0ttic Exp $
+
+  09 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> ash-1.6.ebuild:
+  Updated to use flag-o-matic and toolchain-funcs eclasses; also added static
+  USE flag support (bug #70369).
 
   26 Oct 2004; Tom Martin <slarti@gentoo.org> ash-1.6.ebuild:
   Marked ~amd64 for bug 69062.
