@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.54 2004/11/05 00:54:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.55 2004/11/05 01:24:17 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -156,35 +156,10 @@ pkg_setup() {
 	cflag_setup
 
 	# See bug #35468, circular pam-X11 dep
-	if use pam && best_version x11-base/${PN}; then
-		einfo "Previous ${PN} installation detected"
-		einfo "Enabling PAM features in ${PN}..."
-	else
-		einfo "Previous ${PN} installation NOT detected"
-		einfo "Disabling PAM features in ${PN}..."
-		einfo "You must remerge ${PN} to enable pam."
-		einfo "See http://bugs.gentoo.org/show_bug.cgi?id=35468."
-	fi
+	check_pam
 
-	if use static || use dlloader; then
-		# A static build disallows building the SDK.
-		# See config/xf86.rules.
-		# So does a DllModules YES (use dlloader) build (#50562)
-		# The latter is pending a potential patch.
-		if use sdk; then
-			die "The static and dlloader USE flags are currently incompatible with the sdk USE flag."
-		fi
-	fi
-
-	if use dmx && use doc; then
-		die "The dmx and doc USE flags are temporarily incompatible and result in a dead build."
-	fi
-
-	if use xv && ! use opengl; then
-		eerror "See http://bugs.gentoo.org/show_bug.cgi?id=67996"
-		eerror "The xv USE flag currently requires the opengl flag."
-		die "This is a known bug. Do not report it."
-	fi
+	# Look for invalid USE flag combinations
+	check_use_combos
 
 	# on amd64 we need /usr/lib64/X11/locale/lib to be a symlink
 	# created by the emul lib ebuild in order for adobe acrobat, staroffice,
@@ -298,84 +273,20 @@ src_install() {
 
 	unset MAKE_OPTS
 
-	einfo "Installing X.org X11..."
-	# gcc3 related fix.  Do this during install, so that our
-	# whole build will not be compiled without mmx instructions.
-	if [ "$(gcc-version)" != "2.95" ] && use x86; then
-		make install DESTDIR=${D} \
-		|| make CDEBUGFLAGS="${CDEBUGFLAGS} -mno-mmx" \
-			CXXDEBUGFLAGS="${CXXDEBUGFLAGS} -mno-mmx" \
-			install DESTDIR=${D} || die "install failed"
-	else
-		make install DESTDIR=${D} || die "install failed"
-	fi
-
-	if use sdk; then
-		einfo "Installing X.org X11 SDK..."
-		make install.sdk DESTDIR=${D} || die "sdk install failed"
-	fi
-
-	einfo "Installing man pages..."
-	make install.man DESTDIR=${D} || die "man page install failed"
-	einfo "Compressing man pages..."
-	prepman /usr
-
-	if use nls; then
-		cd ${S}/nls
-		make DESTDIR=${D} install || die "nls install failed"
-	fi
+	install_everything
 
 	backward_compat_setup
 
-	# Fix permissions on locale/common/*.so
-	local x
-	for x in ${D}/usr/$(get_libdir)/locale/$(get_libdir)/common/*.so*; do
-		if [ -f ${x} ]; then
-			fperms 0755 ${x/${D}}
-		fi
-	done
-
-	# Fix permissions on modules ...
-	for x in $(find ${D}/usr/$(get_libdir)/modules -name '*.o' -o -name '*.so'); do
-		if [ -f ${x} ]; then
-			fperms 0755 ${x/${D}}
-		fi
-	done
+	fix_permissions
 
 	# We zap our CFLAGS in the host.def file, as hardcoded CFLAGS can
 	# mess up other things that use xmkmf
-	ebegin "Fixing $(get_libdir)/config/host.def"
-		cp ${D}/usr/$(get_libdir)/config/host.def ${T}
-		awk '!/OptimizedCDebugFlags|OptimizedCplusplusDebugFlags|GccWarningOptions/ {print $0}' \
-			${T}/host.def > ${D}/usr/$(get_libdir)/config/host.def \
-			|| eerror "Munging host.def failed"
-		# theoretically, /usr/lib/X11/config is a possible candidate for
-		# config file management. If we find that people really worry about imake
-		# stuff, we may add it.  But for now, we leave the dir unprotected.
-	eend 0
+	zap_host_def_cflags
 
 	# EURO support
-	ebegin "Euro Support..."
-		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${D}/usr/$(get_libdir)" \
-		${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-8x14.bdf | \
-			gzip -9 > ${D}/usr/share/fonts/misc/Xlat9-8x14-lat9.pcf.gz
-		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${D}/usr/$(get_libdir)" \
-		${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-9x16.bdf | \
-			gzip -9 > ${D}/usr/share/fonts/misc/Xlat9-9x16-lat9.pcf.gz
-		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${D}/usr/$(get_libdir)" \
-		${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-10x20.bdf | \
-			gzip -9 > ${D}/usr/share/fonts/misc/Xlat9-10x20-lat9.pcf.gz
-	eend 0
+	add_euro_support
 
-	# Standard symlinks
-	dodir /usr/{bin,include,$(get_libdir)}
-	dosym ../X11R6/bin /usr/bin/X11
-	dosym ../X11R6/include/X11 /usr/include/X11
-	dosym ../X11R6/include/DPS /usr/include/DPS
-	dosym ../X11R6/include/GL /usr/include/GL
-	dosym ../../usr/$(get_libdir)/xkb /etc/X11/xkb
-	# Added one to reflect xkb move from /usr/X11R6/lib/X11/xkb to /usr/lib/xkb
-	dosym ../../lib/xkb /usr/X11R6/lib/X11/xkb
+	setup_standard_symlinks
 
 	if use opengl; then
 		fix_opengl_symlinks
@@ -397,29 +308,12 @@ src_install() {
 
 	compose_files_setup
 
-	# Yet more Mandrake
 	if use font-server; then
-		ebegin "Encoding files for xfsft font server..."
-			dodir /usr/share/fonts/encodings
-			cp -a ${WORKDIR}/usr/share/fonts/encodings/* \
-				${D}/usr/share/fonts/encodings
-
-			for x in ${D}/usr/share/fonts/encodings/{.,large}/*.enc; do
-				[ -f "${x}" ] && gzip -9 -f ${x} \
-					|| eerror "gzipping ${x} failed"
-			done
-		eend 0
+		encode_xfsft_files
 	fi
 
 	if use nls; then
-		ebegin "gemini-koi8 fonts..."
-			cd ${WORKDIR}/ukr
-			gunzip *.Z || eerror "gunzipping gemini-koi8 fonts failed"
-			gzip -9 *.pcf || eerror "gzipping gemini-koi8 fonts failed"
-			cd ${S}
-			cp -a ${WORKDIR}/ukr ${D}/usr/share/fonts \
-				|| eerror "copying gemini-koi8 fonts failed"
-		eend 0
+		setup_koi8_fonts
 	fi
 
 	etc_files_install
@@ -437,13 +331,7 @@ src_install() {
 
 	strip_execs
 
-	# Install TaD's gentoo cursors
-	insinto /usr/share/cursors/${PN}/gentoo/cursors
-	doins ${WORKDIR}/cursors/gentoo/cursors/*
-	insinto /usr/share/cursors/${PN}/gentoo-blue/cursors
-	doins ${WORKDIR}/cursors/gentoo-blue/cursors/*
-	insinto /usr/share/cursors/${PN}/gentoo-silver/cursors
-	doins ${WORKDIR}/cursors/gentoo-silver/cursors/*
+	install_extra_cursors
 
 	# Remove xterm app-defaults, since we don't install xterm
 #	rm ${D}/etc/X11/app-defaults/{UXTerm,XTerm,XTerm-color}
@@ -457,12 +345,7 @@ src_install() {
 	# If we want xprint, save the init script before deleting /etc/rc.d/
 	# Requested on #68316
 	if use xprint; then
-		# RH-style init script, we provide a wrapper
-		exeinto /usr/lib/misc
-		doexe ${D}/etc/rc.d/xprint
-		# Install the wrapper
-		exeinto /etc/init.d
-		doexe ${FILES_DIR}/xprint.init
+		setup_xprint_init
 	fi
 
 	# Remove the /etc/rc.d nonsense -- not everyone is RedHat
@@ -477,22 +360,12 @@ pkg_preinst() {
 	migrate_usr_x11r6_lib
 
 	update_config_files
+
 	for G_FONTDIR in ${G_FONTDIRS}; do
 		# Get rid of deprecated directories so our symlinks in the same location
 		# work -- users shouldn't be placing fonts here so that should be fine,
 		# they should be using ~/.fonts or /usr/share/fonts. <spyderous>
-		if [ -d ${ROOT}/usr/X11R6/$(get_libdir)/X11/fonts/${G_FONTDIR} ]; then
-			# local directory is for sysadmin-added fonts, so save it
-			# Note: if we did this in src_install(), we would bring fonts from
-			# the build machine to the install machine rather than just moving
-			# fonts on the install machine.
-			if [ "${G_FONTDIR}" = "local" ]; then
-				mv ${ROOT}/usr/X11R6/$(get_libdir)/X11/fonts/${G_FONTDIR} \
-					${ROOT}/usr/share/fonts/
-			else
-				rm -rf ${ROOT}/usr/X11R6/$(get_libdir)/X11/fonts/${G_FONTDIR}
-			fi
-		fi
+		remove_font_dirs
 
 		# clean out old fonts.* and encodings.dir files, as we
 		# will regenerate them
@@ -508,31 +381,9 @@ pkg_preinst() {
 		rm -rf ${ROOT}/usr/X11R6/$(get_libdir)/X11/fonts/truetype
 	fi
 
-	if [ -L ${ROOT}/etc/X11/app-defaults ]; then
-		rm -f ${ROOT}/etc/X11/app-defaults
-	fi
+	move_app_defaults_to_etc
 
-	if [ ! -L ${ROOT}/usr/$(get_libdir)/app-defaults ] \
-		&& [ -d ${ROOT}/usr/$(get_libdir)/app-defaults ]; then
-		if [ ! -d ${ROOT}/etc/X11/app-defaults ]; then
-			mkdir -p ${ROOT}/etc/X11/app-defaults
-		fi
-
-		mv -f ${ROOT}/usr/$(get_libdir)/app-defaults ${ROOT}/etc/X11
-	fi
-
-	if [ -L ${ROOT}/usr/$(get_libdir)/xkb ]; then
-		rm -f ${ROOT}/usr/$(get_libdir)/xkb
-	fi
-
-	if [ ! -L ${ROOT}/etc/X11/xkb ] \
-		&& [ -d ${ROOT}/etc/X11/xkb ]; then
-		if [ ! -d ${ROOT}/usr/$(get_libdir)/xkb ]; then
-			mkdir -p ${ROOT}/usr/$(get_libdir)
-		fi
-
-	    mv -f ${ROOT}/etc/X11/xkb ${ROOT}/usr/$(get_libdir)
-	fi
+	move_xkb_to_usr
 
 	# Run this even for USE=-opengl, to clean out old stuff from possible
 	# USE=opengl build
@@ -555,17 +406,7 @@ pkg_postinst() {
 		fi
 	fi
 
-	for x in $(find ${ROOT}/usr/$(get_libdir)/locale/ -mindepth 1 -type d); do
-		# Remove old compose files we might have created incorrectly
-		# CJK must not have that file (otherwise XIM don't works some times)
-		case $(basename ${x}) in
-			ja*|ko*|zh*)
-				if [ -r "${x}/Compose" ]; then
-					rm -f ${x}/Compose
-				fi
-				;;
-		esac
-	done
+	remove_old_compose_files
 
 	# These need to be owned by root and the correct permissions
 	# (bug #8281)
@@ -579,25 +420,7 @@ pkg_postinst() {
 	done
 
 	if use ppc64; then
-		#The problem about display driver is fixed.
-		cd ${ROOT}/usr/$(get_libdir)/modules/drivers
-		mv fbdev_drv.so fbdev_drv.so.orig
-		mv ati_drv.so ati_drv.so.orig
-		mv nv_drv.so nv_drv.so.orig
-
-		ld -shared -o ${ROOT}/usr/$(get_libdir)/modules/drivers/fbdev_drv.so ${ROOT}/usr/$(get_libdir)/modules/drivers/fbdev_drv.so.orig ${ROOT}/usr/$(get_libdir)/modules/linux/libfbdevhw.so ${ROOT}/usr/$(get_libdir)/modules/libshadow.so ${ROOT}/usr/$(get_libdir)/modules/libshadowfb.so ${ROOT}/usr/$(get_libdir)/modules/libfb.so
-		ld -rpath /usr/$(get_libdir)/modules/drivers -shared -o ati_drv.so ati_drv.so.orig radeon_drv.so atimisc_drv.so fbdev_drv.so r128_drv.so vga_drv.so
-		ld -rpath /usr/$(get_libdir)/modules/drivers -shared -o nv_drv.so nv_drv.so.orig fbdev_drv.so vga_drv.so
-
-		if use opengl; then
-			#The problem about DRI module and GLX module is fixed.
-			cd ${ROOT}/usr/$(get_libdir)/modules/extensions
-			mv libglx.so libglx.so.orig
-			mv libdri.so libdri.so.orig
-
-			ld -rpath /usr/$(get_libdir)/modules/extensions -shared -o libglx.so libglx.so.orig libGLcore.so
-			ld -rpath /usr/$(get_libdir)/modules/extensions -shared -o libdri.so libdri.so.orig libglx.so
-		fi
+		relink_dlloader_files
 	fi
 
 	print_info
@@ -606,15 +429,7 @@ pkg_postinst() {
 pkg_prerm() {
 
 	if use ppc64; then
-		cd ${ROOT}/usr/$(get_libdir)/modules/drivers
-		mv fbdev_drv.so.orig fbdev_drv.so
-		mv ati_drv.so.orig ati_drv.so
-		mv nv_drv.so.orig nv_drv.so
-		cd ${ROOT}/usr/$(get_libdir)/modules/extensions
-		if use opengl; then
-			mv libglx.so.orig libglx.so
-			mv libdri.so.orig libdri.so
-		fi
+		restore_original_dlloader_files
 	fi
 }
 
@@ -683,6 +498,40 @@ cflag_setup() {
 	#
 	# <azarah@gentoo.org> (13 Oct 2002)
 	strip-flags
+}
+
+check_pam() {
+	if use pam && best_version x11-base/${PN}; then
+		einfo "Previous ${PN} installation detected"
+		einfo "Enabling PAM features in ${PN}..."
+	else
+		einfo "Previous ${PN} installation NOT detected"
+		einfo "Disabling PAM features in ${PN}..."
+		einfo "You must remerge ${PN} to enable pam."
+		einfo "See http://bugs.gentoo.org/show_bug.cgi?id=35468."
+	fi
+}
+
+check_use_combos() {
+	if use static || use dlloader; then
+		# A static build disallows building the SDK.
+		# See config/xf86.rules.
+		# So does a DllModules YES (use dlloader) build (#50562)
+		# The latter is pending a potential patch.
+		if use sdk; then
+			die "The static and dlloader USE flags are currently incompatible with the sdk USE flag."
+		fi
+	fi
+
+	if use dmx && use doc; then
+		die "The dmx and doc USE flags are temporarily incompatible and result in a dead build."
+	fi
+
+	if use xv && ! use opengl; then
+		eerror "See http://bugs.gentoo.org/show_bug.cgi?id=67996"
+		eerror "The xv USE flag currently requires the opengl flag."
+		die "This is a known bug. Do not report it."
+	fi
 }
 
 ################
@@ -1043,6 +892,35 @@ patch_setup() {
 # src_install() #
 #################
 
+install_everything() {
+	einfo "Installing X.org X11..."
+	# gcc3 related fix.  Do this during install, so that our
+	# whole build will not be compiled without mmx instructions.
+	if [ "$(gcc-version)" != "2.95" ] && use x86; then
+		make install DESTDIR=${D} \
+		|| make CDEBUGFLAGS="${CDEBUGFLAGS} -mno-mmx" \
+			CXXDEBUGFLAGS="${CXXDEBUGFLAGS} -mno-mmx" \
+			install DESTDIR=${D} || die "install failed"
+	else
+		make install DESTDIR=${D} || die "install failed"
+	fi
+
+	if use sdk; then
+		einfo "Installing X.org X11 SDK..."
+		make install.sdk DESTDIR=${D} || die "sdk install failed"
+	fi
+
+	einfo "Installing man pages..."
+	make install.man DESTDIR=${D} || die "man page install failed"
+	einfo "Compressing man pages..."
+	prepman /usr
+
+	if use nls; then
+		cd ${S}/nls
+		make DESTDIR=${D} install || die "nls install failed"
+	fi
+}
+
 backward_compat_setup() {
 	# Backwards compatibility for /usr/share move
 	G_FONTDIRS="CID Speedo TTF Type1 encodings local misc util"
@@ -1060,6 +938,61 @@ backward_compat_setup() {
 	dosym ../lib /usr/X11R6/lib
 	dosym ../../../share/doc/${PF} /usr/X11R6/$(get_libdir)/X11/doc
 #	dosym ../share/bin /usr/X11R6/bin
+}
+
+fix_permissions() {
+	# Fix permissions on locale/common/*.so
+	local x
+	for x in ${D}/usr/$(get_libdir)/locale/$(get_libdir)/common/*.so*; do
+		if [ -f ${x} ]; then
+			fperms 0755 ${x/${D}}
+		fi
+	done
+
+	# Fix permissions on modules ...
+	for x in $(find ${D}/usr/$(get_libdir)/modules -name '*.o' -o -name '*.so'); do
+		if [ -f ${x} ]; then
+			fperms 0755 ${x/${D}}
+		fi
+	done
+}
+
+zap_host_def_cflags() {
+	ebegin "Fixing $(get_libdir)/config/host.def"
+		cp ${D}/usr/$(get_libdir)/config/host.def ${T}
+		awk '!/OptimizedCDebugFlags|OptimizedCplusplusDebugFlags|GccWarningOptions/ {print $0}' \
+			${T}/host.def > ${D}/usr/$(get_libdir)/config/host.def \
+			|| eerror "Munging host.def failed"
+		# theoretically, /usr/lib/X11/config is a possible candidate for
+		# config file management. If we find that people really worry about imake
+		# stuff, we may add it.  But for now, we leave the dir unprotected.
+	eend 0
+}
+
+add_euro_support() {
+	ebegin "Euro Support..."
+		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${D}/usr/$(get_libdir)" \
+		${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-8x14.bdf | \
+			gzip -9 > ${D}/usr/share/fonts/misc/Xlat9-8x14-lat9.pcf.gz
+		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${D}/usr/$(get_libdir)" \
+		${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-9x16.bdf | \
+			gzip -9 > ${D}/usr/share/fonts/misc/Xlat9-9x16-lat9.pcf.gz
+		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${D}/usr/$(get_libdir)" \
+		${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-10x20.bdf | \
+			gzip -9 > ${D}/usr/share/fonts/misc/Xlat9-10x20-lat9.pcf.gz
+	eend 0
+}
+
+setup_standard_symlinks() {
+	# Standard symlinks
+	dodir /usr/{bin,include,$(get_libdir)}
+	dosym ../X11R6/bin /usr/bin/X11
+	dosym ../X11R6/include/X11 /usr/include/X11
+	dosym ../X11R6/include/DPS /usr/include/DPS
+	dosym ../X11R6/include/GL /usr/include/GL
+	dosym ../../usr/$(get_libdir)/xkb /etc/X11/xkb
+	# Added one to reflect xkb move from /usr/X11R6/lib/X11/xkb to /usr/lib/xkb
+	dosym ../../lib/xkb /usr/X11R6/lib/X11/xkb
 }
 
 compose_files_setup() {
@@ -1092,6 +1025,31 @@ compose_files_setup() {
 			-e "s/\(<dead_acute> <space>\).*$/\1 : \"'\" apostrophe/" ${i} \
 			|| eerror "sed ${i} failed"
 	done
+}
+
+encode_xfsft_files() {
+	# Yet more Mandrake
+	ebegin "Encoding files for xfsft font server..."
+		dodir /usr/share/fonts/encodings
+		cp -a ${WORKDIR}/usr/share/fonts/encodings/* \
+			${D}/usr/share/fonts/encodings
+
+		for x in ${D}/usr/share/fonts/encodings/{.,large}/*.enc; do
+			[ -f "${x}" ] && gzip -9 -f ${x} \
+				|| eerror "gzipping ${x} failed"
+		done
+	eend 0
+}
+
+setup_koi8_fonts() {
+	ebegin "gemini-koi8 fonts..."
+		cd ${WORKDIR}/ukr
+		gunzip *.Z || eerror "gunzipping gemini-koi8 fonts failed"
+		gzip -9 *.pcf || eerror "gzipping gemini-koi8 fonts failed"
+		cd ${S}
+		cp -a ${WORKDIR}/ukr ${D}/usr/share/fonts \
+			|| eerror "copying gemini-koi8 fonts failed"
+	eend 0
 }
 
 etc_files_install() {
@@ -1204,6 +1162,25 @@ strip_execs() {
 			fi
 		done
 	fi
+}
+
+install_extra_cursors() {
+	# Install TaD's gentoo cursors
+	insinto /usr/share/cursors/${PN}/gentoo/cursors
+	doins ${WORKDIR}/cursors/gentoo/cursors/*
+	insinto /usr/share/cursors/${PN}/gentoo-blue/cursors
+	doins ${WORKDIR}/cursors/gentoo-blue/cursors/*
+	insinto /usr/share/cursors/${PN}/gentoo-silver/cursors
+	doins ${WORKDIR}/cursors/gentoo-silver/cursors/*
+}
+
+setup_xprint_init() {
+	# RH-style init script, we provide a wrapper
+	exeinto /usr/lib/misc
+	doexe ${D}/etc/rc.d/xprint
+	# Install the wrapper
+	exeinto /etc/init.d
+	doexe ${FILES_DIR}/xprint.init
 }
 
 setup_config_files() {
@@ -1325,6 +1302,51 @@ update_config_files() {
 				fi
 			fi
 		done
+	fi
+}
+
+remove_font_dirs() {
+		if [ -d ${ROOT}/usr/X11R6/$(get_libdir)/X11/fonts/${G_FONTDIR} ]; then
+			# local directory is for sysadmin-added fonts, so save it
+			# Note: if we did this in src_install(), we would bring fonts from
+			# the build machine to the install machine rather than just moving
+			# fonts on the install machine.
+			if [ "${G_FONTDIR}" = "local" ]; then
+				mv ${ROOT}/usr/X11R6/$(get_libdir)/X11/fonts/${G_FONTDIR} \
+					${ROOT}/usr/share/fonts/
+			else
+				rm -rf ${ROOT}/usr/X11R6/$(get_libdir)/X11/fonts/${G_FONTDIR}
+			fi
+		fi
+}
+
+move_app_defaults_to_etc() {
+	if [ -L ${ROOT}/etc/X11/app-defaults ]; then
+		rm -f ${ROOT}/etc/X11/app-defaults
+	fi
+
+	if [ ! -L ${ROOT}/usr/$(get_libdir)/app-defaults ] \
+		&& [ -d ${ROOT}/usr/$(get_libdir)/app-defaults ]; then
+		if [ ! -d ${ROOT}/etc/X11/app-defaults ]; then
+			mkdir -p ${ROOT}/etc/X11/app-defaults
+		fi
+
+		mv -f ${ROOT}/usr/$(get_libdir)/app-defaults ${ROOT}/etc/X11
+	fi
+}
+
+move_xkb_to_usr() {
+	if [ -L ${ROOT}/usr/$(get_libdir)/xkb ]; then
+		rm -f ${ROOT}/usr/$(get_libdir)/xkb
+	fi
+
+	if [ ! -L ${ROOT}/etc/X11/xkb ] \
+		&& [ -d ${ROOT}/etc/X11/xkb ]; then
+		if [ ! -d ${ROOT}/usr/$(get_libdir)/xkb ]; then
+			mkdir -p ${ROOT}/usr/$(get_libdir)
+		fi
+
+	    mv -f ${ROOT}/etc/X11/xkb ${ROOT}/usr/$(get_libdir)
 	fi
 }
 
@@ -1461,6 +1483,54 @@ font_setup() {
 	fi
 }
 
+switch_opengl_implem() {
+		# Switch to the xorg implementation.
+		# Use new opengl-update that will not reset user selected
+		# OpenGL interface ...
+		echo
+		if [ "$(${ROOT}/usr/sbin/opengl-update --get-implementation)" = "xfree" ]; then
+			${ROOT}/usr/sbin/opengl-update ${PN}
+		else
+			${ROOT}/usr/sbin/opengl-update --use-old ${PN}
+		fi
+}
+
+remove_old_compose_files() {
+	for x in $(find ${ROOT}/usr/$(get_libdir)/locale/ -mindepth 1 -type d); do
+		# Remove old compose files we might have created incorrectly
+		# CJK must not have that file (otherwise XIM don't works some times)
+		case $(basename ${x}) in
+			ja*|ko*|zh*)
+				if [ -r "${x}/Compose" ]; then
+					rm -f ${x}/Compose
+				fi
+				;;
+		esac
+	done
+}
+
+relink_dlloader_files() {
+	#The problem about display driver is fixed.
+	cd ${ROOT}/usr/$(get_libdir)/modules/drivers
+	mv fbdev_drv.so fbdev_drv.so.orig
+	mv ati_drv.so ati_drv.so.orig
+	mv nv_drv.so nv_drv.so.orig
+
+	ld -shared -o ${ROOT}/usr/$(get_libdir)/modules/drivers/fbdev_drv.so ${ROOT}/usr/$(get_libdir)/modules/drivers/fbdev_drv.so.orig ${ROOT}/usr/$(get_libdir)/modules/linux/libfbdevhw.so ${ROOT}/usr/$(get_libdir)/modules/libshadow.so ${ROOT}/usr/$(get_libdir)/modules/libshadowfb.so ${ROOT}/usr/$(get_libdir)/modules/libfb.so
+	ld -rpath /usr/$(get_libdir)/modules/drivers -shared -o ati_drv.so ati_drv.so.orig radeon_drv.so atimisc_drv.so fbdev_drv.so r128_drv.so vga_drv.so
+	ld -rpath /usr/$(get_libdir)/modules/drivers -shared -o nv_drv.so nv_drv.so.orig fbdev_drv.so vga_drv.so
+
+	if use opengl; then
+		#The problem about DRI module and GLX module is fixed.
+		cd ${ROOT}/usr/$(get_libdir)/modules/extensions
+		mv libglx.so libglx.so.orig
+		mv libdri.so libdri.so.orig
+
+		ld -rpath /usr/$(get_libdir)/modules/extensions -shared -o libglx.so libglx.so.orig libGLcore.so
+		ld -rpath /usr/$(get_libdir)/modules/extensions -shared -o libdri.so libdri.so.orig libglx.so
+	fi
+}
+
 print_info() {
 	echo
 	einfo "Please note that the xcursors are in /usr/share/cursors/${PN}"
@@ -1494,15 +1564,18 @@ print_info() {
 	epause 10
 }
 
-switch_opengl_implem() {
-		# Switch to the xorg implementation.
-		# Use new opengl-update that will not reset user selected
-		# OpenGL interface ...
-		echo
-		if [ "$(${ROOT}/usr/sbin/opengl-update --get-implementation)" = "xfree" ]; then
-			${ROOT}/usr/sbin/opengl-update ${PN}
-		else
-			${ROOT}/usr/sbin/opengl-update --use-old ${PN}
+###############
+# pkg_prerm() #
+###############
+
+restore_original_dlloader_files() {
+		cd ${ROOT}/usr/$(get_libdir)/modules/drivers
+		mv fbdev_drv.so.orig fbdev_drv.so
+		mv ati_drv.so.orig ati_drv.so
+		mv nv_drv.so.orig nv_drv.so
+		cd ${ROOT}/usr/$(get_libdir)/modules/extensions
+		if use opengl; then
+			mv libglx.so.orig libglx.so
+			mv libdri.so.orig libdri.so
 		fi
 }
-
