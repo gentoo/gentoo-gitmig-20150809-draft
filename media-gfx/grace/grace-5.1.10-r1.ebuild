@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10-r1.ebuild,v 1.2 2003/10/26 20:22:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10-r1.ebuild,v 1.3 2003/10/30 08:28:08 usata Exp $
 
 inherit eutils
 
@@ -20,14 +20,15 @@ DEPEND="virtual/x11
 	>=media-libs/tiff-3.5
 	pdflib? ( >=media-libs/pdflib-3.0.2 )
 	>=sys-apps/sed-4
-	|| ( net-www/mozilla
-		net-www/mozilla-firebird
-		net-www/mozilla-firebird-bin
-		net-www/mozilla-firebird-cvs
+	|| ( net-www/dillo
 		net-www/opera
+		net-www/mozilla-firebird-bin
+		net-www/mozilla-firebird
+		net-www/mozilla-firebird-cvs
+		net-www/mozilla
 		kde-base/kdebase
 		net-www/galeon
-		net-www/dillo
+		net-www/epiphany
 		net-www/netscape-communicator
 		net-www/netscape-navigator )"
 
@@ -45,20 +46,22 @@ src_compile() {
 
 	local gracehelpviewer
 
-	if has_version 'net-www/mozilla' ; then
-		gracehelpviewer="mozilla"
+	if has_version 'net-www/dillo' ; then
+		gracehelpviewer="dillo"
+	elif has_version 'net-www/opera' ; then
+		gracehelpviewer="opera"
 	elif has_version 'net-www/mozilla-firebird' \
 		|| has_version 'net-www/mozilla-firebird-bin' \
 		|| has_version 'net-www/mozilla-firebird-cvs' ; then
 		gracehelpviewer="MozillaFirebird"
-	elif has_version 'net-www/opera' ; then
-		gracehelpviewer="opera"
+	elif has_version 'net-www/mozilla' ; then
+		gracehelpviewer="mozilla"
 	elif has_version 'kde-base/kdebase' ; then
 		gracehelpviewer="konqueror"
 	elif has_version 'net-www/galeon' ; then
 		gracehelpviewer="galeon"
-	elif has_version 'net-www/dillo' ; then
-		gracehelpviewer="dillo"
+	elif has_version 'net-www/epiphany' ; then
+		gracehelpviewer="epiphany"
 	else
 		gracehelpviewer="netscape"
 	fi
