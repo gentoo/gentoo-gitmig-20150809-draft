@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/pgaccess-0.98.8.ebuild,v 1.8 2004/06/24 21:58:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/pgaccess-0.98.8.ebuild,v 1.9 2004/06/29 17:12:31 agriffis Exp $
 
 DESCRIPTION="a database frontend for postgresql"
 HOMEPAGE="http://www.pgaccess.org/"
@@ -32,4 +32,3 @@ pkg_postinst() {
 	einfo "\"Error: Shared library file: '/usr/lib/libpgtcl.so' does not exist.\","
 	einfo "you need to emerge postgresql with USE='tcltk' again"
 }
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pgaccess
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.6 2004/06/24 21:58:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.7 2004/06/29 17:12:31 agriffis Exp $
+
+  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> pgaccess-0.98.8.ebuild:
+  trim trailing whitespace
 
 *pgaccess-0.98.8 (18 Mar 2003)
 
