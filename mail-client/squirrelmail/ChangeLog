@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.11 2004/07/17 22:08:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.12 2004/11/11 08:31:39 eradicator Exp $
+
+*squirrelmail-1.4.3a-r2 (11 Nov 2004)
+
+  11 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/squirrelmail-1.4.3a-xss.patch, -squirrelmail-1.4.3_rc1-r1.ebuild,
+  -squirrelmail-1.4.3_rc1.ebuild, -squirrelmail-1.4.3a-r1.ebuild,
+  +squirrelmail-1.4.3a-r2.ebuild:
+  Security fix for bug #70739.
 
   14 Jun 2004; Luca Barbato <lu_zero@gentoo.org> squirrelmail-1.4.3a.ebuild:
   Marked ppc
