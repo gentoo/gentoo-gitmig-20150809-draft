@@ -22,3 +22,8 @@ move dev-util/snavigator dev-util/sourcenav
 move sys-apps/ami x11-misc/ami
 move app-text/pktrace app-text/mftrace
 move dev-util/david dev-util/diasce
+move media-video/xine-d4d media-plugins/xine-d4d
+move media-video/xine-d5d media-plugins/xine-d5d
+move media-video/xine-dmd media-plugins/xine-dmd
+move media-video/xine-dvdnav media-plugins/xine-dvdnav
+
