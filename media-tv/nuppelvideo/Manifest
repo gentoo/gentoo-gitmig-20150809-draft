@@ -1,4 +1,5 @@
-MD5 5cda4aec9bffb059dd08214384cdf56e nuppelvideo-0.52a.ebuild 1046
-MD5 29cb3a75a98cdc0f7755c9c9efd4a740 ChangeLog 442
+MD5 73a5d4b113d866260a8ad9000be6f021 nuppelvideo-0.52a.ebuild 1209
+MD5 b363c29ecbd4f703b99dd792ac4dd076 ChangeLog 595
 MD5 9d5040e73ac555ecb27ff66ed7fb4b5a metadata.xml 313
 MD5 7d72be4859ac49d993cb6ebc1ec316c2 files/digest-nuppelvideo-0.52a 69
+MD5 9141a4e67d3c8aeaa94863bf0e39b162 files/gcc3.4.patch 1756

@@ -1,0 +1,93 @@
+diff -ru ../NuppelVideo-0.52a.orig/./RTjpegN.c ./RTjpegN.c
+--- ../NuppelVideo-0.52a.orig/./RTjpegN.c	2001-07-02 23:55:42.000000000 +0200
++++ ./RTjpegN.c	2005-01-14 18:15:50.042499084 +0100
+@@ -136,7 +136,8 @@
+  register __s16 ZZvalue;
+  register unsigned char bitten;
+  register unsigned char bitoff;
+-
++ register __u8 *ustrm;
++ ustrm = (__u8 *)strm;
+ #ifdef SHOWBLOCK
+ 
+   int ii;
+@@ -153,7 +154,7 @@
+ // return 2;
+ 
+  // first byte allways written
+- (__u8)strm[0]=
++ ustrm[0]=
+       (__u8)(data[RTjpeg_ZZ[0]]>254) ? 254:((data[RTjpeg_ZZ[0]]<0)?0:data[RTjpeg_ZZ[0]]);
+ 
+ 
+@@ -163,7 +164,7 @@
+  bitten = ((unsigned char)ci) << 2;
+ 
+  if (ci==0) {
+-   (__u8)strm[1]= bitten; 
++   ustrm[1]= bitten; 
+    co = 2;
+    return (int)co;
+  }
+@@ -192,7 +193,7 @@
+    }
+ 
+    if( bitoff == 0 ) {
+-      (__u8)strm[co]= bitten; 
++      ustrm[co]= bitten; 
+       bitten = 0;
+       bitoff = 8; 
+       co++;
+@@ -204,7 +205,7 @@
+  /* ci must be 0 */
+  if(bitoff != 6) {
+ 
+-      (__u8)strm[co]= bitten; 
++      ustrm[co]= bitten; 
+       co++;
+      
+  }
+@@ -221,7 +222,7 @@
+    break;
+  case 2:
+  case 0:
+-   (__u8)strm[co]= bitten; 
++   ustrm[co]= bitten; 
+    bitoff = 4;
+    co++;
+    bitten = 0; // clear half nibble values in bitten
+@@ -242,7 +243,7 @@
+    bitten |= (ZZvalue&0xf)<<bitoff;
+ 
+    if( bitoff == 0 ) {
+-      (__u8)strm[co]= bitten; 
++      ustrm[co]= bitten; 
+       bitten = 0;
+       bitoff = 8;
+       co++;
+@@ -252,14 +253,14 @@
+  
+  /* ci must be 0 */
+  if( bitoff == 0 ) {
+-    (__u8)strm[co]= bitten; 
++    ustrm[co]= bitten; 
+     co++;
+  }  
+  goto BAUCHWEH;
+ 
+ HIRNWEH:
+ 
+- (__u8)strm[co]= bitten; 
++ ustrm[co]= bitten; 
+  co++;
+   
+ 
+@@ -352,7 +353,7 @@
+     data[i]= 0;
+     break;
+   default: 
+-	
++	;	
+   } 
+ 
+   if( bitoff == 0 ) {
