@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.148 2004/03/26 08:05:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.149 2004/03/28 22:48:12 stuart Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -66,6 +66,7 @@ gdbm - Adds support for sys-libs/gdbm (GNU database libraries)
 ggi - Adds support for media-libs/libggi (non-X video api/drivers)
 gif - Adds GIF image support
 ginac - Adds app-sci/ginac (symbolic math) support
+gmp - Adds support for dev-libs/gmp (GNU MP library)
 gnome - Adds GNOME support
 gphoto2 - Adds digital camera support
 gpm - Adds support for sys-libs/gpm (Console-based mouse driver)
