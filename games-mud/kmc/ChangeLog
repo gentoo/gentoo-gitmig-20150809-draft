@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/kmc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmc/ChangeLog,v 1.7 2004/12/21 12:00:22 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmc/ChangeLog,v 1.8 2004/12/31 17:01:39 weeve Exp $
+
+  31 Dec 2004; Jason Wever <weeve@gentoo.org> kmc-0.9.ebuild:
+  Added ~sparc keyword.
 
   21 Dec 2004; Dylan Carlson <absinthe@gentoo.org> kmc-0.9.ebuild:
   keywords ~amd64.
