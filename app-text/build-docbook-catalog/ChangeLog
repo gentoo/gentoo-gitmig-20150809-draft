@@ -1,6 +1,10 @@
 # ChangeLog for app-text/build-docbook-catalog
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.6 2004/08/19 20:49:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.7 2004/08/22 07:39:52 kumba Exp $
+
+  22 Aug 2004; Joshua Kinard <kumba@gentoo.org>
+  build-docbook-catalog-1.2.ebuild:
+  Marked stable on mips.
 
   19 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   build-docbook-catalog-1.2.ebuild:
