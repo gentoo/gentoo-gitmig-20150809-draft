@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.17-r2.ebuild,v 1.4 2002/08/02 13:47:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.17-r2.ebuild,v 1.5 2002/08/06 03:54:19 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XML version 1 parser for Gnome"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="1"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 RDEPEND=">=sys-libs/ncurses-5.2"
 
