@@ -1,7 +1,17 @@
-MD5 ec1ef4d506caf0dd72831f13ea5ff063 anacron-2.3.ebuild 1394
-MD5 283775715b01b5e421b0458dada304b8 ChangeLog 1041
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 effc2f21c41f22b63df883da17c2c7dd ChangeLog 1155
+MD5 806d952e69d31d8db4355c1cc4081ab4 anacron-2.3.ebuild 1373
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 c213363ea13b5d95fc7f011159b7939c files/anacron-2.3-compile-fix-from-debian.patch 315
 MD5 8b51f14eb766cbba91b4d3565510370b files/anacron.rc6 373
 MD5 950b522f251d3fadc0628372d1f49d68 files/anacrontab 304
-MD5 c213363ea13b5d95fc7f011159b7939c files/anacron-2.3-compile-fix-from-debian.patch 315
 MD5 869189865e4047f742c2d0c7fb853951 files/digest-anacron-2.3 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBKqtnI1lqEGTUzyQRAslEAJ4qVl7uN00E2Kp+bFKYLGmtkYyBoQCeN9n/
+qvoR/MvNnwtLu0/UjsIjB/w=
+=BVSK
+-----END PGP SIGNATURE-----
