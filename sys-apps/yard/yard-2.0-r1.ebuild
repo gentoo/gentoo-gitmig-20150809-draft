@@ -1,13 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/yard-2.0-r1.ebuild,v 1.3 2001/04/09 05:28:18 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/yard-2.0-r1.ebuild,v 1.4 2001/05/09 02:56:13 achim Exp $
 
-A=${P}.tar.gz
+A="${P}.tar.gz diet-utils.tar.bz2"
 S=${WORKDIR}/${P}
 DESCRIPTION="Yard is a suite of Perl scripts for creating rescue disks (also
 called bootdisks) for Linux."
-SRC_URI="http://www.croftj.net/~fawcett/yard/${A}"
+SRC_URI="http://www.croftj.net/~fawcett/yard/${P}.tar.gz"
 HOMEPAGE="http://www.croftj.net/~fawcett/yard/"
 
 src_unpack() {
@@ -20,6 +20,9 @@ src_unpack() {
     patch -p0 < ${FILESDIR}/${P}-extras-Makefile.in-gentoo.diff
 }
 
+src_unpack() {
+    unpack ${P}.tar.gz
+}
 src_compile() {
 
     cd ${S}
@@ -73,6 +76,12 @@ src_install () {
     do
       MAKEDEV $i
     done
+
+    # diet-utils
+    cd ..
+    mkdir bin
+    cd bin
+    unpack diet-utils.tar.bz2
 
 
 
