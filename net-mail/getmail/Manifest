@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 c25263504a2a5d454f9ce6ebc0ea355b ChangeLog 7705
 MD5 9110745bc603bae97aa52bbe6803a8bc getmail-4.2.5-r1.ebuild 1574
-MD5 a85d6b5ccc36fd2c2d7dd59067675488 ChangeLog 7607
-MD5 53e888d9078fe21bb7612c93f503dac6 getmail-4.2.5.ebuild 1457
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 d936f63beeea1b70901d5f248b598471 getmail-4.3.2.ebuild 1564
 MD5 a1f7c1993dac5138f8ceec3fbbeac2d1 getmail-4.3.1-r1.ebuild 1567
-MD5 0db14d6ef935f5869b86b7eb91053398 getmail-4.3.0.ebuild 1460
+MD5 d936f63beeea1b70901d5f248b598471 getmail-4.3.2.ebuild 1564
+MD5 53e888d9078fe21bb7612c93f503dac6 getmail-4.2.5.ebuild 1457
 MD5 64f980c00906ae660682fe04ee5a112b getmail-4.2.6.ebuild 1460
-MD5 cc9c2ca55fc8d3bdfe819b033398b035 getmail-4.3.1.ebuild 1460
-MD5 a76ebc67214c74977c6a6191b3c4362a files/python2.4-fix.patch 3119
-MD5 7e6a2b6fbe17c42e8eb34c370f432661 files/digest-getmail-4.3.1-r1 65
+MD5 0db14d6ef935f5869b86b7eb91053398 getmail-4.3.0.ebuild 1460
+MD5 d270c361bfb5180314495e4f7f5a0483 getmail-4.3.1.ebuild 1462
 MD5 94d0d625767272d78892b2cde0e7b41d files/digest-getmail-4.2.5-r1 65
-MD5 ff8ffca20907f92c1560cd57fc63bcce files/digest-getmail-4.2.6 65
+MD5 7e6a2b6fbe17c42e8eb34c370f432661 files/digest-getmail-4.3.1-r1 65
 MD5 96d91afcf030231acb461620cd8a638f files/digest-getmail-4.3.2 65
+MD5 94d0d625767272d78892b2cde0e7b41d files/digest-getmail-4.2.5 65
+MD5 ff8ffca20907f92c1560cd57fc63bcce files/digest-getmail-4.2.6 65
 MD5 479383244ba9dcf857062301ec83d5d8 files/digest-getmail-4.3.0 65
 MD5 7e6a2b6fbe17c42e8eb34c370f432661 files/digest-getmail-4.3.1 65
-MD5 94d0d625767272d78892b2cde0e7b41d files/digest-getmail-4.2.5 65
+MD5 a76ebc67214c74977c6a6191b3c4362a files/python2.4-fix.patch 3119
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCCcjYQlM6RnzZP+IRAskRAJ9w5bv5S8P23t8PBeOyOWVOIY7IYACgj0B2
-CJTiyD27tKVFreT/Pb/hFdM=
-=J8YP
+iD8DBQFCENrcKRy60XGEcJIRAnkBAJoD/y9+lZrF38W4VFMVVmTPFhmTygCgs+IV
+uemGTPa9h7ocUrkRF7kB0Es=
+=eM5F
 -----END PGP SIGNATURE-----
