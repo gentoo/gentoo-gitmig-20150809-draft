@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/wmail-2.0.ebuild,v 1.4 2003/10/16 16:10:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/wmail-2.0.ebuild,v 1.5 2004/03/13 20:52:37 dholm Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.minet.uni-jena.de/~topical/sveng/wmail.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ~ppc"
 
 DEPEND="virtual/glibc
 	virtual/x11
