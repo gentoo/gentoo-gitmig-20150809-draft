@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/LeakTracer
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/LeakTracer/ChangeLog,v 1.1 2003/09/06 10:26:39 sergey Exp $
+
+*LeakTracer-2.3 (06 Sep 2003)
+
+  06 Sep 2003; Sergey Kuleshov <svyatogor@gentoo.org> LeakTracer-2.3.ebuild,
+  files/LeakCheck-gentoo.patch:
+  Initial commit, thus closing bug #13761. Thanks to Michael Labhard
+  <m.labhard@comcast.net> for the ebuild.
+
