@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gkrellm-mailwatch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-mailwatch/ChangeLog,v 1.8 2003/02/19 22:15:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-mailwatch/ChangeLog,v 1.9 2003/02/19 22:20:54 mholzer Exp $
+
+*gkrellm-mailwatch-2.2.2 (19 Feb 2003)
+
+  19 Feb 2003; Martin Holzer <mholzer@gentoo.org> gkrellm-mailwatch-2.2.2.ebuild  files/digest-gkrellm-mailwatch-2.2.2 ChangeLog :
+  Version bumped.
 
 *gkrellm-mailwatch-2.1 (18 Jan 2003)
 
