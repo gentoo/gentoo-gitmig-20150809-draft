@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.112 2003/07/20 18:42:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.113 2003/07/23 23:13:41 frogger Exp $
+
+*gcc-3.2.3-r2 (23 Jul 2003)
+
+  23 Jul 2003; Matthew Rickard <frogger@gentoo.org> gcc-3.2.3-r2.ebuild:
+  New revision includes updated ProPolice protector-10
+  patch.  This fixes the following issues:
+    - Regex functions cause m4 to seg fault
+    - Doesn't protect the 1st function argument when
+      CFLAGS="-O0".
 
 *gcc-3.3-r1 (20 Jul 2003)
 
