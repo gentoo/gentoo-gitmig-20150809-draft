@@ -1,9 +1,12 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.8 2003/04/07 00:57:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.9 2003/09/12 03:46:45 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*lzo-1.08-r1 (11 Sep 2003)
+
+  11 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to fix asm support #28359.
+
 *lzo-1.08 (21 Sep 2002)
 
   07 Apr 2003; Guy Martin <gmsoft@gentoo.org> lzo-1.08.ebuild :
@@ -20,4 +23,3 @@
 
   13 Apr 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog, lzo-1.07.ebuild New
   lzo ebuild courtesy of Bryce Allen (ballen at mum.edu)
-  
