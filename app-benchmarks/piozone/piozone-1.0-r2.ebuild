@@ -12,7 +12,7 @@ IUSE=""
 SLOT="0"
 KEYWORDS="~x86"
 S=${WORKDIR}/${P}
-SRC_URI="ftp://ftp.lysator.liu.se/pub/unix/${PN}/${P}.tar.gz"
+SRC_URI="ftp://ftp.lysator.liu.se/pub/unix/piozone/${P}.tar.gz"
 
 src_unpack() {
 	unpack ${A}
