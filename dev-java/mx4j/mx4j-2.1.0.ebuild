@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-2.1.0.ebuild,v 1.1 2005/01/22 15:23:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-2.1.0.ebuild,v 1.2 2005/03/16 17:16:15 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -48,7 +48,6 @@ src_compile() {
 	use doc && antflags="${antflags} javadocs"
 	use examples && antflags="${antflags} compile.examples"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	use source && antflags="${antflags} sourcezip"
 	ant ${antflags} || die "ant failed"
 }
 
@@ -61,8 +60,7 @@ src_install () {
 		java_pkg-dohtml -r dist/docs/api/*
 	fi
 	if use source; then
-		dodir /usr/share/doc/${PF}/source
-	    cp dist/${PN}-src.zip ${D}usr/share/doc/${PF}/source
+		java-pkg_dosrc ${S}/src/core/*
 	fi
 	if use examples; then
 		dodir /usr/share/doc/${PF}/examples
