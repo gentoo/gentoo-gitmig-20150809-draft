@@ -1,6 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/DBMix/DBMix-0.9.8.ebuild,v 1.3 2004/06/24 23:56:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/DBMix/DBMix-0.9.8.ebuild,v 1.4 2004/07/04 09:29:49 eradicator Exp $
+
+IUSE="xmms"
+
+inherit gnuconfig
 
 DESCRIPTION="Mix several xmms and other sound streams like a DJ"
 HOMEPAGE="http://dbmix.sourceforge.net"
@@ -8,8 +12,9 @@ SRC_URI="mirror://sourceforge/dbmix/${P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
-IUSE="xmms"
+# -amd64: looks like sizeof() problems... sound plays but "skippy"
+# -sparc: fails to initialize
+KEYWORDS="x86 -amd64 -sparc"
 
 DEPEND="x11-libs/gtk+
 	xmms? ( media-sound/xmms )"
@@ -36,6 +41,8 @@ src_unpack() {
 	einfo "Fixing naked . in include"
 	sed -i~ 's/^INCLUDES = ./INCLUDES = -I./' dbfsd_src/Makefile* \
 		|| die
+
+	gnuconfig_update
 }
 
 src_compile() {
