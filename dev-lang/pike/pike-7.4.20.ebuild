@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc., Emil Skoldberg (see ChangeLog)
+# Copyright 1999-2004 Gentoo Technologies, Inc., Emil Skoldberg (see ChangeLog)
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.17 2003/12/01 18:00:06 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.18 2004/02/07 20:26:47 scandium Exp $
 
 inherit flag-o-matic fixheadtails
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://pike.ida.liu.se/"
 DESCRIPTION="Pike programming language and runtime"
 SRC_URI="ftp://pike.ida.liu.se/pub/pike/all/${PV}/Pike-v${PV}.tar.gz"
 
-LICENSE="GPL-2 | LGPL-2.1 | MPL-1.1"
+LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
 SLOT="0"
 KEYWORDS="x86 ppc"
 
