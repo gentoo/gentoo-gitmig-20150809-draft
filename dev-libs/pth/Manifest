@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4e58478a47651fd57e86b334bdc0688e ChangeLog 1918
 MD5 4f41b874032547bc54a98020f7b6ba08 pth-1.4.0.ebuild 659
-MD5 1c5274637bea9a5ff832681de5eb0d02 pth-1.4.1.ebuild 659
+MD5 84deb4a10e239e61097504ffe065e0dc pth-1.4.1.ebuild 654
 MD5 5a8d84760fa717b03ba0a74fdcda84a2 files/digest-pth-1.4.0 61
 MD5 1bfd642d99d813a259564df018c7f6dd files/digest-pth-1.4.1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (Darwin)
-
-iD8DBQFBaXsKVWNWqTUmv+0RAvbvAKC1uW0O32Y7SeEZjwHd/LW9xi50QgCfTBzq
-9u5pXjkSmPcO/xEq54MpCcY=
-=xl8D
------END PGP SIGNATURE-----
