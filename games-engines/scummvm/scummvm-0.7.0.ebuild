@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.7.0.ebuild,v 1.2 2004/12/27 23:06:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.7.0.ebuild,v 1.3 2004/12/28 03:06:05 vapier Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="alsa debug mad oggvorbis sdl zlib"
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc
 	virtual/x11
 	>media-libs/libmpeg2-0.3.1
 	sdl? ( >=media-libs/libsdl-1.2.2 )
@@ -24,6 +24,8 @@ DEPEND="virtual/libc
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	mad? ( media-libs/libmad )
 	zlib? ( sys-libs/zlib )"
+DEPEND="${RDEPEND}
+	x86? ( dev-lang/nasm )"
 
 src_compile() {
 	local myconf=
@@ -40,6 +42,7 @@ src_compile() {
 		$(use_enable mad) \
 		$(use_enable oggvorbis vorbis) \
 		$(use_enable zlib) \
+		$(use_enable x86 nasm) \
 		${myconf} \
 		|| die "configure failed"
 	emake || die "emake failed"
