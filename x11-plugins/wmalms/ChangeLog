@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmalms
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/ChangeLog,v 1.6 2004/06/24 23:04:29 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmalms/ChangeLog,v 1.7 2005/02/27 12:23:09 brix Exp $
+
+  27 Feb 2005; Henrik Brix Andersen <brix@gentoo.org> wmalms-1.0.0a-r1.ebuild:
+  Dependency update: sys-apps/lm-sensors -> sys-apps/lm_sensors.
 
   26 Dec 2003; Jason Wever <weeve@gentoo.org> wmalms-1.0.0a-r1.ebuild:
   Masked on sparc as lm_sensors doesn't work.
