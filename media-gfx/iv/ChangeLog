@@ -1,21 +1,23 @@
 # ChangeLog for media-gfx/iv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Maintainer: George Shapovalov <george@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/ChangeLog,v 1.4 2003/02/12 07:02:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/ChangeLog,v 1.5 2003/04/24 11:41:38 vapier Exp $
+
+*iv-0.1.10 (24 Apr 2003)
+
+  24 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage
 
 *iv-0.1.9-r1 (30 Oct 2002)
 
   30 Oct 2002; Brandon Low <lostlogic@gentoo.org> iv-0.1.9-r1.ebuild :
-
   Make work with things the way they are.  Let me know if it works in
   glibc-2.2.5 and or gcc-2.95.3 systems.
 
 *iv-0.1.9 (15 May 2002)
 
   16 May 2002; George Shapovalov <george@gentoo.org> iv-0.1.9.ebuild :
-
   updated DEPEND entry per Pedro Fiol's clarification
 	
   15 May 2002; George Shapovalov <george@gentoo.org> iv-0.1.9.ebuild,Changelog,files/digest-iv-0.1.9 :
-
   Initial release
