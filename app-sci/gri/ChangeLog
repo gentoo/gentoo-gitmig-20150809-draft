@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/gri
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gri/ChangeLog,v 1.1 2002/12/07 04:21:59 george Exp $
+
+*gri-2.12.1.ebuild (06 ‰≈À 2002)
+
+  06 Dec 2002; George Shapovalov <george@gentoo.org> ChangeLog, gri-2.12.1.ebuild, files/digest-gri-2.12.1 :
+  initial release
+  Gri is a language for scientific graphics programming.
+  ebuild submitted by 
