@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ctags-5.5.4-r1.ebuild,v 1.6 2005/01/22 15:00:52 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ctags-5.5.4-r1.ebuild,v 1.7 2005/02/03 23:04:34 ciaranm Exp $
 
 inherit eutils
 
-DESCRIPTION="Ctags generates an index (or tag) file of C language objects found in C source and header files that allows these items to be quickly and easily located by a text editor or other utility. Currently supports 33 programming languages."
+DESCRIPTION="Exuberant Ctags generates an index (or tag) file of objects found in source and header files that allows these items to be quickly and easily located by a text editor or other utility. Currently supports 33 programming languages."
 HOMEPAGE="http://ctags.sourceforge.net"
 SRC_URI="mirror://sourceforge/ctags/${P}.tar.gz"
 
