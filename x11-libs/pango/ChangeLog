@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.38 2003/06/02 22:19:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.39 2003/06/09 11:58:50 foser Exp $
+
+*pango-1.2.3 (09 Jun 2003)
+
+  09 Jun 2003; foser <foser@gentoo.org> pango-1.2.3.ebuild :
+  New version
 
 *pango-1.2.2 (03 Jun 2003)
 
