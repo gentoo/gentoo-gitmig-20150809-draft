@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/afbinit
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.1 2003/05/28 00:59:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.2 2003/07/08 20:33:25 weeve Exp $
+
+*afbinit-1.0.1-r1 (08 Jul 2003)
+
+  08 Jul 2003; Jason Wever <weeve@gentoo.org> afbinit-1.0.1-r1.ebuild,
+  files/afbinit.init:
+  Changed afbinit install path to /usr/sbin and added rc.afb into /usr/sbin as
+  well. Also added init script for afbinit thanks to Steve Moret
+  <smoret-gentoo@genocide.net>.
 
 *afbinit-1.0.1 (27 May 2003)
 
