@@ -1,10 +1,13 @@
-MD5 e6260827f9580ee0532ff910875a711c ChangeLog 2986
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b991eea0618927778b2eacdcc071d499 ChangeLog 3087
 MD5 ee8fb13c688cd2cb69e8d8a998ca35c5 gamin-0.0.7.ebuild 1601
 MD5 875135e8740bafa4dab79ee592cf9744 metadata.xml 279
 MD5 ea62db6d3e1fc7819b705ecf31eab839 gamin-0.0.6-r2.ebuild 1572
 MD5 1c22bd93f44fab7256bda5b284b1f659 gamin-0.0.10.ebuild 1720
 MD5 cb79cb3e2161998a010168013b4f171e gamin-0.0.9.ebuild 1363
-MD5 017365ee6585c247b2bf3c0d8d9aa97a gamin-0.0.15.ebuild 847
+MD5 fab00ad2fa02cdde2dffc1d88142d67c gamin-0.0.15.ebuild 838
 MD5 59c722e7488d52801fe5b6df1cd6d48e files/digest-gamin-0.0.6-r2 63
 MD5 f03dcd8a601bc5e7f317e7d577887092 files/digest-gamin-0.0.7 63
 MD5 f52f7211e1d89b971993c4ad763b1dde files/gamin-0.0.6-inotify_h-include.patch 373
@@ -16,3 +19,10 @@ MD5 4e18889d5ef1bba7a3dc94859b535222 files/digest-gamin-0.0.10 64
 MD5 04840f528be2adbf8aeddefd3ef54f53 files/digest-gamin-0.0.9 63
 MD5 fc9e2f75e4d730775c5bb42e53fb6666 files/gamin-0.0.10-HAVE_LINUX-and-ENABLE_DNOTIFY-cleanup.patch 2448
 MD5 c576a2ec43ce151b5bc78b77e0f58c9a files/digest-gamin-0.0.15 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBm3ksHTu7gpaalycRAj4DAJwKwmGqVEeV1DSqM1R8tROHbv0znACeNxAJ
+98DsfLcgu888OkY86OWzpZE=
+=EGHQ
+-----END PGP SIGNATURE-----
