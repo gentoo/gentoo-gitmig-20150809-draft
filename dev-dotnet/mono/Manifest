@@ -4,6 +4,8 @@ MD5 5d70aa2dc0b35bbc8d67989b9da20c8c mono-0.91.ebuild 1718
 MD5 fff4d6940949f3280dcb8556749b6278 mono-0.30.1.ebuild 2451
 MD5 bda2e6b82684286bc13346b7851e0473 mono-0.28.ebuild 2151
 MD5 67131dd9bf95d27be0abb143fd60199a mono-0.95.ebuild 1606
+MD5 dfeac1a78d4f90b29c930fd06d680cb2 .#Manifest.1.32 1209
+MD5 3f057b764b9ad0300718f1743ecf89b3 mono-0.97.ebuild 1603
 MD5 4854360d1955592fb8e93f7bf4efa93d mono-0.31.ebuild 2603
 MD5 d7bf41448695033862db9bb4cc7c3d97 ChangeLog 7488
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
@@ -16,3 +18,4 @@ MD5 e7d95f62bf18430aa812b1a501c2e485 files/digest-mono-0.31 124
 MD5 0145cec2f8b351f3a72669bd6f7e4e0e files/digest-mono-0.91 63
 MD5 274bce1afaca6fcf8751ccea8d3d77c7 files/digest-mono-0.95 63
 MD5 7aace03d500c5c79171c98bfd0ed7b7e files/digest-mono-0.96 63
+MD5 d939fa9402e075070bcaa4f397ae18d4 files/digest-mono-0.97 63

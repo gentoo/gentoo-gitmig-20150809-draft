@@ -3,8 +3,10 @@ MD5 82628f99edf69965099900b5da4ac59e xsp-0.15.ebuild 1026
 MD5 416e71d2a70801e05a7d157127052461 xsp-0.14.ebuild 1026
 MD5 29f4e684ca216ac1f910a795e033be47 ChangeLog 870
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
+MD5 8ee651fc50a3736c20c91b3e2dec245a xsp-0.16.ebuild 1023
 MD5 b9ad1f9879e49c0e9dd64197c018cd0e files/digest-xsp-0.13 60
 MD5 cbf98ddcd59fcc55cbc21fe6fb9bb56e files/digest-xsp-0.14 60
 MD5 26af51781fab59682eb75d854280b4a9 files/digest-xsp-0.15 60
-MD5 038cecc23880f6d9a66656f5e5fd3848 files/xsp.confd 297
-MD5 e752a9e4a55f283f12adbf6d62d9301d files/xsp.initd 676
+MD5 f18d63d88f5bee4df47c3f7e9f0285c5 files/digest-xsp-0.16 60
+MD5 c2a25b6194f9cc791d0b9d9fb84853dd files/xsp.confd 298
+MD5 36d50f99724c72c36eba477930f783fa files/xsp.initd 677
