@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.1 2004/01/25 12:27:18 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.2 2004/01/26 08:46:29 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -86,10 +86,7 @@ subversion_svn_fetch() {
 	# http only...
 	if [ "${ESVN_REPO_URI%%:*}" != "http" ]; then
 		if [ -z "${ESVN_REPO_URI}" ]; then
-			die "subversion.eclass: ESVN_REPO_URI is not empty."
-
-		elif [ "${ESVN_REPO_URI}" = "none" ]; then
-			die "subversion.eclass: ESVN_REPO_URI is not define."
+			die "subversion.eclass: ESVN_REPO_URI is empty."
 
 		else
 			die "subversion.eclass: fetch from "${ESVN_REPO_URI%:*}" is not yet implemented."
@@ -122,7 +119,7 @@ subversion_svn_fetch() {
 		mkdir -p "${ESVN_PROJECT}"
 		cd "${ESVN_PROJECT}"
 
-		#${ESVN_FETCH_CMD} "${ESVN_REPO_URI}"
+		${ESVN_FETCH_CMD} "${ESVN_REPO_URI}"
 		einfo "     stored in: ${ESVN_STORE_DIR}/${ESVN_CO_DIR}"
 
 	else
@@ -132,7 +129,7 @@ subversion_svn_fetch() {
 		einfo "   update from: ${ESVN_REPO_URI}"
 
 		cd "${ESVN_CO_DIR}"
-		#${ESVN_UPDATE_CMD}
+		${ESVN_UPDATE_CMD}
 		einfo "    updated in: ${ESVN_STORE_DIR}/${ESVN_CO_DIR}"
 	fi
 
