@@ -1,8 +1,12 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.56 2003/11/05 16:05:05 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.57 2003/11/17 23:55:26 kumba Exp $
+
 
 *openssh-3.7.1_p2-r1 (05 Nov 2003)
+
+  17 Nov 2003; Joshua Kinard <kumba@gentoo.org> openssh-3.7.1_p2-r1.ebuild:
+  Added a gnuconfig_update call for mips systems
 
   05 Nov 2003; Tavis Ormandy <taviso@gentoo.org> openssh-3.7.1_p2-r1.ebuild,
   files/openssh-skeychallenge-args.diff:
