@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0.3.ebuild,v 1.2 2004/09/27 16:00:17 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0.3.ebuild,v 1.3 2004/09/28 01:08:31 mr_bones_ Exp $
 
 inherit eutils fixheadtails
 
@@ -34,7 +34,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	zlib? ( >=sys-libs/zlib-1.1.4-r2 )
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	|| ( >=dev-libs/libelf-0.8.2 >=dev-libs/elfutils-0.94-r1 )
