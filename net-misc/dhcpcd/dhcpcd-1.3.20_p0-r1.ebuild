@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.20_p0-r1.ebuild,v 1.3 2001/09/29 23:23:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.20_p0-r1.ebuild,v 1.4 2001/09/30 06:15:07 drobbins Exp $
 
 MYV=1.3.20-pl0
 S=${WORKDIR}/${PN}-${MYV}
@@ -18,7 +18,7 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
-	[ -z "`use build`" ]
+	if [ -z "`use build`" ]
 	then
 		dodoc AUTHORS COPYING ChangeLog NEWS README 
 	else
