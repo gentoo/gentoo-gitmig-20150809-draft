@@ -1,6 +1,9 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# fixed mouse scrolling in ppc xfree.  Masked for testing (daybird, 10 may)
+=x11-base/xfree-4.2.0-r10
+
 # kde-base 'child' packages, in testing. 10 May, danarmak
 >=kde-base/kdetoys-3.0-r1
 app-misc/amor
