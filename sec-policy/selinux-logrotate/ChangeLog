@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-logrotate
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-logrotate/ChangeLog,v 1.9 2005/02/25 08:01:09 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-logrotate/ChangeLog,v 1.10 2005/03/23 07:43:26 kaiowas Exp $
+
+  23 Mar 2005; petre rodan <kaiowas@gentoo.org>
+  selinux-logrotate-20050211.ebuild:
+  mark stable
 
 *selinux-logrotate-20050211 (25 Feb 2005)
 
