@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/prosper-1.00.4.ebuild,v 1.4 2003/10/06 14:43:15 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/prosper-1.00.4.ebuild,v 1.5 2003/12/08 04:51:21 usata Exp $
 
 inherit latex-package
 
@@ -10,9 +10,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	mirror://sourceforge/${PN}/PPRblends.sty.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 DEPEND=""
-S=${WORKDIR}/prosper/
+S=${WORKDIR}/${PN}
 
 src_unpack(){
 	unpack ${A}
