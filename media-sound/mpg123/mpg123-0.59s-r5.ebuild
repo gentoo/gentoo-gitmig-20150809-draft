@@ -1,18 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r3.ebuild,v 1.12 2004/09/02 18:13:04 pvdabeel Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r5.ebuild,v 1.1 2004/10/21 20:35:57 eradicator Exp $
 
 IUSE="mmx 3dnow esd nas oss"
 
+inherit eutils
+
+PATCH_VER=1.0
+S="${WORKDIR}/${PN}"
+
 DESCRIPTION="Real Time mp3 player"
 HOMEPAGE="http://www.mpg123.de/"
-SRC_URI="http://www.mpg123.de/mpg123/${PN}-pre${PV}.tar.gz"
+SRC_URI="http://www.mpg123.de/mpg123/${PN}-pre${PV}.tar.gz
+	 http://dev.gentoo.org/~eradicator/${PN}/${P}-gentoo-${PATCH_VER}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ia64 ~amd64 ppc sparc ~alpha hppa ~mips"
+KEYWORDS="x86 ~ia64 amd64 ~ppc sparc ~alpha ~hppa ~mips ~ppc64"
 
 RDEPEND="virtual/libc
 	 esd? ( media-sound/esound )
@@ -26,36 +30,15 @@ DEPEND="${RDEPEND}
 
 PROVIDE="virtual/mpg123"
 
-S=${WORKDIR}/${PN}
+PATCHDIR="${WORKDIR}/patches"
+#PATCHDIR="/home/jeremy/gentoo/mpg123/patches"
 
 src_unpack() {
-	unpack ${A} && cd ${S} || die "unpack failed"
+	unpack ${A}
 
-	# Apply security fixes
-	epatch ${FILESDIR}/${P}-security.diff
-	epatch ${FILESDIR}/${P}-heapfix.diff
-
-	# Add linux-generic target
-	epatch ${FILESDIR}/${PV}-generic.patch
-
-	# Always apply this patch, even though it's particularly for
-	# amd64.  It's good to understand the distinction between int and
-	# long: ANSI says that int should be 32-bits, long should be the
-	# native size of the CPU (usually the same as a pointer).
-	epatch ${FILESDIR}/${P}-amd64.patch
-
-	# Fix Makefile missing quotes
-	epatch ${FILESDIR}/${P}-Makefile.patch
-
-	# Don't force gcc since icc/ccc might be possible
-	sed -i -e "s|CC=gcc||" Makefile
-
-	# Fix a glitch in the x86 related section of the Makefile
-	sed -i -e "s:-m486::g" Makefile
-	# Fix a glitch in the ppc-related section of the Makefile
-	sed -i -e "s:-mcpu=ppc::" Makefile
-	# Make sure we use our CFLAGS
-	sed -i -e "s:-O2::g" Makefile
+	cd ${S}
+        EPATCH_SUFFIX="patch"
+	epatch ${PATCHDIR}
 }
 
 src_compile() {
