@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.6.ebuild,v 1.1 2003/11/01 12:42:04 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.6.ebuild,v 1.2 2003/11/01 14:45:52 tantive Exp $
 
 IUSE="doc snmp usb"
 
@@ -54,8 +54,8 @@ src_compile() {
 		--enable-master-slave \
 		--enable-powerflute \
 		--enable-pthreads \
-		--with-css-dir=/home/httpd/apcupsd \
-		--with-cgi-bin=/home/httpd/apcupsd \
+		--with-css-dir=/var/www/apcupsd \
+		--with-cgi-bin=/var/www/apcupsd \
 		--enable-cgi \
 		${myconf} \
 		|| die
