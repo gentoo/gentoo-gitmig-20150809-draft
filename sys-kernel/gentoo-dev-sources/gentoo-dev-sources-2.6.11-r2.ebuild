@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.11-r2.ebuild,v 1.1 2005/03/04 21:51:48 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.11-r2.ebuild,v 1.2 2005/03/04 22:05:35 hansmi Exp $
 
 ETYPE="sources"
 IUSE="ultra1"
@@ -13,7 +13,7 @@ GPV="11.02"
 GPV_SRC="http://reactivated.net/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
 	http://reactivated.net/genpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-extras.tar.bz2"
 
-KEYWORDS="~x86 ~amd64 ~ppc64"
+KEYWORDS="~x86 ~amd64 ~ppc64 ~ppc"
 
 HOMEPAGE="http://dev.gentoo.org/~dsd/gentoo-dev-sources"
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.187 2005/03/04 21:51:48 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.188 2005/03/04 22:05:35 hansmi Exp $
+
+  04 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
+  gentoo-dev-sources-2.6.11-r2.ebuild:
+  Added to ~ppc.
 
 *gentoo-dev-sources-2.6.11-r2 (04 Mar 2005)
 
