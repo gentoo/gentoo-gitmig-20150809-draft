@@ -2,18 +2,25 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r2.ebuild,v 1.1 2002/02/18 00:48:06 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r3.ebuild,v 1.1 2002/02/19 08:24:06 blocke Exp $
 
 P=pam-${PV}
 A=Linux-PAM-${PV}.tar.gz
 S=${WORKDIR}/Linux-PAM-${PV}
 DESCRIPTION="Pluggable Authentication Modules"
-SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/${A} http://cvs.gentoo.org/~blocke/pam-${PV}-${PR}-gentoo.diff.gz" 
+SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/${A} http://www.gentoo.org/~blocke/pam-${PV}-${PR}-gentoo.diff.gz" 
 HOMEPAGE="http://www.redhat.com/linux-info/pam/"
 
 DEPEND=">=sys-libs/cracklib-2.7-r2 >=sys-libs/pwdb-0.61-r3 berkdb? ( ~sys-libs/db-1.85 ) sys-apps/gzip"
 
 src_unpack() {
+	echo "This ebuild is masked out because it breaks your system..."
+	echo "If you are seeing this and you are not trying to merge it manually"
+	echo "it means someone accidently unmasked it... please report the"
+	echo "problem to #gentoo or the mailing list... Thanks"
+
+	die
+
 	tar xvzf ${DISTDIR}/Linux-PAM-${PV}.tar.gz
 	zcat ${DISTDIR}/pam-${PV}-${PR}-gentoo.diff.gz | patch -p0
 }
@@ -67,10 +74,17 @@ src_install() {
 		ln -s lib${i}.so.${PV} lib${i}.so.0
 	done
 
-	dodir /etc/pam.d
 	#install /etc/pam.d files
-	cd ${FILESDIR}/pam.d
+	dodir /etc/pam.d
+	cd ${FILESDIR}/${PV}-${PR}/pam.d
 	insinto /etc/pam.d
 	doins *
+
+	#install /etc/security files
+	dodir /etc/security
+	cd ${FILESDIR}/${PV}-${PR}/security
+	insinto /etc/security
+	doins *
+
 }
 
