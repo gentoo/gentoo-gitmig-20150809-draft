@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
 HOMEPAGE="http://www.kde.org/"
 
-DEPEND=">=kde-apps/kdemultimedia-${PV}
+DEPEND=">=kde-base/kdemultimedia-${PV}
 	>=media-libs/libsdl-1.2 "
 
 
