@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gento Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.9 2004/07/23 20:34:22 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.10 2004/08/02 17:51:51 vapier Exp $
 
 # drobbins optimized this script at some point which made a bootstrap
 # to complete 20 mins to 2 hours faster, depending on CPU. He did this
@@ -185,7 +185,7 @@ echo "Configuring environment..."
 
 ENV_EXPORTS="GENTOO_MIRRORS PORTDIR DISTDIR PKGDIR PORTAGE_TMPDIR
 	CFLAGS CHOST CXXFLAGS MAKEOPTS ACCEPT_KEYWORDS PROXY HTTP_PROXY
-	FTP_PROXY FEATURES"
+	FTP_PROXY FEATURES STAGE1_USE"
 
 for opt in ${ENV_EXPORTS}; do
 	val=$(pycmd 'import portage; print portage.settings["'${opt}'"];' )
@@ -208,9 +208,9 @@ export CONFIG_PROTECT="-*"
 # disable collision-protection
 export FEATURES="${FEATURES} -collision-protect"
 
-USE="-* build bootstrap" emerge ${STRAP_EMERGE_OPTS} ${myPORTAGE} || cleanup 1
+USE="-* build bootstrap ${STAGE1_USE}" emerge ${STRAP_EMERGE_OPTS} ${myPORTAGE} || cleanup 1
 echo -------------------------------------------------------------------------------
-export USE="${ORIGUSE} bootstrap"
+export USE="${ORIGUSE} bootstrap ${STAGE1_USE}"
 
 # We can't unmerge headers which may or may not exist yet. If your
 # trying to use nptl, it may be needed to flush out any old headers
