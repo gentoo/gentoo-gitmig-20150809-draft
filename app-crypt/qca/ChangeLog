@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.1 2004/12/03 20:49:13 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.2 2004/12/29 17:07:12 weeve Exp $
+
+  29 Dec 2004; Jason Wever <weeve@gentoo.org> qca-1.0.ebuild:
+  Added ~sparc keyword to fix broken deps of qca-tls-1.0-r1.
 
 *qca-1.0 (03 Dec 2004)
 
