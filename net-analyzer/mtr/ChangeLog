@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.26 2004/09/05 21:06:10 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.27 2004/11/22 17:43:00 eldad Exp $
+
+  22 Nov 2004; Eldad Zack <eldad@gentoo.org> mtr-0.64.ebuild:
+  x86 stable
 
   05 Sep 2004; Guy Martin <gmsoft@gentoo.org> mtr-0.54-r2.ebuild:
   Marked stable on hppa.
