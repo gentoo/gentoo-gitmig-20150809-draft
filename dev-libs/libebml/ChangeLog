@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.6 2004/02/26 19:27:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.7 2004/02/27 16:20:08 weeve Exp $
+
+  27 Feb 2004; Jason Wever <weeve@gentoo.org> libebml-0.6.3.ebuild:
+  Added ~sparc keyword.
 
   26 Feb 2004; Guy Martin <gmsoft@gentoo.org> :
   Keyworded ~hppa.
