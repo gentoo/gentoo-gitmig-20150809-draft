@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.0_rc4.ebuild,v 1.1 2004/04/26 22:47:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.0_rc4.ebuild,v 1.2 2004/05/16 09:02:44 vapier Exp $
 
 inherit eutils
 
 MY_P=${PN}core-${PV/_rc/-rc}
-S="${WORKDIR}/${MY_P}/build/generic"
 DESCRIPTION="XviD, a high performance/quality MPEG-4 video de-/encoding solution."
 HOMEPAGE="http://www.xvid.org/"
 SRC_URI="http://files.xvid.org/downloads/${MY_P}.tar.bz2"
@@ -17,6 +16,8 @@ IUSE="doc"
 
 DEPEND="virtual/glibc
 	x86? ( >=dev-lang/nasm-0.98.36 )"
+
+S="${WORKDIR}/${MY_P}/build/generic"
 
 src_unpack() {
 	unpack ${A}
