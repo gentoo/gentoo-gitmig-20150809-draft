@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libmimedir
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmimedir/ChangeLog,v 1.1 2003/09/02 22:20:55 liquidx Exp $
+
+*libmimedir-0.3 (02 Sep 2003)
+
+  02 Sep 2003; Alastair Tse <liquidx@gentoo.org> libmimedir-0.3.ebuild,
+  metadata.xml:
+  initial ebuild. used in SynCE libraries
+
