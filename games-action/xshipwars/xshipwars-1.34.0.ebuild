@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.5 2004/03/31 03:35:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.6 2004/06/03 05:49:31 mr_bones_ Exp $
 
 inherit gcc eutils games
 
@@ -33,7 +33,7 @@ src_compile() {
 	./configure.server Linux --prefix=${GAMES_PREFIX} || die
 	./configure.unvedit Linux --prefix=/usr || die
 
-	[ `gcc-major-version` == 3 ] && epatch ${FILESDIR}/${P}-gcc3.patch
+	[ $(gcc-major-version) == 3 ] && epatch ${FILESDIR}/${P}-gcc3.patch
 
 	for makefile in Makefile.* ; do
 		make \

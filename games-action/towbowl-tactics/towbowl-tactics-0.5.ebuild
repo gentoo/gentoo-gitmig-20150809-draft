@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/towbowl-tactics/towbowl-tactics-0.5.ebuild,v 1.1 2004/03/09 18:42:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/towbowl-tactics/towbowl-tactics-0.5.ebuild,v 1.2 2004/06/03 05:56:40 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -43,7 +43,7 @@ src_unpack() {
 		-e "s:TBTHOME \"/config.xml:\"${GAMES_SYSCONFDIR}/tbt/config.xml:g" \
 			global.h || die "sed global,h failed"
 
-	for f in `find ${S} -type f`
+	for f in $(find ${S} -type f)
 	do
 		edos2unix ${f}
 	done

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/xpilot-4.5.4.ebuild,v 1.3 2004/03/31 03:33:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/xpilot-4.5.4.ebuild,v 1.4 2004/06/03 05:52:47 mr_bones_ Exp $
 
 DESCRIPTION="A multi-player 2D client/server space game"
 HOMEPAGE="http://www.xpilot.org/"
@@ -31,9 +31,10 @@ src_compile() {
 	xmkmf || die "xmkmf Makefile creation failed"
 	make Makefiles || die "Makefiles problem"
 	local f
-	for f in `find . -type f -regex .*Makefile`; do
-		sed -i -e "s:CDEBUGFLAGS = -O:CDEBUGFLAGS = ${CFLAGS}:" $f ||
-			die "sed $f failed"
+	for f in $(find . -type f -regex .*Makefile); do
+		sed -i \
+			-e "s:CDEBUGFLAGS = -O:CDEBUGFLAGS = ${CFLAGS}:" $f \
+			|| die "sed $f failed"
 	done
 	make includes || die "includes problem"
 	make depend || die "depend problem"
