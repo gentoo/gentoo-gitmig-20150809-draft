@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.10.ebuild,v 1.6 2004/04/09 03:29:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.10.ebuild,v 1.7 2004/04/30 19:10:45 kloeri Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ LICENSE="BSD | GPL-2"
 # Should work on  alpha arm hppa i386 ia64 m68k mips mipsel powerpc s390 sparc 
 # REF http://packages.debian.org/cgi-bin/search_packages.pl?searchon=names&version=all&exact=1&keywords=pdnsd
 
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc ~alpha"
 
 S=${WORKDIR}/${PN}-${PV}
 

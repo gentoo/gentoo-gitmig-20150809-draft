@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.25 2004/04/27 02:45:09 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.26 2004/04/30 19:10:45 kloeri Exp $
+
+  30 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> pdnsd-1.1.10.ebuild:
+  Keyworded ~alpha.
 
   26 Apr 2004; Michael McCabe <randy@gentoo.org> pdnsd-1.1.9.ebuild:
   Added s390 keywords
