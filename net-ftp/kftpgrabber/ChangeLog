@@ -1,0 +1,10 @@
+# ChangeLog for net-ftp/kftpgrabber
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/ChangeLog,v 1.1 2004/12/30 09:30:11 centic Exp $
+
+*kftpgrabber-0.5.0 (30 Dec 2004)
+
+  30 Dec 2004; Dominik Stadler <centic@gentoo.org> +metadata.xml,
+  +kftpgrabber-0.5.0.ebuild:
+  Add new version 0.5.0, fixes Bugs 61601 and 75672.
+
