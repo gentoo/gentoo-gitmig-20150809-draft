@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/mozilla-firebird-bin-0.7.ebuild,v 1.1 2003/10/20 09:18:43 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/mozilla-firebird-bin-0.7.ebuild,v 1.2 2003/11/17 06:18:08 brad Exp $
 
 inherit nsplugins eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.mozilla.org/pub/firebird/releases/${PV}/MozillaFirebird-${PV
 HOMEPAGE="http://www.mozilla.org/projects/firebird"
 RESTRICT="nostrip"
 
-KEYWORDS="~x86 -ppc -sparc -alpha"
+KEYWORDS="x86 -ppc -sparc -alpha"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 

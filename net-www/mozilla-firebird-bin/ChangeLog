@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-firebird-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/ChangeLog,v 1.8 2003/10/20 09:18:43 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/ChangeLog,v 1.9 2003/11/17 06:18:08 brad Exp $
+
+  17 Nov 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-bin-0.7.ebuild:
+  Stable on x86.
 
 *mozilla-firebird-bin-0.7 (20 Oct 2003)
 
