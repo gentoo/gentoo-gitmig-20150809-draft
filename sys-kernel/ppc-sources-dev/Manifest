@@ -6,7 +6,7 @@ MD5 d5bd00e9a574a24b019566b389e342c7 ppc-sources-dev-2.4.21.ebuild 1872
 MD5 46093868a7b9b6455e6a0917baaada76 ppc-sources-dev-2.4.22.ebuild 2064
 MD5 b147268040a040e1923b4e9ac12b4190 ppc-sources-dev-2.4.24.ebuild 1932
 MD5 53c928a80615f43ab56d3927b66ef69c ppc-sources-dev-2.4.22-r1.ebuild 2326
-MD5 2b2966e23e09fa7e4f3041ab064bde73 ppc-sources-dev-2.4.24-r1.ebuild 2151
+MD5 144bf8fc981bd21efec5c0409da95c79 ppc-sources-dev-2.4.24-r1.ebuild 1831
 MD5 660f16218c08735d9c1e9e0e5b292a23 files/digest-ppc-sources-dev-2.4.19 68
 MD5 c45b2bb6026a8726c5932c0778879a21 files/digest-ppc-sources-dev-2.4.20 70
 MD5 91cdf75820acd5ac4942bab12e5ceb5a files/digest-ppc-sources-dev-2.4.21 143
