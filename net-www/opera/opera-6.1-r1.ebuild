@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.1-r1.ebuild,v 1.1 2002/11/25 07:10:07 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.1-r1.ebuild,v 1.2 2002/11/26 03:37:32 agenkin Exp $
 #
-# By default, the statically compiled version of opera will be
+# By default, the statically linked version of opera will be
 # installed.  There are two other variations of the package that this
 # ebuild can install.  To pick one, set OPERA_VARIANT environment
 # variable to one of the following:
@@ -16,7 +16,7 @@
 # least likely to cause you any grief.	Only change the variant if you
 # know what you are doing.
 #
-# Example of compiling a non-default varant:
+# Example of compiling a non-default variant:
 #
 #   env OPERA_VARIANT=shared-3.2 emerge opera
 #
