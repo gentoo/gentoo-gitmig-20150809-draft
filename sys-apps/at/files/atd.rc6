@@ -1,19 +1,17 @@
 #!/sbin/runscript
 
 depend() {
- 	need clock
+    need clock
 }
 
 function start() {
-	# Start daemons.
-	ebegin "Starting atd..."
-	start-stop-daemon --start --quiet --exec /usr/sbin/atd
-	eend $? "Started atd." "Error Starting atd"
+    ebegin "Starting atd..."
+    start-stop-daemon --start --quiet --exec /usr/sbin/atd
+    eend $?
 }
 
 function stop() {
-	# Stop daemons.
-	ebegin "Shutting down atd..."
-	start-stop-daemon --stop --quiet --pidfile /var/run/atd.pid
-	eend $? "Stopped atd." "Error Stopping atd."
+    ebegin "Shutting down atd..."
+    start-stop-daemon --stop --quiet --pidfile /var/run/atd.pid
+    eend $?
 }
