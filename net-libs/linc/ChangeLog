@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/linc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/ChangeLog,v 1.21 2003/05/20 12:05:40 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/ChangeLog,v 1.22 2003/06/23 18:01:40 foser Exp $
+
+*linc-1.0.3 (23 jun 2003)
+
+  23 Jun 2003; foser <foser@gentoo.org> linc-1.0.3.ebuild :
+  New version, fix license to be GPL-2
 
 *linc-1.0.2 (19 May 20030
 
