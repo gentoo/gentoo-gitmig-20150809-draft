@@ -1,7 +1,11 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.19 2002/12/13 10:56:57 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.20 2002/12/15 20:55:02 hannes Exp $
 
+*arts-1.0.4-r1 (15 Dec 2002)
+
+  15 Dec 2002; Hannes Mehnert <hannes@gentoo.org> arts-1.0.4-r1.ebuild:
+  added patch which should fix bug #10338
 
   08 Dec 2002; Jack Morgan <jmorgan@gentoo.org> arts-1.1.0_rc5 :
   Added sparc keyword
