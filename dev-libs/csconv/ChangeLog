@@ -1,8 +1,8 @@
 # ChangeLog for dev-libs/csconv
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/csconv/ChangeLog,v 1.1 2003/09/13 23:59:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/csconv/ChangeLog,v 1.2 2003/09/14 01:43:17 usata Exp $
 
   14 Sep 2003; Mamoru KOMACHI <usata@gentoo.org>
   files/csconv-11.4.1467-gentoo.diff:
-  Initial import
+  Initial import. See Bug #28272
 
