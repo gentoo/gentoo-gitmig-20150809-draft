@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/advancemame/advancemame-0.61.1.ebuild,v 1.5 2002/11/30 21:29:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/advancemame/advancemame-0.61.1.ebuild,v 1.6 2002/12/23 17:48:23 azarah Exp $
 
 # This build we configure to explicitly use SDL, as it is very
 # difficult to get it working with fb or svgalib support.  Anyway,
@@ -68,7 +68,16 @@ src_unpack() {
 
 src_compile() {
 	# Configure with explicit SDL support
-	econf --with-system=sdl
+	# NOTE: do not use econf, as we should not
+	#       pass --host ...
+	./configure \
+		--prefix=/usr \
+		--infodir=/usr/share/info \
+		--mandir=/usr/share/man \
+		--with-system=sdl \
+		--enable-pthread \
+		${myconf} || die
+
 	emake || die
 }
 

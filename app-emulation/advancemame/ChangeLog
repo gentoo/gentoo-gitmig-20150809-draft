@@ -1,10 +1,15 @@
 # ChangeLog for app-emulation/advancemame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/advancemame/ChangeLog,v 1.4 2002/11/28 18:45:05 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/advancemame/ChangeLog,v 1.5 2002/12/23 17:48:23 azarah Exp $
+
+  23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> advancemame-0.61.1.ebuild :
+
+  Replace econf with ./configure, as it breaks if we pass --host.
 
   28 Nov 2002; Mark Guertin <gerk@gentoo.org> advancemame-0.62.0.ebuild,
   advancemame-0.61.1.ebuild:
-  set -ppc in keywords, uses x86 asm
+  
+  Set -ppc in keywords, uses x86 asm
 
 *advancemame-0.62.0 (20 Nov 2002)
 
