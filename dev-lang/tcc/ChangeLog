@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.9 2003/07/11 22:14:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.10 2003/10/14 19:42:23 spider Exp $
+
+  14 Oct 2003; <spider@gentoo.org> :
+  Update version to fix linking error with array not found
 
   09 Jun 2003; George Shapovalov <george@gentoo.org> tcc-0.9.19.ebuild :
   changed LICENSE to LGPL-2.1 from GPL-2, seems to have changed recently.
