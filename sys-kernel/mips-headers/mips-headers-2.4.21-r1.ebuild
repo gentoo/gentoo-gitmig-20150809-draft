@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.21-r1.ebuild,v 1.2 2003/08/05 02:28:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.21-r1.ebuild,v 1.3 2003/08/26 07:35:10 kumba Exp $
 
 
 ETYPE="headers"
@@ -19,7 +19,7 @@ EXTRAVERSION=-mipscvs-${CVSDATE}
 # 2) patch off linux-mips ML to fix r4k cache handling
 # 3) patch to fix arch/mips/Makefile to pass appropriate CFLAGS
 
-DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines"
+DESCRIPTION="Linux-Mips CVS headers for MIPS-based machines"
 SRC_URI="mirror://gentoo/linux-mips-${OKV}-${CVSDATE}.tar.bz2
 		mirror://gentoo/mips-patches-${OKV}-${CVSDATE}.tar.bz2"
 HOMEPAGE="http://www.linux-mips.org/" 
