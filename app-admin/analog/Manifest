@@ -4,6 +4,6 @@ MD5 bb35a653587a0ab64f0e515735cacc4e files/digest-analog-5.24 63
 MD5 fc11d5996b49d704c94fe9acec5dc0bb files/digest-analog-5.31 64
 MD5 680b3d1d4411710fa55b5ec607a66222 files/digest-analog-5.32 64
 MD5 17779b474599165b70b48825a08d041f analog-5.24.ebuild 1362
-MD5 3f2064f5e730780fc9b7e08faba799d8 analog-5.31.ebuild 1376
-MD5 5b513b887bd75e5a994fa93a06fdd5e3 ChangeLog 1694
-MD5 bcbf5173b62ea1cabd1f07c267be9013 analog-5.32.ebuild 1338
+MD5 687a0e957b806a38e40c43e206880a38 analog-5.31.ebuild 1371
+MD5 64deec868bc266d063c40fbd613b29d3 ChangeLog 1836
+MD5 177bd79ef4967f4d9cf9b2844203e67c analog-5.32.ebuild 1355
