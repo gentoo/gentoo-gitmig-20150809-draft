@@ -1,6 +1,9 @@
 # ChangeLog for app-text/build-docbook-catalog
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.1 2004/06/30 03:12:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.2 2004/07/15 08:21:21 robbat2 Exp $
+
+  15 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> :
+  fix broken package.
 
 *build-docbook-catalog-1.1 (29 Jun 2004)
 
