@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.3 2002/06/30 03:09:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.4 2002/06/30 13:07:28 azarah Exp $
 
 TV=4.0
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz"
@@ -41,6 +41,14 @@ src_unpack() {
 	#
 	# http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2001/08/0476.html
 	# http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2001/08/0589.html
+	#
+	#
+	# Something to note, is that this patch makes gcc crash if its given
+	# the "-mno-ieee-fp" flag ... libvorbis is an good example of this.
+	# This however is on of those which one we want fixed most cases :/
+	#
+	# Azarah - 30 Jun 2002
+	#
 	patch -l -p1 < ${FILESDIR}/${P}-new-atexit.diff || die
 	
 	# Now we integrate texinfo-${TV} into gcc.  It comes with texinfo-3.12.
