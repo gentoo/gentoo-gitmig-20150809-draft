@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.471 2004/07/08 21:24:29 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.472 2004/07/09 23:22:23 rac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -45,6 +45,7 @@ app-i18n/im-ja:skk - Support for SKK input method
 app-i18n/uim:m17n-lib - Enable m17n-lib support
 app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 app-misc/grass:nviz - support GLw functionality
+app-misc/screen:nethack - Express error messages in nethack style
 app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
 app-misc/workrave:noexercises - Disable exercises support
 app-misc/workrave:noexperimental - Compile without experimental features
