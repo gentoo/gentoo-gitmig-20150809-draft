@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.50 2004/07/31 02:05:01 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.51 2004/07/31 05:27:39 solar Exp $
+
+  31 Jul 2004; <solar@gentoo.org> gettext-0.12.1-r1.ebuild,
+  gettext-0.12.1.ebuild:
+  gnuconfig update needed for atleast uclibc
 
   31 Jul 2004; Tom Gall <tgall@gentoo.org> gettext-0.12.1-r1:
   stable on ppc64, bug #57114

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.20 2004/07/15 03:28:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.21 2004/07/31 05:27:39 solar Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 IUSE="bootstrap emacs nls"
 
@@ -20,6 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use bootstrap && epatch ${FILESDIR}/${P}-bootstrap.patch
+	gnuconfig_update
 }
 
 src_compile() {

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r1.ebuild,v 1.22 2004/07/31 02:05:01 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r1.ebuild,v 1.23 2004/07/31 05:27:39 solar Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 DESCRIPTION="GNU locale utilities"
 HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
@@ -19,6 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use bootstrap && epatch ${FILESDIR}/${P}-bootstrap.patch
+	gnuconfig_update
 }
 
 src_compile() {
