@@ -126,3 +126,4 @@ move app-sci/transcalc sci-calculators/transcalc
 move app-sci/units sci-calculators/units
 move app-sci/wcalc sci-calculators/wcalc
 move app-sci/babel sci-chemistry/babel
+move app-sci/chemtool sci-chemistry/chemtool
