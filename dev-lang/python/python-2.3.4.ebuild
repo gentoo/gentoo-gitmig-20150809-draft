@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4.ebuild,v 1.6 2004/07/02 04:30:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.4.ebuild,v 1.7 2004/07/03 23:40:40 g2boojum Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -46,6 +46,7 @@ PROVIDE="virtual/python"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	sed -ie 's/OpenBSD\/3.\[01234/OpenBSD\/3.\[012345/' configure || die "OpenBSD sed failed"
 	# adds /usr/lib/portage/pym to sys.path - liquidx (08 Oct 03)
 	# prepends /usr/lib/portage/pym to sys.path - liquidx (12 Apr 04)
 	epatch ${FILESDIR}/${PN}-2.3-add_portage_search_path_take_2.patch
