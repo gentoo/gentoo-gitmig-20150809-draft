@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.2.5.ebuild,v 1.4 2003/07/04 20:12:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.2.5.ebuild,v 1.5 2003/07/15 13:33:32 todd Exp $
 
 inherit gnome2
 
@@ -8,7 +8,7 @@ IUSE="doc"
 DESCRIPTION="rendering svg library"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
-KEYWORDS="x86 ppc ~alpha ~sparc hppa"
+KEYWORDS="x86 ppc ~alpha sparc hppa"
 LICENSE="GPL-2 LGPL-2"
 
 RDEPEND=">=dev-libs/glib-2
