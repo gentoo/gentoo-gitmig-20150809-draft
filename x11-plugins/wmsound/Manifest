@@ -1,0 +1,7 @@
+MD5 714a3eb37871829d3cbf219389998393 wmsound-0.9.5.ebuild 1120
+MD5 8a72864e4e32ecc76595ad76c753b8d5 ChangeLog 376
+MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
+MD5 07c8b3d33fbbbed1700c4515b5311721 files/wmsound-esd.patch 2799
+MD5 56668c80d9f0b2b99b5c9088016ed62a files/digest-wmsound-0.9.5 64
+MD5 3bfb08591f212acd293b5f480afd4fab files/wmsound-config.patch 2466
+MD5 d04694a64e4326d5b21eaab7827c9c6c files/wmsound-ComplexProgramTargetNoMan.patch 304
