@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/bbkeys
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeys/ChangeLog,v 1.4 2002/09/30 19:52:48 mkeadle Exp $
+# $Header 
+
+*bbkeys-0.8.6 (4 Nov 2002)
+
+  4 Nov 2002; Matt Keadle <mkeadle@gentoo.org> bbkeys-0.8.6.ebuild :
+  files/digest-bbkeys-0.8.6
+
+  Version bump to latest stable
 
 *bbkeys-0.8.5 (30 Sep 2002)
 
