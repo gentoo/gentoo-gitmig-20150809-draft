@@ -1,6 +1,15 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.38 2004/05/28 15:43:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.39 2004/06/02 18:50:42 lu_zero Exp $
+
+*ati-drivers-3.9.0-r1 (02 Jun 2004)
+
+  02 Jun 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/fglrx-3.9.0-allocation.patch, +files/fglrx-3.9.0-regparm.patch,
+  +ati-drivers-3.9.0-r1.ebuild:
+  Various patches to solve different issues, thanks to Tarmo Tanav
+  <sn4ip3r@estprog.ee> for the regparm patch and Aric Cyr <acyr76@yahoo.ca> for
+  the memory allocation fix.
 
 *ati-drivers-3.2.8-r2 (28 May 2004)
 
