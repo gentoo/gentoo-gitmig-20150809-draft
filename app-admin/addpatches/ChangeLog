@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/addpatches
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/addpatches/ChangeLog,v 1.6 2002/12/13 10:55:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/addpatches/ChangeLog,v 1.7 2003/02/09 21:51:19 gmsoft Exp $
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> addpatches-0.2.ebuild :
+  Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
