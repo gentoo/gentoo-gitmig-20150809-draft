@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.12 2004/05/05 04:50:56 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.13 2004/05/05 09:54:05 dholm Exp $
+
+  05 May 2004; David Holm <dholm@gentoo.org> mono-0.91.ebuild:
+  Added to ~ppc.
 
 *mono-0.91 (05 May 2004)
 
