@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r6.ebuild,v 1.1 2001/11/11 19:47:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r6.ebuild,v 1.2 2001/11/11 19:54:17 azarah Exp $
 
 A="${P}.tar.gz"
 S=${WORKDIR}/${P}
@@ -57,7 +57,7 @@ src_install() {
 	insopts -m0644
 	doins etc.ppp/options
 
-	insinto /etc
+	insinto /etc/init.d
 	insopts -m0700
 	doins ${FILESDIR}/${PVR}/net.ppp0
 
