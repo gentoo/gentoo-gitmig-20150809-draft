@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.49 2002/12/16 18:43:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.50 2002/12/18 10:32:32 azarah Exp $
+
+*baselayout-1.8.5.6 (18 Dec 2002)
+
+  18 Dec 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.5.6.ebuild :
+
+  Mips support among things.
 
   16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.5.5.ebuild :
 
