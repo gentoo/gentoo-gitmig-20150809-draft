@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/luma
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/ChangeLog,v 1.14 2005/03/02 20:23:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/luma/ChangeLog,v 1.15 2005/03/15 19:55:52 carlo Exp $
+
+*luma-2.1.2 (15 Mar 2005)
+
+  15 Mar 2005; Carsten Lohrke <carlo@gentoo.org> +luma-2.1.2.ebuild:
+  version bump
 
 *luma-2.1 (02 Mar 2005)
 
