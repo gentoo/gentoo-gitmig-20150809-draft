@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.0.9708-r1.ebuild,v 1.1 2004/05/12 21:29:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.0.9708-r1.ebuild,v 1.2 2004/05/13 07:52:01 kumba Exp $
 
 inherit eutils
 
-MY_P="${PN}-9708.tar.gz"
+MY_P="${PN}-${P##*.}.tar.gz"
 #The original (http://www.progsoc.uts.edu.au/~dbugger/hacks/hacks.html) is dead
 # but the guy setup his 'perm' home with LSM (http://lsm.execpc.com/)
 DESCRIPTION="The notorious fortune program"
@@ -18,10 +18,12 @@ IUSE="offensive"
 
 DEPEND="virtual/glibc"
 
+S="${WORKDIR}/${MY_P}"
+
 pkg_setup() {
 	einfo "By default the fortune ebuild does not include 'offensive' fortunes."
-	einfo "If you wish to enable this functionality, you must manually edit the"
-	einfo "ebuild. The comments inside are self explainatory."
+	einfo "If you wish to enable this functionality, you must add the 'offensive' local"
+	einfo "USE flag to your make.conf."
 }
 
 src_unpack() {

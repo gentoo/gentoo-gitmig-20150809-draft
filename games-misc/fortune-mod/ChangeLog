@@ -1,6 +1,12 @@
 # ChangeLog for games-misc/fortune-mod
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.3 2004/05/12 21:29:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.4 2004/05/13 07:52:01 kumba Exp $
+
+  13 May 2004; Joshua Kinard <kumba@gentoo.org>
+  fortune-mod-1.0.9708-r1.ebuild, fortune-mod-1.99.1.ebuild:
+  Fixed the ebuild so S gets set properly, otherwise the ebuild will fail to cd
+  to the right dir and apply patches. Also added ~sparc and ~mips to the newer
+  1.99 ebuild.
 
 *fortune-mod-1.99.1 (12 May 2004)
 
