@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.8 2004/04/03 17:00:17 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.9 2004/05/09 22:04:01 weeve Exp $
+
+  09 May 2004; Jason Wever <weeve@gentoo.org> rhino-1.5-r5.ebuild:
+  Added ~sparc keyword to resolve bug #50403.
 
 *rhino-1.5-r5 (03 Apr 2004)
 
