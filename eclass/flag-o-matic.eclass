@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.56 2004/06/10 00:24:57 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.57 2004/06/10 00:41:44 lv Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -304,7 +304,7 @@ has_ssp() {
 has_m64() {
 	temp=`mktemp`
 	echo "int main() { return(0); }" > ${temp}.c
-	gcc -m64 -o /dev/null ${temp}.c > /dev/null 2>&1
+	${CC/ .*/} -m64 -o /dev/null ${temp}.c > /dev/null 2>&1
 	ret=$?
 	rm -f ${temp}.c
 	[ "$ret" != "1" ] && return 0
@@ -314,7 +314,7 @@ has_m64() {
 has_m32() {
 	temp=`mktemp`
 	echo "int main() { return(0); }" > ${temp}.c
-	gcc -m32 -o /dev/null ${temp}.c > /dev/null 2>&1
+	${CC/ .*/} -m32 -o /dev/null ${temp}.c > /dev/null 2>&1
 	ret=$?
 	rm -f ${temp}.c
 	[ "$ret" != "1" ] && return 0
