@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xearth/xearth-1.1.ebuild,v 1.6 2002/12/18 08:16:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xearth/xearth-1.1.ebuild,v 1.7 2002/12/18 15:03:36 vapier Exp $
 
 HOMEPAGE="http://www.cs.colorado.edu/~tuna/xearth/"
 DESCRIPTION="Xearth sets the X root window to an image of the Earth"
@@ -22,8 +22,7 @@ src_compile() {
 }
 
 src_install() {
-	mv xearth.man xearth.1
-	doman xearth.1
+	newman xearth.man xearth.1
 	dobin xearth
 	dodoc BUILT-IN GAMMA-TEST HISTORY INSTALL README
 }
