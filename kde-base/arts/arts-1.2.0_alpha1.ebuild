@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0_alpha1.ebuild,v 1.2 2003/09/12 11:43:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0_alpha1.ebuild,v 1.3 2003/09/16 03:39:11 caleb Exp $
 inherit kde-base flag-o-matic
 
 IUSE="alsa oggvorbis artswrappersuid mad"
@@ -15,7 +15,7 @@ SRC_URI="mirror://kde/unstable/3.1.91/src/${PN}-${MY_PV}.tar.bz2"
 HOMEPAGE="http://multimedia.kde.org"
 DESCRIPTION="aRts, the KDE sound (and all-around multimedia) server/output manager"
 
-KEYWORDS="~x86 ~ppc -sparc ~alpha ~hppa"
+KEYWORDS="~x86"
 
 newdepend "alsa? ( media-libs/alsa-lib )
 	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
