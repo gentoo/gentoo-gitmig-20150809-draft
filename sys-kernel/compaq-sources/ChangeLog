@@ -1,13 +1,13 @@
 # ChangeLog for sys-kernel/compaq-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/ChangeLog,v 1.8 2004/06/19 10:45:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/compaq-sources/ChangeLog,v 1.9 2004/06/19 11:09:38 plasmaroo Exp $
 
 *compaq-sources-2.4.9.32.7-r6 (19 Jun 2004)
 
   19 Jun 2004; <plasmaroo@gentoo.org> -compaq-sources-2.4.9.32.7-r5.ebuild,
   +compaq-sources-2.4.9.32.7-r6.ebuild,
   +files/compaq-sources-2.4.9.32.7.I2C_Limits.patch:
-  Added a patch to add in missing sanity checks that were added upstream in
+  Added a patch to add in missing I2C sanity checks that were added upstream in
   2.4.21.
 
 *compaq-sources-2.4.9.32.7-r5 (29 May 2004)
