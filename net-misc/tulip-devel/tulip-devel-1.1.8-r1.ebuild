@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tulip-devel/tulip-devel-1.1.8-r1.ebuild,v 1.3 2004/10/01 23:40:55 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tulip-devel/tulip-devel-1.1.8-r1.ebuild,v 1.4 2004/11/10 21:43:28 mr_bones_ Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~ppc"
 
 IUSE=""
-DEPEND=">=virtual/kernel-2.3.50"
+DEPEND=">=virtual/linux-sources-2.3.50"
 
 S=${WORKDIR}/${MY_P}/src
 

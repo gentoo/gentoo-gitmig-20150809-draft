@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3f6412c460a2851250a8cd0b3ddc8d1b tulip-devel-1.1.8-r1.ebuild 1219
-MD5 bf95a898b7d96726a98d8e0620d0f8b7 ChangeLog 1100
+MD5 b7d0dde7c78943cb5450b53edb3a5a5a ChangeLog 1231
+MD5 04b32f8692e7d30c649b14c4ef974466 tulip-devel-1.1.8-r1.ebuild 1228
 MD5 0edaac022955356a70882b61be127202 files/digest-tulip-devel-1.1.8-r1 62
 MD5 e26c48157c28af3ca1baef77dcefe4f2 files/tulip-devel-1.1.8-r1-gentoo.patch 737
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBXesXI7fK2cqeyXkRAtoVAJ9TvuRA4JInB5T9UNd9e17XgCjQFACeKPW8
-GNlFEwmT6ODcrNejbdLAaC8=
-=9RCz
------END PGP SIGNATURE-----
