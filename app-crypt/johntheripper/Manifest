@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 1da04b916dc5d18f323ec583c17a7208 metadata.xml 259
 MD5 dfb8cfe55b695afa3d3fd24deabc7279 johntheripper-1.6.ebuild 1329
-MD5 ef754e10a462ee9d5fc5e21e3a2ac0c4 ChangeLog 4872
+MD5 c4c8d334d8344af7190412d8a84b935f ChangeLog 4886
 MD5 ae1423d50cca4adb720f8019a67ba964 johntheripper-1.6-r3.ebuild 2638
 MD5 8ec6cb7c9d3104b06894036951ba7c69 johntheripper-1.6.37_p1.ebuild 4182
 MD5 2a2c77e0b8b4692a9e20de4d68983071 files/digest-johntheripper-1.6 123
@@ -13,7 +13,7 @@ MD5 c44028343f13bf0e4ff431cca80988d9 files/digest-johntheripper-1.6-r3 126
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB1kjnmdTrptrqvGERAi05AKCYD/JCPeqOP/Id627SEctir14arwCfUPT9
-hXcB+/onxUKLSxjVqZXMmfM=
-=dUeV
+iD8DBQFB1ks6mdTrptrqvGERAutoAKCeb+ocDkatvOFvf90VeQBnp1hkpQCfdr2f
+2Oea5xDjm2GUBYpkzHSQqCs=
+=0dub
 -----END PGP SIGNATURE-----
