@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3178 2004/09/22 21:07:12 kito Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3179 2004/09/23 18:35:54 pauldv Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -187,6 +187,7 @@ dev-lang/fpc-source
 # <pauldv@gentoo.org> (19 Aug 2004)
 # Mask the release candidate
 =dev-util/subversion-1.1.0_rc2
+=dev-util/subversion-1.1.0_rc4
 
 # <agriffis@gentoo.org> (19 Aug 2004)
 # Masking because this package is not ready for prime, but want it in
