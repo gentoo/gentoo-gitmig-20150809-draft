@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/nomadii-utils
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/ChangeLog,v 1.1 2002/07/04 18:37:07 nitro Exp $
+
+*nomadii-utils-0.8 (04 Jul 2002)
+
+  01 Feb 2002; Kyle Manna <nitro@gentoo.org> nomadii-utils-0.8.ebuild ChangeLog:
+
+  Inital release of ChangeLog and ebuild
