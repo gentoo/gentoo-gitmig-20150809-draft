@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.9 2004/04/13 21:26:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.10 2004/05/01 00:59:16 cyfred Exp $
+
+*xlockmore-5.12 (01 May 2004)
+
+  01 May 2004; Andrew Bevitt <cyfred@gentoo.org>; +xlockmore-5.12.ebuild:
+  Version bump, can only test on x86 at this time, so removing other keywords.
 
   13 Apr 2004; Jason Wever <weeve@gentoo.org> xlockmore-5.11.1.ebuild:
   Stable on sparc.
