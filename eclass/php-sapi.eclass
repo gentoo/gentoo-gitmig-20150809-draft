@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.6 2004/02/05 01:48:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.7 2004/02/05 06:09:18 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -41,7 +41,7 @@ IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap infor
 # we need db-1.* for ndbm
 # and then either of db3 or db4
 IUSE="${IUSE} berkdb"
-RDEPEND="${RDEPEND} berkdb? ( =sys-libs/db-1.* 
+RDEPEND="${RDEPEND} berkdb? ( =sys-libs/db-1* 
 							  || ( >=sys-libs/db-4.0.14-r2 
 								   >=sys-libs/db-3.2.9-r9
 							     ) 
