@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.3.ebuild,v 1.2 2000/11/01 06:27:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.3.ebuild,v 1.3 2000/12/19 01:07:22 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -26,7 +26,7 @@ src_compile() {
 src_install () {
 
     cd ${S}
-    try make DESTDIR=${D} install
+    try make prefix=${D}/usr/X11R6 install
     dodoc COPYING* ChangeLog GTKDPS-VERSION HACKING NEWS README TODO
 }
 
