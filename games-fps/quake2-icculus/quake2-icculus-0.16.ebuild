@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r2.ebuild,v 1.2 2005/01/03 23:52:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.ebuild,v 1.1 2005/01/03 23:52:32 vapier Exp $
 
-inherit eutils gcc games
+inherit eutils games
 
 MY_P="quake2-r${PV}"
 DESCRIPTION="The icculus.org linux port of iD's quake2 engine"
@@ -14,8 +14,8 @@ SRC_URI="http://icculus.org/quake2/files/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha amd64"
-IUSE="arts svga sdl aalib dedicated opengl noqmax rogue xatrix"
+KEYWORDS="alpha amd64 ppc sparc x86"
+IUSE="arts svga sdl aalib dedicated opengl noqmax rogue xatrix ipv6"
 
 # default to X11 if svga/opengl/sdl/aalib/dedicated are not in USE
 RDEPEND="virtual/libc
@@ -31,66 +31,40 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-pkg_setup() {
-	if [ -e /etc/env.d/09opengl ]
-	then
-		# Set up X11 implementation
-		X11_IMPLEM_P="$(portageq best_version "${ROOT}" virtual/x11)"
-		X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
-		X11_IMPLEM="${X11_IMPLEM##*\/}"
-		einfo "X11 implementation is ${X11_IMPLEM}."
-
-		VOID=$(cat /etc/env.d/09opengl | grep ${X11_IMPLEM})
-
-		USING_X11=$?
-		if [ "${USING_X11}" -eq "1" ]
-		then
-			GL_IMPLEM=$(cat /etc/env.d/09opengl | cut -f5 -d/)
-			opengl-update ${X11_IMPLEM}
-		fi
-	else
-		die "Could not find /etc/env.d/09opengl. Please run opengl-update."
-	fi
-}
-
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd ${S}
-	epatch "${FILESDIR}/${PV}-Makefile-noopts.patch"
-	epatch "${FILESDIR}/${PV}-Makefile-optflags.patch"
-	epatch "${FILESDIR}/${PV}-Makefile-amd64.patch"
-	epatch "${FILESDIR}/${PV}-gentoo-path.patch"
-	epatch "${FILESDIR}/${PV}-amd64.patch"
-	sed -i \
-		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/quake2-data:" \
-		-e "s:GENTOO_LIBDIR:${GAMES_LIBDIR}/quake2-icculus:" \
-		src/qcommon/files.c \
-		|| die "sed src/qcommon/files.c failed"
-	sed -i \
-		-e "s:GENTOO_LIBDIR:${GAMES_LIBDIR}/quake2-icculus:" \
-		src/linux/vid_so.c \
-		|| die "sed src/linux/vid_so.c failed"
+	epatch "${FILESDIR}"/${PV}-Makefile-gentoo-opts.patch
+	epatch "${FILESDIR}"/${PV}-gentoo-path.patch
+	cat << EOF > src/linux/gentoo-paths.h
+#define GENTOO_DATADIR "${GAMES_DATADIR}/quake2-data"
+#ifdef QMAX
+#define GENTOO_LIBDIR "${GAMES_LIBDIR}/${PN}-qmax"
+#else
+#define GENTOO_LIBDIR "${GAMES_LIBDIR}/${PN}"
+#endif
+EOF
 
-	ln -s $(which echo) ${T}/more
-	for g in $(useq rogue && echo rogue) $(useq xatrix && echo xatrix); do
-		mkdir -p ${S}/src/${g}
-		cd ${S}/src/${g}
-		unpack ${g}src320.shar.Z
+	# Now we deal with the silly rogue / xatrix addons ... this is ugly :/
+	ln -s $(which echo) "${T}"/more
+	for g in rogue xatrix ; do
+		use ${g} || continue
+		mkdir -p "${S}"/src/${g}
+		cd "${S}"/src/${g}
+		local shar=${g}src320.shar
+		unpack ${shar}.Z
 		sed -i \
-			-e 's:^read ans:ans=yes :' ${g}src320.shar \
-			|| die "sed ${g}src320.shar failed"
-		env PATH="${T}:${PATH}" unshar ${g}src320.shar
-		rm ${g}src320.shar
+			-e 's:^read ans:ans=yes :' ${shar} \
+			|| die "sed ${shar} failed"
+		echo ">>> Unpacking ${shar} to ${PWD}"
+		env PATH="${T}:${PATH}" unshar ${shar} || die "unpacking ${shar} failed"
+		rm ${shar}
 	done
-	if use rogue ; then
-		sed -i \
-			-e 's:<nan\.h>:<bits/nan.h>:' ${S}/src/rogue/g_local.h \
-				|| die "sed g_local.h failed"
-	fi
+	use rogue && epatch ${FILESDIR}/${PV}-rogue-nan.patch
 }
 
 yesno() {
-	for f in $@ ; do
+	for f in "$@" ; do
 		if ! useq $f ; then
 			echo NO
 			return 1
@@ -108,11 +82,8 @@ src_compile() {
 	# rogue fails to build
 	for BUILD_QMAX in YES NO ; do
 		use noqmax && [ "${BUILD_QMAX}" == "YES" ] && continue
-		[ "${BUILD_QMAX}" == "YES" ] \
-			&& echo "#define GENTOO_LIBDIR \"${GAMES_LIBDIR}/${PN}-qmax\"" > src/linux/gentoo-libdir.h \
-			|| echo "#define GENTOO_LIBDIR \"${GAMES_LIBDIR}/${PN}\"" > src/linux/gentoo-libdir.h
 		make clean || die "cleaning failed"
-		make build_release \
+		emake -j1 build_release \
 			BUILD_SDLQUAKE2=$(yesno sdl) \
 			BUILD_SVGA=$(yesno svga) \
 			BUILD_X11=${BUILD_X11} \
@@ -126,13 +97,11 @@ src_compile() {
 			BUILD_DEDICATED=YES \
 			BUILD_AA=$(yesno aalib) \
 			BUILD_QMAX=${BUILD_QMAX} \
-			HAVE_IPV6=NO \
-			BUILD_ARTS=NO \
-			SDLDIR=/usr/lib \
+			HAVE_IPV6=$(yesno ipv6) \
 			BUILD_ARTS=$(yesno arts) \
+			SDLDIR=/usr/lib \
 			OPTCFLAGS="${CFLAGS}" \
 			|| die "make failed"
-			#HAVE_IPV6=$(yesno ipv6) \
 		# now we save the build dir ... except for the object files ...
 		rm release*/*/*.o
 		mv release* my-rel-${BUILD_QMAX}
@@ -173,10 +142,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ "${USING_X11}" -eq "1" ]
-	then
-		opengl-update ${GL_IMPLEM}
-	fi
 	games_pkg_postinst
 	einfo "Go read /usr/share/doc/${PF}/README-postinstall.gz right now!"
 	einfo "It's important- This install is just the engine, you still need"

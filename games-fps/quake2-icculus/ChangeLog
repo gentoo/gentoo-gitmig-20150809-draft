@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/quake2-icculus
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.10 2004/11/27 15:46:27 wolf31o2 Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.11 2005/01/03 23:52:32 vapier Exp $
+
+*quake2-icculus-0.16 (03 Jan 2005)
+
+  03 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/0.16-Makefile-gentoo-opts.patch, +files/0.16-gentoo-path.patch,
+  +files/0.16-rogue-nan.patch, +quake2-icculus-0.16.ebuild:
+  Version bump. Also update the gentoo path patch to fix game .so searching
+  #42389 and video .so searching #60752.
 
 *quake2-icculus-0.15-r2 (27 Nov 2004)
 

@@ -1,0 +1,111 @@
+--- src/qcommon/files.c.orig	2004-01-02 01:55:47.219787792 -0500
++++ src/qcommon/files.c	2004-01-02 01:55:55.622510384 -0500
+@@ -0,0 +0,1 @@
++#include "../linux/gentoo-paths.h"
+@@ -60,6 +60,7 @@
+ 
+ char	fs_gamedir[MAX_OSPATH];
+ cvar_t	*fs_basedir;
++cvar_t	*fs_libdir;
+ cvar_t	*fs_cddir;
+ cvar_t	*fs_gamedirvar;
+ 
+@@ -696,6 +696,7 @@
+ 		if (fs_cddir->string[0])
+ 			FS_AddGameDirectory (va("%s/%s", fs_cddir->string, dir) );
+ 		FS_AddGameDirectory (va("%s/%s", fs_basedir->string, dir) );
++		FS_AddGameDirectory (va("%s/%s", fs_libdir->string, dir) );
+ 		FS_AddHomeAsGameDirectory(dir);
+ 	}
+ }
+@@ -898,7 +899,8 @@
+ 	// basedir <path>
+ 	// allows the game to run from outside the data tree
+ 	//
+-	fs_basedir = Cvar_Get ("basedir", ".", CVAR_NOSET);
++	fs_basedir = Cvar_Get ("basedir", GENTOO_DATADIR, CVAR_NOSET);
++	fs_libdir = Cvar_Get ("libdir", GENTOO_LIBDIR, CVAR_NOSET);
+ 
+ 	//
+ 	// cddir <path>
+@@ -913,6 +915,7 @@
+ 	// add baseq2 to search path
+ 	//
+ 	FS_AddGameDirectory (va("%s/"BASEDIRNAME, fs_basedir->string) );
++	FS_AddGameDirectory (va("%s/"BASEDIRNAME, fs_libdir->string) );
+ 
+ 	//
+ 	// then add a '.quake2/baseq2' directory in home directory by default
+--- src/linux/vid_so.c.orig	2004-01-02 10:37:46.527355832 -0500
++++ src/linux/vid_so.c	2004-01-02 10:39:23.890554376 -0500
+@@ -0,0 +0,1 @@
++#include "gentoo-paths.h"
+@@ -231,13 +232,17 @@
+ 	//regain root
+ 	seteuid(saved_euid);
+ 
+-	path = Cvar_Get ("basedir", ".", CVAR_NOSET)->string;
++	path = Cvar_Get ("basedir", GENTOO_DATADIR, CVAR_NOSET)->string;
+ 
+ 	snprintf (fn, MAX_OSPATH, "%s/%s", path, name );
+ 	
+ 	if (stat(fn, &st) == -1) {
+-		Com_Printf( "LoadLibrary(\"%s\") failed: %s\n", name, strerror(errno));
+-		return false;
++		path = Cvar_Get ("libdir", GENTOO_LIBDIR, CVAR_NOSET)->string;
++		snprintf (fn, MAX_OSPATH, "%s/%s", path, name );
++		if (stat(fn, &st) == -1) {
++			Com_Printf( "LoadLibrary(\"%s\") failed: %s\n", name, strerror(errno));
++			return false;
++		}
+ 	}
+ 	
+ 	// permission checking
+@@ -498,13 +498,19 @@
+ 	char	*path;
+ 	struct stat st;
+ 
+-	path = Cvar_Get ("basedir", ".", CVAR_NOSET)->string;
++	path = Cvar_Get ("basedir", GENTOO_DATADIR, CVAR_NOSET)->string;
+ 	snprintf (fn, MAX_OSPATH, "%s/ref_%s.so", path, ref );
+ 	
+ 	if (stat(fn, &st) == 0)
+ 		return true;
+-	else
+-		return false;
++	else {
++		path = Cvar_Get ("libdir", GENTOO_LIBDIR, CVAR_NOSET)->string;
++		snprintf (fn, MAX_OSPATH, "%s/ref_%s.so", path, ref );
++		if (stat(fn, &st) == 0)
++			return true;
++		else
++			return false;
++	}
+ }
+ 
+ /*****************************************************************************/
+--- src/linux/qgl_linux.c.orig	2005-01-03 18:12:07.504634768 -0500
++++ src/linux/qgl_linux.c	2005-01-03 18:13:47.662408472 -0500
+@@ -0,0 +0,1 @@
++#include "../linux/gentoo-paths.h"
+@@ -3006,13 +3006,17 @@
+ //				dllname, dlerror());
+ 
+ 		// try basedir next
+-		path = ri.Cvar_Get ("basedir", ".", CVAR_NOSET)->string;
++		path = ri.Cvar_Get ("basedir", GENTOO_DATADIR, CVAR_NOSET)->string;
+ 		
+ 		snprintf (fn, MAX_OSPATH, "%s/%s", path, dllname );
+ 
+ 		if ( ( glw_state.OpenGLLib = dlopen( fn, RTLD_LAZY ) ) == 0 ) {
+-			ri.Con_Printf( PRINT_ALL, "%s\n", dlerror() );
+-			return false;
++			path = ri.Cvar_Get ("libdir", GENTOO_LIBDIR, CVAR_NOSET)->string;
++			snprintf (fn, MAX_OSPATH, "%s/%s", path, dllname );
++			if ( ( glw_state.OpenGLLib = dlopen( fn, RTLD_LAZY ) ) == 0 ) {
++				ri.Con_Printf( PRINT_ALL, "%s\n", dlerror() );
++				return false;
++			}
+ 		}
+ 		Com_Printf ("Using %s for OpenGL...", fn); 
+ 	} else {
