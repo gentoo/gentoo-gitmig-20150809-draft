@@ -1,6 +1,11 @@
 # ChangeLog for games-server/hlstats
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/hlstats/ChangeLog,v 1.7 2005/02/12 01:42:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/hlstats/ChangeLog,v 1.8 2005/03/11 18:12:11 mr_bones_ Exp $
+
+*hlstats-1.31 (11 Mar 2005)
+
+  11 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> +hlstats-1.31.ebuild:
+  version bump (bug #84878)
 
 *hlstats-1.30 (11 Feb 2005)
 
