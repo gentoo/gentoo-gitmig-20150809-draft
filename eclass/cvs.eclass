@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.29 2002/12/22 12:06:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.30 2002/12/31 21:30:19 cretin Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -256,8 +256,11 @@ if myauth == "ext":
 	child.expect(pexpect.EOF)	
 
 elif myauth == "pserver":
-	mycommand = "su ${ECVS_RUNAS} -c \"cvs login\""
-	child = pexpect.spawn(mycommand)
+	if "${ECVS_RUNAS}" == "`whoami`":
+		mycommand2 = "cvs login"
+	else:
+		mycommand2 = "su ${ECVS_RUNAS} -c \"cvs login\""
+	child = pexpect.spawn(mycommand2)
 	child.expect("CVS password:",mytimeout)
 	child.sendline(mypasswd)
 	child.expect(pexpect.EOF)
