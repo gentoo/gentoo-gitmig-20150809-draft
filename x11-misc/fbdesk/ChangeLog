@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/fbdesk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.9 2004/06/24 22:17:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.10 2004/09/09 17:36:55 sekretarz Exp $
+
+  09 Sep 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/fbdesk-1.1.5-gcc34.patch, fbdesk-1.1.5.ebuild:
+  Fixed gcc-34 compile issues. Bug #53910
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> fbdesk-1.1.5.ebuild:
   Added IUSE=
