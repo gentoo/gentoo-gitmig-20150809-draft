@@ -1,6 +1,16 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.92 2004/11/17 22:14:31 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.93 2004/11/27 10:48:15 mrness Exp $
+
+*ppp-2.4.3 (27 Nov 2004)
+
+  27 Nov 2004; Alin Nastac <mrness@gentoo.org> +files/2.4.3/chat-default,
+  +files/2.4.3/confd.ppp0, +files/2.4.3/ip-down, +files/2.4.3/ip-up,
+  +files/2.4.3/killaddr-smarter.patch, +files/2.4.3/modules.ppp,
+  +files/2.4.3/mpls.patch, +files/2.4.3/net.ppp0, +files/2.4.3/options-pppoe,
+  +files/2.4.3/options-pptp, +files/2.4.3/ppp_flags.patch,
+  +files/2.4.3/pppoe.html, +ppp-2.4.3.ebuild:
+  Import ebuild for 2.4.3 from #72405, thanks to tove <bugs@veller.net>.
 
   18 Nov 2004; Alin Nastac <mrness@gentoo.org> ppp-2.4.2-r10.ebuild,
   ppp-2.4.2-r9.ebuild:
