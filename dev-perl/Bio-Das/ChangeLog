@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Bio-Das
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/ChangeLog,v 1.1 2004/01/09 21:27:06 sediener Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/ChangeLog,v 1.2 2004/03/20 02:57:22 esammer Exp $
+
+  19 Mar 2004; Eric Sammer <esammer@gentoo.org> Bio-Das-0.93.ebuild:
+  Fixed category-less dependencies as per bug #45110
 
 *Bio-Das-0.93 (09 Jan 2004)
 

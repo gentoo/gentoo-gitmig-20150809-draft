@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/Bio-Das-0.93.ebuild,v 1.1 2004/01/09 21:27:06 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/Bio-Das-0.93.ebuild,v 1.2 2004/03/20 02:57:22 esammer Exp $
 
 inherit perl-module
 
-DEPEND=">=Compress-Zlib-1.0
-	>=HTML-Parser-3
-	>=libwww-perl-5
-	>=MIME-Base64-2.12
+DEPEND=">=dev-perl/Compress-Zlib-1.0
+	>=dev-perl/HTML-Parser-3
+	>=dev-perl/libwww-perl-5
+	>=dev-perl/MIME-Base64-2.12
 	"
 
 DESCRIPTION="Interface to Distributed Annotation System"
