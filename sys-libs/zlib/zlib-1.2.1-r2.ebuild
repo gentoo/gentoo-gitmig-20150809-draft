@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r2.ebuild,v 1.12 2004/07/22 05:06:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r2.ebuild,v 1.13 2004/08/15 01:30:39 lv Exp $
 
 inherit eutils flag-o-matic
 
@@ -29,18 +29,26 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-configure.patch
 }
 
+pkg_setup() {
+	# this adds support for installing to lib64/lib32. since only portage
+	# 2.0.51 will have this functionality supported in dolib and friends,
+	# and since it isnt expected that many profiles will define it, we need
+	# to make this variable default to lib.
+	[ -z "${CONF_LIBDIR}" ] && export CONF_LIBDIR="lib"
+}
+
 src_compile() {
-	./configure --shared --prefix=/usr --libdir=/lib || die
+	./configure --shared --prefix=/usr --libdir=/${CONF_LIBDIR} || die
 	emake || die
 	make test || die
 
-	./configure --prefix=/usr --libdir=/lib || die
+	./configure --prefix=/usr --libdir=/${CONF_LIBDIR} || die
 	emake || die
 }
 
 src_install() {
-	einstall libdir=${D}/lib || die
-	rm ${D}/lib/libz.a
+	einstall libdir=${D}/${CONF_LIBDIR} || die
+	rm ${D}/${CONF_LIBDIR}/libz.a
 	into /usr
 	dodir /usr/include
 	insinto /usr/include
@@ -62,9 +70,9 @@ src_install() {
 	# for NFS based /usr
 	into /
 	dolib libz.so.${PV}
-	( cd ${D}/lib ; chmod 755 libz.so.* )
-	dosym libz.so.${PV} /lib/libz.so
-	dosym libz.so.${PV} /lib/libz.so.1
+	( cd ${D}/${CONF_LIBDIR} ; chmod 755 libz.so.* )
+	dosym libz.so.${PV} /${CONF_LIBDIR}/libz.so
+	dosym libz.so.${PV} /${CONF_LIBDIR}/libz.so.1
 	# with an extra symlink at /usr/lib
-	dosym /lib/libz.so.${PV} /usr/lib/libz.so
+	dosym /${CONF_LIBDIR}/libz.so.${PV} /usr/${CONF_LIBDIR}/libz.so
 }
