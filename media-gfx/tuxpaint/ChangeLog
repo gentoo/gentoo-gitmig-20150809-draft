@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/tuxpaint
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.13 2005/03/21 01:35:10 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.14 2005/03/22 21:49:32 luckyduck Exp $
+
+  22 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> tuxpaint-0.9.13-r1.ebuild,
+  tuxpaint-0.9.14.ebuild:
+  added ~amd64 to KEYWORDS, fixes #79703
 
   20 Mar 2005; Leonardo Boshell <leonardop@gentoo.org>
   tuxpaint-0.9.13-r1.ebuild,

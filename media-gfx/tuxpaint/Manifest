@@ -1,8 +1,18 @@
-MD5 3169b7bd368f6450fd70a9287ce7d64d ChangeLog 2067
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 eaabe789a7d87374911c0ce4ef002fae tuxpaint-0.9.14.ebuild 1483
+MD5 f547bdce7bea4bffe3e12bac40e778e8 ChangeLog 2214
 MD5 60d69ee439da76dbf4d88951ef86236a metadata.xml 648
-MD5 7aee18cb989be7a6cf2751bc47e45ea8 tuxpaint-0.9.13-r1.ebuild 1445
-MD5 83d4ae8d732ae19d3323855a234c0e1e tuxpaint-0.9.14.ebuild 1476
+MD5 5c1892d3b8e4ca21e68c1f10debb26da tuxpaint-0.9.13-r1.ebuild 1453
+MD5 b12d971848124691a60da9265ecb86ba files/tuxpaint-0.9.14-gentoo.patch 4511
 MD5 6c694aa3e9399a07cdaa7f82a162b222 files/digest-tuxpaint-0.9.14 68
 MD5 ac7dc281a67f1db989d39470aa12ea8e files/digest-tuxpaint-0.9.13-r1 142
-MD5 b12d971848124691a60da9265ecb86ba files/tuxpaint-0.9.14-gentoo.patch 4511
 MD5 195f5bf3e6bddb622dff7e4c30b81edb files/tuxpaint-0.9.13-fix_error_directives.patch 1300
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCQJLy06ebR+OMO78RAikyAJ9Y2yLoU21+CID741BpGoiwZCT4LwCcDzZi
+b+vNl2Kdg/2gyvVseYASoM4=
+=IGjN
+-----END PGP SIGNATURE-----
