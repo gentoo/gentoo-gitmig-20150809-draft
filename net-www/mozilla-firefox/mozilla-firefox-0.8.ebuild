@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8.ebuild,v 1.5 2004/02/12 16:24:20 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8.ebuild,v 1.6 2004/02/12 16:43:41 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -228,14 +228,14 @@ src_install() {
 	if [ "`use gnome`" ]
 	then
 		insinto /usr/share/pixmaps
-		doins ${S}/build/package/rpm/SOURCES/mozilla-icon.png
-
+		doins ${FILESDIR}/icon/firefox-icon.png
 		# Fix comment of menu entry
 		cd ${S}/build/package/rpm/SOURCES
 		cp mozilla.desktop mozillafirefox.desktop
 		perl -pi -e 's:Name=Mozilla:Name=Mozilla Firefox:' mozillafirefox.desktop
 		perl -pi -e 's:Comment=Mozilla:Comment=Mozilla Firefox Web Browser:' mozillafirefox.desktop
 		perl -pi -e 's:Exec=/usr/bin/mozilla:Exec=/usr/bin/firefox:' mozillafirefox.desktop
+		perl -pi -e 's:Icon=mozilla-icon.png:Icon=firefox-icon.png:' mozillafirefox.desktop
 		cd ${S}
 		insinto /usr/share/gnome/apps/Internet
 		doins ${S}/build/package/rpm/SOURCES/mozillafirefox.desktop

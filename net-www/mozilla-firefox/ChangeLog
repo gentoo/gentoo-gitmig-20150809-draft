@@ -1,5 +1,9 @@
 
 
+  12 Feb 2004; Brad Laue <brad@gentoo.org> mozilla-firefox-0.8.ebuild,
+  files/icon/firefox-icon.png:
+  Use the proper firefox icon in the GNOME menu rather than the Mozilla one.
+
   12 Feb 2004; Sven Blumenstein <bazik@gentoo.org> mozilla-firefox-0.8.ebuild:
   Here you got a sparc-cookie, Mr. Firefox.
 
