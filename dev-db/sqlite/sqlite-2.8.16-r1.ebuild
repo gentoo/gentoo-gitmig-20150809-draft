@@ -1,16 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r1.ebuild,v 1.2 2005/04/04 13:34:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r1.ebuild,v 1.3 2005/04/06 18:36:09 arj Exp $
 
 inherit eutils toolchain-funcs
 
-IUSE="nls"
+IUSE="nls doc tcltk"
 
 DESCRIPTION="SQLite: An SQL Database Engine in a C Library."
 SRC_URI="http://www.sqlite.org/${P}.tar.gz"
 HOMEPAGE="http://www.sqlite.org"
 DEPEND="virtual/libc
-	dev-lang/tcl"
+	doc? (dev-lang/tcl)
+	tcltk? (dev-lang/tcl)"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ~ppc sparc ~alpha ~arm ~mips ~hppa ~ppc64 amd64 ~ppc-macos"
@@ -42,11 +43,17 @@ src_compile() {
 	myconf="--enable-incore-db --enable-tempdb-in-ram"
 	myconf="${myconf} `use_enable nls utf8`"
 	econf ${myconf} || die
-	emake all doc || die
+	emake all || die
 
+	if use doc; then
+	emake doc || die
+	fi
+
+	if use tcltk; then
 	cp -P ${FILESDIR}/maketcllib.sh ${S}
 	chmod +x ./maketcllib.sh
 	./maketcllib.sh
+	fi
 }
 
 src_install () {
@@ -57,10 +64,15 @@ src_install () {
 	dobin lemon
 	dodoc README VERSION
 	doman sqlite.1
+
+	if use doc; then
 	docinto html
 	dohtml doc/*.html doc/*.txt doc/*.png
+	fi
 
+	if use tcltk; then
 	mkdir ${D}/usr/lib/tclsqlite${PV}
 	cp ${S}/tclsqlite.so ${D}/usr/lib/tclsqlite${PV}/
 	cp ${S}/pkgIndex.tcl ${D}/usr/lib/tclsqlite${PV}/
+	fi
 }

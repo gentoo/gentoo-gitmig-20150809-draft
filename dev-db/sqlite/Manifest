@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c341f189d403c53488204b63d57880b8 ChangeLog 10369
 MD5 4d4bfa913883e6229573e79b6f02aa3b metadata.xml 275
-MD5 fdbecebdb331496cd81f02ea4487e430 sqlite-2.8.13.ebuild 843
-MD5 99bf2a671c91f7499255003439d5eac0 sqlite-2.8.14.ebuild 862
+MD5 19a44977f4b11ba192cc0430ce0a1908 sqlite-2.8.16-r1.ebuild 1765
 MD5 78d3fa35ae4558e4a5add1fd47fd814f sqlite-2.8.15.ebuild 969
-MD5 bcc1b77342a62ecdd614e6ced4fb6f5e sqlite-3.2.1-r1.ebuild 1849
+MD5 fdbecebdb331496cd81f02ea4487e430 sqlite-2.8.13.ebuild 843
+MD5 86ad2d2037d8bd1b5b6b901a2f8a773f sqlite-3.2.1-r1.ebuild 1666
 MD5 8cda692208b4f43344d30e5bfa2ee396 sqlite-2.8.16.ebuild 1402
-MD5 7344521ba94c1c7d5ce954c14fa4f197 sqlite-2.8.16-r1.ebuild 1622
-MD5 c35f34620d18893001720951f8ea0c73 files/digest-sqlite-2.8.13 65
+MD5 65a4c5f63d311f330c19f51cbfff3354 ChangeLog 10693
+MD5 99bf2a671c91f7499255003439d5eac0 sqlite-2.8.14.ebuild 862
 MD5 c9c200833c7c14eb4d750bb00455199e files/digest-sqlite-2.8.14 65
-MD5 b4031f19b8a32fa2b9dd4dfaf4b57ad0 files/digest-sqlite-2.8.15 65
-MD5 9dce926cc47853cb563ab467d1c5ba28 files/digest-sqlite-3.2.1-r1 65
-MD5 d0fc4c53a61d386992d16680140548d0 files/maketcllib.sh 879
-MD5 217c8f27a3185a30858423e31e1aa4d9 files/sqlite-2.8.15-alignement-fix.patch 538
-MD5 3f0417272ef2e01ef38d27021a93aeaf files/digest-sqlite-2.8.16 65
+MD5 c35f34620d18893001720951f8ea0c73 files/digest-sqlite-2.8.13 65
 MD5 60fec205107aa53f0cf83d62c2300183 files/sqlite-2.8.16-multilib.patch 4038
+MD5 217c8f27a3185a30858423e31e1aa4d9 files/sqlite-2.8.15-alignement-fix.patch 538
 MD5 3f0417272ef2e01ef38d27021a93aeaf files/digest-sqlite-2.8.16-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCUUKDKRy60XGEcJIRAjzrAKCOAS9vccHrs2sj1osSRu5QNBkj9QCgnMnj
-fOS7/mskKtY5VOKiUpGOOV4=
-=Pbnj
------END PGP SIGNATURE-----
+MD5 9dce926cc47853cb563ab467d1c5ba28 files/digest-sqlite-3.2.1-r1 65
+MD5 b4031f19b8a32fa2b9dd4dfaf4b57ad0 files/digest-sqlite-2.8.15 65
+MD5 3f0417272ef2e01ef38d27021a93aeaf files/digest-sqlite-2.8.16 65
+MD5 d0fc4c53a61d386992d16680140548d0 files/maketcllib.sh 879

@@ -1,7 +1,14 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.73 2005/04/04 13:34:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.74 2005/04/06 18:36:09 arj Exp $
 
+  05 Apr 2005; Anders Rune Jensen <arj@gentoo.org>
+  sqlite-2.8.16-r1.ebuild, sqlite-3.2.1-r1.ebuild:
+  Add useflag doc to install html documentation. This removes the
+  dependency on tcl by default. Thanks to Clinton James for the
+  suggestion. Add doc flag to 3.2.1-r1 as 3.2.1 now supports generating
+  documentation again.
+	
   04 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   sqlite-2.8.16-r1.ebuild:
   Stable on sparc
