@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/winex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.29 2003/07/17 04:44:47 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.30 2003/07/29 06:49:33 coronalvr Exp $
+
+*winex-3000 (29 Jul 2003)
+
+  29 Jul 2003; Alex Veber <coronalvr@gentoo.org> winex-20021123.ebuild,
+  winex-20030328.ebuild, winex-3000.ebuild:
+  removed all versions of winex, only a fake package is left.
 
   16 Jul 2003; pfeifer <pfeifer@gentoo.org> All winex ebuilds:
   added !>sys-libs/glibc-2.3.2 to ebuild depend since it does not work
