@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.0.ebuild,v 1.1 2003/10/17 16:39:40 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.0.ebuild,v 1.2 2003/10/18 21:34:47 weeve Exp $
 
 IUSE="nls"
 
@@ -25,6 +25,10 @@ src_unpack() {
 	epatch ${FILESDIR}/gdb-6.0-threadver-aug2003.patch
 	epatch ${FILESDIR}/gdb-6.0-coreutils.patch
 	epatch ${FILESDIR}/gdb-6.0-info.patch
+
+	if [ "${ARCH}" = "sparc" ]; then
+		epatch ${FILESDIR}/${PN}-5.3-sparc-nat-asm.patch
+	fi
 }
 
 src_compile() {
