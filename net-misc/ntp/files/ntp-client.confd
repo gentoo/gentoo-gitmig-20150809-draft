@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2         
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntp-client.confd,v 1.9 2004/10/28 12:25:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntp-client.confd,v 1.10 2005/01/28 22:37:09 vapier Exp $
 
 # Command to run to set the clock initially
 # Most people should just leave this line alone ...
@@ -9,9 +9,10 @@
 NTPCLIENT_CMD="ntpdate"
 
 # Options to pass to the above command
-# Most people should just uncomment this variable and
-# change 'someserver' to a valid hostname which you
-# can aquire from the URL's below
+# This default setting should work fine but you should
+# change the default 'pool.ntp.org' to something closer
+# to your machine.  See http://www.pool.ntp.org/ or
+# try running `netselect -s 3 pool.ntp.org`.
 NTPCLIENT_OPTS="-Q -b -u pool.ntp.org"
 
 # How long to wait (in seconds) before giving up.
@@ -19,10 +20,3 @@ NTPCLIENT_OPTS="-Q -b -u pool.ntp.org"
 # really available but you have your net interface
 # come up with say a static IP.
 NTPCLIENT_TIMEOUT=30
-
-##
-# A list of available servers can be found here:
-# http://www.pool.ntp.org/
-# A good way to get servers for your machine is:
-# netselect -s 3 pool.ntp.org
-##
