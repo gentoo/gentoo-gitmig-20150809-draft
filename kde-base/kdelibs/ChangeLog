@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.26 2002/11/14 07:38:44 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.27 2002/11/20 23:07:10 hannes Exp $
+
+  21 Nov 2002; Hannes Mehnert <hannes@gentoo.org> kdelibs-3.0.4-r1.ebuild:
+  fixed dependencies to =libxml2-2.4.24 and =libxslt-1.0.20 (newer libs are
+  broken for kde).
 
 *kdelibs-3.0.4-r1 (14 Nov 2002)
 
