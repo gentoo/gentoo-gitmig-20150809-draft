@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/cube
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/ChangeLog,v 1.2 2003/09/10 16:04:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/ChangeLog,v 1.3 2004/01/05 05:30:17 vapier Exp $
+
+*cube-20031223 (05 Jan 2004)
+
+  05 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Ugh, dont know what i was thinking ... the old ebuild was ugly as
+  hell.  This new one should be nicer :) #36807.
 
 *cube-20021020-r2 (03 Mar 2003)
 

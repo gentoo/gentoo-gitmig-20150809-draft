@@ -1,0 +1,3 @@
+#!/bin/sh
+cd GENTOO_DATADIR
+exec GENTOO_LIBDIR/cube_server "$@"
