@@ -77,9 +77,6 @@ mozctl - Adds Pango like module to mozilla (???)
 mozilla - Adds mozilla support
 mozirc - Adds IRC (Internet Relay Chat) module to mozilla
 mozxmlterm - Adds Xterm like terminal with XML support to mozilla
-mta-ldap - Adds openldap support to postfix or exim
-mta-tls - Adds openssl support to postfix or exim
-mta-mysql - Adds mysql support to postfix or exim
 mysql - Adds mySQL support
 nas - Adds support for network audio sound
 ncurses - Adds ncurses support (console display library)
