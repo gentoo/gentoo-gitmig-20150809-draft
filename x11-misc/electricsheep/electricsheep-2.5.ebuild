@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.5.ebuild,v 1.7 2005/02/15 11:05:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.5.ebuild,v 1.8 2005/03/04 07:16:04 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -39,7 +39,6 @@ DEPEND="virtual/x11
 RDEPEND="virtual/x11
 	dev-libs/expat
 	net-misc/curl
-	media-libs/nas
 	media-gfx/xloadimage
 	media-libs/jpeg
 	media-libs/libpng
