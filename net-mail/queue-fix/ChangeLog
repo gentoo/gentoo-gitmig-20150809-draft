@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/queue-fix
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/ChangeLog,v 1.5 2003/08/29 01:29:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/ChangeLog,v 1.6 2003/10/31 21:05:24 robbat2 Exp $
+
+  31 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> queue-fix-1.4-r2.ebuild,
+  queue-fix-1.4.ebuild:
+  remove old ver
 
   28 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> queue-fix-1.4-r2.ebuild:
   compile fix for coreutils -1 mess
