@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8-r1.ebuild,v 1.4 2004/02/01 11:56:25 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8-r1.ebuild,v 1.5 2004/02/08 13:48:40 azarah Exp $
 
 inherit mount-boot eutils
 
@@ -42,7 +42,10 @@ src_unpack() {
 
 	# Fixup things for glibc-2.3.3 (and later CVS versions of 2.3.2)
 	cd ${S}; epatch ${FILESDIR}/${PN}-glibc233.patch
+	# Fix building against 2.6 headers
 	cd ${S}; epatch ${FILESDIR}/${P}.lvm.2-6headers.patch
+	# Fix creating install dirs, bug #39405
+	cd ${S}; epatch ${FILESDIR}/${P}-create-install-dirs.patch
 }
 
 src_compile() {

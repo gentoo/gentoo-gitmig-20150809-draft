@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.4 2004/02/01 11:56:24 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.5 2004/02/08 13:48:40 azarah Exp $
+
+  08 Feb 2004; Martin Schlemmer <azarah@gentoo.org> lilo-22.5.8-r1.ebuild,
+  files/lilo-22.5.8-create-install-dirs.patch:
+  Fix creation of install dirs, bug #39405. Patch thanks to Ed Grimm
+  <paranoid@gentoo.evolution.tgape.org>.
 
   01 Feb 2004; <plasmaroo@gentoo.org> lilo-22.5.8-r1.ebuild,
   files/lilo-22.5.8.lvm.2-6headers.patch:
