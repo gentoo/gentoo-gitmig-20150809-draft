@@ -1,13 +1,21 @@
-MD5 7e2bb04342d11efdc1e7b11331a37e34 ChangeLog 6571
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 93f42338d3e22994ba07575ba0427e08 ChangeLog 6811
 MD5 9b91ead14acbf0da98d3b33e75c67e79 metadata.xml 306
 MD5 2997845ce6e1b39c6da2f0dc0ee05a08 psi-0.9.1.ebuild 818
 MD5 27eca0b6299f5b4772be31cdef6cd3d3 psi-0.9.2-r1.ebuild 1141
 MD5 7a62550ce4fcae4f3c0eabd2acf58760 psi-0.9.2.ebuild 829
-MD5 176a4b1bfec179777d977148ae4c2c56 psi-0.9.3-r1.ebuild 8123
-MD5 2db834c8195eda5d1d67c9a0e41e3968 psi-0.9.3.ebuild 7936
+MD5 d75ebc7bd79012e5417d59d5adece3a1 psi-0.9.3-r1.ebuild 8124
 MD5 d27222ab1b988a3cb4364e0a66b7ff2a files/digest-psi-0.9.1 62
 MD5 dab2c4d26326cec55a905a1a38351d51 files/digest-psi-0.9.2 63
 MD5 dab2c4d26326cec55a905a1a38351d51 files/digest-psi-0.9.2-r1 63
-MD5 fc8fae7a49b592b4f2c2914c21494c11 files/digest-psi-0.9.3 1924
 MD5 fc8fae7a49b592b4f2c2914c21494c11 files/digest-psi-0.9.3-r1 1924
 MD5 c43f1bfd60e72f69346f0a67288c62e8 files/psi_gpg_fix 1193
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB9UQW8zY1VwezZiERAs7mAJ9YbMsM/iA3mOPv9CjzYn2oRM8mBgCeK67a
+pS2J5U/GqfcXIFtKGtBJhiU=
+=5Gm2
+-----END PGP SIGNATURE-----
