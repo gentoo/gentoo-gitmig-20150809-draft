@@ -1,27 +1,28 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/passivetex-1.4.ebuild,v 1.11 2003/09/05 22:37:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/passivetex-1.4.ebuild,v 1.12 2003/10/22 10:23:54 obz Exp $
 
-S=${WORKDIR}/passivetex
+S=${WORKDIR}
 DESCRIPTION="A namespace-aware XML parser written in Tex"
 SRC_URI="http://users.ox.ac.uk/~rahtz/passivetex/${PN}.zip"
 HOMEPAGE="http://users.ox.ac.uk/~rahtz/passivetex/"
-KEYWORDS="x86 sparc "
-SLOT="0"
 LICENSE="freedist"
 
-DEPEND="app-text/tetex app-arch/unzip"
-RDEPEND="app-text/tetex"
+KEYWORDS="x86 sparc "
+SLOT="0"
+IUSE=""
+
+RDEPEND="virtual/tetex"
+
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 src_unpack() {
-	mkdir ${S}
-	cd ${S}
-	unpack ${A}
-	cp ${FILESDIR}/${P}-Makefile Makefile
-}
 
-src_compile() {
-	make || die
+	unpack ${A}
+	rm -f Makefile
+	cp ${FILESDIR}/${P}-Makefile Makefile
+
 }
 
 src_install () {
@@ -31,8 +32,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	if [ -e /usr/bin/mktexlsr ]
-	then
-		/usr/bin/mktexlsr
-	fi
+
+	[ -e /usr/bin/mktexlsr ] && /usr/bin/mktexlsr
+
 }
