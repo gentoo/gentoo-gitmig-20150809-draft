@@ -1,5 +1,5 @@
-MD5 0b2b9fe7aa17724e4fbc2098aba1820c devtodo-0.1.17.ebuild 957
-MD5 e9072605cbc418d5c433544be26855d1 ChangeLog 1918
+MD5 a908c958f5ca016481ace77f50366cf6 ChangeLog 2010
+MD5 ba3c6b230d8a9ca4da1b9de6c6c5d119 devtodo-0.1.17.ebuild 955
 MD5 cb4cff0cd869696d1207553de89551c1 files/digest-devtodo-0.1.17 66
 MD5 48d3c0943acaae812475061a16fe6eb9 files/devtodo.patch 2359
 MD5 690abe23e1e2a741222bbc156f9e6478 files/devtodo-0.1.11.colourplain.patch 360
