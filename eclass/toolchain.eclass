@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.75 2005/01/11 13:16:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.76 2005/01/12 19:37:49 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1383,6 +1383,10 @@ gcc_movelibs() {
 		# we dont want these in freaky non-versioned paths that dont ever get used
 		fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 32
 		fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 64
+
+		# Stupid REALLY old profiles are so freakin' dumb!  I can't wait till we deprecate 2004.3!
+		fix_freaky_non_versioned_library_paths_that_dont_ever_get_used lib
+
 		# and mips is just freaky in general ;p
 		fix_freaky_non_versioned_library_paths_that_dont_ever_get_used o32
 		# and finally, the non-bitdepth-or-ABI-specific freaky path
