@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.18 2003/03/27 04:28:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.19 2003/03/30 20:03:03 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -111,50 +111,69 @@ HOMEPAGE="http://www.vim.org/"
 SLOT="0"
 LICENSE="vim"
 
-apply_vim_patches() {
-	einfo "Applying various patches (bugfixes/updates)..."
+DEPEND="${DEPEND}
+	>=sys-apps/sed-4
+	sys-devel/autoconf"
 
+apply_vim_patches() {
 	local p
 
 	# Remove patches specifically excluded in the ebuild;
 	# note this approach is deprecated since now the patch scanner
 	# below does all the work.
 	for p in ${EXCLUDE_PATCH}; do
+		einfo "Excluding ${PV}.${p}"
 		rm -f ${WORKDIR}/vimpatches/${PV}.$p.gz
 	done
 
 	# Scan the patches, applying them only to files that either
 	# already exist or that will be created by the patch
-	for p in ${WORKDIR}/vimpatches/${vim_version}.*.gz; do
-		gzip -dc ${p} | awk '
-			$1=="---" && $NF~/^200.$/ {
-				# Second line of a new patch; try to open the file to see
-				# if it exists.
-				if ((getline tryme < $2) == -1) {
-					# Check if it will be created
-					prevline = prevline "\n" $0
-					getline
-					prevline = prevline "\n" $0
-					getline
-					if ($0 != "*** 0 ****") {
-						# Non-existent and not created, stop printing
-						printing = 0
-						next
-					}
+	einfo "Filtering vim patches..."
+	p=${WORKDIR}/${PV}.001-${VIMPATCH}.patch
+	ls ${WORKDIR}/vimpatches | sort | \
+	xargs -i gzip -dc ${WORKDIR}/vimpatches/{} | awk '
+		/^Subject: Patch/ {
+			if (patchnum) {printf "\n" >"/dev/stderr"}
+			patchnum = $3
+			printf "%s:", patchnum >"/dev/stderr"
+		}
+		$1=="***" && $(NF-1)~/^[0-9][0-9]:[0-9][0-9]:[0-9][0-9]$/ {
+			# First line of a patch; suppress printing
+			firstlines = $0
+			next
+		}
+		$1=="---" && $(NF-1)~/^[0-9][0-9]:[0-9][0-9]:[0-9][0-9]$/ {
+			# Second line of a patch; try to open the file to see
+			# if it exists.
+			thisfile = $2
+			if (!seen[thisfile] && (getline tryme < thisfile) == -1) {
+				# Check if it will be created
+				firstlines = firstlines "\n" $0
+				getline
+				firstlines = firstlines "\n" $0
+				getline
+				if ($0 != "*** 0 ****") {
+					# Non-existent and not created, stop printing
+					printing = 0
+					printf " (%s)", thisfile >"/dev/stderr"
+					next
 				}
-				# Print the previous lines and continue
-				print prevline
-				printing = 1
 			}
-			printing { print }
-			{ prevline = $0 }' > ${p%.gz} || die
+			# Print the previous lines and start printing
+			print firstlines
+			printing = 1
+			printf " %s", thisfile >"/dev/stderr"
+			# Remember that we have seen this file
+			seen[thisfile] = 1
+		}
+		printing { print }
+		END { if (patchnum) {printf "\n" >"/dev/stderr"} }
+		' > ${p} || die
 
-		# Apply the patch now that it's filtered
-		[ -s ${p%.gz} ] && epatch ${p%.gz}
-
-		# Conserve disk space
-		rm -f ${p%.gz}
-	done
+	# For reasons yet unknown, epatch fails to apply this cleanly
+	ebegin "Applying filtered vim patches..."
+	patch -f -s -p0 < ${p}
+	eend 0
 }
 
 vim_src_unpack() {
@@ -179,6 +198,15 @@ vim_src_unpack() {
 src_compile() {
 	local myconf
 
+	# Fix bug #18245: Prevent "make" from the following chain:
+	# (1) Notice configure.in is newer than auto/configure
+	# (2) Rebuild auto/configure
+	# (3) Notice auto/configure is newer than auto/config.mk
+	# (4) Run ./configure (with wrong args) to remake auto/config.mk
+	sed -i 's/ auto.config.mk:/:/' src/Makefile
+	touch src/configure.in
+	make -C src auto/configure || die "make auto/configure failed"
+
 	if [ ${PN} = vim-core ]; then
 		myconf="--with-features=tiny \
 			--enable-gui=no \
@@ -187,7 +215,6 @@ src_compile() {
 			--disable-pythoninterp \
 			--disable-rubyinterp \
 			--disable-gpm"
-
 		use nls \
 			&& myconf="${myconf} --enable-multibyte" \
 			|| myconf="${myconf} --disable-nls"
@@ -220,7 +247,6 @@ src_compile() {
 		addwrite $file
 	done
 
-
 	if [ "${PN}" = "gvim" ]; then
 		myconf="${myconf} --with-vim-name=gvim --with-x"
 		if use gtk2; then
@@ -238,9 +264,11 @@ src_compile() {
 
 	econf ${myconf} || die "vim configure failed"
 
-	if [ "${PN}" = "vim-core" ]
-	then
-		make tools || die "vim make failed"
+	# The following allows emake to be used
+	make -C src auto/osdef.h objects
+
+	if [ "${PN}" = "vim-core" ]; then
+		emake tools || die "emake tools failed"
 		cd ${S}
 		rm src/vim
 	else
@@ -251,7 +279,7 @@ src_compile() {
 			>>${WORKDIR}/vim61/src/feature.h
 
 		# Parallel make does not work
-		make || die "vim make failed"
+		emake || die "emake failed"
 	fi
 }
 
