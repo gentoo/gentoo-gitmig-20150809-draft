@@ -1,6 +1,15 @@
 # ChangeLog for net-www/mozilla-launcher
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.11 2004/06/02 04:05:38 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.12 2004/06/02 16:31:38 agriffis Exp $
+
+*mozilla-launcher-1.11 (02 Jun 2004)
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  +mozilla-launcher-1.11.ebuild:
+  Fix bug 52364 by recognizing when fake_user can't find an instance of
+  _MOZILLA_USER in the xprops.  This just goes to show that fake_user is
+  a hack... can't wait for -a to be available in all the
+  mozilla-xremote-client flavors.
 
   02 Jun 2004; Travis Tilley <lv@gentoo.org> mozilla-launcher-1.10.ebuild:
   moving to stable ahead of schedule for the new -bin support
