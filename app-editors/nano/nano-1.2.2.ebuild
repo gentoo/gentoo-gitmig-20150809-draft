@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.2.2.ebuild,v 1.5 2003/08/21 06:13:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.2.2.ebuild,v 1.6 2003/09/02 23:31:17 vapier Exp $
 
 inherit eutils
 
@@ -23,7 +23,8 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}-tabconvert.patch
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-wsconvert.patch
 }
 
 src_compile() {
