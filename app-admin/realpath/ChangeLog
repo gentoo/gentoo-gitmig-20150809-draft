@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/realpath
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/ChangeLog,v 1.9 2004/11/21 04:55:11 ndimiduk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/ChangeLog,v 1.10 2004/12/15 16:23:04 ciaranm Exp $
+
+*realpath-1.9.16 (15 Dec 2004)
+
+  15 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +realpath-1.9.16.ebuild:
+  New version. Added shell-tools herd as maintainer
 
   20 Nov 2004; Nick Dimiduk <ndimiduk@gentoo.org> realpath-1.9.10.ebuild:
   Provided support for ppc-macos's case-insensative file system.
