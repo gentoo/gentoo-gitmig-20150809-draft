@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgconf-java/libgconf-java-2.8.2.ebuild,v 1.1 2004/12/04 13:34:12 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgconf-java/libgconf-java-2.8.2.ebuild,v 1.2 2004/12/28 12:55:12 axxo Exp $
 
 #
-# WARNING: Because java-gnome is a set of bindings to native GNOME libraries, 
-# it has, like any GNOME project, a massive autoconf setup, and unlike many 
+# WARNING: Because java-gnome is a set of bindings to native GNOME libraries,
+# it has, like any GNOME project, a massive autoconf setup, and unlike many
 # other java libraries, it has its own [necessary] `make install` step.
 # As a result, this ebuild is VERY sensitive to the internal layout of the
 # upstream project. Because these issues are currently evolving upstream,
 # simply version bumping this ebuild is not likely to work but FAILURES WILL
 # BE VERY SUBTLE IF IT DOESN NOT WORK.
-# 
+#
 
 inherit eutils gnome.org
 
@@ -21,7 +21,7 @@ RDEPEND=">=gnome-base/gconf-2.8.0
 	>=virtual/jre-1.2"
 
 #
-# Unfortunately we need to run autogen to do the variable substitutions, so 
+# Unfortunately we need to run autogen to do the variable substitutions, so
 # regardless of whether or not there is an upstream ./configure [at time of
 # writing there isn't] we need to recreate it
 #
@@ -44,6 +44,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/libgconf-java-2.8.2_gentoo-PN-SLOT.patch
+	sed -i "s|^\(JAVA_INCLUDES = \)|\1 -I\${JDK_HOME}/include -I\${JDK_HOME}/include/linux/|" src/Makefile.in || die "sed failed"
 }
 
 src_compile() {
@@ -54,7 +55,7 @@ src_compile() {
 	cd ${S}
 
 	#
-	# Ordinarily, moving things around post `make install` would do 
+	# Ordinarily, moving things around post `make install` would do
 	# the trick, but there are paths hard coded in .pc files and in the
 	# `make install` step itself that need to be influenced.
 	#
@@ -63,7 +64,7 @@ src_compile() {
 		--host=${CHOST} \
 		--prefix=/usr \
 			${conf} || die "./configure failed"
-	make || die
+	make || die "compile failed"
 }
 
 src_install() {
@@ -81,7 +82,7 @@ src_install() {
 	# the upstream install scatters things around a bit. The following cleans
 	# that up to make it policy compliant.
 
-	# I originally tried java-pkg_dojar here, but it has a few glitches 
+	# I originally tried java-pkg_dojar here, but it has a few glitches
 	# like not copying symlinks as symlinks which makes a mess.
 
 	dodir /usr/share/${PN}-${SLOT}/lib
@@ -92,7 +93,7 @@ src_install() {
 	cd ${S}/src/java
 	zip -r ${D}/usr/share/${PN}-${SLOT}/src/libgconf-java-${PV}.src.zip *
 
-	# again, with dojar misbehaving, better do to this manually for the 
+	# again, with dojar misbehaving, better do to this manually for the
 	# time being. Yes, this is bad hard coding, but what in this ebuild isn't?
 
 	# karltk: Missing generation of dependencies, should be fixed.
