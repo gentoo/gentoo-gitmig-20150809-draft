@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-libvisual/xmms-libvisual-0.1.6.ebuild,v 1.2 2004/10/02 17:58:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-libvisual/xmms-libvisual-0.1.6.ebuild,v 1.3 2004/10/02 23:25:32 eradicator Exp $
 
 IUSE=""
 
@@ -26,5 +26,10 @@ RDEPEND="media-sound/xmms
 
 src_install() {
 	make install DESTDIR="${D}" || die
+
+	if [ "$(get_libdir)" != "lib" ]; then
+		mv ${D}/usr/lib ${D}/usr/$(get_libdir)
+	fi
+
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
