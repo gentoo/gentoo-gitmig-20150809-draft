@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-extras/linux-extras-2.4.8.8.ebuild,v 1.2 2001/08/23 19:26:06 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-extras/linux-extras-2.4.8.8.ebuild,v 1.3 2001/08/29 16:04:19 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version
 
@@ -403,26 +403,10 @@ src_install() {
 	then
 		dodir /usr/src
 		cd ${S}
-
-		if [ "`use build`" ] ; then
-			
-			#if we install linux-sources in "build" mode, then only kernel headers
-			#are installed.  And they are installed to /usr/include as system defaults
-			#rather than to /usr/src/linux-${KV}
-			
-			dodir /usr/include/linux
-			dodir /usr/include/asm
-			#grab includes and documentation only
-			echo ">>> Copying includes to /usr/include..."
-			cp -ax ${KS}/include/linux/* ${D}/usr/include/linux
-			cp -ax ${KS}/include/asm-i386/* ${D}/usr/include/asm
-		else
-			echo ">>> Copying sources..."
-			cp -ax ${WORKDIR}/* ${D}/usr/src
-		fi
+		echo ">>> Copying sources..."
+		cp -ax ${WORKDIR}/* ${D}/usr/src
 	elif [ "$PN" = "linux-headers" ]
 	then
-		#the linux-headers package basically takes a "snapshot" of your current linux headers
 		dodir /usr/include/linux
 		cp -ax ${KS}/include/linux/* ${D}/usr/include/linux
 		dodir /usr/include/asm
