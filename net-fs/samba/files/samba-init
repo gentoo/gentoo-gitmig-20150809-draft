@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/samba-init,v 1.6 2004/06/12 14:45:13 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/samba-init,v 1.7 2004/07/14 23:37:16 agriffis Exp $
 
 opts="${opts} reload"
 
