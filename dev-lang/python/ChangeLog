@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.53 2003/11/23 11:39:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.54 2003/11/25 22:16:11 brad_mssw Exp $
+
+  25 Nov 2003; Brad House <brad_mssw@gentoo.org> python-2.2.3-r5.ebuild:
+  mark stable on amd64
 
   23 Nov 2003; Alastair Tse <liquidx@gentoo.org> python-2.3.2-r2.ebuild:
   add pkg_setup() to 2.3 as a temporary measure to stop people messing up their
