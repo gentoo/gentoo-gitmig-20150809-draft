@@ -1,6 +1,13 @@
 # ChangeLog for net-im/jabberd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.35 2004/07/08 01:29:16 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.36 2004/08/11 23:58:51 humpback Exp $
+
+*jabberd-2.0-r1 (12 Aug 2004)
+
+  12 Aug 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  +jabberd-2.0-r1.ebuild:
+  Updated to s3, I still need reports on how this works with the older
+  transports, please report back at bug #39395
 
   08 Jul 2004; Gustavo Felisberto <humpback@gentoo.org>; files/jabber.rc6-r7,
   jabberd-1.4.3-r3.ebuild:
