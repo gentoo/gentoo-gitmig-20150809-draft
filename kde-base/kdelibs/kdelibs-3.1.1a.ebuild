@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.1-r1.ebuild,v 1.5 2003/04/08 17:57:27 danarmak Exp $
-inherit kde kde.org 
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.1a.ebuild,v 1.1 2003/04/08 17:57:27 danarmak Exp $
+inherit kde kde.org eutils
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
 IUSE="alsa cups ipv6 ssl"
@@ -11,7 +11,9 @@ HOMEPAGE="http//www.kde.org/"
 SLOT="3.1"
 LICENSE="GPL-2 LGPL-2"
 
-PATCHES="${FILESDIR}/${P}-zip.diff"
+# for the 3.1.1a version - use incremental patches from 3.1.1
+S=${WORKDIR}/${PN}-3.1.1
+PATCHES1="$PATCHES1 ${WORKDIR}/${P}.diff"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
@@ -54,9 +56,6 @@ qtver-from-kdever ${PV}
 need-qt $selected_version
 
 set-kdedir $PV
-
-# patch posted on kde-packager, fixes kde bug #55571
-PATCHES="$FILESDIR/$P-kio_http.diff"
 
 src_unpack() {
 	kde_src_unpack

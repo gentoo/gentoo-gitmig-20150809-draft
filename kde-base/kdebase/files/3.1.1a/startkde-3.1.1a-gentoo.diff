@@ -1,0 +1,67 @@
+--- startkde~	2003-03-12 18:20:54.000000000 +0100
++++ startkde	2003-03-12 18:26:10.000000000 +0100
+@@ -1,12 +1,34 @@
+-#!/bin/sh
++#!/bin/sh --login
+ #
+-#  DEFAULT KDE STARTUP SCRIPT ( KDE-3.1.1 )
++#  GENTOO CUSTOMIZED KDE STARTUP SCRIPT ( KDE-3.1.1 )
+ #
+ 
+ # When the X server dies we get a HUP signal from xinit. We must ignore it
+ # because we still need to do some cleanup.
+ trap 'echo GOT SIGHUP' HUP
+ 
++# Gentoo part:
++export PATH="_KDEDIR_/bin:${PATH}"
++export KDEDIR="_KDEDIR_"
++# Use env.d's KDEDIRS. They should only include locations like /usr though, not
++# actual KDE installations
++
++# handle ~/.kde* dirs - separate ones for separate KDEs
++cd ~
++[ -d .kde ] && /bin/mv .kde .kde.backup
++if [ ! -e .kde3.1 ]; then
++	if [ -e .kde3 ]; then
++		/bin/cp -r .kde3 .kde3.1
++	else
++		/bin/mkdir .kde3.1
++	fi
++fi
++/bin/ln -sf .kde3.1 .kde
++
++#export KDEHOME="${HOME}/.kdecvs"
++
++# Gentoo part ends
++
+ # Boot sequence:
+ #
+ # kdeinit is used to fork off processes which improves memory usage
+@@ -29,12 +51,12 @@
+ # especially necessary on slow machines, where starting KDE takes one or two
+ # minutes until anything appears on the screen.
+ #
+-# Set the background to plain grey.
++# Set the background to cyan (Gentoo version change).
+ # The standard X background is nasty, causing moire effects and exploding
+ # people's heads. We use colours from the standard KDE palette for those with
+ # palettised displays.
+ 
+-test "$XDM_MANAGED" || bkg="-solid #C0C0C0"
++test "$XDM_MANAGED" || bkg="-solid #5477A0"
+ xsetroot -cursor_name left_ptr $bkg
+ 
+ # The user's personal KDE directory is usually ~/.kde, but this setting
+@@ -140,7 +162,11 @@
+ fi
+ 
+ # the splashscreen and progress indicator
+-ksplash
++if [ -n "$KSPLASH" ]; then
++	$KSPLASH
++else
++	ksplash
++fi
+ 
+ # We set LD_BIND_NOW to increase the efficiency of kdeinit.
+ # kdeinit unsets this variable before loading applications.
