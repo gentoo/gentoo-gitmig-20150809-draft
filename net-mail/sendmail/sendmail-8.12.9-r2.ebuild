@@ -1,17 +1,16 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.9-r2.ebuild,v 1.9 2003/09/05 02:39:51 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.9-r2.ebuild,v 1.10 2004/02/05 02:50:51 vapier Exp $
 
-IUSE="ssl ldap sasl berkdb tcpd gdbm mbox"
-
-DESCRIPTION="Widely-used Mail Transport Agent (MTA)."
-HOMEPAGE="http://www.sendmail.org"
+DESCRIPTION="Widely-used Mail Transport Agent (MTA)"
+HOMEPAGE="http://www.sendmail.org/"
+SRC_URI="ftp://ftp.sendmail.org/pub/${PN}/${PN}.${PV}.tar.gz"
 
 LICENSE="Sendmail"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc hppa"
+KEYWORDS="x86 ~ppc sparc hppa ~amd64"
+IUSE="ssl ldap sasl berkdb tcpd gdbm mbox"
 
-PROVIDE="virtual/mta"
 DEPEND="net-dns/hesiod
 	net-mail/mailbase
 	sys-libs/gdbm
@@ -19,33 +18,17 @@ DEPEND="net-dns/hesiod
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.10 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	ssl? ( dev-libs/openssl )
-	ldap? ( net-nds/openldap )"
-
-
-PDEPEND="!mbox? ( net-mail/procmail )"
-
-
-# We need some db; pick gdbm if none in USE
-if [ -n "`use gdbm`" ]
-then
-	DEPEND="${DEPEND}
-			sys-libs/gdbm"
-elif [ -n "`use berkdb`" ]
-then
-	DEPEND="${DEPEND}
-			>=sys-libs/db-3.2"
-else
-	DEPEND="${DEPEND}
-			sys-libs/gdbm"
-fi
-
+	ldap? ( net-nds/openldap )
+	|| (
+		gdbm? ( sys-libs/gdbm )
+		berkdb? ( >=sys-libs/db-3.2 )
+		sys-libs/gdbm
+	)"
 RDEPEND="${DEPEND}
-		>=net-mail/mailbase-0.00
-		!virtual/mta"
-
-SRC_URI="ftp://ftp.sendmail.org/pub/${PN}/${PN}.${PV}.tar.gz"
-
-S=${WORKDIR}/${P}
+	>=net-mail/mailbase-0.00
+	!virtual/mta"
+PDEPEND="!mbox? ( net-mail/procmail )"
+PROVIDE="virtual/mta"
 
 src_unpack() {
 	unpack ${A}
@@ -89,7 +72,7 @@ src_compile() {
 	done
 }
 
-src_install () {
+src_install() {
 	OBJDIR="obj.`uname -s`.`uname -r`.`arch`"
 	dodir /etc/pam.d /usr/bin /usr/include/libmilter /usr/lib
 	dodir /usr/share/man/man{1,5,8} /usr/sbin /var/log /usr/share/sendmail-cf
@@ -171,8 +154,6 @@ EOF
 }
 
 pkg_postinst() {
-
 	einfo "This ebuild uses mbox support by default. If you are"
 	einfo "looking for maildir support put -mbox into your USE variables."
-
 }
