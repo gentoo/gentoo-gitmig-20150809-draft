@@ -2,8 +2,8 @@ MD5 1d9da31929042a9e6a5a2d96be8424d7 bioperl-1.0.2.ebuild 1495
 MD5 face8739c210251cb732a0232f60ceca bioperl-1.2.3.ebuild 2073
 MD5 32acb1ed6adaa17c288d06e22f21350c bioperl-1.2.ebuild 1544
 MD5 2e3901ad9068da734b6345875ea82d9c bioperl-1.2.2.ebuild 2188
-MD5 00a8770a13fbc14344ffd2b1398493a6 bioperl-1.4.ebuild 1162
-MD5 7c6a6e3bb99fdef67f23c9345f24a027 ChangeLog 2694
+MD5 455ba486b8dc7c8424da364b2ecb5e69 bioperl-1.4.ebuild 1175
+MD5 496843c2d0106794003f5014e4e03b33 ChangeLog 2820
 MD5 e8b4df3df76800c376905734d8043cfa metadata.xml 216
 MD5 8f6c3beb108aaa2b78b0b4f8d218187a files/biodbgff-enable-1.2.2.patch 3355
 MD5 1828ff2ba6225e17a98d27bfbad5c7c9 files/bioperl-1.2-manpage.diff 712

@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.4.ebuild,v 1.3 2005/01/03 03:39:44 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.4.ebuild,v 1.4 2005/01/09 16:41:48 ribosome Exp $
 
 inherit perl-module eutils
 
 CATEGORY="sci-biology"
 
-DESCRIPTION="A collection of tools for bioinformatics, genomics and life science research"
+DESCRIPTION="collection of tools for bioinformatics, genomics and life science research"
 HOMEPAGE="http://www.bioperl.org/"
 SRC_URI="http://www.bioperl.org/ftp/DIST/${P}.tar.bz2"
 
@@ -40,7 +40,10 @@ DEPEND="
 src_compile() {
 	yes "" | perl Makefile.PL ${myconf} \
 	         PREFIX=${D}/usr INSTALLDIRS=vendor
-	#perl-module_src_test || die "Test Failed"
+}
+
+src_test() {
+	perl-module_src_test || die "Test failed"
 }
 
 src_install() {
