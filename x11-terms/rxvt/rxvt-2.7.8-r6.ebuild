@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r6.ebuild,v 1.4 2003/08/02 21:16:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r6.ebuild,v 1.5 2003/09/08 20:22:25 usata Exp $
 
 inherit eutils
 
-IUSE="motif cjk"
+IUSE="motif cjk xgetdefault"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="rxvt -- nice small x11 terminal"
-HOMEPAGE="http://www.rxvt.org"
+HOMEPAGE="http://www.rxvt.org/"
 SRC_URI="mirror://sourceforge/rxvt/${P}.tar.gz
 	cjk? ( http://hp.vector.co.jp/authors/VA021953/rxvt/src/${P}-rk.patch )"
 
@@ -16,7 +16,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc alpha sparc"
 
-DEPEND="virtual/x11
+DEPEND="virtual/glibc
+	virtual/x11
 	motif? ( x11-libs/openmotif )"
 
 
@@ -30,6 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
+
 	econf \
 		--enable-rxvt-scroll \
 		--enable-next-scroll \
@@ -45,7 +47,8 @@ src_compile() {
 		--enable-languages \
 		--enable-xim \
 		--enable-shared \
-		--enable-keepscrolling || die
+		--enable-keepscrolling \
+		`use_enable xgetdefault` || die
 
 	emake || die
 }
