@@ -1,11 +1,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jules Gagnon <eonwe@users.sourceforge.net>
-# $Header: /var/cvsroot/gentoo-x86/net-im/gtk+licq/gtk+licq-0.51-r2.ebuild,v 1.1 2001/12/03 12:55:32 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gtk+licq/gtk+licq-0.51-r2.ebuild,v 1.2 2002/01/06 04:03:09 verwilst Exp $
 
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
-DESCRIPTION="gtk+licq"
+DESCRIPTION="GTK+ interface for Licq, the KDE/QT ICQ client"
 SRC_URI="http://gtk.licq.org/download/${A}"
 HOMEPAGE="http://gtk.licq.org"
 

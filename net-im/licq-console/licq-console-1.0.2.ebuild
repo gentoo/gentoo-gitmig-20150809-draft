@@ -1,12 +1,12 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jules Gagnon <eonwe@users.sourceforge.net>
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq-console/licq-console-1.0.2.ebuild,v 1.6 2002/01/06 03:18:39 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq-console/licq-console-1.0.2.ebuild,v 1.7 2002/01/06 04:03:09 verwilst Exp $
 
 
 LICQV=licq-1.0.3
 A=${LICQV}.tar.gz
 S=${WORKDIR}/${P}
-DESCRIPTION="licq-console"
+DESCRIPTION="Enables you to use Licq from the console using a ncurses 'GUI'"
 SRC_URI="http://download.sourceforge.net/licq/${A}
          ftp://ftp.fanfic.org/pub/licq/srcs/${A}
          ftp://licq.darkorb.net/${A}

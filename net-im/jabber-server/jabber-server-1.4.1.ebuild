@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.1.ebuild,v 1.2 2001/12/16 14:58:38 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.1.ebuild,v 1.3 2002/01/06 04:03:09 verwilst Exp $
 
 S="${WORKDIR}/jabber-1.4.1"
 HOMEPAGE="http://www.jabber.org"
-DESCRIPTION="Jabber Server 1.4.1"
+DESCRIPTION="Open Source Jabber Server"
 
 SRC_URI="http://download.jabber.org/dists/1.4/final/jabber-1.4.1.tar.gz
 		 http://download.jabber.org/dists/transports/aim-transport/aim-transport-0.9.24c.tar.gz
