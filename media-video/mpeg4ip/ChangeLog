@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.5 2004/01/21 18:51:06 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.6 2004/02/27 13:38:34 tester Exp $
+
+  27 Feb 2004; <tester@gentoo.org> mpeg4ip-1.0.ebuild, mpeg4ip-1.0_rc1.ebuild,
+  mpeg4ip-1.0_rc3.ebuild, files/sliver.patch:
+  Add block on faad2 as it provides libmp4v2 too, also removed ~ppc as faac 
+  doesnt have it
 
   21 Jan 2004; <tester@gentoo.org> mpeg4ip-1.0.ebuild:
   Trying to fix bug 38316 which I believe is the same as 34804 since mpeg4ip has
