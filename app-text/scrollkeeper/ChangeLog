@@ -1,7 +1,15 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.20 2002/12/13 10:56:20 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.21 2003/01/24 06:41:45 spider Exp $
 
+*scrollkeeper-0.3.12 (24 Jan 2003)
+  
+  24 Jan 2003; Spider <spider@gentoo.org> : scrollkeeper-0.3.12.ebuild: 
+  First official release in ages, now fixes the tempfile vulnerability and 
+  other bugs from previous version. I had to remake the install-data patch due 
+  to some slight changes to the Makefile.in. nothing big here.
+  
+  
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *scrollkeeper-0.3.11-r1 (04 Sep 2002)
