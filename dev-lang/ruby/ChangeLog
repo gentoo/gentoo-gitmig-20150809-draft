@@ -1,8 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.14 2003/02/12 05:57:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.15 2003/03/16 11:57:32 gmsoft Exp $
  
 *ruby-1.6.8 (26 Dec 2002)
+
+  16 Mar 2003; Guy Martin <gmsoft@gentoo.org> ruby-1.6.8.ebuild :
+  Added hppa to keywords.
 
   30 Jan 2003; Jack Morgan <jmorgan@gentoo.org> ruby-1.6.8.ebuild :
   Added sparc keywords as per bug #14430 (Thanks to Ferris McCormick)
