@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/amanda
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.6 2003/11/13 15:51:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.7 2003/11/28 19:01:41 robbat2 Exp $
+
+  28 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> amanda-2.4.4-r2.ebuild:
+  fix minor blip in how i processed vars
 
 *amanda-2.4.4-r2 (13 Nov 2003)
 

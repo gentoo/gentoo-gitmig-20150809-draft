@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r2.ebuild,v 1.2 2003/11/14 11:38:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r2.ebuild,v 1.3 2003/11/28 19:01:41 robbat2 Exp $
 
 inherit eutils
 
@@ -81,7 +81,7 @@ amanda_variable_setup() {
 	[ -z "${AMANDA_DBMODE}" ] && AMANDA_DBMODE=text
 
 	# Now pull in the old stuff
-	if [ -f "${ENVDFILE}" ]; then
+	if [ -f "${ENVDIR}/${ENVDFILE}" ]; then
 		# We don't just source it as we don't want everything in there.
 		eval $(egrep "^AMANDA_" ${ENVDIR}/${ENVDFILE})
 	fi
