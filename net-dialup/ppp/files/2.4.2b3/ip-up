@@ -18,8 +18,8 @@ if [ "$USEPEERDNS" ]; then
 	/bin/cat /etc/ppp/resolv.conf >> /etc/resolv.conf
 
 	# Change perms because it b0rked kppp
-	chmod 640 /etc/resolv.conf
-	chown root:users /etc/resolv.conf
+	/bin/chmod 640 /etc/resolv.conf
+	/bin/chown --no-dereference root:users /etc/resolv.conf
 
 fi
 

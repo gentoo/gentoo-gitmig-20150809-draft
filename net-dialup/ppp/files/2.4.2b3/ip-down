@@ -17,8 +17,8 @@ if [ "$USEPEERDNS" ]; then
 	/bin/mv -f /etc/resolv.conf.old /etc/resolv.conf
 
 	# Change perms because it b0rked kppp
-	chmod 640 /etc/resolv.conf
-	/bin/chown root:users /etc/resolv.conf
+	/bin/chmod 640 /etc/resolv.conf
+	/bin/chown --no-dereference root:users /etc/resolv.conf
 
 fi
 
