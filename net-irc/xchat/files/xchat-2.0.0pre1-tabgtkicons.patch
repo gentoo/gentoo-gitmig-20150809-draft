@@ -1,0 +1,56 @@
+--- xchat-2.0.0pre1/src/fe-gtk/tabs.c	2003-01-18 03:43:43.000000000 +0100
++++ xchat-2.0.0pre1.patch/src/fe-gtk/tabs.c	2003-02-01 17:32:40.000000000 +0100
+@@ -12,6 +12,7 @@
+ #include <gtk/gtkvbox.h>
+ #include <gtk/gtkviewport.h>
+ #include <gtk/gtkvseparator.h>
++#include <gtk/gtkarrow.h>
+ 
+ /* keep this code generic, don't include xchat.h! */
+ 
+@@ -178,7 +179,7 @@
+ 	GtkWidget *box;
+ 	GtkWidget *viewport;
+ 	GtkWidget *group;
+-	GtkWidget *button;
++	GtkWidget *button, *arrow;
+ 
+ 	if (vertical)
+ 	{
+@@ -192,7 +193,7 @@
+ 	viewport = gtk_viewport_new (0, 0);
+ 	gtk_viewport_set_shadow_type (GTK_VIEWPORT (viewport), GTK_SHADOW_NONE);
+ 	g_signal_connect (G_OBJECT (viewport), "size_request",
+-							G_CALLBACK (tab_viewport_size_request), 0);
++			  G_CALLBACK (tab_viewport_size_request), 0);
+ 	gtk_box_pack_start (GTK_BOX (group), viewport, 1, 1, 0);
+ 	gtk_widget_show (viewport);
+ 
+@@ -204,17 +205,23 @@
+ 	gtk_container_add (GTK_CONTAINER (viewport), box);
+ 	gtk_widget_show (box);
+ 
+-	button = gtk_button_new_with_label (">");
++	button = gtk_button_new ();
++	arrow = gtk_arrow_new (GTK_ARROW_RIGHT, GTK_SHADOW_NONE);
++	gtk_container_add (GTK_CONTAINER (button), arrow);
++	gtk_widget_show (arrow);
+ 	gtk_button_set_relief (GTK_BUTTON (button), GTK_RELIEF_NONE);
+ 	g_signal_connect (G_OBJECT (button), "clicked",
+-							G_CALLBACK (tab_scroll_right_clicked), group);
++			  G_CALLBACK (tab_scroll_right_clicked), group);
+ 	gtk_widget_show (button);
+ 	gtk_box_pack_end (GTK_BOX (group), button, 0, 0, 0);
+ 
+-	button = gtk_button_new_with_label ("<");
++	button = gtk_button_new ();
++	arrow = gtk_arrow_new (GTK_ARROW_LEFT, GTK_SHADOW_NONE);
++	gtk_container_add (GTK_CONTAINER (button), arrow);
++	gtk_widget_show (arrow);
+ 	gtk_button_set_relief (GTK_BUTTON (button), GTK_RELIEF_NONE);
+ 	g_signal_connect (G_OBJECT (button), "clicked",
+-							G_CALLBACK (tab_scroll_left_clicked), group);
++			  G_CALLBACK (tab_scroll_left_clicked), group);
+ 	gtk_widget_show (button);
+ 	gtk_box_pack_end (GTK_BOX (group), button, 0, 0, 0);
+ 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.0_pre1.ebuild,v 1.2 2003/01/27 15:58:45 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.0_pre1.ebuild,v 1.3 2003/02/02 01:17:52 foser Exp $
 
 inherit eutils
 
@@ -27,6 +27,12 @@ RDEPEND=">=dev-libs/glib-2.0.3
 
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.10.38 )"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch ${FILESDIR}/${P}-tabgtkicons.patch
+}
 
 src_compile() {
 	local myopts
