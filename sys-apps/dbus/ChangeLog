@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.28 2005/01/20 23:39:04 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.29 2005/01/21 04:35:39 agriffis Exp $
+
+  20 Jan 2005; Aron Griffis <agriffis@gentoo.org> dbus-0.22-r1.ebuild,
+  dbus-0.22-r2.ebuild, dbus-0.22-r3.ebuild, dbus-0.23-r1.ebuild:
+  mark 0.22-r1 stable on ia64; add ~ia64 to the rest
 
 *dbus-0.23-r1 (21 Jan 2005)
 
