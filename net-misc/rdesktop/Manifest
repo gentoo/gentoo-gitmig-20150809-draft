@@ -1,5 +1,5 @@
 MD5 cf603f45c8bdb935b03b33ca46afbc0d rdesktop-1.3.1-r1.ebuild 1181
-MD5 c5fb1eb00de738549584b605c39b5314 ChangeLog 5735
-MD5 e6f419cdae06716e25ca3f9af98bad25 metadata.xml 555
+MD5 4842baa12a8288c1245d40cad45f7884 ChangeLog 5911
+MD5 6c6c99858d7cd726a669b18be5e25ef3 metadata.xml 556
 MD5 a843f83ff14be3e87d5528c3c31416ed files/rdesktop-1.3.1-kde.patch 2409
 MD5 3f26cdcaa9d46e40bcf78e879cac3d14 files/digest-rdesktop-1.3.1-r1 66

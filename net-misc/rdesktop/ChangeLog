@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.42 2004/10/11 23:27:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.43 2004/10/11 23:28:58 wolf31o2 Exp $
+
+  11 Oct 2004; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
+  Fixing metadata.xml to change herd from no-herd to net-misc with me still as
+  maintainer of the ebuild.
 
   03 Oct 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Fixed herd in metadata.xml.
