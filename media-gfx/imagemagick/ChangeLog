@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.16 2002/09/15 15:31:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.17 2002/09/16 01:22:31 mcummings Exp $
+
+*imagemagick-5.4.7-r1 (15 Sep 2002)
+  15 Sep 2002; <mcummings@gentoo.org> : version bump is at Grant's suggestion
+  since the last version would install, this makes sure anyone that installed
+  it gets the working copy.
 
 *imagemagick-5.4.7 (08 Jul 2002)
 
