@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mosix-sources/mosix-sources-2.4.19.ebuild,v 1.7 2003/03/24 23:34:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mosix-sources/mosix-sources-2.4.19.ebuild,v 1.8 2003/09/07 07:26:01 msterret Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -20,7 +20,7 @@ ETYPE="sources"
 DESCRIPTION="Full sources for the Gentoo Mosix Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://www.ibiblio.org/gentoo/distfiles/linux-gentoo-${KV}.patch.bz2 http://www.ibiblio.org/gentoo/distfiles/linux-gentoo-${KV}-gcc3.patch.bz2"
 PROVIDE="virtual/linux-sources"
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://www.mosix.org/" 
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://www.mosix.org/"
 LICENSE="GPL-2"
 SLOT="${KV}"
 KEYWORDS="~x86 -ppc -sparc  -alpha"
@@ -41,7 +41,7 @@ src_unpack() {
 	mv linux-${OKV} linux-${KV} || die
 	cd ${S}
 	cat ${DISTDIR}/linux-gentoo-${KV}.patch.bz2 | bzip2 -d | patch -p1 || die
-	
+
 	#if the used gcc is gcc3 there is a seperate patch applied.
 	if [ `gcc -dumpversion | cut -d. -f1` == 3 ]; then
 		cat ${DISTDIR}/linux-gentoo-${KV}-gcc3.patch.bz2 | bzip2 -d | patch -p1 || die
@@ -70,7 +70,7 @@ src_unpack() {
 src_compile() {
 	if [ "$ETYPE" = "headers" ]
 	then
-		yes "" | make oldconfig		
+		yes "" | make oldconfig
 		echo "Ignore any errors from the yes command above."
 	fi
 }
@@ -92,7 +92,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	if [ "$ETYPE" = "headers" ] 
+	if [ "$ETYPE" = "headers" ]
 	then
 		[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
 		[ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm

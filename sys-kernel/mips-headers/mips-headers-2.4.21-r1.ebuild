@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.21-r1.ebuild,v 1.3 2003/08/26 07:35:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.21-r1.ebuild,v 1.4 2003/09/07 07:26:01 msterret Exp $
 
 
 ETYPE="headers"
@@ -22,7 +22,7 @@ EXTRAVERSION=-mipscvs-${CVSDATE}
 DESCRIPTION="Linux-Mips CVS headers for MIPS-based machines"
 SRC_URI="mirror://gentoo/linux-mips-${OKV}-${CVSDATE}.tar.bz2
 		mirror://gentoo/mips-patches-${OKV}-${CVSDATE}.tar.bz2"
-HOMEPAGE="http://www.linux-mips.org/" 
+HOMEPAGE="http://www.linux-mips.org/"
 KEYWORDS="-* mips"
 SLOT="${OKV}"
 
@@ -33,7 +33,7 @@ src_unpack() {
 	# Fix R4K Cache Handling
 	cat ${WORKDIR}/mips-patches-r4k-cache-fix.patch | patch -p1
 
-	# Determine the gcc version and patch arch/mips/Makefile appropriately	
+	# Determine the gcc version and patch arch/mips/Makefile appropriately
 	GCCVER=$(gcc -dumpversion | cut -d. -f1,2)
 	case ${GCCVER} in
 		3.2) cat ${WORKDIR}/mips-patches-gcc32-makefile-fix.patch | patch -p0;;

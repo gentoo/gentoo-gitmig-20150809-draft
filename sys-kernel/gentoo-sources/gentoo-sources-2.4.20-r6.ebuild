@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r6.ebuild,v 1.2 2003/08/14 11:07:34 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r6.ebuild,v 1.3 2003/09/07 07:26:00 msterret Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -112,10 +112,10 @@ src_unpack() {
 
 	kernel_src_unpack
 
-	epatch ${FILESDIR}/security.patch1 
-	epatch ${FILESDIR}/security.patch2 
-	epatch ${FILESDIR}/security.patch3 
-	epatch ${FILESDIR}/security.patch4 
+	epatch ${FILESDIR}/security.patch1
+	epatch ${FILESDIR}/security.patch2
+	epatch ${FILESDIR}/security.patch3
+	epatch ${FILESDIR}/security.patch4
 
 }
 

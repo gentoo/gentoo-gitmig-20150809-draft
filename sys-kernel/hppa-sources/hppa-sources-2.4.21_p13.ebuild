@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.4.21_p13.ebuild,v 1.1 2003/08/21 22:59:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.4.21_p13.ebuild,v 1.2 2003/09/07 07:26:00 msterret Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -24,7 +24,7 @@ PATCH_COUNT="$(( `echo ${PATCH_SET} | wc -w` - 1 ))"
 DESCRIPTION="Full sources for the Linux kernel with patch for hppa"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://ftp.parisc-linux.org/cvs/linux-2.4/patch-${OKV}-pa`echo ${PATCH_SET} | awk '{ print $1 }'`.diff.gz
 `for i in \`seq 1 ${PATCH_COUNT}\`; do echo http://ftp.parisc-linux.org/cvs/linux-2.4/patch-${OKV}-pa\`echo ${PATCH_SET} | awk \"{ print \\\\\$$i }\"\`-pa\`echo ${PATCH_SET} | awk \"{ print \\\\\$$((i + 1)) }\"\`.gz; done`"
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://parisc-linux.org" 
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://parisc-linux.org"
 KEYWORDS="hppa -*"
 SLOT="${KV}"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.20-r3.ebuild,v 1.4 2003/07/22 20:00:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.20-r3.ebuild,v 1.5 2003/09/07 07:26:00 msterret Exp $
 
 IUSE="build selinux"
 
@@ -26,7 +26,7 @@ SLOT="${KV}"
 src_unpack() {
 	unpack linux-${OKV}.tar.bz2 patches-${KV}.tar.bz2
 	mv linux-${OKV} linux-${KV} || die
-	
+
 	cd ${KV}
 	# We can't use LSM/SELinux and GRSec in the same kernel.  If USE=selinux, we will
 	# patch in LSM/SELinux and drop support for GRsec.  Otherwise we will include GRSec.
@@ -43,7 +43,7 @@ src_unpack() {
 			rm -f ${file}
 		done
 	fi
-	
+
 	kernel_src_unpack
 }
 

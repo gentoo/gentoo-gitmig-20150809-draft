@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.22.ebuild,v 1.1 2003/09/02 15:04:58 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.22.ebuild,v 1.2 2003/09/07 07:26:01 msterret Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 OKV="2.4.22"
@@ -22,7 +22,7 @@ DESCRIPTION="Full sources for the Gentoo openMosix Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 http://tab.tuxfamily.org/download/openmosix/patch-2.4.22-om-20030825.bz2"
 PROVIDE="virtual/linux-sources"
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://www.openmosix.org/" 
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://www.openmosix.org/"
 LICENSE="GPL-2"
 SLOT="${KV}"
 KEYWORDS="~x86 -ppc -sparc -alpha"

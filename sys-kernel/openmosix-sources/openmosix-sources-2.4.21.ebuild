@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.21.ebuild,v 1.1 2003/06/22 20:47:47 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.21.ebuild,v 1.2 2003/09/07 07:26:01 msterret Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -20,7 +20,7 @@ ETYPE="sources"
 DESCRIPTION="Full sources for the Gentoo openMosix Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 mirror://sourceforge/openmosix/openMosix-2.4.21-1.bz2"
 PROVIDE="virtual/linux-sources"
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://www.openmosix.org/" 
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://www.openmosix.org/"
 LICENSE="GPL-2"
 SLOT="${KV}"
 KEYWORDS="~x86 -ppc -sparc -alpha"
@@ -66,7 +66,7 @@ src_unpack() {
 src_compile() {
 	if [ "$ETYPE" = "headers" ]
 	then
-		yes "" | make oldconfig		
+		yes "" | make oldconfig
 		echo "Ignore any errors from the yes command above."
 	fi
 }
@@ -88,7 +88,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	if [ "$ETYPE" = "headers" ] 
+	if [ "$ETYPE" = "headers" ]
 	then
 		[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
 		[ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm

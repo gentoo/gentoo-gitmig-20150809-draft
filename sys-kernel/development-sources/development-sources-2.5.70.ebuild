@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.5.70.ebuild,v 1.2 2003/06/18 14:28:50 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.5.70.ebuild,v 1.3 2003/09/07 07:26:00 msterret Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 OKV=${PV}
@@ -16,7 +16,7 @@ ETYPE="sources"
 DESCRIPTION="Full sources for the Development Branch of the Linux kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.5/linux-${OKV}.tar.bz2 ${PATCH_URI}"
 PROVIDE="virtual/linux-sources"
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="${KV}"
 KEYWORDS="x86 ppc"
@@ -50,7 +50,7 @@ src_unpack() {
 src_compile() {
 	if [ "$ETYPE" = "headers" ]
 	then
-		yes "" | make oldconfig		
+		yes "" | make oldconfig
 		echo "Ignore any errors from the yes command above."
 	fi
 }
@@ -72,7 +72,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	if [ "$ETYPE" = "headers" ] 
+	if [ "$ETYPE" = "headers" ]
 	then
 		[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
 		[ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm

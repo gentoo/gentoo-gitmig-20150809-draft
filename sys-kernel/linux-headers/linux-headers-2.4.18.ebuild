@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.18.ebuild,v 1.10 2003/03/24 23:34:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.18.ebuild,v 1.11 2003/09/07 07:26:01 msterret Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -17,7 +17,7 @@ KEYWORDS="x86 alpha"
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 PROVIDE="virtual/kernel virtual/os-headers"
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 
 if [ $PN = "linux-sources" ] && [ -z "`use build`" ]
 then
@@ -33,7 +33,7 @@ src_unpack() {
 	unpack linux-${OKV}.tar.bz2
 	mv linux linux-${KV} || die
 	cd ${S}
-	
+
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die
 
@@ -56,7 +56,7 @@ src_unpack() {
 src_compile() {
 	if [ "$PN" = "linux-headers" ]
 	then
-		yes "" | make oldconfig		
+		yes "" | make oldconfig
 		echo "Ignore any errors from the yes command above."
 	fi
 }
@@ -78,7 +78,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	if [ "$PN" = "linux-headers" ] 
+	if [ "$PN" = "linux-headers" ]
 	then
 		[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
 		[ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm

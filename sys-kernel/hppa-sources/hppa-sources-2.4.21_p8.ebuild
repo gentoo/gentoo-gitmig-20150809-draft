@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.4.21_p8.ebuild,v 1.1 2003/08/03 13:45:58 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.4.21_p8.ebuild,v 1.2 2003/09/07 07:26:00 msterret Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -21,7 +21,7 @@ PATCH_BASE="pa7"
 
 DESCRIPTION="Full sources for the Linux kernel with patch for hppa"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://ftp.parisc-linux.org/cvs/linux-2.4/patch-${OKV}-${PATCH_BASE}.diff.gz http://ftp.parisc-linux.org/cvs/linux-2.4/patch-${OKV}-${PATCH_BASE}${EXTRAVERSION}.gz"
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://parisc-linux.org" 
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://parisc-linux.org"
 KEYWORDS="hppa -*"
 SLOT="${KV}"
 

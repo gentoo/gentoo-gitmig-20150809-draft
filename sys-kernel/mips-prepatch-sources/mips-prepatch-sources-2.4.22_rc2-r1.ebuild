@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-prepatch-sources/mips-prepatch-sources-2.4.22_rc2-r1.ebuild,v 1.1 2003/08/15 02:43:52 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-prepatch-sources/mips-prepatch-sources-2.4.22_rc2-r1.ebuild,v 1.2 2003/09/07 07:26:01 msterret Exp $
 
 
 # Eclass Stuff
@@ -28,7 +28,7 @@ DESCRIPTION="Linux-Mips CVS pre-patch sources for MIPS-based machines"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${STABLEVERSION}.tar.bz2
 		mirror://kernel/linux/kernel/v2.4/testing/patch-${OKV}.bz2
 		mirror://gentoo/mipscvs-${OKV}-${CVSDATE}.diff.bz2"
-HOMEPAGE="http://www.kernel.org   http://www.linux-mips.org/" 
+HOMEPAGE="http://www.kernel.org   http://www.linux-mips.org/"
 KEYWORDS="-* ~mips"
 SLOT="${OKV}"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.20-r1.ebuild,v 1.2 2003/03/11 21:11:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.20-r1.ebuild,v 1.3 2003/09/07 07:26:01 msterret Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -18,9 +18,9 @@ S=${WORKDIR}/linux-${KV}
 #	UML clashes with the current Gentoo patch, so I've ignored it for now.
 
 DESCRIPTION="Full (vanilla) sources for the User Mode Linux kernel"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 
+SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 mirror://sourceforge/user-mode-linux/${UML_PATCH}.bz2"
-HOMEPAGE="http://www.kernel.org/ http://user-mode-linux.sourceforge.net" 
+HOMEPAGE="http://www.kernel.org/ http://user-mode-linux.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="${KV}"
 KEYWORDS="~x86 -ppc -sparc  -alpha"
@@ -40,14 +40,14 @@ src_unpack() {
 	cd ${S}
 	bzcat ${DISTDIR}/${UML_PATCH}.bz2 | patch -d ${S} -p1
 	echo "Preparing for compilation..."
-	
+
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
 	chown -R 0.0 *
 	chmod -R a+r-w+X,u+w *
 
 }
-		
+
 src_compile() {
 	echo "Nothing to compile.  That's up to the user"
 }

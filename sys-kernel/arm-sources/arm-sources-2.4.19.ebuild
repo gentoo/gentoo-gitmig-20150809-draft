@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-sources/arm-sources-2.4.19.ebuild,v 1.4 2003/04/05 01:00:55 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-sources/arm-sources-2.4.19.ebuild,v 1.5 2003/09/07 07:26:00 msterret Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 IUSE=""
@@ -64,7 +64,7 @@ if [ -n "${SUBARCH_KERNEL_PATCH}" ]; then
 		die "${SUBARCH}: ${SUBARCH_KERNEL_PATCH} does not have a URLBASE"
 	fi
 fi
-if [ -n "${SUBARCH_KERNEL_HOMEPAGE}" ]; then 
+if [ -n "${SUBARCH_KERNEL_HOMEPAGE}" ]; then
 	HOMEPAGE="${SUBARCH_KERNEL_HOMEPAGE} ${HOMEPAGE}"
 fi
 

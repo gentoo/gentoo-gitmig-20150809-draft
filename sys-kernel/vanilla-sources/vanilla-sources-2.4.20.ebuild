@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.4.20.ebuild,v 1.6 2003/06/25 15:08:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.4.20.ebuild,v 1.7 2003/09/07 07:26:01 msterret Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -17,7 +17,7 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Linux kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 KEYWORDS="x86 ppc sparc alpha"
 SLOT="${KV}"
 

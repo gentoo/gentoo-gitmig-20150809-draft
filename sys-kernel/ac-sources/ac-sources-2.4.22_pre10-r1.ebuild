@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ac-sources-2.4.22_pre10-r1.ebuild,v 1.1 2003/08/02 03:05:23 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ac-sources-2.4.22_pre10-r1.ebuild,v 1.2 2003/09/07 07:26:00 msterret Exp $
 
 IUSE="build"
 
-# OKV=original kernel version, KV=patched kernel version.  
+# OKV=original kernel version, KV=patched kernel version.
 
 ETYPE="sources"
 
@@ -52,7 +52,7 @@ src_unpack() {
 	mv linux-${OURKERNEL} linux-${KV} || die
 
 	cd linux-${KV}
-	
+
 	# if we need a pre/rc patch, then use it
 	if [ ${PRERC} ]; then
 	bzcat ${DISTDIR}/patch-${PV/_/-}.bz2|patch -p1 || die "-marcelo patch failed"

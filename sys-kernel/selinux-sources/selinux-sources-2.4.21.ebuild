@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/selinux-sources-2.4.21.ebuild,v 1.3 2003/08/14 18:41:41 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/selinux-sources-2.4.21.ebuild,v 1.4 2003/09/07 07:26:01 msterret Exp $
 
 IUSE="selinux"
 
@@ -39,12 +39,12 @@ src_unpack() {
 src_install() {
 	insinto /usr/flask
 	doins ${S}/security/selinux/flask/access_vectors
-	doins ${S}/security/selinux/flask/security_classes 
+	doins ${S}/security/selinux/flask/security_classes
 	doins ${S}/security/selinux/flask/initial_sids
 
 	insinto /usr/include/linux/flask
 	doins ${S}/security/selinux/include/linux/flask/*.h
-	
+
 	insinto /usr/include/asm/flask
 	doins ${S}/security/selinux/include/asm/flask/uninstd.h
 
@@ -52,4 +52,4 @@ src_install() {
 
 	dosed 's:-r0::' /usr/src/linux-${KV}/Makefile
 }
-	
+

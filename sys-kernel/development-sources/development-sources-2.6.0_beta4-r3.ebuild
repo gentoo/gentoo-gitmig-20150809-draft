@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta4-r3.ebuild,v 1.1 2003/09/02 13:28:16 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta4-r3.ebuild,v 1.2 2003/09/07 07:26:00 msterret Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 OKV=${PV/_beta/-test}
@@ -18,7 +18,7 @@ IUSE="alsa"
 DESCRIPTION="Full sources for the Development Branch of the Linux kernel"
 PATCH_URI="http://www.kernel.org/pub/linux/kernel/v2.6/snapshots/patch-${PKV}.bz2"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2 ${PATCH_URI}"
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="${PKV}"
 KEYWORDS="-* ~x86"
@@ -57,7 +57,7 @@ src_unpack() {
 src_compile() {
 	if [ "$ETYPE" = "headers" ]
 	then
-		yes "" | make oldconfig		
+		yes "" | make oldconfig
 		echo "Ignore any errors from the yes command above."
 	fi
 }
@@ -79,7 +79,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	if [ "$ETYPE" = "headers" ] 
+	if [ "$ETYPE" = "headers" ]
 	then
 		[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
 		[ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm
@@ -102,7 +102,7 @@ pkg_postinst() {
 	ewarn "The option is File systems->Pseudo filesystems->/dev/pts"
 	ewarn "filesystem."
 	echo
-	ewarn "Also, note that you must compile in support for" 
+	ewarn "Also, note that you must compile in support for"
 	ewarn "input devices (Input device support->Input devices),"
 	ewarn "the virtual terminal (Character Devices->Virtual terminal),"
 	ewarn "vga_console (Graphics Support->Console...->VGA text console)"

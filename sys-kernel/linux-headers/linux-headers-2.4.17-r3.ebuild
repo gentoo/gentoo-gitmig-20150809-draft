@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.17-r3.ebuild,v 1.12 2003/03/24 23:34:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.17-r3.ebuild,v 1.13 2003/09/07 07:26:01 msterret Exp $
 #OKV=original kernel version, KV=patched kernel version. They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -32,7 +32,7 @@ KEYWORDS="x86 -ppc"
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://www.ibiblio.org/gentoo/distfiles/linux-gentoo-${KV}.patch.bz2"
 PROVIDE="virtual/kernel virtual/os-headers"
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 
 XFSV=20020124
 
@@ -61,7 +61,7 @@ src_unpack() {
 	cd ${S}
 	cat ${DISTDIR}/linux-gentoo-${KV}.patch.bz2 | bzip2 -d | patch -p1 || die
 	echo "Preparing for compilation..."
-	
+
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die
 
@@ -82,7 +82,7 @@ src_unpack() {
 		Makefile.orig >Makefile || die # test, remove me if Makefile ok
 	rm Makefile.orig
 }
-		
+
 src_compile() {
 	if [ "${PN}" = "linux-headers" ]
 	then

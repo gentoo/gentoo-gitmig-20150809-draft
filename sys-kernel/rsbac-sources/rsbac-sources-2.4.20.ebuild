@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.20.ebuild,v 1.4 2003/03/11 21:11:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.20.ebuild,v 1.5 2003/09/07 07:26:01 msterret Exp $
 
 ETYPE="sources"
 
@@ -19,11 +19,11 @@ RSBAC=rsbac-v1.2.1
 
 DESCRIPTION="Rule Set Based Access Control (RSBAC) Kernel Patch"
 HOMEPAGE="http://www.rsbac.org"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 
-http://www.rsbac.org/code/rsbac-v1.2.1.tar.bz2 
-http://www.rsbac.org/patches/v1.2.1/patch-2.4.20-v1.2.1.gz 
-http://www.rsbac.org/bugfixes/rsbac-bugfix-v1.2.1-1.diff 
-http://www.rsbac.org/bugfixes/rsbac-bugfix-v1.2.1-2.diff 
+SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
+http://www.rsbac.org/code/rsbac-v1.2.1.tar.bz2
+http://www.rsbac.org/patches/v1.2.1/patch-2.4.20-v1.2.1.gz
+http://www.rsbac.org/bugfixes/rsbac-bugfix-v1.2.1-1.diff
+http://www.rsbac.org/bugfixes/rsbac-bugfix-v1.2.1-2.diff
 http://www.rsbac.org/bugfixes/rsbac-bugfix-v1.2.1-3.diff"
 
 LICENSE="GPL-2"
@@ -42,7 +42,7 @@ src_unpack() {
 		cp ${DISTDIR}/${BUGFIX}-2.diff ${S} || die "Cannot find bugfix patch"
 		cp ${DISTDIR}/${BUGFIX}-3.diff ${S} || die "Cannot find bugfix patch"
 		echo "-> Kernel unpacked..."
-		
+
 		cd ${S}
 		unpack ${RSBAC}.tar.bz2 || die "rsbac unpack failed!"
 		unpack ${KPATCH}.gz || die "kernel patch unpack failed!"
@@ -50,7 +50,7 @@ src_unpack() {
 
 		patch -p1 < ${KPATCH} || die "kernel patching failed!"
 		echo "-> Kernel patched..."
-		
+
 		patch -p1 < ${BUGFIX}-1.diff || die "cannot apply fix patch 1"
 		echo "-> Fix patch 1 applied"
 
@@ -89,7 +89,7 @@ pkg_postinst() {
 		ln -sf linux-${OKV}-rsbac ${ROOT}/usr/src/linux
 
 		einfo "-> Kernel tree is OK"
-			
+
 		# We really need rsbac-admin otherwise it will be impossible to manage the new kernel permissions
 		# but we can't install it before the kernel, rsbac-admin needs some headers included only in
 		# the rsbac-kernel tree - Quequero

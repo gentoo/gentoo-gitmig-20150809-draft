@@ -1,4 +1,4 @@
-MD5 652107e1001a957e981d9fabb3d7173d mips-prepatch-sources-2.4.22_rc2-r1.ebuild 1707
 MD5 7f8a6e3f98fb6300bfe3c70a318ed43b ChangeLog 731
-MD5 b73a606d05e184a8af27c8f9b7a9c9ca files/mips-gcc-makefile-fix-20030813.patch 906
+MD5 4b8c8c0d32a13f3494c980dd23f27204 mips-prepatch-sources-2.4.22_rc2-r1.ebuild 1709
 MD5 7383fb7245357cea3b46d07e372fc89a files/digest-mips-prepatch-sources-2.4.22_rc2-r1 215
+MD5 b73a606d05e184a8af27c8f9b7a9c9ca files/mips-gcc-makefile-fix-20030813.patch 906

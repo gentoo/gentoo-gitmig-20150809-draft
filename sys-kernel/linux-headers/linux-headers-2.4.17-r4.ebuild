@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.17-r4.ebuild,v 1.12 2003/03/24 23:34:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.17-r4.ebuild,v 1.13 2003/09/07 07:26:01 msterret Exp $
 #OKV=original kernel version, KV=patched kernel version. They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -17,13 +17,13 @@ KEYWORDS="x86 -ppc"
 
 # INCLUDED:
 #	xfs (13 Feb 2002 CVS)
-#	read-latency2.patch from http://www.zipworld.com.au/~akpm/linux/2.4/2.4.18-pre9/ 
+#	read-latency2.patch from http://www.zipworld.com.au/~akpm/linux/2.4/2.4.18-pre9/
 #	(improves multiple disk read/write IO performance)
-#	fastpte 
+#	fastpte
 #	(enables an option to do fast scanning of the page tables)
-#	ide.2.4.17.02072002.patch from http://www.linuxdiskcert.org/ 
+#	ide.2.4.17.02072002.patch from http://www.linuxdiskcert.org/
 #	(revamped IDE code)
-#	preempt-kernel-rml-2.4.17-3 from http://www.tech9.net/rml/linux/ 
+#	preempt-kernel-rml-2.4.17-3 from http://www.tech9.net/rml/linux/
 #	(preemptible kernel)
 #	loopback device deadlock fixes from akpm
 
@@ -44,7 +44,7 @@ KEYWORDS="x86 -ppc"
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://www.ibiblio.org/gentoo/distfiles/linux-gentoo-${KV}.patch.bz2"
 PROVIDE="virtual/kernel virtual/os-headers"
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 
 XFSV=20020124
 
@@ -73,7 +73,7 @@ src_unpack() {
 	cd ${S}
 	cat ${DISTDIR}/linux-gentoo-${KV}.patch.bz2 | bzip2 -d | patch -p1 || die
 	echo "Preparing for compilation..."
-	
+
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die
 
@@ -81,7 +81,7 @@ src_unpack() {
 	cp ${S}/arch/i386/defconfig .config || die
 	yes "" | make oldconfig
 	echo "Ignore any errors from the yes command above."
-	 
+
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
 	chown -R 0.0 *
@@ -94,7 +94,7 @@ src_unpack() {
 		Makefile.orig >Makefile || die # test, remove me if Makefile ok
 	rm Makefile.orig
 }
-		
+
 src_compile() {
 	if [ "${PN}" = "linux-headers" ]
 	then

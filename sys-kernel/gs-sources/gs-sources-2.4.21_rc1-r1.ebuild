@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.21_rc1-r1.ebuild,v 1.2 2003/07/22 20:00:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.21_rc1-r1.ebuild,v 1.3 2003/09/07 07:26:00 msterret Exp $
 
 IUSE="build crypt"
 
@@ -26,7 +26,7 @@ S=${WORKDIR}/linux-${KV}
 # Documentation on the patches contained in this kernel will be installed
 # to /usr/share/doc/gs-sources-${PV}/patches.txt.gz
 
-DESCRIPTION="This kernel stays up to date with current kernel -pres, 
+DESCRIPTION="This kernel stays up to date with current kernel -pres,
 	     with recent acpi,evms,win3lin ,futexes,aic79xx,
              superfreeswan,preempt/ll, and various hw fixes."
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
@@ -39,7 +39,7 @@ src_unpack() {
 	mv linux-${OKV} linux-${KV} || die
 
 	cd ${KV}
-	# Kill patches we aren't suppposed to use, don't worry about 
+	# Kill patches we aren't suppposed to use, don't worry about
 	# failures, if they aren't there that is a good thing!
 	# This is the ratified crypt USE flag, enables IPSEC and patch-int
 	if [ -z "`use crypt`" ]; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.19.ebuild,v 1.14 2003/06/12 22:15:02 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.19.ebuild,v 1.15 2003/09/07 07:26:01 msterret Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -17,22 +17,22 @@ ETYPE="sources"
 # INCLUDED:
 #	2.4.19-pre-benh
 #	preempt patch
-#	Ani Joshi's rivafb bigendian fixes from YDL 
+#	Ani Joshi's rivafb bigendian fixes from YDL
 
 
 DESCRIPTION="Full developmental sources for the Gentoo Linux PPC kernel - Experimental!"
 SRC_URI="http://www.penguinppc.org/~kevyn/kernels/gentoo/linux-${KV}.tar.bz2"
 PROVIDE="virtual/linux-sources"
-HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
+HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="${KV}"
 KEYWORDS="ppc -x86 -sparc "
 
-if [ $ETYPE = "sources" ] && [ -z "`use build`" ]                                           
-then                                                                                        
-        DEPEND=">=sys-devel/binutils-2.11.90.0.31"                                          
+if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
+then
+        DEPEND=">=sys-devel/binutils-2.11.90.0.31"
         RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl virtual/modutils sys-devel/make"
-fi                                                                                          
+fi
 
 
 src_unpack() {
@@ -40,7 +40,7 @@ src_unpack() {
 	unpack linux-${KV}.tar.bz2
 	cd ${S}
 	pwd
-	
+
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
 	chown -R 0.0 *
@@ -67,24 +67,24 @@ src_install() {
 	fi
 }
 
-pkg_preinst() {                                                                             
-        if [ "$ETYPE" = "headers" ]                                                         
-        then                                                                                
-                [ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux              
-                [ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm                  
-                true                                                                        
-        fi                                                                                  
-}                                                                                           
-                                                                                            
-pkg_postinst() {                                                                            
-        [ "$ETYPE" = "headers" ] && return                                                  
-        if [ ! -e ${ROOT}usr/src/linux ]                                                    
-        then                                                                                
-                rm -f ${ROOT}usr/src/linux                                                  
-                ln -sf linux-${KV} ${ROOT}/usr/src/linux                                    
-        fi                                                                                  
+pkg_preinst() {
+        if [ "$ETYPE" = "headers" ]
+        then
+                [ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
+                [ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm
+                true
+        fi
+}
+
+pkg_postinst() {
+        [ "$ETYPE" = "headers" ] && return
+        if [ ! -e ${ROOT}usr/src/linux ]
+        then
+                rm -f ${ROOT}usr/src/linux
+                ln -sf linux-${KV} ${ROOT}/usr/src/linux
+        fi
 
 	einfo "* Warning * - This is an experimental kernel to test features"
-	einfo " before they make it to ppc-sources.  Stability cannaot be" 
+	einfo " before they make it to ppc-sources.  Stability cannaot be"
 	einfo " guaranteed. You have been warned. :^)"
 }

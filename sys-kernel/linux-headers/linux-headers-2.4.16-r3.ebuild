@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.16-r3.ebuild,v 1.12 2003/03/24 23:34:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.16-r3.ebuild,v 1.13 2003/09/07 07:26:01 msterret Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -44,9 +44,9 @@ SRC_URI="http://www.de.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 [ "$LBPV" ] && { SRC_URI="$SRC_URI http://www.kernel.org/pub/linux/kernel/people/rml/lock-break/v2.4/lock-break-rml-${LBPV}.patch" PATCHES="$PATCHES ${DISTDIR}/lock-break-rml-${LBPV}.patch"; }
 [ "$XFSV" ] && { SRC_URI="$SRC_URI http://www.ibiblio.org/gentoo/distfiles/XFS-${XFSV}.patch.bz2" PATCHES="$PATCHES ${DISTDIR}/XFS-${XFSV}.patch.bz2"; }
 [ "$BNFV" ] && { SRC_URI="$SRC_URI http://bridge.sourceforge.net/devel/bridge-nf/bridge-nf-${BNFV}.diff" PATCHES="$PATCHES ${DISTDIR}/bridge-nf-${BNFV}.diff"; }
-	
+
 PROVIDE="virtual/kernel virtual/os-headers"
-HOMEPAGE="http://www.kernel.org/ http://www.namesys.com http://www.sistina.com/lvm/ http://developer.intel.com/technology/iapc/acpi/" 
+HOMEPAGE="http://www.kernel.org/ http://www.namesys.com http://www.sistina.com/lvm/ http://developer.intel.com/technology/iapc/acpi/"
 
 if [ $PN = "linux-sources" ] && [ -z "`use build`" ]
 then
@@ -60,7 +60,7 @@ fi
 
 patchorama() {
 	local x
-	for x in ${*} 
+	for x in ${*}
 	do
 		[ -d "$x" ] && continue
 		echo ">>> Applying ${x}..."
@@ -100,7 +100,7 @@ src_unpack() {
 	cp Makefile Makefile.orig
 	sed -e 's:EXTRAVERSION =-xfs:EXTRAVERSION =:g' Makefile.orig > Makefile
 	echo "Preparing for compilation..."
-	
+
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die
 
@@ -108,7 +108,7 @@ src_unpack() {
 	cp ${S}/arch/i386/defconfig .config || die
 	yes "" | make oldconfig
 	echo "Ignore any errors from the yes command above."
-    
+
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
 	chown -R 0.0 *
@@ -121,7 +121,7 @@ src_unpack() {
 		Makefile.orig >Makefile || die # test, remove me if Makefile ok
 	rm Makefile.orig
 }
-		
+
 src_compile() {
 	if [ "${PN}" = "linux-headers" ]
 	then

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.20-r3.ebuild,v 1.3 2003/07/22 20:00:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.20-r3.ebuild,v 1.4 2003/09/07 07:26:01 msterret Exp $
 
 IUSE="build crypt"
 
@@ -37,7 +37,7 @@ src_unpack() {
 	mv linux-${OKV} linux-${KV} || die
 
 	cd ${KV}
-	# Kill patches we aren't suppposed to use, don't worry about 
+	# Kill patches we aren't suppposed to use, don't worry about
 	# failures, if they aren't there that is a good thing!
 
 	# If the compiler isn't gcc3 drop the gcc3 patches
@@ -50,7 +50,7 @@ src_unpack() {
 			einfo "Dropping ${file}..."
 			rm -f ${file}
 		done
-	fi		
+	fi
 
 	# This is the ratified crypt USE flag, enables IPSEC and patch-int
 	if [ -z "`use crypt`" ]; then
