@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/celestia-1.3.2_pre20040731-r1.ebuild,v 1.1 2004/08/09 01:30:31 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/celestia-1.3.2_pre20040731-r1.ebuild,v 1.2 2004/08/09 01:58:42 morfic Exp $
 
 inherit eutils flag-o-matic gnome2
 
@@ -53,6 +53,18 @@ src_unpack() {
 	# adding gcc-3.4 support as posted in
 	# (http://bugs.gentoo.org/show_bug.cgi?id=53479#c2)
 	epatch ${FILESDIR}/resmanager.h.patch || die
+
+	if use !gnome; then
+		# alright this snapshot seems to have some trouble with installing a
+		# file properly. It wants to install celestia.schemas in / which leads
+		# to an ACCESS VIOLATION. Unfortunately this file even gets installed
+		# when no gtk/gnome is enabled
+		# The following lines prevents this but thinkabout as a dirty hack
+		cd ${S}/src/celestia/gtk || die
+		sed -i -e 's:GCONF_SCHEMA_FILE_DIR = @GCONF_SCHEMA_FILE_DIR@:GCONF_SCHEMA_FILE_DIR = $(pkgdatadir)/schemas:g' Makefile.in || die
+		sed -i -e 's:GCONF_SCHEMA_FILE_DIR = @GCONF_SCHEMA_FILE_DIR@:GCONF_SCHEMA_FILE_DIR = $(pkgdatadir)/schemas:g' data/Makefile.in || die
+		cd ${S} || die
+	fi
 
 }
 
