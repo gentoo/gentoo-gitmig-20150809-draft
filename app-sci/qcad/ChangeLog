@@ -1,6 +1,14 @@
 # ChangeLog for app-sci/qcad
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.25 2004/09/21 11:19:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.26 2004/09/30 10:56:14 phosphan Exp $
+
+*qcad-2.0.4.0 (30 Sep 2004)
+
+  30 Sep 2004; Patrick Kursawe <phosphan@gentoo.org> +files/manual.patch-r1,
+  +files/qcad-2.0.4.0-1.src-gentoo.patch, +files/qcad-2.0.4.0-gcc34.patch,
+  +qcad-2.0.4.0.ebuild:
+  Version bump. gcc 3.4 patch no longer necessary. Online help currently not
+  available.
 
   21 Sep 2004; Danny van Dyk <kugelfang@gentoo.org>
   +files/qcad-2.0.3.1-gcc34.patch, qcad-2.0.3.1-r1.ebuild:
