@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/oroborus-extras
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/ChangeLog,v 1.8 2003/12/08 14:47:09 obz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/ChangeLog,v 1.9 2004/04/27 21:41:13 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  oroborus-extras-2.0.13.ebuild:
+  Add inherit eutils
 
   08 Dec 2003; Mike Gardiner <obz@gentoo.org> oroborus-extras-2.0.13.ebuild,
   files/deskmenu-1.4.0-string.patch:

@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r2.ebuild,v 1.4 2003/09/04 07:35:27 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r2.ebuild,v 1.5 2004/04/27 21:48:03 agriffis Exp $
+
+inherit eutils
 
 IUSE="gif nls png kde oss jpeg gnome"
 

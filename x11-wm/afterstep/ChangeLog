@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/afterstep
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.16 2004/03/19 01:07:58 raker Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.17 2004/04/27 21:28:46 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> afterstep-2.0_beta3.ebuild,
+  afterstep-2.0_beta4.ebuild:
+  Add inherit eutils
 
 *afterstep-2.0_beta4 (18 Mar 2004)
 
