@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.2.ebuild,v 1.7 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.2.ebuild,v 1.8 2004/06/07 07:29:09 kloeri Exp $
 
 DESCRIPTION="A real IDENT daemon for linux."
 HOMEPAGE="http://www.fukt.bth.se/~per/identd"
