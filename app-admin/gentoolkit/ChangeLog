@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.37 2002/09/03 02:46:41 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.38 2002/09/04 17:21:58 lostlogic Exp $
+
+*gentoolkit-0.1.17 (03 Sep 2002)
+
+  03 Sep 2002; Brandon Low <lostlogic@gentoo.org> gentoolkit-0.1.17.ebuild:
+
+  Move etc-update to portage.
 
 *gentoolkit-0.1.16 (28 Jul 2002)
 
