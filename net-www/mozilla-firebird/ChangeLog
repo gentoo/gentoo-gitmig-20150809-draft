@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-firebird
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.16 2003/08/03 07:51:24 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.17 2003/08/18 19:17:16 weeve Exp $
+
+  18 Aug 2003; Jason Wever <weeve@gentoo.org> mozilla-firebird-0.6.1.ebuild:
+  Marked stable for sparc
 
   03 Aug 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-0.6.1.ebuild:
   Add fixes for chrome errors on upgrading firebird.

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6.1.ebuild,v 1.9 2003/08/03 09:09:07 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6.1.ebuild,v 1.10 2003/08/18 19:17:16 weeve Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -13,7 +13,7 @@ DESCRIPTION="The Mozilla Firebird Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firebird/"
 SRC_URI="http://ftp.mozilla.org/pub/firebird/releases/${PV}/MozillaFirebird-source-${PV}.tar.bz2"
 
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc sparc ~alpha"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
 IUSE="java gtk2 ipv6 gnome moznoxft"
