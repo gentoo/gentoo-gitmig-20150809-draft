@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3007 2004/07/16 23:39:56 genone Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3008 2004/07/16 23:49:24 genone Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -23,8 +23,9 @@
 ##
 
 # <genone@gentoo.org> (17 July 2004)
-# another victim to the app-portage cleanup
+# two more victims to the app-portage cleanup
 app-portage/lintool
+app-portage/generate-use
 
 # <langthang@gentoo.org> (16 July 2004)
 # temporary masked for testing.
