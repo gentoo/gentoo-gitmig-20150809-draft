@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.24 2003/09/08 15:02:08 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.25 2003/09/08 15:35:26 obz Exp $
+
+  08 Sep 2003; Mike Gardiner <obz@gentoo.org> gnome-icon-theme-1.0.6.ebuild,
+  gnome-icon-theme-1.0.7.ebuild, gnome-icon-theme-1.0.8.ebuild:
+  Removed 0.6, 0.7 and marked 0.8 stable on x86
 
 *gnome-icon-theme-1.0.9 (08 Sep 2003)
 
