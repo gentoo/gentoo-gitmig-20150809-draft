@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0.ebuild,v 1.3 2001/01/11 23:19:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0.ebuild,v 1.4 2001/01/11 23:22:36 drobbins Exp $
 
 P=spython-1.5.2      
 S=${WORKDIR}/Python-2.0
@@ -12,8 +12,9 @@ SRC_URI="http://www.python.org/ftp/python/src/BeOpen-Python-2.0.tar.bz2
 
 HOMEPAGE="http://www.python.org http://www.azstarnet.com/~donut/programs/fchksum/"
 DEPEND=">=sys-libs/gpm-1.19.3"
-RDEPEND="$DEPEND >=sys-apps/bash-2.04 >=dev-lang/python-2.0"
-PROVIDE="virtual/python-2.0"
+RDEPEND="$DEPEND >=sys-apps/bash-2.04 >=sys-devel/python-2.0"
+#this package is just the static binary so it doesn't provide a full python environment
+#PROVIDE="virtual/python-2.0"
 
 src_unpack() {
     unpack BeOpen-Python-2.0.tar.bz2
