@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 58c2bdf927293cd4b9a004ac5e301912 ChangeLog 1197
-MD5 fd8de453aeb8cc087f06f604f2fdecfa cjkcodecs-1.0.2.ebuild 648
-MD5 fa0d39223884f04d75d0f55bdf023045 cjkcodecs-1.0.ebuild 643
+MD5 4c2f3ad871a924a76db48fe0d995963e ChangeLog 1409
+MD5 ffa1c95563247745f132bce911573500 cjkcodecs-1.0.2.ebuild 640
+MD5 08c0eac983cfe55dff34d091924c3309 cjkcodecs-1.0.3.ebuild 659
+MD5 e6ec95440488dff7c374761498f15de8 cjkcodecs-1.0.ebuild 635
+MD5 0b4d4c9305518872a5bbd563546e4e8d cjkcodecs-1.1.1.ebuild 645
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 7d9f4e20858b074ed9cc4de8ac3d6e34 cjkcodecs-1.0.3.ebuild 664
-MD5 cbeeff44a5528b9cceec23f5131663e1 cjkcodecs-1.1.1.ebuild 651
 MD5 fe55aaf14f85bb1bca60f19f40e02e60 files/digest-cjkcodecs-1.0 65
 MD5 ed462808d32026657155f1dff6cdd1e2 files/digest-cjkcodecs-1.0.2 68
 MD5 45fc7efdd09f88205d5a0a1bb4d20daa files/digest-cjkcodecs-1.0.3 68
 MD5 28da2fd8f2ffb71386fc6dba8978277f files/digest-cjkcodecs-1.1.1 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBxvu2roRuSHgZdywRAr56AKCMDlQAdHHWO4ZQ4rmBpzFDUr/PdQCfV4G7
-by8oDCDLsiGwVqWQLmv5s3A=
-=HJ4n
+iD8DBQFB/ZchxtZcznfol0URAifoAJ9bDnZ9X1diM6kulZ6nMzAyKBG19gCg2ZZa
+fjnXLkJ2QzNILx/DKlfRrb8=
+=xLIV
 -----END PGP SIGNATURE-----
