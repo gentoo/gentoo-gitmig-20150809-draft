@@ -14,25 +14,29 @@ SRC_URI="ftp://ftp.freeciv.org/freeciv/stable/${P}.tar.bz2"
 HOMEPAGE="http://www.freeciv.org"
 
 # when compiling with xaw support, it doesn't work, so I am commenting out for now
-if [ -z "`use gtk`" ]; then
-	DEPEND="virtual/x11
-		>=x11-libs/gtk+-1.2.1
-		>=media-libs/imlib-1.9.2"
-else
-	DEPEND="x11-base/xfree
-			x11-libs/Xaw3d"
-fi
 
-#RDEPEND=""
+DEPEND="virtual/x11 gtk? ( >=x11-libs/gtk+-1.2.1 >=media-libs/imlib-1.9.2 ) xaw3d? ( x11-base/xfree x11-libs/Xaw3d )" 
+
+RDEPEND="${DEPEND}"
 
 
 src_compile() {
 	# standard options
 	OPTIONS="--infodir=/usr/share/info --mandir=/usr/share/man --prefix=/usr/X11R6 --host=${CHOST}"
 
-	if [ -z "`use gtk`" ]; then
-		OPTIONS="${OPTIONS} --enable-client=xaw"
+	if [ -z "`use gtk`" && -z "`use xaw3d`" ]; then
+		einfo "This package requires either gtk or xaw3d USE keywords to be defined"
+		exit 1
 	fi
+
+	if [ "`use gtk`" ]; then
+		OPTIONS="${OPTIONS} --enable-client=gtk"
+	fi
+
+	if [ "`use xaw3d`" ]; then
+		OPTIONS="${OPTIONS} --enable-client=xaw3d"
+	fi
+
 	if [ "`use nls`" ]; then
 		OPTIONS="${OPTIONS} --with-included-gettext"
 	else
