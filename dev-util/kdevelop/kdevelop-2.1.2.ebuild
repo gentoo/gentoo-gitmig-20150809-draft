@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.2.ebuild,v 1.6 2002/07/23 11:22:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.2.ebuild,v 1.7 2002/07/27 10:44:31 seemant Exp $
 
 inherit kde-base
 need-kde 3
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 	mirror://gentoo/c_cpp_reference-1.0.tar.gz
 	mirror://gentoo/kdelibs-kdevelop-docs-3.0.1.tar.bz2"
 
-SLOT="0"
+
 LICENSE="GPL-2"
 KEYWORDS="x86"
 

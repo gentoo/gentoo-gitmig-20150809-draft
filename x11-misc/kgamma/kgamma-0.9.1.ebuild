@@ -9,7 +9,7 @@ DESCRIPTION="KGamma - a KControl modul for monitor gamma calibration"
 SRC_URI="http://download.berlios.de/kgamma/${P}.tar.gz"
 HOMEPAGE="http://kgamma.berlios.de/index2.php"
 LICENSE="GPL-2"
-SLOT="0"
+
 KEYWORDS="x86"
 
 #myconf="$myconf --enable-final"

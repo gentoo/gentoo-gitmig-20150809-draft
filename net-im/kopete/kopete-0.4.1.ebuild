@@ -4,7 +4,7 @@
 inherit kde-base || die
 
 need-kde 3
-SLOT="0"
+
 LICENSE="GPL-2"
 KEYWORDS="x86"
 DESCRIPTION="The KDE Instant Messenger"

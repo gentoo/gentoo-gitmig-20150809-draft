@@ -10,7 +10,7 @@ DESCRIPTION="KDE interface for giFT"
 HOMEPAGE="http://kift.sourceforge.net"
 SRC_URI="mirror://sourceforge/kift/${P}.tar.gz"
 
-SLOT="0"
+
 LICENSE="GPL-2"
 KEYWORDS="x86"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cervisia/cervisia-1.4.1.ebuild,v 1.8 2002/07/23 10:38:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cervisia/cervisia-1.4.1.ebuild,v 1.9 2002/07/27 10:44:30 seemant Exp $
 
 inherit kde-base || die
 
@@ -10,7 +10,7 @@ DESCRIPTION="A CVS Client for KDE"
 SRC_URI="mirror://sourceforge/cervisia/${P}.tar.gz"
 HOMEPAGE="http://cervisia.sourceforge.net"
 
-SLOT="0"
+
 LICENSE="QPL-1.0"
 KEYWORDS="x86"
 

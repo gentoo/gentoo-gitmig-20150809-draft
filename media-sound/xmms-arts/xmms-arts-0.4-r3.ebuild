@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-arts/xmms-arts-0.4-r3.ebuild,v 1.5 2002/07/22 00:48:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-arts/xmms-arts-0.4-r3.ebuild,v 1.6 2002/07/27 10:44:31 seemant Exp $
 
 inherit kde-base || die
 
@@ -12,7 +12,7 @@ DESCRIPTION="This output plugin allows xmms to work with arts, KDE's sound syste
 SRC_URI="http://stukach.com/hosted/m.i.a/xmmsarts/xmmsarts-0.4.tar.gz"
 # HOMEPAGE="http://home.earthlink.net/~bheath/xmms-arts/" #disappeared from the 'net?
 
-SLOT="0"
+
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
