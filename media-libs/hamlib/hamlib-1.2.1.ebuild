@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.1.ebuild,v 1.2 2004/06/28 00:26:44 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.1.ebuild,v 1.3 2004/06/28 02:34:01 killsoft Exp $
 
 inherit eutils
 
@@ -31,7 +31,6 @@ src_unpack() {
 src_compile() {
 	econf \
 		--libdir=/usr/lib/hamlib \
-		--includedir=/usr/include/hamlib \
 		--with-microtune \
 		--without-rpc-backends \
 		--without-perl-binding \
@@ -48,8 +47,7 @@ src_compile() {
 
 src_install() {
 	einstall \
-		libdir=${D}/usr/lib/hamlib \
-		includedir=${D}/usr/include/hamlib || \
+		libdir=${D}/usr/lib/hamlib || \
 		die "einstall failed"
 	dodoc AUTHORS PLAN README README.betatester
 	dodoc README.developer LICENSE NEWS TODO
