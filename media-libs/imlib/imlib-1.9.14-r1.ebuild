@@ -1,13 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r1.ebuild,v 1.20 2004/03/07 15:39:26 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r1.ebuild,v 1.21 2004/03/09 06:58:49 ferringb Exp $
 
-inherit libtool
+inherit gnome.org libtool
 
 DESCRIPTION="general image loading and rendering library"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/1.9/${P}.tar.gz
-	 http://ftp.gnome.org/pub/GNOME/sources/${PN}/1.9/${P}.tar.gz
-	 http://ftp.rpmfind.net/linux/gnome.org/sources/{PN}/1.9/${P}.tar.gz"
 HOMEPAGE="http://developer.gnome.org/arch/imaging/imlib.html"
 
 SLOT="0"
