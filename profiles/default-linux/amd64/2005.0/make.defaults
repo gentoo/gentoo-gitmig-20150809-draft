@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/make.defaults,v 1.5 2005/01/23 11:15:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/make.defaults,v 1.6 2005/01/25 00:51:07 eradicator Exp $
 
 STAGE1_USE=""
 GRP_STAGE23_USE="${STAGE1_USE} multislot ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses readline zlib -java -nptl"
@@ -15,10 +15,12 @@ MULTILIB_ABIS="x86 amd64"
 DEFAULT_ABI="amd64"
 
 CFLAGS_amd64="-m64"
+LDFLAGS_amd64="-m elf_x86_64"
 CDEFINE_amd64="__x86_64__"
 LIBDIR_amd64="lib64"
 
 CFLAGS_x86="-m32"
+LDFLAGS_x86="-m elf_i386"
 CDEFINE_x86="__i386__"
 LIBDIR_x86="lib32"
 
