@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.22 2004/05/26 00:53:24 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.23 2004/06/13 07:52:31 eradicator Exp $
+
+*ardour-0.9_beta16 (13 Jun 2004)
+
+  13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +ardour-0.9_beta16.ebuild:
+  Version bump closes bug #53491 and fixing jack dependency for bug #53382.
 
 *ardour-0.9_beta14 (25 May 2004)
 

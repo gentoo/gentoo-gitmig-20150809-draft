@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta14.ebuild,v 1.1 2004/05/26 00:53:24 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta14.ebuild,v 1.2 2004/06/13 07:52:31 eradicator Exp $
 
 MY_P="${P}-3"
 MY_PV="${PV}-3"
@@ -16,7 +16,7 @@ IUSE="nls"
 
 RDEPEND="dev-util/pkgconfig
 	>=media-libs/liblrdf-0.3.6
-	virtual/jack
+	>=media-sound/jack-audio-connection-kit-0.98.1
 	=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
 	>=media-libs/libsndfile-1.0.4

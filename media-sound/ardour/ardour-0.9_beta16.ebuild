@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta11-r1.ebuild,v 1.8 2004/06/13 07:52:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta16.ebuild,v 1.1 2004/06/13 07:52:31 eradicator Exp $
 
-MY_P="${P}.2"
-MY_PV="${PV}.2"
+MY_P="${P}.1"
+MY_PV="${PV}.1"
 
 DESCRIPTION="multi-track hard disk recording software"
 HOMEPAGE="http://ardour.org/"
@@ -11,11 +11,11 @@ SRC_URI="http://ardour.org/releases/${MY_P/_/}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="nls"
 
 RDEPEND="dev-util/pkgconfig
-	>=media-libs/liblrdf-0.3.1
+	>=media-libs/liblrdf-0.3.6
 	>=media-sound/jack-audio-connection-kit-0.98.1
 	=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
