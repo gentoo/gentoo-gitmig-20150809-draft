@@ -1,19 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/wmquake/wmquake-1.1.ebuild,v 1.2 2004/05/27 03:17:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/wmquake/wmquake-1.1.ebuild,v 1.3 2004/06/15 10:15:08 mr_bones_ Exp $
 
 inherit games
 
 DESCRIPTION="Quake1 in a dockapp window"
-SRC_URI="http://www.ne.jp/asahi/linux/timecop/software/${P}.tar.bz2"
 HOMEPAGE="http://www.ne.jp/asahi/linux/timecop/"
+SRC_URI="http://www.ne.jp/asahi/linux/timecop/software/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/x11"
+RDEPEND="virtual/x11"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -23,13 +25,9 @@ src_unpack() {
 		|| die "sed Makefile failed"
 }
 
-src_compile() {
-	emake || die "emake failed"
-}
-
 src_install() {
 	exeinto "${GAMES_LIBDIR}/wmquake"
-	doexe wmquake
+	doexe wmquake || die "doexe failed"
 	games_make_wrapper wmquake "${GAMES_LIBDIR}/wmquake/wmquake" "${GAMES_DATADIR}/quake-data/"
 	dodoc README*
 	prepgamesdirs
