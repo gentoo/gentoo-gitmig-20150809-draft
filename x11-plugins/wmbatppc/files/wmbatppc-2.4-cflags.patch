@@ -1,0 +1,11 @@
+--- Makefile	2004-07-17 20:59:18.140689352 +0200
++++ Makefile	2004-07-17 21:00:09.883823200 +0200
+@@ -6,7 +6,7 @@
+ INSTALL = /usr/bin/install
+ LIBDIR = -L/usr/X11R6/lib
+ LIBS = -lXpm -lXext -lX11 -lm $(shell /usr/bin/xosd-config --libs)
+-FLAGS = -O2 -DENABLE_XOSD $(shell /usr/bin/xosd-config --cflags)
++FLAGS = ${CFLAGS} -DENABLE_XOSD $(shell /usr/bin/xosd-config --cflags)
+ OBJS = wmgeneral.o
+ 
+ default:all
