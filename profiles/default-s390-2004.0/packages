@@ -35,6 +35,7 @@
 !sys-devel/bin86
 !sys-boot/lilo
 !sys-boot/grub
+!dev-util/gtk-doc
 
 # s390 specfic pkgs
 *sys-apps/s390-tools
