@@ -1,20 +1,16 @@
+
 inverse section requests (I like fancy names)
 
 newdepend() in virtual.eclass, consider functions.eclass or similar
-
-debug.eclass - tee output to file
-
-kde-objprelink.eclass - cancelled, integrate into kde.eclass
 
 decide where qt deps versioning should go
 
 koffice-i18n packages
 
--r1 packages for all kde apps in portage - update versions and build all
+add objprelink features to all kde app ebuilds
 
 sort out docs/sgml, get link from site
 
-cleanup or remove kde.org.eclass
+cleanup or remove kde.org.eclass - cancelled?
 
-new inheriting kdelibs ebuild
 
