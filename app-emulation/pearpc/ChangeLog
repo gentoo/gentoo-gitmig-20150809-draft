@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/pearpc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/ChangeLog,v 1.4 2004/08/16 01:41:02 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/ChangeLog,v 1.5 2004/09/18 18:42:57 eradicator Exp $
+
+*pearpc-0.3.1 (18 Sep 2004)
+
+  18 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> +pearpc-0.3.1.ebuild:
+  Version bump.  Added ~amd64.
 
 *pearpc-0.3.0 (16 Aug 2004)
 
