@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openvrml
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/ChangeLog,v 1.7 2003/11/22 20:34:16 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/ChangeLog,v 1.8 2004/03/30 09:35:03 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> openvrml-0.14.3.ebuild:
+  Adding amd64 keyword. Closing #44419.
 
 *openvrml-0.14.3 (22 Nov 2003)
 
