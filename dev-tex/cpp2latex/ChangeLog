@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/cpp2latex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cpp2latex/ChangeLog,v 1.6 2004/07/26 15:25:03 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cpp2latex/ChangeLog,v 1.7 2004/11/27 07:53:20 pclouds Exp $
+
+  27 Nov 2004; <pclouds@gentoo.org> cpp2latex-2.3.ebuild:
+  HOMEPAGE moved
 
   26 Jul 2004; Ferris McCormick <fmccor@gentoo.org> cpp2latex-2.3.ebuild:
   Stable for sparc.
