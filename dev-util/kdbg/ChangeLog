@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.1 2002/02/01 21:53:28 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.2 2002/04/04 22:50:11 danarmak Exp $
+
+*kdbg-1.2.5 (4 Apr 2002)
+
+  4 Apr 2002; Dan Armak <danarmak@gentoo.org> changelog:
+  
+  New version. The 1.2.5.2 ebuild is 1.2.5 linking against kde2, the 1.2.5.3 ebuild
+  is the same 1.2.5 linking against kde3.
 
 *kdbg-1.2.2 (1 Feb 2002)
 
