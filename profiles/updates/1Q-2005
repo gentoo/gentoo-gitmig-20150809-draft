@@ -89,7 +89,6 @@ move kde-base/kate-kpybrowser kde-base/kate-plugins
 move kde-base/kate-make kde-base/kate-plugins
 move kde-base/kate-modeline kde-base/kate-plugins
 move kde-base/kate-openheader kde-base/kate-plugins
-move kde-base/kate-plugins kde-base/kate-plugins
 move kde-base/kate-scripts kde-base/kate-plugins
 move kde-base/kate-snippets kde-base/kate-plugins
 move kde-base/kate-tabbarextension kde-base/kate-plugins
