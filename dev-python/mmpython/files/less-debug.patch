@@ -1,0 +1,12 @@
+*** mmpython-0.1/table.py	Sun Jul 27 21:29:08 2003
+--- mmpython-0.1/table2.py	Wed Jul 30 19:55:22 2003
+***************
+*** 57,63 ****
+          self.translations = {}
+          self.languages = []
+          self.i18ndir = os.path.join(LOCALEDIR, name.lower())
+-         print self.i18ndir
+          try:
+              self.read_translations()
+          except:
+--- 57,62 ----
