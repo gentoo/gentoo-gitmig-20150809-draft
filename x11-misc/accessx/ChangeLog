@@ -1,7 +1,10 @@
 # ChangeLog for x11-misc/accessx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Maintainer: George Shapovalov <george@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.6 2003/05/16 18:51:36 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.7 2003/11/03 07:51:42 abhishek Exp $
+
+  02 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
+  Added metadata.xml
 
 *accessx-950-r1 (24 Jul 2002)
 
