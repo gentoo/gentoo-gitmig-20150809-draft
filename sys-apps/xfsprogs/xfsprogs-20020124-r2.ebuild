@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-20020124.ebuild,v 1.2 2002/01/24 23:13:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-20020124-r2.ebuild,v 1.1 2002/01/24 23:49:08 drobbins Exp $
 
 S=${WORKDIR}/cmd/${PN}
 DESCRIPTION="xfs filesystem utilities"
@@ -22,11 +22,11 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} DK_INC_DIR=${D}/usr/include/disk install install-dev || die
-	dodir /usr/lib
-	cd ${D}/lib
+	dodir /lib
+	cd ${D}/usr/lib
 	local x
-	for x in *
+	for x in libhandle*
 	do
-	ln -s ../../${x} ${D}/usr/lib/${x}
+	ln -s ../usr/lib/${x} ${D}/lib/${x}
 	done
 }
