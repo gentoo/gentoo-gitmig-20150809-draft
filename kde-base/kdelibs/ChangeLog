@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.8 2002/04/06 08:57:49 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.9 2002/05/02 19:43:01 danarmak Exp $
+
+  2 May 2002; Dan Armak <danarmak@gentoo.org> changelog:
+  
+  Add ghostscript dep (needed for printing to pdf).
 
   6 Apr 2002; Dan Armak <danarmak@gentoo.org> changelog:
   
