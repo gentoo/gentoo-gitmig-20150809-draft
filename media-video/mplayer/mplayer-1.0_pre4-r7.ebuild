@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.7 2004/07/27 18:34:41 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.8 2004/07/29 02:35:00 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -60,7 +60,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	svga? ( media-libs/svgalib )
 	!ia64? (
 		theora? ( media-libs/libtheora )
-		live? ( =media-plugins/live-2004.03.27 )
+		live? ( >=media-plugins/live-2004.03.27 )
 		)
 	truetype? ( >=media-libs/freetype-2.1 )
 	xinerama? ( virtual/x11 )
