@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/dvdrtools-0.1.6.ebuild,v 1.1 2004/07/11 21:22:04 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/dvdrtools-0.1.6.ebuild,v 1.2 2004/07/13 15:56:54 agriffis Exp $
 
 inherit eutils gcc gnuconfig
 
@@ -25,8 +25,8 @@ src_unpack() {
 }
 
 src_compile() {
-	econf
-	emake
+	econf || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -67,4 +67,3 @@ src_install() {
 pkg_postinst() {
 	einfo "This version of dvdrtools does not support ATAPI writing, you must use SCSI emulation."
 }
-
