@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/zope-config
 # Copyright 2003-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.13 2004/01/26 20:30:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.14 2004/03/03 22:41:45 dholm Exp $
+
+  03 Mar 2004; David Holm <dholm@gentoo.org> zope-config-0.3.ebuild:
+  Added to ~ppc.
 
   26 Jan 2004; Jason Wever <weeve@gentoo.org> zope-config-0.3.ebuild:
   Changed sparc keyword to ~sparc as this was mistakenly stabilized with broken
