@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.30 2004/02/09 21:43:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.31 2004/02/15 21:07:38 azarah Exp $
+
+  15 Feb 2004; Martin Schlemmer <azarah@gentoo.org> bash-2.05b-r9.ebuild:
+  Fix parallel make, bug #41002.
 
   09 Feb 2004; <gustavoz@gentoo.org> bash-2.05b-r9.ebuild:
   stable on sparc

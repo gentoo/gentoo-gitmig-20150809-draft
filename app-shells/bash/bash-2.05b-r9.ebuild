@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r9.ebuild,v 1.5 2004/02/09 21:43:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r9.ebuild,v 1.6 2004/02/15 21:07:38 azarah Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -38,8 +38,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-multibyte-locale.patch
 	# Segfault on empty herestring
 	epatch ${FILESDIR}/${P}-empty-herestring.patch
-	# fix broken rbash functionality
+	# Fix broken rbash functionality
 	epatch ${FILESDIR}/${P}-rbash.patch
+	# Fix parallel make, bug #41002.
+	epatch ${FILESDIR}/${P}-parallel-build.patch
 
 	# Enable SSH_SOURCE_BASHRC (#24762)
 	sed -e 's:^.*\(#define SSH_SOURCE_BASHRC\).*$:\1:' \
