@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/text-reform
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-reform/ChangeLog,v 1.7 2005/01/13 14:12:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-reform/ChangeLog,v 1.8 2005/03/09 18:36:38 corsair Exp $
+
+  09 Mar 2005; Markus Rothe <corsair@gentoo.org> text-reform-1.11.ebuild:
+  Stable on ppc64
 
   13 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> text-reform-1.11.ebuild:
   Stable on sparc
