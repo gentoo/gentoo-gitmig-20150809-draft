@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0.ebuild,v 1.2 2002/07/16 04:54:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0.ebuild,v 1.3 2002/07/17 06:28:54 seemant Exp $
 
 inherit libtool
 
@@ -16,9 +16,9 @@ KEYWORDS="x86 ppc"
 
 
 DEPEND="sys-devel/perl
-		>=sys-libs/zlib-1.1.4
-		mysql? ( >=dev-db/mysql-3.23.26 )
-		ssl? ( >=dev-libs/openssl-0.9.6 )"
+	>=sys-libs/zlib-1.1.4
+	mysql? ( >=dev-db/mysql-3.23.26 )
+	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
 src_compile() {
 

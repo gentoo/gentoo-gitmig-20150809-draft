@@ -1,12 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.9.1.ebuild,v 1.3 2002/07/11 06:30:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.9.1.ebuild,v 1.4 2002/07/17 06:28:54 seemant Exp $
 
 S="${WORKDIR}/openh323"
 SRC_URI="http://www.openh323.org/bin/openh323_${PV}.tar.gz"
 HOMEPAGE="http://www.openh323.org"
+DESCRIPTION="Open Source implementation of the ITU H.323 teleconferencing
+protocol"
+
+DEPEND=">=dev-libs/pwlib-1.2.20"
+
 SLOT="1.9"
-DEPEND="virtual/glibc >=dev-libs/pwlib-1.2.20"
+LICENSE="MPL-1.1"
 KEYWORDS="x86"
 
 src_compile() {

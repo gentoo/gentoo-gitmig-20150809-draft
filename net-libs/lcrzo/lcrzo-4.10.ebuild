@@ -1,15 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-libs/lcrzo/lcrzo-4.10.ebuild,v 1.1 2002/06/06 19:18:27 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/lcrzo/lcrzo-4.10.ebuild,v 1.2 2002/07/17 06:28:53 seemant Exp $
 
+S=${WORKDIR}/${P}-src
 DESCRIPTION="Library of Ethernet, IP, UDP, TCP, ICMP, ARP and RARP protocols"
 HOMEPAGE="http://www.laurentconstantin.com/en/lcrzo/"
 SRC_URI="http://www.laurentconstantin.com/common/${PN}/download/v4/${P}-src.tgz"
-S=${WORKDIR}/${P}-src
 
 DEPEND="virtual/glibc net-libs/libpcap"
-LICENSE="GPL-2"
+
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}/src

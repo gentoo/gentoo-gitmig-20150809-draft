@@ -9,9 +9,10 @@ HOMEPAGE="http://open.nit.ca/wvstreams"
 
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}"
-LICENSE="GPL-2"
 
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
 
