@@ -1,8 +1,13 @@
 # ChangeLog for app-sci/gri
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gri/ChangeLog,v 1.3 2003/02/12 05:16:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gri/ChangeLog,v 1.4 2003/05/16 09:40:07 george Exp $
 
-*gri-2.12.1.ebuild (06 ‰≈À 2002)
+*gri-2.12.4 (16 May 2003)
+
+  16 May 2003; George Shapovalov <george@gentoo.org> gri-2.12.4.ebuild :
+  new version
+
+*gri-2.12.1 (06 Dec 2002)
 
   07 Jan 2003; George Shapovalov <george@gentoo.org> gri-2.12.1.ebuild :
 
