@@ -1,7 +1,13 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.15 2003/05/20 00:59:52 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.16 2003/07/06 09:13:30 kumba Exp $
 
+  
+*wget-1.8.2-r2 (20 Dec 2002)
+
+  06 Jul 2003; Joshua Kinard <kumba@gentoo.org> wget-1.8.2-r2.ebuild:
+  Changed ~mips to mips in KEYWORDS
+  Cleaned up Changelog
 
   19 May 2003; Joshua Kinard <kumba@gentoo.org> wget-1.8.2-r2.ebuild:
   Add gnuconfig eclass, and gnuconfig_update to src_compile to allow
@@ -16,8 +22,6 @@
   20 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> wget-1.8.2.ebuild, wget-1.8.2-r1.ebuild
 						wget-1.8.2-r2.ebuild :
   Updated SRC_URI and HOMEPAGE.
-  
-*wget-1.8.2-r2 (20 Dec 2002)
 
   20 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Security update - added patch from RedHat.
