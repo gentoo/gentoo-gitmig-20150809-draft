@@ -1,6 +1,10 @@
 # ChangeLog for media-video/camstream
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.8 2004/01/04 02:26:04 caleb Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.9 2004/04/20 06:54:20 phosphan Exp $
+
+  20 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> camstream-0.26.2.ebuild,
+  camstream-0.26.3.ebuild:
+  Fixed what was broken by the last fixes, moved .3 to stable, cleanup.
 
   03 Jan 2004; Caleb Tennis <caleb@gentoo.org> camstream-0.26.2.ebuild,
   camstream-0.26.3.ebuild:
