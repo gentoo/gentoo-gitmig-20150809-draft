@@ -1,8 +1,15 @@
 # ChangeLog for app-cdr/arson
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# Author: Mark Dillavou <line72@postmark.net>
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.1 2002/07/05 10:19:41 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.2 2002/07/11 20:06:07 stroke Exp $
+
+*eroaster-2.1.0 (11 July 2002) 
+
+   11 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> eroaster-2.1.0.ebuild:  
+
+   Eroaster development version added, but *masked*. Closes bug #4250. 
+   Ebuild submitted by:  Philip Walls <malverian@hotmail.com>
 
 *eroaster-2.0.12 (5 July 2002) Bart Verwilst <verwilst@gentoo.org>
 
    initial ebuild
+   ebuild written by Mark Dillavou <line72@postmark.net>
