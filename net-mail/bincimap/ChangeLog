@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/bincimap
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.3 2003/10/22 18:29:27 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.4 2003/10/22 20:47:28 nakano Exp $
 
 *bincimap-1.2.3-r1 (13 Oct 2003)
+
+  22 Oct 2003; Masatomo Nakano <nakano@gentoo.org> metadata.xml:
+  Modified metadata.xml to change herd to net-mail.
 
   22 Oct 2003; Masatomo Nakano <nakano@gentoo.org> bincimap-1.2.3-r1.ebuild:
   Marked as stable.
