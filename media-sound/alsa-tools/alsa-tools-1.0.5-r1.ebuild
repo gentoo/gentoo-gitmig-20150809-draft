@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.5-r1.ebuild,v 1.3 2004/08/04 20:06:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.5-r1.ebuild,v 1.4 2004/09/02 10:36:08 lv Exp $
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 IUSE="X"
 
@@ -45,6 +45,12 @@ if [ -z "${ALSA_TOOLS}" ]; then
 		            us428control usx2yloader vxloader"
 	fi
 fi
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/alsa-tools-1.0.6-gcc34.patch
+}
 
 src_compile() {
 	gnuconfig_update
