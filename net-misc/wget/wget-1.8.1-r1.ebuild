@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.1.ebuild,v 1.1 2001/12/29 00:20:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.1-r1.ebuild,v 1.1 2002/02/23 01:43:15 drobbins Exp $
 
 NPVER=20011209
 S=${WORKDIR}/${P}
@@ -10,12 +9,8 @@ SRC_URI="ftp://prep.ai.mit.edu/gnu/wget/${P}.tar.gz
 	 ftp://gatekeeper.dec.com/pub/GNU/wget/${P}.tar.gz
          http://www.biscom.net/~cade/away/wget-new-percentage/wget-new-percentage-cvs-${NPVER}.tar.gz"
 HOMEPAGE="http://www.cg.tuwien.ac.at/~prikryl/wget.html"
-
-DEPEND="virtual/glibc 
-        nls? ( sys-devel/gettext )
-        ssl? ( >=dev-libs/openssl-0.9.6b )"
-
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/glibc ssl? ( >=dev-libs/openssl-0.9.6b )"
+DEPEND="$RDEPEND nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
