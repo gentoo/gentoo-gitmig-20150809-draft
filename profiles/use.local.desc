@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.429 2004/06/10 06:57:00 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.430 2004/06/10 07:00:40 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -190,6 +190,7 @@ media-gfx/gimageview:mng - Enable mng format support
 media-gfx/gimageview:mplayer - Enable mplayer support
 media-gfx/gimageview:xine - Enable xine support
 media-gfx/gimp:gimpprint - Enable gimp-print printing support
+media-gfx/gimp:mng - Enable MNG support
 media-gfx/graphicsmagick:gs - enable ghostscript support
 media-gfx/graphicsmagick:jbig - enable jbig support
 media-gfx/graphicsmagick:jp2 - enable jpeg v2 support
