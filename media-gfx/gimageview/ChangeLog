@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimageview
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/ChangeLog,v 1.13 2005/03/21 17:31:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/ChangeLog,v 1.14 2005/03/30 16:31:41 hansmi Exp $
+
+  30 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
+  gimageview-0.2.27-r1.ebuild:
+  Stable on ppc.
 
   21 Mar 2005; Mamoru KOMACHI <usata@gentoo.org>
   gimageview-0.2.27-r1.ebuild:
