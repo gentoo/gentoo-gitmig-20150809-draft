@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6.ebuild,v 1.3 2002/12/09 04:17:41 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6.ebuild,v 1.4 2002/12/15 10:44:11 bjb Exp $
 
 inherit elisp
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc  ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 DESCRIPTION="Emacs Backend for Sj3 Ver.2, FreeWnn, Wnn6 and Canna"
 SRC_URI="ftp://ftp.m17n.org/pub/tamago/${P}.tar.gz
          http://cgi18.plala.or.jp/nyy/canna/canna-20011204.diff.gz"

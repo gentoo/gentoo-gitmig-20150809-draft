@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.17.ebuild,v 1.2 2002/12/09 04:17:42 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.17.ebuild,v 1.3 2002/12/15 10:44:11 bjb Exp $
 
 DESCRIPTION="Static HTML photo album generator"
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="x86 ~sparc  ~alpha ~ppc"
+KEYWORDS="x86 ~sparc ~alpha ~ppc"
 
 DEPEND=">=sys-devel/perl-5.6.1-r6
         >=media-gfx/imagemagick-5.4.7-r2

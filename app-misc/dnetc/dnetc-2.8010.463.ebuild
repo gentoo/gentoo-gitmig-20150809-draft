@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.8010.463.ebuild,v 1.3 2002/12/09 04:17:42 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.8010.463.ebuild,v 1.4 2002/12/15 10:44:11 bjb Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}
@@ -11,7 +11,7 @@ SRC_URI="alpha? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}
 	x86? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-x86-elf.tar.gz )"
 LICENSE="distributed.net"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc  ~alpha"
+KEYWORDS="x86 -ppc -sparc ~alpha"
 IUSE=""
 DEPEND=""
 #RDEPEND=""
