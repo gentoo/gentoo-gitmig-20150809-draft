@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.59 2004/09/09 17:28:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.60 2004/09/09 17:35:22 eradicator Exp $
+
+  09 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> +files/webmin-pam:
+  Readded pam file.
 
 *webmin-1.160 (09 Sep 2004)
 
