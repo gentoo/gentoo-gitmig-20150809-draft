@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.2.7.ebuild,v 1.1 2002/12/25 21:37:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.2.7.ebuild,v 1.2 2003/01/06 22:14:41 tuxus Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Utility to change the gcc compiler being used."
 SRC_URI=""
 HOMEPAGE="http://www.gentoo.org/"
 
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha mips"
 SLOT="0"
 LICENSE="GPL-2"
 
