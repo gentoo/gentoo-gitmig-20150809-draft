@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-hello
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-hello/ChangeLog,v 1.1 2005/03/20 09:55:40 mkennedy Exp $
+
+*cl-hello-0.2 (20 Mar 2005)
+
+  20 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-hello-0.2.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
