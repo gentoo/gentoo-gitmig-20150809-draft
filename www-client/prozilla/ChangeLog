@@ -1,6 +1,9 @@
 # ChangeLog for www-client/prozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/prozilla/ChangeLog,v 1.4 2005/02/03 15:00:03 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/prozilla/ChangeLog,v 1.5 2005/02/04 10:58:14 ka0ttic Exp $
+
+  04 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> prozilla-1.3.7.3.ebuild:
+  Marked stable on x86.
 
 *prozilla-1.3.7.3 (03 Feb 2005)
 
