@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.ebuild,v 1.5 2004/06/25 01:05:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.ebuild,v 1.6 2004/06/26 01:42:10 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
@@ -66,9 +66,6 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/mozilla"
 
 pkg_setup() {
-	# Set MAKEOPTS to have proper -j? option ..
-	get_number_of_jobs
-
 	# needed by src_compile() and src_install()
 	export MOZILLA_OFFICIAL=1
 	export BUILD_OFFICIAL=1
@@ -367,7 +364,7 @@ src_compile() {
 		${myconf} || die
 
 	einfo "Building Mozilla..."
-	make MAKE="emake" WORKDIR="${WORKDIR}" || die
+	make WORKDIR="${WORKDIR}" || die
 
 	####################################
 	#

@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.178 2004/06/25 16:00:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.179 2004/06/26 01:42:10 agriffis Exp $
+
+  25 Jun 2004; Aron Griffis <agriffis@gentoo.org> mozilla-1.7.ebuild:
+  Fix bug 54519: stop using get_number_of_jobs
 
   25 Jun 2004; Aron Griffis <agriffis@gentoo.org> mozilla-1.6-r1.ebuild:
   QA - fix use invocation
