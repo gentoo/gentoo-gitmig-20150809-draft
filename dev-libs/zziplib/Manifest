@@ -1,3 +1,13 @@
-MD5 403182553cf0065e518b522dce45bdb1 ChangeLog 1438
-MD5 dc87558c4354cd343aa09d6d60927cac zziplib-0.13.36.ebuild 912
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2bdbd83b93eeae747f3dab0fea8a018d zziplib-0.13.36.ebuild 919
+MD5 8c4d4fe79dfd1bf117763d94cbe8afc3 ChangeLog 1549
 MD5 8c8297e1f481bd0a0e076393cd827e40 files/digest-zziplib-0.13.36 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBofZTZ/iYVBmujdURAjU/AJ9IkNysTOavnupNDewRh8L30v5ZpACfYh4u
+CNDzRa2l7y+IFeKAXTg/V3A=
+=FViB
+-----END PGP SIGNATURE-----
