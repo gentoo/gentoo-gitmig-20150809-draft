@@ -29,6 +29,6 @@ MD5 cf7b2bb276c568f0f66d10951b4ce3ad files/digest-nvidia-glx-1.0.5332-r2 83
 MD5 1316f73c0eecd8832bb362a3d5ca4892 files/digest-nvidia-glx-1.0.5336-r2 80
 MD5 50ffea0f5eb12d252905f379bc7be2d6 files/digest-nvidia-glx-1.0.6106-r1 163
 MD5 c3afc69f917a783ebd53cf2de38065dc files/09nvidia 61
-MD5 dc042e58fec2cdaab035e7cc41307f46 files/1.0.6106/NVIDIA_glx-1.0.6106-glheader.patch 428
+MD5 f6c702c19de46ece719928dc99ef0ad6 files/1.0.6106/NVIDIA_glx-1.0.6106-glheader.patch 419
 MD5 3d8b3ecb3827e2e3a9a45ac6c3210a0a files/1.0.6106/NVIDIA_glx-1.0.6106-defines.patch 437
 MD5 6f55327ce020f7ed0d433ea99dacb315 files/1.0.6106/NVIDIA_glx-1.0.6106-makefile.patch 593
