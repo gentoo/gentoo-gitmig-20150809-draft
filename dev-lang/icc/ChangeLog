@@ -1,8 +1,11 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.21 2004/02/07 23:03:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.22 2004/05/13 11:19:53 xtv Exp $
 
 *icc-8.0.055 (07 Feb 2004)
+
+  13 May 2004; Thomas Veith <xtv@gentoo.org> icc-8.0.055.ebuild:
+  Added DEPEND to sys-libs/lib-compat, bug 48350
 
   07 Feb 2004; Daniel Robbins <drobbins@gentoo.org> icc-8.0.055.ebuild:
   New ebuild, partially rewritten from bug #35602. This ebuild is still
@@ -15,6 +18,9 @@
   Fix rpm_unpack call again.
 
 *icc-7.1.030 (13 Oct 2003)
+
+  13 May 2004; Thomas Veith <xtv@gentoo.org> icc-8.0.055.ebuild:
+  Added DEPEND to sys-libs/lib-compat, bug 48350
 
   13 Oct 2003; Daniel Robbins <drobbins@gentoo.org> icc-7.1.030.ebuild:
   New icc version for people with a premier.intel.com account. ~ on 
@@ -30,12 +36,18 @@
 
 *icc-7.1.029 (18 Sep 2003)
 
+  13 May 2004; Thomas Veith <xtv@gentoo.org> icc-8.0.055.ebuild:
+  Added DEPEND to sys-libs/lib-compat, bug 48350
+
   18 Sep 2003; Daniel Robbins <drobbins@gentoo.org> icc-7.1.029.ebuild:
   new version marked stable for ia64, unstable for x86. ia64 support
   integrated into this ebuild. Also switched to slower rpm2targz simply
   because it doesn't require "rpm" to be merged.
 
 *icc-7.1.006 (11 April 2003)
+
+  13 May 2004; Thomas Veith <xtv@gentoo.org> icc-8.0.055.ebuild:
+  Added DEPEND to sys-libs/lib-compat, bug 48350
 
   11 April 2003; Jon Portnoy <avenj@gentoo.org> icc-7.1.006.ebuild :
 
