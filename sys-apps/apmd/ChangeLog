@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/apmd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.5 2002/07/14 19:20:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.6 2002/07/21 18:22:55 gerk Exp $
 
 *apmd-3.0.2-r3 (12 July 2002)
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
+  updated keywords (-ppc)
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> apmd-3.0.2-r3.ebuild :
   Added KEYWORDS.

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/acpid
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/ChangeLog,v 1.4 2002/07/14 19:20:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/ChangeLog,v 1.5 2002/07/21 18:18:45 gerk Exp $
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added -ppc to keywords
 
   11 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
 
