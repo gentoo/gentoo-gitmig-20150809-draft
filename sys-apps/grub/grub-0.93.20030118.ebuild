@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.93.20030118.ebuild,v 1.10 2003/07/27 18:46:41 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.93.20030118.ebuild,v 1.11 2003/09/06 16:27:42 pappy Exp $
 
 inherit mount-boot eutils flag-o-matic
 
@@ -41,6 +41,13 @@ src_compile() {
 	unset CFLAGS
 
 	use static && export LDFLAGS="${LDFLAGS} -static"
+
+	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
+	# grub configur somehow messes up the CFLAGS, so we need to do it dirty
+	# this is only activated when transparent hardened-gcc is found!
+	if has_version 'sys-devel/hardened-gcc' && [ ${CC}="gcc" ] ; then
+		CC="${CC} -yet_exec"
+	fi
 
 	econf --exec-prefix=/ \
 		--disable-auto-linux-mem-opt || die
