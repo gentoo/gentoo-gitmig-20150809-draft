@@ -1,9 +1,11 @@
 # ChangeLog for dev-python/pyunit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyunit/ChangeLog,v 1.3 2003/02/12 06:34:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyunit/ChangeLog,v 1.4 2003/02/27 02:32:22 liquidx Exp $
 
 *pyunit-1.4.1 (28 Oct 2002)
-
+  27 Feb 2003; Alastair Tse <liquidx@gentoo.org> pyunit-1.4.1.ebuild:
+  SRC_URI to use sf mirror. Fixed invalid DEPEND.
+  
   28 Oct 2002; Nicholas Henke <roughneck@gentoo.org> pyunit-1.4.1.ebuild: 
   Initial import. Ebuild submitted by Eivind Tagseth
   <eivindt-gentoo@multinet.no>
