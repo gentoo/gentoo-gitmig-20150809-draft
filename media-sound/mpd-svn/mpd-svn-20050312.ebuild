@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20050312.ebuild,v 1.1 2005/03/13 12:03:11 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20050312.ebuild,v 1.2 2005/03/14 00:05:19 ticho Exp $
 
 IUSE="oggvorbis mad aac audiofile ipv6 flac mikmod alsa unicode icecast ao"
 
@@ -110,6 +110,8 @@ pkg_postinst() {
 		draw_line
 		echo
 	fi
+	einfo "Please make sure that MPD's pid_file is set to /var/run/mpd/mpd.pid."
+	echo
 	ewarn "Note that this is just a development version of Music Player Daemon,"
 	ewarn "so if you want to report any bug, please state this fact in your"
 	ewarn "report, as well as the fact that you used a ${P} Gentoo ebuild."
