@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/skunkweb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.4 2004/11/19 11:00:56 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.5 2004/12/29 01:56:18 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Nov 2004; Christian Andreetta <satya@gentoo.org>
   +files/skunkweb-cron-cache_cleaner, skunkweb-3.4.0.ebuild:
@@ -39,10 +42,10 @@
   28 Jul 2004; Alastair Tse <liquidx@gentoo.org> skunkweb-3.4_beta5.ebuild:
   fix enewuser enewgroup issues (#58526)
 
-  07 May 2004; Bryan Østergaard <kloeri@gentoo.org> skunkweb-3.4_beta5.ebuild:
+  07 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> skunkweb-3.4_beta5.ebuild:
   Fix IUSE.
 
-  10 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> skunkweb-3.4_beta5.ebuild:
+  10 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> skunkweb-3.4_beta5.ebuild:
   Stable on x86.
 
   25 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
