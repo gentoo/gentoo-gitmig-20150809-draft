@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.33 2004/12/09 17:45:39 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.34 2004/12/14 00:57:07 genone Exp $
+
+*gentoolkit-0.2.0 (13 Dec 2004)
+
+  13 Dec 2004; Marius Mauch <genone@gentoo.org> +gentoolkit-0.2.0.ebuild,
+  -gentoolkit-0.2.0_pre10.ebuild, -gentoolkit-0.2.0_pre8.ebuild,
+  -gentoolkit-0.2.0_pre9.ebuild:
+  Release 0.2.0 final (same as 0.2.0_rc1-r1) as stable for all archs.
 
 *gentoolkit-0.2.0_rc1-r1 (09 Dec 2004)
 
