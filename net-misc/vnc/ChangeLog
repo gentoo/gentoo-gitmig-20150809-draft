@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vnc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.24 2004/01/10 06:12:04 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.25 2004/06/15 05:26:51 kugelfang Exp $
+
+  15 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> vnc-3.3.7.ebuild:
+  Marked stable on amd64.
 
   10 Jan 2004; <augustus@gentoo.org> vnc-3.3.7.ebuild:
   Added ~amd64 keyword. In order for this to work I had to disable Xvnc like ppc
