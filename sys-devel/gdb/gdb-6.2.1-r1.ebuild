@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.0.ebuild,v 1.15 2004/11/10 02:19:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.2.1-r1.ebuild,v 1.1 2004/11/10 02:19:13 vapier Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="GNU debugger"
 HOMEPAGE="http://sources.redhat.com/gdb/"
-SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2"
+SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2
+	mirror://gentoo/gdb-6.1-hppa-01.patch.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 -hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 -sparc ~x86"
 IUSE="nls makecheck"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
@@ -21,10 +22,10 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/gdb-6.0-threadver-aug2003.patch
-	epatch ${FILESDIR}/gdb-6.0-coreutils.patch
-	epatch ${FILESDIR}/gdb-6.0-info.patch
-	[ "${ARCH}" = "sparc" ] && epatch ${FILESDIR}/${PN}-5.3-sparc-nat-asm.patch
+	epatch ${FILESDIR}/gdb-6.1-uclibc.patch
+	epatch ${FILESDIR}/gdb-6.2.1-relative-paths.patch
+	epatch ${FILESDIR}/gdb-6.x-crash.patch
+	epatch ${FILESDIR}/gdb-6.2.1-pass-libdir.patch
 	strip-linguas -u bfd/po opcodes/po
 }
 

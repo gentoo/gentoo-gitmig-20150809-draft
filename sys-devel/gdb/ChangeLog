@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.57 2004/11/04 01:58:35 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.58 2004/11/10 02:19:13 vapier Exp $
+
+  09 Nov 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/gdb-6.2.1-pass-libdir.patch, +files/gdb-6.2.1-relative-paths.patch,
+  +files/gdb-6.x-crash.patch, gdb-6.0-r1.ebuild, gdb-6.0.ebuild,
+  gdb-6.1.1.ebuild:
+  Clean up ebuilds and add support for maketest (#68643). Also add misc
+  patches to resolve segfaults/sandbox violations (#49582 #65404) and package
+  collisions (#69496).
 
   03 Nov 2004; Joshua Kinard <kumba@gentoo.org> gdb-6.2.1.ebuild,
   gdb-6.2.ebuild:

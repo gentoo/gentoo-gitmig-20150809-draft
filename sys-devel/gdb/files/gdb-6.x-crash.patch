@@ -1,0 +1,20 @@
+--- gdb/symfile.c.orig	2004-04-27 21:17:40.955704896 +0200
++++ gdb/symfile.c	2004-04-27 21:18:02.591415768 +0200
+@@ -788,4 +788,4 @@
+   bfd *abfd;
+-  struct section_addr_info *orig_addrs;
+-  struct cleanup *my_cleanups;
++  struct section_addr_info *orig_addrs = NULL;
++  struct cleanup *my_cleanups = NULL;
+ 
+@@ -804,4 +804,2 @@
+ 
+-  orig_addrs = alloc_section_addr_info (bfd_count_sections (abfd));
+-  my_cleanups = make_cleanup (xfree, orig_addrs);
+   if (addrs)
+@@ -809,2 +807,5 @@
+       int i;
++      orig_addrs = alloc_section_addr_info (addrs->num_sections);
++      my_cleanups = make_cleanup (xfree, orig_addrs);
++
+       orig_addrs->num_sections = addrs->num_sections;
