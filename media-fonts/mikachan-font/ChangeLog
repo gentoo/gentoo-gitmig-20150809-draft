@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/mikachan-font
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font/ChangeLog,v 1.11 2004/08/30 03:03:30 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font/ChangeLog,v 1.12 2004/09/29 06:23:37 usata Exp $
+
+  29 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> -mikachan-font-8.8.ebuild,
+  mikachan-font-8.9-r1.ebuild:
+  Stable on x86, alpha and ppc.
 
   29 Aug 2004; Tom Gall <tgall@gentoo.org> mikachan-font-8.9-r1.ebuild:
   stable on ppc64, bug #61741

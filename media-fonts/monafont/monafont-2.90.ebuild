@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90.ebuild,v 1.9 2004/07/15 03:48:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90.ebuild,v 1.10 2004/09/29 06:27:36 usata Exp $
 
 MY_P=${P/_/}
 
 DESCRIPTION="Japanese bitmap and TrueType fonts suitable for browsing 2ch"
 HOMEPAGE="http://monafont.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
-	truetype? mirror://sourceforge/${PN}/${PN}-ttf-${PV}.zip"
+	truetype? ( mirror://sourceforge/${PN}/${PN}-ttf-${PV}.zip )"
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="x86 alpha ppc sparc ~amd64"
