@@ -1,6 +1,7 @@
 MD5 95d0b9277b4a07bd82eed79dbdbb325b gnet-2.0.3.ebuild 661
 MD5 e5e7f199ca928b5ab4b923707c4316c1 gnet-1.1.8.ebuild 978
 MD5 354b6f111a675b4cca639448bb2c7407 gnet-1.1.5.ebuild 983
+MD5 95d0b9277b4a07bd82eed79dbdbb325b gnet-2.0.4.ebuild 661
 MD5 f1d33e1140873005d39d521df9ace057 ChangeLog 2445
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 8a7df4d40cd304e23f32fd3d6da25ba5 gnet-1.1.9.ebuild 971
@@ -9,3 +10,4 @@ MD5 ad648265f6bc0565e36977361e9c4d5d files/digest-gnet-1.1.5 194
 MD5 844d85eb3637f4989bf59bdbb792b8dd files/digest-gnet-1.1.8 62
 MD5 a39e088e927a5d9b2de3794920d01405 files/digest-gnet-1.1.9 62
 MD5 cca2da31378233842e439771d8fb3dae files/digest-gnet-2.0.3 62
+MD5 f73caf8c6efe623e53f99747f02b06e4 files/digest-gnet-2.0.4 62
