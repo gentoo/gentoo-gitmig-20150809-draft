@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.7 2003/11/20 02:26:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225.ebuild,v 1.8 2003/12/09 21:12:13 vapier Exp $
 
 inherit games
 
@@ -147,45 +147,48 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
+
 	# here is where we check for the existence of a cdkey...
 	# if we don't find one, we ask the user for it
 	if [ -f ${dir}/System/cdkey ]; then
 		einfo "A cdkey file is already present in ${dir}/System"
 	else
-		ewarn "Your CD key is NOT checked for validity here."
-		ewarn "  Make sure you type it in correctly."
-		eerror "If you CTRL+C out of this, the game will not run!"
-		echo
-		while true
-		do
-			einfo "Please enter your CD key: "
-			read CDKEY1
-			einfo "Please re-enter your CD key: "
-			read CDKEY2
-
-			if [ "$CDKEY1" == "" ]; then
-				echo "You entered a blank CD key. Try again."
-			else
-				if [ "$CDKEY1" == "$CDKEY2" ]; then
-					echo "$CDKEY1" | tr a-z A-Z > ${dir}/System/cdkey
-					einfo "Thank you!"
-					break
-				else
-					eerror "Your CD key entries don't match. Try again."
-				fi
-			fi
-		done
+		ewarn "You MUST run this before playing the game:"
+		ewarn "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+		ewarn "That way you can [re]enter your cdkey."
 	fi
-
-	einfo "This game should be working, please assign any bugs to games@gentoo.org"
 	echo
 	einfo "To play the game run:"
 	einfo " ut2003"
-
-	games_pkg_postinst
 }
 
 pkg_postrm() {
 	ewarn "This package leaves a cdkey file in ${dir}/System that you need"
 	ewarn "to remove to completely get rid of this game's files."
+}
+
+pkg_config() {
+	ewarn "Your CD key is NOT checked for validity here."
+	ewarn "  Make sure you type it in correctly."
+	eerror "If you CTRL+C out of this, the game will not run!"
+	echo
+	einfo "CD key format is: XXXX-XXXX-XXXX-XXXX"
+	while true ; do
+		einfo "Please enter your CD key:"
+		read CDKEY1
+		einfo "Please re-enter your CD key:"
+		read CDKEY2
+		if [ "$CDKEY1" == "" ] ; then
+			echo "You entered a blank CD key.  Try again."
+		else
+			if [ "$CDKEY1" == "$CDKEY2" ] ; then
+				echo "$CDKEY1" | tr a-z A-Z > ${dir}/System/cdkey
+				einfo "Thank you!"
+				break
+			else
+				eerror "Your CD key entries do not match.  Try again."
+			fi
+		fi
+	done
 }
