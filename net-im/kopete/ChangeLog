@@ -1,6 +1,11 @@
 # ChangeLog for net-im/kopete
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.9 2003/02/12 08:02:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.10 2003/02/18 16:52:12 verwilst Exp $
+
+*kopete-0.6.1 (18 Feb 2003)
+
+  18 Feb 2003; Bart Verwilst <verwilst@gentoo.org>
+  New version, removed some oldies
 
 *kopete-0.6.0 (10 Feb 2003)
 
