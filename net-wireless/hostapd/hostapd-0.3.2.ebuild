@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.3.2.ebuild,v 1.2 2005/01/03 11:06:53 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.3.2.ebuild,v 1.3 2005/01/18 11:21:36 brix Exp $
 
 inherit toolchain-funcs
 
@@ -17,8 +17,7 @@ KEYWORDS="~x86 ~ppc"
 
 IUSE="ssl"
 
-DEPEND=">=net-wireless/hostap-driver-0.3.0
-		ssl? ( dev-libs/openssl )"
+DEPEND="ssl? ( dev-libs/openssl )"
 
 src_unpack() {
 	local CONFIG=${S}/.config

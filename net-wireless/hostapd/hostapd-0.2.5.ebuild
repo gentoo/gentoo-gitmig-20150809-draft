@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.2.5.ebuild,v 1.5 2005/01/03 11:06:53 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.2.5.ebuild,v 1.6 2005/01/18 11:21:36 brix Exp $
 
 inherit toolchain-funcs eutils
 
@@ -13,7 +13,6 @@ KEYWORDS="x86 ppc"
 IUSE=""
 SLOT="0"
 
-RDEPEND=">=net-wireless/hostap-driver-0.1.0"
 DEPEND="virtual/libc"
 
 src_unpack() {
