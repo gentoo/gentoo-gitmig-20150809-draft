@@ -1,8 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.4 2002/07/04 05:05:58 drobbins Exp $
- 
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.5 2002/07/04 05:27:51 drobbins Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
@@ -12,8 +11,6 @@ HOMEPAGE="http://www.gentoo.org"
 RDEPEND="virtual/python dev-libs/libxslt"
 
 src_unpack() {
-	cd ${WORKDIR}/${P}
-	
 	local myhost
 	myhost=`hostname`
 	if [ "$myhost" = "laptop.kicks-ass.net" ]
@@ -29,66 +26,46 @@ src_unpack() {
 	elif [ "$myhost" = "chiba.3jane.net" ]
 	then
 		echo -e "\e[32;1mCHIBA detected.\e[0m"
-		cvs -d /home/cvsroot co gentoo-src
 		WEBROOT=/www/virtual/www.gentoo.org/htdocs
 	fi
 
 	echo "Setting GENTOO_SRCDIR to $GENTOO_SRCDIR"
 	echo "Setting WEBROOT to $WEBROOT"
-		
-	if [ "$MAINTAINER" != "yes" ]
-	then
-		echo "This will zap stuff in ${WEBROOT}."
-		echo "Beware -- maintainers only."
-	fi
-	
+	echo "${WEBROOT}" > ${T}/webroot		
+
+	cd ${WORKDIR}/${P}
 	if [ -n "$GENTOO_SRCDIR" ]
 	then
-		ln -s ${GENTOO_SRCDIR} gentoo-src || die
+		ln -s "${GENTOO_SRCDIR}" gentoo-src || die
 	else
-		die "Please set the GENTOO_SRCDIR env var to point to the gentoo-src tree"
+		echo "GENTOO_SRCDIR $GENTOO_SRCDIR"
+		cvs -d /home/cvsroot co gentoo-src
 	fi
-}
+}	
 
 src_compile() {
 	python ${S}/python/gendevlistxml.py txt/devlist.txt xml/main-devlist.xml || die
 }
 
 src_install() {
+	export WEBROOT="`cat ${T}/webroot`"
 	dodir ${WEBROOT}/doc
 	dodir ${WEBROOT}/projects
 	insinto ${WEBROOT}/doc
 	
-	#process english docs
-	cd ${S}/xml/doc/en
 	local x
-	for x in *.xml
+	local y
+	for y in en es fr
 	do
-		x=`basename ${x} .xml`
-		xsltproc $TEMPLATE ${x}.xml > ${D}${WEBROOT}/doc/${x}.html || die
+		cd ${S}/xml/doc/${y}
+		for x in *.xml
+		do
+			x=`basename ${x} .xml`
+			xsltproc $TEMPLATE ${x}.xml > ${D}${WEBROOT}/doc/${x}.html || die
+		done
 	done
-	cd ${S}
 	
-	#process spanish docs
-	cd ${S}/xml/doc/es
-	local x
-	for x in *.xml
-	do
-		x=`basename ${x} .xml`
-		xsltproc $TEMPLATE ${x}.xml > ${D}${WEBROOT}/doc/${x}.html || die
-	done
 	cd ${S}
-	
-	#process french docs
-	cd ${S}/xml/doc/fr
-	local x
-	for x in *.xml
-	do
-		x=`basename ${x} .xml`
-		xsltproc $TEMPLATE ${x}.xml > ${D}${WEBROOT}/doc/${x}.html || die
-	done
-	cd ${S}
-	
 	cp txt/firewall ${D}${WEBROOT}/doc/
 	dodir ${WEBROOT}/images
 	insinto ${WEBROOT}/images
@@ -153,7 +130,7 @@ src_install() {
 	dodir ${WEBROOT}/packages/
 	insinto ${WEBROOT}/packages/
 	#we're getting bonkers stuff in the main packages pages, so lets make sure it's empty
-	rm ${T}/main-packages.xml
+	rm  -f ${T}/main-packages.xml
 	python python/genpkgxml.py ${T}/main-packages-old-style.xml || die
 	python python/genpkgxml-v2.py ${T}/main-packages.xml || die
 	for DIR in `ls xml/packages`
