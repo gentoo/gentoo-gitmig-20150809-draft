@@ -1,0 +1,10 @@
+# ChangeLog for net-www/pwauth
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/pwauth/ChangeLog,v 1.1 2005/02/17 10:28:57 hollow Exp $
+
+*pwauth-2.3.1 (17 Feb 2005)
+
+  17 Feb 2005; Benedikt Boehm <hollow@gentoo.org> +metadata.xml,
+  +files/pwauth.pam, +pwauth-2.3.1.ebuild:
+  initial ebuild revision
+
