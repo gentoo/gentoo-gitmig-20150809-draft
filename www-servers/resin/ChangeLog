@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.4 2004/11/17 16:52:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.5 2004/12/17 21:40:54 corsair Exp $
+
+  17 Dec 2004; Markus Rothe <corsair@gentoo.org> resin-3.0.8-r1.ebuild:
+  Stable on ppc64
 
   17 Nov 2004; Markus Rothe <corsair@gentoo.org> resin-3.0.8-r1.ebuild:
   marked ~ppc64; bug #55691
