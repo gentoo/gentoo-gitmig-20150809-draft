@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15.ebuild,v 1.1 2003/11/30 06:03:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15.ebuild,v 1.2 2003/12/27 19:45:18 vapier Exp $
 
 inherit games eutils gcc
 
@@ -10,27 +10,41 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="The icculus.org linux port of iD's quake2 engine"
 HOMEPAGE="http://icculus.org/quake2/"
 SRC_URI="http://icculus.org/quake2/files/${MY_P}.tar.gz
-	!noqmax? ( http://icculus.org/quake2/files/maxpak.pak )"
+	!noqmax? ( http://icculus.org/quake2/files/maxpak.pak )
+	rogue? ( ftp://ftp.idsoftware.com/idstuff/quake2/source/roguesrc320.shar.Z )
+	xatrix? ( ftp://ftp.idsoftware.com/idstuff/quake2/source/xatrixsrc320.shar.Z )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc"
-IUSE="svga X sdl aalib opengl noqmax"
+IUSE="svga X sdl aalib opengl noqmax rogue xatrix"
 
 # default to X11 if svga/X/sdl/aalib are not in USE
-DEPEND="svga? ( media-libs/svgalib )
+RDEPEND="svga? ( media-libs/svgalib )
 	arts? ( kde-base/arts )
 	X? ( virtual/x11 )
 	sdl? ( media-libs/libsdl )
 	aalib? ( media-libs/aalib )
 	opengl? ( virtual/opengl )
 	|| ( svga? ( "" ) X? ( "" ) sdl? ( "" ) aalib? ( "" ) virtual/x11 )"
+DEPEND="${RDEPEND}
+	app-arch/sharutils"
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd ${S}
 	[ `gcc-major-version` == 3 ] && epatch ${FILESDIR}/${PV}-Makefile-gcc3.patch
 	epatch ${FILESDIR}/${PV}-Makefile-optflags.patch
+	ln -s `which echo` ${T}/more 
+	for g in `use rogue` `use xatrix` ; do
+		mkdir -p ${S}/src/${g}
+		cd ${S}/src/${g}
+		unpack ${g}src320.shar.Z
+		sed -i 's:^read ans:ans=yes :' ${g}src320.shar
+		env PATH="${T}:${PATH}" unshar ${g}src320.shar
+		rm ${g}src320.shar
+	done
+	use rogue && sed -i 's:<nan\.h>:<bits/nan.h>:' ${S}/src/rogue/g_local.h
 }
 
 yesno() {
@@ -58,8 +72,8 @@ src_compile() {
 			BUILD_SDL=`yesno sdl` \
 			BUILD_SDLGL=`yesno sdl opengl` \
 			BUILD_CTFDLL=YES \
-			BUILD_XATRIX=NO \
-			BUILD_ROGUE=NO \
+			BUILD_XATRIX=`yesno xatrix` \
+			BUILD_ROGUE=`yesno rogue` \
 			BUILD_JOYSTICK=`yesno joystick` \
 			BUILD_DEDICATED=YES \
 			BUILD_AA=`yesno aalib` \
@@ -72,6 +86,7 @@ src_compile() {
 			|| die "make failed"
 			#HAVE_IPV6=`yesno ipv6` \
 		# now we save the build dir ... except for the object files ...
+		rm release*/*/*.o
 		mv release* my-rel-${BUILD_QMAX}
 		cd my-rel-${BUILD_QMAX}
 		rm -rf ref_{gl,soft} ded game client ctf/*.o
@@ -89,8 +104,8 @@ src_install() {
 
 	# regular q2 files
 	dodir ${q2dir}
-	cp -rf my-rel-NO/* ${D}/${q2dir}
-	strip my-rel-NO/{*,*/*}
+	cp -rf my-rel-NO/* ${D}/${q2dir}/
+#	strip my-rel-NO/{*,*/*}
 
 	into ${GAMES_PREFIX}
 	newbin ${FILESDIR}/quake2.start quake2
@@ -125,8 +140,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	einfo "Go read /usr/share/doc/${PF}/README-postinstall.gz right now!"
 	einfo "It's important- This install is just the engine, you still need"
 	einfo "the data paks. Go read."
-	games_pkg_postinst
 }
