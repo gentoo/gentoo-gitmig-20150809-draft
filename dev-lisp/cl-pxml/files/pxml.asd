@@ -1,9 +1,19 @@
+;;; -*- Mode: Lisp; Syntax: ANSI-Common-Lisp -*-
 
-(in-package "CL-USER")
+(defpackage #:pxml-system
+  (:use #:cl #:asdf))
+(in-package #:pxml-system)
 
-(asdf:defsystem pxml
+(in-package :pxml-system)
+
+(defclass acl-file (cl-source-file) ())
+
+(defmethod asdf::source-file-type ((c acl-file) (s module)) 
+  "cl")
+
+(defsystem pxml
     :depends-on (acl-compat)
-    :components ((:file "pxml0")
-		 (:file "pxml1")
-		 (:file "pxml2")
-		 (:file "pxml3")))
+    :components ((:acl-file "pxml0")
+		 (:acl-file "pxml1")
+		 (:acl-file "pxml2")
+		 (:acl-file "pxml3")))
