@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.116 2004/12/23 20:08:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.117 2004/12/29 18:01:11 tgall Exp $
+
+  29 Dec 2004; Tom Gall <tgall@gentoo.org> glib-1.2.10-r5.ebuild:
+  add back in call for gnuconfig_update bug #76039
 
   23 Dec 2004; Guy Martin <gmsoft@gentoo.org> glib-2.4.8.ebuild:
   Stable on hppa.

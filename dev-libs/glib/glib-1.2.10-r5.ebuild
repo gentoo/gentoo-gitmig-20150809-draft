@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.36 2004/12/17 06:57:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.37 2004/12/29 18:01:11 tgall Exp $
 
-inherit libtool flag-o-matic eutils
+inherit libtool flag-o-matic eutils gnuconfig
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
@@ -21,6 +21,8 @@ src_unpack() {
 
 	# Allow glib to build with gcc-3.4.x #47047
 	epatch ${FILESDIR}/${P}-gcc34-fix.patch
+
+	use ppc64 && gnuconfig_update
 
 	uclibctoolize
 }
