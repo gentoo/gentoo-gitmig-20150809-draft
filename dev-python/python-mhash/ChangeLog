@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/python-mhash
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mhash/ChangeLog,v 1.1 2004/05/24 06:39:18 robbat2 Exp $
+
+*python-mhash-1.2 (23 May 2004)
+
+  23 May 2004; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
+  python-mhash-1.2.ebuild:
+  bug #49962, as per request.
+
