@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.4363.ebuild,v 1.6 2004/04/27 21:01:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.4363.ebuild,v 1.7 2004/05/05 23:29:22 cyfred Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 	unpack ${A}
 
 	# correct defines to make gtkglext build work
-	cd ${S}; epatch ${FILESDIR}/${PN}-1.0.4191-defines.patch
+	cd ${S}; epatch ${FILESDIR}/${P}-defines.patch
 }
 
 src_install() {
