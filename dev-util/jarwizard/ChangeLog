@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/jarwizard
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jarwizard/ChangeLog,v 1.1 2004/04/11 21:43:07 zx Exp $
+
+*jarwizard-2.34 (11 Apr 2004)
+
+  11 Apr 2004; Chris Aniszczyk <zx@gentoo.org> jarwizard-2.34.ebuild,
+  metadata.xml:
+  Initial Import. Closes #46187.
+  Thanks to Keith Lea <keith@cs.oswego.edu> for the initial ebuild.
+
