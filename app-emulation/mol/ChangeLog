@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.42 2005/01/27 18:18:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.43 2005/01/27 23:19:54 josejx Exp $
+
+*mol-0.9.70-r1 (28 Jan 2005)
+
+  28 Jan 2005; Joseph Jezak <josejx@gentoo.org> +mol-0.9.70-r1.ebuild,
+  mol-0.9.70.ebuild:
+  Revision bump to ensure everyone is using the patched version. Removed patch
+  from 0.9.70 so users can keep the priority changes if so desired.
 
   28 Jan 2005; Joseph Jezak <josejx@gentoo.org>
   +files/mol-0.9.70-nopriority.patch,
