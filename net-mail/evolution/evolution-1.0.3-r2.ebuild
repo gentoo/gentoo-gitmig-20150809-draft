@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.3-r2.ebuild,v 1.1 2002/04/02 20:42:11 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.3-r2.ebuild,v 1.2 2002/04/03 10:40:12 seemant Exp $
 
 DB3=db-3.1.17
 S=${WORKDIR}/${P}
@@ -63,16 +63,7 @@ src_compile() {
 	cd ${WORKDIR}/${DB3}/build_unix
 	../dist/configure --prefix=${WORKDIR}/db3 || die
 
-	#
-	# Mandrake's workaround for gdk-pixbuf might do the trick here
-	# to allow build without DISPLAY
-	#
-	XDISPLAY=$(i=0; while [ -f /tmp/.X${i}-lock ] ; do i=$((${i}+1)); done; echo ${i})
-	/usr/X11R6/bin/Xvfb :${XDISPLAY} >& /dev/null &
-	DISPLAY=:${XDISPLAY} make || die
-	kill $(cat /tmp/.X${XDISPLAY}-lock)
-	
-	
+	make || die
 	make prefix=${WORKDIR}/db3 install || die
 
 	cd ${S}
@@ -135,8 +126,16 @@ src_compile() {
 		--disable-python-bindings \
 		${myconf} || die
 
-	# emake might not work, so fall back to make
-	emake || make || die
+	#
+	# Mandrake's workaround for gdk-pixbuf might do the trick here
+	# to allow build without DISPLAY
+	#
+	XDISPLAY=$(i=0; while [ -f /tmp/.X${i}-lock ] ; do i=$((${i}+1)); done; echo ${i})
+	/usr/X11R6/bin/Xvfb :${XDISPLAY} >& /dev/null &
+	DISPLAY=:${XDISPLAY} emake || DISPLAY=:${XDISPLAY} make || die
+
+	kill $(cat /tmp/.X${XDISPLAY}-lock)
+	
 }
 
 src_install() {
