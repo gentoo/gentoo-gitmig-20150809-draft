@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.2 2002/04/04 20:09:23 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.3 2002/04/06 16:32:55 danarmak Exp $
+
+  6 Apr 2002; Dan Armak <danarmak@gentoo.org> changelog:
+  
+  kdegraphics-2.2.2, kdegraphics-3.0: change gphoto dep from media-gfx/gphoto
+  to media-gfx/gphoto2. Resolves bug #1570. Thanks to Michael Hall for reporting.
 
 *kdegraphics-3.0 (4 Apr 2002)
 
