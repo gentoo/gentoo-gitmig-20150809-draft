@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.29 2004/11/25 05:01:17 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.30 2004/12/15 12:54:44 gustavoz Exp $
+
+  15 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> nspr-4.4.1-r2.ebuild:
+  Stable on sparc
 
   24 Nov 2004; Travis Tilley <lv@gentoo.org> nspr-4.4.1-r2.ebuild:
   marked stable on amd64 since this fixes the last bug keeping gnome 2.8 from
