@@ -1,0 +1,38 @@
+--- mod/Makefile.org	2004-07-07 20:49:59.000000000 +0200
++++ mod/Makefile	2004-07-07 20:53:58.000000000 +0200
+@@ -95,14 +96,6 @@
+ 
+ CFLAGS += -I$(CUR_DIR)/../include/ -I$(KERNEL_DIR)/include/
+ 
+-ifeq ($(ARCH), alpha)
+-CFLAGS += -O2 -pipe -fno-strict-aliasing -fno-common -mno-fp-regs -ffixed-8 -mcpu=ev5
+-else
+-ifeq ($(ARCH), x86_64)
+-CFLAGS += -O2 -fno-strength-reduce -fno-strict-aliasing -mcmodel=kernel
+-else
+-CFLAGS += -O6 -fno-strength-reduce -fno-strict-aliasing 
+-endif
+-endif
++CFLAGS += $(EXTRA_CFLAGS)
+ 
+ LDFLAGS = -d -r
+--- src/Makefile.org	2004-07-07 20:54:07.000000000 +0200
++++ src/Makefile	2004-07-07 20:54:24.000000000 +0200
+@@ -24,6 +24,7 @@
+ CFLAGS += -L../lib -I../include/ 
+ CFLAGS += -Wall -O2 -fno-strict-aliasing
+ #CFLAGS += -g -static -O6
++CFLAGS += $(EXTRA_CFLAGS)
+ LDFLAGS =
+ 
+ TARGETS = bctool
+--- kgsha/Makefile.org	2004-07-07 20:54:34.000000000 +0200
++++ kgsha/Makefile	2004-07-07 20:54:50.000000000 +0200
+@@ -20,6 +20,7 @@
+ 
+ CPP=g++
+ CPPFLAGS = -Wall -Werror -fno-strength-reduce -I../include -g 
++CPPFLAGS += $(EXTRA_CXXFLAGS)
+ 
+ TARGET = libkgsha.a
+ HEADERS = kg_defs.h kgsha.h kblock.h sha1.h random.h

@@ -1,6 +1,20 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.22 2005/01/01 12:25:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.23 2005/01/03 04:23:22 dragonheart Exp $
+
+*bestcrypt-1.5_p9 (03 Jan 2005)
+
+  03 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/bestcrypt-1.5_p2-bdev_file_fix.patch,
+  -files/bestcrypt-1.5_p2-makefile_fix.patch,
+  -files/bestcrypt-1.5_p5-makefile_fix.patch,
+  -files/bestcrypt-1.5_p6-makefile_fix.patch,
+  +files/bestcrypt-1.5_p9-makefile_fix.patch, -bestcrypt-1.2_p6.ebuild,
+  -bestcrypt-1.5_p1.ebuild, -bestcrypt-1.5_p2.ebuild,
+  -bestcrypt-1.5_p5.ebuild, -bestcrypt-1.5_p6.ebuild,
+  +bestcrypt-1.5_p9.ebuild, -bestcrypt-1.4_p2.ebuild:
+  Old version cleanout. Version bump converted to linux-mod eclass. Solves bug
+  #67732 by Jorge Hodge <hodge@bridge.com.br>.
 
   31 Oct 2004; Brandon Low <lostlogic@gentoo.org>
   bestcrypt-1.5_p7-r1.ebuild:
