@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/parent,v 1.3 2004/06/26 23:29:25 solar Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/parent,v 1.4 2004/09/14 15:27:50 vapier Exp $
 
 # This file describes the parent profile to this.  In most cases this will
 # just be the name of the parent directory
