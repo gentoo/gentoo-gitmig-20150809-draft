@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040415.ebuild,v 1.1 2004/04/18 18:47:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040415.ebuild,v 1.2 2004/05/02 16:13:59 usata Exp $
 
 IUSE=""
 
@@ -17,10 +17,20 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
-DEPEND=""
-RDEPEND=">=sys-apps/groff-1.18.1-r2
+DEPEND=">=sys-apps/groff-1.18.1-r2
 	=sys-apps/groff-1.18*
 	sys-apps/man"
+
+pkg_setup() {
+
+	if ! groff -v -Tnippon >/dev/null 2>&1 ; then
+		ewarn
+		ewarn "You need to compile groff with multilingual support."
+		ewarn "Please recompile sys-apps/groff with USE=\"cjk\"."
+		ewarn
+		die "groff m17n support disabled."
+	fi
+}
 
 src_install () {
 
