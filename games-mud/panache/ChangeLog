@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/panache
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/panache/ChangeLog,v 1.2 2003/09/10 20:38:00 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/panache/ChangeLog,v 1.3 2004/04/14 05:16:32 mr_bones_ Exp $
+
+  13 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> panache-0.2.1.ebuild:
+  removed net-libs/linc from DEPEND, seems to be unused; don't rdepend on
+  dev-util/pkgconfig
 
 *panache-0.2.1 (02 Dec 2002)
 
