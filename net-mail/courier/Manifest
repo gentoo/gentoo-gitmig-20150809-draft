@@ -1,3 +1,4 @@
+MD5 c15ae4bdd9eddc3184258c67482683bb courier-0.43.1.ebuild 10336
 MD5 cde0b9d363f6d323dff0b3435d2e89d0 courier-0.42.2.ebuild 9694
 MD5 636565aadd2a000d4ab59150d9aaa58d courier-0.42.2-r3.ebuild 10210
 MD5 6648267303d77b000cfb060f2bdf27c4 ChangeLog 5367
@@ -15,6 +16,7 @@ MD5 2ec2b05590afdf6d0e94e012baa44c4f files/courier-imapd-ssl 451
 MD5 d8967dea60963b1c0abaccbb2c57ea64 files/apache-sqwebmail.inc 347
 MD5 d41d8cd98f00b204e9800998ecf8427e files/locallowercase 0
 MD5 b24f71b5e2b701cdcb758c2f6e3b1083 files/digest-courier-0.42.2 68
+MD5 f30eaa96d798eb05f3aafc60a44304ae files/digest-courier-0.43.1 68
 MD5 aba961cc052d0c255f4e1deb65945153 files/courier-0.42.2-gentoo.diff.bz2 378
 MD5 957bb3471d7c3c669a9e35475091a35b files/courier-init 4112
 MD5 e3a4ab031bd750b7ce2c7b85fee83d8e files/set-mime 741
