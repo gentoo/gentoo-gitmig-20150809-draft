@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20031225.ebuild,v 1.1 2003/12/26 04:24:05 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20031225.ebuild,v 1.2 2004/01/17 06:26:55 pebenito Exp $
 
 IUSE="build"
 
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~ppc ~sparc"
 DEPEND="build? ( sys-devel/make )"
 RDEPEND="sys-devel/m4
 	 sys-devel/make
-	 >=sys-libs/pam-0.77"
+	 !build? ( >=sys-libs/pam-0.77 )"
 
 S=${WORKDIR}/base-policy
 
