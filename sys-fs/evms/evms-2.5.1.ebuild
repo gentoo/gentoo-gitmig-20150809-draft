@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.0.ebuild,v 1.1 2004/12/28 04:17:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.1.ebuild,v 1.1 2005/02/05 10:00:28 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,6 +17,7 @@ IUSE="ncurses gtk"
 DEPEND="virtual/libc
 	sys-fs/e2fsprogs
 	sys-libs/device-mapper
+	>=sys-apps/baselayout-1.9.4-r6
 	gtk? ( =x11-libs/gtk+-1* )
 	ncurses? ( sys-libs/ncurses )"
 
@@ -74,14 +75,6 @@ src_install() {
 		mv -f ${D}/sbin/evmsgui ${D}/usr/sbin
 	fi
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/evms2-init evms
-
 	# Needed for bug #51252
 	dosym libevms-2.5.so.0.0 /$(get_libdir)/libevms-2.5.so.0
-}
-
-pkg_postinst() {
-	ewarn "Presently gentoo-sources-2.4.22 has basic support for evms2,"
-	ewarn "but does NOT support some of the more advanced features."
 }

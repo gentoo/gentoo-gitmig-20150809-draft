@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/evms
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.25 2004/12/28 04:17:05 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.26 2005/02/05 10:00:28 eradicator Exp $
+
+*evms-2.5.1 (05 Feb 2005)
+
+  05 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org> -evms-2.2.2.ebuild,
+  -evms-2.3.2-r1.ebuild, -evms-2.4.0.ebuild, -evms-2.5.0.ebuild,
+  +evms-2.5.1.ebuild:
+  Version bump and cleanup.
 
 *evms-2.5.0 (27 Dec 2004)
 

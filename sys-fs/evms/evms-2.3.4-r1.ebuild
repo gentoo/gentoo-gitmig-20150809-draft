@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.3.4-r1.ebuild,v 1.7 2004/09/03 19:16:58 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.3.4-r1.ebuild,v 1.8 2005/02/05 10:00:28 eradicator Exp $
 
 inherit eutils flag-o-matic
 
