@@ -1,17 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.18 2004/10/03 18:11:00 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.19 2004/10/08 21:06:55 agriffis Exp $
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
 
-IUSE="java gnome ldap debug xinerama xprint"
+IUSE="java gnome gtk2 ldap debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
 IUSE="${IUSE} moznoxft"
 [[ ${PN} == mozilla || ${PN} == mozilla-firefox ]] && \
 	IUSE="${IUSE} mozdevelop mozxmlterm"
-#[[ ${PN} == mozilla || ${PN} == mozilla-thunderbird ]] && \
-#	IUSE="${IUSE} mozplaintext"
 [[ ${PN} == mozilla ]] && \
 	IUSE="${IUSE} mozsvg"
 
@@ -26,10 +24,15 @@ RDEPEND="virtual/x11
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
-	>=x11-libs/gtk+-2.2.0
-	>=dev-libs/glib-2.2.0
-	>=x11-libs/pango-1.2.1
-	>=dev-libs/libIDL-0.8.0
+	gtk2? (
+		>=x11-libs/gtk+-2.2.0
+		>=dev-libs/glib-2.2.0
+		>=x11-libs/pango-1.2.1
+		>=dev-libs/libIDL-0.8.0 )
+	!gtk2? (
+		=x11-libs/gtk+-1.2*
+		=dev-libs/glib-1.2*
+		=gnome-base/orbit-0* )
 	gnome? ( >=gnome-base/gnome-vfs-2.3.5 )
 	>=net-www/mozilla-launcher-1.19"
 
@@ -145,6 +148,14 @@ mozilla_conf() {
 		$(mozilla_use_enable truetype freetype2) \
 		$(mozilla_use_enable truetype freetypetest)"
 
+	# NOTE: QT and XLIB toolkit seems very unstable, leave disabled until
+	#       tested ok -- azarah
+	if use gtk2; then
+		mozilla_annotate +gtk2 --enable-default-toolkit=gtk2
+	else
+		mozilla_annotate -gtk2 --enable-default-toolkit=gtk
+	fi
+
 	if use debug; then
 		mozilla_annotate +debug \
 			--enable-debug \
@@ -173,18 +184,25 @@ mozilla_conf() {
 		mozilla_annotate "building on ultrasparc" --enable-js-ultrasparc
 	fi
 
-	# We need Xft2.0 locally installed
-	if [[ -x /usr/bin/pkg-config ]] && pkg-config xft; then
-		# We also need pango-1.1, else Mozilla links to both
-		# Xft1.1 *and* Xft2.0, and segfault...
-		pango_version=$(pkg-config --modversion pango | cut -d. -f1,2)
-		if [[ ${pango_version//.} -gt 10 ]]; then
-			mozilla_annotate "gtk2 with xft2 (-moznoxft)" --enable-xft
+	# Check if we should enable Xft support...
+	if use moznoxft; then
+		mozilla_annotate "disabling xft2 by request (+moznoxft)" --disable-xft
+	elif use gtk2; then
+		# We need Xft2.0 locally installed
+		if [[ -x /usr/bin/pkg-config ]] && pkg-config xft; then
+			# We also need pango-1.1, else Mozilla links to both
+			# Xft1.1 *and* Xft2.0, and segfault...
+			pango_version=$(pkg-config --modversion pango | cut -d. -f1,2)
+			if [[ ${pango_version//.} -gt 10 ]]; then
+				mozilla_annotate "gtk2 with xft2 (+gtk2 -moznoxft)" --enable-xft
+			else
+				mozilla_annotate "gtk2 without xft2 (bad pango version <1.1)" --disable-xft
+			fi
 		else
-			mozilla_annotate "gtk2 without xft2 (bad pango version <1.1)" --disable-xft
+			mozilla_annotate "gtk2 without xft2 (no pkg-config xft)" --disable-xft
 		fi
 	else
-		mozilla_annotate "gtk2 without xft2 (no pkg-config xft)" --disable-xft
+		mozilla_annotate "gtk1 with xft2 (-gtk2 -moznoxft)" --enable-xft
 	fi
 
 	# Support some development/debugging stuff for web developers
@@ -218,18 +236,17 @@ mozilla_conf() {
 		fi
 
 		myconf="${myconf} --enable-single-profile \
-		--enable-necko-protocols=http,file,jar,viewsource,res,data \
-		--enable-image-decoders=default,-xbm \
-		$(mozilla_use_enable ldap) \
-		$(mozilla_use_enable ldap ldap-experimental) \
-		--enable-extensions=${myext}"
+			--enable-necko-protocols=http,file,jar,viewsource,res,data \
+			--enable-image-decoders=default,-xbm \
+			$(mozilla_use_enable ldap) \
+			$(mozilla_use_enable ldap ldap-experimental) \
+			--enable-extensions=${myext}"
 
 		mozilla_annotate "n/a on ${PN}" \
 			--disable-calendar \
 			--disable-svg \
 			--disable-necko-disk-cache \
 			--disable-profilesharing 
-			
 	fi
 
 	# Some firefox-only flags
@@ -240,8 +257,9 @@ mozilla_conf() {
 		use mozdevelop && myext="${myext},venkman"
 		use gnome && myext="${myext},gnomevfs"
 		
-		myconf="${myconf} --enable-single-profile \
-		--enable-extensions=${myext}"
+		myconf="${myconf} \
+			--enable-single-profile \
+			--enable-extensions=${myext}"
 			
 		mozilla_annotate "n/a on ${PN}" \
 			--disable-mailnews \
@@ -259,10 +277,11 @@ mozilla_conf() {
 		use moznoirc && myext="${myext},-irc"
 		use mozxmlterm && myext="${myext},xmlterm"
 
-		myconf="${myconf} $(mozilla_use_enable mozcalendar calendar) \
-		$(mozilla_use_enable ldap) \
-		$(mozilla_use_enable ldap ldap-experimental) \
-		--enable-extensions=${myext}"
+		myconf="${myconf} \
+			$(mozilla_use_enable mozcalendar calendar) \
+			$(mozilla_use_enable ldap) \
+			$(mozilla_use_enable ldap ldap-experimental) \
+			--enable-extensions=${myext}"
 
 		if use moznomail && ! use mozcalendar; then
 			mozilla_annotate "+moznomail -mozcalendar" --disable-mailnews
