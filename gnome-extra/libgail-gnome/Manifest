@@ -1,5 +1,5 @@
-MD5 04da8404bef546c4c6e850745f07b8c7 ChangeLog 1188
+MD5 51b19425886376bc8a332d744bd9ec1d ChangeLog 1298
 MD5 cbb5d54efba76c9cb1059516d37252c6 libgail-gnome-1.0.1.ebuild 696
-MD5 5cb98d18b08a8d94c527d92d4542eb36 libgail-gnome-1.0.2.ebuild 676
+MD5 bfd6ebfc6dad17ce0458c79b85fb9afe libgail-gnome-1.0.2.ebuild 681
 MD5 64a5c2ddc837325f50605b1d49183085 files/digest-libgail-gnome-1.0.1 72
 MD5 30974557bd23460d2a2df239b9289c00 files/digest-libgail-gnome-1.0.2 72
