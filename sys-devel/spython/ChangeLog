@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/spython
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/ChangeLog,v 1.6 2003/02/10 07:22:01 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/ChangeLog,v 1.7 2003/02/12 09:16:00 vapier Exp $
 
 *spython-2.0-r9 (14 Mar 2002)
 

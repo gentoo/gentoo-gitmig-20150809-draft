@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/egcs64-sparc
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/egcs64-sparc/ChangeLog,v 1.6 2002/12/15 20:08:01 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/egcs64-sparc/ChangeLog,v 1.7 2003/02/12 09:14:17 vapier Exp $
 
 *egcs64-sparc-19980921-r2 (12-15-02)
   15 Dec 2002, Rodney Rees <manson@gentoo.org> added repaired

@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/bison
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.13 2003/02/09 18:32:47 gmsoft Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.14 2003/02/12 09:13:43 vapier Exp $
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> bison-1.35.ebuild :
   Added hppa to keywords.
