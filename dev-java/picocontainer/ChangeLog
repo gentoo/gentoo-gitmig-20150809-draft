@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/picocontainer
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/ChangeLog,v 1.1 2004/01/11 04:46:47 karltk Exp $
+
+*picocontainer-1.0_beta3 (11 Jan 2004)
+
+  11 Jan 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  picocontainer-1.0_beta3.ebuild files/build-1.0_beta3.xml:
+  Initial import.  Ebuild submitted by myself.
