@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r19.ebuild,v 1.8 2003/03/13 22:18:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r19.ebuild,v 1.9 2003/03/14 15:59:13 tuxus Exp $
 
 IUSE="nls perl python ruby tcltk gpm X"
 
@@ -13,7 +13,7 @@ use nls || EXCLUDE_PATCH="${EXCLUDE_PATCH} 295 301"
 inherit vim
 
 DESCRIPTION="Vi IMproved!"
-KEYWORDS="x86 ppc sparc alpha hppa arm"
+KEYWORDS="x86 ppc sparc alpha hppa arm mips"
 DEPEND="app-editors/vim-core
 	sys-libs/libtermcap-compat
 	dev-util/cscope

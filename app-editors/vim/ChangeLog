@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.46 2003/03/13 22:23:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.47 2003/03/14 15:59:13 tuxus Exp $
 
 *vim-6.1-r20.ebuild (13 Mar 2003)
 
@@ -31,6 +31,9 @@
   Unmasked, security update.
 
 *vim-6.1-r19.ebuild (21 Jan 2003)
+
+  14 Mar 2003; Jan Seidel <tuxus@gentoo.org> vim-6.1-r19.ebuild :
+  Added mips to KEYWORDS
 
   24 Feb 2003; Zach Welch <zwelch@gentoo.org> vim-6.1-r19.ebuild :
   Add arm keyword
