@@ -1,7 +1,7 @@
 diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/Makefile svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/Makefile
 --- svgalib-1.9.17/kernel/svgalib_helper/Makefile	2002-10-28 18:25:47.000000000 +0200
-+++ svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/Makefile	2003-08-03 13:52:47.000000000 +0200
-@@ -1,42 +1,66 @@
++++ svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/Makefile	2003-08-03 14:34:40.000000000 +0200
+@@ -1,45 +1,69 @@
  include ../../Makefile.cfg
  
 -MODVER = $(shell grep CONFIG_MODVERSIONS $(INCLUDEDIR)/linux/autoconf.h)
@@ -80,7 +80,11 @@ diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/Makefile svgalib-1.9.17.kernel2
 +	install -m 0644 -c $(OBJS) $(TOPDIR)/lib/modules/$(VER)/misc
  
  device:
- 	rm -f /dev/svgalib_helper* /dev/svga /dev/svga?
+-	rm -f /dev/svgalib_helper* /dev/svga /dev/svga?
++	rm -f /dev/svgalib_helper* /dev/svga_helper* /dev/svga /dev/svga?
+ 	mknod -m 666 /dev/svga c $(SVGALIB_HELPER_MAJOR) 0
+ 	mknod -m 666 /dev/svga1 c $(SVGALIB_HELPER_MAJOR) 1
+ 	mknod -m 666 /dev/svga2 c $(SVGALIB_HELPER_MAJOR) 2
 @@ -47,7 +71,7 @@ device:
  	mknod -m 666 /dev/svga4 c $(SVGALIB_HELPER_MAJOR) 4
  
@@ -90,340 +94,36 @@ diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/Makefile svgalib-1.9.17.kernel2
  
  depend .depend dep:
  	$(CC) $(CFLAGS) -M *.c > $@
-diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/depend svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/depend
---- svgalib-1.9.17/kernel/svgalib_helper/depend	1970-01-01 02:00:00.000000000 +0200
-+++ svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/depend	2003-08-03 13:53:27.000000000 +0200
-@@ -0,0 +1,324 @@
-+i810.o: i810.c
-+interrupt.o: interrupt.c \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/pci.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/mod_devicetable.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/types.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/config.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/autoconf.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/posix_types.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/stddef.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/posix_types.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/types.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/pci_ids.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/ioport.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/compiler.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/list.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/prefetch.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/processor.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/vm86.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/math_emu.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/sigcontext.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/segment.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/page.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/cpufeature.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/bitops.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/bitops.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/msr.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/system.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/kernel.h \
-+  /usr/lib/gcc-lib/i686-pc-linux-gnu/3.3/include/stdarg.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/linkage.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/linkage.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/byteorder.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/byteorder/little_endian.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/byteorder/swab.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/byteorder/generic.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/bug.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/cache.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/cache.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/threads.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/errno.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/errno.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/errno.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/errno-base.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/device.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/kobject.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/sysfs.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/rwsem.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/atomic.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/rwsem.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/spinlock.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/preempt.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/thread_info.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/thread_info.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/stringify.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/spinlock.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/rwlock.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/module.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/sched.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/param.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/capability.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/timex.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/timex.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/time.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/seqlock.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/div64.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/jiffies.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/rbtree.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/semaphore.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/wait.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/ptrace.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/mmu.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/smp.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/smp.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/fixmap.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/acpi.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/apicdef.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/mpspec.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/mpspec_def.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/mach-default/mach_mpspec.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/io_apic.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/apic.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/pm.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/mach-default/mach_apicdef.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/sem.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/ipc.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/ipcbuf.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/sembuf.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/signal.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/signal.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/siginfo.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/siginfo.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/string.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/string.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/securebits.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/fs_struct.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/completion.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/pid.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/percpu.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/slab.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/gfp.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/mmzone.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/topology.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/topology.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/topology.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/kmalloc_sizes.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/percpu.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/percpu.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/param.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/resource.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/resource.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/timer.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/aio.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/workqueue.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/aio_abi.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/current.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/stat.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/stat.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/kmod.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/elf.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/elf.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/user.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/utsname.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/local.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/module.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/pci.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/mm.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/fs.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/limits.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/kdev_t.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/ioctl.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/ioctl.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/dcache.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/rcupdate.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/radix-tree.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/quota.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/dqblk_xfs.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/dqblk_v1.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/dqblk_v2.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/nfs_fs_i.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/nfs.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/sunrpc/msg_prot.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/fcntl.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/fcntl.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/err.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/pgtable.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/pgtable-2level.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/page-flags.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/scatterlist.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/io.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/vmalloc.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/pci-dma-compat.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/dma-mapping.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/dma-mapping.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/pci.h \
-+  svgalib_helper.h
-+main.o: main.c /lib/modules/2.6.0-test2-bk2/build/include/linux/config.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/autoconf.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/kernel.h \
-+  /usr/lib/gcc-lib/i686-pc-linux-gnu/3.3/include/stdarg.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/linkage.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/linkage.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/stddef.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/types.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/posix_types.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/posix_types.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/types.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/compiler.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/byteorder.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/byteorder/little_endian.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/byteorder/swab.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/byteorder/generic.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/bug.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/module.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/sched.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/param.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/capability.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/spinlock.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/preempt.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/thread_info.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/bitops.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/bitops.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/thread_info.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/processor.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/vm86.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/math_emu.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/sigcontext.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/segment.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/page.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/cpufeature.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/msr.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/system.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/cache.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/cache.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/threads.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/stringify.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/spinlock.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/atomic.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/rwlock.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/timex.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/timex.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/time.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/seqlock.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/div64.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/jiffies.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/rbtree.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/semaphore.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/wait.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/list.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/prefetch.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/rwsem.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/rwsem.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/ptrace.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/mmu.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/smp.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/smp.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/fixmap.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/acpi.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/apicdef.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/mpspec.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/mpspec_def.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/mach-default/mach_mpspec.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/io_apic.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/apic.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/pm.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/mach-default/mach_apicdef.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/sem.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/ipc.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/ipcbuf.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/sembuf.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/signal.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/signal.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/siginfo.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/siginfo.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/string.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/string.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/securebits.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/fs_struct.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/completion.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/pid.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/percpu.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/slab.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/gfp.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/mmzone.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/topology.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/topology.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/topology.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/kmalloc_sizes.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/percpu.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/percpu.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/param.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/resource.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/resource.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/timer.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/aio.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/workqueue.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/aio_abi.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/current.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/stat.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/stat.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/kmod.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/errno.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/errno.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/errno.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/errno-base.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/elf.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/elf.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/user.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/utsname.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/local.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/module.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/fs.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/limits.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/kdev_t.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/ioctl.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/ioctl.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/dcache.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/rcupdate.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/radix-tree.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/kobject.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/sysfs.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/quota.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/dqblk_xfs.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/dqblk_v1.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/dqblk_v2.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/nfs_fs_i.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/nfs.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/sunrpc/msg_prot.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/fcntl.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/fcntl.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/err.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/proc_fs.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/ioport.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/pci.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/mod_devicetable.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/pci_ids.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/device.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/pci.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/mm.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/pgtable.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/pgtable-2level.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/page-flags.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/scatterlist.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/io.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/vmalloc.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/pci-dma-compat.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/dma-mapping.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/dma-mapping.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/pci.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/devfs_fs_kernel.h \
-+  kernel25compat.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/version.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/interrupt.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/hardirq.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/irq.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/irq.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/mach-default/irq_vectors.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/hw_irq.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/profile.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/init.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/sections.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/sections.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/linux/irq_cpustat.h \
-+  /lib/modules/2.6.0-test2-bk2/build/include/asm/uaccess.h \
-+  svgalib_helper.h ../../src/vgaversion.h i810.h interrupt.h
 diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/kernel25compat.h svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/kernel25compat.h
 --- svgalib-1.9.17/kernel/svgalib_helper/kernel25compat.h	2002-09-10 20:20:13.000000000 +0200
-+++ svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/kernel25compat.h	2003-08-03 11:39:14.000000000 +0200
-@@ -1,9 +1,35 @@
++++ svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/kernel25compat.h	1970-01-01 02:00:00.000000000 +0200
+@@ -1,20 +0,0 @@
+-#define minor(x) MINOR(x)
+-
+-#if LINUX_VERSION_CODE < KERNEL_VERSION(2,5,0)
+-#define my_remap_page_range(vma, start, ofs, len, prot) remap_page_range(start,ofs,len,prot)
+-#else
+-#define my_remap_page_range(vma, start, ofs, len, prot) remap_page_range(vma,start,ofs,len,prot)
+-#endif
+-
+-#ifndef _LINUX_DEVFS_FS_KERNEL_H
+-static inline int devfs_register_chrdev (unsigned int major, const char *name,
+-                                         struct file_operations *fops)
+-{
+-    return register_chrdev (major, name, fops);
+-}
+-static inline int devfs_unregister_chrdev (unsigned int major,const char *name)
+-{
+-    return unregister_chrdev (major, name);
+-}
+-#endif
+-
+diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/kernel26compat.h svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/kernel26compat.h
+--- svgalib-1.9.17/kernel/svgalib_helper/kernel26compat.h	1970-01-01 02:00:00.000000000 +0200
++++ svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/kernel26compat.h	2003-08-03 14:33:28.000000000 +0200
+@@ -0,0 +1,46 @@
 +#ifndef minor
- #define minor(x) MINOR(x)
++#define minor(x) MINOR(x)
 +#endif
 +
 +#ifndef KERNEL_VERSION
@@ -435,19 +135,18 @@ diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/kernel25compat.h svgalib-1.9.17
 +# ifdef KERNEL_2_6
 +#  undef KERNEL_2_6
 +# endif
- 
--#if LINUX_VERSION_CODE < KERNEL_VERSION(2,5,0)
- #define my_remap_page_range(vma, start, ofs, len, prot) remap_page_range(start,ofs,len,prot)
++
++#define my_remap_page_range(vma, start, ofs, len, prot) remap_page_range(start,ofs,len,prot)
 +
 +typedef void irqreturn_t;
 +
- #else
++#else
 +
 +# ifndef KERNEL_2_6
 +#  define KERNEL_2_6
 +# endif
 +
- #define my_remap_page_range(vma, start, ofs, len, prot) remap_page_range(vma,start,ofs,len,prot)
++#define my_remap_page_range(vma, start, ofs, len, prot) remap_page_range(vma,start,ofs,len,prot)
 +
 +#include <linux/interrupt.h>
 +
@@ -455,12 +154,23 @@ diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/kernel25compat.h svgalib-1.9.17
 +typedef void* devfs_handle_t;
 +# endif
 +
- #endif
- 
- #ifndef _LINUX_DEVFS_FS_KERNEL_H
++#endif
++
++#ifndef _LINUX_DEVFS_FS_KERNEL_H
++static inline int devfs_register_chrdev (unsigned int major, const char *name,
++                                         struct file_operations *fops)
++{
++    return register_chrdev (major, name, fops);
++}
++static inline int devfs_unregister_chrdev (unsigned int major,const char *name)
++{
++    return unregister_chrdev (major, name);
++}
++#endif
++
 diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/main.c svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/main.c
 --- svgalib-1.9.17/kernel/svgalib_helper/main.c	2002-09-10 20:20:23.000000000 +0200
-+++ svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/main.c	2003-08-03 13:29:24.000000000 +0200
++++ svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/main.c	2003-08-03 14:35:53.000000000 +0200
 @@ -1,6 +1,12 @@
 -#include <linux/module.h>
 +#include <linux/config.h>
@@ -475,6 +185,15 @@ diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/main.c svgalib-1.9.17.kernel2.6
  #include <linux/slab.h> /* kmalloc() */
  #include <linux/fs.h>     /* everything... */
  #include <linux/errno.h>  /* error codes */
+@@ -15,7 +21,7 @@
+ #include <linux/sched.h>
+ #include <linux/wait.h>
+ 
+-#include "kernel25compat.h"
++#include "kernel26compat.h"
+ 
+ #include <asm/uaccess.h>
+ #include <asm/system.h>   /* cli(), *_flags */
 @@ -39,7 +45,7 @@ static struct sh_pci_device *sh_pci_devs
  
  static int irqs[MAX_NR_DEVICES];

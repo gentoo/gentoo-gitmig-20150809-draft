@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.15 2003/08/03 12:32:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.16 2003/08/03 12:58:58 azarah Exp $
+
+  03 Aug 2003; Martin Schlemmer <azarah@gentoo.org>
+  files/svgalib-1.9.17-linux2.6.patch:
+  Cleanup linux-2.6 patch to not contain temp files.
 
 *svgalib-1.9.17-r2 (03 Aug 2003)
 
