@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.25 2005/02/26 13:35:30 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.26 2005/02/26 19:24:45 swegener Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -44,7 +44,7 @@ if [ "$KDEBASE" = "true" ]; then
 	# Note that we set SRC_PATH, and add it to SRC_URI later on
 	case "$PV" in
 		3.4.0_*)	SRC_PATH="unstable/$TARBALLVER/src/$TARBALL" ;;
-		3*)			SRC_PATH="stable/$TARBALLVER/src/$TARBALL.tar.bz2" ;;
+		3*)			SRC_PATH="stable/$TARBALLVER/src/$TARBALL" ;;
 		*)			die "$ECLASS: Error: unrecognized version $PV, could not set SRC_URI" ;;
 	esac
 	
