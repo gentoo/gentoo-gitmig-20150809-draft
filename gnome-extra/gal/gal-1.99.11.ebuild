@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.11.ebuild,v 1.10 2004/07/04 19:19:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.11.ebuild,v 1.11 2004/07/19 22:06:28 foser Exp $
 
 inherit gnome2 gnome.org libtool eutils
 
@@ -19,8 +19,10 @@ RDEPEND=">=gnome-base/libgnomeprint-2.2.0
 	>=gnome-base/libgnomecanvas-2.2.0.2
 	>=dev-libs/libxml2-2.0
 	app-text/scrollkeeper"
+
 DEPEND="sys-devel/gettext
 	dev-util/pkgconfig
+	>=dev-util/intltool-0.29
 	doc? ( dev-util/gtk-doc )
 	${RDEPEND}"
 

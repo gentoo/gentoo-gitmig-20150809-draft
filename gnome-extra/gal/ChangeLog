@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.63 2004/07/04 19:19:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.64 2004/07/19 22:06:28 foser Exp $
+
+  20 Jul 2004; foser <foser@gentoo.org> gal-1.99.11.ebuild :
+  Add intltool dep to compensate for missing XML-parser (#57005)
 
   04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gal-1.99.11.ebuild:
   Stable on alpha.
