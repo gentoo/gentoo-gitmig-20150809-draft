@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-adplug/xmms-adplug-1.1.ebuild,v 1.1 2004/07/20 14:21:01 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-adplug/xmms-adplug-1.1.ebuild,v 1.2 2004/07/21 18:24:42 dholm Exp $
 
 MY_PN="adplug-xmms"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://adplug.sourceforge.net/"
 SRC_URI="mirror://sourceforge/adplug/${MY_PN}-${PV}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND=">=media-libs/adplug-1.4.1
 	media-sound/xmms"
