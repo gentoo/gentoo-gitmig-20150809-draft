@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/evilwm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.23 2004/07/07 02:12:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.24 2004/09/06 08:39:53 tigger Exp $
+
+  06 Sep 2004; Rob Holland <tigger@gentoo.org> evilwm-0.99.17.ebuild:
+  Provide a more sensible default font.
 
   07 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> evilwm-0.99.17.ebuild:
   Stable on alpha.
