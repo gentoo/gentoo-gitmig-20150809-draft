@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prothon/prothon-0.0.2_p190.ebuild,v 1.1 2004/04/02 09:53:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prothon/prothon-0.0.4_p328.ebuild,v 1.1 2004/04/12 23:02:58 kloeri Exp $
 
 MY_P=${P/_p/-b}
 DESCRIPTION="A classless prototype-based programming language with the sensibilities of Python."
@@ -17,7 +17,14 @@ DEPEND="virtual/glibc
 	dev-libs/apr
 	dev-libs/boost"
 
-S=${WORKDIR}/${MY_P/-b/-r}
+#S=${WORKDIR}/${MY_P/-b/-r}
+S=${WORKDIR}/${MY_P}
+
+src_compile() {
+	einfo `pwd`
+	econf || die
+	emake || die
+}
 
 src_install() {
 	einstall || die
