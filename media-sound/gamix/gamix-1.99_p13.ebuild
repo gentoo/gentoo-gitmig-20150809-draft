@@ -1,34 +1,29 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/gamix-1.99_p13.ebuild,v 1.3 2002/08/08 16:07:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/gamix-1.99_p13.ebuild,v 1.4 2003/01/17 22:28:55 vapier Exp $
 
 P_V=${P/_p/.p}
 S=${WORKDIR}/${P_V}
-DESCRIPTION="GTK ALSA audio mixer gamix by Fumihiko Murata <fmurata@p1.tcnet.ne.jp>"
+DESCRIPTION="GTK ALSA audio mixer"
 SRC_URI="http://www1.tcnet.ne.jp/fmurata/linux/down/${P_V}.tar.gz"
 HOMEPAGE="http://www1.tcnet.ne.jp/fmurata/linux/down"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE="nls"
 
-DEPEND=" >=media-sound/alsa-driver-0.9_rc1 
+DEPEND=">=media-sound/alsa-driver-0.9_rc1 
 	>=media-libs/alsa-lib-0.9_rc1
 	x11-libs/gtk+ 
 	dev-libs/glib"
 
 src_compile() {
-
-	local myconf
-
-	use nls || myconf="--disable-nls"
-
-	econf ${myconf} || die "./configure failed"
+	econf `use_enable nls` || die "./configure failed"
 	emake || die
 }
 
-src_install () {
-
+src_install() {
 	einstall || die
 	dodoc README README.euc TODO NEWS INSTALL AUTHORS ABOUT-NLS COPYING
 }
