@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/phpgroupware-0.9.16.002-r1.ebuild,v 1.3 2004/09/03 17:17:21 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/phpgroupware-0.9.16.004.ebuild,v 1.1 2005/01/02 01:49:08 mholzer Exp $
 
 inherit webapp
 
@@ -11,15 +11,19 @@ HOMEPAGE="http://www.phpgroupware.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="~x86 ppc ~alpha ~amd64 ~sparc ~hppa"
+KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~sparc ~hppa"
 
 RDEPEND=">=dev-php/mod_php-4.1"
 
-src_install() {
-	webapp_src_preinst
-
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	# remove CVS directories
 	find . -type d -name 'CVS' -print | xargs rm -rf
+}
+
+src_install() {
+	webapp_src_preinst
 
 	cp -R . ${D}/${MY_HTDOCSDIR}
 	dohtml ${PN}/doc/en_US/html/admin/*.html

@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/phpgroupware
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.7 2004/09/15 12:49:23 kugelfang Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.8 2005/01/02 01:49:08 mholzer Exp $
+
+*phpgroupware-0.9.16.004 (02 Jan 2005)
+
+  02 Jan 2005; Martin Holzer <mholzer@gentoo.org>
+  +phpgroupware-0.9.16.004.ebuild:
+  Version bumped. Security bump. See 74487
 
   15 Sep 2004; Danny van Dyk <kugelfang@gentoo.org>
   phpgroupware-0.9.16.003.ebuild:
