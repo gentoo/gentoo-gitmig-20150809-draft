@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.43 2003/02/12 03:49:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.44 2003/02/13 18:57:31 rphillips Exp $
 
   08 Feb 2003; Guy Martin <gmsoft@gentoo.org> vim-6.1-r19.ebuild :
   Added hppa to keywords.
@@ -9,6 +9,9 @@
   Unmasked, security update.
 
 *vim-6.1-r19.ebuild (21 Jan 2003)
+
+  13 Feb 2003; Ryan Phillips <rphillips@gentoo.org> vim-6.1-r19.ebuild :
+  disable X if -X is used in USE vars
 
   21 Jan 2003; Ryan Phillips <rphillips@gentoo.org> files/vimrc :
   Added modelines=0 to default to high security. Fixes #14088

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r19.ebuild,v 1.4 2003/02/13 07:00:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r19.ebuild,v 1.5 2003/02/13 18:57:31 rphillips Exp $
 
 IUSE="nls perl python ruby tcltk gpm X"
 
@@ -41,7 +41,7 @@ src_compile() {
 	# the configure script should autodetect X being installed, so
 	# we'll specifically turn it off if X is not in the USE vars.
 	# -rphillips
-	use X      && myconf="$myconf --with-x"
+	use X      && myconf="$myconf --with-x" || myconf="$myconf --without-x"
 
 	# This should fix a sandbox violation. 
  	for file in /dev/pty/s*
