@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.4.1.ebuild,v 1.7 2004/02/10 06:29:34 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.4.1.ebuild,v 1.8 2004/03/12 08:06:48 jhuebel Exp $
 
 inherit gnome2
 
@@ -28,3 +28,8 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS BUGS ChangeLog COPYING INSTALL NEWS README THANKS TODO"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	use amd64 && epatch ${FILESDIR}/gedit-2.4.0-64bit-fix.patch
+}
