@@ -65,3 +65,4 @@ slotmove =app-editors/emacs-cvs-21.3.50* 21.3.50 22.0.50
 move app-i18n/scim-chinese app-i18n/scim-pinyin
 move kde-base/libksvg kde-base/ksvg
 move kde-base/ksvgplugin kde-base/ksvg
+move kde-base/kaddressbook-xxports-kworldclock kde-base/kaddressbook-plugins
