@@ -1,6 +1,9 @@
 # ChangeLog for net-print/foomatic-db-engine
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.17 2004/09/16 07:48:01 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.18 2004/09/16 08:25:00 sejo Exp $
+
+  16 Sep 2004; <SeJo@gentoo.org> foomatic-db-engine-3.0.2.ebuild:
+  stable ppc bug: 64166
 
 *foomatic-db-engine-3.0.2 (16 Sep 2004)
 
