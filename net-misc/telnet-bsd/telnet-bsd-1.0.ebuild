@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.0.ebuild,v 1.2 2002/12/25 04:13:42 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/telnet-bsd-1.0.ebuild,v 1.3 2003/01/07 05:37:31 bcowan Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -14,7 +14,7 @@ HOMEPAGE="ftp://ftp.suse.com/pub/people/kukuk/ipv6/"
 
 DEPEND="virtual/glibc"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 LICENSE="BSD"
 
