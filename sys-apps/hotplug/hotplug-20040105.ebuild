@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20040105.ebuild,v 1.3 2004/02/17 08:27:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20040105.ebuild,v 1.4 2004/02/18 14:23:34 agriffis Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/linux-hotplug/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc ~alpha hppa ~amd64"
+KEYWORDS="x86 ppc ~sparc ~alpha hppa ~amd64 ia64"
 
 # hotplug needs pcimodules utility provided by pcitutils-2.1.9-r1
 DEPEND=">=sys-apps/pciutils-2.1.9 >=sys-apps/usbutils-0.9"
