@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.6 2003/03/08 15:04:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.7 2003/04/14 08:28:17 cretin Exp $
 
 *elfutils-0.76 (08 Mar 2003)
+
+  14 Apr 2003; Stefan Jones <cretin@gentoo.org> elfutils-0.76.ebuild :
+  Moved to stable tree.
 
   08 Mar 2003; Martin Schlemmer <azarah@gentoo.org> elfutils-0.76.ebuild :
   Update version.

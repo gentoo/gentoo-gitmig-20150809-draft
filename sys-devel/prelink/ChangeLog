@@ -1,9 +1,6 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.13 2003/04/13 10:35:30 cretin Exp $
-
-  07 Mar 2003; Peter Johanson <latexer@gentoo.org> prelink-20021213.ebuild :
-  Remasked til Cretin deals with deps on elfutils.
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.14 2003/04/14 08:28:17 cretin Exp $
 
 *prelink-20030217 (07 Mar 2003):
 
@@ -15,7 +12,7 @@
 
 *prelink-20021213 (02 Jan 2003):
 
-  07 Mar 2003; Stefan Jones <cretin@gentoo.org> :
+  14 Apr 2003; Stefan Jones <cretin@gentoo.org> :
   Put in stable, it is less buggier than last one
   
   02 Jan 2003; Martin Schlemmer <azarah@gentoo.org> prelink-20021213.ebuild :
