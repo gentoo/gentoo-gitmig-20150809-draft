@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.1.ebuild,v 1.2 2003/03/20 13:51:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.1.ebuild,v 1.3 2003/04/05 21:47:30 danarmak Exp $
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.lyx.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc ~alpha"
 IUSE="nls cups qt"
 
 DEPEND="virtual/x11
@@ -72,7 +72,14 @@ pkg_postinst() {
 		einfo	"the matheditor not to display any special characters (the ones from"
 		einfo	"the Computer Modern font family). Generated documents (.dvi, .ps...)"
 		einfo	"are ok, since tex has right fonts from the bluesky package."
-		einfo	"A proper solution is being busily worked on."
+		einfo	"A proper solution is being worked on. Meanwhile you can install the"
+		einfo	"BaKoMa fonts package; however they are not licensed for redistribution"
+		einfo	"(not even embedded inside generated documents) and cannot be used in"
+		einfo	"commercial environments (without a special agreement from the author)."
+		einfo	"If that suits you, you can get them on CTAN or at ftp.lyx.org as"
+		einfo	"latex-ttf-fonts-0.1.tar.gz. I am working on an alternative, free"
+		einfo	"fonts package derived from bluesky (see the recent threads on the"
+		einfo	"lyx-devel mailing list about this if you want to know more)."
 	fi
 
 }
