@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.6.ebuild,v 1.4 2003/04/06 16:28:35 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.6.ebuild,v 1.5 2003/04/21 21:41:03 mholzer Exp $
 
 IUSE="ssl kerberos ipv6 tcpd"
 
@@ -67,6 +67,9 @@ src_install () {
 	rm -f ${D}/usr/bin/snmptrap
 	dosym /usr/bin/snmptrap /usr/bin/snmpinform
 
+	cp ${FILESDIR}/net-snmpd.rc6 net-snmpd
+	sed -i "s:doc\/net-snmp:doc\/${PF}:" net-snmpd
+	
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/net-snmpd.rc6 net-snmpd
+	newexe net-snmpd net-snmpd
 }
