@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.4.ebuild,v 1.1 2002/11/05 15:06:09 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.4.ebuild,v 1.2 2002/11/05 15:16:44 tantive Exp $
 
 S=${WORKDIR}/mpich-${PV}
 DESCRIPTION="MPICH - A portable MPI implementation"
@@ -26,7 +26,7 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}
-	./configure --mandir=/usr/share/man || die
+	./configure --mandir=/usr/share/man --prefix=/usr || die
 	make || die
 }
 
