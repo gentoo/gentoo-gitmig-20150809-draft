@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> 21 Jul 2002
+# masked for testing
+=sys-apps/gettext-0.11.3
+
 # <seemant@gentoo.org> 20 Jul 2002
 # masked because GNU Readline 4.2 is not in 1.0 default inclusion
 =media-sound/cdcd-0.6.4
