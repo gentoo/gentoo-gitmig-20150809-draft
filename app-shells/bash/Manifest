@@ -1,19 +1,29 @@
-MD5 9b26b6899167a29ee4e9c1ad0d39b5a1 bash-2.05b-r9.ebuild 2909
-MD5 ea922b4dd22deb62f7eff84eb37f9b9d bash-3.0-r5.ebuild 4387
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d3f0cfd418d7be47d357939f050c5f1f ChangeLog 10461
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 6a2f5ace1a2dd30b1bee55eba1509027 bash-2.05b-r10.ebuild 3041
-MD5 4a3ebcb995491c2730d156b314cbab0b files/bash-3.0-etc-inputrc.patch 1223
-MD5 3b905c7c9341c9009bd68f14c047815e files/bash-2.05b-rbash.patch 804
-MD5 694b8b1e47e4743e78ee5f7515f76542 files/bash-3.0-posixtrap.patch 789
-MD5 8424d47516cd474034c956a1cde0cafa files/bashrc 1335
-MD5 4383b25cd54b24b9f459e338f06d096c files/bash-2.05b-parallel-build.patch 459
-MD5 582fb9ed0ca44627978ce6836a5000dc files/config-top.h.diff 487
-MD5 96238e7d942d091ca71574ba7392e847 files/bash-3.0-array-stripping.patch 294
-MD5 0392b634a7a02302d24ccc4a4b349423 files/bash-3.0-local-array.patch 275
-MD5 30a9ff1b688e79f59376a47d882f3419 files/digest-bash-3.0-r5 128
-MD5 28c9d7407d5332c29dddb656a4a1f1ce files/bash-3.0-invisible.patch 705
-MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r10 461
-MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r9 461
+MD5 dcfd174a35a61bcd339f1ee97aeb89a0 bash-2.05b-r10.ebuild 3086
+MD5 ea8456f168c78c5e17532402b56c571e bash-3.0-r5.ebuild 4430
+MD5 973f99c2e75cc8cf20760239f8f2657b bash-2.05b-r9.ebuild 2954
 MD5 edf95b873162f4548435c379e4998b4e files/bash-2.05b-empty-herestring.patch 836
 MD5 90ba92c981c1d26e45d88ecd23a1fbf5 files/bash-2.05b-multibyte-locale.patch 1897
+MD5 3b905c7c9341c9009bd68f14c047815e files/bash-2.05b-rbash.patch 804
+MD5 582fb9ed0ca44627978ce6836a5000dc files/config-top.h.diff 487
+MD5 4383b25cd54b24b9f459e338f06d096c files/bash-2.05b-parallel-build.patch 459
+MD5 8424d47516cd474034c956a1cde0cafa files/bashrc 1335
+MD5 4a3ebcb995491c2730d156b314cbab0b files/bash-3.0-etc-inputrc.patch 1223
+MD5 28c9d7407d5332c29dddb656a4a1f1ce files/bash-3.0-invisible.patch 705
+MD5 0392b634a7a02302d24ccc4a4b349423 files/bash-3.0-local-array.patch 275
+MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r9 461
+MD5 1894aaae72806c410d851d046d13dd32 files/digest-bash-2.05b-r10 461
+MD5 694b8b1e47e4743e78ee5f7515f76542 files/bash-3.0-posixtrap.patch 789
+MD5 30a9ff1b688e79f59376a47d882f3419 files/digest-bash-3.0-r5 128
+MD5 96238e7d942d091ca71574ba7392e847 files/bash-3.0-array-stripping.patch 294
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBJSTRHTu7gpaalycRArziAKCq8BWKhN97t4+2tBhXzfFyZ+UKKACg7K7g
+0vgiHzbbHPzROOv788V9DJw=
+=WxFw
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r10.ebuild,v 1.2 2004/07/24 01:34:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r10.ebuild,v 1.3 2004/08/19 22:08:00 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -18,7 +18,9 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
 IUSE="nls build uclibc"
 
+# we link statically with ncurses
 DEPEND=">=sys-libs/ncurses-5.2-r2"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${P}.tar.gz
