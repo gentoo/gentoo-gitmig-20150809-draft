@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.1.ebuild,v 1.1 2005/01/17 19:40:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.4.1.ebuild,v 1.2 2005/01/23 22:18:15 swegener Exp $
 
 inherit fixheadtails ssl-cert eutils libtool flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.isc.org/isc/inn/${P}.tar.gz
 SLOT="0"
 LICENSE="as-is BSD GPL-2"
 KEYWORDS="~x86 ~ppc"
-IUSE="ipv6 kerberos sasl ssl perl python tcltk berkdb inntaggedhash innkeywords"
+IUSE="ipv6 kerberos sasl ssl perl python berkdb inntaggedhash innkeywords"
 
 RDEPEND="virtual/mta
 	kerberos? ( virtual/krb5 )
@@ -19,7 +19,6 @@ RDEPEND="virtual/mta
 	ssl? ( dev-libs/openssl )
 	perl? ( dev-lang/perl )
 	python? ( dev-lang/python )
-	tcltk? ( dev-lang/tcl )
 	berkdb? ( sys-libs/db )
 	virtual/gzip"
 DEPEND="${RDEPEND}
@@ -68,9 +67,9 @@ src_compile() {
 		--enable-setgid-inews \
 		--enable-uucp-rnews \
 		--with-gnu-ld \
+		--without-tcl \
 		$(use_with perl) \
 		$(use_with python) \
-		$(use_with tcltk tcl) \
 		$(use_with kerberos kerberos /usr) \
 		$(use_with sasl) \
 		$(use_with ssl openssl) \
