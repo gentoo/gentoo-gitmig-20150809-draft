@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/align
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.3 2003/09/03 22:39:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.4 2003/10/27 05:39:44 agriffis Exp $
+
+*align-23 (27 Oct 2003)
+
+  27 Oct 2003; Aron Griffis <agriffis@gentoo.org> align-23.ebuild:
+  Version bump for bug 31396
 
   03 Sep 2003; Jason Wever <weeve@gentoo.org> align-21.ebuild:
   Added ~sparc to keywords to fix bug #27740.
