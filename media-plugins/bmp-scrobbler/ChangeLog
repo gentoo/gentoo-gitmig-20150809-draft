@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/bmp-scrobbler
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-scrobbler/ChangeLog,v 1.1 2005/01/07 19:48:55 chainsaw Exp $
+
+*bmp-scrobbler-0.3.6 (07 Jan 2005)
+
+  07 Jan 2005; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
+  +bmp-scrobbler-0.3.6.ebuild:
+  Initial commit. Ebuild based on the submitted by dju` <dju@elegiac.net> in
+  bug #76393.
+
