@@ -1,0 +1,41 @@
+# ChangeLog for net-mail/cyrus-imspd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.1 2003/09/18 18:23:29 max Exp $
+
+*cyrus-imspd-1.7 (10 Sep 2003)
+
+  10 Sep 2003; Max Kalika <max@gentoo.org> cyrus-imspd-1.6_alpha3.ebuild,
+  cyrus-imspd-1.7.ebuild, files/cyrus-imspd-db4.patch,
+  files/cyrus-imspd-gentoo.patch, files/cyrus-imspd-sasl2.patch,
+  files/imspd.rc6:
+  Bump to version 1.7. Drop sasl2 patch. Fix rc6 script to create a pid file.
+
+  07 Aug 2003; Max Kalika <max@gentoo.org> cyrus-imspd-1.6_alpha3.ebuild,
+  files/cyrus-imspd-db4.patch, files/imspd.conf, files/imspd.rc6,
+  files/imspd.ssl.conf, files/imspd.ssl.rc6, files/stunnel.conf:
+  Change depend to cyrus-imap-dev. Work with both 2.1 and 2.2 series of
+  cyrus-imap-dev. Change ssl depend to stunnel-4. Convert startup script to
+  support stunnel-4. Add support for db4 and versioned symbols.
+
+  03 Jul 2003; Max Kalika <max@gentoo.org> cyrus-imspd-1.6_alpha3.ebuild:
+  Set KEYWORDS to ~x86.
+
+  26 Jun 2003; Max Kalika <max@gentoo.org> cyrus-imspd-1.6_alpha3.ebuild,
+  files/gentestcrt.sh, files/imspd.ssl.conf, files/imspd.ssl.rc6:
+  Add ssl support.
+
+  22 Jun 2003; Max Kalika <max@gentoo.org> cyrus-imspd-1.6_alpha3.ebuild,
+  files/cyrus-imspd-gentoo.patch:
+  Break up the patch into two patches: sasl2.patch brings the package up to the
+  latest cvs sasl2 support, and gentoo.patch makes it compile against
+  cyrus-imapd library. Also exclude configure and aclocal.m4 from the patch
+  which trims it down by 100K.
+
+  19 Jun 2003; Max Kalika <max@gentoo.org> cyrus-imspd-1.6_alpha3.ebuild:
+  Drop all the CVS comments.  Use /bin/sh instead of sh.
+
+*cyrus-imspd-1.6_alpha3 (18 Jun 2003)
+
+  18 Jun 2003; Max Kalika <max@gentoo.org> cyrus-imspd-1.6_alpha3.ebuild:
+  Initial version.
+
