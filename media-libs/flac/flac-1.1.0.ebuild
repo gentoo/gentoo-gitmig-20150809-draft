@@ -1,8 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0.ebuild,v 1.8 2003/06/02 20:16:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0.ebuild,v 1.9 2003/06/20 17:10:27 vapier Exp $
 
-DESCRIPTION="=free lossless audio encoder which includes an XMMS plugin"
+inherit libtool
+
+DESCRIPTION="free lossless audio encoder which includes an XMMS plugin"
 SRC_URI="mirror://sourceforge/flac/${P}.tar.gz"
 HOMEPAGE="http://flac.sourceforge.net/"
 
@@ -15,12 +17,9 @@ RDEPEND="virtual/glibc
 	media-libs/id3lib
 	>=media-libs/libogg-1.0_rc2
 	X? ( xmms? ( media-sound/xmms ) )"
-
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
 	sys-apps/gawk"
-
-inherit libtool
 
 src_unpack() {
 	unpack ${A}
