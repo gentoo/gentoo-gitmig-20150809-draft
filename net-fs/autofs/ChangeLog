@@ -1,6 +1,11 @@
-# ChangeLog for net-fs/autofs
+# ChangeLog for net-fsautofsChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.7 2002/06/21 23:11:19 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.8 2002/07/17 03:11:56 lamer Exp $
+
+  16 Jul 2002; Ben Lutgens <lamer@gentoo.org> files/autofs.rc6  :
+
+  made the initscript depend on ypbind
+# ChangeLog for net-fs/autofs
 
   30 Apr 2002; William McArthur <sandymac@gentoo.org> autofs-3.1.7-r3.ebuild :
 

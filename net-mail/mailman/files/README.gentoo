@@ -1,0 +1,47 @@
+Follow these instructions to finish setting up mailman. This file and the
+original ebuild were tweaked by me <lamer@gentoo.org> but were graciously
+submitted by Joby Walker (YOU RULE!)
+
+Please view the documentation on Mailman at: http://www.list.org/
+
+I have configured Mailman to install in /var/mailman by default, to change
+this you will need to modify the INSTALLDIR variable in the ebuild and the
+locations in the mailman.conf(.apache) file.
+
+1) If this is your first time installing mailman, after your "emerge mailman", you will need to
+run:
+
+ebuild /var/db/pkg/net-mail/mailman-x.x.x/mailman-x.x.x.ebuild config
+
+This will add an Include in your apache.conf to mailman.conf
+
+2) And then in you /etc/conf.d/apache file add the additional option:
+
+-D MAILMAN
+
+3) Make sure mailman is a part of the cron group
+
+4) The rest must be done as user mailman so:
+
+su - mailman
+
+5) Add the cron jobs:
+
+cd cron
+crontab crontab.in
+cd ..
+
+6) create the site password:
+
+bin/mmsitepass
+
+From here you just need to add lists as per the documentation. I placed the
+INSTALL file in /usr/share/doc/mailman-$VERSION/ 
+
+Remember:
+
+Do everything as user "mailman".  If root you will cause mailman to fail,
+but it is correctable by running "bin/check_perms -f" from the root
+mailman directory (/var/mailman).
+
+NOTE TO ORIGINAL AUTHOR: Once again thanks for the submission, you rule!

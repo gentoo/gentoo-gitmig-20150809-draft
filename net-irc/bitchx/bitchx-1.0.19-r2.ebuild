@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r2.ebuild,v 1.2 2002/07/16 04:54:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r2.ebuild,v 1.3 2002/07/17 03:11:56 lamer Exp $
 
 MY_P=ircii-pana-${PV/.0./.0c}
 S=${WORKDIR}/BitchX
@@ -47,9 +47,12 @@ src_compile() {
 #		&& myconf="${myconf} --without-tgetent" \
 #		|| myconf="${myconf} --with-tgetent"
 	
-	use socks5 \
-		&& myconf="${myconf} --with-socks=5" \
-		|| myconf="${myconf} --without-socks"
+	# lamer@gentoo.org BROKEN, will not work with our socks
+	# implementations, is looking for a SOCKSConnect function that our
+	# dante packages don't have :-(
+	#use socks5 \
+	#	&& myconf="${myconf} --with-socks=5" \
+	#	|| myconf="${myconf} --without-socks"
 
 	econf \
 		--enable-cdrom \

@@ -1,6 +1,15 @@
-# ChangeLog for net-mail/fetchmail
+# ChangeLog for net-mailfetchmailChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.2 2002/02/15 05:02:04 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.3 2002/07/17 03:11:56 lamer Exp $
+
+*fetchmail-5.9.11-r1 (16 Jul 2002)
+
+  16 Jul 2002; Ben Lutgens <lamer@gentoo.org> fetchmail-5.9.11-r1,
+  files/fetchmail :
+
+  Added an initscript, revved the minor version to -r1 for masking purposes,
+  masked. Fixes bug 4415
+  
 
 *fetchmail-5.9.7 (14 Feb 2002)
 

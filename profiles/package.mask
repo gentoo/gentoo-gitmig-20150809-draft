@@ -22,6 +22,15 @@
 ##   End example
 ##
 
+# lamer@gentoo.org (16 Jul 2002)
+# Brand spanking shiny new ebuild! Needs testing!
+=net-mail/mailman-2.0.12
+
+# lamer@gentoo.org (16 Jul 2002)
+# initscript needs testing, I don't run a system wide fetchmail so can't
+# verify.
+=net-mail/fetchmail-5.9.11-r1
+
 # stubear@gentoo.org (16 Jul 2002)
 # rxvt-2.7.8-r5 - test for multi-byte char support
 =x11-terms/rxvt-2.7.8-r5
