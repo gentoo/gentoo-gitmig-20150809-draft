@@ -4,27 +4,18 @@ diff -Nu xv-3.10a.clean/Makefile xv-3.10a/Makefile
 +++ xv-3.10a/Makefile	Sat Jul 21 12:43:52 2001
 @@ -1,8 +1,8 @@
  # Makefile for xv
- 
+
  # your C compiler (and options) of choice
 -CC = cc
 -# CC = gcc -ansi
 +#CC = cc
 +CC = gcc -ansi
- 
+
  # use this if you're using 'cc' on a DEC Alpha (OSF/1) or MIPS (Ultrix) system:
  # CC = cc -std1 -Olimit 750
-@@ -14,7 +14,7 @@
- #       -Wuninitialized -Wparentheses
- 
- 
--CCOPTS = -O 
-+CCOPTS = -O3 -march=i686 -mcpu=i686
- 
- 
- ### NOTE: Sun running OpenWindows:
 @@ -28,10 +28,11 @@
- 
- 
+
+
  ### Installation locations
 -BINDIR = /usr/local/bin
 -MANDIR = /usr/local/man/man1
@@ -34,8 +25,8 @@ diff -Nu xv-3.10a.clean/Makefile xv-3.10a/Makefile
 -LIBDIR = /usr/local/lib
 +LIBDIR = /usr/lib
 +DOCDIR = /usr/share/doc/xv-3.10a
- 
- 
+
+
  buildit: all
 @@ -59,12 +60,12 @@
  ### if, for whatever reason, you're unable to get the TIFF library to compile
