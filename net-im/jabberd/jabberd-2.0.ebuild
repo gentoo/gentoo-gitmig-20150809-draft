@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.ebuild,v 1.2 2004/04/09 10:41:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.ebuild,v 1.3 2004/04/09 15:14:58 humpback Exp $
 
 MY_PV="2.0s2"
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -30,6 +30,12 @@ pkg_setup() {
 		eerror
 		die "Look at the error message above."
 	fi
+}
+
+src_unpack() {
+	unpack ${PN}-${MY_PV}.tar.gz
+	cd ${S}/sx
+	epatch ${FILESDIR}/xml-stream-patch-00
 }
 
 src_compile() {

@@ -1,0 +1,17 @@
+--- error.c.old	2004-03-20 14:39:57.985636816 +0100
++++ error.c	2004-03-20 14:40:42.025941672 +0100
+@@ -71,7 +71,13 @@
+         len += sprintf(&(buf->data[len]), "<stream:error xmlns:stream='" uri_STREAMS "'><%s xmlns='" uri_STREAM_ERR "'/><text xmlns='" uri_STREAM_ERR "'>%s</text></stream:error>", _stream_errors[err], text);
+ 
+     if(s->state < state_STREAM)
+-        len += sprintf(&(buf->data[len]), "</stream:stream>");
++	{
++	 char *streamend= "</stream:stream>";
++	 printf ("About to write %d bytes\n", strlen (streamend)); 
++	 // len += sprintf(&(buf->data[len]), "</stream:stream>");
++	 memcpy (&(buf->data[len]), streamend, strlen (streamend)); 
++	 len += strlen (streamend); 
++	}
+ 
+     assert(len == buf->len);
+ 
