@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-2.3.1.ebuild,v 1.3 2001/08/21 23:54:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-2.3.1.ebuild,v 1.4 2001/08/30 15:58:35 drobbins Exp $
 
 S=${WORKDIR}/qt-${PV}
 DESCRIPTION="QT ${PV}"
@@ -58,14 +58,14 @@ src_compile() {
       myconf="${myconf} -release"
     fi
 	
-    try SYSCONF_CFLAGS="$CFLAGS" SYSCONF_CXXFLAGS="$CXXFLAGS" \
+    SYSCONF_CFLAGS="$CFLAGS" SYSCONF_CXXFLAGS="$CXXFLAGS" \
     ./configure -sm -thread -system-zlib -system-jpeg ${myconf} \
 	-system-libmng -system-libpng -gif -platform linux-g++ \
-        -ldl -lpthread -no-g++-exceptions
+        -ldl -lpthread -no-g++-exceptions || die
 
     cd ${S}
-    try make SYSCONF_CFLAGS="$CFLAGS" SYSCONF_CXXFLAGS="$CXXFLAGS" \
-    symlinks src-moc src-mt sub-src sub-tools
+    make SYSCONF_CFLAGS="$CFLAGS" SYSCONF_CXXFLAGS="$CXXFLAGS" \
+    symlinks src-moc src-mt sub-src sub-tools || die
 
     # leave out src-tools for testing !
 }
