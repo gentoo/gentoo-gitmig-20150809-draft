@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.000.ebuild,v 1.4 2003/08/06 06:39:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.000.ebuild,v 1.5 2003/09/06 22:08:32 msterret Exp $
 
 DESCRIPTION="a web-based user administration interface"
 HOMEPAGE="http://www.webmin.com/index6.html"
@@ -31,7 +31,7 @@ src_install() {
 
 	insinto /etc/pam.d
 	newins ${FILESDIR}/${PN}.pam ${PN}
-	
+
 }
 
 pkg_postinst() {

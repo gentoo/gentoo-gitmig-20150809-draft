@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta8.ebuild,v 1.2 2003/09/01 10:22:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta8.ebuild,v 1.3 2003/09/06 22:08:32 msterret Exp $
 
 MY_P=${P/_beta/-beta}
 
@@ -41,7 +41,7 @@ src_install() {
 
 	insinto /usr/share/hddtemp
 	if [ -f hddtemp.db ]; then
-		doins hddtemp.db 
+		doins hddtemp.db
 	else
 		doins ${FILESDIR}/hddtemp.db
 	fi

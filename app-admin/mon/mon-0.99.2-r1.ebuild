@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r1.ebuild,v 1.11 2003/05/25 14:43:27 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r1.ebuild,v 1.12 2003/09/06 22:08:32 msterret Exp $
 
 DESCRIPTION="highly configurable service monitoring daemon"
 SRC_URI="mirror://kernel/software/admin/mon/${P}.tar.bz2"
@@ -29,7 +29,7 @@ src_install() {
 	exeinto /usr/lib/mon/alert.d ; doexe alert.d/*
 	exeinto /usr/lib/mon/mon.d ; doexe mon.d/*.monitor
 	insopts -g uucp -m 02555 ; doins mon.d/*.wrap
-	
+
 	dodir /var/log/mon.d
 	dodir /var/lib/mon.d
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixtest/openmosixtest-0.1-r4.ebuild,v 1.4 2003/03/11 21:11:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixtest/openmosixtest-0.1-r4.ebuild,v 1.5 2003/09/06 22:08:32 msterret Exp $
 
 S=${WORKDIR}/omtest
 DESCRIPTION="openMosix stress test"
@@ -40,7 +40,7 @@ pkg_postinst() {
 	einfo "The openMosix stress test installation will be completed right now."
 	einfo
 	./compile_tests.sh
-	
+
 	einfo
 	einfo "openMosix stress test is now installed in /opt/omtest"
 	einfo "You can run it by executing start_openMosix_test.sh"

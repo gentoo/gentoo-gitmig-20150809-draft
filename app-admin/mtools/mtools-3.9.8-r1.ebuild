@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mtools/mtools-3.9.8-r1.ebuild,v 1.19 2003/05/01 21:13:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mtools/mtools-3.9.8-r1.ebuild,v 1.20 2003/09/06 22:08:32 msterret Exp $
 
 DESCRIPTION="utilities to access MS-DOS disks from Unix without mounting them"
 SRC_URI="http://mtools.linux.lu/mtools-3.9.8.tar.gz"
@@ -21,5 +21,5 @@ src_install() {
 	einstall sysconfdir=${D}/etc/mtools
 	insinto /etc/mtools
 	newins mtools.conf mtools.conf.example
-	dodoc COPYING ChangeLog NEWPARAMS README* Release.notes 
+	dodoc COPYING ChangeLog NEWPARAMS README* Release.notes
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/fetchlog-0.94.ebuild,v 1.1 2003/08/15 12:26:52 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/fetchlog-0.94.ebuild,v 1.2 2003/09/06 22:08:32 msterret Exp $
 
 DESCRIPTION="Displays the last new messages of a logfile"
 HOMEPAGE="http://fetchlog.sourceforge.net/"
@@ -9,9 +9,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-IUSE="snmp" 
+IUSE="snmp"
 S=${WORKDIR}/${P}
-DEPEND="snmp? ( 
+DEPEND="snmp? (
 	>=dev-perl/Net-SNMP-4.0.1-r2
 	>=net-analyzer/net-snmp-5.0.6
 	)"

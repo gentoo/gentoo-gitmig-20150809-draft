@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.3 2003/08/06 06:34:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.4 2003/09/06 22:08:32 msterret Exp $
 
 DESCRIPTION="hp Server Management Drivers and Agents"
 HOMEPAGE="http://h18000.www1.hp.com/products/servers/linux/documentation.html"
@@ -27,13 +27,13 @@ src_unpack() {
 
 src_install() {
 	HPASM_HOME="/opt/compaq"
-	
+
 	dodir ${HPASM_HOME}
 
 	cp -Rdp opt/compaq/* ${D}${HPASM_HOME}
 
 	into /
-	dosbin sbin/bootcfg 
+	dosbin sbin/bootcfg
 
 	dosym /opt/compaq/hpasm/addon/libcpqci.so.1.0 /opt/compaq/hpasm/addon/libcpqci.so.1
 	dosym /opt/compaq/hpasm/addon/libcpqci.so.1.0 /opt/compaq/hpasm/addon/libcpqci.so
@@ -73,12 +73,12 @@ src_install() {
 	doman usr/share/man/man4/cpqhealth.4.gz usr/share/man/man4/hpasm.4.gz \
 		usr/share/man/man8/cpqimlview.8.gz usr/share/man/man8/hplog.8.gz \
 		usr/share/man/man8/hpuid.8.gz
-	
+
 }
-	
+
 pkg_postinst() {
 	einfo ""
-	einfo "If you want to run cpqimlview or hpimlview you will" 
+	einfo "If you want to run cpqimlview or hpimlview you will"
 	einfo "need to emerge xfree, tix, and tclx"
 	einfo ""
 	einfo "You now need to execute /etc/init.d/hpasm start in"

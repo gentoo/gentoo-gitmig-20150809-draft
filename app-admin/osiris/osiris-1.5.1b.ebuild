@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-1.5.1b.ebuild,v 1.4 2003/06/29 15:24:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-1.5.1b.ebuild,v 1.5 2003/09/06 22:08:32 msterret Exp $
 
 
 DESCRIPTION="File integrity verification system"
@@ -23,13 +23,13 @@ src_compile() {
 
 	einfo "Osiris uses gdbm by default, and will use MySQL if \"mysql\""
 	einfo "is set as a USE variable; it cannot be configured to use both."
-	
+
 	local myconf
 	use mysql && myconf="${myconf} --enable-module=mysql"
 
 	# The mysql module searches for the mysql.h file in the wrong place
 	# sed line replaces it with the proper path (mysql/mysql.h)
-	
+
 	cp ${S}/src/modules/module_mysql.c ${S}/src/modules/module_mysql.c.old
 	use mysql && sed -e "s:mysql.h:mysql/mysql.h:" \
 				${S}/src/modules/module_mysql.c.old > ${S}/src/modules/module_mysql.c

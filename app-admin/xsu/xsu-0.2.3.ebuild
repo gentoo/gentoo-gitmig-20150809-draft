@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xsu/xsu-0.2.3.ebuild,v 1.7 2003/02/13 05:33:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xsu/xsu-0.2.3.ebuild,v 1.8 2003/09/06 22:08:32 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Interface for 'su - username -c command' in GNOME."
@@ -11,7 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc "
 
-DEPEND="=gnome-base/gnome-libs-1.4* 
+DEPEND="=gnome-base/gnome-libs-1.4*
 	=x11-libs/gtk+-1.2*
 	=dev-libs/glib-1.2*"
 

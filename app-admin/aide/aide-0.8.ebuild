@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.8.ebuild,v 1.16 2003/07/12 21:33:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.8.ebuild,v 1.17 2003/09/06 22:08:31 msterret Exp $
 
 IUSE="nls postgres"
 
@@ -27,14 +27,14 @@ src_compile() {
 	local myconf
 	use postgres && myconf="${myconf} --with-psql"
 	use nls &&  myconf="${myconf} --with-locale"
-	
+
 	econf \
 		--with-zlib \
 		--sysconfdir=/etc/aide \
 		--with-mhash \
 		--with-extra-lib=/usr/lib \
 		${myconf} || die
-	
+
 	emake || die
 }
 

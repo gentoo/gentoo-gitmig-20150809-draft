@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.37.ebuild,v 1.10 2003/02/28 23:02:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.37.ebuild,v 1.11 2003/09/06 22:08:31 msterret Exp $
 
 DESCRIPTION="a tool to locally check for signs of a rootkit"
 SRC_URI="ftp://ftp.pangeia.com.br/pub/seg/pac/${P}.tar.gz"
@@ -23,6 +23,6 @@ src_compile() {
 }
 
 src_install() {
-	dosbin check_wtmpx chklastlog chkproc chkrootkit chkwtmp ifpromisc 
+	dosbin check_wtmpx chklastlog chkproc chkrootkit chkwtmp ifpromisc
 	dodoc COPYRIGHT README README.chklastlog README.chkwtmp
 }

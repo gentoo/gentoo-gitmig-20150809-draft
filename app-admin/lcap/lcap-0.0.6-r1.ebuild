@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lcap/lcap-0.0.6-r1.ebuild,v 1.1 2003/06/11 13:14:43 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lcap/lcap-0.0.6-r1.ebuild,v 1.2 2003/09/06 22:08:32 msterret Exp $
 
 DESCRIPTION="kernel capability remover"
 
@@ -30,7 +30,7 @@ src_unpack() {
 	use lids || (sed < Makefile > Makefile.tmp -e "s:LIDS =:#\0:" && \
 				mv Makefile.tmp Makefile)
 }
-		
+
 src_compile() {
 	emake || die
 }

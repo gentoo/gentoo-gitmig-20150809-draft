@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnomesu/gnomesu-0.3.1.ebuild,v 1.4 2003/08/05 14:24:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnomesu/gnomesu-0.3.1.ebuild,v 1.5 2003/09/06 22:08:32 msterret Exp $
 
 inherit gnome2 eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 
 RDEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/glib-2
-	>=gnome-base/libgnome-2	
+	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2
 	>=x11-libs/libzvt-2"
 DEPEND="${RDEPEND}

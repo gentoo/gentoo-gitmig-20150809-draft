@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/qtsvc-0.1-r1.ebuild,v 1.15 2003/02/13 05:29:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qtsvc/qtsvc-0.1-r1.ebuild,v 1.16 2003/09/06 22:08:32 msterret Exp $
 
 DESCRIPTION="A QT frontend for svc"
 SRC_URI="http://www.together.net/~plomp/${P}.tar.gz"
@@ -26,6 +26,6 @@ src_compile() {
 }
 
 src_install() {
-	dobin qtsvc/qtsvc	
+	dobin qtsvc/qtsvc
 	dodoc README qtsvc/MANUAL qtsvc/LICENSE qtsvc/PROGRAMMING
 }

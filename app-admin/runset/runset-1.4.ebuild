@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/runset-1.4.ebuild,v 1.14 2003/07/16 14:47:44 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/runset-1.4.ebuild,v 1.15 2003/09/06 22:08:32 msterret Exp $
 
 DESCRIPTION="Runset Init suite, a replacement for sysv style initd"
 SRC_URI="ftp://ftp.ocis.net/pub/users/ldeutsch/release/${P}.tar.gz"
@@ -27,5 +27,5 @@ src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING INSTALL ChangeLog LSM NEWS README
 	cp -a ${S}/sample ${D}/usr/share/doc/${PF}
- 
+
 }

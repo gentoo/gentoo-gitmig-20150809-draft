@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.4-r1.ebuild,v 1.16 2003/07/16 14:44:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.4-r1.ebuild,v 1.17 2003/09/06 22:08:32 msterret Exp $
 
 IUSE="nls mysql"
 
@@ -28,7 +28,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
 	cd ${S}/../gd-1.8.1
-	export CFLAGS="$CFLAGS -I/usr/include/freetype" 
+	export CFLAGS="$CFLAGS -I/usr/include/freetype"
 
 	./configure || die
 	make || die
@@ -40,7 +40,7 @@ src_compile() {
 	use mysql \
 		 && myconf="--with-mysql=/usr" \
 		 || myconf="--without-mysql"
-	
+
 	use nls || myconf="${myconf} --disable-nls"
 
 	cd ${S}

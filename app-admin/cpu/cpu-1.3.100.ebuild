@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/cpu-1.3.100.ebuild,v 1.3 2003/08/05 14:24:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cpu/cpu-1.3.100.ebuild,v 1.4 2003/09/06 22:08:31 msterret Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_compile() {
 	# The package has a history of bad configure files...
 	epatch ${FILESDIR}/${P}-fixup.patch
 	autoconf
-	
+
 	local myconf
 
 	# provide PASSWD support as well
@@ -44,7 +44,7 @@ src_compile() {
 
 	# cache our config!
 	myconf="${myconf} --cache-file=${S}/config.cache"
-	
+
 	econf ${myconf} || die "Configure failure"
 
 	emake || die "Make failure"

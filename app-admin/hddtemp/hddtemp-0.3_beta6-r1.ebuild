@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta6-r1.ebuild,v 1.2 2003/07/11 18:32:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta6-r1.ebuild,v 1.3 2003/09/06 22:08:32 msterret Exp $
 
 MY_P=${P/_beta/-beta}
 HDDDB_VERSION=20030609
@@ -40,6 +40,6 @@ src_compile() {
 src_install() {
 	dobin hddtemp
 	insinto ${HDDDB_DIR}
-	doins ${WORKDIR}/${HDDDB_FILE} 
+	doins ${WORKDIR}/${HDDDB_FILE}
 	dodoc README TODO Changelog COPYING
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/integrit-3.02.00.ebuild,v 1.6 2003/06/29 15:24:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/integrit-3.02.00.ebuild,v 1.7 2003/09/06 22:08:32 msterret Exp $
 
 DESCRIPTION="file integrity verification program"
 SRC_URI="http://www.noserose.net/e/integrit/download/${P}.tar.gz"
@@ -34,12 +34,12 @@ src_install() {
 
 	cd ${S}/utils
 	dosbin i-viewdb
-	dobin i-ls	
+	dobin i-ls
 
 	cd ${S}/hashtbl
 	dolib libhashtbl.a
 	insinto /usr/include
-	doins hashtbl.h		
+	doins hashtbl.h
 	dobin hashtest
 	dodoc README.hashtbl
 
