@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jrockit-jdk-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.4 2004/09/05 07:12:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.5 2004/12/23 01:17:42 karltk Exp $
+
+  23 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> :
+  Updated digests. Upstream is being anal and changing binary content without
+  changing file names. Fixes #71379.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
