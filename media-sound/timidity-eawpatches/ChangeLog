@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/timidity-eawpatches
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/ChangeLog,v 1.1 2002/05/19 19:36:48 agriffis Exp $
+
+*timidity-eawpatches-12 (19 May 2002)
+
+	19 May 2002; Aron Griffis <agriffis@gentoo.org> timidity-eawpatches-12:
+
+	Set of patches for use with timidity++.
