@@ -252,10 +252,6 @@ x11-terms/powershell
 # release.
 =dev-lang/ant-1.5
 
-# <tantive@gentoo.org> (08 Sep 2002)
-# Masked for testing, added a patch to compile using gcc3 
-=sys-kernel/openmosix-sources-2.4.19-r4
-
 # <spider@gentoo.org> (08 Sep 2002)
 # new ebuild. cvs checkout of galeon <head> (galeon2)
 net-www/galeon-cvs
@@ -288,10 +284,6 @@ dev-python/pycrypto
 # <phoenix@gentoo.org> (02 Sep 2002)
 # This needs a lot of testing
 =net-dialup/minicom-2.00.0
-
-# <tantive@gentoo.org> (02 Sep 2002)
-# Masked for testing, fixed some compile errors with >2.99 
-=sys-kernel/openmosix-sources-2.4.19-r3
 
 # <phoenix@gentoo.org> (01 Sep 2002)
 # This needs a lot of testing
@@ -328,14 +320,6 @@ dev-java/sun-j2sdk
 # make test failed on ppc
 # added -r1, threads and fixes to ebuild - 08/10/02
 >=sys-devel/perl-5.8.0
-
-# <tantive@gentoo.org> (28 Aug 2002)
-# masked because there is a freeze, and to test them.
-=sys-kernel/openmosix-sources-2.4.18-r2
-=sys-kernel/openmosix-sources-2.4.18-r3
-=sys-kernel/openmosix-sources-2.4.18-r4
-=sys-kernel/openmosix-sources-2.4.19-r1
-=sys-kernel/openmosix-sources-2.4.19-r2
 
 # <seemant@gentoo.org> (27 Aug 2002)
 # masked because there is a FREEZE, and things should be tested!
