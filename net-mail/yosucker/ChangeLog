@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/yosucker
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.9 2004/05/02 18:12:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.10 2004/05/08 22:10:33 abhishek Exp $
+
+*yosucker-53-r1 (08 May 2004)
+
+  08 May 2004; Abhishek Amit <abhishek@gentoo.org>
+  +files/yosucker-53-no-redirect.patch, +yosucker-53-r1.ebuild:
+  Added no-redirect patch. Thanks to Jefery F and Jonathan Rodgers
+  <jonner@teegra.net> in bug #50432.
 
   02 May 2004; David Holm <dholm@gentoo.org> yosucker-53.ebuild:
   Added to ~ppc.
