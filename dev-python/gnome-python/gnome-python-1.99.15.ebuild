@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.99.15.ebuild,v 1.2 2003/02/13 11:34:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.99.15.ebuild,v 1.3 2003/02/15 23:19:35 gerk Exp $
 
 # devel version - debug
 inherit gnome2 debug
@@ -35,7 +35,7 @@ DEPEND=">=dev-lang/python-2.2
 RDEPEND="${DEPEND} >=dev-util/pkgconfig-0.12.0"
 
 SLOT="2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 # ugly, but necessary
 addwrite /usr/share/pygtk/2.0/codegen

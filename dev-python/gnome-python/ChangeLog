@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.10 2003/02/12 06:32:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.11 2003/02/15 23:19:35 gerk Exp $
 
 *gnome-python-1.99.15 (09 Feb 2003)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> gnome-python-1.99.15.ebuild :
+  set ~ppc in keywords
 
   09 Feb 2003; foser <foser@gentoo.org> gnome-python-1.99.15.ebuild :
   New version
