@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.131 2004/11/05 19:20:00 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.132 2004/11/06 18:39:16 lu_zero Exp $
+
+  06 Nov 2004; Luca Barbato <lu_zero@gentoo.org> kdemultimedia-3.3.0.ebuild,
+  kdemultimedia-3.3.1.ebuild:
+  Fixed taglib dep, thanks to Paolo Sacconier for reporting
 
   05 Nov 2004; Caleb Tennis <caleb@gentoo.org> kdemultimedia-3.3.1.ebuild:
   x86 stable
