@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.9.1.ebuild,v 1.8 2004/09/25 02:40:04 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.9.1.ebuild,v 1.9 2004/11/03 06:33:07 psi29a Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mhash/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha arm amd64 hppa ia64 ppc ~ppc-macos s390 sparc x86 ppc64"
+KEYWORDS="alpha arm amd64 hppa ia64 ppc ~ppc-macos s390 sparc x86 ppc64 ~mips"
 IUSE=""
 
 DEPEND="virtual/libc"
