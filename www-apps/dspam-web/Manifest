@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cf86781453fa730522b219949517f770 dspam-web-3.4.0.ebuild 5088
-MD5 c885857556610347f7225ab4f6153070 dspam-web-3.4_rc3.ebuild 4972
-MD5 e060905d9723daa4eee71b02dc7bb2b3 dspam-web-3.4.1.ebuild 5088
+MD5 6ce7bcd554633c8d80ff5a4ef7a562ca ChangeLog 3080
 MD5 a21ea1fdf0293cd17d270dadc6e1d7e3 dspam-web-3.2.7.ebuild 5213
-MD5 b66bc4e67edb3bf4c838044b4feac4ff ChangeLog 2944
+MD5 cf86781453fa730522b219949517f770 dspam-web-3.4.0.ebuild 5088
+MD5 e060905d9723daa4eee71b02dc7bb2b3 dspam-web-3.4.1.ebuild 5088
+MD5 71c250cfbc4809269a2bf14187515d49 dspam-web-3.4.2.ebuild 5088
 MD5 f1ea445d6b4ddf81c55a4e886bc04218 metadata.xml 341
+MD5 c885857556610347f7225ab4f6153070 dspam-web-3.4_rc3.ebuild 4972
 MD5 ffdfc8d816078f4c58b75b9bed07503f files/htaccess 135
 MD5 b4099a94a52af9abd4ade48d82914c3c files/htpasswd 19
 MD5 8518bd049104dded248d771b3238a776 files/digest-dspam-web-3.4_rc3 65
-MD5 7735956f416bd58bfcbeee99af43bea0 files/digest-dspam-web-3.2.7 63
 MD5 75c7634845fababdfe9dbbd4be1b613a files/digest-dspam-web-3.4.0 63
 MD5 bd9de6b83d0fbae03ae313c8e47ecfe2 files/digest-dspam-web-3.4.1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCQdNEI1lqEGTUzyQRArfSAJsF8USjaaB9QzmgJL6r0LPvdQva3wCghXKV
-iQywIszmOcDMh1OVvqsbCFE=
-=olsD
------END PGP SIGNATURE-----
+MD5 e55d4d9a62cca078d010363f6ded4585 files/digest-dspam-web-3.4.2 63
+MD5 7735956f416bd58bfcbeee99af43bea0 files/digest-dspam-web-3.2.7 63
