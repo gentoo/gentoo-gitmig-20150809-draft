@@ -4,11 +4,12 @@
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Perform lookups in RBL-styles services."
-SRC_URI="mirror://sourceforge/rblcheck/${P}.tar.gz"
 HOMEPAGE="http://rblcheck.sourceforge.net/"
-KEYWORDS="*"
+SRC_URI="mirror://sourceforge/rblcheck/${P}.tar.gz"
+
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc alpha hppa mips arm"
 
 DEPEND="virtual/glibc"
 
