@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r1.ebuild,v 1.3 2004/07/23 05:33:18 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r1.ebuild,v 1.4 2004/07/23 09:56:07 eradicator Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -22,11 +22,7 @@ DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder.
-RDEPEND="xvid? (
-		ppc? ( >=media-libs/xvid-0.9.0 )
-		amd64? ( >=media-libs/xvid-0.9.0 )
-		x86? ( >=media-libs/xvid-0.9.0 )
-		)
+RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	x86? ( divx4linux? (  >=media-libs/divx4linux-20030428 )
 		 >=media-libs/win32codecs-0.60 )
 	aalib? ( media-libs/aalib )
