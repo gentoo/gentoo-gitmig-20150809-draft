@@ -1,0 +1,34 @@
+--- drivers/char/tty_io.c~	2004-11-16 13:44:03.027542320 +0300
++++ drivers/char/tty_io.c	2004-11-16 13:45:53.229789032 +0300
+@@ -763,31 +763,6 @@
+ 		spin_unlock_irqrestore(&tty_termios_lock, flags);
+ 	}
+ 
+-	/* Defer ldisc switch */
+-	/* tty_deferred_ldisc_switch(N_TTY);
+-
+-	read_lock(&tasklist_lock);
+-#ifdef CONFIG_MOSIX
+- 	for_each_local_task(p) {
+-#else
+- 	for_each_task(p) {
+-#endif /* CONFIG_MOSIX */
+-		if ((tty->session > 0) && (p->session == tty->session) &&
+-		    p->leader) {
+-			send_sig(SIGHUP,p,1);
+-			send_sig(SIGCONT,p,1);
+-			if (tty->pgrp > 0)
+-				p->tty_old_pgrp = tty->pgrp;
+-		}
+-		if (p->tty == tty)
+-			p->tty = NULL;
+-	}
+-	read_unlock(&tasklist_lock);
+-
+-	tty->flags = 0;
+-	tty->session = 0;
+-	tty->pgrp = -1;
+-	tty->ctrl_status = 0;
+ 	/*
+ 	 *	If one of the devices matches a console pointer, we
+ 	 *	cannot just call hangup() because that will cause
