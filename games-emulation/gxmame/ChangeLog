@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/gxmame
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.4 2003/09/26 18:30:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.5 2004/01/03 21:37:08 vapier Exp $
+
+*gxmame-0.34b (03 Jan 2004)
+
+  03 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #35961.
 
 *gxmame-0.33-r1 (21 Sep 2003)
 
