@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.28c.ebuild,v 1.3 2003/12/04 04:55:30 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.31.ebuild,v 1.1 2003/12/04 04:55:30 lu_zero Exp $
 
 inherit flag-o-matic
 replace-flags -march=pentium4 -march=pentium3
 
 IUSE="sdl jpeg png mozilla truetype static"
-#IUSE="${IUSE} blender-game blender-static blender-plugin"
+#IUSE="${IUSE} blender-game blender-plugin"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="3D Creation/Animation/Publishing System"
@@ -15,7 +15,7 @@ SRC_URI="http://download.blender.org/source/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2 | BL"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND="virtual/x11
 	blender-game? ( dev-games/ode )
@@ -32,7 +32,7 @@ DEPEND="virtual/x11
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/configure-fix.patch
+	epatch ${FILESDIR}/configure-fix-${PV}.patch
 }
 
 
@@ -40,53 +40,30 @@ src_compile() {
 	local myconf=""
 
 	# SDL Support
-	if [ -n "`use sdl`" ]
-	then
-		myconf="${myconf} --with-sdl=/usr"
-	fi
+	use sdl && myconf="${myconf} --with-sdl=/usr"
+	#	|| myconf="${myconf} --without-sdl"
 
-	# JPG Support (Should be there by default, but I'll put it in anyways)
-	if [ -n "`use jpeg`" ]
-	then
-		myconf="${myconf} --with-libjpeg=/usr"
-	fi
+	# Jpeg support
+	use jpeg && myconf="${myconf} --with-libjpeg=/usr"
 
-	# PNG Support (Same as above)
-	if [ -n "`use png`" ]
-	then
-		myconf="${myconf} --with-libpng=/usr"
-	fi
+	# PNG Support
+	use png && myconf="${myconf} --with-libpng=/usr"
 
 	# ./configure points at the wrong mozilla directories and will fail
 	# with this enabled. (A simple patch should take care of this)
-	if [ -n "`use mozilla`" ]
-	then
-		myconf="${myconf} --with-mozilla=/usr"
-	fi
+	use mozilla && myconf="${myconf} --with-mozilla=/usr"
 
 	# TrueType support (For text objects)
-	if [ -n "`use truetype`" ]
-	then
-		myconf="${myconf} --with-freetype2=/usr"
-	fi
+	use truetype && myconf="${myconf} --with-freetype2=/usr"
 
 	# Build Staticly
-	if [ -n "`use static`" ]
-	then
-		myconf="${myconf} --enable-blenderstatic"
-	fi
+	use static && myconf="${myconf} --enable-blenderstatic"
 
-	# Build the game engine (Fails in 2.28)
-	#if [ -n "`use blender-game`" ]
-	#then
-	#	myconf="${myconf} --enable-gameblender"
-	#fi
+	# Build the game engine
+	# use blender-game && myconf="${myconf} --enable-gameblender"
 
 	# Build the plugin (Will fail, requires gameblender)
-	#if [ -n "`use blender-plugin`" ]
-	#then
-	#	myconf="${myconf} --enable-blenderplugin"
-	#fi
+	# use blender-plugin && myconf="${myconf} --enable-blenderplugin"
 
 	econf ${myconf} || die
 	emake || die
