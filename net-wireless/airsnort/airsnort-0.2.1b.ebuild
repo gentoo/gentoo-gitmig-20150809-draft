@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/airsnort-0.2.1b.ebuild,v 1.5 2003/04/03 21:49:05 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/airsnort-0.2.1b.ebuild,v 1.6 2004/01/26 19:30:13 weeve Exp $
 
 MY_P=${P/a/A}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc -sparc"
 
 DEPEND=">=sys-devel/autoconf-2.13
 	=x11-libs/gtk+-1*
