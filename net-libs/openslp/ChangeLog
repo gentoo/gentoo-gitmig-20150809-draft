@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openslp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.19 2004/05/12 01:35:53 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.20 2004/06/13 03:50:12 tgall Exp $
+
+  12 Jun 2004; Tom Gall <tgall@gentoo.org> openslp-1.0.11.ebuild:
+  stable on ppc64 bug #53766
 
   11 May 2004; Michael McCabe <randy@gentoo.org> openslp-1.0.11.ebuild:
   Added s390 keywords

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.0.11.ebuild,v 1.12 2004/05/28 03:06:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.0.11.ebuild,v 1.13 2004/06/13 03:50:12 tgall Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/openslp/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ppc64"
 IUSE=""
 
 DEPEND="virtual/glibc"
