@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.13 2004/02/25 17:12:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.14 2004/04/05 02:30:51 agriffis Exp $
+
+  04 Apr 2004; Aron Griffis <agriffis@gentoo.org> ypbind-1.11-r1.ebuild:
+  Stable on ia64 for bug 46557
 
   25 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> ypbind-1.17.2.ebuild:
   Adding amd64 keyword. Closing #42619.

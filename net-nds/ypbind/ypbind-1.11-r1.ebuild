@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.11-r1.ebuild,v 1.12 2004/02/24 18:02:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.11-r1.ebuild,v 1.13 2004/04/05 02:30:51 agriffis Exp $
 
 IUSE="nls"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.linux-nis.org/nis/ypbind-mt/index.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc alpha"
+KEYWORDS="x86 sparc alpha ia64"
 
 DEPEND="net-nds/yp-tools
 	net-nds/portmap"
