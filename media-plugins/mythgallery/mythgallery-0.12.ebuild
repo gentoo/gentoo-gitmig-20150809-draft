@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/mythgallery-0.12.ebuild,v 1.1 2003/10/20 03:27:42 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/mythgallery-0.12.ebuild,v 1.2 2003/10/28 16:31:09 max Exp $
 
 inherit flag-o-matic
 
@@ -24,7 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local cpu="`get-flag march`"
+	local cpu="`get-flag march || get-flag mcpu`"
 	if [ "${cpu}" ] ; then
 		sed -e "s:pentiumpro:${cpu}:g" -i "settings.pro" || die "sed failed"
 	fi
