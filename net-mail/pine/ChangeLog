@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/pine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.27 2003/04/05 03:31:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.28 2003/04/15 11:27:29 taviso Exp $
 
 *pine-4.53-r4 (14 Feb 2003)
+
+  15 Apr 2003; Tavis Ormandy <taviso@gentoo.org> pine-4.53-r4.ebuild:
+  added ~alpha #19260
 
   04 Apr 2003; Jason Wever <weeve@gentoo.org> pine-4.53-r4.ebuild:
   Changed ~sparc keyword to sparc.
