@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f7bbbaa3ddd3a58428e26903629d742c ChangeLog 399
+MD5 ae5592e9a022e6beab44a52a4f23c3f0 metadata.xml 221
+MD5 530985dbbbdf956572c28a1615b51ad8 pastemecli-0.8.ebuild 511
+MD5 573e9fae1787b566281d5b2640676c36 files/digest-pastemecli-0.8 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBq/rhugEuf3OQ0akRAlZEAJ0dhbrxr+F7asMbnK2wJDQZeoOPmQCgnnLg
+CXF7MQVR2qiTF5pZNNMwmL4=
+=Z95V
+-----END PGP SIGNATURE-----

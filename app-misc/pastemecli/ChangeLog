@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/pastemecli
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pastemecli/ChangeLog,v 1.1 2004/11/30 04:45:12 kloeri Exp $
+
+*pastemecli-0.8 (30 Nov 2004)
+
+  30 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> +metadata.xml,
+  +pastemecli-0.8.ebuild:
+  Initial import, ebuild by Mina Naguib <webmaster@topfx.com>
+
