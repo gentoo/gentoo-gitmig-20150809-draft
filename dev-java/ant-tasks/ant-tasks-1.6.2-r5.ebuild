@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r5.ebuild,v 1.1 2004/09/10 19:41:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r5.ebuild,v 1.2 2004/09/17 16:52:16 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -64,10 +64,8 @@ src_compile() {
 
 	use javamail && p="${p},sun-javamail-bin,sun-jaf-bin"
 
-	packages=${p}
-
-	libs=$(java-config -p ${packages})
-	./build.sh -Ddist.dir=${D}/usr/share/ant-core -lib ${libs} || die "build failed"
+	libs=$(java-config -p ${p})
+	CLASSPATH="." ./build.sh -Ddist.dir=${D}/usr/share/ant-core -lib ${libs} || die "build failed"
 }
 
 src_install() {
