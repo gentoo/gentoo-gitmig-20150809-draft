@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmsetimon
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsetimon/ChangeLog,v 1.1 2005/01/08 01:07:31 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsetimon/ChangeLog,v 1.2 2005/02/08 13:00:52 s4t4n Exp $
+
+  08 Feb 2005; Michele Noberasco <s4t4n@gentoo.org> wmsetimon-0.5.ebuild:
+  Stable for x86.
 
 *wmsetimon-0.5 (08 Jan 2005)
 
