@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/tla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.16 2004/09/06 20:23:07 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.17 2004/09/18 20:33:31 arj Exp $
+
+*tla-1.2.2_rc2 (18 Sep 2004)
+
+  18 Sep 2004; <arj@gentoo.org> +tla-1.2.2_rc2.ebuild:
+  Add a new release candidate which fixes one little bug in rc1.
 
 *tla-1.2.2_rc1 (06 Sep 2004)
 
