@@ -1,0 +1,3 @@
+#!/bin/sh
+nice -n 19 /usr/bin/glimpseindex -f -z -H /var/man2html `man -w | tr : ' '`
+chmod 644 /var/man2html/.glimpse*
