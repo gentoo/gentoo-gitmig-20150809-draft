@@ -1,6 +1,9 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 07c7ab00f8c699c61c9a6f16add3512b gigabase-3.02.ebuild 977
 MD5 95c2a0adc16e9ed39fda577f98adca00 gigabase-2.75.ebuild 982
-MD5 8e82ddd6051b305abf4f834c1aca0f71 gigabase-3.31.ebuild 983
+MD5 6c0a1533f053ae1b320f4921c6f2ec35 gigabase-3.31.ebuild 974
 MD5 8b96338c3344f5f6b642a31f32580c05 gigabase-2.79.ebuild 971
 MD5 de1d8ce40a86c2872198b4db2a1caf31 gigabase-2.76.ebuild 971
 MD5 e96af274d513a68d6e4f8745b2e429d2 ChangeLog 1055
@@ -10,3 +13,10 @@ MD5 89004ef344369717d00af826ef49d8e0 files/digest-gigabase-2.76 66
 MD5 6ba48786d87a9541840a640ca727b2c9 files/digest-gigabase-2.79 66
 MD5 94b80b292f6c8efb402ee2e7fb4b0e3d files/digest-gigabase-3.02 66
 MD5 feb9614069a2695ed474a7b0134d2b05 files/digest-gigabase-3.31 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB37yvI1lqEGTUzyQRAqroAJsEy4KEAY9dduorpxQDKEUkIq34hwCg3btp
+/cz6hVNzW0KDP0ysEaBc+DU=
+=CKzq
+-----END PGP SIGNATURE-----
