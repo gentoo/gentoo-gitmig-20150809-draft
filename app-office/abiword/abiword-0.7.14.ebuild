@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.7.14.ebuild,v 1.4 2001/08/11 04:34:35 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.7.14.ebuild,v 1.5 2001/09/30 12:20:39 azarah Exp $
 
 A="abi-${PV}.tar.gz abidistfiles-${PV}.tar.gz expat-${PV}.tar.gz psiconv-${PV}.tar.gz
    unixfonts-${PV}.tar.gz wv-${PV}.tar.gz"
@@ -58,6 +58,16 @@ src_install() {
   rm -f AbiWord
   ln -s  ../AbiSuite/bin/AbiWord AbiWord
   ln -s  ../AbiSuite/bin/AbiWord abiword
+  
+  # Install icon and .desktop for menu entry (hopefully this works for this version,
+  # as I have only tested it for 0.9.3
+  if [ "`use gnome`" ] ; then
+            insinto ${GNOME_PATH}/share/pixmaps
+            newins ${WORKDIR}/${P}/abidistfiles/icons/abiword_48.png AbiWord.png
+            insinto ${GNOME_PATH}/share/gnome/apps/Applications
+            doins ${FILESDIR}/AbiWord.desktop
+  fi
+  
 }
 
 
