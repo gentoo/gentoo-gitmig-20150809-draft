@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.9 2003/07/19 10:14:07 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.10 2003/07/20 16:22:51 liquidx Exp $
 
 S=${WORKDIR}/${P}
 
@@ -36,6 +36,9 @@ src_unpack() {
 	# modify install path
 	sed -e 's:SOURCE_PREFIX = $(CORE_DEPTH)/\.\./dist:SOURCE_PREFIX = $(CORE_DEPTH)/dist:' \
 		-i ${S}/mozilla/security/coreconf/source.mk
+		
+	# workaround to satisfy linux-2.6* (#24626)
+	cp ${S}/mozilla/security/coreconf/Linux2.5.mk ${S}/mozilla/security/coreconf/Linux2.6.mk
 }
 
 src_compile() {

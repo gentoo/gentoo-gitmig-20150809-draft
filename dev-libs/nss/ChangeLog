@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.9 2003/07/19 10:14:07 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.10 2003/07/20 16:22:51 liquidx Exp $
+
+  20 Jul 2003; Alastair Tse <liquidx@gentoo.org> nss-3.8.ebuild:
+  workaround for linux-2.6 (#24626)
 
   19 Jul 2003; Alastair Tse <liquidx@gentoo.org> nss-3.8.ebuild:
   express stable bump because of evo 1.4.3
