@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gliv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.4 2002/06/20 21:04:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.5 2002/06/20 21:27:43 azarah Exp $
+
+*gliv-1.5.2 (20 Jun 2002)
+
+  20 Jun 2002; Martin Schlemmer <azarah@gentoo.org> gliv-1.5.2.ebuild :
+  New version; update for >=gtkglarea-1.99.0.
 
   20 Jun 2002; Martin Schlemmer <azarah@gentoo.org> gliv-1.5.1.ebuild :
   Do some gnome2 cleanups.  For instance, we have to use the old gtk+-1.2
