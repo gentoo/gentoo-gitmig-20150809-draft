@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2821af8c638025d5d2795a0677821705 ChangeLog 799
-MD5 d398899bdcd8faa2cf413f1e41c947dd esvn-0.6.8-r1.ebuild 929
-MD5 5082a7fd5f87d44ac35fc01a046116c0 metadata.xml 331
+MD5 79659e52ce8ba0f81796816027258e9a esvn-0.6.8-r1.ebuild 930
 MD5 50d17172367c5eb0181e691efba6a952 esvn-0.6.9.ebuild 932
-MD5 823903375071bc28e3f516ab7a91ba58 files/digest-esvn-0.6.8-r1 65
+MD5 ef288d87e4387b3f80cca76f0c6e1159 ChangeLog 889
+MD5 5082a7fd5f87d44ac35fc01a046116c0 metadata.xml 331
 MD5 f19b87633e117adb1fbb6e74d32eed71 files/digest-esvn-0.6.9 65
+MD5 823903375071bc28e3f516ab7a91ba58 files/digest-esvn-0.6.8-r1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCMbNLjiC39V7gKu0RAlmIAJ9VjmALDEQFzM5XMHczNlavSyRS5gCgv8DW
-NbvCeismkM/lRclhTOXdTVo=
-=K5Vt
+iD8DBQFCM5GkjiC39V7gKu0RAlNpAKCkDg9j8+L48wQXGqwcr1zicoujWgCfXgbP
+qZ4Gjg/Sr5pThDbkoH295LU=
+=cP+C
 -----END PGP SIGNATURE-----
