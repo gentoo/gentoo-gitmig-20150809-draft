@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.18-r1.ebuild,v 1.1 2004/06/22 20:50:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.18-r1.ebuild,v 1.2 2004/06/22 20:51:27 solar Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.pureftpd.org/"
 
 SLOT="0"
 LICENSE="BSD" # Changed from GPL-2 to BSD 06/09/2003
-KEYWORDS="~x86 ~ppc ~sparc alpha ~hppa ~amd64 ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
 
 DEPEND="virtual/glibc
 	pam? ( >=sys-libs/pam-0.75 )
