@@ -1,0 +1,5 @@
+MD5 1fba3eaf0c908ab4ab74ba21c89d19c0 yahoo-transport-2.3.0.ebuild 671
+MD5 275d32a7ff548f45defc99dffae5a00a files/yahootrans.xml 735
+MD5 b2953894675f8844ca75122dd23657ed files/README.Gentoo 1525
+MD5 a8b763954e5ec4351b14baa96f9cb189 files/yahoo-makefile.patch 497
+MD5 25e82b074896a885889f7f45e84872c0 files/digest-yahoo-transport-2.3.0 72
