@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake-wrapper
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.7 2005/01/31 15:22:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.8 2005/02/07 04:17:50 kumba Exp $
+
+  06 Feb 2005; Joshua Kinard <kumba@gentoo.org> automake-wrapper-1.ebuild:
+  Marked stable on mips.
 
   31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   automake-wrapper-1.ebuild:
