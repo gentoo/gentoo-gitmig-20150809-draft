@@ -1,12 +1,15 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.21 2003/07/23 20:21:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.22 2003/07/24 13:06:10 usata Exp $
 
 *zsh-4.1.1 (24 Jul 2003)
 
   24 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> zsh-4.1.1.ebuild:
   New development version. Added cjk support, based on the ebuild
   submitted by Wayne Davison <gentoo@blorf.net> in bug #23114
+  Added libpcre dependency, thanks to Sean E Russell <ser@germane-software.com>
+  in bug #23978
+  Added static USE flag and removed zshall.1 patch
 
 *zsh-4.0.7 (24 Jul 2003)
 
@@ -17,6 +20,7 @@
   Michael Fults <jmf@gtcom.net> in bug #19924.
   Added pkg_preinst() function to help migration of /etc/zsh/zshenv
   to /etc/zsh/zprofile discussed in #23114
+  Added static USE flag and removed zshall.1 patch
 
 *zsh-4.0.6-r4 (17 Apr 2003)
 
