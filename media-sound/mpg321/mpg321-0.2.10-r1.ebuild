@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10-r1.ebuild,v 1.21 2004/07/13 02:14:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10-r1.ebuild,v 1.22 2004/07/13 02:39:57 eradicator Exp $
 
 IUSE=""
 
@@ -30,7 +30,7 @@ src_install () {
 
 pkg_postinst() {
 	# We create a symlink for /usr/bin/mpg123 if it doesn't already exist
-	if ! [ -f /usr/bin/mpg123 ]; then
+	if ! [ -f ${ROOT}/usr/bin/mpg123 ]; then
 		ln -s mpg321 ${ROOT}/usr/bin/mpg123
 	fi
 }
