@@ -1,11 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.2 2004/11/26 19:46:41 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.3 2005/02/12 09:56:36 sergey Exp $
 
-# Author: Sergey Kuleshov <svyatogor@gentoo.org>
-#
-# This eclass is intended to be used with Rox desktop application.
-# See ebuilds in rox-extras/ for examples.
+# ROX eclass Version 2
+
+# This eclass was created by Sergey Kuleshov (svyatogor@gentoo.org) and
+# Alexander Simonov (devil@gentoo.org.ua) to ease installation of ROX desktop
+# applications.
+
+# APPNAME - the actual name of the application as the app folder is named
+# ROX_VER - the minimum version of rox filer required. Default is 2.1.0
+# ROX_LIB_VER - version of rox-lib required if any
+# ROX_CLIB_VER - version of rox-clib required if any
+# SET_PERM - specifies if permisions for arch specific files need to  be set
+
+# For examples refer to ebuilds in rox-extra/
 
 ECLASS=rox
 INHERITED="$INHERITED $ECLASS"
@@ -29,7 +38,7 @@ fi
 
 
 rox_src_compile() {
-	cd $APPNAME
+	cd ${APPNAME}
 	#Some packages need to be compiled.
 	chmod 755 ./AppRun
 	if [ -d "src/" ]; then
@@ -39,18 +48,53 @@ rox_src_compile() {
 }
 
 rox_src_install() {
-	dodir /usr/lib/rox/
 	if [ -d "$APPNAME/Help/" ]; then
 		for i in $APPNAME/Help/*; do
 			dodoc "$i"
 		done
 	fi
-	cp -r $APPNAME ${D}/usr/lib/rox/
+	insinto /usr/lib/rox
+	doins -r ${APPNAME}
+	#set correct permisions on files, in case they are wrong 
+	chmod 755 ${D}/usr/lib/rox/${APPNAME}/AppRun
+	chmod 755 ${D}/usr/lib/rox/${APPNAME}/AppletRun
+
+	# set permisions for programms where we have libdir script
+	if [ -f ${D}/usr/lib/rox/${APPNAME}/libdir ]; then
+	    chmod 755 ${D}/usr/lib/rox/${APPNAME}/libdir
+	fi
+
+	# set permisiaon for programms where we have rox_run script (all who using rox-clib )
+	if [ -f ${D}/usr/lib/rox/${APPNAME}/rox_run ]; then
+	    chmod 755 ${D}/usr/lib/rox/${APPNAME}/rox_run
+	fi
+
+	# some programms have choice_install script
+	if [ -f ${D}/usr/lib/rox/${APPNAME}/choice_install ]; then
+	    chmod 755 ${D}/usr/lib/rox/${APPNAME}/choice_install
+	fi
+
+	# set permisions on all binares files for compiled programms per arch
+	if [ -n "$SET_PERM" ]; then
+	    ARCH="`uname -m`"
+	    case $ARCH in
+		i?86) ARCH=ix86 ;;
+	    esac
+	    PLATFORM="`uname -s`-$ARCH" 
+	    chmod -R 755 ${D}/usr/lib/rox/${APPNAME}/${PLATFORM}
+	fi
+
+	#create a script in bin to run the application from command line
+	dodir /usr/bin/
+	echo "#!/bin/sh" > "${D}/usr/bin/${APPNAME}"
+	echo "exec /usr/lib/rox/${APPNAME}/AppRun \"\$@\"" >> "${D}/usr/bin/${APPNAME}"
+	chmod a+x ${D}/usr/bin/${APPNAME}
 }
 
 rox_pkg_postinst() {
 	einfo "The $APPNAME has been installed into /usr/lib/rox"
-	einfo "You can run it by pointing Rox file manage to that location"
+	einfo "You can run it by enter $APPNAME in command line or"
+	einfo "can run it by pointing Rox file manage to that location"
 	einfo "and click on new application"
 }
 
