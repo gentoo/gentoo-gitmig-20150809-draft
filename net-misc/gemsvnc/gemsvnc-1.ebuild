@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gemsvnc/gemsvnc-1.ebuild,v 1.3 2004/01/03 16:39:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gemsvnc/gemsvnc-1.ebuild,v 1.4 2004/01/14 04:57:45 vapier Exp $
 
 inherit gcc flag-o-matic
 
@@ -41,4 +41,9 @@ src_compile() {
 src_install() {
 	dobin gemsvnc || die
 	dodoc CHANGES README TODO
+}
+
+pkg_postinst() {
+	ewarn "This vnc server may not work with X servers"
+	ewarn "running less than 24bpp."
 }
