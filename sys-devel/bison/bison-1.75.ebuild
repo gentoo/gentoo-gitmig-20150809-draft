@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.75.ebuild,v 1.8 2003/07/16 14:08:07 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.75.ebuild,v 1.9 2003/09/02 19:09:36 mholzer Exp $
 
 IUSE="nls static build" # icc"
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="A yacc-compatible parser generator"
-SRC_URI="ftp://ftp.gnu.org/pub/gnu/bison/${P}.tar.gz"
+SRC_URI="mirror://gnu/bison/${P}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/bison/bison.html"
 
 LICENSE="GPL-2"
