@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/imcom-1.32.ebuild,v 1.4 2004/06/25 12:35:53 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/imcom-1.32.ebuild,v 1.5 2004/07/08 23:40:59 mr_bones_ Exp $
 
 MYVER=${PV}
 S=${WORKDIR}/${PN}-${MYVER}
