@@ -1,8 +1,11 @@
 # ChangeLog for app-sci/zetagrid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/ChangeLog,v 1.9 2003/02/28 11:37:15 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/ChangeLog,v 1.10 2003/02/28 15:47:10 mholzer Exp $
 
 *zetagrid-1.0-r6 (28 Feb 2003)
+ 
+  28 Feb 2003; Martin Holzer <mholzer@gentoo.org> :
+  Fixed headers for zeta.init, zeta_progress.sh and zeta.sh
 
   28 Feb 2003; Michael Imhof <tantive@gentoo.org> :
   Changed /bin/grep to /usr/bin/grep in zeta.init.
