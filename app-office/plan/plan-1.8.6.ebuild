@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.8.6.ebuild,v 1.2 2004/01/11 14:03:28 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.8.6.ebuild,v 1.3 2004/03/19 04:08:31 weeve Exp $
 
 S="${WORKDIR}/${P}/src"
 DESCRIPTION="Motif based schedule planner"
 HOMEPAGE="http://www.bitrot.de/plan.html"
 SRC_URI="ftp://plan.ftp.fu-berlin.de/${P}.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 LICENSE="as-is"
 SLOT="0"
 
