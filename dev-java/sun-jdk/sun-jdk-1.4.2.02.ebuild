@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.02.ebuild,v 1.4 2003/12/09 04:22:22 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.02.ebuild,v 1.5 2003/12/13 17:00:01 strider Exp $
 
 IUSE="doc gnome kde mozilla"
 
@@ -11,10 +11,10 @@ S="${WORKDIR}/j2sdk1.4.2_02"
 DESCRIPTION="Sun's J2SE Development Kit, version 1.4.2_02"
 HOMEPAGE="http://java.sun.com/products/archive/index.html"
 SRC_URI=${At}
-RESTRICT="fetch"
 SLOT="1.4"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa -arm"
+RESTRICT="fetch"
 
 DEPEND=">=dev-java/java-config-0.2.7
 	sys-apps/sed
@@ -26,10 +26,11 @@ PROVIDE="virtual/jre-1.4.2
 	virtual/jdk-1.4.2
 	virtual/java-scheme-2"
 
-RESTRICT="fetch"
-
 PACKED_JARS="lib/tools.jar jre/lib/rt.jar jre/lib/jsse.jar jre/lib/charsets.jar
 jre/lib/ext/localedata.jar jre/lib/plugin.jar jre/javaws/javaws.jar"
+
+# this is needed for proper operating under a PaX kernel without activated grsecurity acl
+CHPAX_CONSERVATIVE_FLAGS="pemsv"
 
 pkg_nofetch() {
 	einfo "Please download ${At} from:"
@@ -134,6 +135,28 @@ pkg_postinst () {
 		einfo "   ln -sf /opt/${P}/jre/plugin/i386/ns4/libjavaplugin.so"
 		einfo "********************************************************"
 		echo
+	fi
+
+	# if chpax is on the target system, set the appropriate PaX flags
+	# this will not hurt the binary, it modifies only unused ELF bits
+	# but may confuse things like AV scanners and automatic tripwire
+	if has_version "sys-apps/chpax"
+	then
+		einfo "setting up conservative PaX flags for jar, javac and java"
+
+		for paxkills in "jar" "javac" "java"
+		do
+			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/bin/$paxkills
+		done
+
+		# /opt/sun-jdk-1.4.2.02/jre/bin/java_vm
+		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/jre/bin/java_vm
+
+		einfo "you should have seen lots of chpax output above now"
+		ewarn "make sure the grsec ACL contains those entries also"
+		ewarn "because enabling it will override the chpax setting"
+		ewarn "on the physical files - help for PaX and grsecurity"
+		ewarn "can be given by #gentoo-hardened + pappy@gentoo.org"
 	fi
 
 	#Thanks to Douglas Pollock <douglas.pollock@magma.ca> for this

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.09.ebuild,v 1.4 2003/12/09 00:21:30 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.09.ebuild,v 1.5 2003/12/13 17:00:01 strider Exp $
 
 IUSE="doc"
 
@@ -22,6 +22,9 @@ LICENSE="sun-bcla-java-vm"
 SLOT="1.3"
 KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa -arm"
 RESTRICT="fetch"
+
+# this is needed for proper operating under a PaX kernel without activated grsecurity acl
+CHPAX_CONSERVATIVE_FLAGS="pemsv"
 
 pkg_nofetch() {
 	einfo "Please download ${At} from:"
@@ -92,6 +95,28 @@ pkg_postinst () {
 	# Set as default VM if none exists
 	java_pkg_postinst
 	inst_plugin /opt/${P}/jre/plugin/i386/mozilla/libjavaplugin_oji.so
+
+	# if chpax is on the target system, set the appropriate PaX flags
+	# this will not hurt the binary, it modifies only unused ELF bits
+	# but may confuse things like AV scanners and automatic tripwire
+	if has_version "sys-apps/chpax"
+	then
+		einfo "setting up conservative PaX flags for jar, javac and java"
+
+		for paxkills in "jar" "javac" "java"
+		do
+			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/bin/$paxkills
+		done
+
+		# /opt/sun-jdk-1.3.1.09/jre/bin/java_vm
+		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/jre/bin/java_vm
+
+		einfo "you should have seen lots of chpax output above now"
+		ewarn "make sure the grsec ACL contains those entries also"
+		ewarn "because enabling it will override the chpax setting"
+		ewarn "on the physical files - help for PaX and grsecurity"
+		ewarn "can be given by #gentoo-hardened + pappy@gentoo.org"
+	fi
 
 	#Thanks to Douglas Pollock <douglas.pollock@magma.ca> for this
 	#comment found on the sun-jdk 1.2.2 ebuild that he sent.
