@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1-r2.ebuild,v 1.1 2002/07/02 04:11:49 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1-r2.ebuild,v 1.2 2002/07/02 04:18:35 jnelson Exp $
 
 PYVER_MAJOR="`echo ${PV} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV} | cut -d '.' -f 2`"
@@ -60,7 +60,7 @@ src_install() {
 
 	# install our own custom python-config
 	exeinto /usr/bin
-	newexe ${FILESDIR}/python-config-${PYVER} python-config
+	newexe ${FILESDIR}/python-config-${PV} python-config
 
 	# seems like the build do not install Makefile.pre.in anymore
 	# it probably shouldn't - use DistUtils, people!
