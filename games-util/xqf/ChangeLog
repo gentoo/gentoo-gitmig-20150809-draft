@@ -1,0 +1,53 @@
+# ChangeLog for app-games/xqf
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.1 2003/09/10 18:53:23 vapier Exp $
+
+  11 Jul 2003; Michael Sterrett <msterret@gentoo.org> xqf-0.9.12.ebuild:
+  emake error message
+
+*xqf-0.9.12 (23 Jun 2003)
+
+  23 Jun 2003; Tal Peer <coredumb@gentoo.org> xqf-0.9.12.ebuild:
+  Added gdk-pixbuf dep, fixes #22729.
+
+  23 Jun 2003; Tal Peer <coredumb@gentoo.org> xqf-0.9.12.ebuild:
+  Bumped version.
+
+*xqf-0.9.10 (21 Dec 2002)
+
+  14 Jan 2003; Jon Nall <nall@gentoo.org> xqf-0.9.10.ebuild :
+  added ~ppc
+
+  21 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #12508 + games eclass support.
+
+*xqf-0.9.10 (20 Nov 2002)
+
+  20 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #10990
+
+*xqf-0.9.9 (10 Jul 2002)
+
+  24 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Depends on newer versions of qstat ... bumbed to 25 and above
+
+  10 Jul 2002; Seemant Kulleen <seemant@gentoo.org> xqf-0.9.9.ebuild
+  files/digest-xqf-0.9.9 :
+  Version bump, thanks to: christian-neumair@web.de (Christian - Manny
+  Calavera - Neumair) in bug #4825
+
+*xqf-0.9.8 (7 May 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> xqf-0.9.8.ebuild :
+  Added LICENSE, KEYWORDS.
+
+  7 May 2002; Spider <spider@gentoo.org> xqf-0.9.8.ebuild :
+  fix sourceforge mirroring.
+	  
+  13 April 2002; Bart Verwilst <verwilst@gentoo.org>: just added a 
+  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.1 2003/09/10 18:53:23 vapier Exp $
+
+*xqf-0.9.8 (6 Apr 2002)
+
+  6 Apr 2002; Bruce A. Locke <blocke@shivan.org> xqf-0.9.8.ebuild :
+  Initial Version

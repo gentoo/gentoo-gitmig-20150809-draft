@@ -1,0 +1,2 @@
+#!/bin/bash
+java -jar GENTOO_DATADIR/GENTOO_P.jar

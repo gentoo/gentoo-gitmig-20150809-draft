@@ -1,0 +1,38 @@
+# ChangeLog for app-games/qstat
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/ChangeLog,v 1.1 2003/09/10 18:53:23 vapier Exp $
+
+*qstat-25c (13 Nov 2002)
+
+  14 Jan 2003; Jon Nall <nall@gentoo.org> qstat-25c.ebuild :
+  added ~ppc
+
+  13 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump
+
+*qstat-25b-r1 (16 Sep 2002)
+
+  16 Sep 2002; Bryon Roche <kain@gentoo.org>
+  qstat-25b-r1.ebuild, files/qstat-25b.gcc3-fix:
+  Off-by-one fix in file-read mode.
+  Gcc-3 fixes.
+
+*qstat-25b (07 Sep 2002)
+
+  07 Sep 2002; J.Alberto Suárez López <bass@gentoo.org>
+  qstat-25b.ebuild:
+  Bumped version and fix LICENSE. Thanks vapier@netzero.com (SpanKY). 
+
+*qstat-24e (29 Mar 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> qstat-24e.ebuild :
+  Added LICENSE, KEYWORDS.
+
+  13 April 2002; Bart Verwilst <verwilst@gentoo.org> Changelog: removed 
+  old version, and did some general cleanups in the ebuild.
+
+  29 Mar 2002; Bruce A. Locke <blocke@shivan.org> ChangeLog :
+  Qstat updated to 24e and ebuild was revamped to make it more version
+  independent
+
+

@@ -1,0 +1,12 @@
+# ChangeLog for app-games/umodpack
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/ChangeLog,v 1.1 2003/09/10 18:53:23 vapier Exp $
+
+  02 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  umodpack-0.5_beta16.ebuild:
+  Fixed to use mirror://sourceforge
+
+*umodpack-0.5_beta16 (23 Oct 2002)
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import. Ebuild submitted by me.

@@ -1,0 +1,13 @@
+Binary files qstat25b/.qstat.c.swp and qstat25b.gcc3-fix/.qstat.c.swp differ
+diff -urN qstat25b/qstat.c qstat25b.gcc3-fix/qstat.c
+--- qstat25b/qstat.c	Thu Aug  8 15:26:59 2002
++++ qstat25b.gcc3-fix/qstat.c	Mon Sep 16 06:35:28 2002
+@@ -1531,7 +1531,7 @@
+ {
+     server_type *type= &types[0];
+     char *t= type_string;
+-    while ( *t) *t++= tolower( *t);
++    while ( *t) {*t= tolower( *t);t++;}
+ 
+     for ( ; type->id != Q_UNKNOWN_TYPE; type++)
+ 	if ( strcmp( type->type_string, type_string) == 0)

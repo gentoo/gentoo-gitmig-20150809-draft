@@ -1,0 +1,29 @@
+# ChangeLog for app-games/uglygs
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/uglygs/ChangeLog,v 1.1 2003/09/10 18:53:23 vapier Exp $
+
+*uglygs-0_rc11 (08 Sep 2003)
+
+  08 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
+
+*uglygs-0_rc10 (30 Jun 2003)
+
+  30 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + move sed's to paches + games.eclass support.
+
+*uglygs-0_rc7 (17 Dec 2002)
+
+  29 Jun 2003; <msterret@gentoo.org> uglygs-0_rc7.ebuild:
+  use sed -i, emake, fix up things in unpack instead of compile
+
+  17 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump
+
+*uglygs-0rc5 (23 Oct 2002)
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  changed sparc ~sparc keywords
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import. Ebuild submitted by me.
