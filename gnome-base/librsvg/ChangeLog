@@ -1,8 +1,11 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.7 2002/10/27 14:42:12 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.8 2002/12/03 14:37:48 nall Exp $
 
 *librsvg-2.1.1 (27 Oct 2002)
+
+  03 Dec 2002; Jon Nall <nall@gentoo.org> librsvg-2.1.1.ebuild :
+  keyworded ~ppc
 
   27 Oct 2002; foser <foser@gentoo.org> librsvg-2.1.1.ebuild :
   Gnome 2.1 commit
