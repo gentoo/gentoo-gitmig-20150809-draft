@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20030805.ebuild,v 1.2 2004/01/06 00:19:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20040105.ebuild,v 1.1 2004/01/06 00:19:49 azarah Exp $
 
 inherit eutils
 
@@ -17,13 +17,16 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64 ~ppc ~hppa ~sparc ~alpha ~mips ~arm"
 
 # hotplug needs pcimodules utility provided by pcitutils-2.1.9-r1
-DEPEND=">=sys-apps/pciutils-2.1.9
-	>=sys-apps/usbutils-0.9"
+DEPEND=">=sys-apps/pciutils-2.1.9 >=sys-apps/usbutils-0.9"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/hotplug-patches
+
+	EPATCH_OPTS="${EPATCH_OPTS} ${S}/etc/hotplug/usb.agent" \
+	epatch ${FILESDIR}/usb.agent.diff
+	epatch ${FILESDIR}/kernel-26-fix.patch || die
 }
 
 src_install() {
@@ -36,7 +39,8 @@ src_install() {
 	insinto /etc/hotplug
 	doins blacklist hotplug.functions usb.distmap usb.handmap usb.usermap
 	exeinto /etc/hotplug
-	doexe *.agent *.rc
+	doexe *.agent *.rc ${FILESDIR}/firmware.agent
+	dodir /usr/lib/hotplug/firmware
 	dodir /etc/hotplug/usb /etc/hotplug/pci
 	cd ${S}/etc/hotplug.d/default
 	exeinto /etc/hotplug.d/default
