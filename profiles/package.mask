@@ -22,6 +22,10 @@
 ##
 
 
+# <lostlogic@gentoo.org> (13 Sep 2002)
+# Masking gaim-0.59.2 because it segfaults all the time
+=net-im/gaim-0.59.2
+
 # <phoenix@gentoo.org> (13 Sep 2002)
 # Masking wine-20020904-r1 and winex-20020807-r1
 # in order to test the new manpage setup.
