@@ -25,4 +25,4 @@ net-misc/rsync
 app-editors/nano
 sys-apps/net-tools
 sys-apps/less
-sys-apps/selinux-small
+sys-apps/coreutils
