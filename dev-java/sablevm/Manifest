@@ -1,6 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8d4d9a08703ea00a775350a22fd399d9 sablevm-1.11.3.ebuild 1526
 MD5 3f88290fa4e1eb5e84480b3c8f5989dc sablevm-1.1.10.ebuild 1524
 MD5 60eb2cdb857ca22c8961794cc991a567 sablevm-1.1.9.ebuild 1523
-MD5 dcab0dc30222f7f57b2a99e68df99ab8 ChangeLog 1786
+MD5 53f7b5937e07fda84d7dc963b868fb2b ChangeLog 1931
 MD5 e9018a8e99df4c7e6d1a26908f42ed22 metadata.xml 579
 MD5 254f0b29aeeb018b6e6df0c98c493190 files/digest-sablevm-1.1.10 143
+MD5 5d5d8b8cfb0eb3524c5bf1ee3bf628ae files/digest-sablevm-1.11.3 143
 MD5 d0093355640b8962e6eb6e9bca6dcd45 files/digest-sablevm-1.1.9 141
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCQ2EL06ebR+OMO78RAgzBAJ9/GpzKBjXhkrrebJaO62fRUnKUtwCfeaMq
+w1hHJgonNEQ5W0kTZv5YSUw=
+=+VBq
+-----END PGP SIGNATURE-----
