@@ -1,0 +1,18 @@
+Index: Makefile.in
+===================================================================
+--- Makefile.in	(revision 320)
++++ Makefile.in	(working copy)
+@@ -137,11 +137,13 @@
+ 	$(RANLIB)  $(libdir)/$(libname)
+ 	$(INSTALL) $(srcdir)/oniguruma.h  $(includedir)/oniguruma.h
+ 	$(INSTALL) $(srcdir)/onigposix.h  $(includedir)/onigposix.h
++	$(INSTALL) $(srcdir)/oniggnu.h    $(includedir)/oniggnu.h
+ 
+ uninstall:
+ 	-rm -f $(libdir)/$(libname)
+ 	-rm -f $(includedir)/oniguruma.h
+ 	-rm -f $(includedir)/onigposix.h
++	-rm -f $(includedir)/oniggnu.h
+ 
+ warn:
+ 	make CFLAGS='@CFLAGS@ @STATISTICS@ -Wall'
