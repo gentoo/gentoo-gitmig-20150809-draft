@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.12.ebuild,v 1.2 2003/12/07 14:39:06 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.12.ebuild,v 1.3 2004/04/06 03:14:02 vapier Exp $
 
 IUSE="nls"
 
-inherit eutils libtool gnome.org
+inherit eutils libtool gnome.org flag-o-matic
 
 DESCRIPTION="A GNOME Web browser based on gecko (mozilla's rendering engine)"
 SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz
