@@ -1,0 +1,7 @@
+MD5 c439a21c456a4bd7830e3dbbda5de872 ChangeLog 1343
+MD5 98ef718374a4c0a2f9655318a24c4379 numeric-22.0.ebuild 825
+MD5 c55753a734e80ec6a561607eb19b5788 numeric-23.0.ebuild 828
+MD5 c55753a734e80ec6a561607eb19b5788 numeric-23.1.ebuild 828
+MD5 543b62c79215183872d1f43ee1033c0b files/digest-numeric-22.0 64
+MD5 1bbfd6024c1a372499b3774b2b91b5ab files/digest-numeric-23.0 64
+MD5 a52c0be4669341bbf82129377ca75f2e files/digest-numeric-23.1 64
