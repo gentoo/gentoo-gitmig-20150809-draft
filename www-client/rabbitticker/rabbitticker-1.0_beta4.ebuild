@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rabbitticker/rabbitticker-1.0_beta4.ebuild,v 1.2 2004/10/06 13:31:38 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rabbitticker/rabbitticker-1.0_beta4.ebuild,v 1.3 2004/10/06 22:54:49 jstubbs Exp $
 
 DESCRIPTION="Skinnable RSS client for QT"
 HOMEPAGE="http://www.work-at.co.jp/rabbit/"
@@ -23,5 +23,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	einstall || die
 }
