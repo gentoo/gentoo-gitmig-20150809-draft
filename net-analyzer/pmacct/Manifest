@@ -1,6 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e2059621c7287e9ad39fb7ebc8bf5c47 pmacct-0.7.1.ebuild 1297
 MD5 95491b12c21869e140dc23899f437460 pmacct-0.7.0.ebuild 1242
-MD5 5c0c55b023d6c7aab14a0edb49a77f78 ChangeLog 403
+MD5 8b9ca2401cd4067a7bb6937bae583b93 ChangeLog 629
 MD5 808a9a788ae7955af0a3c442cafee866 metadata.xml 243
 MD5 50333f1c79a80df31266ce7235cbf36c files/pmacctd-conf.d 313
 MD5 2afa8e97312b03f3e119c0befed9e7d3 files/pmacctd-init.d 869
 MD5 9c8f7c9b62771e795e0d0477b09d6242 files/digest-pmacct-0.7.0 64
+MD5 44c1834789fa301914395bc47ea184bd files/digest-pmacct-0.7.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA955lT+MN7JbqCpMRAkSAAJ4/194okjhDEoTtRMYq0oB23but0gCghwtL
+xLc0a8loMKR+caxuLJX017o=
+=XC66
+-----END PGP SIGNATURE-----
