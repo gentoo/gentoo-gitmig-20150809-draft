@@ -2,9 +2,11 @@ MD5 84de62e1a481f0f3f8c60e5d87f8f5f6 gnome-session-2.4.2.ebuild 1315
 MD5 e3529fb45d7d0138d3a775e8185249d8 ChangeLog 8363
 MD5 51bcd76a866746818b1f082793030eb4 gnome-session-2.5.92.ebuild 1365
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 51bcd76a866746818b1f082793030eb4 gnome-session-2.6.0.ebuild 1365
 MD5 b10dbd1b6388f5fdf9feee0e56525ea5 files/Gnome 2464
 MD5 f02a80d3f1435547a479312c15cc1030 files/gnome-splash.png 78064
 MD5 c7dd76860a26aa54145fafa215e0aa42 files/digest-gnome-session-2.4.2 72
+MD5 2491d6c88bbbdc63af18a9b01a0c5a0e files/digest-gnome-session-2.6.0 72
 MD5 9c41a7c69837eba927f8d546d3c13b8d files/gnome-session-2.6-schema_defaults.patch 1484
 MD5 f02a80d3f1435547a479312c15cc1030 files/gentoo-splash.png 78064
 MD5 9b6a487176c392343b5ce7eab34297af files/gnome-session-2.4-defaults.patch 1004
