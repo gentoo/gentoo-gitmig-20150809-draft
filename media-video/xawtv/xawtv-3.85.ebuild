@@ -1,20 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.83.ebuild,v 1.4 2003/03/09 13:32:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.85.ebuild,v 1.1 2003/03/09 13:32:37 seemant Exp $
+
+inherit eutils
 
 IUSE="aalib motif alsa opengl nls"
 
+MY_PATCH="xaw-deinterlace-3.76-0.1.1.diff.bz2"
 S=${WORKDIR}/${P}
 MY_FONT=tv-fonts-1.0
 DESCRIPTION="TV application for the bttv driver"
 SRC_URI="http://bytesex.org/xawtv/${PN}_${PV}.tar.gz
 	http://bytesex.org/xawtv/${MY_FONT}.tar.bz2
-	mirror://sourceforge/xaw-deinterlace/xaw-deinterlace-3.76-0.1.0.diff"
+	http://cvs.gentoo.org/~seemant/${MY_PATCH}
+	mirror://gentoo/${MY_PATCH}"
 HOMEPAGE="http://bytesex.org/xawtv/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/jpeg-6b
@@ -22,7 +26,6 @@ DEPEND=">=sys-libs/ncurses-5.1
 	media-libs/xpm
 	media-libs/zvbi
 	virtual/x11
-	sys-apps/supersed
 	alsa? ( media-libs/alsa-lib )
 	aalib? ( media-libs/aalib )
 	motif? ( virtual/motif
@@ -33,14 +36,14 @@ DEPEND=">=sys-libs/ncurses-5.1
 src_unpack() {
 	unpack ${PN}_${PV}.tar.gz
 	cd ${S}
-	patch -p1 < ${DISTDIR}/xaw-deinterlace-3.76-0.1.0.diff || die
+	epatch ${DISTDIR}/${MY_PATCH}
 
 	use mmx || \
 		ssed -i "s:#define MMX::" libng/plugins/linear_blend.c
 
 	unpack ${MY_FONT}.tar.bz2
 	cd ${S}/${MY_FONT}
-	patch -p0 < ${FILESDIR}/${MY_FONT}-gentoo.diff || die
+	epatch ${FILESDIR}/${MY_FONT}-gentoo.diff
 }
 
 src_compile() {
@@ -86,9 +89,12 @@ src_install() {
 
 	dodoc COPYING Changes README* TODO
 
-	exeinto /home/httpd/cgi-bin
-	doexe scripts/webcam.cgi
-	dodoc ${FILESDIR}/webcamrc
+	if [ -d /home/httpd ]
+	then
+		exeinto /home/httpd/cgi-bin
+		doexe scripts/webcam.cgi
+		dodoc ${FILESDIR}/webcamrc
+	fi
 
 	if [ -z "`use nls`" ]
 	then
