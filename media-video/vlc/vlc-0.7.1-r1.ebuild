@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.1-r1.ebuild,v 1.2 2004/03/26 13:49:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.1-r1.ebuild,v 1.3 2004/04/10 02:48:43 lv Exp $
 
 inherit libtool gcc eutils
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.videolan.org/vlc"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 RDEPEND="X? ( virtual/x11 )
 	aalib? ( >=media-libs/aalib-1.4_rc4-r2
@@ -55,7 +55,7 @@ RDEPEND="X? ( virtual/x11 )
 	truetype? ( >=media-libs/freetype-2.1.4 )
 	wxwindows? ( >=x11-libs/wxGTK-2.4.1 )
 	xosd? ( >=x11-libs/xosd-2.0 )
-	3dfx? ( media-libs/glide-v3 )
+	3dfx? ( !amd64? ( media-libs/glide-v3 ) )
 	png? ( >=media-libs/libpng-1.2.5 )
 	speex? ( >=media-libs/speex-1.0.3 )
 	svga? ( media-libs/svgalib )
