@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.85-r1.ebuild,v 1.4 2004/08/12 03:05:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.85-r1.ebuild,v 1.5 2004/08/19 22:05:55 vapier Exp $
 
 inherit eutils
 
@@ -8,13 +8,15 @@ DESCRIPTION="/sbin/init - parent of all processes"
 HOMEPAGE="http://freshmeat.net/projects/sysvinit/"
 SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/${P}.tar.gz
 	ftp://sunsite.unc.edu/pub/Linux/system/daemons/init/${P}.tar.gz"
-SLOT="0"
+
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
 IUSE="selinux"
 
-DEPEND="virtual/os-headers
-	selinux? ( >=sys-libs/libselinux-1.14 )"
+RDEPEND="selinux? ( >=sys-libs/libselinux-1.14 )"
+DEPEND="${RDEPEND}
+	virtual/os-headers"
 
 src_unpack() {
 	unpack ${A}
