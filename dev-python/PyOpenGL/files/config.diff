@@ -1,0 +1,14 @@
+diff -urN PyOpenGL-2.0.0.44/config/linux.cfg PyOpenGL-2.0.0.44-modified/config/linux.cfg
+--- PyOpenGL-2.0.0.44/config/linux.cfg	Wed Aug 22 16:05:44 2001
++++ PyOpenGL-2.0.0.44-modified/config/linux.cfg	Fri Aug 23 11:25:42 2002
+@@ -11,8 +11,8 @@
+ [General]
+ build_togl=1
+ gl_platform=GLX
+-include_dirs=/usr/include:/usr/local/include:/usr/X11/include
+-library_dirs=/usr/lib:/usr/local/lib:/usr/X11/lib
++include_dirs=/usr/include:/usr/local/include:/usr/X11R6/include
++library_dirs=/usr/lib:/usr/local/lib:/usr/X11R6/lib
+ 
+ ; a sys.pathsep separated list of the libs needed when linking GL
+ [GL]
