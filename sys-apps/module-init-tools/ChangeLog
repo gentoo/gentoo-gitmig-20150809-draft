@@ -1,11 +1,16 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.21 2003/03/31 04:58:44 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.22 2003/03/31 20:06:32 azarah Exp $
+
+*module-init-tools-0.9.11-r2 (30 Mar 2003)
+
+  30 Mar 2003; Martin Schlemmer <azarah@gentoo.org> module-init-tools-0.9.11-r2.ebuild :
+  The moving of /sbin/lsmod to /bin, causes some breakage, so install a compat
+  symlink.
 
 *module-init-tools-0.9.11-r1 (30 Mar 2003)
 
-  30 Mar 2003; Brandon Low <lostlogic@gentoo.org>
-  module-init-tools-0.9.11-r1.ebuild:
+  30 Mar 2003; Brandon Low <lostlogic@gentoo.org> module-init-tools-0.9.11-r1.ebuild :
   Update modutils to 2.4.25
 
 *module-init-tools-0.9.11 (30 Mar 2003)
