@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.94 2004/12/20 13:10:17 absinthe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.95 2005/01/10 01:36:32 weeve Exp $
+
+  09 Jan 2005; Jason Wever <weeve@gentoo.org> util-linux-2.12i-r1.ebuild:
+  Stable on sparc, resolves bug #77295.
 
   20 Dec 2004; Dylan Carlson <absinthe@gentoo.org>
   util-linux-2.12i-r1.ebuild:
