@@ -1,3 +1,4 @@
-MD5 6aceb267cf797a69021c51b4dc6c375f files/digest-reiser4progs-0.4.20 71
-MD5 aa625f0fc67a262a71d7a60c74a6cba5 reiser4progs-0.4.20.ebuild 916
-MD5 2c288a76094e368e65532d8cf1152d90 ChangeLog 382
+MD5 2835eb3ed4adde5a5b56f8fa33643130 files/digest-reiser4progs-0.5.0 70
+MD5 7de11ce740c178744774a6252b95c309 reiser4progs-0.5.0.ebuild 766
+MD5 9400922c514b1e71a221e35ab6778a7a ChangeLog 636
+MD5 564631952eab971c18ab4de2b5b721bd metadata.xml 267
