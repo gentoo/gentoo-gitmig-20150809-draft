@@ -1,5 +1,15 @@
-MD5 dc8a7651709afea02e9aa9d0b9e551e3 SphinxTrain-0.9.1-r1.ebuild 986
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 387f144e27bd2fa506da0bc0d69143ea ChangeLog 1475
+MD5 663906b228064768933f9ee897f5b18a SphinxTrain-0.9.1-r1.ebuild 878
 MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
 MD5 7ee585b5d5453d603e510f969b876524 files/digest-SphinxTrain-0.9.1-r1 74
 MD5 993e38eaa81b891528bd3447e4d92a90 files/gcc.patch 816
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3EpxHTu7gpaalycRAkFRAJsHCLF50vtDe0GvfzdKykCkHiiuFwCgmZ2R
+bx3lOdSDHIMwj9gdezYrs3o=
+=hT+s
+-----END PGP SIGNATURE-----
