@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/bookview/bookview-3.2.ebuild,v 1.1 2003/09/02 17:47:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/bookview/bookview-3.2.ebuild,v 1.2 2003/09/16 01:23:10 usata Exp $
 
 inherit eutils
 
@@ -12,11 +12,10 @@ SRC_URI="ftp://ftp.sra.co.jp/pub/net/ndtp/bookview/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=sys-apps/sed-4"
-RDEPEND=">=dev-lang/tk-8.3
-	net-misc/ndtpd"
+RDEPEND=">=dev-lang/tk-8.3"
 
 S=${WORKDIR}/${P}
 
