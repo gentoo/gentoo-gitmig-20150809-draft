@@ -1,8 +1,15 @@
 # ChangeLog for dev-util/scons
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.7 2003/02/12 06:46:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.8 2003/07/10 16:39:59 ykoehler Exp $
 
-  04 Jan 2002; Martin Holzer <mholzer@gentoo.org> scons-0.0.9.ebuild files/digest-scons-0.0.9 ChangeLog :
+*scons-0.90 (10 Jul 2003)
+
+  10 Jul 2003; Yannick Koehler <ykoehler@gentoo.org> scons-0.90.ebuild files/digest-scons-0.90 ChangeLog :
+  Version bumped.
+
+*scons-0.0.9 (04 Jan 2003)
+
+  04 Jan 2003; Martin Holzer <mholzer@gentoo.org> scons-0.0.9.ebuild files/digest-scons-0.0.9 ChangeLog :
   Version bumped. Closes #13236 
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
