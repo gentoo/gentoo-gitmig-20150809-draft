@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellmss
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/ChangeLog,v 1.10 2004/06/24 22:57:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/ChangeLog,v 1.11 2004/07/03 14:51:53 pyrania Exp $
+
+  03 Jul 2004; <pyrania@gentoo.org> gkrellmss-2.4.ebuild:
+  Fixed ALSA check sandbox violation. See bug #44408.
 
   19 Jun 2004; <pyrania@gentoo.org> gkrellmss-2.4.ebuild:
   Stable on x86.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.4.ebuild,v 1.4 2004/06/24 22:57:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.4.ebuild,v 1.5 2004/07/03 14:51:53 pyrania Exp $
 
 inherit eutils
 
@@ -30,6 +30,7 @@ src_compile() {
 
 	use nls && myconf="${myconf} enable_nls=1"
 
+	addpredict /dev/snd
 	emake ${myconf} || die
 }
 
