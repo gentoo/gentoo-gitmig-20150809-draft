@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/lletters
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.2 2003/09/10 15:57:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.3 2003/10/29 10:48:09 mr_bones_ Exp $
+
+  29 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org>
+  lletters-0.1.95-r1.ebuild:
+  use games eclass; more docs
 
 *lletters-0.1.95-r1   (7 May 2002)
 
