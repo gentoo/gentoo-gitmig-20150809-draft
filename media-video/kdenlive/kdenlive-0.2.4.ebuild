@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.2.4.ebuild,v 1.9 2004/11/01 11:25:40 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.2.4.ebuild,v 1.10 2005/01/15 00:04:17 danarmak Exp $
 
 inherit eutils gcc kde
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE=""
 
 DEPEND=">=media-video/piave-0.2.4
-	>=kde-base/kdesdk-3.2"
+	|| ( kde-base/kdesdk-meta >=kde-base/kdesdk-3.2 )"
 need-kde 3
 
 src_unpack() {
