@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.5.ebuild,v 1.7 2002/10/20 18:40:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.5.ebuild,v 1.8 2002/10/31 00:50:43 raker Exp $
 
 IUSE="X cups gnome"
 
@@ -33,6 +33,8 @@ src_unpack() {
 	mv ${S}/src/Makefile.in ${S}/src/Makefile.in.orig
 	sed 's#^\(DEVICE_DEVS6=.*\)$#\1 $(DD)hl1240.dev $(DD)hl1250.dev#' \
 	    < ${S}/src/Makefile.in.orig > ${S}/src/Makefile.in || die
+
+	patch -p0 < ${FILESDIR}/png.diff || die "patch failed"
 
 }
 
