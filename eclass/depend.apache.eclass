@@ -1,90 +1,131 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.5 2004/07/24 08:50:23 robbat2 Exp $
-
-ECLASS="depend.apache"
+# Copyright 2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author Michael Tindal <urilith@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.6 2004/11/21 01:51:58 urilith Exp $
+ECLASS=depend.apache
 INHERITED="$INHERITED $ECLASS"
-IUSE="apache apache2"
 
-# remember to set MY_SLOT if you want to include something like ${PVR} in
-# the slot information
-# SLOT="apache? ( 1{$MY_SLOT} ) apache2? ( 2{$MY_SLOT} ) !apache1? ( !apache2? ( 2${MY_SLOT} ) )"
+######
+## Apache Common Variables
+##
+## These are internal variables used by this, and other apache-related eclasses,
+## and thus should not need to be used by the ebuilds themselves (the ebuilds
+## should know what version of Apache they are building against).
+######
 
-DEPEND="$DEPEND apache? ( =net-www/apache-1* ) apache2? ( =net-www/apache-2* )
-	    !apache? ( !apache2? ( =net-www/apache-2* ) )"
+####
+## APACHE_VERSION
+##
+## Stores the version of apache we are going to be ebuilding.  This variable is
+## set by the need_apache{|1|2} functions.
+####
+APACHE_VERSION='2'
 
-# call this function to work out which version of the apache web server
-# your ebuild should be installing itself to use
+####
+## APXS1, APXS2
+##
+## Paths to the apxs tools
+####
+APXS1="/usr/sbin/apxs"
+APXS2="/usr/sbin/apxs2"
 
-detect_apache_useflags() {
-	USE_APACHE1=
-	USE_APACHE2=
-	USE_APACHE_MULTIPLE=
+####
+## APACHECTL1, APACHECTL2
+##
+## Paths to the apachectl tools
+####
+APACHECTL1="/usr/sbin/apachectl"
+APACHECTL2="/usr/sbin/apache2ctl"
 
-	useq apache2 && USE_APACHE2=1
-	useq apache  && USE_APACHE1=1
+####
+## APACHE1_BASEDIR, APACHE2_BASEDIR
+##
+## Paths to the server root directories
+####
+APACHE1_BASEDIR="/usr/lib/apache"
+APACHE2_BASEDIR="/usr/lib/apache2"
 
-	[ -n "$USE_APACHE1" ] && [ -n "$USE_APACHE2" ] && USE_APACHE_MULTIPLE=1
+####
+## APACHE1_CONFDIR, APACHE2_CONFDIR
+##
+## Paths to the configuration file directories (usually under
+## $APACHE?_BASEDIR/conf)
+####
+APACHE1_CONFDIR="/etc/apache"
+APACHE2_CONFDIR="/etc/apache2"
+
+####
+## APACHE1_MODULES_CONFDIR, APACHE2_MODULES_CONFDIR
+##
+## Paths where module configuration files are kept
+####
+APACHE1_MODULES_CONFDIR="${APACHE1_CONFDIR}/modules.d"
+APACHE2_MODULES_CONFDIR="${APACHE2_CONFDIR}/modules.d"
+
+####
+## APACHE1_MODULES_VHOSTDIR, APACHE2_MODULES_VHOSTDIR
+##
+## Paths where virtual host configuration files are kept
+####
+APACHE1_VHOSTDIR="${APACHE1_CONFDIR}/vhosts.d"
+APACHE2_VHOSTDIR="${APACHE2_CONFDIR}/vhosts.d"
+
+####
+## APACHE1_MODULESDIR, APACHE2_MODULESDIR
+##
+## Paths where we install modules
+####
+APACHE1_MODULESDIR="${APACHE1_BASEDIR}/modules"
+APACHE2_MODULESDIR="${APACHE2_BASEDIR}/modules"
+
+####
+## APACHE1_DEPEND, APACHE2_DEPEND
+##
+## Dependencies for apache 1.x and apache 2.x
+####
+APACHE1_DEPEND="=net-www/apache-1*"
+APACHE2_DEPEND="=net-www/apache-2*"
+
+####
+## need_apache1
+##
+## An ebuild calls this to get the dependency information
+## for apache-1.x.  An ebuild should use this in order for
+## future changes to the build infrastructure to happen
+## seamlessly.  All an ebuild needs to do is include the
+## line need_apache1 somewhere.
+####
+need_apache1() {
+	debug-print-function need_apache1
+
+	DEPEND="${DEPEND} ${APACHE1_DEPEND}"
+	APACHE_VERSION='1'
 }
 
-detect_apache_installed() {
-	HAS_APACHE1=
-	HAS_APACHE2=
-	HAS_APACHE_MULTIPLE=
-	HAS_APACHE_ANY=
+####
+## need_apache2
+##
+## An ebuild calls this to get the dependency information
+## for apache-2.x.  An ebuild should use this in order for
+## future changes to the build infrastructure to happen
+## seamlessly.  All an ebuild needs to do is include the
+## line need_apache1 somewhere.
+####
+need_apache2() {
+	debug-print-function need_apache2
 
-	has_version '=net-www/apache-1*' && HAS_APACHE1=1 && HAS_APACHE_ANY=1
-	has_version '=net-www/apache-2*' && HAS_APACHE2=1 && HAS_APACHE_ANY=1
-
-	[ -n "${HAVE_APACHE1}" ] && [ -n "${HAVE_APACHE2}" ] && HAVE_APACHE_MULTIPLE=1
+	DEPEND="${DEPEND} ${APACHE2_DEPEND}"
+	APACHE_VERSION='2'
 }
 
-# call this function from your pkg_setup
+need_apache() {
+	debug-print-function need_apache
 
-depend_apache() {
-	detect_apache_installed
-	detect_apache_useflags
-
-	# deal with the multiple cases first - much easier
-	if [ -n "$USE_APACHE_MULTIPLE" ]; then
-		echo
-		eerror "You have both the apache and apache2 USE flags set"
-		eerror
-		eerror "Please set only ONE of these USE flags, and try again"
-		echo
-		die "Multiple Apache USE flags set - you can only have one set at a time"
+	IUSE="${IUSE} apache2"
+	if useq apache2; then
+		need_apache2
+	else
+		need_apache1
 	fi
-
-	if [ -n "$USE_APACHE2" ] ; then
-		if  [ -z "$HAS_APACHE2" -a -n "$HAS_APACHE_ANY" ] ; then
-			echo
-			eerror "You have the 'apache2' USE flag set, but only have Apache v1 installed"
-			eerror "If you really meant to upgrade to Apache v2, please install Apache v2"
-			eerror "before installing $CATEGORY/${PN}-${PVR}"
-			echo
-			die "Automatic upgrade of Apache would be forced; avoiding"
-		else
-			einfo "Apache 2 support enabled"
-			DETECT_APACHE=2
-			return
-		fi
-	fi
-
-	if [ -n "$USE_APACHE1" ]; then
-		if [ -z "$HAS_APACHE1" -a -n "$HAS_APACHE_ANY" ]; then
-			echo
-			eerror "You have the 'apache' USE flag set, but only have a later version of"
-			eerror "Apache installed on your computer.  Please use the 'apache2' USE flag"
-			eerror "or downgrade to Apache v1 before installing $CATEGORY/${PN}-${PVR}"
-			echo
-			die "Avoiding installing older version of Apache"
-		else
-			einfo "Apache 1 support enabled"
-			DETECT_APACHE=1
-			return
-		fi
-	fi
-
-	[ -z "$DETECT_APACHE" ] && DETECT_APACHE=2
 }
 
