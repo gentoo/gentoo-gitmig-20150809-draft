@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.1 2004/12/26 03:29:49 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.2 2004/12/26 23:06:03 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
-IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux doc dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmx2 mythtv nas network nls nvidia oggvorbis opengl oss png real rtc samba sdl sse svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
+IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux doc dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmx2 mythtv nas nls nvidia oggvorbis opengl oss png real rtc samba sdl sse svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -73,7 +73,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 		)
 	truetype? ( >=media-libs/freetype-2.1 )
 	xinerama? ( virtual/x11 )
-	jack? ( >=media-libs/bio2jack-0.3-r1 )
+	jack? ( >=media-libs/bio2jack-0.4 )
 	xmms? ( media-sound/xmms )
 	xanim? ( >=media-video/xanim-2.80.1-r4 )
 	>=sys-apps/portage-2.0.36
@@ -104,13 +104,6 @@ src_unpack() {
 	# Custom CFLAGS
 	epatch ${FILESDIR}/${PF}-configure.patch
 	sed -e 's:CFLAGS="custom":CFLAGS=${CFLAGS}:' -i configure
-
-	if use !network; then
-		einfo "Please note, a new network USE flag was added for users"
-		einfo "with networkless installs.  If you use mplayer for streaming"
-		einfo "media, please enable the network USE flag or it will not work!"
-		einfo
-	fi
 
 	#adds mythtv support to mplayer
 	use mythtv && epatch ${FILESDIR}/mplayer-mythtv.patch
@@ -239,12 +232,12 @@ src_compile() {
 	myconf="${myconf} $(use_enable ipv6 inet6)"
 	myconf="${myconf} $(use_enable joystick)"
 	myconf="${myconf} $(use_enable lirc)"
-	if use ia64 || use !network; then
+	if use ia64
+	then
 		myconf="${myconf} --disable-live"
 	else
 		myconf="${myconf} $(use_enable live)"
 	fi
-	myconf="${myconf} $(use_enable network) $(use_enable network ftp)"
 	myconf="${myconf} $(use_enable rtc)"
 	myconf="${myconf} $(use_enable samba smb)"
 	myconf="${myconf} $(use_enable truetype freetype)"
@@ -403,6 +396,7 @@ src_compile() {
 		--enable-largefiles \
 		--enable-menu \
 		--enable-real \
+		--enable-network --enable-ftp \
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
 		${myconf} || die

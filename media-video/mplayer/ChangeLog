@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.243 2004/12/26 03:29:49 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.244 2004/12/26 23:06:03 chriswhite Exp $
+
+  27 Dec 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre6.ebuild:
+  Fixed bio2jack dep issues as per bug #75720. Also force enabled networking
+  support as it causes more issues then solves them.
 
 *mplayer-1.0_pre6 (26 Dec 2004)
 
