@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.4-r1.ebuild,v 1.2 2004/02/24 22:16:25 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.6.ebuild,v 1.1 2004/02/24 22:16:25 pebenito Exp $
 
 IUSE="build"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz
 	mirror://gentoo/policycoreutils-extra-${EXTRAS_VER}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="sys-libs/libselinux
 	sys-devel/gettext
@@ -26,8 +26,10 @@ S2=${WORKDIR}/policycoreutils-extra
 src_unpack() {
 	unpack ${A}
 
-	# trivial fix to audit2allow
-	sed -i -e 's:newrules:$0:' ${S}/audit2allow/audit2allow
+	# Change script paths POLICYDIR
+	sed -i -e "s:/etc/security/selinux/src/policy/:${POLICYDIR}:g" ${S}/scripts/restorecon
+	sed -i -e "s:/etc/security/selinux/src/policy/:${POLICYDIR}:g" ${S}/scripts/checkcon
+	sed -i -e "s:/etc/security/selinux/src/policy/:${POLICYDIR}:g" ${S}/scripts/genhomedircon
 
 	# fix up to accept Gentoo CFLAGS
 	local SUBDIRS="load_policy newrole run_init setfiles audit2allow"
