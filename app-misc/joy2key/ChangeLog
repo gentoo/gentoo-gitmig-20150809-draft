@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/joy2key
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/ChangeLog,v 1.6 2004/06/24 22:17:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/ChangeLog,v 1.7 2004/07/10 13:29:01 slarti Exp $
+
+  10 Jul 2004; Tom Martin <slarti@gentoo.org> joy2key-1.6.ebuild:
+  Marked ~amd64.
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> joy2key-1.6.ebuild:
   Add die following econf for bug 48950

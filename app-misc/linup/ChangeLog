@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/linup
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linup/ChangeLog,v 1.9 2004/06/24 22:22:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linup/ChangeLog,v 1.10 2004/07/10 13:38:07 slarti Exp $
+
+  10 Jul 2004; Tom Martin <slarti@gentoo.org> linup-1.1.1-r1.ebuild:
+  Marked ~amd64.
 
   08 Jun 2004; Lisa Seelye <lisa@gentoo.org> -linup-1.1.1.ebuild:
   just cleaning old ebuilds out
