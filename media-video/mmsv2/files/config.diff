@@ -1,0 +1,27 @@
+--- cfg/config	2004-08-10 11:08:00.000000000 +0200
++++ cfg/config-cleaned	2004-11-10 01:31:34.803591512 +0100
+@@ -64,7 +64,7 @@
+ 
+ # Output device 
+ #
+-# choose between "dxr3", "fbdev" and "sdl"
++# choose between "dxr3", "fbdev", "vga" and "sdl"
+ outdev = dxr3
+ 
+ # If you selected sdl as output device this setting will determine if
+@@ -91,15 +91,6 @@
+ #
+ xine_mode = false
+ 
+-# Moviedb
+-#
+-# (not used yet)
+-#
+-# Enable movie database and draw movie graphical using information
+-# from the database
+-#
+-moviedb = no
+-
+ # tv mode
+ # tv output (-p for pal or -n for ntsc)
+ # followed by -o for 4:3 and -w for wide-screen (16:9)

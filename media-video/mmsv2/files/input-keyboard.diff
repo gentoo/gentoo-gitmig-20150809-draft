@@ -1,0 +1,21 @@
+--- cfg/input-keyboard	2004-08-10 11:07:59.000000000 +0200
++++ cfg/input-keyboard-cleaned	2004-11-10 01:32:52.165830664 +0100
+@@ -11,9 +11,6 @@
+ # all inherit from general
+ # all audio modes inherit from audio_general
+ # choose_playlist and playlist inherit from playlist_general
+-#
+-# // Don't work yet ...
+-# database and graphical_movie inherit from graphical
+ 
+ general,prev,UP
+ general,next,DOWN
+@@ -64,8 +61,3 @@
+ search,erase,BACKSPACE
+ search,exit,END
+ search,help,DEL
+-
+-# not used yet
+-
+-#database,char_up,VOL+
+-#database,char_down,VOL-
