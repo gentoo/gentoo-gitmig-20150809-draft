@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.9.ebuild,v 1.3 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.5.9.ebuild,v 1.4 2003/07/15 20:03:45 azarah Exp $
 
 IUSE="bootstrap build"
 
@@ -318,14 +318,6 @@ src_install() {
 	do
 		[ -f ${foo} ] && doins ${foo}
 	done
-	# /etc/conf.d/net.ppp* should only be readible by root
-	chmod 0600 ${D}/etc/conf.d/net.ppp*
-
-	# This seems the best place for templates .. any ideas ?
-	# NB: if we move this, then $TEMPLATEDIR in net.ppp0 need to be updated as well
-	keepdir /etc/ppp
-	insinto /etc/ppp
-	doins ${S}/etc/ppp/chat-default
 
 	dodir /etc/init.d
 	exeinto /etc/init.d
@@ -333,8 +325,9 @@ src_install() {
 	do
 		[ -f ${foo} ] && doexe ${foo}
 	done
-	# /etc/init.d/net.ppp* should only be readible by root
-	#chmod 0600 ${D}/etc/init.d/net.ppp*
+
+	# Now ships with net-dialup/ppp ...
+	rm -f ${D}/etc/{conf,init}.d/net.ppp*
 
 	# These moved from /etc/init.d/ to /sbin to help newb systems
 	# from breaking

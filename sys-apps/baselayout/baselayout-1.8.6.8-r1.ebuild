@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.8-r1.ebuild,v 1.6 2003/07/06 18:05:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.8-r1.ebuild,v 1.7 2003/07/15 20:03:46 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -389,14 +389,9 @@ src_install() {
 	do
 		[ -f ${foo} ] && doins ${foo}
 	done
-	# /etc/conf.d/net.ppp* should only be readible by root
-	chmod 0600 ${D}/etc/conf.d/net.ppp*
 
-	# This seems the best place for templates .. any ideas ?
-	# NB: if we move this, then $TEMPLATEDIR in net.ppp0 need to be updated as well
-	keepdir /etc/ppp
-	insinto /etc/ppp
-	doins ${S}/etc/ppp/chat-default
+	# Now ships with net-dialup/ppp ...
+	rm -f ${D}/etc/{conf,init}.d/net.ppp* 
 
 	dodir /etc/skel
 	insinto /etc/skel
