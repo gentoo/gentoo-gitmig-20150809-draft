@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncview/ncview-1.92d.ebuild,v 1.4 2004/03/30 17:39:01 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncview/ncview-1.92d.ebuild,v 1.5 2004/04/19 11:49:24 phosphan Exp $
 
 DESCRIPTION="X-based viewer for netCDF files"
 SRC_URI="ftp://cirrus.ucsd.edu/pub/ncview/${P}.tar.gz"
@@ -8,6 +8,7 @@ HOMEPAGE="http://meteora.ucsd.edu/~pierce/ncview_home_page.html"
 
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 KEYWORDS="~x86"
 
 DEPEND="app-sci/netcdf
