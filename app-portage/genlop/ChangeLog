@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/genlop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.17 2004/10/03 19:48:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.18 2004/10/13 23:31:42 usata Exp $
+
+  14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> genlop-0.16.3.ebuild:
+  Added to ~ppc-macos.
 
   03 Oct 2004; Jason Wever <weeve@gentoo.org> genlop-0.30.2.ebuild:
   Added ~sparc keyword.

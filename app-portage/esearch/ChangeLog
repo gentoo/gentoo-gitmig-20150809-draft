@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/esearch
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.23 2004/10/06 18:42:57 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.24 2004/10/13 23:26:46 usata Exp $
+
+  14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> esearch-0.7.ebuild:
+  Added to ~ppc-macos.
 
   06 Oct 2004; <genone@gentoo.org> files/eupdatedb.cron:
   added cronscript from bug 51794 (thanks to Sridhar Dhanapalan)

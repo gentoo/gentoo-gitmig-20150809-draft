@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.29 2004/10/10 22:42:16 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.30 2004/10/13 23:36:13 usata Exp $
+
+  14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
+  gentoolkit-0.2.0_pre9.ebuild, gentoolkit-0.2.0_pre10.ebuild:
+  Added to ~ppc-macos.
 
 *gentoolkit-0.2.0_pre10 (11 Oct 2004)
 
