@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/preview-latex/preview-latex-0.7.8.ebuild,v 1.1 2004/02/01 08:05:44 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/preview-latex/preview-latex-0.7.8.ebuild,v 1.2 2004/03/22 16:21:22 usata Exp $
 
 inherit latex-package elisp-common
 
@@ -9,17 +9,15 @@ HOMEPAGE="http://preview-latex.sourceforge.net/"
 SRC_URI="mirror://sourceforge/preview-latex/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="emacs xemacs"
 
 DEPEND="emacs? ( virtual/emacs
 		>=app-emacs/auctex-11.14 )
 	xemacs? ( virtual/xemacs
 		>=app-xemacs/auctex-1.32 )
-	>=app-text/ghostscript-7.05.6-r3
+	virtual/ghostscript
 	virtual/tetex"
-
-#RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
