@@ -1,11 +1,15 @@
 # ChangeLog for app-emulation/winesetuptk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/ChangeLog,v 1.5 2002/08/19 17:47:45 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/ChangeLog,v 1.6 2002/09/04 06:38:14 raker Exp $
 
 *winesetuptk-0.6.0b-r2 (19 August 2002)
 
-  19 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, winesetuptk-0.6.0b-r2.ebuild :
+  04 Sep 2002; Nick Hadaway <raker@gentoo.org> winesetuptk-0.6.0b-r2.ebuild :
+  Changed econf to ./configure so there aren't conflicting --sysconfdir
+  arguments.  Moved useless setting of myconf variables to configure
+  option list as no use variables were referenced.
 
+  19 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, winesetuptk-0.6.0b-r2.ebuild :
   Added -ppc to the keywords.
 
 *winesetuptk-0.6.0b-r2 (12 Jun 2002)
@@ -16,19 +20,16 @@
 
   12 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
   winsetuptk-0.6.0b-r2.ebuild files/digest-winesetuptk-0.6.0b-r2 :
-
   Removed wine from RDEPEND, as this package can really run without
   wine/winex, though it is useles.
 
 *winesetuptk-0.6.0b-r1 (26 Apr 2002)
 
   26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> winesetuptk-0.6.0b-r1.ebuild :
-
   It was pointed out indirectly by a new user that tcl and tk are NOT required
   since this package links statically with them.  Hooray for de-bloat!
 
 *winesetuptk-0.6.0b (3 Apr 2002)
 	
   3 Apr 2002; Seemant Kulleen <seemant@gentoo.org> winesetuptk-0.6.0b.ebuild :
-
   New package to help users set up wine on their systems.
