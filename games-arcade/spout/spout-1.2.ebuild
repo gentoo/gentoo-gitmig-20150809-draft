@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/spout/spout-1.2.ebuild,v 1.2 2004/07/21 18:47:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/spout/spout-1.2.ebuild,v 1.3 2004/07/21 19:52:23 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -35,7 +35,7 @@ pkg_postinst() {
 	einfo "To play in a greater resolution, do 'spout x', where"
 	einfo "x is an integer; the larger x is, the higher the resolution."
 	echo
-	einto "To play:"
+	einfo "To play:"
 	einfo "Accelerate - spacebar, enter, z, x"
 	einfo "Pause - escape"
 	einfo "Exit - shift+escape"
