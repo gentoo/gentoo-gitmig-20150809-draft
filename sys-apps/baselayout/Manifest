@@ -7,7 +7,7 @@ MD5 f7e9754385ef39aa7981f4fe0d2baa1e baselayout-1.8.11.ebuild 15439
 MD5 b6409ba3a872f8b4e942ef6d7dd612fe baselayout-1.8.6.13-r1.ebuild 16796
 MD5 532d3ebaad667cda13f1130d5dc641ff baselayout-1.9.4-r2.ebuild 16270
 MD5 62e0f4f429583435170e7202d5801de2 baselayout-1.9.4.ebuild 16160
-MD5 d9eff625e38ef5e03734a03f1e3bc4bb ChangeLog 32825
+MD5 92dbfd3bd85b362de686722226c30864 ChangeLog 33139
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
 MD5 f009d33103504c1e9efa2afca08bfbff files/digest-baselayout-1.9.1 134
 MD5 9555eb10db9b34b7221ad0a9193d43f1 files/digest-baselayout-1.9.4 134
