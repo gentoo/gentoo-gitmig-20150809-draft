@@ -18,7 +18,6 @@ HOMEPAGE="http://expect.nist.gov/"
 DEPEND=">=dev-lang/tcl-8.2
 		X? ( >=dev-lang/tk-8.2 )"
 
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="as-is"
