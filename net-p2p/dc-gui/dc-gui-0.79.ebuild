@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.79.ebuild,v 1.1 2004/01/11 01:58:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.79.ebuild,v 1.2 2004/01/22 01:34:21 vapier Exp $
 
 MY_P=${PN/-/_}2-${PV}
 DESCRIPTION="GUI for dctc"
@@ -9,7 +9,7 @@ SRC_URI="http://ac2i.homelinux.com/dctc/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE="nls"
 
 DEPEND="=dev-libs/glib-2*
