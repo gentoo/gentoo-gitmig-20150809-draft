@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e8dbb92e07d26606d0c036b16deadf9d ChangeLog 1345
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 a32f43433ecc251995b359b27f06158d ChangeLog 1181
-MD5 95cf9285025c6b060c85ad9c39781ee5 showeq-4.3.21.ebuild 1246
-MD5 44b193f11a4502dde90e5ecd5b0dd801 showeq-5.0.0.16.ebuild 782
+MD5 9311515908195712cccb535b9908546a showeq-5.0.0.16.ebuild 775
+MD5 c7bb62887e4de0d28e24e5d05e806f2d showeq-4.3.21.ebuild 1242
 MD5 89367ba61dd3417f3e851cd88aaa7b94 files/digest-showeq-5.0.0.16 68
 MD5 1d9ebbfda3f734899a768723ecf0c5ea files/digest-showeq-4.3.21 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB/AQemdTrptrqvGERAvq4AJ9eHwTRFwYfzS9xKvpMM9MebGh2VwCgiY3N
+OrWCFgn9SFKj7wmtM0hUroo=
+=EYZ5
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-4.3.21.ebuild,v 1.1 2004/08/23 06:27:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-4.3.21.ebuild,v 1.2 2005/01/29 21:46:00 dragonheart Exp $
 
 inherit games
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="virtual/x11
 	media-libs/libpng
-	>=net-libs/libpcap-0.6.2
+	virtual/libpcap
 	>=x11-libs/qt-3.1
 	>=sys-libs/gdbm-1.8.0"
 DEPEND="${RDEPEND}

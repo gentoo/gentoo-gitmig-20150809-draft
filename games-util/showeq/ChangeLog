@@ -1,6 +1,10 @@
 # ChangeLog for games-util/showeq
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/ChangeLog,v 1.8 2004/12/29 10:18:23 mr_bones_ Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/ChangeLog,v 1.9 2005/01/29 21:46:00 dragonheart Exp $
+
+  30 Jan 2005; Daniel Black <dragonheart@gentoo.org> showeq-4.3.21.ebuild,
+  showeq-5.0.0.16.ebuild:
+  dependancy transition net-libs/libpcap -> virtual/libpcap
 
 *showeq-5.0.0.16 (29 Dec 2004)
 
