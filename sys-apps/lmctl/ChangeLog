@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/lmctl
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lmctl/ChangeLog,v 1.1 2005/01/08 11:25:42 hollow Exp $
+
+*lmctl-0.3.2 (08 Jan 2005)
+
+  08 Jan 2005; Benedikt Boehm <hollow@gentoo.org> lmctl-0.3.2.ebuild, metadata.xml:
+  Initial import.  Ebuild for 0.3.1 submitted by Eric Shattow <jnc@gentoo.org>.
+  Bumped version and fixed a tarball error (0.3.2 contains 0.3.1/)
+  
