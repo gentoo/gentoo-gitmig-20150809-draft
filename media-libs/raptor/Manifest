@@ -1,3 +1,5 @@
-MD5 10bf2a82f3de51dbdcc3fb2f63477a61 files/digest-raptor-0.9.8 64
 MD5 30ab9b822e9b0d313673c2678e8e5f56 ChangeLog 424
 MD5 b82df4ae60f7441a38bee81d8ed7b37e raptor-0.9.8.ebuild 574
+MD5 85dbcede1d8d74e1477faa92765fa37c raptor-0.9.12.ebuild 590
+MD5 10bf2a82f3de51dbdcc3fb2f63477a61 files/digest-raptor-0.9.8 64
+MD5 b9e6e21a483b2a0df980c4ad8123b0e3 files/digest-raptor-0.9.12 65
