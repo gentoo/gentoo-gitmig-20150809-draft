@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.26 2004/07/07 17:57:28 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.27 2004/07/09 09:53:37 eradicator Exp $
+
+  09 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ardour-0.9_beta17.ebuild:
+  Fixed jack to not be virtual.
 
 *ardour-0.9_beta17 (07 Jul 2004)
 
