@@ -1,8 +1,17 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.46 2003/05/08 21:03:10 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.47 2003/05/09 06:49:38 kumba Exp $
+
 
 *binutils-2.14.90.0.1-r1 (08 May 2003)
+
+  09 May 2003; Joshua Kinard <kumba@gentoo.org>
+  binutils-2.14.90.0.1-r1.ebuild:
+  Changed -sparc to ~sparc.  Merges fine on sparc,
+  but further testing to be done.  With mips, edited out the
+  gas-mips-gprel from binutils-2.13.90.0.20, as this patch already
+  appears to be included in 2.14.90.0.1 (emerge failed on attempting to
+  patch it).  Mips testing is underway via "emerge system".
 
   08 May 2003; Nicholas Wourms <dragon@gentoo.org>
   binutils-2.14.90.0.1-r1.ebuild:
