@@ -1,6 +1,13 @@
 # ChangeLog for net-www/nvu
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/ChangeLog,v 1.11 2004/12/21 18:07:14 chriswhite Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/ChangeLog,v 1.12 2005/03/11 06:27:44 chriswhite Exp $
+
+*nvu-0.81 (11 Mar 2005)
+
+  11 Mar 2005; Chris White <chriswhite@gentoo.org> +files/mozconfig2,
+  +files/nvu-0.50-freetype-compile.patch, +nvu-0.81.ebuild:
+  New version of nvu, latest comming once I figure out where they hid it.
+  Thanks to Jory A. Pratt for both the patches and putting up with me :P.
 
   22 Dec 2004; Chris White <chriswhite@gentoo.org> files/nvu.desktop:
   Fixed a typo in the .desktop file as per Bug #75010.
