@@ -1,7 +1,7 @@
 ## Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.ebuild,v 1.1 2001/04/15 21:45:13 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.ebuild,v 1.2 2001/04/18 04:46:35 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -18,6 +18,7 @@ DEPEND="nls? ( sys-devel/gettext )
 	>=gnome-base/bonobo-0.37
 	>=gnome-base/libghttp-1.0.9
         >=gnome-base/scrollkeeper-0.1.2
+	>=gnome-base/control-center-1.4.0
 	>=gnome-libs/medusa-0.3.2
         >=gnome-libs/ammonite-0.8.6"
 
