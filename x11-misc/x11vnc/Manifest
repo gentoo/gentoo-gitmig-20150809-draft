@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f68f563e662b70c64b4d567a334474ca x11vnc-0.7.ebuild 1220
-MD5 53c1f82adb263284313dfedd98ef6b92 ChangeLog 801
+MD5 22f6b4db23053baed6411cca898b16e1 ChangeLog 995
 MD5 8845b35c56be21370ef600f1b3eca775 metadata.xml 470
-MD5 bed373def7254533185032fe28580512 files/0.6.2-configure.ac.patch 826
+MD5 e4272af5c6067c07c3ed6953c6af67e8 x11vnc-0.7.ebuild 1003
+MD5 f787e92e02f72225f0a2d84c215a7d79 files/0.7-autotools.patch 1560
 MD5 0a51724347b7a0fd71c2f0935671b2c8 files/digest-x11vnc-0.7 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB3cGnZ/iYVBmujdURAorKAKDvdEbsMnW7Tbxuh3laEVokbxUkngCfZVi7
-/VayiGQVGv2itq6J5mPpW8k=
-=PWsq
------END PGP SIGNATURE-----

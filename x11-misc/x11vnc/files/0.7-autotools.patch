@@ -1,0 +1,47 @@
+diff -Nur x11vnc.orig/configure.ac x11vnc/configure.ac
+--- x11vnc.orig/configure.ac	2004-11-16 17:39:24.860061978 +0100
++++ x11vnc/configure.ac	2004-11-16 17:39:39.745018698 +0100
+@@ -14,6 +14,10 @@
+ AC_PROG_MAKE_SET
+ AC_PROG_RANLIB
+ 
++# Checks for header files.
++AC_HEADER_STDC
++AC_CHECK_HEADERS([arpa/inet.h fcntl.h netdb.h netinet/in.h stdlib.h string.h sys/socket.h sys/time.h sys/timeb.h syslog.h unistd.h])
++
+ # Options
+ AH_TEMPLATE(BACKCHANNEL, [Enable BackChannel communication])
+ AC_ARG_WITH(backchannel,
+@@ -108,7 +112,3 @@
+ AC_SUBST(SDL_LIBS)
+-
+-# Checks for header files.
+-AC_HEADER_STDC
+-AC_CHECK_HEADERS([arpa/inet.h fcntl.h netdb.h netinet/in.h stdlib.h string.h sys/socket.h sys/time.h sys/timeb.h syslog.h unistd.h])
+ 
+ # Checks for typedefs, structures, and compiler characteristics.
+@@ -200,3 +200,2 @@
+ AC_CONFIG_FILES([Makefile
+-                 libvncserver/Makefile
+                  
+--- x11vnc.orig/Makefile.am	2005-01-28 10:15:00.205392800 -0500
++++ x11vnc/Makefile.am	2005-01-28 10:15:10.882769592 -0500
+@@ -1,7 +1,7 @@
+ CFLAGS=-g -Wall
+ 
+-SUBDIRS=libvncserver x11vnc classes
+-DIST_SUBDIRS=libvncserver x11vnc classes
++SUBDIRS=x11vnc classes
++DIST_SUBDIRS=x11vnc classes
+ 
+ 
+ includedir=$(prefix)/include/rfb
+--- x11vnc.orig/x11vnc/Makefile.am	2005-01-28 10:15:22.031074792 -0500
++++ x11vnc/x11vnc/Makefile.am	2005-01-28 10:18:37.532354080 -0500
+@@ -1,5 +1,5 @@
+ DEFINES = -I ..
+-LDADD = ../libvncserver/libvncserver.a @WSOCKLIB@
++LDADD = -lvncserver @WSOCKLIB@
+ 
+ man_MANS=x11vnc.1
+ EXTRA_DIST=ChangeLog README tkx11vnc $(man_MANS)
