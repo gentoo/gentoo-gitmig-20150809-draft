@@ -1,7 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20020127.ebuild,v 1.1 2002/04/13 12:16:22 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20020127.ebuild,v 1.2 2002/04/13 12:18:55 blocke Exp $
+
+LIBVER="0.0.6"
 
 S=${WORKDIR}/tmp/openal
 DESCRIPTION="OpenAL, the Open Audio Library, is an open, vendor-neutral, cross-platform API for interactive, primarily spatialized audio"
@@ -63,7 +65,7 @@ src_install() {
 	# something is screwy with the makefiles so we create the two library
 	# symlinks manually
 	cd ${D}/usr/lib
-	ln -f -s libopenal.so.0.0.6 libopenal.so.0 || die
-	ln -f -s libopenal.so.0.0.6 libopenal.so || die
+	ln -f -s libopenal.so.${LIBVER} libopenal.so.0 || die
+	ln -f -s libopenal.so.${LIBVER} libopenal.so || die
 }
 
