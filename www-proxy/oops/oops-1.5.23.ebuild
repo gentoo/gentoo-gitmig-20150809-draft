@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/oops/oops-1.5.23.ebuild,v 1.1 2005/02/24 13:21:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/oops/oops-1.5.23.ebuild,v 1.2 2005/03/31 16:56:30 mrness Exp $
 
 DESCRIPTION="An advanced multithreaded caching web proxy"
 HOMEPAGE="http://zipper.paco.net/~igor/oops.eng/"
@@ -8,10 +8,12 @@ SRC_URI="http://zipper.paco.net/~igor/oops/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 IUSE=""
 
-RDEPEND="dev-libs/libpcre"
+RDEPEND="virtual/libc
+	dev-libs/libpcre
+	>=sys-libs/db-3"
 DEPEND="${RDEPEND}
 	sys-devel/flex"
 
@@ -21,6 +23,7 @@ src_unpack() {
 	cd ${S}
 	cp configure configure.orig
 	sed -e 's:/usr/local/lib/libpcre:/usr/lib/libpcre:g' configure.orig > configure
+	sed -e 's:y\.tab\.h:y.tab.c:' Makefile.in
 	cd ${S}/src/modules
 }
 

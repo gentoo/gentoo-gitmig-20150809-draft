@@ -1,6 +1,9 @@
 # ChangeLog for www-proxy/oops
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/oops/ChangeLog,v 1.4 2005/02/24 13:21:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/oops/ChangeLog,v 1.5 2005/03/31 16:56:30 mrness Exp $
+
+  31 Mar 2005; Alin Nastac <mrness@gentoo.org> oops-1.5.23.ebuild:
+  Fix makefile and mark stable on x86 (#87406).
 
 *oops-1.5.23 (24 Feb 2005)
 

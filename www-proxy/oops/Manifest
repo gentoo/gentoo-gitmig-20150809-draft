@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0e579764551461fc264096e9bcd1a70c ChangeLog 1812
-MD5 3d771b47134c8b4b82cd0bdabe3d5d27 metadata.xml 241
-MD5 5ca8283d1f96f4c7891f2374d980c247 oops-1.5.22.ebuild 2666
 MD5 1f3d8865d025ffbe6792efee8a8f28c4 oops-1.5.6.ebuild 2310
-MD5 bcfb4839ca23c57e73fd955d45f70677 oops-1.5.23.ebuild 2256
-MD5 a9957cc3d73892c636b0c45ed7b84ee2 files/digest-oops-1.5.22 63
-MD5 261405b1b49b3bded20e300755773d8b files/digest-oops-1.5.6 62
+MD5 5ca8283d1f96f4c7891f2374d980c247 oops-1.5.22.ebuild 2666
+MD5 a20e5172f639b7d78634a250b5f14ec3 ChangeLog 1928
+MD5 3d771b47134c8b4b82cd0bdabe3d5d27 metadata.xml 241
+MD5 0d6f0e8375972dfc421cc0ba293d0308 oops-1.5.23.ebuild 2329
 MD5 6f1e80af4f1280cfb10b31ab9d2ab820 files/oops.cfg 17896
+MD5 261405b1b49b3bded20e300755773d8b files/digest-oops-1.5.6 62
+MD5 a9957cc3d73892c636b0c45ed7b84ee2 files/digest-oops-1.5.22 63
 MD5 5ecad9ef80ba71f386b700b68e68754e files/digest-oops-1.5.23 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCHdTdjiC39V7gKu0RAqRGAJ9ZDqQLMS111hTNYvE56sMXXdocYQCgkS1J
-ypsnzHZPmpXx/KIVdYLTsxw=
-=Sm+S
+iD8DBQFCTCvWjiC39V7gKu0RAliOAJ9NGfn26ReH5kFbh/tTmuDjiOImQwCfZNor
+oz8bC9D4OVyr/FCbm2b1oJw=
+=1zdi
 -----END PGP SIGNATURE-----
