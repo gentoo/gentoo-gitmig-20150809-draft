@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/epiar
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/ChangeLog,v 1.3 2004/03/28 20:32:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/ChangeLog,v 1.4 2004/04/27 21:04:08 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> epiar-0.5.ebuild:
+  Add inherit eutils
 
   28 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> epiar-0.5.ebuild:
   error check sed; depend on sed >= 4; remove unused debug from IUSE
