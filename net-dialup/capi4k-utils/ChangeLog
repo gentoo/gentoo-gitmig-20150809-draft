@@ -1,7 +1,6 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# Maintainer Alexander Holler <holler@ahsoftware.de>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.11 2004/09/27 10:12:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.12 2004/10/02 15:28:50 swegener Exp $
 
   27 Sep 2004; Daniel Black <dragonheart@gentoo.org> files/capi-init-20040810:
   Fixed path in init script. Bug #65294  Thanks to tuXXer <bs.net@gmx.de>

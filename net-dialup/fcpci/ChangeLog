@@ -1,7 +1,6 @@
 # ChangeLog for net-dialup/fcpci
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# Maintainer Alexander Holler <holler@ahsoftware.de>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.7 2004/06/24 22:26:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.8 2004/10/02 15:25:47 swegener Exp $
 
 *fcpci-03.11.02 (10 Apr 2004)
 
