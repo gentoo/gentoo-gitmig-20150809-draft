@@ -21,6 +21,44 @@
 ##   End example
 ##
 
+# <spider@gentoo.org> (05 Sep 2002)
+# Masked for stable marking upstream
+# gnome 2.0.2rc things
+=app-editors/gedit-2.0.5
+=gnome-base/gnome-panel-2.0.8
+=gnome-base/gnome-session-2.0.7
+=gnome-base/gnome-desktop-2.0.8
+=gnome-base/gnome-vfs-2.0.4
+=gnome-extra/gnome-utils-2.0.5
+=gnome-base/libgnomecanvas-2.0.4
+=gnome-base/libgnome-2.0.4
+=gnome-base/libgnomeui-2.0.5
+=gnome-extra/yelp-1.0.6
+=gnome-extra/gnome-media-2.0.2.5
+=gnome-base/gdm-2.4.0.11
+=gnome-base/libbonoboui-2.0.3
+=gnome-base/libglade-2.0.1
+=gnome-base/gnome-mime-data-2.0.1
+=gnome-extra/at-spi-1.0.2
+=gnome-extra/libgail-gnome-1.0.1
+=gnome-base/nautilus-2.0.6
+=gnome-base/eel-2.0.6
+=media-gfx/eog-1.0.3
+=gnome-extra/gnome-games-2.0.4
+=gnome-extra/gconf-editor-0.3.1
+=media-sound/esound-0.2.29
+=gnome-extra/gnome-system-monitor-2.0.2
+=gnome-base/gnome-applets-2.0.2
+=app-text/ggv-1.99.10
+=x11-libs/libwnck-0.17
+=gnome-base/ORBit2-2.4.3
+=net-libs/linc-0.5.3
+=dev-libs/libxslt-1.0.20
+=dev-libs/libxml2-2.4.24
+=gnome-extra/libgtkhtml-2.0.2
+=gnome-base/control-center-2.0.1.1
+=gnome-base/gnome-2.0.2_pre1
+
 # <phoenix@gentoo.org> (05 Sep 2002)
 # masked for testing
 =app-emulation/wine-20020804
