@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.23.5.ebuild,v 1.8 2004/11/12 02:15:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.23.5.ebuild,v 1.9 2005/01/11 13:02:36 eradicator Exp $
 
-inherit libtool
+inherit libtool eutils
 
 DESCRIPTION="Free MPEG-4 audio codecs by AudioCoding.com"
 HOMEPAGE="http://www.audiocoding.com/"
@@ -30,6 +30,7 @@ src_unpack() {
 	export WANT_AUTOCONF=2.5
 	sh ./bootstrap
 	elibtoolize
+	epunt_cxx
 }
 
 src_install() {
