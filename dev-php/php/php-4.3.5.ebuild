@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.5.ebuild,v 1.1 2004/03/28 23:37:32 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.5.ebuild,v 1.2 2004/03/29 00:06:12 stuart Exp $
 
 PHPSAPI="cli"
 inherit php-sapi eutils
@@ -26,7 +26,7 @@ src_compile() {
 
 
 src_install() {
-	PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-cli install-programs install-pear install-build install-headers"
+	PHP_INSTALLTARGETS="install"
 	php-sapi_src_install
 
 	einfo "Fixing PEAR cache location"
