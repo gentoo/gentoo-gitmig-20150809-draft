@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/memtester
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.4 2004/03/01 19:59:51 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.5 2004/03/29 22:24:02 avenj Exp $
+
+  29 Mar 2004; Jon Portnoy <avenj@gentoo.org> memtester-2.93.1.ebuild :
+  x86 keywords.
 
 *memtester-2.93.1 (Nov 7 2002)
 
