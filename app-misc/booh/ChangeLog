@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/booh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.1 2005/04/01 15:44:56 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.2 2005/04/02 13:41:57 dams Exp $
+
+*booh-0.2.0 (31 Mar 2005)
+
+  31 Mar 2005; <dams@gentoo.org> +booh-0.2.0.ebuild:
+  version 0.2.0 (very buggy on ppc)
 
 *booh-0.1.0 (01 Apr 2005)
 
