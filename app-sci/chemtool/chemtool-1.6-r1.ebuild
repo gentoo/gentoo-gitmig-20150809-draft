@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.6-r1.ebuild,v 1.1 2004/02/26 11:23:44 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.6-r1.ebuild,v 1.2 2004/03/15 13:34:13 phosphan Exp $
 
 [ -n "`use kde`" ] && inherit kde-functions
 inherit eutils
@@ -16,8 +16,7 @@ IUSE="gnome kde nls"
 
 DEPEND=">=media-gfx/transfig-3.2.3d
 	=x11-libs/gtk+-1*
-	>=media-libs/libemf-1.0
-	sys-apps/supersed"
+	>=media-libs/libemf-1.0"
 
 src_unpack() {
 	unpack ${A}
@@ -32,7 +31,6 @@ src_compile() {
 	config_opts="--enable-emf"
 
 	if [ "`use kde`" ]; then
-		need-kde 2
 		config_opts="${config_opts} --with-kdedir=${mykdedir}" ;
 	else
 		config_opts="${config_opts} --without-kdedir"
