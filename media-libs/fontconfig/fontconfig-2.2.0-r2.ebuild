@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.0-r2.ebuild,v 1.2 2003/05/16 12:06:54 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.0-r2.ebuild,v 1.3 2003/05/17 15:49:08 foser Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://fontconfig.org/"
 IUSE="doc"
 LICENSE="fontconfig"
 SLOT="1.0"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~mips ~hppa ~arm"
+KEYWORDS="x86 ~alpha ~ppc ~sparc ~mips ~hppa ~arm"
 
 DEPEND=">=media-libs/freetype-2.1.4
 	>=dev-libs/expat-1.95.3
@@ -62,7 +62,8 @@ src_compile() {
 
 src_install() {
 	einstall confdir=${D}/etc/fonts \
-		datadir=${D}/usr/share || die
+		datadir=${D}/usr/share \
+		docdir=${D}/usr/share/doc/${P} || die
 	
 	insinto /etc/fonts
 	doins ${S}/fonts.conf
