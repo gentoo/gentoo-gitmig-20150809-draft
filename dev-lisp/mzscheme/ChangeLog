@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/mzscheme
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/ChangeLog,v 1.9 2003/07/19 06:38:08 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/ChangeLog,v 1.10 2003/10/14 20:23:37 george Exp $
+
+*mzscheme-205 (14 Oct 2003)
+
+  14 Oct 2003; George Shapovalov <george@gentoo.org> mzscheme-205.ebuild :
+  new version
 
 *mzscheme-201-r1 (18 Jul 2003)
 
