@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020822.ebuild,v 1.1 2002/09/11 19:38:58 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020822.ebuild,v 1.2 2002/09/11 19:52:15 raker Exp $
 
 PF_PV=1.1.11-20020822
 PF_P=postfix-${PF_PV}
@@ -11,8 +11,7 @@ IPV6_P=tls+ipv6-1.4-pf-${PF_PV}
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
 SRC_URI="http://archive.progeny.com/postfix/experimental/${PF_P}.tar.gz
-	ssl? ( ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/${TLS_P}.tar.gz )
-	ipv6? ( ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.4/${IPV6_P}.patch )"
+	ssl? ( ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/${TLS_P}.tar.gz )"
 
 LICENSE="IPL-1"
 SLOT="0"
@@ -50,7 +49,7 @@ src_unpack() {
 	if [ `use ssl` ] && [ `use ipv6` ]
 	then
 		cd ${S}
-		patch -p1 < ${DISTFILES}/${IPV6_P}.patch || die "patch failed"
+		patch -p1 < ${FILESDIR}/${IPV6_P}.patch || die "patch failed"
 		CCARGS="${CCARGS} -DHAS_SSL"
 		AUXLIBS="${AUXLIBS} -lssl -lcrypto"
 	elif [ `use ssl` ]
