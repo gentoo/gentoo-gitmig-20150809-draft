@@ -65,6 +65,7 @@ imlib - Adds support for media-libs/imlib (Image loading and rendering library)
 innodb - Adds innodb support for mySQL (transaction support)
 ipv6 - Adds support for IP version 6
 java - Adds support for Java
+jikes - Compile Java source code with jikes (faster)
 jpeg - Adds JPEG image support
 kde - Adds support for kde-base/kde (K Desktop Enviroment)
 kerberos - Adds kerberos support
