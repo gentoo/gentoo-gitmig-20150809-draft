@@ -25,9 +25,6 @@ media-gfx/k3studio
 # Azarah - 5 June 2002
 =media-video/ati-gatos-4.2.0.11-r1
 
-# Dont work's yet BaSS 05 Jun 2002
-=app-misc/gtk-theme-switch-2.0.0-r2
-
 # This looks like it's going final soon, but it's still in their
 # -Pre directory.  Might as well mask briefly.  // woodchip - 8 Jun 2002
 =dev-db/mysql-3.23.50
@@ -671,7 +668,7 @@ gnome-base/bonobo-activation
 >=gnome-base/control-center-1.99.10
 >=gnome-base/eel-1.1.14	
 gnome-base/gail
->=gnome-base/gconf-1.1.0
+##>=gnome-base/gconf-1.1.0
 >=gnome-base/gnome-applets-1.100.0
 gnome-base/gnome-common
 gnome-base/gnome-desktop
