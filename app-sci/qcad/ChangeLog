@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/qcad
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.18 2004/04/01 08:45:04 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.19 2004/04/21 12:01:11 phosphan Exp $
+
+*qcad-2.0.3.1 (21 Apr 2004)
+
+  21 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> qcad-2.0.3.1.ebuild,
+  files/qcad-2.0.3.1-1.src-gentoo.patch:
+  Version bump. Patch had to be modified because overriding CXXFLAGS broke
+  things the way it was done before.
 
   01 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> qcad-2.0.2.0.ebuild:
   Stable for x86 and ppc.
