@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-1.1.ebuild,v 1.13 2004/06/24 22:59:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-1.1.ebuild,v 1.14 2004/07/24 05:56:56 eradicator Exp $
 
 inherit eutils
 
@@ -12,10 +12,10 @@ S="${WORKDIR}/${PN}"
 IUSE=""
 KEYWORDS="x86 ppc ~sparc amd64"
 RDEPEND=">=media-libs/libsndfile-1.0.1
-	 >=sys-devel/libtool-1.4.1-r10
 	 !media-video/mpeg4ip"
 
 DEPEND="${RDEPEND}
+	>=sys-devel/libtool-1.4.1-r10
 	sys-devel/automake
 	sys-devel/autoconf"
 
