@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.26-r9.ebuild,v 1.1 2004/11/20 11:12:53 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.26-r10.ebuild,v 1.1 2004/11/27 19:29:08 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -44,6 +44,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}.XDRWrapFix.patch || die "Failed to apply the kNFSd XDR patch!"
 	epatch ${FILESDIR}/${P}.binfmt_elf.patch || die "Failed to apply the binfmt_elf patch!"
 	epatch ${FILESDIR}/${P}.smbfs.patch || die "Failed to apply the SMBFS patch!"
+	epatch ${FILESDIR}/${PN}.AF_UNIX.patch || die "Failed to apply the AF_UNIX patch!"
+	epatch ${FILESDIR}/${P}.binfmt_a.out.patch || die "Failed to apply the a.out patch!"
 
 	kernel_universal_unpack
 }
