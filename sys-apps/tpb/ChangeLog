@@ -1,0 +1,8 @@
+# ChangeLog for sys-apps/tpb
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpb/ChangeLog,v 1.1 2003/04/01 23:00:21 latexer Exp $
+
+*tpb-0.4.2 (01 Apr 2003)
+
+  01 Apr 2003; Peter Johanson <latexer@gentoo.org> tpb-0.4.2.ebuild:
+  Initial import.
