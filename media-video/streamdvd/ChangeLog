@@ -1,6 +1,9 @@
 # ChangeLog for media-video/streamdvd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/ChangeLog,v 1.10 2005/01/22 21:12:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/ChangeLog,v 1.11 2005/01/23 03:26:07 luckyduck Exp $
+
+  23 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> streamdvd-0.4-r1.ebuild:
+  replaced gui useflag with X useflag.
 
   22 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> streamdvd-0.4-r1.ebuild:
   added missing dependency and missing gui in IUSE. fixes #69664

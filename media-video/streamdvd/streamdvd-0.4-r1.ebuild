@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/streamdvd-0.4-r1.ebuild,v 1.7 2005/01/22 21:12:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/streamdvd-0.4-r1.ebuild,v 1.8 2005/01/23 03:26:07 luckyduck Exp $
 
 DESCRIPTION="fast tool to backup Video DVDs 'on the fly'"
 HOMEPAGE="http://www.badabum.de/streamdvd.html"
@@ -10,10 +10,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 
-IUSE="gui"
+IUSE="X"
 
 DEPEND="media-libs/libdvdread
-	gui? ( dev-perl/perl-tk
+	X? ( dev-perl/perl-tk
 	dev-perl/Tk-JPEG-Lite
 	virtual/cdrtools
 	>=media-video/dvdauthor-0.6.5
@@ -25,7 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S} || die
 	sed -i "s: -g -Wall : ${CFLAGS} :" Makefile
-	use gui && epatch "${FILESDIR}/${P}.patch"
+	use X && epatch "${FILESDIR}/${P}.patch"
 }
 
 src_compile() {
@@ -39,7 +39,7 @@ src_install() {
 	newdoc contrib/lsdvd/AUTHORS AUTHORS.lsdvd
 	newdoc contrib/lsdvd/README README.lsdvd
 	newdoc contrib/StreamAnalyze/README README.streamanalyze
-	if use gui
+	if use X
 	then
 		eval `perl '-V:installvendorlib'`
 		insinto "$installvendorlib/StreamDVD"
