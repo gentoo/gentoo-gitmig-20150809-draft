@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.2.ebuild,v 1.2 2003/05/20 18:57:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.2.ebuild,v 1.3 2003/06/11 01:48:34 msterret Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -21,6 +21,7 @@ RDEPEND="virtual/glibc
 	postgres? ( >=dev-db/postgresql-7.2 )
 	>=dev-tcltk/expect-5.33.0"
 DEPEND="${RDEPEND} 
+	>=sys-apps/sed-4
 	dev-lang/perl 
 	sys-apps/procps"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.1.ebuild,v 1.2 2003/05/20 18:57:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.1.ebuild,v 1.3 2003/06/11 01:48:34 msterret Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -20,7 +20,7 @@ RDEPEND="virtual/glibc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	tcltk? ( >=dev-tcltk/expect-5.33.0 )
 	postgres? ( >=dev-db/postgresql-7.2 )"
-DEPEND="${RDEPEND} dev-lang/perl sys-apps/procps"
+DEPEND="${RDEPEND} dev-lang/perl sys-apps/procps >=sys-apps/sed-4"
 
 inherit flag-o-matic
 filter-flags -funroll-loops
@@ -29,14 +29,14 @@ filter-flags -fomit-frame-pointer
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	
+
 	# explicitly use db3 over db4
 	if [ -n "`use berkdb`" ]; then
 		sed -i -e "s,-ldb,-ldb-3.2," configure
 		sed -i -e "s,-ldb,-ldb-3.2," bdbobj/configure
 		sed -i -e 's#s,@CFLAGS@,$CFLAGS,#s,@CFLAGS@,-I/usr/include/db3 $CFLAGS,#' bdbobj/configure
 	fi
-	
+
 }
 
 src_compile() {
@@ -126,7 +126,7 @@ src_install() {
 	do
 		mv ${x}.dist ${x}
 	done
-	
+
 	insinto /etc/courier-imap
 	doins ${FILESDIR}/authdaemond.conf
 
@@ -152,7 +152,7 @@ src_install() {
 	cd ..
 
 	rm -f ${D}/usr/sbin/mkimapdcert ${D}/usr/sbin/mkpop3dcert
-	exeinto /usr/sbin 
+	exeinto /usr/sbin
 		doexe ${FILESDIR}/mkimapdcert ${FILESDIR}/mkpop3dcert
 
  	exeinto /etc/init.d
