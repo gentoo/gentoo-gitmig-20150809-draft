@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e701f3c98c5235e5913261eef08e2d33 velocity-1.4.ebuild 1375
+MD5 9629a7d324bbc01072dc58d3aa48db8f ChangeLog 1924
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 efe7ab7e941302e37545e3db355d2df1 ChangeLog 1748
-MD5 42003eaddc7ef176dd6207754c360800 velocity-1.4.ebuild 1328
 MD5 ebc2b845ee1e201a404b4eceb168952a files/digest-velocity-1.4 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcVzP/rLF9B432nYRAld1AKCGDm+SdqAO5wN1FdNkDdR/Z+fSbACgmPBB
+yY19oyHUnIhsOLiRjrnBYjU=
+=3pDy
+-----END PGP SIGNATURE-----

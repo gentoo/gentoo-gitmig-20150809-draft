@@ -1,4 +1,14 @@
-MD5 39f3bbdd615e6bde414ef2d7701a135a ChangeLog 550
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 da488ffb738b21cc7bb4f5c58f940741 jacl-1.3.1.ebuild 864
+MD5 fd80060f352491b459ac8449bd623db2 ChangeLog 724
 MD5 971ccd4be3eb54aaadc4cd56fa3c5d3d metadata.xml 2052
-MD5 c60f5d25f6886176d313c1d785282d83 jacl-1.3.1.ebuild 853
 MD5 541ab414e62e7478e8e2354797196ea3 files/digest-jacl-1.3.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcVez/rLF9B432nYRArrgAJwJ5qWFelyq+89YxhFudmgrK+xiPACcCUev
+3WpOh07iPt+VnFYWWXfcsJQ=
+=gnCE
+-----END PGP SIGNATURE-----

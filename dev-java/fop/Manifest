@@ -1,4 +1,14 @@
-MD5 44e9ea94278a5e3e6588ce97c83dffab ChangeLog 877
-MD5 742e25b02457a9dbbfbaf54ac0d10f87 fop-0.20.5.ebuild 1107
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a2ada2c80f081c3e2775ff03d1ba35ae fop-0.20.5.ebuild 1113
+MD5 cf291eab83632da333f71b652ab423c0 ChangeLog 1045
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 198aedddc6ad08dbc64dec1545524d8d files/digest-fop-0.20.5 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcVam/rLF9B432nYRAgOJAJ9u638Bpz3v5Lv8IY5SMvUl8K+cRwCgtc4G
+FQtGG4FLbGHkgGveto22APc=
+=UZiB
+-----END PGP SIGNATURE-----

@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7c167e6561ec9d3bd490e65b77660437 jsch-0.1.17.ebuild 964
-MD5 b24245455cc4a88a08a354d8c62f7e3e jsch-0.1.16.ebuild 964
-MD5 fdb5f6821acc94ad7b59ff899ba3373e ChangeLog 2313
-MD5 77e0ab836c409c61c5de9829436c2509 jsch-0.1.15.ebuild 960
+MD5 696dfc587a0a017ea59b97b4049021d9 jsch-0.1.17.ebuild 973
+MD5 2e8eab63b6ab634cb74d764c3a4fce23 jsch-0.1.16.ebuild 973
+MD5 ad08c2c5537bbc6685acc3beecb4386a ChangeLog 2528
+MD5 9e8672759e129a93aa74db7aaf174163 jsch-0.1.15.ebuild 969
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 d5f449a0c2ef9fa25fce49d1258916d1 files/digest-jsch-0.1.15 60
 MD5 d08475096e782d87daa3748aa6ed4ebe files/digest-jsch-0.1.16 60
@@ -12,7 +12,7 @@ MD5 53d260d9dbe97b01d9c72f8d71748f1b files/digest-jsch-0.1.17 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBWYNF/rLF9B432nYRAlkVAKCEw2x0J22X//So8HwTAjwKPm3jNgCgltoC
-I9pDs50WhmuGXm6uc5tWyxE=
-=u+Q7
+iD8DBQFBcVnH/rLF9B432nYRAqBTAKCZKsQGLLDySi4XDFgExbgxtH/OCgCgqYjK
+xBWxzSuGSHHcwfhKqjgyebs=
+=32UV
 -----END PGP SIGNATURE-----

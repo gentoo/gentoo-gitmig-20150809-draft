@@ -1,4 +1,14 @@
-MD5 24ee890b524bf5b3eed8ef3a1a309c8c commons-jxpath-1.1.ebuild 1157
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d68b583f8f2252a8bfa9c3f5078c524d ChangeLog 703
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 b54a1b2f791fb9eb3fd3ae8a20b95d88 ChangeLog 521
+MD5 2b6d0bff1cf9c8bc9019de32aab42fe2 commons-jxpath-1.1.ebuild 1168
 MD5 6bee458c65c0dad2d6afd4bb6c5464d7 files/digest-commons-jxpath-1.1 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcVVH/rLF9B432nYRAkpOAKCGmi5e6FLJWuo9rOlVc9S1LvNiiwCgryN/
+Jzg73nckQ0SSunDRU2QT05U=
+=4Fah
+-----END PGP SIGNATURE-----

@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 431f359d54dcac668684f77756b2c4e0 jess-bin-6.1.6.ebuild 1154
-MD5 5550e3d1e99543b3e306c83454dfe58b ChangeLog 967
+MD5 b53a5bd0d423308133c704ac6f4bfafc jess-bin-6.1.6.ebuild 1163
+MD5 07c1cc080ce0d0ba9822919a9726d40c ChangeLog 1164
 MD5 84b61e4d0f951e3bc117b54985f19b31 metadata.xml 244
-MD5 ec558fbce600bce79415ec26adb8a739 jess-bin-6.1.7.ebuild 1159
+MD5 6484dbad050e0d83cbd480cd1b736c9e jess-bin-6.1.7.ebuild 1168
 MD5 54be6290010d7a83d2425c84936bac59 files/digest-jess-bin-6.1.6 57
 MD5 63c07a8d6539f938c75b94ae35e99bf8 files/digest-jess-bin-6.1.7 57
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBTwnH/rLF9B432nYRArIXAKDDZbH75Y34EYeD+PWJJ0vn2TZrlQCfccMN
-ew18cq0SB0/NB/N0prATKV0=
-=h9vv
+iD8DBQFBcVjl/rLF9B432nYRApfOAJwJxSg78uceVGJeC5mgfuswTLc2qgCfVoI2
+XoT1fWbBdo4DTsiOoG33jLI=
+=b7rJ
 -----END PGP SIGNATURE-----

@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 89412c50b51226d9c2c21c5693728b83 lucene-1.3-r1.ebuild 988
-MD5 da73b1fa8bf6683cb7e8e46d975782cc lucene-1.4.ebuild 1022
-MD5 41467b76d6475c7b49b49c30554caf68 lucene-1.3.ebuild 979
-MD5 d2f3b6f167455f836241f4c7a9f6e1c2 lucene-1.4.1.ebuild 1002
-MD5 0dabac5492582db861f37247a4a1d536 ChangeLog 974
+MD5 aedb24a0d3432ee8ab64e9814be91317 lucene-1.3-r1.ebuild 993
+MD5 bfca0729350adefd84b8d95b9bad1a28 lucene-1.4.ebuild 1031
+MD5 b1fdfd521cdb9c69ace19955f19db131 lucene-1.3.ebuild 984
+MD5 acc42bc8fbf963b0ab5679043898c168 lucene-1.4.1.ebuild 1011
+MD5 0584a6d5baa13073850cfb67624431ef ChangeLog 1211
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 549b80eb695d78b55dea8a631a0459a8 files/digest-lucene-1.3 72
 MD5 d330ca472f9e54660d9c2ec948ef4679 files/digest-lucene-1.4 72
@@ -14,7 +14,7 @@ MD5 549b80eb695d78b55dea8a631a0459a8 files/digest-lucene-1.3-r1 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBNJQO/rLF9B432nYRAv8qAJ98uJHXEd7SCxrEJewrrH5Hrj2sigCfaHxk
-2xvYvvfumm1r2bd67RhuLdk=
-=8mI3
+iD8DBQFBcVqL/rLF9B432nYRAvv1AJ4+OvLkez9Vxm68bfUUYwNYRQbmUACgv+5z
+XRcdcUBKaV3zknBG3gudr5U=
+=Hx82
 -----END PGP SIGNATURE-----

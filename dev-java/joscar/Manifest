@@ -1,4 +1,14 @@
-MD5 c3f5260f35ceee136a61235bd617a2d0 ChangeLog 536
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4e6e662dae1c861aaf1a4eb7d0c2788a ChangeLog 706
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 3e8cb21e15a84874840affe6f0e0c33f joscar-0.9.3.ebuild 879
+MD5 174b1dcb19154c67b784866fed94ba50 joscar-0.9.3.ebuild 884
 MD5 c523474a26544868dd1d0f5831aa7059 files/digest-joscar-0.9.3 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcVm0/rLF9B432nYRAmS5AJ9PDC5fupX4ezNG+MwkmWV6bffFegCeIbCn
+4URx+eZsnZOUf9ukVULS900=
+=vJLx
+-----END PGP SIGNATURE-----

@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 140d2c7b4cc00efb2a5f40e93da105c5 javacc-3.2-r3.ebuild 1364
-MD5 661cba0897b238f3524336693bdf5f26 javacc-3.2-r2.ebuild 1254
-MD5 b3051a30cdcd756c75360af013a36c22 ChangeLog 1505
+MD5 14e445187e82bb40d8ac662427598f94 javacc-3.2-r3.ebuild 1373
+MD5 4790fa2589c6ee9041152ddf7e3dcfe4 javacc-3.2-r2.ebuild 1265
+MD5 1e37572bfc7c0bad8f668d3eaa476417 ChangeLog 1704
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 34ffde7ed24a1315dbcba6b16557f644 files/jjdoc 127
 MD5 890206304fc74a131a30bb3f6140cfcb files/javacc-3.2 290
@@ -17,7 +17,7 @@ MD5 0254d70a0b74b6bdaf13ed190e83ce88 files/javacc.sh-3.2 400
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBOxUN/rLF9B432nYRAo/1AKCCVQ2SNuurTTaafKGjjHrX67IxOACgqMLQ
-gB7Ye6WRIClCQ54vCQYWpiM=
-=1NQX
+iD8DBQFBcVgm/rLF9B432nYRAkO+AJ9GmJBPjfRl1YNJwbFubCP9FOvHvgCgvOga
+etNemfpchPC5NNGnkT/AIf4=
+=AklB
 -----END PGP SIGNATURE-----

@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ed4ab2159f355224d1d9c0c3a0bcc2c0 antlr-2.7.3.ebuild 729
-MD5 4a731c8e1ba2afa9e3e3027a4e935904 antlr-2.7.4.ebuild 714
-MD5 0c51be5a736bda5cf335deef3e0bdb79 ChangeLog 3314
+MD5 082b88bed741d70c08e2baceb6aefde6 antlr-2.7.3.ebuild 738
+MD5 7f83ee9f9631e4cef012ed2c19a592e7 antlr-2.7.4.ebuild 723
+MD5 9c6dc0914b258aaabb894f5357b02995 ChangeLog 3537
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 021b7855447990ffc37500ffb64fb834 files/digest-antlr-2.7.3 64
 MD5 a2da49e52406fae792c6d38bdf980d0f files/digest-antlr-2.7.4 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBObxn/rLF9B432nYRAgRHAJ0ZorlzxHkwLIQC5CdqrnBJmKn48gCeMksz
-QYFBMYQWzddsnmXFPKODlNk=
-=MhQl
+iD8DBQFBcVMS/rLF9B432nYRAnGQAJ4gCkB3UssTZfK++0pUY9IMtRNYYgCdG+Ck
+3BiMObKiZWmOGPa/jq/nso0=
+=3Jkl
 -----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 f63f865d7cdf6d514f32d93510f4778a avalon-phoenix-4.0.4.ebuild 1293
-MD5 c91a90b220f0ea419de260a465c5b4a7 ChangeLog 731
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5ae66cf2f1322393ed8d98b81076c984 avalon-phoenix-4.0.4.ebuild 1356
+MD5 b531b016ce5990118dedaeac88332bbe ChangeLog 911
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 889e31dc9c371730f7fed7e481120835 files/digest-avalon-phoenix-4.0.4 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcVOv/rLF9B432nYRAqlWAJ9wls+VPtaF2EEMzhoer4AovjC9LQCfdiUt
+DQ8gOSts4vRiVokHZqzUFeE=
+=KvcZ
+-----END PGP SIGNATURE-----

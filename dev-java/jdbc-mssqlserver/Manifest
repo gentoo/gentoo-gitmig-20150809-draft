@@ -1,4 +1,14 @@
-MD5 089cb430b7377775b4aea66a123c7a55 ChangeLog 614
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 885c2ce5509219da67fc4a1c4eed5242 ChangeLog 799
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 cd6fb490e4a652321e57b7df8a2dc2a3 jdbc-mssqlserver-2.2.0029.ebuild 1039
+MD5 e57c6df4cb5546aca09590b1c207fdb7 jdbc-mssqlserver-2.2.0029.ebuild 1044
 MD5 e5f43f0911295336d8eac64f32dcb1be files/digest-jdbc-mssqlserver-2.2.0029 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcViY/rLF9B432nYRAsMXAJ4h6TbJ5AeYrdFp8UaRjejiORMIhwCgtewe
+Vo/qLmOLecwegNdDCQ8HwBs=
+=gVOt
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 0cef3c1616e60bbca1a80858d5f377dd edtftpj-1.4.2.ebuild 961
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7c0d1caca80b480fbc04c173c8c98895 edtftpj-1.4.2.ebuild 972
+MD5 941a1cb0e5d4a06642a4bb620ed58266 ChangeLog 964
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 85f0b3bb286073601eb4406fe02aa0f0 ChangeLog 787
 MD5 0b07888b20c8c4b8a979ab6bea9eabf8 files/digest-edtftpj-1.4.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcVZt/rLF9B432nYRAvulAJ9vv208T3+HucQyNudhXR5W2ZmAhgCgo1dw
+VnREhla/+dfy3BkCZGKWhbw=
+=te/L
+-----END PGP SIGNATURE-----

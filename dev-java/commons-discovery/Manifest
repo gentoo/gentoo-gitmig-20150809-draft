@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 eb0902f7da87275977fe6ee0d643b65f commons-discovery-0.2-r1.ebuild 1221
+MD5 f4338c6b66f16ea0115b5393366f3760 ChangeLog 1315
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 72796f9c4156af5f0601ccf573737ab4 commons-discovery-0.2-r1.ebuild 1210
-MD5 a03cc232ff04b4810c20a0affcc5e63f ChangeLog 1125
 MD5 c986a5b1efe7715c57da38bb9423ef86 files/digest-commons-discovery-0.2-r1 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcVUL/rLF9B432nYRAuGcAJ9KrKyiRAhcYnZsSz8KxZV2tbcquQCgjLoA
+a3HoD+8zHiKNaA49SbpiZfk=
+=eate
+-----END PGP SIGNATURE-----
