@@ -1,0 +1,82 @@
+--- usage_new.c	2002-07-13 03:01:57.000000000 -0700
++++ usage_new.c.new	2004-06-27 20:28:06.565095345 -0700
+@@ -1,44 +1,35 @@
+-char *usage_new = "
+-
+-     _________________________________________________________
+-
+-   Table of Contents
+-
+-   new [options] filename [template]
+-
+-   filename
+-          Filename of the file to create
+-
+-   -h, --help
+-          Print a list of options
+-
+-   -f, --force
+-          Overwrite any existing file
+-
+-   -l, --list
+-          List templates available for given filename
+-
+-   -m, --mapping path
+-          Use  tge  file  at path to provide additional key/value
+-          mappings
+-
+-   -g, --global
+-          Use global templates instead of personal ones
+-
+-   -t, --template path
+-          Use the file at path as template
+-
+-   -s, --set FOO=bar
+-          Set the key FOO to the value bar
+-
+-   -y, --type type
+-          Set  the  file's type and do not try to extract it from
+-          the filename
+-
+-   -p, --permissions octal
+-          Set the new file's permissions
+-
+-   template
+-          Name  of  the  template  to  use within global or local
+-          template dir
+-";
++char *usage_new =
++"   template-new [options] filename [template]\n"
++"     _________________________________________________________________\n"
++"   \n"
++"   filename\n"
++"          Filename of the file to create\n"
++"          \n"
++"   -h, --help\n"
++"          Print a list of options\n"
++"          \n"
++"   -f, --force\n"
++"          Overwrite any existing file\n"
++"          \n"
++"   -l, --list\n"
++"          List templates available for given filename\n"
++"          \n"
++"   -g, --global\n"
++"          Use global templates instead of personal ones\n"
++"          \n"
++"   -t, --template path\n"
++"          Use the file at path as template\n"
++"          \n"
++"   -s, --set FOO=bar\n"
++"          Set the key FOO to the value bar\n"
++"          \n"
++"   -y, --type type\n"
++"          Set the file's type and do not try to extract it from the\n"
++"          filename\n"
++"          \n"
++"   -p, --permissions octal\n"
++"          Set the new file's permissions\n"
++"          \n"
++"   template\n"
++"          Name of the template to use within global or local template dir\n"
++;
