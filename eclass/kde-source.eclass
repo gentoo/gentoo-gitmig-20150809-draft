@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.18 2003/07/17 14:55:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.19 2003/10/10 18:24:09 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -137,7 +137,7 @@ kde-source_src_unpack() {
 
 	# make sure we give them a clean cvs checkout
 	cd ${S}
-	[ -f "Makefile" ] && make -f Makefile.cvs cvs-clean
+	[ -f "admin/cvs-clean.pl" ] && make -f admin/Makefile.common cvs-clean
 	[ -f "config.cache" ] && rm config.cache
 
 }
