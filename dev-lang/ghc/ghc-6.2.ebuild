@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.ebuild,v 1.2 2003/12/19 11:31:31 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.ebuild,v 1.3 2003/12/22 09:15:50 kosmikus Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -51,7 +51,7 @@ DEPEND="virtual/ghc
 		>=app-text/sgml-common-0.6.3
 		=app-text/docbook-sgml-dtd-3.1-r1
 		>=app-text/docbook-dsssl-stylesheets-1.64
-		>=dev-haskell/haddock-0.6
+		>=dev-haskell/haddock-0.6-r2
 		tetex? ( >=app-text/tetex-1.0.7
 			>=app-text/jadetex-3.12 ) )
 	opengl? ( virtual/opengl
@@ -112,10 +112,14 @@ src_compile() {
 
 src_install () {
 	local mydoc
+	local insttarget
+
+	insttarget="install"
 
 	# determine what to do with documentation
 	if [ `use doc` ]; then
 		mydoc="html"
+		insttarget="${insttarget} install-docs"
 		if [ `use tetex` ]; then
 			mydoc="${mydoc} ps"
 		fi
@@ -126,7 +130,7 @@ src_install () {
 	fi
 	echo SGMLDocWays="${mydoc}" >> mk/build.mk
 
-	make install install-docs \
+	make ${insttarget} \
 		prefix="${D}/usr" \
 		datadir="${D}/usr/share/doc/${PF}" \
 		infodir="${D}/usr/share/info" \
