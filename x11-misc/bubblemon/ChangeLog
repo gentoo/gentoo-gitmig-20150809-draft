@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bubblemon
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/ChangeLog,v 1.12 2004/07/05 22:17:32 fvdpol Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/ChangeLog,v 1.13 2005/03/19 15:23:58 luckyduck Exp $
+
+  19 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> bubblemon-1.41.ebuild:
+  stable on amd64, fixes #85669
 
   06 Jul 2004; Frank van de Pol <fvdpol@gentoo.org> bubblemon-1.41.ebuild:
   Added ~amd64 keyword. Fixed IUSE="". Closes bug #56005.

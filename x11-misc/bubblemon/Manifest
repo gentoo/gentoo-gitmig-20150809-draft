@@ -1,6 +1,16 @@
-MD5 a7b51f35137b075c8a08934541d0e9f6 ChangeLog 1518
-MD5 43478a464480a53e517fe951ae5d638b bubblemon-1.4-r1.ebuild 772
-MD5 b19bdf2b7d8c98ebdd95911942526cc7 bubblemon-1.41.ebuild 781
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0c227519f4d54750bbdcd1aab35459f2 bubblemon-1.41.ebuild 783
+MD5 8f5674eaa347f969e6230075240fdef4 bubblemon-1.4-r1.ebuild 775
+MD5 0cfae3e735573b404abd04529b5cc69d ChangeLog 1629
 MD5 02ca957f8c970d5cd91927128ee317df metadata.xml 475
-MD5 0f82809bdd1bc977dc6e2ffe1d457575 files/digest-bubblemon-1.4-r1 72
 MD5 b50e3e4992fe4bf53cf08bc27e9e6a30 files/digest-bubblemon-1.41 73
+MD5 0f82809bdd1bc977dc6e2ffe1d457575 files/digest-bubblemon-1.4-r1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCPEQU06ebR+OMO78RAkaLAKCAPg0UTL+rWz73L2NY/Nqydx1kuwCeOOiV
+AmvChFsCK52vzWMKSpEvh5U=
+=THMq
+-----END PGP SIGNATURE-----
