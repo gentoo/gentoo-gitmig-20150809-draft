@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <phoenix@gentoo.org> (30 Aug 2002)
+# masked for testing
+=net-dialup/speedtouch-1.1
+
 # <seemant@gentoo.org> (30 Aug 2002)
 # masked for testing
 =sys-libs/readline-4.3
