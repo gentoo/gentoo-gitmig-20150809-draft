@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.2.0_rc1.ebuild,v 1.1 2004/01/19 04:06:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.2.0_rc1.ebuild,v 1.2 2004/01/20 18:02:26 caleb Exp $
 
 inherit kde
 need-kde ${PV}
-MY_PV=3.1.94
+MY_PV=3.1.95
 
 DESCRIPTION="KDE ${PV} - i18n: ${PN}"
 HOMEPAGE="http://www.kde.org/"
@@ -15,11 +15,9 @@ RESTRICT="nomirror"
 DEPEND="~kde-base/kdebase-${PV}
 	>=sys-apps/portage-2.0.49-r8"
 
-LANGS="af ar bg bs ca cs cy da de el en_GB eo es et eu fa fi fr
-he hr hu is it ja lt mn ms mt nb nl nn nso pl pt pt_BR ro ru
-se sl sr sv ta th tr uk uz ven wa xh zh_CN zh_TW zu"
-
-# sk removed due to compilation failures
+LANGS="az bg bs ca cs cy da de el en_GB es et eu fa fi fr gl
+he hi hu it mn ms mt nb nl nn pl pt pt_BR ro ru
+se sk sl sr sv ta tr uk uz zh_CN zh_TW"
 
 #
 # Define the LINGUAS environment variable to contain which language(s) you would
