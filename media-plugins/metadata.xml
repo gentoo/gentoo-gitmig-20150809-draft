@@ -6,8 +6,12 @@
 		applications.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie media-plugins enthält Plugins für verschiedene 
+		Die Kategorie media-plugins enthÃ¤lt Plugins fÃ¼r verschiedene 
 		Multimedia-Anwendungen.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría media-plugins contiene paquetes de extensión para varias
+		aplicaciones de media.
 	</longdescription>
 </catmetadata>
 
