@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/dc-gui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.19 2003/11/03 23:53:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.20 2004/01/11 01:58:36 vapier Exp $
+
+*dc-gui-0.79 (10 Jan 2004)
+
+  10 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + HOMEPAGE fix #37820.
 
 *dc-gui-0.77 (03 Nov 2003)
 

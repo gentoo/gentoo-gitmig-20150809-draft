@@ -1,24 +1,26 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.77.ebuild,v 1.1 2003/11/03 23:53:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.79.ebuild,v 1.1 2004/01/11 01:58:36 vapier Exp $
 
 MY_P=${PN/-/_}2-${PV}
-S=${WORKDIR}/${MY_P}
-DESCRIPTION="GUI for dctc (GTK2 version)"
-HOMEPAGE="http://ac2i.tzo.com/dctc/"
-SRC_URI="http://ac2i.tzo.com/dctc/${MY_P}.tar.gz"
+DESCRIPTION="GUI for dctc"
+HOMEPAGE="http://ac2i.homelinux.com/dctc/"
+SRC_URI="http://ac2i.homelinux.com/dctc/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE="nls"
 
 DEPEND="=dev-libs/glib-2*
 	=x11-libs/gtk+-2*
 	=gnome-base/libgnomeui-2*
 	>=sys-libs/db-3.2*
-	>=net-p2p/dctc-0.85.4"
-RDEPEND="nls? ( sys-devel/gettext )"
+	>=net-p2p/dctc-0.85.8"
+RDEPEND="${DEPEND}
+	nls? ( sys-devel/gettext )"
+
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
