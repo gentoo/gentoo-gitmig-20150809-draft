@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.80.ebuild,v 1.19 2004/07/02 08:41:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.80.ebuild,v 1.20 2004/07/15 03:34:45 agriffis Exp $
 
 inherit gnuconfig
 
@@ -19,7 +19,7 @@ RDEPEND="virtual/libc"
 
 src_compile() {
 	# Detect mips and uclibc systems properly
-	( use mips || use uclibc ) && gnuconfig_update
+	gnuconfig_update
 
 	local myconf=""
 	use nls || myconf="--disable-nls"
