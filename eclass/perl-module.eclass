@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.42 2003/06/18 14:16:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.43 2003/06/27 00:57:17 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -26,18 +26,31 @@ POD_DIR=""
 perl-module_src_prep() {
 
 	SRC_PREP="yes"
-	perl Makefile.PL ${myconf} \
-	PREFIX=${D}/usr
+	if [ "${style}" == "builder" ]; then
+		perl ${S}/Build.PL destdir=${D}
+	else
+		perl Makefile.PL ${myconf} \
+		PREFIX=${D}/usr
+	fi
+
 }
 
 perl-module_src_compile() {
 
 	[ "${SRC_PREP}" != "yes" ] && perl-module_src_prep
-	make ${mymake} || die "compilation failed"
+	if [ "${style}" != "builder" ]; then
+		make ${mymake} || die "compilation failed"
+	fi
+
 }
 
 perl-module_src_test() {
-	make test
+	if [ "${style}" == "builder" ]; then
+		perl ${S}/Build  test
+	else
+		make test
+	fi
+
 }
 
 perl-module_src_install() {
@@ -51,7 +64,9 @@ perl-module_src_install() {
 	eval `perl '-V:installarchlib'`
 	ARCH_LIB=${installarchlib}
 					 
-	
+	if [ "${style}" == "builder" ]; then
+		perl ${S}/Build install
+	else
 	make \
 		PREFIX=${D}/usr \
 		INSTALLMAN1DIR=${D}/usr/share/man/man1 \
@@ -74,7 +89,7 @@ perl-module_src_install() {
 		INSTALLSCRIPT=${D}/usr/bin \
 		${myinst} \
 		${mytargets} || die
-
+	fi
 
 	if [ -f ${D}${ARCH_LIB}/perllocal.pod ];
 	then
@@ -158,10 +173,5 @@ updatepod() {
 		   cat ${FILE} >> ${SITE_LIB}/perllocal.pod
 		   rm -f ${FILE}
 		done
-				   
-		#cat ${POD_DIR}/*.pod.arch >> ${ARCH_LIB}/perllocal.pod
-		#cat ${POD_DIR}/*.pod.site >> ${SITE_LIB}/perllocal.pod
-		#rm -f ${POD_DIR}/*.pod.site
-		#rm -f ${POD_DIR}/*.pod.site
 	fi
 }
