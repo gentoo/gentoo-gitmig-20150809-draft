@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>gnustep</herd>
+<longdescription>
+The frameworks in ImageKits
+
+PDFKit
+PDFKit is a framework to support the rendering of PDF content in GNUstep applications. This is achieved by providing a PDF implementation of NSImageRep, called PDFImageRep. This approach should integrate well with the concepts of the GNUstep framework. With the release of ImageKits 0.6, PDFImageRep has been dramatically improved, mostly due to a new release of xpdf (see below) on which PDFKit is based. Ghostscript based rendering is not supported any more since PDFImageRep does this job now very well (and much faster). When rendering PDF content, PDFKit does not use the fonts from GNUstep. Instead, it uses some standard URW fonts that are included in the ImageKits distribution. These fonts are part of the PDFKit framework and thus will be installed when PDFKit/ImageKits is installed. You will not notice the fonts in the FontPanel or somewhere else, they are inside the PDFKit framework.
+
+PDFKit provides some more nice features including an outline for PDF documents (if the document has one), searching in documents and getting the text in a particular area on a particular page.
+
+PDFKit is based on xpdf, i would like to thank the author for the great work. Without xpdf, PDFKit wouldn't be there where it is today. xpdf is licensed under GPL 2, for more informations see the corresponding files in the xpdf directory in the PDFKit distribution.
+
+GuiImageKit
+This goal of this framework is to provide a pool for gui components that are used in ImageApps and may be of interest for other applications as well. Currently, it contains a PageLayoutPanel that allows the user to adjust the size and orientation of a document via a comfortable panel. Note that this panel is intended to be moved to the GNUstep core framework. After this has been done, GuiImageKit is empty :-( and wait's for components that want to stay inside this framework. 
+</longdescription>
+</pkgmetadata>
