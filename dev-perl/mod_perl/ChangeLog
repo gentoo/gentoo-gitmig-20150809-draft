@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/mod_perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.24 2003/07/12 10:49:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.25 2003/10/15 06:22:23 rac Exp $
+
+*mod_perl-1.27-r4 (14 Oct 2003)
+
+  14 Oct 2003; <rac@gentoo.org> mod_perl-1.27-r4.ebuild:
+  sed-fu to fix deprecated use of tail -1 in a couple of places, solves build
+  problems on machines with new coreutils, including the amd64 port
 
 *mod_perl-1.27-r1 (24 Jun 2003)
  
