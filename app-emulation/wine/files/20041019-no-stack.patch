@@ -1,0 +1,9 @@
+--- loader/Makefile.in.orig	2004-10-27 21:26:15.663148264 -0400
++++ loader/Makefile.in	2004-10-27 21:27:44.434652944 -0400
+@@ -55,3 +55,6 @@
+ 	$(RM) $(WINE_BINARIES) $(MODULE)
+ 
+ ### Dependencies:
++
++preloader.o:
++	$(CC) -c  -fno-pic -fno-stack-protector $(ALLCFLAGS) -o $@ preloader.c

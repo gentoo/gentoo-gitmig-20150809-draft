@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.79 2004/10/27 19:51:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.80 2004/10/28 01:35:14 vapier Exp $
+
+  27 Oct 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/20041019-no-stack.patch, wine-20041019-r1.ebuild,
+  wine-20041019.ebuild:
+  Filter stack-protector flags on the preloader binary #66002 by vyp08.
 
 *wine-20041019-r1 (27 Oct 2004)
 
