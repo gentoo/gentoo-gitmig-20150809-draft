@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/subterfugue/subterfugue-0.2.1a.ebuild,v 1.3 2003/09/07 01:02:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/subterfugue/subterfugue-0.2.1a.ebuild,v 1.4 2003/10/02 14:43:45 liquidx Exp $
 
 inherit distutils
 
@@ -25,6 +25,8 @@ src_unpack() {
 	# custom gentoo setup.py to get around <=python-2.1 requirement
 	# - <liquidx@gentoo.org>
 	cp ${FILESDIR}/${P}-setup.py ${S}/setup.py || die "copying custom setup.py failed"
+	# patch for gcc33 - liquidx@gentoo.org
+	EPATCH_OPTS="-d ${S}/modules" epatch ${FILESDIR}/${P}-gcc33.patch
 }
 
 src_compile() {
