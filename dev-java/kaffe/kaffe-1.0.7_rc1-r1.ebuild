@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.0.7_rc1.ebuild,v 1.1 2002/06/25 01:34:33 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.0.7_rc1-r1.ebuild,v 1.1 2002/07/27 00:53:56 karltk Exp $
 
 . /usr/portage/eclass/inherit.eclass
 inherit java
@@ -13,9 +13,11 @@ DEPEND=">=dev-libs/gmp-3.1
         >=media-libs/jpeg-6b
         >=media-libs/libpng-1.2.1
 	virtual/glibc
-	virtual/x11"
+	virtual/x11
+	>=dev-java/java-config-0.2.4"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A}

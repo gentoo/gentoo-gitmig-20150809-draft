@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.0.6-r3.ebuild,v 1.2 2002/07/11 06:30:19 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.0.6-r3.ebuild,v 1.3 2002/07/27 00:53:56 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A cleanroom, open source Java VM and class libraries"
@@ -13,6 +13,8 @@ DEPEND=">=dev-libs/gmp-3.1
 	virtual/glibc
 	virtual/x11"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A}
