@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.26 2003/11/14 04:37:16 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.27 2003/11/15 08:54:52 seemant Exp $
 
   13 Nov 2003; Brad House <brad_mssw@gentoo.org> gettext-0.12.1.ebuild:
   take ~amd64 flag off gettext-0.12.1. It detects
@@ -14,7 +14,8 @@
   gettext-0.11.3-r1.ebuild, gettext-0.12.1.ebuild,
   files/gettext-0.10.38-gentoo.diff:
   Added a patch to kill the C++ checks during the configure stage, for
-  bootstrapping
+  bootstrapping, closes bug #25080 by: Harald Schioeberg
+  <schioebe@net.in.tum.de>
 
   02 Nov 2003; Aron Griffis <agriffis@gentoo.org> gettext-0.11.5-r1.ebuild:
   Repair compilation on alpha when compaq-jdk/jre is installed
