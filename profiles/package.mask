@@ -104,12 +104,6 @@ dev-libs/commoncpp2
 =x11-themes/ksplash-ml-themes-20020705-r1
 =x11-misc/ksplash-ml-0.95.2-r1
 
-# <bcowan@gentoo.org> (01 Oct 2002)
-# mask updated version of sylpheed for testing
-=net-mail/sylpheed-0.8.4
-# (03 Oct 2002)
-=net-mail/sylpheed-0.8.5
-
 # <spider@gentoo.org> (01 Oct 2002)
 # Masking since its a versionbump as well as fix.
 # hopefully this fixes the "cannot find gdk-poxbuf bugs
