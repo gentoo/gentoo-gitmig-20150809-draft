@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.8.0.ebuild,v 1.1 2005/02/10 11:58:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.8.0.ebuild,v 1.2 2005/03/05 13:24:58 usata Exp $
 
 DESCRIPTION="Qt immodules input method framework plugin for SCIM"
 HOMEPAGE="http://scim.freedesktop.org/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="nls"
 
 DEPEND=">=app-i18n/scim-1.1
