@@ -1,8 +1,14 @@
 # ChangeLog for sys-apps/memtest86
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.5 2002/09/24 23:35:05 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.6 2002/09/25 15:04:24 mkennedy Exp $
 
 *memtest86-3.0 (03 Jun 2002)
+
+  25 Sep 2002; Matthew Kennedy <mkennedy@gentoo.org> :
+  memtest86-3.0.ebuild :
+
+  Applied hanno's ebuild from
+  http://bugs.gentoo.org/show_bug.cgi?id=4088 to fix my bad.
 
   24 Sep 2002; Matthew Kennedy <mkennedy@gentoo.org> :
 

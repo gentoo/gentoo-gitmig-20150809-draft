@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.0.ebuild,v 1.7 2002/09/25 15:04:24 mkennedy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A stand alone memory test for x86 computers"
-SRC_URI="http://www.teresaudio.com/memtest86/${P}.tar.gz"
-HOMEPAGE="http://www.teresaudio.com/memtest86/"
+SRC_URI="http://www.memtest86.com/${P}.tar.gz"
+HOMEPAGE="http://www.memtest86.com/"
 KEYWORDS="x86 -ppc -sparc -sparc64"
 LICENSE="GPL-2"
 SLOT="0"
@@ -38,7 +39,7 @@ src_unpack() {
 }
 
 src_compile() {
-	make CCFLAGS='-Wall -fomit-frame-pointer -fno-builtin' || die
+	make || die
 }
 
 src_install() {
