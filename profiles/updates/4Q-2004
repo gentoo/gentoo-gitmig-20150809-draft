@@ -250,3 +250,4 @@ move app-sci/gempak sci-geosciences/gempak
 move app-sci/gmt sci-geosciences/gmt
 move app-sci/vis5d+ sci-geosciences/vis5d+
 move app-misc/grass sci-geosciences/grass
+move dev-libs/libticables sci-libs/libticables
