@@ -14,6 +14,7 @@ LICENSE="Artistic"
 IUSE="apache2 mysql"
 DEPEND="dev-lang/perl
 	dev-perl/GD
+	dev-perl/DBI
 	mysql? ( dev-db/mysql )"
 DOCS="ChangeLog COPYING README* doc/*"
 
