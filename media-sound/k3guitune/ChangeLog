@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/k3guitune
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/ChangeLog,v 1.1 2004/08/05 18:55:05 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/ChangeLog,v 1.2 2004/08/09 01:50:15 pkdawson Exp $
+
+  08 Aug 2004; Patrick Dawson <pkdawson@gentoo.org> k3guitune-0.4.ebuild:
+  Changed `` to $(). This is a purely stylistic change to the ebuild.
 
 *k3guitune-0.4 (05 Aug 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-0.4.ebuild,v 1.1 2004/08/05 18:55:05 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-0.4.ebuild,v 1.2 2004/08/09 01:50:15 pkdawson Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND=">=kde-base/kdelibs-3
 
 src_compile() {
 	local myconf
-	myconf="`use_enable alsa` `use_enable arts` `use_enable oss`"
+	myconf="$(use_enable alsa) $(use_enable arts) $(use_enable oss)"
 	econf ${myconf} || die
 	emake || die
 }
@@ -27,4 +27,3 @@ src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
 }
-
