@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_beta-r1.ebuild,v 1.8 2004/04/26 15:33:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_beta-r1.ebuild,v 1.9 2004/05/07 19:32:30 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama"
 # Internal USE flags that I do not really want to advertise ...
@@ -96,7 +96,7 @@ RDEPEND="virtual/x11
 	java?  ( virtual/jre )
 	crypt? ( !moznomail? ( >=app-crypt/gnupg-1.2.1 ) )
 	gnome? ( >=gnome-base/gnome-vfs-2.3.5 )
-	net-www/mozilla-launcher"
+	>=net-www/mozilla-launcher-1.7-r1"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -455,7 +455,7 @@ src_install() {
 	cd ${S}
 
 	dodir /usr/bin
-	dosym mozilla-launcher /usr/bin/mozilla
+	dosym /usr/libexec/mozilla-launcher /usr/bin/mozilla
 	insinto /etc/env.d
 	doins ${FILESDIR}/10mozilla
 	dodoc LEGAL LICENSE README/mozilla/README*

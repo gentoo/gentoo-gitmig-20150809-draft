@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc1-r1.ebuild,v 1.4 2004/05/03 02:58:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc1-r1.ebuild,v 1.5 2004/05/07 19:32:30 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
@@ -13,21 +13,18 @@ inherit flag-o-matic gcc eutils nsplugins
 EMVER="0.83.6"
 IPCVER="1.0.5"
 
-PATCH_VER="1.0"
-
 # handle _rc versions
 MY_PV=${PV/_alpha/a} 	# handle alpha
 MY_PV=${MY_PV/_beta/b}	# handle beta
 MY_PV=${MY_PV/_rc/rc}	# handle rc
-S="${WORKDIR}/mozilla"
+
 DESCRIPTION="The Mozilla Web Browser"
+HOMEPAGE="http://www.mozilla.org"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV}/src/${PN}-source-${MY_PV}.tar.bz2
 	crypt? ( !moznomail? (
 		http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
 		http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz
 	) )"
-#	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
-HOMEPAGE="http://www.mozilla.org"
 
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
 SLOT="0"
@@ -55,12 +52,14 @@ RDEPEND="virtual/x11
 	java?  ( virtual/jre )
 	crypt? ( !moznomail ( >=app-crypt/gnupg-1.2.1 ) )
 	gnome? ( >=gnome-base/gnome-vfs-2.3.5 )
-	>=net-www/mozilla-launcher-1.5"
+	>=net-www/mozilla-launcher-1.7-r1"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-lang/perl
 	java? ( >=dev-java/java-config-0.2.0 )"
+
+S="${WORKDIR}/mozilla"
 
 moz_setup() {
 	# Set MAKEOPTS to have proper -j? option ..
@@ -79,8 +78,7 @@ moz_setup() {
 src_unpack() {
 	moz_setup
 
-	unpack ${A}
-
+	unpack ${A} || die "unpack failed"
 	cd ${S} || die
 
 	if [[ $(gcc-major-version) -eq 3 ]]; then
@@ -243,16 +241,16 @@ src_compile() {
 
 	# Set optimization level based on CFLAGS
 	if is-flag -O0; then
-		ENABLE_OPTIMIZE=-O0
+		enable_optimize=-O0
 	elif [[ ${ARCH} == alpha || ${ARCH} == amd64 || ${ARCH} == ia64 ]]; then
 		# Anything more than this causes segfaults on startup on 64-bit
 		# (bug 33767)
-		ENABLE_OPTIMIZE=-O1
+		enable_optimize=-O1
 		append-flags -fPIC
 	elif is-flag -O1; then
-		ENABLE_OPTIMIZE=-O1
+		enable_optimize=-O1
 	else
-		ENABLE_OPTIMIZE=-O2
+		enable_optimize=-O2
 	fi
 
 	# Now strip optimization from CFLAGS so it doesn't end up in the
@@ -320,7 +318,11 @@ src_compile() {
 
 	cd ${S}
 	einfo "Configuring Mozilla..."
-	./configure --prefix=/usr/lib/mozilla \
+	econf \
+		--with-system-jpeg \
+		--with-system-mng \
+		--with-system-png \
+		--with-system-zlib \
 		$(use_enable gnome gnomevfs) \
 		$(use_enable ipv6) \
 		$(use_enable ldap) \
@@ -332,11 +334,10 @@ src_compile() {
 		--enable-mathml \
 		--without-system-nspr \
 		--enable-nspr-autoconf \
-		--with-system-zlib \
 		--enable-xsl \
 		--enable-crypto \
 		--enable-extensions="${myext}" \
-		--enable-optimize="${ENABLE_OPTIMIZE}" \
+		--enable-optimize="${enable_optimize}" \
 		--with-default-mozilla-five-home=/usr/lib/mozilla \
 		${myconf} || die
 
@@ -450,7 +451,7 @@ src_install() {
 	cd ${S}
 
 	dodir /usr/bin
-	dosym mozilla-launcher /usr/bin/mozilla
+	dosym /usr/libexec/mozilla-launcher /usr/bin/mozilla
 	insinto /etc/env.d
 	doins ${FILESDIR}/10mozilla
 	dodoc LEGAL LICENSE README/mozilla/README*
@@ -534,12 +535,6 @@ pkg_postinst() {
 
 	# Fix permissions on chrome files
 	find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec chmod 0644 {} \; || :
-
-	echo
-	ewarn "Please unmerge old versions of mozilla, as the header"
-	ewarn "layout in /usr/lib/mozilla/include have changed and will"
-	ewarn "result in compile errors when compiling programs that need"
-	ewarn "mozilla headers and libs (galeon, nautilus, ...)"
 }
 
 pkg_postrm() {
@@ -556,4 +551,3 @@ pkg_postrm() {
 		fi
 	fi
 }
-

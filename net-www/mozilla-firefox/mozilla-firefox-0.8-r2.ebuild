@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r2.ebuild,v 1.5 2004/04/16 17:33:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r2.ebuild,v 1.6 2004/05/07 19:31:30 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -28,7 +28,7 @@ RDEPEND="virtual/x11
 	gtk2?  ( >=x11-libs/gtk+-2.1.1 >=dev-libs/libIDL-0.8.0 )
 	!gtk2? ( =x11-libs/gtk+-1.2* >=gnome-base/ORBit-0.5.10-r1 )
 	java?  ( virtual/jre )
-	net-www/mozilla-launcher
+	>=net-www/mozilla-launcher-1.7-r1
 	!net-www/mozilla-firefox-bin"
 
 DEPEND="${RDEPEND}
@@ -214,7 +214,7 @@ src_install() {
 	src_mv_plugins /usr/lib/MozillaFirefox/plugins
 
 	dodir /usr/bin
-	dosym mozilla-launcher /usr/bin/firefox
+	dosym /usr/libexec/mozilla-launcher /usr/bin/firefox
 	insinto /etc/env.d
 	doins ${FILESDIR}/10MozillaFirefox
 
