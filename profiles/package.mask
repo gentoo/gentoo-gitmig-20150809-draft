@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <mkennedy@gentoo.org> (14 Dec 2002)
+# needs to be assimilated with app-emacs/psgml
+app-text/psgml
+
 # <blizzy@gentoo.org> (10 Dec 2002)
 # masked for intensive testing
 =net-misc/rsync-2.5.6_pre20021105
