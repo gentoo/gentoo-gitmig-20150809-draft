@@ -244,9 +244,17 @@ net-mail/sendmail
 <app-text/pspell-0.12
 <app-text/aspell-0.33
 >=sys-libs/readline-4.2
->=sys-devel/automake-1.5
 >=app-text/ghostscript-7
->=sys-devel/autoconf-2.50
+
+# Unmask these two, as the latest (automake-1.6-r1 and autoconf-2.53)
+# should do some autodetection magic.
+#
+# Azarah (26/03/2002)
+#
+#>=sys-devel/automake-1.5
+#>=sys-devel/autoconf-2.50
+<sys-devel/automake-1.6-r1
+<sys-devel/autoconf-2.53
 
 # broken
 app-admin/powertweak
