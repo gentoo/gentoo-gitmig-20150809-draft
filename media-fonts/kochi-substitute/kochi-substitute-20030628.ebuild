@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/kochi-substitute-20030626.ebuild,v 1.2 2003/06/30 14:08:28 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/kochi-substitute-20030628.ebuild,v 1.1 2003/06/30 14:08:28 yakina Exp $
 
 IUSE="X"
 
@@ -27,7 +27,12 @@ src_install () {
 	dosym kochi-gothic-subst.ttf ${FONT_PATH}/kochi-gothic.ttf
 	dosym kochi-mincho-subst.ttf ${FONT_PATH}/kochi-mincho.ttf
 
-	dodoc README.ja COPYING
+	dodoc README.ja COPYING docs/README
+	cd docs
+	for d in kappa20 k14goth ayu20gothic wadalab shinonome* naga10; do
+		docinto $d
+		dodoc $d/*
+	done
 }
 
 rebuild_fontfiles() {
