@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.46 2003/01/05 05:16:56 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.47 2003/01/16 15:26:52 foser Exp $
+
+  16 Jan 2003; foser <foser@gentoo.org> gtk+-2.2.0.ebuild :
+  Added some info about rebuilding gtk theme engines after an emerge
 
   04 Jan 2003; Rodney Rees <manson@gentoo.org> gtk+-2.0.6-r3.ebuild :
   changed ~sparc to sparc
