@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.76-r1.ebuild,v 1.1 2005/03/12 15:00:11 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.76-r1.ebuild,v 1.2 2005/03/12 15:10:23 luckyduck Exp $
 
 inherit eutils
 
-IUSE="nas nls esd opengl doc oss gtk oggvorbis alsa jack mikmod flac"
+IUSE="nas nls esd opengl doc oss gtk ogg oggvorbis alsa jack mikmod flac xosd"
 
 DESCRIPTION="Media player primarily utilising ALSA"
 HOMEPAGE="http://www.alsaplayer.org/"
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-1.2.10
 	flac? ( media-libs/flac )
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
 	opengl? ( virtual/opengl )
-	vorbis? ( media-libs/libvorbis )
+	oggvorbis? ( media-libs/libvorbis )
 	ogg? ( media-libs/libogg )
 	xosd? ( x11-libs/xosd )"
 
@@ -41,14 +41,19 @@ src_unpack() {
 }
 
 src_compile() {
+	export CPPFLAGS="${CPPFLAGS} -I/usr/X11R6/include"
+
 	use xosd ||
 		export ac_cv_lib_xosd_xosd_create="no"
 
 	use doc ||
 		export ac_cv_prog_HAVE_DOXYGEN="false"
 
-	if ! use ogg && use vorbis; then
-		die "To enable vorbis you must enable also ogg."
+	if ! use ogg && use oggvorbis; then
+		ewarn
+		ewarn "To enable oggvorbis you must enable also ogg."
+		ewarn
+		die "To enable oggvorbis you must enable also ogg."
 	fi
 
 	if use ogg && use flac; then
@@ -61,7 +66,7 @@ src_compile() {
 		$(use_enable opengl) \
 		$(use_enable nls) \
 		$(use_enable sparc) \
-		$(use_enable vorbis oggvorbis) \
+		$(use_enable oggvorbis) \
 		$(use_enable esd) \
 		$(use_enable gtk) \
 		$(use_enable jack) \

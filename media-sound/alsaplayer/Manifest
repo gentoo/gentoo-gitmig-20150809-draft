@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c8a8374f76b1e15270d8e67ca4bbbd5d alsaplayer-0.99.76-r1.ebuild 1993
+MD5 86c341e83cb83feea8e9e5442804a700 alsaplayer-0.99.76-r1.ebuild 2129
 MD5 d41e2deaa8aef46712f1ede969a217d4 alsaplayer-0.99.75-r1.ebuild 2285
 MD5 fecbec475efa4c387b612ac2a311e2b1 ChangeLog 5422
 MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
@@ -14,7 +14,7 @@ MD5 5c35a3140250067b9e24fea110bde6c4 files/gcc.patch 805
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCMwQI06ebR+OMO78RAqUQAKCMlXIdKLlKFWSP8v1fxFCrOTMofACfVqrh
-6gYtwCl9YbMddE29QPXru7o=
-=fIIn
+iD8DBQFCMwZl06ebR+OMO78RAvzHAJsGpQfB7I4D3lOhIbSC9FJXzgeF3ACdE4qs
+zTGJoFpfCfU9SgVl5G6Knuc=
+=MCym
 -----END PGP SIGNATURE-----
