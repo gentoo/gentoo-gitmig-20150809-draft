@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.4 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eclipse-ext.eclass,v 1.5 2004/06/28 12:29:00 karltk Exp $
 
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
@@ -53,8 +53,8 @@ function eclipse-ext_create-ext-layout {
 	local type=$1
 	if [ "${type}" == "binary" ] ; then
 		eclipse_ext_basedir="/opt/eclipse-extensions-${eclipse_ext_slot}/eclipse"
-		dodir ${eclipse_ext_basedir}/eclipse/{features,plugins}
-		touch ${D}/${eclipse_ext_basedir}/eclipse/.eclipseextension
+		dodir ${eclipse_ext_basedir}/{features,plugins}
+		touch ${D}/${eclipse_ext_basedir}/.eclipseextension
 	else
 		eclipse_ext_basedir="/usr/lib/eclipse-${eclipse_ext_slot}"
 		dodir ${eclipse_ext_basedir}/{features,plugins}
