@@ -1,16 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.6.ebuild,v 1.2 2003/08/06 13:30:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.6.5.ebuild,v 1.1 2003/12/07 23:34:25 hanno Exp $
 
-# Kino 0.6 is newer than 0.51, but portage cannot handle this
-MY_PV="0.6"
-DESCRIPTION="kino is a digital video editor for linux"
+DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://kino.schirmacher.de/"
-SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}-1.tar.gz"
-
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+IUSE="quicktime"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND="x11-libs/gtk+
 	dev-libs/glib
@@ -21,18 +19,20 @@ DEPEND="x11-libs/gtk+
 	media-sound/esound
 	sys-libs/libraw1394
 	sys-libs/libavc1394
-	media-libs/libdv"
-
-S=${WORKDIR}/${PN}-${MY_PV}
+	media-libs/libdv
+	quicktime? ( virtual/quicktime )"
 
 src_compile() {
-	./configure \
+	local myconf
+	use quicktime && myconf="--with-quicktime"
+
+	./configure ${myconf} \
 		--host=${CHOST} \
 		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		--disable-dependency-tracking \
-		--disable-debug || die "./configure failed"
+		--disable-debug || die
 
 	emake || die
 }
