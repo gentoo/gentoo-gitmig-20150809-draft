@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.0f-r1.ebuild,v 1.2 2000/08/16 04:38:31 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.0f-r1.ebuild,v 1.3 2000/08/21 05:39:46 achim Exp $
 
 P=textutils-2.0f
 A=${P}.tar.gz
@@ -21,6 +21,8 @@ src_unpack() {
     cd ${S}/src
     mv tr.c tr.c.orig
     sed -e "234d" tr.c.orig > tr.c
+#    cp sys2.h sys2.h.orig
+#    sed -e "s:^char \*strndup://:" sys2.h.orig > sys2.h
 }
 
 src_install() {                               

@@ -1,13 +1,21 @@
+
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0j-r1.ebuild,v 1.2 2000/08/16 04:38:30 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0j-r1.ebuild,v 1.3 2000/08/21 05:39:46 achim Exp $
 
 P=sh-utils-2.0j
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Your standard GNU shell utilities"
 SRC_URI="ftp://alpha.gnu.org/gnu/fetish/${A}"
+
+src_unpack() {
+  unpack ${A}
+#  cd ${S}/src
+#  cp sys2.h sys2.h.orig
+#  sed -e "s:^char \*strndup://:" sys2.h.orig > sys2.h
+}
 
 src_compile() {                           
 	./configure --host=${CHOST} --prefix=/usr \
