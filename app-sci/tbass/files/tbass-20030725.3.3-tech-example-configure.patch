@@ -1,0 +1,37 @@
+*** balsa-tech-example-3.3/configure.old	Mon Jul 21 21:51:29 2003
+--- balsa-tech-example-3.3/configure	Mon Jul 21 21:53:44 2003
+***************
+*** 1610,1625 ****
+  fi
+  
+  
+! if test ${BALSA_CONFIG}; then :
+! else
+! 	{ { echo "$as_me:$LINENO: error: cannot find required balsa-config, install Balsa and add it to your path" >&5
+! echo "$as_me: error: cannot find required balsa-config, install Balsa and add it to your path" >&2;}
+!    { (exit 1); exit 1; }; }
+! fi
+  
+  echo "$as_me:$LINENO: checking installed Balsa directory" >&5
+  echo $ECHO_N "checking installed Balsa directory... $ECHO_C" >&6
+! ac_default_prefix=`${BALSA_CONFIG} -d`
+  prefix=${ac_default_prefix}
+  echo "$as_me:$LINENO: result: ${ac_default_prefix}" >&5
+  echo "${ECHO_T}${ac_default_prefix}" >&6
+--- 1610,1625 ----
+  fi
+  
+  
+! #if test ${BALSA_CONFIG}; then :
+! #else
+! #	{ { echo "$as_me:$LINENO: error: cannot find required balsa-config, install Balsa and add it to your path" >&5
+! #echo "$as_me: error: cannot find required balsa-config, install Balsa and add it to your path" >&2;}
+! #   { (exit 1); exit 1; }; }
+! #fi
+  
+  echo "$as_me:$LINENO: checking installed Balsa directory" >&5
+  echo $ECHO_N "checking installed Balsa directory... $ECHO_C" >&6
+! ac_default_prefix=/usr
+  prefix=${ac_default_prefix}
+  echo "$as_me:$LINENO: result: ${ac_default_prefix}" >&5
+  echo "${ECHO_T}${ac_default_prefix}" >&6
