@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.78 2003/10/27 11:31:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.79 2003/12/05 21:07:31 robbat2 Exp $
+
+  05 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> mysql-3.23.52-r1.ebuild,
+  mysql-3.23.56.ebuild, mysql-3.23.57-r1.ebuild, mysql-3.23.57.ebuild,
+  mysql-4.0.12.ebuild, mysql-4.0.13-r4.ebuild, mysql-4.0.14-r1.ebuild,
+  mysql-4.0.14-r2.ebuild, mysql-4.0.14.ebuild:
+  fix all chown calls as per bug #35127
 
   27 Oct 2003; Martin Holzer <mholzer@gentoo.org> metadata.xml,
   mysql-4.0.13-r4.ebuild, mysql-4.0.14-r1.ebuild, mysql-4.0.14-r2.ebuild,

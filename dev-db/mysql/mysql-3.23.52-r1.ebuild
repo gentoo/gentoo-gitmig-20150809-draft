@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.15 2003/08/03 02:03:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.16 2003/12/05 21:07:31 robbat2 Exp $
 
 SVER=${PV%.*}
 #normal releases:
@@ -161,7 +161,7 @@ pkg_postinst() {
 
 	# secure the logfiles... does this bother anybody?
 	touch ${ROOT}/var/log/mysql/mysql.{log,err}
-	chown mysql.mysql ${ROOT}/var/log/mysql/mysql.{log,err}
+	chown mysql:mysql ${ROOT}/var/log/mysql/mysql.{log,err}
 	chmod 0660 ${ROOT}/var/log/mysql/mysql.{log,err}
 
 	# your friendly public service announcement...
