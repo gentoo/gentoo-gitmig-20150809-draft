@@ -11,12 +11,12 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND=">=xfree-4.2.0-r9
-        >=ttmkfdir-0.0-r1"
+	>=ttmkfdir-0.0-r1"
 
 SRC_PATH="http://www.on.cs.keio.ac.jp/~yasu/linux/fonts"
 
 SRC_URI="${SRC_PATH}/kochi-gothic-${PV}.tar.bz2
-         ${SRC_PATH}/kochi-mincho-${PV}.tar.bz2"
+	 ${SRC_PATH}/kochi-mincho-${PV}.tar.bz2"
 
 src_unpack () {
 

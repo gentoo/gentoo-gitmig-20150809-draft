@@ -41,7 +41,7 @@ src_install() {
 }
 
 pkg_postinst() {
-        echo ">>> Making font dirs..."
+	echo ">>> Making font dirs..."
 	cd /usr/X11R6/lib/X11/fonts/truetype/
 	/usr/X11R6/bin/ttmkfdir > fonts.scale	
 	mkfontdir

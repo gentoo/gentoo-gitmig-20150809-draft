@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ikons/ikons-0.5.8.ebuild,v 1.4 2002/07/17 00:04:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ikons/ikons-0.5.8.ebuild,v 1.5 2002/08/02 17:54:50 seemant Exp $
 
 S="${WORKDIR}/iKons_058"
 DESCRIPTION="iKons iconset for KDE 2.x"
@@ -24,8 +24,8 @@ src_install(){
 	fi
 
 	if [ -d ${KDE3DIR} ] ; then
-        mkdir -p ${D}/${KDE3DIR}/share/icons/
-        cp -rf ${S} ${D}/${KDE3DIR}/share/icons/iKons_058
-        fi
+	mkdir -p ${D}/${KDE3DIR}/share/icons/
+	cp -rf ${S} ${D}/${KDE3DIR}/share/icons/iKons_058
+	fi
 
 }
