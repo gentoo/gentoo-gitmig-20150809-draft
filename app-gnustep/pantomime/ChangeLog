@@ -1,6 +1,9 @@
 # ChangeLog for app-gnustep/pantomime
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/pantomime/ChangeLog,v 1.4 2003/08/21 08:43:27 g2boojum Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/pantomime/ChangeLog,v 1.5 2004/01/29 16:58:21 agriffis Exp $
+
+  29 Jan 2004; Aron Griffis <agriffis@gentoo.org> pantomime-1.1.0.ebuild:
+  add ~alpha
 
 *pantomime-1.1.0 (21 Aug 2003)
 
