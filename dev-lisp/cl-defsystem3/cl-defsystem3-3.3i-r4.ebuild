@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/cl-defsystem3-3.3i-r4.ebuild,v 1.4 2004/11/21 05:19:58 ndimiduk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/cl-defsystem3-3.3i-r4.ebuild,v 1.5 2004/11/28 02:43:58 josejx Exp $
 
 inherit common-lisp-common
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://packages.debian.org/unstable/devel/cl-defsystem3.html"
 SRC_URI="mirror://gentoo/${PN}_${PV}+cvs.${DEB_CVS}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc ~mips ~ppc-macos"
+KEYWORDS="x86 ~sparc ppc ~mips ~ppc-macos"
 IUSE=""
 
 S=${WORKDIR}/${P}+cvs.${DEB_CVS}
