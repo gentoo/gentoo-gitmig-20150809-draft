@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-3.0.9.ebuild,v 1.11 2004/05/20 05:26:31 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-3.0.9.ebuild,v 1.12 2004/06/19 13:59:31 pyrania Exp $
 
 IUSE=""
 
 inherit eutils flag-o-matic
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="A utility to create a fonts.scale file from a set of TrueType fonts"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 HOMEPAGE="http://www.joerg-pommnitz.de/TrueType/xfsft.html"
