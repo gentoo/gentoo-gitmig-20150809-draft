@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/abeni/abeni-0.0.9.ebuild,v 1.5 2004/06/19 19:00:13 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/abeni/abeni-0.0.9-r1.ebuild,v 1.1 2004/06/19 19:00:13 pythonhead Exp $
 
 inherit distutils
+
 
 DESCRIPTION="Integrated Development Environment for Gentoo Linux ebuilds"
 HOMEPAGE="http://abeni.sf.net/"
@@ -12,19 +13,10 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 DEPEND="virtual/python
-	>=dev-python/wxPython-2.4.1.2
+	>=dev-python/wxPython-2.4.2.4
 	>=sys-apps/portage-2.0.46-r12
 	>=app-portage/gentoolkit-0.1.30
 	>=dev-python/gadfly-1.0.0"
-
-pkg_setup() {
-	if [ ! -f "/usr/bin/wxgtk-2.4-config" ]; then
-		eerror "You MUST emerge wxGTK, and wxPython without gtk2 support! Do:"
-		eerror "USE='-gtk2' emerge wxGTK wxPython"
-		die "gtk2 not supported"
-	fi
-}
-
 
 src_install() {
 	distutils_src_install
@@ -33,3 +25,4 @@ src_install() {
 	doins abenirc
 	doins templates
 }
+
