@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.1 2005/02/05 23:53:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.2 2005/02/06 01:03:57 eradicator Exp $
 
 KEYWORDS="-*"
 
@@ -43,10 +43,10 @@ MIN_KERNEL_VERSION=${MIN_KERNEL_VERSION:-"2.6.6"}
 
 ### SRC_URI ###
 
-# This function handles the basics of setting the SRC_URI for a gcc ebuild.
+# This function handles the basics of setting the SRC_URI for a glibc ebuild.
 # To use, set SRC_URI with:
 #
-#	SRC_URI="$(get_gcc_src_uri)"
+#	SRC_URI="$(get_glibc_src_uri)"
 #
 # Other than the variables normally set by portage, this function's behavior
 # can be altered by setting the following:
@@ -74,7 +74,7 @@ MIN_KERNEL_VERSION=${MIN_KERNEL_VERSION:-"2.6.6"}
 #
 #	GLIBC_MANPAGE_VERSION
 #	GLIBC_INFOPAGE_VERSION
-#			The version of gcc for which we will download manpages. This will
+#			The version of glibc for which we will download manpages. This will
 #			default to ${GLIBC_RELEASE_VER}, but we may not want to pre-generate man pages
 #			for prerelease test ebuilds for example. This allows you to
 #			continue using pre-generated manpages from the last stable release.
@@ -83,7 +83,7 @@ MIN_KERNEL_VERSION=${MIN_KERNEL_VERSION:-"2.6.6"}
 #
 get_glibc_src_uri() {
 	# This variable should be set to the devspace of whoever is currently
-	# maintaining GCC. Please dont set this to mirror, that would just
+	# maintaining GLIBC. Please dont set this to mirror, that would just
 	# make the files unavailable until they get mirrored.
 	local devspace_uri="http://dev.gentoo.org/~eradicator/glibc/"
 	GENTOO_TOOLCHAIN_BASE_URI=${GENTOO_TOOLCHAIN_BASE_URI:-${devspace_uri}}
@@ -582,7 +582,7 @@ setup_flags() {
 		replace-flags -march=pentium-m -mtune=pentium3
 	fi
 
-	if gcc -v 2>&1 | grep -q 'gcc version 3.[0123]'; then
+	if $(tc-getCC) -v 2>&1 | grep -q 'gcc version 3.[0123]'; then
 		append-flags -finline-limit=2000
 	fi
 
@@ -594,7 +594,6 @@ setup_flags() {
 	# conservative here
 	append-flags -O2
 }
-
 
 check_kheader_version() {
 	local header="$(alt_headers)/linux/version.h"
@@ -612,7 +611,6 @@ check_kheader_version() {
 
 	return 1
 }
-
 
 check_nptl_support() {
 	local min_kernel_version="$(KV_to_int "${MIN_KERNEL_VERSION}")"
@@ -966,7 +964,7 @@ src_compile() {
 	fi
 	unset MLTEST
 
-	ABI=${ABI:=default}
+	ABI=${ABI:-default}
 	toolchain-glibc_src_compile
 }
 
@@ -1021,7 +1019,7 @@ src_install() {
 	fi
 	unset MLTEST
 
-	ABI=${ABI:=default}
+	ABI=${ABI:-default}
 	toolchain-glibc_src_install
 }
 
