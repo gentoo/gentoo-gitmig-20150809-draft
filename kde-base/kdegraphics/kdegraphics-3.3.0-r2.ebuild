@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.3.0-r2.ebuild,v 1.5 2005/01/06 22:40:09 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.3.0-r2.ebuild,v 1.6 2005/01/09 11:08:50 swegener Exp $
 
 inherit kde-dist eutils
 
@@ -17,7 +17,7 @@ DEPEND="~kde-base/kdebase-${PV}
 	imlib? ( media-libs/imlib )
 	virtual/ghostscript
 	media-libs/tiff
-	x86? ( scanner? sys-libs/libieee1284 )
+	x86? ( scanner? ( sys-libs/libieee1284 ) )
 	povray? ( x86? ( media-gfx/povray ) )
 	jpeg2k? ( x86? ( media-libs/jasper ) )
 	!media-gfx/kolourpaint"
