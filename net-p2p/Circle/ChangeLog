@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/Circle
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/ChangeLog,v 1.1 2004/04/13 21:46:59 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/ChangeLog,v 1.2 2004/04/14 09:10:38 dholm Exp $
+
+  14 Apr 2004; David Holm <dholm@gentoo.org> Circle-0.39.ebuild:
+  Added to ~ppc.
 
 *Circle-0.39 (13 Apr 2004)
 

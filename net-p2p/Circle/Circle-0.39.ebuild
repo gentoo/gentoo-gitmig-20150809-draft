@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/Circle-0.39.ebuild,v 1.1 2004/04/13 21:46:59 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/Circle-0.39.ebuild,v 1.2 2004/04/14 09:10:38 dholm Exp $
 
 inherit python
 
@@ -10,7 +10,7 @@ SRC_URI="http://thecircle.org.au/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="oggvorbis gnome"
 
 DEPEND="virtual/python
