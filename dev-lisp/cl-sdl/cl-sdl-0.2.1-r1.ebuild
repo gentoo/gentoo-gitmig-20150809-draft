@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/cl-sdl-0.2.1-r1.ebuild,v 1.1 2003/09/24 01:50:02 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/cl-sdl-0.2.1-r1.ebuild,v 1.2 2003/10/17 18:21:29 mkennedy Exp $
 
 inherit common-lisp
 
@@ -21,7 +21,12 @@ DEPEND="dev-lisp/cl-uffi
 
 S=${WORKDIR}/${PN}
 
-SUB_PACKAGES="sdl sdl-ttf sdl-img sdl-mix opengl"
+SUB_PACKAGES="opengl sdl sdl-ttf sdl-img sdl-mix"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-gentoo.patch
+}
 
 src_compile() {
 	make clean
@@ -69,16 +74,26 @@ src_install() {
 
 pkg_postinst() {
 	/usr/sbin/register-common-lisp-source sdl-ffi
-	/usr/sbin/register-common-lisp-source sdl-demos
 	for i in ${SUB_PACKAGES} ; do
 		/usr/sbin/register-common-lisp-source $i
 	done
+	/usr/sbin/register-common-lisp-source sdl-demos
 }
 
 pkg_prerm() {
 	/usr/sbin/unregister-common-lisp-source sdl-ffi
-	/usr/sbin/unregister-common-lisp-source sdl-demos
 	for i in ${SUB_PACKAGES} ; do
 		/usr/sbin/unregister-common-lisp-source $i
 	done
+	/usr/sbin/unregister-common-lisp-source sdl-demos
+}
+
+pkg_preinst() {
+	rm -rf /usr/lib/common-lisp/*/sdl* || true
+	rm -rf /usr/lib/common-lisp/*/opengl || true
+}
+
+pkg_postrm() {
+	rm -rf /usr/lib/common-lisp/*/sdl* || true
+	rm -rf /usr/lib/common-lisp/*/opengl || true
 }
