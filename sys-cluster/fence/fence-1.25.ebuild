@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-1.25.ebuild,v 1.1 2005/03/19 15:35:54 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-1.25.ebuild,v 1.2 2005/03/19 21:52:34 xmerlin Exp $
 
 inherit linux-mod
 
@@ -30,4 +30,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
+
+	exeinto /etc/init.d ; newexe ${FILESDIR}/fenced.rc fenced || die
 }
