@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mkl/mkl-5.1.ebuild,v 1.4 2002/08/14 11:52:27 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mkl/mkl-5.1.ebuild,v 1.5 2002/09/20 21:31:57 vapier Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Intel(R) Math Kernel Library"
-HOMEPAGE="http://developer.intel.com/software/products/mkl/mkl52/index.htm"
+HOMEPAGE="http://developer.intel.com/software/products/mkl/mkl52/"
 SRC_URI="http://developer.intel.com/software/products/mkl/downloads/mkleval-514.tar"
 
 
