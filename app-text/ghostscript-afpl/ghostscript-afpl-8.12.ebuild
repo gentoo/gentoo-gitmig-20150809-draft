@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.12.ebuild,v 1.1 2003/12/11 13:51:45 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.12.ebuild,v 1.2 2003/12/12 09:30:12 lanius Exp $
 
 inherit eutils
 
@@ -45,18 +45,18 @@ src_unpack() {
 
 	# cups support
 	if [ `use cups` ]; then
+		einfo "hallo"
 		unpack cups-${CUPS_PV}-source.tar.bz2
 		cp -r cups-${CUPS_PV}/pstoraster ${S}
 		cd ${S}/pstoraster
 		sed -e 's:@prefix@:/usr:' -e 's:@exec_prefix@:${prefix}:' -e 's:@bindir@:${exec_prefix}/bin:' -e 's:@GS@:gs:' pstopxl.in > pstopxl
 		sed -i -e 's:/usr/local:/usr:' pstoraster
 		sed -i -e "s:pstopcl6:pstopxl:" cups.mak
+		cd ..
+		epatch pstoraster/gs811-lib.patch
 	fi
 
 	cd ${S}
-
-	# patch for cups support
-	use cups && epatch pstoraster/gs811-lib.patch
 
 	# ijs .so patch
 	epatch ${FILESDIR}/gs-8.11-ijs.patch
@@ -75,8 +75,11 @@ src_compile() {
 	econf ${myconf}
 
 	# build cups driver with cups
-	use cups && echo 'include pstoraster/cups.mak' >> Makefile; sed -i -e 's:DEVICE_DEVS17=:DEVICE_DEVS17=$(DD)cups.dev:' Makefile
-	use cups && sed -i -e 's:LDFLAGS= $(XLDFLAGS):LDFLAGS=-L/usr/include -lcups -lcupsimage $(XLDFLAGS):' Makefile
+	if [ `use cups` ]; then
+		echo 'include pstoraster/cups.mak' >> Makefile
+		sed -i -e 's:DEVICE_DEVS17=:DEVICE_DEVS17=$(DD)cups.dev:' Makefile
+		sed -i -e 's:LDFLAGS= $(XLDFLAGS):LDFLAGS=-L/usr/include -lcups -lcupsimage $(XLDFLAGS):' Makefile
+	fi
 
 	# search path fix
 	sed -i -e 's:$(gsdatadir)/lib:/usr/share/ghostscript/8.12/lib:' Makefile
