@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.0_rc2.ebuild,v 1.1 2005/03/18 15:11:32 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.0_rc2.ebuild,v 1.2 2005/03/18 17:07:52 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
@@ -81,6 +81,11 @@ enable_module() {
 
 module_config() {
 	sed -i -r "s/(^module_${1}\\s*=\\s*).*/\\1${2}/" .config
+}
+
+spec_config() {
+        sed -i -r "s/(^${2}\\s*=\\s*).*//" modules/${1}/spec
+        echo "${2}=${3}" >> modules/${1}/spec
 }
 
 src_unpack() {
@@ -165,6 +170,12 @@ src_compile() {
 	use voice && module_config voice m
 
 	# Some fixes                                                                                    
+	einfo "Fixing arts module spec file"
+    	spec_config arts_sound MODULE_INCLUDES_PATH "\"$(kde-config --prefix)/include $(kde-config --prefix)/include/artsc\""
+	spec_config arts_sound MODULE_LIBS_PATH $(kde-config --prefix)/lib
+    	spec_config amarok MODULE_INCLUDES_PATH $(kde-config --prefix)/include
+	spec_config amarok MODULE_LIBS_PATH $(kde-config --prefix)/lib
+	
 	if use extramodules; then
 	    einfo "Changing default firewall log location to user's homedir/.gg/firewall.log"
 	    sed ${WORKDIR}/firewall.tcl -i -e 's%$module(scriptpath)/firewall.log%$env(HOME)/.gg/firewall.log%g'
