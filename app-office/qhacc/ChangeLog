@@ -1,6 +1,13 @@
 # ChangeLog for app-office/qhacc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.2 2003/08/16 05:31:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.3 2003/09/17 04:55:18 seemant Exp $
+
+  16 Sep 2003; Seemant Kulleen <seemant@gentoo.org> qhacc-2.9.ebuild,
+  files/qhacc-2.9-gentoo.patch, files/qhacc-2.9-mysqlplugin-gcc-3.3.patch:
+  Now, qhacc actually compiles! Additionally, install locations are fixed,
+  symlinks are fixed, mysql plugin compiles now. Basically, this is what the
+  ebuild should have been. Thanks to Brandy Westcott <brandy@gentoo.org> for
+  finding and fixing this.
 
 *qhacc-2.9 (12 Aug 2003)
 
