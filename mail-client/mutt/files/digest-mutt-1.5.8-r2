@@ -3,7 +3,7 @@ MD5 44df2038c3cb03b1f6f5d0b998a64aed patch-1.5.5.1.cd.edit_threads.9.5-gentoo-r1
 MD5 c20f30c8cb6002a503aa373c5934f3bb patch-1.5.6.tt.assumed_charset.1.gz 4640
 MD5 994108508f9890329ff4ee07604a374d patch-1.5.8.rr.compressed.gz 10230
 MD5 1ea285e44d0fe45eb841559914b57170 patch-1.5.6.dw.mbox-hook.1 6445
-MD5 80e81a9df998d6c65821b21a864e45ed patch-1.5.8.vvv.nntp-gentoo.bz2 71780
+MD5 fb20d001bb7102cf78f8e1c734eabbdf patch-1.5.8.vvv.nntp-gentoo-r2.bz2 71752
 MD5 404cb8677bb50937405531931629562f mutt-1.5.7-mixmaster+nntp.patch 310
 MD5 8bd12eb073ef94712f3a88eb8493f195 mutt-cvs-header-cache.29 5120
 MD5 758dff57c494e86ac885ef2ecb736f11 patch-1.5.6.dw.pgp-timeout.1 1448

@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.38 2005/03/24 21:23:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.39 2005/03/25 04:20:13 agriffis Exp $
+
+  25 Mar 2005; Aron Griffis <agriffis@gentoo.org> mutt-1.5.8-r2.ebuild:
+  Update nntp patch to apply with assumed_charset. Thanks to Saleem A.
+  (compnerd) in bug 85715 for updating the patch
 
   24 Mar 2005; Aron Griffis <agriffis@gentoo.org> mutt-1.5.8-r2.ebuild:
   Don't use emake for installation... duh #85790
@@ -200,7 +204,7 @@
 
   25 Feb 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.5.6.ebuild,
   files/8patch-1.5.6.dyc.source_stat:
-  Fix bug #42738 with patch submitted by José Romildo Malaquias
+  Fix bug #42738 with patch submitted by JosÃ© Romildo Malaquias
 
   25 Feb 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.5.6.ebuild:
   Always apply slang fix, even when USE=vanilla
