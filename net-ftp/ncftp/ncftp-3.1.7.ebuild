@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.7.ebuild,v 1.7 2004/02/29 21:33:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.7.ebuild,v 1.8 2004/04/13 13:51:29 wolf31o2 Exp $
+
+inherit eutils
 
 IPV6_P="ncftp-317-v6-20040119"
 DESCRIPTION="An extremely configurable ftp client"
