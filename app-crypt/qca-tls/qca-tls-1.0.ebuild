@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0.ebuild,v 1.5 2004/02/10 02:19:27 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0.ebuild,v 1.6 2004/02/28 21:28:40 humpback Exp $
 
 
 DESCRIPTION="plugin to provide SSL/TLS capability to programs that utilize the Qt Cryptographic Architecture (QCA)"
@@ -9,10 +9,11 @@ SRC_URI="http://psi.affinix.com/beta/qca-tls-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc amd64"
+KEYWORDS="x86 ppc amd64"
 
 DEPEND="!ppc? ( >=x11-libs/qt-3.2.1-r3 )
 	ppc? ( >=x11-libs/qt-3.0.5 )
+	x86? ( >=x11-libs/qt-3.3.0-r1 )
 	>=dev-libs/openssl-0.9.6i"
 
 src_compile() {

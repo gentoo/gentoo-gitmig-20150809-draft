@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca-tls
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/ChangeLog,v 1.6 2004/02/10 02:19:27 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/ChangeLog,v 1.7 2004/02/28 21:28:40 humpback Exp $
+
+  28 Feb 2004; Gustavo Felisberto <humpback@gentoo.org>; qca-tls-1.0.ebuild:
+  stable on x86
 
   09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> qca-tls-1.0.ebuild:
   added amd64 keyword.
