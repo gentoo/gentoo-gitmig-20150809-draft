@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r1.ebuild,v 1.5 2004/01/12 00:21:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r1.ebuild,v 1.6 2004/02/08 04:51:50 agriffis Exp $
 
 inherit eutils
 
@@ -17,59 +17,43 @@ DEPEND="virtual/glibc
 	>=sys-apps/sed-4"
 
 src_unpack () {
-	unpack ${A}
-	cd ${S}
+	unpack ${A} && cd ${S} || die "unpack failed"
 
 	# Apply security fix
 	epatch ${FILESDIR}/${P}-security.diff
+
+	# Add linux-generic target
 	epatch ${FILESDIR}/${PV}-generic.patch
-	use amd64 && epatch ${FILESDIR}/mpg123-0.59s-amd64.patch
-	sed -i \
-		-e "s:-O2 -m486:${CFLAGS}:" \
-		-e "s:-O2 -mcpu=ppc:${CFLAGS}:g" Makefile
+
+	# Always apply this patch, even though it's particularly for
+	# amd64.  It's good to understand the distinction between int and
+	# long: ANSI says that int should be 32-bits, long should be the
+	# native size of the CPU (usually the same as a pointer).
+	epatch ${FILESDIR}/mpg123-0.59s-amd64.patch
+
+	# Don't force gcc since icc/ccc might be possible
+	sed -i -e "s|CC=gcc||" Makefile
 }
 
 src_compile() {
-	local MAKEOPT=""
-	local MAKESTYLE=""
+	local style=""
 
-	SYSTEM_ARCH=`echo $ARCH |\
-		sed -e s/[i]*.86/i386/ \
-			-e s/sun.*/sparc/ \
-			-e s/arm.*/arm/ \
-			-e s/sa110/arm/`
-
-	if [ -z "$SYSTEM_ARCH" ]
-	then
-		SYSTEM_ARCH=`uname -m |\
-		sed -e s/[i]*.86/i386/ -e s/arm.*/arm/ -e s/sa110/arm/`
-	fi
-
-	case $SYSTEM_ARCH in
+	case $ARCH in
 		ppc)
-			MAKESTYLE="-ppc";;
-		i386)
-			if [ -z "use mmx" ]
-			then
-				MAKESTYLE="-mmx"
-			else
-				MAKESTYLE="-i486"
-			fi;;
-		sparc64)
-			MAKESTYLE="-sparc";;
-		sparc)
-			MAKESTYLE="-sparc";;
+			style="-ppc";;
+		x86)
+			use mmx && style="-mmx" || style="-i486";;
+		sparc*)
+			style="-sparc";;
 		amd64|x86_64)
-			MAKESTYLE="-x86_64";;
+			style="-x86_64";;
 		alpha)
-			MAKESTYLE="-alpha";;
-		arm)
-			;;
-		hppa)
-			MAKESTYLE="-generic";;
+			style="-alpha";;
+		arm|hppa|ia64)
+			style="-generic";;
 	esac
 
-	make linux${MAKESTYLE}${MAKEOPT} || die
+	make linux${style} RPM_OPT_FLAGS="${CFLAGS}" || die
 }
 
 src_install () {
