@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.0.ebuild,v 1.5 2004/04/16 07:34:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.0.ebuild,v 1.6 2004/05/10 23:59:31 lv Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="cdr xmms oggvorbis kde"
 
 DEPEND=">=x11-libs/qt-3.1.0-r1
