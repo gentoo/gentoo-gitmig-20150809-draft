@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.12-r1.ebuild,v 1.4 2004/07/22 04:03:57 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.12-r1.ebuild,v 1.5 2004/08/21 06:05:32 pylon Exp $
 
 inherit kde
 
@@ -22,7 +22,7 @@ DEPEND="kde? ( >=kde-base/kdebase-3.1 )
 	arts? ( kde-base/arts )"
 
 RDEPEND="${DEPEND}
-	>=app-cdr/cdrtools-1.11
+	virtual/cdrtools
 	>=app-cdr/cdrdao-1.1.7-r3
 	media-sound/normalize
 	dvdr? ( app-cdr/dvd+rw-tools )
