@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.0_rc3.ebuild,v 1.2 2003/12/08 23:32:20 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.0_rc3.ebuild,v 1.3 2003/12/16 10:03:06 tester Exp $
 
 DESCRIPTION="MPEG 4 implementation library"
 
@@ -14,7 +14,7 @@ LICENSE="MPL-1.1 LGPL-2 GPL-2 LGPL-2.1 BSD UCL MPEG4"
 
 SLOT="0"
 
-KEYWORDS="~x86 ~ppc -amd64"
+KEYWORDS="x86 ~ppc -amd64"
 # not 64 bit safe yet
 
 IUSE="ipv6 mmx gtk"
