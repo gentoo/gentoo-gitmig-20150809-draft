@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.60_alpha3.ebuild,v 1.1 2004/11/18 17:14:26 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.60_alpha3.ebuild,v 1.2 2004/11/20 11:00:40 eradicator Exp $
 
 IUSE="static spell"
 
@@ -17,7 +17,7 @@ OPERA_URI="http://snapshot.opera.com/unix/${OPERAFTPDIR}/"
 SRC_URI="
 	x86? ( static? ( ${OPERA_URI}/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
 	x86? ( !static? ( ${OPERA_URI}/intel-linux/en/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
-	amd64? ( ${OPERA}/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
+	amd64? ( ${OPERA_URI}/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
 	sparc? ( static? ( ${OPERA_URI}/sparc-linux/en/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )
 	sparc? ( !static? ( ${OPERA_URI}/sparc-linux/en/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 ) )
 	ppc? ( ${OPERA_URI}/ppc-linux/en/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 )"
