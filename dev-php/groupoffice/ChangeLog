@@ -1,6 +1,8 @@
 # ChangeLog for dev-php/groupoffice
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/ChangeLog,v 1.13 2004/03/10 18:10:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/ChangeLog,v 1.14 2004/04/12 17:22:12 aliz Exp $
+
+*groupoffice-2.04 (25 Mar 2004)
 
 *groupoffice-2.02 (10 Mar 2004)
 

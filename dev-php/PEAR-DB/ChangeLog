@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-DB
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.5 2004/03/15 19:17:45 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.6 2004/04/12 17:22:12 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> PEAR-DB-1.3.ebuild,
+  PEAR-DB-1.5.0_rc2.ebuild:
+  Added IUSE=.
 
 *PEAR-DB-1.6.1 (15 Mar 2004)
 
