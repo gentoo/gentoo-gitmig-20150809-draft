@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.8.ebuild,v 1.6 2004/09/27 09:16:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.8.ebuild,v 1.7 2004/09/27 10:30:06 pauldv Exp $
 
 inherit elisp-common libtool python eutils
 
@@ -31,10 +31,10 @@ RDEPEND="python? ( >=dev-lang/python-2.0 )
 	apache2? ( >=net-www/apache-2.0.48 )
 	!apache2? ( !>=net-www/apache-2* )
 	!dev-libs/apr
-	python? ( || ( >=dev-lang/swig-1.3.21
+	python? ( || ( =dev-lang/swig-1.3.21
 			=dev-lang/swig-1.3.19
 	) )
-	perl? ( !python? ( || ( >=dev-lang/swig-1.3.21
+	perl? ( !python? ( || ( =dev-lang/swig-1.3.21
 			=dev-lang/swig-1.3.19
 		) )
 		>=dev-lang/perl-5.8 )
