@@ -1,8 +1,11 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.22 2003/01/31 02:35:10 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.23 2003/02/06 16:13:52 foser Exp $
 
 *file-roller-2.2.1 (30 Jan 2003)
+
+  06 Feb 2003; foser <foser@gentoo.org> file-roller-2.2.1.ebuild :
+  Fix gnome-vfs dep
 
   30 Jan 2003; foser <foser@gentoo.org> file-roller-2.2.1.ebuild :
   GNOME 2.2 RC2 commit
