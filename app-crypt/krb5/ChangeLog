@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/krb5
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/ChangeLog,v 1.13 2003/03/17 13:01:50 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/ChangeLog,v 1.14 2003/03/21 17:07:26 wmertens Exp $
+
+  21 Mar 2003; Wout Mertens <wmertens@gentoo.org> krb5-1.2.7-r1.ebuild :
+  Bumped revision, forcing rebuild so that people who already had it will
+  not get problems later on when they upgrade glibc.
 
 *krb5-1.2.7 (22 Feb 2003)
 
