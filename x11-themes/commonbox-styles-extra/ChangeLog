@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/commonbox-styles-extra
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles-extra/ChangeLog,v 1.1 2002/10/04 00:43:44 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles-extra/ChangeLog,v 1.2 2002/10/14 23:59:58 mkeadle Exp $
+
+*commonbox-styles-extra-0.2 (14 Oct 2002)
+
+  14 Oct 2002; Matt Keadle <mkeadle@gentoo.org>
+  commonbox-styles-extra-0.2.ebuild files/digest-commonbox-styles-extra-0.2 :
+
+  Added wallpaper images taken from http://www.gentoo.org/index-graphics.html
+  Images created by Meir Kriheli of mksoft
 
 *commonbox-styles-extra-0.1 (03 Oct 2002)
 
