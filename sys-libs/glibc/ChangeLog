@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.99 2003/10/27 23:57:57 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.100 2003/10/28 13:11:28 gmsoft Exp $
+
+  28 Oct 2003; Guy Martin <gmsoft@gentoo.org> glibc-2.3.2-r8.ebuild :
+  Added depend to >=hppa-headers-2.4.21_p13 for succefull compilation.
 
   27 Oct 2003; Guy Martin <gmsoft@gentoo.org> glibc-2.3.2-r8.ebuild :
   Added patches for hppa. This glibc correct many bugs like the -static flag one.
