@@ -868,4 +868,4 @@ x11-base/xdirectfb
 
 # seemant@gentoo.org 02 Jul 2002
 # masked coz it is a highly developmental package
-=net-p2p/lopster-1.0.1.20020701
+>=net-p2p/lopster-1.0.1.20020701
