@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc-cvs/erc-cvs-4.1.ebuild,v 1.1 2003/12/05 14:44:23 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc-cvs/erc-cvs-4.1.ebuild,v 1.2 2004/05/22 15:57:56 usata Exp $
 
-ECVS_SERVER="cvs.erc.sourceforge.net:/cvsroot/erc"
+ECVS_SERVER="cvs.sourceforge.net:/cvsroot/erc"
 ECVS_MODULE="erc"
 ECVS_USER="anonymous"
 ECVS_CVS_OPTIONS="-dP"
@@ -16,7 +16,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 # Never use the sandbox, it causes Emacs to segfault on startup
 SANDBOX_DISABLED="1"
