@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jmf
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf/ChangeLog,v 1.1 2003/05/15 08:47:40 absinthe Exp $
+
+*jmf-2.1.1e (15 May 2003)
+
+  15 May 2003; Dylan Carlson <absinthe@gentoo.org> jmf-2.1.1e.ebuild,
+  files/jmfcustomizer, files/jmfinit, files/jmfregistry, files/jmstudio:
+  Initial import.
+
