@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r8.ebuild,v 1.1 2004/01/28 19:59:42 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r8.ebuild,v 1.2 2004/01/29 02:56:22 rizzo Exp $
 
 inherit flag-o-matic eutils
 
@@ -42,6 +42,9 @@ src_unpack() {
 src_compile() {
 	einfo "Replacing -Os CFLAG with -O2"
 	replace-flags -Os -O2
+
+	# -msse2 doesn't play nice on gcc 3.2
+	[ "`gcc-version`" == "3.2" ] && filter-flags -msse2
 
 	local myconf
 	use perl || myconf="${myconf} --disable-perl"
