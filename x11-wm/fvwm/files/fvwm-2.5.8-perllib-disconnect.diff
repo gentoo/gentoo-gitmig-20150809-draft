@@ -1,0 +1,11 @@
+diff -ruN fvwm-2.5.8.orig/perllib/FVWM/Module/Tk.pm fvwm-2.5.8/perllib/FVWM/Module/Tk.pm
+--- fvwm-2.5.8.orig/perllib/FVWM/Module/Tk.pm	2003-10-23 13:07:10.000000000 +0100
++++ fvwm-2.5.8/perllib/FVWM/Module/Tk.pm	2003-11-11 21:37:03.000000000 +0000
+@@ -51,6 +51,7 @@
+ 	$top->fileevent($self->{istream},
+ 		readable => sub {
+ 			unless ($self->processPacket($self->readPacket)) {
++				$self->disconnect;
+ 				$top->destroy;
+ 			} else {
+ 				$self->eventLoopPrepared(@params);
