@@ -12,5 +12,5 @@ MD5 4455bf14044d642bafa7fbb88c8ff4e6 tcpdump-3.7.1.ebuild 861
 MD5 8c6604daf8ec25a4e047350987b75e70 tcpdump-3.7.2.ebuild 1002
 MD5 9612d5d82f2913ccca941aa56c2bb42a tcpdump-3.8.1.ebuild 922
 MD5 a7afd4d5e3fb58d0fce6f19571cefae2 metadata.xml 379
-MD5 9274a4131ef5e1a6804754718e2cea91 tcpdump-3.8.3-r1.ebuild 1014
+MD5 c873652db482f012b96db7cdbc414d91 tcpdump-3.8.3-r1.ebuild 1018
 MD5 957d21d1e6d0ba1eee70f47305cc9f86 tcpdump-3.8.3.ebuild 926
