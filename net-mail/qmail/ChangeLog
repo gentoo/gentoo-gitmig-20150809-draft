@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.55 2004/01/20 09:35:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.56 2004/01/20 21:02:24 robbat2 Exp $
+
+  20 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
+  files/1.03-r15/qmail-pop3d-top-outputfix.patch:
+  note to self, remember to cvs add new direcoryies ;-). fixes #38826
 
   20 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild,
   qmail-1.03-r13.ebuild, qmail-1.03-r14.ebuild, files/conf-common,
