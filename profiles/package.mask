@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2760 2004/03/21 14:58:04 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2761 2004/03/21 15:28:42 foser Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -58,6 +58,7 @@ app-accessibility/eflite
 gnome-base/gnome-keyring
 >=gnome-base/gnome-panel-2.5
 >=gnome-base/gnome-session-2.5
+>=gnome-extra/gconf-editor-2.5
 >=gnome-extra/bug-buddy-2.5
 >=gnome-extra/nautilus-cd-burner-0.6.5
 >=gnome-extra/nautilus-media-0.7
