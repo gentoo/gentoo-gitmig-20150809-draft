@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.55 2003/07/28 14:38:18 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.56 2003/07/31 11:59:34 latexer Exp $
+
+*mm-sources-2.6.0_beta2-r2 (31 Jul 2003)
+
+  31 Jul 2003; Peter Johanson <latexer@gentoo.org>
+  mm-sources-2.5.74-r1.ebuild, mm-sources-2.5.74-r2.ebuild,
+  mm-sources-2.5.74-r3.ebuild, mm-sources-2.6.0_beta2-r2.ebuild:
+  Bump and cleanup
 
 *mm-sources-2.6.0_beta2-r1 (28 Jul 2003)
 
