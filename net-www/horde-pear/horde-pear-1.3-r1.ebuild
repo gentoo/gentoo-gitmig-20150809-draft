@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-pear/horde-pear-1.3-r1.ebuild,v 1.5 2004/06/25 00:54:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-pear/horde-pear-1.3-r1.ebuild,v 1.6 2004/07/14 02:44:31 vapier Exp $
 
 inherit horde
 
@@ -26,6 +26,7 @@ src_unpack() {
 src_install() {
 	dodir /usr/lib
 	cp -a ${S} ${D}/usr/lib/php
+	rm ${D}/usr/lib/php/PEAR/Downloader.php #54610
 }
 
 pkg_postinst() { :;}
