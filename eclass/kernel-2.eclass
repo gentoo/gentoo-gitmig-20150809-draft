@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.72 2005/01/11 15:12:17 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.73 2005/01/11 15:26:03 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -652,10 +652,13 @@ detect_version() {
 		return
 	fi
 
-	OKV=${PV/_beta/-test}
-	OKV=${OKV/_rc/-rc}
-	OKV=${OKV/_p*/}
-	OKV=${OKV/-r*/}
+	if [ -z "${OKV}" ]
+	then
+		OKV=${PV/_beta/-test}
+		OKV=${OKV/_rc/-rc}
+		OKV=${OKV/_p*/}
+		OKV=${OKV/-r*/}
+	fi
 
 	KV_MAJOR=$(echo ${OKV} | cut -d. -f1)
 	KV_MINOR=$(echo ${OKV} | cut -d. -f2)
@@ -682,6 +685,7 @@ detect_version() {
 	elif [ ${ETYPE} != "headers" ]
 	then
 		[ -z "${K_NOUSENAME}" ] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}"
+		[ "${PN/-*/}" == "wolk" ] && EXTRAVERSION="-${PN/-*/}-${PV}"
 		[ "${PR}" != "r0" ] 	&& EXTRAVERSION="${EXTRAVERSION}-${PR}"
 	fi
 
