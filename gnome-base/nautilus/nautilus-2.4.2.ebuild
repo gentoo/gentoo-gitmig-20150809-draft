@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.2.ebuild,v 1.7 2004/03/16 02:39:24 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.2.ebuild,v 1.8 2004/03/25 23:06:50 foser Exp $
 
 inherit gnome2
 
@@ -34,8 +34,8 @@ RDEPEND=">=dev-libs/glib-2
 	!gstreamer? ( oggvorbis? ( media-sound/vorbis-tools ) )
 	cups? ( net-print/libgnomecups
 		net-print/gnome-cups-manager )
-	gstreamer? ( >=media-libs/gstreamer-0.6.3
-		>=media-libs/gst-plugins-0.6.3 )"
+	gstreamer? ( >=media-libs/gstreamer-0.6*
+		=media-libs/gst-plugins-0.6* )"
 
 DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3.11
@@ -57,6 +57,9 @@ src_unpack() {
 	cd ${S}
 	# Fix a cdda linking error. (it silently links to cdda)
 	epatch ${FILESDIR}/${PN}-2-disable-cdda.patch
+
+	# Fix compile vs gtk-2.4
+	epatch ${FILESDIR}/${PN}-2.4-remove_deprecation_flags.patch
 
 	# use gstreamer for audio preview (patch by <foser@gentoo.org>)
 	use gstreamer && epatch ${FILESDIR}/${PN}-2-icon_view_gst_audio_preview.patch
