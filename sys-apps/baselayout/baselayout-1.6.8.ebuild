@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.8.ebuild,v 1.3 2001/12/23 04:38:52 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.8.ebuild,v 1.4 2001/12/23 15:33:12 drobbins Exp $
 
 SV=1.2.3
 #sysvinit version
@@ -34,9 +34,12 @@ src_compile() {
 	gcc ${CFLAGS} start-stop-daemon.c -o start-stop-daemon || die "cant compile start-stop-daemon.c"
 	echo ${ROOT} > ${T}/ROOT
 
-	# build sysvinit stuff
-	cd ${S2}
-	emake LDFLAGS="" || die "problem compiling sysvinit"
+	if [ -z "`use build`" ]
+	then
+		# build sysvinit stuff
+		cd ${S2}
+		emake LDFLAGS="" || die "problem compiling sysvinit"
+	fi
 }
 
 #adds ".keep" files so that dirs aren't auto-cleaned
@@ -81,62 +84,59 @@ src_install()
 	keepdir /var /var/run /var/lock/subsys
 	dosym ../var/tmp /usr/tmp
 	
-	if [ -z "`use bootcd`" ]
-	then
-		keepdir /boot
-		dosym . /boot/boot
-		keepdir /home
-		keepdir /usr/include /usr/src /usr/portage /usr/X11R6/include/GL
-		dosym ../X11R6/include/X11 /usr/include/X11
-		dosym ../X11R6/include/GL /usr/include/GL
-		
-		#dosym ../src/linux/include/linux /usr/include/linux
-		#dosym ../src/linux/include/asm-i386 /usr/include/asm
-		#Important note: Gentoo Linux 1.0_rc6 no longer uses symlinks to /usr/src for includes.
-		#We now rely on the special sys-kernel/linux-headers package, which takes a snapshot of
-		#the currently-installed includes in /usr/src and copies them to /usr/include/linux and
-		#/usr/include/asm.  This is the recommended approach so that kernel includes can remain
-		#constant.  The kernel includes should really only be upgraded when you upgrade glibc.
-		keepdir /usr/include/linux /usr/include/asm
-		keepdir /usr/share/man /usr/share/info /usr/share/doc /usr/share/misc
-
-		for foo in games lib sbin share bin share/doc share/man src
-		do
-		  keepdir /usr/local/${foo}
-		done
-		#local FHS compat symlinks
-		dosym share/man /usr/local/man	
-		dosym share/doc	/usr/local/doc	
-
-		#FHS compatibility symlinks stuff
-		dosym share/man /usr/man
-		dosym share/doc /usr/doc
-		dosym share/info /usr/info
-		keepdir /usr/X11R6/share
-		dosym ../../share/info	/usr/X11R6/share/info
-		#end FHS compatibility symlinks stuff
-		
-		doman ${FILESDIR}/MAKEDEV.8 ${S}/man/*
-		dodoc ${FILESDIR}/copyright 
-		keepdir /usr/X11R6/lib /usr/X11R6/man
-		keepdir /var/log/news
-
-		#sysvinit docs
-                cd ${S2}/../
-		doman man/*.[1-9]
-		docinto sysvinit-${SVIV}
-		dodoc COPYRIGHT README doc/*
-		
-		#supervise stuff depreciated
-		#dodir /var/lib/supervise
-		#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/control
-		#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/services
-		#end supervise stuff
+	keepdir /boot
+	dosym . /boot/boot
+	keepdir /home
+	keepdir /usr/include /usr/src /usr/portage /usr/X11R6/include/GL
+	dosym ../X11R6/include/X11 /usr/include/X11
+	dosym ../X11R6/include/GL /usr/include/GL
 	
-		keepdir /opt
-	fi
+	#dosym ../src/linux/include/linux /usr/include/linux
+	#dosym ../src/linux/include/asm-i386 /usr/include/asm
+	#Important note: Gentoo Linux 1.0_rc6 no longer uses symlinks to /usr/src for includes.
+	#We now rely on the special sys-kernel/linux-headers package, which takes a snapshot of
+	#the currently-installed includes in /usr/src and copies them to /usr/include/linux and
+	#/usr/include/asm.  This is the recommended approach so that kernel includes can remain
+	#constant.  The kernel includes should really only be upgraded when you upgrade glibc.
+	keepdir /usr/include/linux /usr/include/asm
+	keepdir /usr/share/man /usr/share/info /usr/share/doc /usr/share/misc
 
-#the .keep file messes up Portage when looking in /var/db/pkg
+	for foo in games lib sbin share bin share/doc share/man src
+	do
+		keepdir /usr/local/${foo}
+	done
+	#local FHS compat symlinks
+	dosym share/man /usr/local/man	
+	dosym share/doc	/usr/local/doc	
+
+	#FHS compatibility symlinks stuff
+	dosym share/man /usr/man
+	dosym share/doc /usr/doc
+	dosym share/info /usr/info
+	keepdir /usr/X11R6/share
+	dosym ../../share/info	/usr/X11R6/share/info
+	#end FHS compatibility symlinks stuff
+		
+	doman ${FILESDIR}/MAKEDEV.8 ${S}/man/*
+	dodoc ${FILESDIR}/copyright 
+	keepdir /usr/X11R6/lib /usr/X11R6/man
+	keepdir /var/log/news
+
+	#sysvinit docs
+	cd ${S2}/../
+	doman man/*.[1-9]
+	docinto sysvinit-${SVIV}
+	dodoc COPYRIGHT README doc/*
+		
+	#supervise stuff depreciated
+	#dodir /var/lib/supervise
+	#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/control
+	#install -d -m0750 -o root -g wheel ${D}/var/lib/supervise/services
+	#end supervise stuff
+	
+	keepdir /opt
+
+	#the .keep file messes up Portage when looking in /var/db/pkg
 	dodir /var/db/pkg 
 	keepdir /var/spool /var/tmp /var/lib/misc
 	chmod 1777 ${D}/var/tmp
@@ -212,14 +212,17 @@ src_install()
 	into /
 	dosbin rc rc-update
 
-	#install sysvinit stuff
-	cd ${S2}
-	into /
-	dosbin init halt killall5 runlevel shutdown sulogin
-	dosym init /sbin/telinit
-	dobin last mesg utmpdump wall
-	dosym killall5 /sbin/pidof
-	dosym halt /sbin/reboot
+	if [ -z "`use build`" ]
+	then
+		#install sysvinit stuff
+		cd ${S2}
+		into /
+		dosbin init halt killall5 runlevel shutdown sulogin
+		dosym init /sbin/telinit
+		dobin last mesg utmpdump wall
+		dosym killall5 /sbin/pidof
+		dosym halt /sbin/reboot
+	fi
 
 	#env-update stuff
 	keepdir /etc/env.d
