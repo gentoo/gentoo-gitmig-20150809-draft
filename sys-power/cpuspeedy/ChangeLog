@@ -1,0 +1,75 @@
+# ChangeLog for sys-apps/cpuspeedy
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpuspeedy/ChangeLog,v 1.1 2005/03/15 17:42:10 ciaranm Exp $
+
+*cpuspeedy-0.4.1 (15 Mar 2005)
+
+  15 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +cpuspeedy-0.4.1.ebuild:
+  Moved from sys-apps/cpuspeedy to sys-power/cpuspeedy.
+
+  30 Jan 2004; Konstantin Arkhipov <voxus@gentoo.org> cpuspeedy-0.4.1.ebuild:
+  Added ~amd64 keyword + header fix.
+
+  27 Nov 2004; Daniel Black <dragonheart@gentoo.org> -cpuspeedy-0.3.0.ebuild,
+  -cpuspeedy-0.4.0.ebuild:
+  old version cleanout
+
+  12 Sep 2004; Daniel Black <dragonheart@gentoo.org> cpuspeedy-0.4.1.ebuild:
+  x86 stable
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  cpuspeedy-0.3.0.ebuild, cpuspeedy-0.4.0.ebuild, cpuspeedy-0.4.1.ebuild:
+  Masked cpuspeedy-0.4.1.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  cpuspeedy-0.3.0.ebuild, cpuspeedy-0.4.0.ebuild:
+  Masked cpuspeedy-0.4.0.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  cpuspeedy-0.3.0.ebuild:
+  Masked cpuspeedy-0.3.0.ebuild stable for ppc
+
+*cpuspeedy-0.4.1 (28 Jul 2004)
+
+  28 Jul 2004; Daniel Black <dragonheart@gentoo.org> -cpuspeedy-0.2.1.ebuild,
+  cpuspeedy-0.4.0.ebuild, +cpuspeedy-0.4.1.ebuild:
+  0.4.0 - x86 stable. Removed old version. Added version bump
+
+*cpuspeedy-0.4.0 (23 Jun 2004)
+
+  23 Jun 2004; Daniel Black <dragonheart@gentoo.org> +cpuspeedy-0.4.0.ebuild:
+  version bump. Bug number #54720 refers. Thanks to Gabriele Giorgetti
+  <gabriele_giorgetti@tin.it>
+
+  07 May 2004; Daniel Black <dragonheart@gentoo.org> cpuspeedy-0.2.1.ebuild,
+  cpuspeedy-0.3.0.ebuild:
+  x86 stable
+
+  26 Apr 2004; Daniel Black <dragonheart@gentoo.org> cpuspeedy-0.3.0.ebuild:
+  Changed sed to use ${D} vice fixed directory thanks to Priit Laes
+
+  26 Apr 2004; Daniel Black <dragonheart@gentoo.org> cpuspeedy-0.3.0.ebuild:
+  Fix docdir install
+
+*cpuspeedy-0.3.0 (23 Apr 2004)
+
+  23 Apr 2004; Daniel Black <dragonheart@gentoo.org> cpuspeedy-0.3.0.ebuild:
+  verion bump - thanks to Lukasz Strzygowski <lucass@gentoo.pl> in bug #48661
+
+  30 Mar 2004; David Holm <dholm@gentoo.org> cpuspeedy-0.2.1.ebuild:
+  Added to ~ppc again, repoman should not have approved this insane move of
+  removing the only cpuspeedy in ppc. :(
+
+*cpuspeedy-0.2.1 (30 Mar 2004)
+
+  30 Mar 2004; Daniel Black <dragonheart@gentoo.org> cpuspeedy-0.2.1.ebuild,
+  cpuspeedy-0.2.ebuild, files/cpuspeedy-0.2.patch:
+  Version bump
+
+*cpuspeedy-0.2 (29 Mar 2004)
+
+  29 Mar 2004; Daniel Black <dragonheart@gentoo.org> cpuspeedy-0.2.ebuild,
+  metadata.xml,files/cpuspeedy-0.2.patch:
+  Inital import - thanks to Lukasz Strzygowski <lucass@gentoo.pl> in bug #45841
+
