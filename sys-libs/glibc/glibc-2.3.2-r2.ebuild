@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r2.ebuild,v 1.4 2003/06/22 05:10:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r2.ebuild,v 1.5 2003/06/22 07:19:53 drobbins Exp $
 
 IUSE="nls pic build nptl"
 
@@ -55,8 +55,8 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 	nptl? ( http://people.redhat.com/drepper/nptl/nptl-${NPTL_VER}.tar.bz2 )
 	mirror://gentoo/${P}-branch-update-${BRANCH_UPDATE}.patch.bz2"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
-
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm"
+#amd64-only for now (intentional)
+KEYWORDS="amd64"
 # Is 99% compadible, just some .a's bork
 SLOT="2.2"
 LICENSE="LGPL-2"
