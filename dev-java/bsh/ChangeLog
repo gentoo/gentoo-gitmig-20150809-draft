@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bsh
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.22 2005/03/10 17:45:39 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.23 2005/03/11 05:59:00 swegener Exp $
+
+  11 Mar 2005; Sven Wegener <swegener@gentoo.org> bsh-2.0_beta2.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *bsh-2.0_beta2 (10 Mar 2005)
 
