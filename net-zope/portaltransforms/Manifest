@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aa74683a4fb430c114b59a80d8b13a7b portaltransforms-1.3.2.7.ebuild 833
-MD5 8be1fbd49c731c53dc9c3c7a7293c6ea portaltransforms-1.0.3.ebuild 1116
-MD5 cbcc07c1285c528c32df2a81474e509b portaltransforms-1.3.2.ebuild 828
-MD5 74f07b7f3f88125ffdef2fbac9c76b7f portaltransforms-1.0.4.ebuild 1154
-MD5 80862b3c28a61fccafb18aed14e343f3 ChangeLog 2431
+MD5 347c9b4b34f3027b74bab6293273bacb ChangeLog 2550
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
-MD5 3146c144db0cc7871b78fd6f9decca10 files/digest-portaltransforms-1.3.2.7 76
-MD5 e99beeef3cb5d46572961e0b38e1b7ca files/digest-portaltransforms-1.0.3 71
+MD5 74f07b7f3f88125ffdef2fbac9c76b7f portaltransforms-1.0.4.ebuild 1154
+MD5 cbcc07c1285c528c32df2a81474e509b portaltransforms-1.3.2.ebuild 828
+MD5 f4c1b75a0076f1ff4c87a757298f396b portaltransforms-1.3.2.7.ebuild 838
+MD5 8be1fbd49c731c53dc9c3c7a7293c6ea portaltransforms-1.0.3.ebuild 1116
 MD5 ef0ccb5a871e069463dd79e5498c5e21 files/digest-portaltransforms-1.0.4 71
 MD5 739426d5510ba8e3295bc6cd52f0cb61 files/digest-portaltransforms-1.3.2 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCNwydI1lqEGTUzyQRAqGIAJ9C2A4YmG0S4IkIFxV9DxcJCQeWUACdH2ui
-bGAK1SJmFQcXUApgoym9f08=
-=QUMC
------END PGP SIGNATURE-----
+MD5 3146c144db0cc7871b78fd6f9decca10 files/digest-portaltransforms-1.3.2.7 76
+MD5 e99beeef3cb5d46572961e0b38e1b7ca files/digest-portaltransforms-1.0.3 71
