@@ -328,20 +328,32 @@ dyn_unpack() {
 
 dyn_setoptions() {
     local option option_name option_value
-    # convert commas to spaces
     
     echo ">>> Setting options...
-    trimmed_options="$( echo ${OPTIONS} | sed -e 's/,\+/ /' )"
     
     if [ -s ${BUILDDIR}/OPTIONS ]
     then
-        echo ">>> It looks like some options have already been set.
-        echo ">>> I will replace them with the new ones.
+	echo ">>> Options have already been set."
+	echo ">>> Clean to remove these options."
+    else
+	# the options following -o are in the form:
+	#    name[=value][,name[=value][,name[=value]...]]
+        # the name and value should only contain the characters [a-z_]
+	# convert commas to spaces
+	trimmed_options="$( echo ${OPTIONS} | sed -e 's/,\+/ /' )"
+	
+	for option in ${trimmed_options}
+	do
+	    echo "${option}" | sed 's,=, ,' | read option_name option_value
+	    
+	    # if no value is given for an option, then we set it to "yes"
+	    if [ "${option_value}" = "" ]
+	    then
+		option_value=yes
+	    fi
+	    echo "${option_name}=${option_value}" >> ${BUILDDIR}/OPTIONS
+	done
     fi
-    for option in ${trimmed_options}
-    do
-	echo $option >> ${BUILDDIR}/OPTIONS
-    done
 }
 
 dyn_clean() {
