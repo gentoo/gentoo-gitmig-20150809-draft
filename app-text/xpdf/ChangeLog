@@ -1,6 +1,8 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.1 2002/02/01 21:53:10 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.2 2002/02/02 21:21:22 azarah Exp $
+
+*xpdf-1.00 (2 Feb 2002)
 
 *xpdf-0.93 (1 Feb 2002)
 
