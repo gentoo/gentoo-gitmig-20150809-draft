@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.1.2.ebuild,v 1.1 2003/11/02 10:55:04 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.1.2.ebuild,v 1.2 2003/11/14 13:07:54 hanno Exp $
 
 DESCRIPTION="Desktop Publishing (DTP) and Layout program for Linux."
 HOMEPAGE="http://web2.altmuehlnet.de/fschmid/"
@@ -19,6 +19,13 @@ DEPEND="=x11-libs/qt-3*
 	>=sys-devel/gcc-3.0.0
 	!media-plugins/scribus-svg
 	!media-plugins/scribus-scripting"
+
+src_unpack() {
+	unpack ${A}
+	# Fix for python-2.3 compatibility (bug #32775)
+	sed -e 's:#include "scribus.h":#include <Python.h>\n#include "scribus.h":g' \
+	    -i scribus-1.1.2/scribus/plugins/scriptplugin/cmdvar.h
+}
 
 src_compile() {
 	econf || die

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/scribus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.20 2003/11/02 10:55:04 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.21 2003/11/14 13:07:52 hanno Exp $
+
+  14 Nov 2003; Hanno Boeck <hanno@gentoo.org> scribus-1.1.2.ebuild:
+  Patch to compile with python 2.3 from Marc Chabrol (bug #32775).
 
 *scribus-1.1.2 (02 Nov 2003)
 
