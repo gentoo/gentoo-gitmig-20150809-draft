@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.0.ebuild,v 1.14 2004/10/19 17:43:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.0.ebuild,v 1.15 2004/12/02 16:08:08 carlo Exp $
 
 inherit kde eutils flag-o-matic
 set-kdedir 3.3
@@ -34,7 +34,8 @@ DEPEND=">=sys-devel/autoconf-2.58
 	media-libs/libart_lgpl
 	net-dns/libidn
 	sys-devel/gettext
-	>=x11-libs/qt-3.3.2"
+	>=x11-libs/qt-3.3.2
+	!kde-misc/kgamma"
 RDEPEND="${DEPEND}
 	app-text/sgml-common
 	cups? ( net-print/cups )
