@@ -1,6 +1,14 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.35 2005/01/01 16:01:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.36 2005/01/03 16:46:37 lanius Exp $
+
+*a2ps-4.13c-r2 (03 Jan 2005)
+
+  03 Jan 2005; Heinrich Wendel <lanius@gentoo.org>
+  -files/a2ps-4.13-autoconf-gentoo.diff, +files/a2ps-4.13c-fixps.patch,
+  +files/a2ps-4.13c-psmandup.diff, -a2ps-4.13b-r5.ebuild,
+  -a2ps-4.13b-r6.ebuild, +a2ps-4.13c-r2.ebuild, -a2ps-4.13c.ebuild:
+  security bump; bug #75784
 
   29 Dec 2004; Daniel Goller <morfic@gentoo.org> a2ps-4.13c-r1.ebuild:
   Fixing what needs fixing, libtoolize --copy --force

@@ -1,18 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c.ebuild,v 1.19 2005/01/01 16:01:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r2.ebuild,v 1.1 2005/01/03 16:46:37 lanius Exp $
 
 inherit gnuconfig eutils
 
 S=${WORKDIR}/${PN}-${PV:0:4}
 DESCRIPTION="Any to PostScript filter"
-HOMEPAGE="http://www-inf.enst.fr/~demaille/a2ps/"
+HOMEPAGE="http://www.inf.enst.fr/~demaille/a2ps/"
 SRC_URI="mirror://gentoo/${P}.tar.gz
 	cjk? ( http://dev.gentoo.org/~usata/distfiles/${P}-ja_nls.patch.gz ) "
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ~ia64 ppc64"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="nls tetex cjk vanilla"
 
 DEPEND=">=sys-devel/automake-1.6
@@ -30,11 +30,19 @@ RDEPEND="virtual/ghostscript
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
+
+	epatch ${FILESDIR}/a2ps-4.13-select-freebsd.patch
 	epatch ${FILESDIR}/${P}-locale-gentoo.diff
 	use vanilla || epatch ${FILESDIR}/a2ps-4.13-stdout.diff
 	epatch ${FILESDIR}/${PV}-gcc34.patch
 	use cjk && epatch ${DISTDIR}/${P}-ja_nls.patch.gz
+
+	# improve tempfile handling
+	epatch ${FILESDIR}/${P}-fixps.patch
+	epatch ${FILESDIR}/${P}-psmandup.diff
+
 	gnuconfig_update || die "gnuconfig_update failed"
+	libtoolize --copy --force || die "libtoolize failed"
 }
 
 src_compile() {
