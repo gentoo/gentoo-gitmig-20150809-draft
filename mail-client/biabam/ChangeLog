@@ -1,0 +1,11 @@
+# ChangeLog for mail-client/biabam
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/biabam/ChangeLog,v 1.1 2005/02/10 13:13:46 ferdy Exp $
+
+*biabam-0.9.7 (10 Feb 2005)
+
+  10 Feb 2005; Fernando J. Pereda <ferdy@gentoo.org> +metadata.xml,
+  +biabam-0.9.7.ebuild:
+  Initial commit of biabam. Closes #64400. Thanks to: Martin Ehmsen
+  <martin@ehmsen.org>
+
