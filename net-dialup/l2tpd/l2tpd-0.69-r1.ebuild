@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/l2tpd-0.69-r1.ebuild,v 1.1 2003/12/09 14:53:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/l2tpd-0.69-r1.ebuild,v 1.2 2004/02/11 20:18:44 lanius Exp $
 
 DESCRIPTION="Layer 2 Tunnelling Protocol Daemon"
 HOMEPAGE="http://www.l2tpd.org/"
@@ -11,7 +11,7 @@ DEPEND="virtual/glibc
 	>=sys-apps/sed-4"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 IUSE=""
 
