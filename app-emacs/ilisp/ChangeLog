@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/ilisp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ChangeLog,v 1.6 2003/06/29 19:00:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ChangeLog,v 1.7 2003/08/28 21:22:25 mkennedy Exp $
+
+*ilisp-5.12.0-r3 (28 Aug 2003)
+
+  28 Aug 2003; Matthew Kennedy <mkennedy@gentoo.org> ilisp-5.12.0-r3.ebuild:
+  minor version update and resolve bug #22234 (missing docs)
 
 *ilisp-5.12.0-r2 (11 Jun 2003)
 
