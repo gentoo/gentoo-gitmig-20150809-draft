@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <aliz@gentoo.org> (14 Oct 2002)
+# sourcefile removed from upstream
+=media-libs/SoQt
+
 # <foser@gentoo.org> (13 Oct 2002)
 # all upstream ftp sites are down
 =dev-java/japhar-0.10
