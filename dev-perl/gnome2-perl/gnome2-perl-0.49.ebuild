@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/gnome2-perl-0.49.ebuild,v 1.2 2004/02/22 21:57:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/gnome2-perl-0.49.ebuild,v 1.3 2004/03/07 22:19:22 avenj Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha hppa"
+KEYWORDS="x86 ~ppc ~sparc ~alpha hppa ~amd64"
 
 DEPEND=">=x11-libs/gtk+-2*
 	>=gnome-base/libgnomeprint-2*
