@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.4.1.1.ebuild,v 1.15 2004/11/08 19:40:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.8.1.ebuild,v 1.1 2004/11/25 04:41:27 obz Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64 mips arm"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips ~ppc64 ~arm"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.1.2
@@ -17,31 +17,26 @@ RDEPEND=">=x11-libs/gtk+-2.1.2
 	>=gnome-base/libgnomecanvas-2
 	>=gnome-base/gnome-vfs-2
 	>=x11-libs/startup-notification-0.5
-	>=gnome-base/libbonoboui-2.3
-	>=gnome-base/libbonobo-2
 	!gnome-base/gnome-core"
 
-# ugh, we don't need libbonobo really, but people bug about it. 
-# remove in 2.4.1 release.
 DEPEND="${RDEPEND}
-	>=sys-devel/automake-1.7.2
-	>=sys-devel/autoconf-2.58
-	>=dev-util/intltool-0.22
+	app-text/scrollkeeper
+	sys-devel/gettext
+	>=dev-util/intltool-0.29
 	>=dev-util/pkgconfig-0.12.0
-	>=sys-apps/sed-4"
+	sys-devel/autoconf"
 
-DOCS="AUTHORS ChangeLog README INSTALL NEWS HACKING"
+DOCS="AUTHORS ChangeLog README NEWS HACKING"
 
 src_unpack() {
 
 	unpack ${A}
-	# Set vendor info
 	cd ${S}
-	sed -i 's:GNOME.Org:Gentoo Linux:' configure.in \
-	|| die "sed failed (1)"
 
-	# fix issues with gtk+-2.4 (#45258)
-	epatch ${FILESDIR}/${PN}-2.4-no_deprecated_about.patch
+	# Set vendor info
+	sed -i 's:GNOME.Org:Gentoo Linux:' configure.in || die "sed failed (1)"
+
+	WANT_AUTOCONF=2.5 autoconf || die
 
 	# Fix bug 16853 by building gnome-about with IEEE to prevent
 	# floating point exceptions on alpha
@@ -50,6 +45,4 @@ src_unpack() {
 		|| die "sed failed (2)"
 	fi
 
-	WANT_AUTOMAKE=1.4 automake || die
-	WANT_AUTOCONF=2.5 autoconf || die
 }
