@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.5 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.6 2004/06/27 18:42:40 usata Exp $
 
 # Author: foser <foser@gentoo.org>
 
@@ -83,7 +83,9 @@ font_src_install() {
 	cd ${S}
 	# try to install some common docs
 	DOCS="${DOCS} COPYRIGHT README NEWS"
-	dodoc ${DOCS}
+	for f in ${DOCS}; do
+		[[ -e ${f} ]] && dodoc ${f}
+	done
 }
 
 EXPORT_FUNCTIONS src_install
