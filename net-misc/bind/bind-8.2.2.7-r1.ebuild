@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-8.2.2.7-r1.ebuild,v 1.1 2000/11/15 16:49:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-8.2.2.7-r1.ebuild,v 1.2 2000/11/17 03:05:48 achim Exp $
 
 A=bind-src.tar.gz
 S=${WORKDIR}/src
@@ -13,8 +13,22 @@ DEPEND=">=sys-apps/bash-2.04
 	>=sys-libs/glibc-2.1.3"
 
 src_compile() {                           
+#    unset O A
+    try make depend 
+#    cd ${S}/bin
+#    cp Makefile Makefile.orig
+#    sed -e 's/CDEBUG= -g/#CDEBUG= -g/' Makefile.orig > Makefile
+#    cp Makefile Makefile.orig
+#    sed -e 's/CFLAGS=/#CFLAGS=/' Makefile.orig > Makefile
+#    cd ${S}/lib
+#    cp Makefile Makefile.orig
+#    sed -e "s:^SYSTYPE=.*:SYSTYPE=linux:" Makefile.orig > Makefile
+#    for i in ${S}/bin/*/Makefile
+#    do 
+#      cp $i $i.orig
+#      sed -e "s:^SYSTYPE=.*:SYSTYPE=linux:" $i.orig > $i
+#    done
     try make clean
-    try make depend
     try make all
 }
 
@@ -23,14 +37,14 @@ src_unpack() {
     unpack ${A}
     cd ${S}/port/linux
     cp Makefile.set Makefile.set.orig
-    sed -e 's/CDEBUG=-O -g/CDEBUG=${CFLAGS}/' Makefile.set.orig > Makefile.set
+#    sed -e 's/CDEBUG=-O -g/CDEBUG=${CFLAGS}/' Makefile.set.orig > Makefile.set
     cp Makefile.set Makefile.set.orig
-    sed -e 's/DESTETC=\/etc/DESTETC=\/etc\/bind/' Makefile.set.orig > Makefile.set
-    cd ${S}/bin
-    cp Makefile Makefile.orig
-    sed -e 's/CDEBUG= -g/#CDEBUG= -g/' Makefile.orig > Makefile
-    cp Makefile Makefile.orig
-    sed -e 's/CFLAGS=/#CFLAGS=/' Makefile.orig > Makefile
+    sed -e 's/DESTETC=\/etc/DESTETC=\/etc\/bind/' \
+	-e "s:^'SYSLIBS=.*':'SYSLIBS=-L/usr/lib -lfl':" \
+	Makefile.set.orig > Makefile.set
+    echo "'SYSTYPE=linux'" >> Makefile.set
+
+
 }
 
 src_install() {
