@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gpdf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.64 2004/12/22 17:22:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.65 2004/12/23 01:31:49 obz Exp $
+
+  23 Dec 2004; Mike Gardiner <obz@gentoo.org> gpdf-2.8.1-r1.ebuild:
+  Stable on PPC, see bug #75201
 
   22 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> gpdf-2.8.1-r1.ebuild:
   Stable on sparc wrt #75201
@@ -14,7 +17,7 @@
   22 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> gpdf-2.8.1.ebuild:
   Stable on sparc
 
-  19 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> gpdf-2.8.1.ebuild:
+  19 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> gpdf-2.8.1.ebuild:
   Stable on alpha.
 
   19 Dec 2004; Mike Gardiner <obz@gentoo.org> gpdf-2.8.1.ebuild:
@@ -37,7 +40,7 @@
   gpdf-2.8.0-r2.ebuild:
   stable on amd64
 
-  03 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org> gpdf-0.132-r2.ebuild,
+  03 Nov 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> gpdf-0.132-r2.ebuild,
   gpdf-2.8.0-r2.ebuild:
   Stable on alpha, bug 69662.
 
@@ -86,7 +89,7 @@
   16 Sep 2004; foser <foser@gentoo.org> gpdf-2.8.0.ebuild :
   Gnome 2.8 release
 
-  30 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> gpdf-0.132.ebuild:
+  30 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org> gpdf-0.132.ebuild:
   Remove src_compile as append-flags -fPIC isn't needed for alpha anymore.
 
   08 Aug 2004; foser <foser@gentoo.org> gpdf-0.132.ebuild :
@@ -95,7 +98,7 @@
   07 Aug 2004; Travis Tilley <lv@gentoo.org> gpdf-0.132.ebuild:
   stable on amd64
 
-  08 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> gpdf-0.132.ebuild:
+  08 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org> gpdf-0.132.ebuild:
   Stable on alpha.
 
   05 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> gpdf-0.132.ebuild:
@@ -112,7 +115,7 @@
   11 Jul 2004; <spider@gentoo.org> +gpdf-0.132.ebuild:
   versionbump
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gpdf-0.131.ebuild:
+  03 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org> gpdf-0.131.ebuild:
   Stable on alpha.
 
   03 Jun 2004; Stephen P. Becker <geoman@gentoo.org> gpdf-0.131.ebuild:
