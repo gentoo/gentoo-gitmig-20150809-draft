@@ -3,10 +3,13 @@ Hash: SHA1
 
 MD5 317388ccae91e4122159d3496a499383 policycoreutils-1.12-r1.ebuild 1598
 MD5 69ae1b2448d0e2cf99893a5e9ac1a5e0 policycoreutils-1.4-r1.ebuild 1555
-MD5 3fc927758c78ef95569e01bbfd548a34 ChangeLog 4630
+MD5 689510a25db9863d184cc99d5f882ce5 ChangeLog 4833
 MD5 2eeb1df30e87ba2861eddbdc34a48bb8 metadata.xml 836
 MD5 ba623a78ac61a6df1cdea4cafb9bc823 policycoreutils-1.14.ebuild 1641
+MD5 0d81072d7c1e9f59ba14ed172b1a3a4a policycoreutils-1.12-r2.ebuild 1652
+MD5 01f1dcbb3909023b95a6ff521874fc61 files/runscript-selinux.diff 633
 MD5 b9c41decc251443bb9535f415b9b1896 files/digest-policycoreutils-1.4-r1 143
+MD5 2873e1b7a7e78c17527934e8daa919e3 files/digest-policycoreutils-1.12-r2 144
 MD5 440f1bd6fdf23f39dde7bd50aefc5731 files/policycoreutils-1.10-genhomedircon-reverse.diff 3459
 MD5 50fd778919f191e7676e8c5da5ce0ec7 files/selinux-init 915
 MD5 e47cf908e58118d4b1416a736155d658 files/digest-policycoreutils-1.14 144
@@ -15,7 +18,7 @@ MD5 2873e1b7a7e78c17527934e8daa919e3 files/digest-policycoreutils-1.12-r1 144
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA52oxGFJQsIJWJy4RApjpAJ4vvvef5m16i/mAZTXEMQ430IJXfwCeNVJ/
-3c+3Y1x2lfrgK/6aHI4qIS0=
-=u7Cn
+iD8DBQFA6xrXGFJQsIJWJy4RArVJAJ9RUtU2whQOYhJvYvJN7myUgYLbgQCfafdX
+HvhHx0n7Lm6Dl8FYF/oexas=
+=zUrf
 -----END PGP SIGNATURE-----

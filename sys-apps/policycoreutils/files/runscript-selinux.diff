@@ -1,0 +1,20 @@
+Index: src/runscript_selinux.c
+===================================================================
+RCS file: /var/cvsroot/gentoo-projects/hardened/policycoreutils-extra/src/runscript_selinux.c,v
+retrieving revision 1.6
+diff -u -r1.6 runscript_selinux.c
+--- src/runscript_selinux.c	4 Jul 2004 02:15:35 -0000	1.6
++++ src/runscript_selinux.c	6 Jul 2004 21:28:18 -0000
+@@ -378,10 +378,11 @@
+        fprintf(stderr, "Could not set exec context to %s.\n", new_context);
+        exit(1);
+     }
++
++    freecon(new_context);
+   }
+ 
+   context_free(curr_con);
+-  freecon(new_context);
+   freecon(curr_context);
+ 
+ } /* selinux_runscript() */

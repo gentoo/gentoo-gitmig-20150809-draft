@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.30 2004/07/04 02:23:30 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.31 2004/07/06 21:34:02 pebenito Exp $
+
+*policycoreutils-1.12-r2 (06 Jul 2004)
+
+  06 Jul 2004; Chris PeBenito <pebenito@gentoo.org>
+  +files/runscript-selinux.diff, +policycoreutils-1.12-r2.ebuild:
+  Fix free() error in runscript_selinux.so.
 
   03 Jul 2004; Chris PeBenito <pebenito@gentoo.org>
   policycoreutils-1.14.ebuild:
