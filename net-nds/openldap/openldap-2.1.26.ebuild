@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.26.ebuild,v 1.1 2004/01/28 04:38:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.26.ebuild,v 1.2 2004/02/05 01:42:20 robbat2 Exp $
 
 inherit eutils
 
@@ -157,10 +157,11 @@ src_install() {
 	newins ${FILESDIR}/2.0/slapd.conf slapd
 
 	# install MDK's ssl cert script
-	dodir /etc/openldap/ssl
-	exeinto /etc/openldap/ssl
-	doexe ${FILESDIR}/gencert.sh
-
+	if [ "`use ssl`" -o "`use samba`" ]; then
+		dodir /etc/openldap/ssl
+		exeinto /etc/openldap/ssl
+		doexe ${FILESDIR}/gencert.sh
+	fi
 }
 
 pkg_postinst() {
