@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/fcgi-2.4.0.ebuild,v 1.8 2004/09/02 13:28:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/fcgi-2.4.0.ebuild,v 1.9 2004/11/08 23:44:38 mkennedy Exp $
 
 DESCRIPTION="FastCGI Developer's Kit"
 HOMEPAGE="http://www.fastcgi.com/"
-SRC_URI="HTTP://www.fastcgi.com/dist/${P}.tar.gz"
+SRC_URI="http://www.fastcgi.com/dist/${P}.tar.gz"
 LICENSE="FastCGI"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
@@ -22,7 +22,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install LIBRARY_PATH=${D}/usr/lib || die
 	dodoc LICENSE.TERMS README
 	mv doc/*.[13] . && doman *.[13]
 	dohtml doc/*
