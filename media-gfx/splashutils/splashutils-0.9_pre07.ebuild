@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9_pre07.ebuild,v 1.6 2004/10/13 21:21:50 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9_pre07.ebuild,v 1.7 2005/01/04 18:35:51 hansmi Exp $
 
 MISCSPLASH="miscsplashutils-0.1.1"
 GENTOOSPLASH="splashutils-gentoo-0.1"
