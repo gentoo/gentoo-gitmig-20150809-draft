@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libotr
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.3 2005/02/10 20:33:35 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.4 2005/02/17 19:19:53 rizzo Exp $
+
+*libotr-2.0.1 (17 Feb 2005)
+
+  17 Feb 2005; Don Seiler <rizzo@gentoo.org> +libotr-2.0.1.ebuild:
+  Version bump, closes bug #82285
 
 *libotr-2.0.0 (10 Feb 2005)
 
