@@ -1,11 +1,14 @@
 # ChangeLog for app-admin/fam-oss
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/ChangeLog,v 1.24 2003/06/25 17:30:54 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/ChangeLog,v 1.25 2003/07/01 21:05:22 gmsoft Exp $
 
   25 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> fam-oss-2.6.10.ebuild:
   set ppc in keywords
 
 *fam-oss-2.6.10 (09 Jun 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> fam-oss-2.6.10.ebuild :
+  Added hppa to KEYWORDS.
 
   09 Jun 2003; Nick Hadaway <raker@gentoo.org> fam-oss-2.6.10.ebuild,
   files/digest-fam-oss-2.6.10, files/fam-oss-2.6.10-largefile.patch:
