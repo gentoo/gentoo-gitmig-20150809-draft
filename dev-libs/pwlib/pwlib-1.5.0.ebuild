@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.0.ebuild,v 1.3 2003/06/27 22:04:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.0.ebuild,v 1.4 2003/07/02 09:29:52 phosphan Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -47,7 +47,7 @@ src_compile() {
 	sed -i -e "s:^\(LDFLAGS.*\)-L/usr/lib:\1:" ${S}/make/ptbuildopts.mak
 	sed -i -e "s:^\(LDFLAGS[\s]*=.*\) -L/usr/lib:\1:" ${S}/make/ptlib-config
 	
-	emake opt || die "make failed"
+	make opt || die "make failed"
 }
 
 src_install() {
