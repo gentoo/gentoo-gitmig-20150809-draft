@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.9.0.20031020.ebuild,v 1.1 2003/10/20 16:28:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.9.0.20031025.ebuild,v 1.1 2003/10/25 16:21:23 vapier Exp $
 
 inherit enlightenment eutils
 
@@ -18,24 +18,12 @@ DEPEND="${DEPEND}
 	>=x11-libs/ecore-0.0.2.20031013_pre4
 	>=media-libs/edje-0.0.1.20031013"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-gentoo-sessions.patch
-	gettext_modify
-}
-
 src_install() {
 	enlightenment_src_install
-	insinto /etc/pam.d
-	doins config/pam.d/entrance
+	rm -rf ${D}/etc/init.d
 	insinto /usr/share/entrance/images/sessions
 	doins ${WORKDIR}/extraicons/*
 	exeinto /usr/share/entrance
 	doexe data/config/build_config.sh
-}
-
-pkg_postinst() {
-	cd /usr/share/entrance
-	./build_config.sh || die
+	edb_ed ${D}/etc/entrance_config.db add /entrance/theme str Nebulous.eet
 }
