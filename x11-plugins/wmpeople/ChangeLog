@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmpeople
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpeople/ChangeLog,v 1.5 2004/07/22 00:57:38 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpeople/ChangeLog,v 1.6 2004/07/24 10:57:32 s4t4n Exp $
+
+  24 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmpeople-1.3.ebuild:
+  Stable For x86.
+  wmpeople-1.2.ebuild:
+  Remove older versions.
 
 *wmpeople-1.3 (22 Jul 2004)
 
