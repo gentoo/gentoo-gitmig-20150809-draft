@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-10.0g.ebuild,v 1.7 2003/10/31 14:02:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-10.0g.ebuild,v 1.8 2004/03/04 18:58:08 usata Exp $
 
 inherit elisp
 
@@ -8,7 +8,7 @@ IUSE=""
 
 DESCRIPTION="AUC TeX is an extensible package that supports writing and formatting TeX files"
 HOMEPAGE="http://www.gnu.org/software/auctex/"
-SRC_URI="http://savannah.gnu.org/download/auctex/attic/auctex/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
