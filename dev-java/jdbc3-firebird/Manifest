@@ -1,4 +1,14 @@
-MD5 e5e5e247f6f2a90a2464c0ac985a5096 ChangeLog 393
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 887b3176b54ec8f3ccb5ca25b0f73ccf ChangeLog 393
 MD5 39fc41187baec0583b895cfdb17b9fa8 jdbc3-firebird-1.5.3.ebuild 736
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 a28064d667f1f2c8fda8f0d858cd08b8 files/digest-jdbc3-firebird-1.5.3 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBdm3iI1lqEGTUzyQRArb8AJ0UzHHfV2rkFlUw/qhcpYFOIn6+GwCg2D45
+iz1O0f/AR4AhQ/jmsbQDtaM=
+=wB/1
+-----END PGP SIGNATURE-----
