@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.191 2005/01/15 10:53:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.192 2005/02/07 18:21:57 chriswhite Exp $
+
+  08 Feb 2005; Chris White <chriswhite@gentoo.org> xine-lib-1.0.ebuild,
+  xine-lib-1_rc6-r1.ebuild, xine-lib-1_rc8-r1.ebuild:
+  Removing symbol stripping as it appears to be the cause of a few ffmpeg
+  related packages crashing.
 
   15 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> xine-lib-1.0.ebuild,
   xine-lib-1_rc6-r1.ebuild, xine-lib-1_rc8-r1.ebuild:
