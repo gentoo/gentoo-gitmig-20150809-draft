@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/nedit
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.9 2003/01/27 07:21:29 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.10 2003/02/12 03:48:33 vapier Exp $
 
 *nedit-5.3-r2 (19 Jan 2003)
 

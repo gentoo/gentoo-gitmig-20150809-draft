@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/gedit
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.22 2003/02/04 13:33:44 foser Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.23 2003/02/12 03:46:38 vapier Exp $
 
 *gedit-2.2.0.1 (04 Feb 2003)
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/emacs-cvs
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.6 2003/01/06 10:41:54 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.7 2003/02/12 03:46:25 vapier Exp $
 
 *emacs-cvs-21.3.50 (22 Nov 2002)
 
