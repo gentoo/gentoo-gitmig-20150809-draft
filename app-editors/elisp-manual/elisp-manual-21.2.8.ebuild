@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elisp-manual/elisp-manual-21.2.8.ebuild,v 1.8 2004/06/07 01:27:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elisp-manual/elisp-manual-21.2.8.ebuild,v 1.9 2004/06/24 21:53:14 agriffis Exp $
 
 MY_PV=21-2.8
 DESCRIPTION="The GNU Emacs Lisp Reference Manual"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/vim-core-6.2-r7.ebuild,v 1.8 2004/04/07 16:25:14 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/vim-core-6.2-r7.ebuild,v 1.9 2004/06/24 22:03:18 agriffis Exp $
 
 inherit vim
 

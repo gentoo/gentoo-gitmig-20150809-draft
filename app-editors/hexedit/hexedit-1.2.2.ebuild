@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/hexedit-1.2.2.ebuild,v 1.13 2004/05/31 22:12:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/hexedit-1.2.2.ebuild,v 1.14 2004/06/24 21:56:05 agriffis Exp $
 
 DESCRIPTION="View and edit files in hex or ASCII"
 HOMEPAGE="http://www.chez.com/prigaux/hexedit.html"

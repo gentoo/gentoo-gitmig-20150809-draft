@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gnotepad+/gnotepad+-1.3.3.ebuild,v 1.4 2004/06/14 05:03:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gnotepad+/gnotepad+-1.3.3.ebuild,v 1.5 2004/06/24 21:55:12 agriffis Exp $
 
 DESCRIPTION="Gnotepad+ is a simple HTML and text editor using the GTK Text Widget."
 HOMEPAGE="http://gnotepad.sourceforge.net/"

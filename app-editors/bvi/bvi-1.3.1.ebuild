@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bvi/bvi-1.3.1.ebuild,v 1.8 2004/06/07 01:14:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bvi/bvi-1.3.1.ebuild,v 1.9 2004/06/24 21:51:47 agriffis Exp $
 
 DESCRIPTION="display-oriented editor for binary files, based on the vi texteditor"
 HOMEPAGE="http://bvi.sourceforge.net/"

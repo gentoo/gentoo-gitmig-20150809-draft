@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2_pre12.ebuild,v 1.3 2004/06/01 23:25:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2_pre12.ebuild,v 1.4 2004/06/24 21:56:49 agriffis Exp $
 
 inherit eutils
 

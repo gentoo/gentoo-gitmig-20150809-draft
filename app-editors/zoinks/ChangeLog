@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/zoinks
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/ChangeLog,v 1.6 2004/03/30 06:06:32 spyderous Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/ChangeLog,v 1.7 2004/06/24 22:05:17 agriffis Exp $
 
   30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; zoinks-0.3.7.ebuild,
   zoinks-0.3.8.ebuild:

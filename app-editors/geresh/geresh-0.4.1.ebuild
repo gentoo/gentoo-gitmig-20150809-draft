@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/geresh/geresh-0.4.1.ebuild,v 1.4 2004/03/13 22:30:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/geresh/geresh-0.4.1.ebuild,v 1.5 2004/06/24 21:54:19 agriffis Exp $
 
 DESCRIPTION="A simple multi-lingual console text editor with bidi & utf support"
 HOMEPAGE="http://www.typo.co.il/~mooffie/geresh/"

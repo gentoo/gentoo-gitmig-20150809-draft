@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-0.7.4.ebuild,v 1.4 2004/06/07 03:42:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-0.7.4.ebuild,v 1.5 2004/06/24 21:56:15 agriffis Exp $
 
 DESCRIPTION="editor for executable files"
 HOMEPAGE="http://hte.sourceforge.net/"

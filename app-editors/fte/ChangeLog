@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/fte
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.21 2004/06/16 00:31:42 weeve Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.22 2004/06/24 21:53:58 agriffis Exp $
 
   15 Jun 2004; Jason Wever <weeve@gentoo.org> fte-20020324-r2.ebuild:
   Stable on sparc.

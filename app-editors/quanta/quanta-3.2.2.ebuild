@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-3.2.2.ebuild,v 1.5 2004/05/23 03:06:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-3.2.2.ebuild,v 1.6 2004/06/24 22:01:28 agriffis Exp $
 
 inherit kde
 DEPEND="doc? ( app-doc/quanta-docs )"

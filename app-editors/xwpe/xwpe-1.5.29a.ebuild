@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xwpe/xwpe-1.5.29a.ebuild,v 1.9 2004/03/13 22:27:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xwpe/xwpe-1.5.29a.ebuild,v 1.10 2004/06/24 22:04:44 agriffis Exp $
 
 DESCRIPTION="An IDE to Develop in text and graphical mode"
 HOMEPAGE="http://www.identicalsoftware.com/xwpe/"

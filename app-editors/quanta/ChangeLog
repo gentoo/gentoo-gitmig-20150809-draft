@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/quanta
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.32 2004/06/17 12:42:35 carlo Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.33 2004/06/24 22:01:28 agriffis Exp $
 
   17 Jun 2004; Carsten Lohrke <carlo@gentoo.org> :
   version bump
