@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/gnusound
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.1 2004/02/11 21:19:33 jake Exp $
+
+*gnusound-0.6.1 (11 Feb 2004)
+
+  11 Feb 2004; Blake Matheny <jake@gentoo.org> gnusound-0.6.1.ebuild:
+  Initial import. Closes bug #29544
+
