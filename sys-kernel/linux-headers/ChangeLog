@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.99 2005/02/12 19:34:58 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.100 2005/02/12 21:53:30 solar Exp $
+
+*linux-headers-2.4.22-r1 (12 Feb 2005)
+
+  12 Feb 2005; <solar@gentoo.org> +files/unistd.h-i386-pic.patch,
+  +linux-headers-2.4.22-r1.ebuild:
+  - ~x86 pic syscall macros
 
   12 Feb 2005; <plasmaroo@gentoo.org>
   files/linux-headers-2.6.10-appCompat.patch:
