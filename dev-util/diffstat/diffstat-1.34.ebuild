@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/diffstat-1.34.ebuild,v 1.6 2004/07/14 23:19:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/diffstat-1.34.ebuild,v 1.7 2004/11/03 20:14:11 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://dickey.his.com/diffstat/diffstat.html"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc ppc mips ~amd64"
+KEYWORDS="x86 sparc ppc mips ~amd64 ia64 alpha"
 IUSE=""
 
 DEPEND="sys-apps/diffutils"
