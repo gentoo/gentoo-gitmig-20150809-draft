@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.1.52.ebuild,v 1.10 2004/08/01 14:22:40 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.1.52.ebuild,v 1.11 2004/08/20 20:42:23 suka Exp $
 
 inherit rpm
 
@@ -58,6 +58,8 @@ src_install() {
 	addpredict "/dev/dri"
 	addpredict "/usr/bin/soffice"
 	addpredict "/pspfontcache"
+	addpredict "/opt/OpenOffice.org/foo.tmp"
+	addpredict "/opt/OpenOffice.org/delme"
 
 	# Autoresponse file for main installation
 	cat > ${T}/rsfile-global <<-"END_RS"
