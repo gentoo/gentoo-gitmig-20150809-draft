@@ -1,6 +1,18 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.6 2002/05/19 17:46:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.7 2002/05/19 20:58:55 azarah Exp $
+
+automake-1.6.1-r1 (19 May 2002)
+
+  19 May 2002; M.Schlemmer <azarah@gentoo.org> automake-1.6.1-r1.ebuild :
+
+  Use automake-1.5 instead of automake-1.5d to try and fix KDE.
+
+  Another big change, is that we now have all the macros (.m4 files) for
+  each version of automake in their own private dirs, but then add
+  /usr/share/aclocal/ to each version's aclocal's include path.  This
+  makes it possible for each version to use custom macros added by
+  other programs to /usr/share/aclocal/.
 
 automake-1.6.1 (19 May 2002)
 
