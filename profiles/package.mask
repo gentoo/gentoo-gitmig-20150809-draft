@@ -106,9 +106,6 @@ app-editors/gtk-xemacs
 >=dev-db/unixODBC-2.0.8
 =dev-java/blackdown-1.3.1
 
-# this works ok for me -woodchip
-# =app-misc/bbweather-0.3
-
 #OK, I assume that the XFS in 2.4.4-r5 is hosed; alkaline?
 =sys-kernel/linux-sources-2.4.4-r5
 =sys-kernel/linux-extras-2.4.4-r5
@@ -129,7 +126,6 @@ app-editors/gtk-xemacs
 #=sys-kernel/linux-extras-2.4.5.5
 
 # Seems to be some issues with GConf 
-
 
 # Incompatible. (wait for evolution 0.13)
 >=gnome-base/gal-0.11
