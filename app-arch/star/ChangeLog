@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/star
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.13 2004/09/01 20:48:12 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.14 2004/09/02 08:54:17 lv Exp $
+
+  02 Sep 2004; Travis Tilley <lv@gentoo.org> star-1.5_alpha46.ebuild:
+  stable on amd64
 
   01 Sep 2004; <SeJo@gentoo.org> star-1.5_alpha46.ebuild:
   marked stabe on ppc
