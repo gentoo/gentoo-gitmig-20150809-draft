@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Leo Lipelis <aeoo@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.22.ebuild,v 1.1 2002/03/21 08:16:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.24.ebuild,v 1.1 2002/04/30 22:35:40 seemant Exp $
 
 
 S=${WORKDIR}/${P}
@@ -9,7 +9,7 @@ DESCRIPTION="A modern GTK+ based filemanager for any WM"
 SRC_URI="http://prdownloads.sourceforge.net/gentoo/${P}.tar.gz"
 HOMEPAGE="http://www.obsession.se/gentoo/"
 
-DEPEND=">=x11-libs/gtk+-1.2.0"
+DEPEND="=x11-libs/gtk+-1.2*"
 
 src_compile() {
 	./configure \
@@ -23,4 +23,24 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
+
+	if use gnome ; then
+		insinto /usr/share/pixmaps
+		doins icons/gentoo.png
+		insinto /usr/share/gnome/apps/Applications
+		doins ${FILESDIR}/gentoo.desktop
+	fi
+
+	dodoc AUTHORS BUGS CONFIG-CHANGES COPYING CREDITS ChangeLog INSTALL \
+		NEWS ONEWS README* TODO
+	dodoc docs/FAQ docs/menus.txt
+
+	dohtml docs/*.{html,css}
+	dohtml -r docs/images
+	dohtml -r docs/config
+
+	doman docs/gentoo.1x
+
+	docinto scratch
+	dodoc docs/scratch/*
 }
