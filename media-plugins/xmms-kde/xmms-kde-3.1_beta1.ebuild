@@ -1,24 +1,23 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kde/xmms-kde-3.1_beta1.ebuild,v 1.7 2004/06/24 23:41:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kde/xmms-kde-3.1_beta1.ebuild,v 1.8 2004/06/29 00:40:37 carlo Exp $
 
-inherit kde-base eutils
-
-DESCRIPTION="xmms-kde is a MP3 player integrated into the KDE panel. It can also be used to control XMMS and Noatun from the panel."
-HOMEPAGE="http://xmms-kde.sourceforge.net/"
-IUSE="xmms sdl xinerama"
-KEYWORDS="x86 amd64 ~ppc ~sparc"
+inherit kde eutils
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
+
+DESCRIPTION="xmms-kde is a MP3 player integrated into the KDE panel. It can also be used to control XMMS and Noatun from the panel."
+HOMEPAGE="http://xmms-kde.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xmms-kde/${MY_P}.tar.gz"
-RESTRICT="nomirror"
+
 LICENSE="GPL-2"
+KEYWORDS="x86 amd64 ~ppc ~sparc"
+IUSE="xmms sdl xinerama"
 
 DEPEND="xmms? ( >=media-sound/xmms-1.2.7-r23 )
 	sdl? ( >=media-libs/smpeg-0.4.4-r4 )
 	sys-devel/autoconf"
-
 need-kde 3.1
 
 # I don't think we need to slot this...
