@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1.ebuild,v 1.4 2002/12/16 18:47:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1.ebuild,v 1.5 2003/01/01 00:47:24 method Exp $
 
 IUSE="gtk"
 
@@ -22,7 +22,7 @@ RDEPEND="virtual/glibc
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha"
+KEYWORDS="x86 ~ppc sparc alpha"
 
 src_compile() {
 	elibtoolize
