@@ -1,15 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.164 2004/06/11 21:53:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.165 2004/06/12 07:02:02 mr_bones_ Exp $
+
+# keep them sorted (excluding the special arch flags near the end).
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
+X - Adds support for X11
+Xaw3d - Adds support of the 3d athena widget set
 aalib - Adds support for media-libs/aalib (ASCII-Graphics Library)
 accessibility - Adds support for accessibility (eg 'at-spi' library)
 acl - Adds support for Access Control Lists
 acpi - Adds support for Advanced Configuration and Power Interface
-afs - Adds OpenAFS support (distributed file system)
 adns - Adds support for the adns DNS client library
+afs - Adds OpenAFS support (distributed file system)
 aim - Enable AIM IM protocol support
 alsa - Adds support for media-libs/alsa-lib (Advanced Linux Sound Architecture)
 altivec - Adds support for optimizations for G4 and G5/ppc970 processors
@@ -42,9 +46,9 @@ doc - Adds extra documentation (API, Javadoc, etc)
 dvb - Adds support for DVB (Digital Video Broadcasting)
 dvd - Adds support for DVDs
 dvdr - Adds support for DVD writer hardware (e.g. in xcdroast)
-#embedded - Reserved flag for the embedded herd
 emacs - Adds support for GNU Emacs
 emacs-w3 - Add support for Emacs/W3 where applicable
+#embedded - Reserved flag for the embedded herd
 encode - Adds support for MEncoder or LaME encoder, wherever applicable
 esd - Adds support for media-sound/esound (Enlightened Sound Daemon)
 ethereal - Adds support for ethereal wiretap log support in kismet
@@ -70,6 +74,7 @@ gif - Adds GIF image support
 ginac - Adds app-sci/ginac (symbolic math) support
 gmp - Adds support for dev-libs/gmp (GNU MP library)
 gnome - Adds GNOME support
+gnutls - Adds support for net-libs/gnutls
 gphoto2 - Adds digital camera support
 gpm - Adds support for sys-libs/gpm (Console-based mouse driver)
 gps - Adds support for Global Positioning System
@@ -84,11 +89,11 @@ icc - Add support for the Intel C++ Compiler (does _not_ set $CC)
 icc-pgo - Enable PGO data generation or use when use icc.
 icq - Enable ICQ IM protocol support
 ifc - use ifc instead of g77 to build
-imap - Adds support for IMAP
 imagemagick - Enables support for Imagemagick (image converter)
+imap - Adds support for IMAP
 imlib - Adds support for media-libs/imlib (Image loading and rendering library)
-innodb - Adds innodb support for mySQL (transaction support)
 informix - Adds support for Informix database
+innodb - Adds innodb support for mySQL (transaction support)
 ipv6 - Adds support for IP version 6
 jabber - Enable jabber IM protocol support
 jack - Adds support for the JACK Audio Connection Kit
@@ -104,6 +109,7 @@ ladcca - Adds Linux Audio Developer's Configuration and Connection API support (
 lcms - Adds lcms support to media-gfx/imagemagick (Color management)
 ldap - Adds LDAP support (Lightweight Directory Access Protocol)
 leim - Adds input methods support to Emacs
+lesstif - Use lesstif over openmotif in cases where a program supports both
 libg++ - Adds C++ modules in dev-db/postgresql (libpq++)
 libgda - Adds GNU Data Access (CORBA wrapper) support for gnumeric
 libwww - Adds libwww support (General purpose WEB API)
@@ -115,23 +121,22 @@ mailwrapper - Adds mailwrapper support to allow multiple MTAs to be installed
 matrox - Adds Matrox MGA support to mplayer
 mbox - Adds support for mbox (/var/spool/mail) style mail spools
 mcal - Adds support for MCAL calender system
-mikmod - Adds libmikmod support to allow playing of SoundTracker-style music files
 memlimit - Adds memory usage limiting in supporting programs
+mikmod - Adds libmikmod support to allow playing of SoundTracker-style music files
 mmx - Adds support for optimizations for Pentium MMX and Athlon class processors
 motif - Adds motif support (x11-libs/openmotif x11-libs/lesstif)
-multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
-lesstif - Use lesstif over openmotif in cases where a program supports both
 mozilla - Adds mozilla support
 mpeg - Adds libmpeg3 support to various packages.
 mpi - Adds MPI (Message Passing Interface) layer to the apps that support it.
 msn - Enable MSN Messenger IM protocol support
 mssql - Adds support for Microsoft SQL Server database
 mule - Adds multi-language support to XEmacs
+multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
 mysql - Adds mySQL support
 nas - Adds support for network audio sound
 ncurses - Adds ncurses support (console display library)
-nhc98 - Use the nhc98 Haskell compiler instead of GHC if the package supports it
 netcdf - Enable NetCDF data format support
+nhc98 - Use the nhc98 Haskell compiler instead of GHC if the package supports it
 nls - Adds Native Language Support (using gettext - GNU locale utilities)
 nocardbus - Disables cardbus support in pcmcia-cs
 nocd - Tells emerge to install all files required to run the application without a CD mounted
@@ -172,10 +177,10 @@ snmp - Adds support for the Simple Network Management Protocol if available
 socks5 - Adds support for the socks5 proxy
 speex - Adds support for the speex audio codec
 spell - Adds dictionary support
+sqlite - Adds support for sqlite - embedded sql database
 sse - fast floating point optimisation for Pentium class chips
 ssl - Adds support for Secure Socket Layer connections
 static - !!do not set this during bootstrap!! Causes things to be statically linked instead of dynamically
-sqlite - Adds support for sqlite - embedded sql database
 svg - Adds support for SVG
 svga - Adds support for SVGAlib (graphics library)
 szip - Use the szip compression library
@@ -195,14 +200,12 @@ voodoo3 - Adds support for 3Dfx's Voodoo3 video chipset, else defaults to Voodoo
 wavelan - Tells pcmcia-cs that you want to use the built-in wvlan drivers instead of the Orinoco drivers
 wmf - Adds support for the wmf vector image format
 wxwindows - Adds support for wxWindows/wxGTK
-X - Adds support for X11
-Xaw3d - Adds support of the 3d athena widget set
 xface - Adds xface support -- only in use for sylpheed and sylpheed-claws
 xinerama - Add support for the xinerama X11 extension, which allows you to stretch your display across multiple monitors
-xosd - Sends display using the X On Screen Display library
 xml - Check/Support flag for XML library (version 1)
 xml2 - Check/Support flag for XML library (version 2)
 xmms - Check/Support for XMMS (X MultiMedia System) player.
+xosd - Sends display using the X On Screen Display library
 xv - Adds in optional support for the Xvideo extension (an X API for video playback)
 xvid - Adds support for xvid.org's open-source mpeg-4 codec
 yahoo - Enable Yahoo Messenger IM protocol support
@@ -211,12 +214,12 @@ zeo - Adds support for Zope Enterprise Objects
 zlib - Adds support for zlib (de)compression
 
 # The following flags are NOT to be set or unset by users
-x86 - indicates that architecture is x86
+alpha - indicates that architecture is 64-bit Alpha
+amd64 - indicates that architecture is AMD64
+arm - indicates that architecture is ARM
+hppa - indicates that architecture is HP PA-Risc
+mips - indicates that architecture is MIPS based
 ppc - indicates that architecture is PowerPC
 ppc64 - indicates that architecture is PowerPC64
 sparc - indicates that architecture is (32-bit) Sparc
-alpha - indicates that architecture is 64-bit Alpha
-mips - indicates that architecture is MIPS based
-hppa - indicates that architecture is HP PA-Risc
-arm - indicates that architecture is ARM
-amd64 - indicates that architecture is AMD64
+x86 - indicates that architecture is x86
