@@ -1,17 +1,15 @@
 # ChangeLog for net-analyzer/lcrzoex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lcrzoex/ChangeLog,v 1.8 2002/05/05 02:25:03 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lcrzoex/ChangeLog,v 1.9 2002/06/06 19:17:03 woodchip Exp $
 
-*lcrzoex-4.09-r2 (4 May 2002)
-  
+*lcrzoex-4.10 (6 Jun 2002)
+
+*lcrzoex-4.09-r2 (4 May 2002)  
   4 May 2002; Donny Davies <woodchip@gentoo.org> :
-  
   Ooops fix #2450.  Thanks Ilian Zarov ;)
 
-*lcrzoex-4.09-r1 (3 May 2002)
-  
+*lcrzoex-4.09-r1 (3 May 2002)  
   3 May 2002; Donny Davies <woodchip@gentoo.org> :
-  
   Added LICENSE, SLOT.
 
 *lcrzoex-4.09 (28 Apr 2002)
