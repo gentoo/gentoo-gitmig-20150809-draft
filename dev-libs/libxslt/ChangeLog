@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.94 2005/03/20 18:12:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.95 2005/03/21 00:08:26 joem Exp $
+
+*libxslt-1.1.13 (20 Mar 2005)
+
+  20 Mar 2005; Joe McCann <joem@gentoo.org> +libxslt-1.1.13.ebuild:
+  version bump
 
   20 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> libxslt-1.1.12.ebuild:
   Stable on alpha.
