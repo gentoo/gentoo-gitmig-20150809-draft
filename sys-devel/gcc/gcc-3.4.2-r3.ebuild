@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r3.ebuild,v 1.9 2004/10/28 20:12:52 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r3.ebuild,v 1.10 2004/11/03 03:32:50 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
@@ -373,11 +373,22 @@ src_install() {
 		mv ${D}/${LIBPATH}/../$(get_libdir)/* ${D}/${LIBPATH}/
 		rm -rf ${D}/${LIBPATH}/../$(get_libdir)/
 	fi
-	if [ -d ${D}/${LIBPATH}/../$(get_multilibdir) ] ; then
-		local multilibdir=$(get_multilibdir)
-		mv ${D}/${LIBPATH}/../$(get_multilibdir)/* \
-			${D}/${LIBPATH}/${multilibdir/lib}/
-		rm -rf ${D}/${LIBPATH}/../$(get_multilibdir)/
+
+	local multilibdir=$(get_multilibdir)
+	if [ -n "${multilibdir/lib}" ] ; then
+		if [ -d ${D}/${LIBPATH}/../${multilibdir} ] ; then
+			mkdir -p ${D}/${LIBPATH}/${multilibdir/lib}/
+			mv ${D}/${LIBPATH}/../${multilibdir}/* \
+				${D}/${LIBPATH}/${multilibdir/lib}/
+			rm -rf ${D}/${LIBPATH}/../${multilibdir}/
+		fi
+		if [ -d ${D}/${LIBPATH}/../${multilibdir/lib}/ ] ; then
+			# the gcc install sometimes pulls this trick too. :|
+			mkdir -p ${D}/${LIBPATH}/${multilibdir/lib}/
+			mv ${D}/${LIBPATH}/../${multilibdir/lib}/* \
+				${D}/${LIBPATH}/${multilibdir/lib}/
+			rm -rf ${D}/${LIBPATH}/../${multilibdir/lib}/
+		fi
 	fi
 }
 
