@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25-r3.ebuild,v 1.2 2005/01/25 01:49:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.8.25-r3.ebuild,v 1.3 2005/01/27 12:35:41 lu_zero Exp $
 
 IUSE=""
 
@@ -76,7 +76,7 @@ src_compile() {
 		export _POSIX2_VERSION="199209"
 		# That is the dirty way to avoid the id -u check
 		sed -e 's:`id -u`:0:' \
-			-e 's:`uname -r`:${KV_FULL}:' \
+			-e "s:\`uname -r\`:${KV_FULL}:" \
 			-i make.sh
 		chmod +x make.sh
 		./make.sh || die "DRM module not built"
