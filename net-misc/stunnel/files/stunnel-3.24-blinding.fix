@@ -1,0 +1,11 @@
+--- /tmp/client.c	2003-06-28 22:10:23.000000000 +0000
++++ client.c	2003-06-28 22:10:57.000000000 +0000
+@@ -970,7 +970,7 @@
+       } else {
+           log(LOG_DEBUG, "Private key is not RSA, no blinding needed");
+       }
+-    } else {
++    } else if (ssl->type == SSL_ST_ACCEPT) {
+       log(LOG_ERR, "Unable to get access to the SSL private key.");
+       sslerror("SSL_get_privatekey");
+       exit(1);
