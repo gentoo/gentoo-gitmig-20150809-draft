@@ -1,4 +1,4 @@
-MD5 0f5355771a2add1f1ec5dc77a64462ca ChangeLog 8741
+MD5 f5a265def23a8bec5c299a87258c3cca ChangeLog 8877
 MD5 9acdfaa4153bc29f15206b6c1ffba965 lm-sensors-2.6.5.ebuild 2134
 MD5 674a8ac3695e57f3a9b0035be7340ab4 lm-sensors-2.8.3.ebuild 4732
 MD5 37443e54165d5bcdaa8550d52edafa98 metadata.xml 228
@@ -25,4 +25,4 @@ MD5 2634b37f6b5e364df64f34d79506ca51 files/lm-sensors-2.8.2-sensors-detect-gento
 MD5 d8c62d91275ce75f12c70d068db57a97 files/rc_lm_sensors 621
 MD5 4c60dc8246e548fab5b56c66f6d6a020 files/lm-sensors-2.6.5-hk-longstring.patch 1475
 MD5 456d41bfdda2f5df2208f6c4a232a6c4 files/digest-lm-sensors-2.8.5 68
-MD5 2217cbce56dd9da8bbe4188a24c9412f files/rc 2006
+MD5 e33454a04d8de948781864e289126772 files/rc 2180

@@ -50,6 +50,16 @@ start() {
 		eend $?
 		i=$((i+1))
 	done
+
+	if ! [ -f /etc/sensors.conf ] ; then
+		eerror "/etc/sensors.conf does not exist!"
+		return 1
+	fi
+
+	ebegin "Initializing sensors"
+	/usr/bin/sensors -s &>/dev/null
+	eend $?
+
 	return 0
 }
 
