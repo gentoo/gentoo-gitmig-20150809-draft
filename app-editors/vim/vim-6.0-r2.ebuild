@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Ben Beuchler <insyte@mazer.squad51.net> 
 #	  and Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.0-r2.ebuild,v 1.2 2001/10/21 16:21:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.0-r2.ebuild,v 1.3 2001/10/22 12:07:48 agriffis Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is
@@ -191,10 +191,11 @@ src_install() {
 	dodoc README*
 	cd $D/usr/share/doc/$PF
 	ln -s ../../vim/*/doc $P
-	# .vimrc for root
-	mkdir -p $D/root
-	install -m644 $FILESDIR/vimrc $D/root/.vimrc
 	# Default .vimrc for users (this should be revisited)
 	insinto /etc/skel
 	newins $FILESDIR/vimrc .vimrc
+	# Don't install .vimrc for root since it might overwrite root's
+	# current .vimrc, if it exists.
+	#mkdir -p $D/root
+	#install -m644 $FILESDIR/vimrc $D/root/.vimrc
 }
