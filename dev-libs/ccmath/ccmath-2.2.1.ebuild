@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ccmath/ccmath-2.2.1.ebuild,v 1.2 2003/03/11 20:50:38 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ccmath/ccmath-2.2.1.ebuild,v 1.3 2003/03/30 21:19:26 joker Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://freshmeat.net/projects/ccmath/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc sparc"
 
 DEPEND="virtual/glibc"
 
