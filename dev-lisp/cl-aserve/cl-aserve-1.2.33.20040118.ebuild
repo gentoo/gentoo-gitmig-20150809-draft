@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/cl-aserve-1.2.33.20040118.ebuild,v 1.1 2004/02/12 09:13:13 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/cl-aserve-1.2.33.20040118.ebuild,v 1.2 2004/03/24 17:06:43 mholzer Exp $
 
 inherit common-lisp
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~x86"
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp
-	=cl-acl-compat-${PV}
-	=cl-htmlgen-${PV}"
+	=dev-lisp/cl-acl-compat-${PV}
+	=dev-lisp/cl-htmlgen-${PV}"
 
 CLPACKAGE=aserve
 

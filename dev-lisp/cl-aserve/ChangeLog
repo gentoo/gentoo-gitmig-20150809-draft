@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-aserve
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/ChangeLog,v 1.5 2004/03/18 21:06:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aserve/ChangeLog,v 1.6 2004/03/24 17:06:42 mholzer Exp $
+
+  24 Mar 2004; Martin Holzer <mholzer@gentoo.org> cl-aserve-1.2.12c.ebuild,
+  cl-aserve-1.2.27.20030919.ebuild, cl-aserve-1.2.33.20031205.ebuild,
+  cl-aserve-1.2.33.20040118.ebuild:
+  fixing depend. closes 45110.
 
 *cl-aserve-1.2.33.20040118 (12 Feb 2004)
 

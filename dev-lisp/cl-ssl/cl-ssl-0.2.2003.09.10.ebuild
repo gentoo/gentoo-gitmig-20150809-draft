@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ssl/cl-ssl-0.2.2003.09.10.ebuild,v 1.1 2003/10/27 03:02:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ssl/cl-ssl-0.2.2003.09.10.ebuild,v 1.2 2004/03/24 17:08:18 mholzer Exp $
 
 inherit common-lisp
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86"
 IUSE="doc"
 DEPEND="dev-lisp/common-lisp-controller
 	dev-libs/openssl
-	cl-uffi
+	dev-lisp/cl-uffi
 	virtual/commonlisp"
 
 CLPACKAGE=cl-ssl

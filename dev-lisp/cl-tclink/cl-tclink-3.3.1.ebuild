@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/cl-tclink-3.3.1.ebuild,v 1.1 2003/10/23 20:16:51 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/cl-tclink-3.3.1.ebuild,v 1.2 2004/03/24 17:09:44 mholzer Exp $
 
 inherit common-lisp
 
@@ -17,8 +17,8 @@ KEYWORDS="~x86"
 IUSE="doc"
 DEPEND="dev-lisp/common-lisp-controller
 	dev-libs/openssl
-	cl-split-sequence
-	cl-uffi
+	dev-lisp/cl-split-sequence
+	dev-lisp/cl-uffi
 	doc? ( app-text/tetex )
 	virtual/commonlisp"
 
