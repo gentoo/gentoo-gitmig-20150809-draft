@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.0.32.ebuild,v 1.2 2003/09/06 22:29:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.0.ebuild,v 1.1 2003/11/09 13:37:40 liquidx Exp $
 
 inherit libtool gnome.org
 
@@ -9,17 +9,17 @@ DESCRIPTION="XSLT libraries and tools"
 HOMEPAGE="http://www.xmlsoft.org/"
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="~ia64 ~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 
-DEPEND=">=dev-libs/libxml2-2.5.6
+DEPEND=">=dev-libs/libxml2-2.6.2
 	python? ( dev-lang/python )"
 
 src_compile() {
 	elibtoolize
 
-	econf `use_with python` || die
+	econf $(use_with python) || die "configure failed"
 
-	emake || die
+	emake || die "make failed"
 }
 
 src_install() {
@@ -30,7 +30,7 @@ src_install() {
 		DOC_MODULE=${PF} \
 		EXAMPLES_DIR=/usr/share/doc/${PF}/example \
 		TARGET_DIR=/usr/share/doc/${PF}/html \
-		install || die
+		install || die "install failed"
 
 	dodoc AUTHORS COPYING* ChangeLog README NEWS TODO
 }
