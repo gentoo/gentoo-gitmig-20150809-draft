@@ -1,0 +1,29 @@
+# ChangeLog for app-games/cannonsmash
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/ChangeLog,v 1.1 2003/09/11 12:22:49 vapier Exp $
+
+*cannonsmash-0.6.5 (05 Mar 2003)
+
+  12 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added optional ogg file for theme music #21070.
+
+  09 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added patch for #16903.
+
+  05 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #12662.
+
+*cannonsmash-0.6.4.2-r1 (26 May 2002)
+
+  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> cannonsmash-0.6.4.2-r1.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> cannonsmash-0.6.4.2-r1.ebuild :
+  Added LICENSE, KEYWORDS.
+  Added sdl-mixer to deps, so sound finally works, and made ebuild  
+  nls-aware.
+
+*cannonsmash-0.6.4.2 (18 May 2002)
+
+  18 May 2002; Bart Verwilst <verwilst@gentoo.org> Changelog :
+  Initial ebuild

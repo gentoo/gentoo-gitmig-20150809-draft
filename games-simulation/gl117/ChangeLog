@@ -1,0 +1,17 @@
+# ChangeLog for app-games/gl117
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/ChangeLog,v 1.1 2003/09/11 12:22:49 vapier Exp $
+
+*gl117-1.0 (22 Aug 2003)
+
+  22 Aug 2003; Michael Sterrett <msterret@gentoo.org> gl117-1.0.ebuild:
+  version bump.  Patch from Olivier Migeot via bug 27134.
+
+  12 Jul 2003; Michael Sterrett <msterret@gentoo.org> gl117-0.9.ebuild:
+  fix DESCRIPTION
+
+*gl117-0.9 (07 Jul 2003)
+
+  07 Jul 2003; Michael Sterrett <msterret@gentoo.org> gl117-0.9.ebuild:
+  Initial commit. (bug 23315 - user submitted ebuild wasn't used)
+

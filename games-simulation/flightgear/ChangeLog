@@ -1,0 +1,33 @@
+# ChangeLog for app-games/flightgear
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.1 2003/09/11 12:22:49 vapier Exp $
+
+  03 Aug 2003; Michael Sterrett <msterret@gentoo.org> flightgear-0.9.2.ebuild:
+  INSTALL is generic
+
+  11 Jul 2003; Michael Sterrett <msterret@gentoo.org> flightgear-0.9.2.ebuild:
+  use sed -i in src_unpack
+
+*flightgear-0.9.2 (11 Jun 2003)
+
+  21 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  added a small sed script to fix jpeg issues w/simgear #14177
+
+  11 Jun 2003; Seemant Kulleen <seemant@gentoo.org> flightgear-0.9.2.ebuild:
+  depends specifically on simgear-0.3.3, thanks to Patrick Kurasawe for
+  reminding me
+
+  11 Jun 2003; Seemant Kulleen <seemant@gentoo.org> flightgear-0.9.2.ebuild:
+  version bump, thanks to roger <rogerxxmaillist@san.rr.com> in bug #22568
+
+*flightgear-0.9.1 (09 Dec 2002)
+
+  19 Feb 2003; Seemant Kulleen <seemant@gentoo.org> ChangeLog: 
+
+  Note that Michael Pujos <pujos.michael@laposte.net> had submitted an
+  ebuild for this in bug #8167 which had gotten neglected :(
+
+  09 Dec 2002; Seemant Kulleen <seemant@gentoo.org> flightgear-0.9.1.ebuild
+  ChangeLog files/digest-flightgear-0.9.1 :
+
+  New open source flight simulator

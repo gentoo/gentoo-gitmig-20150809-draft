@@ -1,0 +1,25 @@
+# ChangeLog for app-games/corewars
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/corewars/ChangeLog,v 1.1 2003/09/11 12:22:49 vapier Exp $
+
+  12 Jul 2003; Michael Sterrett <msterret@gentoo.org> corewars-0.9.12.ebuild,
+  corewars-0.9.13.ebuild:
+  fix DESCRIPTION
+
+*corewars-0.9.13 (05 Jun 2003)
+
+  05 Jun 2003; Martin Holzer <mholzer@gentoo.org> corewars-0.9.13.ebuild:
+  Version bumped. closes #20332.
+
+  06 Dec 2003; Mark Guertin <gerk@gentoo.org> :
+  Added ~ppc to keywords
+
+*corewars-0.9.12 (14 April 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> corewars-0.9.12.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  14 April 2002; Bart Verwilst <verwilst@gentoo.org> Changelog :
+
+  Initial ebuild, SLOT'ified.. Enjoy!
+
