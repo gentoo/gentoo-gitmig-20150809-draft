@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/chktex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.8 2004/09/25 20:11:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.9 2004/10/17 10:01:05 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> chktex-1.6.2.ebuild:
+  stable on amd64.
 
   25 Sep 2004; Jason Wever <weeve@gentoo.org> chktex-1.6.2.ebuild:
   Stable on sparc.

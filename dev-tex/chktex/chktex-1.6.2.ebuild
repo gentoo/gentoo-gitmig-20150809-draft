@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/chktex-1.6.2.ebuild,v 1.3 2004/09/25 20:11:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/chktex-1.6.2.ebuild,v 1.4 2004/10/17 10:01:05 absinthe Exp $
 
 DESCRIPTION="Checks latex source for common mistakes"
 HOMEPAGE="http://www.nongnu.org/chktex/"
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ~amd64"
+KEYWORDS="x86 ppc sparc alpha amd64"
 IUSE="debug"
 
 DEPEND="virtual/tetex
