@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r8.ebuild,v 1.5 2005/01/04 14:10:17 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r8.ebuild,v 1.6 2005/02/26 21:47:21 j4rg0n Exp $
 
 inherit ccc flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.cis.upenn.edu/pub/xv/${P}.tar.gz
 
 LICENSE="xv"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha mips hppa ia64 amd64 ppc64"
+KEYWORDS="x86 ppc sparc alpha mips hppa ia64 amd64 ppc64 ppc-macos"
 IUSE="jpeg tiff png"
 
 DEPEND="virtual/x11
@@ -31,6 +31,12 @@ src_unpack() {
 
 	# fix security issues #61619
 	epatch ${FILESDIR}/${P}-security.diff || die
+
+	if use ppc-macos; then
+		epatch ${FILESDIR}/${P}-xv-osx.patch
+		epatch ${FILESDIR}/${P}-vdcomp-osx.patch
+		epatch ${FILESDIR}/${P}-makefile-osx.patch
+	fi
 }
 
 src_compile() {
