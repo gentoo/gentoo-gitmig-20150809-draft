@@ -1,18 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.1-r1.ebuild,v 1.1 2001/09/28 19:38:38 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.1-r1.ebuild,v 1.2 2001/09/29 12:42:18 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
-DESCRIPTION="KDE ${PV} - Base"
+DESCRIPTION="${DESCRIPTION}Base"
 
-SRC_PATH="kde/stable/${PV}/src/${P}.tar.bz2"
-SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH 
-	 ftp://ftp.fh-heilbronn.de/pub/mirrors/$SRC_PATH 
-	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
-
-NEWDEPEND=">=media-sound/cdparanoia-3.9.8 
+NEWDEPEND=">=media-sound/cdparanoia-3.9.8
 	ldap? ( >=net-nds/openldap-1.2 ) 
 	pam? ( >=sys-libs/pam-0.73 ) 
 	motif? ( >=x11-libs/openmotif-2.1.30 ) 
@@ -24,12 +19,9 @@ NEWDEPEND=">=media-sound/cdparanoia-3.9.8
 DEPEND="$DEPEND $NEWDEPEND"
 RDEPEND="$RDEPEND $NEWDEPEND"
 
-echo $DEPEND > /1
-echo $RDEPEND > /2
-
 src_compile() {
     
-    kde_src_compile myconf
+    kde-base_src_compile myconf
     
     use ldap	&& myconf="--with-ldap" 	|| myconf="--without-ldap"
     use pam	&& myconf="$myconf --with-pam"	|| myconf="$myconf --with-shadow"
@@ -40,14 +32,14 @@ src_compile() {
     use opengl					|| myconf="$myconf --without-gl"
     use ssl					|| myconf="$myconf --without-ssl"
     
-    kde_src_compile configure make
+    kde-base_src_compile configure make
 
 }
 
 
 src_install() {
 
-    kde_src_install all
+    kde-base_src_install
 
     insinto /etc/pam.d
     newins ${FILESDIR}/kscreensaver.pam kscreensaver
