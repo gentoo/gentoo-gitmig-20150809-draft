@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.2.4.ebuild,v 1.1 2004/01/29 01:37:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.2.4.ebuild,v 1.2 2004/02/04 17:37:40 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -20,12 +20,14 @@ KEYWORDS="~x86 ~sparc ~ia64 ~alpha"
 
 IUSE="ipv6"
 
-DEPEND="virtual/glibc"
+RDEPEND="virtual/glibc"
+DEPEND="${RDEPEND} >=sys-apps/sed-4"
 
 src_compile() {
 	append-flags -DDO_UNIX
 	use ipv6 && append-flags -DDO_IPV6
 	emake CFLAGS="${CFLAGS}" || die
+	sed -i 's:^\(NETHOME=\).*:\1/usr/bin:' *_script
 }
 
 src_install () {
