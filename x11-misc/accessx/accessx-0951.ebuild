@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # John Stalker <stalker@math.princeton.edu>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/accessx-0951.ebuild,v 1.1 2004/07/03 15:48:08 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/accessx-0951.ebuild,v 1.2 2004/07/04 10:21:01 pyrania Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Interface to the XKEYBOARD extension in X11"
@@ -13,6 +13,7 @@ DEPEND="virtual/x11"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc"
+IUSE=""
 
 src_compile() {
 	make || die
