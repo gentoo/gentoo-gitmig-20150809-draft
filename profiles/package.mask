@@ -139,3 +139,6 @@ app-editors/gtk-xemacs
 # Incompatible. (wait for evolution 0.13)
 >=gnome-base/gal-0.11
 
+# glibc-2.2.4 with gcc 2.95.3 brings back the atexit bug, and the patch
+# won't fix it (chadh)
+=sys-libs/glibc-2.2.4
