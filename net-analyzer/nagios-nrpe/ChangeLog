@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-nrpe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.16 2004/11/30 22:18:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.17 2004/12/11 16:39:33 config Exp $
+
+  11 Dec 2004; Benjamin Schindler <config@gentoo.org>
+  nagios-nrpe-2.0.ebuild:
+  Stable on amd64
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> nagios-nrpe-2.0.ebuild:
   Fixed invalid atoms in *DEPEND.
