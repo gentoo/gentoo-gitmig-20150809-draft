@@ -1,8 +1,9 @@
 MD5 0c025c517da941d499e9c0df98180700 arts-1.2.1.ebuild 3060
+MD5 60689cf6eb5a3e4b19f4caf6c4863886 arts-1.3.0_beta2.ebuild 2842
 MD5 e7404f29d4d0eb7a8c3f74ed7027d1c4 arts-1.1.5.ebuild 2748
 MD5 d3485e80a6b9028c77fa153758d0caae arts-1.2.3.ebuild 3067
 MD5 1b1eb748eee374fd979a5fd182c3a64c arts-1.2.0.ebuild 2819
-MD5 39bd51379170045ed0e9e3e47cdc6530 ChangeLog 13619
+MD5 494d4bd5eff210a18f0d9e1e0a6a6a93 ChangeLog 13739
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 a0b047db609ece57dc1ec3459ef57877 arts-1.3.0_beta1.ebuild 2842
 MD5 cc6827133e678a3975880eebda57494d arts-1.2.2.ebuild 3062
@@ -16,4 +17,5 @@ MD5 4adfa9a4a83af1e64f93a0b430bf7532 files/digest-arts-1.2.1 64
 MD5 1fc0f59ed1b61c1221f4156dac3569b7 files/digest-arts-1.2.2 63
 MD5 ac0526184e3193af65a2a8aa7fd5feab files/digest-arts-1.2.3 63
 MD5 91a10544960d61e02097b5283de6af56 files/digest-arts-1.3.0_beta1 64
+MD5 38ee883582a01168452b2a230fbe5d5f files/digest-arts-1.3.0_beta2 64
 MD5 e78db892e7b447f86fab2ea9503a3a3d files/arts-1.2.3-buffer.patch 745
