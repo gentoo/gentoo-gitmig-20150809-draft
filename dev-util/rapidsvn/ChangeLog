@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.1 2003/08/20 04:58:09 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.2 2003/09/01 18:23:31 iggy Exp $
+
+*rapidsvn-0.3.0 (01 Sep 2003)
+
+  01 Sep 2003; <iggy@gentoo.org> rapidsvn-0.3.0.ebuild:
+  version bump, needs the latest versoin of subversion
 
 *rapidsvn-0.2.0 (19 Aug 2003)
 
