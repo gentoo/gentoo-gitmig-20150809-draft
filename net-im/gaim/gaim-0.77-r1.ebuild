@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.77.ebuild,v 1.10 2004/05/04 20:41:39 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.77-r1.ebuild,v 1.1 2004/05/04 20:41:39 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/gaim/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~amd64 ppc alpha ~ia64 mips ~hppa"
+KEYWORDS="~x86 ~sparc ~amd64 ~ppc ~alpha ~ia64 ~mips ~hppa"
 
 DEPEND=">=x11-libs/gtk+-2.0
 	>=dev-libs/glib-2.0
@@ -55,6 +55,11 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/gaim-0.77-c99.patch
+	epatch ${FILESDIR}/gaim-0.77-64bit_goodness.patch
+	epatch ${FILESDIR}/gaim-0.77-irc-reconnect.patch
+	epatch ${FILESDIR}/gaim-0.77-plugin-prefs.patch
+	epatch ${FILESDIR}/gaim-0.77-smileys_dialogs.patch
+	epatch ${FILESDIR}/gaim-0.77-ucs2-copypaste.patch
 	use cjk && epatch ${FILESDIR}/gaim-0.76-xinput.patch
 	cd src/protocols/novell
 	epatch ${FILESDIR}/gaim-0.78cvs-novelltweaks5.patch

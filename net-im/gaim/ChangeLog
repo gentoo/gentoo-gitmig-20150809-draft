@@ -1,6 +1,18 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.171 2004/05/04 16:01:20 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.172 2004/05/04 20:41:39 rizzo Exp $
+
+*gaim-0.77-r1 (04 May 2004)
+
+  04 May 2004; Don Seiler <rizzo@gentoo.org>;
+  +files/gaim-0.77-64bit_goodness.patch, +files/gaim-0.77-irc-reconnect.patch,
+  +files/gaim-0.77-plugin-prefs.patch, +files/gaim-0.77-smileys_dialogs.patch,
+  +files/gaim-0.77-ucs2-copypaste.patch, +gaim-0.77-r1.ebuild:
+  Patched for Yahoo 64-bit amongst many other bugs
+
+  04 May 2004; Don Seiler <rizzo@gentoo.org>; gaim-0.77.ebuild:
+  Need at least ExtUtils-MakeMaker-6.20 for perl plugin. Thanks to Anders
+  Hellgren for lighting the lightbulb.
 
   04 May 2004; Don Seiler <rizzo@gentoo.org>; -files/gevolution.h,
   -gaim-0.75-r8.ebuild:
