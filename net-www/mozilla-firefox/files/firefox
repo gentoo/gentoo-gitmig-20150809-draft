@@ -2,11 +2,14 @@
 #
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/files/firefox,v 1.5 2004/02/26 04:13:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/files/firefox,v 1.6 2004/02/26 15:08:16 agriffis Exp $
 
 # Set MOZILLA_NEWTYPE to "window" in your environment if you prefer
 # new Firefox windows instead of new tabs
 newtype=${MOZILLA_NEWTYPE:-"window"}
+
+# Make sure necessary progs are in the PATH
+PATH=/usr/bin:/bin:/usr/X11R6/bin:$PATH
 
 # Support both firefox and mozilla
 case "$0" in
@@ -49,7 +52,7 @@ done
 
 # Try to start in an existing session; check all screens
 declare -a screens=(
-  $(/usr/X11R6/bin/xdpyinfo | awk '
+  $(xdpyinfo | awk '
     /^name of display:/ { 
       disp = substr($NF, 0, index($NF, ".")-1) 
     }
