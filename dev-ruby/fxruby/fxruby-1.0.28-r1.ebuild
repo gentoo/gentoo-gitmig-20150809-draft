@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.0.28-r1.ebuild,v 1.4 2004/06/25 01:53:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.0.28-r1.ebuild,v 1.5 2004/07/23 19:23:27 twp Exp $
 
 inherit ruby
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="-alpha -hppa ~sparc ~x86 ~ppc"
 IUSE=""
 DEPEND="virtual/ruby
-	>=x11-libs/fox-1.0
+	>=x11-libs/fox-1.0 <x11-libs/fox-1.2
 	x11-libs/fxscintilla"
 USE_RUBY="ruby16 ruby18 ruby19"
 S=${WORKDIR}/${MY_P}
