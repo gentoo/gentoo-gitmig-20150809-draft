@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.13 2004/09/24 00:45:36 vapier Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.14 2005/01/11 18:05:40 gustavoz Exp $
+
+  11 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> dropbear-0.43.ebuild:
+  Keyworded sparc directly, it'll be required soon
 
   23 Sep 2004; Mike Frysinger <vapier@gentoo.org> dropbear-0.43.ebuild,
   dropbear-0.44_alpha4.ebuild:
