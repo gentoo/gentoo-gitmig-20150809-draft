@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/cream
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.17 2004/09/11 00:20:16 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.18 2004/10/02 00:13:54 ciaranm Exp $
+
+*cream-0.30-r3 (02 Oct 2004)
+
+  02 Oct 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/cream-0.30-ebuilds.patch, +cream-0.30-r3.ebuild:
+  Ebuilds are bash files too. Bug #66052
 
   11 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> cream-0.30-r2.ebuild:
   Added in help text and moved the einfo things around, bug #63318.

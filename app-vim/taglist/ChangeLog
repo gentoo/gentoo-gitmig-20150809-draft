@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/taglist
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/ChangeLog,v 1.26 2004/09/19 19:46:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/ChangeLog,v 1.27 2004/10/02 00:10:35 ciaranm Exp $
+
+*taglist-3.4-r1 (02 Oct 2004)
+
+  02 Oct 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/taglist-3.4-ebuilds.patch, +taglist-3.4-r1.ebuild:
+  Ebuilds are bash files too. Bug #66052
 
   19 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> taglist-3.4.ebuild:
   Stable on alpha.
