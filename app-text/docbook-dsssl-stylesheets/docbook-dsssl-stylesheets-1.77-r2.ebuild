@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.77-r2.ebuild,v 1.15 2004/04/26 11:15:25 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.77-r2.ebuild,v 1.16 2004/05/12 00:56:26 randy Exp $
 
 inherit sgml-catalog
 
@@ -13,7 +13,7 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="ia64 x86 ppc sparc alpha hppa amd64 mips"
+KEYWORDS="ia64 x86 ppc sparc alpha hppa amd64 mips s390"
 
 RDEPEND="app-text/sgml-common"
 
