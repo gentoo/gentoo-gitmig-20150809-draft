@@ -1,4 +1,6 @@
-MD5 3e5f13d5c935acd23fdcfa993b8010e3 ChangeLog 2374
+MD5 34976d87858d8bca6441ca3b048f56d7 ChangeLog 2504
 MD5 107257e77953a4135c8673d484491951 scorched3d-38.ebuild 1402
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 1f9b994a394faf506c70dfb5ea5c935f scorched3d-38.1.ebuild 1420
 MD5 17f69b282bb7c0187787f66ef5ec30ca files/digest-scorched3d-38 71
+MD5 959cde1efe80260eccff4649e262db02 files/digest-scorched3d-38.1 73
