@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-mailsync/pilot-mailsync-0.8.0.2.ebuild,v 1.1 2003/10/12 02:37:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-mailsync/pilot-mailsync-0.8.0.2.ebuild,v 1.2 2003/10/13 19:26:10 mr_bones_ Exp $
 
 DESCRIPTION="An application to transfer outgoing mail from and deliver incoming mail to a Palm OS device."
 HOMEPAGE="http://wissrech.iam.uni-bonn.de/people/garcke/pms/"
@@ -9,7 +9,7 @@ SRC_URI="http://wissrech.iam.uni-bonn.de/people/garcke/pms/${P}.tar.gz"
 LICENSE="MPL-1.0"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="ssl" 
+IUSE="ssl"
 
 DEPEND="ssl? ( dev-libs/openssl )
 	>=app-pda/pilot-link-0.11.7-r1"
