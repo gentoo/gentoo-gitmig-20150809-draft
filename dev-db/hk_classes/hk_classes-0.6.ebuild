@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.6.ebuild,v 1.2 2003/06/17 12:58:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.6.ebuild,v 1.3 2003/07/20 14:53:15 caleb Exp $
 
-DESCRIPTION="GUI-independent C++ libraries for database applications"
+DESCRIPTION="GUI-independent C++ libraries for database applications, plus API documentation and tutorials"
 HOMEPAGE="http://hk-classes.sourceforge.net/"
-SRC_URI="mirror://sourceforge/sourceforge/hk-classes/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/sourceforge/hk-classes/${P}.tar.gz
+	mirror://sourceforge/sourceforge/knoda/hk_docs-${PV}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86"
@@ -36,5 +37,6 @@ src_compile() {
 }
 
 src_install() {
+	use doc && dohtml -r ${WORKDIR}/hk_docs-${PV}
 	make DESTDIR=${D} install || die
 }
