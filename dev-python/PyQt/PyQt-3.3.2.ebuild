@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.3.2.ebuild,v 1.1 2002/07/25 20:39:42 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.3.2.ebuild,v 1.2 2002/08/13 02:41:27 verwilst Exp $
 
 S="${WORKDIR}/PyQt-snapshot-20020722"
 DESCRIPTION="PyQt is a set of Python bindings for the Qt Toolkit( VERSION 3.x ONLY!!)."
@@ -26,7 +26,7 @@ src_compile() {
 	python build.py \
 	-d ${D}/usr/lib/python2.2/site-packages \
 	-b ${D}/usr/bin \
-	-l qt-mt # \
+	-l qt-mt -c
 	make
 }
 
