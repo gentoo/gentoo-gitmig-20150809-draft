@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxmms
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/ChangeLog,v 1.4 2003/09/21 12:46:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/ChangeLog,v 1.5 2003/09/30 21:40:35 todd Exp $
+
+  30 Sep 2003; Todd Sunderlin <todd@gentoo.org> pyxmms-1.07.ebuild:
+  added ~sparc keyword
 
   21 Sep 2003; Alastair Tse <liquidx@gentoo.org> metadata.xml:
   added sound to herds
