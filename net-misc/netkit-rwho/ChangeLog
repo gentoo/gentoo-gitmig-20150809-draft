@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/netkit-rwho
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.8 2004/12/29 19:57:27 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.9 2005/02/05 06:45:52 vapier Exp $
+
+*netkit-rwho-0.17-r1 (05 Feb 2005)
+
+  05 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/netkit-rwho-0.17-tiny-packet-dos.patch,
+  +netkit-rwho-0.17-r1.ebuild, -netkit-rwho-0.17.ebuild:
+  Add patch to fix DoS #78371.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
