@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.102 2004/07/03 22:31:20 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.103 2004/07/13 04:52:29 seemant Exp $
+
+*coreutils-5.2.1-r1 (12 Jul 2004)
+
+  12 Jul 2004; Seemant Kulleen <seemant@gentoo.org>
+  -coreutils-5.0.91-r3.ebuild, +coreutils-5.2.1-r1.ebuild:
+  Fix the sort -M deal, thanks to someone in #gentoo-bugs (please get in touch
+  with me so I can ack you better) and also bartron@gmx.dein bug #54765 by
+  Thomas Petersen <mendocino@mendo.dk>. Also, fix the s390 stuff as reported in
+  bug #52581 by jochen <jochen.eisinger@gmx.de>. Added the ppc64 stuff into the
+  regular uname patch. Finally, fix the selinux-noacl patch, thanks to Chris
+  PeBenito <pebenito@gentoo.org> via e-mail.
 
   03 Jul 2004; Guy Martin <gmsoft@gentoo.org> coreutils-5.2.1.ebuild:
   Marked stable on hppa.
