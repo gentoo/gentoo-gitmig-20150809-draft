@@ -1,20 +1,23 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.14 2003/02/08 21:06:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.15 2003/02/24 20:54:16 zwelch Exp $
+
+*gpm-1.20.0-r6 (13 Jan 2002)
+
+  24 Feb 2003; Zach Welch <zwelch@gentoo.org> gpm-1.20.0-r6.ebuild :
+  Add arm keyword
 
   08 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
-
-*gpm-1.20.0-r5 (18 Nov 2002)
 
   13 Jan 2002; Michael Nazaroff <naz@gentoo.org> gpm-1.20.0-r6.ebuild :
 
   Fix for bug #5232 which helps keep useless logs to minimum.
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *gpm-1.20.0-r5 (18 Nov 2002)
 
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
   18 Nov 2002; Martin Schlemmer <azarah@gentoo.org> gpm-1.20.0-r5.ebuild :
 
   Fix missing /usr/lib/libgpm.so.1, bug #10355.  Convert to use epatch from
