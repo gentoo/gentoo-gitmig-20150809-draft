@@ -120,6 +120,10 @@ dccc_show_env() {
 	grep -v '^#' ${DISTCC_ENV_FILE}
 }
 
+dccc_test_env() {
+	dccc_show_env | grep "$1" | tail -1 | sed -e "s,${1}=,,"
+}
+
 dccc_load_defaults() {
 	rm -f ${DISTCC_ENV_FILE}
 	dccc_install_env
@@ -146,8 +150,10 @@ dccc_set_env() {
 	} >> ${DISTCC_ENV_FILE}
 	rm -f ${DISTCC_ENV_FILE}.tmp
 	env-update
-	einfo "If you want to use these new settings in an existing shell,"
-	einfo "you need to 'source /etc/profile' to get the changes."
+	if [ -z "${DCCC_NO_WARN}" ]; then
+	  einfo "If you want to use these new settings in an existing shell,"
+	  einfo "you need to 'source /etc/profile' to get the changes."
+	fi
 }
 dccc_get_env() {
 	if [ -f ${DISTCC_ENV_FILE} ]; then
@@ -203,6 +209,19 @@ dccc_install() {
 ###
 # main routine
 
+# The --no-profile-warning option is meant to be used with
+#   the following helper function (add to ~/.bashrc)
+#
+# distcc-config() {
+#   command distcc-config --no-profile-warning "$@" && \
+#	source /etc/profile
+# }
+
+if [ "${1}" = "--no-profile-warning" ]; then
+	DCCC_NO_WARN=1
+	shift
+fi
+
 case "${1}" in
 	--get-* )
 		eval "dccc_$(echo ${1} | sed -e 's/^--//;s/-/_/g')"
@@ -212,6 +231,9 @@ case "${1}" in
 		shift
 		[ "${#}" -eq 0 ] && dccc_exit "argument required"
 		eval "dccc_${SET_FUNC} ${*}"
+		;;
+	--has-path )
+		dccc_test_env PATH
 		;;
 	--add-path )
 		dccc_set_env PATH "/usr/lib/distcc/bin"
@@ -238,11 +260,11 @@ case "${1}" in
 		dccc_links remove "${2}"
 		;;
 	* )
-		echo "usage: ${0} --set-hosts $DISTCC_HOSTS | --get-hosts"
+		echo "usage: ${0} --set-hosts DISTCC_HOSTS | --get-hosts"
 		echo "       ${0} --set-verbose { 0 | 1 }   | --get-verbose"
 		echo "       ${0} --set-log FILE  | --get-log" 
-		echo "       ${0} --add-path      | --no-path"
-		echo "       ${0} --install-links | --remove-links } [ CHOST ]"
+		echo -e "       ${0} --add-path      | --no-path\n"
+#		echo "       ${0} --install-links | --remove-links } [ CHOST ]"
 		exit 1
 		;;
 esac
