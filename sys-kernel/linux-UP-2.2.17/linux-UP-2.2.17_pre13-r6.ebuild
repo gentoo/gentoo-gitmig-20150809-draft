@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.2.17/linux-UP-2.2.17_pre13-r6.ebuild,v 1.2 2000/08/16 04:38:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.2.17/linux-UP-2.2.17_pre13-r6.ebuild,v 1.3 2000/09/15 20:09:27 drobbins Exp $
 
 P=linux-UP-2.2.17p13
 A="linux-2.2.16.tar.bz2 i2c-2.5.2.tar.gz lm_sensors-2.5.2.tar.gz
@@ -36,13 +36,13 @@ src_compile() {
     cd ${S}
     unset CFLAGS
     unset CXXFLAGS
-    make dep
-    make bzImage
-    make modules
+    try make dep
+    try make bzImage
+    try make modules
     cd ${S}/fs/reiserfs/utils
-    make
+    try make
     cd ${S}/lm_sensors-2.5.2
-    make
+    try make
 }
 
 src_unpack() {
@@ -103,8 +103,8 @@ src_unpack() {
     cd ${S}
 #    cp Makefile Makefile.orig
 ##    sed -e 's:-O2:${CFLAGS}:g' Makefile.orig > Makefile
-    make include/linux/version.h
-    make symlinks
+    try make include/linux/version.h
+    try make symlinks
     cp ${O}/files/${P}-r6.config .config
     cp ${O}/files/${P}-r6.autoconf include/linux/autoconf.h
     cp ${O}/files/gentoolinux_logo.h include/linux/linux_logo.h
@@ -138,7 +138,7 @@ src_install() {
     insinto /
     cd ${S}
     doins arch/i386/boot/bzImage
-    make INSTALL_MOD_PATH=${D} modules_install
+    try make INSTALL_MOD_PATH=${D} modules_install
     dosym /lib/modules/2.2.17pre13-RAID current
     into /
     cd ${S}/fs/reiserfs/utils/bin
@@ -151,7 +151,7 @@ src_install() {
     cp README README.reiserfs
     dodoc README.reiserfs README.dumpreiserfs
     cd ${S}/lm_sensors-2.5.2
-    make install
+    try make install
     prepman
 }
 
