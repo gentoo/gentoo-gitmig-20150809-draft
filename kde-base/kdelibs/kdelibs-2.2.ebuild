@@ -32,7 +32,7 @@ RDEPEND=">=sys-devel/gcc-2.95.2
 	 >=dev-libs/libpcre-3.4
 	 >=x11-libs/qt-x11-2.3.0
          ~kde-base/kde-env-2.2
-         app-text/sgml-commonk
+         app-text/sgml-common
          alsa? ( >=media-libs/alsa-lib-0.5.9 )
 	cups? ( net-print/cups )
          ssl? ( >=dev-libs/openssl-0.9.6 )
