@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.10.ebuild,v 1.6 2005/02/13 16:23:39 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.10-r1.ebuild,v 1.1 2005/02/13 16:23:39 ferdy Exp $
 
 inherit eutils ssl-cert gnuconfig fixheadtails
 
@@ -10,14 +10,17 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 sparc ~amd64 ~ppc hppa"
+KEYWORDS="~x86 ~sparc ~amd64 ~ppc ~hppa"
 IUSE="afs drac idled kerberos pam snmp ssl tcpd"
 
 PROVIDE="virtual/imapd"
 RDEPEND=">=sys-libs/db-3.2
 	>=dev-libs/cyrus-sasl-2.1.13
 	afs? ( >=net-fs/openafs-1.2.2 )
-	pam? ( >=sys-libs/pam-0.75 )
+	pam? (
+			>=sys-libs/pam-0.75
+			>=net-mail/mailbase-0.00-r8
+		)
 	kerberos? ( virtual/krb5 )
 	snmp? ( virtual/snmp )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
@@ -141,6 +144,8 @@ src_unpack() {
 
 	# Add drac database support.
 	if use drac ; then
+		# better check for drac. Bug #79442.
+		epatch "${FILESDIR}/${P}-drac.patch" || die "epatch failed"
 		epatch "${S}/contrib/drac_auth.patch" || die "epatch failed"
 	fi
 
@@ -207,6 +212,11 @@ src_compile() {
 		--disable-cyradm \
 		${myconf} || die "econf failed"
 
+	# needed for parallel make. Bug #72352.
+	cd ${S}/imap
+	emake xversion.h || die "emake xversion.h failed"
+
+	cd ${S}
 	emake || die "compile problem"
 }
 
@@ -234,7 +244,10 @@ src_install() {
 
 	if use pam ; then
 		insinto /etc/pam.d
-		newins "${FILESDIR}/imap.pam" imap
+	# This is now provided by mailbase-0.00-r8. See #79240
+	# 	newins "${FILESDIR}/imap.pam" imap
+	#	newins "${FILESDIR}/imap.pam" pop3
+		newins "${FILESDIR}/imap.pam" sieve
 	fi
 
 	if use ssl ; then
@@ -244,7 +257,7 @@ src_install() {
 		fowners cyrus:mail /etc/ssl/cyrus/server.{key,pem}
 	fi
 
-	for subdir in imap/{,db,log,msg,proc,socket} spool/imap/{,stage.} ; do
+	for subdir in imap/{,db,log,msg,proc,socket,sieve} spool/imap/{,stage.} ; do
 		keepdir "/var/${subdir}"
 		fowners cyrus:mail "/var/${subdir}"
 		fperms 0750 "/var/${subdir}"
