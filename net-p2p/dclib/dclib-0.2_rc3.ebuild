@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.2_rc1.ebuild,v 1.1 2002/12/08 23:28:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/dclib-0.2_rc3.ebuild,v 1.1 2002/12/20 00:10:38 vapier Exp $
+
+inherit gcc
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
@@ -17,6 +19,9 @@ DEPEND=">=sys-apps/bzip2-1.0.2
 
 src_compile() {
 	export CPPFLAGS="${CXXFLAGS} -I/usr/include/libxml2/libxml"
+	if [ `gcc-major-version` == 2 ] ; then
+		patch -p0 < ${FILESDIR}/${P}-gcc2.patch || die
+	fi
 
 	econf || die
 	emake || die
