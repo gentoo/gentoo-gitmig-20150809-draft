@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.1 2004/04/22 09:31:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.2 2004/04/27 18:17:38 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> musepack-tools-1.15r.ebuild:
+  Add flag-o-matic for bug 49179
 
 *musepack-tools-1.15r (22 Apr 2004)
 
