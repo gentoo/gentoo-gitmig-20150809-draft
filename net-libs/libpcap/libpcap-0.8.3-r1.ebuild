@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.8.3-r1.ebuild,v 1.12 2004/07/01 22:26:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.8.3-r1.ebuild,v 1.13 2004/07/18 03:27:08 tgall Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.tcpdump.org/release/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64"
 IUSE="ipv6"
 
 DEPEND="virtual/libc"

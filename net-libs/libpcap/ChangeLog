@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.30 2004/07/01 22:26:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.31 2004/07/18 03:27:08 tgall Exp $
+
+  17 Jul 2004; Tom Gall <tgall@gentoo.org> libpcap-0.8.3-r1.ebuild:
+  stable on ppc64, bug #56911
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libpcap-0.7.2-r1.ebuild, libpcap-0.7.2.ebuild, libpcap-0.8.1-r1.ebuild,
