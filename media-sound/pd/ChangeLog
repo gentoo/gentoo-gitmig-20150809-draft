@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/pd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/ChangeLog,v 1.5 2003/07/12 20:30:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/ChangeLog,v 1.6 2003/08/16 08:53:07 jje Exp $
+
+*pd-0.36.0 (16 Aug 2003)
+
+  16 Aug 2003; jje <jje@gentoo.org> pd-0.35.0-r1.ebuild,
+  pd-0.35.0-r2.ebuild, pd-0.36.0.ebuild, pd-0.37_pre8.ebuild,
+  files/0.35.0-r1.patch:
+  Added latest version. Limited pre 0.37.0 versions to tk/tcl 8.3.
+
+  See #23178 for details.
 
 *pd-0.35.0-r1 (13 Feb 2003)
  
