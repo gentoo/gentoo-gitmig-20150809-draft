@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/itcl
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.10 2003/10/29 04:44:27 robbat2 Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.11 2004/03/08 04:17:20 robbat2 Exp $
+
+*itcl-3.2.1-r1 (07 Mar 2004)
+
+  07 Mar 2004; Robin H. Johnson <robbat2@gentoo.org> itcl-3.2.1-r1.ebuild:
+  add prospective fix for bug #43770
 
 *itcl-3.2.1 (28 Oct 2003)
 
