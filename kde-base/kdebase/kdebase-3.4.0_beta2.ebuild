@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0_beta2.ebuild,v 1.1 2005/02/09 16:14:47 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0_beta2.ebuild,v 1.2 2005/02/10 14:15:22 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -33,6 +33,9 @@ src_unpack() {
 	kde_src_unpack
 
 	epatch ${FILESDIR}/${PVR}/startkde-gentoo.diff
+
+	# see kde bug 98628. Applied for rc1.
+	epatch ${FILESDIR}/kicker-visibility.diff
 }
 
 src_compile() {

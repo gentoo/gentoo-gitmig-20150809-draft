@@ -3,14 +3,15 @@ MD5 27951cb90590fc35595b2038d4ca5581 kdebase-3.3.1-r2.ebuild 3420
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 a0835355b1270f14da23b5b30f44a63e kdebase-3.3.2-r1.ebuild 3978
 MD5 771fb9eceec5b0d9c5bae83af47b7882 kdebase-3.2.3-r3.ebuild 3476
-MD5 79bae13d777d739b3362b35e3c38051c ChangeLog 32743
+MD5 e055eca13f12ff0ff5a00b4a43ad9bf4 ChangeLog 32900
 MD5 0bd55e9bac19b8fbec4aa67e025a1fbc kdebase-3.3.2-r2.ebuild 3761
-MD5 e5c7176e0390b71ea1e433ebc46d0f8f kdebase-3.4.0_beta2.ebuild 3554
+MD5 8f72556b6e3ca8ce06ef6a3b1f496b13 kdebase-3.4.0_beta2.ebuild 3637
 MD5 2b5419b0b173138e22fe03f4157d5660 files/kde-np.pam 379
 MD5 a348b495507b720286e628a3f7413029 files/post-3.3.1-kdebase-smb.diff 643
 MD5 c8256659ac4c0c43fca3e6af07c3a580 files/digest-kdebase-3.4.0_beta2 69
 MD5 473c39b9f37a35e244d5718bf0006716 files/digest-kdebase-3.3.2-r2 68
 MD5 473c39b9f37a35e244d5718bf0006716 files/digest-kdebase-3.3.2-r1 68
+MD5 91d7c186d90f5da51a627860e23ea594 files/kicker-visibility.diff 2424
 MD5 daa284d6a1f62c5c73deb8aeda9df57d files/digest-kdebase-3.2.3-r3 68
 MD5 f06224b0a38152e5d3435b00a70bcf6c files/konsole-3.3.2.patch 1201
 MD5 b048371a651391ef2bb4166e40e6adff files/kde.pam 405
