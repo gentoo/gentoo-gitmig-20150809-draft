@@ -13,7 +13,7 @@ HOMEPAGE="http://www.texmacs.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=app-text/tetex-1.0.7-r7
 	>=dev-util/guile-1.3.4
