@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0261-r2.ebuild,v 1.1 2003/10/22 20:55:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0261-r2.ebuild,v 1.2 2003/10/22 20:56:48 lanius Exp $
 
 inherit gcc kernel-mod
 
@@ -20,11 +20,11 @@ RESTRICT="nostrip"
 DEPEND="virtual/linux-sources"
 
 src_compile() {
-    if kernel-mod_is_2_5_kernel || kernel-mod_is_2_6_kernel
-    then
-        EPATCH_SINGLE_MSG="Applying 2.5/6 patch ..." \
-        epatch ${FILESDIR}/nforce-net-1.0.0261-kernel-2.6.patch.gz
-    fi
+	if kernel-mod_is_2_5_kernel || kernel-mod_is_2_6_kernel
+	then
+		EPATCH_SINGLE_MSG="Applying 2.5/6 patch ..." \
+		epatch ${FILESDIR}/nforce-net-1.0.0261-kernel-2.6.patch.gz
+	fi
 
 	make KERNSRC="/usr/src/linux" || die
 }
@@ -33,8 +33,8 @@ src_install() {
 	# The driver goes into the standard modules location
 	insinto /lib/modules/${KV}/kernel/drivers/net
 
-    if kernel-mod_is_2_5_kernel || kernel-mod_is_2_6_kernel
-    then
+	if kernel-mod_is_2_5_kernel || kernel-mod_is_2_6_kernel
+	then
 		doins nvnet.ko
 	else
 		doins nvnet.o
