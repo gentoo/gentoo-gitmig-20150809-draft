@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 591ca77b6212db9abb577ca42f1464ca mimd-0.30.1.ebuild 1477
+MD5 4e5a50f7aee667b932576ab7fdcfc85f metadata.xml 219
+MD5 4d8c570a08400dd08870a2ef604913ce ChangeLog 424
+MD5 c7bbbe3d74e59b00c50be012c04f184f files/digest-mimd-0.30.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB7ZyWFdQwWVoAgN4RArAFAKCmi/Z3DUnvQYrPhpWu6jc18uUtfQCg6E7A
+6In24Quvnwtkez8B9e/uHkg=
+=grSd
+-----END PGP SIGNATURE-----
