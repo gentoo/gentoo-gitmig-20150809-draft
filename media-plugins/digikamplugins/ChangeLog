@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/digikamplugins
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamplugins/ChangeLog,v 1.4 2004/08/05 16:12:29 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamplugins/ChangeLog,v 1.5 2004/11/08 18:06:15 carlo Exp $
+
+  08 Nov 2004; Carsten Lohrke <carlo@gentoo.org>
+  -digikamplugins-0.6.2_rc1.ebuild:
+  clean up
 
   05 Aug 2004; Carsten Lohrke <carlo@gentoo.org> digikamplugins-0.6.2.ebuild:
   stable on x86
