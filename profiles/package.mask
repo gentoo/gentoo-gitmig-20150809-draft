@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3752 2005/03/23 11:39:59 lu_zero Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3753 2005/03/23 13:48:56 trapni Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Christian Parpart <trapni@gentoo.org> (22 March 2005)
+# masked for testing
+=www-apps/mediawiki-1.4.0
 
 # Luca Barbato <lu_zero@gentoo.org> (22 March 2005)
 # Experimental ebuild
