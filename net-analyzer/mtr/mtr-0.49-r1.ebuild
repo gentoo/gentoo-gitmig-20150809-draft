@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.49-r1.ebuild,v 1.3 2002/08/14 12:12:12 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.49-r1.ebuild,v 1.4 2002/08/26 11:03:55 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Matt's TraceRoute. Excellent network diagnostic tool."
@@ -18,8 +18,11 @@ src_compile() {
 	local myconf
 	use gtk || myconf="${myconf} --without-gtk"
 
-	./configure --host=${HOST} --prefix=/usr \
+	./configure \
+		--host=${HOST} \
+		--prefix=/usr \
 		--mandir=/usr/share/man \
+		--sbindir=/usr/bin \
 		$myconf || die
 
 	make || die
@@ -28,7 +31,7 @@ src_compile() {
 src_install() {
 	# this binary is universal. ie: it does both console and gtk.
 
-	make prefix=${D}/usr mandir=${D}/usr/share/man install || die
+	make prefix=${D}/usr mandir=${D}/usr/share/man sbindir=${D}/usr/bin install || die
 	
 	dodoc AUTHORS COPYING ChangeLog FORMATS NEWS README SECURITY TODO
 }

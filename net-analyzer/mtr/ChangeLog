@@ -1,12 +1,16 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.1 2002/06/28 11:54:12 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.2 2002/08/26 11:03:55 aliz Exp $
 
   28 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
   moved to net-analyzer
 
 *mtr-0.49-r1 (3 May 2002)
-  
+
+  26 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> mtr-0.49-r1 :
+  Moves binary from /usr/sbin to /usr/bin. Closes #6521. 
+  Submitted by Hannes Mehnert <hannes@mehnert.org>.
+   
   3 May 2002; Donny Davies <woodchip@gentoo.org> :
   
   Added LICENSE, SLOT.
