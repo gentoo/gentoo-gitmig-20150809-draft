@@ -1,0 +1,10 @@
+# ChangeLog for sys-kernel/xbox-sources
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.1 2004/06/30 01:26:07 chrb Exp $
+
+*xbox-sources-2.6.7 (30 Jun 2004)
+
+  30 Jun 2004; Chris Bainbridge <chrb@gentoo.org> +metadata.xml,
+  +xbox-sources-2.6.7.ebuild:
+  This package was submitted by Chris Bainbridge in bug #45100
+
