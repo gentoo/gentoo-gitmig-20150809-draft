@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.34 2004/06/15 08:02:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.35 2004/06/15 19:42:16 kloeri Exp $
+
+  15 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> vsftpd-1.2.2.ebuild:
+  Stable on alpha, bug 53116.
 
 *vsftpd-1.2.2 (15 Jun 2004)
 

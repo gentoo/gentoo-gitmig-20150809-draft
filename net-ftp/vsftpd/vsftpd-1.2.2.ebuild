@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-1.2.2.ebuild,v 1.2 2004/06/15 08:11:27 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-1.2.2.ebuild,v 1.3 2004/06/15 19:42:16 kloeri Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://vsftpd.beasts.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~alpha ~ia64 ~sparc ~s390 ~ppc64 ~ppc"
+KEYWORDS="~x86 ~amd64 alpha ~ia64 ~sparc ~s390 ~ppc64 ~ppc"
 
 DEPEND="pam? ( >=sys-libs/pam-0.75 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
