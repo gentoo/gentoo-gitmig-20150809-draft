@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/swh-plugins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.9 2003/04/28 09:11:02 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.10 2003/06/06 13:07:12 torbenh Exp $
+
+*swh-plugins-0.4.2 (06 Jun 2003)
+
+  06 Jun 2003; torbenh <torbenh@gentoo.org> Manifest swh-plugins-0.4.2.ebuild files/digest-swh-plugins-0.4.2 :
+  Version bump and removed the autmatic machine detection which did not work
+  as good as CFLAGS. Hopefully fixes Bug #21442
 
 *swh-plugins-0.4.0 (28 Apr 2003)
 
