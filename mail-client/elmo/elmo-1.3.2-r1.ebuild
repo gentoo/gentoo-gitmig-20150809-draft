@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/elmo-1.3.2-r1.ebuild,v 1.3 2004/11/30 21:56:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/elmo-1.3.2-r1.ebuild,v 1.4 2005/02/21 17:09:12 citizen428 Exp $
 
 inherit eutils
 
@@ -34,7 +34,10 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
-	dodoc ABOUT-NLS ADVOCACY AUTHORS BUGS COPYING ChangeLog INSTALL NEWS THANKS TODO doc/*
+	dodoc ABOUT-NLS ADVOCACY AUTHORS BUGS ChangeLog INSTALL NEWS \
+		THANKS TODO
+	cd doc
+	dodoc README.txt sample.{,pl.}elmorc tutorial{,.gpg}
 }
 
 pkg_postinst() {
