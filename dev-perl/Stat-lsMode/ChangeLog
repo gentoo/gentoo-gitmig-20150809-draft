@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Stat-lsMode
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Stat-lsMode/ChangeLog,v 1.1 2004/02/15 03:03:13 esammer Exp $
+
+*Stat-lsMode-0.50 (14 Feb 2004)
+
+  14 Feb 2004; Eric Sammer <esammer@gentoo.org> Stat-lsMode-0.50.ebuild:
+  Initial import of Stat-lsMode submitted by Sven Wegener
+  <sven.wegener@stealer.net> as a dependency for the yet to be added
+  app-misc/filer. Thanks to Sven Wegener. Part of bug #41605.
+
