@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.1.1.ebuild,v 1.2 2004/12/20 15:39:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.1.1.ebuild,v 1.3 2004/12/21 12:23:50 mcummings Exp $
 
 DESCRIPTION="The virtual machine that perl6 relies on."
 HOMEPAGE="http://www.parrotcode.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://cpan/authors/id/L/LT/LTOETSCH/${S}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 IUSE=""
 
 #this ebuild has been tested with the given perl
@@ -25,9 +25,9 @@ src_compile() {
 src_install() {
 
 	#The prefix was set by Configure.pl - see src_compile().
-	make install BUILDPREFIX=${D} PREFIX=/usr/share/${P} || die
+	make install BUILDPREFIX=${D} PREFIX=/usr/lib/${P} || die
 	dodir /usr/bin
-	dosym /usr/share/${P}/bin/parrot /usr/bin
+	dosym /usr/lib/${P}/bin/parrot /usr/bin
 
 	#TODO: put the doc (pod) and examples in a special dir
 	#/docs/ /examples/
