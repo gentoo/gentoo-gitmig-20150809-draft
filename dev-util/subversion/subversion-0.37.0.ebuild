@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.37.0.ebuild,v 1.6 2004/02/11 10:05:57 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.37.0.ebuild,v 1.7 2004/02/13 19:55:21 pauldv Exp $
 
 inherit elisp-common libtool
 
@@ -44,7 +44,7 @@ DEPEND="${RDEPEND}
 	)"
 
 pkg_setup() {
-	if has_version '<dev-util/subversion-0.34.0' && [ "${SVN_DUMPED}" == "" ]; then
+	if use berkdb && has_version '<dev-util/subversion-0.34.0' && [ "${SVN_DUMPED}" == "" ]; then
 		einfo ""
 		ewarn ":  Now you have $(best_version subversion)"
 		ewarn " Subversion has changed the repository filesystem schema from 0.34.0."
@@ -59,12 +59,13 @@ pkg_setup() {
 
 	if use apache2; then
 		einfo "The apache2 subversion module will be built, and libapr from the"
-		einfo "apache package will be used instead of the included"
+		einfo "apache package will be used instead of the included."
 	else
 		einfo "Please note that subversion and apache2 cannot be installed"
 		einfo "simultaneously without specifying the apache2 use flag. This is"
 		einfo "because subversion installs its own libapr and libapr-util in that"
-		einfo "case."
+		einfo "case. Specifying the apache2 useflag will also enable the building of"
+		einfo "the apache2 module."
 	fi
 }
 
@@ -126,9 +127,11 @@ src_compile() {
 			fi
 		fi
 	fi
+	cd ${S}
 	if use emacs; then
-		emacs -batch -f batch-byte-compile contrib/client-side/vc-svn.el || die
-		emacs -batch -f batch-byte-compile contrib/client-side/psvn/psvn.el || die
+		einfo "compiling emacs support"
+		elisp-compile ${S}/contrib/client-side/psvn/psvn.el || die "emacs modules failed"
+		elisp-compile ${S}/contrib/client-side/vc-svn.el || die "emacs modules failed"
 	fi
 }
 
@@ -239,7 +242,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	use emacs && elisp-site-regen
+	has_version virtual/emacs && elisp-site-regen
 }
 
 pkg_config() {
