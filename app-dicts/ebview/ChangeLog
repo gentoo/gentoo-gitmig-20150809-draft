@@ -1,0 +1,11 @@
+# ChangeLog for app-dicts/ebview
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ChangeLog,v 1.1 2003/08/29 15:57:33 usata Exp $
+
+*ebview-0.3.1 (30 Aug 2003)
+
+  30 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> ebview-0.3.1.ebuild:
+  Initial import.  Ebuild first written by Masatomo Nakano
+  <nakano@gentoo.org> and updated by (ha)-san and jargon-san
+  at GentooJP BugTrack
+
