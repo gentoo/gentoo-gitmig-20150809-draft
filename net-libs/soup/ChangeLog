@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/soup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.16 2003/04/10 06:17:55 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.17 2003/04/28 23:45:54 liquidx Exp $
+
+  29 Apr 2003; Alastair Tse <liquidx@gentoo.org> soup-0.7.11.ebuild:
+  bump 0.7.11 to stable
 
 *soup-0.7.11 (04 Mar 2003)
 
