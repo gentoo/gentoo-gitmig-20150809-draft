@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.5.3.ebuild,v 1.1 2003/03/17 08:45:12 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.5.3.ebuild,v 1.2 2003/03/18 13:26:05 vladimir Exp $
 
 inherit libtool
 inherit flag-o-matic
@@ -79,4 +79,6 @@ src_install() {
 
 	dosed "s:-I/usr/include ::" /usr/bin/Magick-config
 	dosed "s:-I/usr/include ::" /usr/bin/Magick++-config
+	
+	dosym /usr/lib/libMagick-5.5.5-Q16.so.0.0.0 /usr/lib/libMagick.so.5
 }
