@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.21_pre3-r2.ebuild,v 1.1 2003/01/18 06:45:04 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.21_pre3-r2.ebuild,v 1.2 2003/01/18 23:43:55 livewire Exp $
 
 IUSE="build crypt"
 
@@ -35,7 +35,7 @@ SLOT="${KV}"
 src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
-
+         
 	cd ${KV}
 	# Kill patches we aren't suppposed to use, don't worry about 
 	# failures, if they aren't there that is a good thing!
@@ -64,4 +64,7 @@ src_unpack() {
 	fi
 
 	kernel_src_unpack
+	cd ${S}
+        patch -p1 < ${FILESDIR}/pci.ids.patch || die "Pci.ids fixes patch failed"
+
 }
