@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.11.ebuild,v 1.5 2003/02/25 21:30:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.11.ebuild,v 1.6 2003/03/10 12:01:38 seemant Exp $
 
 IUSE="doc python"
 
@@ -34,8 +34,16 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.9 )"
 
 src_compile() {
+
+	# Strip out -fomit-frame-pointer for k6's
+	is-flag "-march=k6-3" && strip-flags "-fomit-frame-pointer"
+	is-flag "-march=k6-2" && strip-flags "-fomit-frame-pointer"
+	is-flag "-march=k6" && strip-flags "-fomit-frame-pointer"
+
 	local myconf
-	use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --disable-gtk-doc"
+	use doc \
+		&& myconf="${myconf} --enable-gtk-doc" \
+		|| myconf="${myconf} --disable-gtk-doc"
 
 	use python \
 		&& myconf="${myconf} --enable-python" \

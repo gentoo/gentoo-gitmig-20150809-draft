@@ -1,8 +1,13 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.26 2003/03/04 00:51:28 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.27 2003/03/10 12:01:38 seemant Exp $
 
 *gimp-1.3.12 (24 Feb 2003)
+
+  10 Mar 2003; Seemant Kulleen <seemant@gentoo.org> gimp-1.2.3-r2.ebuild,
+  gimp-1.2.3-r3.ebuild, gimp-1.3.11.ebuild, gimp-1.3.12.ebuild:
+  strip out -fomit-frame-pointer for k6 based cpu's. closes bug #15559 by
+  sinterklaas <jerroose@xs4all.nl>
 
   25 Feb 2003; Martin Holzer <mholzer@gentoo.org> gimp-1.3.12.ebuild :
   Filter out -Os and replace with -O2. Closes #12644.

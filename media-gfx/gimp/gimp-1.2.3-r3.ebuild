@@ -1,10 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.9 2003/03/04 00:51:28 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.10 2003/03/10 12:01:38 seemant Exp $
+
+inherit eutils flag-o-matic
 
 IUSE="python nls gnome aalib perl"
 
-S="${WORKDIR}/${P}"
+S=${WORKDIR}/${P}
 DESCRIPTION="The GIMP"
 SRC_URI="ftp://ftp.gimp.org/pub/gimp/v1.2/v${PV}/${P}.tar.bz2"
 HOMEPAGE="http://www.gimp.org/"
@@ -42,7 +44,7 @@ src_unpack() {
 	cd ${S}/plug-ins/common
 	# compile with nonstandard psd_save plugin
 	cp ${FILESDIR}/psd_save.c .
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff || die
+	epatch ${FILESDIR}/${PF}-gentoo.diff
 	cd ${S}
 	
 	if [ -f ${ROOT}/usr/share/gettext/config.rpath ] ; then
@@ -78,6 +80,14 @@ src_unpack() {
 }
 
 src_compile() {
+
+	
+	# Strip out -fomit-frame-pointer for k6's
+	is-flag "-march=k6-3" && strip-flags "-fomit-frame-pointer"
+	is-flag "-march=k6-2" && strip-flags "-fomit-frame-pointer"
+	is-flag "-march=k6" && strip-flags "-fomit-frame-pointer"
+
+
 	local myconf=""
 	local mymake=""
 	local myvars=""

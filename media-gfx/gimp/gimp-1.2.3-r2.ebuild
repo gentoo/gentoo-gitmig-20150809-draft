@@ -1,43 +1,42 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r2.ebuild,v 1.13 2003/02/13 12:32:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r2.ebuild,v 1.14 2003/03/10 12:01:38 seemant Exp $
+
+inherit eutils flag-o-matic
 
 IUSE="python nls gnome aalib perl"
 
-S="${WORKDIR}/${P}"
-DESCRIPTION="The GIMP"
+S=${WORKDIR}/${P}
+DESCRIPTION="The GIMP -- GNU Image Manipulation Program"
 SRC_URI="ftp://ftp.gimp.org/pub/gimp/v1.2/v${PV}/${P}.tar.bz2"
 HOMEPAGE="http://www.gimp.org/"
 
 SLOT="1.2"
-KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
+KEYWORDS="x86 ppc"
 
-DEPEND="nls? ( sys-devel/gettext )
-	sys-devel/autoconf
-	sys-devel/automake
-	=x11-libs/gtk+-1.2*
-	>=media-libs/mpeg-lib-1.3.1
+RDEPEND="=x11-libs/gtk+-1.2*
 	aalib? ( >=media-libs/aalib-1.2 )
-	perl? ( >=dev-perl/PDL-2.2.1 
-		>=dev-perl/Parse-RecDescent-1.80 
+	perl? ( >=dev-perl/PDL-2.2.1
+		>=dev-perl/Parse-RecDescent-1.80
 		>=dev-perl/gtk-perl-0.7004 )
 	python? ( >=dev-lang/python-2.0 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
 
-RDEPEND="=x11-libs/gtk+-1.2*
-	aalib? ( >=media-libs/aalib-1.2 )
-	perl? ( >=dev-perl/PDL-2.2.1 >=dev-perl/Parse-RecDescent-1.80 >=dev-perl/gtk-perl-0.7004 )
-	python? ( >=dev-lang/python-2.0 )
-	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
+DEPEND="${RDEPEND}
+	sys-devel/autoconf
+	sys-devel/automake
+	>=media-libs/mpeg-lib-1.3.1
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
+
 	unpack ${A}
 	
 	cd ${S}/plug-ins/common
 	# compile with nonstandard psd_save plugin
 	cp ${FILESDIR}/psd_save.c .
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff || die
+	epatch ${FILESDIR}/${PF}-gentoo.diff
 	cd ${S}
 	
 	if [ -f ${ROOT}/usr/share/gettext/config.rpath ] ; then
@@ -69,6 +68,13 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# Strip out -fomit-frame-pointer for k6's
+	is-flag "-march=k6-3" && strip-flags "-fomit-frame-pointer"
+	is-flag "-march=k6-2" && strip-flags "-fomit-frame-pointer"
+	is-flag "-march=k6" && strip-flags "-fomit-frame-pointer"
+
+
 	local myconf=""
 	local mymake=""
 	local myvars=""
