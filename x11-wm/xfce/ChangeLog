@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/xfce
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/ChangeLog,v 1.6 2002/03/29 06:52:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/ChangeLog,v 1.7 2002/04/08 06:31:18 azarah Exp $
+
+  8 Apr 2002; M.Schlemmer <azarah@gentoo.org> files/xfce :
+
+  Change start command to /usr/bin/startxfce.
 
 *xfce-3.8.14 (28 Mar 2002)
 
