@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.103 2004/05/12 12:26:20 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.104 2004/05/15 06:50:19 lisa Exp $
+
+  15 May 2004; Lisa Seelye <lisa@gentoo.org> :
+  cleanup of old files
 
   12 May 2004; Michael McCabe <randy@gentoo.org> distcc-2.14.ebuild:
   Added s390 keywords
