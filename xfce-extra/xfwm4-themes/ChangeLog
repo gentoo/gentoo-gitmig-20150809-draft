@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfwm4-themes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/ChangeLog,v 1.28 2004/08/07 14:27:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfwm4-themes/ChangeLog,v 1.29 2004/08/30 18:49:01 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  xfwm4-themes-4.0.6.ebuild:
+  Masked xfwm4-themes-4.0.6.ebuild stable for ppc
 
   07 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> xfwm4-themes-4.0.6.ebuild:
   Stable on alpha.

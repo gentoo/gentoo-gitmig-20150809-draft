@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-mixer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.29 2004/08/06 13:21:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.30 2004/08/30 18:49:01 pvdabeel Exp $
+
+  30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  xfce4-mixer-4.0.6.ebuild:
+  Masked xfce4-mixer-4.0.6.ebuild stable for ppc
 
   06 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   xfce4-mixer-4.0.6.ebuild:

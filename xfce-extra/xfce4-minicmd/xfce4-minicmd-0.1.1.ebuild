@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-minicmd/xfce4-minicmd-0.1.1.ebuild,v 1.7 2004/06/24 22:01:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-minicmd/xfce4-minicmd-0.1.1.ebuild,v 1.8 2004/08/30 18:49:01 pvdabeel Exp $
 
 IUSE=""
 MY_P="${PN}-plugin-${PV}"
@@ -12,7 +12,7 @@ SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="ia64 ~x86 ~ppc ~alpha ~sparc amd64"
+KEYWORDS="ia64 ~x86 ppc ~alpha ~sparc amd64"
 
 DEPEND=">=x11-libs/gtk+-2.0.6
 	dev-util/pkgconfig
