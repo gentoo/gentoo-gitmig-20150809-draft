@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Regexp-Shellish
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Regexp-Shellish/ChangeLog,v 1.3 2004/12/23 16:26:39 nigoro Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Regexp-Shellish/ChangeLog,v 1.4 2005/02/05 14:23:26 absinthe Exp $
+
+  05 Feb 2005; Dylan Carlson <absinthe@gentoo.org>
+  Regexp-Shellish-0.93.ebuild:
+  Keywords ~amd64.
 
   24 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Regexp-Shellish-0.93.ebuild:
   added ~ppc64

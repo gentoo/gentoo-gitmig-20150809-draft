@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Digest
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Digest/ChangeLog,v 1.1 2004/11/27 05:56:57 pclouds Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Digest/ChangeLog,v 1.2 2005/02/05 14:24:37 absinthe Exp $
+
+  05 Feb 2005; Dylan Carlson <absinthe@gentoo.org> IO-Digest-0.10.ebuild:
+  Keywords ~amd64.
 
 *IO-Digest-0.10 (27 Nov 2004)
 

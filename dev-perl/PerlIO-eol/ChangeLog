@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PerlIO-eol
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-eol/ChangeLog,v 1.1 2004/11/27 06:05:18 pclouds Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-eol/ChangeLog,v 1.2 2005/02/05 14:29:50 absinthe Exp $
+
+  05 Feb 2005; Dylan Carlson <absinthe@gentoo.org> PerlIO-eol-0.13.ebuild:
+  Keywords ~amd64.
 
 *PerlIO-eol-0.13 (27 Nov 2004)
 

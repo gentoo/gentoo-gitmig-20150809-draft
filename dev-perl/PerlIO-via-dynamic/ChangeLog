@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PerlIO-via-dynamic
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-dynamic/ChangeLog,v 1.4 2005/01/09 22:30:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-dynamic/ChangeLog,v 1.5 2005/02/05 14:21:45 absinthe Exp $
+
+  05 Feb 2005; Dylan Carlson <absinthe@gentoo.org>
+  PerlIO-via-dynamic-0.11.ebuild:
+  Keywords ~amd64.
 
   09 Jan 2005; Jason Wever <weeve@gentoo.org>
   PerlIO-via-dynamic-0.11.ebuild:
