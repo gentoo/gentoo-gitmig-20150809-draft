@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/dumb-xmms/dumb-xmms-0.1.ebuild,v 1.5 2004/07/06 22:36:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/dumb-xmms/dumb-xmms-0.1.ebuild,v 1.6 2004/09/01 17:33:35 eradicator Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/dumb/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 # -sparc: 0.1: noise playback - eradicator
-KEYWORDS="x86 ~amd64 -sparc"
+KEYWORDS="x86 amd64 -sparc"
 
 DEPEND=">=media-sound/xmms-1.2.7-r20
 	>=media-libs/dumb-0.9.2"

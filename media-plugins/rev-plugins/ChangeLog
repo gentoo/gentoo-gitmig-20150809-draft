@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/rev-plugins
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rev-plugins/ChangeLog,v 1.7 2004/07/04 20:20:45 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rev-plugins/ChangeLog,v 1.8 2004/09/01 17:37:39 eradicator Exp $
+
+  01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  rev-plugins-0.2.1.ebuild:
+  Stable amd64.
 
   04 Jul 2004; Frank van de Pol <fvdpol@gentoo.org> rev-plugins-0.2.1.ebuild:
   Updated package description and URL.

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/dumb-xmms
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/dumb-xmms/ChangeLog,v 1.4 2004/07/06 22:36:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/dumb-xmms/ChangeLog,v 1.5 2004/09/01 17:33:35 eradicator Exp $
+
+  01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> dumb-xmms-0.1.ebuild:
+  Stable amd64.
 
   06 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> dumb-xmms-0.1.ebuild:
   ~amd64 -sparc.

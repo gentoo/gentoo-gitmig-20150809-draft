@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/modplugxmms-2.04.ebuild,v 1.6 2004/07/06 21:09:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/modplugxmms-2.04.ebuild,v 1.7 2004/09/01 17:37:05 eradicator Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://modplug-xmms.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
 #-sparc: 2.04: Bus error when starting playback crashed xmms
-KEYWORDS="x86 ~amd64 -sparc"
+KEYWORDS="x86 amd64 -sparc"
 
 DEPEND=">=media-sound/xmms-1.2.5-r1"
 

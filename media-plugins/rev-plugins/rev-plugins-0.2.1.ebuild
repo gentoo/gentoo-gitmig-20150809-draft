@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rev-plugins/rev-plugins-0.2.1.ebuild,v 1.6 2004/07/04 20:20:45 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rev-plugins/rev-plugins-0.2.1.ebuild,v 1.7 2004/09/01 17:37:39 eradicator Exp $
 #
 MY_P=${P/rev/REV}
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://users.skynet.be/solaris/linuxaudio/"
 SRC_URI="http://users.skynet.be/solaris/linuxaudio/downloads/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 amd64"
 
 IUSE=""
 
