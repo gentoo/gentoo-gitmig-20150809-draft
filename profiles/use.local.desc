@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.876 2005/01/17 20:36:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.877 2005/01/19 19:44:54 luckyduck Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -152,6 +152,8 @@ dev-java/gnu-classpath:native - Compile native .so libraries
 dev-java/gnu-javamail:javadoc - Generate API documentation
 dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
 dev-java/java-gtk:gcj - Enable building with gcj
+dev-java/jdictrayapi:examples - Install example source code
+dev-java/jdictrayapi:source - Zip the sources and install them
 dev-java/jmock:examples - Install example source code
 dev-java/libgconf-java:gcj - Enable building with gcj
 dev-java/libglade-java:gcj - Enable building with gcj
