@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.0.2.ebuild,v 1.2 2003/08/20 05:00:30 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.0.3.ebuild,v 1.1 2003/08/20 05:00:30 obz Exp $
 
 inherit gnome2
 
@@ -11,19 +11,17 @@ HOMEPAGE="http://gtkglext.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="~x86 ~sparc"
 
-RDEPEND=">=dev-libs/glib-2
-	>=x11-libs/gtk+-2
-	>=x11-libs/pango-1
+RDEPEND=">=x11-libs/gtk+-2
 	virtual/glu
-	virtual/opengl
-	virtual/x11"
+	virtual/opengl"
 
 DEPEND="${DEPEND}
-	doc? ( >=dev-util/gtk-doc-0.10 )"
+	doc? ( >=dev-util/gtk-doc-0.10 )
+	dev-util/pkgconfig"
 
-DOCS="AUTHORS COPYING* ChangeLog* INSTALL NEWS* README* TODO"
+DOCS="AUTHORS COPYING* ChangeLog* INSTALL NEWS README* TODO"
 
 # gtkglext doesn't build with some (faulty) nvidia drivers headers
 # this makes it always switch to xfree during install
