@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03-r3.ebuild,v 1.5 2002/12/09 04:21:10 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03-r3.ebuild,v 1.6 2002/12/15 10:44:16 bjb Exp $
 
 MY_P="${P}ii"
 S=${WORKDIR}/${PN}
@@ -10,7 +10,7 @@ HOMEPAGE="http://cpan.perl.org/pub/perl/CPAN/modules/by-module/SGMLS/${MY_P}.rea
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc  alpha"
+KEYWORDS="x86 sparc alpha"
 
 src_unpack() {
 

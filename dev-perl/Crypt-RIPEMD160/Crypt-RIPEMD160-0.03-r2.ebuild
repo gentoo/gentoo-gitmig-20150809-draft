@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-RIPEMD160/Crypt-RIPEMD160-0.03-r2.ebuild,v 1.9 2002/12/09 04:21:06 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-RIPEMD160/Crypt-RIPEMD160-0.03-r2.ebuild,v 1.10 2002/12/15 10:44:13 bjb Exp $
 
 inherit perl-module
 
@@ -11,6 +11,6 @@ SRC_URI="http://www.cpan.org/authors/id/C/CH/CHGEUER/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 export OPTIMIZE="$CFLAGS"

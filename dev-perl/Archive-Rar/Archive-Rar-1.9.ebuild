@@ -11,6 +11,6 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Acrhive/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ~ppc ~sparc  ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND="${DEPEND}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.23-r1.ebuild,v 1.2 2002/12/09 04:21:10 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.23-r1.ebuild,v 1.3 2002/12/15 10:44:16 bjb Exp $
 
 IUSE="gtk tcltk libwww curses"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/poe/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="${DEPEND}
 	dev-perl/Event

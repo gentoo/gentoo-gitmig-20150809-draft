@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Period/Period-1.20-r2.ebuild,v 1.8 2002/12/09 04:21:10 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Period/Period-1.20-r2.ebuild,v 1.9 2002/12/15 10:44:16 bjb Exp $
 
 inherit perl-module
 
@@ -11,6 +11,6 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Time/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND=${DEPEND}

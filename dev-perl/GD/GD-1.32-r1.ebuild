@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-1.32-r1.ebuild,v 1.12 2002/12/09 04:21:06 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-1.32-r1.ebuild,v 1.13 2002/12/15 10:44:14 bjb Exp $
 
 IUSE="X"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/GD/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ppc sparc  alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="${DEPEND}
 	>=media-libs/libgd-1.8.3
