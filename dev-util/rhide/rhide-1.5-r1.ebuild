@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5-r1.ebuild,v 1.2 2003/04/24 11:01:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5-r1.ebuild,v 1.3 2003/05/09 23:19:33 mholzer Exp $
 
 #SNAPSHOT="20020825"
 TVISIONVER="2.0.1"
@@ -50,10 +50,6 @@ src_unpack() {
 	# Get it to work with rhtvision-2.0
 	epatch ${FILESDIR}/${P}-rhtvision2.patch
 
-	cd ${WORKDIR}/${SETEDIT_S}
-	# Fix an include problem with official setedit-0.5.0
-	epatch ${FILESDIR}/setedit-${SETEDITVER}-fix-includes.patch
-	
 	# Update snapshot version
 	if [ -n "${SNAPSHOT}" ]
 	then
