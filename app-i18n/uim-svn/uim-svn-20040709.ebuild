@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20040709.ebuild,v 1.4 2004/11/04 14:28:31 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20040709.ebuild,v 1.5 2004/11/06 12:29:05 hattya Exp $
 
 inherit subversion flag-o-matic
 
@@ -53,7 +53,7 @@ src_compile() {
 
 		! use gtk && sed -ie "52s:NULL:\"uim-helper-candwin-qt\":" xim/canddisp.cpp
 
-		cd qt/qtkde-helper
+		cd qt/uim-kdehelper
 
 		addwrite /usr/qt/3/etc/settings
 		WANT_AUTOCONF=2.5 ./bootstrap
@@ -72,7 +72,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	if use X && use kde; then
-		cd qt/qtkde-helper
+		cd qt/uim-kdehelper
 		make DESTDIR=${D} install || die
 		cd -
 	fi
