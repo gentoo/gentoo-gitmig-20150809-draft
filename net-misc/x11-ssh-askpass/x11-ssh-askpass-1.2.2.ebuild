@@ -15,8 +15,8 @@ RDEPEND=">=net-misc/openssh-2.3.0 virtual/x11"
 src_compile() {
     try ./configure --prefix=/usr --libexecdir=/usr/lib/misc 
     try xmkmf
-    try make includes
-    try make
+    try make $MAKEOPTS includes
+    try make 
 }
 
 
