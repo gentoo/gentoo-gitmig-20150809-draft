@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3360 2004/11/30 21:06:01 vapier Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3361 2004/11/30 21:43:53 rac Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,11 +21,6 @@
 ##
 ##   End example
 ##
-
-# <rac@gentoo.org> (30 Nov 2004)
-# temporary until i get them both in the tree
->=sys-devel/libperl-5.8.6
->=dev-lang/perl-5.8.6
 
 # <jhuebel@gentoo.org> (29 Nov 2004)
 # masking vmware-workstation 5.0 betas, since the beta test
