@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_p1.ebuild,v 1.8 2004/04/24 18:10:32 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6_p1.ebuild,v 1.9 2004/04/25 15:26:39 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -29,8 +29,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=x11-libs/gtk+-2.4.0-r1
 	>=x11-libs/pango-1.4
 
-	>=dev-libs/libxml2-2.6.7
-	>=dev-libs/libxslt-1.1.4
+	>=dev-libs/libxml2-2.6.9
+	>=dev-libs/libxslt-1.1.6
 
 	>=x11-libs/libxklavier-1.02
 	>=media-libs/audiofile-0.2.5
