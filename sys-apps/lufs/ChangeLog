@@ -1,0 +1,8 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lufs/ChangeLog,v 1.1 2002/11/01 10:29:43 aliz Exp $
+
+*lufs-0.7.0 (01 Nov 2002)
+
+  01 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Initial import. Ebuild submitted by Marko Mikulicic <marko@seul.org> in #7314.
