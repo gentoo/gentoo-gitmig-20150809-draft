@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.16.ebuild,v 1.7 2004/06/07 01:41:20 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.16.ebuild,v 1.8 2004/06/07 01:43:02 zul Exp $
 
 MY_P=${P}-1.3.29
 S=${WORKDIR}/${MY_P}
@@ -12,7 +12,7 @@ KEYWORDS="x86 ppc sparc alpha hppa"
 LICENSE="as-is"
 SLOT="0"
 
-DEPEND="=net-www/apache-1.3.29*
+DEPEND="=net-www/apache-1.3.29-r2
 	>=dev-libs/openssl-0.9.6k"
 
 src_unpack() {
