@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.18 2003/04/16 22:44:48 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.19 2003/04/27 10:17:00 tantive Exp $
+
+*openmosix-sources-2.4.20-r4 (27 Apr 2003)
+
+  27 Apr 2003; Michael Imhof <tantive@gentoo.org>
+  Added 2.4.20-ptrace.patch
 
 *openmosix-sources-2.4.20-r3 (18 Apr 2003)
 
