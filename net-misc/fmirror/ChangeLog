@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/fmirror
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fmirror/ChangeLog,v 1.5 2004/06/24 23:44:19 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fmirror/ChangeLog,v 1.6 2005/04/06 20:03:46 seemant Exp $
+
+*fmirror-0.8.4-r1 (06 Apr 2005)
+
+  06 Apr 2005; Seemant Kulleen <seemant@gentoo.org>
+  +files/fmirror-crlf.patch, +metadata.xml, +fmirror-0.8.4-r1.ebuild:
+  added patch to make fmirror more compliant with RFC 959. Patch was made and
+  submitted by: Alin Dobre <alin@gentoo.org> in bug #85526
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
