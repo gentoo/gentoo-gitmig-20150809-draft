@@ -50,7 +50,6 @@ gif - Adds GIF image support
 glide - Adds media-libs/glide support to Xfree86
 gnome - Adds GNOME support
 gpg - Adds support for gpg (GnuPG encryption system)
-gpgme - Add support for gpgme to net-mail/sylpheed-claws
 gphoto2 - Adds digital camera support
 gpm - Adds support for sys-libs/gpm (Console-based mouse driver)
 gtk - Adds support for x11-libs/gtk+ (The GIMP Toolkit)
@@ -92,33 +91,33 @@ nocardbus
 objprelink
 odbc
 oggvorbis - Adds support for the OggVorbis audio encoding
-opengl
+opengl - Adds support for OpenGL
 oss
 pam
-pcmcia
-pda
+pcmcia - Adds support for PCMCIA slots/devices found on laptop computers
+pda - Adds support for portable devices.
 pdflib
-perl
+perl - Adds support/bindings for the Perl language.
 pic
 pixbuf
 plotutils
 pnp
-postgres
-python
-qt
+postgres - Adds support for the postgresql database
+python - Adds support/bindings for the Python language
+qt - Adds support for the Qt library.
 qtmt
 quicktime
 readline
-ruby
+ruby - Adds support/bindings for the Ruby language
 samba
 sdl
 slang
 slp
 snmp
 socks5
-spell
+spell - Adds dictionary support
 sse
-ssl
+ssl - Adds support for Secure Socket Layer connections
 static
 svga
 tcl
@@ -126,13 +125,13 @@ tcltk
 tcpd
 tetex
 tex
-truetype
+truetype - Adds support for FreeType and/or FreeType2 fonts
 trusted
 ungif
 voodoo3
 voodoo4
 voodoo5
-X
+X - Adds support for XFree86
 xface
 xml
 xml2
