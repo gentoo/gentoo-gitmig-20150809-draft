@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/lostirc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.21 2004/06/17 20:11:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.22 2004/06/17 20:28:03 swegener Exp $
+
+  17 Jun 2004; Sven Wegener <swegener@gentoo.org> lostirc-0.2.7.ebuild,
+  lostirc-0.3.2.ebuild, lostirc-0.3.3.ebuild:
+  Removed S=${WORKDIR}/${P}
 
 *lostirc-0.4.0 (17 Jun 2004)
 
