@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/pdftohtml-0.36-r3.ebuild,v 1.6 2005/02/09 14:17:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/pdftohtml-0.36-r3.ebuild,v 1.7 2005/03/16 12:48:44 lanius Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://pdftohtml.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ppc ~amd64 ppc64"
+KEYWORDS="x86 sparc ppc amd64 ppc64"
 IUSE=""
 DEPEND="virtual/libc sys-devel/gcc"
 RDEPEND="virtual/libc"
@@ -21,6 +21,9 @@ src_unpack() {
 	EPATCH_OPTS="-d ${S} -p1" epatch ${FILESDIR}/xpdf2-underflow.patch
 	EPATCH_OPTS="-d ${S}/xpdf -p0" epatch ${FILESDIR}/pdftohtml-xpdf-3.00pl2-CAN-2004-1125.patch
 	EPATCH_OPTS="-d ${S}/xpdf -p0" epatch ${FILESDIR}/xpdf-3.00pl3-keylength.patch
+
+	# fix location of xpdfrc
+	sed -i "s:/usr/local/etc/xpdfrc:/etc/xpdfrc:" aconf.h
 }
 
 src_compile() {

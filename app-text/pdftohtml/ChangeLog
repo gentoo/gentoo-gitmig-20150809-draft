@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pdftohtml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/ChangeLog,v 1.23 2005/02/09 14:17:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftohtml/ChangeLog,v 1.24 2005/03/16 12:48:44 lanius Exp $
+
+  16 Mar 2005; Heinrich Wendel <lanius@gentoo.org> +metadata.xml,
+  -pdftohtml-0.36-r1.ebuild, -pdftohtml-0.36-r2.ebuild,
+  pdftohtml-0.36-r3.ebuild, -pdftohtml-0.36.ebuild:
+  fix location of xpdfrc bug #65728; stable on amd64; cleanups
 
   09 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   pdftohtml-0.36-r3.ebuild:

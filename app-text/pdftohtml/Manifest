@@ -1,24 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 149518ec218bedb1e494e4f354bbe0de ChangeLog 2841
-MD5 413c368de17d0a51407be5454410a84f pdftohtml-0.36.ebuild 660
-MD5 e54cb74355ada1244a283d2ed18012d8 pdftohtml-0.36-r1.ebuild 931
-MD5 02c65dc1012a664dacfb2f8c0d4bc9d6 pdftohtml-0.36-r2.ebuild 1025
-MD5 4e7178b24ce788d633bb416877e842a6 pdftohtml-0.36-r3.ebuild 1107
-MD5 89167430147d99e86ca445b23be50f1b files/digest-pdftohtml-0.36 66
-MD5 89167430147d99e86ca445b23be50f1b files/digest-pdftohtml-0.36-r1 66
-MD5 87d20c86d1451638e4b7adc2f7ac8067 files/xpdf-CESA-2004-007-xpdf2-newer.diff 2718
-MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
+MD5 933bc6788453b1e3448c72b2d39939cb pdftohtml-0.36-r3.ebuild 1186
+MD5 ab6878f00e8c1114a6af5c1be2b8e863 ChangeLog 3077
+MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363
-MD5 89167430147d99e86ca445b23be50f1b files/digest-pdftohtml-0.36-r2 66
-MD5 5d40ba9d885af84bcc917ad17e2bf8e0 files/pdftohtml-xpdf-3.00pl2-CAN-2004-1125.patch 1136
-MD5 89167430147d99e86ca445b23be50f1b files/digest-pdftohtml-0.36-r3 66
 MD5 c32a612ce419b9930ff273cf382558bf files/xpdf-3.00pl3-keylength.patch 346
+MD5 5d40ba9d885af84bcc917ad17e2bf8e0 files/pdftohtml-xpdf-3.00pl2-CAN-2004-1125.patch 1136
+MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
+MD5 89167430147d99e86ca445b23be50f1b files/digest-pdftohtml-0.36-r3 66
+MD5 87d20c86d1451638e4b7adc2f7ac8067 files/xpdf-CESA-2004-007-xpdf2-newer.diff 2718
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCCht/KRy60XGEcJIRArTkAKCn/P0AMqKDJWKU2ORrC71SFdErqQCfSTRj
-xE1iWkLYZx2OeFN9Mmw52iI=
-=wU7A
+iD8DBQFCOCtRevY57Fted3ERAsMeAKDeHwuqfqh1U8unxTK3CHdtO8FZlACg3FhF
+ZV4Da/J0aJ5cTbN4Rd/LoZo=
+=D3ys
 -----END PGP SIGNATURE-----
