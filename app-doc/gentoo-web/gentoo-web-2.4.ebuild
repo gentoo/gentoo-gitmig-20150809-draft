@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.10 2002/11/06 03:44:13 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.11 2002/11/06 04:25:08 zhen Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
@@ -43,8 +43,7 @@ src_unpack() {
 			WEBROOT=${WEBROOT}
 		else
 			# give it a nice default
-			WEBROOT=/home/httpd/htdocs/gentoo/mirror
-			GENTOO_SRCDIR=/data/gentoo-src
+			WEBROOT=/home/httpd/htdocs
 		fi
 	fi
 
