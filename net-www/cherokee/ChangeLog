@@ -1,6 +1,12 @@
 # ChangeLog for net-www/cherokee
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/ChangeLog,v 1.21 2004/07/01 22:42:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/ChangeLog,v 1.22 2004/07/20 18:42:26 mholzer Exp $
+
+*cherokee-0.4.17 (20 Jul 2004)
+
+  20 Jul 2004; Martin Holzer <mholzer@gentoo.org> cherokee-0.4.17.ebuild,
+  files/cherokee-0.4.17-init.d:
+  Version bumped. Closes 56561
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   cherokee-0.4.10.ebuild, cherokee-0.4.14.ebuild, cherokee-0.4.15.ebuild,
