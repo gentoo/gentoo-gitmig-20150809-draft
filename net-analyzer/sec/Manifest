@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1d4b48fa8d746d821ee68f8cd8832508 sec-2.2.5.ebuild 634
+MD5 534d5206d70c31a9320f8e2e0ad6e589 ChangeLog 343
+MD5 71ee222dece91aa5705c45172523801e metadata.xml 218
+MD5 7fe4b7a622862823d386a66b923b22a8 files/digest-sec-2.2.5 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBAm9TT+MN7JbqCpMRAoRqAJ4uYktu6bORiHh4YkkLp9Cbm7INggCfbwxM
+DiuPU+VzcIgm83lk/asVFbY=
+=BrPs
+-----END PGP SIGNATURE-----
