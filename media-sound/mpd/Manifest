@@ -6,4 +6,4 @@ MD5 1bcf81f9d9145d6a7e8e80b7297d6682 mpd-0.11.2-r2.ebuild 2820
 MD5 12b5b0ad7c2d89bfa754775e3a984aad files/digest-mpd-0.11.0-r2 63
 MD5 268d1b619a63dd6c824afc1c63b97b50 files/digest-mpd-0.11.1-r2 63
 MD5 721443952b6dfa20f262595b919c626b files/digest-mpd-0.11.2-r2 63
-MD5 7b23eafedc1b10c4cff0c58b351da6f2 files/mpd.rc6 874
+MD5 e1942b96aae7fa8cbc9b738857b5988f files/mpd.rc6 870
