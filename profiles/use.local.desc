@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.672 2004/10/07 07:06:58 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.673 2004/10/07 15:13:06 lanius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -120,6 +120,7 @@ app-text/namazu:kakasi - Enable kakasi support for namazu
 app-text/noweb:icon - Enable icon language support for noweb
 app-text/sword-modules:intl - Enable different languages
 app-text/sword:icu - Enable icu support for sword
+app-text/xpdf:nodrm - Disable the drm feature
 dev-cpp/sptk:fltk - Enable FLTK support
 dev-db/firebird:inetd - If you want inetd version instead of a superserver (daemon)
 dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY' feature.
