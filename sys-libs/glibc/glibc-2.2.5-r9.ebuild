@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r9.ebuild,v 1.10 2004/08/05 23:59:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r9.ebuild,v 1.11 2004/08/11 04:02:17 vapier Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -258,8 +258,10 @@ src_install() {
 		install_root=${D} \
 		install -C buildhere || die
 	# now, strip everything but the thread libs #46186
+	mkdir ${T}/thread-backup
+	mv ${D}/lib/lib{pthread,thread_db}* ${T}/thread-backup/
 	RESTRICT="" prepallstrip
-	cp `find -maxdepth 2 -name 'libpthread.so' -o -name 'libthread_db.so'` ${D}/lib/
+	mv ${T}/thread-backup/* ${D}/lib/
 
 	if ! use build
 	then
