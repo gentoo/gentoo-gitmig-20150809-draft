@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.94.ebuild,v 1.6 2003/09/25 16:40:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.94.ebuild,v 1.7 2004/02/02 22:11:45 plasmaroo Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A usefull diagnostic, instructional, and debugging tool"

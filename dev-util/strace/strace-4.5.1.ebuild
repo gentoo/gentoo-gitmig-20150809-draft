@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.1.ebuild,v 1.4 2004/01/12 14:38:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.1.ebuild,v 1.5 2004/02/02 22:11:45 plasmaroo Exp $
 
 inherit flag-o-matic
 
@@ -22,8 +22,8 @@ src_compile() {
 		replace-flags -O[3-9] -O2
 	fi
 	filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
-	# Patch is broken for sparc
-	use sparc || epatch ${FILESDIR}/${P}-2.6.patch
+
+	epatch ${FILESDIR}/${P}-2.6.patch
 
 	# configure is broken by default for sparc and possibly others, regen
 	# from configure.in

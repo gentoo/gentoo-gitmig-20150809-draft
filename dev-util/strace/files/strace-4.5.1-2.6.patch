@@ -1,8 +1,114 @@
+diff -ur strace-4.5.1/config.h.in strace-4.5.1.plasmaroo/config.h.in
+--- strace-4.5.1/config.h.in	2003-11-07 02:24:42.000000000 +0000
++++ strace-4.5.1.plasmaroo/config.h.in	2004-02-02 21:40:04.000000000 +0000
+@@ -200,6 +200,9 @@
+ /* Define to 1 if the system has the type `struct t_opthdr'. */
+ #undef HAVE_STRUCT_T_OPTHDR
+ 
++/* Define to 1 if the system has the type `struct user_desc'. */
++#undef HAVE_STRUCT_USER_DESC
++
+ /* Define to 1 if the system has the type `struct __old_kernel_stat'. */
+ #undef HAVE_STRUCT___OLD_KERNEL_STAT
+ 
+diff -ur strace-4.5.1/configure strace-4.5.1.plasmaroo/configure
+--- strace-4.5.1/configure	2004-02-02 21:36:53.000000000 +0000
++++ strace-4.5.1.plasmaroo/configure	2004-02-02 21:40:04.000000000 +0000
+@@ -7708,6 +7708,75 @@
+ 
+ fi
+ 
++if test "x$opsys" = "xlinux"
++then
++	echo "$as_me:$LINENO: checking for struct user_desc" >&5
++echo $ECHO_N "checking for struct user_desc... $ECHO_C" >&6
++if test "${ac_cv_type_struct_user_desc+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#include <asm/ldt.h>
++
++int
++main ()
++{
++if ((struct user_desc *) 0)
++  return 0;
++if (sizeof (struct user_desc))
++  return 0;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext
++if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
++  (eval $ac_compile) 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest.$ac_objext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  ac_cv_type_struct_user_desc=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++ac_cv_type_struct_user_desc=no
++fi
++rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
++fi
++echo "$as_me:$LINENO: result: $ac_cv_type_struct_user_desc" >&5
++echo "${ECHO_T}$ac_cv_type_struct_user_desc" >&6
++if test $ac_cv_type_struct_user_desc = yes; then
++
++cat >>confdefs.h <<_ACEOF
++#define HAVE_STRUCT_USER_DESC 1
++_ACEOF
++
++
++fi
++
++fi
+ 
+ echo "$as_me:$LINENO: checking whether sys_errlist is declared" >&5
+ echo $ECHO_N "checking whether sys_errlist is declared... $ECHO_C" >&6
+diff -ur strace-4.5.1/configure.ac strace-4.5.1.plasmaroo/configure.ac
+--- strace-4.5.1/configure.ac	2003-11-06 23:44:09.000000000 +0000
++++ strace-4.5.1.plasmaroo/configure.ac	2004-02-02 21:40:04.000000000 +0000
+@@ -206,6 +205,10 @@
+ #include <sys/tihdr.h>])
+ 
+ AC_CHECK_TYPES([struct __old_kernel_stat],,, [#include <asm/stat.h>])
++if test "x$opsys" = "xlinux"
++then
++	AC_CHECK_TYPES([struct user_desc],,, [#include <asm/ldt.h>])
++fi
+ 
+ AC_CHECK_DECLS([sys_errlist])
+ AC_CHECK_DECLS([sys_siglist, _sys_siglist],,, [#include <signal.h>])
 diff -ur strace-4.5.1/mem.c strace-4.5.1.plasmaroo/mem.c
 --- strace-4.5.1/mem.c	2003-09-26 00:06:04.000000000 +0100
-+++ strace-4.5.1.plasmaroo/mem.c	2003-12-30 23:49:42.000000000 +0000
-@@ -32,15 +32,19 @@
-  *	$Id: strace-4.5.1-2.6.patch,v 1.2 2003/12/30 23:56:53 plasmaroo Exp $
++++ strace-4.5.1.plasmaroo/mem.c	2004-02-02 21:40:04.000000000 +0000
+@@ -32,15 +32,22 @@
+  *	$Id: strace-4.5.1-2.6.patch,v 1.3 2004/02/02 22:11:45 plasmaroo Exp $
   */
  
 -#include "defs.h"
@@ -14,11 +120,14 @@ diff -ur strace-4.5.1/mem.c strace-4.5.1.plasmaroo/mem.c
  
 +#include "defs.h"
 +
++#ifdef LINUXSPARC
++	#include <asm/mman.h>
++#endif
++
  #if defined(LINUX) && defined(I386)
 -#include <asm/ldt.h>
 +	#include <asm/ldt.h>
-+	#include <linux/version.h>
-+	#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,47)
++	#ifdef HAVE_STRUCT_USER_DESC
 +		#define modify_ldt_ldt_s user_desc
 +	#endif
  #endif
@@ -26,79 +135,77 @@ diff -ur strace-4.5.1/mem.c strace-4.5.1.plasmaroo/mem.c
  #include <asm/page.h>	    /* for PAGE_SHIFT */
 diff -ur strace-4.5.1/process.c strace-4.5.1.plasmaroo/process.c
 --- strace-4.5.1/process.c	2003-11-13 22:32:26.000000000 +0000
-+++ strace-4.5.1.plasmaroo/process.c	2003-12-30 23:49:41.000000000 +0000
-@@ -526,8 +526,12 @@
++++ strace-4.5.1.plasmaroo/process.c	2004-02-02 21:40:04.000000000 +0000
+@@ -526,8 +526,11 @@
  };
  
  # ifdef I386
 -#  include <asm/ldt.h>
 -extern void print_ldt_entry();
 +	#include <asm/ldt.h>
-+	#include <linux/version.h>
-+	#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,47)
++	#ifdef HAVE_STRUCT_USER_DESC
 +		#define modify_ldt_ldt_s user_desc
 +	#endif
 +	extern void print_ldt_entry();
  # endif
  
  # if defined IA64
-diff -ur strace-4.5.1/system.c strace-4.5.1-plasmaroo/system.c
+diff -ur strace-4.5.1/system.c strace-4.5.1.plasmaroo/system.c
 --- strace-4.5.1/system.c	2002-11-06 14:00:13.000000000 +0000
-+++ strace-4.5.1-plasmaroo/system.c	2003-12-25 00:32:03.000000000 +0000
-@@ -77,6 +77,7 @@
- #endif
- 
- #include <linux/sysctl.h>
-+#include <linux/version.h>
- 
- static struct xlat mount_flags[] = {
- 	{ MS_RDONLY,	"MS_RDONLY"	},
-@@ -1625,19 +1626,35 @@
- 	{ 0, NULL }
++++ strace-4.5.1.plasmaroo/system.c	2004-02-02 21:40:04.000000000 +0000
+@@ -1626,15 +1626,55 @@
  };
  
--static struct xlat sysctl_vm[] = {
--	{ VM_SWAPCTL, "VM_SWAPCTL" },
--	{ VM_SWAPOUT, "VM_SWAPOUT" },
--	{ VM_FREEPG, "VM_FREEPG" },
--	{ VM_BDFLUSH, "VM_BDFLUSH" },
--	{ VM_OVERCOMMIT_MEMORY, "VM_OVERCOMMIT_MEMORY" },
--	{ VM_BUFFERMEM, "VM_BUFFERMEM" },
--	{ VM_PAGECACHE, "VM_PAGECACHE" },
--	{ VM_PAGERDAEMON, "VM_PAGERDAEMON" },
--	{ VM_PGT_CACHE, "VM_PGT_CACHE" },
--	{ VM_PAGE_CLUSTER, "VM_PAGE_CLUSTER" },
--	{ 0, NULL },
--};
-+#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
-+	static struct xlat sysctl_vm[] = {
-+		{ VM_UNUSED1, "VM_UNUSED1" },
-+		{ VM_UNUSED2, "VM_UNUSED2" },
-+		{ VM_UNUSED3, "VM_UNUSED3" },
-+		{ VM_UNUSED4, "VM_UNUSED4" },
-+		{ VM_OVERCOMMIT_MEMORY, "VM_OVERCOMMIT_MEMORY" },
-+		{ VM_UNUSED5, "VM_UNUSED5" },
-+		{ VM_UNUSED7, "VM_UNUSED7" },
-+		{ VM_UNUSED8, "VM_UNUSED8" },
-+		{ VM_UNUSED9, "VM_UNUSED9" },
-+		{ VM_PAGE_CLUSTER, "VM_PAGE_CLUSTER" },
-+		{ 0, NULL },
-+	};
-+#else
-+	static struct xlat sysctl_vm[] = {
-+		{ VM_SWAPCTL, "VM_SWAPCTL" },
-+		{ VM_SWAPOUT, "VM_SWAPOUT" },
-+		{ VM_FREEPG, "VM_FREEPG" },
-+		{ VM_BDFLUSH, "VM_BDFLUSH" },
-+		{ VM_OVERCOMMIT_MEMORY, "VM_OVERCOMMIT_MEMORY" },
-+		{ VM_BUFFERMEM, "VM_BUFFERMEM" },
-+		{ VM_PAGECACHE, "VM_PAGECACHE" },
-+		{ VM_PAGERDAEMON, "VM_PAGERDAEMON" },
-+		{ VM_PGT_CACHE, "VM_PGT_CACHE" },
-+		{ VM_PAGE_CLUSTER, "VM_PAGE_CLUSTER" },
-+		{ 0, NULL },
-+	};
+ static struct xlat sysctl_vm[] = {
++#ifdef VM_SWAPCTL
+ 	{ VM_SWAPCTL, "VM_SWAPCTL" },
 +#endif
- 
- static struct xlat sysctl_net[] = {
- 	{ NET_CORE, "NET_CORE" },
++#ifdef VM_UNUSED1
++	{ VM_UNUSED1, "VM_UNUSED1" },
++#endif
++#ifdef VM_SWAPOUT
+ 	{ VM_SWAPOUT, "VM_SWAPOUT" },
++#endif
++#ifdef VM_UNUSED2
++	{ VM_UNUSED2, "VM_UNUSED2" },
++#endif
++#ifdef VM_FREEPG
+ 	{ VM_FREEPG, "VM_FREEPG" },
++#endif
++#ifdef VM_UNUSED3
++	{ VM_UNUSED3, "VM_UNUSED3" },
++#endif
++#ifdef VM_BDFLUSH
+ 	{ VM_BDFLUSH, "VM_BDFLUSH" },
++#endif
++#ifdef VM_UNUSED4
++	{ VM_UNUSED4, "VM_UNUSED4" },
++#endif
+ 	{ VM_OVERCOMMIT_MEMORY, "VM_OVERCOMMIT_MEMORY" },
++#ifdef VM_BUFFERMEM
+ 	{ VM_BUFFERMEM, "VM_BUFFERMEM" },
++#endif
++#ifdef VM_UNUSED5
++	{ VM_UNUSED5, "VM_UNUSED5" },
++#endif
++#ifdef VM_PAGECACHE
+ 	{ VM_PAGECACHE, "VM_PAGECACHE" },
++#endif
++#ifdef VM_UNUSED7
++	{ VM_UNUSED7, "VM_UNUSED7" },
++#endif
++#ifdef VM_PAGERDAEMON
+ 	{ VM_PAGERDAEMON, "VM_PAGERDAEMON" },
++#endif
++#ifdef VM_UNUSED8
++	{ VM_UNUSED8, "VM_UNUSED8" },
++#endif
++#ifdef VM_PGT_CACHE
+ 	{ VM_PGT_CACHE, "VM_PGT_CACHE" },
++#endif
++#ifdef VM_UNUSED9
++	{ VM_UNUSED9, "VM_UNUSED9" },
++#endif
+ 	{ VM_PAGE_CLUSTER, "VM_PAGE_CLUSTER" },
+ 	{ 0, NULL },
+ };
