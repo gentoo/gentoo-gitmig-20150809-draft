@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.11 2003/06/25 06:56:45 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.12 2003/06/27 11:23:34 cretin Exp $
 
 *elfutils-0.76-r2 (14 May 2003)
+
+  27 June 2003; Stefan Jones <cretin@gentoo.org> :
+  Opps, adding it back, I was wrong ...
 
   24 June 2003; Stefan Jones <cretin@gentoo.org> :
   Remove from portage as bug fix is not needed anymore, 

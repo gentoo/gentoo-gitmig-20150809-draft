@@ -1,0 +1,24 @@
+diff -ur elfutils-0.76.orig/libelf/elf_fill.c elfutils-0.76/libelf/elf_fill.c
+--- elfutils-0.76.orig/libelf/elf_fill.c	2002-11-29 01:13:55.000000000 +0000
++++ elfutils-0.76/libelf/elf_fill.c	2003-05-14 11:08:46.000000000 +0100
+@@ -21,7 +21,7 @@
+ #include "libelfP.h"
+ 
+ 
+-int __libelf_fill_byte;
++int __libelf_fill_byte = 0;
+ 
+ 
+ void
+diff -ur elfutils-0.76.orig/libelf/elf_version.c elfutils-0.76/libelf/elf_version.c
+--- elfutils-0.76.orig/libelf/elf_version.c	2002-11-29 01:13:55.000000000 +0000
++++ elfutils-0.76/libelf/elf_version.c	2003-05-14 11:03:33.000000000 +0100
+@@ -20,7 +20,7 @@
+ 
+ 
+ /* Is the version initialized?  */
+-int __libelf_version_initialized;
++int __libelf_version_initialized = 0;
+ 
+ /* Currently selected version.  */
+ unsigned int __libelf_version = EV_CURRENT;
