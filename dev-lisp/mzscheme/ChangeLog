@@ -1,8 +1,12 @@
 # ChangeLog for dev-lisp/mzscheme
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/ChangeLog,v 1.1 2002/02/17 21:47:26 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/ChangeLog,v 1.2 2002/08/01 19:40:14 karltk Exp $
 
 *mzscheme-103_pre1 ( 17 Feb 2002 )
+
+  01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog mzscheme-103_pre1.ebuild :
+
+  Added LICENSE, SLOT and KEYWORDS.
 
   17 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog files/digest-mzscheme-103_pre1 mzscheme-103_pre1:
   
