@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 11b850e6889949d5cdc67d35d982db44 ChangeLog 23786
+MD5 19d88c612c82c68e8c9393933cc02646 distcc-2.18.3.ebuild 5008
 MD5 fdc538f8cbd4354cd059f94668bcfef3 distcc-2.16-r2.ebuild 4847
 MD5 c04441917ccb5e5f9790642545c1f469 metadata.xml 375
-MD5 19d88c612c82c68e8c9393933cc02646 distcc-2.18.3.ebuild 5008
 MD5 b634e8c42c191a882dab36a1e1fddd7b distcc-2.17-r1.ebuild 5169
 MD5 fa3f7ab9f7829ba28b454f624b11da53 files/digest-distcc-2.18.3 66
 MD5 c462167d99c154e9f8b9f94022ed2a71 files/digest-distcc-2.16-r2 64
-MD5 2823938220f7e53be1d5c6938bb46725 files/distcc-gentoo-multilib.patch 3364
+MD5 d939dfd2b17a6e52a1519151c4619dcf files/distcc-gentoo-multilib.patch 3780
 MD5 af5f3983a736bd552e83d92ac9955a03 files/digest-distcc-2.17-r1 64
 MD5 fec77b3be8d8bd8f2d6e5a708cb35717 files/distcc-config 4874
 MD5 bb53a18e009ef62f4402a23f83bfda20 files/2.18/conf 1384
@@ -19,7 +19,7 @@ MD5 1161999a5d25185f95a8c284bd7307d1 files/2.17/init 733
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB0R6VArHZZzCEUG0RAmg9AJ9SbRCj869/m5UL/ywZKPGf0OgkOQCggG0h
-27j4UWmMwZY3nOR+bVVh9zU=
-=mZb8
+iD8DBQFB0SKyArHZZzCEUG0RAucnAJ4hMsDCxz3HJ0C+vDkzuJ5dXhq6swCfbGjJ
+O1d06JfzpvTJXyehIqjgDGQ=
+=h1jk
 -----END PGP SIGNATURE-----
