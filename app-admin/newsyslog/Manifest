@@ -1,4 +1,6 @@
 MD5 2bb5201fc46a1275e9f80891b295e498 ChangeLog 545
 MD5 87c84509d0fff3ff5f8575b3823eab55 newsyslog-1.0.103.ebuild 1102
-MD5 3ead41144e79173c79f70ac7f83d4c39 files/newsyslog-html.patch 589
+MD5 bdb5286ebbb5b89902e24a39f5a75a92 newsyslog-1.1.ebuild 1104
 MD5 481746f23b0ca7fd8a696c0f7197e611 files/digest-newsyslog-1.0.103 69
+MD5 3ead41144e79173c79f70ac7f83d4c39 files/newsyslog-html.patch 589
+MD5 ebd330386233c527897b821b2a2c524c files/digest-newsyslog-1.1 65
