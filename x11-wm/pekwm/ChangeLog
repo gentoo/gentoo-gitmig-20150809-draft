@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/pekwm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.16 2005/02/02 05:37:47 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.17 2005/02/08 02:20:19 fserb Exp $
+
+  08 Feb 2005; Fernando Serboncini <fserb@gentoo.org>
+  pekwm-20050129.2.ebuild:
+  ebuild cleanup
 
   02 Feb 2005; Fernando Serboncini <fserb@gentoo.org>
   pekwm-20050129.2.ebuild:

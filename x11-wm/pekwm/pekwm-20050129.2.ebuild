@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-20050129.2.ebuild,v 1.2 2005/02/02 05:37:47 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-20050129.2.ebuild,v 1.3 2005/02/08 02:20:19 fserb Exp $
 
 inherit eutils
 
@@ -41,14 +41,16 @@ src_compile() {
 		`use_enable perl pcre` \
 		`use_enable xinerama` \
 		`use_enable debug` \
-		--enable-menus --enable-harbour --enable-shape --enable-xrandr --enable-imlib2\
-		${myconf} || die
+		--enable-menus\
+		--enable-harbour\
+		--enable-shape\
+		--enable-xrandr\
+		--enable-imlib2 || die
 	emake || die
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
-	cd ${S}
 	dodoc AUTHORS ChangeLog
 
 	mv ${WORKDIR}/themes/* ${D}/usr/share/${PN}/themes/
