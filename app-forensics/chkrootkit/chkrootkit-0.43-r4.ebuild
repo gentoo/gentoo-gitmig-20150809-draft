@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.43-r4.ebuild,v 1.3 2004/10/05 12:33:22 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.43-r4.ebuild,v 1.4 2004/10/05 21:09:35 kloeri Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.pangeia.com.br/pub/seg/pac/${P}.tar.gz
 
 LICENSE="AMS"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~alpha ~ia64 ~amd64"
+KEYWORDS="x86 ppc ~sparc alpha ~ia64 ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc
