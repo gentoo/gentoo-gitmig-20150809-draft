@@ -1,15 +1,14 @@
 # ChangeLog for dev-php/jpgraph
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/ChangeLog,v 1.2 2003/08/04 23:43:56 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/ChangeLog,v 1.3 2003/08/12 08:21:45 stuart Exp $
 
-*dev-php/jpgraph-1.12.2 (05 Aug 2003)
+  12 Aug 2003; Stuart Herbert <stuart@gentoo.org> jpgraph-1.12.2.ebuild:
+  Fixes for feedback on bug #23866
 
   05 Aug 2003; Stuart Herbert <stuart@gentoo.org> jpgraph-1.12.2.ebuild:
   Tightened up permissions on the cache directory.
   READ_CACHE is now false if USE_CACHE is false.
   Fixed the sed patching code.
-
-*dev-php/jpgraph-1.12.2 (04 Aug 2003)
 
   04 Aug 2003; Stuart Herbert <stuart@gentoo.org> jpgraph-1.12.2.ebuild:
   Initial import; based on an ebuild submitted by Carl A. Dunham
