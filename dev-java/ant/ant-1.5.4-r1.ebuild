@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.4-r1.ebuild,v 1.2 2003/10/18 15:03:11 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.4-r1.ebuild,v 1.3 2003/10/18 22:27:09 strider Exp $
 
 inherit java-pkg
 
@@ -24,6 +24,7 @@ src_unpack() {
 	# Patch build.sh to die with non-zero exit code in case of errors.
 	# This patch may be useful for all ant versions.
 	epatch ${FILESDIR}/build.sh-exit-fix.patch.gz
+	# This patch will be used until ant 1.6 is released
 	epatch ${FILESDIR}/rpmbuild.patch.gz
 }
 
