@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.16 2003/11/06 20:53:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.17 2003/11/30 07:07:40 rac Exp $
+
+*perl-tk-800.025-r1 (29 Nov 2003)
+
+  29 Nov 2003; <rac@gentoo.org> perl-tk-800.025-r1.ebuild,
+  files/perl-tk-800.025-dirtarget.patch:
+  Hack out dir_target stuff as per NI-S mail.  Addresses bug 33240
 
   06 Nov 2003; Jason Wever <weeve@gentoo.org> perl-tk-800.025.ebuild:
   Marked stable on sparc in relation to bug #30846.
