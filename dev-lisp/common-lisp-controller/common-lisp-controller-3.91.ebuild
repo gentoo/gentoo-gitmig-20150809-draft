@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.91.ebuild,v 1.2 2004/11/04 17:13:09 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.91.ebuild,v 1.3 2004/11/21 05:08:51 ndimiduk Exp $
 
 inherit eutils
 
@@ -10,11 +10,11 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/common-lisp-controller/${PN}_$
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc ~mips"
+KEYWORDS="x86 ~sparc ~ppc ~mips ~ppc-macos"
 IUSE=""
 
 DEPEND="app-admin/realpath
-	virtual/logger"
+	!ppc-macos? ( virtual/logger )"
 
 # DEPEND=">=cl-defsystem3-3.3i-r3
 #	>=dev-lisp/cl-asdf-1.84"
