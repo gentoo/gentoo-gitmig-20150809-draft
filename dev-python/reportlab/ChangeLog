@@ -1,19 +1,22 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.5 2004/02/26 19:27:33 bazik Exp $
-
-  26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> reportlab-1.17-r1.ebuild:
-  Stable on sparc.
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.6 2004/03/02 18:14:28 pbienst Exp $
 
 *reportlab-1.18 (14 Dec 2003)
 
   14 Dec 2003; Alastair Tse <liquidx@gentoo.org> reportlab-1.18.ebuild:
   version bump
 
+  02 Mar 2004: Peter Bienstman <pbienst@gentoo.org> reportlab-1.18.ebuild:
+  marked stable on x86
+
 *reportlab-1.17-r1 (04 Jul 2003)
 
   04 Jul 2003; Alastair Tse <liquidx@gentoo.org> reportlab-1.17-r1.ebuild:
   moved from ReportLab to reportlab and fixed paths problem with installation
+
+  26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> reportlab-1.17-r1.ebuild:
+  Stable on sparc.
 
 *ReportLab-1.17 (02 Mar 2003)
 
