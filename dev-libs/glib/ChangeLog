@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.118 2004/12/29 22:17:26 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.119 2005/01/02 04:54:32 j4rg0n Exp $
+
+  01 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> glib-1.2.10-r5.ebuild:
+  ppc-macos needs to call darwintoolize and gnuconfig_update. Bug #75209
+  Thanks to Lars T. Mikkelsen for this information.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

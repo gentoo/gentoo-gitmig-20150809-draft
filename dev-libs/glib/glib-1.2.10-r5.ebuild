@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.37 2004/12/29 18:01:11 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.38 2005/01/02 04:54:32 j4rg0n Exp $
 
 inherit libtool flag-o-matic eutils gnuconfig
 
@@ -25,6 +25,11 @@ src_unpack() {
 	use ppc64 && gnuconfig_update
 
 	uclibctoolize
+
+	if use ppc-macos; then
+		darwintoolize
+		gnuconfig_update
+	fi
 }
 
 src_compile() {

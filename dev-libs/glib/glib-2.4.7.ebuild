@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.7.ebuild,v 1.5 2004/12/16 10:15:13 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.7.ebuild,v 1.6 2005/01/02 04:54:32 j4rg0n Exp $
 
 inherit libtool
 
