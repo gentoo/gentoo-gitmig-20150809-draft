@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r1.ebuild,v 1.3 2005/03/12 01:31:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r1.ebuild,v 1.4 2005/03/12 19:17:40 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -77,13 +77,13 @@ src_compile() {
 	# CFLAGS has to be undefined running econf, else -fno-stack-protector detection fails.
 	# STAGE2_CFLAGS is not allowed to be used on emake command-line, it overwrites
 	# -fno-stack-protector detected by configure, removed from netboot's emake.
+	unset CFLAGS
 
 	export grub_cv_prog_objcopy_absolute=yes #79734
 	use static && append-ldflags -static
 
 	# build the net-bootable grub first, but only if "netboot" is set
 	if use netboot ; then
-		CFLAGS="" \
 		econf \
 		--libdir=/lib \
 		--datadir=/usr/lib/grub \
@@ -105,7 +105,6 @@ src_compile() {
 
 	# Now build the regular grub
 	# Note that FFS and UFS2 support are broken for now - stage1_5 files too big
-	CFLAGS="" \
 	econf \
 		--libdir=/lib \
 		--datadir=/usr/lib/grub \
