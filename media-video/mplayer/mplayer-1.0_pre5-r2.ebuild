@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.13 2004/07/31 06:17:52 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.14 2004/07/31 06:35:45 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -206,7 +206,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable ipv6 inet6)"
 	myconf="${myconf} $(use_enable joystick)"
 	myconf="${myconf} $(use_enable lirc)"
-	if use ia64; then
+	if use ia64 || use !network; then
 		myconf="${myconf} --disable-live"
 	else
 		myconf="${myconf} $(use_enable live)"
