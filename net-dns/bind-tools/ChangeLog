@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.25 2004/06/05 15:58:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.26 2004/06/08 13:51:28 geoman Exp $
+
+  08 Jun 2004; Stephen P. Becker <geoman@gentoo.org>
+  bind-tools-9.2.3-r1.ebuild:
+  Added gnuconfig tweak for mips.
 
   05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
   bind-tools-9.2.3-r1.ebuild:

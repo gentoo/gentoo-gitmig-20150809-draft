@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.3-r1.ebuild,v 1.10 2004/06/05 15:58:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.3-r1.ebuild,v 1.11 2004/06/08 13:51:28 geoman Exp $
 
 inherit flag-o-matic gnuconfig
 
@@ -25,7 +25,7 @@ src_compile() {
 		append-flags -fPIC
 	fi
 
-	use ppc64 && gnuconfig_update
+	(use ppc64 || use mips) && gnuconfig_update
 
 	use ipv6 && myconf="${myconf} --enable-ipv6" || myconf="${myconf} --enable-ipv6=no"
 
