@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0.ebuild,v 1.1 2004/02/04 14:35:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0.ebuild,v 1.2 2004/02/09 16:01:04 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -84,7 +84,9 @@ src_compile() {
 		-system-libpng -lpthread -xft -platform ${PLATFORM} -xplatform \
 		${PLATFORM} -xrender -prefix ${D}${QTBASE} -plugindir ${QTBASE}/plugins \
 		-docdir ${QTBASE}/doc -translationdir ${QTBASE}/translations \
-		-datadir ${QTBASE} -sysconfdir ${QTBASE}/etc/settings -fast ${myconf} -dlopen-opengl || die
+		-datadir ${QTBASE} -sysconfdir ${QTBASE}/etc/settings -fast ${myconf} \
+		-libdir ${QTBASE}/lib -headerdir ${QTBASE}/include \
+		-bindir ${QTBASE}/bin -dlopen-opengl || die
 
 	export QTDIR=${S}
 	emake src-qmake src-moc sub-src sub-tools || die
