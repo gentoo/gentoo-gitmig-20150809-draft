@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/easydiff
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/ChangeLog,v 1.5 2004/09/28 17:54:19 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/ChangeLog,v 1.6 2004/10/17 09:23:40 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org>
+  easydiff-0.3.1_pre20040927.ebuild:
+  Added to ~ppc.
 
 *easydiff-0.3.1_pre20040927 (28 Sep 2004)
 
