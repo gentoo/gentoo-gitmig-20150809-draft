@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20031207.ebuild,v 1.3 2004/04/25 15:13:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20031207.ebuild,v 1.4 2004/06/13 15:42:01 kugelfang Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://project.ktug.or.kr/dvipdfmx/snapshot/current/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"	# this is development branch
+KEYWORDS="~x86 ~alpha ~amd64"	# this is development branch
 
 DEPEND="app-text/ptex
 	!app-text/tetex
