@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.84 2005/01/01 18:06:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.85 2005/01/26 21:51:45 corsair Exp $
+
+  26 Jan 2005; Markus Rothe <corsair@gentoo.org> ant-1.6.2-r6.ebuild:
+  Stable on ppc64
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> ant-1.6.2-r6.ebuild:
   added ~ppc64 to KEYWORDS

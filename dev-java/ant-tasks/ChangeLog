@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.13 2005/01/01 18:07:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.14 2005/01/26 21:51:16 corsair Exp $
+
+  26 Jan 2005; Markus Rothe <corsair@gentoo.org> ant-tasks-1.6.2-r5.ebuild:
+  Stable on ppc64
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> ant-tasks-1.6.2-r5.ebuild:
   added ~ppc64 to KEYWORDS

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-3.1.ebuild,v 1.6 2005/01/20 17:05:26 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-3.1.ebuild,v 1.7 2005/01/26 21:50:46 corsair Exp $
 
 inherit java-pkg eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/jakarta/commons/collections/source/${PN}-${PV}-src.tar.
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 sparc ppc amd64 ~ppc64"
+KEYWORDS="x86 sparc ppc amd64 ppc64"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-1.4
