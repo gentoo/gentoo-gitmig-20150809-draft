@@ -1,0 +1,9 @@
+# ChangeLog for kde-base/ksayit
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksayit/ChangeLog,v 1.1 2005/01/21 19:05:52 danarmak Exp $
+
+*ksayit-3.4.0_beta1 (21 Jan 2005)
+
+  21 Jan 2005; Dan Armak <danarmak@gentoo.org> +ksayit-3.4.0_beta1.ebuild:
+  New in kdeaccessibility 3.4: KDE text-to-speech GUI.
+
