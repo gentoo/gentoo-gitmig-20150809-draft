@@ -1,8 +1,11 @@
 # ChangeLog for x11-wm/plwm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/ChangeLog,v 1.1 2003/04/03 18:09:14 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/ChangeLog,v 1.2 2003/05/07 20:44:51 mholzer Exp $
 
 *plwm-2.5 (03 Apr 2003)
+
+  07 May 2003; Martin Holzer <mholzer@gentoo.org> plwm-2.5.ebuild :
+  Added x86 to Keywords. Closes #20368.
 
   03 Apr 2003; Chris Houser <chouser@gentoo.com> plwm-2.5.ebuild,
   files/digest-plwm-2.5 : Initial import.
