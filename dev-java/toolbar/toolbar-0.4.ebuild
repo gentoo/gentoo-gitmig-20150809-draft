@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/toolbar-0.4.ebuild,v 1.4 2005/03/29 07:41:30 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/toolbar-0.4.ebuild,v 1.5 2005/03/29 08:51:08 luckyduck Exp $
 
 inherit java-pkg
 
@@ -10,13 +10,14 @@ SRC_URI="http://toolbar.tigris.org/files/documents/869/10303/ToolBar-${PV}-src.z
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86"
-IUSE="jikes"
+KEYWORDS="~x86 ~amd64"
+IUSE="jikes source"
 
 DEPEND=">=virtual/jdk-1.4
-		dev-java/ant-core
-		jikes? ( dev-java/jikes )
-		app-arch/unzip"
+	dev-java/ant-core
+	jikes? ( dev-java/jikes )
+	app-arch/unzip
+	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4"
 
 src_unpack() {
@@ -36,10 +37,11 @@ src_unpack() {
 src_compile() {
 	local antflags="-Dversion=${PV}"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-
-	ant ${antflags} -f build.xml || die "Compile failed!"
+	ant ${antflags} || die "Compile failed!"
 }
 
 src_install() {
 	java-pkg_dojar dest/toolbar-${PV}.jar
+
+	use source && java-pkg_dosrc src/*
 }
