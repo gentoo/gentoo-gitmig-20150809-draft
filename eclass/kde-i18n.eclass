@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.32 2002/11/02 09:44:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.33 2002/11/05 00:36:54 hannes Exp $
 
 inherit kde
 ECLASS=kde-i18n
@@ -23,6 +23,7 @@ case "$PV" in
 	3.1_beta1)	RPV=3.0.7;;
 	3.1_beta2)	RPV=3.0.8;;
 	3.1_rc1)	RPV=3.0.9;;
+	3.1_rc2)	RPV=3.0.98;;
 	*)		RPV=$PV;;
 esac
 RP="$PN-$RPV"
