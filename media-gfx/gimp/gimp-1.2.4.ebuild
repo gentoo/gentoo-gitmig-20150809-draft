@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.4.ebuild,v 1.11 2003/09/28 20:49:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.4.ebuild,v 1.12 2004/03/19 13:08:49 foser Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,7 +23,7 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	python? ( >=dev-lang/python-2.0 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
 	tiff? ( media-libs/tiff )
-	jpeg ( media-libs/jpeg )
+	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )"
 
 DEPEND="nls? ( sys-devel/gettext )
