@@ -1,4 +1,6 @@
-MD5 095c06e77f6181e31ed1f0e8110f4d94 ChangeLog 492
+MD5 dda6041d066689124f0431dcc1993532 ChangeLog 620
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 MD5 048410d0bf8f03d4253289afd7e90f57 ml-pnet-0.5.8.ebuild 588
+MD5 2afd2c41f6ab7661556543e7351d6a84 ml-pnet-0.5.10.ebuild 590
 MD5 74cc422b1561704837f2f386ef426a10 files/digest-ml-pnet-0.5.8 65
+MD5 a0ef29fbb19a0611b961571beb20104c files/digest-ml-pnet-0.5.10 66
