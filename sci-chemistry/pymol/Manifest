@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3731b5a87713cd54dfb1e96a63c0fc9c pymol-0.95.ebuild 1143
-MD5 07166c4164cb864f1cc1caa6970316e9 pymol-0.90.ebuild 1133
-MD5 e838307e398ea1e318c8af214bf7fcb9 pymol-0.97.ebuild 1103
-MD5 9c3e23239dd501b7a29b449880d66af5 pymol-0.88.ebuild 1033
-MD5 118304d1ca17f00b666dd3762fbf2364 ChangeLog 2758
+MD5 b55788c23a8af52dc98ede88bf488985 pymol-0.88.ebuild 1030
+MD5 c2fce548a9b0101b501af2d8ddfe0d4d ChangeLog 2839
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 34d172ef31b5038e071b634d4e645cf1 files/pymol-gentoo.diff 1566
+MD5 6305e57aead6d7ccf8d2a5724f73c17f pymol-0.90.ebuild 1130
+MD5 8ca390e4c4cebbf9a13d0ad1c873b2de pymol-0.95.ebuild 1140
+MD5 2dc75723f881f2abbc91c94c7e61ea6c pymol-0.97.ebuild 1107
+MD5 929741dc2da6577e6e99c5542d68dbd5 files/nosplash-gentoo.patch 332
 MD5 bc61462df500f324f8ba07a1c1f7bdf4 files/digest-pymol-0.88 64
 MD5 6970b70ab3710cde34e422cba7cce5c2 files/digest-pymol-0.90 64
 MD5 b674c205dd6279884c91077eec6e5442 files/digest-pymol-0.95 64
 MD5 cb324029606a6b5048895957143c7a44 files/digest-pymol-0.97 64
 MD5 1a6ba582a7928c370c8dfe44c8867e7c files/header_order.patch 905
-MD5 929741dc2da6577e6e99c5542d68dbd5 files/nosplash-gentoo.patch 332
 MD5 e42746bf581479c61ff1e7cc5b978edd files/setup.py-gentoo.patch 311
+MD5 34d172ef31b5038e071b634d4e645cf1 files/pymol-gentoo.diff 1566
 MD5 af2da92225ab57969d18d16ed60324ce files/setup2.py-gentoo.patch 493
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBzHm6I1lqEGTUzyQRAk0rAJ9mWkUHqrI4N5zIbwAA7TQdonK4OgCgqkWe
-HIXBseQnZJQyHAG7BFV3ATM=
-=6yq6
------END PGP SIGNATURE-----
