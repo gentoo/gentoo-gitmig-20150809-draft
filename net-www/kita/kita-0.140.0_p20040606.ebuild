@@ -1,16 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.130.0.ebuild,v 1.2 2004/06/06 10:57:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.140.0_p20040606.ebuild,v 1.1 2004/06/06 10:57:16 usata Exp $
 
 IUSE=""
 
+# snapshot
+MY_P="${P/-*p/-}"
+S="${WORKDIR}/${MY_P}"
+
 DESCRIPTION="Kita - 2ch client for KDE"
 HOMEPAGE="http://kita.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/kita/9393/${P}.tar.gz"
+#SRC_URI="mirror://sourceforge.jp/kita/9517/${P}.tar.gz"
+SRC_URI="http://kita.sourceforge.jp/snapshot/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 RDEPEND="virtual/glibc
 	>=x11-libs/qt-3.1
