@@ -1,10 +1,20 @@
-MD5 62180932c448652402a3b9ed86301537 ChangeLog 2365
-MD5 3c8e1225812577632847153488b201d7 basc-1.5.2.ebuild 2269
-MD5 98f1fd168142a0154882d295792bdff0 basc-1.5.3.ebuild 2295
-MD5 83bc45469d52fa621d1b0c9b6d97d274 basc-1.5.4.ebuild 2155
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 afcfbf8a59eb5ba519d8c1aa6d70b730 basc-1.5.4.ebuild 2149
+MD5 a0814b8e669d5621b902132a810060ee ChangeLog 2726
+MD5 02290c3da33c247fe6f0daf871a5fe15 basc-1.5.2.ebuild 2260
 MD5 36441a3af28aa17a592a5c409239a278 metadata.xml 616
-MD5 d58e6d6a14f28ee7c4b1b73961503e2d basc-1.5.5.ebuild 2138
-MD5 fad108ecff3fcfbf2987a555420c92cc files/digest-basc-1.5.2 61
-MD5 74753ac6d1c6ab7f0dbf6c43d17045b4 files/digest-basc-1.5.3 61
-MD5 0d0e5ae721dc3402d7b52269750aa9b7 files/digest-basc-1.5.4 61
+MD5 3c6c7d2b9f3954b2f84785403d52a0a7 basc-1.5.5.ebuild 2137
+MD5 fe60f25e43f552542fa7fe018f52a025 basc-1.5.3.ebuild 2289
 MD5 144c814e142b0b00a52220a4114f4af3 files/digest-basc-1.5.5 61
+MD5 0d0e5ae721dc3402d7b52269750aa9b7 files/digest-basc-1.5.4 61
+MD5 74753ac6d1c6ab7f0dbf6c43d17045b4 files/digest-basc-1.5.3 61
+MD5 fad108ecff3fcfbf2987a555420c92cc files/digest-basc-1.5.2 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB4I3OLLFUmVNQ7rkRAibAAJ40rvpdvpeZ9V45Ifbk4sJLzgryEwCeIIsj
+xUhIe79OEX4kSDF7D8TjPNQ=
+=9Sgp
+-----END PGP SIGNATURE-----
