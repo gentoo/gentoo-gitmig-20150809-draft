@@ -1,0 +1,10 @@
+# ChangeLog for rox-extra/roxmms
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxmms/ChangeLog,v 1.1 2004/12/09 19:08:44 sergey Exp $
+
+*roxmms-0.3.6 (09 Dec 2004)
+
+  09 Dec 2004; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
+  +roxmms-0.3.6.ebuild:
+  Just added to portage tree. (Bug #51996)
+
