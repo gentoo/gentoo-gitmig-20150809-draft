@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.20 2004/05/16 21:29:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.21 2004/05/24 23:12:45 aliz Exp $
+
+*xmltv-0.5.34 (24 May 2004)
+
+  24 May 2004; Daniel Ahlberg <aliz@gentoo.org> xmltv-0.5.34.ebuild:
+  Version bump, fixed config and dependencies for all grabbers.
 
 *xmltv-0.5.33 (16 May 2004)
 
