@@ -1,18 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.1.ebuild,v 1.21 2004/07/14 15:13:06 agriffis Exp $
-
-IUSE="doc nls"
-
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.1.ebuild,v 1.22 2004/11/08 18:18:47 vapier Exp $
 
 inherit gnome2 gnuconfig
 
-LICENSE="LGPL-2.1"
-
 DESCRIPTION="GLADE is a interface builder"
 HOMEPAGE="http://www.gnome.org/"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
+
+LICENSE="LGPL-2.1"
 SLOT="2.0"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86"
+IUSE="doc nls"
 
 RDEPEND=">=dev-libs/glib-2.0.6
 	>=x11-libs/gtk+-2.0.6

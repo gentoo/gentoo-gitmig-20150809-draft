@@ -1,20 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r6.ebuild,v 1.25 2004/11/05 22:42:05 corsair Exp $
-
-IUSE="nls bonobo"
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r6.ebuild,v 1.26 2004/11/08 18:18:47 vapier Exp $
 
 #provide Xmake and Xemake
 
 inherit libtool virtualx gnome.org
 
-DESCRIPTION="libglade allows programs to load their UIs from an XMLS description at runtime."
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/${PV}/${P}.tar.gz"
+DESCRIPTION="allow programs to load their UIs from an XMLS description at runtime."
 HOMEPAGE="http://developer.gnome.org/doc/API/libglade/libglade.html"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/${PV}/${P}.tar.gz"
 
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ~ppc64"
 LICENSE="LGPL-2.1"
 SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc64 sparc x86"
+IUSE="nls bonobo"
 
 #please dont add gnome-libs as an optional DEPEND, as
 #it causes too many problems.

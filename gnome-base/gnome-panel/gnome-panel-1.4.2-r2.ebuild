@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-1.4.2-r2.ebuild,v 1.10 2004/06/24 21:57:57 agriffis Exp $
-
-IUSE="kde nls"
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-1.4.2-r2.ebuild,v 1.11 2004/11/08 18:22:33 vapier Exp $
 
 inherit libtool
 
@@ -10,9 +8,11 @@ S=${WORKDIR}/gnome-core-${PV}
 DESCRIPTION="Split out panel from gnome-core"
 SRC_URI="mirror://gnome/sources/gnome-core/1.4/gnome-core-${PV}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
-SLOT="1.4"
-KEYWORDS="x86 ppc ~sparc alpha hppa amd64 ia64 mips"
+
 LICENSE="GPL-2"
+SLOT="1.4"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~sparc x86"
+IUSE="kde nls"
 
 RDEPEND="=gnome-base/control-center-1.4*
 	<gnome-base/libglade-0.99.0
