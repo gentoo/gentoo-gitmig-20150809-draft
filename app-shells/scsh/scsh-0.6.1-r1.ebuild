@@ -1,36 +1,34 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.1-r1.ebuild,v 1.11 2003/02/13 09:30:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.1-r1.ebuild,v 1.12 2003/03/01 04:01:02 vapier Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="Scsh is a Unix shell embedded in Scheme"
+DESCRIPTION="Unix shell embedded in Scheme"
 SRC_URI="ftp://ftp.scsh.net/pub/scsh/0.6/${P}.tar.gz"
 HOMEPAGE="http://www.scsh.net/"
 
 SLOT="0"
 LICENSE="as-is | BSD | GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="virtual/glibc"
 
 src_compile() {
-	./configure --prefix=/ --host=${CHOST} \
-		--mandir=/usr/share/man \
+	econf --prefix=/ \
 		--libdir=/usr/lib \
-		--includedir=/usr/include
-	make || die
+		--includedir=/usr/include \
+		|| die
+        make || die
 }
 
 src_install() {
-	make prefix=${D} \
+	einstall \
+		prefix=${D} \
 		htmldir=${D}/usr/share/doc/${PF}/html \
 		incdir=${D}/usr/include \
-		libdir=${D}/usr/lib \
 		mandir=${D}/usr/share/man/man1 \
-		install || die
-
-	dodoc COPYING INSTALL RELEASE
-
+                libdir=${D}/usr/lib \
+		|| die
+	dodoc RELEASE
 
 	# Scsh doesn't have a very consistent documentation
 	# structure. It's possible to override the placement of the
@@ -40,16 +38,10 @@ src_install() {
 	# Thus we let scsh install the documentation and then clean up
 	# afterwards.
 
+	dosed "s:${D}::" /usr/share/man/man1/scsh.1
+
+	dodir /usr/share/doc/${PF}
 	mv ${D}/usr/lib/scsh/doc/* ${D}/usr/share/doc/${PF}
 	rmdir ${D}/usr/lib/scsh/doc
-	find ${D}/usr/share/doc/${PF} \( -name \*.ps -o \
-		-name \*.txt -o \
-		-name \*.dvi -o \
-		-name \*.tex \) \
-		-print | xargs gzip
-
-	mv ${D}/usr/share/man/man1/scsh.1 ${S} || die
-	sed "s:${D}::" ${S}/scsh.1 > scsh.1.blah
-	mv scsh.1.blah scsh.1
-	doman ${S}/scsh.1
+	prepalldocs
 }
