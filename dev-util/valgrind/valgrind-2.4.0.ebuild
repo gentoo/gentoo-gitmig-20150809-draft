@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.4.0.ebuild,v 1.1 2005/03/24 20:32:32 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.4.0.ebuild,v 1.2 2005/03/24 20:36:45 griffon26 Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="An open-source memory debugger for x86-GNU/Linux and ppc-GNU/Linux"
 HOMEPAGE="http://valgrind.kde.org"
-SRC_URI="x86? ( http://developer.kde.org/~sewardj/${P}.tar.bz2 )"
+SRC_URI="x86? ( http://www.valgrind.org/downloads/${P}.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
