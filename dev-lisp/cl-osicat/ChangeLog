@@ -1,11 +1,16 @@
 # ChangeLog for dev-lisp/cl-osicat
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-osicat/ChangeLog,v 1.4 2004/05/09 14:56:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-osicat/ChangeLog,v 1.5 2004/05/09 19:19:52 mkennedy Exp $
 
 *cl-osicat-0.3.7 (09 May 2004)
 
   09 May 2004; David Holm <dholm@gentoo.org> cl-osicat-0.3.7.ebuild:
   Added to ~ppc.
+
+*cl-osicat-0.4.0 (09 May 2004)
+
+  09 May 2004; <mkennedy@gentoo.org> +cl-osicat-0.4.0.ebuild:
+  New upstream version.
 
   23 Mar 2004; <mkennedy@gentoo.org> :
   New upstream minor version
