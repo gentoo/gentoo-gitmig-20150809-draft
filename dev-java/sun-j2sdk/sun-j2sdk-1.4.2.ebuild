@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.2.ebuild,v 1.8 2004/07/14 14:11:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.2.ebuild,v 1.9 2004/07/28 10:58:57 axxo Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -8,7 +8,7 @@
 # Based on http://www.linuxfromscratch.org/~tushar/hints/javafromscratch.txt (LFS)
 # By Tushar Teredesai <Tush@Yahoo.Com>
 
-IUSE="nptl"
+IUSE="nptl doc"
 
 inherit java nsplugins
 

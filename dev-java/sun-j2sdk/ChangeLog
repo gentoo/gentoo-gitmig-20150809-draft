@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-j2sdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.29 2004/07/14 11:44:21 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.30 2004/07/28 10:58:57 axxo Exp $
+
+  28 Jul 2004; Thomas Matthijs <axxo@gentoo.org> sun-j2sdk-1.4.1-r1.ebuild,
+  sun-j2sdk-1.4.2.ebuild:
+  fix iuse
 
   14 Jul 2004; Thomas Matthijs <axxo@gentoo.org> sun-j2sdk-1.4.1-r1.ebuild:
   add restrict fetch + pkg_nofetch, fix src_uri, remove invalid sandbox

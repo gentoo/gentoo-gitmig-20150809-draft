@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.05.ebuild,v 1.1 2004/07/14 13:39:39 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.05.ebuild,v 1.2 2004/07/28 11:01:55 axxo Exp $
 
-IUSE="doc gnome kde mozilla"
+IUSE="gnome kde mozilla"
 
 inherit java nsplugins
 
