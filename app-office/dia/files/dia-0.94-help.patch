@@ -1,0 +1,82 @@
+diff -NurdB dia-0.94-orig/app/commands.c dia-0.94/app/commands.c
+--- dia-0.94-orig/app/commands.c	2005-03-16 20:02:59.000000000 -0500
++++ dia-0.94/app/commands.c	2005-03-16 21:13:01.000000000 -0500
+@@ -518,6 +518,9 @@
+ void
+ help_manual_callback(gpointer data, guint action, GtkWidget *widget)
+ {
++#ifdef GNOME
++  gnome_help_display("dia", NULL, NULL);
++#else  
+   char *helpdir, *helpindex = NULL, *command;
+   guint bestscore = G_MAXINT;
+   GDir *dp;
+@@ -579,6 +582,7 @@
+ #endif
+ 
+   g_free(helpindex);
++#endif  /* GNOME */
+ }
+ 
+ void
+diff -NurdB dia-0.94-orig/doc/en/Makefile.in dia-0.94/doc/en/Makefile.in
+--- dia-0.94-orig/doc/en/Makefile.in	2005-03-16 20:02:59.000000000 -0500
++++ dia-0.94/doc/en/Makefile.in	2005-03-17 01:41:43.000000000 -0500
+@@ -317,13 +317,13 @@
+ # **********  Begin of section some packagers may need to modify  **********
+ # This variable (docdir) specifies where the documents should be installed.
+ # This default value should work for most packages.
+-docdir = $(datadir)/gnome/help/$(docname)/$(lang)
++@HAVE_GNOME_FALSE@helpdir = $(pkgdatadir)/help
++@HAVE_GNOME_TRUE@helpdir = $(datadir)/gnome/help/dia
++docdir = $(helpdir)/$(lang)
+ 
+ # **********  You should not have to edit below this line  **********
+ xml_files = $(entities) $(docname).xml
+-EXTRA_DIST = $(xml_files) $(omffile) \
+-	dia.1 \
+-	dia.dbk \
++xml_files += \
+ 	authors.xml \
+ 	dia.xml \
+ 	entities.xml \
+@@ -338,10 +338,6 @@
+ 	usage-objects-special.xml \
+ 	usage-objects.xml \
+ 	usage-quickstart.xml \
+-	graphics/line_props.png \
+-	graphics/home_network.png \
+-	graphics/line_icon.png \
+-	graphics/greendots.png
+ 
+ CLEANFILES = omf_timestamp
+ omf_dest_dir = $(datadir)/omf/@PACKAGE@
+diff -NurdB dia-0.94-orig/doc/pl/Makefile.in dia-0.94/doc/pl/Makefile.in
+--- dia-0.94-orig/doc/pl/Makefile.in	2005-03-16 20:02:59.000000000 -0500
++++ dia-0.94/doc/pl/Makefile.in	2005-03-17 01:42:44.000000000 -0500
+@@ -313,11 +313,13 @@
+ # **********  Begin of section some packagers may need to modify  **********
+ # This variable (docdir) specifies where the documents should be installed.
+ # This default value should work for most packages.
+-docdir = $(datadir)/gnome/help/$(docname)/$(lang)
++@HAVE_GNOME_FALSE@helpdir = $(pkgdatadir)/help
++@HAVE_GNOME_TRUE@helpdir = $(datadir)/gnome/help/dia
++docdir = $(helpdir)/$(lang)
+ 
+ # **********  You should not have to edit below this line  **********
+ xml_files = $(entities) $(docname).xml
+-EXTRA_DIST = $(xml_files) $(omffile) \
++xml_files += \
+ 	authors.xml \
+ 	dia.xml \
+ 	intro.xml \
+@@ -330,9 +332,6 @@
+ 	usage-objects-special.xml \
+ 	usage-objects.xml \
+ 	usage-quickstart.xml \
+-	graphics/line_props.png \
+-	graphics/home_network.png \
+-	graphics/greendots.png
+ 
+ CLEANFILES = omf_timestamp
+ omf_dest_dir = $(datadir)/omf/@PACKAGE@

@@ -1,0 +1,18 @@
+--- dia-0.94/lib/font.c	2004-12-17 21:51:41.000000000 +0000
++++ dia-0.94/lib/font.c.new	2004-12-17 22:58:38.379589320 +0000
+@@ -628,6 +628,7 @@
+     item->string = g_strdup(string);
+     item->font = font;
+     
++#if 0
+     /* If it's in the cache, use that instead. */
+     cached = g_hash_table_lookup(layoutcache, item);
+     if (cached != NULL) {
+@@ -637,6 +638,7 @@
+       cached->usecount ++;
+       return cached->layout;
+     }
++#endif
+ 
+     dia_font_ref(font);
+ 

@@ -1,11 +1,20 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.41 2005/01/02 21:40:12 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.42 2005/03/17 08:12:06 leonardop Exp $
+
+*dia-0.94-r1 (17 Mar 2005)
+
+  17 Mar 2005; Leonardo Boshell <leonardop@gentoo.org> dia-0.94-r1.ebuild,
+  files/dia-0.94-no_font_cache.patch, files/dia-0.94-help.patch:
+  New revision. Added the `static' use flag. Added a patch to fix incorrect
+  font display due to a buggy cache implementation. Resolves bug #81227 and
+  possibly #67999. Thanks to Markus Luisser for his help on bug #81227.
+  Added a patch to fix the Help->Manual action under gnome. See bug #83726.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
 
-  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> dia-0.93.ebuild:
+  11 Dec 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> dia-0.93.ebuild:
   Stable on alpha.
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> dia-0.93.ebuild:
@@ -38,7 +47,7 @@
   New release, resolves bug #50144. Dependencies corrections. Patch that
   fixes python-related checks in the configure script.
 
-  05 May 2004; Bryan Østergaard <kloeri@gentoo.org> dia-0.92.2.ebuild:
+  05 May 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> dia-0.92.2.ebuild:
   Stable on alpha.
 
   03 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> dia-0.92.2.ebuild:
