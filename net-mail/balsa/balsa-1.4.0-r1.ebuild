@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2  
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.4.0-r1.ebuild,v 1.4 2002/10/05 05:39:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.4.0-r1.ebuild,v 1.5 2002/10/19 22:18:41 cselkirk Exp $
 
 IUSE="ssl nls cups gtkhtml the spell perl"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.balsa.net"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
