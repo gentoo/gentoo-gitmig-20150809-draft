@@ -6,5 +6,5 @@
 <maintainer>
   <email>gnome@gentoo.org</email>
 </maintainer>
-<longdescription>Sussen is a GTK+2 and GNOME 2.2 client for the Nessus security scanning system. It includes support for database backends (via the libgnomedb library), session support, and a policy manager to select the types of security checks a user would like to perform.</longdescription>
+<longdescription>Sussen is a GTK+2 and GNOME client for the Nessus security scanning system. It includes support for database backends (via the libgnomedb library), session support, and a policy manager to select the types of security checks a user would like to perform.</longdescription>
 </pkgmetadata>

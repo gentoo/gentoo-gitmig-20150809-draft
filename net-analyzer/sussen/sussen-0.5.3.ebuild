@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.5.3.ebuild,v 1.2 2003/09/05 23:40:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.5.3.ebuild,v 1.3 2003/09/07 14:34:29 obz Exp $
 
 inherit gnome2 debug
 
-DESCRIPTION="Sussen is a GNOME 2.2 client for the Nessus Security Scanner"
+DESCRIPTION="Sussen is a GNOME client for the Nessus Security Scanner"
 HOMEPAGE="http://sussen.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
