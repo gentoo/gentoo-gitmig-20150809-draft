@@ -1,0 +1,43 @@
+diff --unidirectional-new-file -ur qmail-1.03.orig/qmail-smtpd.c qmail-1.03/qmail-smtpd.c
+--- qmail-1.03.orig/qmail-smtpd.c	2005-01-06 01:22:13.841316160 +0100
++++ qmail-1.03/qmail-smtpd.c	2005-01-06 01:25:34.862756256 +0100
+@@ -132,6 +132,7 @@
+   out(" (#5.7.1)\r\n");
+ }
+ #endif
++void err_badbounce() { out("550 sorry, bounce messages should have a single envelope recipient (#5.7.1)\r\n"); }
+ void err_unimpl() { out("502 unimplemented (#5.5.1)\r\n"); }
+ void err_syntax() { out("555 syntax error (#5.5.4)\r\n"); }
+ void err_relay() { out("553 we don't relay (#5.7.1)\r\n"); }
+@@ -429,6 +430,7 @@
+ stralloc rcptto = {0};
+ stralloc fuser = {0};
+ stralloc mfparms = {0};
++int recipcount;
+ 
+ int mailfrom_size(arg) char *arg;
+ {
+@@ -541,6 +543,7 @@
+   if (!stralloc_copys(&rcptto,"")) die_nomem();
+   if (!stralloc_copys(&mailfrom,addr.s)) die_nomem();
+   if (!stralloc_0(&mailfrom)) die_nomem();
++  recipcount = 0;
+   out("250 ok\r\n");
+ }
+ void smtp_rcpt(arg) char *arg; {
+@@ -580,6 +583,7 @@
+   if (!stralloc_cats(&rcptto,"T")) die_nomem();
+   if (!stralloc_cats(&rcptto,addr.s)) die_nomem();
+   if (!stralloc_0(&rcptto)) die_nomem();
++  recipcount++;
+   out("250 ok\r\n");
+ }
+ 
+@@ -696,6 +700,7 @@
+  
+   if (!seenmail) { err_wantmail(); return; }
+   if (!rcptto.len) { err_wantrcpt(); return; }
++  if (mailfrom.len == 1 && recipcount > 1) { err_badbounce(); return; }
+   if (flagbrt) { err_brt(); return; }
+   seenmail = 0;
+   if (databytes) bytestooverflow = databytes + 1;

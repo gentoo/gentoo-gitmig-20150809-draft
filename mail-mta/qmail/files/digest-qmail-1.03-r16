@@ -12,9 +12,9 @@ MD5 413be7bb5b407c2964c3275c4d596947 qmail-maildir++.patch 43512
 MD5 d566e8bd99b33efee0194e855b8d6995 qmail-date-localtime.patch.txt 2603
 MD5 1c4518f780d231bde9745cdd0fa313b2 qmail-limit-bounce-size.patch.txt 1753
 MD5 9140ad2b03017145cd7963c84bb24f16 qmail-103.patch 2104
-MD5 83bf5c4a4aade3c6c15faa9665ccfb71 qregex-starttls-2way-auth.patch 63825
+MD5 bd4ac5850a50d0c002cb1a13b1885b60 qregex-starttls-2way-auth-20041230.patch 97384
 MD5 1d8b89607d35bfa409f8cfe6d23bc554 qmail-remote-auth-patch-doc.txt 1287
-MD5 fc00be3edc2827f1c93112d7d5147122 qmail-gentoo-1.03-r12-badrcptto-morebadrcptto-accdias.diff.bz2 4524
+MD5 750183fbd36b0fe7bf3e2edf9ec9ca2f qmail-gentoo-1.03-r16-badrcptto-morebadrcptto-accdias.diff.bz2 4736
 MD5 58d912de1ede57062fa8a3e2e0e75abf qmail-popupnofd2close.patch 401
 MD5 d7151dcbeb02eea1c24c1dedffe20e0b qmail-1.03-reread-concurrency.2.patch 1129
 MD5 ad597c93426c0938fdb36d853fbcf40d 08-capa.diff 1323
@@ -22,7 +22,7 @@ MD5 00084ddd52a3665b65f2db20a773b382 qmail-hold-1.03.pat.gz 1596
 MD5 68e7697fd61d7cd9a5a7dc88ce2ecd47 netscape-progress.patch 1457
 MD5 598aca7a3a99426d1f49079172986b31 sendmail-ignore-N.patch 636
 MD5 2bd191cca4e640e87cca79bc0405f97a qmail-1.03-moreipme-0.6pre1-gentoo.patch 13942
-MD5 d96455aaed208e9cd450d8874564781b qmail-relaymxlookup-0.3.diff 3856
+MD5 d9408411822973415ff10018ff4419be qmail-relaymxlookup-0.4.diff 3728
 MD5 d898fbb2b4cb259b208dbb8c9d8c47a9 gentoo-qmail-1.03-r16-mfcheck.3.patch 4223
 MD5 95692f3a7574f258489943ca9d09981a gentoo-qmail-1.03-r16-spp.034.patch 34568
 MD5 a6d05602399a51f6133c7ff19142b7c8 qmail-bounce-encap-20040210.patch 4238

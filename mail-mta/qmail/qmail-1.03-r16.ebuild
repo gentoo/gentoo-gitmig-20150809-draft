@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.6 2005/01/04 22:16:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.7 2005/01/06 20:28:27 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -23,9 +23,9 @@ SRC_URI="mirror://qmail/${P}.tar.gz
 	ftp://ftp.pipeline.com.au/pipeint/sources/linux/WebMail/qmail-date-localtime.patch.txt
 	ftp://ftp.pipeline.com.au/pipeint/sources/linux/WebMail/qmail-limit-bounce-size.patch.txt
 	http://www.ckdhr.com/ckd/qmail-103.patch
-	http://www.arda.homeunix.net/store/old_software/qregex-starttls-2way-auth.patch
+	http://www.arda.homeunix.net/store/qmail/qregex-starttls-2way-auth-20041230.patch
 	http://www.soffian.org/downloads/qmail/qmail-remote-auth-patch-doc.txt
-	mirror://gentoo/qmail-gentoo-1.03-r12-badrcptto-morebadrcptto-accdias.diff.bz2
+	mirror://gentoo/qmail-gentoo-1.03-r16-badrcptto-morebadrcptto-accdias.diff.bz2
 	http://www.dataloss.nl/software/patches/qmail-popupnofd2close.patch
 	http://js.hu/package/qmail/qmail-1.03-reread-concurrency.2.patch
 	http://www.mcmilk.de/qmail/dl/djb-qmail/patches/08-capa.diff
@@ -33,7 +33,7 @@ SRC_URI="mirror://qmail/${P}.tar.gz
 	mirror://qmail/netscape-progress.patch
 	http://www-dt.e-technik.uni-dortmund.de/~ma/djb/qmail/sendmail-ignore-N.patch
 	mirror://gentoo/qmail-1.03-moreipme-0.6pre1-gentoo.patch
-	http://hansmi.ch/download/qmail/qmail-relaymxlookup-0.3.diff
+	http://hansmi.ch/download/qmail/qmail-relaymxlookup-0.4.diff
 	mirror://gentoo/gentoo-qmail-1.03-r16-mfcheck.3.patch
 	mirror://gentoo/gentoo-qmail-1.03-r16-spp.034.patch
 	http://www.finnie.org/software/qmail-bounce-encap/qmail-bounce-encap-20040210.patch
@@ -76,15 +76,22 @@ src_unpack() {
 	# This makes life easy
 	EPATCH_OPTS="-d ${S}"
 
+	# Let the system decide how to define errno
+	epatch ${FILESDIR}/errno.patch
+
 	# this patch merges a few others already
 	EPATCH_SINGLE_MSG="Adding SMTP AUTH (2 way), Qregex and STARTTLS support" \
-	epatch ${DISTDIR}/qregex-starttls-2way-auth.patch
+	EPATCH_OPTS="${EPATCH_OPTS} -F 3" \
+	epatch ${DISTDIR}/qregex-starttls-2way-auth-20041230.patch
+	#epatch ${DISTDIR}/qregex-starttls-2way-auth.patch
 	# bug #30570
-	EPATCH_SINGLE_MSG="Fixing a memory leak in Qregex support" \
-	epatch ${FILESDIR}/${MY_PVR}/qmail-1.03-qregex-memleak-fix.patch
+	#EPATCH_SINGLE_MSG="Fixing a memory leak in Qregex support" \
+	# TODO hansmi, 2005-01-06: no longer required
+	#epatch ${FILESDIR}/${MY_PVR}/qmail-1.03-qregex-memleak-fix.patch
 
 	# Fixes a problem when utilizing "morercpthosts"
-	epatch ${FILESDIR}/${MY_PVR}/smtp-auth-close3.patch
+	# TODO hansmi, 2005-01-06: no longer required
+	#epatch ${FILESDIR}/${MY_PVR}/smtp-auth-close3.patch
 
 	# patch so an alternate queue processor can be used
 	# i.e. - qmail-scanner
@@ -119,9 +126,6 @@ src_unpack() {
 	# Treat 0.0.0.0 as a local address
 	epatch ${DISTDIR}/qmail-1.03-0.0.0.0-0.2.patch
 
-	# Let the system decide how to define errno
-	epatch ${FILESDIR}/errno.patch
-
 	# holdremote support
 	# pre-process to remove the header added upstream
 	zcat ${DISTDIR}/qmail-hold-1.03.pat.gz | sed '123,150d' >${T}/qmail-hold-1.03.patch
@@ -133,9 +137,6 @@ src_unpack() {
 	# Apply patch to make qmail-local and qmail-pop3d compatible with the
 	# maildir++ quota system that is used by vpopmail and courier-imap
 	epatch ${DISTDIR}/qmail-maildir++.patch
-	# fix a typo in the patch
-	# upstream has changed the patch and this isn't needed anymore
-	#epatch ${FILESDIR}/${MY_PVR}/maildir-quota-fix.patch
 
 	# Apply patch for local timestamps.
 	# This will make the emails headers be written in localtime rather than GMT
@@ -150,23 +151,29 @@ src_unpack() {
 	# This helps your server to be able to reject excessively large messages
 	# "up front", rather than waiting the whole message to arrive and then
 	# bouncing it because it exceeded your databytes setting
-	epatch ${FILESDIR}/${MY_PVR}/qmail-smtpd-esmtp-size-gentoo.patch
+	#
+	# hansmi, 2005-01-05: no longer needed as this patch is now included
+	# in qregex-starttls-2way-auth
+	#epatch ${FILESDIR}/${MY_PVR}/qmail-smtpd-esmtp-size-gentoo.patch
 
 	#TODO TEST
 	# Reject some bad relaying attempts
 	# gentoo bug #18064
-	epatch ${FILESDIR}/${MY_PVR}/qmail-smtpd-relay-reject.gentoo.patch
+	epatch ${FILESDIR}/${PVR}/qmail-smtpd-relay-reject.gentoo.patch
 
 	#TODO TEST HEAVILY AS THIS PATCH WAS CUSTOM FIXED
 	# provide badrcptto support
 	# as per bug #17283
 	# patch re-diffed from original at http://sys.pro.br/files/badrcptto-morebadrcptto-accdias.diff.bz2
-	epatch ${DISTDIR}/qmail-gentoo-1.03-r12-badrcptto-morebadrcptto-accdias.diff.bz2
+	# TODO hansmi, 2005-01-06: rediffed for r16
+	epatch ${DISTDIR}/qmail-gentoo-1.03-r16-badrcptto-morebadrcptto-accdias.diff.bz2
 
 	# bug #31426
-	# original submission by shadow@ines.ro, cleaned up by robbat2@gentoo.org
-	# only allows AUTH after STARTTLS, if compiled TLS && TLS_BEFORE_AUTH defines
-	epatch ${FILESDIR}/${MY_PVR}/auth-after-tls-only.patch
+	# original submission by shadow@ines.ro, cleaned up by robbat2@gentoo.org,
+	# redone for r16 by hansmi@gentoo.org
+	# only allows AUTH after STARTTLS when compiled with TLS and TLS_BEFORE_AUTH
+	# defined
+	epatch ${FILESDIR}/${PVR}/auth-after-tls-only.patch
 
 	EPATCH_SINGLE_MSG="Enable stderr logging from checkpassword programs" \
 	epatch ${DISTDIR}/qmail-popupnofd2close.patch
@@ -183,18 +190,19 @@ src_unpack() {
 	epatch ${DISTDIR}/sendmail-ignore-N.patch
 
 	# rediff of original at http://www.qmail.org/accept-5xx.patch
-	epatch ${FILESDIR}/${MY_PVR}/qmail-1.03-accept-5xx.tls.patch
+	epatch ${FILESDIR}/${PVR}/qmail-1.03-accept-5xx.tls.patch
 
 	# rediffed from original at http://www.qcc.ca/~charlesc/software/misc/nullenvsender-recipcount.patch
 	# because of TLS
 	EPATCH_SINGLE_MSG="Refuse messages from the null envelope sender if they have more than one envelope recipient" \
-	epatch ${FILESDIR}/${MY_PVR}/nullenvsender-recipcount.tls.patch
+	epatch ${FILESDIR}/${PVR}/nullenvsender-recipcount.tls.patch
 
 	# rediffed from original at http://www.dataloss.nl/software/patches/qmail-pop3d-stat.patch
 	# because of TLS
 	EPATCH_SINGLE_MSG="qmail-pop3d reports erroneous figures on STAT after a DELE" \
 	epatch ${FILESDIR}/${MY_PVR}/qmail-pop3d-stat.tls.patch
 
+	# this can unintentionally leak information about your system!
 	EPATCH_SINGLE_MSG="Branding qmail with Gentoo identifier 'Gentoo Linux ${PF}'" \
 	epatch ${FILESDIR}/${MY_PVR}/qmail-gentoo-branding.patch
 	sed -e "s/__PF__/${PF}/" -i ${S}/qmail-smtpd.c
@@ -210,27 +218,28 @@ src_unpack() {
 	# add SPP framework for future extensions. Once this has been tested, most
 	# other patches may be rewritten to add a SPP module instead of patching
 	# qmail-smtpd
-	EPATCH_SINGLE_MSG="Adding SPP framework for qmail-smtpd" \
-	epatch ${DISTDIR}/gentoo-qmail-${PVR}-spp.034.patch
+	#EPATCH_SINGLE_MSG="Adding SPP framework for qmail-smtpd" \
+	#epatch ${DISTDIR}/gentoo-qmail-${PVR}-spp.034.patch
 
 	# add mail from DNS check
-	EPATCH_SINGLE_MSG="check envelope sender's domain for validity" \
-	epatch ${DISTDIR}/gentoo-qmail-${PVR}-mfcheck.3.patch
+	#EPATCH_SINGLE_MSG="check envelope sender's domain for validity" \
+	#epatch ${DISTDIR}/gentoo-qmail-${PVR}-mfcheck.3.patch
 
 	# log relay attempts
-	EPATCH_SINGLE_MSG="log relay attempts" \
-	epatch ${FILESDIR}/${PVR}/gentoo-qmail-${PVR}-logrelay.patch
+	#EPATCH_SINGLE_MSG="log relay attempts" \
+	#epatch ${FILESDIR}/${PVR}/gentoo-qmail-${PVR}-logrelay.patch
 
-	# Rediffed patch to prevent from a problem which can
-	# happen when using NAT. Rediffed by hansmi@gentoo.org.
+	# Rediffed patch to prevent from the problem that qmail doesn't know
+	# that it is reachable under another IP address when using NAT.
 	# See http://www.suspectclass.com/~sgifford/qmail/qmail-moreipme-0.6.README
+	# Rediffed by hansmi@gentoo.org.
 	EPATCH_SINGLE_MSG="Adding moreipme-patch" \
 	epatch ${DISTDIR}/qmail-1.03-moreipme-0.6pre1-gentoo.patch
 
-	# Patch to look up the mx before relaying
+	# Patch to look up the MX before relaying
 	# Look at http://hansmi.ch/software/qmail
 	EPATCH_SINGLE_MSG="Adding relaymxlookup-patch" \
-	epatch ${DISTDIR}/qmail-relaymxlookup-0.3.diff
+	epatch ${DISTDIR}/qmail-relaymxlookup-0.4.diff
 	epatch ${FILESDIR}/${PVR}/Makefile-relaymxlookup.patch
 
 	# Fix a bug on ia64, see bug 68173
@@ -240,18 +249,21 @@ src_unpack() {
 
 	# Added due to bug 38849
 	EPATCH_SINGLE_MSG="Adding qmail-bounce-encap to encapsulate bounces in rfc822 messages" \
+	EPATCH_OPTS="${EPATCH_OPTS} -F 3" \
 	epatch ${DISTDIR}/qmail-bounce-encap-20040210.patch
 
 	# Fixes bug 40521
-	epatch ${FILESDIR}/${PVR}/starttls-recordio.patch
+	# TODO Should be fixed with new TLS-patch
+	#epatch ${FILESDIR}/${PVR}/starttls-recordio.patch
 
 	# Add double-bounce-trim-patch from bug 45782
 	EPATCH_SINGLE_MSG="Adding double-bounce-trim-patch" \
 	epatch ${FILESDIR}/${PVR}/double-bounce-trim.patch
 
 	# Fixes bug 40010
-	EPATCH_SINGLE_MSG="Fixing broken #ifdef's to #if (TLS && TLS_BEFORE_AUTH)" \
-	epatch ${FILESDIR}/${PV}-r15/tlsbeforeauth-fix.patch
+	# TODO hansmi, 2005-01-06: no longer needed because auth-after-tls-only is fixed
+	#EPATCH_SINGLE_MSG="Fixing broken #ifdef's to #if (TLS && TLS_BEFORE_AUTH)" \
+	#epatch ${FILESDIR}/${PV}-r15/tlsbeforeauth-fix.patch
 
 	echo -n "$(tc-getCC) ${CFLAGS}" >${S}/conf-cc
 	if use ssl; then
@@ -270,10 +282,10 @@ src_unpack() {
 
 	# fix bug #33818
 	if use noauthcram; then
-		einfo "Disabling AUTHCRAM support"
-		sed -e 's,^#define AUTHCRAM$,//&,' -i ${S}/qmail-smtpd.c
+		einfo "Disabling CRAM_MD5 support"
+		sed -e 's,^#define CRAM_MD5$,//&,' -i ${S}/qmail-smtpd.c
 	else
-		einfo "Enabling AUTHCRAM support"
+		einfo "Enabling CRAM_MD5 support"
 	fi
 
 	echo -n "$(tc-getCC) ${LDFLAGS}" > ${S}/conf-ld
@@ -283,8 +295,9 @@ src_unpack() {
 	ht_fix_file ${S}/Makefile
 
 	# fix bug #74124
-	EPATCH_SINGLE_MSG="fixing stderr logging for checkpassword to enable qmail-queue to continue logging" \
-	epatch ${FILESDIR}/${PVR}/gentoo-qmail-1.03-r16-logging-with-smtpauth.patch
+	# TODO hansmi, 2005-01-06: should not be required anymore
+	#EPATCH_SINGLE_MSG="fixing stderr logging for checkpassword to enable qmail-queue to continue logging" \
+	#epatch ${FILESDIR}/${PVR}/gentoo-qmail-1.03-r16-logging-with-smtpauth.patch
 }
 
 src_compile() {
@@ -528,7 +541,6 @@ pkg_preinst() {
 }
 
 pkg_config() {
-
 	# avoid some weird locale problems
 	export LC_ALL="C"
 
@@ -542,7 +554,7 @@ pkg_config() {
 	fi
 
 	einfo "Accepting relaying by default from all ips configured on this machine."
-	LOCALIPS=`/sbin/ifconfig  | grep inet | cut -d' ' -f 12 -s | cut -b 6-20`
+	LOCALIPS=`/sbin/ifconfig | grep inet | cut -d' ' -f 12 -s | cut -b 6-20`
 	TCPSTRING=":allow,RELAYCLIENT=\"\",RBLSMTPD=\"\""
 	for ip in $LOCALIPS; do
 		myline="${ip}${TCPSTRING}"
@@ -560,8 +572,10 @@ pkg_config() {
 		/var/qmail/bin/mkservercert
 		einfo "If you want to have a properly signed certificate "
 		einfo "instead, do the following:"
-		einfo "openssl req -new -nodes -out req.pem \\"
-		einfo "-config /var/qmail/control/servercert.cnf \\"
+		# space at the end of the string because of the current implementation
+		# of einfo
+		einfo "openssl req -new -nodes -out req.pem \\ "
+		einfo "-config /var/qmail/control/servercert.cnf \\ "
 		einfo "-keyout /var/qmail/control/servercert.pem"
 		einfo "Send req.pem to your CA to obtain signed_req.pem, and do:"
 		einfo "cat signed_req.pem >> /var/qmail/control/servercert.pem"

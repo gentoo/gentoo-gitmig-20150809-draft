@@ -1,0 +1,25 @@
+diff --unidirectional-new-file -ur qmail-1.03.orig/qmail-remote.c qmail-1.03/qmail-remote.c
+--- qmail-1.03.orig/qmail-remote.c	2005-01-06 01:17:21.706727368 +0100
++++ qmail-1.03/qmail-remote.c	2005-01-06 01:18:45.802942800 +0100
+@@ -553,7 +553,9 @@
+   if (!smtps)
+ #endif
+  
+-  if (smtpcode() != 220) quit("ZConnected to "," but greeting failed");
++  code = smtpcode();
++  if (code >= 500) quit("DConnected to "," but greeting failed");
++  if (code != 220) quit("ZConnected to "," but greeting failed");
+  
+ #ifdef EHLO
+ # ifdef TLS
+@@ -580,7 +582,9 @@
+   substdio_put(&smtpto,helohost.s,helohost.len);
+   substdio_puts(&smtpto,"\r\n");
+   substdio_flush(&smtpto);
+-  if (smtpcode() != 250) quit("ZConnected to "," but my name was rejected");
++  code = smtpcode();
++  if (code >= 500) quit("DConnected to "," but my name was rejected");
++  if (code != 250) quit("ZConnected to "," but my name was rejected");
+  
+ #ifdef EHLO
+   }

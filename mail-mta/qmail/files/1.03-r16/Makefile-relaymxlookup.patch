@@ -1,6 +1,11 @@
---- qmail-1.03/Makefile.orig	2005-01-02 22:50:46.939208400 +0100
-+++ qmail-1.03/Makefile	2005-01-02 22:54:48.066551472 +0100
-@@ -1454,7 +1454,8 @@
+--- qmail-1.03.orig/Makefile	2005-01-06 15:49:11.587196496 +0100
++++ qmail-1.03/Makefile	2005-01-06 16:16:17.527016072 +0100
+@@ -1436,11 +1450,12 @@
+ load qmail-qmtpd.o rcpthosts.o control.o constmap.o received.o \
+ date822fmt.o now.o qmail.o cdb.a fd.a wait.a datetime.a open.a \
+ getln.a sig.a case.a env.a stralloc.a alloc.a substdio.a error.a \
+-str.a fs.a auto_qmail.o
++str.a fs.a auto_qmail.o dns.o ip.h ipalloc.h ipme.h byte_diff.o
  	./load qmail-qmtpd rcpthosts.o control.o constmap.o \
  	received.o date822fmt.o now.o qmail.o cdb.a fd.a wait.a \
  	datetime.a open.a getln.a sig.a case.a env.a stralloc.a \
@@ -10,24 +15,25 @@
  
  qmail-qmtpd.0: \
  qmail-qmtpd.8
-@@ -1617,13 +1618,13 @@
+@@ -1603,14 +1618,14 @@
  timeoutwrite.o ip.o ipme.o ipalloc.o control.o constmap.o received.o \
  date822fmt.o now.o qmail.o cdb.a fd.a wait.a datetime.a getln.a \
  open.a sig.a case.a env.a stralloc.a alloc.a strerr.a substdio.a error.a str.a \
--fs.a auto_qmail.o base64.o socket.lib dns.lib
-+fs.a auto_qmail.o base64.o socket.lib dns.lib dns.o ip.h ipalloc.h
+-fs.a auto_qmail.o base64.o socket.lib
++fs.a auto_qmail.o base64.o socket.lib dns.o ip.h ipalloc.h
  	./load qmail-smtpd qregex.o rcpthosts.o commands.o timeoutread.o \
  	timeoutwrite.o ip.o ipme.o ipalloc.o control.o constmap.o \
+ 	tls.o ssl_timeoutio.o ndelay.a -L/usr/local/ssl/lib -lssl -lcrypto \
  	received.o date822fmt.o now.o qmail.o cdb.a fd.a wait.a \
  	datetime.a getln.a open.a sig.a case.a env.a stralloc.a \
 -	alloc.a strerr.a substdio.a error.a str.a fs.a auto_qmail.o base64.o  `cat \
--	socket.lib` dns.o `cat dns.lib` -lssl -lcrypto
+-	socket.lib`
 +	alloc.a strerr.a substdio.a error.a fs.a auto_qmail.o base64.o  `cat \
-+	socket.lib` -lssl -lcrypto dns.o str.a `cat dns.lib`
++	socket.lib` dns.o str.a `cat dns.lib`
  
  qmail-smtpd.0: \
  qmail-smtpd.8
-@@ -1760,7 +1761,7 @@
+@@ -1746,7 +1761,7 @@
  
  rcpthosts.o: \
  compile rcpthosts.c cdb.h uint32.h byte.h open.h error.h control.h \

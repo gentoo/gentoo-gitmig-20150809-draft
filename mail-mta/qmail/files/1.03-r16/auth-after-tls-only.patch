@@ -1,0 +1,73 @@
+diff --unidirectional-new-file -ur qmail-1.03.orig/qmail-smtpd.c qmail-1.03/qmail-smtpd.c
+--- qmail-1.03.orig/qmail-smtpd.c	2005-01-06 00:42:51.960376640 +0100
++++ qmail-1.03/qmail-smtpd.c	2005-01-06 00:53:58.174096760 +0100
+@@ -150,6 +150,7 @@
+ int err_noauth() { out("504 auth type unimplemented (#5.5.1)\r\n"); return -1; }
+ int err_authabrt() { out("501 auth exchange canceled (#5.0.0)\r\n"); return -1; }
+ int err_input() { out("501 malformed auth input (#5.5.4)\r\n"); return -1; }
++int err_wantstarttls() { out("530 Must issue a STARTTLS command first (#5.7.0)\r\n"); return -1; };
+ void err_authfail() { out("535 authentication failed (#5.7.1)\r\n"); }
+ 
+ stralloc greeting = {0};
+@@ -494,6 +495,13 @@
+   seenmail = 0; dohelo(arg);
+   if (bhelook) flagbarfbhelo = bmcheck(BMCHECK_BHELO);
+ }
++void smtp_authout() {
++#ifdef CRAM_MD5
++  out("250-AUTH LOGIN PLAIN CRAM-MD5\r\n");
++#else
++  out("250-AUTH LOGIN PLAIN\r\n");
++#endif
++}
+ /* ESMTP extensions are published here */
+ void smtp_ehlo(arg) char *arg;
+ {
+@@ -504,12 +512,12 @@
+   if (!ssl) out("\r\n250-STARTTLS");
+ #endif
+   out("\r\n250-PIPELINING\r\n250-8BITMIME\r\n");
+-  out("250-SIZE "); out(size); out("\r\n");
+-#ifdef CRAM_MD5
+-  out("250 AUTH LOGIN PLAIN CRAM-MD5\r\n");
++#if defined(TLS) && defined(TLS_BEFORE_AUTH)
++  if(ssl) smtp_authout();
+ #else
+-  out("250 AUTH LOGIN PLAIN\r\n");
++  smtp_authout();
+ #endif
++  out("250 SIZE "); out(size); out("\r\n");
+   seenmail = 0; dohelo(arg);
+   if (bhelook) flagbarfbhelo = bmcheck(BMCHECK_BHELO);
+ }
+@@ -796,6 +804,9 @@
+ {
+   int r;
+ 
++#if defined(TLS) && defined(TLS_BEFORE_AUTH)
++  if (!ssl) return err_wantstarttls();
++#endif
+   if (*arg) {
+     if (r = b64decode(arg,str_len(arg),&user) == 1) return err_input();
+   }
+@@ -820,6 +831,9 @@
+ {
+   int r, id = 0;
+ 
++#if defined(TLS) && defined(TLS_BEFORE_AUTH)
++  if (!ssl) return err_wantstarttls();
++#endif
+   if (*arg) {
+     if (r = b64decode(arg,str_len(arg),&resp) == 1) return err_input();
+   }
+@@ -846,6 +860,10 @@
+   int i, r;
+   char *s;
+ 
++#if defined(TLS) && defined(TLS_BEFORE_AUTH)
++  if (!ssl) return err_wantstarttls();
++#endif
++
+   s = unique;                                           /* generate challenge */
+   s += fmt_uint(s,getpid());
+   *s++ = '.';
