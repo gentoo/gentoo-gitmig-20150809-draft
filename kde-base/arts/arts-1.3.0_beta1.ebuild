@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.0_alpha1.ebuild,v 1.4 2004/06/24 22:11:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.3.0_beta1.ebuild,v 1.1 2004/07/08 22:22:05 caleb Exp $
 
 inherit kde flag-o-matic eutils
 set-kdedir 3.3
 
-MY_PV=1.2.90
+MY_PV=1.2.91
 S=${WORKDIR}/${PN}-${MY_PV}
 
 DESCRIPTION="aRts, the KDE sound (and all-around multimedia) server/output manager"
