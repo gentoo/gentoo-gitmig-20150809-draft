@@ -1,8 +1,11 @@
 # ChangeLog for x11-misc/hotkeys
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/ChangeLog,v 1.2 2002/09/11 19:06:31 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/ChangeLog,v 1.3 2002/09/26 07:44:17 aliz Exp $
 
 *hotkeys-0.5.5.ebuild (11 Sep 2002)
+
+  26 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> hotkeys-0.5.5.ebuild :
+  Updated SRC_URI since 0.5.5 is a custom made package.  
 
   11 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Unoffical version bump to 0.5.5. Should close #6687.

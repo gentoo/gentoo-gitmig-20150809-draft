@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.5.ebuild,v 1.1 2002/09/11 19:06:31 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.5.ebuild,v 1.2 2002/09/26 07:44:17 aliz Exp $
 
 NAME="hotkeys"
 S=${WORKDIR}/${P}
 DESCRIPTION="Make use of extra buttons on newer keyboards."
-SRC_URI="http://ypwong.org/hotkeys/${P}.tar.bz2"
+SRC_URI="http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/${P}.tar.bz2"
 HOMEPAGE="http://ypwong.org/hotkeys/"
 
 LICENSE="GPL-2"
