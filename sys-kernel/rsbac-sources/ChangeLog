@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/rsbac-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.21 2005/01/13 23:46:23 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.22 2005/01/14 00:21:32 kang Exp $
+
+  14 Jan 2005; Guillaume Destuynder <kang@gentoo.org>
+  rsbac-sources-2.4.28-r2.ebuild, rsbac-sources-2.6.10.ebuild:
+  Fixes #77344: informs the user about rsbac doc project
 
 *rsbac-sources-2.4.28-r2 (14 Jan 2005)
 

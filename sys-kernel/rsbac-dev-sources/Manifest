@@ -2,7 +2,7 @@ MD5 ed6fb50f79e8049f3f3576bb25c32747 metadata.xml 465
 MD5 91644f250333e66a726f7aea6607baf4 ChangeLog 4963
 MD5 06368509cc4fd8cb5f1b3f21beefec95 rsbac-dev-sources-2.6.9.ebuild 1480
 MD5 e165a38c2fa378980f2447789095a965 rsbac-dev-sources-2.6.7-r11.ebuild 1925
-MD5 23a9af68107b3d4f7a73ba7011aba3d7 rsbac-dev-sources-2.6.10.ebuild 1384
+MD5 b697b5e0e3939cead02317f70cac53da rsbac-dev-sources-2.6.10.ebuild 1681
 MD5 e12a525c91aa1bdb745f7d243751b5ab rsbac-dev-sources-2.6.7-r12.ebuild 1925
 MD5 706d7794a822074aaf31502d7a7e48d3 files/2.6.7-cmdline.patch 455
 MD5 b6e38b41c8a79943df2ab2642149d06f files/rsbac-dev-sources-CAN-2004-0497.patch 2214
