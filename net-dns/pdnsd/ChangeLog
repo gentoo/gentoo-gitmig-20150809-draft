@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.33 2004/07/01 22:13:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.34 2004/07/18 05:25:36 dragonheart Exp $
+
+  18 Jul 2004; Daniel Black <dragonheart@gentoo.org> pdnsd-1.1.10.ebuild,
+  pdnsd-1.1.11.ebuild:
+  Fix for bug #55901. Add user pdnsd in pkg_setup. Thanks to Daniel Webert.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> pdnsd-1.1.10.ebuild,
   pdnsd-1.1.11.ebuild, pdnsd-1.1.7a.ebuild, pdnsd-1.1.9.ebuild:

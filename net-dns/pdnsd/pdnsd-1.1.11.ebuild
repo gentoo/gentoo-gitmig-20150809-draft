@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.11.ebuild,v 1.5 2004/07/14 23:38:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.11.ebuild,v 1.6 2004/07/18 05:25:36 dragonheart Exp $
 
 inherit eutils
 
@@ -60,7 +60,7 @@ src_compile() {
 	emake all || die "compile problem"
 }
 
-pkg_preinst() {
+pkg_setup() {
 	enewgroup pdnsd
 	enewuser pdnsd -1 /bin/false /var/lib/pdnsd pdnsd
 }
