@@ -1,9 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/mysqlcc-0.9.3.ebuild,v 1.1 2003/09/24 19:05:25 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/mysqlcc-0.9.3.ebuild,v 1.2 2003/10/03 13:00:32 caleb Exp $
 
-inherit eutils kde-functions
-need-qt 3.0.5
+inherit eutils
 
 S=${WORKDIR}/${P}-src
 DESCRIPTION="a MySQL GUI Client"
@@ -12,11 +11,13 @@ SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MySQLC
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="ssl"
 
 DEPEND="virtual/glibc
-	>=dev-db/mysql-4.0.0"
+	>=dev-db/mysql-4.0.0
+	>=x11-libs/qt-3.0.5"
+
 RDEPEND=""
 
 src_unpack() {

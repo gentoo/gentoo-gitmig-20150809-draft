@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysqlcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/ChangeLog,v 1.12 2003/09/24 19:05:25 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/ChangeLog,v 1.13 2003/10/03 13:00:32 caleb Exp $
+
+  03 Oct 2003; Caleb Tennis <caleb@gentoo.org> mysqlcc-0.9.3.ebuild:
+  Mark x86 stable
 
 *mysqlcc-0.9.3 (24 Sep 2003)
   
