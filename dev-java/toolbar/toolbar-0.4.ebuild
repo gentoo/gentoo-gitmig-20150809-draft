@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/toolbar-0.4.ebuild,v 1.1 2005/03/29 05:19:01 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/toolbar-0.4.ebuild,v 1.2 2005/03/29 05:43:52 compnerd Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="http://toolbar.tigris.org/files/documents/869/10303/ToolBar-0.4-src.zip
 
 SLOT="0"
 KEYWORDS="~x86"
-LICENSE="as-is"
+LICENSE="Apache-2.0"
 
 IUSE="jikes"
 DEPEND=">=virtual/jdk-1.4
