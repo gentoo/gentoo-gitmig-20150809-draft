@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0_pre20020115.ebuild,v 1.6 2004/09/27 10:50:38 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0_pre20020115.ebuild,v 1.7 2004/09/28 09:20:43 dragonheart Exp $
 
 inherit flag-o-matic eutils
 
@@ -62,7 +62,7 @@ src_compile() {
 	sed -e 's:-o $(OBJ_DIR)/gencpu:-lstdc++ -o $(OBJ_DIR)/gencpu:' \
 		Makefile.old > Makefile
 
-	emake || die "BasiliskII Make Failed"
+	emake -j1 || die "BasiliskII Make Failed"
 }
 
 src_install() {
