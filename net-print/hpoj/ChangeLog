@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hpoj
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.12 2003/12/22 15:46:36 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.13 2004/03/02 13:46:37 lanius Exp $
+
+  02 Mar 2004; Heinrich Wendel <lanius@gentoo.org> hpoj-0.91-r2.ebuild:
+  stable on x86
 
 *hpoj-0.91-r2 (22 Dec 2003)
 
