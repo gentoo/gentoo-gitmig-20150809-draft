@@ -1,0 +1,3 @@
+keep
+path[xfree-drm]=/lib/modules/%KV%/xfree-drm
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.14 2004/03/09 23:42:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.15 2004/03/14 21:22:38 battousai Exp $
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis mach64"
@@ -105,6 +105,9 @@ src_unpack() {
 
 	# Apply patches
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
+
+	# Change the install location for the modules.d stuff
+	sed -ie "s:/kernel/drivers/char/drm:/xfree-drm:g" Makefile.linux
 }
 
 src_compile() {
@@ -137,6 +140,10 @@ src_install() {
 		# Strip binaries, leaving /lib/modules untouched (bug #24415)
 		strip_bins \/lib\/modules
 	fi
+
+	# Shamelessly stolen from the sys-apps/thinkpad ebuild. Thanks!
+	keepdir /etc/modules.d
+	sed 's/%KV%/'${KV}'/g' ${FILESDIR}/modules.d-xfree-drm > ${D}/etc/modules.d/xfree-drm
 }
 
 pkg_postinst() {
