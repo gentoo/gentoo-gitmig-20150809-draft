@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r4.ebuild,v 1.10 2004/01/17 14:50:30 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r4.ebuild,v 1.11 2004/02/03 20:33:43 drobbins Exp $
 
 inherit eutils flag-o-matic
 
@@ -96,8 +96,6 @@ src_unpack() {
 }
 
 src_compile() {
-	append-flags "-fPIC"
-
 	local myconf=
 	use nls || myconf="--disable-nls"
 
