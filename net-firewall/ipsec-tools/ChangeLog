@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.6 2004/04/12 07:00:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.7 2004/04/24 04:39:12 latexer Exp $
+
+*ipsec-tools-0.3.1 (24 Apr 2004)
+
+  24 Apr 2004; Peter Johanson <latexer@gentoo.org> ipsec-tools-0.3.1.ebuild:
+  Bump, fix for ISAKMP vulnerability. See bug #48847
 
   12 Apr 2004; <plasmaroo@gentoo.org> files/racoon.conf.d,
   files/racoon.init.d:
