@@ -1,6 +1,20 @@
 # ChangeLog for dev-java/jswat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/ChangeLog,v 1.4 2003/04/30 16:43:32 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/ChangeLog,v 1.5 2003/05/23 07:09:24 absinthe Exp $
+
+*jswat-2.17 (23 May 2003)
+
+  23 May 2003; Dylan Carlson <absinthe@gentoo.org> jswat-2.16.ebuild,
+  jswat-2.17.ebuild:
+  Version bump.
+  
+  This version disallows quick-copy of selected text from a text component to
+  the text areas that are not editable. A very long classpath no longer causes
+  exceptions. The shared memory radio button is now disabled in the attach
+  dialog when the connector is not available. The source view no longer throws a
+  null pointer exception for a file stored inside a zip or jar. Breakpoints now
+  resolve within inner classes defined inside interfaces. The alias command now
+  strips enclosing quotes because the command parser does not.
 
 *jswat-2.16 (30 Apr 2003)
 
