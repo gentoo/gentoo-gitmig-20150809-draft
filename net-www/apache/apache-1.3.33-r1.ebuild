@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.6 2005/02/08 04:45:45 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.7 2005/02/13 02:21:32 vericgar Exp $
 
 inherit eutils fixheadtails
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
-GENTOO_PATCHSTAMP="20050207"
+GENTOO_PATCHSTAMP="20050212"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
 # The mod_ssl archive is only for providing the EAPI patch in here.
@@ -24,7 +24,7 @@ SRC_URI="mirror://apache/httpd/apache_${PV}.tar.gz
 LICENSE="Apache-2.0"
 SLOT="1"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
-IUSE="doc ssl pam lingerd no-suexec static-modules"
+IUSE="doc ssl pam lingerd no-suexec static-modules apache2"
 
 DEPEND="dev-lang/perl
 		>=sys-libs/db-1.85-r1
@@ -250,7 +250,15 @@ pkg_postinst() {
 		einfo "if it exists. You must remove the old configuration first"
 		einfo
 		einfo "For more information, see"
-		einfo "        http://dev.gentoo.org/~vericgar/package-refresh.txt"
+		einfo "  http://dev.gentoo.org/~vericgar/doc/apache-package-refresh.html"
+		einfo
+	fi
+
+	if use apache2 ; then
+		ewarn "You have apache2 in USE. Any modules that you"
+		ewarn "install may depend on apache-2.* instead of"
+		ewarn "apache-1*. It's recommended that you remove"
+		ewarn "apache2 from USE."
 	fi
 
 

@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.7 2005/02/08 04:45:45 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.8 2005/02/13 02:21:32 vericgar Exp $
 
 inherit eutils gnuconfig
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
-GENTOO_PATCHSTAMP="20050207"
+GENTOO_PATCHSTAMP="20050212"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
 DESCRIPTION="The Apache Web Server, Version 2.0.x"
@@ -272,7 +272,7 @@ pkg_postinst() {
 	fi
 
 	# Check for dual/upgrade install
-	if has_version '=net-www/apache-1*' ; then
+	if has_version '=net-www/apache-1*' || ! use apache2 ; then
 		ewarn
 		ewarn "Please add the 'apache2' flag to your USE variable and (re)install"
 		ewarn "any additional DSO modules you may wish to use with Apache-2.x."
@@ -308,7 +308,8 @@ pkg_postinst() {
 		einfo "You should also at this time rebuild all your modules"
 		einfo
 		einfo "For more information, see"
-		einfo "        http://dev.gentoo.org/~vericgar/package-refresh.txt"
+		einfo "    http://dev.gentoo.org/~vericgar/doc/apache-package-refresh.html"
+		einfo
 	fi
 }
 
