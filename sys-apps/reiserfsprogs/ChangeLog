@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/reiserfsprogs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfsprogs/ChangeLog,v 1.23 2003/07/28 04:16:29 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfsprogs/ChangeLog,v 1.24 2003/08/05 16:27:49 lostlogic Exp $
+
+*reiserfsprogs-3.6.11 (05 Aug 2003)
+
+  05 Aug 2003; Brandon Low <lostlogic@gentoo.org> reiserfsprogs-3.6.11.ebuild:
+  Bump
 
 *reiserfsprogs-3.6.10 (27 Jul 2003)
 
