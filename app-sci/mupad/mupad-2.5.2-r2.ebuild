@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/mupad/mupad-2.5.2-r2.ebuild,v 1.2 2004/05/16 11:13:33 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/mupad/mupad-2.5.2-r2.ebuild,v 1.3 2004/06/02 13:45:10 agriffis Exp $
 
 IUSE="mupad-noscilab"
 
@@ -81,7 +81,7 @@ src_install() {
 	use mupad-noscilab && rm -rf ${D}/usr/lib/mupad/packages/scilab/
 
 	#patch the sysinfo file to recognize x86_64 as proper ${ARCH}
-	if [ "`use amd64`" ]; then
+	if use amd64; then
 		einfo "Patching sysinfo file to recognize x86_64..."
 		sed -i -e "s/i*86) LINE/i*86|x86_64) LINE/" ${D}/usr/lib/mupad/share/bin/sysinfo
 	fi
