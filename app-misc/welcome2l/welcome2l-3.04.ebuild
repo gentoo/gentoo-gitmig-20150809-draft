@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/welcome2l-3.04.ebuild,v 1.8 2004/06/28 04:17:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/welcome2l-3.04.ebuild,v 1.9 2004/10/21 15:37:52 ka0ttic Exp $
 
 inherit eutils
 
@@ -9,7 +9,8 @@ MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Welcome to Linux, ANSI login logo for Linux"
 HOMEPAGE="http://www.littleigloo.org/"
-SRC_URI="http://www.chez.com/littleigloo/files/${MY_P}.src.tar.gz"
+SRC_URI="http://www.chez.com/littleigloo/files/${MY_P}.src.tar.gz
+	mirror://gentoo/${P}-gentoo.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,7 +22,7 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch ${WORKDIR}/${P}-gentoo.patch
 }
 
 src_compile() {

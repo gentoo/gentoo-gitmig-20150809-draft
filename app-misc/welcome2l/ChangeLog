@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/welcome2l
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/ChangeLog,v 1.5 2004/06/24 22:37:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/ChangeLog,v 1.6 2004/10/21 15:37:52 ka0ttic Exp $
+
+  21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
+  -files/welcome2l-3.04-gentoo.patch, welcome2l-3.04.ebuild:
+  Moved 30k patch to mirrors; added metadata (shell-tools)
 
   06 Apr 2004; Jason Wever <weeve@gentoo.org> welcome2l-3.04.ebuild:
   Added ~sparc keyword wrt bug #46840.
