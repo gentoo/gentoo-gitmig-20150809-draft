@@ -1,3 +1,4 @@
+MD5 6bcf2fd877030800c15a419f0e9991af xchat-2.0.6.ebuild 1978
 MD5 b424d2740a1f93cdc3f306461b4cf778 xchat-2.0.1.ebuild 1946
 MD5 4887bbd6f7df0f18b5aebc93850c6cf4 xchat-1.8.11.ebuild 2213
 MD5 6a93f14b4104d5e69a65614d07546583 xchat-2.0.5-r1.ebuild 2103
@@ -9,6 +10,7 @@ MD5 785881948431e9b5cc0fd90ccbd997e9 xchat-2.0.3-r1.ebuild 1915
 MD5 1ee812a2b3e28e3866413e75a80ff983 files/digest-xchat-2.0.1 64
 MD5 73e096b33cdb2fff840d34ecc8d7c3bb files/digest-xchat-2.0.4 64
 MD5 dc4dfe00cc6b978d3d8f8bd7bc70643e files/digest-xchat-2.0.5 64
+MD5 1c19b8dfe0dfe3574cb74726f3f04466 files/digest-xchat-2.0.6 64
 MD5 a8f607d224408d4a27777d2ffce8beac files/xc1811fixststint.diff 422
 MD5 e470c6b909112da5b80be6880e56c8c3 files/xchat-2.0.3-fix_cps.patch 438
 MD5 011b499714e85d4177185aabaeb1db15 files/00_all_tabs-leftright-and-gtk-icons.patch 13367
