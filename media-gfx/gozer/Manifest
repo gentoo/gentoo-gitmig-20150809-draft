@@ -1,3 +1,13 @@
-MD5 df1f2b6cecd2730bd8ac63fef2078ab7 gozer-0.7.ebuild 676
-MD5 3c78a9e7ba53c912fc704af81f4a63f1 ChangeLog 676
-MD5 afe60e5504a333966022a8a15093db9d files/digest-gozer-0.7 61
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 85ed00fd4b1a5125374756503af6aa01 ChangeLog 873
+MD5 2fe9d1773b621ea29f8d2b3cd6166f56 gozer-0.7-r1.ebuild 607
+MD5 afe60e5504a333966022a8a15093db9d files/digest-gozer-0.7-r1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA9JsCHTu7gpaalycRAjm0AJsEHZn59yDPefkEAUOrwhatxuBGiwCfYhfa
+YDJd9bomK1q9SB3izPshMUQ=
+=IhAc
+-----END PGP SIGNATURE-----
