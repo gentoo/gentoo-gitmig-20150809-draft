@@ -10,7 +10,7 @@ depend() {
 . /etc/profile.env
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin:$ROOTPATH
 
-case "`echo $DISPLAYMANAGER | awk '{ print toupper($1) }`" in
+case "`echo $DISPLAYMANAGER | awk '{ print toupper($1) }'`" in
 	KDM|KDE|KDE2|KDE3)	 
 		EXE=`which kdm`   
 		;;
