@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/smb.conf.example,v 1.1 2002/05/06 19:57:08 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/smb.conf.example,v 1.2 2002/06/23 20:56:53 woodchip Exp $
 # This is the main Samba configuration file. You should read the
 # smb.conf(5) manual page in order to understand the options listed
 # here. Samba has a huge number of configurable options (perhaps too
@@ -17,7 +17,7 @@
 
 # 1. Server Naming Options:
 # workgroup = NT-Domain-Name or Workgroup-Name
-   workgroup = MDKGROUP
+   workgroup = WORKGROUP
 
 # netbios name is the name you will see in "Network Neighbourhood",
 # but defaults to your hostname
@@ -32,7 +32,6 @@
 
 # 2. Printing Options:
 # CHANGES TO ENABLE PRINTING ON ALL CUPS PRINTERS IN THE NETWORK
-# (as cups is now used in linux-mandrake 7.2 by default)
 # if you want to automatically load your printer list rather
 # than setting them up individually then you'll need this
    printcap name = lpstat
@@ -280,13 +279,6 @@
 ;   path = /var/lib/samba/netlogon
 ;   guest ok = yes
 ;   writable = no
-
-#Uncomment the following 2 lines if you would like your login scripts to
-#be created dynamically by ntlogon (check that you have it in the correct
-#location (the default of the ntlogon rpm available in contribs - btw there
-#is no gentoo package for this; make one and submit it if you really want ;)
-;root preexec = /usr/bin/ntlogon -u %U -g %G -o %a -d /var/lib/samba/netlogon
-;root postexec = rm -f /var/lib/samba/netlogon/%U.bat
 
 # Un-comment the following to provide a specific roving profile share
 # the default is to use the user's home directory
