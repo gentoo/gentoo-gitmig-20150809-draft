@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r3.ebuild,v 1.7 2003/12/01 15:28:41 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r3.ebuild,v 1.8 2003/12/02 15:55:11 lanius Exp $
 
 inherit libtool motif
 
@@ -114,7 +114,8 @@ src_install() {
 		DESTDIR=${D} \
 		VARDIR=${D}/var/X11/ install || die "make install failed"
 
-	# move includes
+
+	einfo "Fixing includes"
 	dodir /usr/include/Mrm/2.2/Mrm
 	dodir /usr/include/Xm/2.2/Xm
 	dodir /usr/include/uil/2.2/uil
@@ -123,17 +124,16 @@ src_install() {
 	mv ${D}/usr/X11R6/include/Xm/*.h ${D}/usr/include/Xm/2.2/Xm
 	mv ${D}/usr/X11R6/include/uil/*.h ${D}/usr/include/uil/2.2/uil
 
-	cd ${D}/usr/include
-	motif_fix_headers 2.2
 
-	# bin
+	einfo "Fixing binaries"
 	dodir /usr/bin
 	for file in `ls ${D}/usr/X11R6/bin`
 	do
 		mv ${D}/usr/X11R6/bin/${file} ${D}/usr/bin/${file}-2.2
 	done
 
-	# libs
+
+	einfo "Fixing libraries"
 	dodir /usr/lib/motif/2.2
 	mv ${D}/usr/X11R6/lib/lib* ${D}/usr/lib/motif/2.2
 
@@ -145,7 +145,8 @@ src_install() {
 			"/usr/lib/${lib}"
 	done
 
-	# man pages
+
+	einfo "Fixing man pages"
 	dodir /usr/share/man/man1
 	dodir /usr/share/man/man3
 	dodir /usr/share/man/man4
@@ -172,10 +173,12 @@ src_install() {
 		mv ${D}/usr/X11R6/man/man5/${file}.5 ${D}/usr/share/man/man5/${file}-22.5
 	done
 
-	# cleanups
+
+	einfo "Cleaning up"
 	rm -fR ${D}/usr/X11R6/
 
-	# docs
+
+	einfo "Fixing docs"
 	dodoc COPYRIGHT.MOTIF LICENSE
 	dodoc README RELEASE RELNOTES
 	dodoc BUGREPORT OPENBUGS CLOSEDBUGS

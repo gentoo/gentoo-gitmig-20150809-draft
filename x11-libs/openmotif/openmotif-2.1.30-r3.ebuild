@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r3.ebuild,v 1.4 2003/12/01 15:26:57 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r3.ebuild,v 1.5 2003/12/02 15:55:11 lanius Exp $
 
 inherit motif
 
@@ -69,7 +69,7 @@ src_install() {
 	local NOINSTBIN="imake lndir makedepend makeg mergelib mkdirhier xmkmf"
 	local NOINSTMAN1="imake lndir makedepend makeg mkdirhier xmkmf"
 
-	# cleanups
+	einfo "Cleaning up X11 stuff"
 	rm -fR ${D}/etc
 	for nib in $NOINSTBIN; do
 		f="${D}usr/X11R6/bin/${nib}"; rm "$f" || die "rm $f"
@@ -79,7 +79,8 @@ src_install() {
 	done
 	rm -rf "${D}usr/X11R6/lib/X11/config" || die "rm config"
 
-	# move includes
+
+	einfo "Fixing includes"
 	dodir /usr/include/Mrm/2.1/Mrm
 	dodir /usr/include/Xm/2.1/Xm
 	dodir /usr/include/uil/2.1/uil
@@ -88,17 +89,16 @@ src_install() {
 	mv ${D}/usr/X11R6/include/Xm/*.h ${D}/usr/include/Xm/2.1/Xm
 	mv ${D}/usr/X11R6/include/uil/*.h ${D}/usr/include/uil/2.1/uil
 
-	cd ${D}/usr/include
-	motif_fix_headers 2.1
 
-	# bin
+	einfo "Fixing binaries"
 	dodir /usr/bin
 	for file in `ls ${D}/usr/X11R6/bin`
 	do
 		mv ${D}/usr/X11R6/bin/${file} ${D}/usr/bin/${file}-2.1
 	done
 
-	# libs
+
+	einfo "Fixing libraries"
 	dodir /usr/lib/motif/2.1
 	mv ${D}/usr/X11R6/lib/lib* ${D}/usr/lib/motif/2.1
 
@@ -113,7 +113,8 @@ src_install() {
 	dosym /usr/lib/motif/2.1/libXm.so.2.1 /usr/lib/libXm.so
 	dosym /usr/lib/motif/2.1/libUil.so.2.1 /usr/lib/libUil.so
 
-	# man pages
+
+	einfo "Fixing man pages"
 	dodir /usr/share/man/man1
 	dodir /usr/share/man/man3
 	dodir /usr/share/man/man5
@@ -140,9 +141,12 @@ src_install() {
 		mv ${D}/usr/X11R6/man/man7/${file}.7x ${D}/usr/share/man/man7/${file}-21.7
 	done
 
-	# cleanups
+
+	einfo "Cleaning up"
 	rm -fR ${D}/usr/X11R6/
 
+
+	einfo "Fixing docs"
 	dodoc README COPYRIGHT.MOTIF RELEASE RELNOTES
 	dodoc BUGREPORT OPENBUGS CLOSEDBUGS
 }

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.23 2003/12/01 15:25:03 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.24 2003/12/02 15:55:11 lanius Exp $
+
+  02 Dec 2003; Heinrich Wendel <lanius@gentoo.org> openmotif-2.1.30-r3.ebuild,
+  openmotif-2.2.2-r3.ebuild:
+  reverted include changes, it makes more sense to change the include path
 
   01 Dec 2003; Heinrich Wendel <lanius@gentoo.org> openmotif-2.1.30-r3.ebuild,
   openmotif-2.2.2-r3.ebuild:
