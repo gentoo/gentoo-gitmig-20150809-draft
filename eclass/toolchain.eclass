@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.76 2005/01/12 19:37:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.77 2005/01/13 04:57:06 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -673,7 +673,7 @@ gcc-compiler-pkg_postinst() {
 	should_we_gcc_config && do_gcc_config
 
 	# Update libtool linker scripts to reference new gcc version ...
-	if [ "${ROOT}" = "/" ] && \
+	if [[ ${ROOT} == "/" ]] && \
 	   [ -f "${WORKDIR}/.oldgccversion" -o -f "${WORKDIR}/.oldgccchost" ]
 	then
 		local OLD_GCC_VERSION=
@@ -1671,14 +1671,18 @@ do_gcc_PIE_patches() {
 }
 
 should_we_gcc_config() {
-	# we only want to switch compilers if installing to / and we're not
-	# building a cross-compiler.
-	! [ "${ROOT}" == "/" -a "${CHOST}" == "${CTARGET}" ] && return 1
+	# we only want to switch compilers if installing to /
+	[ ${ROOT} == "/" ] || return 1
 
 	# we always want to run gcc-config if we're bootstrapping, otherwise
 	# we might get stuck with the c-only stage1 compiler
 	use bootstrap && return 0
 	use build && return 0
+
+	# If we're cross-compiling, only run gcc-config the first time
+	if [[ ${CHOST} != ${CTARGET} ]] ; then
+		return $([[ ! -e ${ROOT}/etc/env.d/gcc/config-${CTARGET} ]])
+	fi
 
 	# if the current config is invalid, we definately want a new one
 	[ "$(gcc-config -L | grep -v ^\ )" == "no-config" ] && return 0
