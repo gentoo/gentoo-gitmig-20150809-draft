@@ -1,44 +1,23 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/files/dnetc.init,v 1.1 2002/11/09 17:55:29 aliz Exp $
-
-CLIENT=/opt/distributed.net/dnetc
-
-if [ -e ${CLIENT}.ini ]; then
-	# ini file
-	STARTOPTS="-ini ${CLIENT}.ini"
-elif [ ! -e ${CLIENT}.ini ] && [ ! -z ${EMAIL} ]; then
-	# email adress from config
-	STARTOPTS="-e ${EMAIL}"
-else
-	# none of the above
-	STARTOPTS=""
-fi
-
-test -f $CLIENT || exit 0
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/files/dnetc.init,v 1.2 2002/11/18 10:45:11 aliz Exp $
 
 start() {
-	if [ -z ${STARTOPTS} ]; then
-		ewarn "Neither email adress set in config or ${CLIENT}.ini exists, exiting."
-		return 1
+	if [ -e /opt/distributed.net/dnetc.ini ]; then
+		/opt/distributed.net/dnetc -quiet -ini /opt/distributed.net/dnetc.ini
+	elif [ ! -e /opt/distributed.net/dnetc.ini ] && [ ! -z ${EMAIL} ]; then
+		# email adress from config
+		/opt/distributed.net/dnetc -quiet -e ${EMAIL}
+	else
+		exit 1
 	fi
-echo ${STARTOPTS}
-	ebegin "Start distributed.net client"
-	$CLIENT -quiet -shutdown  # only allow one instance to run.
-	$CLIENT -quiet $STARTOPTS # -quiet is 'mandatory' here.
 	eend $?
 }
 
 stop() {
 	# sends SIGTERM to all running clients.
 	ebegin "Stopping distributed.net client"
-	$CLIENT -quiet -shutdown  # remove '-quiet' to see activity.
+	/opt/distributed.net/dnetc -quiet -shutdown  # remove '-quiet' to see activity.
 	eend $?
-}
-
-restart() {
-	# sends SIGHUP to all running clients.
-	ebegin "Restarting distributed.net client"
-	$CLIENT -quiet -restart   # remove '-quiet' to see activity.
 }
