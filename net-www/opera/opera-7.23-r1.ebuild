@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.23-r1.ebuild,v 1.3 2004/03/14 12:15:09 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.23-r1.ebuild,v 1.4 2004/03/17 01:38:25 gustavoz Exp $
 
 IUSE="static operanom2"
 
@@ -23,7 +23,7 @@ fi
 
 SLOT="0"
 LICENSE="OPERA"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 
 # Dependencies may be augmented later (see below).
 DEPEND=">=sys-apps/sed-4"
