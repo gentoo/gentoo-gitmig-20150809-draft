@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.15_beta2.ebuild,v 1.1 2003/02/27 21:57:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.15_beta2.ebuild,v 1.2 2003/03/10 08:43:35 aliz Exp $
 
 inherit gcc
 
 MY_P="${P/_beta/BETA}"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="utility for network exploration or security auditing"
-SRC_URI="http://www.insecure.org/nmap/dist/${MY_P}.tar.bz2"
+SRC_URI="http://www.insecure.org/nmap/dist/${MY_P}.tgz"
 HOMEPAGE="http://www.insecure.org/nmap/"
 
 SLOT="0"
