@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/units
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/units/ChangeLog,v 1.5 2003/03/20 21:09:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/units/ChangeLog,v 1.6 2003/08/15 13:03:48 spider Exp $
+
+*units-1.74-r1 (15 Aug 2003)
+
+  15 Aug 2003; <spider@gentoo.org> units-1.74-r1.ebuild,
+  files/remove-script.patch:
+  A small patch to remove a script at the end that bugged out with gcc 3.3.1
 
 *units-1.74 (1 Feb 2002)
 
