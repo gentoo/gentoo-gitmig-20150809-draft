@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-lame
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-lame/ChangeLog,v 1.20 2005/03/13 02:35:06 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-lame/ChangeLog,v 1.21 2005/04/02 11:20:46 zaheerm Exp $
+
+  02 Apr 2005; <zaheerm@gentoo.org> -gst-plugins-lame-0.6.4.ebuild:
+  removing gstreamer 0.6.x
 
   13 Mar 2005; Mike Gardiner <obz@gentoo.org> gst-plugins-lame-0.8.7.ebuild:
   Keyworded ppc
