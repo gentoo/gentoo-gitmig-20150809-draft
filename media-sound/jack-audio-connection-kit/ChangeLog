@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.21 2003/12/09 16:33:06 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.22 2003/12/18 22:07:29 mholzer Exp $
+
+  18 Dec 2003; Martin Holzer <mholzer@gentoo.org>
+  jack-audio-connection-kit-0.75.0.ebuild,
+  jack-audio-connection-kit-0.80.0.ebuild,
+  jack-audio-connection-kit-0.90.1-r1.ebuild,
+  jack-audio-connection-kit-0.90.1.ebuild,
+  jack-audio-connection-kit-0.91.1.ebuild:
+  adding RESTRICT=nomirror
 
 *jack-audio-connection-kit-0.90.1-r1 (09 Dec 2003)
 
