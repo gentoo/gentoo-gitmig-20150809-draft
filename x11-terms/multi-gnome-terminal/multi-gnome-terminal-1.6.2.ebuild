@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.6.2.ebuild,v 1.7 2004/06/24 23:22:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.6.2.ebuild,v 1.8 2004/08/21 17:12:19 spider Exp $
 
 IUSE="nls"
 
@@ -19,7 +19,7 @@ DEPEND="=x11-libs/gtk+-1*
 	>=media-libs/gdk-pixbuf-0.11.0-r1
 	=gnome-base/libglade-0*
 	>=app-text/scrollkeeper-0.3.10-r1
-	>=gnome-base/ORBit-0.5.16"
+	=gnome-base/orbit-0*"
 
 RDEPEND="nls? ( sys-devel/gettext )"
 

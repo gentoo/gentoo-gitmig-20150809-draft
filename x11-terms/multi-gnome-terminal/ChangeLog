@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/multi-gnome-terminal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.20 2004/06/24 23:22:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.21 2004/08/21 17:12:19 spider Exp $
+
+  21 Aug 2004; <spider@gentoo.org> multi-gnome-terminal-1.6.2.ebuild:
+  ORBit moved, updating deps
 
   17 Apr 2004; Jason Wever <weeve@gentoo.org>
   multi-gnome-terminal-1.6.2.ebuild:
