@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.89 2004/08/19 02:30:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.90 2004/08/22 17:35:54 obz Exp $
+
+*libxml2-2.6.12 (23 Aug 2004)
+
+  23 Aug 2004; Mike Gardiner <obz@gentoo.org> +libxml2-2.6.12.ebuild:
+  New version 2.6.12
 
   18 Aug 2004; Aron Griffis <agriffis@gentoo.org> libxml2-2.6.11.ebuild:
   stable on alpha and ia64
