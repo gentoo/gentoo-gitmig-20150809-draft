@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/XML-Parser-2.34.ebuild,v 1.4 2004/03/04 14:44:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/XML-Parser-2.34.ebuild,v 1.5 2004/03/23 09:40:45 kumba Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Pro
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ~amd64 ~ppc sparc alpha ~hppa ia64"
+KEYWORDS="x86 ~amd64 ~ppc sparc alpha ~hppa ia64 ~mips"
 
 DEPEND="${DEPEND}
 	>=dev-libs/expat-1.95.1-r1"
