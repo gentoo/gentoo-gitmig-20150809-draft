@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.14 2004/12/21 16:12:31 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.15 2004/12/31 01:26:01 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *aap-1.072 (21 Dec 2004)
 
@@ -21,7 +24,7 @@
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> aap-1.055.ebuild:
   Stable on sparc, added ~mips
 
-  03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> aap-1.055.ebuild:
+  03 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> aap-1.055.ebuild:
   Stable on alpha.
 
   24 May 2004; Ciaran McCreesh <ciaranm@gentoo.org> aap-1.055.ebuild:

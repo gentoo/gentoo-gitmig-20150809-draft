@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bsdiff
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.7 2004/11/10 23:01:10 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.8 2004/12/31 01:27:26 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   10 Nov 2004; Brian Harring <ferringb@gentoo.org> bsdiff-4.1.ebuild,
   bsdiff-4.2.ebuild: Version bump, and a correction of the HOMEPAGE.
@@ -9,7 +12,7 @@
   18 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> bsdiff-4.1.ebuild:
   Stable on sparc at ferringb's request
 
-  03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> bsdiff-4.1.ebuild:
+  03 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> bsdiff-4.1.ebuild:
   Stable on alpha.
 
   28 Apr 2004; Jon Portnoy <avenj@gentoo.org> bsdiff-4.1.ebuild :

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/boa-constructor
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/ChangeLog,v 1.16 2004/11/18 03:06:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/ChangeLog,v 1.17 2004/12/31 01:26:41 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   17 Nov 2004; Jason Wever <weeve@gentoo.org>
   boa-constructor-0.3.0_alpha.ebuild:
@@ -25,7 +28,7 @@
   +boa-constructor-0.3.0_alpha.ebuild:
   Version bump. bug# 60825
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   boa-constructor-0.1.0_alpha.ebuild, boa-constructor-0.2.3_alpha.ebuild,
   boa-constructor-0.2.8_pre20040620.ebuild:
   Change wxPython to wxpython.
