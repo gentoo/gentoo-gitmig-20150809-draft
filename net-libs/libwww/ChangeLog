@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.24 2004/03/12 16:34:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.25 2004/03/14 00:10:13 geoman Exp $
+
+  13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> :
+  Added ~mips keyword.
 
   13 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> libwww-5.4.0-r2.ebuild,
   files/libwww-5.4.0-autoconf-gentoo.diff:
