@@ -1,4 +1,14 @@
-MD5 a69208f89d6c38ca1e89b1f5ca5999a2 ChangeLog 571
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 578a9c8139ac695a6696065f6a0a39ec mindterm-bin-2.4.2.ebuild 800
+MD5 4cd78e2e77ae7be23d4180aa7a09e599 ChangeLog 677
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 41c4570548d16d8e626531c653e50341 mindterm-bin-2.4.2.ebuild 775
 MD5 41863a9fa43532aeec0372df907d335b files/digest-mindterm-bin-2.4.2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBiMd1/rLF9B432nYRAuvCAJ9unv2xrZ5aazT2aLwv0w2vXBuXIQCfXLfx
+5mW9hNBVTSOBRVn2hNc+pi8=
+=Bl51
+-----END PGP SIGNATURE-----
