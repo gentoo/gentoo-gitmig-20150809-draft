@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.48 2004/01/14 22:57:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.49 2004/02/16 04:23:22 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -129,6 +129,16 @@ vim_src_unpack() {
 
 	# Apply any patches available from vim.org for this version
 	[ -n "$VIM_ORG_PATCHES" ] && apply_vim_patches
+
+	# Unpack the runtime snapshot if available (only for vim-core)
+	if [ -n "$VIM_RUNTIME_SNAP" ]; then
+		cd ${S} || die
+		ebegin "Unpacking vim runtime snapshot"
+		rm -rf runtime
+		bzip2 -dc ${DISTDIR}/${VIM_RUNTIME_SNAP} | /bin/tar xf -
+		assert  # this will check both parts of the pipeline; eend would not
+		eend 0
+	fi
 
 	# Another set of patches borrowed from src rpm to fix syntax errors etc.
 	cd ${S} || die "cd ${S} failed"
