@@ -1,6 +1,10 @@
 #still playing with XFS, low latency patches (12/14/2001 - drobbins)
 #=sys-kernel/linux-sources-2.4.16-r1
 
+#untested/not approved stuff, please do not use
+=sys-apps/sysvinit-2.83-r1
+=sys-apps/baselayout-1.6.8
+
 #incomplete and very dangerous
 >=app-office/openoffice-641b
 
