@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (16 Oct 2002)
+# new version is 3.2 (upstream has version numbering issues)
+=x11-plugins/gkrellshoot-0.3.11
+
 # <george@gentoo.org> (15 Oct 2002)
 # new version has some issues with gcc-3.2
 =dev-lisp/gcl-2.4.3
