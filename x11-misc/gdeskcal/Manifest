@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 73ec14f18d76688c1f9cc6ddc48d5779 gdeskcal-0.57.1.ebuild 1600
 MD5 9c6de091d721d164d8993406190d0527 ChangeLog 1104
-MD5 e047fdffa51b3f842ca9d2ce10888c98 gdeskcal-0.57.1.ebuild 1591
 MD5 e60ca3d672670524a6881084c5fd2476 metadata.xml 224
 MD5 bdfc06cfa0781e3a743bad41d80b788b files/gdeskcal-0.57.1-gnomeui.patch 785
 MD5 25dec6cbbd74cd92e98dcd22c280d5b5 files/digest-gdeskcal-0.57.1 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBXUxgI7fK2cqeyXkRAjtvAJ0W7VlSHhCoq1jP35P+NpvU8L8D7QCgvS9P
-Urj+/WBoiY5KWrZaVskxRxc=
-=zfGE
+iD8DBQFB2ulOZ/iYVBmujdURAvQGAKCikm9PeleFVtN2lmamQ8ON4qJDqwCgqpZj
+7rN3dp4QJbhHHLRWWG0Y4mI=
+=bWKD
 -----END PGP SIGNATURE-----
