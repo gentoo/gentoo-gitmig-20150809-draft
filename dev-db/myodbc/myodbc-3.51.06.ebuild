@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-3.51.06.ebuild,v 1.4 2004/06/24 21:56:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-3.51.06.ebuild,v 1.5 2004/06/29 16:23:15 agriffis Exp $
 
 MY_PN="MyODBC"
 MY_P="${MY_PN}-${PV}"
@@ -11,9 +11,10 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE="debug doc static"
 RDEPEND=">=dev-db/mysql-4 dev-db/unixODBC sys-devel/m4"
 # perl is required for building docs
-DEPEND="${RDEPEND} docs? ( dev-lang/perl )"
+DEPEND="${RDEPEND} doc? ( dev-lang/perl )"
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
