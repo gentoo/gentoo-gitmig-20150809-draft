@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.1-r4.ebuild,v 1.2 2003/03/01 07:24:48 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.1-r4.ebuild,v 1.3 2003/03/02 02:07:38 latexer Exp $
 
 NOCO_VERSION="0.13b"
 
@@ -35,7 +35,7 @@ src_unpack() {
 
 		unpack ${OV}.tar.gz
 		cd ${WORKDIR}/${OV}
-		patch -p1 < ${DISTDIR}/${OV}-patch.diff
+		patch -p1 < ${DISTDIR}/${OV}-patched.diff
 
 		cd ${S}
 		mv ../${OV}/hermes*.{c,h} \
