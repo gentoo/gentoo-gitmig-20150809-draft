@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.11-r3.ebuild,v 1.1 2002/03/18 13:53:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.11-r3.ebuild,v 1.2 2002/03/20 23:11:13 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Your standard GNU shell utilities"
@@ -13,13 +13,18 @@ RDEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-
-	# patch to add Chipset info. in uname output
-	tar zxf ${DISTDIR}/nuname-1.0.tar.gz
+	if [ -z "`use build`" ]
+	then
+		# patch to add Chipset info. in uname output
+		# this is not important for the static version, though
+		# and anyway, it breaks compilation on that version
+		tar zxf ${DISTDIR}/nuname-1.0.tar.gz
+		cd ${S}
+		patch src/uname.c ../nuname/lin_uname_patch
+		rm src/uname.c~
+		mv ../nuname/README ../nuname/README.nuname
+	fi
 	cd ${S}
-	patch src/uname.c ../nuname/lin_uname_patch
-	mv ../nuname/README ../nuname/README.nuname
-
 	# patch to remove Stallman's rant about su and the wheel group
 	patch doc/sh-utils.texi ${FILESDIR}/${P}-gentoo.diff
 	rm doc/sh-utils.info
@@ -34,12 +39,12 @@ src_compile() {
 	
 	if [ -z "`use static`" ]
 	then
-		emake || die
+		make || die
 	else
-		emake LDFLAGS=-static || die
+		make LDFLAGS=-static || die
+		cd doc
+		make
 	fi
-	cd doc
-	make
 }
 
 src_install() {
@@ -53,6 +58,7 @@ src_install() {
 	then
 		# We must use hostname from net-base
 		rm ${D}/usr/bin/hostname
+
 		cd ${S}
 		dodoc AUTHORS COPYING ChangeLog ChangeLog.0 NEWS README THANKS TODO 
 		dodoc ../nuname/README.nuname
