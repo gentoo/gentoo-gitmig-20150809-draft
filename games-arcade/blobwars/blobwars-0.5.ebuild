@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-0.5.ebuild,v 1.1 2004/02/24 05:53:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-0.5.ebuild,v 1.2 2004/04/29 19:42:11 agriffis Exp $
 
 inherit games
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.parallelrealities.co.uk/blobWars.php"
 # download page has a lame PHP thing.
 SRC_URI="mirror://gentoo/${P}-1.tar.gz"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~alpha"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
