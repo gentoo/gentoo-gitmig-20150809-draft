@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.35 2003/11/06 23:20:33 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.36 2003/11/07 19:18:47 johnm Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -56,10 +56,7 @@ fi
 
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"
 
-
 kernel_getversion() {
-	local KERNEL_VERSION
-
 	[ -h ${KERNEL_DIR} ] && KERNEL_DIR="$(readlink -f ${KERNEL_DIR})"
 	if [ ! -d ${KERNEL_DIR} ]
 	then
@@ -71,14 +68,13 @@ kernel_getversion() {
 	KERNEL_VERSION="${KERNEL_VERSION/-*/}"
 	KERNEL_VERSION="${KERNEL_VERSION/\/work*/}"
 
-	KV_MAJOR="$(echo ${KERNEL_VERSION} | cut -d. -f1)"
-	KV_MINOR="$(echo ${KERNEL_VERSION} | cut -d. -f2)"
-	KV_PATCH="$(echo ${KERNEL_VERSION} | cut -d. -f3)"
+	KV_MAJOR=$(echo ${KERNEL_VERSION} | cut -d. -f1)
+	KV_MINOR=$(echo ${KERNEL_VERSION} | cut -d. -f2)
+	KV_PATCH=$(echo ${KERNEL_VERSION} | cut -d. -f3)
 }
 
 kernel_is_2_4() {
 	kernel_getversion
-
 	if [ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -eq 4 ]
 	then
 		return 0
@@ -128,7 +124,7 @@ kernel_universal_unpack() {
 		cd ${S}
 	fi
 
-	if [ kernel_is_2_4 -o ${ETYPE} == "headers" ]
+	if [ $(kernel_is_2_4) $? == 0 -o ${ETYPE} == "headers" ]
 	then
 		# this file is required for other things to build properly, 
 		# so we autogenerate it
