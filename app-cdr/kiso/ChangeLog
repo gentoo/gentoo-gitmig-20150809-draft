@@ -1,0 +1,11 @@
+# ChangeLog for app-cdr/kiso
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/ChangeLog,v 1.1 2004/05/03 21:32:45 centic Exp $
+
+*kiso-0.4.2 (03 May 2004)
+
+  03 May 2004; Dominik Stadler <centic@gentoo.org> +metadata.xml,
+  +kiso-0.4.2.ebuild:
+  Add new ebuild, see Bug 43982, thanks to Valerio <mr.gamer@email.it> for the
+  ebuild in Bug 48874
+
