@@ -1,6 +1,9 @@
-# ChangeLog for app-accessibility/mbrola 
+# ChangeLog for app-accessibility/mbrola
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.6 2004/08/14 22:08:38 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.7 2004/09/05 06:37:48 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   14 Aug 2004; Chris Aniszczyk <zx@gentoo.org> mbrola-3.0.1h-r1.ebuild:
   ~ppc
