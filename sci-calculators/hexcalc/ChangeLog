@@ -1,0 +1,15 @@
+# ChangeLog for app-sci/hexcalc
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hexcalc/ChangeLog,v 1.1 2004/12/24 15:16:48 ribosome Exp $
+
+  13 Dec 2004; Michael Hanselmann <hansmi@gentoo.org> hexcalc-1.11.ebuild:
+  Added to ~ppc. See bug #74229.
+
+  08 Sep 2004; <blubb@gentoo.org> hexcalc-1.11.ebuild:
+  added ~amd64 keyword
+
+*hexcalc-1.11 (26 Jun 2003)
+
+   26 Jun 2003; Jon Portnoy <avenj@gentoo.org> hexcalc-1.11.ebuild :
+   Initial import. Submitted in bug 20164 by Damjan
+   <damjan.bole@studioproteus.si> with a minor fix from Don Seiler.
