@@ -1,13 +1,14 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/urlview-0.9.ebuild,v 1.4 2002/07/11 06:30:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/urlview-0.9.ebuild,v 1.5 2002/07/26 23:39:44 cselkirk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="extracts urls from text and will send them to another app"
 SRC_URI="ftp://gd.tuwien.ac.at/infosys/mail/mutt/contrib/${P}.tar.gz"
 HOMEPAGE="http://www.mutt.org"
 DEPEND=">=sys-libs/ncurses-5.2"
-KEYWORDS="x86"
+RDEPEND=">=sys-libs/ncurses-5.2"
+KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
