@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.29 2004/09/22 12:21:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.30 2004/10/09 08:42:37 cardoe Exp $
+
+*usbutils-0.11-r5 (09 Oct 2004)
+
+  09 Oct 2004; Doug Goldstein <cardoe@gentoo.org>
+  +files/usbutils-0.11-fix-usb-ids-man-page-ref.patch,
+  +usbutils-0.11-r5.ebuild:
+  path fixing bug #62786
 
 *usbutils-0.11-r4 (22 Sep 2004)
 
