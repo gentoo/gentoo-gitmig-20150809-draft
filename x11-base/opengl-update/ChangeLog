@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.30 2004/06/26 08:28:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.31 2004/06/27 09:30:45 spyderous Exp $
+
+  27 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; :
+  Fix Manifest, I hope.
 
 *opengl-update-1.7.2 (26 Jun 2004)
 
