@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.9 2004/10/13 21:21:50 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.10 2004/10/20 10:28:00 spock Exp $
+
+  20 Oct 2004; Michal Januszewski <spock@gentoo.org>
+  splashutils-0.9_pre10.ebuild:
+  Marked splashutils stable on x86 and amd64. Changed baselayout dep. to >=
+  1.9.4-r5.
 
   13 Oct 2004; Michal Januszewski <spock@gentoo.org>
   splashutils-0.9_pre07.ebuild, splashutils-0.9_pre08.ebuild,
