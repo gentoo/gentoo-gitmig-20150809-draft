@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1.0.ebuild,v 1.3 2004/08/29 10:17:36 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1.0.ebuild,v 1.4 2004/08/30 17:31:29 kugelfang Exp $
 
 inherit python kde eutils
 
@@ -29,8 +29,12 @@ myconf="$myconf --with-kdelibsdoxy-dir=${KDEDIR}/share/doc/HTML/en/kdelibs-apido
 src_unpack() {
 	kde_src_unpack
 
+	# fPIC patches shall be applied unconditionally
+	# BUG #55238
+	# Danny van Dyk <kugelfang@gentoo.org> 2004/08/30
+	epatch ${FILESDIR}/${P/.0/_beta1}-bdb-fPIC.patch
+
 	if use amd64; then
-		epatch ${FILESDIR}/${P/.0/_beta1}-bdb-fPIC.patch
 		epatch ${FILESDIR}/${P}-bdb-mutex.patch
 	fi
 }

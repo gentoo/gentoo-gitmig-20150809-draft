@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.65 2004/08/29 10:17:36 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.66 2004/08/30 17:31:29 kugelfang Exp $
+
+  30 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> kdevelop-3.1.0.ebuild:
+  fPIC patch now gets applied unconditionally according to Gentoo Policy. BUG
+  #55238.
 
   29 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
   +files/kdevelop-3.1.0-bdb-mutex.patch, kdevelop-3.1.0.ebuild:
