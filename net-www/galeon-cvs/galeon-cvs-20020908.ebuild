@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/galeon-cvs-20020908.ebuild,v 1.2 2002/09/08 13:51:41 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/galeon-cvs-20020908.ebuild,v 1.3 2002/09/08 14:27:22 spider Exp $
 
 
 ECVS_TOP_DIR="${PORTAGE_TMPDIR}"
@@ -10,6 +10,8 @@ ECVS_CVS_OPTIONS="-dP"
 
 inherit cvs
 inherit gnome2
+# inherit debug to enable debugging and do it after gnome2 so as not gnome2 notices debugging
+inherit debug libtool
 
 S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="Galeon is a Web Browser for the Gnome Desktop.  The web, only the web."
@@ -28,6 +30,7 @@ RDEPEND="${DEPEND}"
 
 
 src_compile() {
+	elibtoolize
 	if [ ! -f ${ROOT}/usr/lib/mozilla/components/libwidget_gtk2.so ]
 		then
 		eerror "you need mozilla-1.1-r1 or higher compiled against gtk+-2"
@@ -48,7 +51,7 @@ src_compile() {
 	else
 		./configure ${baseopts} ${myconf}  || die "configure failed"
 	fi
-	emake || die "compile failed"
+	make || die "compile failed"
 }
 
 src_install () {
