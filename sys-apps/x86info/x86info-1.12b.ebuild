@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.12b.ebuild,v 1.4 2004/06/24 22:32:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.12b.ebuild,v 1.5 2004/07/15 02:47:51 agriffis Exp $
 
 inherit eutils
 
@@ -13,7 +13,6 @@ KEYWORDS="~x86 -amd64 -ppc -sparc -mips -alpha -hppa"
 DEPEND="virtual/kernel"
 RDEPEND=""
 IUSE=""
-S=${WORKDIR}/${P}
 
 src_compile() {
 	emake x86info CFLAGS="${CFLAGS}" || die "emake failed"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.11.ebuild,v 1.8 2004/06/24 22:32:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.11.ebuild,v 1.9 2004/07/15 02:47:51 agriffis Exp $
 
 inherit eutils
 
@@ -21,8 +21,6 @@ DEPEND="virtual/kernel"
 RDEPEND=""
 
 IUSE=""
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	emake x86info CFLAGS="${CFLAGS}" ||die "emake failed"
@@ -64,5 +62,3 @@ pkg_postinst() {
 	# copied from media-libs/svgalib/svgalib-1.9.17
 	[ "${ROOT}" = "/" ] && /sbin/modules-update &> /dev/null
 }
-
-

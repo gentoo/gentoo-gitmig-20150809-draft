@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.3-r1.ebuild,v 1.16 2004/06/28 01:25:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.3-r1.ebuild,v 1.17 2004/07/15 02:40:32 agriffis Exp $
 
 inherit eutils
 
 IUSE="nls build"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="The GNU info program and utilities"
 HOMEPAGE="http://www.gnu.org/software/texinfo/"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/texinfo/${P}.tar.gz
@@ -72,4 +71,3 @@ src_install() {
 		dodoc makeinfo/README
 	fi
 }
-
