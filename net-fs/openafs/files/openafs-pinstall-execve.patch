@@ -9,8 +9,8 @@ diff -u -r1.21 -r1.22
  #include <afs/param.h>
  
  RCSID
--    ("$Header: /var/cvsroot/gentoo-x86/net-fs/openafs/files/openafs-pinstall-execve.patch,v 1.1 2003/10/20 05:29:07 rphillips Exp $");
-+    ("$Header: /var/cvsroot/gentoo-x86/net-fs/openafs/files/openafs-pinstall-execve.patch,v 1.1 2003/10/20 05:29:07 rphillips Exp $");
+-    ("$Header: /var/cvsroot/gentoo-x86/net-fs/openafs/files/openafs-pinstall-execve.patch,v 1.2 2004/07/18 03:54:09 dragonheart Exp $");
++    ("$Header: /var/cvsroot/gentoo-x86/net-fs/openafs/files/openafs-pinstall-execve.patch,v 1.2 2004/07/18 03:54:09 dragonheart Exp $");
  
  #include <stdio.h>
  #include <pwd.h>
