@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.17-r1.ebuild,v 1.3 2004/09/06 19:50:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.17-r1.ebuild,v 1.4 2004/09/16 21:38:56 lisa Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -73,7 +73,7 @@ src_compile() {
 		myconf=" ${myconf} --enable-rfc2553 "
 		epause 5
 	fi
-
+	einfo "${D}"
 	econf ${myconf} || die "econf ${myconf} failed"
 	emake || die "emake failed"
 }

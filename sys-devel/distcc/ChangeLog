@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.117 2004/09/13 12:21:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.118 2004/09/16 21:38:56 lisa Exp $
+
+  16 Sep 2004; Lisa Seelye <lisa@gentoo.org> -distcc-2.12.1-r1.ebuild,
+  -distcc-2.13-r1.ebuild, distcc-2.17-r1.ebuild, -distcc-2.17.ebuild:
+  Doing a bit of tidying and then some fun stuff after
 
   13 Sep 2004; Jason Wever <weeve@gentoo.org> distcc-2.16.ebuild:
   Stable on sparc.
