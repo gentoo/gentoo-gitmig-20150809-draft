@@ -1,23 +1,18 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.1.ebuild,v 1.2 2001/12/30 17:29:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-2.3.1.ebuild,v 1.1 2001/12/30 17:29:05 danarmak Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="QT ${PV}, an X11 widget set and general library used by KDE et al"
+S=${WORKDIR}/qt-${PV}
+DESCRIPTION="QT ${PV} docs, manpages, examples and tutorials"
 SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/qt-x11-${PV}.tar.gz"
 HOMEPAGE="http://www.trolltech.com/"
 
-RDEPEND=">=media-libs/libpng-1.0.9
-	>=media-libs/libmng-1.0.0
-	opengl? ( virtual/opengl virtual/glu )
-	nas? ( >=media-libs/nas-1.4.1 )
-	virtual/x11"
+RDEPEND=">=x11-libs/qt-$PV"
 
 DEPEND="$RDEPEND
 	sys-devel/gcc"
 
-QTBASE=/usr/qt/2
 export QTDIR=${S}
 
 src_unpack() {
@@ -45,45 +40,47 @@ src_compile() {
     use nas	&& myconf="${myconf} -system-nas-sound"		|| myconf="${myconf} -no-nas-sound"
     use gif	&& myconf="${myconf} -gif"
     [ -n "$DEBUG" ]	&& myconf="${myconf} -debug"		|| myconf="${myconf} -release"
-	
+
     ./configure -sm -thread -system-zlib -system-jpeg ${myconf} \
 	-system-libmng -system-libpng -gif -platform linux-g++ \
         -ldl -lpthread -no-g++-exceptions || die
 
-    cd ${S}
-    make symlinks src-moc sub-src sub-tools || die
+    # use already built x11-libs/qt
+    export QTDIR=/usr/qt/2
+
+	cd ${S}/tutorial
+    make || die
+    cd ${S}/examples
+    make || die
 
 }
 
 src_install() {
 
+    QTBASE=/usr/qt/2
     cd ${S}
-
-    # binaries
-    into $QTBASE
-    dobin bin/*
-
-    # libraries
-    dolib lib/libqt.so.${PV} lib/libqt-mt.so.${PV} lib/libqutil.so.1.0.0
-    cd ${D}$QTBASE/lib
-    for x in libqt.so libqt-mt.so
-    do
-	ln -s $x.2.3.1 $x.2.3
-	ln -s $x.2.3 $x.2
-	ln -s $x.2 $x
-    done
-    ln -s libqutil.so.1.0.0 libqutil.so.1.0
-    ln -s libqutil.so.1.0 libqutil.so.1
-    ln -s libqutil.so.1 libqutil.so
-
-    # includes
+    
+    # docs
     cd ${S}
-    dodir ${QTBASE}/include
-    cp include/* ${D}/${QTBASE}/include/
+    dodoc ANNOUNCE README* INSTALL FAQ LICENSE* PLATFORMS PORTING
 
+    # html docs
+    dodir $QTBASE/doc
+    cp -r ${S}/doc/html $D/$QTBASE/doc
+
+    # manpages
+    dodir $QTBASE/man
+    cp -r ${S}/doc/man $D/$QTBASE
+
+    # examples
+    cp -r ${S}/examples $D/$QTBASE
+
+    # tutorials
+    cp -r ${S}/tutorial $D/$QTBASE
+    
     # misc
     insinto /etc/env.d
-    doins ${FILESDIR}/50qt2
+    doins ${FILESDIR}/50qt-docs2
 
 }
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-aalsa/xmms-aalsa-0.5.4-r3.ebuild,v 1.1 2001/10/06 17:22:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-aalsa/xmms-aalsa-0.5.4-r3.ebuild,v 1.2 2001/12/30 17:29:05 danarmak Exp $
 
 S=${WORKDIR}/xmms-aalsa_0.5.4
-DESCRIPTION="This output plugin allows xmms to work with arts, KDE's sound system"
+DESCRIPTION="This output plugin allows xmms to work with alsa"
 SRC_URI="http://www1.tcnet.ne.jp/fmurata/linux/aalsa/xmms-aalsa_0.5.4.tar.gz"
 
 DEPEND="virtual/glibc >=media-sound/xmms-1.2.5-r1 >=media-libs/alsa-lib-0.5.9"
