@@ -1005,7 +1005,6 @@ dev-lang/tcl-tk
 # avifile, so it has been restored to portage.
 <media-video/avifile-0.6
 
-
 #seemant@gentoo.org 20 Mar 2002
 # Masking medusa-0.5.1-r4 because it requires libtool-1.4.2 which is also masked
 =gnome-extra/medusa-0.5.1-r4
@@ -1077,7 +1076,6 @@ media-sound/rhythmbox
 # not fit for release (working on it though)
 app-cdr/cddump
 
-
 # seemant@gentoo.org 26 Apr 2002
 # the old ebuild of puregui was mis-versioned to 1, when it was actually
 # 0.0.1
@@ -1090,13 +1088,11 @@ app-cdr/cddump
 # add 4.1.71* too
 =net-misc/ntp-4.1.71*
 
-
 # spider@gentoo.org 9 May 2002
 # Security update see:
 # http://online.securityfocus.com/bid/4339
 # http://online.securityfocus.com/bid/4336
 <media-libs/imlib-1.9.13
-
 
 # spider@gentoo.org 9 May 2002
 # Security update see:
@@ -1142,7 +1138,6 @@ x11-base/xdirectfb
 # rphillips@gentoo.org 27 Jun 2002
 # masked since package is not released
 >=dev-db/mysql-4.0.1_alpha
-
 
 # agriffis@gentoo.org 06 Jul 2002
 # ruby-libglade-1.2 is OLD.  The 0.2[789] versions represent new
@@ -1193,7 +1188,3 @@ app-cdr/eroaster
 # jnelson@gentoo.org 24 Sep 2002
 # mask todo-manager because it's really busted
 app-misc/todo-manager-bronze
-
-# vapier@gentoo.org 2 Oct 2002
-# masked for testing
-net-dialup/ltmodem
