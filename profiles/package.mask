@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3768 2005/03/26 15:56:20 allanonjl Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3769 2005/03/27 09:39:07 usata Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -978,11 +978,6 @@ dev-db/qt-unixODBC
 # Masked all ebuilds of xeasyconf, because there is no stable
 # xfree-ebuild anymore and xeasyconf depends on XFree86.
 x11-misc/xeasyconf
-
-# <usata@gentoo.org> (17 Oct 2004)
-# masked tetex-beta until tetex-3 release (bug #60835).
->=app-text/tetex-2.96
->=app-text/ptex-3.1.8
 
 # <liquidx@gentoo.org> (16 Oct 2004)
 # Deprecate old unsupported gphoto-0.4.3. use gphoto2.
