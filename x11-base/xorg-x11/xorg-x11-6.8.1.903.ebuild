@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.903.ebuild,v 1.1 2005/02/01 22:04:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.903.ebuild,v 1.2 2005/02/02 06:19:17 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1658,7 +1658,7 @@ remove_font_dirs() {
 					rm -rfv ${G_FONTDIR}
 				else
 					ewarn "${G_FONTDIR} not a symlink, moving to /usr/share/fonts"
-					if [ -e ${G_FONTDIR} ]; then
+					if [ -d ${G_FONTDIR} ]; then
 						if [ ! -e /usr/share/fonts/${G_FONTDIR##*/} ]; then
 							einfo "Moving ${G_FONTDIR} to /usr/share/fonts/"
 							mv ${G_FONTDIR} /usr/share/fonts/
