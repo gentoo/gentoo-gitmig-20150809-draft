@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.3.ebuild,v 1.2 2003/12/06 23:09:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.3.ebuild,v 1.3 2004/02/15 13:19:36 dholm Exp $
 
 inherit flag-o-matic
 
@@ -19,6 +19,13 @@ DEPEND="ladcca? ( media-libs/ladcca ) \
 	jack? ( virtual/jack ) \
 	media-libs/ladspa-sdk \
 	alsa? ( media-libs/alsa-lib )"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-nonx86.patch
+}
 
 src_compile() {
 	local myconf
