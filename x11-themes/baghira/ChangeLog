@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/baghira
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.32 2005/03/22 10:34:51 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.33 2005/04/01 22:28:20 pylon Exp $
+
+  01 Apr 2005; Lars Weiler <pylon@gentoo.org> baghira-0.5h-r1.ebuild:
+  Stable on ppc.
 
 *baghira-0.6e-r1 (22 Mar 2005)
 

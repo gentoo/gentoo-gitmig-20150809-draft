@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gdm-themes
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.19 2005/03/17 15:39:05 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.20 2005/04/01 22:30:52 pylon Exp $
+
+  01 Apr 2005; Lars Weiler <pylon@gentoo.org> gdm-themes-2.0-r1.ebuild:
+  Stable on ppc.
 
   17 Mar 2005; Gustavo Felisberto <humpback@gentoo.org>;
   gdm-themes-2.0-r1.ebuild:
