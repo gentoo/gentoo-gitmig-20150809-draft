@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3760 2005/03/23 16:15:45 seemant Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3761 2005/03/23 19:53:59 seemant Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Seemant Kulleen <seemant@gentoo.org> (23 March 2005)
+# Masking while in transit
+www-client/mozilla-launcher
 
 # Christian Parpart <trapni@gentoo.org> (22 March 2005)
 # masked for testing
