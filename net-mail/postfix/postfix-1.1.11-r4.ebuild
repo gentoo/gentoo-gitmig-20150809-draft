@@ -1,9 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r4.ebuild,v 1.1 2002/07/19 15:06:39 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r4.ebuild,v 1.2 2002/07/21 17:16:28 blizzy Exp $
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
+LICENSE="IPL-1"
+SLOT="0"
+KEYWORDS="x86"
 
 POSTFIX_TLS_VER="0.8.11a-${PV}-0.9.6d"
 
@@ -22,13 +25,16 @@ RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00
 	!virtual/mta"
 
-SLOT="0"
-LICENSE="IPL-1"
-KEYWORDS="x86"
+postfix_installed=no
 
 pkg_setup() {
 	if ! grep -q ^postdrop: /etc/group ; then
 		groupadd postdrop || die "problem adding group postdrop"
+	fi
+
+	# is there an existing postfix installation?
+	if [ -d /etc/postfix ] ; then
+		postfix_installed=yes
 	fi
 }
 
@@ -98,7 +104,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die "compile problem"	
+	emake || die "compile problem"
 }
 
 src_install () {
@@ -156,24 +162,24 @@ src_install () {
 pkg_postinst() {
 	install -d 0755 ${ROOT}/var/spool/postfix
 
-	if [ "`use sasl`" ]
-	then
-		if [ -e /usr/include/sasl.h ]
-		then
-			einfo "***************************************************************"
-			einfo "* NOTE: saslv1 and saslv2 seems to be installed. Because we   *"
-			einfo "*       don't want to break existing installations, we use    *"
-			einfo "*       saslv1. If you don't want this, unmerge saslv1 and    *"
-			einfo "*       remerge postfix.                                      *"
-			einfo "***************************************************************"
-		fi
+	if [ "${postfix_installed}" = "yes" ] ; then
+		ewarn "If you've upgraded from <postfix-1.1.8, you must update"
+		ewarn "/etc/postfix/master.cf to the latest version"
+		ewarn "(/etc/postfix/._cfg*_master.cf). Otherwise Postfix will"
+		ewarn "not work correctly."
 	fi
 
-	einfo "***************************************************************"
-	einfo "* NOTE: If config file protection is enabled and you upgraded *"
-	einfo "*       from an earlier version of postfix you must update    *"
-	einfo "*       /etc/postfix/master.cf to the latest version	     *"
-	einfo "*       (/etc/postfix/._cfg????_master.cf). Otherwise postfix *"
-	einfo "*       will not work correctly.                              *"
-	einfo "***************************************************************"
+	if [ ! -e /etc/mail/aliases.db ] ; then
+		echo
+		ewarn "You must edit /etc/mail/aliases to suit your needs"
+		ewarn "and then run /usr/bin/newaliases. Postfix will not"
+		ewarn "work correctly without it."
+	fi
+
+	if [ "`use sasl`" -a -e /usr/include/sasl.h ] ; then
+		echo
+		einfo "sasl v1 and sasl v2 seem to be installed. Because we don't"
+		einfo "want to break existing installations, we use sasl v1."
+		einfo "If you don't want this, unmerge sasl v1 and remerge postfix."
+	fi
 }
