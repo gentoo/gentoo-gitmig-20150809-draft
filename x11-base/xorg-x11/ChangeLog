@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.249 2004/12/22 16:37:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.250 2004/12/22 19:20:48 spyderous Exp $
+
+  22 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.1.901.ebuild:
+  Update freetype dep to >=media-libs/freetype-2.1.8 from
+  >=media-libs/freetype-2.1.4, so we don't use stale libs. X also has an
+  internal freetype, and 2.1.8 is where it's at in 6.8.
 
   22 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.901.ebuild:
