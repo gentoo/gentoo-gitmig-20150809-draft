@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.34.ebuild,v 1.2 2005/01/04 23:50:19 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.34.ebuild,v 1.3 2005/02/05 20:16:32 cryos Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/gnucap"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 
 DEPEND=">=sys-libs/glibc-2.1.3"
 
