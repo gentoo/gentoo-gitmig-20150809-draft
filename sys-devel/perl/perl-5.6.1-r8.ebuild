@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r8.ebuild,v 1.9 2002/12/11 13:02:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r8.ebuild,v 1.10 2002/12/12 16:57:58 mcummings Exp $
 
 IUSE="berkdb gdbm"
 
@@ -214,7 +214,7 @@ pkg_postinst() {
 #########################################
 	cd /usr/include; h2ph *.h sys/*.h
 	#This is an attempt to get MakeMaker into the perl build 
-	echo "n" | perl -MCPAN -e 'CPAN::Shell->install(ExtUtils::MakeMaker)'
+	#echo "n" | perl -MCPAN -e 'CPAN::Shell->install(ExtUtils::MakeMaker)'
 
 #########################################
 	einfo
