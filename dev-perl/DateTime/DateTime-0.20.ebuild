@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/DateTime-0.20.ebuild,v 1.2 2004/03/05 01:00:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/DateTime-0.20.ebuild,v 1.3 2004/05/07 18:49:31 gustavoz Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc"
 
 DEPEND=">=dev-perl/Params-Validate-0.72
 		dev-perl/Time-Local

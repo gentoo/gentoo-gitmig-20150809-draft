@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateTime
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.1 2004/03/04 13:34:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.2 2004/05/07 18:49:31 gustavoz Exp $
+
+  07 May 2004; Gustavo Zacarias <gustavoz@gentoo.org> DateTime-0.20.ebuild:
+  Keyworded sparc
 
 *DateTime-0.20 (04 Mar 2004)
 

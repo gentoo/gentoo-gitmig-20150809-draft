@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/DateTime-TimeZone-0.2507.ebuild,v 1.1 2004/03/04 12:42:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/DateTime-TimeZone-0.2507.ebuild,v 1.2 2004/05/07 18:48:41 gustavoz Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc"
 style="builder"
 
 DEPEND="dev-perl/module-build
