@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.77.2.ebuild,v 1.4 2004/01/08 15:27:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.77.2.ebuild,v 1.5 2004/01/10 21:29:16 vapier Exp $
 
 inherit games eutils
 
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 src_compile() {
 	export PATH="${PATH}:${T}"
 	ln -s `which nasm` ${T}/${CHOST}-nasm
+	use sdl && ln -s `which sdl-config` ${T}/${CHOST}-sdl-config
 	egamesconf \
 		`use_enable debug` \
 		`use_enable static` \
