@@ -1,0 +1,15 @@
+diff -urN bookview-3.2.ORIG/bookview/bookview.in bookview-3.2/bookview/bookview.in
+--- bookview-3.2.ORIG/bookview/bookview.in	2003-06-23 16:45:37.000000000 +0900
++++ bookview-3.2/bookview/bookview.in	2003-09-03 01:54:51.000000000 +0900
+@@ -124,6 +124,11 @@
+ # Bitmap size.
+ set bitmap_size 16
+ 
++# Read Xresource
++if { [ file readable "@sysconfdir@/X11/app-defaults/Bookview" ] } {
++    option readfile "@sysconfdir@/X11/app-defaults/Bookview"
++}
++
+ #
+ # Startup
+ #
