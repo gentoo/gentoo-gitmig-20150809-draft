@@ -295,3 +295,14 @@ diff -urN svgalib-1.9.17/utils/Makefile svgalib-1.9.17.gentoo/utils/Makefile
  
  #
  # include a dependency file if one exists
+--- svgalib-1.9.17/demos/lineart.c	2003-08-03 14:13:02.000000000 +0200
++++ svgalib-1.9.17.gentoo/demos/lineart.c	2003-08-03 14:13:09.000000000 +0200
+@@ -19,7 +19,7 @@
+   
+   if(mode == 0)
+     {
+-      printf("Usage:linp [mode mode ...]\n
++      printf("Usage:linp [mode mode ...]\n\
+               where mode is an integer.\n");
+       return;
+     }

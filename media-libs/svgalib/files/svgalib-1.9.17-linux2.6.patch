@@ -1,0 +1,881 @@
+diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/Makefile svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/Makefile
+--- svgalib-1.9.17/kernel/svgalib_helper/Makefile	2002-10-28 18:25:47.000000000 +0200
++++ svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/Makefile	2003-08-03 13:52:47.000000000 +0200
+@@ -1,42 +1,66 @@
+ include ../../Makefile.cfg
+ 
+-MODVER = $(shell grep CONFIG_MODVERSIONS $(INCLUDEDIR)/linux/autoconf.h)
++ifndef INCLUDEDIR
++INCLUDEDIR = /lib/modules/$(shell uname -r)/build/include
++endif
++
++MODVER = $(shell grep CONFIG_MODVERSIONS $(INCLUDEDIR)/linux/autoconf.h 2>/dev/null)
+ 
+ ifeq ($(MODVER),)
+ 	@echo INCLUDEDIR is not set up correctly
+ 	exit 1
+ endif
+ 
+-CFLAGS = -O2 -DLINUX -Dlinux -D__KERNEL__ -DMODULE -Wall $(DEBFLAGS) 
+-CFLAGS += -I$(INCLUDEDIR)
+-CFLAGS += -DSVGALIB_HELPER_MAJOR=$(SVGALIB_HELPER_MAJOR)
+-
+-ifeq (1,$(findstring 1,$(MODVER)))
+-	CFLAGS += -DMODVERSIONS -include $(INCLUDEDIR)/linux/modversions.h
+-endif
+-
+ # Extract version number from headers.
+-VER = $(shell awk -F\" '/REL/ {print $$2}' $(INCLUDEDIR)/linux/version.h)
++VER = $(shell awk -F\" '/REL/ {print $$2}' $(INCLUDEDIR)/linux/version.h 2>/dev/null)
+ 
+ # Use version of current running kernel
+ ifeq ($(VER),)
+ 	VER = $(shell uname -r)
+ endif
+ 
++VER_MAJOR = $(shell echo $(VER) | cut -d. -f1)
++VER_MINOR = $(shell echo $(VER) | cut -d. -f2)
++
++INCLUDES += -I$(INCLUDEDIR)
++INCLUDES += -I$(INCLUDEDIR)/asm/mach-default
++                                                                                                                            
++#CFLAGS = -O2 -DLINUX -Dlinux -D__KERNEL__ -DMODULE -Wall $(DEBFLAGS)
++CFLAGS = -O2 -DLINUX -Dlinux -D__KERNEL__ -DMODULE $(DEBFLAGS) -nostdinc -iwithprefix include
++ifeq (2,$(VER_MAJOR))
++	ifeq (6,$(VER_MINOR))
++		CFLAGS += -DKBUILD_MODNAME="svgalib_helper"
++	endif
++endif
++CFLAGS += $(INCLUDES)
++CFLAGS += -DSVGALIB_HELPER_MAJOR=$(SVGALIB_HELPER_MAJOR)
++                                                                                                                            
++ifeq (1,$(findstring 1,$(MODVER)))
++	CFLAGS += -DMODVERSIONS -include $(INCLUDEDIR)/linux/modversions.h
++endif
++
+ TARGET = svgalib_helper
+ OBJS = $(TARGET).o
++ifeq (2,$(VER_MAJOR))
++	ifeq (6,$(VER_MINOR))
++		OBJS = $(TARGET).ko
++	endif
++endif
+ SRC = main.c interrupt.c i810.c
+ 
+-all: .depend $(TARGET).o
++all: .depend $(OBJS)
+ 
+ $(TARGET).o: $(SRC:.c=.o)
+ 	$(LD) -r $^ -o $@
+ 
++$(TARGET).ko: $(TARGET).o
++	$(LD) -d -r $^ -o $@
++
+ install: device modules_install
+ 
+-modules_install: $(TARGET).o
++modules_install: $(OBJS)
+ 	mkdir -p $(TOPDIR)/lib/modules/$(VER)/misc 
+-	install -m 0644 -c $(TARGET).o $(TOPDIR)/lib/modules/$(VER)/misc
++	install -m 0644 -c $(OBJS) $(TOPDIR)/lib/modules/$(VER)/misc
+ 
+ device:
+ 	rm -f /dev/svgalib_helper* /dev/svga /dev/svga?
+@@ -47,7 +71,7 @@ device:
+ 	mknod -m 666 /dev/svga4 c $(SVGALIB_HELPER_MAJOR) 4
+ 
+ clean:
+-	rm -f *.o *~ core .depend *.bak *.orig
++	rm -f *.ko *.o *~ core .depend *.bak *.orig
+ 
+ depend .depend dep:
+ 	$(CC) $(CFLAGS) -M *.c > $@
+diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/depend svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/depend
+--- svgalib-1.9.17/kernel/svgalib_helper/depend	1970-01-01 02:00:00.000000000 +0200
++++ svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/depend	2003-08-03 13:53:27.000000000 +0200
+@@ -0,0 +1,324 @@
++i810.o: i810.c
++interrupt.o: interrupt.c \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/pci.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/mod_devicetable.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/types.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/config.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/autoconf.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/posix_types.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/stddef.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/posix_types.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/types.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/pci_ids.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/ioport.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/compiler.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/list.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/prefetch.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/processor.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/vm86.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/math_emu.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/sigcontext.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/segment.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/page.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/cpufeature.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/bitops.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/bitops.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/msr.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/system.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/kernel.h \
++  /usr/lib/gcc-lib/i686-pc-linux-gnu/3.3/include/stdarg.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/linkage.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/linkage.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/byteorder.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/byteorder/little_endian.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/byteorder/swab.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/byteorder/generic.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/bug.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/cache.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/cache.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/threads.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/errno.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/errno.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/errno.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/errno-base.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/device.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/kobject.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/sysfs.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/rwsem.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/atomic.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/rwsem.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/spinlock.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/preempt.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/thread_info.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/thread_info.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/stringify.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/spinlock.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/rwlock.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/module.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/sched.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/param.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/capability.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/timex.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/timex.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/time.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/seqlock.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/div64.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/jiffies.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/rbtree.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/semaphore.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/wait.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/ptrace.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/mmu.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/smp.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/smp.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/fixmap.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/acpi.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/apicdef.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/mpspec.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/mpspec_def.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/mach-default/mach_mpspec.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/io_apic.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/apic.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/pm.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/mach-default/mach_apicdef.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/sem.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/ipc.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/ipcbuf.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/sembuf.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/signal.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/signal.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/siginfo.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/siginfo.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/string.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/string.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/securebits.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/fs_struct.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/completion.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/pid.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/percpu.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/slab.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/gfp.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/mmzone.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/topology.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/topology.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/topology.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/kmalloc_sizes.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/percpu.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/percpu.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/param.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/resource.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/resource.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/timer.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/aio.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/workqueue.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/aio_abi.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/current.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/stat.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/stat.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/kmod.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/elf.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/elf.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/user.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/utsname.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/local.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/module.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/pci.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/mm.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/fs.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/limits.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/kdev_t.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/ioctl.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/ioctl.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/dcache.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/rcupdate.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/radix-tree.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/quota.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/dqblk_xfs.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/dqblk_v1.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/dqblk_v2.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/nfs_fs_i.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/nfs.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/sunrpc/msg_prot.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/fcntl.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/fcntl.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/err.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/pgtable.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/pgtable-2level.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/page-flags.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/scatterlist.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/io.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/vmalloc.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/pci-dma-compat.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/dma-mapping.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/dma-mapping.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/pci.h \
++  svgalib_helper.h
++main.o: main.c /lib/modules/2.6.0-test2-bk2/build/include/linux/config.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/autoconf.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/kernel.h \
++  /usr/lib/gcc-lib/i686-pc-linux-gnu/3.3/include/stdarg.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/linkage.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/linkage.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/stddef.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/types.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/posix_types.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/posix_types.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/types.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/compiler.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/byteorder.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/byteorder/little_endian.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/byteorder/swab.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/byteorder/generic.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/bug.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/module.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/sched.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/param.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/capability.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/spinlock.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/preempt.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/thread_info.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/bitops.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/bitops.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/thread_info.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/processor.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/vm86.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/math_emu.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/sigcontext.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/segment.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/page.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/cpufeature.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/msr.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/system.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/cache.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/cache.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/threads.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/stringify.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/spinlock.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/atomic.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/rwlock.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/timex.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/timex.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/time.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/seqlock.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/div64.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/jiffies.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/rbtree.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/semaphore.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/wait.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/list.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/prefetch.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/rwsem.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/rwsem.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/ptrace.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/mmu.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/smp.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/smp.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/fixmap.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/acpi.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/apicdef.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/mpspec.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/mpspec_def.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/mach-default/mach_mpspec.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/io_apic.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/apic.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/pm.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/mach-default/mach_apicdef.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/sem.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/ipc.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/ipcbuf.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/sembuf.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/signal.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/signal.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/siginfo.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/siginfo.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/string.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/string.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/securebits.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/fs_struct.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/completion.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/pid.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/percpu.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/slab.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/gfp.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/mmzone.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/topology.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/topology.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/topology.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/kmalloc_sizes.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/percpu.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/percpu.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/param.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/resource.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/resource.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/timer.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/aio.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/workqueue.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/aio_abi.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/current.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/stat.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/stat.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/kmod.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/errno.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/errno.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/errno.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/errno-base.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/elf.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/elf.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/user.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/utsname.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/local.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/module.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/fs.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/limits.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/kdev_t.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/ioctl.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/ioctl.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/dcache.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/rcupdate.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/radix-tree.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/kobject.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/sysfs.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/quota.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/dqblk_xfs.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/dqblk_v1.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/dqblk_v2.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/nfs_fs_i.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/nfs.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/sunrpc/msg_prot.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/fcntl.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/fcntl.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/err.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/proc_fs.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/ioport.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/pci.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/mod_devicetable.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/pci_ids.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/device.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/pci.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/mm.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/pgtable.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/pgtable-2level.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/page-flags.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/scatterlist.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/io.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/vmalloc.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/pci-dma-compat.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/dma-mapping.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/dma-mapping.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/pci.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/devfs_fs_kernel.h \
++  kernel25compat.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/version.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/interrupt.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/hardirq.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/irq.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/irq.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/mach-default/irq_vectors.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/hw_irq.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/profile.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/init.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/sections.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm-generic/sections.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/linux/irq_cpustat.h \
++  /lib/modules/2.6.0-test2-bk2/build/include/asm/uaccess.h \
++  svgalib_helper.h ../../src/vgaversion.h i810.h interrupt.h
+diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/kernel25compat.h svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/kernel25compat.h
+--- svgalib-1.9.17/kernel/svgalib_helper/kernel25compat.h	2002-09-10 20:20:13.000000000 +0200
++++ svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/kernel25compat.h	2003-08-03 11:39:14.000000000 +0200
+@@ -1,9 +1,35 @@
++#ifndef minor
+ #define minor(x) MINOR(x)
++#endif
++
++#ifndef KERNEL_VERSION
++# include <linux/version.h>
++#endif
++
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
++
++# ifdef KERNEL_2_6
++#  undef KERNEL_2_6
++# endif
+ 
+-#if LINUX_VERSION_CODE < KERNEL_VERSION(2,5,0)
+ #define my_remap_page_range(vma, start, ofs, len, prot) remap_page_range(start,ofs,len,prot)
++
++typedef void irqreturn_t;
++
+ #else
++
++# ifndef KERNEL_2_6
++#  define KERNEL_2_6
++# endif
++
+ #define my_remap_page_range(vma, start, ofs, len, prot) remap_page_range(vma,start,ofs,len,prot)
++
++#include <linux/interrupt.h>
++
++# ifdef CONFIG_DEVFS_FS
++typedef void* devfs_handle_t;
++# endif
++
+ #endif
+ 
+ #ifndef _LINUX_DEVFS_FS_KERNEL_H
+diff -urpwN svgalib-1.9.17/kernel/svgalib_helper/main.c svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/main.c
+--- svgalib-1.9.17/kernel/svgalib_helper/main.c	2002-09-10 20:20:23.000000000 +0200
++++ svgalib-1.9.17.kernel2.6/kernel/svgalib_helper/main.c	2003-08-03 13:29:24.000000000 +0200
+@@ -1,6 +1,12 @@
+-#include <linux/module.h>
++#include <linux/config.h>
++
++#if defined (CONFIG_MODVERSIONS) && !defined (MODVERSIONS)
++# define MODVERSIONS
++#endif
+ 
+ #include <linux/kernel.h> /* printk() */
++#include <linux/module.h>
++
+ #include <linux/slab.h> /* kmalloc() */
+ #include <linux/fs.h>     /* everything... */
+ #include <linux/errno.h>  /* error codes */
+@@ -39,7 +45,7 @@ static struct sh_pci_device *sh_pci_devs
+ 
+ static int irqs[MAX_NR_DEVICES];
+ 
+-#ifdef CONFIG_DEVFS_FS
++#if (defined CONFIG_DEVFS_FS) && (!defined KERNEL_2_6)
+ static devfs_handle_t devfs_handle;
+ #endif
+ 
+@@ -47,11 +53,11 @@ static int check_io_range(port,device) {
+     return 1;
+ }
+ 
+-static struct pci_dev *get_pci_dev(int pcipos, int minor) {
++static struct pci_dev *get_pci_dev(int pcipos, int _minor) {
+     
+-    if(minor>=num_devices) return NULL;
+-    if(minor>0) {
+-        return sh_pci_devs[minor]->dev;
++    if(_minor>=num_devices) return NULL;
++    if(_minor>0) {
++        return sh_pci_devs[_minor]->dev;
+     } else {
+         if(pcipos>0 && pcipos<num_devices)
+             return sh_pci_devs[pcipos]->dev;
+@@ -60,11 +66,11 @@ static struct pci_dev *get_pci_dev(int p
+ 
+ }
+ 
+-static int get_dev(int pcipos, int minor) {
++static int get_dev(int pcipos, int _minor) {
+     
+-    if(minor>=num_devices) return 0;
+-    if(minor>0) {
+-        return minor;
++    if(_minor>=num_devices) return 0;
++    if(_minor>0) {
++        return _minor;
+     } else {
+         int i;
+         int b, d;
+@@ -81,20 +87,33 @@ static int get_dev(int pcipos, int minor
+ static volatile int vsync=0;
+ static wait_queue_head_t vsync_wait;
+ 
+-static void vsync_interrupt(int irq, void *dev_id, struct pt_regs *regs)
++static irqreturn_t vsync_interrupt(int irq, void *dev_id, struct pt_regs *regs)
+ {
+     struct sh_pci_device *dev = (struct sh_pci_device *)dev_id;
+ 
+     if((char *)dev==sdev_id) {
+-        if(!vga_test_vsync(dev))return;    
++        if(!vga_test_vsync(dev))
++#ifndef KERNEL_2_6
++            return;
++#else
++            return IRQ_NONE;
++#endif
+         vga_ack_vsync(dev);
+     } else {
+-        if(!dev->test_vsync(dev)) return;
++        if(!dev->test_vsync(dev))
++#ifndef KERNEL_2_6
++            return;
++#else
++            return IRQ_NONE;
++#endif
+         dev->ack_vsync(dev);
+     }
+ 
+     vsync=0;
+     wake_up_interruptible(&vsync_wait);
++#ifdef KERNEL_2_6
++    return IRQ_HANDLED;
++#endif
+ }
+ 
+ 
+@@ -103,10 +122,10 @@ static int svgalib_helper_ioctl( struct 
+ 
+     io_t iov;
+     pcic_t pciv;
+-    int minor = minor(inode->i_rdev);
++    int _minor = minor(inode->i_rdev);
+     struct pci_dev *pdev;
+     io_string_t iostr;
+-    int i, ret;
++    int i = 0, ret;
+     u8 pb;
+     u16 pw;
+     u32 pl;
+@@ -126,7 +145,7 @@ static int svgalib_helper_ioctl( struct 
+             if (iostr.length>4096) return -EINVAL;
+ 	    if ( (outb_str = kmalloc(iostr.length, GFP_KERNEL )) == NULL ) return -ENOMEM;
+ 	    copy_from_user(outb_str,iostr.string,iostr.length);
+-	    if(check_io_range(iostr.port,minor))
++        if(check_io_range(iostr.port,_minor))
+ 	        for(i=0; i<iostr.length; i++)
+                     outb(outb_str[i], iostr.port);
+                 else ret = -EPERM;
+@@ -135,28 +154,28 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGALIB_HELPER_IOCSOUTB):
+            copy_from_user(&iov,(char *)arg,sizeof(iov));
+-           if(check_io_range(iov.port,minor))
++           if(check_io_range(iov.port,_minor))
+                outb(iov.val,iov.port);
+                else ret = -EPERM;
+         break;
+ 
+         case _IOC_NR(SVGALIB_HELPER_IOCSOUTW):
+            copy_from_user(&iov,(char *)arg,sizeof(iov));
+-           if(check_io_range(iov.port,minor))
++           if(check_io_range(iov.port,_minor))
+                outw(iov.val,iov.port);
+                else ret = -EPERM;
+         break;
+ 
+         case _IOC_NR(SVGALIB_HELPER_IOCSOUTL):
+            copy_from_user(&iov,(char *)arg,sizeof(iov));
+-           if(check_io_range(iov.port,minor))
++           if(check_io_range(iov.port,_minor))
+                outl(iov.val,iov.port);
+                else ret = -EPERM;
+         break;
+ 
+         case _IOC_NR(SVGALIB_HELPER_IOCGINB):
+            copy_from_user(&iov,(char *)arg,sizeof(iov));
+-           if(check_io_range(iov.port,minor))
++           if(check_io_range(iov.port,_minor))
+                iov.val=inb(iov.port);
+                else ret = -EPERM;
+            copy_to_user((char *)arg,&iov,sizeof(iov));
+@@ -164,7 +183,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGALIB_HELPER_IOCGINW):
+            copy_from_user(&iov,(char *)arg,sizeof(iov));
+-           if(check_io_range(iov.port,minor))
++           if(check_io_range(iov.port,_minor))
+                iov.val=inw(iov.port);
+                else ret = -EPERM;
+            copy_to_user((char *)arg,&iov,sizeof(iov));
+@@ -172,7 +191,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGALIB_HELPER_IOCGINL):
+            copy_from_user(&iov,(char *)arg,sizeof(iov));
+-           if(check_io_range(iov.port,minor))
++           if(check_io_range(iov.port,_minor))
+                iov.val=inl(iov.port);
+                else ret = -EPERM;
+            copy_to_user((char *)arg,&iov,sizeof(iov));
+@@ -213,7 +232,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGALIB_HELPER_IOCGPCIINB):
+             copy_from_user(&pciv,(char *)arg,sizeof(pciv));
+-            pdev = get_pci_dev(pciv.pcipos, minor);
++            pdev = get_pci_dev(pciv.pcipos, _minor);
+             if(!pdev) return -EINVAL;
+             pci_read_config_byte(pdev, pciv.address, &pb);
+             pciv.val=pb;
+@@ -222,7 +241,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGALIB_HELPER_IOCGPCIINW):
+             copy_from_user(&pciv,(char *)arg,sizeof(pciv));
+-            pdev = get_pci_dev(pciv.pcipos, minor);
++            pdev = get_pci_dev(pciv.pcipos, _minor);
+             if(!pdev) return -EINVAL;
+             pci_read_config_word(pdev, pciv.address, &pw);
+             pciv.val=pw;
+@@ -231,7 +250,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGALIB_HELPER_IOCGPCIINL):
+             copy_from_user(&pciv,(char *)arg,sizeof(pciv));
+-            pdev = get_pci_dev(pciv.pcipos, minor);
++            pdev = get_pci_dev(pciv.pcipos, _minor);
+             if(!pdev) return -EINVAL;
+             pci_read_config_dword(pdev, pciv.address, &pl);
+             pciv.val=pl;
+@@ -240,7 +259,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGALIB_HELPER_IOCGPCIAPLEN):
+             copy_from_user(&pciv,(char *)arg,sizeof(pciv));
+-            i = get_dev(pciv.pcipos, minor);
++            i = get_dev(pciv.pcipos, _minor);
+             if((i==0) | (pciv.address>5)) return -EINVAL;
+             pciv.val=sh_pci_devs[i]->len[pciv.address];
+             copy_to_user((char *)arg,&pciv,sizeof(pciv));
+@@ -248,7 +267,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGALIB_HELPER_IOCSPCIOUTB):
+             copy_from_user(&pciv,(char *)arg,sizeof(pciv));
+-            pdev = get_pci_dev(pciv.pcipos, minor);
++            pdev = get_pci_dev(pciv.pcipos, _minor);
+             if(!pdev) return -EINVAL;
+             pb=pciv.val;
+             pci_write_config_byte(pdev, pciv.address, pb);
+@@ -256,7 +275,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGALIB_HELPER_IOCSPCIOUTW):
+             copy_from_user(&pciv,(char *)arg,sizeof(pciv));
+-            pdev = get_pci_dev(pciv.pcipos, minor);
++            pdev = get_pci_dev(pciv.pcipos, _minor);
+             if(!pdev) return -EINVAL;
+             pw=pciv.val;
+             pci_write_config_word(pdev, pciv.address, pw);
+@@ -264,7 +283,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGALIB_HELPER_IOCSPCIOUTL):
+             copy_from_user(&pciv,(char *)arg,sizeof(pciv));
+-            pdev = get_pci_dev(pciv.pcipos, minor);
++            pdev = get_pci_dev(pciv.pcipos, _minor);
+             if(!pdev) return -EINVAL;
+             pl=pciv.val;
+             pci_write_config_dword(pdev, pciv.address, pl);
+@@ -284,17 +303,17 @@ static int svgalib_helper_ioctl( struct 
+         case _IOC_NR(SVGALIB_HELPER_IOCWAITRETRACE):
+ 
+             /* Workaround for nvidia cards, which are not vga compatible */
+-            if(!minor && num_devices==2) minor=1;
++            if(!_minor && num_devices==2) _minor=1;
+ 
+-            if(minor) {
+-                i=sh_pci_devs[minor]->dev->irq;
+-                dev_id = sh_pci_devs[minor];
++            if(_minor) {
++                i=sh_pci_devs[_minor]->dev->irq;
++                dev_id = sh_pci_devs[_minor];
+                 if(i==0 || i==-1 || i==255) return -EINVAL;
+             } else dev_id = sdev_id;
+                         
+             vsync=1;
+ 
+-            if(minor) {
++            if(_minor) {
+                 request_irq(i, vsync_interrupt, SA_SHIRQ, "svgalib_helper", dev_id);
+             } else {
+                 i=0;
+@@ -302,16 +321,16 @@ static int svgalib_helper_ioctl( struct 
+                     request_irq(irqs[i++], vsync_interrupt, SA_SHIRQ, "svgalib_helper", dev_id);
+             }
+ 
+-            if(minor) {
+-                sh_pci_devs[minor]->enable_vsync(sh_pci_devs[minor]);
++            if(_minor) {
++                sh_pci_devs[_minor]->enable_vsync(sh_pci_devs[_minor]);
+             } else {
+-                vga_enable_vsync(sh_pci_devs[minor]);
++                vga_enable_vsync(sh_pci_devs[_minor]);
+             }
+ 
+             interruptible_sleep_on(&vsync_wait);
+             
+-            if(minor) {
+-                if(vsync) sh_pci_devs[minor]->ack_vsync(dev_id);
++            if(_minor) {
++                if(vsync) sh_pci_devs[_minor]->ack_vsync(dev_id);
+                 free_irq(i, dev_id);
+             } else {
+                 i=0;
+@@ -331,17 +350,25 @@ static int svgalib_helper_ioctl( struct 
+ 
+ static int svgalib_helper_open( struct inode *inode, struct file * filp) {
+ 
+-   int minor = minor(inode->i_rdev);
++   int _minor = minor(inode->i_rdev);
+    
+-   if(minor>=num_devices) return -ENODEV;
++   if(_minor>=num_devices) return -ENODEV;
+    
++#ifndef KERNEL_2_6
+    MOD_INC_USE_COUNT;
++#else
++   try_module_get(THIS_MODULE);
++#endif
+    
+    return 0;
+ }
+ 
+ static int svgalib_helper_release( struct inode *inode, struct file *filp) {
++#ifndef KERNEL_2_6
+    MOD_DEC_USE_COUNT;
++#else
++   module_put(THIS_MODULE);
++#endif
+    
+    return 0;
+ }
+@@ -399,14 +426,14 @@ int check_mem(int card, unsigned long st
+ static int svgalib_helper_mmap(struct file *filp, struct vm_area_struct *vma) {
+    unsigned long start=vma->vm_start;
+    unsigned long end=vma->vm_end;
+-   unsigned long minor = minor(filp->f_dentry->d_inode->i_rdev);
++   unsigned long _minor = minor(filp->f_dentry->d_inode->i_rdev);
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,3,0)
+    unsigned long ofs=vma->vm_pgoff*PAGE_SIZE;
+ #else
+    unsigned long ofs=vma->vm_offset;
+ #endif
+ 
+-   if(check_mem(minor, ofs, end-start)) return -EPERM;
++   if(check_mem(_minor, ofs, end-start)) return -EPERM;
+    if(remap_cache(vma, ofs, start, end)) return -EAGAIN;
+    return 0;
+ }
+@@ -432,14 +459,20 @@ int init_module(void)
+     int result, i, j;
+     struct pci_dev *dev=NULL;
+ #ifdef CONFIG_DEVFS_FS
++# ifndef KERNEL_2_6
+     devfs_handle_t slave_handle;
+ #endif
++#endif
+     /*
+      * Register your major, and accept a dynamic number
+      */
+      
+     printk(KERN_INFO "svgalib_helper: Initializing, version %s\n", versionstr);
++#ifndef KERNEL_2_6
+     result = devfs_register_chrdev(SVGALIB_HELPER_MAJOR, "svgalib_helper", &svgalib_helper_fops);
++#else
++    result = register_chrdev(SVGALIB_HELPER_MAJOR, "svgalib_helper", &svgalib_helper_fops);
++#endif
+     if (result < 0) {
+         printk(KERN_WARNING "svgalib_helper: can't get major %d\n",SVGALIB_HELPER_MAJOR);
+         return result;
+@@ -453,15 +486,26 @@ int init_module(void)
+     for(i=1;i<MAX_NR_DEVICES;i++) sh_pci_devs[i]=NULL;
+ 
+ #ifdef CONFIG_DEVFS_FS
++# ifndef KERNEL_2_6
+     devfs_handle = devfs_mk_dir ( NULL, "svga_helper", NULL );
+     devfs_register_series( devfs_handle,
+                "%u", 8, DEVFS_FL_DEFAULT, SVGALIB_HELPER_MAJOR, 0,
+                        S_IFCHR |  S_IRUGO | S_IRWXU, &svgalib_helper_fops, NULL ) ;
+     devfs_mk_symlink( NULL, "svga", 0, "svga_helper/0", &slave_handle, NULL );
+     devfs_auto_unregister( devfs_handle, slave_handle );
++# else
++    devfs_mk_dir ("svga_helper");
++    for (i = 0; i < 8; i++) {
++        devfs_mk_cdev(MKDEV(SVGALIB_HELPER_MAJOR, i),
++                S_IFCHR |  S_IRUGO | S_IRWXU, "svga_helper/%d", i);
++    }
++    devfs_mk_symlink("svga", "svga_helper/0");
++# endif
+ #endif /* devfsd support */
+ 
++#ifndef KERNEL_2_6
+     if(pci_present()) {
++#endif
+         while((dev=pci_find_class(PCI_CLASS_DISPLAY_VGA<<8,dev)) && 
+               (num_devices<=MAX_NR_DEVICES)) {
+             if((sh_pci_devs[num_devices]=kmalloc(sizeof(struct sh_pci_device),GFP_KERNEL))==NULL) {
+@@ -496,7 +540,9 @@ int init_module(void)
+             vga_init_vsync(sh_pci_devs[num_devices]);
+             num_devices++;
+         }
++#ifndef KERNEL_2_6
+     }
++#endif
+     
+     j=0;
+     for(i=1; i<num_devices;i++) {
+@@ -512,14 +558,20 @@ int init_module(void)
+ 
+     init_waitqueue_head(&vsync_wait);
+ 
++#ifndef KERNEL_2_6
+     EXPORT_NO_SYMBOLS;
++#endif
+ 
+     return 0; /* succeed */
+ 
+     nomem_error:
+     for(i=0;i<MAX_NR_DEVICES;i++) 
+         if(sh_pci_devs[i])kfree(sh_pci_devs[i]);     
++#ifndef KERNEL_2_6
+     devfs_unregister_chrdev(SVGALIB_HELPER_MAJOR, "svgalib_helper");
++#else
++    unregister_chrdev(SVGALIB_HELPER_MAJOR, "svgalib_helper");
++#endif
+     return result;
+ }
+ 
+@@ -532,9 +584,20 @@ void cleanup_module(void)
+         }
+      
+ #ifdef CONFIG_DEVFS_FS
++# ifndef KERNEL_2_6
+     devfs_unregister(devfs_handle);
++# else
++    for (i = 0; i < 8; i++)
++        devfs_remove("svga_helper/%d", i);
++    devfs_remove("svga_helper");
++    devfs_remove("svga");
+ #endif
++#endif
++#ifndef KERNEL_2_6
+     devfs_unregister_chrdev(SVGALIB_HELPER_MAJOR, "svgalib_helper");
++#else
++    unregister_chrdev(SVGALIB_HELPER_MAJOR, "svgalib_helper");
++#endif
+ }
+ 
+ #ifdef MODULE_LICENSE
