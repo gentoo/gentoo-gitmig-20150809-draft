@@ -1,11 +1,15 @@
 # ChangeLog for sys-apps/slocate
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.29 2004/01/06 16:16:43 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.30 2004/01/09 16:19:19 agriffis Exp $
+
+  09 Jan 2004; Aron Griffis <agriffis@gentoo.org> slocate-2.7-r4.ebuild:
+  stable on x86, alpha, ia64
 
 *slocate-2.7-r4 (06 Jan 2004)
 
   06 Jan 2004; Aron Griffis <agriffis@gentoo.org> slocate-2.7-r4.ebuild:
-  Bump revision to carry in config file change below (which is a run-time change)
+  Bump revision to carry in config file change below (which is a run-time
+  change)
 
   06 Jan 2004; Aron Griffis <agriffis@gentoo.org> files/updatedb.conf:
   Add supermount to the list of pruned filesystems
@@ -34,7 +38,8 @@
   Mark stable on alpha
 
   06 May 2003; Guy Martin <gmsoft@gentoo.org> slocate-2.7-r2.ebuild :
-  Added sys-apps/shadow to DEPEND since pkg_postinst() use groupmod and groupadd.
+  Added sys-apps/shadow to DEPEND since pkg_postinst() use groupmod and
+  groupadd.
 
   19 Apr 2003; Brandon Low <lostlogic@gentoo.org> slocate-2.7-r2.ebuild:
   Make the group existance checking smarter
