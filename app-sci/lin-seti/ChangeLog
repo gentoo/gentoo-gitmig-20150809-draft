@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/lin-seti
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/ChangeLog,v 1.19 2004/08/14 15:02:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/ChangeLog,v 1.20 2004/09/18 16:53:16 weeve Exp $
+
+  18 Sep 2004; Jason Wever <weeve@gentoo.org> lin-seti-0.8.2.ebuild:
+  Stable on sparc.
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Corrected metadata.xml to match DTD.
