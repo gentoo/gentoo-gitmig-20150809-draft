@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/cedega-4.0.1.ebuild,v 1.7 2004/10/24 05:46:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/cedega-4.0.1.ebuild,v 1.8 2004/10/26 03:22:58 vapier Exp $
 
 MY_P="cedega_${PV}-1.i386"
 DESCRIPTION="Cedega replaces WineX, a distribution of Wine with enhanced DirectX for gaming"
@@ -17,9 +17,7 @@ RDEPEND="virtual/x11
 	opengl? ( virtual/opengl )
 	>=sys-libs/ncurses-5.2
 	cups? ( net-print/cups )
-	>=media-libs/freetype-2.0.0
-	!app-emulation/winex
-	!app-emulation/winex-transgaming"
+	>=media-libs/freetype-2.0.0"
 
 pkg_nofetch() {
 	einfo "Please download the appropriate Cedega archive (${MY_P}.tgz)"
