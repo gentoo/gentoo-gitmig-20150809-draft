@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.156 2004/05/22 20:08:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.157 2004/05/24 06:40:45 phosphan Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -173,6 +173,7 @@ static - !!do not set this during bootstrap!! Causes things to be statically lin
 sqlite - Adds support for sqlite - embedded sql database
 svg - Adds support for SVG
 svga - Adds support for SVGAlib (graphics library)
+szip - Use the szip compression library
 tcltk - Support for Tcl and/or Tk
 tcpd - Adds support for TCP wrappers
 tetex - Adds support for teTeX
