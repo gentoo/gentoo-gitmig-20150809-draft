@@ -54,3 +54,5 @@ nas
 
 hal
 howl
+
+lirc

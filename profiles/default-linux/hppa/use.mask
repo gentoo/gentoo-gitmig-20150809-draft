@@ -113,3 +113,5 @@ mzscheme
 bmp
 
 freetts
+
+lirc
