@@ -1,6 +1,17 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.4 2002/04/30 11:18:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.5 2002/05/01 13:47:51 seemant Exp $
+
+*mgetty-1.1.26-r4 (1 May 2002)
+
+  1 May 2002; Seemant Kulleen <seemant@gentoo.org> mgetty-1.1.26-r4.ebuild
+  files/digest-mgetty-1.1.26-r4 :
+
+  Changed location defined for new_fax from /usr/local/lib/blah to
+  /etc/mgetty+sendfax.  This should close out bug #2157 reported by
+  keith@kbird.net (Kbird)
+
+*mgetty-1.1.26-r3 (30 Apr 2002)
 
   30 Apr 2002; Seemant Kulleen <seemant@gentoo.org> mgetty-1.1.26-r3.ebuild :
 
