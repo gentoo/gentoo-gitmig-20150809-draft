@@ -1,8 +1,13 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.126 2003/04/18 12:09:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.127 2003/04/19 12:56:42 seemant Exp $
 
 *xfree-4.3.0-r2 (08 Apr 2003)
+
+  19 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
+  xfree-4.3.0-r2.ebuild:
+  Updated the patch tarball - this time to 1.1.1 -- this contains two more DRI
+  patches for radeon -- one is Mesa, the other is a reinit patch
 
   15 Apr 2003; Seemant Kulleen <seemant@gentoo.org> xfree-4.3.0-r2.ebuild:
   changed default to core (black) pointer instead of whiteglass, at vlado's
