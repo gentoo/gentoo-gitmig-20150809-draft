@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/gmt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/ChangeLog,v 1.9 2004/06/24 22:01:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/ChangeLog,v 1.10 2004/08/07 21:18:32 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> gmt-3.4.3.ebuild,
+  gmt-3.4.4-r1.ebuild:
+  Typo in DESCRIPTION: Powerfull -> Powerful. Bug 59717.
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> gmt-3.4.3.ebuild,
   gmt-3.4.4-r1.ebuild:

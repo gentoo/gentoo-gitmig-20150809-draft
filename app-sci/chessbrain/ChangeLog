@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/chessbrain
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/ChangeLog,v 1.8 2004/07/28 03:34:18 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/ChangeLog,v 1.9 2004/08/07 21:16:40 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> chessbrain-20314.ebuild:
+  Typo in DESCRIPTION: distibuted -> distributed. Bug 59717.
 
   27 Jul 2004; Olivier Fisette <ribosome@gentoo.org> files/cb-conf.d:
   Changed erroneous reference to the setiathome project.

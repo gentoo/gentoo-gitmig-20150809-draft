@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/gmt-3.4.3.ebuild,v 1.6 2004/06/24 22:01:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/gmt-3.4.3.ebuild,v 1.7 2004/08/07 21:18:32 slarti Exp $
 
-DESCRIPTION="Powerfull map generator"
+DESCRIPTION="Powerful map generator"
 HOMEPAGE="http://gmt.soest.hawaii.edu/"
 SRC_URI="ftp://gmt.soest.hawaii.edu/pub/gmt/GMT${PV}_progs.tar.bz2
 	ftp://gmt.soest.hawaii.edu/pub/gmt/GMT_share.tar.bz2

@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tclspice/tclspice-0.2.14.ebuild,v 1.7 2004/06/24 22:19:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tclspice/tclspice-0.2.14.ebuild,v 1.8 2004/08/07 21:25:16 slarti Exp $
 
 inherit eutils
 
-DESCRIPTION="Spice circuit simulator with TCL scipting language and GUI"
+DESCRIPTION="Spice circuit simulator with TCL scripting language and GUI"
 HOMEPAGE="http://tclspice.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tclspice/${P}.tar.gz
 	 readline? ( http://www.brorson.com/gEDA/ngspice/${P}.sdb.diff )"

@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/tclspice
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tclspice/ChangeLog,v 1.8 2004/06/25 23:05:32 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tclspice/ChangeLog,v 1.9 2004/08/07 21:25:16 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> tclspice-0.2.14.ebuild,
+  tclspice-0.2.15.ebuild, tclspice-0.2.17.ebuild:
+  Typo in DESCRIPTION: scipting -> scripting. Bug 59717.
 
 *tclspice-0.2.17 (26 Jun 2004)
 
