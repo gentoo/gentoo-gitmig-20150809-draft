@@ -1,8 +1,11 @@
 # ChangeLog for app-gnustep/easydiff
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/easydiff/ChangeLog,v 1.1 2003/07/15 08:09:24 raker Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/easydiff/ChangeLog,v 1.2 2003/07/16 16:29:30 brain Exp $
+ 
 *easydiff-0.1 (15 Jul 2003)
+  
+  16 Jul 2003; Michele Balistreri <brain@gentoo.org> easydiff-0.1.ebuild:
+  Changing license to GPL-2 as "GPL" doesnt exist
 
   15 Jul 2003; Nick Hadaway <raker@gentoo.org> easydiff-0.1.ebuild:
   New ebuild.
