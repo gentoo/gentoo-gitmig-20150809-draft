@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mpeg-lib/mpeg-lib-1.3.1-r1.ebuild,v 1.9 2002/08/14 13:08:10 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mpeg-lib/mpeg-lib-1.3.1-r1.ebuild,v 1.10 2002/09/21 01:59:26 vapier Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A lib for MPEG-1 video"
 SRC_URI="ftp://ftp.mni.mcgill.ca/pub/mpeg/${MY_P}.tar.gz"
-HOMEPAGE="http://"
+HOMEPAGE="http://starship.python.net/~gward/mpeglib/"
 
 DEPEND="virtual/glibc"
 
