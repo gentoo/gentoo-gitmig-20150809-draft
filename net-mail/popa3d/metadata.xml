@@ -6,6 +6,10 @@
     <email>port001@gentoo.org</email>
     <name>Ian Leitch</name>
 </maintainer>
+<maintainer>
+	<email>hhg@gentoo.org</email>
+	<name>Hallgrimur H. Gunnarsson</name>
+</maintainer>
 <longdescription>
     A security oriented POP3 server.
 </longdescription>
