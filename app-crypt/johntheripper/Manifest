@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f646829a190d65b98825367eca8765be ChangeLog 3774
-MD5 f701def7e0e56fd85fadf6fda7af37eb johntheripper-1.6-r1.ebuild 2054
-MD5 8ff73c689907265e2a0733c6b52e3b55 johntheripper-1.6.ebuild 1308
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 2120884f94af6c9231a39c388c0a3a16 johntheripper-1.6-r3.ebuild 2600
+MD5 0d6d4c0350fc9c755eb97bd83c28e6cf johntheripper-1.6-r1.ebuild 2088
 MD5 f1c7cc5a000d4ad21244036c3322e062 johntheripper-1.6.37-r1.ebuild 3123
-MD5 2a2c77e0b8b4692a9e20de4d68983071 files/digest-johntheripper-1.6 123
+MD5 ea7f174532ccb1d084d588767401dfdc johntheripper-1.6-r3.ebuild 2629
+MD5 21db1d2955c07704e9dbcca4ab1b4a17 johntheripper-1.6.ebuild 1326
+MD5 a52b9a74d07b04ff2fd058633f58e3b1 ChangeLog 3966
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 d2a0df18590c71836e4c423af635353f files/digest-johntheripper-1.6-r1 456
-MD5 647f92814e453cb358ef2d0df669f026 files/john-ntlm.skey.patch 1168
 MD5 c44028343f13bf0e4ff431cca80988d9 files/digest-johntheripper-1.6-r3 126
+MD5 647f92814e453cb358ef2d0df669f026 files/john-ntlm.skey.patch 1168
 MD5 1dd4c27265865a55a86ed4dd274b42a4 files/digest-johntheripper-1.6.37-r1 135
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3zzUHTu7gpaalycRAi8lAJ41kPr+PPTzB0GLp7utRMHYl4+nSACbBA7V
-F48vW0lfsqHxvYtJbJ1bxG0=
-=a/gW
------END PGP SIGNATURE-----
+MD5 2a2c77e0b8b4692a9e20de4d68983071 files/digest-johntheripper-1.6 123
