@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.4.1.1.ebuild,v 1.5 2004/01/29 04:58:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.4.1.1.ebuild,v 1.6 2004/01/30 05:49:32 drobbins Exp $
 
 inherit gnome2 eutils
 
@@ -25,6 +25,7 @@ RDEPEND=">=x11-libs/gtk+-2.1.2
 # remove in 2.4.1 release.
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.7.2
+	>=sys-devel/autoconf-2.58
 	>=dev-util/intltool-0.22
 	>=dev-util/pkgconfig-0.12.0
 	>=sys-apps/sed-4"
