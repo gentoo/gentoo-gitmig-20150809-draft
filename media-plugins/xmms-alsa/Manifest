@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 7a90ac31b514a801c1c7bc11244347cc xmms-alsa-1.2.10.ebuild 308
-MD5 1838b33ac2238206e4544e955e6dc6fd xmms-alsa-1.2.10-r1.ebuild 349
-MD5 8885f814f4df55862d59f9f89654ec09 ChangeLog 343
+MD5 05406880488e4eab7b4c6f100b01bba4 xmms-alsa-1.2.10.ebuild 468
+MD5 88b122a3f7040ae3dac53e0b9ed99b97 xmms-alsa-1.2.10-r1.ebuild 490
+MD5 029d52d36e1fb80ff83a0a6d1af9d986 ChangeLog 442
 MD5 af2d409c36e9f3caee63715699f1ce44 files/digest-xmms-alsa-1.2.10 142
 MD5 ee4c50bc643c29df08e03dffa42613b8 files/digest-xmms-alsa-1.2.10-r1 227
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCDXKaArHZZzCEUG0RAiv8AJ420wjbJUuaRbsaeEW4yGYfjjMehQCeMNvz
+YuxSoHX6uK1KoH7l4/YFQVg=
+=R2SC
+-----END PGP SIGNATURE-----
