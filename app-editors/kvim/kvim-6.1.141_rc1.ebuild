@@ -1,6 +1,7 @@
 # Copyright 2002 Thomas Capricelli <orzel@freehackers.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.1.141_rc1.ebuild,v 1.3 2002/10/04 04:09:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.1.141_rc1.ebuild,v 1.4 2002/10/17 13:17:10 vapier Exp $
+
 inherit kde-base
 need-kde 3
 
@@ -16,16 +17,13 @@ PATCHES="$FILESDIR/${P}-gcc2fix.patch"
 myconf="$myconf --enable-gui=kde"
 
 src_compile() {
-
-    kde_src_compile myconf configure
-    cd $S
-    # emake does not work
-    make || die 
-
+	kde_src_compile myconf configure
+	cd $S
+	# emake does not work
+	make || die 
 }
 
-src_install () {
-    kde_src_install
-    dodoc BUGS README.txt README_src.txt TODO kvim.lsm IDEAS README.kvim README_lang.txt README_unix.txt
-
+src_install() {
+	kde_src_install
+	dodoc BUGS README.txt README_src.txt TODO kvim.lsm IDEAS README.kvim README_lang.txt README_unix.txt
 }
