@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/ant
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ant/ChangeLog,v 1.4 2004/06/24 22:59:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ant/ChangeLog,v 1.5 2004/09/06 22:43:07 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> ant-0.5.3.ebuild:
+  Stable on x86, sparc
 
   14 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> ant-0.5.3.ebuild:
   Marked ~amd64.
