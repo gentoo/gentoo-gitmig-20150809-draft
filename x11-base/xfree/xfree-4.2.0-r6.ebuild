@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r6.ebuild,v 1.3 2002/02/17 18:30:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r6.ebuild,v 1.4 2002/02/23 15:47:34 azarah Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -15,7 +15,9 @@ SRC_URI="$SRC_PATH0/X${MY_V}src-1.tgz
 	 $SRC_PATH1/X${MY_V}src-1.tgz
 	 $SRC_PATH1/X${MY_V}src-2.tgz
 	 $SRC_PATH1/X${MY_V}src-3.tgz
+	 ftp://ftp.xfree86.org/pub/XFree86/4.2.0/fixes/4.2.0-xlib-i18n-module.patch
 	 http://www.ibiblio.org/gentoo/gentoo-sources/truetype.tar.gz"
+# NOTE:  4.2.0-xlib-i18n-module.patch is ONLY for XFree86 4.2.0
 
 HOMEPAGE="http://www.xfree.org"
 
@@ -34,6 +36,11 @@ PROVIDE="virtual/x11
 src_unpack () {
 
 	unpack X${MY_V}src-{1,2,3}.tgz
+
+	# resolve bug #794
+	# NOTE:  4.2.0-xlib-i18n-module.patch is ONLY for XFree86 4.2.0
+	cd ${WORKDIR}
+	patch -p0 < ${DISTDIR}/4.2.0-xlib-i18n-module.patch || die
 	
 	cd ${S}
 	cp ${FILESDIR}/${PVR}/site.def config/cf/host.def

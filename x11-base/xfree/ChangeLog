@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.2 2002/02/23 15:47:34 azarah Exp $
+
+*xfree-4.2.0-r6 (24 Feb 2002)
+
+  24 Feb 2002; M.Schlemmer <azarah@gentoo.org> xfree-4.2.0-r6.ebuild, and co :
+
+  Lots of updates, started before the ChangeLog, so not sure of them all, but
+  the major ones is here:  Added Voodoo3/4/5 support, and fixed the locale
+  bug #794.
 
 *xfree-4.2.0-r5 (1 Feb 2002)
 
