@@ -7,6 +7,11 @@
 ECLASS=ebook
 INHERITED="$INHERITED $ECLASS"
 HOMEPAGE="http://lidn.sourceforge.net"
+
+SLOT="0"
+LICENSE="OPL"
+KEYWORDS="x86"
+
 # ebook eclass user guide:
 # -vars
 #
@@ -81,6 +86,3 @@ ebook_src_install() {
 
 EXPORT_FUNCTIONS src_unpack src_install
 
-SLOT="0"
-LICENSE="OPL"
-KEYWORDS="x86"
