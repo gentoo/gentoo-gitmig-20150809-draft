@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl-pipeline/bioperl-pipeline-0.1.ebuild,v 1.5 2004/06/24 21:52:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl-pipeline/bioperl-pipeline-0.1.ebuild,v 1.6 2004/08/03 11:48:24 dholm Exp $
 
 inherit perl-module
 CATEGORY="app-sci"
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/$P.tar.gz"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 RDEPEND="

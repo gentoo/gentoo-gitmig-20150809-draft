@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/bioperl-pipeline
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl-pipeline/ChangeLog,v 1.4 2004/06/24 21:52:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl-pipeline/ChangeLog,v 1.5 2004/08/03 11:48:24 dholm Exp $
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> bioperl-pipeline-0.1.ebuild:
+  Added to ~ppc.
 
   22 Mar 2004; Patrick Kursawe <phosphan@gentoo.org>
   bioperl-pipeline-0.1.ebuild:

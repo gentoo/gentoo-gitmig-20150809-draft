@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/generic-genome-browser/generic-genome-browser-1.58.ebuild,v 1.3 2004/06/24 22:00:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/generic-genome-browser/generic-genome-browser-1.58.ebuild,v 1.4 2004/08/03 11:47:17 dholm Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/gmod/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="mysql gd"
 
 S="${WORKDIR}/${MY_P}"
