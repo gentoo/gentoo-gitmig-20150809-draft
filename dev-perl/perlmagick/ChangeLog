@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perlmagick
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.5 2003/06/01 02:57:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.6 2003/06/25 13:13:49 darkspecter Exp $
+
+  25 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> perlmagick-5.5.6.ebuild:
+  small DEPEND fix
 
   31 May 2003; Michael Cummings <mcummings@gentoo.org>
   perlmagick-5.5.5.3.ebuild, perlmagick-5.5.5.3.ebuild:
