@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cvsgraph
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/ChangeLog,v 1.5 2004/06/25 02:26:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/ChangeLog,v 1.6 2004/08/05 22:12:38 agriffis Exp $
+
+  05 Aug 2004; Aron Griffis <agriffis@gentoo.org> cvsgraph-1.4.0.ebuild:
+  Explicitly disable on 64-bit arches because there are assumptions in the app
+  that pointer==integer
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> cvsgraph-1.3.0.ebuild,
   cvsgraph-1.4.0.ebuild:
