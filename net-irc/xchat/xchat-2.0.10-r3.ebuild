@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.10-r2.ebuild,v 1.4 2004/07/31 02:22:43 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.10-r3.ebuild,v 1.1 2004/07/31 12:32:33 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -38,8 +38,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/xc2010-fixtabcomp2.diff
+	epatch ${FILESDIR}/xc2010-fixtabcomp3.diff
 	epatch ${FILESDIR}/xc2010-fixfocus.diff
+	epatch ${FILESDIR}/${PV}-preeditstring.patch
 	use xchatdccserver && epatch ${DISTDIR}/xchat-dccserver-0.4.patch
 }
 

@@ -1,6 +1,18 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.115 2004/07/31 02:22:43 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.116 2004/07/31 12:32:33 swegener Exp $
+
+*xchat-2.0.10-r3 (31 Jul 2004)
+
+  31 Jul 2004; Sven Wegener <swegener@gentoo.org>
+  +files/2.0.10-preeditstring.patch, -files/xc2010-fixtabcomp2.diff,
+  +files/xc2010-fixtabcomp3.diff, -xchat-2.0.10-r2.ebuild,
+  +xchat-2.0.10-r3.ebuild:
+  Another revision bump for an updated tab completion patch. This should close
+  bug #58666 (Tab completion is quirky in XChat) by David Lloyd
+  <dmlloyd@tds.net>. Added backported patch from upstream CVS which fixes bug
+  #56324 (xchat 2.0.10 cjk preedit string bug) by Jung Tae-young
+  <master@mytears.org>.
 
   31 Jul 2004; Tom Gall <tgall@gentoo.org> xchat-2.0.10-r2.ebuild:
   stable on ppc64, bug #57121
