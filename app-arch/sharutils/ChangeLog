@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/sharutils
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.1 2003/11/14 22:29:43 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.2 2004/02/29 20:02:24 azarah Exp $
+
+*sharutils-4.2.1-r7 (29 Feb 2004)
+
+  29 Feb 2004; Martin Schlemmer <azarah@gentoo.org> sharutils-4.2.1-r7.ebuild:
+  Add a fix for bug #40140.  Some other cleanups.
 
 *sharutils-4.2.1-r6 (14 Nov 2003)
 
