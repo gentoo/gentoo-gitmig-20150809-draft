@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r13.ebuild,v 1.1 2003/10/27 09:42:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r13.ebuild,v 1.2 2003/11/06 20:17:27 robbat2 Exp $
 
 inherit eutils fixheadtails
 
@@ -252,7 +252,7 @@ src_install() {
 	do
 		if [ ! -f ${ROOT}/var/qmail/alias/.qmail-${i} ]; then
 			touch ${D}/var/qmail/alias/.qmail-${i}
-			fowners alias.qmail /var/qmail/alias/.qmail-${i}
+			fowners alias:qmail /var/qmail/alias/.qmail-${i}
 		fi
 	done
 
@@ -336,7 +336,7 @@ rootmailfixup() {
 	else
 		${TMPCMD}
 	fi
-	chown -R alias.qmail ${ROOT}/var/qmail/alias/.maildir 2>/dev/null
+	chown -R alias:qmail ${ROOT}/var/qmail/alias/.maildir 2>/dev/null
 }
 
 pkg_postinst() {

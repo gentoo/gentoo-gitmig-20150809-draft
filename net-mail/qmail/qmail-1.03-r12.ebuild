@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.14 2003/09/24 05:50:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.15 2003/11/06 20:17:27 robbat2 Exp $
 
 inherit eutils fixheadtails
 
@@ -248,7 +248,7 @@ src_install() {
 	do
 		if [ ! -f ${ROOT}/var/qmail/alias/.qmail-${i} ]; then
 			touch ${D}/var/qmail/alias/.qmail-${i}
-			fowners alias.qmail /var/qmail/alias/.qmail-${i}
+			fowners alias:qmail /var/qmail/alias/.qmail-${i}
 		fi
 	done
 
@@ -318,7 +318,7 @@ rootmailfixup() {
 	else
 		${TMPCMD}
 	fi
-	chown -R alias.qmail ${ROOT}/var/qmail/alias/.maildir 2>/dev/null
+	chown -R alias:qmail ${ROOT}/var/qmail/alias/.maildir 2>/dev/null
 }
 
 pkg_postinst() {
@@ -380,7 +380,7 @@ pkg_config() {
 		echo "Creating a self-signed ssl-cert:"
 		/usr/bin/openssl req -new -x509 -nodes -out ${ROOT}/var/qmail/control/servercert.pem -days 366 -keyout ${ROOT}/var/qmail/control/servercert.pem
 		chmod 640 ${ROOT}/var/qmail/control/servercert.pem
-		chown qmaild.qmail ${ROOT}/var/qmail/control/servercert.pem
+		chown qmaild:qmail ${ROOT}/var/qmail/control/servercert.pem
 		ln -s /var/qmail/control/servercert.pem ${ROOT}/var/qmail/control/clientcert.pem
 
 		einfo "If You want to have a signed cert, do the following:"

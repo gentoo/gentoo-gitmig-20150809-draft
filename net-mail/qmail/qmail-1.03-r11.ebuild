@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r11.ebuild,v 1.4 2003/09/05 02:44:16 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r11.ebuild,v 1.5 2003/11/06 20:17:27 robbat2 Exp $
 
 inherit eutils
 
@@ -203,7 +203,7 @@ src_install() {
 	do
 		if [ ! -f ${ROOT}/var/qmail/alias/.qmail-${i} ]; then
 			touch ${D}/var/qmail/alias/.qmail-${i}
-			fowners alias.qmail /var/qmail/alias/.qmail-${i}
+			fowners alias:qmail /var/qmail/alias/.qmail-${i}
 		fi
 	done
 
@@ -280,16 +280,16 @@ pkg_postinst() {
 
 	[ -e ${ROOT}/var/qmail/queue/lock/tcpto ] || dd if=/dev/zero of=${ROOT}/var/qmail/queue/lock/tcpto bs=1024 count=1
 	chmod 644 ${ROOT}/var/qmail/queue/lock/tcpto
-	chown qmailr.qmail ${ROOT}/var/qmail/queue/lock/tcpto
+	chown qmailr:qmail ${ROOT}/var/qmail/queue/lock/tcpto
 
 
 	[ -e ${ROOT}/var/qmail/queue/lock/sendmutex ] || touch ${ROOT}/var/qmail/queue/lock/sendmutex
 	chmod 600 ${ROOT}/var/qmail/queue/lock/sendmutex
-	chown qmails.qmail ${ROOT}/var/qmail/queue/lock/sendmutex
+	chown qmails:qmail ${ROOT}/var/qmail/queue/lock/sendmutex
 
 	[ -e ${ROOT}/var/qmail/queue/lock/trigger ] || mkfifo ${ROOT}/var/qmail/queue/lock/trigger
 	chmod 622 ${ROOT}/var/qmail/queue/lock/trigger
-	chown qmails.qmail ${ROOT}/var/qmail/queue/lock/trigger
+	chown qmails:qmail ${ROOT}/var/qmail/queue/lock/trigger
 
 	# for good measure
 	env-update
@@ -343,14 +343,14 @@ pkg_config() {
 		echo "Creating a self-signed ssl-cert:"
 		/usr/bin/openssl req -new -x509 -nodes -out /var/qmail/control/servercert.pem -days 366 -keyout /var/qmail/control/servercert.pem
 		chmod 640 /var/qmail/control/servercert.pem
-		chown qmaild.qmail /var/qmail/control/servercert.pem
+		chown qmaild:qmail /var/qmail/control/servercert.pem
 		ln -s /var/qmail/control/servercert.pem /var/qmail/control/clientcert.pem
 
 		einfo "If You want to have a signed cert, do the following:"
 		einfo "openssl req -new -nodes -out req.pem \\"
 		einfo "-keyout /var/qmail/control/servercert.pem"
 		einfo "chmod 640 /var/qmail/control/servercert.pem"
-		einfo "chown qmaild.qmail /var/qmail/control/servercert.pem"
+		einfo "chown qmaild:qmail /var/qmail/control/servercert.pem"
 		einfo "ln -s /var/qmail/control/servercert.pem /var/qmail/control/clientcert.pem"
 		einfo "Send req.pem to your CA to obtain signed_req.pem, and do:"
 		einfo "cat signed_req.pem >> /var/qmail/control/servercert.pem"
