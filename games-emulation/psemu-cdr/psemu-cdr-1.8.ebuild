@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdr/psemu-cdr-1.8.ebuild,v 1.2 2003/11/22 01:29:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdr/psemu-cdr-1.8.ebuild,v 1.3 2004/02/13 15:36:00 dholm Exp $
 
 inherit games eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://linuzappz.pcsx.net/downloads/cdr-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="gtk2"
 
 DEPEND="gtk2? ( =x11-libs/gtk+-2* )

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopsspu/psemu-peopsspu-1.0.7-r2.ebuild,v 1.1 2004/01/29 22:41:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopsspu/psemu-peopsspu-1.0.7-r2.ebuild,v 1.2 2004/02/13 15:41:33 dholm Exp $
 
 inherit games eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/peops/PeopsSpu${PV//./}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="alsa oss"
 
 DEPEND="alsa? ( media-libs/alsa-lib )

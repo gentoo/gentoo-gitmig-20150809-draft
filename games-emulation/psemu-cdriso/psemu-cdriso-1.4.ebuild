@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdriso/psemu-cdriso-1.4.ebuild,v 1.2 2003/11/14 20:06:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdriso/psemu-cdriso-1.4.ebuild,v 1.3 2004/02/13 15:40:11 dholm Exp $
 
 inherit games eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://linuzappz.pcsx.net/downloads/cdriso-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="sys-libs/zlib
 	app-arch/bzip2
