@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imwheel/imwheel-1.0.0_pre2.ebuild,v 1.5 2004/04/27 20:45:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imwheel/imwheel-1.0.0_pre2.ebuild,v 1.6 2004/05/31 15:12:57 puggy Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://jcatki.no-ip.org/imwheel/files/${P/_/}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 
 IUSE=""
 
