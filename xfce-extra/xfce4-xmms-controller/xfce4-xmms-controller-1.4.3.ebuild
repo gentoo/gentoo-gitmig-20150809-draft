@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xmms-controller/xfce4-xmms-controller-1.4.3.ebuild,v 1.3 2004/04/05 01:48:53 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xmms-controller/xfce4-xmms-controller-1.4.3.ebuild,v 1.4 2004/04/26 15:11:00 agriffis Exp $
 
 IUSE=""
 MY_P="${PN}-plugin-${PV}"
@@ -29,7 +29,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-	    --datadir=/usr/share/xfce4-xmms-controller
+	    --datadir=/usr/share/xfce4-xmms-controller || die "econf failed"
 	emake
 }
 
