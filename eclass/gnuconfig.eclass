@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.10 2003/07/02 08:33:17 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.11 2003/07/12 09:29:29 kumba Exp $
 #
 # Author: Will Woods <wwoods@gentoo.org>
 #
@@ -19,7 +19,8 @@
 ECLASS=gnuconfig
 INHERITED="$INHERITED $ECLASS"
 
-DEPEND="$DEPEND sys-devel/libtool"
+DEPEND="$DEPEND sys-devel/libtool
+                sys-devel/gnuconfig"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
@@ -61,7 +62,8 @@ gnuconfig_do_update() {
 # this searches the standard locations for the newest config.{sub|guess}, and
 # returns the directory where they can be found.
 gnuconfig_findnewest() {
-    local locations="/usr/share/automake-1.6/config.sub \
+    local locations="/usr/share/gnuconfig/config.sub \
+                         /usr/share/automake-1.6/config.sub \
                          /usr/share/automake-1.5/config.sub \
                          /usr/share/automake-1.4/config.sub \
                          /usr/share/libtool/config.sub"
