@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r1.ebuild,v 1.2 2000/09/15 20:09:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r1.ebuild,v 1.3 2000/10/05 18:22:52 achim Exp $
 
 P=squid-2.3.STABLE4
 A=${P}-src.tar.gz
@@ -14,7 +14,7 @@ src_compile() {
  cd ${S}
  LDFLAGS="$LDFLAGS -lresolv" try ./configure --host=${CHOST} \
 	--prefix=/usr --sysconfdir=/etc/squid \
-	--localstatedir=/var/squid
+	--localstatedir=/var/squid \
 	--enable-ipf-transparent --enable-useragent-log \
 	--enable-async-io --enable-icmp
  try make

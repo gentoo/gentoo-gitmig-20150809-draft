@@ -1,11 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.5.0-r1.ebuild,v 1.3 2000/09/15 20:09:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.5.1.ebuild,v 1.1 2000/10/05 18:22:52 achim Exp $
 
-P=whois-4.5.0
-A=whois_4.5.0.tar.gz
-S=${WORKDIR}/whois-4.4.15
+A=whois_4.5.1.tar.gz
+S=${WORKDIR}/${P}
 DESCRIPTION="Whois Client"
 SRC_URI="http://www.linux.it/~md/software/${A}"
 
@@ -16,7 +15,7 @@ src_unpack() {
   sed -e "s/-O2/$CFLAGS/" Makefile.orig > Makefile
   cd po
   cp Makefile Makefile.orig
-  sed -e "s:/usr/bin/install:install:" Makefile.orig > Makefile
+  sed -e "s:/usr/bin/install:/bin/install:" Makefile.orig > Makefile
 
 }
 src_compile() {                           
