@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/fvwm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.51 2003/12/11 11:59:24 taviso Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.52 2004/01/12 10:42:04 taviso Exp $
+
+*fvwm-2.5.8-r3 (12 Jan 2004)
+
+  12 Jan 2004; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.8-r3.ebuild,
+  files/fvwm-2.5.8-taskbar-margins.diff, files/fvwm-2.5.8-undermouse.diff,
+  files/fvwm-iconman.diff:
+  adding two new patches from #37079
+  adding a patch from cvs to fix taskbar margins
+  revision bump
 
   11 Dec 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.8-r2.ebuild,
   files/fvwm-2.5.8-fvwm-menu-directory-security.diff:
