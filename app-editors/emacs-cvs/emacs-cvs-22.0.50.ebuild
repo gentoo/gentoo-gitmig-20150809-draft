@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50.ebuild,v 1.1 2005/02/11 07:17:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50.ebuild,v 1.2 2005/02/16 13:51:54 usata Exp $
 
 ECVS_AUTH="ext"
 export CVS_RSH="ssh"
@@ -97,6 +97,7 @@ src_install () {
 	# make DESTDIR=${D} install doesn't work
 	einstall || die "einstall failed"
 	rm ${D}/usr/bin/emacs-${SLOT}.emacs-${SLOT} || die "removing duplicate emacs executable failed"
+	dohard /usr/bin/emacs.emacs-${SLOT} /usr/bin/emacs-${SLOT} || die
 
 	if use aqua ; then
 		einfo "Installing Carbon Emacs..."

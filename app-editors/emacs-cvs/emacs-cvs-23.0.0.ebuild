@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.0-r1.ebuild,v 1.1 2005/02/11 09:14:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0.ebuild,v 1.1 2005/02/16 13:51:54 usata Exp $
 
 ECVS_AUTH="ext"
 export CVS_RSH="ssh"
@@ -40,7 +40,7 @@ DEPEND=">=sys-libs/ncurses-5.3
 
 PROVIDE="virtual/emacs virtual/editor"
 
-SLOT="22.0.0"
+SLOT="23.0.0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ppc-macos"
 
@@ -97,6 +97,7 @@ src_install () {
 	# make DESTDIR=${D} install doesn't work
 	einstall || die "einstall failed"
 	rm ${D}/usr/bin/emacs-${SLOT}.emacs-${SLOT} || die "removing duplicate emacs executable failed"
+	dohard /usr/bin/emacs.emacs-${SLOT} /usr/bin/emacs-${SLOT} || die
 
 	if use aqua ; then
 		einfo "Installing Carbon Emacs..."
@@ -122,7 +123,7 @@ src_install () {
 		# defaults to aspell if installed
 		elisp-site-file-install ${FILESDIR}/40aspell-gentoo.el
 	fi
-	newenvd ${FILESDIR}/50emacs-${SLOT}.envd 50emacs-${SLOT}
+	newenvd ${FILESDIR}/50emacs-${SLOT}.envd 50emacs-${SLOT} || die
 
 	einfo "Fixing manpages..."
 	for m in  ${D}/usr/share/man/man1/* ; do
