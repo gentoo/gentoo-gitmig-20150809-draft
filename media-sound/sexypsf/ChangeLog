@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/sexypsf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/ChangeLog,v 1.5 2004/07/20 01:02:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/ChangeLog,v 1.6 2004/10/07 23:50:44 eradicator Exp $
+
+*sexypsf-0.4.6 (07 Oct 2004)
+
+  07 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/sexypsf-0.4.6-gentoo.patch, +files/sexypsf-0.4.6-xmms.patch,
+  +sexypsf-0.4.6.ebuild:
+  Version bump.
 
   19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> sexypsf-0.4.5.ebuild:
   -sparc -amd64

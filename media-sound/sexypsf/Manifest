@@ -1,5 +1,7 @@
 MD5 06493e839382347df44653aec7faae19 ChangeLog 708
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 16e48240eb45b3d014770cf1a4977226 sexypsf-0.4.5.ebuild 1365
+MD5 8482d84553f80c0e21f2105a50b29c22 sexypsf-0.4.6.ebuild 1379
 MD5 41f230a0e2debf8b51025a2d796c6e31 files/digest-sexypsf-0.4.5 61
 MD5 ec1912f27a7e4330699ef6addc03a8b0 files/sexypsf-0.4.5-gentoo.patch 1608
+MD5 0ed9b80602e1c597dff882701ce72f64 files/digest-sexypsf-0.4.6 61
