@@ -1,19 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-7.1.2.ebuild,v 1.7 2004/07/15 00:12:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-7.2.1.ebuild,v 1.1 2004/08/11 10:30:09 scandium Exp $
 
 MY_P=${PN}_${PV//./_}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="TkCVS"
+DESCRIPTION="TkCVS is a Tcl/Tk-based graphical interface to CVS."
 SRC_URI="http://www.twobarleycorns.net/${MY_P}.tar.gz"
 HOMEPAGE="http://www.twobarleycorns.net/tkcvs.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~amd64 ~sparc"
 IUSE=""
 
-RDEPEND=">=dev-lang/tk-8.3"
+RDEPEND=">=dev-lang/tk-8.4
+	dev-util/cvs
+	sys-apps/diffutils"
 
 src_compile() {
 	echo "It's tcl, you don't need to compile.  ;)"
@@ -29,11 +31,14 @@ src_install() {
 	mv ${D}/usr/man/man1/* ${D}/usr/share/man/man1
 	rm -rf ${D}/usr/man
 
+	insinto /usr/lib/tkcvs/bitmaps
+	doins tkdiff/tkdiff.xbm
+
 	# Add docs...this is important
-	dodoc CHANGELOG COPYING FAQ README.tkcvs README.windows
+	dodoc CHANGELOG FAQ README.tkcvs README.windows
 
 	docinto tkdiff
-	dodoc tkdiff/PATCHES tkdiff/COPYING
+	dodoc tkdiff/COPYING
 
 	docinto tkcvs
 	dodoc tkcvs/vendor.readme
