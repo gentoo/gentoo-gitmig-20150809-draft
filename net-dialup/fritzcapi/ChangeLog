@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/fritzcapi
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.4 2004/12/05 17:44:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.5 2004/12/12 22:14:02 mrness Exp $
+
+*fritzcapi-2.6.26.7-r3 (12 Dec 2004)
+
+  12 Dec 2004; Alin Nastac <mrness@gentoo.org> -fritzcapi-2.6.26.7-r1.ebuild,
+  -fritzcapi-2.6.26.7-r2.ebuild, +fritzcapi-2.6.26.7-r3.ebuild,
+  -fritzcapi-2.6.26.7.ebuild:
+  Add fcusb2 firmware files and hotplug script. See #52984.
 
 *fritzcapi-2.6.26.7-r2 (05 Dec 2004)
 

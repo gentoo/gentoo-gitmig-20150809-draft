@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.26.7-r2.ebuild,v 1.1 2004/12/05 17:44:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.26.7-r3.ebuild,v 1.1 2004/12/12 22:14:02 mrness Exp $
 
 inherit kernel-mod rpm eutils
 
@@ -8,7 +8,8 @@ S="${WORKDIR}/usr/src/kernel-modules/fritzcapi"
 
 DESCRIPTION="SuSE's 2.6 AVM kernel modules for fcclassic, fcpci, fcpcmcia, fcpnp, fcusb, fcusb2, fxusb_CZ and fxusb"
 HOMEPAGE="http://www.avm.de/"
-SRC_URI="ftp://ftp.suse.com/pub/suse/i386/update/9.1/rpm/i586/km_${P/2.6./2.6-}.i586.rpm"
+SRC_URI="ftp://ftp.suse.com/pub/suse/i386/update/9.1/rpm/i586/km_${P/2.6./2.6-}.i586.rpm
+	mirror://gentoo/fcusb2-firmware-3.11.04.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -86,14 +87,44 @@ src_compile() {
 }
 
 src_install() {
+	dodir /lib/firmware /etc
 	insinto /lib/modules/${KV_VERSION_FULL}/extra
 	doins fritz.*/src/*.ko
+
+	echo -e "# card\tfile\tproto\tio\tirq\tmem\tcardnr\toptions" >${D}/etc/capi.conf
+	echo "#" >>${D}/etc/capi.conf
+
+	[ "${FRITZCAPI_BUILD_TARGETS/xusb_CZ/}" != "${FRITZCAPI_BUILD_TARGETS}" ] && \
+		dodoc fritz.xusb_CZ/README.fxusb_CZ
+
+	[ "${FRITZCAPI_BUILD_TARGETS/usb2/}" != "${FRITZCAPI_BUILD_TARGETS}" ] && (
+		dodir /etc/hotplug/usb
+		cd ${WORKDIR}/fcusb2
+		insopts -m0755
+		insinto /etc/hotplug/usb
+		doins hotplug/usb/*
+
+		insinto /lib/firmware
+		insopts -m0644
+		doins firmware/*
+		echo -e "#fcusb2\tput_here_your_firmware\t-\t-\t-\t-\t-" >>${D}/etc/capi.conf
+	)
+
+	#Compatibility with <=net-dialup/isdn4k-utils-20041006-r3. 
+	#Please remove it when it becomes obsolete
+	dosym firmware /lib/isdn
 }
 
 pkg_postinst() {
 	einfo "Checking kernel module dependencies"
 	[ -r "${ROOT}/usr/src/linux/System.map" ] && \
 		depmod -ae -F "${ROOT}/usr/src/linux/System.map" -b "${ROOT}" -r ${KV}
-	[ "${FRITZCAPI_BUILD_TARGETS/xusb_CZ/}" = "${FRITZCAPI_BUILD_TARGETS}" ] || \
-		dodoc fritz.xusb_CZ/README.fxusb_CZ
+
+	einfo "If your device need a firmware, you should edit copy the firmware files"
+	einfo "in /lib/firmware and edit /etc/capi.conf."
+	einfo
+	[ "${FRITZCAPI_BUILD_TARGETS/usb2/}" != "${FRITZCAPI_BUILD_TARGETS}" ] && (
+		einfo "Note: This ebuild has already installed firmware files necessary for following modules:"
+		einfo "   fcusb2"
+	)
 }
