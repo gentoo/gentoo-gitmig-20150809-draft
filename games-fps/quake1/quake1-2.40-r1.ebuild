@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/quake1-2.40.ebuild,v 1.7 2004/11/20 09:33:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/quake1-2.40-r1.ebuild,v 1.1 2004/12/28 06:29:25 vapier Exp $
 
 inherit eutils gcc games
 
@@ -32,21 +32,23 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	epatch "${FILESDIR}/fix-sys_printf.patch"
+	epatch "${FILESDIR}"/fix-sys_printf.patch
 
 	mv WinQuake/Makefile{.linuxi386,}
 	mv QW/Makefile{.Linux,}
 
-	epatch "${FILESDIR}/makefile-path-fixes.patch"
+	epatch "${FILESDIR}"/makefile-path-fixes.patch
+	epatch "${FILESDIR}"/gentoo-paths.patch
+	sed -i -e "s:GENTOO_DATADIR:${GAMES_DATADIR}/quake-data:" \
+		{QW/client,WinQuake}/common.c || die "setting data paths"
 
-	[ $(gcc-major-version) -eq 3 ] \
-		&& epatch "${FILESDIR}/makefile-gcc3-cflags.patch" \
-		|| epatch "${FILESDIR}/makefile-gcc2-cflags.patch"
+	epatch "${FILESDIR}"/makefile-cflags.patch
 	sed -i "s:GENTOO_CFLAGS:${CFLAGS} -DGL_EXT_SHARED=1:" {WinQuake,QW}/Makefile
+
 	cp QW/client/glquake.h{,.orig}
 	(echo "#define APIENTRY";cat QW/client/glquake.h.orig) > QW/client/glquake.h
 
-	epatch "${FILESDIR}/makefile-sedable.patch"
+	epatch "${FILESDIR}"/makefile-sedable.patch
 	if ! use 3dfx ; then
 		sed -i 's:^   $(BUILDDIR)/bin/glquake ::' WinQuake/Makefile
 		sed -i 's:^   $(BUILDDIR)/bin/glquake.3dfxgl ::' WinQuake/Makefile
@@ -67,8 +69,8 @@ src_unpack() {
 }
 
 src_compile() {
-	make -C "${S}/WinQuake" build_release || die "failed to build WinQuake"
-	make -C "${S}/QW" build_release || die "failed to build QW"
+	emake -j1 -C "${S}"/WinQuake build_release || die "failed to build WinQuake"
+	emake -j1 -C "${S}"/QW build_release || die "failed to build QW"
 }
 
 src_install() {
