@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.6.ebuild,v 1.1 2003/03/11 21:26:13 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.6.ebuild,v 1.2 2003/03/28 22:52:52 mholzer Exp $
 
 IUSE=""
 
@@ -30,7 +30,7 @@ src_install() {
 	
 	einstall || die
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
+	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
 	
 	##
 	## 0.0.3.* and 1.0.0 compat
