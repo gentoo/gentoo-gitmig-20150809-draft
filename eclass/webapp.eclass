@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.4 2004/03/03 18:44:34 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.5 2004/04/14 16:02:37 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -20,15 +20,14 @@ ECLASS=webapp
 INHERITED="$INHERITED $ECLASS"
 SLOT="${PVR}"
 IUSE="$IUSE vhosts"
-G_HASCONFIG=1
 
-if [ -f /etc/conf.d/webapp-config ] ; then
-	. /etc/conf.d/webapp-config
+if [ -f /etc/vhosts/webapp-config ] ; then
+	. /etc/vhosts/webapp-config
 else
-	G_HASCONFIG=0
+	die "Unable to open /etc/vhosts/webapp-config file"
 fi
 
-EXPORT_FUNCTIONS pkg_config pkg_setup src_install
+EXPORT_FUNCTIONS pkg_postinst pkg_setup src_install
 
 # ------------------------------------------------------------------------
 # INTERNAL FUNCTION - USED BY THIS ECLASS ONLY
@@ -101,6 +100,23 @@ function webapp_configfile ()
 
 	einfo "(config) $MY_FILE"
 	echo "$MY_FILE" >> $WA_CONFIGLIST
+}
+
+# ------------------------------------------------------------------------
+# EXPORTED FUNCTION - FOR USE IN EBUILDS
+#
+# Install a text file containing post-installation instructions.
+#
+# @param	$1 - language code (use 'en' for now)
+# @param	$2 - the file to install
+# ------------------------------------------------------------------------
+
+function webapp_postinst_txt
+{
+	webapp_checkfileexists "$2"
+
+	einfo "(rtfm) $2 (lang: $1)"
+	cp "$2" "${MY_APPDIR}/postinst-$1.txt"
 }
 
 # ------------------------------------------------------------------------
@@ -205,6 +221,10 @@ function webapp_src_install ()
 	chown -R root:root ${D}/
 	chmod -R u-s ${D}/
 	chmod -R g-s ${D}/
+
+	keepdir ${MY_PERSISTDIR}
+	fowners root:root ${MY_PERSISTDIR}
+	fperms 755 ${MY_PERSISTDIR}
 }
 
 # ------------------------------------------------------------------------
@@ -217,12 +237,6 @@ function webapp_src_install ()
 
 function webapp_pkg_setup ()
 {
-	# we do have the config file, right?
-
-	if [ "$G_HASCONFIG" = "0" ]; then
-		die "/etc/conf.d/webapp-config missing"
-	fi
-
 	# are we emerging something that is already installed?
 
 	if [ -d "${MY_APPROOT}/${MY_APPSUFFIX}" ]; then
@@ -241,7 +255,8 @@ function webapp_pkg_setup ()
 	mkdir -p ${MY_SQLSCRIPTSDIR}
 }
 
-function webapp_pkg_config ()
+function webapp_pkg_postinst ()
 {
-	use vhosts || webapp-config -u root -d /var/www/localhost/htdocs/${PN}/ ${PN}
+	G_HOSTNAME="${VHOST_HOSTNAME}"
+	use vhosts || /usr/sbin/webapp-config -I -u root -d "${VHOST_ROOT}/htdocs/${PN}/" ${PN} ${PVR}
 }
