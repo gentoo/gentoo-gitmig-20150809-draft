@@ -1,6 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.23 2004/11/09 20:03:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.24 2004/11/13 23:23:08 agriffis Exp $
+#
+# You probably don't want to change this eclass.  Newer ebuilds use
+# mozconfig.eclass instead.
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
