@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/opencdk-0.5.3.ebuild,v 1.11 2004/07/02 02:49:23 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/opencdk-0.5.3.ebuild,v 1.12 2004/07/03 15:08:49 kloeri Exp $
 
 DESCRIPTION="Open Crypto Development Kit for basic OpenPGP message manipulation"
 HOMEPAGE="http://www.gnutls.org/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.gnutls.org/pub/gnutls/opencdk/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha amd64 ppc64"
+KEYWORDS="x86 ~ppc ~sparc ~mips alpha amd64 ppc64"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/libgcrypt-1.1.91"
