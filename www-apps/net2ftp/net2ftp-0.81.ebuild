@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/net2ftp/net2ftp-0.81.ebuild,v 1.1 2005/01/26 11:26:53 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/net2ftp/net2ftp-0.81.ebuild,v 1.2 2005/02/15 11:13:35 uberlord Exp $
 
 inherit eutils webapp
 
@@ -47,7 +47,9 @@ src_install() {
 		rm -f ${doc}
 	done
 
-	cp -a -r * ${D}${MY_HTDOCSDIR}
+	insinto ${MY_HTDOCSDIR}
+	doins -r *
+
 	webapp_configfile ${MY_HTDOCSDIR}/settings.inc.php
 	webapp_configfile ${MY_HTDOCSDIR}/settings_authorizations.inc.php
 
