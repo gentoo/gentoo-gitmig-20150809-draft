@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/lsadb
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsadb/ChangeLog,v 1.1 2004/10/31 21:54:28 pylon Exp $
+
+*lsadb-0.1.2 (31 Oct 2004)
+
+  31 Oct 2004; Lars Weiler <pylon@gentoo.org> +metadata.xml,
+  +lsadb-0.1.2.ebuild:
+  Thanks to DiskBreaker for this ebuild in Bug #56315.
+
