@@ -1,4 +1,4 @@
-MD5 9b8d29172fb01a366102f06a93ec051d ChangeLog 11970
+MD5 4795dea160d8f9ad1b6e2d30040b58fb ChangeLog 12125
 MD5 416452bedba085c06bd2502510370e1a metadata.xml 162
 MD5 5dfe3a3dad2d7e59ec7e5fc229b3997f openbox-1.2.4.ebuild 629
 MD5 cd8e991ef4a7829c1a715bf68403ecdf openbox-2.1.3-r4.ebuild 874
@@ -6,7 +6,7 @@ MD5 d00d1c66664d638aa414324a9de97a24 openbox-2.3.0.ebuild 1237
 MD5 bbddfe37157511609a9ef1a0674b1a73 openbox-2.3.1.ebuild 1257
 MD5 5f7fb2a0eda9f46cb2475c878410b756 openbox-3.0_beta3.ebuild 939
 MD5 39c000af28204e6a5e503be49c8cbffa openbox-3.0_beta4.ebuild 939
-MD5 39c000af28204e6a5e503be49c8cbffa openbox-3.0_beta5.ebuild 939
+MD5 d1b725806a9ed450e4bfc571d35fd658 openbox-3.0_beta5.ebuild 939
 MD5 f0b52d0f48a8b10c418a6d6558c4198c files/digest-openbox-1.2.4 65
 MD5 14ea1589afa8d9807619faebdd1468b5 files/digest-openbox-2.1.3-r4 65
 MD5 e8173797964d97d9293eee8faa1a95aa files/digest-openbox-2.3.0 65
