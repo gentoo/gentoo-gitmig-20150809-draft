@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.45 2004/03/06 01:29:05 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.46 2004/04/12 23:39:27 randy Exp $
+
+  12 Apr 2004; <randy@gentoo.org> irssi-0.8.9.ebuild:
+  Adding s390 keywords
 
   05 Mar 2004; Tom Gall <tgall@gentoo.org> irssi-0.8.9.ebuild:
   marked stable on ppc64
