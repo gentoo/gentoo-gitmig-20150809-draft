@@ -1,9 +1,19 @@
-MD5 6ac79b45fe5af219cf6de1131b070ddd ChangeLog 1113
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f0f3cd4175bbcede8e82a361c0c01d95 ChangeLog 1218
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 e6f860f10b16ab9c8334475b3c0bc0c7 anomy-sanitizer-1.67.ebuild 2945
+MD5 aa6c4d881d55e8faced76604451f9cb9 anomy-sanitizer-1.67.ebuild 2939
 MD5 e516d95d8691b03784d4868f0d4dc9ac files/sample_e-mail-architektur.flw 7001
 MD5 bfbe48e53cc13347c50082c700ca1981 files/digest-anomy-sanitizer-1.67 72
 MD5 28080935c9282efa29386151ab7036ab files/sample2_mailfilter.sh 1898
 MD5 9d08cc149086d19bbf4d2f7f0d17e105 files/anomy.conf 6714
 MD5 021c6f48e4dd016e195dfe39afd39522 files/sample_mailfiler.sh 1725
 MD5 ea517247fe8f9611e41361de67d49d52 files/sample_e-mail-architecture.png 15409
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOfew/rLF9B432nYRAhz3AJ9CXePmjxRq9TfiD5sMalDeS1ijzgCeOZSo
+gJIdAFiRg58UXVO5/bRb7U4=
+=aC1W
+-----END PGP SIGNATURE-----
