@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.11.0.ebuild,v 1.1 2001/06/09 08:57:39 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.11.0.ebuild,v 1.2 2001/06/11 16:58:41 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -27,7 +27,7 @@ src_compile() {
     try ./configure --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome --host=${CHOST} \
 	--with-mozilla-libs=/opt/mozilla \
 	--with-mozilla-includes=/opt/mozilla/include $myconf
-    try make
+    try pmake
 
 }
 
