@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6.ebuild,v 1.4 2003/10/17 23:49:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6.ebuild,v 1.5 2003/10/19 17:33:01 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -27,11 +27,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-security.patch
 
 	# Remove redundant games in directory
-	sed -i -e 's/\/games\//\//g' configure*
+	sed -i -e 's/\/games\//\//g' configure
 }
 
 src_install() {
-	einstall || die
+	egamesinstall || die
 	dodoc ChangeLog README TODO DIFFERENCES INTERESTING-COMBINATIONS
 
 	insinto /usr/share/pixmaps
