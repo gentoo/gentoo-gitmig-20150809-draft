@@ -5,18 +5,16 @@ MD5 2ab5eea8aa09c7e6d0a0a0afbab26a33 ChangeLog 3214
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 c0d6b2d87fd6c298ebc1a4aac23f0581 yc-3.5.8.ebuild 1179
 MD5 38568e4c3329677fc26c103eaa4b3901 yc-4.0.13.ebuild 1421
-MD5 599d275c0090e81bd3d054deafe75fe0 yc-4.0.11.ebuild 1421
 MD5 c7a9bd3748db2a636d097cc3a5de4dec files/50yc-gentoo.el 71
 MD5 af32ce185eed3b8181b307b433c9b48d files/digest-yc-3.5.8 58
 MD5 0514d0093a515b5c57774b0e8c1f5e16 files/sample.dot.emacs 267
 MD5 8c681335bb43a087b552570df6e9e398 files/sample.dot.emacs-4 356
 MD5 e627ed3b58c544fd08d9fd14d4ef295e files/sample.hosts.canna 15
 MD5 2c3fca1bee91e9ff17d207cf563caa18 files/digest-yc-4.0.13 60
-MD5 a36685282f4fc6678d1174e1d1ba5267 files/digest-yc-4.0.11 60
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBaDSkVWNWqTUmv+0RAuSGAJwK2yAofF6T6+NoQCeef5T26RclfgCgopJl
-0YxtORy82yd84jBublnG1Vw=
-=iUKH
+iD8DBQFBeigDVWNWqTUmv+0RAr9CAJwI2bODmReglgOhAtqPAjjaUGTSYQCdFyEY
+OVMBPWCQeFO1Dgg3t+6cz6c=
+=fYhR
 -----END PGP SIGNATURE-----
