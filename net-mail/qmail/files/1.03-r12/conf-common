@@ -1,5 +1,5 @@
 # Common Configuration file for all qmail daemons
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/1.03-r12/conf-common,v 1.2 2003/08/12 05:47:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/1.03-r12/conf-common,v 1.3 2003/08/13 11:36:10 robbat2 Exp $
 
 # Qmail User IDS to run daemons as
 QMAILDUID=`id -u qmaild`
@@ -15,7 +15,7 @@ TCPSERVER_PORT=${SERVICE}
 
 # you do not need to specify -x, -c, -u or -g in this variable as those are
 # added later
-TCPSERVER_OPTS="-H -R -v"
+TCPSERVER_OPTS="-p -v"
 
 # we limit data and stack segments to 8mbytes, you may need to raise this if
 # you are using a filter in QMAILQUEUE

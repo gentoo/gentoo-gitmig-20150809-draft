@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.4 2003/08/13 02:45:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.5 2003/08/13 11:36:10 robbat2 Exp $
 
 inherit eutils
 
@@ -23,7 +23,8 @@ SRC_URI="mirror://qmail/qmail-1.03.tar.gz
 	mirror://gentoo/qmail-local-tabs.patch
   	http://www.shupp.org/patches/qmail-maildir++.patch
   	ftp://ftp.pipeline.com.au/pipeint/sources/linux/WebMail/qmail-date-localtime.patch.txt
-  	ftp://ftp.pipeline.com.au/pipeint/sources/linux/WebMail/qmail-limit-bounce-size.patch.txt"
+  	ftp://ftp.pipeline.com.au/pipeint/sources/linux/WebMail/qmail-limit-bounce-size.patch.txt
+	http://www.ckdhr.com/ckd/qmail-103.patch"
 
 SLOT="0"
 LICENSE="as-is"
@@ -87,6 +88,10 @@ src_unpack() {
 	EPATCH_SINGLE_MSG="Adding support for remote QMTP hosts" \
 	epatch ${DISTDIR}/qmail-1.03-qmtpc.patch
 
+	# Large TCP DNS replies confuse it sometimes
+	EPATCH_SINGLE_MSG="Adding support for oversize DNS" \
+	epatch ${DISTDIR}/qmail-103.patch
+
 	# Fix for tabs in .qmail bug noted at
 	# http://www.ornl.gov/its/archives/mailing-lists/qmail/2000/10/msg00696.html
 	# gentoo bug #24293 
@@ -111,12 +116,6 @@ src_unpack() {
 	# gentoo bug #18064 
 	epatch ${DISTDIR}/qmail-smtpd-relay-reject
 	
-	# provide badrcptto support
-	# as per bug #17283
-	# patch re-diffed from original at http://www.iecc.com/bad-rcpt-noisy-patch.txt
-	# presently this breaks qmail so it is disabled
-	#epatch ${FILESDIR}/${PV}-${PR}/bad-rcpt-noisy-patch
-
 	# Apply patch to make qmail-local and qmail-pop3d compatible with the
 	# maildir++ quota system that is used by vpopmail and courier-imap
 	epatch ${DISTDIR}/qmail-maildir++.patch
@@ -130,10 +129,22 @@ src_unpack() {
 	# This helps your server to be able to reject excessively large messages
 	# "up front", rather than waiting the whole message to arrive and then
 	# bouncing it because it exceeded your databytes setting
+	#epatch ${DISTDIR}/qmail-smtpd-esmtp-size.diff.txt
+	epatch ${FILESDIR}/${PV}-${PR}/qmail-smtpd-esmtp-size-gentoo.patch
+	
+	# Apply patch to trim large bouncing messages down greatly reduces traffic
+	# when multiple bounces occur (As in with spam)
 	epatch ${DISTDIR}/qmail-limit-bounce-size.patch.txt
+	
+	# provide badrcptto support
+	# as per bug #17283
+	# patch re-diffed from original at http://sys.pro.br/files/badrcptto-morebadrcptto-accdias.diff.bz2
+	# presently this breaks qmail so it is disabled
+	epatch ${FILESDIR}/${PV}-${PR}/badrcptto-morebadrcptto-accdias-gentoo
 
-	echo -n "${CC} ${CFLAGS}" >>${S}/conf-cc	
-	use ssl && echo -n '-DTLS' >>${S}/conf-cc
+	echo -n "${CC} ${CFLAGS}" >${S}/conf-cc	
+	ewarn "TLS support is disabled due to a bug in the patch presently"
+	#use ssl && echo -n ' -DTLS' >>${S}/conf-cc
 	echo -n "${CC} ${LDFLAGS}" > ${S}/conf-ld
 	echo -n "500" > ${S}/conf-spawn
 
@@ -248,6 +259,8 @@ src_install() {
 		newins ${FILESDIR}/${PV}-${PR}/run-qmail${i} run
 		insinto /var/qmail/supervise/qmail-${i}/log
 		newins ${FILESDIR}/${PV}-${PR}/run-qmail${i}log run
+		insinto /etc
+		[ -f ${FILESDIR}/tcp.${i}.sample ] && newins ${FILESDIR}/tcp.${i}.sample /etc/tcp.${i}
 	done
 	
 	einfo "Installing the qmail startup file ..."
@@ -270,6 +283,7 @@ src_install() {
 	into /var/qmail
 	insopts -o root -g root -m 644
 	dobin ${FILESDIR}/${PV}-${PR}/config-sanity-check
+
 }
 
 pkg_postinst() {
@@ -324,24 +338,18 @@ pkg_config() {
 
 	einfo "Accepting relaying by default from all ips configured on this machine."
 	LOCALIPS=`/sbin/ifconfig  | grep inet | cut -d' ' -f 12 -s | cut -b 6-20`
-	[ -e ${ROOT}/etc/tcp.smtp ] && TCPSMTP_EXISTS=1 || TCPSMTP_EXISTS=
-	[ -e ${ROOT}/etc/tcp.qmtp ] && TCPQMTP_EXISTS=1 || TCPQMTP_EXISTS=
-	[ -e ${ROOT}/etc/tcp.qmqp ] && TCPQMQP_EXISTS=1 || TCPQMQP_EXISTS=
+	TCPSTRING=":allow,RELAYCLIENT=\"\",RBLSMTPD=\"\""
 	for ip in $LOCALIPS; do
-		[ -z "${TCPSMTP_EXISTS}" ] && echo "$ip:allow,RELAYCLIENT=\"\"" >> ${ROOT}/etc/tcp.smtp
-		[ -z "${TCPQMTP_EXISTS}" ] && echo "$ip:allow,RELAYCLIENT=\"\"" >> ${ROOT}/etc/tcp.qmtp
-		[ -z "${TCPQMQP_EXISTS}" ] && echo "$ip:allow,RELAYCLIENT=\"\"" >> ${ROOT}/etc/tcp.qmqp
-	done
-	[ -z "${TCPSMTP_EXISTS}" ] && echo ":allow" >> ${ROOT}/etc/tcp.smtp
-	[ -z "${TCPQMTP_EXISTS}" ] && echo ":allow" >> ${ROOT}/etc/tcp.qmtp
-	[ -z "${TCPQMQP_EXISTS}" ] && echo ":deny" >>  ${ROOT}/etc/tcp.qmqp
-
-	for i in smtp qmtp qmqp; do
-		tcprules ${ROOT}/etc/tcp.${i}.cdb ${ROOT}/etc/.tcp.${i}.tmp < ${ROOT}/etc/tcp.${i}
+		echo "${ip}${TCPSTRING}" >> ${ROOT}/etc/tcp.smtp
+		echo "${ip}${TCPSTRING}" >> ${ROOT}/etc/tcp.qmtp
+		echo "${ip}${TCPSTRING}" >> ${ROOT}/etc/tcp.qmqp
 	done
 
-	if [ `use ssl` ]; then
-	if [ ! -f ${ROOT}/var/qmail/control/servercert.pem ]; then
+	for i in smtp qmtp qmqp pop3; do
+		[ -f ${ROOT}/etc/tcp.${i}.cdb ] && tcprules ${ROOT}/etc/tcp.${i}.cdb ${ROOT}/etc/.tcp.${i}.tmp < ${ROOT}/etc/tcp.${i}
+	done
+
+	if use ssl && [ ! -f ${ROOT}/var/qmail/control/servercert.pem ]; then
 		echo "Creating a self-signed ssl-cert:"
 		/usr/bin/openssl req -new -x509 -nodes -out ${ROOT}/var/qmail/control/servercert.pem -days 366 -keyout ${ROOT}/var/qmail/control/servercert.pem
 		chmod 640 ${ROOT}/var/qmail/control/servercert.pem
@@ -356,6 +364,5 @@ pkg_config() {
 		einfo "ln -s /var/qmail/control/servercert.pem /var/qmail/control/clientcert.pem"
 		einfo "Send req.pem to your CA to obtain signed_req.pem, and do:"
 		einfo "cat signed_req.pem >> /var/qmail/control/servercert.pem"
-	fi
 	fi
 }
