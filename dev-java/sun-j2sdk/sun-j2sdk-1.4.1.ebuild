@@ -1,46 +1,47 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1.ebuild,v 1.1 2003/01/12 12:21:42 cretin Exp $
+
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r1.ebuild,v 1.10 2002/12/09 04:20:57 manson Exp $
 
-# Based on http://tushar.lfsforum.org/javafromscratch.txt (LFS)
+# Based on http://www.linuxfromscratch.org/~tushar/hints/javafromscratch.txt (LFS)
 # By Tushar Teredesai <Tush@Yahoo.Com>
 
 IUSE=""
 
-inherit java
+inherit java nsplugins
 
-ZLIB_VERSION=1.1.4
-
-JAVA_PATCHES="j2sdk-1.4.0-disable-sanity-check.patch.bz2
-              j2sdk-1.4.0-fix-intl-files.patch.bz2
-              j2sdk-1.4.0-gcc3-syntax.patch.bz2
-              j2sdk-1.4.0-glibc-2.3.1-fixes.patch.bz2
-              j2sdk-1.4.0-link-jpda-2-libjvm.patch.bz2
-              j2sdk-1.4.0-remove-fixed-paths.patch.bz2"
+JAVA_PATCHES="disable-sanity-check
+			fix-intl-files
+			gcc3-syntax
+			glibc-2.3.1-fixes
+			link-jpda-2-libjvm
+			remove-fixed-paths
+			force-motif"
 
 S=${WORKDIR}/j2sdk
 
-SRC_JAVA="j2sdk-1_4_0-src-scsl.zip"
-SRC_MOZHEADERS="j2sdk-1_4_0-mozilla_headers-unix.zip"
+SRC_JAVA="j2sdk-1_4_1-src-scsl.zip"
+SRC_MOZHEADERS="j2sdk-1_4_1-mozilla_headers-unix.zip"
 
-SRC_URI="http://www.gzip.org/zlib/zlib-${ZLIB_VERSION}.tar.bz2"
-		 
+SRC_URI=""
+
 DESCRIPTION="Sun's J2SE Development Kit, version 1.4.0"
-HOMEPAGE="http://java.sun.com/j2se/1.4/download.html"
+HOMEPAGE="http://wwws.sun.com/software/java2/download.html"
 
 SLOT="0"
-KEYWORDS="x86 -ppc -alpha -sparc "
+KEYWORDS="~x86 -ppc -alpha -sparc"
 LICENSE="sun-csl"
 
 RDEPEND="virtual/glibc
 	virtual/x11
 	>=dev-java/java-config-0.1.3"
 DEPEND="${RDEPEND}
+	app-arch/zip
 	app-arch/unzip
 	>=virtual/jdk-1.4
-	>=x11-libs/lesstif-0.93.36-r1
+	!x11-libs/lesstif
 	!x11-libs/openmotif"
 
 PROVIDE="virtual/jre-1.4.0
@@ -56,25 +57,31 @@ pkg_setup() {
 	fi
 
 	#Check the Current java-version ~ 1.4 and is jdk
-	java-config --javac > /dev/null 2>&1 || die "The version of java set by java-config doesn't contain javac"
-
+	JAVAC=`java-config --javac`
+	if [ -z $JAVAC ] ; then
+		eerror "Set java-config to use a jdk not a jre" 
+		die "The version of java set by java-config doesn't contain javac"
+	fi
+	
 	if [ `java-config --java-version 2>&1 | grep "1\.4\."  | wc -l` -lt 1 ]  ; then
 		eerror "JDK is too old, >= 1.4 is required"
 		die "The version of jdk pointed to by java-config is not >=1.4"
 	fi
-	
 }
 
 src_unpack() {
 	die_flag=""
 	if [ ! -f ${DISTDIR}/${SRC_MOZHEADERS} ] ; then
-      eerror "Please download ${SRC_MOZHEADERS} from ${HOMEPAGE} to ${DISTDIR}"
-      die_flag=1
+		eerror "Please download ${SRC_MOZHEADERS} from ${HOMEPAGE} to ${DISTDIR}"
+		die_flag=1
 	fi
 			
 	if [ ! -f ${DISTDIR}/${SRC_JAVA} ] ; then
-      eerror "Please download ${SRC_JAVA} from ${HOMEPAGE} to ${DISTDIR}"
-	  die_flag=1
+		eerror "Please download ${SRC_JAVA} from ${HOMEPAGE} to ${DISTDIR}"
+		einfo "The file is split into two parts on the sun site"
+		einfo "Join them together to form the file ${SRC_JAVA}"
+		einfo "Use \"cat j2sdk-1_4_1-src-scsl-a.zip j2sdk-1_4_1-src-scsl-b.zip > j2sdk-1_4_1-src-scsl.zip\""
+		die_flag=1
 	fi
 
 	[ ! -z ${die_flag} ] && die "Some source files were not found"
@@ -89,21 +96,9 @@ src_unpack() {
 
 	cd ${S}
 	for patch in $JAVA_PATCHES ; do
-		bzip2 -dc ${FILESDIR}/patches/${patch} | patch -p1 || die "Failed to apply ${patch}"
+		einfo "Applying patch ${patch}"
+		cat ${FILESDIR}/${PV}/j2sdk-${PV}-${patch}.patch | patch -p1 || die "Failed to apply ${patch}"
 	done
-
-	# Update zlib to avoid security problem with zlib-1.1.3
-	cd ${S}/j2se/src/share/native/java/util/zip
-	rm -rf zlib-1.1.3
-	unpack zlib-${ZLIB_VERSION}.tar.bz2
-	cd zlib-${ZLIB_VERSION}
-	mv adler32.c zadler32.c
-	mv crc32.c zcrc32.c
-	cd ${S}/j2se/make/java/zip/
-	cp Makefile Makefile.orig
-	chmod +w Makefile
-	sed -e "s:1.1.3:${ZLIB_VERSION}:" Makefile.orig > Makefile
-											
 }
 
 src_compile () {
@@ -125,20 +120,22 @@ src_compile () {
 	
 	export ALT_MOZILLA_PATH="${S}/mozilla"
 	export ALT_BOOTDIR=`java-config --jdk-home`
-	export ALT_MOTIF_DIR="/usr"
+	export ALT_MOTIF_DIR="${S}/motif"
 	export ALT_DEVTOOLS_PATH="/usr/bin"
 	export MILESTONE="gentoo"
 	export BUILD_NUMBER=`date +%s`
+	export LIBS="-lstdc++"
+	export OTHER_LDFLAGS="-lpthread"
 	export INSANE=true
 	export MAKE_VERBOSE=true
-	export OTHER_LDFLAGS="-lpthread"
 	export DEV_ONLY=true 
+	export USRBIN_PATH=""
 
 	cd ${S}/control/make
 	# MUST use make, we DONT want any -j options!
-    JOBS=`echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/"`
+	JOBS=`echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/"`
 	if [ -z "$JOBS" ]; then
-	   JOBS=1
+		JOBS=1
 	fi
 	make HOTSPOT_BUILD_JOBS=${JOBS} || die
 
@@ -163,25 +160,14 @@ src_install () {
 	
 	dodir /opt/${P}/share/
 	cp -a demo src.zip ${D}/opt/${P}/share/
-	
-        if [ "`use mozilla`" ] ; then
-		dodir /usr/lib/mozilla/plugins
-		dosym /opt/${P}/jre/plugin/i386/ns610/libjavaplugin_oji140.so /usr/lib/mozilla/plugins/
-	fi
 
+	chown -R root.root ${D}/opt/${P}
+
+	inst_plugin /opt/${P}/jre/plugin/i386/ns610/libjavaplugin_oji.so
 	set_java_env ${FILESDIR}/${VMHANDLE}
-
 }
 
 pkg_postinst () {                                                               
 	# Set as default VM if none exists
-	java_pkg_postinst	
-
-	if [ "`use mozilla`" ] ; then                                           
-		einfo "The Mozilla browser plugin has been installed as /usr/lib/mozilla/plugins/libjavaplugin_oji140.so"
-	else                                                                    
-		einfo "To install the Java plugin for Mozilla manually, do:"
-		einfo "ln -s /opt/${P}/jre/plugin/i386/ns610/libjavaplugin_oji140.so /usr/lib/mozilla/plugins/"
-		einfo "(Make certain the directory /usr/lib/mozilla/plugins exists first)"
-	fi
+	java_pkg_postinst
 }

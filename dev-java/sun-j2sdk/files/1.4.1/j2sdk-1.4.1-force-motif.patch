@@ -1,0 +1,35 @@
+--- j2sdk.orig/control/make/motif-rules.gmk	2002-09-06 07:00:16.000000000 +0000
++++ j2sdk/control/make/motif-rules.gmk	2003-01-11 22:02:07.000000000 +0000
+@@ -34,6 +34,9 @@
+ motif-build:
+   ifdef BUILD_MOTIF
+ 	$(CD) $(MOTIF_TOPDIR)/lib/Xm ; \
++	$(CD) util ; \
++	$(MAKE) -k ; \
++	$(CD) .. ; \
+ 	$(MAKE) MAKEFLAGS= ARCH_DATA_MODEL=$(ARCH_DATA_MODEL); \
+ 	$(MAKE) includes MAKEFLAGS= ARCH_DATA_MODEL=$(ARCH_DATA_MODEL)
+   endif
+@@ -42,16 +45,16 @@
+ 
+ motif-install-lib: $(MOTIF_DIR)/lib 
+   ifdef BUILD_MOTIF
+-	$(CD) $(MOTIF_DIR)/lib; \
+-	$(RM) libXm.a ; \
+-	$(LN) -s $(ABS_MOTIF_TOPDIR)/lib/libXm.a .
++#	$(CD) $(MOTIF_DIR)/lib; \
++#	$(RM) libXm.a ; \
++#	$(LN) -s $(ABS_MOTIF_TOPDIR)/lib/libXm.a .
+   endif
+ 
+ motif-install-include: $(MOTIF_DIR)/include 
+   ifdef BUILD_MOTIF
+-	$(CD) $(MOTIF_DIR)/include; \
+-	$(RM) Xm ; \
+-	$(LN) -s $(ABS_MOTIF_TOPDIR)/lib/Xm/exports/include/Xm .
++#	$(CD) $(MOTIF_DIR)/include; \
++#	$(RM) Xm ; \
++#	$(LN) -s $(ABS_MOTIF_TOPDIR)/lib/Xm/exports/include/Xm .
+   endif
+ #
+ # clobber the workspace, but note that the motif code misses some

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r3.ebuild,v 1.2 2002/12/09 04:20:57 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r3.ebuild,v 1.3 2003/01/12 12:21:42 cretin Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -33,7 +33,7 @@ DESCRIPTION="Sun's J2SE Development Kit, version 1.4.0"
 HOMEPAGE="http://wwws.sun.com/software/java2/download.html"
 
 SLOT="0"
-KEYWORDS="x86 -ppc -alpha -sparc "
+KEYWORDS="~x86 -ppc -alpha -sparc "
 LICENSE="sun-csl"
 
 RDEPEND="virtual/glibc
@@ -179,11 +179,7 @@ src_install () {
 	dodir /opt/${P}/share/
 	cp -a demo src.zip ${D}/opt/${P}/share/
 	
-        if [ "`use mozilla`" ] ; then
-		dodir /usr/lib/mozilla/plugins
-		dosym /opt/${P}/jre/plugin/i386/ns610/libjavaplugin_oji140.so /usr/lib/mozilla/plugins/
-	fi
-
+	inst_plugin /opt/${P}/jre/plugin/i386/ns610/libjavaplugin_oji140.so
 	set_java_env ${FILESDIR}/${VMHANDLE}
 
 }
@@ -191,5 +187,4 @@ src_install () {
 pkg_postinst () {                                                               
 	# Set as default VM if none exists
 	java_pkg_postinst
-	inst_plugin /opt/${P}/jre/plugin/i386/ns610/libjavaplugin_oji140.so
 }

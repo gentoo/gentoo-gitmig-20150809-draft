@@ -1,10 +1,16 @@
 # ChangeLog for dev-java/sun-j2sdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.11 2002/12/17 19:18:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.12 2003/01/12 12:21:42 cretin Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
+*sun-j2sdk-1.4.1 (12 Jan 2003)
+  12 Jan 2003; Stefan Jones <cretin@gentoo.org>:
+  New version, works here, have fun!
+
 *sun-j2sdk-1.4.0-r3 (21 Nov 2002)
+  12 Jan 2003; Stefan Jones <cretin@gentoo.org> sun-j2sdk-1.4.0-r3.ebuild:
+  Cleaned up the last update.
 
   21 Nov 2002; phoen][x <phoenix@gentoo.org> sun-j2sdk-1.4.0-r3.ebuild,
   files/digest-sun-j2sdk-1.4.0-r3 :
