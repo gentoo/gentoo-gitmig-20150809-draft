@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15t.ebuild,v 1.3 2005/02/09 18:36:41 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15t.ebuild,v 1.4 2005/02/11 21:57:08 chainsaw Exp $
 
 IUSE="static 16bit"
 
@@ -28,6 +28,8 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}-Makefile.patch
+	epatch ${FILESDIR}/${P}-gcc4.patch
+
 	sed -i 's/#define USE_IRIX_AUDIO/#undef USE_IRIX_AUDIO/' mpp.h
 
 	if ! use esd ; then

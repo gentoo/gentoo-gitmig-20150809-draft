@@ -1,10 +1,15 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.19 2005/02/09 18:36:41 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.20 2005/02/11 21:57:08 chainsaw Exp $
 
   09 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
   musepack-tools-1.15s-r2.ebuild, musepack-tools-1.15t.ebuild:
   corrected issue with esound dependency, fixes #81311
+
+  11 Feb 2005; Tony Vroon <chainsaw@gentoo.org>
+  +files/musepack-tools-1.15t-gcc4.patch, musepack-tools-1.15t.ebuild:
+  GCC 4 compatability fix by Radoslaw -AstralStorm- Szkodzinski
+  <astralstorm@gorzow.mm.pl> closes bug #81443.
 
   07 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
   files/musepack-tools-1.15t-Makefile.patch:
