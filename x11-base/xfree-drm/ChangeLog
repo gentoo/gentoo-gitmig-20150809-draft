@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.64 2004/04/08 06:20:01 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.65 2004/04/08 23:08:50 spyderous Exp $
+
+  08 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xfree-drm-4.3.0-r8.ebuild:
+  Drop kmod from inherit since it's not around yet.
 
 *xfree-drm-4.3.0-r8 (06 Apr 2004)
 
