@@ -1,22 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.3.0_beta1.ebuild,v 1.1 2004/07/08 22:38:29 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.3.0_rc1.ebuild,v 1.1 2004/08/06 18:39:50 caleb Exp $
 
 inherit kde-dist flag-o-matic
 
 DESCRIPTION="KDE multimedia apps: noatun, kscd, artsbuilder..."
 
 KEYWORDS="~x86 ~amd64"
-IUSE="flac encode oggvorbis alsa gstreamer"
+IUSE="alsa cdparanoia encode flac oggvorbis speex xine"
 
 DEPEND="~kde-base/kdebase-${PV}
-	media-sound/cdparanoia
+	cdparanoia? ( media-sound/cdparanoia )
 	flac? ( media-libs/flac )
 	encode? ( media-sound/lame )
 	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
-	>=media-libs/xine-lib-1_beta12
+	xine? ( >=media-libs/xine-lib-1_beta12 )
 	alsa? ( media-libs/alsa-lib )
-	gstreamer? ( media-libs/gstreamer )
+	speex? ( media-libs/speex )
 	media-sound/trm
 	media-libs/taglib
 	!media-sound/juk"
@@ -30,7 +30,7 @@ src_compile() {
 	# Still persists with 3.2.1 - kaboodle
 	filter-flags "-fno-default-inline"
 
-	myconf="$myconf --with-xine-prefix=/usr"
+	use xine && myconf="$myconf --with-xine-prefix=/usr"
 
 	# make -j2 fails, at least on ppc
 	use ppc && export MAKEOPTS="$MAKEOPTS -j1"
