@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mythweb
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/ChangeLog,v 1.9 2004/04/11 17:26:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/ChangeLog,v 1.10 2004/04/21 19:47:48 mholzer Exp $
+
+  21 Apr 2004; Martin Holzer <mholzer@gentoo.org> mythweb-0.14-r1.ebuild,
+  mythweb-0.14.ebuild:
+  moving webapp-detect into pkg_setup. closes 48354
 
 *mythweb-0.14-r1 (11 Apr 2004)
 

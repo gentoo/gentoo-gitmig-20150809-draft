@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/mythweb-0.14-r1.ebuild,v 1.1 2004/04/11 17:26:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/mythweb-0.14-r1.ebuild,v 1.2 2004/04/21 19:47:48 mholzer Exp $
 
 inherit webapp-apache
 
+IUSE="apache2"
 DESCRIPTION="PHP scripts intended to manage MythTV from a web browser."
 HOMEPAGE="http://www.mythtv.org/"
 SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
@@ -14,9 +15,8 @@ KEYWORDS="~x86"
 
 RDEPEND=">=dev-php/mod_php-4.2"
 
-webapp-detect || NO_WEBSERVER=1
-
 pkg_setup() {
+	webapp-detect || NO_WEBSERVER=1
 #	webapp-pkg_setup "${NO_WEBSERVER}"
 #	webapp-check-php mysql
 	einfo "Installing ${PN} into ${HTTPD_ROOT}"
