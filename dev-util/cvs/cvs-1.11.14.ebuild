@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.14.ebuild,v 1.4 2004/03/27 23:23:30 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.14.ebuild,v 1.5 2004/03/28 19:23:15 pylon Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.cvshome.org/release/stable/${P}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips ~alpha hppa ~amd64 ~ia64 ~ppc64"
+KEYWORDS="x86 ppc sparc ~mips ~alpha hppa ~amd64 ~ia64 ~ppc64"
 
 IUSE=""
 
