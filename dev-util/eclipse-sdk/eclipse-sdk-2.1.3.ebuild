@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.2-r1.ebuild,v 1.5 2004/03/24 17:20:07 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3.ebuild,v 1.1 2004/03/24 17:20:07 st_lim Exp $
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
-SRC_URI="http://download2.eclipse.org/downloads/drops/R-2.1.2-200311030802/eclipse-sourceBuild-srcIncluded-2.1.2.zip"
+SRC_URI="http://download.eclipse.org/downloads/drops/R-2.1.3-200403101828/eclipse-sourceBuild-srcIncluded-2.1.3.zip"
 IUSE="gtk motif gnome kde"
 
 SLOT="0"
@@ -32,11 +32,6 @@ RDEPEND=">=virtual/jdk-1.3
 
 S=${WORKDIR}/eclipse
 
-src_unpack() {
-	unpack ${A}
-	epatch ${FILESDIR}/00-refactor_rename.patch
-}
-
 src_compile() {
 
 	# This ebuild is doing some slightly funky things since the
@@ -52,10 +47,6 @@ src_compile() {
 	# for KDE though, the motif version must be built with support
 	# for KDE.  Apparently the motif build also supports KDE when
 	# this is done - I could be wrong though.
-
-	if [ ! -z "`java-config --java-version | grep IBM`" ] ; then
-		ANT_EXTRA_OPTS="-Dbootclasspath=`java-config --jdk-home`/jre/lib/core.jar"
-	fi
 
 	gtk_launcher_src_dir="${WORKDIR}/plugins/platform-launcher/library/gtk"
 	motif_launch_src_dir="${WORKDIR}/plugins/platform-launcher/library/motif"
@@ -99,13 +90,13 @@ src_compile() {
 	override_motif_target=
 	if [ "${gtk}" = "y" ] ; then
 		einfo "Building GTK+ frontend"
-		ant -buildfile build.xml -Dos=linux -Dws=gtk ${ANT_EXTRA_OPTS}
+		ant -buildfile build.xml -Dos=linux -Dws=gtk
 		#only do a compile/install for motif...  Don't do a buildDoc.  This will save time...
 		override_motif_target=compile install
 	fi
 	if [ "${motif}" = "y" ] ; then
 		einfo "Building Motif frontend"
-		ant -buildfile ${override_motif_target} build.xml -Dos=linux -Dws=motif ${ANT_EXTRA_OPTS}
+		ant -buildfile ${override_motif_target} build.xml -Dos=linux -Dws=motif
 	fi
 
 	# remove all .so files shipped with the tarball
@@ -192,7 +183,7 @@ src_compile() {
 	fi
 
 
-	# remove all the java files so we can install this.
+	# remove all the java files so we can install this. 
 	# there is no install target in build.xml for some reason and
 	# we don't want all of these files merged.
 	# also remove all the .project, .classpath and build.* files spread out all over the place

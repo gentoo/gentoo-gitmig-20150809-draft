@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.9 2004/01/11 14:04:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.10 2004/03/24 17:20:07 st_lim Exp $
+
+  25 Mar 2004; Lim Swee Tat <st_lim@gentoo.org>
+  eclipse-sdk-2.1.2-r1.ebuild:
+  Updated eclipse-sdk-2.1.2-r1 and added eclipse-2.1.3 There is a deprecation of
+  GtkCombo in gtk+-2.4 and the deprecation causes compilation of libswt-pi-gtk
+  to fail. Removed "#define GTK_DISABLE_DEPRECATION" to allow for compilation
+  Only tested against gtk+-2.4
 
   11 Jan 2004; Heinrich Wendel <lanius@gentoo.org> eclipse-sdk-2.1.1.ebuild,
   eclipse-sdk-2.1.2-r1.ebuild, eclipse-sdk-2.1.2.ebuild,
