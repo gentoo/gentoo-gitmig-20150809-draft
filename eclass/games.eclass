@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.81 2004/11/21 01:51:58 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.82 2004/11/21 01:53:09 urilith Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -126,11 +126,11 @@ EOF
 }
 
 games_pkg_setup() {
-	#enewgroup "${GAMES_GROUP}" 35
-	#[ "${GAMES_USER}" != "root" ] \
-		#&& enewuser "${GAMES_USER}" 35 /bin/false /usr/games "${GAMES_GROUP}"
-	#[ "${GAMES_USER_DED}" != "root" ] \
-		#&& enewuser "${GAMES_USER_DED}" 36 /bin/bash /usr/games "${GAMES_GROUP}"
+	enewgroup "${GAMES_GROUP}" 35
+	[ "${GAMES_USER}" != "root" ] \
+		&& enewuser "${GAMES_USER}" 35 /bin/false /usr/games "${GAMES_GROUP}"
+	[ "${GAMES_USER_DED}" != "root" ] \
+		&& enewuser "${GAMES_USER_DED}" 36 /bin/bash /usr/games "${GAMES_GROUP}"
 
 	# Dear carpaski and portage-dev team, we are so sorry.  Lots of love, games team
 	# See Bug #61680
