@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.11-r2.ebuild,v 1.1 2001/04/28 16:58:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.11-r2.ebuild,v 1.2 2001/05/17 13:26:23 achim Exp $
 
 A=${PN}-stable-20000704.tgz
 S=${WORKDIR}/${P}
@@ -24,7 +24,7 @@ src_compile() {
   try make depend
   try make
   cd tests
-  try make
+  make
 }
 
 src_install() {                               

@@ -11,7 +11,6 @@ HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=gnome-base/gnome-core-1.2.4
         >=sys-libs/ncurses-5.2
-        >=dev-utils/guile-1.4
         nls? ( sys-devel/gettext )"
 
 src_compile() {
