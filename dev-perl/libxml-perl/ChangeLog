@@ -1,6 +1,6 @@
-# ChangeLog for dev-perllibapreqChangeLog/dev-perllibxml-perlChangeLog
+# ChangeLog for dev-perl/libxml-perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libxml-perl/ChangeLog,v 1.6 2002/12/13 10:56:40 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libxml-perl/ChangeLog,v 1.7 2002/12/17 19:36:34 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
