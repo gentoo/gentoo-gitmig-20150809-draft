@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.3.ebuild,v 1.8 2004/06/24 23:23:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.3.ebuild,v 1.9 2004/06/28 20:49:53 mr_bones_ Exp $
 
-inherit kde-base
+inherit kde
 need-kde 3.1
 
 DESCRIPTION="A neat KDE 3.1 style based on the Java Alloy Look&Feel from Incors (http://www.incors.com)."
