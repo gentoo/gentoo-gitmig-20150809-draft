@@ -1,4 +1,4 @@
-MD5 d7753a4f19c351c9c2bb562bd5ec88fb ChangeLog 607
-MD5 5e280171caa3a2e2c63353e0cfa74e72 cmatrix-1.2a.ebuild 1297
 MD5 9bfecf967586ff4ee812fbff868b34b1 files/cmatrix-1.2a-gentoo.patch 3034
 MD5 fbdf087e388b121cf1bdd8fd7f519177 files/digest-cmatrix-1.2a 63
+MD5 d7753a4f19c351c9c2bb562bd5ec88fb ChangeLog 607
+MD5 d1074302ad5b91f3eaf68a253c090cc0 cmatrix-1.2a.ebuild 1302

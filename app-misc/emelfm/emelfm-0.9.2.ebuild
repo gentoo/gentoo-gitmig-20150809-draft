@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm/emelfm-0.9.2.ebuild,v 1.12 2004/04/06 04:14:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm/emelfm-0.9.2.ebuild,v 1.13 2004/04/06 04:42:33 vapier Exp $
 
-inherit eutils
+inherit gcc eutils
 
 DESCRIPTION="A file manager that implements the popular two-pane design."
 HOMEPAGE="http://emelfm.sourceforge.net/"
@@ -26,11 +26,11 @@ src_compile() {
 
 	if use nls ; then
 		make PREFIX=/usr \
-			CC="gcc ${CFLAGS}" \
+			CC="$(gcc-getCC) ${CFLAGS}" \
 			NLS=-DENABLE_NLS || die
 	else
 		make PREFIX=/usr \
-			CC="gcc ${CFLAGS}" \
+			CC="$(gcc-getCC) ${CFLAGS}" \
 			NLS= || die
 	fi
 }
