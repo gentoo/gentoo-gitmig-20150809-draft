@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3-r1.ebuild,v 1.4 2002/12/24 18:44:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3-r1.ebuild,v 1.5 2002/12/29 10:32:24 azarah Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -211,14 +211,15 @@ src_unpack() {
 	echo "#define XVendorString \"Gentoo Linux (XFree86 ${PV}, revision ${PR})\"" \
 		>> config/cf/host.def
 
+	# Bug #12775 .. fails with -Os.
+	replace-flags "-Os" "-O2"
+
 	if [ "`gcc-version`" != "2.95" ]
 	then
-		# should fix bug #4189.  gcc-3.x have problems with -march=pentium4
+		# Should fix bug #4189.  gcc-3.x have problems with -march=pentium4
 		# and -march=athlon-tbird
-		export CFLAGS="${CFLAGS/-march=pentium4/-march=pentium3}"
-		export CXXFLAGS="${CXXFLAGS/-march=pentium4/-march=pentium3}"
-		export CFLAGS="${CFLAGS/-march=athlon-tbird/-march=athlon}"
-		export CXXFLAGS="${CXXFLAGS/-march=athlon-tbird/-march=athlon}"
+		replace-flags "-march=pentium4" "-march=pentium3"
+		replace-flags "-march=athlon-tbird" "-march=athlon"
 
 		# Without this, modules breaks with gcc3
 		if [ "`gcc-version`" = "3.1" ]
