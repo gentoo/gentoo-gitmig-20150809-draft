@@ -1,5 +1,15 @@
-MD5 464596669c8ae8477a1ed733a692da6b ChangeLog 550
-MD5 0b3009e86e7f1dc817efe5b25d3f35c7 canna-shion-20010916.ebuild 806
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 feb3bf496b8866ef8acbc4e6bb906a94 canna-shion-20010916.ebuild 818
+MD5 c610ffb187bf82738c12e13c40f3ba82 ChangeLog 669
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 6ca76f386e5d2266a8cb5647ed5b1f9c files/10shion.dics.dir 360
 MD5 e43f6208b3668fa32a38bba1ae17418a files/digest-canna-shion-20010916 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrOBcI1lqEGTUzyQRAnZkAKCrK/mjTOOOZOiQ5SiIGi2FtHF9UACcDcjo
+HAGheoNBbjr/zsdEuQCPYxQ=
+=u6lY
+-----END PGP SIGNATURE-----

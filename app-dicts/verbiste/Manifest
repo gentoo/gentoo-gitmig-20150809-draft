@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9b4cee53729d3f8427fd56f382115a8f ChangeLog 770
+MD5 85fef0d26668b2e585f01d6160f1bfad verbiste-0.1.9.ebuild 826
+MD5 1e6fa74fd3526cfb053ba41cae500a07 ChangeLog 880
 MD5 021abcb0c095f08d99aa81b84836343f metadata.xml 321
-MD5 a5175545a8fea4f6e6588576c1f55c49 verbiste-0.1.9.ebuild 813
 MD5 239386925f7a534c57385d2cee01d1a1 files/digest-verbiste-0.1.9 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBoXe7wDHaUUJ0mYMRAoywAJ9fevT8tqKqYyGwpKRUxZ8OtFt2QQCfUbHc
-CoWQeSADDbqWU1TAwx9zTuI=
-=0BW4
+iD8DBQFBrOFnI1lqEGTUzyQRAocgAKCwl58LKby5oeQjEleXYVvK1wYRSACfWvsk
+LRwWJX5hAmgmWk4CZp8KnOI=
+=hhHj
 -----END PGP SIGNATURE-----
