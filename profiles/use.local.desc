@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1012 2005/03/16 12:52:58 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1013 2005/03/17 01:01:26 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -517,7 +517,7 @@ net-dns/djbdns:roundrobin - enables round robin patch
 net-dns/djbdns:semanticfix - makes tinydns-data handle more semantic errors
 net-dns/pdnsd:isdn - enable isdn features
 net-firewall/iptables:extensions - Enable support for 3rd patch-o-matic extensions
-net-fs/nfs-utils:nfsv4 - Enable support for NFSv4
+net-fs/nfs-utils:nonfsv4 - Disable support for NFSv4
 net-fs/samba:libclamav - Enable clamav as virus scanner
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
 net-fs/samba:quotas - Add support for user quotas
