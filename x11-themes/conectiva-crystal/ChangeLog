@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/conectiva-crystal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/ChangeLog,v 1.2 2002/07/29 14:38:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/ChangeLog,v 1.3 2002/10/01 18:43:09 satai Exp $
+
+*conectiva-crystal-092502 (01 Oct 02)
+
+  01 Oct 02; Matthew Turk <satai@gentoo.org> :
+
+  Updating to snapshot.  Taking over maintainership.  Also changing
+  index.desktop.
 
 *conectiva-crystal-3.1_beta37-r1 (29 Jul 2002)
 
