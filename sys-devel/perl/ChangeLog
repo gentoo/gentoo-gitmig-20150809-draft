@@ -1,8 +1,16 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.18 2002/12/09 04:37:27 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.19 2002/12/10 21:33:21 mcummings Exp $
 
-\* Autoupdate keywords (12-6-02)
+*perl-5.6.1-r9 (10 Dec 2002)
+
+  10 Dec 2002; Michael Cummings <mcummings@gentoo.org>
+  perl-5.6.1-r9.ebuild:
+
+  Major fixes, including the inclusion of the ExtUtils-MakeMaker fix
+  directly into perl's ebuild (thanks seemant!).
+  
+* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
   26 Nov 2002; Michael Cummings <mcummings@gentoo.org>:

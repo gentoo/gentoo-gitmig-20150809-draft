@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r3.ebuild,v 1.4 2002/10/05 18:17:48 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r3.ebuild,v 1.5 2002/12/10 21:33:21 mcummings Exp $
 
 IUSE="berkdb gdbm"
 
@@ -45,7 +45,10 @@ src_compile() {
 		-Darchname=${CHOST%%-*}-linux \
 		-Dcccdlflags='-fPIC' \
 		-Dccdlflags='-rdynamic' \
-		-Dprefix=/usr \
+		-Dcc=gcc \
+		-Dprefix='/usr' \
+		-Dvendorprefix='/usr' \
+		-Dsiteprefixx='/usr' \
 		-Dlocincpth=' ' \
 		-Doptimize="${CFLAGS}" \
 		-Duselargefiles \
@@ -54,7 +57,6 @@ src_compile() {
 		-Dlibperl=libperl.so \
 		-Dd_dosuid \
 		-Dd_semctl_semun \
-		-Dusethreads \
 		-Dcf_by=Gentoo \
 		-Ud_csh \
 		${myconf} || die
@@ -91,7 +93,10 @@ EOF
 
 	sh Configure -des \
 		-Darchname=${CHOST%%-*}-linux \
-		-Dprefix=/usr \
+		-Dcc=gcc \
+		-Dprefix='/usr' \
+		-Dvendorprefix='/usr' \
+		-Dsiteprefixx='/usr' \
 		-Dlocincpth=' ' \
 		-Doptimize="${CFLAGS}" \
 		-Duselargefiles \
@@ -99,13 +104,12 @@ EOF
 		-Dd_semctl_semun \
 		-Dman3ext=3pm \
 		-Dcf_by=Gentoo \
-		-Dusethreads \
 		-Ud_csh \
 		${myconf} || die "Unable to configure"
 	emake || die "Unable toe make"
 #	make || die "Unable to make"
 	
-	make -i test CCDFLAGS=
+	make -i test CCDLFLAGS=
 							
 
 }
@@ -114,13 +118,11 @@ src_install () {
 	
 	cd ${S}
 	
-	insinto /usr/lib/perl5/${PV}/${CHOST%%-*}-linux-thread-multi/CORE/
+	insinto /usr/lib/perl5/${PV}/${CHOST%%-*}-linux/CORE/
 	doins ${WORKDIR}/libperl.so
-	dosym /usr/lib/perl5/${PV}/${CHOST%%-*}-linux-thread-multi/CORE/libperl.so /usr/lib/libperl.so
+	dosym /usr/lib/perl5/${PV}/${CHOST%%-*}-linux/CORE/libperl.so /usr/lib/libperl.so
 	#Fix for "stupid" modules and programs
-	dosym /usr/lib/perl5/${PV}/${CHOST%%-*}-linux-thread-multi /usr/lib/perl5/${PV}/${CHOST%%-*}-linux
-	dodir /usr/lib/perl5/site_perl/${PV}/${CHOST%%-*}-linux-thread-multi
-	dosym /usr/lib/perl5/site_perl/${PV}/${CHOST%%-*}-linux-thread-multi /usr/lib/perl5/site_perl/${PV}/${CHOST%%-*}-linux
+	dodir /usr/lib/perl5/site_perl/${PV}/${CHOST%%-*}-linux
 
 
 	make DESTDIR=${D} INSTALLMAN1DIR=${D}/usr/share/man/man1 INSTALLMAN3DIR=${D}/usr/share/man/man3 install || die "Unable to make install"
@@ -128,7 +130,7 @@ src_install () {
 	cp -f utils/h2ph utils/h2ph_patched
 	patch -p1 < ${FILESDIR}/perl-5.8.0-RC2-special-h2ph-not-failing-on-machine_ansi_header.patch
 	
-	LD_LIBRARY_PATH=. ./perl -Ilib utils/h2ph_patched -a -d ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux-thread-multi <<EOF
+	LD_LIBRARY_PATH=. ./perl -Ilib utils/h2ph_patched -a -d ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux <<EOF
 asm/termios.h
 syscall.h
 syslimits.h
@@ -142,12 +144,12 @@ EOF
 	#This is to fix a missing c flag for backwards compat
 	
 
-	cp ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux-thread-multi/Config.pm ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux-thread-multi/Config.pm.bak
-	sed -e "s:ccflags=':ccflags='-DPERL5 :" ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux-thread-multi/Config.pm.bak > ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux-thread-multi/Config.pm
-	cp ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux-thread-multi/Config.pm ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux-thread-multi/Config.pm.bak
-	sed -e "s:cppflags=':cppflags='-DPERL5 :" ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux-thread-multi/Config.pm.bak > ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux-thread-multi/Config.pm
+	cp ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux/Config.pm ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux/Config.pm.bak
+	sed -e "s:ccflags=':ccflags='-DPERL5 :" ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux/Config.pm.bak > ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux/Config.pm
+	cp ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux/Config.pm ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux/Config.pm.bak
+	sed -e "s:cppflags=':cppflags='-DPERL5 :" ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux/Config.pm.bak > ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux/Config.pm
 
-	rm -f ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux-thread-multi/Config.pm.bak
+	rm -f ${D}/usr/lib/perl5/${PV}/${CHOST%%-*}-linux/Config.pm.bak
 	rm -f ${D}/usr/lib/perl5/${PV}/Config.pm.4install
 
 
@@ -164,8 +166,8 @@ EOF
 
 # This removes ${D} from Config.pm
 
-	dosed /usr/lib/perl5/${PV}/${CHOST%%-*}-linux-thread-multi/Config.pm
-	dosed /usr/lib/perl5/${PV}/${CHOST%%-*}-linux-thread-multi/.packlist
+	dosed /usr/lib/perl5/${PV}/${CHOST%%-*}-linux/Config.pm
+	dosed /usr/lib/perl5/${PV}/${CHOST%%-*}-linux/.packlist
 
 	 
 
