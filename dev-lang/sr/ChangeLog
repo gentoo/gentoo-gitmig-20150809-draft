@@ -1,0 +1,19 @@
+# ChangeLog for dev-lang/sr
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sr/ChangeLog,v 1.1 2002/11/08 23:05:18 george Exp $
+
+*sr-2.3.2 (01 Nov 2002)
+
+  08 Nov 2002; George Shapovalov <george@gentoo.org> sr-2.3.2.ebuild :
+
+  first inclusion
+  "SR (Synchronizing Resources) is a language for writing concurrent programs. The
+  main language constructs are resources and operations. Resources encapsulate
+  processes and variables they share; operations provide the primary mechanism for
+  process interaction. SR provides a novel integration of the mechanisms for
+  invoking and servicing operations. Consequently, all of local and remote
+  procedure call, rendezvous, message passing, dynamic process creation,
+  multicast, and semaphores are supported. SR also supports shared global
+  variables and operations."
+
+  ebuild submitted by David Holm <dholm@telia.com>
