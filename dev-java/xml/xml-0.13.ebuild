@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml/xml-0.13.ebuild,v 1.2 2004/10/20 08:02:42 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml/xml-0.13.ebuild,v 1.3 2005/02/06 01:48:27 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://plugins.jedit.org/plugins/?XML"
 SRC_URI="mirror://sourceforge/jedit-plugins/XML-${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 DEPEND=">=app-editors/jedit-4.2
 		dev-java/errorlist
