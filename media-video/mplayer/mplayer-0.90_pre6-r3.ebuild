@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre6-r3.ebuild,v 1.9 2002/09/23 19:55:26 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre6-r3.ebuild,v 1.10 2002/10/04 05:56:21 vapier Exp $
 
 # NOTE to myself:  Test this thing with and without dvd/gtk+ support,
 #                  as it seems the mplayer guys dont really care to

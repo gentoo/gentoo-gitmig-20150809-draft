@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.8.5.ebuild,v 1.1 2002/09/21 21:56:30 agenkin Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.8.5.ebuild,v 1.2 2002/10/04 05:56:49 vapier Exp $
 
 DESCRIPTION="Full featured DVD player that supports DVD menus."
 HOMEPAGE="http://www.dtek.chalmers.se/groups/dvd/"

@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/kxine/kxine-0.4.ebuild,v 1.2 2002/08/13 20:17:50 gerk Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kxine/kxine-0.4.ebuild,v 1.3 2002/10/04 05:56:04 vapier Exp $
 inherit kde-base
 need-kde 3
 

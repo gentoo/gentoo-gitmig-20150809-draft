@@ -1,5 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/media-video/rivatv/rivatv-0.8.0.ebuild,v 1.1 2002/06/07 15:12:59 blauwers Exp
 
 S=${WORKDIR}/${P/_/-}

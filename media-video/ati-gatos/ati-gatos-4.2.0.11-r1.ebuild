@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.2.0.11-r1.ebuild,v 1.4 2002/08/19 18:08:34 cybersystem Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ati-gatos-4.2.0.11-r1.ebuild,v 1.5 2002/10/04 05:55:23 vapier Exp $
 
 S=${WORKDIR}/X11R6
 MY_P=ATI-4.2.0-11
