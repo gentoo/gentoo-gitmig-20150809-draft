@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <g2boojum@gentoo.org> (22 Sep 2002)
+# Mask perl-ldap while still semi-frozen
+dev-perl/perl-ldap
+
 # <lostlogic@gentoo.org> (21 Sep 2002)
 # Mask pending release of gentoo-sources-2.4.19-r10
 # Needed for lolo-sources-2.4.19.10*
