@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.16-r2.ebuild,v 1.6 2004/06/24 23:28:16 agriffis Exp $
-
-S=${WORKDIR}/${P}
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.16-r2.ebuild,v 1.7 2004/07/15 01:58:59 agriffis Exp $
 
 DESCRIPTION="E-Mail virus scanner for qmail."
 HOMEPAGE="http://qmail-scanner.sourceforge.net/"
@@ -24,6 +22,7 @@ DEPEND=">=dev-lang/perl-5.6.1-r1
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc"
+IUSE=""
 
 inherit fixheadtails
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.20.ebuild,v 1.6 2004/06/24 23:28:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.20.ebuild,v 1.7 2004/07/15 01:58:59 agriffis Exp $
 
 inherit fixheadtails gcc eutils
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://sourceforge/qmail-scanner/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc"
+IUSE=""
 
 DEPEND=">=dev-lang/perl-5.6.1-r1
 	>=dev-perl/Time-HiRes-01.20-r2
