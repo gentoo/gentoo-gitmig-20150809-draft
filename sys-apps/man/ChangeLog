@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.12 2003/01/08 17:53:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.13 2003/01/19 14:57:27 tuxus Exp $
 
   08 Jan 2003; Martin Schlemmer <azarah@gentoo.org> man-1.5k-r1.ebuild :
 
@@ -35,6 +35,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *man-1.5k (29 Jul 2002)
+
+  19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   27 Sep 2002; Seemant Kulleen <seemant@gentoo.org> man-1.5k.ebuild :
 

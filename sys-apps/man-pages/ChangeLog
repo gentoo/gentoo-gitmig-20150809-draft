@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.9 2002/12/30 23:05:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.10 2003/01/19 14:53:50 tuxus Exp $
 
 *man-pages-1.54 (30 Dec 2002)
+
+  19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   30 Dec 2002; Daniel Robbins <drobbins@gentoo.org> man-pages-1.54.ebuild: new
   release, version bump.
