@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Team: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2-r2.ebuild,v 1.5 2001/09/04 02:57:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2-r2.ebuild,v 1.6 2001/09/04 04:50:54 drobbins Exp $
 
 MYP="openssh-2.9p2"
 S=${WORKDIR}/${MYP}
@@ -51,8 +51,8 @@ src_install() {
     newexe ${FILESDIR}/openssh sshd
 }
 
-pkg_postinst() {
+#pkg_postinst() {
 	# People may not want sshd to automatically start like this
 	# rc-update add sshd default
-}
+#}
 
