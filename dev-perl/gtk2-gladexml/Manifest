@@ -1,5 +1,5 @@
-MD5 17a738fe3d71648bc89c981c3666a241 gtk2-gladexml-0.94.ebuild 727
-MD5 ce69dbdef67cdf685f2299182b1d4420 gtk2-gladexml-1.00.ebuild 765
+MD5 0c2d7dd3da322f8537122bffd135822e gtk2-gladexml-0.94.ebuild 735
+MD5 f7f76ff422688b9a6c379e7490033814 gtk2-gladexml-1.00.ebuild 773
 MD5 2b44e12bca4790862f10b7f23332e7da ChangeLog 1077
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 c0ab51a568549ac1fe7a09977e639fdb files/digest-gtk2-gladexml-0.94 69
