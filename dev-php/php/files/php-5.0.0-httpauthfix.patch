@@ -1,14 +1,5 @@
 --- php-5.0.0/sapi/apache/mod_php5.c	2004-07-10 09:46:09.000000000 +0200
 +++ php-5.0.0.1/sapi/apache/mod_php5.c	2004-08-08 11:32:52.824203512 +0200
-@@ -17,7 +17,7 @@
-    | PHP 4.0 patches by Zeev Suraski <zeev@zend.com>                      |
-    +----------------------------------------------------------------------+
-  */
--/* $Id: php-5.0.0-httpauthfix.patch,v 1.1 2004/08/08 23:54:06 robbat2 Exp $ */
-+/* $Id: php-5.0.0-httpauthfix.patch,v 1.1 2004/08/08 23:54:06 robbat2 Exp $ */
- 
- #include "php_apache_http.h"
- #include "http_conf_globals.h"
 @@ -485,7 +485,7 @@
  		tmp = uudecode(r->pool, authorization);
  		SG(request_info).auth_user = NULL;
