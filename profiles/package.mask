@@ -21,10 +21,6 @@
 ##   End example
 ##
 
-# <rac@gentoo.org> 12 June 2003
-# needs regression testing 
-=dev-db/mysql-4.0.13-r3
-
 # <vladimir@gentoo.org> 10 June 2003
 # As per Luca's request
 # buffer issue on ncurses application (e.g. BitchX)
