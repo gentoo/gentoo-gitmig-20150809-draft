@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.2 2003/10/04 22:50:41 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.3 2003/11/29 20:33:42 brad_mssw Exp $
+
+  29 Nov 2003; Brad House <brad_mssw@gentoo.org> files/75emul-linux-x86-x:
+  forgot path for libGL.so.1 for environment
 
   04 Oct 2003; Brad House <brad_mssw@gentoo.org>
   emul-linux-x86-xlibs-1.0.ebuild:
