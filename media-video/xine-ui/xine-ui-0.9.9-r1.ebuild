@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.9-r1.ebuild,v 1.6 2002/06/16 17:36:21 lostlogic Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.9-r1.ebuild,v 1.7 2002/06/16 17:53:53 lostlogic Exp $ 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
@@ -23,23 +23,12 @@ src_unpack() {
 
 	unpack ${P}.tar.gz
 
-	cd ${S}
-
 	# for some reason upstream skipped on including some files for the
 	# DirectFB front-end for this.
 	use directfb && ( \
 		unpack ${PN}-gentoo-extra.tar.bz2
 		mv ${WORKDIR}/dfb/* ${S}/src/dfb
-	) || ( \
-		sed -e "s:dfb::" src/Makefile.in \
-		    > src/Makefile.in.hacked
-		mv src/Makefile.in.hacked src/Makefile.in 
 	)
-
-	sed -e "s:LDFLAGS =:LDFLAGS = -L/lib:" src/xitk/Makefile.in \
-	    > src/xitk/Makefile.in.hacked
-	mv src/xitk/Makefile.in.hacked src/xitk/Makefile.in
-
 }
 
 src_compile() {
