@@ -1300,3 +1300,15 @@ diff -ur linux-2.6.7/scripts/file2alias.c linux-2.6.7-gentoo/scripts/file2alias.
  #include "modpost.h"
  
  /* We use the ELF typedefs, since we can't rely on stdint.h being present. */
+diff -ur linux-2.6.7/include/asm-x86_64/pda.h linux-2.6.7-gentoo/include/asm-x86_64/pda.h
+--- linux-2.6.7/include/asm-x86_64/pda.h	2004-07-24 21:30:43.213205064 +0100
++++ linux-2.6.7-gentoo/include/asm-x86_64/pda.h	2004-07-24 21:31:24.238968200 +0100
+@@ -36,7 +36,7 @@
+  * have to mention %fs/%gs.  So it needs to be done this Torvaldian way.
+  */ 
+ #define sizeof_field(type,field)  (sizeof(((type *)0)->field))
+-#define typeof_field(type,field)  typeof(((type *)0)->field)
++#define typeof_field(type,field)  __typeof__(((type *)0)->field)
+ 
+ extern void __bad_pda_field(void);
+ 
