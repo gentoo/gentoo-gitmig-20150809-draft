@@ -7,6 +7,10 @@
 # <bangert@gentoo.org> 26 Apr 2oo2
 <app-admin/sudo-1.6.6
 
+# Masked out the koffice pre ebuilds, since beta1 is out
+# <Verwilst, 26 April 2002> 
+=koffice-1.2_pre20020411
+=koffice-1.2_pre20020404
 
 #if you're not careful, you'll build yourself a rsync that depends on libpopt.so! <kainz, 18 Apr 2002>
 #this fixes that.  devlopers give it a shot
