@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gnome
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome/ChangeLog,v 1.6 2003/02/12 06:36:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome/ChangeLog,v 1.7 2003/08/06 01:57:20 agriffis Exp $
+
+*ruby-gnome-0.34 (05 Aug 2003)
+
+  05 Aug 2003; Aron Griffis <agriffis@gentoo.org> ruby-gnome-0.34.ebuild:
+  Update to current release
 
 *ruby-gnome-0.30 (07 Jan 2003)
 
