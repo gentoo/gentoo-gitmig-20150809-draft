@@ -1,0 +1,133 @@
+# ChangeLog for sys-apps/iproute
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.7 2004/04/20 19:31:27 vapier Exp $
+
+*iproute2-2.4.7.20020116 (20 Apr 2004)
+
+  20 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #40589 by tempone@isg.si.
+  Also rename / reversion to fit the way upstream has it.
+
+*iproute-20010824-r5 (06 Apr 2004)
+
+  06 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to clean up bugs and all that fun stuff.
+  #33831 by Miguel Sousa Filipe - We use /usr/include instead of /usr/src/linux.
+  #34294 by Andrea Barisani - Fix local DoS exploit.
+  #37432 by Radek Podgorny - Update the debian patch that we pull.
+  #40230 by Sebastian Werner - Use system pkt_sched.h instead of bundled.
+  #40510 by valli - Use system glibc headers instead of bundled.
+  #45274 by David Pufer - Add HFSC support.
+  #46978 by Seemant Kulleen - Add a little hack to handle 2.4 linux-headers.
+
+  25 Mar 2004; Joshua Kinard <kumba@gentoo.org> iproute-20010824-r4.ebuild:
+  Marked stable on mips.
+
+  02 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> iproute-20010824-r1.ebuild,
+  iproute-20010824-r2.ebuild, iproute-20010824-r3.ebuild,
+  iproute-20010824-r4.ebuild:
+  Changed app-text/tetex to virtual/tetex and tetex IUSE flag to doc
+  IUSE flag. Closing bug #35849
+
+  09 Jan 2004; Aron Griffis <agriffis@gentoo.org> iproute-20010824-r4.ebuild:
+  stable on alpha
+
+  09 Jan 2004; root <root@gentoo.org> iproute-20010824-r4.ebuild:
+  Marked stable on hppa.
+
+  19 Nov 2003; Luca Barbato <lu_zero@gentoo.org> iproute-20010824-r4.ebuild:
+  Marked stable on ppc
+
+  18 Nov 2003; <spider@gentoo.org> iproute-20010824-r4.ebuild:
+  Used tetex without any dependency. Added DEPEND="" statement
+
+  25 Sep 2003; Christian Birchinger <joker@gentoo.org>
+  iproute-20010824-r4.ebuild:
+  Added sparc stable keyword
+
+  23 Sep 2003; Robin H. Johnson <robbat2@gentoo.org>
+  iproute-20010824-r4.ebuild:
+  bump to stable on x86
+
+  28 Aug 2003; Robin H. Johnson <robbat2@gentoo.org>
+  iproute-20010824-r4.ebuild:
+  fix trivial ebuild warning
+
+  24 Aug 2003; Martin Holzer <mholzer@gentoo.org> iproute-20010824-r4.ebuild:
+  Now uses -11 debian diff.
+
+*iproute-20010824-r4 (16 Aug 2003)
+
+  16 Aug 2003; Robin H. Johnson <robbat2@gentoo.org>
+  iproute-20010824-r4.ebuild:
+  update to latest debian patch, adds more manpages, also change to depend on
+  kernel headers and not kernel sources
+
+*iproute-20010824-r3 (04 May 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> iproute-20010824-r3.ebuild :
+  Marked stable on hppa.
+
+  22 Jun 2003; Joshua Kinard <kumba@gentoo.org> iproute-20010824-r3.ebuild:
+  Changed ~sparc to sparc, added ~mips
+
+  27 May 2003; <msterret@gentoo.org> iproute-20010824-r3.ebuild:
+  Added tetex to IUSE since it's `use`d; use sed-4's -i; spell check
+
+  04 May 2003; Daniel Ahlberg <aliz@gentoo.org> iproute-20010824-r3.ebuild :
+  Updated to latest Debian patch which includes htb3.
+
+  27 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> iproute-20010824-r2.ebuild :
+  Move binaries to / instead of /usr. Closes #15430.
+
+*iproute-20010824-r2 (30 Aug 2002)
+
+  17 Apr 2003; Guy Martin <gmsoft@gentoo.org> iproute-20010824-r2.ebuild :
+  Added hppa to KEYWORDS.
+
+  30 Mar 2003; Christian Birchinger <joker@gentoo.org>
+  iproute-20010824-r2.ebuild:
+  Added sparc stable keyword
+
+  07 Mar 2003; Aron Griffis <agriffis@gentoo.org> iproute-20010824-r2.ebuild:
+  Mark stable on alpha
+
+  10 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+  Changed sed expression delimiters from / to :, closing bug #15006 by Blu3
+  <david+gentoo.org@blue-labs.org>.  Also, moved the patches from files/ to
+  the mirrors.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+  22 Oct 2002; Brandon Low <lostlogic@gentoo.org> iproute-20010824-r2.ebuild :
+
+  This should fix the issues people are having with htb3, just resyncs
+  with the latest patch from debian, which is known to work, briefly
+  in the unstable profile (bug 9329).
+
+*iproute-20010824-r1 (30 Aug 2002)
+
+  05 Oct 2002; Jack Morgan <jmorgan@gentoo.org> :
+  Added sparc/sparc64 to keywords.
+
+  30 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> :
+  Added ppc to keywords.
+
+*iproute-20010824-r1 (04 Aug 2002)
+
+  04 Aug 2002; Daniel Robbins <drobbins@gentoo.org> New ebuild with htb3
+  support, which is now always enabled.  We include a "pkt_sched.h" Linux
+  kernel header in our patch that has been htb3-enabled.  This allows us to
+  always be able to compile-in htb3 support, even if the local kernel sources
+  don't include such support; this closes bugs #5780, #6018.
+
+  04 Aug 2002; Daniel Robbins <drobbins@gentoo.org> We now install Debian's man
+  pages which are strangely absent from Debian's binary package.
+
+*iproute-20010824 (09 Jul 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> iproute-20010824.ebuild : Added
+  KEYWORDS, SLOT.
+
+  09 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> ChangeLog : Added ChangeLog.
