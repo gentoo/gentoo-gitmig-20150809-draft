@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.6-r2.ebuild,v 1.10 2005/01/22 06:06:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.6-r2.ebuild,v 1.11 2005/01/22 16:04:18 agriffis Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Howl is a cross-platform implementation of the Zeroconf networking standard. Zeroconf brings a new ease of use to IP networking."
 HOMEPAGE="http://www.porchdogsoft.com/products/howl/"
@@ -22,6 +22,11 @@ src_unpack() {
 }
 
 src_compile() {
+	# The following solves compilation using linux26-headers-2.6.8.1-r2 on ia64.
+	# It's not relevant for linux-headers-2.4.x or other linux26-headers, but
+	# won't hurt anything.  (21 Jan 2005 agriffis)
+	[[ $ARCH == ia64 ]] && append-flags -D_ASM_IA64_TYPES_H
+
 	# If we wanted to remove the html docs in /usr/share/howl....
 	#einfo "Removing html docs from build process...."
 	#sed -e 's/ docs//' < Makefile.am > Makefile.am.new || die "sed failed"

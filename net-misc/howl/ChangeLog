@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/howl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.21 2005/01/10 01:58:20 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.22 2005/01/22 16:04:18 agriffis Exp $
+
+  22 Jan 2005; Aron Griffis <agriffis@gentoo.org> howl-0.9.6-r2.ebuild,
+  howl-0.9.8.ebuild:
+  0.9.6-r2 stable on ia64, repair compilation of 0.9.8 on ia64 with certain
+  versions of linux26-headers
 
   10 Jan 2005; Stefan Knoblich <stkn@gentoo.org> howl-0.9.8.ebuild:
   Updated ebuild to preserve old libraries because 0.9.8 introduces a
