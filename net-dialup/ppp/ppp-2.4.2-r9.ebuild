@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r9.ebuild,v 1.2 2004/11/17 22:14:31 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r9.ebuild,v 1.3 2004/11/29 21:39:56 mrness Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -17,10 +17,10 @@ IUSE="ipv6 activefilter pam atm mppe-mppc dhcp"
 
 RDEPEND="virtual/libc
 	activefilter? ( >=net-libs/libpcap-0.8.3-r1 )
-	atm? ( net-dialup/linux-atm )"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
+	atm? ( net-dialup/linux-atm )
 	pam? ( sys-libs/pam )"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}

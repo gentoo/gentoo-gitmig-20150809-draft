@@ -4,8 +4,8 @@ Hash: SHA1
 MD5 eb5636056ce00a0d4e1669a08a7915fe ChangeLog 16135
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 b109af0767940076444e51dbf3275f16 ppp-2.4.1-r14.ebuild 4698
-MD5 36c90a8e811d5547f180911f2cb628a5 ppp-2.4.2-r9.ebuild 5624
-MD5 583f9c8b8ee2605c4cdf7129f5ae9cf8 ppp-2.4.2-r10.ebuild 5809
+MD5 6ffe34e778cb5dc973754859f99e067e ppp-2.4.2-r9.ebuild 5624
+MD5 d7c43dca6c7dca0b82ce5609410593a9 ppp-2.4.2-r10.ebuild 5809
 MD5 20cfea2ad5ca80647dcfc43740ae9c32 ppp-2.4.3.ebuild 5688
 MD5 140bc2a08334d3546f43259934da603e files/chat-default 347
 MD5 1a60baf88a301c6eed8472a01b3691eb files/confd.ppp0 3312
@@ -60,7 +60,7 @@ MD5 f0ad3e0c62aec1771536caf00e28b9c6 files/2.4.3/pppoe.html 7605
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBq5VZjtv59x0+BrURAuk2AJ9p0fhdxdPb5x88ESakW8vR8d60BACg0sgW
-t8zn5vQg1UIDYX92xE03aNA=
-=yTl9
+iD8DBQFBq5c3jtv59x0+BrURAvTCAKDPx5MrhEiYmNUs5RpxNliOu2kR/gCg9yGH
+yeE+hbyRC48qLThv5+kU+BE=
+=bq3A
 -----END PGP SIGNATURE-----
