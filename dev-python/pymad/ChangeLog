@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymad
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.10 2004/12/19 06:36:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.11 2004/12/30 23:39:50 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> pymad-0.5.2.ebuild:
   Added ~amd64, ~sparc.
@@ -16,7 +19,7 @@
 
 *pymad-0.5.1 (19 Feb 2004)
 
-  19 Feb 2004; Bryan Østergaard,,, <kloeri@gentoo.org> pymad-0.5.1.ebuild:
+  19 Feb 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> pymad-0.5.1.ebuild:
   Version bump.
 
   14 Aug 2003; Lars Weiler <pylon@gentoo.org> pymad-0.4.1.ebuild:

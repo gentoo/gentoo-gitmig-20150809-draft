@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.12 2004/12/20 01:32:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.13 2004/12/30 23:38:33 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   20 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> -pylint-0.3.3.ebuild,
   pylint-0.4.0.ebuild:
@@ -20,13 +23,13 @@
 
 *pylint-0.4.0 (12 May 2004)
 
-  12 May 2004; Bryan Østergaard <kloeri@gentoo.org> +pylint-0.4.0.ebuild:
+  12 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> +pylint-0.4.0.ebuild:
   Version bump.
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> pylint-0.3.3.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pylint-0.3.3.ebuild:
   Add missing IUSE.
 
-  17 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> -pylint-0.2.1.ebuild,
+  17 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> -pylint-0.2.1.ebuild,
   -pylint-0.3.2.ebuild, pylint-0.3.3.ebuild:
   Pylint-0.3.3 stable on x86, remove old ebuilds.
 
@@ -37,7 +40,7 @@
 
 *pylint-0.3.2 (17 Feb 2004)
 
-  17 Feb 2004; Bryan Østergaard,,, <kloeri@gentoo.org> pylint-0.3.2.ebuild:
+  17 Feb 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> pylint-0.3.2.ebuild:
   Version bump.
 
   06 Nov 2003; Alastair Tse <liquidx@gentoo.org> pylint-0.2.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylirc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylirc/ChangeLog,v 1.6 2004/10/31 17:00:08 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylirc/ChangeLog,v 1.7 2004/12/30 23:39:07 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   31 Oct 2004; <iggy@gentoo.org> pylirc-0.0.4.ebuild:
   marking 0.0.4 x86 as a dep of freevo
@@ -8,7 +11,7 @@
   11 Sep 2004; <blubb@gentoo.org> pylirc-0.0.4.ebuild:
   added ~amd64
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> pylirc-0.0.4.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pylirc-0.0.4.ebuild:
   Add missing IUSE.
 
   16 Nov 2003; <max@gentoo.org> pylirc-0.0.4.ebuild:
