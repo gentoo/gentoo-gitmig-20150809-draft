@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.25 2005/03/12 21:31:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.26 2005/03/12 22:13:02 vapier Exp $
 
 inherit eutils gnuconfig toolchain-funcs mono libtool
 
@@ -21,6 +21,7 @@ src_unpack() {
 
 	epunt_cxx
 
+	epatch "${FILESDIR}"/${P}-lib-path-tests.patch #81628
 	# java sucks
 	epatch "${FILESDIR}"/${P}-without_java.patch
 	epatch "${FILESDIR}"/${P}-no-java-tests.patch
