@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-4.4.ebuild,v 1.7 2004/06/25 00:14:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-4.4.ebuild,v 1.8 2004/06/25 19:57:21 agriffis Exp $
 
 MY_P="${PN}44"
 
@@ -57,7 +57,7 @@ src_install () {
 	dobin mup/mup
 	dobin mkmupfnt/mkmupfnt
 	dobin mupprnt
-	if [ -n "`use X`" -o -n "`use svga`" ] ; then
+	if use X || use svga ; then
 		dobin mupdisp/mupdisp
 	fi
 
