@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.2-r1.ebuild,v 1.1 2001/03/01 23:42:44 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.2-r2.ebuild,v 1.1 2001/03/09 21:36:32 drobbins Exp $
 
 S=${WORKDIR}/linux
 #OKV=original kernel version, KV=patched kernel version
@@ -23,7 +23,7 @@ fi
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
          http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz 
          ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${AV}.tar.bz2
-	 ftp://ftp.reiserfs.com/pub/reiserfs-for-2.4/linux-2.4.2-reiserfs-20010301-full.patch.gz
+		ftp://ftp.reiserfs.com/pub/reiserfs-for-2.4/linux-2.4.2-reiserfs-20010305.patch.gz
          ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMVARC}.tar.gz"
 
 HOMEPAGE="http://www.kernel.org/
@@ -215,13 +215,22 @@ src_install() {
 
 		#grab all the sources
 		cd ${WORKDIR}
+		
+		
 		mv linux ${D}/usr/src/linux-${KV}
 		cd ${D}/usr/src
 		ln -sf linux-${KV} linux
-
+		
+		#move config file so we don't overwrite old one on merge
+		
+		cd linux
+		mv .config .config.eg
+		
 		#remove workdir since our install was dirty and modified ${S}
 		#this will cause an unpack to be done next time
+		
 		rm -rf ${WORKDIR}
+		
 	fi
 }
 
@@ -234,6 +243,15 @@ pkg_postinst() {
 		#needs to get fixed for devfs
 		fi
     fi
+	#create .config file only if one doesn't already exist
+	if [ "$PN" = "linux-sources" ]
+	then
+		cd ${ROOT}usr/src/linux
+		if [ ! -e .config ]
+		then
+			cp .config.eg .config
+		fi
+	fi
 }
 
 
