@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/AppConfig
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.10 2004/05/23 23:57:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.11 2004/05/26 21:47:58 rac Exp $
+
+*AppConfig-1.56 (26 May 2004)
+
+  26 May 2004; Robert Coie <rac@gentoo.org> AppConfig-1.56.ebuild:
+  Upstream version bump
 
   24 May 2004; Bryan Østergaard <kloeri@gentoo.org> AppConfig-1.55.ebuild:
   Stable on alpha.
