@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r3.ebuild,v 1.1 2003/04/08 08:44:58 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r3.ebuild,v 1.2 2003/04/08 08:53:49 gmsoft Exp $
 
 MY_P=nc${PV}
 S=${WORKDIR}/nc-${PV}
@@ -9,11 +9,11 @@ SRC_URI="http://www.l0pht.com/~weld/netcat/${MY_P}.tgz
 ipv6?( ftp://sith.mimuw.edu.pl/pub/users/baggins/IPv6/nc-v6-20000918.patch.gz )"
 HOMEPAGE="http://www.l0pht.com/~weld/netcat"
 
-IUSE="ipv6"
+IUSE="ipv6 static"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 
 DEPEND="virtual/glibc"
 
@@ -35,6 +35,7 @@ src_compile() {
 
 	export XFLAGS="-DLINUX"
 	[ -n "`use ipv6`" ] && XFLAGS="${XFLAGS} -DINET6"
+	[ -n "`use static`" ] && export STATIC="-static"
 	CC="gcc ${CFLAGS}" make -e nc || die
 }
 

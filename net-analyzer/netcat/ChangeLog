@@ -1,11 +1,11 @@
 # ChangeLog for net-analyzer/netcat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.12 2003/04/08 08:44:58 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.13 2003/04/08 08:53:49 gmsoft Exp $
 
 *netcat-110-r3 (08 Arp 2003)
 
   08 Arp 2003; Guy Martin <gmsoft@gentoo.org> netcat-110-r3.ebuild, files/digest-netcat-110-r3 :
-  Added ipv6 support. Removed -static from gcc's command line. Added hppa to KEYWORDS.
+  Added ipv6 support. Added support for the static use flag. Added ~hppa to KEYWORDS.
   Added the IUSE variable.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
