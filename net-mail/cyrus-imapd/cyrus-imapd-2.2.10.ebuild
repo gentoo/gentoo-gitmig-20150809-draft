@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.10.ebuild,v 1.4 2004/11/24 18:37:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.10.ebuild,v 1.5 2004/12/29 06:44:00 swegener Exp $
 
 inherit eutils ssl-cert gnuconfig fixheadtails
 
@@ -227,11 +227,10 @@ src_install() {
 	find "${D}/usr/share/doc" -name CVS -print0 | xargs -0 rm -rf
 
 	insinto /etc
-	newins "${FILESDIR}/imapd.conf" imapd.conf
-	newins "${FILESDIR}/cyrus.conf" cyrus.conf
+	doins "${FILESDIR}/cyrus.conf" "${FILESDIR}/imapd.conf"
 
-	exeinto /etc/init.d
-	newexe "${FILESDIR}/cyrus.rc6" cyrus
+	newinitd "${FILESDIR}/cyrus.rc6" cyrus
+	newconfd "${FILESDIR}/cyrus.confd" cyrus
 
 	if use pam ; then
 		insinto /etc/pam.d
