@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-3.99.3.ebuild,v 1.3 2003/09/04 21:19:58 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-3.99.3.ebuild,v 1.4 2003/09/09 19:18:23 bcowan Exp $
 
 IUSE="X"
 S=${WORKDIR}/${P}
@@ -20,7 +20,8 @@ DEPEND=">=x11-libs/gtk+-2.0.6
 	=xfce-base/libxfce4util-${PV}
 	=xfce-base/libxfcegui4-${PV}
 	=xfce-base/libxfce4mcs-${PV}
-	=xfce-base/xfce-mcs-manager-${PV}"
+	=xfce-base/xfce-mcs-manager-${PV}
+	x11-libs/startup-notification"
 
 src_compile() {
 	local myconf
