@@ -15,7 +15,7 @@ MD5 09e9f1cad6f2f28fe81682cbad8e3011 files/ck-sources-2.6.9.CAN-2004-1137.patch 
 MD5 025c80544aef14ce3a49024d791c5596 files/ck-sources-2.6.9.binfmt_a.out.patch 1763
 MD5 7f0579764a55a43256ce069632e0373e files/digest-ck-sources-2.6.9-r3 129
 MD5 915e8d7a0618736caa44d96968015467 files/ck-sources-2.4.27.binfmt_elf.patch 2346
-MD5 26b8e3797f4269779dc15d1a11ccfc65 files/ck-sources-2.6.9.shmLocking.patch 1765
+MD5 f211ff52010dfc1d94d2dcfc06636fd9 files/ck-sources-2.6.9.shmLocking.patch 1757
 MD5 8812f60b8d02b0b3b4c46a3311ddd851 files/ck-sources-2.6.9.smbfs.patch 2662
 MD5 d4a740ae56c2049247083af387a22a85 files/ck-sources-2.4.27.CAN-2004-0394.patch 350
 MD5 cc2afc76adbf81038af8a5f262ed5174 files/digest-ck-sources-2.4.27-r4 214

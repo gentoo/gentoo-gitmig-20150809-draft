@@ -5,7 +5,7 @@ MD5 2b671599525fa8f6972df4bf3130c139 win4lin-sources-2.4.26-r10.ebuild 2675
 MD5 530630d25910e6bd9376b63ea099655f files/win4lin-sources-2.6.9.AF_UNIX.patch 469
 MD5 2b3ddb8b8b15f8da35ade38544b57857 files/win4lin-sources-2.4.26.XDRWrapFix.patch 1499
 MD5 4d656fa3f3a47df751c0d78b64ed8353 files/win4lin-sources-2.6.9.AF_UNIX.SELinux.patch 1761
-MD5 26b8e3797f4269779dc15d1a11ccfc65 files/win4lin-sources-2.6.9.shmLocking.patch 1765
+MD5 f211ff52010dfc1d94d2dcfc06636fd9 files/win4lin-sources-2.6.9.shmLocking.patch 1757
 MD5 53fe3d26f6fc45487d69895fc07770cb files/win4lin-sources-2.6.9.binfmt_elf.patch 2350
 MD5 8812f60b8d02b0b3b4c46a3311ddd851 files/win4lin-sources-2.6.9.smbfs.patch 2662
 MD5 a9991d6324d7404ed99e79be6e44e9de files/win4lin-sources-2.6.binfmt_elf.patch 2348
