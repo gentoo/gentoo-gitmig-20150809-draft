@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.2 2003/06/21 13:42:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.3 2003/06/21 13:47:34 liquidx Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org> (21 Jun 2003)
 #
@@ -25,15 +25,15 @@
 # In addition, rpm2targz-8.0 behaves differently from rpm2targz-9.0. The newer
 # versions will autodetect rpm2cpio whereas 8.0 doesn't. 
 #
-# Also, 9.0 wil# detect if it is a source rpm and place files in 
-# ${prefix%.src} whereas 8.0 will just place them in the current directory. 
+# Also, 9.0 will place files in ${prefix%.src} if extracting a source rpm
+# whereas 8.0 will just place them in the current directory. 
 # As of writing, the current rpm2targz-9.0 in portage has been patched to
 # remove this behaviour for backwards compatibility.
 
 ECLASS="rpm"
 INHERITED="$INHERITED $ECLASS"
 
-newdepend ">=app-arch/rpm2targz-0.9"
+newdepend "app-arch/rpm2targz"
 
 rpm_src_unpack() {
 	local x prefix ext myfail OLD_DISTDIR
