@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4.ebuild,v 1.3 2003/02/13 14:48:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4.ebuild,v 1.4 2003/02/22 07:27:44 zwelch Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.phystech.com/pub/${P/_p/-pl}.tar.gz"
 HOMEPAGE="http://www.phystech.com/download/"
 DEPEND=""
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa arm"
 LICENSE="GPL-2"
 IUSE="alpha build"
 
