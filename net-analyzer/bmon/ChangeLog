@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/bmon
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.5 2004/01/08 14:38:27 lostlogic Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.6 2004/02/06 22:16:05 pyrania Exp $
+
+  06 Feb 2004; Markus Nigbur <pyrania@gentoo.org> bmon-1.2.0.ebuild,
+  bmon-1.2.1.ebuild:
+  Stable on x86, sparc; Fixed bug #40596; DESCRIPTION cleanup.
 
 *bmon-1.2.1 (08 Jan 2004)
 
