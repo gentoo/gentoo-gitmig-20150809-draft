@@ -1,29 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5cb6b7f6e11aca3e92e02a934ed7f478 openvpn-1.6.0.ebuild 1235
+MD5 d996602fe70d508a20ef1f0c40d86e36 ChangeLog 2927
+MD5 232573506834f53e9038fe52ab3aba03 metadata.xml 532
+MD5 b1cadc6077518e0349901e1af611b326 openvpn-1.1.0.ebuild 779
+MD5 72a2cec0b77073b9fb89ea8a3691b724 openvpn-1.3.1.ebuild 779
+MD5 06f6577c4321d566e22ec504429ec6d9 openvpn-1.3.2-r1.ebuild 865
 MD5 d9f4c1927a54516c83afb0d7212335a4 openvpn-1.3.2.ebuild 778
 MD5 d2d04f33d42fdec3605b6a7d69345415 openvpn-1.4.2.ebuild 830
-MD5 759e4ae720c63463d1f6524340f46a81 openvpn-1.5.0.ebuild 1135
-MD5 b1cadc6077518e0349901e1af611b326 openvpn-1.1.0.ebuild 779
-MD5 568f6a2292be96e241a4836bf90d3a0c ChangeLog 2826
-MD5 72a2cec0b77073b9fb89ea8a3691b724 openvpn-1.3.1.ebuild 779
-MD5 232573506834f53e9038fe52ab3aba03 metadata.xml 532
-MD5 06f6577c4321d566e22ec504429ec6d9 openvpn-1.3.2-r1.ebuild 865
 MD5 e470e6326ba76d740b017cdc8a3a56dd openvpn-1.5.0-r1.ebuild 1237
+MD5 759e4ae720c63463d1f6524340f46a81 openvpn-1.5.0.ebuild 1135
+MD5 0098110c036f96c6796cda6a73411360 openvpn-1.6.0.ebuild 1245
 MD5 7a773fcca001e35d171b15d68d435d97 files/digest-openvpn-1.1.0 65
 MD5 45d5378d808bbb444fe4435d781b4329 files/digest-openvpn-1.3.1 65
 MD5 c496ea99e1e80b1d0ea01f1591351f60 files/digest-openvpn-1.3.2 65
+MD5 c496ea99e1e80b1d0ea01f1591351f60 files/digest-openvpn-1.3.2-r1 65
 MD5 e21b10320b90f5cb54d5e90d2d9ad8eb files/digest-openvpn-1.4.2 65
 MD5 51eea8a2c9a5189571de49ad32b88ac1 files/digest-openvpn-1.5.0 65
-MD5 64180e225493c8fc2e085071ff65897b files/digest-openvpn-1.6.0 65
-MD5 c496ea99e1e80b1d0ea01f1591351f60 files/digest-openvpn-1.3.2-r1 65
 MD5 51eea8a2c9a5189571de49ad32b88ac1 files/digest-openvpn-1.5.0-r1 65
+MD5 64180e225493c8fc2e085071ff65897b files/digest-openvpn-1.6.0 65
 MD5 62150e7ee165ac0f0db05fbbfefe17bd files/openvpn 1019
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBcfdf94CCfB4KcwwRAv8gAJ96Odl82oWOkP3BKj2N7mPyFVxmAACdECNr
-6afSha9I933t/6ry6yYy/Xc=
-=TKw5
------END PGP SIGNATURE-----
