@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.4-r1.ebuild,v 1.4 2004/01/08 04:11:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.4-r2.ebuild,v 1.1 2004/01/08 04:11:46 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
 DESCRIPTION="Apache module for PHP"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa ~arm ~amd64"
+KEYWORDS="x86 ~sparc ~ppc ~alpha ~hppa ~arm ~amd64"
 
 detectapache() {
 	local domsg=
@@ -49,24 +49,20 @@ PHPSAPI="apache${APACHEVER}"
 # the php eclass requires the PHPSAPI setting!
 # In this case the PHPSAPI setting is dependant on the detectapache function
 # above this point as well!
-inherit php-2 eutils
+inherit php-sapi eutils
 
-DEPEND="${DEPEND}
-	>=net-www/apache-1.3.26-r2
-	apache2? ( >=net-www/apache-2.0.43-r1 )"
-PDEPEND="${PDEPEND} ~dev-php/php-core-${PV}"
-PROVIDE="virtual/php-4.3.4"
+DEPEND_EXTRA=">=net-www/apache-1.3.26-r2
+			  apache2? ( >=net-www/apache-2.0.43-r1 )"
+DEPEND="${DEPEND} ${DEPEND_EXTRA}"
+RDEPEND="${RDEPEND} ${DEPEND_EXTRA}"
 
 src_unpack() {
 	multiinstwarn
 	detectapache domsg
-	php_src_unpack
+	php-sapi_src_unpack
 }
 
 src_compile() {
-	#no readline on server SAPI
-	myconf="${myconf} --without-readline"
-
 	# Every Apache2 MPM EXCEPT prefork needs Zend Thread Safety
 	if [ -n "${USE_APACHE2}" ]; then
 		APACHE2_MPM="`apache2 -l |egrep 'worker|perchild|leader|threadpool|prefork'|cut -d. -f1|sed -e 's/^[[:space:]]*//g;s/[[:space:]]+/ /g;'`"
@@ -80,12 +76,12 @@ src_compile() {
 	#use apache2 \
 	myconf="${myconf} --with-apxs${USE_APACHE2}=/usr/sbin/apxs${USE_APACHE2}"
 
-	php_src_compile
+	php-sapi_src_compile
 }
 
 
 src_install() {
-	php_src_install
+	php-sapi_src_install
 	einfo "Adding extra symlink to php.ini for Apache${USE_APACHE2}"
 	dodir /etc/apache${USE_APACHE2}/conf/
 	dodir ${PHPINIDIRECTORY}
@@ -118,30 +114,32 @@ apache2msg() {
 
 multiinstwarn() {
 	ewarn "Due to some previous bloopers with PHP and slotting, you may have"
-	ewarn "multiple copies of mod_php installed. Please look at the autoclean"
+	ewarn "multiple instances of mod_php installed. Please look at the autoclean"
 	ewarn "output at the end of the emerge and unmerge all but relevant"
-	ewarn "copies."
+	ewarn "instances."
 }
 
 apache2fix() {
-	einfo "Attemping to update /etc/conf.d/apache2 automatically for the PHP/PHP4 change."
-	local oldfile="/etc/conf.d/apache2.old.`date +%Y%m%d%H%M%S`"
-	cp /etc/conf.d/apache2 ${oldfile}
-	sed -re 's,-D PHP\>,-D PHP4,g' ${oldfile}  <${oldfile} >/etc/conf.d/apache2
+	if egrep -q -- '-D PHP\>' /etc/conf.d/apache2; then
+		einfo "Attemping to update /etc/conf.d/apache2 automatically for the PHP/PHP4 change."
+		local oldfile="/etc/conf.d/apache2.old.`date +%Y%m%d%H%M%S`"
+		cp /etc/conf.d/apache2 ${oldfile}
+		sed -re 's,-D PHP\>,-D PHP4,g' ${oldfile}  <${oldfile} >/etc/conf.d/apache2
+	fi
 }
 
 
 pkg_preinst() {
 	multiinstwarn
 	[ "${APACHEVER}" -eq '2' ] && apache2fix
-	php_pkg_preinst
+	php-sapi_pkg_preinst
 }
 
 pkg_postinst() {
-	php_pkg_postinst
+	php-sapi_pkg_postinst
 	multiinstwarn
 	einfo "To have Apache run php programs, please do the following:"
-	if [ "`use apache2`" ] ; then
+	if [ -n "${USE_APACHE2}" ]; then
 		apache2msg
 	else
 		einfo "1. Execute the command:"
@@ -154,7 +152,7 @@ pkg_postinst() {
 
 pkg_config() {
 	multiinstwarn
-	if [ -n "${USE_APACHE2}" ] ; then
+	if [ -n "${USE_APACHE2}" ]; then
 		apache2msg
 	else
 		${ROOT}/usr/sbin/apacheaddmod \
