@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/scrot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.1 2002/04/24 09:39:13 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.2 2002/06/29 02:13:35 seemant Exp $
+
+*xzgv-0.7-r1 (28 Jun 2002)
+
+  28 Jun 2002; Seemant Kulleen <seemant@gentoo.org> xzgv-0.7-r1.ebuild
+  files/digest-xzgv-0.7-r1 :
+
+  LFH/man page fixes; SLOT and LICENSE
 
 *xzgv-0.7 (24 April 2002)
 
