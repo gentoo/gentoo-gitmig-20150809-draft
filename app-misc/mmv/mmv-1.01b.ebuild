@@ -1,22 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.3 2003/09/05 12:10:36 msterret Exp $
-
-# orig.tar.gz and debian-diff contains an underscore in the name
-# whereas the other files (including the unpacked sources)
-# contain a minus sign !!
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.4 2003/09/21 11:11:12 aliz Exp $
 
 inherit eutils
 
-
 DESCRIPTION="Move/copy/append/link multiple files according to a set of wildcard patterns."
-HOMEPAGE=" http://packages.debian.org/unstable/utils/mmv.html"
+HOMEPAGE="http://packages.debian.org/unstable/utils/mmv.html"
 
 PATCH_DEB_VER="12"
-_P="${PN}_${PV}"
 
-SRC_URI="http://ftp.debian.org/debian/pool/main/m/mmv/${_P}.orig.tar.gz
-	http://ftp.debian.org/debian/pool/main/m/mmv/${_P}-${PATCH_DEB_VER}.diff.gz"
+SRC_URI="mirror://debian/pool/main/m/mmv/${P/-/_}.orig.tar.gz
+	mirror://debian/pool/main/m/mmv/${P/-/_}-${PATCH_DEB_VER}.diff.gz"
 
 LICENSE="freedist"
 SLOT="0"
@@ -26,8 +20,8 @@ KEYWORDS="x86"
 S=${WORKDIR}/${P}.orig
 
 src_unpack() {
-	unpack ${_P}.orig.tar.gz
-	epatch ${DISTDIR}/${_P}-${PATCH_DEB_VER}.diff.gz
+	unpack ${P/-/_}.orig.tar.gz
+	epatch ${DISTDIR}/${P/-/_}-${PATCH_DEB_VER}.diff.gz
 }
 
 src_compile() {

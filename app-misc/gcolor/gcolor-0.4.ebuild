@@ -1,6 +1,6 @@
-# Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcolor/gcolor-0.4.ebuild,v 1.1 2002/12/26 02:20:14 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcolor/gcolor-0.4.ebuild,v 1.2 2003/09/21 11:11:11 aliz Exp $
 
 DESCRIPTION="A simple color selector."
 HOMEPAGE="http://gcolor.sourceforge.net/"
