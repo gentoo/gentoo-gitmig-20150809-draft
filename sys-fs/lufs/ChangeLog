@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lufs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.20 2005/02/02 17:09:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.21 2005/02/14 19:34:26 genstef Exp $
+
+  14 Feb 2005; Stefan Schweizer <genstef@gentoo.org>
+  +files/lufs-no-kernel.patch, lufs-0.9.7-r3.ebuild:
+  Fixing configure to not consider kernel sources thanks to Frank Van Damme
+  <frank.vandamme@student.kuleuven.ac.be> in bug 78790
 
   02 Feb 2005; Stefan Schweizer <genstef@gentoo.org> lufs-0.9.7-r3.ebuild:
   Removing autofs stuff, because it has no chance to work, thanks to Michael S

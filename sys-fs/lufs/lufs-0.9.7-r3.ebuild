@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r3.ebuild,v 1.4 2005/02/02 17:09:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r3.ebuild,v 1.5 2005/02/14 19:34:26 genstef Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="debug"
 DEPEND="sys-fs/lufis
-		|| ( =sys-devel/automake-1.7*
-			=sys-devel/automake-1.8.5-r1 )
+		=sys-devel/automake-1.7*
 		=sys-devel/autoconf-2.5*"
 
 src_unpack() {
@@ -24,6 +23,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-fPIC.patch
 	epatch ${FILESDIR}/lufs-automount-port.diff
 	epatch ${FILESDIR}/${P}-enable-gnome-2.patch
+	epatch ${FILESDIR}/lufs-no-kernel.patch
 
 	filesystems="ftpfs localfs sshfs"
 }
@@ -38,8 +38,7 @@ src_compile() {
 
 	einfo "Compiling for ${filesystems}"
 	unset ARCH
-	econf --with-kheaders=${ROOT}/usr/include \
-		 $(use_enable debug) || die
+	econf $(use_enable debug) || die
 
 	cd filesystems
 	for i in ${filesystems}

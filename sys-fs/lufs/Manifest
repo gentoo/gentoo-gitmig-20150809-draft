@@ -1,9 +1,9 @@
 MD5 af8170bde5ae59fbcc13596c328fa8bb lufs-0.9.5.ebuild 1571
-MD5 21b18ca4d40b35a3c9c342480c3f8347 lufs-0.9.7-r3.ebuild 1661
+MD5 5f5858e23e4d47e6c891995c807522a7 lufs-0.9.7-r3.ebuild 1622
 MD5 42a13004deaa168668edda9d84c37a58 lufs-0.7.0.ebuild 1300
 MD5 5698c7df416433a5d59bace8eb35c131 lufs-0.8.0-r1.ebuild 1337
 MD5 7726048056881c32f36d627b15d65875 lufs-0.9.7-r2.ebuild 2257
-MD5 9f53e54669b52bda1fd97eda1fe431c1 ChangeLog 4970
+MD5 285e4b8877ca31c27556a1e5b9158003 ChangeLog 5208
 MD5 2d8e24e9e409e35ee446ec8d59f23c8d metadata.xml 269
 MD5 3f5d97db2f2eedc51f0ae99618a924c2 files/lufs-0.7.0-init 361
 MD5 5bb142fc118cf319966c128949fba3bb files/gentoo-gcc332fix-0.9.7.patch 453
@@ -17,3 +17,4 @@ MD5 acf6168850b8d8eeb29cda95f24bf348 files/lufs-0.9.7-enable-gnome-2.patch 3079
 MD5 6b6cf45b49b2229781b000b9ae2a0027 files/lufs-automount-port.diff 754
 MD5 3f5d97db2f2eedc51f0ae99618a924c2 files/lufs-0.8.0-init 361
 MD5 1cc4c0f0d3a43f97ba10d59b026a6c6f files/lufs-0.9.7-fPIC.patch 714
+MD5 1a4f221847326b8ed2360ac70d5d8626 files/lufs-no-kernel.patch 3347
