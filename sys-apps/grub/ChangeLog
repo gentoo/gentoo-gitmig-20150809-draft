@@ -1,11 +1,15 @@
 # ChangeLog for sys-apps/grub
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/ChangeLog,v 1.20 2003/03/11 05:39:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/ChangeLog,v 1.21 2003/04/11 18:12:13 method Exp $
 
   24 Jan 2002; <woodchip@gentoo.org> *.ebuild : Reorder mount-boot.eclass
   function, clean some fluff.
 
 *grub-0.93.20030118 (18 Jan 2003)
+
+  11 Apr 2003; Joshua Brindle <method@gentoo.org> grub-0.92-r1.ebuild,
+  grub-0.93.20030118.ebuild:
+  Added filter-flags -fstack-protector
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> grub-0.93.20030118.ebuild :
   This is definitely not for mips.  Maybe sometime in the future...
