@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r2.ebuild,v 1.10 2005/03/01 18:58:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r2.ebuild,v 1.11 2005/03/09 01:01:55 vapier Exp $
 
 inherit alternatives eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.x.org/R5contrib/${MY_P}.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 mips ppc ppc64 sparc x86 ppc-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos sparc x86"
 IUSE="tiff jpeg png"
 
 RDEPEND="virtual/x11
