@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.49 2004/10/12 17:24:25 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.50 2004/10/17 11:38:40 absinthe Exp $
+
+  17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> sqlite-2.8.14.ebuild:
+  stable on amd64.
 
   12 Oct 2004; Guy Martin <gmsoft@gentoo.org>
   files/sqlite-2.8.15-alignement-fix.patch:
