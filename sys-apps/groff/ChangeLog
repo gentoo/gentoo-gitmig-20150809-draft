@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/groff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.43 2004/09/13 07:29:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.44 2004/09/19 21:19:05 vapier Exp $
+
+*groff-1.19.1-r1 (19 Sep 2004)
+
+  19 Sep 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/groff-1.19.1-stack.patch, +groff-1.19.1-r1.ebuild:
+  Add patch to fix stack issues with X.org and such #64117 by Matteo Settenvini
+  and Stephane LOEUILLET.
 
   13 Sep 2004; <solar@gentoo.org> groff-1.19.1.ebuild:
   minor touchups to the ebuild

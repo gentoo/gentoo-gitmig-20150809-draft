@@ -1,21 +1,34 @@
-MD5 0731e5193754b6fcbc962d13f0eef29b groff-1.18.1-r4.ebuild 3146
-MD5 4529f59a57c05a82ed794e90442952db groff-1.19.1.ebuild 3363
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b9c630b6fd14be13a38dd0caf3bb5fab ChangeLog 6334
 MD5 04bb47e5545e19beeb54970d16368d90 groff-1.18.1-r1.ebuild 2303
-MD5 a5e8030b4580d14da6770c540d755c11 groff-1.18.1-r3.ebuild 2985
-MD5 3c5cf62ff5c8b1393960a31a8ea2a610 groff-1.19.ebuild 3307
 MD5 d68bb03ebc39a7b8a3c546424bba7132 groff-1.18.1-r2.ebuild 2834
-MD5 336577f88efe462274836f25ad92aeae ChangeLog 6084
+MD5 a5e8030b4580d14da6770c540d755c11 groff-1.18.1-r3.ebuild 2985
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 a94a3de58bb54769a2793e1f8602a618 files/groff_1.18.1-7-fix.patch 551
-MD5 e0ea59264695cc68dc9947e4611dde5d files/groff-man-UTF-8.diff 391
-MD5 c43ddaf604dd389afc6107d79b90ce6c files/groff-1.18-infoext.patch 673
+MD5 0731e5193754b6fcbc962d13f0eef29b groff-1.18.1-r4.ebuild 3146
+MD5 3c5cf62ff5c8b1393960a31a8ea2a610 groff-1.19.ebuild 3307
+MD5 4529f59a57c05a82ed794e90442952db groff-1.19.1.ebuild 3363
+MD5 8fec09195793a74f9733ce4fa314dae5 groff-1.19.1-r1.ebuild 3442
 MD5 e35d3d0986726ce27b9392409d9f6476 files/digest-groff-1.18.1-r1 65
 MD5 b887e99fa5e1252f1bf827af9892a238 files/digest-groff-1.18.1-r2 132
 MD5 b887e99fa5e1252f1bf827af9892a238 files/digest-groff-1.18.1-r3 132
-MD5 b887e99fa5e1252f1bf827af9892a238 files/digest-groff-1.18.1-r4 132
-MD5 b79e74dab8ceadf74f153032ad30eea3 files/digest-groff-1.19.1 65
-MD5 11e713f291a441e744ed38f94a002097 files/groff-1.17.2-r3-gentoo.diff 984
-MD5 98060417290f3c427f5a3406b21f8da9 files/groff-1.18.1-no-color-segfault.patch 896
-MD5 371e8d0b682fe5a41ffe7d38bb8e1b0a files/digest-groff-1.19 130
 MD5 a48d15e8fbf117ad6d82f9198717be29 files/groff-1.17.2-infoext.patch 594
+MD5 11e713f291a441e744ed38f94a002097 files/groff-1.17.2-r3-gentoo.diff 984
+MD5 c43ddaf604dd389afc6107d79b90ce6c files/groff-1.18-infoext.patch 673
 MD5 ab6a81383557e8cf8eed1e9b15d45540 files/groff-1.18-no-netpbm-depend.patch 367
+MD5 98060417290f3c427f5a3406b21f8da9 files/groff-1.18.1-no-color-segfault.patch 896
+MD5 e0ea59264695cc68dc9947e4611dde5d files/groff-man-UTF-8.diff 391
+MD5 a94a3de58bb54769a2793e1f8602a618 files/groff_1.18.1-7-fix.patch 551
+MD5 b887e99fa5e1252f1bf827af9892a238 files/digest-groff-1.18.1-r4 132
+MD5 371e8d0b682fe5a41ffe7d38bb8e1b0a files/digest-groff-1.19 130
+MD5 b79e74dab8ceadf74f153032ad30eea3 files/digest-groff-1.19.1 65
+MD5 b79e74dab8ceadf74f153032ad30eea3 files/digest-groff-1.19.1-r1 65
+MD5 b70471bdc7015ddf030d176b3a0f2d5f files/groff-1.19.1-stack.patch 3659
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBTffgHTu7gpaalycRAl7IAKCWckfQK78DMHnTfo8B62K5MUD9dQCfSOSi
+wFy5pSyYb75JTy/I312qzRE=
+=vuD5
+-----END PGP SIGNATURE-----
