@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/tar
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/ChangeLog,v 1.13 2003/01/18 19:08:18 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/ChangeLog,v 1.14 2003/02/09 17:24:12 gmsoft Exp $
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> tar-1-13-25-r3.ebuild :
+  Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
