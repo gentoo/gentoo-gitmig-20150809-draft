@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.0-r1.ebuild,v 1.1 2004/03/25 12:54:09 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.2.0-r2.ebuild,v 1.1 2004/03/31 13:02:25 tantive Exp $
 
 DESCRIPTION="Heartbeat high availability cluster manager"
 HOMEPAGE="http://www.linux-ha.org"
@@ -38,6 +38,7 @@ src_unpack() {
 	mv ltmain.sh ltmain.orig
 	echo "export _POSIX2_VERSION=199209" > ltmain.sh
 	cat ltmain.orig >> ltmain.sh
+	epatch ${FILESDIR}/${P}-failbackfix.patch
 	fix_makefiles
 }
 

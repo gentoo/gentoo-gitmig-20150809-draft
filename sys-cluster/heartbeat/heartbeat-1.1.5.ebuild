@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.1.5.ebuild,v 1.2 2004/02/11 07:39:31 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.1.5.ebuild,v 1.3 2004/03/31 13:02:25 tantive Exp $
 
 DESCRIPTION="Heartbeat high availability cluster manager"
 HOMEPAGE="http://www.linux-ha.org"
@@ -17,7 +17,8 @@ DEPEND="dev-libs/popt
 	ldirectord? (	sys-cluster/ipvsadm
 			dev-perl/libwww-perl
 			dev-perl/perl-ldap
-			dev-perl/libnet )"
+			dev-perl/libnet )
+	>=sys-devel/libtool-1.5.2-r5"
 
 # need to add dev-perl/Mail-IMAPClient inside ldirectord above
 

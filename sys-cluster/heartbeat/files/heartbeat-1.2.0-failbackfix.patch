@@ -1,0 +1,11 @@
+diff -ur heartbeat-1.2.0/heartbeat/hb_resource.c heartbeat-1.2.0.new/heartbeat/hb_resource.c
+--- heartbeat-1.2.0/heartbeat/hb_resource.c	2004-02-13 18:57:31.000000000 +0100
++++ heartbeat-1.2.0.new/heartbeat/hb_resource.c	2004-03-26 08:22:00.000000000 +0100
+@@ -825,6 +825,7 @@
+ 					/* FYI: This also got noted earlier */
+ 					procinfo->i_hold_resources
+ 					|=	HB_FOREIGN_RSC;
++					rsc_needs_failback = TRUE;
+ 					other_is_stable = 1;
+ 					if (ANYDEBUG) {
+ 						ha_log(LOG_DEBUG
