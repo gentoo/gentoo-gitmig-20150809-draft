@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.44.ebuild,v 1.2 2002/12/09 04:37:26 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.45-r4.ebuild,v 1.1 2002/12/11 15:28:57 carpaski Exp $
 
 IUSE="build"
 
@@ -8,19 +8,19 @@ IUSE="build"
 # cause everything to segfault !!
 export SANDBOX_DISABLED="1"
 
-S=${WORKDIR}/${P}
+S=${WORKDIR}/${PF}
 SLOT="0"
 DESCRIPTION="Portage ports system"
-SRC_URI=""
+SRC_URI="http://gentoo.twobit.net/portage/${PF}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
 KEYWORDS="x86 ppc sparc alpha"
 LICENSE="GPL-2"
 RDEPEND="!build? ( >=sys-apps/fileutils-4.1.8 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=sys-apps/bash-2.05a )"
 
 src_unpack() {
-	#We are including the Portage bzipped tarball on CVS now, so that if a person's
-	#emerge gets hosed, they are not completely stuck.
-	cd ${WORKDIR}; tar xjf ${FILESDIR}/portage-${PV}.tar.bz2
+	cd ${WORKDIR}
+	echo tar xjf ${DISTDIR}/${PF}.tar.bz2
+	tar xjf ${DISTDIR}/${PF}.tar.bz2 || die "No portage tarball in distfiles."
 }
 
 src_compile() {
@@ -106,6 +106,9 @@ pkg_postinst() {
 		sparc )
 			ln -sf ../usr/portage/profiles/default-sparc-1.0 make.profile
 			;;
+		sparc64 )
+			ln -sf ../usr/portage/profiles/default-sparc64-1.0 make.profile
+			;;
 		x86 )
 			ln -sf ../usr/portage/profiles/default-1.0 make.profile
 			;;
@@ -173,8 +176,22 @@ pkg_postinst() {
 	# Changes in the size of auxdbkeys can cause aux_get() problems.
 	echo -n ">>> Clearing invalid entries in dependancy cache..."
 	cd ${ROOT}var/cache/edb/dep
-	find ${ROOT}var/cache/edb/dep -type f -exec wc -l {} \; | egrep -v "^ *"$(python -c 'import portage; print str(len(portage.auxdbkeys))') | sed 's:^ \+[0-9]\+ \+\([^ ]\+\)$:\1:' 2>/dev/null | xargs -n 50 -r rm -f
+	# 2>&1 >/dev/null <---- Kills stdout, replaces it with stderr
+	AUXDBKEYLEN="$(python -c 'import portage,sys; sys.stderr.write(str(len(portage.auxdbkeys)))' 2>&1 >/dev/null)"
+	find ${ROOT}var/cache/edb/dep -type f -exec wc -l {} \; | egrep -v "^ *${AUXDBKEYLEN}" | sed 's:^ \+[0-9]\+ \+\([^ ]\+\)$:\1:' 2>/dev/null | xargs -n 50 -r rm -f
 	echo " ...done!"
+
+	# Fix the long(time.time()) problems users might have.
+	echo -n "Looking for problems in CONTENTS files... "
+	for FILE in $(find ${ROOT}/var/db/pkg -name CONTENTS); do
+		if egrep -q '^obj.*L$' ${FILE}; then
+			echo ${FILE}
+			mv ${FILE} ${FILE}.orig
+			sed '/^obj.*L$/s/L$//' ${FILE}.orig > ${FILE}
+			rm ${FILE}.orig
+		fi
+	done
+	echo "...done!"
 	
 	echo
 	echo
