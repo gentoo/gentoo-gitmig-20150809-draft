@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.9.ebuild,v 1.3 2004/11/24 21:30:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.9.ebuild,v 1.4 2005/01/30 03:08:13 jnc Exp $
 
 inherit flag-o-matic games
 

@@ -1,6 +1,19 @@
-MD5 a7afa5aa9bab1f341784e496e21db49a ChangeLog 2116
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6588086204c058663809c9999c7f252e ChangeLog 2283
+MD5 2655dc80bff941349ed9468bda24c5f3 glob2-0.8.11.ebuild 1273
+MD5 60a9e69f40b109778c231d319b1d75e7 glob2-0.8.9.ebuild 1274
 MD5 be3faa436a456146cab34d1a7ba5e534 metadata.xml 546
-MD5 3319f2271dcffbca630f080601bfc2f2 glob2-0.8.10.ebuild 937
-MD5 91b861e606812a2c5b70caa6df209ac7 glob2-0.8.9.ebuild 1277
+MD5 9a94a412c5c15d8a6bf1e9a8656e1ffc glob2-0.8.10.ebuild 931
+MD5 da2177e9535fd8deab07d52e847b30a4 files/glob2-0.8.11-configure_speex.patch 2173
+MD5 00b6b6b01afb0aa92162ea1485efcc86 files/digest-glob2-0.8.11 65
 MD5 de4d5ea54b6291db91857fb227244587 files/digest-glob2-0.8.9 64
 MD5 de372c45a3d3c17421e28b07dbf1f49d files/digest-glob2-0.8.10 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB/E+z+uC/ViVka/0RApytAKC2/0eB+VQCfEBDJtd+xEjxgb6bGACgi4f6
+SMcb140uO8KXiHnydFCWKNg=
+=u4sf
+-----END PGP SIGNATURE-----
