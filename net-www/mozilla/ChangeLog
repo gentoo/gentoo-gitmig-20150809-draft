@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.50 2002/11/20 15:10:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.51 2002/11/21 22:19:43 azarah Exp $
+
+  21 Nov 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2_beta.ebuild :
+
+  Add pkgconfig to DEPEND, closing bug #11036.
 
   20 Nov 2002; Martin Schlemmer <azarah@gentoo.org> *.ebuild :
   Change to new shared nsplugin scheme, bug #10056.  Add strip-flags,
