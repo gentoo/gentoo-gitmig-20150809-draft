@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.15 2004/06/25 03:15:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.16 2004/07/16 18:07:33 aliz Exp $
+
+*libevent-0.8a (16 Jul 2004)
+
+  16 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> libevent-0.8a.ebuild:
+  Version bump, ebuild contributed by Justin Guyett <justin@soze.net>.
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> libevent-0.7c.ebuild:
   QA - IUSE
