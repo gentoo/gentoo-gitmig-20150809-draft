@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mhwaveedit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.4 2004/06/25 00:10:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.5 2004/10/22 11:40:23 squinky86 Exp $
+
+  22 Oct 2004; Jon Hood <squinky86@gentoo.org> +files/1.2.3-gcc34.patch,
+  mhwaveedit-1.2.3.ebuild:
+  Added gcc-3.4 fix, #68158.
 
   03 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
   mhwaveedit-1.2.1.ebuild, mhwaveedit-1.2.3.ebuild:

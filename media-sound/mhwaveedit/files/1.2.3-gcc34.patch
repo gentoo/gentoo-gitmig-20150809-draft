@@ -1,0 +1,11 @@
+diff -Naur mhwaveedit-1.2.3.vanilla/src/filetypes.c mhwaveedit-1.2.3/src/filetypes.c
+--- mhwaveedit-1.2.3.vanilla/src/filetypes.c	2003-05-27 13:36:05.000000000 -0500
++++ mhwaveedit-1.2.3/src/filetypes.c	2004-10-21 21:33:10.755276896 -0500
+@@ -613,6 +613,7 @@
+ 	     info->samplerate,info->channels); */
+ 	  if (sf_format_check(info)) return FALSE;
+      outer:
++     {}
+      }
+      /* Try the left out suggestions finally... */
+      i = fmt->samplesize;

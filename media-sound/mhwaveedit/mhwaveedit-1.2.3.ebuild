@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.2.3.ebuild,v 1.4 2004/06/25 00:10:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.2.3.ebuild,v 1.5 2004/10/22 11:40:23 squinky86 Exp $
+
+inherit eutils
 
 IUSE="gtk2 oss sdl"
 
@@ -17,6 +19,12 @@ DEPEND="gtk2? ( >=x11-libs/gtk+-2.0.0 )
 	sdl? ( >=media-libs/libsdl-1.2.3 )
 	>=media-libs/libsndfile-1.0.1
 	>=media-libs/portaudio-18"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc34.patch
+}
 
 src_compile() {
 	econf `use_enable gtk2` `use_with oss` `use_with sdl` || die
