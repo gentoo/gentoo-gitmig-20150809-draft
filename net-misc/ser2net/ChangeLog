@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ser2net
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.6 2005/03/18 20:05:43 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.7 2005/03/20 18:57:59 weeve Exp $
+
+  20 Mar 2005; Jason Wever <weeve@gentoo.org> ser2net-2.2-r1.ebuild:
+  Added ~sparc keyword as it was dropped in the version bump.
 
 *ser2net-2.2-r1 (18 Mar 2005)
 
