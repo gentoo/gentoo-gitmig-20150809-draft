@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.6.1-r1.ebuild,v 1.1 2004/01/21 02:48:49 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.6.1-r1.ebuild,v 1.2 2004/01/21 05:06:27 strider Exp $
 
 inherit java-pkg
 
@@ -50,5 +50,8 @@ src_install () {
 	java-pkg_dojar dist/${PN}*.jar || die "Unable to install"
 	dodoc RELEASE-NOTES.txt LICENSE
 	dohtml STATUS.html PROPOSAL.html
-	dohtml -r dist/docs/*
+
+	if [ -n "`use doc`" ] ; then
+		dohtml -r dist/docs/*
+	fi
 }
