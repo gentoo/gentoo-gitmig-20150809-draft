@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.12.ebuild,v 1.1 2002/11/01 17:21:29 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.12.ebuild,v 1.2 2002/11/02 15:43:18 foser Exp $
 
 DESCRIPTION="rss news aggregator"
 HOMEPAGE="http://www.nongnu.org/straw/"
@@ -19,6 +19,13 @@ DEPEND="virtual/python
 	>=dev-python/egenix-mx-base-2"
 
 S="${WORKDIR}/${P}"
+
+src_unpack() {
+	unpack ${A}
+	
+	# fix problem which prevents updates
+	patch -d ${S} -p0 < ${FILESDIR}/gentoo-${P}.patch
+}
 
 src_compile() {
 	emake || die

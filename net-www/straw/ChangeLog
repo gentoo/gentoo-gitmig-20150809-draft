@@ -1,8 +1,11 @@
 # ChangeLog for net-www/straw
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.1 2002/11/01 17:21:29 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.2 2002/11/02 15:43:18 foser Exp $
 
 *straw-0.12 (01 Nov 2002)
 
   01 Nov 2002; foser <foser@gentoo.org> straw-0.12.ebuild ChangeLog :
   New commit
+
+  02 Nov 2002; foser <foser@gentoo.org> straw-0.12.ebuild :
+  Added patch to fix update problem
