@@ -1,6 +1,10 @@
 # ChangeLog for media-video/linuxvideostudio
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linuxvideostudio/ChangeLog,v 1.3 2004/06/25 00:43:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linuxvideostudio/ChangeLog,v 1.4 2004/06/28 03:29:39 agriffis Exp $
+
+  27 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  linuxvideostudio-0.1.7.ebuild:
+  QA - fix use invocation
 
 *linuxvideostudio-0.1.7 (29 Sep 2003)
 

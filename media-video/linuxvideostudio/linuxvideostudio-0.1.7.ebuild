@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linuxvideostudio/linuxvideostudio-0.1.7.ebuild,v 1.3 2004/06/25 00:43:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linuxvideostudio/linuxvideostudio-0.1.7.ebuild,v 1.4 2004/06/28 03:29:39 agriffis Exp $
 
 DESCRIPTION="small-'n-simple GUI for the MJPEG-tools"
 HOMEPAGE="http://ronald.bitfreak.net/"
@@ -22,7 +22,7 @@ DEPEND=">=media-video/mjpegtools-1.6.0-r7
 src_compile() {
 	local myconf
 	# setting the --with-lircd option somehow makes the test fail
-	if [ -z $(use lirc) ]; then
+	if ! use lirc; then
 		myconf="--without-lircd"
 	fi
 	econf $myconf || die
