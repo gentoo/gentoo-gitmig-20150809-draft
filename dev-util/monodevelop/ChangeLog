@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.19 2005/02/19 22:07:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.20 2005/03/07 19:54:39 latexer Exp $
+
+*monodevelop-0.5.1-r4 (07 Mar 2005)
+
+  07 Mar 2005; Peter Johanson <latexer@gentoo.org>
+  +files/monodevelop-0.5.1-iconloader.diff, +monodevelop-0.5.1-r4.ebuild:
+  Add a fix for icon loading with some gtk+ themes. See bug #83607. Thanks to
+  Alexander Kaiser for the fix.
 
 *monodevelop-0.5.1-r3 (08 Feb 2005)
 

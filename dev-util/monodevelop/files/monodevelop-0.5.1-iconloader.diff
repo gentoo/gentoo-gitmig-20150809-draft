@@ -1,0 +1,32 @@
+Index: Core/src/MonoDevelop.Gui.Utils/FileIcons/FileIconLoader.cs
+===================================================================
+--- ./src/Libraries/MonoDevelop.Gui.Utils/FileIcons/FileIconLoader.cs	(revision 2122)
++++ ./src/Libraries/MonoDevelop.Gui.Utils/FileIcons/FileIconLoader.cs	(working copy)
+@@ -44,20 +44,21 @@
+ 		{
+ 			Gdk.Pixbuf bf = (Gdk.Pixbuf) iconHash [type];
+ 			if (bf == null) {
+-				int i;
+-				string p_filename = "gnome-fs-regular";
++				const string default_icon_location = "../data/resources/icons/gnome-fs-regular.png";
++				string p_filename = "";
+ 				try {
++					int i;
+ 					p_filename = iconTheme.LookupIcon (type, 24, new Gnome.IconData (), out i);
+-					if (p_filename == "") {
+-						return new Gdk.Pixbuf ("../data/resources/icons/gnome-fs-regular.png");
++					if (p_filename.Equals ("")) {
++						p_filename = default_icon_location;
+ 					}
+ 				} catch {
+-					return new Gdk.Pixbuf ("../data/resources/icons/gnome-fs-regular.png");
++					p_filename = default_icon_location;
+ 				}
+ 				try {
+ 					bf = new Gdk.Pixbuf (p_filename);
+ 				} catch {
+-					bf = new Gdk.Pixbuf ("../data/resources/icons/gnome-fs-regular.png");
++					bf = new Gdk.Pixbuf (default_icon_location);
+ 				}
+ 				iconHash [type] = bf;
+ 			}
