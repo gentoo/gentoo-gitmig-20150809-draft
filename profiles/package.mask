@@ -23,7 +23,9 @@
 
 # <hannes@gentoo.org> (09 Feb 2003)
 # doesn't work with kde, bug #15245
+# added libxslt-1.0.25 cause it depends on libxml2-2.5.2
 =dev-libs/libxml2-2.5.2
+=dev-libs/libxslt-1.0.25
 
 # <carpaski@gentoo.org> (07 Feb 2003)
 # Testing for UserPriv compile. Works, but breaks a couple ebuilds.
