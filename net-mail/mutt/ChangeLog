@@ -1,13 +1,17 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.15 2002/12/13 11:00:07 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.16 2002/12/14 17:55:26 agriffis Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *mutt-1.4-r3 (03 Sept 2002) 
+
+  14 Dec 2002; Aron Griffis <agriffis@gentoo.org> mutt-1.4-r3.ebuild :
+
+  Added ~alpha to KEYWORDS
 
   07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> mutt-1.4-r2.ebuild, mutt-1.4-r3.ebuild :
   Changed sparc64 to sparc keyword
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   16 Nov 2002; Calum Selkirk <cselkirk@gentoo.org> mutt-1.4-r3.ebuild :
 
