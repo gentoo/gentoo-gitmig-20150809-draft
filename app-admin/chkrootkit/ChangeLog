@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/chkrootkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.8 2003/02/12 02:16:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/ChangeLog,v 1.9 2003/02/27 11:06:57 aliz Exp $
+
+*chrootkit-0.39a (27 Feb 2003)
+
+  27 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump. Found by Daniel Seyffer <gentoo-bugs@seyffer.de> in #15743.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
