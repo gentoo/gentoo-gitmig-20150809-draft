@@ -1,6 +1,16 @@
 # ChangeLog for dev-lisp/ecls
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.12 2004/11/30 16:32:40 mkennedy Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.13 2005/01/13 22:44:00 mkennedy Exp $
+
+*ecls-0.9e (13 Jan 2005)
+
+  13 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org> metadata.xml,
+  -files/0.9c-gcc-3.4-gentoo.patch, -files/0.9c-texinfo-gentoo.patch,
+  +files/0.9e-headers-gentoo.patch, +files/0.9e-texinfo-gentoo.patch,
+  -files/ecl-texi-gentoo.patch, -ecls-0.2.ebuild, -ecls-0.9b.ebuild,
+  -ecls-0.9c.ebuild, ecls-0.9d.ebuild, +ecls-0.9e.ebuild:
+  New upstream version; Removed old ebuilds; Expanded metadata.xml;
+  Marked 0.9d stable for x86
 
   30 Nov 2004; Matthew Kennedy <mkennedy@gentoo.org>
   +files/0.9d-headers-gentoo.patch, files/0.9d-texinfo-gentoo.patch,

@@ -2,4 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>common-lisp</herd>
+<longdescription>
+ECL (Embeddable Common Lisp) is an implementation of the Common Lisp language as
+described in the X3J13 Ansi specification, featuring CLOS (Common Lisp Object
+System), conditions, loops, etc, plus a translator to C, which can produce
+standalone executables.
+</longdescription>
 </pkgmetadata>
