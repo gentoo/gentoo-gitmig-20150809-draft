@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.6 2004/04/24 13:04:20 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.7 2004/04/28 17:48:56 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails
 
@@ -24,8 +24,9 @@ DEPEND="dev-util/yacc
 	>=sys-apps/sed-4
 	berkdb? ( sys-libs/db )
 	gdbm? ( sys-libs/gdbm )
+	doc? ( =app-doc/apache-manual-2.0.49-r1 )
 	!mips? ( ldap? ( =net-nds/openldap-2* ) )"
-IUSE="berkdb gdbm ldap threads ipv6"
+IUSE="berkdb gdbm ldap threads ipv6 doc"
 
 apache_setup_vars() {
 	# Sane makeopts
