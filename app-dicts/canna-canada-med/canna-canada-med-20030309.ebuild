@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-canada-med/canna-canada-med-20030309.ebuild,v 1.2 2004/06/24 21:36:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-canada-med/canna-canada-med-20030309.ebuild,v 1.3 2004/08/14 11:10:32 usata Exp $
 
 inherit cannadic
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~usata/distfiles/${P}.tar.gz"
 
 LICENSE="canada-med"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 alpha ppc"
 
 DEPEND="canna? ( >=canna-3.6_p4 )"
 
