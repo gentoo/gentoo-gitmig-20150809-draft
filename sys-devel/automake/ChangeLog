@@ -1,8 +1,13 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.31 2003/07/02 11:11:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.32 2003/07/04 09:56:31 kumba Exp $
+
 
 *automake-1.7.5-r2 (02 Jul 2003)
+
+  04 Jul 2003; Joshua Kinard <kumba@gentoo.org> :
+  Fixed b0rked Manifest (yay)
+  Removed stray digests
 
   02 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> automake-1.7.5-r2.ebuild, automake-1.7.5-r1.ebuild, 
 						automake-1.7.5.ebuild :
