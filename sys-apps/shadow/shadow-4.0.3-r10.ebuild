@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r10.ebuild,v 1.9 2004/06/27 20:11:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r10.ebuild,v 1.10 2004/07/13 02:49:26 tgall Exp $
 
 IUSE="pam selinux nls"
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.pld.org.pl/software/shadow/old/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~ppc64"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ppc64"
 
 DEPEND=">=sys-libs/cracklib-2.7-r3
 	pam? ( >=sys-libs/pam-0.75-r4 )
@@ -65,6 +65,10 @@ src_unpack() {
 	# Patch the useradd manpage to be a bit more clear, closing bug #13203.
 	# Thanks to Guy <guycad@mindspring.com>.
 	epatch ${FILESDIR}/${P}-useradd-manpage-update.patch
+
+	# Patch to correct the definition if malloc, so that shadow can compile
+	# using gcc 3.4. see bug #47455 for more information
+	epatch ${FILESDIR}/shadow-4.0.3-gcc34-xmalloc.patch
 }
 
 src_compile() {
@@ -171,7 +175,7 @@ src_install() {
 	dodoc HOWTO LSM README.* *.txt
 
 	# Fix sparc serial console
-	if [ "${ARCH}" = "sparc" ]
+	if [ "${ARCH}" = "sparc" -o "${ARCH}" = "ppc64" ]
 	then
 		# ttyS0 and its devfsd counterpart (Sparc serial port "A")
 		dosed 's:\(vc/1\)$:tts/0\n\1:' /etc/securetty
