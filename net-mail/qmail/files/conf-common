@@ -1,5 +1,5 @@
 # Common Configuration file for all qmail daemons
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/conf-common,v 1.1 2003/11/30 11:32:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/conf-common,v 1.2 2004/01/20 09:35:05 robbat2 Exp $
 
 # Qmail User IDS to run daemons as
 QMAILDUID=`id -u qmaild`
@@ -18,12 +18,22 @@ TCPSERVER_PORT=${SERVICE}
 # added later
 TCPSERVER_OPTS="-p -v"
 
+#  This tells tcpserver where to file the rules cdb file
+[ -d /etc/tcprules.d/ ] && TCPSERVER_RULESCDB=/etc/tcprules.d/tcp.qmail-${SERVICE}.cdb
+[ ! -f "${TCPSERVER_RULESCDB}" ] && TCPSERVER_RULESCDB=/etc/tcp.${SERVICE}.cdb
+
 # we limit data and stack segments to 8mbytes, you may need to raise this if
 # you are using a filter in QMAILQUEUE
 SOFTLIMIT_OPTS="-m 8000000"
 
-# We don't have anything to set QMAILQUEUE to at the moment, so we leave it alone
-#QMAILQUEUE=""
+# We don't have anything to set QMAILQUEUE to at the moment, so we leave it
+# alone Generally it is best to add this in your appropriate (usually SMTP) cdb
+# files /etc/tcp.*.cdb OR /etc/tcprules.d/tcp.qmail-*.cdb instead of on a
+# global basis, as otherwise outgoing mail will be checked (because qmail-queue
+# is used for most parts of qmail) You can also enable this per-server by just
+# placing it into the other configuration files by placing the line there
+# instead. Please note that the export part is important.
+#export QMAILQUEUE=""
 
 # tcpserver maximum concurrency, defaults to 40 in tcpserver
 # this controls the maximum number of incoming connections that it will accept
@@ -36,7 +46,7 @@ LOG_MAXCOUNT=10 # defaults to '10' if empty
 
 # build LOG_OPTS from this
 [ -n "${LOG_MAXSIZE}" ] && LOG_OPTS="${LOG_OPTS} s${LOG_MAXSIZE}"
-[ -n "${LOG_MAXCOUNT}" ] && LOG_OPTS="${LOG_OPTS} s${LOG_MAXCOUNT}"
+[ -n "${LOG_MAXCOUNT}" ] && LOG_OPTS="${LOG_OPTS} n${LOG_MAXCOUNT}"
 
 # directory to log to
 LOG_DEST=/var/log/qmail/qmail-${SERVICE}d

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.15 2003/11/06 20:17:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.16 2004/01/20 09:35:05 robbat2 Exp $
 
 inherit eutils fixheadtails
 
@@ -113,7 +113,8 @@ src_unpack() {
 	# maildir++ quota system that is used by vpopmail and courier-imap
 	epatch ${DISTDIR}/qmail-maildir++.patch
 	# fix a typo in the patch
-	epatch ${FILESDIR}/${PV}-${PR}/maildir-quota-fix.patch
+	# upstream has changed the patch and this isn't needed anymore
+	#epatch ${FILESDIR}/${PV}-${PR}/maildir-quota-fix.patch
 
 	# Apply patch for local timestamps.
 	# This will make the emails headers be written in localtime rather than GMT

@@ -35,7 +35,7 @@ Optional: - when DEBUG is defined, some extra TLS info will be logged
        	    qmail-smtpd. Periodical replacement can be done by crontab:
        	    01 01 * * *  umask 0077; /usr/local/ssl/bin/openssl genrsa \
        	     -out /var/qmail/control/rsa512.new 512 > /dev/null 2>&1 &&\
-       	     chown qmaild.qmail /var/qmail/control/rsa512.new && /bin/mv -f \
+       	     chown qmaild:qmail /var/qmail/control/rsa512.new && /bin/mv -f \
        	     /var/qmail/control/rsa512.new /var/qmail/control/rsa512.pem
           - server authentication:
             qmail-remote requires authentication from servers for which

@@ -1,6 +1,6 @@
 #!/bin/sh
 # Gentoo Startup script for qmail's QMTP daemon
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/run-qmailqmtpd,v 1.1 2003/11/30 11:32:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/run-qmailqmtpd,v 1.2 2004/01/20 09:35:05 robbat2 Exp $
 #
 # If you need to edit this file, please look at editing conf-qmtpd and
 # conf-common first.  If you still need to change this file, you should
@@ -10,7 +10,7 @@ SERVICE=qmtp
 source /var/qmail/bin/qmail-config-system && \
 exec /usr/bin/softlimit ${SOFTLIMIT_OPTS} \
     ${QMAIL_TCPSERVER_PRE} \
-    /usr/bin/tcpserver ${TCPSERVER_OPTS} -x /etc/tcp.${SERVICE}.cdb \
+    /usr/bin/tcpserver ${TCPSERVER_OPTS} -x ${TCPSERVER_RULESCDB} \
     -c ${MAXCONN} -u ${QMAILDUID} -g ${NOFILESGID} \
     ${TCPSERVER_HOST} ${TCPSERVER_PORT} \
     ${QMAIL_QMTP_PRE} /var/qmail/bin/qmail-${SERVICE}d ${QMAIL_QMTP_POST} \
