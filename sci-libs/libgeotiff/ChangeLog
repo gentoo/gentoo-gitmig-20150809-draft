@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libgeotiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/ChangeLog,v 1.2 2004/12/29 00:20:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/ChangeLog,v 1.3 2004/12/29 01:03:39 ribosome Exp $
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org>
+  libgeotiff-1.2.0.ebuild:
+  Dependency update: dev-libs/proj -> sci-libs/proj.
 
 *libgeotiff-1.2.1 (28 Dec 2004)
 
