@@ -1,4 +1,6 @@
-MD5 e610f0fb1d5df92022bc4503820e9b35 ChangeLog 481
+MD5 185abf4bf1cbcc9509eeb2cbe55d054c gnusound-0.6.2.ebuild 1118
+MD5 e98c290950c5706768406a9023d591f2 ChangeLog 611
 MD5 9facd0bc4253ab84a2744bba7b5f27cb metadata.xml 247
 MD5 cc1e795fdcb17c5614933e703ccbe816 gnusound-0.6.1.ebuild 1118
 MD5 144ea19f7fb52c88a88e39c3abe72dba files/digest-gnusound-0.6.1 67
+MD5 2fc6416b1d46e2e4b4cd98881e3b6ca6 files/digest-gnusound-0.6.2 67
