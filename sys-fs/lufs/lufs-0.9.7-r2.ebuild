@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r2.ebuild,v 1.4 2004/06/24 22:52:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r2.ebuild,v 1.5 2004/07/15 03:38:25 agriffis Exp $
 
 inherit kmod eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/lufs/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="debug lufsusermount disablekernelsupport"
+IUSE="debug disablekernelsupport lufsusermount nokernelsupport"
 
 DEPEND="virtual/linux-sources
 	sys-kernel/config-kernel"
