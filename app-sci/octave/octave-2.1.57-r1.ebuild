@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.57-r1.ebuild,v 1.3 2004/05/15 20:07:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.57-r1.ebuild,v 1.4 2004/05/27 13:41:25 phosphan Exp $
 
 inherit flag-o-matic
 
@@ -35,7 +35,7 @@ pkg_setup() {
 	use ifc || if [ -z `which g77` ]; then
 		#if ifc is defined then the dep was already checked
 		eerror "No fortran compiler found on the system!"
-		eerror "Please add g77 to your USE flags and reemerge gcc!"
+		eerror "Please add f77 to your USE flags and reemerge gcc!"
 		die
 	fi
 }
