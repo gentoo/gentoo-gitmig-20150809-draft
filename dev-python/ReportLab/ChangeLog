@@ -1,13 +1,22 @@
 # ChangeLog for dev-python/ReportLab
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ReportLab/ChangeLog,v 1.1 2002/02/01 21:53:28 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ReportLab/ChangeLog,v 1.2 2002/06/29 23:24:18 jnelson Exp $
 
-*ReportLab-1.11 (1 Feb 2002)
+ *ReportLab-1.14 (29 Jun 2002)
+ 
+ 29 Jun 2002; Jon Nelson <jnelson@gentoo.org> ReportLab-1.14.ebuild
+ 
+ Use distutuils for install
+ New upstream
+ Closes 2719
+ Original Author: Tod Neidt <tneidt@fidnet.com>
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+ *ReportLab-1.11 (1 Feb 2002)
+
+ 1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+ Added initial ChangeLog which should be updated whenever the package is
+ updated in any way. This changelog is targetted to users. This means that the
+ comments should well explained and written in clean English. The details about
+ writing correct changelogs are explained in the skel.ChangeLog file which you
+ can find in the root directory of the portage repository.
