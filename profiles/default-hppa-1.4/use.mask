@@ -1,4 +1,8 @@
-#06 Jul 2003 Guy Martin <gmsoft@gentoo.org>
+# 17 Jul 2003 Guy Martin <gmsoft@gentoo.org>
+# Avi support is far from 'supported'
+avi
+
+# 06 Jul 2003 Guy Martin <gmsoft@gentoo.org>
 # Mozilla is curently not working
 mozilla
 
