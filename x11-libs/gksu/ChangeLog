@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.1 2004/04/26 00:25:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.2 2004/04/26 05:20:20 dragonheart Exp $
+
+*gksu-1.0.5 (26 Apr 2004)
+
+  26 Apr 2004; Daniel Black <dragonheart@gentoo.org> gksu-1.0.5.ebuild:
+  Added app-admin/sudo dependancy
 
   26 Apr 2004; Daniel Black <dragonheart@gentoo.org> :
   Inital import to support gtk-cpuspeedy. Missing dependancy noticed by Priit

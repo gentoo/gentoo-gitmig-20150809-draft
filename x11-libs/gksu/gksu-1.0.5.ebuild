@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-1.0.5.ebuild,v 1.1 2004/04/26 00:25:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-1.0.5.ebuild,v 1.2 2004/04/26 05:20:20 dragonheart Exp $
 
 DESCRIPTION="This library provides a gtk+ front end to su and sudo"
 
@@ -38,7 +38,8 @@ RDEPEND="dev-libs/atk
 	sys-libs/zlib
 	virtual/x11
 	x11-libs/gtk+
-	x11-libs/pango"
+	x11-libs/pango
+	app-admin/sudo"
 
 
 src_compile() {
