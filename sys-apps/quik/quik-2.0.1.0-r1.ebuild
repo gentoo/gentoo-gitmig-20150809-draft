@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: quik-2.0.1.0-r1.ebuild,v 1.5 2002/09/24 21:34:51 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quik/quik-2.0.1.0-r1.ebuild,v 1.6 2002/09/30 01:10:41 woodchip Exp $
+
+inherit mount-boot
 
 S="${WORKDIR}/quik-2.0"
 A="quik_2.0e.orig.tar.gz"
@@ -20,35 +22,6 @@ SRC_URI="${DEB_URI}/${A} ${DEB_URI}/${DEB_P}.gz"
 DEPEND="virtual/glibc"
 RDEPEND=""
 KEYWORDS="ppc"
-
-pkg_setup() {
-	[ "${ROOT}" != "/" ] && return 0
-	. ${ROOT}/etc/init.d/functions.sh
-	local fstabstate="$(cat /etc/fstab |grep -v -e '#' |awk '{print $2}')"
-	local procstate="$(cat /proc/mounts |awk '{print $2}')"
-	if [ -n "$(echo ${fstabstate} |grep -e "/boot")" ] && \
-	   [ -n "$(echo ${procstate} |grep -e "/boot")" ]
-	then
-		einfo "Your boot partition was detected as being mounted as /boot."
-		einfo "Files will be installed there for this bootloader to function correctly."
-	elif [ -n "$(echo ${fstabstate} |grep -e "/boot")" ] && \
-	     [ -z "$(echo ${procstate} |grep -e "/boot")" ]
-	then
-		mount /boot &>/dev/null
-		if [ "$?" -eq 0 ]
-		then
-			einfo "Your boot partition was not mounted as /boot, but portage was able to mount"
-			einfo "it without additional intervention."
-			einfo "Files will be installed there for this bootloader to function correctly."
-		else
-			eerror "Your boot partition has to be mounted on /boot before the installation"
-			eerror "can continue. This bootloader needs to install important files there."
-			die "Please mount your /boot partition."
-		fi
-	else
-		einfo "You do not have a seperate /boot partition."
-	fi
-}
 
 src_unpack() {
 	cd ${WORKDIR}
