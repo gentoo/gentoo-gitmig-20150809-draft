@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/valgrind
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.40 2004/12/19 18:36:31 griffon26 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.41 2005/02/13 15:55:25 griffon26 Exp $
+
+*valgrind-2.2.0-r2 (13 Feb 2005)
+
+  13 Feb 2005; Maurice van der Pot <griffon26@gentoo.org>
+  +valgrind-2.2.0-r2.ebuild:
+  Prevent valgrind from ignoring CFLAGS in environment to allow building
+  with hardened gcc (see bug #75789 reported by Dominik Schäfer
+  <schaedpq@despammed.com>)
+  Make valgrind less dependent on actual name of kernel headers as
+  suggested by Mihai Limbasan <mihailim@gmail.com> in bug #80176.
 
 *valgrind-2.2.0-r1 (19 Dec 2004)
 

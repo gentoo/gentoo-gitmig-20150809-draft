@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.2.0-r1.ebuild,v 1.3 2005/02/13 15:55:25 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.2.0-r2.ebuild,v 1.1 2005/02/13 15:55:25 griffon26 Exp $
 
 inherit flag-o-matic eutils
 
@@ -23,20 +23,27 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	use ppc && cd "${WORKDIR}/${P}-ppc" || cd ${S}
+
 	#ugly but working workaround
-	if has_version '>=sys-kernel/linux26-headers-2.6.7' ; then
+	if has_version '>=virtual/os-headers-2.6.7' ; then
 		einfo "Removing net/if.h from the includes in vg_unsafe.h"
 		sed -i -e "s:#include <net/if.h>::" \
 			coregrind/vg_unsafe.h ||die
 	fi
+
 	epatch "${FILESDIR}/${P}-no-exec-stack.patch"
+
+	# make sure our CFLAGS are respected
+	einfo "Changing configure to respect CFLAGS"
+	sed -i -e 's:CFLAGS="":#CFLAGS="":' configure
 }
+
 src_compile() {
 	use ppc && cd "${WORKDIR}/${P}-ppc"
 
 	local myconf
 
-	filter-flags -fPIC
+	filter-flags -fPIC -fstack-protector -fomit-frame-pointer
 
 	use X && myconf="--with-x" || myconf="--with-x=no"
 	# note: it does not appear safe to play with CFLAGS
