@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.0.ebuild,v 1.1 2003/07/16 14:54:54 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.0.ebuild,v 1.2 2003/07/21 12:22:08 lanius Exp $
 
 DESCRIPTION="Omni provides support for many printers with a pluggable framework (easy to add devices)"
 HOMEPAGE="http://sourceforge.net/projects/omniprint"
@@ -35,7 +35,7 @@ src_compile() {
 	
 	./setupOmni ${myconf} || die
 
-	if [ `use ppds` -a `use cups` ]; then
+	if [ "`use ppds`" -a "`use cups`" ]; then
 		cd CUPS
 		cp Makefile Makefile.1
 		sed -e "s/model\/foomatic/model\/omni/g" Makefile.1 > Makefile
