@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/gnome-db-0.2.0.ebuild,v 1.2 2000/12/18 19:04:18 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-db/gnome-db-0.2.0.ebuild,v 1.3 2000/12/18 20:25:19 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -26,6 +26,7 @@ src_install() {
   try make prefix=${D}/opt/gnome \
 	GNOME_sysconfdir=${D}/opt/gnome/etc \
 	GNOME_datadir=${D}/opt/gnome/share \
+	GNOMEDB_oafinfodir=${D}/opt/gnome/share/oaf \
 	install
   dodoc AUTHORS COPYING ChangeLog README
 }
