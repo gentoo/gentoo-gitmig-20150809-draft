@@ -60,7 +60,7 @@ MD5 9c13e6b0d5770979430b76c578afa22c files/gcc3-program-transform.patch 9771
 MD5 cd99b576d23043d02ee0b47a63c0c95e files/digest-gcc-3.2.2 64
 MD5 cf81ae4b2da79c34a005da1182c40134 files/digest-gcc-3.3.2 130
 MD5 35f63854b7b4d5ab1ed1489e517f8e24 files/digest-gcc-3.3.3 361
-MD5 beb174652a788ca0030e7cc395a2e431 files/digest-gcc-3.4.0 226
+MD5 d17e2c6ba913d1c1d5cb135acf853f02 files/digest-gcc-3.4.0 297
 MD5 73da03a8bd40327709e7850d9e2158e6 files/gcc-2.95.3-destructor-atexit.diff 3890
 MD5 3213bd50acdbbd71ce7dd3e40710e30e files/digest-gcc-2.95.3-r7 64
 MD5 3213bd50acdbbd71ce7dd3e40710e30e files/digest-gcc-2.95.3-r8 64
