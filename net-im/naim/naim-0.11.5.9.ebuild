@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.5.9.ebuild,v 1.6 2003/10/14 17:51:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.5.9.ebuild,v 1.7 2004/01/08 09:32:38 aether Exp $
 
 FOLDER="${P}"
 SNAP=""

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.6.1.ebuild,v 1.4 2004/01/08 09:32:38 aether Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.6.4.ebuild,v 1.1 2004/01/08 09:32:38 aether Exp $
 
 
 DESCRIPTION="An ncurses based AOL Instant Messenger"
@@ -9,16 +9,16 @@ SRC_URI="http://shell.n.ml.org/n/naim/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~mips ~alpha ~arm ~hppa ia64 ~amd64"
+KEYWORDS="-* ~x86"
 IUSE="debug"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 
 src_compile() {
-	local myconf=""
 	# --enable-profile
-	# --experimental-buddy-grouping
-	use debug && myconf="--enable-debug"
+	local myconf=""
+
+	use debug && myconf="${myconf} --enable-debug"
 
 	econf \
 		--with-pkgdocdir=/usr/share/doc/${PF} \
