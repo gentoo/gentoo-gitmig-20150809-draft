@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: system@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.05-r2.ebuild,v 1.1 2002/05/25 21:56:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.05-r3.ebuild,v 1.1 2002/06/03 11:53:39 seemant Exp $
 
 MY_P=linux-${PV/./}
 S=${WORKDIR}
@@ -30,7 +30,8 @@ src_install () {
 	dodir ${INSTALLDIR}
 	for i in Browsers Reader Resource
 	do
-		cp -a ${S}/${i} ${D}/${INSTALLDIR}
+		insinto ${INSTALLDIR}
+		doins ${i}/*
 	done
 
 	exeinto ${INSTALLDIR}
@@ -38,17 +39,16 @@ src_install () {
 	dodoc README LICREAD.TXT MANIFEST
 	into /opt/netscape/plugins
 	dosym ${INSTALLDIR}/Browsers/intellinux/nppdf.so /opt/netscape/plugins
-
+	
 	#dynamic environment by T.Henderson@cs.ucl.ac.uk (Tristan Henderson)
 	dodir /etc/env.d
 	echo -e "PATH=${INSTALLDIR}\nROOTPATH=${INSTALLDIR}" > \
 		${D}/etc/env.d/10acroread5
 
 	#mozilla compatibility contributed by m3thos@netcabo.pt(Miguel Sousa Filipe)
-	if use mozilla; then
-		into /usr/lib/mozilla/plugins
+	use mozilla && ( \
 		dosym \
 			${INSTALLDIR}/Browsers/intellinux/nppdf.so \
 				/usr/lib/mozilla/plugins/nppdf.so
-	fi
+	)
 }
