@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc0-r2.ebuild,v 1.1 2003/08/13 00:50:30 spider Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc0-r2.ebuild,v 1.2 2003/08/13 14:28:17 agenkin Exp $ 
 
 # this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
 # Commenting this out in this ebuild, because CFLAGS and CXXFLAGS are unset
@@ -43,7 +43,8 @@ DEPEND="oggvorbis? ( media-libs/libvorbis )
 	>=media-libs/flac-1.0.4
 	>=media-libs/libsdl-1.1.5
 	>=media-libs/libfame-0.9.0
-	>=media-libs/xvid-0.9.0"
+	>=media-libs/xvid-0.9.0
+	media-libs/speex"
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
