@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.148 2005/02/03 23:55:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.149 2005/02/04 21:24:53 chriswhite Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -38,24 +38,22 @@ ecpu_check() {
 	# and dropping the else if you do not plan on adding anything to that
 	# empty block ....
 	# PS: also try to add some quoting, and consider rather using ${foo} than $foo ...
-	if [ $CROSSCOMPILE -eq 1 ] || [ ! -e /proc/cpuinfo ]
+	if [ "${CROSSCOMPILE}" != "1" -a -e "/proc/cpuinfo" ]
 	then
-		:
-	else
-		CPU_FLAGS=$1
+		CPU_FLAGS=${1}
 		USER_CPU=`grep "flags" /proc/cpuinfo`
 
 		for flags in `seq 1 ${#CPU_FLAGS[@]}`
 		do
-			if has ${CPU_FLAGS[$flags - 1]} $USER_CPU && ! has ${CPU_FLAGS[$flags - 1]} $USE
+			if has ${CPU_FLAGS[${flags} - 1]} ${USER_CPU} && ! has ${CPU_FLAGS[${flags} - 1]} ${USE}
 			then
-				ewarn "Your system is ${CPU_FLAGS[$flags - 1]} capable but you don't have it enabled!"
+				ewarn "Your system is ${CPU_FLAGS[${flags} - 1]} capable but you don't have it enabled!"
 				ewarn "You might be cross compiling (in this case set CROSSCOMPILE to 1 to disable this warning."
 			fi
 
-			if ! has ${CPU_FLAGS[$flags - 1]} $USER_CPU  && has ${CPU_FLAGS[$flags -1]} $USE
+			if ! has ${CPU_FLAGS[${flags} - 1]} ${USER_CPU}  && has ${CPU_FLAGS[${flags} -1]} ${USE}
 			then
-				ewarn "You have ${CPU_FLAGS[$flags - 1]} support enabled but your processor doesn't"
+				ewarn "You have ${CPU_FLAGS[${flags} - 1]} support enabled but your processor doesn't"
 				ewarn "Seem to support it!  You might be cross compiling or do not have /proc filesystem"
 				ewarn "enabled.  If either is the case, set CROSSCOMPILE to 1 to disable this warning."
 			fi
