@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ilisp-5.12.0-r3.ebuild,v 1.5 2003/10/12 21:06:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ilisp-5.12.0-r3.ebuild,v 1.6 2003/11/12 05:50:57 mkennedy Exp $
 
 inherit elisp
 
@@ -24,7 +24,10 @@ DEPEND="virtual/emacs
 	virtual/tetex
 	app-text/texi2html"
 
+
 S="${WORKDIR}/${P}+${DEBCVS}"
+
+CLPACKAGE=ilisp
 
 src_compile() {
 	make EMACS=emacs SHELL=/bin/sh || die
@@ -61,6 +64,12 @@ src_install() {
 
 	elisp-site-file-install ${FILESDIR}/50ilispclc-gentoo.el
 	dodoc ACKNOWLEDGMENTS COPYING GETTING-ILISP HISTORY INSTALLATION README Welcome
+
+	sed -i "s,@HYPERSPEC@,${P}/HyperSpec,g" ${D}/usr/share/emacs/site-lisp/50ilispclc-gentoo.el
+}
+
+pkg_preinst() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 }
 
 pkg_postinst() {
@@ -71,6 +80,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	/usr/sbin/unregister-common-lisp-source ${PN}
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 	elisp-site-regen
 }
