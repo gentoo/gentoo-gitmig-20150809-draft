@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.47_pre12.ebuild,v 1.1 2002/11/17 09:20:37 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.47_pre12.ebuild,v 1.2 2002/11/19 02:31:30 blauwers Exp $
 
 IUSE="oggvorbis"
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.exit1.org/dvdrip/${MY_URL}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.exit1.org/dvdrip/"
 SLOT="0"
 LICENSE="Artistic GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND=">=media-video/transcode-0.6.0_pre4-r1
 	media-gfx/imagemagick
