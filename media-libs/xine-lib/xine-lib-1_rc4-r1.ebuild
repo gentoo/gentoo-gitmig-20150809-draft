@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc4-r1.ebuild,v 1.11 2004/06/23 14:48:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc4-r1.ebuild,v 1.12 2004/06/23 23:59:11 vapier Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -105,8 +105,11 @@ src_compile() {
 		&& myconf="${myconf} --with-xv-path=/usr/X11R6/lib"
 
 	# The default CFLAGS (-O) is the only thing working on hppa.
-	use hppa \
-		&& unset CFLAGS
+	if use hppa && [ "`gcc-version`" != "3.4" ] ; then
+		unset CFLAGS
+	else
+		append-flags -ffunction-sections
+	fi
 
 	econf \
 		`use_enable X x11` `use_with X x` `use_enable X shm` `use_enable X xft` \
