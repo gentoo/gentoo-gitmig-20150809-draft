@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc5-r1.ebuild,v 1.1 2005/01/21 18:12:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc5-r1.ebuild,v 1.2 2005/01/22 17:19:29 swegener Exp $
 
 inherit perl-module eutils
 
@@ -61,6 +61,9 @@ src_compile() {
 		$(use_with socks5 socks) \
 		${myconf} || die "./configure failed"
 	emake || die "emake failed"
+
+	# Generate updated help
+	./syntax.pl
 }
 
 src_install() {

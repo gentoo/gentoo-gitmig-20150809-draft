@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.57 2005/01/21 18:12:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.58 2005/01/22 17:19:29 swegener Exp $
+
+  22 Jan 2005; Sven Wegener <swegener@gentoo.org>
+  irssi-0.8.10_rc5-r1.ebuild:
+  Added a call to syntax.pl to generate updated help files.
 
 *irssi-0.8.10_rc5-r1 (21 Jan 2005)
 
