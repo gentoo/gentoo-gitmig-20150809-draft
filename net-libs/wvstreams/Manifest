@@ -1,7 +1,7 @@
 MD5 84906df12ff06c74e269a55f292f09ac wvstreams-3.70-r2.ebuild 869
-MD5 4b05161eef8aad115e98cd02a78cb01a wvstreams-3.75.ebuild 1811
-MD5 1df223cd3261533626bd3efc2d4bcd4a wvstreams-3.74.ebuild 1274
-MD5 97a7b94bca87ce7b4c6cd8ef61fc6f68 ChangeLog 2889
+MD5 0862b8114d16323fe2a50f81b4496289 wvstreams-3.75.ebuild 1868
+MD5 d991640e2ff373e482b3c3478282fef1 wvstreams-3.74.ebuild 1392
+MD5 636fc0fd686ac1c5ca3ec499b8b8cd63 ChangeLog 3171
 MD5 dab468062cf36e0e81e72fb2a59299e0 files/3.70-gcc3.patch 3171
 MD5 5d649f23e7b31fb9224bace4c35bcf3e files/3.70-openssl.patch 470
 MD5 0ee90e98345afff96aaf89dbda1910fc files/digest-wvstreams-3.74 68
@@ -13,3 +13,4 @@ MD5 c48022170e1e20f8222af4b4711373eb files/wvstreams-3.74-makefile.patch 363
 MD5 f2058097f693e07dadf248b1a3319db3 files/digest-wvstreams-3.70-r2 66
 MD5 b8b38bbbccf83a9024a243149fd9b7d1 files/wvstreams-3.70-gentoo.patch 1174
 MD5 7a2a3fb9116991ebccad327a9ad0fd87 files/wvstreams-3.75-tcl_8_4.patch 945
+MD5 e4f46fcdd724dc1c316aefe9e0228dac files/wvstreams-3.75-gcc34.patch 3573
