@@ -1,6 +1,16 @@
-MD5 27ea3fa187bae9fed9bd80cd04e6e492 ChangeLog 1055
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c756b8028027509edc67a3389268a908 metadata.xml 389
-MD5 ee99ff89044abfed9f108611ed44ec7b metagen-0.4.ebuild 802
+MD5 84a6c1aff5ecaea46ff63da968a4a4aa metagen-0.5.ebuild 984
 MD5 1edd4d3a03982db9f14f1b7adfb75a84 metagen-0.3.ebuild 782
-MD5 4ea8056fae73e9d6a24045e2b870c9a1 files/digest-metagen-0.4 59
+MD5 b77c42dc757ccdf6e1b082879a3f948d ChangeLog 1254
+MD5 85529111e12f16d33b7b5410eb5034ad files/digest-metagen-0.5 59
 MD5 e0088c6f4c97a674dc1b1cfca50bead7 files/digest-metagen-0.3 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB3r2tz2gxt1z4IGYRAgSVAKCj2YlJLuOT75nBpwtdvN/rOgrqYgCgvmHr
+IdtusdLx293p0bYLicUrJm0=
+=sA2V
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.4.ebuild,v 1.1 2005/01/04 20:26:05 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.5.ebuild,v 1.1 2005/01/07 16:49:13 pythonhead Exp $
 
 inherit python
 
@@ -21,7 +21,16 @@ src_install() {
 	dodir /usr/lib/python${PYVER}/site-packages/metagen
 	dodir /usr/bin
 	cp *py test_cli ${D}/usr/lib/python${PYVER}/site-packages/metagen/
-	dosym ${D}/usr/lib/python${PYVER}/site-packages/metagen/metagen.py /usr/bin/metagen
+	dosym ${D}/usr/lib/python${PYVER}/site-packages/metagen/metagen.py \
+			/usr/bin/metagen
 	doman metagen.1.gz
 	dodoc docs/*
 }
+
+src_test() {
+	einfo "Starting tests..."
+	python -c "from metagen import metagenerator; metagenerator.do_tests()" \
+		|| die "metagen tests failed"
+	einfo "Tests completed."
+}
+
