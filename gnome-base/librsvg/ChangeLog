@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.41 2004/04/08 10:50:48 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.42 2004/04/25 17:59:36 foser Exp $
+
+  25 Apr 2004; foser <foser@gentoo.org> librsvg-2.6.4.ebuild :
+  Remove the package made gdk pixbuf loader config, we do this ourselves (#47766)
 
   08 Apr 2004; L. Boshell <leonardop@gentoo.org> librsvg-2.6.4.ebuild,
   files/ librsvg-2.6.4-gcc2_fix.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.6.4.ebuild,v 1.2 2004/04/08 10:50:48 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.6.4.ebuild,v 1.3 2004/04/25 17:59:36 foser Exp $
 
 inherit eutils gnome2
 
@@ -38,6 +38,15 @@ src_unpack () {
 	cd ${S}
 	# Make sure the source is proper ANSI C, so it compiles with gcc-2.
 	epatch ${FILESDIR}/${P}-gcc2_fix.patch
+}
+
+src_install() {
+
+	gnome2_src_install
+
+	# remove gdk-pixbuf loaders (#47766)
+	rm -fr ${D}/etc
+
 }
 
 pkg_postinst() {
