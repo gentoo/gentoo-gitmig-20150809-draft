@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-4922.ebuild,v 1.2 2004/01/25 15:52:14 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-5012.ebuild,v 1.1 2004/02/13 14:50:52 hattya Exp $
 
 inherit elisp-common
 
@@ -10,8 +10,9 @@ MY_P="${P/-ss/}"
 
 DESCRIPTION="Anthy -- free and secure Japanese input system"
 HOMEPAGE="http://anthy.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/anthy/7790/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/anthy/8162/${MY_P}.tar.gz"
 
+RESTRICT="nomirror"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 SLOT="0"
@@ -66,6 +67,5 @@ pkg_postinst() {
 pkg_postrm() {
 
 	use emacs && elisp-site-regen
-
 
 }
