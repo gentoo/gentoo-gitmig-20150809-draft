@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/maya
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.1 2004/04/27 05:54:56 eradicator Exp $
+
+*maya-5.0.1 (26 Apr 2004)
+
+  26 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> maya-5.0.1.ebuild,
+  metadata.xml, files/aw_flexlm, files/aw_flexlm.conf.d, files/maya-docs:
+  Initial ebuild by me.
+
