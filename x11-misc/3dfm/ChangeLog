@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/3dfm
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfm/ChangeLog,v 1.4 2004/09/07 23:16:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfm/ChangeLog,v 1.5 2004/10/31 02:15:37 swegener Exp $
+
+  31 Oct 2004; Sven Wegener <swegener@gentoo.org> 3dfm-1.0.ebuild:
+  Added virtual/glut to dependencies. Thanks to David Cuddeback
+  <kauschovar@sdk.ath.cx> in bug #69202.
 
   08 Sep 2004; Sven Wegener <swegener@gentoo.org> 3dfm-1.0.ebuild:
   Marked stable on x86.
