@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.82 2003/08/07 05:36:53 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.83 2003/08/07 21:20:51 msterret Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -10,57 +10,64 @@ app-editors/nano:justify - Toggle the justify option ... god i hate that thing :
 app-editors/vim:vim-with-x - Enables linking the console vim against X libs to enable some features in xterms
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop library
-app-editors/xemacs:neXt - Chooses the neXt L&F widget set
 app-editors/xemacs:lucid - Chooses the lucid widget set (default, deprecated)
+app-editors/xemacs:neXt - Chooses the neXt L&F widget set
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library
 app-games/descent3:nocd - Copies all files required to play game
 app-games/descent3:videos - Copies optional movies from second CD for simgle-player game
 app-games/fakk2:nocd - Copies all data for game from CD
-app-games/freecraft-fcmp:music - Also installs the music that the project provides
 app-games/fortune-mod:offensive - Allow fortune to offend you
+app-games/freecraft-fcmp:music - Also installs the music that the project provides
+app-games/halflife-metamod:src - use the source, not the binary install
 app-games/heavygear2:videos - Copy the video files also ... adds about 100 megs and is for single player only
 app-games/nwn:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
-app-games/quake2:videos - Copy the video files also ... adds a few extra hundred megs and is for single player only
 app-games/quake2-relnev:noqmax - Do not build the pretty version (quake max)
+app-games/quake2:videos - Copy the video files also ... adds a few extra hundred megs and is for single player only
 app-games/torcs:bots - Enables bot support
 app-games/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3)
-app-office/gnucash:ofx - Enable OFX support, for importing OFX data files.
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
-app-sci/maxima:cmucl - use cmucl instead of clisp for building maxima
+app-office/gnucash:ofx - Enable OFX support, for importing OFX data files.
+app-sci/gmt:gmtfull - Full resolution bathimetry database;
+app-sci/gmt:gmthigh - Adds high resolution bathimetry database
+app-sci/gmt:gmtsuppl - Supplement functions for GMT;
+app-sci/gmt:gmttria - Non GNU triangulation method, more efficient;
 app-sci/maxima:auctex - enable auctex in maxima
+app-sci/maxima:cmucl - use cmucl instead of clisp for building maxima
 app-sci/mupad:mupad-noscilab - Disable scilab that comes with MuPAD package. Use system-wide instead.
 app-sci/octave-forge:ginac - Adds app-sci/ginac (symbolic math) support
 app-sci/octave-forge:qhull - Adds media-libs/qhull (geometric extentions) support
-app-sci/gmt:gmthigh - Adds high resolution bathimetry database
-app-sci/gmt:gmtfull - Full resolution bathimetry database;
-app-sci/gmt:gmttria - Non GNU triangulation method, more efficient;
-app-sci/gmt:gmtsuppl - Supplement functions for GMT;
 app-text/namazu:chasen - Enable chasen support for namazu
 app-text/namazu:kakasi - Enable kakasi support for namazu
 dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
+dev-libs/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
 dev-libs/crystalspace:mng - Enables mng support in CrystalSpace
 dev-libs/crystalspace:openal - Enables Open Audio Library support in CrystalSpace
-dev-libs/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
 dev-php/mod_php:gd-external - Use the external version of libgd rather than the bundled one
 dev-php/php:gd-external - Use the external version of libgd rather than the bundled one
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
-gnome-extra/libgda:sqlite - Enable sqlite support for GnomeDB.
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
+gnome-extra/libgda:sqlite - Enable sqlite support for GnomeDB.
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
+media-gfx/autotrace:imagemagick - Enables Imagemagick
 media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
 media-libs/libgd:freetype-version-1 - if for some reason you want to use freetype v1 instead of v2
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
 media-sound/ardour-cvs:ardour-ksi - Build ksi interface for ardour
 media-sound/jack-cvs:jack-tmpfs - Compile in a tmpf path
+media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-sound/terminatorX:sox - Enable sox support
 media-sound/totem:gstreamer - Enable gstreamer instead of Xine backend
-media-sound/museseq:fluidsynth - compile with support for fluidsynth
+media-video/ffmpeg:faad - Enables faad2 support
 media-video/transcode:altivec - Enable Altivec code portions
+media-video/vlc:matroska - Enables support for the matroska video format
+media-video/vlc:v4l - Enables video4linux support
+media-video/vlc:xvid - Enables xvid codec support
 net-analyzer/slurm:altcolors - Use alternative color set
-net-fs/shfs:amd - Enable automounter support
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
+net-fs/shfs:amd - Enable automounter support
+net-mail/courier:fax - Enables fax support in the courier mail server
 net-mail/exim:exiscan - Patch providing support for content scanning backward-compatability
 net-mail/exim:exiscan-acl - Patch providing support for content scanning
 net-mail/exim:lmtp - Adds support for lmtp
@@ -68,22 +75,26 @@ net-mail/ssmtp:md5sum - Enables MD5 summing for ssmtp
 net-mail/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with a plugin
 net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
 net-misc/ntp:parse-clocks - Add parse clock support
+net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/pxes:ltsp - Enable support for Linux Terminal Server Project
 net-misc/zebra:ospfapi - An API for the Zebra OSPF daemon
+net-p2p/pysoulseek:hyriand - Enables usage of the hyriand patch
+net-wireless/hostap:hostap-nopci - Set to not install hostap_pci driver
+net-wireless/hostap:hostap-noplx - Set to not install hostap_plx driver
 net-www/memcached:php - Include the PHP API for memcached
-net-www/mozilla:mozctl - adds in the ctl extension in older versions (1.1 or earlier)
-net-www/mozilla:moznoirc - If you do NOT want the IRC client built with mozilla
-net-www/mozilla:moznomail - If you do NOT want the mail client built with mozilla
-net-www/mozilla:moznocompose - If you do NOT want the web page composer built with mozilla
-net-www/mozilla:moznoxft - blank
-net-www/mozilla:mozp3p - blank
-net-www/mozilla:mozxmlterm - blank
-net-www/mozilla:mozinterfaceinfo - blank
 net-www/mozilla:mozaccess - blank
 net-www/mozilla:mozcalendar - blank
+net-www/mozilla:mozctl - adds in the ctl extension in older versions (1.1 or earlier)
+net-www/mozilla:mozinterfaceinfo - blank
+net-www/mozilla:moznocompose - If you do NOT want the web page composer built with mozilla
+net-www/mozilla:moznoirc - If you do NOT want the IRC client built with mozilla
+net-www/mozilla:moznomail - If you do NOT want the mail client built with mozilla
+net-www/mozilla:moznoxft - blank
+net-www/mozilla:mozp3p - blank
 net-www/mozilla:mozsvg - blank
-sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
+net-www/mozilla:mozxmlterm - blank
 sys-apps/busybox:uclibc - Compile with uclibc :)
+sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
 sys-apps/tinylogin:uclibc - Compile with uclibc :)
 sys-devel/gdb:objc - If you want to be able to debug Objective C code.
 sys-devel/oskit:oskit-noassert - Disable assertions in debugging
@@ -101,21 +112,11 @@ x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/kdrive:type1 - Enables Type1 fonts
 x11-base/xfree-drm:gamma - If you have a 3dlabs video card
 x11-base/xfree-drm:i8x0 - If you have an ibm i810 or i830 video card
-x11-base/xfree-drm:rage128 - If you have an ATI Rage128 based video card
 x11-base/xfree-drm:radeon - If you have an ATI Radeon video card
+x11-base/xfree-drm:rage128 - If you have an ATI Rage128 based video card
 x11-base/xfree-drm:sis - If you have an SiS video card
 x11-misc/lineakd:xosd - Sends display using the X On Screen Display library
+x11-themes/gaim-smileys:offensive - Install possibly offensive smiley themes
 x11-wm/fvwm:bidi - Enable bidirectional language support
 x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
-net-p2p/pysoulseek:hyriand - Enables usage of the hyriand patch
-net-mail/courier:fax - Enables fax support in the courier mail server
-media-video/vlc:xvid - Enables xvid codec support
-media-video/vlc:v4l - Enables video4linux support
-media-video/ffmpeg:faad - Enables faad2 support
-media-video/vlc:matroska - Enables support for the matroska video format
-x11-themes/gaim-smileys:offensive - Install possibly offensive smiley themes
-net-wireless/hostap:hostap-nopci - Set to not install hostap_pci driver
-net-wireless/hostap:hostap-noplx - Set to not install hostap_plx driver
-media-gfx/autotrace:imagemagick - Enables Imagemagick
-net-misc/openssh:X509 - Adds support for X.509 certificate authentication
