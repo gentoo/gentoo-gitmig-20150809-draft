@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.4.0.ebuild,v 1.1 2003/01/28 15:59:41 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.5.0.ebuild,v 1.1 2003/02/04 05:52:20 lostlogic Exp $
 
 IUSE=""
 
@@ -25,15 +25,9 @@ src_compile() {
 src_install() {
 	einstall
 
-	dodoc ${FILESDIR}/README.gentoo-${PV}
-
 	doman doc/pork.1
 	insinto /usr/share/pork/examples
 	doins examples/blist.txt
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README STYLE TODO
-}
-
-pkg_postinst() {
-	einfo "Please read /usr/share/doc/${PN}-${PVR}/README.gentoo-${PV} for quickstart info."
+	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README STYLE TODO QUICK_START
 }
