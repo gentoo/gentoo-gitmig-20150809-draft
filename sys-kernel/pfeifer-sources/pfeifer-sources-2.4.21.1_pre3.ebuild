@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/pfeifer-sources-2.4.20.1_pre10.ebuild,v 1.1 2003/05/05 02:22:45 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/pfeifer-sources-2.4.21.1_pre3.ebuild,v 1.1 2003/07/13 02:44:30 pfeifer Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -18,16 +18,16 @@ IUSE="build crypt evms2 aavm usagi"
 ETYPE="sources"
 
 inherit kernel || die
-OKV="2.4.20"
+OKV="2.4.21"
 # Documentation on the patches contained in this kernel will be installed
-# to /usr/share/doc/pfeifer-sources-${PV}/patches.txt.gz
+# to /usr/share/doc/gentoo-sources-${PV}/patches.txt.gz
 
-DESCRIPTION="Full sources for the experimental Gentoo Kernel. Patches from here may move into sys-kernel/gentoo-sources"
+DESCRIPTION="Full sources for the experimental Gentoo Kernel."
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	mirror://gentoo/patches-${KV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc -sparc -alpha -hppa -mips -arm"
+KEYWORDS="~x86 -ppc -sparc -alpha -hppa -mips -arm -amd64"
 SLOT="${KV}"
 
 
@@ -74,16 +74,16 @@ src_unpack() {
 			rm -f ${file}
 		done
 	else
-		einfo "Setting up kernel for EVMS 2.0.1 support."
-		ewarn "This is very beta. Please read the 'evms2' doc provided with this kernel."
-		ewarn "It is the install doc from the evms 2.0.1 tarball."
+		einfo "Setting up kernel for EVMS 2.1.0 support."
+		ewarn "Please read the 'evms2' doc provided with this kernel."
+		ewarn "It is the install doc from the evms 2.1.0 tarball."
 		for file in 1* ;do
 			einfo "Dropping ${file}..."
 			rm -f ${file}
 		done
 	fi
 
-	# This is the crypt USE flag, keeps {USAGI/superfreeswan/patch-int/loop-jari}
+	# This is the crypt USE flag, keeps {superfreeswan/patch-int/loop-aes}
 	if [ -z "`use crypt`" ]; then
 		einfo "No Cryptographic support, dropping patches..."
 		for file in 6* 8* ;do
@@ -94,16 +94,16 @@ src_unpack() {
 		einfo "Cryptographic patches will be applied"
 	fi
 
-	# This is the usagi USE flag, keeps USAGI, drops {superfreeswan/patch-int/loop-jari}
+	# This is the usagi USE flag, keeps USAGI, drops {superfreeswan/patch-int/loop-aes}
 	# Using USAGI will also cause you to drop all iptables ipv6 patches
 	if [ -z "`use usagi`" ]; then
-		einfo "Keeping {superfreeswan/patch-int/loop-jari} patches, dropping USAGI"
+		einfo "Keeping {superfreeswan/patch-int/loop-aes} patches, dropping USAGI"
 		for file in 6* ;do
 			einfo "Dropping ${file}..."
 			rm -f ${file}
 		done
 	else
-		einfo "Keeping USAGI patch, dropping {superfreeswan/patch-int/loop-jari}"
+		einfo "Keeping USAGI patch, dropping {superfreeswan/patch-int/loop-aes}"
 		for file in *.ipv6 8* ;do
 			einfo "Dropping ${file}..."
 			rm -f ${file}
@@ -117,19 +117,16 @@ pkg_postinst() {
 
 	kernel_pkg_postinst
 
-	ewarn "There is no xfs support in this kernel."
-	ewarn "If you need xfs support, emerge xfs-sources."
 	echo
 	ewarn "If iptables/netfilter behaves abnormally, such as 'Invalid Argument',"
 	ewarn "you will need to re-emerge iptables to restore proper functionality."
 	echo
-	einfo "Please be warned, you have just installed an unstable"
-	einfo "patchset of the Gentoo Linux kernel sources."
-	einfo "This set contains the ptrace patch as part of grsecurity."
+	einfo "If there are issues with it, read the docs and associated help provided."
+	einfo "Next you should check http://forums.gentoo.org/ for assistance."
+	einfo "Otherwise check http://bugs.gentoo.org/ for an existing bug."
+	einfo "Only create a new bug if you have not found one that matches your issue."
+	einfo "It is best to do an advanced search as the initial search has a very low yield."
+	einfo "Assign bugs to pfeifer@gentoo.org"
 	echo
-	einfo "If there are issues with it, please report them"
-	einfo "by assigning bugs on bugs.gentoo.org to"
-	einfo "x86-kernel@gentoo.org"
-	echo
-	einfo "Please read the changelog and associated docs for more information."
+	einfo "Please read the ChangeLog and associated docs for more information."
 }
