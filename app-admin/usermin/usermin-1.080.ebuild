@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.080.ebuild,v 1.1 2004/06/15 22:49:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.080.ebuild,v 1.2 2004/06/15 23:16:30 eradicator Exp $
 
 inherit eutils
 
@@ -43,6 +43,9 @@ src_install() {
 	newins ${FILESDIR}/${PN}.pam ${PN}
 
 	dosym ../usr/libexec/usermin /etc/usermin
+
+	# Change /usr/local/bin/perl references
+	find ${D} -type f | xargs sed -i 's:^#!.*/usr/local/bin/perl:#!/usr/bin/perl:'
 }
 
 pkg_postinst() {
