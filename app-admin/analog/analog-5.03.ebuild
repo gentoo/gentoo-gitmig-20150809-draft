@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.03.ebuild,v 1.1 2001/10/01 00:39:48 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.03.ebuild,v 1.2 2001/10/10 20:18:27 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The most popular logfile analyser in the world"
@@ -30,21 +30,10 @@ src_install () {
 	dobin analog ; newman analog.man analog.1
 
 	dodoc README.txt Licence.txt analog.cfg
+	insinto /usr/share/doc/${PF}/html_manual ; doins docs/favicon.ico docs/*.{html,gif,css}
+	insinto /usr/share/doc/${PF}/cgi_interface ; doins anlgform.html anlgform.pl
+	insinto /usr/share/doc/${PF}/sample_configs ; doins examples/*
+	insinto /usr/share/doc/${PF}/report_images ; doins images/*
+	cp -a how-to ${D}/usr/share/doc/${PF}
 
-	docinto html_manual
-	# dont want these gzipped
-	cp docs/favicon.ico docs/*.{html,gif,css} ${D}/usr/share/doc/${P}/html_manual
-
-	docinto cgi_interface
-	dodoc anlgform.html anlgform.pl
-
-	docinto sample_configs
-	dodoc examples/*
-
-	# dont want these gzipped
-	cp -a how-to ${D}/usr/share/doc/${P}
-
-	docinto report_images
-	# dont want these gzipped
-	cp images/* ${D}/usr/share/doc/${P}/report_images
 }
