@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.37 2005/03/13 16:36:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.38 2005/03/20 23:02:42 weeve Exp $
+
+  20 Mar 2005; Jason Wever <weeve@gentoo.org> libebml-0.7.2.ebuild:
+  Stable on SPARC.
 
   13 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> libebml-0.6.0.ebuild,
   libebml-0.6.3.ebuild, libebml-0.6.4.ebuild, libebml-0.6.5.ebuild,
