@@ -3,14 +3,12 @@ Hash: SHA1
 
 MD5 5af4ffacab7742a653bfa59ec2088392 ChangeLog 1727
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 8c3396588ccb51a7bcb714c7618efdbb tmpreaper-1.4.12.ebuild 822
 MD5 fa1e3810c112c92e59194a5bd85579da tmpreaper-1.5.1.ebuild 621
-MD5 10c1c01bce2cff19237f9e6b1709dfd9 files/digest-tmpreaper-1.4.12 67
 MD5 3721a56987b93cca79656d87d4f17dfd files/digest-tmpreaper-1.5.1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBeFQyHTu7gpaalycRApsjAKDavq4KyQxwJ0eSP1NDyXflOaO2QgCg+c1h
-AjNgQ4opdQmzkkY3ZUtJops=
-=TXmq
+iD8DBQFBeFRWHTu7gpaalycRAhasAKDbXmy4AzuBwpB5SdATYtNANSWP2ACgkUr0
+lk7N23GC53sPIg3OxNP3C7Q=
+=tmng
 -----END PGP SIGNATURE-----
