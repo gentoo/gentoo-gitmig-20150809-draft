@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.14 2004/10/17 10:01:39 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.15 2004/10/20 06:21:18 phosphan Exp $
+
+*qwt-4.2.0_rc2-r1 (20 Oct 2004)
+
+  20 Oct 2004; Patrick Kursawe <phosphan@gentoo.org>
+  +files/4.2.0_rc2-plugin.patch, +qwt-4.2.0_rc2-r1.ebuild,
+  -qwt-4.2.0_rc2.ebuild:
+  Correcting the designer plugin to point to the right include directory for our
+  headers, fixing bug #68230.
 
   17 Oct 2004; David Holm <dholm@gentoo.org> qwt-4.2.0_rc2.ebuild:
   Added to ~ppc.

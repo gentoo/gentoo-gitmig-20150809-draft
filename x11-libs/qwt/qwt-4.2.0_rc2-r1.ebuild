@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0_rc2.ebuild,v 1.2 2004/10/17 10:01:39 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0_rc2-r1.ebuild,v 1.1 2004/10/20 06:21:18 phosphan Exp $
+
+inherit eutils
 
 MY_PV="${PV/_r/r}"
 
@@ -22,6 +24,7 @@ DEPEND=">=x11-libs/qt-3.0.0
 src_unpack () {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${PV}-plugin.patch
 	find . -type f -name "*.pro" | while read file; do
 		sed -e 's/.*no-exceptions.*//g' -i ${file}
 		echo >> ${file} "QMAKE_CFLAGS_RELEASE += ${CFLAGS}"

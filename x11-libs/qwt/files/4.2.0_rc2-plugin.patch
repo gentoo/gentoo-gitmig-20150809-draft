@@ -1,0 +1,41 @@
+--- designer/qwtplugin.cpp	2004-09-26 23:24:22.000000000 +0200
++++ designer/qwtplugin.cpp.new	2004-10-20 08:08:54.529176444 +0200
+@@ -56,27 +56,27 @@
+ 
+ QwtPlugin::QwtPlugin()
+ {
+-    vec.append(Entry("QwtPlot", "qwt_plot.h",
++    vec.append(Entry("QwtPlot", "qwt/qwt_plot.h",
+         "qwtplot.png", "QwtPlot", "whatsthis"));
+-    vec.append(Entry("QwtAnalogClock", "qwt_analog_clock.h", 
++    vec.append(Entry("QwtAnalogClock", "qwt/qwt_analog_clock.h", 
+         "qwtanalogclock.png", "QwtAnalogClock", "whatsthis"));
+-    vec.append(Entry("QwtCompass", "qwt_compass.h",
++    vec.append(Entry("QwtCompass", "qwt/qwt_compass.h",
+         "qwtcompass.png", "QwtCompass", "whatsthis"));
+-    vec.append(Entry("QwtCounter", "qwt_counter.h", 
++    vec.append(Entry("QwtCounter", "qwt/qwt_counter.h", 
+         "qwtcounter.png", "QwtCounter", "whatsthis"));
+-    vec.append(Entry("QwtDial", "qwt_dial.h", 
++    vec.append(Entry("QwtDial", "qwt/qwt_dial.h", 
+         "qwtdial.png", "QwtDial", "whatsthis"));
+-    vec.append(Entry("QwtKnob", "qwt_knob.h",
++    vec.append(Entry("QwtKnob", "qwt/qwt_knob.h",
+         "qwtknob.png", "QwtKnob", "whatsthis"));
+-    vec.append(Entry("QwtPushButton", "qwt_push_button.h",
++    vec.append(Entry("QwtPushButton", "qwt/qwt_push_button.h",
+         "qwtpushbutton.png", "QwtPushButton", "whatsthis"));
+-    vec.append(Entry("QwtScale", "qwt_scale.h",
++    vec.append(Entry("QwtScale", "qwt/qwt_scale.h",
+         "qwtscale.png", "QwtScale", "whatsthis"));
+-    vec.append(Entry("QwtSlider", "qwt_slider.h",
++    vec.append(Entry("QwtSlider", "qwt/qwt_slider.h",
+         "qwtslider.png", "QwtSlider", "whatsthis"));
+-    vec.append(Entry("QwtThermo", "qwt_thermo.h",
++    vec.append(Entry("QwtThermo", "qwt/qwt_thermo.h",
+         "qwtthermo.png", "QwtThermo", "whatsthis"));
+-    vec.append(Entry("QwtWheel", "qwt_wheel.h",
++    vec.append(Entry("QwtWheel", "qwt/qwt_wheel.h",
+         "qwtwheel.png", "QwtWheel", "whatsthis"));
+ }
+ 
