@@ -4,9 +4,6 @@
 #problems with the ppc file BaSS 16/jun/02
 net-misc/mldonkey
 
-#problems with python onlytesting BaSS 13/jun/02
-=net-ftp/ftpcube-0.3.2
-
 =sys-devel/binutils-2.12.90.0.9
 
 # masking nhc98, until strange module lookup behaviour is resolved
