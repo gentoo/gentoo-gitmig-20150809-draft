@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.6 2004/05/12 07:58:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.7 2004/05/21 14:09:49 khai Exp $
+
+  21 May 2004; Yi Qiang <khai@gentoo.org> libglademm-2.0.1.ebuild,
+  libglademm-2.4.0.ebuild:
+  Fixed slots, added the 2.2 series
 
 *libglademm-2.4.0 (09 May 2004)
 
