@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.68 2005/01/23 00:36:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.69 2005/01/28 02:17:11 vapier Exp $
+
+*libtool-1.5.10-r4 (27 Jan 2005)
+
+  27 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  files/1.5.6/libtool-1.5-filter-host-tags.patch, +libtool-1.5.10-r4.ebuild:
+  Fix typo in the tag infer patch.
 
   22 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   libtool-1.5.2-r7.ebuild:
