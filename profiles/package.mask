@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (13 Dec 2002)
+# portage-2.0.45-r5 self-restarting test
+>=sys-apps/portage-2.0.45-r5
+
 # <blizzy@gentoo.org> (10 Dec 2002)
 # masked for intensive testing
 =net-misc/rsync-2.5.6_pre20021105
