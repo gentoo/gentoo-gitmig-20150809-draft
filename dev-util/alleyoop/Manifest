@@ -1,4 +1,15 @@
-MD5 0b56eea966be360127455ae49cd7770c ChangeLog 888
-MD5 7d1446a6e8d02a15c0f9fed3a6264145 alleyoop-0.8.2.ebuild 787
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 d2fe0ad051729b4296a1f4d91f6432c9 ChangeLog 1122
+MD5 d3be1b9015661fd94459f54110d0ffb0 alleyoop-0.8.2.ebuild 888
 MD5 4412525210d04bac0e622ac922819f81 files/digest-alleyoop-0.8.2 66
+MD5 7cb824cbf3377062fa4ba3963f159e8e files/alleyoop-0.8.2.patch 598
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCCKBKmdTrptrqvGERApJYAJ9bYSCrUQQgr90UpK4oKhEIEcq+XACbBM08
+eVVh1nQyCaHAwKga84k1JMw=
+=1JqL
+-----END PGP SIGNATURE-----
