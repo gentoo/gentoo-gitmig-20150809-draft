@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/sharutils-4.2.1-r4.ebuild,v 1.1 2001/08/03 23:05:19 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/sharutils-4.2.1-r4.ebuild,v 1.2 2001/08/23 15:57:34 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,8 +9,7 @@ DESCRIPTION="Tools to deal with shar archives"
 SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/sharutils/${A}
 	 ftp://prep.ai.mit.edu/gnu/sharutils/${A}"
 
-DEPEND="virtual/glibc
-        >=sys-devel/gettext-0.10.35"
+DEPEND="virtual/glibc sys-apps/texinfo >=sys-devel/gettext-0.10.35"
 RDEPEND="virtual/glibc"
 
 
