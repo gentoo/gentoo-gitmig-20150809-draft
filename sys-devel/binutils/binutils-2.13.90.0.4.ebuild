@@ -1,16 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.4.ebuild,v 1.1 2002/08/15 21:54:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.4.ebuild,v 1.2 2002/08/21 14:33:24 verwilst Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
 
-inherit libtool
+inherit libtool flag-o-matic
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools necessary to build programs"
 SRC_URI="ftp://ftp.kernel.org/pub/linux/devel/binutils/${P}.tar.bz2"
-
+filter-flags "-fomit-frame-pointer"
 SLOT="0"
 LICENSE="GPL-2|LGPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
