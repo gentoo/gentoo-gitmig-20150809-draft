@@ -121,3 +121,4 @@ move app-sci/pgcalc2 sci-calculators/pgcalc2
 move app-sci/qalculate-gtk sci-calculators/qalculate-gtk
 move app-sci/snac sci-calculators/snac
 move app-sci/tilp sci-calculators/tilp
+move app-sci/transcalc sci-calculators/transcalc
