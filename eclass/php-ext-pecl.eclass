@@ -1,13 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl.eclass,v 1.1 2003/10/13 19:59:20 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl.eclass,v 1.2 2004/01/24 17:02:56 coredumb Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #
 # This eclass should be used by all dev-php/PECL-* ebuilds, as a uniform way of installing PECL extensions.
 # For more information about PECL, see: http://pecl.php.net
 
-PECL_PKG=${PN/PECL-/}
+[ -z "$PHP_EXT_PECL_PKG" ] && PHP_EXT_PECL_PKG=${PN/PECL-/}
+PECL_PKG=$PHP_EXT_PECL_PKG
 PECL_PKG_V=$PECL_PKG-$PV
 
 [ -z "$PHP_EXT_NAME" ] && PHP_EXT_NAME=$PECL_PKG
