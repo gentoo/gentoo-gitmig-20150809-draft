@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2003.11.ebuild,v 1.5 2004/07/02 04:27:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2003.11.ebuild,v 1.6 2004/10/18 16:54:02 usata Exp $
 
 IUSE="opengl"
 
@@ -16,7 +16,7 @@ LICENSE="as-is"
 
 DEPEND="virtual/libc
 	opengl? ( virtual/opengl virtual/glu virtual/glut )
-	=app-text/docbook-sgml-dtd-4.2"
+	~app-text/docbook-sgml-dtd-4.2"
 
 src_compile() {
 	local myconf
