@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/canna-cannadic-0.95a.ebuild,v 1.5 2004/06/24 21:36:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/canna-cannadic-0.95a.ebuild,v 1.6 2004/08/07 21:03:57 slarti Exp $
 
 inherit cannadic
 
@@ -8,7 +8,7 @@ IUSE="canna"
 
 MY_P="${P/canna-/}"
 
-DESCRIPTION="Japanese dictionary as a supplement/replacemnt to the dictionaries distributed with Canna3.5b2"
+DESCRIPTION="Japanese dictionary as a supplement/replacement to the dictionaries distributed with Canna3.5b2"
 HOMEPAGE="http://cannadic.oucrc.org/"
 SRC_URI="http://cannadic.oucrc.org/${MY_P}.tar.gz"
 
