@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.11 2003/03/19 12:24:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.12 2003/03/20 11:42:41 george Exp $
+
+  19 Mar 2003; George Shapovalov <george@gentoo.org> graphviz-1.9.ebuild :
+  1.9 cannot be built with gcc-2.95.x. (#16018)
+  added >=sys-devel/gcc-3.2* to DEPEND and <media-gfx/graphviz-1.9 to all gcc-2 based profiles
 
   13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> graphviz-1.8.10-r3.ebuild :
   Marked ppc stable
