@@ -1,19 +1,15 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/beaver-0.2.3.ebuild,v 1.8 2003/10/01 11:39:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/beaver-0.2.3.ebuild,v 1.9 2004/03/13 22:05:33 mr_bones_ Exp $
 
-P=beaver-0.2.3
-S=${WORKDIR}/${P}
+DESCRIPTION="An Early AdVanced EditoR"
+HOMEPAGE="http://eturquin.free.fr/beaver/index.htm"
+SRC_URI="http://eturquin.free.fr/beaver/dloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc"
 SLOT="0"
-
-DESCRIPTION="An Early AdVanced EditoR"
-
-SRC_URI="http://eturquin.free.fr/beaver/dloads/${P}.tar.gz"
-
-HOMEPAGE="http://eturquin.free.fr/beaver/index.htm"
+IUSE=""
 
 DEPEND=">=x11-libs/gtk+-1.2.10-r8"
 
