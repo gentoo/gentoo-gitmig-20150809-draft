@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gpdf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.38 2004/08/05 18:56:29 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.39 2004/08/05 22:20:46 gustavoz Exp $
+
+  05 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> gpdf-0.132.ebuild:
+  Stable on sparc
 
   05 Aug 2004; Guy Martin <gmsoft@gentoo.org> gpdf-0.132.ebuild:
   Stable on hppa.
