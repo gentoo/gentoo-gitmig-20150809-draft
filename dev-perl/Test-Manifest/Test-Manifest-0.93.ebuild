@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/Test-Manifest-0.93.ebuild,v 1.4 2004/09/03 16:44:03 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/Test-Manifest-0.93.ebuild,v 1.5 2005/02/18 17:28:20 luckyduck Exp $
 
 inherit perl-module
 
