@@ -62,11 +62,8 @@ diff -ur work/quicktime4linux-2.0.0/Makefile work.new/quicktime4linux-2.0.0/Make
  
 -LIBS := $(OUTPUT) $(MPEG3_DIR)/$(OBJDIR)/libmpeg3.a -lpng -lz -lpthread -lglib -ldl -lm
 +LIBS := $(OUTPUT) \
-+	-logg -lmpeg3 -lmp3lame -ldv -ljpeg -lvorbis -lvorbisenc -lavcodec -a52 \
++	-logg -lmpeg3 -lmp3lame -ldv -ljpeg -lvorbis -lvorbisenc -lavcodec -la52 \
 +	-lpng -lz -lpthread -lglib -ldl -lm
  
  
  $(shell if ! test -d $(OBJDIR) \; then mkdir -p $(DIRS) \; fi )
-Only in work.new/quicktime4linux-2.0.0: Makefile.orig
-Only in work/quicktime4linux-2.0.0: i686
-Only in work/quicktime4linux-2.0.0: jpeg
