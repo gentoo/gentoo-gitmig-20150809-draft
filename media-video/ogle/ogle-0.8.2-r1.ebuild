@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.8.2.ebuild,v 1.1 2002/01/17 20:59:24 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.8.2-r1.ebuild,v 1.1 2002/01/29 18:09:14 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Ogle is a full featured DVD player that supports DVD menus"
@@ -27,6 +27,15 @@ src_install() {
   make prefix=${D}/usr mandir=${D}/usr/share/man infodir=${D}/usr/share/info docdir=${D}/usr/share/doc/${PF}/html sysconfdir=${D}/etc install || die
 
   dodoc AUTHORS COPYING ChangeLog HISTORY INSTALL NEWS README TODO doc/liba52.txt
+
+  # fix bug #376: ogle build does not install libdvdcontrol shared libs
+  # if libs are not already installed... (could not find error in makefile)
+  into /usr/lib/ogle
+  doins ogle/.libs/libdvdcontrol.a
+  doins ogle/libdvdcontrol.la
+  doins ogle/.libs/libdvdcontrol.so.3.2.0
+  dosym /usr/lib/ogle/libdvdcontrol.so.3.2.0 /usr/lib/ogle/libdvdcontrol.so
+  dosym /usr/lib/ogle/libdvdcontrol.so.3.2.0 /usr/lib/ogle/libdvdcontrol.so.3
 
 }
 
