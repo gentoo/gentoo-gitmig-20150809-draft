@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 88b79c0bdc7f7f9bce6d129fc36776d6 stldb4-0.3.7.ebuild 813
+MD5 86bec87ca72bb998c3b17c5eb4ed26a0 ChangeLog 421
 MD5 e278aab9096d59677b60b477be54fec4 metadata.xml 287
-MD5 82bcf8797d44bd1620952590ef834bbe ChangeLog 419
+MD5 d557b4ce616f26188c6294d60b333929 stldb4-0.3.7.ebuild 817
 MD5 bc3215a0cbff8de4b5d788acc3752aa7 files/digest-stldb4-0.3.7 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA9JZ7HTu7gpaalycRAnqlAKCmRdTeqQydwyr/hXh64G3gTxsqJwCg2yk2
-4Rr5V0FH9NhIb2FclX46ewM=
-=OkOJ
------END PGP SIGNATURE-----

@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a683706e4d55d43f3f344eab40948a6b ChangeLog 777
-MD5 c93a4ddca57d8b836b00db926e3d2bf1 myodbc-3.51.06.ebuild 2391
+MD5 28de4baa7d5a0f71cab721b2deddb658 ChangeLog 779
+MD5 cf926d22570f6512edb3e0fb62ba6528 myodbc-3.51.06.ebuild 2393
 MD5 af6071c0c469470111c00d957ccad675 files/digest-myodbc-3.51.06 66
 MD5 bdcd6e3e92526bd31f3dad197f3ff9e4 files/odbc.ini.m4 517
 MD5 ef517bf6e6fb65582a5198a63db3b786 files/odbcinst.ini.m4 233
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+eY/mdTrptrqvGERAueMAJ9xcBogtfo0J1rWpmRpSZAOI1TKRwCeLqZ8
-wL5jUmZsWEkvbpvAZKXgtR0=
-=nX48
------END PGP SIGNATURE-----

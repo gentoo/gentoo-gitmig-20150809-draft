@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 175eaabd83a8b8f0fbd58fa09b68fac1 ChangeLog 640
-MD5 60ae0878ab5b18f8c6fe67985b9e8cd6 libdbi-drivers-0.7.1.ebuild 1236
+MD5 10fad0ec1a3ff8aa418c2d5541c74562 ChangeLog 642
+MD5 367dccebfdd5be2fc83a50afc78b82f9 libdbi-drivers-0.7.1.ebuild 1238
 MD5 773b07f27a69df8943d40fea56b1c36e files/digest-libdbi-drivers-0.7.1 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBZD4NI1lqEGTUzyQRAqe7AJ9fj34sN1uaijh3nEESf9i4WtxLYwCfce+9
-wv7OIt+4dP2RLXjtU2mHjTQ=
-=KTrM
------END PGP SIGNATURE-----

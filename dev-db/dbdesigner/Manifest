@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 526b2c9b59b7976d0b7acd4eae7c6d06 dbdesigner-4.0.5.4.ebuild 1634
-MD5 6e35f7521c9cd8aec29dd6d17375b880 ChangeLog 712
+MD5 0b43e92b9ad3ea00ac2356c567e94963 ChangeLog 717
+MD5 1f503d05c43c1a082f75fe36e4ce4cbf dbdesigner-4.0.5.4.ebuild 1639
 MD5 ca15fabdd1581e384c42b3ada2c811ca metadata.xml 409
 MD5 60c9074f70d74a2aced14aa67cd7335d files/digest-dbdesigner-4.0.5.4 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBw0jBI1lqEGTUzyQRAhCnAKCWkCwnrQdECa1Q11xRACqC7ACsWgCeIfLl
-KJYJltSgOev7yqli0Kss9Uk=
-=mkG+
------END PGP SIGNATURE-----

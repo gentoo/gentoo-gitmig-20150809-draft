@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 643f5e33e881de868098df3f37b40ac5 firebird-1.5.1.ebuild 6392
-MD5 4f73fa4875b90f9fc4efc65427c3182f ChangeLog 4059
+MD5 b9a3f751de719bf64fa7dc12a48790af ChangeLog 4060
 MD5 70eaf71c2018b87fe06aed9df3799509 metadata.xml 225
+MD5 feb7d7b1d16208e60792a0269e34b855 firebird-1.5.1.ebuild 6393
+MD5 a71afe7683db444d9647fc136eaeb1c1 files/70firebird 77
+MD5 d3278f869be37481ddde143f5ee98c4a files/70firebird-1.5.0 50
+MD5 5bc644b4558c11069e2a946e029d70bb files/firebird-1.5.1-gcc34.patch 5906
+MD5 5b28cc81eff2c59fbee652dc2c6ed483 files/firebird-1.5.0.xinetd 425
 MD5 c5f5e6bae2cae891269931331e69f1ca files/firebird.conf.d 80
 MD5 19238be258dea758cf3f082df5ae813a files/firebird.init.d 697
-MD5 d3278f869be37481ddde143f5ee98c4a files/70firebird-1.5.0 50
 MD5 b0d6de21d0e14d41983d440d5675e9d5 files/firebird.xinetd 206
-MD5 5b28cc81eff2c59fbee652dc2c6ed483 files/firebird-1.5.0.xinetd 425
-MD5 5bc644b4558c11069e2a946e029d70bb files/firebird-1.5.1-gcc34.patch 5906
-MD5 a71afe7683db444d9647fc136eaeb1c1 files/70firebird 77
 MD5 606e690fe61535cc02d7314616e263fb files/digest-firebird-1.5.1 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBjrWXZ/iYVBmujdURAkJ1AKCpqcWj/0nA/lQnbJ2i3DPeNtjk7ACgzxSp
-4seWga+mNdpYwK1z1KRZ/do=
-=dXgn
------END PGP SIGNATURE-----

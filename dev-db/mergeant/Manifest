@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 659dabbaac071aa64389c4e6574656f7 mergeant-0.12.1.ebuild 1225
-MD5 f023c427bc6bcdfc11f07fa303af1fb8 mergeant-0.11.0.ebuild 1133
-MD5 ad0262c27b5e17de4b157118e6dab94c mergeant-0.12.0.ebuild 1224
-MD5 64a577986c9a8dd5b56b5ff4c62a2020 ChangeLog 870
+MD5 3da700dd8b8e9ee87d01e63192f93dc1 ChangeLog 872
+MD5 fd9eeb12c1656093338b4dbd41045120 mergeant-0.11.0.ebuild 1135
+MD5 b85ffe9d49025d122fa668874e61af3f mergeant-0.12.0.ebuild 1226
+MD5 74bca0baa718e231263842ff61db2fb1 mergeant-0.12.1.ebuild 1227
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 fcec4e186e23d014e3fe85eefa2ac7d4 files/digest-mergeant-0.11.0 69
 MD5 7acea0628375a86548ecc40dd5f34c35 files/digest-mergeant-0.12.0 69
 MD5 40c851ac355e64c4e94e52bbeabf5a2d files/digest-mergeant-0.12.1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBo4fcI1lqEGTUzyQRAonuAJ9kN2MglOwxVYlsPVWnuGohzYtTrgCgrs21
-mBqC6RXM3MEIhzk9XiFGJlY=
-=qIIq
------END PGP SIGNATURE-----
