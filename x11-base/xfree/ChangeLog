@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.280 2004/02/09 22:26:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.281 2004/02/10 03:21:56 agriffis Exp $
+
+  09 Feb 2004; Aron Griffis <agriffis@gentoo.org> xfree-4.3.0-r4.ebuild:
+  stable on alpha
 
   09 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.2.1-r2.ebuild,
   xfree-4.3.0-r2.ebuild, xfree-4.3.99.902.ebuild:
