@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.22 2003/10/18 16:47:55 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.23 2003/11/19 16:52:47 lanius Exp $
+
+  19 Nov 2003; Heinrich Wendel <lanius@gentoo.org> mldonkey-2.5.4.ebuild:
+  inherit eutils to fix enewuser, thx to iggy for pointing that out
 
   18 Oct 2003; Heinrich Wendel <lanius@gentoo.org> mldonkey-2.5.4.ebuild:
   fixed compiling with ocaml 3.07
