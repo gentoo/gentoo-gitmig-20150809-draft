@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.758 2004/11/24 11:08:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.759 2004/11/24 20:05:30 brix Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -562,6 +562,7 @@ net-wireless/hostap-driver:hostap-noplx - Set to not install hostap_plx driver
 net-wireless/hostap:hostap-nopci - Set to not install hostap_pci driver
 net-wireless/hostap:hostap-noplx - Set to not install hostap_plx driver
 net-wireless/libbtctl:mono - Add Mono Bluetooth bindings
+net-wireless/wireless-tools:multicall - Build the most commonly used tools as one binary
 net-wireless/wpa-supplicant:gsm - Add support for EAP-SIM authentication algorithm
 net-wireless/wpa-supplicant:pcap - Use external libpcap and libdnet for layer2 packet processing
 net-www/apache:distcache - Enable SSL distcache support
