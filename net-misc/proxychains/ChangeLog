@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/proxychains
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/ChangeLog,v 1.1 2004/03/13 00:51:47 vapier Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/ChangeLog,v 1.2 2004/06/25 03:12:48 agriffis Exp $
 
 *proxychains-1.8.2 (12 Mar 2004)
 

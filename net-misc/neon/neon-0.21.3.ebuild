@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.21.3.ebuild,v 1.11 2004/04/26 12:39:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.21.3.ebuild,v 1.12 2004/06/25 03:11:56 agriffis Exp $
 
 IUSE="ssl"
 

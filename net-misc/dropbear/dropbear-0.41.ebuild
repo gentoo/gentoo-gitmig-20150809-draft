@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.41.ebuild,v 1.4 2004/06/21 13:32:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.41.ebuild,v 1.5 2004/06/25 03:12:28 agriffis Exp $
 
 DESCRIPTION="small SSH 2 server designed for small memory environments"
 HOMEPAGE="http://matt.ucc.asn.au/dropbear/"

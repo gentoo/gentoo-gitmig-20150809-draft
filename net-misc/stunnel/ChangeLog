@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/stunnel
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.28 2004/06/18 17:48:05 hansmi Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.29 2004/06/25 03:12:18 agriffis Exp $
 
   18 Jun 2004; Michael Hanselmann <hansmi@gentoo.org> stunnel-4.05.ebuild:
   Added to ~ppc

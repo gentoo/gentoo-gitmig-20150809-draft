@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/jwhois
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.13 2004/06/06 20:51:45 weeve Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.14 2004/06/25 03:12:38 agriffis Exp $
 
   06 Jun 2004; Jason Wever <weeve@gentoo.org> jwhois-3.2.2.ebuild:
   Stable on sparc.
