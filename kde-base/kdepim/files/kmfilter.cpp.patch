@@ -1,0 +1,49 @@
+Index: kmfilter.cpp
+===================================================================
+RCS file: /home/kde/kdepim/kmail/kmfilter.cpp,v
+retrieving revision 1.58
+diff -u -3 -p -r1.58 kmfilter.cpp
+--- kmail/kmfilter.cpp	29 Nov 2003 15:46:43 -0000	1.58
++++ kmail/kmfilter.cpp	4 Feb 2004 16:16:01 -0000
+@@ -147,9 +147,18 @@ void KMFilter::readConfig(KConfig* confi
+   // that the pattern is purified.
+   mPattern.readConfig(config);
+ 
+-  if (bPopFilter)
++  if (bPopFilter) {
+     // get the action description...
+-    mAction = (KMPopFilterAction) config->readNumEntry( "action" );
++    QString action = config->readEntry( "action" );
++    if ( action == "down" )
++      mAction = Down;
++    else if ( action == "later" )
++      mAction = Later;
++    else if ( action == "delete" )
++      mAction = Delete;
++    else
++      mAction = NoAction;
++  }
+   else {
+     QStringList sets = config->readListEntry("apply-on");
+     if ( sets.isEmpty() && !config->hasKey("apply-on") ) {
+@@ -210,7 +219,19 @@ void KMFilter::writeConfig(KConfig* conf
+   mPattern.writeConfig(config);
+ 
+   if (bPopFilter) {
+-    config->writeEntry( "action", mAction );
++    switch ( mAction ) {
++    case Down:
++      config->writeEntry( "action", "down" );
++      break;
++    case Later:
++      config->writeEntry( "action", "later" );
++      break;
++    case Delete:
++      config->writeEntry( "action", "delete" );
++      break;
++    default:
++      config->writeEntry( "action", "" );
++    }
+   } else {
+     QStringList sets;
+     if ( bApplyOnInbound )
