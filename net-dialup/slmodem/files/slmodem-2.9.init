@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.init,v 1.9 2004/08/13 12:59:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.init,v 1.10 2004/12/05 09:28:29 dragonheart Exp $
 
 depend() {
 	need logger
@@ -23,7 +23,7 @@ function loadsalsa {
 	ebegin "Starting slmodemd for ${DEV}"
 	start-stop-daemon --start --background --nicelevel=${NICE} --make-pidfile \
 		--pidfile /var/run/slmodemd.pid --startas /usr/sbin/slmodemd \
-		-- -country=${COUNTRY} -g=${GROUP} --alsa hw:${HW_SLOT}
+		-- -country=${COUNTRY} -g=${GROUP} --alsa ${HW_SLOT}
 	return ${?}
 }
 

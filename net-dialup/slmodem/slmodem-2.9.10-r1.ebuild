@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r1.ebuild,v 1.2 2004/10/24 20:57:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r1.ebuild,v 1.3 2004/12/05 09:28:29 dragonheart Exp $
 
 inherit kernel-mod eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.smlink.com/"
 SRC_URI="http://www.smlink.com/main/down/${P}.tar.gz"
 LICENSE="Smart-Link"
 SLOT="0"
-KEYWORDS="~x86 -*"
+KEYWORDS="x86 -*"
 IUSE="alsa usb"
 
 DEPEND="virtual/libc
@@ -90,6 +90,7 @@ src_install() {
 	# devfs
 		insinto /etc/devfs.d/; newins ${FILESDIR}/${PN}-2.9.devfs ${PN}
 		insinto /etc/modules.d/; newins ${FILESDIR}/${PN}-2.9.modules ${PN}
+		chmod 644 ${D}/etc/modules.d/slmodem
 	elif [ -e ${ROOT}/dev/.udev ] ; then
 	# udev
 		# check Symlink
