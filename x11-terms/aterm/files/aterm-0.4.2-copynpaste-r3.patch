@@ -1,6 +1,6 @@
 diff -Naur aterm-orig/configure aterm-0.4.2/configure
 --- aterm-orig/configure	2001-09-06 18:38:07.000000000 +0200
-+++ aterm-0.4.2/configure	2004-03-29 19:38:49.923263224 +0200
++++ aterm-0.4.2/configure	2004-03-30 18:14:38.189000472 +0200
 @@ -2609,7 +2609,7 @@
      ; \
  do
@@ -12,7 +12,7 @@ diff -Naur aterm-orig/configure aterm-0.4.2/configure
  #include "confdefs.h"
 diff -Naur aterm-orig/src/command.c aterm-0.4.2/src/command.c
 --- aterm-orig/src/command.c	2001-09-06 18:38:07.000000000 +0200
-+++ aterm-0.4.2/src/command.c	2004-03-29 19:38:49.928262464 +0200
++++ aterm-0.4.2/src/command.c	2004-03-30 18:14:38.193999712 +0200
 @@ -2653,7 +2653,7 @@
  		switch (ev->xbutton.button) {
  		case Button1:
@@ -23,8 +23,8 @@ diff -Naur aterm-orig/src/command.c aterm-0.4.2/src/command.c
  
  		case Button2:
 diff -Naur aterm-orig/src/screen.c aterm-0.4.2/src/screen.c
---- aterm-orig/src/screen.c	2004-03-29 19:38:25.944908488 +0200
-+++ aterm-0.4.2/src/screen.c	2004-03-29 19:28:56.000000000 +0200
+--- aterm-orig/src/screen.c	2004-03-30 18:13:11.070244536 +0200
++++ aterm-0.4.2/src/screen.c	2004-03-30 18:06:42.000000000 +0200
 @@ -44,7 +44,7 @@
  
  #include <X11/Xatom.h>
@@ -34,23 +34,34 @@ diff -Naur aterm-orig/src/screen.c aterm-0.4.2/src/screen.c
  
  static screen_t    screen;
  
-@@ -2759,21 +2759,88 @@
+@@ -2759,21 +2759,97 @@
      long            nread;
      unsigned long   bytes_after, nitems;
      unsigned char  *data;
 +    XTextProperty   ct;
      Atom            actual_type;
      int             actual_fmt;
--
 +    int             dummy_count;
 +    char          **cl;
 +    XEvent          ev;
 +    XWindowAttributes wa;
 +    int             setpropertyevent = 0;
 +    
-     if (prop == None)
- 	return;
-+
++    if (prop == None) {
++        prop = XInternAtom(Xdisplay, "VT_SELECTION", False);
++    
++	if (selection.type == 0) {
++	    selection.type++; 
++    	    XConvertSelection(Xdisplay, XA_PRIMARY, XA_UTF8_STRING(Xdisplay), prop, TermWin.vt,selection.request_time);
++        } else if (selection.type == 1) {
++	    selection.type++;
++    	    XConvertSelection(Xdisplay, XA_PRIMARY, XA_STRING, prop, TermWin.vt,selection.request_time);
++	}
++    	return;
++    }
+ 
+-    if (prop == None)
+-	return;
      for (nread = 0, bytes_after = 1; bytes_after > 0; nread += nitems) {
  	if ((XGetWindowProperty(Xdisplay, win, prop, (nread / 4), PROP_SIZE,
 -				Delete, AnyPropertyType, &actual_type,
@@ -114,47 +125,45 @@ diff -Naur aterm-orig/src/screen.c aterm-0.4.2/src/screen.c
 +		/*
 +		* This is a normal 1-time paste
 +		*/
++		if (Delete) {
++			XDeleteProperty(Xdisplay, win, prop);
++		}
++
 +		if (XmbTextPropertyToTextList(Xdisplay, &ct, &cl, &dummy_count) == Success && cl) {
 +	            PasteIt(cl[0], strlen(cl[0]));
 +		    XFreeStringList(cl);
 +		} else {
 +		    PasteIt(ct.value, (unsigned int)ct.nitems);
 +		}
-+
-+		if (Delete) {
-+			XDeleteProperty(Xdisplay, win, prop);
-+		}
-+		
 +		XFree(ct.value);
 +	}
      }
  }
  
-@@ -2787,6 +2854,9 @@
+@@ -2787,6 +2863,11 @@
  selection_request(Time tm, int x, int y)
  {
      Atom            prop;
 +    Atom            xa;
 +
 +    xa = XInternAtom(Xdisplay, "COMPOUND_TEXT", False);
++
++    selection.request_time = tm;
  
      if (!(Options & Opt_pasteMouseOutside))
          if (x < 0 || x >= TermWin.width || y < 0 || y >= TermWin.height)
-@@ -2798,8 +2868,11 @@
+@@ -2798,8 +2879,8 @@
  	selection_paste(Xroot, XA_CUT_BUFFER0, False);
      } else {
  	prop = XInternAtom(Xdisplay, "VT_SELECTION", False);
 -	XConvertSelection(Xdisplay, XA_PRIMARY, XA_STRING, prop, TermWin.vt,
 -			  tm);
-+	if (XConvertSelection(Xdisplay, XA_PRIMARY, xa, prop, TermWin.vt,tm) != Success) {
-+	    if (XConvertSelection(Xdisplay, XA_PRIMARY, XA_UTF8_STRING(Xdisplay), prop, TermWin.vt,tm) != Success) {;
-+	        XConvertSelection(Xdisplay, XA_PRIMARY, XA_STRING, prop, TermWin.vt,tm);
-+	    }
-+	}
++        selection.type = 0;
++	XConvertSelection(Xdisplay, XA_PRIMARY, xa, prop, TermWin.vt,tm);
      }
  }
  
-@@ -2828,7 +2901,7 @@
+@@ -2828,7 +2909,7 @@
   */
  /* PROTO */
  void
@@ -163,7 +172,7 @@ diff -Naur aterm-orig/src/screen.c aterm-0.4.2/src/screen.c
  {
      int             i, col, end_col, row, end_row;
      unsigned char  *new_selection_text;
-@@ -2895,7 +2968,13 @@
+@@ -2895,7 +2976,13 @@
  	FREE(selection.text);
      selection.text = new_selection_text;
  
@@ -178,3 +187,15 @@ diff -Naur aterm-orig/src/screen.c aterm-0.4.2/src/screen.c
      if (XGetSelectionOwner(Xdisplay, XA_PRIMARY) != TermWin.vt)
  	print_error("can't get primary selection");
      XChangeProperty(Xdisplay, Xroot, XA_CUT_BUFFER0, XA_STRING, 8,
+diff -Naur aterm-orig/src/screen.h aterm-0.4.2/src/screen.h
+--- aterm-orig/src/screen.h	2001-09-06 18:38:07.000000000 +0200
++++ aterm-0.4.2/src/screen.h	2004-03-30 18:00:53.000000000 +0200
+@@ -88,6 +88,8 @@
+     short           screen;	/* screen being used                         */
+     short           clicks;	/* number of clicks                          */
+     row_col_t       beg, mark, end;
++    char	    type;
++    int		    request_time;
+ } selection_t;
+ 
+ /* ------------------------------------------------------------------------- */

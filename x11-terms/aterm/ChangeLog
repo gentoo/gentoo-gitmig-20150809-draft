@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.26 2004/03/29 18:17:01 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.27 2004/03/30 16:22:21 spock Exp $
+
+  30 Mar 2004; Michal Januszewski <spock@gentoo.org>
+  files/aterm-0.4.2-copynpaste-r3.patch:
+  There was a nasty bug in the patch I created yesterday, so here it is - an
+  updated version.
 
   28 Mar 2004; Jon Portnoy <avenj@gentoo.org> aterm-0.4.2-r8.ebuild :
   Stable on AMD64.
