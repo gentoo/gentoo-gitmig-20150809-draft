@@ -7,9 +7,6 @@ MD5 6796657ec2d97b93cc9b60012fd0b8b9 rrdtool-1.0.47.ebuild 2819
 MD5 533413dfdc7ffe715c1fbed69d755820 ChangeLog 7737
 MD5 1a739170238a1fae241a8a0df21462e9 metadata.xml 241
 MD5 7d70f3c5e0abd1afecf4f0d568ace73f rrdtool-1.0.45-r2.ebuild 2624
-MD5 db9507e851ba51a61398c1ac7816f72a files/rrdtool-1.0.47-fPIC.patch 587
-MD5 db9507e851ba51a61398c1ac7816f72a files/rrdtool-1.0.48-fPIC.patch 587
-MD5 db9507e851ba51a61398c1ac7816f72a files/rrdtool-1.0.49-fPIC.patch 587
 MD5 cd1090ecb4ba89539e79667d88e4431c files/digest-rrdtool-1.0.47 67
 MD5 f258771c66239d553cf011c9874a50b1 files/digest-rrdtool-1.0.48 67
 MD5 5027f79618fbf229b145b204b1e595ce files/digest-rrdtool-1.0.49 67
@@ -17,7 +14,7 @@ MD5 dd9238326165d64f1c400c9e38cfda28 files/digest-rrdtool-1.0.45-r2 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBe9iAT+MN7JbqCpMRAqKWAKCKJzgzQb0n87OYL96g5d/UdfUq9ACfSAnu
-Ah+7BOp2MScRfhWJDzQqJy4=
-=dYmD
+iD8DBQFBe9j2T+MN7JbqCpMRAojiAJ9ogTg0e6kqWlwGKytIX2k0LNRouQCfa0qt
+lpDZguTuV0dskL8fG32OSpc=
+=ZMS0
 -----END PGP SIGNATURE-----
