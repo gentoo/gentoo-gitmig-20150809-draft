@@ -1,15 +1,22 @@
 # ChangeLog for media-libs/smpeg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.4 2002/08/03 05:03:42 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.5 2002/08/03 09:25:05 cardoe Exp $
 
-  5 Apr 2002; M.Schlemmer <azarah@gentoo.org> smpeg-0.4.4-r2.ebuild :
+*smpeg-0.4.4-r3 (03 Aug 2002)
+ 
+  03 Aug 2002; Doug Goldstein <cardoe@gentoo.org> smpeg-0.4.4-r3.ebuild :
 
-  gcc-3 fixes by PreZ.
+  Fixed gcc-3.1 support. (No ppc KEYWORD yet)
+  Bug #5558 Olivier Crete <tester@videotron.ca> posted the patch from Redhat.
 
 *smpeg-0.4.4-r2 (3 Feb 2002)
 
   02 Aug 2002; mark Guertin <gerk@gentoo.org> smpeg-0.4.4-r2.ebuild :
   Added ppc to keywords
+
+  5 Apr 2002; M.Schlemmer <azarah@gentoo.org> smpeg-0.4.4-r2.ebuild :
+
+  gcc-3 fixes by PreZ.
 
   3 Feb 2002; M.Schlemmer <azarah@gentoo.org> smpeg-0.4.4-r2.ebuild :
 
