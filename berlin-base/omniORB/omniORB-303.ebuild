@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/berlin-base/omniORB/omniORB-303.ebuild,v 1.5 2001/05/03 10:37:38 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/berlin-base/omniORB/omniORB-303.ebuild,v 1.6 2001/05/03 19:33:52 achim Exp $
 
 A="${PN}_${PV}.tar.gz omniORBpy_1_3.tar.gz"
 S=${WORKDIR}/omni
@@ -80,8 +80,8 @@ src_install () {
 
 }
 pkg_postinst() {
-  if [ ! -e "${ROOT}etc/omniORB.cfg" ] ; then
-    echo "ORBInintialHost `uname -n`" > ${ROOT}etc/omniORB.cfg
-    echo "ORBInitialPort 8200" > ${ROOT}etc/omniORB.cfg
+  if [ ! -f "${ROOT}etc/omniORB.cfg" ] ; then
+    echo "ORBInitialHost `uname -n`" > ${ROOT}etc/omniORB.cfg
+    echo "ORBInitialPort 8200" >> ${ROOT}etc/omniORB.cfg
   fi
 }
