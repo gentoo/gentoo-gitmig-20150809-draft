@@ -36,6 +36,7 @@ net-dialup/hcfusbmodem
 >=gnome-extra/gal-1.99
 >=app-text/gnome-spell-1.0
 >=gnome-extra/gtkhtml-3.0
+>=gnome-extra/libgtkhtml-3.0
 >=net-libs/libsoup-1.99
 # these are not slotted. _will_ break existing apps if unmasked.
 >=gnome-extra/gnome-pilot-2.0
@@ -771,9 +772,6 @@ media-libs/monkey-sound
 # Gnome 2 users should not uncomment theese. broken and/or not-present.
 # I repeat- NOT -
 #########
-
-# Not in portage. deprecated
->=app-text/gnome-spell-1.0_pre1
 
 # LEAVE THIS ONE MASKED, EVEN GNOME2 USERS!!!
 >=dev-libs/librep-20020201
