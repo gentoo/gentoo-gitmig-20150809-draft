@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/gnugo-3.3.22.ebuild,v 1.4 2004/07/01 11:11:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/gnugo-3.3.22.ebuild,v 1.5 2004/07/14 14:29:58 agriffis Exp $
 
 inherit games
 
@@ -9,6 +9,7 @@ SRC_URI="ftp://sporadic.stanford.edu/pub/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gnugo/devel.html"
 
 KEYWORDS="x86 ~ppc"
+IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 
