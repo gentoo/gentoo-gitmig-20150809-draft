@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aae07f088eec1ddae89070da67887881 ChangeLog 1095
-MD5 6892c3de5ab0e307a242a7baa5208fb4 PEAR-File_Find-0.2.0.ebuild 401
+MD5 d10ee1e5a906da4083a418bdd35a7f97 ChangeLog 1193
+MD5 89b889ac2052073934fb01f2d1eda909 PEAR-File_Find-0.2.0.ebuild 401
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 d8ae9fab1985e6be4310271c90651929 files/digest-PEAR-File_Find-0.2.0 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCRt0PugEuf3OQ0akRAr4/AJ0RAm4yb+g2lqAocFxplMbhGPapBACgh4Co
-+8sil651l2oUNvdmqJT8tPk=
-=1Q1/
------END PGP SIGNATURE-----

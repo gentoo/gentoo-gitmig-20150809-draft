@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e1d9d2e80daefaab820c80b385fd484c ChangeLog 1167
+MD5 e5e3e2b50a65c912ed1a8d37519f4766 ChangeLog 1274
+MD5 f0a5b71d7a3a9f4498137eb66f8aaaf4 PEAR-Services_Weather-1.3.1.ebuild 590
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
-MD5 08f95c93fc41028d45d8a8d3bdde5a00 PEAR-Services_Weather-1.3.1.ebuild 590
 MD5 3780be3af60c363031658c9ca8f99864 files/digest-PEAR-Services_Weather-1.3.1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCRtgLugEuf3OQ0akRAn2RAKCGua0OeQxiHa44wQYGTj5n1PjdWQCfad7b
-78Q3BgHpKwxTG8rer+isNcU=
-=sl9I
------END PGP SIGNATURE-----
