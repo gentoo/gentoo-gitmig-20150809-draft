@@ -1,3 +1,4 @@
-MD5 548d849e7746bc4e6bdf536dc57f44a1 ChangeLog 530
-MD5 55bc536ca05a19dd10daedc19d53637d ttcp-1.12.ebuild 600
+MD5 7b0564a0bb3eb17fae60814369c7dabb ttcp-1.12.ebuild 694
+MD5 8876dbfce408bb4bf5094990763a369d ChangeLog 655
 MD5 690842d44301d23c6ab6cc2536c16cfb files/digest-ttcp-1.12 60
+MD5 8d82b8d7e98be982b36942093d19b005 files/ttcp-1.12-amd64.patch 5313
