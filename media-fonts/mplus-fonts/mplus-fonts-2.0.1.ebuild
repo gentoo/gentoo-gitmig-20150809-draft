@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/mplus-fonts-2.0.1.ebuild,v 1.1 2003/07/26 18:32:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/mplus-fonts-2.0.1.ebuild,v 1.2 2003/08/09 10:22:20 usata Exp $
 
 FONT_PATH="/usr/share/fonts/mplus"
 MY_P="mplus_bitmap_fonts-${PV}"
@@ -10,7 +10,7 @@ HOMEPAGE="http://mplus-fonts.sourceforge.jp/"
 SRC_URI="mirror://sourceforge.jp/${PN}/5030/${MY_P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND="virtual/x11
 	dev-lang/perl"
