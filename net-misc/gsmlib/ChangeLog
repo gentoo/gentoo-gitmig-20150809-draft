@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gsmlib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsmlib/ChangeLog,v 1.7 2004/07/24 20:43:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsmlib/ChangeLog,v 1.8 2004/11/12 20:26:31 gustavoz Exp $
+
+  12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  gsmlib-1.11_pre030826.ebuild:
+  Stable on sparc
 
 *gsmlib-1.10-r1 (24 Jul 2004)
 
