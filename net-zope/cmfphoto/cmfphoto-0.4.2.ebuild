@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphoto/cmfphoto-0.4.2.ebuild,v 1.1 2004/05/12 19:41:46 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphoto/cmfphoto-0.4.2.ebuild,v 1.2 2004/05/12 19:51:13 batlogg Exp $
 
 inherit zproduct
 
@@ -19,5 +19,7 @@ ZPROD_LIST="CMFPhoto"
 pkg_postinst()
 {
 	zproduct_pkg_postinst
-	ewarn "if you run zope on python < 2.3 make sure you have dev-python/Imageing-21 installed."
+	ewarn "if you run zope on python < 2.3 make sure you have dev-python/Imgeing-21 installed."
+	ewarn "Please use CMFQuickInstallerTool or read the documentation of this"
+	ewarn "product for instruction on how to add this product to your CMF/Plone site."
 }
