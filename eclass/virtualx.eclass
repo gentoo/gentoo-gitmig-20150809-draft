@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.9 2002/10/25 19:55:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.10 2003/01/22 01:47:34 jrray Exp $
 # This eclass can be used for packages that needs a working X environment to build
 
 ECLASS=virtualx
@@ -42,8 +42,24 @@ virtualmake() {
 		/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x32 &>/dev/null &
 		sleep 2
 		
+		local start=${XDISPLAY}
 		while [ ! -f /tmp/.X${XDISPLAY}-lock ]
 		do
+			# Stop trying after 15 tries
+			if [ $((${XDISPLAY} - ${start})) -gt 15 ]; then
+
+				eerror ""
+				eerror "Unable to start Xvfb."
+				eerror ""
+				eerror "'/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x32' returns:"
+				eerror ""
+				/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x32
+				eerror ""
+				eerror "If possible, correct the above error and try your emerge again."
+				eerror ""
+				die
+			fi
+
 			XDISPLAY=$((${XDISPLAY}+1))
 			/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x32 &>/dev/null &
 			sleep 2
