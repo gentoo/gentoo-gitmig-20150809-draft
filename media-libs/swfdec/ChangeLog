@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/swfdec
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.7 2004/10/23 20:02:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.8 2004/11/16 20:32:08 rizzo Exp $
+
+*swfdec-0.3.1 (16 Nov 2004)
+
+  16 Nov 2004; Don Seiler <rizzo@gentoo.org> +swfdec-0.3.1.ebuild:
+  Version bump.  Closes bug #71270.
 
   23 Oct 2004; Jason Wever <weeve@gentoo.org> swfdec-0.2.2-r1.ebuild:
   Added ~sparc keyword.
