@@ -1,4 +1,4 @@
-MD5 374bfe6c7844ea7b976083a36e3d3249 gaim-0.75-r11.ebuild 4436
+MD5 ee0b180e93b566627f974caa3f218b17 gaim-0.75-r11.ebuild 4435
 MD5 4142d141ee10c2855798920736b8decb gaim-0.75-r10.ebuild 3672
 MD5 82f30e5288aa059be77d6ec84e85904b ChangeLog 25110
 MD5 19b3cafbbe380403d46cccc45a984b80 metadata.xml 481
@@ -8,7 +8,7 @@ MD5 a714a5babbb4387f5a5516f75548528a files/gaim-0.76cvs-yahoo-misc-fixes-1.diff 
 MD5 68525b8389e356a5d05d531b84fb1ada files/gaim-0.74-gnome-url-handler.patch 1854
 MD5 8b152d59a54ab95627c4c0cd52758d75 files/digest-gaim-0.75-r8 63
 MD5 a4f3b00a7aa80e7fbc1e315b8c9306c8 files/gaim-0.76cvs-signals-varargs.diff 1753
-MD5 c1c40da376b62090db0d9cf42c1e5c5b files/gaim-gentoo-branding.patch 1944
+MD5 93491cd4f8542689ab3d699e74279ad6 files/gaim-gentoo-branding.patch 1944
 MD5 53302cc68bb7bef9803723e977010339 files/gaim-0.74_cjk_gtkconv.patch 1128
 MD5 e58ee6f06747da85a60cb9c13b91f805 files/gaim-0.76cvs-yahoo-login-fix.diff 4618
 MD5 e16439188287325963107a14ccddf668 files/gaim-0.75-yahoo-security.diff 3863

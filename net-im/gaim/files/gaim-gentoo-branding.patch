@@ -32,7 +32,7 @@ diff -ur gaim-0.75/src/about.c gaim-0.75-branded/src/about.c
 +			  _("This version of gaim has been modified by the Gentoo "
 +				  "developers. If you experience any problems with it, do "
 +				  "<B>NOT</B> report them as bugs in the gaim bug tracker, "
-+					"and certainly do <B><U>NOT</B></U> seek help in #gaim. "
++					"and certainly do <B><U>NOT</U></B> seek help in #gaim. "
 +					"Report them in the gentoo bugzilla at "
 +					"<A HREF=\"http://bugs.gentoo.org\">http://bugs.gentoo.org</A>"
 +				  ".<BR><BR>"), GTK_IMHTML_NO_SCROLL);
