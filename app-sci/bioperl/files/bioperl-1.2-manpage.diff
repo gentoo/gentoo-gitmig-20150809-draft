@@ -1,0 +1,28 @@
+--- Makefile.PL.orig	2003-01-09 19:22:26.000000000 -0700
++++ Makefile.PL	2003-01-09 19:23:06.000000000 -0700
+@@ -270,16 +270,16 @@
+ 		   },
+ );
+ 
+-
+-sub MY::manifypods {
+-    my $self = shift;
+-    #print STDERR "In manifypods moment\n";
+-    if( 1 ) {
+-        return "\nmanifypods : pure_all\n\t$self->{NOECHO}\$(NOOP)\n"
+-      }
+-      else {
+-        return $self->SUPER::manifypods(@_);
+-      }
+-    }
++# build pods by commenting out
++#sub MY::manifypods {
++#    my $self = shift;
++#    #print STDERR "In manifypods moment\n";
++#    if( 1 ) {
++#        return "\nmanifypods : pure_all\n\t$self->{NOECHO}\$(NOOP)\n"
++#      }
++#      else {
++#        return $self->SUPER::manifypods(@_);
++#      }
++#    }
