@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jitac
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.1 2004/02/14 20:36:25 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.2 2004/05/04 17:12:37 kloeri Exp $
+
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> jitac-0.2.0.ebuild:
+  Stable on alpha.
 
 *jitac-0.2.0 (14 Feb 2004)
 
