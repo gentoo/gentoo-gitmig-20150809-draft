@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/pvm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.12 2004/07/01 21:49:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.13 2004/10/09 21:52:30 morfic Exp $
+
+  09 Oct 2004; Daniel Goller <morfic@gentoo.org>
+  +files/pvm-3.4.4-amd64.patch, pvm-3.4.4-r2.ebuild:
+  Fixing for amd64 to finally put transcode bug re: USE=pvm to rest
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> pvm-3.4.4-r1.ebuild,
   pvm-3.4.4-r2.ebuild:
