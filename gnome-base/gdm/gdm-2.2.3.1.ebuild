@@ -12,7 +12,7 @@ DEPEND=">=sys-libs/pam-0.72
 	>=sys-apps/tcp-wrappers-7.6
 	>=gnome-base/gnome-libs-1.2.4
 	>=gnome-base/libglade-0.16-r1
-	>=gnome-base/gdk-pixbuf-0.11"
+	>=media-libs/gdk-pixbuf-0.11"
 
 src_unpack() {
   unpack ${A}

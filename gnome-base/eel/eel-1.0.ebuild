@@ -10,14 +10,14 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=gnome-base/gnome-vfs-1.0.1
-        >=gnome-base/gdk-pixbuf-0.11.0
+        >=media-libs/gdk-pixbuf-0.11.0
         >=media-libs/freetype-2.0.1
 	>=gnome-libs/librsvg-1.0
         >=dev-util/xml-i18n-tools-0.8.4"
 
 RDEPEND=">=media-libs/freetype-2.0.1
         >=gnome-base/gnome-vfs-1.0.1
-        >=gnome-base/gdk-pixbuf-0.11.0
+        >=media-libs/gdk-pixbuf-0.11.0
 	>=gnome-libs/librsvg-1.0"
 
 src_compile() {                           
