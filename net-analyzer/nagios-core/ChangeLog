@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.22 2004/03/21 12:51:38 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.23 2004/03/21 14:12:18 mboman Exp $
+
+  21 Mar 2004; Michael Boman <mboman@gentoo.org> nagios-core-1.1-r4.ebuild:
+  Adding categories to dependencies. See bug 45110 for details.
 
   21 Mar 2004; Michael Boman <mboman@gentoo.org> nagios-core-1.1-r4.ebuild,
   nagios-core-1.1-r5.ebuild:

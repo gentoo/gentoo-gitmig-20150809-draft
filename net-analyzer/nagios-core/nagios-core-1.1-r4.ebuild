@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r4.ebuild,v 1.10 2004/03/21 12:51:38 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r4.ebuild,v 1.11 2004/03/21 14:12:18 mboman Exp $
 
 inherit eutils
 
@@ -18,9 +18,9 @@ IUSE="gd apache2 perl mysql postgres debug"
 DEPEND=">=net-mail/mailx-8.1
 	apache2? ( >=net-www/apache-2.0.43-r1 )
 	gd? (
-		>=jpeg-6b-r3
-		>=libpng-1.2.5-r4
-		>=libgd-1.8.3-r5
+		>=media-libs/jpeg-6b-r3
+		>=media-libs/libpng-1.2.5-r4
+		>=media-libs/libgd-1.8.3-r5
 	)
 	perl? ( >=perl-5.6.1-r7 )
 	mysql? ( >=dev-db/mysql-3.23.56 )
