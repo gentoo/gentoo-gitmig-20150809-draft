@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.32 2005/02/08 11:58:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.33 2005/02/10 10:25:18 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -190,7 +190,7 @@ tetex_src_install() {
 			einstall bindir=${D}/usr/bin texmf=${D}${TEXMF_PATH:-/usr/share/texmf} || die
 			
 			# Install update script
-			cat >>${T}/tetex-update<<'EOF'
+			cat >>${T}/texmf-update<<'EOF'
 #!/bin/bash
 #
 # Utility to update Gentoo teTeX distribution configuration files
@@ -210,21 +210,21 @@ done
 # configure
 echo "Configuring teTeX ..."
 mktexlsr &>/dev/null
-texconfig init &>/dev/null
-texconfig confall &>/dev/null
-texconfig font rw &>/dev/null
-texconfig font vardir /var/cache/fonts &>/dev/null
-texconfig font options varfonts &>/dev/null
-updmap &>/dev/null
+texconfig-sys init &>/dev/null
+texconfig-sys confall &>/dev/null
+texconfig-sys font rw &>/dev/null
+texconfig-sys font vardir /var/cache/fonts &>/dev/null
+texconfig-sys font options varfonts &>/dev/null
+updmap-sys &>/dev/null
 
 # generate
 echo "Generating format files ..."
-fmtutil --missing &>/dev/null
+fmtutil-sys --missing &>/dev/null
 echo
 echo "Use 'texconfig font ro' to disable font generation for users"
 echo
 EOF
-			dosbin ${T}/tetex-update
+			dosbin ${T}/texmf-update
 			;;
 		doc)
 			dodoc PROBLEMS README
@@ -373,12 +373,12 @@ tetex_pkg_preinst() {
 tetex_pkg_postinst() {
 
 	if [ "$ROOT" = "/" ] ; then
-		/usr/sbin/tetex-update
+		/usr/sbin/texmf-update
 	fi
 	if [ -d "/etc/texmf" ] ; then
 		einfo
 		einfo "If you have configuration files in /etc/texmf to merge,"
-		einfo "please update them and run /usr/sbin/tetex-update."
+		einfo "please update them and run /usr/sbin/texmf-update."
 		einfo
 	fi
 }
