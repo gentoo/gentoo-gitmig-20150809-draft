@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.5-r1.ebuild,v 1.1 2004/09/22 23:56:13 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.5-r1.ebuild,v 1.2 2004/09/28 18:15:56 langthang Exp $
 
 inherit eutils ssl-cert
 
@@ -186,7 +186,7 @@ src_install () {
 	fperms 02711 /usr/sbin/post{drop,queue}
 
 	keepdir /etc/postfix
-	mv "${D}/usr/share/doc/${PF}/defaults/"{*.cf,post*-*} "${D}/etc/postfix"
+	mv ${D}/usr/share/doc/${PF}/defaults/{*.cf,post*-*} ${D}/etc/postfix
 	if use mbox
 	then
 		mypostconf="mail_spool_directory=/var/spool/mail"
