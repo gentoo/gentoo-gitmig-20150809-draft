@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.2a.ebuild,v 1.19 2004/08/20 04:03:07 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.2a.ebuild,v 1.20 2004/10/07 03:00:54 eradicator Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ src_install() {
 	dolib.a  libming.a
 	insinto /usr/include
 	doins ming.h
-	exeinto /usr/lib/ming
+	exeinto /usr/$(get_libdir)/ming
 	doexe util/{bindump,hexdump,listswf,listfdb,listmp3,listjpeg,makefdb,swftophp}
 	dodoc CHANGES CREDITS README TODO
 	newdoc util/README README.util

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.3.ebuild,v 1.8 2004/07/13 01:12:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.3.ebuild,v 1.9 2004/10/07 02:50:44 eradicator Exp $
 
 inherit libtool eutils
 
@@ -93,5 +93,5 @@ src_install() {
 	chmod +x ${D}/etc/hotplug/usb/usbcam
 
 	HOTPLUG_USERMAP="${D}/etc/hotplug/usb/usbcam.usermap"
-	${D}/usr/lib/libgphoto2/print-usb-usermap >> ${HOTPLUG_USERMAP}
+	${D}/usr/$(get_libdir)/libgphoto2/print-usb-usermap >> ${HOTPLUG_USERMAP}
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc6.ebuild,v 1.8 2004/09/30 14:08:35 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc6.ebuild,v 1.9 2004/10/07 03:04:58 eradicator Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -94,7 +94,7 @@ src_compile() {
 
 	# the win32 codec path should ignore $(get_libdir) and always use lib
 	use avi	&& use x86 \
-		&& myconf="${myconf} --with-w32-path=/usr/lib/win32" \
+		&& myconf="${myconf} --with-w32-path=/usr/$(get_libdir)/win32" \
 		|| myconf="${myconf} --disable-asf"
 
 	use sparc \

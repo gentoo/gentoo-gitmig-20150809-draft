@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.22.0-r3.ebuild,v 1.6 2004/09/21 01:10:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.22.0-r3.ebuild,v 1.7 2004/10/07 02:52:27 eradicator Exp $
 
 inherit virtualx libtool gnome.org gnuconfig eutils
 
@@ -59,8 +59,8 @@ src_install() {
 
 	dosed -e "s:${D}::g" /usr/bin/gdk-pixbuf-config
 	#fix permissions on the loaders
-	chmod a+rx ${D}/usr/lib/gdk-pixbuf/loaders
-	chmod a+r ${D}/usr/lib/gdk-pixbuf/loaders/*
+	chmod a+rx ${D}/usr/$(get_libdir)/gdk-pixbuf/loaders
+	chmod a+r ${D}/usr/$(get_libdir)/gdk-pixbuf/loaders/*
 
 	dodoc AUTHORS COPYING* ChangeLog INSTALL README NEWS TODO
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.20.ebuild,v 1.11 2004/10/03 04:54:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.20.ebuild,v 1.12 2004/10/07 03:01:46 eradicator Exp $
 
 inherit flag-o-matic gcc
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 	if use svga ; then
 		echo "LINUXSVGAHDR_DIR = /usr/include" >> Makefile.config
-		echo "LINUXSVGALIB = /usr/lib/libvga.so" >> Makefile.config
+		echo "LINUXSVGALIB = /usr/$(get_libdir)/libvga.so" >> Makefile.config
 	fi
 
 	if use jpeg ; then
@@ -67,7 +67,7 @@ src_install() {
 	rm -rf ${D}/usr/{VERSION,misc}
 
 	# Fix symlink not being created.
-	dosym `basename ${D}/usr/lib/libnetpbm.so.*` /usr/lib/libnetpbm.so
+	dosym `basename ${D}/usr/$(get_libdir)/libnetpbm.so.*` /usr/$(get_libdir)/libnetpbm.so
 
 	dodir /usr/share
 	rm -rf ${D}/usr/bin/doc.url

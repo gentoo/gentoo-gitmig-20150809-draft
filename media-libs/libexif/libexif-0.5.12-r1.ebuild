@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.5.12-r1.ebuild,v 1.7 2004/07/29 02:20:10 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.5.12-r1.ebuild,v 1.8 2004/10/07 02:49:21 eradicator Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 IUSE="nls"
 
@@ -23,10 +23,10 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/lib
+	dodir /usr/$(get_libdir)
 	dodir /usr/include/libexif
 	dodir /usr/share/locale
-	dodir /usr/lib/pkgconfig
+	dodir /usr/$(get_libdir)/pkgconfig
 	einstall || die
 
 	dodoc ChangeLog README

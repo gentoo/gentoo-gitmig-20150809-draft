@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.6 2004/07/30 20:17:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.7 2004/10/07 03:03:46 eradicator Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -53,14 +53,14 @@ src_install() {
 		doins t1libx.h
 		ln -s -f libt1x.lai .libs/libt1x.la
 		dolib .libs/libt1x.{la,a,so.${PV}}
-		dosym libt1x.so.${PV} /usr/lib/libt1x.so.${PV%%.*}
-		dosym libt1x.so.${PV} /usr/lib/libt1x.so
+		dosym libt1x.so.${PV} /usr/$(get_libdir)/libt1x.so.${PV%%.*}
+		dosym libt1x.so.${PV} /usr/$(get_libdir)/libt1x.so
 	)
 
 	ln -s -f libt1.lai .libs/libt1.la
 	dolib .libs/libt1.{la,a,so.${PV}}
-	dosym libt1.so.${PV} /usr/lib/libt1.so.${PV%%.*}
-	dosym libt1.so.${PV} /usr/lib/libt1.so
+	dosym libt1.so.${PV} /usr/$(get_libdir)/libt1.so.${PV%%.*}
+	dosym libt1.so.${PV} /usr/$(get_libdir)/libt1.so
 	insinto /etc/t1lib
 	doins t1lib.config
 

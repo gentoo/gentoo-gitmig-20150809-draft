@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.15.ebuild,v 1.14 2004/09/22 10:23:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.15.ebuild,v 1.15 2004/10/07 02:52:54 eradicator Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_compile() {
 
 src_install() {
 	insopts -m755
-	insinto /usr/lib/ladspa
+	insinto /usr/$(get_libdir)/ladspa
 	doins ../plugins/*.so || die "doins failed"
 	dodoc ../README       || die "dodoc failed"
 	dohtml ../doc/*       || die "dohtml failed"

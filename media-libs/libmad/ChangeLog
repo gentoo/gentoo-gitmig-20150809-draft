@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmad
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.23 2004/07/22 10:28:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.24 2004/10/07 02:58:33 eradicator Exp $
+
+  06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libmad-0.15.1b.ebuild:
+  get_libdir fixes.
 
   22 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> libmad-0.15.1b.ebuild:
   Added to macos. See bug #57448

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.49 2004/10/02 21:15:36 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.50 2004/10/07 03:01:46 eradicator Exp $
+
+  06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  netpbm-10.20.ebuild:
+  get_libdir fixes.
 
   02 Oct 2004; Olivier Crete <tester@gentoo.org> netpbm-10.20.ebuild:
   Marking x86 wrt security bug #65647

@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b.ebuild,v 1.12 2004/09/16 02:04:38 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b.ebuild,v 1.13 2004/10/07 02:58:33 eradicator Exp $
 
 IUSE="debug"
+
+inherit eutils
 
 DESCRIPTION="\"M\"peg \"A\"udio \"D\"ecoder library"
 HOMEPAGE="http://mad.sourceforge.net"
@@ -41,7 +43,7 @@ src_install() {
 	dodoc CHANGES COPYRIGHT CREDITS README TODO VERSION
 
 	# This file must be updated with each version update
-	dodir /usr/lib/pkgconfig
-	insinto /usr/lib/pkgconfig
+	dodir /usr/$(get_libdir)/pkgconfig
+	insinto /usr/$(get_libdir)/pkgconfig
 	doins ${FILESDIR}/mad.pc
 }

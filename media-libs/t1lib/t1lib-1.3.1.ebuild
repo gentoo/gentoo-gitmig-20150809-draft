@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.23 2004/07/14 20:31:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.24 2004/10/07 03:03:46 eradicator Exp $
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 IUSE="X"
 
@@ -54,14 +54,14 @@ src_install() {
 		doins t1libx.h
 		ln -s -f libt1x.lai .libs/libt1x.la
 		dolib .libs/libt1x.{la,a,so.1.3.1}
-		dosym libt1x.so.1.3.1 /usr/lib/libt1x.so.1
-		dosym libt1x.so.1.3.1 /usr/lib/libt1x.so
+		dosym libt1x.so.1.3.1 /usr/$(get_libdir)/libt1x.so.1
+		dosym libt1x.so.1.3.1 /usr/$(get_libdir)/libt1x.so
 	)
 
 	ln -s -f libt1.lai .libs/libt1.la
 	dolib .libs/libt1.{la,a,so.1.3.1}
-	dosym libt1.so.1.3.1 /usr/lib/libt1.so.1
-	dosym libt1.so.1.3.1 /usr/lib/libt1.so
+	dosym libt1.so.1.3.1 /usr/$(get_libdir)/libt1.so.1
+	dosym libt1.so.1.3.1 /usr/$(get_libdir)/libt1.so
 	insinto /etc/t1lib
 	doins t1lib.config
 

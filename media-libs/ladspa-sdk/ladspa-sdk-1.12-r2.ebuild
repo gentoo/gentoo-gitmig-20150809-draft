@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12-r2.ebuild,v 1.5 2004/09/16 03:47:58 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12-r2.ebuild,v 1.6 2004/10/07 02:53:46 eradicator Exp $
 
 inherit eutils
 
@@ -46,7 +46,7 @@ src_test() {
 
 src_install() {
 	make \
-		INSTALL_PLUGINS_DIR=${D}/usr/lib/ladspa \
+		INSTALL_PLUGINS_DIR=${D}/usr/$(get_libdir)/ladspa \
 		INSTALL_INCLUDE_DIR=${D}/usr/include \
 		INSTALL_BINARY_DIR=${D}/usr/bin \
 		install || die "make install failed"
@@ -56,5 +56,5 @@ src_install() {
 
 	# Needed for apps like rezound
 	dodir /etc/env.d
-	echo "LADSPA_PATH=/usr/lib/ladspa" > ${D}/etc/env.d/60ladspa
+	echo "LADSPA_PATH=/usr/$(get_libdir)/ladspa" > ${D}/etc/env.d/60ladspa
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.0.1-r1.ebuild,v 1.11 2004/07/29 03:26:10 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.0.1-r1.ebuild,v 1.12 2004/10/07 02:56:44 eradicator Exp $
 
 IUSE="X aalib svga fbcon directfb"
 
@@ -62,7 +62,7 @@ src_install () {
 	# This la file seems to bug mesa.
 # Hopefully libtoolize will fix for mesa-3.5.  The *.la needed
 # for mesa-5.0 in the works - <azarah@gentoo.org> (28 Dec 2002)
-#	rm ${D}/usr/lib/*.la
+#	rm ${D}/usr/$(get_libdir)/*.la
 
 	dodoc ChangeLog* FAQ NEWS README TODO
 	docinto txt

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.20 2004/07/31 03:25:03 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.21 2004/10/07 03:02:34 eradicator Exp $
 
 MY_PN="${PN/pdf/PDF}-Lite"
 MY_P="${MY_PN}-${PV}-Unix-src"
@@ -65,10 +65,10 @@ src_install() {
 			|cut -d ' ' -f 4`"
 		local perlarch="`/usr/bin/perl -v |grep 'This is perl' \
 			|cut -d ' ' -f 7`"
-		dodir /usr/lib/perl${perlmajver/v/}/site_perl/${perlver/v/}/${perlarch}
+		dodir /usr/$(get_libdir)/perl${perlmajver/v/}/site_perl/${perlver/v/}/${perlarch}
 	fi
 	if use python && [ -x /usr/bin/python ] ; then
-		dodir /usr/lib/python${PYVER}/lib-dynload
+		dodir /usr/$(get_libdir)/python${PYVER}/lib-dynload
 	fi
 	#next line required for proper install
 	dodir /usr/bin
