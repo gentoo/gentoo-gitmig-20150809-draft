@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kfile-folder
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile-folder/ChangeLog,v 1.2 2005/02/05 11:39:17 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile-folder/ChangeLog,v 1.3 2005/02/11 01:45:14 caleb Exp $
+
+  10 Feb 2005; Caleb Tennis <caleb@gentoo.org>
+  -kfile-folder-3.4.0_beta2.ebuild:
+  Removing obsoleted package
 
 *kfile-folder-3.4.0_beta2 (05 Feb 2005)
 
