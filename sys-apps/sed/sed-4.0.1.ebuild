@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.1.ebuild,v 1.2 2002/11/08 02:13:00 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.1.ebuild,v 1.3 2002/11/12 22:43:38 gerk Exp $
 
 IUSE="nls static build"
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Super-useful stream editor"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/sed/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/sed/sed.html"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="x86 -ppc sparc sparc64 alpha"
 SLOT="0"
 LICENSE="GPL-2"
 
