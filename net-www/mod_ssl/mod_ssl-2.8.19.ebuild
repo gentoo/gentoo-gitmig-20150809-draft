@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation 
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.19.ebuild,v 1.5 2004/07/28 05:27:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.19.ebuild,v 1.6 2004/07/31 14:15:58 zul Exp $
 
 MY_P=${P}-1.3.31
 S=${WORKDIR}/${MY_P}
@@ -24,9 +24,13 @@ src_unpack() {
 }
 
 src_compile() {
+	if has_version '=sys-libs/gdbm-1.8.3*' ; then
+	     myconf = "--enable-rule=SSL_SDBM"
+    fi
+	
 	SSL_BASE=SYSTEM \
 	./configure \
-		--with-apxs=/usr/sbin/apxs || die "bad ./configure"
+		--with-apxs=/usr/sbin/apxs ${myconf} || die "bad ./configure"
 	make || die "compile problem"
 }
 
