@@ -65,11 +65,6 @@ dev-perl/perl-ldap
 # Too many problems.  Masking to fix.
 >app-text/tetex-1.0.7-r10
 
-# <raker@gentoo.org> (18 Sep 2002)
-# New verison of ghostscript.
-# Please test and report on bug #7787
-=app-text/ghostscript-7.05.5
-
 # <danarmak@gentoo.org> (17 Sep 2002)
 # masked for testing of the gcc3 patch I added for this new version
 =media-gfx/kimagemapeditor-0.9.5.1
