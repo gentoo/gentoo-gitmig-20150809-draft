@@ -1,6 +1,6 @@
-# ChangeLog for app-games/ut2003
+# ChangeLog for games-fps/ut2003
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.1 2003/09/09 18:10:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ChangeLog,v 1.2 2003/09/10 16:07:27 vapier Exp $
 
   08 Sep 2003; Chris Gianelloni <wolf31o2@gentoo.org> ut2003-2225.ebuild:
   Fixed sound and player model picker issues.  Closes bugs # 27357 and 27451.
