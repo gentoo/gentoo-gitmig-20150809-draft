@@ -1,5 +1,5 @@
-MD5 9644300bbd07fc56f20b80529000729f nvidia-settings-1.0.ebuild 1019
-MD5 ba0bf30a83490f85c9f28b08f0b70163 ChangeLog 702
+MD5 37c560610420f41ba06384debd099a46 nvidia-settings-1.0.ebuild 1082
+MD5 695c65ce6bc303456a2dafb14628b9e3 ChangeLog 833
 MD5 9039fc83c6b6691d1e2bf14f10329cce metadata.xml 288
 MD5 92faa535f9924a7ef5a2578d13d43fb3 files/libXNVCtrl.a.bz2 2797
 MD5 d33e0cdae06c398ded66a3a7de7855b0 files/digest-nvidia-settings-1.0 71

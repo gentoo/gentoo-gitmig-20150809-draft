@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.ebuild,v 1.2 2004/07/02 07:43:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.ebuild,v 1.3 2004/07/26 05:09:29 cyfred Exp $
 
 inherit eutils
 
@@ -14,12 +14,14 @@ KEYWORDS="-* ~x86 ~amd64"
 RESTRICT=""
 IUSE=""
 
+NVIDIA_VERSION="1.0.6106"
+
 DEPEND="virtual/libc
 	virtual/x11
 	>=x11-libs/gtk+-2*
 	amd64? ( app-arch/bzip2 )"
-RDEPEND="media-video/nvidia-glx
-	media-video/nvidia-kernel"
+RDEPEND=">=media-video/nvidia-glx-${NVIDIA_VERSION}
+	>=media-video/nvidia-kernel-${NVIDIA_VERSION}"
 
 src_unpack() {
 	unpack ${A}
