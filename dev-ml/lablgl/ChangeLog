@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.25 2004/08/08 06:16:12 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.26 2004/08/16 03:26:51 weeve Exp $
+
+  15 Aug 2004; Jason Wever <weeve@gentoo.org> lablgl-1.00.ebuild:
+  Stable on sparc.
 
   08 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> lablgl-1.00.ebuild:
   Move to stable on x86.
