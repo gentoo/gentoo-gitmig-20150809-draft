@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hspell
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.9 2004/06/24 22:39:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.10 2004/09/27 19:59:20 gustavoz Exp $
+
+  27 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> hspell-0.6.ebuild:
+  Stable on sparc
 
   20 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> hspell-0.7.ebuild:
   Added ~alpha to keywords.
