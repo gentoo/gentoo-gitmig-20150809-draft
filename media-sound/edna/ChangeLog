@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/edna
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.2 2003/12/14 23:17:39 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.3 2003/12/15 00:36:43 nerdboy Exp $
+
+*edna-0.5-r2 (14 Dec 2003)
+
+  14 Dec 2003; <nerdboy@gentoo.org> edna-0.5-r2.ebuild, files/edna.gentoo:
+  changed init script and got rid of local USE flag (still has pidfile glitch)
 
 *edna-0.5-r1 (14 Dec 2003)
 
