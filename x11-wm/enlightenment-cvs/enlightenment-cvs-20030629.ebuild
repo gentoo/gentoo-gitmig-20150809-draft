@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-20030629.ebuild,v 1.8 2004/04/17 03:04:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-20030629.ebuild,v 1.9 2004/05/02 19:00:18 vapier Exp $
 
 inherit enlightenment
 
@@ -10,11 +10,9 @@ SRC_URI=""
 RDEPEND="media-gfx/etcher
 	media-gfx/ebony
 	media-gfx/entice
-	x11-misc/ebindings
 	dev-db/edb
 	media-libs/estyle
 	x11-libs/ecore
-	media-libs/ebits
 	dev-libs/ewd
 	x11-libs/evas
 	media-libs/imlib2
@@ -22,12 +20,15 @@ RDEPEND="media-gfx/etcher
 	dev-libs/eet
 	x11-libs/ewl
 	media-libs/etox
-	media-libs/ebg
 	media-gfx/imlib2_tools
 	sys-fs/efsd
 	x11-misc/entrance
 	app-misc/evidence
-	media-gfx/elicit"
+	media-gfx/elicit
+	net-news/erss
+	x11-libs/esmart
+	dev-libs/embryo
+	media-libs/epeg"
 
 #	x11-misc/enotes
 #	x11-libs/eprog
