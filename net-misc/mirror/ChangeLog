@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/mirror
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirror/ChangeLog,v 1.1 2003/08/22 11:33:32 mcummings Exp $
+
+*mirror-2.9 (22 Aug 2003)
+
+  22 Aug 2003; Michael Cummings <mcummings@gentoo.org> mirror-2.9.ebuild,
+  files/mirror-2.9-gentoo.diff:
+  Bugzilla Bug 19104; ebuild and patch written/submitted by Mark Wagner
+  <mark@lanfear.net>
+
