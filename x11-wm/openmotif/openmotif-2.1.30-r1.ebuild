@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openmotif/openmotif-2.1.30-r1.ebuild,v 1.1 2000/08/23 05:31:48 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openmotif/openmotif-2.1.30-r1.ebuild,v 1.2 2000/09/15 20:09:30 drobbins Exp $
 
 P=openmotif2.1.30
 A=${P}.tar.gz
@@ -24,7 +24,7 @@ src_compile() {
   ln -s /usr/X11R6/include include
   ln -s /usr/X11R6/lib lib
   cd ${S}
-  make World
+  try make World
 }
 
 src_install() {                               
@@ -32,7 +32,7 @@ src_install() {
   cp Makefile Makefile.orig
   sed -e "s:sun_mit:sun_at:" -e "s:sun_news:sun:" Makefile.orig > Makefile
   cd ${S}
-  make DESTDIR=${D} VARDIR=${D}/var/X11/ install
+  try make DESTDIR=${D} VARDIR=${D}/var/X11/ install
 }
 
 
