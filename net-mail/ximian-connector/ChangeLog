@@ -1,0 +1,9 @@
+# ChangeLog for net-mail/ximian-connector
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ximian-connector/ChangeLog,v 1.1 2002/11/20 01:54:36 nall Exp $
+
+*ximian-connector-1.2.0 (18 Nov 2002)
+
+  18 Nov 2002; Jon Nall <nall@gentoo.org> ChangeLog, ximian-connector-1.2.0.ebuild,
+  files/digest-ximian-connector-1.2.0 :
+  Initial import. 
