@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gqcam
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gqcam/ChangeLog,v 1.7 2004/08/12 20:34:59 chriswhite Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gqcam/ChangeLog,v 1.8 2005/01/27 02:19:43 weeve Exp $
+
+  26 Jan 2005; Jason Wever <weeve@gentoo.org> gqcam-0.9.ebuild:
+  Added ~sparc keyword.
 
   13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Adding missing metadata.xml.
