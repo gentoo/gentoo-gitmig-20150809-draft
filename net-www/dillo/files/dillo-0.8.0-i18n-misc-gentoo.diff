@@ -1,0 +1,12 @@
+diff -urN dillo-0.8.0-i18n-misc/src/html.c dillo-0.8.0/src/html.c
+--- dillo-0.8.0-i18n-misc/src/html.c	2004-03-26 13:19:52.535130864 +0900
++++ dillo-0.8.0/src/html.c	2004-03-26 13:20:30.798313976 +0900
+@@ -3461,7 +3461,7 @@
+       data->lb->meta_refresh = &data->html_dead;
+       data->url = a_Url_new(*content ? content :
+                             URL_STR(a_History_get_url(NAV_TOP(data->lb->dd))),
+-                            URL_STR_(data->lb->base_url), 0, 0);
++                            URL_STR_(data->lb->base_url), 0, 0, 0);
+       //a_Url_set_flags(data->url, URL_FLAGS(data->url) | URL_E2EReload);
+ 
+       if (!*content && delay < 7) /* don't refresh itself to often... */
