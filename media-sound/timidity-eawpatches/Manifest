@@ -1,9 +1,14 @@
-MD5 a338e20d1554694ff3489992658d1b2d ChangeLog 2540
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ca2c356d59b27bf72523908e70f66554 ChangeLog 2747
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 795c457b46eefb45cab5ccc15afca6b6 timidity-eawpatches-12-r2.ebuild 1219
-MD5 ef08f0386a706ea25d9ade497e3a6ad6 timidity-eawpatches-12-r3.ebuild 1291
-MD5 ecf8b52662f8aea4a773d4aa1fa4a420 timidity-eawpatches-12-r4.ebuild 1408
-MD5 bc4db09d3bca05b826128910ee3ea94f files/timidity-eawpatches-12-gentoo.diff 650
-MD5 0fc3bf4990261c76091fa637ad44583a files/digest-timidity-eawpatches-12-r3 68
+MD5 a16aaa8538f767d0e70b7ae9331aaaac timidity-eawpatches-12-r4.ebuild 1412
 MD5 0fc3bf4990261c76091fa637ad44583a files/digest-timidity-eawpatches-12-r4 68
-MD5 0fc3bf4990261c76091fa637ad44583a files/digest-timidity-eawpatches-12-r2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCIvS3ArHZZzCEUG0RAleWAJ46bEVRY6FIOopnTkiwveaaD51VaQCffCj4
+gUSnx+sUpO4e+XJ/Lc8za40=
+=vZUG
+-----END PGP SIGNATURE-----
