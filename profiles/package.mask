@@ -843,3 +843,7 @@ x11-libs/gdkxft
 # prez@gentoo.org 13 Jun 2002
 # As per the dev list, we're moving spamassassin to dev-perl
 net-mail/spamassassin
+
+# rphillips@gentoo.org 14 Jun 2002
+# Testing
+=dev-db/postgresql-7.2.1
