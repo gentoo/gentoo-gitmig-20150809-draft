@@ -1,7 +1,11 @@
 # ChangeLog for net-www/opera
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.11 2002/11/25 07:10:07 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.12 2002/12/06 02:04:23 agenkin Exp $
 
+*opera-6.11 (5 Dec 2002)
+  05 Dec 2002; Arcady Genkin <agenkin@gentoo.org> opera-6.11.ebuild :
+  Version bump.
+	
 *opera-6.1-r1 (25 Nov 2002)
 
   25 Nov 2002; Arcady Genkin <agenkin@gentoo.org> opera-6.1-r1.ebuild :
