@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gcal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.8 2004/10/05 13:34:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.9 2004/10/21 13:47:08 ka0ttic Exp $
+
+  21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
+  Add metadata (shell-tools)
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> gcal-3.01.ebuild:
   Masked gcal-3.01.ebuild stable for ppc

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jive
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jive/ChangeLog,v 1.6 2004/07/10 12:55:06 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jive/ChangeLog,v 1.7 2004/10/21 13:56:17 ka0ttic Exp $
+
+  21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
+  Add metadata (shell-tools)
 
   10 Jul 2004; Tom Martin <slarti@gentoo.org> jive-1.1.ebuild:
   Marked ~amd64.

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mmv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.9 2004/09/17 03:34:54 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.10 2004/10/21 14:01:53 ka0ttic Exp $
+
+  21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
+  Add metadata (shell-tools)
 
   16 Sep 2004; Daniel Goller <morfic@gentoo.org> mmv-1.01b.ebuild:
   applied patch for gcc3.4, closing bug 62711
