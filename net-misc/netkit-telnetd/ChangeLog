@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/netkit-telnetd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.29 2005/03/15 03:47:54 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.30 2005/03/29 22:28:32 solar Exp $
+
+*netkit-telnetd-0.17-r6 (29 Mar 2005)
+
+  29 Mar 2005; <solar@gentoo.org> +netkit-telnetd-0.17-r6.ebuild:
+  - debian changes from 0.17-28: telnet/telnet.cc: Fixed buffer overflow in the
+  handling of the LINEMODE suboptions in telnet clients (CAN-2005-0469). Thanks
+  Martin 'Joey' Schulze for the patch.
 
   14 Mar 2005; <solar@gentoo.org>
   files/netkit-telnetd-0.17-cflags-gnu_source.patch:
