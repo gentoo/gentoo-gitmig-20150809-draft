@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/gsm-1.0.10.ebuild,v 1.9 2004/07/01 07:52:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gsm/gsm-1.0.10.ebuild,v 1.10 2004/09/14 16:33:18 eradicator Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.cs.tu-berlin.de/pub/local/kbs/tubmik/gsm/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="OSI-Approved"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 
 DEPEND="virtual/libc"
 

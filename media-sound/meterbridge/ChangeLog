@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/meterbridge
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/meterbridge/ChangeLog,v 1.8 2004/07/03 11:19:32 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/meterbridge/ChangeLog,v 1.9 2004/09/14 16:40:28 eradicator Exp $
+
+  14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  meterbridge-0.9.2.ebuild:
+  Stable amd64.
 
   03 Jul 2004; David Holm <dholm@gentoo.org> meterbridge-0.9.2.ebuild:
   Added to ~ppc.

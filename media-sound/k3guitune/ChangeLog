@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/k3guitune
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/ChangeLog,v 1.5 2004/09/14 07:51:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/ChangeLog,v 1.6 2004/09/14 16:36:52 eradicator Exp $
+
+  14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  k3guitune-0.4.1.ebuild:
+  Stable amd64.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   k3guitune-0.4.1.ebuild:
