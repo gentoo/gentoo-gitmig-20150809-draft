@@ -1,6 +1,10 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.39 2004/12/15 15:02:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.40 2004/12/15 15:04:14 lanius Exp $
+
+  15 Dec 2004; lanius@gentoo.org -acroread-5.09-r1.ebuild,
+  -acroread-5.09.ebuild:
+  remove old versions
 
 *acroread-5.010 (15 Dec 2004)
 
