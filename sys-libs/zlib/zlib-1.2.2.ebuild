@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.2.ebuild,v 1.3 2004/12/06 06:01:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.2.ebuild,v 1.4 2004/12/06 06:18:55 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,8 +15,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="build"
 
 RDEPEND="virtual/libc"
-DEPEND="${RDEPEND}
-	>=sys-devel/binutils-2.14.90.0.6"
 
 src_unpack() {
 	unpack ${A}
@@ -35,7 +33,8 @@ src_unpack() {
 }
 
 src_compile() {
-	export CC="$(tc-getCC)" AR="$(tc-getAR) rc" RANLIB="$(tc-getRANLIB)"
+	tc-export CC RANLIB
+	export AR="$(tc-getAR) rc"
 	./configure --shared --prefix=/usr --libdir=/$(get_libdir) || die
 	emake || die
 }
