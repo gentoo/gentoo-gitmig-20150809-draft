@@ -1,4 +1,5 @@
-MD5 0636ee4b48c699de2e22081346391f1d snes9express-1.42.ebuild 790
-MD5 b523be05a55914bcac6b58b4311c9a1d ChangeLog 460
+MD5 c0179eecaf02e9c1a9be694d148c914f ChangeLog 580
 MD5 8152dd0afb80b8991f9d3354c05fda78 metadata.xml 226
+MD5 1b963d2463dd5f4e4c21af2f4f4e5f6a snes9express-1.42.ebuild 902
 MD5 4b260d8bf99869f59d2ea478d201e559 files/digest-snes9express-1.42 69
+MD5 56710e5516c8de9fbd8a3f2332859393 files/snes9express-1.42-fix.patch 249
