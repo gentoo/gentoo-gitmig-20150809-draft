@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games-extra-data
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games-extra-data/ChangeLog,v 1.10 2004/12/23 16:42:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games-extra-data/ChangeLog,v 1.11 2004/12/23 23:33:31 kloeri Exp $
+
+  24 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  gnome-games-extra-data-2.8.0.ebuild:
+  Stable on alpha.
 
   23 Dec 2004; Guy Martin <gmsoft@gentoo.org>
   gnome-games-extra-data-2.8.0.ebuild:
