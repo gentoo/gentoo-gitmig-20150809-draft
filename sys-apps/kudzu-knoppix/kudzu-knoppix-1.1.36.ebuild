@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36.ebuild,v 1.11 2004/06/27 18:28:35 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/kudzu-knoppix-1.1.36.ebuild,v 1.12 2004/06/30 02:42:07 vapier Exp $
 
 MY_PV=${PV}-2
 S=${WORKDIR}/kudzu-${PV}
 DESCRIPTION="Knoppix version of the Red Hat hardware detection tools"
+HOMEPAGE="http://www.knopper.net/"
 SRC_URI="http://developer.linuxtag.net/knoppix/sources/${PN}_${MY_PV}.tar.gz"
-HOMEPAGE="http://www.knopper.net"
 
-KEYWORDS="x86 amd64 ~ppc ~alpha -sparc -mips"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 amd64 ~ppc alpha -sparc -mips"
 IUSE=""
 
 RDEPEND="dev-libs/newt"
@@ -21,7 +21,7 @@ DEPEND="$RDEPEND
 	!sys-apps/kudzu"
 
 src_compile() {
-	emake  || die
+	emake || die
 
 	if [ "${ARCH}" = "x86" -o "${ARCH}" = "ppc" ]
 	then
@@ -40,4 +40,3 @@ src_install() {
 		dosbin ddcxinfo ddcprobe || die
 	fi
 }
-
