@@ -1,19 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.9.1.ebuild,v 1.4 2004/07/17 09:27:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.9.1.ebuild,v 1.5 2004/07/28 21:43:27 vapier Exp $
 
-DESCRIPTION="User tools for NTFS filesystems -- includes: ntsresize, mkntfs,
-ntfsfix, ntfsdefrag"
+DESCRIPTION="User tools for NTFS filesystems"
 HOMEPAGE="http://linux-ntfs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/linux-ntfs/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc amd64"
 IUSE="gnome"
+
 DEPEND=">sys-devel/gcc-2.95
 	>=sys-apps/sed-4
 	gnome? ( >=dev-libs/glib-2.0
 		>=gnome-base/gnome-vfs-2.0 )"
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc"
 
 src_compile() {
 	sed -i 's:head -1:head -n 1:g' getgccver
@@ -28,7 +29,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "Install failed"
-	dodoc AUTHORS COPYING CREDITS ChangeLog NEWS README TODO.* \
+	dodoc AUTHORS CREDITS ChangeLog NEWS README TODO.* \
 		doc/attribute_definitions doc/*.txt doc/tunable_settings
 
 	# A normal user cannot run ntfsfix; move it over to the right place

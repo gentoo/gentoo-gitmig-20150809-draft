@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.4.ebuild,v 1.8 2004/07/07 20:31:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.4.ebuild,v 1.9 2004/07/28 21:41:19 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www10.software.ibm.com/developer/opensource/jfs/project/pub/${P}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc mips ~hppa amd64 ia64"
+KEYWORDS="x86 ppc ~sparc mips hppa amd64 ia64"
 IUSE=""
 
 DEPEND="virtual/libc"
