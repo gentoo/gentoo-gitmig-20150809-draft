@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.76 2003/08/29 06:11:06 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.77 2003/08/30 09:58:34 liquidx Exp $
+
+  30 Aug 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.2.3.ebuild,
+  evolution-1.2.4.ebuild, evolution-1.4.0.ebuild, evolution-1.4.3.ebuild,
+  evolution-1.4.4.ebuild:
+  moving gnome-extra/gnome-pilot* to app-pda/gnome-pilot*
 
   29 Aug 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.4.4.ebuild:
   added yelp dependency

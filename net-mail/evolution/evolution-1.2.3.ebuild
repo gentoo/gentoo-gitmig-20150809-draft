@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.3.ebuild,v 1.4 2003/06/10 15:10:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.3.ebuild,v 1.5 2003/08/30 09:58:34 liquidx Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6"
 
@@ -37,7 +37,7 @@ RDEPEND="app-text/scrollkeeper
 	doc?	 ( >=app-text/scrollkeeper-0.3.10-r1 )
 	ssl? ( mozilla? ( >=net-www/mozilla-0.9.9 ) : ( >=dev-libs/openssl-0.9.5 ) )
 	ldap?    ( >=net-nds/openldap-2.0 )
-	pda?     ( =gnome-extra/gnome-pilot-0.1*
+	pda?     ( =app-pda/gnome-pilot-0.1*
 			>=dev-libs/pilot-link-0.11.5 )
 	spell?   ( <app-text/gnome-spell-1.0 )"
 
