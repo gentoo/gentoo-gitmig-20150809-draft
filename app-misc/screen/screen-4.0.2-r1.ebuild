@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2.ebuild,v 1.22 2004/12/05 00:55:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r1.ebuild,v 1.1 2004/12/17 19:04:52 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -32,6 +32,9 @@ src_unpack() {
 
 	# uclibc doesnt have sys/stropts.h
 	use uclibc && epatch ${FILESDIR}/${PV}-no-pty.patch
+
+	# Don't use utempter even if it is found on the system
+	epatch ${FILESDIR}/${PV}-no-utempter.patch
 
 	# Fix manpage.
 	sed -i \
