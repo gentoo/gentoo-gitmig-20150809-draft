@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.21 2003/04/24 18:08:57 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.22 2003/05/23 05:39:17 killian Exp $
+
+*ppp-2.4.1-r12 (22 May 2003)
+ 
+  22 May 2003; Chuck Brewer <killian@gentoo.org> ppp-2.4.1-r12.ebuild:
+  Added stuff from baselayout to be provided by the ppp package, i.e.
+  net.ppp0,conf.d/net.ppp0 and chat-default
 
 *ppp-2.4.1-r13 (24 Apr 2003)
   
