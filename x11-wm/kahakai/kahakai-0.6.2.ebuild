@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.2.ebuild,v 1.2 2004/04/11 17:44:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.2.ebuild,v 1.3 2004/05/09 16:29:15 usata Exp $
 
-IUSE="truetype xinerama ruby"
-S=${WORKDIR}/${P}
+IUSE="truetype xinerama"
 
 DESCRIPTION="A language agnostic scriptable window manager based on Waimea."
 HOMEPAGE="http://kahakai.sf.net/"
@@ -15,16 +14,14 @@ KEYWORDS="~x86 ~ppc -alpha -sparc"
 
 DEPEND="virtual/x11
 	truetype? ( virtual/xft )
-	ruby? ( || ( >=dev-lang/ruby-1.8 dev-lang/ruby-cvs ) )
 	>=dev-lang/swig-1.3.20
-	media-libs/imlib2
+	>=media-libs/imlib2-1.1.0
 	dev-util/pkgconfig
 	media-fonts/artwiz-fonts
 	dev-libs/boost"
 
 src_compile() {
 	econf \
-		`use_enable ruby` \
 		`use_enable xinerama` \
 		`use_enable truetype xft` || die
 	emake || die
