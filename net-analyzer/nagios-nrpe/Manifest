@@ -1,10 +1,20 @@
-MD5 3eafe87d320c066d5cc71d894043bb2e ChangeLog 1811
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 296ba6b0078aa45414c7bcfac7b0f979 nagios-nrpe-1.8-r1.ebuild 1408
+MD5 a26c97b0c0266907dd68d3fba573abe0 nagios-nrpe-2.0.ebuild 1761
+MD5 ea6b2e9e8e2f0019d2f6e1d5406b3673 ChangeLog 1933
 MD5 6a5890137b6cd35bb0b647ff45f69667 metadata.xml 395
-MD5 80beac4cc22f880274d979481b1e9ea2 nagios-nrpe-1.8-r1.ebuild 1411
-MD5 f1943f4e14625c6618cf48aef243953e nagios-nrpe-2.0.ebuild 1555
-MD5 a9506069b34b36a580c78efa20b05cc9 files/digest-nagios-nrpe-1.8-r1 59
 MD5 f1fc0bb370291c6d0304900e25a62dc6 files/digest-nagios-nrpe-2.0 59
 MD5 1ea034ce9ade9210fa8c4ade4d51d132 files/nrpe-1.8 462
-MD5 3c91382446609ec78fa98d94509539dd files/nrpe-1.8.cfg 3501
 MD5 1ea034ce9ade9210fa8c4ade4d51d132 files/nrpe-2.0 462
+MD5 3c91382446609ec78fa98d94509539dd files/nrpe-1.8.cfg 3501
 MD5 3c91382446609ec78fa98d94509539dd files/nrpe-2.0.cfg 3501
+MD5 a9506069b34b36a580c78efa20b05cc9 files/digest-nagios-nrpe-1.8-r1 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCPVZ/T+MN7JbqCpMRAoLbAJ4xpphn3UzmnnZMLxKGpehK/shdnACfZnGK
+ykusv0Kr7iMrP0Ka3+TZz5o=
+=qsKb
+-----END PGP SIGNATURE-----

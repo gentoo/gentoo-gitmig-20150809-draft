@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-nrpe
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.17 2004/12/11 16:39:33 config Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.18 2005/03/20 10:53:13 eldad Exp $
+
+  20 Mar 2005; Eldad Zack <eldad@gentoo.org> nagios-nrpe-2.0.ebuild:
+  Generate the dh.h header file for better security.
 
   11 Dec 2004; Benjamin Schindler <config@gentoo.org>
   nagios-nrpe-2.0.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.0.ebuild,v 1.8 2004/12/11 16:39:33 config Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.0.ebuild,v 1.9 2005/03/20 10:53:13 eldad Exp $
 
 inherit eutils
 
@@ -28,6 +28,11 @@ src_compile() {
 	local myconf
 
 	myconf="${myconf} `use_enable ssl`"
+
+	# Generate the dh.h header file for better security (2005 Mar 20 eldad)
+	if useq ssl ; then
+		openssl dhparam -C 512 | sed -n '1,/BEGIN DH PARAMETERS/p' | grep -v "BEGIN DH PARAMETERS" > ${S}/src/dh.h
+	fi
 
 	./configure ${myconf} \
 		--host=${CHOST} \
