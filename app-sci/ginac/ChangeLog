@@ -1,10 +1,10 @@
 # ChangeLog for app-sci/ginac
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ginac/ChangeLog,v 1.6 2004/03/03 17:31:32 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ginac/ChangeLog,v 1.7 2004/03/10 08:10:15 phosphan Exp $
 
-*ginac-1.1.6 (03 Mar 2003)
+*ginac-1.1.6 (03 Mar 2004)
 
-  03 Mar 2003; Peter Bienstman <pbienst@gentoo.org> ginac-1.1.6.ebuild :
+  03 Mar 2004; Peter Bienstman <pbienst@gentoo.org> ginac-1.1.6.ebuild :
   new version
 
 *ginac-1.1.3 (09 Sep 2003)
