@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2814 2004/04/10 05:07:03 klasikahl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2815 2004/04/12 00:14:57 klasikahl Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -25,7 +25,8 @@
 
 # <klasikahl@gentoo.org> (09 Apr 2004)
 # Still in the testing phase.
-app-admin/virt-mail-admin
+# Just changed the package name, so I'm fixing the line up.
+app-admin/mailmin
 
 # <battousai@gentoo.org> (08 Apr 2004)
 # Needs more development and testing. Don't use it yet.
