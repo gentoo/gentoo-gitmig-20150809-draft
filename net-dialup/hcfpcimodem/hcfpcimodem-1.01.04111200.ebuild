@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.01.04111200.ebuild,v 1.1 2004/11/16 07:05:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.01.04111200.ebuild,v 1.2 2005/01/04 19:57:47 mrness Exp $
 
 MY_P=${P%.*}lnxt${PV##*.}full
 S=${WORKDIR}/${MY_P}
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.linuxant.com/"
 SRC_URI="http://www.linuxant.com/drivers/hcf/full/archive/${MY_P}/${MY_P}.tar.gz"
 LICENSE="Conexant"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 IUSE=""
 DEPEND="virtual/libc"
 
