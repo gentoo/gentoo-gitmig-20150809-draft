@@ -1,6 +1,14 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.28 2003/09/25 16:07:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.29 2003/09/25 16:12:47 caleb Exp $
+
+  25 Sep 2003; Caleb Tennis <caleb@gentoo.org> koffice-1.1.1.ebuild,
+  koffice-1.2-r1.ebuild, koffice-1.2-r2.ebuild, koffice-1.2.ebuild,
+  koffice-1.2_beta2.ebuild, koffice-1.2_rc1.ebuild, koffice-1.3_beta1.ebuild,
+  koffice-1.3_beta2.ebuild, files/koffice-1.1.1-gentoo.diff,
+  files/koffice-1.2-kspread_cell.diff,
+  files/koffice-1.3_beta1-fontconfig-2.2-support.diff:
+  removed stale versions
 
   25 Sep 2003; Caleb Tennis <caleb@gentoo.org> :
   New beta version
