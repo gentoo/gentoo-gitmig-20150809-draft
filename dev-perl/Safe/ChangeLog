@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Safe
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Safe/ChangeLog,v 1.6 2003/02/22 07:47:53 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Safe/ChangeLog,v 1.7 2003/06/09 04:51:38 rac Exp $
+
+  08 Jun 2003; <rac@gentoo.org> Safe-2.09.ebuild:
+  Add IUSE, fix header
 
   21 Feb 2003; Zach Welch <zwelch@gentoo.org> Safe-2.09.ebuild :
   Added arm to keywords.
