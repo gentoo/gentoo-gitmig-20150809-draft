@@ -32,7 +32,8 @@ if [ "$USEPEERDNS" ]; then
 	mv $REALRESOLVCONF.tmp $REALRESOLVCONF
 
 	# correct permissions
-	chmod 644 $REALRESOLVCONF
+	chmod 640 /etc/resolv.conf
+	chown root:users /etc/resolv.conf
 
 	fi
 
