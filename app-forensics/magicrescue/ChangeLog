@@ -1,0 +1,8 @@
+# ChangeLog for app-forensics/magicrescue
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/magicrescue/ChangeLog,v 1.1 2005/01/26 03:00:07 dragonheart Exp $
+
+  26 Jan 2005; Daniel Black <dragonheart@gentoo.org> 
+  +magicrescue-1.1.4.ebuild, +metadata.xml:
+  Initial import. Suggested by Michael Zanetta <mzanetta@telsys.ch>.
+

@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 105847dd9829f12cc71df98401454278 metadata.xml 846
+MD5 5e90fd5c97f961e451d5135846a0c378 magicrescue-1.1.4.ebuild 753
+MD5 7dc76974d717c8980c09e5c9090c4db0 ChangeLog 396
+MD5 d4dd9dcad4dd90429113ac6544057531 files/digest-magicrescue-1.1.4 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB9we+mdTrptrqvGERAg28AKCRT9Dizdhr4Z/7T7TuJtGOecTYJACfZHlw
+oibrJnLbKKtDGOYtFpI4XJQ=
+=drID
+-----END PGP SIGNATURE-----
