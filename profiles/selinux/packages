@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.18 2005/03/26 15:18:06 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.19 2005/04/01 01:30:48 pebenito Exp $
 
 ##############################################################################
 # SELinux required versionings
@@ -8,7 +8,6 @@
 # Core Packages
 *>=sys-apps/portage-2.0.49-r15
 *>=sys-apps/baselayout-1.8.6.12-r2
-*virtual/libc
 >=sys-libs/glibc-2.3
 >=sys-libs/uclibc-0.9.26-r8
 >=sys-kernel/linux-headers-2.4.20
@@ -47,4 +46,3 @@
 ##############################################################################
 
 *virtual/bootloader
--*virtual/dev-manager
