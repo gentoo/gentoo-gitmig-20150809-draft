@@ -11,8 +11,8 @@ platform.
 
 Features:
 * C/C++ Editor (basic functionality, syntax highlighting, code completion etc.) 
-* C/C++ Debugger (APIs & Default implementation, using GDB) 
-* C/C++ Launcher (APIs & Default implementation, launches and external application) 
+* C/C++ Debugger (APIs &amp; Default implementation, using GDB) 
+* C/C++ Launcher (APIs &amp; Default implementation, launches and external application) 
 * Parser
 * Search Engine
 * Content Assist Provider

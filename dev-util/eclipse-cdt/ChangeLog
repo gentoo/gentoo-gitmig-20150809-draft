@@ -1,7 +1,19 @@
 # ChangeLog for dev-util/eclipse-cdt
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt/ChangeLog,v 1.2 2004/07/28 14:40:32 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-cdt/ChangeLog,v 1.3 2004/08/21 21:33:50 karltk Exp $
 
+*eclipse-cdt-2.0-r2 (21 Aug 2004)
+
+  21 Aug 2004; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  Removed CVS connetions, reworked the .tar.bz2 snapshot, now uses eclipse-ext
+  properly. Still ugly, but apperas to work somewhat on x86. Removed old
+  revisions.
+  
+*eclipse-cdt-2.0-r1 (30 Jul 2004)
+
+  30 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  Minor fixes.
+  
   28 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org> eclipse-cdt-2.0.ebuild:
   Fixed depends.  
 
