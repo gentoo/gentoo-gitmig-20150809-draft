@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/upx-1.24-r1.ebuild,v 1.1 2003/03/26 04:46:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/upx-1.24-r1.ebuild,v 1.2 2003/11/01 05:52:55 brandy Exp $
 
 S=${WORKDIR}/${P}-linux
 DESCRIPTION="upx is the Ultimate Packer for eXecutables."
@@ -10,6 +10,8 @@ HOMEPAGE="http://upx.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+
+DEPEND="!app-arch/upx-ucl"
 
 RESTRICT="nostrip"
 
