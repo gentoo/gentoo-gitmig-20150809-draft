@@ -1,0 +1,11 @@
+--- hylafax/port.h~	Sun Apr 29 23:47:49 2001
++++ hylafax/port.h	Sun Apr 29 23:52:15 2001
+@@ -16,7 +16,7 @@
+ #define CONFIG_TIOCMBISBYREF yes
+ #define CONFIG_MAXGID 60002
+ #include <sys/types.h>
+-#define HAS_OSFCN_H 1
++#define HAS_OSFCN_H 0
+ #define HAS_SELECT_H 1
+ #define fxSIGACTIONHANDLER (sig_t)
+ #define fxSIGHANDLER (sig_t)

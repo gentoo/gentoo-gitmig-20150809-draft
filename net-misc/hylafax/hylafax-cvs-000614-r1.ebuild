@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-cvs-000614-r1.ebuild,v 1.4 2000/11/02 08:31:53 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-cvs-000614-r1.ebuild,v 1.5 2001/04/30 00:01:17 achim Exp $
 
 P=hylafax-cvs-000614
 A=${P}.tar.bz2
@@ -20,6 +20,8 @@ src_unpack() {
   unpack ${A}
   cd ${S}
   zcat ${O}/files/${P}.patch.gz | patch -p1
+  cd ..
+  patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
 }
 
 src_compile() {                           
