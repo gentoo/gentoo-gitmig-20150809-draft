@@ -1,10 +1,13 @@
-MD5 644d3223f6061a88055f921421eb8488 ChangeLog 5406
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6dc49c141cdc6399bd70142ddaa2aefe ChangeLog 5406
 MD5 853a30dc9e47d59ed3c94a3c9bbc4bf5 metadata.xml 1387
 MD5 01fc96021b8cad5060ba761d5bbb2c3d quagga-0.96.4-r6.ebuild 3354
-MD5 d19ba50e76f663979f91586bf96c9a2d quagga-0.96.5-r1.ebuild 3821
 MD5 cfc3a89dc2a63548877c7544ee9f1f13 quagga-0.96.5.ebuild 3415
-MD5 d1d268d1b71504a38bf157873ec4157e quagga-0.97.1.ebuild 3818
-MD5 d1d268d1b71504a38bf157873ec4157e quagga-0.97.2.ebuild 3818
+MD5 d19ba50e76f663979f91586bf96c9a2d quagga-0.96.5-r1.ebuild 3821
+MD5 377924dd5b2f0f5aa4d62039c3a3a9b6 quagga-0.97.1.ebuild 3818
+MD5 909816ce923b925efaaef6bcf1e091e2 quagga-0.97.2.ebuild 3818
 MD5 72494598a213a5d6f441496f48aefd7b files/digest-quagga-0.96.4-r6 66
 MD5 9056b8bd752a672787eacb129ee47535 files/digest-quagga-0.96.5 142
 MD5 9056b8bd752a672787eacb129ee47535 files/digest-quagga-0.96.5-r1 142
@@ -20,3 +23,10 @@ MD5 6d870c42af2625dcc07ba4b155618ebf files/patches-0.96.4/opaque-ready.patch 261
 MD5 13439f842c485b5402125d2a18158c84 files/patches-0.96.4/ospf_refcount.patch 1296
 MD5 a08e46f6d262bc34749ee9cf9716a753 files/patches-0.97.1/01_all_unbreak-ospfapi.patch.bz2 667
 MD5 a5e54af5a6268307f6d5d86e6a5a680c files/patches-0.97.1/02_all_unbreak-ospfapi.patch.bz2 645
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBfhGaI1lqEGTUzyQRAuOnAKDAgjhkZ5XAFSCqvVk4UNMwGCGpvgCeMVta
+YwKofYfdbhi8pqvGG2FcdHw=
+=AO5f
+-----END PGP SIGNATURE-----
