@@ -1,0 +1,18 @@
+# ChangeLog for app-sci/xd3d
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xd3d/ChangeLog,v 1.1 2004/12/24 03:00:27 ribosome Exp $
+
+*xd3d-8.2.1 (23 Dec 2004)
+
+  23 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/gentoo-xd3d-8.2.1.diff, +xd3d-8.2.1.ebuild:
+  Moved from app-sci/xd3d to media-gfx/xd3d.
+
+*xd3d-8.2.1 (20 May 2004)
+
+  24 May 2004; Thomas Veith <xtv@gentoo.org> xd3d-8.1.2.ebuild:
+  Fixed bug #51675. Thanks to Tobias Minich for pointing out. 
+
+  20 May 2004; Thomas Veith <xtv@gentoo.org> xd3d-8.2.1.ebuild, Manifest,
+ChangeLog, metadata.xml, files/gentoo-xd3d-8.2.1.diff :
+  Initial import.  
