@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0-r2.ebuild,v 1.7 2003/03/03 09:20:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0-r2.ebuild,v 1.8 2003/03/03 18:16:57 vapier Exp $
 
 inherit flag-o-matic 
 
-IUSE="java png apache2 truetype postgres tiff libwww nls jpeg ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
+IUSE="java png apache2 truetype postgres tiff libwww nls jpeg gd ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -52,7 +52,8 @@ DEPEND="
 	libwww? ( >=net-libs/libwww-5.3.2 )
 	firebird? ( >=dev-db/firebird-1.0 )
 	pdflib? ( >=media-libs/pdflib-4.0.1-r2 )
-	postgres? ( >=dev-db/postgresql-7.1 )"
+	postgres? ( >=dev-db/postgresql-7.1 )
+	gd? ( media-libs/libgd )"
 	#java? ( virtual/jdk )
 # Only needed by CGI-Version
 #	readline? ( >=sys-libs/ncurses-5.1
@@ -125,6 +126,7 @@ src_compile() {
 	use pdflib && myconf="${myconf} --with-pdflib=/usr"
 	use jpeg && myconf="${myconf} --with-jpeg-dir=/usr/lib"
 	use tiff && myconf="${myconf} --with-tiff-dir=/usr"
+	use gd && myconf="${myconf} --with-gd=/usr"
 
 	if [ "`use png`" ] ; then
 		myconf="${myconf} --with-png-dir=/usr/lib"
@@ -198,7 +200,6 @@ src_compile() {
 		--enable-ftp \
 		--enable-force-cgi-redirect \
 		--enable-discard-path \
-		--enable-gd-native-ttf \
 		--enable-mime-magic \
 		--enable-wddx \
 		--enable-dbase \
@@ -207,7 +208,6 @@ src_compile() {
 		--enable-bcmath \
 		--enable-sysvsem \
 		--enable-exif \
-		--with-gd \
 		--enable-sysvshm \
 		--enable-sockets \
 		--enable-calendar \

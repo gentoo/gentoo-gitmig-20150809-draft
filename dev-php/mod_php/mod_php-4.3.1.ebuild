@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1.ebuild,v 1.6 2003/03/03 13:28:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1.ebuild,v 1.7 2003/03/03 18:16:57 vapier Exp $
 
 inherit flag-o-matic 
 
-IUSE="java spell png apache2 truetype postgres tiff libwww nls jpeg ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
+IUSE="java spell png apache2 truetype postgres tiff libwww nls gd jpeg ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -24,7 +24,6 @@ replace-flags "-march=k6*" "-march=i586"
 	#>=dev-libs/gmp-3.1.1
 
 DEPEND=">=net-www/apache-1.3.26-r2
-	>=app-crypt/mhash-0.8 )
 	apache2? ( >=net-www/apache-2.0.43-r1 )
 	truetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
@@ -52,7 +51,8 @@ DEPEND=">=net-www/apache-1.3.26-r2
 	libwww? ( >=net-libs/libwww-5.3.2 )
 	firebird? ( >=dev-db/firebird-1.0 )
 	pdflib? ( >=media-libs/pdflib-4.0.1-r2 )
-	postgres? ( >=dev-db/postgresql-7.1 )"
+	postgres? ( >=dev-db/postgresql-7.1 )
+	gd? ( media-libs/libgd )"
 	#java? ( virtual/jdk )
 # Only needed by CGI-Version
 #	readline? ( >=sys-libs/ncurses-5.1
@@ -125,7 +125,7 @@ src_compile() {
 	use pdflib && myconf="${myconf} --with-pdflib=/usr"
 	use jpeg && myconf="${myconf} --with-jpeg-dir=/usr/lib"
 	use tiff && myconf="${myconf} --with-tiff-dir=/usr"
-
+	use gd && myconf="${myconf} --with-gd=/usr"
 	use spell && myconf="${myconf} --with-pspell"
 
 	if [ "`use png`" ] ; then
@@ -197,7 +197,6 @@ src_compile() {
 		--enable-ftp \
 		--enable-force-cgi-redirect \
 		--enable-discard-path \
-		--enable-gd-native-ttf \
 		--enable-mime-magic \
 		--enable-wddx \
 		--enable-dbase \
@@ -206,7 +205,6 @@ src_compile() {
 		--enable-bcmath \
 		--enable-sysvsem \
 		--enable-exif \
-		--with-gd \
 		--enable-sysvshm \
 		--enable-sockets \
 		--enable-calendar \
