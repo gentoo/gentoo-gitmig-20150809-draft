@@ -1,11 +1,16 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.142 2003/11/02 04:52:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.143 2003/11/02 10:44:52 gmsoft Exp $
 
   01 Nov 2003; Aron Griffis <agriffis@gentoo.org> gcc-3.3.2-r2.ebuild:
   Add ~alpha to KEYWORDS
 
 *gcc-3.3.2-r2 (27 Oct 2003)
+
+  02 Nov 2003, Guy Martin <gmsoft@gentoo.org> gcc-3.3.2-r2.ebuild,
+  gcc-3.3.2-r1.ebuild, gcc-3.3.2.ebuild :
+  Marking gcc-3.3.2-r1 and -r2 -hppa due to a problem with binutils.
+  Marking gcc-3.3.2 as ~hppa which does not suffert of this problem.
 
   27 Oct 2003; Guy Martin <gmsoft@gentoo.org> gcc-3.3.2-r2.ebuild :
   Added ~hppa to KEYWORDS.
