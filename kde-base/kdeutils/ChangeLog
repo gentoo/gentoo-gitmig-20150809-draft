@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.21 2003/02/12 06:58:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.22 2003/02/15 20:56:25 weeve Exp $
+
+  15 Feb 2003; Jason Wever <weeve@gentoo.org> kdeutils-3.1.ebuild:
+  Changed ~sparc keyword to sparc.
 
 *kdeutils-2.2.2-r1 (17 Jan 2003)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.27 2003/02/12 16:02:16 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.28 2003/02/15 20:56:25 weeve Exp $
+
+  15 Feb 2003; Jason Wever <weeve@gentoo.org> kdeartwork-3.1.ebuild:
+  Changed ~sparc keyword to sparc.
 
   12 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdeartwork-3.0.2.ebuild,
   kdeartwork-3.0.3.ebuild, kdeartwork-3.1_rc6.ebuild: removed old ebuilds
