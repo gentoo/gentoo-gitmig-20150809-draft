@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/fftw
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.12 2003/08/24 04:31:05 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.13 2003/12/31 19:00:32 george Exp $
+
+  31 Dec 2003; George Shapovalov <george@gentoo.org> fftw-3.0.1.ebuild :
+  marked stable.
+  Note, stuff that needs MPI should DEPEND on 2.15 still! (but this is a task of 
+  dependatnt packages)
 
 *fftw-3.0.1 (23 Aug 2003)
 
