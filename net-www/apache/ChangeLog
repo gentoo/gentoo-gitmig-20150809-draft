@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.225 2004/07/09 10:36:31 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.226 2004/07/09 11:47:23 zul Exp $
+
+  10 Jul 2004; Chuck Short <zul@gentoo.org> apache-2.0.50.ebuild:
+  Marked stable for x86 and sparc.
 
   10 Jul 2004; Chuck Short <zul@gentoo.org> apache-2.0.49-r4.ebuild:
   Apparently I cant spell.
