@@ -7,7 +7,7 @@ MD5 964bf2fe7bbddb6eab73140faa911397 xorg-x11-6.8.1.901-r1.ebuild 52453
 MD5 44835fc4c8bb9d475d312cfb96671654 xorg-x11-6.8.1.902-r1.ebuild 50722
 MD5 ce42c938819216d0ca122f33b4d2b8ab xorg-x11-6.8.1.902.ebuild 50073
 MD5 5ae63ce2f3f20585850a27e5f35ea347 xorg-x11-6.8.1.903.ebuild 57952
-MD5 bd2013f12f29b2625d429f288eb4349a xorg-x11-6.8.1.904.ebuild 58234
+MD5 688c4dd1cd0b38576a9d86c4cafd2ac6 xorg-x11-6.8.1.904.ebuild 58239
 MD5 b59b9e9b5fe5a900264d9e6766a4b3f9 files/digest-xorg-x11-6.8.1.902-r1 517
 MD5 a3314fbdc270d7d84ea14fd477b8d048 files/digest-xorg-x11-6.7.0-r3 904
 MD5 70facbdb85b7ef2bc9b9b702442eda7e files/digest-xorg-x11-6.8.0-r3 908
