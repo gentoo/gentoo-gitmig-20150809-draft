@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.43 2004/08/04 14:02:08 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.44 2004/08/04 20:58:46 agriffis Exp $
+
+  04 Aug 2004; <agriffis@gentoo.org> hdparm-5.5-r3.ebuild:
+  stable on alpha and ia64
 
 *hdparm-5.5-r3 (04 Aug 2004)
 
