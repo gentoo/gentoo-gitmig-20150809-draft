@@ -1,0 +1,13 @@
+# Config file for /etc/init.d/snort
+
+# Make sure this matches your IFACE
+PIDFILE=/var/run/snort_inline.pid
+
+# You probably don't want to change this, but in case you do
+LOGDIR="/var/log/snort_inline"
+
+# Probably not this either
+CONF=/etc/snort_inline/snort.conf
+
+# This pulls in the options above
+SNORT_OPTS="-D -Q -u snort -l $LOGDIR -c $CONF"

@@ -1,0 +1,17 @@
+Index: configure.in
+===================================================================
+RCS file: /cvsroot/snort/snort/configure.in,v
+retrieving revision 1.129
+diff -u -b -B -w -p -r1.129 configure.in
+--- configure.in	17 Dec 2003 21:25:13 -0000	1.129
++++ configure.in	8 Jan 2004 11:50:34 -0000
+@@ -511,6 +511,9 @@ if test "$with_postgresql" != "no"; then
+     elif test -r $i/include/postgresql/libpq-fe.h; then
+       POSTGRESQL_DIR=$i
+       POSTGRESQL_INC_DIR=$i/include/postgresql
++    elif test -r $i/include/postgresql/pgsql/libpq-fe.h; then
++      POSTGRESQL_DIR=$i
++      POSTGRESQL_INC_DIR=$i/include/postgresql/pgsql
+     fi
+   done
+ 

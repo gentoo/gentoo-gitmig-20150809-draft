@@ -1,0 +1,31 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort_inline/files/snort_inline.initd,v 1.1 2004/03/09 03:18:22 mboman Exp $
+
+depend() {
+	need net iptables ebtables
+}
+
+checkconfig() {
+	if [ ! -e /etc/snort_inline/snort.conf ] ; then
+		eerror "You need an /etc/snort_inline/snort.conf to run snort_inline"
+		eerror "There is an example config in /etc/snort_inline/snort.conf.distrib"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting snort_inline"
+	start-stop-daemon --start --quiet --exec /usr/bin/snort_inline \
+		-- ${SNORT_OPTS} >/dev/null 2>&1
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping snort_inline"
+	start-stop-daemon --stop --quiet --pidfile ${PIDFILE}
+	#kill  -9 `cat $PIDFILE`  2>&1
+	eend $?
+}

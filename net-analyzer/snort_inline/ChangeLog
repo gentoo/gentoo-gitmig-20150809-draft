@@ -1,0 +1,7 @@
+# ChangeLog for net-analyzer/snort_inline
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort_inline/ChangeLog,v 1.1 2004/03/09 03:18:22 mboman Exp $
+
+  09 Mar 2004; Michael Boman <mboman@gentoo.org> :
+  New package. Closes bug #38769.
+

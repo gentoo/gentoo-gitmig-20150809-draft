@@ -1,0 +1,157 @@
+--- snort_inline-2.1.0a.orig/configure	2004-01-27 00:48:53.000000000 +0800
++++ snort_inline-2.1.0a/configure	2004-03-09 10:11:36.000000000 +0800
+@@ -7945,22 +7945,22 @@
+         fi
+ 
+         LIBNET_INC_DIR=""
+-        echo "$as_me:$LINENO: checking \"for libnet.h version 1.0.x\"" >&5
+-echo $ECHO_N "checking \"for libnet.h version 1.0.x\"... $ECHO_C" >&6
++        echo "$as_me:$LINENO: checking \"for libnet-1.0.h version 1.0.x\"" >&5
++echo $ECHO_N "checking \"for libnet-1.0.h version 1.0.x\"... $ECHO_C" >&6
+         libnet_dir="/usr/include /usr/local/include"
+         for i in $libnet_dir; do
+-            if test -r $i/libnet.h; then
++            if test -r $i/libnet-1.0.h; then
+                 LIBNET_INC_DIR=$i
+             fi
+         done
+ 
+         if test "$LIBNET_INC_DIR" != ""; then
+-            if eval "grep LIBNET_VERSION $LIBNET_INC_DIR/libnet.h | grep -v 1.0 >/dev/null"; then
++            if eval "grep LIBNET_VERSION $LIBNET_INC_DIR/libnet-1.0.h | grep -v 1.0 >/dev/null"; then
+ 
+    echo
+    echo
+    echo "**********************************************"
+-   echo "  ERROR: unable to find" "libnet 1.0.x (libnet.h)"
++   echo "  ERROR: unable to find" "libnet 1.0.x (libnet-1.0.h)"
+    echo "  checked in the following places"
+    for i in `echo $tmp`; do
+      echo "        $i"
+@@ -7970,8 +7970,8 @@
+    exit
+ 
+             fi
+-            CFLAGS="${CFLAGS} `libnet-config --defines` `libnet-config --cflags`"
+-            LIBS="${LIBS} `libnet-config --libs`"
++            CFLAGS="${CFLAGS} `libnet-1.0-config --defines` `libnet-1.0-config --cflags`"
++            LIBS="${LIBS} `libnet-1.0-config --libs`"
+             CPPFLAGS="${CPPFLAGS} -I${LIBNET_INC_DIR}"
+             echo "$as_me:$LINENO: result: $i" >&5
+ echo "${ECHO_T}$i" >&6
+@@ -7988,31 +7988,31 @@
+ # Check whether --enable-flexresp or --disable-flexresp was given.
+ if test "${enable_flexresp+set}" = set; then
+   enableval="$enable_flexresp"
+-   CPPFLAGS="${CPPFLAGS} -DENABLE_RESPONSE `libnet-config --defines --cflags`" LDFLAGS="${LDFLAGS} `libnet-config --libs`"
++   CPPFLAGS="${CPPFLAGS} -DENABLE_RESPONSE `libnet-1.0-config --defines --cflags`" LDFLAGS="${LDFLAGS} `libnet-1.0-config --libs`"
+ fi;
+ 
+ 
+ if test "$enable_flexresp" != "no" -a "$enable_flexresp" = "yes"; then
+ 
+-  if test `libnet-config --cflags | wc -c` = "1"; then
++  if test `libnet-1.0-config --cflags | wc -c` = "1"; then
+     CPPFLAGS="${CPPFLAGS} -I/usr/local/include -I/sw/include"
+     LIBNET_CONFIG_BROKEN_CFLAGS=yes
+   fi
+ 
+-  if test `libnet-config --libs | wc -c` = "1"; then
+-    { echo "$as_me:$LINENO: WARNING: libnet-config --libs is broken on your system.  If you" >&5
+-echo "$as_me: WARNING: libnet-config --libs is broken on your system.  If you" >&2;}
++  if test `libnet-1.0-config --libs | wc -c` = "1"; then
++    { echo "$as_me:$LINENO: WARNING: libnet-1.0-config --libs is broken on your system.  If you" >&5
++echo "$as_me: WARNING: libnet-1.0-config --libs is broken on your system.  If you" >&2;}
+     { echo "$as_me:$LINENO: WARNING: are using a precompiled package please notify the" >&5
+ echo "$as_me: WARNING: are using a precompiled package please notify the" >&2;}
+     { echo "$as_me:$LINENO: WARNING: maintainer." >&5
+ echo "$as_me: WARNING: maintainer." >&2;}
+     LDFLAGS="${LDFLAGS} -L/usr/local/lib -L/sw/lib"
+-    LIBS="${LIBS} -lnet"
++    LIBS="${LIBS} -lnet-1.0"
+   fi
+ 
+   LNET=""
+ 
+-for ac_header in libnet.h
++for ac_header in libnet-1.0.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if eval "test \"\${$as_ac_Header+set}\" = set"; then
+@@ -8180,18 +8180,18 @@
+       libnet_dir="/usr/include /usr/local/include /sw/include"
+     fi
+   else
+-    libnet_dir=`libnet-config --cflags | cut -dI -f2`
++    libnet_dir=`libnet-1.0-config --cflags | cut -dI -f2`
+   fi
+ 
+   LIBNET_INC_DIR=""
+   for i in $libnet_dir; do
+-    if test -r $i/libnet.h; then
++    if test -r $i/libnet-1.0.h; then
+       LIBNET_INC_DIR=$i
+     fi
+   done
+ 
+   if test "$LIBNET_INC_DIR" != ""; then
+-    if eval "grep LIBNET_VERSION $LIBNET_INC_DIR/libnet.h | grep -v 1.0.2a >/dev/null"; then
++    if eval "grep LIBNET_VERSION $LIBNET_INC_DIR/libnet-1.0.h | grep -v 1.0.2a >/dev/null"; then
+       echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6
+       echo
+@@ -8202,7 +8202,7 @@
+    echo
+    echo
+    echo "**********************************************"
+-   echo "  ERROR: unable to find" "libnet 1.0.2a (libnet.h)"
++   echo "  ERROR: unable to find" "libnet 1.0.2a (libnet-1.0.h)"
+    echo "  checked in the following places"
+    for i in `echo $LIBNET_INC_DIR`; do
+      echo "        $i"
+@@ -8221,7 +8221,7 @@
+    echo
+    echo
+    echo "**********************************************"
+-   echo "  ERROR: unable to find" "libnet 1.0.2a (libnet.h)"
++   echo "  ERROR: unable to find" "libnet 1.0.2a (libnet-1.0.h)"
+    echo "  checked in the following places"
+    for i in `echo $libnet_dir`; do
+      echo "        $i"
+@@ -8234,13 +8234,13 @@
+ 
+   LNET=""
+ 
+-echo "$as_me:$LINENO: checking for libnet_build_ip in -lnet" >&5
+-echo $ECHO_N "checking for libnet_build_ip in -lnet... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for libnet_build_ip in -lnet-1.0" >&5
++echo $ECHO_N "checking for libnet_build_ip in -lnet-1.0... $ECHO_C" >&6
+ if test "${ac_cv_lib_net_libnet_build_ip+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lnet  $LIBS"
++LIBS="-lnet-1.0  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -8302,7 +8302,7 @@
+ #define HAVE_LIBNET 1
+ _ACEOF
+ 
+-  LIBS="-lnet $LIBS"
++  LIBS="-lnet-1.0 $LIBS"
+ 
+ else
+   LNET="no"
+--- snort_inline-2.1.0a.orig/src/inline.c	2004-01-27 01:15:26.000000000 +0800
++++ snort_inline-2.1.0a/src/inline.c	2004-03-09 10:20:59.000000000 +0800
+@@ -5,7 +5,7 @@
+ #include <pcap.h>
+ #include <string.h>
+ #include <stdlib.h>
+-#include <libnet.h>
++#include <libnet-1.0.h>
+ 
+ #define PKT_BUFSIZE 65536
+ 
