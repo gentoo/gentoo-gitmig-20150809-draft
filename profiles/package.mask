@@ -22,6 +22,11 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> 25 Jul 2002
+# masked because of unhealthy groupadd operation in postinst
+# needs sorting out on the policy
+app-misc/nomadii-utils
+
 # <seemant@gentoo.org> (25 Jul 2002)
 # masked while licensing is sorted out
 app-games/halflife-server
