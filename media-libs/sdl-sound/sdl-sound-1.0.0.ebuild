@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.0.ebuild,v 1.6 2003/11/04 08:21:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.0.ebuild,v 1.7 2004/01/30 12:57:18 mr_bones_ Exp $
 
 IUSE="oggvorbis"
 
