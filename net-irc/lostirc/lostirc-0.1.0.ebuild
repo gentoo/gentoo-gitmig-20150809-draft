@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.1.0.ebuild,v 1.2 2002/06/01 13:00:11 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.1.0.ebuild,v 1.3 2002/06/23 18:34:29 azarah Exp $
 
 DESCRIPTION="A simple but functional graphical IRC client"
 HOMEPAGE="http://lostirc.sourceforge.net/"
@@ -11,8 +11,10 @@ SRC_URI="http://unc.dl.sourceforge.net/sourceforge/lostirc/${P}.tar.gz
 
 SLOT="0"
 
-DEPEND=">=x11-libs/gtkmm-1.2.9-r1
-	>=dev-libs/libsigc++-1.0.4-r1"
+DEPEND="( >=x11-libs/gtkmm-1.2.9-r1
+	  <x11-libs/gtkmm-1.3.0 )
+	( >=dev-libs/libsigc++-1.0.4-r1
+	  <dev-libs/libsigc++-1.1.0 )"
 
 
 S=${WORKDIR}/${P}
