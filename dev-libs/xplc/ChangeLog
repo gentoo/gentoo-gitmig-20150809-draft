@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xplc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/ChangeLog,v 1.6 2004/12/08 12:22:12 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/ChangeLog,v 1.7 2004/12/18 18:59:42 mrness Exp $
+
+  18 Dec 2004; Alin Nastac <mrness@gentoo.org> xplc-0.3.10.ebuild:
+  Stable on x86.
 
   08 Dec 2004; Guy Martin <gmsoft@gentoo.org> xplc-0.3.10.ebuild:
   Added ~hppa.
