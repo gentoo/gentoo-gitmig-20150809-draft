@@ -1,5 +1,15 @@
-MD5 e6da4cbbb2cb0f43bfab6f595c75281e ChangeLog 441
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c5a19743656221ba50587784f95ef3d4 ChangeLog 538
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 8b57c904ab163a2def3ba3b94dd2d9ac tux_aqfh-1.0.14.ebuild 855
 MD5 55e00842bfacd631d3d525bfe36af3ae files/1.0.14-fix-paths.patch 5925
 MD5 d7312654531d476da25eb8494cf4c397 files/digest-tux_aqfh-1.0.14 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBWLTNI1lqEGTUzyQRApivAKDOTuFXI0THnj2SSMDJzqfP0CCQaQCdESAB
+Ip0oPhePLD8YtHDCfgdn080=
+=xs6k
+-----END PGP SIGNATURE-----
