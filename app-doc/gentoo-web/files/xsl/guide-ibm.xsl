@@ -145,6 +145,10 @@ time with his wife, Mary, and his new baby daughter, Hadassah.</p>
 	<b><xsl:apply-templates /></b>
 </xsl:template>
 
+<xsl:template match="attribution">
+	<i><xsl:apply-templates /></i>
+</xsl:template>
+
 <xsl:template match="b">
 	<b><xsl:apply-templates /></b>
 </xsl:template>
@@ -157,6 +161,11 @@ time with his wife, Mary, and his new baby daughter, Hadassah.</p>
 	<b><xsl:apply-templates /></b> 
 </xsl:template>
 
+<!-- mertzification -->
+<xsl:template match="code">
+	<b><xsl:apply-templates /></b> 
+</xsl:template>
+
 <xsl:template match="box">
 	<p><xsl:apply-templates /></p>
 </xsl:template>
@@ -165,9 +174,9 @@ time with his wife, Mary, and his new baby daughter, Hadassah.</p>
 <xsl:variable name="prenum"><xsl:number level="any" /></xsl:variable>
 <xsl:variable name="preid">code<xsl:number level="any" /></xsl:variable>
 <p><a name="{$preid}"></a><b><xsl:value-of select="@caption" /></b>
-<table border="1" cellpadding="5"  width="100%" cellspacing="0" bgcolor="#cccccc"><tr><td><pre><code>
+<table border="1" cellpadding="5"  width="100%" cellspacing="0" bgcolor="#cccccc"><tr><td><pre>
 <xsl:apply-templates />
-</code></pre></td></tr></table></p>
+</pre></td></tr></table></p>
 </xsl:template>
 
 <xsl:template match="path">
@@ -184,6 +193,12 @@ time with his wife, Mary, and his new baby daughter, Hadassah.</p>
 			<a href="{$loc}"><xsl:value-of select="."/></a>
 		</xsl:otherwise>
 	</xsl:choose>
+</xsl:template>
+
+<!--HTML compat.-->
+
+<xsl:template match="a">
+	<a href="{@href}"><xsl:apply-templates /></a>
 </xsl:template>
 
 <xsl:template match="p">
