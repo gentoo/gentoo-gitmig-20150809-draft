@@ -1,6 +1,11 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.83 2004/12/20 08:34:26 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.84 2004/12/21 16:16:21 obz Exp $
+
+*epiphany-1.4.7 (22 Dec 2004)
+
+  22 Dec 2004; Mike Gardiner <obz@gentoo.org> +epiphany-1.4.7.ebuild:
+  New version, still requires the nsiurip patch
 
   20 Dec 2004; Mike Gardiner <obz@gentoo.org>
   +files/epiphany-1.4.6-moz-nsiurip.patch, epiphany-1.4.6.ebuild:
