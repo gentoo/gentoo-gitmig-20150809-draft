@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lv/lv-4.50.ebuild,v 1.4 2004/07/01 11:59:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lv/lv-4.50.ebuild,v 1.5 2004/07/23 16:56:19 usata Exp $
 
 MY_P=${PN}${PV//./}
 DESCRIPTION="Powerful Multilingual File Viewer"
@@ -25,7 +25,7 @@ src_compile() {
 }
 src_install() {
 	dodir /usr/{bin,lib,share/man/man1}
-	einstall
+	einstall || die
 
 	dodoc ../README
 }
