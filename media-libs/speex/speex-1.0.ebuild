@@ -10,7 +10,7 @@ HOMEPAGE="http://www.speex.org"
 SRC_URI="http://www.speex.org/download/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="BSD as-is"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND="virtual/glibc"
