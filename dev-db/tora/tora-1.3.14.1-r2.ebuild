@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.14.1-r2.ebuild,v 1.2 2005/01/01 17:44:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.14.1-r2.ebuild,v 1.3 2005/01/29 14:04:26 greg_g Exp $
 
-inherit debug eutils
+inherit debug eutils kde-functions
 
 IUSE="kde oracle debug"
 DESCRIPTION="TOra - Toolkit For Oracle"
@@ -61,6 +61,8 @@ src_unpack() {
 }
 
 src_compile() {
+	set-qtdir 3
+	set-kdedir 3
 
 	# Need to fake out Qt or we'll get sandbox problems
 	REALHOME="$HOME"
