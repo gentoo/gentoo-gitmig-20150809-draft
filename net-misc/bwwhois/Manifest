@@ -1,5 +1,5 @@
-MD5 16ca2c0e4760092744ca23d4f5473432 ChangeLog 667
 MD5 86b6b4dbabbf9d26d4a33697bb009834 bwwhois-3.2.ebuild 872
-MD5 1cbf3c19d02e1549cb84c03c4549025e bwwhois-3.4.ebuild 871
+MD5 31dd8ff3ad5a06401eff58e62eb75738 bwwhois-3.4.ebuild 868
+MD5 9b788668d851c8d05b228f3b03cb95e9 ChangeLog 758
 MD5 ff6a82dfde2579397ea8c617e1a30c22 files/digest-bwwhois-3.2 57
 MD5 9dc1faf1d404599ebc8420b99d288fec files/digest-bwwhois-3.4 57

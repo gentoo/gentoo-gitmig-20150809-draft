@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bwwhois
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.4 2003/07/24 17:59:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.5 2003/08/11 05:37:49 rajiv Exp $
+
+  11 Aug 2003; Rajiv Aaron Manglani <rajiv@gentoo.org> bwwhois-3.4.ebuild:
+  stable on x86.
 
 *bwwhois-3.4 (25 Jul 2003)
 
