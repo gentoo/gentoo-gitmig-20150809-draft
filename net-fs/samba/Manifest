@@ -16,7 +16,7 @@ MD5 fcebd975211fecf647f6cecf26ba5c96 files/samba-3.0.4.patch 8086
 MD5 fa1dcd2c95a81c22c2ad68de6698a85e files/digest-samba-3.0.10 206
 MD5 5cb8bfa14396777d6e3b69975cf7e181 files/digest-samba-3.0.11 204
 MD5 30021657434000c4ef3bf62872367ea7 files/digest-samba-3.0.12 136
-MD5 8f1d5289085aee019339b5f0c5596b66 files/digest-samba-3.0.13 131
+MD5 b2d8f41a9dad89b3e073259680a517cf files/digest-samba-3.0.13 136
 MD5 e89b19f1e62e257cbaa23a44a0362a58 files/swat.xinetd 527
 MD5 def157a63ec14450df82373617c7dc4b files/samba-3.0.11-gcc4.patch 485
 MD5 a7cc90ba23d86b1d90f65645826dde19 files/smbldap_conf.pm 7095
