@@ -1,13 +1,17 @@
 # ChangeLog for gnome-extra/nautilus-cd-burner
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.3 2003/02/21 21:56:34 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.4 2003/03/03 11:27:30 phoenix Exp $
 
 *nautilus-cd-burner-0.3.2 (21 Feb 2003) nautilus-cd-burner-0.3.2.ebuild
 
-	21 Feb 2003; phoen][x <phoenix@gentoo.org> nautilus-cd-burner-0.3.2.ebuild :
-	Version bump.
+  03 Mar 2003; phoen][x <phoenix@gentoo.org> nautilus-cd-burner-0.3.2.ebuild :
+  Added this ebuild to ~ppc. Fernando Usero <fusero@wanadoo.es> successfully compiled 
+  and used it on his ppc.
+
+  21 Feb 2003; phoen][x <phoenix@gentoo.org> nautilus-cd-burner-0.3.2.ebuild :
+  Version bump.
 
 *nautilus-cd-burner-0.2 (3 Jan 2003) nautilus-cd-burner-0.2.ebuild
 
-	3 Jan 2003; Luca Barbato <lu_zero@gentoo.org> :
-	Initial commit 
+  3 Jan 2003; Luca Barbato <lu_zero@gentoo.org> :
+  Initial commit 
