@@ -1,0 +1,11 @@
+--- configure.in	2004-02-22 14:10:48.082041396 +0000
++++ configure.in	2004-02-22 14:11:30.660567613 +0000
+@@ -96,7 +96,7 @@
+ 		;;
+ esac
+ else
+-CFLAGS=`echo $CFLAGS | sed 's/-O[[0-9]]*//g'`
++CFLAGS=`echo $CFLAGS | sed 's/-O[[0-9s]]*//g'`
+ case $CFLAGS in
+ 	*"-g"*)
+ 		;;

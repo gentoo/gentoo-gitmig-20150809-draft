@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.18.ebuild,v 1.8 2003/08/25 03:19:31 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.18.ebuild,v 1.9 2004/02/22 14:21:21 aliz Exp $
 
 DESCRIPTION="uu, xx, base64, binhex decoder"
 HOMEPAGE="http://www.fpx.de/fp/Software/UUDeview/"
@@ -12,14 +12,31 @@ SLOT="0"
 
 IUSE="tcltk debug"
 
-DEPEND="tcltk? ( dev-lang/tcl dev-lang/tk )"
+DEPEND="tcltk? ( dev-lang/tcl dev-lang/tk )
+	sys-devel/autoconf"
+
+src_unpack() {
+	unpack ${A} ; cd ${S}
+
+	epatch ${FILESDIR}/${P}-optimize_size.patch
+}
 
 src_compile() {
+	autoconf
+
+	local myconf
+
+	if [ "`use debug`" ]; then
+		myconf="--disable-optimize"
+	else
+		myconf="--enable-optimize"
+	fi
+
 	econf \
 		`use_enable tcltk tcl` \
 		`use_enable tcltk tk` \
 		`use_enable debug optimize` \
-		|| die
+		$myconf || die
 	emake || die "emake failed"
 }
 
