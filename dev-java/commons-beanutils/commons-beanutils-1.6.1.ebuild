@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.6.1.ebuild,v 1.1 2003/03/22 11:46:29 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.6.1.ebuild,v 1.2 2003/04/06 07:47:48 absinthe Exp $
 
 inherit jakarta-commons
 
@@ -18,7 +18,7 @@ RDEPEND=">=virtual/jdk-1.3
 	>=dev-java/commons-logging-1.0.2"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ppc sparc"
 IUSE="doc jikes junit"
 
 src_compile() {

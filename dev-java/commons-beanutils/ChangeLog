@@ -1,8 +1,12 @@
 # ChangeLog for dev-java/commons-beanutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.6 2003/03/22 11:46:29 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.7 2003/04/06 07:47:48 absinthe Exp $
 
 *commons-beanutils-1.6.1 (22 Mar 2003)
+
+  06 Apr 2003; Dylan Carlson <absinthe@gentoo.org>
+  commons-beanutils-1.6.1.ebuild:
+  x86 ppc sparc moved to stable.
 
   22 Mar 2003; Dylan Carlson <absinthe@gentoo.org>
   commons-beanutils-1.6.1.ebuild:
