@@ -120,7 +120,11 @@ EOF
     make -f Makefile || die
     # Parallel make fails
 	# dont use the || die since some tests fail on bootstrap
-    make -f Makefile test 
+	if [ `expr "$PARCH" ":" "sparc"` -gt 4 ]; then
+		echo "Skipping tests on this platform"
+	else
+    	make -f Makefile test 
+	fi
 }
 
 src_install() {
