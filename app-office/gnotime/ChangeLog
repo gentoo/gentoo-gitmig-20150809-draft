@@ -1,0 +1,9 @@
+# ChangeLog for app-office/gnotime
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.1 2003/08/27 08:44:06 obz Exp $
+
+*gnotime-2.1.6 (27 Aug 2003)
+
+  27 Aug 2003; Mike Gardiner <obz@gentoo.org> gnotime-2.1.6.ebuild:
+  First addition
+
