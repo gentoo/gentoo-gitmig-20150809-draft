@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/skunkweb-3.4_beta5.ebuild,v 1.7 2004/09/03 01:28:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/skunkweb-3.4_beta5.ebuild,v 1.8 2004/09/03 13:23:19 satya Exp $
 
 inherit eutils
 
@@ -68,6 +68,7 @@ src_install() {
 			newins SkunkWeb/mod_skunkweb/http_conf.stub mod_skunkweb.conf
 		fi
 	fi
+	exeinto /etc/init.d; newexe ${FILESDIR}/skunkweb-init skunkweb
 	dodoc README ChangeLog NEWS HACKING ACKS INSTALL
 	if use doc; then
 		cd ${S}/doc

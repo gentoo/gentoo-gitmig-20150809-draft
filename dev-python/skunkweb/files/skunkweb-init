@@ -1,0 +1,32 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/files/skunkweb-init,v 1.1 2004/09/03 13:23:19 satya Exp $
+
+DAEMON_CMD=/usr/bin/swmgr
+opts="${opts} configtest"
+
+depend() {
+	use apache2
+}
+
+configtest() {
+	${DAEMON_CMD} configtest
+}
+
+start() {
+	ebegin "Starting skunkweb"
+	${DAEMON_CMD} start > /dev/null 2>&1
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping skunkweb"
+	${DAEMON_CMD} stop > /dev/null 2>&1
+	eend $?
+}
+restart() {
+	ebegin "Restarting skunkweb"
+	${DAEMON_CMD} restart > /dev/null 2>&1
+	eend $?
+}
