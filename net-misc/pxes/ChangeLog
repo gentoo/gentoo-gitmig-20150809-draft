@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pxes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.14 2004/06/25 00:06:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.15 2004/06/29 13:40:33 wolf31o2 Exp $
+
+  29 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org> pxes-0.7.ebuild,
+  pxes-0.8.ebuild:
+  Fixing broken usage of perl-modules.eclass and closing bug #49884. Thanks,
+  mcummings
 
   04 Jun 2004; Daniel Black <dragonheart@gentoo.org> pxes-0.8.ebuild:
   sys-apps/squashfs-tools dependancy moved to sys-fs

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.7.ebuild,v 1.4 2004/06/25 00:06:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.7.ebuild,v 1.5 2004/06/29 13:40:33 wolf31o2 Exp $
 
 IUSE="ltsp"
 DESCRIPTION="PXES is a package for building thin clients using multiple types of clients"
@@ -36,8 +36,8 @@ src_unpack() {
 
 src_compile() {
 	cd ${WORKDIR}/pxesconfig-${PV}
-	MMSIXELEVEN=""
-	perl-module_src_prep || die
+	SRC_PREP="yes"
+	perl Makefile.PL PREFIX=${D}/usr INSTALLDIRS=vendor DESTDIR=${D}
 	perl-module_src_compile || die
 }
 
