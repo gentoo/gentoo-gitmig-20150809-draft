@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.3.ebuild,v 1.1 2000/08/28 06:02:54 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.3.ebuild,v 1.2 2000/08/28 15:10:45 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -32,9 +32,10 @@ src_install()
 	dodoc ${FILESDIR}/copyright ${FILESDIR}/changelog.Debian
 	dodir /usr/X11R6/lib /usr/src/linux/include/linux
 	dodir /usr/src/linux/include/asm-i386
-	dodir /var /var/run
+	dodir /var /var/run /var/log/news
 	touch ${D}/var/run/utmp
-	dodir /var/lib/locate /var/lib/pkg /var/spool /var/log/news
+	touch ${D}/var/log/wtmp
+	dodir /var/lib/locate /var/lib/pkg /var/spool
 	dodir /root /opt /home/ftp /etc/modules /proc
 	chmod go-rx ${D}/root
 	dodir /tmp
