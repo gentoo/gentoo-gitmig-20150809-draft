@@ -1,4 +1,6 @@
-MD5 ef970779cda0d51f0a1461ab7a2423c1 ChangeLog 1241
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
+MD5 e471ce0976a9b0dc3d5b77edd5b00ac0 ChangeLog 1371
 MD5 4eed6c4b2dccf7b529a0a5565d403882 bluez-libs-2.4.ebuild 544
+MD5 b969b9954bc5ffc3f29c83201cd94b82 bluez-libs-2.5.ebuild 547
 MD5 80177a4623589ccbcfd22e5b167f135e files/digest-bluez-libs-2.4 66
+MD5 fa955b5c11e33f8d98a80f6cc24d79db files/digest-bluez-libs-2.5 66
