@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.3/lib64/make.defaults,v 1.9 2004/10/28 19:35:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.3/lib64/make.defaults,v 1.10 2004/11/07 16:24:30 lv Exp $
 
 ARCH="amd64"
 ACCEPT_KEYWORDS="${ARCH}"
@@ -15,7 +15,7 @@ USE="${GRP_STAGE23_USE} bitmap-fonts oss alsa crypt f77 jpeg nls userlocales ope
 ARCH="amd64"
 
 # we can enable sandbox now that we use multilib by default
-FEATURES="sandbox"
+FEATURES="sandbox autoconfig"
 
 CONF_LIBDIR="lib64"
 CONF_MULTILIBDIR="lib32"
