@@ -1,6 +1,20 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.23 2003/08/04 14:23:07 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.24 2003/08/05 20:00:49 taviso Exp $
+
+*fvwm-2.5.7-r1 (05 Aug 2003)
+
+  05 Aug 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.7-r1.ebuild, files/fvwm2:
+  Adding fvwm-2.5.7-r1, which fixes:
+  	bad xpmroot manpage (fixed with a call to prepallman)
+	dependencies missing for perllib toolkit bindings (gtk2/tcltk/gtk)
+	Remove useless fvwm-perllib script of perllib isnt installed
+  And adds:
+  	Including some developer documentation with USE="doc"
+	If tcltk and perl USE flags are set, install the 3rd Party FvwmTabs module
+	USE="debug" turns on debug mesages, and command logging.
+ 
+  Currently masked.
 
   04 Aug 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.7.ebuild:
   reported working on sparc.
