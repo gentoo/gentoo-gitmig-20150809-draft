@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/AppConfig
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.12 2004/05/27 00:10:59 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.13 2004/05/30 06:14:50 rac Exp $
+
+*AppConfig-1.56-r2 (29 May 2004)
+
+  29 May 2004; Robert Coie <rac@gentoo.org> AppConfig-1.55.ebuild,
+  AppConfig-1.56-r2.ebuild, AppConfig-1.56.ebuild, files/blocksep.patch:
+  Add blocksep patch (sent upstream)
 
 *AppConfig-1.56-r1 (26 May 2004)
 
