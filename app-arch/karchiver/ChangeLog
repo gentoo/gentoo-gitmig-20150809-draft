@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/karchiver
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/ChangeLog,v 1.9 2003/12/28 04:26:22 caleb Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/ChangeLog,v 1.10 2004/04/29 19:39:13 centic Exp $
+
+  29 Apr 2004; Dominik Stadler <centic@gentoo.org> karchiver-3.0.3.ebuild,
+  karchiver-3.0.8.ebuild:
+  Add missing IUSE to ebuilds, mark 3.0.8 stable on x86.
 
 *karchiver-3.0.8 (27 Dec 2003)
 
