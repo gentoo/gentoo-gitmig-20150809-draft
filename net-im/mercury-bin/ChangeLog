@@ -1,6 +1,12 @@
 # ChangeLog for net-im/mercury-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mercury-bin/ChangeLog,v 1.1 2005/02/04 18:27:21 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mercury-bin/ChangeLog,v 1.2 2005/03/01 01:16:16 humpback Exp $
+
+*mercury-bin-1709_beta7 (01 Mar 2005)
+
+  01 Mar 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  +mercury-bin-1709_beta7.ebuild:
+  New version :) Lots of fixes and some more new bugs.
 
 *mercury-bin-1708 (04 Feb 2005)
 
