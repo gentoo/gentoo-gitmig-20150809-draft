@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.4.ebuild,v 1.5 2003/11/16 20:55:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.4.ebuild,v 1.6 2003/12/15 20:03:27 stuart Exp $
 
 inherit eutils
 inherit webapp-apache
@@ -41,6 +41,7 @@ src_compile() {
 }
 
 src_install() {
+	webapp-mkdirs
 
 	local DocumentRoot=${HTTPD_ROOT}
 	local destdir=${DocumentRoot}/phpmyadmin

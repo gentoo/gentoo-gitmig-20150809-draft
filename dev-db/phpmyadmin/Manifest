@@ -1,5 +1,5 @@
-MD5 af29f55c0fbd8f9f1b244bb16fe48a25 phpmyadmin-2.5.4.ebuild 2977
-MD5 e8580382588c0b2a8bb29fbea3c923a8 ChangeLog 5303
+MD5 3042c653eabd26e0a9b00316f9840c8c phpmyadmin-2.5.4.ebuild 2976
+MD5 cea02094008b2057252bf7654450f84e ChangeLog 5404
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
 MD5 069e2c15dc9725b90d0255b042d88489 files/config.inc.php-2.5.4.patch 4826
 MD5 c1b0654f2909f7a01d9621c1dd41cca3 files/digest-phpmyadmin-2.5.4 74
