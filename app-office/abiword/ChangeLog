@@ -1,6 +1,12 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.22 2002/12/22 21:59:19 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.23 2003/01/26 18:04:29 foser Exp $
+
+*abiword-1.0.4 (26 Jan 2003)
+
+  26 Jan 2003; foser <foser@gentoo.org> abiword-1.0.4.ebuild :
+  New version
+  changed SLOT to 1, fixed SRC_URI to use mirror:// (thnx mg)
 
 *abiword-1.0.4_pre1-r2 (22 Dec 2002)
 
