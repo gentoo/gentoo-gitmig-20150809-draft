@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.222 2005/02/03 14:03:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.223 2005/02/03 15:24:54 danarmak Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -158,6 +158,7 @@ joystick - Add support for joysticks in all packages
 jpeg - Adds JPEG image support
 junit - Adds junit awareness -- useful for developers.
 kde - Adds support for kde-base/kde (K Desktop Enviroment)
+kdeenablefinal - Makes kde ebuilds use the enable-final flag, yielding big compilation speedups at the cost of very heavy mem usage
 kdexdeltas - Makes kde ebuilds download binary diffs rather than entire new tarballs for every new release
 kerberos - Adds kerberos support
 krb4 - Adds optional kerberos 4 compatibility support
