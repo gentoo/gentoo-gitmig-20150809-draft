@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-9.0.ebuild,v 1.1 2003/06/21 13:00:41 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-9.0.ebuild,v 1.2 2003/06/21 13:40:27 liquidx Exp $
 
 DESCRIPTION="Convert a .rpm file to a .tar.gz archive"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
@@ -17,7 +17,13 @@ DEPEND="virtual/glibc
 	sys-apps/cpio
 	sys-apps/file"
 
+
 S=${WORKDIR}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}; epatch ${FILESDIR}/${P}-gentoo.patch
+}
 
 src_compile() {
 	${CC:-gcc} ${CFLAGS} -o rpmoffset rpmoffset.c || die
