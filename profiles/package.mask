@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3466 2005/01/09 09:16:22 vericgar Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3467 2005/01/09 10:57:52 vericgar Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -71,9 +71,7 @@ app-dicts/gramadoir
 =net-www/mod_watch-3.18-r1
 =net-www/mod_watch-4.03-r1
 =net-www/mod_xslt-1.0.5a-r1
-=www-apache/libapreq2-2.04_pre03
 =www-apache/mod_csv-0.0.1
-=www-apache/mod_dav_svn-1.1.0
 =www-apache/mod_dav_svn-1.1.1
 =www-apache/mod_diagnostics-0.0.1
 =www-apache/mod_lisp-2.33-r1
