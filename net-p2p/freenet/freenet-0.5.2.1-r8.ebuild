@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.5 2004/06/25 00:31:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.6 2004/07/30 18:53:56 squinky86 Exp $
 
 inherit eutils
 
@@ -79,9 +79,11 @@ pkg_config() {
 		einfo "Press U within 2 seconds to try an unstable snapshot"
 		read -n 1 -t 2 YN
 		if [ "${YN}" == "U" ] || [ "${YN}" == "u" ]; then
+			cp -f /usr/lib/freenet/freenet.jar /usr/lib/freenet/freenet.jar.old
 			wget http://freenetproject.org/snapshots/freenet-unstable-latest.jar -O /usr/lib/freenet/freenet.jar
 			wget http://freenetproject.org/snapshots/unstable.ref -O /var/freenet/seednodes.ref
 		else
+			cp -f /usr/lib/freenet/freenet.jar /usr/lib/freenet/freenet.jar.old
 			wget http://freenetproject.org/snapshots/freenet-latest.jar -O /usr/lib/freenet/freenet.jar
 			wget http://freenetproject.org/snapshots/seednodes.ref -O /var/freenet/seednodes.ref
 		fi
