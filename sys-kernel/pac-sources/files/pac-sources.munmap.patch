@@ -5,7 +5,7 @@
  			goto out;
  
 -		do_munmap(current->mm, new_addr, new_len, 1);
-+		ret = do_munmap(current->mm, new_addr, new_len);
++		ret = do_munmap(current->mm, new_addr, new_len, 1);
 +		if (ret && new_len)
 +			goto out;
  	}
@@ -18,7 +18,7 @@
 -	ret = addr;
  	if (old_len >= new_len) {
 -		do_munmap(current->mm, addr+new_len, old_len - new_len, 1);
-+		ret = do_munmap(current->mm, addr+new_len, old_len - new_len);
++		ret = do_munmap(current->mm, addr+new_len, old_len - new_len, 1);
 +		if (ret && old_len != new_len)
 +			goto out;
 +		ret = addr;
