@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-1.4.1.ebuild,v 1.3 2002/06/28 10:19:31 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-1.4.1.ebuild,v 1.4 2002/06/28 10:21:21 spider Exp $
 
 
 inherit libtool
@@ -19,10 +19,9 @@ RDEPEND="=gnome-base/control-center-1.4*
 	>=media-libs/gdk-pixbuf-0.16.0-r1"
 
 DEPEND="${RDEPEND}
-	(	>=app-text/scrollkeeper-0.2
-		<app-text/scrollkeeper-0.3 )
-		nls? ( sys-devel/gettext
-		>=dev-util/intltool-0.11 )"
+	>=app-text/scrollkeeper-0.2
+	nls? ( sys-devel/gettext
+	>=dev-util/intltool-0.11 )"
 
 src_unpack() {
 	unpack ${A}
