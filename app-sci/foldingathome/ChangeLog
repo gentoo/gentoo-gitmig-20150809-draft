@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/foldingathome
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/ChangeLog,v 1.8 2004/03/03 11:33:11 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/ChangeLog,v 1.9 2004/03/09 14:02:23 aliz Exp $
+
+  09 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> foldingathome-4.0.0.ebuild:
+  Adding amd64 keyword. Closing #43779.
 
 *foldingathome-4.0.0 (03 Mar 2004)
 
