@@ -1,5 +1,5 @@
 MD5 58f887042db750a9d8e72e410c7092c4 mpd-0.8.1.ebuild 1140
-MD5 419ce23e5cab38e216cfc27e05529c20 ChangeLog 398
-MD5 58f887042db750a9d8e72e410c7092c4 mpd-0.8.2.ebuild 1140
+MD5 2b28299d951f1fd15416fd2d198fd6a8 ChangeLog 558
+MD5 24efbb6aa450130a48c0d489924d6dcb mpd-0.8.2.ebuild 1141
 MD5 584e630a8aba4c01febb8248c9f3247b files/digest-mpd-0.8.1 61
 MD5 3ba62c82a1d52363a5cf5862b0ff5d7e files/digest-mpd-0.8.2 61
