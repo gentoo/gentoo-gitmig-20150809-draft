@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/docbook-xml-simple-dtd-4.1.2.4.ebuild,v 1.2 2001/03/26 11:59:57 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/docbook-xml-simple-dtd-4.1.2.4.ebuild,v 1.3 2001/06/08 01:08:06 achim Exp $
 
 A="sdb4124.zip"
 S=${WORKDIR}/${P}
@@ -11,6 +11,7 @@ SRC_URI="http://www.nwalsh.com/docbook/simple/${PV}/${A}"
 HOMEPAGE="http://www.oasis-open.org/docbook/"
 
 DEPEND=">=app-arch/unzip-5.41"
+RDEPEND=""
 
 src_unpack() {
   mkdir ${S}

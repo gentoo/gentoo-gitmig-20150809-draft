@@ -10,16 +10,22 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
 HOMEPAGE="http://www.kde.org/"
 
-DEPEND=">=dev-util/cvs-${PV}
-	>=kde-base/kdelibs-${PV}"
-
-RDEPEND=$DEPEND
+DEPEND=">=kde-base/kdelibs-${PV} sys-devel/flex sys-devel/perl"
+RDEPEND=">=kde-base/kdelibs-${PV}"
 
 src_compile() {
-
+    local myconf
+    if [ "`use qtmt`" ]
+    then
+      myconf="--enable-mt"
+    fi
+    if [ "`use mitshm`" ]
+    then
+      myconf="$myconf --enable-mitshm"
+    fi
     QTBASE=/usr/X11R6/lib/qt
-    try ./configure --prefix=/opt/kde2.1 --host=${CHOST} \
-		--with-qt-dir=$QTBASE
+    try ./configure --prefix=$KDEDIR --host=${CHOST} \
+		--with-qt-dir=$QTBASE $myconf
     try make
 
 }

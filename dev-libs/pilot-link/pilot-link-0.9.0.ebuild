@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/pilot-link-0.9.0.ebuild,v 1.1 2001/06/07 22:28:42 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/pilot-link-0.9.0.ebuild,v 1.2 2001/06/08 01:08:06 achim Exp $
 
 A=${PN}.${PV}.tar.gz
 S=${WORKDIR}/${PN}.${PV}
@@ -24,7 +24,7 @@ src_compile() {
 
 src_install () {
 
-    try make prefix=${D}/usr mandir=${D}/usr/share/man install
+    try make prefix=${D}/usr mandir1=${D}/usr/share/man/man1 mandir7=${D}/usr/share/man/man7  install
     dodoc COPYING* ChangeLog README TODO 
 
 }

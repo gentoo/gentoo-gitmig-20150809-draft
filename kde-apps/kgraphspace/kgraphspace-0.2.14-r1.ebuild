@@ -13,8 +13,16 @@ DEPEND=">=kde-base/kdebase-2.1.1"
 RDEPEND=$DEPEND
 
 src_compile() {
-
-    try ./configure --prefix=${KDEDIR} --host=${CHOST}
+    local myconf
+    if [ "`use qtmt`" ]
+    then
+      myconf="--enable-mt"
+    fi
+    if [ "`use mitshm`" ]
+    then
+      myconf="$myconf --enable-mitshm"
+    fi
+    try ./configure --prefix=${KDEDIR} --host=${CHOST} $myconf
     try make
 
 }

@@ -11,8 +11,8 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 
 HOMEPAGE="http:/www.kde.org/"
 
-DEPEND=">=kde-base/kdelibs-${PV}"
-RDEPEND=$DEPEND
+DEPEND=">=kde-base/kdelibs-${PV} >=dev-libs/pilot-link-0.9.0 sys-devel/perl"
+RDEPEND=">=kde-base/kdelibs-${PV} >=dev-libs/pilot-link-0.9.0"
 
 src_compile() {
     QTBASE=/usr/X11R6/lib/qt
@@ -25,7 +25,7 @@ src_compile() {
     then
       myconf="$myconf --enable-mitshm"
     fi
-    try ./configure --prefix=/opt/kde2.1 --host=${CHOST} \
+    try ./configure --prefix=${KDEDIR} --host=${CHOST} \
 		--with-qt-dir=$QTBASE $myconf
     try make
 }

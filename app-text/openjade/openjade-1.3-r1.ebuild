@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3-r1.ebuild,v 1.8 2001/05/16 11:36:45 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3-r1.ebuild,v 1.9 2001/06/08 01:08:06 achim Exp $
 
 P=openjade-1.3
 A=${P}.tar.gz
@@ -72,20 +72,23 @@ src_install() {
 }
 
 pkg_postinst() {
+  if [ -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ] ; then
     install-catalog --add /etc/sgml/${P}.cat /usr/share/sgml/openjade-1.3/catalog
     install-catalog --add /etc/sgml/${P}.cat /usr/share/sgml/openjade-1.3/dsssl/catalog
     install-catalog --add /etc/sgml/${P}.cat /usr/share/sgml/openjade-1.3/unicode/catalog
     install-catalog --add /etc/sgml/sgml-docbook.cat /etc/sgml/${P}.cat
-    echo
+  fi
 }
 
 pkg_prerm() {
-    if [ "$ROOT" ="/" ] ; then
+ if [ -x  "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ] ; then
+
     install-catalog --remove /etc/sgml/${P}.cat /usr/share/sgml/openjade-1.3/catalog
     install-catalog --remove /etc/sgml/${P}.cat /usr/share/sgml/openjade-1.3/dsssl/catalog
     install-catalog --remove /etc/sgml/${P}.cat /usr/share/sgml/openjade-1.3/unicode/catalog
     install-catalog --add /etc/sgml/sgml-docbook.cat /etc/sgml/${P}.cat
-    fi
+
+ fi
 }
 
 

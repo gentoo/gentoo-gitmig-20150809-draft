@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.29.ebuild,v 1.1 2001/03/20 05:53:12 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.29.ebuild,v 1.2 2001/06/08 01:08:06 achim Exp $
 
 A="dbx129.zip"
 S=${WORKDIR}/docbook
@@ -11,6 +11,7 @@ SRC_URI="http://www.nwalsh.com/docbook/xsl/${A}"
 HOMEPAGE="http://www.oasis-open.org/docbook/"
 
 DEPEND=">=app-arch/unzip-5.41"
+RDEPEND=""
 
 src_install() {
 

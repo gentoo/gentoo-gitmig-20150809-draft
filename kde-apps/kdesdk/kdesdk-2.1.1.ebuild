@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
 HOMEPAGE="http://www.kde.org/"
 
-DEPEND=">=kde-base/kdelibs-${PV} <sys-libs/db-2"
+DEPEND=">=kde-base/kdelibs-${PV}"
 
 RDEPEND=$DEPEND
 
@@ -25,8 +25,8 @@ src_compile() {
     then
       myconf="$myconf --enable-mitshm"
     fi
-    try CFLAGS=\"$CFLAGS -I/usr/include/db1\" ./configure --prefix=$KDEDIR --host=${CHOST} \
-		--with-qt-dir=$QTBASE --with-db-name=libdb.so.2 $myconf
+    try CFLAGS=\"$CFLAGS\" ./configure --prefix=$KDEDIR --host=${CHOST} \
+		--with-qt-dir=$QTBASE $myconf
     try make
 }
 
