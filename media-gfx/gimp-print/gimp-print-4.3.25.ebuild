@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.3.25.ebuild,v 1.6 2004/02/12 15:32:32 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.3.25.ebuild,v 1.7 2004/03/02 14:05:16 lanius Exp $
 
 inherit flag-o-matic libtool
 
@@ -69,8 +69,7 @@ src_compile() {
 		$myconf || die
 
 	# IJS Patch
-	cp src/ghost/ijsgimpprint.c src/ghost/ijsgimpprint.c.org
-	sed -e "s/<ijs/<ijs\/ijs/g" src/ghost/ijsgimpprint.c.org > src/ghost/ijsgimpprint.c
+	sed -i -e "s/<ijs/<ijs\/ijs/g" src/ghost/ijsgimpprint.c
 
 	emake || die "compile problem"
 }
