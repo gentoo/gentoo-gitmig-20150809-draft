@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/bioperl-run
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl-run/ChangeLog,v 1.1 2003/09/29 15:44:23 sediener Exp $
+
+*bioperl-run-1.2.2 (29 Sep 2003)
+
+  29 Sep 2003; <sediener@gentoo.org> bioperl-run-1.2.2.ebuild, metadata.xml,
+  files/bioperl-run-Pise-test-patch.diff:
+  Initial Import. Built of of the bioperl ebuild from Gontran Zepeda.
+
