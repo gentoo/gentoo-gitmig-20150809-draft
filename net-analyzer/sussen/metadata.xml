@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-
 <pkgmetadata>
-<herd>gnome</herd>
-<maintainer>
-  <email>gnome@gentoo.org</email>
-</maintainer>
-<longdescription>Sussen is a GTK+2 and GNOME client for the Nessus security scanning system. It includes support for database backends (via the libgnomedb library), session support, and a policy manager to select the types of security checks a user would like to perform.</longdescription>
+	<herd>netmon</herd>
 </pkgmetadata>
