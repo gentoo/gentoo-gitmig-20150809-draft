@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r1.ebuild,v 1.5 2003/12/17 04:32:52 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r1.ebuild,v 1.6 2004/01/03 15:21:07 aliz Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 [ `use kerberos` ] && append-flags -I/usr/include/gssapi
@@ -110,19 +110,12 @@ src_install() {
 	keepdir /var/empty
 }
 
-pkg_preinst() {
-	userdel sshd 2> /dev/null
-	if ! groupmod sshd; then
-		groupadd -g 90 sshd 2> /dev/null || \
-			die "Failed to create sshd group"
-	fi
-	useradd -u 22 -g sshd -s /dev/null -d /var/empty -c "sshd" sshd || \
-		die "Failed to create sshd user"
-}
-
 pkg_postinst() {
 	# empty dir for the new priv separation auth chroot..
 	install -d -m0755 -o root -g root ${ROOT}/var/empty
+
+	enewgroup sshd 22
+	enewuser sshd 22 /dev/null /var/empty sshd
 
 	ewarn "Remember to merge your config files in /etc/ssh/ and then"
 	ewarn "restart sshd: '/etc/init.d/sshd restart'."

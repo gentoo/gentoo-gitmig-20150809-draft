@@ -1,3 +1,8 @@
+MD5 0bdab2263983cea3dfaa7872d917be1f openssh-3.5_p1-r1.ebuild 3562
+MD5 fbff77168df0943b895dae0d0a786d38 openssh-3.7.1_p2-r1.ebuild 4003
+MD5 092b770f6fb3c69d8acf92b42ca717df openssh-3.6.1_p2.ebuild 3586
+MD5 6ebb11d4c8f6e0302489de1c691d3179 ChangeLog 9398
+MD5 0feff9b09e482567359625301bddce1c metadata.xml 1329
 MD5 2cb187d8f60994c5e1b5fef2bcb6e85d files/openssh-3.5_p1-gentoo-sshd-gcc3.patch 315
 MD5 49cc9062ff27ad7d4e8f94b136ed76a2 files/openssh-3.7.1_p1-selinux.diff 3394
 MD5 31789e51878741d2af4b1312db79fa2f files/digest-openssh-3.6.1_p2 67
@@ -6,8 +11,3 @@ MD5 b86ae0c43a704c4ee2abd2ce5c955f8f files/sshd.pam 294
 MD5 17b2fa077852f2c2990ec97c51bf198b files/sshd.rc6 1233
 MD5 8f421fd8d19a104dc78150e4b1904a46 files/digest-openssh-3.5_p1-r1 65
 MD5 2f8fc1bd837220c9708d9d8b0730fe2c files/digest-openssh-3.7.1_p2-r1 142
-MD5 0bdab2263983cea3dfaa7872d917be1f openssh-3.5_p1-r1.ebuild 3562
-MD5 9196b0c8d88035ad6daf2ad67a063561 openssh-3.7.1_p2-r1.ebuild 4193
-MD5 092b770f6fb3c69d8acf92b42ca717df openssh-3.6.1_p2.ebuild 3586
-MD5 3fcff23f245453da38f81a35e1f201a9 ChangeLog 9233
-MD5 0feff9b09e482567359625301bddce1c metadata.xml 1329
