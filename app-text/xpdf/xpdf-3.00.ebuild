@@ -1,17 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.03.ebuild,v 1.5 2004/01/25 11:50:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00.ebuild,v 1.1 2004/01/25 11:50:22 lanius Exp $
 
-MY_PV=${PV/.1/pl1}
-
-S=${WORKDIR}/${PN}-${MY_PV}
 DESCRIPTION="An X Viewer for PDF Files"
 HOMEPAGE="http://www.foolabs.com/xpdf/xpdf.html"
-SRC_URI="ftp://ftp.foolabs.com/pub/xpdf/${PN}-${MY_PV}.tar.gz"
+SRC_URI="ftp://ftp.foolabs.com/pub/xpdf/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips hppa ~arm ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips hppa ~arm ~amd64 ~ia64"
 IUSE="motif"
 
 DEPEND="motif? ( virtual/x11
@@ -23,16 +20,15 @@ DEPEND="motif? ( virtual/x11
 src_compile() {
 	econf \
 		--enable-freetype2 \
-		--with-freetype2-includes=/usr/include/freetype2 \
-		--with-gzip || die
+		--with-freetype2-includes=/usr/include/freetype2 || die
 
-	make ${MAKEOPTS} || die
+	emake || die
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
 	prepallman
-	dodoc README ANNOUNCE CHANGES
+	dodoc README ANNOUNCE CHANGES COPYING
 	insinto /etc
 	doins ${FILESDIR}/xpdfrc
 }
