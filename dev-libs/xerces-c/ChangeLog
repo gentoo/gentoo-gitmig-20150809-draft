@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.9 2003/08/05 15:25:39 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.10 2003/11/18 17:14:42 zhen Exp $
+
+  18 Nov 2003; zhen <zhen@gentoo.org> :
+  fix for 22928 as well as 15260 - fixed MAKEOPTS to -j1 because xerces does not
+  play nice with multiple build threads.
+  Thanks to Kasper.Souren@ircam.fr for the research.
 
   05 Aug 2003; <zhen@gentoo.org> :
   bumped to -r5 to fix configuration issues. I just used econf/emake instead, no big
