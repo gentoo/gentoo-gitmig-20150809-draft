@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gnuconfig
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.16 2005/03/22 13:19:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.17 2005/03/26 19:37:15 j4rg0n Exp $
+
+  26 Mar 2005; Lina Pezzella <j4rg0n@gentoo.org> gnuconfig-20050223.ebuild:
+  Stable ppc-macos
 
   22 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gnuconfig-20050223.ebuild:

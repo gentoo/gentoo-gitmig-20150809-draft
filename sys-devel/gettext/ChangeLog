@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.80 2005/03/15 09:57:21 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.81 2005/03/26 19:32:51 j4rg0n Exp $
+
+  26 Mar 2005; Lina Pezzella <j4rg0n@gentoo.org> gettext-0.14.1.ebuild:
+  Stable ppc-macos
 
   15 Mar 2005; Christian Birchinger <joker@gentoo.org> gettext-0.14.1.ebuild:
   Added sparc stable keyword
