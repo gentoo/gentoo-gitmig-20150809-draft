@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-postoffice
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-postoffice/ChangeLog,v 1.1 2004/09/12 21:37:49 mkennedy Exp $
+
+*cl-postoffice-1.8.2.3 (12 Sep 2004)
+
+  12 Sep 2004; <mkennedy@gentoo.org> +metadata.xml,
+  +cl-postoffice-1.8.2.3.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
