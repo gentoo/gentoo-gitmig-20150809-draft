@@ -1,6 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.0.ebuild,v 1.8 2003/09/08 07:41:44 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.0.ebuild,v 1.9 2003/10/06 08:21:23 phosphan Exp $
+
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A streaming video server."
@@ -13,6 +16,13 @@ KEYWORDS="x86"
 
 DEPEND=">=media-libs/jpeg-6b-r2
 	>=media-libs/imlib-1.9.13-r2"
+
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-0.5-errno.patch
+}
 
 src_compile() {
 
