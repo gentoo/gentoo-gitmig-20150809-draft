@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.23.ebuild,v 1.18 2004/08/17 22:40:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.23.ebuild,v 1.19 2004/10/06 21:55:50 gustavoz Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -23,8 +23,8 @@ SLOT="0"
 PROVIDE="virtual/kernel virtual/os-headers"
 KEYWORDS="-* ia64 alpha sparc"
 
-DEPEND="!virtual/os-headers"
-
+DEPEND="!virtual/os-headers
+	sparc? ( gcc64? ( sys-devel/gcc-sparc64 ) )"
 
 pkg_setup() {
 	# Figure out what architecture we are, and set ARCH appropriately

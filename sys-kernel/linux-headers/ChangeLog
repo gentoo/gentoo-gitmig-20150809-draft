@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.88 2004/10/04 05:17:09 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.89 2004/10/06 21:55:50 gustavoz Exp $
+
+  06 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  linux-headers-2.4.21-r1.ebuild, linux-headers-2.4.21.ebuild,
+  linux-headers-2.4.23.ebuild:
+  Workaround for cascading profiles on sparc64
 
   04 Oct 2004; <iggy@gentoo.org> linux-headers-2.4.26.ebuild:
   switched custom ARCH setting code to use set_arch_to_* from eutils
