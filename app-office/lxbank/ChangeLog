@@ -1,6 +1,11 @@
 # ChangeLog for app-office/lxbank
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lxbank/ChangeLog,v 1.2 2003/08/08 15:29:49 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lxbank/ChangeLog,v 1.3 2003/12/23 21:20:20 hanno Exp $
+
+*lxbank-0.1.8 (23 Dec 2003)
+
+  23 Dec 2003; Hanno Boeck <hanno@gentoo.org> lxbank-0.1.8.ebuild:
+  Version bump.
 
 *lxbank-0.1.7 (08 Aug 2003)
 

@@ -1,3 +1,6 @@
-MD5 fd97174e15e381dd9bc2cc10a22df6a4 ChangeLog 472
+MD5 c65c999c01f86da07c18a94bda12a3f8 ChangeLog 585
+MD5 5a488e117963616147c6f7f7d38049cd lxbank-0.1.8.ebuild 646
 MD5 0ce8acca8e7fdd61486279b04d9b5c5a lxbank-0.1.7.ebuild 645
+MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
+MD5 98f56d29901fc0ce656ba59843f95b8a files/digest-lxbank-0.1.8 64
 MD5 8b781bd0618b9513d5c36c37632a0911 files/digest-lxbank-0.1.7 64
