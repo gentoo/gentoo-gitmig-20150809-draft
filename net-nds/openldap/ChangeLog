@@ -1,9 +1,15 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.22 2003/01/01 22:02:35 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.23 2003/01/02 11:13:09 raker Exp $
 
 *openldap-2.0.27-r1 (01 Jan 2002)
 *openldap-2.1.10 (01 Jan 2002)
+
+  02 Jan 2002; Nick Hadaway <raker@gentoo.org> openldap-2.0.27-r1.ebuild,
+  openldap-2.1.10.ebuild. files/slapd-2.1.rc6 :
+  Added --enable-ldap to openldap-2.1.10 and changed the ldap data dir
+  from /var/state/openldap/openldap-ldbm to /var/lib/openldap-data.
+  Both of these fixes/updates come from Eric Renfro.  Many thanks!
 
   01 Jan 2002; Nick Hadaway <raker@gentoo.org> openldap-2.0.27-r1.ebuild,
   openldap-2.1.10.ebuild, files/digest-openldap-2.0.27-r1,

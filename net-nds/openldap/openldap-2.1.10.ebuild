@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.10.ebuild,v 1.1 2003/01/01 22:02:35 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.10.ebuild,v 1.2 2003/01/02 11:13:09 raker Exp $
 
 IUSE="ssl tcpd readline ipv6 gdbm ldap sasl kerberos odbc"
 
@@ -86,6 +86,7 @@ src_compile() {
 		--enable-phonetic \
 		--enable-rewrite \
 		--enable-slp \
+		--enable-ldap \
 		--enable-meta \
 		--enable-monitor \
 		--enable-passwd \
@@ -109,8 +110,8 @@ src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
 	chmod ldap:ldap ${D}/etc/openldap/slapd.conf
-        dodir /var/state/openldap/openldap-ldbm
-        chmod ldap:ldap ${D}var/state/openldap/openldap-ldbm
+        dodir /var/lib/openldap-data
+        chmod ldap:ldap ${D}var/lib/openldap-data
 
 	dodoc ANNOUNCEMENT CHANGES COPYRIGHT README LICENSE
 	docinto rfc ; dodoc doc/rfc/*.txt
