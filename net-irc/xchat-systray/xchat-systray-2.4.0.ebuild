@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/xchat-systray-2.4.0.ebuild,v 1.5 2004/07/20 23:44:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/xchat-systray-2.4.0.ebuild,v 1.6 2004/07/24 00:41:15 swegener Exp $
 
 MY_P=${PN}-integration-${PV}
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://blight.altervista.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.0.3
