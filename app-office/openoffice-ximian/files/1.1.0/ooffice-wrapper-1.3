@@ -146,7 +146,7 @@ if [ -z "$OOHOME" ] ; then
       fi
 
       echo "running openoffice.org setup..."
-      if ! /opt/OpenOffice.org/program/setup ${UPDATEFLAG} -R:/etc/openoffice/autoresponse-<pv>.conf >& /dev/null; then
+      if ! /opt/Ximian-OpenOffice/program/setup ${UPDATEFLAG} -R:/etc/openoffice/autoresponse-<pv>.conf >& /dev/null; then
         echo "setup failed.. abort"
         exit 1
       fi
@@ -205,15 +205,15 @@ fi
 
 if [ ! -s $OOHOME/setup ]; then
 	echo "${OOHOME}/setup links to nothing, resetting link"
-	ln -sf /opt/OpenOffice.org/program/setup ${OOHOME}/setup
+	ln -sf /opt/Ximian-OpenOffice/program/setup ${OOHOME}/setup
 fi
 if [ ! -s $OOHOME/soffice ]; then
 	echo "${OOHOME}/soffice links to nothing, resetting link"
-	ln -sf /opt/OpenOffice.org/program/soffice ${OOHOME}/soffice
+	ln -sf /opt/Ximian-OpenOffice/program/soffice ${OOHOME}/soffice
 fi
 if [ ! -s $OOHOME/spadmin ]; then
 	echo "${OOHOME}/spadmin links to nothing, resetting link"
-	ln -sf /opt/OpenOffice.org/program/soffice ${OOHOME}/spadmin
+	ln -sf /opt/Ximian-OpenOffice/program/soffice ${OOHOME}/spadmin
 fi
 
 
