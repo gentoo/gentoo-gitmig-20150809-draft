@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colortail/colortail-0.3.0-r3.ebuild,v 1.10 2004/04/06 04:13:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colortail/colortail-0.3.0-r3.ebuild,v 1.11 2004/06/07 05:43:18 dragonheart Exp $
 
 inherit gcc eutils
 
@@ -10,6 +10,7 @@ SRC_URI="http://www.student.hk-r.se/~pt98jan/colortail-0.3.0.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 KEYWORDS="x86 ppc amd64"
 
 src_unpack() {
