@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/grustibus
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/grustibus/ChangeLog,v 1.5 2004/06/24 22:28:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/grustibus/ChangeLog,v 1.6 2004/09/18 11:46:47 mr_bones_ Exp $
+
+  18 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  grustibus-0.43-r4.ebuild:
+  patch from Roman 'gryf' Dobosz via bug #57004 to fix rom name after rebuild
 
   22 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   +files/0.43-crash.patch, grustibus-0.43-r4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/grustibus/grustibus-0.43-r4.ebuild,v 1.6 2004/06/24 22:28:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/grustibus/grustibus-0.43-r4.ebuild,v 1.7 2004/09/18 11:46:47 mr_bones_ Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch "${FILESDIR}/${PV}-crash.patch"
+	epatch "${FILESDIR}/${PV}-filename.patch" # bug #57004
 }
 
 src_compile() {
