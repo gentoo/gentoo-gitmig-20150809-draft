@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/bootsplash-themes-livecd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes-livecd/ChangeLog,v 1.1 2004/05/19 20:27:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes-livecd/ChangeLog,v 1.2 2004/05/20 21:17:48 wolf31o2 Exp $
+
+  20 May 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  bootsplash-themes-livecd-2004.0.ebuild,
+  bootsplash-themes-livecd-2004.1.ebuild:
+  Moving SRC_URI.
 
 *bootsplash-themes-livecd-2004.0 (19 May 2004)
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes-livecd/bootsplash-themes-livecd-2004.0.ebuild,v 1.1 2004/05/19 20:27:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes-livecd/bootsplash-themes-livecd-2004.0.ebuild,v 1.2 2004/05/20 21:17:48 wolf31o2 Exp $
 
 IUSE="livecd"
 S=${WORKDIR}/${PF}
 DESCRIPTION="Gentoo ${PV} theme for bootsplash consoles"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${PF}.tar.bz2
-	http://dev.gentoo.org/~wolf31o2/${PF}.tar.bz2"
+	http://dev.gentoo.org/~wolf31o2/livecd/${PF}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
