@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r3.ebuild,v 1.8 2003/03/24 21:15:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r3.ebuild,v 1.9 2003/03/25 06:02:52 method Exp $
 
 IUSE="selinux"
 
@@ -28,10 +28,7 @@ RDEPEND=">=sys-libs/pam-0.75-r4
 
 
 pkg_preinst() {
-	if [ -z "`use selinux`" ]
-	then 
-		rm -f ${ROOT}/etc/pam.d/system-auth.new
-	fi
+	rm -f ${ROOT}/etc/pam.d/system-auth.new
 }
 
 src_unpack() {
@@ -112,22 +109,19 @@ src_install() {
 # From sys-apps/pam-login now
 #	insopts -m0644 ; doins ${FILESDIR}/login.defs
 
-	if [ -z "`use selinux`" ]
-	then
-		insinto /etc/pam.d ; insopts -m0644
-		for x in ${FILESDIR}/pam.d/*
-		do
-			[ -f ${x} ] && doins ${x}
-		done
+	insinto /etc/pam.d ; insopts -m0644
+	for x in ${FILESDIR}/pam.d/*
+	do
+		[ -f ${x} ] && doins ${x}
+	done
 
-		cd ${FILESDIR}/pam.d
-		newins system-auth system-auth.new
-		newins shadow chage
-		newins shadow chsh
-		newins shadow chfn
-		newins shadow useradd
-		newins shadow groupadd
-	fi
+	cd ${FILESDIR}/pam.d
+	newins system-auth system-auth.new
+	newins shadow chage
+	newins shadow chsh
+	newins shadow chfn
+	newins shadow useradd
+	newins shadow groupadd
 	
 	cd ${S}
 	# The manpage install is beyond my comprehension, and
@@ -160,28 +154,25 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ -z "`use selinux`" ]
-	then	
-		local CHECK1="$(md5sum ${ROOT}/etc/pam.d/system-auth | cut -d ' ' -f 1)"
-		local CHECK2="$(md5sum ${ROOT}/etc/pam.d/system-auth.new | cut -d ' ' -f 1)"
+	local CHECK1="$(md5sum ${ROOT}/etc/pam.d/system-auth | cut -d ' ' -f 1)"
+	local CHECK2="$(md5sum ${ROOT}/etc/pam.d/system-auth.new | cut -d ' ' -f 1)"
 
-		if [ "${CHECK1}" != "${CHECK2}" -a "${FORCE_SYSTEMAUTH_UPDATE}" = "yes" ]
-		then
-			ewarn "Due to a security issue, ${ROOT}etc/pam.d/system-auth "
-			ewarn "is being updated automatically. Your old "
-			ewarn "system-auth will be backed up as:"
-			ewarn
-			ewarn "  ${ROOT}etc/pam.d/system-auth.bak"
-			echo
-		
-			cp -a ${ROOT}/etc/pam.d/system-auth \
-				${ROOT}/etc/pam.d/system-auth.bak;
-			mv -f ${ROOT}/etc/pam.d/system-auth.new \
-				${ROOT}/etc/pam.d/system-auth
-			rm -f ${ROOT}/etc/pam.d/._cfg????_system-auth
-		else
-			rm -f ${ROOT}/etc/pam.d/system-auth.new
-		fi
+	if [ "${CHECK1}" != "${CHECK2}" -a "${FORCE_SYSTEMAUTH_UPDATE}" = "yes" ]
+	then
+		ewarn "Due to a security issue, ${ROOT}etc/pam.d/system-auth "
+		ewarn "is being updated automatically. Your old "
+		ewarn "system-auth will be backed up as:"
+		ewarn
+		ewarn "  ${ROOT}etc/pam.d/system-auth.bak"
+		echo
+	
+		cp -a ${ROOT}/etc/pam.d/system-auth \
+			${ROOT}/etc/pam.d/system-auth.bak;
+		mv -f ${ROOT}/etc/pam.d/system-auth.new \
+			${ROOT}/etc/pam.d/system-auth
+		rm -f ${ROOT}/etc/pam.d/._cfg????_system-auth
+	else
+		rm -f ${ROOT}/etc/pam.d/system-auth.new
 	fi
 }
 
