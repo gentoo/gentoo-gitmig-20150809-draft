@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/time
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/time/ChangeLog,v 1.5 2004/06/24 23:23:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/time/ChangeLog,v 1.6 2004/11/01 20:44:36 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  time-1.12.ebuild:
+  Marked ~ppc64; bug #67095
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> time-1.12.ebuild:
   Stable on alpha
