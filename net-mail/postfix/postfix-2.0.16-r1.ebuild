@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.16-r1.ebuild,v 1.6 2003/11/08 00:15:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.16-r1.ebuild,v 1.7 2003/11/08 08:53:53 max Exp $
 
 inherit eutils ssl-cert
 
@@ -192,12 +192,15 @@ src_install () {
 		dosym /etc/sasl2/smtpd.conf /usr/lib/sasl2/smtpd.conf
 	fi
 
-	SPOOLDIR=/var/spool/postfix
-	keepdir ${SPOOLDIR}/{pid,hold,corrupt,defer,flush,maildrop,active,bounce}
-	keepdir ${SPOOLDIR}/{deferred,public,incoming,private}
+	keepdir /var/spool/postfix
 }
 
 pkg_postinst() {
+	ebegin "Running postfix check"
+	"${ROOT}/usr/sbin/postfix" check
+	eend $?
+	echo
+
 	ewarn "If you upgraded from postfix-1.x, you must revisit"
 	ewarn "your configuration files.  See"
 	ewarn "  /usr/share/doc/${PF}/RELEASE_NOTES"

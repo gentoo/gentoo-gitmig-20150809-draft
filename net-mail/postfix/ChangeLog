@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.94 2003/11/08 00:15:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.95 2003/11/08 08:53:53 max Exp $
+
+  08 Nov 2003; <max@gentoo.org> postfix-2.0.16-r1.ebuild:
+  Properly fix spool after merging. Fixes bug 31797.
 
   07 Nov 2003; Seemant Kulleen <seemant@gentoo.org> postfix-2.0.16-r1.ebuild:
   keepdir to keep the subdirs in /var/spool/postfix
