@@ -1,8 +1,13 @@
 # ChangeLog for sys-apps/quota
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/ChangeLog,v 1.10 2002/12/13 11:00:33 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/ChangeLog,v 1.11 2003/01/06 04:52:07 seemant Exp $
 
 *quota-3.06 (9 Dec 2002)
+
+  05 Jan 2003; Seemant Kulleen <seemant@gentoo.org> quota-3.06-r1.ebuild :
+
+  NLS bloat reduction.  The upstream configure script needs to take care of
+  that, though :/
 
   9 Dec 2002; Joachim Blaabjerg <styx@gentoo.org> quota-3.06-r1.ebuild :
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/quota-3.06-r1.ebuild,v 1.1 2002/12/10 17:49:41 styx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/quota-3.06-r1.ebuild,v 1.2 2003/01/06 04:52:07 seemant Exp $
+
+IUSE="nls"
 
 S=${WORKDIR}/quota-tools
 DESCRIPTION="Linux quota tools"
@@ -13,11 +15,6 @@ KEYWORDS="~x86 ~ppc ~sparc "
 
 DEPEND="virtual/glibc"
 
-src_compile() {
-	econf || die "./configure failed"
-	emake || die
-}
-
 src_install() {
 	dodir {sbin,etc,usr/sbin,usr/bin,usr/share/man/man{1,2,3,8}}
 	make ROOTDIR=${D} install || die
@@ -29,4 +26,7 @@ src_install() {
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/quota.rc quota
+
+	# NLS bloat reduction
+	use nls || rm -rf ${D}/usr/share/locale
 }
