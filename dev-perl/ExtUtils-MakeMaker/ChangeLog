@@ -1,11 +1,18 @@
 # ChangeLog for dev-perl/ExtUtils-MakeMaker
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.5 2002/10/13 11:25:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ChangeLog,v 1.6 2002/10/23 22:42:41 seemant Exp $
+
+*ExtUtils-MakeMake-6.05-r1 (22 Oct 2002)
+
+  23 Oct 2002; Seemant Kulleen <seemant@gentoo.org>
+  ExtUtils-MakeMaker-6.05-r1.ebuild files/digest-ExtUtils-MakeMaker-6.05 :
+
+  Version bump to force a remerge and fix a lot of dev-perl issues.
 
 *ExtUtils-MakeMaker-6.05 (13 Oct 2002)
 
-  13 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ExtUtils-MakeMaker-6.05
-  files/digest-ExtUtils-MakeMaker-6.05 :
+  13 Oct 2002; Seemant Kulleen <seemant@gentoo.org>
+  ExtUtils-MakeMaker-6.05.ebuild files/digest-ExtUtils-MakeMaker-6.05 :
 
   Version bump thanks to: wongs15@tartarus.uwa.edu.au (Steven Wong) in bug
   #8980.
