@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha3.ebuild,v 1.2 2004/03/22 21:06:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha3.ebuild,v 1.3 2004/04/10 21:33:22 lanius Exp $
 
 IUSE="static"
 
@@ -13,12 +13,12 @@ HOMEPAGE="http://www.opera.com/linux/"
 
 # that's an ugly workaround for the broken src_uri syntax
 SRC_URI="
-	x86? ( static? ( http://snapshot.opera.com/unix/7.50-Preview-3/intel-linux/en/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
-	x86? ( !static? ( http://snapshot.opera.com/unix/7.50-Preview-3/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
-	ppc? ( static? ( http://snapshot.opera.com/unix/7.50-Preview-3/ppc-linux/en/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 ) )
-	ppc? ( !static? ( http://snapshot.opera.com/unix/7.50-Preview-3/ppc-linux/en/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 ) )
-	sparc? ( static? ( http://snapshot.opera.com/unix/7.50-Preview-3/sparc-linux/en/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 )  )
-	sparc? ( !static? ( http://snapshot.opera.com/unix/7.50-Preview-3/sparc-linux/en/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )"
+	x86? ( !static? ( http://snapshot.opera.com/unix/7.50-Preview-3/intel-linux/en/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
+	x86? ( static? ( http://snapshot.opera.com/unix/7.50-Preview-3/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
+	ppc? ( !static? ( http://snapshot.opera.com/unix/7.50-Preview-3/ppc-linux/en/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 ) )
+	ppc? ( static? ( http://snapshot.opera.com/unix/7.50-Preview-3/ppc-linux/en/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 ) )
+	sparc? ( !static? ( http://snapshot.opera.com/unix/7.50-Preview-3/sparc-linux/en/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 )  )
+	sparc? ( static? ( http://snapshot.opera.com/unix/7.50-Preview-3/sparc-linux/en/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )"
 
 # Dependencies may be augmented later (see below).
 DEPEND=">=sys-apps/sed-4"
