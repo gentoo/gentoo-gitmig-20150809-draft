@@ -31,7 +31,8 @@ DEPEND=">=x11-libs/gtk+-2.0.6
 
 src_install() {
 	dodir /etc/X11/Sessions
-	echo startxfce4 > /etc/X11/Sessions/XFCE-4
+	echo startxfce4 > ${D}/etc/X11/Sessions/XFCE-4
+	chmod +755 ${D}/etc/X11/Sessions/XFCE-4
 	
 	einfo "This is just a wrapper script to install all the components of Xfce4"
 	einfo "Use startxfce4 to initialize. You also might want to emerge the extras"
