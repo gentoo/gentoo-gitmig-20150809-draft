@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/acct
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acct/ChangeLog,v 1.4 2004/06/11 12:23:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acct/ChangeLog,v 1.5 2004/06/14 07:51:59 mr_bones_ Exp $
+
+  14 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> acct-6.3.5.ebuild:
+  inherit eutils; use epatch; error check; tidy
 
   11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> acct-6.3.5.ebuild:
   Stable on alpha.
