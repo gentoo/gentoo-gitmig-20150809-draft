@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-2.0.3a.ebuild,v 1.4 2004/07/02 08:33:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-2.0.3c.ebuild,v 1.1 2004/07/07 15:24:34 mholzer Exp $
 
 IUSE="doc"
 
@@ -8,8 +8,8 @@ MY_P_DOCS=${P/${PN}/${PN}-docs-html}
 
 DESCRIPTION="Full state iptables firewall"
 HOMEPAGE="http://www.shorewall.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tgz
-	doc? ( mirror://sourceforge/${PN}/${MY_P_DOCS}.tgz )"
+SRC_URI="http://shorewall.net/pub/${PN}/2.0/${P}/${P}.tgz
+	doc? ( http://shorewall.net/pub/${PN}/2.0/${P}/${MY_P_DOCS}.tgz )"
 
 LICENSE="GPL-2"
 SLOT="0"
