@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre15.ebuild,v 1.15 2004/10/03 10:17:44 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre15.ebuild,v 1.16 2004/10/17 12:44:50 absinthe Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="${HOMEPAGE}/download/${MYP}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha ~amd64 hppa ia64 ~mips ppc ppc64 ppc-macos s390 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 ppc-macos s390 sparc x86"
 IUSE="directfb ssl javascript png X gpm tiff fbcon svga jpeg unicode"
 
 # Note: if X or fbcon usegflag are enabled, links will be built in graphic
