@@ -1,19 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/pms-0.94.ebuild,v 1.3 2003/09/05 12:14:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/pms-0.94.ebuild,v 1.4 2003/10/08 03:50:39 hillster Exp $
 
 S=${WORKDIR}/${P}
 IUSE="ncurses"
-DESCRIPTION="Passwort Management System"
+DESCRIPTION="Password Management System"
 SRC_URI="mirror://sourceforge/passwordms/${P}.tar.gz"
 HOMEPAGE="http://passwordms.sourceforge.net/"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 SLOT="0"
 
 DEPEND="sys-libs/ncurses
-		dev-libs/cdk"
+	dev-libs/cdk"
 
 RDEPEND=""
 
@@ -36,8 +36,8 @@ src_install() {
 	install ${S}/bin/pms_import ${D}/usr/bin && \
 	install ${S}/bin/pms_passwd ${D}/usr/bin || die
 
-	dodoc AUTHORS COPYING ChangeLog \
-		README TODO
+	dodoc AUTHORS BUGS COPYING ChangeLog \
+	NOTES README TODO CONFIGURE.problems
 }
 
 

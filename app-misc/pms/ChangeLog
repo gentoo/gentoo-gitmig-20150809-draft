@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/ChangeLog,v 1.1 2003/06/16 16:36:20 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/ChangeLog,v 1.2 2003/10/08 03:50:39 hillster Exp $
+
+  07 Oct 2003; Joel Hill <hillster@gentoo.org> pms-0.94.ebuild:
+  cleanup added docs, marking stable.
 
 *pms-0.94 (16 Jul 2003)
 
