@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/openslp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.1 2002/02/01 21:53:34 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.2 2002/04/27 23:59:10 seemant Exp $
+
+*openslp-1.0.8a (27 Apr 2002)
+
+  27 Apr 2002; Seemant Kulleen <seemant@gentoo.org> openslp-1.0.8a.ebuild
+  files/digest-openslp-1.0.8a :
+
+  Thanks to lotia@umich.edu (ali asad lotia) in bug #1508 for the version bump.
 
 *openslp-1.0.4 (1 Feb 2002)
 
