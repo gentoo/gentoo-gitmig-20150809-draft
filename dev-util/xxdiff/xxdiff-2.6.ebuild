@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-2.6.ebuild,v 1.10 2004/06/25 02:51:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-2.6.ebuild,v 1.11 2004/07/15 00:15:05 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A graphical file comparator and merge tool simular to xdiff."
 SRC_URI="mirror://sourceforge/xxdiff/${P}.tar.gz"
 RESTRICT="nomirror"
@@ -17,6 +16,7 @@ RDEPEND="=x11-libs/qt-3*
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
+IUSE=""
 
 src_compile() {
 	cd src

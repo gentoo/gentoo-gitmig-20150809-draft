@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.0.2.ebuild,v 1.9 2004/06/25 02:51:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.0.2.ebuild,v 1.10 2004/07/15 00:15:05 agriffis Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_compile() {
 	### borrowed from kde.eclass #
 	#
 	# fix the sandbox errors "can't writ to .kde or .qt" problems.
-	# this is a fake homedir that is writeable under the sandbox, so that the build 
+	# this is a fake homedir that is writeable under the sandbox, so that the build
 	# process can do anything it wants with it.
 	REALHOME="$HOME"
 	mkdir -p $T/fakehome/.kde
