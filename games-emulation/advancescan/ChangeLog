@@ -1,0 +1,10 @@
+# ChangeLog for games-emulation/advancescan
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancescan/ChangeLog,v 1.1 2005/03/25 07:26:30 mr_bones_ Exp $
+
+*advancescan-1.13 (25 Mar 2005)
+
+  25 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +advancescan-1.13.ebuild:
+  initial commit for bug #68430
+
