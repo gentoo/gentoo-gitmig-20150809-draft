@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/open-cobol
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/open-cobol/ChangeLog,v 1.1 2003/06/19 22:21:24 george Exp $
+
+*open-cobol-0.23.ebuild (19 Jun 2003)
+
+  19 Jun 2003; George Shapovalov <george@gentoo.org> Manifest, open-cobol-0.23.ebuild, files/{digest-open-cobol-0.23} :
+  initial release (#21481)
+  an open-source COBOL compiler
+  ebuild submitted by MATSUU Takuto <matsuu@7501.net>
