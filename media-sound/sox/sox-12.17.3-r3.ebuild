@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.3-r3.ebuild,v 1.3 2003/02/28 16:54:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.3-r3.ebuild,v 1.4 2003/08/04 05:51:09 phosphan Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
-SRC_URI="http://download.sourceforge.net/sox/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/sox/${P}.tar.gz"
 
 KEYWORDS="x86 ppc alpha ~sparc "
 SLOT="0"
