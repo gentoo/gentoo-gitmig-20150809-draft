@@ -1,8 +1,18 @@
-MD5 c06d579bf98efff8535e2c1df5205e01 ChangeLog 1125
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e20d56b930db03abbbe76cb560a06127 ChangeLog 1255
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 aca0046865c4f5b12636bb3823cdac2e soappy-0.11.1.ebuild 526
 MD5 69509085eddbf3dfb3ff58d431b0367e soappy-0.11.3.ebuild 537
-MD5 4d9944318baa305c8d247c53e0d318dc soappy-0.11.6.ebuild 557
+MD5 da39a41e5bd213bfbf63b46eb89f95d1 soappy-0.11.6.ebuild 564
 MD5 b3c3125f10348493294bd561f0d28542 files/digest-soappy-0.11.1 65
 MD5 2e07cf786d5fa22da74c2127424c16d7 files/digest-soappy-0.11.3 65
 MD5 e4577572885eab20f84ad6e658781681 files/digest-soappy-0.11.6 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCDlqYxtZcznfol0URAnl6AKDJAHpsWa6UZQN9PX3ToMJRsGOmTACfR/hP
+vWCe17mfqKurGq4oXEIkFVI=
+=w4LG
+-----END PGP SIGNATURE-----
