@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdsp/libdsp-4.9.2-r1.ebuild,v 1.1 2004/08/19 23:01:08 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdsp/libdsp-4.9.2-r1.ebuild,v 1.2 2004/09/01 17:09:51 eradicator Exp $
 
 IUSE="doc"
 
@@ -13,7 +13,9 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+
+# -amd64, -sparc: 4.9.2-r1 - uses x86 assembly
+KEYWORDS="x86 -amd64 -sparc"
 DEPEND=""
 
 S=${WORKDIR}/${PN}-src-${PV}
