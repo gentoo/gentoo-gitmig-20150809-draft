@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a15ce3f0960838099fb56763ec96f86e ChangeLog 3444
+MD5 5ffcf20cef9da8e87db3dc25fbc376b7 ChangeLog 3546
 MD5 f818bddc99102fa67ab0e08935f68a80 taglist-3.1.ebuild 594
 MD5 5658c0a7ebee470fc9ae940bb56f9f60 taglist-3.0.ebuild 587
 MD5 f0367c61e238ddd6f5e0e96ad3bee517 taglist-3.4.ebuild 500
-MD5 42058f08b2df9330dcf5a02d43ff7869 taglist-3.4-r1.ebuild 589
+MD5 7cc4b8ab1ccbb987845b35c48958584c taglist-3.4-r1.ebuild 586
 MD5 57828d81f2e6715d7aca657b7b960db7 taglist-3.3.ebuild 456
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 44d075a7ec8dc46d21f7550cad8ea910 taglist-3.2.ebuild 603
@@ -20,7 +20,7 @@ MD5 a8c9972ab8a6aa542e7f995c49677047 files/digest-taglist-3.2 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBXfEgLLFUmVNQ7rkRAps+AJsEEpjRH59KN17epv9CdLK8JKF/CgCfQFgc
-qKCJzpv4DLXOEpgH+fUKYRM=
-=W+66
+iD8DBQFBZXE1LLFUmVNQ7rkRAqBWAKC+LFAdePvWrsAoJ6YpwHjJQQ48YgCfc8D0
+3JCrM+9pl4C7+ASAfrJP2Fw=
+=qN1H
 -----END PGP SIGNATURE-----
