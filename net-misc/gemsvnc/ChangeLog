@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gemsvnc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gemsvnc/ChangeLog,v 1.6 2004/06/24 23:45:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gemsvnc/ChangeLog,v 1.7 2004/08/11 22:45:12 slarti Exp $
+
+  11 Aug 2004; Tom Martin <slarti@gentoo.org> gemsvnc-2-r1.ebuild:
+  Marked ~amd64; resolves bug 56982. Thanks to Luke-Jr
+  <lukejr+gentoobugs@benedictine.edu> for reporting.
 
 *gemsvnc-2-r1 (28 Mar 2004)
 
