@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.7 2004/11/23 20:07:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.8 2004/12/01 21:29:25 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -51,6 +51,12 @@ apply_binutils_updates() {
 
 	[ -n "${PATCHVER}" ] && epatch ${WORKDIR}/patch
 	[ -n "${UCLIBC_PATCHVER}" ] && epatch ${WORKDIR}/uclibc-patches
+
+	# Fix po Makefile generators
+	sed -i \
+		-e '/^datadir = /s:$(prefix)/@DATADIRNAME@:@datadir@:' \
+		-e '/^gnulocaledir = /s:$(prefix)/share:$(datadir):' \
+		*/po/Make-in || die "sed po's failed"
 
 	# Run misc portage update scripts
 	gnuconfig_update
@@ -129,8 +135,10 @@ toolchain-binutils_src_install() {
 		insinto ${INCPATH}
 		doins "${S}/include/libiberty.h"
 	fi
-	mv "${D}"/${LIBPATH}/lib/* "${D}"/${LIBPATH}/
-	rm -r "${D}"/${LIBPATH}/lib
+	if [ -d "${D}"/${LIBPATH}/lib ] ; then
+		mv "${D}"/${LIBPATH}/lib/* "${D}"/${LIBPATH}/
+		rm -r "${D}"/${LIBPATH}/lib
+	fi
 
 	# Now we generate all the standard links to binaries ...
 	# if this is a native package, we install the basic symlinks (ld,nm,as,etc...)
