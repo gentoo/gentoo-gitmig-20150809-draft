@@ -3,7 +3,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author  Martin Schlemmer <azarah@gentoo.org>
 # Credits  To all those I got ideas from :)
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/2.4.1-r6/net.ppp0,v 1.3 2001/11/11 20:13:44 azarah Exp $
+# /home/cvsroot/gentoo-x86/net-dialup/ppp/files/2.4.1-r6/net.ppp0,v 1.1 2001/11/11 19:47:03 azarah Exp
 
 PEER="isp"			# Define peer (aka ISP)
 DEBUG="no"			# Turn on debugging
@@ -103,6 +103,7 @@ stop() {
 	ebegin "Bringing ${DEVICE} down"
 	if [ -x "`which ifconfig`" ]; then
 		/sbin/ifconfig ${DEVICE} down
+		kill "`cat /var/run/ppp-${DEVICE}.pid`"
 	fi
 	eend
 }
@@ -151,7 +152,7 @@ setup_cmd_line() {
 		CMD_LINE="${CMD_LINE} mtu ${MTU}"
 	fi
 	    
-	if [ -n "${PAPNAME}" ] ; then
+	if [ -n "${USERNAME}" ] ; then
 		CMD_LINE="${CMD_LINE} user ${USERNAME} remotename ${PEER}"
 	fi
 
@@ -180,27 +181,33 @@ setup_cfg_files() {
 			/usr/lib/ppp/chat-default \
 			>/etc/ppp/chat-${PEER}
 
+		# Setup the ip-scripts so long
+		echo '#!/bin/bash' >/etc/ppp/ip-up
+		echo '' >>/etc/ppp/ip-up
+		chmod 770 /etc/ppp/ip-up
+		echo '#!/bin/bash' >/etc/ppp/ip-down
+		echo '' >>/etc/ppp/ip-down
+		chmod 770 /etc/ppp/ip-down
+
 		# Setup if-up and if-down
 		if [ -x ${FWSCRIPT} ] ; then
 		
-			echo "${FWSCRIPT} \${6} start" >/etc/ppp/if-up
-			chmod 770 /etc/ppp/if-up
-			echo "${FWSCRIPT} \${6} stop" >/etc/ppp/if-down
-			chmod 770 /etc/ppp/if-down
+			echo "${FWSCRIPT} \${6} start" >>/etc/ppp/ip-up
+			echo "${FWSCRIPT} \${6} stop" >>/etc/ppp/ip-down
+		fi
 
-			if [ "${PEERDNS}" = "yes" ] ; then
+		if [ "${PEERDNS}" = "yes" ] ; then
 			
-				# if-up: add the server supplied DNS entries to
-				# /etc/resolv.conf
-				echo "cp -f /etc/resolv.conf /etc/resolv.conf.old" \
-					>>/etc/ppp/if-up
-				echo "cat /etc/ppp/resolv.conf >> /etc/resolv.conf" \
-					>>/etc/ppp/if-up
-					
-				# if-down: restore original /etc/resolv.conf
-				echo "mv -f /etc/resolv.conf.old /etc/resolv.conf" \
-					>>/etc/ppp/if-down 
-			fi
+			# ip-up: add the server supplied DNS entries to
+			# /etc/resolv.conf
+			echo "cp -f /etc/resolv.conf /etc/resolv.conf.old" \
+				>>/etc/ppp/ip-up
+			echo "cat /etc/ppp/resolv.conf >> /etc/resolv.conf" \
+				>>/etc/ppp/ip-up
+				
+			# ip-down: restore original /etc/resolv.conf
+			echo "mv -f /etc/resolv.conf.old /etc/resolv.conf" \
+				>>/etc/ppp/ip-down 
 		fi
 	fi
 }
