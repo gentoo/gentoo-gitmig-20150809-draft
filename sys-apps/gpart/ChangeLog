@@ -1,6 +1,6 @@
-# ChangeLog for sys-app/gpart
+# ChangeLog for sys-apps/gpart
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gpart/ChangeLog,v 1.4 2003/06/27 13:42:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gpart/ChangeLog,v 1.5 2003/07/11 15:54:17 vapier Exp $
 
 *gpart-0.1h (09 Feb 2003)
 
