@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.78 2003/07/31 02:55:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.79 2003/07/31 07:41:21 pauldv Exp $
 
 qt-3.2.0 (30 Jul 2003)
+
+  31 Jul 2003; <paul@gentoo.org> qt-3.2.0.ebuild:
+  Add a block on <kde-3.2 as kde-3.1 and kde-3.0 are broken with qt-3.2
 
   30 Jul 2003; Caleb Tennis <caleb@gentoo.org>:
   Add qt-3.2.0, but it's staying masked for a little while longer.
