@@ -1,0 +1,10 @@
+# ChangeLog for media-video/lumiere
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.1 2003/04/13 20:57:16 mholzer Exp $
+
+*vdr-1.1.27 (13 Apr 2003)
+
+  13 Apr 2003; Martin Holzer <mholzer@gentoo.org> vdr-1.1.27.ebuild,
+  files/vdr-1.1.27-gentoo.diff files/digest-vdr-1.1.27 ChangeLog:
+
+  Initial ebuild by myself.
