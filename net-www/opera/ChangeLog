@@ -1,6 +1,11 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.91 2005/02/09 15:18:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.92 2005/02/14 12:29:39 lanius Exp $
+
+*opera-7.54-r3 (14 Feb 2005)
+
+  14 Feb 2005; Heinrich Wendel <lanius@gentoo.org> +opera-7.54-r3.ebuild:
+  fix plugin search path; bug #81747; stable on all previous arches
 
   09 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> opera-7.54-r2.ebuild:
   Stable on sparc wrt #73871
