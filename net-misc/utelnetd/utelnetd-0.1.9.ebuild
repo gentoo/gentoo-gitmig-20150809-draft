@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/utelnetd/utelnetd-0.1.9.ebuild,v 1.5 2004/07/15 03:42:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/utelnetd/utelnetd-0.1.9.ebuild,v 1.6 2004/10/29 13:26:45 matsuu Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="A small Telnet daemon, derived from the Axis tools"
 HOMEPAGE="http://www.pengutronix.de/software/utelnetd_en.html"
@@ -14,7 +16,7 @@ IUSE=""
 DEPEND="virtual/libc"
 
 src_compile() {
-	emake CC="${CC}" || die
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/utelnetd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/utelnetd/ChangeLog,v 1.4 2004/07/01 22:09:19 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/utelnetd/ChangeLog,v 1.5 2004/10/29 13:26:45 matsuu Exp $
+
+  29 Oct 2004; MATSUU Takuto <matsuu@gentoo.org> utelnetd-0.1.9.ebuild:
+  Fixed CC usage to use new toolchain-funcs.eclass. bug 69278.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> utelnetd-0.1.9.ebuild:
   change virtual/glibc to virtual/libc

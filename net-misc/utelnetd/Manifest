@@ -1,5 +1,5 @@
-MD5 04e16b3fbdba95b5b6d73259f9066f90 utelnetd-0.1.9.ebuild 692
-MD5 cc64797da36df0f2c8dede6f33eacd0a ChangeLog 541
+MD5 e34d6210c106a35b6475508f45f67b01 utelnetd-0.1.9.ebuild 721
+MD5 15dc02968dc280aa2cdd1af523a790fe ChangeLog 674
 MD5 7d953237baf36020d41bb64e1527b03a metadata.xml 339
 MD5 217a51497aaa289b6108836ed967b298 files/utelnetd.initd 463
 MD5 6c1972c3a4aca49cd5fc0e6a9e879aa0 files/digest-utelnetd-0.1.9 65
