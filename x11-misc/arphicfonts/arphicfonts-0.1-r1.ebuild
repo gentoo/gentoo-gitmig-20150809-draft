@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.4 2002/11/06 15:45:31 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/arphicfonts/arphicfonts-0.1-r1.ebuild,v 1.5 2002/11/12 07:21:33 vapier Exp $
 
 DESCRIPTION="Arphic Fonts"
 SRC_URI="ftp://ftp.gnu.org/non-gnu/chinese-fonts-truetype/gkai00mp.ttf.gz
@@ -8,17 +8,17 @@ SRC_URI="ftp://ftp.gnu.org/non-gnu/chinese-fonts-truetype/gkai00mp.ttf.gz
 	 ftp://ftp.gnu.org/non-gnu/chinese-fonts-truetype/bsmi00lp.ttf.gz
 	 ftp://ftp.gnu.org/non-gnu/chinese-fonts-truetype/gbsn00lp.ttf.gz"
 HOMEPAGE="http://www.arphic.com.tw/"
+
 LICENSE="Arphic"
 SLOT="0"
 KEYWORDS="x86"
-S=${WORKDIR}
 
 DEPEND="virtual/x11
 	x11-misc/ttmkfdir"
-RDEPEND=${DEPEND}
+
+S="${WORKDIR}"
 
 src_install() {
-	cd ${S}
 	insopts -m0644
 	insinto /usr/share/fonts/ttf/zh_TW
 	doins b*.ttf
