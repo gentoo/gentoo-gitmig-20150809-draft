@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/qmail-scanner
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.7 2004/08/16 04:53:41 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.8 2004/08/17 13:33:02 agriffis Exp $
+
+  17 Aug 2004; Aron Griffis <agriffis@gentoo.org>
+  qmail-scanner-1.22-r1.ebuild, qmail-scanner-1.23-r1.ebuild:
+  Fix USE-flag usage in DEPEND. Should be spamassassin? instead of plain
+  spamassassin
 
 *qmail-scanner-1.23-r1 (16 Aug 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.23-r1.ebuild,v 1.1 2004/08/16 04:53:41 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.23-r1.ebuild,v 1.2 2004/08/17 13:33:02 agriffis Exp $
 
 inherit fixheadtails gcc eutils
 
@@ -27,7 +27,7 @@ DEPEND=">=dev-lang/perl-5.6.1-r1
 	)
 	>=app-arch/unzip-5.42-r1
 	virtual/antivirus
-	spamassassin ( >=mail-filter/spamassassin-2.64 )"
+	spamassassin? ( >=mail-filter/spamassassin-2.64 )"
 
 pkg_setup() {
 	enewgroup qscand 210
