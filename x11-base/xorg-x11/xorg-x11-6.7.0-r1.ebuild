@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.19 2004/06/30 15:02:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.20 2004/07/05 22:34:32 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -8,18 +8,19 @@
 # libxkbfile.so, libxkbui.so
 
 # TODO
-# 23 June 2004 <spyderous@gentoo.org>
-#   TARGET: 1.2
-#		spy: #48095 -- add S3 support for laptop suspend
-#		spy: #49155 -- updated keymap for french-belgian azerty
+# 05 July 2004 <spyderous@gentoo.org>
+#   TARGET: 1.1.1
 #		spy: #50562 -- add SDK/pie compat patch
-#		spy: #54132 -- config tools still add old font paths
+#		spy: #54132 -- xorgconfig still adds old font paths
 # 		spy: #38232 -- move 4152_all_4.3.0-allow-xdm-server-quotes.patch over
 #			from xfree-4.3.0-r7
+# 		spy: #21120 -- sun type6 kbd patch ported from xfree 4.3.0
+#   TARGET: 1.2 (6.7.0-r2)
+#		spy: #48095 -- add S3 support for laptop suspend
+#		spy: #49155 -- updated keymap for french-belgian azerty
 #		spy: Move 9000_all_4.3.0-lnx-evdev-core.patch,
 #			9001_all_4.3.0-lnx-evdev-keyboard.patch and
 #			9002_all_4.3.0-lnx-evdev-mouse.patch over from xfree-4.3.0-r7
-# 		spy: #21120 -- sun type6 kbd needs to be ported (by eradicator)
 # 		tseng: Update hardened patches
 # 			-Also see fd.o bug #296, it's been integrated
 #			-Follow fd.o 'debrix' work
