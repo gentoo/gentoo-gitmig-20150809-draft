@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.8-r1.ebuild,v 1.4 2004/05/04 04:05:26 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.8-r1.ebuild,v 1.5 2004/05/29 20:47:37 lv Exp $
 
 inherit eutils
 
@@ -39,6 +39,7 @@ src_compile() {
 		`use_enable nls` \
 		`use_enable debug` \
 		`use_enable static all-static` \
+		--disable-Werror \
 		--target=${CHOST} ${myconf} || die "Configure failed"
 	emake || die "Make failed"
 }
