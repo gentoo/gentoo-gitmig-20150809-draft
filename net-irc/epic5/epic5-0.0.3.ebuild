@@ -1,9 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-0.0.2.ebuild,v 1.2 2004/06/24 23:04:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-0.0.3.ebuild,v 1.1 2005/02/17 03:34:43 swegener Exp $
 
 inherit eutils
-
 
 DESCRIPTION="Epic5 IRC Client"
 SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC5-ALPHA/${P}.tar.bz2"
@@ -24,7 +23,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/epic-defaultserver.patch
-	epatch ${FILESDIR}/${PV}-segfault-fix.patch
+	epatch ${FILESDIR}/${PV}-ipv6-fix.patch
 
 	sed -i \
 		-e 's:/include/tcl$ver:/include:' \
@@ -35,11 +34,11 @@ src_unpack() {
 src_compile() {
 	econf \
 		--libexecdir=/usr/lib/misc \
-		`use_with ipv6` \
-		`use_with perl` \
-		`use_with ssl` \
-		`use_with tcltk tcl` \
-		`use_with socks5` \
+		$(use_with ipv6) \
+		$(use_with perl) \
+		$(use_with ssl) \
+		$(use_with tcltk tcl) \
+		$(use_with socks5) \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
@@ -53,8 +52,9 @@ src_install () {
 
 	dodoc BUG_FORM COPYRIGHT README KNOWNBUGS VOTES
 
-	cd doc
+	cd ${S}/doc
 	docinto doc
-	dodoc *.txt colors EPIC* IRCII_VERSIONS local_vars missing new-load
-	dodoc nicknames outputhelp SILLINESS TS4
+	dodoc \
+		*.txt colors EPIC* IRCII_VERSIONS local_vars missing new-load \
+		nicknames outputhelp SILLINESS TS4
 }
