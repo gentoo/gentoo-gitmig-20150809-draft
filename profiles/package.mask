@@ -813,3 +813,9 @@ app-arch/gnorpm
 # masked because there are two ebuilds in two different categories
 =app-crypt/vtun-2.5
 =net-misc/vtun-2.5
+
+
+# spider@gentoo.org 27 May 2002
+# Masked because it doesnt work properly
+# and because I'm not inclined to break that many users systems. see bug #3065
+x11-libs/gdkxft
