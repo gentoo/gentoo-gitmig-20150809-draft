@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.45 2004/07/29 06:29:15 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.46 2004/08/03 02:51:20 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -527,7 +527,7 @@ php-sapi_src_install() {
 	mv ${D}/usr/bin/php-config ${D}/usr/bin/php-config.${PN}
 	# these files are provided solely by the PHP provider ebuild
 	php-sapi_is_providerbuild && dosym /usr/bin/php-config.${PN} /usr/bin/php-config
-	php-sapi_is_providerbuild || rm -rf ${D}/usr/bin/{phpize,phpextdist} ${D}/usr/lib/php/build
+	php-sapi_is_providerbuild || rm -rf ${D}/usr/bin/{phpize,phpextdist} ${D}/usr/lib/php/build ${D}/usr/bin/php
 
 	# get the extension dir
 	PHPEXTDIR="`${D}/usr/bin/php-config.${PN} --extension-dir`"

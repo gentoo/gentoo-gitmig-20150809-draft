@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.10 2004/07/28 07:40:32 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.11 2004/08/03 02:51:20 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -23,10 +23,9 @@ HOMEPAGE="http://www.php.net/"
 LICENSE="PHP"
 SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzlib calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbmaker dbx dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg ldap libedit mcve memlimit mhash mime ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session shared sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc zlib"
+IUSE="${IUSE} adabas bcmath berkdb birdstep bzlib calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbm dbmaker dbx dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg ldap libedit mcve memlimit mhash mime ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session shared sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc xpm zlib"
 
 # these USE flags should have the correct dependencies
-
 DEPEND="$DEPEND
 	!<=dev-php/php-4.99.99
 	berkdb? ( =sys-libs/db-4* )
@@ -66,10 +65,13 @@ DEPEND="$DEPEND
 	tiff? ( media-libs/tiff )
 	truetype? ( media-libs/freetype >=media-libs/t1lib-5.0.0 )
 	wddx? ( dev-libs/expat )
-	xml2? ( dev-libs/libxml2 )
 	xpm? ( virtual/x11 )
 	xsl? ( dev-libs/libxslt )
 	zlib? ( sys-libs/zlib )"
+
+# this would be xml2? 
+DEPEND="$DEPEND
+		dev-libs/libxml2"
 
 # ========================================================================
 
@@ -143,7 +145,7 @@ php5-sapi_check_awkward_uses () {
 	fi
 
 	if useq dbx ; then
-		confutils_use_depend_any "dbx" "frontbase" "mssql" "odbc" "postgresql" "sybase-ct" "oci8" "sqlite"
+		confutils_use_depend_any "dbx" "frontbase" "mssql" "odbc" "postgres" "sybase-ct" "oci8" "sqlite"
 		enable_extension_enable		"dbx"			"dbx"			1
 	fi
 
@@ -159,7 +161,7 @@ php5-sapi_check_awkward_uses () {
 		enable_extension_with 	"jpeg-dir" 		"jpeg" 		0 "/usr"
 		enable_extension_with 	"png-dir" 		"png" 		0 "/usr"
 		enable_extension_with 	"tiff-dir" 		"tiff" 		0 "/usr"
-		enable_extension_with 	"xpm-dir" 		"x11" 		0 "/usr/X11R6/lib"
+		enable_extension_with 	"xpm-dir" 		"xpm" 		0 "/usr/X11R6/lib"
 		# enable gd last, so configure can pick up the previous settings
 		enable_extension_with "gd" "gd" 0
 	fi
@@ -215,7 +217,7 @@ php5-sapi_check_awkward_uses () {
 	fi
 
 	confutils_use_depend_all "cdb"		"dba"
-	confutils_use_depend_all "db4"		"dba"
+	confutils_use_depend_all "berkdb"	"dba"
 	confutils_use_depend_all "flatfile"	"dba"
 	confutils_use_depend_all "gdbm"		"dba"
 	confutils_use_depend_all "inifile"	"dba"
@@ -362,7 +364,7 @@ php5-sapi_src_compile () {
 	enable_extension_disable	"tokenizer"		"tokenizer"		1
 	enable_extension_enable		"wddx"			"wddx"			1
 	enable_extension_with		"xsl"			"xsl"			1
-	enable_extension_disable	"xml"			"xml2"			1
+	#enable_extension_disable	"xml"			"xml2"			1 # PEAR needs --enable-xml
 	enable_extension_with		"xmlrpc"		"xmlrpc"		1
 	enable_extension_enable		"yp"			"nis"			1
 	enable_extension_with		"zlib"			"zlib"			1
