@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.2-r1.ebuild,v 1.1 2005/03/27 18:59:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.2-r1.ebuild,v 1.2 2005/03/27 21:46:17 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -55,7 +55,7 @@ src_compile() {
 }
 
 src_install() {
-	cp ${FILESDIR}/${PVR}-ant ${S}/src/ant
+	cp ${FILESDIR}/${PV}-ant ${S}/src/ant
 
 	exeinto /usr/bin
 	doexe src/ant
