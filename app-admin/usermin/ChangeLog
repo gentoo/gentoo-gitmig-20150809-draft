@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.44 2004/12/28 19:52:22 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.45 2004/12/31 22:38:00 eradicator Exp $
+
+*usermin-1.100-r1 (31 Dec 2004)
+
+  31 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/usermin-1.100-setup-nocheck.patch, +usermin-1.100-r1.ebuild:
+  Config files are now installed with src_install().
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
