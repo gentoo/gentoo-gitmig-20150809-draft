@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.30 2002/01/08 19:39:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.31 2002/01/24 08:17:48 drobbins Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -76,6 +76,7 @@ src_install() {
 	xsltproc $TEMPLATE xml/main-download.xml > ${D}${WEBROOT}/index-download.html || die
 	xsltproc $TEMPLATE xml/main-projects.xml > ${D}${WEBROOT}/index-projects.html || die
 	xsltproc $TEMPLATE xml/main-docs.xml > ${D}${WEBROOT}/index-docs.html || die
+	xsltproc $TEMPLATE xml/main-articles.xml > ${D}${WEBROOT}/index-articles.html || die
 
 	doins css/main-new.css css/resume.css
 	
