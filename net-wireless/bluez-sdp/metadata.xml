@@ -2,9 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>wireless</herd>
+<herd>pda</herd>
 <maintainer>
-  <email>latexer@gentoo.org</email>
-  <name>Peter Johanson</name>
-  <description>Keep it up to date until someone dedicated to it takes over</description>
+  <email>liquidx@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
