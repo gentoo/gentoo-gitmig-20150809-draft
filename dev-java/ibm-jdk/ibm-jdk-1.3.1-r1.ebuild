@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.1-r1.ebuild,v 1.7 2002/08/26 16:57:19 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.1-r1.ebuild,v 1.8 2002/09/01 13:45:08 karltk Exp $
 
 . /usr/portage/eclass/java.eclass
 inherit java
@@ -51,7 +51,7 @@ src_install () {
 #		dosym /opt/${P}/jre/bin/libjavaplugin_oji.so /usr/lib/mozilla/plugins/
 #	fi
 
-	java_set_env ${FILESDIR}/${VMHANDLE}
+	set_java_env ${FILESDIR}/${VMHANDLE}
 }
 
 # NOTE: We don't install the plugin, as it always segfaults.
