@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.9 2004/05/30 15:13:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.10 2004/05/30 18:29:11 khai Exp $
+
+  30 May 2004; Yi Qiang <khai@gentoo.org> :
+  Version bump
 
   30 May 2004; Danny van Dyk <kugelfang@gentoo.org> gconfmm-2.6.1.ebuild:
   Fixing BUG #52389.
