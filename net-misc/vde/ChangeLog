@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/vde
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.1 2005/02/07 02:19:57 rphillips Exp $
+
+*vde-1.5.7 (06 Feb 2005)
+
+  06 Feb 2005; <rphillips@gentoo.org> vde-1.5.7.ebuild:
+  Initial commit. thanks to Nico Baggus.
+
