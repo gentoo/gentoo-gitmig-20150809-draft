@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.11a.ebuild,v 1.2 2003/12/20 18:01:18 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.11a.ebuild,v 1.3 2003/12/22 00:20:04 spider Exp $
 
 inherit gnome2 debug libtool
 
@@ -31,6 +31,7 @@ RDEPEND="virtual/x11
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	dev-perl/XML-Parser
 	dev-util/intltool
 	>=sys-devel/gettext-0.11"
 
@@ -44,8 +45,15 @@ pkg_setup () {
 }
 
 src_compile() {
+	# even when we have the XML-Parser module there may be a version mismatch
+	# this line will force the use of local intltool when compiling, avoiding mismatch
+	# remove this when we have all users at the same version as upstream.
+	intltoolize --force
+
 
 	elibtoolize
+
+
 	local moz_ver="`pkg-config --modversion mozilla-xpcom | cut -d. -f1,2 2>/dev/null`"
 	local myconf="--disable-werror"
 
