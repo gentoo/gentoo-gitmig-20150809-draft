@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.4_pre1.ebuild,v 1.1 2002/11/17 01:19:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.0.4_pre1.ebuild,v 1.2 2002/11/17 01:25:44 foser Exp $
 
-inherit debug
+#inherit debug
 
 IUSE="perl nls gnome build spell jpeg xml2"
 
@@ -100,7 +100,7 @@ src_compile() {
 	CFLAGS="${CFLAGS} `gdk-pixbuf-config --cflags`"
 	
 	econf \
-		--enable-debug \
+	#	--enable-debug \
 		${myconf} || die
 
 	emake || die
