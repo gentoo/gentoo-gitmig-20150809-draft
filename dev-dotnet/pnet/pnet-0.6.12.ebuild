@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.12.ebuild,v 1.3 2005/01/29 21:39:09 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.12.ebuild,v 1.4 2005/02/06 16:03:29 scandium Exp $
 
 DESCRIPTION="Portable.NET runtime, compiler, tools"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -28,7 +28,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make DESTDIR="${D}" install || die
 
 	# Rename file names conflicting with dev-dotnet/mono
 	# This should be removed again once we have 'dotnet-config'
