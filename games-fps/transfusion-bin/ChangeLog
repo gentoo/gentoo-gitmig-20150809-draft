@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/transfusion-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/transfusion-bin/ChangeLog,v 1.6 2005/02/26 04:16:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/transfusion-bin/ChangeLog,v 1.7 2005/03/15 20:36:16 wolf31o2 Exp $
+
+  15 Mar 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  transfusion-bin-1.01.ebuild:
+  Updated ebuild to use icon file and closing bug #85276.
 
   25 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org>
   transfusion-bin-1.01.ebuild:
