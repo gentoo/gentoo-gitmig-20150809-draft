@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.5.2.ebuild,v 1.2 2003/04/23 15:26:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.5.2.ebuild,v 1.3 2003/04/26 13:06:37 hannes Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ DEPEND="virtual/glibc
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${MY_P}-sandbox-patch.diff
+	epatch ${FILESDIR}/${P}-sandbox-patch.diff
 }
 
 src_compile() {

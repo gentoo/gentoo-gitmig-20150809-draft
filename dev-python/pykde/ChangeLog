@@ -1,8 +1,12 @@
 # ChangeLog for dev-python/pykde
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.1 2003/04/17 12:25:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.2 2003/04/26 13:06:35 hannes Exp $
 
 *pykde-3.5.2 (14 Apr 2003)
+
+  26 Apr 2003; Hannes Mehnert <hannes@gentoo.org> pykde-3.5.2.ebuild:
+  fixed the epatch, thanks to Paul Pacheco <paul.pacheco@wavecode.com> (bug
+  #19552)
 
   14 Apr 2003; Michele Balistreri <brain@gentoo.org> PyKDE-3.5.2.ebuild:
   Initial import. Ebuild submitted by Paul Pacheco <paul.pacheco@wavecode.com>
