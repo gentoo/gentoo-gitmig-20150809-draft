@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.1.1.ebuild,v 1.1 2004/08/11 21:52:27 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.1.1.ebuild,v 1.2 2004/08/30 16:25:25 dholm Exp $
 
 DESCRIPTION="Maude - A high-level specification language"
 HOMEPAGE="http://maude.cs.uiuc.edu/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="doc"
 
