@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.57-r2.ebuild,v 1.1 2001/02/07 15:51:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.57-r2.ebuild,v 1.2 2001/02/07 18:22:18 achim Exp $
 
 P=net-tools-1.57
 A=${P}.tar.bz2
@@ -9,7 +9,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION="standard Linux network tools"
 SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${A}"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+        sys-devel/gettext"
+RDEPEND="virtual/glibc"
 
 src_unpack() {
 

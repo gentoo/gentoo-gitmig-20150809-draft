@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r2.ebuild,v 1.2 2001/02/06 09:01:35 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r2.ebuild,v 1.3 2001/02/07 18:22:18 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -37,13 +37,14 @@ src_install()
 	dodir /dev
   	dodir /dev/pts
 	dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
-	dodir /usr/share/man /usr/share/info /usr/share/doc /usr/bin/ 
+	dodir /usr/share/man /usr/share/info /usr/share/doc /usr/share/misc /usr/bin/ 
 
 #FHS 2.1 stuff
 	dosym share/man /usr/man
 	dosym share/doc /usr/doc
 	dosym share/info /usr/info
 #end FHS 2.1 stuff
+	dosym ../tmp /usr/tmp
 	doman ${FILESDIR}/MAKEDEV.8	
 
 	dodoc ${FILESDIR}/copyright ${FILESDIR}/changelog.Debian
@@ -52,7 +53,7 @@ src_install()
 	touch ${D}/var/log/lastlog
 	touch ${D}/var/run/utmp
 	touch ${D}/var/log/wtmp
-	dodir /var/db/pkg /var/spool /var/tmp
+	dodir /var/db/pkg /var/spool /var/tmp /var/lib/misc
 
 #supervise stuff
 	dodir /var/lib/supervise
