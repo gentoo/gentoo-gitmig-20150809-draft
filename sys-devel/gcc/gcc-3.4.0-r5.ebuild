@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r5.ebuild,v 1.3 2004/05/31 03:02:15 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r5.ebuild,v 1.4 2004/05/31 04:53:09 iluxa Exp $
 
-IUSE="static nls bootstrap java build X multilib gcj f77 objc pic hardened uclibc"
+IUSE="static nls bootstrap java build X multilib gcj f77 objc pic hardened uclibc n32 n64"
 
 inherit eutils flag-o-matic libtool
 
@@ -40,6 +40,11 @@ do_filter_flags() {
 	# a few archs...
 	setting="`get-flag mcpu`"
 	[ ! -z "${setting}" ] && filter-flags -mcpu="${setting}"
+
+	# If we use multilib on mips, we shouldn't pass -mabi flag - it breaks
+	# build of non-default-abi libraries.
+	use mips && use multilib && filter-flags "-mabi*"
+
 	export GCJFLAGS="${CFLAGS/-O?/-O2}"
 }
 
@@ -121,7 +126,7 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~amd64 ~mips"
 #KEYWORDS="amd64 ~x86 ~ppc ~sparc ~mips ~ia64 ~ppc64 ~hppa ~alpha ~s390"
 
 # Ok, this is a hairy one again, but lets assume that we
@@ -198,6 +203,26 @@ version_patch() {
 
 	sed -e "s:@GENTOO@:$2:g" ${1} > ${T}/${1##*/}
 	epatch ${T}/${1##*/}
+}
+
+check_option_validity() {
+	# Must compile for mips64-linux target if we want n32/n64 support
+	case "${CCHOST}" in
+		mips64-*)
+		;;
+		*)
+		    if use n32 || use n64; then
+		     eerror "n32/n64 can only be used when target host is mips64-*-linux-*";
+		     die "Invalid USE flags for CCHOST ($CCHOST)";
+		    fi
+		;;
+	esac
+
+	#cannot have both n32 & n64 without multilib
+	if use n32 && use n64 && ! use multilib; then
+		eerror "Please enable multilib if you want to use both n32 & n64";
+		die "Invalid USE flag combination";
+	fi
 }
 
 glibc_have_ssp() {
@@ -412,6 +437,10 @@ src_unpack() {
 	# corrects text relocations in libiberty.a
 	(use pic || use hardened) && epatch ${FILESDIR}/3.4.0/gcc-3.4-libiberty-pic.patch
 
+	# Prevent GCC from emitting PC-relative relocs on MIPS (according to
+	# cgd@broadcom.com it is not-really-needed hack from EABI
+	epatch ${FILESDIR}/3.4.0/gcc-3.4.0-mips-pcrel.diff
+
 	version_patch ${FILESDIR}/3.4.0/gcc-${PV}-r3-gentoo-branding.patch \
 		"${BRANCH_UPDATE} (${release_version})" || die "Failed Branding"
 
@@ -437,6 +466,8 @@ src_compile() {
 
 	local myconf=
 	local gcc_lang=
+
+	check_option_validity
 
 	if ! use build
 	then
@@ -471,7 +502,7 @@ src_compile() {
 	fi
 
 	# Multilib not yet supported
-	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	if [ -n "`use multilib`" ]
 	then
 		einfo "WARNING: Multilib support enabled. This is still experimental."
 		myconf="${myconf} --enable-multilib"
@@ -507,6 +538,15 @@ src_compile() {
 	#use s390 && myconf="${myconf} --with-arch=nofreakingclue"
 	#use x86 && myconf="${myconf} --with-arch=i586"
 	#use mips && myconf="${myconf} --with-arch=mips3"
+
+	# Add --with-abi flags to enable respective MIPS ABIs
+	case "${CCHOST}" in
+	    mips*)
+		use multilib && myconf="${myconf} --with-abi=32"
+		use n32 && myconf="${myconf} --with-abi=n32"
+		use n64 && myconf="${myconf} --with-abi=n64"
+	    ;;
+	esac
 
 	do_filter_flags
 	einfo "CFLAGS=\"${CFLAGS}\""

@@ -1,10 +1,16 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.255 2004/05/31 03:02:15 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.256 2004/05/31 04:53:09 iluxa Exp $
 
   30 May 2004; Travis Tilley <lv@gentoo.org>
   +files/3.4.0/gcc34-ppc64-typo-fix.patch, gcc-3.4.0-r5.ebuild:
   added a typo fix patch for ppc64
+
+  30 May 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
+  +files/3.4.0/gcc-3.4.0-mips-pcrel.diff, gcc-3.4.0-r5.ebuild:
+  Add n32 & n64 use flags
+  Add n32/n64 patches and build options
+  Allow multilibs on all arches
 
   28 May 2004; Tom Gall <tgall@gentoo.org> gcc-3.3.3_pre20040408-r1.ebuild:
   marked as stable for ppc64
