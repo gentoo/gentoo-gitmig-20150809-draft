@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/xcb
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/ChangeLog,v 1.1 2003/06/20 18:59:03 agriffis Exp $
+
+*xcb-2.4 (20 Jun 2003)
+
+  20 Jun 2003; Aron Griffis <agriffis@gentoo.org> xcb-2.4.ebuild:
+  New ebuild for this excellent X utility
+
