@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.11 2004/09/16 15:38:36 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.12 2004/09/22 15:29:09 liquidx Exp $
+
+  22 Sep 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/desktop-file-utils-0.8-noemacs.patch, -desktop-file-utils-0.7.ebuild,
+  desktop-file-utils-0.8.ebuild:
+  disable installing of emacs mode file (#60754)
 
 *desktop-file-utils-0.8 (16 Sep 2004)
 
