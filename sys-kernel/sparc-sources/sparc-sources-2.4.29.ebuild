@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.29.ebuild,v 1.3 2005/02/25 02:15:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.29.ebuild,v 1.4 2005/03/06 19:21:57 gustavoz Exp $
 
 ETYPE="sources"
 IUSE="livecd ultra1"
@@ -14,7 +14,8 @@ SSV_URI="mirror://gentoo/patches-${PATCH_BASE}.tar.bz2"
 KEYWORDS="-* sparc"
 DESCRIPTION="Full sources for the Gentoo Sparc Linux kernel"
 UNIPATCH_LIST="${DISTDIR}/patches-${PATCH_BASE}.tar.bz2
-	${FILESDIR}/2.4-sparc64-ramdisk64.patch"
+	${FILESDIR}/2.4-sparc64-ramdisk64.patch
+	${FILESDIR}/blade1500.patch"
 SRC_URI="${KERNEL_URI} ${SSV_URI}"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org"
 

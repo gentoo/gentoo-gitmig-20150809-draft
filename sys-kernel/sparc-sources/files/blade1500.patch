@@ -1,0 +1,43 @@
+# This is a BitKeeper generated diff -Nru style patch.
+#
+# ChangeSet
+#   2005/03/02 14:12:47-08:00 davem@nuts.davemloft.net 
+#   [SPARC64]: Accept 'm5823' clock chip as seen on SB1500.
+#   
+#   Signed-off-by: David S. Miller <davem@davemloft.net>
+# 
+# arch/sparc64/kernel/time.c
+#   2005/03/02 14:12:26-08:00 davem@nuts.davemloft.net +5 -2
+#   [SPARC64]: Accept 'm5823' clock chip as seen on SB1500.
+# 
+diff -Nru a/arch/sparc64/kernel/time.c b/arch/sparc64/kernel/time.c
+--- a/arch/sparc64/kernel/time.c	2005-03-02 14:13:06 -08:00
++++ b/arch/sparc64/kernel/time.c	2005-03-02 14:13:06 -08:00
+@@ -770,6 +770,7 @@
+ 		    strcmp(model, "mk48t59") &&
+ 		    strcmp(model, "m5819") &&
+ 		    strcmp(model, "m5819p") &&
++		    strcmp(model, "m5823") &&
+ 		    strcmp(model, "ds1287")) {
+ 			if (cbus != NULL) {
+ 				prom_printf("clock_probe: Central bus lacks timer chip.\n");
+@@ -829,7 +830,8 @@
+ 
+ 			if (!strcmp(model, "ds1287") ||
+ 			    !strcmp(model, "m5819") ||
+-			    !strcmp(model, "m5819p")) {
++			    !strcmp(model, "m5819p") ||
++			    !strcmp(model, "m5823")) {
+ 				ds1287_regs = edev->resource[0].start;
+ 			} else {
+ 				mstk48t59_regs = edev->resource[0].start;
+@@ -850,7 +852,8 @@
+ 			}
+ 			if (!strcmp(model, "ds1287") ||
+ 			    !strcmp(model, "m5819") ||
+-			    !strcmp(model, "m5819p")) {
++			    !strcmp(model, "m5819p") ||
++			    !strcmp(model, "m5823")) {
+ 				ds1287_regs = isadev->resource.start;
+ 			} else {
+ 				mstk48t59_regs = isadev->resource.start;
