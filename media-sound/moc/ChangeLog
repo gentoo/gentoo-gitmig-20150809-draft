@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/moc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.10 2004/12/19 05:55:50 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.11 2005/01/11 12:47:42 eradicator Exp $
+
+  11 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org> moc-1.1.0.ebuild:
+  Added media-libs/libid3tag to depend to fix bug #74533. Thanks go to Pinky
+  <master_up@post.cz> for the fix.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> moc-1.1.0.ebuild:
   Stable amd64, x86.

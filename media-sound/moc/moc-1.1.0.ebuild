@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-1.1.0.ebuild,v 1.12 2004/12/19 05:55:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-1.1.0.ebuild,v 1.13 2005/01/11 12:47:42 eradicator Exp $
 
 IUSE="oggvorbis mad oss"
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 sparc x86"
 DEPEND="media-libs/libao
 	sys-libs/ncurses
 	oggvorbis? ( media-libs/libvorbis )
-	mad? ( media-libs/libmad sys-libs/zlib )"
+	mad? ( media-libs/libmad sys-libs/zlib media-libs/libid3tag )"
 
 src_unpack() {
 	unpack ${A}
