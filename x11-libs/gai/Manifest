@@ -1,4 +1,6 @@
 MD5 41d0a3243e5ad6a4fec48c12c31b21d4 gai-0.5.0_pre6.ebuild 1462
-MD5 1eda3d80bdd13ad6437e74e159224de9 ChangeLog 901
+MD5 75b18f4efa5d72c83fb9807b1498e8b3 gai-0.5.2.ebuild 1457
+MD5 5e8093267af982548041d57ff785b9cf ChangeLog 1030
 MD5 4de810beafe6af976494dfe29abd5c60 metadata.xml 405
 MD5 2cc1df4e270e1be3a526f9609c89accc files/digest-gai-0.5.0_pre6 66
+MD5 72db507aad739b6917552b17dac52b3c files/digest-gai-0.5.2 62
