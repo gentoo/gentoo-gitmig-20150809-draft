@@ -1,0 +1,32 @@
+diff -Naur eroaster/cdrtools.py patched-eroaster/cdrtools.py
+--- eroaster/cdrtools.py	2003-12-08 21:02:29.000000000 +0200
++++ patched-eroaster/cdrtools.py	2004-02-22 15:42:35.000000000 +0200
+@@ -49,6 +49,8 @@
+         appendCharset = FALSE
+         for i in range(len(jolietCharsetsTemp)):
+             if (appendCharset == TRUE):
++		if (jolietCharsetsTemp[i] == ""):
++		    appendCharset = FALSE
+                 jolietCharsets.append(jolietCharsetsTemp[i])
+             if (jolietCharsetsTemp[i][:14] == "Known charsets"):
+                 appendCharset = TRUE
+@@ -196,7 +198,8 @@
+ 
+         if (type(self.fifosize) == StringType): self.fifosize = atoi(self.fifosize)
+         cmdline = "%s -fs=%d" % (cmdline, self.fifosize)
+-        cmdline = "%s dev=%d,%d,%d" % (cmdline, self.__cdrecord_bus, self.__cdrecord_target, self.__cdrecord_lun)
++	if (self.__cdrecord_device[0:10] == "/dev/cdrom"): cmdline = "%s dev=%s" % (cmdline, self.__cdrecord_device)
++        else: cmdline = "%s dev=%d,%d,%d" % (cmdline, self.__cdrecord_bus, self.__cdrecord_target, self.__cdrecord_lun)
+         if (type(self.speed) == StringType): self.speed = atoi(self.speed)
+         cmdline = "%s speed=%d" % (cmdline, self.speed)
+ 
+--- eroaster/Application.py	2004-03-27 17:41:27.395584679 +0100
++++ eroaster/Application.py.org	2004-03-27 17:41:10.123168669 +0100
+@@ -82,6 +82,7 @@
+     import gtk as gnome
+     import gnome.tools
+ except:
++    import gnome.ui
+     import gnometools
+     gnome.tools = gnometools
+
