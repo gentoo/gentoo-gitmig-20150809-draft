@@ -1,6 +1,11 @@
 # ChangeLog for app-text/dasher
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dasher/ChangeLog,v 1.3 2003/12/14 03:12:53 obz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dasher/ChangeLog,v 1.4 2004/03/10 07:13:53 leonardop Exp $
+
+*dasher-3.2.4 (10 Mar 2004)
+
+  10 Mar 2004; L. Boshell <leonardop@gentoo.org> dasher-3.2.4.ebuild:
+  New release. Misc ebuild cleanups.
 
 *dasher-3.2.1 (14 Dec 2003)
 
