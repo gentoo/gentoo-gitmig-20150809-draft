@@ -84,11 +84,15 @@ def isfifo(x):
 
 def movefile(src,dest):
 	"""moves a file from src to dest, preserving all permissions and attributes."""
-	if dest!="/bin/cp":
+	if dest=="/bin/cp":
+		getstatusoutput("/bin/mv /bin/cp /bin/cp.old")
+		a=getstatusoutput("/bin/cp.old -a "+"'"+src+"' /bin/cp")
+		os.unlink("/bin/cp.old")
+	else:
 		if os.path.exists(dest):
 			os.unlink(dest)
+		a=getstatusoutput("/bin/cp -a "+"'"+src+"' '"+dest+"'")	
 	mymode=os.lstat(src)[ST_MODE]
-	a=getstatusoutput("/bin/cp -a "+"'"+src+"' '"+dest+"'")	
 	os.chmod(dest,mymode)
 	os.unlink(src)
 	if a[0]==0:
@@ -104,15 +108,15 @@ def md5(x):
 
 def prepare_db(mycategory,mypackage):
     if not os.path.isdir(root+"var"):
-	os.mkdir(root+"var",0755)
+		os.mkdir(root+"var",0755)
     if not os.path.isdir(root+"var/db"):
-	os.mkdir(root+"var/db",0755)
+		os.mkdir(root+"var/db",0755)
     if not os.path.isdir(root+"var/db/pkg"):
-	os.mkdir(root+"var/db/pkg",0755)
+		os.mkdir(root+"var/db/pkg",0755)
     if not os.path.isdir(root+"var/db/pkg/"+mycategory):
-	os.mkdir(root+"var/db/pkg/"+mycategory,0755)
+		os.mkdir(root+"var/db/pkg/"+mycategory,0755)
     if not os.path.isdir(root+"var/db/pkg/"+mycategory+"/"+mypackage):
-	os.mkdir(root+"var/db/pkg/"+mycategory+"/"+mypackage,0755)
+		os.mkdir(root+"var/db/pkg/"+mycategory+"/"+mypackage,0755)
 
 def pathstrip(x,mystart):
     cpref=os.path.commonprefix([x,mystart])
