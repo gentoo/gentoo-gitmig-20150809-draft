@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gpc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.13 2004/07/02 04:26:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.14 2004/11/11 09:41:33 mr_bones_ Exp $
+
+  11 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> -gpc-20030209.ebuild:
+  removed - old and with QA issues.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gpc-20030209.ebuild,
   gpc-20040516.ebuild:
