@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.49 2004/06/03 07:30:25 spyderous Exp $
-
-# This is a snapshot of the XORG-RELEASE-1 branch.
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.50 2004/06/23 19:34:45 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -10,49 +8,8 @@
 # libxkbfile.so, libxkbui.so
 
 # TODO
-# 14 March 2004 <spyderous@gentoo.org>
-#   TARGET: 1.0
-# 		spy: get sparc patch from weeve
-# 		spy: delete old fonts dirs if nothing's left in them.
-# 		spy: ati-drivers links to /usr/lib/opengl/xfree/{extensions,include}
-# 			check nvidia etc too
-# 		spy: #43491, #38232
-# 		cyfred: #29953
-# 		(DONE) spy: #23023
-# 		spy: #21120 needs to be ported
-# 		tseng: Update hardened patches
-# 			-Also see fd.o bug #296, it's been integrated
-# 		spy: Check bugs fixed in Gentoo's xfree-4.3.0,4.3.99 lately
-# 		spy: External zlib
-# 		(DONE) spy: get _all_ necessary licenses added
-# 		(DONE) spy: Drop everything related to obsolete XftConfig
-# 		(DONE) spy: Check Fedora patches
-# 		(DONE) spy: port PAM circular dep fixes over
-# 		(DONE) spy: xorg default cursors installed to /usr/share/cursors/xfree
-# 		(DONE) spy: Move as much global stuff as possible to pkg_setup()
-# 			-- Bumped to 1.0_pre20040313-r1 for this
-# 		(DONE) spy: Rename media-fonts/corefonts to microsoft-fonts, provide
-# 			virtual/corefonts in combination with ttf-bitstream-vera, the
-# 			default
-# 			-- Invalidated by addition of bitstream fonts to source
-# 		(DONE) spy: add HaveLib64 switch instead of patch 0181
-# 		(DONE) spy: switch to use() instead of ${ARCH}
-# 		(DONE) tseng, spy: update pie USE
-# 		(DONE) spy: drop wacom
-# 		(DONE) spy: Drop MS corefonts, dep on virtual
-# 		(DONE) spy: Check SDK patches -- wacom, synaptics
-# 		(DONE) spy: Install docs to /usr/share/doc
-# 		(DONE) spy: Install man pages to /usr/share/man
-# 		(DONE) spy: Remove references to libxml. It was never actually used;
-# 			expat was instead. It's still sitting there for no reason
-# 		(DONE) spy: Install fonts to /usr/share/fonts/*
-# 		(DONE) spy: Add external xft, render, xrender drop-ins
-# 		(DONE) spy: Generate xrender.pc
-# 		(DONE) spy: Transition to new patch_exclude()
-#   TARGET: unknown
-# 		spy: Add Alan Cox's VIA 2D+3D driver from XFree86-4.3.0-57.src.rpm, use
-# 			XFree86-4.3.0-build-libXinerama-before-libGL-for-via-driver.patch
-# 		batt: Backport IGP stuff from DRI CVS?
+# 23 June 2004 <spyderous@gentoo.org>
+#	Pull from portage. Affected by xdm security bug #53226
 
 inherit eutils flag-o-matic gcc xfree
 
