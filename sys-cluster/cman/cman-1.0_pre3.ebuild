@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-1.0_pre3.ebuild,v 1.1 2005/01/27 04:37:56 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-1.0_pre3.ebuild,v 1.2 2005/01/27 14:36:17 xmerlin Exp $
 
-inherit eutils
+inherit eutils linux-mod
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
@@ -25,7 +25,10 @@ RDEPEND="virtual/libc"
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	./configure --kernel_src=/usr/src/linux || die
+	check_KV
+	set_arch_to_kernel
+
+	./configure --kernel_src=${KERNEL_DIR} || die
 	emake || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/dlm-1.0_pre6.ebuild,v 1.1 2005/01/27 04:39:09 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/dlm-1.0_pre6.ebuild,v 1.2 2005/01/27 14:34:46 xmerlin Exp $
 
 inherit eutils linux-mod
 
@@ -24,7 +24,10 @@ DEPEND="sys-cluster/dlm-kernel"
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	./configure --kernel_src=/usr/src/linux || die
+	check_KV
+	set_arch_to_kernel
+
+	./configure --kernel_src=${KERNEL_DIR} || die
 	emake || die
 }
 
