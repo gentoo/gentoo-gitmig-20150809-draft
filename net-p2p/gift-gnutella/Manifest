@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4324157013d6f6aeac819a47760152b3 gift-gnutella-0.0.9.2.ebuild 1393
 MD5 7cec74b0299b882dc3eea20601c330a3 ChangeLog 2616
 MD5 875f23093b78af2d864a7a7ba464f126 metadata.xml 223
 MD5 c464f118c813212dd2f6e7ddbfd0bef4 files/digest-gift-gnutella-0.0.9.2 74
 MD5 3a2b71fe09957a425acb0f40be079266 files/gift-gnutella-gcc35.patch 457
-MD5 aabf4a5c1908942ac37aefe12d27cd64 files/cacheupdate.sh 806
+MD5 1433443132dbd9d2f2d1de8d449727b3 files/cacheupdate.sh 864
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBSy9bcAgAdbxYsnERAlVYAJ0cpPDyXt8rOENyGtbeEj5h4uh2kQCeL3N0
+GDUApxYGjxZFDt+csFRcdC8=
+=0TYa
+-----END PGP SIGNATURE-----
