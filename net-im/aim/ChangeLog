@@ -1,6 +1,9 @@
 # ChangeLog for net-im/aim
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/aim/ChangeLog,v 1.1 2003/10/26 03:03:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/aim/ChangeLog,v 1.2 2003/12/14 12:32:05 spyderous Exp $
+
+  14 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; aim-1.5.286.ebuild:
+  Stable on x86. Fix DEPEND to virtual/x11 instead of x11-base/xfree.
 
 *aim-1.5.286 (25 Oct 2003)
 
