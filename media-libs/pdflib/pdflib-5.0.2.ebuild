@@ -1,20 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.14 2004/02/22 21:21:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.15 2004/05/10 09:37:05 mr_bones_ Exp $
 
-IUSE="tcltk perl python java"
-
-MY_PN=${PN/pdf/PDF}-Lite
-MY_P=${MY_PN}-${PV}-Unix-src
-S=${WORKDIR}/${MY_P}
-PYVER="$(/usr/bin/python -V 2>&1 | cut -d ' ' -f 2 | cut -d '.' -f 1,2)"
+MY_PN="${PN/pdf/PDF}-Lite"
+MY_P="${MY_PN}-${PV}-Unix-src"
+S="${WORKDIR}/${MY_P}"
 DESCRIPTION="A library for generating PDF on the fly"
 HOMEPAGE="http://www.pdflib.com/"
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
-SLOT="5"
 LICENSE="Aladdin"
+SLOT="5"
 KEYWORDS="x86 ppc sparc alpha hppa ~mips amd64 ia64 ~ppc64"
+IUSE="tcltk perl python java"
 
 DEPEND=">=sys-apps/sed-4
 	tcltk? ( >=dev-lang/tk-8.2 )
@@ -23,56 +21,39 @@ DEPEND=">=sys-apps/sed-4
 	java? ( >=virtual/jdk-1.3 )"
 
 src_compile() {
-
-	# fix sandbox violations
-	# NOTE: the basic theory is to not compile pdflib.java during
-	# src_compile() or src_install(), but rather in pkg_postinstall(),
-	# and then install it where it can be found.
-	sed -i \
-		-e "s/all:\t\$(SWIG_LIB) pdflib.jar/all:\t\$(SWIG_LIB)/" \
-		-e "s/install: \$(SWIG_LIB) pdflib.jar/install: \$(SWIG_LIB)/" \
-		${S}/bind/java/Makefile.in
-
 	local myconf=
+
+	PYVER="$(/usr/bin/python -V 2>&1 | cut -d ' ' -f 2 | cut -d '.' -f 1,2)"
 	use tcltk || myconf="--with-tcl=no"
-
 	use perl || myconf="${myconf} --with-perl=no"
-
 	use python \
 		&& myconf="${myconf} --with-py=/usr --with-pyincl=/usr/include/python${PYVER}" \
 		|| myconf="${myconf} --with-py=no"
-
 	use java \
 		&& myconf="${myconf} --with-java=${JAVA_HOME}" \
 		|| myconf="${myconf} --with-java=no"
 
-	# libpng-1.2.5 needs to be linked against stdc++ and zlib
-#	sed -i -e 's:-lpng:-lpng -lz -lstdc++:' configure
-
 	econf \
 		--enable-cxx \
 		${myconf} || die
-
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
+	sed -i \
+		-e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
+		${S}/bind/pdflib/perl/Makefile \
+			|| die "sed bind/pdflib/perl/Makefile failed"
 
-	# fix sandbox violations
-	# NB: do this *after* build, otherwise we will get linker problems.
-	# all we basically do here is modify the install path for Makefiles that
-	# need it.
-#	sed -i -e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
-#		${S}/bind/pdflib/java/Makefile
+	sed -i \
+		-e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
+		${S}/bind/pdflib/python/Makefile \
+			|| die "sed bind/pdflib/python/Makefile failed"
 
-	sed -i -e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
-		${S}/bind/pdflib/perl/Makefile
-
-	sed -i -e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
-		${S}/bind/pdflib/python/Makefile
-
-	sed -i -e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
-		${S}/bind/pdflib/tcl/Makefile
+	sed -i \
+		-e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
+		${S}/bind/pdflib/tcl/Makefile \
+			|| die "sed bind/pdflib/tcl/Makefile failed"
 
 	# ok, this should create the correct lib dirs for perl and python.
 	# yes, i know it is messy, but as i see it, a ebuild should be generic
