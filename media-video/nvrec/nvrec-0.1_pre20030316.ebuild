@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvrec/nvrec-0.1_pre20030316.ebuild,v 1.3 2003/04/25 15:59:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvrec/nvrec-0.1_pre20030316.ebuild,v 1.4 2003/05/09 15:25:27 phosphan Exp $
 
 inherit eutils
 
@@ -35,6 +35,10 @@ RDEPEND="avi? ( media-video/avifile )
 S=${WORKDIR}/${PN}-${MY_VER}
 
 src_unpack() {
+	if nm /usr/lib/libquicktime.so | grep -q png; then
+		die "It looks like you have installed quicktime4linux after installing libquicktime. NVrec can't be installed, see bug #20705 for why."
+	fi
+
 	local ffversion
 	ffversion="ffmpeg-0.4.6-r1"
 	ffP="ffmpeg-0.4.6"

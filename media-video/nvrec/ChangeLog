@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvrec
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvrec/ChangeLog,v 1.4 2003/04/24 13:38:03 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvrec/ChangeLog,v 1.5 2003/05/09 15:25:27 phosphan Exp $
+
+  09 May 2003; Patrick Kursawe <phosphan@gentoo.org>
+  nvrec-0.1_pre20030316.ebuild:
+  Added little check to avoid running into bug #20705
 
   24 Apr 2003; Patrick Kursawe <phosphan@gentoo.org>
   nvrec-0.1_pre20030316.ebuild :
