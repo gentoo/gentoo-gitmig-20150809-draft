@@ -1,5 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.04.ebuild,v 1.2 2003/06/12 21:19:03 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A tiny, fast authoritative nameserver that queries LDAP and can be updated instantly"
