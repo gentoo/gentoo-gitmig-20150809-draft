@@ -1,0 +1,9 @@
+# ChangeLog for app-sci/gato
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gato/ChangeLog,v 1.1 2003/12/17 00:42:00 brandy Exp $
+
+*gato-0.98i (17 Dec 2003)
+
+  17 Dec 2003; Brandy Westcott brandy@gentoo.org gato-0.98i.ebuild:
+  Initial import of Gato - Graph Animation Toolbox.
+
