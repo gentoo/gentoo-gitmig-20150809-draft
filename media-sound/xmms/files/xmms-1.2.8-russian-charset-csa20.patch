@@ -842,8 +842,8 @@ diff -dPNur xmms-1.2.8/libxmms/charset_auto_russian.h xmms-1.2.8-patched/libxmms
 +}
 diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 --- xmms-1.2.8/libxmms/charset.c	1970-01-01 01:00:00.000000000 +0100
-+++ xmms-1.2.8-patched/libxmms/charset.c	2003-10-24 19:10:29.000000000 +0200
-@@ -0,0 +1,870 @@
++++ xmms-1.2.8-patched/libxmms/charset.c	2003-10-24 21:51:11.000000000 +0200
+@@ -0,0 +1,981 @@
 +#include <stdio.h>
 +#include <stdlib.h>
 +#include <string.h>
@@ -868,7 +868,11 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +#include "charset_config.h"
 +
 +#ifdef AUTO_ENCA_SUPPORT
++#ifdef DYNAMIC_ENCA
++#include <charset_fake_enca.h>
++#else
 +#include <enca.h>
++#endif
 +#endif
 +
 +#define LOCALE_STRING_LENGTH 64
@@ -994,9 +998,92 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +    xmms_charset_changed=1;
 +}
 +
++
++#ifdef DYNAMIC_ENCA
++# include <dlfcn.h>
++#ifndef RTLD_NOW
++# define RTLD_NOW 0
++#endif
++static void *enca_handle = NULL;
++static int dynamic_enca_initialised = 0;
++
++static void* open_dynamic_lib(char *filename)
++{
++    return dlopen(filename, RTLD_NOW);
++}
++
++static void close_dynamic_lib(void* handle)
++{
++    dlclose(handle);
++}
++
++static void* find_dynamic_symbol(void *handle, char *symbol)
++{
++#ifdef SYMBOL_PREFIX
++	char *sym = g_strconcat(SYMBOL_PREFIX, symbol, NULL);
++	void *symh = dlsym(handle, sym);
++	g_free(sym);
++	return symh;
++#else
++	return dlsym(handle, symbol);
++#endif
++}
++#endif
++/*
++    enca_analyse_const(enca,buf,len);
++    enca_charset_name(ee.charset, ENCA_NAME_STYLE_ICONV);
++    enca_analyser_alloc(ltmp);
++    enca_analyser_free(enca);
++    enca_set_threshold(enca, 1);
++    enca_set_multibyte(enca, 1);
++    enca_set_ambiguity(enca, 1);
++    enca_set_garbage_test(enca, 0);
++    enca_set_filtering(enca, 0);
++    enca_set_significant(enca,1);
++    enca_set_termination_strictness(enca,0);
++    enca_get_language_charsets (const char *langname,
++                                          size_t *n);
++*/
++
++#ifdef DYNAMIC_ENCA
++static void charset_dynamic_enca_init() {
++    if (dynamic_enca_initialised) return;
++    dynamic_enca_initialised=1;
++    enca_handle=open_dynamic_lib(ENCA_LIB);
++    if (enca_handle) {
++	enca_set_multibyte=find_dynamic_symbol(enca_handle,"enca_set_multibyte");
++	enca_set_interpreted_surfaces=find_dynamic_symbol(enca_handle,"enca_set_interpreted_surfaces");
++	enca_set_ambiguity=find_dynamic_symbol(enca_handle,"enca_set_ambiguity");
++	enca_set_filtering=find_dynamic_symbol(enca_handle,"enca_set_filtering");
++	enca_set_garbage_test=find_dynamic_symbol(enca_handle,"enca_set_garbage_test");
++	enca_set_termination_strictness=find_dynamic_symbol(enca_handle,"enca_set_termination_strictness");
++	enca_set_significant=find_dynamic_symbol(enca_handle,"enca_set_significant");
++	enca_set_threshold=find_dynamic_symbol(enca_handle,"enca_set_threshold");
++	enca_charset_name=find_dynamic_symbol(enca_handle,"enca_charset_name");
++	enca_get_language_charsets=find_dynamic_symbol(enca_handle,"enca_get_language_charsets");
++	enca_analyser_alloc=find_dynamic_symbol(enca_handle,"enca_analyser_alloc");
++	enca_analyser_free=find_dynamic_symbol(enca_handle,"enca_analyser_free");
++	enca_analyse_const=find_dynamic_symbol(enca_handle,"enca_analyse_const");
++	if ((!enca_set_multibyte)||(!enca_set_interpreted_surfaces)||(!enca_set_ambiguity)||
++	   (!enca_set_filtering)||(!enca_set_garbage_test)||(!enca_set_termination_strictness)||
++	   (!enca_set_significant)||(!enca_set_threshold)||(!enca_charset_name)||
++	   (!enca_get_language_charsets)||(!enca_analyser_alloc)||(!enca_analyser_free)||
++	   (!enca_analyse_const)) {
++	    close_dynamic_lib(enca_handle);
++	    enca_handle=NULL;
++	    perror( "Enca dynamic: Incomplete function set" );
++	}
++    }
++}
++#endif
++
++
 +void xmms_autocharset_init(int m) {
 +    xmms_autocharset_mode=m;
 +    xmms_autocharset_changed=1;
++#ifdef DYNAMIC_ENCA 
++    charset_dynamic_enca_init();
++#endif
 +}
 +
 +void xmms_autocharset_free() {
@@ -1005,6 +1092,9 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +#endif
 +    xmms_autocharset_iconv_close();
 +#ifdef AUTO_ENCA_SUPPORT
++#ifdef DYNAMIC_ENCA
++    if (enca_handle) {
++#endif
 +    for (i=0;i<autocharset_list_ni;i++)
 +	if (!strcmp(autocharset_list[i].title,"Enca Library")) {
 +	    g_free(autocharset_list[i].title);
@@ -1017,6 +1107,14 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +	enca_analyser_free(enca);
 +	enca=NULL;
 +    }
++#ifdef DYNAMIC_ENCA
++    }
++    if (enca_handle) {
++	close_dynamic_lib(enca_handle);
++	enca_handle=NULL;
++    }
++    dynamic_enca_initialised=0;
++#endif
 +#endif
 +}
 +
@@ -1029,10 +1127,11 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +    
 +    if ((!xmms_autocharset_changed)&&(!xmms_charset_changed)) return;
 +    xmms_autocharset_iconv_close();
-+    xmms_autocharset_changed=-1;
++    xmms_autocharset_changed=0;
 +
 +    xmms_autocharset_number = xmms_autocharset_number_charsets(0);
 +    if (!xmms_autocharset_number) return;
++    xmms_autocharset_changed=-1;
 +    
 +    xmms_autocharset = (iconv_t*)malloc((xmms_autocharset_number+1)*sizeof(iconv_t));
 +    xmms_autocharset_id2utf = (iconv_t*)malloc((xmms_autocharset_number+1)*sizeof(iconv_t));
@@ -1152,11 +1251,12 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +static int autocharset_enca(char *buf, int len) {
 +    char *charset;
 +    EncaEncoding ee;
-+    int i;
++    int i,l;
 +
 +    if (!enca) return 0;
-+    if (!len) len=strlen(buf);
-+    ee=enca_analyse_const(enca,buf,len);
++    l=strlen(buf);
++    if ((len)&&(l>len)) l=len;
++    ee=enca_analyse_const(enca,buf,l);
 +    if (ee.charset<0) return 0;
 +    charset=enca_charset_name(ee.charset, ENCA_NAME_STYLE_ICONV);
 +    for (i=0;autocharset_list[enca_pos].encodings[i];i++) {
@@ -1327,10 +1427,16 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +    }
 +
 +#ifdef AUTO_ENCA_SUPPORT
++#ifdef DYNAMIC_ENCA
++    if (enca_handle) {
++#endif
 +    if (enca) {
 +	enca_analyser_free(enca);
 +	enca=NULL;
 +    }
++#ifdef DYNAMIC_ENCA
++    }
++#endif
 +#endif
 +
 +    if (current_language>=0) {
@@ -1338,6 +1444,10 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +	autocharset_list_ni=languages[current_language].n_autoenc;
 +	autocharset_list=languages[current_language].autoenc;
 +#ifdef AUTO_ENCA_SUPPORT
++#ifdef DYNAMIC_ENCA
++	charset_dynamic_enca_init();
++	if (enca_handle) {
++#endif
 +	if (autocharset_list_ni<CHARSET_MAX_AUTOENCODINGS) {
 +	    for (i=0;i<autocharset_list_ni;i++)
 +		if (!strcmp(autocharset_list[i].title,"Enca Library")) break;
@@ -1373,6 +1483,9 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +		}
 +	    }
 +	}
++#ifdef DYNAMIC_ENCA
++	}
++#endif
 +#endif
 +    }
 +}
@@ -1636,7 +1749,6 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +    if (xmms_autocharset_changed<0) return NULL;
 +    if (!xmms_autocharset_fs2id) return NULL;
 +
-+    
 +    if (check_file(path,buf)) return NULL;
 +    encodings = autocharset_list[xmms_autocharset_mode].encodings;
 +    
@@ -1645,7 +1757,6 @@ diff -dPNur xmms-1.2.8/libxmms/charset.c xmms-1.2.8-patched/libxmms/charset.c
 +	if ((xmms_autocharset_fs2id[i]!=(iconv_t)-1)&&(xmms_autocharset_fs2id[i]!=(iconv_t)-2)) {
 +	    tmp=xmms_charset_recode(xmms_autocharset_fs2id[i],buf,len,0);
 +	    if (tmp) {
-+		puts(tmp);
 +		if (check_file(path,tmp)) return tmp;
 +		free(tmp);
 +	    }
@@ -1757,13 +1868,318 @@ diff -dPNur xmms-1.2.8/libxmms/charset_config.h xmms-1.2.8-patched/libxmms/chars
 +struct autocharset_list_t *autocharset_list=autocharset_list_default;
 diff -dPNur xmms-1.2.8/libxmms/charset_defines.h xmms-1.2.8-patched/libxmms/charset_defines.h
 --- xmms-1.2.8/libxmms/charset_defines.h	1970-01-01 01:00:00.000000000 +0100
-+++ xmms-1.2.8-patched/libxmms/charset_defines.h	2003-10-24 03:04:12.000000000 +0200
-@@ -0,0 +1,5 @@
++++ xmms-1.2.8-patched/libxmms/charset_defines.h	2003-10-24 20:16:37.000000000 +0200
+@@ -0,0 +1,17 @@
++#define DYNAMIC_ENCA
++
++#ifdef HPUX
++#undef DYNAMIC_ENCA
++#endif
++
++#ifdef DYNAMIC_ENCA
++#define AUTO_ENCA_SUPPORT
++#define ENCA_LIB "libenca.so.0"
++#else
 +#undef AUTO_ENCA_SUPPORT
-+//#define AUTO_ENCA_SUPPORT
++#endif
++
++
 +#define CHARSET_MAX_ENCODINGS 16
 +#define CHARSET_MAX_AUTOENCODINGS 5
 +#define ENV_VARIABLE LC_CTYPE
+diff -dPNur xmms-1.2.8/libxmms/charset_fake_enca.h xmms-1.2.8-patched/libxmms/charset_fake_enca.h
+--- xmms-1.2.8/libxmms/charset_fake_enca.h	1970-01-01 01:00:00.000000000 +0100
++++ xmms-1.2.8-patched/libxmms/charset_fake_enca.h	2003-10-24 20:01:30.000000000 +0200
+@@ -0,0 +1,289 @@
++/* This header file is in the public domain. */
++#ifndef ENCA_H
++#define ENCA_H
++
++#include <stdlib.h>
++/* According to autoconf stdlib may not be enough for size_t */
++#include <sys/types.h>
++
++#ifdef __cplusplus
++extern "C" {
++#endif /* __cplusplus */
++
++/* Enumerated types */
++
++/**
++ * EncaSurface:
++ * @ENCA_SURFACE_EOL_CR: End-of-lines are represented with CR's.
++ * @ENCA_SURFACE_EOL_LF: End-of-lines are represented with LF's.
++ * @ENCA_SURFACE_EOL_CRLF: End-of-lines are represented with CRLF's.
++ * @ENCA_SURFACE_EOL_MIX: Several end-of-line types, mixed.
++ * @ENCA_SURFACE_EOL_BIN: End-of-line concept not applicable (binary data).
++ * @ENCA_SURFACE_MASK_EOL: Mask for end-of-line surfaces.
++ * @ENCA_SURFACE_PERM_21: Odd and even bytes swapped.
++ * @ENCA_SURFACE_PERM_4321: Reversed byte sequence in 4byte words.
++ * @ENCA_SURFACE_PERM_MIX: Chunks with both endianess, concatenated.
++ * @ENCA_SURFACE_MASK_PERM: Mask for permutation surfaces.
++ * @ENCA_SURFACE_QP: Quoted printables.
++ * @ENCA_SURFACE_REMOVE: Recode `remove' surface.
++ * @ENCA_SURFACE_UNKNOWN: Unknown surface.
++ * @ENCA_SURFACE_MASK_ALL: Mask for all bits, withnout #ENCA_SURFACE_UNKNOWN.
++ *
++ * Surface flags.
++ **/
++typedef enum { /*< flags >*/
++  ENCA_SURFACE_EOL_CR    = 1 << 0,
++  ENCA_SURFACE_EOL_LF    = 1 << 1,
++  ENCA_SURFACE_EOL_CRLF  = 1 << 2,
++  ENCA_SURFACE_EOL_MIX   = 1 << 3,
++  ENCA_SURFACE_EOL_BIN   = 1 << 4,
++  ENCA_SURFACE_MASK_EOL  = (ENCA_SURFACE_EOL_CR
++                            | ENCA_SURFACE_EOL_LF
++                            | ENCA_SURFACE_EOL_CRLF
++                            | ENCA_SURFACE_EOL_MIX
++                            | ENCA_SURFACE_EOL_BIN),
++  ENCA_SURFACE_PERM_21    = 1 << 5,
++  ENCA_SURFACE_PERM_4321  = 1 << 6,
++  ENCA_SURFACE_PERM_MIX   = 1 << 7,
++  ENCA_SURFACE_MASK_PERM  = (ENCA_SURFACE_PERM_21
++                             | ENCA_SURFACE_PERM_4321
++                             | ENCA_SURFACE_PERM_MIX),
++  ENCA_SURFACE_QP        = 1 << 8,
++  ENCA_SURFACE_REMOVE    = 1 << 13,
++  ENCA_SURFACE_UNKNOWN   = 1 << 14,
++  ENCA_SURFACE_MASK_ALL  = (ENCA_SURFACE_MASK_EOL
++                            | ENCA_SURFACE_MASK_PERM
++                            | ENCA_SURFACE_QP
++                            | ENCA_SURFACE_REMOVE)
++} EncaSurface;
++
++/**
++ * EncaNameStyle:
++ * @ENCA_NAME_STYLE_ENCA: Default, implicit charset name in Enca.
++ * @ENCA_NAME_STYLE_RFC1345: RFC 1345 charset name.
++ * @ENCA_NAME_STYLE_CSTOCS: Cstocs charset name.
++ * @ENCA_NAME_STYLE_ICONV: Iconv charset name.
++ * @ENCA_NAME_STYLE_HUMAN: Human comprehensible description.
++ *
++ * Charset naming styles and conventions.
++ **/
++typedef enum {
++  ENCA_NAME_STYLE_ENCA,
++  ENCA_NAME_STYLE_RFC1345,
++  ENCA_NAME_STYLE_CSTOCS,
++  ENCA_NAME_STYLE_ICONV,
++  ENCA_NAME_STYLE_HUMAN
++} EncaNameStyle;
++
++/**
++ * EncaCharsetFlags:
++ * @ENCA_CHARSET_7BIT: Characters are represented with 7bit characters.
++ * @ENCA_CHARSET_8BIT: Characters are represented with bytes.
++ * @ENCA_CHARSET_16BIT: Characters are represented with 2byte words.
++ * @ENCA_CHARSET_32BIT: Characters are represented with 4byte words.
++ * @ENCA_CHARSET_FIXED: One characters consists of one fundamental piece.
++ * @ENCA_CHARSET_VARIABLE: One character consists of variable number of
++ * fundamental pieces.
++ * @ENCA_CHARSET_BINARY: Charset is binary from ASCII viewpoint.
++ * @ENCA_CHARSET_REGULAR: Language dependent (8bit) charset.
++ * @ENCA_CHARSET_MULTIBYTE: Multibyte charset.
++ *
++ * Charset properties.
++ *
++ * Flags %ENCA_CHARSET_7BIT, %ENCA_CHARSET_8BIT, %ENCA_CHARSET_16BIT,
++ * %ENCA_CHARSET_32BIT tell how many bits a `fundamental piece' consists of.
++ * This is different from bits per character; r.g. UTF-8 consists of 8bit
++ * pieces (bytes), but character can be composed from 1 to 6 of them.
++ **/
++typedef enum { /*< flags >*/
++  ENCA_CHARSET_7BIT      = 1 << 0,
++  ENCA_CHARSET_8BIT      = 1 << 1,
++  ENCA_CHARSET_16BIT     = 1 << 2,
++  ENCA_CHARSET_32BIT     = 1 << 3,
++  ENCA_CHARSET_FIXED     = 1 << 4,
++  ENCA_CHARSET_VARIABLE  = 1 << 5,
++  ENCA_CHARSET_BINARY    = 1 << 6,
++  ENCA_CHARSET_REGULAR   = 1 << 7,
++  ENCA_CHARSET_MULTIBYTE = 1 << 8
++} EncaCharsetFlags;
++
++/**
++ * EncaErrno:
++ * @ENCA_EOK: OK.
++ * @ENCA_EINVALUE: Invalid value (usually of an option).
++ * @ENCA_EEMPTY: Sample is empty.
++ * @ENCA_EFILTERED: After filtering, (almost) nothing remained.
++ * @ENCA_ENOCS8: Mulitibyte tests failed and language contains no 8bit charsets.
++ * @ENCA_ESIGNIF: Too few significant characters.
++ * @ENCA_EWINNER: No clear winner.
++ * @ENCA_EGARBAGE: Sample is garbage.
++ *
++ * Error codes.
++ **/
++typedef enum {
++  ENCA_EOK = 0,
++  ENCA_EINVALUE,
++  ENCA_EEMPTY,
++  ENCA_EFILTERED,
++  ENCA_ENOCS8,
++  ENCA_ESIGNIF,
++  ENCA_EWINNER,
++  ENCA_EGARBAGE
++} EncaErrno;
++
++/**
++ * ENCA_CS_UNKNOWN:
++ *
++ * Unknown character set id.
++ *
++ * Use enca_charset_is_known() to check for unknown charset instead of direct
++ * comparsion.
++ **/
++#define ENCA_CS_UNKNOWN (-1)
++
++/**
++ * ENCA_NOT_A_CHAR:
++ *
++ * Not-a-character in unicode tables.
++ **/
++#define ENCA_NOT_A_CHAR 0xffff
++
++/* Published (opaque) typedefs  */
++typedef struct _EncaAnalyserState *EncaAnalyser;
++
++/* Public (transparent) typedefs */
++typedef struct _EncaEncoding EncaEncoding;
++
++/**
++ * EncaEncoding:
++ * @charset: Numeric charset identifier.
++ * @surface: Surface flags.
++ *
++ * Encoding, i.e. charset and surface.
++ *
++ * This is what enca_analyse() and enca_analyse_const() return.
++ *
++ * The @charset field is an opaque numerical charset identifier, which has no
++ * meaning outside Enca library.
++ * You will probably want to use it only as enca_charset_name() argument.
++ * It is only guaranteed not to change meaning
++ * during program execution time; change of its interpretation (e.g. due to
++ * addition of new charsets) is not considered API change.
++ *
++ * The @surface field is a combination of #EncaSurface flags.  You may want
++ * to ignore it completely; you should use enca_set_interpreted_surfaces()
++ * to disable weird surfaces then.
++ **/
++struct _EncaEncoding { int charset; EncaSurface surface; };
++
++void          (*enca_set_multibyte)              (EncaAnalyser analyser, int multibyte);
++void          (*enca_set_interpreted_surfaces)   (EncaAnalyser analyser, int interpreted_surfaces);
++void          (*enca_set_ambiguity)              (EncaAnalyser analyser, int ambiguity);
++void          (*enca_set_filtering)              (EncaAnalyser analyser, int filtering);
++void          (*enca_set_garbage_test)           (EncaAnalyser analyser, int garabage_test);
++void          (*enca_set_termination_strictness) (EncaAnalyser analyser, int termination_strictness);
++int           (*enca_set_significant)            (EncaAnalyser analyser, size_t significant);
++int           (*enca_set_threshold)              (EncaAnalyser analyser, double threshold);
++const char*   (*enca_charset_name)               (int charset, EncaNameStyle whatname);
++int*          (*enca_get_language_charsets)      (const char *langname, size_t *n);
++EncaAnalyser  (*enca_analyser_alloc)             (const char *langname);
++void          (*enca_analyser_free)              (EncaAnalyser analyser);
++EncaEncoding  (*enca_analyse_const)              (EncaAnalyser analyser,const unsigned char *buffer, size_t size);
++
++/**
++ * enca_charset_is_known:
++ * @cs: Charset id.
++ *
++ * Expands to nonzero when the charset is known (i.e. it's not
++ * ENCA_CS_UNKNOWN).
++ **/
++#define enca_charset_is_known(cs) \
++  ((cs) != ENCA_CS_UNKNOWN)
++
++/**
++ * enca_charset_is_7bit:
++ * @cs: Charset id.
++ *
++ * Expands to nonzero when characters are represented with 7bit characters.
++ **/
++#define enca_charset_is_7bit(cs) \
++  (enca_charset_properties(cs) & ENCA_CHARSET_7BIT)
++
++/**
++ * enca_charset_is_8bit:
++ * @cs: Charset id.
++ *
++ * Expands to nonzero when characters are represented with bytes.
++ **/
++#define enca_charset_is_8bit(cs) \
++  (enca_charset_properties(cs) & ENCA_CHARSET_8BIT)
++
++/**
++ * enca_charset_is_16bit:
++ * @cs: Charset id.
++ *
++ * Expands to nonzero when characters are represented with 2byte words.
++ **/
++#define enca_charset_is_16bit(cs) \
++  (enca_charset_properties(cs) & ENCA_CHARSET_16BIT)
++
++/**
++ * enca_charset_is_32bit:
++ * @cs: Charset id.
++ *
++ * Expands to nonzero when characters are represented with 4byte words.
++ **/
++#define enca_charset_is_32bit(cs) \
++  (enca_charset_properties(cs) & ENCA_CHARSET_32BIT)
++
++/**
++ * enca_charset_is_fixed:
++ * @cs: Charset id.
++ *
++ * Expands to nonzero when one characters consists of one fundamental piece.
++ **/
++#define enca_charset_is_fixed(cs) \
++  (enca_charset_properties(cs) & ENCA_CHARSET_FIXED)
++
++/**
++ * enca_charset_is_variable:
++ * @cs: Charset id.
++ *
++ * Expands to nonzero when one character consists of variable number of
++ * fundamental pieces.
++ **/
++#define enca_charset_is_variable(cs) \
++  (enca_charset_properties(cs) & ENCA_CHARSET_VARIABLE)
++
++/**
++ * enca_charset_is_binary:
++ * @cs: Charset id.
++ *
++ * Expands to nonzero when charset is binary from ASCII viewpoint.
++ **/
++#define enca_charset_is_binary(cs) \
++  (enca_charset_properties(cs) & ENCA_CHARSET_BINARY)
++
++/**
++ * enca_charset_is_regular:
++ * @cs: Charset id.
++ *
++ * Expands to nonzero when charset is language dependent (8bit) charset.
++ **/
++#define enca_charset_is_regular(cs) \
++  (enca_charset_properties(cs) & ENCA_CHARSET_REGULAR)
++
++/**
++ * enca_charset_is_multibyte:
++ * @cs: Charset id.
++ *
++ * Expands to nonzero when charset is multibyte.
++ **/
++#define enca_charset_is_multibyte(cs) \
++  (enca_charset_properties(cs) & ENCA_CHARSET_MULTIBYTE)
++
++#ifdef __cplusplus
++}
++#endif /* __cplusplus */
++
++#endif
 diff -dPNur xmms-1.2.8/libxmms/charset.h xmms-1.2.8-patched/libxmms/charset.h
 --- xmms-1.2.8/libxmms/charset.h	1970-01-01 01:00:00.000000000 +0100
 +++ xmms-1.2.8-patched/libxmms/charset.h	2003-10-24 13:31:19.000000000 +0200
