@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmclockmon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.6 2003/08/18 01:38:12 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/ChangeLog,v 1.7 2003/08/25 19:55:09 weeve Exp $
+
+  25 Aug 2003; Jason Wever <weeve@gentoo.org> wmclockmon-0.2.0.ebuild:
+  Marked stable for sparc to fix bug #27311.
 
   17 Aug 2003; Nick Hadaway <raker@gentoo.org> wmclockmon-0.2.0.ebuild:
   Added gtk+ to DEPEND.  Cleaned up the ebuild and added docs.
