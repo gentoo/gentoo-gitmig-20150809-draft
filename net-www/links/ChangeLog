@@ -1,6 +1,11 @@
 # ChangeLog for net-www/links
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.20 2002/12/15 11:58:45 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.21 2003/01/30 23:30:09 foser Exp $
+
+*links-2.1_pre7 (30 Jan 2003)
+
+  30 Jan 2003; foser <foser@gentoo.org> links-2.1_pre7.ebuild :
+  New version
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
