@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=aMSN
+Exec=amsn
+Icon=messenger.png
+Info=AMSN
+Comment="MSN Messenger for Linux"
+Comment[fr]="MSN Messenger pour Linux"
+Comment[de]="MSN Messenger für Linux"
+Terminal=0
+Type=Application
+Categories=Application;Network;
