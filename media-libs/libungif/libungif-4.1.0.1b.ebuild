@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.1b.ebuild,v 1.15 2004/10/02 22:24:21 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.1b.ebuild,v 1.16 2004/11/06 08:50:27 usata Exp $
 
 inherit eutils libtool
 
@@ -58,5 +58,24 @@ pkg_postinst() {
 		einfo "provided by this package.  If you would rather use the binary"
 		einfo "from giflib, please set the gif USE flag, and re-emerge both"
 		einfo "this and giflib"
+	fi
+}
+
+src_test() {
+	if has_version 'media-gfx/xv' ; then
+		if [ -z "$DISPLAY" ] || ! (/usr/X11R6/bin/xhost &>/dev/null) ; then
+			ewarn
+			ewarn "You are not authorised to conntect to X server to make check."
+			ewarn "Disabling make check."
+			ewarn
+			epause; ebeep; epause
+		else
+			make check || die "make check failed"
+		fi
+	else
+		ewarn
+		ewarn "You need media-gfx/xv to run src_test for this package."
+		ewarn
+		epause; ebeep; epause
 	fi
 }

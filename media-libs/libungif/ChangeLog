@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libungif
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.19 2004/10/02 22:24:21 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.20 2004/11/06 08:50:27 usata Exp $
+
+  06 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> libungif-4.1.0.1b.ebuild,
+  libungif-4.1.3.ebuild:
+  Disabled make check if xv is not installed. See bug #70135.
 
   02 Oct 2004; Travis Tilley <lv@gentoo.org> libungif-4.1.0.1b.ebuild:
   fixed the libdir sandbox violations for the stable libungif too
