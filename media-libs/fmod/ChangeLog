@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fmod
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.4 2003/10/30 00:33:51 lu_zero Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.5 2004/02/18 09:32:29 augustus Exp $
+
+  18 Feb 2004; <augustus@gentoo.org> fmod-3.70.ebuild:
+  Added ~amd64 keyword.
 
   30 Oct 2003; Luca Barbato <lu_zero@gentoo.org> fmod-3.62.ebuild:
   Marked ppc
