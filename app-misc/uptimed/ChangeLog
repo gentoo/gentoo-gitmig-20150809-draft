@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.10 2004/02/18 11:20:40 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.11 2004/02/25 06:52:09 pyrania Exp $
+
+  25 Feb 2004; Markus Nigbur <pyrania@gentoo.org> uptimed-0.3.1.ebuild:
+  Added cgi sample configuration files.
 
 *uptimed-0.3.1 (18 Feb 2004)
 
@@ -12,7 +15,7 @@
 
 *uptimed-0.3.0-r1 (20 Sep 2003)
 
-  20 Sep 2003; Markus Nigbur,,, <pyrania@gentoo.org> uptimed-0.3.0-r1.ebuild,
+  20 Sep 2003; Markus Nigbur <pyrania@gentoo.org> uptimed-0.3.0-r1.ebuild,
   files/uptimed:
   Altered initscript to integrate into Gentoo's initsystem.
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.1.ebuild,v 1.1 2004/02/18 11:20:40 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.1.ebuild,v 1.2 2004/02/25 06:52:09 pyrania Exp $
 
 DESCRIPTION="Standard informational utilities and process-handling tools"
 SRC_URI="http://unixcode.org/downloads/uptimed/${P}.tar.bz2"
@@ -27,6 +27,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	dodoc README NEWS TODO AUTHORS COPYING CREDITS
+	dodoc INSTALL.cgi sample-cgi/*
 	exeinto /etc/init.d ; newexe ${FILESDIR}/uptimed uptimed
 }
 
