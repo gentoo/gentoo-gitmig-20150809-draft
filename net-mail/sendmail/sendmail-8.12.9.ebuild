@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.9.ebuild,v 1.1 2003/03/30 13:28:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.9.ebuild,v 1.2 2003/03/31 00:52:01 avenj Exp $
 
 IUSE="ssl ldap sasl berkdb tcpd gdbm"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.sendmail.org"
 
 LICENSE="Sendmail"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 
 PROVIDE="virtual/mta"
 DEPEND="net-dns/hesiod
