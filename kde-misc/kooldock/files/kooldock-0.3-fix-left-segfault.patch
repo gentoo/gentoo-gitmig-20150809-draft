@@ -1,0 +1,11 @@
+--- kooldock/kooldock/kooldock.cpp	2004-08-11 19:36:00.000000000 +1200
++++ kooldock/kooldock/kooldock.cpp	2005-03-30 14:15:49.000000000 +1200
+@@ -999,7 +999,7 @@
+       else
+       {
+          // the rest of the icons
+-         xosdw->move(x + (cur_cx[i] - iwSmall/2 + adjust + SPACE_W) - (xosdw->w/2), dh - h - xosdw->h);
++         if ((int)i > 0) xosdw->move(x + (cur_cx[i] - iwSmall/2 + adjust + SPACE_W) - (xosdw->w/2), dh - h - xosdw->h);
+       }
+       if(xosd_st==0)
+       {

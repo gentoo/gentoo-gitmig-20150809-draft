@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/kooldock
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.6 2005/01/13 03:07:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kooldock/ChangeLog,v 1.7 2005/03/31 22:54:36 cryos Exp $
+
+*kooldock-0.3-r1 (31 Mar 2005)
+
+  31 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/kooldock-0.3-fix-left-segfault.patch, +kooldock-0.3-r1.ebuild:
+  Patched to stop the segfault on exit left, thanks to David Leaver
+  <danzel@localhost.geek.nz> for the patch. Also marked ~amd64 as it now works
+  properly. Closes bug 85071.
 
   12 Jan 2005; Jason Wever <weeve@gentoo.org> kooldock-0.3.ebuild:
   Stable on sparc.
