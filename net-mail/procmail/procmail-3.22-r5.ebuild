@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r5.ebuild,v 1.5 2002/12/10 20:23:34 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r5.ebuild,v 1.6 2002/12/15 01:09:39 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
@@ -18,7 +18,7 @@ PROVIDE="virtual/mda"
 
 SLOT="0"
 LICENSE="Artistic | GPL"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 ~alpha"
 
 src_compile() {
 

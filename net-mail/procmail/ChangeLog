@@ -1,9 +1,7 @@
 # ChangeLog for net-mail/procmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.13 2002/12/13 11:00:08 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.14 2002/12/15 01:09:39 agriffis Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *procmail-3.22-r5 (28 Oct 2002)
 	
   28 Oct 2002; Grant Goodyear <g2boojum@gentoo.org> procmail-3.22-r5.ebuild :
@@ -14,6 +12,8 @@
   in maildir form (meaning messages were dumped into ~/.maildir instead of
   ~/.maildir/new.  So, I restored the creation of /etc/procmailrc.
 
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
   09 Dec 2002; Jon Portnoy <avenj@gentoo.org> procmail-3.22-r5.ebuild :
 
   Updated ebuild to respect icc USE flag, no revision bump necessary.
@@ -21,6 +21,10 @@
   10 Dec 2002; Jon Portnoy <avenj@gentoo.org> procmail-3.22-r5.ebuild :
 
   Revert USE to prevent a dependency blockage.
+
+  14 Dec 2002; Aron Griffis <agriffis@gentoo.org> procmail-3.22-r5.ebuild :
+
+  Added ~alpha to KEYWORDS
 
 *procmail-3.22-r4 (5 Sep 2002)
 	
