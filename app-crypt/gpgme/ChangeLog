@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.65 2005/02/14 02:29:42 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.66 2005/02/22 09:36:57 hardave Exp $
+
+  22 Feb 2005; Hardave Riar <hardave@gentoo.org> gpgme-0.9.0-r1.ebuild:
+  Marked ~mips
 
   13 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> gpgme-1.0.2.ebuild:
   Modified to work on ppc-macos
