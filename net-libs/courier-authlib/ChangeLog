@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.16 2004/12/22 19:40:01 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.17 2004/12/24 10:22:01 corsair Exp $
+
+  24 Dec 2004; Markus Rothe <corsair@gentoo.org>
+  courier-authlib-0.51_pre.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #75450
 
   22 Dec 2004; Tuan Van <langthang@gentoo.org>
   courier-authlib-0.51_pre.ebuild:
