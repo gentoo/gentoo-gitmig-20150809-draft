@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/pysoulseek
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.22 2003/06/10 05:56:53 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.23 2003/06/13 22:42:19 liquidx Exp $
+
+  13 Jun 2003; Alastair Tse <liquidx@gentoo.org> pysoulseek-1.2.0-r1.ebuild,
+  pysoulseek-1.2.0-r2.ebuild, pysoulseek-1.2.0.ebuild:
+  updated pyogg pyvorbis deps
 
 *pysoulseek-1.2.0-r2 (09 Jun 2003)
 

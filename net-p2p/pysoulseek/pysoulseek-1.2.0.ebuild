@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.0.ebuild,v 1.1 2003/05/22 08:39:02 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.0.ebuild,v 1.2 2003/06/13 22:42:19 liquidx Exp $
 
 IUSE="oggvorbis hyriand"
 
@@ -27,7 +27,7 @@ KEYWORDS="~x86 ~ppc ~sparc"
 DEPEND=">=dev-lang/python-2.1
 	>=dev-python/wxPython-2.4.0.1
 	~x11-libs/wxGTK-2.4.0
-	oggvorbis? ( media-libs/pyvorbis media-libs/pyogg )"
+	oggvorbis? ( dev-python/pyvorbis dev-python/pyogg )"
 
 RDEPEND=${DEPEND}
 
