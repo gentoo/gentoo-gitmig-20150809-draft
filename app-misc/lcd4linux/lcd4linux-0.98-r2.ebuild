@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.98-r1.ebuild,v 1.1 2002/05/20 10:54:06 seemant Exp
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.98-r2.ebuild,v 1.6 2002/10/17 00:39:19 vapier Exp $
 
 IUSE="kde pda png"
 

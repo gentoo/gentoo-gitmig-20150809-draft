@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/skel.build,v 1.11 2001/12/06 22:12:34 drobbins Exp
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/krename-2.3.0.ebuild,v 1.8 2002/10/17 00:38:42 vapier Exp $
 
 inherit kde-base
 
