@@ -1,0 +1,11 @@
+--- Botan-1.4.4/configure.pl	2004-12-02 23:38:44.000000000 -0500
++++ Botan/configure.pl	2004-12-04 12:45:22.189044368 -0500
+@@ -832,7 +832,7 @@
+     # didn't get output, assume it's a buggy GCC. There is no reduction in code
+     # quality, etc, so even if we're wrong it's no big deal.
+ 
+-    if(($gcc_version =~ /gcc version 3\.[34]/) ||
++    if(($gcc_version =~ /3\.[34]/) ||
+        ($gcc_version =~ /2\.95\.[0-4]/) ||
+        ($gcc_version eq '' && $^O eq 'cygwin'))
+     {
