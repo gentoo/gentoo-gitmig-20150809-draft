@@ -1,13 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.4.2-r1.ebuild,v 1.3 2002/12/09 04:26:11 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.4.2-r1.ebuild,v 1.4 2002/12/27 18:14:48 azarah Exp $
 
-inherit flag-o-matic
+inherit eutils libtool flag-o-matic
 
 IUSE="doc"
 
-S=${WORKDIR}/${P}
-
+S="${WORKDIR}/${P}"
 DESCRIPTION="Streaming media framework"
 SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.bz2"
 HOMEPAGE="http://gstreamer.sourceforge.net"
@@ -30,12 +29,15 @@ DEPEND=">=dev-libs/glib-2.0.4
 	
 src_unpack() {
 	unpack ${A}
+	
 	cd ${S}
-	# patch for problems compiling when specifying USE="doc"
-	patch -p1 < ${FILESDIR}/xsl.diff || die "patch failed"
+	# Patch for problems compiling when specifying USE="doc"
+	epatch ${FILESDIR}/xsl.diff
 }
 
 src_compile() {
+	elibtoolize
+
 	strip-flags
 	replace-flags "-O3" "-O2"
 

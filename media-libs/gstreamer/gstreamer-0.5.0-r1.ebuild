@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.5.0.ebuild,v 1.1 2002/12/26 23:22:18 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.5.0-r1.ebuild,v 1.1 2002/12/27 18:14:48 azarah Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -21,14 +21,12 @@ DEPEND=">=dev-libs/glib-2.0.4
 	doc? ( >=dev-util/gtk-doc-0.9
 		media-gfx/transfig
 		dev-libs/libxslt
-		=app-text/docbook-xsl-stylesheets-1.57.0*
+		app-text/docbook-xsl-stylesheets
 		app-text/xmltex
 		app-text/xpdf
 		app-text/ghostscript )
 	x86? ( >=dev-lang/nasm-0.90 )
 	>=sys-libs/zlib-1.1.4"
-# !!! NOTE: if you change above app-text/docbook-xsl-stylesheets       !!!
-# !!!       DEPEND, you also have to ajust ${FILESDIR}/${P}-xsl.patch  !!!
 	
 src_unpack() {
 	unpack ${A}
@@ -39,7 +37,7 @@ src_unpack() {
 	# and delete files it should not.
 	# <azarah@gentoo.org> (27 Dec 2002).
 	cd ${S}
-	epatch ${FILESDIR}/${P}-xsl.patch
+	epatch ${FILESDIR}/${P}-xsl-use-current.patch
 	epatch ${FILESDIR}/${P}-no-rm-html.devhelp.patch
 }
 

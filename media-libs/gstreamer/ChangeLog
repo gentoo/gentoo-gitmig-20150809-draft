@@ -1,7 +1,13 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.13 2002/12/26 23:22:18 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.14 2002/12/27 18:14:48 azarah Exp $
 
+*gstreamer-0.5.0-r1 (27 Dec 2002)
+
+  27 Dec 2002; Martin Schlemmer <azarah@gentoo.org> gstreamer-0.5.0-r1.ebuild :
+  Redo previous fix.  We path html.xsl to rather need the 'current' version of
+  docbook-xsl-stylesheets, and not a specific version.  This voids the need to
+  depend on a specific version ...
 
 *gstreamer-0.5.0 (26 Dec 2002)
 
