@@ -1,36 +1,30 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-1.0.ebuild,v 1.1 2002/10/20 07:33:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-1.0.ebuild,v 1.2 2002/10/28 07:21:51 azarah Exp $
 
-S="${WORKDIR}/${PN}2"
+S=${WORKDIR}/${P}
 DESCRIPTION="A utility to create a fonts.scale file from a set of TrueType fonts"
-SRC_URI="mirror://gentoo/ttmkfdir2-${PV}.tar.bz2"
+SRC_URI="http://www.joerg-pommnitz.de/TrueType/ttmkfdir.tar.gz"
 HOMEPAGE="http://www.joerg-pommnitz.de/TrueType/xfsft.html"
-
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 sparc sparc64 ppc"
 
-DEPEND=">=media-libs/freetype-2.0.8
-	>=sys-devel/flex-2.5.4a-r5
-	sys-devel/libtool"
+DEPEND="<media-libs/freetype-2.0"
 
 src_unpack() {
+	mkdir ${P}
+	cd ${P}
 	unpack ${A}
-
-	cd ${S}; patch -p1 < ${FILESDIR}/${P}-gentoo.patch || die
-
-	cp ${S}/Makefile ${S}/Makefile.orig
-	sed -e "s:CXXFLAGS=-Wall:CXXFLAGS=${CFLAGS} -Wall:" \
-		${S}/Makefile.orig > ${S}/Makefile
+	patch -p1 < ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {
+	make clean || die
 	make OPT="${CFLAGS}" || die
 }
 
-src_install() {
-	exeinto /usr/X11R6/bin
-	doexe ${S}/ttmkfdir
+src_install () {
+	make DESTDIR=${D} install || die
+	dodoc README
 }
-
