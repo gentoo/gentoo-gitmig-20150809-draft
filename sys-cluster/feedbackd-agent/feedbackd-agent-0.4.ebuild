@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/feedbackd-agent/feedbackd-agent-0.3.1.ebuild,v 1.7 2005/01/27 00:48:01 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/feedbackd-agent/feedbackd-agent-0.4.ebuild,v 1.1 2005/01/27 00:48:01 xmerlin Exp $
 
-inherit eutils flag-o-matic
+inherit flag-o-matic
 
 DESCRIPTION="system for dynamic feedback of server loads in a Linux Virtual Server (LVS)-based cluster"
 HOMEPAGE="http://www.redfishsoftware.com.au/projects/feedbackd/"
@@ -17,13 +17,6 @@ DEPEND="virtual/libc
 	dev-libs/libxml2
 	dev-lang/perl"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/compile-gnu-source.patch
-	append-flags -O2
-}
-
 src_compile() {
 	econf \
 		--sysconfdir=/etc \
@@ -31,10 +24,12 @@ src_compile() {
 		--with-xml-config=/usr/bin/xml2-config \
 		--with-perl=/usr/bin/perl \
 		|| die "bad ./configure"
-	make || die
+
+	emake || die
 }
 
 src_install() {
+	#make DESTDIR=${D} install || die
 	einstall || die
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
