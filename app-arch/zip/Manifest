@@ -1,9 +1,19 @@
-MD5 e52a216726ac997e42cccee6b1330f43 ChangeLog 3257
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 72df670c97d30d2a974183a3e12340ae ChangeLog 3352
 MD5 be95da43ccf9816b592b241797c372fa zip-2.3-r2.ebuild 984
+MD5 a3c428a8b65f7de4a92e5cd6d4d0f0e5 zip-2.3-r4.ebuild 1104
 MD5 a3c80560391ef7908418ca7b8fffb5e2 zip-2.3-r3.ebuild 1062
-MD5 8788380279f9a6c7314c676da7c4e475 zip-2.3-r4.ebuild 1106
+MD5 ceb628bca144581dbeff71136122a8e2 files/zip-CAN-2004-1010.patch 673
 MD5 0fae982a1638aacea39c862dd7ebbea6 files/digest-zip-2.3-r2 113
-MD5 0fae982a1638aacea39c862dd7ebbea6 files/digest-zip-2.3-r3 113
 MD5 6cf67950f3003a17d048c9a3ce4f243a files/zip-2.3-unix_configure-pic.patch 444
 MD5 0fae982a1638aacea39c862dd7ebbea6 files/digest-zip-2.3-r4 113
-MD5 ceb628bca144581dbeff71136122a8e2 files/zip-CAN-2004-1010.patch 673
+MD5 0fae982a1638aacea39c862dd7ebbea6 files/digest-zip-2.3-r3 113
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjOi3wDHaUUJ0mYMRAvvMAJ9449b6Ohck/DxIVJmw5AzoAOH8uACgnZAd
+GVecBnO/ABBx5guUDxTUyZ8=
+=qqRc
+-----END PGP SIGNATURE-----
