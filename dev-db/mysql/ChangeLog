@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.38 2003/03/01 23:32:39 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.39 2003/03/01 23:38:34 woodchip Exp $
 
 *mysql-4.0.11a (01 Mar 2003)
 
@@ -20,6 +20,9 @@
 
 *mysql-3.23.55 (29 Jan 2003)
   
+  01 Mar 2003; Donny Davies <woodchip@gentoo.org> : mysql-3.23.55.ebuild :
+  Add a build fix for glibc-2.3.2_pre.  Fix readline configure flags, sigh.
+
   06 Feb 2003; Will Woods <wwoods@gentoo.org>: mysql-3.23.54a.ebuild, mysql-3.23.54a.ebuild
   Disable berkdb on alpha, since it's not supported there.
 
