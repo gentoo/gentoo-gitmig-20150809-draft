@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r12.ebuild,v 1.14 2003/09/18 05:56:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r12.ebuild,v 1.15 2003/09/29 21:04:09 usata Exp $
 
 inherit flag-o-matic
 filter-flags "-fstack-protector"
@@ -61,6 +61,9 @@ src_unpack() {
 	# Fix for dvips to print directly.
 	patch -p1 < ${FILESDIR}/teTeX-1.0-dvips.diff || die
 
+	# Fix picins.sty 
+	patch -p1 < ${FILESDIR}/${P}-picins.diff || die
+
 	# Fix problem where the *.fmt files are not generated due to the LaTeX
 	# source being older than a year.
 	local x
@@ -74,7 +77,6 @@ src_unpack() {
 	# IMPORTANT!  If you're having *.fmt problems, do this:
 	# fmtutil --all
 	# after the merge.
-
 }
 
 src_compile() {
