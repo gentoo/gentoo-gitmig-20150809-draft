@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.41 2004/10/23 05:44:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.42 2005/02/14 23:26:33 mr_bones_ Exp $
 
 inherit gnuconfig eutils flag-o-matic libtool
 
@@ -29,7 +29,7 @@ src_unpack() {
 	gnuconfig_update
 	append-flags -fomit-frame-pointer
 	uclibctoolize
-	( use ppc-macos || use macos ) && darwintoolize
+	use ppc-macos && darwintoolize
 }
 
 src_compile() {
