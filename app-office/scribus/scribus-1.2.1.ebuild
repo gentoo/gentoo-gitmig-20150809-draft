@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.2.1.ebuild,v 1.1 2005/01/08 15:22:05 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.2.1.ebuild,v 1.2 2005/01/27 13:21:12 hanno Exp $
 
-inherit kde-functions
+inherit kde-functions eutils
 need-qt 3
 
 DESCRIPTION="Desktop Publishing (DTP) and Layout program for Linux."
@@ -11,7 +11,7 @@ SRC_URI="http://www.scribus.org.uk/downloads/${PV}/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ppc64"
-IUSE="kde"
+IUSE=""
 
 DEPEND=">=x11-libs/qt-3.3.3
 	>=media-libs/freetype-2.1
@@ -33,16 +33,8 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog README TODO
 
-	# Fixing desktop.scribus
-	if use kde ; then
-		inherit kde-functions
-		set-kdedir 3
-		sed -e 's/local\///' scribus.desktop > desktop.scribus.2
-		echo "Name=Scribus" >> desktop.scribus.2
-		cp -f desktop.scribus.2 scribus.desktop
-		insinto ${PREFIX}/share/applnk/Graphics
-		doins scribus.desktop
-	fi
+	domenu scribus.desktop
+	doicon scribus/icons/scribusicon.png
 
 	dosym /usr/share/scribus/doc /usr/share/doc/${PF}/html
 }
