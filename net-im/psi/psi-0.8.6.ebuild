@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.6.ebuild,v 1.5 2002/09/14 17:43:30 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.6.ebuild,v 1.6 2002/10/05 05:39:21 drobbins Exp $
+
+IUSE="ssl"
 
 S=${WORKDIR}/${P}
 QV="1.0"

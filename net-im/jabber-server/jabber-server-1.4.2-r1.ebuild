@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r1.ebuild,v 1.3 2002/07/17 09:08:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r1.ebuild,v 1.4 2002/10/05 05:39:21 drobbins Exp $
+
+IUSE="ssl"
 
 S="${WORKDIR}/jabber-${PV}"
 DESCRIPTION="Open Source Jabber Server & JUD,AIM,MSN,ICQ,Yahoo and Conference transports"

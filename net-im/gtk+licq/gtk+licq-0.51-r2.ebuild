@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gtk+licq/gtk+licq-0.51-r2.ebuild,v 1.6 2002/07/17 09:08:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gtk+licq/gtk+licq-0.51-r2.ebuild,v 1.7 2002/10/05 05:39:21 drobbins Exp $
+
+IUSE="nls spell gnome"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+ interface for Licq, the KDE/QT ICQ client"

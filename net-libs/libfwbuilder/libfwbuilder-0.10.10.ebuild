@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /home/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-0.10.8.ebuild,v 1.0
 
+IUSE="ssl static"
+
 DESCRIPTION="A firewall GUI (library functions)"
 SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
 HOMEPAGE="http://fwbuilder.sourceforge.net/"

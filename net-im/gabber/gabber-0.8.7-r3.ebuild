@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.7-r3.ebuild,v 1.1 2002/08/30 20:44:45 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.7-r3.ebuild,v 1.2 2002/10/05 05:39:21 drobbins Exp $
+
+IUSE="xmms ssl nls crypt"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GNOME Jabber Client"

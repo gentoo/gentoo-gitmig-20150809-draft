@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.8.2.ebuild,v 1.1 2002/08/19 16:07:20 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.8.2.ebuild,v 1.2 2002/10/05 05:39:18 drobbins Exp $
+
+IUSE="nls"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A ncurses ICQ/Yahoo!/MSN Client"
