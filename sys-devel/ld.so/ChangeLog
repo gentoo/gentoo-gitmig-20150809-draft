@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/ld.so
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ld.so/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ld.so/ChangeLog,v 1.2 2002/11/07 19:53:56 azarah Exp $
+
+*ld.so-1.9.11-r3 (7 Nov 2002)
+
+  7 Nov 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Fix ld.so to install only for ARCH=x86, and be a stub for all the rest.
 
 *ld.so-1.9.11-r2 (1 Feb 2002)
 
