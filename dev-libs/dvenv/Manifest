@@ -1,3 +1,13 @@
-MD5 1eba3c703acd7d71ffa2aeaa463d31ec ChangeLog 581
-MD5 5a0ecfe8323195a3caa786ab6168fbce dvenv-0.2.2.ebuild 623
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 90d5b27f5bdf0c609345c61a0ca41612 dvenv-0.2.2.ebuild 693
+MD5 1f6584b0508d029477dc10c44fee766c ChangeLog 689
 MD5 c42cc75097a337cb937538324a491c7f files/digest-dvenv-0.2.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB+HG4gMUyd/cdjWsRAhOGAJ9r6daGojW5rZ75xIinc5R6DMimHQCfWx3x
+IpGvryvNGsPUcn6HmnFZHyk=
+=4zDx
+-----END PGP SIGNATURE-----
