@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.23 2003/09/14 07:06:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.24 2003/09/24 20:07:15 agriffis Exp $
+
+*hotplug-20030805-r1 (24 Sep 2003)
+
+  24 Sep 2003; Aron Griffis <agriffis@gentoo.org> hotplug-20030805-r1.ebuild,
+  files/hotplug.functions.patch:
+  Add patch to fix bogus error messages from hotplug.functions
 
 *hotplug-20030805 (13 Sep 2003)
 
