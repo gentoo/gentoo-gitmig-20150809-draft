@@ -1,2 +1,14 @@
-MD5 361edc6a1833f7337a7d6d360ecd5e7b javolution-1.1.0.ebuild 838
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d2dc550fa9f194c06acd9d61a875e3d2 javolution-1.1.0.ebuild 941
+MD5 2400f40629d727513c394ea0cf06f08a ChangeLog 412
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 13e3853a9a71a7185517fea0c966988c files/digest-javolution-1.1.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBl2JF/rLF9B432nYRAh6/AJ9yTip0Nzdg9BBfWR5J1FiGWV5HrACfT+n7
+bFEm94uNp0D7w/ku/4/KVRU=
+=DyVO
+-----END PGP SIGNATURE-----
