@@ -5,12 +5,12 @@ MD5 a7700a2cb6070e1977b8f9ef790c67ad mailman-2.1.ebuild 2489
 MD5 ddc361a8f2c9e4ae26324c5846665cef mailman-2.1.1-r2.ebuild 2713
 MD5 04c7220a7f0eb8ce7d7da969992b1c87 ChangeLog 1486
 MD5 648adfcb9a609c3b9977421a2b8eb606 mailman-2.1.1-r3.ebuild 2867
-MD5 ff41a2443653c601e2f80dcb5a87b004 files/README.gentoo 1368
+MD5 9e00a0641afbe041944feb97bfb5f80d files/README.gentoo 1370
 MD5 55be2eab933580039c9feb4796c3bcf9 files/digest-mailman-2.0.12 63
 MD5 2172743b0a9160821702fe304a875392 files/digest-mailman-2.1 61
 MD5 3163b3164584897610113805a484fd2d files/digest-mailman-2.1.1 63
 MD5 3163b3164584897610113805a484fd2d files/digest-mailman-2.1.1-r1 63
-MD5 e3b4f52bd2ed7d3261bf7855fd8f4897 files/mailman.conf 406
+MD5 fe71ab4dfe5cf773c56053a21ce6a7d6 files/mailman.conf 410
 MD5 4e8df002cf51ad9f2f2195c26246aaba files/mailman.rc 559
 MD5 3163b3164584897610113805a484fd2d files/digest-mailman-2.1.1-r2 63
 MD5 3163b3164584897610113805a484fd2d files/digest-mailman-2.1.1-r3 63
