@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.12.ebuild,v 1.11 2004/12/06 01:31:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.12.ebuild,v 1.12 2004/12/06 22:07:11 pyrania Exp $
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 IUSE="nas esd motif opengl truetype gtk pam"
 
