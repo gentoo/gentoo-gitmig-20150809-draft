@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.54 2004/12/31 00:38:11 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.55 2005/02/05 21:14:02 centic Exp $
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
@@ -25,8 +25,13 @@
 
 *sip-3.11.1 (25 Sep 2004)
 
+  25 Sep 2004; Carsten Lohrke <carlo@gentoo.org> +sip-4.1.1.ebuild:
+  version bump
+
+*sip-3.11.1 (25 Sep 2004)
+
   25 Sep 2004; Carsten Lohrke <carlo@gentoo.org> +sip-3.11.1.ebuild,
-  -sip-3.11.ebuild, +sip-4.1.1.ebuild, -sip-4.1.ebuild:
+  -sip-3.11.ebuild, -sip-4.1.ebuild:
   version bump
 
 *sip-3.11 (20 Sep 2004)
@@ -35,7 +40,7 @@
   +sip-4.1.ebuild, -sip-4.1_rc1.ebuild:
   version bump
 
-  17 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> sip-4.1_rc1.ebuild:
+  17 Sep 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org> sip-4.1_rc1.ebuild:
   Fix src_uri.
 
 *sip-4.1_rc1 (16 Sep 2004)
@@ -45,7 +50,7 @@
 
 *sip-3.8-r1 (31 Aug 2004)
 
-  31 Aug 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
+  31 Aug 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org>
   +files/license-3.8.diff, +sip-3.8-r1.ebuild:
   Add back sip-3.8* as it's needed by PyQt-3.8.1.
 
@@ -57,10 +62,12 @@
   21 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> sip-4.0.1.ebuild:
   Marked stable on amd64.
 
+*sip-3.10.2 (18 Jul 2004)
+
   18 Jul 2004; Jason Wever <weeve@gentoo.org> sip-3.10.2.ebuild:
   Stable on sparc wrt bug #56712.
 
-  18 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> sip-3.10.2.ebuild:
+  18 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org> sip-3.10.2.ebuild:
   Stable on alpha.
 
   11 Jul 2004; Carsten Lohrke <carlo@gentoo.org> sip-3.10.2.ebuild:
@@ -147,7 +154,7 @@
 
 *sip-3.5 (25 Dec 2003)
 
-  25 Dec 2003; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> sip-3.5.ebuild:
+  25 Dec 2003; Bryan Ãstergaard,,, <kloeri@gentoo.org> sip-3.5.ebuild:
   Re-add sip-3.5.ebuild to satisfy PyQt dependency
 
   17 Dec 2003; Caleb Tennis <caleb@gentoo.org> sip-3.5.ebuild, sip-3.6.ebuild,
@@ -190,17 +197,17 @@
 
   14 Dec 2002; Bart Verwilst <verwilst@gentoo.org> :
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : 
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
   changed sparc ~sparc keywords
- 
-*sip-3.4 (18 Sep 2002) 
+
+*sip-3.4 (18 Sep 2002)
 
   18 Sep 2002; Sascha Schwabbauer <cybersystem@gentoo.org> :
   Added ppc to keywords.
 
   25 Jul 2003; Bart Verwilst <verwilst@gentoo.org> :
 
-*sip-3.3.2 (25 Jul 2002) 
+*sip-3.3.2 (25 Jul 2002)
 
   25 Jul 2002; Bart Verwilst <verwilst@gentoo.org> :
 
@@ -216,7 +223,7 @@
 *sip-3.0 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
