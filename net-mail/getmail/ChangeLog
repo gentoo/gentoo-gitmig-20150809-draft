@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/getmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.1 2002/06/18 18:09:01 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.2 2002/08/04 21:21:05 cselkirk Exp $
 
 *getmail-2.3.8 (18 Jun 2002)
+
+  4 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> getmail-2.3.8.ebuild :
+
+  Added ppc to KEYWORDS.
 
   18 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> ChangeLog :
 
