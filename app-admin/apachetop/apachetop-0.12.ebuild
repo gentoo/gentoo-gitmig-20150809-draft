@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.12.ebuild,v 1.1 2004/05/24 16:49:13 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.12.ebuild,v 1.2 2004/05/29 17:51:58 zul Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A realtime Apache log analyzer"
@@ -23,7 +23,7 @@ src_compile() {
 	then
 		sed -i 's%DEFAULT_LOGFILE "/var/httpd/apache_log"%DEFAULT_LOGFILE "/var/log/apache2/access_log"%' src/apachetop.h
 	else
-		sed -i 's%DEFAULT_LOGFILE "/var/httpd/apache_log"%DEFAULT_LOGFILE "/var/log/access_log"%' src/apachetop.h
+		sed -i 's%DEFAULT_LOGFILE "/var/httpd/apache_log"%DEFAULT_LOGFILE "/var/log/apache/access_log"%' src/apachetop.h
 	fi
 	./configure
 	emake || die
