@@ -1,14 +1,14 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/Audio-CD-disc-cover-0.04.ebuild,v 1.13 2003/02/13 10:56:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/Audio-CD-disc-cover-0.05.ebuild,v 1.1 2003/05/07 21:56:59 rac Exp $
 
 inherit perl-module
 
-MY_P=Audio-CD-0.04-disc-cover-1.1.0
+MY_P=Audio-CD-0.05
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Perl Module needed for app-cdr/disc-cover"
-HOMEPAGE="http://home.wanadoo.nl/~jano/disc-cover.html"
-SRC_URI="http://www.liacs.nl/~jvhemert/disc-cover/download/libraries/${MY_P}.tar.gz"
+HOMEPAGE="http://home.wanadoo.nl/jano/disc-cover.html"
+SRC_URI="http://home.wanadoo.nl/jano/files/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
@@ -22,4 +22,3 @@ DEPEND="${DEPEND}
 	>=dev-perl/libnet-1.0703-r1
 	>=dev-perl/libwww-perl-5.50
 	>=media-libs/libcdaudio-0.99.6"  
-
