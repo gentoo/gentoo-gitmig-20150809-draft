@@ -1,6 +1,9 @@
 # ChangeLog for games-action/bomberclone
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/ChangeLog,v 1.10 2004/09/01 23:59:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/ChangeLog,v 1.11 2004/10/01 13:31:26 kugelfang Exp $
+
+  01 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> bomberclone-0.11.3.ebuild:
+  Marked ~amd64.
 
 *bomberclone-0.11.3 (01 Sep 2004)
 
