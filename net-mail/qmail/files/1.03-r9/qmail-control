@@ -1,0 +1,30 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/1.03-r9/qmail-control,v 1.1 2002/09/18 22:25:37 raker Exp $
+
+opts="start stop restart reload"
+
+start() {
+    ebegin "Starting qmail mta ..."
+    svc -u /var/qmail/supervise/*
+    eend $?
+    ebegin "Starting qmail mta logging ..."
+    svc -u /var/qmail/supervise/*/log
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping qmail mta ..."
+    svc -d /var/qmail/supervise/*
+    eend $?
+    ebegin "Stopping qmail mta logging ..."
+    svc -d /var/qmail/supervise/*/log
+    eend $?
+}
+
+reload() {
+    ebegin "Reloading 'locals' and 'virtualdomains' control files."
+    svc -h /var/qmail/supervise/qmail-send
+    eend $?
+}
