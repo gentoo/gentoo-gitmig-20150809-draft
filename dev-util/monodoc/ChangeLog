@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.21 2004/07/04 17:05:13 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.22 2004/09/22 01:12:01 latexer Exp $
+
+*monodoc-1.0.1 (21 Sep 2004)
+
+  21 Sep 2004; <peter@gentoo.org> +monodoc-1.0.1.ebuild:
+  Bump.
 
   04 Jul 2004; Peter Johanson <latexer@gentoo.org> monodoc-1.0.ebuild:
   Added check for gtkhtml support. See bug #50096
