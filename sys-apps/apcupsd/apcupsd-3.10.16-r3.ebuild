@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.16-r2.ebuild,v 1.1 2004/12/01 23:28:16 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.16-r3.ebuild,v 1.1 2004/12/20 13:42:14 tantive Exp $
 
 inherit eutils
 
@@ -40,10 +40,10 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	use snmp && myconf="--enable-net-snmp"
+	use snmp && myconf="${myconf} --enable-net-snmp"
 	use gd && myconf="${myconf} --enable-cgi --with-css-dir=/var/www/apcupsd --with-cgi-bin=/var/www/apcupsd"
-	use usb && myconf="--with-upstype=usb --with-upscable=usb --with-serial-dev=/dev/usb/hiddev[0-9] --enable-usb"
-	use !usb && myconf="--with-upstype=apcsmart --with-upscable=apcsmart --with-serial-dev=/dev/ttyS0 --disable-usb"
+	use usb && myconf="${myconf} --with-upstype=usb --with-upscable=usb --with-serial-dev=/dev/usb/hiddev[0-9] --enable-usb"
+	use !usb && myconf="${myconf} --with-upstype=apcsmart --with-upscable=apcsmart --with-serial-dev=/dev/ttyS0 --disable-usb"
 	APCUPSD_MAIL=/usr/sbin/sendmail ./configure \
 		--prefix=/usr \
 		--sbindir=/usr/sbin \
