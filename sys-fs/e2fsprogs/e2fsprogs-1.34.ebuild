@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.34.ebuild,v 1.6 2003/10/22 12:16:13 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.34.ebuild,v 1.7 2003/11/21 16:36:48 mholzer Exp $
 
 inherit eutils
 
@@ -9,6 +9,7 @@ IUSE="nls static"
 DESCRIPTION="Standard EXT2 and EXT3 filesystem utilities"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
