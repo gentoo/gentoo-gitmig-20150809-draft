@@ -1,3 +1,4 @@
-MD5 6b1e27c41eaa5d08363e66b68ae210b4 ChangeLog 834
-MD5 5929a3f7da67a6467f408436eefe2fb5 knetscan-1.0.ebuild 623
+MD5 aedd30e8765f49b3da9a50d490414db9 ChangeLog 925
+MD5 1468646e270fe07d74031d286e9e2ac1 metadata.xml 244
+MD5 b391676952ef6886555600475c7038ef knetscan-1.0.ebuild 608
 MD5 a0309807aa6545f25781e61c5f1264ff files/digest-knetscan-1.0 64
