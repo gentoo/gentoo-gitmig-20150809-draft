@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/forehead
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/forehead/ChangeLog,v 1.1 2005/03/29 23:46:04 compnerd Exp $
+
+*forehead-1.0_beta5 (29 Mar 2005)
+
+  29 Mar 2005; Saleem Abdulrasool <compnerd@gentoo.org> +files/build.xml,
+  +forehead-1.0_beta5.ebuild:
+  Initial import; Resolves bug #70843
+
