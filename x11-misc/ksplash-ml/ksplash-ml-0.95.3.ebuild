@@ -12,7 +12,7 @@ HOMEPAGE="http://www.shadowcom.net/Software/ksplash-ml"
 
 newdepend ">=kde-base/kdebase-3.0"
 
-LICENSE="ksplash-ml"
+LICENSE="BSD"
 
 KEYWORDS="x86 ~ppc"
 
