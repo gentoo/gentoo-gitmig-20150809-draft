@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r3.ebuild,v 1.5 2005/01/16 10:56:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r3.ebuild,v 1.6 2005/03/26 22:54:49 eradicator Exp $
 
-inherit flag-o-matic eutils gnuconfig
+inherit flag-o-matic eutils gnuconfig multilib toolchain-funcs
 
 DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit"
 HOMEPAGE="http://www.wxwidgets.org/"
@@ -68,6 +68,7 @@ src_compile() {
 	myconf="${myconf} `use_with opengl`"
 	myconf="${myconf} --with-gtk"
 	myconf="${myconf} `use_enable debug`"
+	myconf="${myconf} --libdir=/usr/$(get_libdir)"
 
 	if ! use no_wxgtk1 ; then
 		mkdir build_gtk
@@ -78,9 +79,9 @@ src_compile() {
 			--prefix=/usr \
 			--infodir=/usr/share/info \
 			--mandir=/usr/share/man || die "./configure failed"
-		emake || die "make gtk failed"
+		emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "make gtk failed"
 		cd contrib/src
-		emake || die "make gtk contrib failed"
+		emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "make gtk contrib failed"
 	fi
 	cd ${S}
 
@@ -94,9 +95,9 @@ src_compile() {
 			--prefix=/usr \
 			--infodir=/usr/share/info \
 			--mandir=/usr/share/man || die "./configure failed"
-		emake || die "make gtk2 failed"
+		emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "make gtk2 failed"
 		cd contrib/src
-		emake || die "make gtk2 contrib failed"
+		emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "make gtk2 contrib failed"
 
 		cd ${S}
 
@@ -111,10 +112,10 @@ src_compile() {
 				--infodir=/usr/share/info \
 				--mandir=/usr/share/man || die "./configure failed"
 
-			emake || die "make unicode failed"
+			emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "make unicode failed"
 
 			cd contrib/src
-			emake || die "make unicode contrib failed"
+			emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "make unicode contrib failed"
 		fi
 	fi
 }
@@ -122,23 +123,23 @@ src_compile() {
 src_install() {
 	if [ -e ${S}/build_gtk ] ; then
 		cd ${S}/build_gtk
-		einstall || die "install gtk failed"
+		einstall libdir="${D}/usr/$(get_libdir)" || die "install gtk failed"
 		cd contrib/src
-		einstall || die "install gtk contrib failed"
+		einstall libdir="${D}/usr/$(get_libdir)" || die "install gtk contrib failed"
 	fi
 
 	if [ -e ${S}/build_gtk2 ] ; then
 		cd ${S}/build_gtk2
-		einstall || die "install gtk2 failed"
+		einstall libdir="${D}/usr/$(get_libdir)" || die "install gtk2 failed"
 		cd contrib/src
-		einstall || die "install gtk2 contrib failed"
+		einstall libdir="${D}/usr/$(get_libdir)" || die "install gtk2 contrib failed"
 	fi
 
 	if [ -e ${S}/build_unicode ] ; then
 		cd ${S}/build_unicode
-		einstall || die "install unicode failed"
+		einstall libdir="${D}/usr/$(get_libdir)" || die "install unicode failed"
 		cd contrib/src
-		einstall || die "install unicode contrib failed"
+		einstall libdir="${D}/usr/$(get_libdir)" || die "install unicode contrib failed"
 	fi
 
 	# twp 20040830 wxGTK-2.4.2 forgets to install htmlproc.h; copy it manually
