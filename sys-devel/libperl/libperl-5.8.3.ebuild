@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.1_rc1.ebuild,v 1.3 2003/09/05 02:02:21 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.3.ebuild,v 1.1 2004/01/18 06:46:05 rac Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -69,7 +69,7 @@ SHORT_PV="`echo ${PV} | cut -d. -f1,2`"
 MY_P="perl-`echo $PV | sed 's/_rc/-RC/'`"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
-SRC_URI="http://www.cpan.org/authors/id/J/JH/JHI/${MY_P}.tgz"
+SRC_URI="ftp://ftp.cpan.org/pub/CPAN/src/${MY_P}.tar.gz"
 HOMEPAGE="http://www.perl.org"
 
 if [ "${PN}" = "libperl" ]
@@ -82,7 +82,7 @@ fi
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 
 LICENSE="Artistic GPL-2"
-KEYWORDS="~amd64 ~x86 ~sparc ~ppc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="~amd64 ~x86 ~sparc ~ppc ~alpha ~mips ~hppa ~arm ~ia64 ~ppc64"
 
 DEPEND="sys-apps/groff
 	berkdb? ( sys-libs/db )
