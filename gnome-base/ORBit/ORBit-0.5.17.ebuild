@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.17.ebuild,v 1.13 2003/07/04 05:30:23 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.17.ebuild,v 1.14 2003/07/19 23:22:43 tester Exp $
 
 IUSE="nls"
 
@@ -21,7 +21,7 @@ RDEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc alpha ~mips hppa"
+KEYWORDS="x86 sparc alpha ~mips hppa amd64"
 
 src_compile() {
 	if [ -z "`use nls`" ] ; then
