@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r2.ebuild,v 1.11 2004/02/10 19:24:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r2.ebuild,v 1.12 2004/06/07 22:47:43 agriffis Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -67,7 +67,7 @@ src_install() {
 
 	cd ..
 	dodoc Changes LGPL LICENSE README*
-	if [ `use doc` ] ; then
+	if use doc ; then
 		cd doc
 		insinto /usr/share/doc/${PF}
 		doins *.pdf *.dvi

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-3.5.ebuild,v 1.11 2004/03/19 07:56:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-3.5.ebuild,v 1.12 2004/06/07 22:42:53 agriffis Exp $
 
 IUSE="mmx fbcon sse X svga ggi 3dnow"
 
@@ -13,10 +13,10 @@ HOMEPAGE="http://mesa3d.sourceforge.net/"
 
 DEPEND="X? ( virtual/x11 )
 	ggi? ( >=media-libs/libggi-2.0_beta3 )
-	svga? ( >=media-libs/svgalib-1.4.2-r1 )"
+	svga? ( >=media-libs/svgalib-1.4.2-r1 )
+	>=sys-apps/sed-4"
 
-if [ "`use X`" ]
-then
+if use X; then
 	PROVIDE="virtual/opengl virtual/glu virtual/glut"
 else
 	PROVIDE="virtual/opengl"
@@ -27,82 +27,65 @@ LICENSE="LGPL-2"
 KEYWORDS="x86 sparc ~alpha"
 
 src_compile() {
-	local myconf
+	local myconf="
+		$(use_enable mmx) \
+		$(use_enable 3dnow) \
+		$(use_enable sse) \
+		$(use_with svga)"
 
-	use mmx \
-		&& myconf="--enable-mmx" \
-		|| myconf="--disable-mmx"
-
-	use 3dnow \
-		&& myconf="${myconf} --enable-3dnow" \
-		|| myconf="${myconf} --disable-3dnow"
-
-	use sse \
-		&& myconf="${myconf} --enable-sse" \
-		|| myconf="${myconf} --disable-sse"
-
-	use X && ( \
-		myconf="${myconf} --with-x --without-glut"
+	if use X ; then
 		# --without-glut means that mesa is forced to use and install
-		# his own version of glut.
-	) || ( \
+		# its own version of glut
+		myconf="${myconf} --with-x --without-glut"
+	else
 		myconf="${myconf} --without-x"
 		rm -rf src-glut
-	)
+	fi
 
-	( use ggi && use fbcon ) \
-		|| myconf="${myconf} --disable-ggi-fbdev --without-ggi"
+	if ! use ggi || ! use fbcon; then
+		myconf="${myconf} --disable-ggi-fbdev --without-ggi"
+	fi
 
-	use svga || myconf="${myconf} --without-svga"
-
-	cp configure configure.orig
-	sed -e "s:^ggi_confdir.*:ggi_confdir=/etc/ggi:" \
-		-e "s:^ggi_libdir.*:ggi_libdir=\$prefix/lib:" \
-		configure.orig > configure
+	sed -i -e 's:^ggi_confdir.*:ggi_confdir=/etc/ggi:' \
+		-e 's:^ggi_libdir.*:ggi_libdir=$prefix/lib:' configure \
+		|| die "sed failed"
 
 	econf \
 		--sysconfdir=/etc/mesa \
 		${myconf} || die
 
-	( use ggi && use fbcon ) && ( \
-		cd ${S}/src/GGI
-		cp Makefile Makefile.orig
-		sed -e "s:^ggimesaconfdatadir.*:ggimesaconfdatadir = \${ggi_confdir}:" \
-			Makefile.orig > Makefile
-
-		cd ${S}/src/GGI/default
-		cp stubs.c stubs.c.orig
-		sed -e "s:Texture.Enabled:Texture.ReallyEnabled:" stubs.c.orig > stubs.c
-
-		cd ${S}/src/GGI/include/ggi/mesa
-		cp display_fbdev.h display_fbdev.h.orig
-		sed -e "s:fbdev_hook:ggi_fbdev_priv:" display_fbdev.h.orig > display_fbdev.h
+	if use ggi && use fbcon; then
+		sed -i -e 's:^ggimesaconfdatadir.*:ggimesaconfdatadir = ${ggi_confdir}:' \
+			${S}/src/GGI/Makefile \
+			|| die "sed Makefile failed"
+		sed -i -e 's:Texture.Enabled:Texture.ReallyEnabled:' \
+			${S}/src/GGI/default/stubs.c \
+			|| die "sed stubs.c failed"
+		sed -i -e 's:fbdev_hook:ggi_fbdev_priv:' \
+			${S}/src/GGI/include/ggi/mesa/display_fbdev.h \
+			|| die "sed display_fbdev.h failed"
 
 		cd ${S}
 		mkdir gg
 		ln -s /usr/lib/libgg*.so .
-	)
+	fi
 
-	emake || die
+	emake || die "emake failed"
 
-	use ggi && ( \
-		cd ${S}/ggi/ggiglut
-		make \
+	if use ggi; then
+		make -C ${S}/ggi/ggiglut \
 			libglut_la_LIBADD="-lggi -lgg -L${S}/src/.libs -lGL" || die
-	)
+	fi
 }
 
-src_install () {
-	use ggi && ( \
+src_install() {
+	if use ggi; then
 		cd ggi/ggiglut
 		make DESTDIR=${D} install || die
-		cd ${D}/usr/lib
-		cp libglut.la libglut.orig
-		sed -e "s:-L${S}/src/.libs::g" libglut.orig > libglut.la
-		rm libglut.orig
-	)
+		sed -i -e "s:-L${S}/src/.libs::g" ${D}/usr/lib/libglut.la \
+		|| die "sed libglut.la failed"
+	fi
 
-	cd ${S}
 	make DESTDIR=${D} install || die
 	cd ${D}/usr/lib
 	if [ "$PN" = "mesa-glu" ]
@@ -118,6 +101,7 @@ src_install () {
 
 	cd ${S}
 	dodoc docs/*
-	#we no longer install demos since they seem to be linked 
+
+	# we no longer install demos since they seem to be linked 
 	# for built-time testing only.
 }

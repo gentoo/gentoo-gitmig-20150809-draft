@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4-r2.ebuild,v 1.11 2004/05/16 08:52:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4-r2.ebuild,v 1.12 2004/06/07 22:43:59 agriffis Exp $
 
 inherit eutils gcc
 
@@ -46,11 +46,11 @@ src_unpack() {
 	compopts="${compopts} -DHAVE_LIBPNG"
 	libsopts="${libsopts} -lpng"
 
-	if [ `use freetype-version-1` ] ; then
+	if use freetype-version-1 ; then
 		compopts="${compopts} -DHAVE_LIBTTF"
 		libsopts="${libsopts} -lttf"
 		incopts="-I/usr/include/freetype"
-	elif [ `use truetype` ] ; then
+	elif use truetype ; then
 		compopts="${compopts} -DHAVE_LIBFREETYPE"
 		libsopts="${libsopts} -lfreetype"
 		incopts="-I/usr/include/freetype2"

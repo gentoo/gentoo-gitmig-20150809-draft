@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.6 2003/11/25 03:44:27 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.7 2004/06/07 22:42:53 agriffis Exp $
+
+  07 Jun 2004; Aron Griffis <agriffis@gentoo.org> mesa-3.5.ebuild:
+  Fix use invocation
 
   24 Nov 2003; Aron Griffis <agriffis@gentoo.org> mesa-3.5.ebuild:
   Add ~alpha
