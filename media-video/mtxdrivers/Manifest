@@ -1,3 +1,5 @@
-MD5 c8263ecc5894eea9b214a18a81dfec90 ChangeLog 682
-MD5 c4c5e9c177ac3e9b4b1b2acdafe9ddf7 mtxdrivers-0.2.1.ebuild 2369
 MD5 7f8ba51a371592433503032c8875c3b2 files/digest-mtxdrivers-0.2.1 65
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-mtxdrivers-0.3.0 0
+MD5 5bb5dd5fce2f24fe1bc7000f4b356d79 ChangeLog 830
+MD5 c4c5e9c177ac3e9b4b1b2acdafe9ddf7 mtxdrivers-0.2.1.ebuild 2369
+MD5 05d4ba4d090413fa89a5fc7d25dcc811 mtxdrivers-0.3.0.ebuild 2445
