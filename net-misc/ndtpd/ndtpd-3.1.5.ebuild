@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ndtpd-3.1.5.ebuild,v 1.8 2004/07/28 08:54:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ndtpd/ndtpd-3.1.5.ebuild,v 1.9 2005/01/18 09:54:13 usata Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/eb-3
 pkg_setup() {
 	# this is required; src_install() needs ndtpuser:ndtpgrp
 	enewgroup ndtpgrp 402
-	enewuser ndtpuser 402 /sbin/nologin /usr/share/dict ndtpgrp
+	enewuser ndtpuser 402 /bin/false /usr/share/dict ndtpgrp
 }
 
 src_unpack() {
