@@ -1,9 +1,8 @@
 # ChangeLog for x11-plugins/gkrellm-sensors
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-sensors/ChangeLog,v 1.3 2002/12/09 04:41:56 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-sensors/ChangeLog,v 1.4 2002/12/13 11:00:58 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *gklmsensors-0.1 (21 May 2002)
 
