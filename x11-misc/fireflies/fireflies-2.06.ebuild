@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.06.ebuild,v 1.2 2004/02/29 15:14:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.06.ebuild,v 1.3 2004/03/02 07:17:11 spyderous Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -21,6 +23,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/${P}-configure.patch
 	epatch ${FILESDIR}/${P}-Make.include.in.patch
 }

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/fireflies
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.1 2004/01/04 15:06:44 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.2 2004/03/02 07:17:11 spyderous Exp $
+
+  02 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; fireflies-2.06.ebuild:
+  Need to change to $S in src_unpack(), don't know how this got committed as-is.
+  Added inherit eutils for epatch also.
 
 *fireflies-2.06 (04 Jan 2004)
 
