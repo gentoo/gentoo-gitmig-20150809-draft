@@ -1,7 +1,9 @@
 # ChangeLog for sys-devel/patch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.16 2003/07/06 09:10:57 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.17 2003/08/03 15:52:42 azarah Exp $
 
+  03 Aug 2003; Martin Schlemmer <azarah@gentoo.org> patch-2.5.9.ebuild:
+  Bump to stable.
 
 *patch-2.5.9 (17 Jun 2003)
 
