@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.10.ebuild,v 1.2 2004/09/29 03:09:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.10.ebuild,v 1.3 2004/10/04 05:42:03 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -30,26 +30,15 @@ src_install() {
 
 	make DESTDIR="${D}" install || die
 
-	# Keep around old lib
-	if [ -f /usr/$(get_libdir)/libexif.so.9 ]; then
-		cp /usr/$(get_libdir)/libexif.so.9 ${D}/usr/$(get_libdir)
-		fperms 755 /usr/$(get_libdir)/libexif.so.9
-	fi
-
 	dodoc ChangeLog README
 
 	# installs a blank directory for whatever broken reason
 	use nls || rm -rf ${D}/usr/share/locale
+
+	# Keep around old lib
+	preserve_old_lib /usr/$(get_libdir)/libexif.so.9
 }
 
 pkg_postinst() {
-	if [ -f /usr/$(get_libdir)/libexif.so.9 ]; then
-		einfo "An old version of libexif was detected on your system."
-		einfo "In order to avoid conflicts, we've kept the old lib"
-		einfo "around.  In order to make full use of the new version"
-		einfo "of libexif, you will need to do the following:"
-		einfo "  revdep-rebuild --soname libexif.so.9"
-		einfo
-		einfo "After doing that, you can safely remove /usr/$(get_libdir)/libexif.so.9"
-	fi
+	preserve_old_lib_notify /usr/$(get_libdir)/libexif.so.9
 }
