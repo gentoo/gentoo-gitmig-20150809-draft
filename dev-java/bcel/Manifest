@@ -1,7 +1,19 @@
-MD5 930156ec50fbf71caaa50d3906fc2ec9 ChangeLog 2531
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c497d0e3011f98be2a06f91f82b94fa0 bcel-5.1.ebuild 1210
+MD5 f0e60ab3287efe76ac5e13d26def483e bcel-5.1-r1.ebuild 1288
+MD5 2a6e59b4d5a5148cc4008b10b1864ddc ChangeLog 2797
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 88f16b1c12a8814d078c5eb3906d2218 files/bcel-5.1-gentoo.diff 457
 MD5 e908f81e51167a747ab8527dacc3ee4e files/digest-bcel-5.1 66
-MD5 1e5e81012f73f8d7c465486a622baa4a files/bcel-5.1-gentoo-buildxml.diff 1289
+MD5 88f16b1c12a8814d078c5eb3906d2218 files/bcel-5.1-gentoo.diff 457
+MD5 e908f81e51167a747ab8527dacc3ee4e files/digest-bcel-5.1-r1 66
 MD5 55afed4e967381f557d9a2247060a3c9 files/bcel-5.1-gentoo-src.diff 3249
+MD5 1e5e81012f73f8d7c465486a622baa4a files/bcel-5.1-gentoo-buildxml.diff 1289
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCRvFn06ebR+OMO78RAmNUAJ97AVg9WMbpujUenf27LOjpKfVnrgCggEsq
+bRE49hXdibgHNA5udDL1A+w=
+=QDec
+-----END PGP SIGNATURE-----
