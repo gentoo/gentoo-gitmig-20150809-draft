@@ -1,12 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.9.ebuild,v 1.5 2003/10/20 05:32:21 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10-r1.ebuild,v 1.1 2003/10/20 05:32:21 rphillips Exp $
 
 inherit check-kernel
 
 S=${WORKDIR}/${P}
-DESCRIPTION="The AFS 3 distributed file system  targets the issues  critical to
-distributed computing environments."
+DESCRIPTION="The AFS 3 scalable distributed file system"
 HOMEPAGE="http://www.openafs.org/"
 SRC_URI="http://openafs.org/dl/openafs/${PV}/${P}-src.tar.bz2"
 
@@ -17,10 +16,10 @@ KEYWORDS="-* ~x86"
 SANDBOX_DISABLED="1"
 
 DEPEND="virtual/linux-sources
-	>=sys-apps/sed-4
 	>=sys-apps/portage-2.0.47-r10
 	>=sys-libs/ncurses-5.2
-	>=sys-libs/pam-0.75"
+	>=sys-libs/pam-0.75
+	>=sys-apps/gawk-3.1.1"
 
 ARCH=i386_linux24
 
@@ -29,16 +28,13 @@ pkg_setup() {
 
 	if is_2_5_kernel || is_2_6_kernel
 	then
-		die "This only works with 2.4 kernels"
+		die "OpenAFS does not yet support 2.5 and 2.6 kernels"
 	fi
 }
 
 
 src_unpack() {
 	unpack ${A}
-
-	cd ${S}/src/config
-	sed -i "s|/usr/lib/libncurses.so|-lncurses|g" Makefile.i386_linux24.in
 
 	cd ${S}
 	epatch ${FILESDIR}/openafs-pinstall-execve.patch
@@ -50,13 +46,12 @@ src_compile() {
 		--with-afs-sysname=i386_linux24 \
 		--enable-transarc-paths || die
 
-	sed -i "s|-I/usr/include/sys| |g" src/pam/Makefile
-
 	make || die
-	make dest || die
 }
 
 src_install () {
+	make dest || die
+
 	# Client
 
 	cd ${S}/${ARCH}/dest/root.client/usr/vice
@@ -70,7 +65,7 @@ src_install () {
 	doins ${FILESDIR}/{ThisCell,CellServDB}
 	doins etc/afs.conf
 
-	keepdir /afs
+	mount -t afs | awk '{ exit $3 == "/afs" }' && keepdir /afs
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/afs.rc.rc6 afs

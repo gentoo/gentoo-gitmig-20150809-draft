@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.8.ebuild,v 1.9 2003/09/11 01:40:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.8.ebuild,v 1.10 2003/10/20 05:32:21 rphillips Exp $
 
 
 S=${WORKDIR}/${P}
@@ -34,10 +34,10 @@ src_unpack() {
 	sed -e "s|/usr/lib/libncurses.so|-lncurses|g" \
 		Makefile.i386_linux24.in.old > Makefile.i386_linux24.in
 	rm Makefile.i386_linux24.in.old
+	epatch ${FILESDIR}/openafs-pinstall-execve.patch
 }
 
 src_compile() {
-	epatch ${FILESDIR}/openafs-1.2.6.patch
 	epatch ${FILESDIR}/openafs-1.2.8.patch
 
 	./configure \

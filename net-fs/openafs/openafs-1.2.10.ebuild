@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10.ebuild,v 1.2 2003/09/07 00:11:41 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.10.ebuild,v 1.3 2003/10/20 05:32:21 rphillips Exp $
 
 inherit check-kernel
 
@@ -37,7 +37,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/openafs-1.2.6.patch
+	epatch ${FILESDIR}/openafs-pinstall-execve.patch
 }
 
 src_compile() {
