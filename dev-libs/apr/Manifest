@@ -1,3 +1,5 @@
 MD5 d596bd5f9a425f72b47a89d444bb3f18 ChangeLog 322
 MD5 22e3729cff2a4ce52a371749942987a0 apr-0.9.2.ebuild 1422
+MD5 0a63d5a3683513e25a96d40303b2d783 apr-0.9.4.ebuild 837
 MD5 c885cd7c010db2b27e06c0a3c6f426c6 files/digest-apr-0.9.2 199
+MD5 322c68a2024ba4c63bc10a5e97bd79c5 files/digest-apr-0.9.4 128
