@@ -1,6 +1,16 @@
 # ChangeLog for app-dicts/stardict
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.10 2003/07/09 17:24:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.11 2003/09/12 19:20:49 liquidx Exp $
+
+*stardict-2.4.0 (12 Sep 2003)
+
+  12 Sep 2003; Alastair Tse <liquidx@gentoo.org> stardict-2.0.0.ebuild,
+  stardict-2.2.0.ebuild, stardict-2.2.1.ebuild, stardict-2.4.0.ebuild:
+  version bump
+
+  12 Sep 2003; Alastair Tse <liquidx@gentoo.org> stardict-2.0.0.ebuild,
+  stardict-2.2.0.ebuild, stardict-2.2.1.ebuild:
+  removing bonobo deps and clean up
 
   09 Jul 2003; Alastair Tse <liquidx@gentoo.org> stardict-2.0.0.ebuild,
   stardict-2.2.0.ebuild, stardict-2.2.1.ebuild:
