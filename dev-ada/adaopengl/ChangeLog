@@ -1,10 +1,13 @@
 # ChangeLog for dev-ada/adaopengl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adaopengl/ChangeLog,v 1.1 2003/08/14 02:13:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adaopengl/ChangeLog,v 1.2 2003/08/17 20:27:40 dholm Exp $
+
+  17 Aug 2003; David Holm <dholm@gentoo.org> metadata.xml:
+  Added a <longdescription>-tag to metadata.xml.
 
 *adaopengl-0.12 (14 Aug 2003)
 
-  14 Aug 2003; David Holm <avatar@gentoo.org> adaopengl-0.12.ebuild,
+  14 Aug 2003; David Holm <dholm@gentoo.org> adaopengl-0.12.ebuild,
   metadata.xml:
   Initial release (#26444)
   OpenGL bindings to the Ada language.

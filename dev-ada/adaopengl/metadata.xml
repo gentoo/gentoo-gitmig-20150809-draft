@@ -2,4 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>ada</herd>
+<longdescription>This Ada-binding to OpenGL provides the latest OpenGL features in a collection of Ada packages. It also supports the major OpenGL support libraries such as GLU, GLUT and GLFW.</longdescription>
 </pkgmetadata>
