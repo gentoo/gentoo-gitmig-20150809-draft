@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/fvwm-crystal
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.3 2004/03/13 19:52:10 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.4 2004/03/25 19:14:15 taviso Exp $
+
+  25 Mar 2004; Tavis Ormandy <taviso@gentoo.org> fvwm-crystal-1.0.1.ebuild,
+  files/fvwm-crystal-fvwm-version-check.diff:
+  configure logic to check fvwm version doesnt work.
 
   13 Mar 2004; Tavis Ormandy <taviso@gentoo.org> fvwm-crystal-1.0.1.ebuild:
   adding some einfo about some other supported applications mentioned

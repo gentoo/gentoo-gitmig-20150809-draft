@@ -1,4 +1,5 @@
-MD5 127f355f278a1bd3d363cb0d3164894f ChangeLog 787
-MD5 11f48dc3ef7449777e36d9a2e1a5db3d fvwm-crystal-1.0.1.ebuild 1734
+MD5 e126674ef79d97a9fdc907b9b8e4617b fvwm-crystal-1.0.1.ebuild 1990
+MD5 31bf8486b32aacd373aa4494804d34e1 ChangeLog 963
 MD5 5ab7acb96f04eda6ec527059668aac7b metadata.xml 251
 MD5 d2d23021573eab4cf7108ba429abf1a1 files/digest-fvwm-crystal-1.0.1 70
+MD5 8146e2077293da51342d5f6d09cec37a files/fvwm-crystal-fvwm-version-check.diff 429

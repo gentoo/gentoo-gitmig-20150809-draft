@@ -1,0 +1,12 @@
+--- configure.in	2004-01-01 21:03:42.000000000 +0000
++++ configure.in	2004-03-25 18:55:30.441245224 +0000
+@@ -27,8 +27,7 @@
+ if test "x$FVWM_VERSION" = "x"; then FVWM_VERSION=unknown; fi
+ AC_SUBST(FVWM_VERSION)dnl
+ 
+-if (echo $REQUIRED_FVWM_VERSION; echo $FVWM_VERSION) \
+-| sed 's/\./ /g' | uniq | sort -n -c 2>/dev/null; then
++if test ${REQUIRED_FVWM_VERSION//./} -le ${FVWM_VERSION//./}; then
+ 	:
+ 	# fvwm version is ok
+ else
