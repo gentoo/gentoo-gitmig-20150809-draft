@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-0.10.040218.ebuild,v 1.1 2004/03/11 02:26:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-0.10.040218.ebuild,v 1.2 2004/03/11 12:14:23 wolf31o2 Exp $
 
 inherit games
 
@@ -21,28 +21,32 @@ DEPEND="virtual/glibc
 		media-libs/libogg"
 
 src_unpack() {
-	unpack ${A}
-	cd source/linux
-	epatch ${FILESDIR}/${PV}-Makefile.patch
+	unpack ${A} || die "unpack failed"
+	cd ${S}/source/linux || die "change dir"
+	epatch ${FILESDIR}/${PV}-Makefile.patch || die "patching"
 }
 
 src_compile() {
-	cd source/linux
+	cd ${S}/source/linux || die "change dir"
 	make build_release \
 		 OPTCFLAGS="${CFLAGS}" \
 		 || die "make failed"
-	cd ../..
 }
 
 src_install() {
 	dodir ${GAMES_DATADIR}/${PN}
-	cp -rf ufo/* ${D}${GAMES_DATADIR}/${PN}
-	cd source/linux/releasei386-glibc
+	cp -rf ${S}/ufo/* ${D}${GAMES_DATADIR}/${PN} || die "copy data"
+	cd ${S}/source/linux/releasei386-glibc || die "change dir"
 	exeinto ${GAMES_DATADIR}/${PN}
-	doexe ref_gl.so ref_glx.so ufo
+	doexe ${S}/source/linux/releasei386-glibc/{ref_gl.so,ref_glx.so,ufo} \
+		|| die "doexe ufo"
 	exeinto ${GAMES_DATADIR}/${PN}/base
-	doexe gamei386.so
+	doexe ${S}/source/linux/releasei386-glibc/gamei386.so \
+		|| die "doexe gamei386.so"
 	games_make_wrapper ufo-ai ./ufo ${GAMES_DATADIR}/${PN}
 	prepgamesdirs
 }
 
+pkg_postinst() {
+	games_pkg_postinst
+}
