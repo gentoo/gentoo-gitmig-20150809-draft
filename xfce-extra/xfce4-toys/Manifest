@@ -1,2 +1,6 @@
-MD5 5cfe540610a89d7f32ba9078a6d4223d xfce4-toys-4.2.0.ebuild 398
+MD5 a80d9ed6e3dedcfef8e66a0fe5f686ab xfce4-toys-4.2.0.ebuild 398
+MD5 a916c951b966b29f3a8e572f360e2e35 xfce4-toys-4.0.6.ebuild 743
+MD5 f5725e2b7b4952df0a700fa3afb34194 ChangeLog 5530
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 53c9bc3e92ba9c706f2f1a32a973055d files/digest-xfce4-toys-4.0.6 68
 MD5 131e81a8722058445d9e6dadf6629d58 files/digest-xfce4-toys-4.2.0 69

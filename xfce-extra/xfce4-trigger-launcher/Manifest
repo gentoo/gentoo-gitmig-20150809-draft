@@ -1,2 +1,6 @@
-MD5 849257f71e6a98efbd98cab4ad3c4b1f xfce4-trigger-launcher-4.2.0.ebuild 434
+MD5 7ca1f26b4d9cd727aeef35b4b8df81f6 xfce4-trigger-launcher-4.2.0.ebuild 434
+MD5 e14fe28f67b682e0dadecb2a4d8f6d24 xfce4-trigger-launcher-4.0.6.ebuild 773
+MD5 6297792e8cba9c04bf3e8b5e3b18701f ChangeLog 6238
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 5e744c64c31b97a93c8f52706f3dedfd files/digest-xfce4-trigger-launcher-4.0.6 80
 MD5 422105a6b699ce15a9f3525b48fe4645 files/digest-xfce4-trigger-launcher-4.2.0 81
