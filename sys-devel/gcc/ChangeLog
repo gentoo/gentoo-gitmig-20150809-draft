@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.103 2003/06/14 07:19:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.104 2003/06/14 18:21:49 gmsoft Exp $
 
   14 Jun 2003; Joshua Kinard <kumba@gentoo.org> gcc-3.2.3-r1.ebuild:
   Changed ~mips to mips in KEYWORDS
@@ -50,6 +50,9 @@
   and the parallel make fix, so these no longer need to be applied separately.
 
 *gcc-3.2.3-r1 (29 Apr 2003)
+
+  14 Jun 2003; Guy Martin <gmsoft@gentoo.org> gcc-3.2.3-r1.ebuild :
+  Changed ~hppa to -hppa in KEYWORDS. Too many crazy users are using ~hppa.
 
   29 Apr 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.3-r1.ebuild :
   Manpages gets regenerated, and as we do not have perl at bootstrap, we need
