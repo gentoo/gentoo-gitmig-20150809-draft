@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.9 2004/06/05 22:20:41 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.10 2004/06/09 00:34:52 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc n32 n64"
 
@@ -163,7 +163,6 @@ DEPEND="virtual/glibc
 	hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
 	( !sys-devel/hardened-gcc )
 	>=sys-devel/binutils-2.14.90.0.8-r1
-	!amd64? ( hardened? ( >=sys-devel/binutils-2.15.90.0.3 ) )
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
