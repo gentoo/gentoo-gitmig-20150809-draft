@@ -1,6 +1,16 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.4 2002/05/22 11:22:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.5 2002/07/14 13:11:35 aliz Exp $
+
+*xpdf-1.01-r1 (13 Jul 2002)
+
+  13 Jul 2002; Daniel Ahlberg <aliz@telia.com> xpdf-1.01-r1.ebuild
+ 
+  This is a new ebuild for xpdf which uses ghostscript T1 fonts which look much nicer, as advised in 
+  http://www.foolabs.com/xpdf/problems.html#t1lib-base14 . This adds a dependency on app-text/ghostscript. 
+  It also fixes a bug in the current ebuild which misses the xpdfrc.5 manpage.
+
+  ebuild submitted by José Fonseca <j_r_fonseca@yahaoo.co.uk>    
 
 *xpdf-1.01 (22 May 2002)
 
