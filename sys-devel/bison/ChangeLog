@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/bison
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.11 2002/12/19 15:15:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.12 2003/01/18 19:05:49 tuxus Exp $
 
   19 Dec 2002; Martin Schlemmer <azarah@gentoo.org> bison-1.35.ebuild :
 
@@ -24,6 +24,9 @@
   Fixed dependencies for USE="icc".
 
 *bison-1.35 (09 Aug 2002)
+
+  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   16 Aug 2002; Seemant Kulleen <seemant@gentoo.org> bison-1.35.ebuild :
 

@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/flex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.7 2002/12/13 11:00:39 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.8 2003/01/18 19:03:06 tuxus Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -30,6 +30,9 @@
   form in a few places.
 
 *flex-2.5.4a-r4 (1 Feb 2002)
+
+  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
