@@ -1,16 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.4-r6.ebuild,v 1.7 2004/10/05 22:11:06 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.96.5.ebuild,v 1.1 2004/10/05 22:11:06 malverian Exp $
 
 inherit eutils
 
+MD5_PATCH="ht-20040525-0.96.5-bgp-md5.patch"
+
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP. Includes OSPFAPI, NET-SNMP and IPV6 support."
 HOMEPAGE="http://quagga.net/"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
-SRC_URI="http://www.quagga.net/download/${P}.tar.gz"
-IUSE="ipv6 snmp pam"
+SRC_URI="http://www.quagga.net/download/${P}.tar.gz
+	tcpmd5? ( http://hasso.linux.ee/quagga/$MD5_PATCH )"
+
+IUSE="ipv6 snmp pam tcpmd5"
 
 DEPEND="virtual/libc
 	sys-devel/binutils
@@ -34,21 +38,18 @@ pkg_preinst() {
 	enewuser ${QUAGGA_USER_NAME} ${QUAGGA_USER_UID} ${QUAGGA_USER_SH} ${QUAGGA_USER_HOMEDIR} ${QUAGGA_USER_GROUPS}
 }
 
-src_unpack() {
-	unpack ${A} || die
-	cd ${S} || die
-	epatch ${FILESDIR}/patches-${PV}/opaque-ready.patch
-	epatch ${FILESDIR}/patches-${PV}/ospf_refcount.patch
-}
-
 src_compile() {
 	local ipv
 	local snmp
 	local pam
+	local tcpmd5
 
 	use ipv6 && ipv="--enable-ipv6 --enable-ripng --enable-ospf6d --enable-rtadv" || ipv="--disable-ipv6 --disable-ripngd --disable-ospf6d"
 	use snmp && snmp="--enable-snmp"
 	use pam && pam="--with-libpam"
+
+	use tcpmd5 && tcpmd5="--enable-tcp-md5"
+	use tcpmd5 && epatch ${DISTDIR}/$MD5_PATCH
 
 	# update makefiles
 
@@ -72,8 +73,9 @@ src_compile() {
 		    --enable-group=${QUAGGA_GROUP} \
 		    --enable-vty-group=${QUAGGA_VTYGROUP} \
 		    --with-cflags="${CFLAGS}" \
-	            --enable-vtysh ${ipv} ${snmp} ${pam} \
+	            --enable-vtysh ${ipv} ${snmp} ${pam} ${tcpmd5} \
 		    --sysconfdir=/etc/quagga \
+		    --enable-exampledir=${D}/etc/quagga/samples \
 		    --includedir=${D}/usr/include/quagga \
 		    --libdir=${D}/usr/lib/quagga \
 			|| die
@@ -84,8 +86,7 @@ src_install() {
 	einstall || die
 
 	dodir /etc/quagga || die
-	dodir /etc/quagga/sample || die
-	mv ${D}/etc/*sample* ${D}/etc/quagga/sample || die
+	dodir /etc/quagga/samples || die
 
 	keepdir /var/run/quagga || die
 

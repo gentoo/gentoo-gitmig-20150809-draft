@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/quagga
 # Copyright 2003-2004 DataCore GmbH; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.8 2004/10/02 15:37:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.9 2004/10/05 22:11:05 malverian Exp $
+
+*quagga-0.96.5 (05 Oct 2004)
+
+  05 Oct 2004; Philip Walls <malverian@gentoo.org> +quagga-0.96.5.ebuild:
+  Version bump, support for tcp md5 passwords
 
   16 Jul 2004; Amir Guindehi <amir@datacore.org> quagga-0.96.4-r6.ebuild:
   fixed copyright statement according to dmwaters and seemants wishes.
