@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.689 2004/10/20 05:29:36 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.690 2004/10/21 19:33:34 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -354,6 +354,7 @@ media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
 media-plugins/mythphone:festival - Enable festival support
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
 media-sound/amarok:noamazon - Disable support for downloading covers from amazon.com
+media-sound/bpmdj:mp3 - Add support for reading mp3 files
 media-sound/daapd:howl - Enable howl support, enables DNS Service Discovery (DNS-SD)
 media-sound/daapd:mpeg4 - Add support for reading AAC metadata
 media-sound/gnusound:libsamplerate - Build gnusound with support for converting sample rates using libsamplerate
