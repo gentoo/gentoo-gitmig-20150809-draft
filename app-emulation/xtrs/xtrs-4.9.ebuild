@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9.ebuild,v 1.14 2005/01/01 14:21:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9.ebuild,v 1.15 2005/02/27 14:14:49 malc Exp $
 
 inherit eutils gcc
 
@@ -11,7 +11,7 @@ SRC_URI="http://home.gwi.net/~plemon/sources/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 DEPEND="sys-libs/ncurses
