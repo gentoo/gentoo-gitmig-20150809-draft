@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.71 2004/06/24 22:56:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.72 2004/07/01 00:11:30 eradicator Exp $
+
+*alsa-lib-1.0.5-r2 (30 Jun 2004)
+
+  30 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/fix-asound_h.patch, +files/test-asound_h.c,
+  -alsa-lib-1.0.5-r1.ebuild, +alsa-lib-1.0.5-r2.ebuild:
+  Added logic to detect a bad asound.h (missing __user) and die so the user can
+  fix it. This doesn't break alsa-lib, but it breaks packages that use the alsa
+  driver includes, I I believe this is the best place to do the test rather than
+  in every user app. This closes bug #54533.
 
   24 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-lib-1.0.5.ebuild:
