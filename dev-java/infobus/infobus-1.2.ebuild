@@ -1,26 +1,23 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus/infobus-1.2.ebuild,v 1.7 2004/02/10 07:26:08 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus/infobus-1.2.ebuild,v 1.8 2004/03/18 05:20:42 zx Exp $
 
 inherit java-pkg
 
-At="ib12.zip"
-S=${WORKDIR}
 DESCRIPTION="InfoBus enables dynamic exchange of data between JavaBeans component architecture."
-SRC_URI=""
+SRC_URI="ib12.zip"
 HOMEPAGE="http://java.sun.com/products/javabeans/infobus/index.html"
 KEYWORDS="x86 ppc sparc"
 LICENSE="infobus"
 SLOT="0"
+RESTRICT="fetch"
 DEPEND=">=app-arch/unzip-5.50-r1"
 RDEPEND=">=virtual/jdk-1.2"
 IUSE="doc"
 
-src_unpack() {
-	if [ ! -f "${DISTDIR}/${At}" ] ; then
-		echo  " "
-		echo  "!!! Missing ${DISTDIR}/${At}"
-		echo  " "
+S=${WORKDIR}
+
+pkg_nofetch() {
 		einfo " "
 		einfo " Due to license restrictions, we cannot fetch the"
 		einfo " distributables automagically."
@@ -31,13 +28,13 @@ src_unpack() {
 		einfo " 4. Run emerge on this package again to complete"
 		einfo " "
 		die "User must manually download distfile"
-	fi
-	unzip -qq ${DISTDIR}/${At}
 }
 
-src_compile() {
-	einfo " This is a binary-only ebuild."
+src_unpack() {
+	unzip -qq ${DISTDIR}/${A}
 }
+
+src_compile() { :; }
 
 src_install() {
 	use doc && dohtml -r doc/
