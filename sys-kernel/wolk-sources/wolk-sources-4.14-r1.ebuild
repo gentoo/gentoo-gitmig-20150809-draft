@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Submitted by Kerin Francis Millar (kerframil) and Lance Albertson (Ramereth)
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.14-r1.ebuild,v 1.1 2004/06/04 17:53:14 plasmaroo Exp $
 
 OKV="2.4.20"
 OKB="2.4"
-EXTRAVERSION="-${PN%-*}-${PV/$OKV./}"
+EXTRAVERSION="-${PN%-*}-${PV/$OKV./}-${PR}"
 KV="${OKV}${EXTRAVERSION}"
 S="${WORKDIR}/linux-${KV}"
 WOLK_SRC="linux-${OKV}-wolk${PV/${OKV}./}-fullkernel.tar.bz2"
@@ -25,6 +25,10 @@ mailing list: http://sourceforge.net/mailarchive/forum.php?forum_id=8245.
 Refer to the 2.4-WOLK-README file for further information. You will find
 this file in the directory containing the sources."
 
+UNIPATCH_LIST="${FILESDIR}/${PN}.CAN-2004-0133.patch
+	${FILESDIR}/${PN}.CAN-2004-0181.patch
+	${FILESDIR}/${PN}.CAN-2004-0394.patch"
+
 #============================================================================
 # We'll override the src_unpack() function from the eclass. This is necessary
 # due to the inclusion of optional patches in the sources. These cannot be
@@ -37,7 +41,7 @@ src_unpack() {
 	mv ${WOLK_DIR} linux-${KV} || die "Unable to move source tree to ${KV}."
 	cd ${S}
 
+	unipatch ${UNIPATCH_LIST}
 	universal_unpack
 	unpack_set_extraversion
-
 }

@@ -1,15 +1,28 @@
 # ChangeLog for sys-kernel/wolk-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.44 2004/05/01 20:39:56 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.45 2004/06/04 17:53:14 plasmaroo Exp $
+
+*wolk-sources-4.11-r4 (04 Jun 2004)
+
+  04 Jun 2004; <plasmaroo@gentoo.org> -wolk-sources-4.11-r3.ebuild,
+  +wolk-sources-4.11-r4.ebuild, +wolk-sources-4.14-r1.ebuild,
+  -wolk-sources-4.14.ebuild, -wolk-sources-4.9-r6.ebuild,
+  +wolk-sources-4.9-r7.ebuild, +files/wolk-sources.CAN-2004-0133.patch,
+  +files/wolk-sources.CAN-2004-0181.patch,
+  +files/wolk-sources.CAN-2004-0394.patch,
+  +files/wolk-sources.CAN-2004-0427.patch:
+  Added patches for the CAN-2004-0133, CAN-2004-0181, CAN-2004-0394, and
+  CAN-2004-0427 vulnerabilities. Bug #47881. Old versions of sources removed.
 
   01 May 2004; Steve Arnold <nerdboy@gentoo.org> wolk-sources-4.14.ebuild:
-  added back old wolk arches (all ~)
+  Added back old wolk arches (all ~).
 
 *wolk-sources-4.14 (01 May 2004)
 
   01 May 2004; Steve Arnold <nerdboy@gentoo.org> wolk-sources-4.14.ebuild:
-  updated ebuild logic and new mcp patches (all known security issues have
-  been addressed by mcp).  Bumped 4.11 to x86.
+  Updated ebuild logic and new mcp patches (all known security issues have
+  been addressed by mcp).  Bumped 4.11 to x86. Submitted by Kerin Francis
+  Millar (kerframil) and Lance Albertson (Ramereth).
 
 *wolk-sources-4.11-r3 (17 Apr 2004)
 *wolk-sources-4.9-r6 (17 Apr 2004)

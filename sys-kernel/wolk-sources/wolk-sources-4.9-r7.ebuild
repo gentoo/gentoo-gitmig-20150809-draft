@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9-r6.ebuild,v 1.1 2004/04/17 15:23:34 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9-r7.ebuild,v 1.1 2004/06/04 17:53:14 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -77,9 +77,13 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-4.9s.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
 	epatch ${FILESDIR}/${PN}-4.9s.CAN-2004-0010.patch || die "Failed to add the CAN-2004-0010 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
-	epatch ${FILESDIR}/${PN}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0109.patch || die "Failed to add the CAN-2004-0109 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0133.patch || die "Failed to add the CAN-2004-0133 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0177.patch || die "Failed to add the CAN-2004-0177 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0178.patch || die "Failed to add the CAN-2004-0178 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0181.patch || die "Failed to add the CAN-2004-0181 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0427.patch || die "Failed to add the CAN-2004-0427 patch!"
 
 	kernel_universal_unpack
 }
@@ -90,12 +94,13 @@ pkg_postinst() {
 	einfo "For many people they may work, but too many people expecting problems"
 	einfo "with this drivers. They will be reintroduced when they are fixed."
 	einfo "You have to fall back to an earlier release of the wolk kernel when you want"
-	einfo "to use one of this drivers."
+	einfo "to use one of these drivers."
 	einfo
 	einfo "This new ebuild has support for the workstation patches."
 	einfo "With the wolk-bootsplash, wolk-supermount, and"
 	einfo "ipv6 use flags you can take advantage of the"
 	einfo "Bootsplash, Supermount, and MIPv6 patches."
+	einfo
 	ewarn "Patches not guaranteed; YMMV..."
 	einfo
 }
