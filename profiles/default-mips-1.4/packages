@@ -95,7 +95,6 @@
 *sys-libs/cracklib  
 *<sys-libs/db-3.2.10
 *sys-libs/gdbm  
-##*>=sys-libs/ncurses-5.2.20020511-r2
 *>=sys-libs/ncurses-5.2-r2
 *sys-libs/pam     
 *sys-libs/pwdb      
