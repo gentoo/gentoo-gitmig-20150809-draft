@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/gnustep-env-0.1.4.ebuild,v 1.1 2004/09/24 01:05:12 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/gnustep-env-0.1.4.ebuild,v 1.2 2004/10/04 01:17:44 fafhrd Exp $
 
 inherit gnustep
 
@@ -27,8 +27,10 @@ src_compile() {
 src_install() {
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/gnustep.runscript-${PV} gnustep
+	dosed "s:XXX_GENTOO_GNUSTEP_ROOT_XXX:${GENTOO_GNUSTEP_ROOT}:g" /etc/init.d/gnustep
 	insinto /etc/env.d
 	newins ${FILESDIR}/gnustep.env-${PV} 99gnustep
+	dosed "s:XXX_GENTOO_GNUSTEP_ROOT_XXX:${GENTOO_GNUSTEP_ROOT}:g" /etc/env.d/99gnustep
 	dodir /var/run/GNUstep
 	einfo "Check http://dev.gentoo.org/~fafhrd/ for very handy info in setting up your GNUstep env."
 }

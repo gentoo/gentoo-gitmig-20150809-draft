@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-base/gnustep-env
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.4 2004/09/24 01:05:12 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.5 2004/10/04 01:17:44 fafhrd Exp $
+
+*gnustep-env-0.1.4 (03 Oct 2004)
+
+  03 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org> files/gnustep.env-0.1.4,
+  files/gnustep.runscript-0.1.4, gnustep-env-0.1.4.ebuild:
+  Updated to use GENTOO_GNUSTEP_ROOT variable from gnustep.eclass
 
   25 Jul 2004; Lina Pezzella <burgundy@gentoo.org> :
   Fixed Manifest.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.1_pre20040928.ebuild,v 1.1 2004/09/28 17:50:02 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.1_pre20040928.ebuild,v 1.2 2004/10/04 01:17:28 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -46,8 +46,8 @@ src_unpack() {
 src_compile() {
 	cd ${S}
 
-	myconf="--prefix=/usr/GNUstep"
-	myconf="$myconf --with-network-root=/usr/GNUstep/Network"
+	myconf="--prefix=${GENTOO_GNUSTEP_ROOT}"
+	myconf="$myconf --with-network-root=${GENTOO_GNUSTEP_ROOT}/Network"
 	myconf="$myconf --with-tar=/bin/tar"
 	econf $myconf || die "configure failed"
 
@@ -75,19 +75,19 @@ src_install() {
 		die "no Makefile found"
 	fi
 
-	. ${D}usr/GNUstep/System/Library/Makefiles/GNUstep.sh
+	. ${D}${GENTOO_GNUSTEP_ROOT}/System/Library/Makefiles/GNUstep.sh
 
 	if [ `use doc` ]; then
 		cd Documentation
 		make INSTALL_ROOT=${D} \
 			GNUSTEP_SYSTEM_ROOT=${D}${GNUSTEP_SYSTEM_ROOT} \
-			GNUSTEP_MAKEFILES=${D}usr/GNUstep/System/Library/Makefiles \
+			GNUSTEP_MAKEFILES=${D}${GENTOO_GNUSTEP_ROOT}/System/Library/Makefiles \
 			GNUSTEP_USER_ROOT=${TMP}/GNUstep \
 			GNUSTEP_DEFAULTS_ROOT=${TMP}/GNUstep \
 			all || die "doc build failed"
 		make INSTALL_ROOT=${D} \
 			GNUSTEP_SYSTEM_ROOT=${D}${GNUSTEP_SYSTEM_ROOT} \
-			GNUSTEP_MAKEFILES=${D}usr/GNUstep/System/Library/Makefiles \
+			GNUSTEP_MAKEFILES=${D}${GENTOO_GNUSTEP_ROOT}/System/Library/Makefiles \
 			GNUSTEP_USER_ROOT=${TMP}/GNUstep \
 			GNUSTEP_DEFAULTS_ROOT=${TMP}/GNUstep \
 			install || die "doc install failed"
