@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1045d810b645c73d7357069a90cfe616 ChangeLog 1437
-MD5 385d889282f1fbb72690800d4cd35686 gnomoradio-0.15.1.ebuild 865
 MD5 beb871215e05dd7c085d4492bd944b58 gnomoradio-0.13.ebuild 711
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 c4cf022e140c042009d8b9ea8545dd80 files/digest-gnomoradio-0.13 68
+MD5 f92370397b1e78d4c43b480f1dd79eb0 ChangeLog 1533
+MD5 c9764835793c0044d386b7e1f6ee2db7 gnomoradio-0.15.1.ebuild 866
 MD5 410961a71f17292b8829bb17d1587eb9 files/digest-gnomoradio-0.15.1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBo7B3ArHZZzCEUG0RApSMAJ979qE+AadhXbBNRy02x9fIyYOnmgCcDy3A
-rdUPkKe2l9IvxIIPOdKBNIQ=
-=hOeN
------END PGP SIGNATURE-----
+MD5 c4cf022e140c042009d8b9ea8545dd80 files/digest-gnomoradio-0.13 68
