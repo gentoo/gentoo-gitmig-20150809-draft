@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.11 2002/08/01 14:02:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.12 2002/08/18 04:26:55 drobbins Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
@@ -58,11 +58,6 @@ src_unpack() {
 		cvs -d /home/cvsroot co gentoo-src
 	fi
 }	
-
-src_compile() {
-	cd ${S}
-	python python/gendevlistxml.py txt/devlist.txt xml/main-devlist.xml || die
-}
 
 src_install() {
 	export WEBROOT="`cat ${T}/webroot`"
@@ -145,29 +140,8 @@ src_install() {
 	xsltproc $TEMPLATE xml/main-graphics.xml > ${D}${WEBROOT}/index-graphics.html || die
 	OLDROOT=${ROOT} ; unset ROOT
 	
-	#This can only be done in ${T} since ${S} may be a live CVS tree
-	cd ${T}
-	mkdir -p xml/packages
-	dodir ${WEBROOT}/packages/
-	insinto ${WEBROOT}/packages/
-	#we're getting bonkers stuff in the main packages pages, so lets make sure it's empty
-	python ${S}/python/genpkgxml.py ${T}/main-packages-old-style.xml || die
-	python ${S}/python/genpkgxml-v2.py ${T}/main-packages.xml || die
-	for DIR in `ls xml/packages`
-	do
-		dodir ${WEBROOT}/packages/${DIR}
-		for FILE in  `ls xml/packages/${DIR}`
-		do
-			FILE=${FILE%.xml}
-			echo -n "."	
-			xsltproc $TEMPLATE xml/packages/${DIR}/${FILE}.xml > ${D}/${WEBROOT}/packages/${DIR}/${FILE}.html || die
-		done
-	done
-
 	ROOT=${OLDROOT}
 	
-	xsltproc $TEMPLATE ${T}/main-packages.xml > ${D}${WEBROOT}/index-packages.html || die
-	xsltproc $TEMPLATE ${T}/main-packages-old-style.xml > ${D}${WEBROOT}/index-packages-old.html || die
 	xsltproc $TEMPLATE ${S}/xml/main-devlist.xml > ${D}${WEBROOT}/index-devlist.html || die
 	
 	#install XSL for later use
@@ -211,4 +185,28 @@ pkg_preinst() {
 		source ~drobbins/.ssh-agent-chiba.3jane.net
 		rsync --delete -ave ssh ${D}/${WEBROOT}/images/ drobbins@login.ibiblio.org:gentoo/images/
 	fi
+
+	#do some python goodness outside of the firewall
+		cd ${S}
+	python python/gendevlistxml.py txt/devlist.txt xml/main-devlist.xml || die
+	#This can only be done in ${T} since ${S} may be a live CVS tree
+	cd ${T}
+	mkdir -p xml/packages
+	dodir ${WEBROOT}/packages/
+	insinto ${WEBROOT}/packages/
+	#we're getting bonkers stuff in the main packages pages, so lets make sure it's empty
+	python ${S}/python/genpkgxml.py ${T}/main-packages-old-style.xml || die
+	python ${S}/python/genpkgxml-v2.py ${T}/main-packages.xml || die
+	for DIR in `ls xml/packages`
+	do
+		dodir ${WEBROOT}/packages/${DIR}
+		for FILE in  `ls xml/packages/${DIR}`
+		do
+			FILE=${FILE%.xml}
+			echo -n "."	
+			xsltproc $TEMPLATE xml/packages/${DIR}/${FILE}.xml > ${D}/${WEBROOT}/packages/${DIR}/${FILE}.html || die
+		done
+	done
+	xsltproc $TEMPLATE ${T}/main-packages.xml > ${D}${WEBROOT}/index-packages.html || die
+	xsltproc $TEMPLATE ${T}/main-packages-old-style.xml > ${D}${WEBROOT}/index-packages-old.html || die
 }
