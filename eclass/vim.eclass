@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.92 2005/01/21 22:19:40 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.93 2005/01/22 19:45:55 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -37,6 +37,10 @@ fi
 
 if [[ "${PN##*-}" == "cvs" ]] ; then
 	inherit cvs
+fi
+
+if [[ $(get_major_version -ge 7 ) ]] ; then
+	inherit bash-completion
 fi
 
 ECLASS=vim
@@ -536,6 +540,15 @@ src_install() {
 			fperms a+x /usr/share/vim/vim${VIM_VERSION//./}/macros/manpager.sh
 		fi
 	fi
+
+	# bash completion script, bug #79018.
+	if [[ $(get_major_version ) -ge 7 ]] ; then
+		if [[ "${MY_PN}" == "vim-core" ]] ; then
+			dobashcompletion ${FILESDIR}/xxd-completion xxd
+		else
+			dobashcompletion ${FILESDIR}/${MY_PN}-completion ${MY_PN}
+		fi
+	fi
 }
 
 # Make convenience symlinks, hopefully without stepping on toes.  Some
@@ -634,6 +647,10 @@ pkg_postinst() {
 		ewarn "officially supported and may not work."
 		ewarn " "
 		ebeep 5
+	fi
+
+	if [[ $(get_major_version ) -ge 7 ]] ; then
+		bash-completion_pkg_postinst
 	fi
 
 	# Make convenience symlinks
