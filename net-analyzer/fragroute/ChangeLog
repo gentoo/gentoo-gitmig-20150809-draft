@@ -1,0 +1,7 @@
+# ChangeLog for net-analyzer/fragroute
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.1 2003/08/29 01:54:38 zul Exp $
+
+  28 Aug 2003; Chuck Short <zul@gentoo.org> :
+  Initial version. Ebuild contributed by Daniel Seyffer <gentoo-bugs@seyffer.de>.
+
