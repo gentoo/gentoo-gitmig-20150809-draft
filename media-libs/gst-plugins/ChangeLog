@@ -1,7 +1,11 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.62 2004/03/24 01:14:24 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.63 2004/04/03 01:28:13 foser Exp $
+
+  03 Apr 2004; foser <foser@gentoo.org> gst-plugins-0.8.0-r1.ebuild :
+  Add pdepends on some sinks to be on the safe side
+  Add patch to make audioconvert do stereo again (#46408)
 
 *gst-plugins-0.8.0-r1 (23 Mar 2004)
 

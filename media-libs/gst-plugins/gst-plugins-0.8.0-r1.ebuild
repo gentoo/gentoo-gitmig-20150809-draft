@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.8.0-r1.ebuild,v 1.1 2004/03/24 01:14:24 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.8.0-r1.ebuild,v 1.2 2004/04/03 01:28:13 foser Exp $
 
 # IMPORTANT
 #
@@ -16,8 +16,9 @@ inherit gst-plugins gnome2 eutils flag-o-matic
 
 DESCRIPTION="Basepack of plugins for gstreamer"
 HOMEPAGE="http://gstreamer.net/"
-
 LICENSE="GPL-2"
+
+IUSE="esd alsa oss"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
 
 RDEPEND="=media-libs/gstreamer-${PV}*
@@ -27,7 +28,9 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.11.5
 	>=dev-util/pkgconfig-0.9"
 
-#PDEPEND=">=media-plugins/gst-plugins-oss-${PV}"
+PDEPEND="oss? ( >=media-plugins/gst-plugins-oss-${PV} )
+	alsa? ( >=media-plugins/gst-plugins-alsa-${PV} )
+	esd? ( >=media-plugins/gst-plugins-esd-${PV} )"
 
 # we need x for the x overlay to get linked
 GST_PLUGINS_BUILD="x xshm"
@@ -37,6 +40,9 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	# fix audioconvert (#
+	epatch ${FILESDIR}/${P}-audioconvert_stereo.patch
+
 	# ppc asm included in the resample plugin seems to be broken,
 	# using a slower but working version for now
 	#
@@ -69,7 +75,6 @@ src_compile() {
 src_install() {
 
 	gnome2_src_install
-#	gst-plugins_remove_unversioned_binaries
 
 	# forgotten header, should be included next release
 	insinto /usr/include/gstreamer-0.8/gst/xoverlay/
@@ -86,10 +91,7 @@ pkg_postinst () {
 
 	echo ""
 	einfo "The Gstreamer plugins setup has changed quite a bit on Gentoo,"
-	einfo "applications now should provide you with the basic plugins."
-#	echo ""
-#	einfo "Right now this package installs at least an OSS output plugin to have"
-#	einfo "a standard sound output plugin, but this might change in the future."
+	einfo "applications now should provide the basic plugins needed."
 	echo ""
 	einfo "The new seperate plugins are all named 'gst-plugins-<plugin>'."
 	einfo "To get a listing of currently available plugins execute 'emerge -s gst-plugins-'."

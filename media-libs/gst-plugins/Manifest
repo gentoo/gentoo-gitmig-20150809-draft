@@ -1,8 +1,8 @@
 MD5 5024e6812066d0993923103076c757d2 gst-plugins-0.6.2-r1.ebuild 5099
-MD5 a5673014dc5261f245cee1aa5288ba89 gst-plugins-0.8.0-r1.ebuild 2788
+MD5 a9ff1d0dd939ac49d1f2abc7d56403a5 gst-plugins-0.8.0-r1.ebuild 2776
 MD5 1d1e583cca65c1d5f2abe553417efdfc gst-plugins-0.6.1.ebuild 4862
 MD5 81734bbfd7c6251faf854981b7034365 gst-plugins-0.6.3.ebuild 3044
-MD5 d476a8d4fb7fb0286cb6d41cda446f4c ChangeLog 9753
+MD5 6821b4cae889aa45ca45792613fbcec6 ChangeLog 9934
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 eb33b7dba7ce584832ba10535cc25a06 gst-plugins-0.6.4.ebuild 2926
 MD5 4ce1d39bcd5cf1db9464cad55467b790 files/gst-plugins-0.6.3-gcc33.patch 1307
@@ -17,3 +17,4 @@ MD5 f4d299412b70de18060a4226c6fa981f files/gst-plugins-0.6-disable_ffmpeg_mpeg_t
 MD5 548125c96ab562221dc0509e485d0f5a files/gst-plugins-0.6-ffmpeg_ldflags.patch 1858
 MD5 09dbea60bc673a49aadc1a6369d724d7 files/gst-plugins-0.6.4-gcc2_fix.patch 692
 MD5 04bb0cdc1431b53db92b658a3c9fa6dd files/noppcasm.patch 1431
+MD5 c6e69d419de61401529c6e3000271e1b files/gst-plugins-0.8.0-audioconvert_stereo.patch 4437
