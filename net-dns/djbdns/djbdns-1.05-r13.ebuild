@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r12.ebuild,v 1.3 2004/06/23 21:45:21 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r13.ebuild,v 1.1 2004/06/23 21:45:21 jhhudso Exp $
 
-IUSE="ipv6 ipv6arpa static fwdzone roundrobin multipleip aliaschain semanticfix cnamefix doc"
+IUSE="ipv6 static fwdzone roundrobin multipleip aliaschain semanticfix cnamefix doc"
 
 inherit eutils
 
@@ -18,11 +18,11 @@ SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
 	aliaschain? ( ${URL2}/tinydns-alias-chain-truncation.patch )
 	semanticfix? ( ${URL2}/tinydns-data-semantic-error.patch )
 	cnamefix? ( ${URL2}/dnscache-cname-handling.patch )
-	ipv6? ( http://www.fefe.de/dns/djbdns-1.05-test20.diff.bz2 )"
+	ipv6? ( http://www.fefe.de/dns/djbdns-1.05-test21.diff.bz2 )"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86"
 
 RDEPEND=">=sys-apps/daemontools-0.70
 	doc? ( app-doc/djbdns-man )
@@ -31,10 +31,6 @@ RDEPEND=">=sys-apps/daemontools-0.70
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	! useq ipv6 && useq ipv6arpa && \
-	eerror "ipv6arpa can only be used the ipv6 use flag" && \
-	exit -1
 
 	useq ipv6 && useq cnamefix && \
 	eerror "ipv6 cannot currently be used with the cnamefix patch" && \
@@ -73,7 +69,6 @@ src_unpack() {
 		epatch ${DISTDIR}/dnscache-multiple-ip.patch && \
 		epatch ${DISTDIR}/djbdns-1.05-multiip.diff
 
-	epatch ${FILESDIR}/${PV}-errno.patch
 	epatch ${FILESDIR}/headtail.patch
 	epatch ${FILESDIR}/dnsroots.patch
 
@@ -81,11 +76,13 @@ src_unpack() {
 		einfo "At present dnstrace does NOT support IPv6. It will " \
 		      "be compiled without IPv6 support."
 		cp -a ${S} ${S}-noipv6
-		epatch ${WORKDIR}/djbdns-1.05-test20.diff
+		# Careful -- test21 of the ipv6 patch includes the errno patch
+		epatch ${WORKDIR}/djbdns-1.05-test21.diff
+		cd ${S}-noipv6
+		epatch ${FILESDIR}/${PV}-errno.patch
+	} || {
+		epatch ${FILESDIR}/${PV}-errno.patch
 	}
-
-	useq ipv6 && useq ipv6arpa && \
-		epatch ${FILESDIR}/djbdns-1.05-ipv6arpa+BSDok-gentoo.diff
 }
 
 src_compile() {
