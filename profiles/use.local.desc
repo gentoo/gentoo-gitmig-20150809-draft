@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.682 2004/10/11 15:06:08 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.683 2004/10/11 23:18:24 foser Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -268,6 +268,7 @@ gnome-base/gnome-panel:eds - Enable Evolution Data Server (EDS) support
 gnome-base/gnome-vfs:hal - Enable Hardware Abstraction Layer (HAL) support
 gnome-base/gnome-vfs:howl - Enable howl support, enables DNS Service Discovery (DNS-SD)
 gnome-base/gnome:hal - Enable Hardware Abstraction Layer (HAL) support
+gnome-extra/gnome-games:artworkextra - Add extra Artwork to gnome-games
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
 gnome-extra/nautilus-cd-burner:hal - Enable Hardware Abstraction Layer (HAL) support
 gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in e-mail messages.
