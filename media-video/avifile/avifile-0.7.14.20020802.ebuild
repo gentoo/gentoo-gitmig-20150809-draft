@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.14.20020802.ebuild,v 1.3 2002/08/27 20:09:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.14.20020802.ebuild,v 1.4 2002/08/27 20:21:13 raker Exp $
 
 inherit libtool
 
@@ -47,15 +47,14 @@ src_compile() {
 		&& myconf="${myconf} --enable-vorbis" \
 		|| myconf="${myconf} --disable-vorbis --disable-oggtest --disable-vorbistest"
 	
-	use kde \
-		&& ( \ 
-			myconf="${myconf} --enable-kde" \
-			&& LDFLAGS="${LDFLAGS} -L${KDEDIR}/lib" \
-			&& myconf="${myconf} --with-extra-libraries=${KDEDIR}" \
-		) || (
-			myconf="${myconf} --disable-kde" \
-			&& LDFLAGS="${LDFLAGS}"
-		)
+	if [ `use kde` ]
+	then
+		myconf="${myconf} --enable-kde --with-extra-libraries=${KDEDIR}"
+		LDFLAGS="${LDFLAGS} -L${KDEDIR}/lib"
+	else
+		myconf="${myconf} --disable-kde"
+		LDFLAGS="${LDFLAGS}"
+	fi
 
 	# Rather not use custom ones here .. build should set as high as
 	# safe by itself.
