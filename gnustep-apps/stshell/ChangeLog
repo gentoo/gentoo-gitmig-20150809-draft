@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/stshell
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/stshell/ChangeLog,v 1.1 2004/09/28 17:54:55 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/stshell/ChangeLog,v 1.2 2004/10/18 12:13:47 dholm Exp $
+
+  18 Oct 2004; David Holm <dholm@gentoo.org>
+  stshell-0.8.3_pre20040927.ebuild:
+  Added to ~ppc.
 
 *stshell-0.8.3_pre20040927 (28 Sep 2004)
 
