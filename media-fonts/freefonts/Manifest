@@ -1,6 +1,16 @@
-MD5 088fc5e0605031e9f817309282c51239 ChangeLog 2128
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b59eee94befd8d978b3199418e9f3caf ChangeLog 2227
 MD5 1512fa481ce2444ba7bae7772575cbec freefonts-0.10-r1.ebuild 609
-MD5 4fbc5654befec1c914966ec2fdac094c freefonts-0.10-r2.ebuild 949
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
+MD5 e077d7bfad8c942f150f46857218c05c freefonts-0.10-r2.ebuild 955
 MD5 3ef364b1215f2b38248fc08833247ba9 files/digest-freefonts-0.10-r1 67
 MD5 3ef364b1215f2b38248fc08833247ba9 files/digest-freefonts-0.10-r2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBiSXuugEuf3OQ0akRAiEaAJ9fLKAuRKyp4Tv86s7+RsikPYYd7ACgovHz
+LG6zRMHODOIux5IhpRVm2zg=
+=40o3
+-----END PGP SIGNATURE-----
