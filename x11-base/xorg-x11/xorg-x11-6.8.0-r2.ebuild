@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.20 2004/10/19 06:13:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.21 2004/10/19 06:21:20 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -16,7 +16,7 @@
 #		Add some logic so /usr/X11R6/lib can actually be a symlink
 #			- Move everything inside to /usr/lib while retaining its MD5 so
 #				it will still be uninstalled when portage follows the symlink.
-#				Note: A simple `mv` does this. Do in pkg_preinst().
+#				Note: A simple $(mv) does this. Do in pkg_preinst().
 #   TARGET: 6.8.0-r3
 #		Same for /usr/X11R6/include
 #   TARGET: 6.8.0-r4
@@ -83,7 +83,7 @@ LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
 SLOT="0"
 KEYWORDS="~x86"
 
-# Need portage-2.0.50_pre9 for `use !foo`
+# Need portage-2.0.50_pre9 for $(use !foo)
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
 	>=sys-devel/flex-2.5.4a-r5
@@ -306,13 +306,13 @@ host_def_setup() {
 		# Bug #12775 .. fails with -Os.
 		replace-flags "-Os" "-O2"
 
-		if [ "`gcc-version`" != "2.95" ]
+		if [ "$(gcc-version)" != "2.95" ]
 		then
 			# Should fix bug #4189.  gcc 3.x have problems with -march=pentium4
 			# and -march=athlon-tbird
 			# Seems fixed on 3.3 and higher
 
-			if [ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -le "2" ]
+			if [ "$(gcc-major-version)" -eq "3" -a "$(gcc-minor-version)" -le "2" ]
 			then
 				replace-cpu-flags pentium4 pentium3
 				replace-cpu-flags athlon athlon-tbird
@@ -323,13 +323,13 @@ host_def_setup() {
 
 
 			# Try a fix for #49310, see #50931 for more info. <spyderous>
-			if [ "`is-flag -fomit-frame-pointer`" ]
+			if [ "$(is-flag -fomit-frame-pointer)" ]
 			then
 				replace-cpu-flags k6 k6-2 k6-3 i586
 			fi
 
 			# Without this, modules breaks with gcc3
-			if [ "`gcc-version`" = "3.1" ]
+			if [ "$(gcc-version)" = "3.1" ]
 			then
 				append-flags "-fno-merge-constants"
 				append-flags "-fno-merge-constants"
@@ -337,8 +337,8 @@ host_def_setup() {
 		fi
 
 		if ( [ -e "${ROOT}/usr/src/linux" ] && \
-			[ ! `is_kernel "2" "2"` ] ) || \
-			[ "`uname -r | cut -d. -f1,2`" != "2.2" ]
+			[ ! $(is_kernel "2" "2") ] ) || \
+			[ "$(uname -r | cut -d. -f1,2)" != "2.2" ]
 		then
 			echo "#define HasLinuxInput YES" >> ${HOSTCONF}
 		fi
@@ -377,8 +377,8 @@ host_def_setup() {
 
 		# Remove circular dep between pam and X11, bug #35468
 		# If pam is in USE and we have X11, then we can enable PAM
-#		if use pam && [ "`best_version x11-base/xorg-x11`" ]
-		if [ "`best_version x11-base/xorg-x11`" ]
+#		if use pam && [ "$(best_version x11-base/xorg-x11)" ]
+		if [ "$(best_version x11-base/xorg-x11)" ]
 		then
 			# If you want to have optional pam support, do it properly ...
 			use_build pam HasPam
@@ -476,8 +476,8 @@ host_def_setup() {
 				echo "#define ModuleAsCmd CcCmd -c -x assembler -fno-pie -fno-PIE" >> ${HOSTCONF}
 			fi
 			if ( [ -e "${ROOT}/usr/src/linux" ] && \
-			  !( `is_kernel "2" "6"` ) ) || \
-			  [ "`uname -r | cut -d. -f1,2`" != "2.6" ]
+			  !( $(is_kernel "2" "6") ) ) || \
+			  [ "$(uname -r | cut -d. -f1,2)" != "2.6" ]
 			then
 				einfo "Building for kernels less than 2.6 requires special treatment"
 				echo "#define UseDeprecatedKeyboardDriver YES" >> ${HOSTCONF}
@@ -729,7 +729,7 @@ compose_files_setup() {
 	do
 		# make empty Compose files for some locales
 		# CJK must not have that file (otherwise XIM don't works some times)
-		case `basename ${x}` in
+		case $(basename ${x}) in
 			C|microsoft-*|iso8859-*|koi8-*)
 				if [ ! -f ${x}/Compose ]
 				then
@@ -867,7 +867,7 @@ strip_execs() {
 				# Dont do the modules ...
 				if [ "${x/\/usr\/$(get_libdir)\/modules}" = "${x}" ]
 				then
-					echo "`echo ${x} | sed -e "s|${D}||"`"
+					echo "$(echo ${x} | sed -e "s|${D}||")"
 					${STRIP} ${x} || :
 				fi
 			fi
@@ -878,7 +878,7 @@ strip_execs() {
 		do
 			if [ -f ${x} ]
 			then
-				echo "`echo ${x} | sed -e "s|${D}||"`"
+				echo "$(echo ${x} | sed -e "s|${D}||")"
 				${STRIP} --strip-debug ${x} || :
 			fi
 		done
@@ -958,7 +958,7 @@ src_install() {
 	einfo "Installing X.org X11..."
 	# gcc3 related fix.  Do this during install, so that our
 	# whole build will not be compiled without mmx instructions.
-	if [ "`gcc-version`" != "2.95" ] && use x86
+	if [ "$(gcc-version)" != "2.95" ] && use x86
 	then
 		make install DESTDIR=${D} || \
 		make CDEBUGFLAGS="${CDEBUGFLAGS} -mno-mmx" \
@@ -992,7 +992,7 @@ src_install() {
 	do
 		if [ -f ${x} ]
 		then
-			fperms 0755 `echo ${x} | sed -e "s|${D}||"`
+			fperms 0755 $(echo ${x} | sed -e "s|${D}||")
 		fi
 	done
 
@@ -1002,7 +1002,7 @@ src_install() {
 	do
 		if [ -f ${x} ]
 		then
-			fperms 0755 `echo ${x} | sed -e "s|${D}||"`
+			fperms 0755 $(echo ${x} | sed -e "s|${D}||")
 		fi
 	done
 
@@ -1390,7 +1390,7 @@ switch_opengl_implem() {
 		# Use new opengl-update that will not reset user selected
 		# OpenGL interface ...
 		echo
-		if [ "`${ROOT}/usr/sbin/opengl-update --get-implementation`" = "xfree" ]
+		if [ "$(${ROOT}/usr/sbin/opengl-update --get-implementation)" = "xfree" ]
 		then
 			${ROOT}/usr/sbin/opengl-update ${PN}
 		else
@@ -1420,7 +1420,7 @@ pkg_postinst() {
 	do
 		# Remove old compose files we might have created incorrectly
 		# CJK must not have that file (otherwise XIM don't works some times)
-		case `basename ${x}` in
+		case $(basename ${x}) in
 			ja*|ko*|zh*)
 				if [ -r "${x}/Compose" ]
 				then
