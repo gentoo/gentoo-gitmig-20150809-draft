@@ -70,6 +70,7 @@ kde - Adds support for kde-base/kde (K Desktop Enviroment)
 kerberos - Adds kerberos support
 lcms - Adds lcms support to media-gfx/imagemagick (Color management)
 ldap - Adds LDAP support (Lightweight Directory Access Protocol)
+leim - Adds input methods support to Emacs
 libg++ - Adds C++ modules in dev-db/postgresql (libpq++)
 libgda - Adds GNU Data Access (CORBA wrapper) support for gnumeric 
 libwww - Adds libwww support (General purpose WEB API)
