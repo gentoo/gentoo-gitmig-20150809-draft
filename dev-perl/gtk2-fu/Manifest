@@ -1,4 +1,6 @@
 MD5 aca22eefad8cb006c2de860ddfc5894f gtk2-fu-0.01.ebuild 669
 MD5 8a487db2af4fee760b23e1ac102047b0 metadata.xml 240
-MD5 b5f6017e6d6500bc9696fa0ebb0ece2f ChangeLog 343
+MD5 7c8110b909a7136bc58058b538597395 ChangeLog 443
+MD5 eaad75c2de81dbdddf67d0619270854a gtk2-fu-0.02.ebuild 669
 MD5 222bb1ab280993cab6d31c4317b5e711 files/digest-gtk2-fu-0.01 64
+MD5 d169d5602336492a9683ed18e7758aef files/digest-gtk2-fu-0.02 64
