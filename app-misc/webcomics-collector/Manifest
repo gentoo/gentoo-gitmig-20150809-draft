@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c1849267b21b79302e215b1b202f2ca3 webcomics-collector-0.5.0.ebuild 514
-MD5 0e730fc270558315801e03f867b0a674 ChangeLog 397
+MD5 8a9bd5ef3931880ddb9be388049ed2cb ChangeLog 493
+MD5 13975c0b8bdd54934f0057b95a469acc webcomics-collector-0.5.0.ebuild 518
 MD5 e7341e7fa06516f8214bbeb3d3cd3b22 files/digest-webcomics-collector-0.5.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA+glXHTu7gpaalycRAmkLAKCbVqCO5yyxr7GGyNBIpSPALQtalQCghonx
-jCfxcdo3Sbj+KHBo/8ZW4aY=
-=tM7h
------END PGP SIGNATURE-----
