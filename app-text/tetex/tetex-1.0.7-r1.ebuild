@@ -1,22 +1,20 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r1.ebuild,v 1.7 2000/10/19 15:59:08 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r1.ebuild,v 1.8 2000/10/19 16:14:16 achim Exp $
 
 P=tetex-1.0.7
-A="teTeX-src-1.0.7.tar.gz teTeX-texmf-1.0.2.tar.gz teTeX-texmfsrc-1.0.1.tar.gz"
+A="teTeX-src-1.0.7.tar.gz teTeX-texmf-1.0.2.tar.gz"
 S=${WORKDIR}/teTeX-1.0
 DESCRIPTION="teTeX is a complete TeX distribution"
 SRC_URI="ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-src-1.0.7.tar.gz
-	 ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-texmf-1.0.2.tar.gz
-	 ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-texmfsrc-1.0.1.tar.gz"
+	 ftp://sunsite.informatik.rwth-aachen.de/pub/comp/tex/teTeX/1.0/distrib/sources/teTeX-texmf-1.0.2.tar.gz"
 
 HOMEPAGE="http://tug.cs.umb.edu/tetex/"
 
 src_unpack() {
 
   unpack teTeX-src-1.0.7.tar.gz
-#  tar xvzf ${FILESDIR}/teTeX-listings.tar.gz
   cd ${S}
 
   patch -p0 < ${FILESDIR}/teTeX-1.0.dif
@@ -98,6 +96,7 @@ pkg_postinst() {
     texconfig init
   fi
 }
+
 
 
 
