@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.42 2002/12/23 01:26:41 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.43 2002/12/24 20:21:53 azarah Exp $
+
+  24 Dec 2002; Martin Schlemmer <azarah@gentoo.org> gtk+-2.2.0.ebuild :
+  Fix to depend on glib-2.2.0, else it fails with unresolved symbols ..
 
 *gtk+-2.2.0 (22 Dec 2002)
 
