@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/krb5-1.2.5-r2.ebuild,v 1.1 2002/08/02 20:46:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/krb5-1.2.5-r2.ebuild,v 1.2 2002/08/02 20:58:49 seemant Exp $
 
 S=${WORKDIR}/${P}/src
 SRC_URI="http://www.crypto-publish.org/dist/mit-kerberos5/${P}.tar.gz"
@@ -15,10 +15,10 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 
-	patch -p0 < ${FILESDIR}/${PN}-1.2.2-gentoo.diff
+	patch -p0 < ${FILESDIR}/${PN}-1.2.2-gentoo.diff || die
 
 	cd ${S}/lib/rpc
-	patch -p0 < ${FILESDIR}/${P}-r2.patch
+	patch -p0 < ${FILESDIR}/${P}-r2.patch || die
 	cd ${S}
 
 	econf \

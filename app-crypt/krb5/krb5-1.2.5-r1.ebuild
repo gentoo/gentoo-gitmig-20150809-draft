@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/krb5-1.2.5-r1.ebuild,v 1.2 2002/07/25 15:31:25 seemant Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/krb5-1.2.5-r1.ebuild,v 1.3 2002/08/02 20:58:49 seemant Exp $ 
 
 S=${WORKDIR}/${P}/src
 SRC_URI="http://www.crypto-publish.org/dist/mit-kerberos5/${P}.tar.gz"
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 
-	patch -p0 < ${FILESDIR}/${PN}-1.2.2-gentoo.diff
+	patch -p0 < ${FILESDIR}/${PN}-1.2.2-gentoo.diff || die
 
 	econf \
 		--with-krb4 \
@@ -24,7 +24,7 @@ src_compile() {
 	mv Makefile Makefile.orig
 	#Don't install the ftp, telnet, r* apps; use pam instead
 	sed -e 's/ appl / /' Makefile.orig > Makefile
-	emake || die
+	make || die
 }
 
 src_install () {
