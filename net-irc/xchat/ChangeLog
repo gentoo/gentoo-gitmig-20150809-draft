@@ -1,7 +1,13 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.25 2002/11/02 20:11:47 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.26 2002/11/05 15:44:57 foser Exp $
 
+*xchat-1.9.4 (05 Nov 2002)
+
+  05 Nov 2002; foser <foser@gentoo.org> xchat-1.9.4.ebuild :
+  New version, moved to slot 2.
+  IMPORTANT : xchat-1.8 should move to slot 1 next revision/release 
+ 
 *xchat-1.9.3-r3.ebuild (02 Nov 2002)
 
   02 Nov 2002; foser <foser@gentoo.org> xchat-1.9.3-r3.ebuild :
