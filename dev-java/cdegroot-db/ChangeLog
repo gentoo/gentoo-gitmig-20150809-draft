@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/cdegroot-db
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cdegroot-db/ChangeLog,v 1.1 2005/02/06 00:37:14 luckyduck Exp $
+
+*cdegroot-db-0.08 (06 Feb 2005)
+
+  06 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/build.xml, +files/cdegroot-db-0.08-gentoo.patch,
+  +cdegroot-db-0.08.ebuild:
+  Initial import.
+
