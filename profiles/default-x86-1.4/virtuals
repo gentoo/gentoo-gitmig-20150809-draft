@@ -35,4 +35,5 @@ virtual/quicktime		media-libs/libquicktime
 virtual/os-headers	sys-kernel/linux-headers
 virtual/ghc             dev-lang/ghc-bin
 #sys-apps/modutils	sys-apps/module-init-tools
-virtual/modutils	sys-apps/module-init-tools
+#virtual/modutils	sys-apps/module-init-tools
+virtual/modutils	sys-apps/modutils
