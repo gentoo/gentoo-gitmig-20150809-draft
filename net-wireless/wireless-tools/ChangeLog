@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wireless-tools
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.53 2004/12/29 13:27:27 brix Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.54 2005/01/12 13:28:03 gmsoft Exp $
+
+  12 Jan 2005; Guy Martin <gmsoft@gentoo.org> wireless-tools-27.ebuild:
+  Stable on hppa.
 
   29 Dec 2004; Henrik Brix Andersen <brix@gentoo.org>
   -wireless-tools-24.ebuild, -wireless-tools-26.ebuild,
