@@ -87,3 +87,4 @@ move net-www/ncsa-httpd www-servers/ncsa-httpd
 move net-www/orion www-servers/orion
 move net-www/plb www-servers/plb
 move net-www/pound www-servers/pound
+move net-www/privoxy www-proxy/privoxy
