@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.8 2004/02/25 14:43:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.9 2004/02/25 16:50:35 bazik Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 # non-commercial use.
 use idea && LICENCE="${LICENCE} | IDEA"
 
-KEYWORDS="x86 ~ppc ~sparc alpha hppa ~amd64"
+KEYWORDS="x86 ~ppc sparc alpha hppa ~amd64"
 IUSE="X ldap nls static caps idea"
 
 RDEPEND="!static? ( ldap? ( net-nds/openldap )
@@ -26,8 +26,7 @@ RDEPEND="!static? ( ldap? ( net-nds/openldap )
 	X? ( x11-misc/xloadimage )
 	nls? ( sys-devel/gettext )
 	virtual/glibc
-	dev-lang/perl
-	virtual/mta"
+	dev-lang/perl"
 
 # XXX: libpcap earlier than 1.10-r3 did not provide libcap.a
 #	DEPEND="caps? ( static? ( >=sys-libs/libcap-1.10-r3 )

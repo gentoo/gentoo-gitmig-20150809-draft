@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.49 2004/02/23 12:40:00 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.50 2004/02/25 16:50:35 bazik Exp $
+
+  25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> gnupg-1.2.4.ebuild:
+  All your stable keywords are belong to sparc!
 
   23 Feb 2004; Tavis Ormandy <taviso@gentoo.org> gnupg-1.2.4.ebuild:
   copy weeve's sparc32 fixes into 1.2.4 and mark stable on x86 and alpha.
