@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.7.ebuild,v 1.4 2004/06/23 22:37:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.7.ebuild,v 1.5 2004/06/23 22:38:31 agriffis Exp $
 
 IUSE="gtk"
 
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 	gtk? (
 		>=x11-libs/gtk+-2*
 		app-admin/gkrellm
-		dev-util/pkgconfig 
+		dev-util/pkgconfig
 	)"
 
 RDEPEND="virtual/glibc
