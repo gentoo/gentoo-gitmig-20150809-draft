@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.1.ebuild,v 1.2 2004/03/11 02:48:55 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.1.ebuild,v 1.3 2004/03/11 20:43:15 zx Exp $
 
 inherit java-pkg
 
@@ -16,17 +16,17 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="=dev-java/ant-${PV}
 	>=dev-java/java-config-1.2
 	>=dev-java/log4j-1.2.8
-	>=dev-java/xerces-2.6
+	>=dev-java/xerces-2.6.1
 	>=dev-java/xalan-2.5.2
 	>=dev-java/junit-3.8
 	>=dev-java/bsh-1.2-r7
 	>=dev-java/antlr-2.7.2
 	>=dev-java/commons-beanutils-1.6.1
 	>=dev-java/commons-logging-1.0.3
-	>=dev-java/commons-net-1.0.0
+	>=dev-java/commons-net-1.1.0
 	>=dev-java/bcel-5.1
 	>=dev-java/oro-2.0.7
-	>=dev-java/rhino-1.4
+	>=dev-java/rhino-1.5_rc4
 	>=dev-java/jdepend-2.6
 	>=dev-java/jsch-0.1.12
 	>=dev-java/regexp-1.3
