@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.11 2005/03/07 20:08:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.12 2005/03/27 11:28:11 hansmi Exp $
+
+  27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
+  sleuthkit-1.73-r1.ebuild:
+  Stable on ppc.
 
   07 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   sleuthkit-1.73-r1.ebuild:
