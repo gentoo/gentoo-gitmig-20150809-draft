@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ec39e39bbf3b587f35dbb9ad55c407b8 ivcall-0.4.ebuild 737
+MD5 a71451c6c8f966a09211a8c31da8e606 ivcall-0.4-r1.ebuild 794
+MD5 e809f1530ddbd393dd95fa8c201a5af8 ivcall-0.4.ebuild 736
 MD5 c94b0dfdbd5136f198faafda120b63d9 ivcall-0.3.ebuild 736
-MD5 00327f34a4df8752d1b9e7c2b2694487 ChangeLog 575
+MD5 73f169d93084725c26318e28fcd0fea1 ChangeLog 765
 MD5 c1142dc0a0ffc5e8cbaac0db478de330 metadata.xml 252
 MD5 f75547c2596e1e493f26174a0940c024 files/digest-ivcall-0.3 61
 MD5 1062d5f96c51d0af7a720d98495a0ba3 files/digest-ivcall-0.4 62
+MD5 1062d5f96c51d0af7a720d98495a0ba3 files/digest-ivcall-0.4-r1 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB/r98jiC39V7gKu0RAj4kAJ40o2x2cAcDU1a0Be+HMOo+lUQssACeMy/j
-oyowWyOIPJuJbXHUIa2PneY=
-=P7zw
+iD8DBQFCU3MDjiC39V7gKu0RAsyeAJ9klfkCBsbN8PxIohmt8TC+h8rviQCbBlbD
+Ar9gaU1lfbSmSWEuIr3wNHc=
+=RPtq
 -----END PGP SIGNATURE-----
