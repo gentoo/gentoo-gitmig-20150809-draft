@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.92.ebuild,v 1.2 2003/10/08 16:07:01 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.92.ebuild,v 1.3 2003/10/09 03:50:56 brandy Exp $
 
 DESCRIPTION="graphical scanning frontend"
 SRC_URI="http://www.xsane.org/download/${P}.tar.gz"
@@ -16,7 +16,10 @@ DEPEND="media-gfx/sane-backends
 		gtk2? ( >=x11-libs/gtk+-2.0 )
 		=x11-libs/gtk+-1.2*
 	)
-	"
+	jpeg? ( media-libs/jpeg )
+	png? ( media-libs/libpng )
+	tiff? ( media-libs/tiff )"
+
 
 src_compile() {
 	econf \
