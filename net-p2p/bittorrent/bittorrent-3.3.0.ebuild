@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.3.0.ebuild,v 1.3 2004/01/06 03:27:32 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.3.0.ebuild,v 1.4 2004/02/11 21:33:19 mholzer Exp $
 
 inherit distutils
 
@@ -54,13 +54,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Please note that the net-p2p/bittorrent package no longer has"
-	einfo "unofficial feature additions. If you would like advanced features,"
-	einfo "please look into the other BitTorrent clients in Portage:"
-	einfo "    net-p2p/bittorrent-stats     - Only the -stats patch"
-	einfo "                                   (formerly net-p2p/bittorrent)"
-	einfo "    net-p2p/bittorrent-mxs       - mxs's patched BT client"
-	einfo "    net-p2p/bittorrent-theshadow - TheSHAD0W's client. Recommended."
-	einfo "    net-p2p/azureus-bin          - Java BT client"
+	einfo "unofficial feature additions. If you would like statistics, please"
+	einfo "install net-p2p/bittorrent-stats."
 }
-
