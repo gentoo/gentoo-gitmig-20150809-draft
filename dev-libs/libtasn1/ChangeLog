@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libtasn1
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.1 2003/09/02 22:16:31 liquidx Exp $
+
+*libtasn1-0.2.5 (02 Sep 2003)
+
+  02 Sep 2003; Alastair Tse <liquidx@gentoo.org> libtasn1-0.2.5.ebuild,
+  metadata.xml:
+  initial ebuild. dependency for gnutls
+
