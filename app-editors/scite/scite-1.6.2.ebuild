@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.6.2.ebuild,v 1.4 2005/03/11 18:58:18 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.6.2.ebuild,v 1.5 2005/03/14 13:44:47 gustavoz Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scintilla/${PN}${MY_PV}.tgz"
 
 LICENSE="PYTHON"
 SLOT="0"
-KEYWORDS="~ppc ~sparc x86 ~amd64"
+KEYWORDS="~ppc sparc x86 ~amd64"
 IUSE="gtk2 lua"
 
 RDEPEND="gtk2? ( >=x11-libs/gtk+-2 )
