@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.8 2004/03/16 19:22:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.9 2004/03/16 19:35:55 seemant Exp $
 
 inherit rpm
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	rpm_src_unpack
 	cd ${S}
-	find ./ -type l | xargs rm -f
+	find ./ -type l -exec rm -f {} \;
 }
 
 src_install() {
