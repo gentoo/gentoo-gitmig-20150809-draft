@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1790dc09342dce5f1f1aa9cd1622b496 ChangeLog 2793
-MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
+MD5 7fb5ff7fe39ed191dac46c28f5945b61 multitail-3.4.5.ebuild 1030
 MD5 404d92915c91e5a583cf63be32db6afd multitail-3.0.6.ebuild 890
 MD5 3036d281dfbd5a675b5beeaeaf7f3bfa multitail-3.4.1.ebuild 1030
-MD5 076c5460f27478ee75a7995fcb594b1e multitail-3.4.5.ebuild 1031
-MD5 4655668da81d0911c6e4d1f179c96a6b multitail-3.4.4.ebuild 1031
+MD5 102f20190b5f367d87a80b90840a9729 ChangeLog 2918
+MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
 MD5 a2b15786902a65e70fbf571cc9681168 files/digest-multitail-3.0.6 63
-MD5 fe45a3a1567df9e06b0265479e02d163 files/digest-multitail-3.4.5 63
 MD5 0fe2c8f86631c227b4945c0f4d6cdf76 files/digest-multitail-3.4.1 63
-MD5 165c2f40c071dbd979c890adf40364d0 files/digest-multitail-3.4.4 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB79TqKRy60XGEcJIRAvKJAJ97+b0v0c5iwTUkVGp1skHuez6MCQCgkGN6
-lmmHo32cmWGdUzbgp/3UqEo=
-=ZFLI
------END PGP SIGNATURE-----
+MD5 fe45a3a1567df9e06b0265479e02d163 files/digest-multitail-3.4.5 63
