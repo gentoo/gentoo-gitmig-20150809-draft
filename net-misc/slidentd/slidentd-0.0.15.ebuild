@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/slidentd-0.0.15.ebuild,v 1.10 2004/05/13 03:21:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/slidentd-0.0.15.ebuild,v 1.11 2004/06/25 00:11:35 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A secure, lightweight ident daemon."

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-1.0a.ebuild,v 1.10 2004/06/12 03:40:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-1.0a.ebuild,v 1.11 2004/06/24 23:35:47 agriffis Exp $
 
 DESCRIPTION="light Unix download accelerator"
 HOMEPAGE="http://www.lintux.cx/axel.html"

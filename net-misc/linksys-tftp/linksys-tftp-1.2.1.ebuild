@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linksys-tftp/linksys-tftp-1.2.1.ebuild,v 1.2 2004/03/20 11:30:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linksys-tftp/linksys-tftp-1.2.1.ebuild,v 1.3 2004/06/24 23:53:48 agriffis Exp $
 
 DESCRIPTION="TFTP client suitable for uploading to the Linksys WRT54G Wireless Router"
 HOMEPAGE="http://redsand.net/"

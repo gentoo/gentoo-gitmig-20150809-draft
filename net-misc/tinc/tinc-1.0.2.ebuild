@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.2.ebuild,v 1.2 2003/12/24 14:23:51 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.2.ebuild,v 1.3 2004/06/25 00:15:24 agriffis Exp $
 
 
 DESCRIPTION="tinc is an easy to configure VPN implementation"

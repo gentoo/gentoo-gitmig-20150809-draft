@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsmbrowser/xsmbrowser-3.4.0.ebuild,v 1.7 2004/06/09 22:34:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsmbrowser/xsmbrowser-3.4.0.ebuild,v 1.8 2004/06/25 00:21:12 agriffis Exp $
 
 DESCRIPTION="GUI SMB browser with preview written in expect"
 HOMEPAGE="http://www.public.iastate.edu/~chadspen/xsmbrowser.html"

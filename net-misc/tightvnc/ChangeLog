@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/tightvnc
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.33 2004/06/08 08:17:31 kloeri Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.34 2004/06/25 00:15:13 agriffis Exp $
 
   08 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> tightvnc-1.2.9-r1.ebuild:
   Stable on alpha.

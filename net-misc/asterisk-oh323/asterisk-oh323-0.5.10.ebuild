@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-oh323/asterisk-oh323-0.5.10.ebuild,v 1.1 2004/03/12 02:01:30 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-oh323/asterisk-oh323-0.5.10.ebuild,v 1.2 2004/06/24 23:35:05 agriffis Exp $
 
 inherit eutils
 

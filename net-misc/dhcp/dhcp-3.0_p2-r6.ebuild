@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r6.ebuild,v 1.2 2004/04/06 10:40:04 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r6.ebuild,v 1.3 2004/06/24 23:41:07 agriffis Exp $
 
 IUSE="static selinux"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tulip-devel/tulip-devel-1.1.8-r1.ebuild,v 1.1 2003/03/07 09:05:15 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tulip-devel/tulip-devel-1.1.8-r1.ebuild,v 1.2 2004/06/25 00:16:55 agriffis Exp $
 
 DESCRIPTION="Development version of the kernel driver for the Digital/Intel 21x4x ("Tulip") series of ethernet chips."
 MY_PN="tulip"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ipx-utils-1.1.ebuild,v 1.7 2004/04/16 20:04:58 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ipx-utils-1.1.ebuild,v 1.8 2004/06/24 23:50:33 agriffis Exp $
 
 S=${WORKDIR}/${P/-utils}
 DESCRIPTION="The IPX Utilities"

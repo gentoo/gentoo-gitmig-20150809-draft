@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/tftp-hpa
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tftp-hpa/ChangeLog,v 1.7 2004/06/15 05:24:50 kugelfang Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tftp-hpa/ChangeLog,v 1.8 2004/06/25 00:14:52 agriffis Exp $
 
   15 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> tftp-hpa-0.34-r1.ebuild:
   Marked stable on amd64.

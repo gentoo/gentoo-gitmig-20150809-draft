@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/gnome-blog-0.7.ebuild,v 1.4 2004/03/11 00:19:27 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/gnome-blog-0.7.ebuild,v 1.5 2004/06/24 23:45:44 agriffis Exp $
 
 inherit gnome2
 

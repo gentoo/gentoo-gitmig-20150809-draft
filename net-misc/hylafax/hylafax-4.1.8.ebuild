@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.8.ebuild,v 1.6 2004/04/19 22:12:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.8.ebuild,v 1.7 2004/06/24 23:49:09 agriffis Exp $
 
 # This is basically unchanged from the one supplied by Stephane Loeuillet
 # to Gentoo bug: http://bugs.gentoo.org/show_bug.cgi?id=28574

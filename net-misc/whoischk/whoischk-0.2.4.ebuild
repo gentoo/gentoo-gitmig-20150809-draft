@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whoischk/whoischk-0.2.4.ebuild,v 1.1 2004/02/23 18:06:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whoischk/whoischk-0.2.4.ebuild,v 1.2 2004/06/25 00:20:20 agriffis Exp $
 
 DESCRIPTION="monitor a list of domains and report when there has been any change"
 HOMEPAGE="http://downloads.afterdark.org.uk/whoischk/"

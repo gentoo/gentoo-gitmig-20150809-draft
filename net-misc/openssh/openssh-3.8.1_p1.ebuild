@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1.ebuild,v 1.10 2004/06/07 20:11:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1.ebuild,v 1.11 2004/06/25 00:03:09 agriffis Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/rdiff-backup-0.8.0.ebuild,v 1.9 2004/06/11 08:44:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/rdiff-backup-0.8.0.ebuild,v 1.10 2004/06/25 00:08:16 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Remote incremental file backup utility, similar to rsync but more reliable"

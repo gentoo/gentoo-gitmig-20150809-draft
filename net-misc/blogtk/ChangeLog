@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/blogtk
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.3 2004/03/24 17:19:52 mholzer Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.4 2004/06/24 23:37:03 agriffis Exp $
 
   24 Mar 2004; Martin Holzer <mholzer@gentoo.org> blogtk-0.8.ebuild,
   blogtk-0.9.ebuild:

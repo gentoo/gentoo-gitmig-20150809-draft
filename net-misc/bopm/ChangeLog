@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/bopm
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bopm/ChangeLog,v 1.1 2004/02/18 00:43:58 zul Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bopm/ChangeLog,v 1.2 2004/06/24 23:37:33 agriffis Exp $
 
 *bopm-3.1.2 (17 Feb 2004)
 

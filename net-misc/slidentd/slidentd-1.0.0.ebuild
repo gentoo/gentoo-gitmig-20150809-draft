@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/slidentd-1.0.0.ebuild,v 1.3 2004/06/06 09:35:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/slidentd-1.0.0.ebuild,v 1.4 2004/06/25 00:11:35 agriffis Exp $
 
 DESCRIPTION="A secure, lightweight ident daemon."
 SRC_URI="http://www.uncarved.com/slidentd/${P}.tar.gz"

@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/guidedog
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/ChangeLog,v 1.6 2004/05/12 15:14:44 dholm Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/ChangeLog,v 1.7 2004/06/24 23:47:16 agriffis Exp $
 
   12 May 2004; David Holm <dholm@gentoo.org> guidedog-1.0.0.ebuild:
   Added to ~ppc.

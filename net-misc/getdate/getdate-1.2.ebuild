@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/getdate-1.2.ebuild,v 1.3 2004/01/03 13:59:21 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/getdate-1.2.ebuild,v 1.4 2004/06/24 23:45:23 agriffis Exp $
 
 MY_PN=${PN}_rfc868
 MY_P=${MY_PN}-${PV}

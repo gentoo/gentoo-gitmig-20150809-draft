@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0261-r2.ebuild,v 1.4 2004/04/27 21:44:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0261-r2.ebuild,v 1.5 2004/06/25 00:00:19 agriffis Exp $
 
 inherit gcc kernel-mod eutils
 

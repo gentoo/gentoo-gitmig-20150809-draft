@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/geekcredit-0.015.ebuild,v 1.3 2004/04/09 16:00:52 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/geekcredit-0.015.ebuild,v 1.4 2004/06/24 23:45:02 agriffis Exp $
 
 inherit python
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxproxy/nxproxy-1.3.0.ebuild,v 1.2 2004/03/11 11:19:18 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxproxy/nxproxy-1.3.0.ebuild,v 1.3 2004/06/25 00:01:21 agriffis Exp $
 
 MY_P="${PN}-1.3.0-7"
 DESCRIPTION="X11 protocol compression library wrapper"

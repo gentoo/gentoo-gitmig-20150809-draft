@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mmsclient/mmsclient-0.0.3.ebuild,v 1.7 2004/04/26 06:51:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mmsclient/mmsclient-0.0.3.ebuild,v 1.8 2004/06/24 23:56:37 agriffis Exp $
 
 S=${WORKDIR}/mms_client-${PV}
 DESCRIPTION="mms protocol download utility"

@@ -1,7 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # ebuild created by Matthias Schwarzott <zzam@gmx.de>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipe/netpipe-1.0.0_beta2.ebuild,v 1.3 2003/07/13 14:31:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipe/netpipe-1.0.0_beta2.ebuild,v 1.4 2004/06/24 23:59:39 agriffis Exp $
 
 IUSE=""
 

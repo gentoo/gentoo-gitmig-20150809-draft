@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.3.2.ebuild,v 1.6 2004/05/28 03:17:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.3.2.ebuild,v 1.7 2004/06/24 23:54:52 agriffis Exp $
 
 DESCRIPTION="GTK2-based LiveJournal client"
 HOMEPAGE="http://logjam.danga.com/"

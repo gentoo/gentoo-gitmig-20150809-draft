@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/stone
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/ChangeLog,v 1.5 2004/06/10 00:49:23 agriffis Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/ChangeLog,v 1.6 2004/06/25 00:13:51 agriffis Exp $
 
   09 Jun 2004; Aron Griffis <agriffis@gentoo.org> stone-2.2.ebuild,
   stone-2.2c.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kluje/kluje-0.7.ebuild,v 1.7 2004/03/20 00:51:03 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kluje/kluje-0.7.ebuild,v 1.8 2004/06/24 23:51:37 agriffis Exp $
 
 inherit kde
 

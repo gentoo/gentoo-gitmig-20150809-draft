@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/linuxsms
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linuxsms/ChangeLog,v 1.7 2004/06/06 09:30:52 dragonheart Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linuxsms/ChangeLog,v 1.8 2004/06/24 23:54:31 agriffis Exp $
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> -linuxsms-0.58.ebuild,
   linuxsms-0.61.ebuild, linuxsms-0.77.ebuild:

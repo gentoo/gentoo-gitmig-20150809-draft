@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.7.ebuild,v 1.4 2004/04/27 21:52:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.7.ebuild,v 1.5 2004/06/25 00:18:16 agriffis Exp $
 
 MY_PN="vlan"
 DESCRIPTION="802.1Q vlan control utility"

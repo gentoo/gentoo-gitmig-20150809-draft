@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp-agent/dhcp-agent-0.37.ebuild,v 1.6 2004/03/25 02:45:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp-agent/dhcp-agent-0.37.ebuild,v 1.7 2004/06/24 23:41:17 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="dhcp-agent is a portable UNIX Dynamic Host Configuration suite"

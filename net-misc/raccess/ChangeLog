@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/raccess
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/raccess/ChangeLog,v 1.6 2004/04/06 01:13:28 vapier Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/raccess/ChangeLog,v 1.7 2004/06/25 00:07:23 agriffis Exp $
 
 *raccess-0.7 (05 Apr 2004)
 

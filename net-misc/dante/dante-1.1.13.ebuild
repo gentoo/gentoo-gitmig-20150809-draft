@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.19 2004/06/13 11:06:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.20 2004/06/24 23:40:36 agriffis Exp $
 
 inherit gcc
 

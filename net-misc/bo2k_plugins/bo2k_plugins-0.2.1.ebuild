@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bo2k_plugins/bo2k_plugins-0.2.1.ebuild,v 1.1 2003/09/11 12:40:00 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bo2k_plugins/bo2k_plugins-0.2.1.ebuild,v 1.2 2004/06/24 23:37:23 agriffis Exp $
 DESCRIPTION="Plugin pack for LibBO2K."
 HOMEPAGE="http://www.bo2k.com/"
 SRC_URI="mirror://sourceforge/bo2k/${P}.tar.gz"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-1.0.0.ebuild,v 1.3 2004/06/07 07:02:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-1.0.0.ebuild,v 1.4 2004/06/24 23:44:29 agriffis Exp $
 
 DESCRIPTION="Client to configure an IPv6 tunnel to freenet6"
 HOMEPAGE="http://www.freenet6.net/"

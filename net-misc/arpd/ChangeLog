@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/arpd
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/ChangeLog,v 1.4 2003/09/14 16:24:20 iggy Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/ChangeLog,v 1.5 2004/06/24 23:34:44 agriffis Exp $
 
 *arpd-0.2 (14 Sep 2003)
 

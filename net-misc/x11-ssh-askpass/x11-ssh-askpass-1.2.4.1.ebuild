@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.4.1.ebuild,v 1.2 2004/03/10 13:47:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x11-ssh-askpass/x11-ssh-askpass-1.2.4.1.ebuild,v 1.3 2004/06/25 00:20:41 agriffis Exp $
 
 DESCRIPTION="X11-based passphrase dialog for use with OpenSSH"
 HOMEPAGE="http://www.liquidmeme.net/software/x11-ssh-askpass/"

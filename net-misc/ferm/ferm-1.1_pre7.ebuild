@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ferm/ferm-1.1_pre7.ebuild,v 1.7 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ferm/ferm-1.1_pre7.ebuild,v 1.8 2004/06/24 23:44:08 agriffis Exp $
 
 DESCRIPTION="Command line util for managing firewall rules"
 HOMEPAGE="http://www.geo.vu.nl/~koka/ferm/"

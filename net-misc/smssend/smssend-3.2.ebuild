@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smssend/smssend-3.2.ebuild,v 1.5 2004/06/06 09:37:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smssend/smssend-3.2.ebuild,v 1.6 2004/06/25 00:12:28 agriffis Exp $
 
 DESCRIPTION="Universal SMS sender."
 HOMEPAGE="http://zekiller.skytech.org/smssend_menu_en.html"

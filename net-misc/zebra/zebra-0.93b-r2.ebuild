@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r2.ebuild,v 1.5 2004/06/09 22:36:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/zebra-0.93b-r2.ebuild,v 1.6 2004/06/25 00:22:04 agriffis Exp $
 
 inherit eutils
 S=${WORKDIR}/${P}

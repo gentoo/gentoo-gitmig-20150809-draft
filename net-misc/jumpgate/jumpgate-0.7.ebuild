@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jumpgate/jumpgate-0.7.ebuild,v 1.4 2003/12/10 22:37:25 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jumpgate/jumpgate-0.7.ebuild,v 1.5 2004/06/24 23:51:05 agriffis Exp $
 
 DESCRIPTION="An advanced TCP connection forwarder."
 HOMEPAGE="http://jumpgate.sourceforge.net"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netdate/netdate-1.2.ebuild,v 1.2 2004/05/27 04:36:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netdate/netdate-1.2.ebuild,v 1.3 2004/06/24 23:57:58 agriffis Exp $
 
 DESCRIPTION="A Utility to synchronize the time with ntp-servers"
 SRC_URI="mirror://netdate-${PV}.tar.bz2"

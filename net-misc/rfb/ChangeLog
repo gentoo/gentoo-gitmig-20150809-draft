@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/rfb
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rfb/ChangeLog,v 1.7 2003/06/27 20:54:45 vapier Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rfb/ChangeLog,v 1.8 2004/06/25 00:08:46 agriffis Exp $
 
 *rfb-0.6.1-r2 (27 Jun 2003)
 

@@ -1,5 +1,5 @@
 # ChangeLog for net-misc/wakeonlan
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 # $Header
 
   30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> wakeonlan-0.40.ebuild:

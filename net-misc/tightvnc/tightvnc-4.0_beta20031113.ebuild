@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-4.0_beta20031113.ebuild,v 1.6 2004/05/24 23:30:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-4.0_beta20031113.ebuild,v 1.7 2004/06/25 00:15:13 agriffis Exp $
 
 inherit eutils
 IUSE="java tcpd"

@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/mdidentd
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mdidentd/ChangeLog,v 1.1 2003/11/04 00:32:16 vapier Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mdidentd/ChangeLog,v 1.2 2004/06/24 23:55:35 agriffis Exp $
 
 *mdidentd-1.04a (03 Nov 2003)
 

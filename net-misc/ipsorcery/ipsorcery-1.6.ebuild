@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsorcery/ipsorcery-1.6.ebuild,v 1.8 2003/02/13 14:54:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsorcery/ipsorcery-1.6.ebuild,v 1.9 2004/06/24 23:50:01 agriffis Exp $
 
 IUSE="gtk"
 

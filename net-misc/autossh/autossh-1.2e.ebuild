@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/autossh-1.2e.ebuild,v 1.5 2004/06/14 16:51:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/autossh-1.2e.ebuild,v 1.6 2004/06/24 23:35:36 agriffis Exp $
 
 DESCRIPTION="Automatically restart SSH sessions and tunnels"
 HOMEPAGE="http://www.harding.motd.ca/autossh/"

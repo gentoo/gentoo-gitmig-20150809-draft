@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/bo2k_console
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bo2k_console/ChangeLog,v 1.2 2004/03/01 21:34:08 aliz Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bo2k_console/ChangeLog,v 1.3 2004/06/24 23:37:12 agriffis Exp $
 
 *bo2k_console-0.0.2_pre (11 Sep 2003)
     11 Sep 2003; Thomas Raschbacher <lordvan@gentoo.org>: bo2k_console-0.0.2_pre, ChangeLog, metadata.xml:

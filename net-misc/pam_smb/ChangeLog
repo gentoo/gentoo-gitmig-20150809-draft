@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/pam_smb
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pam_smb/ChangeLog,v 1.4 2003/09/01 10:58:37 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pam_smb/ChangeLog,v 1.5 2004/06/25 00:04:06 agriffis Exp $
 
 *pam_smb-2.0.0_rc5 (01 Sep 2003)
 

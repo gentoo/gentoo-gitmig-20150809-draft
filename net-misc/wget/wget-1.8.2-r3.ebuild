@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r3.ebuild,v 1.12 2004/04/27 21:54:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r3.ebuild,v 1.13 2004/06/25 00:19:49 agriffis Exp $
 
 inherit gnuconfig eutils
 

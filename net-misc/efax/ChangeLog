@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/efax
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.2 2003/06/20 04:18:28 vapier Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.3 2004/06/24 23:42:54 agriffis Exp $
 
 *efax-0.9a (25 May 2003)
 

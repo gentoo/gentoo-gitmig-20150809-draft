@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/rdist-6.1.5.ebuild,v 1.7 2004/03/10 14:36:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/rdist-6.1.5.ebuild,v 1.8 2004/06/25 00:08:26 agriffis Exp $
 
 DESCRIPTION="Remote software distribution system"
 HOMEPAGE="http://www.magnicomp.com/rdist/rdist.shtml"

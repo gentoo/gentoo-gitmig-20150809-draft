@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.5.ebuild,v 1.6 2004/06/09 23:46:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.5.ebuild,v 1.7 2004/06/25 00:13:21 agriffis Exp $
 
 DESCRIPTION="SSH.COM free for Non-Comercial Use ssh version"
 HOMEPAGE="http://www.ssh.com/"

@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/netkit-routed
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/ChangeLog,v 1.9 2003/06/06 11:59:17 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/ChangeLog,v 1.10 2004/06/24 23:58:28 agriffis Exp $
 
 *netkit-routed-0.17-r3 (06 Jun 2003)
 

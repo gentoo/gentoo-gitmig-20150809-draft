@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/tor
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.13 2004/06/07 20:21:34 latexer Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.14 2004/06/25 00:16:04 agriffis Exp $
 
 *tor-0.0.7 (07 Jun 2004)
 

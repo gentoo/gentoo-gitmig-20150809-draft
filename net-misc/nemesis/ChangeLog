@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/nemesis
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/ChangeLog,v 1.10 2004/06/06 09:32:57 dragonheart Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/ChangeLog,v 1.11 2004/06/24 23:57:38 agriffis Exp $
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> nemesis-1.4_beta3.ebuild:
   QA - IUSE

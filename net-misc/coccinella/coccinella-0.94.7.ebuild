@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/coccinella/coccinella-0.94.7.ebuild,v 1.1 2004/02/29 15:11:44 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/coccinella/coccinella-0.94.7.ebuild,v 1.2 2004/06/24 23:40:02 agriffis Exp $
 
 NAME=Coccinella
 S="${WORKDIR}/${NAME}-${PV}"

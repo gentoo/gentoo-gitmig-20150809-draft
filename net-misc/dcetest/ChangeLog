@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/dcetest
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dcetest/ChangeLog,v 1.1 2003/12/02 02:53:08 robbat2 Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dcetest/ChangeLog,v 1.2 2004/06/24 23:40:56 agriffis Exp $
 
 *dcetest-2.0 (01 Dec 2003)
 

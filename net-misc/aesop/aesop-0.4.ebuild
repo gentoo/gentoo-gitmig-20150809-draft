@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aesop/aesop-0.4.ebuild,v 1.7 2003/09/05 22:01:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aesop/aesop-0.4.ebuild,v 1.8 2004/06/24 23:33:42 agriffis Exp $
 
 
 S=${WORKDIR}/${P}

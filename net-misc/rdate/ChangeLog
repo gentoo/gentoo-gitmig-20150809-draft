@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/rdate
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.15 2004/06/07 20:15:46 kloeri Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.16 2004/06/25 00:07:54 agriffis Exp $
 
   07 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> rdate-990821-r1.ebuild:
   Stable on alpha.

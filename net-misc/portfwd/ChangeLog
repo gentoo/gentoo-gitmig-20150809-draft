@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/portfwd
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/ChangeLog,v 1.7 2004/04/26 12:40:55 agriffis Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/ChangeLog,v 1.8 2004/06/25 00:05:19 agriffis Exp $
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> portfwd-0.26.ebuild,
   portfwd-0.26_rc6-r1.ebuild, portfwd-0.26_rc6.ebuild:

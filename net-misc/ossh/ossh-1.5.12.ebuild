@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ossh/ossh-1.5.12.ebuild,v 1.1 2004/05/29 07:38:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ossh/ossh-1.5.12.ebuild,v 1.2 2004/06/25 00:03:48 agriffis Exp $
 
 inherit gnuconfig flag-o-matic
 
