@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.28 2004/07/17 15:21:01 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.29 2004/07/22 14:07:01 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -121,7 +121,7 @@ function webapp_configfile ()
 	webapp_checkfileexists "$1" "$D"
 
 	local MY_FILE="`webapp_strip_appdir \"$1\"`"
-	echo $MY_FILE
+	MY_FILE="`webapp_strip_cwd \"$MY_FILE\"`"
 
 	einfo "(config) $MY_FILE"
 	echo "$MY_FILE" >> ${D}${WA_CONFIGLIST}
@@ -202,6 +202,7 @@ function webapp_serverowned ()
 {
 	webapp_checkfileexists "$1" "$D"
 	local MY_FILE="`webapp_strip_appdir \"$1\"`" 
+	MY_FILE="`webapp_strip_cwd \"$MY_FILE\"`"
 	
 	einfo "(server owned) $MY_FILE"
 	echo "$MY_FILE" >> "${D}${WA_SOLIST}"
