@@ -18,7 +18,6 @@
 # TODO
 #
 # - Make HTMLFormatter
-# - Check LICENSE against known licenses
 #
 #
 
@@ -34,8 +33,16 @@ class TextFormatter:
     print "* " + s
   def sub(self, s):
     print "- " + s
+  def subwarn(self, s):
+    print "- (W) " + s
+  def suberr(self, s):
+    print "- (E) " + s
   def subsub(self, s):
     print " |" + s
+  def subsubwarn(self, s):
+    print " (W) |" + s
+  def subsuberr(self, s):
+    print " (E) |" + s
   def div(self, left, right):
     l = len(left)
     r = len(right)
@@ -58,8 +65,6 @@ class Test:
   def getStatus(self):
     if self.hasErrors():
       return "failed"
-    elif self.hasWarnings():
-      return "passed (with warnings)"
     else:
       return "passed"
 
@@ -87,15 +92,17 @@ class TestSpaces(Test):
         self.backslashes.append(head + len(spcs) * "%" + tail)
 
   def hasErrors(self):
+    return 0
+  def hasWarning(self):
     return len(self.spaces) + len(self.backslashes)
   
   def report(self):
     if len(self.spaces):
-      self.formatter.sub("Has illegal space characters (marked by %):")
+      self.formatter.subwarn("Has illegal space characters (marked by %):")
       for i in self.spaces:
         self.formatter.subsub(i)
     if len(self.backslashes):
-      self.formatter.sub("Has illegal white space (marked by %), only one space character allowed:")
+      self.formatter.subwarn("Has illegal white space (marked by %), only one space character allowed:")
       for i in self.backslashes:
         self.formatter.subsub(i)
 
@@ -104,26 +111,33 @@ class TestHeaders(Test):
   def __init__(self, formatter):
     Test.__init__(self,formatter)
     self.desc = "Testing for malformed headers"
-    self.re = [ (re.compile("^(# Copyright 1999-(2000|2001).*)"),
+    self.re = [ (1, # append result of regex match
+                 re.compile("^(# Copyright 1999-(2000|2001).*)"),
                  "Suspect copyright year"), 
-                (re.compile("^(# /home.*)"),
+                (1,
+                 re.compile("^(# /home.*)"),
                  "Suspect path in header"),
-                (re.compile("^(# Authors:.*)"),
-                 "Should use two Author: lines instead"),
-                (re.compile("^(# Maintainerss:.*)"),
-                 "Should use two Maintainer: lines instead"),
-                (re.compile("^(# /space.*)"),
+                (0, # don't append result of regex match
+                 re.compile("^(# Author.*)"),
+                 "Use of Author field in the header is deprecated. Put name in ChangeLog"),
+                (0,
+                 re.compile("^(# Maintainer.*)"),
+                 "Use of Maintainer field in the header is deprecated. Put name in ChangeLog"),
+                (1,
+                 re.compile("^(# /space.*)"),
                  "Suspect path in header")]
 
   def checkLine(self, s):
     for i in self.re:
-      k = i[0].match(s)
-      if k:
-        self.warnings.append(i[1] + ": " + k.groups()[0] )
-
+      k = i[1].match(s)
+      if k and i[0]:
+        self.warnings.append(i[2] + ": " + k.groups()[0] )
+      elif k and not i[0]:
+        self.warnings.append(i[2])
+        
   def report(self):
     if len(self.warnings):
-      self.formatter.sub("Has illegal or suspect headers:")
+      self.formatter.subwarn("Has illegal or suspect headers:")
       for i in self.warnings:
         self.formatter.subsub(i)
 
@@ -143,7 +157,7 @@ class TestTry(Test):
 
   def report(self):
     if len(self.errors):
-      self.formatter.sub("Uses try, which is deprecated")
+      self.formatter.suberr("Uses try, which is deprecated")
       for i in self.errors:
         self.formatter.subsub(i)
 
@@ -161,7 +175,7 @@ class TestA(Test):
 
   def report(self):
     if len(self.errors):
-      self.formatter.sub("Contains superfluous " + self.lines[0])
+      self.formatter.suberr("Contains superfluous " + self.lines[0])
         
 class TestDepend(Test):
 
@@ -177,7 +191,7 @@ class TestDepend(Test):
 
   def report(self):
     if len(self.warnings):
-      self.formatter.sub("DEPEND is suspiciously empty")
+      self.formatter.subwarn("DEPEND is suspiciously empty")
 
 class TestHomepage(Test):
 
@@ -193,7 +207,7 @@ class TestHomepage(Test):
 
   def report(self):
     if len(self.warnings):
-      self.formatter.sub("Is HOMEPAGE really supposed to be empty ?")
+      self.formatter.subwarn("Is HOMEPAGE really supposed to be empty ?")
 
 class TestDescription(Test):
 
@@ -209,13 +223,13 @@ class TestDescription(Test):
 
   def report(self):
     if len(self.errors):
-      self.formatter.sub("DESCRIPTION must not be empty")
+      self.formatter.suberr("DESCRIPTION must not be empty")
 
 class TestEnvVarPresence(Test):
 
   def __init__(self, formatter):
     Test.__init__(self,formatter)
-    self.desc = "Testing for presence of SRC_URI, HOMEPAGE, .."
+    self.desc = "Testing for presence of env vars"
     self.re = []
     self.found = []
     self.required = [ "SRC_URI=",
@@ -225,9 +239,7 @@ class TestEnvVarPresence(Test):
                       "RDEPEND=",
                       "LICENSE="
                       ]
-    self.desired = [ "# Author:",
-                     "# Maintainer:",
-                     "SLOT=",
+    self.desired = [ "SLOT=",
                      "S="]
 
     for i in self.required:
@@ -244,10 +256,10 @@ class TestEnvVarPresence(Test):
   def report(self):
     for i in self.required:
       if i not in self.found:
-        self.formatter.sub("Missing " + i)
+        self.formatter.suberr("Missing " + i)
     for i in self.desired:
       if i not in self.found:
-        self.formatter.sub("Missing " + i)
+        self.formatter.subwarn("Missing " + i)
 
   def hasWarnings(self):
     for i in self.desired:
@@ -281,11 +293,33 @@ class TestUseFlags(Test):
     if k:
       flag = k.group(1)
       if flag not in self.useflags:
-        self.errors.append("Unknown USE flag '" + flag + "'")
+        l = k.start(1)
+        # We want to try and figure pretty exactly if we've hit a real instnce
+        # of the use command or just some random mumbling inside a string
+        numApostrophes = 0
+        numBackticks = 0
+        numTicks = 0
+        for i in xrange(l,0,-1):
+          if s[i] == '\"' and (i == 0 or (i > 0 and s[i-1] != '\\')):
+            numApostrophes += 1
+          if s[i] == '\'' and (i == 0 or (i > 0 and s[i-1] != '\\')):
+            numTicks += 1
+          if s[i] == '`' and (i == 0 or (i > 0 and s[i-1] != '\\')):
+            numBackticks += 1
+
+        if numApostrophes % 2 == 0:
+          foundError = 1
+        elif numBackticks % 2 and numTicks % 2 == 0:
+          foundError = 1
+        else:
+          foundError = 0
+
+        if foundError:
+          self.errors.append("Unknown USE flag '" + flag + "'")
 
   def report(self):
     for i in self.errors:
-      self.formatter.sub(i)
+      self.formatter.suberr(i)
        
 def extractFilename(path):
   return path
@@ -298,20 +332,25 @@ def runTests(tests,results,ins):
     for j in tests:
       j.checkLine(i)
 
+  hasWarning = 0
+  hasError = 0
   for j in xrange(len(tests)):
     if tests[j].hasErrors():
       results[j][0] += 1
+      hasError = 1
     if tests[j].hasWarnings():
       results[j][1] += 1
+      hasWarning = 1
+  return (hasError, hasWarning)
         
 def showStatus(options,tests,formatter,file):
-  if options['showFullStatus'] or options['showSeparate']:
+  if options['showDetails'] or options['showSeparate']:
     formatter.section("Status for " + file)
     for j in tests:
-      if options['showSeparate']:
+      if options['showSeparate'] or options['showDetails']:
         l = len(j.getDesc())
         formatter.bullet(j.getDesc() + " " * (70 - l) + ": " + j.getStatus())
-        if options['showFullStatus']:
+        if options['showDetails']:
           j.report()
   elif options['showShort']:
     allOK = 1
@@ -343,7 +382,7 @@ def usage(opts):
 def parse_opts(argv):
   options = { 'showSeparate': 0,
               'showTotal': 1,
-              'showFullStatus': 0,
+              'showDetails': 0,
               'showShort': 1,
               'listTests': 0,
 	      'desiredTests': 0
@@ -388,7 +427,7 @@ def parse_opts(argv):
   for (option,value) in option_list:
     if option in [ '--show-details' ]:
       options['showShort'] = 0
-      options['showFullStatus'] = 1
+      options['showDetails'] = 1
     elif option in [ '--show-separate' ]:
       options['showShort'] = 0
       options['showSeparate'] = 1
@@ -439,33 +478,51 @@ def main():
       sys.exit(1)
       
     tests = []
+    notTests = []
     if options['desiredTests']:
       for i in options['desiredTests']:
         for j in available_tests:
+          if len(i) and i[0] == "-":
+            notTests.append(i[1:])
           if j.__class__.__name__ == i:
             tests.append(j)
     else:
       tests = available_tests
+
+    if len(notTests):
+      for i in available_tests:
+        if i.__class__.__name__ not in notTests:
+          tests.append(i)
       
     results = [[0, 0] for x in range(len(tests))]
     
-    num_files = 0
+    numFiles = 0
+    totalErrors = 0
+    totalWarnings = 0
+    
     for i in args:
       fn = extractFilename(i)
       ins = open(i, "r")
-      num_files += 1
-      runTests(tests,results,ins)
+      numFiles += 1
+      (hasError, hasWarning) = runTests(tests,results,ins)
+      totalErrors += hasError
+      totalWarnings += hasWarning
       showStatus(options,tests,formatter,fn)
     
     if options['showTotal']:
       print "\n" + "-"*79
-      s = " Summary for all " + str(num_files) + " ebuild(s) checked"
+      s = " Summary for all " + str(numFiles) + " ebuild(s) checked"
       print s + " " * (65 - len(s)) + "# errors/warns"
       print "-"*79
       for i in xrange(len(tests)):
         l = len(tests[i].getDesc())
         print tests[i].getDesc() + " " * (66 - l) + ": " + \
               str(results[i][0]) + " / " + str(results[i][1])
+      print
+      print "Total number of ebuilds with errors                               : " + str(totalErrors) + \
+            " (" + str(totalErrors*100/numFiles) + "%)"
+      print "Total number of ebuilds with warnings                             : " + str(totalWarnings) + \
+            " (" + str(totalWarnings*100/numFiles) + "%)"
         
 if __name__ == "__main__":
   main()

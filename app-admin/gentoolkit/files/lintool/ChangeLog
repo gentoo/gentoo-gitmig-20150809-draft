@@ -1,3 +1,15 @@
+2002-05-15 Karl Trygve Kalleberg <karltk@gentoo.org>
+
+	* Fixed test for Author: and Maintainer: to warn about their
+	deprecation and recommend the use of ChangeLog instead.
+	* Added (E) and (W) prefixes to messages printed by --show-details
+	* Added --tests=-<particular test> to allow turning off a
+	particular test easily.
+	* Added statistics output at the bottom.
+	* Updated man page to reflect new option feature.
+	* Fixed the --show-details, --show-separate annoyance.
+	* Fixed use flags parsing to disregard some false positives.
+	
 2002-05-13 Karl Trygve Kalleberg <karltk@gentoo.org>
 	* Fixed --list-tests which was incorrectly --listTests
 

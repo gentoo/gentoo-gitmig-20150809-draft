@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.14 2002/05/12 17:39:17 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.15 2002/05/14 23:31:37 karltk Exp $
+
+*gentoolkit-0.1.10 (15 May 2002)
+
+  15 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gentoolkit-0.1.10.ebuild files/digest-gentoolkit-0.1.10:
+
+  New version of lintool out. 
+
+  Removed old versions.
 
 *gentoolkit-0.1.9-r1 (12 May 2002)
 

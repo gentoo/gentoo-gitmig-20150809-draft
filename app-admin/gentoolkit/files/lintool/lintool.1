@@ -25,9 +25,10 @@ Show full details of tests for each ebuild checked
 .TP
 \fB--tests=test1,test2,..\fI
 Run only the tests specified to this option. Default is to run all
-tests. A list of tests can be obtained from
+tests. One can turn off a particular test by pretending it with minus (e.g.
+.I --tests=-TestUseFlags,-TestSpaces
+). A list of tests can be obtained from
 .I --list-tests
-.
 .TP
 \fB--list-tests\fI
 List available tests.
@@ -37,4 +38,4 @@ Karl Trygve Kalleberg <karltk@gentoo.org>, 2002
 ebuild(5) 
 .TP
 The \fI/usr/sbin/lintool\fR script. 
-.TP
+
