@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/bacula
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.11 2004/02/03 02:07:40 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.12 2004/02/03 02:18:48 zul Exp $
+
+  02 Feb 2004; Chuck Short <zul@gentoo.org> bacula-1.31.ebuild:
+  bacula 1.31 now uses bacula 1.31a rather than the 04Jun03 snapshot.
+  Closes #25858.
 
   02 Feb 2004; Chuck Short <zul@gentoo.org> :
   Version bump.
