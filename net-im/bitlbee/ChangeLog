@@ -1,6 +1,12 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.36 2004/04/26 04:45:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.37 2004/05/30 01:06:41 weeve Exp $
+
+*bitlbee-0.90 (29 May 2004)
+
+  29 May 2004; Jason Wever <weeve@gentoo.org> -bitlbee-0.85-r1.ebuild,
+  -bitlbee-0.85.ebuild, +bitlbee-0.90.ebuild:
+  Version bump to 0.90 and removed old ebuilds for 0.85 and 0.85-r1.
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> bitlbee-0.84.ebuild,
   bitlbee-0.85-r1.ebuild, bitlbee-0.85.ebuild, bitlbee-0.85a.ebuild:

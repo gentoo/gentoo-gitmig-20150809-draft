@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.85-r1.ebuild,v 1.3 2004/04/26 04:45:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.90.ebuild,v 1.1 2004/05/30 01:06:41 weeve Exp $
 
 inherit eutils
 
@@ -10,10 +10,11 @@ SRC_URI="http://get.bitlbee.org/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
-IUSE="debug jabber msn oscar yahoo"
+KEYWORDS="~x86 ~sparc ~alpha ~ia64 ~ppc"
+IUSE="debug jabber msn oscar yahoo flood"
 
 DEPEND="virtual/glibc
+	>=dev-libs/glib-2.0
 	msn? ( net-libs/gnutls )"
 
 no_flags_die() {
@@ -40,22 +41,21 @@ src_unpack() {
 	# Patch the default xinetd file to add/adjust values to Gentoo defaults
 	cd ${S}/doc
 	epatch ${FILESDIR}/${PN}-0.80-xinetd.patch
-
-	# Patch to fix msn login problems from the bitlbee team
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-0.84-passport.diff
 }
 
 src_compile() {
 	# setup useflags
 	local myconf
 	use debug && myconf="${myconf} --debug=1"
-	use msn || myconf="${myconf} --msn=0"
+	use msn || myconf="${myconf} --msn=0 --ssl=gnutls"
 	use jabber || myconf="${myconf} --jabber=0"
 	use oscar || myconf="${myconf} --oscar=0"
 	use yahoo || myconf="${myconf} --yahoo=0"
+	use flood && myconf="${myconf} --flood=1"
 
-	econf --datadir=/usr/share/bitlbee --etcdir=/etc/bitlbee ${myconf} || die "econf failed"
+	econf --datadir=/usr/share/bitlbee --etcdir=/etc/bitlbee ${myconf} \
+		|| die "econf failed"
+
 	emake || die "make failed"
 
 	# make bitlbeed forking server
@@ -73,11 +73,13 @@ src_install() {
 	keepdir /var/lib/bitlbee
 
 	dodoc COPYING
-	dodoc doc/{AUTHORS,CHANGES,CREDITS,FAQ,README,TODO}
+	dodoc doc/{AUTHORS,CHANGES,CREDITS,FAQ,README,RELEASE-SPEECH-0.90,TODO}
 	dohtml -A sgml doc/*.sgml
-	doman doc/bitlbee.8
+	dohtml doc/*.html
 
-	dobin utils/bitlbeed utils/create_nicksfile.pl
+	doman doc/bitlbee.8 doc/bitlbee.conf.5
+
+	dobin utils/bitlbeed
 
 	insinto /etc/xinetd.d
 	newins doc/bitlbee.xinetd bitlbee
@@ -91,9 +93,14 @@ src_install() {
 	dodir /var/run/bitlbeed
 	keepdir /var/run/bitlbeed
 
+	dodir /usr/share/bitlbee
+	cp ${S}/utils/* ${D}/usr/share/bitlbee
+	rm ${D}/usr/share/bitlbee/bitlbeed*
 }
 
 pkg_postinst() {
 	chown nobody:nobody /var/lib/bitlbee
 	chmod 700 /var/lib/bitlbee
+	einfo "The utils included in bitlbee (other than bitlbeed) are now"
+	einfo "located in /usr/share/bitlbee"
 }
