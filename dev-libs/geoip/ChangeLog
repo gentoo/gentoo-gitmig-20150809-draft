@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.3 2003/07/08 05:51:47 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.4 2003/08/01 06:40:42 solar Exp $
+
+*geoip-1.2.1 (01 Aug 2003)
+
+  01 Aug 2003; <solar@gentoo.org> geoip-1.2.1.ebuild:
+  The changes in this release are as follows:
+  This release represents a significant advance progression from the
+  0.2.0 release. It has lots more new features, making the package even
+  more powerful.
 
   08 Jul 2003; <solar@gentoo.org> metadata.xml:
   Added metadata.xml
