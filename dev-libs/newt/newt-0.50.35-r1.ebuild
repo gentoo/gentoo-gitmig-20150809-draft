@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.50.35-r1.ebuild,v 1.2 2003/02/13 10:48:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.50.35-r1.ebuild,v 1.3 2003/07/18 22:18:17 tester Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="redhat's newt windowing toolkit development files"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.redhat.com"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc amd64"
 
 DEPEND=">=sys-libs/slang-1.4
 	>=dev-libs/popt-1.6"

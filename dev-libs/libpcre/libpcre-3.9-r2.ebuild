@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-3.9-r2.ebuild,v 1.6 2003/07/12 09:22:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-3.9-r2.ebuild,v 1.7 2003/07/18 22:18:17 tester Exp $
 
 S=${WORKDIR}/pcre-${PV}
 DESCRIPTION="Perl-compatible regular expression library"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.pcre.org/"
 
 SLOT="3"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc ~sparc ~alpha hppa"
+KEYWORDS="x86 ~ppc ~sparc ~alpha hppa amd64"
 
 DEPEND="virtual/glibc"
 
