@@ -335,9 +335,6 @@ sys-apps/utempter
 # Masked (incomplete)
 app-emacs/monk
 
-# things that need kde 3.1 or qt 3.1
->=x11-themes/mosfet-liquid-widgets-0.9.6_pre1
-
 # <danarmak@gentoo.org> (29 Oct 2002)
 # fix for bug #9423, in testing
 =kde-base/kdebase-3.0.4-r1
