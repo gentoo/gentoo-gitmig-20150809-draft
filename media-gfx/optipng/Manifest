@@ -1,21 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 02315c1504c589f0a8ede1e06ce0f57c ChangeLog 1846
-MD5 3d378199d61ce13715bc2ae7f3b2df27 optipng-0.4.5.ebuild 2586
-MD5 fb514763cd5e804511e03c8440ae095a optipng-0.4.3.ebuild 1753
+MD5 86d23c83773f704f2e0716a2bc035cdc optipng-0.4.5.ebuild 2587
+MD5 8e6f7048debde7c493dad8d3906ef17d ChangeLog 2093
+MD5 28479f4a8e37d10c17f985923ee24746 optipng-0.4.7.ebuild 925
 MD5 d1fd781dd463a1e5d87df46fad732ec6 metadata.xml 400
-MD5 567b89fb68bac13c20c5db5d37d6daf3 optipng-0.4.3-r1.ebuild 1756
-MD5 eab5451d70e601bb80438372adbcc3cd files/optipng-more-makefile-options.diff 1423
 MD5 cbb26191f6029021230a63ee5ac9a062 files/digest-optipng-0.4.5 65
+MD5 6bb7aeb92d547a0979d3bc3ee21b9319 files/digest-optipng-0.4.7 65
+MD5 eab5451d70e601bb80438372adbcc3cd files/optipng-more-makefile-options.diff 1423
 MD5 95e87b9aa8430dbe8d14268fb922a818 files/optipng-0.4.5-more-makefile-options.diff 2271
-MD5 ae0b66a3fd8e8cff827c907900a5d63c files/optipng-0.4.3-r1-more-makefile-options.diff 1552
-MD5 776935461c2653df2b47f23f7b7c60d7 files/digest-optipng-0.4.3-r1 65
-MD5 776935461c2653df2b47f23f7b7c60d7 files/digest-optipng-0.4.3 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB0sxXCHk4+ZoBpvsRArqpAKC6WAmRJXSZ0eFCxwtLjcfoaj5z8QCfaRrh
-+bqKPzoKOyriKTj8pVYh/VY=
-=hwHU
------END PGP SIGNATURE-----
