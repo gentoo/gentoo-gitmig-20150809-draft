@@ -12,7 +12,7 @@ start() {
 }
 
 stop() {
-	ebegin "Stoping ICQ Jabber Transport"
+	ebegin "Stopping ICQ Jabber Transport"
 	kill `cat /var/log/jabber/jit.pid`
 	sleep 2
 	if [ -f /var/log/jabber/jit.pid ]; then
