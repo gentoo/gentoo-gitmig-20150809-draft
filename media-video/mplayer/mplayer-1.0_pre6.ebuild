@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.20 2005/01/30 07:33:51 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.21 2005/01/30 08:48:29 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -131,6 +131,9 @@ src_unpack() {
 
 	# Fix bug #76429
 	epatch ${FILESDIR}/${PN}-nl.patch
+
+	# fixes bug #78337
+	epatch ${FILESDIR}/${PN}-avi_crash.patch
 }
 
 linguas_warn() {
