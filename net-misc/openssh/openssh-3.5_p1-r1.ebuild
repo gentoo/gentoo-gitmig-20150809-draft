@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.15 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.16 2003/09/16 19:32:41 vapier Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/${PARCH}
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
 SRC_URI="ftp://ftp.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/${PARCH}.tar.gz
-	selinux? http://www.coker.com.au/selinux/ssh/openssh_3.5p1-5.se1.diff.gz"
+	selinux? ( http://www.coker.com.au/selinux/ssh/openssh_3.5p1-5.se1.diff.gz )"
 
 # openssh recognizes when openssl has been slightly upgraded and refuses to run.
 # This new rev will use the new openssl.

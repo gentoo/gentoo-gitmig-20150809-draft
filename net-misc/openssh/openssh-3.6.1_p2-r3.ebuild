@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.6.1_p2-r3.ebuild,v 1.3 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.6.1_p2-r3.ebuild,v 1.4 2003/09/16 19:32:41 vapier Exp $
 
 inherit eutils flag-o-matic ccc
 
@@ -14,8 +14,8 @@ DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
 IUSE="ipv6 static pam tcpd kerberos selinux X509 skey"
 SRC_URI="ftp://ftp.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/${PARCH}.tar.gz
-	selinux? http://lostlogicx.com/gentoo/openssh_3.6p1-5.se1.diff.bz2
-	X509? http://roumenpetrov.info/openssh/x509g2/${X509_PATCH}"
+	selinux? ( http://lostlogicx.com/gentoo/openssh_3.6p1-5.se1.diff.bz2 )
+	X509? ( http://roumenpetrov.info/openssh/x509g2/${X509_PATCH} )"
 
 # openssh recognizes when openssl has been slightly upgraded and refuses to run.
 # This new rev will use the new openssl.
