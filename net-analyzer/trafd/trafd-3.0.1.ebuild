@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafd/trafd-3.0.1.ebuild,v 1.3 2003/05/18 20:20:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafd/trafd-3.0.1.ebuild,v 1.4 2003/07/13 11:30:14 aliz Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="ftp://ftp.riss-telecom.ru/pub/dev/trafd/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 # -lbpft/*своя*/ -lpcap -lcurses -ltermcap -lfl
 DEPEND="net-libs/libpcap

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.2 2003/02/13 13:38:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.3 2003/07/13 11:30:10 aliz Exp $
 
 DESCRIPTION="network Audit Record Generation and Utilization System"
 HOMEPAGE="http://www.qosient.com/argus/"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.qosient.com/argus/"
 SRC_URI="ftp://ftp.qosient.com/pub/argus/src/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 RDEPEND="virtual/glibc
 	>=net-libs/libpcap-0.6.2"

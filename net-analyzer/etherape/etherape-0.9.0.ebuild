@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.0.ebuild,v 1.1 2003/05/11 00:22:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.0.ebuild,v 1.2 2003/07/13 11:30:10 aliz Exp $
 
 IUSE=""
 DESCRIPTION="A graphical network monitor for Unix modeled after etherman"
@@ -9,7 +9,7 @@ HOMEPAGE="http://etherape.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND=">=gnome-base/libglade-2.0
 	>=gnome-base/libgnomeui-2.0

@@ -1,13 +1,13 @@
 # ChangeLog for net-analyzer/calamaris
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/calamaris/ChangeLog,v 1.3 2003/03/09 20:52:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/calamaris/ChangeLog,v 1.4 2003/07/13 11:30:10 aliz Exp $
 
 *calamaris-2.57 (09 Mar 2003)
 
   09 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump.
 
-* calamaris-2.51 (07 August 2002)
+*calamaris-2.51 (07 August 2002)
       
   07 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, calamaris-2.51.ebuild, files/digest-calamaris-2.51 :
 

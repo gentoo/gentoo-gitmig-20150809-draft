@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.9.0.ebuild,v 1.6 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.9.0.ebuild,v 1.7 2003/07/13 11:30:14 aliz Exp $
 
 IUSE="ssl postgres mysql snmp"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.snort.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc "
+KEYWORDS="x86 ~sparc "
 
 DEPEND="virtual/glibc
 	>=net-libs/libpcap-0.6.2-r1

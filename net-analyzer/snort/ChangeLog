@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.15 2003/04/22 12:18:35 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.16 2003/07/13 11:30:14 aliz Exp $
 
 *snort-1.9.1-r2 (22 Apr 2003)
 
@@ -58,6 +58,11 @@
   23 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> snort-1.8.7.ebuild :
   
   New version.
+
+*snort-1.8.6 (11 Mar 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *snort-1.8.5 (6 Apr 2002)
 

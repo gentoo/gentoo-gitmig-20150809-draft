@@ -1,11 +1,11 @@
 # ChangeLog for net-analyzer/squid-graph
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/ChangeLog,v 1.7 2003/06/12 21:15:44 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/ChangeLog,v 1.8 2003/07/13 11:30:14 aliz Exp $
 
   12 Jun 2003; <msterret@gentoo.org> squid-graph-3.1.ebuild:
   add Header
 
-* squid-graph-3.1 (07 April 2003) 
+*squid-graph-3.1 (07 April 2003) 
   07 April 2003; Robin Hugh Johnson <robbat2@gentoo.org>
   squid-graph-3.1.ebuild, ChangeLog, files/digest-squid-graph-3.1:
   Added ebuild for new version. 
@@ -15,7 +15,7 @@
   2. SRCURI has .gz added
   Ebuild contributed by Russell Cloran <russell@rucus.ru.ac.za>
  
-* squid-graph-3.0 (12 August 2002)
+*squid-graph-3.0 (12 August 2002)
   
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 

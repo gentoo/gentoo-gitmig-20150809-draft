@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snorticus/snorticus-1.0.4.ebuild,v 1.1 2003/02/13 10:19:02 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snorticus/snorticus-1.0.4.ebuild,v 1.2 2003/07/13 11:30:14 aliz Exp $
 
 DESCRIPTION="Snorticus is a collection of shell scripts designed to allow easy
 managment of Snort sensors."
@@ -9,7 +9,7 @@ HOMEPAGE="http://snorticus.baysoft.net/"
 SRC_URI="http://snorticus.baysoft.net/snorticus/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="virtual/glibc

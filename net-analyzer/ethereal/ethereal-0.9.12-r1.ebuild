@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.12-r1.ebuild,v 1.1 2003/06/03 05:40:29 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.12-r1.ebuild,v 1.2 2003/07/13 11:30:10 aliz Exp $
 
 IUSE="gtk ipv6 snmp ssl gtk2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ethereal.com/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ~ppc"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	snmp? ( virtual/snmp )
