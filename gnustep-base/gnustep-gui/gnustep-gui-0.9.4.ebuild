@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.9.4.ebuild,v 1.1 2004/09/25 16:27:28 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.9.4.ebuild,v 1.2 2004/09/25 20:38:36 fafhrd Exp $
 
 inherit gnustep
 
@@ -14,8 +14,6 @@ LICENSE="LGPL-2.1"
 
 IUSE="${IUSE} jpeg gif png gsnd doc cups"
 DEPEND="${GNUSTEP_BASE_DEPEND}
-	=gnustep-base/gnustep-make-1.10.0
-	=gnustep-base/gnustep-base-1.10.0
 	virtual/x11
 	=media-libs/tiff-3.5.7*
 	jpeg? =media-libs/jpeg-6b*
