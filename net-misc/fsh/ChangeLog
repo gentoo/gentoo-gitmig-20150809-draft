@@ -1,7 +1,13 @@
 # ChangeLog for net-misc/fsh 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fsh/ChangeLog,v 1.2 2003/02/12 08:22:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fsh/ChangeLog,v 1.3 2003/04/23 13:19:57 wmertens Exp $
 
+*fsh-1.2-r1 (23 Apr 2003)
+
+  23 Apr 2003; Wout Mertens <wmertens@gentoo.org>
+  	fsh-1.2-r1.ebuild files/fsh-1.2-fcpwrap.patch:
+  Fixed bug where fcp user@host would fail. Reported upstream.
+  
 *fsh-1.2 (01 Oct 2002)
 
   01 Oct 2002; Daniel Robbins <drobbins@gentoo.org>: Initial package.

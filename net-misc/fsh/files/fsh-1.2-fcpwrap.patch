@@ -1,0 +1,17 @@
+--- fsh-1.2-orig/fcpwrap.c	2000-12-03 20:12:58.000000000 +0100
++++ fsh-1.2/fcpwrap.c	2003-04-23 14:56:13.000000000 +0200
+@@ -43,8 +43,12 @@
+ 			 break;
+ 		 if (argv [i][1] == 'l')	/* fsh login flag? */
+ 		 {
+-			 login = argv [++i];
+-			 continue;
++		 	if (argv [i][2]) {
++				login = argv[i] + 2;
++			} else {
++				login = argv [++i];
++			}
++			continue;
+ 		 }
+ 		 if (strchr (args, argv [i][1]) && argv[i][2] == '\0')
+ 			 i++;		/* Flag with an argument. */
