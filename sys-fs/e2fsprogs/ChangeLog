@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.23 2004/05/17 02:11:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.24 2004/06/02 05:26:17 lv Exp $
+
+  02 Jun 2004; Travis Tilley <lv@gentoo.org> e2fsprogs-1.35.ebuild:
+  stable on amd64
 
   17 May 2004; Bryan Østergaard <kloeri@gentoo.org> e2fsprogs-1.35.ebuild:
   Add ~alpha.
