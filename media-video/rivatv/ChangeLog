@@ -1,6 +1,11 @@
 # ChangeLog for media-video/rivatv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# /space/gentoo/cvsroot/gentoo-x86/media-video/rivatv/ChangeLog,v 1.1 2002/06/07 15:12:59 blauwers Exp
+# $Header: /var/cvsroot/gentoo-x86/media-video/rivatv/ChangeLog,v 1.4 2003/02/10 22:29:39 blauwers Exp $
+
+*rivatv-0.8.2 (10 Feb 2003)
+
+  10 Feb 2003; B.Lauwers <blauwers@gentoo.org> rivatv-0.8.2.ebuild:
+  Version bump from old ebuild to add new driver support and bugfixes
 
 *rivatv-0.8.1 (09 Dec 2002)
 
