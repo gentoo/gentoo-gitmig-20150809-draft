@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47-r1.ebuild,v 1.4 2004/12/08 01:13:58 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47-r1.ebuild,v 1.5 2004/12/15 21:40:51 swtaylor Exp $
 
 inherit eutils
 
@@ -21,7 +21,6 @@ DEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.6
 	>=sys-libs/gdbm-1.8.0
 	|| ( app-misc/mime-types net-www/apache )
-	crypt? ( >=app-crypt/gnupg-1.0.4 )
 	fax? (	>=media-libs/netpbm-9.12
 		virtual/ghostscript
 		>=net-dialup/mgetty-1.1.28 )
@@ -38,7 +37,8 @@ RDEPEND="${DEPEND}
 	dev-lang/perl
 	sys-apps/procps"
 
-PDEPEND="mailwrapper? ( >=net-mail/mailwrapper-0.2 )"
+PDEPEND="mailwrapper? ( >=net-mail/mailwrapper-0.2 )
+	crypt? ( >=app-crypt/gnupg-1.0.4 )"
 
 src_unpack() {
 	unpack ${A}
