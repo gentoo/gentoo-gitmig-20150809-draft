@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.27.ebuild,v 1.1 2004/10/01 21:23:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.27.ebuild,v 1.2 2004/12/05 19:25:40 solar Exp $
 
 inherit eutils flag-o-matic fixheadtails gcc
 
@@ -32,19 +32,25 @@ src_unpack() {
 	# ${FILESDIR}/ssp.c is integrated with upstream as of dietlibc-0.26
 	# - robbat2 (Oct 01 2004)
 
+	# Ok so let's make dietlibc ssp aware (Aug 7 2004) -solar
+	# ${FILESDIR}/ssp.c does not appear to be integrated with
+	# upstream as of dietlibc-0.27 bug 73112 - solar (Dec 05 2004)
+	cp ${FILESDIR}/ssp.c ${S}/lib/ || die "Failed to copy ssp.c into lib for compile"
+
 	# start with sparc/sparc64/x86_64/i386 for now.
 	# apply to all arches for crazy cross-compiling - robbat2 (Oct 01 2004)
 	epatch ${FILESDIR}/dietlibc-0.26-ssp.patch
-	append-flags -D__dietlibc__
-	# end ssp block code
 
 	# Fix for 45716
 	replace-sparc64-flags
 
 	# be very careful to only effect the CFLAGS used for optimization
 	# and not any of the other CFLAGS. - robbat2 (Oct 01 2004)
+
+	# Shifted ssp exclusion logic into sed expression. - solar (Dec 05 2004)
 	sed -i \
-		-e "s:^CFLAGS+=-O -fomit-frame-pointer:CFLAGS += ${CFLAGS}:" \
+		-e "s:^CFLAGS+=-O -fomit-frame-pointer:CFLAGS += ${CFLAGS} -D__dietlibc__:" \
+		-e "s:^CFLAGS=-pipe -nostdinc:CFLAGS=-pipe -nostdinc -D__dietlibc__ -fno-stack-protector-all -fno-stack-protector:" \
 		-e "s:^prefix.*:prefix=/usr/diet:" \
 		Makefile \
 		|| die "sed Makefile failed"

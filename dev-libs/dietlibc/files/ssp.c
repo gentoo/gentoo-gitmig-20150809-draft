@@ -1,6 +1,6 @@
 /*
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/files/ssp.c,v 1.1 2004/08/07 23:30:19 solar Exp $
+ * $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/files/ssp.c,v 1.2 2004/12/05 19:25:40 solar Exp $
  *
  * This is a modified version of Hiroaki Etoh's stack smashing routines
  * implemented for glibc.
@@ -28,13 +28,7 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/un.h>
-#include <sys/syslog.h>
 #include <sys/time.h>
-#include <sys/sysctl.h>
-
-#ifndef _PATH_LOG
-#define _PATH_LOG "/dev/log"
-#endif
 
 #ifdef __PROPOLICE_BLOCK_SEGV__
 #define SSP_SIGTYPE SIGSEGV
@@ -50,25 +44,10 @@ void
 __guard_setup (void)
 {
   size_t size;
-#ifdef HAVE_DEV_ERANDOM
-  int mib[3];
-#endif
-
   if (__guard != 0UL)
     return;
 
 #ifndef __SSP_QUICK_CANARY__
-#ifdef HAVE_DEV_ERANDOM
-  /* Random is another depth in Linux, hence an array of 3. */
-  mib[0] = CTL_KERN;
-  mib[1] = KERN_RANDOM;
-  mib[2] = RANDOM_ERANDOM;
-
-  size = sizeof (unsigned long);
-  if (__sysctl (mib, 3, &__guard, &size, NULL, 0) != (-1))
-    if (__guard != 0UL)
-      return;
-#endif
   /* 
    * Attempt to open kernel pseudo random device if one exists before 
    * opening urandom to avoid system entropy depletion.
@@ -109,13 +88,7 @@ __stack_smash_handler (char func[], int damaged)
   const char message[] = ": stack smashing attack in function ";
   int bufsz, len;
   char buf[512];
-#ifndef __dietlibc__
-  struct sockaddr_un sock;	/* AF_UNIX address of local logger */
-  int log;
-  extern char *__progname;
-#else
   static char *__progname = "dietapp";
-#endif
 
   sigset_t mask;
   sigfillset (&mask);
@@ -144,18 +117,8 @@ __stack_smash_handler (char func[], int damaged)
   /* print error message */
   write (STDERR_FILENO, buf + 3, len - 3);
   write (STDERR_FILENO, "()\n", 3);
-#ifndef __dietlibc__
-  if ((log = socket (AF_UNIX, SOCK_DGRAM, 0)) != -1)
-    {
-      /* Send "found" message to the "/dev/log" path */
-      sock.sun_family = AF_UNIX;
-      (void) strncpy (sock.sun_path, _PATH_LOG, sizeof (sock.sun_path) - 1);
-      sock.sun_path[sizeof (sock.sun_path) - 1] = '\0';
-      sendto (log, buf, len, 0, (struct sockaddr *) &sock, sizeof (sock));
-    }
-#endif
-  /* Make sure the default handler is associated with the our signal handler */
 
+  /* Make sure the default handler is associated with the our signal handler */
   memset (&sa, 0, sizeof (struct sigaction));
   sigfillset (&sa.sa_mask);	/* Block all signals */
   sa.sa_flags = 0;

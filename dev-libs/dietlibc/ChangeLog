@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.38 2004/10/14 10:52:25 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.39 2004/12/05 19:25:40 solar Exp $
+
+  05 Dec 2004; <solar@gentoo.org> files/ssp.c, dietlibc-0.27.ebuild:
+  - Fixed misc ssp problems introduced from dietlibc-0.26-r1 -> dietlibc-0.27-r0
+  which were causing genkernel failures for hardened users. bug #73112
 
   14 Oct 2004; Guy Martin <gmsoft@gentoo.org> dietlibc-0.25.ebuild:
   Stable on hppa.
