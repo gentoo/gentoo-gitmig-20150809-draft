@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2.ebuild,v 1.9 2005/02/19 15:52:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2.ebuild,v 1.10 2005/02/21 06:04:39 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1317,13 +1317,13 @@ xprint_install() {
 
 xprint_init_install() {
 	# RH-style init script, we provide a wrapper
-	exeinto /usr/lib/misc
+	exeinto /usr/$(get_libdir)/misc
 	doexe ${D}/etc/init.d/xprint
 	rm -f ${D}/etc/init.d/xprint
 	# Install the wrapper
 	newinitd ${FILES_DIR}/xprint.init xprint
 	# patch profile scripts
-	sed -i -e "s:/bin/sh.*get_xpserverlist:/usr/lib/misc/xprint get_xpserverlist:g" ${D}/etc/profile.d/xprint*
+	sed -i -e "s:/bin/sh.*get_xpserverlist:/usr/$(get_libdir)/misc/xprint get_xpserverlist:g" ${D}/etc/profile.d/xprint*
 }
 
 config_files_install() {
