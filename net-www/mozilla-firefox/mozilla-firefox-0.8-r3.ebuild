@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r3.ebuild,v 1.3 2004/04/26 15:43:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8-r3.ebuild,v 1.4 2004/04/26 16:11:46 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -43,13 +43,18 @@ export MOZ_CALENDAR=0
 export MOZ_ENABLE_XFT=1
 
 src_unpack() {
-	unpack firefox-source-${PV}.tar.bz2
+	unpack firefox-source-${PV}.tar.bz2 || die "unpack failed"
+	cd ${S} || die "cd failed"
 
 	# alpha stubs patch from lfs project.
 	# <taviso@gentoo.org> (26 Jun 2003)
 	use alpha && epatch ${FILESDIR}/mozilla-1.3-alpha-stubs.patch
 	use amd64 && epatch ${FILESDIR}/mozilla-firebird-amd64.patch
 
+	# Backward/Forward mouse button support, from
+	# http://bugzilla.mozilla.org/show_bug.cgi?id=64485
+	# See bug 44646 (26 Apr 2004 agriffis)
+	epatch ${FILESDIR}/mozilla-firefox-mousebuttons.patch
 }
 
 src_compile() {
