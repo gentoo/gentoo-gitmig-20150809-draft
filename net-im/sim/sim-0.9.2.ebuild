@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.2.ebuild,v 1.1 2004/01/14 10:38:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.2.ebuild,v 1.2 2004/01/15 13:23:49 sergey Exp $
 
 if [ $( use kde ) ]; then
 	inherit kde-base eutils
@@ -23,7 +23,8 @@ newdepend "ssl? ( dev-libs/openssl )"
 DEPEND="$DEPEND
 	sys-devel/flex
 	sys-devel/automake
-	sys-devel/autoconf"
+	sys-devel/autoconf
+	app-text/sablotron"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
