@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.1.19-r1.ebuild,v 1.2 2001/02/20 22:07:02 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.1.19-r1.ebuild,v 1.3 2001/02/20 22:22:01 drobbins Exp $
 
 S=${WORKDIR}/linux
 #OKV=original kernel version, KV=patched kernel version
@@ -9,6 +9,7 @@ OKV=2.4.1
 KV=2.4.1-ac19
 #Versions of LVM, ALSA, JFS and lm-sensors
 LVMV=0.9.1_beta5
+LVMVARC=0.9.1_beta5_a
 AV=0.5.10b
 JFSV=0.1.5
 SENV=2.5.5
@@ -24,7 +25,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
          http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz 
          http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-${JFSV}-patch.tar.gz
          ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${AV}.tar.bz2
-         ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMV}_a.tar.gz"
+         ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMVARC}.tar.gz"
 #         http://www.braque.dhs.org/pub/linux/kernel/patch/patch-_against_2.4.1-pre10_-knfsdops-reiserfs.gz"
 
 HOMEPAGE="http://www.kernel.org/
@@ -57,7 +58,7 @@ src_unpack() {
     #create and apply LVM patch.  The tools get built later.
     cd ${S}/extras
     echo "Unpacking and applying LVM patch..."
-    unpack lvm_${LVMV}.tar.gz
+    unpack lvm_${LVMVARC}.tar.gz
     cd LVM/${LVMV}
     
     # I had to hack this in so that LVM will look in the current linux
