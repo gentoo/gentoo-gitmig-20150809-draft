@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.57 2004/12/29 20:33:33 seemant Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.58 2005/01/21 07:51:56 spyderous Exp $
+
+  20 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>; xterm-197.ebuild:
+  Unleash upon the x86 masses.
 
   29 Dec 2004; Seemant Kulleen <seemant@gentoo.org> xterm-196-r1.ebuild,
   xterm-196.ebuild, xterm-197.ebuild:
