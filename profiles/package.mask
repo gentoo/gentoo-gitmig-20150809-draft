@@ -1,3 +1,6 @@
+#we no longer use sysvinit (rolled into baselayout)
+sys-apps/sysvinit
+
 # broken
 app-admin/webconfig
 
