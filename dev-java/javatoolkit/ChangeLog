@@ -1,0 +1,8 @@
+# ChangeLog for dev-java/javatoolkit
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/ChangeLog,v 1.1 2004/08/10 20:00:17 karltk Exp $
+
+*javatoolkit-0.1.0 (10 Aug 2004)
+
+  10 Aug 2004; Karl Trygve Kalleberg <karltk@gentoo.org> javatoolkit-0.1.0.ebuild:
+  Initial import. Ebuild submitted by myself.
