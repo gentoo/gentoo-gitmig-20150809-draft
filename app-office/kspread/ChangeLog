@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kspread
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.2 2005/03/05 12:28:21 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.3 2005/03/20 17:48:39 motaboy Exp $
+
+  20 Mar 2005; Simone Gotti <motaboy@gentoo.org> kspread-1.3.5.ebuild:
+  Added dep on kchart instead of only a KMEXTRACTONLY="kchart", so it won't
+  lose the ability to create charts. Fixes bug #85138.
 
 *kspread-1.3.5 (05 Mar 2005)
 
