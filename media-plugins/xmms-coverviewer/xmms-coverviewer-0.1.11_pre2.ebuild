@@ -1,16 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-coverviewer/xmms-coverviewer-0.1.9.ebuild,v 1.1 2003/07/28 03:34:49 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-coverviewer/xmms-coverviewer-0.1.11_pre2.ebuild,v 1.1 2003/09/15 11:48:50 seemant Exp $
 
 IUSE=""
 
+MY_P=${P/_/}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="An XMMS plugin for viewing album covers"
 HOMEPAGE="http://coverviewer.sourceforge.net/"
-SRC_URI="mirror://sourceforge/coverviewer/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/coverviewer/${MY_P}.tar.gz"
 
-LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm"
+LICENSE="GPL-2"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	media-libs/gdk-pixbuf
@@ -34,6 +36,7 @@ pkg_postinst() {
 	ewarn ""
 	ewarn "Do not attempt to configure the plugin right away!"
 	ewarn "Enable the plugin.  Sane default values will be applied."
-	ewarn "After that, changing options are fine."
+	ewarn "After that, changing options is fine."
+	ewarn "To use Internet-search, you'll need python"
 	ewarn ""
 }
