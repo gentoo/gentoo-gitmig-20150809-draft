@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-diskinfo/desklet-diskinfo-0.1.4.ebuild,v 1.1 2003/09/10 12:05:47 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-diskinfo/desklet-diskinfo-0.1.4.ebuild,v 1.2 2003/09/10 12:20:13 obz Exp $
 
 SENS_NAME="Disk"
 DISP_NAME="diskinfo"
@@ -8,7 +8,7 @@ DISP_NAME="diskinfo"
 SENS_P=${SENS_NAME}-${PV}
 DISP_P=${DISP_NAME}-${PV}
 
-DESCRIPTION="A CPU Monitor Sensor for gdesklets"
+DESCRIPTION="A Disk-free Monitoring Sensor and Display for gDesklets"
 SRC_URI="http://gdesklets.gnomedesktop.org/files/${SENS_P}.tar.bz2 \
 		 http://gdesklets.gnomedesktop.org/files/${DISP_P}.tar.bz2"
 HOMEPAGE="http://www.pycage.de/"

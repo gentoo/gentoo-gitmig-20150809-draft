@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-cpuinfo/desklet-cpuinfo-0.1.4.ebuild,v 1.1 2003/09/10 12:01:46 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-cpuinfo/desklet-cpuinfo-0.1.4.ebuild,v 1.2 2003/09/10 12:18:35 obz Exp $
 
 SENS_NAME="CPU"
 DISP_NAME="info"
@@ -8,7 +8,7 @@ DISP_NAME="info"
 SENS_P=${SENS_NAME}-${PV}
 DISP_P=${DISP_NAME}-${PV}
 
-DESCRIPTION="A CPU Monitor Sensor for gdesklets"
+DESCRIPTION="A CPU Monitor Sensor and Display for gDesklets"
 SRC_URI="http://gdesklets.gnomedesktop.org/files/${SENS_P}.tar.bz2 \
 		 http://gdesklets.gnomedesktop.org/files/${DISP_P}.tar.bz2"
 HOMEPAGE="http://www.pycage.de/"
