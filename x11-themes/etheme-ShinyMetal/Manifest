@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1eb1eddf22bcdf11054857a981d0247d ChangeLog 734
-MD5 4fc6f83c50e30a3255a2273f77e01ceb etheme-ShinyMetal-0.16.7.1.ebuild 805
+MD5 3bf269ef43cf74d81f3f04abc0fe0320 ChangeLog 834
+MD5 3cb0496b233a7e6f30c857e7a4dbae23 etheme-ShinyMetal-0.16.7.1.ebuild 802
 MD5 a86f74356e38800245ebe3466641dc31 etheme-ShinyMetal-0.16.7.ebuild 722
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
 MD5 1afa01560a87b8ee44d6c8f9d1dee3f2 files/digest-etheme-ShinyMetal-0.16.7 80
 MD5 2bd6e1a6adad59c0992e47b5e5ea1b58 files/digest-etheme-ShinyMetal-0.16.7.1 93
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByYFwKRy60XGEcJIRAh4VAJ9uiLWSKQL40mSqXU1jD2cCWW2JTwCfbr2Q
-AUAKuhnZNcAundyPDpxVvXI=
-=xG5s
------END PGP SIGNATURE-----

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7980a24c903f5ba06395487c7a4a3490 ChangeLog 721
-MD5 96e5a58b1498df1599785ad1e2334d5a etheme-Ganymede-0.16.7.1.ebuild 801
+MD5 fce7ff47658785b1efc38fd1cdc76a6e ChangeLog 817
+MD5 7badd365fb4cbac4bc23fb9564c5a9d7 etheme-Ganymede-0.16.7.1.ebuild 798
 MD5 a3ea5491a664628169cad73d8a8e63da etheme-Ganymede-0.16.7.ebuild 718
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
 MD5 7fa753e2e8953f4ac4f18fa9d5368c0b files/digest-etheme-Ganymede-0.16.7 78
 MD5 17fe9bccc022a6f7158b57313b03d19a files/digest-etheme-Ganymede-0.16.7.1 91
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByYE5KRy60XGEcJIRApVGAJ0YOag/2T4SopD6PSV3uMhgjQbLzACdFtdD
-q4ADYskodZSWa9ZLMA5EKeM=
-=ySDZ
------END PGP SIGNATURE-----

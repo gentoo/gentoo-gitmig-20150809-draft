@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c11ec7323fc593bd31964891ce07cb9a ChangeLog 530
-MD5 35e2966ccb0c001d616bc55db108e066 ethemes-0.16.7.ebuild 571
+MD5 4d15e1fbfb065ba388d537ebdefb30ff ChangeLog 616
+MD5 58a4962c370f4f3a474ec6c2a49040c6 ethemes-0.16.7.ebuild 568
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ethemes-0.16.7 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByYGnKRy60XGEcJIRAl/KAJ9DpEs7AczeYD9MLdSggrDB0qy09gCePv1x
-tymPSryz3kvI3ZQv0f4K1uY=
-=mT2N
------END PGP SIGNATURE-----
