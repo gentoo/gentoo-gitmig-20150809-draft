@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.05.ebuild,v 1.1 2003/10/12 19:26:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/rackview-0.05.ebuild,v 1.2 2003/10/24 11:29:39 aliz Exp $
 
 inherit perl-module
 
@@ -63,20 +63,17 @@ src_install() {
 
 	#Install .cgi
 	dodir ${HTTPD_ROOT}/../cgi-bin
-	cp cgi-bin/rackview.cgi ${D}${HTTPD_ROOT}/../cgi-bin/${PN}.cgi.orig \
+	cp cgi-bin/rackview.cgi ${D}${HTTPD_ROOT}/../cgi-bin/${PN}.cgi \
 		&& cd ${D}${HTTPD_ROOT}/../cgi-bin \
-		&& sed -e "s:/var/www/html:${HTTPD_ROOT}:" \
-		       -e "s:eidetic:${PN}:" ${PN}.cgi.orig > ${PN}.cgi \
+		&& sed -i -e "s:/var/www/html:${HTTPD_ROOT}:" \
+		       -e "s:eidetic:${PN}:" ${PN}.cgi \
 		&& chmod u+x ${PN}.cgi \
-		&& rm ${PN}.cgi.orig	\
 		|| ewarn "Please copy (& check) ${PN}.cgi manually."
 
 	#Script needs to change also
 	cd ${D}usr/bin
-	cp erackview erackview.orig \
-		&& sed -e "s:eidetic:${PN}:" erackview.orig > e${PN} \
+	sed -i -e "s:eidetic:${PN}:" e${PN} \
 		&& chmod ugo+x e${PN} \
-		&& rm erackview.orig \
 		|| ewarn "Please check script 'e${PN}'."
 
 	#Making sure HTTPD_USER owns all files
