@@ -4,7 +4,7 @@ MD5 f4cc9c2991dd1b3a9bb4d7613dcea226 ocaml-3.07_beta2.ebuild 1574
 MD5 d406fcd06916dad24a060949d03c6665 ocaml-3.06-r2.ebuild 1556
 MD5 cf4a1038774efc57cbb0988514677739 ocaml-3.07.ebuild 1369
 MD5 a76c3ebfb43137b48bb268fbf0466916 ocaml-3.07-r1.ebuild 1468
-MD5 82b156f3f1899c921fdc26a093111c6b ChangeLog 4340
+MD5 cca512be2dbd2997c8ea7ce6d9fb2454 ChangeLog 4367
 MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
 MD5 4df214d6cd74b3c5955d868879dd6cc7 files/ocaml-3.06-tcltk-8.4compat-patch.bz2 639
 MD5 13c4abf06e236e8835011a387f90ecc9 files/digest-ocaml-3.06-r1 63

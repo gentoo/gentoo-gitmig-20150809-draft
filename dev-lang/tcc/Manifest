@@ -4,7 +4,7 @@ MD5 3c26b71a064ba9f38e3e1e4b1d24ac91 tcc-0.9.14.ebuild 1131
 MD5 bea0cd876d00fc8b5506a7d1a5880044 tcc-0.9.20.ebuild 1177
 MD5 ac0436db2eb94eba6c2f715c8af95ca9 tcc-0.9.16.ebuild 1106
 MD5 606b9534b3e8a0c3362dd8e81a60d3e4 tcc-0.9.8.ebuild 839
-MD5 fdaeaff4b64ad565f15b1265bea2220d ChangeLog 1708
+MD5 a8333abe9a76934abf4d2dcdb6ea26e8 ChangeLog 1733
 MD5 f9cc7ff04156fed3f84368964fe98527 metadata.xml 471
 MD5 b0ccf61cace967dfb1500f80fda405e3 files/digest-tcc-0.9.14 62
 MD5 d3d6782e1227fc15f94e306158b1fcb1 files/digest-tcc-0.9.16 62

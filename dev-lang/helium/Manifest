@@ -1,6 +1,6 @@
 MD5 4ef81f498944ef2018dd10aed3c9c06f helium-1.2.ebuild 1478
 MD5 def54f9270288ca2624eaa053f35c3ce helium-1.1.ebuild 1818
-MD5 a8d0b0555b01b321b776554dd95b909a ChangeLog 848
+MD5 4bcb3fd5220809a2677227620c1beb7f ChangeLog 871
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 fb82aad0fbf3d3cb5071c5fef803a7ec files/helium-1.2-readline.patch 1661
 MD5 3991ed4891d6455e980008f704211a97 files/helium-wrapper 558
