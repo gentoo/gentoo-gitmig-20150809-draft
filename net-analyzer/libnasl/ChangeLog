@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/libnasl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.32 2004/08/12 20:21:17 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.33 2004/08/12 22:42:12 kloeri Exp $
+
+  13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> libnasl-2.0.12.ebuild:
+  Stable on alpha, bug 58014.
 
   12 Aug 2004; Eldad Zack <eldad@gentoo.org> libnasl-2.0.10a.ebuild:
   GLSA 200408-11: masking 2.0.10a for all archs besides alpha until 2.0.12 will
