@@ -520,8 +520,10 @@ dev-lang/tcl-tk
 >=x11-libs/gtk+-2.0.0
 
 # spider@gentoo.org ; 18 Apr 2002
-# development branch against gtk+-2.0
+# development branch against gtk+-2.0 (libsigc++ is dependency)
 >=x11-libs/gtkmm-1.3.0
+>=dev-libs/libsigc++-1.1.0
+
 
 # mkennedy@gentoo.org 14 Apr 2002
 # Beta, so masked for now. See also bug 1662.
