@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.44 2004/08/05 10:20:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.45 2004/08/05 10:22:53 ciaranm Exp $
+
+  05 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org> libpng-1.2.5-r8.ebuild:
+  Stable on sparc, bug #59424
 
   05 Aug 2004; Luca Barbato <lu_zero@gentoo.org> libpng-1.2.5-r8.ebuild:
   Marked ppc
