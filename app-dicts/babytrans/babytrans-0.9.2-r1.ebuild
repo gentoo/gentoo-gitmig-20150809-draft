@@ -1,7 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans/babytrans-0.9.2-r1.ebuild,v 1.1 2004/09/10 21:00:45 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans/babytrans-0.9.2-r1.ebuild,v 1.2 2004/09/14 21:05:33 angusyoung Exp $
 
+inherit eutils
 IUSE="gnome"
 
 S=${WORKDIR}/${P}
@@ -22,7 +23,7 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}/src
-	epatch ${FILESDIR}/${PF}.diff
+	epatch ${FILESDIR}/${PF}.patch
 	cd ${S}
 }
 
