@@ -1,6 +1,16 @@
-MD5 50e4e8481d7a7681c3374723d1cf9006 ChangeLog 1497
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9bf0a851bd302f9817e9f974402d98fe ChangeLog 1584
 MD5 776197cc074e30c694fcb91461627734 i18n-langtags-0.28.ebuild 666
-MD5 bd12d87da7b79b04055fa13690ba751c i18n-langtags-0.30.ebuild 685
+MD5 1b4f5497b84c6b4476434d84bfac5d14 i18n-langtags-0.30.ebuild 695
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 44b10439560c951ef0f91f7afbdf1607 files/digest-i18n-langtags-0.28 69
 MD5 f47e1446864e6d734ce097235c45d6dd files/digest-i18n-langtags-0.30 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBzDBX60LfUIagIAkRAk1SAKDEqiMrVdT2pSu1gqd2W8lX3gjBuACfa36Z
+ePevTwCgqbl0l3zfMwTEe6U=
+=5h5+
+-----END PGP SIGNATURE-----
