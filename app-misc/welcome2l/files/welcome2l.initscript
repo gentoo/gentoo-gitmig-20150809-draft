@@ -1,0 +1,11 @@
+#!/sbin/runscript
+
+depend() {
+	need local
+}
+
+start() {
+	ebegin "Starting Welcome2L"
+	/usr/bin/Welcome2L -getty -msg"Gentoo Linux" > /etc/issue
+	eend $result
+}
