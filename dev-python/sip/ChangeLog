@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sip
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.22 2004/01/30 21:42:35 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.23 2004/02/25 23:28:38 kloeri Exp $
+
+*sip-3.8-r1 (26 Feb 2004)
+
+  26 Feb 2004; <kloeri@gentoo.org> sip-3.8-r1.ebuild:
+  sip-3.8 didn't install all files, see bug #42047.
 
   30 Jan 2004; Brian Harring <ferringb@gentoo.org> sip-3.5.ebuild,
   sip-3.8.ebuild, sip-4.0_rc1.ebuild, sip-4.0_rc2.ebuild:
