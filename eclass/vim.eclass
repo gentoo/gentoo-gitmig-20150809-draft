@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.104 2005/03/24 16:36:32 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.105 2005/03/25 03:01:43 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -39,7 +39,7 @@ if [[ "${PN##*-}" == "cvs" ]] ; then
 	inherit cvs
 fi
 
-if [[ $(get_major_version ) -ge 7 ]] ; then
+if version_is_at_least 6.3.1 ; then
 	inherit bash-completion
 fi
 
@@ -231,7 +231,7 @@ vim_src_unpack() {
 			# Changed this from bzip2 |tar to tar -j since the former broke for
 			# some reason on freebsd.
 			#  --spb, 2004/12/18
-			tar xjf ${DISTDIR}/${VIM_RUNTIME_SNAP} 
+			tar xjf ${DISTDIR}/${VIM_RUNTIME_SNAP}
 			assert  # this will check both parts of the pipeline; eend would not
 			eend 0
 		fi
@@ -241,6 +241,14 @@ vim_src_unpack() {
 	cd ${S} || die "cd ${S} failed"
 	EPATCH_SUFFIX="gz" EPATCH_FORCE="yes" \
 		epatch ${WORKDIR}/gentoo/patches-all/
+
+	# Unpack an updated netrw snapshot if necessary. This is nasty. Don't
+	# ask, you don't want to know.
+	if [[ -n "${VIM_NETRW_SNAP}" ]] ; then
+		ebegin "Unpacking updated netrw snapshot"
+		tar xjf ${DISTDIR}/${VIM_NETRW_SNAP} -C runtime/
+		eend $?
+	fi
 
 	# Fixup a script to use awk instead of nawk
 	sed -i '1s|.*|#!/usr/bin/awk -f|' ${S}/runtime/tools/mve.awk \
@@ -566,7 +574,7 @@ src_install() {
 	fi
 
 	# bash completion script, bug #79018.
-	if [[ $(get_major_version ) -ge 7 ]] ; then
+	if version_is_at_least 6.3.1 ; then
 		if [[ "${MY_PN}" == "vim-core" ]] ; then
 			dobashcompletion ${FILESDIR}/xxd-completion xxd
 		else
@@ -692,7 +700,7 @@ pkg_postinst() {
 		ebeep 5
 	fi
 
-	if [[ $(get_major_version ) -ge 7 ]] ; then
+	if version_is_at_least 6.3.1 ; then
 		bash-completion_pkg_postinst
 	fi
 
