@@ -425,8 +425,6 @@ x11-libs/gtkmm-addons
 =net-mail/courier-imap-1.5.3
 # added choosable maildir/mbox support
 =net-mail/uw-imap-2001a-r3
-# new ipv6 patch.  squashes ssl patch though.
-=sys-apps/ucspi-tcp-0.88-r4
 
 # <satai@gentoo.org> (20 Sep 2002)
 # Too many problems.  Masking to fix.
