@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmcalc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/ChangeLog,v 1.6 2004/06/24 23:05:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/ChangeLog,v 1.7 2004/08/15 20:38:38 s4t4n Exp $
+
+*wmcalc-0.4 (15 Aug 2004)
+
+  15 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmcalc-0.4.ebuild,
+  files/wmcalc-0.4-Makefile.patch:
+  Version bump. Add patch to honour Gentoo CFLAGS. Update HOMEPAGE
+  and SRC_URI. Closes #60366.
 
   13 Apr 2004; Don Seiler <rizzo@gentoo.org>; wmcalc-0.3.ebuild:
   Changed dependency to virtual/x11 to work with x11-base/xorg-x11
