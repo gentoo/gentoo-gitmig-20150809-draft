@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.4.0.ebuild,v 1.6 2004/06/24 22:27:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.4.0.ebuild,v 1.7 2004/09/06 00:04:10 ciaranm Exp $
+
+inherit eutils
 
 MY_PN=${PN/ctive-/}
 MY_P=${MY_PN}-${PV}
@@ -42,7 +44,7 @@ pkg_setup() {
 			echo ""
 			# give the user some time to read this, but leave the
 			# choice up to them
-			sleep 8
+			epause 8
 
 		fi
 	fi

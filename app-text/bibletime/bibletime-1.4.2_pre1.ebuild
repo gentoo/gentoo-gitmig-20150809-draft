@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.4.2_pre1.ebuild,v 1.6 2004/07/07 00:01:13 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.4.2_pre1.ebuild,v 1.7 2004/09/06 00:06:11 ciaranm Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="BibleTime KDE Bible study application using the SWORD library."
 HOMEPAGE="http://bibletime.sourceforge.net/"
@@ -37,11 +37,8 @@ pkg_preinst() {
 		ewarn "Press ctrl+c to abort the merge of BibleTime if you want to"
 		ewarn "recompile SWORD with curl support."
 		ewarn
-		for TICKER in 1 2 3 4 5; do
-			echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-			echo -ne "\a" ; sleep 1
-		done
-		sleep 8
+		ebeep 5
+		epause 8
 	fi
 }
 
