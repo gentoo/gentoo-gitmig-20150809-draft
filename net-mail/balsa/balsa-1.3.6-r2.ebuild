@@ -23,7 +23,7 @@ DEPEND="=dev-libs/glib-1.2*
 	ssl? ( dev-libs/openssl )
 	cups? ( >=gnome-base/gnome-print-0.30 )
 	perl? ( >=dev-libs/libpcre-3.4 )
-	spell? ( >=app-text/pspell-0.11.2 )
+	spell? ( >=app-text/aspell-0.50 )
 	gtkhtml? ( >=gnome-extra/gtkhtml-0.16.1 )"
 
 src_unpack() {

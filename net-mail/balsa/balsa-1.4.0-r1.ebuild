@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later  
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.4.0.ebuild,v 1.1 2002/08/19 19:59:49 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-1.4.0-r1.ebuild,v 1.1 2002/09/04 06:06:39 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Balsa: email client for GNOME"
@@ -22,7 +22,7 @@ DEPEND="=dev-libs/glib-1.2*
 	ssl? ( dev-libs/openssl )
 	cups? ( >=gnome-base/gnome-print-0.30 )
 	perl? ( >=dev-libs/libpcre-3.4 )
-	spell? ( >=app-text/pspell-0.11.2 )
+	spell? ( >=app-text/aspell-0.50 )
 	gtkhtml? ( >=gnome-extra/gtkhtml-0.16.1 )"
 
 src_compile() {
