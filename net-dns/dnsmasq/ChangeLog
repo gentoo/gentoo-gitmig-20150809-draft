@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.68 2005/03/27 13:58:56 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.69 2005/03/27 20:45:10 weeve Exp $
+
+  27 Mar 2005; Jason Wever <weeve@gentoo.org> dnsmasq-2.21.ebuild:
+  Stable on SPARC wrt security bug #86718.
 
   27 Mar 2005; Konstantin Arkhipov <voxus@gentoo.org> dnsmasq-2.21.ebuild:
   Stable on amd64 and x86.
