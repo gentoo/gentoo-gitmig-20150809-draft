@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.2.18.ebuild,v 1.9 2003/09/06 22:17:40 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.2.18.ebuild,v 1.10 2003/09/07 23:53:08 lanius Exp $
 
 DESCRIPTION="Doxygen is a documentation system for C++, Java, IDL (Corba, Microsoft and KDE-DCOP flavors) and C."
 HOMEPAGE="http://www.doxygen.org"
@@ -23,9 +23,9 @@ src_unpack() {
 	cd ${S}/tmake/lib/linux-g++
 	cp tmake.conf tmake.conf.orig
 	sed -e "s:^TMAKE_CFLAGS\(\t*\)= .*$:TMAKE_CFLAGS\1= ${CFLAGS}:" \
-     -e "s:^TMAKE_CFLAGS_RELEASE\(\t*\)= .*$:TMAKE_CFLAGS_RELEASE\1= ${CFLAGS}:" \
-     -e "s:^TMAKE_CXXFLAGS\(\t*\)= .*$:TMAKE_CXXFLAGS\1= ${CXXFLAGS}:" \
-	 tmake.conf.orig > tmake.conf
+		-e "s:^TMAKE_CFLAGS_RELEASE\(\t*\)= .*$:TMAKE_CFLAGS_RELEASE\1= ${CFLAGS}:" \
+		-e "s:^TMAKE_CXXFLAGS\(\t*\)= .*$:TMAKE_CXXFLAGS\1= ${CXXFLAGS}:" \
+	tmake.conf.orig > tmake.conf
 }
 
 src_compile()

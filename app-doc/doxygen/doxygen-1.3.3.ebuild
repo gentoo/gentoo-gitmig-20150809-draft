@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.3.ebuild,v 1.2 2003/09/06 22:17:40 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.3.ebuild,v 1.3 2003/09/07 23:53:08 lanius Exp $
 
 IUSE="doc qt"
 
@@ -35,7 +35,7 @@ src_unpack() {
 }
 
 src_compile() {
-    # set ./configure options (prefix, Qt based wizard, static)
+	# set ./configure options (prefix, Qt based wizard, static)
 	local confopts="--prefix ${D}/usr"
 	use qt && confopts="${confopts} --with-doxywizard"
 	#use static && confopts="${confopts} --static"
