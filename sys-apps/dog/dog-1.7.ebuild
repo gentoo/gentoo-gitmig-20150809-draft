@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/dog-1.7.ebuild,v 1.4 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/dog-1.7.ebuild,v 1.5 2003/10/01 20:06:29 taviso Exp $
 
 DESCRIPTION="Dog is better than cat"
 SRC_URI="http://jl.photodex.com/dog/${P}.tar.gz"
@@ -11,7 +11,7 @@ inherit ccc
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~alpha"
+KEYWORDS="x86 amd64 alpha"
 DEPEND=">=sys-apps/sed-4"
 
 src_unpack() {
