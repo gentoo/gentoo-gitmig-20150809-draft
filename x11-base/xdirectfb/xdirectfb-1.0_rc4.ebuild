@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc4.ebuild,v 1.1 2003/03/25 20:21:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc4.ebuild,v 1.2 2003/04/04 21:55:05 phoenix Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
 	sys-devel/flex
 	dev-lang/perl
-	>=dev-libs/DirectFB-0.9.16"
+	>=dev-libs/DirectFB-0.9.17"
 	
 src_unpack () {
 	unpack ${A}
