@@ -2,9 +2,9 @@ MD5 cbbc37208abfeac079e8ad8e563c36b2 ChangeLog 2817
 MD5 bc5ee1d668f16d2800889b8f02df0d49 amaya-6.1.ebuild 882
 MD5 b293ae75dd661bcca45d84822ca7faf7 amaya-7.1.ebuild 903
 MD5 6260e5ccc9154a8503be09a94d9d8c3c amaya-7.2.ebuild 1097
-MD5 33737c9c81c664f9dc038680e7ef902b amaya-8.0.ebuild 1131
-MD5 7d4d36f314eb00c5dfde3f5e1f55c29c amaya-8.1a.ebuild 1127
-MD5 2a03d2079d4780d6e42f97e1794a99aa amaya-8.2.ebuild 1132
+MD5 a163a6acd01abd5a1e5e79358efc0cc0 amaya-8.0.ebuild 1132
+MD5 9f674d295e4c341ba6c069df2a1ab845 amaya-8.1a.ebuild 1128
+MD5 a7c890d8e645fbf665a171c58a08bf7d amaya-8.2.ebuild 1133
 MD5 215d7cb127e55154da64d6095454f996 files/digest-amaya-6.1 63
 MD5 11b38151f5999852f7a8464584ac5c71 files/digest-amaya-7.1 63
 MD5 52a934a60b4b55a0381aa7006fd375a3 files/digest-amaya-7.2 63
