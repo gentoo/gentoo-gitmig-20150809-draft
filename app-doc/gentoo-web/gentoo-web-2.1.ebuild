@@ -1,11 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.1.ebuild,v 1.1 2001/05/23 01:27:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.1.ebuild,v 1.2 2001/05/24 17:01:51 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
-SRC_URI=""
+SRC_URI="http://www.red-bean.com/cvs2cl/cvs2cl.pl"
 HOMEPAGE="http://www.gentoo.org"
 RDEPEND="sys-devel/python gnome-libs/libxslt net-www/apache-ssl"
 
@@ -46,8 +46,19 @@ src_install() {
 	xsltproc xsl/guide-main.xsl xml/main-download.xml > ${D}/usr/local/httpd/htdocs/index-download.html
 		
 	doins css/main-new.css
+	
+	#install XSL for later use
+	dodir /usr/local/httpd/htdocs/xsl
+	insinto /usr/local/httpd/htdocs/xsl
+	cd ${FILESDIR}/xsl
+	doins cvs.xsl guide-main.xsl
+	
 	cd ${D}
-	chmod -R go+r *
+	chmod -R g+rw,o+r *
+	chown -R root.root *
+
+	dobin ${DISTDIR}/cvs2cl.pl
+	dosbin ${FILESDIR}/bin/cvslog.sh
 }
 	
 #pkg_postinst() {
