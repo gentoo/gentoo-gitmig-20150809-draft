@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/msn-transport-20040228.ebuild,v 1.2 2004/05/24 00:42:33 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/msn-transport-20040228.ebuild,v 1.3 2004/06/03 16:33:56 dholm Exp $
 
 MY_PV="1.2.8rc-cvs"
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -9,7 +9,7 @@ HOMEPAGE="http://msn-transport.jabberstudio.org/"
 SRC_URI="http://msn-transport.jabberstudio.org/${PN}-cvs.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 SLOT="0"
 
