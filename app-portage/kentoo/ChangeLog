@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/kentoo
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kentoo/ChangeLog,v 1.6 2004/10/05 22:58:15 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kentoo/ChangeLog,v 1.7 2004/12/31 06:12:16 weeve Exp $
+
+  30 Dec 2004; Jason Wever <weeve@gentoo.org> kentoo-0.4.ebuild:
+  Added ~sparc keyword.
 
   05 Oct 2004; Dylan Carlson <absinthe@gentoo.org> kentoo-0.4.ebuild:
   KEYWORDS ~amd64
