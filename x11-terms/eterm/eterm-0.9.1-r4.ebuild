@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r4.ebuild,v 1.4 2002/07/08 21:55:56 aliz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r4.ebuild,v 1.5 2002/10/04 06:46:19 vapier Exp $
 
 MY_PN=${PN/et/Et}
 MY_P=${MY_PN}-${PV}
