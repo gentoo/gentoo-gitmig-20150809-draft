@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.12 2004/03/13 12:37:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.13 2004/03/13 16:34:27 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,12 +9,8 @@ HOMEPAGE="http://www.gnupg.org/"
 SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2
 	idea? ( ftp://ftp.gnupg.dk/pub/contrib-dk/idea.c.gz )"
 SLOT="0"
-LICENSE="GPL-2"
 
-# IDEA license is rather restrictive if you're unlucky enough to
-# live in a country where its patented, however it is FAIB for
-# non-commercial use.
-use idea && LICENCE="${LICENCE} | IDEA"
+LICENSE="GPL-2 | IDEA GPL-2"
 
 KEYWORDS="x86 ~ppc sparc alpha hppa ~amd64 ia64"
 IUSE="X ldap nls static caps idea"
