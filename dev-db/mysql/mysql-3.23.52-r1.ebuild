@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.5 2002/10/15 14:34:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.6 2002/10/20 18:41:13 vapier Exp $
 
 IUSE="static readline innodb berkdb tcpd"
 
@@ -24,7 +24,6 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	sys-devel/perl
 	sys-apps/procps"
 
-RDEPEND="${DEPEND}"
 KEYWORDS="x86 sparc64"
 
 # HEY!
