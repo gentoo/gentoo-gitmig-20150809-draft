@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.11.ebuild,v 1.1 2004/11/07 07:32:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.11.ebuild,v 1.2 2004/11/26 13:58:21 usata Exp $
+
+inherit kde-functions
 
 DESCRIPTION="a nice LaTeX-IDE"
 
@@ -16,11 +18,12 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="virtual/x11
-	>=x11-libs/qt-3.2*
 	virtual/tetex
 	app-text/psutils
 	virtual/ghostscript
 	media-libs/netpbm"
+
+need-qt 3.2
 
 src_compile() {
 	einfo "using QTDIR: '$QTDIR'."
@@ -37,12 +40,9 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /usr/bin
-	doexe texmaker || die "doexe failed"
+	dobin texmaker || die "doexe failed"
 
-	PIX=/usr/share/pixmaps/texmaker
-	dodir ${PIX}
-	insinto ${PIX}
+	insinto /usr/share/pixmaps/texmaker
 	doins utilities/texmaker*.png || die "doins failed."
 
 	dodoc utilities/{AUTHORS,COPYING} || die "dodoc failed"

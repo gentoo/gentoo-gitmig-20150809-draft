@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.1 2004/11/07 07:32:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.2 2004/11/26 13:58:21 usata Exp $
+
+  26 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> texmaker-1.11.ebuild:
+  Use kde-functions.eclass. This fixes bug #72515.
 
 *texmaker-1.11 (07 Nov 2004)
 
