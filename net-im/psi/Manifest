@@ -1,0 +1,7 @@
+MD5 25e0e2192e8154a18c41b350fd8f76ff ChangeLog 1871
+MD5 ff846a08ccf1b11ef79650c3b99da985 psi-0.8.7.ebuild 1436
+MD5 1fac83bde0a66e90795db859361ed827 psi-0.8.7-r1.ebuild 1545
+MD5 f53c32fcb3dcafee69c54352e27202f4 files/digest-psi-0.8.7 122
+MD5 83db3cef4d81d6fa30bc81db011776de files/gen2-branding-0.8.7.patch 407
+MD5 896d01f56380f7fb991f3f19f4165542 files/0.8.7-shutdown.patch 375
+MD5 f53c32fcb3dcafee69c54352e27202f4 files/digest-psi-0.8.7-r1 122
