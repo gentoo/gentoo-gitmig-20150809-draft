@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.65 2004/08/13 22:42:23 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.66 2004/08/14 15:06:36 squinky86 Exp $
+
+  14 Aug 2004; Jon Hood <squinky86@gentoo.org> mldonkey-2.5.27.ebuild:
+  Fix DEPEND on ocaml and gtk2 use invocation; thanks xake and gustavoz, #58891.
 
 *mldonkey-2.5.27 (13 Aug 2004)
 
