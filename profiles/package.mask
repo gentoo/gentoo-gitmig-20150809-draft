@@ -21,10 +21,6 @@
 ##   End example
 ##
 
-# <carpaski@gentoo.org> (17 Feb 2003)
-# 2.0.47-r2 is good to go... Just doing a little more testing!
->=sys-apps/portage-2.0.47_pre1
-
 # <mholzer@gentoo.org> (09 Feb 2003)
 >=media-video/mjpegtools-1.6.1
 
