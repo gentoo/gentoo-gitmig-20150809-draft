@@ -1,0 +1,21 @@
+--- kdesu/su.cpp	2004/03/26 23:26:45	1.32.2.2
++++ kdesu/su.cpp	2004/04/13 13:32:27	1.32.2.3
+@@ -1,6 +1,6 @@
+ /* vi: ts=8 sts=4 sw=4
+  *
+- * $Id: kdelibs-3.2.2-su.cpp.diff,v 1.1 2004/04/21 01:03:56 caleb Exp $
++ * $Id: kdelibs-3.2.2-su.cpp.diff,v 1.1 2004/04/21 01:03:56 caleb Exp $
+  *
+  * This file is part of the KDE project, module kdesu.
+  * Copyright (C) 1999,2000 Geert Jansen <jansen@kde.org>
+@@ -78,9 +78,9 @@ int SuProcess::exec(const char *password
+ 	args += "root";
+     else
+ 	args += m_User;
+-    args += "-";
+     args += "-c";
+     args += QCString(__KDE_BINDIR) + "/kdesu_stub";
++    args += "-";
+ 
+     QCString command = __PATH_SU;
+     if (::access(__PATH_SU, X_OK) != 0)
