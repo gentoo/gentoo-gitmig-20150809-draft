@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.37 2003/07/31 20:26:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.38 2003/09/25 20:28:46 mholzer Exp $
+
+*ethereal-0.9.15 (26 Sep 2003)
+
+  26 Sep 2003; Martin Holzer <mholzer@gentoo.org> ethereal-0.9.14.ebuild,
+  ethereal-0.9.15.ebuild:
+  Version bumped.
 
   31 Jul 2003; Aron Griffis <agriffis@gentoo.org> ethereal-0.9.14.ebuild:
   Mark stable on alpha
