@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-0.9.12-r3.ebuild,v 1.9 2004/10/11 11:38:46 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-0.9.12-r3.ebuild,v 1.10 2004/10/11 11:50:23 hattya Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ SLOT="0"
 PROVIDE="virtual/sylpheed"
 
 DEPEND="=x11-libs/gtk+-1.2*
-	!amd64? ( nls? ( =sys-devel/gettext-0.12.1* ) )
+	!amd64? ( nls? ( >=sys-devel/gettext-0.12.1 ) )
 	>=media-libs/compface-1.4
 	ssl? ( dev-libs/openssl )
 	pda? ( app-pda/jpilot )
