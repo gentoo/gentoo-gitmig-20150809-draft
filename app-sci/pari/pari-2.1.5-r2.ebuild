@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/pari-2.1.5-r2.ebuild,v 1.2 2004/05/04 23:26:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/pari-2.1.5-r2.ebuild,v 1.3 2004/05/08 10:30:34 kugelfang Exp $
 
 DESCRIPTION="pari (or pari-gp) : a software package for computer-aided number theory"
 HOMEPAGE="http://www.parigp-home.de/"
@@ -24,7 +24,16 @@ src_compile() {
 	addwrite "/var/lib/texmf"
 	addwrite "/usr/share/texmf"
 	addwrite "/var/cache/fonts"
-	emake CFLAGS="${CFLAGS} -DGCC_INLINE" gp || die
+	if [ `use amd64` ]; then
+		# Fixes BUG #49583
+		einfo "Building shared library..."
+		cd Olinux-x86_64
+		emake CFLAGS="${CFLAGS} -DGCC_INLINE -fPIC" lib-dyn || die "Building shared library failed!"
+		einfo "Building executables..."
+		emake CFLAGS="${CFLAGS} -DGCC_INLINE" gp ../gp || die "Building exectuables failed!"
+	else
+		emake CFLAGS="${CFLAGS} -DGCC_INLINE" gp || die
+	fi
 	use doc || rm -rf doc/*.tex
 	use doc && emake doc
 }
