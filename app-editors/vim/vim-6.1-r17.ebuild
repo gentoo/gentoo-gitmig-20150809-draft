@@ -1,12 +1,12 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r17.ebuild,v 1.7 2002/12/15 00:11:26 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r17.ebuild,v 1.8 2002/12/15 12:35:24 bjb Exp $
 
 VIMPATCH="vimpatch-1-263.tar.bz2"
 inherit vim
 
 DESCRIPTION="Vi IMproved!"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~alpha"
 DEPEND="app-editors/vim-core
 	sys-libs/libtermcap-compat
 	dev-util/cscope

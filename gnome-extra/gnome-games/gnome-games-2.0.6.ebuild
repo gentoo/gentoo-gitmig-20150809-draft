@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.0.6.ebuild,v 1.3 2002/12/09 04:22:39 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.0.6.ebuild,v 1.4 2002/12/15 12:35:24 bjb Exp $
 
 inherit gnome2
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Games for the Gnome2 desktop"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
-KEYWORDS="x86 ~sparc  ~ppc ~alpha"
+KEYWORDS="x86 ~sparc ~ppc alpha"
 LICENSE="GPL-2"
 
 RDEPEND=">=dev-libs/glib-2.0.6
