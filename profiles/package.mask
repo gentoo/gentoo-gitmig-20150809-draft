@@ -2,6 +2,11 @@
 #explanation of why something is getting masked
 
 
+
+# X driver renaming *dont* work.
+# Azarah - 5 June 2002
+=media-video/ati-gatos-4.2.0.11-r1
+
 # Dont work's yet BaSS 05 Jun 2002
 app-misc/gtk-theme-switch-2.0.0-r2
 
