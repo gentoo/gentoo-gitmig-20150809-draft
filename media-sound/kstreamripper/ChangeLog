@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kstreamripper
 # Copyright 2004-2004 Gentoo Technologies, Inc.; Distributed under the GPL
 
+  22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  kstreamripper-0.2.ebuild:
+  Removed explicit S=.
+
 *kstreamripper-0.2 (16 Sep 2004)
 
   16 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
