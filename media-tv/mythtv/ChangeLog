@@ -1,6 +1,6 @@
-# ChangeLog for media-video/mythtv
+# ChangeLog for media-tv/mythtv
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.1 2003/07/09 00:05:43 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.2 2003/07/11 15:55:25 vapier Exp $
 
   03 Jul 2003; Max Kalika <max@lsit.ucsb.edu> mythtv-0.8.ebuild:
   Set KEYWORDS to ~x86.
