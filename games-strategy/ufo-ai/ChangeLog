@@ -1,0 +1,11 @@
+# ChangeLog for games-strategy/ufo-ai
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.1 2004/03/11 02:26:22 wolf31o2 Exp $
+
+*ufo-ai-0.10.040218 (10 Mar 2004)
+
+  10 Mar 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  ufo-ai-0.10.040218.ebuild, files/0.10.040218-Makefile.patch:
+  Initial import. Ebuild submitted by Pol <blenderman@tiscali.be>. Closing bug
+  #42418.
+

@@ -1,0 +1,35 @@
+--- Makefile.orig	2004-02-18 16:37:38.000000000 -0500
++++ Makefile	2004-03-07 00:56:10.980247752 -0500
+@@ -54,8 +54,8 @@
+ RELEASE_CFLAGS=$(BASE_CFLAGS) -O6 -ffast-math -funroll-loops \
+ 	-fomit-frame-pointer -fexpensive-optimizations
+ else
+-RELEASE_CFLAGS=$(BASE_CFLAGS) -g -mcpu=pentiumpro -O6 -ffast-math -funroll-loops \
+-	-fomit-frame-pointer -fexpensive-optimizations
++RELEASE_CFLAGS=-ffast-math -funroll-loops $(BASE_CFLAGS)
++#	-fomit-frame-pointer -fexpensive-optimizations
+ endif
+ 
+ DEBUG_CFLAGS=$(BASE_CFLAGS) -g
+@@ -64,9 +64,9 @@
+ XLDFLAGS=-L/usr/X11R6/lib -lX11 -lXext -lXxf86dga
+ XCFLAGS=
+ 
+-GLLDFLAGS=-L/usr/X11R6/lib -L/usr/local/lib -L$(MESA_DIR)/lib -lX11 -lXext -lm -ljpeg
+-GLXLDFLAGS=-L/usr/X11R6/lib -L/usr/local/lib -L$(MESA_DIR)/lib -lX11 -lXext -lXxf86dga -lXxf86vm -lm -ljpeg
+-GLCFLAGS=-I$(MESA_DIR)/include -I/usr/include/glide
++GLLDFLAGS=-L/usr/X11R6/lib -lX11 -lXext -lm -ljpeg
++GLXLDFLAGS=-L/usr/X11R6/lib -lX11 -lXext -lXxf86dga -lXxf86vm -lm -ljpeg
++#GLCFLAGS=-I$(MESA_DIR)/include -I/usr/include/glide
+ 
+ SHLIBEXT=so
+ 
+@@ -100,6 +100,8 @@
+ 	$(BUILDDIR)/ref_gl.$(SHLIBEXT)
+ endif
+ 
++RELEASE_CFLAGS += $(OPTCFLAGS)
++
+ build_debug:
+ 	@-mkdir $(BUILD_DEBUG_DIR) \
+ 		$(BUILD_DEBUG_DIR)/client \
