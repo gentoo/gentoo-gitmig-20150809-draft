@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm-user
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/ChangeLog,v 1.1 2003/09/15 17:46:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm-user/ChangeLog,v 1.2 2003/11/01 04:34:02 pebenito Exp $
+
+*lvm-user-1.0.7-r1 (31 Oct 2003)
+
+  31 Oct 2003; Chris PeBenito <pebenito@gentoo.org> lvm-user-1.0.7-r1.ebuild,
+  files/lvm-user-1.0.7-statics.diff:
+  Add patch to create static vgchange and vgscan if not USE=static, to close
+  29694.
 
 *lvm-user-1.0.4 (15 Sep 2003)
 
