@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libksba
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.15 2004/07/14 17:12:24 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.16 2004/08/15 02:09:02 agriffis Exp $
+
+*libksba-0.9.8 (14 Aug 2004)
+
+  14 Aug 2004; Aron Griffis <agriffis@gentoo.org> +libksba-0.9.8.ebuild:
+  Bump to 0.9.10 to satisfy gnupg 1.9.10 dep
 
   14 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> libksba-0.9.6.ebuild:
   Marked ~amd64.
