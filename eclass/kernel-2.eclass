@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.35 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.36 2004/07/04 23:48:19 tseng Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -434,7 +434,7 @@ unipatch() {
 	do
 		for x in ${KPATCH_DIR}
 		do
-			rm ${x}/${i}* 2>/dev/null
+			rm -f ${x}/${i}* 2>/dev/null
 			if [ $? == 0 ]
 			then
 				einfo "Excluding Patch #${i}"
