@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.1.ebuild,v 1.2 2003/03/19 15:42:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.1.ebuild,v 1.3 2003/03/21 22:25:32 hannes Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
@@ -21,6 +21,9 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 	java? ( virtual/jdk )
 	>=media-libs/freetype-2" 
 #	lm_sensors? ( ?/lm_sensors ) # ebuild doesn't exist yet
+
+RDEPEND="${RDEPEND}
+	sys-apps/eject"
 
 myconf="$myconf --with-dpms --with-cdparanoia"
 
