@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.28 2004/04/02 16:16:38 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.29 2004/04/27 20:07:51 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> libwww-5.4.0-r1.ebuild:
+  Add inherit eutils
 
   02 Apr 2004; <randy@gentoo.org> libwww-5.4.0-r2.ebuild:
   adding s390 keywords
