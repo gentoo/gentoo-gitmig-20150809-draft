@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/pikdev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.7 2004/04/15 15:18:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.8 2004/04/25 01:29:11 dragonheart Exp $
+
+*pikdev-0.6.5c-r1 (25 Apr 2004)
+
+  25 Apr 2004; Daniel Black <dragonheart@gentoo.org> pikdev-0.6.5c-r1.ebuild:
+  Changed to install pkp. Thanks to Colin Tinker <g1gsw@g1gsw.org> in bug #48070
 
   16 Apr 2004; Daniel Black <dragonheart@gentoo.org> pikdev-0.4.4-r1.ebuild,
   pikdev-0.4.4.ebuild, pikdev-0.6.5c.ebuild:
