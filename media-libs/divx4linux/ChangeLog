@@ -1,12 +1,16 @@
 # ChangeLog for media-libs/divx4linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/ChangeLog,v 1.4 2002/09/11 20:09:46 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/ChangeLog,v 1.5 2002/12/01 21:41:22 vapier Exp $
+
+*divx4linux-20020418-r1 (01 Dec 2002)
+
+  01 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump so symlinks are created #11331
 
 *divx4linux-20020418 (5 May 2002)
+
   Sep 11 2002; Mark Guertin <gerk@gentoo.org> :
   Set as -ppc -sparc -sparc64 (supplies x86 only libs)
-
-*divx4linux-20020304 (23 Apr 2002)
 
 *divx4linux-20011025 (1 Feb 2002)
 

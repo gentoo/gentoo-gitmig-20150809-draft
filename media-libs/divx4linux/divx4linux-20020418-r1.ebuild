@@ -1,9 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/divx4linux-20020418.ebuild,v 1.10 2002/11/30 01:58:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/divx4linux-20020418-r1.ebuild,v 1.1 2002/12/01 21:41:22 vapier Exp $
 
 DXVER=501
-S="${WORKDIR}/${PN}-${PV}"
 DESCRIPTION="Binary release of DivX Codec 5.0.1"
 SRC_URI="http://download.divx.com/divx/${PN}${DXVER}-${PV}.tgz"
 HOMEPAGE="http://www.divx.com/"
@@ -14,19 +13,19 @@ KEYWORDS="x86 -ppc -sparc -sparc64"
 
 DEPEND="virtual/glibc"
 
-# Make sure Portage does _NOT_ strip symbols.  Need both lines for
-# Portage 1.8.9+
 DEBUG="yes"
 RESTRICT="nostrip"
 
 src_install() {
-	dodir /usr/{lib,include}
+	for lib in *.so ; do
+		dolib.so ${lib}
+		dosym /usr/lib/${lib} /usr/lib/${lib}.0
+	done
 
-	# Do the divx50 decoder stuff
-	dolib.so *.so
 	insinto /usr/include
 	doins *.h
+
 	dodoc README.linux license.txt
-	dodir /usr/share/doc/${P}/html
-	cp -a 'DivX MPEG-4 Codec and Its Interface.htm' ${D}/usr/share/doc/${P}/html
+	dodir /usr/share/doc/${PF}/html
+	cp -a 'DivX MPEG-4 Codec and Its Interface.htm' ${D}/usr/share/doc/${PF}/html
 }
