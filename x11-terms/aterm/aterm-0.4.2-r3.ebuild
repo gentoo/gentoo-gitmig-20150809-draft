@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r3.ebuild,v 1.9 2003/09/07 00:24:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r3.ebuild,v 1.10 2003/09/07 00:24:54 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A terminal emulator with transparency support as well as rxvt backwards compatibility"
@@ -42,8 +42,8 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install || die
 
-        fperms g+s /usr/bin/aterm
-        fowners root.utmp /usr/bin/aterm
+	fperms g+s /usr/bin/aterm
+	fowners root.utmp /usr/bin/aterm
 
 	dodoc TODO ChangeLog INSTALL doc/BUGS doc/FAQ doc/README.menu
 	docinto menu
