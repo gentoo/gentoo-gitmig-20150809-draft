@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.73 2004/06/29 19:54:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.74 2004/07/03 14:47:16 kloeri Exp $
+
+  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> file-roller-2.6.0.ebuild:
+  Stable on alpha.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> file-roller-2.4.4-r2.ebuild:
   sync IUSE (-${IUSE})
