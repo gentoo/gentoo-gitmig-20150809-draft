@@ -115,3 +115,5 @@
 #sys-libs/lib-compat  
 #rc6 initscripts
 <app-admin/fcron-1.1.1-r6
+<app-admin/metalog-0.6-r6
+
