@@ -1,413 +1,187 @@
-Sun Java(TM) System Message Queue 3.5 SP2, Platform Edition
-Sun Java System Message Queue 3.5 SP2, Enterprise Edition
-for Evaluation Only
 
-IMPORTANT - PLEASE READ.  THE LICENSES BELOW GOVERN YOUR USE
-OF THE SUN JAVA SYSTEM MESSAGE QUEUE, PLATFORM EDITION AND
-SUN JAVA SYSTEM MESSAGE QUEUE, ENTERPRISE EDITION FOR
-EVALUATION ONLY.
+                 Sun Microsystems, Inc.
+             Binary Code License Agreement
 
-THIRD PARTY CODE.  ADDITIONAL COPYRIGHT NOTICES AND LICENSE
-TERMS APPLICABLE TO PORTIONS OF THE SOFTWARE ARE SET FORTH
-IN THE THIRDPARTYLICENSEREADME FILE.  IN ADDITION TO ANY
-TERMS AND CONDITIONS OF ANY THIRD PARTY OPENSOURCE/FREEWARE
-LICENSE IDENTIFIED IN THE THIRDPARTYLICENSEREADME FILE, THE
-DISCLAIMER OF WARRANTY AND LIMITATION OF LIABILITY
-PROVISIONS IN PARAGRAPHS 6 AND 7 OF THE BINARY CODE LICENSE
-AGREEMENTS BELOW SHALL APPLY TO ALL SOFTWARE IN THIS
-DISTRIBUTION.
+   READ THE TERMS OF THIS AGREEMENT AND ANY PROVIDED
+   SUPPLEMENTAL LICENSE TERMS (COLLECTIVELY
+   "AGREEMENT") CAREFULLY BEFORE OPENING THE SOFTWARE
+   MEDIA PACKAGE.  BY OPENING THE SOFTWARE MEDIA
+   PACKAGE, YOU AGREE TO THE TERMS OF THIS
+   AGREEMENT.  IF YOU ARE ACCESSING THE SOFTWARE
+   ELECTRONICALLY, INDICATE YOUR ACCEPTANCE OF THESE
+   TERMS BY SELECTING THE "ACCEPT" BUTTON AT THE END
+   OF THIS AGREEMENT.  IF YOU DO NOT AGREE TO ALL
+   THESE TERMS, PROMPTLY RETURN THE UNUSED SOFTWARE
+   TO YOUR PLACE OF PURCHASE FOR A REFUND OR, IF THE
+   SOFTWARE IS ACCESSED ELECTRONICALLY, SELECT THE
+   "DECLINE" BUTTON AT THE END OF THIS AGREEMENT.
 
-IF YOU SELECT TO USE THE SUN JAVA SYSTEM MESSAGE QUEUE,
-PLATFORM EDITION (ALONG WITH ALL ACCOMPANYING SOFTWARE AND
-DOCUMENTATION, THE "MESSAGE QUEUE PE"), YOUR LICENSE TO THE
-MESSAGE QUEUE PE IS SET FORTH ENTIRELY IN SECTION B.  IF YOU
-SELECT TO USE THE SUN JAVA SYSTEM MESSAGE QUEUE, ENTERPRISE
-EDITION (ALONG WITH ALL ACCOMPANYING SOFTWARE AND
-DOCUMENTATION, THE "MESSAGE QUEUE EE EVALUATION"), YOUR
-LICENSE TO THE MESSAGE QUEUE EE EVALUATION IS SET FORTH
-ENTIRELY IN SECTION A.  The two licenses set forth in
-Sections A and B are separate and distinct legal agreements.
+   1.  LICENSE TO USE.  Sun grants you a
+   non-exclusive and non-transferable license for the
+   internal use only of the accompanying software and
+   documentation and any error corrections provided
+   by Sun (collectively "Software"), by the number of
+   users and the class of computer hardware for which
+   the corresponding fee has been paid.
 
-READ THE TERMS OF THE AGREEMENT IN THE SECTION APPLICABLE TO
-YOU (THE "APPLICABLE AGREEMENT") CAREFULLY BEFORE OPENING
-THE SOFTWARE MEDIA PACKAGE.  BY OPENING THE SOFTWARE MEDIA
-PACKAGE, YOU AGREE TO ALL THE TERMS OF THE APPLICABLE
-AGREEMENT.  IF YOU ARE ACCESSING THE MESSAGE QUEUE PE OR
-MESSAGE QUEUE EE EVALUATION ELECTRONICALLY, INDICATE YOUR
-COMPLETE ACCEPTANCE OF THIS AGREEMENT BY SELECTING THE
-"ACCEPT" BUTTON DISPLAYED ALONG WITH THE APPLICABLE
-AGREEMENT OR OTHERWISE PROVIDING THE AFFIRMATIVE RESPONSE
-REQUESTED.  IF YOU DO NOT AGREE TO ALL OF THE TERMS OF THE
-APPLICABLE AGREEMENT, DO NOT INSTALL, COPY OR OTHERWISE USE
-THE MESSAGE QUEUE PE OR OR MESSAGE QUEUE EE EVALUATION.
+   2.  RESTRICTIONS.  Software is confidential and
+   copyrighted. Title to Software and all associated
+   intellectual property rights is retained by Sun
+   and/or its licensors.  Except as specifically
+   authorized in any Supplemental License Terms, you
+   may not make copies of Software, other than a
+   single copy of Software for archival purposes.
+   Unless enforcement is prohibited by applicable
+   law, you may not modify, decompile, or reverse
+   engineer Software.  You acknowledge that Software
+   is not designed, licensed or intended for use in
+   the design, construction, operation or maintenance
+   of any nuclear facility.  Sun disclaims any
+   express or implied warranty of fitness for such
+   uses.  No right, title or interest in or to any
+   trademark, service mark, logo or trade name of Sun
+   or its licensors is granted under this Agreement.
 
-If you are accepting the Applicable Agreement on behalf of a
-corporation, partnership or other legal entity, the use of
-the terms "you" and "your" in the Applicable Agreement will
-refer to such entity and the entity accepting the Applicable
-Agreement represents and warrants to Sun that it has
-sufficient permissions, capacity, consents and authority to
-enter into the Applicable Agreement.
+   3. LIMITED WARRANTY.  Sun warrants to you that for
+   a period of ninety (90) days from the date of
+   purchase, as evidenced by a copy of the receipt,
+   the media on which Software is furnished (if any)
+   will be free of defects in materials and
+   workmanship under normal use.  Except for the
+   foregoing, Software is provided "AS IS".  Your
+   exclusive remedy and Sun's entire liability under
+   this limited warranty will be at Sun's option to
+   replace Software media or refund the fee paid for
+   Software.
 
+   4.  DISCLAIMER OF WARRANTY.  UNLESS SPECIFIED IN
+   THIS AGREEMENT, ALL EXPRESS OR IMPLIED CONDITIONS,
+   REPRESENTATIONS AND WARRANTIES, INCLUDING ANY
+   IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A
+   PARTICULAR PURPOSE OR NON-INFRINGEMENT ARE
+   DISCLAIMED, EXCEPT TO THE EXTENT THAT THESE
+   DISCLAIMERS ARE HELD TO BE LEGALLY INVALID.
 
-SECTION A:
+   5.  LIMITATION OF LIABILITY.  TO THE EXTENT NOT
+   PROHIBITED BY LAW, IN NO EVENT WILL SUN OR ITS
+   LICENSORS BE LIABLE FOR ANY LOST REVENUE, PROFIT
+   OR DATA, OR FOR SPECIAL, INDIRECT, CONSEQUENTIAL,
+   INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED
+   REGARDLESS OF THE THEORY OF LIABILITY, ARISING OUT
+   OF OR RELATED TO THE USE OF OR INABILITY TO USE
+   SOFTWARE, EVEN IF SUN HAS BEEN ADVISED OF THE
+   POSSIBILITY OF SUCH DAMAGES.  In no event will
+   Sun's liability to you, whether in contract, tort
+   (including negligence), or otherwise, exceed the
+   amount paid by you for Software under this
+   Agreement.  The foregoing limitations will apply
+   even if the above stated warranty fails of its
+   essential purpose.
 
-Sun Microsystems, Inc.  Binary Software Evaluation Agreement
-("Agreement") Sun Java System Message Queue, Enterprise
-Edition for Evaluation Only ("Message Queue EE Evaluation")
+   6.  Termination.  This Agreement is effective
+   until terminated.  You may terminate this
+   Agreement at any time by destroying all copies of
+   Software.  This Agreement will terminate
+   immediately without notice from Sun if you fail to
+   comply with any provision of this Agreement.  Upon
+   Termination, you must destroy all copies of
+   Software.
 
-1.0 DEFINITIONS
+   7. Export Regulations. All Software and technical
+   data delivered under this Agreement are subject to
+   US export control laws and may be subject to
+   export or import regulations in other countries.
+   You agree to comply strictly with all such laws
+   and regulations and acknowledge that you have the
+   responsibility to obtain such licenses to export,
+   re-export, or import as may be required after
+   delivery to you.
 
-"Licensed Software" means all or any portion of the Message
-Queue EE Evaluation in binary form (the "Product"), and any
-other machine readable materials (including, but not limited
-to, libraries, header files, and data files), additional
-software, user manuals, programming guides and other
-documentation provided to you by Sun Microsystems, Inc.
-("Sun") as part of, or embedded with, the files that
-comprise the Product.
+   8.   U.S. Government Restricted Rights.  If
+   Software is being acquired by or on behalf of the
+   U.S. Government or by a U.S. Government prime
+   contractor or subcontractor (at any tier), then
+   the Government's rights in Software and
+   accompanying documentation will be only as set
+   forth in this Agreement; this is in accordance
+   with 48 CFR 227.7201 through 227.7202-4 (for
+   Department of Defense (DOD) acquisitions) and with
+   48 CFR 2.101 and 12.212 (for non-DOD
+   acquisitions).
 
-2.0 LIMITED LICENSE Subject to the terms and conditions of
-this Agreement and your complete acceptance of this
-Agreement, Sun grants to you a non-exclusive,
-non-transferable, royalty-free and limited license to use
-Licensed Software solely for the purposes of evaluation of
-the Licensed Software and internal design, development,
-testing and evaluation of software products developed by
-you.  No license is granted to you for any other purpose.
-You may not sell, rent, loan or otherwise encumber or
-transfer Licensed Software, in whole or in part, to any
-third party, including any output or results of execution of
-the Licensed Software.
+   9.  Governing Law.  Any action related to this
+   Agreement will be governed by California law and
+   controlling U.S. federal law.  No choice of law
+   rules of any jurisdiction will apply.
 
-3.0 LICENSE RESTRICTIONS 3.1 You may not duplicate the
-Licensed Software other than for a single copy of binary
-portions of the Licensed Software for backup purposes only.
-You agree to reproduce all copyright and other proprietary
-right notices on any such copy.
+   10.  Severability. If any provision of this
+   Agreement is held to be unenforceable, this
+   Agreement will remain in effect with the provision
+   omitted, unless omission would frustrate the
+   intent of the parties, in which case this
+   Agreement will immediately terminate.
 
-3.2 Except as otherwise provided by law, you may not modify
-or create derivative works of the Licensed Software, or
-reverse engineer, disassemble or decompile binary portions
-of the Licensed Software, otherwise attempt to derive the
-source code from such portions, or assist any other person
-or entity in any of these activities.
+   11.  Integration.  This Agreement is the entire
+   agreement between you and Sun relating to its
+   subject matter.  It supersedes all prior or
+   contemporaneous oral or written communications,
+   proposals, representations and warranties and
+   prevails over any conflicting or additional terms
+   of any quote, order, acknowledgment, or other
+   communication between the parties relating to its
+   subject matter during the term of this Agreement.
+   No modification of this Agreement will be binding,
+   unless in writing and signed by an authorized
+   representative of each party.
 
-3.3 No right, title, or interest in or to the Licensed
-Software, any trademarks, service marks, or trade names of
-Sun or Sun's licensors is granted under this Agreement.  You
-acknowledge and agree as between you and Sun that Sun owns
-the SUN, SOLARIS, JAVA, JINI, JDK, FORTE, STAROFFICE,
-STARPORTAL, SUN ONE, and iPLANET trademarks and all SUN,
-SOLARIS, JAVA, JINI, FORTE, STAROFFICE, STARPORTAL, SUN ONE
-and iPLANET-related trademarks, service marks, logos and
-other brand designations ("Sun Marks").
+               JAVA(TM) INTERFACE CLASSES
+        JAVA MESSAGE SERVICE (JMS), VERSION 1.1
+               SUPPLEMENTAL LICENSE TERMS
 
-3.4 You have no right to use the Licensed Software in a
-production environment, for commercial use, or for
-operational purposes.
+   These supplemental license terms ("Supplemental
+   Terms") add to or modify the terms of the Binary
+   Code License Agreement (collectively, the
+   "Agreement"). Capitalized terms not defined in
+   these Supplemental Terms shall have the same
+   meanings ascribed to them in the Agreement. These
+   Supplemental Terms shall supersede any
+   inconsistent or conflicting terms in the
+   Agreement, or in any license contained within the
+   Software.
 
-3.5 You acknowledge that Licensed Software may contain a
-timebomb mechanism.
+   1. Software Internal Use and Development License
+   Grant. Subject to the terms and conditions of this
+   Agreement, including, but not limited to Section 3
+   (Java Technology Restrictions) of these
+   Supplemental Terms, Sun grants you a
+   non-exclusive, non-transferable, limited license
+   to reproduce internally and use internally the
+   binary form of the Software, complete and
+   unmodified, for the sole purpose of designing,
+   developing and testing your Java applets and
+   applications ("Programs").
 
-3.6 You may use any Sun(tm) ONE, Sun(tm) or third party
-products embedded in or bundled with Software only in
-conjunction with Software (and the applications that run on
-Software), and not with other software products or on a
-stand-alone basis.  Except as otherwise explicitly provided,
-the use of each such bundled product shall be governed by
-its license agreement.
-
-3.7 Software may contain source code that is provided solely
-for reference purposes pursuant to the terms of this
-Agreement.  Source code may not be redistributed unless
-expressly provided for in this Agreement.
-
-3.8 You may not publish or provide the results of any
-benchmark or comparison tests run on the Licensed Software
-to any third party without Sun's prior written consent.
-
-4.0 NO FURTHER OBLIGATIONS Neither Sun nor its licensors are
-under any obligation to support the Licensed Software or to
-provide you with updates or error corrections (collectively
-"Software Updates").  If Sun, at its sole option, supplies
-Software Updates to you, the Software Updates will be
-considered part of Licensed Software, and subject to the
-terms of this Agreement.  Further, neither Sun nor its
-licensors are under any obligation to develop, market, sell,
-distribute or take any other action with respect to the
-Licensed Software or to provide or ensure compatibility
-between the Licensed Software and any future version of the
-Licensed Software.
-
-5.0 TERM AND TERMINATION OF AGREEMENT 5.1 This Agreement
-will commence on the date on which you install the Licensed
-Software (the "Effective Date") and will terminate 90 days
-from the Effective Date, unless terminated earlier as set
-forth below.  However, if the Licensed Software does not
-require installation for use, the Effective Date is the date
-that you accept this Agreement.
-
-5.2 You may terminate this Agreement at any time by
-completely destroying all copies of the Licensed Software
-and removing all portions of the Licensed Software that you
-deployed on any electronic device (including without
-limitation, computer systems, servers, networks, and
-personal electronic devices).
-
-5.3 Sun may terminate this Agreement upon 10 days' written
-notice to you.  However, Sun may terminate this Agreement
-immediately should any Licensed Software become, or in Sun's
-and/or its licensors' opinion be likely to become, the
-subject of a claim of intellectual property infringement or
-trade secret misappropriation.
-
-5.4 Sun may terminate this Agreement immediately should you
-materially breach any of its provisions or take any action
-in derogation of Sun's and/or its licensors' rights to the
-Licensed Software.
-
-5.5 Upon termination or expiration of this Agreement, you
-will immediately cease use of and destroy Licensed Software,
-and within ten (10) days from termination or expiration of
-this Agreement, you will any copies thereof and provide Sun
-a written statement from a duly authorized representative
-certifying that you have complied with the foregoing
-obligations.
-
-5.6 The following sections will survive any termination or
-expiration of this Agreement:  Sections 1.0, 3.0, 4.0, 5.5,
-5.6, and 6.0-9.0.  You shall have no rights toN IF ANY EXCLUSIVE REMEDY PROVIDED IN THIS AGREEMENT
-FAILS OF ITS ESSENTIAL PURPOSE.  IN NO EVENT WILL THE
-CUMMULATIVE LIABILITY OF SUN FOR ANY DAMAGES WHATSOEVER
-INCURRED BY YOU ARISING OUT OF OR RELATED TO THIS AGREEMENT
-EXCEED THE TOTAL AMOUNT ACTUALLY PAID TO SUN BY YOU UNDER
-THIS AGREEMENT.
-
-8.0 U.S.  GOVERNMENT RESTRICTED RIGHTS.  If Licensed
-Software is being acquired by or on behalf of the U.S.
-Government or by a U.S.  Government prime contractor or
-subcontractor (at any tier), then the Government's rights in
-the Licensed Software will be only as set forth in this
-Agreement; this is in accordance with 48 CFR 227.7201
-through 227.7202-4 (for Department of Defense (DOD)
-acquisitions) and with 48 CFR 2.101 and 12.212 (for non-DOD
-acquisitions).
-
-9.0 GENERAL TERMS 9.1 This Agreement will be governed by and
-construed in accordance with the laws of the State of
-California, U.S.A., excluding its conflict of laws
-principles.  You expressly agree and consent that exclusive
-jurisdiction and venue for any dispute arising out of or
-relating to this Agreement will lie with the federal and
-state courts located in and serving Santa Clara County,
-California, U.S.A.  The U.N.  Convention for the
-International Sale of Goods and the choice of law rules of
-any jurisdiction will not apply.  The official text of this
-Agreement is in the English language and any interpretation
-or construction of this Agreement will be based thereon.  In
-the event that this Agreement or any documents or notices
-related to it are translated into any other language, the
-English language version will control.
-
-9.2 Licensed Software and technical data delivered under
-this Agreement are subject to U.S.  export control laws and
-may be subject to export or import regulations in other
-countries.  You agree to comply strictly with all such laws
-and regulations and acknowledge that you have the
-responsibility to obtain such licenses to export, re-export
-or import as may be required after delivery to you.  Unless
-authorized by the U.S.  Government, you will not, directly
-or indiountry identified in the U.S.  export laws, including but
-not limited to the Export Administration Regulations (15
-C.F.R.  Parts 730-774).  You affirm that you are not
-identified on any U.S.  Government export exclusion lists
-and that you will not use Licensed Software for nuclear
-missile, chemical biological weaponry, or other weapons of
-mass destruction.
-
-9.3 It is understood and agreed that, notwithstanding any
-other provision of this Agreement, your breach of the
-provisions of Sections 2.0, or 3.0 of this Agreement will
-cause Sun and/or its licensors irreparable damage for which
-recovery of money damages would be inadequate, and that Sun
-and/or its licensors will therefore be entitled to seek
-timely injunctive relief, without the necessity of posting
-bond or other security, to protect Sun's and/or its
-licensors' rights under this Agreement in addition to any
-and all remedies available at law.
-
-9.4 You may not assign or otherwise transfer any of your
-rights or obligations under this Agreement, without the
-prior written consent of Sun.
-
-9.5 If any provision of this Agreement is held invalid by
-any law or regulation of any government or by any court,
-such invalidity will not affect the enforceability of any
-other provisions.
-
-9.6 Any express waiver or failure to exercise promptly any
-right under this Agreement will not create a continuing
-waiver or any expectation of non-enforcement.
-
-9.7 This Agreement is the parties' entire agreement relating
-to its subject matter.  It supersedes all prior or
-contemporaneous oral or written communications, proposals,
-conditions, representations and warranties and prevails over
-any conflicting or additional terms of any quote, order,
-acknowledgment, or other communication between the parties
-relating to its subject matter during the term of this
-Agreement.  No modification to this Agreement will be
-binding, unless in writing and signed by an authorized
-representative of each party.
-
-For inquiries please contact:  Sun Microsystems, Inc., 4140
-Network Circle, Santa Clara, California 95054
-
-
-SECTION B:
-
-Sun Microsystems, Inc.  Binary Code License Agreement
-("BCL") Sun Java System Message Queue 3.5 SP2, Platfoto be unenforceable, this Agreement will remain in
-effect with the provision omitted, unless omission would
-frustrate the intent of the parties, in which case this
-Agreement will immediately terminate.
-
-11.  Integration.  This Agreement is the entire agreement
-between you and Sun relating to its subject matter.  It
-supersedes all prior or contemporaneous oral or written
-communications, proposals, representations and warranties
-and prevails over any conflicting or additional terms of any
-quote, order, acknowledgment, or other communication between
-the parties relating to its subject matter during the term
-of this Agreement.  No modification of this Agreement will
-be binding, unless in writing and signed by an authorized
-representative of each party.
-
-For inquiries please contact:  Sun Microsystems, Inc., 4140
-Network Circle, Santa Clara, California 95054
-
-Sun Microsystems, Inc.  Supplemental Terms and Conditions
-for Sun(TM) Java System Message Queue 3.5 SP2, Platform
-Edition
-
-These terms and conditions for the Message Queue PE
-supplement the terms and conditions of the Agreement for the
-Message Queue PE.  Capitalized terms not defined herein
-shall have the meanings ascribed to them in Agreement for
-Message Queue PE.  These terms and conditions shall
-supersede any inconsistent or conflicting terms and
-conditions in the Agreement for the Message Queue PE.
-
-1.  Definitions.
-
-A. "Broker" means the server side Software component that
-   manages the routing of JMS messages.
-
-B. "Client Applications" means the application created by
-   you using the APIs provided in the Software for
-   connecting with the Broker.
-
-2.  Additional Use Conditions.
-
-A. You may copy the documentation, without change, as
-   necessary to fully utilize Software, provided the copies
-   contain all of the original proprietary notices.
-
-B. You may use any Sun(tm) ONE, Sun(tm) or third party
-   products embedded in or bundled with Software only in
-   conjunction with Software (and the applications that run
-   on Software), and not with other software products or on
-   a stand-alone basis.  Except as otherwise explicitly
-   provided, the use of each such bundled product shall be
-   governed by its license agreement.
-
-C.extends to you an
-   option to purchase, at your election, an upgrade to Sun
-   Java System Queue, Enterprise Edition, that will, upon
-   payment of the applicable license fee, terminate your
-   license to Message Queue PE, and upgrade the Software to
-   Sun Java System Message Queue, Enterprise Edition.  Your
-   use of Sun Java System Message Queue, Enterprise Edition
-   pursuant to the upgrade will be governed by and subject
-   to the BCL and applicable Supplemental Terms.  No
-   additional license for the Software is being granted with
-   the purchase of an upgrade to the Software.
-
-3.  License to Distribute Redistributables.  Subject to the
-terms and conditions of this Agreement, Sun grants you a
-non-exclusive, non-transferable, limited license to
-reproduce and distribute the binary form of those files
-specifically identified as redistributable below in Section
-3.A ("Redistributables"), provided that:  (i) you do not
-distribute additional software intended to supersede any
-component(s) of the Redistributables, (ii) you do not remove
-or alter any proprietary legends or notices contained in or
-on the Redistributables, (iii) you only distribute the
-Redistributables pursuant to a license agreement that
-protects Sun's interests consistent with the terms contained
-in the Agreement, and (iv) you agree to defend and indemnify
-Sun and its licensors from and against any damages, costs,
-liabilities, settlement amounts and/or expenses (including
-attorneys' fees) incurred in connection with any claim,
-lawsuit or action by any third party that arises or results
-from the use or distribution of any and all Programs and/or
-Software.  If you distribute the Redistributables pursuant
-to this paragraph, you must include the following statement
-as part of product documentation (whether hard copy or
-electronic), as a part of a copyright page or proprietary
-rights notice page, in an "About" box or in any other form
-reasonably designed to make the statement visible to users
-of the Software:  "This product includes code licensed from
-RSA Data Security".
-
-
-A. Only the following jar files may be redistributed in
-   accordance with the license in Section 3 of these
-les distributed with the product are NOT
-redistributable.
-
-
-4.  Java Technology Restrictions.  In the event that you
-create an additional class and associated API(s) which (i)
-extends the functionality of the Java platform, and (ii) is
-exposed to third party software developers for the purpose
-of developing additional software which invokes such
-additional API, you must promptly publish broadly an
-accurate specification for such API for free use by all
-developers.  You may not create, or authorize your licensees
-to create, additional classes, interfaces, or sub- packages
-that are in any way identified as "java", "javax", "sun" or
-similar convention as specified by Sun in any naming
-convention designation.
-
-5.  Trademarks and Logos.  You acknowledge and agree as
-between you and Sun that Sun owns the SUN, SOLARIS, JAVA,
-JINI, JDK, FORTE, STAROFFICE, STARPORTAL and iPLANET
-trademarks and all SUN, SOLARIS, JAVA, JINI, FORTE,
-STAROFFICE, STARPORTAL and iPLANET-related trademarks,
-service marks, logos and other brand designations ("Sun
-Marks"), and you agree to comply with the Sun Trademark and
-Logo Usage Requirements currently located at
-http://www.sun.com/policies/trademarks.  Any use you make of
-the Sun Marks inures to Sun's benefit.
-
-6.  Source Code.  Software may contain source code that is
-provided solely for reference purposes pursuant to the terms
-of this Agreement.  Source code may not be redistributed
-unless expressly provided for in this Agreement.
-
-7.  Termination for Infringement.  Either party may
-terminate this Agreement immediately should any Software
-become, or in either party's opinion be likely to become,
-the subject of a claim of infringement of any intellectual
-property right.
-
-8.  Additional Restrictions.  You may not publish or provide
-the results of any benchmark or comparison tests run on
-Software to any third party without the prior written
-consent of Sun.
-
-
-SOMQ3.5PE/EE-EVAL LICENSE (LFI#:142957)
-
+   2. License to Distribute Software.  In addition to
+   the license granted in Section 1 (Software
+   Internal Use and Development License Grant) of
+   these Supplemental Terms, subject to the terms and
+   conditions of this Agreement, including but not
+   limited to Section 3 (Java Technology
+   Restrictions), Sun grants you a non-exclusive,
+   non-transferable, limited license to reproduce and
+   distribute the Software in binary form only,
+   provided that you (i) distribute the Software
+   complete and unmodified and only bundled as part
+   of your Programs, (ii) do not distribute
+   additional software intended to replace any
+   component(s) of the Software, (iii) do not remove
+   or alter any proprietary legends or notices
+   contained in the Software, (iv) only distribute
+   the Software subject to a license agreement that
+   protects Sun's interests consistent with the terms
+   contained in this Agreement, and (v) agree to
+   defend and indemnify Sun and its licensors from
+   and against any damages, costs, liabilities,
+   settlement amounts and/or expenses (including
+   attorneys' fees) incurred in connection with any
+  
