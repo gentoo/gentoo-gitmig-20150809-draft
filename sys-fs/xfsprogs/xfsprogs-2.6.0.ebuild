@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.6.0.ebuild,v 1.7 2004/06/28 01:56:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.6.0.ebuild,v 1.8 2004/07/15 03:44:29 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -12,8 +12,7 @@ DESCRIPTION="xfs filesystem utilities"
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~amd64 ~alpha ~mips ~hppa ~ia64 ppc ~sparc"
-
-S=${WORKDIR}/${P}
+IUSE=""
 
 DEPEND="sys-fs/e2fsprogs
 	sys-devel/autoconf
