@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.1.2.ebuild,v 1.5 2003/10/07 23:53:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.2.4.ebuild,v 1.1 2003/10/07 23:53:58 liquidx Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ LICENSE="wxWinLL-3"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 RDEPEND=">=dev-lang/python-2.1
-	=x11-libs/wxGTK-2.4.1*
+	>=x11-libs/wxGTK-2.4.2
 	gtk2? ( >=x11-libs/gtk+-2.0
 		>=x11-libs/pango-1.2
 		>=dev-libs/glib-2.0 ) 
@@ -49,11 +49,6 @@ pkg_setup() {
 			die "wxGTK needs to be compiled without gtk2"
 		fi
 	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	epatch ${FILESDIR}/controls2.py.patch
 }
 
 src_compile() {
