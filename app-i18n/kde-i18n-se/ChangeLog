@@ -1,0 +1,9 @@
+# ChangeLog for app-i18n/kde-i18n-se
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-se/ChangeLog,v 1.1 2003/03/20 12:56:08 hannes Exp $
+
+*kde-i18n-se-3.1.1 (20 Mar 2003)
+
+  20 Mar 2003; Hannes Mehnert <hannes@gentoo.org> kde-i18n-se-3.1.1.ebuild:
+  version bump
+

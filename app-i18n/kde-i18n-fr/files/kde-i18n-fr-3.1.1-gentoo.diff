@@ -1,0 +1,109 @@
+--- docs/kdebase/konqueror/commands.docbook	2003-03-10 22:02:32.000000000 -0500
++++ docs/kdebase/konqueror/commands.docbook	2003-03-19 14:45:16.000000000 -0500
+@@ -1479,9 +1479,7 @@
+ > <guimenu
+ >Configuration</guimenu
+ ><guimenuitem
+->Enregistrer le profil d'affichage <quote
+->Gestion de fichiers</quote
+-></guimenuitem
++>Enregistrer le profil d'affichage Gestion de fichiers</guimenuitem
+ > </menuchoice
+ ></term
+ > <listitem
+@@ -1495,9 +1493,7 @@
+ > <guimenu
+ >Configuration</guimenu
+ ><guimenuitem
+->Enregistrer le profil d'affichage <quote
+->Navigation web</quote
+-></guimenuitem
++>Enregistrer le profil d'affichage Navigation web</guimenuitem
+ > </menuchoice
+ ></term
+ > <listitem
+--- docs/kdebase/konqueror/save-settings.docbook	2003-03-10 22:02:32.000000000 -0500
++++ docs/kdebase/konqueror/save-settings.docbook	2003-03-19 14:30:13.000000000 -0500
+@@ -72,13 +72,9 @@
+ >Pour changer ce comportement au démarrage, paramétrez simplement &konqueror; comme vous le souhaitez, puis dans le menu <guimenu
+ >Configuration</guimenu
+ >, choisissez <guimenuitem
+->Enregistrer le profil d'affichage <quote
+->Gestionnaire de fichiers</quote
+-></guimenuitem
++>Enregistrer le profil d'affichage Gestionnaire de fichiers</guimenuitem
+ > ou <guimenuitem
+->Enregistrer le profil d'affichage <quote
+->Navigateur web</quote
+-></guimenuitem
++>Enregistrer le profil d'affichage Navigateur web</guimenuitem
+ > selon le mode dans lequel vous vous trouvez. Si vous souhaitez que &konqueror; démarre avec une fenêtre vide, saisissez <userinput
+ >about:blank</userinput
+ > dans la barre d'emplacement avant d'enregistrer le profil.</para
+--- docs/kdebase/khelpcenter/userguide/shortcuts.docbook	2002-09-15 18:27:26.000000000 -0400
++++ docs/kdebase/khelpcenter/userguide/shortcuts.docbook	2003-01-28 18:09:12.000000000 -0500
+@@ -42,7 +42,7 @@
+ >Tab</keycap
+ ></keycombo
+ > ou <keycombo
+->&Ctrl;&Maj;<keycap
++>&Ctrl;<keycap>&Maj;</keycap><keycap
+ >Tab</keycap
+ > </keycombo
+ ></term
+@@ -102,7 +102,7 @@
+ > <varlistentry
+ > <term
+ ><keycombo
+->&Ctrl;&Alt;<keycap
++>&Ctrl;<keycap>&Alt;</keycap><keycap
+ >Esc</keycap
+ > </keycombo
+ ></term
+@@ -114,7 +114,7 @@
+ > <varlistentry
+ > <term
+ ><keycombo
+->&Ctrl;&Alt;<keycap
++>&Ctrl;<keycap>&Alt;</keycap><keycap
+ >Correction</keycap
+ > </keycombo
+ ></term
+@@ -126,7 +126,7 @@
+ > <varlistentry
+ > <term
+ ><keycombo
+->&Ctrl;&Alt;<keycap
++>&Ctrl;<keycap>&Alt;</keycap><keycap
+ >Numpad +</keycap
+ ></keycombo
+ ></term
+@@ -138,7 +138,7 @@
+ > <varlistentry
+ > <term
+ ><keycombo
+->&Ctrl;&Alt;<keycap
++>&Ctrl;<keycap>&Alt;</keycap><keycap
+ >Numpad -</keycap
+ > </keycombo
+ ></term
+@@ -223,8 +223,7 @@
+ > <varlistentry
+ > <term
+ ><keycombo
+->&Alt;bouton <mousebutton
+->gauche</mousebutton
++>&Alt;<mousebutton>bouton gauche</mousebutton
+ ></keycombo
+ ></term
+ > <listitem
+@@ -235,8 +234,7 @@
+ > <varlistentry
+ > <term
+ ><keycombo
+->&Alt;bouton <mousebutton
+->central</mousebutton
++>&Alt;<mousebutton>bouton central</mousebutton
+ ></keycombo
+ ></term
+ > <listitem
