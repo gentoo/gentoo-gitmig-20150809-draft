@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.2.ebuild,v 1.2 2004/01/07 20:28:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.2.ebuild,v 1.3 2004/01/11 14:04:22 lanius Exp $
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
@@ -22,11 +22,11 @@ DEPEND="${RDEPEND}
 #	!dev-util/eclipse-cdt-bin"
 
 RDEPEND=">=virtual/jdk-1.3
-	kde? ( kde-base/kde virtual/motif ) :
+	kde? ( kde-base/kde x11-libs/openmotif ) :
 		( gnome? ( =gnome-base/gnome-vfs-2* ) :
-		( motif? ( virtual/motif ) :
+		( motif? ( x11-libs/openmotif ) :
 		( >=x11-libs/gtk+-2.2.1-r1 ) ) )
-	motif? ( virtual/motif )
+	motif? ( x11-libs/openmotif )
 	gnome? ( =gnome-base/gnome-vfs-2* )
 	gtk? ( >=x11-libs/gtk+-2.2.1-r1 )"
 

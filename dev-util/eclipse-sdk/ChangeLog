@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eclipse-sdk
-# Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.8 2003/12/22 00:18:18 karltk Exp $
+# Copyright 2003-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.9 2004/01/11 14:04:22 lanius Exp $
+
+  11 Jan 2004; Heinrich Wendel <lanius@gentoo.org> eclipse-sdk-2.1.1.ebuild,
+  eclipse-sdk-2.1.2-r1.ebuild, eclipse-sdk-2.1.2.ebuild,
+  eclipse-sdk-3.0.0_pre5.ebuild:
+  fixed motif dep
 
   21 Dec 2003; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-sdk-2.1.2-r1.ebuild:
