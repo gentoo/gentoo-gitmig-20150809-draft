@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/xgammon-0.98.ebuild,v 1.3 2004/02/29 10:15:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/xgammon-0.98.ebuild,v 1.4 2004/04/13 09:32:48 mr_bones_ Exp $
 
 inherit eutils
 
@@ -10,8 +10,9 @@ HOMEPAGE="http://fawn.unibw-hamburg.de/steuer/xgammon/xgammon.html"
 SRC_URI="http://fawn.unibw-hamburg.de/steuer/xgammon/Downloads/${P}a.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc"
 SLOT="0"
+KEYWORDS="x86 ppc sparc"
+IUSE=""
 
 DEPEND="virtual/x11"
 
@@ -25,9 +26,9 @@ src_unpack() {
 
 src_compile() {
 	xmkmf || die "xmkmf died"
-	env PATH="${PATH}:." emake || die
+	env PATH="${PATH}:." emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die "make install failed"
 }
