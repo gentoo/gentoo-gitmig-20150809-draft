@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-0.9.0.ebuild,v 1.2 2002/07/11 06:30:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-0.9.0.ebuild,v 1.3 2002/07/21 14:22:13 stubear Exp $
 
 ### This package requires a Mac II/Classic ROM, A Mac OS Image
 ### Mac OS 7.5.3r2 is available freely from the Apple Homepage
@@ -9,6 +9,8 @@
 DESCRIPTION="BasiliskII-0.9.0 Macintosh Emulator (Stable Release)"
 HOMEPAGE="http://phcip1.phyzik.uni-mainz.de/~bauec002/B2Main.html"
 LICENSE="GPL | LGPL"
+KEYWORDS="x86"
+SLOT="0"
 
 ### We'll set $S Manually, it's version dependant, and nested strangely.
 S=${WORKDIR}/BasiliskII-0.9/src/Unix
@@ -20,6 +22,8 @@ S=${WORKDIR}/BasiliskII-0.9/src/Unix
 DEPEND="gtk? ( x11-libs/gtk+ )
 	esd? ( media-sound/esound )" 
 
+RDEPEND="${DEPEND}"
+
 SRC_URI="http://iphcip1.physik.uni-mainz.de/~cbauer/BasiliskII_src_31052001.tar.gz"
 
 src_compile() {
@@ -29,7 +33,7 @@ src_compile() {
 ### Default ./configure options are all =yes by default. we'll check for 
 ### and use -values and switch them accordingly
 
-        use X || myflags="${myflags} --with-x=no"
+	use X || myflags="${myflags} --with-x=no"
 	use esd || myflags="${myflags} --with-esd=no"
 	use gtk || myflags="${myflags} --with-gtk=no"
 	use dga || myflags="${myflags} --with-dga=no"
