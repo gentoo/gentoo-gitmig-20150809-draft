@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/atop
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/atop/ChangeLog,v 1.4 2004/12/10 19:47:35 latexer Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/atop/ChangeLog,v 1.5 2005/03/03 15:22:22 ciaranm Exp $
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> atop-1.9.ebuild:
+  Dependency update: sys-apps/acct -> sys-process/acct.
 
 *atop-1.13 (10 Dec 2004)
 
