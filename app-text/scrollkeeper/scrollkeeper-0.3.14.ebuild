@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14.ebuild,v 1.6 2004/02/12 16:17:50 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14.ebuild,v 1.7 2004/02/13 12:41:38 liquidx Exp $
 
 IUSE="nls"
 
 inherit libtool
 
 S=${WORKDIR}/${P}
-DESCRIPTION="Scrollkeeper"
+DESCRIPTION="ScrollKeeper is a cataloging system for documentation on open systems."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://scrollkeeper.sourceforge.net"
 
