@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/bonnie++-1.93c.ebuild,v 1.2 2004/08/27 18:19:58 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/bonnie++-1.93c.ebuild,v 1.3 2004/09/15 00:52:00 kugelfang Exp $
+
+inherit eutils 64-bit
 
 DESCRIPTION="Hard drive bottleneck testing benchmark suite."
 HOMEPAGE="http://www.coker.com.au/bonnie++/"
@@ -8,10 +10,16 @@ SRC_URI="http://www.coker.com.au/bonnie++/experimental/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha ~amd64"
+KEYWORDS="x86 ~ppc ~sparc alpha amd64"
 IUSE="debug"
 
 DEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	64-bit && epatch ${FILESDIR}/${P}-64bit.patch
+}
 
 src_compile() {
 	econf \
