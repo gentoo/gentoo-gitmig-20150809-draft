@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp-agent/dhcp-agent-0.37.ebuild,v 1.1 2002/08/19 05:17:47 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp-agent/dhcp-agent-0.37.ebuild,v 1.2 2002/08/19 05:25:25 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="dhcp-agent is a portable UNIX Dynamic Host Configuration suite"
@@ -16,7 +16,7 @@ DEPEND=">=dev-libs/libdnet-1.4
 src_compile() {
 
 	econf || die
-	emake || die
+	emake CFLAGS="${CFLAGS} -Wall -g" || die
 
 }
 
