@@ -1,4 +1,6 @@
-MD5 92f71eb93d88333ac67ef9bf4f7f6bc7 ChangeLog 537
+MD5 0234dcb7f0beae564adea9a96485e399 ChangeLog 538
 MD5 0146688f14ddccfc40814da864f9f102 bluej-1.2.2.ebuild 1209
+MD5 e14c9b11aad6809f3bcf956765e0b50b bluej-1.3.0.ebuild 1210
 MD5 5f9987ebe9f3ac64465390df49ef96fe files/bluej 124
 MD5 7ae514074352749242eaad65fc86619d files/digest-bluej-1.2.2 169
+MD5 0236435bbde2b04789397bc4476bccf7 files/digest-bluej-1.3.0 170
