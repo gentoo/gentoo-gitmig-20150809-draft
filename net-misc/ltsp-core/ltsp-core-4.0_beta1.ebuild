@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-4.0_beta1.ebuild,v 1.2 2003/08/28 22:55:31 mholzer Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-4.0_beta1.ebuild,v 1.3 2003/09/05 22:13:37 msterret Exp $
 
 # TODO: xdm configuration, dhcp-pxe example
 

@@ -1,5 +1,5 @@
 MD5 38e0481b21545bb4548c218983878aef ChangeLog 684
-MD5 c3a83d5a363d4bb4a0f83e973222ef08 lambdamoo-1.8.1-r1.ebuild 945
+MD5 75915f735dbc83737d59b1f3933a8fff lambdamoo-1.8.1-r1.ebuild 945
 MD5 4b918fff63c103c64a5862f561bc3b58 files/lambdamoo.conf 185
 MD5 fc4b10da13ac2b1667f12da98bfbfe27 files/lambdamoo.rc 1265
 MD5 3b9fdebdc6426dbceac6f711795d3183 files/1.8.1-enable-outbound.patch 451

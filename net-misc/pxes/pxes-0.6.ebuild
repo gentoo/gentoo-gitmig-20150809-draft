@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologues, Inc.
-# Distrbuted under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.6.ebuild,v 1.3 2003/09/05 22:01:49 msterret Exp $
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.6.ebuild,v 1.4 2003/09/05 22:13:37 msterret Exp $
 
 IUSE="ltsp"
 DESCRIPTION="PXES is a package for building thin clients using multiple types of clients"
