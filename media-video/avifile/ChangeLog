@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.91 2005/01/29 15:49:36 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.92 2005/01/29 16:04:29 luckyduck Exp $
+
+  29 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  avifile-0.7.41.20041001-r2.ebuild:
+  excluded amd64 from optional dmalloc usage.
 
 *avifile-0.7.41.20041001-r2 (29 Jan 2005)
 

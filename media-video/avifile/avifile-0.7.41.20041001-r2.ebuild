@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001-r2.ebuild,v 1.1 2005/01/29 15:49:36 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001-r2.ebuild,v 1.2 2005/01/29 16:04:29 luckyduck Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,7 @@ mmx oggvorbis oss pic qt sblive sdl sse static truetype v4l vidix xinerama xv xv
 DEPEND="alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )
 	avi? ( !alpha? ( !arm? ( !ia64? ( !mips? ( >=media-libs/win32codecs-0.90 ) ) ) ) )
 	divx4linux? ( x86? ( >=media-libs/divx4linux-20030428 ) )
-	dmalloc? ( !arm? ( !mips? ( dev-libs/dmalloc ) ) )
+	dmalloc? ( !amd64? ( !arm? ( !mips? ( dev-libs/dmalloc ) ) ) )
 	dvd? ( >=media-libs/a52dec-0.7 )
 	encode? ( >=media-sound/lame-3.90 )
 	esd? ( >=media-sound/esound-0.2.28 )
