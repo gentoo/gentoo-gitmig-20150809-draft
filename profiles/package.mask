@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <carpaski@gentoo.org> (29 Jun 2003)
+# Masking 2.0.48-r2 for testing some cleanups and fixes
+>=sys-apps/portage-2.0.48-r2
+
 # <liquidx@gentoo.org> (28 Jun 2003)
 # cjkcodecs replaces koreancodecs and possibly japanesecodecs
 dev-python/koreancodecs
