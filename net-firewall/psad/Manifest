@@ -1,10 +1,20 @@
-MD5 05476f10b7ef1de526cebff5845a68f6 ChangeLog 4792
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 18fb8b06ea56b676b0fa85fad1fe5f28 ChangeLog 4881
+MD5 a0f16c96d56b4d063e6fab2e70818809 psad-1.3.2.ebuild 3311
 MD5 ac85ccaacab6bf7a9dd356b8c92b3bac metadata.xml 326
-MD5 938dbb3b56c0f7885c3408516e96a3be psad-1.3.1.ebuild 3210
-MD5 997624d60e270565d1b91814f570e0a6 psad-1.3.2.ebuild 3315
 MD5 9e330d67604b9ecdc1af9ab56fd43c5a psad-1.3.4.ebuild 3338
 MD5 bf74657e36d1519c721fb90559fc1491 psad-1.4.0.ebuild 4038
+MD5 938dbb3b56c0f7885c3408516e96a3be psad-1.3.1.ebuild 3210
 MD5 0685c8a54fb4c35dbc920b79c2bea80e files/digest-psad-1.3.1 63
-MD5 d5b2c82c2615fcf24e2f599706e35ade files/digest-psad-1.3.2 63
-MD5 295923dc84bcfb6e5978b5039ffc0a3a files/digest-psad-1.3.4 63
 MD5 c43f2f1a27860fdad099c9000d373b01 files/digest-psad-1.4.0 63
+MD5 295923dc84bcfb6e5978b5039ffc0a3a files/digest-psad-1.3.4 63
+MD5 d5b2c82c2615fcf24e2f599706e35ade files/digest-psad-1.3.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB8nc4ugEuf3OQ0akRAjrVAJ4xfhvULSQ4HXMq3IzT6lh83NlmFgCfVIEk
+BDebJF5YULyG+XaGSHHkoqE=
+=4FnF
+-----END PGP SIGNATURE-----
