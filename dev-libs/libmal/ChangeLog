@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/ChangeLog,v 1.5 2003/08/30 10:28:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/ChangeLog,v 1.6 2003/09/08 02:06:15 caleb Exp $
+
+  07 Sep 2003; Caleb Tennis <caleb@gentoo.org> libmal-0.31.ebuild:
+  x86 stable
 
   30 Aug 2003; Alastair Tse <liquidx@gentoo.org> metadata.xml:
   added metadata.xml
