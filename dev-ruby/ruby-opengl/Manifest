@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 49c0552e648932e4ffc54bb438afd212 ruby-opengl-0.32d.ebuild 992
-MD5 619f3931553422d50206a59d879feab3 ChangeLog 1173
-MD5 a791924d15a1dd832d78d3169cd0a002 ruby-opengl-0.32c.ebuild 864
+MD5 a4007cf0ba18954fc0c47513ff1a3e0f ChangeLog 1280
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 bd31117249d3822d27a060b566f9c28d files/ruby-opengl-0.32c-font-gentoo.diff 1614
+MD5 a791924d15a1dd832d78d3169cd0a002 ruby-opengl-0.32c.ebuild 864
+MD5 f478e55aead1262d0819e14931bc08ad ruby-opengl-0.32d.ebuild 985
 MD5 589d78cf6f0d143bfd75a2dcb7c17fa0 files/digest-ruby-opengl-0.32c 62
-MD5 918e73dc3ecdcb5711eb8107737dd820 files/digest-ruby-opengl-0.32d 62
 MD5 c8ce3aa892e10ea1e22ccad27d74fe6a files/ruby-opengl-0.32c-extconf-gentoo.diff 742
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBGrUMCHk4+ZoBpvsRAsfIAJ41SDdahwAH0G0nExHMUEcukpw1SQCgoPx6
-+Go1oufnmNA5nhw+xviHJdc=
-=WX0E
------END PGP SIGNATURE-----
+MD5 bd31117249d3822d27a060b566f9c28d files/ruby-opengl-0.32c-font-gentoo.diff 1614
+MD5 918e73dc3ecdcb5711eb8107737dd820 files/digest-ruby-opengl-0.32d 62

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amstd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.13 2004/06/25 01:52:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.14 2004/10/03 14:33:23 usata Exp $
+
+  03 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> amstd-2.0.0-r1.ebuild:
+  Stable on ppc.
 
   15 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org> amstd-2.0.0-r1.ebuild:
   Sparc stable
