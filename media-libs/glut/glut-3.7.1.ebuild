@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.20 2004/07/31 00:06:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.21 2004/10/05 10:24:36 eradicator Exp $
 
-inherit libtool gnuconfig
+inherit libtool gnuconfig eutils
 
 MESA_VER="5.0"
 DESCRIPTION="The OpenGL Utility Toolkit (GLUT)"
@@ -35,11 +35,11 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/lib
+	insinto /usr/$(get_libdir)
 	newins ${S}/src-glut/.libs/libglut.lai libglut.la || die "libtools"
 
 	dolib.so ${S}/src-glut/.libs/libglut.so.${PV}
-	dosym libglut.so.${PV} /usr/lib/libglut.so || die "libraries"
+	dosym libglut.so.${PV} /usr/$(get_libdir)/libglut.so || die "libraries"
 	preplib
 
 	insinto /usr/include/GL

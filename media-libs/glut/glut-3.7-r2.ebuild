@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7-r2.ebuild,v 1.16 2004/07/14 19:41:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7-r2.ebuild,v 1.17 2004/10/05 10:24:36 eradicator Exp $
 
 MESA_VER="4.0.1"
 S=${WORKDIR}/Mesa-${MESA_VER}
@@ -30,14 +30,14 @@ src_compile() {
 
 src_install() {
 
-	insinto /usr/lib
+	insinto /usr/$(get_libdir)
 	doins ${S}/src-glut/libglut.la
-	dosed -e "s: -L${S}/si-glu : -L/usr/lib :" /usr/lib/libglut.la
-	dosed -e "s:/usr/local/lib:/usr/lib:g" /usr/lib/libglut.la
-	dosed -e "s:installed=no:installed=yes:" /usr/lib/libglut.la
+	dosed -e "s: -L${S}/si-glu : -L/usr/$(get_libdir) :" /usr/$(get_libdir)/libglut.la
+	dosed -e "s:/usr/local/$(get_libdir):/usr/$(get_libdir):g" /usr/$(get_libdir)/libglut.la
+	dosed -e "s:installed=no:installed=yes:" /usr/$(get_libdir)/libglut.la
 
 	dolib.so ${S}/src-glut/.libs/libglut.so.${PV}.0
-	dosym libglut.so.${PV}.0 /usr/lib/libglut.so
+	dosym libglut.so.${PV}.0 /usr/$(get_libdir)/libglut.so
 	preplib
 
 	insinto /usr/include/GL
