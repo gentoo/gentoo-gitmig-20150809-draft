@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.31 2004/09/19 10:45:00 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.32 2004/09/19 11:00:17 hattya Exp $
+
+  19 Sep 2004; Akinori Hattori <hattya@gentoo.org> -sylpheed-0.9.10-r1.ebuild,
+  -sylpheed-0.9.8.ebuild:
+  cleaned out old ebuilds.
 
   19 Sep 2004; Akinori Hattori <hattya@gentoo.org> sylpheed-0.9.12.ebuild:
   stable on ia64.
