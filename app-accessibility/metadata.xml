@@ -5,5 +5,9 @@
 		The app-accessibility category contains packages which help with
 		accessibility (for example, screen readers).
 	</longdescription>
+	<longdescription lang="es">
+		La categoría app-accessibility contiene paquetes para ayudar con 
+		accesibilidad (por ejemplo, lectores de pantallas).
+	</longdescription>
 </catmetadata>
 
