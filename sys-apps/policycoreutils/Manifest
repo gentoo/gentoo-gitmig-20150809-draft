@@ -1,14 +1,24 @@
-MD5 15318ab0a4577c2f9e58226d12ae7c8b policycoreutils-1.14.ebuild 1640
-MD5 b2b198550f93781096752f9975c0b065 policycoreutils-1.12-r2.ebuild 1651
-MD5 77f5acba6bf633b6aad9be6bedc1b24d policycoreutils-1.12-r1.ebuild 1597
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 584bf3a6caf9c7ddc688c86bac9234f8 ChangeLog 5204
-MD5 44a699f533824446b88029447bae0a74 policycoreutils-1.4-r1.ebuild 1554
 MD5 2eeb1df30e87ba2861eddbdc34a48bb8 metadata.xml 836
-MD5 98c9b5772013d9f3a4e1fec905eed9c9 files/policycoreutils-1.14-genhomedircon-compat.diff 1520
-MD5 cf2a576401fcd4b41435a50549f43c40 files/selinux-init 907
-MD5 01f1dcbb3909023b95a6ff521874fc61 files/runscript-selinux.diff 633
-MD5 440f1bd6fdf23f39dde7bd50aefc5731 files/policycoreutils-1.10-genhomedircon-reverse.diff 3459
-MD5 4f60b120c053af5e96772b15f2019cc5 files/digest-policycoreutils-1.14 144
+MD5 77f5acba6bf633b6aad9be6bedc1b24d policycoreutils-1.12-r1.ebuild 1597
+MD5 b2b198550f93781096752f9975c0b065 policycoreutils-1.12-r2.ebuild 1651
+MD5 9c17c3196df6f13d65e4c529ddaba233 policycoreutils-1.14.ebuild 1639
+MD5 44a699f533824446b88029447bae0a74 policycoreutils-1.4-r1.ebuild 1554
 MD5 2873e1b7a7e78c17527934e8daa919e3 files/digest-policycoreutils-1.12-r1 144
 MD5 2873e1b7a7e78c17527934e8daa919e3 files/digest-policycoreutils-1.12-r2 144
+MD5 4f60b120c053af5e96772b15f2019cc5 files/digest-policycoreutils-1.14 144
 MD5 b9c41decc251443bb9535f415b9b1896 files/digest-policycoreutils-1.4-r1 143
+MD5 440f1bd6fdf23f39dde7bd50aefc5731 files/policycoreutils-1.10-genhomedircon-reverse.diff 3459
+MD5 98c9b5772013d9f3a4e1fec905eed9c9 files/policycoreutils-1.14-genhomedircon-compat.diff 1520
+MD5 01f1dcbb3909023b95a6ff521874fc61 files/runscript-selinux.diff 633
+MD5 cf2a576401fcd4b41435a50549f43c40 files/selinux-init 907
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBO7s2GFJQsIJWJy4RAsNnAJ9luAT03jCc1U8YNnaWgDuTKGV+OACfUCmP
+MoLGeAGBJokMzZfKVTJz/+M=
+=Dxj0
+-----END PGP SIGNATURE-----
