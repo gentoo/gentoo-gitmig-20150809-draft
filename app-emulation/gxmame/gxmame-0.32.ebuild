@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxmame/gxmame-0.31.ebuild,v 1.7 2003/04/06 15:52:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxmame/gxmame-0.32.ebuild,v 1.1 2003/04/06 15:52:42 mholzer Exp $
 
 IUSE="nls"
 
