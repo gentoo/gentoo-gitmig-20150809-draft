@@ -55,6 +55,7 @@ src_unpack() {
 	patch -p1 < ${FILESDIR}/${P}/grub-0.92-automake16.patch || die
 	patch -p0 < ${FILESDIR}/${P}/grub-0.92-nodeprecatedflags.patch || die
 	patch -p1 < ${FILESDIR}/${P}/grub-0.91-vga16-serial.patch || die
+	patch -p1 < ${FILESDIR}/${P}/grub-0.92-usbfix.patch || die
 
 }
 
