@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.3.3.ebuild,v 1.1 2002/12/14 23:35:07 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.3.3.ebuild,v 1.2 2002/12/17 21:45:01 vapier Exp $
 
 MY_PN=phpMyAdmin
 
@@ -16,13 +16,8 @@ KEYWORDS="~x86"
 
 DEPEND=">=net-www/apache-1.3.24-r1 >=dev-db/mysql-3.23.38 >=dev-php/mod_php-4.1.2-r5"
 
-
 # FIX- Plz check if path of config file (/etc/apache2/conf/apache2.conf)
 # is correct because i'm not using apache2 now, thanx - Quequero
-
-APACHE_ROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`" ;
-[ -z "${APACHE_ROOT}" ] && "`grep '^DocumentRoot' /etc/apache2/conf/apache2.conf | cut -d\  -f2`" ;
-[ -z "${APACHE_ROOT}" ] && APACHE_ROOT="/home/httpd/htdocs"
 
 src_compile() { :; }
 
@@ -36,22 +31,22 @@ src_install () {
 		-e "s:auth_type']     = 'config':auth_type']     = 'http':" \
 	config.inc.php.orig > config.inc.php
 
-	insinto ${APACHE_ROOT}/phpmyadmin
+	insinto /home/httpd/htdocs/phpmyadmin
 	doins *.{php,html}
 
-	insinto ${APACHE_ROOT}/phpmyadmin/images
+	insinto /home/httpd/htdocs/phpmyadmin/images
 	doins images/*.{gif,png}
 
-	insinto ${APACHE_ROOT}/phpmyadmin/scripts
+	insinto /home/httpd/htdocs/phpmyadmin/scripts
 	doins scripts/*.sh
 
-	insinto ${APACHE_ROOT}/phpmyadmin/lang
+	insinto /home/httpd/htdocs/phpmyadmin/lang
 	doins lang/*.{php,sh}
 
-	insinto ${APACHE_ROOT}/phpmyadmin/libraries
+	insinto /home/httpd/htdocs/phpmyadmin/libraries
 	doins libraries/*.{php,js}
 
-	insinto ${APACHE_ROOT}/phpmyadmin/libraries/auth
+	insinto /home/httpd/htdocs/phpmyadmin/libraries/auth
 	doins libraries/auth/*.php
 
 	dodoc ANNOUNCE.txt CREDITS ChangeLog TODO Documentation.{txt,html} \
@@ -60,7 +55,7 @@ src_install () {
 
 pkg_postinst() {
 	einfo
-	einfo "Make sure you edit ${APACHE_ROOT}/phpmyadmin/config.inc.php"
+	einfo "Make sure you edit /home/httpd/htdocs/phpmyadmin/config.inc.php"
 	einfo "Then point your browser to http://<www.your-host.com>/<your-install-dir>/index.php"
 	einfo
 }
