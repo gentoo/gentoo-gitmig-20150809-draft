@@ -1,0 +1,25 @@
+# ChangeLog for app-misc/Welcome2L
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/ChangeLog,v 1.1 2003/08/24 02:05:06 seemant Exp $
+
+*welcome2l-3.04 (23 Aug 2003)
+
+  23 Aug 2003; Seemant Kulleen <seemant@gentoo.org> welcome2l-3.04.ebuild,
+  files/welcome2l-3.04-gentoo.patch, files/welcome2l.initscript:
+  moved from Welcome2L to welcome2l (proper nomenclature).  Also, changed
+  the initscript to "need local" instead of "after *" -- thanks to sorcerer
+  in #gentoo for pointing out the failure with that.
+
+*Welcome2L-3.04 (07 Nov 2002)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> Welcome2L-3.04.ebuild
+  Added ~ppc
+
+  07 Nov 2002; Seemant Kulleen <seemant@gentoo.org> Welcome2L-3.04.ebuild
+  files/Welcome2L-3.04-gentoo.patch files/Welcome2L.initscript ChangeLog
+  files/digest-Welcome2L-3.04 :
+
+  New package, which shows a nice console login, along the lines of
+  linux_logo, but much spiffier looking.  Package (ebuild, patches,
+  initscript) submitted by: webmaster@refstart.nl (Niek van der Maas) in bug
+  #9963.
