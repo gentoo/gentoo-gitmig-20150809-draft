@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libstroke
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/ChangeLog,v 1.13 2004/06/24 23:23:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/ChangeLog,v 1.14 2004/07/31 01:53:53 tgall Exp $
+
+  31 Jul 2004; Tom Gall <tgall@gentoo.org> libstroke-0.5.1.ebuild:
+  stable on ppc64, bug #57040
 
   30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; libstroke-0.4.ebuild,
   libstroke-0.5.1.ebuild:
