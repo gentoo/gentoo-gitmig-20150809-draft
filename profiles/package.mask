@@ -26,6 +26,8 @@
 =net-mail/postfix-1.1.11.20020822
 # New qmail ebuild.  Please test tls, smtp-auth, and ldap support
 =net-mail/qmail-1.03-r9
+# New ebuild for cinelerra, leaving out to respect the freeze
+=media-video/cinelerra
 
 # <aliz@gentoo.org> (11 Sep 2002)
 # Masked for testing
