@@ -42,7 +42,7 @@ dev-java/jaxp
 
 #drobbins@gentoo.org (03 jul 2002)
 #this stuff is ready for the new gnomemeeting in testing:
-=net-im/gnome-meeting-0.92.1
+=net-im/gnomemeeting-0.92.1
 =net-libs/openh323-1.8.11
 =dev-libs/pwlib-1.2.20
 #this is still experimental....
