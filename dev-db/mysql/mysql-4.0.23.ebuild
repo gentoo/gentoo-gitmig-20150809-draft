@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.23.ebuild,v 1.2 2004/12/26 06:55:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.23.ebuild,v 1.3 2004/12/28 11:31:37 mr_bones_ Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -91,7 +91,7 @@ src_unpack() {
 	# Already included upstream in 4.0.21
 
 	cd ${S}
-	autoconf 
+	autoconf
 	libtoolize --copy --force
 	# Saving this for a rainy day, in case we need it again
 	#WANT_AUTOMAKE=1.7 automake
