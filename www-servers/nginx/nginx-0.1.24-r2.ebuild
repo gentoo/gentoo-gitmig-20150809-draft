@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.24-r2.ebuild,v 1.1 2005/03/10 08:57:50 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.24-r2.ebuild,v 1.2 2005/03/20 14:17:00 voxus Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://sysoev.ru/nginx/"
 SRC_URI="http://sysoev.ru/nginx/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="ssl zlib threads"
 
 DEPEND="dev-lang/perl
@@ -36,15 +36,6 @@ src_compile() {
 	fi
 
 	use zlib			|| myconf="${myconf} --without-http_gzip_module"
-
-#	use charset-mod		|| myconf = "${myconf} --without-http_charset_module"
-#	use userid-mod		|| myconf = "${myconf} --without-http_userid_module"
-#	use access-mod		|| myconf = "${myconf} --without-http_access_module"
-#	use autoindex-mod	|| myconf = "${myconf} --without-http_autoindex_module"
-#	use geo-mod			|| myconf = "${myconf} --without-http_geo_module"
-#	use rewrite-mod		|| myconf = "${myconf} --without-http_rewrite_module"
-#	use proxy-mod		|| myconf = "${myconf} --without-http_proxy_module"
-#	use fastcgi-mod		|| myconf = "${myconf} --without-http_fastcgi_module"
 
 	cd ${S}
 	./configure												\

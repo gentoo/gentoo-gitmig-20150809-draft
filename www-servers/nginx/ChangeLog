@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.8 2005/03/19 16:44:08 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.9 2005/03/20 14:17:00 voxus Exp $
+
+  20 Mar 2005; Konstantin Arkhipov <voxus@gentoo.org> nginx-0.1.24-r2.ebuild,
+  nginx-0.1.25.ebuild:
+  Forcing 0.1.24-r2 stable on both x86 and amd64. Cleaned out commented
+  modules handling.
 
 *nginx-0.1.25 (19 Mar 2005)
 
