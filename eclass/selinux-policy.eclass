@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.8 2004/04/11 05:46:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.9 2004/05/11 13:02:05 vapier Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the policy
@@ -62,7 +62,7 @@ selinux-policy_src_install() {
 }
 
 selinux-policy_pkg_postinst() {
-	if [ "`has "loadpolicy" $FEATURES`" ]; then
+	if has "loadpolicy" $FEATURES ; then
 		ebegin "Automatically loading policy"
 		make -C ${POLICYDIR} load
 		eend $?

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.18 2004/02/03 00:01:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.19 2004/05/11 13:02:05 vapier Exp $
 
 inherit games
 
@@ -75,7 +75,7 @@ games-q3mod_pkg_postinst() {
 
 	einfo "To play this mod:             quake3-${MOD_BINS}"
 	einfo "To launch a dedicated server: q3${MOD_BINS}-ded"
-	[ `use dedicated` ] && \
+	use dedicated && \
 	einfo "To launch server at startup:  /etc/init.d/q3${MOD_NAME}-ded"
 
 	games_pkg_postinst
