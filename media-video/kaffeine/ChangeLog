@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.14 2004/06/25 00:41:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.15 2004/07/03 21:52:53 carlo Exp $
+
+  03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> kaffeine-0.4.2.ebuild,
+  kaffeine-0.4.3.ebuild, kaffeine-0.4.3b.ebuild:
+  QA: need-kde after R/DEPEND
 
 *kaffeine-0.4.3b (13 Jun 2004)
 
