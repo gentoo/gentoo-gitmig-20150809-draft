@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/cstools
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/cstools/ChangeLog,v 1.1 2004/11/17 21:48:47 ticho Exp $
+
+*cstools-3.42 (17 Nov 2004)
+
+  17 Nov 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +cstools-3.42.ebuild:
+  Initial import.
+

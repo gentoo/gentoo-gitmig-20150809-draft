@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b8849ede947ccc4cf126957aef9c8c9c ChangeLog 339
+MD5 013cf7410698af23618baf464820fc58 metadata.xml 688
+MD5 2896732ccf828ab817f76003b9b1fc5c cstools-3.42.ebuild 585
+MD5 136cdbc065c179a9863a5dc317bb1f7f files/digest-cstools-3.42 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBm8dU10xuJSrg3/sRAuFiAJ9lss2Wfrbw6W9rSya+Q6La4GB5zACePzzr
+43KzelLzWOlCK5RR8sik+e0=
+=HBZ2
+-----END PGP SIGNATURE-----
