@@ -1,7 +1,11 @@
 # ChangeLog for net-im/imcom
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/ChangeLog,v 1.6 2003/02/12 08:01:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/ChangeLog,v 1.7 2003/03/31 09:09:22 lordvan Exp $
 
+*imcom-1.30_beta8 (31 MAr 2003)
+  31 Mar 2003; Thomas Raschbacher <lordvan@gentoo.org> imcom-1.30_beta8.ebuild:
+  new version
+	
 *imcom-1.30_beta7 (25 Jan 2003)
   25 Jan 2003; Thomas Raschbacher <lordvan@gentoo.org> imcom-1.30_beta7.ebuild:
   version bump + remove old 1.30beta2*+patch
