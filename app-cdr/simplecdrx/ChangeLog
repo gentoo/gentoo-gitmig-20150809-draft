@@ -1,13 +1,15 @@
 # ChangeLog for app-cdr/simplecdrx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/ChangeLog,v 1.6 2002/12/13 10:55:59 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/ChangeLog,v 1.7 2002/12/25 17:50:39 agenkin Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*simplecdrx-1.2.2 (25 Dec 2002)
+
+  25 Dec 2002; Arcady Genkin <agenkin@gentoo.org> :
+  Version bump.
+
 *simplecdrx-1.2.1 (03 Nov 2002)
 
   03 Nov 2002; Arcady Genkin <agenkin@gentoo.org> simplecdrx-1.2.1.ebuild :
-
   Version bump.
 	
 *simplecdrx-1.0_pre1 (1 Feb 2002)
