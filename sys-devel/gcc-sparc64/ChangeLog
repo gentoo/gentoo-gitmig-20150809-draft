@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc-sparc64
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/ChangeLog,v 1.5 2004/03/01 12:15:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/ChangeLog,v 1.6 2004/03/26 14:40:08 weeve Exp $
+
+  26 Mar 2004; Jason Wever <weeve@gentoo.org> gcc-sparc64-3.3.3.ebuild:
+  Stable for sparcenstein.
 
 *gcc-sparc64-3.3.3 (18 Feb 2004)
 
