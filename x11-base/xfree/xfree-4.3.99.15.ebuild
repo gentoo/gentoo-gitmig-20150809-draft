@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.15.ebuild,v 1.3 2003/11/18 17:39:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.15.ebuild,v 1.4 2003/12/02 15:32:15 pappy Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -320,11 +320,6 @@ src_unpack() {
 	if [ -n "`use debug`" -o -n "`use static`" ]
 	then
 		echo "#define DoLoadableServer	NO" >>config/cf/host.def
-	fi
-
-	if has_version ">=sys-devel/hardened-gcc-1.2"; then
-		einfo "setting DoLoadableServer to NO for PaX"
-		echo "#define DoLoadableServer  NO" >>config/cf/host.def
 	fi
 
 	if use debug

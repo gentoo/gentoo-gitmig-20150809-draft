@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.86 2003/11/11 20:21:58 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.87 2003/12/02 15:32:15 pappy Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -347,14 +347,6 @@ src_unpack() {
 	if use static
 	then
 		echo "#define DoLoadableServer	NO" >>config/cf/host.def
-	fi
-
-	if has_version ">=sys-devel/hardened-gcc-1.2"; then
-		einfo "setting DoLoadableServer to NO for PaX and compiler for etdyn building"
-		# this is good for a pax kernel to load the xfree server without the specific module support
-		# that normally prevents xfree from being memory protected, pappy
-		# it only breaks some people using external nvidia core modules and such, but this is not avoidable
-		echo "#define DoLoadableServer  NO" >>config/cf/host.def
 	fi
 
 	if use debug
