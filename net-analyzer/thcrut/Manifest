@@ -1,4 +1,4 @@
-MD5 009f1d78f92f5d959da0a5adbba6b55e thcrut-1.2.5.ebuild 881
-MD5 1f651604f563a38225bc13c250ba013f ChangeLog 472
+MD5 34cce658caad846a3731565b2323ad58 thcrut-1.2.5.ebuild 872
+MD5 15516eb273938f4b500d276896c1df19 ChangeLog 463
 MD5 7a44d04c4783a23f9ed07cc597b21a94 files/1.2.5-libnet.patch 9428
 MD5 c71ac3757388c2ad736d8f1b5134aaac files/digest-thcrut-1.2.5 64

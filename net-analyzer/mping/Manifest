@@ -1,4 +1,4 @@
-MD5 c4cb24ed5c26ed05c8d4a164d5e9fe6b files/digest-mping-2.0_rc1 65
-MD5 e60d95cbe5b48ab15d860748f89414c5 mping-2.0_rc1.ebuild 512
-MD5 7af5a3abce0b640198e04845fd8b4018 ChangeLog 444
+MD5 7237cfc0098b0d21a8b723e02e308984 mping-2.0_rc1.ebuild 505
+MD5 4fdfcd9828e80f5fb80dcf0aed1323af ChangeLog 438
 MD5 4a552cfffe105cd4631ce00ed0bb4e61 metadata.xml 597
+MD5 c4cb24ed5c26ed05c8d4a164d5e9fe6b files/digest-mping-2.0_rc1 65
