@@ -1,0 +1,7 @@
+# Logfile path: (NOTE: This must be uid/gid owned by the value of $LMUSER!)
+LMLOG=/var/log/flexlm.log
+
+# Run the lmgrd user as:
+LMUSER=flexlm
+
+LMLICENSE=/etc/flexlm/license.dat
