@@ -14,7 +14,6 @@ LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
 
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	./configure \

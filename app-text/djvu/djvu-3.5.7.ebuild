@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.7.ebuild,v 1.3 2002/10/19 16:16:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.7.ebuild,v 1.4 2002/10/20 18:40:56 vapier Exp $
 
 MY_P="${PN}libre-${PV}"
 DESCRIPTION="A web-centric format and software platform for distributing documents and images."
@@ -15,7 +15,6 @@ DEPEND=">=qt-3.0.4.20020606-r1
 		>=jpeg-6b-r2"
 
 # Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
-RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
