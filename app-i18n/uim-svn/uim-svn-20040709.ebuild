@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20040709.ebuild,v 1.2 2004/07/17 10:16:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20040709.ebuild,v 1.3 2004/08/10 08:19:40 hattya Exp $
 
 inherit subversion flag-o-matic
 
@@ -51,7 +51,8 @@ src_compile() {
 
 		cd qt/qtkde-helper
 
-		make -f Makefile.cvs
+		addwrite /usr/qt/3/etc/settings
+		WANT_AUTOCONF=2.5 ./bootstrap
 		econf \
 			`use_enable nls` \
 			`use_enable debug '' full` \
