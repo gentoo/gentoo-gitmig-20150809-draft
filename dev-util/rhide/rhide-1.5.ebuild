@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.ebuild,v 1.11 2004/07/02 05:12:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.ebuild,v 1.12 2004/07/15 00:05:16 agriffis Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ SRC_URI="${SRC_URI}
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="X"
+IUSE="X aalib"
 
 DEPEND="virtual/libc
 	>=app-text/recode-3.6
