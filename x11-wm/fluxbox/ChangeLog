@@ -1,6 +1,33 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.30 2002/09/14 01:53:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.31 2002/09/17 12:30:57 seemant Exp $
+
+*fluxbox-0.1.12-r1 (17 Sep 2002)
+
+  17 Sep 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.12-r1.ebuild
+  files/digest-fluxbox-0.1.12-r1 :
+
+  This revision bump incorporates two patches.  The first is the Vano patch
+  from bug #5005 which makes the root menu disappear on left click anywhere.
+  The second is the rootmenu patch which was posted many months ago on the
+  fluxbox mailing lists against an older version of fluxbox.  The patch was
+  recently foreported to this version of flux by Rachel Holmes.  The
+  original patch was BSD licensed, as is Rachel's version of it.  Basically,
+  it allows the rootmenu to be bound to a key. So, for instance, in
+  ~/.fluxbox/keys:
+
+  Mod4 :RootMenu
+
+  will cause the fluxbox menu to open when the "windows logo" key is pressed
+  (x86 machine).  Use xmodmap etc to flavour as you like it.  Seemant is on
+  an x86 and has these entries in his local keys file:
+
+  None Super_L :RootMenu
+  None Super_L :Close
+  Shift Right :OpenSubMenu
+  Shift Return :SelectMenuItem
+  Shift Up :PrevMenuItem
+  Shift Down :NextMenuItem
 
 *fluxbox-0.1.12 (13 Sep 2002)
 
