@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext.eclass,v 1.1 2003/05/15 18:45:26 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext.eclass,v 1.2 2003/06/28 20:23:40 coredumb Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #
@@ -17,9 +17,13 @@ EXPORT_FUNCTIONS src_compile src_install pkg_postinst
 # The extension name, this must be set, otherwise we die.
 [ -z "$PHP_EXT_NAME" ] && die "No module name specified for the php-ext eclass."
 
-# Whether the extensions is a Zend Engine extension
+# Wether the extensions is a Zend Engine extension
 #(defaults to "no" and if you don't know what is it, you don't need it.)
 [ -z "$PHP_EXT_ZENDEXT" ] && PHP_EXT_ZENDEXT="no"
+
+# Wether or not to add a line in the php.ini for the extension
+# (defaults to "yes" and shouldn't be changed in most cases)
+[ -z "$PHP_EXT_INI" ] && PHP_EXT_INI="yes"
 
 # ---end ebuild configurable settings
 
@@ -45,16 +49,20 @@ php-ext_src_install() {
 }
 
 php-ext_pkg_postinst() {
-	if [ `grep ${EXT_DIR}/${PHP_EXT_NAME}.so /etc/php4/php.ini` ] ; then
-		einfo "No changes made to php.ini"
-	else
-		if [ "$PHP_EXT_ZENDEXT" = "yes" ] ; then
-			echo zend_extension=${EXT_DIR}/${PHP_EXT_NAME}.so >> /etc/php4/php.ini
+	if [ "$PHP_EXT_INI" = "yes" ] ; then
+		if [ `grep ${EXT_DIR}/${PHP_EXT_NAME}.so /etc/php4/php.ini` ] ; then
+			einfo "No changes made to php.ini"
 		else
-			echo extension=${EXT_DIR}/${PHP_EXT_NAME}.so >> /etc/php4/php.ini
-		fi
+			if [ "$PHP_EXT_ZENDEXT" = "yes" ] ; then
+				echo zend_extension=${EXT_DIR}/${PHP_EXT_NAME}.so >> /etc/php4/php.ini
+			else
+				echo extension=${EXT_DIR}/${PHP_EXT_NAME}.so >> /etc/php4/php.ini
+			fi
 		
-		einfo "${PHP_EXT_NAME} has been added to php.ini"
-		einfo "Please check phpinfo() output to verify that ${PHP_EXT_NAME} is loaded."
+			einfo "${PHP_EXT_NAME} has been added to php.ini"
+			einfo "Please check phpinfo() output to verify that ${PHP_EXT_NAME} is loaded."
+		fi
+	else
+		einfo "No changes made to php.ini"
 	fi
 }
