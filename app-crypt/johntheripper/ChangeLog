@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/johntheripper
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.5 2003/02/10 06:46:26 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.6 2003/02/12 03:27:36 vapier Exp $
 
 *johntheripper-1.6 (22 May 2002)
 

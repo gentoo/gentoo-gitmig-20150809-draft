@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/pinentry
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.2 2003/02/07 14:01:42 jrray Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.3 2003/02/12 03:28:40 vapier Exp $
 
 *pinentry-0.6.7-r1 (07 Feb 2003)
 

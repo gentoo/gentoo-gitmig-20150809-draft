@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/rotix
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/ChangeLog,v 1.1 2002/12/20 23:37:01 avenj Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/ChangeLog,v 1.2 2003/02/12 03:28:46 vapier Exp $
 
 *rotix-0.83.ebuild (20 Dec 2002)
 

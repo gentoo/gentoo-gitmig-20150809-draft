@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/gpa
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.9 2003/02/07 14:22:55 jrray Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.10 2003/02/12 03:27:11 vapier Exp $
 
 *gpa-0.6.1 (07 Feb 2003)
 
