@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.12 2001/06/17 16:35:30 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.13 2001/06/19 23:04:56 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -47,7 +47,7 @@ src_install()
 
 	dodoc ${FILESDIR}/copyright ${FILESDIR}/changelog.Debian
 	dodir /usr/X11R6/lib 
-	dodir /var /var/run /var/log/news
+	dodir /var /var/run /var/log/news /var/lock
 	touch ${D}/var/log/lastlog
 	touch ${D}/var/run/utmp
 	touch ${D}/var/log/wtmp
@@ -64,6 +64,8 @@ src_install()
 	dodir /tmp
 	chmod 1777 ${D}/tmp
         chmod 1777 ${D}/var/tmp
+	chown root.uucp ${D}/vat/lock
+	chmod 775 ${D}/var/lock
 	insopts -m0644
 	insinto /etc
 	for foo in services passwd shadow nsswitch.conf \
