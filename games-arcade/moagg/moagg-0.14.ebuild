@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/moagg-0.14.ebuild,v 1.1 2004/08/28 13:33:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/moagg-0.14.ebuild,v 1.2 2004/09/27 05:35:21 mr_bones_ Exp $
 
 inherit games
 
@@ -26,6 +26,7 @@ src_unpack() {
 	# We don't want the docs inside ${GAMES_DATADIR}/doc, so we don't
 	# let "make install" do the doc install.
 	sed -i \
+		-e '/^CXXFLAGS/ s/@CXXFLAGS_CONFIG@.*/@CXXFLAGS_CONFIG@/' \
 		-e '/^install:/s/install-doc//' Makefile.in \
 		|| die "sed Makefile.in failed"
 }
