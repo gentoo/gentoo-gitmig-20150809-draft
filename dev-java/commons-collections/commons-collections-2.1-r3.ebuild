@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-2.1-r3.ebuild,v 1.6 2003/09/06 22:26:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-2.1-r3.ebuild,v 1.7 2004/01/14 04:06:35 strider Exp $
 
 inherit jakarta-commons
 
@@ -9,13 +9,13 @@ DESCRIPTION="Jakarta-Commons Collections Component"
 HOMEPAGE="http://jakarta.apache.org/commons/collections.html"
 SRC_URI="mirror://apache/jakarta/commons/collections/source/collections-${PV}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
-		>=ant-1.4
+		>=dev-java/ant-1.4
 		junit? ( >=dev-java/junit-3.7 )
 		jikes? ( >=dev-java/jikes-1.17 )"
 RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 sparc"
 IUSE="doc jikes junit"
 
 src_compile() {
