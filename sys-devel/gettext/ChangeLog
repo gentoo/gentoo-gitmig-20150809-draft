@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.71 2004/11/10 17:57:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.72 2004/12/08 22:51:29 kito Exp $
+
+  08 Dec 2004; Kito <kito@gentoo.org> gettext-0.14.1.ebuild:
+  stable on ppc-macos
 
   11 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> gettext-0.14.1.ebuild:
   ppc-macos doesn't like elibtoolize --reverse-deps
