@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-9999.ebuild,v 1.1 2004/10/22 12:39:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-9999.ebuild,v 1.2 2004/11/15 04:18:45 vapier Exp $
 
 ECVS_MODULE="evidence"
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/evidence"
@@ -27,7 +27,7 @@ DEPEND=">=dev-util/pkgconfig-0.5
 	media-libs/libao
 	virtual/libc
 	sys-devel/gcc
-	app-admin/fam
+	virtual/fam
 	>=x11-libs/evas-1.0.0_pre13
 	>=dev-db/edb-1.0.5
 	>=dev-libs/eet-0.9.0
