@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 69ad411684137443430c0278db581be9 sun-jaf-bin-1.0.2.ebuild 1512
-MD5 b1e50cfebd2de83099dc200ae618707d ChangeLog 1306
+MD5 92e37dddf652f3f79c4116d9fb40fe49 ChangeLog 1412
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 e8b7b5dbe60e5160c882e4eb95fed703 sun-jaf-bin-1.0.2.ebuild 1522
 MD5 0355420a77127d17370357621d02667a files/digest-sun-jaf-bin-1.0.2 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVxw/rLF9B432nYRAjjLAJ90N4sGhuZte/03ohZCmtM3+S+5XACgjqq2
-yW3G/8D5W1lw8tCcuVEBkEg=
-=DqAF
------END PGP SIGNATURE-----

@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 da4d762a081142f6ac7b9988d1079b4a jzlib-1.0.5.ebuild 1095
-MD5 f2bde112b45d63375857c187c422cb5d ChangeLog 1383
+MD5 090095a2be80f10e188db57d757ef73e ChangeLog 1483
+MD5 d4f4a323c03515d2d2d4d4e6bde573ff jzlib-1.0.5.ebuild 1105
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 a01cb77a2d242530ff728832e6aac5a0 files/digest-jzlib-1.0.5 62
 MD5 031e9bb6bd536d127ef97138851c233c files/jzlib_build.xml 1688
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVo9/rLF9B432nYRAq5nAJ9U1lCjseFzShclucBHPtOL92embwCdFBpm
-JCb6FQ9Zp0L6TPuYC59lNSc=
-=IUr6
------END PGP SIGNATURE-----
