@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/plex86/plex86-20021117.ebuild,v 1.2 2003/02/13 07:15:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/plex86/plex86-20021117.ebuild,v 1.3 2003/03/11 12:11:24 lu_zero Exp $
 
 DESCRIPTION="Plex86 is THE opensource free-software alternative for VMWare, VirtualPC, and other IA-32 on IA-32 \"Virtual PC products.\""
 HOMEPAGE="http://savannah.gnu.org/projects/plex86/"
@@ -23,6 +23,7 @@ src_compile() {
     MY_GUI="curses"
     use X && MY_GUI="x"
     use sdl && MY_GUI="sdl"
+    use sdl && export SDL_CFLAGS="`sdl-config --cflags`"
     
     use X && MY_CONF="${MY_CONF} --with-x --with-linux-source=/usr/src/linux"
     MY_CONF="${MY_CONF} --with-gui=${MY_GUI}"
@@ -36,7 +37,7 @@ src_compile() {
 	--prefix=/usr \
 	--infodir=/usr/share/info \
 	--mandir=/usr/share/man ${MY_CONF} || die "./configure failed"
-
+    
     make || die
 }
 
