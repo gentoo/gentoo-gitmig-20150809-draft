@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.3 2004/04/07 18:56:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.4 2004/05/09 16:52:27 usata Exp $
 
 inherit kde-functions eutils
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc amd64"
+KEYWORDS="x86 ppc ~sparc amd64"
 IUSE="nls cups qt debug gnome"
 
 # these dependencies need looking at.
@@ -47,6 +47,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.3.2-nomktex.patch
 	epatch ${FILESDIR}/${PN}-1.3.3-configure-diff
+	elibtoolize
 }
 
 src_compile() {
