@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.98-r1.ebuild,v 1.3 2002/07/25 19:18:34 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.98-r1.ebuild,v 1.4 2002/10/04 04:56:26 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="system and ISDN information is shown on an external display or in a X11 window."

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.09a-r1.ebuild,v 1.5 2002/08/23 11:31:56 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.09a-r1.ebuild,v 1.6 2002/10/04 04:56:57 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="an X11 based presentation tool"

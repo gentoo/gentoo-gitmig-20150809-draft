@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktalog/gtktalog-1.0_rc2.ebuild,v 1.1 2002/08/21 16:52:07 blizzy Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktalog/gtktalog-1.0_rc2.ebuild,v 1.2 2002/10/04 04:55:28 vapier Exp $
 
 MY_P=${P/_/}
 

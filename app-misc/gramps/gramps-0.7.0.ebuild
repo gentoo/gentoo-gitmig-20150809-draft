@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-0.7.0.ebuild,v 1.5 2002/08/27 18:06:41 spider Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-0.7.0.ebuild,v 1.6 2002/10/04 04:55:14 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Genealogical Research and Analysis Management Programming System"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/grc-1.0.2.ebuild,v 1.2 2002/07/25 17:20:00 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/grc-1.0.2.ebuild,v 1.3 2002/10/04 04:55:19 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Generic Colouriser is yet another colouriser for beautifying your logfiles or output of commands"

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.ebuild,v 1.3 2002/09/06 15:03:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.ebuild,v 1.4 2002/10/04 04:54:33 vapier Exp $
 
 MY_P=cku201
 S=${WORKDIR}
