@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD5/Digest-MD5-2.12.ebuild,v 1.5 2000/12/15 07:29:29 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD5/Digest-MD5-2.12.ebuild,v 1.6 2001/03/12 10:52:49 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -24,7 +24,6 @@ src_install () {
 
     cd ${S}
     make PREFIX=${D}/usr install
-    prepman
     dodoc Changes MANIFEST README rfc*.txt
 
 }
