@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2.ebuild,v 1.2 2004/09/08 21:09:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2.ebuild,v 1.3 2004/09/08 23:07:04 lv Exp $
 
 IUSE="static nls bootstrap build nomultilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -503,6 +503,8 @@ src_install() {
 		if [ -e ${D}/${LIBPATH}/libgcc_s.so ] ; then
 			mkdir -p ${D}/$(get_libdir)/
 			mv ${D}/${LIBPATH}/libgcc_s* ${D}/$(get_libdir)/
+			# we need a libgcc_s.so
+			dosym libgcc_s.so.1 /$(get_libdir)/libgcc_s.so
 			add_version_to_shared ${D}/$(get_libdir)/
 		fi
 	fi
