@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/battstat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/battstat/ChangeLog,v 1.3 2002/06/03 12:08:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/battstat/ChangeLog,v 1.4 2002/06/11 00:38:41 seemant Exp $
+
+*battstat-2.0.11 (10 Jun 2002)
+
+  10 Jun 2002; Seemant Kulleen <seemant@gentoo.org> battstat-2.0.11.ebuild
+  files/digest-battstat-2.0.11 :
+
+  Version bump thanks to: hanno@gmx.de (Hanno Boeck) in bug #3587
 
 *battstat-2.0.10-r3 (3 Jun 2002)
 

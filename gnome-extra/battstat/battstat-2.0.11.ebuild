@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/battstat/battstat-2.0.10-r1.ebuild,v 1.1 2001/10/08 19:23:11 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/battstat/battstat-2.0.11.ebuild,v 1.1 2002/06/11 00:38:42 seemant Exp $
 
 S=${WORKDIR}/battstat_applet-${PV}
 DESCRIPTION="Battstat Applet, GNOME battery status applet."
@@ -17,23 +16,24 @@ DEPEND="virtual/glibc
 src_compile() {
 	local myconf
 
-	if [ -z "`use nls`" ] ; then
-        	myconf="--disable-nls"
-	fi
+	use nls \
+		|| myconf="--disable-nls"
+#		&& myconf="--localedir=/usr/share/locale" \
 
-	./configure --prefix=/usr					\
-		    --sysconfdir=/etc					\
-		    --localstatedir=/var/lib				\
-	            $myconf || die
-
+	econf ${myconf} || die
 	emake || die
 }
 
 src_install () {
-	make prefix=${D}/usr						\
-	     sysconfdir=${D}/etc					\
-	     localstatedir=${D}/var/lib					\
-	     install || die
+
+	make \
+		DESTDIR=${D} \
+		gnomeconfdir=${D}/etc \
+		gnomedatadir=${D}/usr/share \
+		gnulocaledir=${D}/usr/share/locale \
+		install || die
+	
+	rm ${D}/topic.dat
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
