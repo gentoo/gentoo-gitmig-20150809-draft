@@ -1,6 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.1-r1.ebuild,v 1.6 2002/08/26 16:03:22 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.1-r1.ebuild,v 1.7 2002/08/26 16:57:19 karltk Exp $
+
+. /usr/portage/eclass/java.eclass
+inherit java
 
 At=IBMJava2-SDK-131.tgz
 S=${WORKDIR}/IBMJava2-131
@@ -12,8 +15,8 @@ DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.1
 	doc? ( =dev-java/java-sdk-docs-1.3.1* )"
 RDEPEND="$DEPEND"
-PROVIDE="virtual/jre-1.3
-	virtual/jdk-1.3
+PROVIDE="virtual/jre-1.3.1
+	virtual/jdk-1.3.1
 	virtual/java-scheme-2"
 LICENSE="IBM-ILNWP"
 SLOT="0"
@@ -48,29 +51,7 @@ src_install () {
 #		dosym /opt/${P}/jre/bin/libjavaplugin_oji.so /usr/lib/mozilla/plugins/
 #	fi
 
-	dodir /etc/env.d/java
-	sed \
-		-e "s/@P@/${P}/g" \
-		-e "s/@PV@/${PV}/g" \
-		-e "s/@PF@/${PF}/g" \
-		< ${FILESDIR}/ibm-jdk-${PV} \
-		> ${D}/etc/env.d/java/20ibm-jdk-${PV}
+	java_set_env ${FILESDIR}/${VMHANDLE}
 }
 
-src_postinst() {
-	
-	# Plugin is disabled as it crashes all the time.
-
-#	if [ -e /opt/netscape/plugins ] ; then
-#		ln -sf /opt/${P}/jre/bin/javaplugin.so /opt/netscape/plugins/
-#		einfo "Netscape 4.x Java plugin installed"
-#	fi
-
-#	if [ "`use mozilla`" ] ; then
-#		einfo "The Mozilla browser plugin has been installed as /usr/lib/mozilla/plugins"
-#	else
-#		einfo "To install the browser plugin manually, do:"
-#		einfo "ln -sf /opt/${P}/jre/bin/libjavaplugin_oji.so /usr/lib/mozilla/plugins/"
-#	fi
-	true
-}
+# NOTE: We don't install the plugin, as it always segfaults.
