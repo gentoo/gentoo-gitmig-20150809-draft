@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/flac123
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/ChangeLog,v 1.1 2004/10/15 09:59:49 eradicator Exp $
+
+*flac123-0.0.7 (15 Oct 2004)
+
+  15 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +flac123-0.0.7.ebuild:
+  Initial ebuild provided by Michael Owen <mowen@costco.com> in bug #65542.
+
