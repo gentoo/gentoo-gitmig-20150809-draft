@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r2.ebuild,v 1.2 2002/10/24 23:23:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r2.ebuild,v 1.3 2002/12/03 07:35:59 azarah Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3
@@ -67,9 +67,9 @@ src_install() {
 		mandir=${D}/usr/share/man \
 		install || die "install problem"
 
-	#do not install this login, but rather the one from
-	#pam-login, as this one have a serious root exploit
-	#with pam_limits in use.
+	# Do not install this login, but rather the one from
+	# pam-login, as this one have a serious root exploit
+	# with pam_limits in use.
 	rm ${D}/bin/login
 
 	mv ${D}/lib ${D}/usr
@@ -80,7 +80,7 @@ src_install() {
 	dosym /usr/bin/newgrp /usr/bin/sg
 	dosym /usr/sbin/useradd /usr/sbin/adduser
 	dosym /usr/sbin/vipw /usr/sbin/vigr
-	# remove dead links
+	# Remove dead links
 	rm -f ${D}/bin/{sg,vipw}
 
 	insinto /etc
@@ -109,8 +109,8 @@ src_install() {
 	newins shadow groupadd
 	cd ${S}
 
-	# the manpage install is beyond my comprehension, and also broken.
-	# just do it over.
+	# The manpage install is beyond my comprehension, and
+	# also broken. Just do it over.
 	rm -rf ${D}/usr/share/man/*
 	for x in man/*.[0-9]
 	do
@@ -120,9 +120,11 @@ src_install() {
 		cp ${x} ${dir}
 	done
 	
-	#dont install the manpage, since we dont use
-	#login with shadow
-	rm ${D}/usr/share/man/man1/login.*
+	# Dont install the manpage, since we dont use
+	# login with shadow
+	rm -f ${D}/usr/share/man/man1/login.*
+	# We use pam, so this is not applicable.
+	rm -f ${D}/usr/share/man/man5/suauth.*
 	
 	cd ${S}/doc
 	dodoc ANNOUNCE INSTALL LICENSE README WISHLIST
