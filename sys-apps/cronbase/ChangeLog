@@ -1,9 +1,12 @@
 # ChangeLog for sys-apps/cronbase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.12 2003/01/23 04:19:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.13 2003/01/31 17:17:13 prez Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*cronbase-0.2.1-r2 (31 Jan 2003)
+
+  31 Jan 2003 Preston A. Elder <prez@gentoo.org> run-crons :
+  Chaged month delay from 30 to 31 days, as per Bug #14862
+
 *cronbase-0.2.1-r1 (13 Nov 2002)
 
   22 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
@@ -12,6 +15,8 @@
   19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
   Added mips to keywords
 
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
   13 Nov 2002; Donny Davies <woodchip@gentoo.org> run-crons : Fix #10409.
 
 *cronbase-0.2.1 (27 Jun 2002)

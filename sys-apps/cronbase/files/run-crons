@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/files/run-crons,v 1.7 2002/11/13 05:10:55 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/files/run-crons,v 1.8 2003/01/31 17:17:13 prez Exp $
 #
 # 23 Jun 2002; Jon Nelson <jnelson@gentoo.org> run-crons:
 #
@@ -33,17 +33,17 @@ do
     then
 	case $BASE in
 	    hourly)
-		#>= 65 min -=> +64 min
-		TIME="-cmin +64" ;;
+		#>= 1 hour, 5 min -=> +65 min
+		TIME="-cmin +65" ;;
 	    daily)
-		#>= 1 day, 5 min -=> +1444 min
-		TIME="-cmin +1444"  ;;
+		#>= 1 day, 5 min -=> +1445 min
+		TIME="-cmin +1445"  ;;
 	    weekly)
-		#>= 1 week, 5 min -=> +10084 min
+		#>= 1 week, 5 min -=> +10085 min
 		TIME="-cmin +10085"  ;;
 	    monthly)
-		#>= 30 days, 5 min -=> +43204 min
-		TIME="-cmin +43204" ;;
+		#>= 31 days, 5 min -=> +44645 min
+		TIME="-cmin +44645" ;;
 	esac
 	find /var/spool/cron/lastrun -name cron.$BASE $TIME -exec rm {} \;
     fi
