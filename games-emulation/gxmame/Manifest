@@ -1,4 +1,6 @@
 MD5 4568afc4f0d14f73287f3139f010d418 gxmame-0.33-r1.ebuild 830
 MD5 791cb9798cc5acf94cc7c6bf879b3b92 files/digest-gxmame-0.33-r1 63
+MD5 fc586b42205f2bfd474e189d0a04c930 files/digest-gxmame-0.34b 64
 MD5 16aef46d5c7fa3b76dd76631d6e63de2 files/0.33-newxmame.patch 5497
-MD5 2f257168edbd96c56b6ba13d0be8d513 ChangeLog 1124
+MD5 773c6ab89cee48d318fcfac28cb2d3c9 gxmame-0.34b.ebuild 925
+MD5 23d646bd632957fa3d45438e537b0a11 ChangeLog 1229

@@ -1,4 +1,4 @@
-MD5 61ed9316a392c65eb59c802462b13292 snes9x-1.41.1.ebuild 1666
+MD5 d6f79784eb2be6869abd47922fe6f907 snes9x-1.41.1.ebuild 1675
 MD5 6c35fb02897c094966c3d722e0c79ac2 files/digest-snes9x-1.41.1 69
 MD5 1ea1144fd7c43c922c8df605ceec8513 files/digest-snes9x-1.39-r1 56
 MD5 82847f439abd1f8ae87876515e60ccdf files/1.41.1-system-zlib.patch 2004
@@ -7,6 +7,6 @@ MD5 5b7c3589393da0616b766b78c69aa16e files/snes9x-139-r1-Makefile-ppc.diff 779
 MD5 29f4c8bf43e00e929c25d85ec4a06b70 files/digest-snes9x-1.42 67
 MD5 60e338baf6468da1d0c1fece4884553c files/snes9x-gcc3.diff 979
 MD5 95a147283e0b09db8ad3307bb3e5b305 files/snes9x-139-r1-BE-sound-fix.diff 550
-MD5 52fddb44c98c2fa69ac96d14dcf74c58 snes9x-1.39-r1.ebuild 1961
-MD5 6cd559800bd3cd6d425bd15dfadc448c snes9x-1.42.ebuild 1658
+MD5 1d62069c0c53248aedddf635f9a73bd4 snes9x-1.39-r1.ebuild 1961
+MD5 4e7ce499a2aef88dc29e226e95379239 snes9x-1.42.ebuild 1667
 MD5 cfc8998243a9f95b4e790136a03794d7 ChangeLog 2185
