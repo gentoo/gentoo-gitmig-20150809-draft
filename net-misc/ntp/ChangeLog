@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.31 2003/09/13 09:59:23 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.32 2003/09/20 19:31:44 pappy Exp $
+
+  20 Sep 2003; Alexander Gabert <pappy@gentoo.org> ntp-4.1.1b-r6.ebuild:
+  added configure logic for hardened-gcc
 
 *ntp-4.1.2 (06 Aug 2003)
 
