@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0-r3.ebuild,v 1.4 2004/08/21 22:20:38 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0-r3.ebuild,v 1.5 2004/08/21 22:26:13 karltk Exp $
 
 inherit eutils java-utils
 
@@ -228,6 +228,7 @@ src_compile() {
 
 	addwrite "/proc/self/maps"
 	addwrite "/proc/cpuinfo"
+	addwrite "/dev/random"
 
 	# Figure out correct boot classpath
 	if [ ! -z "`java-config --java-version | grep IBM`" ] ; then
