@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.4 2002/05/22 22:14:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.5 2002/06/04 10:08:39 seemant Exp $
+
+*alsaplayer-0.99.70-r1 (4 Jun 2002)
+
+  4 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
+  alsaplayer-0.99.70-r1.ebuild files/digest-alsaplayer-0.99.70-r1 :
+
+  sandbox violation fix for installing the documentation if doxygen is on
+  the system.  Closes bug # 3322, by ryan.shaw@stanfordalumni.org (Ryan
+  Shaw)
 
 *alsaplayer-0.99.70 (22 May 2002)
 
