@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/viewcvs/viewcvs-0.9.2_p20030430-r1.ebuild,v 1.3 2004/04/23 08:43:03 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/viewcvs/viewcvs-0.9.2_p20030430-r1.ebuild,v 1.4 2004/04/23 13:22:30 stuart Exp $
 
 PDATE=${PV/0.9.2_p/}
 DESCRIPTION="Viewcvs, a web interface to cvs and subversion"
@@ -12,8 +12,9 @@ SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND=""
-RDEPEND=">=app-text/rcs-5.7
-	>=dev-util/cvs-1.11
+RDEPEND="|| ( ( >=app-text/rcs-5.7
+	>=dev-util/cvs-1.11 )
+	dev-util/subversion )
 	sys-apps/diffutils
 	net-www/apache"
 S=${WORKDIR}/${PN}
