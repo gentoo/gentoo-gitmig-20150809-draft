@@ -2,11 +2,12 @@
 <guide link="/doc/faq.html">
 <title>Gentoo Linux Frequently Asked Questions</title>
 <author title="Editor"><mail link="thomasfl@gentoo.org">Thomas Flavel</mail></author>
+<author title="Chief Architect"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
 
 <abstract>This FAQ is a collection of questions and answers collected from the gentoo-dev mailing list and from IRC -- if you have any questions (or answers!) to add, please contact an author.</abstract>
 
-<version>1.0.1</version>
-<date>20 April 2001</date>
+<version>1.0.2</version>
+<date>31 May 2001</date>
 
 <chapter>
 	<title>Getting Started</title>
@@ -33,10 +34,10 @@
 	</section>
 
 	<section>
-		<title>How do I install with no iso image?</title>
-		<body><p>You use the boot floopies and the sys and build
-tarballs as normal. Please read the <uri
-link="http://www.gentoo.org/doc/install.html">install guide</uri> for more
+		<title>How do I install with no ISO image?</title>
+		<body><p>You use the boot floppies and the sys and build
+tarballs as normal. Please visit the <uri
+link="/index-download.html">Download/Install page</uri> for more
 information.</p> 
 	</body>
 	</section>
@@ -52,12 +53,25 @@ information.</p>
 		<pre># <i>usermod -G users,wheel username</i></pre>
 </body>
 	</section>
-
+	<section>
+		<title>How do I enable devfs?</title>
+		<body>
+<p>
+<e>devfs</e> support is compiled-in to our standard kernels.  To enable it, add a <c>devfs=mount</c> to your <c>GRUB</c> kernel boot options so that the line looks something like <c>kernel /boot/boot/bzImage devfs=mount foo=bar</c>  The kernel will then mount the <path>/dev</path> <e>devfs</e> filesystem automatically at boot-time.
+</p>
+	</body>
+	</section>
 	<section>
 		<title>How do I get <path>/dev/dsp</path>?</title>
 		<body><p>You can create it by typing the following as root:</p>
 		<pre># <i>cd /dev</i>
 # <i>./MAKEDEV audio</i></pre></body>
+	</section>
+	<section>
+		<title>I'm getting ALSA errors -- "mixer #/# not found", etc.</title>
+		<body>
+		<p>Your ALSA sound devices need to be set up correctly.  To do this, grab <uri link="/scripts/snddevices">our updated snddevices script</uri> and execute it by typing <c>bash snddevices</c>.  This will configure the ALSA devices correctly, and these errors should go away and ALSA should now work.</p>
+		</body>
 	</section>
 </chapter>
 
@@ -66,16 +80,26 @@ information.</p>
 	<section>
 		<title>In what format are the packages stored?</title>
 		<body><p>They exist in our portage tree as <e>ebuilds</e>; we are primarily a ports-based distribution, meaning that we provide scripts (<c>.ebuild</c> files) and a special system (Portage) so
-that you can build apps from sources. We generally only build binaries for releases and snapshots. The <uri link="/doc/gentoo-howto">Development HOWTO</uri> covers the contents of an ebuild script in detail.</p>
+that you can build apps from sources. We generally only build binaries for releases and snapshots. The <uri link="/doc/gentoo-howto">Development HOWTO</uri> covers the contents of an ebuild script in detail.  For ISO releases, we create a full suite of binary packages in an enhanced <c>.tbz2</c> format (<c>.tar.bz2</c> compatible with meta-information attached to the end of the file.)</p>
 		</body>
 	</section>
 
 	<section>
 		<title>Why write a new port system (Portage) instead of using BSD's version?</title>
 		<body>
-			<p>One of the design philosophies of the <c>.ebuild</c> syntax was to make it an analog of what you'd type to install the program manually, thus making Portage very easy to learn and modify to your needs.</p>
-			<p>Gentoo Linux is designed from the ground up to be as fast as possible; Open, Net and FreeBSD use make for their ports system, which keeps it relativley slow; ebuild is specifcally designed to be small, fast, clean and extensible. Whereas BSD's ports is 
- a relativley unchangable system, Portage can be adapted to your specific needs - Portage is meant to be a working tool, not just a "system" that comes "as-is". It is designed to allow you to interact with it at all levels.</p>
+
+<p>One of the design philosophies of the <c>.ebuild</c> syntax was to make it
+an analog of what you'd type to install the program manually, thus making
+Portage very easy to learn and modify to your needs.</p>
+
+<p>Gentoo Linux is designed from the ground up to be as fast as possible; Open,
+Net and FreeBSD use <c>make</c> for their ports system, which keeps it
+relatively slow; ebuild is specifcally designed to be small, fast, clean and
+extensible.  Whereas BSD's ports is a relatively unchangable system and tricky
+to modify, Portage can be adapted to your specific needs. Portage is meant to
+be a working tool, not just a hard-to-understand system that comes as-is.
+Portage is designed to allow you to interact with it at all levels.</p>
+
 		</body>
 	</section>
 
@@ -118,7 +142,7 @@ that you can build apps from sources. We generally only build binaries for relea
 		</tr>
 		<tr>
 			<ti>GENTOO_MIRRORS</ti>
-			<ti>A space separated list of uris currently mirroring the Gentoo packages</ti>
+			<ti>A space separated list of URIs currently mirroring the Gentoo packages.  Portage will attempt download from a <c>GENTOO_MIRROR</c> first before trying the official <c>SRC_URI</c>.  To force Portage to skip mirrors, set this variable to "".</ti>
 		</tr>
 		</table>
 		</body>
@@ -126,12 +150,20 @@ that you can build apps from sources. We generally only build binaries for relea
 
 	<section>
 		<title>What happened to <path>/etc/make.defaults</path>?</title>
-		<body><p>As of portage 1.5 onwards, <path>/etc/make.defaults</path> is antiquated -- if you have portage-1.5-r1 or above installed then you can safely delete it. This file has been replaced by <path>/etc/make.profile/make.defaults</path>, which contains system profile-specific default settings. The priority order of the various configuration files is as follows (highest first):
+		<body>
+
+<p>As of portage 1.5 onwards, <path>/etc/make.defaults</path> is antiquated; 
+if you have portage-1.5-r1 or above installed then you can safely delete it.
+This file has been replaced by <path>/etc/make.profile/make.defaults</path> (<path>/etc/make.profile</path> should actually be a symlink to <path>/usr/portage/profiles/default</path>),
+which contains system profile-specific default settings. The priority order of
+the various configuration files is as follows (highest first):
+
+		
 		<ol>
 			<li>Environment variables</li>
-			<li><path>/etc/make.conf</path> -- for your use</li>
-			<li><path>/etc/make.profile/make.defaults</path> -- for profile-specific defaults</li>
-			<li><path>/etc/make.globals</path> -- for global defaults (settings not specified in any other place come from ehere)</li>
+			<li><path>/etc/make.conf</path>, for your use</li>
+			<li><path>/etc/make.profile/make.defaults</path>, for profile-specific defaults</li>
+			<li><path>/etc/make.globals</path>, for global defaults (settings not specified in any other place come from here)</li>
 		</ol></p></body>
 	</section>
 
@@ -144,16 +176,16 @@ that you can build apps from sources. We generally only build binaries for relea
 <chapter>
 	<title>Usage</title>
 	<section>
-		<title>I can start X applications as root only</title>
+		<title>I can start X applications as root only.</title>
 		<body><p>Your <path>/tmp</path> directory has the wrong permissions (it needs the sticky bit set). Type the following as root:</p>
 		<pre># <i>chmod 1777 /tmp</i></pre>
 		</body>
 	</section>
 
 	<section>
-		<title>DNS name resolution works for root only</title>
-		<body><p><path>/etc/resolve.conf</path> has the wrong permissions; ,<c>chmod</c> it as follows:</p>
-		<pre># <i>chmod 644 /etc/resolve.conf</i></pre>
+		<title>DNS name resolution works for root only.</title>
+		<body><p><path>/etc/resolv.conf</path> has the wrong permissions; <c>chmod</c> it as follows:</p>
+		<pre># <i>chmod 0644 /etc/resolv.conf</i></pre>
 		</body>
 	</section>
 
@@ -168,8 +200,44 @@ that you can build apps from sources. We generally only build binaries for relea
 <chapter>
 	<title>Maintenance</title>
 	<section>
-		<title>reiserfs and filesystem corruption issues -- how to fix'em, etc</title>
-		<body><p>TODO: link to ibm article</p></body>
+		<title>ReiserFS and filesystem corruption issues -- how to fix'em, etc</title>
+		<body>
+
+
+		<p>If you have been using ReiserFS since before kernel 2.4.4, then it's
+		recommended that you back up all your important data and recreate your
+		ReiserFS filesystems with a 2.4.4+ kernel and a recent version of
+		<path>reiserfsutils</path>.  If this isn't possible, try using a recent
+		Gentoo Linux <uri
+		path="http://www.gentoo.org/doc/portage-user.html">boot/rootdisk</uri>
+		to boot your system, and then run <c>reiserfsck --rebuild-tree</c> on
+		the corrupted filesystem.  This should make the filesystem consistent
+		again, although you may have lost some files or directories due to
+		corruption.  Since kernel 2.4.4, ReiserFS has been very stable and
+		ready for production environments.</p>
+
+
+		</body>
+	</section>
+
+	<section>
+		<title>How to I view the timestamps in /var/log/syslog.d, etc.</title>
+		<body>
+
+<p>To view multilog timestamps, you need to pipe the current log through the <c>tai64nlocal</c>
+command:</p>
+
+<pre>
+# <i>cat /var/log/syslog.d/current | tai64nlocal | less</i>
+</pre>
+
+<p>Or, alternatively, if you want to "tail" the log:</p>
+
+<pre>
+# <i>cat /var/log/syslog.d/current | tai64nlocal | tail -f</i>
+</pre>
+
+</body>
 	</section>
 </chapter>
 
@@ -177,22 +245,22 @@ that you can build apps from sources. We generally only build binaries for relea
 	<title>Development</title>
 	<section>
 		<title>Where can I report bugs?</title>
-		<body><p>For bugs within a specific program, contact the program's author. Otherwise, contact the <uri link="http://www.gentoo.org/mailman/listinfo/gentoo-dev">gentoo-dev</uri> mailing list, or on <c>#gentoo</c> on the <uri link="http://www.openprojects.net">openprojects</uri> irc network.</p></body>
+		<body><p>For bugs within a specific program, contact the program's author. Otherwise, contact the <uri link="http://cvs.gentoo.org/mailman/listinfo/gentoo-dev">gentoo-dev</uri> mailing list, or on <c>#gentoo</c> on the <uri link="http://www.openprojects.net">openprojects</uri> irc network.</p></body>
 	</section>
 
 	<section>
 		<title>How oftern are new releases made?</title>
-		<body><p>New releases are announced on the <uri link="http://www.gentoo.org/mailman/listinfo/gentoo-announce">gentoo-announce</uri> mailing lists<!-- TODO: approximatley every X months -->.</p></body>
+		<body><p>New releases are announced on the <uri link="http://cvs.gentoo.org/mailman/listinfo/gentoo-announce">gentoo-announce</uri> mailing lists<!-- TODO: approximatley every X months -->.</p></body>
 	</section>
 
 	<section>
 		<title>I would like a package to be added to portage; how would I go about this?</title>
-		<body><p>Send an email to the <uri link="http://www.gentoo.org/mailman/listinfo/gentoo-dev">Developer Discussion</uri> mailing list, and it will be comitted to cvs. If you are making regular packages, contact <mail link="drobbins@gentoo.org">Daniel Robbins</mail> for write access to the cvs tree.</p></body>
+		<body><p>Send an email containing your ebuild to the <uri link="http://cvs.gentoo.org/mailman/listinfo/gentoo-dev">Developer Discussion</uri> mailing list, and it will be comitted to cvs. If you are making regular packages, contact <mail link="drobbins@gentoo.org">Daniel Robbins</mail> for write access to the Portage CVS tree.</p></body>
 	</section>
 
 	<section>
 		<title>How can I add a question or answer to this FAQ?</title>
-		<body><p>You could email an author directly, email the <uri link="http://www.gentoo.org/mailman/listinfo/gentoo-dev">Developer Discussion</uri> mailing list, or drop by on <c>#gentoo</c> on the <uri link="http://www.openprojects.net">openprojects</uri> irc network.</p></body>
+		<body><p>You can email an author directly, email the <uri link="http://cvs.gentoo.org/mailman/listinfo/gentoo-dev">Developer Discussion</uri> mailing list, or drop by on <c>#gentoo</c> on the <uri link="http://www.openprojects.net">openprojects</uri> irc network.</p></body>
 	</section>
 </chapter>
 
@@ -200,7 +268,7 @@ that you can build apps from sources. We generally only build binaries for relea
 <title>Resources</title>
 	<section>
 		<title>Where can I find more about supervise?</title>
-		<body><p><!-- TODO: --><uri>http://cr.yp.to</uri></p></body>
+		<body><p><!-- TODO: --><uri>http://cr.yp.to/daemontools.html</uri></p></body>
 	</section>
 
 	<section>

@@ -7,14 +7,14 @@
 <abstract>This guide briefly covers how to keep your packages up to date, and how to maintain
 your system.</abstract>
 
-<version>1.1</version>
-<date>09 Apr 2001</date>
+<version>1.2</version>
+<date>31 May 2001</date>
 
 <chapter>
-<title>Package Management</title>
+<title>Getting Started</title>
 
 <section>
-<title>Getting Started</title>
+<title>Downloading the Portage tree</title>
 <body>
 
 <p>After you get Gentoo Linux installed and you play around a bit, you may find some bugs or
@@ -24,29 +24,30 @@ ports tree. We have provided an anonymous rsync server that you can use to get o
 Portage tree. Here's how you use it.</p>
 
 <p>First, make a directory called <path>/usr/portage</path>. Then, make sure rsync is installed. If it
-isn't, download it from our ibiblio mirror and install it by typing <c>pkgmerge
+isn't, download it from our ibiblio mirror and install it by typing <c>emerge
 rsync-x.y.z.tbz2</c>. Then, use the following command to synchronize your Portage
 directory:
 </p>
 <pre>
-# <path>rsync -avz rsync://cvs.gentoo.org/gentoo-x86-portage/* /usr/portage</path>
+# <i>emerge rsync</i>
 </pre>
 
 <p>Periodically, you'll want to run this next form of the rsync command, which will delete
-any old ebuild scripts. </p>
+any old ebuild scripts:</p>
 
-<warn>Please note that it will delete any of your
-personal changes or additions to the <path>/usr/portage tree</path>, so use this command with
-caution.</warn>
-
-<p>If you are making regular changes to your <path>/usr/portage</path> tree, you may want to
-contact Daniel for CVS access so that you can commit some or all of them to our official CVS
-tree. With that being said, here's the <c>rsync</c> update command with deletion:</p>
+<warn>Please note that <c>emerge rsync clean</c> will delete any of your
+personal changes or additions to the <path>/usr/portage tree</path>, so use
+this command with caution.</warn>
 
 <pre>
-# <i>rsync -avz --delete --exclude=distfiles/* --exclude=packages/* \
-rsync://cvs.gentoo.org/gentoo-x86-portage/* /usr/portage</i>
+# <i>emerge rsync clean</i>
 </pre>
+
+<p>If you are making regular changes to your <path>/usr/portage</path> tree,
+you may want to contact <mail link="drobbins@gentoo.org">Daniel</mail> for CVS
+access so that you can commit some or all of them to our official Portage CVS tree.
+</p>
+
 </body>
 </section>
 
@@ -59,7 +60,7 @@ following:
 
 <pre>
 # <i>cd /usr/portage/sys-apps/portage</i>
-# <i>ebuild portage-x.y.z.ebuild merge</i>
+# <i>emerge portage-x.y.z.ebuild</i>
 </pre>
 
 <p>Now you'll be using the most recent version of portage, and you can start to use our ebuild
@@ -67,9 +68,11 @@ system to update your installed software.</p>
 
 </body>
 </section>
-
+</chapter>
+<chapter>
+<title>Introducing <c>emerge</c></title>
 <section>
-<title>Important Commands</title>
+<title><c>emerge --pretend</c></title>
 <body><p> 
 To install a package, enter its directory in <path>/usr/portage</path>, i.e:
 </p>
@@ -78,22 +81,111 @@ To install a package, enter its directory in <path>/usr/portage</path>, i.e:
 # <i>cd /usr/portage/net-irc/xchat</i> 
 </pre>
 
-<p>Then, run <c>ebuild merge</c>:</p>
+<p>Then, run <c>emerge --pretend</c> to see what dependencies (if any) will be installed:</p>
 
 <pre>
-# <i>ebuild xchat-1.4.2.ebuild merge</i>
+# <i>emerge --pretend xchat-1.4.3.ebuild</i>
+
+These are the packages that I would merge, in order.
+
+Calculating dependencies......... done!
+[ebuild   U] sys-libs/zlib-1.1.3-r2 to /
+[ebuild   U] dev-libs/glib-1.2.10 to /
+[ebuild N  ] media-libs/jpeg-6b-r2 to /
+[ebuild N  ] x11-base/xfree-4.0.3-r3 to /
+[ebuild N  ] x11-libs/gtk+-1.2.10-r1 to /
+[ebuild N  ] media-libs/giflib-4.1.0-r3 to /
+[ebuild N  ] media-libs/tiff-3.5.6_beta to /
+[ebuild N  ] media-libs/imlib-1.9.10 to /
+[ebuild N  ] net-irc/xchat-1.4.3 to /
 </pre>
 
-<p>The xchat sources will be downloaded (and stored in <path>/usr/portage/distfiles</path>), verified, 
-unpacked, compiled and installed to a temporary directory. Then, they will be merged into the
-local filesystem and a package database will be created at <path>/var/db/pkg/net-irc/xchat-1.4.2/CONTENTS</path>,
-containing the files installed and the md5sums for all files.</p>
+<p>In this particular case, we are attempting to merge <path>xchat</path> on a
+machine that does not have X installed.  Thus, <c>emerge --pretend</c>
+correctly identifies that several dependencies need to be satisfied first.
+Specifically, <path>sys-libs/zlib</path> and <path>dev-libs/glib</path> need to
+be updated, and then a bunch of ebuilds (including <path>x11-base/xfree</path>,
+of course) need to be merged.</p>
+</body>
+</section>
+<section>
+<title>USE and <c>emerge</c></title>
+<body>
+<p>Above, I executed <c>emerge --pretend</c> on a system that did not have
+<c>gnome</c> defined in the <c>USE</c> variable in <path>/etc/make.conf</path>.
+This means that optional GNOME support, if present, will not be enabled.
+However, <path>xchat</path> <e>does</e> have optional GNOME support, so let's
+take a look at the <c>emerge --pretend</c> output after I add <c>gnome</c> to
+the <c>USE</c> environment variable in <path>/etc/make.conf</path>:
+</p>
+
+<pre>
+# <i>emerge --pretend xchat-1.4.3.ebuild</i>
+
+These are the packages that I would merge, in order.
+
+Calculating dependencies............................ done!
+[ebuild N  ] media-libs/jpeg-6b-r2 to /
+[ebuild N  ] gnome-base/libghttp-1.0.9 to /
+[ebuild N  ] media-libs/audiofile-0.2.1 to /
+[ebuild N  ] media-sound/esound-0.2.22-r2 to /
+[ebuild N  ] gnome-base/gnome-env-1.0 to /
+[ebuild N  ] gnome-base/libxml-1.8.11 to /
+[ebuild N  ] gnome-base/ORBit-0.5.8 to /
+[ebuild N  ] gnome-base/oaf-0.6.5 to /
+[ebuild   U] dev-libs/glib-1.2.10 to /
+[ebuild N  ] net-libs/libwww-5.3.2-r1 to /
+[ebuild N  ] media-libs/giflib-4.1.0-r3 to /
+[ebuild N  ] dev-util/guile-1.4-r3 to /
+[ebuild   U] sys-libs/zlib-1.1.3-r2 to /
+[ebuild N  ] x11-base/xfree-4.0.3-r3 to /
+[ebuild N  ] x11-libs/gtk+-1.2.10-r1 to /
+[ebuild N  ] media-libs/tiff-3.5.6_beta to /
+[ebuild N  ] media-libs/imlib-1.9.10 to /
+[ebuild N  ] gnome-base/gnome-libs-1.2.13 to /
+[ebuild N  ] gnome-base/glibwww-0.2-r1 to /
+[ebuild N  ] gnome-base/gdk-pixbuf-0.11.0 to /
+[ebuild N  ] gnome-base/gconf-1.0.0 to /
+[ebuild N  ] gnome-base/gnome-vfs-1.0.1 to /
+[ebuild N  ] gnome-base/control-center-1.4.0.1 to /
+[ebuild N  ] gnome-base/scrollkeeper-0.2 to /
+[ebuild N  ] dev-util/xml-i18n-tools-0.8.1 to /
+[ebuild N  ] gnome-base/libglade-0.16-r1 to /
+[ebuild N  ] gnome-base/gnome-core-1.4.0.4 to /
+[ebuild N  ] net-irc/xchat-1.4.3 to /
+</pre>
+
+<p>As you can see, with <c>gnome</c> added to <c>USE</c>, emerge recognizes
+that xchat should include optional GNOME support.  And of course, in order for
+this optional GNOME support to compile and run correctly, GNOME must first be
+installed.  <c>emerge</c> figures this all out and adds various packages
+required by GNOME to its list of ebuilds to merge.  There may be times where
+your <c>USE</c> variable is not set correctly, causing <c>emerge</c> to
+unexpectedly include or exclude support for various optional extensions.
+That's why I recommended that you always perform an <c>emerge --pretend</c>
+before executing the actual <c>emerge</c>, especially for new, unfamiliar
+ebuilds.  That way, you'll know what to expect. :)  Once everything looks OK,
+you can go ahead with the actual <c>emerge</c> by dropping the <c>--pretend</c>
+option:</p>
+
+<pre>
+# <i>emerge xchat-1.4.3.ebuild</i>
+</pre>
+
+<p>After all dependencies are merged (if they exist; not all packages have
+them), the xchat sources will be downloaded (to
+<path>/usr/portage/distfiles</path>), verified, unpacked, compiled and
+installed to a temporary directory. Then, they will be merged into the local
+filesystem and a package database will be created at
+<path>/var/db/pkg/net-irc/xchat-1.4.3/CONTENTS</path>, containing the files
+installed and the md5sums for all files.</p>
 
 </body>
 </section>
-
-<section>
+</chapter>
+<chapter>
 <title>Upgrading packages</title>
+<section>
 <body>
 
 <p>The standard way to upgrade packages under Gentoo Linux is to merge the new package,
@@ -105,18 +197,24 @@ like:</p>
 # <i>ebuild /var/db/pkg/net-irc/xchat-1.0.0-r1/xchat-1.0.0-r1.ebuild unmerge</i>
 </pre>
 
-<p>It's important to specify the category and exact package version in the above format.  
-Then, this particular package will be unmerged. Portage uses what is called a "safe"
-unmerge; it's only going to unlink original files. If a file has been overwritten or
-modified in some way, it will be left on the filesystem (presumably, you've installed a
-newer version of the package). So, if you unmerge an old version of xchat after merging a
-newer version, the xchat executable will not be deleted off your filesystem, since it has
-a newer timestamp and different md5sum. Safe unmerges are really great because they ensure
-that some version of the application is available at all times. If you had to unmerge     
-first, then xchat wouldn't be available for a few minutes while the new version was being
-merged.</p>
+<p>For now, unmerging is performed using the lower-level <c>ebuild</c> command, rather
+than <c>emerge</c>.  This will likely change in the near future as we begin moving more
+and more functionality over to the high-level <c>emerge</c> tool.
+</p>
 
-<p>That's all for now - more instructions will follow as I have time. I hope this helps.</p>
+<p>When using <c>ebuild</c>, it's important to specify the exact path to the ebuild
+file in <path>/var/db/pkg</path> that you'd like to unmerge.  
+Portage uses what is called a "safe" unmerge; it's only going to
+unlink original files. If a file has been overwritten or modified in some way,
+it will be left on the filesystem (presumably, you've installed a newer version
+of the package). So, if you unmerge an old version of xchat after merging a
+newer version, the xchat executable will not be deleted off your filesystem,
+since it has a newer timestamp and different md5sum. Safe unmerges are really
+great because they ensure that some version of the application is available at
+all times. If you had to unmerge first, then xchat wouldn't be available
+for a few minutes while the new version was being downloaded, compiled,
+installed and merged.</p>
+
 </body>
 </section>
 </chapter>
