@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.128 2005/01/16 20:53:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.129 2005/01/18 08:42:48 dragonheart Exp $
+
+  18 Jan 2005; Daniel Black <dragonheart@gentoo.org> alsa-driver-0.9.8.ebuild,
+  alsa-driver-1.0.7-r4.ebuild, alsa-driver-1.0.8.ebuild:
+  QA - 0.9.8 - fixed bad depend on portage. 1.0.7-r4 and 1.0.8 - added check in
+  for CONFIG_PNP that 2 drivers depend on. Bug #53529 refers
 
   17 Jan 2005; Daniel Black <dragonheart@gentoo.org>
   alsa-driver-1.0.7-r4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r4.ebuild,v 1.7 2005/01/16 20:53:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r4.ebuild,v 1.8 2005/01/18 08:42:48 dragonheart Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -47,22 +47,22 @@ pkg_setup() {
 	#
 	#   env ALSA_CARDS='emu10k1 intel8x0 ens1370' emerge alsa-driver
 	#
-	use ppc && export BAD_DRIVERS="interwave interwave-stb hdspm"
+	linux_chkconfig_present PNP || export PNP_DRIVERS="interwave interwave-stb"
 
 	if [ -z "${ALSA_CARDS}" ]
 	then
 		ALSA_CARDS=all
-		if [ -n "${BAD_DRIVERS}" ]
+		if [ -n "${PNP_DRIVERS}" ]
 		then
-			ewarn "Drivers have been disabled"
-			ewarn "due to compile problems: ${BAD_DRIVERS}"
+			ewarn "Drivers have been disabled."
+			ewarn "They require CONFIG_PNP in the kernel: ${PNP_DRIVERS}"
 		fi
 	else
-		for baddriver in ${BAD_DRIVERS}
+		for pnpdriver in ${PNP_DRIVERS}
 		do
-			# check for bad drivers in ALSA_CARDS
-			[ `expr match ${baddriver} "${ALSA_CARDS}"` -gt 0 ] && \
-				die "Driver ${baddriver} failes to compile."
+			# check for pnp drivers in ALSA_CARDS
+			[ `expr match ${pnpdriver} "${ALSA_CARDS}"` -gt 0 ] && \
+				die "Driver ${pnpdriver} needs CONFIG_PNP."
 		done
 	fi
 }
@@ -105,12 +105,12 @@ src_compile() {
 	# linux-mod_src_compile doesn't work well with alsa
 
 	local myconf
-	if [ -n "${BAD_DRIVERS}" ]
+	if [ -n "${PNP_DRIVERS}" ]
 	then
-		myconf=$(echo ${BAD_DRIVERS//-/_} | sed -e 's/[a-z_]*/CONFIG_SND_\U&\E=n/g')
+		myconf=$(echo ${PNP_DRIVERS//-/_} | sed -e 's/[a-z_]*/CONFIG_SND_\U&\E=n/g')
 	fi
 
-	unset ARCH	
+	unset ARCH
 	# -j1 : see bug #71028
 	emake -j1  ${myconf} || die "Make Failed"
 
@@ -131,9 +131,9 @@ src_install() {
 	dodir /usr/include/sound
 
 	local myconf
-	if [ -n "${BAD_DRIVERS}" ]
+	if [ -n "${PNP_DRIVERS}" ]
 	then
-		myconf=$(echo ${BAD_DRIVERS//-/_} | sed -e 's/[a-z_]*/CONFIG_SND_\U&\E=n/g')
+		myconf=$(echo ${PNP_DRIVERS//-/_} | sed -e 's/[a-z_]*/CONFIG_SND_\U&\E=n/g')
 	fi
 
 	make DESTDIR=${D} ${myconf} install || die
@@ -172,9 +172,9 @@ pkg_postinst() {
 	einfo "If you experience problems, please report bugs to http://bugs.gentoo.org."
 	einfo
 
-	if use ppc
+	if [ -n "${PNP_DRIVERS}" ]
 	then
-		einfo "some drivers haven't been built due to compile problems: ${BAD_DRIVERS}"
+		einfo "some drivers haven't been built due to them requiring CONFIG_PNP in the kernel: ${PNP_DRIVERS}"
 	fi
 
 	linux-mod_pkg_postinst

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8.ebuild,v 1.1 2005/01/14 13:52:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8.ebuild,v 1.2 2005/01/18 08:42:48 dragonheart Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -42,10 +42,28 @@ pkg_setup() {
 	#
 	#   env ALSA_CARDS='emu10k1 intel8x0 ens1370' emerge alsa-driver
 	#
-	if [ -z "${ALSA_CARDS}" ]; then
-		ewarn "\${ALSA_CARDS} isn't set, so we are compiling all alsa drivers."
-		ALSA_CARDS="all"
+
+	linux_chkconfig_present PNP || export PNP_DRIVERS="interwave interwave-stb"
+
+	if [ -z "${ALSA_CARDS}" ]
+	then
+		ALSA_CARDS=all
+		if [ -n "${PNP_DRIVERS}" ]
+		then
+			ewarn "Some drivers have been disabled."
+			ewarn "They require CONFIG_PNP in the kernel: ${PNP_DRIVERS}"
+		else
+			ewarn "\${ALSA_CARDS} isn't set, so we are compiling all alsa drivers."
+		fi
+	else
+		for pnpdriver in ${PNP_DRIVERS}
+		do
+			# check for pnp drivers in ALSA_CARDS
+			[ `expr match ${pnpdriver} "${ALSA_CARDS}"` -gt 0 ] && \
+				die "Driver ${pnpdriver} needs CONFIG_PNP."
+		done
 	fi
+
 }
 
 src_unpack() {
@@ -72,8 +90,16 @@ src_compile() {
 
 	# linux-mod_src_compile doesn't work well with alsa
 	unset ARCH
+
+	local myconf
+	if [ -n "${PNP_DRIVERS}" ]
+	then
+		myconf=$(echo ${PNP_DRIVERS//-/_} | sed -e 's/[a-z_]*/CONFIG_SND_\U&\E=n/g')
+	fi
+
 	# -j1 : see bug #71028
-	emake -j1 || die "Parallel Make Failed"
+	emake -j1  ${myconf} || die "Make Failed"
+
 
 	if use doc;
 	then
@@ -90,7 +116,14 @@ src_compile() {
 
 src_install() {
 	dodir /usr/include/sound
-	make DESTDIR="${D}" install || die
+
+	local myconf
+	if [ -n "${PNP_DRIVERS}" ]
+	then
+		myconf=$(echo ${PNP_DRIVERS//-/_} | sed -e 's/[a-z_]*/CONFIG_SND_\U&\E=n/g')
+	fi
+
+	make DESTDIR=${D} ${myconf} install || die
 
 	# Provided by alsa-headers now
 	rm -rf ${D}/usr/include/sound
@@ -126,8 +159,14 @@ pkg_postinst() {
 	einfo "If you experience problems, please report bugs to http://bugs.gentoo.org."
 	einfo
 
+
+	if [ -n "${PNP_DRIVERS}" ]
+	then
+		einfo "some drivers haven't been built due to them requiring CONFIG_PNP in the kernel: ${PNP_DRIVERS}"
+	fi
 	linux-mod_pkg_postinst
 
 	einfo "Check out the ALSA installation guide availible at the following URL:"
 	einfo "http://www.gentoo.org/doc/en/alsa-guide.xml"
 }
+
