@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.74-r1.ebuild,v 1.4 2003/12/22 22:54:16 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.74-r1.ebuild,v 1.5 2003/12/24 05:23:11 rizzo Exp $
 
 IUSE="nls perl spell nas ssl mozilla cjk debug"
 
@@ -24,7 +24,8 @@ DEPEND="=sys-libs/db-1*
 	>=media-libs/audiofile-0.2.0
 	perl? ( >=dev-lang/perl-5.6.1
 		>=sys-apps/sed-4.0.0 )
-	mozilla? ( net-www/mozilla )
+	mozilla? ( ssl? ( <=net-www/mozilla-1.5-r1 )
+				!ssl? ( net-www/mozilla ) )
 	!mozilla? ( dev-libs/nss )
 	spell? ( >=app-text/gtkspell-2.0.2 )"
 
