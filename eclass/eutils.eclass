@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.159 2005/03/18 22:50:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.160 2005/03/22 17:33:13 wolf31o2 Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1756,4 +1756,25 @@ newpamd() {
 	# these are the default doins options, but be explicit just in case
 	insopts -m 0644 -o root -g root
 	newins "$1" "$2" || die "failed to install $1 as $2"
+}
+
+# make a wrapper script ...
+# NOTE: this was originally games_make_wrapper, but I noticed other places where
+# this could be used, so I have moved it here and made it not games-specific
+# -- wolf31o2
+# $1 == wrapper name
+# $2 == binary to run
+# $3 == directory to chdir before running binary
+# $4 == extra LD_LIBRARY_PATH's (make it : delimited)
+make_wrapper() {
+	local wrapper=$1 bin=$2 chdir=$3 libdir=$4
+	local tmpwrapper=$(emktemp)
+	cat << EOF > "${tmpwrapper}"
+#!/bin/sh
+cd "${chdir}"
+export LD_LIBRARY_PATH="\${LD_LIBRARY_PATH}:${libdir}"
+exec ${bin} "\$@"
+EOF
+	chmod go+rx "${tmpwrapper}"
+	newbin "${tmpwrapper}" "${wrapper}"
 }
