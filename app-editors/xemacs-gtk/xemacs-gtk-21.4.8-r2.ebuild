@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r2.ebuild,v 1.1 2002/07/02 05:26:21 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r2.ebuild,v 1.2 2002/07/15 07:44:27 mkennedy Exp $
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"
@@ -19,11 +19,12 @@ MULE=1.40
 SRC_URI="http://ftp.xemacs.org/xemacs-21.4/${REAL_P}.tar.gz
 	http://ftp.xemacs.org/pub/packages/efs-${EFS}-pkg.tar.gz
 	http://ftp.xemacs.org/pub/packages/xemacs-base-${BASE}-pkg.tar.gz
-	mule? ( http://ftp.xemacs.org/packages/mule-base-${MULE}-pkg.tar.gz )"
+	http://ftp.xemacs.org/packages/mule-base-${MULE}-pkg.tar.gz"
 
 HOMEPAGE="http://www.xemacs.org"
 
 SLOT=""
+KEYWORDS="x86"
 
 RDEPEND="virtual/glibc
 	!virtual/xemacs
