@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-xmms-remote/gaim-xmms-remote-1.3.ebuild,v 1.4 2004/07/06 16:58:16 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-xmms-remote/gaim-xmms-remote-1.3.ebuild,v 1.5 2004/07/16 13:06:55 rizzo Exp $
 
 IUSE="debug"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64 ~sparc"
 
-DEPEND="~net-im/gaim-0.79
+DEPEND=">=net-im/gaim-0.79
 	media-sound/xmms"
 
 #RDEPEND=""
