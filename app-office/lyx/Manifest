@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9bcf9c90820344d4439887bf39b92f34 ChangeLog 8618
-MD5 b60fb8f718d407fdf555280270485656 lyx-1.3.5.ebuild 3326
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 755c76fbd39a9312ab8a30a220889189 ChangeLog 8712
 MD5 643a993dd58f7b161f1a5de6cbbc886e lyx-1.3.4.ebuild 3103
-MD5 5ccd191a3dc796feeda9dcee291d2863 files/digest-lyx-1.3.5 239
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 5fe27ccef0a072c389030e0e74316b8e lyx-1.3.5.ebuild 3328
 MD5 296163b72f99143379e73e616ce4e728 files/digest-lyx-1.3.4 239
-MD5 b86918456f67f911e357a76308cd0fdb files/lyx-1.3.4-gcc34.patch 6589
 MD5 f6bf30211847fb321f0000cd415d9e5b files/lyx-1.3.2-nomktex.patch 449
 MD5 363bfca924cf46b61d21faa4dbfcd43f files/lyx-1.3.3-configure-diff 1953
 MD5 4dc1e1cc2b4e056a629fbfd1334c390e files/lyx.desktop 188
+MD5 b86918456f67f911e357a76308cd0fdb files/lyx-1.3.4-gcc34.patch 6589
+MD5 5ccd191a3dc796feeda9dcee291d2863 files/digest-lyx-1.3.5 239
 MD5 2a779b20a7425abd5eea3b5ee01698f7 files/lyx-1.3.5-boost.patch 655
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBmEC4VWNWqTUmv+0RAn3YAKCPgxU3QrdIctSHZnaRBBO8yuYVGwCgkzlJ
-IE1K31YVPf9dUEHVEs+j79w=
-=GXFg
------END PGP SIGNATURE-----
