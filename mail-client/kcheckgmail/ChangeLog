@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/kcheckgmail
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/kcheckgmail/ChangeLog,v 1.6 2004/12/31 17:47:27 weeve Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/kcheckgmail/ChangeLog,v 1.7 2005/01/29 00:27:09 motaboy Exp $
+
+*kcheckgmail-0.5.3a (29 Jan 2005)
+
+  29 Jan 2005; Simone Gotti <motaboy@gentoo.org> +kcheckgmail-0.5.3a.ebuild:
+  Version Bump. Closes bug #79670.
 
   31 Dec 2004; Jason Wever <weeve@gentoo.org> kcheckgmail-0.5.2.ebuild:
   Added ~sparc keyword.
