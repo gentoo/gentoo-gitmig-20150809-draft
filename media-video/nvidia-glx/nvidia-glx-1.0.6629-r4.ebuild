@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r4.ebuild,v 1.1 2005/01/25 01:38:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r4.ebuild,v 1.2 2005/01/26 06:23:33 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -162,31 +162,28 @@ src_install-libs() {
 	    -e "s:\${libdir}:${NV_ROOT}/lib:" \
 	    ${FILESDIR}/libGL.la-r1 > ${D}/${NV_ROOT}/lib/libGL.la
 
-	# The GLX extension
-	if is_final_abi; then
-		# The X module
-		# Since we moved away from libs in /usr/X11R6 need to check this
-		if has_version ">=x11-base/xorg-x11-6.8.0-r4" ; then
-			local X11_LIB_DIR="/usr/$(get_libdir)"
-		else
-			local X11_LIB_DIR="/usr/X11R6/$(get_libdir)"
-		fi
-
-		exeinto ${X11_LIB_DIR}/modules/drivers
-		doexe usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.o
-
-		insinto ${X11_LIB_DIR}
-		doins usr/X11R6/${pkglibdir}/libXvMCNVIDIA.a
-		exeinto ${X11_LIB_DIR}
-		doexe usr/X11R6/${pkglibdir}/libXvMCNVIDIA.so.${PV}
-
-		exeinto ${NV_ROOT}/extensions
-		newexe usr/X11R6/${pkglibdir}/modules/extensions/libglx.so.${PV} libglx.so
-
-		# Includes
-		insinto ${NV_ROOT}/include
-		doins usr/include/GL/*.h
+	# The X module
+	# Since we moved away from libs in /usr/X11R6 need to check this
+	if has_version ">=x11-base/xorg-x11-6.8.0-r4" ; then
+		local X11_LIB_DIR="/usr/$(get_libdir)"
+	else
+		local X11_LIB_DIR="/usr/X11R6/$(get_libdir)"
 	fi
+
+	exeinto ${X11_LIB_DIR}/modules/drivers
+	[ -f usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.o ] && doexe usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.o
+
+	insinto ${X11_LIB_DIR}
+	[ -f usr/X11R6/${pkglibdir}/libXvMCNVIDIA.a ] && doins usr/X11R6/${pkglibdir}/libXvMCNVIDIA.a
+	exeinto ${X11_LIB_DIR}
+	[ -f usr/X11R6/${pkglibdir}/libXvMCNVIDIA.so.${PV} ] && doexe usr/X11R6/${pkglibdir}/libXvMCNVIDIA.so.${PV}
+
+	exeinto ${NV_ROOT}/extensions
+	[ -f usr/X11R6/${pkglibdir}/modules/extensions/libglx.so.${PV} ] && newexe usr/X11R6/${pkglibdir}/modules/extensions/libglx.so.${PV} libglx.so
+
+	# Includes
+	insinto ${NV_ROOT}/include
+	doins usr/include/GL/*.h
 }
 
 pkg_preinst() {
