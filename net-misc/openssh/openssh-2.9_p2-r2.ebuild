@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2-r2.ebuild,v 1.1 2001/08/18 02:10:29 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2-r2.ebuild,v 1.2 2001/08/24 06:04:59 chadh Exp $
 
 P=openssh-2.9p2
 A=${P}.tar.gz
@@ -47,5 +47,5 @@ src_install() {
     insinto /etc/pam.d
     donewins ${FILESDIR}/sshd.pam sshd
     exeinto /etc/rc.d/init.d
-    newexe ${FILESDIR}/openssh sshd
+    newexe ${FILESDIR}/sshd sshd
 }
