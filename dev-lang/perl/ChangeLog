@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.49 2004/02/01 09:27:32 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.50 2004/02/03 16:09:25 gustavoz Exp $
+
+  03 Feb 2004; <gustavoz@gentoo.org> perl-5.8.2-r1.ebuild:
+  stable on hppa
 
   01 Feb 2004; <rac@gentoo.org> perl-5.8.2-r1.ebuild:
   mark x86
