@@ -9,6 +9,7 @@ MD5 e8d11771b48cdc299598e22b6933ed48 ChangeLog 2301
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 25e7e7048748064cc1ce48ad70b34793 mlterm-2.8.0.ebuild 1204
 MD5 897160590f87c3f0b5924215e293e55a mlterm-2.8.0_p1.ebuild 1516
+MD5 bfd6fc0e7203a368241acb5750cbe42c mlterm-2.8.0_p1-r1.ebuild 1565
 MD5 eec1ca22e9d39b3795fa8dc08e948167 files/digest-mlterm-2.6.2 65
 MD5 2eb5c2051e8917a0ee06e9902dcf2e16 files/digest-mlterm-2.6.3 65
 MD5 61b653fe840ef82968a2bb425dbbdaf5 files/digest-mlterm-2.7.0 65
@@ -18,3 +19,4 @@ MD5 2eb5c2051e8917a0ee06e9902dcf2e16 files/digest-mlterm-2.6.3-r2 65
 MD5 61b653fe840ef82968a2bb425dbbdaf5 files/digest-mlterm-2.7.0-r1 65
 MD5 feb003168fafc7b5623ba9c12efef4da files/digest-mlterm-2.8.0 65
 MD5 a0803ba46dc61092ab4aed1119efee8c files/digest-mlterm-2.8.0_p1 129
+MD5 a0803ba46dc61092ab4aed1119efee8c files/digest-mlterm-2.8.0_p1-r1 129
