@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.56.ebuild,v 1.5 2003/08/05 16:57:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.56.ebuild,v 1.6 2004/02/27 12:42:17 bazik Exp $
 
 DESCRIPTION="tool for reading, sending and managing electronic messages"
 HOMEPAGE="http://www.washington.edu/pine/"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.cac.washington.edu/pine/pine${PV}.tar.bz2
 
 LICENSE="PICO"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 IUSE="mbox ssl ldap"
 
 DEPEND="virtual/glibc

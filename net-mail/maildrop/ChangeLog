@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/maildrop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.25 2003/10/20 21:49:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.26 2004/02/27 12:36:36 bazik Exp $
+
+  27 Feb 2004; Sven Blumenstein <bazik@gentoo.org> maildrop-1.5.3-r1.ebuild:
+  Stable on sparc.
 
   20 Oct 2003; Aron Griffis <agriffis@gentoo.org> maildrop-1.5.3-r1.ebuild:
   Stable on alpha

@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.42 2004/02/22 16:17:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.43 2004/02/27 12:33:59 bazik Exp $
+
+  27 Feb 2004; Sven Blumenstein <bazik@gentoo.org> fetchmail-6.2.5.ebuild:
+  Stable on sparc.
+
+  27 Feb 2004; Sven Blumenstein <bazik@gentoo.org> fetchmail-6.2.5.ebuild:
+  Stable on sparc.
 
   22 Feb 2004; Aron Griffis <agriffis@gentoo.org> fetchmail-5.9.14.ebuild:
   Remove arm keywords
