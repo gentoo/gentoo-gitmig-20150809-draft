@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r4.ebuild,v 1.6 2003/08/28 03:20:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1.ebuild,v 1.1 2003/08/28 03:20:39 caleb Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -8,9 +8,8 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.bz2"
 
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
-# WARNING: do not give this ebuild keywords that >=kdelibs-3.1.1, >=kdebase-3.1.1-r1 don't have
-KEYWORDS="x86 ~ppc ~sparc ~alpha hppa"
-IUSE="cups nas postgres opengl mysql odbc gif debug"
+KEYWORDS="~x86"
+IUSE="cups nas postgres opengl mysql odbc gif"
 
 DEPEND="virtual/x11
 	media-libs/libpng
@@ -19,23 +18,16 @@ DEPEND="virtual/x11
 	>=media-libs/libmng-1.0.0
 	>=media-libs/freetype-2
 	virtual/xft
+	!<kde-base/kdelibs-3.2
 	nas? ( >=media-libs/nas-1.4.1 )
 	odbc? ( >=dev-db/unixODBC-2.0 )
 	mysql? ( >=dev-db/mysql-3.2.10 )
 	opengl? ( virtual/opengl virtual/glu )
-	postgres? ( >=dev-db/postgresql-7.2 )
-	!=kde-base/kdelibs-3.1
-	!=kde-base/kdelibs-3.1-r1
-	!=kde-base/kdelibs-3.1-r2
-	!=kde-base/kdelibs-3.1-r3
-	!=kde-base/kdebase-3.1
-	!=kde-base/kdebase-3.1-r1
-	!=kde-base/kdebase-3.1.1"
-# WARNING: the versions blocked above are known to be buggy. DO NOT use them with this qt	
-RDEPEND="${DEPEND}
-	doc? ( ~app-doc/qt-docs-$PV )"
+	postgres? ( >=dev-db/postgresql-7.2 )"
+RDEPEND="${DEPEND}"
+	#doc? ( ~app-doc/qt-docs- )"
 
-S=${WORKDIR}/qt-x11-free-${PV}
+S=${WORKDIR}/${PV}
 	
 QTBASE=/usr/qt/3
 export QTDIR=${S}
@@ -44,16 +36,6 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	
-	epatch ${FILESDIR}/designer.diff
-	epatch ${FILESDIR}/${P}-qmlined.diff
-	epatch ${FILESDIR}/${P}-r3-qsocket.diff
-	epatch ${FILESDIR}/${P}-qlistview-dnd.diff
-	# Fix issues with coreutils's head and tail commands
-	epatch ${FILESDIR}/${P}-coreutils-fixup.patch
-
-	use cjk && epatch ${FILESDIR}/${P}-korean-xim.patch
-	epatch ${FILESDIR}/${P}-thai-complextext.patch
 	
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
@@ -70,13 +52,24 @@ src_unpack() {
 		cp qmake.conf qmake.conf.orig
 		sed -e "s:= gcc:= ${CC}:" qmake.conf.orig > qmake.conf
 	fi
-
-	# hppa people, please review the following
+	
+	# hppa and alpha people, please review the following
+	
 	# hppa need some additional flags
 	if [ "${ARCH}" = "hppa" ]; then
 		echo "QMAKE_CFLAGS += -fPIC -ffunction-sections" >> qmake.conf
 		echo "QMAKE_CXXFLAGS += -fPIC -ffunction-sections" >> qmake.conf
 		echo "QMAKE_LFLAGS += -ffunction-sections -Wl,--stub-group-size=25000" >> qmake.conf
+	fi
+	
+	# on alpha we need to compile everything with -fPIC
+	if [ ${ARCH} == "alpha" ]; then
+		cp qmake.conf qmake.conf.orig
+		sed -e "s:= -O2:= -O2 -fPIC:" qmake.conf.orig > qmake.conf
+		cat >> ${S}/tools/designer/editor/editor.pro <<_EOF_
+QMAKE_CFLAGS += -fPIC
+QMAKE_CXXFLAGS += -fPIC
+_EOF_
 	fi
 }
 
@@ -94,7 +87,7 @@ src_compile() {
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
 	use opengl	&& myconf="${myconf} -enable-module=opengl" || myconf="${myconf} -disable-opengl"
 	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
-	use xinerama    && myconf="${myconf} -xinerama"
+	use xinerama    && mycong="${myconf} -xinerama"
 	
 	# avoid wasting time building things we won't install
 	rm -rf tutorial examples
@@ -116,7 +109,7 @@ src_install() {
 	dobin bin/*
 
 	# libraries
-	dolib lib/libqt-mt.so.3.1.2 lib/libqui.so.1.0.0 lib/lib{editor,qassistantclient,designer}.a lib/*.la lib/*.prl
+	dolib lib/libqt-mt.so.3.2.0 lib/libqui.so.1.0.0 lib/lib{editor,qassistantclient,designer}.a
 	cd ${D}$QTBASE/lib
 	for x in libqui.so ; do
 		ln -s $x.1.0.0 $x.1.0
@@ -124,14 +117,14 @@ src_install() {
 		ln -s $x.1 $x
 	done
 	
-	# version symlinks - 3.1.2->3.1->3->.so
-	ln -s libqt-mt.so.3.1.2 libqt-mt.so.3.1
-	ln -s libqt-mt.so.3.1 libqt-mt.so.3
+	# version symlinks - 3.2.0->3.2->3->.so
+	ln -s libqt-mt.so.3.2.0 libqt-mt.so.3.2
+	ln -s libqt-mt.so.3.2 libqt-mt.so.3
 	ln -s libqt-mt.so.3 libqt-mt.so
 
 	# libqt -> libqt-mt symlinks
-	ln -s libqt-mt.so.3.1.2 libqt.so.3.1.2
-	ln -s libqt-mt.so.3.1 libqt.so.3.1
+	ln -s libqt-mt.so.3.2.0 libqt.so.3.2.0
+	ln -s libqt-mt.so.3.2 libqt.so.3.2
 	ln -s libqt-mt.so.3 libqt.so.3
 	ln -s libqt-mt.so libqt.so
 
@@ -159,11 +152,4 @@ src_install() {
 		insinto ${QTBASE}/`dirname $x`
 		doins $x
 	done
-}
-
-pkg_postinst() {
-	ewarn "If you upgraded from QT 3.0.x to 3.1.x, you should remerge any copies"
-	ewarn "of kdelibs you have installed. Otherwise, other kde packages may not"
-	ewarn "compile properly. If you upgraded QT from 3.0.x to 3.1.x in the past"
-	ewarn "but have not remerged kdelib, since then, you should proobably do so now."
 }
