@@ -1,0 +1,12 @@
+# ChangeLog for dev-ada/adabroker
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/ChangeLog,v 1.1 2003/08/17 22:31:38 dholm Exp $
+
+*adabroker-1.0_pre4 (18 Aug 2003)
+
+  18 Aug 2003; David Holm <dholm@gentoo.org> adabroker-1.0_pre4.ebuild,
+  metadata.xml:
+  Initial import (#23831)
+  This is a CORBA implementation for Ada.
+  I wrote the ebuild, hooray.
+
