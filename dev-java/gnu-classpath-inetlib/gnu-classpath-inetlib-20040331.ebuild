@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-20040331.ebuild,v 1.1 2004/04/02 09:54:37 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-20040331.ebuild,v 1.2 2004/04/28 01:28:11 karltk Exp $
 
 inherit java-pkg
 
 DESCRIPTION="Network extensions library for GNU classpath and classpathx"
 HOMEPAGE="http://www.gnu.org/software/classpath/"
-SRC_URI="inetlib-${PV}-gentoo.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~karltk/java/distfiles/inetlib-${PV}-gentoo.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
