@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sndfile/xmms-sndfile-1.2.ebuild,v 1.7 2004/10/19 23:24:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sndfile/xmms-sndfile-1.2.ebuild,v 1.8 2004/11/08 21:23:48 vapier Exp $
 
 MY_PN=${PN/-/_}
 MY_P=${MY_PN}-${PV}
@@ -11,8 +11,7 @@ SRC_URI="http://www.mega-nerd.com/xmms_sndfile/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64 sparc"
-
+KEYWORDS="amd64 arm hppa ia64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND="media-libs/libsndfile
