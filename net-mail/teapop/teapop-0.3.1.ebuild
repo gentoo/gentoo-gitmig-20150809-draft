@@ -5,7 +5,7 @@
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="POP Server with support for Maildir,Virtual Domains,Multiple IP's etc"
-SRC_URI="http://ftp.toontown.org/pub/teapop/${A}"
+SRC_URI="ftp://ftp.toontown.org/pub/teapop/${A}"
 HOMEPAGE="http://www.toontown.org/teapop/"
 
 DEPEND=">=sys-libs/glibc-2.1.3"
