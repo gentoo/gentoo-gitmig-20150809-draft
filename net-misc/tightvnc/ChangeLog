@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.35 2004/07/28 04:37:17 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.36 2004/09/20 02:06:21 morfic Exp $
+
+  19 Sep 2004; Daniel Goller <morfic@gentoo.org> :
+  new version 1.3_alpha5 + gcc3.4 patch
 
   28 Jul 2004; Travis Tilley <lv@gentoo.org> tightvnc-1.2.9-r1.ebuild:
   removed amd64 'fix' that broke compiling on amd64 and re-added ~amd64 keyword
