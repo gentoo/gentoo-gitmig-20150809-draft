@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jetty/jetty-4.2.19.ebuild,v 1.1 2004/08/08 17:20:07 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jetty/jetty-4.2.19.ebuild,v 1.2 2004/08/25 03:05:15 swegener Exp $
 
 inherit eutils
 
 DESCRIPTION="A Lightweight Servlet Engine"
-SRC_URI="http://dl.sourceforge.net/sourceforge/jetty/${PN/j/J}-${PV}-all.tar.gz"
+SRC_URI="mirror://sourceforge/jetty/${PN/j/J}-${PV}-all.tar.gz"
 HOMEPAGE="http://www.mortbay.org/"
 KEYWORDS="~x86 ~ppc ~sparc"
 LICENSE="Apache-1.1"
