@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/hppa-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/ChangeLog,v 1.6 2003/11/07 18:38:18 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/ChangeLog,v 1.7 2003/12/05 20:17:57 gmsoft Exp $
+
+*hppa-headers-2.4.23_p3 (5 Dec 2003)
+
+  05 Dec 2003; Guy Martin <gmsoft@gentoo.org> hppa-headers-2.4.23_p3.ebuild :
+  New version. Fix iproute and iputils problems.
 
 *hppa-headers-2.4.22_p13 (07 Nov 2003)
 
