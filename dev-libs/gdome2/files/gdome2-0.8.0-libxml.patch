@@ -1,0 +1,20 @@
+--- gdome2-0.8.0/libgdome/gdome.c.orig	2003-11-17 22:37:32.741786432 +0000
++++ gdome2-0.8.0/libgdome/gdome.c	2003-11-17 22:37:48.309419792 +0000
+@@ -23,6 +23,7 @@
+  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  */
+ 
++#include <libxml/parser.h>
+ #include <libxml/hash.h>
+ #include "gdome.h"
+ #include "gdome-xml-str.h"
+--- gdome2-0.8.0/libgdome/gdome-refdebug.c.orig	2003-11-17 22:38:26.774572200 +0000
++++ gdome2-0.8.0/libgdome/gdome-refdebug.c	2003-11-17 22:38:43.800983792 +0000
+@@ -19,6 +19,7 @@
+  */
+ 
+ #include <glib.h>
++#include <libxml/parser.h>
+ #include <libxml/hash.h>
+ #include "gdome.h"
+ #include "gdome-events.h"

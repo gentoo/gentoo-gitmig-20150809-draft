@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.8.0.ebuild,v 1.1 2003/10/04 09:29:27 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.8.0.ebuild,v 1.2 2003/11/22 19:12:52 lanius Exp $
 
 DESCRIPTION="The DOM C library for the GNOME project"
 HOMEPAGE="http://gdome2.cs.unibo.it/"
@@ -13,10 +13,15 @@ KEYWORDS="~x86 ~sparc ~ppc"
 DEPEND=">=dev-libs/libxml2-2.4.21
 	=dev-libs/glib-1.2*"
 
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-libxml.patch
+}
+
 # has the option of using glib-2 by using --enable-glib-2
-
 src_compile() {
-
 	econf \
 		--with-html-dir=${D}/usr/share/doc || die "configure problem"
 	emake || die "compile problem"
