@@ -1,10 +1,20 @@
-MD5 82ecaecec1b9d7ae3f4398c35226c9c3 XML-Writer-0.4.1.ebuild 506
-MD5 139b23eb09ccf69d965346e8e260dd97 XML-Writer-0.500.ebuild 497
-MD5 92ef4c8363aafe3491c5523e68db3671 ChangeLog 3002
-MD5 af189b342ba3e432b54584535cf1d934 XML-Writer-0.4-r2.ebuild 508
-MD5 1a4cc1359ff85724dc6261dc9692f832 XML-Writer-0.510.ebuild 507
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 262c7c8714d14abcb34521aa79e890c1 ChangeLog 3177
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 a897f0b13c65de2ebf4ad30ac1fd021e XML-Writer-0.4-r2.ebuild 472
+MD5 c826a598607eaf5f859742606e8e9f6e XML-Writer-0.4.1.ebuild 482
+MD5 cf563b47625e69e8a3e549e0332cd07d XML-Writer-0.500.ebuild 485
+MD5 66d986abdafe77e17effbbda9ca55a5b XML-Writer-0.510.ebuild 495
+MD5 6fbb01f6591ac2a8d58c2d1948e45c91 files/digest-XML-Writer-0.4-r2 65
 MD5 296c3cbdae6ea02f8a3478c1c1c7967a files/digest-XML-Writer-0.4.1 67
 MD5 ecc59aeaa7c562c281a4d8b5cccd7a23 files/digest-XML-Writer-0.500 67
 MD5 a4e289f1222a94d7e8d781fa019c9a71 files/digest-XML-Writer-0.510 67
-MD5 6fbb01f6591ac2a8d58c2d1948e45c91 files/digest-XML-Writer-0.4-r2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2qhPtG5z4I8BtQoRAheZAJ0aXp9JtiTz21Ar9wgQcyNRQWgKoACfaUEL
+Rn0AJu3PGl84NK4kdmeS++Y=
+=4UhP
+-----END PGP SIGNATURE-----

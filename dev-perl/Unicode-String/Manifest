@@ -1,8 +1,18 @@
-MD5 651c4ec9b429f33a8150ee8c885fdcc5 Unicode-String-2.06-r1.ebuild 570
-MD5 ab925108f9e1cb3b6f6a3039ac91dd8f Unicode-String-2.06-r2.ebuild 569
-MD5 518ab4f53a7d03ea71b42a7cf9f24660 ChangeLog 1785
-MD5 d18a1fe543e7bf07cc752e5e83eb5fd3 Unicode-String-2.07.ebuild 585
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 44f6ef168bf3181bbbf947428f9e5732 ChangeLog 1949
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 6c071e04e9154bac4c6ec04d785f3efe files/digest-Unicode-String-2.07 70
-MD5 a934ebb5e6e9eb778760039627a0ed3f files/digest-Unicode-String-2.06-r2 70
+MD5 d155607d58d738e049b418ffcbe832ec Unicode-String-2.06-r1.ebuild 523
+MD5 91b062e091ae49370bc05470aba9f448 Unicode-String-2.06-r2.ebuild 522
+MD5 b7c93dd65297af4049ba745c4e9c36da Unicode-String-2.07.ebuild 538
 MD5 a934ebb5e6e9eb778760039627a0ed3f files/digest-Unicode-String-2.06-r1 70
+MD5 a934ebb5e6e9eb778760039627a0ed3f files/digest-Unicode-String-2.06-r2 70
+MD5 6c071e04e9154bac4c6ec04d785f3efe files/digest-Unicode-String-2.07 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2qHKtG5z4I8BtQoRAu5bAJ9Kx9mRyBISWwwg4jYt+BaOC97k/wCfTpqX
+4gIA1bxfsaAfl08uuhS+RXs=
+=DrR5
+-----END PGP SIGNATURE-----

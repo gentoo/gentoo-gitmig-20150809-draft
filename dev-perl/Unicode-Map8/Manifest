@@ -1,8 +1,18 @@
-MD5 d3a0fa556391d74601dc7f4b8ace39b3 ChangeLog 1728
-MD5 a96544bd5f5cd148203d99f1b232830a Unicode-Map8-0.12.ebuild 594
-MD5 8fef503dfbad39cafaf1aa40861415a3 Unicode-Map8-0.11.ebuild 580
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4de350353bffd2a28b84b5687ee3617e ChangeLog 1883
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 6f462644e69765d6de22ec6ef5495b1e Unicode-Map8-0.11-r1.ebuild 582
-MD5 bc16557051ad5ad4c1ef94c7bf49d5eb files/digest-Unicode-Map8-0.12 69
+MD5 181987ace2db4460c3bfab4164df0c71 Unicode-Map8-0.11-r1.ebuild 535
+MD5 24cfaae16bb4f94b89145f59fe467681 Unicode-Map8-0.11.ebuild 533
+MD5 f9722032e0021cd99c27880b1d27de07 Unicode-Map8-0.12.ebuild 547
 MD5 b03dc62dbc2205915602da60d9de575a files/digest-Unicode-Map8-0.11-r1 69
 MD5 b03dc62dbc2205915602da60d9de575a files/digest-Unicode-Map8-0.11 69
+MD5 bc16557051ad5ad4c1ef94c7bf49d5eb files/digest-Unicode-Map8-0.12 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2qFgtG5z4I8BtQoRAkPmAJ4+tb3H+6x324+hNfi7cR7ribx3SACfUaGa
+r0J0iOrqUfw0F0H1kq9Hhww=
+=oRxt
+-----END PGP SIGNATURE-----

@@ -1,12 +1,22 @@
-MD5 e4af4b518fafcdc1788bb9b5b533bc84 libapreq-1.2-r1.ebuild 779
-MD5 b259e4b971c1f62737a7e942dc814d27 libapreq-1.2.ebuild 687
-MD5 db4bfc11e16de07f613d4c3064ee85f6 libapreq-1.3.ebuild 664
-MD5 e7f1b336fb0af77a929ab6cb8ee5f931 libapreq-1.0-r3.ebuild 665
-MD5 b492cf4387988413d71c6de776b60178 ChangeLog 2255
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 314512d345aab0d28d1f23c73d484751 libapreq-1.2.ebuild 578
+MD5 adfad621096c5bb6e15431a322eb5f8c ChangeLog 2395
+MD5 b04f0f3ff2d1731e5a8f2ec77520c866 libapreq-1.0-r3.ebuild 552
+MD5 f00c3119628b85ab17efa961454d671a libapreq-1.2-r1.ebuild 670
+MD5 9143e6d24e640d48ba6dca9a6ee55f75 libapreq-1.3.ebuild 665
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 fedd3f5e45b0f5814cadcea36607baad files/libapreq-1.2-statlink.patch 988
-MD5 4527276b891721c635158cd57532a64c files/digest-libapreq-1.2 64
-MD5 9a5be609da3f50ae8fb88e38aa702f04 files/digest-libapreq-1.3 64
 MD5 6b94213da4a46d8ecdc031e39dfd9233 files/digest-libapreq-1.0-r3 64
+MD5 4527276b891721c635158cd57532a64c files/digest-libapreq-1.2 64
 MD5 4527276b891721c635158cd57532a64c files/digest-libapreq-1.2-r1 64
+MD5 9a5be609da3f50ae8fb88e38aa702f04 files/digest-libapreq-1.3 64
 MD5 fedd3f5e45b0f5814cadcea36607baad files/libapreq-1.3-statlink.patch 988
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2qobtG5z4I8BtQoRAqZsAJwMaV/Fp0PBVtrIL1VgjjVhdxls2QCfQqtK
+R5VRdxKOqdK0G1R84kXHxEA=
+=PmCs
+-----END PGP SIGNATURE-----
