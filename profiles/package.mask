@@ -543,7 +543,3 @@ dev-lang/tcl-tk
 #seemant@gentoo.org 17 Apr 2002
 #masking so that some users can test it first
 =media-video/mplayer-0.60-r6
-
-#seemant@gentoo.org 17 Apr 2002
-# confusing emerge error with this one
-=media-libs/libsdl-1.2.4
