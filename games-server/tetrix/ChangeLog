@@ -1,6 +1,6 @@
-# ChangeLog for games-puzzle/tetrix
+# ChangeLog for games-server/tetrix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/tetrix/ChangeLog,v 1.1 2003/09/21 04:47:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/tetrix/ChangeLog,v 1.2 2003/09/22 02:40:45 vapier Exp $
 
 *tetrix-1.13.16.1.40c-r2 (17 Sep 2002)
 
