@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <lostlogic@gentoo.org> (21 Sep 2002)
+# Mask pending release of gentoo-sources-2.4.19-r10
+# Needed for lolo-sources-2.4.19.10*
+=sys-apps/jfsutils-1.0.22
+
 # <agenkin@gentoo.org> (21 Sep 2002)
 # Masking pending freeze.
 >=media-video/ogle-0.8.5
