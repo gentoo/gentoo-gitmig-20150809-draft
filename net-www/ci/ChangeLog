@@ -1,6 +1,12 @@
 # ChangeLog for net-www/ci
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ci/ChangeLog,v 1.1 2003/11/05 17:12:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ci/ChangeLog,v 1.2 2003/12/17 18:22:50 usata Exp $
+
+*ci-1.1.2 (18 Dec 2003)
+
+  18 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> ci-1.0.0.ebuild,
+  ci-1.1.2.ebuild:
+  Version bumped, corrected RDEPEND, marked previous version stable
 
 *ci-1.0.0 (06 Nov 2003)
 
