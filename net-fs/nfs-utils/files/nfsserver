@@ -1,0 +1,36 @@
+#!/bin/sh
+#RCUPDATE:3 4:73:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE="nfs-server"
+EXE="/sbin/nfsd"
+opts="start stop restart"
+
+start() {
+		ebegin "Starting ${SERVICE}"
+	        start-stop-daemon --start --quiet --exec /sbin/rpc.statd 1>&2
+		start-stop-daemon --start --quiet --exec /sbin/rpc.lockd 1>&2
+		start-stop-daemon --start --quiet --exec /sbin/exportfs -- -r 1>&2
+		start-stop-daemon --start --quiet --exec /sbin/rpc.mountd 1>&2
+		start-stop-daemon --start --quiet --exec /sbin/rpc.nfsd 1>&2
+		eend $? "Error starting ${SERVICE}."
+}
+
+stop() {
+		ebegin "Stopping ${SERVICE}"
+		start-stop-daemon --stop --quiet --exec /sbin/exportfs -- -au 1>&2
+		killall -9 nfsd 1>&2
+		start-stop-daemon --stop --quiet --exec /sbin/rpc.mountd 1>&2
+		killall -9 lockd 1>&2
+		start-stop-daemon --stop --quiet --exec /sbin/rpc.statd 1>&2
+		eend $? "Error stopping ${SERVICE}."
+}
+
+restart() {
+		stop
+		start
+}
+
+doservice ${@}
+

@@ -1,0 +1,41 @@
+#!/bin/sh
+#RCUPDATE:2 3 4:75:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE0=nmbd
+SERVICE1=smbd
+opts="start stop restart"
+
+EXE0=/usr/sbin/nmbd
+EXE1=/usr/sbin/smbd
+
+start() {
+		ebegin "Starting $SERVICE0..."
+     		start-stop-daemon --start --quiet --exec $EXE0 
+		eend $? "Started $SERVICE0." "Error Starting $SERVICE0."
+		ebegin "Starting $SERVICE1..."
+     		start-stop-daemon --start --quiet --exec $EXE1 
+		eend $? "Started $SERVICE1." "Error Starting $SERVICE1."
+
+}
+
+stop() {
+		ebegin "Stopping $SERVICE0..."
+		start-stop-daemon --stop --quiet --exec $EXE0
+		eend $? "Stopped $SERVICE0." "Error Stopping $SERVICE0."
+		ebegin "Stopping $SERVICE1..."
+		start-stop-daemon --stop --quiet --exec $EXE1
+		eend $? "Stopped $SERVICE1." "Error Stopping $SERVICE1."
+
+}
+
+restart () {
+	stop
+	start
+}
+
+doservice ${@}
+
+
+
