@@ -1,7 +1,7 @@
 # (C) 2002 The TelemetryBox Corporation. http://telemetrybox.biz
 # Christoph Lameter, <christoph@lameter.com>, July 15, 2002
-# Released under the GPL
-#
+# $Header: /var/cvsroot/gentoo-x86/app-admin/livecd/livecd-0.5.1.ebuild,v 1.4 2002/10/17 01:28:05 vapier Exp $
+
 DESCRIPTION="Generate a bootable Gentoo live CD. With ability to deploy Gentoo easily. Includes lilo boot time pengiun animation"
 HOMEPAGE="http://cdimages.telemetrybox.org/gentoo/"
 SRC_URI="http://cdimages.telemetrybox.org/gentoo/download/${P}.tar.gz"
@@ -18,6 +18,6 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	emake DESTDIR=${D} install || die
 }
