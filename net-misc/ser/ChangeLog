@@ -2,6 +2,19 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # $Header
 
+*ser-0.8.10 (15 Nov 2002)
+
+  15 Nov 2002; Matt Keadle <mkeadle@gentoo.org> ser-0.9.10.ebuild
+  ChangeLog files/digest-ser-0.8.10:
+
+  Security update. From the iptel.org website: "We discovered the security
+  bug #1 in SER. If the SL module tries to filter ACKs without a To header
+  SER can crash. * We strongly recommend all users to update to version
+  0.8.10."
+
+  Bug #1 is described as "Filtering ACKs without To header with the SL
+  module can crash SER"
+
 *ser-0.8.9 (5 Nov 2002)
   
   5 Nov 2002; Matt Keadle <mkeadle@gentoo.org> ser-0.8.9.ebuild
