@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Craig Joly <joly@ee.ualberta.ca>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.29.ebuild,v 1.1 2001/08/29 23:35:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.29.ebuild,v 1.2 2001/08/30 02:15:44 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
@@ -20,7 +20,10 @@ src_unpack() {
 
 src_compile() {
 	#use $CFLAGS for user tools, but standard kernel optimizations for the kernel modules (for compatibility)
-	./Configure -n --kernel=/usr/src/linux-2.4.8-ac8 --force --arch="$CHOST" --uflags="$CFLAGS" --kflags="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer" --cardbus --pnp --apm || die "failed configuring"
+	./Configure -n --kernel=/usr/src/linux-2.4.8-ac8 --force --arch="$CHOST" --uflags="$CFLAGS" --kflags="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer" --cardbus --nopnp --noapm || die "failed configuring"
+	#nopnp and noapm are important, because without them the pcmcia-cs tools will require a kernel with ISA PnP and/or
+	#APM support, which cannot be guaranteed.  We need to make sure the tools work *all* the time, not just some of
+	#the time.
 	emake all || die "failed compiling"
 }
 
