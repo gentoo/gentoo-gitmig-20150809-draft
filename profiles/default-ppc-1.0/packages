@@ -66,6 +66,8 @@ net-www/netscape-plugger
 ~dev-java/sun-j2ee
 ~dev-java/ibm-jre
 ~app-emulation/basiliskII
+~sys-apps/yard
+~app-emulation/dosemu
 
 # temp (to fix) currently x86 only builds 
 # that can be adjusted for ppc (gerk)
