@@ -1,13 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d965bda05727b43adf4b19ed0c428c9f quintuple-agent-1.0.3.ebuild 1045
-MD5 2104d31743e12cffaecc58c6d96409f8 ChangeLog 484
+MD5 a3918391a65d398d8a70f6eb6c8720ce ChangeLog 736
+MD5 848fe7c5f530f8fcf3c31c596b0ea52f quintuple-agent-1.0.3.ebuild 1039
+MD5 566cf4f89e44670d0aba4a745913d748 metadata.xml 224
 MD5 3c4ed3ac9f343c61fd3bd9776a428c26 files/digest-quintuple-agent-1.0.3 73
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBONhKCHk4+ZoBpvsRAh7yAJ4msUu1jQTq89ah4As4zvdW+GlcMgCfa6/U
-nko7snH44MW8UA46976Vk74=
-=gA4f
+iD8DBQFBSpVxmdTrptrqvGERAh7gAJ0enq1iFNXrkq+DkaYvkkEuUQZEMwCdEbzP
+8hV3TKt31bELc/RzdldcgCM=
+=nw7s
 -----END PGP SIGNATURE-----
