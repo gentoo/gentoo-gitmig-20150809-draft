@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-xmlbeans
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.5 2005/01/08 02:48:45 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.6 2005/01/10 20:02:58 luckyduck Exp $
+
+  10 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  xml-xmlbeans-20041217.ebuild:
+  finally fixed the junit dependency nightmare. fixes #77097.
 
   08 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
   xml-xmlbeans-20041217.ebuild:
