@@ -1,0 +1,14 @@
+--- configure.org	2003-12-24 14:16:13.000000000 +0100
++++ configure	2005-01-05 13:13:30.524432304 +0100
+@@ -7299,8 +7299,10 @@
+    { (exit 1); exit 1; }; }
+ fi
+ 
+-X_LIBRARY_PATH=-L$x_libraries
++if test "x$x_libraries" != x; then
++	X_LIBRARY_PATH=-L$x_libraries
+ 
++fi
+ 
+ # Checks for libraries.
+ 
