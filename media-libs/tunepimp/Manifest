@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c84d85cda204ab02261e1e71d2211f44 ChangeLog 1530
+MD5 3f426be585fa5e1af56f0dd02926601d ChangeLog 1639
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 fcb49f4cb9c4e408ffbc0da4dde66d6a tunepimp-0.3.0.ebuild 1059
+MD5 6ef37f1c05f082bff871e98e7a03d7d9 tunepimp-0.3.0.ebuild 1521
 MD5 f79074eba8191dbaded3e898a9e6faf9 files/digest-tunepimp-0.3.0 69
 MD5 9df04c3c157b652e3e895eeabb7015e6 files/thread.patch 393
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB9ZtaroRuSHgZdywRAvtTAJ9hEPNoYth77JaJh7hvjOCqqJIUbwCfcgAO
-1MmJ+Nu7N3bDxIGzfGboMFM=
-=IUfA
+iD8DBQFB9kpSxtZcznfol0URAoxOAJ0ThG8qMeI1i572xf22vGmzUD9xjwCgj+3k
+/Z5K+/GRfHpfMW1Dh1nPdd8=
+=kzGg
 -----END PGP SIGNATURE-----

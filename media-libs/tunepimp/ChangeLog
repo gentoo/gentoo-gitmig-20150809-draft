@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tunepimp
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.13 2004/12/18 22:26:04 corsair Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.14 2005/01/25 13:31:43 fserb Exp $
+
+  25 Jan 2005; Fernando Serboncini <fserb@gentoo.org> tunepimp-0.3.0.ebuild:
+  Added python and perl bindings
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> tunepimp-0.3.0.ebuild:
   Stable on ppc64
