@@ -21,7 +21,12 @@
 ##   End example
 ##
 
-# <danarmak@gentoo.org> ( 28 Jan 2002)
+# <vapier@gentoo.org> (28 Jan 2003)
+# overwrites glibc and breaks other packages :/
+# Bugs #14378 #14459
+app-crypt/heimdal
+
+# <danarmak@gentoo.org> (28 Jan 2003)
 # new revisions, masked so i can commit them untested. they contain various fixes.
 # after initial testing by the bug reporters i'll mark them ~
 =kde-base/kdelibs-3.0.5a-r1
