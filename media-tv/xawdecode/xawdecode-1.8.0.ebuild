@@ -1,5 +1,5 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2 
+# Distributed under the terms of the GNU General Public License v2
 # $Header:
 
 IUSE="alsa jpeg encode ffmpeg xvid lirc xosd"
@@ -58,7 +58,7 @@ src_compile() {
 	use xosd \
 		&& myconf="${myconf} --enable-xosd" \
 		|| myconf="${myconf} --disable-xosd"
-	
+
 	econf ${myconf} || die "Configuration failed."
 
 	emake PERF_FLAGS="${CFLAGS}" || die "Compilation failed."
