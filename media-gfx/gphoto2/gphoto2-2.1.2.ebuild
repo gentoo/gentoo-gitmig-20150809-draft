@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.2.ebuild,v 1.5 2003/10/27 02:19:04 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.2.ebuild,v 1.6 2004/02/18 14:27:37 agriffis Exp $
 
 inherit libtool flag-o-matic
 
