@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.0.1.ebuild,v 1.8 2004/03/14 02:40:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.0.1.ebuild,v 1.9 2004/04/26 17:51:45 agriffis Exp $
 
 S=${WORKDIR}
 HOMEPAGE="http://regina-rexx.sourceforge.net"
@@ -15,7 +15,7 @@ DEPEND="app-arch/unzip"
 
 src_compile() {
 	autoconf || die "autoconf problem"
-	econf
+	econf || die "econf failed"
 	mv Makefile Makefile~
 	sed <Makefile~ >Makefile \
 		-e 's|-$(INSTALL) -m 755 -c ./rxstack.init.d $(STARTUPDIR)/rxstack||' \

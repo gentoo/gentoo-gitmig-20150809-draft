@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.8 2003/12/02 14:49:30 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.9 2004/04/26 17:49:59 agriffis Exp $
 
 DESCRIPTION="Helium (for learning Haskell)"
 HOMEPAGE="http://www.cs.uu.nl/helium"
@@ -41,7 +41,7 @@ src_compile() {
 	popd
 	popd
 	pushd heliumNT || die
-	econf --without-upx
+	econf --without-upx || die "econf failed"
 	pushd src || die
 	make depend || die
 	make || die # emake doesn't work safely
