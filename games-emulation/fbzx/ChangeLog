@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/fbzx
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/ChangeLog,v 1.1 2004/03/21 20:17:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/ChangeLog,v 1.2 2004/04/22 10:06:02 mr_bones_ Exp $
+
+  22 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> fbzx-1.4.ebuild:
+  keyword for x86; depend on sed >= 4; use games eclass; error check; tidy
 
 *fbzx-1.4 (21 Mar 2004)
 
