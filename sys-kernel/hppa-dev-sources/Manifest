@@ -1,9 +1,10 @@
 MD5 f1b3ae515c1f32812ecbf25193148a90 metadata.xml 223
-MD5 49711b2485a2240ed24255743424c017 ChangeLog 4034
+MD5 b0b3fd3f8e5712b1d3b28403c13d94c8 ChangeLog 4180
 MD5 ae5609d9bd55ed7d9792b7b86da4df6b hppa-dev-sources-2.6.7_p1-r2.ebuild 1180
 MD5 05bef7ac2c9a5cdf016c4be6f71d034b hppa-dev-sources-2.6.7_p14.ebuild 1176
 MD5 73864d24b030876a0f811d73fdbf556c hppa-dev-sources-2.6.7_p14-r1.ebuild 1449
 MD5 8a5dcdd36fad48c8be430484eb1e8763 hppa-dev-sources-2.6.8.1_p4.ebuild 1097
+MD5 6d1df511887a249abe988d03014222ee hppa-dev-sources-2.6.8.1_p7.ebuild 1097
 MD5 c857b174f7e6a6b0ab2e26f9306ad0a0 files/ncr53c8xx.diff 3701
 MD5 c91330cc5b4044b6f59696095c2dc0fb files/CAN-2004-0626-death_packet.patch 423
 MD5 b6e38b41c8a79943df2ab2642149d06f files/CAN-2004-0497.patch 2214
@@ -14,3 +15,4 @@ MD5 2c3b568f5f12b140ab983b53543bca15 files/digest-hppa-dev-sources-2.6.7_p14-r1 
 MD5 b36a855496ce31ee483358985b3a409c files/firmware.c.patch 3604
 MD5 222e890035f4ad3152f0c2a625a9ea67 files/security-proc-cmdline.patch 693
 MD5 7b34a4d3459e54856da6bbcf081caf5f files/digest-hppa-dev-sources-2.6.8.1_p4 132
+MD5 069b3319e774cc246fc3d03a4c648e39 files/digest-hppa-dev-sources-2.6.8.1_p7 132

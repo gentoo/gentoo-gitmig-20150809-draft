@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hppa-dev-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-dev-sources/ChangeLog,v 1.21 2004/08/17 13:48:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-dev-sources/ChangeLog,v 1.22 2004/08/31 12:43:39 gmsoft Exp $
+
+*hppa-dev-sources-2.6.8.1_p7 (31 Aug 2004)
+
+  31 Aug 2004; Guy Martin <gmsoft@gentoo.org>
+  +hppa-dev-sources-2.6.8.1_p7.ebuild:
+  Version bump.
 
 *hppa-dev-sources-2.6.8.1_p4 (17 Aug 2004)
 
