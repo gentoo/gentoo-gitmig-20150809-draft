@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dcron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.21 2003/12/12 18:08:41 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.22 2003/12/27 05:14:55 seemant Exp $
+
+  26 Dec 2003; Seemant Kulleen <seemant@gentoo.org> dcron-2.7-r10.ebuild,
+  dcron-2.9-r1.ebuild, dcron-2.9.ebuild:
+  keepdir instead of dodir, closing bug #36221 by Anders Bruun Olsen
+  <anders@bruun-olsen.net>
 
   12 Dec 2003; Chris PeBenito <pebenito@gentoo.org> files/crontab,
   files/crontab-2.9-r1:
