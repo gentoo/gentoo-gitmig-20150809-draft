@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.19 2003/07/27 09:22:27 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.20 2003/07/27 10:32:12 raker Exp $
 
 inherit eutils
 
@@ -237,9 +237,9 @@ src_install() {
 	dodir /var/log/qmail/qmail-pop3d
 
 	insinto /var/qmail/supervise/qmail-pop3d
-	newins ${FILESDIR}/run-qmailpop3d run
+	newins ${FILESDIR}/${PV}-${PR}/run-qmailpop3d run
 	insinto /var/qmail/supervise/qmail-pop3d/log
-	newins ${FILESDIR}/run-qmailpop3dlog run
+	newins ${FILESDIR}/${PV}-${PR}/run-qmailpop3dlog run
 }
 
 pkg_postinst() {
