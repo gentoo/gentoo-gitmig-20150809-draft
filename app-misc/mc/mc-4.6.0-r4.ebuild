@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r4.ebuild,v 1.1 2003/10/11 18:02:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r4.ebuild,v 1.2 2003/12/06 21:56:45 lanius Exp $
 
 IUSE="gpm nls samba ncurses X slang"
 
@@ -58,7 +58,7 @@ src_compile() {
 
 	use samba \
 	    && myconf="${myconf} --with-samba --with-configdir=/etc/samba
-				--with-codepagedir=/var/lib/samba/codepages" \
+				--with-codepagedir=/var/lib/samba/codepages --with-privatedir=/etc/samba/private" \
 	    || myconf="${myconf} --without-samba"
 
 	econf \
