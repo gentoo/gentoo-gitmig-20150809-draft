@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.307 2004/12/14 23:55:28 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.308 2004/12/15 21:48:41 kloeri Exp $
+
+  15 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> :
+  Fix broken digest, bug 74531.
 
   14 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> apache-1.3.33.ebuild:
   Also fix src_uri in apache-1.x.
