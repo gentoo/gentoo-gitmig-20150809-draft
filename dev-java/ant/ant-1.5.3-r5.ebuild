@@ -1,17 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.3-r5.ebuild,v 1.3 2003/09/06 22:26:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.3-r5.ebuild,v 1.4 2003/09/22 03:44:49 strider Exp $
 
 inherit java-pkg
 
 S="${WORKDIR}/apache-ant-${PV}-1"
 DESCRIPTION="Java-based build tool similar to 'make' that uses XML configuration files."
-SRC_URI="mirror://apache/ant/source/apache-${PN}-${PV}-1-src.tar.bz2"
+SRC_URI="http://archive.apache.org/dist/ant/source/apache-${PN}-${PV}-1-src.tar.bz2"
 HOMEPAGE="http://ant.apache.org"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
-DEPEND="virtual/glibc"
+KEYWORDS="x86 ppc sparc alpha"
+DEPEND="virtual/glibc
+	>=virtual/jdk-1.3"
 RDEPEND=">=virtual/jdk-1.3"
 IUSE="doc"
 
@@ -67,6 +68,12 @@ src_compile() {
 	if [ -f "/usr/share/antlr/lib/antlr.jar" ] ; then
 		export CLASSPATH="${CLASSPATH}:/usr/share/antlr/lib/antlr.jar"
 		export DEP_APPEND="${DEP_APPEND} antlr"
+	fi
+
+	# add bcel if we have it
+	if [ -f "/usr/share/bcel/lib/bcel.jar" ] ; then
+		export CLASSPATH="${CLASSPATH}:/usr/share/bcel/lib/bcel.jar"
+		export DEP_APPEND="${DEP_APPEND} bcel"
 	fi
 
 	./build.sh -Ddist.dir=${D}/usr/share/ant || die

@@ -1,19 +1,29 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.3-r3.ebuild,v 1.3 2003/09/06 22:26:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.5.4.ebuild,v 1.1 2003/09/22 03:44:49 strider Exp $
 
 inherit java-pkg
 
-S="${WORKDIR}/apache-ant-${PV}-1"
+S="${WORKDIR}/apache-ant-${PV}"
 DESCRIPTION="Java-based build tool similar to 'make' that uses XML configuration files."
-SRC_URI="mirror://apache/ant/source/apache-${PN}-${PV}-1-src.tar.bz2"
+SRC_URI="mirror://apache/ant/source/apache-${PN}-${PV}-src.tar.bz2"
 HOMEPAGE="http://ant.apache.org"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
-DEPEND="virtual/glibc"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+DEPEND="virtual/glibc
+	>=virtual/jdk-1.3"
 RDEPEND=">=virtual/jdk-1.3"
 IUSE="doc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Patch build.sh to die with non-zero exit code in case of errors.
+	# This patch may be useful for all ant versions.
+	epatch ${FILESDIR}/build.sh-exit-fix.patch.gz
+}
 
 src_compile() {
 	export JAVA_HOME=${JDK_HOME}
@@ -56,6 +66,12 @@ src_compile() {
 		export DEP_APPEND="${DEP_APPEND} antlr"
 	fi
 
+	# add bcel if we have it
+	if [ -f "/usr/share/bcel/lib/bcel.jar" ] ; then
+		export CLASSPATH="${CLASSPATH}:/usr/share/bcel/lib/bcel.jar"
+		export DEP_APPEND="${DEP_APPEND} bcel"
+	fi
+
 	./build.sh -Ddist.dir=${D}/usr/share/ant || die
 }
 
@@ -64,6 +80,9 @@ src_install() {
 
 	exeinto /usr/bin
 	doexe src/ant
+	for each in antRun runant.pl runant.py complete-ant-cmd.pl ; do
+		dobin ${S}/src/script/${each}
+	done
 
 	java-pkg_dojar build/lib/*.jar
 
