@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/siag/siag-3.5.2-r2.ebuild,v 1.8 2003/02/13 09:20:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/siag/siag-3.5.2-r2.ebuild,v 1.9 2003/06/12 16:57:21 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A free Office package for Linux"
@@ -14,7 +14,6 @@ KEYWORDS="x86"
 
 DEPEND="virtual/x11
 	>=dev-libs/gmp-3.1.1
-	>=media-libs/xpm-3.4
 	>=x11-misc/mowitz-0.2.1
 	>=dev-lang/tcl-8.0.0"
 #	>=media-libs/t1lib-1.0.1"
