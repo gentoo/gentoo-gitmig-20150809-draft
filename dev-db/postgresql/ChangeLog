@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.129 2004/09/17 19:11:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.130 2004/09/28 01:13:38 nakano Exp $
+
+*postgresql-8.0.0_beta3 (28 Sep 2004)
+
+  28 Sep 2004; Masatomo Nakano <nakano@gentoo.org>
+  +files/postgresql-8.0.0_beta3-gentoo.patch, +postgresql-8.0.0_beta3.ebuild:
+  Version bump.
 
   17 Sep 2004; Jason Wever <weeve@gentoo.org> postgresql-7.4.5.ebuild:
   Stable on sparc.
