@@ -682,6 +682,26 @@ dev-lang/tcl-tk
 dev-libs/libIDL
 x11-libs/libzvt
 x11-libs/libwnck
+gnome-base/ORBit2
+gnome-base/bonobo-activation 
+>=gnome-base/control-center-1.99.10.ebuild
+>=gnome-base/eel-1.1.14.ebuild
+gnome-base/gail
+>=gnome-base/gconf-1.1.0
+>=gnome-base/gnome-applets-1.100.0
+gome-base/gnome-common
+gnome-base/gnome-desktop
+gnome-base/gnome-panel
+gnome-base/gnome-session
+>=gnome-base/gnome-vfs-1.9.0
+gnome-base/libbonobo
+gnome-base/libbonobui
+gnome-base/libgnome
+gnome-base/libgnomecanvas
+gnome-base/libgnomeui
+>=gnome-base/libgtop-1.90.0
+>=gnome-base/librsvg-1.1.0
+
 
 
 # spider@gentoo.org ; 18 Apr 2002
