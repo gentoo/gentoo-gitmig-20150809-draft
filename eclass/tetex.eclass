@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.22 2004/10/26 05:37:35 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.23 2004/10/28 11:49:26 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -130,7 +130,11 @@ tetex_src_compile() {
 		${xdvik} \
 		${TETEX_ECONF} || die
 
-	emake -j1 texmf=/usr/share/texmf || die "make teTeX failed"
+	if [ "${TETEX_PV}" == "2.0.2" ] ; then
+		emake -j1 texmf=/usr/share/texmf || die "make teTeX failed"
+	else
+		emake -j1 texmf=/var/lib/texmf || die "make teTeX failed"
+	fi
 }
 
 tetex_src_install() {
@@ -152,11 +156,15 @@ tetex_src_install() {
 				insinto /usr/share/texmf/tex/latex/a0poster
 				doins ${S}/texmf/source/latex/a0poster/a0poster.cls || die
 				doins ${S}/texmf/source/latex/a0poster/a0size.sty || die
+				# Install teTeX files
+				einfo "Installing teTeX ..."
+				einstall bindir=${D}/usr/bin texmf=${D}/usr/share/texmf || die
+			else
+				# Install teTeX files
+				einfo "Installing teTeX ..."
+				dodir /var/lib/texmf
+				einstall bindir=${D}/usr/bin texmf=${D}/var/lib/texmf || die
 			fi
-
-			# Install teTeX files
-			einfo "Installing teTeX ..."
-			einstall bindir=${D}/usr/bin texmf=${D}/usr/share/texmf || die
 			;;
 		doc)
 			dodoc PROBLEMS README
@@ -218,45 +226,35 @@ tetex_src_install() {
 			chown -R root:root ${D}/usr/share/texmf
 			;;
 		link)	# link is for tetex-beta
+			dodir /etc/env.d
+			echo 'CONFIG_PROTECT="/var/lib/texmf"' > ${D}/etc/env.d/98tetex
 			# populate /etc/texmf
-			dodir /etc/texmf /etc/texmf/tex
-			for f in texmf.cnf updmap.cfg ; do
-				mv ${D}/usr/share/texmf/web2c/$f \
-					${D}/etc/texmf \
-					|| die "mv $f failed."
-				cd ${D}/usr/share/texmf/web2c
-				ln -s ../../../../etc/texmf/$f . \
-					|| die "ln -s $f failed."
-				cd -
+			dodir /etc/texmf
+			pushd ${D}/usr/share
+			for d in $(find texmf -name config -type d) ; do
+				dodir /etc/${d}
+				for f in ${D}/usr/share/$d/* ; do
+					mv $f ${D}/etc/$d || die "mv $f failed"
+					dosym /etc/$d/$(basename $f) /usr/share/$d/$(basename $f)
+				done
 			done
-			for cfg in context dvipdfm metafont metapost ; do
-				einfo "Symlinking from /etc/texmf/${cfg} ..."
-				mv ${D}/usr/share/texmf/${cfg}/config \
-					${D}/etc/texmf/${cfg} \
-					|| die "mv ${cfg} failed."
-				cd ${D}/usr/share/texmf/${cfg}
-				ln -s ../../../../etc/texmf/${cfg} config \
-					|| die "ln -s ${cfg} failed."
-				cd -
-			done
-			for cfg in tex/{amstex,context,cyrplain,generic,lambda,latex,mex,plain,platex} ; do
-				einfo "Symlinking from /etc/texmf/${cfg} ..."
-				mv ${D}/usr/share/texmf/${cfg}/config \
-					${D}/etc/texmf/${cfg} \
-					|| die "mv ${cfg} failed."
-				cd ${D}/usr/share/texmf/${cfg}
-				ln -s ../../../../../etc/texmf/${cfg} config \
-					|| die "ln -s ${cfg} failed."
-				cd -
+			for f in $(find texmf -name '*.cnf' -o -name '*.cfg' -type f) ; do
+				if [ "${f/source/}" != "${f}" -o "${f/config/}" != "${f}" ] ; then
+					continue
+				fi
+				dodir /etc/$(dirname $f)
+				mv ${D}/usr/share/$f ${D}/etc/$(dirname $f) || die "mv $f failed."
+				dosym /etc/$f /usr/share/$f
 			done
 			if useq X ; then
-				dodir /etc/texmf/xdvi
-				mv ${D}/usr/share/texmf/xdvi/{xdvi.cfg,XDvi} \
-					${D}/etc/texmf/xdvi \
-					|| die "mv xdvi failed."
-				dosym {/etc,/usr/share}/texmf/xdvi/xdvi.cfg
-				dosym {/etc,/usr/share}/texmf/xdvi/XDvi
+				dodir /etc/X11/app-defaults /etc/texmf/xdvi
+				mv ${D}/var/lib/texmf/xdvi/XDvi ${D}/etc/X11/app-defaults || die "mv XDvi failed"
+				dosym /etc/X11/app-defaults/XDvi /var/lib/texmf/xdvi/XDvi
+				mv ${D}{/var/lib,/etc}/texmf/xdvi/xdvi.cfg || die "mv xdvi.cfg failed"
+				dosym {/etc,/var/lib}/texmf/xdvi/xdvi.cfg
 			fi
+			dodir /var/lib/texmf/web2c
+			popd
 			;;
 		cnf)	# cnf is for tetex-2.0.2
 			dodir /etc/env.d/
@@ -286,17 +284,16 @@ tetex_src_install() {
 
 tetex_pkg_preinst() {
 
-	for d in context dvipdfm metafont metapost tex/{amstex,context,cyrplain,generic,lambda,latex,mex,plain,platex} ; do
-		if [ -d "${ROOT}usr/share/texmf/$d/config" ]
-		then
-			# Portage doesn't handle symbolic links well.
-			ewarn "Removing ${ROOT}usr/share/texmf/$d/config"
-			#tar -C ${ROOT}usr/share/texmf -cf - $d/config | ( cd ${T} ; tar -xpf - )
-			rm -rf "${ROOT}usr/share/texmf/$d/config"
-		fi
-	done
-
 	if [ "${PV}" != "2.0.2" ] ; then
+		for d in $(find ${ROOT}usr/share/texmf -name config \( -type d -o -type l \)) ; do
+			if [ -d "$d" ]
+			then
+				# Portage doesn't handle symbolic links well.
+				ewarn "Removing $d"
+				rm -rf "$d"
+			fi
+		done
+
 		ewarn "Removing ${ROOT}usr/share/texmf/web2c"
 		rm -rf "${ROOT}usr/share/texmf/web2c"
 	fi
