@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.446 2004/06/24 17:33:14 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.447 2004/06/25 02:44:14 ribosome Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -57,6 +57,7 @@ app-pda/multisync:irmc - Adds support for Mobile Client synchronization via IrDa
 app-pda/multisync:opie - Adds support for PDAs based on the OPIE distribution (eg: Zaurus)
 app-pda/synce-kde:avantgo - Adds support for syncing Avantgo accounts.
 app-sci/coq:norealanalysis - Do not build real analysis modules (faster compilation).
+app-sci/emboss:no-biodata - Do not install the biological databases used by some programs.
 app-sci/gmt:gmtfull - Full resolution bathimetry database;
 app-sci/gmt:gmthigh - Adds high resolution bathimetry database
 app-sci/gmt:gmtsuppl - Supplement functions for GMT;
