@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.8 2004/06/12 03:29:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.9 2004/06/12 14:46:51 g2boojum Exp $
+
+*dovecot-0.99.10.5-r1 (12 Jun 2004)
+
+  12 Jun 2004; Grant Goodyear <g2boojum@gentoo.org>
+  +dovecot-0.99.10.4-r1.ebuild, -dovecot-0.99.10.4.ebuild,
+  +dovecot-0.99.10.5-r1.ebuild, -dovecot-0.99.10.5.ebuild:
+  Security fix: old ebuilds installed /etc/dovecot.conf w/ 0644 
+  permissions, but sql passwords might be stored there.
+  
+  Thanks to Andreas Simon (Bug #53707).
 
   11 Jun 2004; Aron Griffis <agriffis@gentoo.org> dovecot-0.99.10.4.ebuild:
   Fix use invocation

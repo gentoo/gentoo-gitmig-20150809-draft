@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.10.4.ebuild,v 1.5 2004/06/12 03:29:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.10.5-r1.ebuild,v 1.1 2004/06/12 14:46:51 g2boojum Exp $
 
-IUSE="debug gnutls ipv6 ldap maildir pam postgres sasl ssl vpopmail nopop3d"
+IUSE="debug ipv6 ldap mbox pam postgres sasl ssl gnutls vpopmail nopop3d"
 
 DESCRIPTION="An IMAP and POP3 server written with security primarily in mind"
 HOMEPAGE="http://dovecot.procontrol.fi/"
@@ -10,7 +10,7 @@ SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~amd64 ~sparc"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
 
 #PROVIDE="virtual/imapd"
 
@@ -51,8 +51,9 @@ src_compile() {
 	use pam || myconf="${myconf} --without-pam"
 	use postgres && myconf="${myconf} --with-pgsql"
 	use sasl && myconf="${myconf} --with-cyrus-sasl2"
+	# prefer gnutls to ssl if both gnutls and ssl are defined
 	use gnutls && myconf="${myconf} --with-ssl=gnutls"
-	use ssl && myconf="${myconf} --with-ssl=openssl"
+	use ssl && ! use gnutls && myconf="${myconf} --with-ssl=openssl"
 	! use gnutls && ! use ssl && myconf="${myconf} --without-ssl"
 	use vpopmail || myconf="${myconf} --without-vpopmail"
 
@@ -69,21 +70,32 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
-
-	# If /etc/dovecot.conf doesn't already exist, install a copy of
-	# dovecot-example.conf, changing the default mailbox locations to
-	# Gentoo's default ($HOME/.maildiir/ or /var/spool/mail/$USER)
-	if [ ! -e /etc/dovecot.conf ]; then
-		cd ${D}/etc
-		if use maildir; then
-			sed s/^#default_mail_env.*$/default_mail_env\ =\ maildir:%h\\/.maildir/	dovecot-example.conf > dovecot.conf
-		else
-			sed s/^#default_mail_env.*$/default_mail_env\ =\ mbox:\\/var\\/spool\\/mail\\/%u/ dovecot-example.conf > dovecot.conf
+	# Create the dovecot.conf file from the dovecot-example.conf file that
+	# the dovecot folks nicely left for us, changing the default
+	# mail spool locations to the Gentoo defaults.  
+	if use mbox
+	then
+		# /var/spool/mail/$USER mail spool
+		# The location of the INDEX may be overridden by the user if desired.
+		if [ -z ${DOVECOT_INDEX_PATH} ]
+		then
+			DOVECOT_INDEX_PATH="/var/dovecot/%d/%n"
+			dodir /var/dovecot
 		fi
-		cd -
+		sed -e \
+			"s|#default_mail_env =|#default_mail_env = mbox:/var/spool/mail/%u:INDEX=${DOVECOT_INDEX_PATH}|" \
+			dovecot-example.conf > dovecot.conf
+	else
+		# $HOME/.maildir mail spool.  
+		sed -e \
+			's|#default_mail_env =|default_mail_env = maildir:%h/.maildir|' \
+			dovecot-example.conf > dovecot.conf
 	fi
-	rm -f ${D}/etc/dovecot-example.conf
+	insinto /etc
+	doins dovecot.conf
+
+	make DESTDIR=${D} install || die
+	rm ${D}/etc/dovecot-example.conf
 
 	# Documentation
 	rm -fr ${D}/usr/share/doc/dovecot
@@ -94,8 +106,7 @@ src_install () {
 	# per default dovecot wants it ssl cert called dovecot.pem
 	# fix this in mkcert.sh, which we use to generate the ssl certs
 	cd ${S}/doc
-	mv mkcert.sh mkcert.sh.tmp
-	sed s/imapd.pem/dovecot.pem/g mkcert.sh.tmp > mkcert.sh
+	sed -ie 's/imapd.pem/dovecot.pem/g' mkcert.sh
 	dodoc mkcert.sh
 
 	# rc script
@@ -103,17 +114,20 @@ src_install () {
 	newexe ${FILESDIR}/dovecot.init dovecot
 
 	# PAM
-	if use pam ; then
+	if use pam
+	then
 		dodir /etc/pam.d
 		insinto /etc/pam.d
 		newins ${FILESDIR}/dovecot.pam dovecot
 	fi
 
 	# Create SSL certificates
-	if  use ssl || use gnutls ; then
+	if  use ssl || use gnutls
+	then
 		cd ${S}/doc
 		dodir /etc/ssl/certs
 		dodir /etc/ssl/private
+		# Let's not make a new certificate if we already have one
 		[ -e /etc/ssl/certs/dovecot.pem -a -e /etc/ssl/private/dovecot.pem ] \
 			|| SSLDIR=${D}/etc/ssl sh mkcert.sh
 	fi
@@ -124,10 +138,12 @@ src_install () {
 	keepdir /var/run/dovecot/login
 	fowners root:dovecot /var/run/dovecot/login
 	fperms 0750 /var/run/dovecot/login
+	fperms 0600 /etc/dovecot.conf
 }
 
 pkg_postinst() {
-	if use pam ; then
+	if use pam
+	then
 		ewarn "If you are upgrading from Dovecot prior to 0.99.10, be aware"
 		ewarn "that the PAM profile was changed from 'imap' to 'dovecot'."
 		einfo "Please review /etc/pam.d/dovecot."
