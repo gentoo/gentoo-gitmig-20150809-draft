@@ -401,7 +401,7 @@ net-misc/radvd
 
 # <george@gentoo.org> (19 Jul 2002)
 # masked for testing
-dev-lang/tcc
+=dev-lang/tcc-0.9.8
 
 # <nitro@gentoo.org> (19 Jun 2002)
 # new version, please test
