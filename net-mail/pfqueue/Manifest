@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a9fffdbe3305ccf7d51c1e9dc5c1cb83 ChangeLog 815
+MD5 c03e792757906f9e0192e0b023622621 ChangeLog 991
 MD5 0af509f3571287a4de162a0953c762a6 pfqueue-0.3.0.ebuild 748
 MD5 24aa54e8d650d998661c7ed2512d0433 metadata.xml 342
 MD5 02c1c4ad42e8bdccf6cbe8083f9e800b pfqueue-0.2.1.ebuild 748
 MD5 7e6654198e82d9f5995e50313d66c990 pfqueue-0.2.0.ebuild 748
+MD5 987b74fd2978518c312797fd84c04d4c pfqueue-0.3.1.ebuild 575
+MD5 8c214e6ed9ebe956b7e5786015943cb6 files/digest-pfqueue-0.3.1 65
 MD5 cf94d6a3c0cbe0951c32087b21b34795 files/digest-pfqueue-0.2.0 65
 MD5 cecff46d0e2fdc06f1355cd96626fffb files/digest-pfqueue-0.2.1 65
 MD5 ede58b8b39f085ade991617aec19edf4 files/digest-pfqueue-0.3.0 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB/yhwQlM6RnzZP+IRAhorAJ4/Zv3kXeBz5p0OShEkvsTtFl0g6QCfTPwf
-Dq0kawz+hkoSKzOYjsjwHb4=
-=Yp4W
+iD8DBQFCD4ktQlM6RnzZP+IRApSpAJ9AYl2s1fUIZKH+JlA0D2nm1hIOsACfUrSG
+AJAuVRMEW5iFo59eXhvIoqU=
+=rz/X
 -----END PGP SIGNATURE-----
