@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/Locale-gettext-1.01-r1.ebuild,v 1.6 2003/08/07 02:16:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/Locale-gettext-1.01-r1.ebuild,v 1.7 2004/03/03 02:10:32 iggy Exp $
 
 inherit perl-module
 
@@ -13,6 +13,6 @@ SRC_URI="http://cpan.org/modules/by-module/Locale/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 amd64 sparc ~ppc ~alpha"
+KEYWORDS="x86 amd64 sparc ~ppc ~alpha s390"
 
 DEPEND="sys-devel/gettext"
