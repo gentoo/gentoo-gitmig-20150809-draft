@@ -1,8 +1,14 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.4 2002/12/15 17:07:27 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.5 2002/12/17 08:54:43 seemant Exp $
 
 *mldonkey-2.01-r1 (15 Dec 2002)
+
+  16 Dec 2002; Seemant Kulleen <seemant@gentoo.org> mldonkey-2.01.ebuild
+  mldonkey-2.01-r1.ebuild :
+
+  Moved 2.01 to stable, and changed the configure settings slightly.  Should
+  go into /var not /usr/var for the state stuff and use econf instead
 
   12 Dec 2002; Hannes Mehnert <hannes@mehnert.org> mldonkey-2.01-r1.ebuild:
   included patch from http://concept.free.free.fr/mldonkey/

@@ -1,32 +1,30 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.01.ebuild,v 1.2 2002/12/15 17:07:27 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.01.ebuild,v 1.3 2002/12/17 08:54:43 seemant Exp $
 
 IUSE="gtk"
+
+S=${WORKDIR}/${PN}
 DESCRIPTION="edonkey, opennap,... client written in ocaml"
 HOMEPAGE="http://www.nongnu.org/mldonkey/"
 SRC_URI="http://savannah.nongnu.org/download/${PN}/stable/${P}.sources.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
+
 DEPEND="gtk? ( >=lablgtk-1.2.3 )
-        >=ocaml-3.06
-		>=perl-5.6.1"
-S="${WORKDIR}/${PN}"
+	>=dev-lang/ocaml-3.06
+	sys-devel/perl"
 
 src_compile() {
 	use gtk || export GTK_CONFIG="no"
 
 	# the dirs are not (yet) used, but it doesn't hurt to specify them anyway
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
+	econf \
 		--sysconfdir=/etc/mldonkey \
-		--sharedstatedir=/usr/var/mldonkey \
-		--localstatedir=/usr/var/mldonkey \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
+		--sharedstatedir=/var/mldonkey \
+		--localstatedir=/var/mldonkey \
 
 	emake || die
 }
