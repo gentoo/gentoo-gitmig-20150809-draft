@@ -1,0 +1,24 @@
+Index: mp4atom.h
+===================================================================
+RCS file: /vws/pan/mpeg4ip/lib/mp4v2/mp4atom.h,v
+retrieving revision 1.30
+diff -c -w -r1.30 mp4atom.h
+*** mp4atom.h	5 Dec 2001 21:11:20 -0000	1.30
+--- mp4atom.h	3 Dec 2003 21:56:26 -0000
+***************
+*** 88,94 ****
+  		return m_type;
+  	};
+  	void SetType(const char* type) {
+! 		if (type) {
+  			ASSERT(strlen(type) == 4);
+  			memcpy(m_type, type, 4);
+  			m_type[4] = '\0';
+--- 88,94 ----
+  		return m_type;
+  	};
+  	void SetType(const char* type) {
+! 		if (type && *type != '\0') {
+  			ASSERT(strlen(type) == 4);
+  			memcpy(m_type, type, 4);
+  			m_type[4] = '\0';
