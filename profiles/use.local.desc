@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.129 2003/10/02 23:29:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.130 2003/10/03 19:44:55 leonardop Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -16,6 +16,9 @@ app-editors/xemacs:neXt - Chooses the neXt L&F widget set
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
 app-misc/grass:nviz - support GLw functionality
+app-misc/workrave:no-exercises - Disable exercises support
+app-misc/workrave:no-experimental - Compile without experimental features
+app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
 app-office/gnucash:ofx - Enable OFX support, for importing OFX data files.
 app-pda/multisync:opie - Adds support for PDAs based on the OPIE distribution (eg: Zaurus)

@@ -291,10 +291,6 @@ media-fonts/chkfontpath
 # waiting for jboss user to be added to passwd
 =net-www/jboss-3.2.1
 
-# <foser@gentoo.org> (7 May 2003)
-# New branch, not backwards compatible.
->=net-libs/gnet-2
-
 # <lu_zero@gentoo.org> (6 May 2003)
 # new binutils to be tested
 =sys-devel/binutils-2.14.90.0.1
