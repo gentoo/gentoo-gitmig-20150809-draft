@@ -1,20 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.04.ebuild,v 1.1 2002/06/29 21:01:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.04.ebuild,v 1.2 2002/08/01 18:50:56 karltk Exp $
 
 At="j2sdk-1_3_1_04-linux-i586.bin"
 S=${WORKDIR}/jdk1.3.1_04
 SRC_URI=""
 DESCRIPTION="Sun Java Development Kit 1.3.1"
 HOMEPAGE="http://java.sun.com/j2se/1.3/download-linux.html"
-
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.2"
 RDEPEND="$DEPEND"
-
 PROVIDE="virtual/jre-1.3
 	virtual/jdk-1.3
 	virtual/java-scheme-2"
+LICENSE="sun-bcla"
+SLOT="0"
+KEYWORDS="x86 -ppc -sparc -sparc64"
 	
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then

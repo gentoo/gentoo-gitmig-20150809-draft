@@ -7,9 +7,9 @@ S=${WORKDIR}/j2sdk1.4.0_01
 SRC_URI=""
 DESCRIPTION="Sun's J2SE Development Kit, version 1.4.0"
 HOMEPAGE="http://java.sun.com/j2se/1.4/download.html"
-LICENSE="SUN Binary"
+LICENSE="sun-bcla"
 SLOT="0"
-
+KEYWORDS="x86"
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.1.3"
 RDEPEND="$DEPEND"
