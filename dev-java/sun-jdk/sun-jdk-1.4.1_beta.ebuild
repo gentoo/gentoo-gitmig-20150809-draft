@@ -1,6 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.1_beta.ebuild,v 1.3 2002/08/19 17:52:39 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.1_beta.ebuild,v 1.4 2002/08/26 16:47:25 karltk Exp $
+
+. /usr/portage/eclass/inherit.eclass
+inherit java
 
 At="j2sdk-1_4_1-beta-linux-i586.bin"
 S=${WORKDIR}/j2sdk1.4.1
@@ -8,10 +11,11 @@ SRC_URI=""
 DESCRIPTION="Sun's J2SE Development Kit, version 1.4.1"
 HOMEPAGE="http://java.sun.com/j2se/1.4.1/download.html"
 LICENSE="sun-bcla"
-SLOT="0"
+SLOT="1.4"
 KEYWORDS="x86 -ppc"
 DEPEND="virtual/glibc
-	>=dev-java/java-config-0.1.3"
+	>=dev-java/java-config-0.2.3
+	doc? ( =dev-java/java-sdk-docs-1.4.0* )"
 RDEPEND="$DEPEND"
 
 PROVIDE="virtual/jre-1.4
@@ -50,16 +54,13 @@ src_install () {
 		dosym /opt/${P}/jre/plugin/i386/ns610/libjavaplugin_oji.so /usr/lib/mozilla/plugins/
 	fi
 	
-	dodir /etc/env.d/java 
-	sed \
-		-e "s/@P@/${P}/g" \
-		-e "s/@PV@/${PV}/g" \
-		-e "s/@PF@/${PF}/g" \
-		< ${FILESDIR}/sun-jdk-${PV} \
-                > ${D}/etc/env.d/java/20sun-jdk-${PV} 
+	set_java_env ${FILESDIR}/${VMHANDLE} || die
 }
 
-pkg_postinst () {                                                               
+pkg_postinst () {        
+	# Set as default system VM if none exists
+	java_pkg_postinst
+
 	if [ "`use mozilla`" ] ; then                                           
 		einfo "The Mozilla browser plugin has been installed as /usr/lib/mozilla/plugins/libjavaplugin_oji140.so"
 	else                                                                    
