@@ -1,19 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r1.ebuild,v 1.5 2003/09/17 23:04:23 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r1.ebuild,v 1.6 2003/10/02 18:15:02 vapier Exp $
 
-inherit gnuconfig
+inherit gnuconfig flag-o-matic
 
-S=${WORKDIR}/${P/_p/-pl}
 DESCRIPTION="A dhcp client only"
-SRC_URI="ftp://ftp.phystech.com/pub/${P/_p/-pl}.tar.gz http://dev.gentoo.org/~drobbins/${P}.diff.bz2 http://dev.gentoo.org/~drobbins/${P}-keepCacheAndResolv.diff.bz2"
 HOMEPAGE="http://www.phystech.com/download/"
-DEPEND=""
+SRC_URI="ftp://ftp.phystech.com/pub/${P/_p/-pl}.tar.gz
+	http://dev.gentoo.org/~drobbins/${P}.diff.bz2
+	http://dev.gentoo.org/~drobbins/${P}-keepCacheAndResolv.diff.bz2"
+
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa arm mips amd64 ia64"
-LICENSE="GPL-2"
-IUSE="build"
+IUSE="build static"
 
+DEPEND=""
+
+S=${WORKDIR}/${P/_p/-pl}
 
 src_unpack() {
 	unpack ${A} || die "unpack failed"
@@ -27,19 +31,17 @@ src_unpack() {
 	#discovered that LFS had an updated one. We're using a patch that is
 	#identical to theirs. It makes dhcpcd FHS-compliant. (drobbins, 06
 	#Sep 2003)
-	cat ${DISTDIR}/${P}.diff.bz2 | bzip2 -d | patch -p1 || die
+	epatch ${DISTDIR}/${P}.diff.bz2
 	#This next patch from Alwyn Schoeman <alwyn@smart.com.ph> is great;
 	#it adds a -z (shutdown, keep cache) and various other little tweaks.
 	#See http://bugs.gentoo.org/show_bug.cgi?id=23428 for more info.
-	cat ${DISTDIR}/${P}-keepCacheAndResolv.diff.bz2 | bzip2 -d | patch -p1 || die
+	epatch ${DISTDIR}/${P}-keepCacheAndResolv.diff.bz2
 	#remove hard-coded arch stuff (drobbins, 06 Sep 2003)
-	local x
-	x=configure
-	cp ${x} ${x}.orig
-	sed -e "s/ -march=i.86//g" ${x}.orig > ${x} || die
+	sed -i "s/ -march=i.86//g" configure
 }
 
 src_compile() {
+	use static && append-flags -static
 	./configure --prefix="" --sysconfdir=/var/lib --mandir=/usr/share/man || die
 	emake || die
 }

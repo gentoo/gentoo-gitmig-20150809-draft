@@ -1,11 +1,14 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.21 2003/09/17 09:12:18 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.22 2003/10/02 18:15:02 vapier Exp $
+
+*dhcpcd-1.3.22_p4-r1 (06 Sep 2003)
+
+  02 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  USE=static support #29207.
 
   17 Sep 2003; Tavis Ormandy <taviso@gentoo.org> dhcpcd-1.3.22_p4-r1.ebuild:
   stable on alpha
-
-*dhcpcd-1.3.22_p4-r1 (06 Sep 2003)
 
   06 Sep 2003; Daniel Robbins <drobbins@gentoo.org> dhcpcd-1.3.22_p4-r1.ebuild:
   added bug 23428 patch from Alwyn Schoeman <alwyn@smart.com.ph>, which is a
