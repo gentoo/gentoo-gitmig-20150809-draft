@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/gentoo-rsync-mirror
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.17 2004/07/17 21:24:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.18 2004/07/18 13:50:27 aliz Exp $
 
   13 Jun 2004; Martin Holzer <mholzer@gentoo.org>
   files/rsync-gentoo-portage.sh:
@@ -13,7 +13,7 @@
   09 Jun 2004; Martin Holzer <mholzer@gentoo.org> files/rsyncd.init:
   fixing bad header. closes 53194
 
-*gentoo-rsync-mirror (06 Jun 2004)
+*gentoo-rsync-mirror-1.0-r3 (06 Jun 2004)
 
   06 Jun 2004; Kurt Lieber <klieber@gentoo.org> :
   added additional einfo language, changed chroot to 'yes' instead of 'no' in
