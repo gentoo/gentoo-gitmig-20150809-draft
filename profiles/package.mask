@@ -387,7 +387,7 @@ dev-libs/libiconv
 #they use as well... Trust me, unmasking this has no use at all :o) <Verwilst, 17 April 2002>
 # adding gtk+licq just to make it complete;  26 Jun 2002; <spider@gentoo.org>
 <net-im/licq-1.1.0
-net-im/gtk+licq
+=net-im/gtk+licq-0.51-r2
 # masking licq-console as well due to licq dependency
 net-im/licq-console
 
