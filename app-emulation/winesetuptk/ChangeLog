@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/winesetuptk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/ChangeLog,v 1.1 2002/04/04 03:53:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winesetuptk/ChangeLog,v 1.2 2002/04/27 01:28:47 seemant Exp $
+
+*winesetuptk-0.6.0b-r1 (26 Apr 2002)
+
+  26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> winesetuptk-0.6.0b-r1.ebuild :
+
+  It was pointed out indirectly by a new user that tcl and tk are NOT required
+  since this package links statically with them.  Hooray for de-bloat!
 
 *winesetuptk-0.6.0b (3 Apr 2002)
 	
