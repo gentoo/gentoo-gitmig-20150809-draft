@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.39 2004/09/30 19:38:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.40 2004/11/24 15:25:27 vapier Exp $
+
+  24 Nov 2004; Mike Frysinger <vapier@gentoo.org> readline-5.0-r1.ebuild:
+  Force ncurses linking #71420.
 
   30 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> readline-4.3-r5.ebuild:
   Stable on sparc

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r1.ebuild,v 1.3 2004/11/12 14:51:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0-r1.ebuild,v 1.4 2004/11/24 15:25:27 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -19,20 +19,21 @@ IUSE=""
 
 # We must be certain that we have a bash that is linked
 # to its internal readline, else we may get problems.
-DEPEND=">=app-shells/bash-2.05b-r2
-	>=sys-libs/ncurses-5.2-r2"
+RDEPEND=">=sys-libs/ncurses-5.2-r2"
+DEPEND="${RDEPEND}
+	>=app-shells/bash-2.05b-r2"
 
 src_unpack() {
 	unpack ${P}.tar.gz
 
 	cd ${S}
-	for x in ${PLEVEL//x}
-	do
+	for x in ${PLEVEL//x} ; do
 		epatch ${DISTDIR}/${PN}${PV/\.}-${x}
 	done
-
 	epatch ${FILESDIR}/bash-3.0-etc-inputrc.patch
-	gnuconfig_update
+
+	# force ncurses linking #71420
+	sed -i -e 's:^SHLIB_LIBS=:SHLIB_LIBS=-lncurses:' support/shobj-conf || die "sed"
 }
 
 src_compile() {
