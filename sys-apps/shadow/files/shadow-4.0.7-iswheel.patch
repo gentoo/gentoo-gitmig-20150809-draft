@@ -1,0 +1,14 @@
+http://bugs.gentoo.org/show_bug.cgi?id=80345
+
+diff -uNr shadow-4.0.7.orig/src/su.c shadow-4.0.7/src/su.c
+--- shadow-4.0.7.orig/src/su.c	2005-02-01 12:22:11.553956864 +0100
++++ shadow-4.0.7/src/su.c	2005-02-01 12:22:33.077684760 +0100
+@@ -111,7 +111,7 @@
+ {
+ 	struct group *grp;
+ 
+-	grp = getgrgid (0);
++	grp = getgrnam ("wheel");
+ 	if (!grp || !grp->gr_mem)
+ 		return 0;
+ 	return is_on_list (grp->gr_mem, username);
