@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CGI
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.28 2004/02/18 13:11:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.29 2004/03/20 02:59:10 esammer Exp $
+
+  19 Mar 2004; Eric Sammer <esammer@gentoo.org> :
+  Fixed category-less dependencies as per bug #45110.
 
   18 Feb 2004; Aron Griffis <agriffis@gentoo.org> CGI-3.04.ebuild:
   stable on alpha and ia64
