@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vnc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.23 2003/12/01 21:58:57 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.24 2004/01/10 06:12:04 augustus Exp $
+
+  10 Jan 2004; <augustus@gentoo.org> vnc-3.3.7.ebuild:
+  Added ~amd64 keyword. In order for this to work I had to disable Xvnc like ppc
+  did. This may be able to be fixed but my knowledge of Imake is limited and I
+  didn't see Xvnc as a show stopper to this package.
 
   01 Dec 2003; Jason Wever <weeve@gentoo.org> vnc-3.3.7.ebuild:
   Marked stable on sparc.
