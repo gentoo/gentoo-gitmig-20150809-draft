@@ -1,0 +1,7 @@
+MD5 cb5516e96443b4edacd0289afd1a7d33 ChangeLog 1210
+MD5 f977b421d2b047b7361304b0e23a20fa bcast-2000c-r2.ebuild 952
+MD5 8f05c272ff57d86407e97b1748c023c1 files/bcast-2000c-gcc3-gentoo.patch 21620
+MD5 4cd8df5643257fe056eef9cbe3249155 files/bcast-2000c-gentoo.diff 702
+MD5 4cd8df5643257fe056eef9cbe3249155 files/bcast-2000c-r1-gentoo.diff 702
+MD5 4cd8df5643257fe056eef9cbe3249155 files/bcast-2000c-r2-gentoo.diff 702
+MD5 a8d235df0046b1032d27e9bdaf5a59b3 files/digest-bcast-2000c-r2 68

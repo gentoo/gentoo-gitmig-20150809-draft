@@ -1,0 +1,6 @@
+MD5 bd7c28863eccf8e8a44c655fd6aac181 ChangeLog 941
+MD5 2357f811cec655e51e636009a6b634cc em8300-modules-0.12.0.ebuild 2437
+MD5 d3b3cfd3beaad1e55f9024e9221b5e2f em8300-modules-0.13.0.ebuild 2436
+MD5 8acb1fa133b6be82b4ec6a12350690c0 files/digest-em8300-modules-0.12.0 65
+MD5 29a6f23e30a4e4d57e5a0daf1d61f8c5 files/digest-em8300-modules-0.13.0 65
+MD5 40448834cd5bc1bdc07ab84d8a3727cc files/modules.em8300 28
