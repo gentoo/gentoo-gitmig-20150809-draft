@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.93 2004/03/23 10:22:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.94 2004/03/23 15:14:44 avenj Exp $
+
+  24 Mar 2004; Jon Portnoy <avenj@gentoo.org> evolution-1.4.5.ebuild,
+  evolution-1.4.6.ebuild :
+  Fixed screwy AMD64 deps in 1.4.5 and modified both ebuilds to recognize
+  kerberos properly on AMD64.
 
   23 Mar 2004; Alastair Tse <liquidx@gentoo.org> evolution-1.4.6.ebuild:
   fix amd64 dep and also fix configure flag passing in src_compile for amd64
