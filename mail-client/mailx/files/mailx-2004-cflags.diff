@@ -1,0 +1,11 @@
+--- Makefile.old        2005-01-27 08:50:34.910805608 +0100
++++ Makefile    2005-01-27 08:51:29.803460656 +0100
+@@ -3,7 +3,7 @@
+ PROG=mail
+ CC=gcc
+ 
+-CFLAGS=-D_BSD_SOURCE -DDEBIAN -g -Wall -IEXT
++CFLAGS=-D_BSD_SOURCE -DDEBIAN -g -Wall -IEXT $(EXTRAFLAGS)
+ 
+ ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+   CFLAGS += -O0

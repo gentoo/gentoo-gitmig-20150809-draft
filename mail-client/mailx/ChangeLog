@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mailx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.26 2005/01/26 18:21:17 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.27 2005/01/27 08:00:02 ferdy Exp $
+
+  27 Jan 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/mailx-2004-cflags.diff:
+  Patch Makefile to enforce the use of CFLAGS. Closes #79655. First approach
+  submitted by: Stefan Briesenick <sbriesen@gmx.de>
 
 *mailx-8.1.2.20040524 (26 Jan 2005)
 
