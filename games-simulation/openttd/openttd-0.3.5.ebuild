@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.3.5.ebuild,v 1.1 2004/12/25 11:15:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.3.5.ebuild,v 1.2 2004/12/28 10:06:14 dholm Exp $
 
 inherit games
 
@@ -11,20 +11,24 @@ SRC_URI="mirror://sourceforge/openttd/${P}-source.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="debug png zlib timidity"
+IUSE="debug png zlib timidity alsa"
 
 DEPEND="virtual/libc
 	media-libs/libsdl
 	png? ( media-libs/libpng )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
-	timidity? ( media-sound/timidity++ )"
+	timidity? ( media-sound/timidity++ )
+	!timidity? ( alsa? ( media-sound/pmidi ) )"
 
 src_compile() {
 	local myopts="MANUAL_CONFIG=1 UNIX=1 WITH_SDL=1 WITH_NETWORK=1 INSTALL=1 RELEASE=${PV} USE_HOMEDIR=1 PERSONAL_DIR=.openttd PREFIX=/usr DATA_DIR=share/games/${PN}"
 	use debug && myopts="${myopts} DEBUG=1"
 	use png && myopts="${myopts} WITH_PNG=1"
 	use zlib && myopts="${myopts} WITH_ZLIB=1"
+	if ! use timidity; then
+		use alsa && myopts="${myopts} MIDI=/usr/bin/pmidi"
+	fi
 
 	emake -j1 ${myopts} || die "emake failed"
 }
