@@ -1,4 +1,6 @@
 MD5 367dc6038258eb7c0270a2199a12db92 util-vserver-0.29.ebuild 969
-MD5 443348d9b1e4d1772629596f59b04c55 ChangeLog 453
+MD5 7de4c37a189ad9dce261c6b8afdf79ea ChangeLog 610
+MD5 24588b65e852bc63d33a2d5b72952ffd util-vserver-0.29_p196-r1.ebuild 1252
+MD5 af1503bee29c51dd40f8a675c89c47d8 files/digest-util-vserver-0.29_p196-r1 74
 MD5 1227d155ce30bb72ad0f511ce77c7535 files/digest-util-vserver-0.29 70
 MD5 b2b8518d47de9e56f0ddbe7c724c5153 files/configure.patch 588
