@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 79bafb12ac2443d8bab51fe3ddf55161 ChangeLog 2159
-MD5 41853ce2666c0b11d7975e61a58e46f7 fontforge-20040930.ebuild 1285
-MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
-MD5 65dcc7406e79045f0f115811fedebdaf fontforge-20050310.ebuild 1257
-MD5 d5c0bbb952a17db22649d4f7a07fb2f2 fontforge-20041231.ebuild 1294
+MD5 53304615baf84c5351fc710a54178f3d fontforge-20040930.ebuild 1290
 MD5 fe425a6318343174cd27a7de476cd6a2 fontforge-20050209.ebuild 1418
+MD5 dedbd11549b8166bcbd44daae3d4047b fontforge-20050310.ebuild 1267
+MD5 d5c0bbb952a17db22649d4f7a07fb2f2 fontforge-20041231.ebuild 1294
+MD5 109528905f41e1013cecb048c7ea3d22 ChangeLog 2281
+MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 d5a8ce92eaf3d0c4677ae12a632dae01 files/digest-fontforge-20040930 73
 MD5 134c4b8ebaff766b1c675d67597995a1 files/digest-fontforge-20041231 73
 MD5 efc93312d0c5dfac72586f4ae523b635 files/digest-fontforge-20050209 73
 MD5 f8fa572061a50dba58afc848e19f773f files/digest-fontforge-20050310 73
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCOu/eVWNWqTUmv+0RAv6ZAKCANaYlAmRsJtDm67ftWgbtKwcswwCgsEVs
-Ef2n/cvgOHiZwZfKwM4qRr8=
-=bvUK
+iD8DBQFCQdLfI1lqEGTUzyQRApR5AJ9O9paozh2OdChpqdsQhT52QiafrQCcCC7u
+0tJsTrF8WpIDQwcvM2ktyVQ=
+=zMIr
 -----END PGP SIGNATURE-----
