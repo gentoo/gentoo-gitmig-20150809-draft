@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.4 2004/06/28 23:00:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.5 2004/09/09 02:17:08 vapier Exp $
 
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
 ECVS_MODULE="e16/e"
-inherit eutils cvs
+inherit cvs
 
 DESCRIPTION="Enlightenment Window Manager"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -27,7 +27,6 @@ S=${WORKDIR}/e16/e
 src_unpack() {
 	cvs_src_unpack
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-kde-menu.patch
 	sed -i 's:$srcdir/configure.*::' autogen.sh
 	./autogen.sh
 }
