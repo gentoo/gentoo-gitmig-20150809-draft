@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.31 2005/01/30 21:06:16 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.32 2005/04/01 09:54:38 sekretarz Exp $
+
+  01 Apr 2005; Karol Wojtaszek <sekretarz@gentoo.org> jpeg-6b-r4.ebuild:
+  Added >=sys-devel/libtool-1.5.10-r4 to DEPEND, bug #77928 and #87063
 
   30 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> jpeg-6b-r4.ebuild:
   Bug #80032 fix.

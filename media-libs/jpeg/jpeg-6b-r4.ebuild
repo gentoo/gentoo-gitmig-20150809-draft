@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r4.ebuild,v 1.5 2005/01/30 21:06:16 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r4.ebuild,v 1.6 2005/04/01 09:54:38 sekretarz Exp $
 
 inherit flag-o-matic libtool eutils toolchain-funcs
 
@@ -16,7 +16,8 @@ IUSE=""
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	>=sys-devel/libtool-1.5.10-r4"
 
 src_unpack() {
 	unpack ${A}
