@@ -488,10 +488,6 @@ x11-libs/gtkmm-addons
 # release that actually works.
 x11-terms/powershell
 
-# <seemant@gentoo.org> (10 Sep 2002)
-# masked coz all our packages only use the old version
->=net-libs/libnet-1.1.0
-
 # <aliz@gentoo.org> (26 Aug 2002)
 # Masked to force lynx-2.8.4.1c
 =net-www/lynx-2.8.4a-r4
