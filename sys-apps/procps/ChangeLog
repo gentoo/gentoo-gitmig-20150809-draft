@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.72 2004/07/20 21:50:30 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.73 2004/07/21 13:59:06 lostlogic Exp $
+
+  21 Jul 2004; Brandon Low <lostlogic@gentoo.org>
+  -files/procps-3.2.2-selinux-E.diff, -procps-3.2.2.ebuild:
+  Turns out that the new -Z option is the same as the old -Z patch option, so
+  removing the new -E option.
 
 *procps-3.2.2 (20 Jul 2004)
 
