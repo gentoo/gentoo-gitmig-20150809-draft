@@ -1,7 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0c24c62fe28146841136c2e513b733e8 ChangeLog 36330
+MD5 f3472d881eb2f7607e6f0285f96b66d6 ChangeLog 36571
+MD5 734a6694cef96d6cd65fcf1e5689a2cd binutils-2.15.92.0.2-r2.ebuild 4473
 MD5 f88f8dfe3428f94d7d0f159f25be6fce binutils-2.14.90.0.6-r6.ebuild 6574
 MD5 91dd2a38d81c3197b8d9b322c28b5172 binutils-2.14.90.0.6-r7.ebuild 6699
 MD5 bd18572159248b6accc7f931e72c2087 binutils-2.15.90.0.1.1-r1.ebuild 4716
@@ -16,6 +17,7 @@ MD5 50ca49430b20bc9727ceece6289c7dad binutils-2.15.91.0.1-r2.ebuild 4994
 MD5 9d0edfae5f1bbfd6243fb71cdac0dd0a binutils-2.15.91.0.2.ebuild 5121
 MD5 dca4c0b2880c411176ca6cfcd95600db binutils-2.15.92.0.2.ebuild 5149
 MD5 c0454a0de06bf6e9136f49b993463337 binutils-2.15.92.0.2-r1.ebuild 4960
+MD5 1b43962f0560663b6b0f58ffa918a8ff files/digest-binutils-2.15.92.0.2-r2 242
 MD5 e3effee7a8054f5e0344034c596cb6fc files/binutils-2.14.amd64-32bit-path-fix.patch 456
 MD5 3b32997c2ca6b9893839c439e077e82d files/digest-binutils-2.14.90.0.6-r6 75
 MD5 3b32997c2ca6b9893839c439e077e82d files/digest-binutils-2.14.90.0.6-r7 75
@@ -85,7 +87,7 @@ MD5 8f619fc0c409a5ba768f126f172ee6bc files/2.15/05_all_binutils-2.15-elf32-arm-t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBdqDZHTu7gpaalycRAi0OAJoDS5nxcvHmUWC5/wDoajSw6oc3uQCg+LM5
-LNmbvuxXcOVOGBXXjHnXtWg=
-=lQA7
+iD8DBQFBdqIOHTu7gpaalycRAt+XAKC3IuYatqzOXu6CCtZ3CAxdjLv98QCgoQef
+1wrr+fBYIe+UlCEsorOpRbA=
+=iRBh
 -----END PGP SIGNATURE-----
