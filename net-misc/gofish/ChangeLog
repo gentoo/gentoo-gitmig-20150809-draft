@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/gofish
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/ChangeLog,v 1.1 2003/12/22 13:22:10 zul Exp $
+
+*gofish-0.29 (22 Dec 2003)
+
+  22 Dec 2003; Chuck Short <zul@gentoo.org> gofish-0.29.ebuild, metadata.xml,
+  files/gofish.confd, files/gofish.rc:
+  Initial release, ebuild submitted by Emil Skoldberg <emil@math.su.se>
+  Closes #35125
+
