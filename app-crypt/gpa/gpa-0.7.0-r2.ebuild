@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.0-r2.ebuild,v 1.6 2005/01/01 12:29:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.0-r2.ebuild,v 1.7 2005/02/24 11:29:25 dragonheart Exp $
+
+inherit eutils
 
 DESCRIPTION="Standard GUI for GnuPG"
 HOMEPAGE="http://www.gnupg.org/(en)/related_software/gpa/index.html"
@@ -34,4 +36,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog README NEWS TODO
+	insinto /usr/share/pixmaps/gpa
+	doins gpa-logo-48x48.png pixmaps/*.xpm
+	make_desktop_entry gpa "Gnu Privacy Assistant" gpa/gpa-logo-48x48.png Utility
 }

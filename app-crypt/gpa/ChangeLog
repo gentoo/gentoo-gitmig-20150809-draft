@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.28 2005/01/02 19:19:16 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.29 2005/02/24 11:29:25 dragonheart Exp $
+
+  24 Feb 2005; Daniel Black <dragonheart@gentoo.org> gpa-0.7.0-r2.ebuild:
+  Added desktop entry as per bug #81736. Thanks Sebastian Spaeth
+  <Sebastian@SSpaeth.de>
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
