@@ -1,7 +1,11 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.4 2002/05/03 20:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.5 2002/06/22 16:23:22 naz Exp $
 
+*hdparm-5.2 (22 Jun 2002)
+
+  02 May 2002; Michael Nazaroff <naz@gentoo.org>: Upgrade to 5.2
+  
 *hdparm-4.9 (02 May 2002)
 
   02 May 2002; Daniel Robbins <drobbins@gentoo.org>: Upgrade to 4.9
