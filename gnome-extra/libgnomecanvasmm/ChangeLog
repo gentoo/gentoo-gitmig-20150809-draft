@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgnomecanvasmm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomecanvasmm/ChangeLog,v 1.5 2002/12/13 10:56:56 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomecanvasmm/ChangeLog,v 1.6 2002/12/22 19:11:03 foser Exp $
+
+*libgnomecanvas-2.0.0 (22 Dec 2002)
+
+  22 Dec 2002; foser <foser@gentoo.org> libgnomecanvas-2.0.0.ebuild :
+  new version, first stable gnome2 release
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
