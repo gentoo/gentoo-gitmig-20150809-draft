@@ -1,4 +1,4 @@
-MD5 a49890d02c2f7394bf8fcb54e1e9ad8f files/digest-kwest-1.0 61
-MD5 61cf83bd9d7ddcf075cd16fcd4ec6b1e ChangeLog 694
-MD5 e21b140e4c02b92dc2b71ebda114e954 kwest-1.0.ebuild 498
+MD5 ac258e7d5deb2e9f296c7d293688328f ChangeLog 816
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 acadeae04d29559eb367bd9640e0cd86 kwest-1.0.ebuild 499
+MD5 a49890d02c2f7394bf8fcb54e1e9ad8f files/digest-kwest-1.0 61
