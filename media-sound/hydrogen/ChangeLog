@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.16 2004/06/25 00:05:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.17 2004/07/01 19:32:55 fvdpol Exp $
+
+*hydrogen-0.8.2-r4 (01 Jul 2004)
+
+  01 Jul 2004; Frank van de Pol <fvdpol@gentoo.org>
+  +files/hydrogen-0.8.2-gcc34.patch, +hydrogen-0.8.2-r4.ebuild:
+  New revision to fix a gcc-3.4 compilation error. Closes bug #52185
 
 *hydrogen-0.8.2-r3 (23 Jun 2004)
 
