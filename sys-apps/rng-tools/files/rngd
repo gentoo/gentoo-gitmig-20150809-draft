@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/files/rngd,v 1.3 2004/03/06 04:09:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/files/rngd,v 1.4 2004/04/08 04:10:42 robbat2 Exp $
 
 depend() {
 	need localmount
@@ -20,8 +20,9 @@ start() {
 		start-stop-daemon --start --quiet --exec /usr/sbin/rngd -- -b -r /dev/i810_rng
 		eend $? "Failed to start hardware RNG daemon"
 	else
-		eerror "No hardware RNG found!"
-		return 1
+		einfo "No hardware RNG found, using /dev/urandom as feedback input"
+		start-stop-daemon --start --quiet --exec /usr/sbin/rngd -- -b -r /dev/urandom
+		eend $? "Failed to start hardware RNG daemon"
 	fi
 }
 
