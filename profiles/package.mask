@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <lanius@gentoo.org> (26 Dec 2003)
+# this is an alpha
+=net-www/opera-7.50_alpha1
+
 # <robbat2@gentoo.org> (25 Dec 2003)
 # Masking as the location of the domain mail has changed
 >=net-mail/vpopmail-5.2.1-r9
