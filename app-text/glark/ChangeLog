@@ -1,6 +1,9 @@
 # ChangeLog for app-text/glark
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.22 2005/01/01 16:16:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.23 2005/01/13 22:27:27 ciaranm Exp $
+
+  13 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> glark-1.7.2.ebuild:
+  sparc mips x86 stable, added ~hppa
 
 *glark-1.7.2 (27 Dec 2004)
 
