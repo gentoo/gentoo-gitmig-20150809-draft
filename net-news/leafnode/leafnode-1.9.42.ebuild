@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.42.ebuild,v 1.3 2003/10/21 21:19:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.42.ebuild,v 1.4 2003/10/29 23:32:45 mholzer Exp $
 
 S=${WORKDIR}/${P}.rel
 DESCRIPTION="leafnode - A USENET software package designed for small sites"
 SRC_URI="mirror://sourceforge/leafnode/${P}.rel.tar.bz2"
+RESTRICT="nomirror"
 HOMEPAGE="http://www.leafnode.org"
 RESTRICT="nomirror"
 DEPEND=">=dev-libs/libpcre-3.9
@@ -55,5 +56,7 @@ pkg_postinst() {
 	mkdir -p /var/spool/news/{leaf.node,failed.postings,interesting.groups,out.going}
 	mkdir -p /var/spool/news/message.id/{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}
 	chown -R news:news /var/spool/news
+	mkdir -p /var/lib/news
+	chown -R news:news /var/lib/news
 	cat ${S}/README.FIRST
 }
