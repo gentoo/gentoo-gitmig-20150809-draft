@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.32 2004/02/06 20:37:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.33 2004/02/09 08:28:35 gmsoft Exp $
+
+  09 Feb 2004; Guy Martin <gmsoft@gentoo.org> pam-login-3.14.ebuild:
+  Marked stable on hppa.
 
   06 Feb 2004; Martin Schlemmer <azarah@gentoo.org> pam-login-3.14.ebuild:
   Bump to stable for x86.
