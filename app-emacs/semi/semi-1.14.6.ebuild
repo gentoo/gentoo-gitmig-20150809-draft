@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/semi-1.14.6.ebuild,v 1.7 2004/08/20 19:03:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/semi-1.14.6.ebuild,v 1.8 2004/09/16 01:29:05 pvdabeel Exp $
 
 inherit elisp eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.m17n.org/pub/mule/semi/semi-1.14-for-flim-1.14/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha sparc ppc macos"
+KEYWORDS="x86 alpha sparc ppc macos ppc-macos"
 
 DEPEND="virtual/emacs
 	>=app-emacs/apel-10.6

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/riece-1.0.1.ebuild,v 1.4 2004/08/06 22:34:37 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/riece-1.0.1.ebuild,v 1.5 2004/09/16 01:27:22 pvdabeel Exp $
 
 inherit elisp
 
@@ -12,7 +12,7 @@ SRC_URI="http://wiliki.designflaw.org/riece/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc ppc64 macos ~amd64"
+KEYWORDS="~x86 ~alpha ~ppc ppc64 macos ~amd64 ppc-macos"
 
 DEPEND="virtual/emacs"
 
