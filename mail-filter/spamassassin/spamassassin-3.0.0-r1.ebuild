@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.0-r1.ebuild,v 1.3 2004/12/20 10:13:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.0-r1.ebuild,v 1.4 2004/12/20 11:07:54 mcummings Exp $
 
 inherit perl-module
 
@@ -194,7 +194,7 @@ pkg_postinst() {
 	einfo "If upgraded from 2.x, please read the file"
 	einfo "  /usr/share/doc/${PF}/UPGRADE.gz"
 	einfo
-	ewarn 
+	ewarn
 	ewarn "spamd is not designed to listen to an untrusted network"
 	ewarn "and is vulnerable to DoS attacks (and eternal doom) if"
 	ewarn "configured to do so"

@@ -1,6 +1,27 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.18 2004/12/20 10:13:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.19 2004/12/20 11:07:54 mcummings Exp $
+
+*spamassassin-3.0.2 (20 Dec 2004)
+
+  20 Dec 2004; Michael Cummings <mcummings@gentoo.org>
+  +spamassassin-3.0.2.ebuild:
+  New version; closes bug 74731
+  Updates:
+  SA-bug 4005: Yahoo groups messages flagged as forged
+  SA-bug 4030: incapable Net::DNS module usage should be a warning
+  SA-bug 2462: detect legitimate SMTP AUTH submission, to avoid false positives on Dynablock-style rules
+  SA-bug 4019: Needed to add in RPAD call wherever token was used in a select
+  SA-bug 3961: Docu fix for two contradicting explanations of the -x switch
+  SA-bug 4014: change spamcop_submission_address to correct name, spamcop_to_address
+  SA-bug 3990: two small regexp errors in RegistrarBoundaries
+  SA-bug 3967: fix performance issues with USERPASS and RATWARE_STORM_URI
+  SA-bug 3953: Provide better debug output for sa-learn --restore
+  SA-bug 3816: deal with 'rewrite_header Subject' markup when no Subject header previously existed
+  SA-bug 3950: Exim 'sender_fullhost' var was not recognized by Received header parser
+  SA-bug 3942: EvalTests::_check_recipients() would sometimes parse out the wrong addresses/overwrite entries on the array/etc
+  SA-bug 3941: spamcop now only wants max 2 day old mail
+  SA-bug 3930: uridnsbl plugin didn't respect the uridnsbl_max_domains value
 
 *spamassassin-3.0.1 (20 Dec 2004)
 
