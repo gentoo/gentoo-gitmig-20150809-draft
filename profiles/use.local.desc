@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.91 2003/08/20 15:15:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.92 2003/08/24 23:09:16 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -21,7 +21,6 @@ app-games/freecraft-fcmp:music - Also installs the music that the project provid
 app-games/halflife-metamod:src - use the source, not the binary install
 app-games/nwn:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
 app-games/quake2-relnev:noqmax - Do not build the pretty version (quake max)
-app-games/torcs:bots - Enables bot support
 app-games/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3)
 app-misc/grass:nviz - support GLw functionality
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
