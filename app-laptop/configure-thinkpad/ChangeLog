@@ -1,6 +1,12 @@
 # ChangeLog for app-laptop/configure-thinkpad
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-thinkpad/ChangeLog,v 1.5 2005/01/01 14:45:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-thinkpad/ChangeLog,v 1.6 2005/01/08 21:41:55 brix Exp $
+
+*configure-thinkpad-0.8 (08 Jan 2005)
+
+  08 Jan 2005; Henrik Brix Andersen <brix@gentoo.org>
+  +configure-thinkpad-0.8.ebuild:
+  Version bump. Fixes bug #39943 and bug #69669.
 
 *configure-thinkpad-0.7 (01 Oct 2004)
 
