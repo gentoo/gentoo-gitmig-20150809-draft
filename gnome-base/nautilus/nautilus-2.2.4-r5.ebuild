@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.2.4-r5.ebuild,v 1.2 2003/06/24 11:24:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.2.4-r5.ebuild,v 1.3 2003/06/24 17:43:40 foser Exp $
 
 inherit gnome2 eutils
 
@@ -33,7 +33,8 @@ RDEPEND="app-admin/fam-oss
 	x11-themes/gnome-icon-theme
 	x11-themes/gnome-themes
 	oggvorbis? ( media-sound/vorbis-tools )
-	cups? ( net-print/libgnomecups )"
+	cups? ( net-print/libgnomecups 
+		net-print/gnome-cups-manager )"
 
 DEPEND="${RDEPEND} 
 	>=app-text/scrollkeeper-0.3.11
