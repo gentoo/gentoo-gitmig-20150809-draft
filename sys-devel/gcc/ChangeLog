@@ -1,7 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.135 2003/10/15 09:05:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.136 2003/10/18 19:24:42 brad_mssw Exp $
 
+  18 Oct 2003; Brad House <brad_mssw@gentoo.org> gcc-3.3.1-r5.ebuild,
+  files/gcc331_use_multilib.amd64.patch:
+  add appropriate changes for amd64, and set ~amd64 in flags
 
 *gcc-3.3.1-r5 (14 Oct 2003)
 

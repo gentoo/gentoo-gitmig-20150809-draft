@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.1-r5.ebuild,v 1.3 2003/10/15 09:05:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.1-r5.ebuild,v 1.4 2003/10/18 19:24:42 brad_mssw Exp $
 
-IUSE="static nls bootstrap java build X"
+IUSE="static nls bootstrap java build X multilib"
 
 inherit eutils flag-o-matic libtool
 
@@ -95,7 +95,7 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="-* ~x86 ~mips ~sparc"
+KEYWORDS="-* ~x86 ~mips ~sparc ~amd64"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -119,6 +119,7 @@ DEPEND="virtual/glibc
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
+	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 
@@ -198,9 +199,18 @@ src_unpack() {
 		mkdir -p ${WORKDIR}/patch/exclude
 		# Exclude this as it is fixed in apps according to lu_zero.
 		mv -f ${WORKDIR}/patch/3* ${WORKDIR}/patch/exclude/
-
+		if [ -n "`use multilib`" -a "$ARCH" = "amd64" ]
+		then
+			mv -f ${WORKDIR}/patch/06* ${WORKDIR}/patch/exclude/
+		fi
 		epatch ${WORKDIR}/patch
 	fi
+
+	if [ -n "`use multilib`" -a "$ARCH" = "amd64" ]
+	then
+		epatch ${FILESDIR}/gcc331_use_multilib.amd64.patch
+	fi
+
 
 	if [ -z "${PP_VER}" ]
 	then
@@ -270,7 +280,17 @@ src_compile() {
 	fi
 
 	# Multilib not yet supported
-	myconf="${myconf} --disable-multilib"
+	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	then
+		einfo "WARNING: Multilib support enabled. This is still experimental."
+		myconf="${myconf} --enable-multilib"
+	else
+		if [ "${ARCH}" = "amd64" ]
+		then
+			einfo "WARNING: Multilib not enabled. You will not be able to build 32bit binaries."
+		fi
+		myconf="${myconf} --disable-multilib"
+	fi
 
 	# In general gcc does not like optimization, and add -O2 where
 	# it is safe.  This is especially true for gcc-3.3 ...
@@ -370,7 +390,13 @@ src_install() {
 	dodir /etc/env.d/gcc
 	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "ROOTPATH=\"${BINPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
-	echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	then
+		# amd64 is a bit unique because of multilib.  Add some other paths
+		echo "LDPATH=\"${LIBPATH}:${LIBPATH}/32:${LIBPATH}/../lib64:${LIBPATH}/../lib32\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	else
+		echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
+	fi
 	echo "MANPATH=\"${DATAPATH}/man\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
 	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}
@@ -518,6 +544,16 @@ src_install() {
 
 	# Fix ncurses b0rking
 	find ${D}/ -name '*curses.h' -exec rm -f {} \;
+
+	if [ -n "`use multilib`" -a "$ARCH" = "amd64" ]
+	then
+		# If using multilib, GCC has a bug, where it doesn't know where to find
+		# -lgcc_s when linking while compiling with g++ .  ${LIBPATH} is in
+		# it's path though, so ln the 64bit and 32bit versions of -lgcc_s
+		# to that directory.
+		ln -sf ${LIBPATH}/../lib64/libgcc_s.so ${D}/${LIBPATH}/libgcc_s.so
+		ln -sf ${LIBPATH}/../lib32/libgcc_s_32.so ${D}/${LIBPATH}/libgcc_s_32.so
+	fi
 }
 
 pkg_preinst() {
@@ -529,14 +565,25 @@ pkg_preinst() {
 
 	# Make again sure that the linker "should" be able to locate
 	# libstdc++.so ...
-	export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
+	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	then
+		# Can't always find libgcc_s.so.1, make it find it
+		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
+	else
+		export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
+	fi
 	${ROOT}/sbin/ldconfig
 }
 
 pkg_postinst() {
 
-	export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
-
+	if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
+	then
+		# Can't always find libgcc_s.so.1, make it find it
+		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
+	else
+		export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
+	fi
 	if [ "${ROOT}" = "/" -a "${COMPILER}" = "gcc3" -a "${CHOST}" = "${CCHOST}" ]
 	then
 		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}

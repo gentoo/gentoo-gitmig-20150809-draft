@@ -1,4 +1,4 @@
-MD5 6d4ff997783f3ff73b4c9c97fcd9be59 ChangeLog 30049
+MD5 4da3c55346af2078a67bd8da89fe18ce ChangeLog 30225
 MD5 6d0d6b9214ecb88e26a54b70901c50b4 gcc-2.95.3-r7.ebuild 5436
 MD5 079abbc45c914fdad6c90540fe82302c gcc-2.95.3-r8.ebuild 9213
 MD5 459fe070924cbfd485139f84f2dd47ff gcc-3.0.4-r6.ebuild 8738
@@ -15,7 +15,7 @@ MD5 aa01e0515884df05563094839c31d7d1 gcc-3.3.1-r1.ebuild 16131
 MD5 3acd503347422782700e912a8188aaf1 gcc-3.3.1-r2.ebuild 16418
 MD5 2d93c1b5cbf13ca71798ca2b3cfda29b gcc-3.3.1-r3.ebuild 16096
 MD5 cc53e87c8013fddf7cab2d546d932576 gcc-3.3.1-r4.ebuild 16101
-MD5 5abbc4a61843a0731d0da2469a6b8a17 gcc-3.3.1-r5.ebuild 16226
+MD5 10dc6dfc81f6d853c4cb5f54f89ccdbe gcc-3.3.1-r5.ebuild 17998
 MD5 66ea7917242ace41e447948c31e86601 gcc-3.3.1.ebuild 16053
 MD5 25a95ad59dc52c9ec23faf193ea4f168 gcc-3.3.ebuild 16642
 MD5 d70bcc196f1d68275346f067efcb9373 files/cc 20
@@ -50,6 +50,7 @@ MD5 9c13e6b0d5770979430b76c578afa22c files/gcc3-program-transform.patch 9771
 MD5 e3193bdffb435b77a21bfb504ff6f591 files/mkinfodir 7324
 MD5 c589fe6a54dc88cf40463cf85a32e81e files/specs-3.3-amd64-unilib 3953
 MD5 33df162e1767e168f4f39442785071af files/texinfo-4.0-no-ncurses-gentoo.diff 51748
+MD5 8baffb486c75efe253bd2daa88daa7d6 files/gcc331_use_multilib.amd64.patch 352
 MD5 aa7a1e8bbe618c0d88368e69caeb7653 files/3.1/gcc31-attr-visibility.patch.bz2 3671
 MD5 8b4c6af1c730dcdd843a77e8095d312b files/3.1/gcc31-attr-visibility2.patch.bz2 2341
 MD5 98f539e65ab7e21994e5d378537a5506 files/3.1/gcc31-boehm-gc-libs.patch.bz2 1921
