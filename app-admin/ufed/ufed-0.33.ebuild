@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ufed/ufed-0.33.ebuild,v 1.1 2003/07/22 05:06:41 fava Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ufed/ufed-0.33.ebuild,v 1.2 2003/08/01 22:45:31 fava Exp $
 
 DESCRIPTION="Gentoo Linux USE flags editor"
 HOMEPAGE="http://www.gentoo.org"
@@ -27,5 +27,5 @@ src_install() {
 	
 	newsbin ufed.pl ufed
 	doman ufed.8
-	dodoc COPYING docs/* ChangeLog
+	dodoc COPYING ChangeLog
 }
