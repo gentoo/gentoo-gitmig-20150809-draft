@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla-launcher
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.26 2004/08/21 01:42:36 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.27 2004/09/27 23:43:47 agriffis Exp $
+
+  27 Sep 2004; Aron Griffis <agriffis@gentoo.org>
+  -mozilla-launcher-1.16.ebuild, mozilla-launcher-1.18.ebuild:
+  Update to 1.19 to fix xremote problems with [Tt]hunderbird-0.8 #65128
 
   20 Aug 2004; Tom Gall <tgall@gentoo.org> mozilla-launcher-1.18.ebuild:
   stable on ppc64, bug #54583
