@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mozilla-firebird-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/ChangeLog,v 1.2 2003/06/03 15:19:54 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird-bin/ChangeLog,v 1.3 2003/06/07 15:47:35 brad Exp $
+
+*mozilla-firebird-bin-0.6-r1 (07 Jun 2003)
+
+  07 Jun 2003; Brad Laue <brad@gentoo.org> mozilla-firebird-bin-0.6-r1.ebuild,
+  files/MozillaFirebird:
+  Move the package directory from mozilla-firebird to MozillaFirebird for
+  consistency with the other ebuilds. Leaving it in opt, per bug #20185.
 
 *firebird-bin-0.6 (03 June 2003)
 
