@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/gtksee
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtksee/ChangeLog,v 1.1 2002/05/15 19:48:57 agenkin Exp $
+
+*gtksee-0.5.0 (15 May 2002)
+
+  15 May 2002; Arcady Genkin <agenkin@thpoon.com> gtksee-0.5.0.ebuild :
+  
+  Initial release of GTK See ebuild, submitted by Lasse Mikkelsen
+  <lbm@fatalerror.dk>.
