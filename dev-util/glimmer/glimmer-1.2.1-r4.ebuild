@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/glimmer-1.2.1-r4.ebuild,v 1.1 2002/09/08 18:23:45 styx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/glimmer-1.2.1-r4.ebuild,v 1.2 2002/09/08 19:33:58 styx Exp $
 
 S=${WORKDIR}/glimmer-${P_VERSION}
 DESCRIPTION="All-purpose gnome code editor."
@@ -32,23 +32,25 @@ src_compile() {
 	# regex is included in glibc now, so disable buildin regex since it cause compile errors
 	cd ${WORKDIR}/${P}
 	mv src/gtkextext/gtkextext.h src/gtkextext/gtkextext.h.orig
-	sed -e 's/\#include "..\/regex\/regex.h"/\#include <regex.h>/' src/gtkextext/gtkextext.h.orig >src/gtkextext/gtkextext.h	
+	sed -e 's/\#include "..\/regex\/regex.h"/\#include <regex.h>/' \
+		src/gtkextext/gtkextext.h.orig >src/gtkextext/gtkextext.h	
 	mv src/Makefile.am src/Makefile.am.orig
 	grep -v 'regex/libregex.a \\' src/Makefile.am.orig >src/Makefile.am.grep
-	sed -e 's/SUBDIRS \= regex gtkextext/SUBDIRS \= gtkextext/' src/Makefile.am.grep >src/Makefile.am
-	cp po/Makefile po/Makefile.orig
-	sed -e 's/prefix = \/usr/prefix = \${DESTDIR}/usr/' po/Makefile.orig \
-		> po/Makefile
+	sed -e 's/SUBDIRS \= regex gtkextext/SUBDIRS \= gtkextext/' \
+		src/Makefile.am.grep >src/Makefile.am
 	automake
 
 	econf \
 		--disable-python || die
-	
+
+	cp po/Makefile po/Makefile.orig
+	sed -e 's/prefix = \/usr/prefix = \${DESTDIR}\/usr/' po/Makefile.orig \
+		> po/Makefile
 	make || die
 }
 
 src_install () {
 	cd ${WORKDIR}/${P}
-	make DESTDIR=${D} prefix=${D} install || die
+	make DESTDIR=${D} install || die
 	dodoc AUTHORS ABOUT-NLS ChangeLog NEWS PROPS TODO README INSTALL COPYING
 }
