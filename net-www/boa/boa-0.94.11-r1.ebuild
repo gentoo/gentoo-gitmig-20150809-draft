@@ -22,7 +22,7 @@ DEPEND="virtual/glibc
 	sys-devel/flex
 	sys-devel/bison
 	sys-apps/texinfo
-        tex? ( app-text/tetex )"
+	tetex? ( app-text/tetex )"
 
 #run-time dependencies, same as DEPEND if RDEPEND isn't defined:
 RDEPEND="virtual/glibc"
@@ -37,10 +37,7 @@ src_compile() {
 	emake || die
 	cd ../docs
 	make boa.html boa.info || die
-	echo "`use tex`"
-	if [ ! -z "`use tex`" ]; then
-		make boa.dvi || die
-	fi
+	use tetex && make boa.dvi
 }
 
 src_install () {
@@ -50,7 +47,7 @@ src_install () {
 	dodoc docs/boa.html || die
 	dodoc docs/boa_banner.png || die
 	doinfo docs/boa.info || die
-	if [ ! -z "`use tex`" ]; then
+	if [ "`use tetex`" ]; then
 		dodoc docs/boa.dvi || die
 	fi
 	
