@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/anagramarama/anagramarama-0.2.ebuild,v 1.1 2004/09/08 22:56:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/anagramarama/anagramarama-0.2.ebuild,v 1.2 2004/09/24 01:02:30 mr_bones_ Exp $
 
 inherit games
 
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${PN}"
 
-src_unpack () {
+src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
