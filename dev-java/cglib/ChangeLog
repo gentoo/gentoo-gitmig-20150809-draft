@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/cglib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.4 2005/01/05 22:25:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.5 2005/01/20 16:00:59 luckyduck Exp $
+
+*cglib-2.0.2-r1 (20 Jan 2005)
+
+  20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +cglib-2.0.2-r1.ebuild,
+  cglib-2.0.2.ebuild:
+  readded old version with ~ppc, -r1 doesnt make use of packed jars.
+
+  20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> cglib-2.0.2.ebuild:
+  readded ~ppc. sorry :/
 
   05 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> cglib-2.0.2.ebuild:
   Removed all packed jars. Fixes #76738.
