@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c81971175b41bc421fd63cfec92dd41b gtklp-0.9p.ebuild 1145
-MD5 c78a7cc20cc83f07462a75d5524834e8 gtklp-0.9m.ebuild 1058
-MD5 6a4ff1218766cc1ce52e3379e050ebff ChangeLog 2210
+MD5 a2ae6998c0151f0d999fa667e3218c72 gtklp-0.9p.ebuild 1153
+MD5 2680ed2fa331fbe344260555e451a2b1 gtklp-0.9m.ebuild 1059
+MD5 9a1760f505d2ec1519f45e75c91f1190 ChangeLog 2315
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 bb0214e75296c077c0a305b4096c803e files/digest-gtklp-0.9m 66
 MD5 3021ef15adb0dbab1dc9262e26c71139 files/digest-gtklp-0.9p 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBon+zI1lqEGTUzyQRAh1IAJ0awrfOmDt3ge7HxM5352Pi3CKQ8ACfeL8d
-ztCsNiSiOOaNvboZpv4n87E=
-=jWOn
+iD8DBQFB3BMnZ/iYVBmujdURAkT4AJ9uTkMkQ6pIvRZ3xt3uipbCK3WtHQCffQud
+exBM+0ILmo511b3c5buqWEI=
+=hDEz
 -----END PGP SIGNATURE-----
