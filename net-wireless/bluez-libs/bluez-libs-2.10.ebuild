@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/bluez-libs-2.10.ebuild,v 1.11 2004/12/16 11:12:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/bluez-libs-2.10.ebuild,v 1.12 2005/01/25 00:26:40 vapier Exp $
 
 inherit eutils
 
@@ -10,16 +10,17 @@ SRC_URI="http://bluez.sourceforge.net/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc sparc x86 alpha ppc64"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="!net-wireless/bluez-sdp"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}; epatch ${FILESDIR}/${P}-handsfree.patch
+	cd ${S}
+	epatch ${FILESDIR}/${P}-handsfree.patch
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 }
