@@ -1,6 +1,13 @@
 # ChangeLog for app-text/cmigemo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/ChangeLog,v 1.10 2004/07/01 19:28:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/ChangeLog,v 1.11 2004/09/07 08:30:25 usata Exp $
+
+*cmigemo-1.3c (07 Sep 2004)
+
+  07 Sep 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -files/cmigemo-1.1.013-migemo-dict.diff, -files/cmigemo-fflush-gentoo.patch,
+  -cmigemo-1.1.013.ebuild, cmigemo-1.2.ebuild, +cmigemo-1.3c.ebuild:
+  Version bumped. Removed old ebuild.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   cmigemo-1.1.013.ebuild, cmigemo-1.2.ebuild:

@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.1.013.ebuild,v 1.8 2004/07/01 11:56:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.3c.ebuild,v 1.1 2004/09/07 08:30:25 usata Exp $
 
 inherit eutils
 
-IUSE="emacs"
-
 DESCRIPTION="C/Migemo -- Migemo library implementation in C"
 HOMEPAGE="http://www.kaoriya.net/#CMIGEMO"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://www.kaoriya.net/dist/var/${P}.tar.bz2"
 
-LICENSE="BSD | LGPL-2.1"
-KEYWORDS="x86 alpha ~sparc ~ppc"
+LICENSE="cmigemo"
 SLOT="0"
+KEYWORDS="~x86 ~alpha ~ppc"
+IUSE="emacs"
 
 DEPEND="virtual/libc
 	app-i18n/qkc
@@ -22,45 +21,36 @@ RDEPEND="virtual/libc
 	emacs? ( >=app-text/migemo-0.40-r1 )"
 
 src_unpack() {
-
 	unpack ${A}
-
-	has_version 'app-editors/vim-core' && epatch ${FILESDIR}/${P}-migemo-dict.diff
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-fflush-gentoo.patch
-
+	epatch ${FILESDIR}/${PN}-1.2-migemo-dict.diff
 	touch ${S}/dict/SKK-JISYO.L
-
 }
 
 src_compile() {
-
 	emake CFLAGS="-fPIC ${CFLAGS}" gcc || die
-
 }
 
 src_install() {
-
-	make prefix=${D}/usr \
-			docdir=${D}/usr/share/doc/${P} \
-			gcc-install || die
+	make \
+		prefix=${D}/usr \
+		docdir=${D}/usr/share/doc/${P} \
+		gcc-install || die
 
 	mv ${D}/usr/share/migemo/euc-jp/*.dat ${D}/usr/share/migemo
 	rm -rf ${D}/usr/share/migemo/{cp932,euc-jp}
 
-	if has_version 'app-editors/vim-core'; then
+	if has_version 'app-editors/vim-core' ; then
 		insinto /usr/share/vim/vimfiles/plugin
 		doins tools/migemo.vim
 	fi
 
 	dodoc tools/migemo.vim
 	dodoc doc/{README_j,TODO_j,vimigemo}.txt
-
 }
 
 pkg_postinst() {
-
-	if use emacs; then
+	if use emacs ; then
 		einfo ""
 		einfo "Please add to your ~/.emacs"
 		einfo "    (setq migemo-command \"cmigemo\")"
@@ -68,7 +58,7 @@ pkg_postinst() {
 		einfo "    (setq migemo-dictionary \"/usr/share/migemo/migemo-dict\")"
 		einfo "    (setq migemo-user-dictionary nil)"
 		einfo "    (setq migemo-regex-dictionary nil)"
+		einfo "to use cmigemo instead of migemo under emacs."
 		einfo ""
 	fi
-
 }
