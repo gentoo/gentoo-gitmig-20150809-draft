@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3f3004afdd8aded2bfd3b9fc4a63b0bd ChangeLog 1138
-MD5 be35f14b43388a1a91453245d0155eec iwidgets-4.0.1.ebuild 966
+MD5 0260eb13d2fcf2a0dedd70f7a385a896 iwidgets-4.0.1.ebuild 969
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 133cd2e2509b627197e8b003489241ed files/digest-iwidgets-4.0.1 127
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBdVnrHTu7gpaalycRAuDVAJ9VHRFx9DDUb5t12q5LtoCP8Ta6MQCeKc7S
+Jgd8cR2Woe+zBrcevXEW+XM=
+=bamH
+-----END PGP SIGNATURE-----

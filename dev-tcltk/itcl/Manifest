@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8a7e38516036463aa3884f8813cc62cb ChangeLog 2750
 MD5 0c870d52f382b7ad6715c7e8e59f5a38 itcl-3.2-r2.ebuild 892
-MD5 8271065b2711a8eab12813f475b9e904 itcl-3.2.1-r1.ebuild 1056
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 0325d081ad6bc7d5f8fe2641c50cd66e itcl-3.2.1-r1.ebuild 1060
 MD5 d78d1b2bd36da73b8fb0ff8e5663ec26 files/digest-itcl-3.2-r2 60
-MD5 e3a3b717c90821cebb7c3e22fa8be626 files/digest-itcl-3.2.1-r1 62
 MD5 d491331a9a5e13cc91ebb8070cc378da files/itcl-3.2-r2-gentoo.diff 1540
 MD5 67dc49dd69f1b7df89aa5f4198b18352 files/itcl-3.2.1-gentoo.diff 4282
+MD5 e3a3b717c90821cebb7c3e22fa8be626 files/digest-itcl-3.2.1-r1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBdVmxHTu7gpaalycRAik/AJ4pBeSg2DV3rKoVbtpqN+TgftM3MACeJ+FT
+iobZMlbC3hzLT+cAJHd0Gdk=
+=HmLf
+-----END PGP SIGNATURE-----
