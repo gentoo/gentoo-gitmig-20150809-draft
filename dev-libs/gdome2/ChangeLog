@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdome2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.5 2003/05/22 19:08:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.6 2003/05/26 09:14:07 liquidx Exp $
+
+  26 May 2003; Alastair Tse <liquidx@gentoo.org> gdome2-0.7.4.ebuild:
+  RDEPEND to DEPEND
 
 *gdome2-0.7.4 (22 May 2003)
 
