@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r4.ebuild,v 1.1 2004/07/30 17:10:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r4.ebuild,v 1.2 2004/07/30 19:40:58 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -22,7 +22,8 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~arm"
-IUSE="build hardened ipv6 static" # nls is not supported yet
+IUSE="build hardened ipv6 static debug" # nls is not supported yet
+RESTRICT="nostrip"
 
 DEPEND="sys-devel/gcc"
 PROVIDE="virtual/glibc virtual/libc"
@@ -64,6 +65,7 @@ src_unpack() {
 		# for now we remove relro/now, no support for relro in ldso
 		rm -f ${WORKDIR}/patch/*relro*
 		rm -f ${WORKDIR}/patch/*now*
+		rm -f ${WORKDIR}/patch/11_all_uClibc-0.9.26-socket.patch.bz2
 		# remove default ssp build
 		use hardened || rm -f ${WORKDIR}/patch/*enable-ssp*
 		epatch ${WORKDIR}/patch
@@ -102,14 +104,17 @@ src_unpack() {
 	make defconfig >/dev/null || die "could not config"
 
 	# this could be a debug flag
-	for def in UCLIBC_PROFILING DO{DEBUG,ASSERTS} SUPPORT_LD_DEBUG{,_EARLY} ; do
-		sed -i -e "s:${def}=y:# ${def} is not set:" .config
-	done
+	if ! use debug ; then
+		for def in UCLIBC_PROFILING DO{DEBUG,ASSERTS} SUPPORT_LD_DEBUG{,_EARLY} ; do
+			sed -i -e "s:${def}=y:# ${def} is not set:" .config
+		done
+	fi
 
 	for def in DO_C99_MATH UCLIBC_HAS_{RPC,CTYPE_CHECKED,WCHAR,HEXADECIMAL_FLOATS,GLIBC_CUSTOM_PRINTF,FOPEN_EXCLUSIVE_MODE,GLIBC_CUSTOM_STREAMS,PRINTF_M_SPEC,FTW} ; do
 		sed -i -e "s:# ${def} is not set:${def}=y:" .config
 	done
-	echo "UCLIBC_HAS_FULL_RPC=n" >> .config
+	echo "UCLIBC_HAS_FULL_RPC=y" >> .config
+	echo "PTHREADS_DEBUG_SUPPORT=y" >> .config
 
 	#if use nls
 	#then
