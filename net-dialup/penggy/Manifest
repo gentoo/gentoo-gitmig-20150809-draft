@@ -1,5 +1,15 @@
-MD5 ba8c68c199ea1d5cf6f2a8efdbf7fdd0 penggy-0.2.1.ebuild 1273
-MD5 3873d0f577b14cf0041348e3efc90f41 ChangeLog 541
-MD5 60f93915838cb266eef644d5f73c9d19 metadata.xml 225
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 16b3fef38694d4449ae1c294431550d9 penggy-0.2.1.ebuild 1085
+MD5 5ddfe3e822ebc731531b534f93754082 ChangeLog 658
+MD5 edfb29e672017e419f873320672daf52 metadata.xml 228
 MD5 0fea2d99dcce8ec0912ba6875a84c8e3 files/digest-penggy-0.2.1 64
 MD5 edb75009c0f9bb4195cb9f103fe75957 files/rc_net.aol 1016
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB0eUejtv59x0+BrURAng6AJ9vPQnetGIlA6yRS6r6K0Cs9Qo/egCgrquV
+sp4+EL56GFEwKFnovo+4u00=
+=X9Ac
+-----END PGP SIGNATURE-----
