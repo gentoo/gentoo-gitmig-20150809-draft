@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: %
 
 IUSE="alsa jpeg encode ffmpeg xvid lirc xosd"
 
+S=${WORKDIR}/${P}
 DESCRIPTION="TV viewer with support for AVI recording and plugins"
 HOMEPAGE="http://xawdecode.sourceforge.net/"
-S="${WORKDIR}/${P}"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
+KEYWORDS="x86 ppc ~sparc ~alpha ~hppa ~mips ~arm"
 
 RDEPEND="virtual/x11
 	>=media-libs/zvbi-0.2.4
