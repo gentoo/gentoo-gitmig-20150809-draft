@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r4.ebuild,v 1.12 2004/11/18 08:57:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r4.ebuild,v 1.13 2005/01/15 13:47:49 eradicator Exp $
 
 inherit eutils
 
@@ -25,6 +25,11 @@ SLOT="0"
 # packages athlon-xp and only motif i686.  needs investigation.
 inherit flag-o-matic
 replace-flags "-mcpu=athlon-xp" "-mcpu=i686"
+
+pkg_setup() {
+	# multilib includes don't work right in this package...
+	[ -n "${ABI}" ] && append-flags "-I/usr/include/gentoo-multilib/${ABI}"
+}
 
 src_unpack() {
 	local cfg="${S}/config/cf/site.def"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r5.ebuild,v 1.20 2004/11/18 17:31:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r5.ebuild,v 1.21 2005/01/15 13:47:49 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,6 +18,11 @@ IUSE=""
 DEPEND="virtual/libc
 	virtual/x11
 	>=sys-apps/sed-4"
+
+pkg_setup() {
+	# multilib includes don't work right in this package...
+	[ -n "${ABI}" ] && append-flags "-I/usr/include/gentoo-multilib/${ABI}"
+}
 
 src_unpack() {
 	local cfg="${S}/config/cf/site.def"
