@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/grass
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/ChangeLog,v 1.4 2003/08/21 23:53:40 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/ChangeLog,v 1.5 2003/09/03 12:45:00 lanius Exp $
+
+  03 Sep 2003; Heinrich Wendel <lanius@gentoo.org> grass-5.0.2.ebuild:
+  back to lesstif, openmotif does not work ..
 
   22 Aug 2003; Heinrich Wendel <lanius@gentoo.org> grass-5.0.2.ebuild:
   made dep on virtual/motif instead of lesstif (bug #25627)
