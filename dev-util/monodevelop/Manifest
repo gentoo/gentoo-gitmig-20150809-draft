@@ -1,4 +1,6 @@
 MD5 edc9fd03f6cacf092ee5983db425db19 monodevelop-0.2.ebuild 882
-MD5 749a22043b6ae40fe0b28479351d5ce1 ChangeLog 512
+MD5 371ee7887f12e80ca7f074d5858d72c3 monodevelop-0.3.ebuild 874
+MD5 46f6b70ce974ca612963814de1262f84 ChangeLog 718
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 MD5 f560516cb9182da3e5637ae1ecb5a305 files/digest-monodevelop-0.2 68
+MD5 db5647b45b74b59c62cf13b797cedc19 files/digest-monodevelop-0.3 68
