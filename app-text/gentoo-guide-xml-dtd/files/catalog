@@ -1,11 +1,10 @@
 
-  -- Catalog data for Gentoo Guide XML V1.0 --
+  -- Catalog data for Gentoo Guide XML V2.1 --
   -- File catalog  --
 
   -- Gentoo Guide driver file .................................................. --
 
-PUBLIC "-//Gentoo//DTD Guide XML V1.0//EN" "xml-dtd-1.0/guide.dtd"
-PUBLIC "-//Gentoo//DTD Guide XML V2.0//EN" "xml-dtd-2.0/guide.dtd"
+PUBLIC "-//Gentoo//DTD Guide XML V2.1//EN" "xml-dtd-2.1/guide.dtd"
 
   -- ISO entity sets ...................................................... --
 
