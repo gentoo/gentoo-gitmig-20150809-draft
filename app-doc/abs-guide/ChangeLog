@@ -1,0 +1,8 @@
+# ChangeLog for app-docs/abs-guide
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.1 2003/05/23 13:28:15 joker Exp $
+
+*abs-guide-1.8 (12 04 2003)
+
+  12 May 2003; Chuck Short <chuck_short@rogers.com.> abs-guide-1.8.ebuild:
+  Initial import.  Ebuild submitted by Chuck Short <chuck_short@rogers.com>.
