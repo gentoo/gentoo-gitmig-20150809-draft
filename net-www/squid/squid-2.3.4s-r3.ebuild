@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r3.ebuild,v 1.2 2001/05/18 17:01:25 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r3.ebuild,v 1.3 2001/05/28 14:32:32 achim Exp $
 
 P=squid-2.3.STABLE4
 
@@ -23,9 +23,10 @@ SRC_URI="$SRC_URI0/${P}-src.tar.gz
 
 HOMEPAGE="http://www.squid-cache.org/"
 
-DEPEND=">=sys-libs/glibc-2.1.3
+RDEPEND="virtual/glibc
 	>=sys-libs/pam-0.72
 	ldap? ( >=net-nds/openldap-1.2.11 )"
+DEPEND="$RDEPEND sys-devel/perl"
 
 src_unpack() {
   unpack ${P}-src.tar.gz

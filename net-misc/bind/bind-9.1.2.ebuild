@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-9.1.2.ebuild,v 1.1 2001/05/06 14:31:26 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-9.1.2.ebuild,v 1.2 2001/05/28 14:32:32 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,9 +9,8 @@ DESCRIPTION="Name Server"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${A}"
 HOMEPAGE="http://www.isc.org/products/BIND"
 
-DEPEND=">=sys-apps/bash-2.04
-        >=sys-devel/libtool-1.3.5
-        >=sys-libs/glibc-2.1.3"
+DEPEND="virtual/glibc sys-apps/groff"
+RDEPEND="virtual/glibc"
 
 #this service should be upgraded to offer optional supervise support
 

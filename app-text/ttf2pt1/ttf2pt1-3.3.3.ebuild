@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ttf2pt1-3.3.3.ebuild,v 1.2 2001/05/28 05:24:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ttf2pt1-3.3.3.ebuild,v 1.3 2001/05/28 14:32:32 achim Exp $
 
 A=${P}.tgz
 S=${WORKDIR}/${P}
@@ -9,8 +9,9 @@ DESCRIPTION="Converts True Type to Type 1 fonts"
 SRC_URI="http://download.sourceforge.net/ttf2pt1/${A}"
 HOMEPAGE="http://ttf2pt1.sourceforge.net"
 
-DEPEND="virtual/glibc
-        =media-libs/freetype-1.3.1-r2"
+RDEPEND="virtual/glibc
+        >=media-libs/freetype-2.0"
+DEPEND="$RDEPEND sys-devel/perl"
 
 src_unpack() {
     unpack ${A}

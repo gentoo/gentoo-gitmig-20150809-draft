@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.9.ebuild,v 1.1 2001/05/10 01:49:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.9.ebuild,v 1.2 2001/05/28 14:32:32 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,7 +10,6 @@ SRC_URI="http://us1.samba.org/samba/ftp/${A}"
 HOMEPAGE="http://www.samba.org"
 
 DEPEND="virtual/glibc
-	>=sys-apps/gawk-3.0.6
 	>=sys-libs/pam-0.72"
 
 #ssl support removed -- it doesn't work...

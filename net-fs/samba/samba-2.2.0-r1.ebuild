@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.0-r1.ebuild,v 1.1 2001/05/24 22:12:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.0-r1.ebuild,v 1.2 2001/05/28 14:32:32 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Samba :)"
@@ -28,7 +28,7 @@ src_compile() {
   # Disabled automout support, because it failed
   # Added -lncurses for readline detection
 
-  try LDFLAGS="-lncurses" ./configure --prefix=/usr \
+  try ./configure --prefix=/usr \
 	--sysconfdir=/etc/smb --localstatedir=/var/log --libdir=/etc/smb --sbindir=/usr/sbin \
 	--without-automount --with-utmp --without-sambabook --with-netatalk --with-smbmount \
 	--with-privatedir=/etc/smb/private --with-msdfs --with-vfs --with-spinlocks --with-lockdir=/var/run/smb --with-swatdir=/usr/share/swat \

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.32.6.ebuild,v 1.2 2000/12/01 21:58:44 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.32.6.ebuild,v 1.3 2001/05/28 14:32:32 achim Exp $
 
 
 A=${PN}-.32.6.tar.gz
@@ -14,19 +14,18 @@ DEPEND=">=app-text/pspell-0.11.2"
 
 src_compile() {
 
-    cd ${S}
-    try ./configure --prefix=/usr --host=${CHOST}
+    try ./configure --prefix=/usr --sysconfdir=/etc/aspell --host=${CHOST}
     try make
 
 }
 
 src_install () {
 
-    cd ${S}
     try make DESTDIR=${D} install
-    mv ${D}/usr/doc/aspell ${D}/usr/doc/${P}
-    mv ${D}/usr/doc/${P}/man-html ${D}/usr/doc/${P}/html
-    mv ${D}/usr/doc/${P}/man-text ${D}/usr/doc/${P}/aspell
+    dodir /usr/share/doc
+    mv ${D}/usr/doc/aspell ${D}/usr/share/doc/${PF}
+    mv ${D}/usr/share/doc/${PF}/man-html ${D}/usr/share/doc/${PF}/html
+    mv ${D}/usr/share/doc/${PF}/man-text ${D}/usr/share/doc/${PF}/aspell
 
     dodoc README* TODO
 

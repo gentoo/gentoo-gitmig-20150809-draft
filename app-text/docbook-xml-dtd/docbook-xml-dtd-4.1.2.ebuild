@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.1.2.ebuild,v 1.1 2001/03/20 05:53:12 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.1.2.ebuild,v 1.2 2001/05/28 14:32:32 achim Exp $
 
 A="docbkx412.zip"
 S=${WORKDIR}/${P}
@@ -10,8 +10,7 @@ SRC_URI="http://www.oasis-open.org/docbook/xml/${PV}/${A}"
 
 HOMEPAGE="http://www.oasis-open.org/docbook/"
 
-DEPEND=">=app-arch/unzip-5.41
-                app-text/sgml-common"
+DEPEND=">=app-arch/unzip-5.41"
 
 src_unpack() {
   mkdir ${S}
