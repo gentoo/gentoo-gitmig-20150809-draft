@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.2.ebuild,v 1.5 2003/03/04 18:08:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.2.ebuild,v 1.6 2003/03/04 20:51:50 liquidx Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6"
 
@@ -16,7 +16,7 @@ SRC_URI="${SRC_URI}
 HOMEPAGE="http://www.ximian.com"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 RDEPEND="app-text/scrollkeeper
 	>=gnome-extra/bonobo-conf-0.16
@@ -34,7 +34,7 @@ RDEPEND="app-text/scrollkeeper
 	=gnome-base/gnome-vfs-1.0*		
 	>=gnome-base/gnome-print-0.35
 	=dev-util/gob-1*
-	>=net-libs/soup-0.7.4-r1
+	>=net-libs/soup-0.7.10
 	doc?	 ( >=app-text/scrollkeeper-0.3.10-r1 )
 	ssl? ( mozilla? ( >=net-www/mozilla-0.9.9 ) : ( >=dev-libs/openssl-0.9.5 ) )
 	ldap?    ( >=net-nds/openldap-2.0 )
