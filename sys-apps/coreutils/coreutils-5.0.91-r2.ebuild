@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r2.ebuild,v 1.1 2003/12/08 11:55:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r2.ebuild,v 1.2 2003/12/08 12:10:35 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -121,17 +121,6 @@ src_compile() {
 src_install() {
 	einstall \
 		bindir=${D}/bin || die
-
-	# hostname comes from net-base
-	# hostname does not work with the -f switch, which breaks gnome2
-	#   amongst other things
-	rm -f ${D}/{bin,usr/bin}/hostname ${D}/usr/share/man/man1/hostname.*
-
-	# /bin/su comes from sys-apps/shadow
-	rm -f ${D}/{bin,usr/bin}/su ${D}/usr/share/man/man1/su.*
-
-	# /usr/bin/uptime comes from the sys-apps/procps packaga
-	rm -f ${D}/{bin,usr/bin}/uptime ${D}/usr/share/man/man1/uptime*
 
 	cd ${D}
 	dodir /usr/bin
