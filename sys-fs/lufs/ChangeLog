@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lufs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.5 2004/04/17 04:16:35 steel300 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.6 2004/04/17 04:29:21 steel300 Exp $
+
+  16 Apr 2004; <coxj@gentoo.org> lufs-0.9.7-r1.ebuild:
+  Fix lufs once and for all.
 
   16 Apr 2004; <coxj@gentoo.org> lufs-0.9.7-r1.ebuild:
   Fix for build on amd64
