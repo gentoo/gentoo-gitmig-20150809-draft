@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.36 2003/03/30 22:15:22 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.37 2003/04/02 06:18:52 lostlogic Exp $
+
+*openssh-3.6_p1 (02 Apr 2003)
+
+  02 Apr 2003; Brandon Low <lostlogic@gentoo.org> openssh-3.6_p1.ebuild:
+  Bump, required some modifications to the selinux patch, test thoroughly
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
