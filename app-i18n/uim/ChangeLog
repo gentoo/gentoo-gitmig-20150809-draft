@@ -1,8 +1,11 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.8 2003/09/14 13:40:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.9 2003/09/18 02:54:02 usata Exp $
 
 *uim-0.0.6 (14 Sep 2003)
+
+  18 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> uim-0.0.6.ebuild:
+  Added debug IUSE flag
 
   14 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
   uim-0.0.6.ebuild:
