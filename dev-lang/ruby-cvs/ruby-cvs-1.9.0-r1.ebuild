@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.9.0-r1.ebuild,v 1.1 2004/01/30 08:10:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.9.0-r1.ebuild,v 1.2 2004/02/21 10:39:51 usata Exp $
 
 IUSE="socks5 tcltk"
 
@@ -13,7 +13,7 @@ SRC_URI=""
 
 LICENSE="Ruby"
 SLOT="1.9"
-KEYWORDS="~alpha ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~hppa ~ia64 ~ppc ~sparc ~x86"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/gdbm-1.8.0
@@ -63,13 +63,13 @@ src_compile() {
 		`use_enable socks5 socks` \
 		--disable-install-doc \
 		|| die "econf failed"
-	emake || die "emake failed"
+	emake || emake || die "emake failed"
 }
 
 src_install() {
 	#export RUBY=${D}/usr/bin/ruby19
-	export LD_LIBRARY_PATH=${D}/usr/lib RUBYLIB=${D}/usr/lib/ruby/1.9
-	einstall DESTDIR=${D} || die "einstall failed"
+	export LD_LIBRARY_PATH=${D}/usr/lib RUBYLIB=${D}/usr/lib/ruby/${SLOT}
+	make DESTDIR=${D} install || die "make install failed"
 
 	dosym /usr/lib/libruby${SLOT/./}.so.${PV} /usr/lib/libruby.so.${PV%.*}
 	dosym /usr/lib/libruby${SLOT/./}.so.${PV} /usr/lib/libruby.so.${PV}
@@ -79,7 +79,7 @@ src_install() {
 
 pkg_postinst() {
 
-	if [ ! -e "$(readlink /usr/bin/ruby)" ] ; then
+	if [ ! -n "$(readlink /usr/bin/ruby)" ] ; then
 		/usr/sbin/ruby-config ruby${SLOT/./}
 	fi
 	einfo
@@ -89,7 +89,7 @@ pkg_postinst() {
 
 pkg_postrm() {
 
-	if [ ! -e "$(readlink /usr/bin/ruby)" ] ; then
+	if [ ! -n "$(readlink /usr/bin/ruby)" ] ; then
 		/usr/sbin/ruby-config ruby${SLOT/./}
 	fi
 }

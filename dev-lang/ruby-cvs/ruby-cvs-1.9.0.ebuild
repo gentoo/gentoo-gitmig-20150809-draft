@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.9.0.ebuild,v 1.1 2004/01/25 12:10:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.9.0.ebuild,v 1.2 2004/02/21 10:39:51 usata Exp $
 
 IUSE="socks5 tcltk"
 
@@ -13,7 +13,7 @@ SRC_URI=""
 
 LICENSE="Ruby"
 SLOT="1.9"
-KEYWORDS="~alpha ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~hppa ~ia64 ~ppc ~sparc ~x86"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/gdbm-1.8.0
