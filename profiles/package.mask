@@ -148,7 +148,6 @@ net-mail/sendmail
 
 # broken
 app-admin/powertweak
-media-video/avi-xmms
 app-text/sgml2x
 >=app-admin/modlogan-0.7.4 (achim)
 
