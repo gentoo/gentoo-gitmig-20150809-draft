@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.3.ebuild,v 1.10 2003/07/18 21:29:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.3.ebuild,v 1.11 2003/07/24 00:39:50 agenkin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Enlightment Data Base"
@@ -18,6 +18,7 @@ DEPEND="$RDEPEND
 src_unpack() {
 	unpack ${A}
 	cp ${FILESDIR}/autogen.sh ${S}
+	chmod +x ${S}/autogen.sh
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/edb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.11 2003/06/29 17:29:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.12 2003/07/24 00:39:50 agenkin Exp $
 
 *edb-1.0.3.20030629 (29 Jun 2003)
 
@@ -22,6 +22,9 @@
   Version bumpage (bug fixes from CVS).
    
 *edb-1.0.3 (3 Jun 2002)
+
+  23 Jul 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Added execute bit to autogen.sh to fix compilation breakage.
 
   09 Apr 2003; Todd Sunderlin <todd@gentoo.org> edb-1.0.3.ebuild:
   Marked stable for sparc.
