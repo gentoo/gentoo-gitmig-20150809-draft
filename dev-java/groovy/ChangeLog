@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/groovy
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.8 2004/10/16 17:15:35 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.9 2005/01/05 22:16:31 luckyduck Exp $
+
+  05 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  groovy-1.0_beta4-r1.ebuild, groovy-1.0_beta4.ebuild:
+  Updated jar-from asm calls to satisfy the new asm-1.4 slot.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> groovy-1.0_beta4-r1.ebuild,
   groovy-1.0_beta4.ebuild:

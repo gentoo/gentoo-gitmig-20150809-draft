@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0_beta4-r1.ebuild,v 1.5 2004/10/16 17:15:35 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0_beta4-r1.ebuild,v 1.6 2005/01/05 22:16:31 luckyduck Exp $
 
 inherit java-pkg
 
@@ -9,17 +9,17 @@ HOMEPAGE="http://groovy.codehaus.org/"
 SRC_URI="http://dist.codehaus.org/groovy/distributions/${PN}-1.0-beta-4-src.tar.gz"
 LICENSE="codehaus-groovy"
 SLOT="1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="doc jikes"
 DEPEND="=dev-java/xerces-2.6* \
 	>=dev-java/commons-cli-1.0-r3
-	=dev-java/ant-1.5*
+	>=dev-java/ant-1.5*
 	=dev-java/junit-3.8*
 	=dev-java/asm-1.4*
 	>=dev-java/classworlds-1.0-r2
 	=dev-java/mockobjects-0.0*
 	=dev-java/bsf-2.3*
-	=www-servers/tomcat-5*
+	=dev-java/servletapi-2.4*
 	=dev-java/xmojo-bin-5.0*"
 # karltk:
 # xmojo-bin is a JMX provider, we should add a list of alternatives
@@ -35,13 +35,13 @@ src_unpack() {
 	cd ${S}/target/lib
 	java-pkg_jar-from xerces-2 || die "Missing xerces"
 	java-pkg_jar-from junit || die "Missing junit"
-	java-pkg_jar-from asm-1 || die "Missing asm"
+	java-pkg_jar-from asm-1.4 || die "Missing asm"
 	java-pkg_jar-from commons-cli-1 || die "Missing commons-cli"
 	java-pkg_jar-from classworlds-1 || die "Missing classworlds"
 	java-pkg_jar-from bsf-2.3 || die "Missing bsf"
 	java-pkg_jar-from mockobjects || die "Missing mockobjects"
 	java-pkg_jar-from xmojo-bin-5.0 || die "Missing xmojo-bin"
-	ln -s /opt/tomcat/common/lib/servlet-api.jar .
+	java-pkg_jar-from servletapi-2.4 servlet-api.jar || die "Missing servletapi"
 
 	cd ${S}
 
