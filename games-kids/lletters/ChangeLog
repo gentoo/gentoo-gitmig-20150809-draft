@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/lletters
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.12 2004/12/27 23:17:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.13 2004/12/29 00:06:51 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   27 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org>
   lletters-0.1.95-r1.ebuild:
@@ -36,10 +39,10 @@
   19 Sept 2002; Mike Frysinger <vapier@gentoo.org> :
   Fixed HOMEPAGE variable
 
-  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> lletters-0.1.95-r1.ebuild :
+  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> lletters-0.1.95-r1.ebuild :
   Added LICENSE, KEYWORDS.
 
-  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> lletters-0.1.95.ebuild :
+  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> lletters-0.1.95.ebuild :
   Added LICENSE, KEYWORDS.
 
   7 May 2002; Spider <spider@gentoo.org> lletters-0.1.95-r1.ebuild lletters-0.1.95.ebuild:
