@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.14.ebuild,v 1.1 2005/01/06 10:44:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.14.ebuild,v 1.2 2005/01/06 10:55:36 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -59,7 +59,6 @@ src_compile() {
 
 	econf \
 		--disable-agent \
-		--libexecdir=/usr/libexec \
 		`use_enable smartcard scdaemon` \
 		`use_enable nls` \
 		`use_enable ldap` \
@@ -70,7 +69,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} libexecdir="/usr/libexec/gnupg" install || die
+	emake DESTDIR="${D}" install || die
 
 	dosym gpg2 /usr/bin/gpg
 
