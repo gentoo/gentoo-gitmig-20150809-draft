@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-apps/viewpdf
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/viewpdf/ChangeLog,v 1.1 2004/10/22 07:38:48 fafhrd Exp $
+
+*viewpdf-0.9 (22 Oct 2004)
+
+  22 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
+  +viewpdf-0.9.ebuild:
+  New package added; keyworded for ~ppc
+
