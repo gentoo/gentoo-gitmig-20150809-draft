@@ -1,9 +1,17 @@
 # ChangeLog for net-mail/mailx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/ChangeLog,v 1.8 2003/02/12 08:13:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/ChangeLog,v 1.9 2003/03/28 21:46:40 avenj Exp $
+
+*mailx-8.1.2.20021129-r1 (27 Mar 2003)
+
+  27 Mar 2003; Jon Portnoy <avenj@gentoo.org> mailx-8.1.2.20021129-r1.ebuild 
+	digest-mailx-8.1.2.20021129-r1 multifix.diff : 
+  Added multifix.diff to fix bug #18259, reported by C. Brewer.
+
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
+
 *mailx-8.1.2.20021129 (01 Dec 2002)
 
   07 Dec 2002; Nick Hadaway <raker@gentoo.org>
