@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e50b7468589f5afe01962b71db699c12 ethereal-0.10.5.ebuild 2477
 MD5 d08324fc74dfecaac0f41bd896cdca66 ChangeLog 11057
-MD5 925f9bf49624b9ec090c461ea364f81f ethereal-0.10.5-r1.ebuild 2589
+MD5 bb9946fe6df0695a2376909c6e3cbd2d ethereal-0.10.5-r1.ebuild 2595
+MD5 e50b7468589f5afe01962b71db699c12 ethereal-0.10.5.ebuild 2477
 MD5 17a9be2cf8cb9f24e7e5b398392483b4 metadata.xml 224
 MD5 5a73274ec255373b4e618388cd057275 files/0.10.3-gcc34.patch 458
-MD5 5a73274ec255373b4e618388cd057275 files/0.10.4-gcc34.patch 458
-MD5 56d5feedd5047dd2b7bcd4c9295addef files/digest-ethereal-0.10.5-r1 69
 MD5 56d5feedd5047dd2b7bcd4c9295addef files/digest-ethereal-0.10.5 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA9YWLT+MN7JbqCpMRAuqlAJ9WQO7M9QptIJkyPIw3X1s21mKGtQCfev0H
-0xFEXbPHCHj5fJynW5C3nEU=
-=OLWG
------END PGP SIGNATURE-----
+MD5 56d5feedd5047dd2b7bcd4c9295addef files/digest-ethereal-0.10.5-r1 69
+MD5 5a73274ec255373b4e618388cd057275 files/0.10.4-gcc34.patch 458
