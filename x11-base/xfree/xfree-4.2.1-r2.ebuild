@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.20 2003/02/13 16:54:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.21 2003/02/16 21:57:13 azarah Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -43,7 +43,7 @@ PATCH_VER="1.2"
 FT2_VER="2.1.2"
 FC2_VER="2.1"
 SISDRV_VER="271102-1"
-SAVDRV_VER="1.1.25t"
+SAVDRV_VER="1.1.27t"
 
 BASE_PV="4.2.0"
 MY_SV="${BASE_PV//\.}"
@@ -61,7 +61,7 @@ X_PATCHES="http://ftp.xfree86.org/pub/XFree86/${PV}/patches/${BASE_PV}-${PV}.dif
 # hours ...
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
-	http://www.probo.com/timr/savage-${SAVDRV_VER}.tgz
+	http://www.probo.com/timr/savage-${SAVDRV_VER}.zip
 	http://www.webit.at/~twinny/sis/sis_drv_src_${SISDRV_VER}.tar.gz
 	3dfx? ( mirror://gentoo/glide3-headers.tar.bz2 )"
 # Updated Wacom driver at http://people.mandrakesoft.com/~flepied/projects/wacom/
@@ -168,9 +168,9 @@ src_unpack() {
 		EPATCH_EXCLUDE="107_all_4.2.1-gcc32-internal-compiler-error.patch.bz2"
 	fi
 
-        # remove 082 patch which b0rks keycodes
-        # see bug #13073
-        rm ${WORKDIR}/patch/082*
+	# Remove 082 patch which b0rks keycodes,
+	# see bug #13073
+	rm -f ${WORKDIR}/patch/082*
 
 	# Various Patches from all over
 	epatch ${WORKDIR}/patch/
@@ -181,10 +181,13 @@ src_unpack() {
 	#   http://www.jg555.com/cvs/cvsweb.cgi/~checkout~/patches/xfree/xfree-4.2.x.-bison.fixes.patch
 	epatch ${FILESDIR}/xfree-4.2.x.-bison.fixes.patch
 
+	# Fix HOME and END keys to work in xterm, bug #15254
+	epatch ${FILESDIR}/xfree-4.2.x-home_end-keys.patch
+
 	# Update the Savage Driver
 	ebegin "Updating Savage driver"
 	cd ${S}/programs/Xserver/hw/xfree86/drivers/savage
-	tar -zxf ${DISTDIR}/savage-${SAVDRV_VER}.tgz || die
+	unzip -qo ${DISTDIR}/savage-${SAVDRV_VER}.zip || die
 	eend 0
     
 	# Update the SIS Driver
@@ -251,6 +254,16 @@ src_unpack() {
 	then
 		# use less ram .. got this from Spider's makeedit.eclass :)
 		echo "#define GccWarningOptions -Wno-return-type -w" >> config/cf/host.def
+	fi
+
+	if [ -n "`use pam`" ]
+	then
+		# If you want to have optional pam support, do it properly ...
+		echo "#define HasPam YES" >> config/cf/host.def
+		echo "#define HasPamMisc YES" >> config/cf/host.def
+	else
+		echo "#define HasPam NO" >> config/cf/host.def
+		echo "#define HasPamMisc NO" >> config/cf/host.def
 	fi
 
 	if [ "${ARCH}" = "x86" ]
@@ -344,7 +357,7 @@ src_install() {
 		make DESTDIR=${D} install || die
 	fi
 
-	# Make sure user running xterm can only write to utmp.
+	# Make sure the user running xterm can only write to utmp.
 	fowners root.utmp /usr/X11R6/bin/xterm
 	fperms 2755 /usr/X11R6/bin/xterm
 
@@ -369,10 +382,11 @@ src_install() {
 	eend 0
 
 	insinto /etc/X11
-	# We use fontconfig now ...
+	# We still use freetype for now ...
 	doins ${FILESDIR}/${PVR}/XftConfig
 	newins ${FILESDIR}/${PVR}/XftConfig XftConfig.new
-	#newins ${S}/lib/Xft/XftConfig-OBSOLETE XftConfig
+	# This is if we are using Fontconfig only ...
+	#newins ${S}/lib/Xft1/XftConfig-OBSOLETE XftConfig
 	dosym ../../../../etc/X11/XftConfig /usr/X11R6/lib/X11/XftConfig
 
 	# Install example config file
@@ -449,7 +463,7 @@ src_install() {
 				fi
 				;;
 			ja*|ko*|zh*)
-				if [ -r "${x}/Compose" ]
+				if [ -r ${x}/Compose ]
 				then
 					rm -f ${x}/Compose
 				fi
@@ -463,7 +477,10 @@ src_install() {
 	# new display manager script
 	doexe ${FILESDIR}/${PVR}/startDM.sh
 	exeinto /etc/X11/Sessions
-	doexe ${FILESDIR}/${PVR}/Sessions/*
+	for x in ${FILESDIR}/${PVR}/Sessions/*
+	do
+		[ -f ${x} ] && doexe ${x}
+	done
 	insinto /etc/env.d
 	doins ${FILESDIR}/${PVR}/10xfree
 	insinto /etc/X11/xinit
@@ -472,10 +489,13 @@ src_install() {
 	doexe ${FILESDIR}/${PVR}/Xsession ${FILESDIR}/${PVR}/Xsetup_0
 	insinto /etc/X11/fs
 	newins ${FILESDIR}/${PVR}/xfs.config config
-	insinto /etc/pam.d
-	newins ${FILESDIR}/${PVR}/xdm.pamd xdm
-	# Need to fix console permissions first
-	newins ${FILESDIR}/${PVR}/xserver.pamd xserver
+	if [ -n "`use pam`" ]
+	then
+		insinto /etc/pam.d
+		newins ${FILESDIR}/${PVR}/xdm.pamd xdm
+		# Need to fix console permissions first
+		newins ${FILESDIR}/${PVR}/xserver.pamd xserver
+	fi
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/${PVR}/xdm.start xdm
 	newexe ${FILESDIR}/${PVR}/xfs.start xfs
@@ -523,7 +543,7 @@ src_install() {
 	           grep -v ' shared object,' | \
 	           sed -n -e 's/^\(.*\):[  ]*ELF.*, not stripped/\1/p')
 	do
-		if [ -f ${x} ]
+	if [ -f ${x} ]
 		then
 			# Dont do the modules ...
 			if [ "${x/\/usr\/X11R6\/lib\/modules}" = "${x}" ]
@@ -666,7 +686,7 @@ pkg_postinst() {
 		#  3)  Now Generate fonts.dir files.
 		#
 		#  CID fonts is a bit more involved, but as we do not install any,
-		#  I am not going to bother.
+		#  thus I am not going to bother.
 		#
 		#  <azarah@gentoo.org> (20 Oct 2002)
 		#
@@ -692,9 +712,9 @@ pkg_postinst() {
 				# Only generate .scale files if there are truetype
 				# fonts present ...
 				if [ "${x/encodings}" = "${x}" -a \
-				     -n "$(find ${x} -iname '*.tt[cf]' -print)" ]
+				     -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
 				then
-					${ROOT}/usr/X11R6/bin/ttmkfdir \
+					${ROOT}/usr/X11R6/bin/ttmkfdir -x 2 \
 						-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
 						-o ${x}/fonts.scale -d ${x}
 				fi
@@ -727,9 +747,8 @@ pkg_postinst() {
 
 			# Only generate XftCache files if there are truetype
 			# fonts present ...
-			if [ "${x/encodings}" = "${x}" ] && \
-			   [ -n "$(find ${x} -iname '*.tt[cf]' -print)" -o \
-			     -n "$(find ${x} -iname '*.pf[ab]' -print)" ]
+			if [ "${x/encodings}" = "${x}" -a \
+			     -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
 			then
 				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
 				${ROOT}/usr/X11R6/bin/xftcache ${x} &> /dev/null
