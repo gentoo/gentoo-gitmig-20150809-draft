@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Lars S. Jensen <lars@nospam.dk> 
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fwbuilder/fwbuilder-1.0.0.ebuild,v 1.1 2002/03/29 23:43:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fwbuilder/fwbuilder-1.0.0.ebuild,v 1.2 2002/03/29 23:53:30 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A firewall GUI"
@@ -15,9 +15,9 @@ DEPEND=">=x11-libs/gtkmm-1.2.5-r1
 	dev-libs/libxml2"
 
 src_compile() {
-    local myopts
+    local myconf
 	
-	use static && myopts="${myopts} LDFLAGS=\"-static\""
+	use static && myconf="${myopts} --enable-shared=no --enable-static=yes"
 
     ./configure	\
 		--prefix=/usr	\
@@ -27,7 +27,12 @@ src_compile() {
     cp config.h config.h.orig
     sed -e "s:#define HAVE_XMLSAVEFORMATFILE 1://:" config.h.orig > config.h
 	
-	make ${myopts} || die
+	if [ "`use static`" ]
+	then
+		make LDFLAGS="-static" || die
+	else
+		make || die
+	fi
 }
 
 src_install () {
