@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.80 2004/10/30 12:38:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.81 2004/10/30 16:57:57 blubb Exp $
+
+  30 Oct 2004; Simon Stelling <blubb@gentoo.org> ppp-2.4.2-r7.ebuild:
+  stable on amd64 for security reasons (bug #69152)
 
 *ppp-2.4.2-r7 (30 Oct 2004)
 
