@@ -163,7 +163,7 @@ for instructions.  Better yet, use <c>konqueror</c>, <c>opera</c>,
 <p>Run <c>startx</c> again just to make sure that X still comes up.
 Assuming that it does, kill X and we'll start a real window manager
 instead.  
-Thanks to Achim and Danarmak, Gentoo's KDE packagers, the
+Thanks to Achim, Danarmak and Verwilst, Gentoo's KDE packagers, the
 KDE ebuild configures KDE quite well all by itself.  The KDM display
 manager should work just by starting it.</p>
 <pre># <i>kdm</i></pre>
