@@ -1,4 +1,14 @@
-MD5 69be9a4b69d6bfa390feaa9bc4881848 ChangeLog 824
-MD5 e2cbfefff4bf4184076837b5cb9f1d2d text-reform-1.11.ebuild 610
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1c98e4bf518aeb4cc0dcd571e522af0f ChangeLog 923
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 319b0332bab47fe963d09635f25ca7fa text-reform-1.11.ebuild 611
 MD5 efc6b1da40bfd11b3b2d33eeefaaabfc files/digest-text-reform-1.11 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5oHZKRy60XGEcJIRAhCSAKCZ8T70uQojdvd6KMcxM5MebC7AtwCeIaJV
+EDYP4cONSoz61L8Q2CHJRvk=
+=dxc+
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
-MD5 b0cbe1007e6a433c941e8a4635367f3f ChangeLog 966
-MD5 36a7379050beab699cef97a2146f77fa set-scalar-1.17.ebuild 585
-MD5 04cd5db67cb06bed475e2cfa71d2c4d7 set-scalar-1.19.ebuild 603
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 65ef0456feb06a008b3bf6097540cd35 ChangeLog 1064
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 7aa747c2d6543cfdd21b84b3ce09c5c4 set-scalar-1.17.ebuild 589
+MD5 3a6bdf949a14d02ea94311e76bf79c92 set-scalar-1.19.ebuild 608
 MD5 0f1c6001f32de9628d39b15080b7cbc4 files/digest-set-scalar-1.17 66
 MD5 d59d8e5daa9312286e0be801ea6ed1ca files/digest-set-scalar-1.19 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5oNiKRy60XGEcJIRAnAZAJ48wFp6WA5WweJrl8iwK+AFYbfHPACff8p5
+9bAbLqVH3RClvlMhegHobcM=
+=jZSN
+-----END PGP SIGNATURE-----

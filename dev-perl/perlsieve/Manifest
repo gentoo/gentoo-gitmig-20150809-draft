@@ -1,4 +1,14 @@
-MD5 8b58e40e675e66c13ccac6f337e9e7dc ChangeLog 740
-MD5 6a9c6e254e805cea87cfe52de940225f perlsieve-0.4.9b.ebuild 537
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 826b17981af5c3611e1accddd7c07519 ChangeLog 839
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 cd57c9446a52c11d6a314dae1b888a1f perlsieve-0.4.9b.ebuild 542
 MD5 50079f4f9b03dc4aa801102208fd58cc files/digest-perlsieve-0.4.9b 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5oQxKRy60XGEcJIRAopVAJ4jHBAZw97PRSqsTCYz5jgJaWCn0wCeMj7D
+OsC6Q1Y17od6tWN7/zLu8Kg=
+=K71L
+-----END PGP SIGNATURE-----
