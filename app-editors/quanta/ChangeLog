@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/quanta
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.12 2003/03/19 12:16:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/ChangeLog,v 1.13 2003/05/19 13:23:09 danarmak Exp $
+
+*quanta-3.1.2 (19 May 2003)
+
+  19 May 2003; Dan Armak <danarmak@gentoo.org> quanta-3.1.2.ebuild:
+  New bugfix release that comes with kde 3.1.2.
 
 *quanta-3.1.1 (14 Mar 2003)
 
