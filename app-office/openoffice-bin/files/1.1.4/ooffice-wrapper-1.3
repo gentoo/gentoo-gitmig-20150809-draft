@@ -43,6 +43,10 @@ if [ -e "$HOME/.sversionrc" ] ; then
      sed -i -e s/1.1.3/1.1.4/g $HOME/.sversionrc
 fi
 
+if [ ! -f "/proc/version" ] ; then
+    echo "--- Warning - OO.o will not work without a mounted /proc filesystem ---"
+fi
+
 ###
 ### Get user settings directory from ~/.sversionrc and echo directory name to stdout
 ### get_settings_dir <Version>

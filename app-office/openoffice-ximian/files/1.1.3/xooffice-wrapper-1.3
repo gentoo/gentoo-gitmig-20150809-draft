@@ -38,6 +38,10 @@ if [ -d "$HOME/.xopenoffice/1.1.2" ] ; then
      echo "Your user install dir has been moved over to the new version"
 fi
 
+if [ ! -f "/proc/version" ] ; then
+    echo "--- Warning - OO.o will not work without a mounted /proc filesystem ---"
+fi
+
 ###
 ### Get user settings directory from ~/.xversionrc and echo directory name to stdout
 ### get_settings_dir <Version>
