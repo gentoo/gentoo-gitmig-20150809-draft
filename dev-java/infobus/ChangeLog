@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/infobus
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus/ChangeLog,v 1.1 2003/05/15 05:17:28 absinthe Exp $
+
+*infobus-1.2 (15 May 2003)
+
+  15 May 2003; Dylan Carlson <absinthe@gentoo.org> infobus-1.2.ebuild:
+  Initial import.
+
