@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sodipodi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/ChangeLog,v 1.5 2002/11/27 19:59:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/ChangeLog,v 1.6 2002/12/24 17:22:17 gerk Exp $
+
+  24 Dec 2002; Mark Guertin <gerk@gentoo.org> sodipodi-0.28.ebuild :
+  Updated KEYWORDS for ~ppc
 
 *sodipodi-0.28 (27 Nov 2002)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.28.ebuild,v 1.2 2002/12/02 22:39:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.28.ebuild,v 1.3 2002/12/24 17:22:17 gerk Exp $
 
 IUSE="xml2 nls bonobo wmf"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sodipodi.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND=">=gnome-base/gnome-print-0.35
 	>=gnome-extra/gal-0.13
