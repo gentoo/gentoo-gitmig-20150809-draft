@@ -1,11 +1,14 @@
 # ChangeLog for dev-lang/ocaml
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.53 2004/12/29 22:01:45 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.54 2005/01/03 00:58:51 j4rg0n Exp $
+
+  02 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> ocaml-3.08.1.ebuild:
+  Stable ppc-macos
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
 
-  20 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> ocaml-3.08.1.ebuild:
+  20 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> ocaml-3.08.1.ebuild:
   Stable on alpha.
 
   07 Dec 2004; Jason Wever <weeve@gentoo.org> ocaml-3.08.1.ebuild:
@@ -98,7 +101,7 @@
   Marked ocaml -amd64. Produces bad object code that causes segfaults under
   certain conditions. This happens only on amd64.
 
-  15 May 2004; Bryan Østergaard <kloeri@gentoo.org> ocaml-3.07-r1.ebuild:
+  15 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> ocaml-3.07-r1.ebuild:
   Stable on alpha.
 
   11 May 2004; Guy Martin <gmsoft@gentoo.org> ocaml-3.07-r1.ebuild:
