@@ -420,3 +420,8 @@ dev-lang/tcl-tk
 # Masking gkrellm-seti, because it does not compile with the new gkrellm,
 # have contacted the author for a patch
 =x11-misc/gkrellm-seti-0.7.0
+
+
+#seemant@gentoo.org 20 Mar 2002
+# Masking medusa-0.5.1-r4 because it requires libtool-1.4.2 which is also masked
+=medusa-0.5.1-r4
