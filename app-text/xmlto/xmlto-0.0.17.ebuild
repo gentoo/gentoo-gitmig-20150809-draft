@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.17.ebuild,v 1.10 2004/06/24 22:57:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.17.ebuild,v 1.11 2004/09/08 02:59:17 tgall Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://cyberelk.net/tim/data/${PN}/stable/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc ~sparc mips alpha arm amd64 ~ia64"
+KEYWORDS="~x86 ppc ~sparc mips alpha arm amd64 ~ia64 ppc64"
 IUSE=""
 
 DEPEND="app-shells/bash
