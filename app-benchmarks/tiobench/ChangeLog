@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/tiobench
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/ChangeLog,v 1.8 2004/09/24 19:04:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/ChangeLog,v 1.9 2004/12/18 19:00:58 blubb Exp $
+
+  18 Dec 2004; Simon Stelling <blubb@gentoo.org> tiobench-0.3.3-r1.ebuild:
+  was testing for a long time, marking stable on amd64
 
   24 Sep 2004; Sven Wegener <swegener@gentoo.org> -tiobench-0.3.3.ebuild:
   Removed old ebuild.

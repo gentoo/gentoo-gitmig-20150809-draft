@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/xfbsuite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/xfbsuite/ChangeLog,v 1.6 2004/06/24 21:30:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/xfbsuite/ChangeLog,v 1.7 2004/12/18 19:02:09 blubb Exp $
+
+  18 Dec 2004; Simon Stelling <blubb@gentoo.org> xfbsuite-0.9.7.6.ebuild:
+  was testing for a long time, marking stable on amd64
 
   15 Apr 2004; David Holm <dholm@gentoo.org> xfbsuite-0.9.7.6.ebuild:
   Where did the ~ppc go?
