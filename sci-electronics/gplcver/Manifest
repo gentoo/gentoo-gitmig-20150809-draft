@@ -1,4 +1,14 @@
-MD5 a791ca65684b6f352196aabc8c6c1fcd gplcver-1.10j.ebuild 1097
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d164999350c36f51385a2299bbeb5fda gplcver-1.10j.ebuild 1109
+MD5 0539f4e3b2de67915179d6817a80b9bc ChangeLog 560
 MD5 b6374e5f17f105d371223cd0e49a3e45 metadata.xml 267
-MD5 ca441f059dd448f4853a59696ad68a01 ChangeLog 359
 MD5 23abea83d3f6bf970f2e02f72bcc3913 files/digest-gplcver-1.10j 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0HcDI1lqEGTUzyQRAjGYAJ9s9rcLGvQRyKOrIGqa7GKFQmSLIwCgxxmL
+tO57Qgr/JWBQfcACIaN3zu4=
+=XQnB
+-----END PGP SIGNATURE-----

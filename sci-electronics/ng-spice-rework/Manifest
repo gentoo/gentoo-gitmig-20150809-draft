@@ -1,6 +1,16 @@
-MD5 44c3d5b4146a4c955b57f92ecbd3d24f ChangeLog 827
-MD5 a06b899b030fa23fc0758943cab8d46a ng-spice-rework-14.ebuild 639
-MD5 f9d7692e2de46001d45a7f111053e5d4 ng-spice-rework-15.ebuild 924
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a11a25807dd08cbe161eedb1b6a5ad09 ng-spice-rework-14.ebuild 647
+MD5 bd46708ab196c551c95069e9dbe3eff7 ChangeLog 1077
 MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
+MD5 a50b259c76cf3ea0a8f3f836d266920e ng-spice-rework-15.ebuild 931
 MD5 419df059e644593b30561622cf904785 files/digest-ng-spice-rework-14 71
 MD5 cdcbac36f6d0470a9935636cb8ca3306 files/digest-ng-spice-rework-15 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0HjUI1lqEGTUzyQRAj3pAKCQejHo/ihnQclhulAc87C9T45HGwCeN2lj
+aY+U4g/10Mg8Qn+nXFKyN7U=
+=1KCa
+-----END PGP SIGNATURE-----

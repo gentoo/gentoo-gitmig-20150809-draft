@@ -1,4 +1,14 @@
-MD5 c2023a774a3ef65202021cb24f3fc6f7 gtkwave-2.0.0_pre20030319.ebuild 771
-MD5 d801740e07afb4f630ad3702fc11bb5b ChangeLog 1441
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 52da392ebeafdd868e5573566c48242f gtkwave-2.0.0_pre20030319.ebuild 779
+MD5 90ead5f8d4a6a2f6d4cdc93cc3f82ed8 ChangeLog 1661
 MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
 MD5 f9a4105574e921c749a8a537dadab907 files/digest-gtkwave-2.0.0_pre20030319 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0HddI1lqEGTUzyQRAuqXAJ9sgTYBBeWVX+Co6uNo9cmchPgraQCfda9c
+xKhN8ACCmf/dlc7aAbKcMnk=
+=6IXb
+-----END PGP SIGNATURE-----

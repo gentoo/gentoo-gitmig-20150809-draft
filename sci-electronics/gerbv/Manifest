@@ -1,6 +1,16 @@
-MD5 d54137f0d87cc9cacf40baf70c941cf6 ChangeLog 826
-MD5 7709162e28a6da9d63e0f7ad13f9703a gerbv-0.15.ebuild 692
-MD5 b3aed1d6dbea790be5418a6444979738 gerbv-0.16.ebuild 1078
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3b746c2de5ddea01497397b00374358b gerbv-0.16.ebuild 1087
+MD5 9428b8149cc93105bff06844b8e52481 gerbv-0.15.ebuild 699
+MD5 0ffecc8f26e685627283eef5891e9158 ChangeLog 1032
 MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
 MD5 e6c0f51c5a63b102adb80fc2c0109d16 files/digest-gerbv-0.15 63
 MD5 8869170c2eb362b80bd88baa7fd4846e files/digest-gerbv-0.16 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0HbFI1lqEGTUzyQRAhh0AJ49z/KJAulnQ8oxW/2YdQkzao719wCfVqJl
+nYeMr2toD4IO5bLiieIMVJQ=
+=9pvR
+-----END PGP SIGNATURE-----

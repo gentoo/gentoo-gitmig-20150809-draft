@@ -1,4 +1,14 @@
-MD5 0743abe3d5305db49721b8f78aeb1945 modelsim-5.7d.ebuild 1269
-MD5 643f4ea31ad03dd7f278ef65073cf13f ChangeLog 462
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 47e4c0ecab82ca625cabba16f8bd845a modelsim-5.7d.ebuild 1277
+MD5 77304c6f05f22dd5e36034dd5af91f21 ChangeLog 661
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 8fa4c00b62753751c5c7ecac997e4524 files/digest-modelsim-5.7d 205
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0HiEI1lqEGTUzyQRAqZWAJ9wf1RRKDFoggYXnATnjI50GQWzkgCdG9Bp
+1mg1oJlAy0RBLP09de+J3ls=
+=Lka8
+-----END PGP SIGNATURE-----

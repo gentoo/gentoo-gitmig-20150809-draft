@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5b4c3c676e2b858e4fe178dd5c756b72 geda-20040111-r1.ebuild 2632
 MD5 f367e116459fd850edace8b71f5a6467 geda-20040111.ebuild 2485
-MD5 cbf47c791b2062e570a8d81048bf1bf9 ChangeLog 964
+MD5 72b4e44fc7d9ee450ec8a6ebbcef5e3e ChangeLog 972
 MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
 MD5 acbd61a0d2aebb4763a3a74686f4fb62 files/digest-geda-20040111 767
 MD5 acbd61a0d2aebb4763a3a74686f4fb62 files/digest-geda-20040111-r1 767
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0HU5I1lqEGTUzyQRAlMjAKCscdMU5AQQecy4KXjOhAl0UC4xwACgoMsK
+ebmJBViK3keAnGOMs1CjtRY=
+=XGI+
+-----END PGP SIGNATURE-----
