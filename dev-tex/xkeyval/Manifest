@@ -1,4 +1,16 @@
-MD5 afb179f2e51dc9b4c1625280fe543f9d ChangeLog 504
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 64d7802d301d7b17aece7dd3ddd88816 xkeyval-1.4.ebuild 736
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 674839276298935ceb4a31acf6d2147f xkeyval-1.4.ebuild 738
+MD5 5ad2031e6db897b090a419949398f7dd ChangeLog 689
+MD5 fe11bd638735baf3cd54618b5ac65711 xkeyval-2.4.ebuild 853
 MD5 02cd83940dfa6c4a345f3379b9c86ae4 files/digest-xkeyval-1.4 63
+MD5 342b357b338bd6adbd3fc589fd10744b files/digest-xkeyval-2.4 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCT5p1VWNWqTUmv+0RAhhhAJ410Ehd9mvwJHdiyqs3BwjsQ3m50wCeMYCf
++o9Zc0cXL1Z29UqjRJlvtBQ=
+=zFQ5
+-----END PGP SIGNATURE-----
