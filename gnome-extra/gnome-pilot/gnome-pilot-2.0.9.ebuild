@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/gnome-pilot-2.0.5.ebuild,v 1.1 2003/04/21 14:50:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/gnome-pilot-2.0.9.ebuild,v 1.1 2003/05/22 11:34:29 liquidx Exp $
 
 inherit gnome.org gnome2 eutils
 
@@ -35,10 +35,10 @@ src_unpack() {
 	cd ${S}
 
 	# hackaround b0rked with pilot-link detection <liquidx@gentoo.org>
-	#epatch ${FILESDIR}/gnome-pilot-2.0.1-pisock.patch
+	# epatch ${FILESDIR}/gnome-pilot-2.0.1-pisock.patch
 	# USB patch from Mandrake.  Allows gnome-pilot to watch /dev/pilot even
 	# when it does not yet exist (because of using devfs).
-	epatch ${FILESDIR}/gnome-pilot-0.1.70-usb.patch
+	# patch -p1 < ${FILESDIR}/gnome-pilot-0.1.70-usb.patch
 
 }
 

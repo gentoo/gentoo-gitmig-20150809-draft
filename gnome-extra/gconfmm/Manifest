@@ -1,5 +1,3 @@
-MD5 e10ab3e9375ba35d2b9368c8b4bb456b ChangeLog 1106
-MD5 38af9cc9f691cac2c754ef410226e6e9 gconfmm-2.0.0.ebuild 617
-MD5 30aa7ac822f5853a117132a5c7c87e94 gconfmm-2.0.1.ebuild 615
-MD5 61c0513ce1421c4f55d53a5b8eddb799 files/digest-gconfmm-2.0.0 65
+MD5 72482b6eda8b71bdc9de7780c8035ab6 ChangeLog 1245
+MD5 1ef0d2c3d855561dbd12b2336ab00176 gconfmm-2.0.1.ebuild 614
 MD5 9c23b9877d9c68a6e815a0a4becd09a1 files/digest-gconfmm-2.0.1 65

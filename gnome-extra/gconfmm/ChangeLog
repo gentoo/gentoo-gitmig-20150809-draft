@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gconfmm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconfmm/ChangeLog,v 1.9 2003/04/26 20:44:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconfmm/ChangeLog,v 1.10 2003/05/22 11:34:29 liquidx Exp $
+
+  22 May 2003; Alastair Tse <liquidx@gentoo.org> gconfmm-2.0.0.ebuild,
+  gconfmm-2.0.0.ebuild, gconfmm-2.0.1.ebuild:
+  marked stable x86
 
 *gconfmm-2.0.1 (26 Apr 2003)
 
