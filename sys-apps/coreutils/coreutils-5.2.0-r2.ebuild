@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.0-r2.ebuild,v 1.4 2004/05/14 00:36:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.0-r2.ebuild,v 1.5 2004/05/14 04:08:10 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -129,7 +129,7 @@ src_install() {
 
 	# add DIRCOLORS
 	insinto /etc
-	doins ${PATCHDIR}/DIR_COLORS
+	doins ${FILESDIR}/DIR_COLORS
 
 	# move non-critical packages into /usr
 	mv bin/{csplit,expand,factor,fmt,fold,join,md5sum,nl,od} usr/bin
