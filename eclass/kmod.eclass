@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.11 2004/04/10 20:07:00 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.12 2004/05/10 05:18:51 cyfred Exp $
 
 # This eclass provides help for compiling external kernel modules from
 # source.
@@ -100,7 +100,7 @@ get_kernel_info()
 
 	KV_DIR_MAJOR="`echo ${KV_DIR_VERSION_FULL} | cut -f 1 -d .`"
 	KV_DIR_MINOR="`echo ${KV_DIR_VERSION_FULL} | cut -f 2 -d .`"
-	KV_DIR_PATCH="`echo ${KV_DIR_VERSION_FULL} | cut -f 3 -d . | cut -f 3 -d -`"
+	KV_DIR_PATCH="`echo ${KV_DIR_VERSION_FULL} | cut -f 3 -d . | cut -f 1 -d -`"
 	KV_DIR_TYPE="`echo ${KV_DIR_VERSION_FULL} | cut -f 2- -d -`"
 
 	# sanity check - do the settings in the kernel's makefile match
