@@ -1,0 +1,86 @@
+Index: etc/conf.d/wireless.example
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/net-scripts/conf.d/wireless.example,v
+retrieving revision 1.11.2.4
+diff -u -B -r1.11.2.4 wireless.example
+--- etc/conf.d/wireless.example	4 Feb 2005 10:33:29 -0000	1.11.2.4
++++ etc/conf.d/wireless.example	1 Apr 2005 16:51:45 -0000
+@@ -244,27 +244,6 @@
+ # since there's nothing to do if it indicates failure.
+ 
+ #preassociate() {
+-##############################################################################
+-# ADVANCED CONFIGURATION
+-# 
+-# Four functions can be defined which will be called surrounding the
+-# start/stop operations.  The functions are called with the interface
+-# name first so that one function can control multiple adapters.
+-#
+-# The return values for the preup and predown functions should be 0
+-# (success) to indicate that configuration or deconfiguration of the
+-# interface can continue.  If preup returns a non-zero value, then
+-# interface configuration will be aborted.  If predown returns a
+-# non-zero value, then the interface will not be allowed to continue
+-# deconfiguration.
+-#
+-# The return values for the postup and postdown functions are ignored
+-# since there's nothing to do if they indicate failure.
+-#
+-# ${ESSID} is set to the exact ESSID of the AP you're connecting to
+-# ${ESSIDVAR} is ${ESSID} converted to variable name bash allows
+-
+-#preassociate() {
+ #	# The below adds two configuration variables leap_user_ESSID
+ #	# and leap_pass_ESSID. When they are both confiugred for the ESSID
+ #	# being connected to then we run the CISCO LEAP script
+Index: lib/rcscripts/net.modules.d/iwconfig
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/net-scripts/net.modules.d/iwconfig,v
+retrieving revision 1.7.2.18
+diff -u -B -r1.7.2.18 iwconfig
+--- lib/rcscripts/net.modules.d/iwconfig	23 Mar 2005 14:39:11 -0000	1.7.2.18
++++ lib/rcscripts/net.modules.d/iwconfig	1 Apr 2005 16:51:46 -0000
+@@ -883,16 +883,3 @@
+ 	interface_down ${iface}
+ 	return 1
+ }
+-
+-# bool iwconfig_pre_stop(char *iface)
+-#
+-# Configures ESSID variable
+-# Always returns 0
+-iwconfig_pre_stop() {
+-	unset ESSID ESSIDVAR
+-	if iwconfig_check_extensions $1 ; then
+-		ESSID=$( iwconfig_get_essid $1 )
+-		ESSIDVAR=${ESSID//[![:word:]]/_}
+-	fi
+-	return 0
+-}
+Index: lib/rcscripts/net.modules.d/wpa_supplicant
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/net-scripts/net.modules.d/wpa_supplicant,v
+retrieving revision 1.2.2.13
+diff -u -B -r1.2.2.13 wpa_supplicant
+--- lib/rcscripts/net.modules.d/wpa_supplicant	23 Mar 2005 14:39:11 -0000	1.2.2.13
++++ lib/rcscripts/net.modules.d/wpa_supplicant	1 Apr 2005 16:51:46 -0000
+@@ -217,19 +217,6 @@
+ 	return 0
+ }
+ 
+-# bool wpa_supplicant_pre_stop(char *iface)
+-#
+-# Configures ESSID variable
+-# Always returns 0
+-wpa_supplicant_pre_stop() {
+-	unset ESSID ESSIDVAR
+-	if wpa_supplicant_check_extensions $1 ; then
+-		ESSID=$( iwconfig_get_essid $1 )
+-		ESSIDVAR=${ESSID//[![:word:]]/_}
+-	fi
+-	return 0
+-}
+-
+ # bool wpa_supplicant_post_stop(char *iface)
+ #
+ # Stops wpa_supplicant on an interface
