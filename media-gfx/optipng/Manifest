@@ -1,3 +1,5 @@
-MD5 a98fe34529256f6cbb6b74c7d71fb531 optipng-0.4.3.ebuild 1640
+MD5 dc8365e3798272938f41a7963e584193 optipng-0.4.3.ebuild 1757
+MD5 23541b9e03ee336c7dd2d71ca5871dda ChangeLog 486
+MD5 d1fd781dd463a1e5d87df46fad732ec6 metadata.xml 400
 MD5 776935461c2653df2b47f23f7b7c60d7 files/digest-optipng-0.4.3 65
 MD5 eab5451d70e601bb80438372adbcc3cd files/optipng-more-makefile-options.diff 1423
