@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.27 2003/06/27 13:49:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.28 2003/06/27 22:04:10 liquidx Exp $
+
+  27 Jun 2003; Alastair Tse <liquidx@gentoo.org> pwlib-1.5.0.ebuild:
+  further fixes. symlinks don't override existing directories using portage :(
 
   27 Jun 2003; Alastair Tse <liquidx@gentoo.org> pwlib-1.5.0.ebuild:
   workaround upgrade path problems (#23594)

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.0.ebuild,v 1.2 2003/06/27 13:48:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.0.ebuild,v 1.3 2003/06/27 22:04:10 liquidx Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -56,12 +56,12 @@ src_install() {
 	make PREFIX=${D}/usr install || die "install failed"
 
 	# these are for compiling openh323
+	# NOTE: symlinks don't work when upgrading
 	# FIXME: probably should fix this with ptlib-config
 	dodir /usr/share/pwlib/include
-	dodir /usr/share/pwlib/lib
-	for x in ptlib.h ptbuildopts.h ptlib ptclib; do
-		dosym /usr/include/${x} /usr/share/pwlib/include/${x}
-   	done
+	cp -r ${D}/usr/include/* ${D}/usr/share/pwlib/include
+	
+	dodir /usr/share/pwlib/lib	
 	for x in ${D}/usr/lib/*; do
 		dosym /usr/lib/`basename ${x}` /usr/share/pwlib/lib/`basename ${x}`
 	done
