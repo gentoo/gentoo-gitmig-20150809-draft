@@ -1,15 +1,15 @@
 # ChangeLog for kde-misc/kio-locate
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/ChangeLog,v 1.9 2005/01/27 20:13:46 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/ChangeLog,v 1.10 2005/01/28 18:39:11 greg_g Exp $
 
 *kio-locate-0.3.4 (27 Jan 2005)
 
-  27 Jan 2005; Gregorio Guidi <greg@gentoo.org> +kio-locate-0.3.4.ebuild:
+  27 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> +kio-locate-0.3.4.ebuild:
   Version bump.
 
 *kio-locate-0.3.2 (19 Jan 2005)
 
-  19 Jan 2005; Gregorio Guidi <greg@gentoo.org> -kio-locate-0.2.4.ebuild,
+  19 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> -kio-locate-0.2.4.ebuild,
   +kio-locate-0.3.2.ebuild:
   Version bump. Removed old version.
 
