@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/kuvert-1.1.8.ebuild,v 1.2 2004/09/04 23:04:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/kuvert-1.1.8.ebuild,v 1.3 2004/11/20 09:46:44 slarti Exp $
+
+inherit eutils
 
 MY_P=${P/-/_}
 
@@ -22,8 +24,6 @@ DEPEND=">=app-crypt/gnupg-1.0.6
 	dev-lang/perl
 	virtual/mta
 	virtual/libc"
-
-inherit eutils
 
 src_unpack() {
 	unpack ${A}
