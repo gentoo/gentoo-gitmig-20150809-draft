@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.42 2003/12/29 04:09:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.43 2004/01/11 14:46:00 azarah Exp $
+
+*ncurses-5.3-r5 (11 Jan 2004)
+
+  11 Jan 2004; Martin Schlemmer <azarah@gentoo.org> ncurses-5.3-r5.ebuild,
+  files/ncurses-5.3-coretutils.patch, files/ncurses-5.3-coreutils.patch:
+  We need the basic terminfo files in /etc, bug #37026.  We will
+  add '--with-terminfo-dirs="/etc/terminfo:..." to ./configure and
+  then populate /etc/terminfo in src_install() ...
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> ncurses-5.3-r2.ebuild:
   Move to mips stable (~mips -> mips)
