@@ -16,9 +16,9 @@
 #####
 #####		SENDMAIL CONFIGURATION FILE
 #####
-##### built by root@orange-pc.ces.clemson.edu on Wed Jun 12 13:43:05 EDT 2002
-##### in /usr/share/sendmail-cf/cf
-##### using ../ as configuration include directory
+##### built by root@orange-pc.ces.clemson.edu on Thu Jul 4 00:56:51 EDT 2002
+##### in /usr/portage/net-mail/sendmail/files
+##### using /usr/share/sendmail-cf/ as configuration include directory
 #####
 ######################################################################
 #####
@@ -27,30 +27,29 @@
 ######################################################################
 ######################################################################
 
-#####  $Id: sendmail.cf,v 1.1 2002/06/12 19:15:55 g2boojum Exp $  #####
-#####  $Id: sendmail.cf,v 1.1 2002/06/12 19:15:55 g2boojum Exp $  #####
-#####  $Id: sendmail.cf,v 1.1 2002/06/12 19:15:55 g2boojum Exp $  #####
-
-#####  $Id: sendmail.cf,v 1.1 2002/06/12 19:15:55 g2boojum Exp $  #####
-
+#####  $Id: sendmail.cf,v 1.2 2002/07/04 04:57:40 g2boojum Exp $  #####
+#####  $Id: sendmail.cf,v 1.2 2002/07/04 04:57:40 g2boojum Exp $  #####
+#####  $Id: sendmail.cf,v 1.2 2002/07/04 04:57:40 g2boojum Exp $  #####
+#####  $Id: sendmail.cf,v 1.2 2002/07/04 04:57:40 g2boojum Exp $  #####
 
 
-#####  $Id: sendmail.cf,v 1.1 2002/06/12 19:15:55 g2boojum Exp $  #####
+
+#####  $Id: sendmail.cf,v 1.2 2002/07/04 04:57:40 g2boojum Exp $  #####
 
 
-#####  $Id: sendmail.cf,v 1.1 2002/06/12 19:15:55 g2boojum Exp $  #####
+#####  $Id: sendmail.cf,v 1.2 2002/07/04 04:57:40 g2boojum Exp $  #####
 
-#####  $Id: sendmail.cf,v 1.1 2002/06/12 19:15:55 g2boojum Exp $  #####
+#####  $Id: sendmail.cf,v 1.2 2002/07/04 04:57:40 g2boojum Exp $  #####
 
-#####  $Id: sendmail.cf,v 1.1 2002/06/12 19:15:55 g2boojum Exp $  #####
-
-
-#####  $Id: sendmail.cf,v 1.1 2002/06/12 19:15:55 g2boojum Exp $  #####
-
-#####  $Id: sendmail.cf,v 1.1 2002/06/12 19:15:55 g2boojum Exp $  #####
+#####  $Id: sendmail.cf,v 1.2 2002/07/04 04:57:40 g2boojum Exp $  #####
 
 
-#####  $Id: sendmail.cf,v 1.1 2002/06/12 19:15:55 g2boojum Exp $  #####
+#####  $Id: sendmail.cf,v 1.2 2002/07/04 04:57:40 g2boojum Exp $  #####
+
+#####  $Id: sendmail.cf,v 1.2 2002/07/04 04:57:40 g2boojum Exp $  #####
+
+
+#####  $Id: sendmail.cf,v 1.2 2002/07/04 04:57:40 g2boojum Exp $  #####
 
 # level 10 config file format
 V10/Berkeley
@@ -1241,7 +1240,7 @@ Sauthinfo
 ###   Local and Program Mailer specification   ###
 ##################################################
 
-#####  $Id: sendmail.cf,v 1.1 2002/06/12 19:15:55 g2boojum Exp $  #####
+#####  $Id: sendmail.cf,v 1.2 2002/07/04 04:57:40 g2boojum Exp $  #####
 
 #
 #  Envelope sender rewriting
@@ -1293,7 +1292,7 @@ Mprog,		P=/usr/sbin/smrsh, F=lsDFMoqeu9, S=EnvFromL/HdrFromL, R=EnvToL/HdrToL, D
 ###   SMTP Mailer specification   ###
 #####################################
 
-#####  $Id: sendmail.cf,v 1.1 2002/06/12 19:15:55 g2boojum Exp $  #####
+#####  $Id: sendmail.cf,v 1.2 2002/07/04 04:57:40 g2boojum Exp $  #####
 
 #
 #  common sender and masquerading recipient rewriting
