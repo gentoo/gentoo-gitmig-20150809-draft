@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.15 2003/01/17 00:50:09 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.16 2003/02/09 13:54:33 seemant Exp $
 
 # The commonbox eclass is designed to allow easier installation of the box
 # window managers such as blackbox and fluxbox and commonbox
@@ -14,7 +14,7 @@ INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_compile src_install pkg_postinst
 
-DEPEND="sys-apps/supersed"
+DEPEND="dev-util/pkgconfig"
 
 RDEPEND="nls? ( sys-devel/gettext )
 	x11-misc/commonbox-utils
@@ -34,42 +34,48 @@ fi
 
 commonprep() {
 
-	ssed -i 's:data ::' ${S}/Makefile.am
+	cp ${S}/Makefile.am ${T}
+	sed -e 's:data ::' ${T}/Makefile.am > ${S}/Makefile.am
 
-	ssed -i \
+	cp ${S}/util/Makefile.am ${T}
+	sed \
 		-e 's:bsetbg::' \
 		-e 's:bsetroot::' \
-		${S}/util/Makefile.am
+		${T}/Makefile.am > ${S}/util/Makefile.am
 
-	ssed -i \
+	cp ${S}/doc/Makefile.am ${T}
+	sed \
 		-e 's:bsetroot.1::' \
 		-e 's:bsetbg.1::' \
-		${S}/doc/Makefile.am
+		${T}/Makefile.am > ${S}/doc/Makefile.am
 
 	for i in `find ${S} -name 'Makefile.am'`
 	do
-		ssed -i 's:$(pkgdatadir)/nls:/usr/share/locale:' ${i}
+		cp ${i} ${T}
+		sed 's:$(pkgdatadir)/nls:/usr/share/locale:' \
+			${T}/Makefile.am > ${i}
 	done
 
 	for i in `find ${S}/nls -name 'Makefile.am'`
 	do
-		ssed -i \
+		cp ${i} ${T}
+		sed \
 			-e "s:blackbox.cat:${MYBIN}.cat:g" \
 			-e "s:${PN}.cat:${MYBIN}.cat:g" \
-			${i}
+			${T}/Makefile.am > ${i}
 	done
 
-        for i in `find ${S}/src -name 'Makefile*'`
-        do
-		ssed -i \
+	for i in `find ${S}/src -name 'Makefile*'`
+	do
+		rm ${T}/Makefile*
+		cp ${i} ${T}
+		sed \
 			-e "s:/styles/Results:/styles/Fury-NG:" \
 			-e "s:/styles/mbdtex:/styles/Fury-NG:" \
 			-e "s:/styles/Clean:/styles/Fury-NG:" \
-			${i}
+			${T}/Makefile* > ${i}
 	done
 	
-	einfo ${MYBIN}
-
 }
 
 commonbox_src_compile() {
@@ -151,13 +157,13 @@ commonbox_pkg_postinst() {
 		einfo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 		einfo "! ${MYBIN} no longer uses /usr/share/${MYBIN} as the  !"
 		einfo "! default share directory to contain styles and menus.      !"
-		einfo "! The default directory is now /usr/share/commonbox         !"
+		einfo "! The default directory is now /usr/share/commonbox	 !"
 		einfo "! Please move any files in /usr/share/${MYBIN} that you  !"
 		einfo "! wish to keep (personal styles and your menu) into the     !"
 		einfo "! new directory and modify your menu files to point all     !"
 		einfo "! listed paths to the new directory.			       !"
 		einfo "! Also, be sure to update the paths in each user's	       !"
-		einfo "! config file found in their home directory.	               !"
+		einfo "! config file found in their home directory.		       !"
 		einfo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 		einfo
 	fi
