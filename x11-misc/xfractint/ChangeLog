@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/xfractint
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.4 2003/02/12 09:33:31 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.5 2004/02/01 18:14:50 spock Exp $
+
+*xfractint-20.2.05 (01 Feb 2004)
+
+  01 Feb 2004; Michal Januszewski <spock@gentoo.org> metadata.xml,
+  xfractint-20.2.04.ebuild, xfractint-20.2.05.ebuild,
+  files/xfractint-20.02p05.patch:
+  Version bump, new version includes a patch that fixes compilation problems
+  with gcc-3.3.x. Closes bug #31975.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

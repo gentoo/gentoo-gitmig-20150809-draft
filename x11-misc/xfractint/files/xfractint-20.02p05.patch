@@ -1,0 +1,668 @@
+diff -Naur xfractint-20.02p05-orig/editpal.c xfractint-20.02p05/editpal.c
+--- xfractint-20.02p05-orig/editpal.c	2003-03-25 02:25:40.000000000 +0100
++++ xfractint-20.02p05/editpal.c	2003-10-25 15:51:01.000000000 +0200
+@@ -114,11 +114,11 @@
+ #endif
+ 
+ #include <string.h>
+-#ifndef XFRACT
++//#ifndef XFRACT
+ #include <stdarg.h>
+-#else
+-#include <varargs.h>
+-#endif
++//#else
++//#include <varargs.h>
++//#endif
+ 
+ #ifdef __TURBOC__
+ #   include <mem.h>   /* to get mem...() declarations */
+@@ -410,21 +410,21 @@
+    }
+ 
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+ static void displayf(int x, int y, int fg, int bg, char *format, ...)
+-#else
++/*#else
+ static void displayf(va_alist)
+ va_dcl
+-#endif
++#endif*/
+    {
+    char buff[81];
+    int  ctr;
+ 
+    va_list arg_list;
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+    va_start(arg_list, format);
+-#else
++/*#else
+    int x,y,fg,bg;
+    char *format;
+ 
+@@ -434,7 +434,7 @@
+    fg = va_arg(arg_list,int);
+    bg = va_arg(arg_list,int);
+    format = va_arg(arg_list,char *);
+-#endif
++#endif*/
+    vsprintf(buff, format, arg_list);
+    va_end(arg_list);
+ 
+diff -Naur xfractint-20.02p05-orig/fracsubr.c xfractint-20.02p05/fracsubr.c
+--- xfractint-20.02p05-orig/fracsubr.c	2003-02-13 04:01:23.000000000 +0100
++++ xfractint-20.02p05/fracsubr.c	2003-10-25 15:52:26.000000000 +0200
+@@ -3,12 +3,12 @@
+ FRACTALS.C, i.e. which are non-fractal-specific fractal engine subroutines.
+ */
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+ #include <stdarg.h>
+-#include <sys/timeb.h>
+-#else
+-#include <varargs.h>
+-#endif
++//#include <sys/timeb.h>
++//#else
++//#include <varargs.h>
++//#endif
+ #include <sys/types.h>
+ #include <time.h>
+   /* see Fractint.c for a description of the "include"  hierarchy */
+@@ -1058,27 +1058,27 @@
+ 
+    */
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+ int put_resume(int len, ...)
+-#else
++/*#else
+ int put_resume(va_alist)
+ va_dcl
+-#endif
++#endif*/
+ {
+    va_list arg_marker;  /* variable arg list */
+    BYTE *source_ptr;
+-#ifdef XFRACT
++/*#ifdef XFRACT
+    int len;
+-#endif
++#endif*/
+ 
+    if (resume_info == 0)
+       return(-1);
+-#ifndef XFRACT
++//#ifndef XFRACT
+    va_start(arg_marker,len);
+-#else
++/*#else
+    va_start(arg_marker);
+    len = va_arg(arg_marker,int);
+-#endif
++#endif*/
+    while (len)
+    {
+       source_ptr = (BYTE *)va_arg(arg_marker,char *);
+@@ -1109,27 +1109,27 @@
+    return(0);
+ }
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+ int get_resume(int len, ...)
+-#else
++/*#else
+ int get_resume(va_alist)
+ va_dcl
+-#endif
++#endif*/
+ {
+    va_list arg_marker;  /* variable arg list */
+    BYTE *dest_ptr;
+-#ifdef XFRACT
++/*#ifdef XFRACT
+    int len;
+-#endif
++#endif*/
+ 
+    if (resume_info == 0)
+       return(-1);
+-#ifndef XFRACT
++//#ifndef XFRACT
+    va_start(arg_marker,len);
+-#else
++/*#else
+    va_start(arg_marker);
+    len = va_arg(arg_marker,int);
+-#endif
++#endif*/
+    while (len)
+    {
+       dest_ptr = (BYTE *)va_arg(arg_marker,char *);
+diff -Naur xfractint-20.02p05-orig/fractint.c xfractint-20.02p05/fractint.c
+--- xfractint-20.02p05-orig/fractint.c	2003-03-25 02:25:46.000000000 +0100
++++ xfractint-20.02p05/fractint.c	2003-10-25 15:55:49.000000000 +0200
+@@ -6,12 +6,12 @@
+ #include <string.h>
+ #include <time.h>
+ #include <signal.h>
+-#ifndef XFRACT
+-#include <io.h>
++//#ifndef XFRACT
++//#include <io.h>
+ #include <stdarg.h>
+-#else
+-#include <varargs.h>
+-#endif
++//#else
++//#include <varargs.h>
++//#endif
+ #include <ctype.h>
+ 
+   /* #include hierarchy for fractint is a follows:
+@@ -555,12 +555,12 @@
+      timer(1,NULL,int width)            decoder
+      timer(2)                           encoder
+   */
+-#ifndef XFRACT
++//#ifndef XFRACT
+ int timer(int timertype,int(*subrtn)(),...)
+-#else
++/*#else
+ int timer(va_alist)
+ va_dcl
+-#endif
++#endif*/
+ {
+    va_list arg_marker;  /* variable arg list */
+    char *timestring;
+@@ -570,15 +570,15 @@
+    int i;
+    int do_bench;
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+    va_start(arg_marker,subrtn);
+-#else
++/*#else
+    int timertype;
+    int (*subrtn)();
+    va_start(arg_marker);
+    timertype = va_arg(arg_marker, int);
+    subrtn = (int (*)())va_arg(arg_marker, int *);
+-#endif
++#endif*/
+ 
+    do_bench = timerflag; /* record time? */
+    if (timertype == 2)   /* encoder, record time only if debug=200 */
+diff -Naur xfractint-20.02p05-orig/framain2.c xfractint-20.02p05/framain2.c
+--- xfractint-20.02p05-orig/framain2.c	2003-03-25 02:25:49.000000000 +0100
++++ xfractint-20.02p05/framain2.c	2003-10-25 15:57:43.000000000 +0200
+@@ -1,11 +1,11 @@
+ #include <string.h>
+ #include <time.h>
+-#ifndef XFRACT
+-#include <io.h>
++//#ifndef XFRACT
++//#include <io.h>
+ #include <stdarg.h>
+-#else
+-#include <varargs.h>
+-#endif
++//#else
++//#include <varargs.h>
++//#endif
+ #include <ctype.h>
+   /* see Fractint.c for a description of the "include"  hierarchy */
+ #include "port.h"
+diff -Naur xfractint-20.02p05-orig/hc.c xfractint-20.02p05/hc.c
+--- xfractint-20.02p05-orig/hc.c	2003-02-13 04:01:23.000000000 +0100
++++ xfractint-20.02p05/hc.c	2003-10-25 15:49:33.000000000 +0200
+@@ -56,7 +56,7 @@
+ #include <io.h>
+ #include <stdarg.h>
+ #else
+-#include <varargs.h>
++#include <stdarg.h>
+ #define strupr strlwr
+ #endif
+ #include <fcntl.h>
+@@ -301,24 +301,25 @@
+    }
+ 
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+ void fatal(int diff, char *format, ...)
+-#else
+-void fatal(va_alist)
+-    va_dcl
+-#endif
++//#else
++//void fatal(va_alist)
++//    va_dcl
++//#endif
+    {
+    va_list arg;
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+    va_start(arg, format);
+-#else
++/*#else
+    int diff;
+    char *format;
+-   va_start(arg);
++   va_start(arg, format);
+    diff = va_arg(arg,int);
+    format = va_arg(arg,char *);
+ #endif
++*/
+ 
+    print_msg("Fatal", srcline-diff, format, arg);
+    va_end(arg);
+@@ -330,24 +331,25 @@
+    }
+ 
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+ void error(int diff, char *format, ...)
+-#else
+-void error(va_alist)
+-    va_dcl
+-#endif
++//#else
++//void error(int diff, char *format, ...)
++//void error(va_alist)
++//    va_dcl
++//#endif
+    {
+    va_list arg;
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+    va_start(arg, format);
+-#else
+-   int diff;
++//#else
++/*   int diff;
+    char *format;
+    va_start(arg);
+    diff = va_arg(arg,int);
+    format = va_arg(arg,char *);
+-#endif
++#endif*/
+    print_msg("Error", srcline-diff, format, arg);
+    va_end(arg);
+ 
+@@ -356,23 +358,23 @@
+    }
+ 
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+ void warn(int diff, char *format, ...)
+-#else
++/*#else
+ void warn(va_alist)
+    va_dcl
+-#endif
++#endif*/
+    {
+    va_list arg;
+-#ifndef XFRACT
++//#ifndef XFRACT
+    va_start(arg, format);
+-#else
++/*#else
+    int diff;
+    char *format;
+    va_start(arg);
+    diff = va_arg(arg, int);
+    format = va_arg(arg, char *);
+-#endif
++#endif*/
+    print_msg("Warning", srcline-diff, format, arg);
+    va_end(arg);
+ 
+@@ -381,47 +383,47 @@
+    }
+ 
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+ void notice(char *format, ...)
+-#else
++/*#else
+ void notice(va_alist)
+     va_dcl
+-#endif
++#endif*/
+    {
+    va_list arg;
+-#ifndef XFRACT
++//#ifndef XFRACT
+    va_start(arg, format);
+-#else
++/*#else
+    char *format;
+ 
+    va_start(arg);
+    format = va_arg(arg,char *);
+-#endif
++#endif*/
+    print_msg("Note", srcline, format, arg);
+    va_end(arg);
+    }
+ 
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+ void msg(char *format, ...)
+-#else
++/*#else
+ void msg(va_alist)
+ va_dcl
+-#endif
++#endif*/
+    {
+    va_list arg;
+-#ifdef XFRACT
++/*#ifdef XFRACT
+    char *format;
+-#endif
++#endif*/
+ 
+    if (quiet_mode)
+       return;
+-#ifndef XFRACT
++//#ifndef XFRACT
+    va_start(arg, format);
+-#else
++/*#else
+    va_start(arg);
+    format = va_arg(arg,char *);
+-#endif
++#endif*/
+    print_msg(NULL, 0, format, arg);
+    va_end(arg);
+    }
+diff -Naur xfractint-20.02p05-orig/jiim.c xfractint-20.02p05/jiim.c
+--- xfractint-20.02p05-orig/jiim.c	2003-03-25 02:25:49.000000000 +0100
++++ xfractint-20.02p05/jiim.c	2003-10-25 15:58:07.000000000 +0200
+@@ -40,11 +40,11 @@
+ 
+ #include <string.h>
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+ #include <stdarg.h>
+-#else
++/*#else
+ #include <varargs.h>
+-#endif
++#endif*/
+ 
+ #ifdef __TURBOC__
+ #   include <mem.h>   /* to get mem...() declarations */
+diff -Naur xfractint-20.02p05-orig/Makefile xfractint-20.02p05/Makefile
+--- xfractint-20.02p05-orig/Makefile	2003-03-29 18:51:27.000000000 +0100
++++ xfractint-20.02p05/Makefile	2003-10-25 16:30:04.000000000 +0200
+@@ -213,8 +213,11 @@
+ 	cp xfractint $(BINDIR)/xfractint
+ 	strip $(BINDIR)/xfractint
+ 	chmod a+x $(BINDIR)/xfractint
+-	cp fractint.hlp $(PARFILES) $(FRMFILES) $(IFSFILES) $(LFILES) ./maps/$(MAPFILES) $(SRCDIR)
+-	(cd $(SRCDIR); chmod a+r fractint.hlp $(PARFILES) $(FRMFILES) $(IFSFILES) $(LFILES) $(MAPFILES) )
++	cp fractint.hlp $(PARFILES) $(FRMFILES) $(IFSFILES) $(LFILES) $(SRCDIR)
++	mkdir $(SRCDIR)/maps
++	(cd maps; cp $(MAPFILES) $(SRCDIR)/maps )	
++	(cd $(SRCDIR); chmod a+r fractint.hlp $(PARFILES) $(FRMFILES) $(IFSFILES) $(LFILES) )
++	(cd $(SRCDIR)/maps; chmod a+r $(MAPFILES) )
+ 	cp xfractint.man $(MANDIR)/xfractint.1
+ 	chmod a+r $(MANDIR)/xfractint.1
+ 
+diff -Naur xfractint-20.02p05-orig/memory.c xfractint-20.02p05/memory.c
+--- xfractint-20.02p05-orig/memory.c	2003-02-13 04:01:23.000000000 +0100
++++ xfractint-20.02p05/memory.c	2003-10-25 15:58:30.000000000 +0200
+@@ -1,12 +1,12 @@
+ #include <string.h>
+ #include <limits.h>
+ #include <malloc.h>
+-#ifndef XFRACT
+-#include <io.h>
++//#ifndef XFRACT
++//#include <io.h>
+ #include <stdarg.h>
+-#else
+-#include <varargs.h>
+-#endif
++//#else
++//#include <varargs.h>
++//#endif
+ #include <ctype.h>
+ 
+ #include "port.h"
+diff -Naur xfractint-20.02p05-orig/miscovl.c xfractint-20.02p05/miscovl.c
+--- xfractint-20.02p05-orig/miscovl.c	2003-03-25 02:51:13.000000000 +0100
++++ xfractint-20.02p05/miscovl.c	2003-10-25 16:00:05.000000000 +0200
+@@ -5,14 +5,14 @@
+ #include <string.h>
+ #include <ctype.h>
+ #include <time.h>
+-#ifndef XFRACT
+-#include <malloc.h>
+-#include <process.h>
++//#ifndef XFRACT
++//#include <malloc.h>
++//#include <process.h>
+ #include <stdarg.h>
+-#include <io.h>
+-#else
+-#include <varargs.h>
+-#endif
++//#include <io.h>
++//#else
++//#include <varargs.h>
++//#endif
+   /* see Fractint.c for a description of the "include"  hierarchy */
+ #include "port.h"
+ #include "prototyp.h"
+@@ -24,12 +24,12 @@
+ static void write_batch_parms(char *colorinf,int colorsonly, int maxcolor,int i, int j);
+ static void expand_comments(char far *target, char far *source);
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+ static void put_parm(char *parm,...);
+-#else
+-static void put_parm();
++//#else
++//static void put_parm();
+ extern  int fake_lut;
+-#endif
++//#endif
+ 
+ static void put_parm_line(void);
+ static int getprec(double,double,double);
+@@ -1200,24 +1200,24 @@
+       }
+ }
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+ static void put_parm(char *parm,...)
+-#else
++/*#else
+ static void put_parm(va_alist)
+ va_dcl
+-#endif
++#endif*/
+ {
+    char *bufptr;
+    va_list args;
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+    va_start(args,parm);
+-#else
++/*#else
+    char * parm;
+ 
+    va_start(args);
+    parm = va_arg(args,char *);
+-#endif
++#endif*/
+    if (*parm == ' '             /* starting a new parm */
+      && wbdata->len == 0)       /* skip leading space */
+       ++parm;
+diff -Naur xfractint-20.02p05-orig/miscres.c xfractint-20.02p05/miscres.c
+--- xfractint-20.02p05-orig/miscres.c	2003-02-13 04:01:23.000000000 +0100
++++ xfractint-20.02p05/miscres.c	2003-10-25 16:00:20.000000000 +0200
+@@ -6,12 +6,12 @@
+ #include <ctype.h>
+ #include <time.h>
+ #include <malloc.h>
+-#ifndef XFRACT
++//#ifndef XFRACT
+ #include <stdarg.h>
+-#include <io.h>
+-#else
+-#include <varargs.h>
+-#endif
++//#include <io.h>
++//#else
++//#include <varargs.h>
++//#endif
+ /*#ifdef __TURBOC__
+ #include <dir.h>
+ #endif  */
+diff -Naur xfractint-20.02p05-orig/printer.c xfractint-20.02p05/printer.c
+--- xfractint-20.02p05-orig/printer.c	2003-02-13 04:01:23.000000000 +0100
++++ xfractint-20.02p05/printer.c	2003-10-25 16:01:27.000000000 +0200
+@@ -87,12 +87,12 @@
+ #include <sys/types.h>
+ #include <errno.h>
+ 
+-#ifndef XFRACT
+-#include <conio.h>
++//#ifndef XFRACT
++//#include <conio.h>
+ #include <stdarg.h>
+-#else
+-#include <varargs.h>
+-#endif
++//#else
++//#include <varargs.h>
++//#endif
+ 
+ #include <string.h>
+ 
+@@ -136,11 +136,11 @@
+ 
+ /********      PROTOTYPES     ********/
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+ static void Printer_printf(char far *fmt,...);
+-#else
+-static void Printer_printf();
+-#endif
++//#else
++//static void Printer_printf();
++//#endif
+ static int  _fastcall printer(int c);
+ static void _fastcall print_title(int,int,char *);
+ static void printer_reset(void);
+@@ -1339,25 +1339,25 @@
+ 
+ /* This function prints a string to the the printer with BIOS calls. */
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+ static void Printer_printf(char far *fmt,...)
+-#else
++/*#else
+ static void Printer_printf(va_alist)
+ va_dcl
+-#endif
++#endif*/
+ {
+ int i;
+ char s[500];
+ int x=0;
+ va_list arg;
+ 
+-#ifndef XFRACT
++//#ifndef XFRACT
+ va_start(arg,fmt);
+-#else
++/*#else
+ char far *fmt;
+ va_start(arg);
+ fmt = va_arg(arg,char far *);
+-#endif
++#endif*/
+ 
+ {
+    /* copy far to near string */
+diff -Naur xfractint-20.02p05-orig/prompts1.c xfractint-20.02p05/prompts1.c
+--- xfractint-20.02p05-orig/prompts1.c	2003-02-13 04:01:23.000000000 +0100
++++ xfractint-20.02p05/prompts1.c	2003-10-25 16:02:09.000000000 +0200
+@@ -1980,8 +1980,7 @@
+ /* subrtn of get_file_entry, separated so that storage gets freed up */
+ {
+ #ifdef XFRACT
+-   static FCODE o_instr[]={"Press "FK_F6" to select different file, "FK_F2" for details,
+-"FK_F4" to toggle sort "};
++   static FCODE o_instr[]={"Press "FK_F6" to select different file, "FK_F2" for details, "FK_F4" to toggle sort "};
+ /* keep the above split on two lines, the carriage return is needed to keep the
+    line length < 80 characters */
+ #else
+diff -Naur xfractint-20.02p05-orig/prototyp.h xfractint-20.02p05/prototyp.h
+--- xfractint-20.02p05-orig/prototyp.h	2003-03-25 02:25:51.000000000 +0100
++++ xfractint-20.02p05/prototyp.h	2003-10-25 15:56:44.000000000 +0200
+@@ -370,13 +370,13 @@
+ 
+ extern void calcfracinit(void);
+ extern void adjust_corner(void);
+-#ifndef XFRACT
++//#ifndef XFRACT
+ extern int put_resume(int ,... );
+ extern int get_resume(int ,... );
+-#else
++/*#else
+ extern int put_resume();
+ extern int get_resume();
+-#endif
++#endif*/
+ extern int alloc_resume(int ,int );
+ extern int start_resume(void);
+ extern void end_resume(void);
+@@ -607,13 +607,13 @@
+ extern int pot_line(BYTE *,int );
+ extern int sound_line(BYTE *,int );
+ extern int sound_line(unsigned char *pixels,int linelen);
+-#ifndef XFRACT
++//#ifndef XFRACT
+ extern int timer(int,int (*subrtn)(),...);
+-extern int _cdecl _matherr(struct exception *);
+-#else
+-extern int timer();
++//extern int _cdecl _matherr(struct exception *);
++//#else
++//extern int timer();
+ extern int XZoomWaiting;
+-#endif
++//#endif*/
+ 
+ 
+ extern void clear_zoombox(void);
