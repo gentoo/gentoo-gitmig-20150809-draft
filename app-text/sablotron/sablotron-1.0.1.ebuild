@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.1.ebuild,v 1.5 2004/06/24 22:51:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.1.ebuild,v 1.6 2004/07/13 23:40:49 agriffis Exp $
 
 inherit libtool gnuconfig
 
@@ -27,7 +27,7 @@ src_compile() {
 	local myconf=
 
 	# Detect mips systems properly
-	use mips && gnuconfig_update
+	gnuconfig_update
 
 	# Please do not remove, else we get references to PORTAGE_TMPDIR
 	# in /usr/lib/libsablot.la ...

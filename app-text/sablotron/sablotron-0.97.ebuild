@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.97.ebuild,v 1.18 2004/06/24 22:51:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.97.ebuild,v 1.19 2004/07/13 23:40:49 agriffis Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gingerall.com/charlie/ga/xml/p_sab.xml"
 LICENSE="MPL-1.1"
 
 SLOT="0"
-IUSE=""
+IUSE="perl"
 KEYWORDS="x86 sparc ppc hppa alpha amd64 ~mips"
 
 DEPEND=">=dev-libs/expat-1.95.6-r1
