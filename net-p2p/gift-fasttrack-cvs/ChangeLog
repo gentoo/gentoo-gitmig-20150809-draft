@@ -1,0 +1,8 @@
+# ChangeLog for net-p2p/gift-fasttrack-cvs
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack-cvs/ChangeLog,v 1.1 2003/07/02 19:58:00 lostlogic Exp $
+
+  02 Jul 2003; Brandon Low <lostlogic@gentoo.org>
+  gift-fasttrack-cvs-0.8.0.ebiuld:
+  First version separated out'
+
