@@ -158,6 +158,9 @@ src_install() {
 	# fix bug #15873 bad owner on /var/run/courier
 	diropts -o mail -g mail
 	keepdir /var/run/courier
+	# make install creates a ton of dirs that we want to keep
+	# and we don't want to run keepdir 900 times
+	find ${D} -type d -exec touch {}/.keep
 
 	local f
 	cd ${D}/etc/courier
@@ -171,19 +174,11 @@ src_install() {
 	exeinto /etc/init.d
 	# we install the new single init script as courier
 	newexe ${FILESDIR}/courier-init courier
-	# and install the old main init script as courier-old
-	newexe ${FILESDIR}/courier courier-old
-	newexe ${FILESDIR}/courier-authdaemond courier-authdaemond
-	newexe ${FILESDIR}/courier-ldapaliasd courier-ldapaliasd
-	newexe ${FILESDIR}/courier-mta courier-mta
-	newexe ${FILESDIR}/courier-esmtpd courier-esmtpd
-	newexe ${FILESDIR}/courier-esmtpd-ssl courier-esmtpd-ssl
-	newexe ${FILESDIR}/courier-esmtpd-msa courier-esmtpd-msa
-	newexe ${FILESDIR}/courier-imapd courier-imapd
-	newexe ${FILESDIR}/courier-imapd-ssl courier-imapd-ssl
-	newexe ${FILESDIR}/courier-pop3d-ssl courier-pop3d-ssl
-	newexe ${FILESDIR}/courier-pop3d courier-pop3d
-	newexe ${FILESDIR}/courier-filterd courier-filterd
+	# and install the old main init script as courier-old if the old one 
+	# is installed which it will be now, but for the future...
+	`grep DAEMONLIST /etc/init.d/courier >&/dev/null` && \
+		newexe ${FILESDIR}/courier courier-old
+	# the rest of them don't need to be installed
 
 	einfo "Setting up maildirs by default in the account skeleton ..."
 	diropts -m 755 -o root -g root
