@@ -1,6 +1,10 @@
 # ChangeLog for net-www/netscape-communicator
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-communicator/ChangeLog,v 1.12 2004/07/04 13:04:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-communicator/ChangeLog,v 1.13 2004/08/14 15:20:21 swegener Exp $
+
+  14 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml,
+  netscape-communicator-4.79-r1.ebuild:
+  Corrected metadata.xml to match DTD and added IUSE="".
 
 *netscape-communicator-4.80 (04 Jul 2004)
 
