@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/stress
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.12 2004/10/05 11:08:30 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.13 2004/11/03 19:31:04 corsair Exp $
+
+  03 Nov 2004; Markus Rothe <corsair@gentoo.org> stress-0.18.1.ebuild:
+  Marked ~ppc64; bug #69909
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   stress-0.18.1.ebuild:
