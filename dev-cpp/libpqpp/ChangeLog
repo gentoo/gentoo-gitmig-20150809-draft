@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/libpqpp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/ChangeLog,v 1.2 2004/01/17 22:12:37 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/ChangeLog,v 1.3 2004/01/18 00:24:40 nakano Exp $
+
+*libpqpp-4.0-r4 (18 Jan 2004)
+
+  18 Jan 2004; Masatomo Nakano <nakano@gentoo.org> libpqpp-4.0-r4.ebuild:
+  Fixed install path.
 
 *libpqpp-4.0-r3 (17 Jan 2004)
 
