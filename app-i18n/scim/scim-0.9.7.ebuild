@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.9.7.ebuild,v 1.4 2004/07/17 10:55:44 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.9.7.ebuild,v 1.5 2004/08/21 15:28:34 foser Exp $
 
 inherit gnome2 eutils
 
@@ -16,7 +16,7 @@ IUSE="gnome"
 RDEPEND="virtual/x11
 	gnome? ( >=gnome-base/gconf-1.2
 		>=dev-libs/libxml2-2.5
-		>=gnome-base/ORBit2-2.8 )
+		>=gnome-base/orbit-2.8 )
 	>=x11-libs/gtk+-2
 	>=dev-libs/atk-1
 	>=x11-libs/pango-1

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/scim-cvs-0.99.4.ebuild,v 1.1 2004/07/18 17:22:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/scim-cvs-0.99.4.ebuild,v 1.2 2004/08/21 15:29:52 foser Exp $
 
 inherit gnome2 eutils cvs
 
@@ -25,7 +25,7 @@ S="${WORKDIR}/${ECVS_MODULE}"
 RDEPEND="virtual/x11
 	gnome? ( >=gnome-base/gconf-1.2
 		>=dev-libs/libxml2-2.5
-		>=gnome-base/ORBit2-2.8 )
+		>=gnome-base/orbit-2.8 )
 	>=x11-libs/gtk+-2
 	>=dev-libs/atk-1
 	>=x11-libs/pango-1
