@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.24 2005/02/16 11:11:33 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.25 2005/02/26 13:35:30 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -17,14 +17,17 @@ if [ -z "$KMNAME" ]; then
 	die "kde-meta.eclass inherited but KMNAME not defined - broken ebuild"
 fi
 
-myPN="$KMNAME"
+# Replace the $myPx mess - it was ugly as well as not general enough for 3.4.0-rc1
+# The following code should set TARBALLVER (the version in the tarball's name) 
+# and TARBALLDIRVER (the version of the toplevel directory inside the tarball).
 case "$PV" in
-	3.4.0_alpha1)	myPV="${PV/3.4.0_alpha1/3.3.90}" ;;
-	3.4.0_beta1)	myPV="${PV/3.4.0_beta1/3.3.91}" ;;
-	3.4.0_beta2)	myPV="${PV/3.4.0_beta2/3.3.92}" ;;
-	*)		myPV="$PV" ;;
+	3.4.0_alpha1)	TARBALLDIRVER="3.3.90"; TARBALLVER="3.3.90" ;;
+	3.4.0_beta1)	TARBALLDIRVER="3.3.91"; TARBALLVER="3.3.91" ;;
+	3.4.0_beta2)	TARBALLDIRVER="3.3.92"; TARBALLVER="3.3.92" ;;
+	3.4.0_rc1)		TARBALLDIRVER="3.4.0"; TARBALLVER="3.4.0-rc1" ;;
+	*)				TARBALLDIRVER="$PV"; TARBALLVER="$PV" ;;
 esac
-myP="$myPN-$myPV"
+TARBALL="$KMNAME-$TARBALLVER.tar.bz2"
 
 # BEGIN adapted from kde-dist.eclass, code for older versions removed for cleanness
 if [ "$KDEBASE" = "true" ]; then
@@ -38,13 +41,11 @@ if [ "$KDEBASE" = "true" ]; then
 	SLOT="$KDEMAJORVER.$KDEMINORVER"
 	
 	# Main tarball for normal downloading style
-	case "$myPV" in
-		3.3.9?)		SRC_PATH="unstable/${myPV}/src/${myPN}-${myPV}.tar.bz2" ;;
-		3.3.0)		SRC_PATH="stable/3.3/src/${myP}.tar.bz2" ;;
-		3*)			SRC_PATH="stable/${myPV}/src/${myP}.tar.bz2" ;;
-		5)			SRC_URI="" # cvs ebuilds, no SRC_URI needed
-					debug-print "$ECLASS: cvs detected, SRC_URI left empty" ;;
-		*)			die "$ECLASS: Error: unrecognized version ${myPV}, could not set SRC_URI" ;;
+	# Note that we set SRC_PATH, and add it to SRC_URI later on
+	case "$PV" in
+		3.4.0_*)	SRC_PATH="unstable/$TARBALLVER/src/$TARBALL" ;;
+		3*)			SRC_PATH="stable/$TARBALLVER/src/$TARBALL.tar.bz2" ;;
+		*)			die "$ECLASS: Error: unrecognized version $PV, could not set SRC_URI" ;;
 	esac
 	
 	# Base tarball and xdeltas for patch downloading style
@@ -52,25 +53,23 @@ if [ "$KDEBASE" = "true" ]; then
 	# For future versions, add all applicable xdeltas (from x.y.0) in correct order to XDELTA_DELTA
 	# For versions that don't have deltas, it's more efficient to leave XDELTA_BASE
 	# unset, making src_unpack extract directly from the tarball in distfiles
-	case "$myPV" in
-		3.3.1)		XDELTA_BASE="stable/3.3/src/${myPN}-3.3.0.tar.bz2"
-					XDELTA_DELTA="stable/3.3.1/src/${myPN}-3.3.0-3.3.1.tar.xdelta"
-					;;
-		3.3.2)		XDELTA_BASE="stable/3.3/src/${myPN}-3.3.0.tar.bz2"
-					XDELTA_DELTA="stable/3.3.1/src/${myPN}-3.3.0-3.3.1.tar.xdelta stable/3.3.2/src/${myPN}-3.3.1-3.3.2.tar.xdelta"
-					;;
-		3.3.91)		XDELTA_BASE="unstable/3.3.90/src/${myPN}-3.3.90.tar.bz2"
-					XDELTA_DELTA="unstable/3.3.91/src/${myPN}-3.3.90-3.3.91.tar.xdelta"
-					;;
-		3.3.92)		XDELTA_BASE="unstable/3.3.90/src/${myPN}-3.3.90.tar.bz2"
-					XDELTA_DELTA="unstable/3.3.91/src/${myPN}-3.3.90-3.3.91.tar.xdelta unstable/3.3.91/src/${myPN}-3.3.91-3.3.92.tar.xdelta"
-					;;
-		*)			;;
+	# Does anyone really want to make this code generic based on $TARBALLVER above?
+	case "$PV" in
+		3.4.0_beta1)	XDELTA_BASE="unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
+						XDELTA_DELTA="unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta"
+						;;
+		3.4.0_beta2)	XDELTA_BASE="unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
+						XDELTA_DELTA="unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta unstable/3.3.91/src/$KMNAME-3.3.91-3.3.92.tar.xdelta"
+						;;
+		3.4.0_rc1)		XDELTA_BASE="unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
+						XDELTA_DELTA="unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta unstable/3.3.91/src/$KMNAME-3.3.91-3.3.92.tar.xdelta unstable/3.4.0-rc1/src/$KMNAME-3.3.92-3.4.0-rc1.tar.xdelta"
+						;;
+		*)				;;
 	esac	
 
 elif [ "$KMNAME" == "koffice" ]; then
-	SRC_PATH="mirror://kde/stable/koffice-$myPV/src/koffice-$myPV.tar.bz2"
-	case $myPV in
+	SRC_PATH="mirror://kde/stable/koffice-$PV/src/koffice-$PV.tar.bz2"
+	case $PV in
 		1.3.4)
 			XDELTA_BASE=""
 			XDELTA_DELTA=""
@@ -83,7 +82,6 @@ elif [ "$KMNAME" == "koffice" ]; then
 fi
 
 # Common xdelta code
-
 if [ -n "$XDELTA_BASE" ]; then # depends on $PV only, so is safe to modify SRC_URI inside it
 	SRC_URI="$SRC_URI kdexdeltas? ( mirror://kde/$XDELTA_BASE "
 	for x in $XDELTA_DELTA; do
@@ -273,7 +271,7 @@ function kde-meta_src_unpack() {
 					acinclude.m4 aclocal.m4 AUTHORS COPYING INSTALL README NEWS ChangeLog \
 					$KMMODULE $KMEXTRA $KMCOMPILEONLY $KMEXTRACTONLY $DOCS
 		do
-			extractlist="$extractlist $myP/$item"
+			extractlist="$extractlist $KMNAME-$TARBALLDIRVER/$item"
 		done
 
 		# xdeltas require us to uncompress to a tar file first.
@@ -282,16 +280,17 @@ function kde-meta_src_unpack() {
 			echo ">>> Base archive + xdelta patch mode enabled."
 			echo ">>> Uncompressing base archive..."
 			cd $T
-			bunzip2 -dkc ${DISTDIR}/${XDELTA_BASE/*\//} > ${myP}.tar
+			RAWTARBALL=${TARBALL//.bz2}
+			bunzip2 -dkc ${DISTDIR}/${XDELTA_BASE/*\//} > $RAWTARBALL
 			for delta in $XDELTA_DELTA; do
 				deltafile="${delta/*\//}"
 				echo ">>> Applying xdelta: $deltafile"
-				xdelta patch ${DISTDIR}/$deltafile ${myP}.tar ${myP}.tar.1
-				mv ${myP}.tar.1 ${myP}.tar
+				xdelta patch ${DISTDIR}/$deltafile $RAWTARBALL $RAWTARBALL.1
+				mv $RAWTARBALL.1 $RAWTARBALL
 			done
-			TARFILE=$T/$myP.tar
+			TARFILE=$T/$RAWTARBALL
 		else
-			TARFILE=$DISTDIR/${myP}.tar.bz2
+			TARFILE=$DISTDIR/$TARBALL
 			KMTARPARAMS="$KMTARPARAMS -j"
 		fi
 		cd $WORKDIR
@@ -301,10 +300,14 @@ function kde-meta_src_unpack() {
 		tar -xpf $TARFILE $KMTARPARAMS $extractlist	2> /dev/null
 		
 		# Avoid syncing if possible
-		rm -f $T/$myP.tar
+		# No idea what the above comment means...
+		if [ -n "$RAWTARBALL" ]; then
+			rm -f $T/$RAWTARBALL
+		fi
 		
 		# Default $S is based on $P not $myP; rename the extracted dir to fit $S
-		mv $myP $P
+		mv $KMNAME-$TARBALLDIRVER $P
+		S=$WORKDIR/$P
 		
 		# Copy over KMCOPYLIB items
 		libname=""
