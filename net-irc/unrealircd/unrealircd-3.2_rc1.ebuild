@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.1.6.ebuild,v 1.3 2004/02/21 02:42:37 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2_rc1.ebuild,v 1.1 2004/02/21 02:42:37 zul Exp $
 
-MY_P=Unreal${PV}-Noon
+MY_P=Unreal3.2-RC1
 DESCRIPTION="aimed to be an advanced (not easy) IRCd"
 HOMEPAGE="http://www.unrealircd.com/"
 SRC_URI="http://www.gower.net/unrealircd/${MY_P}.tar.gz
@@ -16,36 +16,37 @@ IUSE="ssl"
 DEPEND="ssl? ( dev-libs/openssl )
 	>=sys-apps/sed-4"
 
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/Unreal3.2
 
 src_unpack() {
 	unpack ${A} && cd ${S}
 	rm -f .CHANGES.NEW .RELEASE.NOTES
-	epatch ${FILESDIR}/${PV}-Config.patch
-	sed -i 's:^ID_CVS.*::' src/res_mkquery.c
+#	epatch ${FILESDIR}/${PV}-Config.patch
+#	sed -i 's:^ID_CVS.*::' src/res_mkquery.c
 
-	cp Config{,.orig}
-	sed -e "s:GENTOO_CFLAGS:${CFLAGS}:" \
-		Config.orig > Config
+#	cp Config{,.orig}
+#	sed -e "s:GENTOO_CFLAGS:${CFLAGS}:" \
+#		Config.orig > Config
 }
 
 src_compile() {
-	./Config || die "configure failed"
+	./Config -quick || die "configure failed"
 	make RES="res_init.o res_comp.o res_mkquery.o" \
 		|| die "compiling failed"
 }
 
 src_install() {
 	newbin src/ircd unrealircd || die
-	newbin makeconf unrealircd-makeconf || die
-	newbin src/chkconf unrealircd-chkconf || die
 
 	insinto /etc/unrealircd
 	doins badwords.*.conf
 	insinto /etc/unrealircd/networks
 	doins networks/{template.network,unrealircd.conf}
 
-	dodoc doc/* Changes Donation Unreal.nfo dynconf ircdcron/*
+	rm -rf ircdcron/CVS
+	rm -rf doc/CVS
+	rm -rf doc/technical/CVS
+	dodoc doc/* Changes Donation Unreal.nfo ircdcron/*
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/unrealircd.rc unrealircd
