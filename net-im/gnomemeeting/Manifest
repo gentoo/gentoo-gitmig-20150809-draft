@@ -12,4 +12,3 @@ MD5 4a3686c5f4a07cfe93d2025668e96498 files/digest-gnomemeeting-0.98.4 73
 MD5 1eeb16dcd662b2829936876613f02611 files/digest-gnomemeeting-0.98.5 73
 MD5 4ee8954cda5e11a1c1a5345408df45ba files/gnomemeeting-0.96.1-pwcworkaround.patch 612
 MD5 967c15eee4dba436c91d06bda647a525 files/gnomemeeting-0.98.5-libxml_2.6.patch 406
-MD5 978186afd59d560ab2bba226c2742451 files/ifarts.diff 42145
