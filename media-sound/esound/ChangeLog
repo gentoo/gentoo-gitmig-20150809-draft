@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.8 2002/05/06 13:34:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.9 2002/06/07 19:38:28 azarah Exp $
+
+*esound-0.2.27 (07 Jun 2002)
+  07 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Bump version.
 
 *esound-0.2.26 (07 May 2002)
   07 May 2002; Spider <spider@gentoo.org> esound-0.2.26.ebuild :

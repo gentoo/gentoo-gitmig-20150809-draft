@@ -1,17 +1,19 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.24-r2.ebuild,v 1.1 2002/04/03 00:23:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.27.ebuild,v 1.1 2002/06/07 19:38:29 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Enlightened Sound Daemon"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/esound/${P}.tar.gz ftp://download.sourceforge.net/pub/mirrors/gnome/stable/sources/esound/${P}.tar.gz"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/esound/${P}.tar.bz2
+ftp://download.sourceforge.net/pub/mirrors/gnome/stable/sources/esound/${P}.tar.bz2"
 HOMEPAGE="http://www.tux.org/~ricdude/EsounD.html"
+SLOT="0"
 
 DEPEND="virtual/glibc
 	>=media-libs/audiofile-0.1.9
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )
-    tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )"
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )"
 
 RDEPEND="virtual/glibc
 	>=media-libs/audiofile-0.1.9
