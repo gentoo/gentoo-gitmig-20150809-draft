@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10_rc1-r1.ebuild,v 1.1 2004/07/08 00:32:07 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10_rc1-r1.ebuild,v 1.2 2004/07/14 14:09:24 humpback Exp $
 
 inherit flag-o-matic eutils
 
-IUSE="ldap pam postgres mysql ssl tcpd ipv6 shaper"
+IUSE="ldap pam postgres mysql ssl tcpd ipv6 shaper softquota"
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -69,6 +69,17 @@ src_compile() {
 	elif use postgres; then
 		modules="${modules}:mod_sql:mod_sql_postgres"
 		myconf="--with-includes=/usr/include/postgresql"
+	fi
+
+	if use softquota; then
+		modules="${modules}:mod_quotatab"
+		if use mysql || use postgres; then
+			modules="${modules}:mod_quotatab_sql"
+		elif use ldap; then
+			modules="${modules}:mod_quotatab_file:mod_quotatab_ldap"
+		else
+			modules="${modules}:mod_quotatab_file"
+		fi
 	fi
 
 	# New modules for 1.2.9

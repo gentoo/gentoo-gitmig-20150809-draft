@@ -1,6 +1,18 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.65 2004/07/08 00:32:07 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.66 2004/07/14 14:09:24 humpback Exp $
+
+*proftpd-1.2.10_rc3 (14 Jul 2004)
+
+  14 Jul 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  proftpd-1.2.10_rc1-r1.ebuild, +proftpd-1.2.10_rc3.ebuild:
+  Adding rc3. Please report back (by mail) sucess stories
+
+  14 Jul 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  proftpd-1.2.10_rc1-r1.ebuild:
+  Added softquota flag to rc1-r1 and removed the old rc1 ebuild. 1.2.10_rc2 came
+  out today but has a bug and will not build, I have contacted upstream and rc3
+  will come out soon.
 
 *proftpd-1.2.10_rc1-r1 (08 Jul 2004)
 

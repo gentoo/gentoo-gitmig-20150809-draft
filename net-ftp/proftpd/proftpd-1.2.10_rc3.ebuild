@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10_rc1.ebuild,v 1.2 2004/06/24 22:47:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10_rc3.ebuild,v 1.1 2004/07/14 14:09:24 humpback Exp $
 
 inherit flag-o-matic eutils
 
-IUSE="ldap pam postgres mysql ssl tcpd ipv6"
+IUSE="ldap pam postgres mysql ssl tcpd ipv6 shaper softquota"
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="An advanced and very configurable FTP server"
-SRC_URI="ftp://ftp.proftpd.org/distrib/source/${MY_P}.tar.bz2"
+SRC_URI="ftp://ftp.proftpd.org/distrib/source/${MY_P}.tar.bz2
+		shaper? http://www.castaglia.org/${PN}/modules/${PN}-mod-shaper-0.5.2.tar.gz"
 HOMEPAGE="http://www.proftpd.org/"
 
 SLOT="0"
@@ -24,12 +25,22 @@ DEPEND="pam? ( >=sys-libs/pam-0.75 )
 	ssl? ( >=dev-libs/openssl-0.9.6f )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r3 )"
 
+src_unpack() {
+	unpack ${MY_P}.tar.bz2
+	cd ${S}
+	if use shaper; then
+		unpack ${PN}-mod-shaper-0.5.2.tar.gz
+		mv mod_shaper/mod_shaper.c contrib/
+	fi
+}
+
 src_compile() {
 	local modules myconf
 
 	modules="mod_ratio:mod_readme"
 	use pam && modules="${modules}:mod_auth_pam"
 	use tcpd && modules="${modules}:mod_wrap"
+	use shaper && modules="${modules}:mod_shaper"
 
 	if use ldap; then
 		einfo ldap
@@ -60,6 +71,17 @@ src_compile() {
 		myconf="--with-includes=/usr/include/postgresql"
 	fi
 
+	if use softquota; then
+		modules="${modules}:mod_quotatab"
+		if use mysql || use postgres; then
+			modules="${modules}:mod_quotatab_sql"
+		elif use ldap; then
+			modules="${modules}:mod_quotatab_file:mod_quotatab_ldap"
+		else
+			modules="${modules}:mod_quotatab_file"
+		fi
+	fi
+
 	# New modules for 1.2.9
 	# Not sure how these should be enabled yet as no use variables
 	# apply currently.  Uncomment if you want to use them though.
@@ -80,6 +102,7 @@ src_compile() {
 		--enable-shadow \
 		--disable-sendfile \
 		--enable-autoshadow \
+		--enable-ctrls \
 		--with-modules=${modules} \
 		${myconf} $( use_enable ipv6 ) || die "bad ./configure"
 
@@ -98,6 +121,7 @@ src_install() {
 		COPYING CREDITS ChangeLog NEWS README* \
 		doc/{license.txt,GetConf}
 	dohtml doc/*.html
+	use shaper && dohtml mod_shaper/mod_shaper.html
 	docinto rfc
 	dodoc doc/rfc/*.txt
 
