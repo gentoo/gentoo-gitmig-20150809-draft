@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.485 2004/07/15 17:18:50 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.486 2004/07/16 06:14:09 spyderous Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -464,6 +464,7 @@ x11-base/xfree-drm:rage128 - If you have an ATI Rage128 based video card
 x11-base/xfree-drm:sis - If you have an SiS video card
 x11-base/xfree:gatos - Performs GATOS-specific actions including SDK install
 x11-base/xfree:sdk - Builds the software development kit
+x11-base/xorg-x11:dlloader - USE WITH CARE: Enable dynamic module loader (results in many unresolved symbols)
 x11-base/xorg-x11:sdk - Builds the software development kit
 x11-libs/fltk:nptl - Enable support for NPTL
 x11-libs/gtk-sharp:gnomedb - Enable gnomedb support
