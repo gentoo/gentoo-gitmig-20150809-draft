@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.107 2004/12/08 15:51:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.108 2004/12/14 02:33:36 vapier Exp $
+
+  13 Dec 2004; Mike Frysinger <vapier@gentoo.org> db-1.85-r2.ebuild:
+  Update patch to be cross-compile friendly.
 
   08 Dec 2004; Simon Stelling <blubb@gentoo.org>
   +files/db-4.2-libtool.patch, db-4.2.52_p2.ebuild:
