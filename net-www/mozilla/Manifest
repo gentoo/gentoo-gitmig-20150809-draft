@@ -1,3 +1,7 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 df59a76b04a37a9c47e743eefa9e4f6c ChangeLog 36493
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 7c90e1ccb807e874f4bfa5796d3c513d mozilla-1.6-r1.ebuild 16979
 MD5 21fbce86f739b098e11b5225b58f452d mozilla-1.7-r1.ebuild 16620
@@ -6,8 +10,7 @@ MD5 1b86c01a90c75d55fc70099410d8cd0d mozilla-1.7.3-r2.ebuild 9947
 MD5 4370477202723c1b000f026f1edabe7f mozilla-1.7.3-r3.ebuild 9977
 MD5 f4b18993ea4e902777640a7afe26b4de mozilla-1.7.3.ebuild 8822
 MD5 9320e2015bdfdecec9c9bcd3a6f65cfb mozilla-1.7.ebuild 16477
-MD5 13a4be82d833db0ebb04f8316c9ea776 mozilla-1.7.5.ebuild 9986
-MD5 94e66a252056d362d68f187c4ee9d832 ChangeLog 36387
+MD5 f6a652128102e64c8cd2f157e450c04e mozilla-1.7.5.ebuild 9985
 MD5 b99dabe3c40cfafe2e63bdef95815596 files/10mozilla 105
 MD5 11cae063228d9997b2cf9f150d9837fe files/digest-mozilla-1.6-r1 201
 MD5 c3b63fbbf42894e19fff553092660af6 files/digest-mozilla-1.7 204
@@ -52,3 +55,10 @@ MD5 e30291e992d71bccac5937cca9696da0 files/enigmail/Makefile-enigmail 1560
 MD5 68a7617a6d3f0f37904cd6aaa90fe1ba files/enigmail/Makefile-ipc 1596
 MD5 6d52ff4ce4567db1cad08ea40157a65d files/icon/mozilla-icon.png 2350
 MD5 e3c488f3226f61adbb11d6a73ae84209 files/icon/mozilla.desktop 153
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBxzOQKRy60XGEcJIRAohAAJ9VvjU8nsSDbHYbVWC936+PfPrHsACghhfH
+ctV6OSq+cQF75OyU50QEhuQ=
+=Rbcm
+-----END PGP SIGNATURE-----
