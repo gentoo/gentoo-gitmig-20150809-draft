@@ -11,11 +11,6 @@
 # will be commited to cvs, the details on that line will be automatically
 # generated to contain the correct data.
 
-# comprehensive list of any and all USE flags leveraged in the build, 
-# with the exception of any ARCH specific flags, i.e. ppc sparc sparc64
-# x86 alpha - this is a required variable
-IUSE="X gnome"
-
 # Short one-line description of this package.
 DESCRIPTION="This is a sample skeleton ebuild file"
 
@@ -56,6 +51,12 @@ SLOT="0"
 # DO NOT USE KEYWORDS="*". This is deprecated and only for backward
 # compatibility reasons.
 KEYWORDS="x86"
+
+# Comprehensive list of any and all USE flags leveraged in the ebuild,
+# with the exception of any ARCH specific flags, i.e. "ppc", "sparc",
+# "sparc64", "x86" and "alpha". This is a required variable. If the
+# ebuild doesn't use any USE flags, set to "".
+IUSE="X gnome"
 
 # Build-time dependencies, such as
 #    ssl? ( >=openssl-0.9.6b )
