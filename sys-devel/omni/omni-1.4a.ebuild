@@ -1,14 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/omni/omni-1.4a.ebuild,v 1.2 2003/09/06 08:07:33 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/omni/omni-1.4a.ebuild,v 1.3 2003/10/20 10:34:54 tester Exp $
 
 DESCRIPTION="The Omni OpenMP Compiler"
 HOMEPAGE="http://phase.etl.go.jp/Omni/"
 LICENSE="Omni"
 SLOT="0"
-KEYWORDS="~x86"
-S=${WORKDIR}/Omni-${PV}
-A=Omni-${PV}.tar.gz
+KEYWORDS="x86"
+MY_P=Omni-${PV}
+S=${WORKDIR}/${MY_P}
+RESTRICT="fetch"
 
 IUSE="java doc"
 
@@ -20,18 +21,18 @@ RDEPEND="java? ( virtual/jdk )"
 
 src_unpack() {
 
-	if [ ! -e ${DISTDIR}/${A} ] ; then
+	if [ ! -e ${DISTDIR}/${MY_P}.tar.gz ] ; then
 		einfo "Due to license issues you have to download"
 		einfo "the appropriate Omni archive:"
 		einfo "http://phase.etl.go.jp/Omni/Omni-release.html"
-		einfo "Please get the file "${A}
+		einfo "Please get the file "${MY_P}.tar.gz
 		einfo ""
 		einfo "The archive should be placed into ${DISTDIR}."
 
 		die "package archive not found"
 	fi
 
-	unpack ${A}
+	unpack ${MY_P}.tar.gz
 
 
 }
@@ -43,8 +44,7 @@ src_compile() {
 
 	# There is no configure script for the doc
 	if [ ! `use doc` ]  ; then
-	    mv Makefile.in Makefile.in.orig
-	    sed s/doc// Makefile.in.orig > Makefile.in
+	    dosed s/doc// Makefile.in
 	fi
 
 	use java && myconf="${myconf} --with-jvm=yes"
