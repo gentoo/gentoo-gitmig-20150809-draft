@@ -1,9 +1,8 @@
 # ChangeLog for net-libs/liblockfile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.3 2002/12/09 04:33:13 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.4 2002/12/13 11:00:04 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *liblockfile-1.03 (1 Feb 2002)
 

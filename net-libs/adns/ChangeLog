@@ -1,9 +1,8 @@
 # ChangeLog for net-libs/adns
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.4 2002/12/13 06:05:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.5 2002/12/13 11:00:04 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *adns-1.0 (1 Feb 2002)
 
