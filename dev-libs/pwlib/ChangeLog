@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.25 2003/06/27 12:20:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.26 2003/06/27 13:48:56 liquidx Exp $
+
+  27 Jun 2003; Alastair Tse <liquidx@gentoo.org> pwlib-1.5.0.ebuild:
+  workaround upgrade path problems
 
 *pwlib-1.5.0 (27 Jun 2003)
 

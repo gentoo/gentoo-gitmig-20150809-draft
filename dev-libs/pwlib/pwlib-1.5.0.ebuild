@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.0.ebuild,v 1.1 2003/06/27 12:20:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.0.ebuild,v 1.2 2003/06/27 13:48:56 liquidx Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -40,9 +40,13 @@ src_compile() {
        	export OPENSSLLIBS="-lssl -lcrypt"
 	fi
 
-	#export PWLIBDIR=${S}
-
-	econf
+	econf || die "configure failed"
+	
+	# horrible hack to strip out -L/usr/lib to allow upgrades
+	# problem is it adds -L/usr/lib before -L${S} when SSL is enabled 
+	sed -i -e "s:^\(LDFLAGS.*\)-L/usr/lib:\1:" ${S}/make/ptbuildopts.mak
+	sed -i -e "s:^\(LDFLAGS[\s]*=.*\) -L/usr/lib:\1:" ${S}/make/ptlib-config
+	
 	emake opt || die "make failed"
 }
 
@@ -77,9 +81,6 @@ src_install() {
 	sed -i -e "s:^PWLIBDIR.*:PWLIBDIR=/usr/share/pwlib:" ${D}/usr/bin/ptlib-config
 	sed -i -e "s:^PWLIBDIR.*:PWLIBDIR=/usr/share/pwlib:" ${D}/usr/share/pwlib/make/ptbuildopts.mak
 
-	# strip out -L/usr/lib to allow upgrades
-	sed -i -e "s:^\(LDFLAGS.*\)-L/usr/lib:\1:" ${D}/usr/share/pwlib/make/ptbuildopts.mak
-	sed -i -e "s:^\(LDFLAGS[\s]*=.*\) -L/usr/lib:\1:" ${D}/usr/bin/ptlib-config
 
 	dodoc ReadMe.txt History.txt
 }
