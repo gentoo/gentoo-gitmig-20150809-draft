@@ -22,8 +22,8 @@ diff -rc pgaccess-0.98.8/Makefile pgaccess-0.98.8.new/Makefile
   #
   #-------------------------------------------------------------------------
   
-! bindir := $(prefix)/usr/bin/X11
-! libdir := $(prefix)/usr/lib/pgaccess
+! bindir := $(prefix)/bin/X11
+! libdir := $(prefix)/lib/pgaccess
 ! wish := `which wish`
   
   pgaccess: 
