@@ -1,4 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f07bdb7d90644a1912b3f30196670d95 cutecom-0.13.1.ebuild 682
+MD5 04e3ff6dd86092df1f5e5929c744827a cutecom-0.12.0.ebuild 681
+MD5 858e33400b852b1892b1a218d00754c8 ChangeLog 600
 MD5 70eaf71c2018b87fe06aed9df3799509 metadata.xml 225
-MD5 4b334baa30f9a957094a7ea3340ea4bb ChangeLog 421
-MD5 a99c710ca906f4f3b523dde120fd9eb7 cutecom-0.12.0.ebuild 679
 MD5 949bebbe2a4ce9e7429475bfa947381b files/digest-cutecom-0.12.0 65
+MD5 fd1117e58a928e7e489d70ac4e07bcfb files/digest-cutecom-0.13.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCIewDZ/iYVBmujdURAt5aAKDXqYRK0HpsTf6s+hw3pqBOLFnqZwCgtSRH
+UsT5Lr6MGFu7HISs71XRHbI=
+=BUAT
+-----END PGP SIGNATURE-----

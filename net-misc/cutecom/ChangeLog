@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/cutecom
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cutecom/ChangeLog,v 1.1 2004/12/16 20:53:32 sekretarz Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cutecom/ChangeLog,v 1.2 2005/02/27 14:48:01 sekretarz Exp $
+
+*cutecom-0.13.1 (27 Feb 2005)
+
+  27 Feb 2005; Karol Wojtaszek <sekretarz@gentoo.org> cutecom-0.12.0.ebuild,
+  +cutecom-0.13.1.ebuild:
+  Version bump, bug #74236. Stable on amd64
 
 *cutecom-0.12.0 (16 Dec 2004)
 
