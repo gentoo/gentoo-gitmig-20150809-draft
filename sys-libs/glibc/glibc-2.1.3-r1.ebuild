@@ -1,14 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.1.3-r1.ebuild,v 1.1 2000/08/03 16:22:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.1.3-r1.ebuild,v 1.2 2000/08/16 04:38:35 drobbins Exp $
 
 P=glibc-2.1.3
 A="glibc-2.1.3.tar.gz glibc-crypt-2.1.tar.gz 
    glibc-linuxthreads-2.1.3.tar.gz glibc-compat-2.1.2.tar.gz"
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
-CATEGORY="sys-libs"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/glibc/glibc-2.1.3.tar.gz
 	ftp://prep.ai.mit.edu/gnu/glibc/glibc-crypt-2.1.tar.gz
 	ftp://prep.ai.mit.edu/gnu/glibc/glibc-linuxthreads-2.1.3.tar.gz

@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/nvidia/nvidia-0.9.4-r1.ebuild,v 1.2 2000/08/13 03:10:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/nvidia/nvidia-0.9.4-r1.ebuild,v 1.3 2000/08/16 04:38:36 drobbins Exp $
 
 P=nvidia-0.9-4
 A="NVIDIA_GLX-0.9-4.xfree401.tar.gz NVIDIA_kernel-0.9-4.tar.gz"
 S=${WORKDIR}
-CATEGORY="x11-base"
 DESCRIPTION="Accelerated X drivers for NVIDIA based cards"
 SRC_URI="ftp://ftp1.detonator.nvidia.com/pub/drivers/english/XFree86_40/0.9-4/NVIDIA_GLX-0.9-4.xfree401.tar.gz
 	 ftp://ftp1.detonator.nvidia.com/pub/drivers/english/XFree86_40/0.9-4/NVIDIA_kernel-0.9-4.tar.gz"
