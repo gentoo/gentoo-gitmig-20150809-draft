@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mailmin/mailmin-0.0.1-r2.ebuild,v 1.3 2004/04/19 08:52:37 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mailmin/mailmin-0.0.1-r2.ebuild,v 1.4 2004/04/30 07:43:02 klasikahl Exp $
 
 inherit webapp-apache
 
 DESCRIPTION="Mailmin is a PHP frontend to the virtual mail database that is needed in the Virtual/Mailhost Postfix Howto."
-HOMEPAGE="http://gentoo.org/proj/en/mailmin.xml"
+HOMEPAGE="http://gentoo.org/proj/en/tools/mailmin.xml"
 SRC_URI="mirror://gentoo/${P}-pre3-alpha.tar.bz2
 		http://dev.gentoo.org/~klasikahl/mailmin/${P}-pre3-alpha.tar.bz2"
 LICENSE="GPL-2"

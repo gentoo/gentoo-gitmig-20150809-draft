@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/mailmin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mailmin/ChangeLog,v 1.6 2004/04/19 08:52:37 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mailmin/ChangeLog,v 1.7 2004/04/30 07:43:02 klasikahl Exp $
 
   19 Apr 2004; David Holm <dholm@gentoo.org> mailmin-0.0.1-r2.ebuild:
   Added to ~ppc.
@@ -10,6 +10,9 @@
   19 Apr 2004; Martin Holzer <mholzer@gentoo.org> mailmin-0.0.1-r1.ebuild,
   mailmin-0.0.1-r2.ebuild:
   better way to use webapp-detect
+
+  30 Apr 2004; Zack Gilburd <klasikahl@gentoo.org> mailmin-0.0.1-r2.ebuild:
+  Fixing the homepage link
 
 *mailmin-0.0.1-r2 (18 Apr 2004)
 
