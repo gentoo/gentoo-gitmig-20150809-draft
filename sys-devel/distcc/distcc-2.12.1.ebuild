@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.12.1.ebuild,v 1.3 2004/02/21 20:08:23 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.12.1.ebuild,v 1.4 2004/02/22 17:35:21 agriffis Exp $
 
 inherit eutils gcc flag-o-matic
 [ `gcc-major-version` -eq 2 ] && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -13,7 +13,7 @@ DESCRIPTION="a program to distribute compilation of C code across several machin
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha hppa mips ia64 amd64"
+KEYWORDS="x86 ~ppc sparc alpha hppa mips ia64 amd64"
 #Blame drobbins if the ia64 or amd64 break things going into stable before 
 # ~testing. ;-)  -Lisa (2004-02-20)
 
