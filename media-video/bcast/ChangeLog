@@ -1,9 +1,16 @@
 # ChangeLog for media-video/bcast
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/bcast/ChangeLog,v 1.3 2002/04/12 20:55:43 spider Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/media-video/bcast/ChangeLog,v 1.4 2002/09/05 05:32:01 mkennedy Exp $
 
 *bcast-2000c-r2 (11 Apr 2002)
+
+  05 Sep 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  bcast-2000c-r2.ebuild, files/bcast-2000c-gcc-gentoo.patch, 
+  ChangeLog :
+
+  Resolves bug #7366. Patch for GCC3.2 support (mostly C++ syntax
+  error fixes). Lintool clean up.
+	
   11 Apr 2002; Spider <spider@gentoo.org>
   Update with another -r for libpng compability
 

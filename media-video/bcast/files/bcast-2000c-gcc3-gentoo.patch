@@ -1,0 +1,664 @@
+diff -ur bcast-2000c.orig/bcast/assetmanager.h bcast-2000c/bcast/assetmanager.h
+--- bcast-2000c.orig/bcast/assetmanager.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcast/assetmanager.h	2002-09-04 23:43:55.000000000 -0500
+@@ -47,7 +47,7 @@
+ 	AssetManagerThread(MainWindow *mwindow);
+ 	~AssetManagerThread();
+ 
+-	friend AssetManagerIndex;
++	friend class AssetManagerIndex;
+ 
+ 	int create_objects();
+ 	void run();
+diff -ur bcast-2000c.orig/bcast/audiodevice.h bcast-2000c/bcast/audiodevice.h
+--- bcast-2000c.orig/bcast/audiodevice.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcast/audiodevice.h	2002-09-04 23:41:36.000000000 -0500
+@@ -49,10 +49,10 @@
+ 	AudioDevice();
+ 	~AudioDevice();
+ 
+-	friend AudioOSS;
+-	friend AudioESound;
+-	friend Audio1394;
+-	friend VDevice1394;
++	friend class AudioOSS;
++	friend class AudioESound;
++	friend class Audio1394;
++	friend class VDevice1394;
+ 
+ 	int open_input(AudioConfig *config, int rate, int samples);
+ 	int open_output(AudioConfig *config, int rate, int samples);
+diff -ur bcast-2000c.orig/bcast/fileformat.C bcast-2000c/bcast/fileformat.C
+--- bcast-2000c.orig/bcast/fileformat.C	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcast/fileformat.C	2002-09-04 23:49:07.000000000 -0500
+@@ -4,7 +4,7 @@
+ #include "filesystem.h"
+ #include "fileformat.h"
+ 
+-FileFormat::FileFormat(char *display = "")
++FileFormat::FileFormat(char *display)
+  : BC_Window(display, MEGREY, ICONNAME ": File Format", 375, 260, 415, 260)
+ {
+ }
+diff -ur bcast-2000c.orig/bcast/filemov.h bcast-2000c/bcast/filemov.h
+--- bcast-2000c.orig/bcast/filemov.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcast/filemov.h	2002-09-04 23:46:46.000000000 -0500
+@@ -34,7 +34,7 @@
+ 	FileMOV(Asset *asset, File *file);
+ 	~FileMOV();
+ 	
+-	friend FileMOVThread;
++	friend class FileMOVThread;
+ 
+ 	int open_file(int rd, int wr);
+ 	int close_file_derived();
+diff -ur bcast-2000c.orig/bcast/indexthread.h bcast-2000c/bcast/indexthread.h
+--- bcast-2000c.orig/bcast/indexthread.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcast/indexthread.h	2002-09-04 23:50:39.000000000 -0500
+@@ -22,7 +22,7 @@
+ 		long length_source);
+ 	~IndexThread();
+ 
+-	friend IndexFile;
++	friend class IndexFile;
+ 
+ 	int start_build();
+ 	int stop_build();
+diff -ur bcast-2000c.orig/bcast/progressbox.C bcast-2000c/bcast/progressbox.C
+--- bcast-2000c.orig/bcast/progressbox.C	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcast/progressbox.C	2002-09-04 23:52:31.000000000 -0500
+@@ -53,7 +53,7 @@
+ return 0;
+ }
+ 
+-ProgressWindow::ProgressWindow(char *display = "", int cancel_button)
++ProgressWindow::ProgressWindow(char *display, int cancel_button)
+  : BC_Window(display, MEGREY, ICONNAME ": Progress", 340, 120, 340, 120)
+ {
+ 	cancelled = 0;
+diff -ur bcast-2000c.orig/bcast/setsamplerate.C bcast-2000c/bcast/setsamplerate.C
+--- bcast-2000c.orig/bcast/setsamplerate.C	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcast/setsamplerate.C	2002-09-04 23:53:38.000000000 -0500
+@@ -17,7 +17,7 @@
+ }
+ 
+ 
+-SetSampleRateWindow::SetSampleRateWindow(char *display = "")
++SetSampleRateWindow::SetSampleRateWindow(char *display)
+  : BC_Window(display, MEGREY, ICONNAME ": Sample Rate", 340, 140, 340, 140)
+ {
+ }
+diff -ur bcast-2000c.orig/bcast/testobject.h bcast-2000c/bcast/testobject.h
+--- bcast-2000c.orig/bcast/testobject.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcast/testobject.h	2002-09-04 23:53:20.000000000 -0500
+@@ -13,4 +13,4 @@
+ 
+ 
+ 
+-#endif;
++#endif
+diff -ur bcast-2000c.orig/bcast/videodevice.h bcast-2000c/bcast/videodevice.h
+--- bcast-2000c.orig/bcast/videodevice.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcast/videodevice.h	2002-09-04 23:45:21.000000000 -0500
+@@ -69,10 +69,10 @@
+ 	VideoDevice(MainWindow *mwindow);
+ 	~VideoDevice();
+ 
+-	friend VDeviceLML;
+-	friend VDeviceX11;
+-	friend VDevice1394;
+-	friend Audio1394;
++	friend class VDeviceLML;
++	friend class VDeviceX11;
++	friend class VDevice1394;
++	friend class Audio1394;
+ 
+ 	int close_all();
+ 
+diff -ur bcast-2000c.orig/bcbase/bcfilebox.h bcast-2000c/bcbase/bcfilebox.h
+--- bcast-2000c.orig/bcbase/bcfilebox.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcbase/bcfilebox.h	2002-09-04 23:30:20.000000000 -0500
+@@ -29,10 +29,10 @@
+ 				int want_directory = 0);
+ 	virtual ~BC_FileBox();
+ 
+-	friend BC_FileBoxListBox;
+-	friend BC_FileBoxOK;
+-	friend BC_FileBoxCancel;
+-	friend BC_FileBoxUseThis;
++	friend class BC_FileBoxListBox;
++	friend class BC_FileBoxOK;
++	friend class BC_FileBoxCancel;
++	friend class BC_FileBoxUseThis;
+ 
+ 	int create_objects();
+ 
+diff -ur bcast-2000c.orig/bcbase/bclistbox.h bcast-2000c/bcbase/bclistbox.h
+--- bcast-2000c.orig/bcbase/bclistbox.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcbase/bclistbox.h	2002-09-04 23:30:26.000000000 -0500
+@@ -39,7 +39,7 @@
+ 	BC_ListBoxItem(char *text, int color = BLACK);
+ 	virtual ~BC_ListBoxItem();
+ 
+-	friend BC_ListBox;
++	friend class BC_ListBox;
+ 
+ 	BC_ListBoxItem& operator=(BC_ListBoxItem& item);
+ 	int set_text(char *text);
+@@ -63,8 +63,8 @@
+ 						int currentitem = -1); // Current selected item.
+ 	virtual ~BC_ListBox();
+ 
+-	friend BC_ListBoxXScroll;
+-	friend BC_ListBoxYScroll;
++	friend class BC_ListBoxXScroll;
++	friend class BC_ListBoxYScroll;
+ 
+ // user event handler for new selections
+ 	virtual int selection_changed() { return 0; };
+diff -ur bcast-2000c.orig/bcbase/bcmenubar.C bcast-2000c/bcbase/bcmenubar.C
+--- bcast-2000c.orig/bcbase/bcmenubar.C	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcbase/bcmenubar.C	2002-09-04 23:31:57.000000000 -0500
+@@ -491,7 +491,7 @@
+ 
+ // ========================================== menu item
+ 
+-BC_MenuItem::BC_MenuItem(char *text, char *hotkey_text, int hotkey = 0)
++BC_MenuItem::BC_MenuItem(char *text, char *hotkey_text, int hotkey)
+ {
+ 	strcpy(this->text, text);
+ 	strcpy(this->hotkey_text, hotkey_text);
+@@ -758,7 +758,7 @@
+ return 0;
+ }
+ 
+-int BC_MenuItem::set_checked(int value = 1)
++int BC_MenuItem::set_checked(int value)
+ {
+ 	this->checked = value;
+ return 0;
+diff -ur bcast-2000c.orig/bcbase/bcpopupmenu.h bcast-2000c/bcbase/bcpopupmenu.h
+--- bcast-2000c.orig/bcbase/bcpopupmenu.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcbase/bcpopupmenu.h	2002-09-04 23:31:38.000000000 -0500
+@@ -82,8 +82,8 @@
+ 	BC_MenuPopup(BC_WindowBase *subwindow, BC_MenuItem *menu_item, BC_Window *top_level);
+ 	virtual ~BC_MenuPopup();
+ 
+-	friend BC_PopupItem;
+-	friend BC_MenuItem;
++	friend class BC_PopupItem;
++	friend class BC_MenuItem;
+ 
+ 	int add_item(BC_MenuItem *item);
+ 	int delete_item(BC_MenuItem *item); // This just deletes the pointer to the item.
+diff -ur bcast-2000c.orig/bcbase/bcprogressbox.C bcast-2000c/bcbase/bcprogressbox.C
+--- bcast-2000c.orig/bcbase/bcprogressbox.C	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcbase/bcprogressbox.C	2002-09-04 23:36:37.000000000 -0500
+@@ -56,7 +56,7 @@
+ return 0;
+ }
+ 
+-BC_ProgressWindow::BC_ProgressWindow(char *display = "", int cancel_button)
++BC_ProgressWindow::BC_ProgressWindow(char *display, int cancel_button)
+  : BC_Window(display, MEGREY, "Progress", 340, 120, 340, 120)
+ {
+ 	cancelled = 0;
+diff -ur bcast-2000c.orig/bcbase/bcscrollbar.h bcast-2000c/bcbase/bcscrollbar.h
+--- bcast-2000c.orig/bcbase/bcscrollbar.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcbase/bcscrollbar.h	2002-09-04 23:29:51.000000000 -0500
+@@ -19,8 +19,8 @@
+ 	BC_ScrollBar(int x_, int y_, int w_, int h_, long length_, long position_, long handlelength_);
+ 	virtual ~BC_ScrollBar() { };
+ 
+-	friend BC_XScrollBar;
+-	friend BC_YScrollBar;
++	friend class BC_XScrollBar;
++	friend class BC_YScrollBar;
+ 
+ 	int create_tool_objects();
+ 	
+diff -ur bcast-2000c.orig/bcbase/bctextbox.C bcast-2000c/bcbase/bctextbox.C
+--- bcast-2000c.orig/bcbase/bctextbox.C	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcbase/bctextbox.C	2002-09-04 23:37:58.000000000 -0500
+@@ -7,21 +7,21 @@
+ 
+ #include <ctype.h>
+ 
+-BC_TextBox::BC_TextBox(int x, int y, int w, char *text, int has_border = 1)
++BC_TextBox::BC_TextBox(int x, int y, int w, char *text, int has_border)
+ 	: BC_Tool(x, y, w, 25)
+ {
+ 	strcpy(this->text, text);
+ 	this->has_border = has_border;
+ }
+ 
+-BC_TextBox::BC_TextBox(int x, int y, int w, int text, int has_border = 1)
++BC_TextBox::BC_TextBox(int x, int y, int w, int text, int has_border)
+ 	: BC_Tool(x, y, w, 25)
+ {
+ 	sprintf(this->text, "%d", text);
+ 	this->has_border = has_border;
+ }
+ 
+-BC_TextBox::BC_TextBox(int x, int y, int w, float text, int has_border = 1)
++BC_TextBox::BC_TextBox(int x, int y, int w, float text, int has_border)
+ 	: BC_Tool(x, y, w, 25)
+ {
+ 	sprintf(this->text, "%.3f", text);
+diff -ur bcast-2000c.orig/bcbase/bctool.C bcast-2000c/bcbase/bctool.C
+--- bcast-2000c.orig/bcbase/bctool.C	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcbase/bctool.C	2002-09-04 23:38:21.000000000 -0500
+@@ -369,7 +369,7 @@
+ 
+ 
+ 
+-int BC_Tool::set_color(int color, GC *gc = 0)
++int BC_Tool::set_color(int color, GC *gc)
+ {
+ 	XSetForeground(top_level->display, gc ? *gc : top_level->gc, top_level->get_color(color)); 
+ return 0;
+@@ -835,7 +835,7 @@
+ return 0;
+ }
+ 
+-int BC_Tool::draw_3d_line(int x1, int y1, int x2, int y2, int color1, int color2, GC *gc = 0)
++int BC_Tool::draw_3d_line(int x1, int y1, int x2, int y2, int color1, int color2, GC *gc)
+ {
+ 	set_color(color1, gc ? gc : &(top_level->gc));
+ 	XDrawLine(top_level->display, pixmap, gc ? *gc : top_level->gc, x1, y1, x2, y2);
+@@ -867,7 +867,7 @@
+ int BC_Tool::draw_bitmap(BC_Bitmap *bitmap, 
+ 			int fast, 
+ 			int dont_wait, 
+-			GC *gc = 0)
++			GC *gc)
+ {
+ 	int new_w, new_h;
+ 
+diff -ur bcast-2000c.orig/bcbase/bcwindowbase.h bcast-2000c/bcbase/bcwindowbase.h
+--- bcast-2000c.orig/bcbase/bcwindowbase.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcbase/bcwindowbase.h	2002-09-04 23:28:24.000000000 -0500
+@@ -30,8 +30,8 @@
+ 	BC_WindowBase(int x, int y, int w, int h, int color = -1);
+ 	virtual ~BC_WindowBase();
+ 
+-	friend BC_SubWindow;
+-	friend BC_Window;
++	friend class BC_SubWindow;
++	friend class BC_Window;
+ 
+ // affect this window and all its subwindows
+ 
+diff -ur bcast-2000c.orig/bcbase/bcwindow.h bcast-2000c/bcbase/bcwindow.h
+--- bcast-2000c.orig/bcbase/bcwindow.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/bcbase/bcwindow.h	2002-09-04 23:28:22.000000000 -0500
+@@ -45,13 +45,13 @@
+ 	
+ 	virtual ~BC_Window();
+ 
+-	friend BC_Bitmap;
+-	friend BC_Popup;
+-	friend BC_Resources;
+-	friend BC_SubWindow;
+-	friend BC_Tool;
+-	friend BC_WindowBase;
+-	friend BC_Repeater;
++	friend class BC_Bitmap;
++	friend class BC_Popup;
++	friend class BC_Resources;
++	friend class BC_SubWindow;
++	friend class BC_Tool;
++	friend class BC_WindowBase;
++	friend class BC_Repeater;
+ 
+ // =============================== initialization
+ 
+Binary files bcast-2000c.orig/esound/libesound.a and bcast-2000c/esound/libesound.a differ
+diff -ur bcast-2000c.orig/guicast/bcbutton.h bcast-2000c/guicast/bcbutton.h
+--- bcast-2000c.orig/guicast/bcbutton.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/guicast/bcbutton.h	2002-09-04 23:32:58.000000000 -0500
+@@ -14,7 +14,7 @@
+ 	BC_Button(int x, int y, VFrame **data);
+ 	virtual ~BC_Button();
+ 
+-	friend BC_GenericButton;
++	friend class BC_GenericButton;
+ 
+ 	virtual int handle_event() { return 0; };
+ 	int repeat_event(long repeat_id);
+diff -ur bcast-2000c.orig/guicast/bcfilebox.h bcast-2000c/guicast/bcfilebox.h
+--- bcast-2000c.orig/guicast/bcfilebox.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/guicast/bcfilebox.h	2002-09-04 23:41:09.000000000 -0500
+@@ -156,17 +156,17 @@
+ 		int h_padding = 0);
+ 	virtual ~BC_FileBox();
+ 
+-	friend BC_FileBoxCancel;
+-	friend BC_FileBoxListBox;
+-	friend BC_FileBoxTextBox;
+-	friend BC_FileBoxText;
+-	friend BC_FileBoxIcons;
+-	friend BC_FileBoxNewfolder;
+-	friend BC_FileBoxOK;
+-	friend BC_NewFolderThread;
+-	friend BC_FileBoxUpdir;
+-	friend BC_FileBoxFilterText;
+-	friend BC_FileBoxFilterMenu;
++	friend class BC_FileBoxCancel;
++	friend class BC_FileBoxListBox;
++	friend class BC_FileBoxTextBox;
++	friend class BC_FileBoxText;
++	friend class BC_FileBoxIcons;
++	friend class BC_FileBoxNewfolder;
++	friend class BC_FileBoxOK;
++	friend class BC_NewFolderThread;
++	friend class BC_FileBoxUpdir;
++	friend class BC_FileBoxFilterText;
++	friend class BC_FileBoxFilterMenu;
+ 
+ 	virtual int create_objects();
+ // Give the most recently selected path
+diff -ur bcast-2000c.orig/guicast/bclistbox.C bcast-2000c/guicast/bclistbox.C
+--- bcast-2000c.orig/guicast/bclistbox.C	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/guicast/bclistbox.C	2002-09-04 23:39:23.000000000 -0500
+@@ -20,7 +20,7 @@
+ 	int y, 
+ 	char *text, 
+ 	BC_Pixmap *icon, 
+-	int color = BLACK)
++	int color)
+ {
+ 	initialize();
+ 	this->x = x;
+diff -ur bcast-2000c.orig/guicast/bclistbox.h bcast-2000c/guicast/bclistbox.h
+--- bcast-2000c.orig/guicast/bclistbox.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/guicast/bclistbox.h	2002-09-04 23:36:56.000000000 -0500
+@@ -27,7 +27,7 @@
+ 	BC_ListBoxItem(int x, int y, char *text, BC_Pixmap *icon, int color = BLACK);
+ 	virtual ~BC_ListBoxItem();
+ 
+-	friend BC_ListBox;
++	friend class BC_ListBox;
+ 
+ 	BC_ListBoxItem& operator=(BC_ListBoxItem& item);
+ 	void set_text(char *new_text);
+@@ -94,7 +94,7 @@
+ 		int allow_drag = 0);                  // Allow user to drag icons around
+ 	virtual ~BC_ListBox();
+ 
+-	friend BC_PopupListBox;
++	friend class BC_PopupListBox;
+ 
+ 	int initialize();
+ 
+diff -ur bcast-2000c.orig/guicast/bcmenubar.h bcast-2000c/guicast/bcmenubar.h
+--- bcast-2000c.orig/guicast/bcmenubar.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/guicast/bcmenubar.h	2002-09-04 23:43:53.000000000 -0500
+@@ -11,7 +11,7 @@
+ 	BC_MenuBar(int x, int y, int w);
+ 	virtual ~BC_MenuBar();
+ 
+-	friend BC_Menu;
++	friend class BC_Menu;
+ 
+ 	int add_menu(BC_Menu* menu);
+ 
+@@ -44,7 +44,7 @@
+ 	BC_Menu(char *text);
+ 	virtual ~BC_Menu();
+ 
+-	friend BC_MenuBar;
++	friend class BC_MenuBar;
+ 
+ // Called by user
+ 	int add_item(BC_MenuItem* menuitem);
+@@ -85,7 +85,7 @@
+ 	BC_MenuItem(char *text, char *hotkey_text = "", int hotkey = 0);
+ 	virtual ~BC_MenuItem();
+ 
+-	friend BC_MenuPopup;
++	friend class BC_MenuPopup;
+ 
+ 	int add_submenu(BC_SubMenu *submenu);
+ 	int set_checked(int value);
+@@ -141,7 +141,7 @@
+ 	BC_MenuPopup();
+ 	virtual ~BC_MenuPopup();
+ 
+-	friend BC_MenuItem;
++	friend class BC_MenuItem;
+ 
+ 	int initialize(BC_WindowBase *top_level, 
+ 		BC_MenuBar *menu_bar, 
+diff -ur bcast-2000c.orig/guicast/bcpixmap.h bcast-2000c/guicast/bcpixmap.h
+--- bcast-2000c.orig/guicast/bcpixmap.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/guicast/bcpixmap.h	2002-09-04 23:33:01.000000000 -0500
+@@ -19,7 +19,7 @@
+ 		int h);
+ 	~BC_Pixmap();
+ 
+-	friend BC_WindowBase;
++	friend class BC_WindowBase;
+ 
+ 	void resize(int w, int h);
+ 	void copy_area(int x, int y, int w, int h, int x2, int y2);
+diff -ur bcast-2000c.orig/guicast/bcpot.h bcast-2000c/guicast/bcpot.h
+--- bcast-2000c.orig/guicast/bcpot.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/guicast/bcpot.h	2002-09-04 23:44:36.000000000 -0500
+@@ -20,9 +20,9 @@
+ 	BC_Pot(int x, int y, VFrame **data);
+ 	virtual ~BC_Pot();
+ 
+-	friend BC_FPot;
+-	friend BC_IPot;
+-	friend BC_PercentagePot;
++	friend class BC_FPot;
++	friend class BC_IPot;
++	friend class BC_PercentagePot;
+ 
+ 	int initialize();
+ 	virtual float get_percentage() { return 0; };
+diff -ur bcast-2000c.orig/guicast/bcprogressbox.h bcast-2000c/guicast/bcprogressbox.h
+--- bcast-2000c.orig/guicast/bcprogressbox.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/guicast/bcprogressbox.h	2002-09-04 23:45:07.000000000 -0500
+@@ -13,7 +13,7 @@
+ 	BC_ProgressBox(int x, int y, char *text, long length);
+ 	virtual ~BC_ProgressBox();
+ 	
+-	friend BC_ProgressWindow;
++	friend class BC_ProgressWindow;
+ 
+ 	void run();
+ 	int update(long position);    // return 1 if cancelled
+diff -ur bcast-2000c.orig/guicast/bcscrollbar.h bcast-2000c/guicast/bcscrollbar.h
+--- bcast-2000c.orig/guicast/bcscrollbar.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/guicast/bcscrollbar.h	2002-09-04 23:36:49.000000000 -0500
+@@ -30,7 +30,7 @@
+ 		long handlelength);
+ 	virtual ~BC_ScrollBar();
+ 
+-	friend BC_ListBox;
++	friend class BC_ListBox;
+ 
+ 	virtual int handle_event() { return 0; };
+ 	int initialize();
+diff -ur bcast-2000c.orig/guicast/bcslider.C bcast-2000c/guicast/bcslider.C
+--- bcast-2000c.orig/guicast/bcslider.C	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/guicast/bcslider.C	2002-09-04 23:46:15.000000000 -0500
+@@ -295,7 +295,7 @@
+ 	return 0;
+ }
+ 
+-int BC_Slider::reposition_window(int x, int y, int w = -1, int h = -1)
++int BC_Slider::reposition_window(int x, int y, int w, int h)
+ {
+ 	BC_WindowBase::reposition_window(x, y, w, h);
+ 	draw_face();
+diff -ur bcast-2000c.orig/guicast/bcslider.h bcast-2000c/guicast/bcslider.h
+--- bcast-2000c.orig/guicast/bcslider.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/guicast/bcslider.h	2002-09-04 23:45:58.000000000 -0500
+@@ -21,9 +21,9 @@
+ 		int use_caption);
+ 	virtual ~BC_Slider();
+ 
+-	friend BC_ISlider;
+-	friend BC_FSlider;
+-	friend BC_PercentageSlider;
++	friend class BC_ISlider;
++	friend class BC_FSlider;
++	friend class BC_PercentageSlider;
+ 
+ 	virtual int handle_event() { return 0; };
+ 
+@@ -110,7 +110,7 @@
+ 			int use_caption = 0,
+ 			VFrame **data = 0);
+ 
+-	friend BC_PercentageSlider;
++	friend class BC_PercentageSlider;
+ 
+ 	int update(float value);
+ 	int update(int pointer_motion_range, float value, float minvalue, float maxvalue);
+diff -ur bcast-2000c.orig/guicast/bctextbox.h bcast-2000c/guicast/bctextbox.h
+--- bcast-2000c.orig/guicast/bctextbox.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/guicast/bctextbox.h	2002-09-04 23:39:33.000000000 -0500
+@@ -97,8 +97,8 @@
+ 	void update(char *text);
+ 	void update_list(ArrayList<BC_ListBoxItem*> *data);
+ 
+-	friend BC_PopupTextBoxText;
+-	friend BC_PopupTextBoxList;
++	friend class BC_PopupTextBoxText;
++	friend class BC_PopupTextBoxList;
+ 
+ private:
+ 	int x, y, text_w, list_h;
+@@ -147,8 +147,8 @@
+ 	int get_h();
+ 	void set_boundaries(long min, long max);
+ 	
+-	friend BC_TumbleTextBoxText;
+-	friend BC_TumbleTextBoxTumble;
++	friend class BC_TumbleTextBoxText;
++	friend class BC_TumbleTextBoxTumble;
+ 
+ private:
+ 	int x, y, text_w;
+diff -ur bcast-2000c.orig/guicast/bcwindowbase.h bcast-2000c/guicast/bcwindowbase.h
+--- bcast-2000c.orig/guicast/bcwindowbase.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/guicast/bcwindowbase.h	2002-09-04 23:32:12.000000000 -0500
+@@ -62,35 +62,35 @@
+ 	BC_WindowBase();
+ 	virtual ~BC_WindowBase();
+ 
+-	friend BC_Bitmap;
+-	friend BC_Button;
+-	friend BC_GenericButton;
+-	friend BC_Capture;
+-	friend BC_Clipboard;
+-	friend BC_DragWindow;
+-	friend BC_FileBox;
+-	friend BC_ListBox;
+-	friend BC_Menu;
+-	friend BC_MenuBar;
+-	friend BC_MenuItem;
+-	friend BC_MenuPopup;
+-	friend BC_Meter;
+-	friend BC_Pan;
+-	friend BC_Pixmap;
+-	friend BC_Popup;
+-	friend BC_PopupMenu;
+-	friend BC_Pot;
+-	friend BC_ProgressBar;
+-	friend BC_Repeater;
+-	friend BC_Resources;
+-	friend BC_ScrollBar;
+-	friend BC_Slider;
+-	friend BC_SubWindow;
+-	friend BC_TextBox;
+-	friend BC_Title;
+-	friend BC_Toggle;
+-	friend BC_Tumbler;
+-	friend BC_Window;
++	friend class BC_Bitmap;
++	friend class BC_Button;
++	friend class BC_GenericButton;
++	friend class BC_Capture;
++	friend class BC_Clipboard;
++	friend class BC_DragWindow;
++	friend class BC_FileBox;
++	friend class BC_ListBox;
++	friend class BC_Menu;
++	friend class BC_MenuBar;
++	friend class BC_MenuItem;
++	friend class BC_MenuPopup;
++	friend class BC_Meter;
++	friend class BC_Pan;
++	friend class BC_Pixmap;
++	friend class BC_Popup;
++	friend class BC_PopupMenu;
++	friend class BC_Pot;
++	friend class BC_ProgressBar;
++	friend class BC_Repeater;
++	friend class BC_Resources;
++	friend class BC_ScrollBar;
++	friend class BC_Slider;
++	friend class BC_SubWindow;
++	friend class BC_TextBox;
++	friend class BC_Title;
++	friend class BC_Toggle;
++	friend class BC_Tumbler;
++	friend class BC_Window;
+ 
+ // Main loop
+ 	int run_window();
+diff -ur bcast-2000c.orig/guicast/vframe.C bcast-2000c/guicast/vframe.C
+--- bcast-2000c.orig/guicast/vframe.C	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/guicast/vframe.C	2002-09-04 23:48:51.000000000 -0500
+@@ -61,8 +61,8 @@
+ 		long v_offset, 
+ 		int w, 
+ 		int h, 
+-		int color_model = BC_RGBA8888, 
+-		long bytes_per_line = -1)
++		int color_model, 
++		long bytes_per_line)
+ {
+ 	reset_parameters();
+ 	allocate_data(data, 
+diff -ur bcast-2000c.orig/guicast/vframe.h bcast-2000c/guicast/vframe.h
+--- bcast-2000c.orig/guicast/vframe.h	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/guicast/vframe.h	2002-09-04 23:33:05.000000000 -0500
+@@ -32,7 +32,7 @@
+ 	VFrame();
+ 	~VFrame();
+ 
+-	friend PngReadFunction;
++	friend class PngReadFunction;
+ 
+ // Reallocate a frame without deleting the class
+ 	int reallocate(unsigned char *data, 
+diff -ur bcast-2000c.orig/pluginpack/messages.C bcast-2000c/pluginpack/messages.C
+--- bcast-2000c.orig/pluginpack/messages.C	2001-01-02 15:27:16.000000000 -0600
++++ bcast-2000c/pluginpack/messages.C	2002-09-04 23:41:24.000000000 -0500
+@@ -5,7 +5,7 @@
+ #include <stdlib.h>
+ #include <unistd.h>
+ 
+-Messages::Messages(int input_flag, int output_flag, int id = -1)
++Messages::Messages(int input_flag, int output_flag, int id)
+ {
+ 	if(id == -1)
+ 	{
+diff -ur bcast-2000c.orig/plugins/rotate/rotate.h bcast-2000c/plugins/rotate/rotate.h
+--- bcast-2000c.orig/plugins/rotate/rotate.h	2001-01-02 15:27:17.000000000 -0600
++++ bcast-2000c/plugins/rotate/rotate.h	2002-09-04 23:47:05.000000000 -0500
+@@ -45,7 +45,7 @@
+ 	RotateMain(int argc, char *argv[]);
+ 	~RotateMain();
+ 	
+-	friend RotateEngine;
++	friend class RotateEngine;
+ 
+ // required for all realtime plugins
+ 	int process_realtime(long size, VFrame **input_ptr, VFrame **output_ptr);
