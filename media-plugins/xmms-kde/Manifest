@@ -1,7 +1,17 @@
-MD5 04bb20553371dfbd7e9b7d78f61c6ee4 xmms-kde-3.1_beta1.ebuild 1077
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 12f9a79eb9cb758efadb993fd2288a91 metadata.xml 696
-MD5 aa3a811e110041eb3787a625f9ac88d0 ChangeLog 1164
-MD5 874fa62a1e3ff42a6c480770752ab775 xmms-kde-3.1.ebuild 768
+MD5 1d148317ff4a2495b26a7cc1a6695cb6 xmms-kde-3.1_beta1.ebuild 1118
+MD5 0ac7f8be6fcd54a1eb85e35288f224ad xmms-kde-3.1.ebuild 788
+MD5 b53fd8424eecb24df4fae4836d346920 ChangeLog 1308
+MD5 c0d893c15bd9e1b8ac53e6bf6decffe7 files/digest-xmms-kde-3.1_beta1 70
 MD5 8ba6b5722200f81d0d033db7deea9cff files/xmms-kde-3.1_beta1-libsuffix-fix.patch 393
 MD5 3e6358fd4d7585c191566a636ecd43d3 files/digest-xmms-kde-3.1 65
-MD5 c0d893c15bd9e1b8ac53e6bf6decffe7 files/digest-xmms-kde-3.1_beta1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB9qyFArHZZzCEUG0RAhogAJ9LrAGIu2BzvdfEUMQ5LU0WkZVEwACfUv/Z
+YzTnq4HwJEZ1KpDqCfWgZ04=
+=Nm2i
+-----END PGP SIGNATURE-----

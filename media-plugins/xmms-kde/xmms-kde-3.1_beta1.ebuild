@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kde/xmms-kde-3.1_beta1.ebuild,v 1.9 2004/09/15 19:26:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kde/xmms-kde-3.1_beta1.ebuild,v 1.10 2005/01/25 20:30:07 eradicator Exp $
 
 inherit kde eutils
 
@@ -15,9 +15,13 @@ LICENSE="GPL-2"
 KEYWORDS="x86 amd64 ~ppc sparc"
 IUSE="xmms sdl xinerama"
 
-DEPEND="xmms? ( >=media-sound/xmms-1.2.7-r23 )
-	sdl? ( >=media-libs/smpeg-0.4.4-r4 )
+RDEPEND="xmms? ( >=media-sound/xmms-1.2.7-r23 )
+	 sdl? ( >=media-libs/smpeg-0.4.4-r4 )
+	 kde-base/arts"
+
+DEPEND="${RDEPEND}
 	sys-devel/autoconf"
+
 need-kde 3.1
 
 # I don't think we need to slot this...
