@@ -1,6 +1,9 @@
 # ChangeLog for games-action/battalion
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/ChangeLog,v 1.5 2004/06/24 21:52:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/ChangeLog,v 1.6 2004/11/02 20:54:47 josejx Exp $
+
+  03 Nov 2004; Joseph Jezak <josejx@gentoo.org> battalion-1.4b.ebuild:
+  Marked ppc stable.
 
   05 Jun 2004; David Holm <dholm@gentoo.org> battalion-1.4b.ebuild:
   Added to ~ppc.
