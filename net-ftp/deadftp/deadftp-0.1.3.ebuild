@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/deadftp/deadftp-0.1.3.ebuild,v 1.14 2004/08/21 22:10:30 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/deadftp/deadftp-0.1.3.ebuild,v 1.15 2004/12/27 18:50:19 seemant Exp $
 
 IUSE="nls"
 
@@ -14,6 +14,7 @@ KEYWORDS="x86 ppc sparc ~amd64"
 
 DEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
+	dev-libs/libxml
 	=gnome-base/libglade-0.17*
 	>=media-libs/gdk-pixbuf-0.18.0
 	=gnome-base/orbit-0*
