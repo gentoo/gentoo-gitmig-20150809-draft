@@ -30,15 +30,13 @@
 	<section>
 		<title>What is the differenence between the sys and build tarballs?</title>
 		<body><p>The <e>build</e> tarball is a minimal system capable of connecting to the internet and rebuilding itself, whereas <e>sys</e> is a complete comfortable system.</p>
-		<note>If you need a minimal system for recovery, you might want to try the bootable <uri link="http://www.ibiblio.org/gentoo/snapshots/disks/">rescue disk images</uri> instead.</note></body>
+	</body>
 	</section>
 
 	<section>
 		<title>How do I install with no ISO image?</title>
-		<body><p>You use the boot floppies and the sys and build
-tarballs as normal. Please visit the <uri
-link="/index-download.html">Download/Install page</uri> for more
-information.</p> 
+		<body><p>We are working out a solution for 1.0_rc6+ systems as we speak.  Stay tuned and visit the <uri
+link="/index-download.html">Download/Install page</uri> for updates.</p> 
 	</body>
 	</section>
 
@@ -74,6 +72,13 @@ information.</p>
 	</body>
 	</section>
 	<section>
+		<title>How to I disable devfs?</title>
+		<body>
+<p>Under Gentoo Linux 1.0_rc6 and later, you can disable devfs by passing the <c>gentoo=nodevfs</c> to the kernel.  Please
+note that this works even if you are using "non-official" Linux kernel that you compiled yourself.</p>
+		</body>
+	</section>
+<section>
 		<title>How do I get <path>/dev/dsp</path>?</title>
 		<body><p>You can create it by typing the following as root:</p>
 		<pre># <i>cd /dev</i>
@@ -98,7 +103,7 @@ adjust the <c>misc/psaux</c> strings above accoringly.  You'll then want to <c>k
 		<title>Grub can't find stage x.y?</title>
 		<body><p>
 		During installation the grub boot files are copied
-		to <path>/boot/boot/grub</path>.  Grub automatically
+		to <path>/boot/grub</path> (<path>/boot/boot/grub</path> in Gentoo Linux 1.0_rc5 and earlier.) Grub automatically
 		looks in the <path>/boot/grub</path> directory on the
 		boot partition.  (We strongly recommend having a separate
 		no-auto boot partition mounted at <path>/boot</path>,
@@ -127,8 +132,8 @@ adjust the <c>misc/psaux</c> strings above accoringly.  You'll then want to <c>k
 	<title>Package Management</title>
 	<section>
 		<title>In what format are the packages stored?</title>
-		<body><p>They exist in our portage tree as <e>ebuilds</e>; we are primarily a ports-based distribution, meaning that we provide scripts (<c>.ebuild</c> files) and a special system (Portage) so
-that you can build apps from sources. We generally only build binaries for releases and snapshots. The <uri link="/doc/gentoo-howto.html">Development HOWTO</uri> covers the contents of an ebuild script in detail.  For ISO releases, we create a full suite of binary packages in an enhanced <c>.tbz2</c> format (<c>.tar.bz2</c> compatible with meta-information attached to the end of the file.)</p>
+		<body><p>They exist in our portage tree as <e>ebuild</e> autobuild scripts; we are primarily a ports-based distribution, meaning that we provide scripts (<c>.ebuild</c> files) and a special system (Portage) so
+that you can build apps from sources. We generally only build binaries for releases and snapshots. The <uri link="/doc/gentoo-howto.html">Development HOWTO</uri> covers the contents of an ebuild script in detail.  For full binary ISO releases, we create a full suite of binary packages in an enhanced <c>.tbz2</c> format (<c>.tar.bz2</c> compatible with meta-information attached to the end of the file.)</p>
 		</body>
 	</section>
 
@@ -136,24 +141,17 @@ that you can build apps from sources. We generally only build binaries for relea
 		<title>Why write a new port system (Portage) instead of using BSD's version?</title>
 		<body>
 
-<p>One of the design philosophies of the <c>.ebuild</c> syntax was to make it
+<p>In one sentence, because Portage is much better in so many ways.  One of the design philosophies of the <c>.ebuild</c> syntax was to make it
 an analog of what you'd type to install the program manually, thus making
-Portage very easy to learn and modify to your needs.</p>
-
-<p>Gentoo Linux is designed from the ground up to be as fast as possible; Open,
-Net and FreeBSD use <c>make</c> for their ports system, which keeps it
-relatively slow; ebuild is specifcally designed to be small, fast, clean and
-extensible.  Whereas BSD's ports is a relatively unchangable system and tricky
-to modify, Portage can be adapted to your specific needs. Portage is meant to
-be a working tool, not just a hard-to-understand system that comes as-is.
-Portage is designed to allow you to interact with it at all levels.</p>
+Portage very easy to learn and modify to your needs.  We also have OpenBSD-style "fake" installs, safe unmerging,
+system profiles, package masking, a real dependency system, and lots of other good stuff.</p>
 
 		</body>
 	</section>
 
 	<section>
 		<title>How does this differ from Debian's apt or BSD's ports?</title>
-		<body><p>Portage features the best of apt and ports; for example, USE options, a full dependency system, safe installs and uninstalls, and a true package database.  Think of Portage as the best of both worlds; a ports system with the sensibilities and safety of a package management system built-in.</p></body>
+		<body><p>Portage features the best of apt and ports; for example, USE options, a full dependency system, safe installs and uninstalls, and a true package database.  Think of Portage as the best of both worlds; a ports system with the sensibilities and safety of a Linux package management system built-in.</p></body>
 	</section>
 
 	<section>
@@ -218,13 +216,13 @@ the various configuration files is as follows (highest first):
 	<section>
 		<title>Is there a way to upgrade all installed packages
 		a la <e>apt-get upgrade</e> or <e>make World</e>?</title>
-		<body><p>Not yet, although such functionality is
-		being worked upon.  For the moment you can use
+		<body><p>Not yet; we will be adding this functionality
+		before the 1.0 release.  For the moment you can use
 		<c>emerge --pretend update</c> to list upgradable
 		packages, but the actual upgrading has to be done
 		package by package (using <c>ebuild</c> or 
 		<c>emerge</c>).  Otherwise, things may get merged in
-		a slightly non-optimal order.</p></body>
+		an incorrect order.</p></body>
 	</section>
 
 	<section>
@@ -296,7 +294,7 @@ the various configuration files is as follows (highest first):
 		<title>How to I view the timestamps in /var/log/syslog.d, etc.</title>
 		<body>
 
-<p>To view multilog timestamps, you need to pipe the current log through the <c>tai64nlocal</c>
+<p>To view multilog (Gentoo Linux 1.0_rc5 and earlier) timestamps, you need to pipe the current log through the <c>tai64nlocal</c>
 command:</p>
 
 <pre>
@@ -339,7 +337,7 @@ command:</p>
 <chapter>
 <title>Resources</title>
 	<section>
-		<title>Where can I find more about supervise?</title>
+		<title>Where can I find more about supervise used by default in Gentoo Linux 1.0_rc5 and earlier?</title>
 		<body><p><!-- TODO: --><uri>http://cr.yp.to/daemontools.html</uri></p></body>
 	</section>
 

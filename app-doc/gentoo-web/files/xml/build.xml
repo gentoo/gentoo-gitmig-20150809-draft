@@ -162,8 +162,9 @@ provides later:
 and we'll mount our filesystems to these mountpoints.  Note that we use the special <c>-o notail</c>
 option when we mount our ReiserFS boot partition.</p>
 <pre>
-# <i>mkdir -p /mnt/gentoo/boot</i>
+# <i>mkdir /mnt/gentoo</i>
 # <i>mount /dev/hda3 /mnt/gentoo</i>
+# <i>mkdir /mnt/gentoo/boot</i>
 # <i>mount -o notail /dev/hda1 /mnt/gentoo/boot</i>
 </pre>
 <p>If you are setting up Gentoo
