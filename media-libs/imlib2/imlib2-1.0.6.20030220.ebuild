@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6.20030220.ebuild,v 1.4 2003/03/11 16:10:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6.20030220.ebuild,v 1.5 2003/03/26 10:17:51 seemant Exp $
 
 inherit flag-o-matic
 
-IUSE="mmx ungif gif png jpeg tiff static X pic"
+IUSE="mmx gif png jpeg tiff static X"
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
@@ -17,8 +17,8 @@ LICENSE="as-is"
 KEYWORDS="~x86 ~ppc ~alpha"
 
 DEPEND="=media-libs/freetype-1*
-	ungif? ( media-libs/libungif )
-	gif? ( >=media-libs/giflib-4.1.0 )
+	gif? ( media-libs/libungif
+		>=media-libs/giflib-4.1.0 )
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( media-libs/jpeg )
 	tiff? ( >=media-libs/tiff-3.5.5 )"
@@ -34,7 +34,7 @@ src_compile() {
 	env USER=blah WANT_AUTOCONF_2_5=1 ./autogen.sh || die "could not autogen"
 
 	local myconf="--sysconfdir=/etc/X11/imlib --with-gnu-ld"
-	myconf="${myconf} `use_with pic` `use_enable mmx` `use_with X x`"
+	myconf="${myconf} `use_enable mmx` `use_with X x`"
 	econf ${myconf} || die "could not configure"
 	emake || die "could not make"
 }
