@@ -1,13 +1,21 @@
 # ChangeLog for sys-apps/fileutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.4 2002/05/04 05:49:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/ChangeLog,v 1.5 2002/05/04 10:36:33 blocke Exp $
+
+*fileutils-4.1.8-r2 (04 May 2002)
+
+  04 May 2002; Bruce A. Locke <blocke@shivan.org> fileutils-4.1.8-r2.ebuild:
+
+  ACL/NLS fix patch should only be applied if ACL support is actually
+  being compiled in.  Bumping rev so people don't keep trying to merge
+  previous broken version.
+
+*fileutils-4.1.8-r1 (02 May 2002)
 
   03 May 2002; Daniel Robbins <drobbins@gentoo.org>: Added acl.c.diff to fix
   compilation with nls disabled.  Blocke is sending this fix upstream to
   acl.bestbits.at.  No rev bump -- no need for a recompile if it worked for
   people.
-
-*fileutils-4.1.8-r1 (02 May 2002)
 
   02 May 2002; Daniel Robbins <drobbins@gentoo.org>: Added ACL support, closing
   bug #2343 (USE="acl" must be set)
