@@ -6,9 +6,6 @@
 
 =sys-devel/binutils-2.12.90.0.9
 
-# ppc-sources-2.4.19-r6 needs external testing. 
-=sys-kernel/ppc-sources-2.4.19-r6
-
 # masking nhc98, until strange module lookup behaviour is resolved
 # george - Jun 8, 2002
 dev-lang/nhc98
