@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.54.ebuild,v 1.2 2004/06/01 21:42:55 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.54.ebuild,v 1.3 2004/06/02 08:31:27 taviso Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://the.earth.li/~sgtatham/putty/latest/${P}.tar.gz"
 LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64"
 IUSE="doc"
 
 RDEPEND="=x11-libs/gtk+-1.2* virtual/x11"
