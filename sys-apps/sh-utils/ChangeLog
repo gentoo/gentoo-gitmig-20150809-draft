@@ -1,7 +1,12 @@
 # ChangeLog for sys-apps/sh-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.21 2003/06/23 22:50:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.22 2003/07/18 12:49:23 seemant Exp $
 
+*sh-utils-2.0.15-r1 (18 Jul 2003)
+
+  18 Jul 2003; Seemant Kulleen <seemant@gentoo.org> sh-utils-2.0.11-r4.ebuild,
+  sh-utils-2.0.11-r5.ebuild, sh-utils-2.0.15-r1.ebuild:
+  upgrade to coreutils
 
 *sh-utils-2.0.15 (24 Aug 2002)
 
