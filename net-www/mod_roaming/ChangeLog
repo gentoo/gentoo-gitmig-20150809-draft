@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_roaming
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_roaming/ChangeLog,v 1.3 2003/07/12 15:15:53 woodchip Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_roaming/ChangeLog,v 1.4 2004/04/05 00:54:43 zul Exp $
+
+  04 Apr 2004; Chuck Short <zul@gentoo.org> metadata.xml,
+  mod_roaming-2.0.0.ebuild:
+  Updated header, added metadata.
 
   12 Jul 2003; Donny Davies <woodchip@gentoo.org> mod_roaming-2.0.0.ebuild:
   Marked x86 stable.
