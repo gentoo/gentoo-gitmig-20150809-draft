@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1.ebuild,v 1.7 2004/10/12 19:42:04 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1.ebuild,v 1.8 2004/11/30 13:36:15 ticho Exp $
 
 inherit eutils
 
@@ -84,7 +84,8 @@ pkg_postinst() {
 	einfo "enter a passphrase for this keypair twice. If you leave the passphrase"
 	einfo "empty, your key will not be stored encrypted."
 	einfo
-	einfo "You should also load the perl scripts:"
+	einfo "To make full use of silc-plugin, you should load the following perl scripts"
+	einfo "into irssi:"
 	einfo
 	einfo "\t/SCRIPT LOAD silc"
 	einfo "\t/SCRIPT LOAD silc-mime"
