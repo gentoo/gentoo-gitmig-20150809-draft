@@ -18,7 +18,7 @@ DEPEND="virtual/python
 	>=media-libs/sdl-image-1.2.0
 	>=media-libs/sdl-mixer-1.2.0
 	>=dev-python/Numeric-19.0.0
-	>=media-libs/smpeg-0.4.4"
+	>=media-libs/smpeg-0.4.4-r1"
 
 src_compile() {
 	python setup.py build || die

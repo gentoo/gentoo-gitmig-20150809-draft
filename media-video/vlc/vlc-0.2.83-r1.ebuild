@@ -1,6 +1,6 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Nathaniel Hirsch <nh2@njit.edu> Achim Gottinge <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.2.83-r1.ebuild,v 1.1 2001/10/06 10:08:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.2.83-r1.ebuild,v 1.2 2001/10/07 11:11:08 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="DVD / video player"
@@ -8,7 +8,7 @@ SRC_URI="http://www.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.videolan.org"
 
 DEPEND=">=media-libs/libsdl-1.1.8-r1
-	gnome? ( >=gnome-base/gnome-libs-1.4.0.4-r1 )
+	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
     esd? ( >=media-sound/esound-0.2.22 )
     ggi? ( >=media-libs/libggi-2.0_beta3 )
     qt? ( >=x11-libs/qt-x11-2.3.0 )

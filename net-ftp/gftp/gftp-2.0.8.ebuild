@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/gnome-apps/gedit/gedit-0.9.4.ebuild,v 1.4 2000/11/27 16:20:46 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.8.ebuild,v 1.4 2001/08/31 03:23:39 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.8.ebuild,v 1.5 2001/10/07 11:11:08 azarah Exp $
 
 
 A=${P}.tar.gz
@@ -11,7 +11,7 @@ DESCRIPTION="Gnome based FTP Client"
 SRC_URI="http://gftp.seul.org/${A}"
 HOMEPAGE="http://gftp.seul.org"
 
-DEPEND=">=x11-libs/gtk+-1.2.10
+DEPEND=">=x11-libs/gtk+-1.2.10-r4
         nls? ( sys-devel/gettext )"
 
 
@@ -20,14 +20,14 @@ src_compile() {
   if [ -z "`use nls`" ] ; then
      myconf="--disable-nls"
   fi
-  try ./configure --host=${CHOST} --prefix=/usr/X11R6 \
-        --mandir=/usr/X11R6/man ${myconf}
+  try ./configure --host=${CHOST} --prefix=/usr \
+        --mandir=/usr/share/man ${myconf}
   try make
 }
 
 src_install() {
 
-  try make prefix=${D}/usr/X11R6 mandir=${D}/usr/X11R6/man install
+  try make prefix=${D}/usr mandir=${D}/usr/share/man install
 
   dodoc COPYING ChangeLog README* THANKS TODO
   dodoc docs/USERS-GUIDE

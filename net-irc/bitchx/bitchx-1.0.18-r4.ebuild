@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.18-r4.ebuild,v 1.1 2001/10/06 10:08:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.18-r4.ebuild,v 1.2 2001/10/07 11:11:08 azarah Exp $
 
 A=ircii-pana-1.0c18.tar.gz
 S=${WORKDIR}/BitchX
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc
         ssl? ( >=dev-libs/openssl-0.9.6 )
 	gnome? ( >=x11-libs/gtk+-1.2.10-r4
 	         >=media-libs/imlib-1.9.10-r1
- 	         >=gnome-base/gnome-libs-1.4.0.4-r1 )
+ 	         >=gnome-base/gnome-libs-1.4.1.2-r1 )
 	esd? ( >=media-sound/esound-0.2.5
 	       >=media-libs/audiofile-0.1.5 )"
 

@@ -1,7 +1,7 @@
 # Copyrigth 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>, Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.2-r2.ebuild,v 1.2 2001/10/06 12:58:46 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.2-r2.ebuild,v 1.3 2001/10/07 11:11:08 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xchat irc client"
@@ -15,7 +15,7 @@ DEPEND=">=x11-libs/gtk+-1.2.10-r4
         gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 >=media-libs/gdk-pixbuf-0.11.0-r1 )
         ssl? ( >=dev-libs/openssl-0.9.6a )"
 
-RDEPEND=">=x11-libs/gtk+-1.2.8
+RDEPEND=">=x11-libs/gtk+-1.2.10-r4
          gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 >=media-libs/gdk-pixbuf-0.11.0-r1 )
          ssl? ( >=dev-libs/openssl-0.9.6a )"
 
