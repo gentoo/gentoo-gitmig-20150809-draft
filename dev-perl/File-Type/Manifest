@@ -1,4 +1,14 @@
-MD5 b302880eb1db0f7f3e15a65a63e0fd35 File-Type-0.22.ebuild 476
-MD5 bcfb75bc26926bff228d8ec513a6474b ChangeLog 425
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 57b07270692a12addb07bb6a726f589e ChangeLog 550
 MD5 1e7dded402e236d45bd25a38c70c995c metadata.xml 223
+MD5 a756adf0d3f27b71720533346cc189e9 File-Type-0.22.ebuild 525
 MD5 d1d2059aeb27dff17a01ca6a8bb19ffc files/digest-File-Type-0.22 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOAJitG5z4I8BtQoRArU+AJ9PmLQT5Ri4CIMjUMQxxpA/e0Bm6QCdEJig
+SIQtn5SPB+ZpdxXTqo4aRV4=
+=vjLv
+-----END PGP SIGNATURE-----
