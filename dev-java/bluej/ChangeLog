@@ -1,0 +1,31 @@
+# ChangeLog for app-misc/bluej
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej/ChangeLog,v 1.1 2003/10/10 22:48:46 lanius Exp $
+
+*bluej-1.2.2 (11 Oct 2003)
+
+  11 Oct 2003; Heinrich Wendel <lanius@gentoo.org> bluej-1.2.2.ebuild,
+  bluej-1.3.0.ebuild, metadata.xml, files/bluej, files/bluej.desktop:
+  moved from app-misc to dev-java
+
+  10 Oct 2003; Heinrich Wendel <lanius@gentoo.org> bluej-1.3.0.ebuild,
+  metadata.xml:
+  bug #30766
+
+*bluej-1.3.0 (06 Oct 2003)
+
+  06 Oct 2003; Heinrich Wendel <lanius@gentoo.org> bluej-1.3.0.ebuild,
+  files/bluej:
+  version bump
+
+  25 May 2003; Todd Berman <tberman@gentoo.org> bluej-1.2.2.ebuild,
+  files/bluej:
+  blackdown is a valid jdk for this too.
+
+*bluej-1.2.2 (24 May 2003)
+
+  24 May 2003; Todd Berman <tberman@gentoo.org> bluej-1.2.2.ebuild,
+  files/bluej:
+  Initial Import, thanks to Heinrich Wendel for the ebuild submission this is
+  based on
+
