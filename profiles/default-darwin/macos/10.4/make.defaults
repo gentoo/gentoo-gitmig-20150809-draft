@@ -1,0 +1,9 @@
+# Copyright 2004 Pieter Van den Abeele, Gentoo Foundation
+# System-wide defaults for the Portage system
+
+# emerge portage-prefpane to make managing your make.conf file easy
+# The make.defaults file should never be changed
+
+ARCH="ppc"
+ACCEPT_KEYWORDS="ppc-macos" 
+USE="ppc-macos"
