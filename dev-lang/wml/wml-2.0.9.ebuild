@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.9.ebuild,v 1.17 2004/08/03 11:27:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.9.ebuild,v 1.18 2005/02/07 17:44:02 blubb Exp $
 
 inherit fixheadtails eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.engelschall.com/sw/wml/distrib/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc s390 ~ppc"
+KEYWORDS="x86 sparc s390 ~ppc ~amd64"
 IUSE=""
 DEPEND="dev-lang/perl
 	>=sys-devel/autoconf-2.58
