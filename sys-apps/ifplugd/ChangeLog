@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.10 2004/06/30 17:24:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.11 2004/08/09 19:28:17 seemant Exp $
+
+  09 Aug 2004; Seemant Kulleen <seemant@gentoo.org> ifplugd-0.25.ebuild:
+  Add pkgconfig to DEPEND, closing bug #54154 by Greg Andreou
+  <gregorya@dai.ed.ac.uk>
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> ifplugd-0.15.ebuild:
   sync IUSE (+doc)
