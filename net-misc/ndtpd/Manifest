@@ -1,5 +1,5 @@
 MD5 f331fd5874bb353f3a38c72dc39bc080 ndtpd-3.1.5.ebuild 1519
 MD5 043e2d431237aeec1769801a5b0214df metadata.xml 251
-MD5 f8f90b0a01a01d1ae8d52665d584f7d2 ChangeLog 641
-MD5 5c6f54ce028093ee75384ec41ae5e8a3 files/ndtpd.initd 680
+MD5 2fbd39b596c2ae0f48447e6e78c0dd9c ChangeLog 756
+MD5 47643e3514ba4d9dbff244d43e790933 files/ndtpd.initd 679
 MD5 c50d3bad7e4228c971eeb2507f0de06f files/digest-ndtpd-3.1.5 63
