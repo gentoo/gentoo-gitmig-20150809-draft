@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.2 2003/08/18 21:23:02 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.3 2003/08/20 17:25:08 max Exp $
+
+  20 Aug 2003; Max Kalika <max@gentoo.org> mythtv-themes-0.11.ebuild:
+  Fixed visor location. This one contains the proper OSD theme.
 
 *mythtv-themes-0.11 (18 Aug 2003)
 
