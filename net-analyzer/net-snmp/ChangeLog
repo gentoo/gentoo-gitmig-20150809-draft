@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.61 2004/10/25 14:10:45 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.62 2004/10/26 00:42:37 eldad Exp $
+
+  26 Oct 2004; Eldad Zack <eldad@gentoo.org> files/net-snmp-lm_sensors.patch:
+  Fixed lm_sensors patch to dlopen libsensors.so instead of libsensors.so.2.
+  Thanks to Chris Boot <bootc@bootc.net>. Closes #68856
 
   25 Oct 2004; Eldad Zack <eldad@gentoo.org> net-snmp-5.1.1-r1.ebuild,
   net-snmp-5.1.1.ebuild:

@@ -182,7 +182,7 @@ diff -Naur net-snmp-5.1.1.old/agent/mibgroup/host/hr_sensor.c net-snmp-5.1.1/age
 +  void *sensors_library;
 +  
 +  /* This could probably due with a bit more error reporting. */
-+  sensors_library=dlopen("libsensors.so.2",RTLD_LAZY);
++  sensors_library=dlopen("libsensors.so",RTLD_LAZY);
 +  if(sensors_library==NULL)
 +    return; // return before anything is registered
 +

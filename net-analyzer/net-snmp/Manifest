@@ -6,7 +6,7 @@ MD5 f597261fb689d5987bd724f686d8bd8c net-snmp-5.0.9-r1.ebuild 1659
 MD5 469a9d0b2d836a307178f2fa26042d51 net-snmp-5.1.ebuild 2142
 MD5 c9cad6967c195fe67becfed53488a95b net-snmp-5.0.9-r3.ebuild 2253
 MD5 8c0df6e6eece308106357b37d0dd28ca net-snmp-5.1.1-r1.ebuild 3563
-MD5 7d138920c089c09335f07e592e068aaa ChangeLog 9248
+MD5 0a490efc09bfcbf2d1925f63e90bcfec ChangeLog 9460
 MD5 feec9ceb3ba9f6a8b860a4a130998500 metadata.xml 214
 MD5 8cadda02e3a8f7279f531b660164c310 files/digest-net-snmp-5.0.9-r1 67
 MD5 8cadda02e3a8f7279f531b660164c310 files/digest-net-snmp-5.0.9-r3 67
@@ -17,12 +17,12 @@ MD5 00ce9b4fa6d597e08af7ce82d3a5c246 files/snmpd.conf 599
 MD5 1cc5b20de8fc9e7c807195c320ab2f4b files/net-snmp-proc.patch 2448
 MD5 ed2e953a9a923caec45eeca95bec2efc files/snmpd-5.1.conf 606
 MD5 662833e61042a47d4bd8aaae404f4245 files/snmpd.rc6 710
-MD5 2fc90e7bc5fccb2c9435ecdb7497d467 files/net-snmp-lm_sensors.patch 13688
+MD5 25d92c9a7adcbb80240a914a8f6bbfe5 files/net-snmp-lm_sensors.patch 13686
 MD5 0dbde7b1bdd9c9dc988039e676800337 files/snmpd-5.1.rc6 714
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBfQksT+MN7JbqCpMRAt9HAJ9UHcu6cfjMwsm0eAmqaOfQkHPbwwCfZT5T
-sRcdpXnYE4yKsczNm/fskDE=
-=HqP3
+iD8DBQFBfZ09T+MN7JbqCpMRApyMAJ4/z4yeuFJAFdZS31T3vVFxcpZ19ACeOSPc
+LGLhYMoKPO1m9+xcGFm09ak=
+=X3DG
 -----END PGP SIGNATURE-----
