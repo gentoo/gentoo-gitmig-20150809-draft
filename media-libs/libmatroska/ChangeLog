@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.45 2005/03/11 18:48:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.46 2005/03/11 18:54:19 luckyduck Exp $
+
+  11 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> libmatroska-0.7.4.ebuild:
+  stable on x86
 
   11 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> libmatroska-0.7.5.ebuild:
   added ~amd64 to KEYWORDS.
