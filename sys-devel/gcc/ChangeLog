@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.14 2002/05/25 22:52:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.15 2002/05/31 03:50:47 mkennedy Exp $
+
+*gcc-3.1-r5 (29 May 2002)
+
+  29 May 2002; Matthew Kennedy <azarah@gentoo.org> gcc-3.1-r5.ebuild,
+  ChangeLog, files/digest-gcc-3.1-r5 :
+
+  Fixes how we check for already install gcc's.
 
 *gcc-3.1-r4 (25 May 2002)
 
