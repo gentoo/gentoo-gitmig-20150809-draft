@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/openh323
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.3 2002/07/05 22:25:38 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.4 2002/07/20 16:47:30 raker Exp $
+
+*openh323-1.9.3 (20 Jul 2002)
+
+  20 Jul 2002; Nick Hadaway <raker@gentoo.org>
+  openh323-1.9.3.ebuild, files/digest-openh323-1.9.3 :
+
+  Updated openh323 to the latest version supported with gnomemeeting.
+  Removed previous versions from cvs.
 
 *openh323-1.8.8 (05 Jul 2002)
 
