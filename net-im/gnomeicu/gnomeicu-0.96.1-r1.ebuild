@@ -11,6 +11,13 @@ HOMEPAGE="http://gnomeicu.sourceforge.net/"
 DEPEND=">=x11-libs/gtk+-1.2.0
 	>=gnome-base/gnome-core-1.2.4"
 
+src_unpack() {
+  unpack ${A}
+  cd ${S}/src
+  cp ${FILESDIR}/userserver.patch .
+  patch -p0 < userserver.patch
+}
+
 src_compile() {                           
   
 
