@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /home/cvsroot/gentoo-x86/media-sound/moc/moc-1.1.0.ebuild
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-1.1.0.ebuild,v 1.9 2004/09/24 18:37:26 swegener Exp $
 
 inherit eutils
 

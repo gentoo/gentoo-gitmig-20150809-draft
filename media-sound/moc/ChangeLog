@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.6 2004/06/25 00:10:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.7 2004/09/24 18:37:26 swegener Exp $
+
+  24 Sep 2004; Sven Wegener <swegener@gentoo.org> moc-1.1.0.ebuild:
+  Fixed CVS keyword replacement.
 
   31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> moc-1.1.0.ebuild:
   Stable x86.  Added inherit eutils and removed explicit S=.
