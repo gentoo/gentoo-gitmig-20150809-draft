@@ -1,12 +1,26 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.36 2003/01/08 02:04:35 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.37 2003/01/12 03:16:09 lostlogic Exp $
 
   TODO before gentoo-sources-2.4.20-r1:
   * Documentation
-  * Test away
-  * USAGI patch from mattjf
-  * Whatever else I'm forgetting
+
+*lolo-sources-2.4.20.1 (10 Jan 2003)
+  Doing things a littl different this time... people can just
+  keep following lolo-sources and will get the identical
+  as gentoo-sources from the final versions of lolo-sources, 
+  except for documentation updates.
+
+  Changes from _rc3:
+  * Got a bunch of testing.  Apparently some SCSI+Firewire
+    issues, but I'm not sure if they are isolated to this
+    patchset or if they are 2.4.20 generic problems.
+  * Ext3 data=journal fix.
+  * Add an update for the aic7xx controller
+  * Resync with iptables again.
+  * Add one big defconfig patch to make a nicer default for
+    gentoo users.
+  * Drop all defconfig changes from i386 in patches
 
 *lolo-sources-2.4.20.1_rc3 (07 Jan 2003)
 
