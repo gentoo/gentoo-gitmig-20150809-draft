@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-1.99.4.ebuild,v 1.7 2004/03/26 21:16:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-1.99.4.ebuild,v 1.8 2004/06/08 01:06:21 mr_bones_ Exp $
 
 inherit eutils
 
@@ -38,8 +38,6 @@ src_install() {
 	dodoc INSTALL README AUTHORS NEWS KNOWNBUGS ChangeLog
 }
 
-
-src_postinst() {
+pkg_postinst() {
 	einfo "Press TAB for Fullscreen, +/- for resolution."
 }
-
