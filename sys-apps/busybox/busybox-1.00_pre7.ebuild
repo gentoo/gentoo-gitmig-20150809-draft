@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre6.ebuild,v 1.1 2004/02/04 00:07:15 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre7.ebuild,v 1.1 2004/02/05 15:10:30 dragonheart Exp $
 
 MY_PV=${PV/_/-}
 MY_P=${PN}-${MY_PV}
@@ -46,7 +46,7 @@ src_unpack() {
 
 	if use savedconfig; then
 		[ -r .config ] && rm .config
-		for conf in ${PN}-${PV}-${PR},${PN}-${PV},${PN}.config; do
+		for conf in {${PN}-${PV}-${PR},${PN}-${PV},${PN}}.config; do
 			if [ -r /etc/${PN}/${CCHOST}/${conf} ]; then
 				cp /etc/${PN}/${CCHOST}/${conf} ${S}/.config
 				break;
