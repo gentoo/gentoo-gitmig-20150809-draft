@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.1.4_beta4.ebuild,v 1.4 2004/12/19 09:28:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.1.4_beta4.ebuild,v 1.5 2004/12/23 21:29:11 mrness Exp $
 
 S=${WORKDIR}/poptop-1.1.4
 DESCRIPTION="Linux Point-to-Point Tunnelling Protocol Server"
@@ -53,5 +53,5 @@ src_install () {
 
 	dodoc README* AUTHORS COPYING INSTALL TODO ChangeLog
 	docinto samples
-	dodoc samples/*
+	dodoc samples/{options*,chap*,pptp*}
 }

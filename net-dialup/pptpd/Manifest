@@ -1,30 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2a3acb9d28497621c8e123b6fd085ec4 ChangeLog 1559
+MD5 b8675f6e51e1148ef184b27b5b72970c ChangeLog 1926
 MD5 9ab2ee42bf5bf7cf16cfa9a1bfc00d51 metadata.xml 299
-MD5 2f7ef88d4f29a75050c010cc7b2f8be3 pptpd-1.1.2.ebuild 882
-MD5 54a1541dfac5ccfaee7c55b1cc4e3cd4 pptpd-1.1.3.20030409.ebuild 865
-MD5 ae6df295e472e47e7bd7ec16042a4f76 pptpd-1.1.3.ebuild 869
-MD5 b80973cce679b9fec45c47c15dfa94ac pptpd-1.1.4_beta3.ebuild 960
-MD5 25ca777f321833002f5f75e79173cc79 pptpd-1.1.4_beta4.ebuild 1250
-MD5 6e1f9956e6ba9a654f94a873131ac040 files/digest-pptpd-1.1.2 63
-MD5 ccaa45fc34133bf6e2fcdae2ae6aaf6d files/digest-pptpd-1.1.3 63
-MD5 44fe01339a2f4fb8bdd39ab2d5520257 files/digest-pptpd-1.1.3.20030409 72
-MD5 045368d0e9da1b9290ee7405b94c8c55 files/digest-pptpd-1.1.4_beta3 66
+MD5 f65aab9fb25bfa9e2d5b4e8473ad85e3 pptpd-1.1.4_beta4.ebuild 1271
 MD5 584922c862a24633123bc9af4ba32bd3 files/digest-pptpd-1.1.4_beta4 66
-MD5 a01cdcdde4e8d3f166c3fca4bfdc040c files/options.pptpd 278
 MD5 bff575819b8997e7bbe743b95cb134cb files/pptpd-confd 131
 MD5 96fed26a1a72e947d12edda983f74d16 files/pptpd-init 386
-MD5 1d43555befe8c02d19af7030133bbb2b files/pptpd.conf 2339
-MD5 7bab057d2b9f8c95dc92307a81b7596c files/1.1.3/options.pptpd 620
-MD5 1aa6184ca2aca26444923d1f184cc78d files/1.1.3/pptpd.conf 1418
-MD5 e22c7de471773b313e5cb07b236520eb files/1.1.4_beta3/options.pptpd 625
-MD5 d20665267fec5f986fc36eed662c03d1 files/1.1.4_beta3/pptpd.conf 1682
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBxUnejtv59x0+BrURAo+4AJ49rsG0bB8Jds4WDSl4nkzhM0TsAwCcDL+F
-74NhZbCuiiNQ+4onybAetHY=
-=CA8e
+iD8DBQFByzi3jtv59x0+BrURAqzfAKCfxxPTURkT+1Scz5IVdyrfIM2bCgCg54C+
+NHjwlSdwqtw59aL/1jvQAx0=
+=NlGp
 -----END PGP SIGNATURE-----
