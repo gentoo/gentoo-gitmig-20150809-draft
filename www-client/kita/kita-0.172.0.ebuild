@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kita/kita-0.172.0.ebuild,v 1.4 2005/01/01 17:07:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kita/kita-0.172.0.ebuild,v 1.5 2005/01/15 00:17:47 danarmak Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc ~ppc64 alpha"
 
 RDEPEND="virtual/libc
 	>=x11-libs/qt-3.1
-	>=kde-base/kdebase-3.1
+	|| ( kde-base/kdebase-meta >=kde-base/kdebase-3.1 )
 	>=kde-base/kdelibs-3.1
 	>=kde-base/arts-1.1.4
 	>=dev-libs/libpcre-4.2
