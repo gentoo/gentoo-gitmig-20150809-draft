@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/honeyd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.9 2004/03/21 12:09:10 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.10 2004/03/21 14:34:33 mboman Exp $
+
+  21 Mar 2004; Michael Boman <mboman@gentoo.org> honeyd-0.4a.ebuild,
+  honeyd-0.5.ebuild:
+  QA: Adding categories to dependencies. See bug 45110 for details.
 
   21 Mar 2004; Michael Boman <mboman@gentoo.org> honeyd-0.4a.ebuild,
   honeyd-0.5.ebuild, honeyd-0.6a.ebuild, honeyd-0.7a.ebuild,
