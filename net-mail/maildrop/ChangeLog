@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/maildrop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.15 2003/01/01 21:25:27 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.16 2003/01/02 11:15:16 raker Exp $
 
 *maildrop-1.5.1 (01 Jan 2002)
+
+  02 Jan 2002; Nick Hadaway <raker@gentoo.org> maildrop-1.5.1.ebuild :
+  Added CXX='g++' so builds on gcc2 systems don't fail.
 
   01 Jan 2002; Nick Hadaway <raker@gentoo.org> maildrop-1.5.1.ebuild,
   files/digest-maildrop-1.5.1 :

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.1.ebuild,v 1.1 2003/01/01 21:25:27 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.1.ebuild,v 1.2 2003/01/02 11:15:16 raker Exp $
 
 IUSE="mysql ldap gdbm berkdb"
 
@@ -54,7 +54,7 @@ src_compile() {
 		--enable-sendmail=/usr/sbin/sendmail \
 		${myconf} || die "bad ./configure"
 
-	emake || die "compile problem"
+	emake CXX='g++' || die "compile problem"
 }
 
 src_install() {
