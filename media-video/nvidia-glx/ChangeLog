@@ -1,6 +1,14 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.25 2003/09/20 18:32:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.26 2003/10/16 04:41:15 drobbins Exp $
+
+*nvidia-glx-1.0.4499 (15 Oct 2003)
+
+  15 Oct 2003; Daniel Robbins <drobbins@gentoo.org>:
+  nvidia-glx-1.0.4499.ebuild: New version of the ebuild for AMD64 systems.
+  Thanks to Kris Kersey, James Jones and others for working on this. See bug
+  #30799. This ebuild does need some testing; adding it so that it can be
+  tested.
 
   20 Sep 2003; Martin Schlemmer <azarah@gentoo.org>
   nvidia-glx-1.0.4496.ebuild:
