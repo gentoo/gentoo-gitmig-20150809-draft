@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f2f40b6fec3b75d7bf5eeff5349945e6 ChangeLog 2499
-MD5 908b83926eb257edbb6137b5077090af docbook-dsssl-stylesheets-1.77-r1.ebuild 1055
-MD5 70fe61b07a129fb036a91d9acb1e7664 docbook-dsssl-stylesheets-1.77-r2.ebuild 1577
-MD5 e387552673b18606f7f83fa8f71d0c00 docbook-dsssl-stylesheets-1.77.ebuild 1529
+MD5 66b3f1c73e8b1a8c44ba83d934a58f39 docbook-dsssl-stylesheets-1.77.ebuild 1523
+MD5 d28397c6cac7348d6ce1697cca74a835 docbook-dsssl-stylesheets-1.77-r2.ebuild 1570
+MD5 fd9849b53e4076f756b4f49f64c98fba ChangeLog 2493
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 e844559b07d18e21f6037d1609d96489 docbook-dsssl-stylesheets-1.77-r1.ebuild 1049
+MD5 aa413b2500a9fa5f6ac08e657d0958d5 files/docbook-dsssl-stylesheets-1.77.Makefile 676
 MD5 828b0c7fd631679fa8fe2bf60d082c38 files/digest-docbook-dsssl-stylesheets-1.77 70
 MD5 828b0c7fd631679fa8fe2bf60d082c38 files/digest-docbook-dsssl-stylesheets-1.77-r1 70
 MD5 828b0c7fd631679fa8fe2bf60d082c38 files/digest-docbook-dsssl-stylesheets-1.77-r2 70
-MD5 aa413b2500a9fa5f6ac08e657d0958d5 files/docbook-dsssl-stylesheets-1.77.Makefile 676
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAvSifHTu7gpaalycRAgO2AJ4ojPNR3+ecjX9mlFIH4YVyBB5+KgCgmslG
-RprLF5aXFacBiJRmmAELYCg=
-=hAqW
------END PGP SIGNATURE-----
