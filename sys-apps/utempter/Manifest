@@ -1,5 +1,5 @@
-MD5 b3a4a520cbd060b1ed6ff26c3f7b3da6 utempter-0.5.5.4.ebuild 1185
-MD5 7c615304da9e958117723e187c623bc7 ChangeLog 2724
+MD5 e55f80dde59eda80e2c0b1fa18df84c3 utempter-0.5.5.4.ebuild 1184
+MD5 b59e608f8a9131b7bd4f33a7841312b9 ChangeLog 2817
 MD5 865db25e01f95e3aa4643b7a95fd1ab0 metadata.xml 183
 MD5 b2dc09a11b51ceac5735f963a718fa32 files/utempter-0.5.3.2-soname-makefile-fix.patch 932
 MD5 b2dc09a11b51ceac5735f963a718fa32 files/utempter-0.5.5.4-soname-makefile-fix.patch 932
