@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.0_pre3.ebuild,v 1.3 2004/02/22 07:12:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.0_pre3.ebuild,v 1.4 2004/03/13 06:56:26 genone Exp $
 
 DESCRIPTION="Collection of administration scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/~karltk/projects/gentoolkit/"
-SRC_URI="http://dev.gentoo.org/~genone/${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~genone/distfiles/${P}.tar.gz"
 #SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 SLOT="0"
