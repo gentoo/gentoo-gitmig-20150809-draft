@@ -1,8 +1,11 @@
 # ChangeLog for app-arch/unzip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.13 2003/02/15 19:26:49 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.14 2003/03/12 19:07:12 zwelch Exp $
 
 *unzip-5.50-r1 (21 Oct 2002)
+
+  12 Mar 2003; Zach Welch <zwelch@gentoo.org> unzip-5.50-r1.ebuild:
+  add arm keyword
 
   15 Feb 2003; Jan Seidel <tuxus@gentoo.org> :
   Added mips to keywords
