@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/skoosh
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/skoosh/ChangeLog,v 1.2 2004/06/24 23:09:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/skoosh/ChangeLog,v 1.3 2004/07/25 12:26:33 mr_bones_ Exp $
+
+*skoosh-2.5.0 (25 Jul 2004)
+
+  25 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> +skoosh-2.5.0.ebuild:
+  version bump - ebuild from Holly Bostick via bug #57375
 
 *skoosh-2.0.8 (07 Mar 2004)
 
