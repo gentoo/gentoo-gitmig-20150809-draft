@@ -78,7 +78,7 @@ src_compile() {
 		--enable-nautilus-view=no \
 		${myconf} || die
 
-	emake || die
+	emake || make || die
 }
 
 src_install() {
