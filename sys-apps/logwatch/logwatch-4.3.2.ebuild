@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-4.3.2.ebuild,v 1.2 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-4.3.2.ebuild,v 1.3 2003/10/22 21:16:41 mholzer Exp $
 
 DESCRIPTION="Analyzes and Reports on system logs"
 HOMEPAGE="http://www.logwatch.org"
@@ -51,24 +51,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	# this will avoid duplicate entries in the crontab
-	if [ "`grep logwatch.pl ${ROOT}var/spool/cron/crontabs/root`" == "" ];
-	then
-		einfo "adding to cron..."
-		echo "0 0 * * * ${ROOT}usr/sbin/logwatch.pl 2>&1 > /dev/null" \
-			>> ${ROOT}var/spool/cron/crontabs/root
-	fi
-}
-
-pkg_postrm() {
-	# this fixes a bug when logwatch package gets updated
-	if [ "`ls -d ${ROOT}var/db/pkg/sys-apps/logwatch* \
-		| wc -l | tail -c 2`" -lt 2 ];
-	then
-		sed "/^0.*\/usr\/sbin\/logwatch.*null$/d" \
-			${ROOT}var/spool/cron/crontabs/root \
-			> ${ROOT}var/spool/cron/crontabs/root.new
-		mv --force ${ROOT}var/spool/cron/crontabs/root.new \
-			${ROOT}var/spool/cron/crontabs/root
-	fi
+	einfo
+	einfo "you have to manually add ${PN} to cron..."
+	einfo "0 0 * * * /usr/sbin/logwatch.pl 2>&1 > /dev/null"
+	einfo
 }
