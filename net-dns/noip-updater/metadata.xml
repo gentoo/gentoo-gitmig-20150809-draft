@@ -11,5 +11,6 @@
 		<email>dragonheart@gentoo.org</email>
 		<name>Daniel Black</name>
 		<description>Daniel is also the for-now maintainer.</description>
+	</maintainer>
 	<longdescription>no-ip.com dynamic DNS updater</longdescription>
 </pkgmetadata>

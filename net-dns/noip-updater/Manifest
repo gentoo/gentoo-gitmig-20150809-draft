@@ -1,6 +1,6 @@
 MD5 cb33d6cf7ce660a50d1f48bd4e24b2e9 noip-updater-2.1.1-r1.ebuild 1454
 MD5 7688a7703a72edb934b322dd5a9324cc ChangeLog 2282
-MD5 1aa58636df71c2ef8f1d13aeb9c6dd82 metadata.xml 530
+MD5 a20cdb92b8a1629599ec1bf97074d8f6 metadata.xml 545
 MD5 34e9615ea37f3cf8195d6de7e3a7ee08 noip-updater-2.0.15.ebuild 1216
 MD5 1f86b2531c8f115fa178f23b095d0140 files/noip-2.1.1.patch 486
 MD5 ced8f9146ce6aaaa6254e329056676da files/noip2.start 786
