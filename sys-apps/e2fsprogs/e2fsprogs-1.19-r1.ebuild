@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.19-r1.ebuild,v 1.2 2001/02/27 15:29:12 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.19-r1.ebuild,v 1.3 2001/04/06 15:35:21 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard ext2 filesystem utilities"
@@ -9,7 +9,8 @@ SRC_URI="ftp://download.sourceforge.net/pub/sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
 
 DEPEND="virtual/glibc
-        nls? ( sys-devel/gettext )"
+        nls? ( sys-devel/gettext )
+	sys-apps/texinfo"
 RDEPEND="virtual/glibc"
 
 src_unpack() {
