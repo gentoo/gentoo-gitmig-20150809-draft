@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.1 2004/08/18 18:11:16 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.2 2004/08/18 19:13:34 squinky86 Exp $
+
+  18 Aug 2004; Jon Hood <squinky86@gentoo.org> -files/0.3.2-rtorrent.patch,
+  libtorrent-0.3.2.ebuild:
+  Remove patch since Rakshasa upgraded the package with its changes.
 
 *libtorrent-0.3.2 (18 Aug 2004)
 

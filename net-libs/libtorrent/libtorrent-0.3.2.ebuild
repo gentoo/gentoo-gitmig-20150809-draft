@@ -2,8 +2,6 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
-inherit eutils
-
 DESCRIPTION="LibTorrent is a BitTorrent library written in C++ for *nix."
 HOMEPAGE="http://libtorrent.rakshasa.no/"
 SRC_URI="http://libtorrent.rakshasa.no/${P}.tar.gz"
@@ -25,7 +23,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use ncurses && cp client/Makefile2 client/Makefile
-	use ncurses && epatch ${FILESDIR}/0.3.2-rtorrent.patch
 }
 
 src_compile() {

@@ -1,7 +1,0 @@
---- libtorrent-0.3.2/client/rtorrent.cc	2004-08-18 13:00:42.692968144 -0500
-+++ libtorrent-0.3.2/client/rtorrent.cc	2004-08-18 13:00:48.763045352 -0500
-@@ -1,3 +1,4 @@
-+#include <cerrno>
- #include <iostream>
- #include <fstream>
- #include <signal.h>
