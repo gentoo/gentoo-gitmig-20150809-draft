@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/drscheme-205.ebuild,v 1.1 2003/08/09 22:24:24 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/drscheme-205.ebuild,v 1.2 2003/11/03 18:48:29 karltk Exp $
 
 S=${WORKDIR}/plt
 DESCRIPTION="DrScheme programming environment.  Includes mzscheme."
@@ -13,7 +13,7 @@ RDEPEND="virtual/x11
 	opengl? ( virtual/opengl )"
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 src_compile() {

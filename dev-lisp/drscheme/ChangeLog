@@ -1,7 +1,12 @@
 # ChangeLog for dev-lisp/drscheme
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/ChangeLog,v 1.6 2003/09/06 17:10:58 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/drscheme/ChangeLog,v 1.7 2003/11/03 18:48:29 karltk Exp $
 
+  04 Nov 2003; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  drscheme-203.ebuild, drscheme-204.ebuild, drscheme-205.ebuild:
+  203 and 204 do not have versioned tarballs, removing. Marking 205 as 
+  stable.
+  
 *drscheme-205 (06 Sep 2003)
 
   06 May 2003; Karl Trygve Kalleberg <karltk@gentoo.org> drscheme-205.ebuild:
