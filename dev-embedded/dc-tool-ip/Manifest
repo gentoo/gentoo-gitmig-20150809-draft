@@ -1,3 +1,15 @@
-MD5 9047a5e5922d171dcfcf0ef5e5d75c8f dc-tool-ip-1.0.3.ebuild 547
-MD5 2d858bafc715d8b8075635ef64a4fd21 ChangeLog 345
-MD5 a51a6d756989bbd9d5f56e239e05287c files/digest-dc-tool-ip-1.0.3 70
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3c59ad1d8df869262b49d19e82583b31 dc-tool-ip-1.0.4.ebuild 1100
+MD5 5b30e705e7a00a77983c825c5d20225f ChangeLog 549
+MD5 c5b5abb3be81bb53cfee6c21c8ee3645 metadata.xml 222
+MD5 62e0368b50026e7ca176387d1445d637 files/1.0.4-bfd-update.patch 909
+MD5 8bae092f81b693467415ec097555bb7b files/digest-dc-tool-ip-1.0.4 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBlq1BHTu7gpaalycRAmTnAJsEurSKSC9eiw2CdIHYVWj8gCwzHQCfQLH8
+PQSUz56qba68YKmUDScdSUE=
+=ftmc
+-----END PGP SIGNATURE-----

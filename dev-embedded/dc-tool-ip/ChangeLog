@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/dc-tool-ip
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/dc-tool-ip/ChangeLog,v 1.3 2004/07/18 15:43:41 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/dc-tool-ip/ChangeLog,v 1.4 2004/11/14 00:55:46 vapier Exp $
+
+*dc-tool-ip-1.0.4 (13 Nov 2004)
+
+  13 Nov 2004; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +files/1.0.4-bfd-update.patch, -dc-tool-ip-1.0.3.ebuild,
+  +dc-tool-ip-1.0.4.ebuild:
+  Version bump.
 
 *dc-tool-ip-1.0.3 (11 Jun 2004)
 
