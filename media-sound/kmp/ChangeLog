@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kmp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmp/ChangeLog,v 1.5 2004/09/28 19:48:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmp/ChangeLog,v 1.6 2004/11/22 23:36:27 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> kmp-0.01.ebuild:
+  Stable sparc.
 
   28 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> kmp-0.01.ebuild:
   Stable amd64.  Added ~sparc.

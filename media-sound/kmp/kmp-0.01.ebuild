@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmp/kmp-0.01.ebuild,v 1.5 2004/09/28 19:48:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmp/kmp-0.01.ebuild,v 1.6 2004/11/22 23:36:27 eradicator Exp $
+
+IUSE=""
 
 inherit eutils kde-functions
 
@@ -12,8 +14,7 @@ SRC_URI="http://www.threadbox.net/code/files/kmp/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64 ~sparc"
-IUSE=""
+KEYWORDS="amd64 ~ppc sparc x86"
 
 src_unpack() {
 	unpack ${A}
