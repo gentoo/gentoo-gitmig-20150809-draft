@@ -1,14 +1,14 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.2 2002/11/03 19:25:52 roughneck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.3 2002/11/03 19:27:01 roughneck Exp $
 
 *pysqlite-0.2.0-r1 (03 Nov 2002)
 
-  03 Nov 2002; Nicholas Henke <roughneck@gentoo.org> pysqlite-0.2.0-r1.ebuild files/digest-pysqlite-0.2.0-r1:
-
+  03 Nov 2002; Nicholas Henke <roughneck@gentoo.org> pysqlite-0.2.0-r1.ebuild files/digest-pysqlite-0.2.0-r1:\
   old ebuild did not install examples correctly. Thanks to Bardur Arantsson <bardur-gta@odense.kollegienet.dk> for bug fix.
-
   Removed pysqlite-0.2.0.ebuild files/digest-pysqlite-0.2.0
+  
+  Added ppc to keywords
 
 *pysqlite-0.2.0 (30 Jul 2002)
 
