@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.110 2004/04/29 21:40:11 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.111 2004/04/29 21:54:16 tseng Exp $
+
+  29 Apr 2004; Brandon Hale <tseng@gentoo.org> xine-lib-1_rc4.ebuild:
+  Looks golden, x86 stablage.
 
 *xine-lib-1_rc4 (29 Apr 2004)
 
