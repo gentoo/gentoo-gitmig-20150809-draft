@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-musepack
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.2 2003/06/03 12:03:27 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.3 2003/07/22 13:04:20 aliz Exp $
+
+  22 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> xmms-musepack-0.94-r1.ebuild :
+  Changed flags alteration.
 
 *xmms-musepack-0.94-r1 (03 Jun 2003)
 
