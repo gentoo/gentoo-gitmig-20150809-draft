@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.5.ebuild,v 1.5 2003/03/07 22:48:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.5.ebuild,v 1.6 2003/03/08 09:46:27 lordvan Exp $
 
 inherit libtool
 
@@ -18,7 +18,8 @@ DEPEND="=x11-libs/gtk+-1.2*
 	app-text/ghostscript
 	net-print/foomatic
 	doc? ( app-text/texi2html )
-	cups? ( >=net-print/cups-1.1.16 )"
+	cups? ( >=net-print/cups-1.1.16 )
+        !net-print/gimp-print-cups"
 RDEPEND="virtual/glibc"
 
 src_compile() {
