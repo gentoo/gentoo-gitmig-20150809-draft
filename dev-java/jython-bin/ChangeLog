@@ -1,0 +1,38 @@
+# ChangeLog for dev-java/jython
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython-bin/ChangeLog,v 1.1 2004/07/30 11:53:15 karltk Exp $
+
+  30 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org>:
+  Moved from dev-java/jython to dev-java/jython-bin, as these ebuilds do not
+  compile from sources.
+
+  16 Jul 2004; Thomas Matthijs <axxo@gentoo.org> :
+  fix python.home path in files/jython closes 49841
+  fix path in jythonc (although it still doesn't work, looks like it never did
+  if you know how to fix it, please let me know or file a bug on bugzilla)
+
+  19 Jun 2004; Jason Wever <weeve@gentoo.org> jython-2.1-r2.ebuild:
+  Stable on sparc.
+
+  19 Jan 2004; Adrian Almenar <strider@gentoo.org> jython-2.1-r2.ebuild:
+  Added amd64 keyword.
+
+*jython-2.1-r2 (17 Jan 2004)
+
+  17 Jan 2004; Adrian Almenar <strider@gentoo.org> jython-2.1-r1.ebuild,
+  jython-2.1-r2.ebuild, jython-2.1.ebuild:
+  Fixes #25533. Ebuild submitted by Chris Aniszczyk <zx@mea-culpa.net>. Moved
+  2.1-r1 to stable, Removed 2.1.
+
+*jython-2.1-r1 (13 May 2003)
+
+  13 May 2003; Todd Berman <tberman@gentoo.org> jython-2.1-r1.ebuild,
+  files/jython, files/jythonc:
+  Fixed up ebuild, closing bug #20562, bumped revision # for people with it
+  already installed.
+
+*jython-2.1 (29 Apr 2003)
+
+  29 Apr 2003; Todd Berman <tberman@gentoo.org> jython-2.1.ebuild:
+  Initial import.
+
