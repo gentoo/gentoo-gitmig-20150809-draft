@@ -1,12 +1,12 @@
 # ChangeLog for sys-apps/lilo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.5 2002/04/06 07:27:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.6 2002/04/06 07:55:54 azarah Exp $
 
 *lilo-22.1-r3 (5 Apr 2002)
 
   5 Apr 2002; M.Schlemmer <azarah@gentoo.org> lilo-22.1-r3.ebuild :
 
-  Fix the /boot issue finally (hopefully :P)
+  Fix the /boot issue finally (hopefully :P).  Add $ROOT checking afterwards.
 
   18 Feb 2002; Donny Davies <woodchip@gentoo.org> lilo-21.7.5-r1.ebuild :
   
