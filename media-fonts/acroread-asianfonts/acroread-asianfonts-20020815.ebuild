@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-20020815.ebuild,v 1.5 2004/07/01 10:48:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-20020815.ebuild,v 1.6 2004/08/29 23:42:40 kugelfang Exp $
 
 DESCRIPTION="Asian Font Packs for Acrobat Reader 5.0"
 HOMEPAGE="http://www.adobe.com/prodindex/acrobat/readstep.html"
@@ -13,7 +13,7 @@ SRC_URI="${BASE_URI}/chsfont.tar.gz
 
 SLOT="0"
 LICENSE="Adobe"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc
