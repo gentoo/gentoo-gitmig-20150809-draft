@@ -1,12 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10.ebuild,v 1.6 2004/01/09 21:51:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10.ebuild,v 1.7 2004/03/28 02:20:26 mr_bones_ Exp $
 
 inherit eutils
 
-IUSE="motif cjk xgetdefault"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="rxvt -- nice small x11 terminal"
 HOMEPAGE="http://www.rxvt.org/"
 SRC_URI="mirror://sourceforge/rxvt/${P}.tar.gz
@@ -15,6 +12,7 @@ SRC_URI="mirror://sourceforge/rxvt/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc alpha sparc ~mips"
+IUSE="motif cjk xgetdefault"
 
 DEPEND="virtual/glibc
 	virtual/x11
