@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r1.ebuild,v 1.1 2003/09/13 03:46:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r1.ebuild,v 1.2 2003/09/13 10:12:05 msterret Exp $
 
 inherit flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -57,7 +57,7 @@ src_unpack() {
 	# Add /usr/local/share/xmms/Skins to the search path for skins
 	epatch ${FILESDIR}/${PN}-fhs-skinsdir.patch
 
-	# This patch passes audio output through the output plugin 
+	# This patch passes audio output through the output plugin
 	# before recording via the diskwriter plugin
 	# http://forum.xmms.org/viewtopic.php?t=500&sid=c286e1c01fb924a2f81f519969f33764
 	epatch ${FILESDIR}/xmms-diskwriter-audio.patch
@@ -112,7 +112,7 @@ src_install() {
 		GNOME_SYSCONFDIR=${D}/etc \
 		install || die "make install failed"
 
-	dodoc AUTHORS ChangeLog COPYING FAQ NEWS README TODO 
+	dodoc AUTHORS ChangeLog COPYING FAQ NEWS README TODO
 
 	keepdir /usr/share/xmms/Skins
 	insinto /usr/share/pixmaps/
