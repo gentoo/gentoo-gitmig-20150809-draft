@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.3.21.ebuild,v 1.2 2003/09/28 17:48:01 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.3.21.ebuild,v 1.3 2003/10/03 12:40:27 lanius Exp $
 
 IUSE="nls gtk readline cups foomaticdb ppds"
 
 DESCRIPTION="Gimp Print Drivers"
 HOMEPAGE="http://gimp-print.sourceforge.net"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
+KEYWORDS="x86 ppc alpha sparc hppa amd64"
 SRC_URI="mirror://sourceforge/gimp-print/${P}.tar.bz2"
 
 DEPEND="cups? ( >=net-print/cups-1.1.14 )
