@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.22-r2.ebuild,v 1.4 2003/11/20 07:43:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.22-r2.ebuild,v 1.5 2003/12/02 04:01:45 iggy Exp $
 
 IUSE=""
 
@@ -34,6 +34,8 @@ src_unpack() {
 
 	cd ${PF}
 	patch -p1 < ${WORKDIR}/patch-${OKV}-${MY_R} || die "patch failed"
+
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
 
 	use xfs && ( ewarn "XFS is no longer included!" )
 }
