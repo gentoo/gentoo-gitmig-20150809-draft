@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpv6
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.7 2003/08/05 04:58:29 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.8 2003/08/07 21:35:12 latexer Exp $
+
+  07 Aug 2003; Peter Johanson <latexer@gentoo.org> files/patch-iaid-dhcp6-0.85:
+  Removed and added back in the patch as a binary file, so it doesn't update
+  the $Id: field and break the patch. grr.
 
 *dhcpv6-0.85-r1 (05 Aug 2003)
 
