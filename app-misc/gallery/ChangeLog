@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gallery
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/ChangeLog,v 1.20 2003/12/15 19:57:18 stuart Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/ChangeLog,v 1.21 2004/01/25 18:46:47 mholzer Exp $
+
+*gallery-1.4.1_p1 (25 Jan 2004)
+
+  25 Jan 2004; Martin Holzer <mholzer@gentoo.org> gallery-1.4.1_p1.ebuild:
+  Version bumped. Security fix.
 
   15 Dec 2003; Stuart Herbert <stuart@gentoo.org> gallery-1.4.1.ebuild:
   Fix for bug #32636
