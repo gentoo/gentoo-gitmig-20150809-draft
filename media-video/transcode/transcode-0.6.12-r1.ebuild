@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12-r1.ebuild,v 1.12 2004/06/26 01:16:22 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12-r1.ebuild,v 1.13 2004/06/28 06:24:28 mr_bones_ Exp $
 
 inherit libtool flag-o-matic eutils gcc
 
@@ -38,17 +38,17 @@ DEPEND=">=media-libs/a52dec-0.7.4
 	theora? ( media-libs/libtheora )"
 
 src_unpack() {
-	  
- 	unpack ${A}
- 	cd ${S}
-	
+
+	unpack ${A}
+	cd ${S}
+
 	#apply both patches to compile with gcc-3.4.0 closing bug #49457
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
 	then
- 	epatch ${FILESDIR}/transcode-gcc34.patch
-	epatch ${FILESDIR}/transcode-0.6.12-gcc-3.4.patch
+		epatch ${FILESDIR}/transcode-gcc34.patch
+		epatch ${FILESDIR}/transcode-0.6.12-gcc-3.4.patch
 	fi
-	
+
 	if has_version  '>=media-libs/netpbm-9.13'
 	then
 		einfo "New netbpm (>9.12)..."
