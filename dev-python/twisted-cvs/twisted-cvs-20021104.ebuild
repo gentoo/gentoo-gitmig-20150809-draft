@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-cvs/twisted-cvs-20021104.ebuild,v 1.4 2003/06/21 22:30:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-cvs/twisted-cvs-20021104.ebuild,v 1.5 2003/06/22 12:16:00 liquidx Exp $
 
 ECVS_USER="anon"
 ECVS_SERVER="twistedmatrix.com:/cvs"
@@ -19,7 +19,7 @@ RDEPEND="virtual/python"
 DEPEND="$DEPEND
         >=dev-python/epydoc-1.1
         >=dev-python/pycrypto-1.9_alpha4"
-KEYWORDS="x86 amd64 ~alpha"
+KEYWORDS="~x86 ~alpha"
 IUSE=""
 
 inherit distutils

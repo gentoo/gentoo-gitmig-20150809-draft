@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-0.9.2.ebuild,v 1.7 2003/06/21 22:30:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-0.9.2.ebuild,v 1.8 2003/06/22 12:15:59 liquidx Exp $
 
 S=${WORKDIR}/MySQL-python-${PV}
 DESCRIPTION="MySQL Module for python" 
@@ -12,7 +12,7 @@ DEPEND="virtual/python
 	virtual/glibc
 	>=dev-db/mysql-3.22.19"
 RDEPEND=""
-KEYWORDS="x86 amd64 sparc "
+KEYWORDS="ppc x86 sparc "
 IUSE=""
 
 inherit distutils

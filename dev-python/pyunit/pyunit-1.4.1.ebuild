@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyunit/pyunit-1.4.1.ebuild,v 1.5 2003/06/21 22:30:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyunit/pyunit-1.4.1.ebuild,v 1.6 2003/06/22 12:16:00 liquidx Exp $
 
 
 inherit distutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/pyunit/${P}.tar.gz"
 LICENSE="as-is"
 
 SLOT="0"
-KEYWORDS="x86 amd64 ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 DEPEND=">=dev-lang/python-2.0"
 

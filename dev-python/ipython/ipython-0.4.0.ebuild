@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.4.0.ebuild,v 1.3 2003/06/21 22:30:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.4.0.ebuild,v 1.4 2003/06/22 12:15:59 liquidx Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://ipython.scipy.org/dist/${MY_P}.tar.gz"
 
 LICENSE="PYTHON"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86"
 DEPEND="virtual/python"
 S="${WORKDIR}/${MY_P}"
 

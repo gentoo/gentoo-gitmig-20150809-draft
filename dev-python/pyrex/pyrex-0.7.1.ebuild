@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/pyrex-0.7.1.ebuild,v 1.2 2003/06/21 22:30:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/pyrex-0.7.1.ebuild,v 1.3 2003/06/22 12:16:00 liquidx Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ LICENSE="as-is"
 
 DEPEND="virtual/python"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86"
 IUSE=""
 
 src_install () {

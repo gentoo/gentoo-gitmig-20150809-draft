@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/gnosis-utils-1.0.6.ebuild,v 1.2 2003/06/21 22:30:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/gnosis-utils-1.0.6.ebuild,v 1.3 2003/06/22 12:15:59 liquidx Exp $
 
 inherit distutils
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.gnosis.cx/download/"
 DEPEND="virtual/python"
 
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86"
 LICENSE="PYTHON"
 
 

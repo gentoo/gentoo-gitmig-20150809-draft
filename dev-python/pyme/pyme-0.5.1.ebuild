@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.5.1.ebuild,v 1.4 2003/06/21 22:30:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.5.1.ebuild,v 1.5 2003/06/22 12:15:59 liquidx Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://gopher.quux.org:70/devel/pyme"
 DEPEND=">=app-crypt/gpgme-0.3.9"
 
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 
 inherit distutils

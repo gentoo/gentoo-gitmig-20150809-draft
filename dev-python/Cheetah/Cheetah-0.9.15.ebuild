@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Cheetah/Cheetah-0.9.15.ebuild,v 1.3 2003/06/21 22:30:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Cheetah/Cheetah-0.9.15.ebuild,v 1.4 2003/06/22 12:15:59 liquidx Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="Python-powered template engine and code generator."
 HOMEPAGE="http://www.cheetahtemplate.org/"
 LICENSE="PSF-2.2"
 
-KEYWORDS="x86 amd64 ~sparc ~alpha"
+KEYWORDS="x86 ~sparc ~alpha"
 SLOT="0"
 
 RDEPEND=">=dev-lang/python-2.2"

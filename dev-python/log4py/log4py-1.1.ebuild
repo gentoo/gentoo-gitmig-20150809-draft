@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/log4py/log4py-1.1.ebuild,v 1.4 2003/06/21 22:30:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/log4py/log4py-1.1.ebuild,v 1.5 2003/06/22 12:15:59 liquidx Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A python logging module similar to log4j"
@@ -12,7 +12,7 @@ RDEPEND=""
 IUSE=""
 
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc "
+KEYWORDS="x86 ppc sparc "
 LICENSE="MIT"
 
 inherit distutils

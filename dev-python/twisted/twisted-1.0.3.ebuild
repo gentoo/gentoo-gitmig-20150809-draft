@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.0.3.ebuild,v 1.3 2003/06/21 22:30:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.0.3.ebuild,v 1.4 2003/06/22 12:16:00 liquidx Exp $
 
 S=${WORKDIR}/Twisted-${PV}
 DESCRIPTION="Twisted is a collection of servers and clients, which can be used either by developers of new applications or directly. Documentation included." 
@@ -10,7 +10,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 DEPEND="virtual/python
 	>=dev-python/pycrypto-1.9_alpha4"
-KEYWORDS="x86 amd64 ~alpha ~sparc "
+KEYWORDS="x86 ~alpha ~sparc "
 IUSE=""
 
 inherit distutils

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ScientificPython/ScientificPython-2.2-r1.ebuild,v 1.10 2003/06/21 22:30:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ScientificPython/ScientificPython-2.2-r1.ebuild,v 1.11 2003/06/22 12:15:59 liquidx Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://starship.python.net/crew/hinsen/${P}.tar.gz"
 HOMEPAGE="http://starship.python.net/crew/hinsen/scientific.html"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 amd64 sparc alpha"
+KEYWORDS="x86 sparc alpha"
 
 DEPEND="virtual/python
 	>=dev-python/Numeric-19.0

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.13-r1.ebuild,v 1.7 2003/06/21 22:30:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.13-r1.ebuild,v 1.8 2003/06/22 12:15:59 liquidx Exp $
 
 # since its a development version
 inherit debug 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/python/v2.0/${P}.tar.gz"
 HOMEPAGE="http://www.daa.com.au/~james/pygtk/"
 LICENSE="LGPL-2.1"
 
-KEYWORDS="x86 amd64 ~ppc sparc alpha"
+KEYWORDS="x86 ~ppc sparc alpha"
 
 
 DEPEND=">=dev-lang/python-2.2

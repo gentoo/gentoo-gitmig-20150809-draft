@@ -1,6 +1,6 @@
 # Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-1.9_alpha6.ebuild,v 1.4 2003/06/21 22:30:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-1.9_alpha6.ebuild,v 1.5 2003/06/22 12:15:59 liquidx Exp $
 
 inherit distutils
 IUSE=""
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
 	dev-lang/python"
 
 SLOT="0"
-KEYWORDS="x86 amd64 ~alpha"
+KEYWORDS="~x86 ~alpha"
 S="${WORKDIR}/${P/_alpha/a}"
 
 mydoc="ACKS ChangeLog LICENSE MANIFEST PKG-INFO README TODO"
