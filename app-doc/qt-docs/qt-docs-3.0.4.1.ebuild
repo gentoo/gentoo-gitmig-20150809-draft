@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-3.0.4.1.ebuild,v 1.9 2003/02/13 06:37:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-3.0.4.1.ebuild,v 1.10 2003/10/01 09:51:37 aliz Exp $
 # qt-copy-3.0.4 (released with kde-3.0.1)
 
 NPV=3.0.4
 S=${WORKDIR}/qt-copy-3.0.4
-SRC_URI="ftp://ftp.kde.org/pub/kde/stable/3.0.1/src/qt-copy-${NPV}.tar.bz2"
+SRC_URI="mirror://kde/stable/3.0.1/src/qt-copy-${NPV}.tar.bz2"
 HOMEPAGE="http://www.trolltech.com/"
 DEPEND="=x11-libs/qt-3*"
 RDEPEND="$DEPEND sys-devel/gcc"
