@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.3-r1.ebuild,v 1.5 2003/02/28 23:10:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.3-r1.ebuild,v 1.6 2003/03/29 02:20:19 liquidx Exp $
 
 MY_PV=${PV/./_}
 DESCRIPTION="multi-purpose Motif-based text editor for the X Window System"
@@ -11,7 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc"
 
-RDEPEND=">=x11-libs/openmotif-2.1.30"
+RDEPEND="virtual/motif"
 DEPEND="${RDEPEND}
 	dev-util/yacc"
 
