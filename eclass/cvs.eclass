@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.51 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.52 2004/09/28 06:18:06 fafhrd Exp $
 
 # Current Maintainer: Tal Peer <coredumb@gentoo.org>
 # Original Author:    Dan Armak <danarmak@gentoo.org>
@@ -110,6 +110,13 @@ INHERITED="$INHERITED $ECLASS"
 # used, the remote shell to use can be specified in CVS_RSH (SSH is
 # used by default).  Currently, the only supported remote shell for
 # `ext' authentication is SSH.
+#
+# Armando Di Cianno <fafhrd@gentoo.org> 2004/09/27
+# - Added "no" as a server type, which uses no AUTH method, nor
+#    does it login
+#  e.g.
+#   "cvs -danoncvs@savannah.gnu.org:/cvsroot/backbone co System"
+#   ( from gnustep-apps/textedit )
 [ -z "$ECVS_AUTH" ] && ECVS_AUTH="pserver"
 
 # ECVS_USER -- Username to use for authentication on the remote server
@@ -270,7 +277,12 @@ cvs_fetch() {
 
 	# Our server string (i.e. CVSROOT) without the password so it can
 	# be put in Root
-	local server=":${ECVS_AUTH}:${ECVS_USER}@${ECVS_SERVER}"
+	if [ "$ECVS_AUTH" == "no" ]
+	then
+		local server="${ECVS_USER}@${ECVS_SERVER}"
+	else
+		local server=":${ECVS_AUTH}:${ECVS_USER}@${ECVS_SERVER}"
+	fi
 
 	# Switch servers automagically if needed
 	if [ "$mode" == "update" ]; then
@@ -308,7 +320,12 @@ cvs_fetch() {
 
 	# Ditto without the password, for checkout/update after login, so
 	# that the CVS/Root files don't contain the password in plaintext
-	cvsroot_nopass=":${ECVS_AUTH}:${ECVS_USER}@${ECVS_SERVER}"
+	if [ "$ECVS_AUTH" == "no" ]
+	then
+		cvsroot_nopass="${ECVS_USER}@${ECVS_SERVER}"
+	else
+		cvsroot_nopass=":${ECVS_AUTH}:${ECVS_USER}@${ECVS_SERVER}"
+	fi
 
 	# Commands to run
 	cmdlogin="${run} ${ECVS_CVS_COMMAND} -d \"${cvsroot_pass}\" login"
@@ -433,6 +450,14 @@ EOF
 			export DISPLAY="${CVS_ECLASS_ORIG_DISPLAY}"
 		else
 			unset DISPLAY
+		fi
+	elif [ "${ECVS_AUTH}" == "no" ]; then
+		if [ "${mode}" == "update" ]; then
+			einfo "Running $cmdupdate"
+			eval $cmdupdate || die "cvs update command failed"
+		elif [ "${mode}" == "checkout" ]; then
+			einfo "Running $cmdcheckout" 
+			eval $cmdcheckout|| die "cvs checkout command failed"
 		fi
 	fi
 
