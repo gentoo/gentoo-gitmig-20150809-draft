@@ -5,3 +5,4 @@ move app-admin/openmosixtest sys-cluster/openmosixtest
 move app-admin/openmosixview sys-cluster/openmosixview
 move x11-wm/fluxspace x11-misc/fluxspace
 move x11-misc/qingy sys-apps/qingy
+move app-misc/xclip x11-misc/xclip
