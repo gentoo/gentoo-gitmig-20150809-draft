@@ -15,5 +15,5 @@ MD5 d9412dab085f22309997c8f08ea1ac85 files/perl-5.8.2-reorder-INC.patch 2211
 MD5 803b7c028f59008ea1e6d577e5c0bab0 files/stat.t 8884
 MD5 40491f4709ab53baaf1e55b01626ade5 ChangeLog 23258
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 30197cf4a1630bd0e47dca24d4f4bf24 perl-5.8.3.ebuild 9952
+MD5 e6d0aa8ed08b59ef64926f20d24dc724 perl-5.8.3.ebuild 9958
 MD5 a71d75ff445e56927def6d200128a45c perl-5.8.2-r1.ebuild 9945
