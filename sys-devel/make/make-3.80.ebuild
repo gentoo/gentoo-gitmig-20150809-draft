@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.80.ebuild,v 1.16 2004/04/28 05:17:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.80.ebuild,v 1.17 2004/06/15 06:38:50 solar Exp $
 
 inherit gnuconfig
 
@@ -11,15 +11,15 @@ SRC_URI="ftp://ftp.gnu.org/gnu/make/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
-IUSE="nls static build"
+IUSE="nls static build uclibc"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/glibc"
 
 src_compile() {
-	# Detect mips systems properly
-	use mips && gnuconfig_update
+	# Detect mips and uclibc systems properly
+	( use mips || use uclibc ) && gnuconfig_update
 
 	local myconf=""
 	use nls || myconf="--disable-nls"
