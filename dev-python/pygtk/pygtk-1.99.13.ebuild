@@ -1,6 +1,5 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Karl Trygve Kalleberg <karltk@gentoo.org>
 # /space/gentoo/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.10.ebuild,v 1.1 2002/06/13 16:17:12 spider Exp
 
 # since its a development version
