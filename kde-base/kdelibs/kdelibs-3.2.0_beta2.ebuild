@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.9 2004/01/03 13:51:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_beta2.ebuild,v 1.10 2004/01/04 14:57:11 caleb Exp $
 inherit kde
 
 need-autoconf 2.5
@@ -19,16 +19,16 @@ SRC_URI="mirror://kde/unstable/${MY_PV}/src/${PN}-${MY_PV}.tar.bz2"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
-DEPEND="app-arch/bzip2
-	dev-libs/libxslt
-	dev-libs/libpcre
-	dev-libs/libxml2
-	ssl? ( dev-libs/openssl )
-	alsa? ( <=media-libs/alsa-lib-0.9.8 virtual/alsa )
-	cups? ( net-print/cups )
-	ldap? ( net-nds/openldap )
+DEPEND=">=app-arch/bzip2-1.0.2
+	>=dev-libs/libxslt-1.0.31
+	>=dev-libs/libxml2-2.5.8
+	>=dev-libs/libpcre-3.9
+	ssl? ( >=dev-libs/openssl-0.9.6k )
+	alsa? ( media-libs/alsa-lib virtual/alsa )
+	cups? ( >=net-print/cups-1.1.19 )
+	ldap? ( >=net-nds/openldap-2.0.25 )
 	media-libs/tiff
-	app-admin/fam
+	>=app-admin/fam-2.6.10
 	virtual/ghostscript
 	media-libs/libart_lgpl
 	sys-devel/gettext
