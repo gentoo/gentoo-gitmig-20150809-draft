@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1_beta1.ebuild,v 1.4 2002/10/01 14:17:06 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.3-r1.ebuild,v 1.1 2002/10/01 14:17:06 danarmak Exp $
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - base packages: the desktop, panel, window manager, konqueror..."
 
-KEYWORDS="x86 alpha"
+KEYWORDS="x86 ppc"
 
 newdepend ">=media-sound/cdparanoia-3.9.8
 	ldap? ( >=net-nds/openldap-1.2 )
@@ -16,8 +16,7 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 	cups? ( net-print/cups )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	opengl? ( virtual/opengl )
-	samba? ( net-fs/samba )
-	>=media-libs/freetype-2" 
+	samba? ( net-fs/samba )" 
 #	lm_sensors? ( ?/lm_sensors ) # ebuild doesn't exist yet
 
 myconf="$myconf --with-dpms --with-cdparanoia"
@@ -62,13 +61,16 @@ src_install() {
     echo "#!/bin/sh
 ${KDEDIR}/bin/startkde" > kde-${PV}
     chmod a+x kde-${PV}
+    # old scheme - compatibility
+    exeinto /usr/X11R6/bin/wm
+    doexe kde-${PV}
+    # new scheme - for now >=xfree-4.2-r3 only
     exeinto /etc/X11/Sessions
     doexe kde-${PV}
 
     cd ${D}/${KDEDIR}/share/config/kdm || die
     mv kdmrc kdmrc.orig
-    sed -e "s:SessionTypes=:SessionTypes=kde-${PV},:" \
-	-e "s:Session=${PREFIX}/share/config/kdm/Xsession:Session=/etc/X11/xdm/Xsession:"  kdmrc.orig > kdmrc
+    sed -e "s:SessionTypes=:SessionTypes=kde-$PV,:" kdmrc.orig > kdmrc
     rm kdmrc.orig
 
     #backup splashscreen images, so they can be put back when unmerging 

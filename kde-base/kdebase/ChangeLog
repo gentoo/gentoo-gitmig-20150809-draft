@@ -1,6 +1,19 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.24 2002/09/29 15:07:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.25 2002/10/01 14:17:06 danarmak Exp $
+
+*kdebase-3.0.3-r1 (01 Oct 2002)
+
+  01 Oct 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix bug #6519 (ksplash-ml installation problems). See the bugzilla page for
+  full info. Briefly, you can set $KSPLASH in your profile to the full path
+  of a ksplash-replacement binary of your choice. By default, ksplash-ml
+  is used if installed (actually it sets $KSPLASH in env.d), otherwise the
+  default kde ksplash. You will need the latest revision of ksplash-ml and
+  ksplash-ml-themes as well. All this is masked for now.
+  Also fix the remaining part of bug #5953 - use a new and better kde.pam
+  file. See the bugzilla page for details.
 
   29 Aug 2002; Martin Schlemmer <azarah@gentoo.org> kscreensaver.pam :
   Update to use system-auth. Bug #5953.
