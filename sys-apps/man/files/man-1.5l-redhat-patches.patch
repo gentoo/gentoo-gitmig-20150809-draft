@@ -141,7 +141,7 @@ diff -Narup man-1.5k.orig/src/makewhatis.sh man-1.5k/src/makewhatis.sh
      fi
  done
 -DEFCATPATH=$dc
-+DEFCATPATH=$dc;$DEFMANPATH
++DEFCATPATH=$dc:$DEFMANPATH
  
  # In case /usr is read-only, make /usr/man/whatis (etc) a symlink to
  # something like /var/cache/man/whatis.
