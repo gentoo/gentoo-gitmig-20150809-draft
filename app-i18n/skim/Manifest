@@ -1,20 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3e06809495958c9ebe99b8700c924184 ChangeLog 1689
+MD5 9fb5ce61e8b03783fe2f644a4a470372 ChangeLog 1846
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 193ef7ddcc30bceda5d901f5f353e212 skim-0.9.6.ebuild 1265
 MD5 d3a3631adeb9a80f16eef181efd5aa83 skim-1.0.0.ebuild 1326
 MD5 47549479b5e45b218429ea5efcde6fc2 skim-1.0.1.ebuild 1328
-MD5 0d50408972cebd70df6d7f3adba9fe02 skim-0.9.7.ebuild 1265
-MD5 91b177159a56c3572608b4b7eacd1ce6 files/digest-skim-0.9.6 62
-MD5 be6da613ad5f0e59b2f32bfb7728ae12 files/digest-skim-0.9.7 62
+MD5 c42324729578fc446523787085f1bfef skim-1.0.2.ebuild 1328
+MD5 23841544293c91ccf1a672546f0d91f7 files/digest-skim-1.0.2 64
 MD5 230e4770077b6347bc5339a701cee289 files/digest-skim-1.0.0 64
 MD5 5a8896aea52f82362187060edb3507b8 files/digest-skim-1.0.1 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBWs03VWNWqTUmv+0RAqdXAJwNLRMGu89X7rKLvykR5VqKhX6buwCZAWgd
-zZAHZ219232yrz49cjQ9j+I=
-=fOzF
+iD8DBQFBd40aVWNWqTUmv+0RAj5qAKCkqhNP7LXKMtMVcg6C9zSrEl77ZwCfYIIb
+Rzof3wQjGVJ/sb8Pv7ycjVU=
+=OyC8
 -----END PGP SIGNATURE-----
