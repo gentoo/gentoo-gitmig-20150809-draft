@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.1 2004/10/21 20:12:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.2 2004/10/21 20:13:54 vapier Exp $
 
 EHACKAUTOGEN="yes"
 inherit enlightenment flag-o-matic
@@ -8,6 +8,7 @@ inherit enlightenment flag-o-matic
 DESCRIPTION="hardware-accelerated canvas API"
 HOMEPAGE="http://www.enlightenment.org/pages/evas.html"
 
+KEYWORDS="-*"
 IUSE="X directfb fbcon jpeg mmx opengl png sse cairo"
 
 DEPEND="virtual/x11
