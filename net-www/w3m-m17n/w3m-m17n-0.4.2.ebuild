@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.3 2003/10/12 16:18:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.4 2003/10/31 15:38:27 usata Exp $
 
-IUSE="X imlib imlib2 gtk xface migemo gpm ssl"
+IUSE="X nopixbuf imlib imlib2 xface migemo gpm ssl"
 #IUSE="nls"
 
 W3M_CVS_PV="1.862"
@@ -34,7 +34,8 @@ RDEPEND=">=sys-libs/ncurses-5.2-r3
 	>=dev-libs/boehm-gc-6.2
 	X? ( || ( !nopixbuf? ( >=media-libs/gdk-pixbuf-0.22.0 )
 		imlib2? ( >=media-libs/imlib2-1.0.5 )
-		imlib? ( >=media-libs/imlib-1.9.8 ) )
+		imlib? ( >=media-libs/imlib-1.9.8 )
+		virtual/glibc )
 	)
 	xface? ( media-libs/compface )
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
@@ -45,6 +46,17 @@ PROVIDE="virtual/textbrowser
 	virtual/w3m"
 
 S="${WORKDIR}/${P/-m17n/}"
+
+pkg_setup() {
+
+	if [ -n "`use X`" -a -n "`use nopixbuf`" -a -z "`use imlib2`" -a -z "`use imlib`" ] ; then
+		ewarn
+		ewarn "If you set USE=\"nopixbuf\" (disable gdk-pixbuf for w3mimgdisplay),"
+		ewarn "you need to enable either imlib2 or imlib USE flag."
+		ewarn
+		die "w3m-m17n requires gdk-pixbuf, imlib2 or imlib for image support."
+	fi
+}
 
 src_unpack() {
 
