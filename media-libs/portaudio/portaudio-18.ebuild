@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-18.ebuild,v 1.12 2004/07/01 08:02:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-18.ebuild,v 1.13 2004/10/01 00:00:38 eradicator Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ KEYWORDS="x86 ~sparc ~amd64"
 
 IUSE=""
 
-DEPEND="virtual/libc"
+RDEPEND="virtual/libc"
+DEPEND="app-arch/unzip"
 
 src_compile() {
 
