@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-samba
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-samba/ChangeLog,v 1.3 2004/10/23 08:56:56 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-samba/ChangeLog,v 1.4 2004/10/24 16:15:37 kaiowas Exp $
+
+  24 Oct 2004; petre rodan <kaiowas@gentoo.org>
+  selinux-samba-20041016.ebuild:
+  mark stable
 
 *selinux-samba-20041016 (23 Oct 2004)
 
