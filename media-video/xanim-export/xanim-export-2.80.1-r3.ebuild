@@ -1,6 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1-r3.ebuild,v 1.6 2003/02/13 13:37:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1-r3.ebuild,v 1.7 2003/03/04 03:16:53 lostlogic Exp $
+
+inherit flag-o-matic
+
+strip-flags -finline-functions
+replace-flags -O3 -O2
 
 SLOT="0"
 LICENSE="XAnim"

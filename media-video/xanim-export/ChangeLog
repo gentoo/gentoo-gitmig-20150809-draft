@@ -1,8 +1,13 @@
 # ChangeLog for media-video/xanim-export
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/ChangeLog,v 1.4 2003/02/12 07:42:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/ChangeLog,v 1.5 2003/03/04 03:16:53 lostlogic Exp $
 
 *xanim-export-2.80.1-r3 (27 Apr 2002)
+
+  03 Mar 2003; Brandon Low <lostlogic@gentoo.org>
+  xanim-export-2.80.1-r3.ebuild:
+  strip some problematic flags
+
   27 Apr 2002; pvdabeel <pvdabeel@gentoo.org>
   Sparc && ppc fix
 
