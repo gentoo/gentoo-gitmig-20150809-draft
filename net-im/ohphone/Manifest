@@ -1,4 +1,6 @@
-MD5 7ac6272351608f61ad615ed889b4a2ad ChangeLog 377
+MD5 3647db9025bdbe773cd22382621fc772 ChangeLog 668
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+MD5 776c765cddfe7a706b35fe81d832ca0f ohphone-1.4.1-r1.ebuild 1205
 MD5 8b50877e6e0496c9635e449b3cbc5ee6 ohphone-1.4.1.ebuild 821
 MD5 eb00a184805b4c495b46976ce6ccfbbf files/digest-ohphone-1.4.1 64
+MD5 eb00a184805b4c495b46976ce6ccfbbf files/digest-ohphone-1.4.1-r1 64
