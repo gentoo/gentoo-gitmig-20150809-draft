@@ -1,9 +1,11 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.30 2002/12/13 10:56:53 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.31 2002/12/16 22:48:17 agriffis Exp $
+
+  16 Dec 2002; Aron Griffis <agriffis@gentoo.org> gnome-vfs-1.0.5-r2.ebuild :
+  Added ~alpha to KEYWORDS
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 
 *gnome-vfs-2.0.4.1 (16 Nov 2002)
   

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.14 2002/12/13 10:56:01 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.15 2002/12/16 22:48:17 agriffis Exp $
+
+  16 Dec 2002; Aron Griffis <agriffis@gentoo.org> gnupg-1.2.1.ebuild :
+  Added ~alpha to KEYWORDS
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

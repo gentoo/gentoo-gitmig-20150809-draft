@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/ChangeLog,v 1.7 2002/12/13 10:56:29 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/ChangeLog,v 1.8 2002/12/16 22:48:17 agriffis Exp $
+
+  16 Dec 2002; Aron Griffis <agriffis@gentoo.org> libxml-1.8.17-r2.ebuild :
+  Added ~alpha to KEYWORDS
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

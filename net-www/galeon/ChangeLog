@@ -1,6 +1,9 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.25 2002/12/07 01:12:35 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.26 2002/12/16 22:48:17 agriffis Exp $
+
+  16 Dec 2002; Aron Griffis <agriffis@gentoo.org> galeon-1.2.7.ebuild :
+  Add ~alpha to KEYWORDS
 
   04 Dec 2002; Martin Schlemmer <azarah@gentoo.org> galeon-1.2.7.ebuild :
   Fix to DEPEND on mozilla-1.2*.

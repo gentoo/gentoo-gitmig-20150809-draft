@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.17 2002/12/14 18:32:57 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.18 2002/12/16 22:48:17 agriffis Exp $
+
+  16 Dec 2002; Aron Griffis <agriffis@gentoo.org> fetchmail-6.2.0.ebuild :
+  Added ~alpha to KEYWORDS
 
 *fetchmail-6.2.0 (14 Dec 2002)
 
