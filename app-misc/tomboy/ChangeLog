@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.7 2005/03/11 03:23:26 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.8 2005/03/15 01:10:25 latexer Exp $
+
+  14 Mar 2005; Peter Johanson <latexer@gentoo.org> tomboy-0.2.2-r1.ebuild,
+  -tomboy-0.2.2.ebuild, tomboy-0.3.1.ebuild:
+  Mark 0.2.2-r1 stable on x86, fix deps to make sure we get 1.0.x SLOT of
+  gtk-sharp, and remove on older version.
 
   10 Mar 2005; Peter Johanson <latexer@gentoo.org> tomboy-0.2.2-r1.ebuild,
   tomboy-0.2.2.ebuild, tomboy-0.3.1.ebuild:
