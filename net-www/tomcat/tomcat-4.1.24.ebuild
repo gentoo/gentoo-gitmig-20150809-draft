@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.24.ebuild,v 1.1 2003/03/25 16:35:11 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.24.ebuild,v 1.2 2003/03/25 17:04:40 absinthe Exp $
 
 S=${WORKDIR}/jakarta-${P}
 At="jakarta-tomcat-${PV}.tar.gz"
@@ -99,9 +99,6 @@ pkg_postinst() {
 	einfo " "
 	einfo " NOTICE!"
 	einfo " User and group 'tomcat' have been added."
-	einfo " Please set a password for the user account 'tomcat'"
-	einfo " if you have not done so already."
-	einfo " "
 	einfo " "
 	einfo " FILE LOCATIONS:"
 	einfo " 1.  Tomcat home directory: ${TOMCAT_HOME}"
