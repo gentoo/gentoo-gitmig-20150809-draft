@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.4 2004/06/24 23:24:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.5 2004/06/30 17:52:11 merlin Exp $
+
+*mailutils-0.3.1-r1 (30 Jun 2004)
+
+  30 Jun 2004; Cory Visi <merlin@gentoo.org> mailutils-0.3.1-r1.ebuild,
+  files/mailutils-0.3.1-mh-Makefile.in.patch:
+  Some cleanup, add support for postgres, add mh-utils, address Bug 22864
 
   30 May 2004; Robin H. Johnson <robbat2@gentoo.org> mailutils-0.3.1.ebuild,
   mailutils-0.3.ebuild:
