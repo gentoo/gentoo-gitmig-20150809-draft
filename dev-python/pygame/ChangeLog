@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/pygame
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.10 2003/03/04 13:06:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.11 2003/03/26 00:15:16 liquidx Exp $
 
 *pygame-1.5.5 (04 Mar 2003)
+
+  26 Mar 2003; Alastair Tse <liquidx@gentoo.org> pygame-1.5.5.ebuild:
+  bump to stable
 
   04 Mar 2003; Alastair Tse <liquidx@gentoo.org> pygame-1.5.5.ebuild files/digest-pygame-1.5.5 :
   version bump. resolves #13415.
