@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r4.ebuild,v 1.12 2004/09/16 02:19:55 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r4.ebuild,v 1.13 2004/10/06 00:15:33 vapier Exp $
 
 inherit eutils
 
@@ -53,15 +53,15 @@ src_install() {
 		insopts -m755
 		exeinto /usr/sbin
 		doexe savelog
-		dosbin installkernel
+		dosbin installkernel || die "installkernel"
 		into /usr
-		dosbin mkboot
+		dosbin mkboot || die "mkboot"
 
 		into /usr
 		doman mktemp.1 tempfile.1 run-parts.8 savelog.8 \
 			installkernel.8 mkboot.8
 
 		cd debian
-		dodoc changelog control copyright
+		dodoc changelog control
 	fi
 }

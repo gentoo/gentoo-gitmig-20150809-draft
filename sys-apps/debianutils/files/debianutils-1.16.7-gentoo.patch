@@ -38,6 +38,15 @@ diff -urN debianutils-1.16.7.old/installkernel debianutils-1.16.7/installkernel
  }
  
  # check whether LILO is installed
+@@ -90,7 +90,7 @@
+ 
+ # make a boot disk
+ makedisk () {
+-    kernel=${1:-/vmlinuz}
++    kernel=${1:-/boot/vmlinuz}
+     if [ ! -r $kernel ] ; then
+ 	echo "Error: Can't read $kernel."
+ 	exit 1
 @@ -96,7 +102,7 @@
      fi
  
@@ -93,3 +102,5 @@ diff -urN debianutils-1.16.7.old/installkernel debianutils-1.16.7/installkernel
  }
  
  
+--- /usr/sbin/mkboot.orig	2004-10-05 20:12:50.198385480 -0400
++++ /usr/sbin/mkboot	2004-10-05 20:13:29.477414160 -0400
