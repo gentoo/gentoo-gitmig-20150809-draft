@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/gambas
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.14 2004/06/25 03:15:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.15 2004/07/04 23:45:33 genone Exp $
+
+*gambas-0.94 (05 Jul 2004)
+
+  05 Jul 2004; Marius Mauch <genone@gentoo.org> +files/WebHome.html,
+  +files/non-symlink-0.94.patch, -gambas-0.94.ebuild, +gambas-0.94a.ebuild:
+  version bump to 0.94a, 0.94 was removed upstream. Also fixing absolute paths
+  (again) and the help for USE=-doc.
 
   24 Jun 2004; Marius Mauch <genone@gentoo.org> :
   version bump, disable preloading in the Makefile as some people reported

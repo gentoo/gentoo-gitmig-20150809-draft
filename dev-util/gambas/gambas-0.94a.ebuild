@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.94.ebuild,v 1.2 2004/06/25 03:15:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.94a.ebuild,v 1.1 2004/07/04 23:45:33 genone Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://gambas.sourceforge.net/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="postgres mysql sdl doc curl debug"
+IUSE="postgres mysql sdl doc curl debug sqlite"
 
 DEPEND=">=sys-devel/automake-1.7.5
 	>=x11-libs/qt-3.2
@@ -28,11 +28,12 @@ src_unpack() {
 	# replace braindead Makefile
 	rm Makefile*
 	cp "${FILESDIR}/Makefile.am-0.94" ./Makefile.am
-	automake
 	# patches against hardcoded paths
-	epatch ${FILESDIR}/non-symlink-0.90.patch
+	epatch ${FILESDIR}/non-symlink-0.94.patch
 	#epatch ${FILESDIR}/html-files-location-0.93.patch
 	#epatch ${FILESDIR}/info-location-0.90.patch
+
+	automake
 }
 
 src_compile() {
@@ -41,6 +42,7 @@ src_compile() {
 	myconf="${myconf} --enable-kde --enable-qt"
 	myconf="${myconf} `use_enable mysql`"
 	myconf="${myconf} `use_enable postgres`"
+	myconf="${myconf} `use_enable sqlite`"
 	myconf="${myconf} `use_enable sdl`"
 	myconf="${myconf} `use_enable curl`"
 
@@ -65,14 +67,8 @@ src_install() {
 	if use doc; then
 		mv ${D}/usr/share/${PN}/help ${D}/usr/share/doc/${PF}/html
 		mv ${D}/usr/share/${PN}/examples ${D}/usr/share/doc/${PF}/examples
-		einfo "Compiling examples ..."
-		cd ${D}/usr/share/doc/${PF}/examples
-		for p in *; do
-			cd $p
-			gbc -ag
-			gba
-			cd ..
-		done
+	else
+		dohtml ${FILESDIR}/WebHome.html
 	fi
 	rm -rf ${D}/usr/share/${PN}/help ${D}/usr/share/${PN}/examples
 	dosym /usr/share/doc/${PF}/html /usr/share/${PN}/help
