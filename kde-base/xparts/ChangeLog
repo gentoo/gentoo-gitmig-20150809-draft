@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/xparts
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/ChangeLog,v 1.1 2004/11/06 17:23:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/ChangeLog,v 1.2 2004/11/17 17:47:49 danarmak Exp $
+
+  17 Nov 2004; Dan Armak <danarmak@gentoo.org> xparts-3.3.1.ebuild:
+  Unmasked in package.mask; removing all keywords - this package is broken for
+  now
 
 *xparts-3.3.1 (06 Nov 2004)
 

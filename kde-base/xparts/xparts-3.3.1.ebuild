@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/xparts-3.3.1.ebuild,v 1.2 2004/11/07 03:02:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/xparts-3.3.1.ebuild,v 1.3 2004/11/17 17:47:49 danarmak Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY="dcopc"
@@ -8,7 +8,7 @@ KMCOPYLIB="libdcopc dcopc"
 inherit kde-meta
 
 DESCRIPTION="Allows embedding of generic XParts as KDE KParts (broken)"
-KEYWORDS="~x86"
+KEYWORDS="-*"
 IUSE="mozilla"
 DEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
