@@ -1,6 +1,12 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.28 2003/08/22 01:40:26 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.29 2003/08/24 16:21:28 weeve Exp $
+
+*opera-6.12_beta1 (24 Aug 2003)
+
+  24 Aug 2003; Jason Wever <weeve@gentoo.org> opera-6.12_beta1.ebuild:
+  new opera ebuild contributed by Gustavo Zacarias <gustavo@zacarias.com.ar>,
+  closes bug #26543
 
   22 Aug 2003; Chuck Short <zul@gentoo.org> opera-6.12_beta1.ebuild:
   Removed sparc ebuild
