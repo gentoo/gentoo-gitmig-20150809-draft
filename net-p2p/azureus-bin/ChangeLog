@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/azureus-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.12 2004/05/31 17:17:09 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.13 2004/06/16 12:51:13 squinky86 Exp $
+
+  16 Jun 2004; Jon Hood <squinky86@gentoo.org> files/azureus.png:
+  fixing azureus.png irt #54049; thanks Adam Hewgill!
 
 *azureus-bin-2.1.0.0 (31 May 2004)
 
