@@ -93,10 +93,6 @@ src_install() {
 	cp -a ${WORKDIR}/iso-8859-1/ ${D}/usr/share/mplayer/fonts
 	dosym /usr/share/mplayer/fonts/iso-8859-1/arial-14/ /usr/share/mplayer/font
 
-	# Install a wrapper for mplayer to handle the codecs.conf
-	mv ${D}/usr/bin/mplayer ${D}/usr/bin/mplayer-bin
-	exeinto /usr/bin ; doexe ${FILESDIR}/mplayer
-
 	# This tries setting up mplayer.conf automagically
 	local video="sdl" audio="sdl"
 	if [ "`use X`" ] ; then
@@ -132,6 +128,10 @@ src_install() {
 	sed -e "s/vo=xv/vo=${video}/" -e "s/ao=oss/ao=${audio}/" -e 's/include =/#include =/' ${S}/etc/example.conf > ${T}/mplayer.conf
 
 	insinto /etc
-	doins ${T}/mplayer.conf ${S}/etc/codecs.conf
+	doins ${T}/mplayer.conf 
+	
+	# Thanks goes to Mog for this one!
+	insinto /usr/share/mplayer
+	doins ${S}/etc/codecs.conf
 	
 }
