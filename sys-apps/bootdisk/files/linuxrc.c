@@ -13,6 +13,11 @@
 
 #define NUMDRIVES (6)
 
+char *blurb="    Gentoo Linux CD mounter - Copyright 1999-2001 Gentoo Technologies, Inc.     ";
+char *color="\033[36;01m";
+char *off="\033[0m";
+char readbuf[80];
+
 /*drobbins notes (11 Dec 2000)
 	device=(major*256)+minor
 	mount /proc
@@ -59,77 +64,118 @@ int set_loop(const char *device, const char *file, int offset, int loopro)
 	return 1;
 }
 
+//does a mount and performs some error checking/debugging too
+//2=success; 1=no media; 0=failure
+int domount(const char *dev, 
+			const char *loc, 
+			const char *fstype, 
+			unsigned long flags, 
+			const void *data) 
+{
+	int result;
+	result=mount(dev,loc,fstype,flags,data);
+	if (result==-1) {
+		if (errno==ENOMEDIUM) {
+			printf("Media not found in %s\n",dev);
+			return 1;
+		}
+		printf("Error mounting %s at %s of type %s:\n",dev,loc,fstype);
+		perror("mount");
+		return 0;
+	}
+	return 2;
+}
+
+//writes data to a file and performs some error checking
+//1=success; 0=failure
+int writefile(const char *myfile, char *mystring) {
+	FILE *myf;
+	int result;
+	myf=fopen(myfile,"w");
+	if (myf==NULL) {
+		printf("Error opening file %s: errno %d\n",myfile,errno);
+		perror("fopen");
+		return 0;
+	}
+	fwrite(mystring,1,strlen(mystring),myf);
+	fclose(myf);
+	return 1;
+}
+
+
+int getspace(char *dev) {
+	char mychar;
+	printf("\n1) Try %s again\n2) Continue looking\n\n%s> %s",dev,color,off);
+	mychar=getchar();
+	if (mychar=='1')
+		return 1;
+	return 0;
+}
 int main(void) {
 	char *drives[]={ "/dev/hdc","/dev/hdd","/dev/hdb","/dev/hda","/dev/scd0","/dev/scd1"};
-	char *mymtab="/dev/loop0 / ext2 ro 0 0\n"; 
 	int i,mresult;
-	FILE *distfile,*mycdfile;
 	char mychar;
+	FILE *distfile;	
+	printf("\n\0337\033[01;23r\033[24;01f\033[01;44;32m%s\033[0m\0338\033[A",blurb); 
+	//printf("\nRemounting root fs read-write...\n");
+	//should be rw anyway but it's not?
+	//domount("/dev/ram0","/","ext2",MS_MGC_VAL|MS_REMOUNT,NULL);
+	printf("%sLet's begin...%s\n\n",color,off);
+	printf("%sMounting /proc...%s\n",color,off);
+	//mount /proc filesystem
+	domount("proc","/proc","proc",MS_MGC_VAL|MS_NOEXEC,NULL);
+	//turn off kernel logging to console
+	writefile("/proc/sys/kernel/printk","0 0 0 0");
 	
-	printf("\033c\033[36;01mGentoo Linux CD-ROM mounter \033[32;01m\nCopyright 1999-2000 Daniel Robbins\n-=Distributed under the GPL=-\n\n\033[0m");
-
 	i=0;
-	while ( i < NUMDRIVES ) {
+	while ( 1 ) {
 		printf("Trying %s...",drives[i]);
 		sleep(1);
-		mresult=mount(drives[i],"/distcd","iso9660",MS_MGC_VAL|MS_RDONLY,NULL);
-		if ((mresult==-1) && (errno==123)) {
-			//medium not found
-			mychar=' ';
-			while (mychar==' ') {
-				printf("\nEmpty CD-ROM detected at %s.\nYou can either insert the Gentoo Linux CD and press <space> to mount,\nor press any other key to continue probing CD-ROM devices.\n\n", drives[i]);
-				mychar=getchar();
-				if (mychar!=' ') 
-				 	i++; 
-				continue;
-			}	
-		} else if (mresult==0) {
-			//success - a CD of some kind was found
-			printf("\n\033[36;01mCD found...\033[0m\n");
-			while ((distfile=fopen("/distcd/version","r"))==NULL) {
-				printf("This does not appear to be the Gentoo Linux distribution disc.\n");
-				printf("You can either insert Gentoo Linux CD into %s and press <space> to remount,\n",drives[i]);
-				printf("or you can press any other key to continue probing CD-ROM devices.\n\n");					
+		mresult=domount(drives[i],"/distcd","iso9660",MS_MGC_VAL|MS_RDONLY,NULL);
+		if (mresult==2) {
+			//a CD of some kind was found
+			printf("\n%sCD found...%s\n",color,off);
+			if ((distfile=fopen("/distcd/version","r"))==NULL) {
+				printf("%sThis does not appear to be the Gentoo Linux distribution disc.%s\n",color,off);
 				umount(drives[i]);
-				mychar=getchar();	
-				if (mychar!=' ')
+				if (!getspace(drives[i]))
 					i++;
+					if (i>NUMDRIVES)
+						i=0;
 				continue;
+			} else {
+				fclose(distfile);
+				break;
+				//success!
 			}
-			printf("\033[32;01mGentoo Linux distribution CD found!\033[0m\n");
-			fclose(distfile);
-			break;
+		} else if (mresult==1) {
+			if (!getspace(drives[i]))
+				i++;
+				if (i>NUMDRIVES)
+					i=0;
+			continue;
 		} else {
-			//failure
-			printf(" error %i\n",errno);
 			i++;
+			if (i>NUMDRIVES)
+				i=0;
 		}
 	}
-	if (mresult) {
-		//couldn't mount cd :/		
-		printf("\nCould not mount CD.  Ouch!\n");
-		exit(1);
-	}
-
-
-	mycdfile=fopen("/mycd","a");
-	if (mycdfile) {
-		fputs(drives[i],mycdfile);
-		putc('\n',mycdfile);
-		fclose(mycdfile);
-	} else {
-		printf("Error writing mycd info!\n");
-	}		
-
-	printf("Associating loopback CD-ROM filesystem...\n");
+	printf("%sAssociating loopback CD-ROM filesystem...%s\n",color,off);
 	if(!(set_loop("/dev/loop0","/distcd/images/boot.img",0,0))) {
-		printf("Error associating loopback CD-ROM filesystem.  This program is stuck!\n");
+		printf("%sError associating loopback CD-ROM filesystem.  This program is stuck!%s\n",color,off);
 		exit(1);
 	}
-	printf("Success!\n");		
+
+	printf("%sSuccess!%s\n",color,off);		
 	mount("/dev/loop0","/","ext2",MS_MGC_VAL|MS_RDONLY,0);
-	mycdfile=fopen("/etc/mtab","a");
-	fwrite(mymtab,1,strlen(mymtab),mycdfile);
-	fclose(mycdfile);
+
+	//set real root device to /dev/loop0 (major 7, minor 0)
+	writefile("/proc/sys/kernel/real-root-dev","0x700");
+	
+	//umount /proc
+	umount("proc");
+
+	//turn bottom bar off
+	printf("\0337\033[r\033[24;01f\033[K\0338");
 }
 
