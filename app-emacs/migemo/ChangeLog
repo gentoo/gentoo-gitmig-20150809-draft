@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/migemo
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/migemo/ChangeLog,v 1.1 2003/07/28 22:17:56 usata Exp $
+
+*migemo-0.40 (29 Jul 2003)
+
+  29 Jul 2003; Mamoru KOMACHI <usata@gentoo.org>
+  migemo-0.40.ebuild, files/50migemo-gentoo.el:
+  Initial import. Ebuild submitted by Takuto MATSUU
+  <matsuu@gentoo.org>, closing bug #22032
+
