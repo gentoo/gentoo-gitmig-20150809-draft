@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.15-r1.ebuild,v 1.2 2004/09/01 13:19:41 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.15-r1.ebuild,v 1.3 2004/09/01 20:14:32 mr_bones_ Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="doc snmp usb apache2"
 DEPEND=">=sys-apps/baselayout-1.8.4
 	virtual/libc
 	virtual/mta
-	snmp? (virtual/snmp)
+	snmp? ( virtual/snmp )
 	>=media-libs/gd-1.8.4
 	sys-libs/ncurses"
 RDEPEND="${DEPEND}
