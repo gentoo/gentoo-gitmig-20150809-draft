@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.2 2004/02/12 00:13:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.3 2004/02/16 13:45:24 wolf31o2 Exp $
 
 inherit games
 
@@ -24,7 +24,7 @@ dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
 pkg_setup() {
-	check_license
+	check_license || die "License check failed"
 	ewarn "The installed game takes about 507MB of space!"
 	cdrom_get_cds README.tribes2d
 	games_pkg_setup
