@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.13 2004/07/02 20:41:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.14 2004/07/13 14:03:12 lu_zero Exp $
+
+*qemu-0.6.0 (13 Jul 2004)
+
+  13 Jul 2004; Luca Barbato <lu_zero@gentoo.org> +files/qemu-0.6.0-typo.patch,
+  +qemu-0.6.0.ebuild:
+  New version
 
 *qemu-0.5.5-r1 (02 Jul 2004)
 
