@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.36 2004/12/19 02:45:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.37 2005/02/03 11:53:41 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -12,7 +12,7 @@
 #
 # ========================================================================
 
-inherit confutils libtool
+inherit eutils confutils libtool 
 
 ECLASS=php5-sapi
 INHERITED="$INHERITED $ECLASS"
@@ -105,7 +105,7 @@ EXPORT_FUNCTIONS pkg_setup src_compile src_install src_unpack pkg_postinst
 # INTERNAL FUNCTIONS
 # ========================================================================
 
-php5-sapi_check_awkward_uses () {
+php5-sapi_check_awkward_uses() {
 
 	# mysqli support isn't possible yet
 
@@ -193,8 +193,18 @@ php5-sapi_check_awkward_uses () {
 
 	if useq imap ; then
 		enable_extension_with 	"imap" 			"imap" 		1
-		# the IMAP-SSL arg doesn't parse 'shared,/usr/lib' right
-		enable_extension_with 	"imap-ssl" 		"ssl" 		0
+		# this is a PITA to deal with
+		if useq ssl ; then
+			#if [ -n "`strings ${ROOT}/usr/$(get_libdir)/c-client.* 2>/dev/null | grep ssl_onceonlyinit`" ]; then
+			if ! built_with_use virtual/imap-c-client ssl ; then
+				# the IMAP-SSL arg doesn't parse 'shared,/usr/lib' right
+				enable_extension_with 	"imap-ssl" 		"ssl" 		0
+			else
+				msg="IMAP+SSL requested, but your IMAP libraries are built without SSL!"
+				eerror "${msg}"
+				die "${msg}"
+			fi
+		fi
 	fi
 
 	if useq ldap ; then
@@ -219,11 +229,12 @@ php5-sapi_check_awkward_uses () {
 		enable_extension_with		"solid"			"solid"			1
 	fi
 
-	if useq mysql ; then
-		enable_extension_with		"mysql"			"mysql"			1
+	if useq mysql; then
+		enable_extension_with		"mysql"			"mysql"			1 
 		enable_extension_with		"mysql-sock"	"mysql"			0 "/var/run/mysqld/mysqld.sock"
-	else
-		enable_extension_with		"mysqli"		"mysqli"			1
+	fi
+	if useq mysqli; then
+		enable_extension_with		"mysqli"		"mysqli"		1
 	fi
 
 	# QDBM doesn't play nicely with GDBM _or_ DBM
@@ -266,7 +277,8 @@ php5-sapi_check_awkward_uses () {
 	confutils_use_depend_all "sasl" "ldap"
 
 	# mysql support
-	confutils_use_conflict "mysqli" "mysql"
+	# This shouldn't conflict actually
+	#confutils_use_conflict "mysqli" "mysql"
 
 	# odbc support
 	confutils_use_depend_all "adabas"		"odbc"
@@ -288,7 +300,7 @@ php5-sapi_check_awkward_uses () {
 # are we the CLI ebuild or not?
 # used to conditionally install a few things
 
-php5-sapi_is_providerbuild () {
+php5-sapi_is_providerbuild() {
 	if [ "${CATEGORY}/${PN}" == "${PHP_PROVIDER_PKG}" ]; then
 		return 0
 	else
@@ -300,14 +312,14 @@ php5-sapi_is_providerbuild () {
 # EXPORTED FUNCTIONS
 # ========================================================================
 
-php5-sapi_pkg_setup () {
+php5-sapi_pkg_setup() {
 	# let's do all the USE flag testing before we do anything else
 	# this way saves a lot of time
 
 	php5-sapi_check_awkward_uses
 }
 
-php5-sapi_src_unpack () {
+php5-sapi_src_unpack() {
 	unpack ${A}
 	# Fix for HTTP auth bug, #59755 
 	[ "x${PV}" == "x5.0.0" ] && epatch ${FILESDIR}/php-5.0.0-httpauthfix.patch
@@ -334,8 +346,7 @@ php5-sapi_src_unpack () {
 	chmod 755 configure
 }
 
-php5-sapi_src_compile () {
-
+php5-sapi_src_compile() {
 	confutils_init
 
 	my_conf="${my_conf} --with-config-file-path=${PHP_INI_DIR}"
@@ -434,7 +445,7 @@ php5-sapi_src_compile () {
 	emake || die "make failed"
 }
 
-php5-sapi_src_install () {
+php5-sapi_src_install() {
 	addpredict /usr/share/snmp/mibs/.index
 	
 	useq shared && PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules"
