@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r9.ebuild,v 1.2 2003/12/17 03:48:01 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r9.ebuild,v 1.3 2004/04/06 21:31:09 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Queues jobs for later execution"

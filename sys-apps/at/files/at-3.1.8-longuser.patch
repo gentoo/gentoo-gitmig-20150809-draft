@@ -1,0 +1,20 @@
+--- at-3.1.8/atd.c.old	2002-01-17 23:15:27.000000000 -0500
++++ at-3.1.8/atd.c	2004-04-06 15:27:00.000000000 -0400
+@@ -196,7 +196,7 @@
+  */
+     pid_t pid;
+     int fd_out, fd_in;
+-    char mailbuf[9], jobbuf[9];
++    char mailbuf[256], jobbuf[9];
+     char *mailname = NULL;
+     char *newname;
+     FILE *stream;
+@@ -299,7 +299,7 @@
+      * NFS and works with local file systems.  It's not clear where
+      * the bug is located.  -Joey
+      */
+-    if (fscanf(stream, "#!/bin/sh\n# atrun uid=%d gid=%d\n# mail %8s %d",
++    if (fscanf(stream, "#!/bin/sh\n# atrun uid=%d gid=%d\n# mail %255s %d",
+ 	       &nuid, &ngid, mailbuf, &send_mail) != 4)
+ 	pabort("File %.500s is in wrong format - aborting",
+ 	       filename);
