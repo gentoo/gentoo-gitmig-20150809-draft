@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/files/2.7.2/zope.initd,v 1.2 2004/07/24 23:45:46 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/files/2.7.2/zope.initd,v 1.3 2004/09/18 16:06:42 batlogg Exp $
 
-opts="start stop restart kill quit reload status help"
+opts="start stop restart kill quit status help"
 
 depend() {
         need net
@@ -23,7 +23,8 @@ stop() {
 
 restart() {
         ebegin "Restarting Zope in INSTANCE_HOME"
-        INSTANCE_HOME/bin/zopectl restart
+        svc_stop
+	    svc_start
         eend $?
 }
 
@@ -40,6 +41,7 @@ quit() {
 }
 
 reload() {
+         # throws an error, dunno why
         ebegin "Reloading Zope config in INSTANCE_HOME"
         INSTANCE_HOME/bin/zopectl reload
         eend $?

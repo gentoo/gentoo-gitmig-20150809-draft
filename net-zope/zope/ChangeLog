@@ -1,6 +1,15 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.42 2004/09/18 07:14:11 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.43 2004/09/18 16:06:41 batlogg Exp $
+
+*zope-2.7.2-r2 (18 Sep 2004)
+
+  18 Sep 2004; Jodok Batlogg <batlogg@gentoo.org>; files/2.7.2/zope.initd,
+  +zope-2.7.2-r2.ebuild:
+  removed instance creation stuff, this port now only installs the base, zope
+  user and group are only created for backward compatiblity. CAUTION: you need
+  to emerge zope-config manually if you want the ncurses interfaces. thanks to
+  Bernd Dorn.
 
   18 Sep 2004; Heinrich Wendel <lanius@gentoo.org> zope-2.7.2-r1.ebuild:
   fix double slashes, bug #63915
