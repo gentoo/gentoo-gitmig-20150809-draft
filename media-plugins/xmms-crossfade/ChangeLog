@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/xmms-crossfade
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-crossfade/ChangeLog,v 1.14 2004/08/15 23:15:35 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-crossfade/ChangeLog,v 1.15 2004/09/24 09:51:54 eradicator Exp $
+
+*xmms-crossfade-0.3.6 (24 Sep 2004)
+
+  24 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -xmms-crossfade-0.2.9.ebuild, -xmms-crossfade-0.3.1.ebuild,
+  -xmms-crossfade-0.3.2.ebuild, +xmms-crossfade-0.3.6.ebuild:
+  Version bump.  Removing old versions.  Directly into stable on amd64 as it
+  fixes problems with --libdir installing the plugin to an incorrect location
+  in previous versions.
 
   16 Aug 2004; <frank@gentoo.org> :
   Version bump to 0.3.5. Closes bug #59780.
