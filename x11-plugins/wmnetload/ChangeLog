@@ -1,8 +1,13 @@
 # ChangeLog for x11-plugins/wmnetload
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.5 2002/12/17 17:53:50 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.6 2002/12/19 23:37:06 mholzer Exp $
 
 *wmnetload-1.2 (17 Dec 2002)
+
+  19 Dec 2002; Martin Holzer <mholzer@gentoo.org> wmnetload-1.2.ebuild,
+  files/digest-wmnetload-1.2 Changelog :
+  Changed from tar.bz2 to tar.gz cause tar.bz2 seems to be broken :(
+  Fixing #12442.
 
   17 Dec 2002; Brad Cowan <bcowan@gentoo.org> wmnetload-1.2.ebuild,
   files/digest-wmnetload-1.2:
