@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.5.ebuild,v 1.2 2003/02/13 11:57:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.5.ebuild,v 1.3 2003/02/16 19:12:16 hannes Exp $
 
 inherit kde-base eutils
 need-kde 3.1
@@ -15,7 +15,7 @@ SRC_URI="mirror://kde/stable/${P}/src/${MY_P}.tar.bz2
 	mirror://gentoo/$PN-2.1.3-qt-templates.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 newdepend ">=kde-base/kdebase-3
 	>=dev-util/kdoc-2.0_alpha24
