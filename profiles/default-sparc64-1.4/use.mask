@@ -9,3 +9,13 @@ pic
 sse
 svga
 voodoo3
+
+
+# And arch keyword flags that don't work
+
+x86
+ppc
+alpha
+mips
+hppa
+arm
