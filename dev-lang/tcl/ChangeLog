@@ -1,10 +1,10 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.5 2002/08/03 04:56:33 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.6 2002/08/03 05:00:02 gerk Exp $
 
 *tcl-8.3.3-r3 (25 Jun 2002)
 
-  02 Aug 2002; mark Guertin <gerk@gentoo.org> tuxracer-0.61-r1.ebuild :
+  02 Aug 2002; mark Guertin <gerk@gentoo.org> tcl-8.8.3-r3.ebuild :
 
   Added ppc to keywords
 
@@ -23,7 +23,7 @@
 
 *tcl-8.3.3-r1 (24 Apr 2002)
 
-  02 Aug 2002; mark Guertin <gerk@gentoo.org> tuxracer-0.61-r1.ebuild :
+  02 Aug 2002; mark Guertin <gerk@gentoo.org> tcl-8.3.3-r1.ebuild :
 
   Added ppc to keywords
 
