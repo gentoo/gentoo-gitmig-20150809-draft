@@ -1,2 +1,4 @@
 MD5 3e7e19f445027d1b932f9bfab2970277 cdrtools-2.01a27.tar.bz2 1388766
-MD5 59369010af7e4ff46a0743b582baeab3 cdrtools-2.01a26-dvd.patch.bz2 12430
+MD5 de1bdde2b406c27798e21b04345a9a0a cdrtools-2.01a27-dvd.patch.bz2 12484
+MD5 d58897a06f898cedbb314998aeaf39f2 cdrtools-2.01a27-o_excl.patch.bz2 2481
+MD5 00bda85f3f05806f95743d647accd595 cdrtools-2.01a27-writemode.patch.bz2 332
