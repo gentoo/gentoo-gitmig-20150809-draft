@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.8.2.ebuild,v 1.1 2002/01/26 08:54:02 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.8.2.ebuild,v 1.2 2002/04/24 02:31:17 blocke Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
+DESCRIPTION="A graphical network monitor for Unix modeled after etherman"
 SRC_URI="http://prdownloads.sourceforge.net/etherape/${P}.tar.gz"
 HOMEPAGE="http://etherape.sourceforge.net/"
 
