@@ -1,0 +1,10 @@
+# ChangeLog for app-cdr/sync2cd
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/sync2cd/ChangeLog,v 1.1 2004/03/29 02:37:35 dragonheart Exp $
+
+*sync2cd-0.8 (29 Mar 2004)
+
+  29 Mar 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  sync2cd-0.8.ebuild:
+  Inital import - thanks to Lukasz Strzygowski <lucass@gentoo.pl> in bug #45842
+
