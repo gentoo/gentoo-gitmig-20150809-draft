@@ -61,7 +61,7 @@ mkbootimg() {
         cd mnt
         dodirs floppy gentoo ram boot
         ln -sf /initrd/distcd .
-        cd ..
+        cd ../..
         ln -sf mnt/boot boot
 
 
@@ -80,7 +80,7 @@ mkbootimg() {
 
         echo "5. Creating other dirs for initrd"
         cd ${BOOTIMG}/initrd/var
-        dodirs log run state
+        dodirs log run state shm
 	mkdir state/nfs
         touch log/wtmp
         touch run/utmp
@@ -103,45 +103,43 @@ mkbootimg() {
         tar xzf ${BOOTDIR}/files/devices.tgz -C .
         ln -s ram0 ram
 
-        # *********** 8 ************
 
-        echo "3. Creating /initrd devices"
+        # *********** 3 ************
+
+        echo "8. Creating /initrd devices"
+
         cd ${BOOTIMG}/dev
-	for i in tty tty1 tty2 initrd pts log
+	for i in tty tty1 tty2 initrd
 	do
 	  mv $i ../initrd/dev/$i
 	  ln -sf ../initrd/dev/$i $i
 	done
-
-
-# Hmm, shutdown needs write access to /dev/initctl
-# but symlinking it messes up initrd
-
+	ln -sf ../initrd/dev/initctl .
 
 
         # *********** 9 ************
 
         echo "9. Populating /bin"
         cd ${BOOTIMG}/bin
-        doexes bash cat chgrp chmod chown cp df du hostname kill ldd ln login \
-	         ls mkdir mknod mount mv ping ps rm umount uname
+        doexes bash cat  cp df du hostname kill ldd ln login loadkeys \
+	         ls mkdir mount mv ps rm umount uname
         ln -s bash sh
 
         # *********** 10 ************
 
         echo "10. Populating /sbin"
         cd ${BOOTIMG}/sbin
-        doexes agetty cfdisk depmod e2fsck fdisk grub halt ifconfig init insmod \
-	        ldconfig lilo ln lsmod mke2fs mkraid mkreiserfs mkswap portmap \
+        doexes agetty cfdisk ctrlaltdel depmod e2fsck fdisk grub halt ifconfig init \
+	        ldconfig lilo ln lsmod mke2fs mkraid mkreiserfs mkswap \
 	        raidstart reboot resize2fs reiserfsck \
-	        route sfdisk shutdown touch tcpd
+	        sfdisk shutdown touch
 
         # portmap? removed; Ups added again
         # reiserfsck and resize_reiserfs does not exist in 2.4 so 
 	# you need the 2.2.18 kernel installed too!
 
 	# Copy kernel binaries
-	cp -a ${BROOT}/kernel/sbin/* .
+
 	cp /sbin/rpc.statd .
         ln -s insmod modprobe
         ln -s mkraid raid0run
@@ -161,13 +159,15 @@ mkbootimg() {
 
         echo "12. Populating /usr/bin"
         cd ${BOOTIMG}/usr/bin
-        doexes awk bzip2 cut expr fdformat ftp grep gzip joe killall \
-	        loadkeys most rm rmdir scp sed sleep ssh strace tar top vi wget
+        doexes awk bzip2 cut chgrp chmod chown expr fdformat ftp grep gzip joe killall \
+	         most mknod ping rm rmdir scp sed sleep ssh strace tar top vi wget
 
         # *********** 13 ************
 
         echo "13. Populating /usr/sbin"
         cd ${BOOTIMG}/usr/sbin
+        doexes ifconfig portmap route tcpd
+	cp -a ${BROOT}/kernel/sbin/* .
         cp /usr/sbin/rc-update .
 	cp ${BOOTDIR}/files/sbin/network .
         # *********** 14 ************
@@ -187,6 +187,8 @@ mkbootimg() {
         cd ${BOOTIMG}/usr/lib
         cp /usr/lib/joerc .
         cp /lib/libnss_files.so.2 .
+	cp /lib/libnss_dns.so.2 .
+	cp /lib/libresolv.so.2 .
         cp /lib/security/pam_permit.so ${BOOTIMG}/lib/pam_permit.so
 
         # *********** 16 ************
@@ -254,14 +256,14 @@ mkinitrd() {
         echo "3. Populating /dev"
         cd dev
         for i in console fd0 fd0u1440 hda hdb hdc hdd hde hdf hdg hdh loop0 ram0 \
-                scd0 scd1 scd2 scd3 scd4 scd5 scd6 scd7 log
+                scd0 scd1 scd2 scd3 scd4 scd5 scd6 scd7 initrd
         do
             cp -a ${BOOTIMG}/dev/$i .
         done
 	mknod -m 666 tty c 5 0
         mknod -m 600 tty1 c 4 1
         mknod -m 600 tty2 c 4 2
-	mknod -m 600 initrd b 1 250
+        mkfifo -m 600 initctl
         mkdir pts
 	# Just for testing
 	cp -a ${BOOTIMG}/dev/hda2 .
@@ -316,7 +318,7 @@ mkinitrd
 cd ${BROOT}
 
 echo ">>> Generating boot.img"
-dd if=/dev/zero of=boot.img bs=1024 count=18000
+dd if=/dev/zero of=boot.img bs=1024 count=20000
 mke2fs boot.img
 mount -o loop ${BROOT}/boot.img ${BROOT}/mnt
 cp -af ${BOOTIMG}/* ${BROOT}/mnt

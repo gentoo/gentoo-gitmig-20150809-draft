@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ ${#} -lt 3 ] 
+then
+  echo "Usage: network [module] [ip] [netmask] [broadcast]"
+  exit
+fi
+
+modprobe $1
+
+if [ ${#} -eq 4 ]
+then
+  ifconfig eth0 $2 netmask $3 broadcast $4
+else
+  ifconfig eth0 $2 netmask $3 
+fi
+/sbin/portmap
+/sbin/rpc.statd
