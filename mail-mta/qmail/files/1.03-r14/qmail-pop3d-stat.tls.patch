@@ -1,0 +1,24 @@
+diff -urBbw qmail-1.03.orig/qmail-pop3d.c qmail-1.03/qmail-pop3d.c
+--- qmail-1.03.orig/qmail-pop3d.c	2003-11-30 01:41:34.000000000 -0800
++++ qmail-1.03/qmail-pop3d.c	2003-11-30 01:47:44.000000000 -0800
+@@ -150,12 +150,17 @@
+ void pop3_stat()
+ {
+   int i;
++  int realnumm;
+   unsigned long total;
+  
+-  total = 0;
+-  for (i = 0;i < numm;++i) if (!m[i].flagdeleted) total += m[i].size;
++  total = realnumm = 0;
++  for (i = 0;i < numm;++i) 
++      if (!m[i].flagdeleted) { 
++          total += m[i].size;
++          ++realnumm;
++      }
+   substdio_puts(&ssout,"+OK ");
+-  put(strnum,fmt_uint(strnum,numm));
++  put(strnum,fmt_uint(strnum,realnumm));
+   substdio_puts(&ssout," ");
+   put(strnum,fmt_ulong(strnum,total));
+   substdio_puts(&ssout,"\r\n");

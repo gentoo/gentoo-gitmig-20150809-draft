@@ -1,0 +1,15 @@
+diff -uBbwr qmail-1.03.orig/qmail-pop3d.c qmail-1.03/qmail-pop3d.c
+--- qmail-1.03.orig/qmail-pop3d.c       2003-11-30 23:45:22.000000000 -0800
++++ qmail-1.03/qmail-pop3d.c    2003-11-30 23:43:13.000000000 -0800
+@@ -312,9 +312,9 @@
+   fd = open_read(m[i].fn);
+   if (fd == -1) { err_nosuch(); return; }
+   /* okay(); */
+-  puts("+OK ");
++  substdio_puts(&ssout,"+OK ");
+   put(strnum,fmt_ulong(strnum,m[i].size));
+-  puts(" octets\r\n");
++  substdio_puts(&ssout," octets\r\n");
+   flush();
+   substdio_fdbuf(&ssmsg,read,fd,ssmsgbuf,sizeof(ssmsgbuf));
+   blast(&ssmsg,limit);

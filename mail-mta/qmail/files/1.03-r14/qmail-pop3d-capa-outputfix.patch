@@ -1,0 +1,13 @@
+diff -urbBw qmail-1.03.orig/qmail-pop3d.c qmail-1.03/qmail-pop3d.c
+--- qmail-1.03.orig/qmail-pop3d.c	2003-11-30 00:35:33.000000000 -0800
++++ qmail-1.03/qmail-pop3d.c	2003-11-30 00:38:47.000000000 -0800
+@@ -314,7 +314,8 @@
+ 
+ void pop3_capa(arg) char *arg;
+ {
+-  puts("+OK Capability list follows\r\n"
++  substdio_puts(&ssout,
++       "+OK Capability list follows\r\n"
+        "TOP\r\n"
+        "UIDL\r\n"
+        "LAST\r\n"

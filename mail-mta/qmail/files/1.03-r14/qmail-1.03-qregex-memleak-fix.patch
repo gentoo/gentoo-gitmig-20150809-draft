@@ -1,0 +1,15 @@
+diff -urBbw qmail-1.03.orig/qmail-smtpd.c qmail-1.03/qmail-smtpd.c
+--- qmail-1.03.orig/qmail-smtpd.c	2003-11-30 00:51:16.000000000 -0800
++++ qmail-1.03/qmail-smtpd.c	2003-11-30 00:50:54.000000000 -0800
+@@ -397,8 +397,9 @@
+   int j = 0;
+   int x = 0;
+   int negate = 0;
+-  stralloc bmb = {0};
+-  stralloc curregex = {0};
++  static stralloc bmb = {0};
++  static stralloc curregex = {0};
++  bmb.len = curregex.len = 0;
+ 
+   if (which == BMCHECK_BMF) {
+     if (!stralloc_copy(&bmb,&bmf)) die_nomem();

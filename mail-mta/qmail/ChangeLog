@@ -1,0 +1,379 @@
+# ChangeLog for net-mail/qmail
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.1 2004/05/30 10:50:13 robbat2 Exp $
+
+  28 May 2004; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Update metadata.xml.
+
+  13 May 2004; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r10.ebuild,
+  qmail-1.03-r11.ebuild, qmail-1.03-r12.ebuild, qmail-1.03-r13.ebuild,
+  qmail-1.03-r14.ebuild, qmail-1.03-r15.ebuild:
+  fix bug #39265
+
+  10 Apr 2004; Joshua Kinard <kumba@gentoo.org> qmail-1.03-r15.ebuild:
+  Marked stable on mips.
+
+  25 Mar 2004; Joshua Kinard <kumba@gentoo.org> qmail-1.03-r15.ebuild:
+  Added ~mips to KEYWORDS.
+
+  08 Mar 2004; Jon Portnoy <avenj@gentoo.org> qmail-1.03-r15.ebuild :
+  Stable on AMD64.
+
+  28 Feb 2004; Robin Johnson,,604-339-5621,604-298-8414 <robbat2@gentoo.org>
+  qmail-1.03-r13.ebuild, files/1.03-r13/qmail-control:
+  fix bugs #41955, #43223
+
+  18 Feb 2004; Aron Griffis <agriffis@gentoo.org> qmail-1.03-r15.ebuild:
+  stable on ia64
+
+  29 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r10.ebuild,
+  qmail-1.03-r8.ebuild, qmail-1.03-r9.ebuild:
+  fix bug #39808, touching .keep files obsolete.
+
+  28 Jan 2004; Jon Portnoy <avenj@gentoo.org> qmail-1.03-r15.ebuild :
+  AMD64 keywords.
+
+  24 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> :
+  recreate digests
+
+*qmail-1.03-r15 (22 Jan 2004)
+
+  22 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r15.ebuild,
+  files/config-sanity-check:
+  fix sanity-checker more, and minor typo in -r15 ebuild
+
+  20 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
+  files/1.03-r15/qmail-pop3d-top-outputfix.patch:
+  note to self, remember to cvs add new direcoryies ;-). fixes #38826
+
+  20 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild,
+  qmail-1.03-r13.ebuild, qmail-1.03-r14.ebuild, files/conf-common,
+  files/config-sanity-check, files/run-qmailpop3d, files/run-qmailqmqpd,
+  files/run-qmailqmtpd, files/run-qmailsmtpd, files/tcp.pop3.sample,
+  files/tcp.qmqp.sample, files/tcp.qmtp.sample, files/tcp.smtp.sample,
+  files/1.03-r10/tls-patch.txt,
+  files/1.03-r9/qmail-1.03-starttls-smtp-auth.patch:
+  head/tails fixes in some patches. massive update of tcprule stuff, moved to
+  /etc/tcprules.d/ in new versions (the config file checks the new location
+  first before falling back to the old location). -r15 does the move to the new
+  tcprules location. fix bug #34646 (again) in -r15. fixed #36721 in all recent
+  ebuilds. fixed #38771 in main config stuff.
+
+  15 Dec 2003; <spider@gentoo.org> files/gencert.sh,
+  files/1.03-r8/qmail-1.03-starttls-smtp-auth.patch:
+  A few more issues of : instead of . in chown
+
+  30 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r14.ebuild,
+  files/1.03-r14/qmail-gentoo-branding.patch,
+  files/1.03-r14/qmail-qmailqueue-docs.patch:
+  add gentoo branding patch and patch to add docs for QMAILQUEUE
+
+  30 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r14.ebuild:
+  forgot to put in unstable
+
+*qmail-1.03-r14 (30 Nov 2003)
+
+  30 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r14.ebuild,
+  files/99qmail, files/conf-common, files/conf-pop3d, files/conf-qmqpd,
+  files/conf-qmtpd, files/conf-send, files/conf-smtpd,
+  files/config-sanity-check, files/dot_qmail, files/errno.patch,
+  files/mkservercert, files/qmail-config-system, files/qmail-genrsacert.sh,
+  files/rc, files/run-qmailpop3d, files/run-qmailpop3dlog,
+  files/run-qmailqmqpd, files/run-qmailqmqpdlog, files/run-qmailqmtpd,
+  files/run-qmailqmtpdlog, files/run-qmailsend, files/run-qmailsendlog,
+  files/run-qmailsmtpd, files/run-qmailsmtpdlog, files/servercert.cnf,
+  files/1.03-r14/auth-after-tls-only.patch,
+  files/1.03-r14/maildir-quota-fix.patch,
+  files/1.03-r14/nullenvsender-recipcount.tls.patch,
+  files/1.03-r14/qmail-1.03-accept-5xx.tls.patch,
+  files/1.03-r14/qmail-1.03-qregex-memleak-fix.patch,
+  files/1.03-r14/qmail-pop3d-capa-outputfix.patch,
+  files/1.03-r14/qmail-pop3d-stat.tls.patch,
+  files/1.03-r14/qmail-smtpd-esmtp-size-gentoo.patch,
+  files/1.03-r14/qmail-smtpd-relay-reject.gentoo.patch,
+  files/1.03-r14/smtp-auth-close3.patch:
+  This build is hardmasked for initial testing.
+  == Feature changes:
+  Added more control over daemon launching, including new control over logging
+  systems.
+  Added more configuration checks for sanity.
+  Simplified all daemon start scripts using a new launcher -
+  qmail-config-system.
+  Added variable to control qmail-pop3d maildir location.
+  == Bugs fixed: 
+  holdremote feature request - #31542 
+  auth-after-TLS only - #31426 
+  noauthcram option - #33818 
+  pop3d fix for evolution - #34646 
+  == Patches:
+  netscape progress bar fix: http://www.qmail.org/netscape-progress.patch 
+  update of 0.0.0.0 patch:
+  http://www.suspectclass.com/~sgifford/qmail/qmail-1.03-0.0.0.0-0.2.patch
+  ignore -N opts to sendmail:
+  http://www-dt.e-technik.uni-dortmund.de/~ma/djb/qmail/sendmail-ignore-N.patch
+  accept-5xx responses REDIFFED: 
+  http://www.qmail.org/accept-5xx.patch 
+  pop3d-stat REDIFFED:
+  http://www.dataloss.nl/software/patches/qmail-pop3d-stat.patch 
+  envrecip REDIFFED:
+  http://www.qcc.ca/~charlesc/software/misc/nullenvsender-recipcount.patch
+
+  29 Nov 2003; Robin H. Johnson <robbat2@gentoo.org>
+  files/1.03-r13/conf-smtpd:
+  fix weird pre/post bug in conf-smtpd
+
+  28 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r13.ebuild:
+  tcprule building fix
+
+  27 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r13.ebuild:
+  move to stable
+
+  06 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r10.ebuild,
+  qmail-1.03-r11.ebuild, qmail-1.03-r12.ebuild, qmail-1.03-r13.ebuild,
+  qmail-1.03-r8.ebuild, qmail-1.03-r9.ebuild:
+  : instead of . for chown
+
+*qmail-1.03-r13 (27 Oct 2003)
+
+  27 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r13.ebuild,
+  files/1.03-r13/99qmail, files/1.03-r13/conf-common,
+  files/1.03-r13/conf-pop3d, files/1.03-r13/conf-qmqpd,
+  files/1.03-r13/conf-qmtpd, files/1.03-r13/conf-smtpd,
+  files/1.03-r13/config-sanity-check, files/1.03-r13/dot_qmail,
+  files/1.03-r13/errno.patch, files/1.03-r13/maildir-quota-fix.patch,
+  files/1.03-r13/mkservercert, files/1.03-r13/qmail-control,
+  files/1.03-r13/qmail-genrsacert.sh,
+  files/1.03-r13/qmail-smtpd-esmtp-size-gentoo.patch,
+  files/1.03-r13/qmail-smtpd-relay-reject.gentoo.patch, files/1.03-r13/rc,
+  files/1.03-r13/run-qmailpop3d, files/1.03-r13/run-qmailpop3dlog,
+  files/1.03-r13/run-qmailqmqpd, files/1.03-r13/run-qmailqmqpdlog,
+  files/1.03-r13/run-qmailqmtpd, files/1.03-r13/run-qmailqmtpdlog,
+  files/1.03-r13/run-qmailsend, files/1.03-r13/run-qmailsendlog,
+  files/1.03-r13/run-qmailsmtpd, files/1.03-r13/run-qmailsmtpdlog,
+  files/1.03-r13/servercert.cnf, files/1.03-r13/smtp-auth-close3.patch:
+  add new -r13 that makes ssl stuff easier, in preperation for the HOWTO document
+
+  23 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild:
+  install all the manpages
+
+  23 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild:
+  add more patches from bug #29485
+
+  23 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild:
+  fix coreutils issue, finalize badrcptto patch.
+
+  20 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild,
+  files/1.03-r12/dot_qmail, files/1.03-r12/rc:
+  fix bugs #28257, #28258
+
+  11 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild:
+  fix bug #28256
+
+  02 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild,
+  files/1.03-r12/qmail-smtpd-esmtp-size-gentoo.patch,
+  files/1.03-r12/qmail-smtpd-relay-reject.gentoo.patch:
+  more work in progres on -r12, nearly completed, ready for limited testing now
+
+  01 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild:
+  more tweaks to r12
+
+  31 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild,
+  files/1.03-r12/config-sanity-check, files/1.03-r12/maildir-quota-fix.patch,
+  files/1.03-r12/qmail-remote-auth-login.patch, files/1.03-r12/run-qmailpop3d,
+  files/1.03-r12/run-qmailqmqpd, files/1.03-r12/run-qmailqmtpd,
+  files/1.03-r12/run-qmailsmtpd:
+  more work in progress on -r12
+
+  13 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild,
+  files/gencert.sh, files/tcp.pop3.sample, files/tcp.qmqp.sample,
+  files/tcp.qmtp.sample, files/tcp.smtp.sample,
+  files/1.03-r12/badrcptto-morebadrcptto-accdias-gentoo,
+  files/1.03-r12/conf-common, files/1.03-r12/conf-pop3d,
+  files/1.03-r12/conf-qmqpd, files/1.03-r12/conf-qmtpd,
+  files/1.03-r12/conf-smtpd,
+  files/1.03-r12/qmail-smtpd-esmtp-size-gentoo.patch,
+  files/1.03-r12/run-qmailpop3d:
+  Add support for oversize DNS, working badrcptto, trim large bounce messages.
+  Disable SSL as a bug is in it presently. Add better sample files for
+  /etc/tcp.smtp et al.
+
+  12 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild:
+  Add support for maildir++, ESMTP SIZE, localtime (commented out) from bug
+  #26506. Add more cleanups and a fix for a possible local glitch in pkg_config.
+
+  12 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild:
+  Temporarily remove the bad-rcpt-noisy-patch patch as it is breaking some
+  configs
+
+  11 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild,
+  files/1.03-r12/conf-common, files/1.03-r12/conf-qmqpd,
+  files/1.03-r12/conf-qmtpd, files/1.03-r12/conf-smtpd,
+  files/1.03-r12/config-sanity-check, files/1.03-r12/run-qmailqmqpd,
+  files/1.03-r12/run-qmailqmtpd, files/1.03-r12/run-qmailsmtpd,
+  files/1.03-r12/smtp-auth-close3.patch:
+  fix bug #23658, add SMTP-AUTH stubs to conf-smtpd, seperate the sanity check,
+  allow easier configuration of all options. Install config files with correct
+  permissions, prevent the pkg_config from destroying old data. Bug #17283 done.
+
+*qmail-1.03-r12 (11 Aug 2003)
+
+  11 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r12.ebuild,
+  files/1.03-r12/99qmail, files/1.03-r12/conf-common,
+  files/1.03-r12/conf-qmqpd, files/1.03-r12/conf-qmtpd,
+  files/1.03-r12/conf-smtpd, files/1.03-r12/defaultdelivery,
+  files/1.03-r12/dot_qmail, files/1.03-r12/errno.patch,
+  files/1.03-r12/qmail-control, files/1.03-r12/rc,
+  files/1.03-r12/run-qmailpop3d, files/1.03-r12/run-qmailpop3dlog,
+  files/1.03-r12/run-qmailqmqpd, files/1.03-r12/run-qmailqmqpdlog,
+  files/1.03-r12/run-qmailqmtpd, files/1.03-r12/run-qmailqmtpdlog,
+  files/1.03-r12/run-qmailsend, files/1.03-r12/run-qmailsendlog,
+  files/1.03-r12/run-qmailsmtpd, files/1.03-r12/run-qmailsmtpdlog,
+  files/1.03-r12/smtp-auth-close3.patch:
+  Use queue-fix for building the queue, and remove default use of rblsmtpd.
+  Add an example for relay-ctrl in conf-smtpd.
+
+  06 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r11.ebuild,
+  files/1.03-r11/conf-common:
+  forgot a -z fix!
+
+  06 Aug 2003; Robin H. Johnson <robbat2@gentoo.org>
+  files/1.03-r10/run-qmailpop3d:
+  fix bug #25998
+
+  06 Aug 2003; Robin H. Johnson <robbat2@gentoo.org>
+  files/1.03-r11/conf-common:
+  ensure we explictly use the ipv4 tcpserver address
+
+  06 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r11.ebuild,
+  files/1.03-r11/99qmail, files/1.03-r11/conf-common,
+  files/1.03-r11/run-qmailqmqpd, files/1.03-r11/run-qmailqmtpd,
+  files/1.03-r11/run-qmailsmtpd:
+  fix up undefined shell variable bug and clean up the ebuild a little
+
+*qmail-1.03-r11 (05 Aug 2003)
+
+  05 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-1.03-r11.ebuild,
+  files/1.03-r11/99qmail, files/1.03-r11/conf-common,
+  files/1.03-r11/conf-qmqpd, files/1.03-r11/conf-qmtpd,
+  files/1.03-r11/conf-smtpd, files/1.03-r11/defaultdelivery,
+  files/1.03-r11/dot_qmail, files/1.03-r11/errno.patch,
+  files/1.03-r11/qmail-control, files/1.03-r11/rc,
+  files/1.03-r11/run-qmailpop3d, files/1.03-r11/run-qmailpop3dlog,
+  files/1.03-r11/run-qmailqmqpd, files/1.03-r11/run-qmailqmqpdlog,
+  files/1.03-r11/run-qmailqmtpd, files/1.03-r11/run-qmailqmtpdlog,
+  files/1.03-r11/run-qmailsend, files/1.03-r11/run-qmailsendlog,
+  files/1.03-r11/run-qmailsmtpd, files/1.03-r11/run-qmailsmtpdlog,
+  files/1.03-r11/smtp-auth-close3.patch, metadata.xml:
+  Prepare for new release of qmail, this is NOT ready for wide testing in
+  ~anything yet. /var/qmail/alias is now in CONFIG_PROTECT as well. Update
+  metadata.xml to say I'm handling it now. Added QMTP and QMQP support and
+  many more patches.
+
+  31 Jul 2003; Seemant Kulleen <seemant@gentoo.org> qmail-1.03-r10.ebuild:
+  changed epatch to patch, because the dry-run on tls.patch.bz2 seems to fail.
+
+  27 Jul 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild:
+  Integrated the qmail-pop3d build into this.  It was just the creation 
+  of the qmail-pop3d directories and a note for creating the link into
+  /service.  The qmail-pop3d build will remain in portage until a r11
+  is released with a note to just re-install -r10 to add the pop3 
+  portion.
+
+  24 Jul 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild:
+  Fixed a typo in the ebuild as noted on bug #25204.
+
+  09 Jul 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild:
+  Changed hostname to hostname --fqdn in pkg_config.  Thanks to
+  Torsten on bug #23214 for bringing this change to light.
+
+  12 Jun 2003; <msterret@gentoo.org> qmail-1.03-r8.ebuild:
+  fix Header
+
+*qmail-1.03-r10 (01 Feb 2003)
+
+  16 Mar 2003; Will Woods <wwoods@gentoo.org> qmail-1.03-r10.ebuild,
+  qmail-1.03-r8.ebuild:
+  Added alpha keywords
+
+  21 Feb 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild :
+  Small fix0r so .qmail-* files aren't overwritten if they exist from
+  a previous installation.
+
+  17 Feb 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild,
+  files/1.03-r10/smtp-auth-close3.patch :
+  Added a patch for a smtp auth and morercpthosts problem.
+
+  15 Feb 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild :
+  Removed ext_todo and added big-todo and the qmailqueue patch.
+  Thanks Psi-Jack for doing lotsa testing!
+
+  11 Feb 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild :
+  Only touch alias files if they don't already exist as suggested
+  by Sascha Silbe on bug #13014 and add the EXTTODO doc to explain
+  qmail-todo's purpose.
+
+  04 Feb 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild :
+  Moved the ssl cert creation to pkg_config() and it only goes through
+  the cert creation if the file doesn't already exist.  Thanks vapier.
+  Added a patch for 0.0.0.0 addresses and errno detection.
+
+  02 Feb 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild :
+  Added a missing qmail-todo.  Thanks to shadow@ines.ro on bug #14963
+  for catching this so quickly.
+
+  01 Feb 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild,
+  files/digest-qmail-1.03-r10, files/tls.patch, files/tls.txt :
+  Ebuild rework on the patch side.  I will add mysql and ldap support
+  as I work through patch conflicts.  TLS + EHLO patch, SMTP AUTH,
+  big-concurrency, ext/reiserfs non-synchronus link() fix, and the
+  ext_todo-20030105 queue optimization patch are currently included.
+  Now includes /var/qmail/bin in ROOTPATH and PATH.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*qmail-1.03-r9 (11 Sep 2002)
+
+  23 Nov 2002; Nick Hadaway <raker@gentoo.org> qmail-1.03-r9.ebuild :
+  Cosmetic fix to only unpack ldap patch if ldap in USE.
+
+  19 Nov 2002; Nick Hadaway <raker@gentoo.org> qmail-1.03-r9.ebuild :
+  Added fix for ssl enabled builds as noted in bug #10961.  Thanks to 
+  Andrey Ulanov for noticing the problem.
+
+  27 Sep 2002; Nick Hadaway <raker@gentoo.org> 
+  files/1.03-r9/run-qmailsmtpd :
+  Changed softlimit from 2MB to 8MB due to the ssl enabled ucspi-tcp.
+
+  11 Sep 2002; Nick Hadaway <raker@gentoo.org> qmail-1.03-r9.ebuild,
+  files/digest-qmail-1.03-r9,
+  files/1.03-r9/qmail-1.03-starttls-smtp-auth.patch :
+  New qmail ebuild. Added ldap support, and tls+auth support.  The
+  patches both cannot be applied at the same time as they conflict.
+  Please test!
+
+*qmail-1.03-r8 (10 Jun 2002)
+
+  27 Sep 2002; Nick Hadaway <raker@gentoo.org> 
+  files/1.03-r8/run-qmailsmtpd :
+  Changed softlimit from 2MB to 8MB due to the ssl enabled ucspi-tcp.
+
+  10 June 2002; Grant Goodyear <bangert@gentoo.org> qmail-1.03-r8.ebuild :
+  Added qmail-queue patch for qmail-scanner, closing bug #3416.
+
+*qmail-1.03-r7 (1 Feb 2002)
+
+  12 May 2002; Thilo Bangert <bangert@gentoo.org> qmail-1.03-r7.ebuild :
+  fixed location for dns patch. added new digest to reflect the change
+
+  19 Mar 2002; G.Bevin <gbevin@gentoo.org> qmail-1.03-r7.ebuild :
+  Added net-mail/dot-forward to RDEPEND
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> qmail-1.03-r7.ebuild :
+  Prevent qmail from being installed alongside another mta.
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
