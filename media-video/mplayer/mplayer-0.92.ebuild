@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.92.ebuild,v 1.9 2003/12/04 17:27:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.92.ebuild,v 1.10 2003/12/26 01:35:02 seemant Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc"
 
@@ -13,11 +13,11 @@ inherit eutils
 # Handle PREversions as well
 MY_PV="${PV/_/}"
 S="${WORKDIR}/MPlayer-${MY_PV}"
-SRC_URI="http://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
-	http://mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
-	http://mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
+SRC_URI="mirror://mplayer/releases/MPlayer-${MY_PV}.tar.bz2
+	mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
+	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-1.9.17-mplayer.tar.bz2 )
-	gtk? ( http://mplayerhq.hu/MPlayer/Skin/Blue-1.0.tar.bz2 )"
+	gtk? ( mirror://mplayer/Skin/Blue-1.0.tar.bz2 )"
 # Only install Skin if GUI should be build (gtk as USE flag)
 DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayerhq.hu/"
