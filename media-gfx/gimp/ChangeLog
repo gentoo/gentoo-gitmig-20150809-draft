@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.73 2004/03/19 13:08:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.74 2004/03/26 20:17:25 foser Exp $
+
+*gimp-2.0.0 (26 Mar 2004)
+
+  26 Mar 2004; foser <foser@gentoo.org> gimp-2.0.0.ebuild :
+  First stable release of the GTK+-2 gimp (#45563)
+  Add mng & debug USE
+  Fix up mime/application/desktop installation by touching their dirs
+  Remove the unversioned gimp binary link (slot problem)
+  Removed the obsolete postinstall warnings
 
   19 Mar 2004; foser <foser@gentoo.org> gimp-1.2.{4,5}.ebuild :
   Fix jpeg USE in deps (#45110)
