@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6.ebuild,v 1.16 2004/08/04 16:10:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6.ebuild,v 1.17 2004/08/14 19:47:18 lu_zero Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_unpack() {
 
 	# Brother HL-12XX support
 	cp ${FILESDIR}/gs7.05-gdevhl12.c.bz2 ${S}/src/gdevhl12.c.bz2 || die
-	bzip2 -d ${S}/src/gdevhl12.c.bz2 || die
+	bzip2 -df ${S}/src/gdevhl12.c.bz2 || die
 	mv ${S}/src/Makefile.in ${S}/src/Makefile.in.orig
 	sed 's#^\(DEVICE_DEVS6=.*\)$#\1 $(DD)hl1240.dev $(DD)hl1250.dev#' \
 		${S}/src/Makefile.in.orig > ${S}/src/Makefile.in || die
