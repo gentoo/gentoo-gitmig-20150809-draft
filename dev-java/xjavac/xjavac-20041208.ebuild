@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/xjavac-20041208.ebuild,v 1.3 2005/03/13 19:23:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/xjavac-20041208.ebuild,v 1.4 2005/03/23 18:17:41 gustavoz Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="http://cvs.apache.org/viewcvs.cgi/xml-xerces/java/tools/src/XJavac.java"
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="~x86 ~amd64 ~ppc64"
+KEYWORDS="~x86 ~amd64 ~ppc64 ~sparc"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.4
 	jikes? ( >=dev-java/jikes-1.21 )
