@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 612b88c9fd7b1239288c36636fec6ed9 noatun-plugins-3.4.0.ebuild 853
-MD5 739e8c36d76ab3f1d73c714d35bc955d noatun-plugins-3.4.0_rc1.ebuild 841
-MD5 ff758b136821a9c6f25147719c4ae998 ChangeLog 813
+MD5 6d11d7e22d97ced56b31681f0e2c91cf ChangeLog 912
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 739e8c36d76ab3f1d73c714d35bc955d noatun-plugins-3.4.0_rc1.ebuild 841
+MD5 3b6b454aec5ca58f1ee663e5b7c6cc08 noatun-plugins-3.4.0.ebuild 859
+MD5 333f4787d9379a156dba6035f1fca6e3 files/digest-noatun-plugins-3.4.0_rc1 383
 MD5 6ec5a8a3f0f5ae85d431525c926c27fe files/noatun-oblique-db-location-3.4.0_rc1.diff 625
 MD5 231586b7509d98416a3043180cebfe60 files/digest-noatun-plugins-3.4.0 69
-MD5 333f4787d9379a156dba6035f1fca6e3 files/digest-noatun-plugins-3.4.0_rc1 383
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOwchUpKYMelfdYERAvGvAJ4uXxdECvOBa1eVtCrPjuTkS5vdzwCfSMYM
-8ahKmcIVZF1uL0mraT+f4+U=
-=YQPJ
------END PGP SIGNATURE-----

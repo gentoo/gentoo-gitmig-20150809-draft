@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9d9e447fccfcbd4e101e7dd5c259336f konq-plugins-3.4.0_rc1-r1.ebuild 616
-MD5 b25c06285d1c3a0039cef31843f5f35b konq-plugins-3.4.0.ebuild 611
-MD5 abf821d9c2b06a7b3ccf75ac0fea3da1 ChangeLog 1378
+MD5 c10743a3bf278089fb7036e95844e955 ChangeLog 1475
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 fa9f3fb366750423779041679505f1c2 konq-plugins-3.4.0.ebuild 617
+MD5 9d9e447fccfcbd4e101e7dd5c259336f konq-plugins-3.4.0_rc1-r1.ebuild 616
 MD5 333f4787d9379a156dba6035f1fca6e3 files/digest-konq-plugins-3.4.0_rc1-r1 383
 MD5 231586b7509d98416a3043180cebfe60 files/digest-konq-plugins-3.4.0 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOwodUpKYMelfdYERAq/5AKCGQmKHHNxomt4RAJuF640VMQcAnQCeJ45m
-n2POZm/ZiAYSZovuSYYCPOo=
-=Gs90
------END PGP SIGNATURE-----

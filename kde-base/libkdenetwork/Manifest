@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8ccfaf55f2dbbff87ea2832f94c76784 libkdenetwork-3.4.0_rc1.ebuild 435
-MD5 72527c9e9eafdfa72b7c36b94deb17a6 ChangeLog 1287
+MD5 10aa93806ea043fddbb0e2df007745e3 ChangeLog 1385
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 627c40f3c9fa6650935c94f39763300a libkdenetwork-3.4.0.ebuild 437
+MD5 8ccfaf55f2dbbff87ea2832f94c76784 libkdenetwork-3.4.0_rc1.ebuild 435
+MD5 e26f5ad5dd76fbea2cfcd33ac6e7eb94 libkdenetwork-3.4.0.ebuild 443
 MD5 35ccfa3433a499de2fd98af78d32b7db files/digest-libkdenetwork-3.4.0_rc1 373
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-libkdenetwork-3.4.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOwOtUpKYMelfdYERAruVAJ9DYnmOyMCgvmhOZz82mj6fdPAY2QCfSyG1
-U15PTtpvPLHmu1s1YHt8UmY=
-=xj70
------END PGP SIGNATURE-----

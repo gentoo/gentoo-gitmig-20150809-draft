@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 47cf7ee8bf55e0e39cdc618292d19d39 atlantikdesigner-3.4.0_rc1.ebuild 482
-MD5 06ee0dbf6ba01c61a9f1e84ae28bf665 atlantikdesigner-3.4.0.ebuild 484
-MD5 a037e7648ff4cc96600d8e3b5f3b9ef6 ChangeLog 1342
+MD5 45295be68c1d9b1f6df0338ba9838ce8 ChangeLog 1443
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 231586b7509d98416a3043180cebfe60 files/digest-atlantikdesigner-3.4.0 69
+MD5 47cf7ee8bf55e0e39cdc618292d19d39 atlantikdesigner-3.4.0_rc1.ebuild 482
+MD5 b632e1ea3de7c950b32006b26ab41124 atlantikdesigner-3.4.0.ebuild 490
 MD5 333f4787d9379a156dba6035f1fca6e3 files/digest-atlantikdesigner-3.4.0_rc1 383
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOv7VUpKYMelfdYERAr21AJ92Y+m2N8lXK6Qu1EeHzse7HQXB8gCeKJWy
-kv5wH6b8Ziu2GYd/x2NAN6I=
-=c9Ou
------END PGP SIGNATURE-----
+MD5 231586b7509d98416a3043180cebfe60 files/digest-atlantikdesigner-3.4.0 69
