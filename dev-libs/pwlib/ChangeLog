@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.29 2003/07/02 09:29:52 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.30 2003/09/03 10:23:12 liquidx Exp $
+
+*pwlib-1.5.2 (03 Sep 2003)
+
+  03 Sep 2003; Alastair Tse <liquidx@gentoo.org> pwlib-1.5.2.ebuild:
+  version bump. fixes to ptlib-config installation. switch back to using
+  emake but set MAKEOPTS=-j1
 
   02 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> pwlib-1.5.0.ebuild:
   Had trouble with parallel make. Changing emake to make.
