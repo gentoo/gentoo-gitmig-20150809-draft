@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/cmucl-bin-18d.ebuild,v 1.2 2002/07/13 05:34:11 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/cmucl-bin-18d.ebuild,v 1.3 2002/07/13 18:55:17 george Exp $
 
 DESCRIPTION="CMUCL Lisp. This conforms to the ANSI Common Lisp Standard"
 HOMEPAGE="http://www.cons.org/cmucl/index.html"
@@ -27,5 +27,8 @@ src_install () {
 	#some tweaks to make it actually work; details in #4756
 	dosym /opt/cmucl/lib /opt/cmucl/lib/subsystems
 	fperms 755 /opt/cmucl/lib/motifd
+	fperms 755 /opt/cmucl/lib/config
+	#add short README on necessary environment for config
+	dodoc ${FILESDIR}/README.config
 }
 
