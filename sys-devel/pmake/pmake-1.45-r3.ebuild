@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r3.ebuild,v 1.1 2004/02/07 15:04:07 agriffis Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r3.ebuild,v 1.2 2004/02/20 22:18:47 vapier Exp $
 
 inherit eutils
 EPATCH_SOURCE="${FILESDIR}"
@@ -11,12 +9,14 @@ EPATCH_SUFFIX="patch"
 DESCRIPTION="BSD build tool to create programs in parallel"
 HOMEPAGE="http://www.netbsd.org/"
 SRC_URI="mirror://gentoo/${PN}_${PV}-11.tar.gz"
+
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 alpha ia64 amd64"
+KEYWORDS="x86 ~ppc alpha ia64 amd64"
 
 RDEPEND="virtual/glibc"
-DEPEND="${RDEPEND} >=sys-apps/sed-4"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A} && cd ${S} || die
@@ -50,7 +50,7 @@ src_install() {
 	doins mk/*
 
 	mv bmake pmake
-	dobin pmake
+	dobin pmake || die
 	dobin mkdep
 	mv make.1 pmake.1
 	doman mkdep.1 pmake.1
