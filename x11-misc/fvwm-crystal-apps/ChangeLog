@@ -1,0 +1,12 @@
+# ChangeLog for x11-misc/fvwm-crystal-apps
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fvwm-crystal-apps/ChangeLog,v 1.1 2004/08/09 15:12:28 lucass Exp $
+
+*fvwm-crystal-apps-0.5 (09 Aug 2004)
+
+  09 Aug 2004; Lukasz Strzygowski <lucass@gentoo.org> +metadata.xml,
+  +fvwm-crystal-apps-0.5.ebuild:
+  Initial commit. Named "fvwm-crystal-apps" instead of "apps" to
+  avoid possible name-collisions. Thanks for testing to Andrzej
+  Olender <arsen@gentoo.pl>.
+
