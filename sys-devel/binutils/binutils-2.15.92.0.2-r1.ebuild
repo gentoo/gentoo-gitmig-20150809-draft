@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r1.ebuild,v 1.16 2004/12/11 06:12:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r1.ebuild,v 1.17 2004/12/12 01:34:04 eradicator Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 
@@ -45,9 +45,6 @@ src_unpack() {
 			}' ${x}.orig > ${x}
 		rm -rf ${x}.orig
 	done
-
-	# Fix regexps in configure.host
-	epatch ${FILESDIR}/2.15/10_sparc_binutils-sparc64-multilib.patch
 
 	gnuconfig_update
 }
