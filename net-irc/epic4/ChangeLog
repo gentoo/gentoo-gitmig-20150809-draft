@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/epic4
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.42 2004/09/24 19:26:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.43 2004/10/19 12:28:24 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> epic4-2.0-r1.ebuild:
+  Stable on amd64.
 
   24 Sep 2004; Sven Wegener <swegener@gentoo.org> -epic4-1.1.14.ebuild,
   -epic4-1.1.16.ebuild:

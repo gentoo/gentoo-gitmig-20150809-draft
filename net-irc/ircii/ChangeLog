@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ircii
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.14 2004/10/01 01:30:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.15 2004/10/19 12:29:01 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> ircii-20040820.ebuild:
+  Stable on amd64.
 
   01 Oct 2004; Sven Wegener <swegener@gentoo.org> -ircii-20040216.ebuild,
   ircii-20040820.ebuild:

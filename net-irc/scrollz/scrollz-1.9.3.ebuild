@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-1.9.3.ebuild,v 1.4 2004/07/17 14:35:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-1.9.3.ebuild,v 1.5 2004/10/19 12:30:07 absinthe Exp $
 
 MY_P=ScrollZ-${PV}
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.scrollz.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ia64 ~amd64 ~ppc"
+KEYWORDS="x86 ~ia64 amd64 ~ppc"
 IUSE="ipv6 socks5 ssl"
 
 DEPEND="virtual/libc

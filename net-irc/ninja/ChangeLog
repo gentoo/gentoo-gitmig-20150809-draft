@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ninja
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.12 2004/08/14 12:08:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.13 2004/10/19 12:29:35 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> ninja-1.5.9_pre12.ebuild:
+  Stable on amd64.
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> ninja-1.5.9_pre12.ebuild:
   Marked stable on x86.
