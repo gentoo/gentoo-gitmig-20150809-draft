@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.8.1.ebuild,v 1.17 2004/07/14 20:08:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.8.1.ebuild,v 1.18 2004/07/29 03:25:22 tgall Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.ggi-project.org/"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ppc64"
 
 DEPEND="X? ( virtual/x11 )"
 
