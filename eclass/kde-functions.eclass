@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.73 2004/09/15 12:47:11 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.74 2004/10/31 20:08:48 vapier Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -14,15 +14,12 @@ need-automake() {
 
 	debug-print-function $FUNCNAME $*
 
-	unset WANT_AUTOMAKE_1_4
-	unset WANT_AUTOMAKE_1_5
-	unset WANT_AUTOMAKE_1_6
 	unset WANT_AUTOMAKE
 
 	case $1 in
-		1.4)	export WANT_AUTOMAKE_1_4=1;;
-		1.5)	export WANT_AUTOMAKE_1_5=1;;
-		1.6)	export WANT_AUTOMAKE_1_6=1;;
+		1.4)	export WANT_AUTOMAKE=1.4;;
+		1.5)	export WANT_AUTOMAKE=1.5;;
+		1.6)	export WANT_AUTOMAKE=1.6;;
 		1.7)	export WANT_AUTOMAKE='1.7';;
 		*)		echo "!!! $FUNCNAME: Error: unrecognized automake version $1 requested";;
 	esac
@@ -33,12 +30,10 @@ need-autoconf() {
 
 	debug-print-function $FUNCNAME $*
 
-	unset WANT_AUTOCONF_2_1
-	unset WANT_AUTOCONF_2_5
-
+	unset WANT_AUTOCONF
 	case $1 in
-		2.1)	export WANT_AUTOCONF_2_1=1;;
-		2.5)	export WANT_AUTOCONF_2_5=1;;
+		2.1)	export WANT_AUTOCONF=2.1;;
+		2.5)	export WANT_AUTOCONF=2.5;;
 		*)		echo "!!! $FUNCNAME: Error: unrecognized autoconf version $1 requested";;
 	esac
 

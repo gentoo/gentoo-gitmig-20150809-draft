@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.77 2004/10/19 19:51:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.78 2004/10/31 20:08:49 vapier Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -254,7 +254,7 @@ src_compile() {
 	grep -q ^autoconf: src/Makefile && confrule=autoconf
 	# autoconf-2.13 needed for this package -- bug 35319
 	# except it seems we actually need 2.5 now -- bug 53777
-	WANT_AUTOCONF_2_5=yes WANT_AUTOCONF=2.5 \
+	WANT_AUTOCONF=2.5 \
 		make -C src $confrule || die "make $confrule failed"
 
 	# This should fix a sandbox violation (see bug 24447)
