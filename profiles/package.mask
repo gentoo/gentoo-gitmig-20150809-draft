@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3414 2004/12/23 20:25:16 ticho Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3415 2004/12/24 02:52:50 kingtaco Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -129,7 +129,9 @@ app-shells/rssh
 # <jhuebel@gentoo.org> (29 Nov 2004)
 # masking vmware-workstation 5.0 betas, since the beta test
 # is closed to the public.
-=app-emulation/vmware-workstation-5.0_beta1
+# <kingtaco@gentoo.org> (23 Dec 2004)
+# beta is public
+#=app-emulation/vmware-workstation-5.0_beta1
 
 # Jeremy Huddleston <eradicator@gentoo.org> (29 Nov 2004)
 # Masking beta versions of amarok for testing
