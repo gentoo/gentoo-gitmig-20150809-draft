@@ -98,3 +98,4 @@
 *virtual/glibc
 *virtual/modutils
 *virtual/ssh
+*virtual/os-headers
