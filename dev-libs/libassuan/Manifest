@@ -1,3 +1,5 @@
-MD5 5363483470020296b0017a58ec1fa763 ChangeLog 341
-MD5 ce62c4e94f5ec16e955b8aaf4dfed196 libassuan-0.6.2.ebuild 545
 MD5 9a906ee3977f8f5e815569ae8fd8d056 files/digest-libassuan-0.6.2 67
+MD5 90eb33ade8aa7d88927db4aa64468bc6 files/digest-libassuan-0.6.4 67
+MD5 990b7b07a5305adcfe77e23e76e075c0 ChangeLog 445
+MD5 ce62c4e94f5ec16e955b8aaf4dfed196 libassuan-0.6.2.ebuild 545
+MD5 4a8ff8c4459e2172d8d8d544998ff097 libassuan-0.6.4.ebuild 562

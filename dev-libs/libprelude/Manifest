@@ -1,4 +1,4 @@
-MD5 5270462a06cf25671e775028c51ae835 ChangeLog 1453
-MD5 f9eb2fa3b268c82a25ee9eb2fdfaccc9 metadata.xml 311
-MD5 98e94fe7fb589c3903445ef0673f0337 libprelude-0.8.10.ebuild 951
 MD5 4df78be1fea7023bd39fa475deb50465 files/digest-libprelude-0.8.10 69
+MD5 5270462a06cf25671e775028c51ae835 ChangeLog 1453
+MD5 98e94fe7fb589c3903445ef0673f0337 libprelude-0.8.10.ebuild 951
+MD5 aa28b0cd63f86cdb3b93258c3d231756 metadata.xml 309

@@ -1,5 +1,5 @@
-MD5 1c5deb2518b60e86d26532f43ca42885 files/usb.usermap 1062
 MD5 2a696bc8aef7e7b84c42314e41cb3730 files/digest-openct-0.5.0 64
 MD5 e5c5f1a643e9b2b3d3800a8522f736fe files/openct.rc 598
-MD5 41de0aad13e1b3bb59741be297bb1293 openct-0.5.0.ebuild 1693
+MD5 1c5deb2518b60e86d26532f43ca42885 files/usb.usermap 1062
+MD5 b3f2949b43a664079771830cceeb98c1 openct-0.5.0.ebuild 1692
 MD5 a1169f6eee9af4a7d8eb331794866454 ChangeLog 370
