@@ -1,8 +1,18 @@
-MD5 2925fe4f902c08d386effbe98495ff24 eclipse-ve-bin-1.0_rc2.ebuild 949
-MD5 791f8320a3e835539dc26702ea073745 eclipse-ve-bin-1.0_rc1.ebuild 951
-MD5 8ddc61b6b70fd5b917277f9125481d99 ChangeLog 796
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 77e44bd4c6115276825f9145813c7af7 eclipse-ve-bin-1.0_rc2.ebuild 954
+MD5 2f067682aa4467c39caa8d8cc094c941 eclipse-ve-bin-1.0_rc1.ebuild 956
+MD5 f34fe0d8658ba3dae486f11662460b70 ChangeLog 958
 MD5 5d570fc39697cf3e8a12d5e55fda9036 metadata.xml 524
-MD5 ac1d65b5507aef450f886b8b7f63b0bf eclipse-ve-bin-1.0.2.ebuild 935
+MD5 6cccb34befd282a83d4b269a7d92c607 eclipse-ve-bin-1.0.2.ebuild 940
 MD5 6b94fee9902ad1f933156392a4a686c7 files/digest-eclipse-ve-bin-1.0_rc1 66
 MD5 a6782d3e24be4f3feca1ed07fc6cabed files/digest-eclipse-ve-bin-1.0_rc2 66
 MD5 588279a6a5ffd08b44eda74f99e75b89 files/digest-eclipse-ve-bin-1.0.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCPJea06ebR+OMO78RAsvFAJ99WFo1WPJEdWS000KT/snsmEAo6gCfRdo9
+id06voiZ2OJXPEkO2v0AW+o=
+=g8gs
+-----END PGP SIGNATURE-----
