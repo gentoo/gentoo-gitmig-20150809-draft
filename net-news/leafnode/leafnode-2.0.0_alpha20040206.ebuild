@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-2.0.0_alpha20040206.ebuild,v 1.2 2004/02/28 04:40:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-2.0.0_alpha20040206.ebuild,v 1.3 2004/06/25 00:25:49 agriffis Exp $
 
 DESCRIPTION="A USENET software package designed for small sites"
 SRC_URI="http://www-dt.e-technik.uni-dortmund.de/~ma/leafnode/beta/leafnode-2.0.0.alpha20040206a.tar.bz2"

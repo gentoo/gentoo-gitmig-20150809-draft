@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/yydecode/yydecode-0.2.10.ebuild,v 1.1 2004/06/19 01:29:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/yydecode/yydecode-0.2.10.ebuild,v 1.2 2004/06/25 00:27:44 agriffis Exp $
 
 DESCRIPTION="A decoder for yENC format, popular on Usenet"
 HOMEPAGE="http://yydecode.sourceforge.net/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/bnr2/bnr2-0.13.3.ebuild,v 1.1 2004/05/08 02:14:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/bnr2/bnr2-0.13.3.ebuild,v 1.2 2004/06/25 00:24:27 agriffis Exp $
 
 DESCRIPTION="A great newsreader for alt.binaries.*"
 HOMEPAGE="http://www.bnr2.org/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/newspost-1.20.ebuild,v 1.6 2004/06/21 00:51:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/newspost-1.20.ebuild,v 1.7 2004/06/25 00:26:00 agriffis Exp $
 
 DESCRIPTION="a usenet binary autoposter for unix"
 HOMEPAGE="http://newspost.unixcab.org/"

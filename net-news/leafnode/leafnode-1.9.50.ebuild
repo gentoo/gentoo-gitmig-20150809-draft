@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.50.ebuild,v 1.4 2004/04/24 14:21:12 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.50.ebuild,v 1.5 2004/06/25 00:25:49 agriffis Exp $
 
 S=${WORKDIR}/${P}.rel
 DESCRIPTION="A USENET software package designed for small sites"

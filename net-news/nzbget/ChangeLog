@@ -1,6 +1,6 @@
 # ChangeLog for net-news/nzbget
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/nzbget/ChangeLog,v 1.3 2004/06/19 00:53:55 swegener Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/nzbget/ChangeLog,v 1.4 2004/06/25 00:26:21 agriffis Exp $
 
   19 Jun 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Assigned package to the net-news herd.
