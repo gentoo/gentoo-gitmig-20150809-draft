@@ -1,4 +1,6 @@
 MD5 b25647abc9a253949ae796916a195fdc kvirc-3.0.0_beta2-r1.ebuild 2306
-MD5 fc6eccc995c55b44c5a611f4c6ba431b ChangeLog 2975
+MD5 0c7384233f11c5f6b93b22f6429eccde ChangeLog 3259
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+MD5 3fe5adcd4c90e5f7ccf92a34c13b9ead kvirc-3.0.0.ebuild 1679
 MD5 68d2153371007bdad609f225fdba63be files/digest-kvirc-3.0.0_beta2-r1 70
+MD5 4b55df13a25bb1556fa285ede1be937e files/digest-kvirc-3.0.0 65
