@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgamma/kgamma-1.0.1.ebuild,v 1.2 2004/12/02 15:39:23 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgamma/kgamma-1.0.1.ebuild,v 1.3 2005/01/14 23:10:34 danarmak Exp $
 
 inherit kde
 
@@ -13,5 +13,5 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc"
 IUSE=""
 
-DEPEND="!>=kde-base/kdelibs-3.3"
+DEPEND="!>=kde-base/kdelibs-3.3 !kde-base/kgamma !>=kde-base/kdegraphics-3.4.0_alpha1"
 need-kde 3
