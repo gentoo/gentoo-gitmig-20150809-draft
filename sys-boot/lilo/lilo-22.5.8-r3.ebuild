@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8-r3.ebuild,v 1.1 2004/05/09 20:58:10 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8-r3.ebuild,v 1.2 2004/05/11 07:34:06 mr_bones_ Exp $
 
 inherit mount-boot eutils flag-o-matic
 
@@ -19,7 +19,7 @@ KEYWORDS="-* ~x86"
 DEPEND=">=sys-apps/sed-4
 	dev-lang/nasm
 	>=sys-devel/bin86-0.15.5
-	devmap? (>=sys-libs/device-mapper-1.00.08)"
+	devmap? ( >=sys-libs/device-mapper-1.00.08 )"
 
 PROVIDE="virtual/bootloader"
 
