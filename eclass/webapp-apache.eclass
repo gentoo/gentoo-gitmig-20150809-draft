@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.10 2003/11/21 05:43:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.11 2003/11/26 19:20:13 stuart Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 # 
@@ -71,7 +71,7 @@ function webapp-determine-cgibindir ()
     #HTTPD_CGIBIN="`grep 'ScriptAlias /cgi-bin/' ${APACHECONF_COMMON} | cut -d ' ' -f 7`"
     #[ -z "${HTTPD_CGIBIN}" ] && HTTPD_CGIBIN="/home/httpd/cgi-bin/"
 	# temporary fix for webapps
-	HTTPD_ROOT="/var/www/localhost/cgi-bin/"
+	HTTPD_CGIBIN="/var/www/localhost/cgi-bin/"
 }
 
 function webapp-determine-installowner ()
