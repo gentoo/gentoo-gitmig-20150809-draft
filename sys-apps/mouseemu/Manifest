@@ -1,4 +1,14 @@
-MD5 0b569a702eb1cd4d89715cf5cd1b1751 ChangeLog 491
-MD5 d629e2c14f71b7b1283e5d8828caf220 mouseemu-0.12.ebuild 1165
-MD5 5cf2e359f02c75045868db291495d638 files/mouseemu-0.12-fix.diff 1715
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 001bea5d1473bad9a4e07ebcb34d7a14 ChangeLog 570
+MD5 526ee4c3f5f8712a917fd396f79a6c95 mouseemu-0.12.ebuild 1147
 MD5 674625ad158047d3662e040b63ff15d3 files/digest-mouseemu-0.12 59
+MD5 5cf2e359f02c75045868db291495d638 files/mouseemu-0.12-fix.diff 1715
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjPqyI7fK2cqeyXkRAtnmAJ9Kbqwl9Fpbsn2BxH9/QKFYeG1olQCgkhbn
+IalmSZ9/RdacSCJWqQ02TnU=
+=PieM
+-----END PGP SIGNATURE-----

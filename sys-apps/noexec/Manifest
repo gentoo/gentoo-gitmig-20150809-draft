@@ -1,3 +1,13 @@
-MD5 b34082b04c0e20c8074f4d724b7cdeac noexec-1.1.0.ebuild 592
-MD5 80ece045a656b12edf70c9ad6872ad78 ChangeLog 439
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ebe0d0083f587ccc00269d22a35e5289 ChangeLog 520
+MD5 d3bc99293eaa8e6803fdd916d4707eb3 noexec-1.1.0.ebuild 590
 MD5 5ba454a6dac51ece89aa6772aa467223 files/digest-noexec-1.1.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjPpQI7fK2cqeyXkRApvpAKCxezd2xSevczYR3kbZ8bDcVdlmEwCfVUO0
+VWD8shpCt0aC7l5e7Fgmp8A=
+=OWFP
+-----END PGP SIGNATURE-----
