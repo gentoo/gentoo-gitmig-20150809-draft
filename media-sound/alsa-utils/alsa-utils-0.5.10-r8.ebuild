@@ -12,7 +12,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 
 SLOT="0.5"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 

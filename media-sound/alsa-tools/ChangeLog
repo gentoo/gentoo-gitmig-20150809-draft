@@ -1,9 +1,15 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.5 2002/06/27 03:47:30 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.6 2002/10/19 22:28:29 cselkirk Exp $
 
 
 alsa-tools-0.9.0_rc1-r1 (27 Jun 2002)
+
+  20 Oct 2002; Calum Selkirk <cselkirk@gentoo.org>
+  alsa-tools-0.9.0_rc1-r1.ebuild :
+
+  Added ppc to KEYWORDS.
+
   27 Jun 2002; Spider <spider@gentoo.org> alsa-tools-0.9.0_rc1-r1.ebuild :
   Just changed the dep to >= on alsa-lib to get the new portage to not install the old rc, it works with rc2 ..
  
