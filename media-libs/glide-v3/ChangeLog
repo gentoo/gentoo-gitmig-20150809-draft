@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/glide-v3
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.11 2004/03/07 01:11:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.12 2004/06/14 08:53:35 battousai Exp $
+
+*glide-v3-3.10-r4 (13 Jun 2004)
+
+  13 Jun 2004; Bryan Stine <battousai@gentoo.org>; glide-v3-3.10-r4.ebuild:
+  Numerous fixes. Compiling with GCC 3.3 should now be fixed. A few
+  makefile.autoconf.am problems with assembly files have been fixed. The
+  build.3dfx script is no longer used, so no need to worry about chmod +x or the
+  die statement not working. The following bugs have been closed by this bump:
+  31366, 31490, 43660, and 41544.
 
   06 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   glide-v3-3.10-r3.ebuild:
