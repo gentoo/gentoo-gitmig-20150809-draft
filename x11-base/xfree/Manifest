@@ -2,7 +2,7 @@ MD5 f11ed1feb06c079f6d570a0ca23d647c xfree-4.1.0-r6.ebuild 2963
 MD5 41435989d0a4656bf428d17461596d15 xfree-4.3.0-r2.ebuild 31211
 MD5 e98a09bb43033618521bf046d8d218fd xfree-4.3.0-r1.ebuild 25059
 MD5 bd9ddb285a3d2f153656f2639025a9e0 xfree-4.2.1-r2.ebuild 24195
-MD5 e9c99878f74ca191d1b2558d197eb520 xfree-4.3.0-r3.ebuild 31991
+MD5 ddfa21b0128f0ca450c994156f28c4e7 xfree-4.3.0-r3.ebuild 31991
 MD5 8a4207db4c347fa656b5e32577fa3484 ChangeLog 33886
 MD5 c702fab31b9adac56477a9a5c16911c4 xfree-4.2.0-r12.ebuild 10302
 MD5 ab68703ef80727e333fd52ed5806df2d files/digest-xfree-4.1.0-r6 240
@@ -10,7 +10,7 @@ MD5 10e681917f61e8ed068030a373694906 files/xfree-4.2.x-home_end-keys.patch 666
 MD5 e7a9b48bfe345c76aa9a5bf5b3149ea4 files/digest-xfree-4.2.1-r2 10826
 MD5 be43a94caab2339e3a00372906f115a0 files/digest-xfree-4.3.0-r1 1384
 MD5 07227cb734bf8bc053f2965a3ff77fe6 files/digest-xfree-4.3.0-r2 1928
-MD5 d40e0634803515987e1f5eac29e91c83 files/digest-xfree-4.3.0-r3 2009
+MD5 610b4a52c769730e5e556d73012ae88d files/digest-xfree-4.3.0-r3 2009
 MD5 21d5f7a63f9dbf1948cc7df8b2bf67fc files/digest-xfree-4.2.0-r12 576
 MD5 6c0fe2e04a359ddc367dbd0dd00c61a1 files/xfree-4.2.x.-bison.fixes.patch 2854
 MD5 a9371704cf72bcb8d1aa713ca4b27546 files/XFree86-4.2.1-Xft11-Imakefile.patch 341
