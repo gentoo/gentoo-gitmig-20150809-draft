@@ -1,16 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.8 2002/12/20 06:45:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.9 2002/12/20 19:29:49 seemant Exp $
 
-IUSE="3dfx pam mmx truetype 3dnow nls"
+IUSE="nls 3dfx pam truetype 3dnow sse mmx"
 
 inherit eutils flag-o-matic gcc
 
 filter-flags "-funroll-loops"
 
 PATCH_VER="1.2"
-FT2_VER=2.1.2
-FC2_VER-"2.1"
+FT2_VER="2.1.2"
+FC2_VER="2.1"
 SISDRV_VER="141202-1"
 SAVDRV_VER="1.1.26t"
 
@@ -566,8 +566,7 @@ update_XftConfig() {
 		if [ "${CHECK1}" = "${CHECK2}" ]
 		then
 			echo
-			ewarn "Due to an invalid /etc/X11/XftConfig from
-x11-base/xfree-4.2.1,"
+			ewarn "Due to an invalid /etc/X11/XftConfig from x11-base/xfree-4.2.1,"
 			ewarn "/etc/X11/XftConfig is being updated automatically.  Your
 old"
 			ewarn "version of /etc/X11/XftConfig will be backed up as:"
@@ -636,8 +635,7 @@ pkg_postinst() {
 		if [ -x ${ROOT}/usr/X11R6/bin/ttmkfdir ]
 		then
 			ebegin "Creating fonts.scale files..."
-			for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d
--maxdepth 1)
+			for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
 			do
 				[ -z "$(ls ${x}/)" ] && continue
 				[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
@@ -657,8 +655,7 @@ ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
 		fi
 
 		ebegin "Generating fonts.dir files..."
-		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth
-1)
+		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
 		do
 			[ -z "$(ls ${x}/)" ] && continue
 			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
@@ -675,8 +672,7 @@ ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
 		eend 0
 
 		ebegin "Generating Xft Cache..."
-		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth
-1)
+		for x in $(find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1)
 		do
 			[ -z "$(ls ${x}/)" ] && continue
 			[ "$(ls ${x}/)" = "fonts.cache-1" ] && continue
@@ -688,7 +684,7 @@ ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
 				 -n "$(find ${x} -iname '*.pf[ab]' -print)" ]
 			then
 				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
-				${ROOT}/usr/X11R6/bin/xftcache ${x} &> /dev/null
+					${ROOT}/usr/X11R6/bin/xftcache ${x} &> /dev/null
 			fi
 		done
 		eend 0
