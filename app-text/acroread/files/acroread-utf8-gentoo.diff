@@ -1,0 +1,15 @@
+--- acroread.old	2003-02-16 04:12:58.000000000 -0800
++++ acroread	2003-02-16 04:13:53.000000000 -0800
+@@ -289,6 +289,12 @@
+     ;;
+ esac
+ 
++# Set the locale to something generic because it won't 
++# run under a UTF-8 locale and doesn't support localization
++# anyway.
++
++export LANG=POSIX
++
+ #
+ # Set the command.  Process any debug flags and exec.
+ #
