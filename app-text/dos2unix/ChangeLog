@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.8 2004/06/24 22:33:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.9 2004/06/28 02:28:14 ciaranm Exp $
+
+  28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> dos2unix-3.1.ebuild:
+  Added ~mips
 
   23 Jun 2004; Guy Martin <gmsoft@gentoo.org> dos2unix-3.1.ebuild:
   Marked stable on hppa.
