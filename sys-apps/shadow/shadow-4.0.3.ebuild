@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3.ebuild,v 1.8 2002/08/14 03:31:56 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3.ebuild,v 1.9 2002/08/19 23:01:43 murphy Exp $
 
 inherit libtool
 KEYWORDS="x86 sparc sparc64"
@@ -72,6 +72,7 @@ src_install() {
 	insopts -m0600 ; doins ${FILESDIR}/securetty
 	insopts -m0600 ; doins ${S}/etc/login.access
 	insopts -m0644 ; doins ${S}/etc/limits
+
 # From sys-apps/pam-login now
 #	insopts -m0644 ; doins ${FILESDIR}/login.defs
 	insinto /etc/pam.d ; insopts -m0644
@@ -103,6 +104,17 @@ src_install() {
 	dodoc ANNOUNCE INSTALL LICENSE README WISHLIST
 	docinto txt
 	dodoc HOWTO LSM README.* *.txt
+
+	# Fix sparc serial console
+	if [ "${ARCH}" == "sparc" -o "${ARCH}" == "sparc64" ]; then
+		cd ${D}/etc
+		cp securetty securetty.orig
+		# ttyS0 and its devfsd counterpart (Sparc serial port "A")
+		sed -e 's:\(vc/1\)$:tts/0\n\1:' \
+			-e 's:\(tty1\)$:ttyS0\n\1:' \
+			securetty.orig > securetty || die
+		rm securetty.orig
+	fi
 }
 
 pkg_postinst() {
