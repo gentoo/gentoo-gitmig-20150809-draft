@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/timidity-shompatches
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-shompatches/ChangeLog,v 1.1 2004/07/21 09:11:39 eradicator Exp $
+
+*timidity-shompatches-19960409 (21 Jul 2004)
+
+  21 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +timidity-shompatches-19960409.ebuild:
+  Additional Soundfonts for use with timidity. Ebuild submitted by Atsushi
+  Kobayashi <loudear@iswebnet.com> in bug #54246.
+
