@@ -1,24 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.6.ebuild,v 1.7 2004/04/26 02:50:06 mr_bones_ Exp $
-
-IUSE="threads"
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.6.ebuild,v 1.8 2004/04/28 01:41:02 vapier Exp $
 
 DESCRIPTION="Tool Command Language"
 HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
 SRC_URI="mirror://sourceforge/tcl/${PN}${PV}-src.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha mips ~hppa amd64 ~ppc64 ~ia64 s390"
+KEYWORDS="~x86 ~ppc ~sparc mips ~alpha arm ~hppa amd64 ~ia64 ~ppc64 s390"
+IUSE="threads"
 
 DEPEND="virtual/glibc"
 
 S=${WORKDIR}/${PN}${PV}
 
 pkg_setup() {
-
 	if use threads
 	then
 		ewarn ""
@@ -33,7 +30,6 @@ pkg_setup() {
 }
 
 src_compile() {
-
 	local local_config_use=""
 
 	if use threads
@@ -42,11 +38,12 @@ src_compile() {
 	fi
 
 	cd ${S}/unix
-	./configure --host=${CHOST} \
-				--prefix=/usr \
-				--mandir=/usr/share/man \
-				${local_config_use} \
-				|| die
+	./configure \
+		--host=${CHOST} \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		${local_config_use} \
+		|| die
 
 	emake CFLAGS="${CFLAGS}" || die
 }
