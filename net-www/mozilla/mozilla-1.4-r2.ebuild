@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r2.ebuild,v 1.3 2003/07/26 17:10:00 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r2.ebuild,v 1.4 2003/07/30 17:50:24 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -258,7 +258,7 @@ src_compile() {
 	then
 		myext="${myext},xmlterm"
 	fi
-	if [ -n "`use mozaccess-builtin`" ]
+	if [ -n "`use mozaccess`" ]
 	then
 		myext="${myext},access-builtin"
 	fi
