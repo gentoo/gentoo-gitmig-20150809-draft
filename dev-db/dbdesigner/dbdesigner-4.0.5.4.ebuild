@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbdesigner/dbdesigner-4.0.5.4.ebuild,v 1.1 2004/03/17 16:49:49 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbdesigner/dbdesigner-4.0.5.4.ebuild,v 1.2 2004/04/10 00:37:45 pyrania Exp $
 
 DESCRIPTION="DBDesigner 4 is a visual database design system that integrates database design, modeling, creation and maintenance into a single, seamless environment."
 HOMEPAGE="http://www.fabforce.net/dbdesigner4/"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=""
+DEPEND="sys-libs/lib-compat"
 #RDEPEND=""
 
 MY_PN="DBDesigner4"
