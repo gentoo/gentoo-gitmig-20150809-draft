@@ -10,6 +10,12 @@ diff -urN debianutils-1.16.7.old/installkernel debianutils-1.16.7/installkernel
       = "$1-$ver" ] ; then
        ln -sf "$1-$ver.old" "$dir/$1.old"
      else
+@@ -53,4 +53,4 @@
+   updatever config "$config"
+ fi
+ 
+-mkboot -i
++/usr/sbin/mkboot -i
 --- debianutils-1.16.7.old/mkboot	2002-10-16 20:20:42.000000000 -0700
 +++ debianutils-1.16.7/mkboot	2003-04-03 16:16:55.000000000 -0800
 @@ -14,7 +14,18 @@

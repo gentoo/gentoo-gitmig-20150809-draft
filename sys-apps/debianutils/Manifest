@@ -5,13 +5,13 @@ MD5 6bb319db9fdf7098486ca2d5ab78494e ChangeLog 6309
 MD5 53d18d0342eaea1943704acbf6d945cb debianutils-1.16.7-r4.ebuild 1461
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 a497960da56a8ef8cb07158e15407c18 files/debianutils-1.16.7-gcc33.patch 2588
-MD5 a8228055570d24b5a5f42658fe5051b3 files/debianutils-1.16.7-gentoo.patch 2878
+MD5 233aa843e605b70a65b0b7f0dee0cbab files/debianutils-1.16.7-gentoo.patch 2964
 MD5 3f67e66ea1d7aa13843f253310322f51 files/debianutils-compress.patch 743
 MD5 f668f7cf3760bd5f131cec5de5602523 files/digest-debianutils-1.16.7-r4 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBYzW+HTu7gpaalycRAjBOAJ0UqS05q0NxdamLboRRBvjX1XQWuQCg7Txl
-FQI3W+6NuiOKDbn5VbBgCNQ=
-=fw5z
+iD8DBQFBYzcMHTu7gpaalycRAiKgAKCUMf9LApnnxNijN+sPMdlZuqdNLACfbb7O
+tlhA3AmRLwJoOohECln4O+A=
+=kpRC
 -----END PGP SIGNATURE-----
