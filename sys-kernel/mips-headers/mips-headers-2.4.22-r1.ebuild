@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.22-r1.ebuild,v 1.2 2003/09/07 07:26:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.22-r1.ebuild,v 1.3 2003/09/16 02:13:17 kumba Exp $
 
 
 ETYPE="headers"
@@ -31,6 +31,9 @@ src_unpack() {
 
 	# Update the vanilla sources with linux-mips CVS changes
 	cat ${WORKDIR}/mipscvs-${OKV}-${CVSDATE}.diff | patch -p1
+
+	# Big Endian Fix
+	cat ${FILESDIR}/bigendian-byteorder-fix.patch | patch -p1
 
 	# Patch arch/mips/Makefile for gcc
 	cat ${FILESDIR}/mipscvs-${OKV}-${CVSDATE}-makefile-fix.patch | patch -p0
