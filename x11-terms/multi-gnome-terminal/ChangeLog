@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/multi-gnome-terminal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.12 2002/07/29 20:59:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/ChangeLog,v 1.13 2002/08/01 15:16:53 azarah Exp $
+
+*multi-gnome-terminal-1.5.2-r2 (1 Aug 2002)
+
+  1 Aug 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  MDK.
 
   29 Jul 2002; Martin Schlemmer <azarah@gentoo.org> multi-gnome-terminal-1.5.2.ebuild :
   
