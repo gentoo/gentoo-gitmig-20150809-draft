@@ -4,7 +4,7 @@ MD5 597da4dbfadd39beb9c20f2bc28e0e0e rsync-2.6.0-r4.ebuild 2434
 MD5 e04533ca371c57d742250cc0622c005e files/digest-rsync-2.6.0-r4 204
 MD5 62972fab38bf033135efad0bd025f65b files/digest-rsync-2.6.3-r1 63
 MD5 b8cb6d507de74f71738f0f50774c35d0 files/rsync-pathsanitize.patch 235
-MD5 0df055d742992f96e03a9933937804f7 files/rsyncd.conf 507
+MD5 f92735d68f21c6516c8916b484ecd848 files/rsyncd.conf 518
 MD5 39b5aab74752c74d7d600265dd32de05 files/rsyncd.conf.d 348
 MD5 85d62854c15e2e275184c9af7e5d6d18 files/rsyncd.init.d 438
 MD5 b447910de9fdd6425c64002fa7d1ab83 files/rsync-2.6.0-sanitize.patch 5671
