@@ -1,7 +1,7 @@
 #!/bin/bash
 
 z=`find ${D} -name "info" -type d`
-
+echo "info:"
 for x in ${z} 
 do
 	rm -f ${x}/dir
@@ -18,6 +18,7 @@ do
 			ln -sf ${linkto} ${y}.gz
 			rm ${y}
 	    	else
+			echo ${y}
 			gzip -f -9 ${y}
             	fi	
 	done

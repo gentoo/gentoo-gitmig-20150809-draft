@@ -22,16 +22,16 @@ fi
 
 # Set Var for QT
 
-if [ -d /usr/lib/qt-x11-2.2.0 ] ; then
-  export QTDIR="/usr/lib/qt-x11-2.2.0"
-  PATH=$PATH:/usr/lib/qt-x11-2.2.0/bin
+if [ -d /usr/lib/qt ] ; then
+  export QTDIR="/usr/lib/qt"
+  PATH=$PATH:/usr/lib/qt/bin
 fi
 
 # Set Var for KDE
 
-if [ -d /opt/kde ] ; then
-  export KDEDIR="/opt/kde"
-  PATH=$PATH:/opt/kde/bin
+if [ -d /opt/kde2 ] ; then
+  export KDEDIR="/opt/kde2"
+  PATH=$PATH:/opt/kde2/bin
 fi
 
 # Set Var for GNOME

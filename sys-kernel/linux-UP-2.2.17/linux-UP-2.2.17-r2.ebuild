@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.2.17/linux-UP-2.2.17-r2.ebuild,v 1.2 2000/10/03 16:02:07 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.2.17/linux-UP-2.2.17-r2.ebuild,v 1.3 2000/10/23 11:27:16 achim Exp $
 
 P=linux-UP-2.2.17
 A="linux-2.2.17.tar.bz2 i2c-2.5.2.tar.gz lm_sensors-2.5.2.tar.gz
@@ -93,8 +93,8 @@ src_unpack() {
 ##    sed -e 's:-O2:${CFLAGS}:g' Makefile.orig > Makefile
     try make include/linux/version.h
     try make symlinks
-    cp ${O}/files/${P}-r1.config .config
-    cp ${O}/files/${P}-r1.autoconf include/linux/autoconf.h
+    cp ${O}/files/${P}-r2.config .config
+    cp ${O}/files/${P}-r2.autoconf include/linux/autoconf.h
     cp ${O}/files/gentoolinux_logo.h include/linux/linux_logo.h
 
     cd ${S}/lm_sensors-2.5.2

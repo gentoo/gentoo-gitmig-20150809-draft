@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.11-r1.ebuild,v 1.4 2000/09/21 04:23:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-1.2.11-r1.ebuild,v 1.5 2000/10/23 11:27:16 achim Exp $
 
 P=openldap-1.2.11
 A=${P}.tgz
@@ -24,7 +24,6 @@ src_compile() {
 src_install() {                               
   cd ${S}
   make prefix=${D}/usr sysconfdir=${D}/etc/openldap localstatedir=${D}/var/state install
-  prepman
 
   dodoc ANNOUNCEMENT CHANGES COPYRIGHT README LICENSE
   docinto rfc

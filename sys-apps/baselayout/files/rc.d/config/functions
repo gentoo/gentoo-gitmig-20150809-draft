@@ -7,7 +7,7 @@ ENOCH_NORMAL=$'\e[0m'
 ENOCH_HILITE=$'\e[36;01m'
 ENOCH_ENDCOL=$'\e[A\e[73G'
 
-export PATH="/bin:/sbin:/usr/bin:/usr/sbin"
+export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/lib/portage/bin"
 
 function eecho() {
 	echo "${*}"

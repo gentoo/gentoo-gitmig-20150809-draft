@@ -5,8 +5,8 @@ if [ -n "${DEBUG}" ]
 then
 	exit
 fi	
-echo "test:"
-z=`find ${D} -perm +444 -type f`
+echo "strip:"
+z=`find ${D} -type f \( -perm -0100 -or -perm -0010 -or -perm -0001 -or -name "*.so" -or -name "*.so.*" \)`
 
 for x in $z
 do

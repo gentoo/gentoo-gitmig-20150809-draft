@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.14.2.7.1.ebuild,v 1.1 2000/10/18 04:07:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.14.2.7.1.ebuild,v 1.2 2000/10/23 11:27:16 achim Exp $
 
 A="apache_1.3.14.tar.gz mod_ssl-2.7.1-1.3.14.tar.gz"
 S=${WORKDIR}/apache_1.3.14
@@ -26,6 +26,7 @@ src_compile() {
 	--suexec-userdir=public_html --suexec-uidmin=96 \
 	--suexec-gidmin=96 --suexec-safepath="/bin:/usr/bin"
     try make
+    try make certificate TYPE=dummy
 }
 
 src_install() { 
@@ -45,6 +46,7 @@ src_install() {
 pkg_config() {
 
   source ${ROOT}/var/db/pkg/install.config
+  source ${ROOT}/etc/rc.d/config/functions
 
   if [ "$ServerName" = "" ]
   then
@@ -71,6 +73,7 @@ pkg_config() {
 
 pkg_prerm() {
 
+  source ${ROOT}/etc/rc.d/config/functions
   if [ "$ROOT" = "/" ] 
   then
     if [ -f /var/run/httpd.pid ]

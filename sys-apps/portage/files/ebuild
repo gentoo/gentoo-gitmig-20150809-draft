@@ -227,18 +227,22 @@ dyn_fetch() {
 			do
 				if [ ! -e ${DISTDIR}/${y} ] 
 				then
-			    	if [ $y == ${x##*/} ]
-			    	then
+			    		if [ $y == ${x##*/} ]
+			    		then
 						echo ">>> Trying site ${x}..."
 						eval ${FETCHCOMMAND}
 						if [ $? -ne 0 ]
-		        		then
-			    			echo '!!!'" Couldn't download ${y}.  Aborting."
-			    			exit 1
+		        			then
+			    				echo '!!!'" Couldn't download ${y}."
 						fi
-		    		fi
+		    			fi
 				fi
 			done
+			if [ ! -e ${DISTDIR}/${y} ]
+			then
+  				echo '!!!'" Couldn't download ${y}.  Aborting."
+				exit 1
+			fi
 			echo
     	fi	
 	done
@@ -534,6 +538,9 @@ dyn_install() {
     echo
     echo ">>> Install ${PF} into ${D} category ${CATEGORY}"
     src_install
+    prepallman
+    prepallinfo
+    prepallstrip
     install -d -m0700 ${D}var/db/pkg/${CATEGORY}/${PF}
     cp ${STARTDIR}/${EBUILD} ${D}var/db/pkg/${CATEGORY}/${PF}
     echo ">>> Completed installing into ${D}"
