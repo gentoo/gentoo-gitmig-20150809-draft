@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.8.1-r1.ebuild,v 1.1 2004/12/29 04:25:29 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.8.1-r1.ebuild,v 1.2 2005/01/08 23:21:13 slarti Exp $
 
 inherit gnome2 eutils
 
