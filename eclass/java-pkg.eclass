@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.9 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.10 2004/07/31 15:18:50 axxo Exp $
 
 inherit base
 ECLASS=java-pkg
@@ -14,34 +14,99 @@ java-pkg_doclass()
 	java-pkg_dojar $*
 }
 
-java-pkg_dojar()
-{
+java-pkg_do_init_() {
 	debug-print-function ${FUNCNAME} $*
-	[ -z "$1" ]
 	
 	if [ -z "${JARDESTTREE}" ] ; then
 		JARDESTTREE="lib"
+		SODESTTREE="lib"
 	fi
 	
 	# Set install paths
 	sharepath="${DESTTREE}/share"
 	if [ "$SLOT" == "0" ] ; then
-		
-		shareroot="${sharepath}/${PN}"
-		jardest="${shareroot}/${JARDESTTREE}"
-		package_env="${D}${shareroot}/package.env"
+		pkg_name="${PN}"
 	else
-		shareroot="${sharepath}/${PN}-${SLOT}"
-		jardest="${shareroot}/${JARDESTTREE}"
-		package_env="${D}${shareroot}/package.env"
+		pkg_name="${PN}-${SLOT}"
 	fi
+		
+	shareroot="${sharepath}/${pkg_name}"
+	jardest="${shareroot}/${JARDESTTREE}"
+	sodest="/opt/${pkg_name}/${SODESTTREE}"
+	package_env="${D}${shareroot}/package.env"
 
 	debug-print "JARDESTTREE=${JARDESTTREE}"
+	debug-print "SODESTTREE=${SODESTTREE}"
 	debug-print "sharepath=${sharepath}"
 	debug-print "shareroot=${shareroot}"
 	debug-print "jardest=${jardest}"
+	debug-print "sodest=${sodest}"
 	debug-print "package_env=${package_env}"
+}
 
+java-pkg_do_write_() {
+	# Create package.env
+	echo "DESCRIPTION=${DESCRIPTION}" > "${package_env}"
+	if [ -n ${cp_pkg} ]; then
+		echo "CLASSPATH=${cp_prepend}:${cp_pkg}:${cp_append}" >> "${package_env}"
+	fi
+	if [ -n ${lp_pkg} ]; then
+		echo "LIBRARY_PATH=${lp_prepend}:${lp_pkg}:${lp_append}" >> "${package_env}"
+	fi
+}
+
+java-pkg_do_getsrc_() {
+	# Check for symlink
+	if [ -L "${i}" ] ; then
+		cp "${i}" "${T}"
+		echo "${T}"/`/usr/bin/basename "${i}"`
+
+	# Check for directory
+	elif [ -d "${i}" ] ; then
+		echo "java-pkg: warning, skipping directory ${i}"
+		continue
+	else
+		echo "${i}"
+	fi
+}
+
+
+java-pkg_doso()
+{
+	debug-print-function ${FUNCNAME} $*
+	[ -z "$1" ]
+
+	java-pkg_do_init_
+	
+	# Check for arguments
+	if [ -z "$*" ] ; then
+		echo "${0}: at least one argument needed"
+		exit 1
+	fi
+
+	# Make sure directory is created
+	if [ ! -d "${D}${sodest}" ] ; then
+		install -d "${D}${sodest}"
+	fi
+
+	for i in $* ; do
+		mysrc=$(java-pkg_do_getsrc_)
+
+		# Install files
+		install -m 0644 "${mysrc}" "${D}${sodest}"
+	done
+	lp_pkg="${sodest}"
+	
+	java-pkg_do_write_
+}
+
+
+java-pkg_dojar()
+{
+	debug-print-function ${FUNCNAME} $*
+	[ -z "$1" ]
+
+	java-pkg_do_init_
 
 	if [ -n "${DEP_PREPEND}" ] ; then
 		for i in ${DEP_PREPEND}
@@ -94,18 +159,7 @@ java-pkg_dojar()
 	fi
 
 	for i in $* ; do
-		# Check for symlink
-		if [ -L "${i}" ] ; then
-			cp "${i}" "${T}"
-			mysrc="${T}"/`/usr/bin/basename "${i}"`
-
-		# Check for directory
-		elif [ -d "${i}" ] ; then
-			echo "dojar: warning, skipping directory ${i}"
-			continue
-		else
-			mysrc="${i}"
-		fi
+		mysrc=$(java-pkg_do_getsrc_)
 
 		# Install files
 		install -m 0644 "${mysrc}" "${D}${jardest}"
@@ -118,9 +172,7 @@ java-pkg_dojar()
 		fi
 	done
 	
-	# Create package.env
-	echo "DESCRIPTION=${DESCRIPTION}" > "${package_env}"
-	echo "CLASSPATH=${cp_prepend}:${cp_pkg}:${cp_append}" >> "${package_env}"
+	java-pkg_do_write_
 }
 
 java-pkg_dowar()
