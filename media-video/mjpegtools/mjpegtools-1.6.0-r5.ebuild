@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r5.ebuild,v 1.2 2003/02/13 13:29:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r5.ebuild,v 1.3 2003/02/18 20:47:24 mholzer Exp $
 
 IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi"
 
@@ -33,6 +33,7 @@ DEPEND="${RDEPEND}
 	3dnow? ( dev-lang/nasm )
 	sse? ( dev-lang/nasm )
 	media-libs/libdv
+	media-libs/svgalib
 	arts? ( kde-base/arts )"
 
 if [ `use mmx` ] ; then
@@ -47,12 +48,14 @@ fi
 src_unpack() {
 	
 	unpack ${A}
-	cd quicktime4linux-1.4-patch
-	cp libmjpeg.h libmjpeg.h.orig
-	sed -e "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" libmjpeg.h.orig > libmjpeg.h
-	cp jpeg_old.h jpeg_old.h.orig
-	sed -e "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" jpeg_old.h.orig > jpeg_old.h
-	elibtoolize
+	if [ `use quicktime` ] ; then 
+		cd quicktime4linux-1.4-patch
+		cp libmjpeg.h libmjpeg.h.orig
+		sed -e "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" libmjpeg.h.orig > libmjpeg.h
+		cp jpeg_old.h jpeg_old.h.orig
+		sed -e "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" jpeg_old.h.orig > jpeg_old.h
+		elibtoolize
+	fi
 }
 
 src_compile() {
@@ -80,7 +83,7 @@ src_compile() {
 		cd ${WORKDIR}/quicktime4linux-1.4-patch
 		./configure || die
 		make || die
-	)
+	) 
 
 	cd ${S}
 	econf ${myconf} || die
