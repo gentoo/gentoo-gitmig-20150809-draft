@@ -1,5 +1,5 @@
-MD5 2c4a09b17f081c637130bbc4be52eb01 ChangeLog 477
+MD5 895a7df2a35e62a2a4c6fcb1c3c3b535 ChangeLog 584
+MD5 054155b2a17cf20e18bd852a1a484691 liboil-0.2.0.ebuild 814
 MD5 daa5b5804d181bac157ac3a6939bb152 metadata.xml 221
-MD5 a456e6cad065b2c0ca510fd77734e6b5 liboil-0.2.0.ebuild 806
 MD5 9224d2f16c82093310f3ec19f52c3ef3 files/digest-liboil-0.2.0 64
 MD5 5d5ac560f35118a370bed2a7a948341c files/liboil-0.2.0-altivec.patch 4732
