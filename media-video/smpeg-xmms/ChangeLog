@@ -1,6 +1,11 @@
 # ChangeLog for media-video/smpeg-xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smpeg-xmms/ChangeLog,v 1.3 2003/02/12 07:40:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smpeg-xmms/ChangeLog,v 1.4 2003/07/12 21:12:53 aliz Exp $
+
+*smpeg-xmms-0.3.5 (13 Feb 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *smpeg-xmms-0.3.4-r2 (03 Aug 2002)
   

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realone/realone-1.ebuild,v 1.8 2003/05/22 09:08:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realone/realone-1.ebuild,v 1.9 2003/07/12 21:12:53 aliz Exp $
 
 IUSE="gnome kde"
 
@@ -14,7 +14,7 @@ SRC_URI="http://docs.real.com/docs/playerpatch/unix/${RV9_PATCH}
 	 http://195.141.101.151/direct/${INSTALL_BINARY}"
 
 SLOT="0"
-KEYWORDS="~x86 -ppc -sparc "
+KEYWORDS="x86 -ppc -sparc "
 LICENSE="realone" # The LICENSE file in /opt/RealPlayer9
 
 DEPEND="virtual/x11"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gst-player/gst-player-0.5.1.ebuild,v 1.6 2003/07/09 16:47:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gst-player/gst-player-0.5.1.ebuild,v 1.7 2003/07/12 21:12:42 aliz Exp $
 
 # debug since its still in devel
 inherit gnome2 debug
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gstreamer.net/apps/gst-player/"
 SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND=">=media-libs/gstreamer-0.6.1

@@ -1,6 +1,6 @@
 # Copyright 2003 Fridtjof Busse <fridtjof@fbunet.de>.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.2.ebuild,v 1.1 2003/05/06 19:52:52 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.2.ebuild,v 1.2 2003/07/12 21:12:53 aliz Exp $
 
 DESCRIPTION="OSD frontend for xine"
 HOMEPAGE="http://oxine.sourceforge.net/"
@@ -14,7 +14,7 @@ DEPEND=">=media-libs/xine-lib-1_beta8
 IUSE="nls lirc"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 S=${WORKDIR}/${P}
 SRC_URI="mirror://sourceforge/oxine/${P}.tar.gz"

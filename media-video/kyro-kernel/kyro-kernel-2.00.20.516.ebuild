@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kyro-kernel/kyro-kernel-2.00.20.516.ebuild,v 1.1 2003/06/02 14:44:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kyro-kernel/kyro-kernel-2.00.20.516.ebuild,v 1.2 2003/07/12 21:12:47 aliz Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.powervr.com/Drivers/Linux/${MY_P}.tgz"
 
 SLOT="${KV}"
 LICENSE="ImaginationTechnologies"
-KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa -arm"
+KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa -arm"
 
 DEPEND="virtual/x11
 	virtual/linux-sources

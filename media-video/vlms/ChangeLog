@@ -1,10 +1,10 @@
 # ChangeLog for media-video/vlms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlms/ChangeLog,v 1.4 2003/02/12 07:42:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlms/ChangeLog,v 1.5 2003/07/12 21:12:56 aliz Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-vlms-0.2.2 (02 Aug 2002)
+*vlms-0.2.2 (02 Aug 2002)
 
   02 Aug 2002; Nick Hadaway <raker@gentoo.org>
   vlms-0.2.2.ebuild, files/digest-vlms-0.2.2 :

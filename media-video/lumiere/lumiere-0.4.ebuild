@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/lumiere/lumiere-0.4.ebuild,v 1.2 2003/03/21 18:21:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lumiere/lumiere-0.4.ebuild,v 1.3 2003/07/12 21:12:49 aliz Exp $
 
 inherit gnome2 debug
 
@@ -12,7 +12,7 @@ DESCRIPTION="gnome2 front-end for mplayer"
 HOMEPAGE="http://www.nongnu.org/lumiere"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 RDEPEND="media-video/mplayer
 	gnome-base/nautilus"

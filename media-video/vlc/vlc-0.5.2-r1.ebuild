@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.5.2-r1.ebuild,v 1.2 2003/03/29 17:32:15 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.5.2-r1.ebuild,v 1.3 2003/07/12 21:12:56 aliz Exp $
 
 IUSE="arts qt ncurses dvd gtk nls 3dfx esd kde X alsa ggi oggvorbis gnome xv oss sdl fbcon aalib"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.videolan.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
 DEPEND="X? ( virtual/x11 )
 	qt? ( x11-libs/qt )

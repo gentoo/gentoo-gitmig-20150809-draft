@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.9.6.ebuild,v 1.3 2003/04/23 01:35:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.9.6.ebuild,v 1.4 2003/07/12 21:12:31 aliz Exp $
 
 IUSE="qt kde gnome"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ati.com"
 A="fglrx-glc22-4.3.0-${PV}.i586.rpm"
 SLOT="${KV}"
 LICENSE="ATI GPL-2 QPL-1.0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 
 DEPEND=">=virtual/linux-sources-2.4
 	>=sys-libs/glibc-2.2.2

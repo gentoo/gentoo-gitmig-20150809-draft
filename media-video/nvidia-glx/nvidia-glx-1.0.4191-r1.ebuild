@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.4191-r1.ebuild,v 1.2 2003/02/13 13:31:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.4191-r1.ebuild,v 1.3 2003/07/12 21:12:50 aliz Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.nvidia.com/"
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="~x86 -ppc -sparc -alpha"
+KEYWORDS="x86 -ppc -sparc -alpha"
 
 # We need xfree-4.2.0-r9 to support the dynamic libGL* stuff
 DEPEND="virtual/glibc

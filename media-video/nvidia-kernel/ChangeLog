@@ -1,6 +1,6 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.37 2003/07/12 16:03:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.38 2003/07/12 21:12:51 aliz Exp $
 
   12 Jul 2003; Martin Schlemmer <azarah@gentoo.org>
   files/1.0.4363/NVIDIA_kernel-1.0-4363-highpmd.diff:
@@ -91,6 +91,11 @@
   23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> nvidia-kernel-1.0.4191-r1.ebuild :
 
   Add tasklet patch for 2.5 kernels in again.
+
+*nvidia-kernel-1.0.4191-r2 (16 Mar 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *nvidia-kernel-1.0.4191-1 (18 Dec 2002)
 

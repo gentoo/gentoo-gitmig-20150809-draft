@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.5.ebuild,v 1.2 2003/06/12 21:13:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.5.ebuild,v 1.3 2003/07/12 21:12:53 aliz Exp $
 
 inherit eutils 
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.tomchance.uklinux.net/projects/quickrip.shtml"
 
 LICENSE="GPL-2" 
 SLOT="0" 
-KEYWORDS="~x86 -ppc -mips"
+KEYWORDS="x86 -ppc -mips"
 IUSE=""
 
 DEPEND="virtual/glibc 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.1.27.ebuild,v 1.3 2003/06/18 12:39:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.1.27.ebuild,v 1.4 2003/07/12 21:12:53 aliz Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.cadsoft.de/vdr/Developer/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="media-tv/linuxtv-dvb
 	sys-libs/ncurses

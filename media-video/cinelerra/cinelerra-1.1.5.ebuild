@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.5.ebuild,v 1.2 2003/05/06 08:26:20 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.1.5.ebuild,v 1.3 2003/07/12 21:12:33 aliz Exp $
 
 inherit gcc eutils
 export WANT_GCC_3="yes"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/x11
 	virtual/glibc

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0_alpha3.ebuild,v 1.3 2003/07/06 08:38:40 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0_alpha3.ebuild,v 1.4 2003/07/12 21:12:35 aliz Exp $
 
 inherit eutils libtool
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_unpack() {
 

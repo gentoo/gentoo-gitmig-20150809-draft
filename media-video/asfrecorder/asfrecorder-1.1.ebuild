@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/asfrecorder/asfrecorder-1.1.ebuild,v 1.2 2003/02/13 13:22:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/asfrecorder/asfrecorder-1.1.ebuild,v 1.3 2003/07/12 21:12:30 aliz Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://sourceforge.net/projects/${P}/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_PN}.zip"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/sampeg3
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sampeg3/ChangeLog,v 1.1 2003/06/27 12:43:15 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sampeg3/ChangeLog,v 1.2 2003/07/12 21:12:53 aliz Exp $
+
+*sampeg3-0.0.3 (27 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
   27 Jun 2003; Lars Weiler <pylon@gentoo.org> :
   Initial import.
