@@ -1,8 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.64 2003/11/06 16:12:25 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.65 2003/11/17 19:19:16 nakano Exp $
 
 *postgresql-7.3.4-r1 (06 Nov 2003)
+
+  17 Nov 2003; Masatomo Nakano <nakano@gentoo.org> postgresql-7.3.4-r1.ebuild:
+  Marked as stable.
 
   06 Nov 2003; Masatomo Nakano <nakano@gentoo.org> postgresql-7.3.4-r1.ebuild:
   Enable recursive queries like Oracle's 'CONNECT BY' feature.

@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.4-r1.ebuild,v 1.1 2003/11/06 16:12:25 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.4-r1.ebuild,v 1.2 2003/11/17 19:19:16 nakano Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS."
 
-SRC_URI="mirror://mirror/v${PV}/${P}.tar.gz
+SRC_URI="mirror://postgresql/v${PV}/${P}.tar.gz
 	pg-hier? ( http://gppl.terminal.ru/hier-Pg7.3-0.3.tar.gz )"
 HOMEPAGE="http://www.postgresql.org/
 http://gppl.terminal.ru/index.eng.html"
 
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~hppa"
+KEYWORDS="x86 ppc sparc alpha amd64 hppa"
 IUSE="ssl nls java python tcltk perl libg++ pam readline zlib pg-hier"
 
 filter-flags -ffast-math
