@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/gnumail/gnumail-1.1.0.ebuild,v 1.6 2004/06/24 21:40:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/gnumail/gnumail-1.1.0.ebuild,v 1.7 2004/06/30 03:24:31 agriffis Exp $
 
 inherit gnustep
 
-IUSE="${IUSE} xface crypt"
+IUSE="crypt xface"
 S=${WORKDIR}/GNUMail
 
 newdepend dev-util/gnustep-gui
