@@ -1,0 +1,66 @@
+diff -urN fetchmail-5.9.14/configure fetchmail-5.9.14-modified/configure
+--- fetchmail-5.9.14/configure	Wed Sep  4 08:43:37 2002
++++ fetchmail-5.9.14-modified/configure	Wed Sep 11 16:57:12 2002
+@@ -6949,7 +6949,7 @@
+ #define KERBEROS_V5 1
+ EOF
+ 
+-        test "$dir" != "/usr" && CEFLAGS="$CEFLAGS -I$dir/include"
++        test "$dir" != "/usr" && CEFLAGS="$CEFLAGS"
+         LDEFLAGS="$LDEFLAGS -L$dir/lib"
+        LIBS="$LIBS $ac_krblibs $libk5crypto"
+         with_kerberos5=$dir
+@@ -7259,7 +7259,7 @@
+   then
+     ###	ssl.h found under openssl.  Use openssl configuration preferentially
+     echo "Enabling OpenSSL support in $with_ssl"
+-    CEFLAGS="$CEFLAGS -I$with_ssl/include -I$with_ssl/include/openssl"
++    CEFLAGS="$CEFLAGS -I$with_ssl/include/openssl"
+     ###	OpenBSD comes with ssl headers
+   elif test -r /usr/include/ssl/ssl.h
+   then
+@@ -7267,7 +7267,7 @@
+     CEFLAGS="$CEFLAGS -I/usr/include/ssl"
+   else
+     echo "Enabling SSLeay support in $with_ssl"
+-    CEFLAGS="$CEFLAGS -I$with_ssl/include"
++    CEFLAGS="$CEFLAGS"
+   fi
+   LDEFLAGS="$LDEFLAGS -L$with_ssl/lib"
+   LIBS="$LIBS -lssl -lcrypto"
+@@ -7484,7 +7484,7 @@
+     do
+       if test -f "$dir/include/hesiod.h"
+       then
+-        CEFLAGS="$CEFLAGS -DHESIOD -I$dir/include"
++        CEFLAGS="$CEFLAGS -DHESIOD"
+         LDEFLAGS="$LDEFLAGS -L$dir/lib"
+         LIBS="$LIBS -lhesiod"
+         with_hesiod=$dir
+@@ -7494,7 +7494,7 @@
+     ;;
+ *)
+     # Path given
+-    CEFLAGS="$CEFLAGS -DHESIOD -I$with_hesiod/include"
++    CEFLAGS="$CEFLAGS -DHESIOD"
+     LDEFLAGS="$LDEFLAGS -L$with_hesiod/lib"
+     LIBS="$LIBS -lhesiod"
+     ;;
+@@ -7513,7 +7513,7 @@
+   fi
+   if test "$with_gssapi" != "yes" -a -n "$with_gssapi"
+   then
+-    CFLAGS="$CFLAGS -I$with_gssapi/include"
++    CFLAGS="$CFLAGS"
+     LDFLAGS="$LDFLAGS -L$with_gssapi/lib"
+   fi
+ 
+@@ -7613,7 +7613,7 @@
+ EOF
+ 
+   save_CPPFLAGS=$CPPFLAGS
+-  CPPFLAGS="-I$with_gssapi/include"
++  CPPFLAGS=""
+   for ac_hdr in gssapi.h gssapi/gssapi.h gssapi/gssapi_generic.h
+ do
+ ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
