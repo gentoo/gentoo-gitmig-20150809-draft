@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.6 2004/11/20 21:43:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.7 2004/11/20 22:06:45 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -862,38 +862,21 @@ host_def_setup() {
 
 		if use minimal; then
 			echo "#define BuildClients NO" >> ${HOSTCONF}
-
-			# Without nls, truetype-fonts, type1-fonts, we only build misc
-			# Now let's try to reduce what gets built in misc
-			# iso8859-1 has the "fixed" font
-			echo "#define BuildISO8859_2Fonts NO" >> ${HOSTCONF}
-			echo "#define BuildISO8859_3Fonts NO" >> ${HOSTCONF}
-			echo "#define BuildISO8859_4Fonts NO" >> ${HOSTCONF}
-			# 5 is cyrillic, 6 isn't in misc, 7 is greek, 8 is hebrew
-			echo "#define BuildISO8859_9Fonts NO" >> ${HOSTCONF}
-			echo "#define BuildISO8859_10Fonts NO" >> ${HOSTCONF}
-			# 11 is thai, 12 isn't in misc
-			echo "#define BuildISO8859_13Fonts NO" >> ${HOSTCONF}
-			echo "#define BuildISO8859_14Fonts NO" >> ${HOSTCONF}
-			echo "#define BuildISO8859_15Fonts NO" >> ${HOSTCONF}
-			echo "#define BuildISO8859_16Fonts NO" >> ${HOSTCONF}
-
+			echo "#define BuildFonts NO" >> ${HOSTCONF}
 			echo "#define XnestServer NO" >> ${HOSTCONF}
 			echo "#define XVirtualFramebufferServer NO" >> ${HOSTCONF}
 			echo "#define XInputDrivers mouse keyboard" >> ${HOSTCONF}
 			# Don't want to add to defaults for other archs, set above
 			if use x86; then
+				# Removed nsc
+				echo "#define i386Drivers i810" >> ${HOSTCONF}
 				# If you want more drivers built with minimal, file a bug
 				# -Donnie Berkholz <spyderous@gentoo.org>
-				# Remove glint, tga, s3, s3virge, rendition, neomagic, i740,
+				# Removed glint, tga, s3, s3virge, rendition, neomagic, i740,
 				# cirrus, tseng, trident, chips, apm, ark, cyrix, siliconmotion
-				# mga, nv, sis, tdfx, savage, GlideDriver, i386Drivers
-				# (nsc, i810), ati, DevelDrivers, via
-				# Leave vmware driver for testing minimal setups using VMWare
-				# XF86OSCardDrivers includes v4l and fbdev on linux
-				# DevelDrivers includes imstt and newport on x86
-				echo "#define XF86CardDrivers vmware vesa vga dummy \
-					XF86OSCardDrivers XF86ExtraCardDrivers" >> ${HOSTCONF}
+				echo "#define XF86CardDrivers mga nv sis tdfx savage vmware \
+					GlideDriver i386Drivers ati DevelDrivers via vesa vga \
+					dummy XF86OSCardDrivers XF86ExtraCardDrivers" >> ${HOSTCONF}
 			fi
 		fi
 
