@@ -1,31 +1,43 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha1.ebuild,v 1.7 2004/02/21 00:32:13 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha2.ebuild,v 1.1 2004/02/21 00:32:13 lanius Exp $
 
 # Here, like in the other .ebuilds, the static version is
 # forced for simplicity's sake
 
-IUSE="gnome kde operanom2"
+IUSE="static"
 
-MY_PV="7.50-20031219"
+OPERAVER="7.50-20040218"
 OPERATYPE="1-static-qt"
-MY_P=${PN}-${MY_PV}.${OPERATYPE}.i386-en
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${A/.tar.bz2/}
+
 DESCRIPTION="Opera web browser."
 HOMEPAGE="http://www.opera.com/linux/"
-SRC_URI="http://snapshot.opera.com/unix/7.50-Preview-1/intel-linux/en/${MY_P}.tar.bz2"
+
+# that's an ugly workaround for the broken src_uri syntax
+if [ `use static` ]; then
+	SRC_URI="x86? ( http://snapshot.opera.com/unix/7.50-Preview-2/intel-linux/en/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 )
+		ppc? ( http://snapshot.opera.com/unix/7.50-Preview-2/ppc-linux/en/${PN}-${OPERAVER}.2-shared-qt.ppc-en.tar.bz2 )
+		sparc? ( http://snapshot.opera.com/unix/7.50-Preview-2/sparc-linux/en/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 )"
+else
+	SRC_URI="x86? (http://snapshot.opera.com/unix/7.50-Preview-2/intel-linux/en/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
+		ppc? ( http://snapshot.opera.com/unix/7.50-Preview-2/ppc-linux/en/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 )
+		sparc? ( http://snapshot.opera.com/unix/7.50-Preview-2/sparc-linux/en/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 )"
+fi
 
 # Dependencies may be augmented later (see below).
-DEPEND=">=sys-apps/sed-4"
+DEPEND=">=sys-apps/sed-4
+	>=sys-devel/gcc-3.2"
 
 RDEPEND="virtual/x11
 	>=media-libs/fontconfig-2.1.94-r1
 	media-libs/libexif
-	x11-libs/openmotif"
+	x11-libs/openmotif
+	!static? ( =x11-libs/qt-3* )"
 
 SLOT="0"
 LICENSE="OPERA"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 src_unpack() {
 	unpack ${A}
@@ -40,12 +52,6 @@ src_unpack() {
 	       -e 's:#\(export LD_PRELOAD OPERA_FORCE_JAVA_ENABLED\):\1:' \
 		   -e 's:read str_answer:return 0:' \
 	       install.sh || die
-
-	# Make mail and irc support optional
-	if [ "`use operanom2`" ]; then
-		einfo "Removing mail and chat support"
-		rm -f ${S}/lib/m2.so
-	fi
 }
 
 src_compile() {

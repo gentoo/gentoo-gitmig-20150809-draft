@@ -1,6 +1,15 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.48 2004/02/04 12:01:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.49 2004/02/21 00:32:13 lanius Exp $
+
+*opera-7.50_alpha2 (21 Feb 2004)
+
+  21 Feb 2004; Heinrich Wendel <lanius@gentoo.org> opera-7.50_alpha1.ebuild,
+  opera-7.50_alpha2.ebuild:
+  version bump, add shared version
+
+  21 Feb 2004; Heinrich Wendel <lanius@gentoo.org> opera-7.50_alpha1.ebuild:
+  fix operanom2 use flag
 
   04 Feb 2004; Heinrich Wendel <lanius@gentoo.org> opera-7.50_alpha1.ebuild:
   added operanom2 use flag, bug #40074
