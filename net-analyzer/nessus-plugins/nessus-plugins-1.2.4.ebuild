@@ -1,14 +1,15 @@
 # Copyright 2000-2002 Achim Gottinger
 # Distributed under the GPL by Gentoo Technologies, Inc.
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-1.2.4.ebuild,v 1.1 2002/08/22 14:38:12 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-1.2.4.ebuild,v 1.2 2002/09/30 13:13:13 raker Exp $
 
 S=${WORKDIR}/${PN}
+
 DESCRIPTION="A remote security scanner for Linux (nessus-plugins)"
 HOMEPAGE="http://www.nessus.org/"
-
 SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/${P}.tar.gz"
 
 DEPEND="=net-analyzer/nessus-core-${PV}"
+RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -27,7 +28,7 @@ src_install() {
 	make \
 		prefix=${D}/usr \
 		sysconfdir=${D}/etc \
-		localstatedir=${D}/var/state \
+		localstatedir=${D}/var/lib \
 		mandir=${D}/usr/share/man \
 		install || die "make install failed"
 
