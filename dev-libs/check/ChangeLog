@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/check
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.9 2004/09/25 05:24:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.10 2004/10/21 12:16:23 blubb Exp $
+
+  21 Oct 2004; Simon Stelling <blubb@gentoo.org> check-0.8.4.ebuild:
+  added ~amd64
 
   25 Sep 2004; Joshua Kinard <kumba@gentoo.org> check-0.8.4.ebuild:
   Marked stable on mips.
