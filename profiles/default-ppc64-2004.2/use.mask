@@ -6,7 +6,6 @@ afs
 3dfx
 3dnow
 avi
-emacs
 icc
 icc-pgo
 krb4
