@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pbuilder/pbuilder-0.86.ebuild,v 1.1 2003/09/19 17:57:56 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pbuilder/pbuilder-0.86.ebuild,v 1.2 2003/09/19 18:05:46 lanius Exp $
 
 DESCRIPTION="personal package builder for Debian packages"
 HOMEPAGE="http://packages.qa.debian.org/p/pbuilder.html"
@@ -13,7 +13,10 @@ DEPEND=">=sys-apps/debianutils-1.13.1
 	net-misc/wget
 	dev-util/debootstrap
 	app-arch/dpkg
-	uml? ( dev-util/rootstrap )"
+	uml? (
+		dev-util/rootstrap
+		sys-apps/usermode-utilities
+		)"
 IUSE="uml"
 
 src_install() {

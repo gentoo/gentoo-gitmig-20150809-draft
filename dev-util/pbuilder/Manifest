@@ -2,7 +2,7 @@ MD5 ce3e23215810a4023c375ca2c96adfbc ChangeLog 719
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 MD5 46b182f038c8c945d91b7a712bfc7ff6 pbuilder-0.76.ebuild 687
 MD5 e6a8e799cb2894d8dad106b255ab04c8 pbuilder-0.80.ebuild 686
-MD5 1443e9b3cf9b8903e7a38b67ea3b2b44 pbuilder-0.86.ebuild 926
+MD5 8bdde25e5ea9562daeae8b00d7672bdf pbuilder-0.86.ebuild 960
 MD5 940f4822cd2642ca8ef3eee411be33b6 files/digest-pbuilder-0.76 64
 MD5 471693c38d2476f00aaa5048fd1dd70b files/digest-pbuilder-0.80 64
 MD5 d86c6645c57b2a7ee38a3ee2e552297e files/digest-pbuilder-0.86 65
