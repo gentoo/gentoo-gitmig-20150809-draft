@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.19 2003/09/06 01:54:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.20 2003/10/18 08:50:40 brad Exp $
 
 IUSE="moznomail java mozp3p crypt ldap gtk2 mozinterfaceinfo ssl mozaccess mozxmlterm mozctl gnome mozsvg debug"
 
@@ -37,7 +37,7 @@ MY_PV1=${PV/_}
 MY_PV2=${MY_PV1/eta}
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
-SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.gz
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.gz
 	crypt? ( http://enigmail.mozdev.org/dload/src/enigmail-${EMVER}.tar.gz
 	         http://enigmail.mozdev.org/dload/src/ipc-${IPCVER}.tar.gz )"
 HOMEPAGE="http://www.mozilla.org"

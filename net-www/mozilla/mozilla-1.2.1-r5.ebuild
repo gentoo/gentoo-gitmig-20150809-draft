@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r5.ebuild,v 1.11 2003/09/06 01:54:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r5.ebuild,v 1.12 2003/10/18 08:50:40 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -56,7 +56,7 @@ MY_PV2="${MY_PV1/eta}"
 S="${WORKDIR}/mozilla"
 FC_S="${WORKDIR}/fcpackage.${FCVER/\./_}/Xft"
 DESCRIPTION="The Mozilla Web Browser"
-SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.bz2
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.bz2
 	crypt? ( http://enigmail.mozdev.org/dload/src/enigmail-${EMVER}.tar.gz
 	         http://enigmail.mozdev.org/dload/src/ipc-${IPCVER}.tar.gz )
 	http://fontconfig.org/release/fcpackage.${FCVER/\./_}.tar.gz"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.3-r2.ebuild,v 1.10 2003/09/22 19:08:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.3-r2.ebuild,v 1.11 2003/10/18 08:50:40 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -53,7 +53,7 @@ MY_PV1="${PV/_}"
 MY_PV2="${MY_PV1/eta}"
 S="${WORKDIR}/mozilla"
 DESCRIPTION="The Mozilla Web Browser"
-SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.bz2
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.bz2
 	crypt? ( http://enigmail.mozdev.org/dload/src/enigmail-${EMVER}.tar.gz
 	         http://downloads.mozdev.org/enigmail/ipc-${IPCVER}.tar.gz )"
 #	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
