@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/astyle-1.15.3.ebuild,v 1.10 2004/03/28 18:04:06 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/astyle-1.15.3-r1.ebuild,v 1.1 2004/03/28 18:04:06 karltk Exp $
 
 ZIP="astyle_${PV}.zip"
 S=${WORKDIR}

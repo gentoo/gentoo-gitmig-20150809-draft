@@ -1,36 +1,17 @@
 # ChangeLog for dev-util/astyle
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.5 2003/07/12 13:23:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.6 2004/03/28 18:04:06 karltk Exp $
+
+*astyle-1.15.3-r1 28 Mar 2004
+
+  28 Mar 2004; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  Added patch to fix --force-indent-tab, see #43091, thanks to
+  Luca Santarelli <hrk@users.sourceforge.net>.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *astyle-1.15.3 (24 Apr 2002)
 
   24 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> astyle-1.15.3.ebuild files/digest/astyle-1.15.3 :
-  
-  Artistic Style is a reindenter and reformatter of C++, C and Java source 
-  code.
+  Initial import. Ebuild submitted by <eyez@infinite.fsw.leidenuniv.nl>.
 
-  When indenting source code, we as programmers have a tendency to use both 
-  spaces and tab characters to create the wanted indentation. Moreover, some 
-  editors by default insert spaces instead of tabs when pressing the tab key, 
-  and other editors (Emacs for example) have the ability to "pretty up" lines 
-  by automatically setting up the white space before the code on the line, 
-  possibly inserting spaces in a code that up to now used only tabs for 
-  indentation. 
-
-  Since the NUMBER of space characters showed on screen for each tab character
-  in the source code changes between editors (until the user sets up the 
-  number to his liking...), one of the standard problems facing programmers 
-  when moving from one source code editor to another is that code containing 
-  both spaces and tabs that was up to now perfectly indented, suddenly becomes
-  a mess to look at when changing to another editor. Even if you as a 
-  programmer take care to ONLY use spaces or tabs, looking at other peoples 
-  source code can still be problematic.
-
-  To address this problem I have created Artistic Style - a series of filters,
-  written in C++, that automatically reindent & reformat C/C++/Java source 
-  files. These can be used from a command line, or it can be incorporated as 
-  classes in another C++ program.  
-
-  Ebuild submitted by <eyez@infinite.fsw.leidenuniv.nl>.
