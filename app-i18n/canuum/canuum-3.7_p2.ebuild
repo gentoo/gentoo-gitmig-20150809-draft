@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canuum/canuum-3.7_p2.ebuild,v 1.3 2004/06/28 01:42:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canuum/canuum-3.7_p2.ebuild,v 1.4 2004/08/14 15:34:39 usata Exp $
 
 MY_P="Canna${PV//[._]/}"
 S="${WORKDIR}/${MY_P}/${PN}"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge.jp/canna/9558/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND="virtual/libc

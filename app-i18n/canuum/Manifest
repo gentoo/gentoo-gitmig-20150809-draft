@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 63a8ef00d4704887cdf742e5fa645460 ChangeLog 325
-MD5 b172f0e9b2cd20d3ecdfe5bcd35bf832 canuum-3.7_p2.ebuild 927
+MD5 a690b5bc1389a155de9e3b11fd127335 canuum-3.7_p2.ebuild 929
+MD5 70590d2afd3c6d83de1d271809058441 ChangeLog 425
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 300a4fe937c6c06bda8fe832906b672c files/digest-canuum-3.7_p2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA33d/HTu7gpaalycRAjlVAJ0fSJJ+2EkAEQM7DZjYKNQlueSMVQCgnZIf
-sD00innbyZDwCEDT/NYhDvQ=
-=XJr3
------END PGP SIGNATURE-----
