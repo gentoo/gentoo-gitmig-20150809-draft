@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 19d7f53e47a92dcbf73d23b67da1a79d ChangeLog 9200
-MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
+MD5 f0f5f9cac2fbd9e0b16799ef3ce884d5 mythtv-0.17.ebuild 7094
 MD5 f5e313e37938a6988e60395716056801 mythtv-0.16.ebuild 5794
-MD5 e076ea7d9fbccd39897da3d17e1628c9 mythtv-0.17.ebuild 6821
-MD5 fb4505fe7e8b832e115d777bf836d3bc files/digest-mythtv-0.16 66
-MD5 2623cb1c902bf07fca69b846e7a0915a files/mythbackend.conf 1186
+MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
+MD5 54c3223aa496562c5d4a87218998ea13 ChangeLog 9370
 MD5 5938ea3584383e501674bf67a7f7e2a7 files/mythbackend.rc6 1776
 MD5 b3a4780890d53640604812b8069a8297 files/mythfilldatabase.cron 74
-MD5 8d46f5508de5d412db9e4a757db00e26 files/mythtv-0.16-cx88.patch 674
+MD5 2623cb1c902bf07fca69b846e7a0915a files/mythbackend.conf 1186
+MD5 fb4505fe7e8b832e115d777bf836d3bc files/digest-mythtv-0.16 66
 MD5 590c9a6a89442b347c3a5f52d1781351 files/digest-mythtv-0.17 66
+MD5 8d46f5508de5d412db9e4a757db00e26 files/mythtv-0.16-cx88.patch 674
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCJX7UArHZZzCEUG0RApaFAJ4pWo6YAoTXEin8fQOfskhcUBriKgCdGvG5
-CjrtwyfNephpJj/GkEvlzmc=
-=4T3a
+iD8DBQFCRR0U5+pdB4IBr0URAoqYAJ96tRyDHNTvdcIiO0wPywjTXq1XvwCfZRGF
+sLphC3Ab+YWaON6NCgFFdF8=
+=59bG
 -----END PGP SIGNATURE-----
