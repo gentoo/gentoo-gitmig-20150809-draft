@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r1.ebuild,v 1.5 2003/11/14 15:53:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-1.4_p12-r1.ebuild,v 1.6 2003/11/21 16:00:07 aliz Exp $
 
 inherit eutils gnuconfig
 
@@ -27,6 +27,7 @@ src_unpack() {
 		epatch ${FILESDIR}/traceroute-1.4a12.patch
 	fi
 
+	epatch ${FILESDIR}/traceroute-1.4-target-resolv.patch
 }
 
 src_compile() {
