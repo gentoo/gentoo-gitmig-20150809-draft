@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.5-r2.ebuild,v 1.3 2005/01/29 05:12:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.5-r2.ebuild,v 1.4 2005/04/03 16:40:41 chrb Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/opende/${P}.tgz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="doc"
+IUSE="doc debug"
 
 DEPEND="virtual/libc
 	virtual/x11
@@ -24,8 +24,11 @@ src_unpack() {
 	echo 'C_FLAGS+=$(E_CFLAGS) -fPIC' >> config/makefile.unix-gcc
 	epatch "${FILESDIR}"/${PV}-PIC.patch
 	sed -i -e "s/#OPCODE_DIRECTORY/OPCODE_DIRECTORY/" config/user-settings
-	sed -i -e 's/..\/..\/drawstuff\/textures/.\//' ode/test/*.c*
-	sed -i -e 's/fn.path_to_textures = 0/fn.path_to_textures = ".\/"/' drawstuff/dstest/dstest.cpp
+	sed -i -e "s/..\/..\/drawstuff\/textures/\/usr\/share\/${P}\/examples/" ode/test/*.c*
+	sed -i -e "s/fn.path_to_textures = 0/fn.path_to_textures = \"\/usr\/share\/${P}\/examples\"/" drawstuff/dstest/dstest.cpp
+	if use debug; then
+		sed -e "s/#BUILD=d/BUILD=d/" -e "s/BUILD=r/#BUILD=r/" -i ${S}/config/user-settings
+	fi
 }
 
 src_compile() {
