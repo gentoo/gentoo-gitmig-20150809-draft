@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Cgi-Simple
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/ChangeLog,v 1.4 2004/05/24 00:16:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/ChangeLog,v 1.5 2004/06/05 14:32:31 mcummings Exp $
+
+*Cgi-Simple-0.075 (05 Jun 2004)
+
+  05 Jun 2004; Michael Cummings <mcummings@gentoo.org>
+  Cgi-Simple-0.075.ebuild:
+  new version on cpan
 
   24 May 2004; Bryan Østergaard <kloeri@gentoo.org> Cgi-Simple-0.06.ebuild:
   Stable on alpha.

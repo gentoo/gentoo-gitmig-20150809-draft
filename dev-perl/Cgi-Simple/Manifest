@@ -1,4 +1,6 @@
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 dc81833ccd7bf764d4176acbb1bf46df Cgi-Simple-0.06.ebuild 525
 MD5 ef861e58442723718de8bc145a79aea4 ChangeLog 616
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 dc81833ccd7bf764d4176acbb1bf46df Cgi-Simple-0.075.ebuild 525
 MD5 60825ecec90e5b15b6e2a3b15646d435 files/digest-Cgi-Simple-0.06 67
+MD5 d18cb181078892142788055992f3a09b files/digest-Cgi-Simple-0.075 68
