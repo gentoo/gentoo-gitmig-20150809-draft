@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/partimage
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/ChangeLog,v 1.4 2003/10/28 18:52:14 johnm Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/ChangeLog,v 1.5 2004/04/25 22:19:00 robbat2 Exp $
+
+*partimage-0.6.4 (25 Apr 2004)
+
+  25 Apr 2004; Robin H. Johnson <robbat2@gentoo.org> partimage-0.6.4.ebuild,
+  files/servercert.cnf:
+  fix bugs #24727, #14687. massive new stuff for the new version to build
+  properly, and a big pkg_config section for SSL certs.
 
   28 Oct 2003; John Mylchreest <johnm@gentoo.org>; partimage-0.6.2.ebuild:
   fixing chown issue
