@@ -1,6 +1,9 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.28 2003/01/16 00:50:01 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.29 2003/01/19 14:46:57 azarah Exp $
+
+  19 Jan 2003; Martin Schlemmer <azarah@gentoo.org> :
+  Disable KDE support, as it is broken anyhow.  Bug #13608.
 
 *avifile-0.7.25-20030114 (15 Jan 2003)
 

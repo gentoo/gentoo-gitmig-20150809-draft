@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.22.20021129.ebuild,v 1.4 2002/12/27 20:26:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.22.20021129.ebuild,v 1.5 2003/01/19 14:46:57 azarah Exp $
 
 IUSE="nas avi sdl kde oggvorbis 3dnow qt"
 
@@ -51,14 +51,14 @@ src_compile() {
 		&& myconf="${myconf} --enable-vorbis" \
 		|| myconf="${myconf} --disable-vorbis --disable-oggtest --disable-vorbistest"
 	
-	if [ `use kde` ]
-	then
-		myconf="${myconf} --enable-kde --with-extra-libraries=${KDEDIR}"
-		LDFLAGS="${LDFLAGS} -L${KDEDIR}/lib"
-	else
+#	if [ `use kde` ]
+#	then
+#		myconf="${myconf} --enable-kde --with-extra-libraries=${KDEDIR}"
+#		LDFLAGS="${LDFLAGS} -L${KDEDIR}/lib"
+#	else
 		myconf="${myconf} --disable-kde"
-		LDFLAGS="${LDFLAGS}"
-	fi
+#		LDFLAGS="${LDFLAGS}"
+#	fi
 
 	# Rather not use custom ones here .. build should set as high as
 	# safe by itself.
