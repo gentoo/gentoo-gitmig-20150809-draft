@@ -1,4 +1,6 @@
-MD5 2fda531fd5c86e1b9f60a8a07188e1e8 ChangeLog 1789
+MD5 bb676b3c412de9cd72cbc5b4f1a2358e ChangeLog 1884
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 f2e6c34e631e2df14cc7b03e1d9e6202 tintin-1.93.3.ebuild 1000
 MD5 9e2fdd4f08213aea2298f8d99fa59ba3 tintin-1.93.2-r1.ebuild 1009
 MD5 51f0669c75838ea5d5956bb788bfc412 files/digest-tintin-1.93.2-r1 65
+MD5 c946db94ed699c74b1f68473df87e452 files/digest-tintin-1.93.3 65
