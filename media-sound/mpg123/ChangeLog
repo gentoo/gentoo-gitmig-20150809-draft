@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.77 2004/12/29 01:13:29 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.78 2004/12/30 08:42:51 hardave Exp $
+
+  30 Dec 2004; Hardave Riar <hardave@gentoo.org> mpg123-0.59s-r8.ebuild:
+  Stable on mips, bug #74692
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
