@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.2 2003/10/17 17:40:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.3 2004/02/15 23:23:18 wolf31o2 Exp $
 
 inherit games
 
@@ -26,6 +26,8 @@ dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
 pkg_setup() {
+	check_license || die "License check failed"
+	cdrom_get_cds shell/movies/asteroid.mpg
 	if [ "`use videos`" ]; then
 		ewarn "The installed game takes about 500MB of space!"
 	else
@@ -40,22 +42,20 @@ src_unpack() {
 
 src_install() {
 	dodir ${dir}
-	games_get_cd shell/movies/asteroid.mpg
-	games_verify_cd "Heavy Gear II"
 	einfo "Copying files... this may take a while..."
 	exeinto /opt/heavygear2
-	doexe ${GAMES_CD}/bin/x86/glibc-2.1/hg2
+	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/hg2
 	insinto /opt/heavygear2
-	use 3dfx && doins ${GAMES_CD}/bin/x86/glibc-2.1/LibMesaVoodooGL.so.1.2.030300
+	use 3dfx && doins ${CDROM_ROOT}/bin/x86/glibc-2.1/LibMesaVoodooGL.so.1.2.030300
 
-	cp ${GAMES_CD}/{README,icon.{bmp,xpm}} ${Ddir}
-	use videos && cp -r ${GAMES_CD}/shell ${Ddir}
+	cp ${CDROM_ROOT}/{README,icon.{bmp,xpm}} ${Ddir}
+	use videos && cp -r ${CDROM_ROOT}/shell ${Ddir}
 
 	cd ${Ddir}
 	use 3dfx && dosym LibMesaVoodooGL.so.1.2.030300 libGL.so.1
 
-	tar xzf ${GAMES_CD}/data.tar.gz || die "uncompressing data"
-	tar xzf ${GAMES_CD}/binaries.tar.gz || die "uncompressing binaries"
+	tar xzf ${CDROM_ROOT}/data.tar.gz || die "uncompressing data"
+	tar xzf ${CDROM_ROOT}/binaries.tar.gz || die "uncompressing binaries"
 
 	cd ${S}
 	bin/Linux/x86/loki_patch --verify patch.dat
@@ -70,7 +70,7 @@ src_install() {
 	dogamesbin ${FILESDIR}/hg2
 	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/hg2
 	insinto /usr/share/pixmaps
-	newins ${GAMES_CD}/icon.xpm HG2.xpm
+	newins ${CDROM_ROOT}/icon.xpm HG2.xpm
 
 	prepgamesdirs
 	make_desktop_entry hg2 "Heavy Gear II" "HG2.xpm"
