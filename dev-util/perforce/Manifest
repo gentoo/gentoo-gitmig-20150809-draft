@@ -1,0 +1,7 @@
+MD5 125ee013081b112d56a1d15507d72ef2 ChangeLog 3674
+MD5 71da003bb2109fed15aff6635287c6a6 metadata.xml 222
+MD5 4e6d6d82762e598508dbdd1f636efaf0 perforce-2002.2.ebuild 1370
+MD5 71ff013c747258365dfd982b619aaa15 files/digest-perforce-2002.2 342
+MD5 7a54cc6c6d53acca3c67df75fb125100 files/perforce-2002.2/50perforce 95
+MD5 87b715665507ed40609904e1b2795279 files/perforce-2002.2/conf.d/perforce 49
+MD5 98c2576330b327acfeeee611bc8b6812 files/perforce-2002.2/init.d/perforce 1059
