@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bca84710b11ea948019c2bc3137aee76 ChangeLog 2896
-MD5 91b931c4ab13388d94fafd1ca73f3122 cpio-2.5.90.ebuild 979
-MD5 ea1e39b885fac6ccd8a82a93df19dfee cpio-2.5.ebuild 797
-MD5 3d874edef64162374b6a0c450003a579 files/digest-cpio-2.5.90 64
-MD5 a0838e9d5ff0463ecb8758db81652ff1 files/digest-cpio-2.5 60
+MD5 c8caf69ac5b4c8b11dec9a0b2ab4deab ChangeLog 2900
+MD5 f3b60c10f97f35a28763f640628deca3 cpio-2.5.ebuild 801
+MD5 bbf6c257d1f05e51d5ee31f24720d95f cpio-2.5.90.ebuild 983
 MD5 404c6b2a90334fe682029e5d5771620d files/2.5.90-gnulib.patch 3403
+MD5 a0838e9d5ff0463ecb8758db81652ff1 files/digest-cpio-2.5 60
 MD5 1e15955e97a657d0d9e3d0eb4350748d files/2.5.90-makepath.patch 494
 MD5 08a843426a9d4ece31cf478871cd974e files/2.5.90-rili-big-files.patch 2583
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBwzXUroRuSHgZdywRAob4AKCRbbROP7iUtgzfeAbY//De8/3ZigCePDZe
-gBjZamUI9i0ZIoXbqGcYJ8A=
-=plh+
------END PGP SIGNATURE-----
+MD5 3d874edef64162374b6a0c450003a579 files/digest-cpio-2.5.90 64

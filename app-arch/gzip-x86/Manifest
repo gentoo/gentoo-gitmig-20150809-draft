@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 73061241dcc58e3e171210fd57fda579 ChangeLog 787
-MD5 cb9bbede7cf3c5c390969a92b6b048a6 gzip-x86-0.90.ebuild 574
+MD5 1570dfd8896ac0f01811176d4c67b7ea ChangeLog 791
+MD5 7e413b7506e277779c1f7cbaf9e9f117 gzip-x86-0.90.ebuild 578
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 4e952509861b2dea2f65324693d129d7 gzip-x86-0.91.ebuild 778
+MD5 f49eed2a7dcbbb737e438d1affaba02f gzip-x86-0.91.ebuild 782
 MD5 30ea90807bc53110bd9192ea05b16412 files/digest-gzip-x86-0.90 62
 MD5 cd470c57b8574a76b4c902c7ff139137 files/digest-gzip-x86-0.91 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFBGjbkHTu7gpaalycRAusYAKCU7/j2GsKdobyhU1zLhnPyP6CbZgCgrVa5
-VZEd4jUksrojs9aK2KXlzNc=
-=pX1g
------END PGP SIGNATURE-----

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 08702a7c2cc01d3fa0851dcefd21b40f pbzip2-0.8.ebuild 737
-MD5 708b3d5bb27c42b7aabd81694fce9169 pbzip2-0.8.2.ebuild 746
-MD5 15485f257612b13cbf24ec8c0c1146d5 ChangeLog 606
+MD5 181bf1dc51f2d6203d7b7b42fffb92f5 ChangeLog 612
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
+MD5 2e15b50d9c04544c8bba274bc48d0166 pbzip2-0.8.ebuild 739
+MD5 c61424bfcc422acf8b3e96e8987c9567 pbzip2-0.8.2.ebuild 752
 MD5 bb3da86e7044eec3a044df0e7b9a0eec files/digest-pbzip2-0.8 61
 MD5 84f8969a99e23d2ece814386246b53ba files/digest-pbzip2-0.8.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB1DPh/rLF9B432nYRAvDWAJ9pTZm/MJr+GCFe6EDc0bWXb4VH1wCgkK5l
-bgyyetBY0982+aoIsMN62LY=
-=CZCh
------END PGP SIGNATURE-----

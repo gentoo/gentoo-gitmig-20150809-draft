@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b6398ca81a099924b3f4ba05e2589afe ChangeLog 1834
-MD5 c47ac627792907b33386e2b54e808fee unace-1.2b.ebuild 730
-MD5 6949eb3895457c3b2a9bee89fa24a61c unace-2.2.ebuild 493
+MD5 48c4d62b86cb355e11fb71c164da268f ChangeLog 1836
+MD5 22adbef5a4b77d94654be224d912f3ea unace-1.2b.ebuild 734
+MD5 9da1b90e590dd29a38b39ec3b51d038c unace-2.2.ebuild 497
 MD5 34628d3f6507592703856c82761becf0 files/digest-unace-1.2b 61
 MD5 42853f578a4e17a07fc7693bf2a8b8f8 files/digest-unace-2.2 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3LuiHTu7gpaalycRAnEyAJ0YhLIMWQLu8yvNk3TRWq1QBWut0gCgxvrM
-WeR7oK258ykmSe9J2KaiGTU=
-=nyIH
------END PGP SIGNATURE-----

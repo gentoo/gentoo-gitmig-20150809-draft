@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 db4ef7c97ec2199ba93060ee5b6e92d1 ChangeLog 4679
+MD5 6f32dd21d7a47b4175663cf06cc5588f ChangeLog 4683
+MD5 88eb397d1eb3af19fe800d1cee2be3df bzip2-1.0.2-r3.ebuild 2390
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 0fdee407cf5685474fbbf93aa2697679 bzip2-1.0.2-r4.ebuild 2099
-MD5 6f271e15b873b0ebc1056c2cdbe5a161 bzip2-1.0.2-r3.ebuild 2386
-MD5 382f154f0ba01de10aff6207652d6799 files/digest-bzip2-1.0.2-r4 63
+MD5 465820ebacdfcd71cbfb74fb7c14d9b8 bzip2-1.0.2-r4.ebuild 2103
+MD5 382f154f0ba01de10aff6207652d6799 files/digest-bzip2-1.0.2-r3 63
 MD5 cc73bebefba3a38c58fc49b49d7d25a7 files/1.0.2-NULL-ptr-check.patch 838
 MD5 378e8d34dd95cc65b7f65565df5d85f7 files/1.0.2-makefile-CFLAGS.patch 841
-MD5 382f154f0ba01de10aff6207652d6799 files/digest-bzip2-1.0.2-r3 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBzzHBroRuSHgZdywRArjAAJ0b7bdISk0TVPnjzWR2Ze16eywn6gCfYW6T
-JyrDZWk11L8K0SCoVwMPnRs=
-=iqKU
------END PGP SIGNATURE-----
+MD5 382f154f0ba01de10aff6207652d6799 files/digest-bzip2-1.0.2-r4 63

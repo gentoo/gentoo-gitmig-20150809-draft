@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0bbbd82140563c08d1130f08e8c8e562 ChangeLog 1351
-MD5 908def6ebdb3222b963899e92fd3d5b4 bsdsfv-1.18.ebuild 553
+MD5 fb7c7a73196ff23934c8dd44edd7404e ChangeLog 1353
+MD5 34b67abba81c9ced105204d3a830e87a bsdsfv-1.18.ebuild 557
 MD5 edec83a4548c43916e86bf0263c41b9c files/digest-bsdsfv-1.18 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3LmtHTu7gpaalycRAoBEAJ432v2j8VULplsjSr+cWnGbbkDxBACgiHKM
-rhj+cC7co0MeafZHkbl5Z4U=
-=mNN2
------END PGP SIGNATURE-----

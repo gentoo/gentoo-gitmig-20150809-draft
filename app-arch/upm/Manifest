@@ -1,4 +1,4 @@
-MD5 ba64249be821286f404d5e009389e89f ChangeLog 610
-MD5 3d69231889ccb333ebd62e5be988f85e upm-0.85.ebuild 708
-MD5 c28ab9193761c7b15a492afb8f14442c files/upm-0.85-gentoo.diff 979
+MD5 4c791fc94d1b1e8bc6e947ce41ba3bd7 ChangeLog 612
+MD5 ac3ab5d591941e9fe6754398941f29fe upm-0.85.ebuild 711
 MD5 aa0bf47e505a2589041c86d337ebfc3f files/digest-upm-0.85 60
+MD5 c28ab9193761c7b15a492afb8f14442c files/upm-0.85-gentoo.diff 979

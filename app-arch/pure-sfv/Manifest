@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 98d4557dc36b71e0ac0617e20f473faf ChangeLog 651
-MD5 a86df2f815e340d27a763f979d1f5aa7 pure-sfv-0.3.ebuild 659
+MD5 e349eccbaf90252c9fae19800693b7f5 ChangeLog 653
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 26b614fc1a42b3e12f84db5cf78d09ce pure-sfv-0.3.ebuild 663
 MD5 7d7ba97578b6bdc7d018e40fc31e19cb files/digest-pure-sfv-0.3 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3LsnHTu7gpaalycRAtvkAKCoR2UcAjWJUI0GI29kNV6jwYvHrwCeOk7W
-y9hS+tX0fvZU0h4XXbq+HsU=
-=Dsyo
------END PGP SIGNATURE-----
