@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/gringotts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.10 2003/02/12 03:27:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.11 2003/04/28 23:24:14 liquidx Exp $
+
+*gringotts-1.2.7 (29 Apr 2003)
+
+  29 Apr 2003; Alastair Tse <liquidx@gentoo.org> gringotts-1.2.3.ebuild,
+  gringotts-1.2.7.ebuild:
+  version bump. removed optional X dependency, X is not optional.
+
+  29 Apr 2003; Alastair Tse <liquidx@gentoo.org> gringotts-1.2.3.ebuild:
+  bumped to stable. pegged to use libgringotts-1.1.x
 
 *gringotts-1.2.3 (14 Jan 2003)
 

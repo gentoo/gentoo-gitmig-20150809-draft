@@ -1,0 +1,7 @@
+MD5 68fa61b34e70807b97808a2b3fdcbc9c ChangeLog 1522
+MD5 103b5e0487051aef2a179491f47d2593 gringotts-0.6.2.ebuild 817
+MD5 23c6d614345a82640e43e774743ceae0 gringotts-1.2.3.ebuild 859
+MD5 5d245383163b18daa50a94271396ec6b gringotts-1.2.7.ebuild 862
+MD5 f5f93f35d5e5ff64be8c75de6bde2964 files/digest-gringotts-0.6.2 68
+MD5 68ab2337cadf05e3d74b842920110222 files/digest-gringotts-1.2.3 68
+MD5 382c31ccfb9cfcf8055a4796357f2ba0 files/digest-gringotts-1.2.7 68
