@@ -1,6 +1,17 @@
 # ChangeLog for x11-themes/fvwm-crystal
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.9 2004/07/03 23:11:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.10 2004/08/09 16:15:12 lucass Exp $
+
+*fvwm-crystal-2.20040723 (09 Aug 2004)
+
+  09 Aug 2004; Lukasz Strzygowski <lucass@gentoo.org> metadata.xml,
+  +files/fvwm-crystal, +fvwm-crystal-2.20040723.ebuild:
+  Initial commit of ebuild for new branch of fvwm-crystal. Upstream
+  changed versioning scheme. Dropped ~ppc and ~sparc keywords because
+  of new dependency - x11-misc/fvwm-crystal-apps. I will report it to arch
+  teams. Added xsession file - files/fvwm-crystal. Added myself as a maintainer.
+  Added description to metadata.xml. Thanks for testing to Andrzej Olender
+  <arsen@gentoo.pl>.
 
   03 Jul 2004; Jason Wever <weeve@gentoo.org> fvwm-crystal-1.0.3_pre1.ebuild:
   Added ~sparc keyword.
