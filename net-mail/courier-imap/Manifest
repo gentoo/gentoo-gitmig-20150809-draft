@@ -4,9 +4,9 @@ MD5 ff694f5f5f5e185eaec3a88f3a22354b courier-imap-1.6.2-r1.ebuild 4814
 MD5 59992758e443a40e74f6085b01a723eb courier-imap-1.7.3.ebuild 6857
 MD5 b64e4760ae2f4c7baacd233614e4f55c courier-imap-1.7.0.ebuild 4955
 MD5 e37a21b791d0d26ab585fff50650f3c7 courier-imap-1.7.2.ebuild 6697
-MD5 9b1af308ddee97ea260d2288d10bd9f2 ChangeLog 6761
+MD5 86740b7cdf046a1c5b3005018b444170 ChangeLog 6942
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 59992758e443a40e74f6085b01a723eb courier-imap-2.0.0.ebuild 6857
+MD5 3d2ece33ecb48cec61e155810fe6e01a courier-imap-2.0.0.ebuild 6599
 MD5 f959e38175d1fd8f8e7a977a14f7265f files/gentoo-pop3d-1.7.3-r1.rc 1018
 MD5 e448df5fdbc088132766b33d27f27073 files/gentoo-imapd.rc 1006
 MD5 c5993255c6be57914cb943789f59931e files/courier-imapd-ssl.rc6 1208
