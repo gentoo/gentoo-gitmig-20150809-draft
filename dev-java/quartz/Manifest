@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 74c65d2b284ac21284ef369e70c55002 quartz-1.3.4.ebuild 2144
-MD5 7f73465a77522de44a74831b289c22ff ChangeLog 1328
-MD5 d2cfdb20bac9999207f913398800bfbf quartz-1.4.0.ebuild 2150
+MD5 fa7a3fa4f99dd56ff1fb483408c76232 ChangeLog 1447
 MD5 70b5c4b2ad5de8b5ad59a27a446c29ff metadata.xml 221
+MD5 47beec91bfb7d5366bdf958a52858efc quartz-1.3.4.ebuild 2155
+MD5 1262882ec52b915b4095e61b3520ce49 quartz-1.4.0.ebuild 2161
 MD5 2a356855e5f18bec4fa487120599d27a files/digest-quartz-1.3.4 65
 MD5 a71a8902eeeefda7b8bc53dab760ec24 files/digest-quartz-1.4.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVtf/rLF9B432nYRAuQzAKC6+WB+hvZtZvP/DkHO5WL5JmjjrQCdFUum
-MnLypyNCqIBYEP8EWVdw8fU=
-=13eU
------END PGP SIGNATURE-----
