@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.4-r2.ebuild,v 1.7 2002/07/27 13:54:45 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.4-r2.ebuild,v 1.8 2002/08/31 19:05:53 danarmak Exp $
 use kde && inherit kde-base
 
 S=${WORKDIR}/${P}
@@ -45,7 +45,7 @@ src_compile() {
 	    use kde && second_conf="${second_conf} ${myconf} --with-kde"
 	    # note! watch the --prefix=/usr placement; licq itself installs into /usr, but the
 	    # optional kde/qt interface (to which second_conf belogns) installs its files in 
-	    # $KDE2DIR/{lib,share}/licq
+	    # $KDEDIR/{lib,share}/licq
 	    cd plugins/qt-gui-1.0.4
 	    make -f Makefile.cvs || die
 	    ./configure --host=${CHOST} ${second_conf} --prefix=/usr || die
