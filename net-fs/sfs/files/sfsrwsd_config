@@ -1,0 +1,13 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/files/sfsrwsd_config,v 1.1 2003/03/19 01:43:05 wmertens Exp $
+
+# Example sfsrwd_config file for serving files with SFS.  All exported
+# directories must exist within the SFS root export directory and must
+# also be exported to localhost via NFS.  Read the SFS documentation
+# for full information about configuring an SFS server.
+
+Keyfile /etc/sfs/sfs_host_key
+
+# Export /var/sfs/root /
+# Export /home /home
