@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.ebuild,v 1.2 2001/05/08 03:34:25 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.ebuild,v 1.3 2001/05/08 19:27:40 achim Exp $
 
 A=mozilla-source-${PV}.tar.gz
 S=${WORKDIR}/mozilla
@@ -14,7 +14,9 @@ DEPEND=">=gnome-base/ORBit-0.5.7
 	>=x11-libs/gtk+-1.2.9
 	>=sys-libs/zlib-1.1.3
 	>=media-libs/jpeg-6b
-	>=media-libs/libpng-1.0.9"
+	>=media-libs/libpng-1.0.9
+	app-arch/zip
+	app-arch/unzip"
 
 src_compile() {
 
