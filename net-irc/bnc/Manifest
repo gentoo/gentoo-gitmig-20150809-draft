@@ -1,12 +1,14 @@
-MD5 08815a69732a76b4717dcdeb6da7e229 bnc-2.8.6-r1.ebuild 1145
-MD5 dcb93d671a834bea2437822c46b3c214 bnc-2.6.4.ebuild 905
-MD5 b548677db8b820721075cb8c151fe399 metadata.xml 250
-MD5 f15575a42abc7635cb3c7691eb3b4a38 bnc-2.8.6.ebuild 1015
-MD5 cb955d39851b80864fd115586e620584 bnc-2.8.9.ebuild 890
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a6cc65b4055c55ce8767c97a7ca37079 ChangeLog 2093
-MD5 3aecb068876402e1030f940f6caa829a files/digest-bnc-2.6.4 59
-MD5 b9427cecfd47491ea920651f047adb36 files/digest-bnc-2.8.6-r1 59
-MD5 b9427cecfd47491ea920651f047adb36 files/digest-bnc-2.8.6 59
-MD5 cab5a601ff0bb6f73c793cbe7a278f4e files/bnc-2.8.6-gotofail-labelfix.patch 538
+MD5 b548677db8b820721075cb8c151fe399 metadata.xml 250
+MD5 d04e1d16f68d5f7bcf3e01befc47c8ee bnc-2.8.9.ebuild 867
 MD5 abfd9014770224aa08ceed9439d9e0d5 files/digest-bnc-2.8.9 59
-MD5 e8809f89a22004c0092dcb8502e17bfa files/bncsetup.patch 1212
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhEN8HTu7gpaalycRAqh2AKCSmFv9NYHlO5SuGgpGyew/E+jAEQCgoO9Z
+vAmkuLJYxE8XUDXSq9H+v6M=
+=H8A1
+-----END PGP SIGNATURE-----
