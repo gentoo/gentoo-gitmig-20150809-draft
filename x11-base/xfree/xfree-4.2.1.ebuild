@@ -1,12 +1,34 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.12 2002/10/12 15:30:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.13 2002/10/13 01:17:26 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
 inherit flag-o-matic gcc
-# Compile problems with these ...
+
 filter-flags "-funroll-loops"
+
+# Recently there has been a lot of stability problem in Gentoo-land.  Many
+# things can be the cause to this, but I believe that it is due to gcc3
+# still having issues with optimizations, or with it not filtering bad
+# combinations (protecting the user maybe from himeself) yet.
+#
+# This can clearly be seen in large builds like glibc, where too aggressive
+# CFLAGS cause the test to fail miserbly.
+#
+# Quote from Nick Jones <carpaski@gentoo.org>, who in my opinion
+# knows what he is talking about:
+#
+#   People really shouldn't force code-specific options on... It's a
+#   bad idea. The -march options aren't just to look pretty. They enable
+#   options that are sensible (and include sse,mmx,3dnow when apropriate).
+#
+# The next command strips CFLAGS and CXXFLAGS from nearly all flags.  If
+# you do not like it, comment it, but do not bugreport if you run into
+# problems.
+#
+# <azarah@gentoo.org> (13 Oct 2002)
+strip-flags
 
 PATCH_VER="1.0"
 FT2_VER="2.1.2"
