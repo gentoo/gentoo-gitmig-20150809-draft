@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.3.ebuild,v 1.1 2003/07/12 23:28:36 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.3.ebuild,v 1.2 2003/07/12 23:33:50 bcowan Exp $
 
 IUSE="nls gnome xface gtkhtml crypt spell imlib ssl ldap ipv6 pda clamav"
 
@@ -123,7 +123,7 @@ src_install() {
 	cd ${S}/tools
 	exeinto /usr/lib/${PN}/tools
 	doexe *.pl *.py *.rc *.conf gpg-sign-syl
-	doexe launch_phoenix tb2sylpheed update-po uudec
+	doexe launch_firebird tb2sylpheed update-po uudec
 }
 
 pkg_postinst() {
