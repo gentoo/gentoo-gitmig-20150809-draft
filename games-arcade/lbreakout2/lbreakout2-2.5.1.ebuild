@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.5.1.ebuild,v 1.2 2005/01/19 00:14:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.5.1.ebuild,v 1.3 2005/01/25 00:05:10 vapier Exp $
 
 inherit flag-o-matic games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/lgames/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="virtual/libc
