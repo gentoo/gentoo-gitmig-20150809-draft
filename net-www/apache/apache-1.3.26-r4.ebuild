@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.26-r4.ebuild,v 1.6 2002/09/19 20:57:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.26-r4.ebuild,v 1.7 2002/10/02 13:01:43 woodchip Exp $
 
 mod_ssl_ver=2.8.9-${PV}
 HARD_SERVER_LIMIT=512
 
-S=${WORKDIR}/apache_${PV}
+S=${WORKDIR}/${PN}_${PV}
 DESCRIPTION="The Apache Web Server"
 HOMEPAGE="http://www.apache.org http://www.modssl.org"
 KEYWORDS="x86 ppc sparc sparc64"
@@ -124,7 +124,7 @@ src_compile() {
 		--suexec-gidmin=100 \
 		--suexec-caller=apache \
 		--suexec-userdir=public_html \
-		--suexec-docroot=${DATA_DIR}/htdocs \
+		--suexec-docroot=/home \
 		--suexec-safepath="/bin:/usr/bin" \
 		--suexec-logfile=/var/log/apache/suexec_log \
 		\
