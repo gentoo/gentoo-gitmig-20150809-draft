@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.01.ebuild,v 1.7 2005/02/14 12:39:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.01-r1.ebuild,v 1.1 2005/03/25 22:37:07 luckyduck Exp $
 
 inherit java versionator
 
@@ -67,6 +67,7 @@ unpack_jars() {
 		UNPACK_CMD="$JAVAHOME/lib/unpack"
 		chmod +x "$UNPACK_CMD"
 		#packerror=""
+		sed -i 's#/tmp/unpack.log#/dev/null\x00\x00\x00\x00\x00\x00#g' $UNPACK_CMD
 		for i in $PACKED_JARS; do
 			if [ -f "$JAVAHOME/`dirname $i`/`basename $i .jar`.pack" ]; then
 				einfo "Creating ${JAVAHOME}/${i}\n"

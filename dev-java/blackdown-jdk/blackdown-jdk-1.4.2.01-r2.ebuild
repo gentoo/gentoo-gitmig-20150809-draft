@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.01.ebuild,v 1.6 2005/02/14 12:42:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.01-r2.ebuild,v 1.1 2005/03/25 22:37:32 luckyduck Exp $
 
 inherit java versionator
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.blackdown.org"
 
 SLOT="1.4.2"
 LICENSE="sun-bcla-java-vm"
-KEYWORDS="-* x86 amd64"
+KEYWORDS="-* ~x86 ~amd64"
 IUSE="doc mozilla"
 
 DEPEND="virtual/libc
@@ -64,6 +64,7 @@ unpack_jars() {
 		UNPACK_CMD="$JAVAHOME/lib/unpack"
 		chmod +x "$UNPACK_CMD"
 		packerror=""
+		sed -i 's#/tmp/unpack.log#/dev/null\x00\x00\x00\x00\x00\x00#g' $UNPACK_CMD
 		for i in $PACKED_JARS; do
 			if [ -f "$JAVAHOME/`dirname $i`/`basename $i .jar`.pack" ]; then
 				einfo "Creating ${JAVAHOME}/${i}\n"
@@ -104,6 +105,8 @@ src_install() {
 		esac
 
 		install_mozilla_plugin /opt/${P}/jre/plugin/${platform}/mozilla/libjavaplugin_oji.so
+	else
+		rm -f ${D}/opt/${P}/jre/plugin/${platform}/mozilla/libjavaplugin_oji.so
 	fi
 
 	find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;

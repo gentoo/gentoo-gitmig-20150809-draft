@@ -1,11 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.ebuild,v 1.4 2005/01/28 00:52:49 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.02-r1.ebuild,v 1.1 2005/03/25 22:37:57 luckyduck Exp $
 
 inherit java eutils
 
-amd64file="jre-${PV//./_}-linux-amd64.bin"
-x86file="jre-${PV//./_}-linux-i586.bin"
+MY_PVL=${PV%.*}_${PV##*.}
+MY_PVA=${PV//./_}
+
+amd64file="jdk-${MY_PVA}-linux-amd64.bin"
+x86file="jdk-${MY_PVA}-linux-i586.bin"
+
+jcefile="jce_policy-${MY_PVA%_*}.zip"
 
 if use x86; then
 	At=${x86file}
@@ -13,43 +18,62 @@ elif use amd64; then
 	At=${amd64file}
 fi
 
-S="${WORKDIR}/jre${PV}"
-DESCRIPTION="Sun's J2SE Platform"
-HOMEPAGE="http://java.sun.com/j2se/"
-SRC_URI="x86? ( $x86file ) amd64? ( $amd64file )"
+S="${WORKDIR}/jdk${MY_PVL}"
+DESCRIPTION="Sun's J2SE Development Kit, version ${PV}"
+HOMEPAGE="http://java.sun.com/j2se/1.5.0/"
+SRC_URI="x86? ( $x86file ) amd64? ( $amd64file )
+		jce? ( $jcefile )"
 SLOT="1.5"
 LICENSE="sun-bcla-java-vm"
 KEYWORDS="~x86 ~amd64"
-RESTRICT="fetch"
-IUSE="gnome kde mozilla"
+RESTRICT="fetch nostrip"
+IUSE="doc gnome kde mozilla jce"
 
+#
 DEPEND=">=dev-java/java-config-1.2
 	sys-apps/sed
-	virtual/lpr"
+	jce? ( app-arch/unzip )
+	doc? ( =dev-java/java-sdk-docs-1.5.0* )"
 
 RDEPEND="x86? ( sys-libs/lib-compat )
-	virtual/lpr"
+	doc? ( =dev-java/java-sdk-docs-1.5.0* )"
 
-PROVIDE="virtual/jre-1.5"
+PROVIDE="virtual/jre-1.5
+	virtual/jdk-1.5"
 
-PACKED_JARS="lib/rt.jar lib/jsse.jar lib/charsets.jar lib/ext/localedata.jar lib/plugin.jar lib/javaws.jar lib/deploy.jar"
+PACKED_JARS="lib/tools.jar jre/lib/rt.jar jre/lib/jsse.jar jre/lib/charsets.jar jre/lib/ext/localedata.jar jre/lib/plugin.jar jre/lib/javaws.jar jre/lib/deploy.jar"
 
 # this is needed for proper operating under a PaX kernel without activated grsecurity acl
 CHPAX_CONSERVATIVE_FLAGS="pemsv"
 
-FETCH_SDK="http://javashoplm.sun.com:80/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jre-1.5.0-oth-JPR&SiteId=JSC&TransactionId=noreg"
+FETCH_SDK="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jdk-${MY_PVL}-oth-JPR&SiteId=JSC&TransactionId=noreg"
+FETCH_JCE="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jce_policy-${PV%.*}-oth-JPR&SiteId=JSC&TransactionId=noreg"
 
 
 pkg_nofetch() {
 	einfo "Please download ${At} from:"
 	einfo ${FETCH_SDK}
-	einfo "(Select the Linux or Linux AMD64 Self-extracting (.bin), depending on your arch)"
+	einfo "(Select the Self-extracting (.bin) for Linux or Linux AMD64, depending on your arch)"
 	einfo "and move it to ${DISTDIR}"
+
+	if use jce; then
+		echo
+		einfo "Also download ${jcefile} from:"
+		einfo ${FETCH_JCE}
+		einfo "Java(TM) Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files"
+		einfo "and move it to ${DISTDIR}"
+	fi
+
 }
 
 src_unpack() {
 	if [ ! -r ${DISTDIR}/${At} ]; then
 		die "cannot read ${At}. Please check the permission and try again."
+	fi
+	if use jce; then
+		if [ ! -r ${DISTDIR}/${jcefile} ]; then
+			die "cannot read ${jcefile}. Please check the permission and try again."
+		fi
 	fi
 
 	#Search for the ELF Header
@@ -63,6 +87,7 @@ src_unpack() {
 	if [ -f ${S}/bin/unpack200 ]; then
 		UNPACK_CMD=${S}/bin/unpack200
 		chmod +x $UNPACK_CMD
+		sed -i 's#/tmp/unpack.log#/dev/null\x00\x00\x00\x00\x00\x00#g' $UNPACK_CMD
 		for i in $PACKED_JARS; do
 			PACK_FILE=${S}/`dirname $i`/`basename $i .jar`.pack
 			if [ -f ${PACK_FILE} ]; then
@@ -75,25 +100,34 @@ src_unpack() {
 	else
 		die "unpack not found"
 	fi
+	${S}/bin/java -client -Xshare:dump
 }
 
 src_install() {
-
-	if use amd64; then
-		local dirs="bin lib man"
-	else
-		local dirs="bin lib man plugin javaws"
-	fi
-
-
+	local dirs="bin include jre lib man"
 	dodir /opt/${P}
 
 	for i in $dirs ; do
-		cp -a $i ${D}/opt/${P}/ || die "failed to build"
+		cp -a $i ${D}/opt/${P}/ || die "failed to copy"
 	done
+	dodoc COPYRIGHT LICENSE README.html
+	dohtml README.html
+	dodir /opt/${P}/share/
+	cp -a demo src.zip ${D}/opt/${P}/share/
+	if ( use x86 || use amd64 ); then
+		cp -a sample ${D}/opt/${P}/share/
+	fi
 
-	dodoc COPYRIGHT LICENSE README
-	dohtml Welcome.html
+	if use jce ; then
+		cd ${D}/opt/${P}/jre/lib/security
+		unzip ${DISTDIR}/${jcefile} || die "failed to unzip jce"
+		mv jce unlimited-jce
+		dodir /opt/${P}/jre/lib/security/strong-jce
+		mv ${D}/opt/${P}/jre/lib/security/US_export_policy.jar ${D}/opt/${P}/jre/lib/security/strong-jce
+		mv ${D}/opt/${P}/jre/lib/security/local_policy.jar ${D}/opt/${P}/jre/lib/security/strong-jce
+		dosym /opt/${P}/jre/lib/security/unlimited-jce/US_export_policy.jar /opt/${P}/jre/lib/security/
+		dosym /opt/${P}/jre/lib/security/unlimited-jce/local_policy.jar /opt/${P}/jre/lib/security/
+	fi
 
 	if use mozilla; then
 		local plugin_dir="ns7-gcc29"
@@ -102,7 +136,7 @@ src_install() {
 		fi
 
 		if use x86 ; then
-			install_mozilla_plugin /opt/${P}/plugin/i386/$plugin_dir/libjavaplugin_oji.so
+			install_mozilla_plugin /opt/${P}/jre/plugin/i386/$plugin_dir/libjavaplugin_oji.so
 		else
 			eerror "No plugin available for amd64 arch"
 		fi
@@ -112,9 +146,9 @@ src_install() {
 	dodir /opt/${P}/.systemPrefs
 
 	# install control panel for Gnome/KDE
-	sed -e "s/INSTALL_DIR\/JRE_NAME_VERSION/\/opt\/${P}/" \
+	sed -e "s/INSTALL_DIR\/JRE_NAME_VERSION/\/opt\/${P}\/jre/" \
 		-e "s/\(Name=Java\)/\1 Control Panel/" \
-		${D}/opt/${P}/plugin/desktop/sun_java.desktop > \
+		${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop > \
 		${T}/sun_java.desktop
 
 	if use x86; then
@@ -135,11 +169,15 @@ src_install() {
 	fi
 
 	set_java_env ${FILESDIR}/${VMHANDLE}
+
+	# TODO prepman "fixes" symlink ja -> ja__JP.eucJP in 'man' directory,
+	#      creating ja.gz -> ja_JP.eucJP.gz. This is broken as ja_JP.eucJP
+	#      is a directory and will not be gzipped ;)
 }
 
 pkg_postinst() {
 	# Create files used as storage for system preferences.
-	PREFS_LOCATION=/opt/${P}/
+	PREFS_LOCATION=/opt/${P}/jre
 	mkdir -p ${PREFS_LOCATION}/.systemPrefs
 	if [ ! -f ${PREFS_LOCATION}/.systemPrefs/.system.lock ] ; then
 		touch $PREFS_LOCATION/.systemPrefs/.system.lock
@@ -159,7 +197,7 @@ pkg_postinst() {
 		einfo "If you want to install the plugin for Netscape 4.x, type"
 		einfo
 		einfo "   cd /usr/lib/nsbrowser/plugins/"
-		einfo "   ln -sf /opt/${P}/plugin/i386/ns4/libjavaplugin.so"
+		einfo "   ln -sf /opt/${P}/jre/plugin/i386/ns4/libjavaplugin.so"
 	fi
 
 	# if chpax is on the target system, set the appropriate PaX flags
@@ -170,13 +208,13 @@ pkg_postinst() {
 		echo
 		einfo "setting up conservative PaX flags for jar, javac and java"
 
-		for paxkills in "java"
+		for paxkills in "jar" "javac" "java"
 		do
-			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${P}/bin/$paxkills
+			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/bin/$paxkills
 		done
 
-		# /opt/$VM/bin/java_vm
-		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${P}/bin/java_vm
+		# /opt/$VM/jre/bin/java_vm
+		chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/jre/bin/java_vm
 
 		einfo "you should have seen lots of chpax output above now"
 		ewarn "make sure the grsec ACL contains those entries also"
@@ -186,8 +224,14 @@ pkg_postinst() {
 	fi
 
 	echo
-	eerror "Some parts of Sun's JRE require XFree86 to be installed."
+	eerror "Some parts of Sun's JDK require virtual/x11 and/or virtual/lpr to be installed."
 	eerror "Be careful which Java libraries you attempt to use."
+
+	echo
+	einfo " Be careful: ${P}'s Java compiler uses"
+	einfo " '-source 1.5' as default. Some keywords such as 'enum'"
+	einfo " are not valid identifiers any more in that mode,"
+	einfo " which can cause incompatibility with certain sources."
 
 	ebeep 5
 	epause 8

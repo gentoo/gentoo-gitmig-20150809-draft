@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.07.ebuild,v 1.2 2005/02/03 05:53:05 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.07-r1.ebuild,v 1.1 2005/03/25 22:38:15 luckyduck Exp $
 
 inherit java eutils
 
@@ -56,6 +56,7 @@ src_unpack() {
 	if [ -f ${S}/lib/unpack ]; then
 		UNPACK_CMD=${S}/lib/unpack
 		chmod +x $UNPACK_CMD
+		sed -i 's#/tmp/unpack.log#/dev/null\x00\x00\x00\x00\x00\x00#g' $UNPACK_CMD
 		for i in $PACKED_JARS; do
 			PACK_FILE=${S}/`dirname $i`/`basename $i .jar`.pack
 			if [ -f ${PACK_FILE} ]; then

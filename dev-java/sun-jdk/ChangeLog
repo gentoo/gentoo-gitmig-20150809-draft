@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.105 2005/03/25 00:31:18 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.106 2005/03/25 22:37:57 luckyduck Exp $
+
+*sun-jdk-1.5.0.02-r1 (25 Mar 2005)
+
+  25 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> -files/sun-jdk-1.4.2.05,
+  -files/sun-jdk-1.4.2.06, -files/sun-jdk-1.5.0, -files/sun-jdk-1.5.0.01,
+  +sun-jdk-1.4.2.07-r1.ebuild, -sun-jdk-1.4.2.07.ebuild,
+  -sun-jdk-1.5.0.01.ebuild, +sun-jdk-1.5.0.02-r1.ebuild,
+  -sun-jdk-1.5.0.02.ebuild, -sun-jdk-1.5.0.ebuild:
+  applied patch to all versions, see #86585. also did some cleanup.
 
   25 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> sun-jdk-1.4.2.07.ebuild:
   applied patch which was suggested by taviso, fixes insecure temporary file
