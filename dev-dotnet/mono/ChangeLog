@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.7 2004/02/13 20:11:07 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.8 2004/02/14 21:54:00 tberman Exp $
+
+*mono-0.30.1 (14 Feb 2004)
+
+  14 Feb 2004; Todd Berman <tberman@gentoo.org> mono-0.30.1.ebuild:
+  version bump
 
 *mono-0.30 (13 Feb 2004)
 
