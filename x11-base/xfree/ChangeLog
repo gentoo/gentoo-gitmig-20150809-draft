@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.359 2004/09/17 06:27:57 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.360 2004/09/17 17:59:12 lv Exp $
+
+  17 Sep 2004; Travis Tilley <lv@gentoo.org> xfree-4.3.0-r5.ebuild,
+  xfree-4.3.0-r6.ebuild:
+  marking all amd64 keyworded xfree ebuilds ~amd64 since we no longer support
+  xfree
 
   16 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r7.ebuild:
   PATCH_VER 2.1.25.8. This ebuild is *not* the hard-masked enhanced version it
