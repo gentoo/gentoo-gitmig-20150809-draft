@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/mythgallery-0.14.ebuild,v 1.2 2004/02/06 11:51:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/mythgallery-0.14.ebuild,v 1.3 2004/02/06 14:37:50 max Exp $
 
 inherit flag-o-matic
 
@@ -11,12 +11,14 @@ SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE="opengl"
 
 DEPEND=">=sys-apps/sed-4
+	opengl? ( virtual/opengl )
 	|| ( >=media-tv/mythtv-${PV} >=media-tv/mythfrontend-${PV} )"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${A} && cd "${S}"
 
 	for i in `grep -lr "usr/local" "${S}"` ; do
 		sed -e "s:/usr/local:/usr:g" -i "${i}" || die "sed failed"
@@ -24,39 +26,21 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf
+	myconf="${myconf} `use_enable opengl`"
+
 	local cpu="`get-flag march || get-flag mcpu`"
 	if [ "${cpu}" ] ; then
 		sed -e "s:pentiumpro:${cpu}:g" -i "settings.pro" || die "sed failed"
 	fi
 
-	econf `use_enable opengl` || die
-
 	qmake -o "Makefile" "${PN}.pro"
+
+	econf ${myconf}
 	emake || die "compile problem"
 }
 
 src_install() {
 	einstall INSTALL_ROOT="${D}"
-
-	insinto "/usr/share/mythtv/database/${PN}"
-	doins database/*.sql
-
-	dodoc COPYING README UPGRADING
-}
-
-pkg_postinst() {
-	einfo "If this is the first time you install MythGallery,"
-	einfo "you need to add /usr/share/mythtv/database/${PN}/gallery.sql"
-	einfo "to your MythTV database."
-	einfo
-	einfo "You might run 'mysql < /usr/share/mythtv/database/${PN}/gallery.sql'"
-	einfo
-	einfo "If you're upgrading from an older version and for more"
-	einfo "setup and usage instructions, please refer to:"
-	einfo "   /usr/share/doc/${PF}/README.gz"
-	einfo "   /usr/share/doc/${PF}/UPGRADING.gz"
-	ewarn "This part is important as there might be database changes"
-	ewarn "which need to be performed or this package will not work"
-	ewarn "properly."
-	echo
+	dodoc AUTHORS COPYING README UPGRADING
 }

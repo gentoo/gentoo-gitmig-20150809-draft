@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythgallery
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.13 2004/02/06 11:51:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.14 2004/02/06 14:37:50 max Exp $
+
+  06 Feb 2004; Max Kalika <max@gentoo.org> mythgallery-0.14.ebuild:
+  Ditch the postinst() message and don't attempt to install non-existant db
+  files. Properly/cleanly add the opengl support.
 
   06 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> mythgallery-0.14.ebuild:
   Fix crippled package. Closing #40303.
