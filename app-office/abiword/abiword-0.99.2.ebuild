@@ -1,0 +1,132 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author: Karl Trygve Kalleberg <karltk@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.99.2.ebuild,v 1.1 2002/02/24 14:48:01 azarah Exp $
+
+S=${WORKDIR}/${P}/abi
+DESCRIPTION="Text processor"
+SRC_URI="http://download.sourceforge.net/abiword/abiword-${PV}.tar.gz"
+HOMEPAGE="http://www.abisource.com"
+SLOT="0"
+DEPEND="virtual/glibc
+	>=sys-devel/gcc-2.95.2
+	=media-libs/freetype-1.3.1-r3
+	>=media-libs/libpng-1.0.7
+	>=media-libs/jpeg-6b-r2
+	>=x11-libs/gtk+-1.2.10-r4
+	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
+	>=dev-libs/libunicode-0.4-r1
+	>=gnome-base/bonobo-1.0.9-r1
+	>=gnome-extra/gal-0.13-r1 )
+	perl?  ( >=sys-devel/perl-5.6 )
+	spell? ( >=app-text/pspell-0.11.2 )
+	xml2?  ( >=dev-libs/libxml2-2.4.10 )
+	virtual/x11"
+
+
+src_unpack() {
+
+	unpack ${A}
+
+	# Fix perl stuff install outside sandbox, as well as a bug in 
+	# Abiword's build system (Abiword.3pm did not install, and
+	# the '.packlist' was not generated properly) -- Azarah (25/02/2002).
+	cd ${S}/src/bindings/perl
+	cp GNUmakefile.am GNUmakefile.am.orig
+	sed -e 's:write $(SITE_ARCHLIB)/auto:write $(PERLDEST)/$(SITE_ARCHLIB)/auto:g' \
+		-e 's:blib/bin /usr/bin:blib/bin $(PERLDEST)/usr/bin:g' \
+		-e 's:blib/script /usr/bin:blib/script $(PERLDEST)/usr/bin:g' \
+		-e 's:blib/man1 /usr/share/man/man1:blib/man1 $(PERLDEST)/usr/share/man/man1:g' \
+		-e 's:blib/man3 /usr/share/man/man3:blib/man3 $(PERLDEST)/usr/share/man/man3:g' \
+		-e 's:mkpath $(PERL_ARCHLIB):mkpath $(PERLDEST)/$(PERL_ARCHLIB):g' \
+		-e 's:$(PERL_ARCHLIB)/perllocal.pod:$(PERLDEST)/$(PERL_ARCHLIB)/perllocal.pod.new:' \
+		GNUmakefile.am.orig >GNUmakefile.am
+	mkdir -p blib/{arch,bin,lib,man1,man3,script}
+	cd ${S}
+}
+
+src_compile() {
+
+	local myconf
+	if [ "`use gnome`" ] ; then
+		myconf="${myconf} --with-gnome --enable-gnome"
+		export ABI_OPT_BONOBO=1
+	fi
+
+	if [ "`use perl`" ] ; then
+		myconf="${myconf} --enable-scripting"
+	fi
+	
+	if [ "`use spell`" ] ; then
+		myconf="${myconf} --with-pspell"
+	fi
+
+	if [ "`use xml2`" ] ; then
+		myconf="${myconf} --with-libxml2"
+	fi
+
+	./autogen.sh
+	
+	echo
+	echo "*************************************************"
+	echo "* Ignore above ERROR as it does not cause build *"
+	echo "* to fail.                                      *"
+	echo "*************************************************"
+	echo
+
+	CFLAGS="$CFLAGS `gdk-pixbuf-config --cflags`"
+
+	./configure --host=${CHOST} \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
+		--sysconfdir=/etc \
+		--localstatedir=/var/lib \
+		--with-libjpeg \
+		--enable-extra-optimization \
+		${myconf} || die
+
+	# Doesn't work with -j 4 (hallski)
+	make UNIX_CAN_BUILD_STATIC=0 \
+		OPTIMIZER="${CFLAGS}" || die
+}
+
+src_install() {
+
+	dodir /usr/{bin,lib}
+
+	make prefix=${D}/usr \
+		mandir=${D}/usr/share/man \
+		infodir=${D}/usr/share/info \
+		sysconfdir=${D}/etc \
+		localstatedir=${D}/var/lib \
+		PERLDEST=${D} \
+		install || die
+	
+	dosed "s:${D}::g" /usr/bin/AbiWord
+	
+	rm -f ${D}/usr/bin/abiword
+	dosym /usr/bin/AbiWord /usr/bin/abiword
+
+	dodoc BUILD COPYING *.txt, *.TXT
+
+	# Install icon and .desktop for menu entry
+	if [ "`use gnome`" ] ; then
+		insinto /usr/share/pixmaps
+		newins ${WORKDIR}/${P}/abidistfiles/icons/abiword_48.png AbiWord.png
+		insinto /usr/share/gnome/apps/Applications
+		doins ${FILESDIR}/AbiWord.desktop
+	fi
+}
+
+pkg_postinst() {
+
+	# Appending installation info
+	local perlver="`perl -v | grep -e "This is perl" | cut -d ' ' -f 4`"
+	perlver=${perlver/v/}
+	local perlarch="`perl -V | grep -e " archname" | cut -d '=' -f 4`"
+	sed -e "s:5.6.0:${perlver}:g" \
+		/usr/lib/perl5/${perlver}/${perlarch}/perllocal.pod.new \
+		>> /usr/lib/perl5/${perlver}/${perlarch}/perllocal.pod
+	rm -rf /usr/lib/perl5/${perlver}/${perlarch}/perllocal.pod.new
+}
