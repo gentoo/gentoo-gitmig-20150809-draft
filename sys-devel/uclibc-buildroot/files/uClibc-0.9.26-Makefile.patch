@@ -1,0 +1,45 @@
+--- extra/scripts/fix_includes.sh.orig	2004-01-15 17:50:48.474188032 +0930
++++ extra/scripts/fix_includes.sh	2004-01-15 18:45:51.451059224 +0930
+@@ -59,10 +59,10 @@
+     esac;
+ done;
+ 
+-if [ ! -f "$KERNEL_SOURCE/Makefile" ]; then
++if [ ! -f "$KERNEL_SOURCE/Makefile" -a ! -f "$KERNEL_SOURCE/include/linux/version.h" ]; then
+     echo "";
+     echo "";
+-    echo "The file $KERNEL_SOURCE/Makefile is missing!";
++    echo "The file $KERNEL_SOURCE/Makefile  or $KERNEL_SOURCE/include/linux/version.h is missing!";
+     echo "Perhaps your kernel source is broken?"
+     echo "";
+     echo "";
+@@ -79,12 +79,26 @@
+ fi;
+ 
+ # set current VERSION, PATCHLEVEL, SUBLEVEL, EXTERVERSION
+-eval `sed -n -e 's/^\([A-Z]*\) = \([0-9]*\)$/\1=\2/p' -e 's/^\([A-Z]*\) = \(-[-a-z0-9]*\)$/\1=\2/p' $KERNEL_SOURCE/Makefile`
++
++if [ -f "$KERNEL_SOURCE/Makefile" ] ; then
++    eval `sed -n -e 's/^\([A-Z]*\) = \([0-9]*\)$/\1=\2/p' -e 's/^\([A-Z]*\) = \(-[-a-z0-9]*\)$/\1=\2/p' $KERNEL_SOURCE/Makefile`
++else
++    ver=`grep UTS_RELEASE $KERNEL_SOURCE/include/linux/version.h | cut -d '"' -f 2`
++    VERSION=`echo "$ver" | cut -d '.' -f 1`
++    PATCHLEVEL=`echo "$ver" | cut -d '.' -f 2`
++    if echo "$ver" | grep -q '-' ; then
++        SUBLEVEL=`echo "$ver" | sed "s/${VERSION}.${PATCHLEVEL}.//" | cut -d '-' -f 1`
++        EXTRAVERSION=`echo "$ver" | sed "s/${VERSION}.${PATCHLEVEL}.${SUBLEVEL}-//"`
++    else
++        SUBLEVEL=`echo "$ver" | cut -d '.' -f 3`
++        #EXTRAVERSION=
++    fi
++fi
++
+ if [ -z "$VERSION" -o -z "$PATCHLEVEL" -o -z "$SUBLEVEL" ]
+ then
+     echo "Unable to determine version for kernel headers"
+-    echo -e "\tprovided in directory $KERNEL_SOURCE"
+-    exit 1
++    exit 1;
+ fi
+ 
+ echo "Current kernel version is $VERSION.$PATCHLEVEL.$SUBLEVEL${EXTRAVERSION}"
