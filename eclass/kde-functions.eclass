@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.81 2005/01/14 13:49:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.82 2005/01/14 19:43:06 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -432,160 +432,196 @@ deprange() {
 deprange-list() {
 
 	# Assign, parse params
-	local MINVER=$1
-	local MAXVER=$2
-	shift; shift
+	local MINVER=$1; shift
+	local MAXVER=$1; shift
 
+	# Get base version - the major X.Y components
 	local BASEVER=${MINVER%.*}
-	local MINMINOR=${MINVER##*.}
-	local MAXMINOR=${MAXVER##*.}
+	if [ "${MAXVER%.*}" != "$BASEVER" ]; then
+		die "deprange(): unsupported parameters $MINVER $MAXVER - BASEVER must be identical"
+	fi
+	
+	# Get version suffixes
+	local MINSUFFIX MAXSUFFIX
+	if [ "$MINVER" != "${MINVER/_}" ]; then
+		MINSUFFIX=${MINVER##*_}
+		SUFFIXLESSMINVER=${MINVER%_*}
+	else
+		SUFFIXLESSMINVER=$MINVER
+	fi
+	if [ "$MAXVER" != "${MAXVER/_}" ]; then
+		MAXSUFFIX=${MAXVER##*_}
+		SUFFIXLESSMAXVER=${MAXVER%_*}
+	else
+		SUFFIXLESSMAXVER=$MAXVER
+	fi
+	
+	# Separate out the optional lower bound revision number
+	if [ "$MINVER" != "${MINVER/-}" ]; then
+		local MINREV=${MINVER##*-}
+	fi
 
+	# Get minor version components (the 1 in 3.3.1)
+	local MINMINOR=${SUFFIXLESSMINVER##*.}
+	local MAXMINOR=${SUFFIXLESSMAXVER##*.}
+
+	# Iterate over packages
 	while [ -n "$1" ]; do
 		local PACKAGE=$1
 		shift
 
-		# If min version has -rN component, separate it
-		if [ "$MINMINOR" != "${MINMINOR/-r}" ]; then
-			local MINREV=${MINMINOR##*-r}
-			MINMINOR=${MINMINOR%-r*}
-		fi
-
-		# If min or max version has a _alpha/beta/pre/rc suffix, separate it.
-		# To understand why we initialize MINALPHA etc the way we do, see the loops
-		# that use them as bounds.
-		local MINALPHA=11
-		local MINBETA=11
-		local MINPRE=11
-		local MINRC=11
-		if [ "$MINMINOR" != "${MINMINOR/_}" ]; then
-			local MINSUFFIX="${MINMINOR##*_}"
-			MINMINOR="${MINMINOR%_*}"
-			if [ "$MINSUFFIX" != "${MINSUFFIX/alpha}" ]; then
-				MINALPHA="${MINSUFFIX##alpha}"
-				MINBETA=1
-				MINPRE=1
-				MINRC=1
-			elif [ "$MINSUFFIX" != "${MINSUFFIX/beta}" ]; then
-				MINBETA="${MINSUFFIX##beta}"
-				MINPRE=1
-				MINRC=1
-			elif [ "$MINSUFFIX" != "${MINSUFFIX/pre}" ]; then
-				MINPRE="${MINSUFFIX##pre}"
-				MINRC=1
-			elif [ "$MINSUFFIX" != "${MINSUFFIX/rc}" ]; then
-				MINRC="${MINSUFFIX##rc}"
-			else
-				eerror "deprange(): version suffix $MINSUFFIX (probably _pN) not supported"
-				return
-			fi
-		fi
-
-		local MAXALPHA=0
-		local MAXBETA=0
-		local MAXPRE=0
-		local MAXRC=0
-		if [ "$MAXMINOR" != "${MAXMINOR/_}" ]; then
-			local MAXSUFFIX="${MAXMINOR##*_}"
-			MAXMINOR="${MAXMINOR%_*}"
-			if [ "$MAXSUFFIX" != "${MAXSUFFIX/alpha}" ]; then
-				MAXALPHA="${MAXSUFFIX##alpha}"
-			elif [ "$MAXSUFFIX" != "${MAXSUFFIX/beta}" ]; then
-				MAXBETA="${MAXSUFFIX##beta}"
-				MAXALPHA=10
-			elif [ "$MAXSUFFIX" != "${MAXSUFFIX/pre}" ]; then
-				MAXPRE="${MAXSUFFIX##pre}"
-				MAXALPHA=10
-				MAXBETA=10
-			elif [ "$MAXSUFFIX" != "${MAXSUFFIX/rc}" ]; then
-				MAXRC="${MAXSUFFIX##rc}"
-				MAXALPHA=10
-				MAXBETA=10
-				MAXPRE=10
-			else
-				eerror "deprange(): version suffix $MAXSUFFIX (probably _pN) not supported"
-				return
-			fi
-		fi
-
-		# If we stripped a revision number from MINMINOR earlier, increase the main loop's lower bound,
-		# as we don't want to include a ~$PACKAGE-$BASEVER.$MINMINOR option.
-		# If the lower bound has a suffix, we want to increase the suffix and not MINMINOR itself.
-		if [ -n "$MINREV" ]; then
-			if [ -z "$MINSUFFIX" ]; then
-				let MINMINOR++
-			elif [ -n "$MINRC" ]; then
-				let MINRC++
-			elif [ -n "$MINPRE" ]; then
-				let MINPRE++
-			elif [ -n "$MINBETA" ]; then
-				let MINBETA++
-			elif [ -n "$MINALPHA" ]; then
-				let MINALPHA++
-			fi
-		fi
-
-		# If we stripped a suffix from MAXMINOR, decrease it, since MAXMINOR without a suffix
-		# is outside the requested range
-		if [ -n "$MAXSUFFIX" ]; then
-			let MAXMINOR--
-		fi
-
-		# Build list of versions in descending order:
-		# from upper suffix to highest normal (suffixless) version, then just normal versions,
-		# then from lowest normal version to lowest suffix.
-		# Cf. the blocks that initialize MAXALPHA, MINBETA etc above to understand why
-		# the loops below work.
 		local NEWDEP=""
-		local i
 
-		# max version's allowed suffixes
-		for (( i=$MAXRC ; $i > 0 ; i-- )) ; do
-			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MAXMINOR}_rc$i"
-		done
-		for (( i=$MAXPRE ; $i > 0 ; i-- )) ; do
-			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MAXMINOR}_pre$i"
-		done
-		for (( i=$MAXBETA ; $i > 0 ; i-- )) ; do
-			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MAXMINOR}_beta$i"
-		done
-		for (( i=$MAXALPHA ; $i > 0 ; i-- )) ; do
-			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MAXMINOR}_alpha$i"
-		done
+		# If the two versions are identical, our job is simple
+		if [ "$MINVER" == "$MAXVER" ]; then
+			NEWDEP="~$PACKAGE-$MINVER"
 
-		# allowed normal versions
-		for (( i=$MAXMINOR ; $i >= $MINMINOR ; i-- )) ; do
-			NEWDEP="$NEWDEP ~$PACKAGE-$BASEVER.$i"
-		done
-
-		# min version's allowed suffixes
-		for (( i=10 ; $i >= $MINRC ; i-- )) ; do
-			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MINMINOR}_rc$i"
-		done
-		for (( i=10 ; $i >= $MINPRE ; i-- )) ; do
-			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MINMINOR}_pre$i"
-		done
-		for (( i=10 ; $i >= $MINBETA ; i-- )) ; do
-			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MINMINOR}_beta$i"
-		done
-		for (( i=10 ; $i >= $MINALPHA ; i-- )) ; do
-			NEWDEP="$NEWDEP =$PACKAGE-$BASEVER.${MINMINOR}_alpha$i"
-		done
-
-		# If min verson had -rN component, add all revisions from r99 to it in descending order
-		if [ -n "$MINREV" ]; then
-			let MINMINOR--
-			if [ -n "$MINSUFFIX" ]; then
-				BASEMINVER="$PACKAGE-$BASEVER.${MINMINOR}_$MINSUFFIX"
-			else
-				BASEMINVER="$PACKAGE-$BASEVER.${MINMINOR}"
+		# If the range bounds differ only by their suffixes
+		elif [ "$MINMINOR" == "$MAXMINOR" ]; then
+			NEWDEP="$(deprange-iterate-suffixes ~$PACKAGE-$BASEVER.$MINMINOR $MINSUFFIX $MAXSUFFIX)"
+			
+			# Revision constraint on lower bound
+			if [ -n "$MINREV" ]; then
+				NEWDEP="$NEWDEP
+						$(deprange-iterate-numbers =$PACKAGE-$BASEVER.${MINMINOR}_$MINSUFFIX-r $MINREV 99)"
 			fi
-			for (( i=99 ; $i >= $MINREV ; i-- )) ; do
-				NEWDEP="$NEWDEP =$BASEMINVER-r$i"
-			done
-		fi
+			
+		# If the minor version numbers are different too
+		else
 
+			# Max version's allowed suffixes
+			if [ -n "$MAXSUFFIX" ]; then
+				NEWDEP="$(deprange-iterate-suffixes ~$PACKAGE-$BASEVER.$MAXMINOR alpha1 $MAXSUFFIX)"
+			fi
+			
+			# regular versions in between
+			if [ -n "$MINREV" -a -z "$MINSUFFIX" ]; then
+				let MAXMINOR++
+			fi
+			NEWDEP="$NEWDEP
+					$(deprange-iterate-numbers ~${PACKAGE}-${BASEVER}. $MINMINOR $MAXMINOR)"
+		
+			# Min version's allowed suffixes
+			if [ -n "$MINSUFFIX" ]; then
+				NEWDEP="$NEWDEP
+						$(deprange-iterate-suffixes ~$PACKAGE-$BASEVER.$MINMINOR $MINSUFFIX rc10)"
+			fi
+			if [ -n "$MINREV" ]; then
+				local BASE
+				if [ -n "$MINSUFFIX" ]; then
+					BASE="=$PACKAGE-$BASEVER.${MINMINOR}_${MINSUFFIX%-r*}-r"
+				else
+					BASE="=$PACKAGE-$BASEVER.${MINMINOR}-r"
+				fi
+				NEWDEP="$NEWDEP
+						$(deprange-iterate-numbers $BASE ${MINREV#r} 99)"
+			fi
+		fi
+		
+		# Output
 		echo -n $NEWDEP
 	done
+}
+
+# This internal function iterates over simple ranges where only a numerical suffix changes
+# Parameters: base name, lower bound, upper bound
+deprange-iterate-numbers() {
+	local package=$1 lower=$2 upper=$3 i newdep=""
+	for (( i=$upper ; $i >= $lower ; i-- )) ; do
+		newdep="$newdep ${package}${i}"
+	done
+	echo -n $newdep
+}
+
+# This internal function iterates over ranges with the same base version and different suffixes.
+# If the lower bound has a revision number, this function won't mention the lower bound in its output.
+# Parameters: base name, lower version suffix, upper version suffix
+# eg: deprange-iterate-suffixes ~kde-base/libkonq-3.4.0 alpha8 beta2
+deprange-iterate-suffixes() {
+	local NAME=$1 MINSUFFIX=$2 MAXSUFFIX=$3
+	
+	# Separate out the optional lower bound revision number
+	if [ "$MINSUFFIX" != "${MINSUFFIX/-}" ]; then
+		local MINREV=${MINSUFFIX##*-}
+	fi
+	MINSUFFIX=${MINSUFFIX%-*}
+	
+	# Separate out the version suffixes
+	local MINalpha MINbeta MINpre MINrc
+	if [ "$MINSUFFIX" != "${MINSUFFIX/alpha}" ]; then
+		MINalpha="${MINSUFFIX##alpha}"
+	elif [ "$MINSUFFIX" != "${MINSUFFIX/beta}" ]; then
+		MINbeta="${MINSUFFIX##beta}"
+	elif [ "$MINSUFFIX" != "${MINSUFFIX/pre}" ]; then
+		MINpre="${MINSUFFIX##pre}"
+	elif [ "$MINSUFFIX" != "${MINSUFFIX/rc}" ]; then
+		MINrc="${MINSUFFIX##rc}"
+	else
+		die "deprange(): version suffix $MINSUFFIX (probably _pN) not supported"
+	fi
+	local MAXalpha MAXbeta MAXpre MAXrc
+	if [ "$MAXSUFFIX" != "${MAXSUFFIX/alpha}" ]; then
+		MAXalpha="${MAXSUFFIX##alpha}"
+	elif [ "$MAXSUFFIX" != "${MAXSUFFIX/beta}" ]; then
+		MAXbeta="${MAXSUFFIX##beta}"
+	elif [ "$MAXSUFFIX" != "${MAXSUFFIX/pre}" ]; then
+		MAXpre="${MAXSUFFIX##pre}"
+	elif [ "$MAXSUFFIX" != "${MAXSUFFIX/rc}" ]; then
+		MAXrc="${MAXSUFFIX##rc}"
+	else
+		die "deprange(): version suffix $MAXSUFFIX (probably _pN) not supported"
+	fi
+	
+	local started="" NEWDEP="" var
+	
+	# Loop over version suffixes
+	for suffix in rc pre beta alpha; do
+		local upper="" lower=""
+		
+		# If -n $started, we've encountered the upper bound in a previous iteration
+		# and so we use the maximum allowed upper bound for this prefix
+		if [ -n "$started" ]; then
+			upper=10
+			
+		else
+		
+			# Test for the upper bound in the current iteration
+			var=MAX$suffix
+			if [ -n "${!var}" ]; then
+				upper=${!var}
+				started=yes
+			fi
+		fi
+		
+		# If the upper bound has been found
+		if [ -n "$upper" ]; then
+		
+			# Test for the lower bound in the current iteration (of the loop over prefixes)
+			var=MIN$suffix
+			if [ -n "${!var}" ]; then
+				lower=${!var}
+				
+				# If the lower bound has a revision number, don't touch that yet
+				if [ -n "$MINREV" ]; then
+					let lower++
+				fi
+				
+			# If not found, we go down to the minimum allowed for this prefix
+			else
+				lower=1
+			fi
+			
+			# Add allowed versions with this prefix
+			NEWDEP="$NEWDEP
+					$(deprange-iterate-numbers ${NAME}_${suffix} $lower $upper)"
+					
+			# If we've encountered the lower bound on this iteration, don't consider additional prefixes
+			if [ -n "${!var}" ]; then
+				break
+			fi
+		fi
+	done
+	echo -n $NEWDEP
 }
 
 # ---------------------------------------------------------------
