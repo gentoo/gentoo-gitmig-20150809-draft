@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.0.ebuild,v 1.1 2001/05/15 04:31:58 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.0.ebuild,v 1.2 2001/05/18 22:55:14 pete Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
@@ -35,7 +35,7 @@ src_install() {
 	chmod 0644 ${D}/usr/local/httpd/htdocs/projects/dynfw.html
 	
 	insinto /usr/local/httpd/htdocs/projects
-	doins dynfw-1.0/dynfw-1.0.tar.gz css/gentoo-doc.css images/gentoo-doc.gif
+	doins dynfw-1.0/dynfw-1.0.tar.gz css/gentoo-doc.css images/gentoo-doc.gif images/favicon.ico
 
 	insinto /usr/local/httpd/htdocs
 	doins html/index*.html
