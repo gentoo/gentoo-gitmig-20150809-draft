@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.3 2004/02/17 07:36:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.4 2004/05/05 11:41:24 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -20,9 +20,6 @@ HOMEPAGE="http://canna.sourceforge.jp/"		# you need to change this!
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="public-domain"
-# I added all keywords form /usr/portage/profiles/keyword.desc atm since
-# cannadic source is basically plain text and will run on any platform
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hpps ~amd64"
 SLOT="0"
 
 S="${WORKDIR}"
@@ -33,8 +30,8 @@ DOCS="README*"
 
 # You don't need to modify these
 #local cannadir dicsdir
-cannadir="/var/lib/canna/dic/canna"
-dicsdir="/var/lib/canna/dic/dics.d"
+cannadir="${ROOT}/var/lib/canna/dic/canna"
+dicsdir="${ROOT}/var/lib/canna/dic/dics.d"
 
 #
 # pkg_setup() : sets up cannadic dir
@@ -122,8 +119,8 @@ pkg_postinst() {
 	if [ -n "`use canna`" ] ; then
 		update-cannadic-dir
 		einfo
-		einfo "Please restart cannaserver to fit changes."
-		einfo "and modify your config file (~/.canna) to enable dictionary."
+		einfo "Please restart cannaserver to fit the changes."
+		einfo "You need to modify your config file (~/.canna) to enable dictionaries."
 
 		if [ -n "${CANNADICS}" ] ; then
 			einfo "e.g) add $(for d in ${CANNADICS}; do
@@ -132,6 +129,8 @@ pkg_postinst() {
 			einfo "For details, see documents under /usr/share/doc/${PF}"
 		fi
 
+		ewarn "If you are upgrading from existing dictionary, you may need to recreate"
+		ewarn "user dictionary if you have one."
 		einfo
 	fi
 }
