@@ -1,0 +1,11 @@
+# ChangeLog for x11-themes/ximian-artwork
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.1 2003/06/18 20:53:37 liquidx Exp $
+
+*ximian-artwork-0.2.26.0.6.1 (18 Jun 2003)
+
+  18 Jun 2003; Alastair Tse <liquidx@gentoo.org>
+  ximian-artwork-0.2.26.0.6.1.ebuild, files/ximian-artwork-0.2.26-gdm.patch:
+  new package. ximian's industrial engine plus other themes such as gdm, xmms,
+  nautilus. all ximian trademarks removed.
+
