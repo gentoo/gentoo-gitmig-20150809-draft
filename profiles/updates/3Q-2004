@@ -113,3 +113,4 @@ move net-www/horde-nag www-apps/horde-nag
 move net-www/horde-passwd www-apps/horde-passwd
 move net-www/horde-pear www-apps/horde-pear
 move net-www/horde-sork www-apps/horde-sork
+move net-www/horde-turba www-apps/horde-turba
