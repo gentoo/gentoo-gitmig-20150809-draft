@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpfc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/ChangeLog,v 1.6 2004/11/18 18:02:23 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/ChangeLog,v 1.7 2004/12/19 05:58:35 eradicator Exp $
+
+  18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> mpfc-1.3.5.ebuild:
+  Stable amd64, sparc, x86.
 
 *mpfc-1.3.5 (18 Nov 2004)
 
