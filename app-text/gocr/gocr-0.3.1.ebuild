@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.1.build,v 1.2 2001/03/25 22:11:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.1.ebuild,v 1.1 2001/04/28 11:59:27 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -28,6 +28,9 @@ src_unpack() {
   mv gocr.tcl gocr.orig
   sed -e "s:\.\./examples:/usr/share/gocr/fonts:" \
     gocr.orig > gocr.tcl
+  cd ../src
+  cp database.c database.orig
+  sed -e "s:\./db/:/usr/share/gocr/db/:" database.orig > database.c
   cd ../examples
   cp Makefile Makefile.orig
   sed -e "s:polish.pbm man.pbm:polish.pbm:" Makefile.orig > Makefile
@@ -37,7 +40,11 @@ src_unpack() {
 src_compile() {
 
     try ./configure --prefix=/usr --host=${CHOST}
-    try make src frontend examples doc
+    try make src frontend database
+    if [ "`use tex`" ]
+    then
+      try make examples doc
+    fi
 
 }
 
@@ -49,15 +56,19 @@ src_install () {
     dolib.a src/libPgm2asc.a
     insinto /usr/include
     doins src/gocr.h
-    insinto /usr/share/gocr/fonts
-    doins examples/*.pbm
+    insinto /usr/share/gocr/db
+    doins db/*
     doman man/man1/gocr.1
     dodoc AUTHORS BUGS CREDITS HISTORY README* REMARK.txt REVIEW TODO gpl.html
     docinto txt
     dodoc doc/*.txt
-
-    docinto ps
-    dodoc doc/ocr.ps
+    if [ "`use tex`" ]
+    then 
+      doins examples/*.pbm
+      insinto /usr/share/gocr/db
+      docinto ps
+      dodoc doc/ocr.ps
+    fi
 
 }
 
