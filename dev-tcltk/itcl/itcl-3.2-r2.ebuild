@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.2-r2.ebuild,v 1.10 2003/10/27 02:01:14 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.2-r2.ebuild,v 1.11 2003/10/29 04:44:27 robbat2 Exp $
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P}
@@ -22,12 +22,12 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die
-	make CFLAGS_DEFAULT="${CFLAGS}" || die
+	econf || die "Econf failed"
+	make CFLAGS_DEFAULT="${CFLAGS}" || die "Make failed"
 }
 
 src_install() {
-	einstall || die
+	einstall || die "Einstall failed"
 
 	rm ${D}/usr/lib/iwidgets
 	ln -s iwidgets3.0.1 ${D}/usr/lib/iwidgets

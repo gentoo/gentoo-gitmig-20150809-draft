@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/itcl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.9 2003/10/27 02:01:14 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.10 2003/10/29 04:44:27 robbat2 Exp $
+
+*itcl-3.2.1 (28 Oct 2003)
+
+  28 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> itcl-3.2-r2.ebuild,
+  itcl-3.2.1.ebuild, files/itcl-3.2.1-gentoo.diff:
+  add error checking to old ebuild, and rewrite new ebuild for version bump
 
   26 Oct 2003; Brad House <brad_mssw@gentoo.org> itcl-3.2-r2.ebuild:
   add amd64 flag
