@@ -1,0 +1,11 @@
+--- skkserv.rb.in.orig	2003-09-24 23:05:05.000000000 +0900
++++ skkserv.rb.in	2004-02-18 03:04:48.048347464 +0900
+@@ -392,7 +392,7 @@
+     def each_module
+       constants.reverse_each do |s|
+ 	m = const_get(s)
+-	next if m.type != Module
++	next if m.class != Module
+ 	yield m
+       end
+     end

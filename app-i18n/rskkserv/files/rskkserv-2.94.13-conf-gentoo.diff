@@ -1,0 +1,69 @@
+--- rskkserv.conf.in.orig	2003-04-12 21:35:52.000000000 +0900
++++ rskkserv.conf.in	2004-02-18 02:58:23.408821560 +0900
+@@ -1,6 +1,7 @@
+ # rskkserv.conf --- rskkserv configuration file -*- ruby -*-
+ 
+ module SKKServerConfig
++  HOST = "localhost"
+   PORT = 1178
+   MAX_CLIENTS = 32
+ 
+@@ -17,6 +18,58 @@
+     NOCACHE = false
+     KCODE = :eucjp
+   end
++
++#  module JIS2
++#    DICFILE = "@datadir@/skk/SKK-JISYO.JIS2"
++#  end
++
++#  module JIS3_4
++#    DICFILE = "@datadir@/skk/SKK-JISYO.JIS3_4"
++#  end
++
++#  module OMAEMONA_2CH
++#    DICFILE = "@datadir@/skk/SKK-JISYO.2ch"
++#  end
++
++#  module ASSOC
++#    DICFILE = "@datadir@/skk/SKK-JISYO.assoc"
++#  end
++
++#  module EDICT
++#    DICFILE = "@datadir@/skk/SKK-JISYO.edict"
++#  end
++
++#  module FUKUGO
++#    DICFILE = "@datadir@/skk/SKK-JISYO.fukugo"
++#  end
++
++#  module GEO
++#    DICFILE = "@datadir@/skk/SKK-JISYO.geo"
++#  end
++
++#  module JINMEI
++#    DICFILE = "@datadir@/skk/SKK-JISYO.jinmei"
++#  end
++
++#  module LAW
++#    DICFILE = "@datadir@/skk/SKK-JISYO.law"
++#  end
++
++#  module MAZEGAKI
++#    DICFILE = "@datadir@/skk/SKK-JISYO.mazegaki"
++#  end
++
++#  module PUBDICPlus
++#    DICFILE = "@datadir@/skk/SKK-JISYO.pubdic+"
++#  end
++
++#  module ZIPCODE
++#    DICFILE = "@datadir@/skk/SKK-JISYO.zipcode"
++#  end
++
++#  module OFFICE_ZIPCODE
++#    DICFILE = "@datadir@/skk/SKK-JISYO.office.zipcode"
++#  end
+ end
+ 
+ # rskkserv.conf ends here
