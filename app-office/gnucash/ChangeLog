@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.29 2003/07/09 16:37:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.30 2003/07/16 18:46:56 liquidx Exp $
+
+  16 Jul 2003; Alastair Tse <liquidx@gentoo.org> gnucash-1.8.4.ebuild:
+  marked stable for x86
 
   09 Jul 2003; Alastair Tse <liquidx@gentoo.org> gnucash-1.8.2.ebuild,
   gnucash-1.8.4.ebuild:
