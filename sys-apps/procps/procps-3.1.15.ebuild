@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.15.ebuild,v 1.6 2004/02/08 20:34:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.15.ebuild,v 1.7 2004/02/09 16:44:56 gustavoz Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.sf.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~mips ~alpha ~arm hppa ~amd64 ~ia64 ppc64"
+KEYWORDS="x86 ppc sparc ~mips ~alpha ~arm hppa ~amd64 ~ia64 ppc64"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
 
