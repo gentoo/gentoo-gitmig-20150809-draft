@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11o.ebuild,v 1.2 2002/04/26 05:42:18 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11o-r2.ebuild,v 1.1 2002/04/26 05:42:18 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Various useful Linux utilities"
 SRC_URI="http://www.kernel.org/pub/linux/utils/${PN}/${P}.tar.gz
-	
+         http://www.kernel.org/pub/linux/kernel/people/hvr/util-linux-patch-int/${P}.patch.gz"
 
 DEPEND="virtual/glibc >=sys-libs/ncurses-5.2-r2"
 
@@ -18,6 +18,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${WORKDIR}
 	cd ${S}
+	gunzip -c ${DISTDIR}/${P}.patch.gz | patch -p0
 	cp MCONFIG MCONFIG.orig
 	#Build login etc; we will install only login manually....
 	#We do this to fix a bug with shadow's login
@@ -33,15 +34,24 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
 
-	use nls || myconf="${myconf} --disable-nls"
+	./configure || die
+
+	if [ -z "`use nls`" ]
+	then
+		cp defines.h defines.h.orig	
+		cp Makefile Makefile.orig
+		
+		sed -e "s/#define ENABLE_NLS//g" 	\
+			-e "s/#define HAVE_libintl_h//g"	\
+			defines.h.orig > defines.h
 	
-	./configure 	\
-		${myconf} || die
-
+		sed "s/\(^SUBDIRS=\)po/\1lib/g"	\
+			Makefile.orig > Makefile
+	fi
+	
 	emake LDFLAGS="" || die
-	cd sys-utils; makeinfo *.texi || die ; cd ..
+	cd sys-utils; makeinfo *.texi || die
 }
 
 src_install() {

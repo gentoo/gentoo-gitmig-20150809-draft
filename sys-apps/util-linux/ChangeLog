@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.4 2002/04/11 15:11:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.5 2002/04/26 05:42:18 rphillips Exp $
+
+*util-linux-2.11o-r2 (25 Apr 2002)
+
+  25 Apr 2002; Ryan Phillips <rphillips@gentoo.org> util-linux-2.11o-r2.ebuild
+  files/digest-util-linux-2.11o-r2
+
+  patch util-linux with the international crypto patch.  This patch
+  does not contain any cryptographic components. (#1607)
 
 *util-linux-2.11o-r1 (11 Apr 2002)
 
