@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/linuxtv-dvb
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/ChangeLog,v 1.4 2004/02/17 21:50:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/ChangeLog,v 1.5 2004/03/08 20:33:57 avenj Exp $
+
+  08 Mar 2004; Jon Portnoy <avenj@gentoo.org> linuxtv-dvb-1.0.1.ebuild :
+  AMD64 keywords to make repoman happy.
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> linuxtv-dvb-1.0.1.ebuild:
   I have no real clue if this works on alpha or ia64, so just going to have to
