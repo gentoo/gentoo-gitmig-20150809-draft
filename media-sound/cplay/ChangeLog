@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cplay
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.5 2003/08/16 01:23:08 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.6 2003/09/20 12:46:10 jje Exp $
+
+  20 Sep 2003; jje <jje@gentoo.org> cplay-1.47.ebuild:
+  Fix source URI. See #27946.
 
 *cplay-1.47 (15 Aug 2003)
 
