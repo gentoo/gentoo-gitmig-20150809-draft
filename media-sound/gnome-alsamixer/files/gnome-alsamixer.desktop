@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=ALSA Volume Control
+Comment=Adjust the volume level
+Exec=gnome-alsamixer
+Icon=gnome-alsamixer/gnome-alsamixer-icon.png
+Info=Gnome ALSA Mixer
+Terminal=0
+Type=Application
+Categories=Application;AudioVideo;X-Red-Hat-Base;
+Encoding=UTF-8
+X-Desktop-File-Install-Version=0.3

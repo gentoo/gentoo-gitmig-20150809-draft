@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/gnome-alsamixer
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/ChangeLog,v 1.2 2004/01/17 03:27:33 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/ChangeLog,v 1.3 2004/02/17 12:06:26 eradicator Exp $
+
+*gnome-alsamixer-0.9.6 (17 Feb 2004)
+
+  17 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  gnome-alsamixer-0.9.3.ebuild, gnome-alsamixer-0.9.6.ebuild, metadata.xml,
+  files/gnome-alsamixer.desktop:
+  Version bump closes bug #35870.
 
   17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org>
   gnome-alsamixer-0.9.3.ebuild:
