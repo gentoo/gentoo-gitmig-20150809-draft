@@ -1,15 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.74 2004/10/21 07:40:47 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.75 2004/10/28 01:38:31 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
 ECLASS=flag-o-matic
 INHERITED="$INHERITED $ECLASS"
 
-# Please leave ${IUSE} in this until portage .51 is stable, otherwise
-# IUSE gets clobbered.
-IUSE="${IUSE} debug"
+IUSE="debug"
 
 # need access to emktemp()
 inherit eutils toolchain-funcs
@@ -267,8 +265,7 @@ strip-flags() {
 }
 
 test_flag() {
-	local cc=${CC:-gcc} ; cc=${cc%% *}
-	if ${cc} -S -xc "$@" -o "$(emktemp)" /dev/null &>/dev/null; then
+	if $(tc-getCC) -S -xc "$@" -o "$(emktemp)" /dev/null &>/dev/null; then
 		printf "%s\n" "$*"
 		return 0
 	fi
@@ -276,8 +273,7 @@ test_flag() {
 }
 
 test_version_info() {
-	local cc=${CC:-gcc} ; cc=${cc%% *}
-	if [[ $(${cc} --version 2>&1) == *$1* ]]; then
+	if [[ $($(tc-getCC) --version 2>&1) == *$1* ]]; then
 		return 0
 	else
 		return 1
