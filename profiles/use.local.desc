@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.250 2004/02/21 15:52:57 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.251 2004/02/22 22:15:57 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -220,6 +220,7 @@ net-wireless/hostap:hostap-noplx - Set to not install hostap_plx driver
 net-www/elinks:lua - enable lua support
 net-www/links:javascript - enable javascript support
 net-www/memcached:php - Include the PHP API for memcached
+net-www/monkeyd:php - Include support for php scripts
 net-www/mozilla:mozaccess - blank
 net-www/mozilla:mozcalendar - blank
 net-www/mozilla:mozctl - adds in the ctl extension in older versions (1.1 or earlier)
