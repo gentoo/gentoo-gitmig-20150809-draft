@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.833 2005/01/03 21:20:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.834 2005/01/04 06:53:40 spyderous Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -735,8 +735,6 @@ x11-base/kdrive:freetype - Enables Freetype font support
 x11-base/kdrive:speedo - Enables Speedo font support
 x11-base/kdrive:type1 - Enables Type1 font support
 x11-base/x11-drm:gatos - Installs DRM built to work alongside GATOS features
-x11-base/xfree:gatos - Performs GATOS-specific actions including SDK install
-x11-base/xfree:sdk - Builds the software development kit
 x11-base/xorg-x11:bitmap-fonts - Builds the crappy 100 DPI and 75 DPI fonts
 x11-base/xorg-x11:dlloader - Enable dynamic module loader instead of ELF loader
 x11-base/xorg-x11:dmx - Build Distributed Multiheaded X
