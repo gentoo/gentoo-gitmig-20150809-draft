@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5.ebuild,v 1.3 2005/04/04 14:24:54 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5.ebuild,v 1.4 2005/04/04 16:46:00 voxus Exp $
 
 inherit eutils gnuconfig libtool
 
@@ -41,10 +41,6 @@ src_unpack() {
 		       ${i}
 	done
 
-	# it should be installed by bind-tools
-	sed "s:nsupdate ::g" ${S}/bin/Makefile.in > ${T}/Makefile
-	mv ${T}/Makefile ${S}/bin/Makefile.in
-
 	if use dlz; then
 		epatch ${DISTDIR}/dlz-${PV}.patch.bz2
 		epatch ${FILESDIR}/${P}-berkdb_fix.patch
@@ -66,6 +62,10 @@ src_unpack() {
 	cd ${T} && epatch ${FILESDIR}/named.rc6-pid_fix
 
 	gnuconfig_update
+
+	# it should be installed by bind-tools
+	sed "s:nsupdate ::g" ${S}/bin/Makefile.in > ${T}/Makefile
+	mv ${T}/Makefile ${S}/bin/Makefile.in
 
 	cd ${S}
 	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
