@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genflags/genflags-0.96.ebuild,v 1.4 2004/06/28 19:48:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genflags/genflags-0.96.ebuild,v 1.5 2004/11/16 09:46:08 robbat2 Exp $
 
 DESCRIPTION="Gentoo CFLAGS generator"
 HOMEPAGE="http://www.gentoo.org/"
@@ -11,9 +11,9 @@ SRC_URI="mirror://gentoo/${P}-bin.tar.bz2
 
 LICENSE="OSL-1.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64 s390"
 IUSE=""
-# should also work on : m68k cris s390 sh
+# should also work on : m68k cris sh
 # This is all explictly specified as might want this in early stages
 
 DEPEND=""
@@ -44,5 +44,5 @@ pkg_postinst() {
 	ewarn "AMD-K6{,-2,-3} and Athlon vs. Athlon-4."
 	einfo "Please file any patches/bugs to robbat2@gentoo.org via the Gentoo"
 	einfo "Bugzilla."
-	einfo "See /usr/share/doc/${PF}/README for quick instructions."
+	einfo "See /usr/share/doc/${PF}/README.gz for quick instructions."
 }

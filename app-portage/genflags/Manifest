@@ -1,14 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3d3f8d70580be7fcd97fe72d87e3ff3c ChangeLog 1234
+MD5 171517103c10535ec3322076ca852a0c genflags-0.96.ebuild 1449
+MD5 4ec3e16e80120b2328a4a763e55068e5 ChangeLog 1327
 MD5 6346f55d1a2891948e971c283e8c823f metadata.xml 247
-MD5 042dc7fd34f0162f4b1a519f31250c25 genflags-0.96.ebuild 1445
 MD5 16ee605bd999aa435fda39bef3ca28b4 files/digest-genflags-0.96 141
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
 
-iD8DBQFA4HaQHTu7gpaalycRAspKAKDOtNLlq7e2G7wX0l9q0NKhISlfKwCg5Hao
-V8bpP3YK+5XUka3B7uV0O7M=
-=F89L
+iD8DBQFBmdqCPpIsIjIzwiwRAnlLAJ96Rj5StCy3HaYC1WICvRk/79+kmQCdHfj9
+owq9RHvnBfytoMsdFvKSlHo=
+=lgl1
 -----END PGP SIGNATURE-----

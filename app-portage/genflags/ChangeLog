@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/genflags
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genflags/ChangeLog,v 1.5 2004/06/24 21:48:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genflags/ChangeLog,v 1.6 2004/11/16 09:46:08 robbat2 Exp $
+
+  16 Nov 2004; Robin H. Johnson <robbat2@gentoo.org> genflags-0.96.ebuild:
+  fix bug #68012.
 
 *genflags-0.96 (18 Jan 2004)
 
