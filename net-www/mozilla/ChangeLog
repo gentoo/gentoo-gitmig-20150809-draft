@@ -1,8 +1,16 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.43 2002/10/19 12:41:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.44 2002/10/24 08:50:24 seemant Exp $
 
 *mozilla-1.0.1-r2 (19 Oct 2002)
+
+  24 Oct 2002; Seemant Kulleen <seemant@gentoo.org> mozilla-1.0.1-r2.ebuild :
+
+  Added a patch to remove reading the PLATFORM environment variable as this
+  broke compilation on sparc64.  This patch was provided by:
+  wtc@netscape.com (Wan-Teh Chang) in this bug report:
+  http://bugzilla.mozilla.org/show_bug.cgi?id=174143 as it is an upstream
+  bugfix.
 
   19 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
   Add the abi-compat patch back, thanks to Tony Clark.

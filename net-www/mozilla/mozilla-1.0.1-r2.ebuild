@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r2.ebuild,v 1.1 2002/10/19 12:41:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r2.ebuild,v 1.2 2002/10/24 08:50:24 seemant Exp $
 
 IUSE="mozxmlterm moznomail java mozp3p crypt ipv6 gtk2 mozinterfaceinfo ssl ldap mozaccess mozctl gnome mozsvg"
 
@@ -114,6 +114,11 @@ src_unpack() {
 	patch -p1 < ${FILESDIR}/${P}-referrer.patch || die
 	patch -p1 < ${FILESDIR}/${P}-prefcrash.patch || die
 	patch -p1 < ${FILESDIR}/${P}-xuldom.patch || die
+
+	# A patch for mozilla to disregard the PLATFORM variable, which
+	# can break compiles (has done for sparc64).  See:
+	# http://bugzilla.mozilla.org/show_bug.cgi?id=174143
+	patch -p1 < ${FILESDIR}/${P}-platform.patch || die
 
 	# Unpack the enigmail plugin
 	if [ -n "`use crypt`" -a -z "`use moznomail`" ] && \
