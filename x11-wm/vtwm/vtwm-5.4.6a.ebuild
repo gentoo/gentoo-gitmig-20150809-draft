@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/vtwm-5.4.6a.ebuild,v 1.4 2003/09/04 07:32:14 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/vtwm-5.4.6a.ebuild,v 1.5 2003/11/07 17:04:27 usata Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.visi.com/~hawkeyd/vtwm.html"
 SRC_URI="ftp://ftp.visi.com/users/hawkeyd/X/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 ~alpha ~ppc ~sparc"
 DEPEND="virtual/x11"
 
 S="${WORKDIR}/${P}"
@@ -31,11 +31,6 @@ src_install() {
 	echo "/usr/bin/vtwm" >> vtwm
 	exeinto /etc/X11/Sessions
 	doexe vtwm
-	dodoc doc/4.6.*
-	dodoc doc/CHANGELOG
-	dodoc doc/BUGS
-	dodoc doc/DEVELOPERS
-	dodoc doc/HISTORY
-	dodoc doc/SOUND
-	dodoc doc/WISHLIST
+	cd doc
+	dodoc 4.6.* CHANGELOG BUGS DEVELOPERS HISTORY SOUND WISHLIST
 }
