@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmlrpc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.1 2004/07/25 07:49:49 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.2 2004/08/07 21:58:21 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> :
+  Typo in DESCRIPTION: lightweigt -> lightweight. Bug 59717.
 
 *xmlrpc-1.2_beta1 (25 Jul 2004)
 
