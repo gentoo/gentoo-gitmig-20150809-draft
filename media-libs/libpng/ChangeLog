@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.15 2002/12/22 21:21:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.16 2002/12/22 22:12:30 foser Exp $
 
 *libpng-1.2.5-r1 (21 Dec 2002)
+
+  22 Dec 2002; foser <foser@gentoo.org> libpng-1.2.5-r1.ebuild :
+  Fixed problems with -march=k6 (bug #12561)
 
   22 Dec 2002; Martin Holzer <mholzer@gentoo.org> libpng-1.2.5-r1.ebuild files/digest-libpng-1.2.5-r1 Changelog :       
   Changed SRC_URI to sf and .tar.gz to tar.bz2 
