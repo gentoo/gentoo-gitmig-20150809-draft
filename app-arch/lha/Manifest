@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ab46b4473235b2c975270fdf30ae976c ChangeLog 1998
+MD5 3d857e3d86f3b286cd122594cc778d5a ChangeLog 2086
 MD5 dc873af8aed538add6d4037ce1e8ea6f lha-114i-r2.ebuild 860
-MD5 b0638f3f9c61cebd38df42cf9ec1eff1 lha-114i-r3.ebuild 896
-MD5 0ca54fececc10dcda9d3e9f649102c78 files/digest-lha-114i-r3 59
+MD5 e8d28951f8550ffff10118876051714e lha-114i-r3.ebuild 901
 MD5 0ca54fececc10dcda9d3e9f649102c78 files/digest-lha-114i-r2 59
-MD5 7e87f643ac65634d0b934b7bfcd6a8cb files/lha-114i.diff 1721
+MD5 0ca54fececc10dcda9d3e9f649102c78 files/digest-lha-114i-r3 59
 MD5 9c4e9404173fd5897d3736e33c909b81 files/lha-114i-lhext.diff 513
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3LqPHTu7gpaalycRAtWDAJ98LyI8etWxyeZYswGXrkQiS/40cACgjZdp
-eIOSmQ7BfRDFdIiMcBZfJJY=
-=t/BT
------END PGP SIGNATURE-----
+MD5 7e87f643ac65634d0b934b7bfcd6a8cb files/lha-114i.diff 1721
