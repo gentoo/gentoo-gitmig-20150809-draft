@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20041017.ebuild,v 1.2 2004/10/27 19:21:49 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20041017.ebuild,v 1.3 2004/10/31 01:33:14 vapier Exp $
 
 GENCOMP_VERS="1.0_beta2"
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.caliban.org/files/bash/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~s390 ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~s390 ~sparc ~x86"
 IUSE=""
 
 DEPEND="app-arch/tar
