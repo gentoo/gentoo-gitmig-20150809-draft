@@ -32,6 +32,3 @@ virtual/x11
 >=sys-devel/libtool-1.4.1-r4
 >=sys-libs/ncurses-5.2.20020511-r3
 >=sys-libs/pam-0.75-r10
-
-# Get a decent editor - BROKEN
-!app-editors/levee
