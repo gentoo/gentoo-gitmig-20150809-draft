@@ -2,7 +2,7 @@ MD5 2e6ecdfb2323b110e8029a87d1dcac06 ChangeLog 11680
 MD5 cbbab78f5125f834ffb0f83be4957736 libsdl-1.2.6-r3.ebuild 3013
 MD5 7f079469132865bdd25780277639f098 libsdl-1.2.7-r3.ebuild 3960
 MD5 baaaa69f33ef9027dac84ee4ff02773b metadata.xml 974
-MD5 bbae8293e563b787ab5de539478dda80 libsdl-1.2.8-r1.ebuild 4158
+MD5 9270a7993c312f8bbba7719a7f78a8a1 libsdl-1.2.8-r1.ebuild 4216
 MD5 0c2020ec3ce37ea0612064c52d1014b1 files/1.2.6-alsa-1.0.0.patch 557
 MD5 60ecfde6cc7b734ef03b93357c537674 files/1.2.8-keyrepeat.patch 598
 MD5 803844293dc7df2bb7d2323c03977b71 files/1.2.7-libcaca.patch 23266

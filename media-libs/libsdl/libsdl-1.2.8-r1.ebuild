@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.5 2005/03/25 13:38:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.6 2005/04/02 01:00:46 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils gnuconfig
 
@@ -72,6 +72,9 @@ src_compile() {
 	if use amd64 ; then
 		replace-flags -O? -O1 # bug #74608
 		strip-flags -funroll-all-loops -fpeel-loops -fomit-frame-pointer # more bug #74608 and also bug #82618
+	fi
+	if use x86 ; then
+		filter-flags -fforce-addr #87077
 	fi
 	use noaudio && myconf="${myconf} --disable-audio"
 	use novideo \
