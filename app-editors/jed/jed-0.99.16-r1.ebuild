@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.1 2003/02/17 03:19:24 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.2 2003/04/18 01:35:04 foser Exp $
 
 IUSE="X gpm truetype"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://space.mit.edu/~davis/jed/"
 DEPEND=">=sys-libs/slang-1.4.5
 	X? ( virtual/x11 )
 	gpm? ( sys-libs/gpm )
-	truetype? ( >=x11-libs/xft-2.0
+	truetype? ( virtual/xft
                 >=media-libs/freetype-2.0 )"
 
 PROVIDE="virtual/editor"

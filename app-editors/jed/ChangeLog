@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/jed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.8 2003/02/17 03:19:24 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.9 2003/04/18 01:35:04 foser Exp $
 
 *jed-0.99.16-r1 (17 Feb 2003)
+
+  17 Apr 2003; foser <foser@gentoo.org> jed-0.99.16-r1.ebuild :
+  Fixed xft dep to be virtual
 
   17 Feb 2003; Alastair Tse <alastair@gentoo.org> jed-0.99.16.ebuild,
   
