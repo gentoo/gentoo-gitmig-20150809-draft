@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d.ebuild,v 1.8 2004/04/26 04:50:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7d.ebuild,v 1.9 2004/04/28 06:50:51 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -39,6 +39,12 @@ src_unpack() {
 		Configure
 		# Fix detection of parisc running 64 bit kernel
 		sed -i -e 's/parisc-\*-linux2/parisc\*-\*-linux2/' config
+	fi
+	if [ "${ARCH}" = "arm" ]; then
+		# patch linker to add -ldl or things linking aginst libcrypto fail
+		sed -i -e \
+			's!^"linux-elf-arm"\(.*\)::BN\(.*\)!"linux-elf-arm"\1:-ldl:BN\2!' \
+			Configure
 	fi
 	if [ "${ARCH}" = "alpha" -a "${CC}" != "ccc" ]; then
 	# ccc compiled openssl will break things linked against
