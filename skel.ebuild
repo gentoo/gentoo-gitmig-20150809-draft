@@ -47,7 +47,9 @@ SLOT="1"
 # "sparc64". So, if you've confirmed that your ebuild works on x86 and ppc,
 # you'd specify: KEYWORDS="x86 ppc"
 # For packages that are platform-independant (like Java, PHP or Perl
-# applications) specify KEYWORDS="*".
+# applications) specify all keywords.
+# DO NOT USE KEYWORDS="*". This is deprecated and only for backward
+# compatibility reasons.
 KEYWORDS="x86"
 
 # Build-time dependencies, such as
