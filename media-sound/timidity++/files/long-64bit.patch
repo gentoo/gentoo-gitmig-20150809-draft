@@ -1,0 +1,32 @@
+diff -ruN TiMidity++-2.12.0-pre1.orig/configure.in TiMidity++-2.12.0-pre1/configure.in
+--- TiMidity++-2.12.0-pre1.orig/configure.in	2002-01-17 18:51:32.000000000 -0500
++++ TiMidity++-2.12.0-pre1/configure.in	2003-11-10 23:00:22.000000000 -0500
+@@ -320,6 +320,10 @@
+ AC_TYPE_SIZE_T
+ AC_HEADER_TIME
+ 
++AC_CHECK_SIZEOF(short)
++AC_CHECK_SIZEOF(int)
++AC_CHECK_SIZEOF(long)
++
+ AC_CACHE_CHECK(volatile declaration,timidity_cv_type_volatile,
+   AC_TRY_COMPILE(,volatile int x,
+ 	timidity_cv_type_volatile=yes,timidity_cv_type_volatile=no))
+diff -ruN TiMidity++-2.12.0-pre1.orig/timidity/timidity.h TiMidity++-2.12.0-pre1/timidity/timidity.h
+--- TiMidity++-2.12.0-pre1.orig/timidity/timidity.h	2002-01-15 05:53:21.000000000 -0500
++++ TiMidity++-2.12.0-pre1/timidity/timidity.h	2003-11-11 22:08:08.813216152 -0500
+@@ -411,12 +411,11 @@
+ 
+ /* DEC MMS has 64 bit long words */
+ /* Linux-Axp has also 64 bit long words */
+-#if defined(DEC) || defined(__alpha__)
++#if SIZEOF_INT == 4
+ typedef unsigned int uint32;
+ typedef int int32;
+ #else
+-typedef unsigned long uint32;
+-typedef long int32;
++#error "Can't get a 32-bit type"
+ #endif
+ #ifdef HPUX
+ typedef unsigned short uint16;

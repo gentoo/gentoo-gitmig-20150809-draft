@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0-r3.ebuild,v 1.5 2003/09/26 06:44:19 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0-r3.ebuild,v 1.6 2003/12/12 20:07:25 aliz Exp $
 
 MY_P=TiMidity++-${PV}-pre1
 S=${WORKDIR}/${MY_P}
@@ -10,8 +10,9 @@ SRC_URI="http://www.goice.co.jp/member/mo/timidity/dist/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="oss nas esd motif X gtk oggvorbis tcltk slang alsa"
+inherit gnuconfig
 
 DEPEND=">=sys-libs/ncurses-5.0
 	X? ( >=x11-base/xfree-4.0 )
@@ -22,12 +23,17 @@ DEPEND=">=sys-libs/ncurses-5.0
 	motif? ( >=x11-libs/openmotif-2.1 )
 	slang? ( >=sys-libs/slang-1.4 )
 	tcltk? ( >=dev-lang/tk-8.1 )
-	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
+	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )
+	sys-devel/autoconf"
 
 src_compile() {
 	local myconf
 	local audios
 	local interfaces
+
+	use amd64 && ( epatch ${FILESDIR}/gnuconfig_update.patch
+		epatch ${FILESDIR}/long-64bit.patch
+		gnuconfig_update )
 
 	interfaces="dynamic,ncurses,emacs,vt100"
 	if [ "`use oss`" ]; then \
