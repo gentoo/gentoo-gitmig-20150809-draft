@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/net-ssh-perl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.1 2003/06/24 00:55:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.2 2003/10/28 01:29:37 brad_mssw Exp $
+
+  27 Oct 2003; Brad House <brad_mssw@gentoo.org> net-ssh-perl-1.23.ebuild:
+  add ~amd64 flag
 
 *net-ssh-perl-1.23 (23 Jun 2003)
 
