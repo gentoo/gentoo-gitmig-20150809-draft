@@ -1,6 +1,6 @@
-# ChangeLog for dev-perlDBD-PgChangeLog/dev-perlDBIChangeLog
+# ChangeLog for dev-perl/DBI
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.8 2002/12/13 10:56:34 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.9 2002/12/17 19:21:25 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
