@@ -1,8 +1,8 @@
 MD5 bf54e4a11d57128d1354fa8dce00da76 ChangeLog 11757
+MD5 0fafcaa124455a2e049581c0afa9d211 mplayer-0.90-r3.ebuild 11476
 MD5 b84af625bc0a9e42c7e261527325263a mplayer-0.90.ebuild 11032
 MD5 1e578ab350d13b453d2dd2ed206dd4f5 mplayer-0.90_rc4.ebuild 10308
 MD5 b09b29ef56c94df7f1d56642207f4af7 mplayer-0.90_rc5.ebuild 10309
-MD5 4892c03257e8cf250b2d3f3f86618ecd mplayer-0.90-r2.ebuild 11411
 MD5 6f18520dc83e41c6796137ae9dc7f29b mplayer-0.90-r1.ebuild 11212
 MD5 6c2dab3392aab51766253b416ad2a10c files/default-skin.diff 396
 MD5 cf9f37677e08cb0cf279700e2bfa06f0 files/digest-mplayer-0.90 631
@@ -14,4 +14,5 @@ MD5 9e064190a914d26b0392a266753161ed files/mplayer-0.90-ppc-benh.patch 2029
 MD5 059e03d1d2c965b04a5e53ed850de64a files/mplayer-0.90_rc4-gtk2.patch 6183
 MD5 c2d65649f15837c5a326557ded4e47c5 files/mplayer.desktop 119
 MD5 8f18911adcd661e70ad0cd84a94d49ac files/mplayer-0.90-divx.patch 25064
-MD5 c2d1a4c1e84abf704a7b9686ea9309ae files/digest-mplayer-0.90-r2 283
+MD5 707fe95066bbd1ab7f2185a4b4d6e83e files/digest-mplayer-0.90-r2 363
+MD5 707fe95066bbd1ab7f2185a4b4d6e83e files/digest-mplayer-0.90-r3 363
