@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.61 2004/04/04 19:01:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.62 2004/04/15 03:09:38 geoman Exp $
+
+  14 Apr 2004; Stephen P. Becker <geoman@gentoo.org> alsa-lib-1.0.2.ebuild:
+  Marked stable on mips. Fixed gnuconfig inherit also...
 
 *alsa-lib-1.0.4 (04 Apr 2004)
 
