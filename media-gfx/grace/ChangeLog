@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/grace
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/ChangeLog,v 1.16 2003/11/02 03:00:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/ChangeLog,v 1.17 2003/12/10 16:31:17 phosphan Exp $
+
+  10 Dec 2003; Patrick Kursawe <phosphan@gentoo.org> grace-5.1.13.ebuild:
+  I guess ~ppc was removed by accident, at least there is no !ppc.
 
   01 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
   Adding metadata.xml for sci herd.
