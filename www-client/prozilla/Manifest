@@ -3,13 +3,13 @@ Hash: SHA1
 
 MD5 ef90ee16e714b4e19c922a52a25e4582 prozilla-1.3.7.3.ebuild 809
 MD5 3ee42d894abc79fed7c15d4fbc43bc0f ChangeLog 3506
-MD5 18aa31d9e0a1364e234087ea512f1379 metadata.xml 354
+MD5 710ac533a5bb8a241433cc501c85a7b3 metadata.xml 261
 MD5 6b6ac84075fbd80fca2d8fdf2a2bc03b files/digest-prozilla-1.3.7.3 68
 MD5 2beb500a0aec8f4ad6fe729efa26d23b files/prozilla-1.3.7.3-gentoo.diff 1273
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCAjx8EZCkKN40op4RAjSoAJ0Unfg/wJQ1qNAGSLP7ywcn297P0ACeN206
-ccQM44akUf7Vr86IBq2O2dY=
-=PJqb
+iD8DBQFCAj27EZCkKN40op4RAvjfAJwOBKm2BwfxpZI+4/HV1+1bYUhjywCeO2yE
+6xoYT6u6gL2OTPvTrnTULnA=
+=dHBJ
 -----END PGP SIGNATURE-----

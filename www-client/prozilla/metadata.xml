@@ -6,8 +6,4 @@
 		<email>humpback@gentoo.org</email>
 		<name>Gustavo Felisberto</name>
 	</maintainer>
-	<maintainer>
-		<email>ka0ttic@gentoo.org</email>
-		<name>Aaron Walker</name>
-	</maintainer>
 </pkgmetadata>
