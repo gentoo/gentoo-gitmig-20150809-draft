@@ -1,4 +1,4 @@
-MD5 c78326d8da6fedb69b1a7099e346ea72 ChangeLog 1479
-MD5 eafd17d6559dbc062d00f41113516dec gauche-gl-0.3.1.ebuild 1016
+MD5 e40c6aa9cc861e548899e5ba1269ba70 ChangeLog 1565
+MD5 aa84797c4235834d6158af0513e9b5c8 gauche-gl-0.3.1.ebuild 1020
 MD5 a16d01230180c4303bbf845fbd67e7bc metadata.xml 301
 MD5 470c6ba0ae18be4fd8e340d8b9fb2094 files/digest-gauche-gl-0.3.1 64
