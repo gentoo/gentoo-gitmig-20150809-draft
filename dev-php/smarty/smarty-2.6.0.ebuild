@@ -1,16 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.0_rc1.ebuild,v 1.1 2003/09/28 03:15:56 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.0.ebuild,v 1.1 2003/12/22 19:36:10 twp Exp $
 
-MY_P=Smarty-${PV/_rc/-RC}
+MY_P=Smarty-${PV}
 DESCRIPTION="A template engine for PHP"
 HOMEPAGE="http://smarty.php.net/"
-SRC_URI="http://smarty.php.net/distributions/${MY_P}.tar.gz"
+SRC_URI="http://smarty.php.net/distributions/${MY_P}.tar.gz
+	http://smarty.php.net/distributions/manual/en/${MY_P}-docs.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha arm hppa mips ppc sparc x86"
 IUSE="doc"
-DEPEND="virtual/php"
+DEPEND="dev-php/mod_php"
 
 S=${WORKDIR}/${MY_P}
 
@@ -20,6 +21,7 @@ src_install() {
 	doins libs/*
 	insinto /usr/lib/php/Smarty/plugins
 	doins libs/plugins/*
+	dohtml -r ../manual/*
 }
 
 pkg_postinst() {
