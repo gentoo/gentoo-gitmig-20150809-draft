@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jing/jing-20030619-r1.ebuild,v 1.2 2005/01/01 16:23:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jing/jing-20030619-r1.ebuild,v 1.3 2005/01/14 16:08:33 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://thaiopensource.com/relaxng/jing.html"
 SRC_URI="http://www.thaiopensource.com/download/jing-${PV}.zip"
 LICENSE="BSD Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="jikes doc"
 DEPEND=">=virtual/jdk-1.3
 	dev-java/saxon-bin
