@@ -1,6 +1,10 @@
 # ChangeLog for media-video/DFBSee
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/DFBSee/ChangeLog,v 1.4 2003/07/12 21:12:27 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/DFBSee/ChangeLog,v 1.5 2004/01/02 17:40:46 bazik Exp $
+
+  02 Jan 2004; Sven Blumenstein <bazik@gentoo.org> DFBSee-0.7.2.ebuild,
+  DFBSee-0.7.4.ebuild:
+  Masked on sparc as DEPEND dev-libs/DirectFB is -sparc.
 
 *DFBSee-0.7.4 (03 May 2003)
 
