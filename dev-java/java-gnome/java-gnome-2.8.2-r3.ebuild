@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.8.2-r3.ebuild,v 1.1 2004/12/28 12:54:11 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.8.2-r3.ebuild,v 1.2 2004/12/28 13:08:12 axxo Exp $
 
-inherit eutils
+inherit eutils java-pkg
 
 DESCRIPTION="A meta package for all the bindings libraries necessary to write GNOME/GTK applicatons in Java"
 HOMEPAGE="http://java-gnome.sourceforge.net/"
@@ -60,6 +60,7 @@ src_compile() {
 	unzip -o -q /usr/share/libgconf-java-2.8/src/libgconf-java-2.8.2.src.zip -d java
 	unzip -o -q /usr/share/libglade-java-2.8/src/libglade-java-2.8.2.2.src.zip -d java
 
+	mkdir api
 	javadoc \
 		-public -use -version -author \
 		-windowtitle "java-gnome ${PV} API Reference" \
@@ -89,7 +90,7 @@ src_install() {
 	# it depends on all have proper package.env (which this uses, in fact).
 	#
 
-	mkdir -p ${D}/usr/share/java-gnome/lib
+	dodir /usr/share/java-gnome/lib
 	cd ${D}/usr/share/java-gnome/lib
 
 	gtk_jar=`java-config -p libgtk-java-2.4`
@@ -105,9 +106,9 @@ src_install() {
 	ln -s $gconf_jar `basename $gconf_jar`
 
 
-	use doc || return
-
-	mkdir -p ${D}/usr/share/doc/${PF}
-	mv ${WORKDIR}/api ${D}/usr/share/doc/${PF}
+	if use doc; then
+		dodir ${D}/usr/share/doc/${PF}
+		java-pkg_dohtml -r ${WORKDIR}/api
+	fi
 }
 

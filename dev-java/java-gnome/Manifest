@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 90e3c444913def0075d911ad5e608414 java-gnome-0.8.3.ebuild 1719
-MD5 f9a5ce630710f1136800a47c3938fd3e java-gnome-2.8.2-r3.ebuild 3655
+MD5 44a0cd7b8a38e76348758e7c685db8b6 java-gnome-2.8.2-r3.ebuild 3660
 MD5 3eec01d17dab5462a2e5ee8018184c21 java-gnome-2.6.0.1-r1.ebuild 2764
 MD5 f0202da9a3b2534ea914ae6c8b3fc3a4 java-gnome-2.6.0.1.ebuild 2697
 MD5 e0499b218f299e357ac9298d8d0ac5f3 ChangeLog 4745
@@ -18,7 +18,7 @@ MD5 d0548db82a1916704411084a9a019f05 files/digest-java-gnome-0.8.3 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB0Vd+/rLF9B432nYRAjibAJoCIE6c+T33jhpaIjSQs+wCkvFCPgCeIfWR
-vhdEAeKFbQvajvg03qnIPMA=
-=rSDd
+iD8DBQFB0VrJ/rLF9B432nYRAlJLAKCy68lmaU08kQNqnGfFsHhhlruwpwCfWqPe
+kBoEAeg3O/leacG3PT4Xtw0=
+=+lKb
 -----END PGP SIGNATURE-----
