@@ -1,21 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 af4f4d85841029bbd7b97ed312b5e3a0 ChangeLog 3762
 MD5 f877458536685a15fe05349502d82b93 netbeans-3.4.1.ebuild 3201
 MD5 9ced7308aad99f8dd55be6333f140450 netbeans-3.5.1.ebuild 3166
 MD5 b0c908ee17b1b271657c926c1f5bc10e netbeans-3.6-r1.ebuild 3160
-MD5 eba3a44af2a04cab3a7bf00ce982130e files/digest-netbeans-3.4.1 77
-MD5 9db67cc7c38cdd884ec192a4c642e144 files/digest-netbeans-3.5.1 77
-MD5 86a2e857f2e16af4becaa6e0e733c215 files/netbeans 786
+MD5 af4f4d85841029bbd7b97ed312b5e3a0 ChangeLog 3762
+MD5 2cd31b2ab2e5a971fc708bda62116434 metadata.xml 162
 MD5 9c6f59bb154bdcd7242f4544b8feae6b files/netbeans-KDE.desktop 139
-MD5 e04a4eefe6510679e7cf06d0377e9e18 files/netbeans.desktop 103
 MD5 21a78956bac04c98135ba5707b98da66 files/netbeans.png 2163
 MD5 a31cf39b9b70944a298e8fa97275d122 files/digest-netbeans-3.6-r1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+eyYmdTrptrqvGERAnLcAKCVubFzJ+oEf8RU6pUJ7/P8TCc+eQCfZKhe
-8Ocj93gGEFgMrp+ePBWVTpg=
-=kBvm
------END PGP SIGNATURE-----
+MD5 86a2e857f2e16af4becaa6e0e733c215 files/netbeans 786
+MD5 e04a4eefe6510679e7cf06d0377e9e18 files/netbeans.desktop 103
+MD5 eba3a44af2a04cab3a7bf00ce982130e files/digest-netbeans-3.4.1 77
+MD5 9db67cc7c38cdd884ec192a4c642e144 files/digest-netbeans-3.5.1 77
