@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r2.ebuild,v 1.5 2004/11/05 19:44:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r2.ebuild,v 1.6 2004/11/07 00:42:23 carpaski Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -60,6 +60,7 @@ check_multilib() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	sed -i "/PORTAGE_RESTRICT.*'')/s:''):' '):" pym/portage.py
 }
 
 src_compile() {
