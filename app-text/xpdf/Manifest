@@ -1,21 +1,31 @@
-MD5 da223a715c33f4158956df76f9ba9482 ChangeLog 6685
-MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bef529ecba71098065eee2e36263c067 xpdf-3.00-r4.ebuild 3212
+MD5 cd4c206e6375bf59c38258428e4d9766 ChangeLog 6792
 MD5 9f80037668ee21ff1e8772317ca8f6a0 xpdf-2.03.ebuild 1154
 MD5 6dd4db69399ea021171a0c490a2cd8c5 xpdf-3.00-r1.ebuild 978
-MD5 bef529ecba71098065eee2e36263c067 xpdf-3.00-r4.ebuild 3212
-MD5 06fed4a4b3fb757a6313e924a36d7c94 xpdf-3.00-r5.ebuild 3253
-MD5 87cd94ef77a9e99ca1fac42c32270d39 files/digest-xpdf-2.03 61
-MD5 fd6eaa6f4bb5d94506718515cf20ac26 files/digest-xpdf-3.00-r1 61
-MD5 d2fc1b3562bfee9f9c7fb5beaa741084 files/xpdf-3.00-truetype.diff.gz 3288
+MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+MD5 2124c9ab6c2a36ed342f38cfbeef93d9 xpdf-3.00-r5.ebuild 3254
+MD5 263f91efedaa87e4597ab0a83407137d files/xpdfrc.1 1593
+MD5 36b521d0408d11075c1e6536e91265f2 files/digest-xpdf-3.00-r4 767
 MD5 7c0787e730fecfb5b6ebc5a7a69cd64e files/xpdfrc 1092
 MD5 f200f24c7cfa6061337dc6c0e03f36b9 files/xpdf-3.00-nodrm.diff 1049
-MD5 263f91efedaa87e4597ab0a83407137d files/xpdfrc.1 1593
-MD5 8221707abac9c48b486b8c2b9bc7a7a0 files/xpdf-3.00-empty-bookmark.patch 373
 MD5 1ca86139c360680d756c771b7c6c8647 files/xpdf-3.00-freetype-2.1.7.patch 2743
-MD5 36b521d0408d11075c1e6536e91265f2 files/digest-xpdf-3.00-r4 767
-MD5 41c050cd5c7ccdcf1676a6852c7a35ed files/xpdf-3.00-PathScanner.patch.bz2 1003
 MD5 3df9058a9971c09627e71dad6b056244 files/xpdf-3.00-core.patch.bz2 271
-MD5 c3d50c3fb232fe51c2ae06ff1f530d49 files/xpdf-3.00-overflow.patch.bz2 2097
-MD5 37f0b42aad269cb5896773b47b1d83ac files/xpdf-3.00-truetype-new.diff.gz 1271
+MD5 41c050cd5c7ccdcf1676a6852c7a35ed files/xpdf-3.00-PathScanner.patch.bz2 1003
 MD5 36b521d0408d11075c1e6536e91265f2 files/digest-xpdf-3.00-r5 767
 MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
+MD5 87cd94ef77a9e99ca1fac42c32270d39 files/digest-xpdf-2.03 61
+MD5 fd6eaa6f4bb5d94506718515cf20ac26 files/digest-xpdf-3.00-r1 61
+MD5 37f0b42aad269cb5896773b47b1d83ac files/xpdf-3.00-truetype-new.diff.gz 1271
+MD5 8221707abac9c48b486b8c2b9bc7a7a0 files/xpdf-3.00-empty-bookmark.patch 373
+MD5 d2fc1b3562bfee9f9c7fb5beaa741084 files/xpdf-3.00-truetype.diff.gz 3288
+MD5 c3d50c3fb232fe51c2ae06ff1f530d49 files/xpdf-3.00-overflow.patch.bz2 2097
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBiSOHugEuf3OQ0akRAsKgAJ425v7vWgxBExGpBwNYNeKntS1H4ACeNCt5
+PD3+20vTRn7xC2HXSB5f+ew=
+=UmJa
+-----END PGP SIGNATURE-----
