@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.10.ebuild,v 1.2 2004/02/26 18:04:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.10.ebuild,v 1.3 2004/02/29 14:34:18 aliz Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -15,7 +15,7 @@ DESCRIPTION="Working Overloaded Linux Kernel (Server-Edition)"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips"
 SRC_PATH="mirror://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	mirror://sourceforge/wolk/linux-${OKV}-wolk4.10s.patch.bz2"
 
 SLOT="${KV}"

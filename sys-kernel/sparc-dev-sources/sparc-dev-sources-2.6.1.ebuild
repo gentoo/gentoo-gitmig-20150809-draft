@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-dev-sources/sparc-dev-sources-2.6.1.ebuild,v 1.1 2004/01/09 10:05:12 wesolows Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-dev-sources/sparc-dev-sources-2.6.1.ebuild,v 1.2 2004/02/29 14:34:18 aliz Exp $
 
 IUSE="ultra1"
 
@@ -34,8 +34,8 @@ KV="${KV}${EXTRAVERSION}"
 # to /usr/share/doc/sparc-sources-dev-${PV}/patches.txt.gz
 
 DESCRIPTION="Full sources for the Gentoo Sparc Linux development kernel"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.6/linux-${OKV}.tar.bz2
-	http://www.kernel.org/pub/linux/kernel/v2.6/testing/linux-${OKV}.tar.bz2
+SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
+	mirror://kernel/linux/kernel/v2.6/testing/linux-${OKV}.tar.bz2
 	mirror://gentoo/patches-${KV}.tar.bz2"
 
 S=${WORKDIR}/linux-${KV}

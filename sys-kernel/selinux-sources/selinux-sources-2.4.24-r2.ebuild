@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/selinux-sources-2.4.24-r2.ebuild,v 1.2 2004/02/22 23:33:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/selinux-sources-2.4.24-r2.ebuild,v 1.3 2004/02/29 14:34:18 aliz Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ KV="${OKV}${EXTRAVERSION}"
 
 S=${WORKDIR}/linux-${KV}
 DESCRIPTION="LSM patched kernel with SELinux"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	mirror://gentoo/patches-${KV/r2/r1}.tar.bz2"
 
 HOMEPAGE="http://www.kernel.org/ http://www.nsa.gov/selinux"
