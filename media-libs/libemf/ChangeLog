@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libemf
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.1 2003/07/17 10:33:47 phosphan Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.2 2004/02/15 13:17:04 darkspecter Exp $
+
+  15 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> libemf-1.0.ebuild:
+  set ~ppc in keywords
 
 *libemf-1.0 (17 Jul 2003)
 
