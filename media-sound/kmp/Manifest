@@ -1,5 +1,15 @@
-MD5 fd220d19d13f53f3f48de1124fe16a4d ChangeLog 709
-MD5 d7bc702e9fdaa9ea84be637ee382161b kmp-0.01.ebuild 963
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 95ae902cd3a5118780c6f7a0626d78a9 ChangeLog 800
+MD5 5a35bb6f9af789cfd31003abe24ec602 kmp-0.01.ebuild 963
 MD5 83c2574543d0501303b57050254e3880 metadata.xml 222
 MD5 6f827d1afc639044d5838cbf0c834d85 files/digest-kmp-0.01 61
 MD5 367223b8cfcde84caf89a4f46cab4e8e files/kmp-0.01-gcc34.patch 483
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBongFArHZZzCEUG0RAhcwAJ9xEmNRvaOMXPclYAshv0A8azYhVQCcCyCV
+T1m8TwSJzgGmzJV3YqS5PNo=
+=ze73
+-----END PGP SIGNATURE-----
