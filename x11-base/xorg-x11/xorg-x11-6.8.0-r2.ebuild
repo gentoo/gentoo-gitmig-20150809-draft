@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.3 2004/10/11 08:18:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.4 2004/10/11 08:24:36 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -22,7 +22,7 @@ inherit eutils flag-o-matic gcc xfree
 RESTRICT="nostrip"
 
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
-IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc hardened
+IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc dri glx hardened
 	insecure-drivers ipv6 mmx nls pam sdk sse static xfs xprint"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
@@ -82,7 +82,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	>=dev-libs/expat-1.95.3
 	>=media-libs/freetype-2.1.4
 	>=media-libs/fontconfig-2.1-r1
-	>=x11-base/opengl-update-1.7.2
+	glx? ( >=x11-base/opengl-update-1.7.2 )
 	>=x11-misc/ttmkfdir-3.0.9-r2
 	>=sys-apps/sed-4
 	sys-apps/util-linux
@@ -401,7 +401,15 @@ host_def_setup() {
 			echo "#define BuildXF86DRI NO" >> config/cf/host.def
 			echo "#undef DriDrivers" >> config/cf/host.def
 			echo "#define XF86CardDrivers fbdev" >> config/cf/host.def
+		else
+			# Do we want direct rendering support in drivers?
+			use_build dri BuildXF86DRI
 		fi
+
+		# Do we want the glx extension? This will turn off XF86DRI if it's off.
+		# DRI can't build if glx isn't built, so keep this below DRI define.
+		use_build glx BuildGlxExt
+		use_build glx BuildGLXLibrary
 
 		if use alpha
 		then
@@ -892,6 +900,15 @@ update_config_files() {
 	fi
 }
 
+fix_opengl_symlinks() {
+	# Remove invalid symlinks
+	rm -f ${D}/usr/$(get_libdir)/libGL.*
+	# Create required symlinks
+	dosym libGL.so.1.2 /usr/X11R6/$(get_libdir)/libGL.so
+	dosym libGL.so.1.2 /usr/X11R6/$(get_libdir)/libGL.so.1
+	dosym libGL.so.1.2 /usr/X11R6/$(get_libdir)/libMesaGL.so
+}
+
 src_install() {
 
 	unset MAKE_OPTS
@@ -982,16 +999,15 @@ src_install() {
 	dosym ../X11R6/$(get_libdir)/X11 /usr/$(get_libdir)/X11
 	dosym ../../usr/X11R6/$(get_libdir)/X11/xkb /etc/X11/xkb
 
+	if use glx
+	then
+		fix_opengl_symlinks
+	fi
+
 	# Some critical directories
 	keepdir /var/lib/xdm
 	dosym ../../../var/lib/xdm /etc/X11/xdm/authdir
 
-	# Remove invalid symlinks
-	rm -f ${D}/usr/$(get_libdir)/libGL.*
-	# Create required symlinks
-	dosym libGL.so.1.2 /usr/X11R6/$(get_libdir)/libGL.so
-	dosym libGL.so.1.2 /usr/X11R6/$(get_libdir)/libGL.so.1
-	dosym libGL.so.1.2 /usr/X11R6/$(get_libdir)/libMesaGL.so
 	# We move libGLU to /usr/lib now
 	dosym libGLU.so.1.3 /usr/$(get_libdir)/libMesaGLU.so
 
@@ -1039,7 +1055,10 @@ src_install() {
 	# we want libGLU.so* in /usr/lib
 	mv ${D}/usr/X11R6/$(get_libdir)/libGLU.* ${D}/usr/$(get_libdir)
 
-	setup_dynamic_libgl
+	if use glx
+	then
+		setup_dynamic_libgl
+	fi
 
 	# Make the core cursor the default.  People seem not to like whiteglass
 	# for some reason.
@@ -1070,6 +1089,19 @@ src_install() {
 
 	setup_config_files
 
+}
+
+clean_dynamic_libgl() {
+	# clean the dynamic libGL stuff's home to ensure
+	# we don't have stale libs floating around
+	if [ -d ${ROOT}/usr/$(get_libdir)/opengl/${PN} ]
+	then
+		rm -rf ${ROOT}/usr/$(get_libdir)/opengl/${PN}/*
+	fi
+
+	# make sure we do not have any stale files lying around
+	# that could break things.
+	rm -f ${ROOT}/usr/X11R6/$(get_libdir)/libGL*
 }
 
 pkg_preinst() {
@@ -1145,16 +1177,9 @@ pkg_preinst() {
 	    mv -f ${ROOT}/etc/X11/xkb ${ROOT}/usr/X11R6/$(get_libdir)/X11
 	fi
 
-	# clean the dynamic libGL stuff's home to ensure
-	# we don't have stale libs floating around
-	if [ -d ${ROOT}/usr/$(get_libdir)/opengl/${PN} ]
-	then
-		rm -rf ${ROOT}/usr/$(get_libdir)/opengl/${PN}/*
-	fi
-
-	# make sure we do not have any stale files lying around
-	# that could break things.
-	rm -f ${ROOT}/usr/X11R6/$(get_libdir)/libGL*
+	# Run this even for USE=-glx, to clean out old stuff from possible
+	# USE=glx build
+	clean_dynamic_libgl
 }
 
 font_setup() {
@@ -1323,6 +1348,19 @@ print_info() {
 	epause 10
 }
 
+switch_opengl_implem() {
+		# Switch to the xorg implementation.
+		# Use new opengl-update that will not reset user selected
+		# OpenGL interface ...
+		echo
+		if [ "`${ROOT}/usr/sbin/opengl-update --get-implementation`" = "xfree" ]
+		then
+			${ROOT}/usr/sbin/opengl-update ${PN}
+		else
+			${ROOT}/usr/sbin/opengl-update --use-old ${PN}
+		fi
+}
+
 pkg_postinst() {
 
 	env-update
@@ -1335,15 +1373,9 @@ pkg_postinst() {
 
 		font_setup
 
-		# Switch to the xorg implementation.
-		# Use new opengl-update that will not reset user selected
-		# OpenGL interface ...
-		echo
-		if [ "`${ROOT}/usr/sbin/opengl-update --get-implementation`" = "xfree" ]
+		if use glx
 		then
-			${ROOT}/usr/sbin/opengl-update ${PN}
-		else
-			${ROOT}/usr/sbin/opengl-update --use-old ${PN}
+			switch_opengl_implem
 		fi
 	fi
 
@@ -1386,13 +1418,16 @@ pkg_postinst() {
 		ld -rpath ${ROOT}/usr/X11R6/$(get_libdir)/modules/drivers -shared -o ati_drv.so ati_drv.so.orig radeon_drv.so atimisc_drv.so fbdev_drv.so r128_drv.so vga_drv.so
 		ld -rpath ${ROOT}/usr/X11R6/$(get_libdir)/modules/drivers -shared -o nv_drv.so nv_drv.so.orig fbdev_drv.so vga_drv.so
 
-		#The problem about DRI module and GLX module is fixed.
-		cd ${ROOT}/usr/X11R6/$(get_libdir)/modules/extensions
-		mv libglx.so libglx.so.orig
-		mv libdri.so libdri.so.orig
+		if use glx
+		then
+			#The problem about DRI module and GLX module is fixed.
+			cd ${ROOT}/usr/X11R6/$(get_libdir)/modules/extensions
+			mv libglx.so libglx.so.orig
+			mv libdri.so libdri.so.orig
 
-		ld -rpath ${ROOT}/usr/X11R6/$(get_libdir)/modules/extensions -shared -o libglx.so libglx.so.orig libGLcore.so
-		ld -rpath ${ROOT}/usr/X11R6/$(get_libdir)/modules/extensions -shared -o libdri.so libdri.so.orig libglx.so
+			ld -rpath ${ROOT}/usr/X11R6/$(get_libdir)/modules/extensions -shared -o libglx.so libglx.so.orig libGLcore.so
+			ld -rpath ${ROOT}/usr/X11R6/$(get_libdir)/modules/extensions -shared -o libdri.so libdri.so.orig libglx.so
+		fi
 	fi
 
 	print_info
@@ -1407,8 +1442,11 @@ pkg_prerm() {
 		mv ati_drv.so.orig ati_drv.so
 		mv nv_drv.so.orig nv_drv.so
 		cd ${ROOT}/usr/X11R6/$(get_libdir)/modules/extensions
-		mv libglx.so.orig libglx.so
-		mv libdri.so.orig libdri.so
+		if use glx
+		then
+			mv libglx.so.orig libglx.so
+			mv libdri.so.orig libdri.so
+		fi
 	fi
 }
 
@@ -1420,7 +1458,10 @@ pkg_postrm() {
 		ln -snf ../X11R6/bin ${ROOT}/usr/bin/X11
 		ln -snf ../X11R6/include/X11 ${ROOT}/usr/include/X11
 		ln -snf ../X11R6/include/DPS ${ROOT}/usr/include/DPS
-		ln -snf ../X11R6/include/GL ${ROOT}/usr/include/GL
+		if use glx
+		then
+			ln -snf ../X11R6/include/GL ${ROOT}/usr/include/GL
+		fi
 		ln -snf ../X11R6/$(get_libdir)/X11 ${ROOT}/usr/$(get_libdir)/X11
 	fi
 }
