@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3.ebuild,v 1.10 2005/02/06 11:37:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3.ebuild,v 1.11 2005/02/09 02:16:39 j4rg0n Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -12,13 +12,13 @@ SRC_URI="ftp://ftp.motifzone.net/om${PV}/src/${MY_P}.tar.gz"
 
 LICENSE="MOTIF"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~ppc-macos sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ppc-macos sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
 	virtual/x11
 	>=sys-apps/sed-4
-	=sys-devel/automake-1.4*
+	!ppc-macos? ( =sys-devel/automake-1.4* )
 	=sys-devel/autoconf-2.5*
 	!virtual/motif"
 RDEPEND="virtual/libc
@@ -46,14 +46,22 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-XmResizeHashTable.patch
 	epatch ${FILESDIR}/${P}-utf8.patch
 	epatch ${FILESDIR}/${P}-no_demos.patch
+	use ppc-macos && epatch ${FILESDIR}/${P}-automake.patch
 
 	# autotool stuff
 	export WANT_AUTOCONF=2.5
-	export WANT_AUTOMAKE=1.4
+
+	# Patched Makefile.am to work with version 1.6 on ppc-macos.
+	# Untested elsewhere
+	use ppc-macos || export WANT_AUTOMAKE=1.4
 
 	libtoolize --force --copy
 	aclocal || die
-	automake --foreign || die
+	AUTOMAKE_OPTS="--foreign"
+	# For some reason ppc-macos complains about missing depcomp and compile
+	# files
+	use ppc-macos && AUTOMAKE_OPTS="-a -c -f ${AUTOMAKE_OPTS}"
+	automake ${AUTOMAKE_OPTS} || die
 	autoconf || die
 }
 
@@ -94,6 +102,11 @@ src_install() {
 
 	# remove unneeded files
 	rm -fR ${D}/usr/$(get_libdir)/X11/bindings
+
+	# remove files provided by Apple's X11
+	if ( use ppc-macos && hasq collision-protect ${FEATURES} ); then
+		rm -fR ${D}/usr/include/X11/bitmaps/
+	fi
 
 	# install docs
 	dodoc COPYRIGHT.MOTIF LICENSE
