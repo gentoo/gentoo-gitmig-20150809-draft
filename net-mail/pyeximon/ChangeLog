@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/pyeximon
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pyeximon/ChangeLog,v 1.1 2004/10/26 23:04:49 slarti Exp $
+
+*pyeximon-1.0 (26 Oct 2004)
+
+  26 Oct 2004; Tom Martin <slarti@gentoo.org> +metadata.xml,
+  +pyeximon-1.0.ebuild:
+  Initial import, resolves bug 68905.
+
