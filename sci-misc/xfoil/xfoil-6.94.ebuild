@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/xfoil/xfoil-6.94.ebuild,v 1.1 2004/12/27 21:08:20 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/xfoil/xfoil-6.94.ebuild,v 1.2 2004/12/29 16:35:37 ribosome Exp $
 
 inherit gcc
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="doc"
 
-DEPEND="app-sci/blas
+DEPEND="sci-libs/blas
 	virtual/x11"
 
 S=${WORKDIR}/XFOIL${MY_PV}
