@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.37 2003/06/17 07:04:35 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.38 2003/07/07 00:17:11 woodchip Exp $
+
+*samba-3.0.0_beta2-r1 (06 Jul 2003)
+
+  06 Jul 2003; Donny Davies <woodchip@gentoo.org> samba-3.0.0_beta2-r1.ebuild:
+  SAMBA_3_0 CVS snapshot from 20030706; an slightly updated beta2 release.
+  The latest samba-vscan CVS snapshot in included, I had trouble accessing
+  their CVS.  All USE flags build OK here.  See WHATSNEW.txt for
+  information on IdMap LDAP support and Trust Relationships.
 
 *samba-3.0.0_beta1-r1 (17 Jun 2003)
 
