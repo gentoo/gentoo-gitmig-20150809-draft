@@ -238,6 +238,7 @@
 						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-dev">gentoo-dev</a><br/>
 						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-announce">gentoo-announce</a><br/>
 						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-cvs">gentoo-cvs</a><br/>
+						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo">complete list</a><br/>
 						<br/>
 						Other Resources:<br/>
 						<a class="altlink" href="http://cvs.gentoo.org/cgi-bin/cvsweb.cgi">cvsweb</a> (browse our repository)<br/>
