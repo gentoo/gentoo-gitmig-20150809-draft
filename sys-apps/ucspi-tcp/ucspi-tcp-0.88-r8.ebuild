@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r8.ebuild,v 1.13 2004/08/30 03:20:42 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r8.ebuild,v 1.14 2004/08/31 18:10:12 hansmi Exp $
 
 inherit eutils gcc
 
@@ -14,7 +14,7 @@ SRC_URI="http://cr.yp.to/${PN}/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc mips alpha arm hppa amd64 ia64 ppc64"
+KEYWORDS="x86 ppc ~sparc mips alpha arm hppa amd64 ia64 ppc64 ~macos"
 IUSE="ssl ipv6 selinux"
 
 DEPEND="virtual/libc
