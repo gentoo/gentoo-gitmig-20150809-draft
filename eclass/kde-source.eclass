@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.9 2002/09/08 16:17:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.10 2002/10/20 11:14:50 danarmak Exp $
 
 # This is for kde-base cvs ebuilds. Read comments about settings.
 # It uses $S and sets $SRC_URI, so inherit it as late as possible (certainly after any other eclasses).
@@ -72,9 +72,15 @@ kde-source_src_unpack() {
 		
 		ECVS_SUBDIR= ECVS_LOCAL=yes cvs_src_unpack
 		
-		# we need the module/doc/name directory too
-		ECVS_SUBDIR=doc/$ECVS_SUBDIR cvs_src_unpack
+		# we need the module//doc/name directory too, and the top-level doc/ directory
 		ECVS_SUBDIR=doc ECVS_LOCAL=yes cvs_src_unpack
+		# but, if such a directory doesn't exist on the cvs server and we're
+		# in offline mode cvs.eclass will abort, so only call this if we're
+		# in online mode or the dir is already fetched
+		if [ -d "$ECVS_TOP_DIR/$ECVS_MODULE/doc/$ECVS_SUBDIR" -o "$ECVS_SERVER" != "offline" ]; then
+		    debug-print "$FUNCNAME: fetching doc/$ECVS_SUBDIR..."
+		    ECVS_SUBDIR=doc/$ECVS_SUBDIR cvs_src_unpack
+		fi
 		
 	fi
 	
