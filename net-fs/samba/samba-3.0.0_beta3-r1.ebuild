@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.0_beta1-r1.ebuild,v 1.2 2003/07/16 14:19:37 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.0_beta3-r1.ebuild,v 1.1 2003/07/21 02:47:08 woodchip Exp $
 
 inherit eutils
 
@@ -8,17 +8,18 @@ IUSE="kerberos mysql xml acl cups ldap pam readline python"
 IUSE="${IUSE} oav"
 
 DESCRIPTION="SAMBA is a suite of SMB and CIFS client/server programs for UNIX"
-HOMEPAGE="http://www.samba.org"
+HOMEPAGE="http://www.samba.org/
+	http://www.openantivirus.org/projects.php"
 
-VSCAN_VER=0.3.2b
+VSCAN_VER=HEAD-07-09-2003
 VSCAN_MODS=${VSCAN_MODS:=fprot mks openantivirus sophos trend icap} #kapersky
 # To build the "kapersky" plugin, the kapersky lib must be installed.
 
-_CVS=_3_0_20030616
+_CVS=_3_0_20030720
 S=${WORKDIR}/${PN}${_CVS}
 
 SRC_URI="mirror://gentoo/${PN}${_CVS}.tar.bz2
-	oav? mirror://sourceforge/openantivirus/${PN}-vscan-${VSCAN_VER}.tar.bz2"
+	oav? http://www.openantivirus.org/snapshots/${PN}-vscan-${VSCAN_VER}.tar.gz"
 
 DEPEND="sys-devel/autoconf dev-libs/popt
 	readline? sys-libs/readline
@@ -43,15 +44,9 @@ src_unpack() {
 	# Clean up CVS and add patch(es)
 	find . -name .cvsignore | xargs rm -f
 	find . -name CVS | xargs rm -rf
-	# no patches this time :)
-
-	#HACK!! else get linker errors starting with vfstest
-	#and then the build will fail, problem in configure i think
-	if use ldap || use kerberos; then
-		cd source; cp Makefile.in Makefile.in.orig
-		sed -e "s%^\(LIBS=.*\)%\1 -llber -lldap%" Makefile.in.orig >Makefile.in
-		cd ..
-	fi
+	# no patches this time either... although there's some
+	# interesting ones from Antti Andreimann here:
+	# http://lists.samba.org/pipermail/samba-technical/2003-July/046137.html
 
 	# For clean docs packaging sake.
 	rm -rf ${S}/examples.bin ; cp -a ${S}/examples ${S}/examples.bin
@@ -59,10 +54,6 @@ src_unpack() {
 	# Prep samba-vscan source.
 	if use oav; then
 		cp -a ${WORKDIR}/${PN}-vscan-${VSCAN_VER} ${S}/examples.bin/VFS
-		cd ${S}/examples.bin/VFS/${PN}-vscan-${VSCAN_VER}/include
-		sed -e "s%^\(# define SAMBA_VERSION_MAJOR\).*%\1 3%" \
-			vscan-global.h >vscan-global.h.3
-		mv -f vscan-global.h.3 vscan-global.h
 	fi
 
 	cd ${S}/source
@@ -74,7 +65,7 @@ src_compile() {
 	local myconf
 	local mymods
 
-	#still seems broken...
+	#looks like this is deprecated...
 	#mymods="nisplussam"
 	use xml && mymods="xml,${mymods}"
 	use mysql && mymods="mysql,${mymods}"
@@ -150,17 +141,20 @@ src_compile() {
 		--host=${CHOST} ${myconf} || die
 
 	# Compile main SAMBA pieces.
-	make everything wins || die "SAMBA pieces"
+	make everything || die "SAMBA pieces"
 	#make rpctorture
 
 	# Build selected samba-vscan plugins.
-	use oav && \
-	for i in ${VSCAN_MODS}
-	do
-		cd ${S}/examples.bin/VFS/${PN}-vscan-${VSCAN_VER}/$i
-		make USE_INCLMKSDLIB=1 #needed for the mks build
-		assert "problem building $i vscan module"
-	done
+	if use oav; then
+		cd ${S}/examples.bin/VFS/${PN}-vscan-${VSCAN_VER}
+		./configure || die "bad ${PN}-vscan-${VSCAN_VER} ./configure"
+		for i in ${VSCAN_MODS}
+		do
+			cd ${S}/examples.bin/VFS/${PN}-vscan-${VSCAN_VER}/$i
+			make USE_INCLMKSDLIB=1 #needed for the mks build
+			assert "problem building $i vscan module"
+		done
+	fi
 }
 
 src_install() {
@@ -171,10 +165,10 @@ src_install() {
 
 	# Install standard binary files.
 	for i in smbclient net smbspool testparm testprns smbstatus \
-		smbcontrol smbtree tdbbackup nmblookup pdbedit editreg \
+		smbcontrol smbtree tdbbackup nmblookup pdbedit \
 		smbpasswd rpcclient smbcacls profiles ntlm_auth \
 		smbcquotas smbmount smbmnt smbumount wbinfo \
-		debug2html smbfilter talloctort # smbsh
+		debug2html smbfilter talloctort #smbsh editreg
 	do
 		exeinto /usr/bin
 		doexe source/bin/${i}
@@ -246,7 +240,6 @@ src_install() {
 
 	# Passdb modules.
 	exeinto /usr/lib/samba/pdb
-#nisplussam should be in here somewhere...
 	use mysql && doexe source/bin/mysql.so
 	use xml && doexe source/bin/xml.so
 
