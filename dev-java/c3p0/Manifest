@@ -1,4 +1,6 @@
-MD5 42ad6923fdca719c39a98d73cd801bcd ChangeLog 961
+MD5 776d421e2a45aa046168693c417f0f6c ChangeLog 1093
 MD5 b4323ab336a40fff79175ed98f8a3a0b c3p0-0.8.4.5.ebuild 1020
+MD5 99329dca0f773ebffb36cad25269df0f c3p0-0.8.5_pre9.ebuild 1057
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 6817abfd62ce274cacfdc4bd47838de4 files/digest-c3p0-0.8.5_pre9 67
 MD5 a681652e2025f1c0806f596fa54dce17 files/digest-c3p0-0.8.4.5 65
