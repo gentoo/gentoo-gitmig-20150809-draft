@@ -1,3 +1,4 @@
+MD5 f01c4f0197c120d97c99216d06fadcb0 gnustep-make-1.10.1_pre20041116.ebuild 6678
 MD5 ae1aaa05a220a14b3ecc49095a45deb0 gnustep-make-1.10.0.ebuild 2629
 MD5 438fde2802a4fab9ded98e13fdccc287 gnustep-make-1.10.1_pre20041030.ebuild 2885
 MD5 a5e0f21454d9d7bcd9580992eadf66eb gnustep-make-1.10.0-r1.ebuild 6623
@@ -11,3 +12,4 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-make-1.10.1_pre2004103
 MD5 020f6b825d80a9769c36a39877f13f44 files/digest-gnustep-make-1.10.0 71
 MD5 020f6b825d80a9769c36a39877f13f44 files/digest-gnustep-make-1.10.0-r1 71
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-make-1.10.1_pre20041030 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-make-1.10.1_pre20041116 0

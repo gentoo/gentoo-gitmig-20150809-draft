@@ -1,6 +1,7 @@
 MD5 0ed4adc84367642a60e7813301bf3cd9 gnustep-base-1.10.0.ebuild 2182
 MD5 e585da9c1da83943e295ea7774db5983 gnustep-base-1.10.1-r1.ebuild 2643
 MD5 38f82f2b0548aee169bd441883e12cb6 gnustep-base-1.10.1_pre20040928.ebuild 2452
+MD5 17d7d0eed521cfd5cf880f8ffff7f8ef gnustep-base-1.10.2_pre20041116.ebuild 2772
 MD5 1ce84a41b6dd184226328e37935d2d74 gnustep-base-1.10.1.ebuild 2212
 MD5 d2f74cdbde491bec5b521615a26f60ee ChangeLog 5859
 MD5 6054f8e4a94313852ff8e1294c8abd88 metadata.xml 670
@@ -9,4 +10,5 @@ MD5 efda24cf74398ac3ddce6cba6071561a files/config-gnustep-base.sh 559
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-base-1.10.1_pre20040928 0
 MD5 da38d67a86d0553b73378aea856093f5 files/digest-gnustep-base-1.10.0 72
 MD5 deded00aa5a335854582a82255ddc2f3 files/digest-gnustep-base-1.10.1 72
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-base-1.10.2_pre20041116 0
 MD5 1e1e21f737b0d25c8faabb89bd286988 files/base-user-defaults.patch-1.10.0 1069
