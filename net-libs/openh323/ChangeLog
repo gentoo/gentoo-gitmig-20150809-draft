@@ -1,6 +1,17 @@
 # ChangeLog for net-libs/openh323
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.2 2002/07/03 21:31:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.3 2002/07/05 22:25:38 raker Exp $
+
+*openh323-1.8.8 (05 Jul 2002)
+
+  05 Jul 2002; Nick Hadaway <raker@gentoo.org> openh323-1.8.8.ebuild:
+  Like pwlib, openh323.org has removed everything but their devel series
+  from the ftp site.  Now pulling downloads from gnomemeeting.org
+
+*openh323-1.9.2 (05 Jul 2002)
+
+  05 Jul 2002; Nick Hadaway <raker@gentoo.org> openh323-1.9.2.ebuild:
+  Version bump.  Possibly works with gnomemeeting.
 
 *openh323-1.8.11 (03 Jul 2002)
 
