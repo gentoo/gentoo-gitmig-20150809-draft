@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.0.2.ebuild,v 1.6 2004/07/15 00:12:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.0.2.ebuild,v 1.7 2004/08/12 14:58:42 obz Exp $
 
 inherit gnome2 eutils
 
@@ -75,6 +75,15 @@ src_compile() {
 		--host=${CHOST} \
 		${myconf} || die "configure failed"
 	emake || die
+}
+
+pkg_postinst() {
+
+	# we need to fix the GConf permissions, see bug #59764
+	# <obz@gentoo.org>
+	einfo "Fixing GConf permissions for gnomemeeting"
+	gnomemeeting-config-tool --fix-permissions
+
 }
 
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS FAQ TODO"
