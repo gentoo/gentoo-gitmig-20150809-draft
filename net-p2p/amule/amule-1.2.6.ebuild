@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-1.2.6.ebuild,v 1.7 2004/06/25 00:27:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-1.2.6.ebuild,v 1.8 2004/06/29 00:41:44 squinky86 Exp $
 
 MY_P=${P/m/M}
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE="nls"
 
 DEPEND=">=x11-libs/wxGTK-2.4.2

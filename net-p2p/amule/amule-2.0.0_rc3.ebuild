@@ -1,5 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.0.0_rc3.ebuild,v 1.4 2004/06/29 00:41:44 squinky86 Exp $
 
 MY_P=${P/m/M}
 MY_P=${MY_P/_/}
