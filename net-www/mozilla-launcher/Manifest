@@ -1,4 +1,6 @@
 MD5 66f25cfc1940f568616d976c0baef73a mozilla-launcher-1.16.ebuild 842
-MD5 a91b64f24109b8aa1cc0ee485b5ae936 ChangeLog 5705
+MD5 2f28b354ffa610a5a7a78a469b0da492 mozilla-launcher-1.17.ebuild 849
+MD5 63198ac218578b447645b499d35af8e3 ChangeLog 5864
 MD5 cc0891c820a717f0335919e48e686cbe metadata.xml 222
 MD5 dc04fd23f1c8f2a4b0b249d9660d24fa files/digest-mozilla-launcher-1.16 68
+MD5 fedd34ea247dda62efe0c00ab70de0ab files/digest-mozilla-launcher-1.17 68
