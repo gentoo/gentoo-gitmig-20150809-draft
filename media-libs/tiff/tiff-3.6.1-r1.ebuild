@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r1.ebuild,v 1.11 2004/10/08 09:25:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r1.ebuild,v 1.12 2004/10/10 18:06:54 gongloo Exp $
 
 inherit eutils
 
@@ -47,7 +47,8 @@ src_compile() {
 src_install() {
 	dodir /usr/{bin,$(get_libdir),share/man,share/doc/}
 	dodir /usr/share/doc/${PF}/html
-	make DESTDIR="${D}" ROOT="" INSTALL="/bin/sh ${S}/port/install.sh" install || die
+	# 'make' before environment variables on a command-line does not work with non-gnu make.
+	DESTDIR="${D}" ROOT="" INSTALL="/bin/sh ${S}/port/install.sh" make install || die
 	preplib /usr
 	dodoc README TODO VERSION README-LZW-COMPRESSION
 }

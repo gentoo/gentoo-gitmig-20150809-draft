@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.26 2004/10/08 09:25:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.27 2004/10/10 18:06:54 gongloo Exp $
+
+  10 Oct 2004; Hasan Khalil <gongloo@gentoo.org> tiff-3.6.1-r1.ebuild:
+  fix for non-gnu make.
 
   08 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/config.site-3.6.1-r1:
