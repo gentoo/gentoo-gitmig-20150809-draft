@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texi2html
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.13 2004/04/27 16:07:27 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.14 2004/04/28 14:44:49 gmsoft Exp $
+
+  28 Apr 2004; Guy Martin <gmsoft@gentoo.org> texi2html-1.64-r1.ebuild:
+  Marked stable on hppa.
 
   27 Apr 2004; Ferris McCormick <fmccor@gentoo.org> texi2html-1.64-r1.ebuild:
   Mark stable for sparc (see bug 34217).
