@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/moldy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/moldy/ChangeLog,v 1.3 2003/02/12 05:17:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/moldy/ChangeLog,v 1.4 2003/10/05 00:44:16 spyderous Exp $
+
+  04 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; moldy-2.16e.ebuild:
+  Adding what appears to be a non-optional tetex dependency. However there are
+  sandbox issues at present (bug #20657).
 
 *moldy-2.16e (1 Feb 2002)
 

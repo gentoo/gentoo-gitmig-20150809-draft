@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/moldy/moldy-2.16e.ebuild,v 1.8 2003/02/13 09:23:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/moldy/moldy-2.16e.ebuild,v 1.9 2003/10/05 00:44:16 spyderous Exp $
 
 IUSE="X"
 
@@ -15,12 +15,13 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="virtual/glibc
+	app-text/tetex
 	X? ( x11-base/xfree )"
 
 src_compile() {
 	local myconf
 
-	use X || myconf="--without-x"
+	myconf=`use_with X`
 
 #Individuals may want to edit the OPT* variables below.
 #From the READ.ME:
