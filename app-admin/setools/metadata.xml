@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>hardened</herd>
+<maintainer>
+  <email>pebenito@gentoo.org</email>
+  <name>Chris PeBenito</name>
+  <description>Primary Maintainer</description>
+</maintainer>
+<longdescription>SELinux graphical policy analisis and editing tools.  On a SELinux machine, a user manager is also included for keeping the unix user and SELinux identity consistent.</longdescription>
+</pkgmetadata>
