@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.293 2004/11/12 23:43:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.294 2004/11/22 16:28:57 tgall Exp $
+
+  22 Nov 2004; Tom Gall <tgall@gentoo.org> glibc-2.3.4.20041102.ebuild:
+  stable on ppc64
 
   12 Nov 2004; Joshua Kinard <kumba@gentoo.org>
   glibc-2.3.4.20040619-r2.ebuild:
