@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.13.1.ebuild,v 1.7 2004/05/07 16:57:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.13.1.ebuild,v 1.8 2004/05/25 07:27:18 mr_bones_ Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND="virtual/opengl
 	=media-libs/freetype-2*
 	media-libs/devil
 	gtk? (
-		=dev-cpp/libglademm-2*
+		=dev-cpp/libglademm-2.0*
 		=dev-cpp/gtkmm-2* )
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
