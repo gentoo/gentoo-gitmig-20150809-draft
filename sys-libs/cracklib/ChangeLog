@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.31 2003/09/26 23:36:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.32 2003/11/09 22:48:37 azarah Exp $
+
+*cracklib-2.7-r8 (10 Nov 2003)
+
+  10 Nov 2003; Martin Schlemmer <azarah@gentoo.org> cracklib-2.7-r8.ebuild,
+  files/cracklib-2.7-static-lib.patch:
+  Add support to build static lib, needed for new version of pam.
 
   26 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> cracklib-2.7-r7.ebuild:
   inherit eutil for older portages
