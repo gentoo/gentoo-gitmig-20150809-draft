@@ -15,8 +15,7 @@ ppc			default-ppc-2004.2					stable
 ppc64		default-ppc64-2004.1				dev
 ppc-macos	default-macos/ppc/10.3				dev
 s390		default-linux/s390/2004.3			stable
-sparc		default-linux/sparc/sparc32/2004.2	stable
-sparc		default-linux/sparc/sparc32/2004.3	dev
+sparc		default-sparc-2004.0			dev
 sparc		default-linux/sparc/sparc64/2004.2	stable
 sparc		default-linux/sparc/sparc64/2004.3	dev
 x86			default-linux/x86/2004.3			stable
