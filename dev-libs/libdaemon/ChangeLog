@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for dev-libs/libdaemon
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.1 2003/08/05 12:28:07 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.2 2003/08/05 19:12:23 vapier Exp $
 
 *libdaemon-0.2 (05 Aug 2003)
 
