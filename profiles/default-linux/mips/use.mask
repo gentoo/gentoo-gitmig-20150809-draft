@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.14 2004/11/22 20:47:06 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.15 2004/11/22 21:24:18 vapier Exp $
 
 # Stephen P. Becker <geoman@gentoo.org>
 # masked because it hoses xchat on 64-bit machines
@@ -126,3 +126,5 @@ sybase-ct
 # Added because of xmms-plugin.eclass.  Please test out
 # media-sound/beep-media-player and remove if   
 bmp
+
+djbfft
