@@ -1,24 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r7.ebuild,v 1.5 2003/03/28 16:52:44 gmsoft Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r7.ebuild,v 1.6 2003/06/22 21:40:45 vapier Exp $
 
 inherit eutils
 
-MY_P="${PN}_${PV}eta"
-A0=portmap_5beta.dif
-S=$WORKDIR/${MY_P}
+MY_P=${PN}_${PV}eta
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Netkit - portmapper"
 SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz"
 HOMEPAGE="ftp://ftp.porcupine.org/pub/security/index.html"
 
-DEPEND="virtual/glibc
-		sys-apps/tcp-wrappers"
-
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc alpha arm hppa"
+KEYWORDS="x86 ppc sparc alpha arm hppa"
+
+DEPEND="virtual/glibc
+	sys-apps/tcp-wrappers"
 
 src_unpack() {
 	unpack ${A}
