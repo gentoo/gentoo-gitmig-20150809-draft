@@ -1,8 +1,60 @@
 <jabber>
+  <!--
+  This is the Jabber server configuration file. The file is
+  broken into different sections based on the services being 
+  managed by jabberd, the server daemon. Most of the important 
+  sections have comments and are easy to modify.
+
+  At http://jabberd.jabberstudio.org/1.4/ you find further
+  instructions including an annotated version of this con-
+  figuration file and an installation guide.
+  
+  Note that when you see a tag like "jabberd:cmdline", it's
+  automatically replaced on startup with the command line flag
+  passed in to jabberd. This enables you to override para-
+  meters set in this configuration file if necessary or de-
+  sired. Also note as you comment things in and out that
+  jabberd does not like comments within comments, so be care-
+  ful with your XML. :)
+  -->
+ 
+ 
+ <!-- 
+  The following <service/> section is for the session manager, 
+  the most important component within the server. This section
+  contains the following types of information: 
+
+    * the server's hostname
+    * other basic server information
+    * the location of the session log file
+    * email addresses for server administrators 
+    * registration instructions for new users
+    * a welcome message for new users
+    * a list of agents with which users can register
+    * load rules for the modules within the session manager
+
+  -->
 
   <service id="sessions">
+    <!-- 
+    Replace all occurrences of "localhost" in this file by
+    the hostname of your Jabber server. Be aware changing
+    the server's name is all but impossible once users start
+    to use the server. So choose a name that is permanent
+    (especially no Intranet hostnames or IP addresses).
 
-    <host>localhost</host>
+    Multiple <host/> entries are allowed - each one is for a 
+    separate virtual server. Note that each host entry must 
+    be on one line, the server doesn't like it otherwise! :)
+    Use lowercase for the hostname.
+    -->
+
+    <host><jabberd:cmdline flag="h">localhost</jabberd:cmdline></host>
+    
+    <!-- 
+    This is the custom configuration section for the 
+    Jabber session manager, a.k.a. "JSM". 
+    -->
 
     <jsm xmlns="jabber:config:jsm">
 
@@ -32,25 +84,58 @@
               </actions>
           </allow>
       </filter>
-
+	<!-- The server vCard -->
       <vCard>
         <FN>localhost</FN>
         <DESC>localhost</DESC>
         <URL>http://localhost/</URL>
       </vCard>
 
-      <!-- commented out so no one can register!!! -->
+      <!-- commented out so no one can register!!! 
       <register notify="yes">
         <instructions>Choose a username and password to register with this server.</instructions>
         <name/>
         <email/>
       </register>
-      <!-- -->
+      -->
+
+      <!-- 
+      A welcome note that is sent to every new user who registers 
+      with your server. Comment it out to disable this function.
+      -->
 
       <welcome>
         <subject>Welcome!</subject>
         <body>Welcome to the Private Jabber server at localhost -- we hope you enjoy this service! For Questions and Remarks, please contact Foo Bar [ foobar@localhost ]. </body>
       </welcome>
+
+      <!-- 
+      IDs with admin access - these people will receive admin 
+      messages (any message to="yourhostname" is an admin
+      message).  These addresses must be local ids, they cannot
+      be remote addresses.
+
+      Note that they can also send announcements to all
+      users of the server, or to all online users. To use
+      the announcement feature, you need to send raw xml and be
+      logged in as one of the admin users. Here is the syntax 
+      for sending an announcement to online users:
+
+        <message to="yourhostname/announce/online">
+          <body>announcement here</body>
+        </message>
+
+        <message to="yourhostname/announce/motd">
+          <body>message (of the day) that is sent only once to all users that are logged in and additionally to new ones as they log in</body>
+        </message>
+
+      Sending to /announce/motd/delete will remove any existing
+      motd, and to /announce/motd/update will only update the motd
+      without re-announcing to all logged in users.
+
+      The <reply> will be the message that is automatically
+      sent in response to any admin messages.
+      -->
 
       <admin>
         <read>foobar@localhost</read>
@@ -61,15 +146,31 @@
         </reply>
       </admin>
 
-      <!--<update><jabberd:cmdline flag="h">localhost</jabberd:cmdline></update>-->
 
       <vcard2jud/>
-<browse>
+	<browse>
+
 <!-- Place to "advertise" your transports -->
+<!--
+      The <browse/> section identifies the transports and other
+      services that are available from this server. Note that each
+      entity identified here must exist elsewhere or be further 
+      defined in its own <service/> section below. These services 
+      will appear in the user interface of Jabber clients that
+      connect to your server.
+      The <browse/> section is also used by mod_disco (see below)
+      for building the disco#items reply.
+      -->
+<!-- An example that would setup a Jabber User Directory could be:
 
+<service type="jud" jid="jud.localhost" name="Jabber User Directory">
+        <ns>jabber:iq:search</ns>
+        <ns>jabber:iq:register</ns>
+</service>
 
-</browse>
-    </jsm>
+-->
+	</browse>
+	</jsm>
 
     <load main="jsm">
       <jsm>/usr/lib/jabberd/jsm.so</jsm>
@@ -88,15 +189,19 @@
       <mod_presence>/usr/lib/jabberd/jsm.so</mod_presence>
       <mod_auth_plain>/usr/lib/jabberd/jsm.so</mod_auth_plain>
       <mod_auth_digest>/usr/lib/jabberd/jsm.so</mod_auth_digest>
-      <mod_auth_0k>/usr/lib/jabberd/jsm.so</mod_auth_0k>
       <mod_log>/usr/lib/jabberd/jsm.so</mod_log>
-<!-- commented out so no one can register!!! -->
+<!-- commented out so no one can register!!!
       <mod_register>/usr/lib/jabberd/jsm.so</mod_register>
-<!-- -->
+-->
       <mod_xml>/usr/lib/jabberd/jsm.so</mod_xml>
     </load>
 
   </service>
+ <!--
+  The <xdb/> component handles all data storage, using the filesystem.
+  Make sure the spool directory defined here exists and has proper
+  permissions.
+  -->
 
   <xdb id="xdb">
     <host/>
@@ -107,6 +212,32 @@
       <spool><jabberd:cmdline flag='s'>/var/spool/jabber</jabberd:cmdline></spool>
     </xdb_file>
   </xdb>
+
+  <!--
+  The following service manages incoming client socket connections.
+  There are several items you can set here to optimize performance:
+
+    * authtime - default is unlimited, but you can set this to
+      limit the amount of time allowed for authentication to be
+      completed, e.g., <authtime>10</authtime> for 10 seconds
+
+    * heartbeat - default is to not send out heartbeat packets
+      to the clients.  This option allows you to specify that
+      you want heartbeats to happen every x seconds.  This is
+      useful if you have a lot of dial-up or laptop users who
+      may drop their connection without logging off of jabber.
+      Otherwise the server won't notice that they are offline until
+      someone tries to send a packet to them (and the message is
+      lost).  Example: <heartbeat>60</heartbeat>
+
+    * karma - this is an input/output rate limiting system that
+      the Jabber team came up with to prevent bandwidth hogging.
+      For details about karma, read the io section at the bottom.
+      These are the low settings and apply per connection/socket
+      and can be changed as desired.
+      To disable rate limiting just delete the <karma/> section.
+  -->
+
 
   <service id="c2s">
     <load>
@@ -119,14 +250,36 @@
         <max>10</max>
         <inc>1</inc>
         <dec>1</dec>
+	<heartbeat>60</heartbeat>
         <penalty>-6</penalty>
         <restore>10</restore>
       </karma>
+
+        <!-- 
+      Use these to listen on particular addresses and/or ports.
+      Example: <ip port="5222">127.0.0.1</ip>
+      Default is to listen on port 5222 on every interface.
+      Remove the <ip/> section to disable non-ssl client connections.
+      -->
       <ip port="5222"/>
-      <ssl port="5223"/><!-- 10.1.2.3</ssl> -->
+
+      <!--
+      The <ssl/> tag acts pretty much like the <ip/> tag,
+      except it defines that SSL is to be used on the 
+      ports and IP addresses specified. You must specify
+      an IP address here, or the connections will fail.
+      <ssl port='5223'>127.0.0.1</ssl>
+      <ssl port='5224'>192.168.1.100</ssl>
+      -->
+
 	
-	 </pthcsock>
+	</pthcsock>
   </service>
+  
+  <!-- 
+  This is the default server error logging component, 
+  which copies to a file and to STDERR. 
+  -->
 
   <log id='elogger'>
     <host/>
@@ -153,7 +306,15 @@
     	<resend>s2s</resend>
     </dnsrv>
   </service>
-
+  
+  <!--
+  The following 's2s' config handles server connections and 
+  dialback hostname verification.  The <legacy/> element is 
+  here to enable communication with old 1.0 servers. The 
+  karma settings are a little higher here to handle the 
+  higher traffic of server-to-server connections (read
+  the io section below for more details, medium settings).
+  -->
   <service id="s2s">
     <load>
       <dialback>/usr/lib/jabberd/dialback.so</dialback>
@@ -172,14 +333,132 @@
     </dialback>
   </service>
 
+ <!--
+  update.jabber.org is long dead but some clients still
+  request update information. In order to avoid errors
+  in the logs, just drop packages for update.jabber.org.
+  -->
+  <service id="update.jabber.org">
+    <host>update.jabber.org</host>
+    <null/>
+  </service>
 
+  <!-- 
+  If you identified additional agents in the main <service/> 
+  section (see examples above), you'll need to define each 
+  of them here using a separate <service/> section for each 
+  <agent/> you identified. Note that the <agent/> sections
+  determine what gets shown to clients that connect to your
+  server, whereas the following <service/> sections define
+  these services within the server itself. The following are
+  examples only, you will need to create/modify them to get 
+  them working on your Jabber server. See the README files 
+  for each agent and/or the server howto for further 
+  information/instructions. 
+  -->
+
+  <!-- we're commenting these out, of course :)
+<service id="jud">
+  <host>jud.localhost</host>
+  <load><jud>/usr/lib/jabberd/jud.so</jud></load>
+  <jud xmlns="jabber:config:jud">
+    <vCard>
+      <FN>Local User Directory</FN>
+      <DESC>This service provides a simple user directory service.</DESC>
+      <URL>http://jud.jabberstudio.org/</URL>
+    </vCard>
+  </jud>
+</service>
+	-->
 
   <io>
-    <rate points="10" time="25"/>
+    <!-- Set the default karma for *all* sockets -->
+    <!-- definition of terms:
+
+      * Avg. Throughput - The number of bytes you can
+        send every second without incuring any penalty.
+
+      * Burst Allowed - The maximum number of bytes you
+        can send in 2 seconds without incurring any penalty.
+
+      * Max Sustained Rate - If you send data as fast as 
+        you can, you will hit penalty, and will not be 
+        able to send for 10 seconds; the max sustained 
+        rate is the average rate you can dump data when 
+        you are dumping as much data as you can, as fast 
+        as you can.
+
+      * Seconds to Recover from Burst - The amount of time 
+        it will take to reach Avg. Throughput capability 
+        after sending a max burst of data.
+
+      * Penalty Length - The length of your penalty is
+        determined according to this formula:
+              abs(penalty) * Heartbeat seconds
+        E.g., a penalty of -5 and heartbeat of 2 will 
+        cause your penalty length to be 10 seconds. 
+   Note that a penalty CANNOT be less than -100, 
+        otherwise strange things might happen.
+
+    -->
+     <!-- Example of Low Karma Limits 
+        Avg. Throughput: 1k-2k/s 
+        Burst Allowed To: 5.5k/s 
+        Max Sustained Rate: 485b/s
+        Seconds to Recover from Burst: 20
+        Penalty Length: 12 seconds
+    <karma>
+      <heartbeat>2</heartbeat>
+      <init>10</init>
+      <max>10</max>
+      <inc>1</inc>
+      <dec>1</dec>
+      <penalty>-6</penalty>
+      <restore>10</restore>
+    </karma>
+    -->
+
+       <!-- 
+    Set rate limits to monitor the number of connection
+    attempts from a single IP, any more than [points]
+    within [time] will engage the limit.  This setting
+    applies to all incoming connections to any service,
+    unless otherwise overridden by that service.
+    -->
+    
+    <rate points="5" time="25"/>
+
+        <!-- 
+    The following section initializes SSL for top-level I/O.
+    This works only when the server is compiled with openssl!
+    Use IPs here or connections will fail.
+    -->
+
     <ssl>
       <key ip="64.57.168.155">/etc/jabber/gentoo.pem</key>
     </ssl>
+  <!-- 
+    The following section is used to allow or deny 
+    communications from specified IP networks or 
+    addressses. If there is no <allow/> section, 
+    then *all* IPs will be allowed to connect. If 
+    you allow one block, then only that block may 
+    connect. Note that <allow/> is checked before
+    <deny/>, so if a specific address is allowed 
+    but the network for that address is denied, 
+    then that address will still be denied.
+    -->
+    <!--
+    <allow><ip>127.0.0.0</ip><mask>255.255.255.0</mask></allow>
+    <allow><ip>12.34.56.78</ip></allow>
+    <deny><ip>22.11.44.0</ip><mask>255.255.255.0</mask></deny>
+    -->
+
   </io>
+
+  <!--
+  This specifies the file to store the pid of the process in.
+  -->
 
   <pidfile>/var/run/jabber.pid</pidfile>
 
