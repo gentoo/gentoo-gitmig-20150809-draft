@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/jumpnbump
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/ChangeLog,v 1.6 2004/08/10 12:03:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/ChangeLog,v 1.7 2004/09/22 07:04:27 mr_bones_ Exp $
+
+*jumpnbump-1.50-r1 (22 Sep 2004)
+
+  22 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +jumpnbump-1.50-r1.ebuild:
+  add autotools patch from Jon Atkins; rework ebuild as a result
 
   10 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> jumpnbump-1.50.ebuild:
   Support no-X install (bug #59952)
