@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fondu
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fondu/ChangeLog,v 1.3 2004/10/09 20:39:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fondu/ChangeLog,v 1.4 2004/11/04 15:52:53 usata Exp $
+
+  05 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> fondu-20040925.ebuild:
+  Marked as stable.
 
 *fondu-20040925 (10 Oct 2004)
 
