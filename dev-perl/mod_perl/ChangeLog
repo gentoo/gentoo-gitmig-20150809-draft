@@ -1,10 +1,14 @@
 # ChangeLog for dev-perl/mod_perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.7 2002/09/09 21:53:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.8 2002/09/16 04:57:48 rphillips Exp $
 
 *mod_perl-1.27 (20 Jun 2002)
 
-  9 Sep 2002; <mcummings@gentoo.org> mod_perl-1.27.ebuikd :
+  15 Sep 2002; Ryan Phillips <rphillips@gentoo.org> mod_perl-1.27.ebuild :
+
+  Added libwww-perl depedency... Hopefully fixes #7867
+
+  9 Sep 2002; <mcummings@gentoo.org> mod_perl-1.27.ebuild :
   Corrected build syntax
 
   1 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> mod_perl-1.27.ebuild :

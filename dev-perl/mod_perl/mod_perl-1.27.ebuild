@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.27.ebuild,v 1.7 2002/09/09 21:53:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.27.ebuild,v 1.8 2002/09/16 04:57:49 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Perl Module for Apache"
@@ -12,7 +12,8 @@ LICENSE="Apache-1.1 as-is"
 KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND="sys-devel/perl
-	>=net-www/apache-1.3.24-r1"
+		dev-perl/libwww-perl
+		>=net-www/apache-1.3.24-r1"
 
 src_compile() {
 	perl Makefile.PL USE_APXS=1 \
