@@ -1,6 +1,14 @@
 # ChangeLog for net-zope/archetypes
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/archetypes/ChangeLog,v 1.4 2004/03/01 21:37:46 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/archetypes/ChangeLog,v 1.5 2004/03/26 23:28:00 batlogg Exp $
+
+*archetypes-1.2.5_rc4 (27 Mar 2004)
+
+  27 Mar 2004; Jodok Batlogg <batlogg@gentoo.org>; archetypes-1.0.1.ebuild,
+  archetypes-1.2.5_rc4.ebuild:
+  corrected copyright (repoman),
+  version bump, it's better to use generator and validation shipped with
+  archetypes than the python packages
 
 *archetypes-1.2.3 (19 Jan 2004)
 
