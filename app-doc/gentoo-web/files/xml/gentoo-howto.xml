@@ -1,13 +1,16 @@
 <?xml version='1.0'?>
+<!-- $Id: gentoo-howto.xml,v 1.13 2001/05/20 08:37:24 pete Exp $ -->
 
 <guide>
-<title>Gentoo Linux HOWTO</title>
+<title>Gentoo Linux Developers HOWTO</title>
 <author title="Author"><mail link="pete@gentoo.org">Peter Gavin</mail></author>
-<abstract>This document is a work in progress, and is constantly being
-updated and changed. It is by no means complete.</abstract>
-
-<version>0.51</version>
-<date>9 Apr 2001</date>
+<abstract>This document describes the Gentoo Linux Portage system, how
+to create new packages for Gentoo, and is also meant to be somewhat of
+a standard for the Gentoo Developers. It is a work in progress, and is
+constantly being updated and changed. It is by no means
+complete.</abstract>
+<version>0.55</version>
+<date>20 May 2001</date>
 
 <!--
 
