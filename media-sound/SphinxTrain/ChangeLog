@@ -1,0 +1,12 @@
+# ChangeLog for media-sound/SphinxTrain
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header
+
+*SphinxTrain-0.9.1 (5 Nov 2002)
+  
+  5 Nov 2002; Matt Keadle <mkeadle@gentoo.org> SphinxTrain-0.9.1.ebuild
+  ChangeLog files/digest-SphinxTrain-0.9.1 :
+
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. Many, many thanks to Rigo Ketelings for creating this
+  ebuild.
