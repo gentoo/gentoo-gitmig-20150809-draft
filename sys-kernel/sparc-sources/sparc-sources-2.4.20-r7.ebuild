@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.20-r7.ebuild,v 1.1 2003/03/30 18:29:41 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.20-r7.ebuild,v 1.2 2003/04/02 00:16:34 joker Exp $
 
-IUSE="build"
+IUSE="build ultra1"
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the
 # same.
@@ -45,7 +45,7 @@ src_unpack() {
 	kernel_src_unpack
 
 	# Patch the HME driver only on Ultra1 machines.
-	[ -n "${U1_HME_FIX}" ] && epatch ${FILESDIR}/U1-hme-lockup.patch
+	use ultra1 && epatch ${FILESDIR}/U1-hme-lockup.patch
 }
 
 pkg_postinst() {
@@ -57,7 +57,7 @@ pkg_postinst() {
 		einfo "For users with an Enterprise model Ultra 1 using the HME network interface,"
 		einfo "please emerge the kernel using the following command:"
 		einfo
-		einfo "U1_HME_FIX=y emerge sparc-sources"
+		einfo "USE=ultra1 emerge sparc-sources"
 		einfo
 	fi
 }
