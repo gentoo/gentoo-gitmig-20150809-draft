@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par/par-1.1.ebuild,v 1.12 2003/02/13 05:55:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par/par-1.1.ebuild,v 1.13 2003/05/19 18:49:04 mholzer Exp $
 
 S=${WORKDIR}/par-cmdline
 DESCRIPTION="Parchive archive fixing tool"
@@ -17,8 +17,7 @@ src_unpack() {
 	unpack par-v${PV}.tar.gz
 	cd ${S}
 	source /etc/make.conf
-	mv Makefile Makefile.orig
-	sed "s/CFLAGS.*/CFLAGS = -Wall $CFLAGS/" Makefile.orig > Makefile
+	sed -i "s/CFLAGS.*/CFLAGS = -Wall $CFLAGS/" Makefile
 }
 
 src_compile() {
