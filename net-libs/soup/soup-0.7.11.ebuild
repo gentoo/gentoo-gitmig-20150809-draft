@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.11.ebuild,v 1.9 2004/06/24 23:18:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.11.ebuild,v 1.10 2004/07/15 01:28:28 agriffis Exp $
 
 IUSE="ssl doc"
 
 inherit gnome.org libtool
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Soup is a SOAP implementation"
 HOMEPAGE="http://www.gnome.org/"
 
