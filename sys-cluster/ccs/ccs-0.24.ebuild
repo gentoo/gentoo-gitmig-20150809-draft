@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ccs-0.24.ebuild,v 1.3 2005/03/25 16:02:10 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/ccs-0.24.ebuild,v 1.4 2005/03/25 16:25:14 xmerlin Exp $
 
 DESCRIPTION="cluster configuration system to manage the cluster config file"
 HOMEPAGE="http://sources.redhat.com/cluster/"
@@ -26,8 +26,8 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	newinitd ${FILESDIR}/${PN}.rc ${PN} || die
-	newconfd ${FILESDIR}/${PN}.conf ${PN} || die
+	newinitd ${FILESDIR}/${PN}d.rc ${PN}d || die
+	newconfd ${FILESDIR}/${PN}d.conf ${PN}d || die
 }
 
 pkg_postinst() {

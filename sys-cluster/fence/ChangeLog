@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/fence
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/ChangeLog,v 1.13 2005/03/25 16:08:16 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/ChangeLog,v 1.14 2005/03/25 16:28:06 xmerlin Exp $
+
+  25 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> fence-1.25.ebuild:
+  fixed init/conf name
 
   25 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> files/fenced.rc,
   fence-1.25.ebuild, -fence-1.5.ebuild:

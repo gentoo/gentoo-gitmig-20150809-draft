@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-1.25.ebuild,v 1.5 2005/03/25 16:06:31 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-1.25.ebuild,v 1.6 2005/03/25 16:28:06 xmerlin Exp $
 
 DESCRIPTION="I/O fencing system"
 HOMEPAGE="http://sources.redhat.com/cluster/"
@@ -25,6 +25,6 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	newinitd ${FILESDIR}/${PN}.rc ${PN} || die
-	newconfd ${FILESDIR}/${PN}.conf ${PN} || die
+	newinitd ${FILESDIR}/${PN}d.rc ${PN}d || die
+	newconfd ${FILESDIR}/${PN}d.conf ${PN}d || die
 }
