@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lard/lard-2.0.14.ebuild,v 1.2 2002/11/17 06:45:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lard/lard-2.0.14.ebuild,v 1.3 2002/11/17 09:00:15 vapier Exp $
 
 DESCRIPTION="Language for Asynchronous Research and Development. Used to describe and simulate asynchronous circuits"
 HOMEPAGE="http://www.cs.man.ac.uk/amulet/projects/lard/"
@@ -41,7 +41,7 @@ src_install() {
 	cp -R ${WORKDIR}/lard-demos-2.0.12/* ${D}/usr/share/doc/${PF}/demos
 	cd ${WORKDIR}/lard-doc
 	find . -name "*.doc *.cgi" -exec rm {} \;
-	mkdir -p ${D}/usr/share/doc/${PF}/html
+	dodir /usr/share/doc/${PF}/html
 	cp -R * ${D}/usr/share/doc/${PF}/html
 	cd ${WORKDIR}
 	dosed "s:\$exec_prefix:#\$exec_prefix:g" /usr/bin/lcd
