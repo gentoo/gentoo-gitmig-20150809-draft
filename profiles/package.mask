@@ -881,14 +881,6 @@ media-sound/rhythmbox
 =media-libs/libgii-20010313
 =media-libs/libggi-20010313
 
-#seemant@gentoo.org 16 Apr 2002
-# ispell's newer stuff is totally b0rked
->=ispell-3.2.06.ebuild
-
-#seemant@gentoo.org 17 Apr 2002
-# ispell-de needs to be checked
-=ispell-de-20011124
-
 # mkennedy@gentoo.org 19 Apr 2002
 # not fit for release (working on it though)
 app-cdr/cddump
@@ -908,10 +900,6 @@ app-cdr/cddump
 # jnelson@gentoo.org 4 May 2002
 # add 4.1.71* too
 =net-misc/ntp-4.1.71*
-
-# seemant@gentoo.org 5 May 2002
-# xpdf-1.00-r1 has a dependency on the masked freetype2
-=app-text/xpdf-1.00-r1
 
 
 # spider@gentoo.org 9 May 2002
@@ -988,7 +976,6 @@ app-cdr/eroaster
 # stroke@gentoo.org 16 Jul 2002
 # app-editors/bluefish-2002.06.23 gtk+2 port snapshot masked. (#5034)
 =app-editors/bluefish-2002.06.23
-	
 
 # g2boojum@gentoo.org 16 Jul 2002
 # new net-tools ; needs testing
