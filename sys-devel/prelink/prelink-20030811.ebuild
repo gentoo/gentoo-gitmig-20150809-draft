@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20030811.ebuild,v 1.1 2003/08/19 22:26:30 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20030811.ebuild,v 1.2 2003/08/27 17:04:03 cretin Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ HOMEPAGE="ftp://people.redhat.com/jakub/prelink"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc ~alpha"
 
 DEPEND=">=dev-libs/elfutils-0.72
 	!dev-libs/libelf
