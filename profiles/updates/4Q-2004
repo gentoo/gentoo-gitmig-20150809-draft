@@ -173,3 +173,4 @@ move app-sci/chessbrain sci-misc/chessbrain
 move app-sci/gt-itm sci-misc/gt-itm
 move app-sci/lightspeed sci-misc/lightspeed
 move app-sci/oww sci-misc/oww
+move app-sci/xfoil sci-misc/xfoil
