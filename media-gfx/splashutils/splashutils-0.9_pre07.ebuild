@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9_pre07.ebuild,v 1.3 2004/08/22 14:59:17 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9_pre07.ebuild,v 1.4 2004/08/22 15:00:52 spock Exp $
 
 MISCSPLASH="miscsplashutils-0.1.1"
 GENTOOSPLASH="splashutils-gentoo-0.1"
@@ -73,7 +73,7 @@ src_install() {
 	ln -s emergence ${D}/etc/splash/default
 	dodoc docs/* README AUTHORS
 
-	# fix a little bug in the current version of the emergence theme
+	# fix a little bug in the current version of the emergence theme.
 	sed -re 's/silent-([0-9]+x[0-9]+)-240/silent-\1-256/g' -i ${D}/etc/splash/emergence/*.cfg
 
 	if [ ! -e ${ROOT}/etc/splash/default ]; then
