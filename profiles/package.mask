@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3655 2005/02/24 13:18:13 wolf31o2 Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3656 2005/02/24 13:23:37 tigger Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -821,16 +821,6 @@ sys-kernel/hppa-dev-sources
 # <mkennedy@gentoo.org> (14 Dec 2004)
 # Masked pending removal
 dev-lisp/cl-clx-sbcl
-
-# <klieber@gentoo.org> (14 Dec 2004)
-# The following packages contains a security vulnerability and has been
-# hard masked accordingly.
-#
-# Please see http://bugs.gentoo.org/show_bug.cgi?id=72358 for more info
-#
-# You may unmask this package by placing an appropriate entry in your
-# /etc/portage/package.unmask file
-x11-plugins/wmfrog
 
 # <tove@gentoo.org> (14 Dec 2004)
 # Needs testing
