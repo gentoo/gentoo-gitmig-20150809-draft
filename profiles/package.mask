@@ -5,3 +5,6 @@
 app-admin/powertweak
 app-admin/va-systemimager-server
 app-admin/va-systemimager-client
+app-editors/gtk-xemacs
+>=app-text/pspell-0.12
+>=app-text/aspell-0.33
