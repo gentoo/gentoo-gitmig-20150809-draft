@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.7 2002/09/05 21:15:32 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.8 2002/09/06 04:59:03 spider Exp $
 
-
+*libwnck-0.17 (06 Sep 2002)
+  06 Sep 2002; Spider <spider@gentoo.org> libwnck-0.17.ebuild :
+  new version
+  
   05 Sep 2002; Spider <spider@gentoo.org> 
   fix all mirror://gnome/sources to be mirror://gnome/2.0.0/sources due to mirror changes.
   
