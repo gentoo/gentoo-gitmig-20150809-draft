@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/convert-ascii-armour
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-ascii-armour/ChangeLog,v 1.1 2003/06/24 00:37:36 mcummings Exp $
+
+*convert-ascii-armour-1.4 (23 Jun 2003)
+
+  23 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  convert-ascii-armour-1.4.ebuild:
+  dep for crypt-rsa, which is a dep for net-ssh
+
