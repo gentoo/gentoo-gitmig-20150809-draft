@@ -82,24 +82,25 @@
 		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=on">Outstanding Neither:</a></td>
 		<td><?=$on;?></td>
 	</tr>
+	<br>
 	<tr>
-		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=u">Outstanding All:</a></td>
-		<td><?=$outstanding;?></td>
-	</tr>
-	<tr>
-		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=u">Unassigned All:</a></td>
+		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=u">Total Unassigned:</a></td>
 		<td><?=$unassigned;?></td>
 	</tr>
-<?php } else { ?>
 	<tr>
-		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=o">Outstanding:</a></td>
+		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=o">Total Outstanding:</a></td>
 		<td><?=$outstanding;?></td>
 	</tr>
+	<?php } else { ?>
 	<tr>
-		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=u">Unassigned:</a></td>
+		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=u">Total Unassigned:</a></td>
 		<td><?=$unassigned;?></td>
 	</tr>
-<?php } ?>
+	<tr>
+		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=o">Total Outstanding:</a></td>
+		<td><?=$outstanding;?></td>
+	</tr>
+	<?php } ?>
 	</table>
 	</td></tr></table>
 </div>
