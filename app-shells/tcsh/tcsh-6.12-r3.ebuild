@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.12-r3.ebuild,v 1.9 2004/08/22 07:27:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.12-r3.ebuild,v 1.10 2004/09/25 06:14:58 kumba Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.astron.com/pub/tcsh/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha arm hppa amd64 ia64 ppc64 ~mips"
+KEYWORDS="x86 ~ppc sparc alpha arm hppa amd64 ia64 ppc64 mips"
 IUSE="cjk perl"
 
 RDEPEND="virtual/libc
