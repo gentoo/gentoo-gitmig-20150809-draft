@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Fraunhofer Fokus
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.8.11.ebuild,v 1.2 2003/11/19 20:43:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.8.11.ebuild,v 1.3 2003/11/20 16:07:36 mholzer Exp $
 
 DESCRIPTION="SIP Express Router"
 
