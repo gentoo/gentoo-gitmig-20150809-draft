@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.3.ebuild,v 1.3 2004/07/12 13:23:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.8.3.ebuild,v 1.4 2004/09/03 14:03:03 pvdabeel Exp $
 
 inherit gnome2
 
@@ -8,7 +8,7 @@ DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ppc ~amd64"
 #IUSE="oggvorbis xine flac faad mad pda"
 IUSE="oggvorbis flac faad mad pda"
 SLOT="0"

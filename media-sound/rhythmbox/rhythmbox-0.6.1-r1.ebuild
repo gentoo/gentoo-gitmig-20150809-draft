@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.1-r1.ebuild,v 1.6 2004/06/25 00:20:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.1-r1.ebuild,v 1.7 2004/09/03 14:03:03 pvdabeel Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://web.rhythmbox.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE="oggvorbis mad xine flac faad"
 
 RDEPEND=">=x11-libs/gtk+-2.2.2
