@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.0.4.ebuild,v 1.4 2004/04/16 15:02:29 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.0.4.ebuild,v 1.5 2004/04/24 20:03:06 tgall Exp $
 
 IUSE="crypt"
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}
 	!sys-cluster/mpich"
 
 SLOT="6"
-KEYWORDS="x86 amd64 alpha sparc ~ppc"
+KEYWORDS="x86 amd64 alpha sparc ~ppc ppc64"
 LICENSE="as-is"
 
 src_unpack() {

@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.13 2004/04/16 15:02:29 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.14 2004/04/24 20:03:06 tgall Exp $
+
+  24 Apr 2004; Tom Gall <tgall@gentoo.org> lam-mpi-7.0.4.ebuild:
+  Marked stable for ppc64
 
   16 Apr 2004; Ferris McCormick <fmccor@gentoo.org> lam-mpi-7.0.4.ebuild:
   Mark stable for sparc
