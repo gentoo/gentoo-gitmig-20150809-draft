@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.2.ebuild,v 1.3 2004/08/14 01:41:19 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.2.ebuild,v 1.4 2004/08/14 18:15:37 seemant Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -531,13 +531,13 @@ src_unpack() {
 #		unpack X11R${PV}-src5.tar.gz
 	eend 0
 
-	if use doc
-	then
-		ebegin "Unpacking documentation"
-			unpack X11R${PV}-src6.tar.gz
-			unpack X11R${PV}-src7.tar.gz
-		eend 0
-fi
+#	if use doc
+#	then
+#		ebegin "Unpacking documentation"
+#			unpack X11R${PV}-src6.tar.gz
+#			unpack X11R${PV}-src7.tar.gz
+#		eend 0
+#	fi
 
 	ebegin "Unpacking Gentoo files and patches"
 		unpack ${P}-files-${FILES_VER}.tar.bz2 > /dev/null
