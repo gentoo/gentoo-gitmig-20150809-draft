@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/i8086emu/i8086emu-0.9.1.ebuild,v 1.5 2004/06/27 23:04:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/i8086emu/i8086emu-0.9.1.ebuild,v 1.6 2004/09/04 14:23:28 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/i8086emu/i8086emu-src-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 -ppc"
 IUSE="X"
 
 RDEPEND="sys-libs/ncurses
