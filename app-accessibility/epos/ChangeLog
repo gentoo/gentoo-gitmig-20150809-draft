@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/epos
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.1 2004/04/02 22:43:00 dmwaters Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.2 2004/06/02 13:40:51 squinky86 Exp $
+
+  02 Jun 2004; Jon Hood <squinky86@gentoo.org> epos-2.5.23.ebuild:
+  stable on x86
 
 *epos-2.5.23 (02 Apr 2004)
 
