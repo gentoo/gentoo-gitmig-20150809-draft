@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tdl
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/ChangeLog,v 1.4 2003/09/03 03:59:57 dholm Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/ChangeLog,v 1.5 2004/03/03 22:05:25 taviso Exp $
+
+*tdl-1.5.2 (03 Mar 2004)
+
+  03 Mar 2004; Tavis Ormandy <taviso@gentoo.org> tdl-1.5.2.ebuild:
+  new stable release, readline dependency is required... :-/
 
   03 Sep 2003; David Holm <dholm@gentoo.org> tdl-1.4.1.ebuild:
   Added tdl-1.4.1 to ~ppc.
