@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.0.ebuild,v 1.1 2002/12/23 01:26:41 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.0.ebuild,v 1.2 2002/12/23 03:13:44 foser Exp $
 
-inherit eutils libtool flag-o-matic debug
+inherit eutils libtool flag-o-matic
 
 IUSE="tiff doc jpeg"
 SLOT="2"
