@@ -22,7 +22,7 @@ src_compile() {
 
 src_install () {
 
-    exeinto /usr/lib/gkrellm/plugins
+    exeinto /usr/share/gkrellm/plugins
     doexe volume.so
     dodoc README Changelog
 }
