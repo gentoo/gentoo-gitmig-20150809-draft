@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.6.2.ebuild,v 1.1 2004/08/09 16:10:41 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.6.2.ebuild,v 1.2 2004/09/18 07:39:12 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -11,8 +11,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-# Internal USE flags: noexercises noexperimental distribution
-IUSE="gnome nls xml2 noexercises noexperimental distribution"
+# Internal USE flags: distribution
+IUSE="gnome nls xml2 distribution"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2
@@ -41,8 +41,6 @@ G2CONF="${G2CONF} $(use_enable xml2 xml)"
 G2CONF="${G2CONF} $(use_enable gnome)"
 
 use gnome          && G2CONF="${G2CONF} --enable-gconf"
-use noexercises    && G2CONF="${G2CONF} --disable-exercises"
-use noexperimental && G2CONF="${G2CONF} --disable-experimental"
 
 if ! use gnome && ! use xml2
 then

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.0-r1.ebuild,v 1.12 2004/06/28 04:18:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.0-r1.ebuild,v 1.13 2004/09/18 07:39:12 leonardop Exp $
 
 # This is the first workrave ebuild with gnome support,
 # which should be considered experimental. The next
@@ -21,7 +21,7 @@ IUSE="debug gnome nls xml2 noexercises noexperimental distribution"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2
-	=dev-cpp/gtkmm-2.2.11
+	=dev-cpp/gtkmm-2.2*
 	>=dev-libs/libsigc++-1.2
 	distribution? ( >=net-libs/gnet-2 )
 	gnome? ( >=gnome-base/libgnomeui-2
