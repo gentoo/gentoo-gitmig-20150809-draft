@@ -14,14 +14,14 @@ MD5 be89d4c412387337e14a1d141b90b125 files/oniguruma-2.3.1-fix-ppc.patch 593
 MD5 d05f63da27634456886e7c924eaf96da files/ruby-1.6.8-fix-x86_64.patch 431
 MD5 00ccb2b51acb8e90488b9bd2f8bf2c32 files/digest-ruby-1.6.8-r11 136
 MD5 a5d6f26168583bd4fd399f0855323175 files/digest-ruby-1.8.2_pre2 134
-MD5 c712bead7ea215530089c5ee8de9c774 files/ruby-1.6.8-20040728-20041024.diff 3057
+MD5 a061fe32b8e0538c203bccebcd2ad8ac files/ruby-1.6.8-20040728-20041024.diff 3094
 MD5 c20ec6eaf6847e4eb46d8865241f1016 files/ruby-1.8.0-CGI::Session.patch 801
 MD5 844ffd93bddeeb9decf86b49669423e8 files/digest-ruby-1.6.8-r12 136
 MD5 d604e46a2d8a4c411b03c101e36ee29a files/ruby-rdoc-gentoo.diff 473
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBilafVWNWqTUmv+0RAtUaAJ94Anz9IW7Z3sEWo0/fSRVPDsTXjACffJMJ
-tUBalhvwNaC9zxsfRn2KSx0=
-=mKjD
+iD8DBQFBiliEVWNWqTUmv+0RAlzvAJ9DxcUSyb97jLbo7nCxFkud/Bz4UQCgkXhU
+9Sa6qCqkKTu0NNKHd1q5z5c=
+=+OlM
 -----END PGP SIGNATURE-----
