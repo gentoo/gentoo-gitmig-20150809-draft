@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/http-emacs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/http-emacs/ChangeLog,v 1.2 2004/06/24 22:14:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/http-emacs/ChangeLog,v 1.3 2004/11/01 10:56:30 usata Exp $
+
+  01 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  http-emacs-1.1.ebuild:
+  Stable on x86. Added to ~alpha and ~ppc-macos.
 
 *http-emacs-1.1 (03 Nov 2003)
 
