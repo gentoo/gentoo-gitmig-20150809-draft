@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/pydance
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/ChangeLog,v 1.13 2005/04/05 19:22:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/ChangeLog,v 1.14 2005/04/05 19:28:16 mr_bones_ Exp $
+
+  05 Apr 2005; Michael Sterrett <mr_bones_@gentoo.org> -files/pydance,
+  -pydance-0.8.4.ebuild, -pydance-0.9.1.ebuild, -pydance-1.0.1.ebuild,
+  -pydance-1.0.2.ebuild:
+  clean old files
 
 *pydance-1.0.3 (05 Apr 2005)
 
