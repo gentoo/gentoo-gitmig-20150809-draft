@@ -3,14 +3,16 @@ Hash: SHA1
 
 MD5 22104a9b1890abca4181c71dbceaa08a jconfig-2.5.ebuild 952
 MD5 0f4dc706cc1c006b731672b2791b00c0 jconfig-2.7.ebuild 952
-MD5 ba8c8ce0149589d7ec2a28229dfc8844 ChangeLog 616
+MD5 ff2814e850f609319d9169728a3a37b7 jconfig-2.8.ebuild 952
+MD5 5c1c1bf08d77260dfe0d9c4d388b2709 ChangeLog 730
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 690cd396b6dc7c904b6b8ef7181f28a0 files/digest-jconfig-2.5 68
 MD5 6cb7c699055eeeea4bb765b7d8856098 files/digest-jconfig-2.7 69
+MD5 5989812c8bb90bb2d2de5ce82e273665 files/digest-jconfig-2.8 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBLxuO/rLF9B432nYRAhnAAJ9o7eSVoebyMjPKJYDGtSfqRkDa/ACfcbJY
-awnwzZy3SJe9HImWjWbDHCU=
-=KBsg
+iD8DBQFBNX3I/rLF9B432nYRApdkAJ4r5RjZi3esnxtghibxb3OAQhsyiQCeJw0N
+72Qt8zLBc/GfpO+th9HCp3A=
+=I+NX
 -----END PGP SIGNATURE-----
