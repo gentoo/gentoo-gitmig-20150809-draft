@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-1.7.ebuild,v 1.2 2005/01/20 16:33:17 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-1.7.ebuild,v 1.3 2005/01/22 12:53:24 luckyduck Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
 DEPEND="sys-libs/libavc1394
-	<=media-libs/libdv-0.102
+	>=media-libs/libdv-0.102
 	jpeg? ( media-libs/jpeg )
 	quicktime? ( media-libs/libquicktime )"
 
