@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r2.ebuild,v 1.4 2003/09/24 16:39:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.0-r2.ebuild,v 1.5 2003/10/06 17:25:50 agriffis Exp $
 
-inherit gnuconfig
+inherit gnuconfig flag-o-matic
 
 IUSE="X doc"
 
@@ -20,7 +20,9 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 
 src_unpack() {
 	unpack ${A}
-	use amd64 && gnuconfig_update
+	if use amd64 || use alpha; then
+		gnuconfig_update || die "gnuconfig_update failed"
+	fi
 
 	cd ${S}/doc
 	mv Makefile.in Makefile.in-orig
@@ -32,6 +34,8 @@ src_compile() {
 
 	local myconf
 	local myopt
+
+	use alpha && append-flags -mieee
 
 	use X \
 		&& myconf="--with-x" \
