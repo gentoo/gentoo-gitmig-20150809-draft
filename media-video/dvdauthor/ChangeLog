@@ -1,0 +1,9 @@
+# ChangeLog for media-video/dvdauthor
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.1 2003/03/11 06:13:50 rac Exp $
+
+*dvdauthor-0.5.0 (10 Mar 2003)
+
+  10 Mar 2003; <rac@gentoo.org> dvdauthor-0.5.0.ebuild:
+  Initial ebuild.  DVD authoring tools.
+
