@@ -1,0 +1,15 @@
+--- hacks/analogtv.c.orig	2004-02-19 10:07:05.331873912 +0000
++++ hacks/analogtv.c	2004-02-19 10:07:21.449423672 +0000
+@@ -292,12 +292,6 @@
+   /* Scale width proportionally */
+   wlim=wlim*hlim/ohlim;
+ 
+-  {
+-    FILE *fp=fopen("/tmp/analogtv.size","w");
+-    fprintf(fp,"wlim=%d hlim=%d\n", wlim, hlim);
+-    fclose(fp);
+-  }
+-
+   /* Most times this doesn't change */
+   if (wlim != oldwidth || hlim != oldheight) {
+ 
