@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-1.2.9-r2.ebuild,v 1.9 2004/05/23 15:57:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-1.2.9-r2.ebuild,v 1.10 2004/06/02 15:36:02 agriffis Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	[ `use debug` ] \
+	use debug \
 		&& myconf="--enable-debug=yes" \
 		|| myconf="--enable-debug=no"
 	econf \
