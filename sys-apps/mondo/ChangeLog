@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mondo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo/ChangeLog,v 1.6 2004/06/24 22:17:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo/ChangeLog,v 1.7 2004/06/30 21:47:19 agriffis Exp $
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> mondo-0.6.ebuild,
+  mondo-0.9.ebuild:
+  sync IUSE (missing)
 
 *mondo-0.9 (30 Oct 2002)
 
