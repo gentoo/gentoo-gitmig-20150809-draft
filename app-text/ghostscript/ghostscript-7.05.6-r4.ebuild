@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r4.ebuild,v 1.2 2003/12/08 11:35:46 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r4.ebuild,v 1.3 2003/12/09 16:36:08 lanius Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.easysw.com/pub/ghostscript/espgs-${PV}-source.tar.bz2
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~ia64 ~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
+KEYWORDS="ia64 x86 ppc sparc alpha hppa amd64"
 IUSE="X cups cjk"
 
 DEPEND="virtual/glibc
