@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3e62b238471693e9eacdb4a3fa39b253 botan-1.4.3.ebuild 2210
+MD5 d769a7ef93cd04ed5de9f468af0979cd metadata.xml 463
+MD5 684e18119e4b313e00305bb39baab81a ChangeLog 447
+MD5 c9748b2c6a670b1f0b8cbcb3ca74b8bb files/digest-botan-1.4.3 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBj/u3mdTrptrqvGERAg9zAJ9vxWf/CplKRwqzEhBsdgoBHRaYWwCfeypM
+wYpZQtV/l6m2p0+fh39SsPA=
+=BtVc
+-----END PGP SIGNATURE-----
