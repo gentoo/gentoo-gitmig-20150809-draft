@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/preview-latex/preview-latex-0.8.1.ebuild,v 1.4 2004/06/18 16:52:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/preview-latex/preview-latex-0.8.1.ebuild,v 1.5 2004/06/19 08:10:55 usata Exp $
 
 inherit latex-package elisp-common
 
@@ -17,7 +17,7 @@ IUSE="emacs xemacs"
 # if you don't have either emacs or xemacs, defaults to emacs. bug #54183
 DEPEND="emacs? ( virtual/emacs >=app-emacs/auctex-11.14 )
 	xemacs? ( virtual/xemacs >=app-xemacs/auctex-1.32 )
-	!emacs? ( !xemacs ( virtual/emacs >=app-emacs/auctex-11.14 ) )
+	!emacs? ( !xemacs? ( virtual/emacs >=app-emacs/auctex-11.14 ) )
 	virtual/ghostscript
 	virtual/tetex"
 
