@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3328 2004/11/17 22:23:30 robbat2 Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3329 2004/11/18 01:58:56 agriffis Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -46,12 +46,6 @@
 # <lucass@gentoo.org> (15 Nov 2004)
 # Masking due to dependency on wxpython-2.5
 dev-python/drpython
-
-# <agriffis@gentoo.org> (13 Nov 2004)
-# screwed up --enable-extensions
-=net-www/mozilla-1.7.3-r1
-=net-www/mozilla-firefox-1.0-r1
-=net-www/mozilla-thunderbird-0.9-r1
 
 # <pythonhead@gentoo.org (13 Nov 2004)
 # Masking till USE='opengl' errors get ironed out
