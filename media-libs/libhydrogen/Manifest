@@ -1,5 +1,15 @@
-MD5 e736718951c83904a249c98faec3d720 libhydrogen-0.8.0.ebuild 1040
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1de5d12ae8eb59cb969b967c1a24597d ChangeLog 1929
+MD5 3e4835f9fed179102c3d6b538290602b libhydrogen-0.8.0.ebuild 1021
 MD5 49e7203af1c9d9b8819582afee8f708a libhydrogen-0.8.1_beta5.ebuild 919
-MD5 87277e0d5fb6c179c7b74c39f0325abe ChangeLog 1807
 MD5 c8d5fcd2ff12b8752743a46f73ed562e files/digest-libhydrogen-0.8.0 69
 MD5 d4d63074ccd3e776ac594ab6f11f8f47 files/digest-libhydrogen-0.8.1_beta5 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBK/jcI1lqEGTUzyQRAiU9AKDJILitjB3R0vyBLWRf7YMGFryJ2ACgnRja
+jC/moYg0tYmLXwet4B7Kn4c=
+=JI0I
+-----END PGP SIGNATURE-----
