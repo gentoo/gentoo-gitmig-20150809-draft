@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/commons-pool-1.1.ebuild,v 1.10 2005/01/01 18:19:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/commons-pool-1.1.ebuild,v 1.11 2005/01/20 18:40:14 luckyduck Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,8 @@ SRC_URI="mirror://apache/jakarta/commons/pool/source/${PN}-${PV}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-1.4
 	>=dev-java/commons-collections-2.0
-	junit? ( >=dev-java/junit-3.7 )"
+	junit? ( >=dev-java/junit-3.7 )
+	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3
 	>=dev-java/commons-collections-2.0"
 LICENSE="Apache-1.1"
