@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.7.ebuild,v 1.6 2002/10/24 23:23:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.7.ebuild,v 1.7 2002/12/03 20:49:39 azarah Exp $
 
 # Do we want to backup an old login.defs, and forcefully
 # install a new version?
@@ -34,10 +34,12 @@ src_install() {
 
 	insinto /etc
 	insopts -m0644
-	
+
+	doins ${FILESDIR}/login.defs
+	# Also install another one that we can use to check if
+	# we need to update it if FORCE_LOGIN_DEFS = "yes"
 	[ "${FORCE_LOGIN_DEFS}" = "yes" ] \
-		&& newins ${FILESDIR}/login.defs login.defs.new \
-		|| doins ${FILESDIR}/login.defs
+		&& newins ${FILESDIR}/login.defs login.defs.new
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README THANKS
 }
@@ -68,3 +70,4 @@ pkg_postinst() {
 		rm -f ${ROOT}/etc/login.defs.new
 	fi
 }
+
