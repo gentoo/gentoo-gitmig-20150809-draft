@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f-r5.ebuild,v 1.1 2004/03/16 17:22:31 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f-r5.ebuild,v 1.2 2004/03/19 22:54:43 zul Exp $
 
 MY_P="bacula-1.32f-5"
 S="${WORKDIR}/${MY_P}"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/bacula/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="readline tcpd ssl gnome mysql sqlite X static"
 
 #theres a local sqlite use flag. use it -OR- mysql, not both.
@@ -59,7 +59,7 @@ src_compile() {
 
 	if use sqlite
 	then
-		myconf="${myconf} --with-sqlite=/usr"
+		myconf="${myconf} --with-sqlite=/usr/include"
 	fi
 
 	if use sqlite && use mysql
