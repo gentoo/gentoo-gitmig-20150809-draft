@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.70 2005/02/01 14:01:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.71 2005/02/07 04:27:02 kumba Exp $
+
+  06 Feb 2005; Joshua Kinard <kumba@gentoo.org> libtool-1.5.10-r4.ebuild:
+  Marked stable on mips.
 
   01 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   libtool-1.5.10-r4.ebuild:
