@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.5 2005/01/25 02:27:51 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.6 2005/01/25 20:36:39 eradicator Exp $
 
 MY_P=${P/pyopengl/PyOpenGL}
 S=${WORKDIR}/${MY_P}
@@ -40,7 +40,9 @@ src_install() {
 }
 
 pkg_setup() {
-	if [ -e /etc/env.d/09opengl ]
+	local ENVFILE=/etc/env.d/03opengl
+	[ -f /etc/env.d/09opengl ] && ENVFILE=/etc/env.d/09opengl
+	if [ -e ${ENVFILE} ]
 	then
 		# Set up X11 implementation
 		X11_IMPLEM_P="$(portageq best_version "${ROOT}" virtual/x11)"
@@ -48,16 +50,16 @@ pkg_setup() {
 		X11_IMPLEM="${X11_IMPLEM##*\/}"
 		einfo "X11 implementation is ${X11_IMPLEM}."
 
-		VOID=$(cat /etc/env.d/09opengl | grep ${X11_IMPLEM})
+		VOID=$(cat ${ENVFILE} | grep ${X11_IMPLEM})
 
 		USING_X11=$?
 		if [ "${USING_X11}" -eq "1" ]
 		then
-			GL_IMPLEM=$(cat /etc/env.d/09opengl | cut -f5 -d/)
+			GL_IMPLEM=$(cat ${ENVFILE} | cut -f5 -d/)
 			opengl-update ${X11_IMPLEM}
 		fi
 	else
-		die "Could not find /etc/env.d/09opengl. Please run opengl-update."
+		die "Could not find ${ENVFILE}. Please run opengl-update."
 	fi
 }
 
