@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.10.ebuild,v 1.6 2004/06/24 22:47:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.10.ebuild,v 1.7 2004/08/24 10:54:07 sekretarz Exp $
+
+inherit eutils
 
 DESCRIPTION="eXtended XKB - assign different keymaps to different windows"
 HOMEPAGE="http://${PN}.sourceforge.net"
@@ -10,6 +12,13 @@ SLOT="0"
 KEYWORDS="x86"
 DEPEND="virtual/x11"
 IUSE=""
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc34-fix.patch
+}
 
 src_compile() {
 	xmkmf || die
