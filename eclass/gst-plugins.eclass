@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.9 2004/03/24 11:07:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.10 2004/03/28 18:45:53 foser Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -45,9 +45,6 @@ GST_PLUGINS_BUILD=${PN/gst-plugins-/}
 # Actual build dir, is the same as the configure switch name most of the time
 GST_PLUGINS_BUILD_DIR=${PN/gst-plugins-/}
 
-# Set to 1 if we need interfaces to build against
-GST_NEED_INTERFACE=""
-
 # general common gst-plugins ebuild entries 
 DESCRIPTION="${BUILD_GST_PLUGINS} plugin for gstreamer"
 HOMEPAGE="http://www.gstreamer.net/status/"
@@ -86,7 +83,7 @@ gst-plugins_find_plugin_dir() {
 
 gst-plugins_src_configure() {
 	
-	elibtoolize ${ELTCONF}
+#	elibtoolize ${ELTCONF}
 
 	# disable any external plugin besides the plugin we want
 	local plugin gst_conf
@@ -94,7 +91,7 @@ gst-plugins_src_configure() {
 	einfo "Configuring to build ${GST_PLUGINS_BUILD} plugin(s)..."
 
 	for plugin in ${GST_PLUGINS_BUILD}; do
-		my_gst_plugins=${my_gst_plugins/plugin/}
+		my_gst_plugins=${my_gst_plugins/${plugin}/}
 	done
 	for plugin in ${my_gst_plugins}; do
 		gst_conf="${gst_conf} --disable-${plugin} "
@@ -139,18 +136,19 @@ gst-plugins_src_unpack() {
 
 	unpack ${A}
 
-	# When working with interfaces we need more than only the plugin
-	if ! [ -z ${GST_NEED_INTERFACE} ]; then
-		return 0;
-	fi
+	# Link with the syswide installed interfaces if needed
+	gst-plugins_find_plugin_dir
+	sed -e "s:\$(top_builddir)/gst-libs/gst/libgstinterfaces:/usr/lib/libgstinterfaces:" \
+		-e "s:\${top_builddir}/gst-libs/gst/libgstinterfaces:/usr/lib/libgstinterfaces:" \
+		-i Makefile.in
+	cd ${S}
 
 	# Remove generation of any other Makefiles except the plugin's Makefile
 	if [ -d "${S}/sys/${GST_PLUGINS_BUILD_DIR}" ]; then
 		makefiles="Makefile sys/Makefile sys/${GST_PLUGINS_BUILD_DIR}/Makefile"
 	elif [ -d "${S}/ext/${GST_PLUGINS_BUILD_DIR}" ]; then
 		makefiles="Makefile ext/Makefile ext/${GST_PLUGINS_BUILD_DIR}/Makefile"
-	fi
-				
+	fi				
 	sed -e "s:ac_config_files=.*:ac_config_files='${makefiles}':" \
 		-i ${S}/configure
 
@@ -159,11 +157,6 @@ gst-plugins_src_unpack() {
 gst-plugins_src_compile() {
 
 	gst-plugins_src_configure ${@}
-
-	if ! [ -z ${GST_NEED_INTERFACE} ]; then
-		cd ${S}/gst-libs
-		emake
-	fi
 
 	gst-plugins_find_plugin_dir
 	emake || die "compile failure"
