@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.14.ebuild,v 1.12 2004/09/08 17:39:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.14.ebuild,v 1.13 2004/09/24 16:17:58 vapier Exp $
 
 DESCRIPTION="The Shared MIME-info Database specification."
 HOMEPAGE="http://www.freedesktop.org/software/shared-mime-info"
@@ -8,7 +8,7 @@ SRC_URI="http://www.freedesktop.org/software/shared-mime-info/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
