@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/files/firebird.init.d,v 1.1 2004/03/31 00:35:47 mksoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/files/firebird.init.d,v 1.2 2004/07/14 21:38:45 agriffis Exp $
 
  
 #  NOTE: make sure you have localhost in your hosts.equiv file see next 2 
