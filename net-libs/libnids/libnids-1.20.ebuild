@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.20.ebuild,v 1.1 2005/02/25 00:43:39 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.20.ebuild,v 1.2 2005/03/11 00:35:26 ka0ttic Exp $
 
 inherit eutils
 
@@ -28,6 +28,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "make install failed"
+	make install_prefix="${D}" install || die "make install failed"
 	dodoc CHANGES COPYING CREDITS MISC README
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnids
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.15 2005/02/25 00:43:39 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.16 2005/03/11 00:35:26 ka0ttic Exp $
+
+  11 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> libnids-1.20.ebuild:
+  Re-add install_prefix=${D} for bug 84699.
 
 *libnids-1.20 (24 Feb 2005)
 
