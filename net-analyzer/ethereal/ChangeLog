@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.57 2004/03/28 12:15:41 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.58 2004/03/29 17:57:51 agriffis Exp $
+
+  29 Mar 2004; Aron Griffis <agriffis@gentoo.org> ethereal-0.9.16-r1.ebuild:
+  Stable on alpha and ia64
 
   28 Mar 2004; Kurt Lieber <klieber@gentoo.org> ethereal-0.10.3.ebuild:
   marking stable on x86 to fix 45543
