@@ -1,13 +1,8 @@
 # ChangeLog for app-sci/epix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/ChangeLog,v 1.1 2003/02/14 16:28:29 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/ChangeLog,v 1.2 2003/02/14 16:40:09 latexer Exp $
 
 *epix-0.8.8a (14 Feb 2003)
 
   14 Feb 2003; Peter Johanson <latexer@gentoo.org> epix-0.8.8a.ebuild files/digest-epix-0.8.8a :
-  Initial import. Ebuilds by me.
-
-*epix-0.8.7a (14 Feb 2003)
-
-  14 Feb 2003; Peter Johanson <latexer@gentoo.org> epix-0.8.7a.ebuild files/digest-epix-0.8.7a :
   Initial import. Ebuilds by me.
