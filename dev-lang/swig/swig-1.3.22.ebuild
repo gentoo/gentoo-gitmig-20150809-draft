@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.22.ebuild,v 1.4 2004/10/23 22:06:18 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.22.ebuild,v 1.5 2005/02/19 20:12:59 lanius Exp $
 
 inherit flag-o-matic mono #48511
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
-IUSE="java guile python tcltk ruby perl php"
+IUSE="java guile python tcltk ruby perl php X"
 
 DEPEND="virtual/libc
 	python? ( >=dev-lang/python-2.0 )
