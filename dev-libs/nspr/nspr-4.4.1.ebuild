@@ -1,14 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.4.1.ebuild,v 1.6 2004/04/06 19:51:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.4.1.ebuild,v 1.7 2004/04/21 16:44:10 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Netscape Portable Runtime"
-SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v${PV}/src/${P}.tar.gz"
 HOMEPAGE="http://www.mozilla.org/projects/nspr/"
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v${PV}/src/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="MPL-1.1"
+SLOT="0"
 KEYWORDS="x86 sparc ppc alpha ~amd64 hppa ~ia64 ~mips"
+IUSE=""
 
 DEPEND="virtual/glibc"
 

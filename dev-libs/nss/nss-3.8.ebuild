@@ -1,23 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.21 2004/04/06 19:57:44 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.22 2004/04/21 16:44:57 vapier Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils
 
 RTM_NAME="NSS_${PV/./_}_RTM"
 DESCRIPTION="Mozilla's Netscape Security Services Library that implements PKI support"
-SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}/src/${P}.tar.gz"
 HOMEPAGE="http://www.mozilla.org/projects/security/pki/nss/"
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}/src/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="MPL-1.1"
+SLOT="0"
 KEYWORDS="x86 ppc sparc alpha ~amd64 ~ia64 ~mips hppa"
+IUSE=""
 
 DEPEND="virtual/glibc
 	app-arch/zip
 	>=dev-libs/nspr-4.3"
-
-MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
@@ -49,7 +48,7 @@ src_unpack() {
 		epatch ${FILESDIR}/${PN}-${PV}-hppa.patch
 	fi
 
-	if [ "`use mips`" ]; then
+	if use mips ; then
 		cd ${S}; epatch ${FILESDIR}/${PN}-${PV}-mips.patch
 	fi
 }
@@ -60,11 +59,11 @@ src_compile() {
 	# Fix for Linux 2.6
 	cp Linux2.5.mk Linux2.6.mk
 
-	emake BUILD_OPT=1 || die "coreconf make failed"
+	emake -j1 BUILD_OPT=1 || die "coreconf make failed"
 	cd ${S}/mozilla/security/dbm
-	emake BUILD_OPT=1 || die "dbm make failed"
+	emake -j1 BUILD_OPT=1 || die "dbm make failed"
 	cd ${S}/mozilla/security/nss
-	emake BUILD_OPT=1 || die "nss make failed"
+	emake -j1 BUILD_OPT=1 || die "nss make failed"
 }
 
 src_install () {
@@ -82,5 +81,4 @@ src_install () {
 	doins public/nss/*.h
 
 	# NOTE: we ignore the binary files
-
 }

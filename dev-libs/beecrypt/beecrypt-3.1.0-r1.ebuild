@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-3.1.0-r1.ebuild,v 1.12 2004/04/16 02:33:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-3.1.0-r1.ebuild,v 1.13 2004/04/21 16:37:55 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="Beecrypt is a general-purpose cryptography library."
 HOMEPAGE="http://sourceforge.net/projects/beecrypt"
@@ -45,5 +45,5 @@ src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 	# Not needed
 	rm -f ${D}/usr/lib/python*/site-packages/_bc.*a
-	dodoc BUGS README BENCHMARKS NEWS || die "dodoc failed"
+	dodoc BUGS README BENCHMARKS NEWS
 }

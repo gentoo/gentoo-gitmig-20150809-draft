@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/proj/proj-4.4.7-r1.ebuild,v 1.6 2004/04/21 06:15:52 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/proj/proj-4.4.7-r1.ebuild,v 1.7 2004/04/21 16:45:48 vapier Exp $
 
 inherit eutils
 
@@ -10,10 +10,10 @@ HOMEPAGE="http://proj.maptools.org/"
 SRC_URI="http://proj.maptools.org/dl/${P}.tar.gz
 	http://proj.maptools.org/dl/proj-nad27-1.1.tar.gz"
 
-SLOT="0"
-IUSE=""
 LICENSE="MIT"
+SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
@@ -26,11 +26,6 @@ src_unpack() {
 	TMPDIR=${T}  tar xvzf ${DISTDIR}/proj-nad27-1.1.tar.gz || die
 }
 
-src_compile() {
-	econf || die
-	emake || die
-}
-
 src_install() {
 	einstall || die
 	insinto /usr/share/proj
@@ -40,5 +35,5 @@ src_install() {
 	insopts -m 644
 	doins nad/pj_out27.dist
 	doins nad/pj_out83.dist
-	dodoc COPYING README NEWS AUTHORS INSTALL ChangeLog ${N}/README.NAD ${N}/README.NADUS
+	dodoc README NEWS AUTHORS INSTALL ChangeLog ${N}/README.NAD ${N}/README.NADUS
 }

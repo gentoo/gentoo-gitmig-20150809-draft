@@ -1,14 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1-r1.ebuild,v 1.18 2004/02/24 17:55:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1-r1.ebuild,v 1.19 2004/04/21 16:38:20 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Library for arithmetic on arbitrary precision integers, rational numbers, and floating-point numbers"
 HOMEPAGE="http://www.gnu.org/software/gmp/gmp.html"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/gmp/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="LGPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
+IUSE=""
 
 DEPEND="~sys-devel/m4-1.4"
 
@@ -35,7 +38,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	dodoc AUTHORS ChangeLog COPYING* NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 	dodoc doc/configuration doc/isa_abi_headache
 	dohtml -r doc
 }

@@ -1,16 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.2.ebuild,v 1.18 2004/04/03 09:31:23 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.2.ebuild,v 1.19 2004/04/21 16:39:16 vapier Exp $
 
 inherit flag-o-matic libtool
-filter-flags -ffast-math
 
 DESCRIPTION="Library for arithmetic on arbitrary precision integers, rational numbers, and floating-point numbers"
 HOMEPAGE="http://www.gnu.org/software/gmp/gmp.html"
 SRC_URI="mirror://gnu/gmp/${P}.tar.gz"
-SLOT="0"
+
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc alpha amd64 ia64 ~mips hppa"
+SLOT="0"
+KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64 ia64"
+IUSE=""
+
 DEPEND="~sys-devel/m4-1.4"
 
 src_unpack() {
@@ -21,6 +23,8 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-flags -ffast-math
+
 	elibtoolize
 
 	local myconf=""
@@ -39,7 +43,7 @@ src_compile() {
 	# It's pretty slow to run all the checks, and not really necessary
 	# on every build of this package.  Just run the checks when
 	# debugging is enabled.  (23 Feb 2003 agriffis)
-	if [ `use debug` ] ; then
+	if use debug ; then
 		make check || die "make check failed"
 	fi
 }
@@ -47,7 +51,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
-	dodoc AUTHORS ChangeLog COPYING* NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 	dodoc doc/configuration doc/isa_abi_headache
 	dohtml -r doc
 }

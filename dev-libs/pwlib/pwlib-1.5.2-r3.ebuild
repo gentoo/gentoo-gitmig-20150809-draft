@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.2-r3.ebuild,v 1.5 2004/03/30 22:25:15 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.2-r3.ebuild,v 1.6 2004/04/21 16:47:13 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Portable Multiplatform Class Libraries for OpenH323"
 HOMEPAGE="http://www.openh323.org/"
@@ -19,7 +21,6 @@ DEPEND=">=sys-devel/bison-1.28
 	sdl? ( media-libs/libsdl )
 	ssl? ( dev-libs/openssl )"
 
-MAKEOPTS="${MAKEOPTS} -j1"
 S=${WORKDIR}/${PN}
 
 src_unpack() {
@@ -39,7 +40,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ "`use ssl`" ]; then
+	if use ssl ; then
 		export OPENSSLFLAG=1
 		export OPENSSLDIR="/usr"
 		export OPENSSLLIBS="-lssl -lcrypt"
@@ -58,7 +59,7 @@ src_compile() {
 		-e "s:^\(CCFLAGS[\s]*=.*\) -I/usr/include:\1:" \
 		${S}/make/ptlib-config
 
-	emake opt || die "make failed"
+	emake -j1 opt || die "make failed"
 }
 
 src_install() {
