@@ -1,4 +1,4 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: phoen][x <eqc_phoenix@gmx.de>
 # Maintainer: Matthew Kennedy <mkennedy@gentoo.org>
@@ -7,7 +7,7 @@
 MY_P=${P/dvdr/Video-DVDR}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="dvd::rip is a graphical frontend for transcode"
-SRC_URI="http://www.exit1.org/dvdrip/dist/$MY_P.tar.gz"
+SRC_URI="http://www.exit1.org/dvdrip/dist/${MY_P}.tar.gz"
 HOMEPAGE="http://www.exit1.org/dvdrip/"
 
 DEPEND=">=media-video/transcode-0.6.0_pre4-r1
