@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.5.72-r1.ebuild,v 1.1 2003/06/17 12:10:37 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.5.72-r1.ebuild,v 1.2 2003/06/17 15:20:01 latexer Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 inherit eutils 
@@ -16,8 +16,8 @@ ETYPE="sources"
 # The development branch of the linux kernel with Andrew Morton's patch
 
 DESCRIPTION="Full sources for the development linux kernel with Andrew Morton's patchset"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.5/linux-${OKV}.tar.bz2 ${PATCH_URI}
-http://www.kernel.org/pub/linux/kernel/people/akpm/patches/2.5/${PV}/${PVR/r/mm}/${PVR/r/mm}.bz2"
+SRC_URI="mirror://kernel/linux/kernel/v2.5/linux-${OKV}.tar.bz2 ${PATCH_URI}
+mirror://kernel/linux/kernel/people/akpm/patches/2.5/${PV}/${PVR/r/mm}/${PVR/r/mm}.bz2"
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
