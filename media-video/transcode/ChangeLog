@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.61 2004/02/27 19:34:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.62 2004/02/28 13:21:30 zypher Exp $
+
+  28 Feb 2004; Marc Hildebrand <zypher@gentoo.org> transcode-0.6.12-r1.ebuild:
+  added two filter-flags, removed use_enable mmx
+  See bug #38570
 
   27 Feb 2004; Seemant Kulleen <seemant@gentoo.org> transcode-0.6.10.ebuild,
   transcode-0.6.11.ebuild, transcode-0.6.12-r1.ebuild:
