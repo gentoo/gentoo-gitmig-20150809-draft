@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.15 2004/01/25 08:13:12 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.16 2004/04/28 05:51:06 vapier Exp $
 
-IUSE="doc"
 
 inherit java nsplugins
 
@@ -10,6 +9,7 @@ JREV="01"
 
 S="${WORKDIR}/j2sdk${PV}"
 DESCRIPTION="Blackdown Java Development Kit ${PV}"
+HOMEPAGE="http://www.blackdown.org"
 J_URI="ftp://ftp.gwdg.de/pub/languages/java/linux/JDK-${PV}"
 if [ "`gcc -dumpversion | cut -f1 -d.`" -eq "3" -a "`gcc -dumpversion | cut -f2 -d.`" -ge "2" ] ; then
 	SRC_URI="x86? ( ${J_URI}/i386/${JREV}/j2sdk-${PV}-${JREV}-linux-i586-gcc3.2.bin )
@@ -22,17 +22,15 @@ SRC_URI="${SRC_URI} sparc? ( ${J_URI}/sparc/${JREV}/j2sdk-${PV}-${JREV}-linux-sp
 # this is needed for proper operating under a PaX kernel without activated grsecurity acl
 CHPAX_CONSERVATIVE_FLAGS="pemsv"
 
-HOMEPAGE="http://www.blackdown.org"
-
-SLOT="1.4.1"
 LICENSE="sun-bcla-java-vm"
+SLOT="1.4.1"
 KEYWORDS="x86 -ppc sparc amd64"
+IUSE="doc"
 
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.6
 	doc? ( =dev-java/java-sdk-docs-1.4.1* )
 	amd64? ( >=app-emulation/emul-linux-x86-baselibs-1.0 )"
-
 PROVIDE="virtual/jdk-1.4.1
 	virtual/jre-1.4.1
 	virtual/java-scheme-2"

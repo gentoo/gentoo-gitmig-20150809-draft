@@ -1,28 +1,27 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r8.ebuild,v 1.10 2004/01/25 08:13:12 strider Exp $
-
-IUSE="doc"
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r8.ebuild,v 1.11 2004/04/28 05:51:06 vapier Exp $
 
 inherit java nsplugins
 
 S=${WORKDIR}/j2sdk1.3.1
 DESCRIPTION="Blackdown Java Development Kit 1.3.1"
+HOMEPAGE="http://www.blackdown.org"
 SRC_URI="x86? ( mirror://blackdown.org/JDK-${PV}/i386/FCS/j2sdk-${PV}-FCS-linux-i386.tar.bz2 )
 	ppc? ( mirror://blackdown.org/JDK-${PV}/ppc/FCS-02b/j2sdk-${PV}-02b-FCS-linux-ppc.bin )
 	sparc? ( mirror://blackdown.org/JDK-${PV}/sparc/FCS-02b/j2sdk-${PV}-02b-FCS-linux-sparc.bin )"
 
-HOMEPAGE="http://www.blackdown.org"
+LICENSE="sun-bcla-java-vm"
+SLOT="1.3"
+KEYWORDS="~x86 ~ppc ~sparc"
+IUSE="doc"
+
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.5
 	doc? ( =dev-java/java-sdk-docs-1.3.1* )"
-RDEPEND="$DEPEND"
 PROVIDE="virtual/jdk-1.3.1
 	virtual/jre-1.3.1
 	virtual/java-scheme-2"
-SLOT="1.3"
-LICENSE="sun-bcla-java-vm"
-KEYWORDS="~x86 ~ppc ~sparc"
 
 src_unpack () {
 	if (use ppc) || (use sparc) ; then

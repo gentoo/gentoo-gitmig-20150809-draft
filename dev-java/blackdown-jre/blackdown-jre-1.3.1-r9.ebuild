@@ -1,32 +1,28 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.9 2004/04/13 08:54:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.10 2004/04/28 05:51:53 vapier Exp $
 
-IUSE=""
-
-inherit java nsplugins
+inherit java nsplugins gcc
 
 S=${WORKDIR}/j2re1.3.1
 DESCRIPTION="Blackdown Java Runtime Environment 1.3.1"
-SRC_URI="ppc? http://distro.ibiblio.org/pub/Linux/distributions/yellowdog/software/openoffice/j2re-1.3.1-02c-FCS-linux-ppc.bin"
-
 HOMEPAGE="http://www.blackdown.org"
+SRC_URI="ppc? ( http://distro.ibiblio.org/pub/Linux/distributions/yellowdog/software/openoffice/j2re-1.3.1-02c-FCS-linux-ppc.bin )"
+
+LICENSE="sun-bcla-java-vm"
+SLOT="0"
+KEYWORDS="ppc"
+IUSE=""
+
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.5"
-RDEPEND="$DEPEND"
 PROVIDE="virtual/jre-1.3.1
 	virtual/java-scheme-2"
-SLOT="0"
-LICENSE="sun-bcla-java-vm"
-
-# other arches will need to chase this down when its released for them
-KEYWORDS="ppc"
 
 src_unpack () {
 	if (use ppc) || (use sparc) || (use sparc64) ; then
 	# this is built on gcc 3.2 so only update if gcc 3.x is present
-	[ -z "${CC}" ] && CC=gcc
-	if [ "`${CC} -dumpversion | cut -d. -f1,2`" = "2.95" ] ; then
+	if [ "`gcc-major-version`" != "3" ] ; then
 		die "This is for gcc 3.x only"
 	fi
 
