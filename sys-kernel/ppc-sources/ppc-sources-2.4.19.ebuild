@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Kain X <kain@gentoo.org>
-# $Id: ppc-sources-2.4.19.ebuild,v 1.2 2002/04/29 21:01:13 sandymac Exp $ 
+# $Id: ppc-sources-2.4.19.ebuild,v 1.3 2002/05/08 05:59:25 drobbins Exp $ 
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -108,19 +108,9 @@ pkg_preinst() {
 
 pkg_postinst() {
 	[ "$ETYPE" = "headers" ] && return
-	cd ${ROOT}usr/src/linux-${KV}
-	if [ -e "${ROOT}usr/src/linux/.config" ]
+	if [ ! -e ${ROOT}usr/src/linux ]
 	then
-		cp "${ROOT}usr/src/linux/.config" .config
-		#The default setting will be selected.
-		yes "" | make oldconfig
-		echo "Ignore any errors from the yes command above."
-		make dep
-	else
-		cp "${ROOT}usr/src/linux-${KV}/arch/ppc/defconfig" .config
+		rm -f ${ROOT}usr/src/linux
+		ln -sf linux-${KV} ${ROOT}/usr/src/linux
 	fi
-	#remove /usr/src/linux symlink
-	rm -f ${ROOT}/usr/src/linux
-	#set up a new one
-	ln -sf linux-${KV} ${ROOT}/usr/src/linux
 }

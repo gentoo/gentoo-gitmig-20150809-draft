@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/redhat-sources-2.4.18.0.13.ebuild,v 1.4 2002/04/29 21:01:13 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/redhat-sources-2.4.18.0.13.ebuild,v 1.5 2002/05/08 05:59:25 drobbins Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -90,21 +90,9 @@ pkg_preinst() {
 
 pkg_postinst() {
 	[ "$ETYPE" = "headers" ] && return
-	cd ${ROOT}usr/src/linux-${KV}
-	make mrproper
-	if [ -e "${ROOT}usr/src/linux/.config" ]
+	if [ ! -e ${ROOT}usr/src/linux ]
 	then
-		cp "${ROOT}usr/src/linux/.config" .config
-		#we only make dep when upgrading to a new kernel (with existing config)
-		#The default setting will be selected.
-		yes "" | make oldconfig
-		echo "Ignore any errors from the yes command above."
-		make dep
-	else
-		cp "${ROOT}usr/src/linux-${KV}/arch/i386/defconfig" .config
+		rm -f ${ROOT}usr/src/linux
+		ln -sf linux-${KV} ${ROOT}/usr/src/linux
 	fi
-	#remove /usr/src/linux symlink
-	rm -f ${ROOT}/usr/src/linux
-	#set up a new one
-	ln -sf linux-${KV} ${ROOT}/usr/src/linux
 }
