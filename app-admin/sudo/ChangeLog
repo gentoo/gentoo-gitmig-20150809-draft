@@ -1,11 +1,14 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.15 2003/05/24 00:28:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.16 2003/07/02 18:16:05 gmsoft Exp $
 
   23 May 2003; Seemant Kulleen <seemant@gentoo.org> sudo-1.6.6.ebuild:
   download location fixed
 
 *sudo-1.6.7_p5 (19 May 2003)
+
+  02 Jul 2003; Guy Martin <gmsoft@gentoo.org> sudo-1.6.7_p5.ebuild :
+  Marked stable on hppa.
 
   19 May 2003; Daniel Ahlberg <aliz@gentoo.org> sudo-1.6.7_p5.ebuild :
   Version bump.
