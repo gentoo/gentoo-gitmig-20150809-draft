@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/ncbi-tools
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.2 2003/05/05 19:36:21 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ncbi-tools/ChangeLog,v 1.3 2003/10/08 22:08:02 robbat2 Exp $
+
+*ncbi-tools-04222003-r2 (08 Oct 2003)
+
+  08 Oct 2003; Robin H. Johnson <robbat2@gentoo.org>
+  ncbi-tools-04222003-r2.ebuild:
+  modified patch from #30656, corrected two pathes in the postinst message
 
 *ncbi-tools-04222003-r1 (05 May 2003)
 
