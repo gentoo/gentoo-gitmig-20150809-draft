@@ -1,4 +1,4 @@
-GNOMEDIR=/opt/gnome
+GNOME_PATH=/opt/gnome
 PATH=/opt/gnome/bin:/opt/gnome/sbin
 ROOTPATH=/opt/gnome/bin:/opt/gnome/sbin
 MANPATH=/opt/gnome/man
