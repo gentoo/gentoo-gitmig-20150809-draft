@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 d8d39f1cc84e17ee4cb97387924b99da tdl-1.5.2.ebuild 1318
+MD5 20e1c622a364a9418ecc2904539ee0f2 tdl-1.4.1.ebuild 1203
 MD5 bcfc1499bae852095fa0d041ec6bd6ea ChangeLog 1605
 MD5 96e865f5c22f4de4451408833a2667e1 metadata.xml 479
-MD5 20e1c622a364a9418ecc2904539ee0f2 tdl-1.4.1.ebuild 1203
-MD5 d8d39f1cc84e17ee4cb97387924b99da tdl-1.5.2.ebuild 1318
 MD5 e99939886dd2c94f740140ef76236e33 files/digest-tdl-1.4.1 60
-MD5 ff06d78684e7e3ab92ff23b37b1a9388 files/screenshot.png 24689
 MD5 faf29f05b6930bde649efeaae5b33de2 files/digest-tdl-1.5.2 60
+MD5 d272ec18342edb6d258aec9fdf1b2c45 files/screenshot.png 16399
 MD5 8e3a75855c82e4ffb3b73e8e2634f38c files/tdl-1.5.2-tar-gz-asc.txt 189
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBcXbMHTu7gpaalycRAhDmAJsFuymJbBpGurUnDmxeIniOmTmQUACfaTTb
-xXapuuuMuQwgAvZBTCuA/+c=
-=ZlEh
------END PGP SIGNATURE-----
