@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0.ebuild,v 1.9 2003/10/18 13:25:38 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0.ebuild,v 1.10 2003/10/18 13:26:19 liquidx Exp $
 
 MY_P=${P/-/}
 S=${WORKDIR}/${MY_P}/unix
@@ -32,7 +32,7 @@ src_compile() {
 		--enable-shared || die "./configure failed"
 
 	ebegin "Fixing the Makefile..."
-	sed -e 's:TK_LIBS =:TK_LIBS = -L/usr/X11R6/lib -lX11:' -i ${S}/unix/Makefile 
+	sed -e 's:TK_LIBS =:TK_LIBS = -L/usr/X11R6/lib -lX11:' -i ${S}/unix/Makefile
 	eend $?
 
 	make || die
