@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0608c779bffb3de71dd05d3d10d0cbcf ChangeLog 592
-MD5 8dd6cf9d05dcbbd83ed64ccaa81f67a4 libsoundtouch-1.2.1.ebuild 1483
+MD5 27ca143d48dbad0d5944ba04be993cb5 ChangeLog 715
+MD5 6dee5304d1bf358abe46e6d1f6a85211 libsoundtouch-1.2.1.ebuild 1489
 MD5 2f758c82434233f84f01f80f850a1112 metadata.xml 217
 MD5 3c9ded8dc9e9d37cf59b37200a04dd86 files/digest-libsoundtouch-1.2.1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBYa+LArHZZzCEUG0RAgIHAJ9pahPoXYPnnAGyvJMlk1Wk+pUqxQCcDDE4
-f0/SWJfTTDCM5gerp01vmVo=
-=VJxJ
+iD8DBQFBdK5mArHZZzCEUG0RAkJvAJ9ZS/FITxwiz7/JDgYNQKjYuZbeCQCePelS
+IgoXqD7teu7vexntTlXFKxo=
+=ji7X
 -----END PGP SIGNATURE-----

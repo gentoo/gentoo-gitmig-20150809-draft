@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.2.1.ebuild,v 1.3 2004/10/04 20:15:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.2.1.ebuild,v 1.4 2004/10/19 06:02:25 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://sky.prohosting.com/oparviai/soundtouch/soundtouch_v${PV}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 # FIXME:
 #
@@ -41,6 +41,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} pkgdocdir=/usr/share/doc/${P} install || die
-	rm -f ${D}/usr/share/doc/${P}/COPYING.TXT  # remove obsolete LICENCE file
+	make DESTDIR="${D}" pkgdocdir="/usr/share/doc/${PF}" install || die
+	rm -f ${D}/usr/share/doc/${PF}/COPYING.TXT  # remove obsolete LICENCE file
 }
