@@ -1,7 +1,11 @@
 # ChangeLog for sys-libs/libraw1394
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.4 2003/03/27 12:05:38 seemant Exp $
 
-*libavc1394-0.3.1 (12 Jul 2002)
+*libraw1394-0.9.0 (12 Jul 2002)
+
+  27 Mar 2003; Seemant Kulleen <seemant@gentoo.org> libraw1394-0.9.0.ebuild:
+  create device.  Closes bug #18287 by Frantz Dhin <tragedy_rm@hotmail.com>
 
   20 Jul 2002; Mark Guertin <gerk@gentoo.org> libraw1394-0.9.0.ebuild :
   Added ppc keyword
