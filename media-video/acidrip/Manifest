@@ -3,7 +3,9 @@ MD5 20f07c7fba9e84dae0a83bdc08207607 acidrip-0.7.ebuild 753
 MD5 2dac859693fb5b644b8b2fcef5471051 acidrip-0.8.ebuild 779
 MD5 154c4d37de2d587ab72558b2220bd7d2 acidrip-0.9.ebuild 893
 MD5 17790ef5a3f59cd3c8ac2e6375bd6be6 acidrip-0.10.ebuild 930
+MD5 17790ef5a3f59cd3c8ac2e6375bd6be6 acidrip-0.11.ebuild 930
 MD5 76bbd8cce48f0a602a7e48dff81fc757 files/digest-acidrip-0.7 62
 MD5 8dc178fe99738aa4c5f0650f4c43ef87 files/digest-acidrip-0.8 62
 MD5 323cd557e9fc58678ae4dd3eb9287a01 files/digest-acidrip-0.9 62
 MD5 5a80aa78f0fd5a80536acc5418ba6179 files/digest-acidrip-0.10 63
+MD5 8e4ac761424d3012be5f6bfd33d0911a files/digest-acidrip-0.11 63
