@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/files/vmware.rc,v 1.2 2004/02/13 19:13:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/files/vmware.rc,v 1.3 2004/02/15 08:08:56 woodchip Exp $
 
 depend() {
 	need localmount
-	use logger net
+	use logger net samba
 }
 
 vmware-prettify() {
