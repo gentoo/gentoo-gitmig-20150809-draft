@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/phpsysinfo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.10 2004/03/28 22:30:57 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.11 2004/03/28 22:36:40 stuart Exp $
+
+*phpsysinfo-2.1-r2 (28 Mar 2004)
+
+  28 Mar 2004; Stuart Herbert <stuart@gentoo.org> phpsysinfo-2.1-r2.ebuild:
+  Auto-apply the 2.5 kernel patch if we're running on a 2.5 / 2.6 kernel
 
   28 Mar 2004; Stuart Herbert <stuart@gentoo.org> :
   Included working 2.5/2.6 kernel patch from Stephen Reindl

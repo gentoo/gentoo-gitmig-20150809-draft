@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/phpsysinfo-2.1-r2.ebuild,v 1.1 2004/03/28 22:30:57 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/phpsysinfo-2.1-r2.ebuild,v 1.2 2004/03/28 22:36:40 stuart Exp $
 
-inherit eutils
+inherit eutils kernel-mod
 
 MY_PN="phpSysInfo"
 MY_P="${MY_PN}-${PV}"
@@ -26,7 +26,11 @@ src_unpack() {
 	mv ${P}/debian ${S}
 	rmdir ${P}
 	epatch ${S}/debian/patches/urlencoded-security-fix.diff
-	epatch ${FILESDIR}/fix_memory_display_kernel2.5.diff.gz
+
+	APPLY_25PATCH=0
+	kernel-mod_is_2_5_kernel && APPLY_25PATCH=1
+	kernel-mod_is_2_6_kernel && APPLY_25PATCH=1
+	[ "$APPLY_25PATCH" = "1" ] && epatch ${FILESDIR}/fix_memory_display_kernel2.5.diff.gz
 }
 
 src_install() {
