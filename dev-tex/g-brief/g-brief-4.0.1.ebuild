@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/g-brief-4.0.1.ebuild,v 1.3 2003/10/09 12:40:53 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/g-brief-4.0.1.ebuild,v 1.4 2004/04/30 22:01:46 jhuebel Exp $
 
 inherit latex-package
 
@@ -14,7 +14,7 @@ LICENSE="LPPL-1.2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 
 # we dont need to regenerate the dvis, they come
 # in the archive, see bug #28240. <obz@gentoo.org>
