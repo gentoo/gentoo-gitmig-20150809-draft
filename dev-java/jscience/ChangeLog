@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jscience
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/ChangeLog,v 1.1 2004/11/14 13:49:04 axxo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jscience/ChangeLog,v 1.2 2005/01/09 18:03:24 luckyduck Exp $
+
+*jscience-1.0.3 (09 Jan 2005)
+
+  09 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +jscience-1.0.3.ebuild:
+  new upstream version available. fixes bug #75950.
 
 *jscience-1.0.1 (14 Nov 2004)
 
