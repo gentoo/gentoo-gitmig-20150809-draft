@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.1.5.ebuild,v 1.1 2004/03/06 00:45:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.1.5.ebuild,v 1.2 2004/05/05 23:18:59 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -25,10 +25,18 @@ RDEPEND=">=media-libs/libsdl-1.2.5
 DEPEND="${RDEPEND}
 	>=dev-util/jam-2.5"
 
+src_unpack() {
+	unpack ${A}
+	cd ${WORKDIR}/${PN}data-${DATAVERSION}/
+	epatch "${FILESDIR}/physfs.patch"
+	./autogen.sh
+}
+
 src_compile() {
 	egamesconf || die
 	jam        || die "jam failed"
 
+	einfo "working in ${WORKDIR}/${PN}data-${DATAVERSION}/"
 	cd ${WORKDIR}/${PN}data-${DATAVERSION}/
 	egamesconf || die
 	jam        || die "jam failed (on data package)"
