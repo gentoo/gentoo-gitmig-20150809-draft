@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/linux-wlan-ng
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.41 2004/07/09 22:11:18 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/ChangeLog,v 1.42 2004/10/09 09:04:59 cardoe Exp $
+
+*linux-wlan-ng-0.2.1_pre22 (09 Oct 2004)
+
+  09 Oct 2004; Doug Goldstein <cardoe@gentoo.org>
+  +linux-wlan-ng-0.2.1_pre22.ebuild:
+  revision bump to pre22, masked because no testable hardware
+  includes the fixes from bug 64176 
+  should fix access violation compiler error
 
   09 Jul 2004; Travis Tilley <lv@gentoo.org> linux-wlan-ng-0.2.0-r1.ebuild,
   linux-wlan-ng-0.2.0-r2.ebuild, linux-wlan-ng-0.2.0-r3.ebuild,
