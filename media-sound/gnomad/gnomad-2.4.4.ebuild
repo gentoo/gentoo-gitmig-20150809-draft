@@ -1,9 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
-/home/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.4.4.ebuild,v 1.3 2004/04/20 17:20:21 eradicator Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.4.4.ebuild,v 1.3 2004/05/10 05:13:18 mr_bones_ Exp $
 
 inherit flag-o-matic gnome2
 
@@ -19,9 +16,10 @@ HOMEPAGE="http://gnomad2.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${MY_PN}/${MY_P}.tar.gz"
 RESTRICT="nomirror"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~ppc"
+IUSE=""
 
 DEPEND=">=gnome-base/libgnomeui-2
 	>=media-libs/libnjb-1.1
