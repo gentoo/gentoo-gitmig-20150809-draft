@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cdctl
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdctl/ChangeLog,v 1.1 2003/03/04 23:57:27 agenkin Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdctl/ChangeLog,v 1.2 2004/04/13 19:58:18 kugelfang Exp $
+
+  13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> cdctl-0.15.ebuild:
+  marked ~amd64
 
 *cdctl-0.15 (04 Mar 2003)
 
