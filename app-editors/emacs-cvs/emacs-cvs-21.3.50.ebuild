@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.9 2003/04/16 17:14:53 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.10 2003/06/01 09:02:51 mkennedy Exp $
 
 ECVS_SERVER="subversions.gnu.org:/cvsroot/emacs"
 ECVS_MODULE="emacs"
@@ -89,7 +89,7 @@ src_install () {
 		install || die
 
 	# fix info documentation
-	find ${D}/usr/share/info -type f -exec echo mv {} {}.info \;
+	find ${D}/usr/share/info -type f -exec mv {} {}.info \;
 
 	dodoc BUGS ChangeLog README
 
