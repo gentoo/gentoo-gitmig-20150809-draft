@@ -81,6 +81,63 @@ egnustepmake() {
 	return 0
 }
 
+# This was added for gnustep-guile and will provide an alternate
+# easier-to-swallow configure for gnustep programs that fail w/egnustepmake
+egnustepmake2() {
+	getsourcedir
+
+	addwrite ~/GNUstep/Defaults/.GNUstepDefaults.lck
+	addpredict ~/GNUstep	
+
+	cd ${S}
+
+	unset CFLAGS
+	unset CC
+
+	if [ -f /usr/GNUstep/System/Makefiles/GNUstep.sh ] ; then
+		. /usr/GNUstep/System/Makefiles/GNUstep.sh
+	else
+		die "gnustep-make not installed!"
+	fi
+
+	mkdir -p $TMP/fakehome/GNUstep
+
+	if [ -x configure ] ; then
+		if [ -z "$*" ] ; then
+			./configure
+				HOME=$TMP/fakehome \
+				GNUSTEP_USER_ROOT=$TMP/fakehome/GNUstep \
+				|| die "configure failed"
+		else
+			./configure
+				HOME=$TMP/fakehome \
+				GNUSTEP_USER_ROOT=$TMP/fakehome/GNUstep \
+				$* || die "configure failed (options: $*)"
+		fi
+	fi
+
+	if [ ! "${GNUSTEPBACK_XFT}" -eq 2 ] ; then
+		if [ "${PN}" = "gnustep-back" ] ; then
+			if [ ! -f "/usr/X11R6/include/X11/Xft1/Xft.h" ]; then
+				sed "s,^#define HAVE_XFT.*,#undef HAVE_XFT,g" config.h > config.h.new
+				sed "s,^#define HAVE_UTF8.*,#undef HAVE_UTF8,g" config.h.new > config.h
+				sed "s,^WITH_XFT=.*,WITH_XFT=no," config.make > config.make.new
+				sed "s,-lXft,," config.make.new > config.make
+			fi
+		fi
+	fi
+	
+	if [ -f ./[mM]akefile -o -f ./GNUmakefile ] ; then
+		make \
+			HOME=$TMP/fakehome \
+			GNUSTEP_USER_ROOT=$TMP/fakehome/GNUstep \
+			|| die "emake failed"
+	else
+		die "no Makefile found"
+	fi
+	return 0
+}
+
 egnustepinstall() {
 	getsourcedir
 
