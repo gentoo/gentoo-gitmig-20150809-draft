@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.2 2002/07/12 15:24:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.3 2002/08/26 16:41:50 karltk Exp $
 
 ECLASS=java
 INHERITED="$INHERITED $ECLASS"
@@ -69,6 +69,14 @@ set_java_env() {
                 -e "s/@PF@/${PF}/g" \
                 < $1 \
                 > ${D}/etc/env.d/java/20`basename $1` || die
+}
+
+pkg_postrm() {
+	java_rm_env ${VMHANDLE}
+}
+
+java_rm_env() {
+	rm -f ${ROOT}/etc/env.d/java/20`basename $1` || die
 }
 
 install_mozilla_plugin() {
