@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.9.ebuild,v 1.1 2003/06/22 18:12:33 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.9.ebuild,v 1.2 2003/07/16 19:09:03 hanno Exp $
 
 DESCRIPTION="Ice Window Manager"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -43,8 +43,8 @@ src_compile(){
 		|| myconf="${myconf} --disable-x86-asm"
 
 	use gnome \
-		&& myconf="${myconf} --with-gnome-menus" \
-		|| myconf="${myconf} --without-gnome-menus"
+		&& myconf="${myconf} --enable-menus-gnome" \
+		|| myconf="${myconf} --disable-menus-gnome"
 
 	CXXFLAGS="${CXXFLAGS}" econf \
 		--with-xpm \
