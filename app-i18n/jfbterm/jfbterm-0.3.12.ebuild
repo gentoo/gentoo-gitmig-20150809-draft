@@ -1,19 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v3
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/jfbterm-0.3.12.ebuild,v 1.3 2003/06/10 17:40:46 msterret Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/jfbterm-0.3.12.ebuild,v 1.4 2003/08/06 07:51:02 vapier Exp $
 
 inherit flag-o-matic
 replace-flags "-march=pentium3" "-mcpu=pentium3"
 
-IUSE=""
-
 DESCRIPTION="A Japanized framebuffer terminal with Multilingual Enhancement"
-SRC_URI="http://downloads.sourceforge.jp/${PN}/1637/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.jp/projects/${PN}"
+SRC_URI="http://downloads.sourceforge.jp/${PN}/1637/${P}.tar.gz"
 
-S=${WORKDIR}/${P}
-SLOT="0"
 LICENSE="as-is"
+SLOT="0"
 KEYWORDS="x86 ppc sparc"
 
 DEPEND=">=sys-apps/sed-4
@@ -31,7 +28,7 @@ src_compile() {
 	sed -i '/^encoding/s/,,/,/' jfbterm.conf.sample
 }
 
-src_install () {
+src_install() {
 	dodir /etc
 	einstall
 
