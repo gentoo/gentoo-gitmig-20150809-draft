@@ -1,6 +1,10 @@
 # ChangeLog for net-www/webapp-config
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.56 2004/08/19 21:39:56 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.57 2004/08/28 09:18:17 stuart Exp $
+
+  28 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  webapp-config-1.10-r10.ebuild:
+  Marked stable on x86
 
   19 Aug 2004; Stuart Herbert <stuart@gentoo.org>
   -webapp-config-1.10-r9.ebuild:
