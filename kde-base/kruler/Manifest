@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d042bfeb4a22e1a8f38edfa39097dc5d kruler-3.4.0.ebuild 399
-MD5 8a6a10d4078d64fd458694ca4084087e kruler-3.4.0_rc1.ebuild 397
-MD5 7295268f280765f1c251a3a3af62249d ChangeLog 1213
+MD5 dd76ba0a2eb214018f794022aef3b304 ChangeLog 1304
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 e48f24f251a08d557aee3f0d60feb26d files/digest-kruler-3.4.0 71
+MD5 8a6a10d4078d64fd458694ca4084087e kruler-3.4.0_rc1.ebuild 397
+MD5 82d191c7a6c6a0f94dd6d224e2f63c82 kruler-3.4.0.ebuild 405
 MD5 4ac1ee7d57d8c40f18fe0d54cf80c8f5 files/digest-kruler-3.4.0_rc1 393
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOw0dUpKYMelfdYERAjbcAJ9tcTSMAK3bbuLK6/HuBL5ab64SYACfYtOb
-tT1TMBPJD/mjnlnsl60Bxgk=
-=8ahZ
------END PGP SIGNATURE-----
+MD5 e48f24f251a08d557aee3f0d60feb26d files/digest-kruler-3.4.0 71
