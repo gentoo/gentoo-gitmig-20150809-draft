@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.3.ebuild,v 1.2 2003/10/08 08:25:50 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.3.ebuild,v 1.3 2003/10/09 13:05:45 obz Exp $
 
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 HOMEPAGE="http://www.lyx.org/"
 SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.bz2
+	http://movementarian.org/latex-xft-fonts-0.1.tar.gz
 	http://www.math.tau.ac.il/~dekelts/lyx/files/hebrew.bind
 	http://www.math.tau.ac.il/~dekelts/lyx/files/preferences"
 LICENSE="GPL-2"
@@ -84,25 +85,19 @@ src_install() {
 		doins ${FILESDIR}/lyx.desktop
 	fi
 
+	# install the latex-xft fonts, which should fix
+	# the problems outlined in bug #15629
+	# <obz@gentoo.org>
+	cd ${WORKDIR}/latex-xft-fonts-0.1
+	make DESTDIR=${D} install || die "Font installation failed"
+
 }
 
 pkg_postinst() {
-	if [ `use qt` ] ; then
-		einfo	"WARNING: the QT gui, together with xft2+fontconfig (which you"
-	 	einfo	"almost certainly have), suffer from one infamous bug that causes"
-		einfo	"the matheditor not to display any special characters (the ones from"
-		einfo	"the Computer Modern font family). Generated documents (.dvi, .ps...)"
-		einfo	"are ok, since tex has right fonts from the bluesky package."
-		einfo	"A proper solution was being worked on. Meanwhile you can install the"
-		einfo	"BaKoMa fonts package; however they are not licensed for redistribution"
-		einfo	"(not even embedded inside generated documents) and cannot be used in"
-		einfo	"commercial environments (without a special agreement from the author)."
-		einfo	"If that suits you, you can get them on CTAN or at ftp.lyx.org as"
-		einfo	"latex-ttf-fonts-0.1.tar.gz. I was working on an alternative, free"
-		einfo	"fonts package derived from bluesky, but got stuck; wuold be glad"
-		einfo	"to see someone continuing the effort (see the relevant threads on the"
-		einfo	"lyx-devel mailing list or mail me if you want to know more)."
-	fi
+
+	einfo "Updating the font cache"
+	fc-cache -f --system-only
+
 	einfo ""
 	einfo "================"
 	einfo ""
