@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030411.ebuild,v 1.1 2003/04/11 19:44:59 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030411.ebuild,v 1.2 2003/04/12 16:02:23 phoenix Exp $
 
 inherit eutils base
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.winehq.com/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc -sparc"
+KEYWORDS="x86 -ppc -sparc"
 IUSE="nas arts cups opengl alsa tcltk"
 
 DEPEND="sys-devel/gcc
