@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r2.ebuild,v 1.2 2003/08/24 02:52:26 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r2.ebuild,v 1.3 2003/08/27 06:10:53 cretin Exp $
 
 inherit base
 
@@ -24,7 +24,8 @@ S=${WORKDIR}/${P}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/libcap-1.10-python.patch 
+	epatch ${FILESDIR}/libcap-1.10-python.patch
+	epatch ${FILESDIR}/libcap-1.10-syscall.patch
 	sed -i 's|WARNINGS=-ansi|WARNINGS=|' Make.Rules
 }
 
@@ -38,8 +39,8 @@ src_compile() {
 		CFLAGS="${CFLAGS} -I/usr/include/python${PYTHONVER}"
 	fi
 	
-	# all 64 bit platforms need to get -fPIC
-	use alpha || use mips || use amd64 && append-flags -fPIC
+	# all platforms need to get -fPIC for shared libraries
+	append-flags -fPIC
 	
 	emake COPTFLAG="${CFLAGS}" DEBUG="" ${myflags} || die
 }

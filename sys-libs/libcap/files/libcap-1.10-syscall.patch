@@ -1,0 +1,20 @@
+--- libcap-1.10/libcap/cap_sys.c.jj	2003-08-24 19:03:35.524759616 -0700
++++ libcap-1.10/libcap/cap_sys.c	2003-08-24 19:03:48.406801248 -0700
+@@ -10,7 +10,7 @@
+ #include "libcap.h"
+ #define __LIBRARY__
+ #include <linux/unistd.h>
+-
++/*
+ _syscall2(int, capget,
+ 	  cap_user_header_t, header,
+ 	  cap_user_data_t, data)
+@@ -18,7 +18,7 @@
+ _syscall2(int, capset,
+ 	  cap_user_header_t, header,
+ 	  const cap_user_data_t, data)
+-
++*/
+ /*
+  * $Log: not supported by cvs2svn $
+  * Revision 1.1.1.1  1999/04/17 22:16:31  morgan
