@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.48 2003/12/07 23:56:12 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.49 2003/12/08 22:44:45 mholzer Exp $
+
+  09 Dec 2003; Martin Holzer <mholzer@gentoo.org>
+  courier-imap-1.7.3-r1.ebuild, courier-imap-2.1.2-r1.ebuild:
+  adding RESTRICT="nomirror"
 
   07 Dec 2003; foser <foser@gentoo.org> courier-imap*.ebuild :
   Fix fam-oss dep to fam, due to move
