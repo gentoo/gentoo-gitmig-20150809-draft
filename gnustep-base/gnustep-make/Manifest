@@ -5,8 +5,8 @@ MD5 422a26483b4dc19239451d201d729d61 gnustep-make-1.6.0.ebuild 1027
 MD5 1d0f0080a652d06bb33b0521cbec7af3 gnustep-make-1.7.1.ebuild 1022
 MD5 95b076f758f375caa475d9f50360001f gnustep-make-1.7.2.ebuild 1291
 MD5 ca04d409726e17e7151b832de9989a48 metadata.xml 530
-MD5 3edbd06b0d17cce393d6db49f056d9f9 gnustep-make-1.10.0.ebuild 2607
-MD5 e900b5a1e667e2fac834c7435068fbbd gnustep-make-1.10.1_pre20040928.ebuild 2856
+MD5 179efc2317ffec651dea0c8c81bc42bd gnustep-make-1.10.0.ebuild 2608
+MD5 86e02ce1ee0255b9a6f037dcc149f9a1 gnustep-make-1.10.1_pre20040928.ebuild 2857
 MD5 020f6b825d80a9769c36a39877f13f44 files/digest-gnustep-make-1.10.0 71
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-make-1.10.1_pre20040928 0
 MD5 df4d0245583afe01d23dadcfa5b28224 files/digest-gnustep-make-1.3.4 70

@@ -5,8 +5,8 @@ MD5 44d2d858d061c56b3e03979648cf00e8 gnustep-base-1.6.0.ebuild 1811
 MD5 618fa6ee84194d52655fcb356f143a37 gnustep-base-1.7.1.ebuild 1454
 MD5 bfeed6219e25f7a18273da8952e28d7a gnustep-base-1.7.2.ebuild 1460
 MD5 6054f8e4a94313852ff8e1294c8abd88 metadata.xml 670
-MD5 cac96daba80c39722f953dd12ca61892 gnustep-base-1.10.0.ebuild 2181
-MD5 01b9d43e75edc06b652ff33ae55a7710 gnustep-base-1.10.1_pre20040928.ebuild 2430
+MD5 0ed4adc84367642a60e7813301bf3cd9 gnustep-base-1.10.0.ebuild 2182
+MD5 fd5caf40301c39a56bbacc596f79671d gnustep-base-1.10.1_pre20040928.ebuild 2431
 MD5 1e1e21f737b0d25c8faabb89bd286988 files/base-user-defaults.patch-1.10.0 1069
 MD5 efda24cf74398ac3ddce6cba6071561a files/config-gnustep-base.sh 559
 MD5 da38d67a86d0553b73378aea856093f5 files/digest-gnustep-base-1.10.0 72
