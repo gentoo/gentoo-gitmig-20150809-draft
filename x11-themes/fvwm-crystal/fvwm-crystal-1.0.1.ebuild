@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-1.0.1.ebuild,v 1.5 2004/03/13 19:52:10 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-1.0.1.ebuild,v 1.6 2004/03/14 11:00:43 mr_bones_ Exp $
 
 DESCRIPTION="A very nice and powerful theme for FVWM"
 HOMEPAGE="http://fvwm-crystal.linuxpl.org/"
@@ -13,7 +13,7 @@ IUSE="xmms"
 
 RDEPEND=">=x11-wm/fvwm-2.5.9
 	xmms? ( media-plugins/xmms-shell
-		>=media-sound/xmms-1.2.7 
+		>=media-sound/xmms-1.2.7
 		media-plugins/xmms-find )
 	x11-misc/xdaliclock
 	x11-terms/aterm
@@ -35,8 +35,8 @@ src_compile() {
 	automake || die
 	eend $?
 
-	# doesnt make any difference with this version but if xmms 
-	# support controls any features in future, we shouldnt leave 
+	# doesnt make any difference with this version but if xmms
+	# support controls any features in future, we shouldnt leave
 	# it up to configure to enable it.
 	#
 	#if ! use xmms; then
