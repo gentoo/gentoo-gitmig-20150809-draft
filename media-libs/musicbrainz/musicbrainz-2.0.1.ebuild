@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.1.ebuild,v 1.6 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.1.ebuild,v 1.7 2004/01/26 00:37:44 vapier Exp $
 
 IUSE=""
 
@@ -31,7 +31,7 @@ src_unpack() {
 	# remove .. if there are any issues, let me know.
 	# <azarah@gentoo.org> (30 Mar 2003)
 	einfo "Reconfiguring..."
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 	aclocal
 	autoconf
 	automake

@@ -1,18 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.4-r1.ebuild,v 1.3 2004/01/21 11:03:24 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.4-r1.ebuild,v 1.4 2004/01/26 00:35:57 vapier Exp $
 
-IUSE="alsa arts esd nas"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="the audio output library"
-SRC_URI="http://www.xiph.org/ao/src/${P}.tar.gz"
 HOMEPAGE="http://www.xiph.org/ao/"
+SRC_URI="http://www.xiph.org/ao/src/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
-# removing "mips" because of dependency breakage
+IUSE="alsa arts esd nas"
 
 DEPEND="virtual/glibc
 	alsa? ( media-libs/alsa-lib )
@@ -26,7 +23,7 @@ src_unpack() {
 	epatch ${FILESDIR}/alsa-1.0.patch
 	cd ${S}
 	epatch ${FILESDIR}/${P}-esd.patch
-	WANT_AUTOCONF_2_5=1 autoconf || die
+	WANT_AUTOCONF=2.5 autoconf || die
 }
 
 src_compile() {

@@ -1,34 +1,30 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc3.ebuild,v 1.3 2003/12/30 17:37:03 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc3.ebuild,v 1.4 2004/01/26 00:33:21 vapier Exp $
 
 inherit eutils libtool flag-o-matic
 
-# see #34392
-filter-flags "-mfpmath=sse"
-
-HOMEPAGE="http://faac.sourceforge.net/"
 DESCRIPTION="The fastest ISO AAC audio decoder available, correctly decodes all MPEG-4 and MPEG-2 MAIN, LOW, LTP, LD and ER object type AAC files"
-LICENSE="GPL-2"
-
+HOMEPAGE="http://faac.sourceforge.net/"
 SRC_URI="mirror://sourceforge/faac/${PN}-${PV/_/-}.tar.gz"
-IUSE=""
-S=${WORKDIR}/${PN}
 
+LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~amd64"
 
 DEPEND="virtual/glibc
 	sys-devel/automake
 	sys-devel/autoconf"
-
 #	xmms? ( >=media-sound/xmms-1.2.7
 #		media-libs/id3lib )"
 
-SLOT="0"
+S=${WORKDIR}/${PN}
 
 src_compile() {
+	# see #34392
+	filter-flags -mfpmath=sse
 
-	WANT_AUTOCONF_2_5=1 WANT_AUTOMAKE=1.7 sh ./bootstrap
+	WANT_AUTOCONF=2.5 WANT_AUTOMAKE=1.7 sh ./bootstrap
 
 	# mp4v2 needed for rhythmbox
 	# drm needed for nothing but doesn't hurt
@@ -40,17 +36,14 @@ src_compile() {
 		|| die
 
 	emake || die
-
 }
 
 src_install() {
-
-	einstall
+	einstall || die
 
 	# unneeded include, breaks building of apps
 	# <foser@gentoo.org>
 	dosed "s:#include <systems.h>::" /usr/include/mpeg4ip.h
 
 	dodoc AUTHORS ChangeLog INSTALL NEWS README README.linux TODO
-
 }

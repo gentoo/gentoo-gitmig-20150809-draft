@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.0.ebuild,v 1.4 2004/01/12 23:31:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.0.ebuild,v 1.5 2004/01/26 00:34:32 vapier Exp $
 
 inherit enlightenment flag-o-matic gcc
 
@@ -21,18 +21,9 @@ DEPEND="=media-libs/freetype-2*
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	virtual/x11"
 
-#S=${WORKDIR}/${PN}		# cvs
-S=${WORKDIR}/${P}		# release
+S=${WORKDIR}/${P}
 
 src_compile() {
-	# cvs only stuff
-#	cp autogen.sh{,.old}
-#	sed -e 's:.*configure.*::' autogen.sh.old > autogen.sh
-#	env USER=blah WANT_AUTOCONF_2_5=1 ./autogen.sh || die "could not autogen"
-#	cd libltdl
-#	env WANT_AUTOCONF_2_5=1 autoconf || die
-#	cd ${S}
-
 	replace-flags k6-3 i586
 	replace-flags k6-2 i586
 	replace-flags k6 i586

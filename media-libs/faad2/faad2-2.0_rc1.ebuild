@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc1.ebuild,v 1.3 2003/10/02 16:11:29 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc1.ebuild,v 1.4 2004/01/26 00:33:21 vapier Exp $
 
 inherit eutils libtool
 
