@@ -1,1 +1,2 @@
 move net-misc/fwbuilder net-firewall/fwbuilder
+move media-plugins/xmms-xosd x11-libs/xosd
