@@ -1,6 +1,14 @@
 # ChangeLog for net-www/orion
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/ChangeLog,v 1.8 2003/04/06 08:52:22 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/ChangeLog,v 1.9 2003/05/01 17:50:29 absinthe Exp $
+
+*orion-2.0.1 (01 May 2003)
+
+  01 May 2003; Dylan Carlson <absinthe@gentoo.org> orion-2.0.1.ebuild,
+  files/2.0.1/2.0.1-gentoo.patch, files/2.0.1/orion.conf,
+  files/2.0.1/orion.init, files/2.0.1/start_orion.sh,
+  files/2.0.1/stop_orion.sh:
+  Version bump.  Will fetch automatically now as well.
 
 *orion-2.0 (21 Mar 2003)
 
