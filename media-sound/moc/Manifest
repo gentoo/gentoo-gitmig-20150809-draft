@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 034a690a78c8a4ec539fc17b8f30e6f4 moc-1.1.0.ebuild 1031
-MD5 2c38111663c58b370ebc1fca705cd04d moc-2.2.0.ebuild 1058
-MD5 0097fbc8aa476baeace9aa2086605efd ChangeLog 1702
+MD5 f9f10ffd5858180b375351523da7347f moc-2.2.0.ebuild 1160
+MD5 3acbcab5eaa27a4ea27c581410d72240 ChangeLog 1829
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 20a4ed30ecafd0d58e25f6ebab39e57c moc-2.1.4.ebuild 1055
 MD5 a90f9e3223b6e3cb5a0bf42b862d130e files/digest-moc-1.1.0 61
@@ -12,9 +12,9 @@ MD5 285908314a37f1af4c045d98d60a1e0d files/digest-moc-2.2.0 61
 MD5 ffe585145e5d7dfe41d78a4b05a36802 files/moc-1.1.0-gcc3.patch 4196
 MD5 5a9ee40731b6659c61c667199e041802 files/moc-1.1.0-gcc34.patch 211
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCIg9YZ/iYVBmujdURAiYtAJ4gPjIxmPP/nMoOr2ED0+Hc9U+1NgCgk7fM
-5OtFHiw34GRgftONjaPIYXA=
-=uZVb
+iD8DBQFCSTPh06ebR+OMO78RAna1AKCZs9leJsj06qv4k8mZqbUI3NjQRwCfetmv
+mOMuA6RhQySbC61j50iANwo=
+=jMlV
 -----END PGP SIGNATURE-----

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.2.0.ebuild,v 1.1 2005/02/27 17:19:17 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.2.0.ebuild,v 1.2 2005/03/29 10:54:06 luckyduck Exp $
 
-IUSE="oggvorbis mad oss"
+IUSE="flac mad oggvorbis oss"
 
 inherit eutils
 
@@ -15,14 +15,17 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~sparc ~x86"
 
 DEPEND="media-libs/libao
+	media-libs/libsndfile
 	sys-libs/ncurses
-	oggvorbis? ( media-libs/libvorbis )
-	mad? ( media-libs/libmad sys-libs/zlib media-libs/libid3tag )"
+	flac? ( media-libs/flac )
+	mad? ( media-libs/libmad sys-libs/zlib media-libs/libid3tag )
+	oggvorbis? ( media-libs/libvorbis )"
 
 src_compile() {
 	local myconf
-	use oggvorbis || myconf="--without-ogg"
+	use flac || myconf="${myconf} --without-flac"
 	use mad || myconf="${myconf} --without-mp3"
+	use oggvorbis || myconf="--without-ogg"
 	use oss || myconf="${myconf} --without-oss"
 
 	econf ${myconf} || die "./configure failed"
