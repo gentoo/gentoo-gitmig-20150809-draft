@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.16-r2.ebuild,v 1.1 2004/09/17 19:11:18 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.16-r2.ebuild,v 1.2 2004/09/22 18:32:03 pvdabeel Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -15,7 +15,7 @@ SRC_URI="http://distcc.samba.org/ftp/distcc/distcc-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips ~alpha ~arm ~hppa ~ia64 ~amd64 ~s390 ~ppc64"
+KEYWORDS="x86 ppc sparc ~mips ~alpha ~arm ~hppa ~ia64 ~amd64 ~s390 ~ppc64"
 # ATTN s390 MAINTANER: if you bump this stable on s390 please remove 2.14 from cvs -lisa
 # 2004-07-08
 
