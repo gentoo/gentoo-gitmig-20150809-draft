@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001.ebuild,v 1.1 2004/10/05 13:39:16 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001.ebuild,v 1.2 2004/10/06 07:16:50 phosphan Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 MAJ_PV=${PV:0:3}
 MIN_PV=${PV:0:6}
@@ -100,6 +100,8 @@ src_compile() {
 	sed -i \
 		-e "s:extern \"C\" void exit(int);:/* extern \"C\" void exit(int); */:" \
 		configure
+
+	filter-flags "-momit-leaf-frame-pointer"
 
 	econf \
 		`use_enable static` \
