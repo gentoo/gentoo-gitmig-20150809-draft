@@ -14,3 +14,4 @@ MD5 1c4518f780d231bde9745cdd0fa313b2 qmail-limit-bounce-size.patch.txt 1753
 MD5 9140ad2b03017145cd7963c84bb24f16 qmail-103.patch 2104
 MD5 83bf5c4a4aade3c6c15faa9665ccfb71 qregex-starttls-2way-auth.patch 63825
 MD5 1d8b89607d35bfa409f8cfe6d23bc554 qmail-remote-auth-patch-doc.txt 1287
+MD5 fc00be3edc2827f1c93112d7d5147122 qmail-gentoo-1.03-r12-badrcptto-morebadrcptto-accdias.diff.bz2 4524

@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.11 2003/09/20 23:58:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.12 2003/09/24 04:06:14 robbat2 Exp $
 
-inherit eutils
+inherit eutils fixheadtails
 
 IUSE="ssl"
 DESCRIPTION="A modern replacement for sendmail which uses maildirs and includes SSL/TLS, AUTH SMTP, and queue optimization"
@@ -24,7 +24,8 @@ SRC_URI="mirror://qmail/qmail-1.03.tar.gz
 	ftp://ftp.pipeline.com.au/pipeint/sources/linux/WebMail/qmail-limit-bounce-size.patch.txt
 	http://www.ckdhr.com/ckd/qmail-103.patch
 	http://www.arda.homeunix.net/store/qmail/qregex-starttls-2way-auth.patch
-	http://www.soffian.org/downloads/qmail/qmail-remote-auth-patch-doc.txt"
+	http://www.soffian.org/downloads/qmail/qmail-remote-auth-patch-doc.txt
+	mirror://gentoo/qmail-gentoo-1.03-r12-badrcptto-morebadrcptto-accdias.diff.bz2"
 
 SLOT="0"
 LICENSE="as-is"
@@ -128,22 +129,22 @@ src_unpack() {
 	# gentoo bug #18064
 	epatch ${FILESDIR}/${PV}-${PR}/qmail-smtpd-relay-reject.gentoo.patch
 
-	#TODO REDIFF
+	#TODO TEST HEAVILY AS THIS PATCH WAS CUSTOM FIXED
 	# provide badrcptto support
 	# as per bug #17283
 	# patch re-diffed from original at http://sys.pro.br/files/badrcptto-morebadrcptto-accdias.diff.bz2
-	# presently this breaks qmail so it is disabled
-	#epatch ${FILESDIR}/${PV}-${PR}/badrcptto-morebadrcptto-accdias-gentoo
+	epatch ${DISTDIR}/qmail-gentoo-1.03-r12-badrcptto-morebadrcptto-accdias.diff.bz2
 
 	echo -n "${CC} ${CFLAGS}" >${S}/conf-cc
-	use ssl && echo -n ' -DTLS' >>${S}/conf-cc
+	if use ssl; then
+		einfo "Enabling SSL/TLS functionality"
+		echo -n ' -DTLS' >>${S}/conf-cc
+	fi
 	echo -n "${CC} ${LDFLAGS}" > ${S}/conf-ld
 	echo -n "500" > ${S}/conf-spawn
 
 	# fix coreutils messup
-	sed -re 's/(head|tail) (-[[:alpha:]][[:alnum:]]+)+ -([[:digit:]]+)/\1 \2 -n\3/g' -i ${S}/Makefile
-	sed -re 's/(head|tail) -([[:digit:]]+)/\1 -n\2/g' -i ${S}/Makefile
-
+	ht_fix_file ${S}/Makefile
 
 }
 
@@ -194,8 +195,7 @@ src_install() {
 	qmail-popup qmail-qmqpc qmail-qmqpd qmail-qmtpd qmail-smtpd \
 	sendmail tcp-env qreceipt qsmhook qbiff forward preline \
 	condredirect bouncesaying except maildirmake maildir2mbox \
-	maildirwatch qail elq pinq config-fast
-	#doins qmail-newbrt
+	maildirwatch qail elq pinq config-fast qmail-newbrt
 
 	into /usr
 	einfo "Installing manpages"

@@ -2,10 +2,9 @@ MD5 f2193d3a327e5328b066c43a85be6b16 qmail-1.03-r11.ebuild 11396
 MD5 9f63e83d10743897e07c25c28a6c57f3 qmail-1.03-r9.ebuild 9963
 MD5 a44e4287eb93476321e39985a7217b65 qmail-1.03-r10.ebuild 11152
 MD5 2e824ec277afa32dfbc8a5b796ecb15d qmail-1.03-r8.ebuild 8115
-MD5 477a762f0016b40ab90f982cd1bfb208 qmail-1.03-r12.ebuild 12897
-MD5 89d6bc18f38089193e2a7eb9b8361d82 ChangeLog 10151
+MD5 2494d3577575290d78f7ab5f8ade3e50 qmail-1.03-r12.ebuild 12591
+MD5 954962b289db93ff4f3b934fe5fdfa9e ChangeLog 10277
 MD5 ff596e74b015e067a180fc78855aa87a metadata.xml 360
-MD5 7430fb40cf83664e7f0cdc9a80050c25 tmp/badrcptto-morebadrcptto-accdias.diff.bz2 4788
 MD5 e0686e52df7f0c840a7ac2bfe1fd291a files/tcp.qmqp.sample 337
 MD5 946a715ffdd5e6d2d29c6fdfb29376dd files/tcp.smtp.sample 3726
 MD5 734ea9dfff4513984d2d69123ce54fb8 files/gencert.sh 224
