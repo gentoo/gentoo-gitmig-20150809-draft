@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.4.0-r1.ebuild,v 1.7 2003/09/04 07:36:40 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.4.0-r1.ebuild,v 1.8 2003/12/17 16:39:58 usata Exp $
 
 inherit eutils
 
@@ -21,9 +21,9 @@ DEPEND="virtual/x11
 PROVIDE="virtual/blackbox"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.tar.bz2
 	cd ${S}
-	use cjk && epatch ${DISTDIR}/${P}-ja.patch
+	use cjk && epatch ${DISTDIR}/${P}-japanese.patch
 }
 
 src_compile() {
