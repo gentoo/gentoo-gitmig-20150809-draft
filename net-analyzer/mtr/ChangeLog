@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.14 2003/07/30 19:18:33 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.15 2003/08/04 08:53:32 gmsoft Exp $
+
+*mtr-0.54-r1 (04 Aug 2003)
+
+  04 Aug 2003; Guy Martin <gmsoft@gentoo.org> mtr-0.54-r1.ebuild :
+  Added support for ipv6.
 
   30 Jul 2003; Tavis Ormandy <taviso@gentoo.org> mtr-0.54.ebuild:
   marking ~alpha
