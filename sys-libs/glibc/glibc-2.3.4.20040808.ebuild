@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.15 2004/08/30 14:02:39 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.16 2004/09/06 00:40:08 ciaranm Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -225,7 +225,7 @@ do_makecheck() {
 	else
 		ewarn "remounting / without noatime option so that make check"
 		ewarn "does not fail!"
-		sleep 2
+		epause 2
 		mount / -o remount,atime
 		cd ${WORKDIR}/build
 		make check || die
