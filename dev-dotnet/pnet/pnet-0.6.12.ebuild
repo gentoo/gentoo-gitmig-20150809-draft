@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.12.ebuild,v 1.1 2005/01/16 09:48:25 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/pnet-0.6.12.ebuild,v 1.2 2005/01/26 17:22:47 scandium Exp $
 
 DESCRIPTION="Portable.NET runtime, compiler, tools"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -12,6 +12,20 @@ KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64"
 IUSE=""
 
 DEPEND=">=dev-util/treecc-0.3.0"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	# Fix symlink for renamed executables
+	sed -i "s:ilasm.1.gz:ilasm.pnet.1.gz:" ilasm/Makefile.am
+	sed -i "s:al.1.gz:al.pnet.1.gz:" ilasm/Makefile.am
+}
+
+src_compile() {
+	./auto_gen.sh
+	econf || die
+	emake || die
+}
 
 src_install() {
 	einstall || die
