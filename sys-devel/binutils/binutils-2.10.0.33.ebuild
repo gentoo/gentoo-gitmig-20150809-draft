@@ -1,12 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.10.0.33.ebuild,v 1.1 2000/11/10 16:00:11 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.10.0.33.ebuild,v 1.2 2000/11/14 04:25:31 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools necessary to build programs"
-SRC_URI="ftp://ftp.varesearch.com/pub/support/hjl/binutils/${A}"
+SRC_URI="http://ftp.varesearch.com/pub/support/hjl/binutils/${A}"
 
 src_compile() {                           
 	try ./configure --prefix=/usr --host=${CHOST}
