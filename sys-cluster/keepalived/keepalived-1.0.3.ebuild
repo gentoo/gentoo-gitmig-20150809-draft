@@ -25,6 +25,8 @@ src_install() {
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/init-keepalived keepalived
 
+	dodoc doc/* doc/samples/*
+
 }
 
 pkg_postinst() {

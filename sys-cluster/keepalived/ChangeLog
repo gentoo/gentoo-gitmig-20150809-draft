@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.3 2003/07/04 02:15:20 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.4 2003/07/04 04:52:40 iggy Exp $
+
+  03 Jul 2003; ,,, <iggy@gentoo.org> keepalived-1.0.3.ebuild:
+  added some docs to be installed
 
   03 Jul 2003; ,,, <iggy@gentoo.org> metadata.xml:
   added metadata.xml
