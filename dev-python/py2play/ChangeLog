@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/py2play
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py2play/ChangeLog,v 1.1 2003/05/10 18:44:02 liquidx Exp $
+
+*py2play-0.1.2 (10 May 2003)
+
+  10 May 2003; Alastair Tse <liquidx@gentoo.org> py2play-0.1.2.ebuild:
+  Initial ebuild. Thanks to FranÃ§ois Weykmans <nectroom@swing.be>. Part of
+  Slune and OOmadness suite.
+
