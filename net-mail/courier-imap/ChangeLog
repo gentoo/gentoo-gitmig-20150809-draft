@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.2 2002/02/21 19:17:21 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.3 2002/03/14 17:37:01 g2boojum Exp $
+
+*courier-imap-1.4.1-r4 (14 Mar 2002)
+
+14 Mar 2002; Grant Goodyear <g2boojum@gentoo.org> :
+
+	Fixed bug where /etc/courier-imap/pop3d didn't have
+	MAILDIR=.maildir set.
 
 *courier-imap-1.4.1-r2 (21 Feb 2002)
 
