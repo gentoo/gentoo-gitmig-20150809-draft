@@ -9,13 +9,15 @@
 <body>
 
 <e>Gentoo Linux 1.0_rc5 has been released!</e>  You can find the release at
-<uri>http://www.ibiblio.org/gentoo/releases/1.0_rc5</uri>.  Currently, our
-binary CD (620Mb) is built with i686 optimizations, meaning that you need a P6 core or
-greater to use it.  If you have a Pentium Pro/II/III/4 or
-Athlon/Duron, then you're all set.  You can find binary CD installation instructions
-below.  This install procedure has been independently
-tested and works.  We also have a 42Mb build image that will run on any type of
-processor (486 and up).  <e>You can find build CD install instructions <uri link="/doc/build.html">here</uri></e>.
+<uri>http://www.ibiblio.org/gentoo/releases/1.0_rc5</uri>.  We now have two
+different binary CD's, one compiled to run on systems with P6 cores or greater,
+like the Pentium Pro/II/III/4 and Duron/Athlon; this one is called the i686-exclusive
+CD.  The other is built for Pentium Classic and greater cores, and will run on 
+the Pentium, Pentium MMX and AMD K6 series of processors; this one is called the
+i586-exclusive build.  Both binary ISO images are approximately 620Mb in size.
+In addition to our binary CD's, we also have a 42Mb build image that will run on any type of
+processor (486 and up) and can be used to build your own Gentoo Linux system from scratch,
+using <e>your</e> favorite personal optimizations and build-time extensions.  <e>You can find build CD install instructions <uri link="/doc/build.html">here</uri></e>.
 Enjoy Gentoo Linux 1.0_rc5 and if you have any questions, please post them
 to <mail link="gentoo-dev@gentoo.org">the gentoo-dev mailing list</mail> or stop by
 #gentoo on irc.openprojects.net.
@@ -38,18 +40,19 @@ NCR, Symbios, Tekram and more.  Pretty much any modern SCSI controller should be
 supported.</p>
 
 <p>Right now, the easiest way to install Gentoo Linux is to use our
-i686-specific binary CD, which is around 620Mb in size and is available at
+binary CDs, which are each around 620Mb in size.  If you have a system with a P6 or
+greater core (Pentium Pro/II/III/4, Duron and Athlon), you should use our i686-exclusive CD, which can be downloaded from
 <uri>
 http://www.ibiblio.org/gentoo/releases/1.0_rc5/isos/gentoo-i686-exclusive-bin-1.0_rc5-r3.iso</uri>.
-To use this CD, you'll need a system with a P6 or P6-compatible core, such as a
-Pentium Pro/II/III/4 or Athlon.  Our i586 binary CD will be available soon and
-will support the AMD K6 and Pentium Classic processors.  Assuming you have a P6
-or P6-compatible core, you're ready to get Gentoo Linux 1.0_rc5 running on your
-system.  Alternatively, we have <uri link="/doc/build.html">instructions for
+If you have a system with a Pentium-compatible core (Pentium, Pentium MMX or AMD K6 series), then
+use our i586-exclusive CD, available from 
+<uri>
+http://www.ibiblio.org/gentoo/releases/1.0_rc5/isos/gentoo-i586-exclusive-bin-1.0_rc5.iso</uri>.
+Alternatively, we have <uri link="/doc/build.html">instructions for
 installing our minimal build CD</uri>, which will work on any type of x86
 processor.  It's an ideal installation method for those who prefer a "build
-from scratch" approach.  The instructions below will guide you through the i686
-binary CD install.</p>
+from scratch" approach.  The instructions below will guide you through the i586 and i686
+binary CD installs.</p>
 
 </body>
 </section>
