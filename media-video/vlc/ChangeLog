@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.29 2003/08/01 08:46:29 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.30 2003/08/14 02:49:11 g2boojum Exp $
+
+*vlc-0.6.2 (13 Aug 2003)
+
+  13 Aug 2003; Nick Hadaway <raker@gentoo.org> vlc-0.6.2.ebuild:
+  Version bump.  Removed 0.6.1 related workarounds.  Added support
+  for the altivec USE variable.  Up to 34 USE variables now. :)
 
 *vlc-0.6.1 (01 Aug 2003)
 
