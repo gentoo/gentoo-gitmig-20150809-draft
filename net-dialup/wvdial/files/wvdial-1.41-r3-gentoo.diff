@@ -1,0 +1,11 @@
+--- wvdial-1.41/streams/wvstream.cc~	Thu Oct 21 00:37:04 1999
++++ wvdial-1.41/streams/wvstream.cc	Tue Apr 24 15:55:07 2001
+@@ -9,7 +9,7 @@
+  * for each stream.
+  */
+ #include "wvstream.h"
+-#include <sys/time.h>
++#include <time.h>
+ #include <sys/types.h>
+ #include <errno.h>
+ #include <assert.h>
