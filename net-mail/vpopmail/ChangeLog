@@ -1,11 +1,15 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.13 2003/05/22 22:56:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.14 2003/05/23 00:50:06 robbat2 Exp $
+
+*vpopmail-5.2.1-r5 (02 Apr 2003)
+  
+  23 May 2003; Robin Johnson <robbat2@gentoo.org> vpopmail-5.2.1-r5.ebuild:
+  Fix an error in SRC_URI (mysql?) from Martin's minor changes. 
 
   23 May 2003; Martin Holzer <mholzer@gentoo.org> vpopmail-5.2.1-r5.ebuild:
   Added ipalias. Closes #17684.
 
-*vpopmail-5.2.1-r5 (02 Apr 2003)
   02 Apr 2003; Robin Johnson <robbat2@gentoo.org> vpopmail-5.2.1-r5.ebuild,
   files/digest-vpopmail-5.2.1-r5:
   Removed MySQL v4 block (see bug 18193)
