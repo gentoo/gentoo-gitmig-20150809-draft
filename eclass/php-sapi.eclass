@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.40 2004/07/05 20:43:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.41 2004/07/12 05:48:48 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -597,6 +597,9 @@ php-sapi_src_install() {
 	fi
 
 	if php-sapi_is_providerbuild; then
+		insinto /usr/lib/php
+		doins ${S}/run-tests.php
+		fperms 644 /usr/lib/php/run-tests.php
 		einfo "Fixing PEAR cache location"
 		local oldloc="${T}/pear/cache"
 		local old="s:${#oldloc}:\"${oldloc}\""
