@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.25.ebuild,v 1.1 2003/04/21 16:42:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.26.ebuild,v 1.1 2003/04/25 13:49:23 lostlogic Exp $
 
 inherit gcc
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.insecure.org/nmap/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 IUSE="gtk gnome"
 
 DEPEND="virtual/glibc
