@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.12 2002/09/07 13:30:00 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.13 2002/09/08 16:10:07 karltk Exp $
 
 . /usr/portage/eclass/inherit.eclass
 inherit java
@@ -42,6 +42,14 @@ src_install () {
 	dodoc COPYRIGHT LICENSE README INSTALL
 	dohtml README.html
 
+	# Install mozilla plugin
+	if [ "${ARCH}" == "x86" ] ; then
+		PLATFORM="i386"
+	elif [ "${ARCH}" == "ppc" ] ; then
+		PLATFORM="ppc"
+	elif [ "${ARCH}" == "sparc" ] || [ "${ARCH}" == "sparc64" ] ; then
+		PLATFORM="sparc"
+	fi
 	install_mozilla_plugin /opt/${P}/plugin/${PLATFORM}/mozilla/javaplugin_oji.so
 
 	mv ${D}/opt/${P}/lib/font.properties ${D}/opt/${P}/lib/font.properties.orig
