@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.1.0-r1.ebuild,v 1.5 2003/07/18 21:03:47 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.1.0-r1.ebuild,v 1.6 2003/09/07 00:09:22 msterret Exp $
 
 
 S=${WORKDIR}/pptp-linux-${PV}-1
@@ -22,7 +22,7 @@ src_compile() {
 	tar zxf pptp-linux-${PV}.tar.gz
 	cd ${S}/pptp-linux-${PV}
 
-	make || die "make failed" 
+	make || die "make failed"
 }
 
 src_install() {
@@ -36,10 +36,10 @@ src_install() {
 		mv xpptp_fe.pl.new xpptp_fe.pl
 		dosbin xpptp_fe.pl
 	fi
-	
+
 	cd pptp-linux-${PV}
 	dosbin pptp
-	
+
 	dodoc AUTHORS COPYING ChangeLog DEVELOPERS NEWS README TODO USING
 	dodoc Documentation/*
 	dodoc Reference/*

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.2_beta1.ebuild,v 1.5 2003/08/03 03:24:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.2_beta1.ebuild,v 1.6 2003/09/07 00:09:22 msterret Exp $
 
 inherit flag-o-matic
 filter-flags -mpowerpc-gfxopt -mpowerpc-gpopt
@@ -19,7 +19,7 @@ RDEPEND=">=net-dialup/ppp-2.4.1"
 
 src_compile() {
 	local myconf
-	
+
 	[ `use debug` ] && myconf="--enable-debug"
 	use static && myconf="${myconf} --enable-static"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.53-r1.ebuild,v 1.5 2003/08/21 22:50:28 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.53-r1.ebuild,v 1.6 2003/09/07 00:09:22 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Excellent program which automatically configures your PPP session"
@@ -23,7 +23,7 @@ src_unpack() {
 }
 
 src_compile() {
-	
+
 	cp Makefile Makefile.orig
 	sed -e "s:PREFIX=/usr/local:PREFIX=/usr:" \
 		Makefile.orig > Makefile
@@ -38,6 +38,6 @@ src_install() {
 		PREFIX=${D}/usr \
 		install || die
 
-	dodoc ANNOUNCE CHANGES COPYING.LIB README 
+	dodoc ANNOUNCE CHANGES COPYING.LIB README
 	dodoc debian/copyright debian/changelog
 }

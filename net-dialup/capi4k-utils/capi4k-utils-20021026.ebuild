@@ -1,6 +1,6 @@
 # Copyright 2002 Alexander Holler
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20021026.ebuild,v 1.3 2003/08/28 22:38:06 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20021026.ebuild,v 1.4 2003/09/07 00:09:22 msterret Exp $
 
 YEAR_PV=${PV:0:4}
 MON_PV=${PV:4:2}
@@ -29,7 +29,7 @@ src_compile() {
 	emake || die
 }
 
-src_install() { 
+src_install() {
 	dodir /dev
 	make install DESTDIR=${D} || die
 	rm -rf ${D}/dev

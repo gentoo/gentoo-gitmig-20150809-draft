@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r2.ebuild,v 1.5 2003/08/21 23:47:29 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r2.ebuild,v 1.6 2003/09/07 00:09:22 msterret Exp $
 
 IUSE="X"
 
@@ -59,18 +59,18 @@ src_unpack() {
 	epatch ${FILESDIR}/gcc33-multiline.patch
 }
 
-src_compile() {                           
+src_compile() {
 	make subconfig || die
 	make || die
 }
 
-src_install() {                   
+src_install() {
   	cd ${S}
 	dodir /dev /sbin /usr/bin
 	make DESTDIR=${D} install || die
 	rm -rf ${D}/usr/doc ${D}/dev
 	dodoc COPYING NEWS README Mini-FAQ/isdn-faq.txt
-	
+
 	cd ${FILESDIR}/${PVR}
 	dodir /etc/init.d /etc/conf.d /etc/ppp /var/lib/isdn4linux
 

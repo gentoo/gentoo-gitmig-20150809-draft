@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r11.ebuild,v 1.8 2003/02/28 16:55:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r11.ebuild,v 1.9 2003/09/07 00:09:22 msterret Exp $
 
 IUSE="crypt ipv6"
 S=${WORKDIR}/${P}.pppoe4
@@ -25,7 +25,7 @@ src_compile() {
 	patch -p0 < ${FILESDIR}/${P}-r10.patch
 
 	./configure --prefix=/usr || die
-    
+
 	#fix Makefiles to compile optimized
 	cd pppd
 	mv Makefile Makefile.orig
@@ -59,9 +59,9 @@ src_compile() {
 	mv Makefile Makefile.orig
 	sed -e "s:CFLAGS= -O:CFLAGS= ${CFLAGS}:" Makefile.orig > Makefile
 	cd ..
-    
+
 	export CC=gcc
-    
+
 	emake || die
 }
 
@@ -71,10 +71,10 @@ src_install() {
 		doman ${y}/${y}.8
 		dosbin ${y}/${y}
 	done
-    
+
 	chmod u+s-w ${D}/usr/sbin/pppd
 	chown root:daemon ${D}/usr/sbin/pppstats
-    
+
 	dodir /etc/ppp/peers
 	insinto /etc/ppp
 	insopts -m0600
@@ -95,7 +95,7 @@ src_install() {
 	dodoc PLUGINS README* SETUP Changes-2.3 FAQ
 	dohtml ${FILESDIR}/pppoe.html
 
-# This will have to be updated to work with the new net.ppp0	
+# This will have to be updated to work with the new net.ppp0
 #	# Added a couple scripts to simplify dialing up
 #	# borrowed from debian, man they got some nice little apps :-)
 #	dosbin ${FILESDIR}/pon

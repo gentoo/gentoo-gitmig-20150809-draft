@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2.ebuild,v 1.5 2003/07/01 23:45:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2.ebuild,v 1.6 2003/09/07 00:09:22 msterret Exp $
 
 DESCRIPTION="unix dialout program"
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/apps/serialcomm/dialout/"
@@ -28,7 +28,7 @@ src_install () {
 	dodir /usr/bin /usr/share/man/man1 /usr/lib/xc
 
 	make DESTDIR=${D} install || die
-	
+
 	insinto /usr/lib/xc
 	doins phonelist xc.init dotfiles/.[a-z]*
 }

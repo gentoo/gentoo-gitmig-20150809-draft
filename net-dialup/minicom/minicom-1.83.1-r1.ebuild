@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-1.83.1-r1.ebuild,v 1.11 2003/04/24 21:07:01 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-1.83.1-r1.ebuild,v 1.12 2003/09/07 00:09:22 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Serial Communication Program"
@@ -37,7 +37,7 @@ src_unpack() {
 }
 
 src_compile() {
-	cd src 
+	cd src
 	make || die
 }
 
@@ -50,8 +50,8 @@ src_install() {
 	exeinto /usr/bin
 	doexe src/xminicom
 	insinto /etc/minicom
-	doins ${FILESDIR}/minirc.dfl 
-	
+	doins ${FILESDIR}/minirc.dfl
+
 	dodoc Readme Copyright
 }
 

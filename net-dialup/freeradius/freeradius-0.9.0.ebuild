@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.9.0.ebuild,v 1.1 2003/08/20 17:42:40 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.9.0.ebuild,v 1.2 2003/09/07 00:09:22 msterret Exp $
 
 IUSE="snmp mysql postgres ldap kerberos ssl pam frascend frlargefiles frnothreads frxp"
 
@@ -34,7 +34,7 @@ src_unpack() {
   cd ${WORKDIR}
   unpack ${MY_PN}.tar.gz
   cd ${S}
-  
+
   autoconf
 
 }
@@ -86,7 +86,7 @@ src_compile() {
               ${myconf} || die
 
   make || die
-	
+
 }
 
 src_install() {

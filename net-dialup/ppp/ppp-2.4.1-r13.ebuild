@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r13.ebuild,v 1.4 2003/07/16 14:16:44 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r13.ebuild,v 1.5 2003/09/07 00:09:22 msterret Exp $
 
 IUSE="crypt ipv6 activefilter"
 S=${WORKDIR}/${P}.pppoe4
@@ -35,7 +35,7 @@ src_compile() {
 	}
 
 	./configure --prefix=/usr || die
-    
+
 	#fix Makefiles to compile optimized
 	cd ${S}/pppd
 	mv Makefile Makefile.orig
@@ -69,9 +69,9 @@ src_compile() {
 	mv Makefile Makefile.orig
 	sed -e "s:CFLAGS= -O:CFLAGS= ${CFLAGS}:" Makefile.orig > Makefile
 	cd ..
-    
+
 	export CC=gcc
-    
+
 	emake || die
 }
 
@@ -81,7 +81,7 @@ src_install() {
 		doman ${y}/${y}.8
 		dosbin ${y}/${y}
 	done
-    
+
 	chmod u+s-w ${D}/usr/sbin/pppd
 	chown root.dialout ${D}/usr/sbin/pppd
 	chown root.dialout ${D}/usr/sbin/pppdump
@@ -110,7 +110,7 @@ src_install() {
 	dohtml ${FILESDIR}/pppoe.html
 
 # This has nothing to do with net.ppp0 now as net.ppp0 calls pppd
-# from the command line with the parameters.	
+# from the command line with the parameters.
 	#New scripts acquired from cvs (cvs.samba.org)
 	#Changed from old because /usr/sbin not in user's $PATH
 	dobin ${FILESDIR}/pon
@@ -120,7 +120,7 @@ src_install() {
 
 	#Hack because /usr/sbin is not in user's $PATH?
 	dosym /usr/sbin/pppdump /usr/bin/pppdump
-	dosym /usr/sbin/pppstats /usr/bin/pppstats    	
+	dosym /usr/sbin/pppstats /usr/bin/pppstats
 
 	#Adding misc. specialized scripts to doc dir
 	dodir /usr/share/doc/${PF}/scripts
@@ -148,8 +148,8 @@ pkg_postinst() {
 	ewarn "New users or those requiring something more should have a look at"
 	ewarn "the /etc/init.d/net.ppp0 script."
 	ewarn "Users needing particular scripts (ssh,rsh,etc.)should check out the"
-	ewarn "/usr/share/doc/ppp*/scripts directory." 
-}	
+	ewarn "/usr/share/doc/ppp*/scripts directory."
+}
 
 pkg_preinst() {
 	# Fix those broken flags (755 -> 644)

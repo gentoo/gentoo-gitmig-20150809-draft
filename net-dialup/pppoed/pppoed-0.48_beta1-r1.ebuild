@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppoed/pppoed-0.48_beta1-r1.ebuild,v 1.10 2003/07/19 20:47:30 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppoed/pppoed-0.48_beta1-r1.ebuild,v 1.11 2003/09/07 00:09:22 msterret Exp $
 
 S=${WORKDIR}/pppoed-0.48b1/pppoed
 DESCRIPTION="PPP over Ethernet"
@@ -13,13 +13,13 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
-src_compile() {													 
+src_compile() {
 	econf \
 		--sysconfdir=/etc/ppp/pppoed || die
 	make || die
 }
 
-src_install() {															 
+src_install() {
 
 	make DESTDIR=${D} install || die
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.4.3.ebuild,v 1.2 2003/02/13 13:52:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.4.3.ebuild,v 1.3 2003/09/07 00:09:22 msterret Exp $
 
 S=$WORKDIR/${P}
 DESCRIPTION="a client that plugs into your handphone"
@@ -28,7 +28,7 @@ src_compile() {
         --prefix=/usr \
 		--enable-security \
 		${myconf} || die
-	make CC="gcc ${CFLAGS}" || die "make failed (myconf=${myconf})"    
+	make CC="gcc ${CFLAGS}" || die "make failed (myconf=${myconf})"
 }
 
 src_install () {

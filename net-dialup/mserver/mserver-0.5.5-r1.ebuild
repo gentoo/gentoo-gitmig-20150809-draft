@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mserver/mserver-0.5.5-r1.ebuild,v 1.3 2003/07/13 11:36:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mserver/mserver-0.5.5-r1.ebuild,v 1.4 2003/09/07 00:09:22 msterret Exp $
 
 DESCRIPTION="Daemon that provides control of dial-up links to other PCs on the LAN"
 HOMEPAGE="http://cpwright.com/mserver/"
@@ -32,10 +32,10 @@ src_install() {
 
 	insinto /etc
 	newins mserver/mserver.conf mserver.conf.dist
-	
+
 	insinto /etc/pam.d
 	doins pam/mserver
-	
+
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/mserver-init mserver
 }

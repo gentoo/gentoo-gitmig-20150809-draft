@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.00.0.ebuild,v 1.11 2003/08/21 07:56:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.00.0.ebuild,v 1.12 2003/09/07 00:09:22 msterret Exp $
 
 DESCRIPTION="Serial Communication Program"
 SRC_URI="http://www.netsonic.fi/~walker/${P}.src.tar.gz"
@@ -21,8 +21,8 @@ src_install() {
 	einstall || die "einstall failed"
 	dodoc doc/minicom.FAQ
 	insinto /etc/minicom
-	doins ${FILESDIR}/minirc.dfl 
-	
+	doins ${FILESDIR}/minirc.dfl
+
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
 
 }
