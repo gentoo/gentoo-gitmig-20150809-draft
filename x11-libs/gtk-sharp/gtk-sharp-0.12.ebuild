@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.12.ebuild,v 1.1 2003/11/04 20:04:26 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.12.ebuild,v 1.2 2003/11/04 20:32:40 tberman Exp $
 
 # WARNING
 # All gst-sharp hacks done in this build are nonfunctional
@@ -20,10 +20,10 @@ SLOT="0"
 IUSE="gnome gnomedb libgda"
 
 RDEPEND=">=dev-dotnet/mono-0.24
-	>=x11-libs/gtk+-2
+	>=x11-libs/gtk+-2.2
 	>=gnome-base/libglade-2
-	gnome? ( >=gnome-base/libgnomecanvas-2
-		>=gnome-base/libgnomeui-2 )
+	gnome? ( >=gnome-base/libgnomecanvas-2.2
+		>=gnome-base/libgnomeui-2.2 )
 	libgda? ( >=gnome-extra/libgda-0.11 )
 	gnomedb? ( >=gnome-extra/libgnomedb-0.11 )"
 
