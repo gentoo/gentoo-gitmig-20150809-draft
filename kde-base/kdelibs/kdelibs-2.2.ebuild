@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.ebuild,v 1.11 2001/10/06 14:36:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.ebuild,v 1.12 2001/10/17 18:54:05 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="KDE ${PV} - Libraries"
@@ -66,6 +66,7 @@ src_compile() {
     if [ "`use qtmt`" ] ; then
       myopts="$myopts --enable-mt"
     fi
+    if [ -z "`use ipv6`" ] ; then
       myopts="$myopts --with-ipv6-lookup=no"
     fi
 
