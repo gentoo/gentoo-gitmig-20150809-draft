@@ -63,7 +63,7 @@ retrieving revision 1.7.2.17
 diff -u -B -r1.7.2.17 iwconfig
 --- lib/rcscripts/net.modules.d/iwconfig	21 Mar 2005 16:06:04 -0000	1.7.2.17
 +++ lib/rcscripts/net.modules.d/iwconfig	23 Mar 2005 13:11:05 -0000
-@@ -890,7 +890,10 @@
+@@ -889,7 +889,10 @@
  # Configures ESSID variable
  # Always returns 0
  iwconfig_pre_stop() {
