@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for sys-apps/epm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/epm/ChangeLog,v 1.4 2002/10/22 13:57:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/epm/ChangeLog,v 1.5 2002/11/06 06:26:42 vapier Exp $
 
 *epm-1.7 (22 Oct 2002)
 
