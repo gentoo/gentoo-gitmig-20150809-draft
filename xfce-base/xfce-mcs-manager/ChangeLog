@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce-mcs-manager
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-manager/ChangeLog,v 1.19 2004/03/17 00:31:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-manager/ChangeLog,v 1.20 2004/04/05 13:22:29 gmsoft Exp $
+
+  05 Apr 2004; Guy Martin <gmsoft@gentoo.org> :
+  Marked stable on hppa.
 
   16 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   xfce-mcs-manager-4.0.4.ebuild:
