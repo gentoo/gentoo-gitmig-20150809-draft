@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.8.ebuild,v 1.3 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.8.ebuild,v 1.4 2003/05/04 14:58:45 aliz Exp $
 
 inherit eutils
 
@@ -18,7 +18,8 @@ SLOT="0"
 DEPEND=">=x11-base/xfree-4.2.1
 	~media-libs/jpeg-6b
 	sys-libs/zlib
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )"
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )
+	!net-misc/vnc"
 
 RDEPEND="${DEPEND}
 	dev-lang/perl
