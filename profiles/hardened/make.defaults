@@ -1,7 +1,0 @@
-# Copyright 1999-2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/make.defaults,v 1.3 2004/09/09 08:17:08 seemant Exp $
-
-FEATURES="sandbox sfperms strict"
-
-USE="bitmap-fonts xprint"
