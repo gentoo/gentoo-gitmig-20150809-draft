@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-cvs
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/ChangeLog,v 1.3 2004/06/30 03:31:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/ChangeLog,v 1.4 2004/07/18 17:22:26 usata Exp $
+
+*scim-cvs-0.99.4 (19 Jul 2004)
+
+  19 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> +scim-cvs-0.99.4.ebuild:
+  Version bumped. app-i18n/skim-0.9.3 depends on the latest scim.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> scim-cvs-0.99.1.ebuild:
   sync IUSE (-debug), add sed-4 dep
