@@ -9,7 +9,7 @@ MD5 a5d8bc7e346d119fe17bd7721d91ceee alsa-driver-1.0.4-r1.ebuild 3386
 MD5 76541c3e45b8da67fd12552e3c47091d alsa-driver-1.0.4.ebuild 3328
 MD5 877620814180fa005b3ca3fea1afc17d alsa-driver-1.0.5.ebuild 3381
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 ef2f20b583e15502766130cf54abc97c alsa-driver-1.0.5a.ebuild 3391
+MD5 a2144e4016c6287014cb55523d15f15c alsa-driver-1.0.5a.ebuild 3609
 MD5 b90be2dac383a8357911e2a9c1e2ea07 files/alsasound 4607
 MD5 45f2cf526eaa8ff274ac6876f15302d1 files/alsa 518
 MD5 87448a6155eb013f2b14e4a531ffc25a files/alsa-driver-0.9.0rc1-ppc.patch 358
@@ -29,3 +29,4 @@ MD5 22c91af2bd37ea657699d07e80d109c3 files/digest-alsa-driver-1.0.4-r1 71
 MD5 06c2fc65e1f20840ecea92fae417205e files/digest-alsa-driver-1.0.5 71
 MD5 27ccbe36406f145c1d63725a53517233 files/makefile.patch 1122
 MD5 deb0bfd8e2cfe0ba434fb5a820294502 files/digest-alsa-driver-1.0.5a 72
+MD5 a2ee6fa920bbac70835b4a58e5759e8c files/alsa-driver-1.0.5a-cs46xx-passthrough.patch 446

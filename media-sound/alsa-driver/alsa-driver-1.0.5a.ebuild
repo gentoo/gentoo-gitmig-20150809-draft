@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.5a.ebuild,v 1.1 2004/06/25 07:53:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.5a.ebuild,v 1.2 2004/07/08 08:11:34 eradicator Exp $
 
 inherit kernel-mod flag-o-matic eutils
 
@@ -41,6 +41,10 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.0.5-devfix.patch
+
+	# Uncomment to include the cs46xx patch.
+	# Sorry no revision bump because portage 2.0.50 does not allow 1.0.5a-r1 as a version string.  1.0.6 should be out soon...
+	#epatch ${FILESDIR}/${P}-cs46xx-passthrough.patch
 
 	if kernel-mod_is_2_6_kernel || kernel-mod_is_2_5_kernel; then
 		FULL_KERNEL_PATH="${ROOT}/usr/src/${KV_DIR}"

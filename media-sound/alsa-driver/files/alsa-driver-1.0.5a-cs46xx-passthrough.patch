@@ -1,0 +1,13 @@
+--- alsa-driver-1.0.5a/pci/cs46xx/Makefile	2004-04-08 12:38:16.000000000 -0400
++++ alsa-driver-1.0.3/pci/cs46xx/Makefile	2004-07-01 19:18:58.084822112 -0400
+@@ -5,6 +5,10 @@
+ include $(SND_TOPDIR)/toplevel.config
+ include $(SND_TOPDIR)/Makefile.conf
+ 
++# Hack for new dsp flag
++EXTRA_CFLAGS += -DCONFIG_SND_CS46XX_NEW_DSP=1
++CONFIG_SND_CS46XX_NEW_DSP=y
++
+ include $(SND_TOPDIR)/alsa-kernel/pci/cs46xx/Makefile
+ 
+ include $(SND_TOPDIR)/Rules.make
