@@ -1,9 +1,19 @@
 # ChangeLog for sys-apps/noflushd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/ChangeLog,v 1.11 2004/04/10 22:18:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/ChangeLog,v 1.12 2004/04/13 17:42:47 mholzer Exp $
+
+*noflushd-2.7.3 (13 Apr 2004)
+
+  13 Apr 2004; Martin Holzer <mholzer@gentoo.org> noflushd-2.7.3.ebuild:
+  Version bumped. Closes 47731
 
   11 Apr 2004; David Holm <dholm@gentoo.org> noflushd-2.7.2.ebuild:
   Added to ~ppc.
+
+*noflushd-2.7.2 (10 Apr 2004)
+
+  10 Apr 2004; Martin Holzer <mholzer@gentoo.org> noflushd-2.7.2.ebuild:
+  Version bumped. Closes 46792
 
 *noflushd-2.7.2 (10 Apr 2004)
 
