@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.5-r1.ebuild,v 1.2 2000/09/15 20:09:04 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.5-r1.ebuild,v 1.3 2000/10/30 20:08:25 achim Exp $
 
 P=tiff-v3.5.5
 A=${P}.tar.gz
@@ -44,11 +44,12 @@ src_install() {
 	dodoc COPYRIGHT README TODO VERSION
 	dodir /usr/doc/${PF}/html
 	try make install
-	prepman
 	gzip ${D}/usr/doc/${PF}/html/*.html
 	gzip ${D}/usr/doc/${PF}/html/images/*
         rm ${D}/usr/lib/libtiff.so.3
 	mv ${D}/usr/lib/libtiff.so.3.5. ${D}/usr/lib/libtiff.so.3.5.5
+        preplib /usr
 	rm -r /tiff.sw.tools
 }
+
 
