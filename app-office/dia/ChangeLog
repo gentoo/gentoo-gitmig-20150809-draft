@@ -1,6 +1,12 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.17 2003/09/21 16:49:34 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.18 2003/10/10 21:30:19 liquidx Exp $
+
+*dia-0.92_pre4 (10 Oct 2003)
+
+  10 Oct 2003; Alastair Tse <liquidx@gentoo.org> dia-0.92_pre4.ebuild:
+  version bump. this is more stable than 0.91 and also fixes the pango text
+  problem with >=1.2.4
 
 *dia-0.91 (26 Mar 2003)
 
