@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/dancer-ircd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/ChangeLog,v 1.3 2003/04/22 10:24:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/ChangeLog,v 1.4 2003/05/05 18:23:58 gmsoft Exp $
+
+*dancer-ircd-1.0.31_p8-r1 (05 May 2003)
+
+  05 May 2003; Guy Martin <gmsoft@gentoo.org> dancer-ircd-1.0.31_p8-r1.ebuild :
+  Corrected documentation building and creation of the log directory.
 
 *dancer-ircd-1.0.31_p8 (06 Mar 2003)
 
