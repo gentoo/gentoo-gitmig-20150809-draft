@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/zoneminder
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.3 2004/09/05 09:17:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.4 2004/11/22 12:24:18 dragonheart Exp $
+
+  22 Nov 2004; Daniel Black <dragonheart@gentoo.org> zoneminder-0.9.12.ebuild:
+  added dev-perl/DBD-mysql RDEPEND as per bug #72003. Thanks Jakub Sadowski
+  <JakubSadowski@Yahoo.com> for the bug report
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
