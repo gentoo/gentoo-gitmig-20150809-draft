@@ -1,10 +1,20 @@
-MD5 7a784e5f301d80fa35fc0d41776dfc76 ChangeLog 1705
-MD5 77fd36d93b0a1b9f35abbe6a1c146561 metadata.xml 482
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e684976f004645589624749b7fccc283 nxserver-freenx-0.2.3.ebuild 2712
-MD5 056f03d985d31975e028c9c4974f3a81 nxserver-freenx-0.2.2.ebuild 2709
-MD5 40aa90acfc38b06ac68d0dfd7b10a04a nxserver-freenx-0.2.1.ebuild 2693
+MD5 9e12b6be0d05f8d0b93d9362942c1e95 nxserver-freenx-0.2.2.ebuild 2711
 MD5 007196bbd26b88873495e95edb2f525c nxserver-freenx-0.2.4.ebuild 2713
+MD5 f52d233fb520a987d0c4ed7993850724 ChangeLog 1831
+MD5 40aa90acfc38b06ac68d0dfd7b10a04a nxserver-freenx-0.2.1.ebuild 2693
+MD5 77fd36d93b0a1b9f35abbe6a1c146561 metadata.xml 482
+MD5 d388064e3dc5e12382a5df38d2963a7b files/digest-nxserver-freenx-0.2.1 63
 MD5 80e15c6c222aaea0ade019d2b0070d2e files/digest-nxserver-freenx-0.2.2 63
 MD5 bc6040cb8843d3061568b6a06fec8b98 files/digest-nxserver-freenx-0.2.3 63
 MD5 1d9408c6273fb71e5cb06519db691598 files/digest-nxserver-freenx-0.2.4 63
-MD5 d388064e3dc5e12382a5df38d2963a7b files/digest-nxserver-freenx-0.2.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpQQ5I1lqEGTUzyQRAl2OAKCaXz7X7MJ1KJRaMVfhRtwyW1nsuACfSyOc
+QkkzV7vWuW8qRmju2Zfkbts=
+=TRHd
+-----END PGP SIGNATURE-----
