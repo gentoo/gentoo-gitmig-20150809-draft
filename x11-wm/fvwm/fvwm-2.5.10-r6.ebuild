@@ -1,19 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.10-r6.ebuild,v 1.8 2004/10/19 08:26:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.10-r6.ebuild,v 1.9 2004/11/04 05:18:46 vapier Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="bidi debug gnome gtk gtk2 imlib ncurses nls nosm noxpm perl png readline rplay stroke tcltk truetype xinerama"
-
 DESCRIPTION="An extremely powerful ICCCM-compliant multiple virtual desktop window manager"
-SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
-		perl? ( http://users.tpg.com.au/users/scottie7/FvwmTabs-v3.1.tar.gz	)"
 HOMEPAGE="http://www.fvwm.org/"
+SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
+	perl? ( http://users.tpg.com.au/users/scottie7/FvwmTabs-v3.1.tar.gz	)"
 
-SLOT="0"
-KEYWORDS="~x86 ppc64 ppc"
 LICENSE="GPL-2 FVWM"
+SLOT="0"
+KEYWORDS="ia64 ppc ppc64 ~x86"
+IUSE="bidi debug gnome gtk gtk2 imlib ncurses nls nosm noxpm perl png readline rplay stroke tcltk truetype xinerama"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.3-r1 )
 		gtk? ( =x11-libs/gtk+-1.2*
