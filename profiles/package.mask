@@ -21,11 +21,13 @@
 ##   End example
 ##
 
+# <tantive@gentoo.org> (08 Sep 2002)
+# Masked for testing, added a patch to compile using gcc3 
+=sys-kernel/openmosix-sources-2.4.19-r4
 
 # <spider@gentoo.org> (08 Sep 2002)
 # new ebuild. cvs checkout of galeon <head> (galeon2)
 net-www/galeon-cvs
-
 
 # <carpaski@gentoo.org> (08 Sep 2002)
 # Possible/likely fix for python compile issues
