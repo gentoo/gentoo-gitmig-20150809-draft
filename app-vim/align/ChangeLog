@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/align
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.25 2005/01/21 16:24:25 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.26 2005/01/29 20:08:30 ciaranm Exp $
+
+*align-30-r1 (29 Jan 2005)
+
+  29 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> +align-30-r1.ebuild:
+  Become vim7 friendly, bug #79982
 
 *align-30 (21 Jan 2005)
 
