@@ -1,7 +1,11 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.9 2002/12/20 16:25:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.10 2002/12/20 16:45:06 aliz Exp $
 
+  20 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> wget-1.8.2.ebuild, wget-1.8.2-r1.ebuild
+						wget-1.8.2-r2.ebuild :
+  Updated SRC_URI and HOMEPAGE.
+  
 *wget-1.8.2-r2 (20 Dec 2002)
 
   20 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> :

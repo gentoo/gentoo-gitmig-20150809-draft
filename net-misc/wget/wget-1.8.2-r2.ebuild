@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r2.ebuild,v 1.1 2002/12/20 16:25:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r2.ebuild,v 1.2 2002/12/20 16:45:06 aliz Exp $
 
 IUSE="ssl nls static ipv6"
 
@@ -8,8 +8,7 @@ NPVER=20011209
 S=${WORKDIR}/${P}
 DESCRIPTION="Network utility to retrieve files from the WWW"
 HOMEPAGE="http://www.cg.tuwien.ac.at/~prikryl/wget.html"
-SRC_URI="ftp://prep.ai.mit.edu/gnu/wget/${P}.tar.gz
-	ftp://gatekeeper.dec.com/pub/GNU/wget/${P}.tar.gz
+SRC_URI="mirror://gnu/wget/${P}.tar.gz
 	http://www.biscom.net/~cade/away/wget-new-percentage/wget-new-percentage-cvs-${NPVER}.tar.gz
 	ipv6? mirror://gentoo/${P}-ipv6-debian.patch.bz2"
 
