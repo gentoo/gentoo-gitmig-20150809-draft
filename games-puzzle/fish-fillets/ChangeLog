@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/fish-fillets
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.9 2004/08/26 19:02:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.10 2004/09/21 08:57:05 mr_bones_ Exp $
+
+  21 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  -fish-fillets-0.3.0.ebuild, -fish-fillets-0.4.0.ebuild,
+  -fish-fillets-0.4.1.ebuild, -fish-fillets-0.5.0.ebuild:
+  clean older ebuilds
 
 *fish-fillets-0.5.0-r1 (26 Aug 2004)
 
