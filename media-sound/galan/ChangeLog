@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/galan
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/ChangeLog,v 1.10 2004/04/17 18:21:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/ChangeLog,v 1.11 2004/04/27 18:10:09 kugelfang Exp $
+
+  27 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> galan-0.3.0_beta5.ebuild:
+  marked ~amd64.
 
   17 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   galan-0.3.0_beta3.ebuild, galan-0.3.0_beta5.ebuild:
