@@ -942,7 +942,6 @@ dev-lang/tcl-tk
 # dependencies for theese arent fixed yet:
 gnome-extra/libgnomemm
 gnome-extra/libgnomeuimm
-gnome-extra/libglademm
 
 ## Non gnome-core packages, applications, extra libraries and so on
 
