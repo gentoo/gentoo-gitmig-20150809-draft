@@ -1,12 +1,16 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.6 2002/04/30 22:13:33 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.7 2002/06/21 23:11:19 rphillips Exp $
 
   30 Apr 2002; William McArthur <sandymac@gentoo.org> autofs-3.1.7-r3.ebuild :
 
   Added HOMEPAGE, LICENSE and made the DESCRIPTION a little more so.
 
 *autfofs-3.1.7-r3 (16 Apr 2002)
+
+  21 Jun 2002; Ryan Phillips <rphillips@gentoo.org> files/autofs.rc6 :
+
+  added a /g to the pidfile variable
 
   16 Apr 2002; Seemant Kulleen <seemant@gentoo.org> autofs-3.1.7-r3.ebuild
   files/digest-autofs-3.1.7-r3 :
