@@ -1,0 +1,31 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# /space/gentoo/cvsroot/gentoo-x86/net-www/apache/files/apache.rc6,v 1.1 2002/04/09 23:51:39 woodchip Exp
+
+depend() {
+	need net
+	use mysql named
+}
+
+start() {
+	ebegin "Starting apache2"
+	start-stop-daemon --quiet --start --startas /usr/lib/apache2/bin/httpd \
+		--pidfile /var/run/apache2.pid -- -k start ${APACHE2_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping apache2"
+	/usr/lib/apache2/bin/httpd -k stop ${APACHE2_OPTS}
+	sleep 3
+	start-stop-daemon -o --quiet --stop --pidfile /var/run/apache2.pid
+	eend $?
+}
+
+# NOT LEGAL... Need to work on this...
+reload() {
+	ebegin "Reloading apache2"
+	/usr/lib/apache2/bin/httpd -k reload ${APACHE2_OPTS}
+	eend $?
+}
