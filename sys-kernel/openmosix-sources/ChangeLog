@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.78 2004/12/27 09:20:38 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.79 2004/12/27 16:49:40 voxus Exp $
+
+*openmosix-sources-2.4.28-r4 (27 Dec 2004)
+
+  27 Dec 2004; Konstantin Arkhipov <voxus@gentoo.org>:
+  +files/openmosix-sources.CAN-2004-1137.patch,
+  -openmosix-sources-2.4.28-r3.ebuild,
+  +openmosix-sources-2.4.28-r4.ebuild:
+  Yet another security patch, closing bug #74384.
 
 *openmosix-sources-2.4.28-r3 (27 Dec 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.28-r3.ebuild,v 1.1 2004/12/27 09:20:38 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.28-r4.ebuild,v 1.1 2004/12/27 16:49:40 voxus Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -43,6 +43,7 @@ src_unpack() {
 	# CAN's
 	epatch ${FILESDIR}/${PN}.CAN-2004-1016.patch || die "Patch for CAN-2004-1016 failed."
 	epatch ${FILESDIR}/${PN}.CAN-2004-1056.patch || die "Patch for CAN-2004-1056 failed."
+	epatch ${FILESDIR}/${PN}.CAN-2004-1137.patch || die "Patch for CAN-2004-1137 failed."
 
 	epatch ${FILESDIR}/${PN}-vma.patch || "Second patch for CAN-2004-1074 failed."
 
