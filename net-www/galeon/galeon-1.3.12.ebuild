@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.12.ebuild,v 1.2 2004/02/10 09:38:30 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.12.ebuild,v 1.3 2004/02/10 15:09:53 gustavoz Exp $
 
 inherit gnome2 debug libtool
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~alpha ~sparc ~ia64 ~amd64"
+KEYWORDS="x86 ~ppc ~alpha sparc ~ia64 ~amd64"
 SLOT="0"
 
 # supports moz-1.4 to 1.6
