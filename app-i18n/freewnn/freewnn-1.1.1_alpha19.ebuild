@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha19.ebuild,v 1.3 2002/10/20 18:40:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha19.ebuild,v 1.4 2003/01/06 12:24:22 jmorgan Exp $
 
-KEYWORDS="x86"
+KEYWORDS="x86 sparc"
 
 DESCRIPTION="Network-Extensible Kana-to-Kanji Conversion System"
 HOMEPAGE="http://www.freewnn.org/"
