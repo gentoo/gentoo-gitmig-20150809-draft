@@ -117,7 +117,7 @@
 # sys-libs/nss-db 
 *sys-libs/pam     
 *sys-libs/pwdb      
-*sys-libs/readline  
+*<sys-libs/readline-4.2 
 *sys-libs/slang
 *sys-libs/zlib
 #these ones have the new rc6 style init scripts
