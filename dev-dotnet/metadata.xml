@@ -5,5 +5,9 @@
 		The dev-dotnet category contains libraries and utilities relevant to the
 		.NET programming environment.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie dev-dotnet enthält Bibliotheken und Werkzeuge für die
+		.NET Programmierumgebung.
+	</longdescription>
 </catmetadata>
 
