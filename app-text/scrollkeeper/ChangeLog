@@ -1,7 +1,13 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.4 2002/05/31 14:53:04 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.5 2002/06/01 17:54:11 spider Exp $
 
+
+
+*scrollkeeper-0.3.8-r2 (1 Jun 2002)
+  1 Jun 2002; Spider <spider@gentoo.org> scrollkeeper-0.3.8-r2.ebuild :
+  ebuild update to use /usr/bin/scrollkeeper* instead of "scrollkeeper-*" for paths
+    
 *scrollkeeper-0.3.8-r1 (31 May 2002)
   31 May 2002; Spider <spider@gentoo.org> scrollkeeper-0.3.8-r1.ebuild :
   updated with a patch for gcc 3.1 at ia32

@@ -1,0 +1,21 @@
+--- extract/dtds/Makefile.in.old	Wed May  1 15:55:59 2002
++++ extract/dtds/Makefile.in	Wed May  1 15:56:07 2002
+@@ -222,7 +222,6 @@
+ 
+ install-data-am: install-dtdsHEADERS
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-data: install-data-am
+ 
+ install-am: all-am
+--- libs/database.c.old	Sat Apr 20 23:14:16 2002
++++ libs/database.c	Tue May 14 16:48:45 2002
+@@ -122,7 +122,7 @@
+     closedir(dir);
+     
+     if (!empty)
+-        return;
++        return 0;
+         
+     data_dir = malloc((strlen(scrollkeeper_data_dir)+strlen("/Templates")+1)*
+     			sizeof(char));
