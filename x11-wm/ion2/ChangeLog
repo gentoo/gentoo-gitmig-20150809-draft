@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion2
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.23 2004/10/07 12:28:01 twp Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.24 2005/02/03 16:06:35 gustavoz Exp $
+
+  03 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> ion2-20040729.ebuild:
+  Stable on sparc
 
   07 Oct 2004; Tom Payne <twp@gentoo.org> -files/ion2-20040207-20040211.patch,
   -files/ion2-20040207-rename.patch, -files/ion2-20040407-rename.patch,
