@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.31 2004/10/14 04:41:29 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.32 2004/10/14 05:05:33 eldad Exp $
+
+  14 Oct 2004; Eldad Zack <eldad@gentoo.org> +files/postinstall-en.txt,
+  cacti-0.8.6b.ebuild:
+  Better postinst instructions: using webapp.eclass postinst support
 
 *cacti-0.8.6b (14 Oct 2004)
 
