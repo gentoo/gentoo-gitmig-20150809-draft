@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.1 2004/01/20 17:39:36 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.2 2004/01/26 01:00:16 vapier Exp $
 
 inherit gnuconfig ssl-cert
 
@@ -40,7 +40,7 @@ src_unpack() {
 			-i "${S}/cmulocal/libcyrus.m4" || die "sed failed"
 	fi
 
-	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOCONF=2.5
 	touch config.{guess,sub}
 	gnuconfig_update
 
@@ -74,7 +74,7 @@ src_install() {
 
 	keepdir /var/imsp{,/user}
 
-	if [ "`use ssl`" ] ; then
+	if [ `use ssl` ] ; then
 		insinto /etc/stunnel
 		newins "${FILESDIR}/stunnel.conf" imspd.conf
 
