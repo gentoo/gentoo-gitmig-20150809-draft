@@ -1,8 +1,12 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.6 2002/10/24 09:18:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.7 2002/10/24 17:26:10 azarah Exp $
 
 xscreensaver-4.06 (24 Oct 2002)
+
+  24 Oct 2002; Martin Schlemmer <azarah@gentoo.org> xscreensaver-4.06.ebuild :
+
+  Fix the libxml hack to actually work.
 
   24 Oct 2002; Seemant Kulleen <seemant@gentoo.org> xscreensaver-4.06.ebuild
   files/digest-xscreensaver-4.06 :

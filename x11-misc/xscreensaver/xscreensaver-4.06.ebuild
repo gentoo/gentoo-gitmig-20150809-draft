@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.06.ebuild,v 1.1 2002/10/24 09:18:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.06.ebuild,v 1.2 2002/10/24 17:26:10 azarah Exp $
 
 IUSE="pam kerberos gtk motif gnome opengl jpeg xml"
 
@@ -73,7 +73,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-nls" \
 		|| myconf="${myconf} --disable-nls"
 
-	export C_INCLUDE_PATH="/usr/include/libxml2/libxml/"
+	export C_INCLUDE_PATH="/usr/include/libxml2/"
 	econf \
 		--enable-hackdir=/usr/lib/xscreensaver \
 		--with-mit-ext \
