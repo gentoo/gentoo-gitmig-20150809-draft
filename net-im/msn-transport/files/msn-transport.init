@@ -12,7 +12,7 @@ start() {
 }
 
 stop() {
-	ebegin "Stoping MSN Jabber Transport"
+	ebegin "Stopping MSN Jabber Transport"
 	kill `cat /var/log/jabber/msnt.pid`
 	sleep 2
 	if [ -f /var/log/jabber/msnt.pid ]; then

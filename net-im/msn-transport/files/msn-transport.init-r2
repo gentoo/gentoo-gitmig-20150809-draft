@@ -19,7 +19,7 @@ start() {
 }
 
 stop() {
-	ebegin "Stoping MSN Jabber Transport"
+	ebegin "Stopping MSN Jabber Transport"
         if [ -f ${PIDFILE} ]; then
                 kill `cat ${PIDFILE}`
         fi
