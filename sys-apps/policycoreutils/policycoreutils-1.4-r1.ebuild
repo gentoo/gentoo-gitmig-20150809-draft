@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.4-r1.ebuild,v 1.5 2004/06/25 03:09:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.4-r1.ebuild,v 1.6 2004/08/08 00:38:07 slarti Exp $
 
 IUSE="build"
 
 EXTRAS_VER="1.0"
 
-DESCRIPTION="SELinux core utilites"
+DESCRIPTION="SELinux core utilities"
 HOMEPAGE="http://www.nsa.gov/selinux"
 SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz
 	mirror://gentoo/policycoreutils-extra-${EXTRAS_VER}.tar.bz2"

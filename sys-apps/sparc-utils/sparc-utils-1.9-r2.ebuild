@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9-r2.ebuild,v 1.4 2004/07/09 22:31:37 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9-r2.ebuild,v 1.5 2004/08/08 00:38:51 slarti Exp $
 
 inherit eutils
 
-DESCRIPTION="Various sparc utilites from Debian GNU/Linux"
+DESCRIPTION="Various sparc utilities from Debian GNU/Linux"
 HOMEPAGE="http://www.debian.org/"
 SRC_URI=" http://http.us.debian.org/debian/pool/main/s/${PN}/${PN}_${PV}.orig.tar.gz
 	mirror://gentoo/${PN}_${PV}-2.diff.bz2"

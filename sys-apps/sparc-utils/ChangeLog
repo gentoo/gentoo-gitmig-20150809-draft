@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sparc-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/ChangeLog,v 1.16 2004/07/09 22:31:37 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/ChangeLog,v 1.17 2004/08/08 00:38:51 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> sparc-utils-1.9-r1.ebuild,
+  sparc-utils-1.9-r2.ebuild, sparc-utils-1.9.ebuild:
+  Typo in DESCRIPTION: utilites -> utilities. Bug 59717.
 
   09 Jul 2004; Travis Tilley <lv@gentoo.org> sparc-utils-1.9-r1.ebuild,
   sparc-utils-1.9-r2.ebuild, sparc-utils-1.9.ebuild:
