@@ -7,7 +7,7 @@ MD5 d2116d58ad25ce6b7f4d6c960edc49f9 ximian-connector-1.2.2_p1.ebuild 1883
 MD5 7d1011e7aed9deb24a6fc1433700e40c ximian-connector-2.0.0.ebuild 896
 MD5 d5d4638760f932e0fead2e6e8391ee08 ximian-connector-2.0.1.ebuild 985
 MD5 279f3c12bf43cc57e6a1fcef3ba9bd8d ximian-connector-1.4.7.2.ebuild 957
-MD5 7bb73411d73be4455883998ca83fd56d ximian-connector-2.0.2.ebuild 907
+MD5 7b066344f1bd66fd6d5b4928fcd26b7a ximian-connector-2.0.2.ebuild 906
 MD5 9dfb89cf8aa1ed2f2530cf73c0c6c478 files/digest-ximian-connector-1.2.2_p1 173
 MD5 7d1775fcd3f66e7fb5a1631fc9db5fcc files/digest-ximian-connector-1.4.7.2 76
 MD5 e9d7f494208fffcff73379ac9e7f12c8 files/digest-ximian-connector-2.0.0 76
@@ -17,7 +17,7 @@ MD5 26036add2c9eea8522d465fa529fc43f files/digest-ximian-connector-2.0.2 76
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBeYvYRkyva5PS18kRAogCAJ429Rh/31Vxspb7nZKPtxqvbJVwkACeI4Sn
-X7XTXPDABpM7rUCMH29co/M=
-=e7D+
+iD8DBQFBmQpPRkyva5PS18kRAgmhAJ0QE0Q1weYCzzJgbaceQ2eR8ISAGACgprxf
+sTAG+tPR+U6mfLH4sM+lqFg=
+=3gF+
 -----END PGP SIGNATURE-----
