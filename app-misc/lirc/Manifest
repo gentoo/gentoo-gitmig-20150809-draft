@@ -6,7 +6,7 @@ MD5 8e2d86034995b5649dee1d822cf23131 ChangeLog 4326
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 eb1d5f40e0d59edbc1ac2a097cea5850 files/digest-lirc-0.6.6-r1 63
 MD5 d0d865cbe48f328fb4cfb41e22d4407b files/lirc-0.7.0_pre2-i2c.patch.gz 705
-MD5 f275b602a7ec5ed176e7db5597205bcb files/lircd 482
+MD5 c596050c9cc46444831c6108bc787c0f files/lircd 476
 MD5 ce31954d209c4e81861d7e3c76aaa91e files/lircd.conf 71
 MD5 cec75bc2acbedddba62b71993bf9981c files/digest-lirc-0.7.0_pre3 67
 MD5 03a0569271c2917b330754938b62cae7 files/digest-lirc-0.7.0_pre4 67

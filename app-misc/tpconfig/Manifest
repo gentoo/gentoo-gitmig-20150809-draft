@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1d1b48138edfb66feab250f9d043a0f6 ChangeLog 621
 MD5 f0083ad8dcd2efcbb79053c01c8c0d4e tpconfig-3.1.3.ebuild 647
+MD5 1d1b48138edfb66feab250f9d043a0f6 ChangeLog 621
 MD5 d5e5e3bb4dcb75ac99b9dca887be9bbe files/digest-tpconfig-3.1.3 66
-MD5 838d85ba6c35dc82f4e21ae00e85dfa2 files/tpconfig 541
-MD5 0e17b65fc9641858e147d465a1eadb7f files/tpconfig.conf 253
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35ubHTu7gpaalycRAr1RAJ0Y9lKKSYhXy9aQmxepcs1hvZm4/ACcCq9e
-QS34ZJwQ+SHQkq8hbJ1tYX4=
-=4cl3
------END PGP SIGNATURE-----
+MD5 334f7cb873d02f0d20ee5ad40ab66f57 files/tpconfig.conf 246
+MD5 800f4723a732af78a8bb3b2f9223fb86 files/tpconfig 534
