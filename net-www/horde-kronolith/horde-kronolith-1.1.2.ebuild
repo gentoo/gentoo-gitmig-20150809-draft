@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/horde-kronolith-1.1.2.ebuild,v 1.1 2004/03/21 10:11:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/horde-kronolith-1.1.2.ebuild,v 1.2 2004/03/29 01:36:45 zx Exp $
 
 inherit horde
 
 DESCRIPTION="Kronolith is the Horde calendar application"
 
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa"
 
 DEPEND=""
 RDEPEND=">=net-www/horde-2.2.5"
