@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.4.ebuild,v 1.2 2003/12/16 05:24:18 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.4.ebuild,v 1.3 2004/02/18 11:31:35 hhg Exp $
 
 #
 # Mailbox format is determined by the 'mbox' and 'maildir'
@@ -90,14 +90,14 @@ src_compile() {
 
 	epatch ${DISTDIR}/popa3d-0.6.3-vname-2.diff
 
-	if use mbox ; then
-		einfo "Mailbox format is: MAILBOX."
-	else
-		epatch ${DISTDIR}/popa3d-0.5.9-maildir-2.diff
+	if use maildir ; then
 		einfo "Mailbox format is: MAILDIR."
+		epatch ${DISTDIR}/popa3d-0.5.9-maildir-2.diff
 		if [ "${POPA3D_HOME_MAILBOX}" = "" ] ; then
 			POPA3D_HOME_MAILBOX=".maildir"
 		fi
+	else
+		einfo "Mailbox format is: MAILBOX."
 	fi
 
 	if [ "${POPA3D_HOME_MAILBOX}" != "" ] ; then
