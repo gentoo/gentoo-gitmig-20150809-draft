@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesupport/kdesupport-2.0.1.ebuild,v 1.1 2000/12/07 16:31:02 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesupport/kdesupport-2.0.1.ebuild,v 1.2 2000/12/09 06:26:45 drobbins Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 HOMEPAGE="http://www.kde.org/"
 
 DEPEND=">=sys-devel/gcc-2.95.2
-	>=kde-base/qt-x11-2.2.1
+	>=kde-base/qt-2.2.1
 	>=net-print/cups-1.1.4
 	>=media-libs/audiofile-0.1.9"
 

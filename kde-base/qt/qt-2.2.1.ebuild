@@ -1,18 +1,19 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qt/qt-x11-2.2.2.ebuild,v 1.1 2000/11/26 12:52:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qt/qt-2.2.1.ebuild,v 1.1 2000/12/09 06:26:45 drobbins Exp $
 
-A=${P}.tar.gz
-S=${WORKDIR}/qt-2.2.2
+QP=${PN}-x11-${PV}
+A=${QP}.tar.gz
+S=${WORKDIR}/${P}
 DESCRIPTION="QT 2.2"
 SRC_PATH="kde/stable/2.0/distribution/tar/generic/src/${A}"
-SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/${A}"
+SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
+	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
 HOMEPAGE="http://www.kde.org/"
 
 DEPEND=">=media-libs/libpng-1.0.7
 	>=media-libs/libmng-0.9.3
-	>=media-libs/mesa-glu-3.2
 	>=media-sound/nas-1.4.1
 	>=x11-base/xfree-4.0.1"
 
@@ -45,26 +46,26 @@ src_compile() {
 
 src_install() {
 	cd ${S}
-	dodir /usr/lib/${P}
-	into /usr/lib/${P}
+	dodir /usr/lib/${QP}
+	into /usr/lib/${QP}
 	dobin bin/*
 	dolib.so lib/libqt.so.${PV}
 	dolib.so lib/libqt-mt.so.${PV}
 	dolib.so lib/libqutil.so.1.0.0
-	preplib /usr/lib/${P}
-	dosym	libqt.so.${PV} /usr/lib/${P}/lib/libqt.so
-	dosym   libqt-mt.so.${PV} /usr/lib/${P}/lib/libqt-mt.so
-	dosym   libqutil.so.1.0.0 /usr/lib/${P}/lib/libqutil.so
+	preplib /usr/lib/${QP}
+	dosym	libqt.so.${PV} /usr/lib/${QP}/lib/libqt.so
+	dosym   libqt-mt.so.${PV} /usr/lib/${QP}/lib/libqt-mt.so
+	dosym   libqutil.so.1.0.0 /usr/lib/${QP}/lib/libqutil.so
 	cd ${D}/usr/lib
- 	ln -sf  qt-x11-${PV} qt
+ 	ln -sf  ${QP} qt
 	cd ${S}
 	dodir /usr/lib/${P}/include
-	cp include/* ${D}/usr/lib/${P}/include/
-#	cp -a extensions ${D}/usr/lib/${P}/
+	cp include/* ${D}/usr/lib/${QP}/include/
+#	cp -a extensions ${D}/usr/lib/${QP}/
 #	cd src
 #	try make clean
 #	cd ..
-#	cp -a src ${D}/usr/lib/${P}/
+#	cp -a src ${D}/usr/lib/${QP}/
 #	into /usr
 	doman doc/man/man3/*
 
