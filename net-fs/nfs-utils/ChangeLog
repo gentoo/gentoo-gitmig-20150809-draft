@@ -1,6 +1,6 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.8 2002/12/12 14:55:09 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.9 2002/12/13 10:59:54 blizzy Exp $
 
 *nfs-utils-1.0.1 (12 Dec 2002)
 
@@ -8,8 +8,7 @@
   
   Added options to config file thanks to Cardoe and j2ee.
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *nfs-utils-1.0.1 (13 Oct 2002)
  
