@@ -1,13 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.213 2004/04/25 03:35:49 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.214 2004/04/25 20:20:31 vapier Exp $
 
   24 Apr 2004; Joshua Kinard <kumba@gentoo.org> gcc-3.3.3.ebuild:
   Marking gcc-3.3.3 stable on mips, as stages and GRPs are built with it, and
   it's run fine with no issues.
 
   22 Apr 2004; Mike Frysinger <vapier@gentoo.org> gcc-3.3.3-r2.ebuild:
-  Change the nogcj flag to gcj and add support for ada via an ada USE flag.
+  Change the nogcj flag to gcj.
 
   21 Apr 2004; Mike Frysinger <vapier@gentoo.org> gcc-3.2-r5 gcc-3.1-r8:
   These were never released so lets prune them.
