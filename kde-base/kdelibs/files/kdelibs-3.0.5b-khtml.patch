@@ -1,0 +1,27 @@
+--- khtml/html/html_documentimpl.cpp	6 Sep 2002 23:13:21 -0000	1.139.2.2
++++ khtml/html/html_documentimpl.cpp	10 Jul 2003 11:15:34 -0000
+@@ -84,7 +84,23 @@
+ DOMString HTMLDocumentImpl::referrer() const
+ {
+     if ( view() )
+-        return view()->part()->referrer();
++    {
++        KURL referrerURL = view()->part()->referrer();
++        if (referrerURL.isValid())
++        {
++            QString protocol = referrerURL.protocol();
++
++            if ((protocol == "http") ||
++               ((protocol == "https") && (view()->part()->url().protocol() == "https")))
++            {
++                referrerURL.setRef(QString::null);
++                referrerURL.setUser(QString::null);
++                referrerURL.setPass(QString::null);
++                return referrerURL.url();
++            }
++        }
++    }
++
+     return DOMString();
+ }
+ 

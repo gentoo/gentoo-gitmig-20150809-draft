@@ -1,0 +1,57 @@
+--- khtml/khtml_part.cpp	3 Jul 2003 17:13:02 -0000	1.770.2.27
++++ khtml/khtml_part.cpp	10 Jul 2003 11:45:10 -0000
+@@ -4171,7 +4171,27 @@
+ 
+ QString KHTMLPart::referrer() const
+ {
+-   return d->m_pageReferrer;
++   return d->m_referrer;
++}
++
++QString KHTMLPart::pageReferrer() const
++{
++   KURL referrerURL = d->m_pageReferrer;
++   if (referrerURL.isValid())
++   {
++      QString protocol = referrerURL.protocol();
++
++      if ((protocol == "http") ||
++         ((protocol == "https") && (m_url.protocol() == "https")))
++      {
++          referrerURL.setRef(QString::null);
++          referrerURL.setUser(QString::null);
++          referrerURL.setPass(QString::null);
++          return referrerURL.url();
++      }
++   }
++   
++   return QString::null;
+ }
+
+ 
+--- khtml/khtml_part.h	18 May 2003 12:34:36 -0000	1.197.2.5
++++ khtml/khtml_part.h	10 Jul 2003 11:45:11 -0000
+@@ -702,6 +702,11 @@
+   QString referrer() const;
+ 
+   /**
++   * Referrer used to obtain this page.
++   */
++  QString pageReferrer() const;
++
++  /**
+    * Last-modified date (in raw string format), if received in the [HTTP] headers.
+    */
+   QString lastModified() const;
+
+--- khtml/html/html_documentimpl.cpp	27 Jun 2003 09:55:33 -0000	1.143.2.6
++++ khtml/html/html_documentimpl.cpp	10 Jul 2003 11:45:11 -0000
+@@ -85,7 +85,7 @@
+ DOMString HTMLDocumentImpl::referrer() const
+ {
+     if ( view() )
+-        return view()->part()->referrer();
++        return view()->part()->pageReferrer();
+     return DOMString();
+ }
+ 
