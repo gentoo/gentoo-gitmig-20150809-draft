@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/jmeter
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.18 2005/02/03 17:15:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.19 2005/03/29 17:16:55 luckyduck Exp $
+
+  29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> jmeter-2.0.1-r1.ebuild:
+  moved from dev-java/oro to dev-java/jakarta-oro dependency. see #71337.
 
   03 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> jmeter-2.0.1-r1.ebuild:
   updated to reflect the new jdom slots

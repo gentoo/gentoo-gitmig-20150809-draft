@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-2.0.1-r1.ebuild,v 1.6 2005/02/03 17:15:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-2.0.1-r1.ebuild,v 1.7 2005/03/29 17:16:55 luckyduck Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ DEPEND=">=virtual/jdk-1.3
 	dev-java/commons-logging
 	>=dev-java/commons-httpclient-2.0
 	dev-java/commons-collections
-	>=dev-java/oro-2.0
+	=dev-java/jakarta-oro-2.0*
 	~dev-java/jdom-1.0_beta9
 	>=dev-java/xerces-2.6.2-r1
 	dev-java/xalan
@@ -37,7 +37,7 @@ src_unpack() {
 	java-pkg_jar-from commons-logging
 	java-pkg_jar-from commons-httpclient commons-httpclient.jar commons-httpclient-2.0.jar
 	java-pkg_jar-from commons-collections
-	java-pkg_jar-from oro oro.jar jakarta-oro-2.0.8.jar
+	java-pkg_jar-from jakarta-oro-2.0 jakarta-oro.jar jakarta-oro-2.0.8.jar
 	java-pkg_jar-from jdom-1.0_beta9 jdom.jar jdom-b9.jar
 	java-pkg_jar-from xalan
 	java-pkg_jar-from xerces-2
