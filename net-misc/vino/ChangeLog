@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.21 2005/03/09 08:52:27 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.22 2005/03/10 02:25:42 gustavoz Exp $
+
+  09 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> vino-2.8.1.ebuild:
+  Stable on sparc
 
 *vino-2.10.0 (09 Mar 2005)
 
