@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.3.ebuild,v 1.2 2004/10/10 11:40:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.3.ebuild,v 1.3 2004/10/12 15:14:45 suka Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -19,9 +19,9 @@ HOMEPAGE="http://www.openoffice.org/"
 SRC_URI="x86? ( mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install.tar.gz ) \
 		 amd64? (mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install.tar.gz )"
 
-LICENSE="LGPL-2 | SISSL-1.1"
+LICENSE="|| ( LGPL-2  SISSL-1.1 )"
 SLOT="0"
-KEYWORDS="~x86 amd64"
+KEYWORDS="x86 amd64"
 IUSE="kde gnome"
 
 DEPEND="sys-apps/findutils
