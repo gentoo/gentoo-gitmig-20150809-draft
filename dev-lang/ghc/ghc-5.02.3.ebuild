@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.02.3.ebuild,v 1.8 2002/08/14 15:48:13 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.02.3.ebuild,v 1.9 2002/08/21 16:53:25 george Exp $
 
 
 # ebuild for Glorious Glasgow Haskell
@@ -153,12 +153,12 @@ src_unpack() {
 	if test x$boot_from_hc = xyes; then
 		# Patch GHC 4's hc-build script to check for GNU Make's name.
 		echo '>>> Patching stage 1 sources.'
-		bzcat ${FILESDIR}/ghc-${STAGE1_PV}-gentoo.patch | patch -d ${STAGE1_S} -p1 || die
+		bzcat ${FILESDIR}/ghc-${STAGE1_PV}-gentoo.patch.bz2 | patch -d ${STAGE1_S} -p1 || die
 	fi
 
 	# Patch GHC 5's configure script to recognize --without-happy
 	echo '>>> Patching stage 2/3 sources.'
-	bzcat ${FILESDIR}/ghc-${PV}-gentoo.patch | patch -d ${S} -p1 || die
+	bzcat ${FILESDIR}/ghc-${PV}-gentoo.patch.bz2 | patch -d ${S} -p1 || die
 
 	# Create our own lndir if none installed.
 	local LNDIR
