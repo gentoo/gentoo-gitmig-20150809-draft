@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.11 2002/09/11 20:45:19 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.12 2002/10/12 20:05:25 seemant Exp $
+
+*libsdl-1.2.5 (12 Oct 2002)
+
+  12 Oct 2002; Seemant Kulleen <seemant@gentoo.org> libsdl-1.2.5.ebuild
+  files/digest-libsdl-1.2.5 :
+
+  Version bump.  Ebuild submitted by: wongs15@tartarus.uwa.edu.au (Steven
+  Wong) in bug #8979
 
 *libsdl-1.2.3-r1 (16 Aug 2002)
 
