@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/m17n-db
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.12 2004/10/19 08:31:23 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.13 2004/12/12 03:45:09 weeve Exp $
+
+  11 Dec 2004; Jason Wever <weeve@gentoo.org> m17n-db-1.1.0.ebuild:
+  Stable on sparc.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> m17n-db-1.1.0.ebuild:
   Stable on amd64.
