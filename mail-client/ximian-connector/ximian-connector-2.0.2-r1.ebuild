@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-2.0.1.ebuild,v 1.2 2004/10/22 22:37:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-2.0.2-r1.ebuild,v 1.1 2004/12/03 16:09:21 liquidx Exp $
 
 inherit gnome2 eutils
 
@@ -12,11 +12,11 @@ SLOT="2.0"
 KEYWORDS="~x86 ~sparc"
 IUSE="debug doc"
 
-RDEPEND=">=mail-client/evolution-2
+RDEPEND=">=mail-client/evolution-2.0.2
 		>=dev-libs/glib-2.0
 		>=gnome-base/orbit-2.3
 		>=gnome-base/gconf-2.0
-		>=net-libs/libsoup-2.2
+		>=net-libs/libsoup-2.2.1
 		>=gnome-base/libglade-2.0
 		>=gnome-base/libgnomeui-2.0
 		>=gnome-base/libbonobo-2.0
@@ -34,5 +34,6 @@ USE_DESTDIR="1"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}; epatch ${FILESDIR}/${P}-exchange2003.patch
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-exchange_auth.patch
 }

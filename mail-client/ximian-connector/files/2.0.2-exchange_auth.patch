@@ -1,0 +1,11 @@
+--- storage/exchange-account.c.orig	2004-10-11 01:21:46.000000000 -0400
++++ storage/exchange-account.c	2004-10-27 17:37:02.328080687 -0400
+@@ -1507,7 +1507,7 @@
+ 	 */
+ 	account->priv->password_key = g_strdup_printf ("exchange://%s", account->priv->uri_authority);
+ 
+-	account->priv->username = g_strdup (uri->user);
++	account->priv->username = g_strconcat (uri->domain, "\\", uri->user, 0);
+ 	account->exchange_server = g_strdup (uri->host);
+ 	if (uri->authmech && !strcmp (uri->authmech, "Basic"))
+ 		account->priv->auth_pref = E2K_AUTOCONFIG_USE_BASIC;
