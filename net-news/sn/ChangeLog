@@ -1,6 +1,9 @@
 # ChangeLog for net-news/sn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/sn/ChangeLog,v 1.8 2004/07/22 01:27:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/sn/ChangeLog,v 1.9 2004/07/30 00:23:30 swegener Exp $
+
+  30 Jul 2004; Sven Wegener <swegener@gentoo.org> -sn-0.3.6.ebuild:
+  Removed old ebuild.
 
   22 Jul 2004; Sven Wegener <swegener@gentoo.org> sn-0.3.7.ebuild:
   Marked stable on x86.
