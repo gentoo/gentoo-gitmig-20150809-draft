@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0_pre4-r2.ebuild,v 1.4 2002/07/14 20:25:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0_pre4-r2.ebuild,v 1.5 2002/07/17 01:40:22 seemant Exp $
 
 NV=6.0-20020110.2-shared_qt.i386
 S=${WORKDIR}/opera-${NV}
@@ -9,6 +9,7 @@ SRC_URI="ftp://ftp.opera.com/pub/opera/linux/600/tp3/opera-${NV}.tar.gz"
 HOMEPAGE="http://www.opera.com"
 SLOT="0"
 KEYWORDS="x86"
+LICENSE="OPERA"
 
 DEPEND="=x11-libs/qt-2*
 	=media-libs/libpng-1.0.12*"

@@ -1,15 +1,16 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0.ebuild,v 1.6 2002/07/14 20:25:23 aliz Exp $
-
-DESCRIPTION="Opera web browser, version 6.0 Final."
-HOMEPAGE="http://www.opera.com"
-SLOT="0"
-KEYWORDS="x86"
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0.ebuild,v 1.7 2002/07/17 01:40:22 seemant Exp $
 
 NV=6.0-20020510.2-shared-qt.i386
 S=${WORKDIR}/opera-${NV}
+DESCRIPTION="Opera web browser, version 6.0 Final."
+HOMEPAGE="http://www.opera.com"
 SRC_URI="http://www.panix.com/opera/files/linux/600/final/en/qt_shared/opera-${NV}.tar.bz2"
+
+SLOT="0"
+KEYWORDS="x86"
+LICENSE="OPERA"
 
 DEPEND="=x11-libs/qt-2*
 	=media-libs/libpng-1.0.12*"

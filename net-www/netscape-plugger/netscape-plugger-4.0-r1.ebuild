@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/netscape-plugger-4.0-r1.ebuild,v 1.5 2002/07/14 20:25:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/netscape-plugger-4.0-r1.ebuild,v 1.6 2002/07/17 01:40:22 seemant Exp $
 
 MYP=${P#netscape-}-linux-x86-glibc
 S=${WORKDIR}/plugger-4.0
@@ -9,6 +9,7 @@ SRC_URI="http://fredrik.hubbe.net/plugger/"${MYP}.tar.gz
 HOMEPAGE="http://fredrik.hubbe.net/plugger.html"
 SLOT="0"
 KEYWORDS="x86"
+LICENSE="GPL-2"
 
 src_install() {                               
 	cd ${S}
@@ -28,5 +29,6 @@ src_install() {
 		dosym /opt/netscape/plugins/plugger.so \
 			/usr/lib/mozilla/plugins/plugger.so
 	fi
-  
+ 	
+	dodoc README
 }
