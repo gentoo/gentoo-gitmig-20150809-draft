@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.6.3.ebuild,v 1.2 2005/03/31 23:19:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.6.4.ebuild,v 1.1 2005/03/31 23:19:53 foser Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 IUSE="jpeg tiff png gphoto2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 # FIXME : configure switches, no autodetection
 
@@ -41,3 +41,12 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
 
 USE_DESTDIR="1"
+
+src_unpack() {
+
+	unpack ${A}
+
+	rm ${S}/components/catalog-view/*.server
+	rm ${S}/components/image-viewer/*.server
+
+}
