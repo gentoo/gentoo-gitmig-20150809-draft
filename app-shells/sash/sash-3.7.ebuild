@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.7.ebuild,v 1.8 2004/06/29 03:58:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.7.ebuild,v 1.9 2004/08/19 02:37:34 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.canb.auug.org.au/~dbell/programs/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa amd64 ia64 ~ppc64 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips alpha arm ~hppa amd64 ia64 ~ppc64 s390"
 IUSE="readline"
 
 DEPEND="virtual/libc
