@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <agenkin@gentoo.org> (10 Jul 2003)
+# xmms-aalsa package is permanently removed (bug #6797)
+media-plugins/xmms-aalsa
+
 # <liquidx@gentoo.org> (03 Jul 2003)
 # python with db4 support and threads enabled
 #=dev-lang/python-2.2.3-r1
