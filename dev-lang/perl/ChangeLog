@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.88 2004/09/27 17:53:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.89 2004/09/28 08:50:52 mcummings Exp $
+
+  28 Sep 2004; Michael Cummings <mcummings@gentoo.org> perl-5.8.2-r1.ebuild,
+  perl-5.8.3.ebuild, perl-5.8.4-r1.ebuild, perl-5.8.4.ebuild,
+  perl-5.8.5.ebuild:
+  Added back perlsuid/sperl based on local use flag. Bug 64823. Users should
+  read http://perldoc.com/perl5.8.4/INSTALL.html#suidperl before enabling.
 
   27 Sep 2004; Mike Frysinger <vapier@gentoo.org> perl-5.8.2-r1.ebuild,
   perl-5.8.3.ebuild, perl-5.8.4-r1.ebuild, perl-5.8.4.ebuild,

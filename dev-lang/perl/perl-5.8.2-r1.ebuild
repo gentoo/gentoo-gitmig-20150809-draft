@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.2-r1.ebuild,v 1.21 2004/09/27 17:53:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.2-r1.ebuild,v 1.22 2004/09/28 08:50:52 mcummings Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -17,7 +17,7 @@ SLOT="0"
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 LICENSE="Artistic GPL-2"
 KEYWORDS="x86 amd64 sparc ppc alpha mips hppa ia64 ppc64"
-IUSE="berkdb debug doc gdbm ithreads uclibc"
+IUSE="berkdb debug doc gdbm ithreads perlsuid uclibc"
 
 DEPEND="!uclibc? ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
@@ -151,6 +151,14 @@ src_compile() {
 		CFLAGS="${CFLAGS} -g"
 	fi
 
+	if use perlsuid
+	then
+		myconf="${myconf} -Dd_dosuid"
+		ewarn "You have enabled Perl's suid compile. Please"
+		ewarn "read http://perldoc.com/perl5.8.2/INSTALL.html#suidperl"
+		epause 3
+	fi
+
 	if use sparc
 	then
 		myconf="${myconf} -Ud_longdbl"
@@ -180,7 +188,6 @@ src_compile() {
 		-Dlocincpth=' ' \
 		-Doptimize="${CFLAGS}" \
 		-Duselargefiles \
-		-Dd_dosuid \
 		-Dd_semctl_semun \
 		-Dscriptdir=/usr/bin \
 		-Dman3ext='3pm' \
