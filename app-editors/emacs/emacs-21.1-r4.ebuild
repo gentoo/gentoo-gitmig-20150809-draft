@@ -1,8 +1,8 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Mikael Hallendal <micke@hallendal.net>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.1-r4.ebuild,v 1.1 2002/04/12 21:05:14 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.1-r4.ebuild,v 1.2 2002/04/12 22:39:21 seemant Exp $
 
 
 S=${WORKDIR}/${P}
@@ -28,39 +28,37 @@ PROVIDE="virtual/emacs"
 
 src_compile() {
 	local myconf
+	
+	use nls	\
+		|| myconf="${myconf} --disable-nls"
 
-	if [ -z "`use nls`" ] ; then
-		myconf="${myconf} --disable-nls"
-	fi 
-
-	if [ "`use X`" ] ; then
-		myconf="${myconf} \
+	use X	\
+		&& myconf="${myconf} \
 			--with-x \
 			--with-xpm \
 			--with-jpeg \
 			--with-tiff \
 			--with-gif \
-			--with-png"
-	else
-		myconf="${myconf} --without-x"
-	fi
+			--with-png"	\
+		|| myconf="${myconf} --without-x"
 
-	if [ "`use motif`" ] ; then
-		myconf="${myconf} --with-x-toolkit=motif"
-	fi
+	use motif	\
+		&& myconf="${myconf} --with-x-toolkit=motif"
 
-	./configure	--host=${CHOST} \
-			--prefix=/usr \
-			--libexecdir=/usr/lib \
-			--mandir=/usr/share/man \
-			--infodir=/usr/share/info \
-			${myconf} || die
+	./configure		\
+		--host=${CHOST} \
+		--prefix=/usr \
+		--libexecdir=/usr/lib \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
+		${myconf} || die
 
 	emake || die
 }
 
 src_install () {
-	make 	prefix=${D}/usr \
+	make 	\
+		prefix=${D}/usr \
 		libexecdir=${D}/usr/lib \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
