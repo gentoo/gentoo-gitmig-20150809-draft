@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4-r2.ebuild,v 1.3 2005/02/05 19:30:35 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4-r2.ebuild,v 1.4 2005/02/11 12:34:23 mcummings Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -375,24 +375,45 @@ pkg_postinst() {
 		ln -snf libperl.so.${PERLSLOT} ${ROOT}usr/lib/libperl.so
 	fi
 
+	INC=$(perl -e 'for $line (@INC) { next if $line eq "."; next if $line =~ m/'${PV}'|etc|local|perl$/; print "$line\n" }')
 	if [ "${ROOT}" = "/" ]
 	then
+		ebegin "Removing old .ph files"
+		for DIR in $INC; do
+			if [ -d ${ROOT}/$DIR ]; then
+				for file in $(find ${ROOT}/$DIR -name "*.ph" -type f); do
+					rm ${ROOT}/$file
+					einfo "<< $file"
+				done
+			fi
+		done
 		ebegin "Converting C header files to the corresponding Perl format"
 		cd /usr/include;
 		h2ph * sys/* arpa/* netinet/* bits/* security/* asm/* gnu/* linux/*
 		cd /usr/include/linux;
 		h2ph *
 	fi
+# This has been moved into a function because rumor has it that a future release
+# of portage will allow us to check what version was just removed - which means
+# we will be able to invoke this only as needed :)
 
-	eerror ""
-	eerror "If this is an upgrade to a perl 5.6.1 system,"
-	eerror "~OR~ an upgrade to a previous Gentoo release"
-	eerror "of perl 5.8.0, prior to -r8 "
-	eerror "you may need to recompile applications that"
-	eerror "were emerged against the old libperl.so"
-	eerror ""
+	# Tried doing this via  -z, but $INC is too big...
+	if [ "${INC}x" != "x" ]; then
+		cleaner_msg
+		epause 10
+	fi
+
+}
+
+cleaner_msg() {
+	eerror "You have changed versions of perl. It is recommended"
+	eerror "that you run"
 	eerror "${FILESDIR}/perl-cleaner "
-	eerror "is provided to assist with this. "
+	eerror "to assist with this transition. This script is capable"
+	eerror "of cleaning out old .ph files, rebuilding modules for "
+	eerror "your new version of perl, as well as re-emerging"
+	eerror "applications that compiled against your old libperl.so"
+	eerror
 	eerror "PLEASE DO NOT INTERRUPT THE RUNNING OF THIS SCRIPT."
 	eerror "Part of the rebuilding of applications compiled against "
 	eerror "your old libperl involves temporarily unmerging"
@@ -405,4 +426,5 @@ pkg_postinst() {
 	eerror "for more information or to report a bug."
 	eerror ""
 	eerror ""
+
 }
