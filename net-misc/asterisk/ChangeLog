@@ -2,6 +2,9 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+  30 Nov 2003; Brandy Westcott brandy@gentoo.org asterisk-0.2.0.ebuild:
+  Pinned emake to -j1. Closes bug #34642.
+
   03 Oct 2003; Seemant Kulleen <seemant@gentoo.org> asterisk-0.2.0.ebuild:
   from an email from the asterisk upstream authors, this package is actually
   GPL-2, and NOT BSD. Apologies to them for this oversight. Thanks, in

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.2.0.ebuild,v 1.6 2003/10/03 07:17:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.2.0.ebuild,v 1.7 2003/11/30 00:22:53 brandy Exp $
 
 IUSE="doc"
 
@@ -19,7 +19,7 @@ DEPEND="virtual/glibc
 
 src_compile() {
 
-	emake || die
+	emake -j1 || die
 
 	# One small error in Makefile
 	sed -i 's:mkdir -p /etc/asterisk:mkdir -p $(INSTALL_PREFIX)/etc/asterisk:' \
