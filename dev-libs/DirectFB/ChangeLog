@@ -1,7 +1,14 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.8 2002/04/27 00:36:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.9 2002/05/26 14:05:33 azarah Exp $
 
+*DirectFB-0.9.10-r1 (26 Apr 2002)
+
+  26 May 2002; Martin Schlemmer <azarah@gentoo.org> DirectFB-0.9.10-r1.ebuild :
+
+  Having "mmx" in use did not enable it .. fixed.  Updated avifile DEPEND
+  for now ... this will be needed when I can get it patched to work with
+  avifile-0.7.4.
 
 *DirectFB-0.9.10 (26 Apr 2002)
 

@@ -1,18 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r5.ebuild,v 1.2 2002/05/23 06:50:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r6.ebuild,v 1.1 2002/05/26 14:05:33 azarah Exp $
 
 PLO_VER="$(echo ${PV} | sed -e "s:\.::g")"
 S=${WORKDIR}/${P}
 DESCRIPTION="X MultiMedia System"
-SRC_URI="ftp://ftp.xmms.org/xmms/1.2.x/${P}.tar.gz
-	avi? ( http://www.openface.ca/~nephtes/plover-xmms${PLO_VER}.tar.gz )"
+SRC_URI="ftp://ftp.xmms.org/xmms/1.2.x/${P}.tar.gz"
+# This if for the Plover patch
+#	avi? ( http://www.openface.ca/~nephtes/plover-xmms${PLO_VER}.tar.gz )"
 HOMEPAGE="http://www.xmms.org/"
 
 RDEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/libmikmod-3.1.9
-	avi? ( >=media-video/avifile-0.7.4.20020426 )
+	avi? ( >=media-video/avifile-0.7.4.20020426-r2 )
 	esd? ( >=media-sound/esound-0.2.22 )
 	xml? ( >=dev-libs/libxml-1.8.15 )
 	gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 )
@@ -27,14 +28,19 @@ src_unpack() {
 	unpack ${P}.tar.gz
 
 	cd ${S}
-	
-	use avi	&& (\
-		tar -zxf ${DISTDIR}/plover-xmms${PLO_VER}.tar.gz || die
-		cp plover-xmms${PLO_VER}.diff plover-xmms${PLO_VER}.diff.orig || die
-		sed -e "s:avifile-config:avifile-config0.7:g" \
-			plover-xmms${PLO_VER}.diff.orig >plover-xmms${PLO_VER}.diff
-		patch -p1 <plover-xmms${PLO_VER}.diff || die
-	)
+
+	# For plugins such as avi4xmms, xmms needs to be linked to libavifile
+	# and libstdcxx.
+	use avi && patch -p1 <${FILESDIR}/${P}-enable-avifile-plugins.patch || die
+
+# This is for the Plover patch
+#	use avi	&& (\
+#		tar -zxf ${DISTDIR}/plover-xmms${PLO_VER}.tar.gz || die
+#		cp plover-xmms${PLO_VER}.diff plover-xmms${PLO_VER}.diff.orig || die
+#		sed -e "s:avifile-config:avifile-config0.7:g" \
+#			plover-xmms${PLO_VER}.diff.orig >plover-xmms${PLO_VER}.diff
+#		patch -p1 <plover-xmms${PLO_VER}.diff || die
+#	)
 }
 
 src_compile() {

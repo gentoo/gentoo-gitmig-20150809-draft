@@ -1,6 +1,13 @@
 # ChangeLog for media-video/drip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/ChangeLog,v 1.4 2002/05/19 19:03:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/ChangeLog,v 1.5 2002/05/26 14:05:33 azarah Exp $
+
+*drip-0.8.1-r3 (26 May 2002)
+
+  26 May 2002; M.Schlemmer <azarah@gentoo.org> drip-0.8.1-r3.ebuild :
+
+  Make it depend on latest avifile, and remove the patches for
+  the suffix that was added to avifile-config.
 
 *drip-0.8.1-r2 (19 May 2002)
 
