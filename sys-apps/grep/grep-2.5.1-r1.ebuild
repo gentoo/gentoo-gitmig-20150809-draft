@@ -1,18 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.13 2003/10/01 14:26:44 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.14 2003/11/02 07:28:32 seemant Exp $
 
 inherit gnuconfig flag-o-matic
 
+IUSE="nls build"
+
 DESCRIPTION="GNU regular expression matcher"
 HOMEPAGE="http://www.gnu.org/software/grep/grep.html"
-SRC_URI="ftp://prep.ai.mit.edu/gnu/${PN}/${P}.tar.gz
-	ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
+SRC_URI="http://ftp.club.cc.cmu.edu/pub/gnu/${PN}/${P}.tar.gz
+	mirror://gentoo/${P}.tar.gz
+	mirror://gnu/${PN}/${P}.tar.gz"
 
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm ia64"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="nls build"
+KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm ia64"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )"

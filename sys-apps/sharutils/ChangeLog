@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sharutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/ChangeLog,v 1.10 2003/03/11 06:25:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/ChangeLog,v 1.11 2003/11/02 07:30:27 seemant Exp $
+
+  01 Nov 2003; Seemant Kulleen <seemant@gentoo.org> sharutils-4.2.1-r6.ebuild:
+  point SRC_URI to gentoo mirrors first closing bug #32520 by Stony Yakovac
+  <stonyy@tek.com>
 
 *sharutils-4.2.1-r6 (10 Mar 2003)
 
