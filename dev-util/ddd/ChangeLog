@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ddd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.22 2004/07/07 16:28:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.23 2004/08/23 01:22:58 tgall Exp $
+
+  22 Aug 2004; Tom Gall <tgall@gentoo.org> ddd-3.3.9.ebuild:
+  stable on ppc64, bug #58188
 
 *ddd-3.3.9 (07 Jul 2004)
 
