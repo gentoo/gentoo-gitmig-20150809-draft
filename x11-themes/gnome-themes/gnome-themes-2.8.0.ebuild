@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.8.0.ebuild,v 1.6 2004/11/12 03:03:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.8.0.ebuild,v 1.7 2004/11/29 07:53:10 obz Exp $
 
 # FIXME : the engines in here should probably be disabled and done in seperate ebuilds
 
@@ -24,7 +24,7 @@ RDEPEND=">=x11-libs/gtk+-2
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.29
-	!x11-theme/gtk-themes"
+	!x11-themes/gtk-themes"
 
 G2CONF="${G2CONF} $(use_enable accessibility all-themes)"
 DOCS="AUTHORS COPYING README INSTALL NEWS ChangeLog"
