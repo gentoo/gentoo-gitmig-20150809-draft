@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1.ebuild,v 1.9 2004/06/25 02:07:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1.ebuild,v 1.10 2004/07/09 20:28:54 kloeri Exp $
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P}
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/incrtcl/${MY_P}.tar.gz
 HOMEPAGE="http://incrtcl.sourceforge.net/itcl/"
 SLOT="0"
 LICENSE="as-is BSD"
-KEYWORDS="x86 ~ppc sparc ~amd64"
+KEYWORDS="x86 ~ppc sparc ~amd64 ~alpha"
 DEPEND=">=dev-tcltk/itcl-3.2.1"
 PDEPEND="dev-tcltk/iwidgets"
 
