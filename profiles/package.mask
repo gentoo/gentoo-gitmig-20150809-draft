@@ -21,6 +21,13 @@
 ##   End example
 ##
 
+
+# <spider@gentoo.org> (26 Aug 2002)
+# Masked for testing -- tore out the broken id3lib included and
+# added the final + patches to make it work
+# needs testing on 2.95.3
+=media-sound/audacity-1.0.0-r2
+
 # <seemant@gentoo.org> (26 Aug 2002)
 # Masked for testing -- put into portage because the current version 
 # has a buggy od
