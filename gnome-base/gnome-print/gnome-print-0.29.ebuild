@@ -9,12 +9,13 @@ DESCRIPTION="gnome-print"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/"${A}
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND="nls? ( sys-devel/gettext ) sys-devel/perl
-	>=gnome-base/gdk-pixbuf-0.9.0
+DEPEND="nls? ( sys-devel/gettext ) 
+        sys-devel/perl
+	>=media-libs/gdk-pixbuf-0.9.0
 	>=gnome-base/libglade-0.13
         >=app-text/ghostscript-6.50-r2"
 
-RDEPEND=">=gnome-base/gdk-pixbuf-0.9.0
+RDEPEND=">=media-libs/gdk-pixbuf-0.9.0
 	 >=gnome-base/libglade-0.13"
 
 

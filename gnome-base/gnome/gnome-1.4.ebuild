@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-1.4.ebuild,v 1.4 2001/06/14 23:03:59 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-1.4.ebuild,v 1.5 2001/07/29 10:32:15 hallski Exp $
 
 A=""
 S=${WORKDIR}
@@ -13,7 +13,6 @@ DEPEND="=gnome-base/gnome-env-1.0
         =gnome-base/libxml-1.8.13
         =gnome-base/oaf-0.6.5
         =gnome-base/gnome-libs-1.2.13
-        =gnome-base/gdk-pixbuf-0.11.0
         =gnome-base/gnome-print-0.29
         =gnome-base/control-center-1.4.0.1
 	=gnome-base/gnome-vfs-1.0.1
@@ -29,7 +28,8 @@ DEPEND="=gnome-base/gnome-env-1.0
         =gnome-libs/medusa-0.5.1
         =gnome-apps/nautilus-1.0.3
         =gnome-base/gnome-applets-1.4.0.1
-        =gnome-base/scrollkeeper-0.2"
+        =gnome-base/scrollkeeper-0.2
+        =media-libs/gdk-pixbuf-0.11.0"
 
 src_install() {
 	dosym gnome-session /opt/gnome/bin/gnome
