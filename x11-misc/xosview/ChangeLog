@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xosview
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.13 2004/09/06 19:16:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.14 2004/10/03 16:55:13 kloeri Exp $
+
+  03 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> xosview-1.8.2.ebuild:
+  Stable on alpha.
 
   06 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> xosview-1.8.2.ebuild:
   Stable on sparc
