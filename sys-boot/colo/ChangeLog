@@ -1,0 +1,10 @@
+# ChangeLog for sys-boot/colo
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.1 2004/04/05 07:49:06 kumba Exp $
+
+*colo-1.4 (05 Apr 2004)
+
+  05 Apr 2004; Joshua Kinard <kumba@gentoo.org> colo-1.4.ebuild,
+  files/colo-1.4-gentoo.patch files/default.boot.example:
+  Initial import of a modern bootloader for Cobalt MIPS systems
+

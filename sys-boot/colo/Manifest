@@ -1,0 +1,6 @@
+MD5 2b00b89b8df12875085e6bfb2524a632 colo-1.4.ebuild 3326
+MD5 821bbe104fd36eab5f08495277bc5adb metadata.xml 364
+MD5 7eca1d5456c8a526fef159421d5947de ChangeLog 420
+MD5 c1b257fb8b0e15a8f27cbef798f5aede files/colo-1.4-gentoo.patch 2631
+MD5 7c11a1ef9a1547e23ae00c09ef797d11 files/digest-colo-1.4 63
+MD5 6a9e242bf3b159c4ead248ff40151b32 files/default.boot.example 9

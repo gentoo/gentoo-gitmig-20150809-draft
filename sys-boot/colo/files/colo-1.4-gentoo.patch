@@ -1,0 +1,81 @@
+diff -Naurp boot-loader-1.4.orig/chain/Makefile boot-loader-1.4/chain/Makefile
+--- boot-loader-1.4.orig/chain/Makefile	2004-03-28 16:48:37.000000000 -0500
++++ boot-loader-1.4/chain/Makefile	2004-04-03 03:06:52.337184944 -0500
+@@ -12,7 +12,7 @@ OBJS=	chain.o\
+ 		serial.o\
+ 		start.o\
+ 
+-MIPSFLAGS= -mno-abicalls -fno-pic -EL -mips2 -mcpu=r5000
++MIPSFLAGS= -mno-abicalls -fno-pic -G 0 -mips4 -mabi=32 -mtune=r5000
+ 
+ CFLAGS= -Wall -Wstrict-prototypes -fomit-frame-pointer -O2 -fno-builtin -nostdlib $(MIPSFLAGS)
+ ASFLAGS= $(MIPSFLAGS)
+diff -Naurp boot-loader-1.4.orig/chain/src/start.S boot-loader-1.4/chain/src/start.S
+--- boot-loader-1.4.orig/chain/src/start.S	2004-03-28 16:25:38.000000000 -0500
++++ boot-loader-1.4/chain/src/start.S	2004-04-03 03:37:01.898089872 -0500
+@@ -18,7 +18,7 @@
+ 
+ _start:			la	sp, __stack - 16
+ 			lui	gp, %hi(_gp)
+-			bal	chain
++			jal	chain
+ 			 addiu	gp, %lo(_gp)
+ 
+ 			b	.
+diff -Naurp boot-loader-1.4.orig/stage1/Makefile boot-loader-1.4/stage1/Makefile
+--- boot-loader-1.4.orig/stage1/Makefile	2004-03-28 11:06:07.000000000 -0500
++++ boot-loader-1.4/stage1/Makefile	2004-04-03 03:07:24.047364264 -0500
+@@ -15,7 +15,7 @@ OBJS=	init.o\
+ 		fast.o\
+ 		start.o\
+ 
+-MIPSFLAGS= -mno-abicalls -fno-pic -EL -mips2 -mcpu=r5000
++MIPSFLAGS= -mno-abicalls -fno-pic -G 0 -mips4 -mabi=32 -mtune=r5000
+ 
+ CFLAGS= -Wall -Wstrict-prototypes -fomit-frame-pointer -O2 -fno-builtin -nostdlib $(MIPSFLAGS)
+ ASFLAGS= $(MIPSFLAGS)
+diff -Naurp boot-loader-1.4.orig/stage1/src/start.S boot-loader-1.4/stage1/src/start.S
+--- boot-loader-1.4.orig/stage1/src/start.S	2004-03-28 11:06:07.000000000 -0500
++++ boot-loader-1.4/stage1/src/start.S	2004-04-03 03:35:24.893836760 -0500
+@@ -16,16 +16,16 @@
+ 
+ 			la	sp, __stack - 16
+ 			lui	gp, %hi(_gp)
+-			bal	cpu_init
++			jal	cpu_init
+ 			 addiu	gp, %lo(_gp)
+ 
+-			bal	stage1
++			jal	stage1
+ 			 nop
+ 
+-			bal	loader
++			jal	loader
+ 			 subu	sp, v0, 16
+ 
+-			b	fatal
++			j	fatal
+ 			 nop
+ 
+ 			.org	0x200
+@@ -36,7 +36,7 @@
+ 
+ 1:			la	sp, __stack - 16
+ 			lui	gp, %hi(_gp)
+-			b	exception
++			j	exception
+ 			 addiu	gp, %lo(_gp)
+ 
+ 			.org	0x280
+diff -Naurp boot-loader-1.4.orig/stage2/Makefile boot-loader-1.4/stage2/Makefile
+--- boot-loader-1.4.orig/stage2/Makefile	2004-03-28 14:30:52.000000000 -0500
++++ boot-loader-1.4/stage2/Makefile	2004-04-03 03:07:39.687986528 -0500
+@@ -32,7 +32,7 @@ OBJS=	main.o\
+ 		launch.o\
+ 		start.o\
+ 
+-MIPSFLAGS= -mno-abicalls -fno-pic -EL -mips2 -mcpu=r5000
++MIPSFLAGS= -mno-abicalls -fno-pic -G 0 -mips4 -mabi=32 -mtune=r5000
+ 
+ CFLAGS= -Wall -Wstrict-prototypes -fomit-frame-pointer -O2 -fno-builtin -nostdlib $(MIPSFLAGS)
+ ASFLAGS= $(MIPSFLAGS)
