@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/python-mode
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.7 2004/11/11 10:29:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.8 2004/12/03 04:32:37 usata Exp $
+
+*python-mode-4.63-r1 (03 Dec 2004)
+
+  03 Dec 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/55python-mode-gentoo.el, +python-mode-4.63-r1.ebuild:
+  Fixed pycomplete.py. Thanks to Nick Savchenko <rust@voliacable.com>;
+  bug #72712.
 
 *python-mode-4.63 (11 Nov 2004)
 
