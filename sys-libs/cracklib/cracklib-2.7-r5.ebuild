@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r3.ebuild,v 1.1 2002/03/17 22:55:24 azarah Exp
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r5.ebuild,v 1.2 2002/05/11 07:41:54 pvdabeel Exp $
 
 S=${WORKDIR}/cracklib,${PV}
 DESCRIPTION="Cracklib"
