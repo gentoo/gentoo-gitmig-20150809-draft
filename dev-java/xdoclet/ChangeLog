@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/xdoclet
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.1 2002/12/21 07:06:13 mkennedy Exp $
+
+*xdoclet-1.2.0_beta1 (20 Dec 2002)
+
+  20 Dec 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  xdoclet-1.2.0_beta1.ebuild, files/digest-xdoclet-1.2.0_beta1 :
+
+  Initial import.
+
