@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/bsdiff
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.6 2004/07/18 19:14:24 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.7 2004/11/10 23:01:10 ferringb Exp $
+
+  10 Nov 2004; Brian Harring <ferringb@gentoo.org> bsdiff-4.1.ebuild,
+  bsdiff-4.2.ebuild: Version bump, and a correction of the HOMEPAGE.
+  Thanks to David Morgan for the notice- bug #70714.
 
   18 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> bsdiff-4.1.ebuild:
   Stable on sparc at ferringb's request
