@@ -1,6 +1,19 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.29 2004/11/22 20:05:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.30 2004/11/22 20:14:05 mrness Exp $
+
+  22 Nov 2004; Alin Nastac <mrness@gentoo.org> -files/local.start,
+  -files/3.2_p1-r4/config, -files/3.2_p1-r4/pathfix.patch,
+  -files/3.2_p1-r4/vbox-makefile.am.patch, -files/3.5_p20041024/config,
+  -files/3.5_p20041024/gentoo.patch, -files/3.5_p20041024/ioptions,
+  -files/3.5_p20041024/ip-down, -files/3.5_p20041024/ip-up,
+  -files/3.5_p20041024/isdn4linux.conf, -files/3.5_p20041024/isdn4linux.init,
+  -files/3.5_p20041024/net.ippp0, -files/3.5_p20041024/options.ippp0,
+  -files/3.5_p20041024/pathfix.patch,
+  -files/3.5_p20041024/vbox-makefile.am.patch, -isdn4k-utils-3.2_p1-r3.ebuild,
+  -isdn4k-utils-3.2_p1-r4.ebuild, -isdn4k-utils-3.5_p20041024-r1.ebuild,
+  -isdn4k-utils-3.5_p20041024.ebuild:
+  Remove obsolete testing ebuilds. Now vbox3 has its own ebuild.
 
 *isdn4k-utils-3.5_pre20041110 (22 Nov 2004)
 
