@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r5.ebuild,v 1.6 2002/09/11 20:05:23 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11-r5.ebuild,v 1.7 2002/09/25 16:09:59 blizzy Exp $
 
-POSTFIX_TLS_VER="0.8.11a-${PV}-0.9.6d"
+POSTFIX_TLS_VER="0.8.11a-${PV}-0.9.6g"
 S=${WORKDIR}/${P}
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"

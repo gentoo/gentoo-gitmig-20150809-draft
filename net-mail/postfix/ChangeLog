@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.38 2002/09/23 13:15:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.39 2002/09/25 16:09:59 blizzy Exp $
+
+  25 Sep 2002; Maik Schreiber <blizzy@gentoo.org>
+  postfix-1.1.11-r5.ebuild, files/digest-postfix-1.1.11-r5:
+  Fixed URL of TLS patch.
 
 *postfix-1.1.11.20020917 (19 Sep 2002)
 
