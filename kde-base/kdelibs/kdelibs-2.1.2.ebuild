@@ -2,8 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.2.ebuild,v 1.3 2001/06/07 01:45:52 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.2.ebuild,v 1.9 2001/09/29 21:03:26 danarmak Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.1.2.ebuild,v 1.10 2002/03/24 22:05:28 danarmak Exp $
 
 V=2.1
 A=${P}.tar.bz2

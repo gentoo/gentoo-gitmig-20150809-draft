@@ -1,8 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.3 2002/03/21 11:57:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.4 2002/03/24 22:05:28 danarmak Exp $
 
-*kdelibs-2.2.2-r3 (21 Mar 2002)
+*kdelibs-2.2.2-r4 (24 Mar 2002)
+
+  24 Mar 2002; Dan Armak <danarmak@gentoo.org> changelog:
+  
+  Split the env.d file into two, so that when both ked2 and kde3 are installed,
+  the KDEDIR of kde3 gets exported (was the other way around till now).
 
   21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> kdelibs-2.2.2-r3.ebuild :
 
