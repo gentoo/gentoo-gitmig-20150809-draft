@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.43 2004/09/10 02:34:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.44 2004/12/05 00:18:36 mr_bones_ Exp $
+
+  04 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  DirectFB-0.9.20-r1.ebuild:
+  use emake (bug #72199)
 
   09 Sep 2004; Mike Frysinger <vapier@gentoo.org> DirectFB-0.9.20-r1.ebuild,
   -DirectFB-0.9.20.ebuild:

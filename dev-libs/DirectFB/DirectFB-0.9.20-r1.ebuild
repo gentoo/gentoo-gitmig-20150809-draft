@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.20-r1.ebuild,v 1.2 2004/09/10 02:34:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.20-r1.ebuild,v 1.3 2004/12/05 00:18:36 mr_bones_ Exp $
 
 inherit eutils 64-bit flag-o-matic gcc
 
@@ -96,7 +96,7 @@ src_compile() {
 	fi
 
 	# add extra -lstdc++ so libpng/libflash link correctly
-	make CPPFLAGS="${mycppflags}" LDFLAGS="${LDFLAGS} -lstdc++" || die
+	emake CPPFLAGS="${mycppflags}" LDFLAGS="${LDFLAGS} -lstdc++" || die
 }
 
 src_install() {
