@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.1.20020604.ebuild,v 1.1 2002/06/05 19:14:09 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.1.20020604.ebuild,v 1.2 2002/06/08 16:24:44 danarmak Exp $
 
 inherit kde-patch kde-dist
 
@@ -19,14 +19,15 @@ newdepend ">=sys-libs/ncurses-5.2
 	app-cdr/cdrtools
 	>=app-cdr/cdrdao-1.1.5
 	>=media-sound/mpg123-0.59r
-	tcltk? ( >=dev-lang/tcl-tk.8.0.5-r2 )
-	alsa? ( >=media-libs/alsa-lib-0.5.9 )"
+	tcltk? ( >=dev-lang/tcl-tk.8.0.5-r2 )"
+#	alsa? ( >=media-libs/alsa-lib-0.5.9 )"
 
 myaudio="--enable-audio=oss"
 myinterface="--enable-interface=xaw,ncurses"
 myconf="$myconf --enable-xaw --enable-ncurses"
 
-use alsa	&& myconf="$myconf --with-alsa --with-arts-alsa" && myaudio="$myaudio,alsa"|| myconf="$myconf --without-alsa --disable-alsa"
+#use alsa	&& myconf="$myconf --with-alsa --with-arts-alsa" && myaudio="$myaudio,alsa" ||
+myconf="$myconf --without-alsa --disable-alsa"
 use nas		&& myaudio="$myaudio,nas"					|| myconf="$myconf --disable-nas"
 use esd		&& myaudio="$myaudio,esd"					|| myconf="$myconf --disable-esd"
 use motif	&& myinterface="$myinterface,motif" && myconf="$myconf --enable-motif"
