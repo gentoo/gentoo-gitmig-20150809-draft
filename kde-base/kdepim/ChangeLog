@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.32 2003/03/19 15:55:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.33 2003/04/08 19:58:09 hannes Exp $
+
+*kdepim-3.0.5b (08 Apr 2003)
+
+  08 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdepim-3.0.5b.ebuild:
+  version bump
 
 *kdepim-3.1.1 (14 Mar 2003)
 

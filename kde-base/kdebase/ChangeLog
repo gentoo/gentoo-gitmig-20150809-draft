@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.69 2003/04/01 20:28:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.70 2003/04/08 19:58:08 hannes Exp $
+
+*kdebase-3.0.5b (08 Apr 2003)
+
+  08 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdebase-3.0.5b.ebuild,
+  files/3.0.5b/kdebase-3.0.5b-xft2.0-fix.diff,
+  files/3.0.5b/kdebase-3.0.5b-xft_h-fix.diff,
+  files/3.0.5b/startkde-3.0.5b-gentoo.diff:
+  version bump
 
   01 Apr 2003; danrmaak <danarmak@gentoo.org> kdebase-3.1.1-r1.ebuild:
   Added stable x86 keyword.
