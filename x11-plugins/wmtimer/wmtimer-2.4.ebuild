@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.4.ebuild,v 1.15 2004/09/02 18:22:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.4.ebuild,v 1.16 2004/10/24 06:17:20 eradicator Exp $
 
 IUSE=""
 
@@ -34,5 +34,5 @@ src_compile() {
 src_install () {
 	dobin wmtimer
 	cd ..
-	dodoc README COPYING INSTALL CREDITS INSTALL Changelog
+	dodoc README CREDITS Changelog
 }
