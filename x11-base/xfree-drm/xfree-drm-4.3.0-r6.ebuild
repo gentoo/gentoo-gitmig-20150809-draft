@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.9 2003/09/29 17:39:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.10 2003/10/14 22:43:50 spyderous Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -67,7 +67,7 @@ if [ `use radeon || vcards radeon` ]
 then
 	VIDCARDS="${VIDCARDS} radeon.o"
 fi
-if [ `use sis || vcards sis` ]
+if [ `use sis || vcards sis300` ]
 then
 	VIDCARDS="${VIDCARDS} sis.o"
 fi
@@ -84,13 +84,18 @@ vcards i810 && VIDCARDS="${VIDCARDS} i810.o"
 vcards i830 && VIDCARDS="${VIDCARDS} i830.o"
 
 src_unpack() {
-# Is this necessary with the fixed Makefile?
+	# 2.6 kernels are broken for now
+	is_kernel "2" "6" && \
+		die "Please link /usr/src/linux to 2.4 kernel sources."
+
+	# Is this necessary with the fixed Makefile?
 	if [ ! -f /usr/src/linux/include/config/MARKER ] ; then
 		die "Please compile kernel sources."
 	fi
 
+	# Require at least one video card.
 	if [ -z "${VIDCARDS}" ] ; then
-		die "Please set at least one video card in VIDEO_CARDS. USE is deprecated. Possible VIDEO_CARDS values are matrox, 3dfx, rage128, radeon, sis, i810, i830, and gamma."
+		die "Please set at least one video card in VIDEO_CARDS in make.conf or the environment. USE is deprecated. Possible VIDEO_CARDS values are matrox, 3dfx, rage128, radeon, sis300, i810, i830, and gamma."
 	fi
 
 	unpack ${A}
@@ -179,6 +184,12 @@ pkg_postinst() {
 	if [ -z "VIDEO_CARDS" ]
 	then
 		einfo "USE is deprecated. Please set your video cards using VIDEO_CARDS."
-		einfo "Possible VIDEO_CARDS values are matrox, 3dfx, rage128, radeon, sis, i810, i830, and gamma."
+		einfo "Possible VIDEO_CARDS values are matrox, 3dfx, rage128, radeon, sis300, i810, i830, and gamma."
+	fi
+
+	if vcards sis300
+	then
+		einfo "SiS direct rendering only works on 300/305, 540, 630/S/ST, 730/S chipsets."
+		einfo "SiS framebuffer also needs to be enabled in the kernel."
 	fi
 }
