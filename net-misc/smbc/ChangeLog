@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/smbc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smbc/ChangeLog,v 1.1 2004/12/20 10:34:06 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smbc/ChangeLog,v 1.2 2004/12/20 15:09:09 satya Exp $
+
+*smbc-1.0.0-r1 (20 Dec 2004)
+
+  20 Dec 2004; Christian Andreetta <satya@gentoo.org> +smbc-1.0.0-r1.ebuild:
+  two new iuse: debug and nls
 
 *smbc-1.0.0 (20 Dec 2004)
 
