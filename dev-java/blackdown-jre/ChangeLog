@@ -1,7 +1,13 @@
 # ChangeLog for dev-java/blackdown-jre
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.31 2004/04/13 08:54:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.32 2004/06/03 16:58:21 karltk Exp $
 
+  03 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org 
+  blackdown-jdk-1.3.1-r9.ebuild, blackdown-jdk-1.4.1.ebuild,
+  blackdown-jdk-1.4.2_rc1.ebuild: Added check in pkg_postinst to
+  only install as default system VM if no JDK is found, partly fixes 
+  #9289.
+  
   13 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
   blackdown-jre-1.3.1-r9.ebuild:
   remove bogus sourcing of inherit.eclass

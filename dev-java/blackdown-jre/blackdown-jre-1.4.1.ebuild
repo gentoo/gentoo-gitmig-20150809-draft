@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1.ebuild,v 1.8 2004/03/18 06:33:56 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1.ebuild,v 1.9 2004/06/03 16:58:21 karltk Exp $
 
 inherit java nsplugins gcc
 
@@ -73,6 +73,18 @@ src_install () {
 }
 
 pkg_postinst () {
-	java_pkg_postinst
+	# Only install the JRE as the system default if there's no JDK 
+	# installed. Installing a JRE over an existing JDK will result
+	# in major breakage, see #9289.
+	if [ ! -e ${JAVAC} ] ; then
+		ewarn "Found no JDK, setting ${PF} as default system VM"
+		java_pkg_postinst
+	fi
 }
 
+pkg_postrm() {
+	if [ ! -z "$(java-config -J) | grep ${PV}" ] ; then
+		ewarn "It appears you are removing your default system VM!"
+		ewarn "Please run java-config -L then java-config-S to set a new system VM!"
+	fi
+}
