@@ -1,12 +1,13 @@
 # Copyright 2003 Arcady Genkin <agenkin@gentoo.org>.
 # Distributed under the terms of the GNU General Public License v2.
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/Tk_Theme/Tk_Theme-23.ebuild,v 1.1 2003/02/01 22:25:03 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/Tk_Theme/Tk_Theme-23.ebuild,v 1.2 2003/04/22 16:50:11 utx Exp $
 
 DESCRIPTION="Theming library for TCL/TK."
 HOMEPAGE="http://www.xmission.com/~georgeps/Tk_Theme/"
+IUSE=""
 
-DEPEND="=dev-lang/tcl-8.3*
-	=dev-lang/tk-8.3*
+DEPEND="dev-lang/tcl
+	dev-lang/tk
 	x11-base/xfree"
 
 LICENSE="BSD"
@@ -18,7 +19,7 @@ S=${WORKDIR}/${P}
 
 src_compile() {
 
-	tclsh8.3 configure || die
+	tclsh configure || die
 	make || die
 
 }
