@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/makepasswd/makepasswd-1.10.ebuild,v 1.11 2003/09/20 19:56:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/makepasswd/makepasswd-1.10.ebuild,v 1.12 2003/10/06 00:38:49 zul Exp $
 
 DESCRIPTION="Random password generator"
 SRC_URI="mirror://debian/dists/potato/main/source/admin/${P/-/_}.orig.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://packages.debian.org/stable/admin/makepasswd.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc ~ia64"
 
 RDEPEND="dev-lang/perl"
 
