@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/evms-1.0.0.ebuild,v 1.1 2002/04/27 07:17:49 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/evms-1.0.0.ebuild,v 1.2 2002/04/27 16:12:01 woodchip Exp $
 
 # You need to have an evms-patched kernel source tree in /usr/src/linux
 # to build this.  Either take care of that yourself or do these steps :
@@ -41,7 +41,7 @@ pkg_setup() {
 
 src_compile() {
 	local interfaces="CommandLine,LvmUtils,utilities"
-	#use ncurses && interfaces="ncurses,${interfaces}"
+	use ncurses && interfaces="ncurses,${interfaces}"
 	use gtk && interfaces="evmsgui,${interfaces}"
 
 	cd engine
