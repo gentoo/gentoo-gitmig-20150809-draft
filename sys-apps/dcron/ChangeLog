@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dcron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.39 2005/01/10 06:49:36 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.40 2005/02/10 04:19:21 vapier Exp $
+
+*dcron-2.9-r3 (09 Feb 2005)
+
+  09 Feb 2005; Mike Frysinger <vapier@gentoo.org> +dcron-2.9-r3.ebuild:
+  Add support for cron.eclass by Aaron Walker #78077.
 
   10 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> dcron-2.9-r2.ebuild:
   Added in a message with a link to the Cron Guide, bug #77320
