@@ -1,6 +1,9 @@
 # ChangeLog for net-www/raggle
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/raggle/ChangeLog,v 1.3 2003/12/29 02:53:29 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/raggle/ChangeLog,v 1.4 2003/12/29 03:00:07 weeve Exp $
+
+  28 Dec 2003; Jason Wever <weeve@gentoo.org> raggle-0.2.4.ebuild:
+  Marked back to ~sparc since developer cannot do simple QA.
 
   29 Dec 2003; Tom Payne <twp@gentoo.org> raggle-0.2.4.ebuild, metadata.xml :
   Marked stable on all ARCHes (it's a script). Assign to ruby herd.
