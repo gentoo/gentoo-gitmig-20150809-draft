@@ -51,8 +51,11 @@ net-www/zope
 # Mozilla installs correctly, but there is a java-config error with the plugin
 # This is more a java-config bug ....
 =net-www/mozilla-0.9.9
+
+
 # Galeon 1.2.0 depends on Mozilla 0.9.9
->=net-www/galeon-1.1.0
+# We have mozilla 0.9.9 now <spider@gentoo.org>
+# >=net-www/galeon-1.1.0
 
 # Let's see how this works
 #>=sys-apps/pcmcia-cs-3.1.33
