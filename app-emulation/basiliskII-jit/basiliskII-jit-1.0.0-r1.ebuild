@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0.0.ebuild,v 1.3 2004/06/24 22:30:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0.0-r1.ebuild,v 1.1 2004/09/02 15:47:46 dholm Exp $
 
 inherit flag-o-matic
 
@@ -74,6 +74,9 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		install || die "make install failed"
 
+	mv ${D}/usr/bin/BasiliskII ${D}/usr/bin/BasiliskII-jit
+	mv ${D}/usr/share/man/man1/BasiliskII.1 \
+		${D}/usr/share/man/man1/BasiliskII-jit.1
 	cd ../..
 	dodoc ChangeLog INSTALL README TECH TODO TODO.JIT
 
