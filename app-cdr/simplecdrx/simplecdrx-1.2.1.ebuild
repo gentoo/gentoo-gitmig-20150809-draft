@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.2.1.ebuild,v 1.1 2002/11/03 19:10:41 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.2.1.ebuild,v 1.2 2002/11/03 19:17:14 agenkin Exp $
 
 DESCRIPTION="CD ripping/mastering"
 HOMEPAGE="http://ogre.rocky-road.net/cdr.shtml"
@@ -47,16 +47,16 @@ src_install () {
 
 	make DESTDIR=${D} install || die
 
+	doman man/simplecdr-x.1
+
+	insinto /usr/share/pixmaps
+	doins pixmaps/simplecdr.xpm ${FILESDIR}/simplecdrx.png
 
 	# Add the Gnome menu entry
 	if [ "`use gnome`" ] ; then
-		insinto /usr/share/pixmaps
-		doins ${FILESDIR}/simplecdrx.png
 		insinto /usr/share/gnome/apps/Applications/
 		doins ${FILESDIR}/simplecdrx.desktop
 	fi
-
-	doman man/simplecdr-x.1
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
 }
