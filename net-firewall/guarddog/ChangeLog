@@ -1,7 +1,12 @@
 # ChangeLog for net-firewall/guarddog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/ChangeLog,v 1.5 2003/11/09 09:45:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/ChangeLog,v 1.6 2003/12/29 13:41:32 mholzer Exp $
+
+  29 Dec 2003; Martin Holzer <mholzer@gentoo.org> guarddog-1.9.16.ebuild,
+  guarddog-2.0.0.ebuild, guarddog-2.1.5.ebuild, guarddog-2.1.7.ebuild,
+  guarddog-2.2.0.ebuild:
+  changing depend to rdepend. Closes 36611
 
 *guarddog-2.2.0 (09 Nov 2003)
 
