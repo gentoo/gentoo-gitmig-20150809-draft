@@ -1,15 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.01.ebuild,v 1.3 2004/02/21 01:00:11 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.01.ebuild,v 1.4 2004/04/10 09:05:09 mr_bones_ Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="Hercules System/370, ESA/390 and zArchitecture Mainframe Emulator"
 SRC_URI="http://www.conmicro.cx/hercules/${P}.tar.gz"
 HOMEPAGE="http://www.conmicro.cx/hercules/"
+
 LICENSE="QPL-1.0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 SLOT="0"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 IUSE=""
 
 DEPEND="virtual/glibc
@@ -39,9 +40,9 @@ src_install() {
 	dohtml -r html/
 	insinto /usr/share/hercules
 	doins hercules.cnf
-	dodoc README.COMMADPT README.CVS README.ECPSVM README.HDL
-	dodoc README.NETWORKING README.OSX README.TAPE
-	dodoc RELEASE.NOTES CHANGES
+	dodoc README.COMMADPT README.CVS README.ECPSVM README.HDL \
+		README.NETWORKING README.OSX README.TAPE \
+		RELEASE.NOTES CHANGES
 }
 
 pkg_postinst() {
