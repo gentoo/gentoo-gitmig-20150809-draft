@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/ctags
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.2 2002/05/20 04:29:04 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.3 2002/09/19 11:52:03 doctomoe Exp $
 
 *ctags-5.2.3 (19 May 2002)
+
+  19 Sep 2002; Olivier Reisch <doctomoe@gentoo.org> ctags-5.2.3.ebuild:
+  Added ppc keyword
 
   19 May 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   ctags-5.2.3.ebuild, files/digest-ctags-5.2.4 :
