@@ -1,10 +1,11 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.25 2003/12/20 17:41:59 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.26 2003/12/21 12:22:58 scandium Exp $
 
   20 Dec 2003; Rainer Groesslinger <scandium@gentoo.org>
   cvs-1.11.10-r1.ebuild, cvs-1.11.11.ebuild, files/cvspserver.xinetd.d:
   Changed home directory of the cvs user to /usr/local/cvsroot
+  Update: It is now /var/cvsroot
   (bug #36142)
 
 *cvs-1.11.11 (20 Dec 2003)
