@@ -1,0 +1,9 @@
+# ChangeLog for net-analyzer/geotrace
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/geotrace/ChangeLog,v 1.1 2002/02/17 21:27:40 agriffis Exp $
+
+*geotrace-0.0.4 (17 Feb 2002)
+
+	17 Feb 2002; Aron Griffis <agriffis@gentoo.org> geotrace-0.0.4.ebuild, files/geotrace-map-location.patch:
+
+	New ebuild for geotrace, a geographical traceroute utility.
