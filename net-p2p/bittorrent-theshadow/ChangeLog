@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/bittorrent-theshadow
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/ChangeLog,v 1.17 2004/01/22 02:55:38 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/ChangeLog,v 1.18 2004/02/26 11:38:26 eradicator Exp $
+
+*bittorrent-theshadow-5.8.10 (26 Feb 2004)
+
+  26 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  bittorrent-theshadow-5.8.10.ebuild:
+  Version bump.  Closes bug #42116.
 
 *bittorrent-theshadow-5.8.7 (21 Jan 2004)
 
