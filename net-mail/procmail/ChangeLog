@@ -1,9 +1,16 @@
 # ChangeLog for net-mail/procmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.5 2002/07/27 02:46:21 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/ChangeLog,v 1.6 2002/08/03 17:38:04 cselkirk Exp $
 
 *procmail-3.22-r3 (26 Jul 2002)
 
+  3 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> procmail-3.22-r3.ebuild
+  procmail-3.22-r2.ebuild files/gentoo-maildir.diff digest-procmail-3.22-r3 :
+
+  Add ppc to KEYWORDS (procmail-3.22-r2.ebuild).
+  Changed from *.patch to *.diff
+  Seems i neglected to cvs add the diff.
+  
   26 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> procmail-3.22-r3.ebuild 
   files/gentoo-maildir.patch digest-procmail-3.22-r3 :
 

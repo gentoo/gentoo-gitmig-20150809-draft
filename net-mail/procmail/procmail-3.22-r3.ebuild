@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r3.ebuild,v 1.1 2002/07/27 02:46:21 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.22-r3.ebuild,v 1.2 2002/08/03 17:38:04 cselkirk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
@@ -36,7 +36,7 @@ src_compile() {
 		# the above doesn't seem to work as MAILSPOOLDIR is still defined .. so
 
 	cd ${S}
-	patch -p1 <${FILESDIR}/gentoo-maildir.patch
+	patch -p1 <${FILESDIR}/gentoo-maildir.diff
 
 	else
 		echo '# Use mbox-style mailbox in /var/spool/mail' > ${S}/procmail
