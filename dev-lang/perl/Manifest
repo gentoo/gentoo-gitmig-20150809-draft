@@ -5,7 +5,7 @@ MD5 45b023d8ed1107395e0fe9336656932b ChangeLog 29303
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 dea8dfaedf16a29ca87b485ea337033b perl-5.8.2-r1.ebuild 10001
 MD5 ea5b082a979f5f8da02044b0780a177f perl-5.8.3.ebuild 9970
-MD5 3eb1d9cc6c3d5fe955c6b902fd132767 perl-5.8.4-r1.ebuild 12136
+MD5 fdbdfbcbe66fefdfaf0d9c0e830d9782 perl-5.8.4-r1.ebuild 12135
 MD5 b44e14c6d515db6d2b65b50970b40dad perl-5.8.4.ebuild 10766
 MD5 d4a12b08f4dc187d4447975621c96f18 perl-5.8.5.ebuild 11503
 MD5 93155b02a7e9d3cdc6d6934ce78d9f11 files/digest-perl-5.8.4 64
@@ -41,7 +41,7 @@ MD5 803b7c028f59008ea1e6d577e5c0bab0 files/stat.t 8884
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBa08kHTu7gpaalycRAq4oAKDEaqX30CUDC6xdabGf+/Ujx5pcBwCgtfbH
-ITXtssJEtvD0cunWgLYsmAU=
-=CTB9
+iD8DBQFBb+mUHTu7gpaalycRAif8AJ0aYPWrnCMn6Lj4f//ZUDfDOITXowCg4kre
+Sm9T7jNy8Z4JhN9UVyt51Bw=
+=oSjI
 -----END PGP SIGNATURE-----
