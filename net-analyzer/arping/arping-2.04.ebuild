@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.04.ebuild,v 1.3 2005/02/13 01:16:52 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.04.ebuild,v 1.4 2005/02/14 17:10:38 gustavoz Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.habets.pp.se/pub/synscan/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86 ~ppc ~sparc ~arm ~amd64"
+KEYWORDS="x86 ~ppc sparc ~arm ~amd64"
 IUSE=""
 
 DEPEND="virtual/libpcap
