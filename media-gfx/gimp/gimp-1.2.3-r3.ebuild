@@ -1,19 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.11 2003/09/06 23:56:38 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.12 2003/11/20 02:27:27 vapier Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="python nls gnome aalib perl"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="The GIMP"
-SRC_URI="ftp://ftp.gimp.org/pub/gimp/v1.2/v${PV}/${P}.tar.bz2"
 HOMEPAGE="http://www.gimp.org/"
+SRC_URI="ftp://ftp.gimp.org/pub/gimp/v1.2/v${PV}/${P}.tar.bz2"
 
+LICENSE="GPL-2"
 SLOT="1.2"
 KEYWORDS="x86 ppc sparc alpha"
-LICENSE="GPL-2"
+IUSE="python nls gnome aalib perl"
 
 RDEPEND="=x11-libs/gtk+-1.2*
 	aalib? ( >=media-libs/aalib-1.2 )
@@ -22,7 +20,6 @@ RDEPEND="=x11-libs/gtk+-1.2*
 		>=dev-perl/gtk-perl-0.7004 )
 	python? ( >=dev-lang/python-2.0 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
-
 DEPEND="nls? ( sys-devel/gettext )
 	sys-devel/autoconf
 	sys-devel/automake
