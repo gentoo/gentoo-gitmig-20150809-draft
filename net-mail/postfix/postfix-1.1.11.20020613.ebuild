@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020613.ebuild,v 1.1 2002/07/22 23:09:48 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020613.ebuild,v 1.2 2002/07/22 23:13:09 raker Exp $
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
@@ -135,4 +135,12 @@ pkg_postinst() {
 	einfo "*       (/etc/postfix/._cfg????_master.cf). Otherwise postfix *"
 	einfo "*       will not work correctly.                              *"
 	einfo "***************************************************************"
+
+	einfo "********************************************************"
+	einfo "* First time installers: You must edit                 *"
+	einfo "* /etc/mail/aliases to suit your needs and then run    *"
+	einfo "* /usr/bin/newaliases. Postfix will not work correctly *"
+	einfo "* without it                                           *"
+	einfo "********************************************************"
+
 }
