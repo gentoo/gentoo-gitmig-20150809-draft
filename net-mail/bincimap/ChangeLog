@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/bincimap
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.7 2004/02/15 09:51:58 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.8 2004/02/25 14:39:16 aliz Exp $
+
+  25 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> bincimap-1.2.5.ebuild:
+  Adding amd64 keyword. Closing #38881.
 
 *bincimap-1.2.6 (15 Feb 2004)
 
