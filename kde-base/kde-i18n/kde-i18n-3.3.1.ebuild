@@ -1,8 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.3.1.ebuild,v 1.9 2005/01/02 17:24:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.3.1.ebuild,v 1.10 2005/01/20 16:28:21 greg_g Exp $
 
-inherit kde
+inherit kde eutils
+
 MY_PV=${PV}
 #MY_PV=3.3
 
