@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-6.1.ebuild,v 1.5 2005/03/16 09:04:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-6.5.ebuild,v 1.1 2005/03/16 09:04:28 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -32,9 +32,19 @@ DEPEND="${RDEPEND}
 	sys-apps/texinfo
 	app-text/texi2html"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i \
+		-e '/^install-data-am/s/install-libgcomprisincludeHEADERS//' \
+		src/gcompris/Makefile.in \
+		|| die "sed failed"
+}
+
 src_compile() {
 	export GNUCHESS="${GAMES_BINDIR}/gnuchess"
 	econf \
+		--disable-dependency-tracking \
 		$(use_with python python /usr/bin/python) \
 		$(use_with editor) \
 		|| die
@@ -43,6 +53,11 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR=${D} || die "make install failed"
+	# Crashed for me
+	rm -rf "${D}/usr/share/gcompris/boards/watercycle"*
+	rm -f "${D}/usr/share/gcompris/boards/followline.xml"
+	# mailing list reports crash
+	rm -f "${D}/usr/share/gcompris/boards/click_on_letter.xml"
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	prepgamesdirs
 }
