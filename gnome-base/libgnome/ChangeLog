@@ -1,11 +1,16 @@
 # ChangeLog for gnome-base/libgnome
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.22 2003/03/01 14:45:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.23 2003/04/11 00:50:41 todd Exp $
+
+
+*libgnome-2.2.0.1
+
+  10 Apr 2003; Todd Sunderlin <todd@gentoo.org> libgnome-2.2.0.1.ebuild :
+  Marked stable for sparc.
 
   07 Feb 2003; Aron Griffis <agriffis@gentoo.org> libgnome-2.2.0.1.ebuild :
   Add ~alpha to KEYWORDS
 
-*libgnome-2.2.0.1
 
   01 Mar 2003; Jason Wever <weeve@gentoo.org> libgnome-2.2.0.1.ebuild :
   Added ~sparc to keywords.
