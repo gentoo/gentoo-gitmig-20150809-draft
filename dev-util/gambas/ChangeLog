@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gambas
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.17 2004/08/23 08:06:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.18 2004/10/11 04:15:07 genone Exp $
+
+*gambas-0.99 (11 Oct 2004)
+
+  11 Oct 2004; <genone@gentoo.org> +gambas-0.99.ebuild:
+  version bump
 
   23 Aug 2004; <genone@gentoo.org> gambas-0.94a.ebuild, gambas-0.95.ebuild:
   - mark 0.95 stable
