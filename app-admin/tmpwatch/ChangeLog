@@ -1,8 +1,13 @@
 # ChangeLog for app-admin/tmpwatch
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.1 2002/11/08 13:59:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.2 2003/02/10 06:43:25 seemant Exp $
 
 tmpwatch-2.8.4 (08 Nov 2002)
+
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> tmpwatch-2.8.4.ebuild :
+
+  Changed sed expression delimiters from / to :, closing bug #15006 by Blu3
+  <david+gentoo.org@blue-labs.org>
 
   08 Nov 2002; Daniel Ahlberg <aliz@gentooorg> :
   Initial import. Ebuild contributed by Cory Visi <cory@visi.name> in #9817.

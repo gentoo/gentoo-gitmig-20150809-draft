@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r3.ebuild,v 1.1 2002/12/16 16:55:47 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r3.ebuild,v 1.2 2003/02/10 06:43:25 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard log daemons"
@@ -16,7 +16,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	mv Makefile Makefile.orig
-	sed -e "s/-O3/${CFLAGS}/" Makefile.orig > Makefile
+	sed -e "s:-O3:${CFLAGS}:" Makefile.orig > Makefile
 }
 
 src_compile() {

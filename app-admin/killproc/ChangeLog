@@ -1,11 +1,16 @@
 # ChangeLog for app-admin/killproc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.4 2002/12/13 10:55:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.5 2003/02/10 06:43:25 seemant Exp $
+
+*killproc-1.12-r2 (1 Feb 2002)
+
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> killproc-1.12-r2.ebuild :
+
+  Changed sed expression delimiters to : instead of /, closing bug #15006 by
+  Blu3 <david+gentoo.org@blue-labs.org>
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*killproc-1.12-r2 (1 Feb 2002)
-
   29 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> killproc-1.12-r2.ebuild :
 
   Added an if [ ${ARCH} = "x86" ] for -m486 flag > Makefile to make non arch
