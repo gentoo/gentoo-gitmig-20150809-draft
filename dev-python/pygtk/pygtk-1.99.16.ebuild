@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.16.ebuild,v 1.6 2003/08/07 02:41:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.16.ebuild,v 1.7 2003/08/28 06:55:09 obz Exp $
 
 # since its a development version
 inherit debug gnome.org
@@ -14,13 +14,16 @@ SLOT="2.0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
 IUSE="gnome opengl"
 
-DEPEND=">=dev-lang/python-2.2
+RDEPEND=">=dev-lang/python-2.2
 	>=x11-libs/pango-1
 	>=x11-libs/gtk+-2
 	>=dev-libs/atk-1
 	>=dev-libs/glib-2
 	gnome? ( >=gnome-base/libglade-2 )
 	opengl? ( >=x11-libs/gtkglarea-1.99 )"
+
+DEPEND="${RDEPEND}
+	>=dev-util/pkgconfig-0.9"
 
 src_compile() {
 	econf --enable-thread || die

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.19 2003/08/01 16:13:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.20 2003/08/28 06:55:09 obz Exp $
+
+  28 Aug 2003; Mike Gardiner <obz@gentoo.org> pygtk-1.99.16.ebuild,
+  pygtk-1.99.17.ebuild:
+  Added >=pkgconfig-0.9 to depends, see bug #26573
 
 *pygtk-1.99.17 (01 Aug 2003)
 
