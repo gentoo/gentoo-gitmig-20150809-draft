@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/wavplay
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavplay/ChangeLog,v 1.1 2003/04/02 15:35:08 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavplay/ChangeLog,v 1.2 2003/04/04 06:03:02 phosphan Exp $
+
+
+  03 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> wavplay-1.4.ebuild :
+  Corrected the copyright line
 
 *wavplay-1.4 (02 Apr 2003)
 
