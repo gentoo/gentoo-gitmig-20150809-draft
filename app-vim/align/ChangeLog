@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/align
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.22 2004/10/31 15:04:17 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.23 2004/12/28 21:04:16 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   31 Oct 2004; Ciaran McCreesh <ciaranm@gentoo.org> -align-23.ebuild,
   -align-26.ebuild, -align-27.ebuild:
@@ -9,13 +12,13 @@
   26 Oct 2004; Tom Martin <slarti@gentoo.org> align-28.ebuild:
   Marked ~amd64.
 
-  19 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> align-28.ebuild:
+  19 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> align-28.ebuild:
   Stable on alpha.
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> align-28.ebuild:
   Stable on x86, sparc, mips
 
-  06 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> align-27.ebuild:
+  06 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> align-27.ebuild:
   Stable on alpha.
 
   03 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> align-28.ebuild:

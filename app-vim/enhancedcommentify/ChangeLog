@@ -1,12 +1,15 @@
 # ChangeLog for app-vim/enhancedcommentify
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/enhancedcommentify/ChangeLog,v 1.14 2004/12/21 16:16:34 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/enhancedcommentify/ChangeLog,v 1.15 2004/12/28 21:06:41 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   21 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   enhancedcommentify-2.1-r1.ebuild:
   Can't install ctx and enhancedcommentify at the same time, bug #74897
 
-  19 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  19 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   enhancedcommentify-2.1-r1.ebuild:
   Stable on alpha.
 

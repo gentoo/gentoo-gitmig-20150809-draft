@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/taglist
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/ChangeLog,v 1.31 2004/10/31 15:22:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/ChangeLog,v 1.32 2004/12/28 21:08:53 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   31 Oct 2004; Ciaran McCreesh <ciaranm@gentoo.org> -taglist-3.0.ebuild,
   -taglist-3.1.ebuild, -taglist-3.2.ebuild, -taglist-3.3.ebuild:
@@ -9,7 +12,7 @@
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> taglist-3.4-r1.ebuild:
   Stable on amd64.
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> taglist-3.4-r1.ebuild:
+  10 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> taglist-3.4-r1.ebuild:
   Stable on alpha.
 
   07 Oct 2004; Ciaran McCreesh <ciaranm@gentoo.org> taglist-3.4-r1.ebuild:
@@ -21,7 +24,7 @@
   +files/taglist-3.4-ebuilds.patch, +taglist-3.4-r1.ebuild:
   Ebuilds are bash files too. Bug #66052
 
-  19 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> taglist-3.4.ebuild:
+  19 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> taglist-3.4.ebuild:
   Stable on alpha.
 
   09 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> taglist-3.4.ebuild:
@@ -38,7 +41,7 @@
   20 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org> +taglist-3.4.ebuild:
   Version bump
 
-  16 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> taglist-3.3.ebuild:
+  16 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> taglist-3.3.ebuild:
   Stable on alpha.
 
   15 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> taglist-3.3.ebuild:

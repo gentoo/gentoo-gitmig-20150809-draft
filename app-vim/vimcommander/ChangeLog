@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vimcommander
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/ChangeLog,v 1.8 2004/09/06 22:11:46 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcommander/ChangeLog,v 1.9 2004/12/28 21:09:23 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   vimcommander-1.54.2.2.ebuild:
@@ -10,7 +13,7 @@
   vimcommander-1.54.2.2.ebuild:
   Stable on sparc
 
-  13 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  13 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   vimcommander-1.54.2.2.ebuild:
   Stable on alpha.
 
