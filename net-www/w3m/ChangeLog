@@ -1,6 +1,15 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.31 2003/09/25 08:45:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.32 2003/10/04 20:20:40 usata Exp $
+
+*w3m-0.4.2-r1 (05 Oct 2003)
+
+  05 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> w3m-0.4.2-r1.ebuild,
+  files/w3m-0.4.2-imglib-gentoo.diff, files/w3m-0.4.2-w3mman-gentoo.diff,
+  files/w3m.sh, files/w3mbookmark.sh.in, files/w3mhelperpanel.sh.in:
+  New CVS snapshot. -m17n is enabled by default. Added nopixbuf,
+  imlib2 and migemo USE flag.  Added scripts (taken from Debian) to
+  support pseudo-nls.
 
   25 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> w3m-0.4.1-r3.ebuild,
   w3m-0.4.2.ebuild, files/w3m-w3mman-gentoo.diff:

@@ -1,0 +1,66 @@
+diff -urN w3m-0.4.2.ORIG/Makefile.in w3m-0.4.2/Makefile.in
+--- w3m-0.4.2.ORIG/Makefile.in	2003-09-25 00:36:41.000000000 +0900
++++ w3m-0.4.2/Makefile.in	2003-09-25 03:27:57.000000000 +0900
+@@ -112,7 +112,7 @@
+ HELP_ALLFILES=w3mhelp-w3m_en.html w3mhelp-w3m_ja.html \
+ 	w3mhelp-lynx_en.html w3mhelp-lynx_ja.html
+ 
+-SCRIPTSUBDIRS= scripts
++SCRIPTSUBDIRS= scripts scripts/multipart scripts/w3mman
+ SUBDIRS = $(SCRIPTSUBDIRS) w3mimg libwc po
+ 
+ .PHONY: $(SUBDIRS)
+diff -urN w3m-0.4.2.ORIG/configure.in w3m-0.4.2/configure.in
+--- w3m-0.4.2.ORIG/configure.in	2003-09-25 00:36:50.000000000 +0900
++++ w3m-0.4.2/configure.in	2003-09-25 04:10:35.000000000 +0900
+@@ -138,6 +138,9 @@
+ AC_W3M_SIGSETJMP
+ AC_W3M_SIGNAL
+ 
++AC_SUBST(HELP_DIR)
++HELP_DIR="/usr/share/w3m"
++AC_DEFINE_UNQUOTED(HELP_DIR, "$HELP_DIR")
+ AC_SUBST(RC_DIR)
+ RC_DIR="~/.$PACKAGE"
+ AC_DEFINE_UNQUOTED(RC_DIR, "$RC_DIR")
+diff -urN w3m-0.4.2.ORIG/scripts/w3mman/Makefile.in w3m-0.4.2/scripts/w3mman/Makefile.in
+--- w3m-0.4.2.ORIG/scripts/w3mman/Makefile.in	2003-09-23 07:53:53.000000000 +0900
++++ w3m-0.4.2/scripts/w3mman/Makefile.in	2003-09-25 03:46:38.000000000 +0900
+@@ -28,6 +28,7 @@
+ RC_DIR = ~/.$(package)
+ ETC_DIR = $(sysconfdir)
+ CONF_DIR = $(sysconfdir)/$(package)
++MAN1_DIR = $(mandir)/man1
+ 
+ TARGETS		= w3mman
+ LIB_TARGETS	= w3mman2html.cgi
+@@ -37,17 +38,17 @@
+ MKDIR		= mkdir -p
+ INSTALL		= @INSTALL@
+ INSTALL_SCRIPT	= @INSTALL_SCRIPT@
+-INSTALL_MAN	= @INSTALL_MAN@
++INSTALL_MAN	= @INSTALL_DATA@
+ 
+ all: $(TARGETS) $(LIB_TARGETS) $(MAN_TARGETS)
+ 
+ install: $(TARGETS) $(LIB_TARGETS) $(MAN_TARGETS)
+-	-$(MKDIR) $(DESTDIR)$(BIN_DIR)
++	-$(MKDIR) $(DESTDIR)$(bindir)
+ 	-$(MKDIR) $(DESTDIR)$(LIB_DIR)
+ 	-$(MKDIR) $(DESTDIR)$(MAN1_DIR)
+ 	for file in $(TARGETS);     \
+ 	do      \
+-		$(INSTALL_SCRIPT) $$file $(DESTDIR)$(BIN_DIR);	\
++		$(INSTALL_SCRIPT) $$file $(DESTDIR)$(bindir);	\
+ 	done
+ 	for file in $(LIB_TARGETS);     \
+ 	do      \
+@@ -61,7 +62,7 @@
+ uninstall:
+ 	-for file in $(TARGETS);     \
+ 	do      \
+-		rm -f $(BIN_DIR)/$$file;	\
++		rm -f $(bindir)/$$file;	\
+ 	done
+ 	-for file in $(LIB_TARGETS);     \
+ 	do      \
