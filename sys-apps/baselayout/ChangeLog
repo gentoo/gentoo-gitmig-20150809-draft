@@ -1,9 +1,16 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.213 2005/03/10 15:33:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.214 2005/03/10 16:48:28 agriffis Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.12.0_alpha1 (10 Mar 2005)
+
+  10 Mar 2005; Aron Griffis <agriffis@gentoo.org> baselayout-1.11.10.ebuild,
+  +baselayout-1.12.0_alpha1.ebuild:
+  Don't apply 1.11.9-r1 patches to 1.11.10, which already contains them. Add
+  1.12.0_alpha1 for baselayout developers only
 
 *baselayout-1.11.10 (10 Mar 2005)
 

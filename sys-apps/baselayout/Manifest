@@ -2,12 +2,13 @@
 Hash: SHA1
 
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
-MD5 de4926c5d617f0f7a9d4c300db858a9a ChangeLog 48297
 MD5 63fe1de96f6485a4e395d1a9132b8b33 baselayout-1.11.8-r3.ebuild 16828
 MD5 e9435605e672ce445890b9b723ff234b baselayout-1.11.9-r1.ebuild 16982
 MD5 7875c929dd71e995da27936c6d859717 baselayout-1.9.4-r6.ebuild 16862
 MD5 a564d6194f6a91d76d572a0f934c4faa baselayout-1.9.4-r7.ebuild 18143
-MD5 385f8d38a060045a4032c981b39c97ad baselayout-1.11.10.ebuild 16984
+MD5 f54e3b8d3373e6822d6c395298965112 baselayout-1.11.10.ebuild 16801
+MD5 381b7b758a7c6baedb4c5f741dc43e7a baselayout-1.12.0_alpha1.ebuild 16806
+MD5 a5e1c9df39d46155b5be677d199518c5 ChangeLog 48576
 MD5 dd7fbce62822fed1595f11078e23aa32 files/baselayout-1.8.6.13-r1-gcc2.patch 443
 MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
 MD5 50816019be7cc03120fa58d075eb07f7 files/sysvinit-2.84-selinux1.patch 3612
@@ -22,10 +23,11 @@ MD5 08ade596f939beaf9f7b3657c5811593 files/rc-scripts-1.6.9-checkfs-lvm.patch 57
 MD5 126200ae85bdf0ef43de75411f71aaa8 files/rc-scripts-1.6.9-domainname.patch 380
 MD5 6ec416bfd1097d350c09e78949a736b8 files/rc-scripts-1.6.9-ifconfig.patch 266
 MD5 9d6be55475cd744a889551d6cc31596b files/digest-baselayout-1.11.10 70
+MD5 8973ba1466f017b32112df32c15ee8a7 files/digest-baselayout-1.12.0_alpha1 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCMGjQBXaUFmZvwyMRAn7JAJ46Prgo1U9YVSLG2kojIrFNwksS/gCgmcV8
-YT6AhAKYtvFxN2yHpfQhNFU=
-=5lNc
+iD8DBQFCMHplBXaUFmZvwyMRAjqXAKCP8ijx+spMiT5LRGE6HjJKELnwUACgx0YT
+ZKFfLhzNyXDSEqdH4wTDzk8=
+=Ue2w
 -----END PGP SIGNATURE-----
