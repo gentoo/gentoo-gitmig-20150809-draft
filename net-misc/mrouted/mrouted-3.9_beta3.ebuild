@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/mrouted-3.9_beta3.ebuild,v 1.2 2004/03/13 01:00:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/mrouted-3.9_beta3.ebuild,v 1.3 2004/03/13 01:43:04 vapier Exp $
 
 MY_P=${P/_}+IOS12
 DEB_PVER=3
@@ -13,7 +13,9 @@ LICENSE="Stanford"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
-DEPEND="virtual/os-headers"
+DEPEND="virtual/os-headers
+	dev-util/yacc"
+RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
 
