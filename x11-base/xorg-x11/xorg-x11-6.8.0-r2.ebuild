@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.56 2004/11/05 07:53:07 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.57 2004/11/15 17:21:42 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -976,10 +976,13 @@ backward_compat_setup() {
 	if ! use minimal; then
 		dosym ../share/man /usr/X11R6/man
 	fi
-	# Have the top-level lib symlink made first, so real dirs don't get created
-	dosym ../lib /usr/X11R6/lib
+	# Have the top-level libdir symlink made first, so real dirs don't get created
+	dosym ../$(get_libdir) /usr/X11R6/$(get_libdir)
 	dosym ../../../share/doc/${PF} /usr/X11R6/$(get_libdir)/X11/doc
 #	dosym ../share/bin /usr/X11R6/bin
+
+	# Another symlink for the keysym database (#70927)
+	dosym ../XKeysymDB /usr/$(get_libdir)/X11/XKeysymDB
 }
 
 fix_permissions() {
