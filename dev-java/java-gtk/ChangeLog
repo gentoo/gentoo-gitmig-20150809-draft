@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-gtk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/ChangeLog,v 1.4 2003/02/12 05:52:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/ChangeLog,v 1.5 2003/05/03 19:13:35 tberman Exp $
+
+  03 May 2003; Todd Berman <tberman@gentoo.org> java-gtk-0.7.1.ebuild:
+  Fixed up ebuild, closing bug 14119.
 
 *java-gtk-0.7.1 (1 Feb 2002)
 
