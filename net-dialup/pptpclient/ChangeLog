@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/pptpclient
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.21 2005/03/19 15:29:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.22 2005/04/01 17:54:45 mrness Exp $
+
+*pptpclient-1.5.0-r2 (01 Apr 2005)
+
+  01 Apr 2005; Alin Nastac <mrness@gentoo.org> +pptpclient-1.5.0-r2.ebuild:
+  Fix taint check of pptp-command script. Thanks goes to Francisco Olarte
+  <folarte@peoplecall.com> who spotted and fixed this problem (#81880).
 
   19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   pptpclient-1.5.0-r1.ebuild:
