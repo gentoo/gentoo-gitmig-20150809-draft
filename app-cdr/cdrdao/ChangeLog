@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.22 2003/11/21 19:13:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.23 2003/11/28 13:29:49 aliz Exp $
+
+  27 Nov 2003; Daniel AHlberg <aliz@gentoo.org> cdrdao-1.1.7-r2.ebuild:
+  Depend on virtual/cdrtools instead of app-cdr/cdrtools.
 
   21 Nov 2003; Martin Holzer <mholzer@gentoo.org> cdrdao-1.1.5-r1.ebuild,
   cdrdao-1.1.7-r1.ebuild, cdrdao-1.1.7-r2.ebuild, cdrdao-1.1.7.ebuild:
