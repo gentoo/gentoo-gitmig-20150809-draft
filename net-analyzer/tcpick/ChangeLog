@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpick
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpick/ChangeLog,v 1.4 2004/07/10 11:23:46 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpick/ChangeLog,v 1.5 2004/08/01 22:03:00 kugelfang Exp $
+
+  02 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> tcpick-0.1.19.ebuild:
+  Marked ~amd64.
 
   10 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
   tcpick-0.1.19.ebuild:
