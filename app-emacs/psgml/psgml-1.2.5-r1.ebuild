@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/psgml-1.2.5-r1.ebuild,v 1.3 2004/03/04 05:10:58 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/psgml-1.2.5-r1.ebuild,v 1.4 2004/03/11 17:41:45 weeve Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sourceforge.net/projects/psgml/"
 SRC_URI="mirror://sourceforge/psgml/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc amd64"
+KEYWORDS="x86 sparc amd64"
 
 DEPEND="virtual/emacs
 	app-text/openjade"

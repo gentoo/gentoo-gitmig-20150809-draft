@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/psgml
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/ChangeLog,v 1.5 2004/02/28 15:19:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/ChangeLog,v 1.6 2004/03/11 17:41:45 weeve Exp $
+
+  11 Mar 2004; Jason Wever <weeve@gentoo.org> psgml-1.2.5-r1.ebuild:
+  Stable on sparc.
 
   28 Feb 2004; Jason Wever <weeve@gentoo.org> psgml-1.2.5-r1.ebuild:
   Added ~sparc keyword.
