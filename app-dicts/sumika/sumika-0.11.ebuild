@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sumika/sumika-0.11.ebuild,v 1.1 2004/04/13 16:36:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sumika/sumika-0.11.ebuild,v 1.2 2004/04/14 09:11:29 dholm Exp $
 
 IUSE="nls"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sumika.sourceforge.jp/"
 SRC_URI="mirror://sourceforge.jp/${PN}/9071/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 
 DEPEND="virtual/glibc
