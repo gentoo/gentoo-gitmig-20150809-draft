@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.ebuild,v 1.1 2004/04/08 22:16:18 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.ebuild,v 1.2 2004/04/09 10:41:45 dholm Exp $
 
 MY_PV="2.0s2"
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -11,7 +11,7 @@ SRC_URI="http://www.jabberstudio.org/files/jabberd2/${PN}-${MY_PV}.tar.gz"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="ldap ipv6 mysql postgres pam berkdb"
 
 DEPEND="!net-im/jabber-server
