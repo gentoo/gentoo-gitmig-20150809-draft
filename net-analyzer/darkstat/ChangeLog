@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.2 2004/01/03 02:18:56 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.3 2004/01/03 02:47:26 zul Exp $
+
+*darkstat-2.6 (02 Jan 2004)
+
+  02 Jan 2004; Chuck Short <zul@gentoo.org> darkstat-2.6.ebuild:
+  New version, closes #37059.
+  Updated homepage and src_uri
+  added nls support.
 
   02 Jan 2004; Chuck Short <zul@gentoo.org> darkstat-2.5.ebuild:
   Marked stable.
