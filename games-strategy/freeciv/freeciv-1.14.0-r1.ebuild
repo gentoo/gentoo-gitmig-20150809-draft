@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-1.14.0-r1.ebuild,v 1.1 2003/09/10 05:27:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-1.14.0-r1.ebuild,v 1.2 2003/10/13 22:13:56 vapier Exp $
 
 DESCRIPTION="multiplayer strategy game (Civilization Clone)"
 HOMEPAGE="http://www.freeciv.org/"
@@ -12,16 +12,16 @@ KEYWORDS="x86 ppc sparc"
 IUSE="X Xaw3d gtk2 nls"
 
 DEPEND="X? ( virtual/x11 )
-		Xaw3d? ( x11-libs/Xaw3d )
-		gtk? ( ~x11-libs/gtk+-1.2.10-r4
-				>=media-libs/imlib-1.9.2
-				>=media-libs/libogg-1.0
-				>=media-libs/libvorbis-1.0-r2 )
-		gtk2? ( >=x11-libs/gtk+-2.0.0
-				>=dev-libs/atk-1.0.3
-				>=x11-libs/pango-1.2.1-r1
-				>=media-libs/libogg-1.0
-				>=media-libs/libvorbis-1.0-r2 )"
+	Xaw3d? ( x11-libs/Xaw3d )
+	gtk? ( ~x11-libs/gtk+-1.2.10-r4
+			>=media-libs/imlib-1.9.2
+			>=media-libs/libogg-1.0
+			>=media-libs/libvorbis-1.0-r2 )
+	gtk2? ( >=x11-libs/gtk+-2.0.0
+			>=dev-libs/atk-1.0.3
+			>=x11-libs/pango-1.2.1-r1
+			>=media-libs/libogg-1.0
+			>=media-libs/libvorbis-1.0-r2 )"
 RDEPEND="sys-libs/zlib"
 
 src_compile() {
@@ -35,24 +35,22 @@ src_compile() {
 	use Xaw3d \
 		&& myconf="${myconf} --enable-client=xaw3d --disable-gtktest"
 
-	use gtk \
-		&& myconf="${myconf} --enable-client=gtk --enable-gtktest"
-
-	use gtk2 \
-		&& myconf="${myconf} --enable-client=gtk-2.0 --enable-gtktest"
-
+	if [ `use gtk2` ] ; then
+		myconf="${myconf} --enable-client=gtk-2.0 --enable-gtktest"
+	elif [ `use gtk` ] ; then
+		myconf="${myconf} --enable-client=gtk --enable-gtktest"
+	fi
 
 	use nls \
 		|| myconf="${myconf} --disable-nls"
 
-		./configure \
-			--host=${CHOST} \
-			--prefix=/usr \
-			--infodir=/usr/share/info \
-			--mandir=/usr/share/man \
-			--with-zlib \
-		${myconf} || die
-
+	./configure \
+		--host=${CHOST} \
+		--prefix=/usr \
+		--infodir=/usr/share/info \
+		--mandir=/usr/share/man \
+		--with-zlib \
+	${myconf} || die
 	emake || die
 }
 

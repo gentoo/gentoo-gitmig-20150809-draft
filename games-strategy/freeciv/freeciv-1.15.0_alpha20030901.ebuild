@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-1.15.0_alpha20030901.ebuild,v 1.3 2003/10/13 22:09:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-1.15.0_alpha20030901.ebuild,v 1.4 2003/10/13 22:13:56 vapier Exp $
 
 inherit games
 
@@ -46,13 +46,13 @@ src_compile() {
 	use Xaw3d \
 		&& myconf="${myconf} --enable-client=xaw3d --disable-gtktest"
 
-	use gtk \
-		&& myconf="${myconf} --enable-client=gtk --enable-gtktest" \
-		|| myconf="${myconf} --disable-client=gtk --disable-gtktest"
-
-	use gtk2 \
-		&& myconf="${myconf} --enable-client=gtk-2.0 --enable-gtktest" \
-		|| myconf="${myconf} --disable-client=gtk-2.0 --disable-gtktest"
+	if [ `use gtk2` ] ; then
+		myconf="${myconf} --enable-client=gtk-2.0 --enable-gtktest"
+	elif [ `use gtk` ] ; then
+		myconf="${myconf} --enable-client=gtk --enable-gtktest"
+	else
+		myconf="${myconf} --disable-client --disable-gtktest"
+	fi
 
 	use sdl \
 		&& myconf="${myconf} --enable-client=sdl" \
