@@ -1,8 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/daphne/daphne-0.99.6.ebuild,v 1.1 2003/07/16 01:35:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/daphne/daphne-0.99.6.ebuild,v 1.2 2003/07/23 23:41:08 vapier Exp $
 
-inherit games eutils
+inherit games eutils flag-o-matic
+replace-flags -march=i686 -march=i586		# Bug 18807 Comment #11
+replace-flags -march=pentium3 -march=i586	# Bug 18807 Comment #4
 
 DESCRIPTION="Laserdisc Arcade Game Emulator"
 SRC_URI="http://www.daphne-emu.com/download/${P}-src.tar.gz"
