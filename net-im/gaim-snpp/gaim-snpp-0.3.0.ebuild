@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-snpp/gaim-snpp-0.3.0.ebuild,v 1.2 2004/04/25 15:27:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-snpp/gaim-snpp-0.3.0.ebuild,v 1.3 2004/04/29 17:34:09 rizzo Exp $
 
 use debug && inherit debug
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="debug"
 
 DEPEND=">=net-im/gaim-0.77"
