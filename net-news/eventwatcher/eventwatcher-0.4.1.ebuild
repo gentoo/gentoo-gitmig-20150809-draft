@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/eventwatcher-0.4.1.ebuild,v 1.2 2004/06/25 00:24:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/eventwatcher/eventwatcher-0.4.1.ebuild,v 1.3 2004/07/03 21:26:48 carlo Exp $
 
 inherit kde
-need-kde 3
-
-DEPEND="kde-base/kdenetwork"
 
 DESCRIPTION="EventWatcher is a KDE application which notifies about various events."
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://eventwatcher.sourceforge.net/"
+SRC_URI="mirror://sourceforge/eventwatcher/${P}.tar.bz2"
 
+
+SLOT="0"
 LICENSE="LGPL-2"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
-
 IUSE=""
-SLOT="0"
 
+
+DEPEND="kde-base/kdenetwork"
+need-kde 3
