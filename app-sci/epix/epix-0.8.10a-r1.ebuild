@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/epix-0.8.10a-r1.ebuild,v 1.5 2004/06/24 21:57:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/epix-0.8.10a-r1.ebuild,v 1.6 2004/11/22 13:26:40 phosphan Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="2- and 3-D plotter for creating images (to be used in LaTeX)"
 HOMEPAGE="http://mathcs.holycross.edu/~ahwang/current/ePiX.html"
@@ -35,7 +37,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CXX="${CXX}" CFLAGS="-c ${CFLAGS}" shrdir=${D}/usr/share\
+	emake CXX="$(tc-getCXX)" CFLAGS="-c ${CFLAGS}" shrdir=${D}/usr/share\
 			mandir=${D}/usr/share/man/man1 epix contrib || die
 	echo > README.gentoo -e "The full documentation is well hidden in the epix*howto.ps.gz-file in the tutorial subdirectory"
 }
