@@ -1,7 +1,7 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.0-r4.ebuild,v 1.1 2003/02/13 19:03:29 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.0-r4.ebuild,v 1.2 2003/02/13 20:14:27 vapier Exp $
 
 IUSE="truetype postgres tiff libwww nls jpeg readline ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
