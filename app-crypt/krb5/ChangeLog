@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/krb5
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/ChangeLog,v 1.4 2002/06/23 01:23:35 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/ChangeLog,v 1.5 2002/08/02 20:46:47 aliz Exp $
+
+*krb5-1.2.5-r2 (02 aug 2002)
+
+  02 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> krb5-1.2.5-r2.ebuild :
+
+  Security update, compile fix and updated homepage URL.
 
 *krb5-1.2.5-r1 (22 Jun 2002)
 
