@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Technologies, Inc.
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ipmitool-1.6.0.ebuild,v 1.1 2005/03/01 08:15:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmitool/ipmitool-1.6.0.ebuild,v 1.2 2005/03/01 08:16:06 robbat2 Exp $
 
 DESCRIPTION="Utility for controlling IPMI enabled devices."
 HOMEPAGE="http://${PN}.sf.net/"
@@ -14,7 +14,7 @@ RDEPEND="virtual/libc
 		dev-libs/openssl"
 DEPEND="${RDEPEND}
 		virtual/os-headers"
-		
+
 src_compile() {
 	econf \
 		--enable-ipmievd --enable-ipmishell \
