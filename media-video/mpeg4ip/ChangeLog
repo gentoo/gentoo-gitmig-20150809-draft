@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.7 2004/05/21 03:52:12 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.8 2004/06/01 15:25:04 tester Exp $
+
+  01 Jun 2004; <tester@gentoo.org> mpeg4ip-1.0.ebuild, mpeg4ip-1.1.ebuild:
+  only --disable-v4l2 is valid, fixes bug #52649, removed useless cruft from
+  pre-releases
 
 *mpeg4ip-1.1 (20 May 2004)
 

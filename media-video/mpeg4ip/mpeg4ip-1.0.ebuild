@@ -1,14 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.0.ebuild,v 1.5 2004/02/27 13:38:34 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.0.ebuild,v 1.6 2004/06/01 15:25:04 tester Exp $
 
 DESCRIPTION="MPEG 4 implementation library"
 
 HOMEPAGE="http://www.mpeg4ip.net/"
 
-PV2=`echo $PV | sed s/_rc/RC/`
-
-SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV2}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="MPL-1.1 LGPL-2 GPL-2 LGPL-2.1 BSD UCL MPEG4"
 
@@ -29,7 +27,7 @@ DEPEND="sys-devel/libtool
 		media-video/ffmpeg
 		!media-libs/faad2"
 
-S="${WORKDIR}/${PN}-${PV2}"
+S="${WORKDIR}/${P}"
 
 src_unpack() {
 	unpack ${A}
