@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-6.5.9-r1.ebuild,v 1.5 2004/07/01 21:47:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-6.5.9-r1.ebuild,v 1.6 2004/08/20 02:44:15 pvdabeel Exp $
 
 IUSE="crypt "
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}
 	!crypt? ( net-misc/netkit-rsh )"
 
 SLOT="6"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ppc"
 LICENSE="as-is"
 
 
