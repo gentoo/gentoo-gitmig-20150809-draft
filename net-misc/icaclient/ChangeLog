@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.15 2004/10/05 02:25:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.16 2004/10/30 17:23:06 weeve Exp $
+
+*icaclient-8.0-r2 (30 Oct 2004)
+
+  30 Oct 2004; Jason Wever <weeve@gentoo.org> +icaclient-8.0-r2.ebuild:
+  Added NLS fixes wrt bug #69171, thanks to Rob Henderson
+  <robh@cs.indiana.edu> for the patch.
 
 *icaclient-8.0-r1 (04 Oct 2004)
 
