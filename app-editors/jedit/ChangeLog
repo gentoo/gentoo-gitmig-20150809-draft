@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.25 2004/02/16 01:59:34 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.26 2004/02/17 07:59:23 absinthe Exp $
+
+  17 Feb 2004; Dylan Carlson <absinthe@gentoo.org> jedit-4.1.ebuild,
+  jedit-4.2_pre8.ebuild, jedit-4.2_pre9.ebuild:
+  added ~amd64 keywords.
 
   16 Feb 2004; Lars Weiler <pylon@gentoo.org> jedit-4.1.ebuild,
   jedit-4.2_pre9.ebuild:
