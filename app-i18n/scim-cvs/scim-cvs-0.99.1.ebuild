@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/scim-cvs-0.99.1.ebuild,v 1.2 2004/06/27 11:32:24 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/scim-cvs-0.99.1.ebuild,v 1.3 2004/06/30 03:31:38 agriffis Exp $
 
 inherit gnome2 eutils cvs
 
@@ -11,7 +11,7 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc"
-IUSE="gnome debug"
+IUSE="gnome"
 
 ECVS_AUTH="ext"
 CVS_RSH="ssh"
@@ -35,7 +35,8 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	sys-devel/autoconf
-	sys-devel/automake"
+	sys-devel/automake
+	>=sys-apps/sed-4"
 PDEPEND="|| ( app-i18n/scim-m17n
 		app-i18n/scim-uim
 		app-i18n/scim-tables )"
