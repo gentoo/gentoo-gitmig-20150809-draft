@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.42 2003/10/01 15:30:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.43 2003/10/07 23:53:24 agriffis Exp $
+
+  07 Oct 2003; Aron Griffis <agriffis@gentoo.org> files/vimrc:
+  Use nomodeline instead of modelines=0
 
   01 Oct 2003; Aron Griffis <agriffis@gentoo.org> vim-core-6.2-r4.ebuild,
   vim-core-6.2_pre1.ebuild, vim-core-6.2_pre2.ebuild,
