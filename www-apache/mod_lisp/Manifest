@@ -7,7 +7,7 @@ MD5 3098b7df164adc789f5d487bf34b23f4 mod_lisp-2.32.ebuild 731
 MD5 fc8208e6f7bb42f5d5f0cc79c52bc7fd mod_lisp-2.33-r1.ebuild 685
 MD5 e1a54cbed5ff007d27e979c6f1824f28 mod_lisp-2.33.ebuild 818
 MD5 9b28a6cd51c0e1a7add3606e7f873ed6 mod_lisp-2.42.ebuild 654
-MD5 540e247b41b08d3bef00f479bbd734ab mod_lisp-1.1.ebuild 652
+MD5 189b2528f8c4d680f24dce99d7428685 mod_lisp-1.1.ebuild 647
 MD5 0934df016f72c1014a1af3c23a98610f files/10_mod_lisp.conf 258
 MD5 b4eba66b6da346a960928c288bc2017c files/README.Gentoo 220
 MD5 9612cb5b42a552575760404670303d0f files/apache.conf 543
@@ -19,7 +19,7 @@ MD5 7e99a1accb5a700127b29b9bba62770a files/digest-mod_lisp-2.42 59
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCI0+LmPFBzbX68WERAn/TAJ0U7yAI1XaZTUNkKGIjSy57sICLIACfYdn+
-uHuPp4TaPpMDVGe1cfcKGeE=
-=/WcT
+iD8DBQFCI0/DmPFBzbX68WERAsiAAJ0cKxZyXW4eJfK6RtV9CMZF0nPfOgCfaQUv
+YvFzPsf+ArS66XkHo0/qL6A=
+=TmJH
 -----END PGP SIGNATURE-----
