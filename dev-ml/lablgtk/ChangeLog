@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.1 2002/06/29 05:14:35 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.2 2002/10/26 00:09:00 foser Exp $
+
+*lablgtk-1.2.5.ebuild (25 Oct 2002)
+
+  25 Oct 2002; foser <foser@gentoo.org> lablgtk-1.2.5.ebuild :
+  
+  New version. Ebuild by Jeffrey Palmer <jeffrey.palmer@acm.org> (bug #9609)
 
 *lablgtk-1.2.3.ebuild (28 Jun 2002)
 
