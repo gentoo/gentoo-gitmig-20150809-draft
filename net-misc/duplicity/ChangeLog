@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/duplicity
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/duplicity/ChangeLog,v 1.5 2004/10/24 00:23:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/duplicity/ChangeLog,v 1.6 2004/11/01 20:55:57 ticho Exp $
+
+  01 Nov 2004; Andrej Kacian <ticho@gentoo.org> duplicity-0.4.1.ebuild:
+  Stable on x86
 
   24 Oct 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
   duplicity-0.4.0.ebuild, duplicity-0.4.1.ebuild:

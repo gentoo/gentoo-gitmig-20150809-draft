@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 14ad4dcd2bf9d5f4ae79671719c3bbd9 ChangeLog 980
+MD5 c0809928609184ec9369d21e747d566a ChangeLog 1069
 MD5 bd9e210457c22384582e7c1394314d3f metadata.xml 250
-MD5 7f87a4f449d25755b4f0200fd7099733 duplicity-0.4.1.ebuild 674
+MD5 871b9646449ee6c65d9e064cc70406af duplicity-0.4.1.ebuild 673
 MD5 261f67bb523bbd5770871494f750ef80 duplicity-0.4.0.ebuild 674
 MD5 5fe71b465051c84995eee335f8a2c98a files/digest-duplicity-0.4.1 67
 MD5 62b458a17bbaa649ff6a760d965f81e0 files/digest-duplicity-0.4.0 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBevX710xuJSrg3/sRAiOdAJ9LaiJuv0tHquA9de4Ye4mbPq4RZQCfQZVk
-vJaqtLTxBHaW0CaaDB7jev0=
-=iYRe
+iD8DBQFBhqLl10xuJSrg3/sRAhKEAJ98MMqJxpLPJLMFy+mrpZ3tDoL1wQCfeZS7
+1NGIfc5dxP1zLKvAPyBvPaw=
+=fOeC
 -----END PGP SIGNATURE-----
