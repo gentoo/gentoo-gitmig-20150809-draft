@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/xmingw-gcc
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/ChangeLog,v 1.1 2003/10/02 10:19:39 cretin Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/ChangeLog,v 1.2 2004/03/15 21:54:39 mr_bones_ Exp $
+
+  15 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  xmingw-gcc-3.3.1.ebuild:
+  don't assign to P; use emake; error messages; tidy
 
 * xmingw-gcc-3.3.1 (01 Oct 2003)
 
