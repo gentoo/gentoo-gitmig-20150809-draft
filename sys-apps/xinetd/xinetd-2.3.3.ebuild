@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.3.ebuild,v 1.2 2001/09/01 06:12:57 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.3.ebuild,v 1.3 2001/09/01 06:15:50 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Replacement for inetd."
@@ -29,8 +29,8 @@ src_install() {
 	exeinto /etc/rc.d/init.d
 	newexe ${FILESDIR}/xinetd.rc5 xinetd
 	doexe ${FILESDIR}/svc-xinetd
+	newexe ${FILESDIR}/xinetd-run run
 
-	newexe ${FILESDIR}/xinetd-run-${PV}  run
 	exeinto /usr/sbin
 	doexe ${FILESDIR}/xconv.pl
 }
