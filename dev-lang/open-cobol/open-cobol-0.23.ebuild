@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/open-cobol/open-cobol-0.23.ebuild,v 1.1 2003/06/19 22:21:24 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/open-cobol/open-cobol-0.23.ebuild,v 1.2 2004/03/14 02:33:34 mr_bones_ Exp $
 
 DESCRIPTION="an open-source COBOL compiler"
 HOMEPAGE="http://www.open-cobol.org/"
@@ -16,8 +16,6 @@ DEPEND="sys-devel/libtool
 	>=sys-libs/db-2.0
 	readline? ( sys-libs/readline )
 	ncurses? ( >=sys-libs/ncurses-5.2 )"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 

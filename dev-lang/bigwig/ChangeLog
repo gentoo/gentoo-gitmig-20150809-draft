@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/bigwig
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/bigwig/ChangeLog,v 1.4 2003/07/11 22:14:03 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/bigwig/ChangeLog,v 1.5 2004/03/14 02:33:07 mr_bones_ Exp $
+
+  13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> bigwig-2.0-r7.ebuild:
+  Don't assign default to S; header fix
 
 *bigwig-2.0-r7 (01 Jul 2002)
 
