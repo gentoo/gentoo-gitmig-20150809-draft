@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/ufo2000
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ChangeLog,v 1.4 2004/03/21 20:09:38 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ChangeLog,v 1.5 2004/04/03 09:02:16 mr_bones_ Exp $
+
+*ufo2000-0.4.0.353 (03 Apr 2004)
+
+  03 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  ufo2000-0.4.0.353.ebuild:
+  version bump; ebuild submitted by Serge Semashko via bug #46386
 
   21 Mar 2004; David Holm <dholm@gentoo.org> ufo2000-0.4.0.334.ebuild:
   Added to ~ppc.
