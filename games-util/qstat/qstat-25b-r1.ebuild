@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/qstat-25b-r1.ebuild,v 1.1 2003/09/10 18:53:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/qstat-25b-r1.ebuild,v 1.2 2004/04/18 06:15:11 mr_bones_ Exp $
 
-S=${WORKDIR}/${PN}${PV}
+S="${WORKDIR}/${PN}${PV}"
 DESCRIPTION="Server statics collector supporting many FPS games"
 SRC_URI="http://www.qstat.org/${PN}${PV}.tar.gz"
 HOMEPAGE="http://www.qstat.org"
@@ -10,6 +10,7 @@ HOMEPAGE="http://www.qstat.org"
 KEYWORDS="x86"
 LICENSE="Artistic"
 SLOT="0"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
@@ -20,15 +21,14 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" || die
+	emake CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
-src_install () {
-	dobin qstat
+src_install() {
+	dobin qstat || die "dobin failed"
 
 	dosym /usr/bin/qstat /usr/bin/quakestat
 
 	dodoc CHANGES.txt COMPILE.txt
-	dohtml template/*
-	dohtml qstatdoc.html
+	dohtml template/* qstatdoc.html
 }
