@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20021205.ebuild,v 1.2 2004/04/25 16:09:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20040301.ebuild,v 1.1 2004/04/25 16:09:43 usata Exp $
 
 IUSE="X"
 
@@ -8,24 +8,31 @@ MY_PV=${PV:2}	# 20021205 -> 021205
 
 DESCRIPTION="Jasspa Microemacs"
 HOMEPAGE="http://www.jasspa.com/"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
-# downloaded from:
-#SRC_URI="http://www.jasspa.com/release_${MY_PV}/memacros.tar.gz 
+SRC_URI="http://www.jasspa.com/release_${MY_PV}/jasspa-memacros-${PV}.tar.gz
+	http://www.jasspa.com/release_${MY_PV}/jasspa-mehtml-${PV}.tar.gz
+	http://www.jasspa.com/release_${MY_PV}/jasspa-mesrc-${PV}.tar.gz
+	http://www.jasspa.com/release_${MY_PV}/meicons-extra.tar.gz"
 #	http://www.jasspa.com/release_${MY_PV}/me.ehf.gz
-#	http://www.jasspa.com/release_${MY_PV}/mehtml.tar.gz
-#	http://www.jasspa.com/release_${MY_PV}/mesrc.tar.gz 
 #	http://www.jasspa.com/release_${MY_PV}/meicons.tar.gz 
-#	http://www.jasspa.com/release_${MY_PV}/meicons-extra.tar.gz"
 ##	http://www.jasspa.com/spelling/ls_enus.tar.gz
 ##	http://www.jasspa.com/release_${MY_PV}/readme.jasspa_gnome
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND="virtual/glibc
 	sys-libs/ncurses
 	X? ( virtual/x11 )"
+
+S="${WORKDIR}/me${MY_PV}/src"
+
+src_unpack() {
+	unpack jasspa-mesrc-${PV}.tar.gz
+	cd ${T}
+	# everything except jasspa-mesrc
+	unpack ${A/jasspa-mesrc-${PV}.tar.gz/}
+}
 
 src_compile() {
 	sed -i "/^COPTIMISE/s/.*/COPTIMISE = ${CFLAGS}/" linux2.gmk
@@ -52,7 +59,7 @@ EOT
 src_install() {
 	dodir /usr/share/jasspa
 	keepdir /usr/share/jasspa/site
-	dobin me
-	dobin me32
-	cp -r ${S}/stagging/* ${D}/usr/share/jasspa
+	dobin me me32 || die
+	dodoc ../*.txt ../change.log
+	cp -r ${T}/* ${D}/usr/share/jasspa
 }
