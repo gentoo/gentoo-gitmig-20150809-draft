@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.9-r1.ebuild,v 1.9 2004/11/02 00:20:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.13.ebuild,v 1.1 2004/11/02 00:20:26 foser Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
 IUSE="doc tiff jpeg"
 
 RDEPEND="virtual/x11
@@ -34,9 +34,6 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	# security fixes (#64230)
-	epatch ${FILESDIR}/${P}-xpm_ico_secure.patch
-
 	# Turn of --export-symbols-regex for now, since it removes
 	# the wrong symbols
 	epatch ${FILESDIR}/gtk+-2.0.6-exportsymbols.patch
@@ -45,6 +42,7 @@ src_unpack() {
 	# add smoothscroll support for usability reasons
 	# http://bugzilla.gnome.org/show_bug.cgi?id=103811
 	epatch ${FILESDIR}/${PN}-2.4-smoothscroll.patch
+
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
 	use amd64 && epatch ${DISTDIR}/gtk+-2.4.1-lib64.patch.bz2

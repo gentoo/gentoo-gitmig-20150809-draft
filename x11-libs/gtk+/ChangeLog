@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.127 2004/10/13 21:02:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.128 2004/11/02 00:20:26 foser Exp $
+
+*gtk+-2.4.13 (02 Nov 2004)
+
+  02 Nov 2004; foser <foser@gentoo.org> gtk+-2.4.13.ebuild :
+  Not so fresh release (#64913)
+  Add correct automake dep (#65796)
 
   14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> gtk+-1.2.10-r11.ebuild:
   Removed ~ppc-macos keyword until bug #57677 is solved.
