@@ -1,6 +1,9 @@
 # ChangeLog for app-office/planner
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.14 2005/01/01 15:40:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.15 2005/01/02 21:43:21 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *planner-0.12.1 (09 Nov 2004)
 
@@ -38,7 +41,7 @@
   19 Jun 2004; Jason Wever <weeve@gentoo.org> planner-0.11.ebuild:
   Stable on sparc.
 
-  05 May 2004; Bryan Østergaard <kloeri@gentoo.org> planner-0.11.ebuild:
+  05 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> planner-0.11.ebuild:
   Stable on alpha.
 
   03 Apr 2004; <spider@gentoo.org> planner-0.11.ebuild:

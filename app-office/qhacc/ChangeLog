@@ -1,6 +1,9 @@
 # ChangeLog for app-office/qhacc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.24 2005/01/01 15:41:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/ChangeLog,v 1.25 2005/01/02 21:44:04 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *qhacc-3.2.3 (24 Dec 2004)
 
@@ -58,7 +61,7 @@
   19 Jun 2004; Jason Wever <weeve@gentoo.org> qhacc-2.9.8.ebuild:
   Stable on sparc.
 
-  05 May 2004; Bryan Østergaard <kloeri@gentoo.org> qhacc-2.9.8.ebuild:
+  05 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> qhacc-2.9.8.ebuild:
   Stable on alpha.
 
   01 May 2004; Dominik Stadler <centic@gentoo.org> qhacc-2.9.8.ebuild:

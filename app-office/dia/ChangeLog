@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.40 2005/01/01 15:31:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.41 2005/01/02 21:40:12 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> dia-0.93.ebuild:
   Stable on alpha.
@@ -35,7 +38,7 @@
   New release, resolves bug #50144. Dependencies corrections. Patch that
   fixes python-related checks in the configure script.
 
-  05 May 2004; Bryan �stergaard <kloeri@gentoo.org> dia-0.92.2.ebuild:
+  05 May 2004; Bryan Østergaard <kloeri@gentoo.org> dia-0.92.2.ebuild:
   Stable on alpha.
 
   03 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> dia-0.92.2.ebuild:
