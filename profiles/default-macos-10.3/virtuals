@@ -20,6 +20,7 @@ virtual/tetex		app-text/tetex
 virtual/textbrowser	net-www/links
 virtual/x11		sys-darwin/apple-xfree
 virtual/xft		sys-darwin/apple-xfree
+virtual/opengl		sys-darwin/apple-xfree
 virtual/skkserv		app-i18n/skkserv
 virtual/flim		app-emacs/flim
 virtual/semi		app-emacs/semi
