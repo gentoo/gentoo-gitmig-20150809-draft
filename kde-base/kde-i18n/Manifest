@@ -1,4 +1,6 @@
 MD5 0ce7b263e142377775340d8d9915f8da kde-i18n-3.1.4.ebuild 1547
-MD5 6204f127eaf82c1f53b73d19e97b5d4a ChangeLog 581
+MD5 728c6071be7edcabeec1bd2d5962a2e4 kde-i18n-3.2.0_beta1.ebuild 1622
+MD5 13ecbbe56e72bde2175046b8d0825de0 ChangeLog 714
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 ef88a0ad3bd6fc130342381bdba6500f files/digest-kde-i18n-3.2.0_beta1 5198
 MD5 47b8fcf8ee830e187b7229adfd3e7b1d files/digest-kde-i18n-3.1.4 3708
