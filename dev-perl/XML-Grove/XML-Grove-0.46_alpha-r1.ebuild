@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Grove/XML-Grove-0.46_alpha-r1.ebuild,v 1.5 2003/08/07 02:18:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Grove/XML-Grove-0.46_alpha-r1.ebuild,v 1.6 2003/12/16 01:24:49 weeve Exp $
 
 inherit perl-module
 
@@ -13,6 +13,6 @@ SRC_URI="http://cpan.org/modules/by-module/XML/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc"
+KEYWORDS="x86 amd64 ppc ~sparc"
 
 DEPEND=">=dev-perl/libxml-perl-0.07-r1"
