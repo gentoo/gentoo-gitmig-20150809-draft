@@ -1,4 +1,14 @@
-MD5 6e17b3b7ec79a83958c7b12c7c2c6e7a ChangeLog 502
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 414e4c1ef6af966daf95094c73f6e21c ChangeLog 590
 MD5 72725571aa7f1cccc7b0d1ca542152c9 metadata.xml 348
-MD5 51bf1ab0e3242fdc7f5b6c721258e87b sipcalc-1.1.2.ebuild 751
+MD5 74aee1ec2a28baeb44a8389f09b34b74 sipcalc-1.1.2.ebuild 750
 MD5 025d83b9fa0ed5567e8e9692acf0ff78 files/digest-sipcalc-1.1.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB0ICyQlM6RnzZP+IRAiVQAJ9EHCk3k1GoN9gBWcslFBA2yOnF4QCgw4lK
+eJC2SWjCZr/un7M+yMbtuS0=
+=3NIA
+-----END PGP SIGNATURE-----
