@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.7 2005/01/13 11:45:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.8 2005/01/14 00:43:44 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Force binutils-config versions of binutils
@@ -39,3 +39,8 @@
 ->=sys-kernel/gentoo-sources-2.6
 ->=sys-kernel/vanilla-sources-2.6
 ->=sys-kernel/linux-headers-2.6
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# Non multilib-friendly baselayouts
+=sys-apps/baselayout-1.11.7-r2
+=sys-apps/baselayout-1.11.8
