@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/nbsmtp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.10 2004/10/23 19:11:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.11 2004/11/01 21:17:12 ticho Exp $
+
+  01 Nov 2004; Andrej Kacian <ticho@gentoo.org> nbsmtp-0.92-r1.ebuild,
+  nbsmtp-0.92.ebuild, nbsmtp-0.96.ebuild:
+  Stable on x86
 
   23 Oct 2004; Jason Wever <weeve@gentoo.org> nbsmtp-0.96.ebuild:
   Added ~sparc keyword.
