@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-1.8.ebuild,v 1.6 2004/03/17 01:04:18 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-1.8.ebuild,v 1.7 2004/03/23 02:47:17 leonardop Exp $
 
 inherit gnome2
 
@@ -24,3 +24,12 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README THANKS TODO"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Don't set the UTF-8 codeset before parsing command line arguments.
+	# Closes bug #45204.
+	epatch ${FILESDIR}/${P}-utf8_fix.patch
+}
