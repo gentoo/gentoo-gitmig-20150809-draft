@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.7 2003/09/30 06:17:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.8 2003/09/30 07:01:57 spyderous Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -13,7 +13,7 @@
 ECLASS=xfree
 INHERITED="${INHERITED} ${ECLASS}"
 
-EXPORT_FUNCTIONS vcards is_kernel
+EXPORT_FUNCTIONS vcards is_kernel strip_bins
 
 vcards() {	
 	has "$1" ${VIDEO_CARDS} && return 0
@@ -48,4 +48,30 @@ is_kernel() {
         else
                 return 1
         fi
+}
+
+# For stripping binaries, but not drivers or modules.
+strip_bins() {
+        einfo "Stripping binaries..."
+        # This bit I got from Redhat ... strip binaries and drivers ..
+        # NOTE:  We do NOT want to strip the drivers, modules or DRI modules!
+        for x in $(find ${D}/ -type f -perm +0111 -exec file {} \; | \
+                grep -v ' shared object,' | \
+                sed -n -e 's/^\(.*\):[  ]*ELF.*, not stripped/\1/p')
+        do
+        if [ -f ${x} ]
+                then
+                        # Dont do the modules ...
+                        if [ "${x/\/lib\/modules}" = "${x}" ]
+                        then
+                                echo "`echo ${x} | sed -e "s|${D}||"`"
+                                strip ${x} || :
+                        fi
+                        if [ "${x/\usr\/X11R6\/lib\/modules}" = "${x}" ]
+                        then
+                                echo "`echo ${x} | sed -e "s|${D}||"`"
+                                strip ${x} || :
+                        fi
+                fi
+        done
 }
