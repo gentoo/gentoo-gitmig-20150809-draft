@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.6.2.ebuild,v 1.7 2004/10/01 15:12:57 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.6.2.ebuild,v 1.8 2004/10/17 19:36:26 liquidx Exp $
 
 inherit gnome2 eutils
 
@@ -26,6 +26,12 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 	${RDEPEND}"
 
 DOCS="AUTHORS ChangeLog HACKING INSTALL MAINTAINERS NEWS README TODO"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-amd64.patch
+}
 
 src_install() {
 

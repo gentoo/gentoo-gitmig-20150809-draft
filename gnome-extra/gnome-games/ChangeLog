@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.78 2004/10/11 23:14:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.79 2004/10/17 19:36:26 liquidx Exp $
+
+  17 Oct 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/gnome-games-2.6.2-amd64.patch, gnome-games-2.6.2.ebuild:
+  added amd64 specific patch (#48948)
 
 *gnome-games-2.8.1 (12 Oct 2004)
 

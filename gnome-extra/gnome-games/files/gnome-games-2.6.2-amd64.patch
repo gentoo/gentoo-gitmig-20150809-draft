@@ -1,0 +1,52 @@
+diff -ru gnome-games-2.6.2/gnometris/blockops.cpp /tmp/gnome-games-2.6.2/gnometris/blockops.cpp
+--- gnome-games-2.6.2/gnometris/blockops.cpp	2003-05-31 20:01:34.000000000 -0700
++++ /tmp/gnome-games-2.6.2/gnometris/blockops.cpp	2004-08-14 03:14:13.863616496 -0700
+@@ -33,7 +33,7 @@
+   			"y", (double) y * BLOCK_SIZE,
+ 			"width", (double) BLOCK_SIZE,
+ 			"height", (double) BLOCK_SIZE,
+-  			0);
++  			NULL);
+ 
+ 	return it;
+ }
+diff -ru gnome-games-2.6.2/gnometris/field.cpp /tmp/gnome-games-2.6.2/gnometris/field.cpp
+--- gnome-games-2.6.2/gnometris/field.cpp	2002-05-04 09:43:54.000000000 -0700
++++ /tmp/gnome-games-2.6.2/gnometris/field.cpp	2004-08-14 03:13:43.052300528 -0700
+@@ -56,7 +56,7 @@
+   			"y", (double) 0,
+ 			"width", (double) COLUMNS * BLOCK_SIZE,
+ 			"height", (double) LINES * BLOCK_SIZE,
+-  			0);
++  			NULL);
+ 		else
+ 			bg = gnome_canvas_item_new(
+   			gnome_canvas_root(GNOME_CANVAS(w)),
+@@ -68,5 +68,5 @@
+ 				"fill_color", "black",
+ 				"outline_color", "black",
+ 				"width_units", 1.0,
+-  			0);
++  			NULL);
+ }
+diff -ru gnome-games-2.6.2/gnometris/tetris.cpp /tmp/gnome-games-2.6.2/gnometris/tetris.cpp
+--- gnome-games-2.6.2/gnometris/tetris.cpp	2004-02-23 03:09:11.000000000 -0700
++++ /tmp/gnome-games-2.6.2/gnometris/tetris.cpp	2004-08-14 03:14:01.866440344 -0700
+@@ -202,7 +202,7 @@
+                                               "y", LINES*BLOCK_SIZE/2.0,
+                                               "text", _("Paused"),
+                                               "size_points", 36.0,
+-                                              0
++                                              NULL
+                                               );
+ 
+ 	/* Since gnome_canvas doesn't support setting the size of text in
+@@ -230,7 +230,7 @@
+                                                  "y", LINES*BLOCK_SIZE/2.0,
+                                                  "text", _("Game Over"),
+                                                  "size_points", 36.0,
+-                                                 0
++                                                 NULL
+                                                  );
+ 
+ 	gnome_canvas_item_get_bounds (gameoverMessage, &x1, &y1, &x2, &y2);
