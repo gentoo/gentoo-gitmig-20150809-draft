@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.1.3.ebuild,v 1.12 2004/07/14 03:11:58 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.1.3.ebuild,v 1.13 2004/09/16 03:51:17 tgall Exp $
 
 inherit gnome2 gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/abiword/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="x86 ~ppc sparc amd64 alpha ~ia64 mips hppa"
+KEYWORDS="x86 ~ppc sparc amd64 alpha ~ia64 mips hppa ppc64"
 
 IUSE=""
 # FIXME : some sort of proper spellchecker selection needed

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enchant
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.32 2004/07/14 03:11:58 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.33 2004/09/16 03:51:17 tgall Exp $
+
+  15 Sep 2004; Tom Gall <tgall@gentoo.org> enchant-1.1.3.ebuild:
+  stable on ppc64
 
   13 Jul 2004; Stephen P. Becker <geoman@gentoo.org> enchant-1.1.3.ebuild:
   make gnuconfig_update unconditional, remove COPYING.LIB reference
