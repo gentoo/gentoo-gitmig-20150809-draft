@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3560 2005/02/04 22:45:46 twp Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3561 2005/02/05 02:31:29 kingtaco Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Mike Doty <kingtaco@gentoo.org> (4 Feb 2005)
+# masking due to replacment by media-video/spca5xx. due for
+# removal from tree after 1 May 2005.
+media-video/spca50x
 
 # Tom Payne <twp@gentoo.org> (4 Feb 2005)
 # Masked pending resolution of bug # 79640
