@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.3.ebuild,v 1.2 2002/10/18 11:14:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.3.ebuild,v 1.3 2002/10/28 01:26:00 rphillips Exp $
 
 IUSE="ssl nls java python tcltk perl"
 
@@ -135,6 +135,9 @@ src_install () {
 
 	exeinto /etc/init.d/
 	doexe ${FILESDIR}/${PV}/${PN}
+
+	exeinto /etc/conf.d/
+	doexe ${FILESDIR}/postgresql
 }
 
 pkg_postinst() {
