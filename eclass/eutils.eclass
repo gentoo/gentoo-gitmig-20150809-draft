@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.26 2003/03/06 20:35:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.27 2003/03/10 08:49:05 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -452,6 +452,7 @@ get_number_of_jobs() {
 # Default values if you do not specify any:
 # username:	REQUIRED !
 # uid:		next available (see useradd(8))
+#		note: pass -1 to get default behavior
 # shell:	/bin/false
 # homedir:	/dev/null
 # groups:	none
@@ -482,7 +483,7 @@ enewuser() {
 
 	# handle uid
 	local euid="$1"; shift
-	if [ ! -z "${euid}" ] ; then
+	if [ ! -z "${euid}" ] && [ "${euid}" != "-1" ] ; then
 		if [ ${euid} -gt 0 ] ; then
 			opts="${opts} -u ${euid}"
 		else
