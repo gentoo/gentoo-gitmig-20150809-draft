@@ -1,0 +1,11 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/s390/2004.3/make.defaults,v 1.1 2004/09/21 15:13:53 vapier Exp $
+
+GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses"
+
+ARCH="s390"
+
+USE="berkdb bitmap-fonts crypt cups fbcon foomaticdb gdbm imlib jpeg libwww mikmod motif mad mpeg ncurses nls pam perl png python readline slang spell ssl tcpd truetype xprint zlib"
+
+ACCEPT_KEYWORDS="s390"
