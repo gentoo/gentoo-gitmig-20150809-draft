@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Original from libgd-1.8.3-r3.ebuild slightly edited for libgd-2.0.1
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-2.0.1.ebuild,v 1.2 2002/09/14 12:39:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-2.0.1.ebuild,v 1.3 2002/10/04 05:48:35 vapier Exp $
 
 MY_P=${P/lib/}
 S=${WORKDIR}/${MY_P}
