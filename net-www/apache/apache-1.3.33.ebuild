@@ -1,10 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33.ebuild,v 1.3 2004/10/29 15:21:15 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33.ebuild,v 1.4 2004/10/29 15:55:07 stuart Exp $
 
-# stuart@gentoo.org - 2004/10/29:
+# Gentoo ARCH teams
 #
-# this ebuild is masked, awaiting the release of the corresponding mod_ssl
+# Do NOT mark this ebuild as stable unless the corresponding mod_ssl package
+# can also be marked as stable on your arch.
+#
+# Thanks,
+# stuart@gentoo.org
 
 inherit eutils fixheadtails
 
