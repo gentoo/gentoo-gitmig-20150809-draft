@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.5 2004/03/02 15:29:10 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.6 2004/03/23 06:48:58 vapier Exp $
 
 IUSE="nls bootstrap build"
 
@@ -14,21 +14,19 @@ filter-flags "-fomit-frame-pointer -fssa"
 
 PATCHVER="1.2"
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Tools necessary to build programs"
+HOMEPAGE="http://sources.redhat.com/binutils/"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 	mirror://kernel/linux/devel/binutils/test/${P}.tar.bz2
 	mirror://gentoo/${P}-patches-${PATCHVER}.tar.bz2"
-HOMEPAGE="http://sources.redhat.com/binutils/"
 
-SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
+SLOT="0"
 KEYWORDS="amd64 ~x86 ~ppc ~alpha ~sparc -mips ~hppa ~ia64 ~ppc64 s390"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )
 	!build? ( !bootstrap? ( dev-lang/perl ) )"
-
 
 src_unpack() {
 
@@ -59,7 +57,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=
-
+	[ ! -z "${CBUILD}" ] && myconf="--build=${CBUILD}"
 	use nls && \
 		myconf="${myconf} --without-included-gettext" || \
 		myconf="${myconf} --disable-nls"

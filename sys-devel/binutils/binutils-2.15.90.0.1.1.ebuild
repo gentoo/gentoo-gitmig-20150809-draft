@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.1.1.ebuild,v 1.2 2004/03/17 15:14:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.90.0.1.1.ebuild,v 1.3 2004/03/23 06:48:58 vapier Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -56,7 +56,7 @@ src_compile() {
 	filter-flags "-fomit-frame-pointer -fssa"
 
 	local myconf=
-
+	[ ! -z "${CBUILD}" ] && myconf="--build=${CBUILD}"
 	use nls \
 		&& myconf="${myconf} --without-included-gettext" \
 		|| myconf="${myconf} --disable-nls"
