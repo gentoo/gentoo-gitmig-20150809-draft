@@ -1,12 +1,18 @@
 # ChangeLog for sys-kernel/gaming-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.4 2003/04/21 02:14:10 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.5 2003/05/01 02:30:20 livewire Exp $
+
+gaming-sources-2.4.20-r3 (30 April 2003)
+
+  30 April 2003; Bob Johnson <livewire@gentoo.org>
+
+	-gcc31 default optimizations changed to -O2 (pfeifer@gentoo.org)
 
 *gaming-sources-2.4.20-r2 (20 April 2003)
 
   16 April 2003; Bob Johnson <livewire@gentoo.org>
 
-	- new bootsplash patches
+	-new bootsplash patches
 	-bumped back down to ck4 for performance
 
 *gaming-sources-2.4.20-r1 (11 Mar 2003)
