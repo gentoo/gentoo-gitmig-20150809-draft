@@ -1,0 +1,8 @@
+# ChangeLog for x11-plugins/wmpower
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethstatus/ChangeLog,v 1.1 2004/12/06 19:45:11 s4t4n Exp $
+
+*ethstatus-0.4.2-r2 (06 Dec 2004)
+
+  06 Dec 2004; Michele Noberasco <s4t4n@gentoo.org> ethstatus-0.4.2-r2.ebuild:
+  Initial import. This is a debian-enhanced version of the package.
