@@ -1,4 +1,6 @@
 MD5 aab01f9f283cc9dfa33a6f0be094d75e qpopper-4.0.5.ebuild 3207
-MD5 52072ddf424f552476f4a0783896a86b ChangeLog 1381
+MD5 820f5ebb6cffcc9057fb7f923f4a0066 qpopper-4.0.5-r1.ebuild 3304
+MD5 bd5fc422a55e6a1aeefcb9547e0fc376 ChangeLog 1662
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 843447464085eea5bb368ef6d5e357ba files/digest-qpopper-4.0.5 131
+MD5 843447464085eea5bb368ef6d5e357ba files/digest-qpopper-4.0.5-r1 131

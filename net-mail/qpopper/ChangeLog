@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/qpopper
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.13 2004/06/24 23:28:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.14 2004/07/24 05:10:06 langthang Exp $
+
+*qpopper-4.0.5-r1 (23 Jul 2004)
+
+  23 Jul 2004; Tuan Van <langthang@gentoo.org> +qpopper-4.0.5-r1.ebuild:
+  Add local use flags:
+  	xinetd, resolve bug #17800
+  	mailbox, resolve bug #42289
+  	gdbm, optional gdbm support.
+  	debug, optional debugging support
+  Fixed bug #34017.
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> qpopper-4.0.5.ebuild:
   Add die following econf for bug 48950
