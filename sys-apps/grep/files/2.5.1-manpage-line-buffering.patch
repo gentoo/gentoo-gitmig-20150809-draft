@@ -1,3 +1,6 @@
+grep recognizes '--line-buffered' instead of '--line-buffering'
+taviso (20 Aug 2004)
+
 --- doc/grep.1.orig	2004-08-20 09:28:45.857442048 +0100
 +++ doc/grep.1	2004-08-20 09:27:20.959348520 +0100
 @@ -303,7 +303,7 @@

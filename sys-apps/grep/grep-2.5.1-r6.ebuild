@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r6.ebuild,v 1.10 2005/01/02 23:18:23 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r6.ebuild,v 1.11 2005/01/06 05:36:21 vapier Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -24,15 +24,14 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A} && cd ${S} || die
 
-	if [ "${ARCH}" = "sparc" -a "${PROFILE_ARCH}" = "sparc" ] ; then
-		epatch "${FILESDIR}/gentoo-sparc32-dfa.patch"
-	fi
+	# Fix a weird sparc32 compiler bug
+	echo "" >> src/dfa.h
 	epatch "${FILESDIR}/${PV}-manpage.patch"
 
 	# man page describes a --line-buffering option, where as
 	# grep recognises --line-buffered.
 	# 	-taviso (20 Aug 2004)
-	epatch ${FILESDIR}/${PV}-manpage-line-buffering.diff
+	epatch ${FILESDIR}/${PV}-manpage-line-buffering.patch
 
 	use uclibc && epatch ${FILESDIR}/grep-2.5.1-restrict_arr.patch
 
