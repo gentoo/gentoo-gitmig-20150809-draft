@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r1.ebuild,v 1.2 2003/08/10 20:41:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6-r1.ebuild,v 1.3 2003/08/11 20:40:27 mholzer Exp $
 
 DESCRIPTION="Graphical backgrounds for frame buffer consoles"
 HOMEPAGE="http://linux.tkdack.com/"
@@ -70,7 +70,7 @@ pkg_postinst() {
 	done
 
 	einfo
-	einfo "Execute \"ebuild /var/db/pkg/media-gfx/${P}/${P}.ebuild config\""
+	einfo "Execute \"ebuild /var/db/pkg/media-gfx/${PF}/${PF}.ebuild config\""
 	einfo "to have your kernel sources in /usr/src/linux patched with the"
 	einfo "Framebuffer Bootsplash patches"
 	einfo
