@@ -1,12 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1.ebuild,v 1.6 2002/04/12 17:15:30 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1-r1.ebuild,v 1.1 2002/05/04 02:58:22 woodchip Exp $
 use arts && . /usr/portage/eclass/inherit.eclass
 use arts && inherit kde-functions && set-kdedir
-
-# I highly suggest you read the features section of the freeamp website to
-# see all the neat stuff this program can do. Pretty spiffy :)
 
 DESCRIPTION="An extremely full-featured mp3/vorbis/cd player with ALSA support"
 SRC_URI="http://www.freeamp.org/download/src/${P}.tar.bz2"
@@ -24,6 +20,8 @@ RDEPEND="virtual/glibc
 	X? ( virtual/x11 ) arts? ( kde-base/kdelibs )
 	oggvorbis? ( media-libs/libvorbis )"
 DEPEND="${RDEPEND} dev-lang/nasm sys-devel/perl"
+LICENSE="GPL-2"
+SLOT="0"
 
 # Unfortunately you can't selectively build a lot of the features. Therefore
 # this whole package is essentially a judgement call. However, I've made the
