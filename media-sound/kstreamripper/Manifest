@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 04b3a03dcdf17aa739873bcd470b0d3a ChangeLog 1085
+MD5 d7c3a382cb62bacef2d72cb0cb27c520 kstreamripper-0.2.ebuild 561
+MD5 7ea52231b6eac4c59ddab4c9e6e9e225 ChangeLog 1219
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 3c1050212a2dc3a17f8a20240ca7bcb6 kstreamripper-0.2.ebuild 574
 MD5 e305dcc4ef30bf8f188f8122c3259736 files/digest-kstreamripper-0.2 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxRbjArHZZzCEUG0RAtJiAJ9MAeLOGjYdoc1PD0wX90b1Ti2ZjACeORnp
-rsP2CYIDW4XXqAPeCiYdv4o=
-=KaRm
------END PGP SIGNATURE-----

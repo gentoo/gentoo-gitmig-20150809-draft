@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kstreamripper
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/ChangeLog,v 1.8 2004/12/19 05:51:10 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/ChangeLog,v 1.9 2005/02/03 21:19:37 carlo Exp $
+
+  03 Feb 2005; Carsten Lohrke <carlo@gentoo.org> kstreamripper-0.2.ebuild:
+  QA: inherit kde-base -> inherit kde, need-kde after R/DEPEND
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   kstreamripper-0.2.ebuild:
