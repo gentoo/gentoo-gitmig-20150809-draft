@@ -1,9 +1,19 @@
-MD5 b5b9e88e860a68d57928248ef99056c4 ChangeLog 726
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1cdaf970784e6bac7182f8efc75eccc4 ChangeLog 724
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 a73629f724fa71b3ab96a32f70deccfe mod_auth_kerb-4.11.ebuild 1081
-MD5 59e80341fef75a7dc798258fabe86654 mod_auth_kerb-4.11-r1.ebuild 863
+MD5 305a2884f3d786ee45d11ca24a2f5859 mod_auth_kerb-4.11.ebuild 1079
+MD5 862f1e12609fd86384b8bae627fab5cf mod_auth_kerb-4.11-r1.ebuild 864
 MD5 c9bbfd002811a674505b3844837a63ee files/11_mod_auth_kerb.conf 180
 MD5 7e465f540fb90976cd1c7959ae94e6ab files/digest-mod_auth_kerb-4.11 69
 MD5 05d525e36b7e86f564e3a15608eca8e4 files/mod_auth_kerb_register.patch 782
 MD5 7e465f540fb90976cd1c7959ae94e6ab files/digest-mod_auth_kerb-4.11-r1 69
 MD5 b1d5221d1f57a0c7e01e320bdbec8150 files/4.11-r1/11_mod_auth_kerb.conf 175
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4Hz+mPFBzbX68WERAtTCAJ99xmCenSVXvemTK5En671N0reTkwCfaqlJ
+w10DeQjSIV1R2r7lfm/wCCs=
+=on4P
+-----END PGP SIGNATURE-----

@@ -1,12 +1,22 @@
-MD5 59106b140e0f4054088b8b5434d752d8 ChangeLog 1320
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c3c59e4b6f32a4222351610875495651 ChangeLog 1319
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 9f836a90624909befcb789f5021128f6 mod_vdbh-1.0.2-r1.ebuild 863
-MD5 629ef3e1fc406c631c8da22dc6883684 mod_vdbh-1.0.2.ebuild 859
-MD5 ace498e990e83f9394455720729bf3d5 mod_vdbh-1.0.3.ebuild 879
-MD5 9a4094601abb0e3ec9a4d5e5e6147af6 mod_vdbh-1.0.3-r1.ebuild 767
+MD5 7daf812ef2e4a5485f802014e7f1edd9 mod_vdbh-1.0.2-r1.ebuild 860
+MD5 8557cc1befde7a54896009138801ef48 mod_vdbh-1.0.2.ebuild 856
+MD5 264bae348ae98339eb5fce84ed6bd663 mod_vdbh-1.0.3.ebuild 877
+MD5 4f743035bca03d07e7d2359ce8750442 mod_vdbh-1.0.3-r1.ebuild 768
 MD5 5dde0d1eb90420a1ba31516e99151139 files/21_mod_vdbh.conf 576
 MD5 3e4e2e532cd0eaf5fc84c4d9d9917f77 files/digest-mod_vdbh-1.0.2 65
 MD5 3e4e2e532cd0eaf5fc84c4d9d9917f77 files/digest-mod_vdbh-1.0.2-r1 65
 MD5 697732d8b1d327f07a0d56a17f021ae5 files/digest-mod_vdbh-1.0.3 64
 MD5 697732d8b1d327f07a0d56a17f021ae5 files/digest-mod_vdbh-1.0.3-r1 64
 MD5 fdfebeb3c991150f5d17e7e05637a0f8 files/1.0.3-r1/21_mod_vdbh.conf 566
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4HcCmPFBzbX68WERAgYxAJ9tkSz11dr62c8RghUZxWN1ZsngvgCggG/t
+xLOdCumqcnfLEHXaM090FFI=
+=AMMU
+-----END PGP SIGNATURE-----
