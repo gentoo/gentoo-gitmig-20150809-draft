@@ -1,14 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/make.defaults,v 1.1 2005/01/01 02:59:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/make.defaults,v 1.2 2005/01/10 12:35:20 eradicator Exp $
 
 ARCH="amd64"
 ACCEPT_KEYWORDS="${ARCH}"
 
 CHOST="x86_64-pc-linux-gnu"
 
-# GCC 3.4.2 has multilib enabled by default, but we still need multilib in USE
-# for compatibility. also, without this we might actually fail to build stages.
-STAGE1_USE="multilib"
+STAGE1_USE="multilib emul-linux-x86"
 GRP_STAGE23_USE="${STAGE1_USE}"
 USE="${GRP_STAGE23_USE}"
