@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.0/use.mask,v 1.3 2004/03/31 22:57:44 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.0/use.mask,v 1.4 2004/06/10 01:46:12 george Exp $
 
 # Anything that relies on vm86.h will not built on amd64
 # SVGAlib doesnt build
@@ -34,3 +34,8 @@ selinux
 
 # x86 binary only, used by php
 fdftk
+
+# versions that are in portage do not support amd64,
+# will be removed when Intel issues an update and it gets into portage
+# (it seems to be in the works)
+ifc

@@ -32,3 +32,7 @@ directfb
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
 selinux
+
+# versions that are in portage do not support amd64, 
+# will be removed when Intel issues an update and it gets into portage
+ifc
