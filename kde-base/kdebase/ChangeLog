@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.165 2004/12/13 15:37:43 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.166 2004/12/18 22:28:06 corsair Exp $
+
+  18 Dec 2004; Markus Rothe <corsair@gentoo.org> kdebase-3.3.1-r2.ebuild:
+  Stable on ppc64
 
   13 Dec 2004; Caleb Tennis <caleb@gentoo.org> -files/detectwidget.cpp.diff,
   -files/utils.h.diff, -files/3.3.1-r1/Xsetup, -files/3.3.1-r1/backgroundrc,
