@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.9 2002/10/04 21:22:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.10 2002/10/29 19:38:20 raker Exp $
 
 S=${WORKDIR}/${P}
 
@@ -17,9 +17,12 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
+inherit gcc
+
 src_unpack() {
 
-	unpack ${A} ; cd ${S}
+	unpack ${A}
+	cd ${S}
 	patch -p1 < ${FILESDIR}/${P}-gentoo-r1.diff || die
 
 }
@@ -27,7 +30,14 @@ src_unpack() {
 src_compile() {
 
 	export CXX=g++
-	export LIBS="-lcrypt -lsupc++"
+
+	if [ "`gcc-major-version`" = "3" ]; then
+		export LIBS="-lcrypt -lsupc++"
+	fi
+
+	if [ "`gcc-major-version`" = "2" ]; then
+		export LIBS="-lcrypt"
+	fi
 
 	econf || die "./configure failed"
 
