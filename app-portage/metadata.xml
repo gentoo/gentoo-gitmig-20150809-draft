@@ -6,8 +6,12 @@
 		ebuilds.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie app-portage enthält Programme für das Arbeiten mit Portage
+		Die Kategorie app-portage enthÃ¤lt Programme fÃ¼r das Arbeiten mit Portage
 		oder Ebuilds.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría app-portage contiene programas para trabajar con portage
+		o con ebuilds.
 	</longdescription>
 </catmetadata>
 
