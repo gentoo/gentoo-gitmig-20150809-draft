@@ -1,0 +1,11 @@
+# ChangeLog for media-video/avinfo
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/avinfo/ChangeLog,v 1.1 2004/11/16 15:28:08 chriswhite Exp $
+
+*avinfo-1.0_alpha15 (17 Nov 2004)
+
+  17 Nov 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +avinfo-1.0_alpha15.ebuild:
+  Initial import into the tree.  This closes bug #35470.  Thanks to   	
+  Jose Romildo Malaquias and Kai Zimmermann for their ebuild submissions.
+
