@@ -1,9 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.0_beta2.ebuild,v 1.3 2003/12/10 13:45:46 caleb Exp $
-inherit kde flag-o-matic
-
-need-kde 3
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.0_beta2.ebuild,v 1.4 2003/12/17 14:07:39 caleb Exp $
+inherit flag-o-matic
 
 LICENSE="GPL-2"
 KEYWORDS="x86"
@@ -11,6 +9,7 @@ DESCRIPTION="A library for reading and editing audio meta data"
 HOMEPAGE="http://ktown.kde.org/~wheeler/taglib"
 SRC_URI="http://ktown.kde.org/~wheeler/${PN}/${PN}-0.96.tar.gz"
 S=${WORKDIR}/${PN}-0.96
+SLOT=0
 
 replace-flags "-O3 -O2"
 
@@ -23,4 +22,9 @@ src_compile()
 	aclocal && autoconf && automake
 	econf
 	emake
+}
+
+src_install()
+{
+	make install DESTDIR=${D} destdir=${D}
 }
