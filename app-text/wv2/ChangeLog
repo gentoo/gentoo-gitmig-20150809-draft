@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.20 2004/08/14 11:10:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.21 2004/08/27 03:39:18 tgall Exp $
+
+  26 Aug 2004; Tom Gall <tgall@gentoo.org> wv-2-0.2.2.ebuild:
+  stable on ppc64, bug #58711
 
   14 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> wv2-0.2.ebuild:
   Stable on alpha.
