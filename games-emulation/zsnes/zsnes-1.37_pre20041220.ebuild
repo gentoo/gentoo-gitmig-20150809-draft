@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20041220.ebuild,v 1.3 2004/01/15 17:32:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.37_pre20041220.ebuild,v 1.4 2004/01/30 05:45:03 drobbins Exp $
 
 inherit games eutils
 
@@ -21,7 +21,7 @@ RDEPEND="opengl? ( virtual/opengl )
 DEPEND="${RDEPEND}
 	>=dev-lang/nasm-0.98
 	sys-devel/automake
-	sys-devel/autoconf"
+	>=sys-devel/autoconf-2.58"
 
 S=${WORKDIR}
 
