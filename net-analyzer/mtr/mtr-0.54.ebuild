@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.54.ebuild,v 1.1 2003/05/17 11:20:57 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.54.ebuild,v 1.2 2003/06/05 21:30:54 mholzer Exp $
 
 IUSE="gtk"
 
@@ -14,7 +14,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~hppa"
 
 src_compile() {
 	local myconf
@@ -26,6 +26,6 @@ src_compile() {
 
 src_install() {
 	# this binary is universal. ie: it does both console and gtk.
-	make DESTDIR=${D} sbindir=${D}/usr/bin install || die
+	make DESTDIR=${D} sbindir=/usr/bin install || die
 	dodoc AUTHORS COPYING ChangeLog FORMATS NEWS README SECURITY TODO
 }

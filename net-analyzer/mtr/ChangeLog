@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.10 2003/05/17 11:23:16 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.11 2003/06/05 21:30:54 mholzer Exp $
+
+  05 Jun 2003; Martin Holzer <mholzer@gentoo.org> mtr-0.54.ebuild:
+  Marked stable on x86.
+  Now installs into right location. closes #21495.
 
 *mtr-0.54 (17 May 2003)
 
