@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-1.2.0.ebuild,v 1.1 2004/11/08 22:20:51 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-1.2.0.ebuild,v 1.2 2004/12/17 17:23:37 chainsaw Exp $
 
 inherit eutils libtool gnuconfig
 
@@ -15,18 +15,6 @@ IUSE=""
 
 DEPEND="virtual/libc"
 
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-
-	aclocal
-	autoconf
-	automake
-
-	elibtoolize
-}
-
 src_compile() {
 	# Detect mips systems properly
 	gnuconfig_update
@@ -37,7 +25,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall includedir=${D}/usr/include/sysfs || die
+	make DESTDIR=${D} install || die
 
 	# We do not distribute this
 	rm -f ${D}/usr/bin/dlist_test
