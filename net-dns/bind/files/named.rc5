@@ -22,8 +22,8 @@ stop() {
 }
 
 restart() {
-		stop
-		start
+		svc_stop
+		svc_start
 }
 
 doservice ${@}
