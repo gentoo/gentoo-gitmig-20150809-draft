@@ -12,15 +12,20 @@ ${PATCH_URI}/${P}-popup_win.diff"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 HOMEPAGE="http://slrn.sourceforge.net/"
 DEPEND="virtual/glibc
-	virtual/mta
-	>=sys-apps/sharutils-4.2.1
-	>=sys-libs/slang-1.4.4
-	ssl? ( >=dev-libs/openssl-0.9.6 )"
+		virtual/mta
+		>=sys-apps/sharutils-4.2.1
+		>=sys-libs/slang-1.4.4
+		ssl? ( >=dev-libs/openssl-0.9.6 )"
 
+RDEPEND="virtual/glibc
+		>=sys-apps/sharutils-4.2.1
+		>=sys-libs/slang-1.4.4
+		ssl? ( >=dev-libs/openssl-0.9.6 )"
+		
 src_unpack() {
 	unpack ${P}.tar.bz2
 	cd ${S}
