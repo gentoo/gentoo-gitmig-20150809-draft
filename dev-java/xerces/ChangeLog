@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.16 2004/01/19 04:53:02 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.17 2004/02/10 06:53:29 strider Exp $
+
+*xerces-2.6.1 (10 Feb 2004)
+
+  10 Feb 2004; Adrian Almenar <strider@gentoo.org> xerces-2.6.1.ebuild:
+  Version Bump.
 
   19 Jan 2004; Adrian Almenar <strider@gentoo.org> xerces-2.6.0.ebuild:
   Added amd64 keyword.
