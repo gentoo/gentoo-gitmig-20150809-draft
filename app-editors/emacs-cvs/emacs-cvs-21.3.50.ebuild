@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.13 2003/09/05 23:05:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.14 2003/09/12 22:13:15 usata Exp $
 
 ECVS_SERVER="subversions.gnu.org:/cvsroot/emacs"
 ECVS_MODULE="emacs"
@@ -9,7 +9,7 @@ ECVS_CVS_OPTIONS="-dP"
 
 inherit cvs
 
-IUSE="X nls gtk gtk2 Xaw3d gnome"
+IUSE="X nls gtk gtk2 Xaw3d gnome spell"
 
 S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="Emacs is the extensible, customizable, self-documenting real-time display editor."
@@ -24,7 +24,7 @@ DEPEND=">=sys-libs/ncurses-5.3
 	sys-libs/gdbm
 	dev-util/cvs
 	dev-python/pexpect
-	app-text/ispell
+	spell? ( app-text/ispell )
 	X? ( virtual/x11
 		>=media-libs/libungif-4.1.0.1b
 		>=media-libs/jpeg-6b
