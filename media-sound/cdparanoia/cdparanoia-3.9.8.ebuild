@@ -1,8 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8.ebuild,v 1.7 2002/07/16 11:36:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8.ebuild,v 1.8 2002/07/17 01:47:07 seemant Exp $
 
-MY_PA=${PN}-III-alpha9.8
+MY_P=${PN}-III-alpha9.8
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="an advanced CDDA reader with error correction"
 SRC_URI="http://www.xiph.org/paranoia/download/${MY_P}.src.tgz"
