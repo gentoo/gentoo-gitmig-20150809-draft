@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.29 2004/01/14 19:29:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.30 2004/01/16 20:55:47 darkspecter Exp $
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> at-spi-1.3.8.ebuild:
+  set ppc in keywords
 
   14 Jan 2004; <gustavoz@gentoo.org> at-spi-1.3.9.ebuild:
   added ~sparc
