@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r1.ebuild,v 1.2 2003/06/30 10:05:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r1.ebuild,v 1.3 2003/07/09 11:31:04 joker Exp $
 
 use apache2 && PHPSAPI="apache2" || PHPSAPI="apache1"
 inherit php eutils
@@ -8,7 +8,7 @@ inherit php eutils
 IUSE="${IUSE} apache2"
 
 DESCRIPTION="Apache module for PHP"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa ~arm ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa ~arm"
 EXCLUDE_DB4_FIX=1
 EXCLUDE_PEAR_FIX=1
 
