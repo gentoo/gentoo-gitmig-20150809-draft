@@ -1,17 +1,8 @@
 # ChangeLog for net-misc/gnugk
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnugk/ChangeLog,v 1.4 2004/09/06 00:24:04 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnugk/ChangeLog,v 1.5 2005/03/24 22:14:03 pvdabeel Exp $
 
-  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> gnugk-2.0.6.ebuild:
-  Switch to use epause and ebeep, bug #62950
+*gnug-2.2.1 (24 Mar 2005)
 
-  09 Jun 2004; Aron Griffis <agriffis@gentoo.org> gnugk-2.0.6.ebuild:
-  Fix use invocation
-
-*gnugk-2.0.6 (26 Oct 2003)
-
-  26 Oct 2003; Stefan Knoblich <stkn@gentoo.org> gnugk-2.0.6.ebuild,
-  metadata.xml, files/gnugk-2.0.6-gentoo.diff, files/gnugk.confd,
-  files/gnugk.rc6:
-  initial import.
-
+  24 Mar 2005; Pieter Van den Abeele <pvdabeel@gentoo.org> gnugk-2.2.1.ebuild:
+  Version bump.

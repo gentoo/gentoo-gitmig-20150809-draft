@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 771762a09e7c042da1d3927cd704efba ChangeLog 613
+MD5 0b538f05eb47d96b3ada123663a65855 ChangeLog 325
+MD5 66b52d9e4a68f93babd942a6094f080b gnugk-2.0.6.ebuild 2072
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
-MD5 a3d5de706635845ea661222bb5d10815 gnugk-2.0.6.ebuild 2071
+MD5 b33629ce2ed8a321b925ec0e06e74840 gnugk-2.2.1.ebuild 1304
 MD5 bde2e8379cf391b3ffffa57c618f5e40 files/digest-gnugk-2.0.6 60
-MD5 35b105cf2bdba978762fe60d44d51cac files/gnugk.rc6 523
-MD5 2e2883db5d62010d2cf65ad1f6ef62a6 files/gnugk.confd 382
 MD5 7c2af84d098f7e49f119f6eb3694b0e7 files/gnugk-2.0.6-gentoo.diff 972
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBO616LLFUmVNQ7rkRAtyrAKCgIHdh+aiUIqaVOeDJvZDz8ZyXdwCgn/gC
-+qhyuQzxSmtfuYzb9SnZWG0=
-=9BUK
------END PGP SIGNATURE-----
+MD5 2e2883db5d62010d2cf65ad1f6ef62a6 files/gnugk.confd 382
+MD5 35b105cf2bdba978762fe60d44d51cac files/gnugk.rc6 523
+MD5 c37fb62222da3f3e2e9f090f4dbd5c8c files/digest-gnugk-2.2.1 60
