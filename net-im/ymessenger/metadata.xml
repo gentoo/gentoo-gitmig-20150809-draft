@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>seemant</maintainer>
+<maintainer><email>seemant@gentoo.org</email></maintainer>
 <longdescription>Xfree86: famous and free X server.</longdescription>
 </pkgmetadata>
