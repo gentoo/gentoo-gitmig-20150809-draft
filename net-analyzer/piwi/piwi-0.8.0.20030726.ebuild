@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.8.0.20030726.ebuild,v 1.3 2003/09/05 23:40:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.8.0.20030726.ebuild,v 1.4 2003/10/28 15:26:33 mholzer Exp $
 
 DESCRIPTION="(Prelude|Perl) IDS Web Interface"
 HOMEPAGE="http://www.prelude-ids.org"
@@ -58,7 +58,7 @@ src_install() {
 pkg_postinst() {
 	einfo ""
 	einfo "To have Apache run PIWI, please do the following:"
-	einfo "1) Include the /usr/share/doc/${P}/piwi-apache.conf in your apache configuration"
+	einfo "1) Include the /usr/share/doc/${P}/piwi-apache.conf.gz in your apache configuration"
 	einfo "2) Edit /etc/conf.d/apache or /etc/conf.d/apache2 and add \"-D PIWI\""
 	einfo "3) Edit /etc/piwi/config.pl to reflect your settings"
 	ewarn ""
