@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.56 2003/12/09 20:28:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.57 2004/01/08 14:23:10 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,msterret}@gentoo.org
 #
@@ -198,7 +198,7 @@ games_make_wrapper() {
 	cat << EOF > ${wrapper}
 #!/bin/sh
 cd "${chdir}"
-exec "./${bin}" "\$@"
+exec "${bin}" "\$@"
 EOF
 	echo ${wrapper}
 }
