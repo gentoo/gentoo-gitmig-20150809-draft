@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash-completion-config
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/ChangeLog,v 1.9 2004/11/04 13:35:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/ChangeLog,v 1.10 2004/11/04 17:29:54 corsair Exp $
+
+  04 Nov 2004; Markus Rothe <corsair@gentoo.org>
+  bash-completion-config-0.4.ebuild:
+  Marked ~ppc64; bug #69991
 
   05 Nov 2004; Joseph Jezak <josejx@gentoo.org>
   bash-completion-config-0.2.ebuild, bash-completion-config-0.3.ebuild,
