@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.43 2005/03/13 13:45:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.44 2005/03/17 17:01:45 corsair Exp $
+
+  17 Mar 2005; Markus Rothe <corsair@gentoo.org> elfutils-0.97.ebuild:
+  Stable on ppc64; bug #85575
 
 *elfutils-0.101 (13 Mar 2005)
 
