@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 9e542619b2ab8708eccb967215341d74 ChangeLog 5879
 MD5 671f19c098650f48f938aba3ce96efd5 metadata.xml 522
 MD5 31eaeb35d1a3aab937796b270dba482f im-ja-1.2-r1.ebuild 2629
-MD5 52001130367a030ddd3e3364b5c01737 ChangeLog 5787
-MD5 d2f098b995eb66f831bca9f4ae973944 im-ja-1.3-r1.ebuild 2385
 MD5 462bac20720c21edfe551264f8d4744b im-ja-1.2.ebuild 2205
+MD5 8bea970cd130366ac270d12ff9630908 im-ja-1.3-r1.ebuild 2382
 MD5 3ab8f20388045bda688d16be32fa1cb9 files/digest-im-ja-1.2-r1 130
 MD5 cf7d1a07d984d74a0f0575ad5e8b88a4 files/digest-im-ja-1.3-r1 61
-MD5 d30a8eb5243225cdcf281d93311194dc files/digest-im-ja-1.2 61
 MD5 f77bff8724589c3448942bdce8a18153 files/im-ja-1.2-gtk26.patch 872
+MD5 d30a8eb5243225cdcf281d93311194dc files/digest-im-ja-1.2 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCQWyCKRy60XGEcJIRAj5CAJ4r8wyafkREypMuHN1Srz5//lGp0gCfYuW0
-PSPZOneZtPiVwR58nA8Ut9Q=
-=9VgG
+iD8DBQFCRnequgEuf3OQ0akRAlDtAJ0SRIq2llotKoLKYqC3P9q1Qq5x5gCfUl/P
+l/kaUwrB0Fhh9BgKwRjrZJo=
+=RPIf
 -----END PGP SIGNATURE-----
