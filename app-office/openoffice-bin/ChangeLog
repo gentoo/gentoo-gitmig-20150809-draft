@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.54 2005/01/01 15:38:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.55 2005/01/12 14:02:17 suka Exp $
+
+  12 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-bin-1.1.4.ebuild:
+  Mark 1.1.4 stable on x86
 
 *openoffice-bin-1.1.4 (23 Dec 2004)
 
