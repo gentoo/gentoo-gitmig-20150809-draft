@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.0-r1.ebuild,v 1.4 2005/03/19 14:57:12 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.2.ebuild,v 1.1 2005/03/19 14:57:12 ka0ttic Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
 DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
 HOMEPAGE="http://www.snort.org/"
-SRC_URI="http://www.snort.org/dl/${P}.tar.gz
+SRC_URI="http://www.snort.org/dl/current/${P}.tar.gz
 	snortsam? ( mirror://gentoo/snortsam-20050110.tar.gz )
 	prelude? ( http://www.prelude-ids.org/download/releases/snort-prelude-reporting-patch-0.3.6.tar.gz )
 	sguil? ( mirror://sourceforge/sguil/sguil-sensor-0.5.3.tar.gz )"
@@ -16,7 +16,7 @@ SRC_URI="http://www.snort.org/dl/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 -sparc -alpha ~amd64 ppc"
+KEYWORDS="~x86 -sparc -alpha ~amd64 ~ppc"
 IUSE="ssl postgres mysql flexresp selinux snortsam odbc prelude inline sguil"
 
 # Local useflag snortsam: patch snort for use with snortsam package.
