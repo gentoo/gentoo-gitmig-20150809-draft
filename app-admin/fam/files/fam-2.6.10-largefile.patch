@@ -1,0 +1,13 @@
+--- fam-2.6.9/common.am	Tue Jul 16 01:23:24 2002
++++ fam-2.6.9-largefile/common.am	Mon Oct 28 16:21:55 2002
+@@ -4,7 +4,9 @@
+ AUTOMAKE_OPTIONS=no-dependencies
+ 
+ #  why couldn't CONFIG_ETC_CONFIG_PATH be defined in config.h???
+-INCLUDES = @FAMPROTOINC@ -DCONFIG_ETC_CONFIG_PATH=\"@FAM_CONF@\"
++INCLUDES = @FAMPROTOINC@ -DCONFIG_ETC_CONFIG_PATH=\"@FAM_CONF@\"	\
++	-D_FILE_OFFSET_BITS=64						\
++	-D_LARGEFILE64_SOURCE
+ 
+ #  should this be set by the configure script?
+ EDITCONF = perl $(top_srcdir)/util/editconf/editconf.perl

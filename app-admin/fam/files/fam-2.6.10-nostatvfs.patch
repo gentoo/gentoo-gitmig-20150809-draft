@@ -1,0 +1,41 @@
+diff -urN fam-2.6.10/configure.in fam-2.6.10-modified/configure.in
+--- fam-2.6.10/configure.in	2003-07-30 16:28:14.000000000 -0500
++++ fam-2.6.10-modified/configure.in	2003-07-30 16:28:59.000000000 -0500
+@@ -151,35 +151,11 @@
+ echo "Using imon support module $IMON_FUNCS"
+ 
+ 
+-AC_CHECK_HEADER(sys/statvfs.h, [AC_DEFINE(HAVE_STATVFS, 1) have_statvfs="yes"], [AC_DEFINE(HAVE_STATVFS, 0) have_statvfs="no"])
+ AC_CHECK_HEADER(sys/syssgi.h,  AC_DEFINE(HAVE_SYSSGI,  1), AC_DEFINE(HAVE_SYSSGI,  0))
+ AC_CHECK_HEADER(sys/fs/nfs_clnt.h, AC_DEFINE(HAVE_SYS_FS_NFS_CLNT_H, 1), AC_DEFINE(HAVE_SYS_FS_NFS_CLNT_H, 0))
+ 
+-dnl  Linux has statvfs, but its f_fsid is a struct, and SmallTable can't
+-dnl  be instantiated for it because there's no > or < operator for it yet.
+-dnl  fam does work without the fs_by_id table, so we'll pretend we don't
+-dnl  have statvfs for now.  This should be fixed, though.
+-if test `uname` != 'IRIX' && test `uname` != 'IRIX64'; then
+-    AC_DEFINE(HAVE_STATVFS, 0)
+-    have_statvfs="no"
+-fi
+-dnl dnl
+-dnl dnl  If we have statvfs, test for fsid_t.
+-dnl dnl
+-dnl if test "$have_statvfs" = "yes"; then
+-dnl     for fsid_t in ulong_t fsid_t __fsid_t; do
+-dnl         AC_MSG_CHECKING([sys/statvfs.h for $fsid_t fsid])
+-dnl         AC_TRY_COMPILE([#include <sys/statvfs.h>], [struct statvfs s; $fsid_t i = s.f_fsid;], have_fsid_t=yes, have_fsid_t=no)
+-dnl         AC_MSG_RESULT($have_fsid_t)
+-dnl         if test "$have_fsid_t" = "yes"; then
+-dnl             AC_DEFINE_UNQUOTED(CONFIG_FSID_T, $fsid_t)
+-dnl             break
+-dnl         fi
+-dnl     done
+-dnl     if test "$have_fsid_t" != "yes"; then
+-dnl         AC_MSG_ERROR([Have sys/statvfs.h, but couldn't get statvfs.f_fsid type])
+-dnl     fi
+-dnl fi
++AC_DEFINE(HAVE_STATVFS, 0)
++have_statvfs="no"
+ 
+ dnl
+ dnl  Test for SGI_NOHANG in syssgi.h
