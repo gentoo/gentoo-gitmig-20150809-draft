@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.32.ebuild,v 1.3 2003/06/29 15:24:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.32.ebuild,v 1.4 2003/06/30 13:59:09 aliz Exp $
 
 inherit eutils
 
@@ -13,21 +13,25 @@ LICENSE="as-is"
 KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND=">=dev-libs/libpcre-3.4
-	>=media-libs/libgd-1.8.3
+	>=media-libs/libgd-1.8.4-r2
 	sys-libs/zlib
-	media-libs/jpeg"
+	media-libs/jpeg
+	media-libs/libpng
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
-	mv src/Makefile src/Makefile.orig
-	sed -e "s:^CFLAGS.*:CFLAGS = ${CFLAGS}:" \
-		-e 's:^DEFS.*:DEFS = -DHAVE_GD -DHAVE_PCRE -DHAVE_ZLIB:' \
-		-e 's:^LIBS.*:LIBS = -lgd -lpng -ljpeg -lz -lpcre -lm:' \
-		src/Makefile.orig > src/Makefile
 	epatch ${FILESDIR}/${PN}-5.1-gentoo.diff
 }
 
 src_compile() {
+	ebegin "Configuring"
+	sed -i -e "s:^CFLAGS.*:CFLAGS = ${CFLAGS}:" \
+		-e 's:^DEFS.*:DEFS = -DHAVE_GD -DHAVE_PCRE -DHAVE_ZLIB:' \
+		-e "s:^LIBS.*:LIBS = -lgd -lz -lpcre -lm -lpng -ljpeg:" \
+		src/Makefile
+	eend $?
+
 	make -C src || die
 }
 
