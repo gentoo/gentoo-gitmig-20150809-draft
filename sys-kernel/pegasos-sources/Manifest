@@ -1,32 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7d4bf14d4d53a080d019f50efe343b37 pegasos-sources-2.6.10-r2.ebuild 753
-MD5 2279fed0291bb0fd8d6bf585bdae0823 pegasos-sources-2.6.11-r1.ebuild 754
-MD5 99c6fa09e99144e51fad6512b550f11a pegasos-sources-2.6.10-r4.ebuild 754
-MD5 3a6d5b471f34b6b88a45dba4439cd142 pegasos-sources-2.6.11.ebuild 751
-MD5 49a0cfa3284e5edf96bb23ad771bb17d pegasos-sources-2.6.10-r1.ebuild 753
-MD5 6a86956f9ec4e574174bf27ebf9599c0 pegasos-sources-2.6.9-r5.ebuild 751
-MD5 2bc620c9efc561a19b0fdc771ecc06c5 pegasos-sources-2.6.10-r3.ebuild 752
-MD5 b55d7994b8f30d6a8b4b496d2e620495 pegasos-sources-2.6.11-r2.ebuild 754
-MD5 f1b24abeb1139b2a06c1f26b99345308 ChangeLog 3014
-MD5 e8a29073e80e7fd9a95a1913e5afdd80 pegasos-sources-2.6.8.1-r2.ebuild 832
+MD5 e53dd6240cb4c8a7e9fbac2d54d4b6a8 ChangeLog 3164
 MD5 a768f20366d412feaf748b4ac46b046e metadata.xml 350
+MD5 49a0cfa3284e5edf96bb23ad771bb17d pegasos-sources-2.6.10-r1.ebuild 753
+MD5 e8a29073e80e7fd9a95a1913e5afdd80 pegasos-sources-2.6.8.1-r2.ebuild 832
 MD5 537dd7128c0b7e05882553403da3bc19 pegasos-sources-2.6.9-r4.ebuild 751
-MD5 1dd726d7451c3f2aac3b202914704a1c files/digest-pegasos-sources-2.6.8.1-r2 198
+MD5 6a86956f9ec4e574174bf27ebf9599c0 pegasos-sources-2.6.9-r5.ebuild 751
+MD5 7d4bf14d4d53a080d019f50efe343b37 pegasos-sources-2.6.10-r2.ebuild 753
+MD5 3a6d5b471f34b6b88a45dba4439cd142 pegasos-sources-2.6.11.ebuild 751
+MD5 2279fed0291bb0fd8d6bf585bdae0823 pegasos-sources-2.6.11-r1.ebuild 754
+MD5 b55d7994b8f30d6a8b4b496d2e620495 pegasos-sources-2.6.11-r2.ebuild 754
+MD5 2bc620c9efc561a19b0fdc771ecc06c5 pegasos-sources-2.6.10-r3.ebuild 752
+MD5 99c6fa09e99144e51fad6512b550f11a pegasos-sources-2.6.10-r4.ebuild 754
+MD5 ccf676f247e1f5394bc6954c13d24070 pegasos-sources-2.6.11-r3.ebuild 753
 MD5 55c967d175ece9bc37715a8a47442e26 files/digest-pegasos-sources-2.6.10-r1 139
-MD5 7245fdb1adceb99c8c655212bbd2d55b files/digest-pegasos-sources-2.6.10-r2 139
-MD5 91ed98313cb39460d2f17b2274989497 files/digest-pegasos-sources-2.6.10-r3 139
-MD5 ee1c9f280296a6d23fca9f8e41fb239e files/digest-pegasos-sources-2.6.10-r4 139
-MD5 5689dc0532a52e74eceef7eaedfca81e files/digest-pegasos-sources-2.6.11-r1 139
-MD5 2e1d0143c2ff828ca9af730c5c69d1da files/digest-pegasos-sources-2.6.11-r2 139
+MD5 b03f2054a7c8d904d9f7d2a10867aa09 files/digest-pegasos-sources-2.6.8.1-r2 141
 MD5 152f36d2b5a67c4dc78118f6d6b4009d files/digest-pegasos-sources-2.6.9-r4 137
 MD5 1dfa80fe9da56995233d5165cfc30cec files/digest-pegasos-sources-2.6.9-r5 137
+MD5 7245fdb1adceb99c8c655212bbd2d55b files/digest-pegasos-sources-2.6.10-r2 139
 MD5 d79c375533a70bbbdbff656a407b39ca files/digest-pegasos-sources-2.6.11 139
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCU2sYI1lqEGTUzyQRAoZuAKCd+/NqxltlfLpjLp6dO932z+qy9ACgwXKC
-0fPVDHYQrGaw82vOGmtV8QA=
-=kkUR
------END PGP SIGNATURE-----
+MD5 5689dc0532a52e74eceef7eaedfca81e files/digest-pegasos-sources-2.6.11-r1 139
+MD5 2e1d0143c2ff828ca9af730c5c69d1da files/digest-pegasos-sources-2.6.11-r2 139
+MD5 91ed98313cb39460d2f17b2274989497 files/digest-pegasos-sources-2.6.10-r3 139
+MD5 ee1c9f280296a6d23fca9f8e41fb239e files/digest-pegasos-sources-2.6.10-r4 139
+MD5 5cd67345168c60ed0ddf8ceb0116a1d6 files/digest-pegasos-sources-2.6.11-r3 139
