@@ -1,15 +1,26 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.0.1.ebuild,v 1.2 2003/03/19 14:29:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.0.1.ebuild,v 1.1 2003/03/21 16:21:03 liquidx Exp $
 
-inherit gnome.org gnome2
+inherit gnome2
 
+MY_P=${P/lib/}
+MY_PN=${PN/lib/}
 DESCRIPTION="Lightweight HTML Rendering/Printing/Editing Engine"
 HOMEPAGE="http://www.gnome.org/"
+
+# stolen from gnome.org eclass because it support this one-off name-mangling
+
+[ -z "${GNOME_TARBALL_SUFFIX}" ] && export GNOME_TARBALL_SUFFIX="bz2"
+PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
+SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.${GNOME_TARBALL_SUFFIX}"
+
 LICENSE="GPL-2"
 SLOT="3"
 KEYWORDS="~x86"
 IUSE=""
+
+S=${WORKDIR}/${MY_P}
 
 RDEPEND=">=gnome-base/libgnomeui-2.2
 	>=gnome-base/libgnomeprint-2.2
