@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.31 2005/03/02 19:07:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.32 2005/03/04 12:37:55 eradicator Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -13,15 +13,18 @@ INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
 tc-getPROG() {
-	local var=$1
-	local prog=$2
+	local var=${1}
+	local prog=${2}
 
 	if [[ -n ${!var} ]] ; then
 		echo "${!var}"
 		return 0
 	fi
 
-	if [[ -n ${CHOST} ]] ; then
+	if [[ -n ${3} ]] ; then
+		local search=$(type -p "${3}-${prog}")
+		[[ -n ${search} ]] && prog=${search##*/}
+	elif [[ -n ${CHOST} ]] ; then
 		local search=$(type -p "${CHOST}-${prog}")
 		[[ -n ${search} ]] && prog=${search##*/}
 	fi
@@ -31,23 +34,23 @@ tc-getPROG() {
 }
 
 # Returns the name of the archiver
-tc-getAR() { tc-getPROG AR ar; }
+tc-getAR() { tc-getPROG AR ar "${@}"; }
 # Returns the name of the assembler
-tc-getAS() { tc-getPROG AS as; }
+tc-getAS() { tc-getPROG AS as "${@}"; }
 # Returns the name of the C compiler
-tc-getCC() { tc-getPROG CC gcc; }
+tc-getCC() { tc-getPROG CC gcc "${@}"; }
 # Returns the name of the C++ compiler
-tc-getCXX() { tc-getPROG CXX g++; }
+tc-getCXX() { tc-getPROG CXX g++ "${@}"; }
 # Returns the name of the linker
-tc-getLD() { tc-getPROG LD ld; }
+tc-getLD() { tc-getPROG LD ld "${@}"; }
 # Returns the name of the symbol/object thingy
-tc-getNM() { tc-getPROG NM nm; }
+tc-getNM() { tc-getPROG NM nm "${@}"; }
 # Returns the name of the archiver indexer
-tc-getRANLIB() { tc-getPROG RANLIB ranlib; }
+tc-getRANLIB() { tc-getPROG RANLIB ranlib "${@}"; }
 # Returns the name of the fortran compiler
-tc-getF77() { tc-getPROG F77 f77; }
+tc-getF77() { tc-getPROG F77 f77 "${@}"; }
 # Returns the name of the java compiler
-tc-getGCJ() { tc-getPROG GCJ gcj; }
+tc-getGCJ() { tc-getPROG GCJ gcj "${@}"; }
 
 # Returns the name of the C compiler for build
 tc-getBUILD_CC() {

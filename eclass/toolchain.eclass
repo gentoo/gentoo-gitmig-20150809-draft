@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.117 2005/03/04 10:21:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.118 2005/03/04 12:37:55 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -624,8 +624,30 @@ create_gcc_env_entry() {
 	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${gcc_envd_file}
 	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${gcc_envd_file}
 
-	# Only export CTARGET if cross-compiling (for now ...)
-	is_crosscompile	&& echo "CTARGET=${CTARGET}" >> ${gcc_envd_file}
+	if has_version '>=sys-devel/gcc-config-1.4.0'; then
+		echo "CFLAGS_default=\"$(get_abi_CFLAGS ${DEFAULT_ABI})\"" >> ${gcc_envd_file}
+
+		echo "CTARGET=${CTARGET}" >> ${gcc_envd_file}
+
+		local ctarget_alias
+		local abi
+		local CTARGET_ALIASES=""
+		for abi in $(get_all_abis); do
+			for ctarget_alias in $(get_abi_CHOST ${abi}) $(get_abi_CTARGET_ALIASES ${abi}); do
+				if [[ ${ctarget_alias} != ${CHOST} ]]; then
+					CTARGET_ALIASES="${CTARGET_ALIASES+${CTARGET_ALIASES} }${ctarget_alias}"
+					local var="CFLAGS_${ctarget_alias//-/_}"
+					echo "${var}=\"$(get_abi_CFLAGS ${abi}) ${!var}\"" >> ${gcc_envd_file}
+				fi
+			done
+		done
+
+		if [[ -n "${CTARGET_ALIASES}" ]]; then
+			echo "CTARGET_ALIASES=\"${CTARGET_ALIASES}\"" >> ${gcc_envd_file}
+		fi
+	elif is_crosscompile; then
+		echo "CTARGET=${CTARGET}" >> ${gcc_envd_file}
+	fi
 
 	# Set which specs file to use
 	[ -n "${gcc_specs_file}" ] && echo "GCC_SPECS=\"${gcc_specs_file}\"" >> ${gcc_envd_file}
@@ -980,13 +1002,6 @@ gcc_do_configure() {
 		--disable-checking \
 		--disable-werror \
 		--disable-libunwind-exceptions"
-	# When building a stage1 cross-compiler (just C compiler), we 
-	# have to disable shared gcc libs and threads or gcc goes boom
-	if use nocxx && is_crosscompile; then
-		confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
-	else
-		confgcc="${confgcc} --enable-shared --enable-threads=posix"
-	fi
 
 	# etype specific configuration
 	einfo "running ${ETYPE}-configure"
@@ -996,6 +1011,26 @@ gcc_do_configure() {
 	# requires C support
 	GCC_LANG=${GCC_LANG:-c}
 	confgcc="${confgcc} --enable-languages=${GCC_LANG}"
+
+	# When building a stage1 cross-compiler (just C compiler), we 
+	# have to disable shared gcc libs and threads or gcc goes boom
+	if [[ ${EXTRA_ECONF/-shared} == ${EXTRA_ECONF} ]]; then
+		if is_crosscompile && [[ ${GCC_LANG} == "c" ]]; then
+			confgcc="${confgcc} --disable-shared --without-headers"
+		elif use static; then
+			confgcc="${confgcc} --disable-shared"
+		else
+			confgcc="${confgcc} --enable-shared"
+		fi
+	fi
+
+	if [[ ${EXTRA_ECONF/-threads} == ${EXTRA_ECONF} ]]; then
+		if is_crosscompile && [[ ${GCC_LANG} == "c" ]]; then
+			confgcc="${confgcc} --disable-threads"
+		else
+			confgcc="${confgcc} --enable-threads=posix"
+		fi
+	fi
 
 	# Nothing wrong with a good dose of verbosity
 	echo
@@ -1072,11 +1107,11 @@ gcc_do_make() {
 	if is_crosscompile; then
 		# 3 stage bootstrapping doesnt quite work when you cant run the
 		# resulting binaries natively ^^;
-		GCC_MAKE_TARGET=${GCC_MAKE_TARGET:-all}
+		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-all}
 	elif { use x86 || use amd64 || use ppc64 ;} && [[ ${GCC_BRANCH_VER} != "3.3" ]] ; then
-		GCC_MAKE_TARGET=${GCC_MAKE_TARGET:-profiledbootstrap}
+		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-profiledbootstrap}
 	else
-		GCC_MAKE_TARGET=${GCC_MAKE_TARGET:-bootstrap-lean}
+		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-bootstrap-lean}
 	fi
 
 	# the gcc docs state that parallel make isnt supported for the
@@ -1302,7 +1337,7 @@ gcc-compiler_src_install() {
 		do
 			[[ -f ${x} ]] && mv -f "${x}" ${D}${LIBPATH}/include/
 		done
-		for x in gcj gnu java javax org ; do
+		for x in gcj gnu java javax org; do
 			if [[ -d ${D}${PREFIX}/include/${x} ]] ; then
 				dodir /${LIBPATH}/include/${x}
 				mv -f ${D}${PREFIX}/include/${x}/* ${D}${LIBPATH}/include/${x}/
@@ -1336,8 +1371,7 @@ gcc-compiler_src_install() {
 			[[ -f ${x} ]] && mv ${x} ${CTARGET}-${x}
 
 			if [[ -f ${CTARGET}-${x} ]] && ! is_crosscompile; then
-				[[ ! -f ${x} ]] && mv ${CTARGET}-${x} ${x}
-				ln -sf ${x} ${CTARGET}-${x}
+				ln -sf ${CTARGET}-${x} ${x}
 			fi
 
 			if [[ -f ${CTARGET}-${x}-${GCC_CONFIG_VER} ]] ; then
