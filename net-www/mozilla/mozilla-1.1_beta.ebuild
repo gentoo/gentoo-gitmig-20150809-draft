@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1_beta.ebuild,v 1.3 2002/07/26 00:24:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1_beta.ebuild,v 1.4 2002/07/29 03:42:29 cardoe Exp $
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 inherit makeedit
@@ -397,14 +397,17 @@ pkg_postinst() {
 	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 755 {} \; || :
 
     
-	echo
-	echo "*****************************************************************"
-	echo "* NB:  Please unmerge old versions of mozilla, as the header    *"
-	echo "* layout in /usr/lib/mozilla/include have changed and will      *"
-	echo "* result in compile errors when compiling programs that need    *"
-	echo "* mozilla headers and libs (galeon, nautilus, ...)              *"
-	echo "*****************************************************************"
-	echo
+	einfo
+	einfo "*****************************************************************"
+	einfo "* NB:  Please unmerge old versions of mozilla, as the header    *"
+	einfo "* layout in /usr/lib/mozilla/include have changed and will      *"
+	einfo "* result in compile errors when compiling programs that need    *"
+	einfo "* mozilla headers and libs (galeon, nautilus, ...)              *"
+	einfo "*****************************************************************"
+	einfo
+	einfo "This ebuild is an alpha of beta software which means it will have"
+	einfo "problems. Do not count on this to work flawlessly."
+	einfo
 }
 
 pkg_postrm() {
