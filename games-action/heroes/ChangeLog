@@ -1,6 +1,13 @@
 # ChangeLog for games-action/heroes
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/ChangeLog,v 1.6 2004/06/24 21:56:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/ChangeLog,v 1.7 2004/07/21 01:31:45 vapier Exp $
+
+*heroes-0.21-r1 (20 Jul 2004)
+
+  20 Jul 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/0.21-cvs-segfault-fix.patch, +heroes-0.21-r1.ebuild,
+  -heroes-0.21.ebuild:
+  Version bump to fix SDL segfault #56118 by Kim Tingkær.
 
   02 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> heroes-0.21.ebuild:
   fix up use invocation
