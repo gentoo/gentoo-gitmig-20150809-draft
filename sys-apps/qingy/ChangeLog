@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/qingy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.5 2003/10/25 15:55:06 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.6 2003/12/06 17:02:04 pyrania Exp $
+
+  06 Dec 2003; Markus Nigbur <pyrania@gentoo.org> qingy-0.2.3.ebuild:
+  Added DEPEND to pkgconfig
 
   25 Oct 2003; Markus Nigbur <pyrania@gentoo.org> qingy-0.2.1.ebuild,
   qingy-0.2.2.ebuild, qingy-0.2.3.ebuild:
