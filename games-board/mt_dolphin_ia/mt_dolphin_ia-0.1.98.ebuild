@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mt_dolphin_ia/mt_dolphin_ia-0.1.98.ebuild,v 1.2 2004/02/29 10:25:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mt_dolphin_ia/mt_dolphin_ia-0.1.98.ebuild,v 1.3 2004/05/02 02:04:27 mr_bones_ Exp $
 
 inherit games
 
@@ -11,6 +11,7 @@ SRC_URI="http://savannah.nongnu.org/download/maitretarot/${PN}.pkg/${PV}/${P}.ta
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="=dev-libs/glib-2*
 	dev-libs/libxml2
@@ -18,7 +19,7 @@ DEPEND="=dev-libs/glib-2*
 	dev-games/libmt_client"
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
 	prepgamesdirs
 }
