@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.11.ebuild,v 1.7 2004/08/09 02:41:16 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.11.ebuild,v 1.8 2004/12/28 12:22:35 lu_zero Exp $
 
 inherit libtool flag-o-matic eutils gcc
 
@@ -55,7 +55,7 @@ src_compile() {
 	filter-mfpmath sse
 	filter-flags -fPIC
 	filter-flags -maltivec -mabi=altivec
-
+	use ppc && append-flags -U__ALTIVEC__
 	# fix gcc-3.4 compilation
 	if [ "$(gcc-major-version)" -eq "3" -a "$(gcc-minor-version)" -eq "4" ]
 	then
