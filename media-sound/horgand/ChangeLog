@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/horgand
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/ChangeLog,v 1.1 2003/06/06 22:37:42 robh Exp $
+
+*horgand-0.91 (06 Jun 2003)
+
+  06 Jun 2003; robh <robh@gentoo.org> horgand-0.91.ebuild:
+  Initial version. Ebuild submitted by Josep Andreu,
+  hacked at by me. Closes #22213
+
