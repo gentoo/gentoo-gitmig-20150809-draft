@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/skystreets
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/skystreets/ChangeLog,v 1.10 2004/04/11 00:30:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/skystreets/ChangeLog,v 1.11 2004/04/29 19:23:54 agriffis Exp $
+
+  29 Apr 2004; Aron Griffis <agriffis@gentoo.org> skystreets-0.2.2.ebuild,
+  skystreets-0.2.3-r1.ebuild, skystreets-0.2.3.ebuild:
+  Add ~alpha
 
 *skystreets-0.2.3-r1 (10 Apr 2004)
 

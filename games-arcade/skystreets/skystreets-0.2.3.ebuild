@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/skystreets/skystreets-0.2.3.ebuild,v 1.3 2004/04/11 00:22:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/skystreets/skystreets-0.2.3.ebuild,v 1.4 2004/04/29 19:23:54 agriffis Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://skystreets.kaosfusion.com/${P}.tar.bz2"
 
 LICENSE="OSL-2.0"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="x86 ppc ~amd64 ~alpha"
 IUSE=""
 
 DEPEND="virtual/opengl
