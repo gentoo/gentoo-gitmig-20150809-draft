@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.1.ebuild,v 1.2 2003/06/12 19:52:47 msterret Exp $
 
 DESCRIPTION="A Japanese dictionary program for Gnome"
 SRC_URI="http://gjiten.sourceforge.net/${P}.tar.gz"
