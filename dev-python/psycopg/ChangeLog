@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.6 2003/02/12 06:33:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.7 2003/03/08 22:42:19 kutsuya Exp $
+
+*psycopg-1.1.2 (08 Mar 2003)
+
+  08 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> psycopg-1.1.2.ebuild:
+  Version bump.
 
 *psycopg-1.0.13 (12 Dec 2002)
 
