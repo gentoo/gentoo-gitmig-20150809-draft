@@ -4,16 +4,15 @@
 
 *ebook-gdk-pixbuf-2.0 (09 May 2002)
 
+  06 May 2003; Martin Holzer <mholzer@gentoo.org> :
+  Updated digest.
+
   09 May 2002; Francisco Gimeno <kikov@fco-gimeno.com> 
     ebook-gdk-pixbuf-2.0.ebuild : 
-  
   Initial Release of the ebook to the devhelp tool.
-  
 
 *ebook-gdk-pixbuf-1.0 (09 May 2002)
 
   09 May 2002; Francisco Gimeno <kikov@fco-gimeno.com> 
     ebook-gdk-pixbuf-1.0.ebuild : 
-  
   Initial Release of the ebook to the devhelp tool.
-  
