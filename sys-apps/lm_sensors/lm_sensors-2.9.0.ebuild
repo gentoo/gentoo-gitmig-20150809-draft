@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.9.0.ebuild,v 1.1 2005/02/27 12:21:59 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.9.0.ebuild,v 1.2 2005/02/27 12:24:29 brix Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -24,7 +24,7 @@ DEPEND=">=sys-apps/i2c-${PV}
 src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
-	epatch ${FILESDIR}/lm-sensors-2.8.8-sensors-detect-gentoo.diff > /dev/null || die
+	epatch ${FILESDIR}/lm_sensors-2.8.8-sensors-detect-gentoo.diff > /dev/null || die
 
 	# Get the right I2C includes without dropping the kernel includes
 	mkdir -p ${MYI2C}/linux
