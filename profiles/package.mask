@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <genone@gentoo.org> (07 Jan 2004)
+# unmaintained and currently doesn't even build anymore. Masking until
+# plasmaroo makes a new version.
+app-portage/kportage
+
 # <lu_zero@gentoo.org> (06 Jan 2004)
 # Has memory leak issue
 =media-video/ati-drivers-3.7.0
