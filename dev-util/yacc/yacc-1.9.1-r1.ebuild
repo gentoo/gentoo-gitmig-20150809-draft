@@ -1,15 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r1.ebuild,v 1.23 2004/03/05 14:18:14 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r1.ebuild,v 1.24 2004/03/13 01:44:56 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Yacc"
-SRC_URI="ftp://metalab.unc.edu/pub/Linux/devel/compiler-tools/${P}.tar.Z"
 HOMEPAGE="http://dinosaur.compilertools.net/#yacc"
+SRC_URI="ftp://metalab.unc.edu/pub/Linux/devel/compiler-tools/${P}.tar.Z"
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc hppa alpha mips amd64 ia64 s390 ppc64"
+SLOT="0"
+KEYWORDS="x86 ppc ppc64 sparc alpha mips hppa amd64 ia64 s390"
 
 DEPEND="virtual/glibc"
 
@@ -19,14 +18,14 @@ src_unpack () {
 	cp Makefile Makefile.orig
 	sed -e "s:-O:${CFLAGS}:" Makefile.orig > Makefile
 }
+
 src_compile() {
 	make clean || die
 	make || die
 }
 
 src_install() {
-	into /usr
-	dobin yacc
+	dobin yacc || die
 	doman yacc.1
 	dodoc 00README* ACKNOWLEDGEMENTS NEW_FEATURES NO_WARRANTY NOTES README*
 }
