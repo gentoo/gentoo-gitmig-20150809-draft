@@ -1,0 +1,25 @@
+--- Makefile.am~	Mon Dec 18 16:14:07 2000
++++ Makefile.am	Fri Jun 22 16:58:34 2001
+@@ -105,6 +105,7 @@
+ 	polar \
+ 	ps \
+ 	psd \
++	psd_save \
+ 	$(PSP) \
+ 	randomize \
+ 	ripple \
+@@ -944,6 +945,14 @@
+ 	psd.c
+
+ psd_LDADD = \
++	$(top_builddir)/libgimp/libgimp.la	\
++	$(GLIB_LIBS)				\
++	$(INTLLIBS)
++
++psd_save_SOURCES = \
++	psd_save.c
++
++psd_save_LDADD = \
+ 	$(top_builddir)/libgimp/libgimp.la	\
+ 	$(GLIB_LIBS)				\
+ 	$(INTLLIBS)
