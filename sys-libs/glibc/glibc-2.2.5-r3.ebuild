@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r3.ebuild,v 1.2 2002/04/13 11:06:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r3.ebuild,v 1.3 2002/05/04 22:50:18 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -10,12 +10,12 @@ HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
 #portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
 #drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
-DEPEND="sys-kernel/linux-headers nls? ( sys-devel/gettext ) gd? ( media-libs/libgd )"
+DEPEND="sys-kernel/linux-headers nls? ( sys-devel/gettext )"
 RDEPEND="sys-kernel/linux-headers"
 
 if [ -z "`use build`" ]
 then
-	RDEPEND="$RDEPEND gd? ( sys-libs/zlib media-libs/libpng ) sys-apps/baselayout"
+	RDEPEND="$RDEPEND sys-apps/baselayout"
 else
 	RDEPEND="$RDEPEND >=sys-apps/portage-1.8.9_pre1 sys-apps/baselayout"
 fi
@@ -72,17 +72,11 @@ src_compile() {
 	local myconf
 	# If we build for the build system we use the kernel headers from the target
 	[ "`use build`" ] && myconf="--with-header=${ROOT}usr/include"
-	if [ "`use gd`" ] && [ -z "`use bootstrap`" ] && [ -z "`use build`" ]
-	then
-		myconf="${myconf} --with-gd=yes"
-	else
-		myconf="${myconf} --with-gd=no"
-	fi
 	[ -z "`use nls`" ] && myconf="${myconf} --disable-nls"
 	rm -rf buildhere
 	mkdir buildhere
 	cd buildhere
-	../configure --host=${CHOST} --without-cvs --enable-add-ons=linuxthreads --disable-profile --prefix=/usr \
+	../configure --host=${CHOST} --with-gd=no --without-cvs --enable-add-ons=linuxthreads --disable-profile --prefix=/usr \
 		--mandir=/usr/share/man --infodir=/usr/share/info --libexecdir=/usr/lib/misc ${myconf} || die
 	
 	#This next option breaks the Sun JDK and the IBM JDK
