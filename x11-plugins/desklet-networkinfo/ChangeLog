@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/desklet-networkinfo
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-networkinfo/ChangeLog,v 1.1 2003/09/10 12:13:18 obz Exp $
+
+*desklet-networkinfo-0.1.4 (10 Sep 2003)
+
+  10 Sep 2003; Mike Gardiner <obz@gentoo.org> desklet-networkinfo-0.1.4.ebuild,
+  metadata.xml:
+  First import
+
