@@ -1,0 +1,29 @@
+--- zdiff.in	2002-09-26 04:33:24.000000000 -0400
++++ zdiff.in.new	2004-10-26 19:06:08.000000000 -0400
+@@ -35,6 +35,10 @@
+ 	echo "Usage: $prog [${comp}_options] file [file]"
+ 	exit 2
+ fi
++tmp=`tempfile -d /tmp -p gz` || {
++	echo 'cannot create a temporary file' >&2
++	exit 1
++}
+ set $FILES
+ if test $# -eq 1; then
+ 	FILE=`echo "$1" | sed 's/[-.][zZtga]*$//'`
+@@ -47,11 +51,11 @@
+ 	        *[-.]gz* | *[-.][zZ] | *.t[ga]z)
+ 			F=`echo "$2" | sed 's|.*/||;s|[-.][zZtga]*||'`
+ 			set -C
+-			trap 'rm -f /tmp/"$F".$$; exit 2' HUP INT PIPE TERM 0
+-			gzip -cdfq "$2" > /tmp/"$F".$$ || exit
+-                        gzip -cdfq "$1" | $comp $OPTIONS - /tmp/"$F".$$
++			trap 'rm -f $tmp; exit 2' HUP INT PIPE TERM 0
++			gzip -cdfq "$2" > $tmp || exit
++			gzip -cdfq "$1" | $comp $OPTIONS - $tmp
+                         STAT="$?"
+-			/bin/rm -f /tmp/"$F".$$ || STAT=2
++			/bin/rm -f $tmp || STAT=2
+ 			trap - HUP INT PIPE TERM 0
+ 			exit $STAT;;
+ 
