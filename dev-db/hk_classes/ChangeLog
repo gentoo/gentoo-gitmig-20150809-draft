@@ -1,0 +1,9 @@
+# ChangeLog for dev-db/hk_classes
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.1 2003/04/23 13:36:11 pauldv Exp $
+
+*hk_classes-0.5.6 (23 Apr 2003)
+
+  23 Apr 2003; Paul de Vrieze pauldv@gentoo.org hk_classes-0.5.6.ebuild:
+  Initial import, courtessy of Peter Ruskin <aoyu93@dsl.pipex.com>
+
