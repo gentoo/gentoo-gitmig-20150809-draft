@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.0.1-r1.ebuild,v 1.11 2002/11/15 16:19:44 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.0.1-r1.ebuild,v 1.12 2002/12/07 07:06:43 jmorgan Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ DEPEND=">=sys-libs/ncurses-5.2"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc64"
+KEYWORDS="x86 ppc sparc"
 
 inherit flag-o-matic
 replace-flags -O[3-9] -O2
