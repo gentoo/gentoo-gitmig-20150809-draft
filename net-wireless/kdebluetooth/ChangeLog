@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.14 2004/08/23 17:15:12 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.15 2004/08/29 12:14:59 puggy Exp $
+
+*kdebluetooth-0.0.20040824 (29 Aug 2004)
+
+  29 Aug 2004; Douglas Russell,,, <puggy@gentoo.org>
+  +kdebluetooth-0.0.20040824.ebuild:
+  New snapshot fixes the sdp browse in kde-3.3.0
 
 *kdebluetooth-0.0.20040715-r1 (23 Aug 2004)
 
