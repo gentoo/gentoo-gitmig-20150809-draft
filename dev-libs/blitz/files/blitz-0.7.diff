@@ -1,0 +1,17 @@
+*** Blitz++-0.7/doc/blitz.texi	Tue Jan 21 12:01:07 2003
+--- Blitz++-0.7.new/doc/blitz.texi	Wed Dec 17 14:42:58 2003
+***************
+*** 11,16 ****
+--- 11,22 ----
+  @end iftex
+  @c %**end of header
+  
++ @dircategory Blitz++ library
++ @direntry
++ * Blitz++: (blitz++).           High-performance C++ numeric library
++ @end direntry
++ 
++ 
+  @macro faq{question}
+  @strong{@bullet{} \question\}
+  @end macro
