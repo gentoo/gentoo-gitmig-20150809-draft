@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-1.0_pre31.ebuild,v 1.1 2005/03/19 16:06:24 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-1.0_pre31.ebuild,v 1.2 2005/03/19 21:36:45 xmerlin Exp $
 
 inherit linux-mod
 
@@ -37,4 +37,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
+
+	exeinto /etc/init.d ; newexe ${FILESDIR}/cman.rc cman || die
+	insinto /etc/conf.d ; newins ${FILESDIR}/cman.conf cman || die
 }

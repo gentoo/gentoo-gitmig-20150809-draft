@@ -1,0 +1,55 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/files/cman.rc,v 1.1 2005/03/19 21:36:45 xmerlin Exp $
+
+depend() {
+	use net
+	before fence gfs
+	need ccsd
+	provide cman
+}
+
+exefile=/sbin/cman_tool
+pidfile=/var/run/cman.pid
+
+start() {
+	if grep -qE "<[[:space:]]*gulm([[:space:]]|[>]|$)" /etc/cluster/cluster.conf
+	then
+		die "<gulm> section detected in /etc/cluster/cluster.conf"
+	fi
+
+	ebegin "Loading cman module"
+	modprobe cman
+	eend $?
+
+	ebegin "Starting cman"
+	/sbin/cman_tool -t ${CMAN_CLUSTER_TIMEOUT} \
+		-w join ${CMAN_JOIN_OPTS}
+	eend $?
+	
+	# make sure that we are quorate?  
+	if [ ${CMAN_QUORUM_TIMEOUT} -gt 0 ]
+	then
+		/sbin/cman_tool -t ${CMAN_QUORUM_TIMEOUT} -q wait
+	fi
+	
+	ebegin "Loading dlm module"
+	modprobe dlm
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping cman"
+	/sbin/cman_tool -t ${CMAN_SHUTDOWN_TIMEOUT} -w leave > /dev/null
+	eend $?
+	
+	ebegin "Removing dlm module"
+	modprobe -r dlm &>/dev/null
+	eend $?
+	
+	ebegin "Removing cman module"
+ 	modprobe -r cman && rtrn=0
+	eend $?
+}
+
