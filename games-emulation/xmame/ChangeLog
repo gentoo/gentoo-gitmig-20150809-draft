@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.21 2004/06/16 03:40:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.22 2004/06/18 21:42:04 mr_bones_ Exp $
+
+  18 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> xmame-0.83.1.ebuild:
+  amd64 compile fix for bug #54270 - thanks to Andrew Williams
 
 *xmame-0.83.1 (15 Jun 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.83.1.ebuild,v 1.1 2004/06/16 03:40:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.83.1.ebuild,v 1.2 2004/06/18 21:42:04 mr_bones_ Exp $
 
 inherit flag-o-matic gcc eutils games
 
@@ -133,10 +133,13 @@ src_unpack() {
 	fi
 
 	case ${ARCH} in
-		x86|ia64|amd64)	append-flags -Wno-unused -fomit-frame-pointer -fstrict-aliasing -fstrength-reduce -ffast-math
+		x86|ia64)	append-flags -Wno-unused -fomit-frame-pointer -fstrict-aliasing -fstrength-reduce -ffast-math
 			[ $(gcc-major-version) -eq 3 ] \
 				&& append-flags -falign-functions=2 -falign-jumps=2 -falign-loops=2 \
 				|| append-flags -malign-functions=2 -malign-jumps=2 -malign-loops=2
+			;;
+		# amd64 no likey the -ffast-math - bug #54270
+		amd64)	append-flags -Wno-unused -fomit-frame-pointer -fstrict-aliasing -fstrength-reduce
 			;;
 		ppc)	append-flags -Wno-unused -funroll-loops -fstrength-reduce -fomit-frame-pointer -ffast-math -fsigned-char
 			;;
