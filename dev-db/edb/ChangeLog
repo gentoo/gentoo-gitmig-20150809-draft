@@ -1,8 +1,11 @@
 # ChangeLog for dev-db/edb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.7 2003/02/20 11:41:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.8 2003/03/11 17:01:28 agriffis Exp $
 
 *edb-1.0.3.20030220 (20 Feb 2003)
+
+  11 Mar 2003; Aron Griffis <agriffis@gentoo.org> edb-1.0.3.20030220.ebuild:
+  Add ~alpha to KEYWORDS and use -fPIC on alpha
 
   20 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bumpage (bug fixes from CVS).
