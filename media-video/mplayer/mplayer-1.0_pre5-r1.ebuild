@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5.ebuild,v 1.11 2004/07/22 19:56:54 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r1.ebuild,v 1.1 2004/07/23 03:53:46 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
-IUSE="3dfx 3dnow aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd dvdread edl encode esd fbdev gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad  matroska matrox mmx nas network nls oggvorbis opengl oss png rtc samba sdl sse svga tga theora truetype v4l v4l2 xinerama xmms xvid"
+IUSE="3dfx 3dnow aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd dvdread edl encode esd fbdev gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mythtv nas network nls oggvorbis opengl oss rtc samba sdl sse svga tga theora truetype v4l v4l2 X xinerama xmms xvid"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -12,7 +12,7 @@ SVGV=1.9.17
 # Handle PREversions as well
 MY_PV="${PV/_/}"
 S="${WORKDIR}/MPlayer-${MY_PV}"
-SRC_URI="http://www1.mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
+SRC_URI="mirror://mplayer/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )
@@ -107,6 +107,9 @@ src_unpack() {
 	#bug #49669, horrid syntax errors in help/help_mp-ro.h	
 	epatch ${FILESDIR}/mplayer-1.0_pre4-help_mp-ro.h.patch
 
+	#adds mythtv support to mplayer
+	use mythtv && epatch ${FILESDIR}/mplayer-mythtv.patch
+
 	# GCC 3.4 fixes
 	epatch ${FILESDIR}/mplayer-1.0_pre4-alsa-gcc34.patch
 
@@ -140,80 +143,86 @@ src_unpack() {
 
 src_compile() {
 
+	filter-flags -fPIE
+
 	local myconf=
 	################
 	#Optional features#
 	###############
-	use bidi && myconf="${myconf} $(use_enable bidi fribidi)"
-	use cdparanoia && myconf="${myconf} $(use_enable cdparanoia)"
-	use dvd && myconf="${myconf} $(use_enable dvd mpdvdkit)"
-	use dvdread &&myconf="${myconf} --disable-mpdvdkit $(use_enable dvdread)"
-	use edl && myconf="${myconf} $(use_enable edl)"
-	use encode && myconf="${myconf} $(use_enable encode mencoder)"
-	use gtk && myconf="${myconf} $(use_enable gtk gui) $(use_enable gtk x11) $(use_enable gtk xv)"
-	use ipv6 && myconf="${myconf} $(use_enable ipv6 inet6)"
-	use joystick && myconf="${myconf} $(use_enable joystick)"
-	use lirc && myconf="${myconf} $(use_enable lirc)"
-	use live && myconf="${myconf} $(use_enable live)"
-	use network && myconf="${myconf} $(use_enable network)"
-	use rtc && myconf="${myconf} $(use_enable rtc)"
-	use samba && myconf="${myconf} $(use_enable samba smb)"
-	use truetype && myconf="${myconf} $(use_enable truetype freetype)"
-	use v4l && myconf="${myconf} $(use_enable v4l tv-v4l)"
-	use v4l2 && myconf="${myconf} $(use_enable v4l tv-v4l2)"
+	myconf="${myconf} $(use_enable bidi fribidi)"
+	myconf="${myconf} $(use_enable cdparanoia)"
+	myconf="${myconf} $(use_enable dvd mpdvdkit)"
+	myconf="${myconf} $(use_enable edl)"
+	myconf="${myconf} $(use_enable encode mencoder)"
+	myconf="${myconf} $(use_enable gtk gui) $(use_enable gtk x11) $(use_enable gtk xv) $(use_enable gtk vm)"
+	myconf="${myconf} $(use_enable ipv6 inet6)"
+	myconf="${myconf} $(use_enable joystick)"
+	myconf="${myconf} $(use_enable lirc)"
+	myconf="${myconf} $(use_enable live)"
+	myconf="${myconf} $(use_enable network) $(use_enable network ftp)"
+	myconf="${myconf} $(use_enable rtc)"
+	myconf="${myconf} $(use_enable samba smb)"
+	myconf="${myconf} $(use_enable truetype freetype)"
+	myconf="${myconf} $(use_enable v4l tv-v4l)"
+	myconf="${myconf} $(use_enable v4l tv-v4l2)"
 
 	#########
 	# Codecs #
 	########
-	use divx4linux && myconf="${myconf} $(use_enable divx4linux)"
-	use gif && myconf="${myconf} $(use_enable gif)"
-	use jpeg && myconf="${myconf} $(use_enable jpeg)"
-	use lzo && myconf="${myconf} $(use_enable lzo liblzo)"
-	use matroska && myconf="${myconf} --disable-internal-matroska"
-	use mad && myconf="${myconf} --disable-internal-faad"
-	use oggvorbis && myconf="${myconf} $(use_enable oggvorbis vorbis)"
-	use png && myconf="${myconf} $(use_enable png)"
-	use theora && myconf="${myconf} $(use_enable theora)"
-	use xmms && myconf="${myconf} $(use_enable xmms)"
-	use xvid && mconf="${myconf} $(use_enable xvid)"
+	myconf="${myconf} $(use_enable divx4linux)"
+	myconf="${myconf} $(use_enable gif)"
+	myconf="${myconf} $(use_enable jpeg)"
+	myconf="${myconf} $(use_enable lzo liblzo)"
+	myconf="${myconf} $(use_enable matroska external-matroska) $(use_enable !matroska internal-matroska)"
+	myconf="${myconf} $(use_enable mpeg external-faad) $(use_enable !mpeg internal-faad)"
+	myconf="${myconf} $(use_enable oggvorbis vorbis)"
+	myconf="${myconf} $(use_enable theora)"
+	myconf="${myconf} $(use_enable xmms)"
+	myconf="${myconf} $(use_enable xvid)"
 
 	#############
 	# Video Output #
 	#############
-	use 3dfx && myconf="${myconf} $(use_enable 3dfx)"
-	( use xvid && use 3dfx ) \
-		&& myconf="${myconf} --enable-tdfxvid" \
-		||  myconf="${myconf} --disable-tdfxvid"
-	use aalib && myconf="${myconf} $(use_enable aalib aa)"
-	use directfb && myconf="${myconf} $(use_enable directfb)"
-	use dvb && myconf="${myconf} $(use_enable dvb)"
-	use fbdev && myconf="${myconf} $(use_enable fbdev)"
-	use ggi && myconf="${myconf} $(use_enable ggi)"
-	use libcaca && myconf="${myconf} $(use_enable libcaca caca)"
-	( use matrox && use gtk ) && myconf="${myconf} $(use_enable matrox xmga)"
-	use opengl && myconf="${myconf} $(use_enable opengl gl)"
-	use sdl && myconf="${myconf} $(use_enable sdl)"
-	use tga && myconf="${myconf} $(use_enable tga)"
-	use xinerama && myconf="${myconf} $(use_enable xinerama)"
+	myconf="${myconf} $(use_enable 3dfx)"
+	if use xvid && use 3dfx; then
+		myconf="${myconf} --enable-tdfxvid"
+	else
+		myconf="${myconf} --disable-tdfxvid"
+	fi
+	myconf="${myconf} $(use_enable aalib aa)"
+	myconf="${myconf} $(use_enable directfb)"
+	myconf="${myconf} $(use_enable dvb)"
+	myconf="${myconf} $(use_enable fbdev)"
+	myconf="${myconf} $(use_enable ggi)"
+	myconf="${myconf} $(use_enable libcaca caca)"
+	if use matrox && use X; then
+		myconf="${myconf} $(use_enable matrox xmga)"
+	fi
+	myconf="${myconf} $(use_enable opengl gl)"
+	myconf="${myconf} $(use_enable sdl)"
+	myconf="${myconf} $(use_enable svga)"
+	myconf="${myconf} $(use_enable tga)"
+	myconf="${myconf} $(use_enable xinerama)"
 
 	#############
 	# Audio Output #
 	#############
-	use alsa && myconf="${myconf} $(use_enable alsa)"
-	use arts && myconf="${myconf} $(use_enable arts)"
-	use esd && myconf="${myconf} $(use_enable esd)"
-	use nas && myconf="${myconf} $(use_enable nas)"
-	use oss && myconf="${myconf} $(use_enable oss ossaudio)"
+	myconf="${myconf} $(use_enable alsa)"
+	myconf="${myconf} $(use_enable arts)"
+	myconf="${myconf} $(use_enable esd)"
+	myconf="${myconf} $(use_enable mad)"
+	myconf="${myconf} $(use_enable nas)"
+	myconf="${myconf} $(use_enable oss ossaudio)"
 
 	#################
 	# Advanced Options #
 	#################
-	use 3dnow && myconf="${myconf} $(use_enable 3dnow) $(use_enable 3dnow 3dnowex)"
-	use altivec && myconf="${myconf} $(use_enable altivec)"
-	use debug && myconf="${myconf} $(use_enable debug)"
-	use mmx && myconf="${myconf} $(use_enable mmx) $(use_enable mmx mmx2)"
-	use nls && myconf="${myconf} $(use_enable nls i18n)"
-	use sse && myconf="${myconf} $(use_enable sse) $(use_enable sse sse2)"
+	myconf="${myconf} $(use_enable 3dnow) $(use_enable 3dnow 3dnowex)"
+	myconf="${myconf} $(use_enable altivec)"
+	myconf="${myconf} $(use_enable debug)"
+	myconf="${myconf} $(use_enable mmx) $(use_enable mmx mmx2)"
+	myconf="${myconf} $(use_enable nls i18n)"
+	myconf="${myconf} $(use_enable sse) $(use_enable sse sse2)"
 
 	if [ -d /opt/RealPlayer9/Real/Codecs ]
 	then
@@ -235,16 +244,18 @@ src_compile() {
 	# Build the matrox driver before mplayer configuration.
 	# That way the configure script sees it and builds the support
 	#build the matrox driver before the 
-	if use matrox && use x86 ; then
-		check_KV
-		cd ${S}/drivers
-		# bad hack, will be fixed later
-		addwrite /usr/src/linux/
-		unset ARCH
-		make all || die "Matrox build failed!  Your kernel may need to have `make mrproper` run on it before trying to use matrox support in this ebuild again."
-		cd ${S}
-	else
-		einfo "Not building matrox driver.  It doesn't seem to like other archs.  Please let me know if you find out otherwise."
+	if use matrox ; then
+		if use x86 ; then
+			check_KV
+			cd ${S}/drivers
+			# bad hack, will be fixed later
+			addwrite /usr/src/linux/
+			unset ARCH
+			make all || die "Matrox build failed!  Your kernel may need to have `make mrproper` run on it before trying to use matrox support in this ebuild again."
+			cd ${S}
+		else
+			einfo "Not building matrox driver.  It doesn't seem to like other archs.  Please let me know at chriswhite@gentoo.org if you find out otherwise."
+		fi
 	fi
 	unset CFLAGS CXXFLAGS
 	./configure --prefix=/usr \
@@ -297,13 +308,11 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog README
 	# Install the documentation; DOCS is all mixed up not just html
-	find ${S}/DOCS -type d | xargs -- chmod 0755
-	cp -r ${S}/DOCS ${D}/usr/share/doc/${PF}/ || die
+	docinto /usr/share/doc/${PF} ; dodoc -r ${S}/DOCS
 
 	# Copy misc tools to documentation path, as they're not installed
 	# directly
-	find ${S}/TOOLS -type d | xargs -- chmod 0755
-	cp -r ${S}/TOOLS ${D}/usr/share/doc/${PF} || die
+	docinto /usr/share/doc/${PF} ; dodoc -r ${S}/TOOLS
 
 	# Install the default Skin and Gnome menu entry
 	if use gtk

@@ -1,0 +1,14 @@
+diff -urN MPlayer-1.0pre4-orig/libmpdemux/aviheader.c MPlayer-1.0pre4/libmpdemux/aviheader.c
+--- MPlayer-1.0pre4-orig/libmpdemux/aviheader.c	2004-04-27 18:08:46.000000000 -0500
++++ MPlayer-1.0pre4/libmpdemux/aviheader.c	2004-07-22 20:58:18.451988624 -0500
+@@ -225,9 +225,7 @@
+       DWORD i;
+       unsigned msize = 0;
+       avisuperindex_chunk *s;
+-      // FIXME: do not use odml index for files that don't need it.
+-      // apparently the odml code is buggy!
+-      if (demuxer->movi_end < 0x7fffffff) break;
++/*    if (demuxer->movi_end < 0x7fffffff) break;*/
+       priv->suidx_size++;
+       priv->suidx = realloc(priv->suidx, priv->suidx_size * sizeof (avisuperindex_chunk));
+       s = &priv->suidx[priv->suidx_size-1];
