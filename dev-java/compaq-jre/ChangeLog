@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/compaq-jre
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jre/ChangeLog,v 1.6 2004/01/10 15:20:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jre/ChangeLog,v 1.7 2004/01/13 03:41:26 agriffis Exp $
+
+*compaq-jre-1.3.1-r2 (12 Jan 2004)
+
+  12 Jan 2004; Aron Griffis <agriffis@gentoo.org> compaq-jre-1.3.1-r2.ebuild:
+  Fix non-POSIX head invocation in .java_wrapper for bug 21975
 
 *compaq-jre-1.3.1-r1 (10 Jan 2004)
 
