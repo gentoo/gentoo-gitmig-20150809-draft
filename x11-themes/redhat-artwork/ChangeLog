@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/redhat-artwork 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.29 2004/05/26 18:27:08 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.30 2004/05/30 01:56:15 khai Exp $
+
+  29 May 2004; Yi Qiang <khai@gentoo.org> :
+  version bump, requested by #52398
 
   26 May 2004; Travis Tilley <lv@gentoo.org> redhat-artwork-0.95.ebuild:
   added ~amd64 keyword
