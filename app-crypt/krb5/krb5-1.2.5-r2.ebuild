@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/krb5-1.2.5-r2.ebuild,v 1.2 2002/08/02 20:58:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/krb5/krb5-1.2.5-r2.ebuild,v 1.3 2002/08/16 02:36:53 murphy Exp $
 
 S=${WORKDIR}/${P}/src
 SRC_URI="http://www.crypto-publish.org/dist/mit-kerberos5/${P}.tar.gz"
@@ -9,7 +9,7 @@ HOMEPAGE="http://web.mit.edu/kerberos/www/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="virtual/glibc"
 
