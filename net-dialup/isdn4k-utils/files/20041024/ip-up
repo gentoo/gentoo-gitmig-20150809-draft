@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# This calls /etc/ppp/ip-up.<interface> or /etc/ppp/ip-down.<interface>
-
-[ -s $0.$1 ] && . $0.$1 "$@"

@@ -1,21 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cf96c8aa4291b12f31526ac3d10b1781 ChangeLog 4734
+MD5 ed8b5bc7397c5886c352551ad484aabf ChangeLog 5237
 MD5 9f4187355b91c0dabfca1b251589f527 isdn4k-utils-3.2_p1-r2.ebuild 2808
 MD5 5bfcbc27dc20e18327b61f5df2bbec60 isdn4k-utils-3.2_p1-r3.ebuild 3070
 MD5 f18a68edbe338cae044acc49ae9fdd2b isdn4k-utils-3.2_p1-r4.ebuild 3553
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 f1cac015a1fd0ca2da5a4712ec6b24fa isdn4k-utils-20041024.ebuild 3525
-MD5 18e1229fe631fbf89555a54ddf4757be isdn4k-utils-20041024-r1.ebuild 3373
 MD5 25e734017cd86e4def771bbfd2954306 isdn4k-utils-3.5_p20041024.ebuild 3414
 MD5 e2cc85397eb8ff285f383213ab00cdad files/digest-isdn4k-utils-3.2_p1-r2 73
 MD5 12a790e7cfe579394ff02019abcdf95d files/digest-isdn4k-utils-3.2_p1-r3 136
 MD5 12a790e7cfe579394ff02019abcdf95d files/digest-isdn4k-utils-3.2_p1-r4 136
 MD5 2dbc97316fbe5d721b9701347464e22c files/gcc33-multiline.patch 1977
 MD5 adcc3c0ef100b737b0af224401812a4b files/local.start 564
-MD5 73d16856e5d4ae2a30bfb77fbd2ab017 files/digest-isdn4k-utils-20041024 144
-MD5 73d16856e5d4ae2a30bfb77fbd2ab017 files/digest-isdn4k-utils-20041024-r1 144
 MD5 73d16856e5d4ae2a30bfb77fbd2ab017 files/digest-isdn4k-utils-3.5_p20041024 144
 MD5 2f4c186b729606b475e17a0ea54189c9 files/3.2_p1-r2/config 2405
 MD5 7ce4e9c2bb9dee4d231ae8da54a06b9f files/3.2_p1-r2/gentoo.patch 2383
@@ -29,17 +25,6 @@ MD5 48266d44ebe70519d3fc67a6b0e260ff files/3.2_p1-r2/options.ippp0 443
 MD5 0a638249458e39c304846ddd401e3fee files/3.2_p1-r4/config 2405
 MD5 56b93c0cc4cc17b12c6add0237283271 files/3.2_p1-r4/pathfix.patch 641
 MD5 15ef676fec91271f9a48dc7a1b7e82a2 files/3.2_p1-r4/vbox-makefile.am.patch 1211
-MD5 36eadf8ec47ec3bf118cffbf2a42adb5 files/20041024/config 2407
-MD5 76e9b700a1600d4b74dea30751934c83 files/20041024/gentoo.patch 2383
-MD5 92412760dfacc81cfac908d522ac8e39 files/20041024/ioptions 86
-MD5 49ffb48689897498866cc14687831e08 files/20041024/ip-down.ippp0 228
-MD5 6ed9643d1d6b7e57adadee4dd28ea81a files/20041024/ip-up 115
-MD5 115bcf317b18a9c362ef37acf5cd4c4b files/20041024/isdn4linux.conf 105
-MD5 4183c8198a49b738531a11c462cc69e7 files/20041024/isdn4linux.init 712
-MD5 1c9b32ba3c1b3d083d5352af736f36cb files/20041024/net.ippp0 2423
-MD5 48266d44ebe70519d3fc67a6b0e260ff files/20041024/options.ippp0 443
-MD5 56b93c0cc4cc17b12c6add0237283271 files/20041024/pathfix.patch 641
-MD5 15ef676fec91271f9a48dc7a1b7e82a2 files/20041024/vbox-makefile.am.patch 1211
 MD5 36eadf8ec47ec3bf118cffbf2a42adb5 files/3.5_p20041024/config 2407
 MD5 76e9b700a1600d4b74dea30751934c83 files/3.5_p20041024/gentoo.patch 2383
 MD5 92412760dfacc81cfac908d522ac8e39 files/3.5_p20041024/ioptions 86
@@ -54,7 +39,7 @@ MD5 a3751d222be8dc6eb7633a2b222ae45d files/3.5_p20041024/ip-down 940
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBkPMijtv59x0+BrURAu/WAJ48JI3btlln68vXWyJV6dpzGeKRzwCcC5vA
-LSkL5Cz8EBP+HYLBTJ91NhQ=
-=4OXD
+iD8DBQFBkPTvjtv59x0+BrURApJwAKD6GPDlQ+xTHJjtce1Q+LXfUFQFEQCguhNe
+wByES1wC7QFqF+I4DW6nOto=
+=mybC
 -----END PGP SIGNATURE-----
