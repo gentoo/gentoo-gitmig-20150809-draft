@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-22-r1.ebuild,v 1.1 2002/10/28 05:59:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-22-r1.ebuild,v 1.2 2002/12/07 05:27:30 jmorgan Exp $
 
 S=${WORKDIR}/${PN}${PV}
 DESCRIPTION="FIGlet is a program for making large letters out of ordinary text"
@@ -9,7 +9,7 @@ HOMEPAGE="http://st-www.cs.uiuc.edu/users/chai/figlet.html"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 sparc64"
+KEYWORDS="x86 sparc"
 
 DEPEND="virtual/glibc"
 
