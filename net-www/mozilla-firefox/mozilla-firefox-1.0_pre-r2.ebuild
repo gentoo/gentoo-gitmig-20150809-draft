@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0_pre-r2.ebuild,v 1.8 2004/10/28 16:33:08 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0_pre-r2.ebuild,v 1.9 2004/11/08 15:08:52 vapier Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozilla mozilla-launcher
 
@@ -12,9 +12,9 @@ MY_PV=${PV/_pre/PR.1}
 SRC_URI="mirror://gentoo/firefox-${MY_PV}-source.tar.bz2 \
 	http://dev.gentoo.org/~brad/firefox-${MY_PV}-source.tar.bz2"
 
-KEYWORDS="~alpha amd64 ia64 ppc sparc x86"
-SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
+SLOT="0"
+KEYWORDS="~alpha amd64 arm ia64 ppc sparc x86"
 IUSE="java gtk2 ipv6 moznoxft truetype xinerama"
 
 RDEPEND="virtual/x11
