@@ -1,5 +1,5 @@
 MD5 2f41af39b12a3829b5166d3e4bc48186 libmustux-0.16.0.ebuild 684
-MD5 f2b591642ef08b591304e9eeecb66129 ChangeLog 369
-MD5 539b02aea943a11a384825773b7bd7ae libmustux-0.17.5.ebuild 578
+MD5 e96533340bf8029bc5c551762b207f25 ChangeLog 545
+MD5 ea95a50ea3f322e28f07243f09557514 libmustux-0.17.5.ebuild 683
 MD5 7514c5bcfb2fe30b6d14c9fdd04bae9a files/digest-libmustux-0.16.0 68
 MD5 ef3ef2ffeec56ba14dda1f266a6e4c13 files/digest-libmustux-0.17.5 68
