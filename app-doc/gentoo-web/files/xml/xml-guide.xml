@@ -1,0 +1,358 @@
+<?xml version='1.0'?>
+<guide>
+<title>Gentoo Linux Documentation Guide</title>
+<author title="Chief Architect"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
+<author title="Editor"><mail link="thomasfl@gentoo.org">Thomas Flavel</mail></author>
+
+<abstract>This guide shows you how to compose web documentation using the new lightweight Gentoo guide
+XML syntax.  This syntax is the official format for Gentoo Linux documentation, and this document
+itself was created using guide XML.  This guide assumes a basic working knowledge of XML and HTML.
+</abstract>
+
+<version>1.0</version>
+<date>29 Mar 2001</date>
+
+<chapter>
+<title>Guide basics</title>
+
+<section>
+<title>Guide XML design goals</title>
+<body>
+
+<p> The guide XML syntax is lightweight yet expressive, so that it is easy to
+learn yet also provides all the features we need for the creation of web
+documentation.  The number of tags is kept to a minimum -- just those we need.
+This makes it easy to transform guide into other formats, such as DocBook
+XML/SGML or web-ready HTML.  </p>
+
+<p>The goal is to make it easy to <e>create</e> and <e>transform</e> guide XML
+documents.</p>
+
+</body>
+</section>
+
+<section>
+<title>How to transform guide XML into HTML</title>
+<body>
+
+<p> Before we take a look at the guide syntax itself, it's helpful to know how
+guide XML is transformed into web-ready HTML.  To do this, we use a special
+file called <path>guide.xsl</path>, along with a command-line XSLT processing
+tool (also called an "engine").  The <path>guide.xsl</path> file describes
+exactly how to transform the contents of the source guide XML document to
+create the target HTML file.  Two popular XSLT processors are <c>sabcmd</c>
+(included in the <path>app-text/sablotron</path> package) and <c>xsltproc</c>
+(found in the <path>gnome-libs/libxslt</path> package).  From experience, we've
+found that <c>xsltproc</c> is the higher-quality and more feature-rich XSLT
+processor.  </p>
+
+<p> Once you have either <c>xsltproc</c> or <c>sabcmd</c> installed, you're
+ready to convert guide XML into web-ready HTML.  Here's how it works.  First,
+select a sample document from
+<path>/usr/portage/app-doc/gentoo-web/files/xml</path>, such as
+<path>install.xml</path> (The new user installation guide).  This will be our
+source XML guide document.  The easiest way to perform the transformation is to
+change directories to the location of the <path>guide.xsl</path> file.  Then,
+execute <c>xsltproc</c> as follows: </p>
+
+<pre>
+# <i>cd /usr/portage/app-doc/gentoo-web/files/xsl</i>
+# <i>xsltproc guide.xsl ../xml/install.xml &gt; /tmp/install.html</i>
+</pre>
+
+<p> If all went well, you should have a web-ready version of
+<path>install.xml</path> at <path>/tmp/install.html</path>.  For this document
+to display properly in a web browser, you may have to copy some files from
+<path>/usr/portage/app-doc/gentoo-web/files</path> to <path>/tmp</path>, such
+as <path>css/gentoo-dcc.css</path> and <path>images/gentoo-doc.gif</path>.
+</p>
+
+</body>
+</section>
+</chapter>
+<chapter>
+	<title>Guide XML</title>
+<section>
+<title>Basic structure</title>
+<body>
+
+<p>Now that you know how to transform guide XML, you're ready to start learning
+the guide XML syntax.  We'll start with the the initial tags used in a guide
+XML document: </p>
+
+<pre caption="The initial part of a guide XML document">
+&lt;?xml version='1.0'?&gt;
+&lt;guide&gt;
+&lt;title&gt;<i>Gentoo Linux Documentation Guide</i>&lt;/title&gt;
+&lt;author title="<i>Chief Architect</i>"&gt;&lt;mail link="<i>drobbins@gentoo.org</i>"&gt;<i>Daniel Robbins</i>&lt;/mail&gt;&lt;/author&gt;
+&lt;author title="<i>Editor</i>"&gt;&lt;mail link="<i>thomasfl@gentoo.org</i>"&gt;<i>Thomas Flavel</i>&lt;/mail&gt;&lt;/author&gt;
+
+&lt;abstract&gt;<i>This guide shows you how to compose web documentation using our new lightweight Gentoo guide
+XML syntax.  This syntax is the official format for Gentoo Linux web documentation, and this document
+itself was created using guide XML.</i>
+&lt;/abstract&gt;
+
+&lt;version&gt;<i>1.0</i>&lt;/version&gt;
+&lt;date&gt;<i>29 Mar 2001</i>&lt;/date&gt;
+</pre>
+
+<p>On the first, line, we see the requisite tag that identifies this as an XML
+document.  Following it, there's a <c>&lt;guide&gt;</c> tag  -- the entire
+guide document is enclosed within a <c>&lt;guide&gt; &lt;/guide&gt;</c> pair.
+Next, there's a <c>&lt;title&gt;</c> tag, used to set the title for the entire
+guide document.  </p>
+
+<p>Then, we come to the <c>&lt;author&gt;</c> tags, which contain information
+about the various authors of the document.  Each <c>&lt;author&gt;</c> tag
+allows for an optional <c>title=</c> element, used to specify the author's
+relationship to the document (author, co-author, editor, etc.).  In this
+particular example, the authors' names are enclosed in another tag -- a
+<c>&lt;mail&gt;</c> tag, used to specify an email address for this particular
+person.  The <c>&lt;mail&gt;</c> tag is optional and can be omitted, and no
+more than one <c>&lt;author&gt;</c> element is required per guide document.
+</p>
+
+<p>Next, we come to the <c>&lt;abstract&gt;</c>, <c>&lt;version&gt;</c> and
+<c>&lt;date&gt;</c> tags, used to specify a summary of the document, the
+current version number, and the current version date (in DD MMM YYYY format)
+respectively.  This rounds out the tags that should appear at the beginning of
+a guide document.  Besides the <c>&lt;title&gt;</c> and <c>&lt;mail&gt;</c>
+tags, these tags shouldn't appear anywhere else except immediately inside the
+<c>&lt;guide&gt;</c> tag, and for consistency it's recommended (but not
+required) that these tags appear before the content of the document.  </p>
+
+</body>
+</section>
+
+<section>
+<title>Chapters and sections</title>
+<body>
+<p>Once the initial tags have been specified, you're ready to start adding
+the structural elements of the document.  Guide documents are divided into
+chapters, and each chapter can hold one or more sections.  Every chapter
+and section has a title.  Here's an example chapter with a single section,
+consisting of a paragraph.  If you append this XML to the XML in the <uri link="#doc_pre2">previous
+excerpt</uri> and append a <c>&lt;/guide&gt;</c> to the end of the file, you'll have a valid
+(if minimal) guide document:
+</p>
+
+<pre>
+&lt;chapter&gt;
+&lt;title&gt;<i>This is my chapter</i>&lt;/title&gt;
+&lt;section&gt;
+	&lt;title&gt;<i>This is section one of my chapter</i>&lt;/title&gt;
+	&lt;body&gt;
+		&lt;p&gt;<i>This is the actual text content of my section.</i>&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/section&gt;
+&lt;/chapter&gt;
+</pre>
+
+<p>Above, I set the chapter title by adding a child <c>&lt;title&gt;</c>
+element to the <c>&lt;chapter&gt;</c> element.  Then, I created a section by
+adding a <c>&lt;section&gt;</c> element.  If you look inside the
+<c>&lt;section&gt;</c> element, you'll see that it has two child elements -- a
+<c>&lt;title&gt;</c> and a <c>&lt;body&gt;</c>.  While the <c>&lt;title&gt;</c>
+is nothing new, the <c>&lt;body&gt;</c> is -- it contains the actual text
+content of this particular section.  We'll look at the tags that are allowed
+inside a <c>&lt;body&gt;</c> element in a bit.  </p>
+
+<note>A <c>&lt;guide&gt;</c> element can contain multiple
+<c>&lt;chapter&gt;</c> elements, and a <c>&lt;chapter&gt;</c> can contain
+multiple <c>&lt;section&gt;</c> elements.  However, a <c>&lt;section&gt;</c>
+element can only contain one <c>&lt;body&gt;</c> element.  </note>
+
+</body>
+</section>
+
+<section>
+<title>An example &lt;body&gt;</title>
+<body>
+<p>
+Now, it's time to learn how to mark up actual content.  Here's the XML code for an example <c>&lt;body&gt;</c> element:
+</p>
+<pre>
+&lt;p&gt;
+This is a paragraph.  &lt;path&gt;/etc/passwd&lt;/path&gt; is a file.
+&lt;uri&gt;http://www.gentoo.org&lt;/uri&gt; is my favorite website.
+Type &lt;c&gt;ls&lt;/c&gt; if you feel like it.  I &lt;e&gt;really&lt;/e&gt; want to go to sleep now.
+&lt;/p&gt;
+
+&lt;pre&gt;
+This is text output or code.
+# &lt;i&gt;this is user input&lt;/i&gt;
+
+Make HTML/XML easier to read by using selective emphasis:
+&lt;foo&gt;&lt;i&gt;bar&lt;/i&gt;&lt;/foo&gt;
+
+&lt;codenote&gt;This is how to insert an inline note into the code block&lt;/codenote&gt;
+&lt;/pre&gt;
+&lt;note&gt;This is a note.&lt;/note&gt;
+&lt;warn&gt;This is a warning.&lt;/warn&gt;
+&lt;impo&gt;This is important.&lt;/impo&gt;
+</pre>
+<p>Now, here's how this <c>&lt;body&gt;</c> element is rendered:</p>
+
+<p>
+This is a paragraph.  <path>/etc/passwd</path> is a file.
+<uri>http://www.gentoo.org</uri> is my favorite website.
+Type <c>ls</c> if you feel like it.  I <e>really</e> want to go to sleep now.
+</p>
+
+<pre>
+This is text output or code.
+# <i>this is user input</i>
+
+Make HTML/XML easier to read by using selective emphasis:
+&lt;foo&gt;<i>bar</i>&lt;/foo&gt;
+
+<codenote>This is how to insert an inline note into the code block</codenote>
+</pre>
+<note>This is a note.</note>
+<warn>This is a warning.</warn>
+<impo>This is important.</impo>
+</body>
+</section>
+
+<section>
+<title>The &lt;body&gt; tags</title>
+<body>
+
+<p> We introduced a lot of new tags in the previous section -- here's what you
+need to know.  The <c>&lt;p&gt;</c> (paragraph), <c>&lt;pre&gt;</c> (code
+block), <c>&lt;note&gt;</c>, <c>&lt;warn&gt;</c> (warning) and
+<c>&lt;impo&gt;</c> (important) tags all can contain one or more lines of text.
+Besides the <c>&lt;table&gt;</c> element (which we'll cover in just a bit),
+these are the only tags that should appear immediately inside a
+<c>&lt;body&gt;</c> element.  Another thing -- these tags <e>should not</e> be
+stacked -- in other words, don't put a <c>&lt;note&gt;</c> element inside a
+<c>&lt;p&gt;</c> element.  As you might guess, the <c>&lt;pre&gt;</c> element
+preserves its whitespacing formatting, making it well-suited for code excerpts.</p>
+
+</body>
+</section>
+<section>
+<title>&lt;path&gt;, &lt;c&gt; and &lt;e&gt;</title>
+<body>
+
+<p>The <c>&lt;path&gt;</c>, <c>&lt;c&gt;</c> and <c>&lt;e&gt;</c> elements can
+be used inside any child <c>&lt;body&gt;</c> tag, except for
+<c>&lt;pre&gt;</c>.  </p>
+
+<p>The <c>&lt;path&gt;</c> element is used to mark text that refers to an
+<e>on-disk file</e> -- either an <e>absolute or relative path</e>, or a <e>simple filename</e>.
+This element is generally rendered with a monospaced font to offset it from the
+standard paragraph type.  </p>
+
+<p>The <c>&lt;c&gt;</c> element is used to mark up a <e>command</e> or <e>user
+input</e>.  Think of <c>&lt;c&gt;</c> as a way to alert the reader to something
+that they can type in that will perform some kind of action.  For example, all
+the XML tags displayed in this document are enclosed in a <c>&lt;c&gt;</c>
+element because they represent something that the user could type in that is
+not a path.  By using <c>&lt;c&gt;</c> elements, you'll help your readers
+quickly identify commands that they need to type in.  Also, because
+<c>&lt;c&gt;</c> elements are already offset from regular text, <e>it is rarely
+necessary to surround user input with double-quotes</e>. For example, don't
+refer to a "<c>&lt;c&gt;</c>" element like I did in this sentence.  Avoiding
+the use of unnecessary double-quotes makes a document more readable -- and adorable!</p>
+
+<p><c>&lt;e&gt;</c> is used to apply emphasis to a word or phrase; for example:
+I <e>really</e> should use semicolons more often.  As you can see, this text is
+offset from the regular paragraph type for emphasis.  This helps to give your
+prose more <e>punch</e>!</p>
+
+</body>
+</section>
+
+<section>
+<title>&lt;mail&gt; and &lt;uri&gt;</title>
+<body>
+
+<p>We've taken a look at the <c>&lt;mail&gt;</c> tag earlier; it's used to link some text
+with a particular email address, and takes the form <c>&lt;mail link="foo@bar.com"&gt;Mr. Foo Bar&lt;/mail&gt;</c>.</p>
+
+<p>The <c>&lt;uri&gt;</c> tag is used to point to files/locations on the
+Internet.  It has two forms -- the first can be used when you want to have the
+actual URI displayed in the body text, such as this link to
+<uri>http://www.gentoo.org</uri>.  To create this link, I typed
+<c>&lt;uri&gt;http://www.gentoo.org&lt;/uri&gt;</c>.  The alternate form is
+when you want to associate a URI with some other text -- for example, <uri
+link="http://www.gentoo.org">the Gentoo Linux website</uri>.  To create <e>this</e>
+link, I typed <c>&lt;uri link="http://www.gentoo.org"&gt;the Gentoo Linux website&lt;/uri&gt;</c>.
+</p>
+
+</body>
+</section>
+
+<section>
+<title>Figures</title>
+
+<body>
+
+<p>Here's how to insert a figure into a document -- <c>&lt;figure
+link="mygfx.png" short="my picture" caption="my favorite picture of all
+time"/&gt;</c>.  The <c>link=</c> attribute points to the actual graphic image,
+the <c>short=</c> attribute specifies a short description (currently used for
+the image's HTML <c>alt=</c> attribute), and a caption.  Not too difficult
+:)</p>
+
+</body>
+</section>
+<section>
+<title>Tables and lists</title>
+<body>
+
+<p>Guide supports a simplified table syntax similar to that of HTML.  To start
+a table, use a <c>&lt;table&gt;</c> tag.  Start a row with a <c>&lt;tr&gt;</c>
+tag.  However, for inserting actual table data, we <e>don't</e> support the
+HTML &lt;td&gt; tag; instead, use the <c>&lt;th&gt;</c> if you are inserting a
+header, and <c>&lt;ti&gt;</c> if you are inserting a normal informational
+block.  You can use a <c>&lt;th&gt;</c> anywhere you can use a <c>&lt;ti&gt;</c> --
+there's no requirement that <c>&lt;th&gt;</c> elements appear only in the 
+first row.  Currently, these tags don't support any attributes, but some will
+be added (such as a <c>caption=</c> attribute for <c>&lt;table&gt;</c>) soon.
+</p>
+
+<p> To create ordered or unordered lists, simply use the HTML-style
+<c>&lt;ol&gt;</c>, <c>&lt;ul&gt;</c> and <c>&lt;li&gt;</c> tags.  List tags
+should only appear inside a <c>&lt;p&gt;</c>, <c>&lt;ti&gt;</c>,
+<c>&lt;note&gt;</c>, <c>&lt;warn&gt;</c> or <c>&lt;impo&gt;</c> tag.  </p>
+
+</body>
+</section>
+
+<section>
+<title>Intra-document references</title>
+<body>
+
+<p>Guide makes it really easy to reference other parts of the document using
+hyperlinks.  You can create a link pointing to <uri link="#doc_chap1">Chapter
+One</uri> by typing <c>&lt;uri link="#doc_chap1"&gt;Chapter
+One&lt;/uri&gt;</c>.  To point to <uri link="#doc_chap1_sect2">section two of
+Chapter One</uri>, type <c>&lt;uri link="#doc_chap1_sect2"&gt;section two of
+Chapter One&lt;/uri&gt;</c>.  To refer to figure 3, type <c>&lt;uri
+link="doc_fig3"&gt;figure 3&lt;/uri&gt;</c>.  Or, to refer to <uri link="#doc_pre2">code listing 2</uri>,
+type <c>&lt;uri link="doc_pre2"&gt;code listing 2&lt;/uri&gt;</c>.  We'll be
+adding other auto-link abilities (such as table support) soon.</p>
+
+</body>
+</section>
+</chapter>
+<chapter>
+<title>Resources</title>
+<section>
+	<title>Start writing</title>
+	<body>
+		<p>Guide has been specially designed to be "lean and mean" so that developers
+		can spend more time writing documentation and less time learning the actual XML
+		syntax.  Hopefully, this will allow developers who aren't unusually "doc-savvy"
+		to start writing quality Gentoo Linux documentation.  If you'd like to help (or have any questions about guide), please
+		post a message to <mail link="gentoo-dev@gentoo.org">the gentoo-dev mailing list</mail>
+		stating what you'd like to tackle.</p>
+		<p>If you'd like to explore guide further, you can find the necessary files in our
+		Portage tree -- <path>/usr/portage/app-doc/gentoo-web/files</path>.  Have fun!</p>
+	</body>
+</section>
+</chapter>
+</guide>
+
