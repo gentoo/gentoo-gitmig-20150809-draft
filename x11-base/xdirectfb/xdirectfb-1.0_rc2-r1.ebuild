@@ -60,11 +60,13 @@ src_install() {
 	doexe ${S}/programs/Xserver/XDirectFB 
 	doexe ${FILESDIR}/startxdfb 
 
-	mv ${S}/programs/Xserver/hw/directfb/XDirectFB.man ./XDirectFB.1x
+	mv ${S}/programs/Xserver/hw/directfb/XDirectFB._man ./XDirectFB.1x
 	insinto /usr/X11R6/man/man1
 	doins ${S}/XDirectFB.1x
-	cp ${FILESDIR}/.dfbserverrc /etc/skel
-	cp ${FILESDIR}/dfbserverrc /etc/X11/xinit
+	dodir /etc/skel
+	dodir /etc/X11/xinit
+	cp ${FILESDIR}/.dfbserverrc ${D}/etc/skel
+	cp ${FILESDIR}/dfbserverrc ${D}/etc/X11/xinit
 	
 	dohtml ${S}/programs/Xserver/hw/directfb/XDirectFB.1x.html
 	
