@@ -1,1 +1,4 @@
 default-ppc-2004.1
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-ppc-2004.1 make.profile
