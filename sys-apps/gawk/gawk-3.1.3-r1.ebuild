@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.21 2004/11/12 14:29:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.22 2004/11/14 21:08:05 chainsaw Exp $
 
 inherit eutils gnuconfig toolchain-funcs
 
@@ -21,7 +21,7 @@ src_unpack() {
 	unpack ${A}
 
 	# Copy filefuncs module's source over ...
-	cp -dR "${FILESDIR}/filefuncs" "${WORKDIR}/" || die "cp failed"
+	cp -PR "${FILESDIR}/filefuncs" "${WORKDIR}/" || die "cp failed"
 
 	cd ${S}
 	# support for dec compiler.
