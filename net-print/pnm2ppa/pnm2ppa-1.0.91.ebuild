@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.0.91.ebuild,v 1.1 2001/07/23 18:44:46 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.0.91.ebuild,v 1.2 2001/07/23 18:55:15 danarmak Exp $
 # Note: this also d/ls the hp-ppa-howto and installs it under /usr/share/doc/${P}
 
 # pnm2ppa is a print filter for HP's line of Winprinters which use a proprietary
@@ -24,7 +24,8 @@ HOMEPAGE="http://pnm2ppa.sourceforge.net"
 DESCRIPTION="Print driver for Hp Deskjet 710, 712, 720, 722, 820, 1000 series"
 
 # note: this doesn't depend on virtual/lpr, because it can work on its own,
-# just without queueing etc.
+# just without queueing etc. since it's not just a driver but a standalone
+# executable.
 DEPEND=""
 RDEPEND="app-text/enscript"
 
