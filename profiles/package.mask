@@ -516,3 +516,9 @@ dev-lang/tcl-tk
 # this is here for dirty installs, the ebuild will be removed
 # when the actual bug is resolved
 =app-editors/vim-6.1-r1
+
+#seemant@gentoo.org
+# 5 Apr 2002
+# >ncurses-5.2-r5 causes an incompatibility here
+# masking until that can be resolved
+=sys-devel/gdb-5.1.1
