@@ -1,3 +1,7 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-truecombat/quake3-truecombat-1.2.ebuild,v 1.2 2004/09/29 08:02:46 wolf31o2 Exp $
+
 MOD_DESC="total transformation realism based MOD"
 MOD_NAME=truecombat
 MOD_BINS=tc
