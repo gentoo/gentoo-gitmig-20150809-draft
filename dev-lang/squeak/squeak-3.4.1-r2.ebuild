@@ -1,11 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1-r2.ebuild,v 1.4 2004/03/30 20:51:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1-r2.ebuild,v 1.5 2004/04/01 23:04:47 mr_bones_ Exp $
 
 inherit libtool flag-o-matic eutils
-strip-flags
-filter-mfpmath sse
-filter-flags "-fPIC" "-maltivec" "-mabi=altivec" "-fstack-protector" "-pipe" "-g" "-mtune" "-march" "-mcpu" "-O" "-O1" "-O2" "-Os" "-O3" "-freorder-blocks" "-fprefetch-loop-array" "-fforce-addr"
 
 #Simply change these numbers for different versions
 MV=3.4
@@ -42,6 +39,10 @@ src_compile() {
 	use X || myconf="--without-x"
 	use oss && myconf="${myconf} --with-audio=oss"
 	use mmx && myconf="${myconf} --enable-mpg-mmx"
+
+	strip-flags
+	filter-mfpmath sse
+	filter-flags "-fPIC" "-maltivec" "-mabi=altivec" "-fstack-protector" "-pipe" "-g" "-mtune" "-march" "-mcpu" "-O" "-O1" "-O2" "-Os" "-O3" "-freorder-blocks" "-fprefetch-loop-array" "-fforce-addr"
 
 	# fix tail problems
 	cd ${S}/platforms/unix/config

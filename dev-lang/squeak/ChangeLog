@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/squeak
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/ChangeLog,v 1.9 2004/03/30 20:51:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/ChangeLog,v 1.10 2004/04/01 23:04:47 mr_bones_ Exp $
+
+  01 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> squeak-3.4.1-r1.ebuild,
+  squeak-3.4.1-r2.ebuild:
+  flag-o-matic functions into src_compile
 
   30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; squeak-3.2.5.ebuild,
   squeak-3.4.1-r1.ebuild, squeak-3.4.1-r2.ebuild, squeak-3.4.1.ebuild:
