@@ -1,0 +1,6 @@
+MD5 95334c4a1f6c64c12d0ba77ff689b8a9 ChangeLog 621
+MD5 074069c5166bba1996556eed87872081 smartmontools-5.0.45.ebuild 960
+MD5 36a8ed618ed933830734c1e19ed1a9c6 smartmontools-5.1.9.ebuild 1002
+MD5 274bf91846f51fc5e93f303e5d4710f9 files/smartd.rc 518
+MD5 5dafe6c5d2381ddd1e48877419a22372 files/digest-smartmontools-5.1.9 71
+MD5 432ca1c6b0ccb2ce8c44f223aebd61af files/digest-smartmontools-5.0.45 71
