@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/qdox
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.1 2005/01/04 22:35:32 luckyduck Exp $
+
+*qdox-20050104 (04 Jan 2005)
+
+  04 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +qdox-20050104.ebuild:
+  Initial import. Ebuild provides by /me. Dependency of #63290.
+
