@@ -1,6 +1,14 @@
-# ChangeLog for net-dialuppppChangeLog/
+# ChangeLog for net-dialup/ppp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.5 2002/07/17 03:11:56 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.6 2002/07/31 14:15:15 aliz Exp $
+
+*ppp-2.4.1-r10 (31 Jul 2002)
+
+  31 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> ppp-2.4.1-r10.ebuild :
+
+  Security fix - added a patch to prevent race condition.
+
+*ppp-2.4.1-r9
 
   16 Jul 2002; Ben Lutgens <lamer@gentoo.org> ppp-2.4.1-r[789].ebuild  :
 
