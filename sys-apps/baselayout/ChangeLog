@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.162 2004/07/12 03:11:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.163 2004/07/28 00:04:27 agriffis Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  27 Jul 2004; <agriffis@gentoo.org> baselayout-1.10.1-r1.ebuild,
+  baselayout-1.10.1-r2.ebuild:
+  Move util-linux back inside conditional since it pulls in a lot of dependencies
 
 *baselayout-1.10.1-r2 (11 Jul 2004)
 
