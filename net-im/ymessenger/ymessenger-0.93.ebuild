@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors: Seemant Kulleen <seemant@gentoo.org> Matthew Kennedy <mkennedy@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.93.ebuild,v 1.1 2002/04/27 22:51:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.93.ebuild,v 1.2 2002/05/22 12:40:30 seemant Exp $
 
 MY_P="ymessenger-0.93.0-1.i386.rpm"
 S=${WORKDIR}/usr/local
@@ -11,6 +11,11 @@ HOMEPAGE="http://messenger.yahoo.com/messenger/download/unix.html"
 
 DEPEND=">=app-arch/rpm-3.0.6"
 RDEPEND="virtual/x11"
+
+RESTRICT="fetch"
+
+SLOT="0"
+LICENSE="Artistic"
 
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${MY_P} ]
@@ -28,5 +33,6 @@ src_install () {
 	exeinto /opt/Yahoo/
 	doexe bin/ymessenger
 	
-	echo "PATH=/opt/Yahoo" > ${D}/etc/env.d/97ymessenger
+	insinto /etc/env.d
+	doins ${FILESDIR}/97ymessenger
 }
