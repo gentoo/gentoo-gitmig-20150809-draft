@@ -1,4 +1,14 @@
 #!/bin/sh -e
+#
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/files/generate-asm-sparc,v 1.2 2002/09/02 00:14:32 murphy Exp $
+#
+# This script generates the files in /usr/include/asm for sparc systems
+# during installation of sys-kernel/linux-headers.
+# Will no longer be needed when full 64 bit support is used on sparc64
+# systems.
+#
+# Shamefully ripped from Debian
+# ----------------------------------------------------------------------
 
 # Idea borrowed from RedHat's kernel package
 
@@ -66,3 +76,5 @@ EOF
 EOF
 
 done
+
+exit 0
