@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-1.0.4.1.ebuild,v 1.1 2003/09/20 02:28:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-1.0.4.1.ebuild,v 1.2 2003/10/02 00:51:17 seemant Exp $
 
 inherit kde rpm
 
@@ -19,7 +19,7 @@ RDEPEND="virtual/x11"
 
 SLOT="0"
 LICENSE="yahoo"
-KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa"
+KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa"
 
 pkg_setup() {
 	if [ ${ARCH} != "x86" ] ; then
@@ -48,11 +48,16 @@ src_install () {
 	then
 		insinto /usr/share/gnome/apps/Internet
 		doins ymessenger.desktop
+		insinto /opt/ymessenger/bin
+		doins ymessenger.desktop
 	fi
 
 	if use kde
 	then
 		insinto ${KDEDIR}/share/applnk/Internet
+		doins ymessenger.kdelnk
+
+		insinto /opt/ymessenger/bin
 		doins ymessenger.kdelnk
 	fi
 
