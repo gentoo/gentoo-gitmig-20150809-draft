@@ -1,3 +1,5 @@
+# $Id: ipac.conf.1.30,v 1.2 2004/10/11 23:44:03 eldad Exp $
+
 # This is the main ipac-ng configuration file.  It contains the
 # configuration directives that give the ipac-ng its instructions.
 
@@ -5,37 +7,35 @@
 ## please note: you *should* specify YES, unless you are kaiser13 :)
 ## note2: you are trying to use 'ugly flawed experimental dangerous mode' 
 ##                             if you are using 'no', don't set it to no.
-classic mode = yes
 
-## specify access agent. supported are: files, postgre. files works with classic mode only
-# did you specify 'no' above? ok, here should be 'files' for you.
+## specify access agent
+# supported are: 'files', 'postgre'. 'files' works only with classic mode
+# did you specify 'yes' above? Then you should set this here to 'files'.
 access agent = files
 
-## accouting agent. iptables and ipchains available now. 
+## accouting agent
+# supported are: 'iptables', 'ipchains'
 #   (ipchains is not supported in nonclassic mode). does anybody still uses them?
 account agent = iptables
 
-## storage. gdbm, postgre and files supported. (files is not recommended)
+## storage
+# supported are: 'gdbm', 'postgre', 'files' (files is not recommended)
 # postgre is the best & fastest method now.
 storage = gdbm
-
 
 # set the hostname, used to store\fetch\another work with database
 # get from hostname() if not specified here
 hostname = sibinet
 
-
 ## rules file for classic mode
 rules file = /etc/ipac-ng/rules.conf
 
-## login all users at startup (specific only for nonclassic mode) (only those who has enough cash)
-# note: forget about this.
+## login all users at startup (only those who have enough cash)
+# specify *only* in nonclassic mode, otherwise forget about this
 #login at start = no
 
-## support for traffic passing to\from auth host (specific only for nonclassic mode)
-## name or ip of the auth host
-## disable support if not specified,
-# forget about this, too
+## support for traffic passing to\from auth host 
+# specify *only* in nonclassic mode, otherwise forget about this
 #auth host = sibinet.com
 
 # dont store lines contains only zeroes to speedup processing and to save space
