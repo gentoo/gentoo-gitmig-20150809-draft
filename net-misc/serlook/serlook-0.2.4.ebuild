@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/serlook/serlook-0.2.4.ebuild,v 1.1 2004/06/01 20:20:22 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/serlook/serlook-0.2.4.ebuild,v 1.2 2004/06/04 09:12:55 dholm Exp $
 
 inherit kde
 
@@ -14,5 +14,5 @@ SRC_URI="http://serlook.sunsite.dk/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
