@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/phpdbg
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/ChangeLog,v 1.6 2003/10/19 18:53:29 stuart Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/ChangeLog,v 1.7 2004/01/05 04:33:34 robbat2 Exp $
+
+*phpdbg-2.11.23 (04 Jan 2004)
+
+  04 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> phpdbg-2.10-r1.ebuild,
+  phpdbg-2.10.ebuild, phpdbg-2.11.23.ebuild:
+  remove old version as they are broken and require too much effort to fix
+  manually
 
   19 Oct 2003; Stuart Herbert <stuart@gentoo.org> :
   Version bump; closes bug #23870

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/phpdbg-2.11.23.ebuild,v 1.1 2003/10/19 18:53:29 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/phpdbg-2.11.23.ebuild,v 1.2 2004/01/05 04:33:34 robbat2 Exp $
 
 PHP_EXT_NAME="dbg"
 PHP_EXT_ZENDEXT="no"
@@ -24,7 +24,6 @@ src_compile() {
 
 src_install () {
 	php-ext-source_src_install
-
 	dodoc AUTHORS COPYING INSTALL
 }
 
@@ -33,13 +32,10 @@ pkg_postinst() {
 	php-ext-base_addtoinifiles "[Debugger]"
 	php-ext-base_addtoinifiles "debugger.enabled" "on"
 	php-ext-base_addtoinifiles "debugger.profiler_enabled" "on"
-	einfo Please reload Apache to activate the changes
-
+	einfo "Please reload Apache to activate the changes"
 }
 
 pkg_postrm() {
-	einfo You need to remove all lines referring to the debugger, and
-		extension=dbg.so.Please reload Apache to activate the changes
-
+	einfo "You need to remove all lines referring to the debugger, and"
+	einfo "extension=dbg.so. Please reload Apache to activate the changes."
 }
-
