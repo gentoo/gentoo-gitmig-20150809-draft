@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libgii
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.7 2003/03/10 22:19:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.8 2004/01/28 20:56:35 plasmaroo Exp $
+
+  28 Jan 2004; <plasmaroo@gentoo.org> libgii-0.8.1.ebuild,
+  files/libgii-linux-headers-2.6.patch:
+  Added a patch to get libgii to compile on 2.6 kernel headers. Thanks to James
+  Noble for filing bug #39580!
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

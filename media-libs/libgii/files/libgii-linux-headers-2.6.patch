@@ -1,0 +1,13 @@
+diff -ur libgii-0.8.1~old/input/linux_evdev/eventparse.c libgii-0.8.1/input/linux_evdev/eventparse.c
+--- libgii-0.8.1~old/input/linux_evdev/eventparse.c     2004-01-27 18:41:18.656312744 +0000
++++ libgii-0.8.1/input/linux_evdev/eventparse.c 2001-08-26 15:57:18.000000000 +0000
+@@ -28,6 +28,9 @@
+ #include linux_evdev.h
+ #include <errno.h>
+
++#ifndef EV_RST
++#define EV_RST EV_SYN
++#endif
+
+ static gii_event_mask
+ dispatch_pmove(struct gii_input *inp, struct input_event *event,

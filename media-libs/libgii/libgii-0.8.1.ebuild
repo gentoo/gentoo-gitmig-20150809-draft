@@ -1,9 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.8.1.ebuild,v 1.12 2003/07/18 21:55:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.8.1.ebuild,v 1.13 2004/01/28 20:56:35 plasmaroo Exp $
 
 IUSE="X"
-
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Fast and safe graphics and drivers for about any graphics card to the Linux kernel (sometimes)"
@@ -22,6 +21,7 @@ src_compile() {
 
 	use X || myconf="--without-x --disable-x --disable-xwin"
 
+	epatch ${FILESDIR}/libgii-linux-headers-2.6.patch
 	econf ${myconf} || die
 	emake || die
 
