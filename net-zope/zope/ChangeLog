@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.52 2004/10/18 18:31:20 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.53 2004/10/25 07:27:13 batlogg Exp $
+
+*zope-2.7.3 (24 Oct 2004)
+
+  24 Oct 2004; Jodok Batlogg <batlogg@gentoo.org>; +files/2.7.3/gid.patch,
+  +files/2.7.3/zope.initd, +zope-2.7.3.ebuild:
+  version bump, unstable on all platforms
 
   18 Oct 2004; Radoslaw Stachowiak <radek@gentoo.org> -zope-2.7.2-r1.ebuild,
   -zope-2.7.2.ebuild:
