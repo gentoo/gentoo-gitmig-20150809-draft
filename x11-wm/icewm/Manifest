@@ -1,23 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6c6a8d9159cb465dbd055981bb583b3d icewm-1.2.17_pre1.ebuild 2496
 MD5 42adda7c2d33b99328a938a9764f5098 icewm-1.2.16-r1.ebuild 2433
-MD5 093afff2a21bfcf8c8241d380fb03cd0 ChangeLog 13019
-MD5 7a78b4106f26fb7a2c2c9b9fcfb83d32 icewm-1.2.17.ebuild 2161
+MD5 4666f03720010b5d4ca6704933f86c48 ChangeLog 13213
+MD5 ea48e715d5684ad1718745b60c0a392a icewm-1.2.17.ebuild 2159
 MD5 a26b94d92c1e03083b7020e2f4c1afe9 metadata.xml 630
-MD5 c335367aa3ff27e70e3882690864364a icewm-1.2.17_pre2.ebuild 2441
 MD5 fd57fef0e5a817b5a5ea6ffed65a3e5d files/digest-icewm-1.2.17 64
 MD5 9028fc0d1b794c88e4a2db9cf28f66f0 files/IceWM.desktop 200
 MD5 0adfec296f9e1a9eb08a326c0690c28e files/icewm-1.2.17.ybutton.cc.patch 591
 MD5 37ad1f076784e6c0b601719e9f5d2a46 files/icewm-1.2.17_pre1.wmtaskbar.cc.patch 342
 MD5 a15c477442ec11a68f6c5e1932e72d42 files/digest-icewm-1.2.16-r1 141
-MD5 09fb90eb26ebbd9fecafd03b53e956ac files/digest-icewm-1.2.17_pre1 145
-MD5 346b791e3835d7de7199c7289e29b116 files/digest-icewm-1.2.17_pre2 145
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBjn7RUpKYMelfdYERAqBwAJ97gKy/dI8zq1P8BjXjfS4+nRLgWgCbB2ss
-h7rGdd7jig+TAiP5Lfe6RPA=
-=dLKP
+iD8DBQFBoBpKUpKYMelfdYERAgoxAJ4wwCErUu/+YsUTbAJGxY55OXaBRwCdGv11
+fROdjRIXDqcjAy8jomV5QXo=
+=3PmC
 -----END PGP SIGNATURE-----
