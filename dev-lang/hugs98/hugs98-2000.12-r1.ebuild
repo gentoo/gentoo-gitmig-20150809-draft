@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2000.12.ebuild,v 1.4 2002/07/18 03:41:50 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2000.12-r1.ebuild,v 1.1 2002/08/08 01:53:17 karltk Exp $
 
 MY_P="hugs98-Dec2001"
 S=${WORKDIR}/${MY_P}
@@ -12,15 +12,20 @@ SLOT="0"
 KEYWORDS="x86"
 LICENSE="as-is"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )"
 
 src_compile() {
+	local myc
+	use readline && myc="${myc} --with-readline" || myc="${myc} --without-readline"
+
 	cd ${S}/src/unix || die
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
 		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
+		--mandir=/usr/share/man \
+		${myc} || die "./configure failed"
 	cd ..
 	emake || die
 }
