@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.17 2003/03/17 07:58:58 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.18 2003/04/02 14:00:00 joker Exp $
 
 *expat-1.95.6-r1 (17 Mar 2003)
+
+  02 Apr 2003; Christian Birchinger <joker@gentoo.org> expat-1.95.6-r1.ebuild:
+  Added stable sparc keyword
 
   17 Mar 2003; Patrick Kursawe <phosphan@gentoo.org> :
   added patch xmlstatus to fix problem described in
