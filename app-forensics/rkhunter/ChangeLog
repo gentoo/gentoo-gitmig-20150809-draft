@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/rkhunter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.12 2004/10/23 18:18:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.13 2004/11/07 02:46:48 ka0ttic Exp $
+
+  06 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> rkhunter-1.1.7.ebuild,
+  rkhunter-1.1.8.ebuild:
+  Updated to use bash-completion.eclass
 
   23 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> rkhunter-1.1.8.ebuild:
   Stable on alpha.
