@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.7 2003/06/19 20:05:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.8 2003/07/02 02:53:52 george Exp $
+
+*erlang-9c-r1 (01 Jul 2003)
+
+  01 Jul 2003; George Shapovalov <george@gentoo.org> erlang-9c-r1.ebuild :
+  incorporated patch to make erlang read nsswitch.conf in 
+  addition to host.conf (#22836)
+  Thanks to Claes Wikstrom <klacke@hyber.org> for the patch
 
 *erlang-9c (09 May 2003)
 
