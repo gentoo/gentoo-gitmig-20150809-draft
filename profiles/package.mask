@@ -308,5 +308,5 @@ dev-util/poedit
 dev-lang/tcl
 dev-lang/tk
 
-# untested, / Hallski
+# seems to be incompatible with autoconf 2.13, / Hallski
 >=sys-devel/libtool-1.4.2
