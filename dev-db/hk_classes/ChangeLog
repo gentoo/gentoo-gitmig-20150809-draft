@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.26 2004/12/07 00:47:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.27 2004/12/09 13:59:02 motaboy Exp $
+
+*hk_classes-0.7.2-r1 (09 Dec 2004)
+
+  09 Dec 2004; Simone Gotti <motaboy@gentoo.org>
+  +hk_classes-0.7.2-r1.ebuild:
+  Use the patch I sent to the author to selectively choose the db plugins to
+  compile depending on the useflag status instead of compiling the plugin also
+  if the flag is disabled but the DB is installed.
 
 *hk_classes-0.7.2 (06 Dec 2004)
 
