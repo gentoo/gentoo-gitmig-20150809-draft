@@ -34,10 +34,6 @@ sys-apps/coreutils
 # breaks ghostscript 7.05.[56]
 >=net-print/gimp-print-cups-4.3.10
 
-# <vladimir@gentoo.org> (05 Mar 2003)
-# Seriously buggy ebuilds, install random stuff to /etc/gshield
-net-misc/gshield
-
 # <vapier@gentoo.org> (03 Mar 2003)
 # package compiles fine then doesnt run ...
 app-games/xboing
