@@ -1,0 +1,4 @@
+#!/bin/sh
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/files/vpopmail.clearopensmtp,v 1.1 2003/08/06 09:08:23 robbat2 Exp $
+# clean open smtp relays that vpopmail might have
+/var/vpopmail/bin/clearopensmtp 2>&1 > /dev/null
