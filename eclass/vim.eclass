@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.41 2003/11/12 22:22:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.42 2003/11/13 13:25:52 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -123,7 +123,7 @@ vim_src_unpack() {
 	# Apply any patches available from vim.org for this version
 	[ -n "$VIM_ORG_PATCHES" ] && apply_vim_patches
 
-	# Another set of patch's borrowed from src rpm to fix syntax error's etc.
+	# Another set of patches borrowed from src rpm to fix syntax errors etc.
 	cd ${S} || die "cd ${S} failed"
 	EPATCH_SUFFIX="gz" EPATCH_FORCE="yes" \
 		epatch ${WORKDIR}/gentoo/patches-all/
