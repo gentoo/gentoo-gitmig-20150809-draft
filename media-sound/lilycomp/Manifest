@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6675ad1d37a7fad3757e041b891e22df ChangeLog 531
+MD5 e6278326bc628851100fd4c6fba50898 lilycomp-1.0.2.ebuild 592
 MD5 50117cfdeb267d9181cf9cacac87d8a6 metadata.xml 256
-MD5 3ed17c871289dd287dfd2c941b2f8af3 ChangeLog 416
-MD5 35f54e98597bfb7a2b86c3b99e3db69a lilycomp-1.0.2.ebuild 569
 MD5 700516518a5197099a6b2c344f5247f9 files/digest-lilycomp-1.0.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD4DBQFBos9nArHZZzCEUG0RAsaMAJUQFf/L04r3//1DgB15zlHul1m0AKCAOX5v
+sXffBbk7Dgj5nLNQIkELcw==
+=zE+t
+-----END PGP SIGNATURE-----
