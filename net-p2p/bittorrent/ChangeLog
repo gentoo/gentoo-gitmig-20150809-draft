@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/bittorrent 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.12 2003/06/10 15:20:17 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.13 2003/06/24 08:19:16 phosphan Exp $
+
+  24 Jun 2003; Patrick Kursawe <phosphan@gentoo.org>
+  bittorrent-3.2.1b-r3.ebuild:
+  Considered stable for x86
 
 *bittorrent-3.2.1b-r3 (10 Jun 2003)
 
