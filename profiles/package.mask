@@ -266,6 +266,7 @@ dev-lisp/cmucl-bin
 =kde-base/kdeadmin-3.2.0_beta2
 =kde-base/kdeaddons-3.2.0_beta2
 =kde-base/kdeartwork-3.2.0_beta2
+=kde-base/kdebindings-3.2.0_beta2
 =kde-base/kdeedu-3.2.0_beta2
 =kde-base/kdegames-3.2.0_beta2
 =kde-base/kdegraphics-3.2.0_beta2
