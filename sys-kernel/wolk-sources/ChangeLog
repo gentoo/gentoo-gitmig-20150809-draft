@@ -1,10 +1,21 @@
 # ChangeLog for sys-kernel/wolk-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.40 2004/04/17 03:51:32 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.41 2004/04/17 15:23:34 plasmaroo Exp $
+
+*wolk-sources-4.11-r3 (17 Apr 2004)
+
+  17 Apr 2004; <plasmaroo@gentoo.org>
+  +files/wolk-sources-4.9s.CAN-2004-0010.patch,
+  +files/wolk-sources.CAN-2004-0177.patch,
+  +files/wolk-sources.CAN-2004-0178.patch, -wolk-sources-4.11-r2.ebuild,
+  +wolk-sources-4.11-r3.ebuild, -wolk-sources-4.9-r5.ebuild,
+  +wolk-sources-4.9-r6.ebuild:
+  Added patches for the CAN-2004-0010, CAN-2004-0177 and CAN-2004-0178
+  vulnerabilities. Old revisions removed.
 
   16 Apr 2004; <nerdboy@gentoo.org> wolk-sources-4.11-r2.ebuild, 
   wolk-sources-4.9-r4.ebuild, wolk-sources-4.11-r1.ebuild:
-  removed older revs prior to security patches
+  Removed older revisions prior to security patches.
 
 *wolk-sources-4.9-r5 (15 Apr 2004)
 

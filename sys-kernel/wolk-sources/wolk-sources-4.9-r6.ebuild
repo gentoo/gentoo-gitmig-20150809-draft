@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9-r5.ebuild,v 1.1 2004/04/15 15:25:04 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9-r6.ebuild,v 1.1 2004/04/17 15:23:34 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -73,10 +73,13 @@ src_unpack() {
 	fi
 
 	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to patch for do_brk() vulnerability!"
+	epatch ${FILESDIR}/${PN}-4.9s.munmap.patch || die "Failed to apply munmap patch!"
+	epatch ${FILESDIR}/${PN}-4.9s.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
+	epatch ${FILESDIR}/${PN}-4.9s.CAN-2004-0010.patch || die "Failed to add the CAN-2004-0010 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
-	epatch ${FILESDIR}/${PN}-4.9s.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
-	epatch ${FILESDIR}/${PN}-4.9s.munmap.patch || die "Failed to apply munmap patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0177.patch || die "Failed to add the CAN-2004-0177 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-0178.patch || die "Failed to add the CAN-2004-0178 patch!"
 
 	kernel_universal_unpack
 }
