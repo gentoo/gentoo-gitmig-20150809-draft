@@ -39,3 +39,4 @@ virtual/x11             x11-base/xfree
 virtual/xemacs          app-editors/xemacs
 virtual/xft		x11-base/xfree
 x11-libs/xaw            x11-libs/Xaw3d
+virtual/snmp		net-analyzer/net-snmp

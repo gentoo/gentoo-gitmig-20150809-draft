@@ -15,3 +15,4 @@ virtual/modutils sys-apps/modutils
 virtual/aspell-dict           app-dicts/aspell-en
 virtual/skkserv		app-i18n/skkserv
 virtual/ghc		dev-lang/ghc-bin
+virtual/snmp		net-analyzer/net-snmp

@@ -28,3 +28,4 @@ virtual/modutils		sys-apps/modutils
 virtual/inetd			sys-apps/netkit-base
 virtual/aspell-dict           app-dicts/aspell-en
 virtual/skkserv		app-i18n/skkserv
+virtual/snmp		net-analyzer/net-snmp
