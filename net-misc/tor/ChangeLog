@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.30 2005/02/25 18:45:48 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.31 2005/03/23 10:32:12 humpback Exp $
+
+  23 Mar 2005; Gustavo Felisberto <humpback@gentoo.org>; files/tor.initd:
+  Changed init script to send SIGINT at shutdown. May increase the shutdown time
+  of servers, but will close in a more clean way.
 
   25 Feb 2005; Gustavo Felisberto <humpback@gentoo.org>;
   -tor-0.0.9.4-r1.ebuild, -tor-0.0.9.4-r2.ebuild, tor-0.0.9.5.ebuild:
