@@ -115,4 +115,10 @@ pkg_postinst () {
 	einfo "5) scripts or other non-interactive processes can add or change"
 	einfo "   the passwords with the following command:"
 	einfo "   # popauth -user <user> <password>"
+	einfo ""
+	einfo "to enable qpopper in netkit-inetd just add this in one line"
+	einfo "pop-3 stream tcp nowait root	/usr/sbin/tcpd 
+		/usr/sbin/in.qpopper -f /etc/qpopper.conf"
+	einfo "into your /etc/inetd.conf"
+	
 }
