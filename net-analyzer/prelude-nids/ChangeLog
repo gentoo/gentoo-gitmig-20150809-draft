@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/prelude-nids
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/ChangeLog,v 1.7 2003/11/18 14:26:05 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/ChangeLog,v 1.8 2003/12/17 07:30:35 mboman Exp $
+
+*prelude-nids-0.8.6 (17 Dec 2003)
+
+  17 Dec 2003; Michael Boman <mboman@gentoo.org> prelude-nids-0.8.6.ebuild:
+  New upstream version.
 
 *prelude-nids-0.8.5 (17 Nov 2003)
 
