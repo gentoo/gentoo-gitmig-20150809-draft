@@ -1,6 +1,6 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.20 2003/11/29 16:24:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.21 2003/11/29 16:34:47 usata Exp $
 
   30 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> mlterm-2.6.3-r2.ebuild,
   mlterm-2.7.0-r1.ebuild, mlterm-2.8.0_p1-r1.ebuild:
@@ -15,6 +15,9 @@
   Cleaned out duplicate versions
 
 *mlterm-2.8.0_p1-r1 (27 Oct 2003)
+
+  30 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> mlterm-2.8.0_p1-r1.ebuild:
+  Marked as stable
 
   27 Oct 2003; Masatomo Nakano <nakano@gentoo.org> mlterm-2.8.0_p1-r1.ebuild:
   Fixed ebuild bug in which some documents are not installed
