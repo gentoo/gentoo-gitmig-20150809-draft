@@ -3,7 +3,7 @@ MD5 6af0a703972bb7f858aabcc18896454b proftpd-1.2.5-r1.ebuild 2487
 MD5 bef00204f7097fbe4c9cc00c6f638e93 proftpd-1.2.7.ebuild 3670
 MD5 51ec144b10cfa11179ca02140ec2b717 proftpd-1.2.8.ebuild 2731
 MD5 ed644dbda898814d27dbf3b8b8775fef proftpd-1.2.9_rc1.ebuild 2911
-MD5 14aca2211734c455dc8a67705a12cb98 proftpd-1.2.9_rc2.ebuild 2861
+MD5 20d0d39d768fd8964e2698bd05767d0f proftpd-1.2.9_rc2.ebuild 2861
 MD5 6236a589ef01778d118911281b20be51 files/digest-proftpd-1.2.5-r1 66
 MD5 c1dc1d9278d5b77f53ea44ee848dafc6 files/digest-proftpd-1.2.7 211
 MD5 cb6cd6133728449d0da092b1d6147b9d files/digest-proftpd-1.2.8 66
