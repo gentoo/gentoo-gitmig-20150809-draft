@@ -15,7 +15,7 @@ start() {
 		    rm -f /var/log/omniORB/omninames*
 		fi
 		ebegin "Starting ${SERVICE}"
-		exec $EXE -start 8200 -logdir /var/log/omniORB -errlog /var/log/omniORB/omniORB.errors 1>&2 &
+		exec $EXE -start 2809 -logdir /var/log/omniORB -errlog /var/log/omniORB/omniORB.errors 1>&2 &
 		eend $? "Error starting ${SERVICE}."
 }
 
