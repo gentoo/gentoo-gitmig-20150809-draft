@@ -1,17 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.31.ebuild,v 1.3 2003/10/18 18:12:16 mholzer Exp $
-
-DESCRIPTION="Bacula is a featureful client/server network backup suite"
-HOMEPAGE="http://www.bacula.org/"
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.31.ebuild,v 1.4 2003/11/11 13:07:28 vapier Exp $
 
 NEWP=${P}-04Jun03
 S=${WORKDIR}/${NEWP}
+DESCRIPTION="featureful client/server network backup suite"
+HOMEPAGE="http://www.bacula.org/"
 SRC_URI="mirror://sourceforge/bacula/${NEWP}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
 SLOT="0"
+KEYWORDS="~x86 ~ppc"
 IUSE="readline tcpd ssl gnome mysql sqlite X static"
 
 #theres a local sqlite use flag. use it -OR- mysql, not both.
@@ -25,10 +24,12 @@ DEPEND="sys-libs/libtermcap-compat
 	sqlite? >=dev-db/sqlite-2.7
 	mysql? >=dev-db/mysql-3.23
 	X? virtual/x11"
-RDEPEND="${DEPEND} sys-apps/mtx app-arch/mt-st"
+RDEPEND="${DEPEND}
+	sys-apps/mtx
+	app-arch/mt-st"
 
 src_compile() {
-	local myconf
+	local myconf=""
 
 	#define this to skip building the other daemons ...
 	[ -n "$BUILD_CLIENT_ONLY" ] \
@@ -39,44 +40,23 @@ src_compile() {
 		&& myconf="${myconf} --enable-static-tools \
 		--enable-static-fd --enable-static-sd \
 		--enable-static-dir --enable-static-cons"
-
-	use readline \
-		&& myconf="${myconf} --enable-readline" \
-		|| myconf="${myconf} --disable-readline"
-
-	use gnome \
-		&& myconf="${myconf} --enable-gnome" \
-		|| myconf="${myconf} --disable-gnome"
-
-	use tcpd \
-		&& myconf="${myconf} --enable-tcpd" \
-		|| myconf="${myconf} --disable-tcpd"
-
-	use mysql \
-		&& myconf="${myconf} --with-mysql" \
-		|| myconf="${myconf} --without-mysql"
-
-	use sqlite \
-		&& myconf="${myconf} --with-sqlite" \
-		|| myconf="${myconf} --without-sqlite"
-
-	use X \
-		&& myconf="${myconf} --with-x" \
-		|| myconf="${myconf} --without-x"
-
+	myconf="
+		`use_enable readline`
+		`use_enable gnome`
+		`use_enable tcpd`
+		`use_enable mysql`
+		`use_enable sqlite`
+		`use_enable X x`
+		"
 	#not ./configure'able
-	#use ssl \
-	#	&& myconf="${myconf} --enable-ssl" \
-	#	|| myconf="${myconf} --disable-ssl"
+	#`use_enable ssl`
 
-	#mysql is the reccomended choice ...
+	# mysql is the reccomended choice ...
 	if use mysql && use sqlite
 	then
 		#needs one or the either, nuke '--with-sqlite'
 		myconf=${myconf/--with-sqlite/}
 	fi
-
-	einfo "\$myconf is: $myconf"
 
 	./configure \
 		--prefix=/usr \
