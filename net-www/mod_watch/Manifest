@@ -1,4 +1,4 @@
-MD5 3dd24bcb7d8ca6568f68da502d37d3c6 mod_watch-3.18.ebuild 1216
-MD5 689929c5c5b9fbdea9ef811241bf6da1 ChangeLog 285
+MD5 45ddfdf11fb40b4986473975042f65fd mod_watch-3.18.ebuild 1320
+MD5 b81fc6e040c28312d22882327fe9d9cf ChangeLog 377
 MD5 50267e95c06324c0c4f9a603358501ad files/mod_watch.conf 627
 MD5 2d99e90c1a0ac34fbc7ad74473f526f7 files/digest-mod_watch-3.18 60
