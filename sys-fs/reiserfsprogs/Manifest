@@ -3,7 +3,7 @@ MD5 03572e2761fc1a2442aceb3be35bd48a reiserfsprogs-3.6.11.ebuild 835
 MD5 eab29802c73c5f6883c74a99cbcf511f reiserfsprogs-3.6.8.ebuild 790
 MD5 4e6f980ee6810b78ef26cf9751d8900c reiserfsprogs-3.6.13.ebuild 784
 MD5 50eb16d20a358d39d1e1fa37b5be9427 reiserfsprogs-3.6.11-r1.ebuild 1078
-MD5 d1943790d4b7e982837354694165493c ChangeLog 7332
+MD5 db79f4758bed612dbd88a312a63a7991 ChangeLog 7339
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 b4eeb93b06e335142e6fd3984030f841 files/blk_size.patch 1254
 MD5 f71b5a7289045ceb19f83e04ff079e09 files/digest-reiserfsprogs-3.6.8 71
