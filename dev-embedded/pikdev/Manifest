@@ -7,7 +7,7 @@ MD5 ea8340383fbe5f00b77b5590d6a6a741 pikdev-0.6.5c.ebuild 1585
 MD5 ae52d7ed0781584a455fbc53895b2536 pikdev-0.6.5c-r1.ebuild 1603
 MD5 b552eb398d6e4ccc5608d3c49ea09fc7 pikdev-0.6.5b.ebuild 803
 MD5 f75bc0db03f32f00d9d70bc8aef2b627 pikdev-0.6.6.ebuild 1674
-MD5 ccfc12d8c78bd10b7cee3d6764e6a71b pikdev-0.6.6a.ebuild 1615
+MD5 86ba65c3b1bfeb9a217bf7280cc08546 pikdev-0.6.6a.ebuild 1571
 MD5 204ebe37bf2d6ed5c9b02713d12f6a2d files/digest-pikdev-0.6.6a 65
 MD5 d3c152a6159a5b551409aa7622397e81 files/digest-pikdev-0.6.5c 65
 MD5 d3c152a6159a5b551409aa7622397e81 files/digest-pikdev-0.6.5c-r1 65
@@ -16,7 +16,7 @@ MD5 1a530f198288beb88127022055b35b95 files/digest-pikdev-0.6.6 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA+hxDmdTrptrqvGERAk1fAJ9H32EQ6GvG4xTbL3B1Izp4xhMG3ACff/VV
-gUResgGtSYlkHd1ZRkiDt3U=
-=sKKq
+iD8DBQFA+hzrmdTrptrqvGERArWNAKCKrfZxFPUjGlv+HmYHXV2IiOtmjACeKBcW
+8Ix8+DgRsz71GljPZQbOpKQ=
+=7A+M
 -----END PGP SIGNATURE-----
