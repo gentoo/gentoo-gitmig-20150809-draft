@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.33 2005/01/18 02:09:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.34 2005/01/18 06:34:18 eradicator Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -69,7 +69,7 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 RDEPEND="virtual/os-headers
 	sys-apps/baselayout
 	nls? ( sys-devel/gettext )"
-# until we compile the 32bit glibc here
+# until amd64's 2004.3 is purged out of existence
 PDEPEND="amd64? ( multilib? ( app-emulation/emul-linux-x86-glibc ) )"
 
 PROVIDE="virtual/glibc virtual/libc"
@@ -168,7 +168,7 @@ setup_flags() {
 	fi
 
 	# AMD64 multilib
-	if use amd64 && [ -n "${ABI}" ]; then
+	if use amd64 && has_multilib_profile; then
 		# We change our CHOST, so set this right here
 		export CC="$(tc-getCC)"
 
@@ -376,7 +376,7 @@ do_arch_amd64_patches() {
 	[[ $(tc-arch ${CTARGET}) != "amd64" ]] && return 0
 	cd ${S}
 
-	if [ -z "${MULTILIB_ABIS}" ]; then
+	if ! has_multilib_profile; then
 		# CONF_LIBDIR support
 		epatch ${FILESDIR}/2.3.4/glibc-gentoo-libdir.patch
 		sed -i -e "s:@GENTOO_LIBDIR@:$(get_libdir):g" ${S}/sysdeps/unix/sysv/linux/configure
@@ -445,7 +445,7 @@ do_arch_mips_patches() {
 
 	# Need to install into /lib for n32-only userland for now.
 	# Propper solution is to make all userland /lib{32|64}-aware.
-	use multilib || epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-nolib3264.diff
+	has_multilib_profile || use multilib || epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-nolib3264.diff
 }
 
 
@@ -462,7 +462,7 @@ do_arch_ppc64_patches() {
 	# Any needed patches for ppc64 go here
 
 	# setup lib -- seems like a good place to set this up
-	[ -z "${MULTILIB_ABIS}" ] && get_libdir_override lib64
+	! has_multilib_profile && get_libdir_override lib64
 }
 
 
@@ -711,8 +711,8 @@ glibc_do_configure() {
 
 src_compile() {
 	local MLTEST=$(type dyn_unpack)
-	if [ -n "${MULTILIB_ABIS}" -a -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ]; then
-		local OABI="${ABI}"
+	if has_multilib_profile && [ -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ]; then
+		OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
 			export ABI
 			einfo "Compiling ${ABI} glibc"
@@ -741,8 +741,8 @@ src_compile() {
 
 src_install() {
 	local MLTEST=$(type dyn_unpack)
-	if [ -n "${MULTILIB_ABIS}" -a -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ]; then
-		local OABI="${ABI}"
+	if has_multilib_profile && [ -z "${OABI}" -a "${MLTEST/set_abi}" = "${MLTEST}" ]; then
+		OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
 			export ABI
 
@@ -1030,7 +1030,12 @@ pkg_preinst() {
 	# decide to be multilib compatible and FHS compliant. note that this
 	# chunk of FHS compliance only applies to 64bit archs where 32bit
 	# compatibility is a major concern (not IA64, for example).
-	use amd64 && [ "$(get_libdir)" == "lib64" -a -z "${MULTILIB_ABIS}" ] && fix_lib64_symlinks
+
+	# amd64's 2005.0 is the first amd64 profile to not need this code.
+	# 2005.0 is setup properly, and this is executed as part of the
+	# 2004.3 -> 2005.0 upgrade script.
+	# It can be removed after 2004.3 has been purged from portage.
+ 	use amd64 && [ "$(get_libdir)" == "lib64" ] && ! has_multilib_profile && fix_lib64_symlinks
 
 	# it appears that /lib/tls is sometimes not removed. See bug
 	# 69258 for more info.
