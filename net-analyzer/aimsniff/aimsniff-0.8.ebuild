@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.8.ebuild,v 1.3 2003/09/05 23:40:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.8.ebuild,v 1.4 2003/10/04 15:32:58 stuart Exp $
 
 inherit webapp-apache
 
@@ -24,16 +24,22 @@ DEPEND="dev-lang/perl
 	samba? ( net-fs/samba )"
 
 src_install() {
-	newsbin aimsniff.pl aimsniff
+	newsbin aimSniff.pl aimsniff
 	insinto /etc/${PN}
 	doins aimsniff.config table.struct
 	dodoc README ChangeLog
 
-	webapp-detect
+	webapp-detect || NO_WEBSERVER=1
 	dodir ${HTTPD_ROOT}
 	mv ../was ${D}/${HTTPD_ROOT}
 	cd ${D}/${HTTPD_ROOT}
 	chown -R ${HTTPD_USER}.${HTTPD_GROUP} *
+}
+
+pkg_setup ()
+{
+	webapp-detect || NO_WEBSERVER=1
+	webapp-pkg_setup $NO_WEBSERVER
 }
 
 pkg_postinst() {
