@@ -1,6 +1,10 @@
 # ChangeLog for net-www/lxr
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lxr/ChangeLog,v 1.5 2004/06/25 00:58:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lxr/ChangeLog,v 1.6 2004/07/31 21:46:47 jmglov Exp $
+
+  31 Jul 2004; Josh Glover <jmglov@gentoo.org> lxr-0.3.1.ebuild:
+  added >=dev-perl/DB_File-1.807 to RDEPEND; submitted by Robert Zaleski in bug
+  #58894
 
   25 Apr 2004; David Holm <dholm@gentoo.org> lxr-0.3.1.ebuild:
   Added to ~ppc.
