@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.3-r1.ebuild,v 1.6 2003/10/11 23:09:18 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.3-r1.ebuild,v 1.7 2003/10/22 12:34:49 kosmikus Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -61,6 +61,7 @@ DEPEND="virtual/ghc
 RDEPEND="virtual/glibc
 	>=sys-devel/gcc-2.95.3
 	>=dev-lang/perl-5.6.1
+	>=dev-libs/gmp-4.1
 	opengl? ( virtual/opengl virtual/glu virtual/glut )"
 
 

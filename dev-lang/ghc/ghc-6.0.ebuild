@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.0.ebuild,v 1.2 2003/07/29 23:21:27 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.0.ebuild,v 1.3 2003/10/22 12:34:49 kosmikus Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -61,6 +61,7 @@ DEPEND="virtual/ghc
 RDEPEND="virtual/glibc
 	>=sys-devel/gcc-2.95.3
 	>=dev-lang/perl-5.6.1
+	>=dev-libs/gmp-4.1
 	opengl? ( virtual/opengl virtual/glu virtual/glut )"
 
 # extend path to /opt/ghc/bin to guarantee that ghc-bin is found
