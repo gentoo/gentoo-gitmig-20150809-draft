@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.14.ebuild,v 1.3 2003/04/19 10:49:22 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.14.ebuild,v 1.4 2003/04/19 17:48:50 malverian Exp $
 
 IUSE="doc python perl aalib png jpeg tiff gtkhtml"
 
@@ -58,7 +58,7 @@ src_compile() {
 	use png \
 		&& myconf="${myconf} --with-libpng" \
 		|| myconf="${myconf} --without-libpng"
-	use libjpeg \
+	use jpeg \
 		&& myconf="${myconf} --with-libjpeg" \
 		|| myconf="${myconf} --without-libjpeg"
 	use tiff \
