@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.19 2003/03/30 20:03:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.20 2003/03/31 15:59:13 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -172,7 +172,7 @@ apply_vim_patches() {
 
 	# For reasons yet unknown, epatch fails to apply this cleanly
 	ebegin "Applying filtered vim patches..."
-	patch -f -s -p0 < ${p}
+	TMPDIR=${T} patch -f -s -p0 < ${p}
 	eend 0
 }
 
