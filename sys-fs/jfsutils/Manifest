@@ -1,21 +1,31 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7f28b58a2ac7dada44c1f3426106b328 ChangeLog 4669
-MD5 9c074fe5a57bb36dfa3939080f8530a5 jfsutils-1.1.1-r1.ebuild 1019
-MD5 11bb989151c2c670d2d486f9b27de9e0 metadata.xml 414
 MD5 c59533ed5cccb987047aa8475b1b974e jfsutils-1.1.0-r1.ebuild 824
-MD5 deaa73fea306fa62e7748030358d44bb jfsutils-1.1.3.ebuild 953
+MD5 01d709335284e364a4a50ac262299de6 jfsutils-1.1.0-r2.ebuild 821
+MD5 9c074fe5a57bb36dfa3939080f8530a5 jfsutils-1.1.1-r1.ebuild 1019
 MD5 577d7e0811fc25dc073559675277bc00 jfsutils-1.1.1.ebuild 818
 MD5 058900a411b165060de67c2386af57ec jfsutils-1.1.2.ebuild 824
-MD5 51da81f504dd948881a567f73e656f41 jfsutils-1.1.4.ebuild 958
+MD5 deaa73fea306fa62e7748030358d44bb jfsutils-1.1.3.ebuild 953
+MD5 4476bfd9b5411098111b5705673d392f jfsutils-1.1.4.ebuild 959
+MD5 11bb989151c2c670d2d486f9b27de9e0 metadata.xml 414
 MD5 c79ff48ed335c514506b14e205f7dc83 jfsutils-1.1.5.ebuild 839
 MD5 a0a9ebef6c2ab5ebcb7e29b70da23981 jfsutils-1.1.6.ebuild 842
-MD5 01d709335284e364a4a50ac262299de6 jfsutils-1.1.0-r2.ebuild 821
 MD5 9df5c3cda43191d385b965c3e7e4b623 files/digest-jfsutils-1.1.0-r1 66
-MD5 715d1522f73093d3a6caef53d4fd7b0d files/digest-jfsutils-1.1.2 66
 MD5 9df5c3cda43191d385b965c3e7e4b623 files/digest-jfsutils-1.1.0-r2 66
-MD5 02a77158e691fa37674726dd46ddbce8 files/digest-jfsutils-1.1.5 66
 MD5 707821828c75636f2dcb29c3fff8db30 files/digest-jfsutils-1.1.1 66
-MD5 e785b4639def65d28e65596530a4204c files/digest-jfsutils-1.1.3 66
 MD5 184a5086ccee55d695da4b34eb6c9f68 files/digest-jfsutils-1.1.1-r1 137
-MD5 660d9ea4ff2ff28f9c30013a57e24fa8 files/digest-jfsutils-1.1.6 66
-MD5 5b66e6bd95c97fa48f19547a0a59f802 files/jfsutils-1.1.3-gentoo.diff 563
+MD5 715d1522f73093d3a6caef53d4fd7b0d files/digest-jfsutils-1.1.2 66
+MD5 e785b4639def65d28e65596530a4204c files/digest-jfsutils-1.1.3 66
 MD5 fbaccd19a284782bf35b685c7d838b26 files/digest-jfsutils-1.1.4 66
+MD5 5b66e6bd95c97fa48f19547a0a59f802 files/jfsutils-1.1.3-gentoo.diff 563
+MD5 02a77158e691fa37674726dd46ddbce8 files/digest-jfsutils-1.1.5 66
+MD5 660d9ea4ff2ff28f9c30013a57e24fa8 files/digest-jfsutils-1.1.6 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBCB2OHTu7gpaalycRAt3MAKDVK8eYi7SmWKXlId1o6JABnqrIiACcDO89
+CZA5XF6WSUIcGjS8DyauPbo=
+=Z1iy
+-----END PGP SIGNATURE-----
