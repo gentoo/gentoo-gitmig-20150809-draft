@@ -1,3 +1,6 @@
+# /lib/rcscripts/addons/lvm2-start.sh
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/files/lvm2-start.sh,v 1.2 2005/02/23 03:35:18 rocket Exp $
+
 # LVM support for /usr, /home, /opt ....
 # This should be done *before* checking local
 # volumes, or they never get checked.

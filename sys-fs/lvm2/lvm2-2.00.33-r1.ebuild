@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.00.33-r1.ebuild,v 1.1 2005/02/23 02:25:38 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.00.33-r1.ebuild,v 1.2 2005/02/23 03:35:18 rocket Exp $
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
 HOMEPAGE="http://sources.redhat.com/lvm2/"
@@ -28,5 +28,6 @@ src_install() {
 
 	dodoc COPYING* INSTALL README VERSION WHATS_NEW doc/*.{conf,c,txt}
 	insinto /lib/rcscripts/addons
-	doins ${FILESDIR}/lvm2-{start,stop}.sh
+	newins ${FILESDIR}/lvm2-start.sh lvm-start.sh
+	newins ${FILESDIR}/lvm2-stop.sh lvm-stop.sh
 }
