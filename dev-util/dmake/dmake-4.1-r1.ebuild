@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/dmake-4.1-r1.ebuild,v 1.15 2004/12/12 16:50:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/dmake-4.1-r1.ebuild,v 1.16 2004/12/27 18:40:35 seemant Exp $
 
 inherit eutils
 
 DESCRIPTION="Improved make"
-SRC_URI="http://plg.uwaterloo.ca/~ftp/dmake/${PN}-v${PV}-src-export.all-unknown-all.tar.gz"
-HOMEPAGE="http://www.scri.fsu.edu/~dwyer/dmake.html"
+SRC_URI="http://public.activestate.com/gsar/${P}pl1-src.tar.gz"
+HOMEPAGE="http://tools.openoffice.org/tools/dmake.html"
 
 SLOT="0"
 LICENSE="GPL-1"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dmake
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.9 2004/12/12 16:50:26 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.10 2004/12/27 18:40:35 seemant Exp $
+
+  27 Dec 2004; Seemant Kulleen <seemant@gentoo.org> dmake-4.1-r1.ebuild:
+  HOMEPAGE and SRC_URI fix thanks to: Adam Chodorowski <adam@chodorowski.com>
+  in bug #68646
 
   12 Dec 2004; Sven Wegener <swegener@gentoo.org> dmake-4.1-r1.ebuild:
   Tidied the ebuild. Fixed broken Manifest.
