@@ -1,6 +1,15 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.4 2002/03/31 12:26:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.5 2002/03/31 13:43:04 seemant Exp $
+
+*sgmltools-lite-3.0.3-r4 (31 Mar 2002)
+
+  31 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sgmltools-lite-3.0.3-r4.ebuild :
+
+  This addresses bug # 1163.  However, there are no symlinks being created for
+  the binary.  Instead, a mini shell script is created to call the
+  sgmltools binary with the appropriate flag.  Symlinks, however, are created
+  for the man pages for the 5 extra binaries.
 
 *sgmltools-lite-3.0.3-r3 (31 Mar 2002)
 
