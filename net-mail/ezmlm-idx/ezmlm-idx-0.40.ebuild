@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-0.40.ebuild,v 1.2 2002/10/16 20:56:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-0.40.ebuild,v 1.3 2002/10/16 21:18:15 drobbins Exp $
 
 # NOTE: ezmlm-idx, ezmlm-idx-mysql and ezmlm-idx-pgsql all supported by this single ebuild
 # (Please keep them in sync)
 
 PB=ezmlm-idx
-S2=${WORKDIR}/${P}
+S2=${WORKDIR}/${PB}-${PV}
 S=${WORKDIR}/ezmlm-0.53
 DESCRIPTION="Simple yet powerful mailing list manager for qmail."
 SRC_URI="http://gd.tuwien.ac.at/infosys/mail/qmail/ezmlm-patches/${PB}-${PV}.tar.gz http://cr.yp.to/software/ezmlm-0.53.tar.gz"
@@ -31,9 +31,9 @@ fi
 src_unpack() {
 	unpack ${A}
 	cd ${S2}
-	mv ${S2}/* ${S}
+	mv ${S2}/* ${S} || die
 	cd ${S}
-	patch < idx.patch
+	patch < idx.patch || die
 	#remove cat-man pages
 	cp MAN MAN.orig
 	cat MAN.orig | grep -v cat > MAN
