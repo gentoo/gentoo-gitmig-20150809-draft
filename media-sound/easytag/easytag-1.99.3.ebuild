@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-1.99.2-r1.ebuild,v 1.3 2005/01/02 14:51:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-1.99.3.ebuild,v 1.1 2005/01/21 16:37:36 dsd Exp $
 
 inherit eutils gnuconfig
 
@@ -22,7 +22,6 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ppc64"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/easytag-ape-fix.patch
 	gnuconfig_update
 }
 
