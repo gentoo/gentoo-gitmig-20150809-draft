@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dcron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.36 2004/09/03 21:03:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.37 2004/09/05 01:11:51 solar Exp $
+
+  04 Sep 2004; <solar@gentoo.org> +files/dcron-2.9-ldflags.patch,
+  dcron-2.9-r2.ebuild:
+  use non-lazy bindings for +s apps installed by this package
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> dcron-2.9.ebuild:
   Masked dcron-2.9.ebuild stable for ppc
