@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.21.ebuild,v 1.2 2004/09/18 10:01:18 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.21.ebuild,v 1.3 2004/09/22 13:08:33 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp2.easysw.com/pub/cups/${PV}/${MY_P}-source.tar.bz2 ftp://ftp.e
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
-IUSE="ssl slp pam"
+IUSE="ssl slp pam samba"
 
 DEP="virtual/libc
 	pam? ( >=sys-libs/pam-0.75 )
@@ -21,12 +21,12 @@ DEP="virtual/libc
 	slp? ( >=net-libs/openslp-1.0.4 )
 	>=media-libs/libpng-1.2.1
 	>=media-libs/tiff-3.5.5
-	>=media-libs/jpeg-6b
-	samba? ( net-fs/samba )"
+	>=media-libs/jpeg-6b"
 DEPEND="${DEP}
 	>=sys-devel/autoconf-2.58"
 RDEPEND="${DEP}
-	!virtual/lpr"
+	!virtual/lpr
+	samba? ( net-fs/samba )"
 PROVIDE="virtual/lpr"
 
 S=${WORKDIR}/${MY_P}

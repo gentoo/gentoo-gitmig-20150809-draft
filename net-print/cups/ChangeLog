@@ -1,6 +1,6 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.83 2004/09/22 07:02:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.84 2004/09/22 13:08:33 lanius Exp $
 
   22 Sep 2004; Joshua Kinard <kumba@gentoo.org> cups-1.1.20-r2.ebuild:
   Marked stable on mips.
@@ -19,6 +19,9 @@
 
   16 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> cups-1.1.20-r2.ebuild:
   Stable on sparc wrt #64168
+
+  22 Sep 2004; Heinrich Wendel <lanius@gentoo.org> cups-1.1.21.ebuild:
+  move samba depend to rdepend, bug #62560
 
   02 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> cups-1.1.20-r1.ebuild,
   cups-1.1.21_rc2.ebuild:
