@@ -1,22 +1,23 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.0.1-r1.ebuild,v 1.14 2005/03/28 04:58:21 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.0.ebuild,v 1.1 2005/03/28 04:58:21 chriswhite Exp $
 
 inherit eutils libtool
 
 DESCRIPTION="Fast and safe graphics and drivers for about any graphics card to the Linux kernel (sometimes)"
 HOMEPAGE="http://www.ggi-project.org/"
-SRC_URI="http://www.ggi-project.org/ftp/ggi/v2.0/${P}.tar.bz2"
+SRC_URI="http://www.ggi-project.org/ftp/ggi/v2.1/${P}.src.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
-IUSE="X aalib svga fbcon directfb"
+KEYWORDS="~x86"
+IUSE="X aalib svga fbcon directfb dga 3dfx debug mmx vis"
 
-DEPEND=">=media-libs/libgii-0.8.1
+DEPEND=">=media-libs/libgii-0.9.0
 	X? ( virtual/x11 )
 	svga? ( >=media-libs/svgalib-1.4.2 )
-	aalib? ( >=media-libs/aalib-1.2-r1 )"
+	aalib? ( >=media-libs/aalib-1.2-r1 )
+	dga? (virtual/x11)"
 
 src_unpack() {
 	unpack ${A}
@@ -30,25 +31,32 @@ src_compile() {
 
 	local myconf=""
 
-	use X \
-		|| myconf="--without-x"
-
 	use svga \
 		|| myconf="${myconf} --disable-svga --disable-vgagl"
 
-	use fbcon \
-		&& myconf="${myconf} --enable-fbdev"
+	if use !fbcon && use !directfb; then
+		myconf="${myconf} --disable-fbdev --disable-directfb"
+	elif use directfb; then
+		myconf="${myconf} --enable-fbdev --enable-directfb"
+	else
+		myconf="${myconf} --enable-fbdev"
+	fi
 
-	use directfb \
-		&& myconf="${myconf} --enable-fbdev --enable-directfb-renderer" \
+	if use amd64 || use ppc64 || use ia64 ; then
+		myconf="${myconf} --enable-64bitc"
+	else
+		myconf="${myconf} --disable-64bitc"
+	fi
 
-	(use fbcon || use directfb) \
-		|| myconf="${myconf} --disable-fbdev"
-
-	use aalib \
-		|| myconf="${myconf} --disable-aa"
-
-	econf ${myconf} || die
+	econf \
+	$(use_with X x) \
+	$(use_enable aalib aa) \
+	$(use_enable vis) \
+	$(use_enable mmx) \
+	$(use_enable debug) \
+	$(use_enable 3dfx glide) \
+	${myconf} \
+	|| die
 	emake || die
 }
 

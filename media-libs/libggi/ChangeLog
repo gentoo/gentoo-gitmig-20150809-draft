@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libggi
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.15 2004/10/07 02:56:44 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.16 2005/03/28 04:58:21 chriswhite Exp $
+
+*libggi-2.1.0 (28 Mar 2005)
+
+  28 Mar 2005; Chris White <chriswhite@gentoo.org> +libggi-2.1.0.ebuild:
+  Rather large bump. Dropped keywords down to x86. See bug #43612 for more
+  details.
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libggi-2.0.1-r1.ebuild:
