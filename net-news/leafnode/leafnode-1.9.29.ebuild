@@ -1,18 +1,25 @@
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.22.ebuild,v 1.5 2002/10/04 06:16:31 vapier Exp $
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.22.ebuild,v 1.5 2002/10/04 06:16:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.9.29.ebuild,v 1.1 2002/11/06 07:09:05 blocke Exp $
 
 S=${WORKDIR}/${P}.rel
 DESCRIPTION="leafnode - A USENET software package designed for small sites"
-SRC_URI="ftp://wpxx02.toxi.uni-wuerzburg.de/pub/${P}.tar.gz"
+SRC_URI="http://www-dt.e-technik.uni-dortmund.de/~ma/leafnode/${P}.rel.tar.bz2
+		http://www-dt.e-technik.uni-dortmund.de/~ma/leafnode/leafnode-1.9.29.only_groups_pcre.patch"
 HOMEPAGE="http://www.leafnode.org"
-
-# leafnode uses pcre
-DEPEND=">=dev-libs/libpcre-3.5"
-
+DEPEND=">=dev-libs/libpcre-3.9"
+RDEPEND="$DEPEND"
+LICENSE="GPL-2"
 SLOT="0"
-LICENSE="GPL"
-KEYWORDS="x86"
+KEYWORDS="~x86"
+
+src_unpack() {
+	unpack ${P}.rel.tar.bz2
+
+	cd ${S}
+	# NOTE: release specific patch from upstream, yank for future releases
+	patch -p1 < ${DISTDIR}/leafnode-1.9.29.only_groups_pcre.patch
+}
 
 src_compile() {
 	use ipv6 && myconf="--with-ipv6"
@@ -24,7 +31,7 @@ src_compile() {
 		--localstatedir=/var \
 		${myconf} || die "./configure failed"
 
-	emake DEBUG="$CFLAGS" || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -39,8 +46,14 @@ src_install() {
 
 	insinto /etc/xinetd.d
 	newins ${FILESDIR}/leafnode.xinetd leafnode-nntp
+
+	exeinto /etc/cron.hourly
+	doexe ${FILESDIR}/fetchnews.cron
+	exeinto /etc/cron.daily
+	doexe ${FILESDIR}/texpire.cron
+
 	dodoc COPYING CREDITS ChangeLog FAQ INSTALL README TODO README.FIRST \
-		README-MAINTAINER PCRE_README
+		README-MAINTAINER README.FQDN PCRE_README
 }
 
 pkg_postinst() {
