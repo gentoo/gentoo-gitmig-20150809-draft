@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/dnstracer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dnstracer/ChangeLog,v 1.7 2004/06/24 21:59:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dnstracer/ChangeLog,v 1.8 2004/07/01 17:29:49 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> dnstracer-1.6.ebuild,
+  dnstracer-1.7.ebuild:
+  change virtual/glibc to virtual/libc, add metadata.xml
 
   16 Apr 2004; Michael McCabe <randy@gentoo.org> dnstracer-1.7.ebuild:
   adding s390 keywords
