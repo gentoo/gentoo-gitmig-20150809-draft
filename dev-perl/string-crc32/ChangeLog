@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/string-crc32
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/string-crc32/ChangeLog,v 1.1 2003/06/23 13:30:55 mcummings Exp $
+
+*string-crc32-1.2 (23 Jun 2003)
+
+  23 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  string-crc32-1.2.ebuild:
+  New module, dep for Net-SSH-Perl
+
