@@ -7,8 +7,8 @@
 #
 # Maintainer: Brandon Low <lostlogic@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.18 2003/01/05 12:36:25 mholzer Exp $
-ID='$Id: qpkg,v 1.18 2003/01/05 12:36:25 mholzer Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.19 2003/03/21 12:37:18 mholzer Exp $
+ID='$Id: qpkg,v 1.19 2003/03/21 12:37:18 mholzer Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -168,7 +168,7 @@ ${BR}Package Selection:
   ${BL}-fp, --find-pattern${NO}${T}finds to package that owns file matching *<pattern>*
   ${BL}-I,  --installed${NO}${T}Include${YL} only${NO} installed packages
   ${BL}-U,  --uninstalled${NO}${T}Include${YL} only${NO} uninstalled packages
-  ${BL}-g,  --group${NO}${T}${T}Find by goup (can be combined with other searches)
+  ${BL}-g,  --group${NO}${T}${T}Find by group (can be combined with other searches)
 
 ${BR}Information Selection:
   ${BL}-l,  --list${NO}${T}${T}List package content
