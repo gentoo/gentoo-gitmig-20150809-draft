@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/kover
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/ChangeLog,v 1.8 2003/06/29 16:01:56 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/ChangeLog,v 1.9 2004/03/21 00:34:36 weeve Exp $
+
+  20 Mar 2004; Jason Wever <weeve@gentoo.org> kover-2.9.3.ebuild:
+  Added ~sparc keyword.
 
 *kover-2.9.3 (28 Jun 2003)
 
