@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/jasmin-sable
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jasmin-sable/ChangeLog,v 1.1 2004/06/03 11:32:46 karltk Exp $
+
+*jasmin-sable-1.2.7 (03 Jun 2004)
+
+  03 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org> jasmin-sable-1.2.7.ebuild:
+  Initial import. Ebuild submitted by myself, with great help from previous
+  work done by Arne Mejlholm <aaby@gentoo.org> for #46267.
