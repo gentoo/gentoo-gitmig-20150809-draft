@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/di
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/di/ChangeLog,v 1.4 2003/02/21 02:08:30 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/di/ChangeLog,v 1.5 2003/05/25 22:56:17 avenj Exp $
+
+*di-3.9 (25 May 2003)
+
+  25 May 2003; Jon Portnoy <avenj@gentoo.org> di-3.9.ebuild :
+  Version bump.
 
 *di-3.8 (09 Feb 2003)
 
