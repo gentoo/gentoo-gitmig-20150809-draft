@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.3.ebuild,v 1.3 2004/01/17 03:25:46 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.3.ebuild,v 1.4 2004/03/08 21:11:02 avenj Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Command line utilities to work with desktop menu entries"
@@ -8,7 +8,7 @@ SRC_URI="http://www.freedesktop.org/software/desktop-file-utils/releases/${P}.ta
 HOMEPAGE="http://www.freedesktop.org/software/desktop-file-utils/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc amd64"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.0.0
