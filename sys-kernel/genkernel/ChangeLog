@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.35 2004/02/27 17:34:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.36 2004/02/28 18:51:23 aliz Exp $
 
 *genkernel-3.0.1 (27 Feb 2004)
 
@@ -130,45 +130,45 @@
 	  --livecd will build LiveCD kernel/initrd.
 	  --help now works.
 	
-* genkernel-1.8 (11 Sep 2003)
+*genkernel-1.8 (11 Sep 2003)
 
   11 Sep 2003; Daniel Robbins <drobbins@gentoo.org>: important bug fix; in 1.7,
   Modules were not getting copied to the initrd. Now fixed.
 
-* genkernel-1.7 (10 Sep 2003)
+*genkernel-1.7 (10 Sep 2003)
 
   10 Sep 2003; Daniel Robbins <drobbins@gentoo.org>: Genkernel now FHS-compliant;
   Sed redirect fix. Also, MAKEOPTS now comes from Portage/make.conf. 
   This closes bugs #27920, #27948.
 
-* genkernel-1.6 (03 Sep 2003)
+*genkernel-1.6 (03 Sep 2003)
 
   03 Sep 2003; Daniel Robbins <drobbins@gentoo.org>: Fixed various bugs: 
   26336, 26346, 26822, 26901, 27446, 27871 (some duplicates)...
 
-* genkernel-1.5 (31 Jul 2003)
+*genkernel-1.5 (31 Jul 2003)
 
   31 Jul 2003; Daniel Robbins <drobbins@gentoo.org>: New version with 
   support for System.map.
 
-* genkernel-1.4 (30 Jul 2003)
+*genkernel-1.4 (30 Jul 2003)
 
   30 Jul 2003; Daniel Robbins <drobbins@gentoo.org>: New version with 
   lots of fixes.
 
-* genkernel-1.2 (14 07 2003)
+*genkernel-1.2 (14 07 2003)
 
   14 07 2003; Bob Johnson <livewire@gentoo.org>
   Minor typo fixes.
 
-* genkernel-1.1 (26 04 2003)
+*genkernel-1.1 (26 04 2003)
 
   26 04 2003; Bob Johnson <livewire@gentoo.org>
 	
        	- Added kernel package option (--buildpkg).
 	- Make fail on missing $KV.
 	
-* genkernel-1.0 (14 04 2003)
+*genkernel-1.0 (14 04 2003)
 
   14 04 2003; Bob Johnson <livewire@gentoo.org> 
   Initial import.  
