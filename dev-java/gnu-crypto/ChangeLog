@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gnu-crypto
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/ChangeLog,v 1.9 2005/01/09 12:12:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/ChangeLog,v 1.10 2005/03/26 01:59:59 luckyduck Exp $
+
+  26 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> gnu-crypto-2.0.1.ebuild:
+  jikes support disabled, doesnt work: #86655
 
   09 Jan 2005; Sven Wegener <swegener@gentoo.org> gnu-crypto-2.0.1.ebuild:
   Added missing parentheses in SRC_URI/*DEPEND/LICENSE.
