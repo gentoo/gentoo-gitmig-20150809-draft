@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.58 2004/03/23 16:04:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.59 2004/03/30 01:32:53 lu_zero Exp $
+
+  30 Mar 2004; Luca Barbato <lu_zero@gentoo.org> :
+  Removed an unnecessary patch
 
 *metacity-2.8.0 (23 Mar 2004)
 
