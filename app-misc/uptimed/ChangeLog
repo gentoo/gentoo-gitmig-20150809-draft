@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.23 2005/01/01 15:28:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.24 2005/03/14 12:19:46 nigoro Exp $
+
+  14 Mar 2005; Yuta SATOH <nigoro@gentoo.org> uptimed-0.3.3.ebuild:
+  added ~ppc64
 
   13 Dec 2004; Jason Wever <weeve@gentoo.org> uptimed-0.3.3.ebuild:
   Stable on sparc.
