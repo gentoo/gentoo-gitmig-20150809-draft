@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/distcc
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.92 2004/01/11 21:06:38 pyrania Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.93 2004/02/21 20:08:23 lisa Exp $
+
+  21 Feb 2004; Lisa Seelye <lisa@gentoo.org> distcc-2.11.1.ebuild,
+  distcc-2.11.2-r1.ebuild, distcc-2.11.2.ebuild, distcc-2.12.1.ebuild,
+  distcc-2.5-r1.ebuild, distcc-2.8-r2.ebuild, distcc-2.9.ebuild:
+  remove arm keyword from old ebuilds. i will clean (rdepend.bad and prune)
+  these up shortly...
+
+  21 Feb 2004; Lisa Seelye <lisa@gentoo.org> distcc-2.12.1.ebuild:
+  Bump 2.12.1 to stable across several arches - still need to hear from alpha
+  and ppc. Also add amd64 and ia64 to keyword
 
   11 Jan 2004; Markus Nigbur <pyrania@gentoo.org> distcc-2.11.2-r1.ebuild,
   distcc-2.11.2.ebuild, distcc-2.12.1.ebuild:

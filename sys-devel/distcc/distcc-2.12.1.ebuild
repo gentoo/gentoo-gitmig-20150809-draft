@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.12.1.ebuild,v 1.2 2004/01/11 21:06:38 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.12.1.ebuild,v 1.3 2004/02/21 20:08:23 lisa Exp $
 
 inherit eutils gcc flag-o-matic
 [ `gcc-major-version` -eq 2 ] && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -13,8 +13,9 @@ DESCRIPTION="a program to distribute compilation of C code across several machin
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
-
+KEYWORDS="x86 ~ppc sparc ~alpha hppa mips ia64 amd64"
+#Blame drobbins if the ia64 or amd64 break things going into stable before 
+# ~testing. ;-)  -Lisa (2004-02-20)
 
 IUSE="gnome gtk selinux ipv6"
 
@@ -23,15 +24,18 @@ DEPEND=">=sys-apps/portage-2.0.49-r6
 	>=sys-devel/gcc-config-1.3.1
 	sys-apps/shadow"
 
-RDEPEND="gnome? ( >=x11-libs/gtk+-2.0.0
+RDEPEND="!mips? ( gnome? ( >=x11-libs/gtk+-2.0.0
 		  >=gnome-base/libgnome-2.0.0
 		  >=gnome-base/libgnomeui-2.0.0.0
 		  >=gnome-base/libglade-2.0.0
 		  x11-libs/pango
 		 )
-	gtk?	(
+	       )
+	!mips? (
+		gtk?	(
 		>=x11-libs/gtk+-2.0.0
 		x11-libs/pango
+		)
 		)
 	selinux? ( sec-policy/selinux-distcc )"
 
@@ -43,8 +47,12 @@ src_compile() {
 	#configure script, so we'll just make the distinction here:
 	#gnome takes precedence over gtk if both are specified (gnome pulls
 	#in gtk anyways...)
-	use gtk && ! use gnome && myconf="${myconf} --with-gtk"
-	use gtk && use gnome && myconf="${myconf} --with-gnome"
+	use gtk && ! use gnome && ! use mips && myconf="${myconf} --with-gtk"
+	use gtk && use gnome && ! use mips && myconf="${myconf} --with-gnome"
+	use mips && use gtk || use gnome && ewarn "X support for Mips has been disabled."
+
+	#Above, mips is excluded due to version issues. 2004-02-20
+
 
 	if use ipv6; then
 		ewarn "To use IPV6 you must have IPV6 compiled into your kernel"
