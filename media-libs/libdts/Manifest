@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f442bdc2de75a4defd680654f5356012 ChangeLog 760
-MD5 9f300d81ee4328dd0cbd4a1b5c75b7f2 libdts-0.0.2.ebuild 931
+MD5 f611365b44c448d690de8d98db7bceaa ChangeLog 867
+MD5 e36b3ef9a589165d5ad80efc6821a828 libdts-0.0.2.ebuild 939
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 9d1c5f06b01f4cc5b729407e44de4078 files/digest-libdts-0.0.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBxttTroRuSHgZdywRAsfRAJ9UPokaI8PDV7HI/ZM6SIxSWApeXACglEyg
-9sEU+pPXBlnz/mKY2X7FpxI=
-=jKen
------END PGP SIGNATURE-----
