@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.12.ebuild,v 1.7 2003/04/03 17:15:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.12.ebuild,v 1.8 2003/04/22 15:32:19 liquidx Exp $
 
 inherit virtualx libtool gnome.org
 
@@ -43,6 +43,12 @@ RDEPEND="=x11-libs/gtk+-1.2*
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.11"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	patch -p1 < ${FILESDIR}/gnumeric-1.1.16-scrollkeeper.patch || die "scrollkeeper patch failed"
+}
 
 src_compile() {
 	# fix the relink bug, and invalid paths in .la files.
@@ -100,10 +106,21 @@ src_compile() {
 }	
 
 src_install() {
+	# keep scrollkeeper happy
+	dodir /var/lib/scrollkeeper
+	
   	make prefix=${D}/usr \
 		sysconfdir=${D}/etc \
+		scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper \
 		install || die
 
+	# regenerate docs later
+	rm -f ${D}/var/lib/scrollkeeper
+
   	dodoc AUTHORS COPYING *ChangeLog HACKING NEWS README TODO
+}
+
+pkg_postinst() {
+	scrollkeeper-update
 }
 
