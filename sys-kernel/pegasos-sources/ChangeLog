@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/pegasos-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-sources/ChangeLog,v 1.15 2005/03/18 22:35:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-sources/ChangeLog,v 1.16 2005/04/06 04:52:25 swegener Exp $
+
+  06 Apr 2005; Sven Wegener <swegener@gentoo.org> :
+  Fixed digests for KV_EXTRA suport in kernel-2.eclass.
 
 *pegasos-sources-2.6.10-r4 (18 Mar 2005)
 
