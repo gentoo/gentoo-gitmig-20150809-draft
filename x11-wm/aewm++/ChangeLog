@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/aewm++
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/ChangeLog,v 1.2 2003/02/12 09:50:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/ChangeLog,v 1.3 2003/11/21 02:54:03 mkennedy Exp $
+
+*aewm++-1.0.24 (20 Nov 2003)
+
+  20 Nov 2003; <mkennedy@gentoo.org> aewm++-1.0.24.ebuild:
+  minor version update
 
 *aewm++-1.0.22 (19 Nov 2002)
 

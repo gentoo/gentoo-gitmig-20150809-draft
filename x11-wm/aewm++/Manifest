@@ -1,3 +1,7 @@
 MD5 3e0f2c904f2e366ab1d6d779cb97fabb ChangeLog 374
 MD5 5ca7c499489992387dd764f031d0f4d8 aewm++-1.0.22.ebuild 673
+MD5 e6947c959196876d1192553a30343522 metadata.xml 378
+MD5 a738fc5cf4f85630dc125934ba892a4c aewm++-1.0.24.ebuild 654
+MD5 5ca7c499489992387dd764f031d0f4d8 aewm++-1.0.24.ebuild~ 673
 MD5 a0b78e5966e37ff6486a378446e92602 files/digest-aewm++-1.0.22 65
+MD5 22ae4dfeaf792eeab219e40b773e7bf8 files/digest-aewm++-1.0.24 65
