@@ -1,6 +1,19 @@
 # ChangeLog for media-sound/zinf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.12 2003/05/16 19:56:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.13 2003/08/16 06:34:06 jje Exp $
+
+*zinf-2.2.4 (16 Aug 2003)
+
+  16 Aug 2003; jje <jje@gentoo.org> zinf-2.2.1.ebuild, zinf-2.2.3.ebuild,
+  zinf-2.2.4.ebuild, files/zinf-2.2.4-pref.patch:
+  Clean up of old versions.
+
+*zinf-2.2.4 (16 Aug 2003)
+
+  16 Aug 2003; jje <jje@gentoo.org> zinf-2.2.4.ebuild:
+  Version bump. This looks like it's going to need work to get stable.
+  
+  Submitted by: Robert Davis <rdavis@uniformcompany.com>
 
   16 May 2003; Dan Armak <danarmak@gentoo.org> zinf-2.2.3.ebuild:
   Enable command line interface.
