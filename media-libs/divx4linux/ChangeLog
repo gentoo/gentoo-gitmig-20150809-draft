@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/divx4linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/ChangeLog,v 1.14 2003/07/12 18:05:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/ChangeLog,v 1.15 2003/08/02 13:43:10 lisa Exp $
 
 *divx4linux-20020418-r2 (13 Feb 2003)
  
@@ -8,6 +8,10 @@
   Added missing changelog entry.
 
 *divx4linux-20030428 (29 Jun 2003)
+
+  02 Aug 2003; Lisa Seelye <lisa@gentoo.org> divx4linux-20030428-r1.ebuild :
+  Fixed a dependancy issue (bug 24478) and made this -r1 so people can get
+  their library re-linked
 
   29 Jun 2003; Stefan Jones <cretin@gentoo.org> divx4linux-20030428.ebuild :
   New version.
