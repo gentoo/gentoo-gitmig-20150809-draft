@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/hlatex-0.991.ebuild,v 1.2 2004/09/04 23:02:20 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/hlatex-0.991.ebuild,v 1.3 2004/10/16 16:34:43 usata Exp $
 
 inherit latex-package
 
@@ -12,14 +12,18 @@ SRC_URI="http://user.chollian.net/~jh1228/data/gentoo/${P}.tar.gz
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc alpha"
 IUSE=""
-DEPEND="virtual/tetex"
 
 add_line() {
 
 	FILE=$1
 	STRING=$2
+
+	if [ ! -e "${FILE}" ]
+	then
+		return
+	fi
 
 	if [ -z "`grep "^${STRING}$" ${FILE}`" ]
 	then
@@ -32,6 +36,11 @@ del_line() {
 
 	FILE=$1
 	STRING=$2
+
+	if [ ! -e "${FILE}" ]
+	then
+		return
+	fi
 
 	cp ${FILE} ${FILE}.temp
 	CMD=`echo "/^${STRING}$/d"`
@@ -93,8 +102,8 @@ src_install() {
 
 pkg_postinst() {
 
-	add_line "${TEXMF}/dvips/config/config.ps" "p +uhc-down.map"
 	add_line "${TEXMF}/pdftex/config/pdftex.cfg" "map +uhc-pdftex.map"
+	add_line "${TEXMF}/dvips/config/config.ps" "p +uhc-down.map"
 	add_line "${TEXMF}/dvipdfm/config/config" "f uhc-dvipdfm.map"
 
 	texhash
