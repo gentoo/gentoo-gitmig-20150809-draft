@@ -1,6 +1,6 @@
-# ChangeLog for sys-libs/readline
+# ChangeLog for sys-libs/detect
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/detect/ChangeLog,v 1.2 2002/09/15 15:38:24 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/detect/ChangeLog,v 1.3 2002/12/17 19:48:56 vapier Exp $
 
 *detect-0.9.72 (15 Sept 2002) Bart Verwilst <verwilst@gentoo.org>:
   
