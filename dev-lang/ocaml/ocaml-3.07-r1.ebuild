@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07-r1.ebuild,v 1.5 2004/04/19 12:01:29 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07-r1.ebuild,v 1.6 2004/04/22 11:27:03 mattam Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,7 +19,7 @@ DEPEND="virtual/glibc
 	tcltk? ( >=dev-lang/tk-3.3.3 )"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.tar.gz
 	cd ${S}
 	epatch ${DISTDIR}/${P}-patch2.diffs
 	grep -rle "head -1" . | xargs sed -i "s:head -1:head -n 1:g"
