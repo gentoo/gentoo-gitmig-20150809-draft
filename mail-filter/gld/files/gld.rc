@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/files/gld.rc,v 1.1 2004/08/10 00:45:19 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/files/gld.rc,v 1.2 2004/08/11 18:31:51 slarti Exp $
 
 depend() {
 	need
@@ -11,6 +11,12 @@ depend() {
 
 start() {
 	ebegin "Starting gld"
-	start-stop-daemon --start --exec --quiet /usr/bin/gld
+	start-stop-daemon --start --quiet --exec /usr/bin/gld
+	eend $?
 }
 
+stop() {
+	ebegin "Stopping gld"
+	start-stop-daemon --stop --quiet --name gld
+	eend $?
+}
