@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/nvram-reboot
+# ChangeLog for sys-power/nvram-reboot
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-reboot/ChangeLog,v 1.1 2005/03/14 22:29:46 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-reboot/ChangeLog,v 1.2 2005/03/15 16:37:07 swegener Exp $
 
 *nvram-reboot-2004.10.03 (14 Mar 2005)
 

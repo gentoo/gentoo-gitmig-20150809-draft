@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/speedfreq
+# ChangeLog for sys-power/speedfreq
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/speedfreq/ChangeLog,v 1.1 2005/03/14 21:57:10 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/speedfreq/ChangeLog,v 1.2 2005/03/15 16:39:57 swegener Exp $
 
 *speedfreq-0.7.2-r2 (14 Mar 2005)
 *speedfreq-0.7.2-r1 (14 Mar 2005)

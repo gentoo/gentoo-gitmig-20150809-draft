@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/athcool
+# ChangeLog for sys-power/athcool
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/athcool/ChangeLog,v 1.1 2005/03/14 22:56:32 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/athcool/ChangeLog,v 1.2 2005/03/15 16:32:19 swegener Exp $
 
 *athcool-0.3.9 (14 Mar 2005)
 *athcool-0.3.8 (14 Mar 2005)

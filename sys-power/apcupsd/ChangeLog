@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/apcupsd
+# ChangeLog for sys-power/apcupsd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.1 2005/03/14 23:27:27 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.2 2005/03/15 16:31:34 swegener Exp $
 
 *apcupsd-3.10.16-r3 (14 Mar 2005)
 *apcupsd-3.10.15-r1 (14 Mar 2005)

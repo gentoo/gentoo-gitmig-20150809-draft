@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/powermgmt-base
+# ChangeLog for sys-power/powermgmt-base
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/ChangeLog,v 1.1 2005/03/14 23:18:24 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/ChangeLog,v 1.2 2005/03/15 16:38:29 swegener Exp $
 
 *powermgmt-base-1.21 (14 Mar 2005)
 
