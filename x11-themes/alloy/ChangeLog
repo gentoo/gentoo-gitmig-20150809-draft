@@ -1,8 +1,8 @@
 # ChangeLog for x11-themes/alloy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.17 2005/01/25 18:41:07 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.18 2005/01/28 18:32:45 greg_g Exp $
 
-  25 Jan 2005; Gregorio Guidi <greg@gentoo.org> -alloy-0.3.ebuild,
+  25 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> -alloy-0.3.ebuild,
   -alloy-0.4.1a.ebuild, -alloy-0.5.ebuild, -alloy-0.5.1.ebuild:
   Removed old ebuilds.
 

@@ -1,8 +1,8 @@
 # ChangeLog for x11-themes/redhat-artwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.46 2005/01/26 14:57:56 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.47 2005/01/28 18:33:48 greg_g Exp $
 
-  26 Jan 2005; Gregorio Guidi <greg@gentoo.org>
+  26 Jan 2005; Gregorio Guidi <greg_g@gentoo.org>
   redhat-artwork-0.120.1.2.ebuild:
   Use kde eclasses, and make sure to not install anything in KDEDIR.
 

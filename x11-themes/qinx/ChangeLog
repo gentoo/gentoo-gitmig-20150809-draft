@@ -1,8 +1,8 @@
 # ChangeLog for x11-themes/qinx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qinx/ChangeLog,v 1.21 2005/01/20 14:39:29 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qinx/ChangeLog,v 1.22 2005/01/28 18:33:14 greg_g Exp $
 
-  20 Jan 2005; Gregorio Guidi <greg@gentoo.org> -qinx-0.6.ebuild,
+  20 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> -qinx-0.6.ebuild,
   -qinx-1.0.ebuild, -qinx-1.1.ebuild:
   Removed old versions.
 

@@ -1,6 +1,6 @@
 # ChangeLog for x11-themes/baghira
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.23 2005/01/15 00:21:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.24 2005/01/28 18:35:05 greg_g Exp $
 
   15 Jan 2005; Dan Armak <danarmak@gentoo.org> baghira-0.5a.ebuild,
   baghira-0.5h-r1.ebuild, baghira-0.5h.ebuild, baghira-0.6.ebuild,
@@ -12,7 +12,7 @@
 
 *baghira-0.6a (10 Jan 2005)
 
-  10 Jan 2005; Gregorio Guidi <greg@gentoo.org> +baghira-0.6a.ebuild:
+  10 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> +baghira-0.6a.ebuild:
   Bump to version 0.6a. Fix for ppc not needed anymore.
 
   09 Dec 2004; Michael Hanselmann <hansmi@gentoo.org> baghira-0.6.ebuild:
