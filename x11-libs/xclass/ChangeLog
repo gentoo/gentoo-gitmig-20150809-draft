@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/xclass
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.8 2004/04/26 14:44:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.9 2004/05/14 00:21:25 vapier Exp $
+
+*xclass-0.8.2-r1 (13 May 2004)
+
+  13 May 2004; Mike Frysinger <vapier@gentoo.org> -xclass-0.7.4.ebuild,
+  +xclass-0.8.2-r1.ebuild, -xclass-0.8.2.ebuild:
+  Fix install paths so that the library can find the files in the right location
+  #50733 by Roy Culley
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> xclass-0.7.4.ebuild:
   Add die following econf for bug 48950
