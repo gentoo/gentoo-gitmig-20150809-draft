@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/gotmail-0.7.3_p1-r1.ebuild,v 1.1 2002/10/16 16:42:25 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gotmail/gotmail-0.7.3_p1-r1.ebuild,v 1.2 2002/10/16 16:49:18 g2boojum Exp $
 
 PV0=0.7.3
 PDP=1
@@ -15,7 +15,7 @@ DEPEND=${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${PN}_${PV0}.orig.tar.gz
