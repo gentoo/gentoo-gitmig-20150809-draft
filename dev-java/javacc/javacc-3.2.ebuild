@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-3.2.ebuild,v 1.2 2004/03/29 19:10:27 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-3.2.ebuild,v 1.3 2004/03/30 08:05:33 mr_bones_ Exp $
 
 inherit java-pkg
 
@@ -18,11 +18,10 @@ src_compile() {
 	ant || die
 }
 
- src_install() {
- 	use doc && dohtml -r www/*
- 	java-pkg_dojar bin/lib/javacc.jar
- 	dobin ${FILESDIR}/javacc
- 	dobin ${FILESDIR}/jjdoc
- 	dobin ${FILESDIR}/jjtree
+src_install() {
+	use doc && dohtml -r www/*
+	java-pkg_dojar bin/lib/javacc.jar
+	dobin ${FILESDIR}/javacc
+	dobin ${FILESDIR}/jjdoc
+	dobin ${FILESDIR}/jjtree
 }
-
