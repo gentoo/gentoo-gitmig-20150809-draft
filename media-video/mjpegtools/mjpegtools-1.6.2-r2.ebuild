@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r2.ebuild,v 1.2 2004/06/09 17:09:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r2.ebuild,v 1.3 2004/06/14 21:09:48 hansmi Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="gtk avi dv quicktime sdl X yv12 3dnow mmx sse"
 
 DEPEND="media-libs/jpeg
@@ -36,6 +36,11 @@ src_unpack() {
 	# See bug #36502, comment 8
 	[ "$ARCH" != x86 ] && epatch ${FILESDIR}/${P}-fPIC.patch
 	epatch ${FILESDIR}/${P}-gcc34.patch
+
+	# Fix an error in the detection of the altivec-support
+	# in the compiler
+	epatch "${FILESDIR}/altivec-fix-${PV}.patch"
+	autoreconf
 
 	use X || epatch "${FILESDIR}/no-x11-lib-2.patch"
 }
