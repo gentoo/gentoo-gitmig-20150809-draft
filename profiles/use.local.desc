@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.628 2004/09/19 00:58:58 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.629 2004/09/19 05:15:30 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -51,10 +51,10 @@ app-emulation/wine:nptl - Support for the Native POSIX Threading Library built i
 app-i18n/anthy-ss:ucs4 - Enable ucs4 support
 app-i18n/im-ja:anthy - Support for Anthy input method
 app-i18n/im-ja:skk - Support for SKK input method
-app-i18n/uim-svn:m17n-lib - Enable m17n-lib support
-app-i18n/uim:m17n-lib - Enable m17n-lib support
 app-i18n/scim:immqt - Enable immodule for Qt support (binary incompatible)
 app-i18n/scim:immqt-bc - Enable immodule for Qt support (binary compatible)
+app-i18n/uim-svn:m17n-lib - Enable m17n-lib support
+app-i18n/uim:m17n-lib - Enable m17n-lib support
 app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 app-misc/grass:nviz - support GLw functionality
 app-misc/screen:nethack - Express error messages in nethack style
@@ -153,10 +153,10 @@ dev-java/gnu-classpath:native - Compile native .so libraries
 dev-java/gnu-javamail:javadoc - Generate API documentation
 dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
 dev-java/java-gtk:gcj - Enable building with gcj
-dev-java/quartz:dbcp - Enable dbcp support
 dev-java/log4j:javamail - Build the SMTPAppender
 dev-java/log4j:jms - Build the JMSAppender
 dev-java/log4j:jmx - Build org.apace.log4j.jmx
+dev-java/quartz:dbcp - Enable dbcp support
 dev-java/quartz:jboss - Enable jboss support
 dev-java/quartz:jmx - Enable jmx support
 dev-java/quartz:jta - Enable jta support
@@ -239,6 +239,7 @@ games-server/halflife-metamod:src - use the source, not the binary install
 games-server/halflife-statsme:nocstrike - no counterstrike
 games-server/halflife-statsme:nodod - no day of defeat
 games-server/halflife-statsme:notfc - no team fortress classic
+games-simulation/openttd:timidity - Add sound support (timidity)
 games-strategy/freecraft-fcmp:music - Also installs the music that the project provides
 games-strategy/wesnoth:editor - Enable compilation editor
 games-strategy/wesnoth:nomusic - Lite install
@@ -309,8 +310,6 @@ media-gfx/opendx:hdf - Adds support for the Hierarchical Data Format
 media-gfx/optipng:ext-png - Link with the system libpng, rather than the bundled optimised version.
 media-gfx/optipng:ext-zlib - Link with the system zlib, rather than the bundled version optimised specifically for use with png.
 media-gfx/sane-frontends:gimp - Build a plugin for the GIMP
-media-libs/sdif:threads  - Enables posix thread support
-media-libs/sdif:ftruncate - Enables usage of ftruncate v. truncate
 media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
 media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
 media-libs/gd:freetype-version-1 - if for some reason you want to use freetype v1 instead of v2
@@ -321,6 +320,8 @@ media-libs/libsdl:noaudio - Allow users to disable audio support completely (at 
 media-libs/libsdl:nojoystick - Allow users to disable joystick support completely (at their own risk)
 media-libs/libsdl:novideo - Allow users to disable video support completely (at their own risk)
 media-libs/openvrml:javascript - Script node JavaScript support
+media-libs/sdif:ftruncate - Enables usage of ftruncate v. truncate
+media-libs/sdif:threads  - Enables posix thread support
 media-libs/sdl-sound:physfs - Enable physfs support
 media-libs/tiff:lzw-tiff - Enable the LZW Compression Toolkit (Unisys license)
 media-libs/tiff:private - Install additional "private" headers
@@ -513,9 +514,9 @@ sys-apps/busybox:diet - Compile and link with dietlibc
 sys-apps/busybox:make-busybox-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/busybox:savedconfig - Adds support to user defined configs
 sys-apps/dbus:mono - Build Mono bindings to support dotnet type stuff
-sys-apps/lm-sensors:rrdtool - Builds sensord (Needs RRDTool).
 sys-apps/iproute2:atm - Add support for ATM qdisc manager
 sys-apps/iproute2:minimal - Builds and installs only the traffic control util.
+sys-apps/lm-sensors:rrdtool - Builds sensord (Needs RRDTool).
 sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/parted:noreiserfs - Do not include reiserfs support
@@ -528,9 +529,9 @@ sys-devel/binutils:multitarget - Adds support to binutils for canadian cross com
 sys-devel/gcc:f77 - Build support for the f77 language
 sys-devel/gcc:gcj - Build gcj (java compiler included with gcc package)
 sys-devel/gcc:hardened - activate default PIE (position independent executables) and SSP (stack smashing protector)
-sys-devel/gcc:nomultilib - Disables multilib support in gcc
 sys-devel/gcc:n32 - Enable n32 ABI support on mips
 sys-devel/gcc:n64 - Enable n64 support on mips
+sys-devel/gcc:nomultilib - Disables multilib support in gcc
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/libperl:threads - Enable Perl threads, has some compatibility problems
@@ -558,13 +559,13 @@ sys-libs/glibc:userlocales - build only the locales specified in /etc/locales.bu
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/nut:cgi - Add CGI script support
+www-client/w3m-m17n:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
+www-client/w3m-m17n:migemo - Enables migemo support
+www-client/w3m-m17n:nopixbuf - If you do NOT want to link gdk_pixbuf against w3mimgdisplay
 www-client/w3m:async - Enables asynchronous fetch
 www-client/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-client/w3m:migemo - Enables migemo support
-www-client/w3m-m17n:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
-www-client/w3m-m17n:migemo - Enables migemo support
-www-client/w3m-m17n:nopixbuf - If you do NOT want to link gdk_pixbuf against w3mimgdisplay
 www-proxy/tinyproxy:transparent-proxy - enable support for transparent proxies
 www-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
 www-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
