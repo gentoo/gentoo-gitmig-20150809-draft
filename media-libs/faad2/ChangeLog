@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.37 2004/10/23 07:30:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.38 2004/11/09 13:42:11 corsair Exp $
+
+  09 Nov 2004; Markus Rothe <corsair@gentoo.org> faad2-2.0-r3.ebuild:
+  Marked ~ppc64
 
   23 Oct 2004; Joseph Jezak <josejx@gentoo.org> faad2-2.0-r3.ebuild:
   Removed call to bootstrap and added the contents to the ebuild.  See #67510
