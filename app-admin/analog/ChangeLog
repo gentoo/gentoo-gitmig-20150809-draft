@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/analog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.30 2005/01/01 10:54:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.31 2005/02/24 02:14:28 mr_bones_ Exp $
+
+  23 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> analog-5.32.ebuild,
+  analog-6.0.ebuild:
+  use built_with_use (bug #83044); tidy
 
 *analog-6.0 (31 Dec 2004)
 
