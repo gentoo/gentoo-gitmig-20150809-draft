@@ -1,0 +1,24 @@
+diff -urN grace-5.1.12.ORIG/src/fontwin.c grace-5.1.12/src/fontwin.c
+--- grace-5.1.12.ORIG/src/fontwin.c	2002-08-22 05:19:51.000000000 +0900
++++ grace-5.1.12/src/fontwin.c	2003-08-18 21:45:58.000000000 +0900
+@@ -320,7 +320,7 @@
+     Widget font_table = (Widget) data;
+     
+     FontID = value;
+-    switch (CheckForFontID(FontID)) {
++    switch (T1_CheckForFontID(FontID)) {
+     case 0:
+         T1_LoadFont(FontID);
+         break;
+diff -urN grace-5.1.12.ORIG/src/t1fonts.c grace-5.1.12/src/t1fonts.c
+--- grace-5.1.12.ORIG/src/t1fonts.c	2002-08-14 05:31:25.000000000 +0900
++++ grace-5.1.12/src/t1fonts.c	2003-08-18 21:46:40.000000000 +0900
+@@ -89,7 +89,7 @@
+         return (RETURN_FAILURE);
+     }
+     
+-    nfonts = T1_Get_no_fonts();
++    nfonts = T1_GetNoFonts();
+     if (nfonts < 1) {
+         return (RETURN_FAILURE);
+     }
