@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.57-r1.ebuild,v 1.4 2004/11/29 22:57:13 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.57-r1.ebuild,v 1.5 2004/12/26 18:35:45 iggy Exp $
 
 inherit eutils
 
@@ -34,6 +34,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} \
-		check install install-configure || die
+	make check DESTDIR=${D} || die
+	make install DESTDIR=${D} || die
+	DESTDIR=${D} make install-configure || die
+	dosed "3i export LANG=en_US" /usr/bin/cone
 }

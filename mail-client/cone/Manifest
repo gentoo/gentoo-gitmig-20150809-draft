@@ -1,19 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5fba0cc5dad47ae812cef1903afa4f9a cone-0.56.ebuild 801
-MD5 23ae037d2e829a8f2e75f6e2826e950a ChangeLog 1577
+MD5 541522d3c5f03bf10b0e2dd580a1f678 cone-0.57-r1.ebuild 961
+MD5 c96b653f67cb4c8e5b469c703b03a7eb cone-0.63.ebuild 806
+MD5 660d97795b6e2be03fcf2c58dc45cf4c ChangeLog 1796
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 17b366d297f0ccf32d75c89cfcd8c825 cone-0.57.ebuild 813
-MD5 08de2bdb30a9a9ed64c8df98414d044c cone-0.57-r1.ebuild 870
-MD5 28b43eab37446bf115b3a7c894f99040 files/cone-dotsignature.patch 2127
-MD5 6a82a031a17392d5565b4ceaafc87604 files/digest-cone-0.57 63
-MD5 cd49a94f0d2396f3880a8b0bca431073 files/digest-cone-0.56 63
 MD5 6a82a031a17392d5565b4ceaafc87604 files/digest-cone-0.57-r1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBq6lV10xuJSrg3/sRAmYRAJ4j+LgG0zgnvGXxQL/N4C/sPNZPIgCfaU/N
-sUiPNqTgVfP33x9UORmx6lg=
-=VD7B
------END PGP SIGNATURE-----
+MD5 28b43eab37446bf115b3a7c894f99040 files/cone-dotsignature.patch 2127
+MD5 2487e4a2a650ad88efe5a4fcae050bab files/digest-cone-0.63 63
