@@ -1,6 +1,10 @@
 # ChangeLog for media-video/quickrip
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/ChangeLog,v 1.9 2004/05/11 17:31:20 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/ChangeLog,v 1.10 2004/05/17 12:50:58 phosphan Exp $
+
+  17 May 2004; Patrick Kursawe <phosphan@gentoo.org> quickrip-0.4.ebuild,
+  quickrip-0.5.ebuild:
+  Cleanup
 
   11 May 2004; Patrick Kursawe <phosphan@gentoo.org> quickrip-0.6.ebuild:
   Adjusted HOMEPAGE for latest stable
