@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.0.5.ebuild,v 1.1 2002/08/20 20:24:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.0.5.ebuild,v 1.2 2002/08/21 22:02:06 danarmak Exp $
 
 S=${WORKDIR}/qt-embedded-free-${PV}
 
@@ -142,6 +142,9 @@ src_install() {
 	ln -s libqte-mt.so.3.0		libqte.so.3.0
 	ln -s libqte-mt.so.3		libqte.so.3
 	ln -s libqte-mt.so		libqte.so
+	
+	# fonts
+	cp -r $S/lib/fonts $D/$QTBASE/lib
 
 	# includes
 	cd ${S}
