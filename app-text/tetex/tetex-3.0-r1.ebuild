@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0-r1.ebuild,v 1.3 2005/02/21 13:48:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-3.0-r1.ebuild,v 1.4 2005/03/30 14:15:23 usata Exp $
 
 inherit tetex eutils flag-o-matic
 
@@ -37,7 +37,8 @@ DEPEND="motif? ( lesstif? ( x11-libs/lesstif )
 	!dev-tex/g-brief
 	!dev-tex/pgf
 	!dev-tex/xcolor
-	!dev-tex/xkeyval"
+	!dev-tex/xkeyval
+	!dev-tex/latex-beamer"
 
 pkg_setup() {
 	ewarn

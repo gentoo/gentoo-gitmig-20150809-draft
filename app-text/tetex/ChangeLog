@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.88 2005/02/21 13:48:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.89 2005/03/30 14:15:23 usata Exp $
+
+  30 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> tetex-3.0-r1.ebuild:
+  Blocks latex-beamer; bug #60835.
 
 *tetex-2.0.2-r6 (21 Feb 2005)
 
