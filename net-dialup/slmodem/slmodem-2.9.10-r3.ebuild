@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r3.ebuild,v 1.2 2004/12/29 22:38:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r3.ebuild,v 1.3 2004/12/30 08:39:09 mrness Exp $
 
 inherit eutils linux-mod
 
@@ -47,10 +47,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-usb_endpoint_halted-gentoo.patch || die "failed to apply fix for usb_endpoint"
 
-	# http://marc.theaimsgroup.com/?l=gentoo-dev&m=109672618708314&w=2
-	if kernel_is ge 2 6 6; then
-		sed -i 's:SUBDIRS=:M=:g' drivers/Makefile
-	fi
+	convert_to_m drivers/Makefile
 
 	if kernel_is ge 2 6 10; then
 		epatch ${FILESDIR}/${P}-fix-for-2.6.10.patch || die "failed to apply fix for kernels >= 2.6.10"
