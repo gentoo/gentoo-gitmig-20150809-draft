@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>kernel</herd>
-<maintainer>
-  <email>latexer@gentoo.org</email>
-  <description>config-kernel was written by me to be a general purpose tool forvarious configuration changes regarding the actual kernel build environment</description>
-</maintainer>
-</pkgmetadata>
