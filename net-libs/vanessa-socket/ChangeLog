@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/vanessa-socket
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-libs/vanessa-socket/ChangeLog,v 1.1 2003/03/15 07:44:11 george Exp $
+
+*vanessa-socket-0.0.5_beta4.ebuild (14 Mar 2003)
+
+  14 Мар 2003; George Shapovalov <george@gentoo.org> vanessa-socket-0.0.5_beta4.ebuild, files/digest-vanessa-socket-0.0.5_beta4 :
+  initial release (#17402)
+  Simplifies TCP/IP socket operations.
+  ebuild submitted by Todd Punderson <todd@doonga.net>
