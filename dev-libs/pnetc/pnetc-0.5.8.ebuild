@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pnetc/pnetc-0.5.8.ebuild,v 1.1 2003/06/17 08:37:59 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pnetc/pnetc-0.5.8.ebuild,v 1.2 2003/06/17 09:57:05 scandium Exp $
 
 MY_P=${P/c/C}
 S=${WORKDIR}/${MY_P}
@@ -25,5 +25,5 @@ src_compile() {
 src_install() {
 	einstall || die
 
-	dodoc AUTHORS COPYING Changelog INSTALL README doc/HACKING
+	dodoc AUTHORS COPYING ChangeLog INSTALL README doc/HACKING
 }
