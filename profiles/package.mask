@@ -25,6 +25,7 @@
 # masking work in progress (multiple blas related packages will have to be unmasked
 # sinchronously)
 app-sci/blas-reference
+app-sci/blas-atlas
 
 # <karltk@gentoo.org> (01 Feb 2004)
 # does not work, will not maintain atm.
