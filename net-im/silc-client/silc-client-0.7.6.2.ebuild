@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Stein Magnus Jodal <stein.magnus@jodal.no>
 # Maintainer: Chris Houser <chouser@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-0.7.6.2.ebuild,v 1.2 2002/02/09 11:47:57 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-0.7.6.2.ebuild,v 1.3 2002/04/12 18:54:01 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Secure Internet Live Conferencing"
@@ -10,7 +10,7 @@ SRC_URI="http://www.silcnet.org/download/client/sources/${P}.tar.gz"
 HOMEPAGE="http://silcnet.org"
 SLOT="0"
 DEPEND="virtual/glibc
-	>=dev-libs/glib-1.2.0
+	=dev-libs/glib-1.2*
 	sys-libs/ncurses"
 
 src_compile() {
