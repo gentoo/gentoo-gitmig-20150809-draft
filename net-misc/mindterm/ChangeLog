@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/mindterm
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/ChangeLog,v 1.1 2005/01/27 18:39:52 luckyduck Exp $
+
+*mindterm-2.4.2 (27 Jan 2005)
+
+  27 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/2.4.2-buildxml.patch, +mindterm-2.4.2.ebuild:
+  moved from app-misc to net-misc, also now build from source. fixes bug #79610
+  and #79611.
+
