@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.8.ebuild,v 1.1 2003/07/10 16:04:43 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.8.ebuild,v 1.2 2003/07/11 02:07:16 lisa Exp $
 
 inherit eutils gcc flag-o-matic
 [ `gcc-major-version` -eq 2 ] && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -114,4 +114,3 @@ pkg_postinst() {
 	einfo "To use the distccmon programs with Gentoo you should use this command:"
 	einfo "   sudo -H -u portage distccmon-text OR sudo -H -u portage distccmon-gnome"
 }
-
