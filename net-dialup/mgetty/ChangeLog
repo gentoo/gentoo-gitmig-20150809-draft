@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.18 2003/11/21 20:31:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.19 2003/12/26 13:49:21 weeve Exp $
+
+  26 Dec 2003; Jason Wever <weeve@gentoo.org> mgetty-1.1.30.ebuild:
+  Marked stable on sparc to fix the broken dependencies of hylafax.
 
   21 Nov 2003; Jason Wever <weeve@gentoo.org> mgetty-1.1.30.ebuild:
   Added ~sparc keyword, resolves bug #33996.
