@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5-r1.ebuild,v 1.5 2004/01/26 00:06:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5-r1.ebuild,v 1.6 2004/01/30 02:58:32 spyderous Exp $
 
 inherit gnome.org gnome2 libtool
 
@@ -20,7 +20,8 @@ RDEPEND=">=gnome-base/libgnomeui-2.2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
-	>=dev-lang/perl-5.6.0"
+	>=dev-lang/perl-5.6.0
+	>=sys-devel/autoconf-2.58"
 
 DOCS="AUTHORS COPYING ChangeLog NEWS README"
 
