@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.2.1,v 1.1 2002/11/27 21:45:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.2.4,v 1.1 2002/12/16 18:45:53 azarah Exp $
 
 
 source /etc/init.d/functions.sh || {
@@ -27,6 +27,10 @@ Options:
 	[--get-current-profile]
 
 		Print current used gcc profile.
+
+	[--list-profiles]
+
+	    Print a list of available profiles.
 	
 	[--get-bin-path]
 
@@ -51,6 +55,23 @@ then
 	usage
 fi
 
+cmd_setup() {
+
+	# Sourcing /etc/env.d/gcc/${GCC_COMP} is going to mess up
+	# PATH among things...
+	CP="$(find_path cp)"
+	RM="$(find_path rm)"
+	MV="$(find_path mv)"
+	LN="$(find_path ln)"
+	CAT="$(find_path cat)"
+	AWK="$(find_path gawk)"
+	GREP="$(find_path grep)"
+	FIND="$(find_path find)"
+	CHMOD="$(find_path chmod)"
+	TOUCH="$(find_path touch)"
+	ENV_UPDATE="$(find_path env-update)"
+}
+
 find_path() {
 	[ -z "$1" ] && return 0
 
@@ -62,6 +83,16 @@ find_path() {
 			break
 		fi
 	done
+}
+
+gen_wrapper() {
+	${CAT} > $1 << END
+#!/bin/sh
+
+$2 "\$@"
+END
+
+	${CHMOD} 0755 $1
 }
 
 GCC_COMP=""
@@ -81,14 +112,7 @@ switch_profile() {
 
 	# Sourcing /etc/env.d/gcc/${GCC_COMP} is going to mess up
 	# PATH among things...
-	CP="$(find_path cp)"
-	RM="$(find_path rm)"
-	MV="$(find_path mv)"
-	LN="$(find_path ln)"
-	AWK="$(find_path gawk)"
-	GREP="$(find_path grep)"
-	FIND="$(find_path find)"
-	ENV_UPDATE="$(find_path env-update)"
+	cmd_setup
 
 	# Order our profiles to have the default first...
 	# We do this so that we can have them ordered with default
@@ -122,19 +146,22 @@ switch_profile() {
 
 	source /etc/env.d/gcc/${GCC_COMP}
 
-	if [ -d /usr/include/${STDCXX_INCDIR} -a ! -L /usr/include/${STDCXX_INCDIR} ]
+	# Create /lib/cpp if missing or a symlink
+	if [ -L /lib/cpp -o ! -f /lib/cpp ]
 	then
-		${MV} /usr/include/${STDCXX_INCDIR} /usr/include/${STDCXX_INCDIR}.orig
-	elif [ -L /usr/include/${STDCXX_INCDIR} ]
-	then
-		${RM} -f /usr/include/${STDCXX_INCDIR}
+		${RM} -f /lib/cpp
+		gen_wrapper /lib/cpp cpp
 	fi
-	${LN} -snf ..${LDPATH/\/usr}/include/${STDCXX_INCDIR} /usr/include/${STDCXX_INCDIR}
-
-	[ -L /lib/cpp -o -f /lib/cpp ] && ${RM} -f /lib/cpp
-	${LN} -snf ..${PATH}/cpp /lib/cpp
-	[ -L /usr/bin/cc -o -f /usr/bin/cc ] && ${RM} -f /usr/bin/cc
-	${LN} -snf ../..${PATH}/gcc /usr/bin/cc
+	# Make sure it are not unmerged by mistake
+	${TOUCH} /lib/cpp
+	# Create /usr/bin/cc if missing for a symlink
+	if [ -L /usr/bin/cc -o ! -f /usr/bin/cc ]
+	then
+		${RM} -f /usr/bin/cc
+		gen_wrapper /usr/bin/cc gcc
+	fi
+	# Make sure it are not unmerged by mistake
+	${TOUCH} /usr/bin/cc
 
 	echo "CURRENT=${GCC_COMP}" > /etc/env.d/gcc/config
 
@@ -165,6 +192,22 @@ get_current_profile() {
 	echo "${CURRENT}"
 
 	return 0
+}
+
+list_profiles() {
+	if [ ! -f /etc/env.d/gcc/config ]
+	then
+		eerror "$0:  No gcc profile is active!"
+		return 1
+	fi
+
+	for x in /etc/env.d/gcc/*
+	do
+		if [ -f ${x} -a ${x} != "/etc/env.d/gcc/config" ]
+		then
+			echo "${x##*/}"
+		fi
+	done
 }
 
 get_bin_path() {
@@ -213,6 +256,13 @@ do
 			then
 				NEED_ACTION="no"
 				DOIT="get_current_profile"
+			fi
+			;;
+		--list-profiles)
+			if [ "${NEED_ACTION}" = "yes" ]
+			then
+				NEED_ACTION="no"
+				DOIT="list_profiles"
 			fi
 			;;
 		--get-bin-path)

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.2.2.ebuild,v 1.1 2002/12/16 04:19:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.2.4.ebuild,v 1.1 2002/12/16 18:45:51 azarah Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Utility to change the gcc compiler being used."
@@ -15,20 +15,8 @@ DEPEND="virtual/glibc"
 
 
 src_install() {
-	newsbin ${FILESDIR}/${PN}-${PV} ${PN}
 
-	# Install wrappers .. these are shared with the gcc ebuilds
-	# currently .. will remove when the new gcc have propagated ...
-	if [ -L ${ROOT}/lib/cpp ]
-	then
-		exeinto /lib
-		doexe ${FILESDIR}/cpp
-	fi
-	if [ -L ${ROOT}/usr/bin/cc ]
-	then
-		exeinto /usr/bin
-		doexe ${FILESDIR}/cc
-	fi
+	newsbin ${FILESDIR}/${PN}-${PV} ${PN}
 }
 
 pkg_postinst() {
@@ -51,6 +39,11 @@ pkg_postinst() {
 		if [ -L ${ROOT}/usr/include/g++-v3 ]
 		then
 			rm -f ${ROOT}/usr/include/g++-v3
+		fi
+
+		if [ ${ROOT} = "/" ]
+		then
+			/usr/sbin/gcc-config $(/usr/sbin/gcc-config --get-current-profile)
 		fi
 	fi
 }
