@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-elephant
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-elephant/ChangeLog,v 1.1 2004/10/10 05:01:52 mkennedy Exp $
+
+*cl-elephant-0.2.1 (09 Oct 2004)
+
+  09 Oct 2004; <mkennedy@gentoo.org> +metadata.xml,
+  +cl-elephant-0.2.1.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
