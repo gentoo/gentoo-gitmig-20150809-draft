@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/qtjava-3.3.1.ebuild,v 1.6 2004/12/25 15:50:37 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/qtjava-3.3.1.ebuild,v 1.7 2005/02/03 14:33:54 danarmak Exp $
 
 KMNAME=kdebindings
 KM_MAKEFILESREV=1

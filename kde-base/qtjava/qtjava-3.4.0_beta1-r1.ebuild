@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/qtjava-3.3.2.ebuild,v 1.2 2005/02/03 14:33:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/qtjava-3.4.0_beta1-r1.ebuild,v 1.1 2005/02/03 14:33:54 danarmak Exp $
 
 KMNAME=kdebindings
 KM_MAKEFILESREV=1
-MAXKDEVER=3.3.2
+MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
@@ -12,8 +12,8 @@ DESCRIPTION="Java bindings for QT"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/jdk"
-PATCHES="$FILESDIR/no-gtk-glib-check.diff"
-
+PATCHES="$FILESDIR/no-gtk-glib-check.diff
+	$FILESDIR/docs-target-dir.diff" # in cvs; remove for 3.4.0beta2
 
 src_compile() {
 	myconf="$myconf --with-java=`java-config --jdk-home`"
