@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.36 2004/11/16 00:34:57 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.37 2004/11/18 17:00:27 ka0ttic Exp $
+
+  18 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> vixie-cron-4.1-r4.ebuild:
+  Add warning in pkg_postinst if /etc/pam.d/cron is SUID and give user
+  instructions for fixing permissions.
 
 *vixie-cron-4.1-r4 (15 Nov 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r4.ebuild,v 1.1 2004/11/16 00:34:57 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r4.ebuild,v 1.2 2004/11/18 17:00:27 ka0ttic Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -101,5 +101,17 @@ pkg_postinst() {
 		ewarn "Please run:"
 		ewarn "rc-update del vcron"
 		ewarn "rc-update add vixie-cron default"
+	fi
+
+	# bug 71326
+	if [ -u ${ROOT}/etc/pam.d/cron ] ; then
+		echo
+		ewarn "Warning: previous ebuilds didn't reset permissions prior"
+		ewarn "to installing crontab, resulting in /etc/pam.d/cron being"
+		ewarn "installed with the SUID and executable bits set."
+		ewarn
+		ewarn "Run the following as root to set the proper permissions:"
+		ewarn "   chmod 0644 /etc/pam.d/cron"
+		echo
 	fi
 }
