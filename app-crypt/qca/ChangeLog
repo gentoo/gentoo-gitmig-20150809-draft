@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.2 2004/12/29 17:07:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.3 2004/12/30 04:16:43 chriswhite Exp $
+
+  30 Dec 2004; Chris White <chriswhite@gentoo.org> qca-1.0.ebuild:
+  Ok so, added ~ppc keywords and ~hppa/~ia64 as per vapier's request. Fixed to
+  install into /usr not /usr/local.
 
   29 Dec 2004; Jason Wever <weeve@gentoo.org> qca-1.0.ebuild:
   Added ~sparc keyword to fix broken deps of qca-tls-1.0-r1.
