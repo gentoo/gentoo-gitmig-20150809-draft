@@ -1,13 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.2.18.ebuild,v 1.1 2000/12/23 09:17:54 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.2.18.ebuild,v 1.2 2000/12/27 10:51:31 achim Exp $
 
 P=linux-UP-2.2.18
 A="linux-2.2.18.tar.bz2 i2c-2.5.4.tar.gz lm_sensors-2.5.4.tar.gz
    linux-2.2.18-reiserfs-3.5.29-patch.gz
    ide.2.2.18.1221.patch.bz2
-   patch-2.2.16-agpgart.bz2 pppoed0.47.tgz"
+   patch-2.2.16-agpgart.bz2 pppoed0.47.tgz lpp-0.1c.tar.bz2"
 
 
 S=${WORKDIR}/linux
@@ -20,12 +20,14 @@ SRC_URI="ftp://ftp.uk.kernel.org/pub/linux/kernel/v2.2/linux-2.2.18.tar.bz2
 	 ftp://ftp.kernel.org/pub/linux/kernel/people/hedrick/ide-2.2.18/ide.2.2.18.1221.patch.bz2
 	 ftp://ftp.uk.kernel.org/pub/linux/kernel/people/hedrick/ide-2.2.18/ide.2.2.18.1221.patch.bz2
 	 ftp://ftp.de.kernel.org/pub/linux/kernel/people/hedrick/ide-2.2.18/ide.2.2.18.1221.patch.bz2
-	 http://www.davin.ottawa.on.ca/pppoe/pppoed0.47.tgz"
+	 http://www.davin.ottawa.on.ca/pppoe/pppoed0.47.tgz
+	 http://lug.mfh-iserlohn.de/lpp/lpp-0.1c.tar.bz2"
 
 HOMEPAGE="http://www.kernel.org/
 	  http://www.netroedge.com/~lm78/
 	  http://devlinux.com/projects/reiserfs/
-	  http://www.linux-usb.org"
+	  http://www.linux-usb.org
+	  http://www.atnf.csiro.au/~rgooch/linux/kernel-patches.html"
 DEPEND=""
 RDEPEND=""
 	
@@ -62,6 +64,9 @@ src_unpack() {
     unpack pppoed0.47.tgz
     patch -p1 < pppoed-0.47/kernel-patches/2214-pppox
 
+    echo "Applying linux-progress-patch..."
+    bzip2 -dc ${DISTDIR}/lpp-0.1c.tar.bz2 | patch -p1
+
     echo "Creating i2c-patch..."
     unpack i2c-2.5.4.tar.gz
     cd i2c-2.5.4
@@ -90,7 +95,7 @@ src_unpack() {
     try make symlinks
     cp ${O}/files/${PV}/${PF}.config .config
     cp ${O}/files/${PV}/${PF}.autoconf include/linux/autoconf.h
-    cp ${O}/files/${PV}/gentoolinux_logo.h include/linux/linux_logo.h
+#    cp ${O}/files/${PV}/gentoolinux_logo.h include/linux/linux_logo.h
 
     cd ${S}/lm_sensors-2.5.4
 
@@ -104,6 +109,23 @@ src_unpack() {
 	-e "s:^PREFIX \:= .*:PREFIX \:= /usr:" \
 	Makefile.orig > Makefile
 
+}
+
+src_compile() {
+    cd ${S}
+    unset CFLAGS
+    unset CXXFLAGS
+    try make dep
+    cd ${S}/arch/i386/lib
+    cp Makefile Makefile.orig
+    sed -e "s:-traditional::" Makefile.orig > Makefile
+    cd ${S}
+    try make bzImage
+    try make modules
+    cd ${S}/fs/reiserfs/utils
+    try make
+    cd ${S}/lm_sensors-2.5.4
+    try make
 }
 
 src_install() {                               
