@@ -1,23 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ibpp-1.0.5.2-r1.ebuild,v 1.8 2003/02/13 10:40:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ibpp-1.0.5.2-r1.ebuild,v 1.9 2003/03/29 04:33:15 seemant Exp $
 
-S="${WORKDIR}/${P}"
+S=${WORKDIR}/${P}
 DESCRIPTION="IBPP, a C++ client API for firebird 1.0"
-SRC_URI="mirror://sourceforge/ibpp/ibpp-1-0-5-2-src.zip"
-HOMEPAGE="http://ibpp.sourceforge.net/"
+HOMEPAGE="http://www.ibpp.org/"
+SRC_URI="mirror://sourceforge/ibpp/${P//./-}-src.zip"
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
-DEPEND=">=dev-db/firebird-1.0"
+DEPEND=">=sys-apps/portage-2.0.47-r10
+	>=dev-db/firebird-1.0"
 
 src_unpack() {
 	mkdir ${P}
 	cd ${P}
-	unpack ibpp-1-0-5-2-src.zip
-	patch -p1 < ${FILESDIR}/ibpp-1.0.5.2.patch || die
+	unpack ${A}
+	epatch ${FILESDIR}/${P}.patch
 	rm ibase.h iberror.h 
 }
 
