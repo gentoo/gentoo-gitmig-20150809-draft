@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/mknbi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/ChangeLog,v 1.6 2003/07/19 20:04:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/ChangeLog,v 1.7 2003/12/08 12:34:16 mholzer Exp $
+
+*mknbi-1.4.3 (08 Dec 2003)
+
+  08 Dec 2003; Martin Holzer <mholzer@gentoo.org> mknbi-1.4.3.ebuild:
+  Version bumped.
 
 *mknbi-1.2.12 (20 Jul 2003)
 
