@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.8.ebuild,v 1.4 2004/04/07 16:15:32 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.8.ebuild,v 1.5 2004/04/08 19:20:27 pebenito Exp $
 
 IUSE="build"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz
 	mirror://gentoo/policycoreutils-extra-${EXTRAS_VER}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="sys-libs/libselinux
 	sys-devel/gettext
