@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3.ebuild,v 1.7 2003/04/11 20:44:01 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3.ebuild,v 1.8 2003/04/17 22:44:48 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -204,8 +204,8 @@ pkg_setup() {
 	ewarn "                                                                "
 	ewarn " To build Openoffice in your native language start emerge with  "
 	ewarn "                LANGUAGE=XX emerge openoffice                   "
-	ewarn " XX is the telephon-code of your country. To see all supported  "
-	ewarn " languages visit                                                "
+	ewarn " To see all supported languagess visit. (as well as for the     "
+	ewarn " specific LANGUAGE=XX settings you might need		       "
 	ewarn "   http://l10n.openoffice.org/all_supported_languages.html      "
 	ewarn "                                                                "
 	ewarn " To install language specified dictionaries emerge ooodi        "
