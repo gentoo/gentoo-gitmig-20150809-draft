@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/filelight/filelight-0.6.4.1.ebuild,v 1.4 2004/04/12 22:21:19 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/filelight/filelight-0.6.4.1.ebuild,v 1.5 2004/05/16 21:12:18 centic Exp $
 
 inherit kde-base
 need-kde 3
@@ -13,6 +13,6 @@ S=${WORKDIR}/${PN}-0.6.4
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
