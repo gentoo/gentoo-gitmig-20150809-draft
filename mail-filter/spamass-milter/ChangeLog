@@ -1,0 +1,17 @@
+# ChangeLog for net-mail/spamass-milter
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.1 2004/06/03 07:30:32 seemant Exp $
+
+*spamass-milter-0.2.0 (03 Jun 2004)
+
+  03 Jun 2004; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  +files/README.gentoo, +files/spamass-milter.conf, +files/spamass-milter.rc,
+  +spamass-milter-0.2.0.ebuild:
+  Moved from net-mail/spamass-milter to mail-filter/spamass-milter.
+
+*spamass-milter-0.2.0 (16 Jul 2003)
+
+  16 Jul 2003; Nick Hadaway <raker@gentoo.org> spamass-milter-0.2.0.ebuild,
+  files/README.gentoo, files/spamass-milter.conf, files/spamass-milter.rc:
+  Original ebuild idea submitted by Vadim Kuznetsov on bug #23136.  I have
+  added a proper README.gentoo for final configuration instructions.
