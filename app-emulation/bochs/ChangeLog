@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.34 2004/11/20 20:41:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.35 2004/11/26 17:57:08 lu_zero Exp $
+
+  26 Nov 2004; Luca Barbato <lu_zero@gentoo.org>
+  -files/bochs-2.0.2-gcc3.patch, -bochs-1.4.1.ebuild, -bochs-1.4.ebuild,
+  -bochs-2.0.2.ebuild, -bochs-2.0.ebuild:
+  Cleanup
 
   20 Nov 2004; Luca Barbato <lu_zero@gentoo.org> bochs-2.1.1.ebuild:
   Added vbe support, as requested in bug #71876
