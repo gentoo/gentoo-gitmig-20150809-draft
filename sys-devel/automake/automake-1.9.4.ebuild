@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.9.3.ebuild,v 1.5 2005/01/04 02:37:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.9.4.ebuild,v 1.1 2005/01/11 01:15:24 vapier Exp $
 
 inherit eutils gnuconfig
 
