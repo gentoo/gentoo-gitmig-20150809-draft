@@ -1,9 +1,14 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.60 2004/12/16 20:15:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.61 2004/12/20 23:53:58 lu_zero Exp $
 
   16 Dec 2004; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Changing ownership to livecd herd.
+
+*parted-1.6.18 (21 Dec 2004)
+
+  21 Dec 2004; Luca Barbato <lu_zero@gentoo.org> +parted-1.6.18.ebuild:
+  New version, amiga partitions supported by upstream
 
   13 Dec 2004; Mike Frysinger <vapier@gentoo.org> parted-1.6.15.ebuild:
   Clean up and push into stable.
