@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.9 2004/04/04 16:19:05 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion2/ChangeLog,v 1.10 2004/04/07 20:57:59 twp Exp $
+
+  07 Apr 2004; Tom Payne <twp@gentoo.org> ion2-20040407.ebuild :
+  Version bump.
 
   31 Mar 2004; Tom Payne <twp@gentoo.oth> ion2-20040211-r3.ebuild :
   Rename binaries so it can co-exist with x11-wm/ion. Bug # 46225.
