@@ -4,7 +4,10 @@
 CHFN_AUTH               yes
 CHFN_RESTRICT           rwh
 CONSOLE                 /etc/securetty
-CREATE_HOME             yes
+#CREATE_HOME is a RedHat'ism and not supported
+#by the stock shadow package.
+#Generates warning message if set to 'yes'
+CREATE_HOME             no
 DEFAULT_HOME            yes
 DIALUPS_CHECK_ENAB      yes
 ENVIRON_FILE            /etc/environment
