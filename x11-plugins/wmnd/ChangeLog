@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmnd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.25 2004/12/27 23:24:57 s4t4n Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.26 2005/01/28 23:32:30 s4t4n Exp $
+
+  29 Jan 2005; Michele Noberasco <s4t4n@gentoo.org> wmnd-0.4.11.ebuild:
+  Stable for x86. Fix copyright headers.
+  wmnd-0.4.10.ebuild, wmnd-0.4.9.ebuild:
+  Fix copyright headers.
 
 *wmnd-0.4.11 (28 Dec 2004)
 
