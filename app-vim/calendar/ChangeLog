@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/calendar
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/calendar/ChangeLog,v 1.4 2003/11/15 04:37:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/calendar/ChangeLog,v 1.5 2003/12/03 18:37:40 ciaranm Exp $
+
+  03 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org> calendar-1.3u.ebuild:
+  Keyworded ~sparc
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> calendar-1.3u.ebuild:
   Stable on ia64
