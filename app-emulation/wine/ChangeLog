@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.60 2003/12/10 20:06:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.61 2003/12/15 06:00:40 coronalvr Exp $
+
+  15 Dec 2003; Alex Veber <coronalvr@gentoo.org> wine-20031118-r1.ebuild:
+  Bump to stable.
 
   10 Dec 2003; Martin Holzer <mholzer@gentoo.org> wine-20031118-r1.ebuild,
   wine-20031016.ebuild, files/wine-alsa.patch:
