@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.172 2005/01/17 15:41:51 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.173 2005/01/17 17:30:47 greg_g Exp $
+
+  17 Jan 2005; Gregorio Guidi <greg@gentoo.org> kdebase-3.4.0_beta1.ebuild:
+  Added missing (optional) dep on lm_sensors.
 
   17 Jan 2005; Dan Armak <danarmak@gentoo.org> kdebase-3.4.0_beta1.ebuild:
   Adding missing dep on freetype, bug #78206.
