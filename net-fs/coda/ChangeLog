@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/coda
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.6 2004/06/24 22:42:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.7 2004/07/16 23:22:03 dragonheart Exp $
+
+  17 Jul 2004; Daniel Black <dragonheart@gentoo.org> files/auth2,
+  files/coda-update, files/codasrv, files/venus:
+  Scripts enhanced thanks to Maurice van der Pot <griffon26@kfk4ever.com> in bug
+  #26132
 
   12 May 2004; David Holm <dholm@gentoo.org> coda-6.0.6.ebuild:
   Added to ~ppc.

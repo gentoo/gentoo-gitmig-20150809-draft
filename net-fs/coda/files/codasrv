@@ -1,21 +1,26 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/files/codasrv,v 1.2 2004/07/14 23:33:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/files/codasrv,v 1.3 2004/07/16 23:22:03 dragonheart Exp $
 
 depend() {
 	need net coda-update auth2
 }
 
 checkconfig() {
-	if [ ! -e /var/lib/vice/hostname ] ; then
-		eerror "Please set up vice before starting the service..."
-		return 1
-	fi
+        if [ ! -e /etc/coda/server.conf ] ; then
+                eerror "Please run vice-setup before starting the service..."
+                return 1
+        fi
+        eval `grep "^vicedir=" /etc/coda/server.conf || echo vicedir=/var/lib/vice`
+        if [ ! -e $vicedir/hostname ] ; then
+                eerror "Please run vice-setup before starting the service..."
+                return 1
+        fi
 }
 
 we_are_scm() {
-	if [ "`cat /var/lib/vice/hostname`" = "`cat /var/lib/vice/db/scm`" ] ; then
+	if [ "`cat $vicedir/hostname`" = "`cat $vicedir/db/scm`" ] ; then
 		return 0
 	else
 		return 1
