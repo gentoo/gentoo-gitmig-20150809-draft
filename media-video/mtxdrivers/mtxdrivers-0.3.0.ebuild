@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.3.0.ebuild,v 1.6 2003/09/10 22:35:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.3.0.ebuild,v 1.7 2003/11/20 02:29:38 vapier Exp $
 
 At="mtxdrivers-rh9.0-0.3.0.run"
 DESCRIPTION="Drviers for the Matrox Parhelia and Millenium P650/P750 cards."
@@ -16,8 +16,6 @@ DEPEND=">=x11-base/xfree-4.2.0
 	virtual/kernel
 	!mtxdrivers-pro"
 
-Xversion=`X -version 2>&1 | grep -s "XFree86 Version" | cut -d" " -f3 | sed -e "s/\([^\.]*\.[^\.]*\.[^\.]*\)\.[^\.]*/\1/"`
-
 pkg_nofetch() {
 	einfo "You must go to: http://www.matrox.com/mga/registration/home.cfm?refid=7667"
 	einfo "(for the RH9.0 drivers) and log in (or create an account) to download the"
@@ -32,9 +30,11 @@ src_unpack() {
 }
 
 src_compile() {
+	Xversion=`X -version 2>&1 | grep -s "XFree86 Version" | cut -d" " -f3 | sed -e "s/\([^\.]*\.[^\.]*\.[^\.]*\)\.[^\.]*/\1/"`
+
 	if [ ! -e ${S}/xfree86/${Xversion} ]; then
 		eerror "Matrox does not support XFree v${Xversion}"
-		exit 1
+		die
 	fi
 
 	export PARHELIUX=$PWD/src
@@ -47,6 +47,8 @@ src_compile() {
 }
 
 src_install() {
+	Xversion=`X -version 2>&1 | grep -s "XFree86 Version" | cut -d" " -f3 | sed -e "s/\([^\.]*\.[^\.]*\.[^\.]*\)\.[^\.]*/\1/"`
+
 	Xpath="`which X | sed -e "s:/bin/X$::"`"
 	Kversion=`uname -r`
 

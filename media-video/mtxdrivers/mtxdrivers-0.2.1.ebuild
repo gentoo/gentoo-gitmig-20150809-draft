@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.2.1.ebuild,v 1.8 2003/08/07 04:20:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.2.1.ebuild,v 1.9 2003/11/20 02:29:38 vapier Exp $
 
 RELEASE=2002
 DESCRIPTION="Drviers for the Matrox Parhelia card."
@@ -14,14 +14,14 @@ KEYWORDS="x86"
 DEPEND=">=x11-base/xfree-4.1.0
 	virtual/kernel"
 
-Xversion=`X -version 2>&1 | grep -s "XFree86 Version" | cut -d" " -f3 | sed -e "s/\([^\.]*\.[^\.]*\.[^\.]*\)\.[^\.]*/\1/"`
-
 src_unpack() {
 	unpack ${A}
 	mv mtxdrivers ${P}
 }
 
 src_compile() {
+	Xversion=`X -version 2>&1 | grep -s "XFree86 Version" | cut -d" " -f3 | sed -e "s/\([^\.]*\.[^\.]*\.[^\.]*\)\.[^\.]*/\1/"`
+
 	# hack to make mtx.o compile with rmap enabled kernels
 	if [ ${RMAPHACK} = "yes" ]; then
 		cp kernel/src/mtx_vm.c kernel/src/mtx_vm.c.orig
@@ -33,7 +33,7 @@ src_compile() {
 
 	if [ ! -e ${S}/xfree86/${Xversion} ]; then
 		eerror "Matrox does not support XFree v${Xversion}"
-		exit 1
+		die
 	fi
 
 	cd ${S}/kernel/src
@@ -42,6 +42,8 @@ src_compile() {
 }
 
 src_install() {
+	Xversion=`X -version 2>&1 | grep -s "XFree86 Version" | cut -d" " -f3 | sed -e "s/\([^\.]*\.[^\.]*\.[^\.]*\)\.[^\.]*/\1/"`
+
 	Xpath="`which X | sed -e "s:/bin/X$::"`"
 	Kversion=`uname -r`
 
