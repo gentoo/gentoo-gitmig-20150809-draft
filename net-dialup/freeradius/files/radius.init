@@ -11,16 +11,22 @@ checkconfig() {
 		return 1
 	fi
 
+	cd /var/log/radius #set the location of startup.log
 	if [ "`/usr/sbin/check-radiusd-config >/dev/null 2>&1; echo $?`" != "0" ] ; then
 		eerror "Config not ok! (try /usr/sbin/check-radiusd-config )"
 		return 1
 	fi
 
-	if [ -z "`grep radiusd /etc/passwd`" ]; then
+	if [ -z "`grep radiusd /etc/passwd`" ] || [ -z "`grep radiusd /etc/group`" ]; then
 		eerror "radiusd user missing!"
 		return 1
 	fi
 
+	if [ ! -f radius.log ]; then
+		touch radius.log && chown radiusd:radiusd radius.log \
+			|| return 1
+	fi
+	
 	return 0
 }
 

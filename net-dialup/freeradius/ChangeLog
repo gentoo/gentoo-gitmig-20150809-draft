@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.25 2005/03/02 06:49:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.26 2005/03/13 23:05:11 mrness Exp $
+
+*freeradius-1.0.2-r1 (14 Mar 2005)
+
+  14 Mar 2005; Alin Nastac <mrness@gentoo.org> files/radius.init,
+  +freeradius-1.0.2-r1.ebuild, -freeradius-1.0.2.ebuild:
+  Fix owner of log file (#84341).
 
   02 Mar 2005; Alin Nastac <mrness@gentoo.org>
   +files/freeradius-1.0.2-whole-archive-gentoo.patch,
