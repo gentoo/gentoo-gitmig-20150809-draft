@@ -1,5 +1,5 @@
-MD5 fb156095d6deb6bc2b78c835a8712a9d hteditor-0.7.3.ebuild 757
-MD5 c4b6a5c2a7e6d4a2fbb0a10d6f2460e9 hteditor-0.7.0.ebuild 717
 MD5 d6fa22e870711ea89163fd12f399fdd1 ChangeLog 862
+MD5 430aea152fc02aaaef8d306e5b22faa5 hteditor-0.7.0.ebuild 720
+MD5 32724d50c40a42439dbc72839e2738bc hteditor-0.7.3.ebuild 760
 MD5 4968160acfadf68eb28892fb51734068 files/digest-hteditor-0.7.0 61
 MD5 e74a3e89412f3b1f5e4995afc5f42a36 files/digest-hteditor-0.7.3 61
