@@ -108,7 +108,7 @@ import portage
 import sys
 import os
 
-portdir=portage.settings["PORTDIR"]
+portdir=portage.cfgtree["/"]["PORTDIR"]
 if not os.path.exists(portdir+"/ChangeLog"):
 	sys.stderr.write("!!! Error: Can't find ChangeLog.  Exiting.\n\n")
 	sys.exit(1)
