@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Crypt-Rijndael
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Rijndael/ChangeLog,v 1.1 2005/03/10 12:56:55 mcummings Exp $
+
+*Crypt-Rijndael-0.05 (10 Mar 2005)
+
+  10 Mar 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Crypt-Rijndael-0.05.ebuild:
+  Bug 73911 - original ebuild submitted by Quequero <quequero@bitchx.it>.
+
