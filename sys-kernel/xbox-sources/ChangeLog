@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/xbox-sources
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.21 2004/11/28 11:57:52 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.22 2004/11/30 15:51:20 chrb Exp $
+
+*xbox-sources-2.6.8.1-r6 (30 Nov 2004)
+
+  30 Nov 2004; Chris Bainbridge <chrb@gentoo.org>
+  -xbox-sources-2.6.8.1-r5.ebuild, +xbox-sources-2.6.8.1-r6.ebuild:
+  fix crashing in 2.6 lirc driver
 
   28 Nov 2004; <plasmaroo@gentoo.org> xbox-sources-2.6.8.1-r5.ebuild,
   +files/xbox-sources-2.6.8.1.AF_UNIX.patch:

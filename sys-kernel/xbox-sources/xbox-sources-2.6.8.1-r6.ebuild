@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.6.8.1-r5.ebuild,v 1.2 2004/11/28 11:57:52 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.6.8.1-r6.ebuild,v 1.1 2004/11/30 15:51:20 chrb Exp $
 
 ETYPE='sources'
 inherit kernel-2
 detect_version
 
 # version of gentoo patchset
-XBOX_PATCHES=xboxpatches-2.6.8.1-20041104.tar.bz2
+XBOX_PATCHES=xboxpatches-2.6.8.1-20041104-r1.tar.bz2
 
 K_NOSETEXTRAVERSION="don't_set_it"
 KEYWORDS="~x86 -*"
