@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Team: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2-r2.ebuild,v 1.7 2001/09/06 01:59:53 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2-r2.ebuild,v 1.8 2001/09/06 02:09:23 woodchip Exp $
 
 MYP="openssh-2.9p2"
 S=${WORKDIR}/${MYP}
@@ -48,6 +48,5 @@ src_install() {
     insinto /etc/pam.d
     donewins ${FILESDIR}/sshd.pam sshd
     exeinto /etc/init.d
-    dowexe ${FILESDIR}/sshd
+    doexe ${FILESDIR}/sshd
 }
-
