@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.2-r5.ebuild,v 1.3 2003/07/18 21:55:44 tester Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.2-r5.ebuild,v 1.4 2003/08/07 03:51:05 vapier Exp $
 
 # IMPORTANT
 #
@@ -14,7 +14,7 @@
 inherit gnome2 gst-plugins eutils flag-o-matic
 
 DESCRIPTION="Additional plugins for gstreamer"
-HOMEPAGE="http://gstreamer.net"
+HOMEPAGE="http://gstreamer.net/"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"

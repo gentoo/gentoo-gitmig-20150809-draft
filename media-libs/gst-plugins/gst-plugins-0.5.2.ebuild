@@ -1,21 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.5.2.ebuild,v 1.3 2003/06/27 15:45:34 foser Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.5.2.ebuild,v 1.4 2003/08/07 03:51:05 vapier Exp $
 
 inherit eutils libtool gnome2 flag-o-matic
 
-IUSE="encode quicktime mpeg oggvorbis jpeg esd gnome mikmod avi sdl png alsa arts dvd aalib"
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Additional plugins for gstreamer - streaming media framework"
 # bz2 gives 404 right now 
 #SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.bz2"
 #SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.gz"
 HOMEPAGE="http://gstreamer.sourceforge.net"
 
-SLOT="0.5"
 LICENSE="LGPL-2.1"
+SLOT="0.5"
 KEYWORDS="~x86 ~sparc ~ppc"
+IUSE="encode quicktime mpeg oggvorbis jpeg esd gnome mikmod avi sdl png alsa arts dvd aalib"
 
 # required packages
 # there are many many optional libraries. features are compiled if the libraries

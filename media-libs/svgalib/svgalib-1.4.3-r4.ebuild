@@ -1,16 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.4 2003/03/16 15:13:49 liquidx Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.5 2003/08/07 03:55:04 vapier Exp $
 
 inherit eutils
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="A library for running svga graphics on the console"
+HOMEPAGE="http://www.svgalib.org/"
 SRC_URI="http://www.svgalib.org/${P}.tar.gz
 	http://www.arava.co.il/matan/svgalib/r128.c"
-HOMEPAGE="http://www.svgalib.org/"
 
 LICENSE="BSD"
 SLOT="0"
@@ -18,9 +15,7 @@ KEYWORDS="x86 -ppc -sparc -alpha"
 
 DEPEND="virtual/glibc"
 
-
 src_unpack() {
-
 	unpack ${P}.tar.gz
 	
 	cd ${S}
@@ -32,7 +27,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	make OPTIMIZE="${CFLAGS}" static shared textutils lrmi utils || die
 	# Build the gl stuff tpp
 	make OPTIMIZE="${CFLAGS}" -C gl || die
@@ -46,7 +40,6 @@ src_compile() {
 }
 
 src_install() {
-
 	dodir /etc/{vga,svga} /usr/{include,lib,bin,share/man}
 	make TOPDIR=${D} OPTIMIZE="${CFLAGS}" install || die
 	insinto /usr/include
@@ -81,9 +74,9 @@ src_install() {
 }
 
 pkg_postinst() {
-    # we chown/chmod outside userpriv
-    for x in /usr/lib/svgalib/demos/* /usr/lib/svgalib/theeDKit/*; do
-       chown root ${x}
-       chmod u+s ${x}
-    done       
+	# we chown/chmod outside userpriv
+	for x in /usr/lib/svgalib/demos/* /usr/lib/svgalib/theeDKit/*; do
+		chown root ${x}
+		chmod u+s ${x}
+	done       
 }

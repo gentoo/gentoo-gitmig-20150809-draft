@@ -1,29 +1,28 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaudiooss/libaudiooss-1.1.0-r1.ebuild,v 1.2 2003/08/07 03:57:22 vapier Exp $
 
-IUSE=""
-
-S=${WORKDIR}/audiooss-${PV}
 HOMEPAGE="http://romeo.skybert.no/~erik/linux.html"
 DESCRIPTION="Transparent OSS emulation on top of the Network Audio System"
 SRC_URI="http://romeo.skybert.no/~erik/audiooss-${PV}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND="virtual/x11
 	media-libs/nas"
-RDEPEND="${DEPEND}"
+
+S=${WORKDIR}/audiooss-${PV}
 
 src_compile() {
 	xmkmf -a || die
 	mv Makefile Makefile.old
 	sed -e "s:.*CDEBUGFLAGS =.*:CDEBUGFLAGS=${CFLAGS}:" \
 		Makefile.old > Makefile
-    emake || die
+	emake || die
 }
 
 src_install() {
-    emake DESTDIR=${D} install || die
+	emake DESTDIR=${D} install || die
 }

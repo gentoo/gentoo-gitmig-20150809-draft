@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.0-r4.ebuild,v 1.6 2003/06/27 15:45:34 foser Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.0-r4.ebuild,v 1.7 2003/08/07 03:51:05 vapier Exp $
 
 inherit eutils libtool gnome2 flag-o-matic
 
@@ -8,15 +8,13 @@ inherit eutils libtool gnome2 flag-o-matic
 PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
 PV_MAJ_MIN=${PVP[0]}.${PVP[1]}
 
-IUSE="encode quicktime mpeg jpeg esd gnome mikmod sdl png alsa arts dvd aalib oggvorbis mmx"
-
-S="${WORKDIR}/${P}"
 DESCRIPTION="Additional plugins for gstreamer - streaming media framework"
 HOMEPAGE="http://gstreamer.sourceforge.net"
 
-SLOT=${PV_MAJ_MIN}
 LICENSE="LGPL-2.1"
+SLOT=${PV_MAJ_MIN}
 KEYWORDS="x86 ~sparc ppc"
+IUSE="encode quicktime mpeg jpeg esd gnome mikmod sdl png alsa arts dvd aalib oggvorbis mmx"
 
 # required packages
 # there are many many optional libraries. features are compiled if the libraries

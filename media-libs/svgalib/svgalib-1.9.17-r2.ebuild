@@ -1,32 +1,27 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r2.ebuild,v 1.1 2003/08/03 12:32:01 azarah Exp $
-
-IUSE=""
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r2.ebuild,v 1.2 2003/08/07 03:55:04 vapier Exp $
 
 inherit eutils
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="A library for running svga graphics on the console"
-SRC_URI="http://www.arava.co.il/matan/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.svgalib.org/"
+SRC_URI="http://www.arava.co.il/matan/${PN}/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="BSD"
+SLOT="0"
 KEYWORDS="~x86 -ppc -sparc -alpha"
 
 DEPEND="virtual/glibc"
 
 pkg_setup() {
-
 	check_KV
 }
 
 src_unpack() {
-
 	unpack ${A}
-	
-	cd ${S};
+
+	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.patch
 
 	# Get it to work with kernel 2.6
@@ -34,7 +29,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	make OPTIMIZE="${CFLAGS}" static shared textutils lrmi utils || \
 		die "Failed to build libraries and utils!"
 	# Build the gl stuff tpp
@@ -60,7 +54,6 @@ src_compile() {
 }
 
 src_install() {
-	
 	local x=
 
 	dodir /etc/svgalib /usr/{include,lib,bin,share/man}
@@ -102,7 +95,5 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	 [ "${ROOT}" = "/" ] && /sbin/modules-update &> /dev/null
 }
-

@@ -1,22 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.1-r2.ebuild,v 1.6 2003/07/09 17:02:22 liquidx Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.1-r2.ebuild,v 1.7 2003/08/07 03:52:49 vapier Exp $
 
 inherit libtool
 inherit flag-o-matic
-MAKEOPTS="-j1"
-# or the documentation fails. bah!
+MAKEOPTS="-j1" # or the documentation fails. bah!
 
-IUSE="nls doc jpeg"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="free, redistributable digital camera software application"
-SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 HOMEPAGE="http://www.gphoto.org/"
+SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ~ppc sparc"
+IUSE="nls doc jpeg"
 
 DEPEND=">=dev-libs/libusb-0.1.6
 	dev-util/pkgconfig
