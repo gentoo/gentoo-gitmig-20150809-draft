@@ -2,8 +2,8 @@ MD5 51d6ec854f6bdcb2c1bf65920b500af2 procmail-3.22-r3.ebuild 1832
 MD5 392784d20a3ab646e1844a96aebb7a78 procmail-3.22-r5.ebuild 1799
 MD5 6831716f3d33d83c0b90e6c4a128df35 procmail-3.22-r2.ebuild 1701
 MD5 d314d9738c34a62ab68c6a6f170a9779 procmail-3.22-r4.ebuild 1855
-MD5 b85d134e522f0c51a8bbbdb9aee789dc procmail-3.22-r6.ebuild 1800
-MD5 ee6f05332b792b4a2c4d6e9bfee718ec ChangeLog 4001
+MD5 618cbe71d9c13067076682eec29920a7 procmail-3.22-r6.ebuild 1802
+MD5 6dad1cc3ee902796e4210225eb6dea58 ChangeLog 4004
 MD5 280e86cd3850b13629b0beee3c2c5522 files/gentoo-maildir2.diff 797
 MD5 3b583fb1759a67d82e1f304ea40c2859 files/digest-procmail-3.22-r2 65
 MD5 3b583fb1759a67d82e1f304ea40c2859 files/digest-procmail-3.22-r3 65
