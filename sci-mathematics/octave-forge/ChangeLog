@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/octave-forge
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/ChangeLog,v 1.3 2005/01/17 11:39:14 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/ChangeLog,v 1.4 2005/01/17 11:43:33 phosphan Exp $
+
+  17 Jan 2005; Patrick Kursawe <phosphan@gentoo.org>
+  octave-forge-2004.02.12.ebuild:
+  Updating DEPEND
 
 *octave-forge-2004.11.16 (17 Jan 2005)
 

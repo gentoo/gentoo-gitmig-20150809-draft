@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2004.02.12.ebuild,v 1.2 2005/01/17 11:36:23 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2004.02.12.ebuild,v 1.3 2005/01/17 11:43:33 phosphan Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ SLOT="0"
 IUSE="ginac qhull"
 
 DEPEND=">=sci-mathematics/octave-2.1.40
+		<=sci-mathematics/octave-2.1.57
 		>=sys-apps/sed-4
 		sys-libs/libtermcap-compat
 		!amd64? ( ginac? ( sci-mathematics/ginac ) )
