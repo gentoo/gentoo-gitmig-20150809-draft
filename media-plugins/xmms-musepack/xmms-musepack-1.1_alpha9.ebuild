@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-1.1_alpha7.ebuild,v 1.2 2004/09/05 22:23:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-1.1_alpha9.ebuild,v 1.1 2004/09/24 10:14:06 eradicator Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="XMMS plugin to play audio files encoded with Andree Buschmann's encoder Musepack (mpc, mp+, mpp)"
 HOMEPAGE="http://www.musepack.net"
-SRC_URI="http://www.saunalahti.fi/cse/seed/downloads/linux/plugins/${MY_P}.tar.bz2"
+SRC_URI="http://www.musepack.net/downloads/linux/plugins/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/xmms-musepack
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.20 2004/09/05 22:23:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.21 2004/09/24 10:14:06 eradicator Exp $
+
+*xmms-musepack-1.1_alpha9 (24 Sep 2004)
+
+  24 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -xmms-musepack-1.1_alpha7.ebuild, +xmms-musepack-1.1_alpha9.ebuild:
+  Version bump.
 
 *xmms-musepack-1.1_alpha7 (05 Sep 2004)
 
