@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.2.ebuild,v 1.4 2002/01/07 01:04:09 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.3-r1.ebuild,v 1.1 2002/01/11 11:05:19 gbevin Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage ports system"
@@ -12,7 +12,6 @@ HOMEPAGE="http://www.gentoo.org"
 if [ -z "`use build`" ] ; then
   RDEPEND="sys-devel/spython sys-apps/debianutils"
 fi
-RDEPEND=">=sys-apps/bash-2.05a-r1"
 
 src_unpack() {
 	#We are including the Portage bzipped tarball on CVS now, so that if a person's
@@ -24,6 +23,16 @@ src_compile() {
 	cd ${S}/src; gcc ${CFLAGS} tbz2tool.c -o tbz2tool
 	cd ${S}/src/sandbox
 	emake || die
+}
+
+pkg_preinst() {
+	if [ -d /var/db/pkg/sys-apps/bash-2.05a ] && [ ! -d /var/db/pkg/sys-apps/bash-2.05a-r1 ]
+	then
+		eerror "You have to update your bash-2.05a installation."
+		eerror "Please execute 'emerge sys-apps/bash' as root"
+		eerror "before installing this version of portage."
+		die
+	fi
 }
 
 src_install() {
