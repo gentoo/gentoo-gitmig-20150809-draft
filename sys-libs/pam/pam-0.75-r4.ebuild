@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r4.ebuild,v 1.1 2002/03/03 08:35:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r4.ebuild,v 1.2 2002/03/14 23:01:07 azarah Exp $
 
 S=${WORKDIR}/Linux-PAM-${PV}
 S2=${WORKDIR}/pam
@@ -12,6 +12,8 @@ HOMEPAGE="http://www.redhat.com/linux-info/pam/"
 
 DEPEND=">=sys-libs/cracklib-2.7-r2
 	>=sys-libs/pwdb-0.61-r3
+	>=sys-devel/autoconf-2.13
+	>=sys-devel/automake-1.4
 	berkdb? ( ~sys-libs/db-1.85 )"
 
 src_unpack() {
@@ -31,7 +33,7 @@ src_unpack() {
 	tar -jxf ${FILESDIR}/pam-${PVR}-gentoo.tbz2 || die
 	cd ${S}
 	tar -jxf ${S2}/pam-redhat-0.75-21.tar.bz2 || die
-	cp /usr/share/automake/install-sh .
+	cp /usr/share/automake/install-sh . || die
 	ln -sf defs/redhat.defs default.defs
 	
 	for x in `cat ${S2}/patch.list`
