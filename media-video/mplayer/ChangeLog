@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.112 2004/03/21 21:05:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.113 2004/03/22 03:28:03 weeve Exp $
+
+  21 Mar 2004; Jason Wever <weeve@gentoo.org> mplayer-1.0_pre3-r2.ebuild:
+  Added ~sparc keyword.
 
   21 Mar 2004; Jason Wever <weeve@gentoo.org> mplayer-1.0_pre3-r2.ebuild:
   Marked -sparc until libtheora builds on sparc.
