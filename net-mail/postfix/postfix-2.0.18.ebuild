@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.18.ebuild,v 1.1 2004/01/23 15:06:46 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.18.ebuild,v 1.2 2004/02/09 23:58:53 max Exp $
 
 inherit eutils ssl-cert
 
-TLS_P="pfixtls-0.8.16-2.0.16-0.9.7b"
-IPV6="1.20"
-IPV6_P="ipv6-${IPV6}-pf-2.0.16"
+TLS_P="pfixtls-0.8.16-2.0.18-0.9.7c"
+IPV6="1.21"
+IPV6_P="ipv6-${IPV6}-pf-2.0.18"
 IPV6_TLS_P="tls+${IPV6_P}"
 PGSQL_P="postfix-pg.postfix-2.0.0.2"
 
