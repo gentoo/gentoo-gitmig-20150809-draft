@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.2 2004/10/30 21:21:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.3 2004/10/31 00:13:15 pylon Exp $
+
+  31 Oct 2004; Lars Weiler <pylon@gentoo.org> tellico-0.12.ebuild:
+  Stable on ppc as requested in bug #65514
 
   30 Oct 2004; Jason Wever <weeve@gentoo.org> tellico-0.12.ebuild:
   Stable on sparc wrt bug #65514
