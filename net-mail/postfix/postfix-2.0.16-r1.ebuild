@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.16-r1.ebuild,v 1.7 2003/11/08 08:53:53 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.16-r1.ebuild,v 1.8 2003/11/10 18:48:35 max Exp $
 
 inherit eutils ssl-cert
 
@@ -196,8 +196,8 @@ src_install () {
 }
 
 pkg_postinst() {
-	ebegin "Running postfix check"
-	"${ROOT}/usr/sbin/postfix" check
+	ebegin "Fixing permissions"
+	"${ROOT}/etc/postfix/post-install" upgrade-permissions
 	eend $?
 	echo
 
