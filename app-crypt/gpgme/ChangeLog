@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.12 2003/02/13 08:08:11 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.13 2003/02/13 19:24:24 ykoehler Exp $
 
 *gpgme-0.4.0 (29 Jan 2003)
 
@@ -10,6 +10,9 @@
   to a program that needs gpgme 0.4.0 or later.
 
 *gpgme-0.3.14 (29 Jan 2003)
+
+  13 Feb 2003; Yannick Koehler <ykoehler@gentoo.org> gpgme-0.3.14.ebuild :
+  Added missing USE flag 'nls crypt doc' to IUSE.
 
   13 Feb 2003; Mark Guertin <gerk@gentoo.org> gpgme-0.3.14.ebuild :
   set ppc in keywords
@@ -22,10 +25,16 @@
  
 *gpgme-0.3.13 (26 Nov 2002)
 
+  13 Feb 2003; Yannick Koehler <ykoehler@gentoo.org> gpgme-0.3.13.ebuild :
+  Added missing USE flag 'nls crypt doc' to IUSE.
+
   26 Nov 2002; J Robert Ray <jrray@gentoo.org> gpgme-0.3.13.ebuild :
   Version bump, no longer an alpha release.  Closing bug 11213.
 
 *gpgme-0.3.12 (18 Oct 2002)
+
+  13 Feb 2003; Yannick Koehler <ykoehler@gentoo.org> gpgme-0.3.12.ebuild :
+  Added missing USE flag 'nls crypt doc' to IUSE.
 
   18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> gpgme-0.3.12.ebuild :
   Version bump, found by Jacob Perkins <jap1@ionet.net> in #6665.
