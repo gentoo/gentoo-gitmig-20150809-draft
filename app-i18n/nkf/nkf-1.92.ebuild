@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-1.92.ebuild,v 1.6 2003/09/30 13:43:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-1.92.ebuild,v 1.7 2003/11/14 23:11:54 seemant Exp $
 
 use perl && inherit perl-module
 
@@ -8,7 +8,7 @@ IUSE="perl"
 DESCRIPTION="Network Kanji code conversion Filter"
 SRC_URI="ftp://ftp.ie.u-ryukyu.ac.jp/pub/software/kono/${PN}${PV/./}.shar"
 HOMEPAGE="http://bw-www.ie.u-ryukyu.ac.jp/~kono/software.html"
-DEPEND=">=sys-apps/sharutils-4.2.1-r5"
+DEPEND=">=app-arch/sharutils-4.2.1-r5"
 KEYWORDS="x86 ppc sparc alpha"
 LICENSE="public-domain"
 SLOT="0"
