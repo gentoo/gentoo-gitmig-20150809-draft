@@ -2,5 +2,7 @@ MD5 d704bc8b2bc1f5ce677083c47b21d1f3 xfdesktop-4.1.99.2.ebuild 821
 MD5 4c0b3ad83b2e4256c2f67aa2f67b15f6 xfdesktop-4.0.6.ebuild 970
 MD5 76ca4befe2b3216774fe419000c9ff6b ChangeLog 4666
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 d704bc8b2bc1f5ce677083c47b21d1f3 xfdesktop-4.1.99.3.ebuild 821
 MD5 5a42f394e1b742861d369baced86b7b2 files/digest-xfdesktop-4.0.6 68
 MD5 1cb2c1f8debe4630894957cb88312f2f files/digest-xfdesktop-4.1.99.2 71
+MD5 dff3fd64549e80d51e00bc82fc4b4a93 files/digest-xfdesktop-4.1.99.3 71

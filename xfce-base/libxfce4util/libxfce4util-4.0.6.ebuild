@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/libxfce4util-4.0.6.ebuild,v 1.9 2004/11/04 22:58:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/libxfce4util-4.0.6.ebuild,v 1.10 2005/01/02 16:05:49 bcowan Exp $
 
 DESCRIPTION="Libraries for XFCE4"
 HOMEPAGE="http://www.xfce.org/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.1.99.2.ebuild,v 1.2 2004/12/17 06:27:54 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/xfce4-extras-4.1.99.2.ebuild,v 1.3 2005/01/02 16:17:08 bcowan Exp $
 
 IUSE=""
 DESCRIPTION="Xfce 4 base ebuild"
