@@ -1,0 +1,9 @@
+# ChangeLog for net-im/silc-plugin
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/ChangeLog,v 1.1 2004/08/31 15:11:48 ticho Exp $
+
+*silc-plugin-1.0.1 (31 Aug 2004)
+
+  31 Aug 2004; <ticho@gentoo.org> +metadata.xml, +silc-plugin-1.0.1.ebuild:
+  Initial import, from bug #61189. Marked unstable on x86 and sparc.
+
