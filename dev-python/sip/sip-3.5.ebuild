@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.5.ebuild,v 1.7 2003/04/04 01:21:34 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-3.5.ebuild,v 1.8 2003/04/04 21:33:40 liquidx Exp $
 
 IUSE=""
 
@@ -21,6 +21,7 @@ DEPEND="virtual/glibc
 
 S=${WORKDIR}/${MY_P}
 
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -28,19 +29,22 @@ src_unpack() {
 }
 
 src_compile(){
+	distutils_python_version
+
 	chmod +x build.py
 	dodir /usr/bin
-	dodir /usr/lib/python${PY_VER}/site-packages
+	dodir /usr/lib/python${PYVER}/site-packages
 	python build.py -l qt-mt \
 		-b ${D}/usr/bin \
-		-d ${D}/usr/lib/python${PY_VER}/site-packages \
-		-e ${D}/usr/include/python${PY_VER}
+		-d ${D}/usr/lib/python${PYVER}/site-packages \
+		-e ${D}/usr/include/python${PYVER}
 		
 	make || die
 }
 
 src_install() {
-	dodir /usr/include/python${PY_VER}
+	distutils_python_version
+	dodir /usr/include/python${PYVER}
 	make DESTDIR=${D} install || die
 	dodoc NEWS README THANKS
 }
