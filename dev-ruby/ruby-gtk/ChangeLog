@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gtk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk/ChangeLog,v 1.8 2003/07/21 17:04:44 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk/ChangeLog,v 1.9 2003/12/11 17:16:26 usata Exp $
+
+*ruby-gtk-0.34-r1 (12 Dec 2003)
+
+  12 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> ruby-gtk-0.34-r1.ebuild:
+  inherit ruby to support both ruby16 and ruby18
 
 *ruby-gtk-0.34 (21 Jul 2003)
 
