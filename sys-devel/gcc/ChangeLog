@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.51 2002/12/16 04:27:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.52 2002/12/16 18:12:40 azarah Exp $
+
+  16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.1-r1.ebuild,
+  gcc-3.2.1-r6.ebuild, gcc-2.95.3-r7.ebuild gcc-3.2.1*.ebuild :
+
+  Install and touch manpages if we do not have perl, as they started to
+  use perl to generate the manpages ...  If we do not do this, gcc fails
+  to build during bootstrap.
+
+  Install the /lib/cpp and /usr/bin/cc wrappers for other common used gcc's.
 
 *gcc-3.2.1-r1 (16 Dec 2002)
 *gcc-3.2.1-r6 (16 Dec 2002)

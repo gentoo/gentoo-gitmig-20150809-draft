@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.7 2002/12/16 04:27:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.8 2002/12/16 18:12:40 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -74,7 +74,7 @@ DEPEND="virtual/glibc
 	          nls? ( sys-devel/gettext ) )"
 			  
 RDEPEND="virtual/glibc
-	>=sys-devel/gcc-config-1.2.2
+	>=sys-devel/gcc-config-1.2.3
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"

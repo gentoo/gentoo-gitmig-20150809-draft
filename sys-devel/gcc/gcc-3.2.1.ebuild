@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1.ebuild,v 1.9 2002/12/15 12:41:26 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1.ebuild,v 1.10 2002/12/16 18:12:40 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -250,11 +250,11 @@ src_install() {
 	echo "CC=\"gcc\"" >> ${D}/etc/env.d/05gcc
 	echo "CXX=\"g++\"" >> ${D}/etc/env.d/05gcc
 	
-	if ! build_multiple
-	then
-		dosym /usr/bin/cpp /lib/cpp
-		dosym gcc /usr/bin/cc
-	fi
+	# Install wrappers
+	exeinto /lib
+	doexe ${FILESDIR}/cpp
+	exeinto /usr/bin
+	doexe ${FILESDIR}/cc
 
 # This is fixed via the linker scripts (bug #4411) ....
 #
@@ -404,14 +404,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if [ ! -L ${ROOT}/lib/cpp ]
-	then
-		ln -sf /usr/bin/cpp ${ROOT}/lib/cpp
-	fi
-	if [ ! -L ${ROOT}/usr/bin/cc ]
-	then
-		ln -sf gcc ${ROOT}/usr/bin/cc
-	fi
 	
 	# Fix ncurses b0rking (if r5 isn't unmerged)
 	find ${ROOT}/usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;

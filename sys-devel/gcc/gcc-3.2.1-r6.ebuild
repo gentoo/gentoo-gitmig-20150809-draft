@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r6.ebuild,v 1.1 2002/12/16 04:27:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r6.ebuild,v 1.2 2002/12/16 18:12:40 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -77,6 +77,7 @@ else
 	S="${WORKDIR}/gcc-${SNAPSHOT//-}"
 	SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT//-}.tar.bz2"
 fi
+SRC_URI="${SRC_URI} mirror://gentoo/${P}-manpages.tar.bz2"
 
 DESCRIPTION="Modern C/C++ compiler written by the GNU people"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -101,7 +102,7 @@ DEPEND="virtual/glibc
 	          nls? ( sys-devel/gettext ) )"
 			  
 RDEPEND="virtual/glibc
-	>=sys-devel/gcc-config-1.2.2
+	>=sys-devel/gcc-config-1.2.3
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
@@ -154,6 +155,12 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/gcc32-testsuite.patch
 	epatch ${FILESDIR}/${PV}/gcc32-tls-reload-fix.patch
 
+	# Install our pre generated manpages if we do not have perl ...
+	if [ ! -x /usr/bin/perl ]
+	then
+		cd ${S}; unpack ${P}-manpages.tar.bz2
+	fi
+
 	# Currently if any path is changed via the configure script, it breaks
 	# installing into ${D}.  We should not patch it in src_install() with
 	# absolute paths, as some modules then gets rebuild with the wrong
@@ -171,11 +178,6 @@ src_unpack() {
 		sed -e 's:bindir = @bindir@:bindir = $(FAKE_ROOT)@bindir@:' \
 			${x}.orig > ${x}
 
-		# Fix --exec-prefix=
-		cp ${x} ${x}.orig
-		sed -e 's:exec_prefix = @exec_prefix@:exec_prefix = $(FAKE_ROOT)@exec_prefix@:' \
-			${x}.orig > ${x}
-		
 		# Fix --with-gxx-include-dir=
 		cp ${x} ${x}.orig
 		sed -e 's:gxx_include_dir = @gxx_:gxx_include_dir = $(FAKE_ROOT)@gxx_:' \
@@ -202,6 +204,7 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	local gcc_lang=""
+	
 	if [ -z "`use build`" ]
 	then
 		myconf="${myconf} --enable-shared"
@@ -233,7 +236,6 @@ src_compile() {
 	addwrite "/dev/zero"
 	${S}/configure --prefix=${LOC} \
 		--bindir=${BINPATH} \
-		--exec-prefix=${LOC} \
 		--datadir=${DATAPATH} \
 		--mandir=${DATAPATH}/man \
 		--infodir=${DATAPATH}/info \
@@ -254,6 +256,12 @@ src_compile() {
 		${myconf} || die
 
 	touch ${S}/gcc/c-gperf.h
+
+	# Do not make manpages if we do not have perl ...
+	if [ ! -x /usr/bin/perl ]
+	then 
+		find ${S} -name '*.[17]' -exec touch {} \; || :
+	fi
 
 	einfo "Building GCC..."
 	if [ -z "`use static`" ]
@@ -290,7 +298,6 @@ src_install() {
 	S="${WORKDIR}/build" \
 	make prefix=${D}${LOC} \
 		bindir=${D}${BINPATH} \
-		exec_prefix=${D}${LOC} \
 		datadir=${D}${DATAPATH} \
 		mandir=${D}${DATAPATH}/man \
 		infodir=${D}${DATAPATH}/info \

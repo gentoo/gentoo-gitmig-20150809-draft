@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r1.ebuild,v 1.1 2002/12/16 04:27:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r1.ebuild,v 1.2 2002/12/16 18:12:40 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -72,6 +72,7 @@ else
 	S="${WORKDIR}/gcc-${SNAPSHOT//-}"
 	SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT//-}.tar.bz2"
 fi
+SRC_URI="${SRC_URI} mirror://gentoo/${P}-manpages.tar.bz2"
 
 DESCRIPTION="Modern C/C++ compiler written by the GNU people"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -143,6 +144,12 @@ src_unpack() {
 	use sparc && epatch ${FILESDIR}/${PV}/gcc32-sparc32-hack.patch
 	epatch ${FILESDIR}/${PV}/gcc32-testsuite.patch
 	epatch ${FILESDIR}/${PV}/gcc32-tls-reload-fix.patch
+
+	# Install our pre generated manpages if we do not have perl ...
+	if [ ! -x /usr/bin/perl ]
+	then
+		cd ${S}; unpack ${P}-manpages.tar.bz2
+	fi
 
 	# Currently if any path is changed via the configure script, it breaks
 	# installing into ${D}.  We should not patch it in src_install() with
@@ -235,6 +242,12 @@ src_compile() {
 
 	touch ${S}/gcc/c-gperf.h
 
+	# Do not make manpages if we do not have perl ...
+	if [ ! -x /usr/bin/perl ]
+	then 
+		find ${S} -name '*.[17]' -exec touch {} \; || :
+	fi
+	
 	if [ -z "`use static`" ]
 	then
 		# Fix for our libtool-portage.patch

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.15 2002/12/15 17:05:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.16 2002/12/16 18:12:40 azarah Exp $
 
 IUSE="nls static build"
 
@@ -120,9 +120,6 @@ src_install() {
 	
     FULLPATH=${D}${LOC}/lib/gcc-lib/${CHOST}/${PV}
 	cd ${FULLPATH}
-	dodir /lib
-	dosym /usr/bin/cpp /lib/cpp
-	dosym gcc /usr/bin/cc
 	dosym g++ /usr/bin/${CHOST}-g++
 	dosym g++ /usr/bin/${CHOST}-c++
 	dodir /etc/env.d
@@ -132,6 +129,12 @@ src_install() {
 	echo "CC=\"gcc\"" >> ${D}/etc/env.d/05gcc
 	echo "CXX=\"g++\"" >> ${D}/etc/env.d/05gcc
 	
+	# Install wrappers
+	exeinto /lib
+	doexe ${FILESDIR}/cpp
+	exeinto /usr/bin
+	doexe ${FILESDIR}/cc
+
 	cd ${S}
     if [ -z "`use build`" ]
     then
@@ -208,17 +211,6 @@ pkg_preinst() {
 	   [ -f ${ROOT}/usr/bin/${CHOST}-c++ ]
 	then
 		rm -f ${ROOT}/usr/bin/${CHOST}-c++
-	fi
-}
-
-pkg_postrm() {
-	if [ ! -L ${ROOT}/lib/cpp ]
-	then
-		ln -sf /usr/bin/cpp ${ROOT}/lib/cpp
-	fi
-	if [ ! -L ${ROOT}/usr/bin/cc ]
-	then
-		ln -sf gcc ${ROOT}/usr/bin/cc
 	fi
 }
 
