@@ -30,3 +30,6 @@ java
 
 # masked until net-nds/openldap is tested on ppc64
 ldap
+
+# no nptl on ppc64 yet
+nptl
