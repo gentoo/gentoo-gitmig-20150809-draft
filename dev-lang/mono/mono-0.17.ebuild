@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-0.17.ebuild,v 1.1 2002/12/10 15:06:16 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-0.17.ebuild,v 1.2 2002/12/18 13:15:28 foser Exp $
 
 S=${WORKDIR}/${P}
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.go-mono.com/"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86 -ppc"
+KEYWORDS="x86 -ppc"
 
 DEPEND="virtual/glibc
 	>=dev-libs/glib-2.0
