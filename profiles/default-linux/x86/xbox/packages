@@ -1,0 +1,8 @@
+# Copyright 2001-2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/xbox/packages,v 1.1 2004/10/25 12:46:49 vapier Exp $
+
+# version specific stuff for xbox support
+>=app-misc/lirc-0.7.0_pre6
+>=x11-base/xfree-4.3.0-r6
+>=media-sound/alsa-driver-1.0.5a
