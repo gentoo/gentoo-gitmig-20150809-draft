@@ -1,26 +1,25 @@
-# Copyright 1999-2005 Gentoo Technologies, Inc.
+# Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20050317.ebuild,v 1.1 2005/03/17 18:46:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20050317.ebuild,v 1.2 2005/03/17 19:31:52 agriffis Exp $
 
 DESCRIPTION="mutt-ng is the next generation of mutt."
 HOMEPAGE="http://www.muttng.org/"
 SRC_URI="http://www.muttng.org/snapshots/${P}.tar.gz"
-RESTRICT=nomirror
 IUSE="crypt debug gnutls gpgme imap mbox nls nntp sasl slang smtp ssl"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha"
+KEYWORDS="~alpha ~ia64 ~x86"
 RDEPEND="nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.2
 	sys-devel/automake
 	sys-devel/autoconf
 	net-dns/libidn
-	smtp? ( net-libs/libesmtp )
-	ssl? ( >=dev-libs/openssl-0.9.6 )
-	slang? ( >=sys-libs/slang-1.4.2 )
+	smtp?   ( net-libs/libesmtp )
+	ssl?    ( >=dev-libs/openssl-0.9.6 )
+	slang?  ( >=sys-libs/slang-1.4.2 )
 	gnutls? ( >=net-libs/gnutls-1.0.17 )
-	gpgme? ( >=app-crypt/gpgme-0.9.0 )
-	sasl? ( >=cyrus-sasl-2 )"
+	gpgme?  ( >=app-crypt/gpgme-0.9.0 )
+	sasl?   ( >=cyrus-sasl-2 )"
 DEPEND="${RDEPEND}
 	net-mail/mailbase"
 
@@ -34,7 +33,7 @@ src_unpack() {
 	autoconf						|| die "autoconf failed"
 }
 
-src_compile() {	
+src_compile() {
 	local myconf="
 		$(use_enable nls) \
 		$(use_enable gpgme) \
@@ -89,7 +88,7 @@ src_install() {
 		insinto /etc/muttng
 		doins ${FILESDIR}/Muttngrc
 	fi
-	
+
 	dodoc BEWARE COPYRIGHT ChangeLog NEWS OPS* PATCHES README* TODO VERSION
 }
 
