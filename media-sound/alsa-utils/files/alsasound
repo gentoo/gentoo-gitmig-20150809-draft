@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.6 2003/12/18 22:29:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.7 2004/02/07 05:00:03 eradicator Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -73,20 +73,23 @@ start() {
 		
 		for DRIVER in ${DRIVERS}
 		do
-			if [ ! "${DRIVER}" = off ] ; then
+			if [ ! "${DRIVER}" = off ] &&
+			   [ -z `cut -d' ' -f1 /proc/modules | egrep "^${DRIVER}\$"` ]; then
 				einfo "Loading: ${DRIVER}"
 				/sbin/modprobe ${DRIVER}
 			fi
 		done
 		
 		sleep 1
-		
+
 		if [ -f /proc/asound/seq/drivers ] ; then
 			SEQUENCERS="$(cut -d"," -f1 /proc/asound/seq/drivers)"
 			for SEQUENCER in ${SEQUENCERS}
 			do
-				einfo "Loading: ${SEQUENCER}"
-				[ -n "${SEQUENCER}" ] && /sbin/modprobe ${SEQUENCER}
+				if [ -z `cut -d' ' -f1 /proc/modules | egrep "^${SEQUENCER}\$"` ]; then
+					einfo "Loading: ${SEQUENCER}"
+					[ -n "${SEQUENCER}" ] && /sbin/modprobe ${SEQUENCER}
+				fi
 			done
 		fi
 		

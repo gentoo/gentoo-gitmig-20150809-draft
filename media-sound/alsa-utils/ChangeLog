@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.40 2004/01/27 19:35:04 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.41 2004/02/07 05:00:03 eradicator Exp $
+
+  06 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound:
+  init script now checks /proc/modules to see if module is loaded before
+  modprobing.  Closes bug #32045.
 
 *alsa-utils-1.0.2 (27 Jan 2004)
 
