@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.1.3-r1.ebuild,v 1.3 2004/07/01 21:59:27 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.1.3-r1.ebuild,v 1.4 2004/07/08 01:54:55 mr_bones_ Exp $
 
 inherit eutils
 
@@ -99,22 +99,22 @@ src_unpack() {
 
 	cd programs/pluto
 
-	if [ `use curl` ]; then
-	ebegin "Curl support requested. Enabling curl support"
-	sed -i -e 's:#LIBCURL=1:LIBCURL=1:g' Makefile || die
-	eend $?
+	if use curl ; then
+		ebegin "Curl support requested. Enabling curl support"
+		sed -i -e 's:#LIBCURL=1:LIBCURL=1:g' Makefile || die
+		eend $?
 	fi
 
-	if [ `use ldap` ]; then
-	ebegin "LDAP support requested. Enabling LDAPv3 support"
-	sed -i -e 's:#LDAP_VERSION=3:LDAP_VERSION=3:g' Makefile || die
-	eend $?
+	if use ldap ; then
+		ebegin "LDAP support requested. Enabling LDAPv3 support"
+		sed -i -e 's:#LDAP_VERSION=3:LDAP_VERSION=3:g' Makefile || die
+		eend $?
 	fi
 
-	if [ `use smartcard` ]; then
-	ebegin "Smartcard support requested. Enabling opensc support"
-	sed -i -e 's:#SMARTCARD=1:SMARTCARD=1:g' Makefile || die
-	eend $?
+	if  use smartcard ; then
+		ebegin "Smartcard support requested. Enabling opensc support"
+		sed -i -e 's:#SMARTCARD=1:SMARTCARD=1:g' Makefile || die
+		eend $?
 	fi
 }
 
