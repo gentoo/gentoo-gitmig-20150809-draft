@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001.ebuild,v 1.5 2004/10/06 22:28:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.41.20041001.ebuild,v 1.6 2004/10/07 02:54:30 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -126,10 +126,9 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/lib /usr/bin
-	use avi && dodir /usr/lib/win32
+	use avi && dodir /usr/$(get_libdir)/win32
 
-	make install DESTDIR=${D} || die
+	make DESTDIR="${D}" install || die
 
 	dodoc README INSTALL
 	cd doc
