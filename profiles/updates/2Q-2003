@@ -64,3 +64,11 @@ move x11-themes/Silver-XCursrors-3D x11-themes/silver-xcursors
 move x11-themes/BlueGlass-XCursrors-3D x11-themes/blueglass-xcursors
 move x11-themes/Golden-XCursrors-3D x11-themes/golden-xcursors
 move net-www/http-fetcher dev-libs/http-fetcher
+move gnome-extra/gnomemm dev-cpp/gnomemm
+move gnome-extra/gconfmm dev-cpp/gconfmm
+move gnome-extra/libbonobo dev-cpp/libbonobo
+move gnome-extra/libbonoboui dev-cpp/libbonoboui
+move gnome-extra/libglademm dev-cpp/libglademm
+move gnome-extra/libgnomecanvasmm dev-cpp/libgnomecanvasmm
+move gnome-extra/libgnomemm dev-cpp/libgnomemm
+move gnome-extra/libgnomeuimm dev-cpp/libgnomeuimm
