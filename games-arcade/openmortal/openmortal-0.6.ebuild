@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc., 2004 Freyr Gunnar Ólafsson <gnarlin@utopia.is>
+# Copyright 1999-2004 Gentoo Foundation, 2004 Freyr Gunnar Ólafsson <gnarlin@utopia.is>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/openmortal-0.6.ebuild,v 1.4 2004/04/07 22:26:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/openmortal-0.6.ebuild,v 1.5 2004/06/24 22:09:34 agriffis Exp $
 
 inherit games
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/njam-1.00.ebuild,v 1.6 2004/06/19 15:50:48 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/njam-1.00.ebuild,v 1.7 2004/06/24 22:09:24 agriffis Exp $
 
 inherit eutils games
 

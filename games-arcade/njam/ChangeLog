@@ -1,6 +1,6 @@
 # ChangeLog for games-arcade/njam
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/ChangeLog,v 1.4 2003/11/07 20:40:47 mr_bones_ Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/ChangeLog,v 1.5 2004/06/24 22:09:24 agriffis Exp $
 
   07 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> njam-1.00.ebuild:
   add eutils for epatch

@@ -1,6 +1,6 @@
 # ChangeLog for games-arcade/pacmanarena
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/ChangeLog,v 1.6 2004/06/07 04:03:09 agriffis Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/ChangeLog,v 1.7 2004/06/24 22:09:55 agriffis Exp $
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org> pacmanarena-0.15.ebuild:
   Fix typo: pkg_postins -> pkg_postinst

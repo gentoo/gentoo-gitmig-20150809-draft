@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgolddemo/marbleblastgolddemo-1.4.1.ebuild,v 1.4 2004/06/18 20:56:04 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgolddemo/marbleblastgolddemo-1.4.1.ebuild,v 1.5 2004/06/24 22:07:48 agriffis Exp $
 
 inherit eutils games
 

@@ -1,6 +1,6 @@
 # ChangeLog for games-arcade/gunocide2ex
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/ChangeLog,v 1.3 2004/03/26 11:55:52 mr_bones_ Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/ChangeLog,v 1.4 2004/06/24 22:05:42 agriffis Exp $
 
   26 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> gunocide2ex-1.0.ebuild:
   don't rdepend on sed; tidy
