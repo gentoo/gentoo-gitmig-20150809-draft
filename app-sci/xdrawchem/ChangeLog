@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/xdrawchem
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.30 2004/09/07 18:37:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.31 2004/10/25 09:31:20 phosphan Exp $
+
+  25 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> xdrawchem-1.7.8.ebuild,
+  xdrawchem-1.8.4.ebuild, xdrawchem-1.8.5.ebuild:
+  Adding pkgconfig dependency (bug #67898)
 
   07 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> xdrawchem-1.8.4.ebuild:
   Keyworded sparc

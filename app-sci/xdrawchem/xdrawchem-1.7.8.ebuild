@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/xdrawchem-1.7.8.ebuild,v 1.3 2004/06/24 22:21:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/xdrawchem-1.7.8.ebuild,v 1.4 2004/10/25 09:31:20 phosphan Exp $
 
 inherit flag-o-matic
 
@@ -18,6 +18,7 @@ KEYWORDS="x86 ppc sparc"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-3.1.0
+	dev-util/pkgconfig
 	>=app-sci/openbabel-1.100.2*"
 
 src_compile() {
