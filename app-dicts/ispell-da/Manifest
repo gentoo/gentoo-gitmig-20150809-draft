@@ -1,10 +1,20 @@
-MD5 b06de8eae9ab94bcf002affde85d8dec ChangeLog 4576
-MD5 c29e0ac460b71da5ac370cad3b36cbcb ispell-da-1.4.42.ebuild 587
-MD5 e6032b9157f1175760a76a35f8e6247d ispell-da-1.4.43.ebuild 591
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4de9ebec08f3622dd335a7df731ead75 ispell-da-1.4.44.ebuild 570
+MD5 e6032b9157f1175760a76a35f8e6247d ispell-da-1.4.43.ebuild 591
+MD5 2f9d96f7b710aa681c7797289e68a617 ispell-da-1.4.45.ebuild 580
+MD5 c29e0ac460b71da5ac370cad3b36cbcb ispell-da-1.4.42.ebuild 587
+MD5 33dbffd08cfb44ab9dedff6ec7a15e7e ChangeLog 4689
 MD5 fadb28235bb7171b540a4a0b4e3e3a85 metadata.xml 251
-MD5 c5607debd03780363d787a0dfdc2c747 ispell-da-1.4.45.ebuild 572
 MD5 b52675a324d9cc53134385f84444afa5 files/digest-ispell-da-1.4.42 68
 MD5 de5339850c65f4cfeb29d8b482877308 files/digest-ispell-da-1.4.43 68
 MD5 3a36d8ae01a38bdc27e74169349a6405 files/digest-ispell-da-1.4.44 68
 MD5 6f0d940d020e844c1eb09fcbbbe18562 files/digest-ispell-da-1.4.45 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBt4NtZ/iYVBmujdURAjyjAJ4i/HmdOU4XQF3YQDvu/LSpMYnzIQCgslB1
+Ni5AZtdFEdiJtMB8Ehl8yuo=
+=lyXA
+-----END PGP SIGNATURE-----
