@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.6.0_beta3.ebuild,v 1.2 2003/09/07 07:26:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.6.0_beta3.ebuild,v 1.3 2003/09/08 09:25:35 tantive Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 OKV=${PV/_beta/-test}
@@ -27,7 +27,7 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/
 http://www.openmosix.org"
 LICENSE="GPL-2"
 SLOT="${PKV}"
-KEYWORDS="-* ~x86"
+KEYWORDS="~x86 -sparc -ppc -alpha"
 PROVIDE="virtual/linux-sources"
 [ -n "$(use alsa)" ] && PROVIDE="${PROVIDE} virtual/alsa"
 
