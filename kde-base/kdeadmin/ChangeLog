@@ -1,8 +1,16 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.30 2003/04/11 17:02:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.31 2003/04/23 17:02:05 danarmak Exp $
 
-*kdeadmin-3.0.5b (08 Apr 2003)
+*kdeadmin-3.1.1-r1 (08 Apr 2003)
+
+  23 Apr 2003; Dan Armak <danarmak@gentoo.org> kdeadmin-3.1.1-r1:
+  Do not build kpackage and ksysv by default, since they are normally useless on
+  a Gentoo system. Each of them can be built by turning on the appropriate local
+  use flag: foreign-package for kpackage and foreign-sysvinit for ksysv.
+  
+  Also, always build lilo-config, even if lilo isn't installed -- makes for
+  deterministic behaviour.
 
   08 Apr 2003; Hannes Mehnert <hannes@gentoo.org> kdeadmin-3.0.5b.ebuild:
   A security patch release fixing a kghostview vulnerability. See GLSA.
