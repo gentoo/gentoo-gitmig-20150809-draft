@@ -1,6 +1,6 @@
 MD5 855f14e3bb89ee0984c8eefd69387aaa zenity-1.6.ebuild 934
 MD5 256254d7d90db1ce44f4c7fb05eddb40 zenity-1.8.ebuild 879
-MD5 27147ed4ce108b0a0fe73cab57769ddf zenity-2.6.0.ebuild 879
+MD5 59305562cce8ebd1ac7273a2fc7852e6 zenity-2.6.0.ebuild 875
 MD5 c6bf756271c9e1776802fba9c04570a6 ChangeLog 2551
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 11d6827a445afb68eb58138ba36167b6 files/zenity-1.8-utf8_fix.patch 716

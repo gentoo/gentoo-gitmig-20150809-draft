@@ -1,6 +1,6 @@
 MD5 10ed351afe3358a25219603a134cd469 gnome-system-monitor-2.4.0.ebuild 892
 MD5 f42164b158413d334400be9f97b4a47a ChangeLog 5106
-MD5 8988a5fe55ed595ec835c98240fca814 gnome-system-monitor-2.6.0.ebuild 771
+MD5 dd9afa55e965711c25f47167dcd20bc8 gnome-system-monitor-2.6.0.ebuild 770
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 19acc82cb5fc63387b37c71ddf4c09c6 files/gnome-system-monitor-2.0.5-fix-startup-crash.patch 616
 MD5 b39b1d001c6cfb36a860351aed50ddb3 files/gnome-system-monitor-devicesviewimprovements.patch 20935
