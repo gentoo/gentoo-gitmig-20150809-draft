@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author William McArthur <leknor@leknor.com>
-# $HEADER $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bonnie++/bonnie++-1.02a.ebuild,v 1.2 2002/01/27 07:07:19 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Hard drive bottleneck testing benchmark suite."
