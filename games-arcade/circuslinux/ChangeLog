@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/circuslinux
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/ChangeLog,v 1.7 2004/06/24 22:03:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/ChangeLog,v 1.8 2004/11/11 20:44:03 wolf31o2 Exp $
+
+  11 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  circuslinux-1.0.3.ebuild:
+  Added ~amd64 KEYWORD and closing bug #70834.
 
   18 Jun 2004; Jason Eric Huebel <jhuebel@gentoo.org>
   circuslinux-1.0.3.ebuild:
