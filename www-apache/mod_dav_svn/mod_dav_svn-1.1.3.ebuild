@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_dav_svn/mod_dav_svn-1.1.3.ebuild,v 1.1 2005/01/22 04:56:40 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_dav_svn/mod_dav_svn-1.1.3.ebuild,v 1.2 2005/01/23 07:42:18 trapni Exp $
 
 # FIXME this ebuild acutally installes mod_dav_svn *and* mod_authz_svn... 
 # what about this? shall it be splitted up, too?
@@ -16,7 +16,7 @@ HOMEPAGE="http://subversion.tigris.org/"
 
 SLOT="0"
 LICENSE="Apache-1.1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
