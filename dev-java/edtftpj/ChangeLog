@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/edtftpj
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.6 2004/10/20 06:04:33 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.7 2004/10/29 12:47:41 axxo Exp $
+
+  29 Oct 2004; Thomas Matthijs <axxo@gentoo.org> edtftpj-1.4.2.ebuild,
+  edtftpj-1.4.4.ebuild:
+  removed nomirror
 
 *edtftpj-1.4.4 (20 Oct 2004)
 

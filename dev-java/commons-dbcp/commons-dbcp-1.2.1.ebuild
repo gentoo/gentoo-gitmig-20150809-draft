@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.2.1.ebuild,v 1.2 2004/10/16 17:05:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.2.1.ebuild,v 1.3 2004/10/29 12:51:19 axxo Exp $
 
 inherit java-pkg
 
@@ -18,7 +18,6 @@ LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
 IUSE="jikes doc"
-RESTRICT="nomirror"
 
 src_compile() {
 	local antflags="build-jar"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/edtftpj-1.4.4.ebuild,v 1.1 2004/10/20 06:04:33 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/edtftpj-1.4.4.ebuild,v 1.2 2004/10/29 12:47:41 axxo Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,6 @@ DEPEND="virtual/jdk
 	>=dev-java/ant-1.5"
 RDEPEND="virtual/jdk"
 SLOT="0"
-RESTRICT="nomirror"
 
 src_compile() {
 	cd ${S}/src

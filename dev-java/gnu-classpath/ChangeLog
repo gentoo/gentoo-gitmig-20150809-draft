@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.18 2004/10/20 07:02:47 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.19 2004/10/29 12:55:10 axxo Exp $
+
+  29 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
+  gnu-classpath-0.10-r1.ebuild, gnu-classpath-0.11.ebuild:
+  removed nomirror
 
   20 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   gnu-classpath-0.10-r1.ebuild, gnu-classpath-0.11.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.15 2004/10/16 17:05:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.16 2004/10/29 12:51:19 axxo Exp $
+
+  29 Oct 2004; Thomas Matthijs <axxo@gentoo.org> commons-dbcp-1.2.1.ebuild:
+  removed nomirror
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> commons-dbcp-1.2.1.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in

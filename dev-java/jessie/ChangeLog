@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jessie
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/ChangeLog,v 1.8 2004/10/20 07:03:15 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jessie/ChangeLog,v 1.9 2004/10/29 12:52:25 axxo Exp $
+
+  29 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jessie-1.0.0.ebuild:
+  removed nomirror
 
   20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> jessie-1.0.0.ebuild:
   Keywords ~amd64.
