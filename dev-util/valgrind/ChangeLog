@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.32 2004/07/21 22:52:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.33 2004/07/24 09:39:34 mr_bones_ Exp $
+
+  24 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> valgrind-2.1.2.ebuild:
+  don't rdepend on autoconf; error message; doc tidy
 
 *valgrind-2.1.2 (22 Jul 2004)
 
