@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.4 2002/04/27 23:08:36 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.5 2002/06/17 12:31:34 seemant Exp $
+
+*a52dec-0.7.3-r1 (17 Jun 200)
+
+  17 Jun 2002; Seemant Kulleen <seemant@gentoo.org> a52dec-0.7.3-r1.ebuild
+  files/digest-a52dev-0.7.3-r1 :
+
+  removed the "--enable-double" configure option, which Bernardo Silva
+  pointed out as being wrong, and it was confirmed by upstream as being a
+  debug option for their developers only.
 
 *a52dec-0.7.3 (15 Apr 2002)
 
