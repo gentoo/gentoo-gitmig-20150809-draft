@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.150 2005/02/09 16:19:35 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.151 2005/02/11 11:43:54 danarmak Exp $
+
+  11 Feb 2005; Dan Armak <danarmak@gentoo.org> +files/artsc-typo.diff,
+  kdemultimedia-3.4.0_beta2.ebuild:
+  Added a patch that already exists in the artsplugin-mpeglib ebuild. It
+  doesn't fix anything in particular, that I know of, but it might.
 
 *kdemultimedia-3.4.0_beta2 (09 Feb 2005)
 
