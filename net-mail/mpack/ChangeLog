@@ -1,0 +1,12 @@
+# ChangeLog for net-mail/mpack
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.1 2002/06/12 13:03:49 stroke Exp $
+
+*mpack-1.5 (12 Jun 2002)
+
+  12 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> ChangeLog :
+
+  New package. Ebuild author: Robert Coie <rac@intrigue.com>
+
+
+
