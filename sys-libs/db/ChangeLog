@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.45 2003/09/07 14:15:46 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.46 2003/09/08 08:39:40 robbat2 Exp $
+
+  08 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> db-4.0.14-r2.ebuild:
+  mark db-4.0 as stable on x86, and put it into testing on all other arches
 
   07 Sep 2003; Alexander Gabert <pappy@gentoo.org> db-3.2.9-r7.ebuild,
   db-3.2.9-r9.ebuild, db-4.0.14-r2.ebuild:
