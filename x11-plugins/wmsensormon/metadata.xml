@@ -1,5 +1,3 @@
- [32;01m*[0m Generated metadata.xml:
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
@@ -7,7 +5,7 @@
 <longdescription>
 Wmsensormon is a dockapp for Window Maker that utilizes lm_sensors to monitor 
 CPU temp, sys temp, fan speeds, and CPU voltage. It offers configurable 
-warnings for over­heating, and the sensors displayed are adjustible by the user 
+warnings for over-heating, and the sensors displayed are adjustible by the user
 with commandline parameters.
 </longdescription>
 </pkgmetadata>
