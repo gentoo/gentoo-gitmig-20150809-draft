@@ -1,0 +1,44 @@
+diff -u examples.old/coolwave.py examples/coolwave.py
+--- examples.old/coolwave.py	2004-01-18 11:35:37.000000000 +0100
++++ examples/coolwave.py	2004-01-18 11:54:32.000000000 +0100
+@@ -246,10 +246,10 @@
+         pass
+ 
+     def button_motion (self, width, height, event):
+-        if event.state == gtk.gdk.BUTTON1_MASK:
++        if event.state & gtk.gdk.BUTTON1_MASK:
+             self.__sphi += (event.x - self.__beginX)/4.0
+             self.__stheta += (self.__beginY - event.y)/4.0
+-        elif event.state == gtk.gdk.BUTTON2_MASK:
++        elif event.state & gtk.gdk.BUTTON2_MASK:
+             self.__sdepth += (self.__beginY - event.y)/10.0
+         self.__beginX = event.x
+         self.__beginY = event.y
+diff -u examples.old/Shapes.py examples/Shapes.py
+--- examples.old/Shapes.py	2004-01-18 11:35:37.000000000 +0100
++++ examples/Shapes.py	2004-01-18 11:54:32.000000000 +0100
+@@ -209,10 +209,10 @@
+         pass
+     
+     def button_motion(self, width, height, event):
+-        if event.state == gtk.gdk.BUTTON1_MASK:
++        if event.state & gtk.gdk.BUTTON1_MASK:
+             self.rotx = self.rotx + ((event.y-self.beginy)/width)*360.0
+             self.roty = self.roty + ((event.x-self.beginx)/height)*360.0
+-        elif event.state == gtk.gdk.BUTTON2_MASK:
++        elif event.state & gtk.gdk.BUTTON2_MASK:
+             self.depth = self.depth - ((event.y-self.beginy)/(height))*50.0;
+         
+         if self.depth > 130.0: self.depth = 130.0;
+diff -u examples.old/teapot2.py examples/teapot2.py
+--- examples.old/teapot2.py	2004-01-18 11:35:37.000000000 +0100
++++ examples/teapot2.py	2004-01-18 11:54:32.000000000 +0100
+@@ -79,7 +79,7 @@
+         pass
+     
+     def button_motion(self, width, height, event):
+-        if event.state == gtk.gdk.BUTTON1_MASK:
++        if event.state & gtk.gdk.BUTTON1_MASK:
+             self.rotx = self.rotx + ((event.y-self.beginy)/width)*360.0
+             self.roty = self.roty + ((event.x-self.beginx)/height)*360.0
+         
