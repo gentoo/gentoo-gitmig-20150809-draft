@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <avenj@gentoo.org> (16 Sep 2003)
+# Produces broken code. See bug 28875.
+=sys-devel/gcc-3.3.1-r2
+
 # <seemant@gentoo.org> (15 Sep 2003)
 # Working copy of gtk2 -claws got checked in
 =net-mail/sylpheed-claws-0.9.5-r1
