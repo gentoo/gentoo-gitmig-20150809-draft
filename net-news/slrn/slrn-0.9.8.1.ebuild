@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.1.ebuild,v 1.5 2004/12/07 14:39:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.1.ebuild,v 1.6 2004/12/18 16:46:16 swegener Exp $
 
 inherit eutils
 
@@ -24,6 +24,15 @@ RDEPEND="virtual/mta
 DEPEND="${RDEPEND}
 	uudeview? ( dev-libs/uulib )
 	nls? ( sys-devel/gettext )"
+
+pkg_setup() (
+	if use unicode && ! built_with_use sys-libs/slang unicode
+	then
+		eerror "For USE=\"unicode\" support you need to have your sys-libs/slang also compiled"
+		eerror "with USE=\"unicode\" support."
+		die "sys-libs/slang with USE=\"unicode\" support needed"
+	fi
+)
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,10 @@
 # ChangeLog for net-news/slrn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.34 2004/12/07 14:39:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.35 2004/12/18 16:46:16 swegener Exp $
+
+  18 Dec 2004; Sven Wegener <swegener@gentoo.org> slrn-0.9.8.1.ebuild:
+  Added built_with_use magic to depend on sys-libs/slang with unicode support,
+  if the unicode USE flag is active.
 
   07 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> slrn-0.9.8.1.ebuild:
   Stable on sparc
