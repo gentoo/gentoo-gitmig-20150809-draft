@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/sc/sc-7.12.ebuild,v 1.14 2004/05/21 17:01:32 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/sc/sc-7.12.ebuild,v 1.15 2004/06/19 02:00:55 weeve Exp $
 
 DESCRIPTION="sc is a free curses-based spreadsheet program that uses key bindings similar to vi and less."
 SRC_URI="ftp://ibiblio.org/pub/Linux/apps/financial/spreadsheet/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://ibiblio.org/pub/Linux/apps/financial/spreadsheet/"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="x86 ppc ~sparc ~amd64"
+KEYWORDS="x86 ppc sparc ~amd64"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-libs/ncurses-5.2"
