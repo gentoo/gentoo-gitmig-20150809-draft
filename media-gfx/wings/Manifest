@@ -1,4 +1,6 @@
 MD5 47c422554d460b7f913bf97cbd77af70 files/wings.sh 188
+MD5 f1c27021ec48dfa2ce2fdeeb25204c62 files/digest-wings-0.98.11a 66
 MD5 9ccf264bb035e088c69faf93d3145e2a files/digest-wings-0.98.11 65
 MD5 01bf38ffdb0704f572f8a0a1733e51d2 wings-0.98.11.ebuild 917
-MD5 7896dca12683957be711dae0550dd50f ChangeLog 589
+MD5 63aada9fc9ff329fed8800c5ab0c22ff ChangeLog 696
+MD5 a30338c956e29232c924ca04de416d9a wings-0.98.11a.ebuild 920
