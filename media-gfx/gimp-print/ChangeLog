@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.3 2002/04/28 23:47:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.4 2002/09/25 16:34:18 raker Exp $
+
+*gimp-print-4.2.2 (25 Sep 2002)
+
+  25 Sep 2002; Nick Hadaway <raker@gentoo.org> gimp-print-4.2.2.ebuild,
+  files/digest-gimp-pring-4.2.2 :
+  Version bump.  Lots of fixes. See...
+  http://sourceforge.net/project/shownotes.php?release_id=110475
+  for a complete list of changes.
 
 *gimp-print-4.2.1 (29 Apr 2002)
 
