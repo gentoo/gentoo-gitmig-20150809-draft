@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.35 2004/04/18 06:44:04 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.36 2004/04/20 03:27:19 weeve Exp $
+
+  19 Apr 2004; Jason Wever <weeve@gentoo.org> anjuta-1.2.2.ebuild:
+  Added ~sparc keyword.
 
 *anjuta-1.2.2 (18 Apr 2004)
 
