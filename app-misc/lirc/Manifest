@@ -1,20 +1,30 @@
-MD5 57a5196198df0e3e0ace088c108f41d0 ChangeLog 7049
-MD5 d456052ad1ec80985fcd939345cea279 lirc-0.7.0.ebuild 3990
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 be0068ee9d6ecbb8ad4ab32b03a26aae ChangeLog 7205
+MD5 e03c7f187656b1f8db2713455e97f000 lirc-0.7.0.ebuild 4024
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 9dec01b704006290727d5bf8d5c7fb3b lirc-0.7.0_pre3.ebuild 4430
 MD5 6ea46a8f53247afcc0e5566e20a97270 lirc-0.7.0_pre6.ebuild 4619
 MD5 6409d202b33858fe2babae36d09cff0c lirc-0.7.0_pre7.ebuild 3524
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 cec75bc2acbedddba62b71993bf9981c files/digest-lirc-0.7.0_pre3 67
+MD5 38f5c72cd28f349ae1bfc116190bda17 files/digest-lirc-0.7.0 150
+MD5 9d17cef262495b7318c8929900877365 files/digest-lirc-0.7.0_pre6 67
 MD5 6031968a1ddb51ff5265d1f22bd2d237 files/lirc-0.6.6-gentoo.diff.bz2 2215
 MD5 d0d865cbe48f328fb4cfb41e22d4407b files/lirc-0.7.0_pre2-i2c.patch.gz 705
 MD5 ab341c2bcfd5c4f94560dc256e32a70c files/lircd 450
 MD5 ce31954d209c4e81861d7e3c76aaa91e files/lircd.conf 71
-MD5 9d17cef262495b7318c8929900877365 files/digest-lirc-0.7.0_pre6 67
+MD5 cec75bc2acbedddba62b71993bf9981c files/digest-lirc-0.7.0_pre3 67
 MD5 ee2b49c33fb3b2a65122cfc698d9e100 files/xbox-lircd.conf 784
 MD5 556773de652aa24339c9807015e154a9 files/digest-lirc-0.7.0_pre7 154
 MD5 54581835f791fe37a1285926c6d21b12 files/lircmd 466
 MD5 ab567186b553096440ee53918e52b867 files/lirc-0.7.0_pre7-streamzap.patch.bz2 10724
 MD5 deb700405f78459561856d13837fdd7c files/lirc-0.7.0_pre7-configure.patch 924
-MD5 38f5c72cd28f349ae1bfc116190bda17 files/digest-lirc-0.7.0 150
 MD5 d874cf5e0b5c21cd211acea456f171d7 files/lirc-0.7.0-configure.in.patch 747
 MD5 8fd71f6a7c4842bfbad1e2bfb67f187f files/lirc-0.7.0-streamzap.patch.bz2 16868
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBodXemdTrptrqvGERAhLhAJ40uup7ZSzW3BjJb/lSh5s6D2dvAQCePu6W
+/vRt0NXNaY6A4O8Z+sh1N68=
+=QOSP
+-----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.47 2004/11/17 14:52:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.48 2004/11/22 12:04:39 dragonheart Exp $
+
+  22 Nov 2004; Daniel Black <dragonheart@gentoo.org> lirc-0.7.0.ebuild:
+  added debug support as per bug #71989. Thanks to Colin Macdonald <cbm@sfu.ca>
 
   17 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> lirc-0.7.0_pre7.ebuild:
   Keyworded sparc

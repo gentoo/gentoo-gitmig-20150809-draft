@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0.ebuild,v 1.1 2004/11/17 14:05:05 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0.ebuild,v 1.2 2004/11/22 12:04:39 dragonheart Exp $
 
 inherit eutils kernel-mod
 
@@ -41,7 +41,7 @@ HOMEPAGE="http://www.lirc.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="doc streamzap"
+IUSE="debug doc streamzap"
 KEYWORDS="~x86 ~ppc ~alpha ~ia64 ~amd64 ~ppc64"
 
 DEPEND="virtual/linux-sources"
@@ -91,6 +91,7 @@ src_compile() {
 		--localstatedir=/var \
 		--with-syslog=LOG_DAEMON \
 		--enable-sandboxed \
+		`use_enable debug` \
 		${LIRC_OPTS} || die "./configure failed"
 
 	emake || die
