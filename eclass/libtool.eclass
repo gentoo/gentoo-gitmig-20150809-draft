@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.31 2004/09/22 20:04:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.32 2004/09/25 06:35:09 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -265,7 +265,7 @@ uclibctoolize() {
 	local x
 
 	if [ -z "$@" ] ; then
-		targets="$(find ${S} -name configure)"
+		targets="$(find ${S} -name configure -o -name ltconfig)"
 	fi
 
 	einfo "Applying uClibc/libtool patches ..."
