@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <solar@gentoo.org> (5 Nov 2003)
+# secuirty update #32724
+<net-libs/libnids-1.18
+
 # <mr_bones_@gentoo.org> (5 Nov 2003)
 # Temporarily masking until the ebuilds are fixed.
 #
