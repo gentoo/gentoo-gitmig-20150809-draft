@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ioncube_loaders/ioncube_loaders-2.1.ebuild,v 1.3 2003/09/08 04:53:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ioncube_loaders/ioncube_loaders-2.4.ebuild,v 1.1 2004/01/05 03:39:20 robbat2 Exp $
 
-MY_P="${PN}_${PV}"
+MY_P="${PN}"
 PHP_VER="4.3"
 
 DESCRIPTION="PHP extension that support for running PHP scripts encoded with ionCube's encoder"
