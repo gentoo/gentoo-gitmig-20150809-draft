@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/koncd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/koncd/ChangeLog,v 1.1 2002/02/01 21:53:00 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/koncd/ChangeLog,v 1.2 2002/03/10 22:06:23 danarmak Exp $
+
+  10 Mar 2002; Dan Armak <danarmak@gentoo.org> changelog:
+  
+  Added several missing deps; thanks to Popsickle for finding them. Now the deps
+  include everything needed for full functionality.
 
 *koncd-1.0_rc1 (1 Feb 2002)
 
