@@ -1,5 +1,5 @@
-MD5 9b1f6dd05c37766dae853525eec273fe wmcp-1.2.8.ebuild 742
-MD5 190805c016c353e59331b979356ed3b5 ChangeLog 794
+MD5 5d2969b32c3050c1aa0adef9b34cfaac wmcp-1.2.8.ebuild 737
+MD5 3806cb3dcd464db84b3b6ac41035caf4 ChangeLog 880
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
 MD5 bdcccfed4408157d33483585f88c7ccc files/wmcp-1.2.8-makefile.patch 446
 MD5 47184d848f1e3cd7af6cbbf1da2ebdca files/digest-wmcp-1.2.8 60
