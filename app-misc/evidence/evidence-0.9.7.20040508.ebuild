@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.7.20040501.ebuild,v 1.2 2004/05/04 02:02:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.7.20040508.ebuild,v 1.1 2004/05/12 20:45:07 vapier Exp $
 
 inherit enlightenment eutils flag-o-matic
 
