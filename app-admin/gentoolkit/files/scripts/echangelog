@@ -49,11 +49,11 @@ if (-f 'ChangeLog') {
 open C, 'cvs diff --brief 2>&1 |' or die "Can't run cvs diff: $!\n";
 while (<C>) {
     /ChangeLog/ and next;
-	if (/^cvs server: (([^\/]*?)\.ebuild) was removed/) { 
+	if (/^cvs.*?: (([^\/]*?)\.ebuild) was removed/) { 
 		push @files, $1;
 		$versions{$2} = 0;	# existing ebuild that was removed
 	}
-    if (/^cvs server: (\S+) was removed/) {
+    if (/^cvs.*?: (\S+) was removed/) {
 		push @files, $1;
 		# existing file that has been removed
 	}
@@ -65,11 +65,11 @@ while (<C>) {
 		push @files, $1;
 		# existing file, but not an ebuild, so no %version entry
 	}
-	elsif (/^cvs server: (([^\/]*?)\.ebuild) is a new entry/) { 
+	elsif (/^cvs.*?: (([^\/]*?)\.ebuild) is a new entry/) { 
 		push @files, $1;
 		$versions{$2} = -1;	# new ebuild, will create a new entry
 	}
-	elsif (/^cvs server: (\S+) is a new entry/) {
+	elsif (/^cvs.*?: (\S+) is a new entry/) {
         push @files, $1;
 		# new file, but not an ebuild, so no %version entry
 	}
