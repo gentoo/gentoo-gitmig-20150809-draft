@@ -1,10 +1,10 @@
 # ChangeLog for net-im/gnugadu
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.5 2004/03/17 19:59:41 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.6 2004/03/17 20:01:01 spock Exp $
 
   17 Mar 2004; Michal Januszewski <spock@gentoo.org> gnugadu-2.0_pre8.ebuild:
-  Added full spelling support, thanks to MadeJ <madej@afn.no-ip.org> for his
-  comments on gtkspell.
+  Added full spell-checking support, thanks to MadeJ <madej@afn.no-ip.org>
+  for his comments on gtkspell.
 
   17 Mar 2004; Michal Januszewski <spock@gentoo.org> gnugadu-2.0_pre8.ebuild:
   Fixed Perl support, added preliminary support for gtkspell.
