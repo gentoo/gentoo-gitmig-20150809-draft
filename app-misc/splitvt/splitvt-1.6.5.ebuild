@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.5.ebuild,v 1.13 2004/03/14 10:53:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.5.ebuild,v 1.14 2004/03/17 22:14:10 aliz Exp $
 
 SRC_URI="http://www.devolution.com/~slouken/projects/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.devolution.com/~slouken/projects/splitvt"
@@ -8,7 +8,7 @@ DESCRIPTION="A program for splitting terminals into two shells"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc"
+KEYWORDS="x86 sparc ppc ~amd64"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 

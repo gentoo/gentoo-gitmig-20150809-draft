@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/splitvt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.4 2004/03/14 10:53:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.5 2004/03/17 22:14:10 aliz Exp $
+
+  17 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> splitvt-1.6.5.ebuild:
+  Adding amd64 keyword. Closing #44305.
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> splitvt-1.6.5.ebuild:
   Don't assign default to S; header fix
