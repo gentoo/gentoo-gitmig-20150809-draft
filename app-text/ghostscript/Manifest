@@ -1,4 +1,4 @@
-MD5 ae96d809fd03acafbfe3da3202fc037d ChangeLog 6127
+MD5 b97dbdc769af2392bc7e1b7be9bd6d5e ChangeLog 6520
 MD5 5969230b95c1114627460bc012999274 ghostscript-7.05.3-r1.ebuild 1964
 MD5 02e2e18900fd6c21bfacfc834a8cc5d5 ghostscript-7.05.5-r1.ebuild 2481
 MD5 3b965d457685aacc4e1ae4e0bba087e8 ghostscript-7.05.5-r2.ebuild 2603
@@ -6,7 +6,7 @@ MD5 b109fca2c805d2bea14c0261a373616f ghostscript-7.05.5.ebuild 1886
 MD5 96922ead39294ea771bcc47b5d4b7a2b ghostscript-7.05.6-r1.ebuild 2605
 MD5 5775b11c48d3699b400fe9d518682f0c ghostscript-7.05.6-r2.ebuild 2712
 MD5 5fd0e465470e0c28630425b8aa19f06a ghostscript-7.05.6.ebuild 2592
-MD5 c8563213c40627b530bfeea7d80ec0e1 ghostscript-7.05.6-r3.ebuild 2923
+MD5 369f4b196922538d27af762d313c177d ghostscript-7.05.6-r3.ebuild 3040
 MD5 cd47befad950c27337bdc21511f89050 files/digest-ghostscript-7.05.3-r1 295
 MD5 ac5b31ed5b19e7d882fc094159e35e8d files/digest-ghostscript-7.05.5 220
 MD5 3cdc3dc3a080a9e1e29ba2ddf05debd4 files/digest-ghostscript-7.05.5-r1 359

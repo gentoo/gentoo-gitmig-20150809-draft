@@ -1,0 +1,11 @@
+--- espgs-7.05.5/src/gdevpdf.c-orig	2003-05-24 14:19:35.000000000 -0400
++++ espgs-7.05.5/src/gdevpdf.c	2003-05-24 14:19:57.000000000 -0400
+@@ -504,7 +504,7 @@
+ 	 * If we're on a system that provides /dev/random, that's the best
+ 	 * source of good random bits.
+ 	 */
+-	FILE *rfile = fopen("/dev/random", "rb");
++	FILE *rfile = fopen("/dev/urandom", "rb");
+ 
+ 	if (rfile && fread(&pdev->random_offset, sizeof(pdev->random_offset),
+ 			   1, rfile) == sizeof(pdev->random_offset)
