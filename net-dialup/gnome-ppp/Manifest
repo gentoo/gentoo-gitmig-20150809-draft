@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 31c5d8e967dccf2fb06d2f834463e488 ChangeLog 1397
+MD5 5c028da703460e2af3447999d16b2881 ChangeLog 1476
 MD5 82d1ae50bd35737aa5cc8a6b2a08a7b1 gnome-ppp-0.3.13.ebuild 676
-MD5 d1f4a15687e36d02bf20e8bb6bf11458 gnome-ppp-0.3.14.ebuild 677
-MD5 95435965170cb0ef9682824cdca827af gnome-ppp-0.3.16.ebuild 659
+MD5 139c0bb5ea6a9ad258e07b2df46dfb05 gnome-ppp-0.3.14.ebuild 676
 MD5 202034bd87dab639103a4f2f07b6c376 metadata.xml 222
+MD5 95435965170cb0ef9682824cdca827af gnome-ppp-0.3.16.ebuild 659
 MD5 e612d52468f389965175314ad05476b9 gnome-ppp-0.3.17.ebuild 717
 MD5 543c520c15401ea84691f8cb24e79e14 files/digest-gnome-ppp-0.3.13 68
 MD5 e538e9e98d900fbd41d0c2f4d1f74378 files/digest-gnome-ppp-0.3.14 68
 MD5 c3e0e483b4d249483afc35c10e91ad8d files/digest-gnome-ppp-0.3.16 68
 MD5 307b4dc30ecaa606ed441efe0f953c4e files/digest-gnome-ppp-0.3.17 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBnmodjtv59x0+BrURAq2CAJ491n8NJbZ/0zcwRWM8o62ASmTjTgCgghQo
-+1O/eNr+fBwX0i9CI9iXf6A=
-=oSoB
------END PGP SIGNATURE-----

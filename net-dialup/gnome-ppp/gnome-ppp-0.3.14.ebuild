@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/gnome-ppp-0.3.14.ebuild,v 1.2 2004/08/05 07:10:51 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/gnome-ppp-0.3.14.ebuild,v 1.3 2004/11/27 06:46:37 pclouds Exp $
 
 inherit gnome2 eutils
 
@@ -12,7 +12,7 @@ MP=${PV%.[0-9]*}
 SRC_URI="http://www.gnome-ppp.org/download/${MP}/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND=">=net-dialup/wvdial-1.53-r1
