@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.0.0.ebuild,v 1.1 2004/06/26 16:45:28 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.0.0.ebuild,v 1.2 2004/06/27 10:15:53 dholm Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ DEPEND="mysql? ( >=dev-db/mysql-3.23 ) || ( >=sys-libs/db-4.0 )
 		procmail? ( >=mail-filter/procmail-3.22 )"
 RDEPEND="virtual/cron
 		app-admin/logrotate"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="3.0"
 
 # some FHS-like structure
