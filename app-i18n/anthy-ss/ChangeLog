@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/anthy-ss
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/ChangeLog,v 1.53 2004/10/18 15:48:12 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/ChangeLog,v 1.54 2004/10/23 10:04:00 hattya Exp $
+
+*anthy-ss-5822 (23 Oct 2004)
+
+  23 Oct 2004; Akinori Hattori <hattya@gentoo.org> +anthy-ss-5822.ebuild:
+  version bump.
 
   19 Oct 2004; Akinori Hattori <hattya@gentoo.org> -anthy-ss-5812.ebuild:
   this version has a bug. shared libraries don't have ".so" suffix.
