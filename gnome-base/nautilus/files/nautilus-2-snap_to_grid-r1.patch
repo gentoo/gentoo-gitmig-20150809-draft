@@ -1,0 +1,1188 @@
+Index: libnautilus-private/nautilus-icon-container.c
+===================================================================
+RCS file: /cvs/gnome/nautilus/libnautilus-private/nautilus-icon-container.c,v
+retrieving revision 1.339
+diff -u -r1.339 nautilus-icon-container.c
+--- libnautilus-private/nautilus-icon-container.c	23 Apr 2003 14:31:21 -0000	1.339
++++ libnautilus-private/nautilus-icon-container.c	3 May 2003 23:21:42 -0000
+@@ -101,9 +101,9 @@
+ #define STANDARD_ICON_GRID_WIDTH 155
+ 
+ /* Desktop layout mode defines */
+-#define DESKTOP_PAD_HORIZONTAL 	30
++#define DESKTOP_PAD_HORIZONTAL 	10
+ #define DESKTOP_PAD_VERTICAL 	10
+-#define CELL_SIZE 		20
++#define SNAP_SIZE 		78
+ 
+ /* Value used to protect against icons being dragged outside of the desktop bounds */
+ #define DESKTOP_ICON_SAFETY_PAD 10
+@@ -116,6 +116,14 @@
+ #define MINIMUM_EMBEDDED_TEXT_RECT_WIDTH       20
+ #define MINIMUM_EMBEDDED_TEXT_RECT_HEIGHT      20
+ 
++#define SNAP_HORIZONTAL(func,x) ((func ((double)((x) - DESKTOP_PAD_HORIZONTAL) / SNAP_SIZE) * SNAP_SIZE) + DESKTOP_PAD_HORIZONTAL)
++#define SNAP_VERTICAL(func, y) ((func ((double)((y) - DESKTOP_PAD_VERTICAL) / SNAP_SIZE) * SNAP_SIZE) + DESKTOP_PAD_VERTICAL)
++
++#define SNAP_NEAREST_HORIZONTAL(x) SNAP_HORIZONTAL (eel_round, x)
++#define SNAP_NEAREST_VERTICAL(y) SNAP_VERTICAL (eel_round, y)
++
++#define SNAP_CEIL_HORIZONTAL(x) SNAP_HORIZONTAL (ceil, x)
++#define SNAP_CEIL_VERTICAL(y) SNAP_VERTICAL (ceil, y)
+ 
+ enum {
+ 	NAUTILUS_TYPESELECT_FLUSH_DELAY = 1000000
+@@ -220,6 +228,15 @@
+ 	CLEARED,
+ 	LAST_SIGNAL
+ };
++
++typedef struct {
++	int **icon_grid;
++	int *grid_memory;
++	int num_rows;
++	int num_columns;
++	gboolean tight;
++} PlacementGrid;
++
+ static guint signals[LAST_SIGNAL];
+ 
+ /* Functions dealing with NautilusIcons.  */
+@@ -335,6 +352,7 @@
+ icon_set_size (NautilusIconContainer *container,
+ 	       NautilusIcon *icon,
+ 	       guint icon_size,
++	       gboolean snap,
+ 	       gboolean update_position)
+ {
+ 	guint old_size;
+@@ -350,8 +368,8 @@
+ 		(container->details->zoom_level);
+ 	nautilus_icon_container_move_icon (container, icon,
+ 					   icon->x, icon->y,
+-					   scale, scale,
+-					   FALSE, update_position);
++					   scale, scale, FALSE,
++					   snap, update_position);
+ }
+ 
+ static void
+@@ -398,6 +416,15 @@
+ 	if (icon == container->details->stretch_icon) {
+ 		container->details->stretch_icon = NULL;
+ 		nautilus_icon_canvas_item_set_show_stretch_handles (icon->item, FALSE);
++		/* snap the icon if necessary */
++		if (container->details->keep_aligned) {
++			nautilus_icon_container_move_icon (container,
++							   icon,
++							   icon->x, icon->y,
++							   icon->scale_x, icon->scale_y,
++							   FALSE, TRUE, TRUE);
++		}
++		
+ 		emit_stretch_ended (container, icon);
+ 	}
+ 
+@@ -1004,150 +1031,313 @@
+ 	g_array_free (positions, TRUE);
+ }
+ 
+-/* Search for available space at location */
+-static gboolean
+-find_open_grid_space (NautilusIcon *icon, int **icon_grid, int num_rows, 
+-		      int num_columns, int row, int column)
+-{		      
+-	int row_index, column_index;
+-	int x1, x2, y1, y2;
+-	double width, height;
+-	int qwidth, qheight;
+-	
+-	/* Get icon dimensions */
+-	icon_get_bounding_box (icon, &x1, &y1, &x2, &y2);
+-
+-	width = (x2 - x1) + DESKTOP_PAD_HORIZONTAL;
+-	height = (y2 - y1) + DESKTOP_PAD_VERTICAL;
+-
+-	/* Convert to grid coordinates */
+-	qwidth = ceil (width / CELL_SIZE);
+-	qheight = ceil (height / CELL_SIZE);
++static void
++snap_position (NautilusIconContainer *container,
++	       NautilusIcon *icon,
++	       int *x, int *y)
++{
++	int center_x;
++	int baseline_y;
++	int icon_width;
++	int icon_height;
++	ArtDRect icon_position;
++	
++	if (*x < DESKTOP_PAD_HORIZONTAL) {
++		*x = DESKTOP_PAD_HORIZONTAL;
++	}
+ 
+-	if ((row + qwidth > num_rows) || (column + qheight > num_columns)) {
+-		return FALSE;
++	if (*y < DESKTOP_PAD_VERTICAL) {
++		*y = DESKTOP_PAD_VERTICAL;
+ 	}
+ 
+-	qwidth += row;	
+-	qheight += column;
++	icon_position = nautilus_icon_canvas_item_get_icon_rectangle (icon->item);
++	icon_width = icon_position.x1 - icon_position.x0;
++	icon_height = icon_position.y1 - icon_position.y0;
+ 	
+-	for (row_index = row; row_index < qwidth; row_index++) {
+-		for (column_index = column; column_index < qheight; column_index++) {
+-			if (icon_grid [row_index] [column_index] == 1) {
+-				return FALSE;
+-			}
+-		}
+-	}
+-	return TRUE;
++	center_x = *x + icon_width / 2;
++	*x = SNAP_NEAREST_HORIZONTAL (center_x) - (icon_width / 2);
++
++	/* Find the grid position vertically and place on the proper baseline */
++	baseline_y = *y + icon_height;
++	baseline_y = SNAP_NEAREST_VERTICAL (baseline_y);
++	*y = baseline_y - (icon_position.y1 - icon_position.y0);
++}
++
++static int
++compare_icons_by_position (gconstpointer a, gconstpointer b)
++{
++	NautilusIcon *icon_a, *icon_b;
++	int x1, y1, x2, y2;
++	int center_a;
++	int center_b;
++
++	icon_a = (NautilusIcon*)a;
++	icon_b = (NautilusIcon*)b;
++
++	icon_get_bounding_box (icon_a, &x1, &y1, &x2, &y2);
++	center_a = x1 + (x2 - x1) / 2;
++	icon_get_bounding_box (icon_b, &x1, &y1, &x2, &y2);
++	center_b = x1 + (x2 - x1) / 2;
++
++	return center_a == center_b ?
++		icon_a->y - icon_b->y :
++		center_a - center_b;
+ }
+ 
++static PlacementGrid *
++placement_grid_new (NautilusIconContainer *container, gboolean tight)
++{
++	PlacementGrid *grid;
++	int width, height;
++	int num_columns;
++	int num_rows;
++	int i;
++
++	/* Get container dimensions */
++	width  = GTK_WIDGET (container)->allocation.width /
++		EEL_CANVAS (container)->pixels_per_unit
++		- container->details->left_margin
++		- container->details->right_margin;
++	height = GTK_WIDGET (container)->allocation.height /
++		EEL_CANVAS (container)->pixels_per_unit
++		- container->details->top_margin
++		- container->details->bottom_margin;
++
++	num_columns = width / SNAP_SIZE;
++	num_rows = height / SNAP_SIZE;
++	
++	if (num_columns == 0 || num_rows == 0) {
++		return NULL;
++	}
++
++	grid = g_new0 (PlacementGrid, 1);
++	grid->tight = tight;
++	grid->num_columns = num_columns;
++	grid->num_rows = num_rows;
++
++	grid->grid_memory = g_new0 (int, (num_rows * num_columns));
++	grid->icon_grid = g_new0 (int *, num_columns);
++	
++	for (i = 0; i < num_columns; i++) {
++		grid->icon_grid[i] = grid->grid_memory + (i * num_rows);
++	}
++	
++	return grid;
++}
+ 
+ static void
+-get_best_empty_grid_location (NautilusIcon *icon, int **icon_grid, int num_rows, 
+-			      int num_columns, int *x, int *y)
++placement_grid_free (PlacementGrid *grid)
+ {
+-	gboolean found_space;
+-	int row, column;
++	g_free (grid->icon_grid);
++	g_free (grid->grid_memory);
++	g_free (grid);
++}
++
++static gboolean
++placement_grid_position_is_free (PlacementGrid *grid, ArtIRect pos)
++{
++	int x, y;
+ 	
+-	g_assert (icon_grid != NULL);
+-	g_assert (x != NULL);
+-	g_assert (y != NULL);
+-
+-	found_space = FALSE;
+-	
+-	/* Set up default fallback position */
+-	*x = num_columns * CELL_SIZE;
+-	*y = num_rows * CELL_SIZE;
+-
+-	/* Find best empty location */
+-	for (row = 0; row < num_rows; row++) {
+-		for (column = 0; column < num_columns; column++) {
+-			found_space = find_open_grid_space (icon, icon_grid, num_rows, 
+-							    num_columns, row, column);
+-			if (found_space) {				
+-				*x = row * CELL_SIZE;
+-				*y = column * CELL_SIZE;
+-
+-				/* Correct for padding */
+-				if (*x < DESKTOP_PAD_HORIZONTAL) {
+-					*x = DESKTOP_PAD_HORIZONTAL;
+-				}
+-				if (*y < DESKTOP_PAD_VERTICAL) {
+-					*y = DESKTOP_PAD_VERTICAL;
+-				}
+-				return;
++	g_return_val_if_fail (pos.x0 >= 0 && pos.x0 < grid->num_columns, TRUE);
++	g_return_val_if_fail (pos.y0 >= 0 && pos.y0 < grid->num_rows, TRUE);
++	g_return_val_if_fail (pos.x1 >= 0 && pos.x1 < grid->num_columns, TRUE);
++	g_return_val_if_fail (pos.y1 >= 0 && pos.y1 < grid->num_rows, TRUE);
++
++	for (x = pos.x0; x <= pos.x1; x++) {
++		for (y = pos.y0; y <= pos.y1; y++) {
++			if (grid->icon_grid[x][y] != 0) {
++				return FALSE;
+ 			}
+-		}		
++		}
+ 	}
++
++	return TRUE;
+ }
+ 
+ static void
+-mark_icon_location_in_grid (NautilusIcon *icon, int **icon_grid, int num_rows, int num_columns)
++placement_grid_mark (PlacementGrid *grid, ArtIRect pos)
+ {
+-	int x1, x2, y1, y2;
+-	double width, height;
+-	int qx, qy, qwidth, qheight, qy_index;
+-	int grid_width, grid_height;
+-
+-	icon_get_bounding_box (icon, &x1, &y1, &x2, &y2);
+-
+-	width = (x2 - x1) + DESKTOP_PAD_HORIZONTAL;
+-	height = (y2 - y1) + DESKTOP_PAD_VERTICAL;
+-
+-	/* Convert x and y to our quantized grid value */
+-	qx = icon->x / CELL_SIZE;
+-	qy = icon->y / CELL_SIZE;
+-	qwidth = ceil (width / CELL_SIZE);
+-	qheight = ceil (height / CELL_SIZE);
+-
+-	/* Check and correct for edge conditions */
+-	grid_width = num_rows;
+-	grid_height = num_columns;
++	int x, y;
+ 	
+-	if ((qx + qwidth) > grid_width) {
+-		qwidth = grid_width;  
+-	} else {
+-		qwidth = qx + qwidth;
++	g_return_if_fail (pos.x0 >= 0 && pos.x0 < grid->num_columns);
++	g_return_if_fail (pos.y0 >= 0 && pos.y0 < grid->num_rows);
++	g_return_if_fail (pos.x1 >= 0 && pos.x1 < grid->num_columns);
++	g_return_if_fail (pos.y1 >= 0 && pos.y1 < grid->num_rows);
++
++	for (x = pos.x0; x <= pos.x1; x++) {
++		for (y = pos.y0; y <= pos.y1; y++) {
++			grid->icon_grid[x][y] = 1;
++		}
+ 	}
+-	if ((qy + qheight) > grid_height) {
+-		qheight = grid_height;  
++}
++
++static void
++canvas_position_to_grid_position (PlacementGrid *grid,
++				  ArtIRect canvas_position,
++				  ArtIRect *grid_position)
++{
++	/* The first bit of this block will identify all intersections
++	 * that the icon actually crosses.  The second bit will mark
++	 * any intersections that the icon is adjacent to.
++	 * The first causes minimal moving around during a snap, but
++	 * can end up with partially overlapping icons.  The second one won't
++	 * allow any overlapping, but can cause more movement to happen 
++	 * during a snap. */
++	if (grid->tight) {
++		grid_position->x0 = ceil ((double)(canvas_position.x0 - DESKTOP_PAD_HORIZONTAL) / SNAP_SIZE);
++		grid_position->y0 = ceil ((double)(canvas_position.y0 - DESKTOP_PAD_VERTICAL) / SNAP_SIZE);
++		grid_position->x1 = floor ((double)(canvas_position.x1 - DESKTOP_PAD_HORIZONTAL) / SNAP_SIZE);		
++		grid_position->y1 = floor ((double)(canvas_position.y1 - DESKTOP_PAD_VERTICAL) / SNAP_SIZE);
+ 	} else {
+-		qheight = qy + qheight;  
++		grid_position->x0 = floor ((double)(canvas_position.x0 - DESKTOP_PAD_HORIZONTAL) / SNAP_SIZE);
++		grid_position->y0 = floor ((double)(canvas_position.y0 - DESKTOP_PAD_VERTICAL) / SNAP_SIZE);
++		grid_position->x1 = ceil ((double)(canvas_position.x1 - DESKTOP_PAD_HORIZONTAL) / SNAP_SIZE);
++		grid_position->y1 = ceil ((double)(canvas_position.y1 - DESKTOP_PAD_VERTICAL) / SNAP_SIZE);
+ 	}
++
++	grid_position->x0 = CLAMP (grid_position->x0, 0, grid->num_columns - 1);
++	grid_position->y0 = CLAMP (grid_position->y0, 0, grid->num_rows - 1);
++	grid_position->x1 = CLAMP (grid_position->x1, grid_position->x0, grid->num_columns - 1);
++	grid_position->y1 = CLAMP (grid_position->y1, grid_position->y0, grid->num_rows - 1);
++}
++
++static void
++placement_grid_mark_icon (PlacementGrid *grid, NautilusIcon *icon)
++{
++	ArtIRect icon_pos;
++	ArtIRect grid_pos;
+ 	
+-	/* Mark location */
+-	for (; qx < qwidth; qx++) {		
+-		for (qy_index = qy; qy_index < qheight; qy_index++) {
+-			icon_grid [qx] [qy_index] = 1;
++	icon_get_bounding_box (icon, 
++			       &icon_pos.x0, &icon_pos.y0,
++			       &icon_pos.x1, &icon_pos.y1);
++	canvas_position_to_grid_position (grid, 
++					  icon_pos,
++					  &grid_pos);
++	placement_grid_mark (grid, grid_pos);
++}
++
++static void
++find_empty_location (NautilusIconContainer *container,
++		     PlacementGrid *grid,
++		     NautilusIcon *icon,
++		     int start_x,
++		     int start_y,
++		     int *x, 
++		     int *y)
++{
++	double icon_width, icon_height;
++	int canvas_width;
++	int canvas_height;
++	ArtIRect icon_position;
++	ArtDRect pixbuf_rect;
++	gboolean collision;
++
++	/* Get container dimensions */
++	canvas_width  = GTK_WIDGET (container)->allocation.width /
++		EEL_CANVAS (container)->pixels_per_unit
++		- container->details->left_margin
++		- container->details->right_margin;
++	canvas_height = GTK_WIDGET (container)->allocation.height /
++		EEL_CANVAS (container)->pixels_per_unit
++		- container->details->top_margin
++		- container->details->bottom_margin;
++
++	icon_get_bounding_box (icon, 
++			       &icon_position.x0, &icon_position.y0, 
++			       &icon_position.x1, &icon_position.y1);
++	icon_width = icon_position.x1 - icon_position.x0;
++	icon_height = icon_position.y1 - icon_position.y0;
++	
++	pixbuf_rect = nautilus_icon_canvas_item_get_icon_rectangle (icon->item);
++	
++	/* Start the icon on a grid location */
++	snap_position (container, icon, &start_x, &start_y);
++
++	icon_position.x0 = start_x;
++	icon_position.y0 = start_y;
++	icon_position.x1 = icon_position.x0 + icon_width;
++	icon_position.y1 = icon_position.y0 + icon_height;
++
++	do {
++		ArtIRect grid_position;
++
++		collision = FALSE;
++		
++		canvas_position_to_grid_position (grid,
++						  icon_position,
++						  &grid_position);
++
++		if (!placement_grid_position_is_free (grid, grid_position)) {
++			icon_position.y0 += SNAP_SIZE;
++			icon_position.y1 = icon_position.y0 + icon_width;
++			
++			if (icon_position.y1 + DESKTOP_PAD_VERTICAL > canvas_height) {
++				/* Move to the next column */
++				icon_position.y0 = DESKTOP_PAD_VERTICAL + SNAP_SIZE - (pixbuf_rect.y1 - pixbuf_rect.y0);
++				while (icon_position.y0 < DESKTOP_PAD_VERTICAL) {
++					icon_position.y0 += SNAP_SIZE;
++				}
++				icon_position.y1 = icon_position.y0 + icon_width;
++				
++				icon_position.x0 += SNAP_SIZE;
++				icon_position.x1 = icon_position.x0 + icon_height;
++			}
++				
++			collision = TRUE;
+ 		}
+-	}	
++	} while (collision && (icon_position.x1 < canvas_width));
++
++	*x = icon_position.x0;
++	*y = icon_position.y0;
+ }
+ 
+-static void 
+-mark_icon_locations_in_grid (GList *icon_list, int **icon_grid, int num_rows, int num_columns)
++static void
++align_icons (NautilusIconContainer *container)
+ {
+-	GList *p;
+-	NautilusIcon *icon;
++	GList *unplaced_icons;
++	GList *l;
++	PlacementGrid *grid;
++
++	unplaced_icons = g_list_copy (container->details->icons);
+ 	
+-	/* Mark filled grid locations */
+-	for (p = icon_list; p != NULL; p = p->next) {
+-		icon = p->data;
+-		mark_icon_location_in_grid (icon, icon_grid, num_rows, num_columns);
++	unplaced_icons = g_list_sort (unplaced_icons, 
++				      compare_icons_by_position);
++
++	grid = placement_grid_new (container, TRUE);
++
++	if (!grid) {
++		return;
+ 	}
++
++	for (l = unplaced_icons; l != NULL; l = l->next) {
++		NautilusIcon *icon;
++		int x, y;
++
++		icon = l->data;
++		x = icon->x;
++		y = icon->y;
++
++		find_empty_location (container, grid, 
++				     icon, x, y, &x, &y);
++
++		icon_set_position (icon, x, y);
++
++		placement_grid_mark_icon (grid, icon);
++	}
++
++	g_list_free (unplaced_icons);
++
++	placement_grid_free (grid);
+ }
+ 
+ static void
+ lay_down_icons_tblr (NautilusIconContainer *container, GList *icons)
+ {
+ 	GList *p, *placed_icons, *unplaced_icons;
+-	int index, total, new_length, placed;
++	int total, new_length, placed;
+ 	NautilusIcon *icon;
+-	int width, height, max_width, icon_width, icon_height;
++	int width, height, max_width, column_width, icon_width, icon_height;
+ 	int x, y, x1, x2, y1, y2;
+-	int *grid_memory;
+-	int **icon_grid;
+-	int num_rows, num_columns;
+-	int row, column;
+ 	ArtDRect icon_rect;
+ 
+ 	/* Get container dimensions */
+@@ -1168,6 +1358,7 @@
+ 	new_length = g_list_length (icons);
+ 	placed = total - new_length;
+ 	if (placed > 0) {
++		PlacementGrid *grid;
+ 		/* Add only placed icons in list */
+ 		for (p = container->details->icons; p != NULL; p = p->next) {
+ 			icon = p->data;
+@@ -1181,54 +1372,40 @@
+ 		}
+ 		placed_icons = g_list_reverse (placed_icons);
+ 		unplaced_icons = g_list_reverse (unplaced_icons);
+-					
+-		/* Allocate grid array */
+-		num_rows = width / CELL_SIZE;
+-		num_columns = height / CELL_SIZE;
+-
+-		/* Allocate array memory */
+-		grid_memory = malloc (num_rows * num_columns * sizeof (int *));
+-		g_assert (grid_memory);
+-
+-		/* Allocate room for the pointers to the rows */
+-		icon_grid = malloc (num_rows * sizeof (int *));
+-		g_assert (icon_grid);
+-
+-		/* Point to array pointers */
+-		for (index = 0; index < num_rows; index++) {
+-			icon_grid[index] = grid_memory + (index * num_columns);
+-		}
+-
+-		/* Set all grid values to unfilled */
+-		for (row = 0; row < num_rows; row++) {
+-			for (column = 0; column < num_columns; column++) {
+-				icon_grid [row] [column] = 0;
+-			}
+-		}
+-		
+-		/* Mark filled grid locations */
+-		mark_icon_locations_in_grid (placed_icons, icon_grid, num_rows, num_columns);
+ 
+-		/* Place unplaced icons in the best locations */
+-		for (p = unplaced_icons; p != NULL; p = p->next) {
+-			icon = p->data;
+-			get_best_empty_grid_location (icon, icon_grid, num_rows, num_columns,
+-						      &x, &y);
++		grid = placement_grid_new (container, FALSE);
+ 
+-			icon_get_bounding_box (icon, &x1, &y1, &x2, &y2);
+-			icon_width = x2 - x1;
++		if (grid) {
++			for (p = placed_icons; p != NULL; p = p->next) {
++				placement_grid_mark_icon
++					(grid, (NautilusIcon*)p->data);
++			}
+ 			
+-			icon_rect = nautilus_icon_canvas_item_get_icon_rectangle (icon->item);
++			/* Place unplaced icons in the best locations */
++			for (p = unplaced_icons; p != NULL; p = p->next) {
++				icon = p->data;
++				
++				icon_rect = nautilus_icon_canvas_item_get_icon_rectangle (icon->item);
++				icon_get_bounding_box (icon, 
++						       &x1, &y1, &x2, &y2);
++				
++				/* Start the icon in the first column */ 
++				x = DESKTOP_PAD_HORIZONTAL + SNAP_SIZE - ((x2 - x1) / 2);
++				y = DESKTOP_PAD_VERTICAL + SNAP_SIZE - (icon_rect.y1 - icon_rect.y0);
++
++				find_empty_location (container,
++						     grid,
++						     icon,
++						     x, y,
++						     &x, &y);
++				
++				icon_set_position (icon, x, y);
++				placement_grid_mark_icon (grid, icon);
++			}
+ 
+-			icon_set_position (icon,
+-					   x + (icon_width - (icon_rect.x1 - icon_rect.x0)) / 2, y);
+-			/* Add newly placed icon to grid */
+-			mark_icon_location_in_grid (icon, icon_grid, num_rows, num_columns);
++			placement_grid_free (grid);
+ 		}
+-
+-		/* Clean up */
+-		free (icon_grid);
+-		free (grid_memory);
++		
+ 		g_list_free (placed_icons);
+ 		g_list_free (unplaced_icons);
+ 	} else {
+@@ -1236,18 +1413,32 @@
+ 		x = DESKTOP_PAD_HORIZONTAL;
+ 
+ 		while (icons != NULL) {
++			int center_x;
++			int baseline;
++			gboolean should_snap;
++			
++			should_snap = !(container->details->tighter_layout && !container->details->keep_aligned);
++			
+ 			y = DESKTOP_PAD_VERTICAL;
+-			max_width = 0;
+ 
++			max_width = 0;
++			
+ 			/* Calculate max width for column */
+ 			for (p = icons; p != NULL; p = p->next) {
+ 				icon = p->data;
+-				
+ 				icon_get_bounding_box (icon, &x1, &y1, &x2, &y2);
+ 				
+ 				icon_width = x2 - x1;
+ 				icon_height = y2 - y1;
+-				
++
++				if (should_snap) {
++					/* Snap the baseline to a grid position */
++					icon_rect = nautilus_icon_canvas_item_get_icon_rectangle (icon->item);
++					baseline = y + (icon_rect.y1 - icon_rect.y0);
++					baseline = SNAP_CEIL_VERTICAL (baseline);
++					y = baseline - (icon_rect.y1 - icon_rect.y0);
++				}
++				    
+ 				/* Check and see if we need to move to a new column */
+ 				if (y != DESKTOP_PAD_VERTICAL && y > height - icon_height) {
+ 					break;
+@@ -1261,6 +1452,15 @@
+ 			}
+ 
+ 			y = DESKTOP_PAD_VERTICAL;
++
++			center_x = x + max_width / 2;
++			column_width = max_width;
++			if (should_snap) {
++				/* Find the grid column to center on */
++				center_x = SNAP_CEIL_HORIZONTAL (center_x);
++				column_width = (center_x - x) + (max_width / 2);
++			}
++			
+ 			/* Lay out column */
+ 			for (p = icons; p != NULL; p = p->next) {
+ 				icon = p->data;
+@@ -1269,15 +1469,21 @@
+ 				icon_height = y2 - y1;
+ 				
+ 				icon_rect = nautilus_icon_canvas_item_get_icon_rectangle (icon->item);
++
++				if (should_snap) {
++					baseline = y + (icon_rect.y1 - icon_rect.y0);
++					baseline = SNAP_CEIL_VERTICAL (baseline);
++					y = baseline - (icon_rect.y1 - icon_rect.y0);
++				}
+ 				
+ 				/* Check and see if we need to move to a new column */
+ 				if (y != DESKTOP_PAD_VERTICAL && y > height - icon_height) {
+-					x += max_width + DESKTOP_PAD_HORIZONTAL;
++					x += column_width + DESKTOP_PAD_HORIZONTAL;
+ 					break;
+ 				}
+ 				
+ 				icon_set_position (icon,
+-						   x + max_width / 2 - (icon_rect.x1 - icon_rect.x0) / 2,
++						   center_x - (icon_rect.x1 - icon_rect.x0) / 2,
+ 						   y);
+ 				
+ 				y += icon_height + DESKTOP_PAD_VERTICAL;
+@@ -1493,6 +1699,7 @@
+ 				   int x, int y,
+ 				   double scale_x, double scale_y,
+ 				   gboolean raise,
++				   gboolean snap,
+ 				   gboolean update_position)
+ {
+ 	NautilusIconContainerDetails *details;
+@@ -1507,13 +1714,6 @@
+ 		end_renaming_mode (container, TRUE);
+ 	}
+ 
+-	if (!details->auto_layout) {
+-		if (x != icon->x || y != icon->y) {
+-			icon_set_position (icon, x, y);
+-			emit_signal = update_position;
+-		}
+-	}
+-	
+ 	if (scale_x != icon->scale_x || scale_y != icon->scale_y) {
+ 		icon->scale_x = scale_x;
+ 		icon->scale_y = scale_y;
+@@ -1522,7 +1722,17 @@
+ 			redo_layout (container); 
+ 			emit_signal = TRUE;
+ 		}
++	}
++
++	if (!details->auto_layout) {
++		if (details->keep_aligned && snap) {
++			snap_position (container, icon, &x, &y);
++		}
+ 
++		if (x != icon->x || y != icon->y) {
++			icon_set_position (icon, x, y);
++			emit_signal = update_position;
++		}
+ 	}
+ 	
+ 	if (emit_signal) {
+@@ -2598,6 +2808,12 @@
+ 		g_source_remove (container->details->stretch_idle_id);
+ 		container->details->stretch_idle_id = 0;
+ 	}
++
++        if (container->details->align_idle_id != 0) {
++		g_source_remove (container->details->align_idle_id);
++		container->details->align_idle_id = 0;
++	}
++
+        
+ 	nautilus_icon_container_flush_typeselect_state (container);
+ 
+@@ -2985,7 +3201,7 @@
+ 			  &world_x, &world_y);
+ 
+ 	icon_set_position (icon, world_x, world_y);
+-	icon_set_size (container, icon, stretch_state.icon_size, FALSE);
++	icon_set_size (container, icon, stretch_state.icon_size, FALSE, FALSE);
+ 
+ 	container->details->stretch_idle_id = 0;
+ 
+@@ -3062,6 +3278,7 @@
+ 	icon_set_size (container,
+ 		       stretched_icon, 
+ 		       container->details->stretch_initial_size,
++		       TRUE,
+ 		       TRUE);
+ 	
+ 	container->details->stretch_icon = NULL;				
+@@ -5113,7 +5330,7 @@
+ 			nautilus_icon_container_move_icon (container, icon,
+ 							   icon->x, icon->y,
+ 							   1.0, 1.0,
+-							   FALSE, TRUE);
++							   FALSE, TRUE, TRUE);
+ 		}
+ 	}
+ }
+@@ -5251,6 +5468,57 @@
+ 	}
+ }
+ 
++gboolean
++nautilus_icon_container_is_keep_aligned (NautilusIconContainer *container)
++{
++	return container->details->keep_aligned;
++}
++
++static gboolean
++align_icons_callback (gpointer callback_data)
++{
++	NautilusIconContainer *container;
++
++	container = NAUTILUS_ICON_CONTAINER (callback_data);
++	align_icons (container);
++	container->details->align_idle_id = 0;
++
++	return FALSE;
++}
++
++static void
++unschedule_align_icons (NautilusIconContainer *container)
++{
++        if (container->details->align_idle_id != 0) {
++		g_source_remove (container->details->align_idle_id);
++		container->details->align_idle_id = 0;
++	}
++}
++
++static void
++schedule_align_icons (NautilusIconContainer *container)
++{
++	if (container->details->align_idle_id == 0
++	    && container->details->has_been_allocated) {
++		container->details->align_idle_id = g_idle_add
++			(align_icons_callback, container);
++	}
++}
++
++void
++nautilus_icon_container_set_keep_aligned (NautilusIconContainer *container,
++					  gboolean keep_aligned)
++{
++	if (container->details->keep_aligned != keep_aligned) {
++		container->details->keep_aligned = keep_aligned;
++		
++		if (keep_aligned && !container->details->auto_layout) {
++			schedule_align_icons (container);
++		} else {
++			unschedule_align_icons (container);
++		}
++	}
++}
+ 
+ void
+ nautilus_icon_container_set_layout_mode (NautilusIconContainer *container,
+Index: libnautilus-private/nautilus-icon-container.h
+===================================================================
+RCS file: /cvs/gnome/nautilus/libnautilus-private/nautilus-icon-container.h,v
+retrieving revision 1.78
+diff -u -r1.78 nautilus-icon-container.h
+--- libnautilus-private/nautilus-icon-container.h	7 Apr 2003 11:56:03 -0000	1.78
++++ libnautilus-private/nautilus-icon-container.h	3 May 2003 23:21:42 -0000
+@@ -205,6 +205,10 @@
+ gboolean          nautilus_icon_container_is_tighter_layout             (NautilusIconContainer  *container);
+ void              nautilus_icon_container_set_tighter_layout            (NautilusIconContainer  *container,
+ 									 gboolean                tighter_layout);
++
++gboolean          nautilus_icon_container_is_keep_aligned               (NautilusIconContainer  *container);
++void              nautilus_icon_container_set_keep_aligned              (NautilusIconContainer  *container,
++									 gboolean                keep_aligned);
+ void              nautilus_icon_container_set_layout_mode               (NautilusIconContainer  *container,
+ 									 NautilusIconLayoutMode  mode);
+ void              nautilus_icon_container_sort                          (NautilusIconContainer  *container);
+Index: libnautilus-private/nautilus-icon-dnd.c
+===================================================================
+RCS file: /cvs/gnome/nautilus/libnautilus-private/nautilus-icon-dnd.c,v
+retrieving revision 1.130
+diff -u -r1.130 nautilus-icon-dnd.c
+--- libnautilus-private/nautilus-icon-dnd.c	23 Apr 2003 09:49:47 -0000	1.130
++++ libnautilus-private/nautilus-icon-dnd.c	3 May 2003 23:21:43 -0000
+@@ -811,7 +811,7 @@
+ 				(container, icon,
+ 				 world_x + item->icon_x, world_y + item->icon_y,
+ 				 icon->scale_x, icon->scale_y,
+-				 TRUE, TRUE);
++				 TRUE, TRUE, TRUE);
+ 		}
+ 		moved_icons = g_list_prepend (moved_icons, icon);
+ 	}		
+Index: libnautilus-private/nautilus-icon-private.h
+===================================================================
+RCS file: /cvs/gnome/nautilus/libnautilus-private/nautilus-icon-private.h,v
+retrieving revision 1.71
+diff -u -r1.71 nautilus-icon-private.h
+--- libnautilus-private/nautilus-icon-private.h	27 Mar 2003 12:53:07 -0000	1.71
++++ libnautilus-private/nautilus-icon-private.h	3 May 2003 23:21:43 -0000
+@@ -177,6 +177,9 @@
+ 	/* Idle handler for stretch code */
+ 	guint stretch_idle_id;
+ 
++	/* Align idle id */
++	guint align_idle_id;
++
+ 	/* DnD info. */
+ 	NautilusIconDndInfo *dnd_info;
+ 
+@@ -215,7 +218,10 @@
+ 	/* Layout mode */
+ 	NautilusIconLayoutMode layout_mode;
+ 
+-	/* Set to TRUE after first allocation has been done */
++	/* Should the container keep icons aligned to a grid */
++	gboolean keep_aligned;
++
++        /* Set to TRUE after first allocation has been done */
+ 	gboolean has_been_allocated;
+ 	
+ 	/* Is the container fixed or resizable */
+@@ -252,6 +258,7 @@
+ 								   double                 scale_x,
+ 								   double                 scale_y,
+ 								   gboolean               raise,
++								   gboolean               snap,
+ 								   gboolean		  update_position);
+ void          nautilus_icon_container_select_list_unselect_others (NautilusIconContainer *container,
+ 								   GList                 *icons);
+Index: libnautilus-private/nautilus-metadata.h
+===================================================================
+RCS file: /cvs/gnome/nautilus/libnautilus-private/nautilus-metadata.h,v
+retrieving revision 1.25
+diff -u -r1.25 nautilus-metadata.h
+--- libnautilus-private/nautilus-metadata.h	19 Dec 2002 19:56:36 -0000	1.25
++++ libnautilus-private/nautilus-metadata.h	3 May 2003 23:21:43 -0000
+@@ -53,6 +53,7 @@
+ #define NAUTILUS_METADATA_KEY_ICON_VIEW_TIGHTER_LAYOUT      	"icon_view_tighter_layout"
+ #define NAUTILUS_METADATA_KEY_ICON_VIEW_SORT_BY          	"icon_view_sort_by"
+ #define NAUTILUS_METADATA_KEY_ICON_VIEW_SORT_REVERSED    	"icon_view_sort_reversed"
++#define NAUTILUS_METADATA_KEY_ICON_VIEW_KEEP_ALIGNED            "icon_view_keep_aligned"
+ 
+ #define NAUTILUS_METADATA_KEY_LIST_VIEW_ZOOM_LEVEL       	"list_view_zoom_level"
+ #define NAUTILUS_METADATA_KEY_LIST_VIEW_SORT_COLUMN      	"list_view_sort_column"
+Index: src/file-manager/fm-desktop-icon-view.c
+===================================================================
+RCS file: /cvs/gnome/nautilus/src/file-manager/fm-desktop-icon-view.c,v
+retrieving revision 1.202
+diff -u -r1.202 fm-desktop-icon-view.c
+--- src/file-manager/fm-desktop-icon-view.c	23 Apr 2003 10:49:38 -0000	1.202
++++ src/file-manager/fm-desktop-icon-view.c	3 May 2003 23:21:43 -0000
+@@ -121,6 +121,7 @@
+ 								   FMDesktopIconView      *icon_view);
+ static void     update_desktop_directory                          (UpdateType              type);
+ static gboolean real_supports_auto_layout                         (FMIconView             *view);
++static gboolean real_supports_keep_aligned                        (FMIconView             *view);
+ static void     real_merge_menus                                  (FMDirectoryView        *view);
+ static void     real_update_menus                                 (FMDirectoryView        *view);
+ static gboolean real_supports_zooming                             (FMDirectoryView        *view);
+@@ -300,6 +301,7 @@
+ 	FM_DIRECTORY_VIEW_CLASS (class)->supports_zooming = real_supports_zooming;
+ 
+ 	FM_ICON_VIEW_CLASS (class)->supports_auto_layout = real_supports_auto_layout;
++	FM_ICON_VIEW_CLASS (class)->supports_keep_aligned = real_supports_keep_aligned;
+ }
+ 
+ static void
+@@ -1470,6 +1472,12 @@
+ 	 * fixed-size window.
+ 	 */
+ 	return FALSE;
++}
++
++static gboolean
++real_supports_keep_aligned (FMIconView *view)
++{
++	return TRUE;
+ }
+ 
+ static gboolean
+Index: src/file-manager/fm-icon-view.c
+===================================================================
+RCS file: /cvs/gnome/nautilus/src/file-manager/fm-icon-view.c,v
+retrieving revision 1.278
+diff -u -r1.278 fm-icon-view.c
+--- src/file-manager/fm-icon-view.c	7 Apr 2003 11:56:04 -0000	1.278
++++ src/file-manager/fm-icon-view.c	3 May 2003 23:21:43 -0000
+@@ -98,10 +98,12 @@
+ #define COMMAND_TIGHTER_LAYOUT 			"/commands/Tighter Layout"
+ #define COMMAND_SORT_REVERSED			"/commands/Reversed Order"
+ #define COMMAND_CLEAN_UP			"/commands/Clean Up"
++#define COMMAND_KEEP_ALIGNED 			"/commands/Keep Aligned"
+ 
+ #define ID_MANUAL_LAYOUT                        "Manual Layout"
+ #define ID_TIGHTER_LAYOUT                       "Tighter Layout"
+ #define ID_SORT_REVERSED                        "Reversed Order"
++#define ID_KEEP_ALIGNED 			"Keep Aligned"
+ 
+ typedef struct {
+ 	NautilusFileSortType sort_type;
+@@ -578,6 +580,16 @@
+ 		 supports_auto_layout, (view));
+ }
+ 
++static gboolean
++fm_icon_view_supports_keep_aligned (FMIconView *view)
++{
++	g_return_val_if_fail (FM_IS_ICON_VIEW (view), FALSE);
++
++	return EEL_CALL_METHOD_WITH_RETURN_VALUE
++		(FM_ICON_VIEW_CLASS, view,
++		 supports_keep_aligned, (view));
++}
++
+ static void
+ update_layout_menus (FMIconView *view)
+ {
+@@ -617,6 +629,18 @@
+ 	nautilus_bonobo_set_sensitive
+ 		(view->details->ui, COMMAND_CLEAN_UP, !is_auto_layout);	
+ 
++
++	nautilus_bonobo_set_hidden (view->details->ui,
++				    COMMAND_KEEP_ALIGNED, 
++				    !fm_icon_view_supports_keep_aligned (view));
++	
++	nautilus_bonobo_set_toggle_state 
++		(view->details->ui, COMMAND_KEEP_ALIGNED, 
++		 nautilus_icon_container_is_keep_aligned (get_icon_container (view)));
++	
++	nautilus_bonobo_set_sensitive
++		(view->details->ui, COMMAND_KEEP_ALIGNED, !is_auto_layout);
++
+ 	bonobo_ui_component_thaw (view->details->ui, NULL);
+ }
+ 
+@@ -753,6 +777,41 @@
+ 		 sort_reversed);
+ }
+ 
++static gboolean
++get_default_directory_keep_aligned (void)
++{
++	return TRUE;
++}
++
++static gboolean
++fm_icon_view_get_directory_keep_aligned (FMIconView *icon_view,
++					 NautilusFile *file)
++{
++	if (!fm_icon_view_supports_keep_aligned (icon_view)) {
++		return FALSE;
++	}
++	
++	return  nautilus_file_get_boolean_metadata
++		(file,
++		 NAUTILUS_METADATA_KEY_ICON_VIEW_KEEP_ALIGNED,
++		 get_default_directory_keep_aligned ());
++}
++
++static void
++fm_icon_view_set_directory_keep_aligned (FMIconView *icon_view,
++					 NautilusFile *file,
++					 gboolean keep_aligned)
++{
++	if (!fm_icon_view_supports_keep_aligned (icon_view)) {
++		return;
++	}
++
++	nautilus_file_set_boolean_metadata
++		(file, NAUTILUS_METADATA_KEY_ICON_VIEW_KEEP_ALIGNED,
++		 get_default_directory_keep_aligned (),
++		 keep_aligned);
++}
++
+ /* maintainence of auto layout boolean */
+ static gboolean default_directory_manual_layout = FALSE;
+ 
+@@ -880,6 +939,14 @@
+ }
+ 
+ static gboolean
++real_supports_keep_aligned (FMIconView *view)
++{
++	g_return_val_if_fail (FM_IS_ICON_VIEW (view), FALSE);
++
++	return FALSE;
++}
++
++static gboolean
+ set_sort_reversed (FMIconView *icon_view, gboolean new_value)
+ {
+ 	if (icon_view->details->sort_reversed == new_value) {
+@@ -1005,6 +1072,9 @@
+ 	/* Set the sort direction from the metadata. */
+ 	set_sort_reversed (icon_view, fm_icon_view_get_directory_sort_reversed (icon_view, file));
+ 
++	nautilus_icon_container_set_keep_aligned
++		(get_icon_container (icon_view), 
++		 fm_icon_view_get_directory_keep_aligned (icon_view, file));
+ 	nautilus_icon_container_set_tighter_layout
+ 		(get_icon_container (icon_view), 
+ 		 fm_icon_view_get_directory_tighter_layout (icon_view, file));
+@@ -1287,6 +1357,37 @@
+ }
+ 
+ static void
++keep_aligned_state_changed_callback (BonoboUIComponent *component,
++				     const char        *path,
++				     Bonobo_UIComponent_EventType type,
++				     const char        *state,
++				     gpointer          user_data)
++{
++	FMIconView *icon_view;
++	NautilusFile *file;
++	gboolean keep_aligned;
++
++	g_assert (strcmp (path, ID_KEEP_ALIGNED) == 0);
++
++	icon_view = FM_ICON_VIEW (user_data);
++
++	if (strcmp (state, "") == 0) {
++		/* State goes blank when component is removed; ignore this. */
++		return;
++	}
++
++	keep_aligned = strcmp (state, "1") == 0 ? TRUE : FALSE;
++
++	file = fm_directory_view_get_directory_as_file (FM_DIRECTORY_VIEW (icon_view));
++	fm_icon_view_set_directory_keep_aligned (icon_view,
++						 file,
++						 keep_aligned);
++						      
++	nautilus_icon_container_set_keep_aligned (get_icon_container (icon_view),
++						  keep_aligned);
++}
++
++static void
+ switch_to_manual_layout (FMIconView *icon_view)
+ {
+ 	if (!fm_icon_view_using_auto_layout (icon_view)) {
+@@ -1393,6 +1494,7 @@
+ 	
+ 	bonobo_ui_component_add_listener (icon_view->details->ui, ID_TIGHTER_LAYOUT, tighter_layout_state_changed_callback, view);
+ 	bonobo_ui_component_add_listener (icon_view->details->ui, ID_SORT_REVERSED, sort_reversed_state_changed_callback, view);
++	bonobo_ui_component_add_listener (icon_view->details->ui, ID_KEEP_ALIGNED, keep_aligned_state_changed_callback, view);
+ 	icon_view->details->menus_ready = TRUE;
+ 
+ 	bonobo_ui_component_freeze (icon_view->details->ui, NULL);
+@@ -1472,6 +1574,8 @@
+ 
+ 	set_sort_criterion (icon_view, get_sort_criterion_by_sort_type (get_default_sort_order ()));
+ 	set_sort_reversed (icon_view, get_default_sort_in_reverse_order ());
++	nautilus_icon_container_set_keep_aligned 
++		(icon_container, get_default_directory_keep_aligned ());
+ 	nautilus_icon_container_set_tighter_layout
+ 		(icon_container, get_default_directory_tighter_layout ());
+ 
+@@ -2520,6 +2624,7 @@
+ 
+ 	klass->clean_up = fm_icon_view_real_clean_up;
+ 	klass->supports_auto_layout = real_supports_auto_layout;
++	klass->supports_keep_aligned = real_supports_keep_aligned;
+         klass->get_directory_auto_layout = fm_icon_view_real_get_directory_auto_layout;
+         klass->get_directory_sort_by = fm_icon_view_real_get_directory_sort_by;
+         klass->get_directory_sort_reversed = fm_icon_view_real_get_directory_sort_reversed;
+Index: src/file-manager/fm-icon-view.h
+===================================================================
+RCS file: /cvs/gnome/nautilus/src/file-manager/fm-icon-view.h,v
+retrieving revision 1.12
+diff -u -r1.12 fm-icon-view.h
+--- src/file-manager/fm-icon-view.h	4 Feb 2003 10:36:21 -0000	1.12
++++ src/file-manager/fm-icon-view.h	3 May 2003 23:21:43 -0000
+@@ -84,6 +84,12 @@
+ 	 */
+ 	gboolean (* supports_auto_layout)	 (FMIconView *view);
+ 
++	/* supports_auto_layout is a function pointer that subclasses may
++	 * override to control whether snap-to-grid mode
++	 * should be enabled. The default implementation returns FALSE.
++	 */
++	gboolean (* supports_keep_aligned)	 (FMIconView *view);
++
+ };
+ 
+ /* GObject support */
+Index: src/file-manager/nautilus-icon-view-ui.xml
+===================================================================
+RCS file: /cvs/gnome/nautilus/src/file-manager/nautilus-icon-view-ui.xml,v
+retrieving revision 1.23
+diff -u -r1.23 nautilus-icon-view-ui.xml
+--- src/file-manager/nautilus-icon-view-ui.xml	5 Jul 2002 20:37:24 -0000	1.23
++++ src/file-manager/nautilus-icon-view-ui.xml	3 May 2003 23:21:44 -0000
+@@ -24,6 +24,9 @@
+ 	<cmd name="Sort by Emblems"
+          _label="By _Emblems"
+ 	 _tip="Keep icons sorted by emblems in rows"/>
++	<cmd name="Keep Aligned"
++         _label="_Keep Aligned"
++	 _tip="Keep icons lined up on a grid"/>
+ 	<cmd name="Tighter Layout"
+          _label="Compact _Layout"
+ 	 _tip="Toggle using a tighter layout scheme"/>
+@@ -78,6 +81,9 @@
+ 			</submenu>
+ 			<menuitem name="Clean Up"
+ 				  verb="Clean Up"/>
++			<menuitem name="Keep Aligned" 
++	                          id="Keep Aligned"
++	                          type="toggle"/>
+ 		</placeholder>
+ 		
+ 	</submenu>
+@@ -108,6 +114,7 @@
+ 							  id="Sort by Emblems"/>
+ 					</placeholder>
+ 					<separator/>
++
+ 					<menuitem name="Tighter Layout" 
+ 	                                          id="Tighter Layout"
+ 	                                          type="toggle"/>
+@@ -115,7 +122,11 @@
+ 	                                          id="Reversed Order"
+ 	                                          type="toggle"/>
+ 				</submenu>
++
+ 				<menuitem name="Clean Up" verb="Clean Up"/>
++				<menuitem name="Keep Aligned" 
++	                                        id="Keep Aligned"
++	                                        type="toggle"/>
+ 			</placeholder>
+ 		</placeholder>
+ 	</popup>
