@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.37 2004/01/11 03:14:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.38 2004/01/24 12:00:39 gustavoz Exp $
+
+  24 Jan 2004; <gustavoz@gentoo.org> libgd-2.0.15-r1.ebuild:
+  marked stable on sparc
 
   10 Jan 2004; <agriffis@gentoo.org> libgd-1.8.4-r2.ebuild:
   stable on ia64

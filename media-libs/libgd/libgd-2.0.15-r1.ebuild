@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-2.0.15-r1.ebuild,v 1.3 2003/11/14 15:14:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-2.0.15-r1.ebuild,v 1.4 2004/01/24 12:00:39 gustavoz Exp $
 
 inherit eutils libtool
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.boutell.com/gd/http/${MY_P}.tar.gz
 
 LICENSE="as-is | BSD"
 SLOT="2"
-KEYWORDS="x86 ppc ~sparc ~mips hppa ~arm ~alpha"
+KEYWORDS="x86 ppc sparc ~mips hppa ~arm ~alpha"
 IUSE="X gif"
 
 DEPEND=">=media-libs/jpeg-6b
