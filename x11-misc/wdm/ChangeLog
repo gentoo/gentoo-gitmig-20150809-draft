@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/wdm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.3 2003/04/18 01:50:16 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/ChangeLog,v 1.4 2003/06/25 04:13:23 bcowan Exp $
+
+*wdm-1.25 (25 Jun 2003)
+
+  25 Jun 2003; Brad Cowan <bcowan@gentoo.org> wdm-1.25.ebuild:
+  Version bump.
 
 *wdm-1.22 (19 Feb 2003)
 
