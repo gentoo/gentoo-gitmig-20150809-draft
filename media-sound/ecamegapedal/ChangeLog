@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ecamegapedal
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecamegapedal/ChangeLog,v 1.4 2004/03/01 05:37:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecamegapedal/ChangeLog,v 1.5 2004/03/11 19:16:58 eradicator Exp $
+
+  11 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ecamegapedal-0.4.2.ebuild, ecamegapedal-0.4.3.ebuild:
+  Stable on x86 and added jack USE flag support to close bug #31263.
 
   07 Dec 2003; Heinrich Wendel <lanius@gentoo.org> ecamegapedal-0.4.2.ebuild,
   ecamegapedal-0.4.3.ebuild:
