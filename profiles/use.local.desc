@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.357 2004/05/06 07:52:42 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.358 2004/05/06 22:59:53 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -53,8 +53,6 @@ app-sci/maxima:gcl   - adds gcl (lisp) support to maxima
 app-sci/mupad:mupad-noscilab - Disable scilab that comes with MuPAD package. Use system-wide instead.
 app-sci/octave-forge:qhull - Adds media-libs/qhull (geometric extensions) support
 app-sci/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to app-sci/octave (may be merged with hdf when opendx is completed)
-app-sci/opendx:cdf - Adds cdf data exchange format to app-sci/opendx
-app-sci/opendx:hdf - Adds support for the Hierarchical Data Format to app-sci/opendx
 app-sci/orsa:cln - Use the Class Library for Numbers for calculations
 app-sci/orsa:gsl - Use the GNU scientific library for calculations
 app-sci/predict:xforms - Adds a "map" client which uses the xforms library for its GUI
@@ -63,7 +61,6 @@ app-shells/zsh:pcre - Adds PCRE (Perl-compatible regular expressions) support
 app-text/namazu:chasen - Enable chasen support for namazu
 app-text/namazu:kakasi - Enable kakasi support for namazu
 app-text/sword:icu - Enable icu support for sword
-deb-libs/pwlib:ieee1394 - enable dv/firewire camera support
 dev-db/firebird:inetd - If you want inetd version instead of a superserver (daemon)
 dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY' feature.
 dev-db/postgresql:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
@@ -98,16 +95,15 @@ dev-lang/tk:threads - Enable threads as some packages require it.
 dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/gmetadom:ocaml - adds support/bindings for the Ocaml
 dev-libs/libcdio:cddb - use libcddb for CD database lookups
+dev-libs/libmix:no-net2 - disable libpcap and libnet support
 dev-libs/libsqlora8:orathreads - specifies use of Oracle threads
 dev-libs/libsqlora8:pthreads - specifies use of POSIX threads
-dev-libs/libmix:no-net2 - disable libpcap and libnet support
 dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
-dev-lisp/bigloo-lib:expat - enable expat support
-dev-lisp/bigloo-lib:ipcs - enable ipcs support
+dev-libs/pwlib:ieee1394 - enable dv/firewire camera support
 dev-lisp/clisp:pcre - enable PCRE support
 dev-lisp/clisp:threads - build CLISP with support for (experimental threads)
-dev-lisp/sbcl:threads - build SBCL with support for native threads (x86 only)
 dev-lisp/gauche-gtk:glgd - enable GL graph draw
+dev-lisp/sbcl:threads - build SBCL with support for native threads (x86 only)
 dev-ml/lablgl:glut - Enable glut support.
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/lablgtk:svg - Enable librsvg bindings compilation.
@@ -116,6 +112,8 @@ dev-php/PEAR-Log:pear-db - Use the PEAR-DB package
 dev-python/anygui:wxwin - enable wxwin support
 dev-python/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
 dev-python/wxPython:unicode - enable unicode support (must be enabled in wxGTK as well)
+dev-scheme/bigloo-lib:expat - enable expat support
+dev-scheme/bigloo-lib:ipcs - enable ipcs support
 dev-tex/preview-latex:xemacs - Adds support for XEmacs
 dev-util/eric:idl - Enable omniorb support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
@@ -151,6 +149,8 @@ media-gfx/gimp:gimpprint - Enable gimp-print printing support
 media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar formats
 media-gfx/maya:bundled-libs - Use the bundled versions of libs rather than system ones (libstdc++, libgcc_s, libqt, and libXm)
 media-gfx/nvidia-cg-toolkit:glut - enable glut support
+media-gfx/opendx:cdf - Adds cdf data exchange format
+media-gfx/opendx:hdf - Adds support for the Hierarchical Data Format
 media-gfx/optipng:ext-png - Link with the system libpng, rather than the bundled optimised version.
 media-gfx/optipng:ext-zlib - Link with the system zlib, rather than the bundled version optimised specifically for use with png.
 media-gfx/sane-frontends:gimp - Build a plugin for the GIMP
@@ -166,10 +166,8 @@ media-libs/sdl-sound:physfs - Enable physfs support
 media-libs/tiff:lzw-tiff - Enable the LZW Compression Toolkit (Unisys license)
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
-media-sound/ardour-cvs:ardour-ksi - Build ksi interface for ardour
 media-sound/gnusound:libsamplerate - Build gnusound with support for converting sample rates using libsamplerate
 media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
-media-sound/jack-cvs:jack-tmpfs - Compile in a tmpf path
 media-sound/lilypond:nopfa - disable building pfa fonts
 media-sound/mpd:aac - enable support for aac using the faad2 library
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
@@ -200,7 +198,7 @@ net-analyzer/nagios-plugins:nagios-ntp - installs deps for ntp monitoring
 net-analyzer/nagios-plugins:nagios-ping - installs deps for fancy ping monitoring
 net-analyzer/nagios-plugins:nagios-ssh - installs deps for monitoring ssh
 net-analyzer/netcat:GAPING_SECURITY_HOLE - add support for running programs after connect
-net-analyzer/nstat:pcap - enable pcap support
+net-analyzer/nstats:pcap - enable pcap support
 net-analyzer/slurm:altcolors - Use alternative color set
 net-analyzer/snort:flexresp - Enable connection tearing (not recommended)
 net-dialup/gnokii:bluetooth - Enable Bluetooth Support
@@ -212,7 +210,6 @@ net-dns/djbdns:ipv6arpa - enables ipv6 arpa patch
 net-dns/djbdns:multipleip - enables multi-IP patch
 net-dns/djbdns:roundrobin - enables round robin patch
 net-dns/pdnsd:isdn - enable isdn features
-net-fs/ftpfs:autofs - Adds support for autofs mounting
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
 net-fs/shfs:amd - Enable automounter support
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
@@ -223,9 +220,9 @@ net-im/silc-toolkit:server - Enables silc server
 net-irc/unrealircd:leaf - Enables leaf node
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat:xchattext - Enables the text/console front end to XChat
+net-libs/libsoup:gnutls - Use GnuTLS instead of OpenSSL for SSL support
 net-libs/libvncserver:no24bpp - disable 24bpp support
 net-libs/libvncserver:nobackchannel - disable backchannel support
-net-libs/libsoup:gnutls - Use GnuTLS instead of OpenSSL for SSL support
 net-mail/amavisd-new:milter - Enable Sendmail milter support
 net-mail/clamav:milter - Build sendmail mail filter (milter) support
 net-mail/courier:fax - Enables fax support in the courier mail server
@@ -315,7 +312,7 @@ sys-apps/iproute2:atm - Add support for ATM qdisc manager
 sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/parted:noreiserfs - Do not include reiserfs support
-sys-apps/partmage:nologin - Do not include login support
+sys-apps/partimage:nologin - Do not include login support
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
 sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:uclibc - Compile with uclibc
@@ -328,6 +325,7 @@ sys-devel/gcc:hardened - improve PIE (position independent executables) and SSP 
 sys-devel/gcc:multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gcc:uclibc - Enable uclibc specific patches for gcc
+sys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/hardened-gcc:debug - activate verbose commandline output of the default PIE SSP hardened-gcc wrapper
 sys-devel/libperl:threads - Enable Perl threads, has some compatibility problems
 sys-devel/oskit:oskit-noassert - Disable assertions in debugging
@@ -350,10 +348,6 @@ sys-kernel/gentoo-sources:xfs - If you want XFS filesystem support
 sys-kernel/ppc-development-sources:extlib - If you want to use gcloop a external lib is needed
 sys-kernel/ppc64-sources:extlib - If you want to use gcloop a external lib is needed
 sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
-sys-kernel/wolk-dev-sources:grsec - Enable GRSEC support (2.6.x kernel)
-sys-kernel/wolk-dev-sources:staircase - Enable staircase support (2.6.x kernel)
-sys-kernel/wolk-dev-sources:systrace - Enable systrace support (2.6.x kernel)
-sys-kernel/wolk-dev-sources:win4lin - Enable win4lin support (2.6.x kernel)
 sys-kernel/wolk-sources:wolk-bootsplash - If you want WOLK's own bootsplash patch (deprecated)
 sys-kernel/wolk-sources:wolk-supermount - If you want to use supermount (deprecated)
 sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
@@ -384,4 +378,3 @@ x11-wm/fvwm:nosm - Disable support for Session Management (xsm protocol)
 x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png images are to be used)
 x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
-ys-devel/gdb:objc - Build support for the Objective C code language
