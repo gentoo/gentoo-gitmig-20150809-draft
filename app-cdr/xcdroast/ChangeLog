@@ -4,6 +4,9 @@
 
 *xcdroast-0.98_alpha13 (04 Jan 2003)
 
+  02 Apr 2003; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha13.ebuild:
+  Set ppc in KEYWORDS
+
   13 Feb 2003; Yannick Koehler <ykoehler@gentoo.org> xcdroast-0.98_alpha13.ebuild :
   Added 'nls' USE flag to IUSE.
  

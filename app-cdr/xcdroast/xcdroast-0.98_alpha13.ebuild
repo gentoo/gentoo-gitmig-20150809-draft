@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha13.ebuild,v 1.4 2003/02/13 19:20:06 ykoehler Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha13.ebuild,v 1.5 2003/04/01 23:59:59 pylon Exp $
 
 S=${WORKDIR}/${P/_/}
 DESCRIPTION="Menu based front-end to mkisofs and cdrecord"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/xcdroast/${P/_/}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 IUSE="nls"
 
 DEPEND="=x11-libs/gtk+-1.2*
