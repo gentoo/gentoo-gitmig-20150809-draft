@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.110 2004/03/17 22:39:07 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.111 2004/03/21 19:43:22 mholzer Exp $
+
+*mplayer-1.0_pre3-r2 (21 Mar 2004)
+
+  21 Mar 2004; Martin Holzer <mholzer@gentoo.org> mplayer-1.0_pre3-r2.ebuild:
+  adding libtheora support.
 
   18 Mar 2004; Martin Holzer <mholzer@gentoo.org> mplayer-1.0_pre3-r1.ebuild,
   files/mplayer-1.0_pre3-libmatroska063.diff:
