@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5.ebuild,v 1.6 2004/04/02 19:15:09 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5.ebuild,v 1.7 2004/05/07 22:22:59 ciaranm Exp $
 
 inherit libtool
 
@@ -12,7 +12,7 @@ IUSE="gpm"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ia64 s390"
+KEYWORDS="~x86 ~ppc sparc ~alpha ~mips ~hppa ~amd64 ~ia64 s390"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	gpm? ( sys-libs/gpm )"
