@@ -11,5 +11,5 @@ MD5 50c560b391869be15a001b738e0b7bfe files/tetex-2.0.2.diff 2010
 MD5 1c3401dbbc9d478e94c98e44b9b68e38 files/tetex-no-readlink-manpage.diff 542
 MD5 93953e5af28f5035215eaab627c438bc ChangeLog 11138
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 46be1ee0c7e5be51d711b3c24a45ebd7 tetex-1.0.7-r13.ebuild 4768
-MD5 f8e2aef1daaf1567bf38bd541af3d183 tetex-2.0.2-r3.ebuild 459
+MD5 00636800c8b66395bd5b65161f6624fc tetex-1.0.7-r13.ebuild 4792
+MD5 a168edd59bd8f6169f27a4a7e9137181 tetex-2.0.2-r3.ebuild 466

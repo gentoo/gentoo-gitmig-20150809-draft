@@ -7,7 +7,7 @@ MD5 0d1849d1ea9bd928f0e4db105ea92d9c files/kbarcode-1.7.2-default-parameter.patc
 MD5 e7cbabe1011f5b9ada2c2530b79dd0b1 ChangeLog 2729
 MD5 69c1462512d963f769362d322cb0cded kbarcode-1.6.1.ebuild 808
 MD5 fe3d564401fc49f98db91a01ab4bd386 kbarcode-1.7.0.ebuild 803
-MD5 e745f84982bbfd29d665530082d630f2 kbarcode-1.7.2.ebuild 644
+MD5 4633b57cdfcd6bc57cdbfd7c70e46cd2 kbarcode-1.7.2.ebuild 650
 MD5 239035865cc78c0cf2206e70cedac0f8 kbarcode-1.6.2.ebuild 803
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 266e78a1057599daeae8c8f9a7a58e1b kbarcode-1.6.0.ebuild 781
