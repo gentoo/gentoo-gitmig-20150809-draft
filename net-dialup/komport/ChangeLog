@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/komport
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/komport/ChangeLog,v 1.1 2004/06/01 19:59:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/komport/ChangeLog,v 1.2 2004/06/01 20:25:23 carlo Exp $
+
+  01 Jun 2004; Carsten Lohrke <carlo@gentoo.org> komport-0.5.9.ebuild:
+  missing SLOT
 
 *komport-0.5.9 (01 Jun 2004)
 
