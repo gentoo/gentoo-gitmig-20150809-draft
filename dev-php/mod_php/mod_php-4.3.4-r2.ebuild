@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.4-r2.ebuild,v 1.2 2004/01/08 06:33:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.4-r2.ebuild,v 1.3 2004/01/10 08:01:42 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -55,6 +55,10 @@ DEPEND_EXTRA=">=net-www/apache-1.3.26-r2
 			  apache2? ( >=net-www/apache-2.0.43-r1 )"
 DEPEND="${DEPEND} ${DEPEND_EXTRA}"
 RDEPEND="${RDEPEND} ${DEPEND_EXTRA}"
+
+pkg_setup() {
+	use debug && einfo "Installing in SLOT=${SLOT}"
+}
 
 src_unpack() {
 	multiinstwarn
