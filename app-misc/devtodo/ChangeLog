@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.28 2004/11/11 10:37:54 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.29 2004/11/13 14:43:50 ka0ttic Exp $
+
+  13 Nov 2004; Aaron Walker <ka0ttic@gentoo.org>
+  files/devtodo.bash-completion:
+  Clean up completion functions.
 
 *devtodo-0.1.18-r1 (11 Nov 2004)
 

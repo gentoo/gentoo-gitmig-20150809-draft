@@ -1,5 +1,9 @@
-# bash-completion script for devtodo
-# place this in /etc/bash_completion.d
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/files/devtodo.bash-completion,v 1.2 2004/11/13 14:43:50 ka0ttic Exp $
+
+# devtodo completion
+# original author: Aaron Walker <ka0ttic@gentoo.org>
 
 _devtodo() {
 	local cur prev
@@ -32,8 +36,6 @@ _devtodo() {
 			;;
 	esac
 }
-complete -F _devtodo devtodo
-complete -F _devtodo todo
 
 _tda() {
 	local cur prev
@@ -43,8 +45,8 @@ _tda() {
 
 	if [[ "${cur}" == -* ]] || [[ ${COMP_CWORD} -eq 1 ]]; then
 		COMPREPLY=($(compgen -W "-v --verbose -g --graft -p --priority \
-		-G --global --global-database --database --mono --help --version" \
-		-- "${cur}"))
+		-G --global --global-database --database --mono --help --version \
+		-l --link" -- "${cur}"))
 	fi
 	
 	case "${prev}" in
@@ -53,12 +55,11 @@ _tda() {
 			verylow" -- "${cur}"))
 			;;
 			
-		--*database)
+		-l|--link|--*database)
 			COMPREPLY=($(compgen -o filenames -A file -- "${cur}"))
 			;;
 	esac
 }
-complete -F _tda tda
 
 _tde() {
 	local cur prev
@@ -83,7 +84,6 @@ _tde() {
 			;;
 	esac	
 }
-complete -F _tde tde
 
 _tdr() {
 	local cur prev
@@ -102,7 +102,6 @@ _tdr() {
 			;;
 	esac			
 }
-complete -F _tdr tdr
 
 _tdd() {
 	local cur prev
@@ -121,4 +120,10 @@ _tdd() {
 			;;
 	esac				
 }
+
+complete -F _devtodo devtodo
+complete -F _devtodo todo
+complete -F _tda tda
+complete -F _tde tde
+complete -F _tdr tdr
 complete -F _tdd tdd
