@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.17 2002/12/11 23:17:36 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.18 2002/12/30 02:30:40 drobbins Exp $
+
+*ethereal-0.9.8-r1 (29 Dec 2002)
+
+  29 Dec 2002; Daniel Robbins <drobbins@gentoo.org>: New rev -- re-enabled gtk2
+  support, as it works here.  Added missing libpcap runtime dependency and
+  unmasked this ebuild as it fixes a malformed packet crash issue in 0.9.7 and
+  below.
 
 *ethereal-0.9.8 (11 Dec 2002) 
 
