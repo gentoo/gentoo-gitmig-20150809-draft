@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.3 2002/11/25 04:14:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.4 2002/12/16 03:50:17 azarah Exp $
+
+*win32codecs-0.90.1 (16 Dec 2002)
+
+  16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Update to latest tarball that include WMA codecs, bug #11882.
 
 *win32codecs-0.90 (24 Nov 2002)
 
