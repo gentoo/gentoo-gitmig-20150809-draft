@@ -1,6 +1,9 @@
-# ChangeLog for dev-db/mysql
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.21 2002/10/28 07:15:32 woodchip Exp $
+# ChangeLog for home/mysql
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.22 2002/11/03 22:26:56 roughneck Exp $
+
+  03 Nov 2002; Nicholas Henke <roughneck@gentoo.org> mysql-3.23.52-r2.ebuild  :
+  added ppc to keywords
 
   28 Oct 2002; Donny Davies <woodchip@gentoo.org> mysql.init :
   Behave more carefully in stop().  Thanks psi-jack@myrealbox.com.
