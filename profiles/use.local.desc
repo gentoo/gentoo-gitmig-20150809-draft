@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.932 2005/02/05 05:10:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.933 2005/02/05 15:08:00 satya Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -658,6 +658,7 @@ sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problem
 sys-fs/lufs:disablekernelsupport - If you already have a patched lufs kernel, skip the module building part
 sys-fs/lufs:lufsusermount - allow users to mount LUFS filesystems
 sys-fs/quota:rpc - Enable quota interaction via RPC
+sys-fs/unionfs:vserver - Enable vserver kernel patches support
 sys-kernel/alpha-sources:usagi - adds USAGI (Linux IPv6 Development Project) support
 sys-kernel/development-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/genkernel:bootsplash - Installs bootsplash support if you request it and it is not already available.
