@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.0.ebuild,v 1.3 2005/01/25 14:24:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.0.ebuild,v 1.4 2005/02/25 19:02:35 solar Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -45,10 +45,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ ! -e /dev/grsec ] ; then
+	if [ ! -e ${ROOT}/dev/grsec ] ; then
 		einfo "Making character device for grsec2 learning mode"
-		mkdir -p -m 755 /dev/
-		mknod -m 0622 /dev/grsec c 1 12 || die "Cant mknod for grsec learning device"
+		mkdir -p -m 755 ${ROOT}/dev/
+		mknod -m 0622 ${ROOT}/dev/grsec c 1 12 || die "Cant mknod for grsec learning device"
 	fi
 	ewarn "Be sure to set a password with 'gradm -P' before enabling learning mode"
 }

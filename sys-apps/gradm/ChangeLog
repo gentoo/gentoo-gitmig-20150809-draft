@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.43 2005/01/25 14:24:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.44 2005/02/25 19:02:35 solar Exp $
+
+  25 Feb 2005; <solar@gentoo.org> -gradm-1.9.14.ebuild, -gradm-2.0-r1.ebuild,
+  -gradm-2.0.1-r1.ebuild, -gradm-2.0.1.ebuild, -gradm-2.0.2.ebuild,
+  -gradm-2.0.ebuild, gradm-2.1.0.ebuild:
+  - removed older ebuilds. If somebody needs them they can get them from the
+  viewcvs Attic. Updated /dev/grsec to use ROOT for device nod creation. Thanks
+  carlo for pointing this out.
 
   25 Jan 2005; Jason Wever <weeve@gentoo.org> gradm-2.1.0.ebuild:
   Marking back to ~sparc as, to my knowledge, the sparc team didn't change
