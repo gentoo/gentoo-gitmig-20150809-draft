@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2833 2004/04/25 09:06:33 mksoft Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2834 2004/04/26 10:49:13 lanius Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -54,7 +54,6 @@ sec-policy/grsecurity-base-policy
 
 # <lanius@gentoo.org> (12 Apr 2004) (upd. 17 Apr 2004)
 # this is an alpha version
-=media-gfx/gimp-print-5.0.0_alpha1
 =media-gfx/gimp-print-5.0.0_alpha2
 
 # <carpaski@gentoo.org> (11 Apr 2004)
@@ -411,11 +410,6 @@ app-portage/kportage
 >=net-print/foomatic-2000
 >=net-print/foomatic-db-engine-2000
 >=net-print/foomatic-filters-2000
-
-# <lanius@gentoo.org> (26 Dec 2003) ( upd: 17 Apr 2004)
-# this is an alpha
-=net-www/opera-7.50_alpha3
-=net-www/opera-7.50_alpha4
 
 # <pauldv@gentoo.org> (22 Dec 2003)
 # Some testing is needed before unmasking. It should run well, but this package
