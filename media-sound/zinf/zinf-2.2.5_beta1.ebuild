@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5_beta1.ebuild,v 1.2 2004/02/09 03:27:14 eradicator Exp $
-
-IUSE="debug esd X gtk oggvorbis gnome arts alsa nls"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5_beta1.ebuild,v 1.3 2004/02/11 22:19:10 vapier Exp $
 
 inherit kde-functions
 
@@ -11,9 +9,13 @@ MY_P="${PN}-${MY_PV}"
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="An extremely full-featured mp3/vorbis/cd player with ALSA support, previously called FreeAmp"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
-RESTRICT="nomirror"
 HOMEPAGE="http://www.zinf.org/"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86"
+IUSE="debug esd X gtk oggvorbis gnome arts alsa nls"
 
 RDEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
@@ -28,19 +30,14 @@ RDEPEND="=dev-libs/glib-1.2*
 	oggvorbis? ( media-libs/libvorbis )
 	alsa? ( >=media-libs/alsa-lib-0.9.8 )
 	arts? ( kde-base/arts )"
-
 # When updating next, check boost to see if the newer versions fix compilation
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
 	nls? ( sys-devel/gettext )
 	>=media-libs/id3lib-3.8.0
-	<dev-libs/boost-1.31.0_alpha1
+	dev-libs/boost
 	dev-db/metakit
 	dev-lang/perl"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~x86"
 
 src_compile() {
 	local myconf="--enable-cmdline"
