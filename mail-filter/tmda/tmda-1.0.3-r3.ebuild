@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/tmda-1.0.3-r3.ebuild,v 1.1 2004/10/14 21:56:28 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/tmda-1.0.3-r3.ebuild,v 1.2 2004/11/12 18:46:53 blubb Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ DEPEND=">=dev-lang/python-2.2
 
 SRC_URI="http://www.tmda.net/releases/stable/${P}.tgz"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE=""
 
 src_compile () {

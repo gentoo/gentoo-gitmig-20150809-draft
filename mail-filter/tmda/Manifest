@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 865ca732fbe3ec7ef734873545db4c1b ChangeLog 8058
-MD5 b054d3c7bd392afff7c8544079f8f3ae tmda-1.0.3-r2.ebuild 1662
+MD5 e13bf52611dde5b99785773f603d59b0 ChangeLog 8145
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 0067fa6df94b5c5f0dc272e72ff7d0d0 tmda-0.92.ebuild 1529
 MD5 952475b22dac3406d5d71fdd44c6cde2 tmda-1.0-r1.ebuild 1634
 MD5 477c54625aa12fe135542e36d6939d51 tmda-1.0.3-r1.ebuild 1662
-MD5 5142d7cc8e674eb67d4fb1a6c706656b tmda-1.0.3-r3.ebuild 1782
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 427a0665420e32bc6408c1f67db8f374 tmda-1.0.ebuild 1503
-MD5 0067fa6df94b5c5f0dc272e72ff7d0d0 tmda-0.92.ebuild 1529
+MD5 b054d3c7bd392afff7c8544079f8f3ae tmda-1.0.3-r2.ebuild 1662
+MD5 caa23c3ba7db2b45b58b9badc7334694 tmda-1.0.3-r3.ebuild 1789
 MD5 16661ae384785cab84b49f1edeaf6ea6 tmda-1.0.3.ebuild 1531
-MD5 5953212bfef29b28dc63d4602b7fb9fc files/digest-tmda-1.0 57
-MD5 c7e7e04f751268e6e20f08b217c81e47 files/digest-tmda-1.0.3-r3 59
-MD5 228675d39b4c19f76460c3fd129f56b0 files/tmda-1.0-non-interactive-tty.patch 976
-MD5 5953212bfef29b28dc63d4602b7fb9fc files/digest-tmda-1.0-r1 57
+MD5 427a0665420e32bc6408c1f67db8f374 tmda-1.0.ebuild 1503
 MD5 7bb9e7641e04129bd8f857fb7feb59e3 files/digest-tmda-0.92 58
+MD5 5953212bfef29b28dc63d4602b7fb9fc files/digest-tmda-1.0 57
+MD5 5953212bfef29b28dc63d4602b7fb9fc files/digest-tmda-1.0-r1 57
 MD5 c7e7e04f751268e6e20f08b217c81e47 files/digest-tmda-1.0.3 59
-MD5 c7e7e04f751268e6e20f08b217c81e47 files/digest-tmda-1.0.3-r2 59
 MD5 c7e7e04f751268e6e20f08b217c81e47 files/digest-tmda-1.0.3-r1 59
+MD5 c7e7e04f751268e6e20f08b217c81e47 files/digest-tmda-1.0.3-r2 59
+MD5 c7e7e04f751268e6e20f08b217c81e47 files/digest-tmda-1.0.3-r3 59
 MD5 19cf6a631b8348843ef86773c916d835 files/tmda-1.0-multipart-handling.patch 919
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBbvYl10xuJSrg3/sRAhtYAJwLjlUPSVQdW6i6swxGS1AiS7wxkQCeMgCn
-pSaQFH9UuvOo6hg/dtJscfw=
-=CU4O
------END PGP SIGNATURE-----
+MD5 228675d39b4c19f76460c3fd129f56b0 files/tmda-1.0-non-interactive-tty.patch 976
