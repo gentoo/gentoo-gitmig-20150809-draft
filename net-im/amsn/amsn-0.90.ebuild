@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.90.ebuild,v 1.4 2004/02/23 11:03:20 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.90.ebuild,v 1.5 2004/02/23 18:13:34 tester Exp $
 
 S="${WORKDIR}/msn"
 DESCRIPTION="Alvaro's Messenger client for MSN"
 SRC_URI="mirror://sourceforge/${PN}/${P/./_}.tar.gz"
 HOMEPAGE="http://amsn.sourceforge.net"
 
-IUSE="gnome kde imlib imagemagick xmms ssl"
+IUSE="gnome kde imlib imagemagick xmms"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -16,10 +16,18 @@ KEYWORDS="~x86 ~alpha"
 
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
+	dev-tcltk/tls
 	imlib? ( media-libs/imlib )
 	imagemagick? ( media-gfx/imagemagick )
-	ssl? ( dev-tcltk/tls )
 	xmms? ( media-plugins/xmms-infopipe )"
+
+src_unpack() {
+
+	unpack ${A}
+
+	echo 'Categories=Application;Network;' >> ${S}/amsn.desktop
+
+}
 
 src_compile() {
 
