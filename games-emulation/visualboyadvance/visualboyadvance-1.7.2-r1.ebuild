@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r1.ebuild,v 1.1 2004/09/08 04:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r1.ebuild,v 1.2 2004/11/22 20:37:06 plasmaroo Exp $
 
-inherit eutils games
+inherit eutils games flag-o-matic
 
 DESCRIPTION="gameboy, gameboy color, and gameboy advance emulator"
 HOMEPAGE="http://vba.ngemu.com/"
@@ -35,6 +35,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# -O3 causes GCC to behave badly and hog memory, bug #64670.
+	replace-flags -O3 -O2
+
 	egamesconf \
 		--enable-c-core \
 		$(use_with mmx) \

@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/visualboyadvance
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.19 2004/09/08 04:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.20 2004/11/22 20:37:06 plasmaroo Exp $
+
+*visualboyadvance-1.7.2-r1 (22 Nov 2004)
+
+  22 Nov 2004; <plasmaroo@gentoo.org> visualboyadvance-1.7.2-r1.ebuild,
+  visualboyadvance-1.7.2.ebuild:
+  Adding a replace-flags for -O3 to -O2 to prevent the OOM killer from killing the
+  compile; bug #64670.
 
 *visualboyadvance-1.7.2 (07 Sep 2004)
 
