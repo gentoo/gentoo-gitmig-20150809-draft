@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-stunnel
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-stunnel/ChangeLog,v 1.1 2004/11/14 20:53:40 kaiowas Exp $
+
+*selinux-stunnel-20041112 (14 Nov 2004)
+
+  14 Nov 2004; petre rodan <kaiowas@gentoo.org> +metadata.xml,
+  +selinux-stunnel-20041112.ebuild:
+  initial commit
+

@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-arpwatch
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-arpwatch/ChangeLog,v 1.1 2004/11/14 20:46:18 kaiowas Exp $
+
+*selinux-arpwatch-20041114 (14 Nov 2004)
+
+  14 Nov 2004; petre rodan <kaiowas@gentoo.org> +metadata.xml,
+  +selinux-arpwatch-20041114.ebuild:
+  initial commit
+
