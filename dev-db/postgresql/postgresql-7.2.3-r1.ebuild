@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.3-r1.ebuild,v 1.1 2002/10/28 04:39:41 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.3-r1.ebuild,v 1.2 2002/11/08 03:29:50 rphillips Exp $
 
 IUSE="ssl nls java python tcltk perl"
 
@@ -85,17 +85,6 @@ src_compile() {
 
 
 	make || die
-}
-
-pkg_preinst() {
-	if ! groupmod postgres ; then
-		groupadd -g 70 postgres || die "problem adding group postgres"
-	fi
-
-	if ! id postgres; then
-		useradd -g postgres -s /bin/bash -d /var/lib/postgresql -c "postgres" postgres
-		assert "problem adding user postgres"
-	fi
 }
 
 src_install () {

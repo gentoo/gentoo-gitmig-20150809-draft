@@ -1,8 +1,15 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.37 2002/10/28 04:39:41 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.38 2002/11/08 03:29:50 rphillips Exp $
 
 *postgresql-7.2.3-r1 (27 Oct 2002)
+
+  07 Nov 2002; Ryan Phillips <rphillips@gentoo.org> postgresql-7.2.3-r1.ebuild :
+
+  Fixes a few bugs:
+    Log File (#10368)
+    Removed the check for the postgres user
+    
 
   27 Oct 2002; Ryan Phillips <rphillips@gentoo.org> postgresql-7.2.3-r1.ebuild :
 
