@@ -9,7 +9,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 DEPEND="virtual/python"
 RDEPEND="$DEPEND"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 inherit distutils
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.3.2.ebuild,v 1.2 2002/08/13 02:41:27 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.3.2.ebuild,v 1.3 2002/08/16 02:49:58 murphy Exp $
 
 S="${WORKDIR}/PyQt-snapshot-20020722"
 DESCRIPTION="PyQt is a set of Python bindings for the Qt Toolkit( VERSION 3.x ONLY!!)."
@@ -8,7 +8,7 @@ SRC_URI="http://www.riverbankcomputing.co.uk/download/snapshots/PyQt/PyQt-snapsh
 HOMEPAGE="http://www.riverbankcomputing.co.uk/pyqt/"
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 DEPEND="virtual/glibc
 	sys-devel/libtool
 	>=x11-libs/qt-3.0.4.1

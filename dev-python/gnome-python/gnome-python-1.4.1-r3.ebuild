@@ -1,6 +1,6 @@
 # Copyright 1999-20022 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.1-r3.ebuild,v 1.5 2002/07/27 19:23:31 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.1-r3.ebuild,v 1.6 2002/08/16 02:49:58 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome-python"
@@ -16,7 +16,7 @@ DEPEND="virtual/python
 RDEPEND="${RDEPEND}"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 LICENSE="GPL-2"
 
 src_compile() {

@@ -11,7 +11,7 @@ DEPEND="virtual/python"
 RDEPEND="${DEPEND}"
 
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="PYTHON"
 
 

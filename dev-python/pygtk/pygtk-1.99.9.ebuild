@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.9.ebuild,v 1.3 2002/07/30 00:50:11 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.9.ebuild,v 1.4 2002/08/16 02:49:58 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+2  bindings for Python"
@@ -16,7 +16,7 @@ DEPEND="virtual/python
 RDEPEND="${DEPEND}"
 
 SLOT="2.0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 LICENSE="LGPL-2.1"
 
 src_compile() {

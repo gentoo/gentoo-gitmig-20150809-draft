@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.3.2.1-r1.ebuild,v 1.2 2002/07/30 11:00:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.3.2.1-r1.ebuild,v 1.3 2002/08/16 02:49:58 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A blending of the wxWindows C++ class library with Python."
@@ -16,7 +16,7 @@ DEPEND=">=dev-lang/python-2.1
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
 	local myconf

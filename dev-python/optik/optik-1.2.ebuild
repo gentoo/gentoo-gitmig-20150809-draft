@@ -12,7 +12,7 @@ DEPEND="virtual/python"
 RDEPEND="${DEPEND}"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 LICENSE="BSD"
 
 src_install () {
