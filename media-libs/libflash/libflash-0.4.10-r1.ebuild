@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/libflash-0.4.10-r1.ebuild,v 1.8 2003/03/25 05:20:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/libflash-0.4.10-r1.ebuild,v 1.9 2003/08/31 10:34:53 plasmaroo Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library for flash animations"
@@ -35,6 +35,6 @@ src_compile() {
 src_install () {
 
 	make DESTDIR=${D} install || die "Install failed"
-	dodoc AUTHORS COPYING ChangeLog NEWS README
+	dodoc AUTHORS COPYING README
 
 }
