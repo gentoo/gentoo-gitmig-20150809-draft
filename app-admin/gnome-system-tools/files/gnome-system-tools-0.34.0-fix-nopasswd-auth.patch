@@ -1,0 +1,97 @@
+--- gnome-system-tools-0.34.0/backends/general.pl.in	2004-07-05 17:08:11.752058480 +0200
++++ gnome-system-tools-0.34.0.az/backends/general.pl.in	2004-07-05 17:08:32.256941264 +0200
+@@ -323,6 +323,22 @@
+ {
+   my ($name, $version, $description, $directives, @args) = @_;
+   my (%tool, $arg);
++  my @iargs = @_;
++  my $i;
++
++  # used to sync with gst_auth_write_password() - it checks for
++  # "Backend Init" and then writes a CR
++  while ($arg = shift (@iargs))
++  {
++    if ($arg eq "--pw-prompt") {
++      print "Backend Init";
++      do {
++        $i = <STDIN>;
++      } while ($1 != "\n");
++      goto end_pw_prompt_loop;
++    }
++  }
++end_pw_prompt_loop:
+ 
+   # print a CR for synchronysm with the frontend
+   print "\n";
+@@ -369,7 +385,7 @@
+       $tool{"do_report"} = $gst_do_report = 1;
+       &gst_report_set_threshold (99);
+     }
+-    else
++    elsif ($arg ne "--pw-prompt")
+     {
+       print STDERR "Error: Unrecognized option '$arg'.\n\n";
+       &gst_print_usage (\%tool, 1);
+--- gnome-system-tools-0.34.0/src/common/gst-auth.c	2004-07-05 17:08:02.965394256 +0200
++++ gnome-system-tools-0.34.0.az/src/common/gst-auth.c	2004-07-05 17:08:25.608951912 +0200
+@@ -158,25 +158,34 @@
+ gst_auth_write_password (GstTool *tool, gchar *pwd)
+ {
+ 	gchar *answer = "yes\n";
+-	gboolean cont = FALSE;
++	gboolean cont = FALSE, authed = FALSE;
+ 	gchar *str;
+ 	
+ 	/* read all the su or ssh output and flush the descriptors */
+ 	while (!cont) {
+-		str = gst_tool_read_from_backend (tool, "assword:", "/no)?", NULL);
++		str = gst_tool_read_from_backend (tool, "assword:", "/no)?", "ackend Init", NULL);
+ 
+ 		/* FIXME: hope that someday we can get rid of this ssh output string parsing */
+ 		if (g_strrstr (g_ascii_strup (str, -1), "AUTHENTICITY") != NULL) {
+ 			/* it's the "add to known hosts list" ssh's message, just answer "yes" */
+ 			gst_tool_write_to_backend (tool, answer);
+ 		} else if (g_strrstr (g_ascii_strup (str, -1), "PASSWORD") != NULL) {
++			authed = TRUE;
++			gst_tool_write_to_backend (tool, pwd);
++		
++		/* we pass --pw-prompt to the backend when we try to auth with su or
++		 * ssh - it then prints "Backend Init" to allow us to sync with it
++		 * in case the user can su/ssh without a password (pam module in the
++		 * case of su, or DSA key in the case of ssh */
++		} else if (g_strrstr (g_ascii_strup (str, -1), "BACKEND INIT") != NULL) {
++			/* we need to write '\n' to the backend, as it will wait for a CR
++			 * before it continues (if --pw-prompt was passed to it) */
++			gst_tool_write_to_backend (tool, "\n");
+ 			cont = TRUE;
+ 		}
+ 
+ 		g_free (str);
+ 	}
+-
+-	gst_tool_write_to_backend (tool, pwd);
+ }
+ 
+ static GladeXML *
+@@ -336,7 +345,9 @@
+ 	g_string_append (command, "`pkg-config --variable=backenddir system-tools-backends`");
+ 	g_string_append (command, "/");
+ 	g_string_append (command, tool->script_name);
+-	g_string_append (command, " --report");
++	/* --pw-prompt is for gst_auth_write_password() to be able to sync
++	 * with the backends */
++	g_string_append (command, " --pw-prompt --report");
+ 
+ 	if (tool->current_platform) {
+ 		g_string_append (command, " --platform ");
+@@ -364,7 +375,9 @@
+ 	command = g_string_new (NULL);
+ 	gst_auth_save_locale   (command);
+ 	command = g_string_append (command, tool->script_path);
+-	command = g_string_append (command, " --report");
++	/* --pw-prompt is for gst_auth_write_password() to be able to sync
++	 * with the backends */
++	command = g_string_append (command, " --pw-prompt --report");
+ 
+ 	if (tool->current_platform) {
+ 		g_string_append (command, " --platform ");
