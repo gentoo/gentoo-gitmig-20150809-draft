@@ -30,7 +30,7 @@ fi
 # lm-sensors           N         lm_sensors        Need to move this to its own ebuild
 
 LVMV=0.9.1_beta7
-EXT3V=2.4-0.9.1-246
+EXT3V=2.4-0.9.2-246
 MOSV=1.0.5
 # AV=0.5.11
 #JFSV=1.0.0

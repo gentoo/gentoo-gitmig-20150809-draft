@@ -1,15 +1,15 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.11.ebuild,v 1.2 2001/07/13 04:16:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.11.ebuild,v 1.3 2001/07/13 15:47:11 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Advanced Linux Sound Architecture modules"
 SRC_URI="ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${PV}.tar.bz2"
 HOMEPAGE="http://www.alsa-project.org"
 
-#add kernel includes dependency when we have one
-DEPEND="sys-devel/autoconf virtual/glibc sys-kernel/linux-headers"
+#virtual/glibc should depend on specific kernel headers
+DEPEND="sys-devel/autoconf virtual/glibc"
 PROVIDE="virtual/alsa"
 
 #might be good to roll this into Portage at some point.
