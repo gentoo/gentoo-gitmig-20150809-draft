@@ -1,4 +1,5 @@
 MD5 5e6a3789a774848dc8f1439e60792971 gst-plugins-faad-0.8.1.ebuild 331
+MD5 fc51845ced5911cbba4533f3095e0afe gst-plugins-faad-0.8.8.ebuild 330
 MD5 d8a6f6dca89dd0e70fbe92c4a20d0f9f gst-plugins-faad-0.8.3.ebuild 330
 MD5 2aa35644f770d9eef8cdea87508a1447 gst-plugins-faad-0.8.5.ebuild 331
 MD5 fc51845ced5911cbba4533f3095e0afe gst-plugins-faad-0.8.7.ebuild 330
@@ -10,3 +11,4 @@ MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-faad-0.8.2 71
 MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-faad-0.8.3 71
 MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-faad-0.8.5 71
 MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-faad-0.8.7 71
+MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-faad-0.8.8 71
