@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.04.ebuild,v 1.1 2003/11/18 17:42:24 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.04.ebuild,v 1.2 2003/11/28 20:52:28 port001 Exp $
 
 IUSE="nas esd motif opengl truetype gtk pam"
 
@@ -21,7 +21,7 @@ DEPEND="virtual/x11
 	nas? ( media-libs/nas )
 	esd? ( media-sound/esound )
 	motif? ( virtual/motif )
-	gtk? ( x11-libs/gtk+ )"
+	gtk? ( =x11-libs/gtk+-1.2* )"
 
 src_compile() {
 	local myconf
