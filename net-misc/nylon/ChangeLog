@@ -1,17 +1,18 @@
 # ChangeLog for net-misc/nylon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nylon/ChangeLog,v 1.5 2004/07/16 17:55:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nylon/ChangeLog,v 1.6 2004/08/12 16:04:28 aliz Exp $
 
 *nylon-1.2-r1 (16 Jul 2004)
 
   16 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> nylon-1.2-r1.ebuild,
   files/nylon.init:
   Added initscript contributed by <deltahat@nukesoft.org> and amd64 keyword.
+  Closing #22165.
 
 *nylon-1.2 (10 May 2004)
 
   10 May 2004; Daniel Ahlberg <aliz@gentoo.org> nylon-1.2.ebuild:
-  Version bump.
+  Version bump. Closing #30719.
 
 *nylon-1.1 (01 Jan 2003)
 
