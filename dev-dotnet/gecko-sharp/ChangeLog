@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/gecko-sharp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.4 2004/05/05 16:44:50 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.5 2004/05/06 15:09:33 latexer Exp $
+
+*gecko-sharp-0.3 (06 May 2004)
+
+  06 May 2004; Peter Johanson <latexer@gentoo.org> gecko-sharp-0.3.ebuild:
+  Bump to latest release from todd.
 
   05 May 2004; Peter Johanson <latexer@gentoo.org> gecko-sharp-0.2.ebuild:
   Add info to the || die for make. If upgrading from 0.1, problems arise due to
