@@ -1,8 +1,12 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.22 2004/05/12 08:52:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.23 2004/05/14 01:55:58 karltk Exp $
 
 *eclipse-sdk-2.1.3-r2 (10 May 2004)
+
+  14 May 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  eclipse-sdk-2.1.3-r2.ebuild: Added pauldv's build patches. Fixes #50759.
+  Can not be safely compiled with jikes at the moment.
 
   10 May 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-sdk-3.0.0_pre8-r1.ebuild: Added -fPIC when compiling xpcom.o

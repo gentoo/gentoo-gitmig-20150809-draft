@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r2.ebuild,v 1.2 2004/05/10 21:10:21 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r2.ebuild,v 1.3 2004/05/14 01:55:58 karltk Exp $
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download.eclipse.org/downloads/drops/R-2.1.3-200403101828/eclipse-sourceBuild-srcIncluded-2.1.3.zip"
-IUSE="gtk motif gnome kde mozilla jikes"
+IUSE="gtk motif gnome kde jikes"
 SLOT="2"
 LICENSE="CPL-1.0"
 KEYWORDS="~x86"
@@ -65,8 +65,11 @@ src_unpack() {
 	cd ${S}
 	unpack ${A}
 
-	# karltk: Is this really needed?
-#	addwrite "/proc/self/maps"
+	# Patch build script
+	epatch ${FILESDIR}/${PN}-${PV}-build.patch
+
+	# This one required for the IBM JDK
+	addwrite "/proc/self/maps"
 
 	# Clean up all pre-built code
 	ant -q -Dws=gtk -Dos=linux clean
@@ -82,10 +85,8 @@ src_unpack() {
 	# Move around some source code that should have been handled by the build system
 	cd ${S}/"${gtk_swt_src_dir}" || die "Directory ${gtk_swt_src_dir} not found"
 	cp ${S}/plugins/org.eclipse.swt/Eclipse\ SWT/common/library/* .
-#	cp ${S}/plugins/org.eclipse.swt/Eclipse\ SWT\ Mozilla/common/library/* .
-#	cp ${S}/plugins/org.eclipse.swt/Eclipse\ SWT\ Program/gnome/library/* .
-#	cp ${S}/plugins/org.eclipse.swt/Eclipse\ SWT\ AWT/gtk/library/* .
 
+	# Configure libraries for GNOME and GTK+
 	if use gnome ; then
 	    gnome_lib=`pkg-config --libs gnome-vfs-module-2.0 libgnome-2.0 libgnomeui-2.0 | sed -e "s:-pthread:-lpthread:" -e "s:-Wl,--export:--export:"`
 	fi
@@ -93,7 +94,6 @@ src_unpack() {
 	if use gtk ; then
 		gthread_lib=`pkg-config --libs gtk+-2.0 gthread-2.0 | sed -e "s:-pthread:-lpthread:" -e "s:-Wl,--export:--export:"`
 	fi
-
 
 	sed -e "s:/bluebird/teamswt/swt-builddir/ive:$JAVA_HOME:" \
 		-e "s:JAVA_JNI=\$(IVE_HOME)/bin/include:JAVA_JNI=\$(IVE_HOME)/include:" \
@@ -112,6 +112,7 @@ src_unpack() {
 			-i swt.c
 	fi
 
+	# Some fixups for the motif compilation
 	cd ${S}/"${motif_swt_src_dir}"
 	cp ${S}/plugins/org.eclipse.swt/Eclipse\ SWT/common/library/* .
 
@@ -125,8 +126,10 @@ src_unpack() {
 		-e "s:-I/usr/include/kde:-I\`kde-config --prefix\`/include:" \
 	-i make_linux.mak
 
+	# Patch in package version into the build info
 	cd ${S}
-	find -type f -name about.mappings -exec sed -e "s/@build@/Gentoo Linux ${PV}/" -i \{\} \;
+	find -type f -name about.mappings -exec sed -e "s/@build@/Gentoo Linux ${PF}/" -i \{\} \;
+
 }
 
 build_gtk_frontend() {
@@ -139,15 +142,6 @@ build_gtk_frontend() {
 
 	cd ${S}/"${gtk_swt_src_dir}"
 	make -f make_gtk.mak make_swt || die "Failed to build platform-independent SWT support"
-#	make -f make_gtk.mak make_atk || die "Failed to build atk support"
-#	if use gnome ; then
-#		einfo "Building GNOME VFS support"
-#		make -f make_gtk.mak make_gnome || die "Failed to build GNOME VFS support"
-#	fi
-#	if use mozilla ; then
-#		einfo "Building Mozilla component"
-#		make -f make_gtk.mak make_mozilla || die "Failed to build Mozilla support"
-#	fi
 
 	# move the *.so files to the right path so eclipse can find them
 	mkdir -p ${S}/"${gtk_swt_dest_dir}"
@@ -177,11 +171,12 @@ build_motif_frontend() {
 
 src_compile() {
 
-#	addwrite "/proc/self/maps"
+	addwrite "/proc/self/maps"
 
 	# Figure out correct boot classpath
 	if [ ! -z "`java-config --java-version | grep IBM`" ] ; then
 		# IBM JRE
+		einfo "Using the IBM JDK"
 		ant_extra_opts="-Dbootclasspath=$(java-config --jdk-home)/jre/lib/core.jar"
 	else
 		# Sun derived JREs (Blackdown, Sun)
@@ -196,9 +191,23 @@ src_compile() {
 
 	set_dirs
 
+	# Build resources
+	einfo "Building resources.core plugin"
+	cd ${core_src_dir}
+	make JDK_INCLUDE="`java-config -O`/include -I`java-config -O`/include/linux" || die "Failed to build resource.core plugin"
+	mkdir -p ${S}/"${core_dest_dir}"
+	mv *.so ${S}/"${core_dest_dir}"
+
+
+	# Build selected frontends
+	cd ${S}
+	use gtk && build_gtk_frontend
+	use motif && build_motif_frontend
+
+	# Build java code
 	# karltk: Do we really need to rebuild all of this if both motif and
 	# gtk are specified?
-
+	cd ${S}
 	if ( use gtk || ! ( use gtk || use motif || use kde ) ); then
 		einfo "Building platform suited for the GTK+ frontend"
 		ant -q \
@@ -206,7 +215,7 @@ src_compile() {
 			-Dos=linux \
 			-Dws=gtk \
 			-DinstallArch=$ARCH \
-			${ant_extra_opts} compile || die "Failed to compile java code (gtk+)"
+			${ant_extra_opts} compile distribute || die "Failed to compile java code (gtk+)"
 	fi
 	if use motif ; then
 		einfo "Building platform suited for the Motif frontend"
@@ -215,39 +224,9 @@ src_compile() {
 			-Dos=linux \
 			-Dws=motif \
 			-DinstallArch=$ARCH \
-			${ant_extra_opts} compile || die "Failed to compile java code (Motif)"
+			${ant_extra_opts} compile distribute || die "Failed to compile java code (Motif)"
 	fi
 
-	einfo "Building resources.core plugin"
-	cd ${core_src_dir}
-	make JDK_INCLUDE="`java-config -O`/include -I`java-config -O`/include/linux" || die "Failed to build resource.core plugin"
-	mkdir -p ${S}/"${core_dest_dir}"
-	mv *.so ${S}/"${core_dest_dir}"
-
-	cd ${S}
-
-	# Build selected frontends
-	use gtk && build_gtk_frontend
-	use motif && build_motif_frontend
-
-}
-
-generate_filelist() {
-	local findopts
-	if [ "$1" == "dirs" ] ; then
-		findopts="-type d"
-	elif [ "$1" == "files" ] ; then
-		findopts="-type f"
-	else
-		die "Incorrect param to generate_filelist"
-	fi
-	find plugins ${findopts} | \
-		egrep -v ".*\.(java|c|h|o|mak)$" | \
-		egrep -v "(/|\.)(carbon|solaris|win32|hpux|aix|photon|macosx|gtk64)" | \
-		egrep -v ".*src.zip$" | \
-		egrep -v "/src(-|_|new)" | \
-		egrep -v "/src/" | \
-		grep -v "build.xml"
 }
 
 src_install() {
@@ -255,38 +234,26 @@ src_install() {
 
 	# Create basic directories
 	dodir ${eclipse_dir}
-	insinto ${eclipse_dir}
-	doins plugins/org.eclipse.platform/.eclipseproduct
 
-	# Install features
-	dodir ${eclipse_dir}/features
-	einfo "Copying features"
-	cp -dpR features/org.eclipse.{jdt,platform,team.extras}-feature ${D}/${eclipse_dir}/features/
-	if use gtk ; then
-		cp -dpR features/org.eclipse.{platform,sdk}.linux.gtk-feature ${D}/${eclipse_dir}/features/
-	fi
-	if use motif ; then
-		cp -dpR features/org.eclipse.{platform,sdk}.linux.motif-feature ${D}/${eclipse_dir}/features/
-	fi
-
-	# Install plugins
-	einfo "Creating directory structure"
-	generate_filelist dirs | xargs -n 1 -i@ dodir ${eclipse_dir}/@ || die "Failed to create plugin directory structure"
-	einfo "Copying plugins"
-	generate_filelist files | xargs -n 1 -i@ cp @ ${D}/${eclipse_dir}/@ || die "Failed to copy plugins"
+	einfo "Installing features and plugins"
+	find features \
+		-name "*.bin.dist.zip" \
+		-exec unzip -q \{\} -d ${D}/${eclipse_dir} \;
 
 	# Install launchers and native code
+	exeinto ${eclipse_dir}
 	if use gtk ; then
 		einfo "Installing eclipse-gtk binary"
-		mv  ${D}/${eclipse_dir}/plugins/platform-launcher/library/gtk/eclipse-gtk \
-			${D}/${eclipse_dir}/eclipse-gtk || die "Failed to install eclipse-gtk"
+		doexe plugins/platform-launcher/library/gtk/eclipse-gtk || die "Failed to install eclipse-gtk"
 	fi
 	if use motif ; then
 		einfo "Installing eclipse-motif binary"
-		mv  ${D}/${eclipse_dir}/plugins/platform-launcher/library/motif/eclipse-motif \
-			${D}/${eclipse_dir}/eclipse-motif || die "Failed to install eclipse-motif"
+		doexe plugins/platform-launcher/library/motif/eclipse-motif || die "Failed to install eclipse-gtk"
 	fi
 
+	# Installing misc files
+	insinto ${eclipse_dir}
+	doins plugins/org.eclipse.platform/.eclipseproduct
 	doins plugins/org.eclipse.platform/{startup.jar,splash.bmp}
 	doins plugins/platform-launcher/bin/linux/gtk/icon.xpm
 
