@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.94 2004/03/23 15:14:44 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.95 2004/03/25 08:24:36 mr_bones_ Exp $
+
+  25 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> evolution-1.2.3.ebuild,
+  evolution-1.2.4.ebuild:
+  don't use deprecated ? : use syntax
 
   24 Mar 2004; Jon Portnoy <avenj@gentoo.org> evolution-1.4.5.ebuild,
   evolution-1.4.6.ebuild :
