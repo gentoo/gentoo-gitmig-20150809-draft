@@ -1,8 +1,11 @@
 # ChangeLog for net-libs/libcapsinetwork 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libcapsinetwork/ChangeLog,v 1.5 2003/02/12 08:05:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libcapsinetwork/ChangeLog,v 1.6 2003/02/17 19:56:43 mholzer Exp $
 
 *libcapsinetwork-0.2.3 (06 Jan 2003)
+
+  17 Feb 2003; Martin Holzer <mholzer@gentoo.org> libcapsinetwork-0.2.3.ebuild:
+  Didn't want emake, changed to make. Closes #15792.
 
   06 Jan 2003; Hannes Mehnert <hannes@gentoo.org> libcapsinetwork-0.2.3.ebuild:
   version bump, thanks to cap@capsi.com (Rob Kaper) (bug #9872)
