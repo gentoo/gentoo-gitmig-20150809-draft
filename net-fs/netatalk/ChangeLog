@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/netatalk
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.13 2004/01/05 06:24:38 zhen Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.14 2004/04/10 17:57:51 ciaranm Exp $
+
+  10 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org> netatalk-1.6.4.ebuild:
+  Added ~sparc, thanks to Belinus in #gentoo-sparc
 
   05 Jan 2004; zhen <zhen@gentoo.org> metadata.xml:
   changing herd to net-fs
