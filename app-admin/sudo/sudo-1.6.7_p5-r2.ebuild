@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5-r2.ebuild,v 1.9 2004/11/17 15:58:43 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5-r2.ebuild,v 1.10 2004/11/23 13:14:15 gmsoft Exp $
 
 inherit gnuconfig eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${P/_/}.tar.gz"
 
 LICENSE="Sudo"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha ~arm ~hppa amd64 ~ia64 ~s390 ppc64"
+KEYWORDS="x86 ppc sparc mips alpha ~arm hppa amd64 ~ia64 ~s390 ppc64"
 IUSE="pam skey"
 
 DEPEND="pam? ( >=sys-libs/pam-0.73-r1 ) skey? ( >=app-admin/skey-1.1.5-r1 )"

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.35 2004/11/17 15:58:43 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.36 2004/11/23 13:14:15 gmsoft Exp $
+
+  23 Nov 2004; Guy Martin <gmsoft@gentoo.org> sudo-1.6.7_p5-r2.ebuild:
+  Stable on hppa.
 
   17 Nov 2004; Hardave Riar <hardave@gentoo.org> sudo-1.6.7_p5-r2.ebuild:
   Stable on mips, bug #70838
