@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.60 2004/11/23 03:54:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.61 2004/11/23 04:51:15 vapier Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -18,6 +18,17 @@ if [ -e /etc/init.d/functions.sh ] ; then
 		echo &> /dev/null
 	}
 fi
+
+# Track progress of the bootstrap process to allow for
+# semi-transparent resuming
+progressfile=/var/run/bootstrap-progress
+[ -e ${progressfile} ] && source ${progressfile}
+export BOOTSTRAP_STAGE="${BOOTSTRAP_STAGE:-1}"
+set_bootstrap_stage() {
+	[ -n "${STRAP_RUN}" ] && return 0
+	export BOOTSTRAP_STAGE=$1
+	echo "BOOTSTRAP_STAGE=$1" > ${progressfile}
+}
 
 unset STRAP_EMERGE_OPTS 
 STRAP_RUN=1
@@ -48,6 +59,20 @@ for opt in "$@" ; do
 	esac
 done
 
+if [ -n "${STRAP_RUN}" ] 
+	if [ ${BOOTSTRAP_STAGE} -ge 6 ] ; then
+		echo
+		einfo "System has been bootstrapped already!"
+		einfo "If you re-bootstrap the system, you must complete the entire bootstrap process"
+		einfo "otherwise you will have a broken system."
+		einfo "Press enter to continue or CTRL+C to abort ..."
+		read
+		set_bootstrap_stage 1
+	fi
+else
+	export BOOTSTRAP_STAGE=0
+fi
+
 MYPROFILEDIR="$(readlink -f /etc/make.profile)"
 if [ ! -d "${MYPROFILEDIR}" ] ; then
 	echo "!!! Error:  '${MYPROFILEDIR}' does not exist. Exiting."
@@ -63,8 +88,12 @@ echo -e "\n${GOOD}Gentoo Linux${GENTOO_VERS}; ${BRACKET}http://www.gentoo.org/${
 echo -e "Copyright 1999-2004 Gentoo Foundation; Distributed under the GPLv2"
 if [ "${STRAP_EMERGE_OPTS:0:2}" = "-f" ]; then
 	echo "Fetching all bootstrap-related archives ..."
-else
-	echo "Starting Bootstrap of base system ..."
+elif [ -n "${STRAP_RUN}" ] ; then
+	if [ ${BOOTSTRAP_STAGE} -gt 2 ] ; then
+		echo "Resuming Bootstrap of base system ..."
+	else
+		echo "Starting Bootstrap of base system ..."
+	fi
 fi
 echo -------------------------------------------------------------------------------
 
@@ -210,16 +239,22 @@ export CONFIG_PROTECT="-*"
 # disable collision-protection
 export FEATURES="${FEATURES} -collision-protect"
 
-USE="-* build bootstrap ${STAGE1_USE}" emerge ${STRAP_EMERGE_OPTS} ${myPORTAGE} || cleanup 1
-echo -------------------------------------------------------------------------------
+if [ ${BOOTSTRAP_STAGE} -le 1 ] ; then
+	USE="-* build bootstrap ${STAGE1_USE}" emerge ${STRAP_EMERGE_OPTS} ${myPORTAGE} || cleanup 1
+	echo -------------------------------------------------------------------------------
+	set_bootstrap_stage 2
+fi
 export USE="${ORIGUSE} bootstrap ${STAGE1_USE}"
 
 # We can't unmerge headers which may or may not exist yet. If your
 # trying to use nptl, it may be needed to flush out any old headers
 # before fully bootstrapping. 
-#emerge ${STRAP_EMERGE_OPTS} -C virtual/os-headers || cleanup 1
-emerge ${STRAP_EMERGE_OPTS} ${myOS_HEADERS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} || cleanup 1
-echo -------------------------------------------------------------------------------
+if [ ${BOOTSTRAP_STAGE} -le 2 ] ; then
+	#emerge ${STRAP_EMERGE_OPTS} -C virtual/os-headers || cleanup 1
+	emerge ${STRAP_EMERGE_OPTS} ${myOS_HEADERS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} || cleanup 1
+	echo -------------------------------------------------------------------------------
+	set_bootstrap_stage 3
+fi
 
 # If say both gcc and binutils were built for i486, and we then merge
 # binutils for i686 without removing the i486 version (Note that this is
@@ -250,8 +285,11 @@ if [ -n "${STRAP_RUN}" ]; then
     emerge clean || cleanup 1
 fi
 
-emerge ${STRAP_EMERGE_OPTS} ${myGCC} || cleanup 1
-echo -------------------------------------------------------------------------------
+if [ ${BOOTSTRAP_STAGE} -le 3 ] ; then
+	emerge ${STRAP_EMERGE_OPTS} ${myGCC} || cleanup 1
+	echo -------------------------------------------------------------------------------
+	set_bootstrap_stage 4
+fi
 
 # Basic support for gcc multi version/arch scheme ...
 if [ -n "${STRAP_RUN}" ]; then
@@ -265,13 +303,19 @@ if [ -n "${STRAP_RUN}" ]; then
 	fi
 fi
 
-emerge ${STRAP_EMERGE_OPTS} ${myLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
-echo -------------------------------------------------------------------------------
+if [ ${BOOTSTRAP_STAGE} -le 4 ] ; then
+	emerge ${STRAP_EMERGE_OPTS} ${myLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
+	echo -------------------------------------------------------------------------------
+	set_bootstrap_stage 5
+fi
 
 # ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
 export USE="${ORIGUSE}"
-emerge ${STRAP_EMERGE_OPTS} ${myNCURSES} || cleanup 1
-echo -------------------------------------------------------------------------------
+if [ ${BOOTSTRAP_STAGE} -le 5 ] ; then
+	emerge ${STRAP_EMERGE_OPTS} ${myNCURSES} || cleanup 1
+	echo -------------------------------------------------------------------------------
+	set_bootstrap_stage 6
+fi
 
 # Restore original make.conf
 cleanup 0
