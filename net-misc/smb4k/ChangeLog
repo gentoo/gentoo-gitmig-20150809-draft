@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/smb4k
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.5 2004/05/16 19:19:21 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.6 2004/06/22 18:07:44 malc Exp $
+
+  22 Jun 2004; <malc@gentoo.org> smb4k-0.4.0.ebuild:
+  Added ~amd64 keyword, fixes bug #54586
 
 *smb4k-0.4.0 (15 May 2004)
 
