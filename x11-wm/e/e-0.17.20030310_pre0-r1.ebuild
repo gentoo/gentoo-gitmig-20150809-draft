@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-0.17.20030310_pre0-r1.ebuild,v 1.2 2003/03/22 08:27:51 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-0.17.20030310_pre0-r1.ebuild,v 1.3 2003/09/15 18:11:29 seemant Exp $
 
 DESCRIPTION="window manager and desktop shell"
 HOMEPAGE="http://www.enlightenment.org/pages/enlightenment.html"
@@ -19,7 +19,7 @@ DEPEND="virtual/x11
 	>=dev-db/edb-1.0.3.2003*
 	>=media-libs/ebits-1.0.1.2003*
 	>=x11-libs/ecore-0.0.2.2003*
-	>=sys-apps/efsd-0.0.1.2003*
+	>=sys-fs/efsd-0.0.1.2003*
 	>=media-libs/ebg-1.0.0.2003*
 	>=media-libs/imlib2_loaders-1.0.4.2003*
 	>=media-libs/freetype-2.1.3*
