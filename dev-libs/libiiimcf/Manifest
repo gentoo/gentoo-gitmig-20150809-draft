@@ -1,8 +1,18 @@
-MD5 e2d04418333e92a10715a13040e12bec ChangeLog 904
-MD5 3343436cdbfaee1377281b9796398b93 libiiimcf-12.1_p2002.ebuild 746
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 18f00ef61ecc541459680b19a6cadd5d ChangeLog 1041
+MD5 a5f9a08fabf1c9211d3314e2479dc75f libiiimcf-12.1_p2002.ebuild 742
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 8d842efe9a4d900979e2ca4dfee0eb1e libiiimcf-11.4_p1467.ebuild 612
 MD5 65ac2addbf5399589c3f933b090da739 libiiimcf-12.0.1_pre1891.ebuild 673
 MD5 be37bb244b3081121d1781e5118f2443 files/digest-libiiimcf-12.1_p2002 79
 MD5 de5dcfe76eb7086d4b90d73615622cd3 files/digest-libiiimcf-11.4_p1467 74
 MD5 e97031d3645096ad0e4fb680a228b9c0 files/digest-libiiimcf-12.0.1_pre1891 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCStqRVWNWqTUmv+0RAokIAKCjdB6dzk+4rx8NN8Y+U+SsKoQf8ACeKgdY
+GZ0lQrTW7LdIL24UZ/reuDY=
+=5FrY
+-----END PGP SIGNATURE-----

@@ -1,5 +1,8 @@
-MD5 d0666d21df0fa0abda75051fe16d024b ChangeLog 1047
-MD5 57782cfd6b8b6ea8ff7ce3b5cad5f111 csconv-12.1_p2002.ebuild 873
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 89efa8ada0cb7a7cb7dd9d5354107866 ChangeLog 1176
+MD5 530f809524fbe9c9a162f62ea0dec5c2 csconv-12.1_p2002.ebuild 808
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 9286336f03014d5d32208b476eb1400a csconv-11.4_p1467.ebuild 728
 MD5 4c22e252d014e007b0613b962e4eacc4 csconv-12.0.1_pre1891.ebuild 810
@@ -8,3 +11,10 @@ MD5 e97031d3645096ad0e4fb680a228b9c0 files/digest-csconv-12.0.1_pre1891 77
 MD5 cb0f0e83a841551c20af4ee8339547de files/csconv-11.4-gentoo.diff 1024
 MD5 5392f632676d350d0ce95e1579f7e51f files/csconv-12.0.1-gentoo.diff 1015
 MD5 be37bb244b3081121d1781e5118f2443 files/digest-csconv-12.1_p2002 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCStlyVWNWqTUmv+0RAqURAJ43QvcxlPLx83zjkJ6hhEYFl2YZJQCfR8TV
+zx5bAzjll3GuzeHi65Kt8Hk=
+=UPeF
+-----END PGP SIGNATURE-----
