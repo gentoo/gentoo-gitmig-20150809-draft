@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 741b7eae88d6192b1130df8ba1d9011e ChangeLog 3759
 MD5 e7bc2d5a93ab1696d4c26ed10b590385 netcat-110-r6.ebuild 1562
 MD5 c260f5cd9a68c0965120f9244b5df4ef metadata.xml 284
 MD5 65549a89bfefa86a357427408e4ac6d7 files/digest-netcat-110-r6 200
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBq80SroRuSHgZdywRAv8ZAJsEVYq4jXaZi4lmBurgBSNQOIEsrwCcCYS5
+ZcwjmUX5MCpZCBEAlOdCPuI=
+=unU8
+-----END PGP SIGNATURE-----
