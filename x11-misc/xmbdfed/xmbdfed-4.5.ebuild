@@ -1,19 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.5.ebuild,v 1.1 2002/10/25 06:57:46 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.5.ebuild,v 1.2 2002/12/04 19:53:07 vapier Exp $
 
-IUSE="truetype"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="BDF font editor for X"
 SRC_URI="http://clr.nmsu.edu/~mleisher/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2"
 HOMEPAGE="http://clr.nmsu.edu/~mleisher/xmbdfed.html"
 
-
 SLOT="0"
 LICNSE="as-is"
 KEYWORDS="~x86"
+IUSE="truetype"
 
 DEPEND="virtual/x11
 	>=x11-libs/openmotif-2.1.30
@@ -30,31 +27,25 @@ src_unpack() {
 }
 
 src_compile() {
-
-# There's no ./configure in xmbdfed, so perform the make by manually
-# specifying the correct options for Gentoo.
+	# There's no ./configure in xmbdfed, so perform the make by manually
+	# specifying the correct options for Gentoo.
 
 	local flags=""
-	local incs=""
-	local libs=""
+	local incs="-I/usr/X11R6/include"
+	local libs="-L/usr/X11R6/lib -lXm -lXpm -lXmu -lXt -lXext -lX11 -lSM -lICE"
 
-	incs="-I/usr/X11R6/include"
-	libs="-L/usr/X11R6/lib -lXm -lXpm -lXmu -lXt -lXext -lX11 -lSM -lICE"
-
-	if use truetype
-	then
+	if [ `use truetype` ] ; then
 		flags="FTYPE_DEFS=\"-DHAVE_FREETYPE\""
 		incs="${incs} -I/usr/include/freetype"
 		libs="${libs} -lttf"
 	fi
-	
-	
+
 	make CFLAGS="${CFLAGS}" ${flags} \
-	INCS="${incs}" \
-	LIBS="${libs}"
+		INCS="${incs}" \
+		LIBS="${libs}"
 }
 
-src_install () {
+src_install() {
 	dobin xmbdfed
 	newman xmbdfed.man xmbdfed.1
 	dodoc CHANGES COPYRIGHTS INSTALL README xmbdfedrc
