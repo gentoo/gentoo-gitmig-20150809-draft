@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1.ebuild,v 1.3 2004/07/22 21:06:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1.ebuild,v 1.4 2004/07/28 03:10:09 lv Exp $
 
 DESCRIPTION="Tool to setup encrypted devices with dm-crypt"
 HOMEPAGE="http://www.saout.de/misc/dm-crypt/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.saout.de/misc/dm-crypt/${PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND=">=sys-libs/device-mapper-1.00.07-r1
 		>=dev-libs/libgcrypt-1.1.42"
