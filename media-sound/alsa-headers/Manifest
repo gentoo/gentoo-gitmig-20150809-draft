@@ -1,4 +1,6 @@
-MD5 b356da52a01217e6bbda1b7dac2c69fc ChangeLog 864
 MD5 f9621e5bfc3f76852e2e4d7b7e6de89b alsa-headers-1.0.5a.ebuild 1086
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 b356da52a01217e6bbda1b7dac2c69fc ChangeLog 864
+MD5 ba893472e6524c1985b86925738ccd5d alsa-headers-1.0.6a.ebuild 1099
 MD5 deb0bfd8e2cfe0ba434fb5a820294502 files/digest-alsa-headers-1.0.5a 72
+MD5 e1b13905eac70fe728dcb85fcaac27a9 files/digest-alsa-headers-1.0.6a 72
