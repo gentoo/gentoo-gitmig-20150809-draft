@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.14 2003/03/16 23:14:33 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.15 2003/07/09 19:03:19 raker Exp $
 
 inherit eutils
 
@@ -283,7 +283,7 @@ pkg_postinst() {
 
 pkg_config() {
 
-export qhost=`hostname`			
+export qhost=`hostname --fqdn`			
 	if [ ${ROOT} = "/" ] ; then
 		if [ ! -f ${ROOT}/var/qmail/control/me ] ; then
 			${ROOT}/var/qmail/bin/config-fast $qhost 
