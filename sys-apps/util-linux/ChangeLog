@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.14 2002/10/27 07:43:12 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.15 2002/11/30 02:42:18 carpaski Exp $
+
+*util-linux-2.11y (27 Oct 2002)
+
+  29 Nov 2002; Nicholas Jones <carpaski@gentoo.org> :
+	Latest release. Patched 2.11r crypto patch for this version.
+	On mirrors as util-linux-2.11y-crypt-gentoo.patch.gz
+	Updates are mostly cleanups.
 
 *util-linux-2.11w (27 Oct 2002)
 
