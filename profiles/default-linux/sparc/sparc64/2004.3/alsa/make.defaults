@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2004.3/alsa/make.defaults,v 1.1 2004/11/22 18:31:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2004.3/alsa/make.defaults,v 1.2 2004/12/30 12:55:42 vapier Exp $
 
 ARCH="sparc"
 
 # Even though this is a 64bit kernel, we use a 32-bit userland (v9)
 CHOST="sparc-unknown-linux-gnu"
-PLATFORM="sparc64-unknown-linux-gnu"
 
 # Used in ebuilds for verifying sparc64 profile
 PROFILE_ARCH="sparc64"
