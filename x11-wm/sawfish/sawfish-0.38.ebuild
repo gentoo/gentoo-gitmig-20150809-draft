@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-0.38.ebuild,v 1.5 2001/07/29 10:59:16 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-0.38.ebuild,v 1.6 2001/09/30 12:24:09 azarah Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -63,6 +63,10 @@ src_install() {
   try make DESTDIR=${D} install
   dodoc AUTHORS BUGS COPYING ChangeLog DOC FAQ NEWS README THANKS TODO
 
+  # Add to Gnome CC's Window Manager list
+  insinto ${GNOME_PATH}/share/gnome/wm-properties
+  doins ${FILESDIR}/Sawfish.desktop
+      
 }
 
 
