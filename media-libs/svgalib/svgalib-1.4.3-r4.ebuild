@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.13 2004/02/01 22:16:00 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.14 2004/04/06 03:05:24 vapier Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="A library for running svga graphics on the console"
 HOMEPAGE="http://www.svgalib.org/"
@@ -41,9 +41,9 @@ src_compile() {
 
 	make OPTIMIZE="${CFLAGS}" LDFLAGS='-L ../sharedlib' demoprogs || die
 
-	cp Makefile Makefile.orig
-	sed 's/\(install: $(INSTALLAOUTLIB) \)installheaders \(.*\)/\1\2/g' \
-		Makefile.orig > Makefile
+	sed -i \
+		's/\(install: $(INSTALLAOUTLIB) \)installheaders \(.*\)/\1\2/g' \
+		Makefile
 }
 
 src_install() {
