@@ -1,4 +1,6 @@
 MD5 b33459d5beb80cc23aae39df5f0aee72 jabref-1.4.ebuild 897
-MD5 7bca0ea8c992f12f2d4004704c2348fd ChangeLog 1206
+MD5 4ee580a12f644808d9ac6ab4653135e9 jabref-1.5.ebuild 868
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 9dee85ef2d832e64ec66b3361a89ab75 ChangeLog 1325
 MD5 0f1a7e4f032e6a1428a78040406d1a88 files/digest-jabref-1.4 67
+MD5 1f8c47f49e81868dd718727defee12fa files/digest-jabref-1.5 68
