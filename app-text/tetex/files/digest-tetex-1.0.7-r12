@@ -9,7 +9,7 @@ MD5 f05081952fcd0ac7d776c04242a3f7d1 /files/teTeX-1.0-gentoo.diff 1176
 MD5 50c560b391869be15a001b738e0b7bfe /files/tetex-2.0.diff 2010
 MD5 a57ac0ec7f0c9a136cb087abc8d86c46 /files/tetex-1.0.7-r11-gentoo.diff 1693
 MD5 476a1c8128397ff7a381c43fe723a522 /files/tetex-2.0.2-dont-run-config.diff 1243
-MD5 0c47274d4ec0a195691e8858452ecdfc /tetex-1.0.7-r12.ebuild 4888
+MD5 68ede01c89e3b745b675833855f8c730 /tetex-1.0.7-r12.ebuild 4890
 MD5 2c6da2a45096c2fdc41b8de6a8af1a52 teTeX-src-1.0.7.tar.gz 8040192
 MD5 984530be5cc0dd73738de9d0067bc130 teTeX-texmf-gg-1.0.3.tar.bz2 35037546
 MD5 12925188fdadcd6a970c21bba3269fc2 ec-ready-mf-tfm.tar.gz 386630
