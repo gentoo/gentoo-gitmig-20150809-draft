@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc1-r1.ebuild,v 1.5 2004/05/07 19:32:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc1-r1.ebuild,v 1.6 2004/05/08 23:20:24 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
@@ -318,7 +318,7 @@ src_compile() {
 
 	cd ${S}
 	einfo "Configuring Mozilla..."
-	econf \
+	./configure --prefix=/usr/lib/mozilla \
 		--with-system-jpeg \
 		--with-system-mng \
 		--with-system-png \
