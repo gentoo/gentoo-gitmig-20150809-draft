@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-0.2.0.ebuild,v 1.4 2004/12/15 09:40:19 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-0.2.0.ebuild,v 1.5 2004/12/19 18:19:16 twp Exp $
 
 DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
@@ -17,11 +17,10 @@ DEPEND="virtual/x11
 	media-libs/fontconfig
 	>=media-libs/freetype-2*
 	>=media-libs/libpixman-0.1.1
-	glitz? ( media-libs/glitz-cvs )
+	glitz? ( =media-libs/glitz-0.2.3 )
 	png? ( media-libs/libpng )"
 
 src_compile() {
-	use glitz && ewarn "Cairo glitz support seems to be broken, expect compilation to fail"
 	econf `use_enable glitz` `use_enable png` || die
 	emake || die
 }
