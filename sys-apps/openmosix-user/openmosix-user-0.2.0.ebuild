@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openmosix-user/openmosix-user-0.2.0.ebuild,v 1.5 2002/10/13 22:27:01 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openmosix-user/openmosix-user-0.2.0.ebuild,v 1.6 2002/11/03 21:55:58 tantive Exp $
 
 S=${WORKDIR}/openMosixUserland-${PV}
 DESCRIPTION="User-land utilities for openMosix process migration (clustering) software"
 SRC_URI="mirror://sourceforge/openmosix/openMosixUserland-${PV}.tar.gz"
-HOMEPAGE="http://www.openmosix.com"
+HOMEPAGE="http://www.openmosix.com/"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2
 	>=sys-kernel/openmosix-sources-2.4.17"
