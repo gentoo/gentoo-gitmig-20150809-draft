@@ -1,0 +1,16 @@
+diff --exclude=.deps -ur xmms-crossfade-0.3.8-orig/monitor.h xmms-crossfade-0.3.8/monitor.h
+--- xmms-crossfade-0.3.8-orig/monitor.h	2005-03-13 02:11:01.000000000 -0500
++++ xmms-crossfade-0.3.8/monitor.h	2005-03-13 02:12:25.000000000 -0500
+@@ -34,9 +34,9 @@
+ void xfade_start_monitor    ();
+ void xfade_stop_monitor     ();
+ 
+-extern GtkWidget   *monitor_win;
+-extern GtkWidget   *monitor_display_drawingarea;
++static GtkWidget   *monitor_win;
++static GtkWidget   *monitor_display_drawingarea;
+ extern GtkEntry    *monitor_output_entry;
+-extern GtkProgress *monitor_output_progress;
++static GtkProgress *monitor_output_progress;
+ 
+ #endif  /* _MONITOR_H_ */

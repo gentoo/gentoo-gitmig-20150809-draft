@@ -1,5 +1,16 @@
-MD5 2f0777083af0174ce1bd41254816dfad bmp-crossfade-0.3.8-r2.ebuild 995
-MD5 a64a5431fb0c81cb126a263925d40f31 ChangeLog 1316
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a257663d83076ded7b4cf0104acdcc80 ChangeLog 1461
+MD5 c4b28a96499b43b70339234fddfc5207 bmp-crossfade-0.3.8-r2.ebuild 1031
 MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
-MD5 9bd20128f860dc9821976ce49fd6f70f files/digest-bmp-crossfade-0.3.8-r2 72
+MD5 fc3a672afea37ae64a575207d55eae94 files/0.3.8-gcc4.patch 657
 MD5 65b7984b615809f5dbb31cb05601fc12 files/0.3.8-bmp.patch 3434
+MD5 9bd20128f860dc9821976ce49fd6f70f files/digest-bmp-crossfade-0.3.8-r2 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCNIfICRZPokWLroQRArRcAJ9L6XCVGtye6DKDsol2lGAmh8KOxwCfVucc
+OERz5+ecd9Qv0lT7vVuvRic=
+=G53q
+-----END PGP SIGNATURE-----
