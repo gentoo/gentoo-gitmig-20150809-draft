@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.6.ebuild,v 1.6 2004/06/02 18:29:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.6.ebuild,v 1.7 2004/06/23 02:44:31 vapier Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.pygame.org/ftp/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 hppa sparc ~amd64 ~ppc"
+KEYWORDS="x86 ppc sparc hppa amd64"
 IUSE=""
 
 DEPEND="virtual/python
@@ -21,8 +21,7 @@ DEPEND="virtual/python
 	>=dev-python/numeric-22.0
 	>=media-libs/smpeg-0.4.4-r1"
 
-
-src_install () {
+src_install() {
 	mydoc=WHATSNEW
 	distutils_src_install
 
