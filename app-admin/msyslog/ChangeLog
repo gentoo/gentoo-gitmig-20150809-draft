@@ -1,46 +1,45 @@
 # ChangeLog for app-admin/msyslog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/ChangeLog,v 1.6 2002/08/08 02:42:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/ChangeLog,v 1.7 2002/09/21 02:57:34 woodchip Exp $
+
+*msyslog-1.09a (20 Sep 2002)
+
+  20 Sep 2002; Donny Davies <woodchip@gentoo.org> :
+  Update to latest release + fix severe b0rkage inflicted by other
+  devels upon this package.  Please assign all issues to me.
 
 *msyslog-1.08e (25 Jul 2002)
 
   07 Aug 2002; Seemant Kulleen <seemant@gentoo.org> msyslog-1.08e.ebuild
-  files/msyslog-{confd,init} files/msyslog.conf :
-
-  Added those files back into files/ and changed bz2 to be just the patch.
+  files/msyslog-{confd,init} files/msyslog.conf :  Added those files back
+  into files/ and changed bz2 to be just the patch.
 
   29 Jul 2002; Calum Selkrik <cselkirk@gentoo.org> msyslog-1.08e.ebuild :
-
   Added PPC to KEYWORDS. Added RDEPEND.
-  25 Jul 2002; Seemant Kulleen <seemant@gentoo.org> msyslog-1.08e.ebuild :
 
+  25 Jul 2002; Seemant Kulleen <seemant@gentoo.org> msyslog-1.08e.ebuild :
   Version bump.
 
 *msyslog-1.08a-r3 (25 Jul 2002)
 
   25 Jul 2002; Seemant Kulleen <seemant@gentoo.org> msyslog-1.08a-r3.ebuild
-  files/msyslog-{confd,init} files/msyslog.conf
-  files/msyslog-1.08a-gentoo.diff :
-
+  files/msyslog-{confd,init} files/msyslog.conf files/msyslog-1.08a-gentoo.diff :
   Moved the stuff out of files, and into a tar.bz2 that is on the mirrors
   instead.
 
 *msyslog-1.08a-r2 (3 May 2002)
 
   3 May 2002; Donny Davies <woodchip@gentoo.org> :
-  
   Add LICENSE, SLOT, $Headers.
 
 *msyslog-1.08a-r1 (1 Feb 2002)
 
   11 March 2002; M.Schlemmer <azarah@gentoo.org> :
-
   Update rc-script to provide "logger".
 
 *msyslog-1.08a (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

@@ -1,0 +1,128 @@
+diff -uNr msyslog-v1.09a.orig/configure msyslog-v1.09a/configure
+--- msyslog-v1.09a.orig/configure	Wed Aug 14 19:45:14 2002
++++ msyslog-v1.09a/configure	Fri Sep 20 22:23:28 2002
+@@ -4288,7 +4288,7 @@
+ 	prefix=$ac_default_prefix
+ fi
+ cat >>confdefs.h <<_ACEOF
+-#define INSTALL_LIBDIR "$prefix/lib/alat"
++#define INSTALL_LIBDIR "$prefix/lib"
+ _ACEOF
+ 
+ 
+@@ -4460,7 +4460,7 @@
+ _ACEOF
+ 
+ 	MAIN_CPPFLAGS="-Xlinker -E";
+-	SHARED_PARAMS="-Bshareable"
++        SHARED_PARAMS="-shared"
+ 	DCCFLAGS=""
+ 	cat >>confdefs.h <<\_ACEOF
+ #define _GNU_SOURCE 1
+@@ -4548,7 +4548,7 @@
+ # Name of pidfile
+ if test "$UNAME" = "Linux" ; then
+ 	cat >>confdefs.h <<\_ACEOF
+-#define PID_FILE "syslogd.pid"
++#define PID_FILE "msyslogd.pid"
+ _ACEOF
+ 
+ else
+diff -uNr msyslog-v1.09a.orig/src/examples/syslog.conf.peo msyslog-v1.09a/src/examples/syslog.conf.peo
+--- msyslog-v1.09a.orig/src/examples/syslog.conf.peo	Tue May 29 21:22:50 2001
++++ msyslog-v1.09a/src/examples/syslog.conf.peo	Fri Sep 20 22:12:20 2002
+@@ -1,3 +1,3 @@
+ # Protect a log of classic module
+-auth.info	%peo -l -k /var/ssyslog/.var.log.authlog.key %classic /var/log/authlog
++auth.info      %peo -l -k /var/lib/msyslog/.var.log.authlog.key %classic /var/log/authlog
+ 
+diff -uNr msyslog-v1.09a.orig/src/modules/Makefile.in msyslog-v1.09a/src/modules/Makefile.in
+--- msyslog-v1.09a.orig/src/modules/Makefile.in	Wed Aug 14 14:32:22 2002
++++ msyslog-v1.09a/src/modules/Makefile.in	Fri Sep 20 22:11:50 2002
+@@ -29,13 +29,12 @@
+ #
+ 
+ CC=		@CC@
+-LD=		ld
+ CFLAGS=		@CFLAGS@
+ DCCFLAGS=	@DCCFLAGS@
+ CPPFLAGS=	-I.. @CPPFLAGS@
+ 
+ INSTALL=	@INSTALL@
+-INSTALL_LIBDIR=	@prefix@/lib/alat
++INSTALL_LIBDIR=	@prefix@/lib
+ 
+ MLIBNAME=	@MLIBNAME@
+ MSRCS=		@MSRCS@
+@@ -49,7 +48,7 @@
+ $(MLIBNAME):  $(MSRCS) $(HASH_SRCS) ../config.h
+ 	$(CC) $(CFLAGS) $(CPPFLAGS) $(DCCFLAGS) -c $(HASH_SRCS)
+ 	$(CC) $(CFLAGS) $(CPPFLAGS) $(DCCFLAGS) -c $(MSRCS)
+-	$(LD) $(SHARED_PARAMS) -o $(MLIBNAME) $(MOBJS) $(HASH_OBJS)
++	$(CC) $(SHARED_PARAMS) -o $(MLIBNAME) $(MOBJS) $(HASH_OBJS)
+ 
+ all: $(MLIBNAME)
+ 
+diff -uNr msyslog-v1.09a.orig/src/modules/om_peo.c msyslog-v1.09a/src/modules/om_peo.c
+--- msyslog-v1.09a.orig/src/modules/om_peo.c	Wed Aug 14 19:45:17 2002
++++ msyslog-v1.09a/src/modules/om_peo.c	Fri Sep 20 22:16:12 2002
+@@ -157,7 +157,7 @@
+  *  INIT -- Initialize om_peo
+  *  args:
+  * 
+- *	-k <keyfile>		(default: /var/ssyslog/.var.log.messages)
++ *      -k <keyfile>            (default: /var/lib/msyslog/.var.log.messages)
+  *	-l			line number corruption detect mode
+  *				(generates a strcat(keyfile, ".mac") file)
+  *	-m <hash_method>	md5, rmd160, or sha1 (default: sha1)
+diff -uNr msyslog-v1.09a.orig/src/peo/hash.c msyslog-v1.09a/src/peo/hash.c
+--- msyslog-v1.09a.orig/src/peo/hash.c	Wed Aug 14 14:32:23 2002
++++ msyslog-v1.09a/src/peo/hash.c	Fri Sep 20 22:17:42 2002
+@@ -73,7 +73,7 @@
+ #endif
+ 
+ 
+-char *default_keyfile = "/var/ssyslog/.var.log.messages.key";
++char *default_keyfile = "/var/lib/msyslog/.var.log.messages.key";
+ char *hmstr[] = { /* enum order */
+ 	"md5",
+ 	"rmd160",
+diff -uNr msyslog-v1.09a.orig/src/peo/peochk.c msyslog-v1.09a/src/peo/peochk.c
+--- msyslog-v1.09a.orig/src/peo/peochk.c	Wed Aug 14 14:32:23 2002
++++ msyslog-v1.09a/src/peo/peochk.c	Fri Sep 20 22:19:49 2002
+@@ -45,7 +45,7 @@
+  *
+  * defaults:
+  *	logfile: 	/var/log/messages
+- *	keyfile:	/var/ssyslog/.var.log.messages.key
++ *      keyfile:        /var/lib/msyslog/.var.log.messages.key
+  *	hash_method:	sha1
+  *
+  * NOTES:
+@@ -491,12 +491,12 @@
+ 	if (keyfile == default_keyfile && logfile != default_logfile) {
+ 		char *tmp;
+ 
+-		if ( (tmp = strallocat("/var/ssyslog/", logfile)) == NULL) {
++                if ( (tmp = strallocat("/var/lib/msyslog/", logfile)) == NULL) {
+ 			release();
+ 			perror("buffer for keyfile");
+ 			exit(-1);
+ 		}
+-		strdot(tmp+13);
++                strdot(tmp+strlen("/var/lib/msyslog/"));
+ 		if ( (keyfile = strallocat(tmp, ".key")) == NULL) {
+ 			free(tmp);
+ 			release();
+diff -uNr msyslog-v1.09a.orig/src/syslogd.h msyslog-v1.09a/src/syslogd.h
+--- msyslog-v1.09a.orig/src/syslogd.h	Fri Aug 23 18:52:30 2002
++++ msyslog-v1.09a/src/syslogd.h	Fri Sep 20 22:21:11 2002
+@@ -64,7 +64,7 @@
+ /* #warning using 	_PATH_KLOG	"/dev/klog" */
+ #endif
+ 
+-#define	_PATH_LOGCONF	"/etc/syslog.conf"
++#define _PATH_LOGCONF   "/etc/msyslog/msyslog.conf"
+ 
+ /*
+  * Debug reporting levels
