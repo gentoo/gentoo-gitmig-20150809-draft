@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <pauldv@gentoo.org> (17 May 2003)
+# Masking this version as the "standard" version is testing and this new
+# ebuild has quite some changes, so I don't want it to be testing immediately
+=dev-util/subversion-0.22.2
+
 # <azarah@gentoo.org> (17 May 2003)
 # There is a bit of work needed to the tree to get it gcc-3.3 ready.
 # Also, I want to verify that the Hammer update do not break older
@@ -41,24 +46,24 @@
 
 # <danarmak@gentoo.org> (7 May 2003)
 # not yet released, ebuilds in testing
-=kde-base/arts-1.1.2
-=kde-base/kde-3.1.2
-=kde-base/kdeaddons-3.1.2
-=kde-base/kdeadmin-3.1.2
-=kde-base/kdeartwork-3.1.2
-=kde-base/kdebase-3.1.2
-=kde-base/kdebindings-3.1.2
-=kde-base/kdeedu-3.1.2
-=kde-base/kdegames-3.1.2
-=kde-base/kdegraphics-3.1.2
-=kde-base/kdelibs-3.1.2
-=kde-base/kdemultimedia-3.1.2
-=kde-base/kdenetwork-3.1.2
-=kde-base/kdepim-3.1.2
-=kde-base/kdesdk-3.1.2
-=kde-base/kdetoys-3.1.2
-=kde-base/kdeutils-3.1.2
-=app-doc/kdelibs-apidocs-3.1.2
+kde-base/arts-1.1.2
+kde-base/kde-3.1.2
+kde-base/kdeaddons-3.1.2
+kde-base/kdeadmin-3.1.2
+kde-base/kdeartwork-3.1.2
+kde-base/kdebase-3.1.2
+kde-base/kdebindings-3.1.2
+kde-base/kdeedu-3.1.2
+kde-base/kdegames-3.1.2
+kde-base/kdegraphics-3.1.2
+kde-base/kdelibs-3.1.2
+kde-base/kdemultimedia-3.1.2
+kde-base/kdenetwork-3.1.2
+kde-base/kdepim-3.1.2
+kde-base/kdesdk-3.1.2
+kde-base/kdetoys-3.1.2
+kde-base/kdeutils-3.1.2
+app-doc/kdelibs-apidocs-3.1.2
 
 # <lu_zero@gentoo.org> (6 May 2003)
 # new binutils to be tested
@@ -685,7 +690,11 @@ app-admin/va-systemimager-client
 # Seems we are back to square 1.  libtool-1.4.2 needs autoconf-2.5
 # or later .. masking 1.4.2 again and adding 1.4.1-r2 with the
 # "relink bug" fixed.
+<<<<<<< package.mask
+#>=sys-devel/libtool-1.4.2
+=======
 =sys-devel/libtool-1.4.2-r2
+>>>>>>> 1.2178
 <sys-devel/libtool-1.4.1-r4
 
 # We are masking out the older pams now, in order to get the
