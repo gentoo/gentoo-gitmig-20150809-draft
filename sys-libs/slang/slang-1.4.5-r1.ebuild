@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.5.ebuild,v 1.1 2002/02/20 15:54:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.5-r1.ebuild,v 1.1 2002/03/05 04:25:43 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console display library used by most text viewer"
@@ -19,8 +19,9 @@ src_compile() {
 
 src_install() {
 	make install install-elf DESTDIR=${D} || die "make install failed"
+	( cd ${D}/usr/lib ; chmod 755 libslang.so.* )
 	# remove the documentation... we want to install it ourselves
-	rm -rf ${D}/usr/share
+	rm -rf ${D}/usr/doc
 	dodoc COPYING* NEWS README *.txt
 	dodoc doc/*.txt doc/internal/*.txt doc/text/*.txt
 	docinto html
