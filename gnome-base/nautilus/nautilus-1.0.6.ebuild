@@ -3,7 +3,7 @@
 # Author Achim Gottinger <achim@gentoo.org>
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
 # /home/cvsroot/gentoo-x86/gnome-apps/nautilus/nautilus-1.0.ebuild,v 1.3 2001/04/29 18:42:54 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6.ebuild,v 1.1 2001/11/09 14:24:44 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6.ebuild,v 1.2 2001/11/10 13:47:46 hallski Exp $
 
 
 S=${WORKDIR}/${P}
@@ -46,6 +46,8 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-mozilla-component"
 	fi
+
+	CFLAGS="${CFLAGS} `gnome-config --cflags gdk_pixbuf`"
 
 	./configure --host=${CHOST} 					\
 		    --prefix=/usr					\
