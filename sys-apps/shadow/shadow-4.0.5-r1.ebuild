@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.5-r1.ebuild,v 1.1 2004/11/03 17:58:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.5-r1.ebuild,v 1.2 2004/11/03 18:17:04 vapier Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -143,7 +143,7 @@ src_install() {
 
 	# Remove manpages that are handled by other packages
 	find ${D}/usr/share/man \
-		'(' -name id.1 -o -name passwd.5 -o name getspnam.3 ')' \
+		'(' -name id.1 -o -name passwd.5 -o -name getspnam.3 ')' \
 		-exec rm {} \;
 
 	cd ${S}/doc
