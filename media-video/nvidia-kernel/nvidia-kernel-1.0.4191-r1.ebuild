@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191-r1.ebuild,v 1.1 2002/12/18 21:15:07 styx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4191-r1.ebuild,v 1.2 2002/12/23 02:31:05 azarah Exp $
 
 inherit eutils
 
@@ -52,20 +52,15 @@ src_unpack() {
 	# these to us, and being so helpful to select which to use.
 	# This should close bug #9704.
 	
-#	local KV_major="`uname -r | cut -d. -f1`"
-#	local KV_minor="`uname -r | cut -d. -f2`"
-#
-#	cd ${S}
-#	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 5 ]
-#	then
-#		EPATCH_SINGLE_MSG="Applying tasklet patch for kernel 2.5..." \
-#		epatch ${FILESDIR}/${NV_PACKAGE}-2.5-tl.diff
-#		EPATCH_SINGLE_MSG="Applying page_alloc.c patch..." \
-#		epatch ${FILESDIR}/${NV_PACKAGE}-2.5-tl-pa.diff
-#	else
-#		EPATCH_SINGLE_MSG="Applying page_alloc.c patch..." \
-#		epatch ${FILESDIR}/${NV_PACKAGE}-pa.diff
-#	fi
+	local KV_major="`uname -r | cut -d. -f1`"
+	local KV_minor="`uname -r | cut -d. -f2`"
+
+	cd ${S}
+	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 5 ]
+	then
+		EPATCH_SINGLE_MSG="Applying tasklet patch for kernel 2.5..." \
+		epatch ${FILESDIR}/${NV_PACKAGE}-2.5-tl.diff
+	fi
 
 	# This is a minor patch to make it work with rmap enabled kernels
 	EPATCH_SINGLE_MSG="Applying rmap compat patch for kernel 2.4..."
