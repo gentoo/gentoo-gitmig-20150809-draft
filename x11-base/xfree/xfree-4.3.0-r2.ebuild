@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0.ebuild,v 1.8 2003/03/20 15:25:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.1 2003/04/08 22:33:39 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
 DEBUG="yes"
 RESTRICT="nostrip"
 
-IUSE="sse nls mmx truetype 3dnow 3dfx"
+IUSE="savage sis 3dfx sse mmx 3dnow xml truetype"
 
 inherit eutils flag-o-matic gcc
 
@@ -16,7 +16,7 @@ filter-flags "-funroll-loops"
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
 # still having issues with optimizations, or with it not filtering bad
-# combinations (protecting the user maybe from himeself) yet.
+# combinations (protecting the user maybe from themselves) yet.
 #
 # This can clearly be seen in large builds like glibc, where too aggressive
 # CFLAGS cause the tests to fail miserbly.
@@ -38,9 +38,9 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="1.1"
+PATCH_VER="1.0"
 FT2_VER="2.1.3"
-SISDRV_VER="141202-1"
+SISDRV_VER="060403-1"
 SAVDRV_VER="1.1.27t"
 
 BASE_PV="${PV}"
@@ -49,12 +49,11 @@ S="${WORKDIR}/xc"
 DESCRIPTION="Xfree86: famous and free X server"
 SRC_PATH0="ftp://ftp.xfree.org/pub/XFree86/${BASE_PV}/source"
 SRC_PATH1="ftp://ftp1.sourceforge.net/pub/mirrors/XFree86/${BASE_PV}/source"
-# If we are using CVS snapshots made by Seemant ...
-SRC_PATH_SS="http://www.ibiblio.org/gentoo/gentoo-sources"
 HOMEPAGE="http://www.xfree.org"
 
 # Misc patches we may need to fetch ..
-X_PATCHES="mirror://gentoo/XFree86-4.2.99.4-patches-${PATCH_VER}.tar.bz2"
+X_PATCHES="mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
+	http://www.cpbotha.net/files/dri_resume/xfree86-dri-resume-v8.patch"
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 	http://www.probo.com/timr/savage-${SAVDRV_VER}.zip
@@ -76,36 +75,32 @@ MS_COREFONTS="./andale32.exe ./arial32.exe
 # Need windows license to use this one
 MS_FONT_URLS="${MS_COREFONTS//\.\//mirror://sourceforge/corefonts/}"
 
-if [ "${USE_SNAPSHOT}" = "yes" ]
-then
-	SRC_URI="${SRC_PATH_SS}/X${BASE_PV}-1.tar.bz2
-		${SRC_PATH_SS}/X${BASE_PV}-2.tar.bz2
-		${SRC_PATH_SS}/X${BASE_PV}-3.tar.bz2
-		${SRC_PATH_SS}/X${BASE_PV}-4.tar.bz2"
-else
-	SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
-		${SRC_PATH0}/X${MY_SV}src-2.tgz
-		${SRC_PATH0}/X${MY_SV}src-3.tgz
-		${SRC_PATH0}/X${MY_SV}src-4.tgz
-		${SRC_PATH0}/X${MY_SV}src-5.tgz
-		${SRC_PATH0}/X${MY_SV}src-6.tgz
-		${SRC_PATH0}/X${MY_SV}src-7.tgz
-		${SRC_PATH1}/X${MY_SV}src-1.tgz
-		${SRC_PATH1}/X${MY_SV}src-2.tgz
-		${SRC_PATH1}/X${MY_SV}src-3.tgz
-		${SRC_PATH1}/X${MY_SV}src-4.tgz
-		${SRC_PATH1}/X${MY_SV}src-5.tgz
-		${SRC_PATH1}/X${MY_SV}src-6.tgz
-		${SRC_PATH1}/X${MY_SV}src-7.tgz"
-fi
+SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
+	${SRC_PATH0}/X${MY_SV}src-2.tgz
+	${SRC_PATH0}/X${MY_SV}src-3.tgz
+	${SRC_PATH0}/X${MY_SV}src-4.tgz
+	${SRC_PATH0}/X${MY_SV}src-5.tgz
+	${SRC_PATH0}/X${MY_SV}src-6.tgz
+	${SRC_PATH0}/X${MY_SV}src-7.tgz
+	${SRC_PATH1}/X${MY_SV}src-1.tgz
+	${SRC_PATH1}/X${MY_SV}src-2.tgz
+	${SRC_PATH1}/X${MY_SV}src-3.tgz
+	${SRC_PATH1}/X${MY_SV}src-4.tgz
+	${SRC_PATH1}/X${MY_SV}src-5.tgz
+	${SRC_PATH1}/X${MY_SV}src-6.tgz
+	${SRC_PATH1}/X${MY_SV}src-7.tgz"
+
 SRC_URI="${SRC_URI}
 	${X_PATCHES}
 	${X_DRIVERS}
+	mirror://gentoo/gemini-koi8-u.tar.bz2
+	mirror://gentoo/eurofonts-X11.tar.bz2
+	mirror://gentoo/xfsft-encodings.tar.bz2
 	truetype? ( ${MS_FONT_URLS} )"
 
 LICENSE="X11 MSttfEULA"
 SLOT="0"
-KEYWORDS="~x86 ppc ~sparc ~alpha ~mips hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa arm"
 
 DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
@@ -142,25 +137,47 @@ PROVIDE="virtual/x11
 
 src_unpack() {
 
-	if [ "${USE_SNAPSHOT}" = "yes" ]
-	then
-		unpack X${BASE_PV}-{1,2,3,4}.tar.bz2
-	else
-		unpack X${MY_SV}src-{1,2,3,4,5,6,7}.tgz
-	fi
-	
-	unpack XFree86-4.2.99.4-patches-${PATCH_VER}.tar.bz2
+	# Unpack source and patches
+	unpack X${MY_SV}src-{1,2,3,4,5,6,7}.tgz
+	unpack XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
 
-	# Install the glide3 headers for compiling the tdfx driver
-#	if [ -n "`use 3dfx`" ]
+	# Unpack extra fonts stuff from Mandrake
+	unpack gemini-koi8-u.tar.bz2
+	unpack eurofonts-X11.tar.bz2
+	unpack xfsft-encodings.tar.bz2
+	
+	# remove bum font
+	rm -f ${WORKDIR}/usr/X11R6/lib/X11/fonts/encodings/urdunaqsh-0.enc
+	
+	# Update the Savage Driver
+	# savage driver 1.1.27t is a .zip and contains a savage directory
+	# (that's why we have to be in drivers, not in savage subdir).
+	# Could be USE flag based
+#	if [ -n "`use savage`" ]
 #	then
-#		ebegin "Installing tempory glide3 headers"
-#		cd ${WORKDIR}; unpack glide3-headers.tar.bz2
-#		cp -f ${S}/lib/GL/mesa/src/drv/tdfx/Imakefile ${T}
-#		sed -e 's:$(GLIDE3INCDIR):$(WORKDIR)/glide3:g' \
-#			${T}/Imakefile > ${S}/lib/GL/mesa/src/drv/tdfx/Imakefile
-#		eend 0
+		ebegin "Updating Savage driver"
+		cd ${S}/programs/Xserver/hw/xfree86/drivers
+		unzip -oqq ${DISTDIR}/savage-${SAVDRV_VER}.zip || die
+		ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
+			${S}/programs/Xserver/hw/xfree86/drivers/savage
+		cd ${S}
+		eend 0
+#	else
+#		rm -f ${WORKDIR}/patch/30*
 #	fi
+    
+	# Update the SIS Driver
+#	if [ -n "`use sis`" ]
+#	then
+		ebegin "Updating SiS driver"
+		cd ${S}/programs/Xserver/hw/xfree86/drivers/sis
+		tar -zxf ${DISTDIR}/sis_drv_src_${SISDRV_VER}.tar.gz || die
+		ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
+			${S}/programs/Xserver/hw/xfree86/drivers/sis
+		cd ${S}
+		eend 0
+#	fi
+    
 
 	if [ "`gcc-version`" = "2.95" ]
 	then
@@ -168,36 +185,21 @@ src_unpack() {
 		# closing bug #10146.
 		EPATCH_EXCLUDE="107_all_4.2.1-gcc32-internal-compiler-error.patch.bz2"
 	fi
-	# Various Patches from all over
-	epatch ${WORKDIR}/patch/
-	unset EPATCH_EXCLUDE
-	
-	# enable the nv driver on ppc
-	if use ppc; then
-		epatch ${FILESDIR}/${PV}-patches/XFree86-${PV}-enable-nv-on-ppc.patch 
+
+	if [ -z "`use debug`" ]
+	then
+		rm -f ${WORKDIR}/patch/202_all_4.2.99.3-acecad-debug.patch.bz2
 	fi
 
-	# Fix HOME and END keys to work in xterm, bug #15254
-	epatch ${FILESDIR}/xfree-4.2.x-home_end-keys.patch
-
-	# Update the Savage Driver
-	# savage driver 1.1.27t is a .zip and contains a savage directory
-	# (that's why we have to be in drivers, not in savage subdir).
-	ebegin "Updating Savage driver"
-	cd ${S}/programs/Xserver/hw/xfree86/drivers
-	unzip -oqq ${DISTDIR}/savage-${SAVDRV_VER}.zip || die
-	ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
-		${S}/programs/Xserver/hw/xfree86/drivers/savage
-	eend 0
-    
-	# Update the SIS Driver
-#	ebegin "Updating SiS driver"
-#	cd ${S}/programs/Xserver/hw/xfree86/drivers/sis
-#	tar -zxf ${DISTDIR}/sis_drv_src_${SISDRV_VER}.tar.gz || die
-#	ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
-#		${S}/programs/Xserver/hw/xfree86/drivers/sis
-#	eend 0
-    
+	# Various Patches from all over
+	epatch ${WORKDIR}/patch/
+	
+	unset EPATCH_EXCLUDE
+	
+	# Fix DRI related problems
+	cd ${S}/programs/Xserver/hw/xfree86/
+	epatch ${DISTDIR}/xfree86-dri-resume-v8.patch
+	
 	# Update Wacom Driver, hopefully resolving bug #1632
 	# The kernel driver should prob also be updated, this can be
 	# found at:
@@ -229,9 +231,14 @@ src_unpack() {
 	fi
 	
 	ebegin "Setting up config/cf/host.def"
-	cd ${S}; cp ${FILESDIR}/${PVR}/site.def config/cf/host.def || die
+	cd ${S}; cp ${FILESDIR}/${PV}/site.def config/cf/host.def || die
 	echo "#define XVendorString \"Gentoo Linux (XFree86 ${PV}, revision ${PR})\"" \
 		>> config/cf/host.def
+
+	# We're using Xwrapper instead -- so that nothing else needs to be
+	# set uid any more.
+	echo "#define InstallXserverSetUID NO" >> config/cf/host.def
+	echo "#define BuildServersOnly NO" >> config/cf/host.def
 
 	# Bug #12775 .. fails with -Os.
 	replace-flags "-Os" "-O2"
@@ -250,12 +257,23 @@ src_unpack() {
 			export CXXFLAGS="${CXXFLAGS} -fno-merge-constants"
 		fi
 	fi
+
+	if [ "`uname -r | cut -d. -f1,2`" != "2.2" ]
+	then
+		echo "#define HasLinuxInput YES" >> config/cf/host.def
+	fi
+
 	echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
 	echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS}" >> config/cf/host.def
-	if [ "${DEBUGBUILD}" != "yes" ]
+	if [ -n "`use debug`" ]
 	then
+		echo "#define XFree86Devel	YES" >> config/cf/host.def
+		echo "#define DoLoadableServer	NO" >>config/cf/host.def
+	else
+		echo "#define ExtraXInputDrivers acecad" >> config/cf/host.def
 		# use less ram .. got this from Spider's makeedit.eclass :)
-		echo "#define GccWarningOptions -Wno-return-type -w" >> config/cf/host.def
+		echo "#define GccWarningOptions -Wno-return-type -w" \
+			>> config/cf/host.def
 	fi
 
 	if [ -n "`use pam`" ]
@@ -266,6 +284,11 @@ src_unpack() {
 	else
 		echo "#define HasPam NO" >> config/cf/host.def
 		echo "#define HasPamMisc NO" >> config/cf/host.def
+	fi
+
+	if [ -n "`use nls`" ]
+	then
+		echo "#define XtermWithI18N YES" >> config/cf/host.def
 	fi
 
 	if [ "${ARCH}" = "x86" ]
@@ -286,27 +309,48 @@ src_unpack() {
 			echo "#define HasKatmaiSupport YES" >> config/cf/host.def
 			echo "#define MesaUseKatmai YES" >> config/cf/host.def
 		fi
+
+		# build with glide3 support? (build the tdfx_dri.o module)
+		if [ -n "`use 3dfx`" ]
+		then
+			echo "#define HasGlide3 YES" >> config/cf/host.def
+		fi
 	fi
 
-	if [ "`uname -r | cut -d. -f1,2`" != "2.2" ]
+	if [ "${ARCH}" = "hppa" ]
 	then
-		echo "#define HasLinuxInput YES" >> config/cf/host.def
+		echo "#define DoLoadableServer NO" >> config/cf/host.def
 	fi
 
-	# build with glide3 support? (build the tdfx_dri.o module)
-	if [ -n "`use 3dfx`" ]
+	if [ "${ARCH}" = "alpha" ]
 	then
-		echo "#define HasGlide3 YES" >> config/cf/host.def
+		echo "#define XF86CardDrivers mga nv tga s3virge sis rendition neomagic i170 tdfx cirrus tseng trident chips apm fbdev ati vga v4l glint"  \
+			>> config/cf/host.def
 	fi
 
-	if [ -n "`use nls`" ]
+	if [ "${ARCH}" = "ppc" ]
 	then
-		echo "#define XtermWithI18N YES" >> config/cf/host.def
+		echo "#define XF86CardDrivers mga glint s3virge sis savage trident chips tdfx fbdev ati DevelDrivers vga nv XF86OSCardDrivers XF86ExtraCardDrivers" \
+			>> config/cf/host.def
 	fi
 
-	[ "${ARCH}" = "hppa" ] && echo "#define DoLoadableServer NO" >> config/cf/host.def
-	
+	if [ -n "`use xml`" ]
+	then
+		echo "#define HasLibxml2 YES" >> config/cf/host.def
+	fi
+
+	# The definitions for fontconfig
+	echo "#define UseFontconfig YES" >> config/cf/host.def
+	echo "#define HasFontconfig YES" >> config/cf/host.def
+
+	# End the host.def definitions here
 	eend 0
+
+	cd ${S}
+	bzcat ${DISTDIR}/XFree86-compose.dir.bz2 > nls/compose.dir
+	bzcat ${DISTDIR}/XFree86-locale.alias.bz2 > nls/locale.alias
+	bzcat ${DISTDIR}/XFree86-locale.dir.bz2 > nls/locale.dir
+	bzcat ${DISTDIR}/XFree86-en_US.UTF-8.old.bz2 > nls/Compose/en_US.UTF-8
 
 	# These are not included anymore as they are obsolete
 	rm -rf ${S}/doc/hardcopy/{XIE,PEX5}
@@ -326,10 +370,11 @@ src_compile() {
 	# Set MAKEOPTS to have proper -j? option ..
 	get_number_of_jobs
 
-	#if a user defines the MAKE_OPTS variable in /etc/make.conf instead of MAKEOPTS,
-	#they'll redefine an internal XFree86 Makefile variable and the xfree build will
-	#silently die. This is tricky to track down, so I'm adding a preemptive fix for
-	#this issue by making sure that MAKE_OPTS is unset. (drobbins, 08 Mar 2003)
+	# If a user defines the MAKE_OPTS variable in /etc/make.conf instead of
+	# MAKEOPTS, they'll redefine an internal XFree86 Makefile variable and the
+	# xfree build will silently die. This is tricky to track down, so I'm
+	# adding a preemptive fix for this issue by making sure that MAKE_OPTS is
+	# unset. (drobbins, 08 Mar 2003)
 	unset MAKE_OPTS
 
 	einfo "Building XFree86..."
@@ -339,7 +384,36 @@ src_compile() {
 	then
 		cd ${S}/nls
 		make || die
+		cd ${S}
 	fi
+
+	ebegin "Fixing documentation..."
+	find xc/doc/hardcopy -name '*.PS.Z' | xargs gzip -df
+	find xc/doc/hardcopy -name '*.PS' | xargs gzip -f
+
+	groff -Tascii -ms xc/doc/misc/RELNOTES.ms > xc/doc/hardcopy/RELNOTES.txt
+	groff -Tascii -ms xc/doc/specs/BDF/bdf.ms > xc/doc/hardcopy/BDF/bdf.txt
+	groff -Tascii -ms xc/doc/specs/CTEXT/ctext.tbl.ms >xc/doc/hardcopy/CTEXT/ctext.tbl.txt
+	groff -Tascii -ms xc/doc/specs/FSProtocol/protocol.ms >xc/doc/hardcopy/FSProtocol/protocol.txt
+	groff -Tascii -ms xc/doc/specs/ICCCM/icccm.ms >xc/doc/hardcopy/ICCCM/icccm.txt
+	groff -Tascii -ms xc/doc/specs/ICE/ICElib.ms >xc/doc/hardcopy/ICE/ICElib.txt
+	groff -Tascii -ms xc/doc/specs/ICE/ice.ms > xc/doc/hardcopy/ICE/ice.txt
+	cp xc/doc/specs/PM/PM_spec xc/doc/hardcopy/ICE
+	groff -Tascii -ms xc/doc/specs/SM/SMlib.ms > xc/doc/hardcopy/SM/SMlib.txt
+	groff -Tascii -ms xc/doc/specs/XDMCP/xdmcp.ms >xc/doc/hardcopy/XDMCP/xdmcp.txt
+	groff -Tascii -ms xc/doc/specs/XIM/xim.ms > xc/doc/hardcopy/XIM/xim.txt
+	groff -Tascii -ms xc/doc/specs/XLFD/xlfd.tbl.ms >xc/doc/hardcopy/XLFD/xlfd.tbl.txt
+
+	rm -rf xc/doc/hardcopy/BSD/*
+	rm -rf xc/doc/hardcopy/CTEXT/*
+	rm -rf xc/doc/hardcopy/FSProtocol/*
+	rm -rf xc/doc/hardcopy/ICCCM/*
+	rm -rf xc/doc/hardcopy/ICE/*
+	rm -rf xc/doc/hardcopy/SM/*
+	rm -rf xc/doc/hardcopy/XDMCP/*
+	rm -rf xc/doc/hardcopy/XIM/*
+	rm -rf xc/doc/hardcopy/XLFD/*
+	eend 0
 }
 
 src_install() {
@@ -366,7 +440,7 @@ src_install() {
 	rm -f ${D}/usr/X11R6/man/man3/Xft.3x*
 	rm -rf ${D}/usr/X11R6/include/fontconfig
 	rm -f ${D}/usr/X11R6/lib/libfontconfig.*
-	rm -f ${D}/usr/X11R6/bin/fontconfig-config
+	rm -f ${D}/usr/X11R6/bin/{fontconfig-config,fc-cache,fc-list}
 	rm -f ${D}/usr/X11R6/man/man3/fontconfig.3x*
 	rm -rf ${D}/etc/fonts/
 
@@ -423,8 +497,8 @@ src_install() {
 
 	insinto /etc/X11
 	# We still use freetype for now ...
-	doins ${FILESDIR}/${PVR}/XftConfig
-	newins ${FILESDIR}/${PVR}/XftConfig XftConfig.new
+	doins ${FILESDIR}/${PV}/XftConfig
+	newins ${FILESDIR}/${PV}/XftConfig XftConfig.new
 	# This is if we are using Fontconfig only ...
 	#newins ${S}/lib/Xft1/XftConfig-OBSOLETE XftConfig
 	dosym ../../../../etc/X11/XftConfig /usr/X11R6/lib/X11/XftConfig
@@ -440,6 +514,14 @@ src_install() {
 		cp -af ${WORKDIR}/truetype/*.ttf ${D}/usr/X11R6/lib/X11/fonts/truetype
 		eend 0
 	fi
+
+	# EURO support
+	ebegin "Euro Support..."
+	${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-8x14.bdf | \
+		gzip -9 > ${D}/usr/X11R6/lib/X11/fonts/misc/Xlat9-8x14-lat9.pcf.gz
+	${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-9x16.bdf | \
+		gzip -9 > ${D}/usr/X11R6/lib/X11/fonts/misc/Xlat9-9x16-lat9.pcf.gz
+	eend 0
 
 	# Change the silly red pointer to a white one ...
 	dosed 's:redglass:whiteglass:' /usr/X11R6/lib/X11/icons/default/index.theme
@@ -468,12 +550,21 @@ src_install() {
 
 	# .la files for libtool support
 	insinto /usr/X11R6/lib
-	doins ${FILESDIR}/${PVR}/lib/*.la
+	doins ${FILESDIR}/${PV}/lib/*.la
 
 	# Remove libz.a, as it causes problems (bug #4777)
 	rm -f ${D}/usr/X11R6/lib/libz.a
 	# And do not forget the includes (bug #9470)
 	rm -f ${D}/usr/X11R6/include/{zconf.h,zlib.h}
+
+	# Use the Xwrapper as the X binary
+	rm -f ${D}/usr/X11R6/bin/X
+	dosym Xwrapper /usr/X11R6/bin/X
+	dosym ../../usr/X11R6/bin/XFree86 /etc/X11/X
+
+	# fix perms
+	fperms 755 /usr/X11R6/lib/X11/xkb/geometry/sgi
+	fperms 755 /usr/X11R6/bin/dga
 
 	# Hack from Mandrake (update ours that just created Compose files for
 	# all locales)
@@ -497,36 +588,66 @@ src_install() {
 		esac
 	done
 	
+	# Another hack from Mandrake -- to fix dead + space for the us
+	# international keyboard
+	for i in ${D}/usr/X11R6/lib/X11/locale/*/Compose
+	do
+		sed -i \
+			-e 's/\(<dead_diaeresis> <space>\).*$/\1 : "\\"" quotedbl/' \
+			-e "s/\(<dead_acute> <space>\).*$/\1 : \"'\" apostrophe/" \
+			${i}
+	done
+
+	# Yet more Mandrake
+	ebegin "Encoding files for xfsft font server..."
+	dodir /usr/X11R6/lib/X11/fonts/encodings
+	cp -a ${WORKDIR}/usr/X11R6/lib/X11/fonts/encodings/* \
+		${D}/usr/X11R6/lib/X11/fonts/encodings
+	
+	gzip -9 -f ${D}/usr/X11R6/lib/X11/fonts/encodings/*.enc
+#	gzip -9 -f ${D}/usr/X11R6/lib/X11/fonts/encodings/large/*.enc
+	eend 0
+
+	ebegin "gemini-koi8 fonts..."
+	cd ${WORKDIR}/ukr
+	gunzip *.Z
+	gzip -9 *.pcf
+	cd ${S}
+	cp -a ${WORKDIR}/ukr ${D}/usr/X11R6/lib/X11/fonts
+	eend 0
+	
+	
+	
 	exeinto /etc/X11
 	# new session management script
-	doexe ${FILESDIR}/${PVR}/chooser.sh
+	doexe ${FILESDIR}/${PV}/chooser.sh
 	# new display manager script
-	doexe ${FILESDIR}/${PVR}/startDM.sh
+	doexe ${FILESDIR}/${PV}/startDM.sh
 	exeinto /etc/X11/Sessions
-	for x in ${FILESDIR}/${PVR}/Sessions/*
+	for x in ${FILESDIR}/${PV}/Sessions/*
 	do
 		[ -f ${x} ] && doexe ${x}
 	done
 	insinto /etc/env.d
-	doins ${FILESDIR}/${PVR}/10xfree
+	doins ${FILESDIR}/${PV}/10xfree
 	insinto /etc/X11/xinit
-	doins ${FILESDIR}/${PVR}/xinitrc
+	doins ${FILESDIR}/${PV}/xinitrc
 	exeinto /etc/X11/xdm
-	doexe ${FILESDIR}/${PVR}/Xsession ${FILESDIR}/${PVR}/Xsetup_0
+	doexe ${FILESDIR}/${PV}/Xsession ${FILESDIR}/${PV}/Xsetup_0
 	insinto /etc/X11/fs
-	newins ${FILESDIR}/${PVR}/xfs.config config
+	newins ${FILESDIR}/${PV}/xfs.config config
 	if [ -n "`use pam`" ]
 	then
 		insinto /etc/pam.d
-		newins ${FILESDIR}/${PVR}/xdm.pamd xdm
+		newins ${FILESDIR}/${PV}/xdm.pamd xdm
 		# Need to fix console permissions first
-		newins ${FILESDIR}/${PVR}/xserver.pamd xserver
+		newins ${FILESDIR}/${PV}/xserver.pamd xserver
 	fi
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PVR}/xdm.start xdm
-	newexe ${FILESDIR}/${PVR}/xfs.start xfs
+	newexe ${FILESDIR}/${PV}/xdm.start xdm
+	newexe ${FILESDIR}/${PV}/xfs.start xfs
 	insinto /etc/conf.d
-	newins ${FILESDIR}/${PVR}/xfs.conf.d xfs
+	newins ${FILESDIR}/${PV}/xfs.conf.d xfs
 
 	# we want libGLU.so* in /usr/lib
 	mv ${D}/usr/X11R6/lib/libGLU.* ${D}/usr/lib
@@ -725,6 +846,12 @@ pkg_postinst() {
 			-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings \
 			-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/large \
 			-- ${ROOT}/usr/X11R6/lib/X11/fonts/encodings
+		eend 0
+
+		ebegin "Generating koi8 fonts..."
+		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
+		${ROOT}/usr/X11R6/bin/mkfontdir \
+			${ROOT}/usr/X11R6/lib/X11/fonts/ukr
 		eend 0
 
 		if [ -x ${ROOT}/usr/X11R6/bin/ttmkfdir ]
