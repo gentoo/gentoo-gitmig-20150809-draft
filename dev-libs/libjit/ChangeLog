@@ -1,0 +1,12 @@
+# ChangeLog for dev-libs/libjit
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/ChangeLog,v 1.1 2004/08/08 07:28:08 scandium Exp $
+
+*libjit-0.0.4 (08 Aug 2004)
+
+  08 Aug 2004; Rainer Groesslinger <scandium@gentoo.org> +metadata.xml,
+  +libjit-0.0.4.ebuild:
+  Initial commit.
+  Ebuild submitted by Michael C. Ferguson <mcf@augustmail.com>
+  (bug #50595) with some modifications added
+
