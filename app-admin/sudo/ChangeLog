@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.31 2004/11/17 11:18:17 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.32 2004/11/17 12:52:50 gustavoz Exp $
+
+  17 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> sudo-1.6.7_p5-r2.ebuild:
+  Stable on sparc wrt #70838
 
   17 Nov 2004; <SeJo@gentoo.org> sudo-1.6.7_p5-r2.ebuild:
   stable on ppc: 70838
