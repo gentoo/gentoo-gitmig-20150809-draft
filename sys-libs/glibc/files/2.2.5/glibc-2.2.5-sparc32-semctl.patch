@@ -1,11 +1,11 @@
 --- libc/sysdeps/unix/sysv/linux/sparc/sparc32/semctl.c.jj	Fri Feb 11 20:44:42 2000
 +++ libc/sysdeps/unix/sysv/linux/sparc/sparc32/semctl.c	Thu Apr 25 22:52:00 2002
 @@ -1 +1,205 @@
--#include &lt;sysdeps/unix/sysv/linux/i386/semctl.c&gt;
+-#include <sysdeps/unix/sysv/linux/i386/semctl.c>
 +/* Semctl for architectures where word sized unions are passed indirectly
 +   Copyright (C) 1995, 1997, 1998, 2000, 2002 Free Software Foundation, Inc.
 +   This file is part of the GNU C Library.
-+   Contributed by Ulrich Drepper &lt;drepper@gnu.ai.mit.edu&gt;, August 1995.
++   Contributed by Ulrich Drepper <drepper@gnu.ai.mit.edu>, August 1995.
 +
 +   The GNU C Library is free software; you can redistribute it and/or
 +   modify it under the terms of the GNU Lesser General Public
@@ -22,17 +22,17 @@
 +   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
 +   02111-1307 USA.  */
 +
-+#include &lt;errno.h&gt;
-+#include &lt;stdarg.h&gt;
-+#include &lt;sys/sem.h&gt;
-+#include &lt;ipc_priv.h&gt;
++#include <errno.h>
++#include <stdarg.h>
++#include <sys/sem.h>
++#include <ipc_priv.h>
 +
-+#include &lt;sysdep.h&gt;
-+#include &lt;string.h&gt;
-+#include &lt;sys/syscall.h&gt;
++#include <sysdep.h>
++#include <string.h>
++#include <sys/syscall.h>
 +
-+#include &quot;kernel-features.h&quot;
-+#include &lt;shlib-compat.h&gt;
++#include "kernel-features.h"
++#include <shlib-compat.h>
 +
 +struct __old_semid_ds
 +{
@@ -50,13 +50,13 @@
 +union semun
 +{
 +  int val;			/* value for SETVAL */
-+  struct semid_ds *buf;		/* buffer for IPC_STAT &amp; IPC_SET */
-+  unsigned short int *array;	/* array for GETALL &amp; SETALL */
++  struct semid_ds *buf;		/* buffer for IPC_STAT & IPC_SET */
++  unsigned short int *array;	/* array for GETALL & SETALL */
 +  struct seminfo *__buf;	/* buffer for IPC_INFO */
 +};
 +
-+#include &lt;bp-checks.h&gt;
-+#include &lt;bp-semctl.h&gt;		/* definition of CHECK_SEMCTL needs union semum */
++#include <bp-checks.h>
++#include <bp-semctl.h>		/* definition of CHECK_SEMCTL needs union semum */
 +
 +#ifdef __NR_getuid32
 +# if __ASSUME_32BITUIDS == 0
@@ -99,7 +99,7 @@
 +    }
 +
 +  return INLINE_SYSCALL (ipc, 5, IPCOP_semctl, semid, semnum, cmd,
-+			 CHECK_SEMCTL (&amp;arg, semid, cmd));
++			 CHECK_SEMCTL (&arg, semid, cmd));
 +}
 +compat_symbol (libc, __old_semctl, semctl, GLIBC_2_0);
 +#endif
@@ -128,9 +128,9 @@
 +      break;
 +    }
 +
-+#if __ASSUME_32BITUIDS &gt; 0
++#if __ASSUME_32BITUIDS > 0
 +  return INLINE_SYSCALL (ipc, 5, IPCOP_semctl, semid, semnum, cmd | __IPC_64,
-+			 CHECK_SEMCTL (&amp;arg, semid, cmd | __IPC_64));
++			 CHECK_SEMCTL (&arg, semid, cmd | __IPC_64));
 +#else
 +  switch (cmd) {
 +    case SEM_STAT:
@@ -139,7 +139,7 @@
 +      break;
 +    default:
 +      return INLINE_SYSCALL (ipc, 5, IPCOP_semctl, semid, semnum, cmd,
-+			     CHECK_SEMCTL (&amp;arg, semid, cmd));
++			     CHECK_SEMCTL (&arg, semid, cmd));
 +  }
 +
 +  {
@@ -148,58 +148,58 @@
 +    struct semid_ds *buf;
 +
 +#ifdef __NR_getuid32
-+    if (__libc_missing_32bit_uids &lt;= 0)
++    if (__libc_missing_32bit_uids <= 0)
 +      {
-+	if (__libc_missing_32bit_uids &lt; 0)
++	if (__libc_missing_32bit_uids < 0)
 +	  {
 +	    int save_errno = errno;
 +
 +	    /* Test presence of new IPC by testing for getuid32 syscall.  */
 +	    result = INLINE_SYSCALL (getuid32, 0);
-+	    if (result == -1 &amp;&amp; errno == ENOSYS)
++	    if (result == -1 && errno == ENOSYS)
 +	      __libc_missing_32bit_uids = 1;
 +	    else
 +	      __libc_missing_32bit_uids = 0;
 +	    __set_errno(save_errno);
 +	  }
-+	if (__libc_missing_32bit_uids &lt;= 0)
++	if (__libc_missing_32bit_uids <= 0)
 +	  {
 +	    result = INLINE_SYSCALL (ipc, 5, IPCOP_semctl, semid, semnum, cmd | __IPC_64,
-+				     CHECK_SEMCTL (&amp;arg, semid, cmd | __IPC_64));
++				     CHECK_SEMCTL (&arg, semid, cmd | __IPC_64));
 +	    return result;
 +	  }
 +      }
 +#endif
 +
 +    buf = arg.buf;
-+    arg.buf = (struct semid_ds *)&amp;old;
++    arg.buf = (struct semid_ds *)&old;
 +    if (cmd == IPC_SET)
 +      {
-+	old.sem_perm.uid = buf-&gt;sem_perm.uid;
-+	old.sem_perm.gid = buf-&gt;sem_perm.gid;
-+	old.sem_perm.mode = buf-&gt;sem_perm.mode;
-+	if (old.sem_perm.uid != buf-&gt;sem_perm.uid ||
-+	    old.sem_perm.gid != buf-&gt;sem_perm.gid)
++	old.sem_perm.uid = buf->sem_perm.uid;
++	old.sem_perm.gid = buf->sem_perm.gid;
++	old.sem_perm.mode = buf->sem_perm.mode;
++	if (old.sem_perm.uid != buf->sem_perm.uid ||
++	    old.sem_perm.gid != buf->sem_perm.gid)
 +	  {
 +	    __set_errno (EINVAL);
 +	    return -1;
 +	  }
 +      }
 +    result = INLINE_SYSCALL (ipc, 5, IPCOP_semctl, semid, semnum, cmd,
-+			     CHECK_SEMCTL (&amp;arg, semid, cmd));
-+    if (result != -1 &amp;&amp; cmd != IPC_SET)
++			     CHECK_SEMCTL (&arg, semid, cmd));
++    if (result != -1 && cmd != IPC_SET)
 +      {
 +	memset(buf, 0, sizeof(*buf));
-+	buf-&gt;sem_perm.__key = old.sem_perm.__key;
-+	buf-&gt;sem_perm.uid = old.sem_perm.uid;
-+	buf-&gt;sem_perm.gid = old.sem_perm.gid;
-+	buf-&gt;sem_perm.cuid = old.sem_perm.cuid;
-+	buf-&gt;sem_perm.cgid = old.sem_perm.cgid;
-+	buf-&gt;sem_perm.mode = old.sem_perm.mode;
-+	buf-&gt;sem_perm.__seq = old.sem_perm.__seq;
-+	buf-&gt;sem_otime = old.sem_otime;
-+	buf-&gt;sem_ctime = old.sem_ctime;
-+	buf-&gt;sem_nsems = old.sem_nsems;
++	buf->sem_perm.__key = old.sem_perm.__key;
++	buf->sem_perm.uid = old.sem_perm.uid;
++	buf->sem_perm.gid = old.sem_perm.gid;
++	buf->sem_perm.cuid = old.sem_perm.cuid;
++	buf->sem_perm.cgid = old.sem_perm.cgid;
++	buf->sem_perm.mode = old.sem_perm.mode;
++	buf->sem_perm.__seq = old.sem_perm.__seq;
++	buf->sem_otime = old.sem_otime;
++	buf->sem_ctime = old.sem_ctime;
++	buf->sem_nsems = old.sem_nsems;
 +      }
 +    return result;
 +  }
