@@ -1,12 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r8.ebuild,v 1.4 2003/12/21 16:48:41 brad_mssw Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r8.ebuild,v 1.5 2004/02/02 00:10:24 vapier Exp $
 
 inherit flag-o-matic eutils
-
-filter-flags "-fstack-protector"
 
 MY_P=${P/-/,}
 S=${WORKDIR}/${MY_P}
@@ -14,12 +10,12 @@ DESCRIPTION="Password Checking Library"
 HOMEPAGE="http://www.crypticide.org/users/alecm/"
 SRC_URI="http://www.crypticide.org/users/alecm/security/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="CRACKLIB"
-KEYWORDS="amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64 ppc64"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64 amd64 ppc64"
 
 RDEPEND="sys-apps/miscfiles
-		>=sys-apps/portage-2.0.47-r10"
+	>=sys-apps/portage-2.0.47-r10"
 DEPEND="${RDEPEND}
 	sys-devel/gcc-config"
 
@@ -43,12 +39,12 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-flags -fstack-protector
 	# Parallel make does not work for 2.7
 	make all || die
 }
 
 src_install() {
-
 	dodir /usr/{lib,sbin,include}
 	keepdir /usr/share/cracklib
 
@@ -74,4 +70,3 @@ src_install() {
 
 	dodoc HISTORY LICENCE MANIFEST POSTER README
 }
-
