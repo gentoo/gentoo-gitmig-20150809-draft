@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.13 2003/02/27 11:37:14 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.14 2003/03/15 18:04:45 liquidx Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -29,6 +29,10 @@
   new release for gnome2  
 
 *glade-0.6.4 (9 Apr 2002)
+
+  15 Mar 2003; Alastair Tse <liquidx@gentoo.org> glade-0.6.4.ebuild,
+  files/glade-0.6.4-autogen.sh.patch:
+  patches to template autogen.sh files to work with newer gettext.
 
   15 Feb 2003; Mark Guertin <gerk@gentoo.org> glade-0.6.4.ebuild :
   set ppc in keywords

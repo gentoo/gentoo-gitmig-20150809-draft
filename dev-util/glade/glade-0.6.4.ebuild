@@ -1,8 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.4.ebuild,v 1.9 2003/02/15 20:55:54 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.4.ebuild,v 1.10 2003/03/15 18:04:46 liquidx Exp $
 
 IUSE="nls gnome bonobo"
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="glade"
@@ -24,6 +26,8 @@ RDEPEND="${RDEPEND}
 
 src_compile() {
 	local myconf
+
+	epatch ${FILESDIR}/${P}-autogen.sh.patch
 
 	use gnome || myconf="--disable-gnome"
 
