@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.98b-r1.ebuild,v 1.1 2002/09/12 08:04:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.98b-r1.ebuild,v 1.2 2002/09/12 08:16:12 aliz Exp $
 
+X509_PATCH=0.9.15
 S=${WORKDIR}/${P}
 DESCRIPTION="FreeS/WAN IPSec Userspace Utilities with X.509 Patches"
 SRC_URI="ftp://ftp.xs4all.nl/pub/crypto/freeswan/${P}.tar.gz
-	 http://www.strongsec.com/freeswan/x509patch-0.9.15-${P}.tar.gz"
+	 http://www.strongsec.com/freeswan/x509patch-${X509_PATCH}-${P}.tar.gz"
 
 HOMEPAGE="http://www.freeswan.org"
 DEPEND="virtual/glibc
@@ -31,7 +32,7 @@ src_unpack() {
 
 	cd ${S}
 	patch -p1 < ${FILESDIR}/freeswan-gentoo-cflags.patch || die
-	sed 's:/etc/ipsec.d:/etc/ipsec/ipsec.d:g' ${WORKDIR}/x509patch-0.9.13-${P}/freeswan.diff | patch -p1 || die
+	sed 's:/etc/ipsec.d:/etc/ipsec/ipsec.d:g' ${WORKDIR}/x509patch-${X509_PATCH}-${P}/freeswan.diff | patch -p1 || die
 }
 
 src_compile() {
@@ -59,9 +60,9 @@ src_install () {
 		INC_MANDIR=share/man			\
 		install || die
 
-	newdoc ${WORKDIR}/x509patch-0.9.12-${P}/README README.x509
-	newdoc ${WORKDIR}/x509patch-0.9.12-${P}/CHANGES CHANGES.x509
-	newdoc ${WORKDIR}/x509patch-0.9.12-${P}/ipsec.secrets.template ipsec.secrets.x509
+	newdoc ${WORKDIR}/x509patch-${X509_PATCH}-${P}/README README.x509
+	newdoc ${WORKDIR}/x509patch-${X509_PATCH}-${P}/CHANGES CHANGES.x509
+	newdoc ${WORKDIR}/x509patch-${X509_PATCH}-${P}/ipsec.secrets.template ipsec.secrets.x509
 	dodoc INSTALL COPYING CREDITS BUGS CHANGES README doc/*
 }
 
