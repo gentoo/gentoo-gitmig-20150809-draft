@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.5.ebuild,v 1.1 2005/01/13 09:50:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.5-r1.ebuild,v 1.1 2005/01/17 13:09:55 foser Exp $
 
 inherit eutils python
 
@@ -37,6 +37,8 @@ src_unpack() {
 	cd ${S}
 	# remove pamconsole option
 	epatch ${FILESDIR}/${PN}-0.4.1-old_storage_policy.patch
+	# pick up the gentoo usermap
+	epatch ${FILESDIR}/${P}-gentoo_gphoto2_usermap.patch
 
 }
 
