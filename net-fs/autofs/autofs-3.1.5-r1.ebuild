@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.5-r1.ebuild,v 1.1 2000/08/08 17:53:33 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.5-r1.ebuild,v 1.2 2000/08/16 04:38:13 drobbins Exp $
 
 P=autofs-3.1.5
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
-CATEGORY="net-fs"
 DESCRIPTION="Automounter"
 SRC_URI="ftp://ftp.kernel.org/pub/linux/daemons/autofs/${A}
 	 ftp://ftp.de.kernel.org/pub/linux/daemons/autofs/${A}
