@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cyrus-imap-admin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.21 2004/02/22 16:14:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.22 2004/03/30 13:17:28 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> cyrus-imap-admin-2.2.3.ebuild,
+  files/cyrus-imap-admin-2.2.3-fPIC.patch:
+  Adding amd64 keyword. Closing #45810.
 
   22 Feb 2004; Aron Griffis <agriffis@gentoo.org>
   cyrus-imap-admin-2.1.12.ebuild, cyrus-imap-admin-2.1.13.ebuild,

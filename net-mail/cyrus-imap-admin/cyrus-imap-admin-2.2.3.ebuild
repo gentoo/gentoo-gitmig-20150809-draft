@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.2.3.ebuild,v 1.2 2004/01/30 07:04:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.2.3.ebuild,v 1.3 2004/03/30 13:17:28 aliz Exp $
 
-inherit perl-module eutils
+inherit perl-module eutils gnuconfig
 
 DESCRIPTION="Utilities and Perl modules to administer a Cyrus IMAP server."
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/cyrus-imapd-${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="ssl kerberos"
 
 RDEPEND=">=sys-libs/db-3.2
@@ -44,9 +44,13 @@ src_unpack() {
 
 	# When linking with rpm, you need to link with more libraries.
 	sed -e "s:lrpm:lrpm -lrpmio -lrpmdb:" -i configure || die "sed failed"
+
+	epatch ${FILESDIR}/${P}-fPIC.patch
 }
 
 src_compile() {
+	gnuconfig_update
+
 	local myconf
 	myconf="${myconf} `use_with ssl openssl`"
 	myconf="${myconf} `use_with kerberos gssapi`"
