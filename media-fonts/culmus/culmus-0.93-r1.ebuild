@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.93-r1.ebuild,v 1.4 2004/11/09 22:20:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.93-r1.ebuild,v 1.5 2005/03/28 10:09:17 usata Exp $
 
 DESCRIPTION="Hebrew Type1 fonts"
 SRC_URI="mirror://sourceforge/culmus/${P}.tar.gz
