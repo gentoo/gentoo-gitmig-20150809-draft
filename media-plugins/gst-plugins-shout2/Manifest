@@ -1,4 +1,6 @@
-MD5 14b0237fe423a053d2da8e5dffee04bb ChangeLog 603
 MD5 c857edbbb2644b2394a8dbc978277e99 gst-plugins-shout2-0.8.5.ebuild 406
+MD5 731dd76b3920d1c311f389520510dc51 gst-plugins-shout2-0.8.7.ebuild 407
+MD5 3442a7f918d7cd0aa668e583dbcdc5fa ChangeLog 644
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-shout2-0.8.5 71
+MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-shout2-0.8.7 71

@@ -1,6 +1,8 @@
 # ChangeLog for media-plugins/gst-plugins-vorbis
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.36 2004/12/29 01:07:18 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.37 2005/01/05 23:20:48 foser Exp $
+
+*gst-plugins-vorbis-0.8.7 (05 Jan 2005)
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
