@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.23 2003/11/25 23:44:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.24 2003/12/27 17:28:16 weeve Exp $
+
+  27 Dec 2003; Jason Wever <weeve@gentoo.org> sbcl-0.8.5-r1.ebuild:
+  Added patch from Steven Farmer <steve@megahack.com> to fix bug #36005.
 
 *sbcl-0.8.5-r1 (25 Nov 2003)
 
