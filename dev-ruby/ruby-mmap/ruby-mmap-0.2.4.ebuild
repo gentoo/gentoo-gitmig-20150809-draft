@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mmap/ruby-mmap-0.2.2.ebuild,v 1.8 2004/03/13 20:08:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mmap/ruby-mmap-0.2.4.ebuild,v 1.1 2004/03/13 20:08:48 usata Exp $
 
 inherit ruby
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://moulon.inra.fr/pub/ruby/${MY_P}.tar.gz"
 SLOT="0"
 USE_RUBY="ruby16 ruby18 ruby19"
 LICENSE="Ruby"
-KEYWORDS="x86 alpha ~ppc ~sparc"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc"
 
 DEPEND="dev-ruby/rdoc"
 
