@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.43 2003/06/11 21:09:48 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.44 2003/06/26 15:29:37 coronalvr Exp $
+
+*wine-20030618 (26 Jun 2003)
+
+  26 Jun 2003; Alex Veber <coronalvr@gentoo.org> wine-20030618.ebuild:
+  version bump.
 
   11 Jun 2003; Stanislav Brabec <utx@gentoo.org>:
   Version 20030411-r1 included back to portage tree (bug #22587).
