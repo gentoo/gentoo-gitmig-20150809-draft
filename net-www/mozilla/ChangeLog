@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.159 2004/03/29 04:21:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.160 2004/03/30 05:18:16 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; mozilla-1.6-r1.ebuild,
+  mozilla-1.7_alpha.ebuild, mozilla-1.7_beta-r1.ebuild,
+  mozilla-1.7_beta.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   28 Mar 2004; Aron Griffis <agriffis@gentoo.org> mozilla-1.7_beta-r1.ebuild:
   Add missing dodir before dosym for bug 46049

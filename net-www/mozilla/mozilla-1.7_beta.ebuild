@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_beta.ebuild,v 1.1 2004/03/23 21:00:16 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_beta.ebuild,v 1.2 2004/03/30 05:18:16 spyderous Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama"
 # Internal USE flags that I do not really want to advertise ...
@@ -71,7 +71,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
-RDEPEND=">=x11-base/xfree-4.2.0-r11
+RDEPEND="virtual/x11
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/fontconfig-2.1
 	!moznoxft ( virtual/xft )
@@ -95,7 +95,6 @@ RDEPEND=">=x11-base/xfree-4.2.0-r11
 	gnome? ( >=gnome-base/gnome-vfs-2.3.5 )"
 
 DEPEND="${RDEPEND}
-	virtual/x11
 	dev-util/pkgconfig
 	dev-lang/perl
 	java? ( >=dev-java/java-config-0.2.0 )"
