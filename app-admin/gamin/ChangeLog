@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gamin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.4 2004/08/24 17:29:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.5 2004/08/25 18:24:58 azarah Exp $
+
+*gamin-0.0.7 (25 Aug 2004)
+
+  25 Aug 2004; Martin Schlemmer <azarah@gentoo.org> +gamin-0.0.7.ebuild:
+  Update version.
 
   24 Aug 2004; Martin Schlemmer <azarah@gentoo.org>
   +files/gamin-0.0.6-quiet-inotify-warning.patch, gamin-0.0.6-r2.ebuild:
