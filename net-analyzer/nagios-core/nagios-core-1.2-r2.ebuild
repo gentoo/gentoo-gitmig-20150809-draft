@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.5 2004/08/10 09:48:14 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.6 2004/08/16 10:37:07 eldad Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ~ppc ~amd64"
 IUSE="noweb mysql postgres perl debug apache2"
 
 DEPEND="virtual/mailx
