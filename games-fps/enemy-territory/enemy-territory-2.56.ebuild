@@ -5,9 +5,10 @@ inherit games eutils
 
 DESCRIPTION="Return to Castle Wolfenstein: Enemy Territory - standalone multi-player game based on Return to Castle Wolfenstein"
 HOMEPAGE="http://www.idsoftware.com/"
-SRC_URI="ftp://ftp.gameaholic.com/pub/demos/et-linux-2.55.x86.run
-	ftp://ftp.gigabell.net/pub/games/gameaholic/demos/et-linux-2.55.x86.run
-	ftp://ftp.planetmirror.com/pub/gameaholic/demos/et-linux-2.55.x86.run
+SRC_URI="ftp://3dgamers.in-span.net/pub/3dgamers3/games/wolfensteinet/et-linux-2.55.x86.run
+	ftp://theuser:Xyz3y@ftp4.3dgamers.com/pub/3dgamers/games/wolfensteinet/et-linux-2.55.x86.run
+	http://3dgamers.planetmirror.com/pub/3dgamers/games/wolfensteinet/et-linux-2.55.x86.run
+	ftp://freeftp.game.net/pub/games/enemyterritory/full_game/et-linux-2.55.x86.run
 	http://sjcredirvip.xlontech.net/100083/games/wolfensteinet/et-linux-${PV}-update.x86.run
 	ftp://3dgamers.in-span.net/pub/3dgamers3/games/wolfensteinet/et-linux-${PV}-update.x86.run
 	ftp://theuser:Xyz3y@ftp4.3dgamers.com/pub/3dgamers/games/wolfensteinet/et-linux-${PV}-update.x86.run"
