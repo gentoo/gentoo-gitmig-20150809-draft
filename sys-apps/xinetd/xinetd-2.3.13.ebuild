@@ -1,9 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.13.ebuild,v 1.9 2004/07/15 02:48:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.13.ebuild,v 1.10 2004/07/30 04:00:01 vapier Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="Xinetd is a powerful replacement for inetd, with advanced features"
-HOMEPAGE="http://www.xinetd.org"
+HOMEPAGE="http://www.xinetd.org/"
 SRC_URI="http://www.xinetd.org/${P}.tar.gz"
 
 LICENSE="BSD"
@@ -16,6 +18,12 @@ DEPEND="virtual/libc
 RDEPEND="${DEPEND}
 	dev-lang/perl"
 PROVIDE="virtual/inetd"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	gnuconfig_update
+}
 
 src_compile() {
 	local myconf

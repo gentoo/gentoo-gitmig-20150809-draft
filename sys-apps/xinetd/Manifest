@@ -1,22 +1,32 @@
-MD5 c646fabf73243050feabff12be3048cc xinetd-2.3.11.ebuild 2054
-MD5 20d059d1e8f523e5a43f51e67842cb23 xinetd-2.3.13.ebuild 2045
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8b2dab6a28b96553ff28fb749114e90d ChangeLog 5135
-MD5 d30b18a707d76aec5799c780ad03aca3 xinetd-2.3.12.ebuild 2066
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 300b0b4bf4741ed50e7978d3361e5666 files/xinetd-run 463
-MD5 3eda9814ff868bdb29f35c7ad4d2c02f files/xinetd.rc6 919
-MD5 897e24c3c7cc5a08093dfcb3a71fc0ee files/xconv.pl 3030
-MD5 ccad3f7878ea7a1e078796419717c4b2 files/xinetd.conf 459
-MD5 1f24b28f485355ae6fa0f9e4008553c5 files/xinetd.confd 289
+MD5 c646fabf73243050feabff12be3048cc xinetd-2.3.11.ebuild 2054
+MD5 d30b18a707d76aec5799c780ad03aca3 xinetd-2.3.12.ebuild 2066
+MD5 7712a7b37de06019d7ccabb6454202d9 xinetd-2.3.13.ebuild 2122
 MD5 469ecc467df958570cae2caad4391dd1 files/digest-xinetd-2.3.11 65
 MD5 80bdf9f954db1de9c7956540826c456c files/digest-xinetd-2.3.12 65
+MD5 897e24c3c7cc5a08093dfcb3a71fc0ee files/xconv.pl 3030
+MD5 300b0b4bf4741ed50e7978d3361e5666 files/xinetd-run 463
+MD5 ccad3f7878ea7a1e078796419717c4b2 files/xinetd.conf 459
+MD5 1f24b28f485355ae6fa0f9e4008553c5 files/xinetd.confd 289
+MD5 3eda9814ff868bdb29f35c7ad4d2c02f files/xinetd.rc6 919
 MD5 3b6428878ffb5338d7eaff85ccbe6f6a files/digest-xinetd-2.3.13 65
 MD5 f9591814c08ab763ace5c8969ce6d457 files/etc.xinetd.d/README.services 643
 MD5 7d04f6175ae493c8aa988e3728e959b3 files/etc.xinetd.d/chargen-tcp 246
 MD5 a26dbc5cae6b20e71846bff26600eb89 files/etc.xinetd.d/chargen-udp 266
 MD5 2444f1a969860075d1d7fe9974a62575 files/etc.xinetd.d/daytime-tcp 246
 MD5 79665fc4e88391cc1d5f8f0f4fd391d8 files/etc.xinetd.d/daytime-udp 272
-MD5 02bc3d5745432ee4b5b11b9c2e03c731 files/etc.xinetd.d/time-tcp 270
-MD5 70829ea9fe03a6e343efa635c9f263e0 files/etc.xinetd.d/time-udp 272
 MD5 6eb573e86ba7cad19ea240848a88767a files/etc.xinetd.d/echo-tcp 238
 MD5 15e73cb0db884334cef7ac44ced9fa6c files/etc.xinetd.d/echo-udp 263
+MD5 02bc3d5745432ee4b5b11b9c2e03c731 files/etc.xinetd.d/time-tcp 270
+MD5 70829ea9fe03a6e343efa635c9f263e0 files/etc.xinetd.d/time-udp 272
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBCcfRHTu7gpaalycRAgoPAJ4zTqKCp8mSERmTrtBSKH1stxMq5gCfWvCz
+KLDm/1zKZWZd0dIjPhoM4Qs=
+=qj4p
+-----END PGP SIGNATURE-----
