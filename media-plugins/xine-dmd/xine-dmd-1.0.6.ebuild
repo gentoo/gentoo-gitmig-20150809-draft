@@ -1,6 +1,6 @@
-# Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-dmd/xine-dmd-1.0.6.ebuild,v 1.2 2002/12/12 09:30:46 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-dmd/xine-dmd-1.0.6.ebuild,v 1.3 2003/09/29 21:22:43 mholzer Exp $
 
 S=${WORKDIR}/${PN/-/_}_plugin-${PV}
 DESCRIPTION="DMD plugin for DVD playback for Xine player."

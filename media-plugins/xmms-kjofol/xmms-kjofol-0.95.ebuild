@@ -1,6 +1,6 @@
-# Copyright 2002, Jens Schittenhelm
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kjofol/xmms-kjofol-0.95.ebuild,v 1.4 2003/09/07 00:02:15 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-kjofol/xmms-kjofol-0.95.ebuild,v 1.5 2003/09/29 21:23:34 mholzer Exp $
 
 DESCRIPTION="A xmms remote that allows users to use K-Jofol skins"
 HOMEPAGE="http://www.csse.monash.edu.au/~timf/xmms.html"
