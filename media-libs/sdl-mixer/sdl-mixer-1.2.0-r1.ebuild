@@ -1,7 +1,7 @@
 # Copyriht 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.0-r1.ebuild,v 1.2 2001/10/07 11:11:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.0-r1.ebuild,v 1.3 2001/10/27 20:36:02 lordjoe Exp $
 
 A=SDL_mixer-${PV}.tar.gz
 S=${WORKDIR}/SDL_mixer-${PV}
@@ -15,13 +15,13 @@ DEPEND="virtual/glibc
 	ogg? ( >=media-libs/libvorbis-1.0_beta4 )"
 
 src_compile() {
-  try ./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man || die
-  try emake || die
+  ./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man || die
+  emake || die
 }
 
 src_install() {
   cd ${S}
-  try make DESTDIR=${D} install || die
+  make DESTDIR=${D} install || die
   preplib /usr
   dodoc CHANGES COPYING README  
 }
