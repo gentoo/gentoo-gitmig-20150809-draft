@@ -1,4 +1,4 @@
-MD5 939287211acde962f552aaafc97b15fe files/digest-ecore-1.0.0.20031213_pre4 79
+MD5 8ad360017b0f9ceb15671e6df93608bb files/digest-ecore-1.0.0.20040110_pre4 79
+MD5 0dd1c56c81b1f4cadfe17c635fb78a3e ecore-1.0.0.20040110_pre4.ebuild 957
 MD5 daefec1326e3ea67b50b68357b0e271c ChangeLog 570
 MD5 f37911494b2f19fda2bf5b9d9a17f1e4 metadata.xml 611
-MD5 e7daf602c45dbfdc14f4e01e9afc3471 ecore-1.0.0.20031213_pre4.ebuild 957
