@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.18.ebuild,v 1.1 2004/04/01 21:34:41 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.18.ebuild,v 1.2 2004/04/02 03:04:42 latexer Exp $
 
 # WARNING
 # All gst-sharp hacks done in this build are nonfunctional
@@ -19,11 +19,13 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="gnome gnomedb libgda gtkhtml"
 
-RDEPEND=">=dev-dotnet/mono-0.24
+RDEPEND=">=dev-dotnet/mono-0.31
 	>=x11-libs/gtk+-2.2
 	>=gnome-base/libglade-2
+	>=gnome-base/ORBit2-2.8.3
 	gnome? ( >=gnome-base/libgnomecanvas-2.2
-		>=gnome-base/libgnomeui-2.2 )
+		>=gnome-base/libgnomeui-2.2
+		>=gnome-base/libgnomeprintui-2.2 )
 	libgda? ( >=gnome-extra/libgda-0.11 )
 	gnomedb? ( >=gnome-extra/libgnomedb-0.11 )
 	gtkhtml? ( >=gnome-extra/libgtkhtml-3* )"

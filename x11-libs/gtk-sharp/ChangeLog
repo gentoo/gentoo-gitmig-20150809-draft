@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk-sharp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/ChangeLog,v 1.16 2004/04/01 21:34:41 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/ChangeLog,v 1.17 2004/04/02 03:04:42 latexer Exp $
+
+  01 Apr 2004; Peter Johanson <latexer@gentoo.org> gtk-sharp-0.18.ebuild:
+  Added a few more saner depends.
 
 *gtk-sharp-0.18 (01 Apr 2004)
 
