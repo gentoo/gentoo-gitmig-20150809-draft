@@ -1,3 +1,4 @@
-MD5 6895fc0d9d65c0a2c65f01ec0fc645d6 .mod_scgi-1.2_alpha1.ebuild.swp 12288
-MD5 0f200994a1d5098336cb0baab84f5c93 mod_scgi-1.2_alpha1.ebuild 812
+MD5 c88cc1e17740d8b35139af7a915341a1 mod_scgi-1.2_alpha1.ebuild 1214
+MD5 094b07f31ed336f5bf553ca221162686 ChangeLog 349
 MD5 fe6e3027503038b59f1e9b4ee2cb3baa files/digest-mod_scgi-1.2_alpha1 61
+MD5 3d1c20f03676d9a3da3d0fe3ea73720f files/20_mod_scgi.conf 118

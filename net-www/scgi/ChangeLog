@@ -1,0 +1,9 @@
+# ChangeLog for net-www/scgi
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/scgi/ChangeLog,v 1.1 2003/08/12 04:42:02 g2boojum Exp $
+
+*scgi-1.2_alpha1 (12 Aug 2003)
+
+  12 Aug 2003; Grant Goodyear <g2boojum@gentoo.org> scgi-1.2_alpha1.ebuild:
+  New package
+
