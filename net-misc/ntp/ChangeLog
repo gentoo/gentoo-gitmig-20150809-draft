@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.21 2003/02/12 08:29:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.22 2003/02/14 18:47:39 mholzer Exp $
 
 *ntp-4.1.1b-r4 (12 Jan 2003)
+
+  14 Feb 2003; Martin Holzer <mholzer@gentoo.org> ntp-4.1.1b-r4.ebuild : 
+  Added one more einfo. Closes #15690.
 
   12 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
   Added a lot more comments to hopefully keep people from
