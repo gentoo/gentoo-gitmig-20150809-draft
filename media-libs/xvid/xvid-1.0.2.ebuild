@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.2.ebuild,v 1.5 2004/10/04 14:31:47 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.0.2.ebuild,v 1.6 2004/10/05 19:07:44 eradicator Exp $
 
 inherit eutils
 
@@ -33,9 +33,9 @@ src_install() {
 	cd ${S}/../../
 	dodoc AUTHORS ChangeLog README TODO doc/*
 
-	local mylib="$(basename $(ls ${D}/usr/lib/libxvidcore.so*))"
-	dosym ${mylib} /usr/lib/libxvidcore.so
-	dosym ${mylib} /usr/lib/${mylib/.0}
+	local mylib="$(basename $(ls ${D}/usr/$(get_libdir)/libxvidcore.so*))"
+	dosym ${mylib} /usr/$(get_libdir)/libxvidcore.so
+	dosym ${mylib} /usr/$(get_libdir)/${mylib/.0}
 
 	if use doc ; then
 		dodoc CodingStyle doc/README

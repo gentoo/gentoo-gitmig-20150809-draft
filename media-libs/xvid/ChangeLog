@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.30 2004/10/04 14:31:47 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.31 2004/10/05 19:07:44 eradicator Exp $
+
+  05 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xvid-0.9.2-r1.ebuild, xvid-1.0.1.ebuild, xvid-1.0.2.ebuild:
+  get_libdir fixes.
 
   04 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> xvid-1.0.2.ebuild:
   Fixing typo which broke patching (bug #62939).
