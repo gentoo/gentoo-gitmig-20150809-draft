@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r3.ebuild,v 1.16 2005/01/05 23:24:19 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r3.ebuild,v 1.17 2005/03/15 23:22:17 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -83,18 +83,6 @@ DEPEND="${RDEPEND}
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~ia64 ~hppa ~sparc ~mips"
-
-
-pkg_setup() {
-	echo
-	einfo "Please note that we do not use C[XX]FLAGS from /etc/make.conf"
-	einfo "or the environment, as the upstream maintainers will then"
-	einfo "ignore bug reports and refuse support."
-
-	echo
-	ebeep 3
-	epause 5
-}
 
 src_unpack() {
 
@@ -182,6 +170,8 @@ src_unpack() {
 src_compile() {
 
 	filter-flags -fPIE -fPIC
+
+	strip-flags
 
 	local myconf=
 	################
