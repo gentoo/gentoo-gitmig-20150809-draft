@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.35 2004/04/11 11:27:52 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.36 2004/04/16 21:00:30 tuxus Exp $
+
+  16 Apr 2004; <tuxus@gentoo.org> elfutils-0.94-r1.ebuild:
+  files/elfutils-0.94-alpha-mips-atime.diff: Fix 0.94 compilation on mips and
+  alpha
 
   11 Apr 2004; <cretin@gentoo.org> elfutils-0.94-r1.ebuild:
   Stable on all archs

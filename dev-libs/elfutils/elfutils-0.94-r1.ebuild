@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.94-r1.ebuild,v 1.4 2004/04/11 11:27:52 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.94-r1.ebuild,v 1.5 2004/04/16 21:00:30 tuxus Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="OpenSoftware"
 SLOT="0"
-KEYWORDS="x86 sparc amd64 ppc alpha"
+KEYWORDS="x86 sparc amd64 ppc alpha mips"
 IUSE="nls"
 
 DEPEND=">=sys-libs/glibc-2.3.2
@@ -26,6 +26,8 @@ src_unpack() {
 		sed -e 's:-Werror::g' \
 		${x}.orig > ${x}
 	done
+
+	use mips || use alpha && epatch ${FILESDIR}/${P}-alpha-mips-atime.diff
 }
 
 src_compile() {
