@@ -13,8 +13,8 @@ DEPEND=">=x11-libs/gtk+-1.2.10
 	gnome? ( >=gnome-base/gdk-pixbuf-0.11.0 )
 	nls? ( >=sys-devel/gettext-0.10.38 )
 	gnome? ( >=gnome-base/gnome-core-1.2.2.1 )
-#	ssl? ( >=dev-libs/openssl-0.9.6a )"
 	python? ( >=dev-lang/python-2.0 )" 
+#	ssl? ( >=dev-libs/openssl-0.9.6a )"
 # ssl does not seem to work... feel free to try it if you'd like =)	
 
 src_compile() {
