@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/jftpgw/jftpgw-0.13.4-r1.ebuild,v 1.4 2004/05/02 12:03:36 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/jftpgw/jftpgw-0.13.4-r1.ebuild,v 1.5 2004/06/19 04:42:08 vapier Exp $
 
 inherit eutils
 
@@ -15,8 +15,6 @@ IUSE="crypt tcpd"
 
 DEPEND="virtual/glibc
 	tcpd? ( sys-apps/tcp-wrappers )"
-RDEPEND="${DEPEND}
-	virtual/inetd"
 
 src_compile() {
 	econf \
