@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/kexchange
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kexchange/ChangeLog,v 1.4 2004/09/05 13:59:37 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kexchange/ChangeLog,v 1.5 2004/10/26 13:02:45 weeve Exp $
+
+  26 Oct 2004; Jason Wever <weeve@gentoo.org> kexchange-1.0.ebuild:
+  Added ~sparc keyword.
 
   05 Sep 2004; Malcolm Lashley <malc@gentoo.org> kexchange-1.0.ebuild:
   ~amd64 - closes #62450
