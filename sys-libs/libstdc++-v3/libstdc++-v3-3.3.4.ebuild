@@ -1,46 +1,82 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.4.ebuild,v 1.5 2004/10/27 03:44:37 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.4.ebuild,v 1.6 2004/10/30 16:32:29 lv Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
-do_filter_flags() {
+transform_known_flags() {
 	declare setting
 
-	strip-flags
+	# and on x86, we just need to filter the 3.4 specific amd64 -marchs
+	replace-cpu-flags k8 athlon64 opteron x86-64
+
+	# gcc 3.3 doesn't support -march=pentium-m
+	replace-cpu-flags pentium-m pentium3m pentium3
+
+	#GCC 3.3 does not understand G3, G4, G5 on ppc
+	replace-cpu-flags G3 750
+	replace-cpu-flags G4 7400
+	replace-cpu-flags G5 7400
+}
+
+is_arch_allowed() {
+	i386_processor_table="i386 i486 i586 pentium pentium-mmx winchip-c6 \
+		winchip2 c3 i686 pentiumpro pentium2 pentium3 pentium4 prescott \
+		nocona k6 k6-2 k6-3 athlon athlon-tbird x86-64 athlon-4 athlon-xp \
+		athlon-mp"
+
+	for proc in ${i386_processor_table} ; do
+		[ "${proc}" == "${1}" ] && return 0
+	done
+
+
+	mips_processor_table="mips1 mips2 mips3 mips4 mips32 mips64 r3000 r2000 \
+		r3900 r6000 r4000 vr4100 vr4111 vr4120 vr4300 r4400 r4600 orion \
+		r4650 r8000 vr5000 vr5400 vr5500 4kc 4kp 5kc 20kc sr71000 sb1"
+
+	for proc in ${mips_processor_table} ; do
+		[ "${proc}" == "${1}" ] && return 0
+	done
+
+
+	rs6000_processor_table="common power power2 power3 power4 powerpc \
+		powerpc64 rios rios1 rsc rsc1 rios2 rs64a 401 403 405 505 601 602 \
+		603 603e ec603e 604 604e 620 630 740 750 7400 7450 8540 801 821 823 \
+		860"
+
+	for proc in ${rs6000_processor_table} ; do
+		[ "${proc}" == "${1}" ] && return 0
+	done
+
+
+	return 1
+}
+
+
+do_filter_flags() {
+	declare setting
 
 	# In general gcc does not like optimization, and add -O2 where
 	# it is safe.  This is especially true for gcc 3.3 + 3.4
 	replace-flags -O? -O2
 
-	if use amd64
-	then
-		# gcc 3.3 doesn't support -march=k8/etc on amd64, so xgcc will fail
-		setting="`get-flag march`"
-		[ ! -z "${setting}" ] && filter-flags -march="${setting}"
-	fi
-
-	# and on x86, we just need to filter the 3.4 specific amd64 -marchs
-	filter-flags -march=k8
-	filter-flags -march=athlon64
-	filter-flags -march=opteron
-
-	# gcc 3.3 doesn't support -march=pentium-m
-	replace-flags -march=pentium-m -march=pentium3
-
-	#GCC 3.3 does not understand G3, G4, G5 on ppc
-	replace-flags -mcpu=G3 -mcpu=750
-	replace-flags -mcpu=G4 -mcpu=7400
-	replace-flags -mtune=G3 -mtune=750
-	replace-flags -mtune=G4 -mtune=7400
-	filter-flags -mcpu=G5
-	filter-flags -mtune=G5
 
 	# gcc 3.3 doesn't support -mtune on numerous archs, so xgcc will fail
-	if use x86 || use amd64 ; then
-		setting="`get-flag mtune`"
-		[ ! -z "${setting}" ] && filter-flags -mtune="${setting}"
+	setting="`get-flag mtune`"
+	[ ! -z "${setting}" ] && filter-flags -mtune="${setting}"
+
+
+	# only allow the flags that we -know- are supported
+	transform_known_flags
+	setting="`get-flag march`"
+	if [ ! -z "${setting}" ] ; then
+		is_arch_allowed "${setting}" || filter-flags -march="${setting}"
 	fi
+	setting="`get-flag mcpu`"
+	if [ ! -z "${setting}" ] ; then
+		is_arch_allowed "${setting}" || filter-flags -mcpu="${setting}"
+	fi
+
 
 	# xgcc wont understand gcc 3.4 flags...
 	filter-flags -fno-unit-at-a-time
@@ -60,6 +96,10 @@ do_filter_flags() {
 
 	# ...sure, why not?
 	strip-unsupported-flags
+
+	strip-flags
+
+	einfo "CFLAGS: ${CFLAGS}"
 }
 
 S=${WORKDIR}/gcc-${PV}

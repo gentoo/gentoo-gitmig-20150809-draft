@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.26 2004/10/27 03:44:37 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.27 2004/10/30 16:32:29 lv Exp $
+
+  30 Oct 2004; Travis Tilley <lv@gentoo.org> libstdc++-v3-3.3.3-r1.ebuild,
+  libstdc++-v3-3.3.4.ebuild:
+  updated the ebuild with a table of known valid arch settings for i386/x86-64,
+  mips, and rs6000/ppc/ppc64
 
   26 Oct 2004; Daniel Goller <morfic@gentoo.org> libstdc++-v3-3.3.4.ebuild:
   Do the required magic to deal with G3, G4, G5 archs on gcc3.3
