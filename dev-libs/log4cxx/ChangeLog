@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/log4cxx
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.1 2004/06/03 14:08:01 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.2 2004/06/03 18:57:53 zul Exp $
+
+  03 Jun 2004; Chuck Short <zul@gentoo.org> log4cxx-0.9.5.ebuild:
+  Correct HOMEPAGE.
 
 *log4cxx-0.9.5 (03 Jun 2004)
 
