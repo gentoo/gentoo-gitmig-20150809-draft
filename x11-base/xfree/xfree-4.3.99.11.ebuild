@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.11.ebuild,v 1.5 2003/09/07 13:35:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.11.ebuild,v 1.6 2003/09/16 14:30:19 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -808,7 +808,7 @@ src_install() {
 	insinto /usr/X11R6/lib/modules/input
 	doins ${SYNDIR}/synaptics_drv.o
 	insinto /usr/X11R6/bin
-	doins ${SYNDIR}/synclient
+	doexe ${SYNDIR}/synclient
 	docinto synaptics
 	dodoc ${SYNDIR}/{COMPATIBILITY,FEATURES,FILES,INSTALL,INSTALL.DE,LICENSE,NEWS,PARAMETER,TODO,VERSION}
 }

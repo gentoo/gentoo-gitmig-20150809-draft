@@ -797,7 +797,7 @@ src_install() {
 	insinto /usr/X11R6/lib/modules/input
 	doins ${SYNDIR}/synaptics_drv.o
 	insinto /usr/X11R6/bin
-	doins ${SYNDIR}/synclient
+	doexe ${SYNDIR}/synclient
 	docinto synaptics
 	dodoc ${SYNDIR}/{COMPATIBILITY,FEATURES,FILES,INSTALL,INSTALL.DE,LICENSE,NEWS,PARAMETER,TODO,VERSION}
 }
