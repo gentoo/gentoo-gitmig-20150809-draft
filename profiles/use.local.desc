@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.652 2004/09/28 07:07:29 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.653 2004/09/28 13:28:00 lv Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -575,6 +575,7 @@ sys-libs/glibc:makecheck - makes glibc perform a 'make check' before merging and
 sys-libs/glibc:n32 - Enable n32 ABI support on mips
 sys-libs/glibc:n64 - Enable n64 ABI support on mips
 sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
+sys-libs/glibc:nptlonly - Disables building the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 sys-libs/glibc:userlocales - build only the locales specified in /etc/locales.build
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
