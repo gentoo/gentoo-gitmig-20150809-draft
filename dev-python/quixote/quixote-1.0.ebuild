@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/quixote-1.0.ebuild,v 1.4 2005/02/07 15:46:14 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/quixote-1.0.ebuild,v 1.5 2005/02/19 06:21:42 gongloo Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.mems-exchange.org/software/files/${PN}/${MY_P}.tar.gz"
 
 LICENSE="CNRI"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~ppc-macos"
+KEYWORDS="~x86 ~ppc ppc-macos"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.2"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.21 2005/01/20 03:04:22 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.22 2005/02/19 06:19:11 gongloo Exp $
+
+  19 Feb 2005; <gongloo@gentoo.org> docutils-0.3.5.ebuild:
+  Stable on ppc-macos.
 
   19 Jan 2005; <gongloo@gentoo.org> docutils-0.3.5.ebuild:
   Keyworded ~ppc-macos.
