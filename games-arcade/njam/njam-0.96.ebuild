@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/njam-0.96.ebuild,v 1.1 2003/09/10 19:29:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/njam-0.96.ebuild,v 1.2 2003/10/27 15:10:00 mholzer Exp $
 
 inherit games eutils
 
@@ -9,6 +9,7 @@ S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Multi or single-player network Pacman-like game in SDL"
 HOMEPAGE="http://njam.sourceforge.net/"
 SRC_URI="mirror://sourceforge/njam/${MY_P}.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
