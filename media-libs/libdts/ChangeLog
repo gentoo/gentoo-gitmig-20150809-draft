@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdts
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.3 2004/06/24 23:06:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.4 2004/07/24 05:28:23 eradicator Exp $
+
+  23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> libdts-0.0.2.ebuild:
+  Added to ~sparc and ~amd64.  Removed autoconf from RDEPEND.
 
   08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> libdts-0.0.2.ebuild:
   Stable x86.
