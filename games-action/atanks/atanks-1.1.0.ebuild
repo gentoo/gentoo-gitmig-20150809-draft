@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.6 2004/09/12 09:57:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.7 2004/10/31 21:53:36 josejx Exp $
 
 inherit eutils gcc games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/atanks/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/x11
