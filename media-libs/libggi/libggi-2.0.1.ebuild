@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.0.1.ebuild,v 1.1 2002/04/14 18:44:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.0.1.ebuild,v 1.2 2002/06/05 19:42:20 doctomoe Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Fast and safe graphics and drivers for about any graphics card to the Linux kernel (sometimes)"
@@ -12,6 +12,14 @@ DEPEND=">=media-libs/libgii-0.8.1
 		X? ( virtual/x11 )
 		svga? ( >=media-libs/svgalib-1.4.2 )
 		aalib? ( >=media-libs/aalib-1.2-r1 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	if [ ${ARCH} = "ppc" ]
+	then patch -p1 < ${FILESDIR}/libggi-${PV}-ppc.patch || die
+	fi
+}
 
 src_compile() {
 
