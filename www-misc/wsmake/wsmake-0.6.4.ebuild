@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/wsmake/wsmake-0.6.4.ebuild,v 1.1 2004/08/15 18:18:25 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/wsmake/wsmake-0.6.4.ebuild,v 1.2 2004/09/04 16:43:23 axxo Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Website Pre-processor"
@@ -13,6 +13,7 @@ http://ftp.wsmake.org/pub/wsmake6/docs/user-manual-html.tar.gz"
 KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 
 src_unpack () {
 	unpack ${P}.tar.bz2
