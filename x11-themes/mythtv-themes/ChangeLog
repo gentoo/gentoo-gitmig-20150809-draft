@@ -1,22 +1,29 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.1 2003/07/09 00:12:58 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.2 2003/08/18 21:23:02 max Exp $
+
+*mythtv-themes-0.11 (18 Aug 2003)
+
+  18 Aug 2003; Max Kalika <max@gentoo.org> mythtv-themes-0.11.ebuild:
+  Bump version to 0.11, has new version of the visor theme. Change RDEPEND to
+  use mythtv or mythfrontend, whichever is installed. Tidy up installed files a
+  bit. Other cleanups.
 
 *mythtv-themes-0.10 (06 Jul 2003)
 
-  06 Jul 2003; Max Kalika <max@lsit.ucsb.edu> mythtv-themes-0.10.ebuild:
+  06 Jul 2003; Max Kalika <max@gentoo.org> mythtv-themes-0.10.ebuild:
   Change version scheme to match that of MythTV. Add the new visor theme.
 
-  13 Jun 2003; Max Kalika <max@lsit.ucsb.edu> mythtv-themes-1.1.ebuild:
+  13 Jun 2003; Max Kalika <max@gentoo.org> mythtv-themes-1.1.ebuild:
   Change depend to media-tv/mythtv.
 
 *mythtv-themes-1.1 (18 Jun 2003)
 
-  13 Jun 2003; Max Kalika <max@lsit.ucsb.edu> mythtv-themes-1.1.ebuild:
+  13 Jun 2003; Max Kalika <max@gentoo.org> mythtv-themes-1.1.ebuild:
   Bump to 1.1. Contains all the themes for mythtv version 0.9.1.
 
 *mythtv-themes-1.0 (11 Apr 2003)
 
-  11 Apr 2003; Max Kalika <max@lsit.ucsb.edu> mythtv-themes-1.0.ebuild:
+  11 Apr 2003; Max Kalika <max@gentoo.org> mythtv-themes-1.0.ebuild:
   Initial version. Contains all the themes for mythtv version 0.8.
 
