@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.2-r1.ebuild,v 1.1 2003/07/30 19:33:04 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.2-r1.ebuild,v 1.2 2003/09/05 02:55:30 msterret Exp $
 
 IUSE="apache2"
 
@@ -21,38 +21,38 @@ APACHEGID="81"
 MAILGID="280"
 
 pkg_setup() {
-        if ! grep -q ^mailman: /etc/group ; then
-                groupadd -g 280 mailman || die "problem adding group mailman"
-        fi
-        if ! grep -q ^mailman: /etc/passwd ; then
-                useradd -u 280 -g mailman -G cron -s /bin/bash \
-					-d ${INSTALLDIR} -c "mailman" mailman
-        fi
+	if ! grep -q ^mailman: /etc/group ; then
+		groupadd -g 280 mailman || die "problem adding group mailman"
+	fi
+	if ! grep -q ^mailman: /etc/passwd ; then
+		useradd -u 280 -g mailman -G cron -s /bin/bash \
+			-d ${INSTALLDIR} -c "mailman" mailman
+	fi
 	mkdir -p ${INSTALLDIR}
 	chown mailman.mailman ${INSTALLDIR}
 	chmod 2775 ${INSTALLDIR}
 }
 
 src_compile() {
-        econf \
-                --prefix=${INSTALLDIR} \
-                --with-mail-gid=${MAILGID} \
-                --with-cgi-gid=${APACHEGID} \
-		|| die "configure failed"
+	econf \
+		--prefix=${INSTALLDIR} \
+		--with-mail-gid=${MAILGID} \
+		--with-cgi-gid=${APACHEGID} \
+	|| die "configure failed"
 
-        make || die "make failed"
+	make || die "make failed"
 }
 
 src_install () {
 	ID=${D}${INSTALLDIR}
 
-        mkdir -p ${ID}/logs
+	mkdir -p ${ID}/logs
 	touch ${ID}/logs/.keep
 
-        chown -R mailman.mailman ${ID}
-        chmod 2775 ${ID}
+	chown -R mailman.mailman ${ID}
+	chmod 2775 ${ID}
 
-        make prefix=${ID} var_prefix=${ID} doinstall || die
+	make prefix=${ID} var_prefix=${ID} doinstall || die
 
 	if [ "`use apache2`" ]; then
 		dodir /etc/apache2/conf/modules.d
@@ -111,7 +111,7 @@ pkg_postinst() {
 		einfo "It appears that you aren't running apache2..."
 		einfo "ebuild /var/db/pkg/net-mail/mailman/mailman-2.1.2-r1.ebuild config"
 		einfo "to add the mailman hooks to your config"
-	fi	
+	fi
 }
 
 pkg_config() {
@@ -119,7 +119,7 @@ pkg_config() {
 		einfo "Updating apache config"
 		einfo "added: \"Include  conf/addon-modules/mailman.conf\""
 		einfo "to ${ROOT}etc/apache/conf/apache.conf"
-       		echo "Include  conf/addon-modules/mailman.conf" \
+		echo "Include  conf/addon-modules/mailman.conf" \
 			>> ${ROOT}etc/apache/conf/apache.conf
 	fi
 }

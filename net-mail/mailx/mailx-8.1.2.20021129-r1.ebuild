@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.2.20021129-r1.ebuild,v 1.4 2003/05/27 16:08:11 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.2.20021129-r1.ebuild,v 1.5 2003/09/05 02:52:24 msterret Exp $
 
-inherit ccc 
+inherit ccc
 
 MX_VER="8.1.1"
 S=${WORKDIR}/mailx-${MX_VER}.orig
@@ -13,8 +13,8 @@ SRC_URI="ftp://ftp.debian.org/debian/pool/main/m/mailx/mailx_${MX_VER}.orig.tar.
 	mirror://gentoo/20021129-cvs.diff.bz2"
 HOMEPAGE="http://www.debian.org"
 
-DEPEND=">=net-libs/liblockfile-1.03 
-        virtual/mta
+DEPEND=">=net-libs/liblockfile-1.03
+	virtual/mta
 	!net-mail/mailutils"
 
 SLOT="0"
@@ -30,18 +30,18 @@ src_unpack() {
 }
 
 src_compile() {
-	
-	is-ccc && replace-cc-hardcode 
+
+	is-ccc && replace-cc-hardcode
 
 	# Can't compile mailx with optimizations
 	_CFLAGS=$(echo $CFLAGS|sed 's/-O.//g')
-	
+
 	make CFLAGS="$_CFLAGS" || die "make failed"
 
 }
 
 src_install() {
-	
+
 	dodir /bin /usr/share/man/man1 /etc /usr/lib
 
 	insinto /bin
@@ -52,7 +52,7 @@ src_install() {
 
 	dosym mail /bin/Mail
 	dosym mail /bin/mailx
-        dosym mail.1 /usr/share/man/man1/Mail.1
+	dosym mail.1 /usr/share/man/man1/Mail.1
 
 	cd ${S}/misc
 	insinto /usr/lib
