@@ -1,0 +1,11 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/files/squid.confd,v 1.1 2004/08/15 19:01:22 stuart Exp $
+
+# Config file for /etc/init.d/squid
+
+SQUID_OPTS="-DYC"
+
+# Max. number of filedescriptors to use. You can increase this on a busy
+# cache to a maximum of (currently) 4096 filedescriptors. Default is 1024.
+SQUID_MAXFD=1024

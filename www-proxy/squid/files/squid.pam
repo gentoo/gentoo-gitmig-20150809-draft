@@ -1,0 +1,8 @@
+#%PAM-1.0
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/files/squid.pam,v 1.1 2004/08/15 19:01:22 stuart Exp $
+auth       required     /lib/security/pam_stack.so service=system-auth
+auth       required     /lib/security/pam_nologin.so
+account    required     /lib/security/pam_stack.so service=system-auth
+password   required     /lib/security/pam_stack.so service=system-auth
+session    required     /lib/security/pam_stack.so service=system-auth
+session    required     /lib/security/pam_limits.so
