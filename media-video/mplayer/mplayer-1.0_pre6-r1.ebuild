@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.29 2005/02/23 22:23:17 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r1.ebuild,v 1.1 2005/03/18 21:23:55 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
 RESTRICT="nostrip"
-IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts avi bidi debug dga divx4linux doc dts dvb cdparanoia directfb dvd dv dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmx2 mythtv nas nls nvidia oggvorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
+IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts avi bidi debug dga divx4linux doc dts dvb cdparanoia directfb dvd dv dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmxext mythtv nas nls nvidia oggvorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -31,6 +31,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	x86? (
 		divx4linux? (  >=media-libs/divx4linux-20030428 )
 		avi? ( >=media-libs/win32codecs-20040916 )
+		real? ( >=media-video/realplayer-10.0.3 )
 		)
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
@@ -89,6 +90,12 @@ LICENSE="GPL-2"
 #agriffis - uncomment this when ia64 is ready - Chris
 KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~hppa ~sparc ~ppc64"
 
+pkg_setup() {
+	if use real && use x86; then
+				REALLIBDIR="/opt/RealPlayer/codecs"
+	fi
+}
+
 src_unpack() {
 
 	unpack ${MY_P}.tar.bz2 \
@@ -102,7 +109,7 @@ src_unpack() {
 	cd ${S}
 
 	# Custom CFLAGS
-	epatch ${FILESDIR}/${PF}-configure.patch
+	epatch ${FILESDIR}/${P}-configure.patch
 	sed -e 's:CFLAGS="custom":CFLAGS=${CFLAGS}:' -i configure
 
 	#adds mythtv support to mplayer
@@ -139,6 +146,11 @@ src_unpack() {
 
 	#fixes endian issues with jack output
 	epatch ${FILESDIR}/${PN}-jack.patch
+
+	# fixes the real codecs names (there's no .so.6.0's at
+	# the end anymore ) and add 3gp (nokia) video codec support
+	# per bug #85642
+	epatch ${FILESDIR}/${P}-codecs.patch
 }
 
 linguas_warn() {
@@ -208,7 +220,7 @@ src_compile() {
 	# check cpu flags
 	if use x86
 	then
-		CPU_FLAGS=(mmx sse sse2)
+		CPU_FLAGS=(mmx sse sse2 mmx2)
 		ecpu_check CPU_FLAGS
 	fi
 
@@ -300,7 +312,7 @@ src_compile() {
 	fi
 	myconf="${myconf} $(use_enable xmms)"
 	myconf="${myconf} $(use_enable xvid)"
-	myconf="${myconf} $(use_enable real)"
+	use x86 && myconf="${myconf} $(use_enable real)"
 	use x86 && myconf="${myconf} $(use_enable avi win32)"
 
 	#############
@@ -317,9 +329,15 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-tdfxfb"
 	fi
+
+	if use dvb ; then
+		myconf="${myconf} --enable-dvbhead --with-dvbincdir=/usr/src/linux/include"
+	else
+		myconf="${myconf} --disable-dvbhead"
+	fi
+
 	myconf="${myconf} $(use_enable aalib aa)"
 	myconf="${myconf} $(use_enable directfb)"
-	myconf="${myconf} $(use_enable dvb)"
 	myconf="${myconf} $(use_enable fbcon fbdev)"
 	myconf="${myconf} $(use_enable ggi)"
 	myconf="${myconf} $(use_enable libcaca caca)"
@@ -386,7 +404,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable sse)"
 	myconf="${myconf} $(use_enable sse2)"
 	myconf="${myconf} $(use_enable mmx)"
-	myconf="${myconf} $(use_enable mmx2)"
+	myconf="${myconf} $(use_enable mmxext mmx2)"
 	myconf="${myconf} $(use_enable debug)"
 	myconf="${myconf} $(use_enable nls i18n)"
 
@@ -405,32 +423,6 @@ src_compile() {
 		use altivec && append-flags -maltivec -mabi=altivec
 	fi
 
-	if use real
-	then
-		if use x86 || use amd64 && [ -d /usr/$(get_libdir)/real ]
-		then
-				REALLIBDIR="/usr/$(get_libdir)/real"
-		else
-				eerror "Real libs not found!  Install win32codecs"
-				eerror "And ensure that real USE flag is enabled!"
-				die "Real libs not found"
-		fi
-		if use ppc || use sparc || use alpha
-		then
-			if [ -d /opt/RealPlayer9/Real/Codecs ]
-			then
-				einfo "Setting REALLIBDIR to /opt/RealPlayer9/Real/Codecs..."
-				REALLIBDIR="/opt/RealPlayer9/Real/Codecs"
-			elif [ -d /opt/RealPlayer8/Codecs ]
-			then
-				einfo "Setting REALLIBDIR to /opt/RealPlayer8/Codecs..."
-				REALLIBDIR="/opt/RealPlayer8/Codces"
-			else
-				eerror "Real libs not found!  Install realplayer"
-				die "Real libs not found"
-			fi
-		fi
-	fi
 
 	if use xanim
 	then

@@ -1,6 +1,17 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.277 2005/03/16 00:03:03 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.278 2005/03/18 21:23:54 chriswhite Exp $
+
+*mplayer-1.0_pre6-r1 (19 Mar 2005)
+
+  19 Mar 2005; Chris White <chriswhite@gentoo.org>
+  +files/mplayer-1.0_pre6-codecs.patch, mplayer-1.0_pre4-r7.ebuild,
+  mplayer-1.0_pre5-r3.ebuild, mplayer-1.0_pre5-r4.ebuild,
+  mplayer-1.0_pre5-r5.ebuild, +mplayer-1.0_pre6-r1.ebuild,
+  -mplayer-1.0_pre6.ebuild:
+  Fixed bugs #85642 #85534 #83609 #83546. Pre6 gets a revbump because it uses
+  RealPlayer's codecs instead of win32codecs and because of new 3gp codec
+  support. Old pre6 goes bye bye. mmx2->mmxext.
 
   16 Mar 2005; Chris White <chriswhite@gentoo.org>
   +files/mplayer-1.0_pre5-gcc_detection.patch, mplayer-1.0_pre5-r3.ebuild:

@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.27 2005/01/05 23:24:19 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.28 2005/03/18 21:23:54 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
-IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad  matroska matrox mmx mmx2 mpeg mythtv nas network nls oggvorbis opengl oss png real rtc samba sdl sse svga tga theora truetype v4l v4l2 xinerama X xmms xv xvid gnome"
+IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad  matroska matrox mmx mmxext mpeg mythtv nas network nls oggvorbis opengl oss png real rtc samba sdl sse svga tga theora truetype v4l v4l2 xinerama X xmms xv xvid gnome"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -216,7 +216,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable 3dnowex)"
 	myconf="${myconf} $(use_enable sse)"
 	myconf="${myconf} $(use_enable mmx)"
-	myconf="${myconf} $(use_enable mmx2)"
+	myconf="${myconf} $(use_enable mmxext mmx2)"
 
 	if use real
 	then

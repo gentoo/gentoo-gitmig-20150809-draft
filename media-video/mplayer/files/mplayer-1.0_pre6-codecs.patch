@@ -1,0 +1,62 @@
+--- etc/codecs.conf.old	2004-12-17 22:30:29.000000000 +0900
++++ etc/codecs.conf	2005-03-19 04:43:19.000000000 +0900
+@@ -893,6 +893,7 @@
+   status working
+   fourcc H263,U263,h263,X263
+   fourcc viv1 h263
++  fourcc s263
+   driver ffmpeg
+   dll h263
+   out YV12,I420,IYUV
+@@ -1104,6 +1105,15 @@
+   dll "drv43260.dll"
+   out I420
+ 
++videocodec rv40real
++  info "Real RV40 decoder"
++  status working
++  fourcc RV40,rv40
++  fourcc RV30,rv30
++  driver realvid
++  dll "drvc.so"
++  out I420
++
+ videocodec rv40mac
+   info "Mac OS X RealPlayer 9 RV40 decoder"
+   status working
+@@ -1141,7 +1151,7 @@
+   status working
+   fourcc RV20,rv20
+   driver realvid
+-  dll "drv2.so.6.0"
++  dll "drv2.so"
+   out I420
+ 
+ videocodec rv20win
+@@ -1997,7 +2007,7 @@
+   status working
+   format 0x6B6F6F63 ; "cook"
+   driver realaud
+-  dll "cook.so.6.0"
++  dll "cook.so"
+ 
+ audiocodec racookwin
+   info "Win32 RealAudio COOK"
+@@ -2018,7 +2028,7 @@
+   status working
+   format 0x72706973 ; "sipr"
+   driver realaud
+-  dll "sipr.so.6.0"
++  dll "sipr.so"
+ 
+ audiocodec rasiprwin
+   info "Win32 RealAudio Sipro"
+@@ -2039,7 +2049,7 @@
+   status working
+   format 0x63727461 ; "atrc"
+   driver realaud
+-  dll "atrc.so.6.0"
++  dll "atrc.so"
+ 
+ audiocodec raatrcwin
+   info "Win32 RealAudio ATRAC3"

@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.25 2005/02/07 20:31:18 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.26 2005/03/18 21:23:54 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
 RESTRICT="nostrip"
-IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts avi bidi debug dga divx4linux doc dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmx2 mythtv nas network nls nvidia oggvorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
+IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts avi bidi debug dga divx4linux doc dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmxext mythtv nas network nls nvidia oggvorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -31,6 +31,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	x86? (
 		divx4linux? (  >=media-libs/divx4linux-20030428 )
 		avi? ( >=media-libs/win32codecs-20040916 )
+		real? ( >=media-libs/win32codecs-20040916 )
 		)
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
@@ -87,6 +88,16 @@ LICENSE="GPL-2"
 #KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~ia64 ~hppa ~sparc"
 #agriffis - uncomment this when ia64 is ready - Chris
 KEYWORDS="x86 ppc alpha amd64 ~hppa sparc ppc64"
+
+pkg_setup() {
+	if use real && use x86 && built_with_use win32codecs real; then
+			REALLIBDIR="/usr/$(get_libdir)/real"
+	else
+			eerror "You do not have win32codecs with real"
+			eerror "support builtin!"
+			die || "Real libs not found!"
+	fi
+}
 
 src_unpack() {
 
@@ -169,6 +180,8 @@ src_unpack() {
 	# fixes 80564 involved in x11 lib directory
 	# detection
 	epatch ${FILESDIR}/${PN}-x11.patch
+
+	epatch ${FILESDIR}/${P}-gcc_detection.patch
 }
 
 linguas_warn() {
@@ -238,7 +251,7 @@ src_compile() {
 	# check cpu flags
 	if use x86
 	then
-		CPU_FLAGS=( mmx sse sse2 )
+		CPU_FLAGS=( 3dnow 3dnowex mmx sse sse2 mmxext )
 		ecpu_check CPU_FLAGS
 	fi
 
@@ -319,10 +332,10 @@ src_compile() {
 	fi
 	myconf="${myconf} $(use_enable xmms)"
 	myconf="${myconf} $(use_enable xvid)"
-	myconf="${myconf} $(use_enable real)"
 
 	if use x86; then
 		myconf="${myconf} $(use_enable avi win32)"
+		myconf="${myconf} $(use_enable real)"
 	fi
 
 	#############
@@ -408,8 +421,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable sse)"
 	myconf="${myconf} $(use_enable sse2)"
 	myconf="${myconf} $(use_enable mmx)"
-	myconf="${myconf} $(use_enable mmx2)"
-	myconf="${myconf} $(use_enable 3dnow)"
+	myconf="${myconf} $(use_enable mmxext mmx2)"
 	myconf="${myconf} $(use_enable debug)"
 	myconf="${myconf} $(use_enable nls i18n)"
 
@@ -419,18 +431,6 @@ src_compile() {
 	else
 		myconf="${myconf} $(use_enable altivec)"
 		use altivec && append-flags -maltivec -mabi=altivec
-	fi
-
-	if use real
-	then
-		if [ -d /usr/$(get_libdir)/real ]
-		then
-			REALLIBDIR="/usr/$(get_libdir)/real"
-		else
-			eerror "Real libs not found!  Install win32codecs"
-			eerror "And ensure that real USE flag is enabled!"
-			die "Real libs not found"
-		fi
 	fi
 
 	if use xanim
