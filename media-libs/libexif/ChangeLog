@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libexif
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.7 2003/09/07 13:16:13 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.8 2003/09/09 17:25:18 mholzer Exp $
+
+  09 Sep 2003; Martin Holzer <mholzer@gentoo.org> libexif-0.5.10.ebuild,
+  libexif-0.5.12.ebuild, libexif-0.5.9.ebuild:
+  Added note about upgrading from older version. Closes #26498.
 
 *libexif-0.5.10 (07 Sep 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.5.10.ebuild,v 1.3 2003/09/07 13:16:13 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.5.10.ebuild,v 1.4 2003/09/09 17:25:19 mholzer Exp $
 
 inherit flag-o-matic
 
@@ -32,4 +32,11 @@ src_install() {
 	einstall || die
 
 	dodoc ChangeLog README
+}
+
+pkg_postinst() {
+	einfo
+	einfo "if you've upgraded from ${PN}-0.5.8 you'll"
+	einfo "have to run revdep-rebuild from gentoolkit"
+	einfo
 }
