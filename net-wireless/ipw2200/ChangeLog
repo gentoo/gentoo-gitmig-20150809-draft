@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/ipw2200
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.16 2005/01/18 10:37:27 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.17 2005/01/18 10:45:36 brix Exp $
+
+*ipw2200-0.21 (18 Jan 2005)
+
+  18 Jan 2005; Henrik Brix Andersen <brix@gentoo.org> +ipw2200-0.21.ebuild:
+  Version bump, ported to use linux-mod.eclass, split firmware from ebuild,
+  re-enabled debug, disabled yet-to-be-completed WPA and promiscuous support.
 
   18 Jan 2005; Henrik Brix Andersen <brix@gentoo.org> ipw2200-0.11.ebuild,
   ipw2200-0.12.ebuild, ipw2200-0.13.ebuild, ipw2200-0.15.ebuild,
