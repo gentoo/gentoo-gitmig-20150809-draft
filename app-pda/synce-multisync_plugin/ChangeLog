@@ -1,11 +1,6 @@
 # ChangeLog for app-pda/synce-multisync_plugin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-multisync_plugin/ChangeLog,v 1.7 2004/07/01 11:49:00 eradicator Exp $
-
-  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
-  synce-multisync_plugin-0.8.2-r1.ebuild, synce-multisync_plugin-0.8.2.ebuild,
-  synce-multisync_plugin-0.8.9.ebuild:
-  virtual/glibc -> virtual/libc
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-multisync_plugin/ChangeLog,v 1.8 2004/07/01 19:23:59 eradicator Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   synce-multisync_plugin-0.8.2-r1.ebuild, synce-multisync_plugin-0.8.2.ebuild,
