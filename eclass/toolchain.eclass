@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.119 2005/03/04 14:03:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.120 2005/03/04 17:51:25 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -631,19 +631,19 @@ create_gcc_env_entry() {
 
 		local ctarget_alias
 		local abi
-		local CTARGET_ALIASES=""
+		local FAKE_TARGETS=""
 		for abi in $(get_all_abis) ; do
-			for ctarget_alias in $(get_abi_CHOST ${abi}) $(get_abi_CTARGET_ALIASES ${abi}) ; do
+			for ctarget_alias in $(get_abi_CHOST ${abi}) $(get_abi_FAKE_TARGETS ${abi}) ; do
 				if [[ ${ctarget_alias} != ${CHOST} ]] ; then
-					CTARGET_ALIASES="${CTARGET_ALIASES+${CTARGET_ALIASES} }${ctarget_alias}"
+					FAKE_TARGETS="${FAKE_TARGETS+${FAKE_TARGETS} }${ctarget_alias}"
 					local var="CFLAGS_${ctarget_alias//-/_}"
 					echo "${var}=\"$(get_abi_CFLAGS ${abi}) ${!var}\"" >> ${gcc_envd_file}
 				fi
 			done
 		done
 
-		if [[ -n ${CTARGET_ALIASES} ]] ; then
-			echo "CTARGET_ALIASES=\"${CTARGET_ALIASES}\"" >> ${gcc_envd_file}
+		if [[ -n ${FAKE_TARGETS} ]] ; then
+			echo "FAKE_TARGETS=\"${FAKE_TARGETS}\"" >> ${gcc_envd_file}
 		fi
 	elif is_crosscompile ; then
 		echo "CTARGET=${CTARGET}" >> ${gcc_envd_file}
