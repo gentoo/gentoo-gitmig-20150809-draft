@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.23 2004/01/03 20:05:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.24 2004/01/04 12:12:26 aliz Exp $
+
+  04 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> guile-1.4-r3.ebuild:
+  Add gnuconfig_update. Closing #37166.
 
   03 Jan 2004; <agriffis@gentoo.org> guile-1.6.4-r1.ebuild:
   Stable on ia64
