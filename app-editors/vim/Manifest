@@ -1,3 +1,4 @@
+MD5 f7440102e3be5f6d09c5580bac9d89b4 vim-6.2-r8.ebuild 785
 MD5 03da8de88ba7e775deb77a9a6f3e396d vim-6.2-r3.ebuild 770
 MD5 b09c3c117f7d6f7fe2d54e83fc6d2457 vim-6.2-r5.ebuild 777
 MD5 001a269c517dab205a3c417747452ac5 vim-6.2-r7.ebuild 776
@@ -8,4 +9,5 @@ MD5 7872d6ce1d0728653a5d0ebd09d069ae files/digest-vim-6.2-r3 275
 MD5 e92de6be4fb936ce511bfd13594c2cc5 files/digest-vim-6.2-r5 275
 MD5 b55c47a253613f757d8fb0bdd9008660 files/digest-vim-6.2-r6 275
 MD5 daa101d1c1c5ddeaffcb3d6a29559c39 files/digest-vim-6.2-r7 275
+MD5 93984fd1e5f44bb594248a2eaa495f03 files/digest-vim-6.2-r8 275
 MD5 48e706214652b216c21280e50511627d files/vimrc 3004
