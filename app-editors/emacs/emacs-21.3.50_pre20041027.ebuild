@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3.50_pre20041027.ebuild,v 1.1 2004/11/06 16:06:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3.50_pre20041027.ebuild,v 1.2 2004/12/19 11:09:05 eradicator Exp $
 
 inherit elisp-common alternatives flag-o-matic eutils
 
@@ -64,6 +64,10 @@ src_unpack() {
 			epatch ../${MULTI_TTY}.patch
 		fi
 	fi
+
+	# This will need to be updated for X-Compilation
+	sed -i -e "s:/usr/lib/\([^ ]*\).o:/usr/$(get_libdir)/\1.o:g" \
+	       ${S}/src/s/gnu-linux.h
 
 }
 
