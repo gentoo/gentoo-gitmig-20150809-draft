@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimagemapeditor/kimagemapeditor-0.9.5.1.ebuild,v 1.8 2004/03/14 17:23:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimagemapeditor/kimagemapeditor-0.9.5.1.ebuild,v 1.9 2004/04/30 11:44:42 dholm Exp $
 
 inherit kde
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://kimagemapeditor.sourceforge.net/"
 need-kde 3
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 if [ "$COMPILER" == "gcc3" ]
 then
