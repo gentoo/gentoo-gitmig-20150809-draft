@@ -1,0 +1,51 @@
+--- iodbc/install_libodbc.sh.old	2004-03-01 15:43:13.000000000 +0000
++++ iodbc/install_libodbc.sh	2004-03-04 11:46:08.000000000 +0000
+@@ -89,48 +89,3 @@
+ fi
+ 
+ 
+-cd "$PREFIX"/lib
+-
+-
+-#
+-#  Create a dynamic libodbc.so library link (if available)
+-#
+-if test -f libiodbc.la
+-then
+-    echo "Creating dynamic library for Generic ODBC driver Manager ..."
+-    . libiodbc.la
+-    for lib in $library_names
+-    do
+-	case $lib in
+-	libiodbc.so.*)
+-	    rm -f libodbc.so
+-	    ln -s $lib libodbc.so
+-	    ;;
+-	libiodbc.sl.*)
+-	    rm -f libiodbc.sl
+-	    ln -s $lib libodbc.sl
+-	    ;;
+-	esac
+-	break
+-    done
+-fi
+-
+-
+-#
+-#  Create a static libodbc.a library link
+-#
+-echo "Creating static library for Generic ODBC driver Manager ..."
+-case "$MACHINE" in
+-  AIX)  
+-	echo "Special handling for AIX ..."
+-	rm -f libodbc.so libodbc.a odbc.so
+-	cat libiodbc.so.2 > odbc.so
+-	ar rv libodbc.a odbc.so
+-	rm -f odbc.so
+-	;;
+-
+-  *)
+-	rm -f libodbc.a
+-	ln -s libiodbc.a libodbc.a
+-	;;
+-esac
