@@ -1,31 +1,29 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.93.20031222.ebuild,v 1.2 2004/01/25 18:22:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.1 2004/02/26 07:38:10 seemant Exp $
 
-inherit mount-boot eutils flag-o-matic
+inherit mount-boot eutils flag-o-matic gcc
 
-filter-flags "-fstack-protector"
-
-IUSE="static"
-
-S=${WORKDIR}/${PN}
 DESCRIPTION="GNU GRUB boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2
-	http://dev.gentoo.org/~seemant/extras/${P}.tar.bz2"
+SRC_URI="ftp://alpha.gnu.org/gnu/grub/${P}.tar.gz
+	http://dev.gentoo.org/~spock/portage/distfiles/${P}-splash.patch.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="-* ~x86"
+IUSE="static"
 
 DEPEND=">=sys-libs/ncurses-5.2-r5
 	>=sys-devel/autoconf-2.5"
-
 PROVIDE="virtual/bootloader"
 
 src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
+
+	epatch ${WORKDIR}/${P}-splash.patch
+
 	# grub-0.93.20030118-gentoo.diff; <woodchip@gentoo.org> (18 Jan 2003)
 	# -fixes from grub CVS pulled on 20030118
 	# -vga16 patches; mined from Debian's grub-0.93+cvs20030102-1.diff
@@ -42,17 +40,19 @@ src_unpack() {
 }
 
 src_compile() {
-	### i686-specific code in the boot loader is a bad idea; disabling to ensure 
-	### at least some compatibility if the hard drive is moved to an older or 
+	### i686-specific code in the boot loader is a bad idea; disabling to ensure
+	### at least some compatibility if the hard drive is moved to an older or
 	### incompatible system.
 	unset CFLAGS
 
-	append-flags "-DNDEBUG -minline-all-stringops"
-	use static && export LDFLAGS="${LDFLAGS} -static"
+	filter-flags -fstack-protector
+
+	append-flags -DNDEBUG
+	[ `gcc-major-version` -eq 3 ] && append-flags -minline-all-stringops
+	use static && append-ldflags -static
 
 	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
-	then
+	if has_version 'sys-devel/hardened-gcc' && [ "$(gcc-getCC)" == "gcc" ] ; then
 		# the configure script has problems with -nostdlib
 		CC="${CC} -yet_exec -yno_propolice"
 	fi
@@ -63,7 +63,7 @@ src_compile() {
 
 	# build the net-bootable grub first
 	CFLAGS="" \
-		econf \
+	econf \
 		--datadir=/usr/lib/grub \
 		--exec-prefix=/ \
 		--disable-auto-linux-mem-opt \
@@ -82,11 +82,11 @@ src_compile() {
 
 	# now build the regular grub
 	CFLAGS="${CFLAGS}" \
-		econf \
+	econf \
 			--datadir=/usr/lib/grub \
 			--exec-prefix=/ \
 			--disable-auto-linux-mem-opt || die
-		emake || die "making regular stuff"
+	emake || die "making regular stuff"
 }
 
 src_install() {
@@ -104,20 +104,24 @@ src_install() {
 
 pkg_postinst() {
 	[ "$ROOT" != "/" ] && return 0
-	/sbin/grub-install --just-copy
 
 	# change menu.lst to grub.conf
 	if [ ! -e /boot/grub/grub.conf -a -e /boot/grub/menu.lst ]
 	then
 		mv /boot/grub/menu.lst /boot/grub/grub.conf
-		ln -s grub.conf /boot/grub/menu.lst
 		ewarn
 		ewarn "*** IMPORTANT NOTE: menu.lst has been renamed to grub.conf"
 		ewarn
 	fi
+	einfo "Linking from new grub.conf name to menu.lst"
+	ln -s grub.conf /boot/grub/menu.lst
 
 	[ -e /boot/grub/stage2 ] && mv /boot/grub/stage2{,.old}
+
+	einfo "Copying files from /usr/lib/grub to /boot"
 	cp -p /usr/lib/grub/* /boot/grub
+	cp -p /usr/lib/grub/grub/*/* /boot/grub
+
 	[ -e /boot/grub/grub.conf ] \
 		&& /usr/sbin/grub \
 			--batch \

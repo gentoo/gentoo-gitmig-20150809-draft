@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/grub
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.7 2004/02/15 22:26:22 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.8 2004/02/26 07:38:10 seemant Exp $
+
+*grub-0.94-r1 (25 Feb 2004)
+
+  25 Feb 2004; Seemant Kulleen <seemant@gentoo.org> grub-0.93.20031222.ebuild,
+  grub-0.93.20040125.ebuild, grub-0.94-r1.ebuild, grub-0.94.ebuild:
+  revision bump for spock's change
 
   15 Feb 2004; Michal Januszewski <spock@gentoo.org> grub-0.94.ebuild:
   Added the 'grubsplash' patch, closes #40827.
