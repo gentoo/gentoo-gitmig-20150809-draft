@@ -1,0 +1,52 @@
+#! /bin/sh
+#RCUPDATE:3 4:72:Required for rc-update
+. /etc/rc.d/config/functions
+
+SERVICE=courier-imapd
+opts="start stop"
+
+prefix=/usr
+exec_prefix=${prefix}
+bindir=${exec_prefix}/bin
+libexecdir=${exec_prefix}/libexec
+
+. /etc/courier-imap/imapd.config
+. /etc/courier-imap/imapd-ssl.config
+
+start() {	
+	LIBAUTHMODULES=""
+	for f in `echo $AUTHMODULES`
+	do
+		LIBAUTHMODULES="$LIBAUTHMODULES ${exec_prefix}/libexec/authlib/$f"
+	done
+
+	if test -x ${libexecdir}/authlib/authdaemond
+	then
+		/usr/bin/env - ${libexecdir}/authlib/authdaemond start
+	fi
+
+	ulimit -d $IMAP_ULIMITD
+	/usr/bin/env - /bin/sh -c " . /etc/courier-imap/imapd.config ; \
+				. /etc/courier-imap/imapd-ssl.config ; \
+		IMAP_STARTTLS=$IMAPDSTARTTLS ; export IMAP_STARTTLS ; \
+		`sed -n '/^#/d;/=/p' </etc/courier-imap/imapd.config | \
+			sed 's/=.*//;s/^/export /;s/$/;/'`
+		`sed -n '/^#/d;/=/p' </etc/courier-imap/imapd-ssl.config | \
+			sed 's/=.*//;s/^/export /;s/$/;/'`
+		${exec_prefix}/libexec/couriertcpd -address=$ADDRESS \
+			-stderrlogger=${exec_prefix}/libexec/logger \
+			-maxprocs=$MAXDAEMONS -maxperip=$MAXPERIP \
+			-pid=$PIDFILE $TCPDOPTS \
+			$PORT ${exec_prefix}/sbin/imaplogin $LIBAUTHMODULES \
+				${exec_prefix}/bin/imapd .maildir"
+}
+
+stop() {
+	${exec_prefix}/libexec/couriertcpd -pid=$PIDFILE -stop
+	if test -x ${libexecdir}/authlib/authdaemond
+	then
+		${libexecdir}/authlib/authdaemond stop
+	fi
+}
+
+doservice ${@}
