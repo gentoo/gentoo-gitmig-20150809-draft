@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0.ebuild,v 1.1 2004/09/09 00:46:07 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0.ebuild,v 1.2 2004/09/09 00:58:53 cyfred Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -38,7 +38,7 @@ HOMEPAGE="http://freedesktop.org/XOrg"
 
 # Misc patches we may need to fetch ..
 X_PATCHES="mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2
-	http://dev.gentoo.org/~seemant/distfiles/${P}-patches-${PATCH_VER}.tar.bz2"
+	http://dev.gentoo.org/~cyfred/distfiles/${P}-patches-${PATCH_VER}.tar.bz2"
 
 X_DRIVERS=""
 #	mirror://gentoo/${P}-drivers-via-${VIADRV_VER}.tar.bz2"
@@ -46,26 +46,24 @@ X_DRIVERS=""
 # Latest SIS drivers:  http://www.winischhofer.net/
 
 GENTOO_FILES="mirror://gentoo/${P}-files-${FILES_VER}.tar.bz2
-	http://dev.gentoo.org/~seemant/distfiles/${P}-files-${FILES_VER}.tar.bz2"
+	http://dev.gentoo.org/~cyfred/distfiles/${P}-files-${FILES_VER}.tar.bz2"
 
 SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
-	http://dev.gentoo.org/~spyderous/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2
+	http://dev.gentoo.org/~cyfred/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2
 	mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2
 	nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
 	${GENTOO_FILES}
 	${X_DRIVERS}
 	${X_PATCHES}
-	mirror://gentoo/${P}.tar.bz2
-	http://dev.gentoo.org/~seemant/distfiles/${P}.tar.bz2"
-#	http://freedesktop.org/~xorg/X11R${PV}/src/X11R${PV}-src1.tar.gz
-#	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src2.tar.gz
-#	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src3.tar.gz
-#	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src4.tar.gz
-#	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src5.tar.gz
-#	doc? (
-#		http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src6.tar.gz
-#		http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src7.tar.gz
-#	)"
+	http://freedesktop.org/~xorg/X11R${PV}/src/X11R${PV}-src1.tar.gz
+	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src2.tar.gz
+	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src3.tar.gz
+	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src4.tar.gz
+	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src5.tar.gz
+	doc? (
+		http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src6.tar.gz
+		http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src7.tar.gz
+	)"
 
 LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
 	bigelow-holmes-urw-gmbh-luxi christopher-g-demetriou national-semiconductor
@@ -435,26 +433,14 @@ host_def_setup() {
 		# Use the xorg Xft2 lib
 		echo "#define SharedLibXft YES" >> ${HOSTCONF}
 
-		# Set up docs building
-		if use doc
-		then
-			local DOC="YES"
-		else
-			local DOC="NO"
-		fi
-
 		# with USE="X doc' circular dep w/ virtual/ghostscript
 		# echo "#define HasGhostScript ${DOC}" >> ${HOSTCONF}
 		# Caused issues, basic docs aren't installed
-		#echo "#define BuildLinuxDocText ${DOC}" >> ${HOSTCONF}
-#		echo "#define BuildLinuxDocHtml ${DOC}" >> ${HOSTCONF}
-#		echo "#define BuildLinuxDocPS ${DOC}" >> ${HOSTCONF}
-#		echo "#define BuildSpecsDocs ${DOC}" >> ${HOSTCONF}
-#		echo "#define BuildHtmlManPages ${DOC}" >> ${HOSTCONF}
 		use_build doc BuildLinuxDocText
 		use_build doc BuildLinuxDocPS
 		use_build doc BuildSpecsDocs
 		use_build doc BuildHtmlManPages
+		use_build doc InstallHardcopyDocs
 
 		# enable Japanese docs, optionally
 #		if use cjk
@@ -464,49 +450,26 @@ host_def_setup() {
 		use doc && use_build cjk InstallJapaneseDocs
 
 		# Native Language Support Fonts
+		use_build nls BuildCyrillicFonts
+		use_build nls BuildArabicFonts
+		use_build nls BuildGreekFonts
+		use_build nls BuildHebrewFonts
+		use_build nls BuildThaiFonts
+
 		if use !nls
 		then
-			echo "#define BuildCyrillicFonts NO" >> ${HOSTCONF}
-			echo "#define BuildArabicFonts NO" >> ${HOSTCONF}
-			echo "#define BuildGreekFonts NO" >> ${HOSTCONF}
-			echo "#define BuildHebrewFonts NO" >> ${HOSTCONF}
-			echo "#define BuildThaiFonts NO" >> ${HOSTCONF}
-
-			if use !cjk
-			then
-				echo "#define BuildCIDFonts NO" >> ${HOSTCONF}
-				echo "#define BuildJapaneseFonts NO" >> ${HOSTCONF}
-				echo "#define BuildKoreanFonts NO" >> ${HOSTCONF}
-				echo "#define BuildChineseFonts NO" >> ${HOSTCONF}
-			fi
+			use_build cjk BuildCIDFonts
+			use_build cjk BuildJapaneseFonts
+			use_build cjk BuildKoreanFonts
+			use_build cjk BuildChineseFonts
 		fi
 
 		# Crappy bitmap fonts
-#		if use bitmap-fonts
-#		then
-#			echo "#define Build75DpiFonts YES" >> ${HOSTCONF}
-#			echo "#define Build100DpiFonts YES" >> ${HOSTCONF}
-#		else
-#			echo "#define Build75DpiFonts NO" >> ${HOSTCONF}
-#			echo "#define Build100DpiFonts NO" >> ${HOSTCONF}
-#		fi
 		use_build bitmap-fonts Build75DpiFonts
 		use_build bitmap-fonts Build100DpiFonts
 
-#		if use dmx
-#		then
-#			echo "#define BuildDmx YES" >> ${HOSTCONF}
-#		else
-#			echo "#define BuildDmx NO" >> ${HOSTCONF}
-#		fi
 		use_build dmx BuildDmx
 
-#		if use insecure-drivers
-#		then
-#			echo "#define BuildDevelDRIDrivers YES" >> ${HOSTCONF}
-#		else
-#			echo "#define BuildDevelDRIDrivers NO" >> ${HOSTCONF}
-#		fi
 		use_build insecure-drivers BuildDevelDRIDrivers
 
 		if use ipv6
@@ -518,6 +481,7 @@ host_def_setup() {
 #		else
 #			echo "#define BuildIPv6 NO" >> ${HOSTCONF}
 		fi
+
 		use_build ipv6 BuildIPv6
 
 		# Ajax is the man for getting this going for us
@@ -573,16 +537,16 @@ src_unpack() {
 
 	# Unpack source and patches
 	ebegin "Unpacking source"
-		unpack ${P}.tar.bz2
-#		unpack X11R${PV}-src[1..5].tar.gz
+#		unpack ${P}.tar.bz2
+		unpack X11R${PV}-src{1,2,3,4,5}.tar.gz
 	eend 0
 
-#	if use doc
-#	then
-#		ebegin "Unpacking documentation"
-#			unpack X11R${PV}-src{6,7}.tar.gz
-#		eend 0
-#	fi
+	if use doc
+	then
+		ebegin "Unpacking documentation"
+			unpack X11R${PV}-src{6,7}.tar.gz
+		eend 0
+	fi
 
 	ebegin "Unpacking Gentoo files and patches"
 		unpack ${P}-files-${FILES_VER}.tar.bz2 > /dev/null
