@@ -1,6 +1,4 @@
 MD5 57964f9acc5f966b2bcb6b27f315a767 ChangeLog 817
-MD5 98b2fa94ab464b03a5e95df993f033c1 pysol-4.81-r1.ebuild 1641
 MD5 2333586157049ec56c37889631e9edb4 pysol-4.82.ebuild 1629
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
-MD5 b678862ac0cf6cb48cc82b461ff685a7 files/digest-pysol-4.81-r1 64
 MD5 64d3e8b76a0ed236cf4a0fdb4a3e4b50 files/digest-pysol-4.82 64
