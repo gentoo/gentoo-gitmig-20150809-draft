@@ -23,7 +23,7 @@ DEPEND="virtual/x11
 		>=x11-libs/pango-1.0.1
 		png? ( >=media-libs/libpng-1.2.1 )
 		jpeg? ( >=media-libs/jpeg-6b-r2 )
-		tiff ( >=media-libs/tiff-3.5.7 )
+		tiff? ( >=media-libs/tiff-3.5.7 )
 		doc? ( >=dev-util/gtk-doc-0.9-r2 )"
 
 src_compile() {
