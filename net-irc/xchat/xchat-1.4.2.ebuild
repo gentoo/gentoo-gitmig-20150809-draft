@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.4.2.ebuild,v 1.4 2000/09/15 20:09:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.4.2.ebuild,v 1.5 2000/10/28 19:16:05 drobbins Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -31,8 +31,6 @@ src_install() {
   	try make prefix=${D}/usr/X11R6 install
   fi
   dodoc AUTHORS COPYING ChangeLog NEWS README
-  #FOR TESTING
-  mknod ${D}/var/db/pkg/${CATEGORY}/${P}/foo b 4 0
 }
 
 

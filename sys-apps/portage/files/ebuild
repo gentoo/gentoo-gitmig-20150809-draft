@@ -558,7 +558,7 @@ dyn_merge() {
     echo
     pkg_preinst
     #/usr/sbin/portage-merge
-	dopython portage.merge "$ROOT" "$CATEGORY" "$PF" "$D"
+	dopython portage.merge "$CATEGORY" "$PF" "$D"
 	cd ${BUILDDIR}
     #zap it so that people don't look at a bad image and get confused
     rm -rf image
@@ -569,7 +569,7 @@ dyn_merge() {
 dyn_unmerge() {
     trap "" SIGINT SIGQUIT
     #/usr/sbin/portage-unmerge ${PF}
-    dopython portage.unmerge "$ROOT" "$CATEGORY" "$PF"
+    dopython portage.unmerge "$CATEGORY" "$PF"
     trap SIGINT_SIGQUIT
 }
 
