@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.11.ebuild,v 1.3 2003/10/27 13:08:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.11.ebuild,v 1.4 2003/10/27 19:11:58 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -673,6 +673,13 @@ EOF
 	elif [ -f ${ROOT}/etc/modules.conf ]
 	then
 		rm -f ${ROOT}/etc/modules.conf
+	fi
+
+	# Enable shadow groups.
+	if [ "${ROOT}" = "/" -a \
+	     ! -f /etc/gshadow -a -x /usr/sbin/grpconv ]
+	then
+		/usr/sbin/grpconv
 	fi
 
 	# Simple Release version for testing of features that *should* be
