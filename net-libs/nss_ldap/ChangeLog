@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/nss_ldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.12 2003/06/18 02:01:14 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.13 2003/06/19 07:29:12 raker Exp $
+
+*nss_ldap-209 (19 Jun 2003)
+
+  19 Jun 2003; Nick Hadaway <raker@gentoo.org> nss_ldap-209.ebuild:
+  Version bump.  Re-verified the resolution of bug #18975.
 
   17 Jun 2003; Donny Davies <woodchip@gentoo.org> nss_ldap-207-r1.ebuild:
   Add a few more doc files.
