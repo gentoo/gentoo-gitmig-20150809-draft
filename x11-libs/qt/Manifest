@@ -16,7 +16,7 @@ MD5 2d5b68b38185a30a28ffb2b652258cb8 files/45qt3 83
 MD5 7a287bc7609ad2420f70af6d4c58302f files/50qt2 63
 MD5 65c6cd464a60955c85a85b1dfd487c04 files/0004-qiconview_etc_ctrl_selecting.patch 2207
 MD5 edd5c27031cc5f29070a9094425f09d9 files/digest-qt-3.2.0 72
-MD5 89e3274d3b0079fdcfea7606de13360e files/digest-qt-3.2.1 78
+MD5 b79277b535797e854be75d1c396de0f2 files/digest-qt-3.2.1 72
 MD5 e4054a5914b182318d548c53beea9590 files/0020-designer-deletetabs.patch 3493
 MD5 c6dc1b6fadcb4897d4c7b0a768c2d196 files/qt-3.1.2-r3-qsocket.diff 447
 MD5 0c06df8bd83ccf54e9045ef5703a1703 files/0024-fix_enter_leave_notify.patch 1374
@@ -29,7 +29,7 @@ MD5 52e7df9b93f281c262716caac4cb7705 files/digest-qt-3.1.0-r3 72
 MD5 cfa73af7c2f2661be4ea9f3c9347db84 files/digest-qt-3.1.1-r2 72
 MD5 f197d87f2b33685cadba08c9cf2d08ee files/digest-qt-3.1.2-r3 72
 MD5 f197d87f2b33685cadba08c9cf2d08ee files/digest-qt-3.1.2-r4 72
-MD5 89e3274d3b0079fdcfea7606de13360e files/digest-qt-3.2.1-r1 78
+MD5 b79277b535797e854be75d1c396de0f2 files/digest-qt-3.2.1-r1 72
 MD5 024632ca815ede1ccdd13cacea10e64a files/qt-3.1.2-thai-complextext.patch 528
 MD5 1a268563c150260e99ed24dd4d2f5fd0 files/0021-qiconview-dragalittle.patch 2341
 MD5 1da4214f7cf90d34592e0453f47b4758 files/designer.diff 380
