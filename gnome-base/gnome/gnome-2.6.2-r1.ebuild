@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.2-r1.ebuild,v 1.2 2004/07/31 03:55:37 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.2-r1.ebuild,v 1.3 2004/08/05 20:20:18 gmsoft Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -13,7 +13,7 @@ SLOT="2.0"
 IUSE="accessibility cdr dvdr"
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="x86 ~ppc ~sparc ~amd64 ~mips ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~amd64 ~mips ~alpha hppa"
 
 #  Note to developers:
 #  This is a wrapper for the complete Gnome2 desktop,
@@ -32,7 +32,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=x11-libs/gtk+-2.4.4
 	>=x11-libs/pango-1.4
 
-	>=dev-libs/libxml2-2.6.11
+	hppa? ( >=dev-libs/libxml2-2.6.9 )
+	!hppa? ( >=dev-libs/libxml2-2.6.11 )
 	>=dev-libs/libxslt-1.1.8
 
 	>=x11-libs/libxklavier-1.02
@@ -68,7 +69,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gnome-media-2.6.2
 
 	>=media-gfx/eog-2.6.1
-	!mips? ( >=net-www/epiphany-1.2.6 )
+	!hppa? ( !mips? ( >=net-www/epiphany-1.2.6 ) )
 	>=app-arch/file-roller-2.6.1
 	>=gnome-extra/gcalctool-4.3.51
 	>=gnome-extra/gconf-editor-2.6.2
