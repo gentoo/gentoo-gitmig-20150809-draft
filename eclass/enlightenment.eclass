@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.34 2004/11/11 03:36:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.35 2004/11/17 15:40:03 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -43,8 +43,7 @@ case ${ECVS_STATE} in
 esac
 IUSE="nls doc"
 
-DEPEND="doc? ( app-doc/doxygen )
-	>=sys-devel/autoconf-2.58-r1"
+DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND="nls? ( sys-devel/gettext )"
 
 case ${ECVS_STATE} in
