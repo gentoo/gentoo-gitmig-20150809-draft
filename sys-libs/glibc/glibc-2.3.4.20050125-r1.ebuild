@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.25 2005/03/16 06:12:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.26 2005/03/16 11:33:30 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1090,6 +1090,8 @@ src_unpack() {
 	esac
 
 	use nomalloccheck || GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 5020_all_nomalloccheck.patch"
+
+	[[ $(gcc-major-version) == "4" ]] || GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 5040_all_2.3.4-gcc4.patch"
 
 	toolchain-glibc_src_unpack
 
