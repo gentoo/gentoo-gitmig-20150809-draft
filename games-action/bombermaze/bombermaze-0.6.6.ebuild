@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bombermaze/bombermaze-0.6.6.ebuild,v 1.3 2004/02/08 05:42:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bombermaze/bombermaze-0.6.6.ebuild,v 1.4 2004/06/03 07:48:23 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -20,18 +20,18 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	# It normally fails to locate gdk-pixbuf.h
-	append-flags `gdk-pixbuf-config --cflags`
+	append-flags $(gdk-pixbuf-config --cflags)
 
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
 		--with-included-gettext \
-		`use_enable nls` || die "./configure failed"
+		$(use_enable nls) || die "./configure failed"
 
 	emake || die "emake failed"
 }
 
 src_install() {
-	make prefix=${D}/usr install || die "make install failed"
-	dodoc AUTHORS ChangeLog NEWS TODO || die "dodoc failed"
+	make prefix="${D}/usr" install || die "make install failed"
+	dodoc AUTHORS ChangeLog NEWS TODO
 }

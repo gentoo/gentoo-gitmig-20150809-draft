@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5.ebuild,v 1.4 2004/03/31 06:53:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5.ebuild,v 1.5 2004/06/03 07:50:38 mr_bones_ Exp $
 
 inherit flag-o-matic eutils games
 
@@ -33,7 +33,7 @@ src_unpack() {
 
 src_compile() {
 	# --disable-network --enable-console
-	local myconf="`use_enable x86 assembler`"
+	local myconf="$(use_enable x86 assembler)"
 	use debug \
 		&& debugconf="${myconf} --enable-debug --disable-release" \
 		|| debugconf="${myconf} --disable-debug --enable-release"
@@ -41,7 +41,7 @@ src_compile() {
 	# in gr, thus when they go to link they cause redefine errors ...
 	# we build each by it self, save the binary file, clean up, and start over
 	mkdir my-bins
-	for ren in sdl `use opengl` `use svga` `use ggi` ; do
+	for ren in sdl $(use opengl) $(use svga) $(use ggi) ; do
 		[ "${ren}" == "sdl" ] \
 			&& renconf="" \
 			|| renconf="--with-${ren}"
