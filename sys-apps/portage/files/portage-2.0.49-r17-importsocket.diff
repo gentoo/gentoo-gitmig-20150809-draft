@@ -1,0 +1,12 @@
+diff -ur portage-2.0.49-r17/bin/emerge portage-2.0.49-r17.new/bin/emerge
+--- portage-2.0.49-r17/bin/emerge	2003-11-25 03:21:37.000000000 -0600
++++ portage-2.0.49-r17.new/bin/emerge	2003-11-27 04:52:08.000000000 -0600
+@@ -3,7 +3,7 @@
+ # Distributed under the terms of the GNU General Public License v2
+ # $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/files/portage-2.0.49-r17-importsocket.diff,v 1.1 2003/11/27 11:07:30 carpaski Exp $
+ 
+-import os,sys
++import os,sys,socket
+ os.environ["PORTAGE_CALLER"]="emerge"
+ sys.path += ["/usr/lib/portage/pym"]
+ 

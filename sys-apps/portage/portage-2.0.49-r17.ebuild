@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r17.ebuild,v 1.1 2003/11/26 06:50:21 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r17.ebuild,v 1.2 2003/11/27 11:07:30 carpaski Exp $
 
 IUSE="build"
 
@@ -33,7 +33,8 @@ python_version() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/pym
+	cd ${S}
+	patch -p1 < ${FILESDIR}/portage-2.0.49-r17-importsocket.diff
 }
 
 src_compile() {

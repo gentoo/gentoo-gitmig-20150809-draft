@@ -1,4 +1,4 @@
-MD5 2cfdc6ffef4887bfea25b17f7ca85271 portage-2.0.49-r17.ebuild 10521
+MD5 004ef37a381e320ab9cd9c09cf073e23 portage-2.0.49-r17.ebuild 10579
 MD5 2264df67fab8f5ab427e536d7e32f497 ChangeLog 695
 MD5 1ccc29af0e9489c8aec1090e62705bab portage-2.0.49-r15.ebuild 10281
 MD5 b6989b04bc0ab44de75cf82ab47698fa files/portage-rescue-2.0.48-r1-sparc.tbz2 227629
@@ -10,3 +10,4 @@ MD5 73094a2d75dca36817b40611589ea226 files/portage-rescue-2.0.44-ppc.tbz2 168027
 MD5 d4bb71bd3515647145916ba7d6287d20 files/README.RESCUE 1064
 MD5 e2f7d2797f76d586452705abed1e515e files/portage-rescue-2.0.48-r1-sparc64.tbz2 227569
 MD5 fa4bfa4ee3ec778658dadf6a63864877 files/portage-rescue-2.0.49-r15-amd64.tbz2 289608
+MD5 983f783499a94f12c0d6408096622cae files/portage-2.0.49-r17-importsocket.diff 557
