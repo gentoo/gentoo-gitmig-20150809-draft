@@ -39,3 +39,4 @@
 
 *net-firewall/iptables
 *virtual/bootloader
+-*virtual/dev-manager
