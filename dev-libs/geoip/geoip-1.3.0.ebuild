@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.2.1.ebuild,v 1.4 2003/10/15 22:27:26 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.3.0.ebuild,v 1.1 2003/10/15 22:27:26 solar Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ DESCRIPTION="Geo-IP enables you to easily lookup countries by IP addresses, even
 
 SRC_URI="http://www.maxmind.com/download/geoip/api/c/${MY_P}.tar.gz"
 HOMEPAGE="http://www.maxmind.com/geoip/api/c.shtml"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="~x86 ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 MAINTAINER="solar@gentoo.org"
