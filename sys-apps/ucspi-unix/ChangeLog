@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ucspi-unix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ChangeLog,v 1.5 2003/02/12 09:10:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ChangeLog,v 1.6 2003/04/23 21:11:29 sethbc Exp $
+
+*ucspi-unix-0.36 (23 Apr 2003)
+
+  23 Apr 2003; Seth Chandler <sethbc@gentoo.org>; ucspi-unix-0.36.ebuild:
+  version bump
 
   13 Mar 2002; Thilo Bangert <bangert@gentoo.org> ucspi-unix-0.34.ebuild:
 
