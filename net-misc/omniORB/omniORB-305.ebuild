@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-305.ebuild,v 1.3 2002/07/26 21:38:14 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-305.ebuild,v 1.4 2002/08/08 18:27:55 phoenix Exp $
 
 S="${WORKDIR}/omni"
 DESCRIPTION="a robust, high-performance CORBA 2 ORB"
@@ -79,7 +79,7 @@ src_install () {
 	doman man/man[15]/*.[15]
 	
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/omniORB.rc6 omniORB
+	newexe ${FILESDIR}/omniORB.305 omniORB
 	dodir /etc/omniorb
 	insinto /etc/omniorb
 	cd ${S}

@@ -1,8 +1,12 @@
 # ChangeLog for net-misc/omniORB
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.4 2002/07/25 21:43:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.5 2002/08/08 18:27:55 phoenix Exp $
 
 *omniORB-305 (25 Jul 2002)
+
+  08 Aug 2002; phoen][x <phoenix@gentoo.org> files/omniORB.305 omniORB-305.ebuild :
+  Bumped the init.d file to omniORB.305; removed notifd from and fixed the killall command.
+  Incorporated this change in the ebuild.
 
   25 Jul 2002; George Shapovalov <george@gentoo.org> omniORB-305.ebuild :
 
