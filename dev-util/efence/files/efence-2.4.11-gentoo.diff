@@ -1,0 +1,60 @@
+diff -urN efence.orig/Makefile efence/Makefile
+--- efence.orig/Makefile	2005-01-04 22:02:25.000000000 -0500
++++ efence/Makefile	2005-01-04 22:53:39.776708008 -0500
+@@ -10,8 +10,8 @@
+     EFENCESO=
+   endif
+ else
+-  CFLAGS= -g $(PIC)
+-  CPPFLAGS= -g $(PIC)
++  CFLAGS += -g $(PIC)
++#   CPPFLAGS += $(PIC)
+   LIBS=-lpthread
+   EFENCESO=libefence.so.0.0
+ endif
+@@ -25,7 +25,7 @@
+ prefix=/usr
+ BIN_INSTALL_DIR= $(prefix)/bin
+ LIB_INSTALL_DIR= $(prefix)/lib
+-MAN_INSTALL_DIR= $(prefix)/man/man3
++MAN_INSTALL_DIR= $(prefix)/share/man/man3
+ 
+ 
+ PACKAGE_SOURCE= README CHANGES efence.3 Makefile \
+@@ -36,7 +36,9 @@
+ 
+ OBJECTS = efencepp.o efence.o
+ 
+-all:	libefence.a $(EFENCESO) tstheap eftest eftestpp
++all:	libefence.a $(EFENCESO)
++
++check: tstheap eftest eftestpp
+ 	@ echo
+ 	@ echo "Testing Electric Fence."
+ 	@ echo "After the last test, it should print that the test has PASSED."
+@@ -47,13 +49,16 @@
+ 	@ echo
+ 
+ install: libefence.a efence.3 libefence.so.0.0
++	$(INSTALL) -d $(BIN_INSTALL_DIR)
+ 	$(INSTALL) -m 755 ef.sh $(BIN_INSTALL_DIR)/ef
++	$(INSTALL) -d $(LIB_INSTALL_DIR)
+ 	$(INSTALL) -m 644 libefence.a $(LIB_INSTALL_DIR)
+ 	$(INSTALL) -m 755 libefence.so.0.0 $(LIB_INSTALL_DIR)
+ 	- rm -f $(LIB_INSTALL_DIR)/libefence.so.0
+ 	ln -s libefence.so.0.0 $(LIB_INSTALL_DIR)/libefence.so.0
+ 	- rm -f $(LIB_INSTALL_DIR)/libefence.so
+ 	ln -s libefence.so.0.0 $(LIB_INSTALL_DIR)/libefence.so
++	$(INSTALL) -d $(MAN_INSTALL_DIR)
+ 	$(INSTALL) -m 644 efence.3 $(MAN_INSTALL_DIR)/efence.3
+ 
+ clean:
+@@ -79,7 +84,7 @@
+ ifneq ($(OS), Windows_NT)
+ libefence.so.0.0: efence_config.h $(OBJECTS)
+ 	$(CXX) -g -shared -Wl,-soname,libefence.so.0 -o libefence.so.0.0 \
+-	$(OBJECTS) -lpthread -lc
++	$(OBJECTS) -lpthread
+ endif
+ 
+ efence_config.h: createconf
