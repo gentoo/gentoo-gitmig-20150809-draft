@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b6c823ffd0fa37bb5cc5911fa25304e8 ChangeLog 663
-MD5 84de81b81151f0fb8e682c9b62b404e3 demolition-0.9.ebuild 865
+MD5 3b5f20a433873076f2dcf27924439e76 ChangeLog 777
+MD5 6bf30463d4e9c35a5c4f68adc70f38d6 demolition-0.9.ebuild 791
 MD5 2f758c82434233f84f01f80f850a1112 metadata.xml 217
 MD5 2cf577846c4458e9cf655d35bf0d5ee5 files/digest-demolition-0.9 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBcv5HI1lqEGTUzyQRAgAnAJ9uM9zv9NrZsnFYRG9hgpNWyke1cwCghzto
-1wOeQyvnMOhJGDNmFn4mrGU=
-=1TfZ
+iD8DBQFBg3fFArHZZzCEUG0RAiZgAJ0eLhWLvNHkim7QmP6qJ+DtaKb3BQCdG7o0
+OgRXv7zNs98SNSzpoRO8mUM=
+=36Za
 -----END PGP SIGNATURE-----
