@@ -8,7 +8,7 @@
  
  // fsize is in samples, not bytes(gets translated before ioctl())
  int InitUNIXDSPSound(int *rate, int bits, int fsize, int nfrags, int dev)
-@@ -89,9 +90,20 @@
+@@ -89,9 +90,19 @@
  
   if(ioctl(dspfd,SNDCTL_DSP_SETFRAGMENT,&x)==-1)
    printf("ERROR (continuing anyway)\n");
@@ -26,7 +26,6 @@
 +  printf("\n   Couldn't set mono, faking stereo...\n");
 +  fakestereo = 1;
 + }
-+ else goto __disperror;
 + 
   printf("\n   Setting playback rate of %d hz...",*rate);
   if(ioctl(dspfd,SNDCTL_DSP_SPEED,rate)==-1) goto __disperror;
