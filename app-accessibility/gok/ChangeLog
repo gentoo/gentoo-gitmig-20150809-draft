@@ -1,0 +1,57 @@
+# ChangeLog for app-accessibility/gok
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.1 2004/03/17 22:17:47 leonardop Exp $
+
+  16 Mar 2004; L. Boshell <leonardop@gentoo.org> gok-0.9.3.ebuild:
+  Stable on x86. Inherit from eutils.
+  
+  13 Mar 2004; foser <foser@gentoo.org> metadata.xml :
+  Maintainership to gnome-accessibility
+
+*gok-0.9.3 (11 Feb 2004)
+
+  11 Feb 2004; L. Boshell <leonardop@gentoo.org> gok-0.9.3.ebuild:
+  Version bump. Added patch to make it compile with gcc-2.
+  
+  10 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> gok-0.9.1.ebuild:
+  set ppc in keywords
+
+  09 Feb 2004; <spider@gentoo.org> gok-0.9.1.ebuild:
+  ~amd64, tested by "Cody Russell"
+
+  06 Feb 2004; Luca Barbato <lu_zero@gentoo.org> gok-0.9.1.ebuild:
+  Marked ~ppc as requested by Spider
+
+  28 Jan 2004; Aron Griffis <agriffis@gentoo.org> gok-0.9.1.ebuild:
+  stable on alpha and ia64
+
+  18 Jan 2004; <gustavoz@gentoo.org> gok-0.9.1.ebuild:
+  stable on hppa and sparc
+
+  07 Jan 2004; <gustavoz@gentoo.org> gok-0.9.1.ebuild:
+  keyworded ~sparc
+
+  10 Dec 2003; L. Boshell <leonardop@gentoo.org> gok-0.9.1.ebuild:
+  Marked as stable on x86.
+
+  10 Nov 2003; L. Boshell <leonardop@gentoo.org> gok-0.8.4.ebuild :
+  Marking as x86-stable.
+  
+*gok-0.9.1 (06 Nov 2003)
+
+  06 Nov 2003; L. Boshell <leonardop@gentoo.org> gok-0.9.1.ebuild :
+  Version bump.
+  
+  06 Nov 2003; L. Boshell <leonardop@gentoo.org> gok-0.8.4.ebuild :
+  Fix for some schemas that were being set incorrectly due to awkward m4
+  rules.
+  
+*gok-0.8.4 (03 Nov 2003)
+
+  03 Nov 2003; L. Boshell <leonardop@gentoo.org> gok-0.8.4.ebuild :
+  Version bump.
+
+*gok-0.8.3 (10 Oct 2003)
+
+  10 Oct 2003; L. Boshell <leonardop@gentoo.org> gok-0.8.3.ebuild :
+  Initial import.
