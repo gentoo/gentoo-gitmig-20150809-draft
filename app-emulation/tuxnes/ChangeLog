@@ -1,0 +1,9 @@
+# ChangeLog for app-emulation/mol
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/tuxnes/ChangeLog,v 1.1 2002/12/11 23:14:25 rphillips Exp $
+
+*tuxnes-0.75 (11 Dec 2002)
+
+  11 Dec 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  New package
+
