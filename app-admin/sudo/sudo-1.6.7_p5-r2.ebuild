@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5-r2.ebuild,v 1.1 2004/11/11 23:15:15 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5-r2.ebuild,v 1.2 2004/11/13 09:31:38 taviso Exp $
 
 inherit gnuconfig eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	gnuconfig_update ${S}
 	use skey && epatch ${FILESDIR}/${PN}-skeychallengeargs.diff
+	epatch ${FILESDIR}/${P}-strip-bash-functions.diff
 }
 
 src_compile() {
