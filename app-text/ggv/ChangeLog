@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.69 2004/09/16 19:27:00 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.70 2004/10/01 05:55:07 geoman Exp $
+
+  01 Oct 2004; Stephen P. Becker <geoman@gentoo.org> ggv-2.6.1.ebuild:
+  stable on mips
 
 *ggv-2.8.0 (16 Sep 2004)
 
