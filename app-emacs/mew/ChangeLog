@@ -1,8 +1,11 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.15 2003/08/06 17:41:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.16 2003/08/13 07:02:52 usata Exp $
 
 *mew-3.3 (29 Jul 2003)
+
+  13 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> mew-3.3.ebuild:
+  Marked stable on x86 and ppc
 
   29 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> mew-3.1.ebuild,
   mew-3.2-r1.ebuild, mew-3.2.ebuild, files/3.1/50mew-gentoo.el,
@@ -60,6 +63,9 @@
 
 *mew-2.3-r1 (07 Aug 2003)
 
+  13 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> mew-2.3-r1.ebuild:
+  Marked stable
+
   07 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> mew-2.3-r1.ebuild,
   files/mew-smtp-2.3-gentoo.patch:
   Fixed smtp bug that sends mails to unintended recipients
@@ -71,8 +77,8 @@
 
 *mew-2.2 (31 Oct 2002)
 
-  21 Dec 2002; Jungmin Seo <seo@gentoo.org> ChangeLog,
-  mew-2.2.ebuild:
+  13 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> mew-2.2.ebuild:
+  Removed.  See http://www.mew.org/ml/mew-int-3.1/msg00063.html
 
   added ~ppc
 

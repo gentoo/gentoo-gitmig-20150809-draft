@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-2.3-r1.ebuild,v 1.1 2003/08/06 17:41:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-2.3-r1.ebuild,v 1.2 2003/08/13 07:02:52 usata Exp $
 
 inherit elisp eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.mew.org/pub/Mew/release/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~sparc ~ppc"
+KEYWORDS="x86 alpha sparc ppc"
 S="${WORKDIR}/${P}"
 
 DEPEND="virtual/emacs"
