@@ -1,6 +1,14 @@
-MD5 e5c1c6247b3c19c0cedfbd69b14e6e4a ChangeLog 1781
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b9e901f17f3048973fe2751e2573aed1 ChangeLog 1912
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 6e3efa20598958533a38c6b2db35e045 timidity-shompatches-19960409-r3.ebuild 1338
-MD5 6288344eef6dd836eb8d6650a7c7185c timidity-shompatches-19960409.ebuild 1375
-MD5 16eda58a2ef3c11d782c330dcef86759 files/digest-timidity-shompatches-19960409 63
+MD5 cf89b113b33fd2a1d5ac36abc92fb1bc timidity-shompatches-19960409-r3.ebuild 1342
 MD5 16eda58a2ef3c11d782c330dcef86759 files/digest-timidity-shompatches-19960409-r3 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCIvQ5ArHZZzCEUG0RApCcAJ9yblbfZGacDMJSQ900S6aU0lzG6ACfdrWn
+0JOfi+o93p98tFJYpgfaWRs=
+=Ffrf
+-----END PGP SIGNATURE-----
