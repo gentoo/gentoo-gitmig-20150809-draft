@@ -65,6 +65,8 @@ then
 fi
 
 export CONFIG_PROTECT=""
+# disable autoclean, or it b0rks
+export AUTOCLEAN="no"
 #above allows portage to overwrite stuff
 cd /usr/portage
 emerge $myPORTAGE #separate, so that the next command uses the *new* emerge
