@@ -1,6 +1,6 @@
 # ChangeLog for app-dicts/canna-cannadic
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.4 2003/09/22 00:07:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.5 2003/09/30 13:01:38 usata Exp $
 
 *canna-cannadic-0.95a (22 Sep 2003)
 
@@ -9,6 +9,10 @@
   the new release.  This closes Bug #29189.
 
 *canna-cannadic-0.95-r1 (11 Sep 2003)
+
+  30 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> canna-cannadic-0.94h.ebuild,
+  canna-cannadic-0.95.ebuild, canna-cannadic-0.95-r1.ebuild:
+  Marked stable for x86, sparc and alpha
 
   11 Sep 2003; Mamoru KOMACHI <usata@gentoo.org>
   canna-cannadic-0.95-r1.ebuild:
