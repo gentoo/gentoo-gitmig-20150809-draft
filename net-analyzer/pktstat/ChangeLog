@@ -1,10 +1,17 @@
 # ChangeLog for net-analyzer/pktstat
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.3 2004/07/10 11:45:51 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.4 2004/11/06 13:12:33 eldad Exp $
 
-*pktstat-1.7.2q (10 Jul 2004)
+*pktstat-1.7.5 (06 Nov 2004)
+
+  06 Nov 2004; Eldad Zack <eldad@gentoo.org> +pktstat-1.7.5.ebuild:
+  Version bump.
 
   10 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
   pktstat-1.7.2q.ebuild:
   Tidy. x86 stable
 
+*pktstat-1.7.2q (10 Jul 2004)
+
+  11 Oct 2003; Martin Holzer <mholzer@gentoo.org> pktstat-1.7.2q.ebuild:
+  Initial Version. Submitted by Jeff Shirley <shirjs0@wfu.edu> in #25807.
