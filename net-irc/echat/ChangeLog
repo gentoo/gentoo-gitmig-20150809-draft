@@ -1,0 +1,10 @@
+# ChangeLog for net-irc/echat
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/ChangeLog,v 1.1 2003/10/05 21:05:11 zul Exp $
+
+*echat-0.02-r1 (05 Oct 2003)
+
+  05 Oct 2003; <chuck@gentoo.org> echat-0.02-r1.ebuild:
+  Initial version, closes bug #25638. Submitted by <x11@junk.b0x.la>
+  I had to modify this ebuild so it would detect the language settings properly.
+
