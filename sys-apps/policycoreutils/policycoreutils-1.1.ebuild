@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.1.ebuild,v 1.1 2003/08/14 15:32:03 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.1.ebuild,v 1.2 2003/08/16 01:09:59 pebenito Exp $
 
 IUSE=""
 
@@ -43,4 +43,9 @@ src_install() {
 	make DESTDIR="${D}" install
 
 	dosbin ${FILESDIR}/rlpkg
+
+	# overwrite pam.d stuff with ours
+	rm -f ${D}/etc/pam.d/{newrole,run_init}
+	insinto /etc/pam.d
+	doins ${FILESDIR}/{newrole,run_init}
 }
