@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/eyeD3
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.1 2004/08/30 20:56:42 pkdawson Exp $
+
+*eyeD3-0.6.2 (30 Aug 2004)
+
+  30 Aug 2004; Patrick Dawson <pkdawson@gentoo.org> eyeD3-0.6.2.ebuild :
+  Initial import.  Ebuild submitted by Travis Shirk <travis@pobox.com>.
+  Closes bug #48745.
+
