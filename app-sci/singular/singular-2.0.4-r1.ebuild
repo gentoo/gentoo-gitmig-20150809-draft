@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/singular-2.0.4-r1.ebuild,v 1.1 2003/10/29 16:26:57 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/singular-2.0.4-r1.ebuild,v 1.2 2003/11/06 13:05:58 phosphan Exp $
 
 S=${WORKDIR}/${P}
 MINPV=${PV//./-}
 BPN=${PN/s/S}
-DESCRIPTION="Singular"
+DESCRIPTION="computer algebra system for polynomial computations"
 SRC_URI="ftp://www.mathematik.uni-kl.de/pub/Math/Singular/src/${BPN}-doc-${MINPV}.tar.gz
 		ftp://www.mathematik.uni-kl.de/pub/Math/Singular/src/${BPN}-emacs-${MINPV}.tar.gz
 		ftp://www.mathematik.uni-kl.de/pub/Math/Singular/src/${BPN}-factory-${MINPV}b.tar.gz
@@ -101,7 +101,11 @@ src_install () {
 					while grep -q "${strange_error}" makeresult
 					do make 2>&1 info | tee makeresult
 					done
-					cp singular.hlp singular.info
+					echo > singular.info "INFO-DIR-SECTION Math"
+					echo >> singular.info "START-INFO-DIR-ENTRY"
+					echo >> singular.info "* Singular: (singular).         A Computer Algebra System for Polynomial Computations"
+					echo >> singular.info "END-INFO-DIR-ENTRY"
+					cat singular.hlp >> singular.info
 					doinfo singular.info
 					make html
 					dohtml -r html/.
