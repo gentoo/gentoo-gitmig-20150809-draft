@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.19 2003/04/23 00:11:15 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.20 2003/04/23 00:22:48 lostlogic Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -36,46 +36,27 @@ fi
 
 commonprep() {
 
-	cp ${S}/Makefile.am ${T}
-	sed -e 's:data ::' ${T}/Makefile.am > ${S}/Makefile.am
+	sed -i -e 's:data ::' ${S}/Makefile.am
 
-	cp ${S}/util/Makefile.am ${T}
-	sed \
-		-e 's:bsetbg::' \
-		-e 's:bsetroot::' \
-		${T}/Makefile.am > ${S}/util/Makefile.am
+	sed -i -e 's:bsetbg::; s:bsetroot::' ${S}/util/Makefile.am
 
-	cp ${S}/doc/Makefile.am ${T}
-	sed \
-		-e 's:bsetroot.1::' \
-		-e 's:bsetbg.1::' \
-		${T}/Makefile.am > ${S}/doc/Makefile.am
+	sed -i -e 's:bsetroot.1::; s:bsetbg.1::' ${S}/doc/Makefile.am
 
 	for i in `find ${S} -name 'Makefile.am'`
 	do
-		cp ${i} ${T}
-		sed 's:$(pkgdatadir)/nls:/usr/share/locale:' \
-			${T}/Makefile.am > ${i}
+		sed -i -e 's:$(pkgdatadir)/nls:/usr/share/locale:' ${i}
 	done
 
 	for i in `find ${S}/nls -name 'Makefile.am'`
 	do
-		cp ${i} ${T}
-		sed \
-			-e "s:blackbox.cat:${MYBIN}.cat:g" \
-			-e "s:${PN}.cat:${MYBIN}.cat:g" \
-			${T}/Makefile.am > ${i}
+		sed -i -e "s:blackbox.cat:${MYBIN}.cat:g; s:${PN}.cat:${MYBIN}.cat:g" ${i}
 	done
 
 	for i in `find ${S}/src -name 'Makefile*'`
 	do
-		rm ${T}/Makefile*
-		cp ${i} ${T}
-		sed \
-			-e "s:/styles/Results:/styles/Fury-NG:" \
-			-e "s:/styles/mbdtex:/styles/Fury-NG:" \
-			-e "s:/styles/Clean:/styles/Fury-NG:" \
-			${T}/Makefile* > ${i}
+		sed -i -e "s:/styles/Results:/styles/Fury-NG:" \
+		       -e "s:/styles/mbdtex:/styles/Fury-NG:" \
+		       -e "s:/styles/Clean:/styles/Fury-NG:" ${i}
 	done
 	
 }
