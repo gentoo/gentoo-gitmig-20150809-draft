@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/fax4cups-1.23.ebuild,v 1.5 2004/01/27 14:31:53 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/fax4cups-1.23.ebuild,v 1.6 2004/05/05 23:14:58 lanius Exp $
 
 DESCRIPTION="efax/hylafax backend for CUPS"
 
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 DEPEND="net-print/cups
-	|| ( net-misc/hylafax net-misc/efax net-dialup/mgetty ) "
+	|| ( net-misc/hylafax net-misc/efax net-dialup/mgetty )
+	app-admin/sudo"
 
 S=${WORKDIR}/fax4CUPS-${PV}
 
