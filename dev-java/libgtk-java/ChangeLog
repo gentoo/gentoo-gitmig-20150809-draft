@@ -1,0 +1,24 @@
+# ChangeLog for dev-java/libgtk-java
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/ChangeLog,v 1.1 2004/11/16 18:40:33 karltk Exp $
+
+*libgtk-java-2.4.6-r1 (16 Nov 2004)
+
+  16 Nov 2004; <karltk@gentoo.org> +metadata.xml,
+  +files/libgtk-java-2.4.6_gcj-autoconf-macro-fix.patch,
+  +files/libgtk-java-2.4.6_gentoo-PN-SLOT.patch,
+  +files/libgtk-java-2.4.6_install-doc.patch,
+  +files/libgtk-java-2.4.6_no-docbook-autoconf-macro.patch,
+  +libgtk-java-2.4.6-r1.ebuild:
+  Initial import into Portage. Ebuild and patches by Andrew Cowie
+  <andrew@operationaldynamics.com>. Fixes #70559.
+
+*libgtk-java-2.4.6 (07 Nov 2004)
+
+  07 Nov 2004; Andrew Cowie <andrew@operationaldynamics.com>
+  New ebuild. What used to be java-gnome is now multiplexed into various modular
+  subcomponents. Upstream CVS was all re-arranged, and now there is a release
+  tarball for each piece. This ebuild is the java binding around the core GTK
+  libraries (and is the only one of the new pieces which doesn't need the rest of
+  GNOME installed).
+
