@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.26 2004/11/25 14:29:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.27 2004/11/26 10:18:10 ticho Exp $
+
+  26 Nov 2004; Andrej Kacian <ticho@gentoo.org>
+  -files/pine-4.33-whitespace.patch, -files/pine-4.40-boguswarning.patch,
+  -pine-4.50-r4.ebuild, -pine-4.58-r3.ebuild, -pine-4.60.ebuild,
+  -pine-4.61-r1.ebuild, pine-4.61-r2.ebuild, pine-4.61-r3.ebuild:
+  Removed ebuilds <=4.61-r1, as well as no longer used patches from files/
+  dir. Closes bug #72200, reported by Michael <fd0man@chadeux.net>.
 
   25 Nov 2004; Jason Wever <weeve@gentoo.org> pine-4.61-r2.ebuild:
   Stable on sparc wrt bug #72268.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.61-r2.ebuild,v 1.9 2004/11/25 14:29:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.61-r2.ebuild,v 1.10 2004/11/26 10:18:10 ticho Exp $
 
 inherit eutils
 
@@ -68,10 +68,6 @@ src_unpack() {
 	epatch "${FILESDIR}/pine-4.40-lockfile-perm.patch"
 	# Add missing time.h includes.
 	epatch "${FILESDIR}/imap-2000-time.patch"
-	# Get rid of stripwhitespace() calls.
-	# Fixed with changed default behaviour and options.
-	# Patch does not apply anymore.
-	#epatch "${FILESDIR}/pine-4.33-whitespace.patch"
 	# Bug #23336 - makes pine transparent in terms that support it.
 	epatch "${FILESDIR}/transparency.patch"
 
