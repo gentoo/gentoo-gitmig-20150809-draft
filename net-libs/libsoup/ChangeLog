@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.47 2005/02/04 06:15:05 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.48 2005/02/10 11:29:16 dragonheart Exp $
+
+  10 Feb 2005; Daniel Black <dragonheart@gentoo.org> libsoup-2.2.1.ebuild,
+  libsoup-2.2.2.ebuild:
+  Bad sed in last fix - bug #79161 refers.
 
   04 Feb 2005; Stephen P. Becker <geoman@gentoo.org> libsoup-2.2.1.ebuild:
   stable on mips
