@@ -1,6 +1,11 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.29 2003/03/26 13:43:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.30 2003/03/31 23:06:24 foser Exp $
+
+*abiword-1.1.4 (31 Mar 2003)
+
+  31 Mar 2003; foser <foser@gentoo.org> abiword-1.1.4.ebuild :
+  GTK+2 development release
 
 *abiword-1.0.5 (16 Mar 2003)
 
