@@ -1,10 +1,20 @@
-MD5 8cfdb798cb0fd4af96c2f60183966d30 kmymoney2-0.6.ebuild 511
-MD5 c8d4cbed9c857652f697a36ae5bdae4b kmymoney2-0.6.2.ebuild 510
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a78a3619e1965797884460970deb94d7 ChangeLog 2283
 MD5 79be6e573717c19144d65b0f94ddded8 kmymoney2-0.5.1.ebuild 496
 MD5 95afded1183a085b9be8cc0cd995c0ea kmymoney2-0.6.1.ebuild 504
-MD5 3817ad957ea10c85fa9711b60a24edf2 ChangeLog 2183
+MD5 8005b362d9534f075fde4c6b7a8ead54 kmymoney2-0.6.2.ebuild 512
+MD5 8cfdb798cb0fd4af96c2f60183966d30 kmymoney2-0.6.ebuild 511
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 e391b736d19e1bcd73809df2505d4f7c files/digest-kmymoney2-0.6 67
 MD5 1e021f274fd4522ebc21d1efaa886126 files/digest-kmymoney2-0.5.1 69
+MD5 e391b736d19e1bcd73809df2505d4f7c files/digest-kmymoney2-0.6 67
 MD5 59b72e89be9d093eff803ee409e03f79 files/digest-kmymoney2-0.6.1 69
 MD5 b3fe7b1c928e0834b5821b639e3bd586 files/digest-kmymoney2-0.6.2 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBtMn2KRy60XGEcJIRArh+AJ97xuBXDzVQr0NnrHEuflorA8f0AwCeOswV
+xTrKMqNY1pE6VYx/1ueBS40=
+=G7yU
+-----END PGP SIGNATURE-----
