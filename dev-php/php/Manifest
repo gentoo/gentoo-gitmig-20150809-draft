@@ -1,4 +1,4 @@
-MD5 5b1687f6eacc486f61cd0b90d37c3e2e php-4.3.4-r2.ebuild 1127
+MD5 7ae356e77467dacd8c6956fe49439000 php-4.3.4-r2.ebuild 1133
 MD5 db72709573c572cf5f41f9c0d192be83 php-5.0_beta1-r1.ebuild 1284
 MD5 44032cb601378cfb68cc611c3d73c027 php-4.3.2-r3.ebuild 1128
 MD5 7c756a37424dc81995fc07ae7d41bd23 php-4.3.3-r2.ebuild 1196
@@ -8,7 +8,7 @@ MD5 73c273747e4324f86cddb2bcf54dd923 php-4.3.2-r2.ebuild 1170
 MD5 c0e042bf7276ef1642b339ef04f8cda0 php-4.3.4.ebuild 1204
 MD5 0641aac580bbe91ba865933b7ae6130c php-4.3.3-r1.ebuild 1197
 MD5 2c4f329f8ef101fc4b4c2853d870b04f php-5.0_beta1.ebuild 1164
-MD5 e1214caacc2de9a73ff027f4facf7ee9 ChangeLog 10843
+MD5 96b057001c2322c9f0220cd03cfc3300 ChangeLog 10948
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 3fcea37aff85c97681f35ebe4e39a26f php-4.3.3-r3.ebuild 1207
 MD5 bac39ed18f8e24bc8b6ae6613328a6e1 php-4.3.2-r1.ebuild 978
