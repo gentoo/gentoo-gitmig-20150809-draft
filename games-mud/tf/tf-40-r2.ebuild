@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-40-r2.ebuild,v 1.1 2003/09/10 19:03:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-40-r2.ebuild,v 1.2 2004/02/03 01:07:09 mr_bones_ Exp $
 
 MY_P=${P}s1
 S=${WORKDIR}/${MY_P}
@@ -36,6 +36,6 @@ src_install () {
 	insopts -m0755
 	doins tf-lib/*
 	doins CHANGES
-	dodoc CHANGES COPYING CREDITS README
+	dodoc CHANGES CREDITS README
 	use doc && dohtml -r ${WORKDIR}/${MY_P}-help
 }
