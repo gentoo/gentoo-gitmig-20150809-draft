@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/gamin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.2 2004/08/22 22:43:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.3 2004/08/24 17:21:43 azarah Exp $
+
+*gamin-0.0.6-r2 (24 Aug 2004)
+
+  24 Aug 2004; Martin Schlemmer <azarah@gentoo.org>
+  +files/gamin-0.0.6-actually-enable-inotify-support.patch,
+  +gamin-0.0.6-r2.ebuild:
+  Sources is using wrong DEFINE to check if INotify should be enabled.
 
 *gamin-0.0.6-r1 (23 Aug 2004)
 
