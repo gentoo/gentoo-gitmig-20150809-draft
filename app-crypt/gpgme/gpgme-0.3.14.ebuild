@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14.ebuild,v 1.11 2004/02/23 16:16:23 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14.ebuild,v 1.12 2004/04/23 23:59:36 dragonheart Exp $
 
 DESCRIPTION="GnuPG Made Easy (GPGME) is a library designed to make access to GnuPG easier for applications."
 SRC_URI="ftp://ftp.gnupg.org/gcrypt/gpgme/${P}.tar.gz"
@@ -11,7 +11,11 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc hppa alpha amd64 ia64"
 
 DEPEND=">=sys-libs/zlib-1.1.3
-	>=app-crypt/gnupg-1.0.7"
+	>=app-crypt/gnupg-1.0.7
+	sys-apps/gawk
+	sys-devel/libtool
+	sys-devel/gcc"
+
 #	crypt? ( app-crypt/gpgsm )"
 RDEPEND="nls? ( sys-devel/gettext )"
 IUSE="nls crypt doc"
