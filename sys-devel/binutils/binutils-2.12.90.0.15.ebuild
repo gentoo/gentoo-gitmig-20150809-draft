@@ -1,11 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.15.ebuild,v 1.18 2004/07/15 03:10:40 agriffis Exp $
-
-IUSE="nls bootstrap static build"
-
-# NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
-#                      the manpages, but seems this is incorrect ....
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.15.ebuild,v 1.19 2004/08/14 02:27:55 vapier Exp $
 
 inherit libtool
 
@@ -13,9 +8,10 @@ DESCRIPTION="Tools necessary to build programs"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2"
 HOMEPAGE="http://sources.redhat.com/binutils/"
 
-SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
-KEYWORDS="x86 ppc sparc "
+SLOT="0"
+KEYWORDS="x86 ppc sparc"
+IUSE="nls bootstrap static build"
 
 DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )
@@ -26,9 +22,7 @@ DEPEND="virtual/libc
 # This is a hairy one.  Basically depend on dev-lang/perl
 # if "build" or "bootstrap" not in USE.
 
-
 src_compile() {
-
 	local myconf=""
 	use nls && \
 		myconf="${myconf} --without-included-gettext" || \

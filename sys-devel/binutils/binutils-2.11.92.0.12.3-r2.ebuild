@@ -1,35 +1,34 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.92.0.12.3-r2.ebuild,v 1.19 2004/07/15 03:10:40 agriffis Exp $
-
-IUSE="nls static build"
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.92.0.12.3-r2.ebuild,v 1.20 2004/08/14 02:27:55 vapier Exp $
 
 DESCRIPTION="Tools necessary to build programs"
+HOMEPAGE="http://sources.redhat.com/binutils/"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2"
+
 LICENSE="GPL-2 LGPL-2 BINUTILS"
 SLOT="0"
 KEYWORDS="x86 sparc"
-HOMEPAGE="http://sources.redhat.com/binutils/"
+IUSE="nls static build"
 
 DEPEND="virtual/libc
-		nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
 	cd ${S}
-	#man pages are tarred up seperately because building them depends on perl, which isn't installed at
-	#Gentoo Linux bootstrap time.
+	#man pages are tarred up seperately because building them depends
+	#on perl, which isn't installed at Gentoo Linux bootstrap time.
 	mkdir man; cd man
 	tar xjf ${DISTDIR}/${PN}-manpages-${PV}.tar.bz2 || die
 }
 
 src_compile() {
-
 	local myconf
 
-	use nls && \
-		myconf="${myconf} --without-included-gettext" || \
-		myconf="${myconf} --disable-nls"
+	use nls \
+		&& myconf="${myconf} --without-included-gettext" \
+		|| myconf="${myconf} --disable-nls"
 
 	./configure --enable-shared \
 		--enable-64-bit-bfd \
@@ -88,8 +87,7 @@ src_install() {
 	if ! use build
 	then
 		#install info pages
-		make infodir=${D}/usr/share/info \
-			install-info || die
+		make infodir=${D}/usr/share/info install-info || die
 		dodoc COPYING* README
 		docinto bfd
 		dodoc bfd/ChangeLog* bfd/COPYING bfd/README bfd/PORTING bfd/TODO

@@ -1,9 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.7-r4.ebuild,v 1.10 2004/07/02 09:31:17 eradicator Exp $
-
-# NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
-#                      the manpages, but seems this is incorrect ....
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.7-r4.ebuild,v 1.11 2004/08/14 02:27:55 vapier Exp $
 
 inherit eutils libtool flag-o-matic
 

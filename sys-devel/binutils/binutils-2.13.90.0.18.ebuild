@@ -1,25 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.18.ebuild,v 1.25 2004/07/15 03:10:40 agriffis Exp $
-
-IUSE="nls bootstrap build"
-
-# NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
-#                      the manpages, but seems this is incorrect ....
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.18.ebuild,v 1.26 2004/08/14 02:27:55 vapier Exp $
 
 inherit eutils libtool flag-o-matic
 
-# Generate borked binaries.  Bug #6730
-filter-flags "-fomit-frame-pointer -fssa"
-
 DESCRIPTION="Tools necessary to build programs"
+HOMEPAGE="http://sources.redhat.com/binutils/"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 	mirror://kernel/linux/devel/binutils/test/${P}.tar.bz2"
-HOMEPAGE="http://sources.redhat.com/binutils/"
 
-SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc alpha sparc ~mips ~hppa "
+IUSE="nls bootstrap build"
 
 DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )
@@ -30,14 +23,7 @@ DEPEND="virtual/libc
 # This is a hairy one.  Basically depend on dev-lang/perl
 # if "build" or "bootstrap" not in USE.
 
-
-# filter CFLAGS=".. -O2 .." on arm
-if [ "${ARCH}" = "arm" ]; then
-	CFLAGS="$(echo "${CFLAGS}" | sed -e 's,-O[2-9] ,-O1 ,')"
-fi
-
 src_unpack() {
-
 	unpack ${A}
 
 	cd ${S}
@@ -61,6 +47,10 @@ src_unpack() {
 }
 
 src_compile() {
+	# Generate borked binaries.  Bug #6730
+	filter-flags -fomit-frame-pointer -fssa
+	use arm && replace-flags -O? -O1
+
 	local myconf=""
 
 	use nls && \

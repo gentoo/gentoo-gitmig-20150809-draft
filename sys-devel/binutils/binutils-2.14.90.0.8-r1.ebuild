@@ -1,14 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.18 2004/07/03 09:13:09 kloeri Exp $
-
-# NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
-#                      the manpages, but seems this is incorrect ....
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.19 2004/08/14 02:27:55 vapier Exp $
 
 inherit eutils libtool flag-o-matic
 
 PATCHVER="1.2"
-
 DESCRIPTION="Tools necessary to build programs"
 HOMEPAGE="http://sources.redhat.com/binutils/"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
@@ -52,7 +48,7 @@ src_unpack() {
 
 src_compile() {
 	# Generate borked binaries.  Bug #6730
-	filter-flags "-fomit-frame-pointer -fssa"
+	filter-flags -fomit-frame-pointer -fssa
 
 	local myconf=
 	[ ! -z "${CBUILD}" ] && myconf="--build=${CBUILD}"
