@@ -2,8 +2,10 @@ MD5 17322489ca9c354a47d7da8571a085f9 openoffice-1.1.0-r5.ebuild 15994
 MD5 5db2958e0700c8dc2a4346d2c32f5279 openoffice-1.0.3-r2.ebuild 21332
 MD5 60d23892e310273ec34cae0bd84f2c56 openoffice-1.1.1-r1.ebuild 16341
 MD5 7fd11cd0700a17825324a93a4e5cfa3d openoffice-1.1.0-r4.ebuild 20375
-MD5 ba7748b2f0b2f2123c7c9bba6a26438d ChangeLog 17434
+MD5 5223d63dea2e5139d00cec2a3188d747 ChangeLog 17722
 MD5 e3ec4a70395943b59adad7fc4f0538d7 metadata.xml 461
+MD5 42415169864c7c242294e82311f82775 openoffice-1.1.2.ebuild 15852
+MD5 2e1cecfeaa8a5134d03b75149ca35ef4 files/digest-openoffice-1.1.2 127
 MD5 b1ec8fd75e9b93ccf4a4f0c926de5199 files/digest-openoffice-1.0.3-r2 330
 MD5 9d1828c128b70f1612c0c31b69719a26 files/digest-openoffice-1.1.0-r4 195
 MD5 601e987d3fa97d8dfc4cdd052b0e9832 files/digest-openoffice-1.1.0-r5 128
@@ -42,3 +44,7 @@ MD5 ee20d490a8aa62d79ca65e99339e3397 files/1.1.1/neon.patch 8300
 MD5 7978a9c1f590a83622b8040ee83197a4 files/1.1.1/nptl.patch 1285
 MD5 fc8711196de6324c9fae45342d159bf3 files/1.1.1/build.patch 330
 MD5 d08ea5bce1e9a925cbd712607f89f920 files/1.1.1/newstlportfix.patch 10032
+MD5 04f76dc323b7b7b9600ef1ccffd1d04a files/1.1.2/ooffice-wrapper-1.3 9471
+MD5 35601b7efe487b346f78d43c23e2f8f3 files/1.1.2/openoffice-java.patch 2092
+MD5 866e4e913af8431072dab7ec53269c31 files/1.1.2/linux-sparc.patch 14494
+MD5 d08ea5bce1e9a925cbd712607f89f920 files/1.1.2/newstlportfix.patch 10032
