@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/jack-3.0.0.ebuild,v 1.5 2004/06/25 00:06:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/jack-3.0.0.ebuild,v 1.6 2004/07/05 03:27:06 eradicator Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ DESCRIPTION="A frontend for several cd-rippers and mp3 encoders"
 HOMEPAGE="http://www.home.unix-ag.org/arne/jack/"
 SRC_URI="http://www.home.unix-ag.org/arne/jack/${P}.tar.gz"
 
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64 ~sparc"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -20,6 +20,7 @@ DEPEND=">=virtual/python-1.5.2
 RDEPEND="${DEPEND}
 	dev-python/cddb-py
 	dev-python/id3-py
+	dev-python/pyid3lib
 	dev-python/pyvorbis
 	media-libs/flac
 	media-sound/lame
