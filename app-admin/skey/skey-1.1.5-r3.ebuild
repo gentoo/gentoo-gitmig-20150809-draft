@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r3.ebuild,v 1.3 2004/09/14 23:11:08 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r3.ebuild,v 1.4 2004/09/15 00:29:22 pvdabeel Exp $
 
 inherit flag-o-matic ccc eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="BSD X11"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm hppa ~amd64 ~ia64 ~s390 ppc64"
+KEYWORDS="x86 ppc ~sparc ~mips ~alpha ~arm hppa ~amd64 ~ia64 ~s390 ppc64"
 IUSE=""
 
 DEPEND="sys-libs/cracklib
