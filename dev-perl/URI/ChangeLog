@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/URI
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.26 2004/09/21 10:07:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.27 2004/09/21 14:31:46 mcummings Exp $
+
+  21 Sep 2004; Michael Cummings <mcummings@gentoo.org> :
+  This note is for future devs. At this time URI will fail tests - and they
+  shouldn't be enabled anyway. The author makes calls to external sites with
+  the tests; some fail because the URL's in question are no longer valid; that
+  aside, its considered a security risk to allow unmonitored URL calls to
+  unknown sites. Hence the lack of testing in this particular module.
 
   21 Sep 2004; Michael Cummings <mcummings@gentoo.org> URI-1.31.ebuild:
   Marking stable for x86
