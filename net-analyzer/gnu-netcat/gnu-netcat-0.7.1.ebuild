@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/gnu-netcat-0.7.1.ebuild,v 1.2 2004/06/25 03:22:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/gnu-netcat-0.7.1.ebuild,v 1.3 2004/07/01 19:47:47 squinky86 Exp $
 
 inherit eutils gcc flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64"
 IUSE="nls debug"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}/netcat-${PV}
 

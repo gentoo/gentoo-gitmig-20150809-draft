@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.27_p1-r2.ebuild,v 1.2 2004/06/24 22:04:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.27_p1-r2.ebuild,v 1.3 2004/07/01 19:52:45 squinky86 Exp $
 
 DESCRIPTION="ip accounting suite for 2.4 and 2.6 series kernels with text and PNG image output like mrtg"
 HOMEPAGE="http://sourceforge.net/projects/ipac-ng/"
@@ -17,13 +17,13 @@ DEPEND="sys-devel/bison
 	sys-libs/gdbm
 	gd? ( dev-perl/GD )
 	sys-devel/flex
-	virtual/glibc"
+	virtual/libc"
 RDEPEND="net-firewall/iptables
 	virtual/cron
 	dev-lang/perl
 	sys-libs/gdbm
 	gd? ( dev-perl/GD )
-	virtual/glibc"
+	virtual/libc"
 
 S=${WORKDIR}/${P/_p*}
 

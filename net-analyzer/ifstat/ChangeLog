@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ifstat
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ChangeLog,v 1.6 2004/06/24 22:04:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ChangeLog,v 1.7 2004/07/01 19:51:52 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> ifstat-1.0.ebuild,
+  ifstat-1.1.ebuild:
+  change virtual/glibc to virtual/libc
 
 *ifstat-1.1 (22 Jun 2004)
 
