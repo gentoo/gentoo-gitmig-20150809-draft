@@ -1,0 +1,12 @@
+--- Rules.make	2001-08-06 20:50:21.000000000 +0200
++++ /root/Rules.make	2003-02-17 17:17:08.000000000 +0100
+@@ -31,7 +31,8 @@
+ 	    sed -e 's@^.*\.o:@$*.d $*_sh.o:@' > $@
+ 
+ $(SHARED_LIBS): %.so : %_sh.o
+-	$(LD) -shared -o $@ $<
++#	$(LD) -shared -o $@ $<
++	$(CC) -shared -o $@ -nostdlib $< -lgcc
+ 
+ %_sh.o : %.c
+ 	$(CC) $(SH_CFLAGS) -o $@ -c $<

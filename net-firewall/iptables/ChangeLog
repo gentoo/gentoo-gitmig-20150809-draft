@@ -1,0 +1,155 @@
+# ChangeLog for sys-apps/iptables
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.1 2003/03/11 21:50:24 mholzer Exp $
+
+*iptables-1.2.7a-r3 (11 Mar 2003)
+
+  11 Mar 2003; Martin Holzer <mholzer@gentoo.org> iptables-1.2.7a-r3.ebuild,
+  files/grsecurity-1.2.7a-iptables.patch, files/iptables-1.2.6a-imq.diff-3,
+  files/iptables-1.2.7a-gentoo.diff, files/iptables-1.2.7a-hppa.diff,
+  files/iptables-1.2.7a-imq.diff-3, files/iptables.confd, files/iptables.init,
+  files/1.2.7a-files/01_all_grsecurity.patch.bz2,
+  files/1.2.7a-files/02_all_imq.patch.bz2,
+  files/1.2.7a-files/03_all_mac_fix.patch.bz2,
+  files/1.2.7a-files/04_all_no_optimize_fix.patch.bz2:
+  moved from sys-apps/iptables to net-firewall/iptables
+
+  21 Feb 2003; Zach Welch <zwelch@gentoo.org> iptables-1.2.7a-r3.ebuild :
+  Added arm keyword 
+
+  17 Feb 2003; Guy Martin <gmsoft@gentoo.org> iptables-1.2.7a-r3.ebuild :
+  Added patch and keyword for hppa.
+
+*iptables-1.2.7a-r3 (09 Jan 2003)
+
+  11 Mar 2003; Zach Welch <zwelch@gentoo.org> iptables-1.2.7a-r3.ebuild:
+  change sys-kernel/linux-headers to new virtual/os-headers
+
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org>
+  iptables-1.2.7a-r3.ebuild :
+
+  Sed expression delimiter from / to :, closing bug #15006 by Blu3
+  <david+gentoo.org@blue-labs.org>
+ 
+  06 Feb 2003; Mark Guertin <gerk@gentoo.org> iptables-1.2.7a-r3.ebuild :
+  Added ppc keyword
+
+  10 Jan 2003; Joshua Brindle <method@gentoo.org> iptables-1.2.7a-r3.ebuild :
+  unmasked for x86, sparc, alpha re: bug #13466
+  fixed sed string re: bug #13644
+
+  09 Jan 2003; Christian Birchinger <joker@gentoo.org> :
+  Added new revsion with sparc64 limit rule fixes. 
+
+  09 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> files/iptables.init :
+  Readded save() function, closes #7752.
+
+  08 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> files/iptables.init :
+  Forgot to remove save() function from initscript.
+
+  08 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a-r2.ebuild :
+  Closes #13466.
+
+  07 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Cleaned out old files.
+
+*iptables-1.2.7a-r2 (07 Jan 2003)
+
+  07 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a-r2.ebuild, files/iptables.init,
+						files/iptables.confd :
+  Closes #13366, #13144 and #10424. Added new patching method and made installation prettier. 
+
+*iptables-1.2.7a-r1 (10 Dec 2002)
+  
+  10 Dec 2002; Joshua Beindle <method@gentoo.org> iptables-1.2.7a-r1.ebuild :
+  Added grsecurity stealth module patch
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*iptables-1.2.7a (27 Aug 2002)
+
+  20 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a.ebuild :
+  Added patch for iptables-restore. Contributed by fridtjof@fbunet.de in #10736.
+
+  25 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> files/iptables-1.2.7a-imq.diff-3 :
+  Closes #8046.
+
+  23 Sep 2002; Jack Morgan <jmorgan@gentoo.org> iptables-1.2.7a.ebuild : 
+  Added sparc/sparc64 keywords
+
+  09 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a.ebuild : 
+  Cleaned up configurationfiles and ebuild, added blocke's changes to -r1 into this version.
+
+  08 Sep 2002; Bruce A. Locke <blocke@shivan.org> iptables-1.2.6a-r3.ebuild, iptables-1.2.7a-r2, files/iptables.confd-2, files/iptables.init-2
+  Fix #2355.  Forwarding is disabled on script stop and only turned on 
+  during script start if conf.d/iptables settings are enabled.
+
+  01 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a.ebuild : 
+  Added better handling of stopping iptables as described in #6949. 
+  Suggested and submitted by Frederic Jolliton <fred@jolliton.com>.
+
+  30 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a.ebuild : 
+  Added the IMQ patch to 1.2.7a.
+
+  27 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a.ebuild : New
+  upstream version to fix the bugs introduced in 1.2.7.
+
+*iptables-1.2.6a-r3
+
+  08 Sep 2002; Bruce A. Locke <blocke@shivan.org> iptables-1.2.6a-r3.ebuild, iptables-1.2.7a-r2, files/iptables.confd-2, files/iptables.init-2
+  Fix #2335.  Forwarding is disabled on script stop and only turned on 
+  during script start if conf.d/iptables settings are enabled.
+
+*iptables-1.2.6a-r2 (29 Aug 2002)
+
+  29 Aug 2002; Daniel Robbins <drobbins@gentoo.org> new rev of iptables-1.2.6a
+  adding support for IMQ (intermediate queueing device.) See
+  http://luxik.cdi.cz/~patrick/imq/ for more information.
+
+*iptables-1.2.7.ebuild (17 Aug 2002)
+
+  17 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7.ebuild : Version
+  bump. Christian Parpart <cparpart@surakware.net> brought this to our
+  attention.
+
+*iptables-1.2.6a-r1.ebuild (14 July 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> iptables-1.2.6a.ebuild :
+  Added KEYWORDS.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> iptables-1.2.6a-r1.ebuild :
+  Added KEYWORDS.
+
+*iptables-1.2.4-r1.ebuild (14 July 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> iptables-1.2.4-r1.ebuild :
+  Added KEYWORDS, SLOT.
+
+*iptables-1.2.6a (13 Apr 2002)
+
+  13 Apr 2002; Seemant Kulleen <seemant@gentoo.org> iptables-1.2.6a.ebuild :
+
+  gaarde@yahoo.com (Paul Belt) in bug #1670 submitted the update.
+
+*iptables-1.2.5-r1 (20 Mar 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> iptables-1.2.5.ebuild :
+  Added KEYWORDS, SLOT.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> iptables-1.2.5-r1.ebuild :
+  Added KEYWORDS.
+
+  20 Mar 2002; Daniel Robbins <drobbins@gentoo.org> : iptables *requires*
+  kernel sources to compile.  Before, we got away without them since we had a
+  /usr/include/linux/autoconf.h.  Now we don't, and this means that we need a
+  source tree handy.  Sad but true, and apparently the right thing to do.
+
+*iptables-1.2.5 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
