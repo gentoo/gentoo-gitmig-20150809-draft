@@ -1,4 +1,4 @@
-MD5 d767460db9650d878b6165e4c4acad72 ChangeLog 4965
+MD5 7adcd9be5a6894593ffe83d0d01e60d7 ChangeLog 5080
 MD5 ae5609d9bd55ed7d9792b7b86da4df6b hppa-dev-sources-2.6.7_p1-r2.ebuild 1180
 MD5 73864d24b030876a0f811d73fdbf556c hppa-dev-sources-2.6.7_p14-r1.ebuild 1449
 MD5 05bef7ac2c9a5cdf016c4be6f71d034b hppa-dev-sources-2.6.7_p14.ebuild 1176
@@ -23,5 +23,5 @@ MD5 1ee8ba8362089c31fdd7d88b32eaf63e files/binfmt_elf-loader-security.patch 1938
 MD5 00d36aabec0074afff01d252833fdcd0 files/digest-hppa-dev-sources-2.6.8.1_p11-r1 133
 MD5 ef54ffd1bb8629f1a948afa9ff83d8a0 files/CAN-2004-0814-r1.patch 130187
 MD5 b0a1f80aff51d6601e8924329023b241 files/AF_UNIX-security.patch 515
-MD5 22192366443458dc8815827df35b63a7 files/CAN-2004-1074.patch 8034
+MD5 e5e5fab00c59854df1d816400a747728 files/CAN-2004-1074.patch 1878
 MD5 00d36aabec0074afff01d252833fdcd0 files/digest-hppa-dev-sources-2.6.8.1_p11-r2 133
