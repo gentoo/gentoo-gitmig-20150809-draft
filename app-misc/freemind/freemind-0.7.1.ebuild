@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.7.1.ebuild,v 1.10 2004/10/05 13:34:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.7.1.ebuild,v 1.11 2004/10/16 18:14:18 axxo Exp $
+
+inherit java-pkg
 
 DESCRIPTION="Mind-mapping software written in Java"
 HOMEPAGE="http://freemind.sf.net"
@@ -34,7 +36,7 @@ src_install() {
 	echo "'${JAVA_HOME}'/bin/java -jar lib/${PN}.jar" >> ${PN}.sh
 
 	cp -R ${S}/doc ${D}/opt/${PN}
-	use doc && dohtml -r doc/
+	use doc && java-pkg_dohtml -r doc/
 
 	into /opt
 	newbin ${PN}.sh ${PN}
