@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.1.1.ebuild,v 1.4 2004/04/27 21:45:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.1.1.ebuild,v 1.5 2004/06/15 05:36:44 kugelfang Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.openswan.org/code/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* ~x86 amd64"
 IUSE=""
 
 DEPEND="virtual/glibc
