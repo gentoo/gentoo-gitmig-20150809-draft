@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/leafnode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/ChangeLog,v 1.5 2005/02/21 21:49:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/ChangeLog,v 1.6 2005/03/14 22:02:58 swegener Exp $
+
+  14 Mar 2005; Sven Wegener <swegener@gentoo.org> leafnode-1.10.8.ebuild:
+  Marked stable on x86.
 
   21 Feb 2005; Simon Stelling <blubb@gentoo.org> leafnode-1.10.8.ebuild:
   added ~amd64
