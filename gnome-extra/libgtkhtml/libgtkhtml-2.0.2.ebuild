@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-2.0.2.ebuild,v 1.3 2002/09/21 12:09:35 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-2.0.2.ebuild,v 1.4 2002/09/26 00:37:01 owen Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnome/2.0.1/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="1"
 LICENSE="LGPL-2.1 GPL-2"
-KEYWORDS="x86 sparc sparc64 alpha"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 RDEPEND=">=x11-libs/gtk+-2.0.6
 	>=dev-libs/libxml2-2.4.24
