@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jzlib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.12 2004/12/18 09:20:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.13 2004/12/19 18:44:22 zx Exp $
+
+  19 Dec 2004; Chris Aniszczyk <zx@gentoo.org> jzlib-1.0.5.ebuild:
+  Fix for #74798
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> jzlib-1.0.5.ebuild:
   added ~ppc64 to KEYWORDS
