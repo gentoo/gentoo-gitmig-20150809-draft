@@ -8,7 +8,7 @@ else
   echo "!!! /etc/env.d/20java not found, please configure your system VM with java-config"
 fi
 
-JAVA_HOME=`grep JAVA_HOME $envfile | sed "s/JAVA_HOME=//"`
+JAVA_HOME=`grep "^JAVA_HOME" $envfile | sed "s/JAVA_HOME=//"`
 
 if [ -f $HOME/.antrc ] ; then 
   . $HOME/.antrc

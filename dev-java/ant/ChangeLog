@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.2 2002/04/10 12:10:43 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.3 2002/05/03 19:50:00 karltk Exp $
+
+*ant-1.4.1-r3 (03 May 2002)
+
+  03 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild files/digest-ant-1.4.1-r3:
+
+  Now handles the case of multiple occurrences of JAVA_HOME in the Java
+  environment setting, thanks to Florian L. Klein <kleinf@gmx.de>.
+
+  Removed ant-1.4.1-r2.ebuild files/digest-ant-1.4.1-r2
 
 *ant-1.4.1-r2 (10 Apr 2002)
 
