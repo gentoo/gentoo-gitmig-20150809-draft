@@ -1,7 +1,15 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.60 2004/10/11 02:40:21 tgall Exp $
-  
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.61 2004/10/13 16:29:03 vapier Exp $
+
+*gcc-config-1.3.7 (13 Oct 2004)
+
+  13 Oct 2004; Mike Frysinger <vapier@gentoo.org> +files/gcc-config-1.3.7,
+  +gcc-config-1.3.7.ebuild:
+  Better invalid arg handling, list profiles even if you dont have a current
+  one, support $ROOT, dont export CC/CXX, create g77 wrappers alongside f77,
+  and general touchups.
+
   10 Oct 2004; Tom Gall <tgall@gentoo.org> gcc-config-1.3.6-r3.ebuild:
   stable on ppc64
 
