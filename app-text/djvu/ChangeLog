@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djvu
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.10 2004/02/21 12:26:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.11 2004/03/14 05:05:12 weeve Exp $
+
+  13 Mar 2004; Jason Wever <weeve@gentoo.org> djvu-3.5.12.ebuild:
+  Stable on sparc.
 
   21 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> djvu-3.5.12.ebuild:
   Marked stable on x86, see bug #41659 and #38430
