@@ -1,5 +1,9 @@
 #!/sbin/runscript
 
+depend() {
+	use mta
+}
+
 checkconfig() {
         if [ ! -f /etc/fetchmailrc ]; then
                 eerror "Configuration file /etc/fetchmailrc not found"
