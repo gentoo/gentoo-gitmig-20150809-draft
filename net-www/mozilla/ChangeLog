@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.19 2002/06/01 19:38:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.20 2002/06/05 19:42:43 lostlogic Exp $
+
+*mozilla-1.0 (5 Jun 2002)
+  5 Jun 2002; Brandon Low <lostlogic@gentoo.org> :
+  Took 1.0_rc3-r51 and made it 1.0 werksferme, give it a try!
 
 *mozilla-1.0_rc3-r50 (31 May 2002)
   01 May 2002; Martin Schlemmer <azarah@gentoo.org> :
