@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r3.ebuild,v 1.4 2004/09/02 17:55:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r3.ebuild,v 1.5 2004/10/23 07:30:56 josejx Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/faac/${PN}-${PV/_/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips ~alpha hppa amd64 ~ia64"
+KEYWORDS="x86 ppc sparc ~mips ~alpha hppa amd64 ~ia64 ppc-macos"
 IUSE="xmms"
 
 RDEPEND="xmms? ( >=media-sound/xmms-1.2.7
@@ -50,7 +50,13 @@ src_compile() {
 	# see #34392
 	filter-flags -mfpmath=sse
 
-	WANT_AUTOCONF=2.5 WANT_AUTOMAKE=1.7 sh ./bootstrap
+	# Fix for bug #67510
+	WANT_AUTOCONF=2.5 WANT_AUTOMAKE=1.7  \
+	aclocal -I .					&& \
+	autoheader						&& \
+	libtoolize --automake --copy	&& \
+	automake --add-missing --copy	&& \
+	autoconf || die "Couldn't build configuration file"
 
 	# mp4v2 needed for rhythmbox
 	# drm needed for nothing but doesn't hurt
