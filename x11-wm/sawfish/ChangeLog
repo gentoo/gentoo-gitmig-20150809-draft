@@ -1,7 +1,10 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.6 2002/05/22 18:28:42 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.7 2002/05/22 22:45:18 spider Exp $
 
+*sawfish-20020419 (22 May 2002)
+  22 May 2002; Spider <spider@gentoo.org> sawfish-20020419.ebuild :
+  gnome2 snapshots
 
 *sawfish-1.0.1-r4 (21 May 2002) 
   21 May 2002; Spider <spider@gentoo.org> sawfish-1.0.1-r4.ebuild ChangeLog :
