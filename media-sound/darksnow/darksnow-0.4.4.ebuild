@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/darksnow-0.4.4.ebuild,v 1.4 2004/11/23 04:12:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/darksnow-0.4.4.ebuild,v 1.5 2004/12/19 05:39:58 eradicator Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://darksnow.radiolivre.org/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 sparc x86"
 
 DEPEND=">=x11-libs/gtk+-2
 	>=media-sound/darkice-0.14"

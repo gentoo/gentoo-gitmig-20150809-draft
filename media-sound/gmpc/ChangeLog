@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.6 2004/11/23 05:17:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.7 2004/12/19 05:43:46 eradicator Exp $
+
+  18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> gmpc-0.11.2.ebuild:
+  Stable amd64, sparc, x86.
 
   22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> gmpc-0.11.2.ebuild:
   Stable amd64, x86.  Added to ~sparc.
