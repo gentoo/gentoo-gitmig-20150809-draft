@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/aterm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/aterm/ChangeLog,v 1.7 2003/02/12 06:00:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/aterm/ChangeLog,v 1.8 2003/12/16 15:32:15 weeve Exp $
+
+  16 Dec 2003; Jason Wever <weeve@gentoo.org> aterm-1.6.7.ebuild:
+  Added ~sparc keyword to fix broken dependencies for dev-lang/stratego.
 
   20 Jan 2003; Jon Nall <nall@gentoo.org> aterm-1.6.7.ebuild: :
   keyworded ~ppc
