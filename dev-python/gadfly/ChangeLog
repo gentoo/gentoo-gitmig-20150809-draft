@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/gadfly
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gadfly/ChangeLog,v 1.2 2003/02/12 06:31:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gadfly/ChangeLog,v 1.3 2003/03/25 21:04:27 liquidx Exp $
 
 *gadfly-1.0.0 (17 Dec 2002)
+
+  25 Mar 2003; Alastair Tse <liquidx@gentoo.org> gadfly-1.0.0.ebuild:
+  bump to stable
 
   17 Dec 2002; B.Lauwers <blauwers@gentoo.org> :
   Initial submit per #8359, thanks Ollie Rutherfurd!
