@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/desklet-sysinfo
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sysinfo/ChangeLog,v 1.1 2003/09/30 11:24:46 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sysinfo/ChangeLog,v 1.2 2003/11/12 11:18:21 obz Exp $
+
+*desklet-sysinfo-0.21.2-r1 (12 Nov 2003)
+
+  12 Nov 2003; Mike Gardiner <obz@gentoo.org>
+  desklet-sysinfo-0.21.2-r1.ebuild:
+  Fixed Sensor permissions, see bug #32907
 
 *desklet-sysinfo-0.21.2 (30 Sep 2003)
 
