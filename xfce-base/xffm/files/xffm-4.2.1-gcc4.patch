@@ -1,0 +1,20 @@
+diff -ur xffm-4.2.1-orig/libs/callbacks.c xffm-4.2.1/libs/callbacks.c
+--- xffm-4.2.1-orig/libs/callbacks.c	2005-03-24 00:11:02.000000000 -0500
++++ xffm-4.2.1/libs/callbacks.c	2005-03-24 00:11:39.000000000 -0500
+@@ -631,7 +631,7 @@
+     return FALSE;
+ }
+ 
+-
++static gboolean unsel(GtkTreeModel *,GtkTreePath *, GtkTreeIter *, gpointer);
+ 
+ G_MODULE_EXPORT
+ gboolean treeclick(GtkWidget * widget, GdkEventButton * event, gpointer data)
+@@ -665,7 +665,6 @@
+     skip_second_release = FALSE;
+ 
+     for (tree_id=0; tree_id<TREECOUNT; tree_id++) {      
+-      static gboolean unsel(GtkTreeModel *,GtkTreePath *, GtkTreeIter *, gpointer);
+       /*printf("DBG: treeview is  0x%x==0x%x\n",tree_details->treestuff[tree_id].treeview,treeview);*/
+       if (treeview != tree_details->treestuff[tree_id].treeview){
+         /* unselect all in auxiliary treeview */
