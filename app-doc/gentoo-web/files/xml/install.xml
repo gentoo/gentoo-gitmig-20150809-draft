@@ -267,6 +267,7 @@ Here are some popular non-English keymaps:</p>
 <table><th>Language</th><th>Keymap</th>
 <tr><ti>German</ti><ti>de-latin1-nodeadkeys</ti></tr>
 <tr><ti>French</ti><ti>fr_latin1</ti></tr>
+<tr><ti>Swedish</ti><ti>se_latin1</ti></tr>
 </table>
 <p>
 Please <mail link="drobbins@gentoo.org">email me</mail> the keymaps that you use for your
