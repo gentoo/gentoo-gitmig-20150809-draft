@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.15 2004/11/22 20:44:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.16 2004/12/11 08:44:00 obz Exp $
+
+*vino-2.8.1 (11 Dec 2004)
+
+  11 Dec 2004; Mike Gardiner <obz@gentoo.org> +vino-2.8.1.ebuild:
+  New version
 
   22 Nov 2004; Markus Rothe <corsair@gentoo.org> vino-2.8.0.1.ebuild:
   Added ~ppc64 to KEYWORDS
