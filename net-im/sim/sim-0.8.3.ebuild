@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.3.ebuild,v 1.5 2003/10/10 08:50:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.3.ebuild,v 1.6 2003/10/27 14:50:03 aliz Exp $
 
 if [ $( use kde ) ]; then
 	inherit kde-base eutils
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 DESCRIPTION="An ICQ v8 Client. Supports File Transfer, Chat, Server-Side Contactlist, ..."
 SRC_URI="mirror://sourceforge/sim-icq/${P}.tar.gz"
 HOMEPAGE="http://sim-icq.sourceforge.net"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 IUSE="ssl kde"
 
@@ -28,30 +28,27 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ -n "`use ssl`" ]; then
-		myconf="$myconf --enable-openssl"
-	else
-		myconf="$myconf --disable-openssl"
-	fi
+	local myconf
 
-	if [ -n "`use kde`" ]; then
+	myconf="$( use_enable ssl openssl )"
+	myconf="$myconf $( use_enable kde )"
+	myconf="$myconf --without-gkrellm_plugin"
+	myconf="$myconf --prefix=/usr"
+
+	if [ $( use kde ) ]; then
 		need-kde 3
-		myconf="$myconf --enable-kde"
 	else
 		need-qt 3
-		myconf="$myconf --disable-kde"
 	fi
 
-	need-automake 1.5
+	need-automake 1.6
 	need-autoconf 2.5
 
 	make -f admin/Makefile.common
 
-	myconf="$myconf --without-gkrellm_plugin"
-	[ -n "`use kde`" ] && kde_src_compile myconf
-	myconf="$myconf --prefix=/usr"
+	use kde && kde_src_compile myconf
 
-	econf $myconf --without-gkrellm $( use-enable kde ) $( use-enable ssl openssl ) || die
+	econf $myconf --without-gkrellm || die
 	make || die
 }
 
