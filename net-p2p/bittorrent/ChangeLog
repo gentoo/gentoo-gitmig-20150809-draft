@@ -1,6 +1,16 @@
 # ChangeLog for net-p2p/bittorrent 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.17 2003/10/02 01:05:06 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.18 2003/12/17 18:35:13 luke-jr Exp $
+
+*bittorrent-3.3.0 (17 Dec 2003)
+
+  17 Dec 2003; Luke-Jr <luke-jr@gentoo.org> bittorrent-3.2.1.ebuild,
+  bittorrent-3.2.1b-r1.ebuild, bittorrent-3.2.1b-r2.ebuild,
+  bittorrent-3.2.1b-r3.ebuild, bittorrent-3.2.1b-r4.ebuild,
+  bittorrent-3.2.1b.ebuild, bittorrent-3.3.0.ebuild, bittorrent-3.3.ebuild,
+  files/bittorrent-3.2.1b.patch:
+  Cleanup; move unofficial BT patch to net-p2p/bittorrent-stats; rename 3.3 to
+  3.3.0 to keep with 3-number versions
 
   02 Oct 2003; Luke-Jr <luke-jr@gentoo.org> metadata.xml:
   Now maintaining bittorrent
