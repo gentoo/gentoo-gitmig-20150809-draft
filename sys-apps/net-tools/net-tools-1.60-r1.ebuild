@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r1.ebuild,v 1.2 2001/08/29 04:33:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r1.ebuild,v 1.3 2002/02/27 22:23:56 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="standard Linux network tools"
@@ -24,9 +24,11 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die	
+	# Changing "emake" to "make" closes half of bug #820; configure is run from *inside*
+	# the Makefile, sometimes breaking parallel makes (if ./configure doesn't finish first) 
+	make || die	
 	cd po
-	emake || die
+	make || die
 }
 
 src_install() {
