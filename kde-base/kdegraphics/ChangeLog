@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.100 2004/08/10 15:24:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.101 2004/08/19 15:49:43 caleb Exp $
+
+*kdegraphics-3.3.0 (19 Aug 2004)
+
+  19 Aug 2004; Caleb Tennis <caleb@gentoo.org> kdegraphics-3.3.0.ebuild,
+  kdegraphics-3.3.0_beta2.ebuild:
+  3.3.0 final
 
 *kdegraphics-3.3.0_rc2 (10 Aug 2004)
 
