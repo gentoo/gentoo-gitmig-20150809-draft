@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/mod_auth_ldap-2.4.1-r1.ebuild,v 1.1 2004/04/13 22:41:21 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_ldap/mod_auth_ldap-2.4.1-r1.ebuild,v 1.2 2004/06/20 13:41:17 zul Exp $
 
 inherit eutils
 
@@ -47,7 +47,7 @@ src_install() {
 pkg_postinst() {
 	einfo
 	einfo "Execute the command:"
-	einfo " \"ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config\""
+	einfo " \"ebuild /var/db/pkg/net-www/${PF}/${PF}.ebuild config\""
 	einfo " to auto-update apache.conf with supporting statements."
 	einfo " Then edit /etc/conf.d/apache accordingly."
 	einfo " You can find config examples here: ${HOMEPAGE}."
