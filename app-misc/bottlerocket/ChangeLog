@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/bottlerocket
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bottlerocket/ChangeLog,v 1.1 2003/05/14 20:57:09 agriffis Exp $
+
+*bottlerocket-0.04c (14 May 2003)
+
+  14 May 2003; Aron Griffis <agriffis@gentoo.org> bottlerocket-0.04c.ebuild:
+  Initial import.  Ebuild submitted by Russell Adams <demo@demosthenes.org>.
+
