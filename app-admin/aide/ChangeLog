@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/aide
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/ChangeLog,v 1.5 2002/10/21 09:27:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/ChangeLog,v 1.6 2002/10/29 13:55:56 aliz Exp $
 
 *aide-0.9 (21 Oct 2002)
+
+  29 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> aide-0.9.ebuild :
+  Added patch to fix compilation. Found by Janos Milus <j.milus@chello.hu> in #9750.
 
   21 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump. Found by Joshua Brindle <jbrindle@snu.edu> in #5372.

@@ -1,0 +1,73 @@
+diff -ru ./src/commandconf.c /var/tmp/portage/aide-0.9/work/aide-0.9/src/commandconf.c
+--- src/commandconf.c 2002-05-29 08:04:27.000000000 +0000
++++ src/commandconf.c   2002-10-29 13:44:29.000000000 +0000
+@@ -29,7 +29,7 @@
+ #include "aide.h"
+ #include "conf_lex.h"
+ #include "conf_yacc.h"
+-#include "db.h"
++#include "../include/db.h"
+ #include "db_config.h"
+ #include "gen_list.h"
+ #include "symboltable.h"
+diff -ru ./src/compare_db.c /var/tmp/portage/aide-0.9/work/aide-0.9/src/compare_db.c
+--- src/compare_db.c  2002-05-30 09:42:46.000000000 +0000
++++ src/compare_db.c    2002-10-29 13:44:29.000000000 +0000
+@@ -30,7 +30,7 @@
+ #include "gnu_regex.h"
+ #include "gen_list.h"
+ #include "list.h"
+-#include "db.h"
++#include "../include/db.h"
+ #include "util.h"
+ #include "commandconf.h"
+ #include "gen_list.h"
+diff -ru ./src/conf_yacc.y /var/tmp/portage/aide-0.9/work/aide-0.9/src/conf_yacc.y
+--- src/conf_yacc.y   2002-05-29 08:04:27.000000000 +0000
++++ src/conf_yacc.y     2002-10-29 13:46:11.000000000 +0000
+@@ -25,7 +25,7 @@
+ #include <string.h>
+ #include "list.h"
+ #include "gen_list.h"
+-#include "db.h"
++#include "../include/db.h"
+ #include "db_config.h"
+ #include "symboltable.h"
+ #include "commandconf.h"
+diff -ru ./src/db.c /var/tmp/portage/aide-0.9/work/aide-0.9/src/db.c
+--- src/db.c  2002-05-29 08:04:27.000000000 +0000
++++ src/db.c    2002-10-29 13:45:01.000000000 +0000
+@@ -22,7 +22,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <errno.h>
+-#include "db.h"
++#include "../include/db.h"
+ #include "db_file.h"
+ #include "db_disk.h"
+
+diff -ru ./src/db_sql.c /var/tmp/portage/aide-0.9/work/aide-0.9/src/db_sql.c
+--- src/db_sql.c      2002-05-29 08:04:27.000000000 +0000
++++ src/db_sql.c        2002-10-29 13:45:52.000000000 +0000
+@@ -31,7 +31,7 @@
+ #include <string.h>
+ #include <gcrypt.h>
+ #include "base64.h"
+-#include "db.h"
++#include "../include/db.h"
+
+ #include "db_sql.h"
+ #include "db_config.h"
+diff -ru ./src/gen_list.c /var/tmp/portage/aide-0.9/work/aide-0.9/src/gen_list.c
+--- src/gen_list.c    2002-05-30 09:53:52.000000000 +0000
++++ src/gen_list.c      2002-10-29 13:44:29.000000000 +0000
+@@ -38,7 +38,7 @@
+ #include "list.h"
+ #include "gen_list.h"
+ #include "seltree.h"
+-#include "db.h"
++#include "../include/db.h"
+ #include "db_config.h"
+ #include "compare_db.h"
+ #include "commandconf.h"
+

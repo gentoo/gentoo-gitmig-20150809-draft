@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.9.ebuild,v 1.1 2002/10/21 09:27:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.9.ebuild,v 1.2 2002/10/29 13:55:56 aliz Exp $
 
 IUSE="nls postgres zlib crypt"
 
@@ -22,6 +22,13 @@ DEPEND="sys-apps/gzip
 	postgres? ( dev-db/postgresql )"
 
 RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	
+	cd ${S}
+	patch -p0 <${FILESDIR}/${PF}-gentoo.diff || die
+}
 
 src_compile() {
 
