@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/cmf
 # Copyright 2003-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmf/ChangeLog,v 1.9 2004/01/29 13:18:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmf/ChangeLog,v 1.10 2004/03/13 22:12:52 dholm Exp $
+
+  13 Mar 2004; David Holm <dholm@gentoo.org> cmf-1.4.2-r1.ebuild:
+  Added to ~ppc.
 
 *cmf-1.4.2-r1 (29 Jan 2004)
 
