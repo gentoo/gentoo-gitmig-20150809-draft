@@ -1,9 +1,19 @@
-MD5 3e9774e4f799800ba3cfa67f72fad484 ChangeLog 1836
-MD5 cda669bfd7b9c120afc89ccc0eede900 dailystrips-1.0.27.ebuild 840
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f208e047a68f93f900220d4c879cbde9 dailystrips-1.0.28-r1.ebuild 936
 MD5 bc5783298347301e32c0f94e6d80ffbd dailystrips-1.0.28.ebuild 851
-MD5 2a290e8beefc2b4857ddac08c0fd61ca dailystrips-1.0.28-r2.ebuild 917
+MD5 c9b3a16841fdd55e88592ef3efd0ac31 dailystrips-1.0.28-r2.ebuild 923
+MD5 6c57efb508d04fe00883d6d1e4226197 ChangeLog 1952
+MD5 cda669bfd7b9c120afc89ccc0eede900 dailystrips-1.0.27.ebuild 840
 MD5 33301916edd726d50f535ffb90f4f61d files/digest-dailystrips-1.0.27 69
 MD5 6c8761c393587ec7612ae933a8df7aa6 files/digest-dailystrips-1.0.28 69
 MD5 6c8761c393587ec7612ae933a8df7aa6 files/digest-dailystrips-1.0.28-r1 69
 MD5 6c8761c393587ec7612ae933a8df7aa6 files/digest-dailystrips-1.0.28-r2 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5JIpZ/iYVBmujdURAuSMAKDxt8Lh0mhEIG8m2RJkB74FPQ8qgQCgsvdA
+pUY5Eb4HJSrb3Lr0wITG9bE=
+=0d0c
+-----END PGP SIGNATURE-----
