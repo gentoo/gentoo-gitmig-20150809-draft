@@ -1,4 +1,4 @@
-MD5 0ddcfa9fec6cbf1d056f99ad62f83733 files/digest-propertyobject-1.3.3 71
-MD5 63dbbd34956e7d903d13ff12fe71f6db propertyobject-1.3.3.ebuild 524
-MD5 b84df5cbdfd31ece241bc7556cb21a31 ChangeLog 474
+MD5 2ac91785c9f6f70f9cf0bef2674148a7 ChangeLog 600
+MD5 0589d0327d173c672e2371c8ef663c87 propertyobject-1.3.3.ebuild 526
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+MD5 0ddcfa9fec6cbf1d056f99ad62f83733 files/digest-propertyobject-1.3.3 71
