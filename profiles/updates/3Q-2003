@@ -54,3 +54,4 @@ move app-admin/generate-use app-portage/generate-use
 move app-admin/gentoolkit app-portage/gentoolkit
 move app-admin/gentoo-stats app-portage/gentoo-stats
 move app-admin/mirrorselect app-portage/mirrorselect
+move app-admin/portagemaster app-portage/portagemaster
