@@ -313,6 +313,8 @@ sys-apps/sysvinit
 # 20020430 (PreZ) Several people have reported the 641d build and bin
 # works installs work fine.  So the 641b one will remain masked alone.
 =app-office/openoffice-641b
+# mask 641d to enable 1.0.0
+=app-office/openoffice-bin-641d*
 
 #apparently has an fs unmount corruption bug
 =sys-kernel/linux-sources-2.4.15
@@ -435,10 +437,8 @@ sys-kernel/linux-sources-vanilla
 #
 # Azarah (26/03/2002)
 #
-<sys-devel/automake-1.5d-r1
->=sys-devel/automake-1.6
-<sys-devel/autoconf-2.5d
->=sys-devel/autoconf-2.52i
+<sys-devel/automake-1.6.1-r2
+<sys-devel/autoconf-2.53
 
 # broken
 app-admin/powertweak
