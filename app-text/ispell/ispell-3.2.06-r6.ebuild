@@ -1,31 +1,34 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r4.ebuild,v 1.11 2003/09/12 14:16:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r6.ebuild,v 1.1 2003/09/12 14:16:25 seemant Exp $
 
 inherit eutils
 
 DESCRIPTION="fast screen-oriented spelling checker"
-SRC_URI="http://fmg-www.cs.ucla.edu/geoff/tars/${P}.tar.gz
-	mirror://gentoo/${P}-gentoo.diff.bz2"
 HOMEPAGE="http://fmg-www.cs.ucla.edu/geoff/ispell.html"
+SRC_URI="http://fmg-www.cs.ucla.edu/geoff/tars/${P}.tar.gz
+	mirror://gentoo/${PF}-gentoo.diff.bz2"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha ~mips ~hppa"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~mips ~hppa"
 
 DEPEND="sys-apps/sed
-	sys-devel/bison
+	dev-util/byacc
+	sys-apps/miscfiles
 	>=sys-libs/ncurses-5.2"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${WORKDIR}/${P}-gentoo.diff
+	cd ${S}
+	epatch ${WORKDIR}/${PF}-gentoo.diff
 }
 
 src_compile() {
 	make config.sh || die
 
 	#Fix config.sh to install to ${D}
+	cp -p config.sh config.sh.orig
 	sed \
 		-e "s:^\(BINDIR='\)\(.*\):\1${D}\2:" \
 		-e "s:^\(LIBDIR='\)\(.*\):\1${D}\2:" \
@@ -45,7 +48,8 @@ src_install() {
 	dodir /usr/bin /usr/lib/ispell /usr/share/info \
 		/usr/share/man/man1 /usr/share/man/man5
 
-	make install || die "Installation Failed"
+	make \
+		install || die "Installation Failed"
 
 	rmdir ${D}/usr/share/man/man5
 	rmdir ${D}/usr/share/info
