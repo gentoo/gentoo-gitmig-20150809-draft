@@ -1,5 +1,5 @@
 MD5 e1d5db80fe1ed9680665c50c11ec3fbe ChangeLog 5761
-MD5 b107d98b8c4f05cedcb6894fb3552fc2 findutils-4.1.20-r1.ebuild 2031
+MD5 027898bb4f64339083a599c95d3ac4f1 findutils-4.1.20-r1.ebuild 2065
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 43e3e3c15b66b30de4be62db3b7674ea files/findutils-4.1.20-selinux.diff 10392
 MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20-r1 68

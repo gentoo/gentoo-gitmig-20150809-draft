@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.25 2004/11/12 15:57:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.20-r1.ebuild,v 1.26 2004/12/07 22:11:46 vapier Exp $
 
-inherit eutils flag-o-matic gnuconfig
+inherit eutils flag-o-matic gnuconfig toolchain-funcs
 
 SELINUX_PATCH="findutils-4.1.20-selinux.diff"
 
@@ -52,8 +52,8 @@ src_compile() {
 	export CPPFLAGS="${CXXFLAGS}"
 	use static && append-ldflags -static
 
-	econf `use_enable nls` || die
-	emake libexecdir=/usr/lib/find || die
+	econf $(use_enable nls) || die
+	emake libexecdir=/usr/lib/find AR="$(tc-getAR)" || die
 }
 
 src_install() {

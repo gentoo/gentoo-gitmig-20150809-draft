@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0925a68b9bc396c4a46a405b2b710443 ChangeLog 7217
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 0fc57d037a61d08786c34e4089c171bc net-tools-1.60-r9.ebuild 3280
+MD5 fe22cc636a8944d54a8009ad745d5d8d net-tools-1.60-r9.ebuild 3295
 MD5 21723cf8906d7431823260022ba2bb12 files/1.60-gcc34.patch 712
 MD5 3d8683073f95e3da2c596bb09c1cbb89 files/1.60-man.patch 737
 MD5 51de6eabe2d6d6dc860f72c41cee636b files/net-tools-1.60-2.6-compilefix.patch 784
 MD5 e98da89f3a64d4842946223b199fd5c7 files/net-tools-1.60-cleanup-list-handling.patch 1322
 MD5 b1288e643ec595e07f37d7fd0d755ba5 files/digest-net-tools-1.60-r9 148
 MD5 492e3dfd36d8f80cfd73ef58dcb2082e files/net-tools-1.60-get_name.patch 1608
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD4DBQFBmPuUHTu7gpaalycRAtghAJjm8LDvwLUQZc7PftCXIR0GRy/mAJ96NupS
-r01RKcmBYGPRIKhdWU4z2Q==
-=w06l
------END PGP SIGNATURE-----
