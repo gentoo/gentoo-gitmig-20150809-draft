@@ -1,6 +1,15 @@
 # ChangeLog for net-p2p/qtella
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.8 2003/02/12 08:40:49 vapier Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.9 2003/02/25 18:21:19 danarmak Exp $
+
+*qtella-0.6.1 (25 Feb 2003) Dan Armak <danarmak@gentoo.org>
+
+  25 Feb 2003; Dan Armak <danarmak@gentoo.org>:
+
+  New version; fix bug #12197. Added a patch to fix a compile problem when
+  kde support is disabled; however do not click on 'check' in the menu as it
+  does strang things... I wouldn't commit this normally, but it's still a lot
+  better than the previous ebuilds, so it's on the way to fixing everything.
 
 *qtella-0.5.4 (8 Dec 2002) Bart Verwilst <verwilst@gentoo.org>
 
