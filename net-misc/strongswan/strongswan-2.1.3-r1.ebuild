@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.1.3-r1.ebuild,v 1.1 2004/07/01 07:27:35 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.1.3-r1.ebuild,v 1.2 2004/07/01 07:59:48 pfeifer Exp $
 
 inherit eutils
 
@@ -106,8 +106,8 @@ src_unpack() {
 	fi
 
 	if [ `use ldap` ]; then
-	ebegin "LDAP support requested. Enabling LDAPv2 support"
-	sed -i -e 's:#LDAP_VERSION=2:LDAP_VERSION=2:g' Makefile || die
+	ebegin "LDAP support requested. Enabling LDAPv3 support"
+	sed -i -e 's:#LDAP_VERSION=3:LDAP_VERSION=3:g' Makefile || die
 	eend $?
 	fi
 
