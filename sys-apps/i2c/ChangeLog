@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/i2c
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.8 2003/10/14 21:02:42 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.9 2003/10/30 21:55:11 mholzer Exp $
+
+*i2c-2.8.1 (30 Oct 2003)
+
+  30 Oct 2003; Martin Holzer <mholzer@gentoo.org> i2c-2.7.0.ebuild,
+  i2c-2.8.0.ebuild, i2c-2.8.1.ebuild:
+  Version bumped. Closes #31180
+
+  30 Oct 2003; Martin Holzer <mholzer@gentoo.org> i2c-2.7.0.ebuild,
+  i2c-2.8.0.ebuild:
+  Changing Slot to ${KV}
 
   14 Oct 2003; <plasmaroo@gentoo.org> i2c-2.7.0.ebuild, i2c-2.8.0.ebuild,
   files/i2c-2.8.0-alphaCompile.patch:
