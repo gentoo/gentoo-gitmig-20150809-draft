@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z.ebuild,v 1.7 2004/04/04 22:02:12 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z.ebuild,v 1.8 2004/04/04 22:08:33 zx Exp $
+
+inherit eutils
 
 SRC_URI="mirror://sourceforge/blt/BLT2.4z.tar.gz"
 HOMEPAGE="http://blt.sf.net"
