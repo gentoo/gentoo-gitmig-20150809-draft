@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/kdejava-3.4.0_beta1.ebuild,v 1.2 2005/02/05 11:39:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/kdejava-3.4.0_beta1.ebuild,v 1.3 2005/02/06 19:22:05 danarmak Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY=qtjava
@@ -20,7 +20,7 @@ DEPEND="virtual/jdk $COMMONDEPEND"
 RDEPEND="virtual/jre $COMMONDEPEND"
 OLDDEPEND="~kde-base/kwin-$PV ~kde-base/kcontrol-$PV ~kde-base/qtjava-$PV virtual/jdk"
 
-PATCHES="$FILESDIR/no-gtk-glib-check.diff $FILESDIR/classpath.diff"
+PATCHES="$FILESDIR/no-gtk-glib-check.diff $FILESDIR/$P-classpath.diff"
 
 
 # Probably missing other kdebase, kdepim etc deps
