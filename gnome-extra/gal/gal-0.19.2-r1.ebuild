@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.19.2-r1.ebuild,v 1.1 2002/05/26 15:14:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.19.2-r1.ebuild,v 1.2 2002/06/08 15:40:50 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Gnome Application Libraries"
@@ -11,7 +11,8 @@ HOMEPAGE="http://www.gnome.org/"
 DEPEND="nls? ( sys-devel/gettext )
 	>=dev-util/intltool-0.11
 	sys-devel/perl
-	>=gnome-base/gnome-vfs-1.0.2-r1
+	( >=gnome-base/gnome-vfs-1.0.2-r1
+	  <gnome-base/gnome-vfs-1.9.0 )
 	>=dev-libs/libunicode-0.4-r1
 	alsa? ( >=media-libs/alsa-lib-0.5.10 )
 	>=gnome-base/gnome-print-0.34
