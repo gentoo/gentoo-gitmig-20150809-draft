@@ -32,7 +32,7 @@
 ## mozilla work.
 
 ## Faster startup
-export XPCOM_CHECK_THREADSAFE=0
+#export XPCOM_CHECK_THREADSAFE=0
 
 cmdname=`basename $0`
 
