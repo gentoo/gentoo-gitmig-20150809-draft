@@ -50,10 +50,6 @@
 =sys-kernel/xfs-sources-2.4.19-r2
 =sys-kernel/gentoo-sources-2.4.19-r10
 
-# <hannes@gentoo.org> (04 Oct 2002)
-# masking pending testing/freeze. look at #8649 for more information
-=media-sound/apollo-1.4.1
-
 # <agenkin@gentoo.org> (04 Oct 2002)
 # Masking pending unfreeze.
 app-games/koth
