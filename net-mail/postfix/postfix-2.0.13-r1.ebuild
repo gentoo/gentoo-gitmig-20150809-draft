@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.13-r1.ebuild,v 1.2 2003/07/18 20:34:39 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.13-r1.ebuild,v 1.3 2003/07/21 08:35:55 raker Exp $
 
 IUSE="ssl mysql sasl ldap ipv6 maildir mbox postgres"
 
@@ -213,9 +213,9 @@ src_install () {
 	exeinto /etc/init.d ; doexe ${FILESDIR}/postfix
 	insinto /etc/pam.d ; newins ${FILESDIR}/smtp.pam smtp
 
-	insinto /etc/sasl2
-	doins ${FILESDIR}/smtpd-2.0.conf smtpd.conf
-	if [ "`use sasl`" ] ; then
+	if [ "`use sasl`" ]; then
+		insinto /etc/sasl2
+		doins ${FILESDIR}/smtpd-2.0.conf smtpd.conf
 		dodir /usr/lib/sasl2
 		dosym ../../../etc/sasl2/smtpd.conf /usr/lib/sasl2/smtpd.conf
 	fi
