@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnocatan
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/ChangeLog,v 1.7 2004/02/24 16:38:41 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/ChangeLog,v 1.8 2004/03/31 19:01:10 mr_bones_ Exp $
+
+  31 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  gnocatan-0.8.1.16-r1.ebuild:
+  inherit eutils for epatch
 
 *gnocatan-0.8.1.16-r1 (24 Feb 2004)
 
