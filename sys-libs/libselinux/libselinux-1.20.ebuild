@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.20.ebuild,v 1.1 2005/01/08 03:04:43 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.20.ebuild,v 1.2 2005/02/14 00:26:36 pebenito Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.nsa.gov/selinux"
 SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ppc sparc amd64"
 
 DEPEND="virtual/libc"
 
