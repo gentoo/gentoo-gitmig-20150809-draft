@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.14 2002/06/05 12:50:24 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.15 2002/06/11 11:05:38 stroke Exp $
+
+*nautilus-2.0.0 (11 Jun 2002)
+  
+  11 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> nautilus-2.0.0.ebuild:
+
+  new version
 
 *nautilus-1.1.19 (05 June 2002)
   
