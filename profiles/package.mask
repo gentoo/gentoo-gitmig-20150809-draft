@@ -674,6 +674,7 @@ dev-lang/tcl-tk
 >=x11-libs/rep-gtk-20020419
 >=dev-libs/librep-20020201
 
+>=gnome-extra/gnome-utils-1.100.0
 
 # spider@gentoo.org ; 18 Apr 2002
 # development branch against gtk+-2.0 (libsigc++ is dependency)
