@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/File-Spec
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Spec/ChangeLog,v 1.1 2003/05/31 19:52:18 mcummings Exp $
+
+*File-Spec-0.82 (31 May 2003)
+
+  31 May 2003; Michael Cummings <mcummings@gentoo.org> File-Spec-0.82.ebuild:
+  Initial import of File-Spec. This fulfills deps for existing modules like
+  CGI.pm
+
