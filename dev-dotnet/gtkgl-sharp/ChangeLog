@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gtkgl-sharp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkgl-sharp/ChangeLog,v 1.1 2004/06/02 17:16:47 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkgl-sharp/ChangeLog,v 1.2 2004/06/02 21:30:23 dholm Exp $
+
+  02 Jun 2004; David Holm <dholm@gentoo.org> gtkgl-sharp-0.05.ebuild:
+  Added to ~ppc.
 
 *gtkgl-sharp-0.05 (02 Jun 2004)
 
