@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.4.20030220.ebuild,v 1.3 2003/03/10 11:13:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.4.20030220.ebuild,v 1.4 2003/03/10 11:15:45 vapier Exp $
 
 DESCRIPTION="GTK2 file-manager"
 HOMEPAGE="http://evidence.sourceforge.net/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="picoggvorbis perl X"
+IUSE="pic oggvorbis perl X"
 
 #	gnome? ( >=gnome-base/gnome-vfs-2.0 >=gnome-base/libgnomecanvas-2.0 )
 DEPEND=">=dev-util/pkgconfig-0.5
