@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/pcsx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pcsx/ChangeLog,v 1.8 2003/04/07 06:21:37 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pcsx/ChangeLog,v 1.9 2003/05/27 06:41:26 msterret Exp $
+
+  26 May 2003; <msterret@gentoo.org> pcsx-1.4.ebuild:
+  New ebuild for 1.5.  There's something odd about the RDEPEND stuff in 1.4 but
+  I don't know what to do about it.  Hopefully someone else will pick this ebuild
+  up and tidy it if necessary.
 
 *pcsx-1.4 (11 Dec 2002)
 
