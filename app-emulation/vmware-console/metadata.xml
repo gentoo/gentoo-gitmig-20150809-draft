@@ -5,10 +5,6 @@
   <email>wolf31o2@gentoo.org</email>
   <name>Chris Gianelloni</name>
 </maintainer>
-<maintainer>
-  <email>vapier@gentoo.org</email>
-  <name>Mike Frysinger</name>
-</maintainer>
 <longdescription>
 VMWare Console is a remote console for a VMWare GSX server.
 </longdescription>
