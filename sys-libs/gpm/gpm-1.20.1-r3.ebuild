@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r3.ebuild,v 1.1 2005/02/07 01:14:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r3.ebuild,v 1.2 2005/02/07 19:32:24 eradicator Exp $
 
 inherit eutils toolchain-funcs
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		--libdir=/lib \
+		--libdir=/$(get_libdir) \
 		--sysconfdir=/etc/gpm \
 		|| die "econf failed"
 	emake \
