@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c-r3.ebuild,v 1.1 2005/03/03 13:52:49 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c-r3.ebuild,v 1.2 2005/03/03 17:01:12 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.washington.edu/imap/ http://vimap.sf.net/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~sparc ~ppc ~hppa ~alpha"
+KEYWORDS="~amd64 x86 ~sparc ~ppc ~hppa ~alpha"
 IUSE="ssl clearpasswd"
 
 PROVIDE="virtual/imapd"
