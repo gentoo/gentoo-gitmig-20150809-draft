@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.6.ebuild,v 1.8 2004/07/14 16:17:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.6.ebuild,v 1.9 2004/07/28 03:36:39 agriffis Exp $
 
 # kde before gnome2, otherwise kde_src_install will override gnome2_src_install
 use kde && inherit kde
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.ximian.com"
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde crypt"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc hppa ~alpha amd64"
+KEYWORDS="x86 ppc sparc hppa alpha amd64 ia64"
 
 # Top stanza are ximian deps
 RDEPEND=">=gnome-extra/libgtkhtml-3.0.10
