@@ -1,6 +1,9 @@
-MD5 67511209f37d19e3869d2b11162e5d6b ChangeLog 2196
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d7dd06078d4f3a44b46709294cc7bc21 metadata.xml 249
 MD5 537ddd8eeff0940c67a0bf23f10bbbd8 squidguard-1.2.0-r1.ebuild 1934
+MD5 e1795a42e9b7492cd973d175835ecea9 ChangeLog 2277
 MD5 127270fbe0d0bfbc141ffaf56313f3e6 files/blockedsites 8
 MD5 bca506ead890af8fe52e0fdf5e73440f files/digest-squidguard-1.2.0-r1 69
 MD5 3e17e52277c56640bb3a9a24da57dae9 files/squidGuard.conf.blocksites 192
@@ -8,3 +11,10 @@ MD5 0c3ba4835c98256ad8ee4bf3336eb277 files/squidGuard.conf.minimal 61
 MD5 5838403ff8fe47285fdc4235a53467ba files/squidguard-1.2.0-db4.patch 685
 MD5 71814cadfec6eed3d7ee2437fdd1f0ab files/squidguard-1.2.0-db41.patch 794
 MD5 d639b977d8cfd92f19913f1d9fa12564 files/squidguard-1.2.0-db42.patch 1348
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOtt8I1lqEGTUzyQRAi3HAJ946O3Ue8z38CLdA1wznqTZaNEMAQCglpAb
+/txjO4vb5TBfdQHNK3oTaRI=
+=LOag
+-----END PGP SIGNATURE-----

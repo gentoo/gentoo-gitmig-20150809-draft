@@ -1,6 +1,16 @@
-MD5 26cf289f4956a05574ea662b67655e1a ChangeLog 722
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d9deb8db85ec3b52b53a3c21bd236125 metadata.xml 487
 MD5 beeb251aea7da47741bc08228c1b1d80 ntlmaps-0.9.8.ebuild 1016
+MD5 f2b6a6d561adcaafde0122d5799a6d36 ChangeLog 805
 MD5 547d2124c00f02458c472025ac835071 files/digest-ntlmaps-0.9.8 57
 MD5 584fc4f03ea3e2cb11cf5d155a86fab0 files/ntlmaps-0.9.8.patch 358
 MD5 822cfcf69e84a4f1705d551644effe52 files/ntlmaps.init 788
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOtq1I1lqEGTUzyQRAgb8AJ91TMY/2K/WdDk4URmTrN9gqFHscACguqHQ
+oPoWh9jjJibbHDCDUIIot28=
+=mNXs
+-----END PGP SIGNATURE-----
