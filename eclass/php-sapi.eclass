@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.41 2004/07/12 05:48:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.42 2004/07/14 16:09:18 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -53,8 +53,9 @@ IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap infor
 # the patch for different versions of PHP
 
 case "$PV" in
-	4.3.6) HARDENEDPHP_PATCH="hardened-php-4.3.6-0.1.2.patch.gz" ;;
-	4.3.7) HARDENEDPHP_PATCH="hardened-php-4.3.7-0.1.2.patch.gz" ;;
+	4.3.6) HARDENEDPHP_PATCH="hardened-php-$PV-0.1.2.patch.gz" ;;
+	4.3.7) HARDENEDPHP_PATCH="hardened-php-$PV-0.1.2.patch.gz" ;;
+	4.3.8) HARDENEDPHP_PATCH="hardened-php-$PV-0.2.1.patch.gz" ;;
 esac
 
 [ -n "$HARDENEDPHP_PATCH" ] && SRC_URI="${SRC_URI} hardenedphp? ( http://www.hardened-php.net/$HARDENEDPHP_PATCH )"
