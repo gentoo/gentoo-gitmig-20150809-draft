@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.8 2005/02/05 20:44:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.9 2005/02/09 01:40:36 hollow Exp $
+
+  09 Feb 2005; Benedikt Boehm <hollow@gentoo.org> apr-util-0.9.5.ebuild:
+  fixed expat, closes #81260
 
   05 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> apr-util-0.9.5.ebuild:
   ~alpha keyword, bug 77455.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.5.ebuild,v 1.8 2005/02/05 20:44:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-0.9.5.ebuild,v 1.9 2005/02/09 01:40:36 hollow Exp $
 
 inherit gnuconfig
 
@@ -52,6 +52,7 @@ src_compile() {
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
 		--with-apr=/usr \
+		--with-expat=/usr \
 		$myconf || die
 
 	emake || die
