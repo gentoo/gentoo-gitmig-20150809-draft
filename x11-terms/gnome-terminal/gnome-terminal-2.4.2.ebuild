@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.4.2.ebuild,v 1.1 2003/11/09 12:41:24 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.4.2.ebuild,v 1.2 2004/01/14 13:56:38 obz Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="The Gnome Terminal"
 
 HOMEPAGE="http://www.gnome.org/"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
+KEYWORDS="x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 
