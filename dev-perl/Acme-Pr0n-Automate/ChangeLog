@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Acme-Pr0n-Automate
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Acme-Pr0n-Automate/ChangeLog,v 1.1 2002/11/21 01:16:45 mkennedy Exp $
+
+*Acme-Pr0n-Automate-0.05 (18 Nov 2002)
+
+  18 Nov 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  Acme-Pr0n-Automate-0.05.ebuild, ChangeLog,
+  files/digest-Acme-Pr0n-Automate-0.05 :
+
+  Initial import.
