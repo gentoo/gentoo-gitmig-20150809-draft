@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.41 2004/07/01 20:56:39 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.42 2004/07/18 06:02:28 vapier Exp $
+
+*dhcp-3.0.1 (18 Jul 2004)
+
+  18 Jul 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/dhcp-3.0+paranoia.patch, +dhcp-3.0.1.ebuild, dhcp-3.0_p2-r5.ebuild,
+  dhcp-3.0_p2-r6.ebuild:
+  Version bump #57347 by Martin Jackson. Also move paranoia patch out of
+  $DISTDIR and into $FILESDIR.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> dhcp-3.0_p2-r4.ebuild,
   dhcp-3.0_p2-r5.ebuild, dhcp-3.0_p2-r6.ebuild:

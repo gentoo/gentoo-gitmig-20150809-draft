@@ -1,44 +1,34 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r6.ebuild,v 1.5 2004/07/18 06:02:28 vapier Exp $
-
-IUSE="static selinux"
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.1.ebuild,v 1.1 2004/07/18 06:02:28 vapier Exp $
 
 inherit eutils flag-o-matic
 
-MY_P=${P/_p/pl}
-S=${WORKDIR}/${MY_P}
-DESCRIPTION="ISC Dynamic Host Configuration Protocol."
+DESCRIPTION="ISC Dynamic Host Configuration Protocol"
 HOMEPAGE="http://www.isc.org/products/DHCP"
-SRC_URI="ftp://ftp.isc.org/isc/dhcp/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.isc.org/isc/dhcp/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="isc-dhcp"
-KEYWORDS="x86 ~ppc ~ppc64 sparc ~mips hppa"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~hppa ~ppc64"
+IUSE="static selinux"
 
 RDEPEND="virtual/libc
-		selinux? ( sec-policy/selinux-dhcp )"
-
+	selinux? ( sec-policy/selinux-dhcp )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
-
 PROVIDE="virtual/dhcpc"
 
 src_unpack() {
-	unpack ${A} && cd "${S}"
-	epatch "${FILESDIR}/dhcp-3.0pl2-user-option-fix.patch"
-	epatch "${FILESDIR}/dhclient.c-3.0-dw-cli-fix.patch"
-	epatch "${FILESDIR}/dhcp-3.0+paranoia.patch"
-	epatch "${FILESDIR}/dhcp-3.0pl2-fix-perms.patch"
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/dhcp-3.0+paranoia.patch
+	epatch ${FILESDIR}/dhcp-3.0pl2-fix-perms.patch
 }
 
 src_compile() {
 	# 01/Mar/2003: Fix for bug #11960 by Jason Wever <weeve@gentoo.org>
-	if [ "${ARCH}" = "sparc" ] ; then
-		filter-flags "-O3"
-		filter-flags "-O2"
-		filter-flags "-O"
-	fi
+	[ "${ARCH}" == "sparc" ] && filter-flags -O3 -O2 -O
 
 	use static && append-flags -static
 
@@ -63,17 +53,16 @@ src_compile() {
 	USRMANDIR = /usr/share/man/man1
 	END
 
-	./configure --with-nsupdate \
-		--copts "-DPARANOIA -DEARLY_CHROOT ${CFLAGS}" || die "configure failed"
+	./configure \
+		--with-nsupdate \
+		--copts "-DPARANOIA -DEARLY_CHROOT ${CFLAGS}" \
+		|| die "configure failed"
 
 	emake || die "compile problem"
 }
 
 src_install() {
-	enewgroup dhcp
-	enewuser dhcp -1 /bin/false /var/lib/dhcp dhcp
-
-	einstall DESTDIR="${D}"
+	make install DESTDIR="${D}" || die
 
 	insinto /etc/dhcp
 	newins server/dhcpd.conf dhcpd.conf.sample
@@ -82,7 +71,7 @@ src_install() {
 		/etc/dhcp/dhclient.conf.sample
 	mv "${D}/sbin/dhclient-script" "${D}/etc/dhcp/dhclient-script.sample"
 
-	dodoc ANONCVS CHANGES COPYRIGHT README RELNOTES doc/*
+	dodoc ANONCVS CHANGES README RELNOTES doc/*
 	newdoc client/dhclient.conf dhclient.conf.sample
 	newdoc client/scripts/linux dhclient-script.sample
 	newdoc server/dhcpd.conf dhcpd.conf.sample
@@ -95,6 +84,11 @@ src_install() {
 	newins "${FILESDIR}/dhcrelay.conf" dhcrelay
 
 	keepdir /var/{lib,run}/dhcp
+}
+
+pkg_preinst() {
+	enewgroup dhcp
+	enewuser dhcp -1 /bin/false /var/lib/dhcp dhcp
 }
 
 pkg_postinst() {

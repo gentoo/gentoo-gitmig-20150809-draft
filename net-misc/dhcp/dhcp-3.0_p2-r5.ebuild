@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r5.ebuild,v 1.4 2004/07/01 20:56:39 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r5.ebuild,v 1.5 2004/07/18 06:02:28 vapier Exp $
 
 IUSE="static selinux"
 
@@ -10,8 +10,7 @@ MY_P=${P/_p/pl}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="ISC Dynamic Host Configuration Protocol."
 HOMEPAGE="http://www.isc.org/products/DHCP"
-SRC_URI="ftp://ftp.isc.org/isc/dhcp/${MY_P}.tar.gz
-	http://www.episec.com/people/edelkind/patches/dhcp/dhcp-3.0+paranoia.patch"
+SRC_URI="ftp://ftp.isc.org/isc/dhcp/${MY_P}.tar.gz"
 
 LICENSE="isc-dhcp"
 SLOT="0"
@@ -28,7 +27,7 @@ src_unpack() {
 	unpack ${A} && cd "${S}"
 	epatch "${FILESDIR}/dhcp-3.0pl2-user-option-fix.patch"
 	epatch "${FILESDIR}/dhclient.c-3.0-dw-cli-fix.patch"
-	epatch "${DISTDIR}/dhcp-3.0+paranoia.patch"
+	epatch "${FILESDIR}/dhcp-3.0+paranoia.patch"
 }
 
 src_compile() {
