@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-hciemu
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hciemu/ChangeLog,v 1.1 2003/03/18 07:02:12 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hciemu/ChangeLog,v 1.2 2003/10/12 02:01:04 liquidx Exp $
+
+  12 Oct 2003; Alastair Tse <liquidx@gentoo.org> bluez-hciemu-1.0.ebuild,
+  metadata.xml:
+  removing kernel dep, add docs and other cleanups
 
 *bluez-hciemu-1.0 (18 Mar 2003)
 
