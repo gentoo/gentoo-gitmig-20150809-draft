@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.1.1.1790.ebuild,v 1.6 2002/08/01 11:40:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.1.1.1790.ebuild,v 1.7 2002/08/06 18:40:13 gerk Exp $
 
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators."
 S=${WORKDIR}/vmware-distrib
@@ -28,7 +28,7 @@ SRC_URI="$SRC_PATH0/${NP}.tar.gz
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
 SLOT="0"
 LICENSE="vmware"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc -sparc -sparc64"
 
 DEPEND="virtual/glibc virtual/x11 sys-kernel/linux-headers
 		>=sys-devel/perl-5 ~dev-lang/tcl-8.3.3"
