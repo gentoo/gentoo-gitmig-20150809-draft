@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/bison
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.34 2005/01/11 01:19:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.35 2005/01/11 01:32:00 vapier Exp $
+
+*bison-2.0 (10 Jan 2005)
+
+  10 Jan 2005; Mike Frysinger <vapier@gentoo.org> +bison-2.0.ebuild:
+  Version bump #77407 by Michael Cramer.
 
   10 Jan 2005; Jason Wever <weeve@gentoo.org> bison-1.875d.ebuild:
   Marked stable on sparc wrt bug #77435 so Spanky can't spank us

@@ -1,8 +1,20 @@
-MD5 d4821b597e2ccfc6ad558bfb34154b2e ChangeLog 5140
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 38b268bccc9305cc9ca830ef0f4cae51 ChangeLog 5278
+MD5 2248d37ee73b8782eb8c1204223bc3bf bison-2.0.ebuild 1396
 MD5 1fa097c5dadf6409725fb45ad1779636 bison-1.875d.ebuild 1786
 MD5 8c84616c45d124011832de90f7838807 bison-1.875.ebuild 1801
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 61b224a9eaf1ae7f77c2d1456d8fda87 files/bison-1.32-extfix.patch 1170
 MD5 644a4912da3e5107f509022f173ec146 files/bison-1.875-gccerror.patch 1538
+MD5 4ac198b61c1a87f5070a32369477eda0 files/digest-bison-2.0 62
 MD5 6af3f9859615301181f6a1536aa56fb1 files/digest-bison-1.875d 65
 MD5 4a875793f3bd808692002c152e5e26c4 files/digest-bison-1.875 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB4yyoroRuSHgZdywRAs6lAKCQ8NEFfGIcO0Wnbh//fNM+csOw3gCeNypB
++V2mkMZeLvXQ6RmB38Ik314=
+=L7r5
+-----END PGP SIGNATURE-----
