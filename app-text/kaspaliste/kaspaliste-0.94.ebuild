@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/kaspaliste-0.94.ebuild,v 1.1 2003/10/11 19:19:10 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/kaspaliste-0.94.ebuild,v 1.2 2004/01/15 18:06:59 lanius Exp $
 
 inherit kde-base
 
@@ -8,7 +8,7 @@ DESCRIPTION="A litterature database"
 SRC_URI="http://kaspaliste.sourceforge.net/${P}.tar.bz2"
 HOMEPAGE="http://kaspaliste.sourceforge.net"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 LICENSE="GPL-2"
 
