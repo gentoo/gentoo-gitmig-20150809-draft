@@ -1,20 +1,21 @@
 # ChangeLog for app-sci/xephem
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/ChangeLog,v 1.4 2002/09/02 02:08:05 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/ChangeLog,v 1.5 2002/09/03 22:33:17 drobbins Exp $
+
+  03 Sep 2002; Daniel Robbins <drobbins@gentoo.org> xephem-3.5.2.ebuild:
+  moved rphillips' 'download later' stuff into pkg_setup so it doesn't
+  kill metadata extraction.
 
 *xephem-3.5.2 (31 May 2002)
 
-  1 Sep 2002; Ryan Phillips <rphillips@gentoo.org> xephem-3.5.2.ebuild :
-
+  01 Sep 2002; Ryan Phillips <rphillips@gentoo.org> xephem-3.5.2.ebuild :
   Fixes to the 'download later' section of the script.
 
   18 Aug 2002; Ryan Phillips <rphillips@gentoo.org> xephem-3.5.2.ebuild :
-
   Thanks to Bret Towe for an update.
 
   25 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> xephem-3.5.2.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
-  
   31 May 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
 
   Added initial ChangeLog which should be updated whenever the package is
