@@ -1,8 +1,12 @@
 # ChangeLog for app-misc/evidence
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/ChangeLog,v 1.6 2003/03/24 18:54:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/ChangeLog,v 1.7 2003/04/02 17:41:57 liquidx Exp $
 
 *evidence-0.9.4.20030220-r2 (24 Mar 2003)
+
+  02 Apr 2003; Alastair Tse <liquidx@gentoo.org>
+  evidence-0.9.4.20030220-r2.ebuild:
+  add a direntry to info file to stop portage from complaining
 
   24 Mar 2003; Martin Schlemmer <azarah@gentoo.org> evidence-0.9.4.20030220-r2.ebuild :
   Fix broken theme and icon symlinks.  Fix looking for loaders in /usr/local/lib.

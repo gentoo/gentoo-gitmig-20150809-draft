@@ -1,0 +1,13 @@
+--- evidence/evidence.texinfo	2002-08-31 09:48:33.000000000 +0100
++++ evidence-new/evidence.texinfo	2003-04-02 17:44:24.000000000 +0100
+@@ -7,6 +7,10 @@
+ @setchapternewpage odd
+ @c %**end of header
+ 
++@direntry
++* evidence: (evidence).         Evidence, a GTK2/e17 file manager
++@end direntry
++
+ @set VERSION 0.1.0
+ 
+ @ifinfo

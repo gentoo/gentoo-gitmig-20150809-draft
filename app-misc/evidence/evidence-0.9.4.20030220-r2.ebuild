@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.4.20030220-r2.ebuild,v 1.1 2003/03/24 18:54:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.4.20030220-r2.ebuild,v 1.2 2003/04/02 17:41:57 liquidx Exp $
+
+inherit eutils
 
 DESCRIPTION="GTK2 file-manager"
 HOMEPAGE="http://evidence.sourceforge.net/"
@@ -38,6 +40,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+    epatch ${FILESDIR}/${PN}-info-direntry.patch || die "patch failed"
 
 	for x in evidence.themes/engines/sb_edb.c setup/*
 	do
