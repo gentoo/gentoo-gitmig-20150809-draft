@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2.8.1-r1.ebuild,v 1.1 2003/03/01 22:39:48 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2.8.1-r1.ebuild,v 1.2 2003/03/06 19:41:24 latexer Exp $
 
 DESCRIPTION="Kismet is a 802.11b wireless network sniffer."
 HOMEPAGE="http://www.kismetwireless.net/"
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~sparc ~ppc"
 IUSE="acpi ipv6 gps ethereal"
 
 DEPEND="gps? ( >=dev-libs/expat-1.95.4 media-gfx/imagemagick )"
-
+RDEPEND="net-wireless/wireless-tools"
 src_compile() {
 	local myconf
 
