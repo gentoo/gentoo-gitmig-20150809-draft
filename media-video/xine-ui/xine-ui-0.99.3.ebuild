@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.3.ebuild,v 1.3 2005/02/17 18:17:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.3.ebuild,v 1.4 2005/03/27 02:33:03 eradicator Exp $
 
 inherit eutils
 
@@ -51,6 +51,10 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} docdir=/usr/share/doc/${PF} docsdir=/usr/share/doc/${PF} install || die
-
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
+
+	rm ${D}/usr/share/xine/desktop/xine.desktop
+
+	insinto /usr/share/applications
+	doins ${FILESDIR}/xine.desktop
 }
