@@ -1,7 +1,6 @@
-- inverse section requests (I like fancy names)
 - sort out docs/sgml, get link from site
 - have ebuilds/eclasses use newdepend()
 - sort debug.eclass msgs into levels, divide output
-
+- MAJOR AND COMPLETE REWRITE (?!)
 
 
