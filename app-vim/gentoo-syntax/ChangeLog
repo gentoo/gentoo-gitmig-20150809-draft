@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.1 2004/08/26 18:51:01 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.2 2004/08/27 09:30:23 kugelfang Exp $
+
+  27 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
+  gentoo-syntax-20040826.ebuild:
+  Marked ~amd64.
 
 *gentoo-syntax-20040826 (26 Aug 2004)
 
