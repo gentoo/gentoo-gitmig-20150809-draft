@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.3.ebuild,v 1.6 2003/09/12 20:23:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.3.ebuild,v 1.7 2003/09/28 17:37:18 pyrania Exp $
 
 inherit eutils flag-o-matic libtool gnome.org
 
@@ -57,10 +57,10 @@ src_compile() {
 		--disable-tests  --disable-examples \
 		${myconf} || die "./configure failed"
 
-	# On alpha some innocuous warnings are spit out that break the
+	# On alpha and amd64 some innocuous warnings are spit out that break the
 	# build because of -Werror
 	use alpha && find . -name Makefile | xargs sed -i -e 's/-Werror//g'
-
+	use amd64 && find . -name Makefile | xargs sed -i -e 's/-Werror//g'
 	emake || die "compile failed"
 }
 
