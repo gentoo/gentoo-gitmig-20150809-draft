@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/root-tail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/ChangeLog,v 1.6 2003/09/24 15:23:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/ChangeLog,v 1.7 2004/03/06 12:27:34 zul Exp $
+
+*root-tail-0.9 (06 Mar 2004)
+
+  06 Mar 2004; Chuck Short <zul@gentoo.org> root-tail-0.0.10.ebuild,
+  root-tail-0.2.ebuild, root-tail-0.9.ebuild:
+  Version bump, closes #43866.
 
   24 Sep 2003; Jason Wever <weeve@gentoo.org> root-tail-0.2.ebuild:
   Added ~sparc keyword
