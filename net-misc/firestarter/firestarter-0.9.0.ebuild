@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/firestarter/firestarter-0.9.0.ebuild,v 1.3 2002/08/18 01:17:32 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/firestarter/firestarter-0.9.0.ebuild,v 1.4 2002/08/30 03:36:55 gerk Exp $
 
 #MY_P=firestarter-${PV}
 S=${WORKDIR}/${P}
@@ -15,7 +15,7 @@ DEPEND="x11-libs/gtk+
 	nls? ( sys-devel/gettext )"
 RDEPEND="${DEPEND}"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_compile() {
 
