@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.5.ebuild,v 1.4 2004/04/20 15:40:18 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.5.ebuild,v 1.5 2004/04/20 19:54:52 foser Exp $
 
 inherit eutils
 
-IUSE="spell jpeg xml2 gnome debug doc"
+IUSE="spell jpeg xml2 gnome doc"
 
 S_P=${S}/${PN}-plugins
 S_D=${S}/${PN}-docs
@@ -57,7 +57,7 @@ src_compile() {
 		`use_enable gnome` \
 		`use_with xml2 libxml2` \
 		`use_enable spell enchant` \
-		`use_enable debug` \
+		--disable-debug \
 		--enable-bidi \
 		--enable-threads \
 		--without-ImageMagick \
