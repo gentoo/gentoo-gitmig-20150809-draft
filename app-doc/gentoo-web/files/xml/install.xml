@@ -215,8 +215,11 @@ restoring a system image.</impo>
 If you're installing from another Linux distribution and your version of tar doesn't have the <c>-j</c> (bzip2) option, the following
 pipeline should do the exact same thing:
 </p><pre>
-# <i>cat /path/to/sys.tbz2 | bzip2 -d | tar -xvf - -C /mnt/gentoo</i>
+# <i>cat /path/to/sys.tbz2 | bzip2 -d | tar -xpvf - -C /mnt/gentoo</i>
 </pre>                                                         
+<impo>Again, notice that we use the extremely important <c>p</c> option to
+extract the tarball.</impo>
+
 </body>
 </section>
 </chapter>
