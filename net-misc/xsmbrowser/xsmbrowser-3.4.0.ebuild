@@ -1,26 +1,28 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsmbrowser/xsmbrowser-3.4.0.ebuild,v 1.8 2004/06/25 00:21:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsmbrowser/xsmbrowser-3.4.0.ebuild,v 1.9 2004/07/14 06:36:07 mr_bones_ Exp $
 
 DESCRIPTION="GUI SMB browser with preview written in expect"
 HOMEPAGE="http://www.public.iastate.edu/~chadspen/xsmbrowser.html"
+SRC_URI="http://www.public.iastate.edu/~chadspen/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~sparc ~amd64"
+IUSE=""
+
 RDEPEND="virtual/x11
 	 net-fs/samba
 	 dev-tcltk/expect"
-KEYWORDS="x86 ~sparc ~amd64"
-SLOT="0"
-SRC_URI="http://www.public.iastate.edu/~chadspen/${P}.tar.gz"
-S=${WORKDIR}/${P}
 
 pkg_setup() {
 	if ! use X; then
-		eerror " "
+		eerror
 		eerror "You must have X in your USE flags.  Expect must be compiled with X support."
 		eerror "Without X support, xSMBrowser will not function."
-		eerror " "
+		eerror
 		eerror "If expect is already merged, you probably have to remerge it with USE=\"X\"."
-		eerror " "
+		eerror
 		die "You must have USE=\"X\"."
 	fi
 }
