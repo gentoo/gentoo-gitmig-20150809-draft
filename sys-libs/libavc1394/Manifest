@@ -1,6 +1,16 @@
-MD5 1569ab69a22f1a6e4f4c255db4098e5b ChangeLog 1348
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4308ecd565f673b71f985c6f95d35f8a ChangeLog 1455
 MD5 56de525941815303af5b0afc6e1588b8 libavc1394-0.3.1.ebuild 811
 MD5 344a0ad69c05c54d71c19a61de55fa62 libavc1394-0.4.1.ebuild 644
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 b9d66cbc5568bbb0285371cb12781d50 files/digest-libavc1394-0.3.1 68
 MD5 22363b2362e88752e67a8dd37624ecce files/digest-libavc1394-0.4.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBXsvPI1lqEGTUzyQRAomWAJ9PXRLvxtP80tyzxsnNQ0i/cm+D0gCguMHA
+c8W+iWhmCm3HtM8Ejehk4mg=
+=yC13
+-----END PGP SIGNATURE-----
