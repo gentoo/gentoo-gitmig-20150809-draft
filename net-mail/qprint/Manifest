@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 23d5e46e4ba3b79c75fa85e633b98b99 ChangeLog 397
+MD5 3af133fe578c377d7b01a6cf90651826 metadata.xml 326
+MD5 c169de38fa3e394705e09ef5c5e08502 qprint-1.0.ebuild 733
+MD5 aeea5e0c260d916996327d21f1f9c6a4 files/digest-qprint-1.0 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBoubt10xuJSrg3/sRAo1TAJ9xUxKE6MBDRPXc491m7beM0JF6IwCeMUvG
+2q6poLF2LZAdcYHiRkjcmP0=
+=WtoI
+-----END PGP SIGNATURE-----

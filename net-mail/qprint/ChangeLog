@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/qprint
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qprint/ChangeLog,v 1.1 2004/11/23 07:28:55 ticho Exp $
+
+*qprint-1.0 (23 Nov 2004)
+
+  23 Nov 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +qprint-1.0.ebuild:
+  Initial import. Closes #25245, ebuild submitted by Ian Abbott <ian@abbott.org>.
+
