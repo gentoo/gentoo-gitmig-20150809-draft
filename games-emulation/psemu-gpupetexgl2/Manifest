@@ -1,4 +1,6 @@
-MD5 8e90b3440fbbe19a2dd02ca857a87e6f ChangeLog 631
+MD5 a54a05201b0910748c2c08ab150b08f7 ChangeLog 817
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 3b0dd39a49336abc92a04b5266bf1be2 psemu-gpupetexgl2-2.0.5-r2.ebuild 1088
+MD5 008de2089b57e90e835bf54db5ff4fdf psemu-gpupetexgl2-2.0.6.ebuild 1031
+MD5 dcae2ca24764feb3dad82b0c8a04a63a files/digest-psemu-gpupetexgl2-2.0.6 210
 MD5 69a07a880a5feaf74d068eef433ca1f4 files/digest-psemu-gpupetexgl2-2.0.5-r2 213
