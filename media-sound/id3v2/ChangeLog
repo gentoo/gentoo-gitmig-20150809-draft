@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/id3v2
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.9 2004/03/01 04:25:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.10 2004/04/08 07:48:16 eradicator Exp $
+
+  08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  id3v2-0.1.9-r1.ebuild:
+  nomirror and stable on x86.
 
   29 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
   id3v2-0.1.9-r1.ebuild, id3v2-0.1.9.ebuild, metadata.xml:
