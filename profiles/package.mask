@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (26 Aug 2002)
+# Masked for testing -- put into portage because the current version 
+# has a buggy od
+=sys-apps/textutils-2.0.21
+
 # <aliz@gentoo.org> (26 Aug 2002)
 # Masked to force lynx-2.8.4.1c
 =net-www/lynx-2.8.4a-r4
