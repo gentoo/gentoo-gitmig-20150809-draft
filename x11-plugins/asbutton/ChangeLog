@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/asbutton
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asbutton/ChangeLog,v 1.1 2003/04/19 19:40:41 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asbutton/ChangeLog,v 1.2 2003/06/18 12:15:25 robh Exp $
+
+*asbutton-0.3-r1 (18 Jun 2003)
+
+  18 Jun 2003; robh <robh@gentoo.org> asbutton-0.3-r1.ebuild,
+  files/asbutton-0.3-r1-gentoo.patch:
+  Made sure a sample asbuttonrc is copied (thanks to Jens Hoffrichter, closes
+  #22982). Also corrected a dep.
 
 *asbutton-0.3 (19 Apr 2003)
 
