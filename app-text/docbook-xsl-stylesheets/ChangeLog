@@ -1,6 +1,9 @@
 # ChangeLog for app-text/docbook-xsl-stylesheets
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/ChangeLog,v 1.9 2003/02/09 07:35:04 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/ChangeLog,v 1.10 2003/02/11 17:14:13 gmsoft Exp $
+
+  11 feb 2003; Guy Martin <gmsoft@gentoo.org> :
+  Added hppa to keywords.
 
 *docbook-xsl-stylesheets-1.60.1 (09 Feb 2003)
 

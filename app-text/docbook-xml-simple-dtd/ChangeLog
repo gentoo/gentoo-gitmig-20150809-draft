@@ -1,6 +1,9 @@
 # ChangeLog for app-text/docbook-xml-simple-dtd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/ChangeLog,v 1.7 2003/02/09 09:06:15 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/ChangeLog,v 1.8 2003/02/11 17:19:13 gmsoft Exp $
+
+  11 Feb 2003; Guy Martin <gmsoft@gentoo.org> docbook-xml-simple-dtd-4.1.2.4.ebuild :
+  Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

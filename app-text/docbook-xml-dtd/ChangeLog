@@ -1,6 +1,9 @@
 # ChangeLog for app-text/docbook-xml-dtd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/ChangeLog,v 1.9 2003/02/10 08:40:47 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/ChangeLog,v 1.10 2003/02/11 17:14:58 gmsoft Exp $
+
+  11 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
+  Added hppa to keywords.
 
   10 Feb 2003; Matthew Turk <satai@gentoo.org>
   Slotted these ebuilds.
