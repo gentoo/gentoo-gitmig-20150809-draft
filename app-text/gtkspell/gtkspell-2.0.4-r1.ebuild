@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.4-r1.ebuild,v 1.9 2004/04/30 18:45:54 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.4-r1.ebuild,v 1.10 2004/05/04 18:25:10 foser Exp $
 
 inherit eutils
 
@@ -13,8 +13,11 @@ SLOT="0"
 KEYWORDS="x86 sparc ~ppc alpha hppa amd64 ia64 mips"
 IUSE="doc"
 
-DEPEND=">=x11-libs/gtk+-2
-	>=app-text/enchant-1
+RDEPEND=">=x11-libs/gtk+-2
+	>=app-text/enchant-1"
+
+DEPEND="${RDEPEND}
+	sys-devel/autoconf
 	doc? ( >=dev-util/gtk-doc-0.6 )"
 
 src_unpack() {
@@ -30,6 +33,8 @@ src_unpack() {
 
 	# use enchant as backend
 	epatch ${FILESDIR}/${P}-enchant.patch
+
+	autoconf || die
 
 }
 
