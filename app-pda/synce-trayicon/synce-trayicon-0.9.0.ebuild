@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/synce-trayicon-0.9.0.ebuild,v 1.3 2005/01/01 15:50:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/synce-trayicon-0.9.0.ebuild,v 1.4 2005/01/26 14:34:16 liquidx Exp $
 
 DESCRIPTION="Synchronize Windows CE devices with computers running GNU/Linux, like MS ActiveSync."
 HOMEPAGE="http://sourceforge.net/projects/synce/"
@@ -14,6 +14,9 @@ IUSE=""
 DEPEND="virtual/libc
 	>=app-pda/synce-librapi2-0.9.0
 	>=x11-libs/gtk+-2.0
+	>=gnome-base/libgtop-2
+	>=gnome-base/libgnome-2
+	>=gnome-base/libglade-2
 	>=gnome-base/libgnomeui-2.0"
 
 src_compile() {
