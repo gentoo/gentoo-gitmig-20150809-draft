@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.7 2003/10/23 22:02:33 brandy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.8 2003/12/18 22:49:36 mholzer Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="MP3/Ogg/Wav-Manager and Jukebox 4 XMMS/Noatun"
 HOMEPAGE="http://yammi.sourceforge.net/"
 SRC_URI="mirror://sourceforge/yammi/${P}fixed.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
