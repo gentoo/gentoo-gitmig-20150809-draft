@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dmalloc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.12 2004/07/02 04:37:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.13 2004/09/12 23:57:31 kloeri Exp $
+
+  13 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> dmalloc-5.3.0.ebuild:
+  Add ~alpha keyword, bug 57485.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   dmalloc-4.8.2-r1.ebuild, dmalloc-5.2.3.ebuild, dmalloc-5.2.4.ebuild,
