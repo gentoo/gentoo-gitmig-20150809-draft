@@ -1,4 +1,5 @@
 virtual/bootloader		sys-boot/palo
-virtual/x11				x11-base/xorg-x11
+virtual/x11			x11-base/xorg-x11
 virtual/opengl			x11-base/xorg-x11
-virtual/glu				x11-base/xorg-x11
+virtual/glu			x11-base/xorg-x11
+virtual/alsa			sys-kernel/hppa-dev-sources
