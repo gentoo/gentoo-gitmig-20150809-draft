@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fetchlog
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/ChangeLog,v 1.1 2003/08/15 12:26:52 phosphan Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/ChangeLog,v 1.2 2004/03/24 10:44:29 phosphan Exp $
+
+  24 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> fetchlog-0.94.ebuild:
+  Removing unnecessary S=...
 
 *fetchlog-0.94 (15 Aug 2003)
 
