@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.1 2004/05/17 03:46:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.2 2004/06/15 00:35:15 mr_bones_ Exp $
+
+  14 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> libssh-0.1.ebuild:
+  fix LICENSE (bug #53926); error check
 
 *libssh-0.1 (17 May 2004)
 
