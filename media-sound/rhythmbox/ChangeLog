@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.24 2003/12/20 14:09:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.25 2003/12/23 14:19:36 foser Exp $
+
+*rhythmbox-0.6.3 (23 Dec 2003)
+
+  23 Dec 2003; foser <foser@gentoo.org> rhythmbox-0.6.3.ebuild :
+  New release
 
 *rhythmbox-0.6.2 (20 Dec 2003)
 
