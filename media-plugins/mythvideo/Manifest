@@ -1,3 +1,4 @@
+MD5 5fe367c089ba59c9e5b0489fb7cfe6d4 mythvideo-0.15.1.ebuild 1053
 MD5 8293832fbcff7fa04a63924946518f0e mythvideo-0.12.ebuild 1782
 MD5 5fe367c089ba59c9e5b0489fb7cfe6d4 mythvideo-0.14.ebuild 1053
 MD5 ab880b645c727db4b27e8b71f91289a6 mythvideo-0.11.ebuild 1765
@@ -8,3 +9,4 @@ MD5 1c1055ed7527e3c6e5c556e1f79456bc files/digest-mythvideo-0.11 67
 MD5 8b1f40b48872fd36d6dfd997ee675a30 files/digest-mythvideo-0.12 67
 MD5 a8800f5c5151851b8e57a6a777fde3b0 files/digest-mythvideo-0.13 67
 MD5 51fbad420f3d94ef8747f16c24ee8c18 files/digest-mythvideo-0.14 67
+MD5 e15e758ba887eb0ff1df3ff4f24db090 files/digest-mythvideo-0.15.1 69

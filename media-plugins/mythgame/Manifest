@@ -2,9 +2,11 @@ MD5 2d88ee960a77aab4923da0c0e7f7e918 mythgame-0.12.ebuild 1995
 MD5 59944a2d4973f1da5a430e1b845c68f8 mythgame-0.14.ebuild 1020
 MD5 f93a85010bf23771390cd4305bfde5a9 mythgame-0.11.ebuild 1992
 MD5 2ca40e3cf45fbb02e89bbf651af52a45 mythgame-0.13.ebuild 1995
+MD5 59944a2d4973f1da5a430e1b845c68f8 mythgame-0.15.ebuild 1020
 MD5 ded7344c31822b8e0d83eac66246599e ChangeLog 2505
 MD5 20e2255501865de5b568424821abf69d metadata.xml 161
 MD5 2bd60d4f779ab52e53d15145940b8946 files/digest-mythgame-0.11 65
 MD5 ace6a7f7f30d271f0c3e7bb1ea4ea89b files/digest-mythgame-0.12 65
 MD5 ba98a6a8ff627a1e603a490d0c21a131 files/digest-mythgame-0.13 65
 MD5 b2fb16ec79b3ec5d217bc4d12d5701a9 files/digest-mythgame-0.14 65
+MD5 e5049b74067dde8ebda7ffbd4938d9b7 files/digest-mythgame-0.15 65

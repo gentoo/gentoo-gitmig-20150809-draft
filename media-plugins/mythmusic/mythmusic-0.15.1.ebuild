@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.12.ebuild,v 1.4 2004/04/26 18:29:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.15.1.ebuild,v 1.1 2004/06/01 17:19:13 aliz Exp $
 
-inherit flag-o-matic
+inherit gcc flag-o-matic eutils
 
 DESCRIPTION="Music player module for MythTV."
 HOMEPAGE="http://www.mythtv.org/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="opengl sdl X"
 
 DEPEND=">=media-sound/cdparanoia-3.9.8
@@ -23,10 +23,10 @@ DEPEND=">=media-sound/cdparanoia-3.9.8
 	X? ( =dev-libs/fftw-2* )
 	opengl? ( virtual/opengl =dev-libs/fftw-2* )
 	sdl? ( >=media-libs/libsdl-1.2.5 )
-	|| ( >=media-tv/mythtv-${PV} >=media-tv/mythfrontend-${PV} )"
+	|| ( >=media-tv/mythtv-${PV}* >=media-tv/mythfrontend-${PV}* )"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${A} && cd "${S}"
 
 	for i in `grep -lr "usr/local" "${S}"` ; do
 		sed -e "s:/usr/local:/usr:" -i "${i}" || die "sed failed"
@@ -39,9 +39,11 @@ src_compile() {
 	myconf="${myconf} `use_enable opengl`"
 	myconf="${myconf} `use_enable sdl`"
 
-	# Fix bug 31952
-	replace-flags mcpu=pentium4 mcpu=pentium3
-	replace-flags march=pentium4 march=pentium3
+	if [ "`gcc-version`" = "3.2" ] || [ "`gcc-version`" = "3.3" ] ; then
+		replace-flags mcpu=pentium4 mcpu=pentium3
+		replace-flags march=pentium4 march=pentium3
+	fi
+
 	local cpu="`get-flag march || get-flag mcpu`"
 	if [ "${cpu}" ] ; then
 		sed -e "s:pentiumpro:${cpu}:g" -i "settings.pro" || die "sed failed"
@@ -55,26 +57,5 @@ src_compile() {
 
 src_install() {
 	einstall INSTALL_ROOT="${D}"
-
-	insinto "/usr/share/mythtv/database/${PN}"
-	doins musicdb/*.sql
-
 	dodoc AUTHORS COPYING README UPGRADING
-	newdoc musicdb/README README.db
-}
-
-pkg_postinst() {
-	einfo "If this is the first time you install MythMusic,"
-	einfo "you need to add /usr/share/mythtv/database/${PN}/metadata.sql"
-	einfo "to your MythTV database."
-	einfo
-	einfo "You might run 'mysql < /usr/share/mythtv/database/${PN}/metadata.sql'"
-	einfo
-	einfo "If you're upgrading from an older version and for more"
-	einfo "setup and usage instructions, please refer to:"
-	einfo "   /usr/share/doc/${PF}/README.gz"
-	einfo "   /usr/share/doc/${PF}/UPGRADING.gz"
-	ewarn "This part is important as there might be database changes"
-	ewarn "which need to be performed or this package will not work"
-	ewarn "properly."
 }

@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythweather
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.13 2004/04/20 17:46:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.14 2004/06/01 17:23:26 aliz Exp $
+
+*mythweather-0.15 (01 Jun 2004)
+
+  01 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> mythweather-0.11.ebuild,
+  mythweather-0.12.ebuild, mythweather-0.15.ebuild:
+  Version bump and cleanups.
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mythweather-0.11.ebuild, mythweather-0.12.ebuild, mythweather-0.13.ebuild,

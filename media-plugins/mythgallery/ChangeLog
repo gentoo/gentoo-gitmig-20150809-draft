@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythgallery
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.16 2004/04/26 18:21:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.17 2004/06/01 17:15:29 aliz Exp $
+
+*mythgallery-0.15 (01 Jun 2004)
+
+  01 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> mythgallery-0.11.ebuild,
+  mythgallery-0.12.ebuild, mythgallery-0.15.ebuild:
+  Version bump and cleanups.
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> mythgallery-0.14.ebuild:
   Add die following econf for bug 48950
