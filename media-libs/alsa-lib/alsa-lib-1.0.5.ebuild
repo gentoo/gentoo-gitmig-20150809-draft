@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.5.ebuild,v 1.8 2004/07/24 03:04:14 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.5.ebuild,v 1.9 2004/07/24 05:32:11 eradicator Exp $
 
 inherit libtool
 
@@ -12,6 +12,8 @@ KEYWORDS="x86 ppc ~alpha amd64 -sparc ~ia64 ppc64"
 LICENSE="GPL-2 LGPL-2.1"
 
 IUSE="static jack"
+
+RDEPEND="virtual/libc"
 
 DEPEND=">=sys-devel/automake-1.7.2
 	>=sys-devel/autoconf-2.57-r1"

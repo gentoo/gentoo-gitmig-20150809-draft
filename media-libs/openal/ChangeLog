@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.28 2004/07/07 20:52:57 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.29 2004/07/24 05:34:13 eradicator Exp $
+
+  23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  openal-20020127.ebuild:
+  Removed auto* from RDEPEND.
 
   07 Jul 2004; Travis Tilley <lv@gentoo.org> openal-20040303.ebuild:
   stable on amd64
