@@ -1147,15 +1147,15 @@ def port_porttree():
 				continue
 			if y=="CVS":
 				continue
-		for mypkg in os.listdir(os.getcwd()+"/"+x+"/"+y):
-			if mypkg[-7:] != ".ebuild":
-				continue
-			mypkg=mypkg[:-7]
-			mykey=x+"/"+y
-			fullpkg=x+"/"+mypkg
-			if not portagedict.has_key(mykey):
-				portagedict[mykey]=[]
-			portagedict[mykey].append([fullpkg,catpkgsplit(fullpkg)])
+			for mypkg in os.listdir(os.getcwd()+"/"+x+"/"+y):
+				if mypkg[-7:] != ".ebuild":
+					continue
+				mypkg=mypkg[:-7]
+				mykey=x+"/"+y
+				fullpkg=x+"/"+mypkg
+				if not portagedict.has_key(mykey):
+					portagedict[mykey]=[]
+				portagedict[mykey].append([fullpkg,catpkgsplit(fullpkg)])
 	os.chdir(origdir)
 	return portagedict
 	
