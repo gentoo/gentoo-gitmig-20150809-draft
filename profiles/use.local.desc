@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1005 2005/03/11 03:33:17 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1006 2005/03/11 16:20:38 st_lim Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -147,12 +147,17 @@ dev-java/fop:jai - Enable jai support
 dev-java/fop:jimi - Enable jimi support
 dev-java/gnu-classpath:native - Compile native .so libraries
 dev-java/gnu-javamail:javadoc - Generate API documentation
+dev-java/hibernate:c3p0 - Enable c3p0 support
+dev-java/hibernate:dbcp - Enable Database Connection Pooling support
+dev-java/hibernate:jboss - Enable JBoss support
+dev-java/hibernate:oscache - Enable OSCache support
+dev-java/hibernate:proxool - Enable Proxool support
 dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
 dev-java/log4j:javamail - Build the SMTPAppender
 dev-java/log4j:jms - Build the JMSAppender
 dev-java/log4j:jmx - Build org.apace.log4j.jmx
 dev-java/quartz:dbcp - Enable dbcp support
-dev-java/quartz:jboss - Enable jboss support
+dev-java/quartz:jboss - Enable JBoss support
 dev-java/quartz:jmx - Enable jmx support
 dev-java/quartz:jta - Enable jta support
 dev-java/quartz:servlet-2.3 - Enable servlet-2.3 support
