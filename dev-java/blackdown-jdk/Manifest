@@ -3,7 +3,7 @@ MD5 92f520d931517e0bf77f02dae191975e blackdown-jdk-1.3.1-r8.ebuild 2316
 MD5 57b0ab845a9a522c1e7d490f5a832369 blackdown-jdk-1.4.1-r1.ebuild 3844
 MD5 5d9fe13db8048b9a99fab19e28d1117c blackdown-jdk-1.4.2.01.ebuild 4317
 MD5 f3c59ad6d2dc788f5d5ff0bbe90719b5 blackdown-jdk-1.3.1-r10.ebuild 2170
-MD5 36d601a30e78b00a2082cf00f7542358 ChangeLog 12698
+MD5 2c84b313e79385e3af91a4a5aea53b61 ChangeLog 12811
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 34e2dcfed358db9c2c63d0e1b834a310 files/blackdown-jdk-1.4.2.01-r1 640
 MD5 c9852c72bb83b5f0d4b48f1dd3ca4459 files/blackdown-jdk-1.4.2.01 637

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.71 2005/01/24 20:03:45 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.72 2005/01/24 22:17:16 luckyduck Exp $
+
+  24 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> :
+  added server jvm directory to ADDLDPATH. see bug #74589
 
   24 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
   files/blackdown-jdk-1.4.2.01, files/blackdown-jdk-1.4.2.01-r1,
