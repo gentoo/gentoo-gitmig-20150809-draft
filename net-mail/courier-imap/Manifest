@@ -1,6 +1,9 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 98ff975617b94649165b1789b86b5a99 courier-imap-3.0.5.ebuild 8530
-MD5 65b58943ab147f5659b79f310c61fc86 courier-imap-3.0.7.ebuild 9330
-MD5 87c102f1934ce31745ec6329c0d8e13a ChangeLog 14559
+MD5 80c7cd71a3af2e7cfaae72edf6b78587 courier-imap-3.0.7.ebuild 9235
+MD5 93fa3ceacee4435446cbc3539882f67c ChangeLog 14676
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 MD5 d9d0cf2a19ee5b20039583b7cb4cffcc files/courier-pop3d-ssl.rc6-3.0.5 1204
 MD5 457d7f87a25f4f8f05af321130d846bf files/courier-imap-3.0.7-db4-bdbobj_configure.in.patch 1263
@@ -30,3 +33,10 @@ MD5 70a999ccc2bc13e7df65b72959fa6f7d files/gentoo-pop3d.rc 997
 MD5 92cd406de622a1cf2de2ffc0662349bc files/authdaemond.rc6 957
 MD5 9f46519bb9780f36b21727a008545b89 files/courier-pop3d.rc6 953
 MD5 7b677e761c000af45fa7a37635b0c5c8 files/mkpop3dcert 996
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBKoLh5FrxP71izLARAo9pAJ9bCdvV2/UcBBmsT3hK74VysOAF9QCeMgfB
+v2ZsR6KkXWE479/Gm+E7Jx4=
+=4lPS
+-----END PGP SIGNATURE-----
