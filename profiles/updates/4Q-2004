@@ -188,3 +188,4 @@ move app-sci/coq sci-mathematics/coq
 move app-sci/drgeo sci-mathematics/drgeo
 move app-sci/euler sci-mathematics/euler
 move app-sci/geomview sci-mathematics/geomview
+move app-sci/gimps sci-mathematics/gimps
