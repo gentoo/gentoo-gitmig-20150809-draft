@@ -1,8 +1,12 @@
 # ChangeLog for dev-ruby/strscan
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/strscan/ChangeLog,v 1.4 2003/04/08 09:34:42 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/strscan/ChangeLog,v 1.5 2003/05/07 17:47:41 twp Exp $
 
 *strscan-0.6.7 (08 Apr 2003)
+
+  07 May 2003; Tom Payne <twp@gentoo.org> strscan-0.6.7.ebuild :
+
+  Marked stable on all architectures. Bug # 14898.
 
   08 Apr 2003; Tom Payne <twp@gentoo.org> ChangeLog strscan-0.6.7.ebuild :
 
