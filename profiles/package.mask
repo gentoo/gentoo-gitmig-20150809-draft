@@ -472,11 +472,6 @@ x11-terms/powershell
 # masked coz all our packages only use the old version
 >=net-libs/libnet-1.1.0
 
-# <spider@gentoo.org> (08 Sep 2002)
-# new ebuild. cvs checkout of galeon <head> (galeon2)
-#net-www/galeon-cvs
-
-
 # <azarah@gentoo.org> (08 Sep 2002)
 # Get things ready for new xfree release.
 #=x11-base/xfree-4.2.1
