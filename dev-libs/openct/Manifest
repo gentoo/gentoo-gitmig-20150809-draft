@@ -1,17 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 09e6cff5ced61fba252387afbbad7646 openct-0.5.0.ebuild 1709
-MD5 16c4b3092c6134fd0a1841414c0e0c14 ChangeLog 903
+MD5 089283f5145f5fab6b797b26a3362ae2 ChangeLog 1000
+MD5 e0da33789bfb088c48c8c96b33b37ed4 openct-0.5.0.ebuild 1756
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 a29db091fb7bf907da5c86f744270314 openct-0.6.1.ebuild 1698
 MD5 2a696bc8aef7e7b84c42314e41cb3730 files/digest-openct-0.5.0 64
+MD5 f9d3bb65907d0de3d41783b94994c5b6 files/digest-openct-0.6.1 64
 MD5 f9bb624a2f171539f67614d14137476f files/openct.rc 591
 MD5 1c5deb2518b60e86d26532f43ca42885 files/usb.usermap 1062
-MD5 f9d3bb65907d0de3d41783b94994c5b6 files/digest-openct-0.6.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBazYHHTu7gpaalycRAjMKAKDPG+T6m1AIaPKeCQ4aKqEuHz9SmQCgv/HP
-9D8PQfJk9/bp+KWpR6HY5rc=
-=mWMB
------END PGP SIGNATURE-----
