@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.6 2004/09/28 01:53:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.7 2004/10/02 15:49:13 latexer Exp $
+
+*hal-0.2.98-r1 (02 Oct 2004)
+
+  02 Oct 2004; <peter@gentoo.org> +hal-0.2.98-r1.ebuild:
+  Revision bump. hal-device-manager now comes from a seperate package.
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> files/hald:
   Gentoo Technologies, Inc. -> Gentoo Foundation
