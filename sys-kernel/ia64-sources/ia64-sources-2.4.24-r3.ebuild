@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.24.ebuild,v 1.1 2004/01/29 23:15:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.24-r3.ebuild,v 1.1 2004/04/17 11:44:12 plasmaroo Exp $
 
 IUSE=""
 
@@ -17,7 +17,7 @@ IUSE=""
 
 ETYPE="sources"
 
-inherit kernel
+inherit kernel eutils
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
 EXTRAVERSION="-${PN/-*/}"
 [ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
@@ -53,6 +53,11 @@ src_unpack() {
 	# 2.4.24 includes the do_brk, mremap and rtc fixes, so those
 	# patches aren't needed (29 Jan 2004 agriffis)
 
+	epatch ${FILESDIR}/${P}.munmap.patch || die "Failed to apply munmap patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0010.patch || die "Failed to add the CAN-2004-0010 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0177.patch || die "Failed to add the CAN-2004-0177 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0178.patch || die "Failed to add the CAN-2004-0178 patch!"
 	kernel_universal_unpack
 }
 
