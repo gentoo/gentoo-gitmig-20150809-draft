@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/root-tail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/ChangeLog,v 1.27 2005/02/24 10:59:21 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/ChangeLog,v 1.28 2005/03/10 10:51:02 ka0ttic Exp $
+
+  10 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> root-tail-1.2-r1.ebuild,
+  root-tail-1.2-r2.ebuild:
+  Append -DDEBUG if USE=debug; also fixed deps.
 
 *root-tail-1.2-r2 (24 Feb 2005)
 
