@@ -106,7 +106,5 @@
 *sys-libs/zlib
 *net-misc/openssh
 *sys-apps/devfsd
-*dev-java/compaq-jdk
-*dev-java/compaq-jre
 # not using supersed yet
 # *sys-apps/supersed
