@@ -55,7 +55,7 @@ MD5 c378c5845848ee31d70f0d05cbcf86be files/1.03-r8/dot_qmail 12
 MD5 f43900d79a0aacb5e0d71b0bb6c06fea files/1.03-r8/run-qmailsmtpdlog 97
 MD5 834dad5113515d0f00981fdc1d07fa84 files/1.03-r8/run-qmailsendlog 96
 MD5 abc975ae7274a2b5332231ba3f78db76 files/1.03-r8/qmail-linksync.patch 1363
-MD5 77490d2c33be1d63ca8dfa129569b48e files/1.03-r8/qmail-control 799
+MD5 40f781a0a2aa618dd444e1fdc02322a1 files/1.03-r8/qmail-control 792
 MD5 23a2babf3049fe012de21c17e550b3e5 files/1.03-r8/run-qmailsend 29
 MD5 71aa0894c118dda3405f1f847944158c files/1.03-r9/qmail-queue.patch 1512
 MD5 aa0823cdce32c502c856664c8b0ce775 files/1.03-r9/run-qmailsmtpd 231
@@ -65,7 +65,7 @@ MD5 c378c5845848ee31d70f0d05cbcf86be files/1.03-r9/dot_qmail 12
 MD5 f43900d79a0aacb5e0d71b0bb6c06fea files/1.03-r9/run-qmailsmtpdlog 97
 MD5 834dad5113515d0f00981fdc1d07fa84 files/1.03-r9/run-qmailsendlog 96
 MD5 abc975ae7274a2b5332231ba3f78db76 files/1.03-r9/qmail-linksync.patch 1363
-MD5 5e2b78e0fcdd06a7bf94bd28c0620da6 files/1.03-r9/qmail-control 799
+MD5 a732c539383e75f9aa9102644bd43689 files/1.03-r9/qmail-control 792
 MD5 23a2babf3049fe012de21c17e550b3e5 files/1.03-r9/run-qmailsend 29
 MD5 f42a779e5c708c2d7bf38de66dfb93f5 files/1.03-r10/rc 108
 MD5 ec7a73ba2bca7d6dd54ba92cf13136c9 files/1.03-r10/run-qmailpop3d 223
@@ -79,7 +79,7 @@ MD5 c378c5845848ee31d70f0d05cbcf86be files/1.03-r10/dot_qmail 12
 MD5 f43900d79a0aacb5e0d71b0bb6c06fea files/1.03-r10/run-qmailsmtpdlog 97
 MD5 834dad5113515d0f00981fdc1d07fa84 files/1.03-r10/run-qmailsendlog 96
 MD5 dd5158b78a3878d78a68878f1910e0e4 files/1.03-r10/tls.patch.bz2 10458
-MD5 8450d09cd69ccfede01fc30a3b821d46 files/1.03-r10/qmail-control 800
+MD5 676a679be60e98c9f021af0e8d76bca5 files/1.03-r10/qmail-control 793
 MD5 23a2babf3049fe012de21c17e550b3e5 files/1.03-r10/run-qmailsend 29
 MD5 0e97c0b031776f40cacdfbf3114af574 files/1.03-r10/run-qmailpop3dlog 97
 MD5 f42a779e5c708c2d7bf38de66dfb93f5 files/1.03-r11/rc 108
@@ -99,7 +99,7 @@ MD5 3c8fd1daa3348423eca334bdb1b24669 files/1.03-r11/conf-qmqpd 484
 MD5 7d1a5e91c21c0e78d738afb460adfba2 files/1.03-r11/conf-qmtpd 576
 MD5 5b2334c4a3d2490abec42ad84b398162 files/1.03-r11/conf-smtpd 338
 MD5 834dad5113515d0f00981fdc1d07fa84 files/1.03-r11/run-qmailsendlog 96
-MD5 ad8477dc1ab506c430ce40b3f3746e9f files/1.03-r11/qmail-control 848
+MD5 0841858b17b70abd7324fa491e3153a7 files/1.03-r11/qmail-control 841
 MD5 60622116b5b3f17230d4c04effceddaf files/1.03-r11/conf-common 836
 MD5 23a2babf3049fe012de21c17e550b3e5 files/1.03-r11/run-qmailsend 29
 MD5 0e97c0b031776f40cacdfbf3114af574 files/1.03-r11/run-qmailpop3dlog 97
@@ -124,7 +124,7 @@ MD5 6bcaeec84cc0944598bc878be2440304 files/1.03-r12/conf-qmtpd 562
 MD5 cde8043f5e58cd20ddfd6ef088ceaa98 files/1.03-r12/conf-smtpd 1709
 MD5 834dad5113515d0f00981fdc1d07fa84 files/1.03-r12/run-qmailsendlog 96
 MD5 2a725c31201c59077cd389486407624f files/1.03-r12/qmail-smtpd-esmtp-size-gentoo.patch 2131
-MD5 847810e07e15171857df9ef6a1a1f9bc files/1.03-r12/qmail-control 848
+MD5 157077927d26cf107005e41b8b5ae594 files/1.03-r12/qmail-control 841
 MD5 dda736a7fb5a56209abead6e840252e8 files/1.03-r12/badrcptto-morebadrcptto-accdias-gentoo 19322
 MD5 d4eb13844209f943ef9c5970de871830 files/1.03-r12/conf-common 1094
 MD5 34adc148cab4c8a592c4115846640344 files/1.03-r12/config-sanity-check 814
@@ -153,7 +153,7 @@ MD5 1a8f1d3d7355eccd09e0f7066671d277 files/1.03-r13/conf-smtpd 1707
 MD5 834dad5113515d0f00981fdc1d07fa84 files/1.03-r13/run-qmailsendlog 96
 MD5 9f47bd621b273dab86283c0b91c656bb files/1.03-r13/mkservercert 1434
 MD5 2a725c31201c59077cd389486407624f files/1.03-r13/qmail-smtpd-esmtp-size-gentoo.patch 2131
-MD5 cf911aa7dcc6044b7ce457a94c716505 files/1.03-r13/qmail-control 856
+MD5 d4d25a1094931cdc4f939bddb3109284 files/1.03-r13/qmail-control 849
 MD5 a35ee23ca22db351b7be0a97a1fb9fdf files/1.03-r13/conf-common 1094
 MD5 05ee30d630250efbea71cee3ad60e179 files/1.03-r13/config-sanity-check 814
 MD5 d3997795df512803e6a27b5486d2b81e files/1.03-r13/qmail-smtpd-relay-reject.gentoo.patch 1433

@@ -7,6 +7,6 @@ MD5 e00a488aecb141a34c5ec43eac58b9a9 files/15xmail 24
 MD5 5bbd572781bd63319f432d3a74a399cf files/digest-xmail-1.16-r1 62
 MD5 5bbd572781bd63319f432d3a74a399cf files/digest-xmail-1.16 62
 MD5 6581875d1cebeca3b8fe46e7474622e1 files/digest-xmail-1.20 62
-MD5 83d5827b27ef269bc0cd20f87b1fd8c2 files/xmailwizard 2306
+MD5 722274fd9ffd32da5477fb703d3f657c files/xmailwizard 2299
 MD5 8f93bde743cf3f7a77f27bcf602aa4dc files/xmail.confd 409
-MD5 6445512ce263f40aad7eabadeea2e3d7 files/xmail.initd 2803
+MD5 006332f5dceeb1f9e334cbd295a98344 files/xmail.initd 2796

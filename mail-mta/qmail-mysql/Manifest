@@ -16,7 +16,7 @@ MD5 b24f4dbd450d2d4eddc75ba19cebb915 files/1.03/defaultdelivery 34
 MD5 c378c5845848ee31d70f0d05cbcf86be files/1.03/dot_qmail 12
 MD5 f43900d79a0aacb5e0d71b0bb6c06fea files/1.03/run-qmailsmtpdlog 97
 MD5 834dad5113515d0f00981fdc1d07fa84 files/1.03/run-qmailsendlog 96
-MD5 bfb155ffb0b884e9b62003b2fd47a0a6 files/1.03/qmail-control 812
+MD5 600548424848fe3197201d5f2a00626b files/1.03/qmail-control 805
 MD5 23a2babf3049fe012de21c17e550b3e5 files/1.03/run-qmailsend 29
 MD5 6c0f741d2f9a7cc5e6b346d435ab0e64 files/1.03-r13/rc 117
 MD5 e44346ddbb073775f16bc96fdbf3d28b files/1.03-r13/run-qmailpop3d 1182
@@ -40,7 +40,7 @@ MD5 3784ae157ab963297381f6b4641d559b files/1.03-r13/conf-smtpd 1715
 MD5 834dad5113515d0f00981fdc1d07fa84 files/1.03-r13/run-qmailsendlog 96
 MD5 527bd550408bdf44f74c8f1848c98cb2 files/1.03-r13/mkservercert 1440
 MD5 2a725c31201c59077cd389486407624f files/1.03-r13/qmail-smtpd-esmtp-size-gentoo.patch 2131
-MD5 b0349d8d417d48a7e6ba68c57235824c files/1.03-r13/qmail-control 864
+MD5 5d88ac807ea662dd22f5b49c2cf16aee files/1.03-r13/qmail-control 857
 MD5 5d9ab1dcd266faecef92921394411056 files/1.03-r13/conf-common 1100
 MD5 a0a031cd2dfff99b52de094a5d2ff234 files/1.03-r13/config-sanity-check 820
 MD5 d3997795df512803e6a27b5486d2b81e files/1.03-r13/qmail-smtpd-relay-reject.gentoo.patch 1433

@@ -14,7 +14,7 @@ MD5 342c65cb8c9a9f695632b7c31b48efc7 postfix-2.0.11.ebuild 5887
 MD5 4d990dab16b401d2089652fd65ba5fe1 postfix-2.0.19-r3.ebuild 6435
 MD5 1500b5e39b34095feae698e12ed31559 postfix-1.1.11.20020917.ebuild 4543
 MD5 6775371821db3139dd2470c794a1e01f files/digest-postfix-1.1.11.20020917-r1 166
-MD5 caa45c1c2711fe687d0896d8b6400e78 files/postfix.rc6 585
+MD5 ae2c43ff532a05c6093dfd42ed09dfd1 files/postfix.rc6 578
 MD5 0de0aeb149204f1dc5ead666107694ce files/smtp.pass 137
 MD5 4ac27d1fe53badbee2546d5044ca3d27 files/smtp.sasl 127
 MD5 0acffde07d4dd4906e5f1cdb7dc9a646 files/main.cf 18374
