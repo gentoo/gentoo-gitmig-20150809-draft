@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3310 2004/11/11 08:30:07 eradicator Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3311 2004/11/12 04:00:18 fafhrd Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -216,30 +216,10 @@ dev-perl/libapreq2
 # - This will "make room" for the new packages/setup for GNUstep
 # - This will make it much more apparent to users that these packages
 #     are broken, for most intents and purposes
-# gnustep-libs
 =gnustep-libs/gnustep-guile-1.0.3
 =gnustep-libs/gnustep-guile-1.1.1
 =gnustep-libs/jigs-1.5.5
-=gnustep-libs/renaissance-0.7.0
-=gnustep-libs/pantomime-1.1.0*
-# gnustep-base
-<=gnustep-base/gnustep-make-1.7.2
-<=gnustep-base/gnustep-base-1.7.2
-<=gnustep-base/gnustep-gui-0.8.8
-<=gnustep-base/gnustep-back-0.8.8
-=gnustep-base/gnustep-env-0.1
-# gnustep-apps
-=gnustep-apps/affiche-0.6.0
-=gnustep-apps/easydiff-0.1
-=gnustep-apps/gnumail-1.1.0
-=gnustep-apps/gorm-0.3.0
-=gnustep-apps/gridlock-1.6.1
-=gnustep-apps/gworkspace-0.5.3
-=gnustep-apps/helpviewer-0.3
-=gnustep-apps/imageviewer-0.6.2
-=gnustep-apps/projectcenter-0.3.5
 =gnustep-apps/talksoup-0.81
-=gnustep-apps/terminal-0.9.4
 
 # Karl Trygve Kalleberg <karltk@gentoo.org> (23 Sep 2004)
 # upstream is unstable
