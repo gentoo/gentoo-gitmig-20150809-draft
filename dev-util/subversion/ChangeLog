@@ -1,9 +1,14 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.116 2004/11/05 21:25:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.117 2004/11/07 13:36:41 pauldv Exp $
 
   05 Nov 2004; Aron Griffis <agriffis@gentoo.org> subversion-1.0.9.ebuild:
   Remove attempted installation of cvs2svn #47099
+
+*subversion-1.1.1 (05 Nov 2004)
+
+  05 Nov 2004; <pauldv@gentoo.org> +subversion-1.1.1.ebuild:
+  New upstream version
 
   04 Nov 2004; Aron Griffis <agriffis@gentoo.org> subversion-1.0.9.ebuild,
   subversion-1.1.0.ebuild:
