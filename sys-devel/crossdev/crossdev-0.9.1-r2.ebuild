@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/crossdev-0.9.1-r2.ebuild,v 1.1 2005/03/12 19:33:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/crossdev-0.9.1-r2.ebuild,v 1.2 2005/03/15 04:59:54 vapier Exp $
 
 DESCRIPTION="Gentoo Cross-toolchain generator"
 HOMEPAGE="http://www.gentoo.org/"
@@ -16,6 +16,6 @@ RDEPEND="sys-apps/portage
 	sys-apps/coreutils"
 
 src_install() {
-	dobin "${FILESDIR}"/crossdev || die
+	dosbin "${FILESDIR}"/crossdev || die
 	dosed "s:GENTOO_PV:${PV}:" /usr/bin/crossdev
 }
