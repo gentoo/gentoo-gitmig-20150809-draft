@@ -163,6 +163,7 @@ src_install() {
 	dodir /etc/pam.d
 	make install DESTDIR=${D} || die
 	# fix bug #15873 bad owner on /var/run/courier
+	mkdir -p ${D}/var/run/courier
 	diropts -o mail -g mail
 	for dir2keep in `(cd ${D} && find . -type d)` ; do
 		keepdir $dir2keep || die "failed running keepdir: $dir2keep"
