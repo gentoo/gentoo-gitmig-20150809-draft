@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.4 2002/09/11 18:00:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.5 2002/09/14 00:45:23 azarah Exp $
 
 inherit flag-o-matic gcc
 # Compile problems with these ...
@@ -280,6 +280,9 @@ src_install() {
 	# .la files for libtool support
 	insinto /usr/X11R6/lib
 	doins ${FILESDIR}/${PVR}/lib/*.la
+
+	# Remove libz.a, as it causes problems (bug #4777)
+	rm -f ${D}/usr/X11R6/lib/libz.a
 
 	exeinto /etc/X11
 	# new session management script
