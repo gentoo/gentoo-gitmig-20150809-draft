@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.9.ebuild,v 1.1 2003/09/10 05:27:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.9.ebuild,v 1.2 2003/10/17 22:22:42 leonardop Exp $
 
 inherit games eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://dopewars.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="nls ncurses gtk gtk2 gnome esd sdl"
 
 DEPEND="=dev-libs/glib-1.2*
@@ -47,9 +47,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	cd ${D}/${GAMES_DATADIR}
-	use gnome \
-		&& mv gnome ../ \
-		|| rm -rf gnome
+	use gnome && mv gnome ../ || rm -rf gnome
 	mv pixmaps ../
 	dohtml -r doc/*/*
 	rm -rf doc
