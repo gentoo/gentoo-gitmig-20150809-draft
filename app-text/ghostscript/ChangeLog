@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.94 2005/01/02 22:05:00 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.95 2005/03/04 11:24:20 lanius Exp $
+
+  04 Mar 2005; Heinrich Wendel <lanius@gentoo.org>
+  -ghostscript-7.05.6-r1.ebuild, -ghostscript-7.05.6.ebuild,
+  -ghostscript-7.07.1-r1.ebuild, -ghostscript-7.07.1-r2.ebuild,
+  -ghostscript-7.07.1-r3.ebuild, -ghostscript-7.07.1-r4.ebuild,
+  -ghostscript-7.07.1-r5.ebuild, -ghostscript-7.07.1-r6.ebuild:
+  cleanups
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
