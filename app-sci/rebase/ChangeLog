@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/rebase
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/rebase/ChangeLog,v 1.7 2004/11/20 23:38:28 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/rebase/ChangeLog,v 1.8 2004/12/14 00:49:03 ribosome Exp $
+
+*rebase-412 (13 Dec 2004)
+
+  13 Dec 2004; Olivier Fisette <ribosome@gentoo.org> rebase-411.ebuild,
+  +rebase-412.ebuild:
+  New version: 412. Added 411 to x86.
 
   21 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> rebase-411.ebuild:
   Keyworded ~amd64, bug #71858
