@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/freelords
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/ChangeLog,v 1.13 2004/11/19 21:55:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/ChangeLog,v 1.14 2004/12/13 12:17:01 mr_bones_ Exp $
+
+  13 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/freelords-0.3.3-gcc-3.4.patch, -freelords-0.3.3.ebuild,
+  freelords-0.3.4.ebuild:
+  clean older ebuild; fix dep (patch from Nathan Skillen via bug #74271)
 
 *freelords-0.3.4 (19 Nov 2004)
 
