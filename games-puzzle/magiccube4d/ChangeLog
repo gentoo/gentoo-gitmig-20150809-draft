@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/magiccube4d
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/magiccube4d/ChangeLog,v 1.3 2004/06/24 23:07:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/magiccube4d/ChangeLog,v 1.4 2004/11/05 05:09:15 josejx Exp $
+
+  05 Nov 2004; Joseph Jezak <josejx@gentoo.org>
+  +files/magiccube4d-EventHandler.patch, magiccube4d-2.2.ebuild:
+  Added ~ppc and gcc-3.4 fixes.
 
 *magiccube4d-2.2 (22 Jun 2003)
 

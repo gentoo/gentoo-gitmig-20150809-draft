@@ -1,4 +1,5 @@
-MD5 d67e1c1ad6edd9f2bebada852b913f47 magiccube4d-2.2.ebuild 776
-MD5 203c2218508deb1db51627b37ff0b9f4 ChangeLog 357
+MD5 9c76b1d8a4bf0b1b6558c258f4d489cf ChangeLog 501
+MD5 7d8fe14113cbcc80e6ea5525ee9f2406 magiccube4d-2.2.ebuild 871
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 6f62ca4a6d3ec6e1ac7de88bd76c5209 files/digest-magiccube4d-2.2 61
+MD5 90c881c0f91424913c40d79bc940e47d files/magiccube4d-EventHandler.patch 425
