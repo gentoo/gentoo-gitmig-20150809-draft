@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.0-r1.ebuild,v 1.6 2004/03/16 11:26:05 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.0-r1.ebuild,v 1.7 2004/05/06 07:57:17 leonardop Exp $
 
 inherit eutils
 
-IUSE="debug gnome nls xml2"
-# Internal USE flags
-IUSE="${IUSE} no-exercises no-experimental distribution"
+# Internal USE flags: noexercises noexperimental distribution
+IUSE="debug gnome nls xml2 noexercises noexperimental distribution"
 
 DESCRIPTION="Helpful utility to attack Repetitive Strain Injury (RSI)"
 HOMEPAGE="http://workrave.sourceforge.net/"
