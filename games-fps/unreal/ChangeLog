@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/unreal
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.3 2004/02/08 21:06:38 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.4 2004/02/28 17:06:19 wolf31o2 Exp $
+
+  28 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> :
+  Fixing digest and closing bug #43206.
 
 *unreal-226 (23 Oct 2002)
 
