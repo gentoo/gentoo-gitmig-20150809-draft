@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r13.ebuild,v 1.4 2003/04/03 02:08:46 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r13.ebuild,v 1.5 2003/04/05 20:05:25 carpaski Exp $
 
 IUSE="build"
 
@@ -61,7 +61,7 @@ src_install() {
 		doins make.globals make.conf
 		;;
 	esac
-	use build && rm -f ${D}/etc/make.conf
+	use build && [ -f /etc/make.conf ] && rm -f ${D}/etc/make.conf
 	
 	doins etc-update.conf dispatch-conf.conf
 	#python modules
