@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html401/html401-19991224-r1.ebuild,v 1.5 2004/03/12 09:18:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html401/html401-19991224-r1.ebuild,v 1.6 2004/04/16 20:40:38 randy Exp $
 
 inherit sgml-catalog
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.w3.org/TR/html401/html40.tgz"
 S=${WORKDIR}
 LICENSE="W3C"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 s390"
 DEPEND="app-text/sgml-common"
 
 src_install() {
