@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.43 2005/03/14 20:08:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.44 2005/03/15 07:50:41 mrness Exp $
+
+  15 Mar 2005; Alin Nastac <mrness@gentoo.org>
+  +files/wvstreams-4.0.1-without-pam.patch, wvstreams-4.0.1-r2.ebuild:
+  Fix broken build when pam flag isn't set (#84817).
 
   14 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
   wvstreams-4.0.1-r2.ebuild:

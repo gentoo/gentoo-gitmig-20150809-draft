@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.1-r2.ebuild,v 1.3 2005/03/14 20:08:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.1-r2.ebuild,v 1.4 2005/03/15 07:50:41 mrness Exp $
 
 inherit eutils
 
@@ -38,7 +38,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
-	epatch ${FILESDIR}/${P}-linux-serial.patch || die "failed to patch"
+	epatch ${FILESDIR}/${P}-linux-serial.patch
+	epatch ${FILESDIR}/${P}-without-pam.patch
 
 	if useq tcltk; then
 		epatch ${FILESDIR}/${P}-tcl_8_4.patch

@@ -1,0 +1,12 @@
+diff -Nru wvstreams-4.0.1.orig/streams/wvpam.cc wvstreams-4.0.1/streams/wvpam.cc
+--- wvstreams-4.0.1.orig/streams/wvpam.cc	2004-11-18 16:15:05.000000000 +0200
++++ wvstreams-4.0.1/streams/wvpam.cc	2005-03-15 09:38:36.416927072 +0200
+@@ -68,7 +68,7 @@
+ 
+ bool WvPam::authenticate(WvStringParm rhost, WvStringParm user, WvStringParm password)
+ {
+-    return fail;
++    return false;
+ }
+ 
+ WvString WvPam::getuser() const
