@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.10.0.ebuild,v 1.1 2005/03/09 05:43:35 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.10.0.ebuild,v 1.2 2005/03/09 10:24:09 joem Exp $
 
 inherit eutils gnome2
 
@@ -14,7 +14,7 @@ IUSE="spell"
 
 RDEPEND=">=dev-libs/glib-2.6
 	>=x11-libs/gtk+-2.6
-	>=x11-libs/gtksourceview-1.1.91
+	>=x11-libs/gtksourceview-1.2
 	>=gnome-base/libgnomeui-2.8
 	>=gnome-base/libglade-2.4
 	>=gnome-base/eel-2.6
