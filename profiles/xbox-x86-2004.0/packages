@@ -111,3 +111,4 @@ virtual/os-headers
 >=app-misc/lirc-0.7.0_pre6
 >=x11-base/xfree-4.3.0-r6
 >=media-sound/alsa-driver-1.0.5a
+>=x11-base/xorg-x11/xorg-6.8.0-r2
