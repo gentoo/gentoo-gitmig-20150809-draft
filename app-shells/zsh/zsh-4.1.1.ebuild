@@ -1,30 +1,30 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.7.ebuild,v 1.2 2003/07/23 20:21:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.1.ebuild,v 1.1 2003/07/23 20:21:36 usata Exp $
 
 IUSE="maildir ncurses"
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
 
-MYPATCH="${P/-/_}-5.diff"
 # New zshall.1 generated with the following, run in Doc:
 # perl -nle'$_ = `cat $1` if /^\.so man1\/(.+\.1)/;print' zshall.1
 ZSHALL="${P}-zshall-gentoo.diff"
-SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.gz
-	 http://ftp.debian.org/debian/pool/main/z/${PN}/${MYPATCH}.gz
-	 http://dev.gentoo.org/~usata/distfiles/${ZSHALL}.bz2"
+SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
+	http://dev.gentoo.org/~usata/distfiles/${ZSHALL}.bz2
+	cjk? ( http://www.ono.org/software/dist/${P}-euc-0.2.patch.gz )"
 
 SLOT="0"
 LICENSE="ZSH"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="~x86 -alpha ~ppc ~sparc"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5.1 )"
 
 src_unpack() {
-	unpack ${A}
-	epatch ${MYPATCH}
-	epatch ${ZSHALL}
+	unpack ${P}.tar.bz2
+	epatch ${DISTDIR}/${ZSHALL}.bz2
+	cd ${S}
+	use cjk && epatch ${DISTDIR}/${P}-euc-0.2.patch.gz
 }
 
 src_compile() {
