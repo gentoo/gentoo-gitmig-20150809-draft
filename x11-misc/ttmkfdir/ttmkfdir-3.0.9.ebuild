@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-3.0.9.ebuild,v 1.14 2004/07/15 00:56:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-3.0.9.ebuild,v 1.15 2004/11/04 04:30:18 spyderous Exp $
 
 IUSE=""
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A utility to create a fonts.scale file from a set of TrueType fonts"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
@@ -26,7 +26,7 @@ src_unpack() {
 
 src_compile() {
 	filter-flags "-O -O1 -O2 -O3"
-	make CXX="${CXX:=g++}" \
+	make CXX="$(tc-getCXX)" \
 		OPTFLAGS="${CFLAGS}" DEBUG="" || die
 }
 

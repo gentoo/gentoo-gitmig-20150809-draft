@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-3.0.9-r1.ebuild,v 1.18 2004/09/24 12:59:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-3.0.9-r1.ebuild,v 1.19 2004/11/04 04:30:18 spyderous Exp $
 
-inherit eutils flag-o-matic gcc
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A utility to create a fonts.scale file from a set of TrueType fonts"
 HOMEPAGE="http://www.joerg-pommnitz.de/TrueType/xfsft.html"
@@ -32,7 +32,7 @@ src_unpack() {
 src_compile() {
 	filter-flags -O -O1 -O2 -O3
 	emake \
-		CXX="$(gcc-getCXX)" \
+		CXX="$(tc-getCXX)" \
 		OPTFLAGS="${CFLAGS}" \
 		DEBUG="" \
 		|| die "emake failed"

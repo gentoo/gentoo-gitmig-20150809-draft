@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/ttmkfdir
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.45 2004/10/21 19:54:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.46 2004/11/04 04:30:18 spyderous Exp $
+
+  03 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  ttmkfdir-3.0.9-r1.ebuild, ttmkfdir-3.0.9-r2.ebuild, ttmkfdir-3.0.9.ebuild:
+  Move eclass from gcc to toolchain-funcs.
 
   23 Oct 2004; Aron Griffis <agriffis@gentoo.org> ttmkfdir-3.0.9-r2.ebuild:
   stable on ia64
