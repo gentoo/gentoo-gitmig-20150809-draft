@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.ebuild,v 1.1 2004/10/12 17:21:43 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.ebuild,v 1.2 2004/10/29 00:43:24 vapier Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -24,23 +24,19 @@ DEPEND=">=sys-apps/portage-2.0.49-r6
 	sys-apps/shadow
 	dev-util/pkgconfig"
 RDEPEND="
-	!arm? (
-	  !mips? (
-		!s390? (
-		  gnome? (
-			>=x11-libs/gtk+-2.0.0
-			>=gnome-base/libgnome-2.0.0
-			>=gnome-base/libgnomeui-2.0.0.0
-		    >=gnome-base/libglade-2.0.0
-			x11-libs/pango
-			>=gnome-base/gconf-2.0.0
-		  )
-		  gtk? (
-			>=x11-libs/gtk+-2.0.0
-			x11-libs/pango
-		  )
-		)
-	  )
+	!mips? (
+	gnome? (
+		>=x11-libs/gtk+-2.0.0
+		>=gnome-base/libgnome-2.0.0
+		>=gnome-base/libgnomeui-2.0.0.0
+		>=gnome-base/libglade-2.0.0
+		x11-libs/pango
+		>=gnome-base/gconf-2.0.0
+	)
+	gtk? (
+		>=x11-libs/gtk+-2.0.0
+		x11-libs/pango
+	)
 	)
 	selinux? ( sec-policy/selinux-distcc )"
 

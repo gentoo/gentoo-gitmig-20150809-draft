@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 bae63152392738d01451f1d38404328e ChangeLog 22843
 MD5 05e11e55fc2c52ffec1f8f44703802f9 distcc-2.16-r2.ebuild 5026
 MD5 b634e8c42c191a882dab36a1e1fddd7b distcc-2.17-r1.ebuild 5169
-MD5 ef5116f7d387c69aa45c1b437aa55cf2 distcc-2.18.ebuild 5036
+MD5 a2ab277352c124e91d48f2a70b257c16 distcc-2.18.ebuild 4984
 MD5 70619e7eb5fa4fd0aa4f3588579cd50d metadata.xml 443
 MD5 d846f3713232d9c263e6adbfdd521b02 files/digest-distcc-2.18 64
 MD5 c462167d99c154e9f8b9f94022ed2a71 files/digest-distcc-2.16-r2 64
@@ -18,7 +18,7 @@ MD5 1161999a5d25185f95a8c284bd7307d1 files/2.17/init 733
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBd+ImHTu7gpaalycRAtysAJ0dIc0Dx/d+BVn36jJg/ptSNN24FACfSGJC
-C4dHOOj8XUmNJUVkq4h8kWM=
-=c87K
+iD8DBQFBgZJSHTu7gpaalycRAr1eAKDOAilJ8AyYKhOEUR6dCS7f/bCNgQCgxlcr
+IPzRcEsVM+S5zrWOtnDuqiQ=
+=3QRw
 -----END PGP SIGNATURE-----
