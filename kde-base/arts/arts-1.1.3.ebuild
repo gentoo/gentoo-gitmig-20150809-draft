@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.3.ebuild,v 1.5 2003/09/11 01:16:25 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.3.ebuild,v 1.6 2003/09/12 18:49:38 caleb Exp $
 inherit kde-base flag-o-matic
 
 IUSE="alsa oggvorbis artswrappersuid mad"
@@ -47,6 +47,13 @@ src_unpack() {
 	# for the configure.in.in patch, for some reason it's not automatically picked up
 	rm $S/configure
 	kde_fix_autodetect
+}
+
+src_compile() {
+	kde_src_compile myconf
+	kde_fix_head_instances acinclude.m4 aclocal.m4 admin/cvs.sh admin/libtool.m4 debian/rules
+	kde_src_compile configure
+	kde_src_compile make
 }
 
 src_install() {
