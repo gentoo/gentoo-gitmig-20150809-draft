@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.07.ebuild,v 1.1 2005/01/15 21:25:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.07.ebuild,v 1.2 2005/01/25 23:53:42 solar Exp $
 
-inherit eutils gcc
+inherit eutils
 
 DESCRIPTION="SysLinux, IsoLinux and PXELinux bootloader"
 HOMEPAGE="http://syslinux.zytor.com/"
@@ -22,6 +22,12 @@ DEPEND="${RDEPEND}
 # than the installers.
 
 # removed all the unpack/patching stuff since we aren't rebuilding the core stuff anymore
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/syslinux-3.07-nossp.patch
+}
 
 src_compile() {
 	emake installer || die

@@ -1,0 +1,186 @@
+diff -Nrup syslinux-3.07/Makefile syslinux-3.07-solar/Makefile
+--- syslinux-3.07/Makefile	2005-01-06 17:34:06.000000000 -0500
++++ syslinux-3.07-solar/Makefile	2005-01-18 09:56:37.000000000 -0500
+@@ -18,7 +18,7 @@
+ OSTYPE   = $(shell uname -msr)
+ CC	 = gcc
+ INCLUDE  =
+-CFLAGS   = -W -Wall -Os -fomit-frame-pointer -D_FILE_OFFSET_BITS=64
++CFLAGS   = -W -Wall -fno-stack-protector -Os -fomit-frame-pointer -D_FILE_OFFSET_BITS=64
+ PIC      = -fPIC
+ LDFLAGS  = -O2 -s
+ AR	 = ar
+@@ -191,9 +191,8 @@ libsyslinux.a: bootsect_bin.o ldlinux_bi
+ $(LIB_SO): bootsect_bin.o ldlinux_bin.o syslxmod.o
+ 	$(CC) $(LDFLAGS) -shared -Wl,-soname,$(LIB_SONAME) -o $@ $^
+ 
+-gethostip.o: gethostip.c
+-
+-gethostip: gethostip.o
++gethostip: gethostip.c
++	$(CC) $(LDFLAGS) gethostip.c -o gethostip -fno-stack-protector
+ 
+ mkdiskimage: mkdiskimage.in mbr.bin bin2hex.pl
+ 	$(PERL) bin2hex.pl < mbr.bin | cat mkdiskimage.in - > $@
+diff -Nrup syslinux-3.07/com32/lib/MCONFIG syslinux-3.07-solar/com32/lib/MCONFIG
+--- syslinux-3.07/com32/lib/MCONFIG	2005-01-08 00:58:20.000000000 -0500
++++ syslinux-3.07-solar/com32/lib/MCONFIG	2005-01-18 09:59:44.000000000 -0500
+@@ -18,7 +18,7 @@ LIBFLAGS = -DDYNAMIC_CRC_TABLE -DPNG_NO_
+ 
+ REQFLAGS  = -g -m32 -mregparm=3 -DREGPARM=3 -D__COM32__ -I. -I./sys -I../include
+ OPTFLAGS  = -Os -march=i386 -falign-functions=0 -falign-jumps=0 \
+-	    -falign-labels=0
++	    -falign-labels=0 -fno-stack-protector
+ WARNFLAGS = -W -Wall -Wpointer-arith -Wwrite-strings -Wstrict-prototypes -Winline
+ 
+ CFLAGS  = -Wp,-MT,$@,-MD,$(dir $@).$(notdir $@).d $(OPTFLAGS) \
+Files syslinux-3.07/com32/lib/libcom32.a and syslinux-3.07-solar/com32/lib/libcom32.a differ
+diff -Nrup syslinux-3.07/com32/libutil/Makefile syslinux-3.07-solar/com32/libutil/Makefile
+--- syslinux-3.07/com32/libutil/Makefile	2005-01-03 22:05:17.000000000 -0500
++++ syslinux-3.07-solar/com32/libutil/Makefile	2005-01-18 09:56:37.000000000 -0500
+@@ -40,10 +40,10 @@ LD         = ld -m elf_i386
+ AR	   = ar
+ NASM	   = nasm
+ RANLIB	   = ranlib
+-CFLAGS     = $(M32) -mregparm=3 -DREGPARM=3 -D__COM32__ -W -Wall -march=i386 -Os -fomit-frame-pointer -I./include -I../include
++CFLAGS     = $(M32) -mregparm=3 -DREGPARM=3 -D__COM32__ -W -Wall -fno-stack-protector -march=i386 -Os -fomit-frame-pointer -I./include -I../include
+ SFLAGS     = $(M32) -D__COM32__ -march=i386
+ LDFLAGS    = -T ../lib/com32.ld
+-LNXCFLAGS  = -I./include -W -Wall -O -g
++LNXCFLAGS  = -I./include -W -Wall -fno-stack-protector -O -g
+ LNXSFLAGS  = -g
+ LNXLDFLAGS = -g
+ OBJCOPY    = objcopy
+diff -Nrup syslinux-3.07/com32/modules/Makefile syslinux-3.07-solar/com32/modules/Makefile
+--- syslinux-3.07/com32/modules/Makefile	2005-01-04 19:07:01.000000000 -0500
++++ syslinux-3.07-solar/com32/modules/Makefile	2005-01-18 09:56:37.000000000 -0500
+@@ -25,8 +25,8 @@ LD         = ld -m elf_i386
+ AR	   = ar
+ NASM	   = nasm
+ RANLIB	   = ranlib
+-CFLAGS     = $(M32) -mregparm=3 -DREGPARM=3 -W -Wall -march=i386 -Os -fomit-frame-pointer -I../libutil/include -I../include  -D__COM32__
+-LNXCFLAGS  = -W -Wall -O -g -I../libutil/include
++CFLAGS     = $(M32) -mregparm=3 -DREGPARM=3 -W -Wall -fno-stack-protector -march=i386 -Os -fomit-frame-pointer -I../libutil/include -I../include  -D__COM32__
++LNXCFLAGS  = -W -Wall -fno-stack-protector -O -g -I../libutil/include
+ LNXSFLAGS  = -g
+ LNXLDFLAGS = -g
+ SFLAGS     = -D__COM32__ -march=i386
+diff -Nrup syslinux-3.07/com32/samples/Makefile syslinux-3.07-solar/com32/samples/Makefile
+--- syslinux-3.07/com32/samples/Makefile	2005-01-03 22:05:17.000000000 -0500
++++ syslinux-3.07-solar/com32/samples/Makefile	2005-01-18 09:56:37.000000000 -0500
+@@ -25,8 +25,8 @@ LD         = ld -m elf_i386
+ AR	   = ar
+ NASM	   = nasm
+ RANLIB	   = ranlib
+-CFLAGS     = $(M32) -mregparm=3 -DREGPARM=3 -W -Wall -march=i386 -Os -fomit-frame-pointer -I../libutil/include -I../include  -D__COM32__
+-LNXCFLAGS  = -W -Wall -O -g -I../libutil/include
++CFLAGS     = $(M32) -mregparm=3 -DREGPARM=3 -W -Wall -fno-stack-protector -march=i386 -Os -fomit-frame-pointer -I../libutil/include -I../include  -D__COM32__
++LNXCFLAGS  = -W -Wall -fno-stack-protector -O -g -I../libutil/include
+ LNXSFLAGS  = -g
+ LNXLDFLAGS = -g
+ SFLAGS     = -D__COM32__ -march=i386
+diff -Nrup syslinux-3.07/dos/Makefile syslinux-3.07-solar/dos/Makefile
+--- syslinux-3.07/dos/Makefile	2004-12-30 16:34:18.000000000 -0500
++++ syslinux-3.07-solar/dos/Makefile	2005-01-18 09:56:37.000000000 -0500
+@@ -3,7 +3,7 @@ LD       = ld -m elf_i386
+ OBJCOPY  = objcopy
+ OPTFLAGS = -g -Os -march=i386 -falign-functions=0 -falign-jumps=0 -falign-loops=0 -fomit-frame-pointer
+ INCLUDES = -include code16.h -I. -I.. -I../libfat
+-CFLAGS	 = -W -Wall -ffreestanding -msoft-float $(OPTFLAGS) $(INCLUDES)
++CFLAGS	 = -W -Wall -fno-stack-protector -ffreestanding -msoft-float $(OPTFLAGS) $(INCLUDES)
+ LDFLAGS	 = -T com16.ld
+ AR       = ar
+ RANLIB   = ranlib
+diff -Nrup syslinux-3.07/extlinux/Makefile syslinux-3.07-solar/extlinux/Makefile
+--- syslinux-3.07/extlinux/Makefile	2004-12-22 02:17:53.000000000 -0500
++++ syslinux-3.07-solar/extlinux/Makefile	2005-01-18 09:56:37.000000000 -0500
+@@ -1,7 +1,7 @@
+ CC	 = gcc
+ OPTFLAGS = -g -Os
+ INCLUDES = -I. -I.. -I../libfat
+-CFLAGS	 = -W -Wall -Wno-sign-compare -D_FILE_OFFSET_BITS=64 $(OPTFLAGS) $(INCLUDES)
++CFLAGS	 = -W -Wall -fno-stack-protector -Wno-sign-compare -D_FILE_OFFSET_BITS=64 $(OPTFLAGS) $(INCLUDES)
+ LDFLAGS	 = -s
+ 
+ SRCS     = extlinux.c ../extlinux_bss_bin.c ../extlinux_sys_bin.c
+diff -Nrup syslinux-3.07/memdisk/Makefile syslinux-3.07-solar/memdisk/Makefile
+--- syslinux-3.07/memdisk/Makefile	2004-12-28 20:58:02.000000000 -0500
++++ syslinux-3.07-solar/memdisk/Makefile	2005-01-18 09:56:37.000000000 -0500
+@@ -20,7 +20,7 @@ M32     := $(call gcc_ok,-m32,)
+ ALIGN   := $(call gcc_ok,-falign-functions=0 -falign-jumps=0 -falign-loops=0,-malign-functions=0 -malign-jumps=0 -malign-loops=0)
+ 
+ CC       = gcc $(M32)
+-CFLAGS   = -g -W -Wall -Wno-sign-compare \
++CFLAGS   = -g -W -Wall -fno-stack-protector -Wno-sign-compare \
+ 	   -Os -fomit-frame-pointer -march=i386 $(ALIGN) \
+ 	   -DVERSION='"$(VERSION)"' -DDATE='"$(DATE)"'
+ LDFLAGS  = -g
+diff -Nrup syslinux-3.07/menu/Makefile syslinux-3.07-solar/menu/Makefile
+--- syslinux-3.07/menu/Makefile	2004-02-25 01:48:05.000000000 -0500
++++ syslinux-3.07-solar/menu/Makefile	2005-01-18 09:56:37.000000000 -0500
+@@ -5,7 +5,7 @@ M32     := $(call gcc_ok,-m32,)
+ ALIGN   := $(call gcc_ok,-falign-functions=0 -falign-jumps=0 -falign-loops=0,-malign-functions=0 -malign-jumps=0 -malign-loops=0)
+ 
+ CC	= gcc
+-CFLAGS  =  $(M32) -funsigned-char -g -W -Wall -march=i386 $(ALIGN) -Os
++CFLAGS  =  $(M32) -funsigned-char -g -W -Wall -fno-stack-protector -march=i386 $(ALIGN) -Os
+ AR      = ar
+ AS      = as
+ LD      = ld -m elf_i386
+diff -Nrup syslinux-3.07/mtools/Makefile syslinux-3.07-solar/mtools/Makefile
+--- syslinux-3.07/mtools/Makefile	2004-12-15 05:51:18.000000000 -0500
++++ syslinux-3.07-solar/mtools/Makefile	2005-01-18 09:56:37.000000000 -0500
+@@ -1,7 +1,7 @@
+ CC	 = gcc
+ OPTFLAGS = -g -Os
+ INCLUDES = -I. -I.. -I../libfat
+-CFLAGS	 = -W -Wall -D_FILE_OFFSET_BITS=64 $(OPTFLAGS) $(INCLUDES)
++CFLAGS	 = -W -Wall -fno-stack-protector -D_FILE_OFFSET_BITS=64 $(OPTFLAGS) $(INCLUDES)
+ LDFLAGS	 = -s
+ 
+ SRCS     = syslinux.c ../syslxmod.c ../bootsect_bin.c ../ldlinux_bin.c $(wildcard ../libfat/*.c)
+diff -Nrup syslinux-3.07/sample/Makefile syslinux-3.07-solar/sample/Makefile
+--- syslinux-3.07/sample/Makefile	2005-01-03 03:23:16.000000000 -0500
++++ syslinux-3.07-solar/sample/Makefile	2005-01-18 09:56:37.000000000 -0500
+@@ -25,7 +25,7 @@ LD         = ld -m elf_i386
+ AR	   = ar
+ NASM	   = nasm
+ RANLIB	   = ranlib
+-CFLAGS     = -W -Wall -march=i386 -Os -fomit-frame-pointer -I../com32/include
++CFLAGS     = -W -Wall -fno-stack-protector -march=i386 -Os -fomit-frame-pointer -I../com32/include
+ SFLAGS     = -march=i386
+ LDFLAGS    = -s
+ OBJCOPY    = objcopy
+diff -Nrup syslinux-3.07/unix/Makefile syslinux-3.07-solar/unix/Makefile
+--- syslinux-3.07/unix/Makefile	2004-12-15 21:51:29.000000000 -0500
++++ syslinux-3.07-solar/unix/Makefile	2005-01-18 09:56:37.000000000 -0500
+@@ -1,7 +1,7 @@
+ CC	 = gcc
+ OPTFLAGS = -g -Os
+ INCLUDES = -I. -I.. -I../libfat
+-CFLAGS	 = -W -Wall -D_FILE_OFFSET_BITS=64 $(OPTFLAGS) $(INCLUDES)
++CFLAGS	 = -W -Wall -fno-stack-protector -D_FILE_OFFSET_BITS=64 $(OPTFLAGS) $(INCLUDES)
+ LDFLAGS	 = -s
+ 
+ SRCS     = syslinux.c ../syslxmod.c ../bootsect_bin.c ../ldlinux_bin.c $(wildcard ../libfat/*.c)
+diff -Nrup syslinux-3.07/win32/Makefile syslinux-3.07-solar/win32/Makefile
+--- syslinux-3.07/win32/Makefile	2004-12-22 12:53:54.000000000 -0500
++++ syslinux-3.07-solar/win32/Makefile	2005-01-18 09:56:37.000000000 -0500
+@@ -23,7 +23,7 @@ ifeq ($(findstring CYGWIN,$(OSTYPE)),CYG
+ CC       = gcc
+ AR	 = ar
+ RANLIB   = ranlib
+-CFLAGS   = -mno-cygwin -W -Wall -Os -fomit-frame-pointer -D_FILE_OFFSET_BITS=64
++CFLAGS   = -mno-cygwin -W -Wall -fno-stack-protector -Os -fomit-frame-pointer -D_FILE_OFFSET_BITS=64
+ PIC	 =
+ LDFLAGS  = -mno-cygwin -Os -s
+ else
+@@ -37,7 +37,7 @@ AR	 = mingw-ar
+ RANLIB   = mingw-ranlib
+ endif
+ 
+-CFLAGS   = -W -Wall -Wno-sign-compare -Os -fomit-frame-pointer -D_FILE_OFFSET_BITS=64
++CFLAGS   = -W -Wall -fno-stack-protector -Wno-sign-compare -Os -fomit-frame-pointer -D_FILE_OFFSET_BITS=64
+ PIC      =
+ LDFLAGS  = -Os -s
+ endif
