@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/files/autofs.rc8,v 1.4 2003/02/14 22:59:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/files/autofs.rc8,v 1.5 2003/02/28 04:01:55 bcowan Exp $
 
 # rc file for automount using a Sun-style "master map".
 # We first look for a local /etc/auto.master, then a YP
@@ -135,29 +135,31 @@ function getmounts()
 
 start() {
 	ebegin "Starting automounter"
-	getmounts | while read cmd timeout mnt rest
+	getmounts | while read cmd timeout time mnt rest
 	do
 		#FIXME: this works but it really sucks
 		if echo $timeout|grep -v -- '--timeout' >/dev/null ; then
-			rest="$mnt $rest"
+			rest="$time $mnt $rest"
 			mnt="$timeout"
+			time=""
 			timeout=""
 		fi
 
 		echo -n " $mnt"
 		pidfile=/var/run/autofs`echo $mnt | sed 's/\//./g'`.pid
 		start-stop-daemon --start --pidfile $pidfile --quiet \
-			--exec /usr/sbin/automount -- $timeout $mnt $rest
+			--exec /usr/sbin/automount -- $timeout $time $mnt $rest
 		#
 		#	Automount needs a '--pidfile' or '-p' option.
 		#	For now we look for the pid ourself.
 		#
-		ps ax | grep "[0-9]:[0-9][0-9] /usr/sbin/automount $timeout \?$mnt" | (
+		ps ax | grep "[0-9]:[0-9][0-9] /usr/sbin/automount $timeout $time \?$mnt" | (
 			read pid rest
 			echo $pid > $pidfile
 			echo "$mnt $rest" >> $pidfile
 		)
 	done
+	echo
 	eend $?
 }
 
@@ -174,7 +176,7 @@ stats() {
 	echo ""
 	echo "Active Mount Points:"
 	echo "--------------------"
-	ps ax|grep "[0-9]:[0-9][0-9] automount " | (
+	ps ax|grep "[0-9]:[0-9][0-9] /usr/sbin/automount " | (
 		while read pid tt stat time command; do echo $command; done
 	)
 }
