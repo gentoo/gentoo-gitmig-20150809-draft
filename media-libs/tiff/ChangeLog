@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.16 2004/04/17 08:09:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.17 2004/04/25 08:23:46 nerdboy Exp $
+
+*tiff-3.5.5 (25 Apr 2004)
+
+  25 Apr 2004; Steve Arnold <nerdboy@gentoo.org> tiff-3.5.5.ebuild, 
+  tiff-3.6.1-r1.ebuild:
+  added lzw-compression to 3.6.1-r1 and resurrected 3.5.5 for hylafax
+  addresses bugs 48694 and 48077
 
   17 Apr 2004; Travis Tilley <lv@gentoo.org> tiff-3.6.1.ebuild:
   marked stable on amd64
