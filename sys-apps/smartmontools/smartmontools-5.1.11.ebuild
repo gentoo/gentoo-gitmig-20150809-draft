@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.1.11.ebuild,v 1.4 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.1.11.ebuild,v 1.5 2004/05/24 09:59:32 kloeri Exp $
 
 MAJ_PV=${PV:0:3}
 MIN_PV=${PV:4:6}
