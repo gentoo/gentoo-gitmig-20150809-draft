@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r1.ebuild,v 1.1 2004/04/25 08:23:46 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.6.1-r1.ebuild,v 1.2 2004/05/12 00:33:26 randy Exp $
 
 MY_S=${P/tiff-/tiff-v}
 MY_P=${PN}-v${PV/_beta/-beta}
@@ -16,7 +16,7 @@ DEPEND=">=media-libs/jpeg-6b
 IUSE="lzw-tiff"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa mips amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa mips amd64 ~ia64 s390"
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
