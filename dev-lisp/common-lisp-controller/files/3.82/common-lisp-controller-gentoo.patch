@@ -1,0 +1,121 @@
+Index: clc-autobuild-check
+===================================================================
+RCS file: /home/mkennedy/cvsroot/common-lisp-controller/clc-autobuild-check,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 clc-autobuild-check
+--- clc-autobuild-check	14 Jan 2004 17:41:13 -0000	1.1.1.1
++++ clc-autobuild-check	14 Jan 2004 19:11:24 -0000
+@@ -31,7 +31,7 @@
+ 	return
+     fi
+     if [ -r $file ]; then
+-	first_line="$(cat $file | head -1)"
++	first_line="$(cat $file | head -n 1)"
+ 	if [ "$first_line" ]; then
+ 	    first_line="$(echo "$first_line" | tr "[A-Z]" "[a-z]")"
+ 	    if [ "$(expr "$first_line" : ".*\(yes\).*")" ]; then
+Index: post-sysdef-install.lisp
+===================================================================
+RCS file: /home/mkennedy/cvsroot/common-lisp-controller/post-sysdef-install.lisp,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 post-sysdef-install.lisp
+--- post-sysdef-install.lisp	14 Jan 2004 17:41:13 -0000	1.1.1.1
++++ post-sysdef-install.lisp	14 Jan 2004 19:07:37 -0000
+@@ -146,75 +146,22 @@
+ 
+ (defun require-defsystem3 (module-name)
+   ;; if in the clc root:
+-  (let ((system (mk:find-system module-name
+-				:load-or-nil)))
+-    (or
+-     ;; try to load it
+-     (progn
+-       (mk:oos  module-name
+-                :load
+-                :load-source-instead-of-binary nil
+-                :load-source-if-no-binary nil
+-                :bother-user-if-no-binary nil
+-                :compile-during-load nil)
+-       ;; did we load it?
+-       (find module-name mk::*modules* :test #'string=))
+-     (progn
+-       (format t "~&;;;Please wait, recompiling library...")
+-       (cond
+-         (*recompiling-from-daemon*
+-          (mk:oos module-name
+-                  :compile
+-                  :verbose nil))
+-         (t
+-          ;; first compile the sub-components!
+-          (dolist (sub-system (make::component-depends-on system))
+-            (when (stringp sub-system)
+-              (setf sub-system (intern sub-system (find-package :keyword))))
+-            (clc-require sub-system))
+-          (common-lisp-controller:send-clc-command :recompile
+-                                                   (if (stringp module-name)
+-                                                       module-name
+-                                                       (string-downcase
+-                                                        (symbol-name
+-                                                         module-name))))))
+-       (terpri)
+-       (mk:oos  module-name
+-		:load
+-		:load-source-instead-of-binary nil
+-		:load-source-if-no-binary nil
+-		:bother-user-if-no-binary nil
+-		:compile-during-load nil)
+-       t))))
++  (let ((system (mk:find-system module-name :load-or-nil)))
++    (mk:oos  module-name
++	     :load
++	     :load-source-instead-of-binary nil
++	     :load-source-if-no-binary nil
++	     :bother-user-if-no-binary nil
++	     :compile-during-load nil)
++    ;; did we load it?
++    (find module-name mk::*modules* :test #'string=)))
+ 
+ 
+ (defun require-asdf (module-name)
+   (let ((system (asdf:find-system module-name)))
+     (when system
+-      (if (asdf-system-compiled-p system)
+-	  (asdf:oos 'asdf:load-op module-name)
+-	(progn
+-	  (format t "~&;;; Please wait, recompiling library...")
+-	  (cond
+-	   (*recompiling-from-daemon*
+-	    (asdf:oos 'asdf:compile-op module-name))
+-	   (t
+-	    ;; first compile the depends-on
+-	    (dolist (sub-system
+-			;; skip asdf:load-op at beginning of first list
+-			(cdar (asdf:component-depends-on
+-			       (make-instance 'asdf:compile-op) system)))
+-	      (clc-require sub-system))
+-	    (let ((module-name-str
+-		   (if (stringp module-name)
+-		       module-name
+-		     (string-downcase (symbol-name module-name)))))
+-	      ;; clc-build-daemon will report pkg built unless all components are removed
+-	      (common-lisp-controller:send-clc-command :remove module-name-str)
+-	      (common-lisp-controller:send-clc-command :recompile module-name-str))))
+-	  (terpri)
+-	  (asdf:oos 'asdf:load-op module-name)))
+-      t)))
++      (asdf:oos 'asdf:load-op module-name)))
++  t)
+ 
+ ;; we need to hack the require to
+ ;; call clc-send-command on load failure...
+@@ -234,9 +181,7 @@
+ 
+ (defun compile-library (library)
+   "Recompiles the given library"
+-  (let* (;; this is because of clc-build-daemon
+-         (*recompiling-from-daemon* t)
+-	 (system (find-system-def library)))
++  (let ((system (find-system-def library)))
+     (case system
+       (:defsystem3
+        (mk:oos library :compile :verbose nil))
