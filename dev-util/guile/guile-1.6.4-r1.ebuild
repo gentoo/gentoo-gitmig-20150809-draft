@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.1 2003/09/06 21:28:37 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.2 2003/11/22 20:09:22 liquidx Exp $
 
 inherit flag-o-matic
 
@@ -23,6 +23,9 @@ DEPEND=">=sys-libs/ncurses-5.1
 
 SLOT="12"
 MAJOR="1.6"
+
+# Problems with parallel builds (#34029), so I'm taking the safer route
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_compile() {
 	# Fix for bug 26484: This package fails to build when built with
