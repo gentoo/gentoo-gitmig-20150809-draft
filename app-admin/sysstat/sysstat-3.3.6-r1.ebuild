@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-3.3.6-r1.ebuild,v 1.14 2004/01/02 21:00:23 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-3.3.6-r1.ebuild,v 1.15 2004/01/03 11:43:32 mholzer Exp $
 
 DESCRIPTION="System performance tools for Linux"
 SRC_URI="http://www.ibiblio.org/pub/Linux/system/status/${P}.tar.gz"
@@ -30,6 +30,7 @@ src_install() {
 	dodir /usr/bin
 	dodir /usr/share/man/man{1,8}
 	dodir /var/log/sa
+	keepdir /var/log/sa
 
 	make \
 		DESTDIR=${D} \

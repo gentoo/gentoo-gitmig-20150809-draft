@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.10 2004/01/02 21:00:23 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.11 2004/01/03 11:43:32 mholzer Exp $
+
+  03 Jan 2004; Martin Holzer <mholzer@gentoo.org> sysstat-3.3.6-r1.ebuild,
+  sysstat-4.0.7.ebuild, sysstat-5.0.0.ebuild:
+  adding keepdir. Closes 37084
 
 *sysstat-5.0.0 (02 Jan 2004)
 
