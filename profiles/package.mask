@@ -170,7 +170,7 @@ net-www/zope
 # Mozilla installs correctly, but there is a java-config error with the plugin
 # This is more a java-config bug ....
 =net-www/mozilla-0.9.9
-
+=net-www/mozilla-1.0_rc2
 
 # New orinoco_cs 0.11a driver -- karltk (01/05/2002)
 #
