@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnono/gnono-0.0.3.ebuild,v 1.5 2004/11/11 12:50:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnono/gnono-0.0.3.ebuild,v 1.6 2004/12/30 21:39:18 josejx Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.paw.co.za/pub/PAW/sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="nls"
 
 DEPEND="gnome-base/gnome-libs
