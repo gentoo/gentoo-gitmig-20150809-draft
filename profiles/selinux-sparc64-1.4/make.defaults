@@ -1,0 +1,24 @@
+# Copyright 2004 Gentoo Technologies, Inc.
+# System-wide defaults for the Portage system
+
+ARCH="sparc"
+
+# Host type
+CHOST=sparc-unknown-linux-gnu
+PLATFORM=sparc64-unknown-linux-gnu
+PROFILE_ARCH="sparc64"
+
+# C Compiler flags
+CFLAGS="-O2 -pipe"
+# C++ Compiler flags
+CXXFLAGS=${CFLAGS}
+
+USE="sparc berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
+GRP_STAGE23_USE="x86 berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
+
+COMPILER="gcc3"
+
+ACCEPT_KEYWORDS="sparc"
+FEATURES="sandbox ccache strict sfperms"
+
+POLICYDIR="/etc/security/selinux/src/policy"
