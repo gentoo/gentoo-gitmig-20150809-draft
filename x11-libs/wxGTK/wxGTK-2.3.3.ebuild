@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.3.ebuild,v 1.3 2002/10/29 06:35:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.3.ebuild,v 1.4 2002/12/05 16:32:37 vapier Exp $
 
-IUSE="nls odbc jpeg png opengl motif gif tiff zlib gtk X"
+IUSE="nls odbc jpeg png opengl motif gif tiff gtk X"
 
 S=${WORKDIR}/${P}
 
@@ -20,7 +20,7 @@ DEPEND="dev-libs/libunicode
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	tiff? ( media-libs/tiff )
-	zlib? ( sys-libs/zlib )
+	sys-libs/zlib
 	odbc? ( dev-db/unixODBC  )
 	opengl? ( virtual/opengl )
 	motif? ( x11-libs/openmotif )
