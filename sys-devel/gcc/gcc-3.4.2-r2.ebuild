@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.9 2004/10/05 12:35:52 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2-r2.ebuild,v 1.10 2004/10/06 14:27:23 pappy Exp $
 
-IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
+IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64 boundschecking"
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
-DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie and ssp extensions"
+DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
 
@@ -51,6 +51,7 @@ PIE_VER="8.7.6.5"
 PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"
 PP_VER="3_4_1"
 PP_FVER="${PP_VER//_/.}-1"
+HTB_VER="1.00"
 SRC_URI="$(get_gcc_src_uri)"
 S="$(gcc_get_s_dir)"
 
