@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6-r1.ebuild,v 1.17 2003/09/07 09:01:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6-r1.ebuild,v 1.18 2003/10/19 01:08:58 vapier Exp $
 
 inherit libtool flag-o-matic
 replace-flags k6-3 i586
@@ -19,9 +19,8 @@ DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/giflib-4.1.0
 	>=media-libs/libpng-1.2.1
 	>=media-libs/tiff-3.5.5
-	<=media-libs/freetype-1.4
-	virtual/x11
-	dev-db/edb"
+	=media-libs/freetype-1*
+	virtual/x11"
 
 src_compile() {
 	# always turn off mmx because binutils 2.11.92+
