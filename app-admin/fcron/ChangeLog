@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/fcron
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fcron/ChangeLog,v 1.2 2002/04/20 12:13:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fcron/ChangeLog,v 1.3 2002/04/24 13:14:33 bangert Exp $
+
+  24 Apr 2002; Thilo Bangert <bangert@gentoo.org> :
+  
+  removed app-admin/fcron - this is in sys-apps/fcron now
+  please upgrade - see also
+  http://lists.gentoo.org/pipermail/gentoo-announce/2002-April/000151.html
+  closes bug #2060
+  
 
   20 April 2002; Martin Schlemmer <azarah@gentoo.org> files/fcron.rc6 :
 
