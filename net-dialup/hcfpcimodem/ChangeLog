@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/hcfpcimodem
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/ChangeLog,v 1.3 2003/05/23 06:31:21 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/ChangeLog,v 1.4 2003/06/12 21:16:33 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> hcfpcimodem-0.99.02123100.ebuild:
+  fix Header
 
 *hcfpcimodem-0.99mbsibeta02123100 (22 May 2003)
 
