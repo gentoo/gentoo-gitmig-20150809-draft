@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.7.ebuild,v 1.8 2002/08/23 09:37:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.7.ebuild,v 1.9 2002/08/30 14:08:42 seemant Exp $
 
 inherit libtool
 
@@ -66,6 +66,7 @@ src_install() {
 	fi
 
 	rm ${D}/usr/share/gtkrc*
+	rm -rf ${D}/usr/doc
 
 	dodoc AUTHORS COPYING* ChangeLog README NEWS HACKING
 }
