@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.2.ebuild,v 1.2 2002/11/17 15:51:00 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.2.ebuild,v 1.3 2002/11/19 12:58:15 phoenix Exp $
+
+inherit base
 
 IUSE="readline esd nls"
 
@@ -24,6 +26,13 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 	readline? ( >=sys-libs/readline-4.1 )
 	nls? ( sys-devel/gettext )"
 
+
+src_unpack() {
+	base_src_unpack
+	cd ${S}
+	einfo "Applying fullscreen patch"
+	patch -p0 < ${FILESDIR}/sawfish-1.2-fullscreen.patch
+}
 
 src_compile() {
 

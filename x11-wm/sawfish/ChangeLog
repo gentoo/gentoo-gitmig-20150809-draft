@@ -1,8 +1,12 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.15 2002/11/17 11:50:53 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.16 2002/11/19 12:58:15 phoenix Exp $
 
 *sawfish-1.2 (17 Nov 2002)
+
+  19 Nov 2002; phoen][x <phoenix@gentoo.org> sawfish-1.2.ebuild,
+  files/sawfish-1.2-fullscreen.patch :
+  Incorporated the fullscreen patch. This closes bug #10904. 
   
   17 Nov 2002; phoen][x <phoenix@gentoo.org> sawfish-1.2.ebuild, 
   files/digest-sawfish-1.2.ebuild :
