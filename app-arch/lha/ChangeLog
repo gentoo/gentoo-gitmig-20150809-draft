@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/lha
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.15 2004/05/04 12:17:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.16 2004/05/19 17:20:41 usata Exp $
+
+*lha-114i-r3 (20 May 2004)
+
+  20 May 2004; Mamoru KOMACHI <usata@gentoo.org> +files/lha-114i-lhext.diff,
+  +lha-114i-r3.ebuild:
+  Fixed another buffer overflow vulnerability. Thanks to Florian Schilhabel
+  <florian.schilhabel@gmx.net> for the patch, see bug #51285
 
 *lha-114i-r2 (04 May 2004)
 
