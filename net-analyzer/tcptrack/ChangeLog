@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/tcptrack
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrack/ChangeLog,v 1.8 2005/01/29 05:12:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrack/ChangeLog,v 1.9 2005/03/23 01:21:12 vanquirius Exp $
+
+*tcptrack-1.1.5 (22 Mar 2005)
+
+  22 Mar 2005; Marcelo Goes <vanquirius@gentoo.org> +tcptrack-1.1.5.ebuild:
+  Version bump.
 
   29 Jan 2005; Daniel Black <dragonheart@gentoo.org> tcptrack-1.1.1.ebuild,
   tcptrack-1.1.2.ebuild:
