@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+`# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.18 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.19 2004/05/24 00:30:34 carpaski Exp $
 #
 # Author: Spider
 #
@@ -10,12 +10,15 @@
 # Debug ECLASS
 ECLASS="debug"
 INHERITED="$INHERITED $ECLASS"
-# Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
-DEBUG="yes"
-RESTRICT="nostrip"
-# Remove omit-frame-pointer as some useless folks define that all over the place. they should be shot with a 16 gauge slingshot at least :)
-# force debug information
-export CFLAGS="${CFLAGS/-fomit-frame-pointer/} -g"
-export CXXFLAGS="${CXXFLAGS/-fomit-frame-pointer/} -g"
-# einfo "CFLAGS and CXXFLAGS redefined"
+IUSE="debug"
 
+if useq debug; then
+	# Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
+	DEBUG="yes"
+	RESTRICT="$RESTRICT nostrip"
+	# Remove omit-frame-pointer as some useless folks define that all over the place. they should be shot with a 16 gauge slingshot at least :)
+	# force debug information
+	export CFLAGS="${CFLAGS/-fomit-frame-pointer/} -g"
+	export CXXFLAGS="${CXXFLAGS/-fomit-frame-pointer/} -g"
+	# einfo "CFLAGS and CXXFLAGS redefined"
+fi
