@@ -1,0 +1,11 @@
+# ChangeLog for gnome-extra/shermans-aquarium
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/ChangeLog,v 1.1 2003/06/14 23:21:26 liquidx Exp $
+
+*shermans-aquarium-2.2.0 (15 Jun 2003)
+
+  15 Jun 2003; Alastair Tse <liquidx@gentoo.org>
+  shermans-aquarium-2.2.0.ebuild:
+  New package. Ebuild submitted by Mike Gardiner <driver@iinet.net.au>.
+  (#10572)
+
