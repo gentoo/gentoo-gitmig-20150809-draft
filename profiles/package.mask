@@ -456,11 +456,6 @@ x11-libs/gtkmm-addons
 # release that actually works.
 x11-terms/powershell
 
-# <vapier@gentoo.org> (14 Sep 2002)
-# noone touch or i smack !
->=media-libs/libgd-2.0.1
->=dev-perl/GD-2
-
 # <seemant@gentoo.org> (10 Sep 2002)
 # masked coz all our packages only use the old version
 >=net-libs/libnet-1.1.0
