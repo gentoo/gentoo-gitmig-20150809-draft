@@ -1,0 +1,10 @@
+# ChangeLog for games-strategy/majesty-demo
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/ChangeLog,v 1.1 2005/02/23 03:38:43 wolf31o2 Exp $
+
+*majesty-demo-1.0.0 (22 Feb 2005)
+
+  22 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +majesty-demo-1.0.0.ebuild:
+  Initial import.  Ebuild by me.  Closes bug #70914.
+
