@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.39 2003/02/24 21:14:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.40 2003/02/26 07:57:47 azarah Exp $
 
 # IMPORTANT NOTE:
 # This script now accepts an optional argument.
@@ -80,7 +80,8 @@ INVALID_USE="`gawk -v ORIGUSE="${ORIGUSE}" '
 			print "yes"
 	}'`"
 
-if [ "${INVALID_USE}" = "yes" ]
+# Do not do the check for stage build scripts ...
+if [ "$1" = "" ] && [ "${INVALID_USE}" = "yes" ]
 then
 	echo
 	eerror "You have 'build' or 'bootstrap' in your USE flags!  Please"
