@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r7.ebuild,v 1.8 2002/12/15 10:44:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r7.ebuild,v 1.9 2002/12/27 20:58:18 mcummings Exp $
 
 IUSE="berkdb gdbm"
 
@@ -17,6 +17,7 @@ RDEPEND="gdbm? ( >=sys-libs/gdbm-1.8.0 )
 		=sys-libs/db-1.85-r1 )"
 
 DEPEND="sys-apps/groff
+	sys-devel/automake
 	${RDEPEND}"
 
 src_compile() {

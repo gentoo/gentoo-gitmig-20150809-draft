@@ -1,7 +1,17 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.34 2002/12/27 16:57:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.35 2002/12/27 20:58:18 mcummings Exp $
 
+  27 Dec 2002;  Michael Cummings <mcummings@gentoo.org>
+  perl-5.8.0-r7.ebuild:
+   
+  Added depend for automake
+
+  27 Dec 2002;  Michael Cummings <mcummings@gentoo.org>
+  perl-5.6.1-r10:
+
+  Added depend for automake
+   
   27 Dec 2002;  Michael Cummings <mcummings@gentoo.org>
   perl-5.8.0-r7.ebuild:
 

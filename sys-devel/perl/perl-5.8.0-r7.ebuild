@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r7.ebuild,v 1.3 2002/12/27 16:57:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r7.ebuild,v 1.4 2002/12/27 20:58:18 mcummings Exp $
 
 IUSE="berkdb gdbm"
 
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ~sparc ~ppc ~alpha ~mips"
 
 DEPEND="sys-apps/groff 
+	sys-devel/automake
 	berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 ) 
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	>=sys-apps/portage-2.0.45-r4"
