@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfcalendar/xfcalendar-0.1.8.ebuild,v 1.6 2004/05/24 18:05:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfcalendar/xfcalendar-0.1.8.ebuild,v 1.7 2004/06/23 08:57:42 malc Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-4.0.5/src/${P}.ta
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="ia64 x86 ppc alpha sparc ~amd64 hppa ~mips"
+KEYWORDS="ia64 x86 ppc alpha sparc amd64 hppa ~mips"
 
 RDEPEND=">=x11-libs/gtk+-2.0.6
 	dev-libs/libxml2
