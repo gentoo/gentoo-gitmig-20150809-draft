@@ -1,4 +1,6 @@
-MD5 cd30d15e4412a9a74ebcd315684a3e90 ChangeLog 813
+MD5 136a66562a7e0adcca8c0668b9f597db ChangeLog 961
+MD5 7455a703f7792e23465db1a8d443059d gtkatlantic-0.4.1.ebuild 690
 MD5 f17e37ea1506c4159ee2d54df1acbbfc gtkatlantic-0.3.1.ebuild 680
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 84e4f4c92d7339bd6a02a43497e171d6 files/digest-gtkatlantic-0.4.1 70
 MD5 c9cb1050f701978820d0069a0dc979d9 files/digest-gtkatlantic-0.3.1 70
