@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.57 2003/06/10 15:12:02 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.58 2003/06/10 17:30:20 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -386,119 +386,6 @@ kde_remove_dir(){
 
 }
 
-# new convinience patch wapper function to eventually replace epatch(), $PATCHES, $PATCHES1, src_unpack:patch, src_unpack:autopatch and /usr/bin/patch
-# Features:
-# - bulk patch handling similar to epatch()'s
-# - automatic patch level detection like epatch()'s
-# - semiautomatic patch uncompression like epatch()'s (may switch to using /usr/bin/file for extra power, instead of just looking at the filename)
-# - doesn't have the --dry-run overhead of epatch() - inspects patchfiles manually instead
-# - is called from base_src_unpack to handle $PATCHES to avoid defining src_unpack(-) just to use xpatch
-# - generally configurable - accepts parameters for patch, complex specifications of patchfiles, etc like epatch() does
-
-# accepts zero or more parameters specifying patchfiles and/or patchdirs
-
-# known issues:
-# - only supports unified style patches (does anyone _really_ use anything else?)
-# - first file addressed in a patch can't have spaces in its name or in the path mentioned in the patchfile
-# (can be easily fixed to be: at least one file addressed in the patch must have no spaces...)
-xpatch() {
-
-	debug-print-function $FUNCNAME $*
-
-	local list=""
-	local list2=""
-	declare -i plevel
-
-	# parse patch sources
-	for x in $*; do
-		debug-print "$FUNCNAME: parsing parameter $x"
-		if [ -f "$x" ]; then
-			list="$list $x"
-		elif [ -d "$x" ]; then
-			# handles patchdirs like epatch() for now: no recursion.
-			# patches are sorted by filename, so with an xy_foo naming scheme you'll get the right order.
-			# only patches with _$ARCH_ or _all_ in their filenames are applied.
-			for file in `ls -A $x`; do
-				debug-print "$FUNCNAME:  parsing in subdir: file $file"
-				if [ -f "$x/$file" ] && [ "${file}" != "${file/_all_}" -o "${file}" != "${file/_$ARCH_}" ]; then
-					list2="$list2 $x/$file"
-				fi
-			done
-			list="`echo $list2 | sort` $list"
-		else
-			die "Couldn't find $x"
-		fi
-	done
-
-	debug-print "$FUNCNAME: final list of patches: $list"
-
-	for x in $list; do
-		debug-print "$FUNCNAME: processing $x"
-		# deal with compressed files. /usr/bin/file is in the system profile, or should be.
-		case "`/usr/bin/file -b $x`" in
-			*gzip*) patchfile="${T}/current.patch"; ungzip -c "$x" > "${patchfile}";;
-			*bzip2*) patchfile="${T}/current.patch"; bunzip2 -c "$x" > "${patchfile}";;
-			*text*) patchfile="$x";;
-			*) die "Could not determine filetype of patch $x";;
-		esac
-		debug-print "$FUNCNAME: patchfile=$patchfile"
-
-		# determine patchlevel. supports p0 and higher with either $S or $WORKDIR as base.
-		target="`/bin/grep '+++' $patchfile | /usr/bin/tail -1`"
-		debug-print "$FUNCNAME: raw target=$target"
-		# strip target down to the path/filename. NOTE doesn't support filenames/paths with spaces in them :-(
-		# remove leading +++
-		target="${target/+++ }"
-		# ugly, yes. i dunno why doesn't this work instead: target=${target%% *}
-		for foo in $target; do target="$foo"; break; done
-		# duplicate slashes are discarded by patch wrt the patchlevel. therefore we need to discard them as well
-		# to calculate the correct patchlevel.
-		while [ "$target" != "${target/\/\/}" ]; do
-			target="${target/\/\//\/}"
-		done
-		debug-print "$FUNCNAME: stripped target=$target"
-
-		# look for target
-		for basedir in "$S" "$WORKDIR" "`pwd`"; do
-			debug-print "$FUNCNAME: looking in basedir=$basedir"
-			cd "$basedir"
-
-			# try stripping leading directories
-			target2="$target"
-			plevel=0
-			debug-print "$FUNCNAME: trying target2=$target2, plevel=$plevel"
-			while [ ! -f "$target2" ]; do
-				target2="${target2#*/}" # removes piece of target2 upto the first occurence of /
-				plevel=plevel+1
-				debug-print "$FUNCNAME: trying target2=$target2, plevel=$plevel"
-				[ "$target2" == "${target2/\/}" ] && break
-			done
-			test -f "$target2" && break
-
-			# try stripping filename - needed to support patches creating new files
-			target2="${target%/*}"
-			plevel=0
-			debug-print "$FUNCNAME: trying target2=$target2, plevel=$plevel"
-			while [ ! -d "$target2" ]; do
-				target2="${target2#*/}" # removes piece of target2 upto the first occurence of /
-				plevel=plevel+1
-				debug-print "$FUNCNAME: trying target2=$target2, plevel=$plevel"
-				[ "$target2" == "${target2/\/}" ] && break
-			done
-			test -d "$target2" && break
-
-		done
-
-		test -f "${basedir}/${target2}" || test -d "${basedir}/${target2}" || die "Could not determine patchlevel for $x"
-		debug-print "$FUNCNAME: determined plevel=$plevel"
-		# do the patching
-		ebegin "Applying patch ${x##*/}..."
-		/usr/bin/patch -p$plevel < "$patchfile" > /dev/null || die "Failed to apply patch $x"
-		eend $?
-
-	done
-
-}
 
 # is this a kde-base ebuid?
 case $PN in kde-i18n*|arts|kdeaddons|kdeadmin|kdeartwork|kdebase|kdebindings|kdeedu|kdegames|kdegraphics|kdelibs|kdemultimedia|kdenetwork|kdepim|kdesdk|kdetoys|kdeutils|kdelibs-apidocs)
