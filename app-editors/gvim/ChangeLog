@@ -1,12 +1,15 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.11 2002/12/13 10:56:05 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.12 2003/01/14 17:37:05 rphillips Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *gvim-6.1-r4.ebuild (06 Dec 2002)
 
-  11 Dec 2002; Ryan Phillips <rphillips@gentoo.org> vim-6.1-r17.ebuild :
+  14 Jan 2003; Ryan Phillips <rphillips@gentoo.org> gvim-6.1-r4.ebuild :
+  added an addpredict for remote compiles
+
+  11 Dec 2002; Ryan Phillips <rphillips@gentoo.org> gvim-6.1-r4.ebuild :
   Moved gvimrc file to /etc/vim/vimrc
 
   06 Dec 2002; Ryan Phillips <rphillips@gentoo.org> gvim-6.1-r4.ebuild :

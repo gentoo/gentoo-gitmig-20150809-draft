@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r4.ebuild,v 1.7 2003/01/08 23:55:42 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-6.1-r4.ebuild,v 1.8 2003/01/14 17:37:05 rphillips Exp $
 
 VIMPATCH="vimpatch-1-263.tar.bz2"
 inherit vim
@@ -53,6 +53,7 @@ src_compile() {
 	
 	# This should fix a sandbox violation. 
 	addwrite /dev/pty/*
+	addpredict /dev/pty/
 	
 	if [ -n "$guiconf" ]; then
 		./configure \
