@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mini_httpd/files/mini_httpd.confd,v 1.1 2003/03/04 06:51:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mini_httpd/files/mini_httpd.confd,v 1.2 2003/10/04 13:16:29 stuart Exp $
 
 ## Config file for /etc/init.d/mini_httpd
 
@@ -18,5 +18,9 @@
 
 MINI_HTTPD_OPTS="-p 8080 -u nobody -r -i /var/run/mini_httpd.pid -l /var/log/mini_httpd.log"
 
-## to add cgi-support:
-#MINI_HTTPD_OPTS="$MINI_HTTPD_OPTS -c **.cgi"
+## to add cgi-support you should switch over to a config-file, a sample can
+## be found in your DOCDESTTREE (/usr/share/doc/mini_httpd-xxxx) named
+##     mini_httpd.conf.sample.gz
+## copy the sample to /etc/mini_httpd.conf and replace the MINI_HTTPD_OPTS-line
+## above by:
+##MINI_HTTPD_OPTS="-C /etc/mini_httpd.conf"
