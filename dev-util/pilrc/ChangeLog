@@ -1,5 +1,6 @@
 # ChangeLog for dev-util/pilrc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pilrc/ChangeLog,v 1.9 2004/09/30 00:30:51 swegener Exp $
 
   19 Sep 2003; Alastair Tse <liquidx@gentoo.org> pilrc-2.9_p10.ebuild:
   changing to use edos2unix rather than dos2unix
