@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.6 2002/09/02 02:22:06 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.7 2002/09/02 02:27:42 rphillips Exp $
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -95,7 +95,7 @@ src_compile() {
 	use snmp && myconf="${myconf} --with-snmp --enable-ucd-snmp-hack"
 	use gdbm && myconf="${myconf} --with-gdbm=/usr"
 	use berkdb && myconf="${myconf} --with-db3=/usr"
-	use mysql && myconf="${myconf} --enable-mysql=/usr" || myconf="${myconf} --without-mysql"
+	use mysql && myconf="${myconf} --with-mysql=/usr" || myconf="${myconf} --without-mysql"
 	use postgres && myconf="${myconf} --with-pgsql=/usr"
 	use odbc && myconf="${myconf} --with-unixODBC=/usr"
 	use ldap &&  myconf="${myconf} --with-ldap" 
