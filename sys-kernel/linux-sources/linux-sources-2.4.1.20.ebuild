@@ -1,12 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.1.19-r2.ebuild,v 1.2 2001/02/21 07:39:50 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.1.20.ebuild,v 1.1 2001/02/21 15:46:22 achim Exp $
 
 S=${WORKDIR}/linux
 #OKV=original kernel version, KV=patched kernel version
 OKV=2.4.1
-KV=2.4.1-ac19
+KV=2.4.1-ac20
 #Versions of LVM, ALSA, JFS and lm-sensors
 LVMV=0.9.1_beta5
 LVMVARC=0.9.1_beta5_a
@@ -48,12 +48,9 @@ src_unpack() {
     cd ${S}
     echo "Applying ${KV} patch..."
     try bzip2 -dc ${DISTDIR}/patch-${KV}.bz2 | patch -p1
-    echo "Applying reiserfs-nfsd patch..."
+    echo "Applying reiserfs-update patch..."
     try gzip -dc ${DISTDIR}/linux-2.4.2-pre4-reiserfs-20010220.patch.gz | patch -N -p1
     echo "You can ignore the tail-conversion.c reject the changes already are in rc19"
-#    echo "Applying reiserfs-superfs.c fix..."
-#    cd fs/reiserfs
-#    try patch -p0 < ${FILESDIR}/${PV}-r${PR}/super.diff
     mkdir ${S}/extras
     
     #create and apply LVM patch.  The tools get built later.
@@ -103,9 +100,7 @@ src_unpack() {
     make mrproper
     #this is the configuration for the default kernel
     try cp ${FILESDIR}/${KV}/config .config
-    try cp ${FILESDIR}/${KV}/autoconf.h include/linux/autoconf.h
-    try make include/linux/version.h
-    
+
     #fix silly permissions in tarball
     cd ${WORKDIR}
     chown -R 0.0 linux
@@ -113,8 +108,7 @@ src_unpack() {
 }
 
 src_compile() {
-    # moved this up here cause it looks like LVM depends on the symlinks - pete
-    cd ${S}
+    
     try make symlinks
     
     #LVM tools are included even in the linux-sources package
@@ -138,6 +132,7 @@ src_compile() {
     try make
 
     cd ${S}
+    yes \"\" | make oldconfig
     try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" bzImage
     try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" modules
 
@@ -151,9 +146,9 @@ src_install() {
 
 	#clean up object files and original executables to reduce size of linux-sources
 	dodir /usr/lib
-	cd ${S}/extras/LVM/${LVMV}
+	cd ${S}/extras/LVM/${LVMV}/tools
 
-	try make install -e prefix=${D} mandir=${D}/usr/share/man \
+	try CFLAGS=\"${CFLAGS} -I${S}/include\" make install -e prefix=${D} mandir=${D}/usr/share/man \
 		sbindir=${D}/sbin libdir=${D}/lib
 	#no need for a static library in /lib
 	mv ${D}/lib/liblvm*.a ${D}/usr/lib
