@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.0.36.ebuild,v 1.2 2001/01/18 20:16:57 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.0.36.ebuild,v 1.3 2001/01/18 20:17:56 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -22,10 +22,7 @@ src_install() {
 	dodoc COPYING NEWS README*  THANKS TODO ChangeLog ChangeLog-1997 AUTHORS
 	make prefix=${D}/usr install
 	cd ${D}
-        dodir bin
-	mv usr/bin/* bin
-        cd usr/bin
-        ln -s ../../bin/* .
+	mv usr/bin .
         rm -rf usr/lib
 }
 
