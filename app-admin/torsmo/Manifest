@@ -1,9 +1,18 @@
-MD5 c16a75759c74604344c61c8790a3a058 torsmo-0.14.ebuild 1207
-MD5 ef89d5070f3162f88703356be653bfa0 torsmo-0.16.ebuild 1207
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bd0dd434f60799d6f3fcc02713ddb09c torsmo-0.17.ebuild 1334
-MD5 ddd479dba3c4095eba7eea5b05710ced ChangeLog 2215
+MD5 24d34eacbb0f977cdf02589d29614f57 ChangeLog 2456
 MD5 e62755aeb2fcd53a4426e99d3af550ed metadata.xml 549
-MD5 552e015366516a5ff2034d10b083c303 files/torsmo-0.17-mozilla.patch 601
-MD5 0b0637dc0d84ad4add55e41e75a72790 files/digest-torsmo-0.14 62
-MD5 db0c2639b478a6cf43ba3e09d0bbd4f9 files/digest-torsmo-0.16 62
+MD5 7cb27fd15dc2516cac2e0de8d5502261 torsmo-0.17-r1.ebuild 1438
+MD5 38f2bbcb59c900a0fc2a2f0ec2f75463 files/digest-torsmo-0.17-r1 62
 MD5 38f2bbcb59c900a0fc2a2f0ec2f75463 files/digest-torsmo-0.17 62
+MD5 552e015366516a5ff2034d10b083c303 files/torsmo-0.17-mozilla.patch 601
+MD5 d27874dbf963063e13d6387d8ef3912f files/torsmo-0.17-kernel2.4.patch 2388
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBr38YmdTrptrqvGERAsA+AJsF9na0LzTUohJv6gdv/nXkC9DEgwCcDnoy
+7BvI/Adcs0jm2Vvu4vzOh9c=
+=vIoz
+-----END PGP SIGNATURE-----

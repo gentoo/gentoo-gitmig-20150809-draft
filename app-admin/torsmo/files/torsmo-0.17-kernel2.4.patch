@@ -1,0 +1,102 @@
+--- linux.c.orig	2004-05-25 18:27:19.000000000 +0930
++++ linux.c	2004-12-03 06:11:57.604376744 +0930
+@@ -176,7 +176,24 @@
+ static int running_processes;
+ static unsigned int cpu_user, cpu_system, cpu_nice;
+ 
+-static FILE *stat_fp;
++static FILE *stat_fp, *proc_fp;
++
++static void update_procs() {
++  static int rep;
++  char buf[64];
++  float fj;
++  int dj;
++  if (proc_fp == NULL)
++    proc_fp = open_file("/proc/loadavg", &rep);
++  else 
++    fseek(proc_fp, 0, SEEK_SET);
++  while (!feof(proc_fp)){
++    if (fgets(buf, 64, proc_fp) == NULL) break;
++    else
++      sscanf(buf, "%f %f %f %d/%d %d",&fj,&fj,&fj,&running_processes,&dj,&dj);
++  }
++}
++
+ 
+ static void update_stat() {
+   static int rep;
+@@ -191,10 +208,6 @@
+   while (!feof(stat_fp)) {
+     if (fgets(buf, 255, stat_fp) == NULL)
+       break;
+-
+-    if (strncmp(buf, "procs_running ", 14) == 0) {
+-      sscanf(buf, "%*s %d", &running_processes);
+-    }
+     else if (strncmp(buf, "cpu ", 4) == 0) {
+       sscanf(buf, "%*s %u %u %u", &cpu_user, &cpu_nice, &cpu_system);
+     }
+@@ -204,7 +217,7 @@
+ }
+ 
+ int get_running_processes() {
+-  update_stat();
++  update_procs();
+   return running_processes;
+ }
+ 
+@@ -253,7 +266,7 @@
+   }
+ }
+ 
+-#define I2C_DIR "/sys/bus/i2c/devices/"
++#define I2C_DIR "/proc/sys/dev/sensors/"
+ 
+ int open_i2c_sensor(const char *dev, const char *type, int n, int *div) {
+   char path[256];
+@@ -272,12 +285,13 @@
+   if (strcmp(type, "vol") == 0)
+     type = "in";
+ 
+-  snprintf(path, 255, I2C_DIR "%s/%s%d_input", dev, type, n);
++  snprintf(path, 255, I2C_DIR "%s/%s%d", dev, type, n);
+ 
+   /* open file */
+   fd = open(path, O_RDONLY);
+   if (fd < 0) ERR("can't open '%s': %s", path, strerror(errno));
+ 
++  
+   if (strcmp(type, "in") == 0 || strcmp(type, "temp") == 0)
+     *div = 1;
+   else
+@@ -287,7 +301,8 @@
+ }
+ 
+ double get_i2c_info(int fd, int div) {
+-  int val = 0;
++  double val = 0;
++  double jf;
+ 
+   if (fd <= 0) return 0;
+ 
+@@ -301,14 +316,13 @@
+     /* should read until n == 0 but I doubt that kernel will give these
+      * in multiple pieces. :) */
+     buf[n] = '\0';
+-    val = atoi(buf);
++    if (div)
++       sscanf(buf, "%lf %lf %lf", &jf, &jf, &val);
++     else
++       sscanf(buf, "%lf %lf", &jf, &val);
+   }
+ 
+-  /* divide voltage and temperature by 1000 */
+-  if (div)
+-    return val / 1000.0;
+-  else
+-    return val;
++  return val;
+ }
+ 
+ void get_load_average(double v[3]) {

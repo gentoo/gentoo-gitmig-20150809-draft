@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/torsmo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.13 2004/10/19 22:00:17 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.14 2004/12/02 20:46:10 dragonheart Exp $
+
+*torsmo-0.17-r1 (03 Dec 2004)
+
+  03 Dec 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/torsmo-0.17-kernel2.4.patch, -torsmo-0.14.ebuild,
+  -torsmo-0.16.ebuild, +torsmo-0.17-r1.ebuild:
+  added 2.4 kernel patch as per bug #69405.
 
   19 Oct 2004; Sven Blumenstein <bazik@gentoo.org> :
   Stable on sparc.
