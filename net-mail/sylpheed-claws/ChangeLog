@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.54 2003/11/11 02:46:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.55 2003/11/12 22:22:14 genone Exp $
+
+  12 Nov 2003; Marius Mauch <genone@gentoo.org> metadata.xml,
+  sylpheed-claws-0.9.5-r1.ebuild, sylpheed-claws-0.9.5.ebuild,
+  sylpheed-claws-0.9.6-r1.ebuild, sylpheed-claws-0.9.6.ebuild:
+  fixed SRC_URI, added maintainers to metadata.xml
 
 *sylpheed-claws-0.9.6-r2 (10 Nov 2003)
 
