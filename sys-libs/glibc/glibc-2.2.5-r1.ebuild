@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5.ebuild,v 1.3 2002/02/11 17:28:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r1.ebuild,v 1.1 2002/02/16 00:47:43 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -29,13 +29,13 @@ export CFLAGS="$CFLAGS -O2"
 export CXXFLAGS="$CFLAGS"
 
 src_unpack() {
-	unpack glibc-${PV}.tar.bz2
+	unpack glibc-${PV}.tar.bz2 || die
 	cd ${S}
 	#extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir man; cd man
-	tar xjf ${FILESDIR}/glibc-manpages-${PV}.tar.bz2
+	tar xjf ${FILESDIR}/glibc-manpages-${PV}.tar.bz2 || die
 	cd ${S}
-	unpack glibc-linuxthreads-${PV}.tar.bz2
+	unpack glibc-linuxthreads-${PV}.tar.bz2 || die
 	
 	# This patch apparently eliminates compiler warnings for some versions of gcc.
 	# For information about the string2 patch, see: 
@@ -111,10 +111,7 @@ src_install() {
 			mv ${i} ${i%.map}_pic.map
 		done
 	fi
-	rm ${D}/lib/ld-linux.so.2
-	rm ${D}/lib/libc.so.6
-	rm ${D}/lib/libpthread.so.0
-	#is this next line actually needed or does the makefile get it right.
+	#is this next line actually needed or does the makefile get it right?
 	#It previously has 0755 perms which was killing things.
 	chmod 4755 ${D}/usr/lib/misc/pt_chown
 	rm -f ${D}/etc/ld.so.cache
@@ -127,8 +124,25 @@ src_install() {
 	dosym /usr/lib/libbsd-compat.a /usr/lib/libbsd.a
 }
 
+pkg_preinst() {
+	#we need to ensure that symlinks are installed *after* the real libraries; otherwise we can get symlink death.
+	#This needs to be generalized into Portage to it automatically works for other packages too.
+	mkdir -f ${T}/symlinks
+	cd ${D}/lib
+	local x
+	for x in *
+	do
+		if [ -L $x ]
+		then
+			mv $x ${T}/symlinks
+		fi
+	done
+}
+
 pkg_postinst()
 {
+	#restore symlinks
+	mv -f ${T}/symlinks/* ${ROOT}/lib
 	if [ ! -e ${ROOT}etc/localtime ]
 	then
 		echo "Please remember to set your timezone using the zic command."
