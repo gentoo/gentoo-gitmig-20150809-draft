@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.4 2003/03/28 19:19:14 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.5 2003/05/15 13:41:29 phosphan Exp $
+
+  15 May 2003; Patrick Kursawe <phosphan@gentoo.org> auctex-10.0g.ebuild,
+  auctex-11.13.ebuild, auctex-11.14.ebuild:
+  Corrected homepage and src_uri, bug 21001
 
 *auctex-11.14 (28 Mar 2003)
 
