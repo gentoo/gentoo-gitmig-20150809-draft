@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc1.ebuild,v 1.1 2003/10/12 17:45:56 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc1.ebuild,v 1.2 2003/10/17 18:16:11 mholzer Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://xine.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="1"
 KEYWORDS="~x86 ~ppc ~hppa ~sparc ~amd64"
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl"
 
