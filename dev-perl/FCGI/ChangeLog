@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/FCGI
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FCGI/ChangeLog,v 1.1 2004/08/25 11:34:26 rl03 Exp $
+
+*FCGI-0.67 (25 Aug 2004)
+
+  25 Aug 2004; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
+  +FCGI-0.67.ebuild:
+  Initial ebuild. RT dependency. OK'd by mcummings.
+
