@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7b37daac44e02daf71f88d38186cdea8 ChangeLog 16972
+MD5 65df2cc398ee19db3ce71f63b6166f4d ChangeLog 17224
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 64c8c8131c7bbba90c84132b722baa38 shadow-4.0.4.1-r4.ebuild 5947
-MD5 498b29f3eb732e07497949bd2b4f29d4 shadow-4.0.6.ebuild 5271
+MD5 080d68b76a4c9e4199caca00b8d008a2 shadow-4.0.6.ebuild 5436
 MD5 4442569a619d928b23429170034aee02 shadow-4.0.5-r2.ebuild 5424
 MD5 3d9d665aebdcc9922e3a7c3a852c2d06 shadow-4.0.5-r3.ebuild 5509
 MD5 cef6788bc7c8c5468c1b1f68df77ed9e files/digest-shadow-4.0.4.1-r4 67
@@ -29,6 +29,8 @@ MD5 d8b8542a7bc013011a293732ca504a50 files/digest-shadow-4.0.5-r3 66
 MD5 c5e9081ed43837797e2f1617b7ce1c24 files/shadow-4.0.5-fix-adding-of-pam_env-set-env-vars.patch 285
 MD5 fda41657b856ffaeec5a2734b312409b files/shadow-4.0.5-fix-mail-configure.patch 5452
 MD5 d15398f7d8c06b906abdf73ae3a55f54 files/shadow-4.0.6-manpages.patch 564
+MD5 722c164266b87cc374eae4ce1de7632b files/shadow-4.0.6-dots-in-usernames.patch 882
+MD5 fcbc820ddc961b2b153ccc5a7a62935b files/shadow-4.0.6-long-groupnames.patch 659
 MD5 6e0bc0211949c624da0ea08d994a7038 files/default/useradd 96
 MD5 51b0337bd261f6ed5e53af5dc196431a files/pam.d/system-auth 499
 MD5 a5311bbc9c1fc378a6b0bfb3ca1b2394 files/pam.d/login 431
@@ -38,9 +40,9 @@ MD5 60d44a6f43aafcb9ca35858ab2534a49 files/pam.d/shadow 227
 MD5 942190363cb06bd4cf1b3acdcca6c513 files/pam.d/su 1296
 MD5 624bacd4dd8e9855404cd262dd6f8f62 files/pam.d/system-auth-1.1 671
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB3hXZroRuSHgZdywRAtt3AJkBVjuAG0zO/uHB0B/fNdUlmtrxxwCffbUc
-Bkz086P94XBdD9n/+6OsGaM=
-=MNdJ
+iD8DBQFB4iI3roRuSHgZdywRAkMKAJ9D4VG7wuORt92xJ+IO8mQL21TVkwCeKWNO
+aZpz+QS/fPxdTbw5QZS1I+k=
+=EFcc
 -----END PGP SIGNATURE-----

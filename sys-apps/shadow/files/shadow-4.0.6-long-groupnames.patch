@@ -1,0 +1,23 @@
+Remove arbitrary requirement on the length of groups.  Perhaps we 
+should turn this into a configure option and send upstream ?
+
+http://bugs.gentoo.org/show_bug.cgi?id=3485
+
+Index: libmisc/chkname.c
+===================================================================
+RCS file: /cvsroot/shadow/libmisc/chkname.c,v
+retrieving revision 1.8
+diff -u -r1.8 chkname.c
+--- libmisc/chkname.c	12 May 2003 05:29:14 -0000	1.8
++++ libmisc/chkname.c	10 Jan 2005 06:25:47 -0000
+@@ -58,8 +59,10 @@
+ 	 * Arbitrary limit for group names - max 16
+ 	 * characters (same as on HP-UX 10).
+ 	 */
++#if 0
+ 	if (strlen (name) > 16)
+ 		return 0;
++#endif
+ 
+ 	return good_name (name);
+ }

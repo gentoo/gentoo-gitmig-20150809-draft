@@ -1,0 +1,28 @@
+Allow people to add users with dots in their names.
+
+http://bugs.gentoo.org/show_bug.cgi?id=22920
+
+Index: libmisc/chkname.c
+===================================================================
+RCS file: /cvsroot/shadow/libmisc/chkname.c,v
+retrieving revision 1.8
+diff -u -r1.8 chkname.c
+--- libmisc/chkname.c	12 May 2003 05:29:14 -0000	1.8
++++ libmisc/chkname.c	10 Jan 2005 06:25:47 -0000
+@@ -18,7 +18,7 @@
+ static int good_name (const char *name)
+ {
+ 	/*
+-	 * User/group names must match [a-z_][a-z0-9_-]*
++	 * User/group names must match [a-z_][a-z0-9_-.$]*
+ 	 */
+ 	if (!*name || !((*name >= 'a' && *name <= 'z') || *name == '_'))
+ 		return 0;
+@@ -27,6 +27,7 @@
+ 		if (!((*name >= 'a' && *name <= 'z') ||
+ 		      (*name >= '0' && *name <= '9') ||
+ 		      *name == '_' || *name == '-' ||
++		      *Name == '.' ||
+ 		      (*name == '$' && *(name + 1) == '\0')))
+ 			return 0;
+ 	}
