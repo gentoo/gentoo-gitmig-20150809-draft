@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0020afb0c3588c2d08e95d4c867d19b2 ChangeLog 679
+MD5 47913c89d86eab9f9de0c8d0ab16987b esmtp-0.5.0-r1.ebuild 972
+MD5 8f57915a35201af21c9b48f6f802ace3 ChangeLog 795
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 33145b13b2eee311d58624b3202fc1b7 esmtp-0.5.0-r1.ebuild 969
 MD5 c99a26bd6ed6b3b450d77f9c3ef0e823 files/digest-esmtp-0.5.0-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOBWz10xuJSrg3/sRAr+rAJ4r9s+gBBg55Bmp8i+jdPe7NEjaSACeP9jr
-WezFakXGYXoaM1ClJ/X/doI=
-=S7TT
------END PGP SIGNATURE-----
