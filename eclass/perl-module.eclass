@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.66 2005/03/14 15:09:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.67 2005/03/14 18:28:04 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -37,6 +37,20 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
 # of file collision features by giving us a single exportable function to deal
 # with the pods. Modifications to the eclass provided by Yaakov S
 # <yselkowitz@hotmail.com> in bug 83622
+# 
+# <later the same day>
+# The long awaited (by me) fix for automagically detecting and dealing
+# with module-build dependancies. I've chosen not to make it a default dep since
+# this adds overhead to people that might not otherwise need it, and instead
+# modified the eclass to detect the existence of a Build.PL and behave
+# accordingly. This will fix issues with g-cpan builds that needs module-build
+# support, as well as get rid of the (annoying) style=builder vars. I know of
+# only one module that needed to be hacked for this, Class-MethodMaker-2.05, but
+# that module has a bad Build.PL to begin with. Ebuilds should continue to
+# DEPEND on module-build<-version> as needed, but there should be no need for
+# the style directive any more (especially since it isn't in the eclass
+# anymore). Enjoy!
+
 
 
 DEPEND=">=dev-lang/perl-5.8.2 !<dev-perl/ExtUtils-MakeMaker-6.17"
@@ -50,6 +64,7 @@ VENDOR_LIB=""
 VENDOR_ARCH=""
 ARCH_LIB=""
 POD_DIR=""
+BUILDER_VER=""
 
 perl-module_src_prep() {
 
@@ -57,9 +72,20 @@ perl-module_src_prep() {
 
 	export PERL_MM_USE_DEFAULT=1
 
+
 	SRC_PREP="yes"
-	if [ "${style}" == "builder" ]; then
-		perl ${S}/Build.PL installdirs=vendor destdir=${D}
+	if [ -f ${S}/Build.PL ]; then
+		if [ -z ${BUILDER_VER} ]; then
+			eerror
+			eerror "Please post a bug on http://bugs.gentoo.org assigned to"
+			eerror "perl@gentoo.org - ${P} was added without a dependancy"
+			eerror "on dev-perl/module-build"
+			eerror "${BUILDER_VER}"
+			eerror
+			die
+		else
+			perl ${S}/Build.PL installdirs=vendor destdir=${D}
+		fi
 	else
 		perl Makefile.PL ${myconf} \
 		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
@@ -68,8 +94,9 @@ perl-module_src_prep() {
 
 perl-module_src_compile() {
 
+	perlinfo
 	[ "${SRC_PREP}" != "yes" ] && perl-module_src_prep
-	if [ "${style}" != "builder" ]; then
+	if [ -z ${BUILDER_VER} ]; then
 		make ${mymake} || die "compilation failed"
 	fi
 
@@ -80,10 +107,11 @@ perl-module_src_compile() {
 }
 
 perl-module_src_test() {
-	if [ "${style}" == "builder" ]; then
-		perl ${S}/Build  test
-	else
+	perlinfo
+	if [ -z ${BUILDER_VER} ]; then
 		make test
+	else
+		perl ${S}/Build  test
 	fi
 }
 
@@ -93,10 +121,10 @@ perl-module_src_install() {
 	
 	test -z ${mytargets} && mytargets="install"
 					 
-	if [ "${style}" == "builder" ]; then
-		perl ${S}/Build install
-	else
+	if [ -z ${BUILDER_VER} ]; then
 		make ${myinst} ${mytargets} || die
+	else
+		perl ${S}/Build install
 	fi
 
 	fixlocalpod
@@ -161,6 +189,14 @@ perlinfo() {
 	eval `perl '-V:installvendorarch'`
 	VENDOR_ARCH=${installvendorarch}
 	
+	if [ -f ${S}/Build.PL ]; then
+		if [ ${PN} == "module-build" ]; then
+			BUILDER_VER="1" # A bootstrapping if you will
+		else
+			BUILDER_VER=`perl -MModule::Build -e 'print "$Module::Build::VERSION;"' `
+		fi
+	fi
+
 	if [ -f /usr/bin/perl ]
 	then 
 		POD_DIR="/usr/share/perl/gentoo-pods/${version}"
