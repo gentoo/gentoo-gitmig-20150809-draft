@@ -1,8 +1,11 @@
 # ChangeLog for app-crypt/mhash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/ChangeLog,v 1.22 2004/08/19 03:43:27 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/ChangeLog,v 1.23 2004/09/21 23:25:05 kito Exp $
 
-  18 Aug 2004; Tom Gall <tgall@gentoo.org> mhash-0.8.18-r1.ebuild:
+  21 Sep 2004; kito <kito@gentoo.org> mhash-0.9.1.ebuild:
+  added ~ppc-macos keyword. Closes bug #63880 
+
+  18 Aug 2004; Tom Gall <otgall@gentoo.rg> mhash-0.8.18-r1.ebuild:
   stable on ppc64
 
   19 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
