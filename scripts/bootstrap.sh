@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.57 2004/08/13 13:44:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.58 2004/08/18 02:39:27 vapier Exp $
 
 # IMPORTANT NOTE:
 # This script no longer accepts an optional argument.
@@ -29,12 +29,18 @@ then
 fi
 
 MYPROFILEDIR="`readlink -f /etc/make.profile`"
-if [ ! -d ${MYPROFILEDIR} ]
+if [ ! -d "${MYPROFILEDIR}" ]
 then
-	echo "!!! Error:  ${MYPROFILEDIR} does not exist. Exiting."
+	echo "!!! Error:  '${MYPROFILEDIR}' does not exist. Exiting."
 	exit 1
 fi
- 
+
+if [ -f "${MYPROFILEDIR}/parent" ]
+then
+	echo "!!! Error:  You must use 'bootstrap-cascade.sh' with cascading profiles. Exiting."
+	exit 1
+fi
+
 if [ -e /usr/bin/spython ]
 then
 	# 1.0_rc6 and earlier

@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gento Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.10 2004/08/02 17:51:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.11 2004/08/18 02:39:27 vapier Exp $
 
 # drobbins optimized this script at some point which made a bootstrap
 # to complete 20 mins to 2 hours faster, depending on CPU. He did this
@@ -35,8 +35,13 @@ for opt in $* ; do
 done
 
 MYPROFILEDIR="`readlink -f /etc/make.profile`"
-if [ ! -d ${MYPROFILEDIR} ]; then
-	echo "!!! Error:  ${MYPROFILEDIR} does not exist. Exiting."
+if [ ! -d "${MYPROFILEDIR}" ] ; then
+	echo "!!! Error:  '${MYPROFILEDIR}' does not exist. Exiting."
+	exit 1
+fi
+
+if [ ! -f "${MYPROFILEDIR}/parent" ] ; then
+	echo "!!! Error:  You must use 'bootstrap.sh' with non-cascading profiles. Exiting."
 	exit 1
 fi
 
