@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/foomatic-2.0.0.ebuild,v 1.8 2003/01/08 14:31:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic/foomatic-2.0.0.ebuild,v 1.9 2003/01/22 19:22:40 agriffis Exp $
 
 inherit perl-module
 
@@ -29,7 +29,10 @@ src_unpack() {
 
 src_compile() {
 	econf || die "configure failed"
-	emake || die "parallel make failed"
+
+	# Doesn't always build when using emake.  It fails consistently on
+	# my Athlon when using -j6.  (22 Jan 2003 agriffis)
+	make || die "make failed"
 }
 
 src_install() {
