@@ -288,7 +288,7 @@ with your network mask.  For the <c>route</c> command, replace
 $GTWAY with your default gateway.
 </p>
 <pre>
-# <i>/sbin/ifconfig lo 127.0.0.1 up
+# <i>/sbin/ifconfig lo 127.0.0.1 up</i>
 # <i>/sbin/ifconfig $IFACE $IPNUM broadcast $BCAST netmask $NMASK</i>
 # <i>/sbin/route add -net default gw $GTWAY netmask 0.0.0.0 metric 1</i>
 </pre>
@@ -504,9 +504,11 @@ Remember to specify <c>ext2</c>, <c>ext3</c> or <c>reiserfs</c> filesystem types
 #
 # &lt;fs&gt;          &lt;mountpoint&gt;    &lt;type&gt;  	&lt;opts&gt;    &lt;dump/pass&gt;
 </comment>
-/dev/hda1		/boot		reiserfs	notail,noauto,noatime	1 1
+/dev/hda1		/boot		reiserfs	notail,noauto,noatime	0 0
+<comment># use a dump/pass of "2 2" if your boot filesystem is *not* ReiserFS</comment>
 /dev/hda2		none            swap		sw			0 0
-/dev/hda2		/		reiserfs	notail,noatime		0 0
+/dev/hda3		/		reiserfs	notail,noatime		0 0
+<comment># use a dump/pass of "1 1" if your root filesystem is *not* ReiserFS</comment>
 /dev/hdc		/mnt/cdrom	iso9660		noauto,ro		0 0
 <comment>
 # /proc should always be enabled
