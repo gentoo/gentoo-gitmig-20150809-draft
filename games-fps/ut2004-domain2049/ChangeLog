@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-domain2049
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-domain2049/ChangeLog,v 1.2 2004/11/29 15:34:09 wolf31o2 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-domain2049/ChangeLog,v 1.3 2005/01/05 18:06:53 wolf31o2 Exp $
+
+  05 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-domain2049-2.2.ebuild:
+  Icon is a PNG not a XPM.
 
   29 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-domain2049-2.2.ebuild:
