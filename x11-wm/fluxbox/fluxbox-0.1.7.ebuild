@@ -1,11 +1,11 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Karl Trygve Kalleberg
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.5.ebuild,v 1.2 2001/12/29 21:45:09 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.7.ebuild,v 1.1 2002/03/02 08:29:56 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window manager based on BlackBox"
-SRC_URI="http://prdownloads.sourceforge.net/fluxbox/fluxbox-0.1.5.tar.gz"
+SRC_URI="http://download.sourceforge.net/fluxbox/fluxbox-${PV}.tar.gz"
 HOMEPAGE="http://fluxbox.sf.net"
 
 DEPEND="virtual/x11
@@ -17,8 +17,11 @@ RDEPEND="$DEPEND"
 
 src_compile() {
 	local myconf
-	use nls && myconf="$myconf --enable-nls" || myconf="$myconf --disable-nls"
-	use kde && myconf="$myconf --enable-kde" && export KDEDIR=/usr/kde/2 || myconf="$myconf --disable-kde"
+	use nls && myconf="$myconf --enable-nls" \
+		|| myconf="$myconf --disable-nls"
+	use kde && myconf="$myconf --enable-kde" \
+		&& export KDEDIR=/usr/kde/2 \
+		|| myconf="$myconf --disable-kde"
 	 
 	./configure \
 		--host=${CHOST} \
@@ -26,6 +29,7 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		$myconf || die "./configure failed"
+		
 	emake || die
 }
 
