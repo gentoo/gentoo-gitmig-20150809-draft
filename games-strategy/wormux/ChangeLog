@@ -1,0 +1,8 @@
+# ChangeLog for games-strategy/wormux
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/ChangeLog,v 1.1 2004/12/16 22:34:09 vapier Exp $
+
+*wormux-0.5.0 (16 Dec 2004)
+
+  16 Dec 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by [a bunch of people] #52679.
