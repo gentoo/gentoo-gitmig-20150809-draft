@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.17 2002/05/29 11:26:06 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.18 2002/05/31 22:51:30 spider Exp $
+
+*mozilla-1.0_rc3-r50 (31 May 2002)
+  31 May 2002; Spider <spider@gentoo.org> :
+  very experimental gtk2 version of mozilla. Handle with care.
+  will break galeon 1!
 
 *mozilla-1.0_rc3-r2 (28 May 2002)
 

@@ -1,0 +1,70 @@
+--- mozilla/gfx/src/gtk/nsFontMetricsGTK.cpp.old	Mon May 20 18:23:23 2002
++++ mozilla/gfx/src/gtk/nsFontMetricsGTK.cpp	Mon May 20 18:24:23 2002
+@@ -3126,10 +3126,31 @@
+ 
+     GdkRegion *rgn = nsnull;
+     clipRegion->GetNativeRegion((void *&)rgn);
+-    GdkRegionPrivate  *priv = (GdkRegionPrivate *)rgn;
+ 
+-    XftDrawSetClip(draw, priv->xregion);
+-  }
++// getting xregion for gdk2 so we can set the XftDrawSetClip region
++    GdkRectangle *rectangles = nsnull;
++    int         n_rect = 0;
++    int		i;
++    
++    gdk_region_get_rectangles (rgn, &rectangles, &n_rect);
++
++    Region     xregion = XCreateRegion();
++    
++    for (i=0; i<n_rect; i++) {
++	XRectangle 	xrect;
++
++	xrect.x            =       CLAMP (rectangles[i].x, G_MINSHORT, G_MAXSHORT);
++	xrect.y            =       CLAMP (rectangles[i].y, G_MINSHORT, G_MAXSHORT);
++	xrect.width        =       CLAMP (rectangles[i].width, G_MINSHORT, G_MAXSHORT);
++	xrect.height       =       CLAMP (rectangles[i].height, G_MINSHORT, G_MAXSHORT);
++      
++	XUnionRectWithRegion (&xrect, xregion, xregion);
++    }
++
++    XftDrawSetClip(draw, xregion);
++    XDestroyRegion (xregion);
++  
++   }
+ 
+   XftDrawString16(draw, &color, mXftFont, aX, aY + mBaselineAdjust, 
+                   (FcChar16 *)aString, aLength);
+@@ -3169,9 +3190,30 @@
+ 
+     GdkRegion *rgn = nsnull;
+     clipRegion->GetNativeRegion((void *&)rgn);
+-    GdkRegionPrivate  *priv = (GdkRegionPrivate *)rgn;
+ 
+-    XftDrawSetClip(draw, priv->xregion);
++// getting xregion for gdk2 so we can set the XftDrawSetClip region
++    GdkRectangle *rectangles = nsnull;
++    int         n_rect = 0;
++    int		i;
++    
++    gdk_region_get_rectangles (rgn, &rectangles, &n_rect);
++
++    Region     xregion = XCreateRegion();
++    
++    for (i=0; i<n_rect; i++) {
++	XRectangle 	xrect;
++
++	xrect.x            =       CLAMP (rectangles[i].x, G_MINSHORT, G_MAXSHORT);
++	xrect.y            =       CLAMP (rectangles[i].y, G_MINSHORT, G_MAXSHORT);
++	xrect.width        =       CLAMP (rectangles[i].width, G_MINSHORT, G_MAXSHORT);
++	xrect.height       =       CLAMP (rectangles[i].height, G_MINSHORT, G_MAXSHORT);
++      
++	XUnionRectWithRegion (&xrect, xregion, xregion);
++    }
++
++    XftDrawSetClip(draw, xregion);
++    XDestroyRegion (xregion);
++    
+   }
+ 
+   XftDrawString8(draw, &color, mXftFont, aX, aY + mBaselineAdjust, 
