@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.1 2003/12/07 23:19:54 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.2 2003/12/08 15:37:25 foser Exp $
 
 inherit libtool eutils
 
@@ -14,6 +14,15 @@ LICENSE="GPL-2 LGPL-2.1"
 IUSE=""
 
 DEPEND=">=net-nds/portmap-5b-r6"
+
+src_unpack() {
+
+	unpack ${A}
+
+	# fix permission problems with user* in FEATURES (#35307)
+	chmod u+w ${S}/configure
+
+}
 
 src_install() {
 
@@ -30,7 +39,7 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo "To enable fam by on boot you will have to add it to the"
+	einfo "To enable fam on  boot you will have to add it to the"
 	einfo "default profile, issue the following command as root to do so."
 	echo
 	einfo "rc-update add famd default"

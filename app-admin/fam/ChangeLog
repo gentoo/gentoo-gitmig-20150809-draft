@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/fam
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.1 2003/12/07 23:19:54 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.2 2003/12/08 15:37:25 foser Exp $
 
 *fam-2.7.0 (07 Dec 2003)
+
+  08 Dec 2003; foser <foser@gentoo.org> fam-2.7.0.ebuild :
+  Fix problem with user{priv,sandbox} features and configure (#35307)
 
   07 Dec 2003; foser <foser@gentoo.org> fam-2.7.0.ebuild, metadata.xml :
   Pack moved from fam-oss to fam
