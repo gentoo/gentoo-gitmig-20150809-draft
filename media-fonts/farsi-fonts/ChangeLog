@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/farsi-fonts
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/farsi-fonts/ChangeLog,v 1.1 2004/10/17 07:26:04 usata Exp $
+
+*farsi-fonts-0.4 (17 Oct 2004)
+
+  17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +farsi-fonts-0.4.ebuild:
+  Initial import. Ebuild submitted by Michael Mauch <michael.mauch@gmx.de>,
+  closing bug #66170.
+
