@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/pysoulseek
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.14 2003/03/28 23:34:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.15 2003/04/19 14:17:32 liquidx Exp $
+
+*pysoulseek-1.1.0_pre5 (19 Apr 2003)
+
+  19 Apr 2003; Alastair Tse <liquidx@gentoo.org> pysoulseek-1.1.0_pre5.ebuild:
+  important version bump. apparently the protocol has changed.
+  hyriand patch version is currently inside the ebuild rather than appended
+  to the version because of complications with _pre
 
 *pysoulseek-1.0.4.13 (28 Mar 2003)
 
