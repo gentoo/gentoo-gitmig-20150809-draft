@@ -1,6 +1,6 @@
-diff -Naur gkrellm-2.1.24-orig/src/mail.c gkrellm-2.1.24/src/mail.c
---- gkrellm-2.1.24-orig/src/mail.c	2003-12-19 05:57:01.000000000 +0100
-+++ gkrellm-2.1.24/src/mail.c	2004-01-20 16:47:09.000000000 +0100
+diff -Naur src/mail.c.org src/mail.c
+--- src/mail.c.org	2003-12-19 05:57:01.000000000 +0100
++++ src/mail.c	2004-01-20 16:47:09.000000000 +0100
 @@ -1376,7 +1378,15 @@
  		mbox->old_mail_count = 0;
  		while(fgets(buf, sizeof(buf), f))

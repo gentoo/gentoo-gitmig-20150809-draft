@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.67 2004/01/22 19:10:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.68 2004/01/22 22:48:51 mholzer Exp $
+
+  23 Jan 2004; Martin Holzer <mholzer@gentoo.org>
+  files/gkrellm-2.1.24-mail.patch, files/gkrellm-dotkeep.patch:
+  fixing patch. Closes =39076
 
 *gkrellm-2.1.25 (22 Jan 2004)
 
