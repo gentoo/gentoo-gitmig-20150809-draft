@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.44 2003/11/15 02:52:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.45 2003/11/28 13:30:23 ciaranm Exp $
+
+  28 Nov 2003; Ciaran McCreesh <ciaranm@gentoo.org>
+  gnome-applets-2.4.0.ebuild:
+  Moved to stable on sparc (bug 23402)
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> gnome-applets-2.4.0.ebuild:
   Stable on ia64
