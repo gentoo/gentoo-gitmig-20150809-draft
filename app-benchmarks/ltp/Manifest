@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 035a54e7d8b3fbfa188d34c0f50fd852 ltp-20041104.ebuild 1119
+MD5 f592f012ff1df95e9b2dcd743df2405b metadata.xml 402
+MD5 68ccdadc573c7c5b65c824ea70affb1b ChangeLog 496
+MD5 e2a7ff766a942e7a6a8e299cb74edacb files/runltp-path.patch 387
+MD5 e4bb569a7ad39bd83b66430469168d6b files/IDcheck-noninteractive.patch 729
+MD5 d1ba3a9b21ea0697d2b92b74e9147231 files/digest-ltp-20041104 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjV95mdTrptrqvGERAtVMAJwOFNfTPvK0rpbMjR7T6sFONFHkFgCeP29l
+6ATZ35Dbc7jgYZDOzBq6tJw=
+=TrWr
+-----END PGP SIGNATURE-----
