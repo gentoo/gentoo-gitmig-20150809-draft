@@ -1,10 +1,13 @@
-MD5 92096e17fd8e738341f7e99faaca8527 ChangeLog 5521
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9ad069c36311fb2b235b4ca975d493ae ChangeLog 5645
 MD5 5b012319f221d1ea2adea1b2f253e7f6 bluez-utils-2.10.ebuild 2294
 MD5 43c46462d55ff522368adcca12159bd9 bluez-utils-2.7.ebuild 2276
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
 MD5 ed80a378b301103c8715cffda6157d7a bluez-utils-2.10-r1.ebuild 2596
 MD5 86c3a3359732cc35173eb0115f9b7b4a bluez-utils-2.12.ebuild 2190
-MD5 86c3a3359732cc35173eb0115f9b7b4a bluez-utils-2.15.ebuild 2190
+MD5 16d3c3f6bcae307e0ee652a902946ad9 bluez-utils-2.15.ebuild 2482
 MD5 44ca243c60a83967c811537a38b92549 files/bluetooth.rc 1166
 MD5 d552cb6515bf251c019ca4a95dd266eb files/bluez-utils-2.3-bluepin-gtk2.patch 3295
 MD5 336de3d1eba238735777d7d8f8e0c282 files/bluez-utils-2.3-bluepin.patch 461
@@ -19,3 +22,10 @@ MD5 7b0985abd13b5bbc75fe58e206372a65 files/digest-bluez-utils-2.15 68
 MD5 e7df7cd2ca07f4f1ab415d457a6e1c13 files/2.10-r1/pin 5
 MD5 992426019dbbd772c9326512d2a0033d files/2.10-r1/pin-helper.sh 49
 MD5 cba196ec0ce8e3622a29f93b030ed027 files/2.10-r1/bluetooth.rc 3340
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCLcXlRkyva5PS18kRAoumAKCO1JmmKXrxEOhvaau+ZUHLBdkPxQCfWJKr
+DP4t1KD1Tj1GFQQjjRlH6WE=
+=54oF
+-----END PGP SIGNATURE-----

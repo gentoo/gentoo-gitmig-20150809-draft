@@ -1,6 +1,16 @@
-MD5 afa14a8bdea29d94d1dcbebf6b95d017 ChangeLog 860
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 21ffedae4622d0caa34b5617259348a9 ChangeLog 983
 MD5 7ef9a91d6cff25341caf30cec9a5c35b bluez-hciemu-1.0.ebuild 669
 MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
-MD5 7ef9a91d6cff25341caf30cec9a5c35b bluez-hciemu-1.1.ebuild 669
+MD5 be5fd46ee89d183b605b783936e8f0b2 bluez-hciemu-1.1.ebuild 669
 MD5 f5381103c4e278a6cc5b444451df12c4 files/digest-bluez-hciemu-1.0 68
 MD5 30c2a2f15c38b1d6292de83b8a84ca14 files/digest-bluez-hciemu-1.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCLcaKRkyva5PS18kRAiOKAKC6pQmkmGNqWsrTXyUE+UCBz/oo5wCcCL+T
+liANyueGbKjNDq82RfO/HhE=
+=cxdN
+-----END PGP SIGNATURE-----
