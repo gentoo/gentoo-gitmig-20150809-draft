@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <mattam@gentoo.org> (24 Jan 2004)
+# OCaml binary incompatibility and deps not rebuilt.
+# bug #39246
+=dev-ml/lablgtk-2.2.O
+
 # <suka@gentoo.org> (24 Jan 2004)
 # Big rework of the OOo-ebuild needs some testing
 =app-office/openoffice-1.1.0-r3
