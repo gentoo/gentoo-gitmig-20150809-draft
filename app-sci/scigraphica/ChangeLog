@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/scigraphica
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/ChangeLog,v 1.5 2003/09/02 22:41:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/ChangeLog,v 1.6 2004/01/04 20:49:18 george Exp $
+
+*scigraphica-0.8.0-r2 (04 jan 2003)
+
+  04 Jan 2003; George Shapovalov <george@gentoo.org> scigraphica-0.8.0-r2.ebuild :
+  fixes ##18436 and 20853.
 
   02 Sep 2003; Alastair Tse <liquidx@gentoo.org> scigraphica-0.8.0-r1.ebuild,
   scigraphica-0.8.0.ebuild:
