@@ -2,7 +2,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or
 # later
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/files/iptables.init,v 1.1 2003/03/11 21:50:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/files/iptables.init,v 1.2 2003/05/04 18:19:03 aliz Exp $
 
 opts="start stop save"
 
@@ -10,43 +10,34 @@ depend() {
 	need logger net
 }
 
-start() {
-	ebegin "Loading iptables state and starting firewall"
-	# This variable is set in /etc/conf.d/iptables
+checkrules() {
 	if [ ! -f ${IPTABLES_SAVE} ]
 	then
-		einfo "Not starting iptables. First create some rules then run"
-		einfo "/etc/init.d/iptables save"
-	else 
-		einfo "Restoring iptables ruleset"
-		/sbin/iptables-restore ${SAVE_RESTORE_OPTIONS} < ${IPTABLES_SAVE}
+		eerror "Not starting iptables. First create some rules then run"
+		eerror "/etc/init.d/iptables save"
+		return 1
+	fi
+}
 
-		if [ "${ENABLE_FORWARDING_IPv4}" = "yes" ] ; then
-			einfo "Enabling forwarding for ipv4"
-			echo "1" > /proc/sys/net/ipv4/conf/all/forwarding
-		fi
+start() {
+	checkrules || return 1	
+	ebegin "Loading iptables state and starting firewall"
+	einfo "Restoring iptables ruleset"
+	/sbin/iptables-restore ${SAVE_RESTORE_OPTIONS} < ${IPTABLES_SAVE}
 
-		if [ "${ENABLE_FORWARDING_IPv6}" = "yes" ] ; then
-			einfo "Enabling forwarding for ipv6"
-			echo "1" > /proc/sys/net/ipv6/conf/all/forwarding
-               fi
+	if [ "${ENABLE_FORWARDING_IPv4}" = "yes" ] ; then
+		einfo "Enabling forwarding for ipv4"
+		echo "1" > /proc/sys/net/ipv4/conf/all/forwarding
 	fi
 
 	eend $?
 }
 
 stop() {
-	ebegin "Stopping firewall and saving iptables state"
-		# This way we don't forget to save changes
-		/sbin/iptables-save ${SAVE_RESTORE_OPTIONS} > ${IPTABLES_SAVE}
-
+	ebegin "Stopping firewall"
 		# set sane defaults that disable forwarding
 		if [ -f /proc/sys/net/ipv4/conf/all/forwarding ] ; then
 			echo "0" > /proc/sys/net/ipv4/conf/all/forwarding
-		fi
-
-		if [ -f /proc/sys/net/ipv6/conf/all/forwarding ] ; then
-			echo "0" > /proc/sys/net/ipv6/conf/all/forwarding
 		fi
 
 		for a in `cat /proc/net/ip_tables_names`; do

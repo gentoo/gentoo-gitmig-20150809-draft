@@ -1,0 +1,71 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or
+# later
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/files/ip6tables.init,v 1.1 2003/05/04 18:19:03 aliz Exp $
+
+opts="start stop save"
+
+depend() {
+	need logger net
+}
+
+checkrules() {
+	if [ ! -f ${IP6TABLES_SAVE} ]
+	then
+		eerror "Not starting ip6tables. First create some rules then run"
+		eerror "/etc/init.d/ip6tables save"
+		return 1
+	fi
+}
+
+start() {
+	checkrules || return 1	
+	ebegin "Loading ip6tables state and starting firewall"
+	einfo "Restoring ip6tables ruleset"
+	/sbin/ip6tables-restore ${SAVE_RESTORE_OPTIONS} < ${IP6TABLES_SAVE}
+
+	if [ "${ENABLE_FORWARDING_IPv6}" = "yes" ] ; then
+		einfo "Enabling forwarding for ipv6"
+		echo "1" > /proc/sys/net/ipv6/conf/all/forwarding
+        fi
+
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping firewall"
+		# set sane defaults that disable forwarding
+		if [ -f /proc/sys/net/ipv6/conf/all/forwarding ] ; then
+			echo "0" > /proc/sys/net/ipv6/conf/all/forwarding
+		fi
+
+		for a in `cat /proc/net/ip_tables_names`; do
+			ip6tables -F -t $a
+			ip6tables -X -t $a
+
+			if [ $a == nat ]; then
+				ip6tables -t nat -P PREROUTING ACCEPT
+				ip6tables -t nat -P POSTROUTING ACCEPT
+				ip6tables -t nat -P OUTPUT ACCEPT
+			elif [ $a == mangle ]; then
+				ip6tables -t mangle -P PREROUTING ACCEPT
+				ip6tables -t mangle -P INPUT ACCEPT
+				ip6tables -t mangle -P FORWARD ACCEPT
+				ip6tables -t mangle -P OUTPUT ACCEPT
+				ip6tables -t mangle -P POSTROUTING ACCEPT
+			elif [ $a == filter ]; then
+				ip6tables -t filter -P INPUT ACCEPT
+				ip6tables -t filter -P FORWARD ACCEPT
+				ip6tables -t filter -P OUTPUT ACCEPT
+			fi
+		done
+	eend $?
+}
+
+save() {
+        ebegin "Saving ip6tables state"
+        /sbin/ip6tables-save ${SAVE_RESTORE_OPTIONS} > ${IP6TABLES_SAVE}
+        eend $?
+}
+

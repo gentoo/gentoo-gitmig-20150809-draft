@@ -1,11 +1,11 @@
 
 # Location in which iptables initscript will save set rules on 
 # service shutdown
-IPTABLES_SAVE="/var/lib/iptables/rules-save"
+IP6TABLES_SAVE="/var/lib/ip6tables/rules-save"
 
 # Change to "yes" to enable forwarding support in the kernel.  Please
 # note that this will override any setting placed in /etc/sysctl.conf.
-ENABLE_FORWARDING_IPv4="no"
+ENABLE_FORWARDING_IPv6="no"
 
 #Options to pass to iptables-save and iptables-restore 
 SAVE_RESTORE_OPTIONS="-c"

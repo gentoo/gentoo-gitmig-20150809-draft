@@ -1,6 +1,20 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.9 2003/05/02 09:45:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.10 2003/05/04 18:19:03 aliz Exp $
+
+*iptables-1.2.8-r1 (04 May 2003)
+
+  04 May May 2003; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.8-r1.ebuild, files/iptables.init 
+							files/iptables.confd, files/ip6tables.init
+							files/ip6tables.confd :
+  Fixed ipv6 support. Closes #17155.
+
+  04 May 2003; Daniel Ahlberg <aliz@gentoo.org> files/1.2.8-files/03_hppa_gentoo.patch.bz2 :
+  doh! uncompressed patch.
+
+  04 May 2003; Daniel Ahlberg <aliz@gentoo.org> files/iptables.init :
+  Removed auto saving of rules when stopping iptables. Closing #15333 
+  and #13673.
 
   02 May 2003; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.8.ebuild :
   Force -O2 if no -O flag is set. Remove 03_all_no_optimize_fix.patch.bz2.
