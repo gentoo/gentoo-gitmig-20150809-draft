@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.91.ebuild,v 1.1 2004/04/30 18:34:01 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.91.ebuild,v 1.2 2004/04/30 22:40:40 tester Exp $
 
 S="${WORKDIR}/msn"
 DESCRIPTION="Alvaro's Messenger client for MSN"
@@ -14,8 +14,8 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~alpha ~sparc ~ppc ~hppa ~amd64"
 
 
-DEPEND=">=dev-lang/tcl-8.3.3
-	>=dev-lang/tk-8.3.3
+DEPEND=">=dev-lang/tcl-8.4
+	>=dev-lang/tk-8.4
 	imlib? ( media-libs/imlib )"
 
 RDEPEND="${DEPEND}
@@ -66,14 +66,12 @@ src_install() {
 		einfo "Installing the freedesktop notification plugin"
 		dodir /usr/lib/amsn/plugins/traydock
 		mv ${D}/usr/share/amsn/plugins/traydock/libtray.so ${D}/usr/lib/amsn/plugins/traydock
-		rm -rf ${D}/usr/share/amsn/plugins/*
 		ln -s /usr/lib/amsn/plugins/traydock ${D}/usr/share/amsn/plugins/traydock
 	else
-		rm -rf ${D}/usr/share/amsn/plugins/*
+		rm -rf ${D}/usr/share/amsn/plugins/traydock
 	fi
-	cp -a ${S}/plugins/BWidget*  ${D}/usr/share/amsn/plugins/
-	cp -a ${S}/plugins/tclzlib*  ${D}/usr/share/amsn/plugins/
 
+	rm -rf ${D}/usr/share/amsn/plugins/winflash
 	rm -rf ${D}/usr/share/amsn/utils/
 
 	dodir /usr/bin/
