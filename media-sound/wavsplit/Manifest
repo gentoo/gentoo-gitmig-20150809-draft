@@ -1,4 +1,6 @@
-MD5 b228c32d775a1340c1ad165e052480fb ChangeLog 592
+MD5 cc05c54b44254f8b28baf8366fffef28 ChangeLog 719
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 71a764c5591c7570c9975502c8e30c00 wavsplit-1.0.ebuild 682
+MD5 b6b9b426b6add80f6333eee85b752e66 wavsplit-1.1.0.ebuild 687
 MD5 614dc021dbcc9eeff1f7f30e81c6070d files/digest-wavsplit-1.0 60
+MD5 db9e42a4c6a9b5af5fafcd4ad40de35b files/digest-wavsplit-1.1.0 65
