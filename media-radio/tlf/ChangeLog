@@ -1,6 +1,30 @@
 # ChangeLog for media-radio/tlf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.8 2005/03/31 00:05:09 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.9 2005/03/31 01:24:44 killsoft Exp $
+
+*tlf-0.9.23 (30 Mar 2005)
+
+  30 Mar 2005; Robb Romans <killsoft@gentoo.org> +tlf-0.9.23.ebuild:
+  New version 0.9.23
+  * New function: start cw before call is complete. In contest mode, you can
+    start sending the call from the call window with 'space' or with
+    'down-arrow'.
+  * New command: :CHAR asks for number of characters the call must have before
+    sending starts. Default: 0 = OFF. If CHARS is 3, tlf starts sending as soon
+    as you have input the first 3 letters of the call. If you are on slow speed
+    you then have time to complete the call (including backspacing) before
+    sending the first 3 letters is finished. This is of limited use when running
+    above 40 wpm :)
+  * incorporated patch from W9WI fixing a bug in the voice keyer.
+  * changed cw speed control: now default active in call and exchange fields,
+    even if field is not empty
+  * changed qso save logic: RETURN now always logs the qso in SSB and in general
+    qso mode.
+  * New parameter: CHANGE_RST. If set in logcfg.dat, Pg-up and Pg-down will
+    change RST instead of CW speed if field is not empty. Default: off.
+  * fixed nasty bug which caused CQDELAY to start at 0 instead of the default in
+    logcfg.dat
+  * manpage updated for version 0.9.23
 
 *tlf-0.9.22 (30 Mar 2005)
 
