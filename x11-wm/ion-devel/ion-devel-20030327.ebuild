@@ -1,19 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ion-devel-20030327.ebuild,v 1.1 2003/04/06 20:48:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ion-devel-20030327.ebuild,v 1.2 2003/07/18 18:19:53 vapier Exp $
 
 ION_VERSION="${PV}"
 inherit ion
 
 DESCRIPTION="A tiling tabbed window manager designed with keyboard users in mind"
 HOMEPAGE="http://www.students.tut.fi/~tuomov/ion/"
+
 LICENSE="Clarified-Artistic"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86"
-DEPEND="${DEPEND} app-misc/run-mailcap"
+KEYWORDS="~x86 ~ppc ~sparc"
+
+DEPEND="${DEPEND}
+	app-misc/run-mailcap"
 
 src_compile() {
-
 	src_configure
 
 	sed -e "s:PREFIX/etc/ion:/etc/X11/${PN}:" \
