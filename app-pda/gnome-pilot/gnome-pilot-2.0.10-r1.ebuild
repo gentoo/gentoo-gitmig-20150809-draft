@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.10-r1.ebuild,v 1.5 2003/12/14 01:06:21 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.10-r1.ebuild,v 1.6 2004/02/15 11:41:39 liquidx Exp $
 
 inherit gnome2 eutils
 
@@ -36,4 +36,7 @@ src_unpack() {
 	# patch to fix crashes with memo file syncing
 	# http://bugzilla.gnome.org/show_bug.cgi?id=114361
 	epatch ${FILESDIR}/${P}-memofile.patch
+	# add treo600 support
+	# http://bugzilla.gnome.org/show_bug.cgi?id=124254
+	epatch ${FILESDIR}/${P}-treo600.patch
 }

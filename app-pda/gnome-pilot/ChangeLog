@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gnome-pilot
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.8 2003/12/14 01:06:20 pylon Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.9 2004/02/15 11:41:39 liquidx Exp $
+
+  04 Feb 2004; Alastair Tse <liquidx@gentoo.org> gnome-pilot-2.0.10-r1.ebuild,
+  files/gnome-pilot-2.0.10-treo600.patch:
+  add patch to support treo600 (#39004)
 
   14 Dec 2003; Lars Weiler <pylon@gentoo.org> gnome-pilot-2.0.10-r1.ebuild:
   Make stable on ppc

@@ -1,0 +1,19 @@
+diff -ur gnome-pilot-2.0.10-treo600/gpilotd/gpilotd.c gnome-pilot-2.0.10/gpilotd/gpilotd.c
+--- gnome-pilot-2.0.10-treo600/gpilotd/gpilotd.c	2003-07-16 10:25:16.000000000 -0600
++++ gnome-pilot-2.0.10/gpilotd/gpilotd.c	2003-10-23 21:18:13.000000000 -0600
+@@ -791,6 +791,7 @@
+ {
+ 	"Vendor=082d ProdID=0100", /* Handspring Visor/Treo 300 */
+ 	"Vendor=082d ProdID=0200", /* Handspring Treo */
++	"Vendor=082d ProdID=0300", /* Handspring Treo 600*/
+ 	"Vendor=0830 ProdID=0001", /* Palm M500 */
+ 	"Vendor=0830 ProdID=0002", /* Palm M505 */
+ 	"Vendor=0830 ProdID=0003", /* Palm M515 */
+@@ -832,6 +833,7 @@
+        TRUE,
+        TRUE,
+        TRUE,
++       TRUE,
+        -1
+ };
+ 
