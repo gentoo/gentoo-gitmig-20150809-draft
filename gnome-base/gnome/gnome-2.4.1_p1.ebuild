@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.1_p1.ebuild,v 1.13 2004/02/05 20:34:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.1_p1.ebuild,v 1.14 2004/02/05 20:58:21 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -74,7 +74,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=app-editors/gedit-2.4.1
 	>=app-text/ggv-2.4.0.2
 	>=app-text/gpdf-0.112
-	>=gnome-base/gnome-applets-2.4.1-r2
+	>=gnome-base/gnome-applets-2.4.2
 	>=gnome-base/gnome-desktop-2.4.1.1
 	>=gnome-extra/gnome-games-2.4.1.1
 
