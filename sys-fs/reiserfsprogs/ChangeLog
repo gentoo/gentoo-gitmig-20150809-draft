@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/reiserfsprogs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.10 2004/02/12 22:10:28 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.11 2004/02/12 22:11:05 lostlogic Exp $
+
+  12 Feb 2004; Brandon Low <lostlogic@gentoo.org> reiserfsprogs-3.6.12.ebuild:
+  Remove bad version
 
 *reiserfsprogs-3.6.12-r1 (12 Feb 2004)
 
