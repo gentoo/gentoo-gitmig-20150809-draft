@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libtermcap-compat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.6 2002/12/14 01:19:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.7 2003/02/08 20:56:13 gmsoft Exp $
+
+  08 Feb 2003; Guy Martin <gmsoft@gentoo.org> libtermcap-compat-1.2.3.ebuild :
+  Added hppa to keywords.
 
 *libtermcap-compat-1.2.3 (05 Sep 2002)
 
