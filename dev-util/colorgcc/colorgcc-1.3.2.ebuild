@@ -4,20 +4,18 @@
 # /home/cvsroot/gentoo-x86/skel.build,v 1.7 2001/08/25 21:15:08 chadh Exp
 
 S=${WORKDIR}/${P}
-DESCRIPTION="This is a sample skeleton ebuild file"
+DESCRIPTION="Adds color to gcc output"
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/${PN}/${PN}_${PV}.orig.tar.gz
 http://ftp.debian.org/debian/pool/main/c/${PN}/${PN}_${PV}-4.1.diff.gz"
 
-#Homepage, not used by Portage directly but handy for developer reference
 HOMEPAGE="http://packages.debian.org/testing/devel/colorgcc.html"
 
-#build-time dependencies
 DEPEND="sys-devel/perl
-        sys-devel/gcc"
+	sys-devel/gcc"
 
 src_unpack() {
-    unpack ${PN}_${PV}.orig.tar.gz
-    zcat ${DISTDIR}/${PN}_${PV}-4.1.diff.gz | patch -p0
+	unpack ${PN}_${PV}.orig.tar.gz
+	zcat ${DISTDIR}/${PN}_${PV}-4.1.diff.gz | patch -p0
 }
 
 src_compile() { 
@@ -45,4 +43,3 @@ else
 	echo '/usr/bin/wrappers added to path in /etc/profile!'
 fi
 }
-
