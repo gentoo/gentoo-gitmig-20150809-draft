@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.157 2005/01/08 14:08:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.158 2005/01/09 00:55:21 chainsaw Exp $
+
+*development-sources-2.6.10-r1 (09 Jan 2005)
+
+  09 Jan 2005; Tony Vroon <chainsaw@gentoo.org>
+  +files/development-sources-2.6.10-CAN-2004-1235.patch,
+  +development-sources-2.6.10-r1.ebuild, -development-sources-2.6.10.ebuild:
+  Security bump; patch for kernel uselib() privilege elevation
+  (CAN-2004-1235), see bug #77025.
 
   08 Jan 2005; Tony Vroon <chainsaw@gentoo.org>
   development-sources-2.6.10.ebuild, -development-sources-2.6.10_rc1.ebuild,
