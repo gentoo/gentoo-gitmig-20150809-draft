@@ -8,12 +8,14 @@ MD5 174438d215b70cad5ffb00ca8123c062 files/usermode-sources-2.4.24.munmap.patch 
 MD5 02c062ec3a11a6a1498cdf0b1716c90a files/usermode-sources-2.6.6.FPULockup-53804.patch 895
 MD5 c460ea130cb4ae84a5063ba044e3ce72 files/usermode-sources-2.4.24.CAN-2004-0427.patch 460
 MD5 147fec50180ad91b6260fc7201dcb90f files/usermode-sources-2.4.24.CAN-2004-0010.patch 6050
+MD5 dc18e982f8149588a291956481885a8c files/usermode-sources-2.4.CAN-2004-0495.patch 17549
 MD5 2f7e35e02cfe97af5e6e49bf84614b42 files/digest-usermode-sources-2.4.24-r5 134
 MD5 288e26eaaaf3c35f214951caa52754ab files/digest-usermode-sources-2.6.6-r1 132
 MD5 de75cfa969ed092578d9ddda6c5be334 files/usermode-sources-2.4.24.CAN-2004-0181.patch 1233
 MD5 df8bd0d5ef39221c9dec36a99223c690 files/digest-usermode-sources-2.4.26-r2 134
 MD5 ac42024b6e6ee1e2165914db4b22a61c files/usermode-sources-2.4.24.CAN-2004-0178.patch 424
 MD5 d4a740ae56c2049247083af387a22a85 files/usermode-sources-2.4.26.CAN-2004-0394.patch 350
+MD5 0f66013f643c79c97fda489618a4e2fd files/usermode-sources-2.4.CAN-2004-0535.patch 476
 MD5 c9da1bc82b906f6abc648c056e7bf662 files/usermode-sources-2.4.FPULockup-53804.patch 354
 MD5 eaeda68a619caaddd5b8fdc5e7c39932 files/usermode-sources-2.4.24.CAN-2004-0177.patch 384
 MD5 21f3a4f186017d925067335e24db36a1 files/usermode-sources-2.4.24.CAN-2004-0109.patch 1877
