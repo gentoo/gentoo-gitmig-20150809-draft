@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.0.1.ebuild,v 1.4 2004/03/20 05:01:31 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.0.1.ebuild,v 1.5 2004/03/21 09:02:56 eradicator Exp $
 
 inherit eutils
 S=${WORKDIR}/bpmdj-2.0
@@ -16,7 +16,8 @@ KEYWORDS="x86"
 DEPEND="x11-libs/qt
 	virtual/tetex"
 
-RDEPEND="virtual/mpg123"
+RDEPEND="${DEPEND}
+	virtual/mpg123"
 
 src_unpack() {
 	unpack ${A}
