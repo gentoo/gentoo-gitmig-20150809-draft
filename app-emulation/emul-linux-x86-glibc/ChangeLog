@@ -1,0 +1,10 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc/ChangeLog,v 1.1 2004/07/31 12:47:02 kugelfang Exp $
+
+*emul-linux-x86-glibc-1.0 (31 Jul 2004)
+
+  31 Jul 2004; Danny van Dyk <kugelfang@gentoo.org>
+  +emul-linux-x86-glibc-1.0.ebuild:
+  Initial Release. Using glibc 2.3.3.
+
