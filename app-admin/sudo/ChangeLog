@@ -1,12 +1,16 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.2 2002/03/06 18:55:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.3 2002/03/10 11:49:24 blocke Exp $
 
 *sudo-1.6.5_p2 (6 Mar 2002)
 
   6 Mar 2002; Daniel Robbins <drobbins@gentoo.org> : new release, fixing 
   the "pam_setcred: permission denied" bug.  Which is apparently a bug in
   PAM itself?
+
+  10 Mar 2002; Bruce A. Locke <blocke@shivan.org> sudo-1.6.5_p2.ebuild :
+
+  FAQ file is no longer in the upstream tarball
 
 *sudo-1.6.5_p1 (1 Feb 2002)
 
