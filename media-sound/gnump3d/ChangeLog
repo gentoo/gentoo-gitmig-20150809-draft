@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnump3d
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.2 2002/11/05 19:29:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/ChangeLog,v 1.3 2002/12/01 12:12:18 aliz Exp $
+
+  01 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> files/doc-Makefile-gentoo.patch :
+  Closes #11396.
 
 *gnump3d-1.0_pre1 (05 Nov 2002)
 
