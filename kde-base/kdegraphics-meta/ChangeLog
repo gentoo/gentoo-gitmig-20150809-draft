@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.10 2005/03/18 17:14:09 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.11 2005/03/25 04:32:46 weeve Exp $
+
+  25 Mar 2005; Jason Wever <weeve@gentoo.org> kdegraphics-meta-3.4.0.ebuild:
+  Added ~sparc keyword.
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org>
   kdegraphics-meta-3.4.0.ebuild:

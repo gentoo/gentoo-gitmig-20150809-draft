@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkscan
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkscan/ChangeLog,v 1.7 2005/03/25 04:18:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkscan/ChangeLog,v 1.8 2005/03/25 04:30:52 weeve Exp $
+
+  25 Mar 2005; Jason Wever <weeve@gentoo.org> :
+  Added ~sparc keyword.
 
   25 Mar 2005; Jason Wever <weeve@gentoo.org> libkscan-3.4.0.ebuild:
   Added ~sparc keyword.
