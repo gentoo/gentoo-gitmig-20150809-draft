@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/apache-manual/apache-manual-2.0.49-r1.ebuild,v 1.15 2004/05/21 23:30:50 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/apache-manual/apache-manual-2.0.49-r1.ebuild,v 1.16 2004/06/01 11:56:47 vapier Exp $
 
-DESCRIPTION="Configures the apache manual for local viewing."
-HOMEPAGE="http://www.apache.org"
+DESCRIPTION="Configures the apache manual for local viewing"
+HOMEPAGE="http://www.apache.org/"
 SRC_URI="http://www.apache.org/dist/httpd/httpd-${PV}.tar.gz"
-KEYWORDS="x86 ppc hppa mips sparc amd64 ia64 alpha s390"
-LICENSE="Apache-2.0"
+
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
 SLOT="0"
+LICENSE="Apache-2.0"
+IUSE=""
 
 DEPEND="=net-www/apache-2*
 	>=sys-apps/sed-4"
 RDEPEND=""
-
-IUSE=""
 
 src_compile() {
 	einfo "Nothing to do."
