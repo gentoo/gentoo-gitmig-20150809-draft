@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpv6
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.9 2003/09/21 17:34:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.10 2003/11/27 21:05:19 mr_bones_ Exp $
+
+  27 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> dhcpv6-0.8.ebuild,
+  dhcpv6-0.85-r1.ebuild:
+  fix HOMEPAGE (bug 34529)
 
 *dhcpv6-0.85-r1 (05 Aug 2003)
 
