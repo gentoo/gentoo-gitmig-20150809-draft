@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.0.1-r2.ebuild,v 1.3 2003/03/24 09:37:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.0.1-r2.ebuild,v 1.4 2003/07/18 18:47:41 azarah Exp $
 
-IUSE=""
+IUSE=
 
 DESCRIPTION="Epic4 IRC Client"
 SRC_URI="ftp://prbh.org/pub/epic/EPIC4-PRODUCTION/${P}.tar.gz \
@@ -15,8 +15,18 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc"
 
-inherit flag-o-matic
+inherit eutils flag-o-matic gcc
 replace-flags "-O?" "-O"
+
+src_unpack() {
+	unpack ${A}
+
+	# Macro's in gcc-3.3 and later changed slightly ...
+	if [ "`gcc-major-version`" -eq 3 -a "`gcc-minor-version`" -ge 3 ]
+	then
+		cd ${S}; epatch ${FILESDIR}/${P}-gcc33.patch
+	fi
+}
 
 src_compile() {
 	econf --libexecdir=/usr/lib/misc || die

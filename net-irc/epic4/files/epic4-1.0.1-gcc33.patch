@@ -1,0 +1,22 @@
+--- epic4-1.0.1/source/status.c	2003-07-18 20:16:45.000000000 +0200
++++ epic4-1.0.1.gcc33/source/status.c	2003-07-18 20:17:24.000000000 +0200
+@@ -36,7 +36,7 @@
+  * Maximum number of "%" expressions in a status line format.  If you change
+  * this number, you must manually change the sprintf() in make_status 
+  */
+-#define STATUS_FUNCTION(x) static Char * ## x (Window *window, int map, int key)
++#define STATUS_FUNCTION(x) static Char * x (Window *window, int map, int key)
+ #define MAX_FUNCTIONS 40
+ #define MAX_STATUS_USER 39
+ 
+--- epic4-1.0.1/source/info.c.sh.in	2003-07-18 20:17:00.000000000 +0200
++++ epic4-1.0.1.gcc33/source/info.c.sh.in	2003-07-18 20:17:13.000000000 +0200
+@@ -20,7 +20,7 @@
+  */
+ 
+ #ifdef __STDC__
+-#define my_paste(x, y, z) x ## y ## z
++#define my_paste(x, y, z) x y z
+ #else
+ #define my_paste(x, y, z) x/**/y/**/z
+ #endif
