@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.47 2004/07/26 04:55:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.48 2004/07/28 17:04:09 agriffis Exp $
+
+  28 Jul 2004; Aron Griffis <agriffis@gentoo.org> +files/lame-3.96-ccc.patch,
+  lame-3.92.ebuild, lame-3.93.1-r1.ebuild, lame-3.96.1.ebuild,
+  lame-3.96.ebuild:
+  If ccc (alpha compiler) is installed on the system, the default configure is
+  broken, fix it to respect CC. This is only directly broken for ARCH=alpha but
+  would affect anybody with a ccc binary in their PATH. #41908
 
 *lame-3.96.1 (25 Jul 2004)
 

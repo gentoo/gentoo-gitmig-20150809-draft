@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1-r1.ebuild,v 1.16 2004/06/25 00:08:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1-r1.ebuild,v 1.17 2004/07/28 17:04:09 agriffis Exp $
 
 inherit flag-o-matic gcc
 
-DESCRIPTION="LAME Ain't an Mp3 Encoder"
+DESCRIPTION="LAME Ain't an MP3 Encoder"
 HOMEPAGE="http://www.mp3dev.org/mp3/"
 SRC_URI="mirror://sourceforge/lame/${P}.tar.gz"
 

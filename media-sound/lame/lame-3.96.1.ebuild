@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.1.ebuild,v 1.1 2004/07/26 04:55:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.1.ebuild,v 1.2 2004/07/28 17:04:09 agriffis Exp $
 
 IUSE="gtk debug"
 
 inherit flag-o-matic gcc eutils
 
-DESCRIPTION="LAME Ain't an Mp3 Encoder"
+DESCRIPTION="LAME Ain't an MP3 Encoder"
 HOMEPAGE="http://lame.sourceforge.net"
 SRC_URI="mirror://sourceforge/lame/${P}.tar.gz"
 
@@ -18,7 +18,20 @@ RDEPEND=">=sys-libs/ncurses-5.2
 	gtk? ( =x11-libs/gtk+-1.2* )"
 
 DEPEND="${RDEPEND}
-	x86? ( dev-lang/nasm )"
+	x86? ( dev-lang/nasm )
+	sys-devel/autoconf"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S} || die
+
+	# If ccc (alpha compiler) is installed on the system, the default
+	# configure is broken, fix it to respect CC.  This is only
+	# directly broken for ARCH=alpha but would affect anybody with a
+	# ccc binary in their PATH.  Bug #41908  (26 Jul 2004 agriffis)
+	epatch ${FILESDIR}/lame-3.96-ccc.patch
+	autoconf || die
+}
 
 src_compile() {
 	# take out -fomit-frame-pointer from CFLAGS if k6-2
