@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 12a48f030ac584e8bb53d485ed59b6b9 ChangeLog 1447
+MD5 001c08f22f75785c6c1f5b4f9deb823a lshw-01.06a.ebuild 845
+MD5 a8941518f499b11e1ad6d2bbb808ad83 lshw-01.08a.ebuild 849
+MD5 899b4e68e68f53eb6ce7250b0f7e71b8 ChangeLog 1562
 MD5 d1e0bce2f0e4a6d40ab45dee056a5a58 lshw-01.07a.ebuild 849
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 001c08f22f75785c6c1f5b4f9deb823a lshw-01.06a.ebuild 845
-MD5 0d14c82e2cce1010d3978d85c8375bb7 files/digest-lshw-01.07a 64
 MD5 f9d23b7fa6a32b569f27eccc905c55c1 files/digest-lshw-01.06a 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4iqXHTu7gpaalycRAnu7AJ9Dtgg+n5O/Epe5n6A4XhlbnvWgBgCfR7/8
-RyFdQuqYRURYdGYXxnBv1pk=
-=BF6u
------END PGP SIGNATURE-----
+MD5 0d14c82e2cce1010d3978d85c8375bb7 files/digest-lshw-01.07a 64
+MD5 7c020ad03172a84e510775b8a6b7d3ce files/digest-lshw-01.08a 64
