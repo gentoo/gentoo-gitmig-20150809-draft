@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.10 2003/04/11 18:32:16 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.11 2003/05/02 08:34:39 george Exp $
+
+  01 May 2003; George Shapovalov <george@gentoo.org> ocaml-3.06-r1.ebuild :
+  updated the ebuild to incorporate the fix for tk-8.4 necessary for lablgl.
+  Thanks to Rick Harris <rickharris@mightylegends.zapto.org> for the note and the patch.
 
 *ocaml-3.06 (28 Jan 2003)
 
