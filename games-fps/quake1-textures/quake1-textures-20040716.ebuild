@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/quake1-textures-20040716.ebuild,v 1.1 2004/08/06 03:54:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/quake1-textures-20040716.ebuild,v 1.2 2004/08/30 23:29:27 dholm Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://np.teamfortress.org/im/textures/textures-406files-7-16-04.zip"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND="app-arch/unzip"
