@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-adminmod/halflife-adminmod-2.50.56a.ebuild,v 1.1 2003/09/10 05:51:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-adminmod/halflife-adminmod-2.50.56a.ebuild,v 1.2 2003/09/10 06:02:19 vapier Exp $
 
 inherit games eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* x86"
 
-RDEPEND="app-games/halflife-metamod"
+RDEPEND="games-server/halflife-metamod"
 PDEPEND="app-games/halflife-modsetup"
 
 S=${WORKDIR}/Adminmod
