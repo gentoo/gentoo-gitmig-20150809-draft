@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgoodies-looks
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.1 2005/01/05 23:55:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.2 2005/01/06 21:08:15 luckyduck Exp $
+
+  06 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  jgoodies-looks-1.2.2.ebuild:
+  slotted jgoodies-looks-1.2.2 as 1.2 for future compatibility.
 
 *jgoodies-looks-1.2.2 (06 Jan 2005)
 
