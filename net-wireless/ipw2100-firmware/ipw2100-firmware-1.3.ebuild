@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100-firmware/ipw2100-firmware-1.3.ebuild,v 1.1 2005/01/04 00:33:57 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100-firmware/ipw2100-firmware-1.3.ebuild,v 1.2 2005/01/17 11:44:56 brix Exp $
 
 MY_P=${P/firmware/fw}
 S=${WORKDIR}
@@ -11,7 +11,7 @@ HOMEPAGE="http://ipw2100.sourceforge.net/"
 SRC_URI="mirror://gentoo/${MY_P}.tgz"
 
 LICENSE="ipw2100-fw"
-SLOT="0"
+SLOT="${PV}"
 KEYWORDS="~x86"
 
 IUSE=""
