@@ -1,6 +1,16 @@
-MD5 8c4491d9f7aa00fc33c4c5703579025b industri-1.01.ebuild 1692
-MD5 c8be5328b270c19f5c31a1d896bd8a60 ChangeLog 438
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0030857236bf0e81af65de03551b3068 ChangeLog 439
+MD5 acce80fa31f0cbcc7b66e0f74c2a204e industri-1.01.ebuild 1486
 MD5 97d0c324ee72786e94f04f1bc052cc63 metadata.xml 669
+MD5 a49d2e91753fb140005919f4de2eb3c6 files/1.01-nvidia-opengl.patch 1078
 MD5 c85d9088fac1afff8639c4e07123c098 files/digest-industri-1.01 138
 MD5 5c2c277e6fc318889a5bc2bf4f26c473 files/industri.pretty 42
-MD5 a49d2e91753fb140005919f4de2eb3c6 files/1.01-nvidia-opengl.patch 1078
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFAv58FHTu7gpaalycRAvC4AKC6joPGj5NiLt4mz/1hMpFHUqM5pwCg9XpP
+984JzDQU2TXHEniUWJngxUw=
+=RTh3
+-----END PGP SIGNATURE-----
