@@ -1,7 +1,11 @@
 # ChangeLog for gnome-base/libgtop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.3 2002/06/10 23:09:08 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.4 2002/06/25 18:27:39 spider Exp $
 
+*libgtop-2.0.0-r1 ( 26 Jun 2002)
+  26 Jun 2002; Spider <spider@gentoo.org> libgtop-2.0.0-r1.ebuild :
+  fixed a SLOT="" issue. now passess lintool checks
+  
 *libgtop-2.0.0 ( 10 Jun 2002)
   10 Jun 2002; Spider <spider@gentoo.org> libgtop-2.0.0.ebuild :
   new eclassed stable version 
