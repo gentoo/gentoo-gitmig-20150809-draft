@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r2.ebuild,v 1.1 2003/06/06 20:56:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r2.ebuild,v 1.2 2003/06/07 03:23:28 seemant Exp $
 
 inherit libtool
 
@@ -71,7 +71,7 @@ src_install() {
 
 	# upstream does not include an app-defaults/Mwm file any longer with
 	# 2.2.2
-	into /etc/X11/app-defaults
+	insinto /etc/X11/app-defaults
 	newins ${FILESDIR}/Mwm.defaults Mwm
 
 	dodoc COPYRIGHT* LICENSE* RE* *BUG*
