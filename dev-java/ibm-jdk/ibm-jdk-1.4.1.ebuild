@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.1.ebuild,v 1.3 2003/09/22 03:15:56 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.1.ebuild,v 1.4 2003/12/07 17:55:32 strider Exp $
 
 IUSE="doc"
 
@@ -15,7 +15,7 @@ DESCRIPTION="IBM Java Development Kit, version 1.4.1"
 HOMEPAGE="https://www6.software.ibm.com/dl/lxdk/lxdk-p"
 SRC_URI=""
 RESTRICT="fetch"
-SLOT="1.4.1"
+SLOT="1.4"
 LICENSE="IBM-ILNWP"
 KEYWORDS="x86 ~ppc -sparc -alpha -mips -arm"
 
@@ -74,8 +74,30 @@ src_install () {
 
 pkg_postinst() {
 
-	einfo "*******************************************"
-	einfo "To set ${P} as the default JVM run"
-	einfo "java-config --set-system-vm=ibm-jdk-1.4.1"
-	einfo "*******************************************"
+	#Thanks to Douglas Pollock <douglas.pollock@magma.ca> for this
+	#comment found on the sun-jdk 1.2.2 ebuild that he sent.
+	if [ !"`use X`" ] ; then
+		einfo "********************************************************"
+		eerror "You're not using X so its possible that you dont have"
+		eerror "a X server installed, please read the following warn: "
+		eerror "Some parts of IBM JDK require XFree86 to be installed."
+		eerror "Be careful which Java libraries you attempt to use."
+		einfo "********************************************************"
+		echo
+	fi
+
+	einfo "******************************************************"
+	einfo " After installing ${P} this"
+	einfo " was set as the default JVM to run."
+	einfo " When finished please run the following so your"
+	einfo " enviroment gets updated."
+	eerror "    /usr/sbin/env-update && source /etc/profile"
+	einfo " Or use java-config program to set your preferred VM"
+	einfo "******************************************************"
+
+	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+	echo -ne "\a" ; sleep 1
+	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+	echo -ne "\a" ; sleep 1
+	sleep 8
 }
