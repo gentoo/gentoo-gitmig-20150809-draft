@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10-r1.ebuild,v 1.7 2004/09/08 13:58:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.10-r1.ebuild,v 1.8 2004/10/04 23:27:57 pvdabeel Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://plasma-gate.weizmann.ac.il/Grace/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE="pdflib"
 
 DEPEND="virtual/x11
