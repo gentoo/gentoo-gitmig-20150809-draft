@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.1.4.ebuild,v 1.9 2005/02/28 22:23:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.1.4.ebuild,v 1.10 2005/03/01 15:16:01 rizzo Exp $
 
 inherit flag-o-matic eutils gcc debug
 
@@ -13,11 +13,9 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~arm ~hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="nls perl spell nas cjk gnutls silc eds krb4 tcltk debug"
 
-DEPEND=">=x11-libs/gtk+-2.0
+RDEPEND=">=x11-libs/gtk+-2.0
 	>=dev-libs/glib-2.0
 	nas? ( >=media-libs/nas-1.4.1-r1 )
-	dev-util/pkgconfig
-	sys-devel/gettext
 	media-libs/libao
 	>=media-libs/audiofile-0.2.0
 	perl? ( >=dev-lang/perl-5.8.2-r1
@@ -30,6 +28,10 @@ DEPEND=">=x11-libs/gtk+-2.0
 	krb4? ( >=app-crypt/mit-krb5-1.3.6-r1 )
 	tcltk? ( dev-lang/tcl
 			dev-lang/tk )"
+
+DEPEND="$RDEPEND
+	dev-util/pkgconfig
+	nls? ( sys-devel/gettext )"
 
 # List of plugins
 #	app-accessibility/festival-gaim
@@ -50,7 +52,7 @@ DEPEND=">=x11-libs/gtk+-2.0
 
 print_gaim_warning() {
 	ewarn
-	ewarn "If you are merging ${P} from an earlier version, you will need"
+	ewarn "If you are merging ${P} from an earlier version, you may need"
 	ewarn "to re-merge any plugins like gaim-encryption or gaim-snpp."
 	ewarn
 	ewarn "If you experience problems with gaim, file them as bugs with"
