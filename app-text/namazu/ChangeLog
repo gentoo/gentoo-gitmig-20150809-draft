@@ -1,6 +1,9 @@
 # ChangeLog for app-text/namazu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.4 2004/07/25 07:57:12 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.5 2004/08/06 13:31:44 hattya Exp $
+
+  06 Aug 2004; Akinori Hattori <hattya@gentoo.org> namazu-2.0.13.ebuild:
+  fixes bug #58452.
 
 *namazu-2.0.13 (25 Jul 2004)
 

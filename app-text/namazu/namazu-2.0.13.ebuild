@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.13.ebuild,v 1.1 2004/07/25 07:57:12 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.13.ebuild,v 1.2 2004/08/06 13:31:44 hattya Exp $
 
 IUSE="chasen cjk emacs kakasi nls tcltk"
 
@@ -8,7 +8,6 @@ DESCRIPTION="Namazu is a full-text search engine"
 HOMEPAGE="http://www.namazu.org/"
 SRC_URI="http://www.namazu.org/stable/${P}.tar.gz"
 
-RESTRICT="nomirror"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 SLOT="0"
@@ -22,9 +21,16 @@ DEPEND=">=dev-perl/File-MMagic-1.12
 
 src_compile() {
 
+	local myconf
+
+	use tcltk && myconf="--with-namazu=/usr/bin/namazu
+					--with-mknmz=/usr/bin/mknmz
+					--with-indexdir=/var/lib/namazu/index"
+
 	econf \
 		`use_enable nls` \
 		`use_enable tcltk tknamazu` \
+		${myconf} \
 		|| die
 	sed -ie "s:\(rm -f \$(filterdir).*$\):# \1:" filter/Makefile
 	emake || die
