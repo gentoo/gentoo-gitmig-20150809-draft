@@ -1,6 +1,11 @@
 # ChangeLog for net-www/publicfile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/ChangeLog,v 1.8 2003/03/25 15:06:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/publicfile/ChangeLog,v 1.9 2003/12/30 15:08:32 mholzer Exp $
+
+*publicfile-0.52-r1 (30 Dec 2003)
+
+  30 Dec 2003; Martin Holzer <mholzer@gentoo.org> publicfile-0.52-r1.ebuild:
+  Ebuild enhancement submitted by adam morley <axm135@po.cwru.edu> in 31558
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
