@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 762081c49771d5026f6703266335d28f openttd-0.3.4.ebuild 2041
-MD5 25944d17686e962c3d5b922e39cb2ba4 openttd-0.3.3.ebuild 2118
-MD5 8a68dd2606f29b334f76ea15f806edbc ChangeLog 1325
+MD5 9834a743ac7d407a01d93b1178a34e84 ChangeLog 1462
 MD5 7efefbbe81a05cbc5d4e96203f047fda metadata.xml 245
-MD5 211d365a1cdda11aa6e5e2f7fb307579 files/digest-openttd-0.3.3 130
+MD5 762081c49771d5026f6703266335d28f openttd-0.3.4.ebuild 2041
+MD5 cc5c19a22d3315c3465b292ba592c9d5 openttd-0.3.5.ebuild 2117
 MD5 0a486aa82ad73424c6a6c791c8143b84 files/digest-openttd-0.3.4 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBpP8VI1lqEGTUzyQRAnRMAKCwbSN1yGC3c8yFJG2DFu3TWNZskwCgq//x
-+JzPBVFMxZoE39xTt2GMCL0=
-=IsUr
------END PGP SIGNATURE-----
+MD5 94e0df18e09dc754083d5e1247f809b7 files/digest-openttd-0.3.5 73

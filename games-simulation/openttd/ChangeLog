@@ -1,6 +1,12 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.7 2004/09/19 05:16:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.8 2004/12/25 11:15:23 dholm Exp $
+
+*openttd-0.3.5 (25 Dec 2004)
+
+  25 Dec 2004; David Holm <dholm@gentoo.org> -openttd-0.3.3.ebuild,
+  +openttd-0.3.5.ebuild:
+  Version bumped
 
 *openttd-0.3.4 (18 Sep 2004)
 
