@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h-r1.ebuild,v 1.1 2001/02/07 16:10:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h-r1.ebuild,v 1.2 2001/02/11 20:08:41 pete Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}/build_unix
@@ -54,7 +54,12 @@ src_install () {
 
     cd ${S}/..
     dodoc README LICENSE
-    mv ${D}/usr/docs ${D}/usr/share/doc/${PF}/html
+    if [ -d ${D}/usr/share/doc/${PF} ]
+    then
+	mv ${D}/usr/docs ${D}/usr/share/doc/${PF}/html
+    else
+	mv ${D}/usr/docs ${D}/usr/doc/${PF}/html
+    fi
     prepalldocs
 
 }
