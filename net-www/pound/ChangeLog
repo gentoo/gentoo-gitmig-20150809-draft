@@ -1,6 +1,6 @@
-# ChangeLog for sys-cluster/pound
+# ChangeLog for net-www/pound
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/pound/ChangeLog,v 1.1 2003/08/01 22:59:20 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/pound/ChangeLog,v 1.2 2003/08/03 06:49:53 vapier Exp $
 
 *pound-1.4 (02 Aug 2003)
 
