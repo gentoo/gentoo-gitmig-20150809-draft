@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.2 2003/02/13 10:07:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.3 2003/05/24 06:37:35 absinthe Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ RDEPEND="$DEPEND"
 PROVIDE="virtual/jre-1.3.1
 	virtual/java-scheme-2"
 SLOT="0"
-LICENSE="sun-bcla"
+LICENSE="sun-bcla-java-vm"
 
 # other arches will need to chase this down when its released for them
 KEYWORDS="ppc"
