@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b2d96ace4129c016c9878e5f574bb38d ChangeLog 332
+MD5 fea39951bacc77c34d1d1dd65f942577 metadata.xml 250
+MD5 7a582fdc50309a0aefeafb59e62857c3 embrace-0.0.1.20041016.ebuild 703
+MD5 7f8b133fddab01387c391049c007997b files/digest-embrace-0.0.1.20041016 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBc8v3HTu7gpaalycRAvayAJ9fJ/recvwCUvH6V0ufiJFToi5M9gCcCNnm
+gF4bJRDw+tg746m3UMmjdTE=
+=XF45
+-----END PGP SIGNATURE-----
