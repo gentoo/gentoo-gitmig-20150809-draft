@@ -1,0 +1,80 @@
+--- mol-0.9.70.orig/src/netdriver/sheep.c
++++ mol-0.9.70/src/netdriver/sheep.c
+@@ -25,12 +25,20 @@
+ #include <linux/in.h>
+ #include <linux/wait.h>
+ 
++MODULE_AUTHOR("Marc Hellwig and Christian Bauer");
++MODULE_DESCRIPTION("SheepShaver/Basilisk II networking");
+ MODULE_LICENSE("GPL");
+ 
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
+ #define LINUX_26
+ #endif
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,9)
++#define ETH_HDR(skb) eth_hdr((skb))
++#else
++#define ETH_HDR(skb) (skb)->mac.ethernet
++#endif
++
+ #define DEBUG 0
+ 
+ #define bug printk
+@@ -151,7 +159,7 @@
+ static int 
+ sheep_net_receiver( struct sk_buff *skb, struct net_device *dev, struct packet_type *pt )
+ {
+-	int multicast = (skb->mac.ethernet->h_dest[0] & ETH_ADDR_MULTICAST);
++	int multicast = (ETH_HDR(skb)->h_dest[0] & ETH_ADDR_MULTICAST);
+ 	const char *laddr = dev->dev_addr;
+ 	struct sk_buff *skb2;
+ 	struct SheepVars *v = (struct SheepVars*)pt;
+@@ -165,7 +173,7 @@
+ 
+ 		if( !multicast ) {
+ 			// Drop, unless this is a localhost -> MOL transmission */
+-			if( addrcmp((char*)&skb->mac.ethernet->h_dest, v->fake_addr) )
++			if( addrcmp((char*)&ETH_HDR(skb)->h_dest, v->fake_addr) )
+ 				goto drop;
+ 
+ 			/* XXX: If it were possible, we would prevent the packet from beeing sent out
+@@ -176,16 +184,16 @@
+ 			 * the controller. This way, the packet ought to be discarded by
+ 			 * switches.
+ 			 */
+-			cpyaddr( &skb->mac.ethernet->h_dest[0], laddr );
++			cpyaddr( &ETH_HDR(skb)->h_dest[0], laddr );
+ 		}
+ 	} else {
+ 		// is this a packet to the local host from MOL?
+-		if( !addrcmp((char*)&skb->mac.ethernet->h_source, v->fake_addr) )
++		if( !addrcmp((char*)&ETH_HDR(skb)->h_source, v->fake_addr) )
+ 			goto drop;
+ 		
+ 		if( !multicast ) {
+ 			// if the packet is not meant for this host, discard it
+-			if( addrcmp((char*)&skb->mac.ethernet->h_dest, laddr) )
++			if( addrcmp((char*)&ETH_HDR(skb)->h_dest, laddr) )
+ 				goto drop;
+ 
+ 			// filter IP-traffic
+@@ -213,7 +221,7 @@
+ 	skb = skb2;
+ 
+ 	if( !multicast )
+-		cpyaddr( &skb->mac.ethernet->h_dest[0], v->fake_addr );
++		cpyaddr( &ETH_HDR(skb)->h_dest[0], v->fake_addr );
+ 
+ 	// We also want the Ethernet header
+ 	skb_push( skb, skb->data - skb->mac.raw );
+@@ -394,7 +402,7 @@
+ 	skb->mac.raw = skb->data;
+ 
+ 	// Base the IP-filter on the IP address of outgoing ARPs
+-	if( skb->mac.ethernet->h_proto == htons(ETH_P_ARP) ) {
++	if( ETH_HDR(skb)->h_proto == htons(ETH_P_ARP) ) {
+ 		char *s = &skb->data[14+14];	/* source IP-address */
+ 		int n[4];
+ 		if( *(long*)s != v->ipfilter ) {
+--- mol-0.9.70.orig/debian/debian.mol-modules-source/control.m4

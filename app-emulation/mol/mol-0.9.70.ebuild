@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.70.ebuild,v 1.13 2005/01/27 23:19:54 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.70.ebuild,v 1.14 2005/01/28 20:06:05 hansmi Exp $
 
 inherit flag-o-matic eutils
 
@@ -45,6 +45,11 @@ src_unpack() {
 
 src_compile() {
 	filter-flags -fsigned-char
+echo -- "$LDFLAGS"
+	# See bug #70367, remove -Wl,-O? from LDFLAGS as it causes
+	# the compilation to fail.
+	filter-ldflags "-Wl,-O?"
+echo -- "$LDFLAGS"
 
 	export KERNEL_SOURCE="/usr/src/${FK}"
 	export LDFLAGS=""

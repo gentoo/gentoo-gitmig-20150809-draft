@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.71_pre1.ebuild,v 1.2 2005/01/27 18:18:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.71_pre1.ebuild,v 1.3 2005/01/28 20:06:05 hansmi Exp $
 
 inherit flag-o-matic eutils
 
@@ -35,6 +35,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-module-fix.patch
 	epatch ${FILESDIR}/${P}-nopriority.patch
+
+	# Fixes bug 79428
+	epatch ${FILESDIR}/${P}-linux-2.6.9.patch
 
 	# dhcp config fix and show dchpd messages on starting mol
 	sed -i "s:#ddns-update-style:ddns-update-style:g" Doc/config/dhcpd-mol.conf || die
