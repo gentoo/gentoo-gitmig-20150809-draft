@@ -1,7 +1,11 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.19 2003/07/31 20:11:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.20 2003/08/27 16:00:01 caleb Exp $
 
+*PyQt-3.8 (27 Aug 2003)
+
+  27 Aug 2003; Caleb Tennis <caleb@gentoo.org> PyQt-3.8.ebuild:
+  Version bump
   
   31 Jul 2003; Caleb Tennis <caleb@gentoo.org> PyQT-3.7.ebuild:
   Upgrade dep on QScintilla-1.53
