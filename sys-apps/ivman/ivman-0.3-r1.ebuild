@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.3-r1.ebuild,v 1.1 2004/12/14 15:45:56 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.3-r1.ebuild,v 1.2 2004/12/15 14:05:44 genstef Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-cvs.update
-	epatch ../ivman_20041211.usb.diff
+	useq usb && epatch ../ivman_20041211.usb.diff
 }
 
 src_compile() {
