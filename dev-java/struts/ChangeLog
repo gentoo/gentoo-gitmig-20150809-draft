@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/struts
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.6 2004/09/10 13:33:30 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.7 2004/09/12 17:11:13 axxo Exp $
+
+  12 Sep 2004; Thomas Matthijs <axxo@gentoo.org> struts-1.1-r1.ebuild,
+  struts-1.2.2.ebuild:
+  improved dependencies, bug 63783 and typo
 
 *struts-1.2.2 (10 Sep 2004)
 
