@@ -1,6 +1,10 @@
 # ChangeLog for net-www/horde-imp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/ChangeLog,v 1.1 2004/08/15 12:24:24 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/ChangeLog,v 1.2 2004/08/16 04:04:34 mr_bones_ Exp $
+
+  15 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> horde-imp-3.2.4.ebuild,
+  horde-imp-3.2.5.ebuild:
+  net-www/horde -> www-apps/horde
 
 *horde-imp-3.2.4 (15 Aug 2004)
 
