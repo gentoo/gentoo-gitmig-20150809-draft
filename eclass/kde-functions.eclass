@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.92 2005/02/05 18:03:01 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.93 2005/02/05 18:13:06 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -42,6 +42,7 @@ kde-base/kdeaddons kde-base/kate-xmltools
 kde-base/kdeaddons kde-base/kdeaddons-docs-kate-plugins
 kde-base/kdeaddons kde-base/kdeaddons-docs-kicker-applets
 kde-base/kdeaddons kde-base/kdeaddons-docs-konq-plugins
+kde-base/kdeaddons kde-base/kfile-cert
 kde-base/kdeaddons kde-base/kfile-desktop
 kde-base/kdeaddons kde-base/kfile-folder
 kde-base/kdeaddons kde-base/kfile-html
