@@ -3,33 +3,34 @@
 # /space/gentoo/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.10.ebuild,v 1.1 2002/06/13 16:17:12 spider Exp
 
 # since its a development version
-inherit debug 
+inherit debug gnome.org
 
-S=${WORKDIR}/${P}
-DESCRIPTION="GTK+2  bindings for Python"
-SRC_URI="ftp://ftp.gtk.org/pub/gtk/python/v2.0/${P}.tar.gz"
+IUSE="gnome opengl"
+
+DESCRIPTION="GTK+2 bindings for Python"
+#SRC_URI="ftp://ftp.gtk.org/pub/gtk/python/v2.0/${P}.tar.gz"
 HOMEPAGE="http://www.daa.com.au/~james/pygtk/"
 LICENSE="LGPL-2.1"
 
-KEYWORDS="x86 ~ppc sparc alpha"
-
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND=">=dev-lang/python-2.2
-	>=x11-libs/pango-1.0.0
-	>=gnome-base/libglade-2.0.0
-	opengl? ( >=x11-libs/gtkglarea-1.99.0 )"
+	>=x11-libs/pango-1
+	>=x11-libs/gtk+-2
+	>=dev-libs/atk-1
+	>=dev-libs/glib-2
+	gnome? ( >=gnome-base/libglade-2 )
+	opengl? ( >=x11-libs/gtkglarea-1.99 )"
 
 SLOT="2.0"
 
 src_compile() {
-
-	./configure --prefix=/usr/ \
-	            --host=${CHOST} || die
+	econf --enable-thread || die
 	emake || die
 }
 
 src_install () {
-	make prefix=${D}/usr install || die
+	einstall || die
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL MAPPING NEWS README THREADS TODO
 }
