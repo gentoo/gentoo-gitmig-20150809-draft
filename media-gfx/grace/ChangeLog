@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/grace
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/ChangeLog,v 1.26 2004/11/07 16:16:10 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/ChangeLog,v 1.27 2005/03/18 14:17:27 seemant Exp $
+
+  18 Mar 2005; Seemant Kulleen <seemant@gentoo.org> grace-5.1.10-r1.ebuild,
+  grace-5.1.12-r1.ebuild, grace-5.1.13.ebuild, grace-5.1.14.ebuild:
+  Galeon is now in www-client from net-www
 
   07 Nov 2004; Jason Wever <weeve@gentoo.org> grace-5.1.13.ebuild:
   Stable on sparc.
