@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ppc-sources-crypto-2.4.20.ebuild,v 1.8 2003/09/10 04:32:25 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ppc-sources-crypto-2.4.20.ebuild,v 1.9 2003/12/02 04:10:31 iggy Exp $
 
 IUSE="build crypt"
 
@@ -45,6 +45,8 @@ src_unpack() {
 	unpack linux-ppc-crypto-${OKV}.tar.bz2
 	cd ${S}
 	pwd
+
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
 
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.20.ebuild,v 1.6 2003/10/27 13:49:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.20.ebuild,v 1.7 2003/12/02 04:11:38 iggy Exp $
 
 ETYPE="sources"
 
@@ -59,6 +59,8 @@ src_unpack() {
 
 		patch -p1 < ${BUGFIX}-3.diff || die "cannot apply fix patch 1"
 		echo "-> Fix patch 3 applied"
+
+		epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
 
 		# We need to have our kernel in /boot
 		mv Makefile Makefile.orig
