@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.5.ebuild,v 1.3 2004/04/20 18:02:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.5.ebuild,v 1.4 2004/04/25 18:47:12 squinky86 Exp $
 
 IUSE=""
 
@@ -24,7 +24,7 @@ S=${WORKDIR}/${MY_P}
 src_compile() {
 #	cp /usr/share/libtool/ltmain.sh .
 #	./autogen.sh --prefix=/usr --host=${CHOST} || die "FastTrack configure failed"
-	econf || dir "FastTrack plugin failed to configure"
+	econf || die "FastTrack plugin failed to configure"
 	emake || die "FastTrack plugin failed to build"
 }
 
