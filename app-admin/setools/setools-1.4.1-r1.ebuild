@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.4.1.ebuild,v 1.1 2004/08/22 15:55:33 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.4.1-r1.ebuild,v 1.1 2004/09/16 01:26:59 pebenito Exp $
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux_policy_tools.html"
@@ -41,8 +41,10 @@ src_unpack() {
 	# we will manually install policy
 #	sed -i -e "s: policy-install::g" ${S}/seuser/Makefile
 
-	# fix up the paths in the file contexts
-#	sed -i -e 's:/usr/apol:/usr/share/setools:' ${S}/policy/seuser.fc
+	# generate the file contexts from the template
+	sed -e 's:SEUSER_BINDIR:/usr/bin:' \
+		-e 's:SEUSER_INSTALL_LIBDIR:/usr/share/setools:' \
+		< ${S}/policy/seuser_template.fc > ${S}/policy/seuser.fc
 
 	# dont chcon or install -Z
 	sed -i -e '/chcon/d' ${S}/secmds/Makefile
