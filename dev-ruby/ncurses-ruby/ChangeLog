@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ncurses-ruby
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.9 2004/12/31 01:03:37 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.10 2005/02/15 16:12:32 citizen428 Exp $
+
+*ncurses-ruby-0.9.1 (15 Feb 2005)
+
+  15 Feb 2005; Michael Kohl <citizen428@gentoo.org>
+  +ncurses-ruby-0.9.1.ebuild:
+  Version bump; submitted by Thomas Kirchner <gentoo@halffull.org> in bug #81638
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
