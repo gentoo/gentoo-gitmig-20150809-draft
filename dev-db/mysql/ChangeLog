@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.14 2002/07/29 02:24:36 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.15 2002/08/25 09:18:09 woodchip Exp $
+
+*mysql-3.23.52 (25 Aug 2002)
+
+  25 Aug 2002; Donny Davies <woodchip@gentoo.org> mysql-3.23.52.ebuild,
+  mysql-3.23.52-install-db-sh.diff :
+
+  Update to latest stable release.  Fix mysql_install_db patch.
 
 *mysql-3.23.51-r4 (28 Jul 2002)
 
