@@ -18,5 +18,11 @@ virtual/snmp		net-analyzer/net-snmp
 virtual/ssh		net-misc/openssh
 virtual/tetex		app-text/tetex
 virtual/textbrowser	net-www/links
-virtual/x11		sys-darwin/X11
-virtual/xft		sys-darwin/X11
+virtual/x11		sys-darwin/apple-xfree
+virtual/xft		sys-darwin/apple-xfree
+virtual/skkserv		app-i18n/skkserv
+virtual/flim		app-emacs/flim
+virtual/semi		app-emacs/semi
+virtual/w3m		net-www/w3m
+virtual/ruby		dev-lang/ruby
+virtual/blackbox	x11-wm/fluxbox
