@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5298ddf099391e7f55948efa32f87c09 ChangeLog 368
+MD5 9950b809e473e64c2c84e823af41dace obpager-1.8.ebuild 551
+MD5 a833a8f11fdfcf95b3a92f93c68d5bc1 metadata.xml 313
+MD5 087ed13764f0ec9707aad1e98ecb7576 files/digest-obpager-1.8 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjObsI7fK2cqeyXkRAhbpAKCoHHK5QPpqGckLoXEkuYjCCHPWKACgpBZw
+2tcqdKbq3wZ03uQE49nsxYA=
+=/pmC
+-----END PGP SIGNATURE-----
