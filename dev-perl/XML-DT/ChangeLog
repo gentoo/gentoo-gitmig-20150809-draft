@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/XML-DT
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.16 2004/07/04 08:11:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.17 2004/09/22 14:37:40 mcummings Exp $
+
+*XML-DT-0.32 (22 Sep 2004)
+
+  22 Sep 2004; Michael Cummings <mcummings@gentoo.org> +XML-DT-0.32.ebuild:
+  New version for playing. Please note: KEYWORDS was modified because not all
+  arch's could support the deps at this time. This does not mean they won't
+  support it, but they couldn't at the time of commit.
 
   04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> XML-DT-0.24.1.ebuild:
   Stable on alpha.
