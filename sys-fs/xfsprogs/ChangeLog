@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.22 2004/09/03 19:16:59 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.23 2004/09/22 03:36:18 vapier Exp $
+
+  21 Sep 2004; Mike Frysinger <vapier@gentoo.org> xfsprogs-2.6.13.ebuild:
+  Make nls support optional #64862 by Aaron GIpson.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   xfsprogs-2.3.9.ebuild, xfsprogs-2.6.3.ebuild:
