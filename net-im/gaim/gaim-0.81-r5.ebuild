@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.81-r2.ebuild,v 1.1 2004/08/17 01:32:04 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.81-r5.ebuild,v 1.1 2004/08/24 13:52:14 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -68,9 +68,9 @@ src_unpack() {
 	cd ${S}
 	use cjk && epatch ${FILESDIR}/gaim-0.76-xinput.patch
 	epatch ${FILESDIR}/syslog_fd_leak.diff
-	epatch ${FILESDIR}/gaim-0.82cvs-gtkprefs-fix.patch
-	cd src/protocols/msn/
-	epatch ${FILESDIR}/gaim-0.81_msn-slp.diff
+
+	# All security patches wrapped into one
+	epatch ${FILESDIR}/gaim-0.81-security2.diff
 }
 
 src_compile() {
