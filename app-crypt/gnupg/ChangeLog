@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.47 2004/01/06 17:46:23 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.48 2004/01/12 09:55:44 carpaski Exp $
 
 *gnupg-1.9.0 (06 Jan 2004)
 
@@ -36,6 +36,10 @@
   stable on all platforms.
 
 *gnupg-1.2.3-r5 (03 Dec 2003)
+
+  12 Jan 2004; Nicholas Jones <carpaski@gentoo.org> gnupg-1.2.3-r5.ebuild:
+	Fixed the sparc checks and moved the filter-flags inherit call to a
+	legal position so the ebuild quite printing error messages.
 
   03 Dec 2003; Tavis Ormandy <taviso@gentoo.org> gnupg-1.2.3-r5.ebuild,
   files/gnupg-1.2.3-hkp-format-string.diff:

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r5.ebuild,v 1.4 2004/01/02 21:00:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r5.ebuild,v 1.5 2004/01/12 09:55:44 carpaski Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
@@ -35,8 +35,7 @@ DEPEND="caps? ( sys-libs/libcap )
 # -mcpu enabled.  While this is not a gnupg problem, it is a temporary
 # fix until the gcc problem can be tracked down.
 
-if [ ${ARCH} = "sparc" -a ${PROFILE_ARCH} = "sparc" ]; then
-	inherit flag-o-matic
+if [ "${ARCH}" == "sparc" ] && [ "${PROFILE_ARCH}" == "sparc" ]; then
 	filter-flags "-mcpu=supersparc -mcpu=v8 -mcpu=v7"
 fi
 
