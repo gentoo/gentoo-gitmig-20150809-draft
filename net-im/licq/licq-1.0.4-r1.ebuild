@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.4-r1.ebuild,v 1.6 2002/04/13 16:43:43 danarmak Exp $
-. /usr/portage/eclass/inherit.eclass || die
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.4-r1.ebuild,v 1.7 2002/05/21 18:14:11 danarmak Exp $
+
 use kde && inherit kde-base
 
 S=${WORKDIR}/${P}

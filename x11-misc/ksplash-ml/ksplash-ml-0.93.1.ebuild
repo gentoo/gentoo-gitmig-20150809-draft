@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2 
 # Author Bart Verwilst <verwilst@gentoo.org>
 # $ Header: $
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit kde-base || die
 
 need-kde 3

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Christophe Vanfleteren <c.vanfleteren@pandora.be>
 
-. /usr/portage/eclass/inherit.eclass || die
+
 inherit kde-base || die
 
 need-kde 3

@@ -1,8 +1,8 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/kwintv/kwintv-0.8.11.ebuild,v 1.1 2002/01/12 01:12:24 verwilst Exp $
-. /usr/portage/eclass/inherit.eclass || die
+# $Header: /var/cvsroot/gentoo-x86/media-video/kwintv/kwintv-0.8.11.ebuild,v 1.2 2002/05/21 18:14:10 danarmak Exp $
+
 inherit kde-base || die
 
 need-kde 2.1
