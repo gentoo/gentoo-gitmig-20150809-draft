@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3040 2004/08/06 13:54:03 caleb Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3041 2004/08/06 18:00:59 liquidx Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,15 @@
 ##
 ##   End example
 ##
+
+# <liquidx@gentoo.org> (6 Aug 2004)
+# development versions of evolution.
+# warning: installing evolution-data-server will break evolution-1.4
+gnome-extra/evolution-data-server
+>=gnome-extra/gal-2.1
+>=gnome-extra/libgtkhtml-3.1
+>=mail-client/evolution-1.5
+>=net-libs/libsoup-2.1
 
 # <twp@gentoo.org> (6 Aug 2004)
 # Masked until linking problems are solved
