@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bopm/bopm-3.1.2.ebuild,v 1.3 2004/07/01 20:47:03 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bopm/bopm-3.1.2.ebuild,v 1.4 2004/12/19 17:21:09 kloeri Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.blitzed.org/bopm/"
 SRC_URI="http://static.blitzed.org/www.blitzed.org/${PN}/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~alpha"
 IUSE=""
 
 RDEPEND="virtual/libc"
