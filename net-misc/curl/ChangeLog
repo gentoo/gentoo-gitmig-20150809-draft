@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.19 2004/12/29 03:33:53 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.20 2005/01/12 13:25:49 gmsoft Exp $
+
+  12 Jan 2005; Guy Martin <gmsoft@gentoo.org> curl-7.12.0-r2.ebuild:
+  Stable on hppa.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
