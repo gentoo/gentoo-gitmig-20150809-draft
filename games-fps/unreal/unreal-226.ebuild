@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.4 2003/11/16 08:06:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.5 2004/02/08 21:06:47 vapier Exp $
 
 inherit games eutils
 
@@ -21,8 +21,8 @@ RDEPEND="X? ( virtual/x11 )
 S=${WORKDIR}
 
 pkg_setup() {
-	games_get_cd System/
-	games_verify_cd ${PN}
+	export CDROM_NAME="Unreal Tournament CD"
+	cdrom_get_cds System/
 	games_pkg_setup
 }
 

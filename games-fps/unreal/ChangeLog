@@ -1,10 +1,11 @@
 # ChangeLog for games-fps/unreal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.2 2003/09/10 16:07:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.3 2004/02/08 21:06:38 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *unreal-226 (23 Oct 2002)
+
+  08 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Re-do somewhat to fix issues with newer UT #30611.
 
   23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
   Initial import. Ebuild submitted by me.
