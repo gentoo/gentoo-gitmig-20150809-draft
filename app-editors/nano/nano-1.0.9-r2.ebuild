@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.9-r1.ebuild,v 1.1 2002/11/30 10:58:06 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.9-r2.ebuild,v 1.1 2002/12/01 17:27:29 vapier Exp $
 
 DESCRIPTION="clone of Pico with more functions in a smaller size"
 SRC_URI="http://www.nano-editor.org/dist/v1.0/${P}.tar.gz"
@@ -17,25 +17,20 @@ DEPEND="virtual/glibc
 
 src_compile() {
 	local myconf="--bindir=/bin --enable-extra"
-
 	use nls   || myconf="${myconf} --disable-nls"
-	
-	if use build ; then
-		myconf="${myconf} --disable-wrapping-as-root"
-	fi
+	use build && myconf="${myconf} --disable-wrapping-as-root"
 
 	econf ${myconf}
 	emake || die
 }
 
-src_install () {
-	make \
-		DESTDIR=${D} \
-		install || die
+src_install() {
+	make DESTDIR=${D} install || die
 
-	if use build; then
-		rm -rf ${D}/usr/share
-	else
-		dodoc COPYING ChangeLog README
-	fi
+	use build \
+		&& rm -rf ${D}/usr/share \
+		|| dodoc COPYING ChangeLog README
+
+	dodir /usr/bin
+	dosym /bin/nano /usr/bin/nano
 }
