@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systrace/systrace-1.0-r4.ebuild,v 1.5 2004/01/26 01:08:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systrace/systrace-1.0-r4.ebuild,v 1.6 2004/01/30 07:20:57 drobbins Exp $
 
 DESCRIPTION="Systrace userland binary"
 HOMEPAGE="http://www.systrace.org/"
@@ -11,8 +11,10 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="gtk"
 
-DEPEND="dev-libs/libevent
+RDEPEND="dev-libs/libevent
 	gtk? ( =x11-libs/gtk+-1.2* =dev-libs/glib-1.2* )"
+DEPEND="$RDEPEND
+	>=sys-devel/autoconf-2.58"
 
 pkg_setup() {
 	if ! [ -f ${ROOT}/usr/include/linux/systrace.h ] ;
