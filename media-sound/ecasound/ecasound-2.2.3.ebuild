@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.2.3.ebuild,v 1.3 2003/09/07 00:06:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.2.3.ebuild,v 1.4 2003/09/10 22:41:46 msterret Exp $
 
 IUSE="ncurses arts alsa python oss mikmod oggvorbis"
 
@@ -74,9 +74,9 @@ src_compile () {
 }
 
 src_install () {
-    make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die
 
-    if use python; then
+	if use python; then
 		cd pyecasound || die
 		python -c "import compileall; compileall.compile_dir('.')" || die
 		python -O -c "import compileall; compileall.compile_dir('.')" || die

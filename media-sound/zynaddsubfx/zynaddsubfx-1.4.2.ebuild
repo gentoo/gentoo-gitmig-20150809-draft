@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-1.4.2.ebuild,v 1.1 2003/07/17 13:20:23 torbenh Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-1.4.2.ebuild,v 1.2 2003/09/10 22:40:44 msterret Exp $ 
 
 MY_P=ZynAddSubFX-${PV}
 DESCRIPTION="ZynAddSubFX is a opensource software synthesizer."
@@ -20,23 +20,22 @@ DEPEND=">=x11-libs/fltk-1.1.2
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-        # patched to enable jack and fix compile scripts for
-        # spliter and controller
-        epatch ${FILESDIR}/${P}.patch
-        cd ${S}/src
-        make || die "compile failed"
-        cd ${S}/ExternalPrograms/Spliter
-        ./compile.sh
-        cd ${S}/ExternalPrograms/Controller
-        ./compile.sh
+	# patched to enable jack and fix compile scripts for
+	# spliter and controller
+	epatch ${FILESDIR}/${P}.patch
+	cd ${S}/src
+	make || die "compile failed"
+	cd ${S}/ExternalPrograms/Spliter
+	./compile.sh
+	cd ${S}/ExternalPrograms/Controller
+	./compile.sh
 }
 
 src_install() {
-        dobin ${S}/src/zynaddsubfx
-        dobin ${S}/ExternalPrograms/Spliter/spliter
-        dobin ${S}/ExternalPrograms/Controller/controller
+	dobin ${S}/src/zynaddsubfx
+	dobin ${S}/ExternalPrograms/Spliter/spliter
+	dobin ${S}/ExternalPrograms/Controller/controller
 	dodoc COPYING FAQ.txt README.txt HISTORY.txt
 	dodir /usr/share/${PN}
 	cp -r ${S}/examples/* ${D}/usr/share/${PN}
 }
-

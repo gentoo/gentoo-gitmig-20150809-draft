@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-0.3.ebuild,v 1.4 2003/07/12 23:41:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-0.3.ebuild,v 1.5 2003/09/10 22:39:41 msterret Exp $
 
 DESCRIPTION="Graphical patch bay for the ALSA sequencer API."
 HOMEPAGE="http://pkl.net/~node/alsa-patch-bay.html"
@@ -35,5 +35,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-        dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS TODO
+	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS TODO
 }

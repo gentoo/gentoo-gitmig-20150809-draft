@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.31.ebuild,v 1.3 2003/09/07 00:06:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.31.ebuild,v 1.4 2003/09/10 22:37:22 msterret Exp $
 
 IUSE="tcpd alsa"
 
@@ -47,21 +47,21 @@ src_install() {
 	insinto /etc/conf.d
 	newins ${FILESDIR}/esound.conf.d esound
 
-        exeinto /etc/init.d
+	exeinto /etc/init.d
 	extradepend=""
 	use tcpd && extradepend=" portmap"
 	use alsa && extradepend="$extradepend alsasound"
-        sed "s/@extradepend@/$extradepend/" <${FILESDIR}/esound.init.d >${T}/esound
+	sed "s/@extradepend@/$extradepend/" <${FILESDIR}/esound.init.d >${T}/esound
 	doexe ${T}/esound
 
 }
 
 pkg_postinst() {
-        # rebuild init deps to include deps on esound
-        /etc/init.d/depscan.sh
+	# rebuild init deps to include deps on esound
+	/etc/init.d/depscan.sh
 }
 
 pkg_postrm() {
-        # rebuild init deps to remove deps on esound
-        /etc/init.d/depscan.sh
+	# rebuild init deps to remove deps on esound
+	/etc/init.d/depscan.sh
 }
