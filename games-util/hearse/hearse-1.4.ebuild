@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/hearse/hearse-1.4.ebuild,v 1.3 2004/03/01 19:51:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/hearse/hearse-1.4.ebuild,v 1.4 2004/03/01 20:46:20 mr_bones_ Exp $
 
 inherit games
 
@@ -15,6 +15,7 @@ KEYWORDS="x86"
 DEPEND=">=dev-lang/perl-5.8.0
 	>=games-roguelike/nethack-3.4.1
 	>=sys-apps/sed-4
+	dev-perl/libwww-perl
 	net-libs/libwww"
 
 src_unpack() {
