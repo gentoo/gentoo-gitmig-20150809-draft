@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sary/sary-1.0.5_pre20030426.ebuild,v 1.3 2004/03/01 11:28:26 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sary/sary-1.0.5_pre20030426.ebuild,v 1.4 2004/04/25 14:48:58 usata Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sary.namazu.org/"
 SRC_URI="http://taiyaki.org/tmp/sary/${PN}-cvs_${PV/*_pre/}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~alpha ~ppc"
 SLOT="0"
 S="${WORKDIR}/${PN}"
 
