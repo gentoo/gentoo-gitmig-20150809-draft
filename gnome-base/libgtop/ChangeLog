@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgtop
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.39 2004/03/09 23:24:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.40 2004/03/14 17:41:00 geoman Exp $
+
+  14 Mar 2004; Stephen P. Becker <geoman@gentoo.org> libgtop-2.0.8.ebuild:
+  Added ~mips keyword.
 
   09 Mar 2004; <agriffis@gentoo.org> libgtop-2.0.8.ebuild:
   stable on alpha and ia64

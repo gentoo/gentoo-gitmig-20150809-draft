@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-2.0.8.ebuild,v 1.6 2004/03/09 23:24:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-2.0.8.ebuild,v 1.7 2004/03/14 17:41:00 geoman Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 IUSE=""
 SLOT="2"
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64 ia64"
+KEYWORDS="x86 ppc sparc alpha hppa ~amd64 ia64 ~mips"
 
 RDEPEND=">=dev-libs/glib-2"
 

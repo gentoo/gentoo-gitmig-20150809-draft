@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/ChangeLog,v 1.32 2004/03/13 16:23:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/ChangeLog,v 1.33 2004/03/14 17:38:20 geoman Exp $
+
+  14 Mar 2004; Stephen P. Becker <geoman@gentoo.org> gail-1.4.1.ebuild:
+  Added ~mips keyword.
 
   13 Mar 2004; foser <foser@gentoo.org> metadata.xml :
   Move maintainership to gnome-accessibility herd
