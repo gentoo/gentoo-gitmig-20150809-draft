@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.22 2004/10/29 12:31:49 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.23 2004/12/18 09:18:29 corsair Exp $
+
+  18 Dec 2004; Markus Rothe <corsair@gentoo.org> rhino-1.5.5.ebuild:
+  added ~ppc64 to KEYWORDS
 
   29 Oct 2004; Thomas Matthijs <axxo@gentoo.org> rhino-1.5.5.ebuild:
   removed nomirror, why was it there?

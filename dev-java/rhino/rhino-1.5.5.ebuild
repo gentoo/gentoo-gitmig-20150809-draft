@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.5.5.ebuild,v 1.2 2004/10/29 12:31:49 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.5.5.ebuild,v 1.3 2004/12/18 09:18:29 corsair Exp $
 
 inherit eutils java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/js/${MY_P}.zip http://dev.gentoo.
 HOMEPAGE="http://www.mozilla.org/rhino/"
 LICENSE="NPL-1.1"
 SLOT="0"
-KEYWORDS="x86 ppc amd64 sparc"
+KEYWORDS="x86 ppc amd64 sparc ~ppc64"
 IUSE="jikes doc"
 S="${WORKDIR}/${MY_P}"
 DEPEND="dev-java/ant-core

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmx
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/ChangeLog,v 1.10 2004/11/05 03:39:03 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/ChangeLog,v 1.11 2004/12/18 09:01:54 corsair Exp $
+
+  18 Dec 2004; Markus Rothe <corsair@gentoo.org> jmx-1.2.1.ebuild:
+  added ~ppc64 to KEYWORDS
 
   04 Nov 2004; Jason Wever <weeve@gentoo.org> jmx-1.2.1.ebuild:
   Added ~sparc keyword to fix broken deps.

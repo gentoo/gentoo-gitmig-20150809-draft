@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail-bin/sun-javamail-bin-1.3.1.ebuild,v 1.5 2004/12/07 14:59:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail-bin/sun-javamail-bin-1.3.1.ebuild,v 1.6 2004/12/18 09:04:08 corsair Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/javamail-${PV}
 DESCRIPTION="A Java-based framework to build multiplatform mail and messaging applications."
 SRC_URI="${At}"
 HOMEPAGE="http://java.sun.com/products/javamail/index.html"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="x86 ppc sparc amd64 ~ppc64"
 LICENSE="sun-bcla-javamail"
 SLOT="0"
 DEPEND=">=app-arch/unzip-5.50-r1"

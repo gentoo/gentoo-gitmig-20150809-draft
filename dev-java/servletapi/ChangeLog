@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.17 2004/10/17 07:31:29 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.18 2004/12/18 09:26:07 corsair Exp $
+
+  18 Dec 2004; Markus Rothe <corsair@gentoo.org> servletapi-2.4.ebuild:
+  added ~ppc64 to KEYWORDS
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> servletapi-2.4.ebuild:
   keywords ~amd64; closes #67325.

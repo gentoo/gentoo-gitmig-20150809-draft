@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/regexp-1.3-r1.ebuild,v 1.4 2004/10/16 17:33:48 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/regexp/regexp-1.3-r1.ebuild,v 1.5 2004/12/18 09:10:41 corsair Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://jakarta.apache.org/"
 SLOT="0"
 IUSE="doc jikes"
 LICENSE="Apache-1.1"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="x86 ppc sparc amd64 ~ppc64"
 DEPEND=">=virtual/jdk-1.3
 	dev-java/ant-core"
 
