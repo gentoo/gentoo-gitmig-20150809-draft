@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5-r1.ebuild,v 1.1 2004/07/24 05:10:06 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5-r1.ebuild,v 1.2 2004/07/24 05:33:46 langthang Exp $
 
 IUSE="debug gdbm mailbox pam ssl xinetd"
 
@@ -26,8 +26,9 @@ src_compile() {
 
 	use pam && myconf="${myconf} --with-pam=pop3"
 	use mailbox && myconf="${myconf} --enable-home-dir-mail=Mailbox"
+	use xinetd && myconf="${myconf} --disable-standalone" || \
+		myconf="${myconf} --enable-standalone"
 	myconf="${myconf} $(use_enable debug debugging)"
-	myconf="${myconf} $(use_enable xinetd standalone)"
 	myconf="${myconf} $(use_with ssl openssl)"
 	myconf="${myconf} $(use_with gdbm)"
 	econf --enable-apop=/etc/pop.auth \
