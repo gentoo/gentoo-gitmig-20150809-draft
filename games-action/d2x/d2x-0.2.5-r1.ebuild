@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r1.ebuild,v 1.1 2004/06/26 17:52:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r1.ebuild,v 1.2 2004/06/28 04:25:14 agriffis Exp $
 
 inherit flag-o-matic eutils games
 
@@ -62,7 +62,9 @@ src_compile() {
 	# in gr, thus when they go to link they cause redefine errors ...
 	# we build each by it self, save the binary file, clean up, and start over
 	mkdir my-bins
-	for ren in sdl $(use opengl) $(use svga) $(use ggi) ; do
+	for ren in sdl $(useq opengl && echo opengl) \
+			$(useq svga && echo svga) $(useq ggi && echo ggi)
+	do
 		[ "${ren}" == "sdl" ] \
 			&& renconf="" \
 			|| renconf="--with-${ren}"
