@@ -1,12 +1,12 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.59 2002/05/15 19:49:45 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.60 2002/06/06 00:01:17 meekrob Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
-TEMPLATE="xsl/guide-main.xsl"
 S=${WORKDIR}/gentoo-src/gentoo-web
+TEMPLATE=${S}/xsl/guide-main.xsl
 DESCRIPTION="www.gentoo.org website"
 SRC_URI="http://www.red-bean.com/cvs2cl/cvs2cl.pl"
 HOMEPAGE="http://www.gentoo.org"
@@ -14,16 +14,25 @@ RDEPEND="virtual/python dev-libs/libxslt"
 WEBROOT=/www/virtual/www.gentoo.org/htdocs
 
 src_unpack() {
+	local myhost
+	myhost=`hostname`
+	if [ "$myhost" = "laptop.kicks-ass.net" ]
+	then
+		export GENTOO_SRCDIR=/home/meekrob/gentoo-src
+		WEBROOT=/home/httpd/htdocs
+		echo -e "\e[32;1mMEEKROB detected.\e[0m"
+		echo "Setting GENTOO_SRCDIR to $GENTOO_SRCDIR"
+		echo "Setting WEBROOT to $WEBROOT"
+	fi
 	if [ "$MAINTAINER" != "yes" ]
 	then
 		echo "This will zap stuff in ${WEBROOT}."
 		echo "Beware -- maintainers only."
 	fi
 	cd ${WORKDIR}/${P}
-	local myhost
-	myhost=`hostname`
 	if [ "$myhost" = "inventor.gentoo.org" ]
 	then
+		echo -e "\e[32;1mCHIBA detected.\e[0m"
 		ln -s /home/drobbins/gentoo-src gentoo-src
 	elif [ "$myhost" = "chiba.3jane.net" ]
 	then
@@ -37,19 +46,44 @@ src_unpack() {
 }
 
 src_compile() {
-	python python/gendevlistxml.py txt/devlist.txt xml/main-devlist.xml
+	python ${S}/python/gendevlistxml.py txt/devlist.txt xml/main-devlist.xml
 }
 
 src_install() {
 	dodir ${WEBROOT}/doc
 	dodir ${WEBROOT}/projects
 	insinto ${WEBROOT}/doc
-	cd ${S}
+	
+	#process english docs
+	cd ${S}/xml/doc/en
 	local x
-	for x in mirroring gentooppc-quickstart use-howto gentoo-security rc-scripts java eclass-howto build desktop xml-guide portage-manual portage-user gentoo-howto faq nvidia_tsg openafs cvs-tutorial shots ebuild-submit altinstall uml nano-basics-guide build-fr desktop-fr portage-manual-fr portage-user-fr faq-fr nvidia_tsg-fr altinstall-fr rc-scripts-fr
+	for x in *.xml
 	do
-		xsltproc $TEMPLATE xml/${x}.xml > ${D}${WEBROOT}/doc/${x}.html || die
+		x=`basename ${x} .xml`
+		xsltproc $TEMPLATE ${x}.xml > ${D}${WEBROOT}/doc/${x}.html || die
 	done
+	cd ${S}
+	
+	#process spanish docs
+	cd ${S}/xml/doc/es
+	local x
+	for x in *.xml
+	do
+		x=`basename ${x} .xml`
+		xsltproc $TEMPLATE ${x}.xml > ${D}${WEBROOT}/doc/${x}.html || die
+	done
+	cd ${S}
+	
+	#process french docs
+	cd ${S}/xml/doc/fr
+	local x
+	for x in *.xml
+	do
+		x=`basename ${x} .xml`
+		xsltproc $TEMPLATE ${x}.xml > ${D}${WEBROOT}/doc/${x}.html || die
+	done
+	cd ${S}
+	
 	cp txt/firewall ${D}${WEBROOT}/doc/
 	dodir ${WEBROOT}/images
 	insinto ${WEBROOT}/images
