@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation, Pieter Van den Abeele <pvdabeel@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/readline/readline-2.3.3.ebuild,v 1.5 2004/09/16 01:56:37 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/readline/readline-2.3.3.ebuild,v 1.6 2004/10/23 08:12:26 mr_bones_ Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.metadistribution.org/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* macos ~ppc ppc-macos"
+KEYWORDS="-* ~ppc ppc-macos"
 IUSE=""
 
 DEPEND=">=sys-libs/readline-4.3
