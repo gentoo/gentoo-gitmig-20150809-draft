@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.3.1.ebuild,v 1.7 2002/07/16 03:16:42 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.3.1.ebuild,v 1.8 2002/08/08 08:13:16 danarmak Exp $
 
 # qt-copy-3.0.3 ebuild (released with kde3)
 
@@ -23,6 +23,7 @@ HOMEPAGE="http://www.trolltech.com/"
 DEPEND="virtual/x11
 	media-libs/libpng
 	>=media-libs/libmng-1.0.0
+	>=media-libs/freetype-2
 	gif? ( media-libs/giflib
 		media-libs/libungif )
 	nas? ( >=media-libs/nas-1.4.1 )

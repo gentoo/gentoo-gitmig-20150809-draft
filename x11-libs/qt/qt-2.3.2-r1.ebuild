@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.7 2002/08/05 10:02:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.8 2002/08/08 08:13:16 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="QT ${PV}, an X11 widget set and general library used by KDE et al"
@@ -14,6 +14,7 @@ RDEPEND="virtual/x11
 	media-libs/libpng
 	media-libs/lcms
 	>=media-libs/libmng-1.0.0
+	>=media-libs/freetype-2
 	gif? ( media-libs/giflib
 		media-libs/libungif )
 	nas? ( >=media-libs/nas-1.4.1 )
