@@ -1,5 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 
 MY_P="`echo ${P} |sed -e 's/-//' -e 's/g/G/' -e 's/a/A/'`"
 S=${WORKDIR}/${MY_P}
