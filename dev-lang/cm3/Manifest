@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 873b1d73ec7a62d2f694a9c6fcabc70e cm3-5.2.6.ebuild 2324
-MD5 741f1b7c5d10dcf6ba7ae9393909ada1 ChangeLog 650
+MD5 265b1d9d60328bc587974b87989bd4fd ChangeLog 808
 MD5 4a92760230ce87e45653db9797a26de6 metadata.xml 1943
+MD5 0ccb0fc585d22594fffc5a66252be722 cm3-5.2.7_pre050331.ebuild 1926
+MD5 873b1d73ec7a62d2f694a9c6fcabc70e cm3-5.2.6.ebuild 2324
 MD5 a071e91cf56b602fba2b046c25fa0826 files/05cm3 26
+MD5 b59e89e23c56831be2c1552870f15afb files/cm3.cfg 13025
+MD5 288b8f9b71b91ebd331a54a79abcfcd0 files/m3build 33
 MD5 6013cd456a4381ba3abd48bddba25305 files/digest-cm3-5.2.6 68
 MD5 697094d1f2a7219c52ebdd86dfbd9a8b files/m3ship 32
-MD5 288b8f9b71b91ebd331a54a79abcfcd0 files/m3build 33
-MD5 b59e89e23c56831be2c1552870f15afb files/cm3.cfg 13025
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBpPt7I1lqEGTUzyQRArD8AJ4tBS5+bC7+OSijCSWmamdWwrVpowCgweP5
-ipwOvD9KwTj/4r8/SLlfQ4c=
-=ADIP
------END PGP SIGNATURE-----
+MD5 65b3003c4f6af3ee0d2e3e9f4dd00c90 files/digest-cm3-5.2.7_pre050331 80

@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/cm3
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3/ChangeLog,v 1.4 2004/06/24 22:47:33 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3/ChangeLog,v 1.5 2005/04/02 04:30:42 vapier Exp $
+
+*cm3-5.2.7_pre050331 (02 Apr 2005)
+
+  02 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +cm3-5.2.7_pre050331.ebuild:
+  Version bump #81798 by Stefan Sperling.
 
 *cm3-5.2.6 (17 Jul 2003)
 
