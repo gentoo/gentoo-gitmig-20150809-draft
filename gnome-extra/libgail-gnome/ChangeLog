@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgail-gnome
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.13 2003/07/04 21:47:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.14 2003/08/12 22:35:22 weeve Exp $
+
+  12 Aug 2003; Jason Wever <weeve@gentoo.org> libgail-gnome-1.0.2.ebuild:
+  Changed ~sparc keyword to sparc.
 
   30 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org>
   libgail-gnome-1.0.2.ebuild:
