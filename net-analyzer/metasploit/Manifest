@@ -1,3 +1,14 @@
-MD5 f7749730de048e43886bdce08644286b metasploit-2.3.ebuild 1100
-MD5 d92153bd1fe2451ba296d70226937178 metadata.xml 907
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fa18b778db85122937a3ae7e2b815914 metasploit-2.3.ebuild 1175
+MD5 2f8b393e5837fd817b3ec24c7b9a9bca ChangeLog 411
+MD5 5c7feb9f12264fd99f3f435216e82f26 metadata.xml 926
 MD5 38b31ffed97d630a113365424ecd9655 files/digest-metasploit-2.3 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCD8YpI1lqEGTUzyQRAkJUAJ9Li4dP/5mrtkz5K3UjGDUr/bN1UACg1reb
+Ls2WI36ya+88zrgSZDqttAI=
+=6/kw
+-----END PGP SIGNATURE-----
