@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20040824.ebuild,v 1.1 2004/08/24 18:42:51 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20040906.ebuild,v 1.1 2004/09/06 18:46:51 solar Exp $
 
 # All work on madwifi is pretty much done under the WPA branch. At some
 # point in the near future it should be merged back into HEAD. 
@@ -13,7 +13,7 @@ HOMEPAGE="http://madwifi.sourceforge.net/"
 
 # Point to any required sources; these will be automatically downloaded by
 # Portage.
-SRC_URI="mirror://gentoo/$P.tar.bz2"
+SRC_URI="mirror://gentoo/$P.tar.bz2 mirror://gentoo/${PN}-${PV}-gentoo.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,7 +27,11 @@ S=${WORKDIR}
 pkg_setup() {
 	if [[ "${KV}" > "2.5" ]] ; then
 		cd ${ROOT}/usr/src/linux
-		./scripts/modpost ./vmlinux
+		if [[ "${KV}" > "2.6.8" ]] ; then
+			./scripts/mod/modpost ./vmlinux
+		else
+			./scripts/modpost ./vmlinux
+		fi
 	fi
 }
 
@@ -35,6 +39,9 @@ src_unpack() {
 	check_KV
 	unpack ${A}
 	cd ${S}
+
+	epatch ${DISTDIR}/${PN}-${PV}-gentoo.patch.bz2
+
 	if kernel-mod_is_2_6_kernel && [ ${KV_PATCH} -gt 5 ]; then
 		for dir in ath ath_hal net80211; do
 			sed -i -e "s:SUBDIRS=:M=:" ${S}/${dir}/Makefile
@@ -53,12 +60,12 @@ src_install() {
 	make KERNELPATH="${ROOT}/usr/src/linux" KERNELRELEASE="${KV}" \
 		DESTDIR="${D}" install || die
 
-	dodoc README
+	dodoc README COPYRIGHT
 }
 
 pkg_postinst() {
 
-	test -r "${ROOT}/usr/src/linux/System.map" && \
+	[ -r "${ROOT}/usr/src/linux/System.map" ] && \
 		depmod -ae -F "${ROOT}/usr/src/linux/System.map" -b "${ROOT}" -r ${KV}
 
 	einfo ""
