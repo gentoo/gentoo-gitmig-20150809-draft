@@ -9,13 +9,14 @@ diff -ur epiphany-1.6.0/embed/mozilla/Makefile.in epiphany-1.6.0-patched/embed/m
  	helperAppDlg		\
  	gfx			\
  	history			\
-@@ -355,10 +356,12 @@
+@@ -355,10 +356,13 @@
  	passwordmgr		\
  	pipboot			\
  	pipnss			\
 +	pref			\
  	shistory		\
  	sidebar			\
++	string 			\
  	uriloader		\
  	uconv			\
 +	wallet			\
