@@ -1,15 +1,15 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2 
 # Author Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.5.ebuild,v 1.1 2001/11/29 00:19:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.8.ebuild,v 1.1 2002/02/12 19:23:33 verwilst Exp $ 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
-SRC_URI="http://skyblade.homeip.net/xine/XINE-${PV}/source.TAR.BZ2s/xine-lib-${PV}.tar.bz2"
+SRC_URI="http://xine.sourceforge.net/files/xine-lib-${PV}.tar.gz"
 HOMEPAGE="http://xine.sourceforge.net/"
 
 DEPEND="virtual/glibc
-	>=media-libs/libdvdcss-1.0.0
+	>=media-libs/libdvdcss-0.0.3.3
 	>=media-libs/libdvdread-0.9.2
 	>=media-libs/win32codecs-0.50
 	>=media-libs/aalib-1.4_rc3
@@ -28,20 +28,19 @@ src_compile() {
 	use X      || myconf="${myconf} --disable-x11 --disable-xv"
 	use alsa   || myconf="${myconf} --disable-alsa --disable-alsatest"
 	use esd    || myconf="${myconf} --disable-esd --disable-esdtest"
-#	use aalib  || myconf="${myconf} --disable-aalib --disable-aalibtest"
+#	use aalib  || myconf="${myconf} --disable-aalib --disable-aalibtest" 
 	use arts   || myconf="${myconf} --disable-arts --disable-artstest"
 	use ogg    || myconf="${myconf} --disable-ogg --disable-oggtest"
 	use vorbis || myconf="${myconf} --disable-vorbis --disable-vorbistest"
 	 
-	./configure --host=${CHOST} 					\
-		    --prefix=/usr					\
-		    --mandir=/usr/share/man				\
-		    --infodir=/usr/share/info				\
-		    --sysconfdir=/etc					\
-		    --with-w32-path=/usr/lib/win32			\
+	./configure --host=${CHOST} 			\
+		    --prefix=/usr			\
+		    --mandir=/usr/share/man		\
+		    --infodir=/usr/share/info		\		    --sysconfdir=/etc			\
+		    --with-w32-path=/usr/lib/win32	\
 		    ${myconf} || die
 		    
-	make || die
+	emake || die
 }
 
 src_install() {
@@ -56,5 +55,8 @@ src_install() {
 	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
 	cd ${S}/doc
 	dodoc dataflow.dia README*
+
 }
+
+
 
