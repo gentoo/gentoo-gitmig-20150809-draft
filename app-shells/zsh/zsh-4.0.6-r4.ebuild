@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.6-r4.ebuild,v 1.4 2003/09/21 13:00:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.6-r4.ebuild,v 1.5 2003/10/28 07:09:25 usata Exp $
 
 IUSE="ncurses"
 
@@ -8,7 +8,7 @@ DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
 SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.gz
 	 mirror://debian/pool/main/z/zsh/${P/-/_}-15.gz
-	 http://cvs.gentoo.org/~vladimir/distfiles/zshall-${PV}.bz2"
+	 http://dev.gentoo.org/~vladimir/distfiles/zshall-${PV}.bz2"
 
 SLOT="0"
 LICENSE="ZSH"
