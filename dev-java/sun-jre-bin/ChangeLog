@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jre
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.1 2004/06/03 18:23:30 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.2 2004/06/07 03:08:14 agriffis Exp $
+
+  06 Jun 2004; Aron Griffis <agriffis@gentoo.org> sun-jre-bin-1.4.2.04.ebuild:
+  Fix use invocation
 
   03 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   sun-jre-bin-1.4.2.04.ebuild: Moved from dev-java/sun-jre to 
