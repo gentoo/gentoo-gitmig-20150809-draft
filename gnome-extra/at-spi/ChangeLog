@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.52 2004/06/20 21:01:02 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.53 2004/06/22 14:51:03 squinky86 Exp $
+
+  22 Jun 2004; Jon Hood <squinky86@gentoo.org> -at-spi-1.5.2.ebuild:
+  removing unstable ebuild- thanks leonardop
 
 *at-spi-1.5.2 (20 Jun 2004)
 

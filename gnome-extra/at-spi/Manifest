@@ -2,11 +2,9 @@ MD5 cd3b11fc7864917da879bafe1a10e044 at-spi-1.4.0.ebuild 721
 MD5 c7610a5db2c456a12075679c3b339a61 at-spi-1.3.9.ebuild 779
 MD5 b731442cd78ca6b4e3217b7b8ef4050b at-spi-1.4.2.ebuild 728
 MD5 2fba819fe4684c5d71fdc6ccc75c0144 at-spi-1.3.12.ebuild 754
-MD5 c66b2b891a909f1eb6d0fc54fd219e45 at-spi-1.5.2.ebuild 733
-MD5 c8dc26a2cbc77b04ec3ef15027decd66 ChangeLog 6153
+MD5 aa5eed4119acd6e163e5a57c05045f0d ChangeLog 6268
 MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
 MD5 efc432f173e9c4e253e75e9dad207583 files/digest-at-spi-1.3.12 66
 MD5 1db32c9a39a71dc877098609ecd2d8d4 files/digest-at-spi-1.3.9 65
 MD5 540f037e5f75cf900f345a47f4e3bb67 files/digest-at-spi-1.4.0 65
 MD5 be2e44c0d8b92adea62569c44d62d4f9 files/digest-at-spi-1.4.2 65
-MD5 629c5859d2f70970af73fa94462ba5ed files/digest-at-spi-1.5.2 65
