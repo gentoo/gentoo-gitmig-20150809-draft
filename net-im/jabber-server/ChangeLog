@@ -1,6 +1,13 @@
 # ChangeLog for net-im/jabber-server
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/ChangeLog,v 1.5 2003/04/25 20:56:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/ChangeLog,v 1.6 2003/05/11 16:18:35 luke-jr Exp $
+
+*jabber-server-1.4.2-r3 (09 May 2003)
+
+  09 May 2003; Luke-Jr <luke-jr@gentoo.org> jabber-server-1.4.2-r3.ebuild,
+  files/config-1.4.2-r3.tbz2, files/jabber.rc6-r3:
+  Merged LDAP and JUD ebuild patches; Added package-specific USE flags: j-noaim
+  j-nomsn j-nojud j-noyahoo
 
 *jabber-server-1.4.2-r2 (03 Dec 2002)
 

@@ -1,0 +1,33 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/files/jabber.rc6-r3,v 1.1 2003/05/11 16:18:35 luke-jr Exp $
+depend() {
+        need net
+}
+
+start() {
+        ebegin "Starting Jabber Server"
+
+        jabberd -B -c /etc/jabber/multiple.xml >/dev/null 2>&1
+	for addon in /etc/jabber/*.xml; do
+		if [ "$addon" != "/etc/jabber/multiple.xml" ]; then
+			jabberd -B -c $addon >/dev/null 2>&1
+		fi
+	done
+
+        #jabberd -c /etc/jabber/aimtrans.xml &
+        #jabberd -c /etc/jabber/msntrans.xml &
+        #jabberd -c /etc/jabber/yahootrans.xml &
+        #jabberd -c /etc/jabber/muctrans.xml &
+        #jabberd -c /etc/jabber/icqtrans.xml &
+
+        eend $?
+}
+
+stop() {
+        ebegin "Stopping Jabber Server"
+        killall jabberd
+	sleep 2
+        eend $?
+}
