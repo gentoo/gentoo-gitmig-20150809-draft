@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tripwire
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.7 2003/11/04 23:45:47 taviso Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.8 2004/03/27 20:12:16 taviso Exp $
+
+  27 Mar 2004; Tavis Ormandy <taviso@gentoo.org> tripwire-2.3.1.2.ebuild:
+  use strip-flags
 
   04 Nov 2003; Tavis Ormandy <taviso@gentoo.org> tripwire-2.3.1.2.ebuild:
   tripwire doesnt like -Os, fixing #32613

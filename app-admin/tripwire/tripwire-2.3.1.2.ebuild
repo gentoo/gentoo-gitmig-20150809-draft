@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2.ebuild,v 1.9 2004/03/27 17:08:38 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2.ebuild,v 1.10 2004/03/27 20:12:16 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -51,9 +51,10 @@ src_unpack() {
 src_compile() {
 	cd ${S}/src
 
-	# tripwire no like -Os #32613
-	# (04 Nov 2003) taviso@gentoo.org
-	replace-flags -Os -O2
+	# tripwire can be sensitive to compiler optimisation.
+	# see #32613, #45823, and others.
+	# 	-taviso@gentoo.org
+	strip-flags
 
 	emake release RPM_OPT_FLAGS="${CXXFLAGS}"
 }
@@ -92,9 +93,8 @@ src_install() {
 pkg_postinst() {
 	einfo "After installing this package, you should run \"/etc/tripwire/twinstall.sh\""
 	einfo "to generate cryptographic keys, and \"tripwire --init\" to initialize the"
-	einfo "database Tripwire uses.  This must be done manually because the key used to"
-	einfo "sign the database should be different for each system."
+	einfo "database Tripwire uses."
 	einfo
-	einfo "There is also a quickstart guide, included in the docs directory"
+	einfo "A quickstart guide is included with the documentation."
 	einfo
 }
