@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rio500/rio500-0.7-r1.ebuild,v 1.1 2001/05/31 19:48:00 michael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rio500/rio500-0.7-r1.ebuild,v 1.2 2002/04/12 19:09:10 spider Exp $
 
 #P=
 A=${P}.tar.gz
@@ -11,7 +11,7 @@ SRC_URI="http://download.sourceforge.net/rio500/${A}"
 HOMEPAGE="http://rio500.sourceforge.net"
 
 DEPEND="virtual/glibc
-	>=dev-libs/glib-1.2.9"
+	=dev-libs/glib-1.2*"
 
 src_compile() {
     try ./configure --prefix=/usr --host=${CHOST} \
