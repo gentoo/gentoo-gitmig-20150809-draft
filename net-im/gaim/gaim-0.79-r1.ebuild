@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.79-r1.ebuild,v 1.8 2004/07/08 02:39:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.79-r1.ebuild,v 1.9 2004/07/08 15:33:59 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -31,7 +31,7 @@ DEPEND=">=x11-libs/gtk+-2.0
 		!ia64? ( evo? ( mail-client/evolution ) )
 		silc? ( >=net-im/silc-toolkit-0.9.12-r2 )
 	)"
-PDEPEND="crypt? ( >=net-im/gaim-encryption-2.27 )"
+PDEPEND="crypt? ( >=x11-plugins/gaim-encryption-2.27 )"
 
 pkg_setup() {
 	ewarn
