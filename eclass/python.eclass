@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.6 2003/10/23 23:15:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.7 2003/10/24 07:12:42 pythonhead Exp $
 #
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -17,7 +17,7 @@
 #                           orphaned *.pyc *.pyo
 # python_makesym()        - Makes /usr/bin/python symlinks
 
-inherit alternatives virtualx
+inherit alternatives
 
 ECLASS="python"
 INHERITED="$INHERITED $ECLASS"
@@ -83,23 +83,17 @@ python_tkinter_exists() {
 
 #
 # name:   python_mod_exists
-# desc:   run with the module name as an argument. it will check if a 
+# desc:   run with the module name as an argument. it will check if a
 #         python module is installed and loadable. it will return
 #         TRUE(0) if the module exists, and FALSE(1) if the module does
 #         not exist.
-#
-# note:   we use virtualmake from virtualx.eclass to get around 
-#         when people build without X available. some packages like
-#         pygtk need X avaiable when being imported.
-#
-# exam:   
+# exam:
 #         if python_mod_exists gtk; then
 #             echo "gtk support enabled
 #         fi
 #
 python_mod_exists() {
-	export maketype="python"
-	if ! virtualmake -c "import $1" >/dev/null 2>&1; then
+	if ! python -c "import $1" >/dev/null 2>&1; then
 		return 1
 	fi
 	return 0
@@ -116,18 +110,18 @@ python_mod_compile() {
 	# allow compiling for older python versions
 	if [ -n "${PYTHON_OVERRIDE_PYVER}" ]; then
 		PYVER=${PYTHON_OVERRIDE_PYVER}
-	else		
+	else
 		python_version
 	fi
-	
+
 	if [ -f "$1" ]; then
 		python${PYVER} -c "import py_compile; py_compile.compile('${1}')" || \
 			ewarn "Failed to compile ${1}"
 		python${PYVER} -O -c "import py_compile; py_compile.compile('${1}')" || \
-			ewarn "Failed to compile ${1}"			
+			ewarn "Failed to compile ${1}"
 	else
 		ewarn "Unable to find ${1}"
-	fi		
+	fi
 }
 
 #
@@ -135,7 +129,7 @@ python_mod_compile() {
 # desc:   if no arguments supplied, it will recompile all modules under
 #         sys.path (eg. /usr/lib/python2.3, /usr/lib/python2.3/site-packages/ ..)
 #         no recursively
-# 
+#
 #         if supplied with arguments, it will recompile all modules recursively
 #         in the supplied directory
 # exam:
@@ -145,17 +139,17 @@ python_mod_optimize() {
 	# allow compiling for older python versions
 	if [ -n "${PYTHON_OVERRIDE_PYVER}" ]; then
 		PYVER=${PYTHON_OVERRIDE_PYVER}
-	else		
+	else
 		python_version
 	fi
-	
+
 	# set opts
 	if [ "${PYVER}" = "2.2" ]; then
 		compileopts=""
 	else
 		compileopts="-q"
 	fi
-	
+
 	ebegin "Byte Compiling Python modules for ${PYVER} .."
 	python${PYVER} ${ROOT}usr/lib/python${PYVER}/compileall.py ${compileopts} $@
 	python${PYVER} -O ${ROOT}usr/lib/python${PYVER}/compileall.py ${compileopts} $@
@@ -166,7 +160,7 @@ python_mod_optimize() {
 # name:   python_mod_cleanup
 # desc:   run with optional arguments, where arguments are directories of
 #         python modules. if none given, it will look in /usr/lib/python[0-9].[0-9]
-#         
+#
 #         it will recursively scan all compiled python modules in the directories
 #         and determine if they are orphaned (eg. their corresponding .py is missing.)
 #         if they are, then it will remove their corresponding .pyc and .pyo
@@ -177,28 +171,23 @@ python_mod_cleanup() {
 	if [ $# -gt 0 ]; then
 		for path in $@; do
 			SEARCH_PATH="${SEARCH_PATH} ${ROOT}${path#/}"
-		done		
+		done
 	else
 		for path in ${ROOT}usr/lib/python*/site-packages; do
 			SEARCH_PATH="${SEARCH_PATH} ${path}"
 		done
 	fi
-	
+
 	for path in ${SEARCH_PATH}; do
 		einfo "Searching ${path} .."
-		for obj in $(find ${path} -name *.pyc | sort -r); do
+		for obj in $(find ${path} -name *.pyc); do
 			src_py="$(echo $obj | sed 's:c$::')"
 			if [ ! -f "${src_py}" ]; then
 				einfo "Purging ${src_py}[co]"
 				rm -f ${src_py}[co]
-				# clean up directory if it is empty
-				current_dir="`dirname ${obj}`"
-				if [ `ls -1 --color=none $current_dir | wc -l 2> /dev/null` -lt 1 ]; then
-					rmdir -f ${current_dir}
-				fi
 			fi
 		done
-	done		
+	done
 }
 
 
