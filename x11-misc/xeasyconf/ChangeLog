@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/Xeasyconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 
+xeasyconf-0.1.3 (Aug 28, 2002)
+  25 Aug 2002; Mark Guertin <gerk@gentoo.org> xeasyconf-0.1.3.ebuild :
+  Added new version (updated for bugfix), should work fine with radeon
+  users now
+
 *Xeasyconf-0.1.2-(May 30 2002)
 
   30 May 2002; M. Guertin <gerk@imaclinux.net> ChangeLog :
