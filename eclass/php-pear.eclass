@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear.eclass,v 1.5 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear.eclass,v 1.6 2004/12/13 20:54:16 robbat2 Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #
@@ -18,7 +18,9 @@ EXPORT_FUNCTIONS src_install
 # portage (generally shouldn't be the case).
 [ -z "$PHP_PEAR_PKG_NAME" ] && PHP_PEAR_PKG_NAME=${PN/PEAR-/}
 
-DEPEND="$DEPEND virtual/php"
+# We must depend on the virtual as well as the base package as we need it to do
+# install tasks (it provides the pear binary).
+DEPEND="$DEPEND virtual/php dev-php/php"
 RDEPEND="$RDEPEND $DEPEND"
 
 fix_PEAR_PV() {
