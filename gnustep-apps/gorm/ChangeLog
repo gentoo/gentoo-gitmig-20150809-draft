@@ -1,23 +1,26 @@
 # ChangeLog for gnustep-apps/gorm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.4 2004/09/05 07:54:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.5 2004/09/26 21:17:17 fafhrd Exp $
+
+*gorm-0.8.0 (26 Sep 2004)
+
+  26 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org> metadata.xml,
+  +gorm-0.8.0.ebuild:
+  New version; key'd for ~x86.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
 
-  23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org> gorm-0.3.0.ebuild:
+  23 Jul 2004; Armando Di Cianno <fafhrd@gentoo.org> gorm-0.3.0.ebuild:
   Changed referenced categories in ebuilds to reflect recent epkgmove changes.
 
 *gorm-0.3.0 (23 Jul 2004)
 
-  23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org> +metadata.xml,
+  23 Jul 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
   +gorm-0.3.0.ebuild:
   Moved from app-gnustep/gorm to gnustep-apps/gorm.
 
-  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org> gorm-0.3.0.ebuild:
-  Changing the eclass to gnustep-old
-
-  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org> gorm-0.3.0.ebuild:
+  22 Jul 2004; Armando Di Cianno <fafhrd@gentoo.org> gorm-0.3.0.ebuild:
   Changing the eclass to gnustep-old
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> gorm-0.3.0.ebuild:

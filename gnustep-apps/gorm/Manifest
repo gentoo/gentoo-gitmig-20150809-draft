@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 7995fa6ecb224c40ae7487e52372a02b gorm-0.3.0.ebuild 565
-MD5 80699754a7e9adb6c02df33c8fa16fd6 metadata.xml 161
-MD5 ad44b76478be661e4e0633f5f75218bf ChangeLog 1531
+MD5 bf530ad965ae887d0419917f383e3e7e gorm-0.8.0.ebuild 561
+MD5 b1345ae45450dd398937880c7eec700f ChangeLog 1551
+MD5 521ef42b013a69d7099613591efccc02 metadata.xml 1489
 MD5 0143cd1d679015adfc56920df6e378ef files/digest-gorm-0.3.0 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOsZVI1lqEGTUzyQRArJ4AKDEene37oKO0jspdAPnTvYx5gOGWwCdHp9M
-WaIB5f7wJBDleaz4crhPpI0=
-=vPRd
------END PGP SIGNATURE-----
+MD5 0ed5404b24f90c037c8308694ff79ddf files/digest-gorm-0.8.0 62
