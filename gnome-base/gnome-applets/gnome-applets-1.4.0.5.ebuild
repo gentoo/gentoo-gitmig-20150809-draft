@@ -1,21 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-1.4.0.5.ebuild,v 1.2 2002/08/16 04:09:22 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-1.4.0.5.ebuild,v 1.3 2002/08/19 21:53:24 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome-applets"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 
-RDEPEND="( >=gnome-base/gnome-panel-1.4.1 
-		    <gnome-base/gnome-panel-1.5.0 )
-	 >=gnome-base/libgtop-1.0.12-r1
-	 >=gnome-base/libghttp-1.0.9-r1"
+RDEPEND="<gnome-base/gnome-panel-1.5.0
+		=gnome-base/libgtop-1.0*
+		>=gnome-base/libghttp-1.0.9-r1"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-        >=app-text/scrollkeeper-0.2
-        >=dev-util/intltool-0.11"
+	>=app-text/scrollkeeper-0.2
+    >=dev-util/intltool-0.11"
 
 SLOT="1"
 LICENSE="GPL"
@@ -28,6 +27,7 @@ src_compile() {
 
 	./configure \
 		--host=${CHOST} \
+		--includedir="" \
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
