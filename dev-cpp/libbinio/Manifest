@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2cc0850184ec7aa259c5ab63b46e02ec ChangeLog 996
+MD5 e9352e3c2d8edcedc2de5348901f3399 ChangeLog 1067
 MD5 c3aace360f1051d980f79948180776af libbinio-1.2.ebuild 568
-MD5 64123330cf7644b4711354177b6cb1e3 libbinio-1.3.ebuild 567
+MD5 435b66ca3c479bdc86b12b4a99d60136 libbinio-1.3.ebuild 563
 MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
 MD5 2276483f87057a438fb25dc0b61c195c files/digest-libbinio-1.2 65
 MD5 e5e473002a0e114687fe4ae1d6ce6381 files/digest-libbinio-1.3 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB5XzsKRy60XGEcJIRAgmjAJ9xUex2msq950qmMUIL4oW2z0ulRwCaA6nH
-pl0I1oBMFfYlEEhYF9ai+50=
-=PYgT
------END PGP SIGNATURE-----
