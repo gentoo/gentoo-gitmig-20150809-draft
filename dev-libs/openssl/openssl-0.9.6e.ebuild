@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6e.ebuild,v 1.1 2002/07/30 13:49:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6e.ebuild,v 1.2 2002/07/30 13:49:40 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Toolkit for SSL v2/v3 and TLS v1"
@@ -11,6 +11,7 @@ RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND} >=sys-devel/perl-5"
 LICENSE="as-is"
 SLOT="0"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
