@@ -1,10 +1,12 @@
 #! /bin/sh
+#
+# Copyright (c) 2002-2004, Karl Trygve Kalleberg <karltk@gentoo.org>
+# 
+# Licensed under the GNU General Public License, v2
 
-if [ -z "$CLASSPATH" ]  ; then
-	CLASSPATH=`cat /usr/share/kissme/classpath.env`
-else
-	CLASSPATH=`cat /usr/share/kissme/classpath.env`:${CLASSPATH}
-fi
+bootclasspath=$(java-config -p kissme)
+
+CLASSPATH=${bootclasspath}:${CLASSPATH}
 
 if [ -z "$*" ] ; then 
 	/usr/bin/kissmebin

@@ -2,4 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>java</herd>
+
+<longdescription>
+kissme is a free (GPLed) Java Virtual Machine. It is being developed on
+GNU/Linux and can run console java applications. kissme is to be used with the
+GNU Classpath java class library. kissme also provides support for orthogonally
+persistent java.
+</longdescription>
+
 </pkgmetadata>

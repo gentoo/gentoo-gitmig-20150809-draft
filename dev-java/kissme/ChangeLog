@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/kissme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/ChangeLog,v 1.8 2004/07/02 04:22:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/ChangeLog,v 1.9 2004/07/31 21:50:35 karltk Exp $
+
+*kissme-0.0.32-r1 31 Jul 2004
+
+  31 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  kissme-0.0.32-r1.ebuild: Fixed #47614.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> kissme-0.0.32.ebuild:
   virtual/glibc -> virtual/libc

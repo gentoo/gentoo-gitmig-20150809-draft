@@ -1,4 +1,6 @@
 MD5 21cc6897a2278d015a4dcb608e9a42e6 gnu-classpath-0.10.ebuild 1002
-MD5 4faef9826d13b8f8cd5d978a353e16b2 ChangeLog 1749
+MD5 d8a6bbb32fddf1fd490ce3ed6d0503c0 gnu-classpath-0.10-r1.ebuild 1094
+MD5 34248210bd1fd43f89971bfc8c0c9b36 ChangeLog 1935
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 6bcac2500b924707633a717d9bf03def files/digest-gnu-classpath-0.10-r1 67
 MD5 6bcac2500b924707633a717d9bf03def files/digest-gnu-classpath-0.10 67
