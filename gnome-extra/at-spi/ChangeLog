@@ -1,7 +1,11 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.21 2003/09/11 21:40:54 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.22 2003/10/17 22:06:05 leonardop Exp $
 
+  17 Oct 2003; L. Boshell <leonardop@gentoo.org> at-spi-1.1.9.ebuild,
+  at-spi-1.3.7.ebuild:
+  Marking stable for x86.
+  
 *at-spi-1.3.7 (11 Sep 2003)
 
   11 Sep 2003; <spider@gentoo.org> at-spi-1.3.7.ebuild:
