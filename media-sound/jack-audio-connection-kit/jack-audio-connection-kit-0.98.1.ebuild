@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.98.1.ebuild,v 1.3 2004/06/25 00:06:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.98.1.ebuild,v 1.4 2004/07/09 09:51:09 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -23,7 +23,7 @@ DEPEND=">=media-libs/alsa-lib-0.9.1
 	doc? ( app-doc/doxygen )
 	sys-devel/autoconf
 	!media-sound/jack-cvs"
-PROVIDE="virtual/jack"
+
 
 src_unpack() {
 	unpack ${A}
