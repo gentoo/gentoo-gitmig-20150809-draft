@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/moon-buggy-0.5.53.ebuild,v 1.2 2003/10/26 22:26:21 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/moon-buggy-0.5.53.ebuild,v 1.3 2003/11/04 20:38:00 mr_bones_ Exp $
 
 inherit games
 
@@ -12,23 +12,27 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
-DEPEND=">=sys-libs/ncurses-5*
+RDEPEND=">=sys-libs/ncurses-5"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -i \
-		-e 's:$(DESTDIR)$(bindir)/moon-buggy -c:#$(DESTDIR)$(bindir)/moon-buggy -c:' \
-		Makefile.in || die "sed Makefile.in failed"
+		-e '/$(DESTDIR)$(bindir)\/moon-buggy -c/d' Makefile.in || \
+			die "sed Makefile.in failed"
 }
 
 src_compile() {
-	egamesconf || die
-	emake || die
+	egamesconf sharedstatedir="${GAMES_STATEDIR}" || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	einstall bindir=${D}/${GAMES_BINDIR} || die
+	egamesinstall sharedstatedir="${D}${GAMES_STATEDIR}" || die
+	dodoc ANNOUNCE AUTHORS ChangeLog NEWS README TODO    || die "dodoc failed"
+	touch ${D}${GAMES_STATEDIR}/${PN}/mbscore            || die "touch failed"
+	fperms 664 ${GAMES_STATEDIR}/${PN}/mbscore           || die "fperms failed"
 	prepgamesdirs
 }
