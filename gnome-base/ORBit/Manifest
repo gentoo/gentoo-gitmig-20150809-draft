@@ -4,5 +4,4 @@ MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 01cf7fa3f243aa6129267dbb60f6410f ORBit-0.5.17.ebuild 1413
 MD5 32d8c91c3a81fc3081891cb85734aad9 files/digest-ORBit-0.5.16 66
 MD5 51bfc1efb763de186ee1b1f1e594891a files/digest-ORBit-0.5.17 66
-MD5 065f9b49e71102bb054f825206b824fe files/alloca.diff 334
 MD5 54d4643035be77ed8362225823cd7b60 files/libIDLConf.sh-gentoo.diff 462
