@@ -1,10 +1,11 @@
-MD5 d6660bb8dd4fe9f822c40ab5affd3f76 ChangeLog 10756
+MD5 53ce3b554c99a5232b960dabb5d17c2a ChangeLog 10853
 MD5 7b2ac1727b895b7d349ea30e61486a73 glib-1.2.10-r5.ebuild 2098
 MD5 81ad1a378e9c801a11af4c6b1501375e glib-2.2.3.ebuild 1021
 MD5 de6e6bd8dd4bac5f1fbaea0e159252e7 glib-2.4.0.ebuild 995
 MD5 fd2f66a83b030b479ef059a02996017c glib-2.4.1.ebuild 997
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 33374c66124d4339d26a7241a0fdd6c9 glib-2.4.2.ebuild 1046
+MD5 bef8159e795830cd14e6f0d69eeb8da5 glib-2.4.5.ebuild 1095
 MD5 0061f20389380a065de63158750fbedb glib-2.4.4.ebuild 1094
 MD5 0b6b97a59b4b0e1acc433697ce022a3c files/digest-glib-1.2.10-r5 63
 MD5 b8ffd1df331b401706a2ac487f28fee8 files/digest-glib-2.2.3 64
@@ -13,3 +14,4 @@ MD5 9409a054bd000d556e84987a855b10f0 files/digest-glib-2.4.1 64
 MD5 2657ca6d0c857b4e97ad93525212ffa1 files/glib-1.2.10-gcc34-fix.patch 2008
 MD5 bb11efe8c19407a4742056f67df25dd7 files/digest-glib-2.4.2 64
 MD5 524c2c1cfb5ab43d0b402cefb8da4a9a files/digest-glib-2.4.4 64
+MD5 4f50760a1f3a23a715d8c07ff936bcf6 files/digest-glib-2.4.5 64
