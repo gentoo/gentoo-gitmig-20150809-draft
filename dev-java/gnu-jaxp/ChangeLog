@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gnu-jaxp
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.1 2003/03/16 08:09:54 absinthe Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.2 2004/03/27 06:09:06 zx Exp $
+
+  30 Mar 2004; Chris Aniszczyk <zx@gentoo.org> gnu-jaxp-1.0_beta1.ebuild:
+  Fixes bug #45691
 
 *gnu-jaxp-1.0_beta1 (16 Mar 2003)
 
