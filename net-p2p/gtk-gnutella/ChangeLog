@@ -1,8 +1,14 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.9 2002/11/28 03:12:07 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.10 2002/12/07 07:14:35 jmorgan Exp $
 
 *gtk-gnutella-0.91.1 (27 Nov 2002)
+
+  07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> gtk-gnutella-0.90-r2.ebuild,
+  gtk-gnutella-0.91.ebuild, gtk-gnutella-0.91.1.ebuild :
+  Changed sparc64 to sparc keyword gtk-gnutella-0.90-r2.ebuild
+  Changed ~sparc64 to sparc keyword gtk-gnutella-0.91.ebuild
+  Changed ~sparc64 to ~sparc keyword gtk-gnutella-0.91.1.ebuild
 
   27 Nov 2002; Brandon Low <lostlogic@gentoo.org> gtk-gnutella-0.91.1.ebuild :
 
