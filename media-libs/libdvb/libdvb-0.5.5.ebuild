@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.5.ebuild,v 1.1 2004/12/06 17:29:09 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.5.ebuild,v 1.2 2005/01/29 22:09:31 dragonheart Exp $
 
 inherit eutils
 
@@ -21,7 +21,8 @@ src_unpack() {
 
 	# Disable compilation of sample programs
 	# and use DESTDIR when installing
-	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch" || die "patch failed"
+	epatch ${FILESDIR}/errno.patch || die "patch failed"
 }
 
 src_compile() {
@@ -29,8 +30,8 @@ src_compile() {
 }
 
 src_install() {
-	einstall DESTDIR="${D}" || die "Install problem"
-#make DESTDIR="${D}" PREFIX=/usr install || die
+	#einstall DESTDIR="${D}" || die "Install problem"
+	make DESTDIR="${D}" PREFIX=/usr install || die
 
 	use doc && insinto "/usr/share/doc/${PF}/sample_progs" && \
 	doins sample_progs/* && \

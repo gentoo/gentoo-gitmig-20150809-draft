@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.0-r1.ebuild,v 1.8 2004/07/14 20:01:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.0-r1.ebuild,v 1.9 2005/01/29 22:09:31 dragonheart Exp $
 
 inherit eutils
 
@@ -21,7 +21,8 @@ src_unpack() {
 
 	# Disable compilation of sample programs
 	# and use DESTDIR when installing
-	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch" || die "patch failed"
+	epatch ${FILESDIR}/errno.patch || die "patch failed"
 }
 
 src_compile() {
