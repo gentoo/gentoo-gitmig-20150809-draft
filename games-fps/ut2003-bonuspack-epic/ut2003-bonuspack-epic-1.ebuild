@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ut2003-bonuspack-epic-1.ebuild,v 1.1 2004/02/27 21:59:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ut2003-bonuspack-epic-1.ebuild,v 1.2 2004/03/11 00:34:29 wolf31o2 Exp $
 
 inherit games
 
@@ -43,9 +43,9 @@ src_install() {
 
 	cp -r ${S}/{Maps,Sounds,StaticMeshes,Textures} ${Ddir} \
 		|| die "Copying Maps/Sounds/Textures"
-	cp ${S}/System/{*.{det,est,frt,int,itt,kot,tmt,u},User.ini} ${Ddir} \
+	cp ${S}/System/{*.{det,est,frt,int,itt,kot,tmt,u},User.ini} ${Ddir}/System \
 		|| die "Copying System files"
-	cp -v ${S}/System/Manifest.ini ${Ddir}/Manifest.ini.epic \
+	cp -v ${S}/System/Manifest.ini ${Ddir}/System/Manifest.ini.epic \
 		|| die "Copying Manifest"
 
 	prepgamesdirs
@@ -68,7 +68,7 @@ pkg_postinst() {
 pkg_config() {
 	cd ${dir}/System
 	cp Manifest.ini Manifest.ini.pre-epic
-	cp ${dir}/Manifest.ini.epic Manifest.ini
+	cp ${dir}/System/Manifest.ini.epic Manifest.ini
 
 	cp Default.ini Default.ini.pre-epic
 	cat >> Default.ini <<EOT
