@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.41 2003/06/07 07:18:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.42 2003/06/14 15:59:34 bcowan Exp $
+
+  14 Jun 2003; Brad Cowan <bcowan@gentoo.org> sylpheed-claws-0.9.0-r1.ebuild:
+  Enabled tray icon plugin
 
 *sylpheed-claws-0.9.0-r1 (07 Jun 2003)
 
