@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-old.eclass,v 1.3 2004/08/06 21:35:36 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-old.eclass,v 1.4 2004/09/23 17:46:42 fafhrd Exp $
 
 ECLASS=gnustep-old
 INHERITED="$INHERITED $ECLASS"
@@ -135,11 +135,11 @@ egnustepinstall() {
 	return 0
 }
 
-gnustep_src_compile() {
+gnustep-old_src_compile() {
 	egnustepmake || die
 }
 
-gnustep_src_install() {
+gnustep-old_src_install() {
 	egnustepinstall || die
 }
 
