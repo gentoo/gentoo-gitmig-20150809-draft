@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.10 2005/02/19 19:11:46 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.11 2005/03/23 16:16:06 seemant Exp $
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> swt-3.0.ebuild,
+  swt-3.0-r1.ebuild, swt-3.0-r2.ebuild, swt-3.1.ebuild:
+  change dep from net-www/mozilla to www-client/mozilla
 
   19 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> swt-3.0-r1.ebuild,
   swt-3.0-r2.ebuild, swt-3.0.ebuild, swt-3.1.ebuild:
