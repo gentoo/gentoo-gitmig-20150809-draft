@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.22.0-r2.ebuild,v 1.10 2004/06/24 23:00:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.22.0-r2.ebuild,v 1.11 2004/07/14 19:36:25 agriffis Exp $
 
 inherit virtualx libtool gnome.org gnuconfig
 
 IUSE="doc mmx"
-S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Image Library"
 HOMEPAGE="http://www.gtk.org/"
 
@@ -28,7 +27,7 @@ KEYWORDS="~x86 ppc sparc ~alpha ~hppa amd64 ia64 mips"
 
 src_compile() {
 	#allow to build on mipslinux systems
-	use mips && gnuconfig_update
+	gnuconfig_update
 
 	local myconf
 	#update libtool, else we get the "relink bug"

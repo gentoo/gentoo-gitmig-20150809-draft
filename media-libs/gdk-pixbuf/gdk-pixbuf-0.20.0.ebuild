@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.20.0.ebuild,v 1.7 2004/06/24 23:00:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.20.0.ebuild,v 1.8 2004/07/14 19:36:25 agriffis Exp $
 
 inherit virtualx libtool gnome.org
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Image Library"
 HOMEPAGE="http://www.gtk.org/"
 
@@ -21,6 +20,7 @@ DEPEND="media-libs/jpeg
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="x86 ppc sparc alpha"
+IUSE=""
 
 src_unpack() {
 
@@ -56,4 +56,3 @@ src_install() {
 
 	dodoc AUTHORS COPYING* ChangeLog INSTALL README NEWS TODO
 }
-
