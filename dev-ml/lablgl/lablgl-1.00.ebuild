@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.16 2005/02/14 19:11:54 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.17 2005/02/14 19:14:48 sekretarz Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ pkg_setup()
 			eerror ""
 			eerror "lablgl requires ocaml be built with tk support."
 			eerror ""
-			eerror "Please make sure that ocaml is installed with tk support."
+			eerror "Please recompile ocaml with tcltk useflag enabled."
 			sleep 5;
 			die "Ocaml is missing tk support";
 		fi
