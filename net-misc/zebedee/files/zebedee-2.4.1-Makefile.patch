@@ -1,0 +1,63 @@
+--- Makefile.old	2002-05-29 10:42:08.000000000 -0700
++++ Makefile	2003-03-17 14:35:01.000000000 -0800
+@@ -5,7 +5,7 @@
+ 
+ ZBD_VERSION = 2.4.1
+ 
+-OS = 
++OS = linux
+ 
+ ###
+ ### Locations of tools, libraries and installation directories.
+@@ -45,19 +45,17 @@
+ # BFINC = /usr/include/openssl
+ # BFLIB = -lcrypto
+ 
+-BFINC = -I../blowfish-0.9.5a
+-BFLIB = ../blowfish-0.9.5a/libblowfish.a
++BFINC = /usr/include/openssl
++BFINC = -lcrypto
+ 
+ # Location of zlib include and library
+ 
+-ZINC = -I../zlib-1.1.4
+-ZLIB = ../zlib-1.1.4/libz.a
++ZLIB = /usr/lib/libz.a
+ 
+ # Location of bzlib include and library
+ # Set these empty if you don't want bzib2 support
+ 
+-BZINC = -I../bzip2-1.0.1
+-BZLIB = ../bzip2-1.0.1/libbz2.a
++BZLIB = /usr/lib/libbz2.a
+ 
+ #
+ # Tools needed for Perl "POD"-format documentation conversion.
+@@ -73,10 +71,9 @@
+ 
+ # Installation directories for the Linux/Solaris/*NIX World
+ 
+-ROOTDIR = /usr
++ROOTDIR = $(DESTDIR)/usr
+ BINDIR = $(ROOTDIR)/bin
+-ZBDDIR = $(ROOTDIR)/lib/zebedee
+-MANDIR = $(ROOTDIR)/man/man1
++MANDIR = $(ROOTDIR)/share/man/man1
+ 
+ # This is a BSD-style install
+ 
+@@ -224,13 +221,11 @@
+ 	rm -f ftpgw.tcl.tmp
+ 
+ install : precheck zebedee$(EXE) zebedee.1 ftpgw.tcl.1 $(ZBDFILES) $(TXTFILES)
+-	-mkdir -p $(BINDIR) $(MANDIR) $(ZBDDIR)
++	-mkdir -p $(BINDIR) $(MANDIR)
+ 	$(INSTALL) zebedee$(EXE) $(BINDIR)
+ 	$(INSTALL) -m 0755 ftpgw.tcl $(BINDIR)
+ 	$(INSTALL) zebedee.1 $(MANDIR)
+ 	$(INSTALL) ftpgw.tcl.1 $(MANDIR)
+-	$(INSTALL) $(ZBDFILES) $(ZBDDIR)
+-	$(INSTALL) $(TXTFILES) $(ZBDDIR)
+ 
+ clean :
+ 	rm -f zebedee zebedee.exe *.o core *.1 *.html *.tmp *.bak
