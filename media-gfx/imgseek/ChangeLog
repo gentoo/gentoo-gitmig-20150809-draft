@@ -1,9 +1,12 @@
 # ChangeLog for media-gfx/imgseek
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imgseek/ChangeLog,v 1.1 2003/09/23 02:04:28 avenj Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imgseek/ChangeLog,v 1.2 2004/03/14 21:17:54 avenj Exp $
+
+  14 Mar 2004; Jon Portnoy <avenj@gentoo.org> imgseek-0.8.2.ebuild :
+  AMD64 keywords.
 
 *imgseek-0.8.2 (22 Sep 2003)
 
-    22 Sep 2003; Jon Portnoy <avenj@gentoo.org> imgseek-0.8.2.ebuild :
-    Initial import. Submitted in bug 20186 by Ricardo Niederberger 
-    <nieder@mail.ru>.
+  22 Sep 2003; Jon Portnoy <avenj@gentoo.org> imgseek-0.8.2.ebuild :
+  Initial import. Submitted in bug 20186 by Ricardo Niederberger 
+  <nieder@mail.ru>.
