@@ -6,7 +6,7 @@ MD5 d161cb0e313c1619fc61077d5b0c8821 metadata.xml 251
 MD5 d1a2ec32b0639d78243cc5aee840eb9f vsftpd-1.0.1-r1.ebuild 1325
 MD5 213703fc92069b2036caf192afb39068 vsftpd-1.2.0-r1.ebuild 2218
 MD5 284ab51c778b56a5f4155fbb7eb7492e vsftpd-1.2.1.ebuild 2237
-MD5 32875dc16ce302fc6268111353f45a32 vsftpd-1.2.2.ebuild 2242
+MD5 8db5a76f69189b1fc1bbbcce8f18e517 vsftpd-1.2.2.ebuild 2238
 MD5 3734a4e9aaa1cc7775943c0c97bedd4b files/digest-vsftpd-1.0.1-r1 63
 MD5 767d44cc19f7afc4085da8fd837193e4 files/digest-vsftpd-1.2.0-r1 64
 MD5 fd342c037bab05b6fcdd20c0d8fd6720 files/digest-vsftpd-1.2.1 64
@@ -22,9 +22,9 @@ MD5 e50b10a57c22f7b27de250b8b65038a0 files/vsftpd.xinetd 468
 MD5 32951e2e5a1c743fa96533989167c54a files/vsftpd.xinetd.ipv6 488
 MD5 a44f959b4b7b9b7fa839bf999f04c9e1 files/digest-vsftpd-1.2.2 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFA+faemdTrptrqvGERArRKAJ9gR2rw6lDQ+D6J9zCVUDlgIwoafwCfT134
-9QttdFHMlOSnKHoAaRlIUcQ=
-=vwgo
+iD8DBQFBUlWVHTu7gpaalycRAv7jAJ4+aEt2TKVky+ASsL3qRiOA6xMi0gCcCIkn
+OGALcZOlciYN5CN3eNUlN/g=
+=dAEV
 -----END PGP SIGNATURE-----
