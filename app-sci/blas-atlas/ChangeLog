@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/blas-atlas
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.9 2004/06/25 01:32:07 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.10 2004/07/03 16:51:56 fmccor Exp $
+
+  03 Jul 2004; Ferris McCormick <fmccor@gentoo.org> blas-atlas-3.6.0.ebuild:
+  1. Restructure .ebuild for correct sparc CFLAGS (kugelfang@gentoo.org)
+  2. Add ~sparc keyword to restructured build.
 
   24 Jun 2004; George Shapovalov <george@gentoo.org> blas-atlas-3.6.0.ebuild :
   ifc useflag got retained even though this ebuild does not support ifc (yet), cleaned up

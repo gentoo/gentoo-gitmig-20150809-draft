@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.8 2004/06/25 01:32:07 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.9 2004/07/03 16:51:56 fmccor Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/math-atlas/${MY_PN}${PV}.tar.bz2
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 amd64 ~ppc"
+KEYWORDS="~x86 amd64 ~ppc ~sparc"
 IUSE="doc"
 
 DEPEND="app-sci/blas-config
@@ -49,6 +49,32 @@ atlas_fail() {
 	die "ATLAS auto-config failed."
 }
 
+# Added to allow compilation on sparc architecture. The default CCFLAG0
+# and MMFLAGS are *bad*.
+# Danny van Dyk <kugelfang@gentoo.org> 2004/07/02 
+#
+reconfigure() {
+	case "`uname -p`" in
+		"sun4m")
+			MY_CCFLAG0="-O3 -mcpu=v8"
+			MY_MMFLAGS="-O -mcpu=v8"
+			;;
+		"sun4u")
+			MY_CCFLAG0="-O3 -mcpu=ultrasparc"
+			MY_MMFLAGS="-O -mcpu=ultrasparc"
+			;;
+		*)
+			MY_CCFLAG0="${CFLAGS}"
+			MY_MMFLAGS="${CFLAGS}"
+			;;
+	esac
+	
+	MY_FILE="`find -name Make.Linux*`"
+	
+	sed -i -e "s/CCFLAG0 =/CCFLAG0 = ${MY_CCFLAG0}\n#&/1" ${MY_FILE}
+	sed -i -e "s/MMFLAGS =/MMFLAGS = ${MY_MMFLAGS}\n#&/" ${MY_FILE}
+}
+
 src_compile() {
 	# Libraries will be installed in ${RPATH}/atlas and ${RPATH}/threaded-atlas:
 	RPATH="${DESTTREE}/lib/blas"
@@ -62,6 +88,10 @@ src_compile() {
 	else
 		# Use ATLAS defaults for all questions:
 		(echo | make config CC="${GCC} -DUSE_LIBTOOL") || atlas_fail
+	fi
+
+	if [ "${ARCH}" == "sparc" ]; then
+		reconfigure
 	fi
 
 	TMPSTR=$(ls Make.Linux*)
