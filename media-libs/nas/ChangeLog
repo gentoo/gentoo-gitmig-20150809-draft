@@ -1,8 +1,8 @@
 # ChangeLog for media-libs/nas
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.26 2004/07/10 17:21:52 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.27 2004/07/18 14:15:59 aliz Exp $
 
-*nas-1.6c-r2 10 Jul 2004
+*nas-1.6c-r2 (10 Jul 2004)
 
   10 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> +nas-1.6c-r1.ebuild:
   Doing Jeremy a favour. Rev-bumping to -r2 and applying -header patch

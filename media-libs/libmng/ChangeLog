@@ -1,6 +1,8 @@
 # ChangeLog for media-libs/libmng
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.14 2004/07/14 21:37:12 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.15 2004/07/18 14:20:39 aliz Exp $
+
+*libmng-1.0.7 (15 Jul 2004)
 
   15 Jul 2004; Chris White <chriswhite@gentoo.org> :
   version bump thanks to bug report by Raphael Assenat.  Added self as mantainer.
