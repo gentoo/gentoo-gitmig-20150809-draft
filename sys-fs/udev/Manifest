@@ -1,3 +1,4 @@
+MD5 80b328009155e14e1423314abb4bd4da udev-006.ebuild 1762
 MD5 d946528b5d2a5ed7e7ca558f7efa0c7d ChangeLog 1683
 MD5 bb941a13588f122cda62f71eb5639deb udev-005.ebuild 1732
 MD5 7bcfbb3f4f8989b4124402541419d845 udev-003.ebuild 1454
@@ -10,5 +11,6 @@ MD5 058742a5d4f67c3b083f702abdeb5558 files/digest-udev-004 61
 MD5 7c9b568fafa102079bff2e3645a729a7 files/udev-004-disk-loop-fix.patch 1116
 MD5 1e9ce6f1d2c8f186504ebfa883dbcf4a files/digest-udev-005-r1 61
 MD5 21bf830d57de77dd576e9331df8756cf files/udev-004-manpage-update.patch 5926
+MD5 6ee9d9a6ab3cd60c9395d7541ca2e66a files/digest-udev-006 61
 MD5 2788e369a5b4d4b9377747ad39978a11 files/udev-003-fix-partition-support.patch 5493
 MD5 bfcf0cdc893687e50a846b1784b3ea09 files/namedev.permissions 1585

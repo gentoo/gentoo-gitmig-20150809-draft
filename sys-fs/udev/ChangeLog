@@ -1,11 +1,19 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.8 2003/11/07 21:44:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.9 2003/11/19 20:51:59 azarah Exp $
+
+*udev-006 (19 Nov 2003)
+
+  19 Nov 2003; Martin Schlemmer <azarah@gentoo.org> udev-006.ebuild:
+  Update version. Make it easier to choose between internal and external
+  libsysfs; also make possible to enable kglibc support. Note that there were
+  some libsysfs changes again, so we cannot use external libsysfs for this
+  release ...
 
 *udev-005-r1 (07 Nov 2003)
 
   07 Nov 2003; Martin Schlemmer <azarah@gentoo.org> udev-005-r1.ebuild:
-  FUpdate to build against external libsysfs.
+  Update to build against external libsysfs.
 
 *udev-005 (23 Oct 2003)
 
