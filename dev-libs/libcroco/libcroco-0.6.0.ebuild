@@ -1,15 +1,15 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/libcroco-0.6.0.ebuild,v 1.8 2004/12/23 17:20:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/libcroco-0.6.0.ebuild,v 1.9 2005/01/22 06:19:06 vapier Exp $
 
 inherit gnome2
 
 DESCRIPTION="Generic Cascading Style Sheet (CSS) parsing and manipulation toolkit"
 HOMEPAGE="http://www.freespiders.org/projects/libcroco/"
-LICENSE="LGPL-2"
 
+LICENSE="LGPL-2"
 SLOT="0.6"
-KEYWORDS="x86 alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 sparc"
+KEYWORDS="x86 alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 sparc"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
