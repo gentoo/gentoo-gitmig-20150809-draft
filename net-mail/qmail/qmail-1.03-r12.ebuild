@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.5 2003/08/13 11:36:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r12.ebuild,v 1.6 2003/09/01 05:22:31 robbat2 Exp $
 
 inherit eutils
 
@@ -10,21 +10,22 @@ HOMEPAGE="http://www.qmail.org/
 	http://members.elysium.pl/brush/qmail-smtpd-auth/
 	http://www.jedi.claranet.fr/qmail-tuning.html"
 SRC_URI="mirror://qmail/qmail-1.03.tar.gz
-	http://members.elysium.pl/brush/qmail-smtpd-auth/dist/qmail-smtpd-auth-0.31.tar.gz
 	mirror://qmail/qmailqueue-patch
 	http://qmail.null.dk/big-todo.103.patch
 	http://www.jedi.claranet.fr/qmail-link-sync.patch
 	mirror://qmail/big-concurrency.patch
 	http://www.suspectclass.com/~sgifford/qmail/qmail-0.0.0.0.patch
 	http://david.acz.org/software/sendmail-flagf.patch
-	mirror://gentoo/qmail-tls.patch.tbz2
 	mirror://qmail/qmail-1.03-qmtpc.patch
 	http://qmail.goof.com/qmail-smtpd-relay-reject
 	mirror://gentoo/qmail-local-tabs.patch
   	http://www.shupp.org/patches/qmail-maildir++.patch
   	ftp://ftp.pipeline.com.au/pipeint/sources/linux/WebMail/qmail-date-localtime.patch.txt
   	ftp://ftp.pipeline.com.au/pipeint/sources/linux/WebMail/qmail-limit-bounce-size.patch.txt
-	http://www.ckdhr.com/ckd/qmail-103.patch"
+	http://www.ckdhr.com/ckd/qmail-103.patch
+	http://www.arda.homeunix.net/store/qmail/qregex-starttls-2way-auth.patch
+	http://www.soffian.org/downloads/qmail/qmail-remote-auth-patch-doc.txt
+	"
 
 SLOT="0"
 LICENSE="as-is"
@@ -52,28 +53,17 @@ src_unpack() {
 
 
 	# unpack the initial stuff
-	unpack ${P}.tar.gz qmail-tls.patch.tbz2 qmail-smtpd-auth-0.31.tar.gz
+	unpack ${P}.tar.gz 
 	
 	# This makes life easy
 	EPATCH_OPTS="-d ${S}" 
 
-	# SMTP AUTH
-	cp ${WORKDIR}/qmail-smtpd-auth-0.31/{README.auth,base64.c,base64.h} ${S}
-
-	EPATCH_SINGLE_MSG="Adding SMTP AUTH support" \
-	epatch qmail-smtpd-auth-0.31/auth.patch
-
+	# this patch merges a few others already
+	EPATCH_SINGLE_MSG="Adding SMTP AUTH (2 way), Qregex and STARTTLS support" \
+	epatch ${DISTDIR}/qregex-starttls-2way-auth.patch
+	
 	# Fixes a problem when utilizing "morercpthosts"
 	epatch ${FILESDIR}/${PV}-${PR}/smtp-auth-close3.patch
-
-	# TLS support and an EHLO patch
-	if use ssl 
-	then
-		#bzcat ${WORKDIR}/tls.patch.bz2 | patch -p1 &>/dev/null || die
-		ebegin "Adding TLS support" 
-		bzcat ${WORKDIR}/tls.patch.bz2 | patch -p1 -d ${S} &>/dev/null || die
-		eend $?
-	fi
 
 	# patch so an alternate queue processor can be used
 	# i.e. - qmail-scanner
@@ -89,7 +79,7 @@ src_unpack() {
 	epatch ${DISTDIR}/qmail-1.03-qmtpc.patch
 
 	# Large TCP DNS replies confuse it sometimes
-	EPATCH_SINGLE_MSG="Adding support for oversize DNS" \
+	#EPATCH_SINGLE_MSG="Adding support for oversize DNS" \
 	epatch ${DISTDIR}/qmail-103.patch
 
 	# Fix for tabs in .qmail bug noted at
@@ -114,39 +104,46 @@ src_unpack() {
 
 	# Reject some bad relaying attempts
 	# gentoo bug #18064 
-	epatch ${DISTDIR}/qmail-smtpd-relay-reject
+	#epatch ${DISTDIR}/qmail-smtpd-relay-reject
 	
 	# Apply patch to make qmail-local and qmail-pop3d compatible with the
 	# maildir++ quota system that is used by vpopmail and courier-imap
 	epatch ${DISTDIR}/qmail-maildir++.patch
+	# fix a typo in the patch
+	epatch ${FILESDIR}/${PV}-${PR}/maildir-quota-fix.patch
 
 	# Apply patch for local timestamps.
 	# This will make the emails headers be written in localtime rather than GMT
 	# If you really want, uncomment it yourself, as mail really should be in GMT
-	# epatch ${DISTDIR}/qmail-date-localtime.patch.txt
+	#epatch ${DISTDIR}/qmail-date-localtime.patch.txt
 
 	# Apply patch to add ESMTP SIZE support to qmail-smtpd
 	# This helps your server to be able to reject excessively large messages
 	# "up front", rather than waiting the whole message to arrive and then
 	# bouncing it because it exceeded your databytes setting
 	#epatch ${DISTDIR}/qmail-smtpd-esmtp-size.diff.txt
-	epatch ${FILESDIR}/${PV}-${PR}/qmail-smtpd-esmtp-size-gentoo.patch
+	#epatch ${FILESDIR}/${PV}-${PR}/qmail-smtpd-esmtp-size-gentoo.patch
 	
 	# Apply patch to trim large bouncing messages down greatly reduces traffic
 	# when multiple bounces occur (As in with spam)
-	epatch ${DISTDIR}/qmail-limit-bounce-size.patch.txt
+	#epatch ${DISTDIR}/qmail-limit-bounce-size.patch.txt
 	
 	# provide badrcptto support
 	# as per bug #17283
 	# patch re-diffed from original at http://sys.pro.br/files/badrcptto-morebadrcptto-accdias.diff.bz2
 	# presently this breaks qmail so it is disabled
-	epatch ${FILESDIR}/${PV}-${PR}/badrcptto-morebadrcptto-accdias-gentoo
+	#epatch ${FILESDIR}/${PV}-${PR}/badrcptto-morebadrcptto-accdias-gentoo
 
 	echo -n "${CC} ${CFLAGS}" >${S}/conf-cc	
-	ewarn "TLS support is disabled due to a bug in the patch presently"
-	#use ssl && echo -n ' -DTLS' >>${S}/conf-cc
+	#ewarn "TLS support is disabled due to a bug in the patch presently"
+	use ssl && echo -n ' -DTLS' >>${S}/conf-cc
 	echo -n "${CC} ${LDFLAGS}" > ${S}/conf-ld
 	echo -n "500" > ${S}/conf-spawn
+
+	# fix coreutils messup
+	sed -re 's/(head|tail) (-[[:alpha:]][[:alnum:]]+)+ -([[:digit:]]+)/\1 \2 -n\3/g' -i ${S}/Makefile
+	sed -re 's/(head|tail) -([[:digit:]]+)/\1 -n\2/g' -i ${S}/Makefile
+
 
 }
 
@@ -178,8 +175,7 @@ src_install() {
 	doins home home+df proc proc+df binm1 binm1+df binm2 binm2+df binm3 binm3+df
  
 	dodoc FAQ UPGRADE SENDMAIL INSTALL* TEST* REMOVE* PIC* SECURITY 
-	dodoc SYSDEPS TARGETS THANKS THOUGHTS TODO VERSION
-	dodoc ${WORKDIR}/tls-patch.txt 
+	dodoc SYSDEPS TARGETS THANKS THOUGHTS TODO VERSION README* ${DISTDIR}/qmail-remote-auth-patch-doc.txt
 
 	insinto /var/qmail/bin
 	insopts -o qmailq -g qmail -m 4711
@@ -359,9 +355,6 @@ pkg_config() {
 		einfo "If You want to have a signed cert, do the following:"
 		einfo "openssl req -new -nodes -out req.pem \\"
 		einfo "-keyout /var/qmail/control/servercert.pem"
-		einfo "chmod 640 /var/qmail/control/servercert.pem"
-		einfo "chown qmaild.qmail /var/qmail/control/servercert.pem"
-		einfo "ln -s /var/qmail/control/servercert.pem /var/qmail/control/clientcert.pem"
 		einfo "Send req.pem to your CA to obtain signed_req.pem, and do:"
 		einfo "cat signed_req.pem >> /var/qmail/control/servercert.pem"
 	fi

@@ -1,6 +1,6 @@
 #!/bin/sh
 # Gentoo Startup script for qmail's SMTP daemon
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/1.03-r12/run-qmailsmtpd,v 1.2 2003/08/12 05:47:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/1.03-r12/run-qmailsmtpd,v 1.3 2003/09/01 05:22:31 robbat2 Exp $
 #
 # If you need to edit this file, please look at editing conf-smtpd and
 # conf-common first.  If you still need to change this file, you should
@@ -9,6 +9,9 @@
 
 # This is to make life easier
 SERVICE=smtp
+
+# this is to inherit QMAIL_CONTROLDIR
+. /etc/profile
 
 [ -s ${QMAIL_CONTROLDIR}/conf-common ] && source ${QMAIL_CONTROLDIR}/conf-common
 [ -s ${QMAIL_CONTROLDIR}/conf-${SERVICE}d ] && source ${QMAIL_CONTROLDIR}/conf-${SERVICE}d
