@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/integrit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.3 2003/02/12 02:23:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.4 2003/03/28 09:33:41 pvdabeel Exp $
 
 *integrit-3.02.00 (23 Oct 2002)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+  Moving this to ppc unstable
 
   23 Oct 2002; Zach Welch <zwelch@gentoo.org> : 
   Import from bug 9454, contributed by Danny Pansters <danny@ricin.com>

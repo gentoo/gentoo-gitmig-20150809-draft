@@ -7,7 +7,7 @@ SRC_URI="http://www.noserose.net/e/integrit/download/${P}.tar.gz"
 HOMEPAGE="http://integrit.sourceforge.net/"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
