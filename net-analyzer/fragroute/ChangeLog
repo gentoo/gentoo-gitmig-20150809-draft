@@ -1,7 +1,10 @@
 # ChangeLog for net-analyzer/fragroute
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.5 2004/07/09 12:00:22 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.6 2004/08/05 18:44:54 alexander Exp $
 
+  05 Aug 2004; Alexander Plank <alexander@gentoo.org> fragroute-1.2.ebuild:
+  add ~macos keyword (ranlib must be run, i need to also commit the libraries which work
+    
   09 Jul 2004; Eldad Zack <eldad@gentoo.org> fragroute-1.2.ebuild:
   Tidy up.
 
