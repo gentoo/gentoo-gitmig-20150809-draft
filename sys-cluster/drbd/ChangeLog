@@ -1,6 +1,16 @@
 # ChangeLog for sys-cluster/drbd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.8 2004/09/20 20:50:52 tantive Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.9 2005/01/14 01:53:51 xmerlin Exp $
+
+*drbd-0.7.7 (13 Jan 2005)
+
+  13 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> +files/drbd-0.7-init,
+  +files/drbd-0.7.7-module-Makefile.patch, +drbd-0.7.7.ebuild:
+  merged Brian Jackson's (iggy@gentoo.org> ebuild (attachment id=40930) with
+  my ebuild, added some additional checks to prevent drbd stop before umount the
+  device, removed unneed /var/lib/drbd dir, fixed "ACCESS DENIED" error in the
+  depmod phase, added Francisco Javier's <ffelix@sshinf.com> suggestions to use
+  the linux-mod eclass (attachment id=48373).
 
   20 Sep 2004; Michael Imhof <tantive@gentoo.org>
   -files/0.6.6-Makefile.vars.patch, -files/0.6.6-drbd-Makefile.patch,

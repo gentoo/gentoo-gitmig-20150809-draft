@@ -1,0 +1,68 @@
+#!/sbin/runscript
+# Distributed under the terms of the GNU General Public License v2
+#
+# kindly provided by Ron O'Hara, see
+# http://thread.gmane.org/gmane.comp.linux.drbd/6429
+#
+# modified by Christian Zoffoli <xmerlin@gentoo.org>
+#
+
+opts="${opts} reload"
+
+DRBDADM="/sbin/drbdadm"
+PROC_DRBD="/proc/drbd"
+MODPROBE="modprobe"
+RMMOD="rmmod"
+
+depend() {
+	use logger
+	before heartbeat
+	after sshd
+	need net
+}
+
+start() {
+	ebegin "Starting DRBD"
+
+	if [ ! -f $PROC_DRBD ]; then
+		modprobe drbd &> /dev/null
+	fi
+
+	${DRBDADM} up all
+	eend $ret
+}
+
+stop() {
+	ebegin "Stopping DRBD"
+
+	# Check for mounted drbd devices	
+	if ! grep -q '^/dev/drbd' /proc/mounts &>/dev/null; then
+		if [ -f $PROC_DRBD ]; then
+			${DRBDADM} down all
+		fi
+		eend $?
+	else
+		einfo "drbd devices mounted, please umount them before trying to stop drbd!!!"
+		eend 1
+	fi
+}
+
+status() {
+	# NEEDS to be heartbeat friendly...
+	# so: put some "OK" in the output.
+	ebegin "Status of DRBD"
+	if [ -e $PROC_DRBD ]; then
+	    echo "drbd driver OK; device status:"
+	    cat "$PROC_DRBD"
+	    eend 0
+	else
+	    echo >&2 "drbd not loaded"
+	    eend 3
+	fi
+}
+
+reload() {
+	ebegin "Reloading DRBD"
+	${DRBDADM} adjust all
+	eend $?
+}
