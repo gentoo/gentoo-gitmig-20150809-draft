@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.49 2004/07/28 23:54:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.50 2004/08/30 21:38:28 kumba Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -75,6 +75,7 @@ set_arch_to_kernel() {
 		x86)	export ARCH="i386";;
 		amd64)	export ARCH="x86_64";;
 		hppa)	export ARCH="parisc";;
+		mips)	export ARCH="mips";;
 		*)		export ARCH="${ARCH}";;
 	esac
 }
