@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/libdc1394
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libdc1394/ChangeLog,v 1.6 2004/10/23 03:33:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libdc1394/ChangeLog,v 1.7 2004/11/05 22:09:48 lv Exp $
+
+  05 Nov 2004; Travis Tilley <lv@gentoo.org> libdc1394-1.0.0.ebuild:
+  add missing ~amd64 keyword
 
 *libdc1394-1.0.0 (22 Oct 2004)
 
