@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gnomemeeting
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.47 2005/01/09 23:31:53 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.48 2005/01/10 16:07:07 stkn Exp $
+
+  10 Jan 2005; Stefan Knoblich <stkn@gentoo.org> gnomemeeting-1.2.0.ebuild:
+  Updated the description to reflect recent changes in gnomeeting-1.2.0 (by request
+  of gnomemeeting head developer).
 
   10 Jan 2005; Stefan Knoblich <stkn@gentoo.org> gnomemeeting-1.2.0.ebuild:
   Marked ~alpha.
