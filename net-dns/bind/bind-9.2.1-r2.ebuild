@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.1-r2.ebuild,v 1.4 2002/08/07 03:05:26 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.1-r2.ebuild,v 1.5 2002/08/07 20:07:59 nitro Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="BIND - Name Server"
@@ -66,6 +66,7 @@ src_install() {
 	insinto /var/bind/pri ; doins ${FILESDIR}/127.0.0
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/named.rc6 named
+	insinto /etc/conf.d ; newins ${FILESDIR}/named.confd named
 	
 	dosym /var/bind/named.ca /var/bind/root.cache 
 	dosym /var/bind/pri /etc/bind/pri
