@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/pcgen-5.3.9.ebuild,v 1.1 2003/09/18 21:12:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/pcgen-5.3.9.ebuild,v 1.2 2003/09/19 00:17:32 msterret Exp $
 
 inherit games
 
@@ -28,7 +28,7 @@ src_unpack() {
 	unpack pcgen${MY_PV}_part{1,2,3}of3.zip skin.zip
 	cd ${S}/lib
 	unpack pdf_new.zip
-	
+
 	cd ${S}
 	# bat file? bat file?  We don't need no stinking bat file.
 	rm pcgen.bat
