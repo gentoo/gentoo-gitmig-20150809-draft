@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/oskit/oskit-20020317-r1.ebuild,v 1.3 2004/04/27 21:51:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/oskit/oskit-20020317-r1.ebuild,v 1.4 2004/05/17 16:18:43 usata Exp $
 
 inherit flag-o-matic eutils
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS="-* ~x86"
-DEPEND="doc? ( app-text/tetex )"
+DEPEND="doc? ( virtual/tetex )"
 IUSE="debug oskit-profiling oskit-noassert doc oskit-nobuild oskit-noconf"
 
 src_unpack() {
