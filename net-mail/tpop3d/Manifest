@@ -4,5 +4,4 @@ MD5 3d65c6cff5d8227c1e1372fa58239918 tpop3d-1.4.2.ebuild 2500
 MD5 ab040e5df6fb8f4c7addcf549d0b280f tpop3d-1.5.3.ebuild 2472
 MD5 70073dfbe2bd93a7922b97c4f4cd3af2 files/digest-tpop3d-1.4.2 145
 MD5 4a64dc0452c80fd14ebdfe21d889d235 files/digest-tpop3d-1.5.3 64
-MD5 b40cd6aa6ab9186588d4c6ab10167a8f files/tpop3d-1.5.2-fix-AV-problem.patch 1710
-MD5 9190b714d11bf56eaa8488012a167b70 files/tpop3d-init 702
+MD5 4aec7bd2614890bf787df5fbf006ee00 files/tpop3d-init 696
