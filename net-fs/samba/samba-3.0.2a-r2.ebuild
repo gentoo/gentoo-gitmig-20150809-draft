@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.2a.ebuild,v 1.7 2004/04/26 19:09:27 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.2a-r2.ebuild,v 1.1 2004/04/26 19:09:27 solar Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ DEPEND="sys-devel/autoconf
 #IDEALX scripts are now using Net::LDAP
 RDEPEND="ldap? dev-perl/perl-ldap ${_COMMON_DEPS}"
 
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~hppa amd64 ~ia64 ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~hppa ~amd64 ~ia64 ~alpha"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -56,11 +56,18 @@ src_unpack() {
 	#Next one is from eger@cc.gatech.edu :)
 	patch -p1 <${FILESDIR}/samba-3.0.0-python-setup.patch || die
 	#Fix for bug #27858
-	if [ "${ARCH}" = "sparc" -o "${ARCH}" = "ppc" -o "${ARCH}" = "mips" ]
+	if [ "${ARCH}" = "sparc" -o "${ARCH}" = "ppc" ]
 	then
 		cd ${S}/source/include
 		epatch ${FILESDIR}/samba-2.2.8-statfs.patch
 	fi
+	# bug 45965; smbprint tmpfile vulnerability
+	# NOTE that this should be removed for Samba 3.0.3, as it will be included
+	# in that release.
+	# Additional Note: Make sure w're in ${S} before patching.
+	cd ${S}
+	epatch ${FILESDIR}/samba-3.0.2a-smbprint.patch
+
 	#Bug #36200; sys-kernel/linux-headers dependent
 	sed -i -e 's:#define LINUX_QUOTAS_2:#define LINUX_QUOTAS_1:' \
 		-e 's:<linux/quota.h>:<sys/quota.h>:' \
@@ -416,4 +423,17 @@ pkg_postinst() {
 	install -m0755 -o root -g root -d ${ROOT}/var/lib/samba/{netlogon,profiles}
 	install -m0755 -o root -g root -d \
 		${ROOT}/var/lib/samba/printers/{W32X86,WIN40,W32ALPHA,W32MIPS,W32PPC}
+
+	ewarn ""
+	ewarn "If you are upgrading from a Samba version prior to 3.0.2, and you"
+	ewarn "use Samba's password database, you must run the following command:"
+	ewarn ""
+	ewarn "  pdbedit --force-initialized-passwords"
+	ewarn ""
+	if use ldap; then
+		ewarn "If you are upgrading from prior to 3.0.2, and you are using LDAP"
+		ewarn "for Samba authentication, you must check the sambaPwdLastSet"
+		ewarn "attribute on all accounts, and ensure it is not 0."
+		ewarn ""
+	fi
 }
