@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-305.ebuild,v 1.12 2003/03/25 21:06:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-305.ebuild,v 1.13 2003/09/04 04:38:22 msterret Exp $
 
 S=${WORKDIR}/omni
 DESCRIPTION="a robust, high-performance CORBA 2 ORB"
@@ -79,7 +79,7 @@ src_install () {
 	doexe lib/${PLT}/omnicpp
 	cp -af lib/python/* ${D}/usr/lib/python2.2/
 	doman man/man[15]/*.[15]
-	
+
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/omniORB.305 omniORB
 	dodir /etc/omniorb

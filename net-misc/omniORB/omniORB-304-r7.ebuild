@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304-r7.ebuild,v 1.8 2003/03/25 21:02:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304-r7.ebuild,v 1.9 2003/09/04 04:38:22 msterret Exp $
 
 S=${WORKDIR}/${PN/ORB/}
 DESCRIPTION="a robust, high-performance CORBA 2 ORB"
@@ -31,8 +31,8 @@ src_unpack() {
 	cp config.mk config.mk.orig
 	sed -e "s:#platform = ${PLT}:platform = ${PLT}:" \
 		config.mk.orig > config.mk
-	
-	
+
+
 
 	cd ${S}/mk
 	cp unix.mk unix.mk.orig
@@ -62,7 +62,7 @@ src_install () {
 
 	dodir /usr/share/omniORB/bin/scripts
 	cp -af bin/scripts/* ${D}/usr/share/omniORB/bin/scripts
-	dobin bin/${PLT}/* 
+	dobin bin/${PLT}/*
 
 	insinto /usr/idl
 	doins idl/*.idl
@@ -92,7 +92,7 @@ src_install () {
 	doins src/services/omniNotify/channel.cfg
 	doins src/services/omniNotify/standard.cfg
 
-	dodoc CHANGES* COPYING* CREDITS PORTING README* ReleaseNote_omniORB_304 \ 
+	dodoc CHANGES* COPYING* CREDITS PORTING README* ReleaseNote_omniORB_304 \
 		THIS_IS_omniORB_3_0_4
 
 	cd doc

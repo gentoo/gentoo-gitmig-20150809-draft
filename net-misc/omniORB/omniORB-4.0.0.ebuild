@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.0.0.ebuild,v 1.6 2003/07/13 14:31:36 aliz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.0.0.ebuild,v 1.7 2003/09/04 04:38:22 msterret Exp $
 
 DESCRIPTION="A robust, high-performance CORBA 2 ORB"
 SRC_URI="mirror://sourceforge/omniorb/${PF}.tar.gz"
@@ -38,7 +38,7 @@ src_install () {
 	emake DESTDIR=${D} install
 
 	cd ${S}
-	dodoc COPYING* CREDITS README* ReleaseNotes* 		
+	dodoc COPYING* CREDITS README* ReleaseNotes*
 
 	cd ${S}/doc
 	docinto print
@@ -53,12 +53,12 @@ src_install () {
 	echo "OMNIORB_CONFIG=/etc/omniorb/omniORB.cfg" >> ${D}/etc/env.d/90omniORB
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/omniORB-4.0.0 omniORB
-	
+
 	cp ${S}/sample.cfg ${S}/omniORB.cfg
 	dodir /etc/omniorb
-	insinto /etc/omniorb	
+	insinto /etc/omniorb
 	doins ${S}/omniORB.cfg
-	
+
 }
 
 pkg_postinst() {
