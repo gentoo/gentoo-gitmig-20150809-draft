@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/strace
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.3 2002/05/17 05:06:52 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.4 2002/08/01 18:26:40 gerk Exp $
 
 *strace-4.4 (27 Apr 2002)
+
+  01 Aug 2002; Mark Guertin <gerk@gentoo.org> strace-4.4.ebuild :
+  Added ppc to keywords
 
   17 May 2002; Bruce A. Locke <blocke@shivan.org> strace-4.4.ebuild :
 
