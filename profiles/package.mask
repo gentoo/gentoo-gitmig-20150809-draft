@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3745 2005/03/21 14:47:40 hattya Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3746 2005/03/21 23:07:59 chriswhite Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,10 +24,6 @@
 # Rob Holland <tigger@gentoo.org> (21 March 2005)
 # marked due to bad code #84659
 net-misc/dyndnsupdate
-
-# Chris White <chriswhite@gentoo.org> (21 Mar 2005)
-# mask this until I can get that pic patch working straight.
-=media-video/mplayer-1.0_pre6-r2
 
 # Sven Wegener <swegener@gentoo.org> (20 Mar 2005)
 # pre-release versions that need testing
