@@ -1,6 +1,14 @@
 # ChangeLog for net-www/liferea
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/ChangeLog,v 1.9 2004/08/18 10:17:05 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/liferea/ChangeLog,v 1.10 2004/08/22 07:59:54 obz Exp $
+
+*liferea-0.5.3b (22 Aug 2004)
+
+  22 Aug 2004; Mike Gardiner <obz@gentoo.org> -liferea-0.4.6b.ebuild,
+  -liferea-0.4.8.ebuild, -liferea-0.4.9.ebuild, liferea-0.5.3.ebuild,
+  +liferea-0.5.3b.ebuild:
+  Added new version 0.5.3b, marked 0.5.3 x86, and removed old versions that
+  incorrectly handled the gtkhtml/mozilla USEing
 
 *liferea-0.5.3 (18 Aug 2004)
 
