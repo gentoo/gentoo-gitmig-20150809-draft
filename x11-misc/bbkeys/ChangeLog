@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/bbkeys
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeys/ChangeLog,v 1.15 2004/10/02 15:45:40 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeys/ChangeLog,v 1.16 2005/03/11 17:59:22 ka0ttic Exp $
+
+*bbkeys-0.9.0 (11 Mar 2005)
+
+  11 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> +bbkeys-0.9.0.ebuild:
+  Version bump for bug 84861.
 
   01 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> bbkeys-0.8.6.ebuild:
   Marked ~amd64.
