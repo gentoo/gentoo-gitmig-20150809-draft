@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 1d92671261d5e5ddcb50f26da871bdf8 ncurses-8.1.ebuild 406
-MD5 fb8c4282c9f28022204af2203f160ec7 ncurses-5.4-r5.ebuild 6082
+MD5 9b518840fa3acf0dc47a06bcafa05b4f ncurses-5.4-r5.ebuild 6086
 MD5 9eda8b626d7aff90b3bb8962185f935c ChangeLog 14304
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ncurses-8.1 0
@@ -13,7 +13,7 @@ MD5 a370aabb0870d2822a0ab839947919f3 files/digest-ncurses-5.4-r5 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD4DBQFCQGiwevY57Fted3ERArMlAJdohvCnCar7BslIKipe5LZBdJttAKCKAW6W
-/vLJhavO/Xduh6OCmFQ1YA==
-=jpEU
+iD8DBQFCQGmFevY57Fted3ERAnU/AJ0Ra/3ILiiC3Je5gKtrunrPE/9OagCgnIVC
+Lr8jGLP6fi0bEUThB2uZjVM=
+=6kFk
 -----END PGP SIGNATURE-----
