@@ -929,17 +929,6 @@ diff -ur linux-2.6.8.1/include/linux/wait.h linux-2.6.8.1-gentoo/include/linux/w
 -#endif /* __KERNEL__ */
 -
  #endif
-diff -ur linux-2.6.8.1/include/linux/fd.h linux-2.6.8.1-gentoo/include/linux/fd.h
---- linux-2.6.8.1/include/linux/fd.h	2004-06-12 12:11:54.000000000 +0100
-+++ linux-2.6.8.1-gentoo/include/linux/fd.h	2004-06-18 20:53:39.000000000 +0100
-@@ -3,6 +3,7 @@
- 
- #include <linux/ioctl.h>
- #include <linux/compiler.h>
-+#include <linux/types.h>
- 
- /* New file layout: Now the ioctl definitions immediately follow the
-  * definitions of the structures that they use */
 diff -ur linux-2.6.8.1/include/linux/compiler.h linux-2.6.8.1-gentoo/include/linux/compiler.h
 --- linux-2.6.8.1/include/linux/compiler.h	2004-06-12 12:11:54.000000000 +0100
 +++ linux-2.6.8.1-gentoo/include/linux/compiler.h	2004-06-24 09:48:32.478502752 +0100
