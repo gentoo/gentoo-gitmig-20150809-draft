@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.1.ebuild,v 1.3 2004/09/08 15:12:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.1.ebuild,v 1.4 2004/09/13 11:23:35 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,6 +19,13 @@ DEPEND="virtual/libc
 	inetd? ( virtual/inetd )"
 
 S=${WORKDIR}/${P}.${extra_ver}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-gcc34.patch
+}
 
 pkg_setup() {
 	enewgroup firebird 450
