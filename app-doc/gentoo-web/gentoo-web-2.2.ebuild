@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.28 2002/01/05 01:12:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.29 2002/01/05 18:09:25 drobbins Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -29,7 +29,7 @@ src_install() {
 	insinto ${WEBROOT}/doc
 	cd ${S}
 	local x
-	for x in build desktop xml-guide portage-user gentoo-howto faq nvidia_tsg openafs cvs-tutorial
+	for x in build desktop xml-guide portage-user gentoo-howto faq nvidia_tsg openafs cvs-tutorial shots
 	do
 		xsltproc $TEMPLATE xml/${x}.xml > ${D}${WEBROOT}/doc/${x}.html || die
 	done
@@ -37,10 +37,17 @@ src_install() {
 	insinto ${WEBROOT}/images
 	cd ${S}/images
 	doins paypal.png gtop-s.jpg znurt.jpg gbot-s.gif gridtest.gif gentoo-new.gif install*.gif fishhead.gif line.gif icon-* keychain-2.gif gentoo-2.gif
+	insinto ${WEBROOT}/images/shots
+	doins shots/*
+	local x
+	for x in shots/desktop*.png
+	do
+		[ "${x%*small.png}" != "${x}" ] && continue
+		sed -e "s:TITLE:${x}:" -e "s:IMG:/images/${x}:" ${S}/html/shell.html > ${D}${WEBROOT}/images/${x%.png}.html
+	done
+	
 	insinto ${WEBROOT}
 	doins favicon.ico
-	
-
 	
 	#dynamic firewalls tools page
 	cd ${S}
