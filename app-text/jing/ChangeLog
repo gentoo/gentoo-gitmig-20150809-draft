@@ -1,6 +1,12 @@
 # ChangeLog for app-text/jing
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jing/ChangeLog,v 1.6 2004/11/03 11:52:50 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jing/ChangeLog,v 1.7 2004/11/14 14:56:27 axxo Exp $
+
+*jing-20030619-r1 (14 Nov 2004)
+
+  14 Nov 2004; Thomas Matthijs <axxo@gentoo.org> +files/build-patch.diff,
+  +files/build.xml, +files/manifest.mf, +jing-20030619-r1.ebuild:
+  build from source 63240, submitted by Jan Brinkmann <lucky@the-luckyduck.de>
 
   03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> jing-20030619.ebuild:
   depend on app-arch/unzip
