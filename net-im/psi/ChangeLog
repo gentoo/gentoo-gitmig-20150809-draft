@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.32 2004/04/27 22:45:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.33 2004/05/24 11:37:30 humpback Exp $
+
+  24 May 2004; Gustavo Felisberto <humpback@gentoo.org>; :
+  Adding version 0.9.2_rc2 wich is hardmasked
 
   27 Apr 2004; Guy Martin <gmsoft@gentoo.org> psi-0.9.1.ebuild:
   Marked stable on hppa.
