@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.8 2004/04/13 21:48:58 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.9 2004/05/07 10:41:15 lanius Exp $
 
 # Note: this also d/ls the hp-ppa-howto and installs it under /usr/share/doc/${P}
 
@@ -12,6 +12,7 @@ KEYWORDS="x86 ~amd64"
 SLOT="0"
 DESCRIPTION="Print driver for Hp Deskjet 710, 712, 720, 722, 820, 1000 series"
 LICENSE="GPL-2"
+IUSE=""
 
 # note: this doesn't depend on virtual/lpr, because it can work on its own,
 # just without queueing etc. since it's not just a driver but a standalone
