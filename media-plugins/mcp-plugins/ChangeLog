@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/mcp-plugins
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/ChangeLog,v 1.1 2003/07/12 11:16:08 torbenh Exp $
+
+*mcp-plugins-0.0.2 (12 Jul 2003)
+
+  12 Jul 2003; torbenh <torbenh@gentoo.org> mcp-plugins-0.0.2.ebuild files/digest-mcp-plugins-0.0.2 :
+  Initial Version
+  
+  submitted by Jonathan Kraut
+
