@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.24 2003/11/17 02:29:27 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.25 2004/01/16 21:01:33 darkspecter Exp $
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> dia-0.92.2.ebuild:
+  set ppc in keywords
 
   10 Nov 2003; Aron Griffis <agriffis@gentoo.org> dia-0.92.2.ebuild:
   Add ~alpha

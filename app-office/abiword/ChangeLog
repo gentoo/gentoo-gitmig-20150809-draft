@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.58 2004/01/09 19:06:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.59 2004/01/16 21:01:33 darkspecter Exp $
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> abiword-2.0.1.ebuild:
+  set ppc in keywords
 
   09 Jan 2004; <gustavoz@gentoo.org> abiword-2.0.1.ebuild:
   marked stable on sparc
