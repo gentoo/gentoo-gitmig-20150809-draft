@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/nail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.4 2004/06/24 22:17:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.5 2004/07/01 19:49:25 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> nail-10.7.ebuild,
+  nail-9.30.ebuild:
+  virtual/glibc -> virtual/libc
 
 *nail-10.7 (06 Jun 2004)
 

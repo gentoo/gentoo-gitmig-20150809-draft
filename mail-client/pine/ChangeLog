@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/pine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.6 2004/06/30 06:58:58 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.7 2004/07/01 19:49:55 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> pine-4.50-r4.ebuild,
+  pine-4.58-r1.ebuild, pine-4.58-r2.ebuild, pine-4.58-r3.ebuild,
+  pine-4.58.ebuild, pine-4.60.ebuild:
+  virtual/glibc -> virtual/libc
 
   30 Jun 2004; Cory Visi <merlin@gentoo.org> pine-4.50-r4.ebuild,
   pine-4.58-r1.ebuild, pine-4.58-r2.ebuild, pine-4.58-r3.ebuild,

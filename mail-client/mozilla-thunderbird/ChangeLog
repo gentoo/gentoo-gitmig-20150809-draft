@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mozilla-thunderbird
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.13 2004/06/30 03:15:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.14 2004/07/01 19:48:57 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mozilla-thunderbird-0.5-r1.ebuild, mozilla-thunderbird-0.5.ebuild:
+  virtual/glibc -> virtual/libc
 
 *mozilla-thunderbird-0.7.1 (29 Jun 2004)
 

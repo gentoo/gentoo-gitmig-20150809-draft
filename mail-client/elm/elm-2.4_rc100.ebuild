@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/elm-2.4_rc100.ebuild,v 1.3 2004/06/24 22:15:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/elm-2.4_rc100.ebuild,v 1.4 2004/07/01 19:48:22 eradicator Exp $
 
 # HORRIBLY SORRY FOR THIS!  BUT I WANT THE EBUILD AND IT DOESN'T
 # HURT ANYTHING!  I PROMISE! :) - raker@gentoo.org
@@ -16,7 +16,7 @@ KEYWORDS="x86 ~sparc ~ppc alpha"
 
 IUSE="spell"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=net-mail/mailbase-0.00-r5
 	dev-libs/openssl
 	spell? ( app-text/ispell )"
