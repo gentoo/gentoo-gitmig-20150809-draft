@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ng-1.5_beta1.ebuild,v 1.1 2004/05/15 18:19:20 usata Exp $
+# $Id: ng-1.5_beta1.ebuild,v 1.2 2004/05/15 18:47:45 usata Exp $
+
+inherit eutils
 
 IUSE="canna"
 
@@ -34,7 +36,9 @@ src_compile() {
 
 	local myconf
 
-	myconf="`use_enable canna`"
+	if use canna; then
+		myconf="--enable-canna"
+	fi
 	econf ${myconf} || die
 	sed -i -e "s/^#undef NO_BACKUP/#define NO_BACKUP/" config.h \
 		|| die "sed failed"
