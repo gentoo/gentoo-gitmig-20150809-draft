@@ -1,0 +1,13 @@
+# default: off
+# description: Pure-FTPd service example config.
+
+service ftp 
+{ 
+    socket_type = stream 
+    server = /usr/sbin/pure-ftpd
+    server_args = -s -a 42
+    protocol = tcp 
+    user = root 
+    wait = no
+    disable = yes
+}

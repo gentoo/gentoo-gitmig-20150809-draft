@@ -5,6 +5,9 @@
 #IS_CONFIGURED="yes"
 
 ## FTP Server,Port (separated by comma) ##
+## If you prefer host names over IP addresses, it's your choice :
+## SERVER=" S ftp.rtchat.com,21"
+## IPv6 addresses are supported.
 SERVER="-S 192.168.0.1,21"
 
 ## Number of simultaneous connections in total, and per ip ##
@@ -21,7 +24,15 @@ DISK_FULL="-k 90%"
 #USE_NAT="-N"
 
 ## Authentication (others are 'pam', ...)##
+## Further infos in the README file.
 AUTH="-l unix"
+
+## Change the maximum idle time. (in minutes. default 15)
+#TIMEOUT="-I <timeout>'"
+
+## Use that facility for syslog logging. It defaults to 'ftp'
+## Logging can be disabled with '-f none' .
+#LOG="-f facility"
 
 ## Misc. Others ##
 MISC_OTHER="-A -x -j -R"
@@ -40,10 +51,10 @@ MISC_OTHER="-A -x -j -R"
 # -x [ Authenticated users can read/write files beginning with a dot ('.') 
 #       Anonymous users can't, for security reasons ]
 # -X [ Users can't write/read files and directories starting with a dot ('.') ]
-
-
-
-
-
-
-
+# -D [ List files beginning with a dot ('.') even when the client doesn't
+#      append the '-a' option to the list command. A workaround for badly
+#      configured FTP clients. ]
+# -G [ Disallow renaming. ]
+# -d [ Send various debugging messages to the syslog. ONLY for DEBUG ]
+# -F <fortune file> [ Display a fortune cookie on login. Check the README file ]
+# -H [ By default, fully-qualified host names are logged. The '-H' flag avoids host names resolution. ]

@@ -1,21 +1,25 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.3 2002/04/20 18:47:10 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.4 2002/10/12 14:41:42 blizzy Exp $
 
-  19 April 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
+*pure-ftpd-1.0.12 (12 Oct 2002)
 
-  Added fix, conf.d file wasn't copied... this new revision (r1) should
-  fix the problem.
+  12 Oct 2002; Maik Schreiber <blizzy@gentoo.org> : New version, closes
+  bug #6000.
 
+*pure-ftpd-1.0.11-r1 (19 Apr 2002)
 
-  14 April 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
+  19 Apr 2002; Bart Verwilst <verwilst@gentoo.org> : Added fix, conf.d
+  file wasn't copied... this new revision (r1) should fix the problem.
 
-  Upgraded version, removed old one.. New ebuild (1.0.11) includes pam 
-  fixes as well..
+*pure-ftpd-1.0.11 (14 Apr 2002)
 
-*pure-ftpd-1.0.8 (1 Feb 2002)
+  14 Apr 2002; Bart Verwilst <verwilst@gentoo.org> : Upgraded version,
+  removed old one.. New ebuild (1.0.11) includes pam fixes as well..
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+*pure-ftpd-1.0.8 (01 Feb 2002)
+
+  01 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
