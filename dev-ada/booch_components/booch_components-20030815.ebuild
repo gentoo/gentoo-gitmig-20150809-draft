@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/booch_components-20030815.ebuild,v 1.1 2003/10/14 11:41:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/booch_components-20030815.ebuild,v 1.2 2003/10/28 13:22:16 dholm Exp $
 
 IUSE=""
 
@@ -50,8 +50,8 @@ src_install () {
 
 	#set up environment
 	dodir /etc/env.d
-	echo "ADA_OBJECTS_PATH=\${ADA_OBJECTS_PATH}:/usr/lib/ada/adalib/${PN}" > ${D}/etc/env.d/55booch_components
-	echo "ADA_INCLUDE_PATH=\${ADA_INCLUDE_PATH}:/usr/lib/ada/adainclude/${PN}" >> ${D}/etc/env.d/55booch_components
+	echo "ADA_OBJECTS_PATH=/usr/lib/ada/adalib/${PN}" > ${D}/etc/env.d/55booch_components
+	echo "ADA_INCLUDE_PATH=/usr/lib/ada/adainclude/${PN}" >> ${D}/etc/env.d/55booch_components
 }
 
 pkg_postinst(){

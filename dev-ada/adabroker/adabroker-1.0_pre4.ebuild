@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/adabroker-1.0_pre4.ebuild,v 1.5 2003/10/28 13:07:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabroker/adabroker-1.0_pre4.ebuild,v 1.6 2003/10/28 13:26:30 dholm Exp $
 
 inherit gnat
 
@@ -65,8 +65,9 @@ src_install () {
 
 	#set up environment
 	dodir /etc/env.d
-	echo "ADA_OBJECTS_PATH=\${ADA_OBJECTS_PATH}:/usr/lib/ada/adalib/${PN}" > ${D}/etc/env.d/55adabroker
-	echo "ADA_INCLUDE_PATH=\${ADA_INCLUDE_PATH}:/usr/lib/ada/adainclude/${PN}" \
+	echo "ADA_OBJECTS_PATH=/usr/lib/ada/adalib/${PN}" \
+		> ${D}/etc/env.d/55adabroker
+	echo "ADA_INCLUDE_PATH=/usr/lib/ada/adainclude/${PN}" \
 		>> ${D}/etc/env.d/55adabroker
 }
 
