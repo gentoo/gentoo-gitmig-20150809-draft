@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3ee568b63d3eb9028fa9214414c94986 ipp2p-0.6.ebuild 1019
 MD5 3923b6ae9bc25fc124e24e7747c8a802 metadata.xml 226
-MD5 838cf9ab0243cc8d93fde7c2b4b82495 ipp2p-0.7.ebuild 1102
-MD5 06515efeb52bbc7810f2f0966fc41318 ChangeLog 854
-MD5 67c58e94b5aec13e9b6dca903a9d5782 ipp2p-0.6-r1.ebuild 1167
-MD5 7dde11c31f867f3b9c624ac8dcb944a4 files/digest-ipp2p-0.6 58
+MD5 01c5c194e8c3f281aedc9ede83c58f13 ipp2p-0.7.ebuild 1102
+MD5 6634717b9f4ae61ef52a91b975579902 ChangeLog 1063
+MD5 1dc3022936a4d96933083d70ea01bc84 ipp2p-0.6-r1.ebuild 1165
+MD5 43feea974b6a7c2ac687bde766a25a07 ipp2p-0.7.1.ebuild 1109
 MD5 210b099d966d09350c8cfc0d81ec56ce files/ipp2p-0.6-Makefile.patch 996
 MD5 7dde11c31f867f3b9c624ac8dcb944a4 files/digest-ipp2p-0.6-r1 58
 MD5 3493a751f553b880c087ad0e71ac242a files/digest-ipp2p-0.7 60
 MD5 ab7e8116b2ec2c738835b5facdfbf3d3 files/ipp2p-0.7-Makefile.patch 1069
+MD5 09c45d9dd51a824d5f46627efc141020 files/digest-ipp2p-0.7.1 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBzxcMArHZZzCEUG0RAvyVAKCE6KKrT915LdBugLl+LKYAZyTj/gCeIXP4
-6X6HYH12T36O+f4e6jOVojg=
-=OsHj
+iD8DBQFB46zvArHZZzCEUG0RAiHzAJ42mH8yPr2Rj2YqKYabN2N7Akz9/wCaAjp8
+QpI0MzB8vONNFXTeIHddV+I=
+=7ia1
 -----END PGP SIGNATURE-----
