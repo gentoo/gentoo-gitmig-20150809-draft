@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cunit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/ChangeLog,v 1.4 2003/02/12 06:39:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/ChangeLog,v 1.5 2003/05/15 14:45:11 phosphan Exp $
+
+*cunit-1.0.0.8 (15 May 2003)
+
+  15 May 2003; Patrick Kursawe <phosphan@gentoo.org> cunit-1.0.0.8.ebuild:
+  upgrading to -8 and marking as stable, because there are problems with -6 -
+  this closes bugs 15927 and 19591.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
