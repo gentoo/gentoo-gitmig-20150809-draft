@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/commonc++
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/ChangeLog,v 1.18 2004/08/21 00:43:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/ChangeLog,v 1.19 2004/11/02 22:02:15 gustavoz Exp $
+
+  02 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  commonc++-1.9.7-r2.ebuild, commonc++-1.9.7-r3.ebuild:
+  Keyworded -sparc, doesn't work, no depends
 
   20 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
   commonc++-1.9.7-r2.ebuild, commonc++-1.9.7-r3.ebuild:
