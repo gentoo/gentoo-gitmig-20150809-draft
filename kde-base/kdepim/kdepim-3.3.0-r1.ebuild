@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.3.0-r1.ebuild,v 1.9 2004/12/02 13:15:11 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.3.0-r1.ebuild,v 1.10 2004/12/02 22:10:55 carlo Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE PIM (Personal Information Management) apps: korganizer, kmail, knode..."
 
-KEYWORDS="~x86 amd64 ppc64 sparc ppc hppa"
+KEYWORDS="x86 amd64 ppc64 sparc ppc hppa"
 IUSE="crypt gnokii pda cjk"
 
 DEPEND="pda? ( app-pda/pilot-link dev-libs/libmal )
