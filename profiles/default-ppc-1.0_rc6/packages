@@ -31,6 +31,9 @@
 # prevents the user from shooting himself/herself in the foot by installing a
 # wacky version.
 
+#does not build with gcc-2.x
+<media-gfx/graphviz-1.9
+
 *>=sys-apps/baselayout-1.6.7
 *>=sys-apps/portage-1.6.10
 *~sys-devel/binutils-2.11.92.0.12.3

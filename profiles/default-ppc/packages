@@ -37,6 +37,9 @@
 sys-apps/lilo
 sys-apps/grub 
 
+#does not build with gcc-2.x
+<media-gfx/graphviz-1.9
+
 *sys-apps/baselayout
 *sys-apps/portage
 *sys-devel/binutils
