@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r7.ebuild,v 1.4 2003/11/18 22:32:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r7.ebuild,v 1.5 2003/11/19 02:56:44 gmsoft Exp $
 
 IUSE="nls pic build nptl"
 
@@ -363,7 +363,8 @@ src_unpack() {
 			einfo Applying `basename $i`...
 			patch -p1 < $i
 		done
-
+		einfo Applying glibc23-07-hppa-atomicity.dpatch..
+		patch -p1 < ${FILESDIR}/2.3.1/glibc23-07-hppa-atomicity.dpatch
 
 	fi
 

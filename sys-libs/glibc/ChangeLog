@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.105 2003/11/18 22:32:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.106 2003/11/19 02:56:44 gmsoft Exp $
 
 *glibc-2.3.2-r9 (18 Nov 2003)
 
@@ -93,6 +93,9 @@
   except for an occasional break, current CVS snapshots looks good.
 
 *glibc-2.3.2-r7 (14 Oct 2003)
+
+  19 Nov 2003; Guy Martin <gmsoft@gentoo.org> glibc-2.3.2-r7.ebuild :
+  Added missing atomicity patch for hppa.
 
   18 Nov 2003; Guy Martin <gmsoft@gentoo.org> glibc-2.3.2-r7.ebuild :
   Readded for hppa only. Added hppa patches and depend to correct
