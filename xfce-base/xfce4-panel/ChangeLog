@@ -1,6 +1,6 @@
-# ChangeLog for x11-misc/xfce4-panel
+# ChangeLog for xfce-base/xfce4-panel
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.2 2003/07/22 07:31:29 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.3 2003/07/26 07:42:17 vapier Exp $
 
 *xfce4-panel-3.99.2 (22 Jul 2003)
 
