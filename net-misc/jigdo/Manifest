@@ -1,2 +1,5 @@
-MD5 c328e22f7d9db273e429ef19b86d98be jigdo-0.7.0.ebuild 914
+MD5 13054219221ec0a7cd565431049c0fc5 jigdo-0.7.0.ebuild 1285
+MD5 de7df99d5dcb2fa3a99617144a7e6257 metadata.xml 637
+MD5 5376ada9f20aa89d511045bbae481ad0 ChangeLog 381
 MD5 ba134b43460d2b9a0378c9ccbfc4fc6e files/digest-jigdo-0.7.0 64
+MD5 c49b767331699f22f72518da29438c56 files/makefile.patch 524
