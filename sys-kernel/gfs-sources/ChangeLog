@@ -1,0 +1,8 @@
+# ChangeLog for sys-kernel/gfs-sources
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gfs-sources/ChangeLog,v 1.1 2004/06/27 15:15:40 zypher Exp $
+
+*gfs-sources-2.6.7 (25 Jun 2004)
+
+  27 Jun 2003; Marc Hildebrand <zypher@gentoo.org> gfs-sources-2.6.7.ebuild:
+  Initial import.
