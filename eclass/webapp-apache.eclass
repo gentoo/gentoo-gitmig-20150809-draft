@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.4 2003/08/04 01:01:56 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.5 2003/08/04 11:07:23 stuart Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 # 
@@ -62,6 +62,7 @@ function webapp-determine-installowner ()
 	HTTPD_GROUP="apache"
 }
 
+
 function webapp-pkg_setup ()
 {
 	if [ "$1" == "1" ]; then
@@ -71,3 +72,31 @@ function webapp-pkg_setup ()
 	fi
 }
 
+# shamelessly stolen from Max Kalika <max@gentoo.org>'s horde stuff ;-)
+#
+# call this from your ebuild's pkg_setup() function!!
+
+function webapp-check-php ()
+{
+	local missing=""
+	local php_use="$(</var/db/pkg/`best_version dev-php/mod_php`/USE)"
+	local i
+
+	for i in $* ; do
+		if [ ! "`has ${i} ${php_use}`" ] ; then
+			missing="${missing} ${i}"
+		fi
+	done
+
+	# let's tell the user how to fix these problems
+
+	if [ -n "${missing}" ]; then
+		eerror "PHP is missing support for one or more options:"
+		eerror " ${missing}"
+		eerror
+		eerror "Please add '${missing}' to your USE flags, and re-install mod_php"
+		die "mod_php needs re-compiling with missing options"
+	fi
+
+	return 0
+}
