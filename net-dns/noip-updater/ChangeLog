@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/noip-updater
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.6 2003/08/03 21:36:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.7 2003/12/30 12:01:14 seemant Exp $
+
+*noip-updater-2.0.15 (30 Dec 2003)
+
+  30 Dec 2003; Seemant Kulleen <seemant@gentoo.org>
+  noip-updater-2.0.12.ebuild, noip-updater-2.0.15.ebuild,
+  files/noip-2.0.15.patch:
+  version bump, thanks to: Shaun Cloherty <s.cloherty@gsbme.unsw.edu.au> in bug
+  #36324
 
   03 Aug 2003; Seemant Kulleen <seemant@gentoo.org>
   noip-updater-2.0.12.ebuild, files/noip2.start:
