@@ -1,8 +1,11 @@
 # ChangeLog for games-fps/quakeforge
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.2 2003/09/10 16:05:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.3 2004/02/22 10:18:56 vapier Exp $
 
 *quakeforge-0.5.4 (18 Jul 2003)
+
+  22 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Add optional support for the sgl client #41997 by Kevin J Meagher.
 
   18 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump + clean up all use option selections + add more optional support + games.eclass.

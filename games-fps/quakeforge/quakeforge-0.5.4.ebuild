@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.4.ebuild,v 1.8 2004/02/20 06:35:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.4.ebuild,v 1.9 2004/02/22 10:18:56 vapier Exp $
 
 inherit eutils games
 
@@ -52,18 +52,19 @@ src_compile() {
 	#fi
 
 	local debugopts
-	[ `use debug` ] \
+	use debug \
 		&& debugopts="--enable-debug --disable-optimize --enable-profile" \
 		|| debugopts="--disable-debug --disable-profile"
 
 	local clients=${QF_CLIENTS}
-	[ `use 3dfx` ] && clients="${clients},3dfx"
-	[ `use fbcon` ] && clients="${clients},fbdev"
-	[ `use opengl` ] && clients="${clients},glx"
-	[ `use sdl` ] && clients="${clients},sdl,sdl32"
-	[ `use svga` ] && clients="${clients},svga"
-	[ `use X` ] && clients="${clients},x11"
-	[ `use X` ] && [ `use opengl` ] && clients="${clients},wgl"
+	use 3dfx && clients="${clients},3dfx"
+	use fbcon && clients="${clients},fbdev"
+	use opengl && clients="${clients},glx"
+	use sdl && clients="${clients},sdl,sdl32"
+	use sdl && use opengl && clients="${clients},sgl"
+	use svga && clients="${clients},svga"
+	use X && clients="${clients},x11"
+	use X && use opengl && clients="${clients},wgl"
 	[ "${clients:0:1}" == "," ] && clients=${clients:1}
 
 	local servers=${QF_SERVERS:-master,nq,qw}
@@ -71,7 +72,7 @@ src_compile() {
 	local tools=${QF_TOOLS:-all}
 
 	local svgaconf	# use old school way for broken conf opts
-	[ `use svga` ] \
+	use svga \
 		&& svgaconf="--with-svga=/usr" \
 		|| svgaconf="--without-svga"
 
