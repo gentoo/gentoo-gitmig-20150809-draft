@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-1.1.ebuild,v 1.6 2004/06/25 00:38:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-1.5.2.ebuild,v 1.1 2004/08/19 09:03:26 lanius Exp $
 
 DESCRIPTION="Provides a virtual printer for CUPS to produce PDF files."
 HOMEPAGE="http://cip.physik.uni-wuerzburg.de/~vrbehr/cups-pdf/"
@@ -9,26 +9,27 @@ SRC_URI="http://cip.physik.uni-wuerzburg.de/~vrbehr/cups-pdf/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~amd64 ~sparc"
 IUSE=""
 
 DEPEND="net-print/cups
 	virtual/ghostscript"
 
-S="${WORKDIR}/${MY_P}"
-
 src_compile() {
+	cd src
+	sed -i -e "s:CPLOGTYPE 7:CPLOGTYPE 2:" \
+		   -e "s:nobody:lp:" cups-pdf.h
 	gcc ${CFLAGS} -o cups-pdf cups-pdf.c || die "Compilation failed."
 }
 
 src_install () {
 	dodir /usr/lib/cups/backend
 	exeinto /usr/lib/cups/backend
-	doexe cups-pdf
+	doexe src/cups-pdf
 
 	dodir /usr/share/cups/model
 	insinto /usr/share/cups/model
-	doins PostscriptColor.ppd.gz
+	doins extra/PostscriptColor.ppd.gz
 
 	dodoc ${FILESDIR}/README.gentoo
 }
