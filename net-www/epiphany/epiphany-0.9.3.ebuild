@@ -1,15 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-0.9.1.ebuild,v 1.2 2003/08/24 15:53:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-0.9.3.ebuild,v 1.1 2003/09/01 18:21:33 foser Exp $
 
 inherit gnome2 debug
 
 DESCRIPTION="GNOME webbrowser based on the mozilla rendering engine"
 HOMEPAGE="http://epiphany.mozdev.org/"
 LICENSE="GPL-2"
-
-# better to get it from gnome.org if possible
-SRC_URI="http://downloads.mozdev.org/epiphany/epiphany-0.9.1.tar.gz"
 
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
