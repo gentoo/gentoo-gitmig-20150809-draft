@@ -23,6 +23,7 @@ dev-ada
 dev-cpp
 dev-db
 dev-dotnet
+dev-embedded
 dev-games
 dev-haskell
 dev-java
@@ -39,10 +40,10 @@ dev-tex
 dev-util
 games-action
 games-arcade
+games-board
 games-emulation
 games-engines
 games-fps
-games-board
 games-kids
 games-misc
 games-mud
