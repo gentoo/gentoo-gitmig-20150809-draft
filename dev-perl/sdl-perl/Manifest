@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 be72c909d0d8be5a73584272a6f2858d ChangeLog 4648
 MD5 709cd2696c593abb0a2090e0640315f6 metadata.xml 176
-MD5 710e2aaf70e2585eda56fdeb5672c2b0 sdl-perl-1.20.3.ebuild 669
+MD5 3ffdd41b4145f621877bca3e93ab1a1e sdl-perl-1.20.3.ebuild 657
 MD5 86eae464baf636675d0f37ec51e4b94e sdl-perl-2.1.2.ebuild 771
 MD5 8f817948159607a1ed78a8b839f5ce9b files/digest-sdl-perl-2.1.2 66
 MD5 000eb623a9e2ce37c9e3efd665f6e5c2 files/digest-sdl-perl-1.20.3 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBwFHLroRuSHgZdywRAu9+AJ94lOZmEafuEYb1DLuSVJSPZEqR/QCfRRnv
-nIEX6GafPe/xLlkm4CZPyPY=
-=TqGU
+iD8DBQFBwcrHroRuSHgZdywRAvOrAJ4v4mcwUsgzciAKjphpTHu0VBvSCACgkPM4
+q5c692v2Fsa0rqkc+rUTr1A=
+=N4sh
 -----END PGP SIGNATURE-----
