@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.ebuild,v 1.4 2003/04/03 19:23:06 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.ebuild,v 1.5 2003/04/05 02:01:29 absinthe Exp $
 
 
 S=${WORKDIR}/${PN}
@@ -31,7 +31,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/${PV}-gentoo.patch
 }
 
-
 pkg_setup() {
 	if ! groupmod orion ; then
 		groupadd -g 260 orion || die "problem adding group orion"
@@ -40,7 +39,6 @@ pkg_setup() {
 		useradd -u 260 -g orion -s /bin/bash -d /opt/orion -c "orion" orion || die "problem adding user orion"
 	fi
 }
-
 
 src_install() {
 	
