@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.3 2003/10/13 21:01:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.4 2003/10/21 02:27:44 agriffis Exp $
+
+  20 Oct 2003; Aron Griffis <agriffis@gentoo.org> gnutls-0.8.10.ebuild:
+  Stable on alpha
 
   13 Oct 2003; Alastair Tse <liquidx@gentoo.org> gnutls-0.8.10.ebuild:
   stable bump for x86
