@@ -1,0 +1,39 @@
+--- aalib-1.4.0/configure.in~	Tue Apr 24 16:00:02 2001
++++ aalib-1.4.0/configure.in	Sun May  6 20:37:32 2001
+@@ -83,10 +83,10 @@
+ 	fi
+ ])
+ AC_ARG_WITH(gpm-mouse, 
+-	[  --with-gpm-mouse=base-dir  Specifies the base gpm directory],
+-	if test x$withval = xyes
++	[  --with-gpm-mouse=base-dir/no  Specifies the base gpm directory],
++	if test x$withval = xno
+ 	then 
+-		AC_MSG_WARN(Usage is: --with-gpm-mouse=base-dir)
++		gpm_mousedriver_test=no
+ 	else
+ 		LIBS="$LIBS -L$withval/lib -lgpm"
+                 AC_DEFINE(GPM_MOUSEDRIVER)
+--- aalib-1.4.0/configure.orig	Sun May  6 20:38:23 2001
++++ aalib-1.4.0/configure	Sun May  6 20:38:26 2001
+@@ -28,7 +28,7 @@
+ ac_help="$ac_help
+   --with-curses-driver=no/yes Used to disable/force curses driver"
+ ac_help="$ac_help
+-  --with-gpm-mouse=base-dir  Specifies the base gpm directory"
++  --with-gpm-mouse=base-dir/no  Specifies the base gpm directory"
+ ac_help="$ac_help
+   --with-x                use the X Window System"
+ ac_help="$ac_help
+@@ -1960,9 +1960,9 @@
+ # Check whether --with-gpm-mouse or --without-gpm-mouse was given.
+ if test "${with_gpm_mouse+set}" = set; then
+   withval="$with_gpm_mouse"
+-  if test x$withval = xyes
++  if test x$withval = xno
+ 	then 
+-		echo "configure: warning: Usage is: --with-gpm-mouse=base-dir" 1>&2
++		gpm_mousedriver_test=no
+ 	else
+ 		LIBS="$LIBS -L$withval/lib -lgpm"
+                 cat >> confdefs.h <<\EOF
