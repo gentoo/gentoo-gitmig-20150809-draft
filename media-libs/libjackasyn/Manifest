@@ -1,3 +1,5 @@
-MD5 74712c46f2b2986c0388c3a94ff64bda ChangeLog 377
 MD5 81d912aea6e1aeaedd7a23230fdf1571 libjackasyn-0.8.ebuild 812
+MD5 93c658962d57c7ae0e514aa77d1f9630 ChangeLog 520
+MD5 7ae55fb5acc65da30b54b20df57c2e36 libjackasyn-0.10.ebuild 783
+MD5 2a4ada362fa3e0aeab0ba7a5eb0787df files/digest-libjackasyn-0.10 67
 MD5 1f38c0c1e629135027a5d3d9f9dea2d3 files/digest-libjackasyn-0.8 66
