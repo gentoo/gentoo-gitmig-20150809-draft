@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/cbtracker
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cbtracker/ChangeLog,v 1.1 2004/03/28 03:17:40 zul Exp $
+
+*cbtracker-1.0b (27 Mar 2004)
+
+  27 Mar 2004; Chuck Short <zul@gentoo.org> cbtracker-1.0b.ebuild:
+  Initial verison submitted by Jon Hood < jon@squinky.gotdns.com >.
+  Closes #45538.
+
