@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.22 2003/01/20 00:11:11 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.23 2003/01/21 21:22:10 vapier Exp $
+
+  21 Jan 2003; Mike Frysinger <vapier@gentoo.org> libpng-1.2.5-r4.ebuild :
+  Fixed 'doman' so that in doesn't mistakenly install library files.
 
   19 Jan 2003; George Shapovalov <george@gentoo.org> libpng-1.2.5-r3.ebuild, libpng-1.0.15.ebuild :
   update to libpng-1.0.15 may cause autocleaning of png.h if user did not remerge libpng-1.2.5 after
