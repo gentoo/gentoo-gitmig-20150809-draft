@@ -1,16 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/mutella-0.3.3.ebuild,v 1.3 2002/07/09 21:25:47 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/mutella-0.4.ebuild,v 1.1 2002/07/09 21:25:47 sunflare Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="Text-mode gnutella client."
-SRC_URI="http://telia.dl.sourceforge.net/sourceforge/mutella/mutella-0.3.3.tar.gz"
+DESCRIPTION="mutella is a text-mode gnutella client."
+SRC_URI="http://telia.dl.sourceforge.net/sourceforge/mutella/${P}.tar.gz"
 HOMEPAGE="http://mutella.sourceforge.net"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND="virtual/glibc sys-libs/readline"
+DEPEND="virtual/glibc
+	>=sys-libs/readline-4.2"
 RDEPEND=${DEPEND}
 
 src_compile() {
@@ -24,7 +25,7 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog COPYING INSTALL KNOWN-BUGS README TODO
+	dodoc AUTHORS ChangeLog COPYING INSTALL LICENSE KNOWN-BUGS README TODO
 }
 
 
