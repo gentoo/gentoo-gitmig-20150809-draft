@@ -243,13 +243,6 @@ net-dialup/hcfusbmodem
 # <liquidx@gentoo.org> (13 Mar 2003)
 # evolution beta and friends. may cause breakage!
 =net-mail/evolution-1.3*
-#>=gnome-extra/gal-1.99
-#>=app-text/gnome-spell-1.0
-#>=gnome-extra/libgtkhtml-3.0
-#>=net-libs/libsoup-1.99
-# these are not slotted. _will_ break existing apps if unmasked.
-#>=gnome-extra/gnome-pilot-2.0
-#>=gnome-extra/gnome-pilot-conduits-2.0
 
 # NEVER remove this mask!! We once renamed gtkhtml-3.0 to libgtkhtml-3.0,
 # so if you remove it, gtk+1 apps that use gtkhtml will get the wrong deps
@@ -313,13 +306,13 @@ sys-apps/pcmcia-cs-tools
 sys-apps/pcmcia-cs-drivers
 
 # <lu_zero@gentoo.org> (23 Jan 2003)
-#Not enough mature
+# Not enough mature
 media-video/lumiere
 
 # <mjc@gentoo.org> (10 Jan 2003)
 # fixed others silly dates
 # masked, I just copied the old ebuild
->=net-www/mozilla-1.3a
+=net-www/mozilla-1.3a*
 
 # <rendhalver@gentoo.org> (03 Jan 2003)
 # new XEmacs version masking for testing xemacs without sandbox disable
@@ -738,7 +731,9 @@ app-admin/va-systemimager-client
 # Masking medusa-0.5.1-r4 because it requires libtool-1.4.2 which is also masked
 =gnome-extra/medusa-0.5.1-r4
 
-## Non gnome-core packages, applications, extra libraries and so on
+# <gnome@gentoo.org> (some time ago)
+# There are development versions. Dev versions are not right for portage.
+# Do not remove this mask without consulting the gnome team. 
 >=media-gfx/gimp-1.3
 >=app-office/gnumeric-1.1.3
 
