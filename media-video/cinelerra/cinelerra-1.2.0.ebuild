@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.2.0.ebuild,v 1.1 2004/05/15 19:18:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.2.0.ebuild,v 1.2 2004/05/26 18:12:24 kugelfang Exp $
 
 inherit gcc eutils flag-o-matic
 export WANT_GCC_3="yes"
@@ -46,10 +46,13 @@ src_compile() {
 src_install() {
 	local myarch
 	if [ -n "`use x86`" ]; then
-	myarch="${CHOST/-*/}" #should solve the i586/i686 problem
+		myarch="${CHOST/-*/}" #should solve the i586/i686 problem
+	fi
+	if [ -n "`use amd64`" ]; then
+		myarch="x86_64" #Fixes BUG #51740
 	fi
 	if [ -n "`use ppc`" ]; then
-	myarch="ppc"
+		myarch="ppc"
 	fi
 	cd ${S}/${PN}/${myarch}
 	dobin ${PN} || die "cinelerra not built"
