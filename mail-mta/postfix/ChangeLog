@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.20 2004/08/24 00:10:32 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.21 2004/08/31 02:47:29 tgall Exp $
+
+  30 Aug 2004; Tom Gall <tgall@gentoo.org> postfix-2.1.3.ebuild:
+  stable on ppc64, bug #61746
 
 *postfix-2.1.4 (23 Aug 2004)
 
