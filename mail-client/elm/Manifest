@@ -1,6 +1,14 @@
-MD5 877fdf758ba6f70d62436b01b857aeb5 ChangeLog 1987
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5d01fb30981a3d67f6010e378dea50b0 ChangeLog 2080
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 32385eb9232dcc74b94e6fe5b8cbbe1f elm-2.4_rc100-r1.ebuild 2132
-MD5 f09c6d86097ecbf1c6cfc4f77d20acc9 elm-2.4_rc100.ebuild 1535
-MD5 07d5c730af371c6220688b51c8a7ae14 files/digest-elm-2.4_rc100 66
 MD5 07d5c730af371c6220688b51c8a7ae14 files/digest-elm-2.4_rc100-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB2W70QlM6RnzZP+IRAh7/AJ9O59vGPlyImqeCQTrPWIFEjTCfuQCfQvuj
+xT71R4JAYX9J/O0gwbHhCPo=
+=YPd+
+-----END PGP SIGNATURE-----
