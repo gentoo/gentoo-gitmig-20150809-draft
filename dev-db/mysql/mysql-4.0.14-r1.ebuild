@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14-r1.ebuild,v 1.7 2003/09/17 07:10:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14-r1.ebuild,v 1.8 2003/10/19 11:46:49 lanius Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -166,7 +166,7 @@ src_install() {
 		rm -rf ${D}/usr/share/mysql/sql-bench
 	fi
 
-	dodoc README COPYING COPYING.LIB MIRRORS Docs/manual.*
+	dodoc README COPYING COPYING.LIB Docs/manual.*
 	docinto conf-samples
 	dodoc support-files/my-*.cnf
 	dohtml -r Docs/*

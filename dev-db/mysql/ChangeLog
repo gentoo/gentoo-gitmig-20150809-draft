@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.73 2003/10/13 07:01:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.74 2003/10/19 11:46:49 lanius Exp $
+
+  19 Oct 2003; Heinrich Wendel <lanius@gentoo.org> mysql-4.0.14-r1.ebuild,
+  mysql-4.0.14-r2.ebuild, mysql-4.0.14.ebuild, mysql-4.0.15.ebuild:
+  fixed MIRRORS dodoc
 
   13 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.14-r2.ebuild:
   bump 4.0.14-r2 to stable
