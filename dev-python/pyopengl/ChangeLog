@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyopengl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.7 2005/01/25 20:36:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.8 2005/01/26 01:27:30 fserb Exp $
+
+  25 Jan 2005; Fernando Serboncini <fserb@gentoo.org>
+  pyopengl-2.0.0.44.ebuild, pyopengl-2.0.1.09.ebuild:
+  Fixed opengl-update switch on both ebuilds. Fixes #76928
 
   25 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   pyopengl-2.0.0.44.ebuild, pyopengl-2.0.1.09.ebuild:

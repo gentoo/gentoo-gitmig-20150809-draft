@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 aafb4678937923dc4dc9c6b051ee82fb ChangeLog 4091
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 f41d85b6971705e0ca0b1aa1c5d8c588 pyopengl-2.0.0.44.ebuild 1656
-MD5 e1e1b85d6fda02b91925dd39a8386bd8 ChangeLog 3928
-MD5 f56f143795197308b23ca12614f10124 pyopengl-2.0.1.09.ebuild 818
+MD5 d753af3f442fbad16b62d25f30a806dd pyopengl-2.0.0.44.ebuild 1090
+MD5 ea57450c5c1a1624f382223398e02560 pyopengl-2.0.1.09.ebuild 949
 MD5 67d2ad027cfd6d411a585b0e346606a8 files/config.diff 1175
 MD5 9feca450998c720327067463fea8cdc0 files/digest-pyopengl-2.0.0.44 70
 MD5 ba0f0760a4a22fa7666205b8a5f4f514 files/pyopengl-2.0.0.44-disable_togl.patch 406
 MD5 1160aa70c95cda6bac58711ef532c929 files/digest-pyopengl-2.0.1.09 70
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB9q3hArHZZzCEUG0RAsOGAJ9Mhy2sRfEUwh5F5iEdL6EuXvM7bgCfXVT8
-JZcTH3IQaV9oClM0aSMvUew=
-=WZK2
+iD8DBQFB9vIWxtZcznfol0URAqxFAKDo+WJe7PQgmcBrkVlkUBQQrlBWaQCg5OlJ
+3PkVosgXEXUToerRnJRjI0g=
+=3/K1
 -----END PGP SIGNATURE-----
