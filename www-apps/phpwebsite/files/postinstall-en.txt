@@ -5,13 +5,13 @@ on your own before starting setup.
 
 Then change permissions for set with this script:
 
-cd ${MY_HTDOCSDIR}/phpwebsite/setup
-./secure_setup.sh setup
+cd /var/www/localhost/htdocs/phpwebsite/setup
+./secure_phpws.sh setup
 
 Once you have a database ready proceed to
 http://$HOSTNAME/phpwebsite to continue installation.
 
 Once you are done with installation you need to run:
 
-cd ${MY_HTDOCSDIR}/phpwebsite/setup
+cd /var/www/localhost/htdocs/phpwebsite/setup
 ./secure_phpws.sh run apache users
