@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.59 2003/09/22 22:44:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.60 2003/09/23 01:26:58 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -979,52 +979,50 @@ unpack_makeself() {
 # Usage: check_license [license]
 # - If the file is not specified then ${LICENSE} is used.
 check_license() {
-	local src="$1"
-	
-	if [ -z "${src}" ]
-	then
-		src="${PORTDIR}/licenses/${LICENSE}"
+	local lic=$1
+	if [ -z "${lic}" ] ; then
+		lic="${PORTDIR}/licenses/${LICENSE}"
 	else
-		if [ -e "${PORTDIR}/licenses/${src}" ]
-		then
-			src="${PORTDIR}/licenses/${src}"
-		elif [ -e "${PWD}/${src}" ]
-		then
-			src="${PWD}/${src}"
-		elif [ -e "${src}" ]
-		then
-			src="${src}"
+		if [ -e "${PORTDIR}/licenses/${src}" ] ; then
+			lic="${PORTDIR}/licenses/${src}"
+		elif [ -e "${PWD}/${src}" ] ; then
+			lic="${PWD}/${src}"
+		elif [ -e "${src}" ] ; then
+			lic="${src}"
 		fi
 	fi
-	[ ! -e "${src}" ] && die "Could not find requested license ${src}"
+	[ ! -f "${lic}" ] && die "Could not find requested license ${src}"
 
-	# here is where we check for the license...
-	# if we don't find one, we ask the user for it
-	if [ ! -d "/usr/share/licenses" ]
-	then
-		mkdir -p /usr/share/licenses
-	fi
-	if [ -f "/usr/share/licenses/${LICENSE}" ]
-	then
-		einfo "The license for this application has already been accepted."
-	else
-		ewarn "You MUST accept this license for installation to continue."
-		eerror "If you CTRL+C out of this, the install will not run!"
-		echo
+	# here is where we check for the licenses the user already
+	# accepted ... if we don't find a match, we make the user accept
+	local alic
+	for alic in ${ACCEPT_LICENSE} ; do
+		[ "${alic}" == "*" ] && return 0
+		[ "${alic}" == "${lic}" ] && return 0
+	done
 
-		${PAGER} ${src} || die "Could not execute ${PAGER} ${src}"
-		einfo "Do you accept the terms of this license? [yes/no]"
-		read ACCEPT_TERMS
-		case ${ACCEPT_TERMS} in
-			"yes"|"Yes"|"y"|"Y")
-				cp ${src} /usr/share/licenses
-				exit 0
-				;;
-			*)
-				eerror "You MUST accept the license to continue!  Exiting!"
-				die "Failed to accept license"
-				;;
-		esac
-	fi
+	local licmsg="`mymktemp ${T}`"
+	cat << EOF > ${licmsg}
+**********************************************************
+The following license outlines the terms of use of this
+package.  You MUST accept this license for installation to
+continue.  When you are done viewing, hit 'q'.  If you
+CTRL+C out of this, the install will not run!
+**********************************************************
+
+EOF
+	cat ${lic} >> ${licmsg}
+	${PAGER:-less} ${licmsg} || die "Could not execute pager (${PAGER}) to accept ${lic}"
+	einfon "Do you accept the terms of this license? [yes/no] "
+	read alic
+	case ${alic} in
+		yes|Yes|y|Y)
+			return 0
+			;;
+		*)
+			echo;echo;echo
+			eerror "You MUST accept the license to continue!  Exiting!"
+			die "Failed to accept license"
+			;;
+	esac
 }
-
