@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.118 2005/02/09 16:15:27 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.119 2005/02/11 19:04:30 danarmak Exp $
+
+  11 Feb 2005; Dan Armak <danarmak@gentoo.org>
+  +files/noatun-oblique-db-location-3.4.0_beta2.diff,
+  kdeaddons-3.4.0_beta2.ebuild:
+  Added the same patch noatun-oblique and noatun-plugins use. This fixes the
+  berkeley db test, which enables the oblique plugin. Note that the berkdb USE
+  flag actually works here wrt what is built.
 
 *kdeaddons-3.4.0_beta2 (09 Feb 2005)
 
