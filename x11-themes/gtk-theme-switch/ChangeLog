@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-theme-switch
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/ChangeLog,v 1.7 2004/03/10 02:38:38 tgall Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/ChangeLog,v 1.8 2004/03/14 00:47:11 geoman Exp $
+
+  13 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
+  gtk-theme-switch-2.0.0_rc2-r1.ebuild:
+  Added ~mips keyword.
 
   09 Mar 2004; Tom Gall <tgall@gentoo.org> 
   gtk-theme-switch-1.0.1-r1.ebuild gtk-theme-switch-2.0.0_rc2-r1.ebuild:
