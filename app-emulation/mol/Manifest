@@ -1,8 +1,8 @@
-MD5 1aae2fe015b299eacd5765d16188fbaa ChangeLog 9146
+MD5 7b47fd97d7ed4b9b6f146d52fbd1f2b5 ChangeLog 9295
 MD5 37e2c58edef99f3f2be0803169d89bcd mol-0.9.70.ebuild 4048
 MD5 3263d375abba2d098c636efc2b135ea5 metadata.xml 333
 MD5 7b1c05be512e22dbfb69b67e87d6d2f7 mol-0.9.70-r1.ebuild 3940
-MD5 f89d7deb6015b207e4d936fbb487bff5 mol-0.9.71_pre1.ebuild 4217
+MD5 5674dc422930ad165912ce5d91cafff8 mol-0.9.71_pre1.ebuild 4518
 MD5 f0299c003ac50a8f73bd8264889116d7 files/mol-0.9.71_pre1-linux-2.6.9.patch 2571
 MD5 934e9ecf483ff3c4e34bb6307212d776 files/mol-0.9.70-nopriority.patch 1853
 MD5 3944510308e77b92ac85c07708947ad0 files/digest-mol-0.9.70-r1 64
@@ -11,4 +11,5 @@ MD5 2f8f758938db9b3cb5a13c0b33d989e3 files/mol-module-fix.patch 327
 MD5 453e05b555f037270dd6da665e100aa8 files/digest-mol-0.9.71_pre1 69
 MD5 0ea7bd65a5ff4666665a71fb9652aae8 files/mol-0.9.70-makefile-fix.patch 924
 MD5 3944510308e77b92ac85c07708947ad0 files/digest-mol-0.9.70 64
+MD5 8eb2c97c995cba996b31b0ba38ef4fd0 files/mol-0.9.71_pre1-tmp-offset.patch 864
 MD5 3bf68312e4299f777065f55eea5297fa files/mol-0.9.71_pre1-nopriority.patch 1861

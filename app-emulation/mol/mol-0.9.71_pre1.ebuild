@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.71_pre1.ebuild,v 1.4 2005/02/20 04:59:31 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.71_pre1.ebuild,v 1.5 2005/03/28 13:22:16 josejx Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils linux-mod
 
 DESCRIPTION="MOL (Mac-on-Linux) lets PPC users run MacOS (X) under Linux (rsync snapshot)"
 HOMEPAGE="http://www.maconlinux.net/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc"
+KEYWORDS="-* ~ppc"
 IUSE="vnc alsa oss fbcon X oldworld sheep debug dga usb"
 
 MAKEOPTS="${MAKEOPTS} -j1"
@@ -22,11 +22,19 @@ RDEPEND="net-misc/dhcp
 	vnc? ( net-misc/vnc )
 	X? ( virtual/x11 )"
 
+
+MODULE_NAMES="mol(mol:${S}/src/kmod/Linux)
+			  sheep(net:${S}/src/netdriver)
+			  tun(net:${S}/src/netdriver)"
+
+
 pkg_setup() {
 	echo
 	einfo "If you want to use MOL fullscreen on a virtual console"
 	einfo "be sure to have the USE-flag \"fbcon\" set!"
 	echo
+
+	linux-mod_pkg_setup
 }
 
 src_unpack() {
@@ -42,6 +50,9 @@ src_unpack() {
 	# Adds big filesystem (>2Gb) image support, bug #80098
 	epatch ${FILESDIR}/${P}-big-filesystem.patch
 
+	# Fixes bug tmp-offset access violation
+	epatch ${FILESDIR}/${P}-tmp-offset.patch
+
 	# dhcp config fix and show dchpd messages on starting mol
 	sed -i "s:#ddns-update-style:ddns-update-style:g" Doc/config/dhcpd-mol.conf || die
 	sed -i "s:DHCPD\ -q\ -cf:DHCPD\ -cf:g" Doc/config/tunconfig || die
@@ -56,10 +67,10 @@ src_compile() {
 
 	# initialize all needed build-files
 	./autogen.sh
-	./configure --prefix="/usr" || die "configure failed"
+	./configure --prefix="/usr" || die "Configure failed."
 
 	# workaround for proper module-building
-	make defconfig || die "This is a ppc-only package (time to buy that iBook, no?)"
+	emake defconfig || die "Make failed."
 
 	sed -i "s:CONFIG_XDGA=y:# CONFIG_XDGA is not set:" .config-ppc
 	sed -i "s:CONFIG_TAP=y:# CONFIG_TAP is not set:" .config-ppc
@@ -76,21 +87,25 @@ src_compile() {
 
 	einfo "The configuration has been altered according to your USE-flags."
 	# reinitialize our changed configuration
-	make oldconfig
+	emake oldconfig
 
-	addwrite "/usr/src/${FK}"
-	make || die "Build mol with: FEATURES=\"-userpriv -usersandbox\" emerge mol"
+	cd ${S}
+	emake BUILD_MODS=n || die "Build failed."
+
+	# Build the modules too!
+	BUILD_PARAMS="KERNEL_SOURCE=${KV_DIR} LV=${KV_MAJOR}${KV_MINOR} MP=${KV_OBJ}
+				  KUNAME=${KV}"
+	BUILD_TARGETS=all
+	linux-mod_src_compile
 }
 
 src_install() {
-	# MOL needs write access to some .depend-files in the kernel-dir
-	# (at least arch/ppc/) to build the kernel-modules.  With
-	# sandboxing enabled this would result in an access violation.
-
-	addwrite "/usr/src/${FK}"
-	make DESTDIR=${D} install || die "Failed to install MOL."
-
-	dodoc 0README BUILDING COPYRIGHT CREDITS Doc/*
+	#linux-mod_src_install
+	cd ${S}
+	emake DESTDIR=${D} install || die "Failed to install"
+	dodoc CREDITS Doc/Boot-ROM Doc/NewWorld-ROM Doc/Sound Doc/Video
+	dodoc Doc/Networking Doc/Dev/Debugger Doc/Dev/Addresses
+	dodoc Doc/man/molvconfig.1 Doc/man/startmol.1 Doc/man/molrc.5
 }
 
 pkg_postinst() {
@@ -107,6 +122,7 @@ pkg_postinst() {
 	ewarn "If errors with networking occur, make sure you have the following"
 	ewarn "kernel functions enabled:"
 	einfo "For the dhcp server:"
+	einfo "    Socket Filtering (CONFIG_FILTER)"
 	einfo "    Packet Socket (CONFIG_PACKET)"
 	einfo "For NAT:"
 	einfo "    Network packet filtering (CONFIG_NETFILTER)"

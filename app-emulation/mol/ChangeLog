@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.46 2005/03/08 00:01:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.47 2005/03/28 13:22:16 josejx Exp $
+
+  28 Mar 2005; Joseph Jezak <josejx@gentoo.org>
+  +files/mol-0.9.71_pre1-tmp-offset.patch, mol-0.9.71_pre1.ebuild:
+  Converted ebuild to linux-mod.
 
   08 Mar 2005; Joseph Jezak <josejx@gentoo.org>
   files/mol-0.9.71_pre1-big-filesystem.patch:

@@ -1,0 +1,18 @@
+--- src/kmod/Linux/Makefile.old	2005-03-28 20:16:13.000000000 +1000
++++ src/kmod/Linux/Makefile.26	2005-03-28 20:16:47.000000000 +1000
+@@ -34,11 +34,11 @@
+ 
+ $(src)/asm_offsets.h:	$(src)/archinclude.h $(src)/kernel_vars.h $(src)/mac_registers.h
+ $(src)/asm_offsets.h:	$(src)/asm_offsets.c $(src)/asm_offsets.inc
+-	@$(RM) $(src)/tmp-offsets.c $@ ; cat $^ > $(src)/tmp-offsets.c
+-	@$(CC) $(CPPFLAGS) $(CFLAGS) -I$(src) -Wall -S $(src)/tmp-offsets.c
++	@$(RM) ${T}/tmp-offsets.c $@ ; cat $^ > ${T}/tmp-offsets.c
++	@$(CC) $(CPPFLAGS) $(CFLAGS) -I$(src) -Wall -S ${T}/tmp-offsets.c -o ${T}/tmp-offsets.s
+ 	@echo "/* WARNING! Automatically generated from 'shared/asm_offsets.c' - DO NOT EDIT! */" > $@
+-	@grep '^#' tmp-offsets.s >> $@
+-	@$(RM) $(src)/tmp-offsets.*
++	@grep '^#' ${T}/tmp-offsets.s >> $@
++	@$(RM) ${T}/tmp-offsets.*
+ 
+ 
+ $(src)/_performance.c: $(PERFOBJS)
