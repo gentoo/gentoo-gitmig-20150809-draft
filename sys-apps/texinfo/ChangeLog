@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.48 2005/02/15 18:32:28 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.49 2005/03/15 10:10:52 joker Exp $
+
+  15 Mar 2005; Christian Birchinger <joker@gentoo.org> texinfo-4.8.ebuild:
+  Added sparc stable keyword
 
   15 Feb 2005; Kito <kito@gentoo.org> texinfo-4.8.ebuild:
   ~ppc-macos keyword
