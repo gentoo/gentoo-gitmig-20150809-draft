@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/chktex/chktex-1.5-r2.ebuild,v 1.3 2002/08/02 17:42:49 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chktex/chktex-1.5-r2.ebuild,v 1.4 2002/08/06 14:56:03 gerk Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://www.ibiblio.org/pub/linux/distributions/gentoo/${P}.tar.gz"
@@ -16,7 +16,7 @@ DEPEND="app-text/tetex
 	app-text/latex2html"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 PPC"
+KEYWORDS="x86 ppc"
 src_compile() {
     
     myconf="--prefix=/usr --host=${CHOST}"
