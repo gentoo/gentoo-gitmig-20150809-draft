@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.4 2004/11/27 11:26:52 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.5 2004/11/28 09:47:31 johnm Exp $
 
 # This eclass provides functions for compiling external kernel modules
 # from source.
@@ -48,12 +48,12 @@ update_depmod() {
 	get_version;
 	
 	ebegin "Updating module dependencies for ${KV_FULL}"
-	if [ -r ${KV_DIR}/System.map ]
+	if [ -r ${KV_OUT_DIR}/System.map ]
 	then
-		depmod -ae -F ${KV_DIR}/System.map -b ${ROOT} -r ${KV_FULL}
+		depmod -ae -F ${KV_OUT_DIR}/System.map -b ${ROOT} -r ${KV_FULL}
 	else
 		ewarn
-		ewarn "${KV_DIR}/System.map not found."
+		ewarn "${KV_OUT_DIR}/System.map not found."
 		ewarn "You must manually update the kernel module dependencies using depmod."
 		ewarn
 	fi

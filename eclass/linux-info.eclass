@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.3 2004/11/27 11:26:52 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.4 2004/11/28 09:47:31 johnm Exp $
 #
 # This eclass provides functions for querying the installed kernel
 # source version, selected kernel options etc.
@@ -12,8 +12,6 @@ INHERITED="$INHERITED $ECLASS"
 # Overwritable environment Var's
 # ---------------------------------------
 KERNEL_DIR="${KERNEL_DIR:-/usr/src/linux}"
-
-
 
 # File Functions
 # ---------------------------------------
@@ -97,14 +95,11 @@ kernel_is() {
 }
 
 get_version() {
+	local kbuild_output
+	
 	# no need to execute this twice assuming KV_FULL is populated.
 	# we can force by unsetting KV_FULL
-	if [ -n "${KV_FULL}" ]
-	then
-		# Lets keep this quiet eh?
-		# einfo "\${KV_FULL} is already set. Not running get_version again"
-		return
-	fi
+	[ -n "${KV_FULL}" ] && return
 
 	# if we dont know KV_FULL, then we need too.
 	# make sure KV_DIR isnt set since we need to work it out via KERNEL_DIR
@@ -121,6 +116,16 @@ get_version() {
 		die
 	fi
 	
+	# OK so now we know our sources directory, but they might be using
+	# KBUILD_OUTPUT, and we need this for .config and localversions-*
+	# so we better find it eh?
+	# do we pass KBUILD_OUTPUT on the CLI?
+	OUTPUT_DIR="${OUTPUT_DIR:-${KBUILD_OUTPUT}}"
+	
+	# Or maybe KBUILD_OUTPUT is set in Makefile?
+	kbuild_output="$(getfilevar KBUILD_OUTPUT ${KV_DIR}/Makefile)"
+	OUTPUT_DIR="${OUTPUT_DIR:-${kbuild_output}}"
+	
 	# And contrary to existing functions I feel we shouldn't trust the
 	# directory name to find version information as this seems insane.
 	# so we parse ${KV_DIR}/Makefile
@@ -128,8 +133,28 @@ get_version() {
 	KV_MINOR="$(getfilevar PATCHLEVEL ${KV_DIR}/Makefile)"
 	KV_PATCH="$(getfilevar SUBLEVEL ${KV_DIR}/Makefile)"
 	KV_EXTRA="$(getfilevar EXTRAVERSION ${KV_DIR}/Makefile)"
+	
 	# and in newer versions we can also pull LOCALVERSION if it is set.
-	KV_LOCAL="$(cat ${KV_DIR}/localversion* 2>/dev/null)$(getfilevar CONFIG_LOCALVERSION ${KV_DIR}/.config | sed 's:"::g')"
+	# but before we do this, we need to find if we use a different object directory.
+	# This *WILL* break if the user is using localversions, but we assume it was
+	# caught before this if they are.
+	[ "${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}.${KV_EXTRA}" == "$(uname -r)" ] && \
+		OUTPUT_DIR="/lib/modules/${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}.${KV_EXTRA}/build"
+
+	[ -h "${OUTPUT_DIR}" ] && KV_OUT_DIR="$(readlink -f ${OUTPUT_DIR})"
+	[ -d "${OUTPUT_DIR}" ] && KV_OUT_DIR="${OUTPUT_DIR}"
+	if [ -n "${KV_OUT_DIR}" ];
+	then
+		einfo "Found kernel object directory:"
+		einfo "    ${KV_OUT_DIR}"
+		
+		KV_LOCAL="$(cat ${KV_OUT_DIR}/localversion* 2>/dev/null)"
+	fi
+	# and if we STILL haven't got it, then we better just set it to KV_DIR
+	KV_OUT_DIR="${KV_OUT_DIR:-${KV_DIR}}"
+	
+	KV_LOCAL="${KV_LOCAL}$(cat ${KV_DIR}/localversion* 2>/dev/null)"
+	KV_LOCAL="${KV_LOCAL}$(getfilevar CONFIG_LOCALVERSION ${KV_OUT_DIR}/.config | sed 's:"::g')"
 	
 	# And we should set KV_FULL to the full expanded version
 	KV_FULL="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${KV_EXTRA}${KV_LOCAL}"
@@ -157,7 +182,7 @@ check_kernel_built() {
 	# if we haven't determined the version yet, we need too.
 	get_version;
 	
-	if [ ! -f "${KV_DIR}/System.map" ]
+	if [ ! -f "${KV_OUT_DIR}/System.map" ]
 	then
 		eerror "These sources have not yet been compiled."
 		eerror "We cannot build against an uncompiled tree."
@@ -176,13 +201,13 @@ check_modules_supported() {
 	# if we haven't determined the version yet, we need too.
 	get_version;
 	
-	getfilevar_isset CONFIG_MODULES ${KV_DIR}/.config
+	getfilevar_isset CONFIG_MODULES ${KV_OUT_DIR}/.config
 	if [ "$?" != 0 ]
 	then
 		eerror "These sources do not support loading external modules."
 		eerror "to be able to use this module please enable \"Loadable modules support\""
 		eerror "in your kernel, recompile and then try merging this module again."
-		die No support for external modules in ${KV_FUll} config
+		die No support for external modules in ${KV_FULL} config
 	fi
 }
 
@@ -199,13 +224,13 @@ local	config negate error
 		if [ "${negate}" == "!" ];
 		then
 			config="${config:1}"
-			if getfilevar_isset ${config} ${KV_DIR}/.config ;
+			if getfilevar_isset ${config} ${KV_OUT_DIR}/.config ;
 			then
 				eerror "  ${config}:\tshould not be set in the kernel configuration, but it is."
 				error=1
 			fi
 		else
-			if ! getfilevar_isset ${config} ${KV_DIR}/.config ;
+			if ! getfilevar_isset ${config} ${KV_OUT_DIR}/.config ;
 			then
 				eerror "  ${config}:\tshould be set in the kernel configuration, but isn't"
 				error=1
@@ -260,7 +285,7 @@ local	DEFLATE
 	LINENO_START="$(head -n $LINENO_END ${KV_DIR}/lib/Config.in | grep -n 'if \[' | tail -n 1 | cut -d : -f 1)"
 	(( LINENO_AMOUNT = $LINENO_END - $LINENO_START ))
 	(( LINENO_END = $LINENO_END - 1 ))
-	SYMBOLS="$(head -n $LINENO_END ${KERNEL_DIR}/lib/Config.in | tail -n $LINENO_AMOUNT | sed -e 's/^.*\(CONFIG_[^\" ]*\).*/\1/g;')"
+	SYMBOLS="$(head -n $LINENO_END ${KV_DIR}/lib/Config.in | tail -n $LINENO_AMOUNT | sed -e 's/^.*\(CONFIG_[^\" ]*\).*/\1/g;')"
 
 	# okay, now we have a list of symbols
 	# we need to check each one in turn, to see whether it is set or not
