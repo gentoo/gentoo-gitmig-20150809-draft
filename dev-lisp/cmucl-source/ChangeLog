@@ -1,0 +1,9 @@
+# ChangeLog for dev-lisp/cmucl-source
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-source/ChangeLog,v 1.1 2003/09/22 03:11:35 mkennedy Exp $
+
+*cmucl-source-18e (21 Sep 2003)
+
+  21 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  Initial import.  This is a port of the similary named package from the
+  Debian Project.
