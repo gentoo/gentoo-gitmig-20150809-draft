@@ -1,32 +1,22 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 08581a40e7ea607b7c3bd4bf0a0ce7db ChangeLog 696
-MD5 e85df7a2abba2c23d47a3dfdecac4ff5 lilo-22.5.9-r2.ebuild 5293
-MD5 6cde09ddcf185231adbc1dae9b780d09 lilo-22.5.8-r1.ebuild 4335
-MD5 28e6f9154e1300ddeb623623ca2d2fb9 lilo-22.5.8.ebuild 4033
-MD5 eeee4743c4e463eeed3a7a4c15380e0d metadata.xml 254
 MD5 31852bade8b88f0986819f90226f59d7 lilo-22.5.8-r2.ebuild 4450
+MD5 6cde09ddcf185231adbc1dae9b780d09 lilo-22.5.8-r1.ebuild 4335
 MD5 8bb31b20a28d26ed1277851e119b0064 lilo-22.5.8-r3.ebuild 4626
-MD5 925f55c96304e240bdb20cc35c6745ae files/digest-lilo-22.5.9-r2 124
+MD5 28e6f9154e1300ddeb623623ca2d2fb9 lilo-22.5.8.ebuild 4033
+MD5 e85df7a2abba2c23d47a3dfdecac4ff5 lilo-22.5.9-r2.ebuild 5293
+MD5 fdd2cb60ff8fd7baf2a7f63bed7d4d6a ChangeLog 783
+MD5 eeee4743c4e463eeed3a7a4c15380e0d metadata.xml 254
+MD5 45847050f78ebbd2b2d89c03f6a08fb4 files/lilo-22.5.8-devmapper_gentoo.patch 11889
 MD5 ab2657bc635313522eb791e30b1166ef files/lilo-22.5.9-correct-usage-info.patch 683
 MD5 15b1ea46b95a7517e5207c63b2252fe6 files/digest-lilo-22.5.8 63
 MD5 15b1ea46b95a7517e5207c63b2252fe6 files/digest-lilo-22.5.8-r1 63
-MD5 ca44cc6ec0aecfe30c49c455f74aacec files/lilo-glibc233.patch 640
-MD5 5f2172291cc1252b30f5a60981a51ac4 files/lilo.conf 1722
-MD5 348f7a96783361cf8f0a0703bfeaa03a files/lilo-22.5.8.lvm.2-6headers.patch 470
-MD5 2419c22323e1cfdbbc1ca149cb05e74d files/lilo-22.5.8-create-install-dirs.patch 970
 MD5 15b1ea46b95a7517e5207c63b2252fe6 files/digest-lilo-22.5.8-r2 63
-MD5 45847050f78ebbd2b2d89c03f6a08fb4 files/lilo-22.5.8-devmapper_gentoo.patch 11889
 MD5 15b1ea46b95a7517e5207c63b2252fe6 files/digest-lilo-22.5.8-r3 63
-MD5 2419c22323e1cfdbbc1ca149cb05e74d files/lilo-22.5.9-create-install-dirs.patch 970
-MD5 fdc2575e3b1e96d80ba2c1409abcad0e files/lilo-22.5.9-devmapper_gentoo.patch 11884
+MD5 925f55c96304e240bdb20cc35c6745ae files/digest-lilo-22.5.9-r2 124
 MD5 77acd52c9bdf0a660026777a3419ccb3 files/lilo-22.5.9-glibc233.patch 584
+MD5 2419c22323e1cfdbbc1ca149cb05e74d files/lilo-22.5.9-create-install-dirs.patch 970
+MD5 2419c22323e1cfdbbc1ca149cb05e74d files/lilo-22.5.8-create-install-dirs.patch 970
+MD5 5f2172291cc1252b30f5a60981a51ac4 files/lilo.conf 1722
 MD5 348f7a96783361cf8f0a0703bfeaa03a files/lilo-22.5.9-lvm.2-6headers.patch 470
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA+gFgmdTrptrqvGERAnvAAJ0Ux0aaOkQnALYsrjH6+kVawrJB5ACfdvpR
-48JbKZuKDnebT9U9YhMi1HI=
-=58tb
------END PGP SIGNATURE-----
+MD5 fdc2575e3b1e96d80ba2c1409abcad0e files/lilo-22.5.9-devmapper_gentoo.patch 11884
+MD5 348f7a96783361cf8f0a0703bfeaa03a files/lilo-22.5.8.lvm.2-6headers.patch 470
+MD5 ca44cc6ec0aecfe30c49c455f74aacec files/lilo-glibc233.patch 640
