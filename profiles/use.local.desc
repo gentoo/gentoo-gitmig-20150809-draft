@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.728 2004/11/11 06:27:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.729 2004/11/11 09:45:00 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -592,6 +592,7 @@ sys-apps/module-init-tools:no-old-linux - Don't support modules for Linux 2.4 an
 sys-apps/parted:noreiserfs - Do not include reiserfs support
 sys-apps/partimage:nologin - Do not include login support
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
+sys-apps/shadow:skey - Enable S/Key (Single use password) authentication support
 sys-apps/tcng:tcsim - enable traffic simulator
 sys-boot/arcboot:cobalt - Disables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-boot/lilo:devmap - Compile with support for device-mapper
