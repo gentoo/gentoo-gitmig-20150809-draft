@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/vorbisgain
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/ChangeLog,v 1.7 2004/04/20 17:39:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbisgain/ChangeLog,v 1.8 2004/04/27 20:43:16 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> vorbisgain-0.32-r1.ebuild:
+  Add inherit eutils
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   vorbisgain-0.32-r1.ebuild, vorbisgain-0.32.ebuild,

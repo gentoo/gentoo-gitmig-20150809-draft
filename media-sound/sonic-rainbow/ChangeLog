@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonic-rainbow
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-rainbow/ChangeLog,v 1.1 2004/04/06 18:26:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-rainbow/ChangeLog,v 1.2 2004/04/27 20:40:05 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> sonic-rainbow-0.5.1.ebuild:
+  Add inherit eutils
 
 *sonic-rainbow-0.5.1 (06 Apr 2004)
 

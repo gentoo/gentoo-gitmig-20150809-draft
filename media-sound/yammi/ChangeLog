@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/yammi
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.12 2004/04/16 07:34:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.13 2004/04/27 20:44:44 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> yammi-0.8.2.ebuild:
+  Add inherit eutils
 
   16 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> yammi-0.8.2.ebuild,
   yammi-1.0.ebuild:

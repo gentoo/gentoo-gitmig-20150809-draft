@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.22 2004/04/25 20:36:09 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.23 2004/04/27 20:38:59 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> lilypond-1.8.2.ebuild,
+  lilypond-2.0.0.ebuild, lilypond-2.0.3.ebuild:
+  Add inherit eutils
 
   25 Apr 2004; Jon Hood <squinky86@gentoo.org> lilypond-1.6.6.ebuild:
   added "die"
