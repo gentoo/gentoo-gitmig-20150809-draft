@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b80f7ffa10824e0490f8b61718f11da3 transgaming-mozctlinstaller-1.0.ebuild 729
+MD5 6e817c3f6b82338028366853fddccf5f metadata.xml 157
+MD5 749df8a96828bed2df45087e355978e1 ChangeLog 425
+MD5 b91fc2addca0b2e41be16e1b1ab72ab9 files/digest-transgaming-mozctlinstaller-1.0 86
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB5GsMroRuSHgZdywRAjikAJ4zDNny6Wx5IIAkyyj0YgrDBpTgqgCfRQe/
+g29Fq64lIBJUrnDwQqhgBEM=
+=MDXk
+-----END PGP SIGNATURE-----
