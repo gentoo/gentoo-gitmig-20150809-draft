@@ -1,17 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3c2382293d28b5c6921bbc5580ce7510 ChangeLog 2348
-MD5 4a65224eeba9c363c31a8333635df901 tkcvs-7.2.1.ebuild 1140
-MD5 ca97ce21935a2b201db8a672dd3353bc tkcvs-7.2.2.ebuild 1072
+MD5 b649cf7f6c3c10f86071e9a42a63ca78 tkcvs-7.2.2-r1.ebuild 965
 MD5 c0adf7b7f51ee32613312c89caf88631 tkcvs-7.1.4.ebuild 1140
+MD5 ca97ce21935a2b201db8a672dd3353bc tkcvs-7.2.2.ebuild 1072
+MD5 4a65224eeba9c363c31a8333635df901 tkcvs-7.2.1.ebuild 1140
+MD5 7a19b91c1b7d496b555c8b958883ec06 ChangeLog 2519
+MD5 37d9be6d753633a1cb6704052776ab1f metadata.xml 159
+MD5 80cab2952537a0017e0401abc8b5731e files/digest-tkcvs-7.2.2-r1 64
+MD5 4a6d3697b88a2a80ef6332cfe3a3748e files/digest-tkcvs-7.1.4 63
 MD5 84f449e2b115f6ebcccd5b06cf90bef9 files/digest-tkcvs-7.2.1 64
 MD5 80cab2952537a0017e0401abc8b5731e files/digest-tkcvs-7.2.2 64
-MD5 4a6d3697b88a2a80ef6332cfe3a3748e files/digest-tkcvs-7.1.4 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBpkLYmdTrptrqvGERAqiVAJ9582vvhYExtAuAr/OEpY8fhrkE8ACbBiOZ
-WEqH8/37xMbZZPiLKoQTO8c=
-=aOF7
------END PGP SIGNATURE-----
