@@ -1,6 +1,16 @@
 # ChangeLog for net-www/boa
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/boa/ChangeLog,v 1.12 2004/01/20 20:45:06 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/boa/ChangeLog,v 1.13 2004/04/23 09:02:21 stuart Exp $
+
+*boa-0.94.13-r1 (23 Apr 2004)
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org> boa-0.94.13-r1.ebuild,
+  files/boa.rc6:
+  Added support for changing Boa's ServerRoot on startup, thanks to Kurt V.
+  Hindenburg <khindenburg@cherrynebula.net>. See bug #34141 for details.
+  
+  Also changed default DocumentRoot to be /var/www/localhost/htdocs, as per GLEP
+  #11.
 
   20 Jan 2004; <tuxus@gentoo.org> boa-0.94.13.ebuild:
   Added ~mips to KEYWORDS.

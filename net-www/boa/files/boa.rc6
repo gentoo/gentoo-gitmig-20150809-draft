@@ -1,15 +1,24 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/boa/files/boa.rc6,v 1.4 2004/03/06 03:54:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/boa/files/boa.rc6,v 1.5 2004/04/23 09:02:21 stuart Exp $
+
+# NB: Standard config is in /etc/boa/boa.conf
+# NB: Arguments to pass to boa are in /etc/conf.d/boa
 
 depend() {
 	need net
 }
 
 checkconfig() {
-	if [ ! -e /etc/boa/boa.conf ] ; then
-		eerror "You need an /etc/boa/boa.conf to run Boa"
+	if [ -e /etc/conf.d/boa ]; then
+		SR=`echo ${BOA_OPTS} | awk '{ FS = " " } { print $2 }'`
+	else
+		SR=/etc/boa
+	fi
+
+	if [ ! -e ${SR}/boa.conf ] ; then
+		eerror "You need a ${SR}/boa.conf to run Boa"
 		eerror "There is a sample file in /usr/share/docs/boa"
 		return 1
 	fi
@@ -18,7 +27,7 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 	ebegin "Starting Boa"
-	start-stop-daemon --quiet --start --exec /usr/sbin/boa
+	start-stop-daemon --quiet --start --exec /usr/sbin/boa -- ${BOA_OPTS}
 	eend $?
 }
 
