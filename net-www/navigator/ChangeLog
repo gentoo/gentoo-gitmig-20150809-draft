@@ -1,9 +1,0 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/navigator/ChangeLog,v 1.1 2002/04/07 00:42:09 jnelson Exp $
-
-*navigator-4.08 (6 Apr 2002)
-
-  6 Apr 2002; Jon Nelson <jnelson@gentoo.org> navigator-4.08.ebuild
-  
-  Initial release of navigator package

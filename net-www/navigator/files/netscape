@@ -1,8 +1,0 @@
-#!/bin/sh
-
-export MOZILLA_HOME=/opt/netscape
-
-if [ -f $MOZILLA_HOME/netscape ]
-then
-   $MOZILLA_HOME/netscape $@
-fi
