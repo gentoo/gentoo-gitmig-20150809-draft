@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-clockspeed
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-clockspeed/ChangeLog,v 1.4 2004/10/23 08:44:21 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-clockspeed/ChangeLog,v 1.5 2004/10/24 15:54:27 kaiowas Exp $
+
+  24 Oct 2004; petre rodan <kaiowas@gentoo.org>
+  selinux-clockspeed-20041016.ebuild:
+  mark stable
 
 *selinux-clockspeed-20041016 (23 Oct 2004)
 
