@@ -1,0 +1,23 @@
+diff -Naur gaim-encryption-2.24.orig/encrypt.c gaim-encryption-2.24/encrypt.c
+--- gaim-encryption-2.24.orig/encrypt.c	2004-04-15 23:01:18.000000000 -0400
++++ gaim-encryption-2.24/encrypt.c	2004-04-21 07:38:30.000000000 -0400
+@@ -841,6 +841,9 @@
+ 
+    int baggage_size;
+    char baggage[BUF_LONG];
++   
++   const gchar* header = g_hash_table_lookup(header_table, (gpointer)gaim_account_get_protocol(conv->account));
++   const gchar* footer = g_hash_table_lookup(footer_table, (gpointer)gaim_account_get_protocol(conv->account));
+ 
+    if (msg_id == 0) {
+       gaim_debug(GAIM_DEBUG_ERROR, "gaim-encryption", "Bad call to resend_msg: %p %p\n", conv, msg_id);
+@@ -851,9 +854,6 @@
+       conv = gaim_conversation_new(GAIM_CONV_IM, acct, name);
+    }
+ 
+-   const gchar* header = g_hash_table_lookup(header_table, (gpointer)gaim_account_get_protocol(conv->account));
+-   const gchar* footer = g_hash_table_lookup(footer_table, (gpointer)gaim_account_get_protocol(conv->account));
+-
+    if (!header) header = header_default;
+    if (!footer) footer = "";
+ 

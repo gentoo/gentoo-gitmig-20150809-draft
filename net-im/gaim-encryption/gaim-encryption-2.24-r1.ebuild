@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/gaim-encryption-2.24-r1.ebuild,v 1.3 2004/04/23 12:25:23 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/gaim-encryption-2.24-r1.ebuild,v 1.4 2004/04/23 14:18:02 rizzo Exp $
 
 inherit flag-o-matic
 
@@ -20,6 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/encrypt_api.diff
+	epatch ${FILESDIR}/gaim-encryption-2.24-gcc2_fix.patch
 }
 
 src_compile() {

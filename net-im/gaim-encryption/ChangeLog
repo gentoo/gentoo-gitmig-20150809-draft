@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gaim-encryption
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/ChangeLog,v 1.21 2004/04/23 12:12:51 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/ChangeLog,v 1.22 2004/04/23 14:18:02 rizzo Exp $
+
+  23 Apr 2004; Don Seiler <rizzo@gentoo.org>;
+  +files/gaim-encryption-2.24-gcc2_fix.patch, gaim-encryption-2.24-r1.ebuild:
+  Patch to fix building on gcc2.  Thanks to Tristan Henderson, fixes Bug #48554
 
 *gaim-encryption-2.24-r1 (23 Apr 2004)
 
