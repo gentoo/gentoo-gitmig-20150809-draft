@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/kmousetool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kmousetool/ChangeLog,v 1.12 2005/01/10 16:34:38 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kmousetool/ChangeLog,v 1.13 2005/01/14 23:17:15 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> kmousetool-1.05.ebuild,
+  kmousetool-1.11.ebuild:
+  Added blocking dep on new version in kde-base, which is the split package
+  from KDE 3.4, and on its mother package, kdeaccessibility. Eventually
+  there'll be a move instruction from this package to that.
 
   10 Jan 2005; Gregorio Guidi <greg@gentoo.org>
   +files/kmousetool-1.11-gcc34-fix.patch, kmousetool-1.11.ebuild:
