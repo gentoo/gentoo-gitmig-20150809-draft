@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gift
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.46 2004/07/07 19:32:01 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.47 2004/07/27 13:16:13 kang Exp $
+
+  27 Jul 2004; Guillaume Destuynder <kang@gentoo.org>
+  gift-0.11.7_pre20040627.ebuild,
+  gift-0.11.6-r1.ebuild:
+  Fixes #58526, incorrect enewuser usage
 
   07 Jul 2004; Travis Tilley <lv@gentoo.org> gift-0.11.7_pre20040627.ebuild:
   marking stable on amd64 since it's the only version that really works right
