@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11u.ebuild,v 1.5 2002/10/04 06:31:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11u.ebuild,v 1.6 2002/10/05 05:39:25 drobbins Exp $
+
+IUSE="crypt nls"
 
 CRYPT_PATCH_P=${PN}-${PV/1u/1r}
 S=${WORKDIR}/${P}

@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-3.02.80-r3.ebuild,v 1.8 2002/10/04 06:29:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-3.02.80-r3.ebuild,v 1.9 2002/10/05 05:39:25 drobbins Exp $
+
+IUSE="nls static build"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Super-useful stream editor"

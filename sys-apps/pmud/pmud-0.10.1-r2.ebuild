@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: pmud-0.10.1-r2.ebuild,v 1.8 2002/10/04 06:29:09 vapier Exp $
+# $Id: pmud-0.10.1-r2.ebuild,v 1.9 2002/10/05 05:39:25 drobbins Exp $
+
+IUSE="X"
 
 S=${WORKDIR}/${P}
 

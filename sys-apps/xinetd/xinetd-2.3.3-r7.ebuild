@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.3-r7.ebuild,v 1.7 2002/10/04 06:32:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.3-r7.ebuild,v 1.8 2002/10/05 05:39:25 drobbins Exp $
+
+IUSE="tcpd"
 
 # NB: This ebuild introduces the /etc/xinetd.d includedir with a default
 #     /etc/xinetd.conf file.  Check your config files if you're upgrading

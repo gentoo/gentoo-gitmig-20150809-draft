@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.27-r1.ebuild,v 1.9 2002/10/04 06:24:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.27-r1.ebuild,v 1.10 2002/10/05 05:39:24 drobbins Exp $
+
+IUSE="nls acl"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard EXT2 and EXT3 filesystem utilities"
