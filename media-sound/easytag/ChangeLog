@@ -1,8 +1,21 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.2 2002/04/26 21:02:32 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.3 2002/05/27 22:32:10 rphillips Exp $
+
+*easytag-0.21 (26 Apr 2002)
+
+  26 May 2002; Ryan Phillips <rphillips@gentoo.org> easytag-0.21.ebuild :
+
+  Updated version.
+  support for mirror:// added
+  builds without ogg support if USE variable is not set
 
 *easytag-0.18 (26 Apr 2002)
+
+  26 May 2002; Ryan Phillips <rphillips@gentoo.org> easytag-0.18.ebuild :
+
+  Actually builds easytag without ogg support
+  Changed to mirror:// support
 
   26 Apr 2002; Ryan Phillips <rphillips@gentoo.org> easytag-0.18.ebuild :
 
