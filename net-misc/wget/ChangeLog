@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.5 2002/10/23 19:29:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.6 2002/10/31 17:27:53 seemant Exp $
+
+*wget-1.8.2-r1 (31 Oct 2002)
+
+  31 Oct 2002; Seemant Kulleen <seemant@gentoo.org> wget-1.8.2-r1.ebuild
+  files/digest-wget-1.8.2-r1 :
+
+  Added debian's patch for ipv6 if "ipv6" is in USE.  Thanks to:
+  andre@tomt.net (Andre Tomt) in bug #8286 for the patch.
 
 *wget-1.8.2 (29 May 2002)
 
