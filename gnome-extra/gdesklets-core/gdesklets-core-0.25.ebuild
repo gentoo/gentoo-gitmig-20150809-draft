@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.25.ebuild,v 1.1 2003/12/28 12:49:14 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.25.ebuild,v 1.2 2004/02/29 04:22:29 jhuebel Exp $
 
 inherit gnome2
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 RDEPEND=">=dev-lang/python-2.2
 	>=gnome-base/gconf-2
