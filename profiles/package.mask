@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3085 2004/08/21 16:37:44 chriswhite Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3086 2004/08/21 22:47:58 seemant Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -57,6 +57,7 @@ gnome-base/gnome-volume-manager
 # Masked for TESTING by DEVS and ARCHES!
 >=x11-base/xorg-x11-6.7.99.2
 x11-misc/xcompmgr
+x11-misc/transset
 
 # <pfeifer@gentoo.org> (12 Aug 2004)
 # Masked for following ebuilds for testing:
