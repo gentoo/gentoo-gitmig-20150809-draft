@@ -3,21 +3,16 @@ Hash: SHA1
 
 MD5 3012f422939400d11e18a72cd608fafd ChangeLog 3016
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 47c73d1fe7a6ab3ead5526bca6137179 ntfsprogs-1.7.1.ebuild 1211
-MD5 2ece7be207ce2ca36a828fa1d709a353 ntfsprogs-1.8.5.ebuild 1259
 MD5 ff1fdaed136986e564040c3afb6cd09e ntfsprogs-1.9.0.ebuild 1266
 MD5 1b98261238c784b5c19c6545a1179913 ntfsprogs-1.9.1.ebuild 1203
 MD5 3a1fbaff4f1757c54de0d64a62cb6500 ntfsprogs-1.9.2.ebuild 1203
-MD5 9c54070c93405b7ad66d548e7fa2e2a4 files/digest-ntfsprogs-1.7.1 67
-MD5 d9d7402b81931391a4e354e89d94e4cd files/digest-ntfsprogs-1.8.5 67
-MD5 2954e3eda945cc153d217db1eb3a3a6e files/ntfsprogs-1.7.1-gcc3.patch 1983
 MD5 cd0b90ba20bb2ccbbf7f8b8d268fdf28 files/digest-ntfsprogs-1.9.0 67
 MD5 6d541589fcae2059ef92bbcb622489c4 files/digest-ntfsprogs-1.9.1 67
 MD5 0311a9250d765babd3f1e464dac4948c files/digest-ntfsprogs-1.9.2 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBilfOHTu7gpaalycRAu49AJ409Iw4Fho+N9vs1tgHCH1T1J3WoACgyOZk
-EliLhopy+iG5Z9mbuAvu/zs=
-=l1rz
+iD8DBQFBilhOHTu7gpaalycRApH+AKDKVgWkjC7QfzV0QVVxFfKgdmYbuwCfZsXO
+and3pv6jU4tYiv4Otvn13Vk=
+=uP8A
 -----END PGP SIGNATURE-----
