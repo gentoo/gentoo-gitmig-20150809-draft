@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgml-common
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.15 2003/09/13 06:27:02 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.16 2003/09/13 06:30:52 obz Exp $
+
+  13 Sep 2003; Mike Gardiner <obz@gentoo.org> sgml-common-0.6.3-r1.ebuild,
+  sgml-common-0.6.3.ebuild:
+  Removed older versions
 
   13 Sep 2003; Mike Gardiner <obz@gentoo.org> metadata.xml,
   sgml-common-0.6.3-r3.ebuild, sgml-common-0.6.3-r4.ebuild:
