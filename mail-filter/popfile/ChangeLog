@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/popfile
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.4 2004/07/18 15:40:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.5 2004/09/25 17:50:35 ticho Exp $
+
+  25 Sep 2004; Andrej Kacian <ticho@gentoo.org> popfile-0.20.1.ebuild,
+  popfile-0.21.1.ebuild:
+  Add unzip to DEPEND, since the distfile is .zip. Closes #65176, reported by
+  Tom PArker <tom@wiresncode.com>.
 
   05 Jun 2004; David Holm <dholm@gentoo.org> popfile-0.21.1.ebuild:
   Added to ~ppc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-0.21.1.ebuild,v 1.3 2004/06/24 22:21:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-0.21.1.ebuild,v 1.4 2004/09/25 17:50:35 ticho Exp $
 
 IUSE=""
 
@@ -18,7 +18,8 @@ DEPEND=">=dev-lang/perl-5.8
 	dev-perl/Text-Kakasi
 	dev-perl/MIME-Base64
 	dev-perl/HTML-Tagset
-	dev-perl/DBD-SQLite"
+	dev-perl/DBD-SQLite
+	app-arch/unzip"
 
 src_compile() {
 	# do nothing

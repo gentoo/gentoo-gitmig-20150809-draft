@@ -1,6 +1,16 @@
-MD5 28ce0b23d174ef0b1fec98a564f87d9f popfile-0.20.1.ebuild 1094
-MD5 bcb893ddf21a9dc9400f7277e0578a74 popfile-0.21.1.ebuild 1134
-MD5 7191c082f3c54da55e866f6c3d3e924b ChangeLog 1421
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7787d5ddc6bba31f81070a4cfd5962f4 ChangeLog 1632
 MD5 7ffa9bf1b757cbd93afb8c746fcd24e6 metadata.xml 293
+MD5 3f6da034eaa8a81c7d156abc45ffc172 popfile-0.21.1.ebuild 1147
+MD5 709707056a5500bc115d9e26f94d356e popfile-0.20.1.ebuild 1107
 MD5 b97d4969666f64a2d8b7c050253dc29b files/digest-popfile-0.20.1 64
 MD5 d9d12773e8397a1960eab275e3bcc8c4 files/digest-popfile-0.21.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBVbAF10xuJSrg3/sRAtPGAJ4xO8uxVhBL8GQuE0hG7VffaS76egCeOIxx
+bIR64AC9l1f1VDRUy8hR+YI=
+=tmdY
+-----END PGP SIGNATURE-----
