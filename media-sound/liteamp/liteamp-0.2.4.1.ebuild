@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/liteamp/liteamp-0.2.4.1.ebuild,v 1.6 2004/07/09 03:05:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/liteamp/liteamp-0.2.4.1.ebuild,v 1.7 2004/07/14 20:50:42 agriffis Exp $
 
-IUSE="doc debug"
+IUSE=""
 
 inherit eutils gnome2
 
