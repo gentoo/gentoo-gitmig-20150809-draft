@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r1.ebuild,v 1.8 2004/06/25 03:09:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r1.ebuild,v 1.9 2004/07/14 23:53:46 agriffis Exp $
 
 inherit gnuconfig
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}
 	>=sys-apps/util-linux-2.11f"
 
 src_compile() {
-	use ppc64 && gnuconfig_update
+	gnuconfig_update
 	./configure \
 		--mandir=/usr/share/man \
 		--with-statedir=/var/lib/nfs \
