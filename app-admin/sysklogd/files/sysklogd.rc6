@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/files/sysklogd.rc6,v 1.5 2003/05/12 16:02:15 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/files/sysklogd.rc6,v 1.6 2003/07/28 07:08:12 azarah Exp $
 
 # NB: Config is in /etc/conf.d/sysklogd
 
@@ -29,10 +29,10 @@ start() {
 
 stop() {
 
-	ebegin "Stopping klogd, syslogd"
-	start-stop-daemon --stop --retry 1 --quiet --pidfile /var/run/klogd.pid
-	retval=$?
+	ebegin "Stopping syslogd, klogd"
 	start-stop-daemon --stop --retry 1 --quiet --pidfile /var/run/syslogd.pid
+	retval=$?
+	start-stop-daemon --stop --retry 1 --quiet --pidfile /var/run/klogd.pid
 	retval=$(( ${retval} + $? ))
 	eend ${retval} "Failed to stop klogd, syslogd"
 }
