@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/psgml-1.2.5-r1.ebuild,v 1.5 2004/03/14 12:49:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/psgml-1.2.5-r1.ebuild,v 1.6 2004/06/15 09:54:20 kloeri Exp $
 
 inherit elisp
 
@@ -15,8 +15,6 @@ KEYWORDS="x86 sparc amd64 ~ppc"
 
 DEPEND="virtual/emacs
 	app-text/openjade"
-
-S="${WORKDIR}/${P}"
 
 SITEFILE=50psgml-gentoo.el
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tnt/tnt-2.4.ebuild,v 1.4 2004/06/01 14:09:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tnt/tnt-2.4.ebuild,v 1.5 2004/06/15 10:05:13 kloeri Exp $
 
 inherit elisp
 
@@ -14,8 +14,6 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="virtual/emacs"
-
-S="${WORKDIR}/${P}"
 
 src_compile() {
 	make clean && make || die

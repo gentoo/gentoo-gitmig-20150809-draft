@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-4.6.ebuild,v 1.5 2004/04/03 23:35:30 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-4.6.ebuild,v 1.6 2004/06/15 09:55:29 kloeri Exp $
 
 inherit elisp
 
@@ -14,8 +14,6 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 
 DEPEND="virtual/emacs"
-
-S="${WORKDIR}/${P}"
 
 src_compile() {
 	emacs -batch -eval '(byte-compile-file "python-mode.el")'

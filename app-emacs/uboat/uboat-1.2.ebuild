@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/uboat/uboat-1.2.ebuild,v 1.4 2004/04/25 15:35:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/uboat/uboat-1.2.ebuild,v 1.5 2004/06/15 10:07:06 kloeri Exp $
 
 inherit elisp
 
@@ -14,8 +14,6 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 
 DEPEND="virtual/emacs"
-
-S="${WORKDIR}/${P}"
 
 SITEFILE=50uboat-gentoo.el
 

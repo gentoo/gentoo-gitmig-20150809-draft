@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-4.0.64.ebuild,v 1.2 2004/04/04 16:19:07 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-4.0.64.ebuild,v 1.3 2004/06/15 09:49:53 kloeri Exp $
 
 inherit elisp
 
@@ -14,8 +14,6 @@ LICENSE="BSD"
 SLOT="0"
 # 4.x is meant to be a development branch, so please don't unmask it!
 KEYWORDS="~x86 ~alpha"
-
-S="${WORKDIR}/${P}"
 
 DEPEND="virtual/emacs"
 RDEPEND="${DEPEND}

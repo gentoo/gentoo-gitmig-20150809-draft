@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-3.3.ebuild,v 1.4 2004/04/04 16:19:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-3.3.ebuild,v 1.5 2004/06/15 09:49:53 kloeri Exp $
 
 inherit elisp
 
@@ -12,7 +12,6 @@ SRC_URI="ftp://ftp.mew.org/pub/Mew/release/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 alpha ppc sparc"
-S="${WORKDIR}/${P}"
 
 DEPEND="virtual/emacs"
 RDEPEND="${DEPEND}
