@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.4.ebuild,v 1.1 2002/04/17 11:48:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.4.ebuild,v 1.2 2002/04/17 17:11:50 seemant Exp $
 
 S=${WORKDIR}/SDL-${PV}
 DESCRIPTION="Simple Direct Media Layer"
@@ -20,7 +20,7 @@ RDEPEND=">=media-libs/audiofile-0.1.9
 	directfb? ( >=dev-libs/DirectFB-0.9.7 )"
 
 DEPEND="${RDEPEND}
-	dev-lang/nasm-0.98"
+	dev-lang/nasm"
 
 
 src_compile() {
