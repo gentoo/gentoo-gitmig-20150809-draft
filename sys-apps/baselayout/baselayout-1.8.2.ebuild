@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.1.ebuild,v 1.4 2002/08/19 23:11:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.2.ebuild,v 1.1 2002/08/25 19:12:55 azarah Exp $
 
-SV="1.3.8"
+SV="1.3.9"
 SVREV=""
 #sysvinit version
 SVIV="2.84"
+
 S=${WORKDIR}/rc-scripts-${SV}
 S2=${WORKDIR}/sysvinit-${SVIV}/src
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts and sysvinit)"
@@ -14,12 +15,13 @@ SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/sysvinit-${SVIV}.tar.g
 	http://www.ibiblio.org/gentoo/distfiles/termcap.bz2"
 #	http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
-KEYWORDS="x86 ppc sparc sparc64"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND="sys-kernel/linux-headers"
+
 # This version need awk and wc in /bin, so add it with this dummy depend.
 RDEPEND="${DEPEND}
 	!<sys-apps/gawk-3.1.0-r3"
@@ -69,7 +71,7 @@ src_unpack() {
 	fi
 	
 	# Fix Sparc specific stuff
-	if [ "${ARCH}" == "sparc" -o "${ARCH}" == "sparc64" ]; then
+	if [ "${ARCH}" = "sparc" -o "${ARCH}" = "sparc64" ]; then
 		cd ${S}/etc
 		cp rc.conf rc.conf.orig
 		sed -e 's:KEYMAP="us":KEYMAP="sun":' rc.conf.orig >rc.conf || die
@@ -99,22 +101,12 @@ src_compile() {
 	fi
 }
 
-#adds ".keep" files so that dirs aren't auto-cleaned
-keepdir() {
-	dodir $*
-	local x
-	for x in $*
-	do
-		touch ${D}/${x}/.keep
-	done
-}
-
 defaltmerge() {
 	#define the "altmerge" variable.
 	altmerge=0
 	#special ${T}/ROOT hack because ROOT gets automatically unset during src_install()
 	#(because it conflicts with some makefiles)
-	local ROOT
+	local ROOT=""
 	ROOT="`cat ${T}/ROOT`"
 	if [ -z "`use bootstrap`" ] && [ -z "`use build`" ] &&  [ -e ${ROOT}/dev/.devfsd ]
 	then
@@ -127,7 +119,7 @@ defaltmerge() {
 
 src_install()
 {
-	local foo
+	local foo=""
 	defaltmerge
 	keepdir /sbin
 	exeinto /sbin
@@ -234,10 +226,6 @@ src_install()
 	insinto /etc
 	doins ${WORKDIR}/termcap
 
-#	dodir /etc/X11
-#	exeinto /etc/X11
-#	doexe ${S}/sbin/startDM.sh
-
 	keepdir /lib/dev-state
 	if [ $altmerge -eq 1 ]
 	then
@@ -290,7 +278,7 @@ src_install()
 		[ -f $foo ] && doins $foo
 	done
 	#/etc/conf.d/net.ppp* should only be readible by root
-#	chmod 0600 ${D}/etc/conf.d/net.ppp*
+	chmod 0600 ${D}/etc/conf.d/net.ppp*
 
 	#this seems the best place for templates .. any ideas ?
 	#NB: if we move this, then $TEMPLATEDIR in net.ppp0 need to be updated as well
@@ -305,7 +293,7 @@ src_install()
 		[ -f $foo ] && doexe $foo
 	done
 	#/etc/init.d/net.ppp* should only be readible by root
-	chmod 0600 ${D}/etc/init.d/net.ppp*
+#	chmod 0600 ${D}/etc/init.d/net.ppp*
 
 	#these moved from /etc/init.d/ to /sbin to help newb systems
 	#from breaking
@@ -335,7 +323,7 @@ src_install()
 	[ "$ROOT" = "/" ] && return
 	
 	#set up default runlevel symlinks
-	local bar
+	local bar=""
 	for foo in default boot nonetwork single
 	do
 		keepdir /etc/runlevels/${foo}
@@ -380,8 +368,27 @@ pkg_postinst() {
 	then
 		cd ${ROOT}/dev
 		#These devices are also needed by many people and should be included
-		echo "Making device nodes (this could take a minute or so...)"
-		${ROOT}/usr/sbin/MAKEDEV generic-i386
+		einfo "Making device nodes (this could take a minute or so...)"
+		
+		case ${ARCH} in
+			x86)
+				einfo "Using generic-i386 to make device nodes..."
+				${ROOT}/usr/sbin/MAKEDEV generic-i386
+				;;
+			ppc)
+				einfo "Using generic-powerpc to make device nodes..."
+				${ROOT}/usr/sbin/MAKEDEV generic-powerpc
+				;;
+			sparc|sparc64)
+				einfo "Using generic-sparc to make device nodes..."
+				${ROOT}/usr/sbin/MAKEDEV generic-sparc
+				;;
+			*)
+				einfo "Using generic-i386 to make device nodes..."
+				${ROOT}/usr/sbin/MAKEDEV generic-i386
+				;;
+		esac
+		
 		${ROOT}/usr/sbin/MAKEDEV sg
 		${ROOT}/usr/sbin/MAKEDEV scd
 		${ROOT}/usr/sbin/MAKEDEV rtc 
@@ -416,7 +423,7 @@ EOF
 		fi
 	fi
 	#we should only install empty files if these files don't already exist.
-	local x
+	local x=""
 	for x in log/lastlog run/utmp log/wtmp
 	do
 		[ -e ${ROOT}/var/${x} ] || touch ${ROOT}/var/${x}
@@ -440,7 +447,8 @@ EOF
 	# not to quit properly on reboot, and causes a fsck of / on next reboot.
 	if [ "$ROOT" = "/" ] && [ -z "`use bootstrap`" ] && [ -z "`use build`" ]
 	then
-		/sbin/init U &>/dev/null
+		#do not return an error if this fails
+		/sbin/init U &>/dev/null || :
 	fi
 }
 
