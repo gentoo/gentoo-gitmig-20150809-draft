@@ -35,7 +35,7 @@ MD5 bf268fdddc8ef677b6fa78661a094eac files/samba-3.0.6-samba.schema 16044
 MD5 216595e2a9b2485358f5c47e8ab7993e files/digest-samba-3.0.5-r1 203
 MD5 e767027dcb6844f85b56cb874c6c72d6 files/digest-samba-3.0.6-r3 203
 MD5 e767027dcb6844f85b56cb874c6c72d6 files/digest-samba-3.0.6-r4 203
-MD5 5674f3d9b2f2e643f85ed0737baaaa7f files/digest-samba-3.0.7-r1 203
+MD5 a6cb7ea67d2a4fa00cb2d5dba0710cc3 files/digest-samba-3.0.7-r1 203
 MD5 8c1f1e3655e12b85102ce257f3efad62 files/smb.conf.example-samba3 20762
 MD5 9560b7e29d3a65db029fc1800e84abcc files/samba-pdb_ldap-exop.patch 3921
 MD5 3685eadb817d185b06476eca6c0c15c4 files/smbusers 204
