@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.5 2002/11/10 18:45:31 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.6 2003/01/15 19:02:57 raker Exp $
+
+*audacity-1.1.1 (15 Jan 2003)
+
+  15 Jan 2003; Nick Hadaway <raker@gentoo.org> audacity-1.1.1.ebuild, 
+  files/digest-audacity-1.1.1, files/mono_mp3_export.patch :
+  Version bump.  Marked stable as it depends on wxGTK-2.4.x which
+  has also been released as stable.  Thanks to the anonymous
+  "Gentoo User" on bug #13978 for the mono patch.
 
 *audacity-1.1.0 (10 Nov 2002)
 
