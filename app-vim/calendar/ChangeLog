@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/calendar
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/calendar/ChangeLog,v 1.1 2003/08/12 01:47:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/calendar/ChangeLog,v 1.2 2003/08/12 02:02:14 agriffis Exp $
+
+  11 Aug 2003; Aron Griffis <agriffis@gentoo.org> :
+  Update from author: "Sorry, I was very busy. I'm glad to your invitation.
+  Please include it. Thanks."  I assume this means that the choice of the
+  vim license is sufficient.
 
 *calendar-1.3u (11 Aug 2003)
 
