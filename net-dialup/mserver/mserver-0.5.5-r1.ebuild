@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mserver/mserver-0.5.5-r1.ebuild,v 1.7 2004/06/24 22:30:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mserver/mserver-0.5.5-r1.ebuild,v 1.8 2004/07/14 23:04:45 agriffis Exp $
 
 inherit eutils
 
 DESCRIPTION="Daemon that provides control of dial-up links to other PCs on the LAN"
 HOMEPAGE="http://cpwright.com/mserver/"
 SRC_URI="http://cpwright.com/mserver/download/c-${P}.tar.gz"
-S=${WORKDIR}/${P}
 IUSE=""
 DEPEND="sys-libs/pam"
 RDEPEND="net-dialup/ppp"
