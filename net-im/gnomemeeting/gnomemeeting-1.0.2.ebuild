@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.0.2.ebuild,v 1.9 2004/08/22 05:12:47 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.0.2.ebuild,v 1.10 2004/10/23 14:02:22 weeve Exp $
 
 inherit gnome2 eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.gnomemeeting.org/includes/clicks_counter.php?http://www.gnom
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="ipv6 sdl ssl"
 
 RDEPEND=">=dev-libs/pwlib-1.6.6
