@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 
 DESCRIPTION="Exports GNUSTEP_LOCAL_ROOT"
+HOMEPAGE="http://www.gentoo.org"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 sparc sparc64"
 SLOT="0"
