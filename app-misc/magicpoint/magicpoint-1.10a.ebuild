@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.10a.ebuild,v 1.4 2003/09/05 12:10:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.10a.ebuild,v 1.5 2003/09/22 01:31:57 usata Exp $
 
-inherit elisp eutils
+inherit elisp-common eutils
 
 IUSE="cjk emacs truetype gif nls imlib"
 
@@ -14,14 +14,13 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="x86 ~alpha ~sparc ~ppc"
 
-E_DEPEND="emacs? ( ${E_DEPEND}  )"
-E_RDEPEND="emacs? ( ${E_RDEPEND} )"
 DEPEND="virtual/x11
 	gif? ( >=media-libs/libungif-4.0.1 )
 	imlib? ( media-libs/imlib )
 	cjk? ( truetype? ( >=media-libs/vflib-2.25.6-r1 )
 		: ( =media-libs/freetype-1* ) )
-	truetype? ( =media-libs/freetype-1* )"
+	truetype? ( =media-libs/freetype-1* )
+	emacs? ( virtual/emacs )"
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
@@ -91,4 +90,14 @@ src_install() {
 	cd -
 
 	dodoc COPYRIGHT* FAQ README* RELNOTES SYNTAX TODO* USAGE*
+}
+
+pkg_postinst() {
+
+	use emacs && elisp-site-regen
+}
+
+pkg_postrm() {
+
+	use emacs && elisp-site-regen
 }
