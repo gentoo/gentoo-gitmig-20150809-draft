@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.4 2004/07/26 03:30:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.5 2004/07/27 06:07:59 ferringb Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -270,7 +270,7 @@ src_compile() {
 		$(use_enable samba smb)		\
 		$(use_enable truetype freetype)	\
 		$(use_enable v4l tv-v4l)	\
-		$(use_enable v4l tv-v4l2)	\
+		$(use_enable v4l2 tv-v4l2)	\
 		$(use_enable divx4linux)	\
 		$(use_enable gif)		\
 		$(use_enable jpeg)		\
