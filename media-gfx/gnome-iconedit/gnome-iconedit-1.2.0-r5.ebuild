@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/gnome-iconedit-1.2.0-r5.ebuild,v 1.19 2004/07/14 17:37:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/gnome-iconedit-1.2.0-r5.ebuild,v 1.20 2004/08/22 05:10:28 obz Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,7 +18,7 @@ RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	>=media-libs/gdk-pixbuf-0.11.0-r1
 	dev-libs/libxml
 	media-libs/libpng
-	gnome-base/ORBit"
+	=gnome-base/orbit-0*"
 
 DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 # Gnome-Print support is broken
