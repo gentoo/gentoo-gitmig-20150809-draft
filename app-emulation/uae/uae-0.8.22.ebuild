@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.16 2004/10/22 13:10:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.17 2004/10/22 17:30:41 dholm Exp $
 
 inherit eutils
 
-DESCRIPTION="An amiga emulator"
+DESCRIPTION="The Umiquious Amiga Emulator"
 HOMEPAGE="http://www.freiburg.linux.de/~uae/"
 SRC_URI="ftp://ftp.freiburg.linux.de/pub/uae/sources/develop/${P}.tar.gz"
 
