@@ -123,7 +123,7 @@ switch_profile() {
 			_activate_profile $1
 		fi
 	else
-		for x in `ls ${PROFILE_PATH}`; do
+		for x in `ls ${PROFILE_PATH} | sort -r`; do
 			if [ "${x}" != "current" -a "${x}" != "removed" ]; then
 				_deactivate_profile
 				_activate_profile ${x}
