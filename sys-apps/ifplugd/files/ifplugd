@@ -1,0 +1,36 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/files/ifplugd,v 1.1 2003/03/17 15:24:17 wmertens Exp $
+
+#NB: Config is in /etc/conf.d/ifplugd
+
+IFPLUGD=/usr/sbin/ifplugd
+
+[ -z "$INTERFACES" ] && INTERFACES="eth0"
+[ "$INTERFACES" = "auto" ] && INTERFACES=`cat /proc/net/dev | awk '{ print $1 }' | grep ^eth | cut -d: -f1`
+
+start() {
+	einfon "Starting ifplugd: "
+	for IF in $INTERFACES ; do
+		echo -n "$IF "
+		$IFPLUGD -i $IF $ARGS
+		if [ $? -ne 0 ]; then
+			eend $? "Problem starting for $IF"
+			return 1
+		fi
+	done
+	eend 0
+}
+
+stop() {
+	einfon "Stopping ifplugd: "
+	for IF in $INTERFACES ; do
+		echo -n "$IF "
+		$IFPLUGD -k -i $IF || ewarn "Couldn't stop instance for $IF"
+	done
+	eend 0
+}
+
+
+# vim:ts=4
