@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/aalib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.15 2004/06/24 22:55:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.16 2004/10/05 09:32:17 eradicator Exp $
+
+  05 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml:
+  static USE flag support and added metadata.
 
   20 Jun 2004; Seemant Kulleen <seemant@gentoo.org> aalib-1.4_rc4-r2.ebuild:
   ensure that automake-1.4 is used, otherwise build errors are the result.
