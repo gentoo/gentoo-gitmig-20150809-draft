@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-2.3.1.ebuild,v 1.2 2003/05/20 21:39:09 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-2.3.1.ebuild,v 1.3 2003/06/03 21:24:23 mkeadle Exp $
 
-IUSE="gnome kde nls xinerama"
+IUSE="gnome kde nls xinerama truetype"
 
 inherit commonbox eutils
 

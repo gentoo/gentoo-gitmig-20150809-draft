@@ -4,7 +4,7 @@
 
 inherit commonbox
 
-IUSE="gnome kde nls xinerama"
+IUSE="gnome kde nls xinerama truetype"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window manager based on BlackBox"
