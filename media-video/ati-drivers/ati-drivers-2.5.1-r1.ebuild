@@ -1,21 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1-r1.ebuild,v 1.8 2003/03/27 02:07:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1-r1.ebuild,v 1.9 2003/03/27 02:12:45 seemant Exp $
 
 IUSE="qt kde gnome"
 
-SRC_URI="http://pdownload.mii.instacontent.net/ati/drivers/fglrx-glc22-4.2.0-${PV}.i586.rpm"
-HOMEPAGE="http://www.ati.com"
 DESCRIPTION="Ati precompiled drivers for r300, r250 and r200 chipsets"
+HOMEPAGE="http://www.ati.com"
+SRC_URI="http://pdownload.mii.instacontent.net/ati/drivers/fglrx-glc22-4.2.0-${PV}.i586.rpm"
 
-LICENSE="ATI GPL-2 QPL-1.0"
 SLOT="${KV}"
+LICENSE="ATI GPL-2 QPL-1.0"
 KEYWORDS="-* ~x86"
 
 DEPEND=">=virtual/linux-sources-2.4
 	>=sys-libs/glibc-2.2.2
-	sys-apps/cpio
-	app-arch/rpm
+	app-arch/rpm2targz
 	<x11-base/xfree-4.2.99
 	qt? ( >=x11-libs/qt-3.0 )"
 
@@ -24,7 +23,8 @@ RESTRICT="nostrip"
 
 src_unpack() {
     cd ${WORKDIR}
-    rpm2cpio ${DISTDIR}/${A} | cpio --extract --make-directories --unconditional
+    rpm2targz ${DISTDIR}/${A}
+	tar zxf fglrx-glc22-4.2.0-${PV}.i586.tar.gz
 }
 
 pkg_setup(){

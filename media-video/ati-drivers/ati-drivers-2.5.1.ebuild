@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1.ebuild,v 1.5 2003/03/27 02:07:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.5.1.ebuild,v 1.6 2003/03/27 02:12:45 seemant Exp $
 
 IUSE="qt kde gnome"
 
@@ -14,8 +14,7 @@ KEYWORDS="-* ~x86"
 
 DEPEND=">=virtual/linux-sources-2.4
 	>=sys-libs/glibc-2.2.2
-	sys-apps/cpio
-	app-arch/rpm
+	app-arch/rpm2targz
 	qt? ( >=x11-libs/qt-3.0 )"
 
 ATIBIN="${D}/opt/ati/bin"
@@ -23,7 +22,8 @@ RESTRICT="nostrip"
 
 src_unpack() {
     cd ${WORKDIR}
-    rpm2cpio ${DISTDIR}/${A} | cpio --extract --make-directories --unconditional
+    rpm2targz ${DISTDIR}/${A}
+	tar zxf fglrx-glc22-4.2.0-${PV}.i586.tar.gz
 }
 
 src_compile() {
