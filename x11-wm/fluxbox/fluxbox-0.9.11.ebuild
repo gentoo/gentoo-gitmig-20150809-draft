@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.11.ebuild,v 1.9 2005/01/02 18:21:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.11.ebuild,v 1.10 2005/01/11 19:08:57 ciaranm Exp $
 
 inherit eutils
 
@@ -67,9 +67,11 @@ src_unpack() {
 		[[ -f "${style}" ]] || die "waah! ${style} doesn't exist"
 
 		# Make fonts more readable if we use bigger-fonts
-		use bigger-fonts 1>/dev/null && ( sed -i \
-			-e 's~\([fF]ont:[ \t]\+[a-zA-Z]\+-\)[789]~\110~' \
-			${style} || die "sed voodoo failed (insufficient goats?)" )
+		if use bigger-fonts 1>/dev/null ; then
+			sed -i \
+				-e 's~\([fF]ont:[ \t]\+[a-zA-Z]\+-\)[789]~\110~' \
+				${style} || die "sed voodoo failed (insufficient goats?)"
+		fi
 
 		# We don't have a reliable sans font alias, change it to lucidasans.
 		# That might not work either, but it's more likely...
