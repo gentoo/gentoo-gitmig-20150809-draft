@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libart_lgpl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.12 2003/05/05 11:56:20 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.13 2003/07/01 20:25:48 gmsoft Exp $
 
 *libart_lgpl-2.3.12 (05 May 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> libart_lgpl-2.3.12.ebuild :
+  Added hppa to KEYWORDS.
 
   05 May 2003; foser <foser@gentoo.org libart_lgpl-2.3.12.ebuild :
   New version
