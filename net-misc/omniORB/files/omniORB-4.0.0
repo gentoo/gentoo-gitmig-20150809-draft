@@ -1,28 +1,27 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/files/omniORB-4.0.0,v 1.2 2003/02/14 23:06:53 vapier Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/files/omniORB-4.0.0,v 1.3 2004/03/06 03:38:08 vapier Exp $
 
 depend() {
-    need net
+	need net
 }
 
 start() {
-    if [ ! -d "/var/log/omniORB" ] ; then
-	install -d /var/log/omniORB
-    fi
-    if [ "/var/log/omniORB/omninames*" ] ; then
-	rm -f /var/log/omniORB/omninames*
-    fi
-    ebegin "Starting omniORB"
-    exec /usr/bin/omniNames -start 2809 -logdir /var/log/omniORB \
-    	-errlog /var/log/omniORB/omniORB.errors 1>&2 &
-    eend $? "Error starting omniORB."
+	if [ ! -d "/var/log/omniORB" ] ; then
+		install -d /var/log/omniORB
+	fi
+	if [ "/var/log/omniORB/omninames*" ] ; then
+		rm -f /var/log/omniORB/omninames*
+	fi
+	ebegin "Starting omniORB"
+	exec /usr/bin/omniNames -start 2809 -logdir /var/log/omniORB \
+		-errlog /var/log/omniORB/omniORB.errors 1>&2 &
+	eend $? "Error starting omniORB."
 }
 
 stop() {
-    ebegin "Stopping omniORB"
-    killall omniNames 1>&2
-    eend $? "Error stopping omniORB."
+	ebegin "Stopping omniORB"
+	killall omniNames 1>&2
+	eend $? "Error stopping omniORB."
 }
-

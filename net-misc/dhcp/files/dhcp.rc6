@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.rc6,v 1.10 2004/01/15 01:15:07 max Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.rc6,v 1.11 2004/03/06 03:30:53 vapier Exp $
 
 depend() {
 	need net
@@ -32,13 +32,13 @@ start() {
 	start-stop-daemon --start --quiet --exec /usr/sbin/dhcpd \
 		-- -pf /var/run/dhcp/dhcpd.pid -q \
 		-user dhcp -group dhcp ${DHCPD_OPTS} \
-        	${CHROOT:+-chroot ${CHROOT}} ${IFACE}
+		${CHROOT:+-chroot ${CHROOT}} ${IFACE}
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping dhcpd"
 	start-stop-daemon --stop --quiet --pidfile \
-                "${CHROOT}/var/run/dhcp/dhcpd.pid"
+		"${CHROOT}/var/run/dhcp/dhcpd.pid"
 	eend $?
 }

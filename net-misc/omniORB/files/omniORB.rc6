@@ -1,30 +1,29 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/files/omniORB.rc6,v 1.5 2003/02/14 23:07:05 vapier Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/files/omniORB.rc6,v 1.6 2004/03/06 03:38:08 vapier Exp $
 
 depend() {
-    need net
+	need net
 }
 
 start() {
-    if [ ! -d "/var/log/omniORB" ] ; then
-	install -d /var/log/omniORB
-    fi
-    if [ "/var/log/omniORB/omninames*" ] ; then
-	rm -f /var/log/omniORB/omninames*
-    fi
-    ebegin "Starting omniORB"
-    exec /usr/bin/omniNames -start 2809 -logdir /var/log/omniORB \
-    	-errlog /var/log/omniORB/omniORB.errors 1>&2 &
-    exec /usr/bin/notifd -c /etc/omniorb/channel.cfg 1>&2 &
-    eend $? "Error starting omniORB."
+	if [ ! -d "/var/log/omniORB" ] ; then
+		install -d /var/log/omniORB
+	fi
+	if [ "/var/log/omniORB/omninames*" ] ; then
+		rm -f /var/log/omniORB/omninames*
+	fi
+	ebegin "Starting omniORB"
+	exec /usr/bin/omniNames -start 2809 -logdir /var/log/omniORB \
+		-errlog /var/log/omniORB/omniORB.errors 1>&2 &
+	exec /usr/bin/notifd -c /etc/omniorb/channel.cfg 1>&2 &
+	eend $? "Error starting omniORB."
 }
 
 stop() {
-    ebegin "Stopping omniORB"
-    killall /usr/bin/omniNames 1>&2
-    killall /usr/bin/notifd 1>&2
-    eend $? "Error stopping omniORB."
+	ebegin "Stopping omniORB"
+	killall /usr/bin/omniNames 1>&2
+	killall /usr/bin/notifd 1>&2
+	eend $? "Error stopping omniORB."
 }
-

@@ -1,5 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/files/INSTALL.Gentoo,v 1.3 2004/03/06 03:36:03 vapier Exp $
 
 	 *******************************************************************************************
 	  | PLEASE LOOK AT THE MERGED CONFIG FILES AND UPDATE/OVERWRITE OLDER CONFS AS NEEDED! ***| 
@@ -40,4 +41,3 @@
 	 *******************************************************************************************
 	  | FOR MORE INFORMATION AND COMPLETE SET OF DOCUMENTATION GO TO WWW.LTSP.ORG  ***********| 
 	 *******************************************************************************************
-

@@ -1,5 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/files/zebra.confd,v 1.2 2004/03/06 03:40:48 vapier Exp $
 
 # Config file for /etc/init.d/zebra
 
