@@ -1,6 +1,8 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.26 2003/02/19 21:46:47 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.27 2003/02/21 21:35:23 agriffis Exp $
+
+*distcc-1.1-r11 (17 Feb 2003)
 
   19 Feb 2003; Zach Welch <zwelch@gentoo.org> distcc-1.1-r11.ebuild :
   Added arm to keywords.
@@ -8,8 +10,6 @@
   19 Feb 2003; Guy Martin <gmsoft@gentoo.org> distcc-1.1-r11.ebuild :
   Added ~hppa to keywords.
 
-*distcc-1.1-r11 (17 Feb 2003)
-  
   18 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Updated to fix minor bugs in -r11
 
