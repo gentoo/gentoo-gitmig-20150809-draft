@@ -1,6 +1,16 @@
-MD5 7da45f46de2d204cd6fc2fa8ed687bf2 viruskiller-0.9.ebuild 1105
-MD5 9ffe65e691dcf4277f8e13d19ab97ff3 ChangeLog 801
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0e2439770fe334b29863757b6e9ab738 viruskiller-0.9.ebuild 1113
+MD5 de87c3f85ee6f67c0d3a8a5eb7716424 ChangeLog 913
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 7e9b4e146dc27c68482cbda541bd9bd3 viruskiller-0.1.ebuild 1100
 MD5 5a039497fd26db84e5233c78ace9db37 files/digest-viruskiller-0.1 70
 MD5 7aed6b4a5ef035f812b711d9b650f0e0 files/digest-viruskiller-0.9 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBofbMZ/iYVBmujdURAk81AKD1uZJam03OtGoK7sp1P2tuFtMmVQCgiw06
+AW5akfrnq7NejA1JrNjoK94=
+=fwW+
+-----END PGP SIGNATURE-----

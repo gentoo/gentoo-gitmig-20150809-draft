@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/viruskiller
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/viruskiller/ChangeLog,v 1.5 2004/06/24 22:13:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/viruskiller/ChangeLog,v 1.6 2004/11/22 14:25:01 sekretarz Exp $
+
+  22 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  viruskiller-0.9.ebuild:
+  Added to ~amd64, bug #71226
 
   07 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> viruskiller-0.9.ebuild:
   stable; no bugs for 80 days
