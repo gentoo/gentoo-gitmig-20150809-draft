@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1.ebuild,v 1.9 2004/06/24 22:47:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1.ebuild,v 1.10 2004/07/14 17:50:30 agriffis Exp $
 
 inherit eutils
 
@@ -61,4 +61,3 @@ src_install() {
 
 	dodoc AUTHORS NEWS README
 }
-
