@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Mail-IMAPClient
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/ChangeLog,v 1.1 2005/01/09 15:45:55 mcummings Exp $
+
+*Mail-IMAPClient-2.2.9 (09 Jan 2005)
+
+  09 Jan 2005; Michael Cummings <mcummings@gentoo.org>
+  +files/2.2.9-skiptest.patch, +Mail-IMAPClient-2.2.9.ebuild:
+  bug 77092; ebuild and patch from Vanquirius <marcelogoes@gmail.com>
+
