@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2.ebuild,v 1.5 2004/02/07 11:32:08 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2.ebuild,v 1.6 2004/02/08 22:31:40 spider Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -13,7 +13,7 @@ IUSE="cdr dvdr doc accessibility samba"
 # when unmasking for an arch
 # double check none of the deps are still masked !
 
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64"
 
 #  Note to developers:
 #  This is a wrapper for the complete Gnome2 desktop,
@@ -54,7 +54,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=dev-libs/libxml2-2.6.4
 	>=dev-libs/libxslt-1.1.2
 
-	>=gnome-extra/acme-2.4.2
+	>=gnome-extra/acme-2.4.2-r1
 	>=gnome-extra/bug-buddy-2.4.2
 
 	>=gnome-base/control-center-2.4
@@ -63,9 +63,11 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/nautilus-2.4.2
 	>=gnome-extra/nautilus-media-0.3.3.1
 
+
+	!hppa? ( >=net-www/epiphany-1.0.7 )
+
 	>=media-gfx/eog-2.4.1
-	>=net-www/epiphany-1.0.7
-	>=app-arch/file-roller-2.4.4
+	>=app-arch/file-roller-2.4.4-r2
 	>=gnome-extra/gcalctool-4.3.16
 	>=gnome-extra/gconf-editor-2.4
 	>=gnome-base/gdm-2.4.1.7
@@ -114,7 +116,7 @@ RDEPEND="!gnome-base/gnome-core
 		>=gnome-extra/at-spi-1.3.9
 		>=gnome-extra/gnome-speech-0.2.8
 		>=gnome-extra/gnome-mag-0.10.4
-		>=gnome-extra/gok-0.8.4
+		>=gnome-extra/gok-0.9.1
 		>=gnome-extra/gnopernicus-0.7.1 )
 
 	samba? ( >=gnome-extra/gnome-vfs-extras-0.99.11 )"
@@ -123,7 +125,7 @@ RDEPEND="!gnome-base/gnome-core
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.15
-	>=dev-util/intltool-0.30
+	>=dev-util/intltool-0.29
 	doc? ( >=dev-util/gtk-doc-1.1 )"
 
 pkg_postinst () {
