@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.27 2004/04/15 18:05:08 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.28 2004/04/19 22:12:34 kugelfang Exp $
+
+  20 Apr 2004; Danny van Dyk <kugelfang@gentoo.org>
+  +files/hylafax-4.1.8-fPIC.patch, hylafax-4.1.8-r1.ebuild,
+  hylafax-4.1.8-r2.ebuild, hylafax-4.1.8.ebuild:
+  Added patch to allow compilation on alpha and amd64. Fixes BUG #47846. marked
+  -r2 "~amd64 ~alpha" and marked all previous version "-alpha -amd64" on behalf
+  of agriffis.
 
   15 Apr 2004; <augustus@gentoo.org> hylafax-4.1.8-r2.ebuild:
   Added ~amd64 keyword.
