@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.21 2004/11/07 16:48:24 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.22 2004/11/08 19:31:52 corsair Exp $
+
+  08 Nov 2004; Markus Rothe <corsair@gentoo.org> icu-2.8.ebuild:
+  Marked ~ppc64
 
 *icu-2.6.2 (07 Nov 2004)
 
