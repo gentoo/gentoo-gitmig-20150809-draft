@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.ebuild,v 1.3 2002/04/04 21:39:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.ebuild,v 1.4 2002/04/17 20:02:15 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-dist
 
@@ -28,6 +28,7 @@ src_unpack() {
     cd ${S}
     patch -p0 < ${FILESDIR}/${P}-gentoo-timidity.diff
     use alsa && patch -p0 < ${FILESDIR}/${P}-gentoo-alsa.diff
+    kde_sandbox_patch ${S}/kmidi/config    
     
 }
 
