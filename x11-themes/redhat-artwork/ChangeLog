@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/redhat-artwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.43 2004/12/20 18:24:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.44 2004/12/28 22:35:35 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *redhat-artwork-0.120.1.2 (20 Dec 2004)
 
@@ -47,7 +50,7 @@
   standing qt sandbox violations (#25445), xfree/xorg cursor install paths
   (#53348)
 
-  13 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  13 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   redhat-artwork-0.73.ebuild:
   Stable on alpha.
 

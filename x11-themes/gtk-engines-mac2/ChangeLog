@@ -1,8 +1,11 @@
 # ChangeLog for x11-themes/gtk-engines-mac2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mac2/ChangeLog,v 1.6 2004/07/09 21:32:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-mac2/ChangeLog,v 1.7 2004/12/28 22:31:29 ciaranm Exp $
 
-  09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  09 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gtk-engines-mac2-1.0.3-r1.ebuild:
   Stable on alpha.
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.20 2004/12/14 21:50:48 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.21 2004/12/28 22:34:07 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *gtk-engines-xfce-2.2.3 (14 Dec 2004)
 
@@ -21,7 +24,7 @@
   17 Sep 2004; Tom Gall <tgall@gentoo.org> gtk-engines-xfce-2.1.9.ebuild:
   stable on ppc64, bug #57744
 
-  09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  09 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gtk-engines-xfce-2.1.7.ebuild:
   Stable on alpha.
 

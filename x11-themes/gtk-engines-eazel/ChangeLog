@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-eazel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-eazel/ChangeLog,v 1.9 2004/10/17 23:52:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-eazel/ChangeLog,v 1.10 2004/12/28 22:27:58 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   18 Oct 2004; Alastair Tse <liquidx@gentoo.org>
   +files/gtk-engines-eazel-0.3-gcc34.patch, gtk-engines-eazel-0.3-r1.ebuild,
@@ -8,7 +11,7 @@
   added gcc3.4 patch thanks to Sebastian Dröge <sebastian.droege@gmx.de>
   (#64109)
 
-  09 Jul 2004; Bryan �stergaard <kloeri@gentoo.org>
+  09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
   gtk-engines-eazel-0.3-r1.ebuild:
   Stable on alpha.
 
