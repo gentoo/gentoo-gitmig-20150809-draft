@@ -1,0 +1,11 @@
+--- equeue-2.0.1/src/equeue-core/uq_engines.ml	2004-01-16 17:32:48.000000000 +0100
++++ equeue-2.0.1.patched/src/equeue-core/uq_engines.ml	2004-06-16 21:59:30.252822736 +0200
+@@ -518,7 +518,7 @@
+ let receiver_attn g = Unixqueue.Extra(Receiver_attn g);;
+ 
+ 
+-let buf_max_size = 4096;;
++let buf_max_size = 65536;;
+ 
+ 
+ class receiver ~src ~(dst : #async_out_channel) ?(close_src=true) 
