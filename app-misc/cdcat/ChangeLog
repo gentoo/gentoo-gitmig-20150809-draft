@@ -1,8 +1,11 @@
 # ChangeLog for app-misc/cdcat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/ChangeLog,v 1.4 2003/04/06 17:40:20 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/ChangeLog,v 1.5 2003/05/04 19:20:50 mholzer Exp $
 
 *cdcat-0.3 (06 Apr 2003)
+
+  04 May 2003; Martin Holzer <mholzer@gentoo.org> cdcat-0.3.ebuild:
+  Updated Homepage and SRC_URI. Closes #19987.
 
   06 Apr 2003; Martin Holzer <mholzer@gentoo.org> cdcat-0.2.ebuild,
   cdcat-0.3.ebuild:

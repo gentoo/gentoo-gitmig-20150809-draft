@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/cdcat-0.3.ebuild,v 1.2 2003/04/23 14:31:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/cdcat-0.3.ebuild,v 1.3 2003/05/04 19:20:51 mholzer Exp $
 
 DESCRIPTION="simple yet effective CD indexing program"
-SRC_URI="http://www.littledragon.f2s.com/unix/cdcat/${P}.tar.gz"
-HOMEPAGE="http://www.littledragon.f2s.com/unix/"
+SRC_URI="http://littledragon.home.ro/unix/${P}.tar.gz"
+HOMEPAGE="http://littledragon.home.ro/unix/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-apps/grep-2.4.2
