@@ -144,10 +144,6 @@ dev-java/jaxp
 #also LICENSE entry is not complete
 =dev-util/netbeans-3.3.2
 
-# <mkennedy@gentoo.org> (29 Jun 2002)
-# if it works with gcc2.95.3, unmask it
-=net-www/gplflash-0.4.10-r1
-
 # <spider@gentoo.org> ( 18 Jun 2002)
 # libtool break.
 #=net-libs/linc-0.5.0-r2
