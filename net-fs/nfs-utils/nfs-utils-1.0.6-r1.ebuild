@@ -1,29 +1,31 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r1.ebuild,v 1.5 2004/04/13 23:07:59 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r1.ebuild,v 1.6 2004/04/28 04:18:02 vapier Exp $
 
 inherit gnuconfig
 
+DESCRIPTION="NFS client and server daemons"
+HOMEPAGE="http://nfs.sourceforge.net/"
+SRC_URI="mirror://sourceforge/nfs/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc mips arm hppa ~amd64 ppc64"
 IUSE="tcpd"
 
-DESCRIPTION="NFS client and server daemons"
-SRC_URI="mirror://sourceforge/nfs/${P}.tar.gz"
-HOMEPAGE="http://nfs.sourceforge.net/"
-RESTRICT="nomirror"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 mips ppc64"
-
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )"
-RDEPEND="${DEPEND} >=net-nds/portmap-5b-r6 >=sys-apps/util-linux-2.11f"
+RDEPEND="${DEPEND}
+	>=net-nds/portmap-5b-r6
+	>=sys-apps/util-linux-2.11f"
 
 src_compile() {
 	use ppc64 && gnuconfig_update
 	./configure \
 		--mandir=/usr/share/man \
 		--with-statedir=/var/lib/nfs \
-		--disable-rquotad --enable-nfsv3 || die "Configure failed"
+		--disable-rquotad \
+		--enable-nfsv3 \
+		|| die "Configure failed"
 
 	if ! use tcpd; then
 		sed -i "s:\(-lwrap\|-DHAVE_TCP_WRAPPER\)::" config.mk
@@ -82,7 +84,4 @@ pkg_postinst() {
 	ewarn "export list, thus assuming the default behavior, a warning will"
 	ewarn "be generated at export time."
 	echo
-
-	# Running depscan since we introduced /etc/init.d/{portmap,nfs}
-	/etc/init.d/depscan.sh
 }
