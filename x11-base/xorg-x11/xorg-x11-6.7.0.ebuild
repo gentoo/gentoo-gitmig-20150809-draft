@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.2 2004/04/07 18:09:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.3 2004/04/07 18:29:24 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -79,7 +79,7 @@ XFSFT_ENC_VER="0.1"
 
 S="${WORKDIR}/xc"
 
-HOMEPAGE="http://www.x.org"
+HOMEPAGE="http://freedesktop.org/XOrg"
 
 # Misc patches we may need to fetch ..
 X_PATCHES="http://dev.gentoo.org/~spyderous/xorg/${PN}/patchsets/${PV}/${P}-patches-${PATCH_VER}.tar.bz2"
