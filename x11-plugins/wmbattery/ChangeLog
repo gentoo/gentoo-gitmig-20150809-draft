@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbattery
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.5 2003/12/06 15:43:38 port001 Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.6 2004/01/24 11:59:40 pyrania Exp $
+
+  24 Jan 2004; Markus Nigbur <pyrania@gentoo.org> wmbattery-2.19.ebuild:
+  SRC_URI fix.
 
 *wmbattery-2.19 (06 Dec 2003)
 
