@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Dan Armak <danarmak@gentoo.org>, Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.1 2001/12/18 12:42:18 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.2 2001/12/18 19:52:48 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
@@ -25,11 +25,12 @@ DEPEND="$DEPEND
 
 src_unpack() {
 	base_src_unpack all patch
-	kde-objprelink-patch
+	#kde-objprelink-patch
 }
 
 src_compile() {
-
+    
+    myconf="$myconf --enable-all"
     kde_src_compile myconf configure
     cd ${S} 
     make LIBPYTHON="`python-config --libs`"
