@@ -1,4 +1,16 @@
-MD5 aa34d0bc97adf5e67842f6c0d10d054c ChangeLog 401
-MD5 cad9c5bb949f1ceec8078182d6fe794d cgkit-1.1.0.ebuild 823
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 984fc0471975c73bdeb549fb03999cee metadata.xml 326
+MD5 f9093463dd55946e4e458ac47703ab34 cgkit-1.1.0.ebuild 824
+MD5 16d74d5da3b1e210952e04803853e7f0 ChangeLog 521
+MD5 4cdcf844048e00ddddf8c12068080d54 cgkit-1.2.0.ebuild 826
+MD5 bbefb53083b5476471ae7a80bd19225f files/digest-cgkit-1.2.0 60
 MD5 0dc9644564e6fe463b85fb42ed468ad3 files/digest-cgkit-1.1.0 123
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCDeXVugEuf3OQ0akRAlNxAJ0aEuVxP7GP8cHkHvLPfQsfzWaLhQCgoitO
+GycOv+HCdplwyEgTCd288Cs=
+=QcGV
+-----END PGP SIGNATURE-----
