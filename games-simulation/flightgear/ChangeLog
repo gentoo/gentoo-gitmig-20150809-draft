@@ -1,6 +1,13 @@
 # ChangeLog for games-simulation/flightgear
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.15 2004/12/26 18:16:05 seemant Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.16 2005/02/04 19:45:51 wolf31o2 Exp $
+
+*flightgear-0.9.8 (04 Feb 2005)
+
+  04 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  flightgear-0.9.4.ebuild, -flightgear-0.9.6.ebuild,
+  +flightgear-0.9.8.ebuild, -flightgear-0.9.8_pre1.ebuild:
+  Updated to 0.9.8 final and resolving bug #78962.
 
 *flightgear-0.9.8_pre1 (26 Dec 2004)
 

@@ -1,17 +1,16 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.8_pre1.ebuild,v 1.1 2004/12/26 18:16:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.8.ebuild,v 1.1 2005/02/04 19:45:51 wolf31o2 Exp $
 
 inherit flag-o-matic games
 
 MY_PN=FlightGear
-MY_PV=${PV/_/-}
-MY_P=${MY_PN}-${MY_PV}
+MY_P=${MY_PN}-${PV}
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Open Source Flight Simulator"
 HOMEPAGE="http://www.flightgear.org/"
 SRC_URI="mirror://flightgear/Source/${MY_P}.tar.gz
-	mirror://flightgear/Shared/fgfs-base-${MY_PV}.tar.bz2"
+	mirror://flightgear/Shared/fgfs-base-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,16 +18,14 @@ KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE=""
 
 RDEPEND="=dev-games/simgear-0.3.8*
-	>=media-libs/plib-1.7.0"
+	>=media-libs/plib-1.8.4"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i \
-		's:\(#include <simgear/screen/jpgfactory.hxx\)>:\1-faile-include>:g' \
-		configure || die "sed configure failed"
+	mv ../data ./data
 }
 
 src_compile() {
@@ -45,7 +42,7 @@ src_install() {
 	egamesinstall || die
 
 	dodir "${GAMES_DATADIR}/${MY_PN}"
-	cp -a ${WORKDIR}/data/* "${D}/${GAMES_DATADIR}/${MY_PN}" || die "cp failed"
+	cp -a data/* "${D}/${GAMES_DATADIR}/${MY_PN}" || die "cp failed"
 
 	dodoc README* ChangeLog AUTHORS NEWS Thanks
 
