@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2860 2004/05/14 20:47:17 lanius Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2861 2004/05/17 00:34:27 george Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -326,12 +326,6 @@ media-libs/libgpio
 # <george@gentoo.org> (03 Feb 2004)
 # blas dependants, will have to be unmasked after virtual is finalized and blas is unmasked
 =app-sci/xfoil-6.94-r1
-
-# <george@gentoo.org> (original mask 27 Oct 2003; renamed 01 Feb 2004)
-# masking work in progress (multiple blas related packages will have to be unmasked
-# sinchronously)
-app-sci/blas-reference
-app-sci/blas-atlas
 
 # <dragonheart@gentoo.org> (01 Feb 2004)
 # work in progress
