@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.02.3.ebuild,v 1.1 2002/06/10 07:28:29 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.02.3.ebuild,v 1.2 2002/06/18 21:21:17 george Exp $
 
 
 # ebuild for Glorious Glasgow Haskell
@@ -16,10 +16,16 @@
 #   a matching version of GHC.
 # - Stage 3:
 #   The full and final GHC is built, including HOpenGL (if using
-#   opengl), GHCi, and user documentation.
+#   opengl), GHCi, and user documentation (if using doc).
 #
 # Set the GHC environment variable to your GHC executable if it's not
 # in your PATH.
+#
+# USE variable summary:
+#   opengl - Build HOpenGL (OpenGL binding for Haskell).
+#   doc    - Build extra documenation from DocBook sources, namely
+#            the GHC User's Guide and the hslibs docs. In HTML format.
+#   tetex  - Build the above docs as PostScript as well.
 #
 # 2002-05-22  Sven Moritz Hallberg <pesco@gmx.de>
 
@@ -39,12 +45,12 @@ DEPEND="virtual/glibc
 		>=sys-devel/make-3.79.1
 		>=sys-apps/sed-3.02.80
 		>=sys-devel/flex-2.5.4a
-		>=app-text/openjade-1.3.1
-		>=app-text/sgml-common-0.6.3
-		>=app-text/docbook-sgml-dtd-4.1
-		>=app-text/docbook-dsssl-stylesheets-1.64
-		tetex? ( >=app-text/tetex-1.0.7
-				>=app-text/jadetex-3.12 )
+		doc? ( >=app-text/openjade-1.3.1
+				>=app-text/sgml-common-0.6.3
+				app-text/docbook-sgml-dtd-3.1
+				>=app-text/docbook-dsssl-stylesheets-1.64
+				tetex? ( >=app-text/tetex-1.0.7
+						>=app-text/jadetex-3.12 ) )
 		opengl? ( virtual/opengl
 				virtual/glu
 				virtual/glut )"
@@ -210,16 +216,18 @@ src_install() {
 			# Misc
 			dodoc README ANNOUNCE LICENSE || die
 
-			# HTML
-			dohtml -r docs/set/set/* || die
-			dosym set.html /usr/share/doc/${PF}/html/index.html || die
+			if use doc; then
+				# HTML
+				dohtml -r docs/set/set/* || die
+				dosym set1.html /usr/share/doc/${PF}/html/index.html || die
 
-			# PostScript
-			if use tetex; then
-				pushd docs/set || die
-					docinto ps
-					dodoc set.ps || die
-				popd
+				# PostScript
+				if use tetex; then
+					pushd docs/set || die
+						docinto ps
+						dodoc set.ps || die
+					popd
+				fi
 			fi
 
 		# End documentation
@@ -274,9 +282,12 @@ build_stage3() {
 				--without-happy \
 				${myconf} || die
 		make || die
-		emake html || die
-		if use tetex; then
-			emake ps || die
+
+		if use doc; then
+			emake html || die
+			if use tetex; then
+				emake ps || die
+			fi
 		fi
 
 	popd
