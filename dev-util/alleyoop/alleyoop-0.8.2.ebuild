@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/alleyoop-0.8.2.ebuild,v 1.3 2004/05/13 14:36:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/alleyoop-0.8.2.ebuild,v 1.4 2004/06/15 02:19:00 dragonheart Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/alleyoop/${P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc -sparc -alpha"
+KEYWORDS="x86 ~ppc -sparc -alpha"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.2
@@ -20,17 +20,7 @@ RDEPEND=">=dev-libs/glib-2.2
 	>=gnome-base/libglade-2.2
 	sys-devel/binutils
 	dev-util/valgrind
-	dev-libs/atk
-	dev-libs/expat
-	dev-libs/libxml2
-	dev-libs/popt
-	gnome-base/ORBit2
-	gnome-base/gnome-vfs
-	gnome-base/libbonoboui
-	virtual/glibc
-	sys-libs/zlib
-	virtual/x11
-	x11-libs/pango"
+	virtual/glibc"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
