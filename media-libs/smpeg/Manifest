@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 56630c536c5721b149b9b8f4b3b6d38c ChangeLog 2385
-MD5 b6653541e757bb87ad908d134afb6ab0 smpeg-0.4.4-r4.ebuild 1367
+MD5 7c078fcebf6ee6965d8c96dbb7d20c14 smpeg-0.4.4-r4.ebuild 1361
+MD5 bcdff718fc24cba27a544a0474b88636 ChangeLog 2379
 MD5 228adf6a40bb4eef222c38d23f97014b files/digest-smpeg-0.4.4-r4 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA2hpQHTu7gpaalycRAjtCAKCoD2KFqxpFUWqK8E2FBBF775e4fQCfSl4n
-Fjhg69+j9qFR4qVV4To3HDo=
-=44Mv
------END PGP SIGNATURE-----

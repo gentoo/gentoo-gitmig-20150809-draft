@@ -1,31 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3c274dbf75a06b6944c33b906db14ba5 ChangeLog 6875
-MD5 bd29ae6136ac08f32c6a27cbb4b1d65f netpbm-10.19.ebuild 1745
-MD5 b609eecf67c4b72a6bfbb5c00334a98e netpbm-10.11.14.ebuild 2006
-MD5 1432768a4a532f0f2c0b210c2300921f netpbm-10.11.5-r3.ebuild 1563
-MD5 3d1fe9ba2b1847ffe9bb8a1875bc5260 netpbm-9.12-r4.ebuild 1339
-MD5 bb4bc60722f622a741ec16fa85b6dec8 netpbm-10.11.15.ebuild 2005
+MD5 8ca8160a58c467be2569594d11f80208 netpbm-10.20.ebuild 2145
+MD5 def67e3fce4a507bc2a3e0fff3d2c19c netpbm-9.12-r4.ebuild 1333
+MD5 a06eeead6a09fadcec683801846fed1b netpbm-10.11.14.ebuild 2000
+MD5 21805071ef24d25d77ce30ad4608e8fe netpbm-10.18.7.ebuild 1999
+MD5 7873f0d4e23d5ca1c67bf2c025a0daa8 netpbm-10.11.15.ebuild 1999
+MD5 fc5b2c41ccdc4c486d3f7b65771753b5 netpbm-10.19.ebuild 1739
+MD5 5e69978e4bb333a8c7becf5aeb7b6926 ChangeLog 6867
+MD5 8b26ce27b466cd799219bae9a1a9919a netpbm-10.11.5-r3.ebuild 1557
 MD5 e1f6c302199a36c1be4ecf1654be9bac metadata.xml 224
-MD5 60e164c7482e87c2698316714a2d6043 netpbm-10.18.7.ebuild 2005
-MD5 c27531fe64df542a2b04457af395054f netpbm-10.20.ebuild 2151
-MD5 15efd1a3748d1c9b0a9d9e88374bcbbc files/digest-netpbm-10.11.15 65
 MD5 6735fc271948c349d02f59361b4c373e files/digest-netpbm-10.11.14 65
-MD5 19ce2b4d396523dcbcb1e415d4bdb8c9 files/digest-netpbm-10.11.5-r3 64
+MD5 15efd1a3748d1c9b0a9d9e88374bcbbc files/digest-netpbm-10.11.15 65
+MD5 74da89b4a373ba2116b4ba5d8e9d31a0 files/digest-netpbm-10.18.7 64
 MD5 b38412609f4a8671a787d303b8d2b876 files/digest-netpbm-9.12-r4 61
 MD5 c06a062a991dc2b0f8bd88ac44a1e5e5 files/digest-netpbm-10.19 62
-MD5 74da89b4a373ba2116b4ba5d8e9d31a0 files/digest-netpbm-10.18.7 64
 MD5 40a3370de6ed591305e4585ffbc605bd files/digest-netpbm-10.20 62
-MD5 d3afaf9141525a706f8c077f66918670 files/10.11.14/Makefile.config 17308
-MD5 be5dafab017b8247e09f643e9798441e files/10.11.14/Makefile.svga 17374
-MD5 d3afaf9141525a706f8c077f66918670 files/10.11.5/Makefile.config 17308
-MD5 be5dafab017b8247e09f643e9798441e files/10.11.5/Makefile.svga 17374
+MD5 19ce2b4d396523dcbcb1e415d4bdb8c9 files/digest-netpbm-10.11.5-r3 64
 MD5 943662580b449abb996444e348c48298 files/9.12/Makefile.config 11635
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD4DBQFAya8EHTu7gpaalycRAoUHAJ4yLI6/Lt5LZhTaNsQrOodlgA+YVwCXU3k0
-jrsfYGbLZF2VG4l5LmQiJQ==
-=98on
------END PGP SIGNATURE-----
+MD5 be5dafab017b8247e09f643e9798441e files/10.11.14/Makefile.svga 17374
+MD5 d3afaf9141525a706f8c077f66918670 files/10.11.14/Makefile.config 17308
+MD5 be5dafab017b8247e09f643e9798441e files/10.11.5/Makefile.svga 17374
+MD5 d3afaf9141525a706f8c077f66918670 files/10.11.5/Makefile.config 17308
