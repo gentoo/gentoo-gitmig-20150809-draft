@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d0057c0ad166e1aefc9bcf89ec876efe davfs2-0.2.2.ebuild 805
-MD5 4ea3c50c09f5b16e414406b0c707fe37 davfs2-0.2.2-r1.ebuild 906
 MD5 ef94e04d2bfa9bb77cd4397541e0b513 davfs2-0.2.1.ebuild 801
-MD5 00e4fba19f657785c9f7d15cb4c27cd1 ChangeLog 1086
+MD5 d0057c0ad166e1aefc9bcf89ec876efe davfs2-0.2.2.ebuild 805
+MD5 f1654452dc14d2898b09e9c3aee7a424 davfs2-0.2.2-r1.ebuild 909
+MD5 8bb4c82ccdb40f20bb5756dfd4675381 ChangeLog 1219
 MD5 222bb7c9a0ba144f42b188211d562cd3 files/digest-davfs2-0.2.1 64
 MD5 340445f0521e173e52743ac4f2889f56 files/digest-davfs2-0.2.2 64
 MD5 2a75243abdc7295fe437c748aec1ee5b files/davfs2-0.2.2-pid.patch 1235
 MD5 340445f0521e173e52743ac4f2889f56 files/digest-davfs2-0.2.2-r1 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBiO7z94CCfB4KcwwRApF2AJwMInVKD5BtMTpUdl7ooUZ4QOGBogCgiAG3
-6J7HzZuAHwx/nn2WiuNdri8=
-=ZHOX
+iD8DBQFBkTRqMGnpIbeahxwRAr3jAKDEYuZfd97tYyLNo0rmYwnRn+eqgQCgn+8h
+SwY1Ha3wzl7QyHQGHUXRZ3E=
+=pb/w
 -----END PGP SIGNATURE-----
