@@ -260,10 +260,7 @@ dev-perl/CDDB-File
 =dev-libs/DirectFB-0.9.13
 
 # <raker@gentoo.org> (27 Aug 2002)
-# Masked for the freeze.
-# Adding to portage to address problems experienced in bug #4885
-=sys-apps/star-1.5_alpha06
-# also Masked for the freeze
+# Masked for the freeze
 # Adding to portage because a rendering bug was fixed from 0.7.14
 =media-video/avifile-0.7.15.20020816
 
