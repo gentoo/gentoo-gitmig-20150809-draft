@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/jmeter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.14 2004/10/16 18:13:51 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.15 2004/12/14 16:26:48 axxo Exp $
+
+  14 Dec 2004; Thomas Matthijs <axxo@gentoo.org> jmeter-1.9.1.ebuild,
+  jmeter-2.0.1.ebuild:
+  fix deps 74389
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jmeter-1.9.1.ebuild,
   jmeter-2.0.1-r1.ebuild, jmeter-2.0.1.ebuild:

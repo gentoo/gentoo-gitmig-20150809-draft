@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 18834cd5e22f1c69c7efa25c59d2c639 jmeter-2.0.1-r1.ebuild 1884
-MD5 9336d453e6cf97d368a1d782574fa37d jmeter-2.0.1.ebuild 1132
-MD5 aac14a164c90ab641bbf162f92d02926 jmeter-1.9.1.ebuild 996
-MD5 0bb0872ffef504c080715e414f2080cb ChangeLog 2766
+MD5 85a890b693469ebb8aae400a7db3e44c jmeter-2.0.1.ebuild 1146
+MD5 887ce297c5f5969ff8b8e346af16303b jmeter-1.9.1.ebuild 1059
+MD5 f18efe87b760f9611039880b295693f0 ChangeLog 2877
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 a62f7266e5fa7c30d2b82af95a3fea55 files/digest-jmeter-1.9.1 74
 MD5 93ea369264f1330ccbcbe9b6b2da7424 files/digest-jmeter-2.0.1 74
@@ -12,7 +12,7 @@ MD5 93ea369264f1330ccbcbe9b6b2da7424 files/digest-jmeter-2.0.1-r1 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBcWTo/rLF9B432nYRAiqGAJ9oqmUuZNz1s58R2J7j8J7M72vvpwCgwduv
-Xp0oktHnxaGZHiO4bp3FyEw=
-=FDOn
+iD8DBQFBvxRm/rLF9B432nYRAvGyAJ4hiNj97VoR2b9a/s2Nv+3mjaSA/gCeJpuz
+KhKsFN3bjxhmLYx1eNkfMdI=
+=tDRy
 -----END PGP SIGNATURE-----
