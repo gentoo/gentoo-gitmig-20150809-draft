@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/pilrc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+*pilrc-2.9 (12 Jun 2003)
+
+  12 Jun 2003; <msterret@gentoo.org> pilrc-2.9.ebuild:
+  add Header
+
   14 Aug 2002; Matthew Turk <satai@gentoo.org> ChangeLog  :
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
