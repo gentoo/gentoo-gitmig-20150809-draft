@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.29 2004/12/13 00:42:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.30 2004/12/13 17:03:28 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -44,7 +44,7 @@ IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc font-server hardened
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.6"
-PATCH_VER="0.2.10"
+PATCH_VER="0.2.11"
 XCUR_VER="0.3.1"
 #MGADRV_VER="1_3_0beta"
 #VIADRV_VER="0.1"
@@ -493,7 +493,7 @@ cflag_setup() {
 		# according to ciaranm
 		# And hardened compiler must be softened. -- fmccor, 20.viii.04
 		sparc)	filter-flags "-fomit-frame-pointer"
-			if use hardened; then
+			if use hardened && ! use dlloader; then
 				einfo "Softening gcc for sparc"
 				ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-pie -fno-PIE"
 				append-flags "-fno-pie -fno-PIE"
@@ -540,13 +540,11 @@ check_pam() {
 }
 
 check_use_combos() {
-	if use static || use dlloader; then
+	if use static; then
 		# A static build disallows building the SDK.
 		# See config/xf86.rules.
-		# So does a DllModules YES (use dlloader) build (#50562)
-		# The latter is pending a potential patch.
 		if use sdk; then
-			die "The static and dlloader USE flags are currently incompatible with the sdk USE flag."
+			die "The static USE flag is incompatible with the sdk USE flag."
 		fi
 	fi
 
@@ -788,7 +786,7 @@ host_def_setup() {
 			suntcx sunbw2 glint mga tdfx ati savage vesa vga fbdev \
 			XF86OSCardDrivers XF86ExtraCardDrivers \
 			DevelDrivers" >> ${HOSTCONF}
-			if use hardened; then
+			if use hardened && ! use dlloader; then
 				einfo "Softening the assembler so cfb modules will play nice with sunffb"
 				echo "#define AsCmd CcCmd -c -x assembler -fno-pie -fno-PIE" >> ${HOSTCONF}
 				echo "#define ModuleAsCmd CcCmd -c -x assembler -fno-pie -fno-PIE" >> ${HOSTCONF}

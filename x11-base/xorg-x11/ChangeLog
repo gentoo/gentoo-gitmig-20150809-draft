@@ -1,6 +1,22 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.242 2004/12/13 00:42:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.243 2004/12/13 17:03:28 spyderous Exp $
+
+  13 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r4.ebuild:
+  PATCH_VER 0.2.11. (fd.o #1934, #47922) Add the highly demanded fix for DPMS
+  problems: 9830_all_6.8.0-fix-random-dpms-blanks.patch. Fix
+  0455_all_6.8.0-prevent-keyboard-hardware-repeat-v2.patch with new code from
+  upstream (fd.o #1651 comment #9). Add three sparc patches: (#fd.o #1114,
+  #61063) 0485_all_6.8.0-afb-cfb-dlloader-fixes.patch, which allows sunffb+cfb
+  to work with dlloader; (fd.o #2072, #61063)
+  0490_all_6.8.0-sparc-dlloader-cflags.patch, which defines
+  LargePositionIndependentCflags when Mesa is built for the dlloader; and
+  (fd.o #2073, #61063) 0495_all_6.8.0-sunffb-imake.patch, which prevents the
+  incompatible CFLAGS combination of '-mcpu=ultrasparc -mv8' because Xorg
+  wrongly tries to not build a 64-bit version when it shouldn't be doing this.
+  Also, fix the ebuild to work with new sparc patches and to respect that
+  dlloader+sdk has worked for quite a while.
 
   12 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild:
