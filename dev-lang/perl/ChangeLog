@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.105 2005/01/27 13:01:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.106 2005/01/31 10:18:07 mcummings Exp $
+
+  31 Jan 2005; Michael Cummings <mcummings@gentoo.org> files/perl-cleaner:
+  swtaylor came up with a quicker way to generate the module list, plus a more
+  secure call for making the tmp files
 
   27 Jan 2005; Michael Cummings <mcummings@gentoo.org> files/perl-cleaner:
   Code cleanup thanks to Mr.B. *MAJOR* typo in the filename for the prelist of

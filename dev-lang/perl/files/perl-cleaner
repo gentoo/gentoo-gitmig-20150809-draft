@@ -1,5 +1,12 @@
 #!/bin/bash
 
+
+# sort of a changelog if you want to call it that...
+
+# version 1.2 - swtaylor gave some good pointers on making the tmp files, as well as reminding me of grep's -f functionality :)
+# version 1.1 - Mr. Bones gave a lot of good input on cleaning up the script
+# Version 1 - stuff
+
 # First and foremost - make sure we have a perl to work with...
 PERL=$(which perl)
 if [ "${PERL}x" == "x" ]; then
@@ -13,38 +20,34 @@ TMPDIR=${TMPDIR:-/tmp}
 
 PKGDIR=$(/usr/bin/portageq vdb_path)
 DATESTAMP=$(date +"%Y%m%d%H%M%S")
-LOG="${TMPDIR}/perl-cleaner.log.$DATESTAMP"
-
+LOG=$(mktemp ${TMPDIR}/perl-cleaner.log.$DATESTAMP.XXXXXXXXXX)
 PAGER=${PAGER:-more}
+
+# Set up our temporary files
+MODULES_LIST=$(mktemp ${TMPDIR}/modules.list.XXXXXXXXXX)
+EBUILDS_PREINSTALL=$(mktemp ${TMPDIR}/ebuilds.preinstall.XXXXXXXXXX)
+EBUILDS_ORDERED=$(mktemp ${TMPDIR}/ebuilds.ordered.XXXXXXXXXX)
+EBUILDS_REINSTALL=$(mktemp ${TMPDIR}/ebuilds.reinstall.XXXXXXXXXX)
+
 ASK=""
 
 if [ ! -z $2 ]; then
    ASK="--ask"
 fi
 
-# Set up our temporary files
 
-function cleanrun() {
-   for FILE in modules.list ebuilds.preinstall ebuilds.ordered ebuilds.reinstall ; do
-
-      if [ -f ${TMPDIR}/$FILE ]; then
-         cp /dev/null ${TMPDIR}/$FILE
-      fi
-
-   done
-}
 
 function postclean {
-   for FILE in modules.list ebuilds.preinstall ebuilds.ordered ebuilds.reinstall; do
+   for FILE in ${MODULES_LIST} ${EBUILDS_PREINSTALL} ${EBUILDS_ORDERED} ${EBUILDS_REINSTALL}; do
 
-      if [ -f ${TMPDIR}/$FILE ]; then
-         rm -f ${TMPDIR}/$FILE
+      if [ -f $FILE ]; then
+         rm -f $FILE
       fi
 
    done
 
    echo
-   echo "For a complete log, please read ${TMPDIR}/perl-cleaner.log.DATESTAMP"
+   echo "For a complete log, please read $LOG"
    echo
 }
 
@@ -81,14 +84,17 @@ function module_list() {
 # no sense in revisiting that dir
    echo "$(date) : Building list of modules for reinstall" | tee -a $LOG
    INC=$(perl -e 'for $line (@INC) { next if $line eq "."; next if $line =~ m/'${PERL_VERSION}'/; print "$line\n" }')
+   MODFIND=$(mktemp ${TMPDIR}/modules.found.XXXXXXXXXX)
    echo "Locating modules for reinstall"
    for DIR in $INC; do
       if [ -d $DIR ]; then
          for file in $(find $DIR -iname "*.pm" -type f|grep -v "${PERL_VERSION}"); do
-            grep -l $file $PKGDIR/*/*/CONTENTS >>${TMPDIR}/modules.list
+	    echo "$file" >>$MODFIND
          done
       fi
    done
+   grep -f $MODFIND -l $PKGDIR/*/*/CONTENTS >${MODULES_LIST}
+   rm $MODFIND
 }
 
 # The meat of it - rebuilding the ebuilds
@@ -99,20 +105,20 @@ function module_list() {
 function ebuild_rebuild() {
 
    echo "$(date) : Rebuilding modules: Building list of ebuilds" | tee -a $LOG
-   if [ -s ${TMPDIR}/modules.list ]; then
-      for line in $(sort -u ${TMPDIR}/modules.list); do
-         echo "$line"|sed -e 's|.*pkg/||' -e 's|/CONTENTS||'|grep -v "dev-lang/perl" >>${TMPDIR}/ebuilds.preinstall
+   if [ -s ${MODULES_LIST} ]; then
+      for line in $(sort -u ${MODULES_LIST}); do
+         echo "$line"|sed -e 's|.*pkg/||' -e 's|/CONTENTS||'|grep -v "dev-lang/perl" >>${EBUILDS_PREINSTALL}
       done
    fi
 
 
 # If they asked for interactive, let them see what will be reinstalled
-   if [ -s ${TMPDIR}/ebuilds.preinstall ]; then
+   if [ -s ${EBUILDS_PREINSTALL} ]; then
   
      if [ ! -z $ASK ]; then
         echo "Press Enter to see the list of ebuilds we'll be avaluating"
         read key
-        $PAGER ${TMPDIR}/ebuilds.preinstall
+        $PAGER ${EBUILDS_PREINSTALL}
         printf "Continue? (Y/N) "
         read ANSWER
         if [ $(echo "${ANSWER}" | egrep -e "^n|N" ) ]; then
@@ -121,7 +127,7 @@ function ebuild_rebuild() {
         fi
      fi
   
-     for EBUILD in $(cat ${TMPDIR}/ebuilds.preinstall); do
+     for EBUILD in $(cat ${EBUILDS_PREINSTALL} ); do
         if emerge --oneshot -p "=$EBUILD"|egrep -q ".*ebuilds.*satisfy"; then
            if emerge --oneshot -p ">=$EBUILD"|egrep -q ".*ebuilds.*satisfy"; then
               echo "$(date) : There are no unmasked ebuilds to satisfy $EBUILD. Skipping" | tee -a $LOG
@@ -131,23 +137,23 @@ function ebuild_rebuild() {
                  printf "${EBUILD} isn't available, but a new version is. Install? (Y/N) "
                  read ANSWER
                  if [ $(echo "${ANSWER}" | egrep -e "^y|Y" ) ]; then
-                    echo ">=$EBUILD" >> ${TMPDIR}/ebuilds.ordered
+                    echo ">=$EBUILD" >> ${EBUILDS_ORDERED}
 	            echo "$(date) : User chose to install >=${EBUILD}">>$LOG
                  fi
               else
-                 echo ">=$EBUILD" >>${TMPDIR}/ebuilds.ordered
+                 echo ">=$EBUILD" >>${EBUILDS_ORDERED}
               fi
            fi
      else
-        echo "=$EBUILD">>${TMPDIR}/ebuilds.ordered
+        echo "=$EBUILD">>${EBUILDS_ORDERED}
      fi
      done
 
-    if [ -s ${TMPDIR}/ebuilds.ordered ]; then
+    if [ -s ${EBUILDS_ORDERED} ]; then
      if [ ! -z $ASK ]; then
         echo "Press Enter to see the final list of ebuilds to install"
         read key
-        $PAGER ${TMPDIR}/ebuilds.ordered
+        $PAGER ${EBUILDS_ORDERED}
         printf "Continue? (Y/N) "
         read ANSWER
         if [ $(echo "${ANSWER}" | egrep -e "^n|N" ) ]; then
@@ -157,17 +163,17 @@ function ebuild_rebuild() {
      fi
 
 # Cut down to one line so portage can handle ordering these appropriately
-     emerge -p --oneshot $(cat ${TMPDIR}/ebuilds.ordered) | grep ebuild | sed -e 's:\([^ ]\+\):=\1:g' -e 's:.*\] \([^ ]*\) .*:\1:'>>${TMPDIR}/ebuilds.reinstall
+     emerge -p --oneshot $(cat ${EBUILDS_ORDERED} ) | grep ebuild | sed -e 's:\([^ ]\+\):=\1:g' -e 's:.*\] \([^ ]*\) .*:\1:'>>${EBUILDS_REINSTALL}
 
      echo "Reinstalling ebuilds"
      echo "$(date) : Ebuilds to reinstall: ">>$LOG
-     cat ${TMPDIR}/ebuilds.reinstall>>$LOG
+     cat ${EBUILDS_REINSTALL}>>$LOG
      echo >>$LOG
 
 # Now that we have them in the right order, emerge them one at a time
 # This is to avoid problems if one doesn't emerge correctly
 
-     for EBUILD in $(cat ${TMPDIR}/ebuilds.reinstall); do
+     for EBUILD in $(cat ${EBUILDS_REINSTALL}); do
         emerge --oneshot ${ASK} "$EBUILD"
      done
     else
@@ -193,7 +199,7 @@ function libperl_list() {
          $(find $(echo $PATH | sed 's/:/ /g') -type f -perm +0111 ! -newer /usr/lib/libperl.so ) ;
    do
      if [ -f ${i} ]; then
-        ldd ${i} 2>&1 | grep "libperl" - >/dev/null && grep -l $i $PKGDIR/*/*/CONTENTS>>${TMPDIR}/modules.list;
+        ldd ${i} 2>&1 | grep "libperl" - >/dev/null && grep -l $i $PKGDIR/*/*/CONTENTS>>${MODULES_LIST};
      fi
    done 
 
@@ -218,7 +224,6 @@ function leftovers() {
    done
 }
 
-cleanrun
 
 case "$1" in
    leftovers)
