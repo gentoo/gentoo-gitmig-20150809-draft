@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.6 2002/10/17 10:06:48 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.7 2002/11/14 17:06:11 leonardop Exp $
+
+*bluefish-0.7-r3 (14 Nov 2002)
+
+  14 Nov 2002; L. Boshell <leonardop@gentoo.org> : Make use of econf and
+  einstall. Install .desktop file when `gnome' USE flag is present.
 
 *bluefish-2002.09.26 (17 Oct 2002)
 
