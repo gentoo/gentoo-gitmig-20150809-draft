@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0_beta1.ebuild,v 1.1 2005/01/14 00:19:31 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0_beta1.ebuild,v 1.2 2005/01/14 21:04:30 greg_g Exp $
 
 inherit kde-dist eutils
 
@@ -19,8 +19,12 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	java? ( || ( virtual/jdk virtual/jre ) )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
 	logitech-mouse? ( dev-libs/libusb )"
-# TODO: we do not suport hal/dbus backend for 'media:' ioslave yet.
-# Depends on hal and dbus compiled with qt support.
+# TODO:
+# - add support for dbus/hal for 'media:' ioslave:
+#     hal? ( >=sys-apps/dbus-0.22-r3    (for proper Qt support)
+#            >=sys-apps/hal-0.4 )
+#   the 'hal' flag should become global,
+#   since it's already used by 5 ebuilds.
 
 RDEPEND="${DEPEND}
 	sys-apps/eject"
