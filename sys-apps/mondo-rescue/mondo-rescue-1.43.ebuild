@@ -1,4 +1,6 @@
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.43.ebuild,v 1.1 2002/07/25 03:27:22 lostlogic Exp $
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.43.ebuild,v 1.2 2002/07/25 03:28:46 lostlogic Exp $
 
 S=${WORKDIR}/mondo-1.45
 DESCRIPTION="a nice backup tool"
