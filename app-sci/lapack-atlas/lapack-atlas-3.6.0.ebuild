@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.10 2004/07/04 22:48:23 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.11 2004/07/13 03:42:20 george Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Full LAPACK implementation using available ATLAS routines"
 HOMEPAGE="http://math-atlas.sourceforge.net/"
@@ -126,6 +126,10 @@ src_compile() {
 					# routines to determine machine constants.
 	else
 		FC="g77"
+		# g77 hates opts, esp. machine-specific
+		ALLOWED_FLAGS="-O -O1 -O2 -fstack-protector -fno-unit-at-a-time \
+						-pipe -g -Wall"
+		strip-flags
 		FFLAGS="${CFLAGS}"
 		NOOPT=""
 	fi
