@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.37 2003/09/22 03:44:49 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.38 2003/10/18 14:53:59 strider Exp $
+
+*ant-1.5.4-r1 (13 Oct 2003)
+
+  13 Oct 2003; Adrian Almenar <strider@gentoo.org> ant-1.5.4-r1.ebuild:
+  Thanks to Gunnlaugur Thor Briem <gthb@hi.is>.
+  Fix http://nagoya.apache.org/bugzilla/show_bug.cgi?id=14650
+  (RPM package builds using rpm task failed with newer rpm versions
+  such as the current stable one in portage)
 
 *ant-1.5.4 (21 Sep 2003)
 
