@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.32 2003/04/23 00:05:16 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.33 2003/05/08 03:07:35 mkeadle Exp $
+
+*openbox-2.3.1 (07 May 2003)
+
+  07 May 2003; mkeadle <mkeadle@gentoo.org> openbox-2.3.1.ebuild :
+  New release (royal city). Was a slight issue with non-compile on
+  gcc 2.95x but that's been fixed now. Cheers.
 
 *openbox-2.3.0 (07 Feb 2003)
 
