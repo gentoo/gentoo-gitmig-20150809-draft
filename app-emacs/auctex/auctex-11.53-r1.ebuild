@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.53-r1.ebuild,v 1.4 2005/02/08 11:06:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.53-r1.ebuild,v 1.5 2005/02/12 02:49:42 weeve Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64 ~sparc ~ppc-macos"
+KEYWORDS="x86 ppc ~amd64 sparc ~ppc-macos"
 IUSE=""
 
 DEPEND="virtual/tetex"
