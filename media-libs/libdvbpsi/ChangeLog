@@ -1,10 +1,18 @@
 # ChangeLog for media-libs/libdvbpsi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.4 2002/12/13 10:59:35 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.5 2002/12/23 00:44:29 mholzer Exp $
+
+*libdvbpsi-0.1.2 (22 Dec 2002)
+
+  22 Dec 2002; Martin Holzer <mholzer@gentoo.org> libdvpsi-0.1.2.ebuild files/digest-libdvbpsi-0.1.2 Changelog :
+  Added new version.
+
+*libdvbpsi-0.1.1 (03 Aug 2002)
+
+  22 Dec 2002; Martin Holzer <mholzer@gentoo.org> libdvpsi-0.1.1.ebuild Changelog :
+  Changed SRC_URI.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*libdvbpsi-0.1.1 (03 Aug 2002)
 
   15 Aug 2002; Mark Guertin <gerk@gentoo.org> libdvpsi-0.1.1.ebuild :
   Added ppc to keywords
