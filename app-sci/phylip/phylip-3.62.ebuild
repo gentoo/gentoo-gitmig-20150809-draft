@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/phylip/phylip-3.6.ebuild,v 1.3 2004/07/23 16:03:01 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/phylip/phylip-3.62.ebuild,v 1.1 2004/09/29 21:39:58 ribosome Exp $
 
 DESCRIPTION="PHYLIP - The PHYLogeny Inference Package"
 HOMEPAGE="http://evolution.genetics.washington.edu/${PN}.html"
@@ -17,8 +17,11 @@ DEPEND="virtual/libc
 S=${WORKDIR}/${P}/src
 
 src_compile() {
+	sed -i -e "s/CFLAGS =/CFLAGS = ${CFLAGS}/" Makefile
+	sed -i -e "s/CC        = cc/CC        = ${CC:gcc}/" Makefile
+	sed -i -e "s/DC        = cc/DC        = ${CC:gcc}/" Makefile
 	mkdir ../fonts
-	emake -j1 -e all put || die
+	emake -j1 all put || die
 	mv ../exe/font* ../fonts
 }
 
@@ -34,6 +37,4 @@ src_install()
 
 	insinto /usr/share/${PN}/fonts
 	doins fonts/*
-	insinto /usr/share/${PN}/icons
-	doins src/icons/*.ico
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/phylip/phylip-3.61.ebuild,v 1.2 2004/09/23 23:57:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/phylip/phylip-3.61.ebuild,v 1.3 2004/09/29 21:39:58 ribosome Exp $
 
 DESCRIPTION="The PHYLogeny Inference Package"
 HOMEPAGE="http://evolution.genetics.washington.edu/${PN}.html"
@@ -8,7 +8,7 @@ SRC_URI="ftp://evolution.genetics.washington.edu/pub/${PN}/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND="virtual/libc
