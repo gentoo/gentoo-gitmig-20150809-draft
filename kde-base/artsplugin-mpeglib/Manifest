@@ -1,6 +1,4 @@
-MD5 ef184d7ba5b4650fe8d697a5993be0ff ChangeLog 1604
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 ad7059646776debaee974fa24a79601c artsplugin-mpeglib-3.4.0_rc1.ebuild 726
 MD5 8c8c63eb52cf2f9a5f6c992e720b98c9 artsplugin-mpeglib-3.4.0.ebuild 739
-MD5 d68ff14d4ed5a746d4def9f2706bb705 files/digest-artsplugin-mpeglib-3.4.0_rc1 403
+MD5 ef184d7ba5b4650fe8d697a5993be0ff ChangeLog 1604
 MD5 1b6b47988f359abcece7b1f1f5b98377 files/digest-artsplugin-mpeglib-3.4.0 73

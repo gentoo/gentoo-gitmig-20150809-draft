@@ -1,6 +1,4 @@
-MD5 106483bb84f2f182479b1952df4ed8ae ChangeLog 1326
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 9121d616805017cd2d7a50e8d9619390 kteatime-3.4.0_rc1.ebuild 396
+MD5 106483bb84f2f182479b1952df4ed8ae ChangeLog 1326
 MD5 f8da5a038db557a159557dbbe6a192c5 kteatime-3.4.0.ebuild 404
-MD5 72ac09de5dee4a204a0ee54a99bc0908 files/digest-kteatime-3.4.0_rc1 371
 MD5 5b4e3adba5796dc0f4ac34763f6e0bff files/digest-kteatime-3.4.0 67

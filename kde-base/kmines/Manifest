@@ -1,6 +1,4 @@
-MD5 190dadc5a793814a72e8a4c5af0abb7e ChangeLog 1304
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 bb5eafcd9b644da67ad4751da26db357 kmines-3.4.0_rc1.ebuild 541
 MD5 334f6d9da9d1fa48c5a02c4e9253f166 kmines-3.4.0.ebuild 549
-MD5 8b19b23f6a048c71e6c5d2550695c013 files/digest-kmines-3.4.0_rc1 378
+MD5 190dadc5a793814a72e8a4c5af0abb7e ChangeLog 1304
 MD5 6e72046b806b6a397ba3e655b9c9d135 files/digest-kmines-3.4.0 68

@@ -1,6 +1,4 @@
-MD5 e1f824d23d46a54b0e24f7d553db447a ChangeLog 1315
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 de90aa56d96e14fddb164c42500c902d libkpgp-3.4.0_rc1.ebuild 388
 MD5 d0552da2619152132a02673efab8d612 libkpgp-3.4.0.ebuild 396
-MD5 35ccfa3433a499de2fd98af78d32b7db files/digest-libkpgp-3.4.0_rc1 373
+MD5 e1f824d23d46a54b0e24f7d553db447a ChangeLog 1315
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-libkpgp-3.4.0 67

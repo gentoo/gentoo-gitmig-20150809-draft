@@ -1,6 +1,4 @@
-MD5 ab8f7c19c9e375017fc39e57d3f3d618 ChangeLog 1315
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 b15c37df3ba3986c6e1064d16621c9a8 klipper-3.4.0_rc1.ebuild 402
 MD5 566204b6e5c32721fce3037ef2425431 klipper-3.4.0.ebuild 410
-MD5 bf55cbe0244386a3b46be4ca7fe7bc8a files/digest-klipper-3.4.0_rc1 378
+MD5 ab8f7c19c9e375017fc39e57d3f3d618 ChangeLog 1315
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-klipper-3.4.0 68

@@ -1,6 +1,4 @@
-MD5 08440d12ae21deee6e12d8416967684a ChangeLog 1380
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 6efceee6028c416d40bf4b3af2b8b28e kappfinder-3.4.0_rc1.ebuild 464
+MD5 08440d12ae21deee6e12d8416967684a ChangeLog 1380
 MD5 c356ded3938312b1af84dc0e15c319d7 kappfinder-3.4.0.ebuild 524
-MD5 bf55cbe0244386a3b46be4ca7fe7bc8a files/digest-kappfinder-3.4.0_rc1 378
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kappfinder-3.4.0 68

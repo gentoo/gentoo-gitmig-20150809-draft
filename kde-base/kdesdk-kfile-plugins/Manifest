@@ -1,6 +1,4 @@
-MD5 11e56cfe6f1f591ceb56dceff0458a3f ChangeLog 1508
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 1edc82d3239945dbeac8639fd224fcb4 kdesdk-kfile-plugins-3.4.0_rc1.ebuild 449
+MD5 11e56cfe6f1f591ceb56dceff0458a3f ChangeLog 1508
 MD5 6b7cafd154f13c318b33225804d7932a kdesdk-kfile-plugins-3.4.0.ebuild 457
-MD5 5278998b3d2ca1313a1cd967b9c51b58 files/digest-kdesdk-kfile-plugins-3.4.0_rc1 368
 MD5 629dc052bf3cddca3be442ae6c22f412 files/digest-kdesdk-kfile-plugins-3.4.0 66

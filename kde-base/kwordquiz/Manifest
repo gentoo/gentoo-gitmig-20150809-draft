@@ -1,6 +1,4 @@
-MD5 e485e1e4a66d3b52c8ae0eeb289114bc ChangeLog 1341
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 e1d924d4d45e34c7efe93e96fb9d48cd kwordquiz-3.4.0_rc1.ebuild 416
 MD5 aa618533a6fd978b8d850279f8e47ff0 kwordquiz-3.4.0.ebuild 424
-MD5 e86b3031f18fffbe826fe58a427e65ba files/digest-kwordquiz-3.4.0_rc1 371
+MD5 e485e1e4a66d3b52c8ae0eeb289114bc ChangeLog 1341
 MD5 1392d63258c3b385fd5609f4923caa75 files/digest-kwordquiz-3.4.0 67

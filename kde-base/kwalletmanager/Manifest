@@ -1,6 +1,4 @@
-MD5 3d2dc14fece0ac4c6605a9c7aa9e80c0 ChangeLog 1398
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 4f9ec0a9f8f4386a7bb6b375434108ed kwalletmanager-3.4.0_rc1.ebuild 409
+MD5 3d2dc14fece0ac4c6605a9c7aa9e80c0 ChangeLog 1398
 MD5 b74ea71a57291467a51bbbf231c7d84f kwalletmanager-3.4.0.ebuild 417
-MD5 2e986761e662b965b58e8ca3bbe8579b files/digest-kwalletmanager-3.4.0_rc1 378
 MD5 dbade662a75a6b44c890deef5400485f files/digest-kwalletmanager-3.4.0 68

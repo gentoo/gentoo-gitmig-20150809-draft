@@ -1,6 +1,4 @@
-MD5 0d2b104a862b4b2e5d4b443db9bcb812 ChangeLog 1466
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 848a1aa475051126fd6d7b9d54fc4f31 kasteroids-3.4.0_rc1.ebuild 674
+MD5 0d2b104a862b4b2e5d4b443db9bcb812 ChangeLog 1466
 MD5 2423103095284eafd6b8602d5304f239 kasteroids-3.4.0.ebuild 688
-MD5 8b19b23f6a048c71e6c5d2550695c013 files/digest-kasteroids-3.4.0_rc1 378
 MD5 6e72046b806b6a397ba3e655b9c9d135 files/digest-kasteroids-3.4.0 68

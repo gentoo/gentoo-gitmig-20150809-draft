@@ -1,6 +1,4 @@
-MD5 076cb60f4c054502c148f28b90b4b67e ChangeLog 1326
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 9a0747a65bf1afac1fde0a30d47d694e umbrello-3.4.0_rc1.ebuild 379
 MD5 2eb2153de618f096c0e77b88c497af0f umbrello-3.4.0.ebuild 387
-MD5 5278998b3d2ca1313a1cd967b9c51b58 files/digest-umbrello-3.4.0_rc1 368
+MD5 076cb60f4c054502c148f28b90b4b67e ChangeLog 1326
 MD5 629dc052bf3cddca3be442ae6c22f412 files/digest-umbrello-3.4.0 66

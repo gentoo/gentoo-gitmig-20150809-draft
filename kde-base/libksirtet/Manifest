@@ -1,6 +1,4 @@
-MD5 1a84438e2e1a5ff6949fde9c70fee916 ChangeLog 1352
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 2abeeb792d2e230f8dae5940c13a878f libksirtet-3.4.0_rc1.ebuild 542
+MD5 1a84438e2e1a5ff6949fde9c70fee916 ChangeLog 1352
 MD5 a322fbc5d1989b73f7f7b3af1256b115 libksirtet-3.4.0.ebuild 550
-MD5 8b19b23f6a048c71e6c5d2550695c013 files/digest-libksirtet-3.4.0_rc1 378
 MD5 6e72046b806b6a397ba3e655b9c9d135 files/digest-libksirtet-3.4.0 68

@@ -1,6 +1,4 @@
-MD5 1cc6b8e5a5854e97f9d3966f5694e321 ChangeLog 1328
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 de31a95ce42e10510ab3f6d0b5eeb420 kbruch-3.4.0_rc1.ebuild 401
 MD5 22e438d291605ac49df44ccecdea7dba kbruch-3.4.0.ebuild 409
-MD5 e86b3031f18fffbe826fe58a427e65ba files/digest-kbruch-3.4.0_rc1 371
+MD5 1cc6b8e5a5854e97f9d3966f5694e321 ChangeLog 1328
 MD5 1392d63258c3b385fd5609f4923caa75 files/digest-kbruch-3.4.0 67

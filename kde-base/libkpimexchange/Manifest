@@ -1,6 +1,4 @@
-MD5 c46c06e852386c76392fc363d126ba66 ChangeLog 1409
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 9ce580c066ead81c4526b689561deb98 libkpimexchange-3.4.0_rc1.ebuild 944
 MD5 eb26bdbabbe9cb48d8f75407e697a84d libkpimexchange-3.4.0.ebuild 952
-MD5 35ccfa3433a499de2fd98af78d32b7db files/digest-libkpimexchange-3.4.0_rc1 373
+MD5 c46c06e852386c76392fc363d126ba66 ChangeLog 1409
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-libkpimexchange-3.4.0 67

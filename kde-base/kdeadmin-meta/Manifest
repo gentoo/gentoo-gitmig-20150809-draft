@@ -1,6 +1,4 @@
-MD5 66154e8dd65774504650775840116005 ChangeLog 1559
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 771059a1e11b27ed203b91eff89be410 kdeadmin-meta-3.4.0_rc1.ebuild 899
+MD5 66154e8dd65774504650775840116005 ChangeLog 1559
 MD5 23b8570c118c52eb7864f7af8e3125b7 kdeadmin-meta-3.4.0.ebuild 899
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.4.0_rc1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kdeadmin-meta-3.4.0 0

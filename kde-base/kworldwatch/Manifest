@@ -1,6 +1,4 @@
-MD5 f6eb2e45c8f157192c82c1190fc046bc ChangeLog 1540
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 8a154f9faf8bdbfdbce9d02cbe481a25 kworldwatch-3.4.0_rc1.ebuild 508
+MD5 f6eb2e45c8f157192c82c1190fc046bc ChangeLog 1540
 MD5 1fc9062c9ee021e3abcf66423cb88562 kworldwatch-3.4.0.ebuild 516
-MD5 72ac09de5dee4a204a0ee54a99bc0908 files/digest-kworldwatch-3.4.0_rc1 371
 MD5 5b4e3adba5796dc0f4ac34763f6e0bff files/digest-kworldwatch-3.4.0 67

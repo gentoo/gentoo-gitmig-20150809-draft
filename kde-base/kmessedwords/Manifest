@@ -1,6 +1,4 @@
-MD5 5990d29549eaad1b5cf7d7656e8ddb20 ChangeLog 1374
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 bb610d4648e9c3d0f0007d61c0e1c872 kmessedwords-3.4.0_rc1.ebuild 386
+MD5 5990d29549eaad1b5cf7d7656e8ddb20 ChangeLog 1374
 MD5 17cc9af55f8682c1f23a94305d131e92 kmessedwords-3.4.0.ebuild 394
-MD5 e86b3031f18fffbe826fe58a427e65ba files/digest-kmessedwords-3.4.0_rc1 371
 MD5 1392d63258c3b385fd5609f4923caa75 files/digest-kmessedwords-3.4.0 67

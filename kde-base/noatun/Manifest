@@ -1,6 +1,4 @@
-MD5 1897385de6ff4395a0c333ad221e674a ChangeLog 1267
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 2d2ee627b9eacd2b0761827443ca327f noatun-3.4.0_rc1.ebuild 998
 MD5 cc55380b8da518f3d629ea71da114ce8 noatun-3.4.0.ebuild 994
-MD5 d68ff14d4ed5a746d4def9f2706bb705 files/digest-noatun-3.4.0_rc1 403
+MD5 1897385de6ff4395a0c333ad221e674a ChangeLog 1267
 MD5 1b6b47988f359abcece7b1f1f5b98377 files/digest-noatun-3.4.0 73

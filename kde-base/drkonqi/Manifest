@@ -1,6 +1,4 @@
-MD5 044c5a65c932a4aa4448714f50f9769e ChangeLog 1323
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 049952b920a511ac87c2e48dab3c1651 drkonqi-3.4.0_rc1.ebuild 416
 MD5 3a617c45d63f2b96f9525de948941dce drkonqi-3.4.0.ebuild 424
-MD5 bf55cbe0244386a3b46be4ca7fe7bc8a files/digest-drkonqi-3.4.0_rc1 378
+MD5 044c5a65c932a4aa4448714f50f9769e ChangeLog 1323
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-drkonqi-3.4.0 68

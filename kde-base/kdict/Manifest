@@ -1,6 +1,4 @@
-MD5 cd33e080bdb61755c928dde65bb565b5 ChangeLog 1316
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 8187b72bc136eef61bde8ade98766600 kdict-3.4.0_rc1.ebuild 393
+MD5 cd33e080bdb61755c928dde65bb565b5 ChangeLog 1316
 MD5 5b8b5f13711faf5fc45dfc62ad5a7054 kdict-3.4.0.ebuild 401
-MD5 ee82ae945549a695ca5353dd33e3ce47 files/digest-kdict-3.4.0_rc1 389
 MD5 622d3497792334fa87e483e249da693d files/digest-kdict-3.4.0 70

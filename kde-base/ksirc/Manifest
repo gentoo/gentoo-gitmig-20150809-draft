@@ -1,6 +1,4 @@
-MD5 e118b4564a2e34b74b21ab106e419e8b ChangeLog 1293
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 3f2fc073c3e7133053ad06a71ad4ecee ksirc-3.4.0_rc1.ebuild 427
+MD5 e118b4564a2e34b74b21ab106e419e8b ChangeLog 1293
 MD5 ee8898b0ac77a2ec516d34305836dcec ksirc-3.4.0.ebuild 435
-MD5 ee82ae945549a695ca5353dd33e3ce47 files/digest-ksirc-3.4.0_rc1 389
 MD5 622d3497792334fa87e483e249da693d files/digest-ksirc-3.4.0 70

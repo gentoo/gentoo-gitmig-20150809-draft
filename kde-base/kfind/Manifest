@@ -1,6 +1,4 @@
-MD5 bfa7ee1a6ad109e59e00d009b60d820b ChangeLog 1316
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 137be1c558bb24f61bdfaf8b043f303b kfind-3.4.0_rc1.ebuild 486
+MD5 bfa7ee1a6ad109e59e00d009b60d820b ChangeLog 1316
 MD5 6a921c8bbc3308563e27a04362b30b9f kfind-3.4.0.ebuild 494
-MD5 bf55cbe0244386a3b46be4ca7fe7bc8a files/digest-kfind-3.4.0_rc1 378
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kfind-3.4.0 68

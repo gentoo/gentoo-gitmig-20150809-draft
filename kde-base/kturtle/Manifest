@@ -1,6 +1,4 @@
-MD5 56ebdc78d2686c5c057ab9bec9410385 ChangeLog 1315
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 300ccdebd010e44a3d3554bd38774983 kturtle-3.4.0_rc1.ebuild 430
 MD5 837bfe5a754f2ce5fed8c971065bea92 kturtle-3.4.0.ebuild 438
-MD5 e86b3031f18fffbe826fe58a427e65ba files/digest-kturtle-3.4.0_rc1 371
+MD5 56ebdc78d2686c5c057ab9bec9410385 ChangeLog 1315
 MD5 1392d63258c3b385fd5609f4923caa75 files/digest-kturtle-3.4.0 67

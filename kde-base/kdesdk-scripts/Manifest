@@ -1,6 +1,4 @@
-MD5 1663db0c59e88013adf60616ce40239c ChangeLog 1432
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 b7c43210df516b490d240b8a7ba2c2c8 kdesdk-scripts-3.4.0_rc1.ebuild 455
+MD5 1663db0c59e88013adf60616ce40239c ChangeLog 1432
 MD5 09c07372c06b0126a831052930e5186c kdesdk-scripts-3.4.0.ebuild 463
-MD5 5278998b3d2ca1313a1cd967b9c51b58 files/digest-kdesdk-scripts-3.4.0_rc1 368
 MD5 629dc052bf3cddca3be442ae6c22f412 files/digest-kdesdk-scripts-3.4.0 66

@@ -3,11 +3,9 @@ MD5 4e8d73b6d2dd250377d67249c2ac1829 kdepim-3.3.2.ebuild 669
 MD5 945bc413d535eb0c94a557931f48cf2d ChangeLog 18380
 MD5 53f145bb4ec5a11aad2e6cb113416a2a kdepim-3.2.3.ebuild 819
 MD5 0d8fbfe8a352c18ceecf4ecee91dc141 kdepim-3.4.0-r1.ebuild 1020
-MD5 0de229ac5b6aaddff7855d3b5a3cb192 kdepim-3.4.0_rc1.ebuild 880
 MD5 f487b0894ac81c4e75d85875ce51d24a files/kdepim-3.4.0-akregator-fix.patch 2505
 MD5 1ec4778f0dbac85bc27bc2c2541e5c64 files/kdepim-3.4.0-fix-imap-resource-type.patch 1938
 MD5 318e6b50444a5837fed2a5ea9ecc57e9 files/digest-kdepim-3.2.3 66
-MD5 a4075966c05522fce30e0cba5f3a5435 files/digest-kdepim-3.4.0_rc1 71
 MD5 38f90eca12bd5623fc7f28e814efd1a2 files/digest-kdepim-3.3.2 66
 MD5 678530a6c8baabd5d9cbe817b5c571f2 files/kdepim-3.2.3-cjk.diff 6957
 MD5 21ee60d2fa71ac7e3b1ba13411911045 files/kdepim-3.4.0_rc1-dimap-cache-loss.patch 3168

@@ -1,6 +1,4 @@
-MD5 39ef78f0fab620184dbd4b7e32c882c1 ChangeLog 1431
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 1e671b3b0fc0dd2ca24a781580e539e2 akode-3.4.0_rc1.ebuild 1110
+MD5 39ef78f0fab620184dbd4b7e32c882c1 ChangeLog 1431
 MD5 c6e4825a761f1ba3623019391ec4bf6a akode-3.4.0.ebuild 1124
-MD5 d68ff14d4ed5a746d4def9f2706bb705 files/digest-akode-3.4.0_rc1 403
 MD5 1b6b47988f359abcece7b1f1f5b98377 files/digest-akode-3.4.0 73

@@ -1,6 +1,4 @@
-MD5 a28dd448f490019b8d3f0648cc7f7e69 ChangeLog 1656
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 f8a2f4fd145cc72ce9a9553323ac231a kde-meta-3.4.0_rc1.ebuild 1213
+MD5 a28dd448f490019b8d3f0648cc7f7e69 ChangeLog 1656
 MD5 3699d5470c650f8ad29aadb5ed470e4e kde-meta-3.4.0.ebuild 1236
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-meta-3.4.0_rc1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-kde-meta-3.4.0 0

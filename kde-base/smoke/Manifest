@@ -1,21 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 afb72a6d84b1830aa99bddf10e1a6ad3 smoke-3.4.0_rc1.ebuild 1115
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 26ddf9a485ab5c700150dcd5978e9586 smoke-3.4.0.ebuild 1060
 MD5 0ad450f60c136e72b45e8c935045dfdc ChangeLog 1934
-MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 701f61e8efb8d7e88e99b0512a0098e1 smoke-3.3.1.ebuild 1058
+MD5 b49bfb02ebaf3b34e2e5c4c5750429d6 files/digest-smoke-3.4.0 71
 MD5 92a2bf7b4c3eebd09d53b684b22513af files/parallel-make.diff 1696
+MD5 6830fc45ae55313b9f8515babcf58b79 files/digest-smoke-3.3.1 71
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 b33c90b58271cf4555c9ddac04138674 files/no_knotifywidgetbase.diff 267
-MD5 6830fc45ae55313b9f8515babcf58b79 files/digest-smoke-3.3.1 71
-MD5 b49bfb02ebaf3b34e2e5c4c5750429d6 files/digest-smoke-3.4.0 71
-MD5 3946152f4855210898ab9178271cf802 files/digest-smoke-3.4.0_rc1 394
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOwIbUpKYMelfdYERAssuAJ9gICPLHbjAE0Xfp0ULcA1RPfK6YgCfQSr/
-PD7E722puNrnyO/Ci7eA4JY=
-=1sem
------END PGP SIGNATURE-----

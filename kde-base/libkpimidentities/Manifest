@@ -1,6 +1,4 @@
-MD5 7d21e419dbb4d93bfe2f5cbe76b3d27b ChangeLog 1435
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 4a1e89049dbb130d3d3a61c8ca7fed9e libkpimidentities-3.4.0_rc1.ebuild 709
+MD5 7d21e419dbb4d93bfe2f5cbe76b3d27b ChangeLog 1435
 MD5 1c761b0fabbf8f1f9ab0db2736f6be68 libkpimidentities-3.4.0.ebuild 717
-MD5 35ccfa3433a499de2fd98af78d32b7db files/digest-libkpimidentities-3.4.0_rc1 373
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-libkpimidentities-3.4.0 67

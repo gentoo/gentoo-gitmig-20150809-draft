@@ -1,6 +1,4 @@
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 eaf701240679bb204aee2026324511ea ChangeLog 1445
 MD5 610a860f59e4bbd53de9fc5f4b143a6b kontact-3.4.0.ebuild 1037
-MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 7b922995188284db1492d03ab801f2ce kontact-3.4.0_rc1.ebuild 1029
-MD5 35ccfa3433a499de2fd98af78d32b7db files/digest-kontact-3.4.0_rc1 373
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-kontact-3.4.0 67

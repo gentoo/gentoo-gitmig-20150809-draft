@@ -3,13 +3,11 @@ MD5 d168992c0e7f21589c7706bf69219dce kdegraphics-3.2.3-r4.ebuild 1372
 MD5 a6802a733311568fe33ff48f1b247ae5 ChangeLog 22500
 MD5 d2028ede99c0950869e387c95f0748c9 kdegraphics-3.2.3-r3.ebuild 1329
 MD5 fb02b10d1438c508c4e30d5e46bb928e kdegraphics-3.3.2-r2.ebuild 1553
-MD5 4fca61037cfddd00db6569ea470d5da9 kdegraphics-3.4.0_rc1.ebuild 1122
 MD5 98e892331b24ea8a00fd3b8ef2454015 kdegraphics-3.4.0.ebuild 1171
 MD5 e48f24f251a08d557aee3f0d60feb26d files/digest-kdegraphics-3.4.0 71
 MD5 e43eeb201ab38aa05917d4de1573ff59 files/digest-kdegraphics-3.2.3-r4 71
 MD5 bf6b28780e0f5ea8f99e0777187e73cb files/post-3.3.2-kdegraphics.diff 1385
 MD5 9eb12845ce85cc31e216d463877cb519 files/digest-kdegraphics-3.3.2-r2 71
-MD5 79e5bfc7ea77408d7fdc0e3234d91968 files/digest-kdegraphics-3.4.0_rc1 75
 MD5 870d90051bb236753070fb553890f95d files/post-3.2.3-kdegraphics_2.diff 3205
 MD5 e43eeb201ab38aa05917d4de1573ff59 files/digest-kdegraphics-3.2.3-r3 71
 MD5 284f518172a2843428d308d2d48bbbee files/CAN-2005-0064.patch 793

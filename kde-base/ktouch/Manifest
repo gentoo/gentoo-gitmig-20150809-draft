@@ -1,6 +1,4 @@
-MD5 1b3bb4942c2992e54845b66321c7539e ChangeLog 1304
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 2d67e3327e8bf9dce47ed06b8004a9cb ktouch-3.4.0_rc1.ebuild 416
+MD5 1b3bb4942c2992e54845b66321c7539e ChangeLog 1304
 MD5 4c5c081f5a8aeaa58be20be94656c335 ktouch-3.4.0.ebuild 424
-MD5 e86b3031f18fffbe826fe58a427e65ba files/digest-ktouch-3.4.0_rc1 371
 MD5 1392d63258c3b385fd5609f4923caa75 files/digest-ktouch-3.4.0 67

@@ -6,9 +6,7 @@ MD5 076c081cd2f681cbda71ed15fc702b7d ChangeLog 36236
 MD5 d2b4b1a7bcb1bc7191e59d82a37a3bdc kdelibs-3.4.0.ebuild 2960
 MD5 813e4e255e83805ce8e5469228a08cea kdelibs-3.3.2-r2.ebuild 3153
 MD5 8c3940db01bff3514095956bd535442e kdelibs-3.3.2-r7.ebuild 3472
-MD5 3110a84a8fab7b6ed8b7e2d6d8458eae kdelibs-3.4.0_rc1-r1.ebuild 2637
 MD5 5a3d1a6d316ead8f2cb08751b71b9aba kdelibs-3.2.3-r7.ebuild 3002
-MD5 29bcfee4f3cecd8529fa92ce4caba53c files/digest-kdelibs-3.4.0_rc1-r1 72
 MD5 40783b984dcb127c8852246f7eb0a1e8 files/kdelibs-3.3.2-ppc64.patch 957
 MD5 296419fbb169c4d87ace85d1e1645652 files/kdelibs-3.4.0-form-freeze.patch 660
 MD5 119cc73926dceafff9107b5f916277ee files/post-3.2.3-kdelibs-htmlframes.patch 15435

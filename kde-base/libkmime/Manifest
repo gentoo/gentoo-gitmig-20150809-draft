@@ -1,6 +1,4 @@
-MD5 6d4dc4d75185ad8f16ff08a6187053c7 ChangeLog 1326
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 f525f5fe5b3b419c4e088ccfedb0d5f8 libkmime-3.4.0_rc1.ebuild 394
+MD5 6d4dc4d75185ad8f16ff08a6187053c7 ChangeLog 1326
 MD5 d86f207f5c042db7dcd2ba9f08b57e8c libkmime-3.4.0.ebuild 402
-MD5 35ccfa3433a499de2fd98af78d32b7db files/digest-libkmime-3.4.0_rc1 373
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-libkmime-3.4.0 67

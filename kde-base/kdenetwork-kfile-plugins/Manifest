@@ -1,6 +1,4 @@
-MD5 912ea6d1c224828457f94a8bf2d6e56c ChangeLog 1556
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 1304ed79bb5004580baa90d26d7b1e5a kdenetwork-kfile-plugins-3.4.0_rc1.ebuild 497
 MD5 99de06518d3b98215c61257d3dd76482 kdenetwork-kfile-plugins-3.4.0.ebuild 505
-MD5 ee82ae945549a695ca5353dd33e3ce47 files/digest-kdenetwork-kfile-plugins-3.4.0_rc1 389
+MD5 912ea6d1c224828457f94a8bf2d6e56c ChangeLog 1556
 MD5 622d3497792334fa87e483e249da693d files/digest-kdenetwork-kfile-plugins-3.4.0 70
