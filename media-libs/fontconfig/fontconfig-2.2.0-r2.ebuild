@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.0-r2.ebuild,v 1.9 2003/06/11 22:47:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.2.0-r2.ebuild,v 1.10 2003/06/17 23:21:11 foser Exp $
 
 inherit eutils
 
@@ -49,12 +49,10 @@ src_unpack() {
 }
 
 src_compile() {
-	# FIXME : docs switch doesn't seem to work
-
 	[ "${ARCH}" == "alpha" -a "${CC}" == "ccc" ] && \
 		die "Dont compile fontconfig with ccc, it doesnt work very well"
 				
-	econf `use_enable doc docs` \
+	econf --disable-docs \
 		--with-docdir=${D}/usr/share/doc/${PF} \
 		--x-includes=/usr/X11R6/include \
 		--x-libraries=/usr/X11R6/lib \
