@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/php-docs
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.4 2003/09/05 01:44:11 msterret Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.5 2004/03/28 20:56:49 stuart Exp $
+
+*php-docs-200403 (28 Mar 2004)
+
+  28 Mar 2004; Stuart Herbert <stuart@gentoo.org> php-docs-200403.ebuild:
+  Added ebuild for a snapshot of March 2004's PHP manual; closes bug #38761
 
   04 Sep 2003; Michael Sterrett <msterret@gentoo.org> php-docs-4.2.3.ebuild:
   simplify ebuild by using dohtml (resulting install is the same as before)
