@@ -5,7 +5,6 @@
 #               this server is required to connect to the network,
 #               it will open a TCP port to communicate with the
 #               GUI and an UDP port to communicate with the world.
-# NOTE: I have not tested this script.
 
 depend() {
 	need net
@@ -14,13 +13,16 @@ depend() {
 start() {
 	ebegin "Starting gnunetd"
 	# -u username, -c path to gnunet.conf file
-	start-stop-daemon --start --quiet --exec /usr/local/bin/gnunetd -u gnunet \ 
-	-c /var/lib/GNUnet/gnunet.conf
+	start-stop-daemon --start --quiet --background --exec /usr/bin/gnunetd \
+		-- -u gnunet -c /var/lib/GNUnet/gnunet.conf
 	eend $? "Failed to start gnunetd"
 }
 
 stop() {
 	ebegin "Stopping gnunetd"
-	start-stop-daemon --stop --quiet --exec /usr/local/bin/gnunetd
+	# pointing file descriptors to /dev/null, because start-stop-daemon
+	# prints warnings that it cannot kill process forks, 
+	# but they are already dead
+	start-stop-daemon --stop --quiet --user gnunet &>/dev/null
 	eend $? "Failed to stop gnunetd"
 }
