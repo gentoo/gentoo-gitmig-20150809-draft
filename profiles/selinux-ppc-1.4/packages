@@ -1,16 +1,16 @@
 # Core Packages
 
-*virtual/os-headers
-*>=sys-apps/baselayout-1.7.9-r1
 *>=sys-devel/binutils-2.13.90.0.18
 *>=sys-devel/gcc-3.2.1
-*>=sys-libs/glibc-2.3.1-r2
 
 ###########################################################
-# SELinux versionings
+# SELinux required versionings
 
 # Core Packages
-*>=sys-apps/portage-2.0.49_pre19
+*>=sys-apps/portage-2.0.49-r15
+*>=sys-apps/baselayout-1.7.9-r1
+*>=sys-libs/glibc-2.3.1-r2
+>=sys-kernel/linux-headers-2.4.20
 
 # Base SELinux packages
 *sys-libs/libselinux
@@ -23,10 +23,11 @@
 *>=net-misc/openssh-3.7.1_p2
 *>=sys-apps/coreutils-5.0.91
 *>=sys-apps/findutils-4.1.20
+*>=sys-apps/pam-login-3.14
 *=sys-apps/procps-3.1.12
 *>=sys-apps/psmisc-21.2-r4
+*sys-apps/tar
 *>=sys-apps/util-linux-2.12
-*>=sys-apps/pam-login-3.12-r1
 *>=sys-libs/pam-0.77
 *>=sys-libs/pwdb-0.61-r4
 
@@ -84,7 +85,6 @@
 *<sys-apps/shadow-5
 *>=sys-apps/sharutils-4.2.1-r6
 *sys-apps/slocate
-*sys-apps/tar
 *sys-apps/texinfo
 *sys-apps/which
 *sys-devel/autoconf
