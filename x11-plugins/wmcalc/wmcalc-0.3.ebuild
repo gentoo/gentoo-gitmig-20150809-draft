@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2              
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/wmcalc-0.3.ebuild,v 1.3 2003/02/13 17:28:24 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/wmcalc-0.3.ebuild,v 1.4 2003/09/06 05:45:17 msterret Exp $
 
 DESCRIPTION="A WindowMaker DockApp calculator"
 #The homepage is not working, but it is what the source lists
@@ -21,7 +21,7 @@ src_unpack() {
 	cd ${S}
 	patch -p1 < ${FILESDIR}/${P}-gentoo.diff || die
 
-}		
+}
 
 src_compile() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bgchanger/gkrellm-bgchanger-0.0.4.ebuild,v 1.2 2003/02/13 17:23:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bgchanger/gkrellm-bgchanger-0.0.4.ebuild,v 1.3 2003/09/06 05:45:17 msterret Exp $
 
 IUSE="gtk gtk2"
 
@@ -32,7 +32,7 @@ src_unpack() {
 		unpack ${MY_P2}.tar.gz
 	fi
 }
-	
+
 
 src_compile() {
 	if [ -f /usr/bin/gkrellm ]
@@ -64,7 +64,7 @@ src_install() {
 		cd ${S2}
 		insinto /usr/lib/gkrellm2/plugins
 		doins ${MY_PN}.so
-		
+
 		docinto gkrellm2
 		dodoc ChangeLog README TODO
 	fi

@@ -1,6 +1,6 @@
 # Copyright 2002 Robin Cull
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-sensors/gkrellm-sensors-0.1.ebuild,v 1.4 2003/05/29 09:38:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-sensors/gkrellm-sensors-0.1.ebuild,v 1.5 2003/09/06 05:45:17 msterret Exp $
 
 MY_P=${P/gkrellm-/gklm}
 S=${WORKDIR}/gklmsensors
@@ -21,5 +21,5 @@ src_compile() {
 
 src_install() {
 	insinto /usr/lib/gkrellm/plugins
-	doins sensors.so	
+	doins sensors.so
 }

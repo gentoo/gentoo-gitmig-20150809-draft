@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpinboard/wmpinboard-1.0.ebuild,v 1.5 2003/06/17 21:40:43 wwoods Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpinboard/wmpinboard-1.0.ebuild,v 1.6 2003/09/06 05:45:18 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window Maker dock applet resembling a miniature pinboard."
@@ -21,4 +21,4 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install-strip || die "install failed"
 }
-	
+

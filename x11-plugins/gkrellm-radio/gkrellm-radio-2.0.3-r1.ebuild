@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-radio/gkrellm-radio-2.0.3-r1.ebuild,v 1.2 2003/07/08 21:31:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-radio/gkrellm-radio-2.0.3-r1.ebuild,v 1.3 2003/09/06 05:45:17 msterret Exp $
 
 IUSE="lirc"
 
@@ -25,5 +25,5 @@ src_compile() {
 src_install () {
 	exeinto /usr/lib/gkrellm2/plugins
 	doexe radio.so
-	dodoc README CHANGES 
+	dodoc README CHANGES
 }

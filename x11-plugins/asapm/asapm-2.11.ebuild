@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/asapm-2.11.ebuild,v 1.4 2003/02/15 08:19:39 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/asapm-2.11.ebuild,v 1.5 2003/09/06 05:45:17 msterret Exp $
 
 IUSE="jpeg"
 
@@ -30,15 +30,15 @@ src_compile() {
 		--host=${CHOST} \
 		${myconf} || die
 
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff    
+	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
 	emake || die
 }
 
 src_install () {
-	
+
 	dodir usr/bin
 	dodir usr/share/man/man1
-	
+
 	make \
 		AFTER_BIN_DIR=${D}/usr/bin \
 		AFTER_MAN_DIR=${D}/usr/share/man/man1 \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12.ebuild,v 1.3 2003/02/13 17:22:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12.ebuild,v 1.4 2003/09/06 05:45:17 msterret Exp $
 
 S=${WORKDIR}/${P}
 
@@ -42,7 +42,7 @@ src_compile() {
 		asclock.o parser.o symbols.o config.o \
 		-L/usr/X11R6/lib \
 		-L/usr/lib/X11 \
-		-lXpm -lXext -lX11 || die  
+		-lXpm -lXext -lX11 || die
 }
 
 src_install () {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmlaunch/gkrellmlaunch-0.5.ebuild,v 1.7 2003/09/04 13:32:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmlaunch/gkrellmlaunch-0.5.ebuild,v 1.8 2003/09/06 05:45:17 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a Program-Launcher Plugin for GKrellM2"
@@ -21,5 +21,5 @@ src_install () {
 	insinto /usr/lib/gkrellm2/plugins
 	doins gkrellmlaunch.so
 
-	dodoc README  
+	dodoc README
 }

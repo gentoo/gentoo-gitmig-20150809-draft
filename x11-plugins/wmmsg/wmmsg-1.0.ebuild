@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/wmmsg-1.0.ebuild,v 1.1 2003/04/15 17:11:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/wmmsg-1.0.ebuild,v 1.2 2003/09/06 05:45:18 msterret Exp $
 
 DESCRIPTION="wmmsg is a dockapp that informs you of new events, such as incoming chat messages, by displaying related icons and arrival times"
 HOMEPAGE="http://taxiway.swapspace.net/~matt/wmmsg/"
@@ -10,8 +10,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/x11
-    =x11-libs/gtk+-1.2*
-    media-libs/imlib2"
+	=x11-libs/gtk+-1.2*
+	media-libs/imlib2"
 S=${WORKDIR}/${PN}
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmspaceclock/wmspaceclock-1.2b.ebuild,v 1.1 2003/05/17 11:04:01 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmspaceclock/wmspaceclock-1.2b.ebuild,v 1.2 2003/09/06 05:45:18 msterret Exp $
 
 DESCRIPTION="A sexy anti-aliased dockapp clock"
 HOMEPAGE="http://wmspaceclock.sourceforge.net"
@@ -18,7 +18,7 @@ src_compile() {
 	cd ${S}
 	sed	-i "s:/usr/local:/usr:" Makefile
 	sed	-i "s:-g3 -O2:${CFLAGS}:" Makefile
-    ./configure
+	./configure
 	make
 }
 
