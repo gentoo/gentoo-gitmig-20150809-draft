@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/turck-mmcache
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.24 2004/08/03 18:21:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.25 2004/10/24 03:12:41 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> turck-mmcache-2.4.6.ebuild:
+  Added ~sparc keyword.
 
   03 Aug 2004; <agriffis@gentoo.org> turck-mmcache-2.4.5.ebuild:
   add ~ia64 #56295
