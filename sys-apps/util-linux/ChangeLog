@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.44 2003/07/06 14:38:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.45 2003/07/12 17:42:40 solar Exp $
+
+*util-linux-2.11z-r5 (12 Jul 2003)
+
+  12 Jul 2003; <solar@gentoo.org> util-linux-2.11z-r5.ebuild,
+  files/util-linux-2.11z-pic.patch:
+  Added defines for fPIC code to avoid the use the of old __NR* inline assembly
+  construction of syscalls
 
   05 Jul 2003; Luca Barbato <lu_zero@gentoo.org> util-linux-2.11z-r4.ebuild:
   Keyworded ppc

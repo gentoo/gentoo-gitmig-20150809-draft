@@ -1,5 +1,6 @@
 MD5 3e53010365b59dade267ca354fbe2ffd ChangeLog 6958
 MD5 fdc6f7ebf1e7f279d96f19c330868aa2 util-linux-2.11y.ebuild 2109
+MD5 0cd926897e8b3294ec46d9b721f9386d util-linux-2.11z-r5.ebuild 2706
 MD5 b73abbe53ce7a49cad81cc855b7d5924 util-linux-2.11z-r4.ebuild 2410
 MD5 48e36b9b6ea3bed4ea25292f9ae5a958 files/digest-util-linux-2.11y 152
 MD5 02afa4d774f45ab0b9ef42ecc1748005 files/digest-util-linux-2.11z-r4 153
@@ -9,3 +10,5 @@ MD5 e3697bc8fd6a344e8cba1c7d32e34790 files/util-linux-2.11y-parallel-make.patch 
 MD5 6dc0134d8d5f325a86257698d2184718 files/util-linux-2.11z-mips-fdisk-fix.patch 1698
 MD5 e3697bc8fd6a344e8cba1c7d32e34790 files/util-linux-2.11z-parallel-make.patch 369
 MD5 90b5a47385e394b9112357282c35eb4a files/util-linux-2.11z-script.patch 1580
+MD5 18371db840b08f5782e3f8f96c4efe8d files/util-linux-2.11z-pic.patch 3056
+MD5 02afa4d774f45ab0b9ef42ecc1748005 files/digest-util-linux-2.11z-r5 153
