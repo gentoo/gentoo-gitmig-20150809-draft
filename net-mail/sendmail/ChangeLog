@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/sendmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.21 2003/01/23 11:03:24 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.22 2003/01/23 22:00:53 raker Exp $
+
+*sendmail-8.12.7-r3 (23 Jan 2003)
+
+  23 Jan 2003; Nick Hadaway <raker@gentoo.org> sendmail-8.12.7-r3.ebuild,
+  files/digest-sendmail-8.12.7-r3, files/sendmail-r3 :
+  Changed init to incorporate KILL_OPTS so people can choose their level
+  of daemon shutdown forcefulness.
 
 *sendmail-8.12.7-r2 (23 Jan 2003)
 
