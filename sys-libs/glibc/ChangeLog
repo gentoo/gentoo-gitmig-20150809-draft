@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.234 2004/08/12 00:14:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.235 2004/08/13 01:25:31 kumba Exp $
+
+  12 Aug 2004; Joshua Kinard <kumba@gentoo.org>
+  glibc-2.3.4.20040619-r1.ebuild:
+  Bumped glibc-2.3.4.20040619-r1 to stable for the hotfix (Bug #59526).
 
   11 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   glibc-2.3.3.20040420-r1.ebuild:
