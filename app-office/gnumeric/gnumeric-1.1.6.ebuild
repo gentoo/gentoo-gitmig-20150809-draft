@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.6.ebuild,v 1.2 2002/08/30 06:20:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.6.ebuild,v 1.3 2002/09/06 00:45:28 spider Exp $
 
 #provide Xmake and Xemake
 inherit virtualx
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
-SRC_URI="mirror://gnome/sources/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://gnome/2.0.0/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
 
 SLOT="0"
