@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.4-r8.ebuild,v 1.1 2001/01/29 19:39:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.4-r9.ebuild,v 1.1 2001/01/31 18:55:45 drobbins Exp $
  
 A=""
 S=${WORKDIR}/${P}

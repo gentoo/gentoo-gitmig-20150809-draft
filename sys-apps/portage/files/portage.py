@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+#
 # Gentoo Linux Dependency Checking Code
 # Copyright 1998-2000 Daniel Robbins, Gentoo Technologies, Inc.
 # Distributed under the GNU Public License
@@ -71,7 +73,7 @@ categories=("app-admin", "app-arch", "app-cdr", "app-doc", "app-editors", "app-e
 			"dev-python", "dev-ruby", "dev-util", "gnome-apps", "gnome-base", "gnome-libs", 
 			"gnome-office","kde-apps", "kde-base", "kde-libs", "media-gfx", "media-libs", "media-sound", "media-video", 
 			"net-analyzer", "net-dialup", "net-fs", "net-ftp", "net-irc", "net-libs", "net-mail", "net-misc", "net-nds", 
-			"net-print", "net-www", "packages", "sys-apps", "sys-build", "sys-devel", "sys-kernel", "sys-libs", "x11-base", "x11-libs", 
+			"net-print", "net-www", "packages", "sys-apps", "sys-devel", "sys-kernel", "sys-libs", "x11-base", "x11-libs", 
 			"x11-terms", "x11-wm","virtual")
 
 #parse /etc/env.d and generate /etc/profile.env
@@ -1102,88 +1104,90 @@ def getgeneral(mycatpkg):
 	else:
 		return string.join([mysplit[0],mysplit[1]],"/")
 
-def dep_depreduce(mypkgdep):
-	global inst
-	#installcache holds a cached dictionary containing all installed packages
-	if not installcache:
-		installcache=port_insttree()
-		#initialize cache
+# some old code
+#def dep_depreduce(mypkgdep):
+#	global installcache
+#	#installcache holds a cached dictionary containing all installed packages
+##	if not installcache:
+#		installcache=port_insttree()
+#		#initialize cache
+#
+#	if mypkgdep[0]=="!":
+#		#this is an exact package match
+#		if isinstalled(mypkgdep[1:]):
+#			return 0
+#		else:
+#			return 1
+#	elif mypkgdep[0]=="=":
+#		#this is an exact package match
+#		if isspecific(mypkgdep[1:]):
+#			if isinstalled(mypkgdep[1:]):
+#				return 1
+#			else:
+#				return 0
+#		else:
+#			return None
+#	elif mypkgdep[0:2]==">=":
+#		#this needs to check against multiple packages
+#		if not isspecific(mypkgdep[2:]):
+#			return None
+#		if isinstalled(getgeneral(mypkgdep[2:])):
+#			mycatpkg=catpkgsplit(mypkgdep[2:])
+#			mykey=mycatpkg[0]+"/"+mycatpkg[1]
+#			if not installcache.has_key(mykey):
+#				return 0
+#			for x in installcache[mykey]:
+#				if pkgcmp(x[1][1:],mycatpkg[1:])>=0:
+#					return 1
+#		return 0
+#	elif mypkgdep[0:2]=="<=":
+#		#this needs to check against multiple packages
+#		if not isspecific(mypkgdep[2:]):
+#			return None
+#		if isinstalled(getgeneral(mypkgdep[2:])):
+#			mycatpkg=catpkgsplit(mypkgdep[2:])
+#			mykey=mycatpkg[0]+"/"+mycatpkg[1]
+#			if not installcache.has_key(mykey):
+#				return 0
+#			for x in installcache[mykey]:
+#				if pkgcmp(x[1][1:],mycatpkg[1:])<=0:
+#					return 1
+#		return 0
+#	elif mypkgdep[0]=="<":
+#		#this needs to check against multiple packages
+#		if not isspecific(mypkgdep[2:]):
+#			return None
+#		if isinstalled(getgeneral(mypkgdep[2:])):
+#			mycatpkg=catpkgsplit(mypkgdep[2:])
+#			mykey=mycatpkg[0]+"/"+mycatpkg[1]
+#			if not installcache.has_key(mykey):
+#				return 0
+#			for x in installcache[mykey]:
+#				if pkgcmp(x[1][1:],mycatpkg[1:])<0:
+#					return 1
+#		return 0
+#	elif mypkgdep[0]==">":
+#		#this needs to check against multiple packages
+#		if not isspecific(mypkgdep[2:]):
+#			return None
+#		if isinstalled(getgeneral(mypkgdep[2:])):
+#			mycatpkg=catpkgsplit(mypkgdep[2:])
+#			mykey=mycatpkg[0]+"/"+mycatpkg[1]
+#			if not installcache.has_key(mykey):
+#				return 0
+#			for x in installcache[mykey]:
+#				if pkgcmp(x[1][1:],mycatpkg[1:])<0:
+##					return 1
+#		return 0
+#	if not isspecific(mypkgdep):
+#		if isinstalled(mypkgdep):
+#			return 1
+#		else:
+#			return 0
+##	else:
+#		return None
+#		
 
-	if mypkgdep[0]=="!":
-		#this is an exact package match
-		if isinstalled(mypkgdep[1:]):
-			return 0
-		else:
-			return 1
-	elif mypkgdep[0]=="=":
-		#this is an exact package match
-		if isspecific(mypkgdep[1:]):
-			if isinstalled(mypkgdep[1:]):
-				return 1
-			else:
-				return 0
-		else:
-			return None
-	elif mypkgdep[0:2]==">=":
-		#this needs to check against multiple packages
-		if not isspecific(mypkgdep[2:]):
-			return None
-		if isinstalled(getgeneral(mypkgdep[2:])):
-			mycatpkg=catpkgsplit(mypkgdep[2:])
-			mykey=mycatpkg[0]+"/"+mycatpkg[1]
-			if not installcache.has_key(mykey):
-				return 0
-			for x in installcache[mykey]:
-				if pkgcmp(x[1][1:],mycatpkg[1:])>=0:
-					return 1
-		return 0
-	elif mypkgdep[0:2]=="<=":
-		#this needs to check against multiple packages
-		if not isspecific(mypkgdep[2:]):
-			return None
-		if isinstalled(getgeneral(mypkgdep[2:])):
-			mycatpkg=catpkgsplit(mypkgdep[2:])
-			mykey=mycatpkg[0]+"/"+mycatpkg[1]
-			if not installcache.has_key(mykey):
-				return 0
-			for x in installcache[mykey]:
-				if pkgcmp(x[1][1:],mycatpkg[1:])<=0:
-					return 1
-		return 0
-	elif mypkgdep[0]=="<":
-		#this needs to check against multiple packages
-		if not isspecific(mypkgdep[2:]):
-			return None
-		if isinstalled(getgeneral(mypkgdep[2:])):
-			mycatpkg=catpkgsplit(mypkgdep[2:])
-			mykey=mycatpkg[0]+"/"+mycatpkg[1]
-			if not installcache.has_key(mykey):
-				return 0
-			for x in installcache[mykey]:
-				if pkgcmp(x[1][1:],mycatpkg[1:])<0:
-					return 1
-		return 0
-	elif mypkgdep[0]==">":
-		#this needs to check against multiple packages
-		if not isspecific(mypkgdep[2:]):
-			return None
-		if isinstalled(getgeneral(mypkgdep[2:])):
-			mycatpkg=catpkgsplit(mypkgdep[2:])
-			mykey=mycatpkg[0]+"/"+mycatpkg[1]
-			if not installcache.has_key(mykey):
-				return 0
-			for x in installcache[mykey]:
-				if pkgcmp(x[1][1:],mycatpkg[1:])<0:
-					return 1
-		return 0
-	if not isspecific(mypkgdep):
-		if isinstalled(mypkgdep):
-			return 1
-		else:
-			return 0
-	else:
-		return None
-		
 def dep_parenreduce(mysplit,mypos=0):
 	"Accepts a list of strings, and converts '(' and ')' surrounded items to sub-lists"
 	while (mypos<len(mysplit)): 
@@ -1233,6 +1237,8 @@ def dep_opconvert(mysplit,myuse):
 				#the package isn't installed, delete conditional and next item
 				del mysplit[mypos]
 				del mysplit[mypos]
+				#we don't want to move to the next item, so we perform a quick hack
+				mypos=mypos-1
 		mypos=mypos+1
 	return mysplit
 
@@ -1439,26 +1445,27 @@ def dep_listcleanup(deplist):
 				newlist.append(x)
 	return newlist
 	
-def dep_parse(depstring):
-	"Evaluates a dependency string"
-	myusesplit=string.split(getsetting("USE"))
-	mysplit=string.split(depstring)
-	#convert parenthesis to sublists
-	mysplit=dep_parenreduce(mysplit)
-	#mysplit can't be None here, so we don't need to check
-	mysplit=dep_opconvert(mysplit,myusesplit)
-	#if mysplit==None, then we have a parse error (paren mismatch or misplaced ||)
-	if mysplit==None:
-		return [0,"Parse Error (parenthesis mismatch or || abuse?)"]
-	mysplit2=mysplit[:]
-	mysplit2=dep_wordreduce(mysplit2)
-	if mysplit2==None:
-		return [0,"Invalid token"]
-	myeval=dep_eval(mysplit2)
-	if myeval:
-		return [1,None]
-	else:
-		return [1,dep_listcleanup(dep_zapdeps(mysplit,mysplit2))]
+#I believe it's ok to depreciate this now
+#def dep_parse(depstring):
+#	"Evaluates a dependency string"
+#	myusesplit=string.split(getsetting("USE"))
+#	mysplit=string.split(depstring)
+#	#convert parenthesis to sublists
+#	mysplit=dep_parenreduce(mysplit)
+#	#mysplit can't be None here, so we don't need to check
+#	mysplit=dep_opconvert(mysplit,myusesplit)
+#	#if mysplit==None, then we have a parse error (paren mismatch or misplaced ||)
+#	if mysplit==None:
+#		return [0,"Parse Error (parenthesis mismatch or || abuse?)"]
+#	mysplit2=mysplit[:]
+#	mysplit2=dep_wordreduce(mysplit2)
+#	if mysplit2==None:
+#		return [0,"Invalid token"]
+#	myeval=dep_eval(mysplit2)
+#	if myeval:
+#		return [1,None]
+#	else:
+#		return [1,dep_listcleanup(dep_zapdeps(mysplit,mysplit2))]
 
 def merge_check(mycatpkg):
 	if roottree.exists_specific(mycatpkg):
@@ -1487,6 +1494,7 @@ def dep_frontend(mytype,depstring):
 	else:
 		print '!!! Some '+mytype+' dependencies must be satisfied:'
 		print
+		print myparse[1]
 		dep_print(myparse[1])
 		print
 #		This is the semi-working auto-ebuild stuff, disabled for now
@@ -2023,6 +2031,7 @@ def pkgmerge(mytbz2):
 		return rdep[1:]
 
 def init():
+#	global installcache
 	global root, ERRPKG, ERRVER, configdefaults, configsettings, currtree, roottree, localtree, porttree 
 	configdefaults=getconfig("/etc/make.defaults")
 	configsettings=getconfig("/etc/make.conf")
@@ -2055,5 +2064,5 @@ def init():
 	#package database is now initialized and ready, cap'n!
 	ERRPKG=""
 	ERRVER=""
-	installcache=None
+#	installcache=None
 init()
