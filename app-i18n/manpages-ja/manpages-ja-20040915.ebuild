@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040915.ebuild,v 1.7 2005/01/01 14:35:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040915.ebuild,v 1.8 2005/03/31 20:34:56 blubb Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.linux.or.jp/JM/${MY_P}.tar.gz
 	http://dev.gentoo.org/~hattya/distfiles/${GENTOO_MAN_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 hppa ia64 mips ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc sparc x86"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 

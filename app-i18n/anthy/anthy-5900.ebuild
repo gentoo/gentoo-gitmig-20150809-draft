@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-5900.ebuild,v 1.7 2005/01/01 14:25:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-5900.ebuild,v 1.8 2005/03/31 20:33:51 blubb Exp $
 
 inherit elisp-common
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge.jp/anthy/12071/${P}.tar.gz"
 
 RESTRICT="nomirror"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ~ia64 ~ppc ~ppc-macos sparc x86"
+KEYWORDS="alpha amd64 ~ia64 ~ppc ~ppc-macos sparc x86"
 SLOT="0"
 
 DEPEND="emacs? ( virtual/emacs )
