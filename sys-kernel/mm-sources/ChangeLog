@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.100 2003/12/17 15:30:19 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.101 2003/12/23 21:42:24 tseng Exp $
+
+*mm-sources-2.6.0-r1 (23 Dec 2003)
+
+  23 Dec 2003; Brandon Hale <tseng@gentoo.org> mm-sources-2.6.0-r1.ebuild,
+  files/2.6.0-test5-mm4-devfsd-fix, files/2.6.0-test9-mm4-alsa-crash.patch,
+  files/test5.patch:
+  Version bump and files/ cleanup.
 
 *mm-sources-2.6.0_beta11-r1 (17 Dec 2003)
 
