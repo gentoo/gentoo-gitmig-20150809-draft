@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.7.ebuild,v 1.3 2004/03/26 22:01:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/xmms-jack-0.7.ebuild,v 1.4 2004/06/13 08:09:38 eradicator Exp $
 
 DATE="20040119"
 
@@ -17,7 +17,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="media-sound/xmms
-	virtual/jack"
+	media-sound/jack-audio-connection-kit"
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 

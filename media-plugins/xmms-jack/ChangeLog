@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-jack
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.8 2004/06/02 18:31:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.9 2004/06/13 08:09:38 eradicator Exp $
+
+  13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-jack-0.7.ebuild,
+  xmms-jack-0.8.1.ebuild, xmms-jack-0.9.ebuild:
+  Getting rid of virtual/jack.
 
   02 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-jack-0.9.ebuild:
   Stable x86.
