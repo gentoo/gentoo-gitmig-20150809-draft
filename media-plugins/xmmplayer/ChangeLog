@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/xmmplayer
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmmplayer/ChangeLog,v 1.4 2004/02/15 12:06:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmmplayer/ChangeLog,v 1.5 2004/03/30 18:02:38 eradicator Exp $
+
+*xmmplayer-0.3.3 (30 Mar 2004)
+
+  30 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmmplayer-0.3.3.ebuild:
+  Version bump.  Closes bug #46015
 
   15 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmmplayer-0.2.1.ebuild, xmmplayer-0.3.1.ebuild:
