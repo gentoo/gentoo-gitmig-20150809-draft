@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.113 2004/07/26 15:13:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.114 2004/07/27 17:16:26 aliz Exp $
 
   27 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> postgresql-7.4.3-r1.ebuild:
   Fixed SHMMAX_MIN to calculate from MAX_CONNECTIONS.
@@ -10,6 +10,7 @@
   Fixed header path. (#56091)
 
 *postgresql-7.3.6-r2 (18 Jul 2004)
+*postgresql-7.4.3-r1 (18 Jul 2004)
 
   18 Jul 2004; Masatomo Nakano <nakano@gentoo.org>
   -files/pg_autovacuum.conf-7.4.2, -files/pg_autovacuum.init-7.4.2,
