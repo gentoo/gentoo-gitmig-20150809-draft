@@ -58,3 +58,4 @@ tetex		app-text/tetex
 tiff		media-libs/tiff
 X		x11-base/xfree
 bitmap-fonts
+xprint

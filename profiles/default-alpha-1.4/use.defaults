@@ -44,3 +44,4 @@ snmp		net-analyzer/ucd-snmp
 cdr		app-cdr/cdrtools
 scanner		media-gfx/sane-backends
 bitmap-fonts
+xprint
