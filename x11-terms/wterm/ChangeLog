@@ -1,6 +1,14 @@
 # ChangeLog for x11-terms/wterm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/ChangeLog,v 1.3 2003/01/09 01:56:23 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/ChangeLog,v 1.4 2003/01/13 11:13:57 raker Exp $
+
+*wterm-6.2.9-r2 (13 Jan 2003)
+
+  13 Jan 2003; Nick Hadaway <raker@gentoo.org> wterm-6.2.9-r2.ebuild,
+  files/digest-wterm-6.2.9-r1 :
+  Now setting rxvt as the default term value and specifying some
+  configure options to make doubly sure that the nice features get
+  compiled in.
 
 *wterm-6.2.9-r1 (08 Jan 2002)
 
