@@ -1,6 +1,9 @@
 # ChangeLog for app-text/bogosort
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bogosort/ChangeLog,v 1.3 2005/01/01 16:04:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bogosort/ChangeLog,v 1.4 2005/01/05 11:52:58 ciaranm Exp $
+
+  05 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> bogosort-0.4.2.ebuild:
+  x86, sparc, mips stable, added ~hppa
 
   15 Dec 2004; Michael Hanselmann <hansmi@gentoo.org> +files/xmalloc.patch,
   bogosort-0.4.2.ebuild:

@@ -1,5 +1,15 @@
-MD5 9fee5e0b235a76c0242b1b9c6734caaa ChangeLog 510
-MD5 bdb0b83de096489b443d267a5edf9642 bogosort-0.4.2.ebuild 685
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3d514e7ff917551c0bc35db9096ef1c2 bogosort-0.4.2.ebuild 685
+MD5 ffb8e279ef42e7b1ead40611c2b943c9 ChangeLog 622
 MD5 4c1040b15c428fc436d1f5b746abfa8a metadata.xml 496
-MD5 375c74fb876d97ee1d8b1acb3e55ada5 files/digest-bogosort-0.4.2 66
 MD5 5c0ac35193f6152a103241167bae834d files/xmalloc.patch 395
+MD5 375c74fb876d97ee1d8b1acb3e55ada5 files/digest-bogosort-0.4.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB29VVLLFUmVNQ7rkRAqIeAJ0W6EbBdzgGCEOCZ3GUEjRol7cVOwCeIbn2
+rXUUIqVcCMn0A+rcITZcaLc=
+=iseC
+-----END PGP SIGNATURE-----

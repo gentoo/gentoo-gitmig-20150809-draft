@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bogosort/bogosort-0.4.2.ebuild,v 1.3 2005/01/01 16:04:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bogosort/bogosort-0.4.2.ebuild,v 1.4 2005/01/05 11:52:58 ciaranm Exp $
 
 inherit libtool eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ulrik.haugen.se/pub/unix/bogosort/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~mips ~ppc"
+KEYWORDS="x86 sparc mips ~ppc ~hppa"
 IUSE=""
 
 DEPEND=""
