@@ -1,6 +1,16 @@
-MD5 dc993b8e048aa0b021c8a4f27776987b ChangeLog 1167
-MD5 a5046cdf62c25e2513f5146dca54d60b gtk2-gladexml-0.94.ebuild 730
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d19ff00009016bb2f634f74e7481e2ba ChangeLog 1276
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 54950baeb39c8dfa08eb2f81521f53fc gtk2-gladexml-1.00.ebuild 772
+MD5 a5046cdf62c25e2513f5146dca54d60b gtk2-gladexml-0.94.ebuild 730
+MD5 ddb9beb3b2d08a7cd03596dcac1c833b gtk2-gladexml-1.00.ebuild 772
 MD5 c0ab51a568549ac1fe7a09977e639fdb files/digest-gtk2-gladexml-0.94 69
 MD5 f0f93fa064d4cd67a2ac8e72d37e6d93 files/digest-gtk2-gladexml-1.00 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBxqlOtG5z4I8BtQoRAofxAJsE99ZSRpPdpE160YxAFjjADp3h6QCgkgy8
+IW2Hryn0Pf0OVM8J8dxYt7A=
+=sdwk
+-----END PGP SIGNATURE-----
