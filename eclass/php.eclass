@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.53 2003/06/20 03:05:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.54 2003/06/20 03:36:28 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -217,7 +217,8 @@ php_src_compile() {
 
 	use crypt && myconf="${myconf} --with-mcrypt=/usr --with-mhash"
 	use firebird && myconf="${myconf} --with-interbase=/opt/interbase"
-	use flash && myconf="${myconf} --with-swf=/usr --with-ming=/usr"
+	use flash && myconf="${myconf} --with-ming=/usr"
+	use flash && use x86 && myconf="${myconf} --with-swf=/usr"
 	use freetds && myconf="${myconf} --with-sybase=/usr"
 	use gdbm && myconf="${myconf} --with-gdbm=/usr"
 	use informix && [ -n "${INFORMIXDIR}" ] && myconf="${myconf} --with-informix=${INFORMIXDIR}"
