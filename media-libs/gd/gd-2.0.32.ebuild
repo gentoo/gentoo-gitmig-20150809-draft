@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.31.ebuild,v 1.3 2004/11/02 21:41:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.32.ebuild,v 1.1 2004/11/03 00:44:16 vapier Exp $
 
 inherit gnuconfig eutils
 
@@ -21,7 +21,6 @@ DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-png-check.patch
 	gnuconfig_update
 }
 

@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/gd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.15 2004/11/02 21:41:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.16 2004/11/03 00:44:16 vapier Exp $
+
+*gd-2.0.32 (02 Nov 2004)
+
+  02 Nov 2004; Mike Frysinger <vapier@gentoo.org>
+  -files/1.8.4-dec-alpha-compiler.diff, -files/1.8.4-jpeg-inc.patch,
+  -files/1.8.4-png-overflows.patch, -gd-1.8.4-r2.ebuild, -gd-2.0.31.ebuild,
+  +gd-2.0.32.ebuild:
+  Version bump to fix png compiling.
 
   02 Nov 2004; Markus Rothe <corsair@gentoo.org> gd-2.0.31.ebuild:
   Stable on ppc64, bug #69070
