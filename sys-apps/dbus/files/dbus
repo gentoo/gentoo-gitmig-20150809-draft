@@ -1,0 +1,25 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/files/dbus,v 1.1 2004/04/07 14:26:19 foser Exp $
+
+start() {
+
+	ebegin "Starting D-BUS system messagebus"
+
+	start-stop-daemon --start --exec /usr/bin/dbus-daemon-1 -- --system
+
+	eend $?
+
+}
+
+stop() {
+
+	ebegin "Stopping D-BUS system messagebus"
+
+	start-stop-daemon --stop --pidfile /var/run/dbus.pid 
+	rm /var/run/dbus.pid
+
+	eend $?
+
+}

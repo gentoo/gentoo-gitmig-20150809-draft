@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.6 2004/02/17 22:46:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.7 2004/04/07 14:26:18 foser Exp $
+
+*dbus-0.21 (07 Apr 2004)
+
+  07 Apr 2004; foser <foser@gentoo.org> dbus-0.21.ebuild :
+  Overhaul of the whole ebuild, lots of cleanups.
+  Fixed deps (#43806)
+  Fixed api doc building & installation
+  Added init script & postinst note (#46101)
+  Added myself as maintainer for this package to metadat
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> dbus-0.20.ebuild:
   Remove all KEYWORDS other than ~x86, since none of the support stuff (i.e.
