@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r1.ebuild,v 1.14 2004/09/23 23:10:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r1.ebuild,v 1.15 2004/09/23 23:13:44 mr_bones_ Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -35,5 +35,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS BACKLOG ChangeLog INSTALL NEWS README THANKS TODO
+	dodoc AUTHORS BACKLOG ChangeLog NEWS README THANKS TODO
 }
