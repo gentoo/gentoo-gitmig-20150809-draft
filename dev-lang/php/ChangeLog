@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.18 2002/04/26 02:15:31 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.19 2002/04/27 09:30:58 rphillips Exp $
+
+  27 Apr 2002; Ryan Phillips <rphillips@gentoo.org> :
+
+  This ChangeLog file needs reformatting.
 
   25 Apr 2002; Donny Davies <woodchip@gentoo.org> :
 
@@ -13,6 +17,13 @@
 
   Hmm, and I did not edit the ChangeLog for some reason to say that the mhash
   and mcrypt flags are encapsulated by the crypt flag now.
+
+*php-4.1.2-r8 (27 Apr 2002)
+
+  27 Apr 2002; Ryan Phillips <rphillips@gentoo.org> php-4.1.2-r7.ebuild :
+
+  Tweaked ebuild to include --with-gettext support.  This fixes #2106, but
+  does it break anything else?
 
 *php-4.1.2-r7 (15 Apr 2002)
 
