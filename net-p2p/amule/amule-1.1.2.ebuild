@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-1.1.2.ebuild,v 1.3 2004/01/06 04:48:26 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-1.1.2.ebuild,v 1.4 2004/01/26 01:02:08 vapier Exp $
 
 MY_P=${P/m/M}
 S=${WORKDIR}/${MY_P}
@@ -31,7 +31,7 @@ pkg_setup() {
 }
 
 src_compile () {
-	export WANT_AUTOCONF_2_5='1'
+	export WANT_AUTOCONF='2.5'
 	export WANT_AUTOMAKE='1.7'
 	./autogen.sh
 	econf || die
