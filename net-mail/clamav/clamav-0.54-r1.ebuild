@@ -1,8 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/clamav-0.54-r1.ebuild,v 1.5 2003/04/24 10:37:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/clamav-0.54-r1.ebuild,v 1.6 2003/06/27 13:01:57 vapier Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
+has_version =sys-libs/glibc-2.2* && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
 DESCRIPTION="Clam Anti-Virus Scanner"
 HOMEPAGE="http://clamav.elektrapro.com"
