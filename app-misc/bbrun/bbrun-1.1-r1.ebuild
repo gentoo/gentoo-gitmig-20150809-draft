@@ -14,7 +14,6 @@ DEPEND=">=x11-wm/blackbox-0.61
 src_unpack() {
 	unpack ${A}
 	cd ${S}/bbrun
-	cd ${S}/bbrun
 	mv Makefile Makefile.orig
 	try sed '/CFLAGS =/ s:$: -I/usr/X11R6/include/gtk-1.2 -I/usr/include/glib-1.2 '"${CFLAGS}"':' Makefile.orig > Makefile
 }
