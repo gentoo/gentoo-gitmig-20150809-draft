@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.2-r1.ebuild,v 1.1 2004/03/29 18:25:05 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.2-r1.ebuild,v 1.2 2004/04/03 03:47:47 rphillips Exp $
 
 MY_P="${P/_/}"
 
@@ -49,5 +49,6 @@ src_install () {
 	docinto html
 	dohtml -r html/
 
-	cp "${WORKDIR}/${MY_P}/src/tla/=gpg-check.awk" "${D}/usr/bin/tla-gpg-check.awk"
+	chmod 755 "${WORKDIR}/${MY_P}/src/tla/=gpg-check.awk"
+	cp -a "${WORKDIR}/${MY_P}/src/tla/=gpg-check.awk" "${D}/usr/bin/tla-gpg-check.awk"
 }
