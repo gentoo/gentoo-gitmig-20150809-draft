@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.1.ebuild,v 1.5 2004/07/25 21:11:25 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.1.ebuild,v 1.6 2004/08/28 06:00:42 seemant Exp $
 
 inherit eutils webapp
 
@@ -126,6 +126,6 @@ pkg_postinst() {
 	ewarn "/etc/awstats/awstats.<yourdomain>.conf and edit."
 	ewarn "use the command"
 	ewarn "     webapp-config"
-	ewarn "to install awstats for each virtual host. See propert man page."
+	ewarn "to install awstats for each virtual host. See proper man page."
 }
 
