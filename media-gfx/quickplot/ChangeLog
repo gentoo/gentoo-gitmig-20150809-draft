@@ -1,0 +1,12 @@
+# ChangeLog for media-gfx/quickplot
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/quickplot/ChangeLog,v 1.1 2005/01/05 01:12:43 cryos Exp $
+
+*quickplot-0.8.2 (05 Jan 2005)
+
+  05 Jan 2005; Marcus Hanwell <cryos@gentoo.org> +metadata.xml,
+  +files/quickplot-0.8.2-gcc-3.4.patch, +quickplot-0.8.2.ebuild:
+  Initial import - thanks to Michael Labhard <m.labhard@comcast.net> bug 49103,
+  and Lance Arenault <lanceman@bev.net> bug 49725 for the initial ebuilds. I
+  added the gcc patch to fix compilation problems with GCC 3.4.
+
