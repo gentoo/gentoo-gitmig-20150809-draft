@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.14 2005/01/15 22:32:29 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.15 2005/01/15 22:53:21 compnerd Exp $
+
+  15 Jan 2005; Saleem Abdulrasool <compnerd@gentoo.org> sun-jre-bin-1.4.2.06.ebuild:
+  Marked stable for x86
 
   15 Jan 2005; Saleem Abdulrasool <compnerd@gentoo.org> sun-jre-bin-1.4.2.06.ebuild:
   Updated lisense; resolves bug #72645
