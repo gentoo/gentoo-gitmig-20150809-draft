@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.5 2002/07/21 01:01:12 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.6 2002/09/23 07:16:39 vapier Exp $
+
+*mol-0.9.65 (20 July 2002)
+
+  23 Sep 2002; Mike Frysinger <vapier@gentoo.org>
+
+  Changed LICENSE from GPL to GPL-2 and removed pkg_setup check for ARCH
 
   20 July 2002; Phil Bordelon <sunflare@gentoo.org> mol-0.9.63.ebuild mol-0.9.64.ebuild :
 
@@ -9,12 +15,20 @@
 
 *mol-0.9.64 (12 July 2002)
 
+  23 Sep 2002; Mike Frysinger <vapier@gentoo.org>
+
+  Changed LICENSE from GPL to GPL-2 and removed pkg_setup check for ARCH
+
   12 July 2002; Gerk (gerk@gentoo.org)
 
   Added 0.9.64, simple bump and moved to 
   emake instead of make
 
 *mol-0.9.63 (5 May 2002)
+
+  23 Sep 2002; Mike Frysinger <vapier@gentoo.org>
+
+  Changed LICENSE from GPL to GPL-2 and removed pkg_setup check for ARCH
 
   22 June 2002; Gerk (gerk@gentoo.org)
 

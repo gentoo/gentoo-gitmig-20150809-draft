@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.64.ebuild,v 1.3 2002/08/02 05:06:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.64.ebuild,v 1.4 2002/09/23 07:16:39 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="MOL (Mac-on-Linux) is a PPC-only program to run Mac OS <=9.2 natively within Linux"
@@ -10,15 +10,8 @@ HOMEPAGE="http://www.maconlinux.net/"
 DEPEND="virtual/glibc"
 RDEPEND=""
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="ppc -x86 -sparc -sparc64"
-
-pkg_setup() {
-	if [ ${ARCH} != "ppc" ] ; then
-	        eerror "Sorry, this is a PPC only package."
-	        die "Sorry, this as a PPC only pacakge."
-	fi
-}
 
 src_compile() {
 
