@@ -1,6 +1,11 @@
 # ChangeLog for games-util/aabrowse
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/aabrowse/ChangeLog,v 1.1 2004/08/25 10:23:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/aabrowse/ChangeLog,v 1.2 2004/12/07 10:23:14 mr_bones_ Exp $
+
+*aabrowse-0.0.8 (07 Dec 2004)
+
+  07 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +aabrowse-0.0.8.ebuild:
+  version bump
 
 *aabrowse-0.0.6 (25 Aug 2004)
 
