@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/groupoffice-1.98.ebuild,v 1.2 2004/03/09 21:32:13 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/groupoffice-2.01.ebuild,v 1.1 2004/03/09 21:32:13 mholzer Exp $
 
 inherit webapp-apache
 
