@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/m17n-db-1.0.2.ebuild,v 1.9 2004/07/31 23:02:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/m17n-db-1.0.2.ebuild,v 1.10 2005/01/01 16:01:18 usata Exp $
 
 DESCRIPTION="Database for the m17n library"
 HOMEPAGE="http://www.m17n.org/m17n-lib/"

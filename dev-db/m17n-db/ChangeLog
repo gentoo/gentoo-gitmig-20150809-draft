@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/m17n-db
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.13 2004/12/12 03:45:09 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.14 2005/01/01 16:01:18 usata Exp $
+
+*m17n-db-1.2.0 (02 Jan 2005)
+
+  02 Jan 2005; Mamoru KOMACHI <usata@gentoo.org> +m17n-db-1.2.0.ebuild:
+  Version bumped.
 
   11 Dec 2004; Jason Wever <weeve@gentoo.org> m17n-db-1.1.0.ebuild:
   Stable on sparc.
