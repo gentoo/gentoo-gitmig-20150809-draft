@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <ciaranm@gentoo.org> (30 Jan 2004)
+# silo 1.4.x still has issues that need fixing. masking this until they're
+# straightened out, anyone that needs the new features can override locally
+>=sys-boot/silo-1.4.0
+
 # <lanius@gentoo.org> (27 Jan 2004)
 # this is still in development
 =net-zope/plone-2.0.0_rc3
