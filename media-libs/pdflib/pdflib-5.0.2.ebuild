@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.1 2004/01/14 04:42:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-5.0.2.ebuild,v 1.2 2004/01/22 22:02:07 seemant Exp $
 
 IUSE="tcltk perl python java"
 MY_PN=${PN/pdf/PDF}-Lite
@@ -60,17 +60,17 @@ src_install() {
 	# fix sandbox violations
 	# NB: do this *after* build, otherwise we will get linker problems.
 	# all we basically do here is modify the install path for Makefiles that
-	# needs it.
-	sed -i -e "s:LANG_LIBDIR \t\= :LANG_LIBDIR\t\= ${D}:" \
+	# need it.
+	sed -i -e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
 		${S}/bind/java/Makefile
 
-	sed -i -e "s:LANG_LIBDIR \t\= :LANG_LIBDIR\t\= ${D}:" \
+	sed -i -e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
 		${S}/bind/perl/Makefile
 
-	sed -i -e "s:LANG_LIBDIR \t\= :LANG_LIBDIR\t\= ${D}:" \
+	sed -i -e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
 		${S}/bind/python/Makefile
 
-	sed -e "s:LANG_LIBDIR \t\= :LANG_LIBDIR\t\= ${D}:" \
+	sed -i -e "s:^\(LANG_LIBDIR\).*= \(.*\):\1\t = ${D}/\2:" \
 		${S}/bind/tcl/Makefile
 
 	# ok, this should create the correct lib dirs for perl and python.
@@ -90,8 +90,7 @@ src_install() {
 	fi
 	#next line required for proper install
 	dodir /usr/bin
-	make prefix=${D}/usr \
-		install || die
+	einstall || die
 
 	dodoc readme.txt doc/*
 
