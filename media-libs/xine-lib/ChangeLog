@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.97 2004/03/21 21:28:16 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.98 2004/03/22 03:24:27 weeve Exp $
+
+  21 Mar 2004; Jason Wever <weeve@gentoo.org> xine-lib-1_rc3-r2.ebuild:
+  Added ~sparc keyword.
 
   21 Mar 2004; Martin Holzer <mholzer@gentoo.org> xine-lib-1_rc3-r2.ebuild:
   this should fix 45297 and 45305

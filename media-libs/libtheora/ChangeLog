@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libtheora
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.5 2004/03/21 21:57:04 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.6 2004/03/22 03:21:21 weeve Exp $
+
+  21 Mar 2004; Jason Wever <weeve@gentoo.org> libtheora-1.0_alpha3.ebuild:
+  Added ~sparc keyword.
 
 *libtheora-1.0_alpha3 (21 Mar 2004)
 
