@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.0.1.ebuild,v 1.4 2003/10/18 04:02:35 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.0.1.ebuild,v 1.5 2003/11/17 18:39:16 vapier Exp $
 
 IUSE="oggvorbis sse"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.speex.org/download/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD as-is"
-KEYWORDS="~x86"
+KEYWORDS="~x86 hppa"
 
 DEPEND="virtual/glibc
 	oggvorbis? ( >=media-libs/libogg-1.0 )"
