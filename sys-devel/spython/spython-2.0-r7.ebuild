@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r7.ebuild,v 1.1 2001/08/04 02:10:10 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/spython/spython-2.0-r7.ebuild,v 1.2 2001/08/06 23:01:55 pete Exp $
 
 S=${WORKDIR}/Python-2.0
 S2=${WORKDIR}/python-fchksum-1.1
@@ -71,7 +71,7 @@ src_compile() {
 }
 
 src_install() {
-
+	
     dodir /usr/share/man
     try make install prefix=${D}/usr MANDIR=${D}/usr/share/man
 	
@@ -88,4 +88,14 @@ src_install() {
 		rm -rf ${D}/usr/lib/python${PV}/{test,config}
 		rm -rf ${D}/usr/include
     fi
+}
+
+pkg_preinst() {
+	# keep portage from breaking from this move
+	for file in ${ROOT}/usr/lib/python2.0/{xpak,portage}.py
+	do
+	  [ -f ${file} ] || continue
+	  cp -a ${file} ${ROOT}/usr/lib/python2.0/site-packages
+	  rm -f ${file}
+	done
 }
