@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/pcmcia-cs-tools-3.2.3.ebuild,v 1.1 2003/01/23 08:30:55 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/pcmcia-cs-tools-3.2.3.ebuild,v 1.2 2003/02/02 07:15:20 chadh Exp $
 
 P=${P/-tools/}
 S=${WORKDIR}/${P}
@@ -9,11 +9,11 @@ SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz"
 
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
 DEPEND="sys-kernel/linux-headers
-	gtk?( =x11-libs/gtk+-1.2* )
-	X? ( x11-base/xfree)"
+	gtk? ( =x11-libs/gtk+-1.2* )
+	X? ( x11-base/xfree )"
 RDEPEND=""
 SLOT="0"
-IUSE="trusted apm pnp nocardbus build"
+IUSE="trusted apm pnp nocardbus build gtk X"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
@@ -91,6 +91,8 @@ src_install () {
 	cd ${S}/cardmgr
 	make PREFIX=${D} install || die "failed installing"
 	cd ${S}/flash
+	make PREFIX=${D} install || die "failed installing"
+	cd ${S}/etc
 	make PREFIX=${D} install || die "failed installing"
 	cd ${S}/man
 	make PREFIX=${D} install-man1-x11 install-man5 install-man8
