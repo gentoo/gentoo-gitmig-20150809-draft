@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_pre8-r3.ebuild,v 1.2 2004/05/31 13:15:41 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_pre8-r3.ebuild,v 1.3 2004/06/01 23:07:54 karltk Exp $
 
 inherit eutils
 
@@ -12,7 +12,8 @@ SLOT="3"
 LICENSE="CPL-1.0"
 KEYWORDS="~x86"
 
-RDEPEND=">=virtual/jdk-1.4.2
+# karltk: blackdown-jdk is in ~x86, but not everybody agrees
+RDEPEND="|| ( >=virtual/jdk-1.4.2 =dev-java/blackdown-jdk-1.4.2* )
 	|| (
 		gtk? ( >=x11-libs/gtk+-2.2.4 )
 		kde? ( kde-base/kdelibs x11-libs/openmotif )
