@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-1.99.4.ebuild,v 1.6 2004/02/22 22:25:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-1.99.4.ebuild,v 1.7 2004/03/26 21:16:37 eradicator Exp $
+
+inherit eutils
 
 MY_P=${P/xmms-/}
 S=${WORKDIR}/${MY_P}
@@ -11,6 +13,8 @@ SRC_URI="http://ios.free.fr/goom/devel/${MY_P}-src.tgz"
 SLOT="0"
 LICENSE="LGPL-2"
 KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips "
+
+IUSE=""
 
 DEPEND="media-sound/xmms
 	media-libs/libsdl

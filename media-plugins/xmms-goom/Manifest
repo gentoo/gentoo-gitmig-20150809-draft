@@ -1,5 +1,5 @@
-MD5 2f2aa859efc7df7a0ce451f41bf1b53d ChangeLog 1075
-MD5 012f265cfd9b685977efa5d26ecaadfb xmms-goom-1.99.4.ebuild 918
+MD5 6eff233328458095e104c3d1a1a49afa xmms-goom-1.99.4.ebuild 945
+MD5 1184a28f16ca61546a3f1871787c53e7 ChangeLog 1197
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 c799d0f5d602fcc614edff965046b897 files/xmms-goom-gcc-3.3.patch 5611
 MD5 968662905603222290ae708c927ba2df files/digest-xmms-goom-1.99.4 64

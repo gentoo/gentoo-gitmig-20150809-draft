@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-goom
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/ChangeLog,v 1.5 2003/09/15 16:03:35 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/ChangeLog,v 1.6 2004/03/26 21:16:37 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-goom-1.99.4.ebuild:
+  Added eutils and explicit IUSE.
 
   15 Sep 2003; Seemant Kulleen <seemant@gentoo.org> xmms-goom-1.99.4.ebuild:
   change dependency from sh-utils to coreutils. Closes bug #28591 by
