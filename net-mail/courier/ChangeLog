@@ -1,0 +1,8 @@
+# ChangeLog for net-mail/courier-imap
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# /space/gentoo/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.5 2002/05/04 03:10:05 woodchip Exp
+04.05.2002
+initial working release
+06.05.2002
+added some post install comments and a "set-mime" script which tweaks the 
+mta's default behaviour regarding MIME headers.
