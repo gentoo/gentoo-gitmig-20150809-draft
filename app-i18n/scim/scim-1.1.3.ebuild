@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.0.2.ebuild,v 1.3 2005/02/10 11:43:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.1.3.ebuild,v 1.1 2005/02/10 11:43:05 usata Exp $
 
-inherit gnome2 eutils
+inherit eutils
 
 DESCRIPTION="Smart Common Input Method (SCIM) is an Input Method (IM) development platform"
 HOMEPAGE="http://www.scim-im.org/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ppc ~amd64 ~sparc ppc64"
+KEYWORDS="~x86 ~alpha ~ppc ~amd64 ~sparc ~ppc64"
 IUSE="gnome gtk immqt immqt-bc"
 
 GTK_DEPEND=">=x11-libs/gtk+-2
@@ -29,10 +29,6 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	dev-lang/perl"
 
-ELTCONF="--reverse-deps"
-SCROLLKEEPER_UPDATE="0"
-USE_DESTDIR="1"
-
 has_gtk() {
 	if has_version '>=x11-libs/gtk+-2' ; then
 		true
@@ -49,32 +45,16 @@ get_gtk_confdir() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	# use scim gtk2 IM module only for chinese/japanese/korean
-	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-0.6.1-gtk2immodule.patch
-
-	# workaround for problematic makefile
-	sed -i -e "s:^\(scim.*LDFLAGS.*\):\1 -ldl:g" \
-		${S}/src/Makefile.* || die
-	sed -i -e "s:^\(scim_make_table_LDFLAGS.*\):\1 -ldl:" \
-		${S}/modules/IMEngine/Makefile.* || die
-	sed -i -e "s:^LDFLAGS = :LDFLAGS = -ldl :g" \
-		-e "s:^\(test.*LDFLAGS.*\):\1 -ldl:g" \
-		${S}/tests/Makefile.* || die
-	sed -i -e "s:GTK_VERSION=2.3.5:GTK_VERSION=2.4.0:" \
-		${S}/configure || die
-}
-
 src_compile() {
-	use gnome || G2CONF="${G2CONF} --disable-config-gconf"
-	use gtk || use immqt || use immqt-bc || G2CONF="${G2CONF} --disable-panel-gtk --disable-setup-ui"
-	has_gtk || G2CONF="${G2CONF} --disable-gtk2-immodule"
-	gnome2_src_compile
+	use gnome || myconf="${myconf} --disable-config-gconf"
+	use gtk || use immqt || use immqt-bc || myconf="${myconf} --disable-panel-gtk --disable-setup-ui"
+	has_gtk || myconf="${myconf} --disable-gtk2-immodule"
+	econf ${myconf} || die
+	emake || die
 }
 
 src_install() {
-	gnome2_src_install || die "install failed"
+	make DESTDIR=${D} install || die
 	dodoc README AUTHORS ChangeLog docs/developers docs/scim.cfg
 	dohtml -r docs/html/*
 }
@@ -101,6 +81,10 @@ pkg_postinst() {
 	einfo "To use various input methods (more than 30 languages):"
 	einfo "	# emerge app-i18n/scim-m17n"
 	einfo
+	ewarn
+	ewarn "If you are upgrading from scim-1.0.x, you should remerge all SCIM modules."
+	ewarn
+	epause 10
 
 	has_gtk && gtk-query-immodules-2.0 > ${ROOT}$(get_gtk_confdir)/gtk.immodules
 }
