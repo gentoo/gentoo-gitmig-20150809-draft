@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.120 2005/01/16 21:37:31 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.121 2005/02/02 21:46:24 j4rg0n Exp $
+
+  02 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> glib-1.2.10-r5.ebuild:
+  Stable ppc-macos
 
 *glib-2.6.1 (16 Jan 2005)
 
