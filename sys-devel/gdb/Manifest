@@ -10,13 +10,11 @@ MD5 b22097a5c74c1bf2a730be6fac6283fe gdb-6.1.1.ebuild 1654
 MD5 40c9461c10c963b38e72cf7707a536fc gdb-6.2.ebuild 1652
 MD5 1c4272b806e64f56cec0b7082d4b18cf gdb-6.2.1.ebuild 1649
 MD5 420712ede2a47fedcae76b6f6215b9d4 files/digest-gdb-6.0 62
-MD5 734c7bb9c66275fa7982d104905234da files/gdb-5.1.1-ppc-booltypes.patch 994
 MD5 bcc4ae6718ad45a97ca7822df03bb8af files/digest-gdb-6.2 131
 MD5 1de0e1b91ac150426719e904f0e1a5cd files/gdb-5.3-sparc-nat-asm.patch 521
 MD5 e497ab2f05d847bde74f4e3441e2c7a2 files/gdb-6.0-coreutils.patch 1964
 MD5 c6dfff1373e52fef5872c1bdca4cb706 files/gdb-6.0-info.patch 1108
 MD5 adbe09f334ca5267284ca9404400d2f5 files/gdb-6.0-threadver-aug2003.patch 4081
-MD5 4d383b990c22a7f0ee0d4a1679b82d20 files/man.diff 607
 MD5 c87a4627da2b7a05406088f51237e5b4 files/digest-gdb-6.0-r1 127
 MD5 dc01eff75d7495a2159e2ff9fc48f164 files/gdb-6.0-xfreemod-all.patch 1599
 MD5 460629563df21e6a68b8941c07d4f30b files/digest-gdb-6.1 131
@@ -27,7 +25,7 @@ MD5 b3790be989db97b22c599572afbce109 files/digest-gdb-6.2.1 133
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBeAS6HTu7gpaalycRAn8hAJ9MTV5eiQnewPjbpmR2N7pEqitlAwCfRzJ0
-POpz1QjIpqVQcix5ZjoY8b0=
-=Rsou
+iD8DBQFBeAUhHTu7gpaalycRAig+AJ0YKzvq8bcnTLZGvuQUksuk1DqQWQCeNzik
+vOp1JUL2jR02Kv9DjREd3t0=
+=2sKU
 -----END PGP SIGNATURE-----
