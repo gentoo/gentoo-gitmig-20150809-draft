@@ -1,6 +1,11 @@
 # ChangeLog for net-www/squid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.17 2003/06/04 18:59:35 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.18 2003/06/04 23:40:43 brad Exp $
+
+*squid-2.5.2 (04 Jun 2003)
+
+  04 Jun 2003; Brad Laue <brad@gentoo.org> Manifest, squid-2.5.2.ebuild,
+  Mark stable on x86.
 
 *squid-2.5.3 (04 Jun 2003)
 
