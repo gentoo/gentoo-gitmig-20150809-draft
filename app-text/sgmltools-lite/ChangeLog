@@ -1,18 +1,22 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.10 2002/09/12 07:20:19 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.11 2002/09/20 20:16:59 vapier Exp $
 
 *sgmltools-lite-3.0.3-r5 (12 Sep 2002)
 
+  20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Updated HOMEPAGE and removed duplicate LICENSE
+
   12 Sep 2002; satai <satai@gentoo.org> sgmltools-lite-3.0.3-r5.ebuild :
   Added more robust file checking.
-
-*sgmltools-lite-3.0.3-r5 (02 Sep 2002)
 
   02 Sep 2002; satai <satai@gentoo.org> sgmltools-lite-3.0.3-r5.ebuild :
   Added catalog installation.
 
 *sgmltools-lite-3.0.3-r4 (3 Apr 2002)
+
+  20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Updated HOMEPAGE and removed duplicate LICENSE
 
   2 Aug 2002; phoen][x <phoenix@gentoo.org> sgmltools-lite-3.0.3.ebuild :
   Added LICENSE, SLOT.
@@ -32,6 +36,9 @@
 
 *sgmltools-lite-3.0.3-r3 (31 Mar 2002)
 
+  20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Updated HOMEPAGE and removed duplicate LICENSE
+
   2 Aug 2002; phoen][x <phoenix@gentoo.org> sgmltools-lite-3.0.3-r3.ebuild :
   Added LICENSE, SLOT.
 
@@ -41,6 +48,9 @@
   achieve that.
 
 *sgmltools-lite-3.0.3-r2 (27 Mar 2002)
+
+  20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Updated HOMEPAGE and removed duplicate LICENSE
 
   2 Aug 2002; phoen][x <phoenix@gentoo.org> sgmltools-lite-3.0.3-r2.ebuild :
   Added LICENSE, SLOT, DESCRIPTION.
@@ -57,6 +67,9 @@
   Fixed a sandbox violation.
 
 *sgmltools-lite-3.0.3 (1 Feb 2002)
+
+  20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Updated HOMEPAGE
 
   2 Aug 2002; phoen][x <phoenix@gentoo.org> sgmltools-lite-3.0.3-r1.ebuild :
   Added DESCRIPTION.

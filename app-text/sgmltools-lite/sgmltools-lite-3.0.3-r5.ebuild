@@ -6,11 +6,9 @@
 S=${WORKDIR}/${P}
 SRC_URI="mirror://sourceforge/sgmltools-lite/${P}.tar.gz
 		 mirror://sourceforge/sgmltools-lite/nw-eps-icons-0.0.1.tar.gz"
-HOMEPAGE="sgmltools-lite.sourceforge.net"
+HOMEPAGE="http://sgmltools-lite.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
-LICENSE="|"
-LICENSE="as-is"
 DESCRIPTION="Python interface to SGML software specificially in a 
 DocBook/OpenJade environment.  Provides sgml2{html,txt,rtf,dvi,ps}"
 
