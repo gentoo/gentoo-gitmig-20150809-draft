@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1-r5.ebuild,v 1.3 2002/10/05 05:39:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.1-r5.ebuild,v 1.4 2002/10/15 19:50:14 azarah Exp $
 
 IUSE="readline tcltk berkdb bootstrap"
 
@@ -82,12 +82,7 @@ src_install() {
 	# While we're working on the config stuff... Let's fix the OPT var
 	# so that it doesn't have any opts listed in it. Prevents the problem
 	# with compiling things with conflicting opts later.
-	mv \
-		${D}/usr/lib/python${PYVER}/config/Makefile \
-		${D}/usr/lib/python${PYVER}/config/Makefile.orig
-	sed 's:^OPT=.*:OPT=-NDEBUG:' \
-		< ${D}/usr/lib/python${PYVER}/config/Makefile.orig \
-		> ${D}/usr/lib/python${PYVER}/config/Makefile
+	dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' /usr/lib/python${PYVER}/config/Makefile
 
 	# If USE tcltk lets install idle
 	# Need to script the python version in the path

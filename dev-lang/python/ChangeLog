@@ -1,8 +1,13 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.15 2002/10/03 14:15:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.16 2002/10/15 19:50:14 azarah Exp $
 
 *python-2.2.1-r5 (03 Oct 2002)
+
+  15 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Fix the sed on /usr/lib/python<ver>/config/Makefile to change
+  OPT to 'OPT = -DNDEBUG', and not 'OPT = -NDEBUG' which caused
+  gcc warnings.
 
   03 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Security update.
