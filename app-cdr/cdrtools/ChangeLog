@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.58 2003/10/22 11:48:03 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.59 2003/10/29 20:01:57 pylon Exp $
+
+*cdrtools-2.01_alpha19 (29 Oct 2003)
+
+  29 Oct 2003; Lars Weiler <pylon@gentoo.org> cdrtools-2.01_alpha19.ebuild:
+  Version bump.
+  
+  rscsi as described in bug 29296 will be installed now.
 
   22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org>
   cdrtools-2.01_alpha18-r1.ebuild:
