@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/3ddesktop
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header
+
+*3ddesktop-0.2.4 (01 Dec 2002)
+  
+  01 Dec 2002; Matt Keadle <mkeadle@gentoo.org> 3ddesktop-0.2.4.ebuild
+  files/digest-3ddesktop-0.2.4:
+
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. Thanks to Loke for submitting this ebuild.
