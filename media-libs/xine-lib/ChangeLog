@@ -1,8 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.27 2002/12/25 03:45:12 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.28 2002/12/25 10:05:37 raker Exp $
 
 *xine-lib-1_beta1 (24 Dec 2002)
+
+  25 Dec 2002; Nick Hadaway <raker@gentoo.org> xine-lib-1_beta1.ebuild :
+  Removed {C.CXX}FLAGS as configure sets very specific optimization
+  settings already and this should solve problems such as those found
+  on bug #11779.
 
   24 Dec 2002; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.

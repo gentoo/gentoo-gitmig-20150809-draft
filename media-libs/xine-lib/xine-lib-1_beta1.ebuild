@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta1.ebuild,v 1.1 2002/12/25 03:45:12 agenkin Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta1.ebuild,v 1.2 2002/12/25 10:05:37 raker Exp $ 
 
 DESCRIPTION="Core libraries for Xine movie player."
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -59,6 +59,12 @@ src_compile() {
 		|| myconf="${myconf} --disable-asf"
 
 	einfo "myconf: ${myconf}"
+
+	# Very specific optimization is set by configure
+	# Should fix problems like the one found on bug #11779
+	# raker@gentoo.org (25 Dec 2002)
+	export CFLAGS=""
+	export CXXFLAGS=""
 
 	econf ${myconf} || die
 	emake || die
