@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/freenet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet/ChangeLog,v 1.1 2002/02/18 21:20:55 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet/ChangeLog,v 1.2 2002/06/21 18:28:24 bass Exp $
+
+*freenet-20020621.ebuild ( 21 Jun 2002 )
+
+  20 Jun 2002; J.Alberto Suárez L. <bass@gentoo.org> freenet-20020621.ebuild:
+  Bumped versión, and a note that explain how down the newest version.
 
 *freenet-20020214.ebuild ( 18 Feb 2002 )
 
