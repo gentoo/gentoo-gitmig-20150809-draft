@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.79.1-r5.ebuild,v 1.10 2004/06/24 22:47:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.79.1-r5.ebuild,v 1.11 2004/07/02 08:41:16 eradicator Exp $
 
 inherit gnuconfig
 
@@ -15,8 +15,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha mips"
 
-DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
-RDEPEND="virtual/glibc"
+DEPEND="virtual/libc nls? ( sys-devel/gettext )"
+RDEPEND="virtual/libc"
 
 src_compile() {
 

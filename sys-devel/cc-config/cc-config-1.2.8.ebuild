@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/cc-config/cc-config-1.2.8.ebuild,v 1.3 2004/06/24 22:43:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/cc-config/cc-config-1.2.8.ebuild,v 1.4 2004/07/02 08:37:49 eradicator Exp $
 
 DISABLE_GEN_GCC_WRAPPERS="yes"
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc sparc alpha mips"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 
 src_install() {

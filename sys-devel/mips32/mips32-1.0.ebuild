@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/mips32/mips32-1.0.ebuild,v 1.2 2004/06/24 22:48:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/mips32/mips32-1.0.ebuild,v 1.3 2004/07/02 08:41:39 eradicator Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="-* mips"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

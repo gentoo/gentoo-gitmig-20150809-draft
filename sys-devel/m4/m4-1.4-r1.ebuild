@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4-r1.ebuild,v 1.10 2004/06/24 22:47:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4-r1.ebuild,v 1.11 2004/07/02 08:40:51 eradicator Exp $
 
 inherit eutils gnuconfig
 
@@ -16,10 +16,10 @@ SLOT="0"
 KEYWORDS="x86 ppc64 ppc sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE="nls"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	!bootstrap? ( >=sys-devel/libtool-1.3.5-r2 )
 	nls? ( sys-devel/gettext )"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

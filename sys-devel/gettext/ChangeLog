@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.45 2004/06/24 22:46:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.46 2004/07/02 08:39:44 eradicator Exp $
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  gettext-0.12.1-r1.ebuild, gettext-0.12.1.ebuild:
+  virtual/glibc -> virtual/libc
 
   24 Jun 2004; Aron Griffis <agriffis@gentoo.org> gettext-0.12.1-r1.ebuild,
   gettext-0.12.1.ebuild:

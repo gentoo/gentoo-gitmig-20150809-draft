@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.4-r5.ebuild,v 1.8 2004/06/24 22:48:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.4-r5.ebuild,v 1.9 2004/07/02 08:42:03 eradicator Exp $
 
 DESCRIPTION="Utility to apply diffs to files"
 HOMEPAGE="http://www.gnu.org/software/patch/patch.html"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha mips hppa"
 IUSE="build static"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	CFLAGS="$CFLAGS -DLINUX -D_XOPEN_SOURCE=500"

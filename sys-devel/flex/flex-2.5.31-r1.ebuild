@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.31-r1.ebuild,v 1.5 2004/06/24 22:45:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.31-r1.ebuild,v 1.6 2004/07/02 08:38:39 eradicator Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="FLEX"
 KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ppc64"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {

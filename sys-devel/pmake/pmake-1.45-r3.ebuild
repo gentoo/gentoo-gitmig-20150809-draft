@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r3.ebuild,v 1.4 2004/06/24 22:49:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r3.ebuild,v 1.5 2004/07/02 08:42:32 eradicator Exp $
 
 inherit eutils
 EPATCH_SOURCE="${FILESDIR}"
@@ -14,7 +14,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ~ppc alpha ia64 amd64 ~sparc"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 

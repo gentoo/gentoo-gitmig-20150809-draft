@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.13 2004/06/29 17:37:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.14 2004/07/02 08:42:32 eradicator Exp $
 
 IUSE=""
 
@@ -21,7 +21,7 @@ SLOT="0"
 
 KEYWORDS="x86 alpha ia64 amd64"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 #RDEPEND=""
 
 src_unpack() {

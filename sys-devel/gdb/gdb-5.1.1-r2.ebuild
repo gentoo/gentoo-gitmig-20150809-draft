@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.1.1-r2.ebuild,v 1.12 2004/06/24 22:46:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.1.1-r2.ebuild,v 1.13 2004/07/02 08:39:18 eradicator Exp $
 
 IUSE="nls"
 
@@ -13,11 +13,11 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc "
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r2
 	nls? ( sys-devel/gettext )"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r2"
 
 src_unpack() {

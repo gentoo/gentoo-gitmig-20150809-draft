@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.3-r3.ebuild,v 1.7 2004/06/24 22:47:32 agriffis Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.3-r3.ebuild,v 1.8 2004/07/02 08:40:18 eradicator Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
 
 IUSE=
 
@@ -20,7 +20,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86 ppc sparc alpha mips hppa ia64 ppc64"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 
 lt_setup() {

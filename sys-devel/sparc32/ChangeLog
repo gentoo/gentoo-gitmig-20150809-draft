@@ -1,5 +1,9 @@
 # ChangeLog for sys-devel/sparc32
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparc32/ChangeLog,v 1.7 2004/05/05 08:05:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparc32/ChangeLog,v 1.8 2004/07/02 08:42:56 eradicator Exp $
+
+  02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  sparc32-1.1-r1.ebuild, sparc32-1.1-r2.ebuild:
+  virtual/glibc -> virtual/libc
 
 *sparc32-1.1-r2 (05 May 2004)
 
