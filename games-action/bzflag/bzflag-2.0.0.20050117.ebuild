@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.0.20050117.ebuild,v 1.3 2005/02/05 03:35:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.0.20050117.ebuild,v 1.4 2005/03/07 02:45:05 mr_bones_ Exp $
 
 inherit flag-o-matic games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/bzflag/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="adns dedicated kerberos"
+IUSE="adns curl dedicated kerberos"
 
 RDEPEND="virtual/libc
 	!dedicated? ( virtual/opengl media-libs/libsdl )
@@ -43,9 +43,9 @@ src_compile() {
 	fi
 	egamesconf \
 		--disable-dependency-tracking \
-		$(use_with kerberos) \
-		$(use_enable curl) \
 		$(use_enable adns) \
+		$(use_enable curl) \
+		$(use_with kerberos) \
 		${myconf} \
 		|| die
 	emake || die "emake failed"
