@@ -1,0 +1,14 @@
+# ChangeLog for net-mail/bmf
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/ChangeLog,v 1.1 2004/06/03 07:02:01 seemant Exp $
+
+*bmf-0.9.4 (03 Jun 2004)
+
+  03 Jun 2004; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  +bmf-0.9.4.ebuild:
+  Moved from net-mail/bmf to mail-filter/bmf.
+
+*bmf-0.9.4 (16 Jul 2003)
+	
+  16 Jul 2003; Nick Hadaway <raker@gentoo.org>  bmf-0.9.4.ebuild:
+  Thanks to Steingrim Dovland for submitting this ebuild in bug #19947.
