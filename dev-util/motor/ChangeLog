@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/motor
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/motor/ChangeLog,v 1.4 2004/06/25 02:41:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/motor/ChangeLog,v 1.5 2004/07/24 17:54:25 liquidx Exp $
+
+*motor-3.3.0 (24 Jul 2004)
+
+  24 Jul 2004; Alastair Tse <liquidx@gentoo.org> +motor-3.3.0.ebuild:
+  version bump. changing back to official release rather than debian releases
 
 *motor-3.2.4.1 (28 Mar 2004)
 
