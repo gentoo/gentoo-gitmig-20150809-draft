@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/basiliskII
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/ChangeLog,v 1.6 2003/03/16 22:22:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/ChangeLog,v 1.7 2003/05/15 13:03:02 phosphan Exp $
+
+  15 May 2003; Patrick Kursawe <phosphan@gentoo.org> basiliskII-0.9.0.ebuild:
+  Corrected homepage (bug 21056)
 
 *basiliskII-0.9.0 (19 August 2002)
 

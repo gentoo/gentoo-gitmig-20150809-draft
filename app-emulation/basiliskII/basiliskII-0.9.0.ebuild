@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-0.9.0.ebuild,v 1.11 2003/03/16 22:22:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-0.9.0.ebuild,v 1.12 2003/05/15 13:03:02 phosphan Exp $
 
 IUSE="X gtk xv esd dga"
 
@@ -11,7 +11,7 @@ inherit flag-o-matic
 ### System ROMS can be retreived from a 'real' Mac, See info/man pages
 
 DESCRIPTION="BasiliskII-0.9.0 Macintosh Emulator (Stable Release)"
-HOMEPAGE="http://phcip1.phyzik.uni-mainz.de/~bauec002/B2Main.html"
+HOMEPAGE="http://www.uni-mainz.de/~bauec002/B2Main.html"
 LICENSE="GPL-2 | LGPL-2.1"
 KEYWORDS="x86 -ppc"
 SLOT="0"
