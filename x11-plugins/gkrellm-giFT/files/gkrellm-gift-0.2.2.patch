@@ -1,0 +1,13 @@
+diff -aur gkrellm-giFT-0.2.2.orig/configure gkrellm-giFT-0.2.2/configure
+--- gkrellm-giFT-0.2.2.orig/configure	2003-12-20 10:36:28.000000000 +0100
++++ gkrellm-giFT-0.2.2/configure	2004-05-21 19:34:51.592100864 +0200
+@@ -18995,9 +18995,6 @@
+ fi
+ 
+ 
+-cat >>confdefs.h <<\_ACEOF
+-#define GTK_DISABLE_DEPRECATED 1
+-_ACEOF
+ 
+ 
+ if test x$prefix = xNONE; then
