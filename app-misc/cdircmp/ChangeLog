@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cdircmp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdircmp/ChangeLog,v 1.3 2004/07/11 23:51:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdircmp/ChangeLog,v 1.4 2004/10/04 20:33:16 kloeri Exp $
+
+  04 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> cdircmp-0.3.ebuild:
+  Clean up ebuild.
 
   12 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> cdircmp-0.3.ebuild:
   Use default src_compile.
