@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/hesiod-3.0.2-r1.ebuild,v 1.1 2003/10/20 09:47:19 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/hesiod-3.0.2-r1.ebuild,v 1.2 2003/10/24 12:09:27 lanius Exp $
 
 inherit flag-o-matic
 filter-flags -fstack-protector
@@ -17,8 +17,11 @@ DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
+
 	#Patches stolen from RH
 	epatch ${FILESDIR}/hesiod-${PV}-redhat.patch.gz
+	autoconf
+
 	cd ${S}
 	for manpage in *.3
 	do
