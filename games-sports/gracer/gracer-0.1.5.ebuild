@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.4 2004/03/24 04:54:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.5 2004/04/12 18:18:47 weeve Exp $
 
 inherit games eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gracer/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc"
 IUSE="gif jpeg png joystick"
 
 RDEPEND="virtual/x11

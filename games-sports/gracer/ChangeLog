@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/gracer
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/ChangeLog,v 1.4 2004/03/24 04:54:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/ChangeLog,v 1.5 2004/04/12 18:18:47 weeve Exp $
+
+  12 Apr 2004; Jason Wever <weeve@gentoo.org> gracer-0.1.5.ebuild:
+  Added ~sparc keyword.
 
   23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> gracer-0.1.5.ebuild:
   don't rdepend on sed
