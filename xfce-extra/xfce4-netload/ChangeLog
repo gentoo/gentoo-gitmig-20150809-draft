@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-netload
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload/ChangeLog,v 1.14 2004/09/19 04:15:25 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload/ChangeLog,v 1.15 2004/09/20 03:37:50 bcowan Exp $
+
+*xfce4-netload-0.2.3 (19 Sep 2004)
+
+  19 Sep 2004; Brad Cowan <bcowan@gentoo.org> +xfce4-netload-0.2.3.ebuild:
+  Version bump.
 
   18 Sep 2004; Tom Gall <tgall@gentoo.org> xfce4-netload-0.2.2.ebuild:
   stable on ppc64, bug #57744

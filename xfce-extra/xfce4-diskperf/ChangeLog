@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-diskperf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-diskperf/ChangeLog,v 1.7 2004/06/24 22:00:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-diskperf/ChangeLog,v 1.8 2004/09/20 03:34:40 bcowan Exp $
+
+  19 Sep 2004; Brad Cowan <bcowan@gentoo.org> :
+  Version bump.
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> xfce4-diskperf-1.4.1.ebuild:
   Stable on sparc.
