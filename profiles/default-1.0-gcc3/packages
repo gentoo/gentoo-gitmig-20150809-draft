@@ -52,6 +52,7 @@
 #no real cost for nano, since we already have ncurses
 *net-ftp/ftp
 *net-misc/dhcpcd
+*net-misc/iputils
 *net-misc/netkit-telnetd
 *net-misc/rsync
 *net-misc/wget
@@ -80,7 +81,6 @@
 *sys-apps/man-pages
 *sys-apps/modutils
 *sys-apps/net-tools
-*sys-apps/netkit-base
 *sys-apps/procps
 *sys-apps/psmisc
 *sys-apps/raidtools
