@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9.ebuild,v 1.17 2004/06/22 17:08:34 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9.ebuild,v 1.18 2004/06/24 05:11:20 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -21,7 +21,7 @@ src_compile() {
 	strip-flags
 	CFLAGS="$CFLAGS -DLINUX -D_XOPEN_SOURCE=500"
 	# workaround for hardened on amd64, 1st part
-	if [ "`use amd64`" ] && [ "is-ldflags -pie" ]; then
+	if use amd64 && is-ldflags -pie; then
 		einfo Stripping "-pie" from LDFLAGS, adding it to Makefile manually
 		filter-ldflags -pie
 		append-flags -fPIC

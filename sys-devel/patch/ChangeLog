@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/patch
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.22 2004/06/22 17:08:34 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.23 2004/06/24 05:11:20 agriffis Exp $
+
+  24 Jun 2004; Aron Griffis <agriffis@gentoo.org> patch-2.5.4-r5.ebuild,
+  patch-2.5.9.ebuild:
+  QA - fix use invocation. This also fixes an ebuild error due in part to the
+  less readable use syntax. It was written [ "is-ldflags -pie" ] when it should
+  have been [ "`is-ldflags -pie`" ]. The way it was written would have always
+  evaluated to true.
 
   22 Jun 2004; <solar@gentoo.org> patch-2.5.9.ebuild:
   Fixed unary operator problem because LDFLAGS_PIE does not exist in most of the
