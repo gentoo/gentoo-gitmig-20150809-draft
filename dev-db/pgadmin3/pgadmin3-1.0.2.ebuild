@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.0.2.ebuild,v 1.5 2004/06/24 21:59:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.0.2.ebuild,v 1.6 2004/06/29 17:13:13 agriffis Exp $
 
 IUSE=""
 
@@ -16,7 +16,8 @@ KEYWORDS="x86 ppc sparc alpha amd64"
 
 # Need 2.4.1-r1 for the extras in contrib
 DEPEND=">=x11-libs/wxGTK-2.4.1-r1
-	|| ( >=dev-db/postgresql-7.3.5 >=dev-db/postgresql-7.4.1-r2 )"
+	|| ( >=dev-db/postgresql-7.3.5 >=dev-db/postgresql-7.4.1-r2 )
+	>=sys-apps/sed-4"
 
 pkg_setup() {
 	if wx-config --cppflags | grep gtk2u >& /dev/null; then
