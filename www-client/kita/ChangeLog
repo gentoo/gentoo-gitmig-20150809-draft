@@ -1,6 +1,9 @@
 # ChangeLog for www-client/kita
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kita/ChangeLog,v 1.10 2005/02/05 04:53:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kita/ChangeLog,v 1.11 2005/02/12 15:07:40 nigoro Exp $
+
+  12 Feb 2005; Yuta SATOH <nigoro@gentoo.org> kita-0.174.0.ebuild:
+  Stable on ppc64
 
   05 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> -kita-0.172.0.ebuild,
   kita-0.174.0.ebuild:
