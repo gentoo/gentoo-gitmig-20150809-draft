@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.22 2004/08/08 00:20:40 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.23 2005/01/26 21:36:45 kaiowas Exp $
 
 inherit gcc
 
@@ -11,11 +11,12 @@ HOMEPAGE="http://www.inet.no/dante/"
 LICENSE="BSD"
 KEYWORDS="x86 ppc sparc alpha hppa mips amd64"
 SLOT="0"
-IUSE="tcpd debug"
+IUSE="tcpd debug selinux"
 
 RDEPEND="virtual/libc
 	sys-libs/pam
-	tcpd? ( sys-apps/tcp-wrappers )"
+	tcpd? ( sys-apps/tcp-wrappers )
+	selinux? ( sec-policy/selinux-dante )"
 DEPEND="${RDEPEND}
 	dev-lang/perl"
 

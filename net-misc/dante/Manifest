@@ -1,15 +1,25 @@
-MD5 a0569955d7dc210e5df61fef121bb379 ChangeLog 4827
-MD5 d8353e0876f1e13ebbd6384e33906894 dante-1.1.13.ebuild 1617
-MD5 62bb87d73264e521aa4bb1a8dff0e1a0 dante-1.1.15_pre1.ebuild 2103
-MD5 420470a75aee90019433b2b8a957e68b dante-1.1.14-r1.ebuild 1614
-MD5 ba5406607f4bbbbd635559cdb0c53f6e dante-1.1.14-r2.ebuild 2029
-MD5 e1b94493b162bbdb56acba97cec7349a files/dante-1.1.15_pre1-socksify.patch 811
-MD5 18a1fa3293fe5b6272427ca60293f867 files/dante-1.1.14-socksify.patch 801
-MD5 50224590fe8129aed7c9cb47a4e123ec files/digest-dante-1.1.15_pre1 69
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e1e8fb4587bba23f3f96e0f9d8f60f68 ChangeLog 4997
+MD5 853cd9b8ebf824d0bc4b1f370c5ce07c dante-1.1.13.ebuild 1665
+MD5 d74517af49b35ae7db4e148fd5190d6a dante-1.1.14-r1.ebuild 1672
+MD5 c6bf0611a8d74df6a59f3397be58da61 dante-1.1.14-r2.ebuild 2075
+MD5 09b1e0f2779a1c9a16ed980f02fe8345 dante-1.1.15_pre1.ebuild 2147
 MD5 72d9add89e45e3cb921c99d79bdf31a7 files/dante-1.1.14-bindresvport.patch 485
-MD5 a5e8f0769876952c68e2a06a1508fbfd files/digest-dante-1.1.13 64
-MD5 0e18d6df6b8f67d3872a56dc65ee4e28 files/dante-sockd-init-1.1.14-r2 1330
-MD5 7d257618e686db991bad06011612d805 files/digest-dante-1.1.14-r2 64
-MD5 9f583f8333c19ae4cdebc4daae6d7516 files/dante-sockd-init 889
-MD5 7d257618e686db991bad06011612d805 files/digest-dante-1.1.14-r1 64
+MD5 18a1fa3293fe5b6272427ca60293f867 files/dante-1.1.14-socksify.patch 801
+MD5 e1b94493b162bbdb56acba97cec7349a files/dante-1.1.15_pre1-socksify.patch 811
 MD5 184812cd77df081c52d4a0c540d0ba74 files/dante-sockd-conf-1.1.14-r2 474
+MD5 9f583f8333c19ae4cdebc4daae6d7516 files/dante-sockd-init 889
+MD5 0e18d6df6b8f67d3872a56dc65ee4e28 files/dante-sockd-init-1.1.14-r2 1330
+MD5 a5e8f0769876952c68e2a06a1508fbfd files/digest-dante-1.1.13 64
+MD5 7d257618e686db991bad06011612d805 files/digest-dante-1.1.14-r1 64
+MD5 7d257618e686db991bad06011612d805 files/digest-dante-1.1.14-r2 64
+MD5 50224590fe8129aed7c9cb47a4e123ec files/digest-dante-1.1.15_pre1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB+AXWGSBEIeh4AEYRAru3AJ9l6s43j0k2fi8yhwXCrJjngdB4IwCdFAQZ
+WjXyp6Euo13zfCtcUqRLjKA=
+=n6z9
+-----END PGP SIGNATURE-----
