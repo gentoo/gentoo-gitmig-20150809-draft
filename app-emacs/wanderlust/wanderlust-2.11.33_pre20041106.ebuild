@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.11.31_pre20040912.ebuild,v 1.3 2004/10/23 07:48:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.11.33_pre20041106.ebuild,v 1.1 2004/11/07 15:30:53 usata Exp $
 
 inherit elisp
 
@@ -24,7 +24,7 @@ DEPEND="virtual/emacs
 	virtual/semi
 	!app-emacs/wanderlust-cvs"
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/wl"
 
 src_compile() {
 	use ssl && echo "(setq wl-install-utils t)" >> WL-CFG
