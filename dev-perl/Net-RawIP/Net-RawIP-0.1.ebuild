@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/Net-RawIP-0.1.ebuild,v 1.2 2003/06/21 21:36:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/Net-RawIP-0.1.ebuild,v 1.3 2004/06/25 00:49:43 agriffis Exp $
 
 inherit perl-module
 

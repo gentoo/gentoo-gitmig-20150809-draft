@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Audio-Tools
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Tools/ChangeLog,v 1.9 2004/02/09 19:34:06 gustavoz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Tools/ChangeLog,v 1.10 2004/06/25 00:07:34 agriffis Exp $
 
   09 Feb 2004; <gustavoz@gentoo.org> Audio-Tools-0.01.ebuild:
   stable on sparc

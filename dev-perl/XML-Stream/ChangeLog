@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/XML-Stream
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/ChangeLog,v 1.1 2004/06/06 15:10:17 mcummings Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/ChangeLog,v 1.2 2004/06/25 01:14:22 agriffis Exp $
 
 *XML-Stream-1.21 (06 Jun 2004)
 

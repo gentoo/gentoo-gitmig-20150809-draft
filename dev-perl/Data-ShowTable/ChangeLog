@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Data-ShowTable
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ShowTable/ChangeLog,v 1.10 2003/07/12 10:49:57 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ShowTable/ChangeLog,v 1.11 2004/06/25 00:20:38 agriffis Exp $
 
 *Data-ShowTable-3.3-r2 (21 Jun 2003)
  

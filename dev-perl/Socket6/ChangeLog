@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Socket6
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.4 2004/06/06 22:39:50 mcummings Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.5 2004/06/25 00:59:34 agriffis Exp $
 
 *Socket6-0.17 (06 Jun 2004)
 

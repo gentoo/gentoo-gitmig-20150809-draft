@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ImageInfo-1.15.ebuild,v 1.5 2004/05/04 16:49:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ImageInfo-1.15.ebuild,v 1.6 2004/06/25 00:39:16 agriffis Exp $
 
 inherit perl-module
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/MIME-Lite-2.117.ebuild,v 1.6 2004/05/04 22:55:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/MIME-Lite-2.117.ebuild,v 1.7 2004/06/25 00:46:09 agriffis Exp $
 
 IUSE=""
 

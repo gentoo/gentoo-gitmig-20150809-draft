@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0-r1.ebuild,v 1.8 2004/06/06 22:30:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0-r1.ebuild,v 1.9 2004/06/25 00:53:37 agriffis Exp $
 
 IUSE="opengl"
 

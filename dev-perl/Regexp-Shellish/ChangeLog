@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Regexp-Shellish
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Regexp-Shellish/ChangeLog,v 1.1 2004/03/14 12:48:24 mcummings Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Regexp-Shellish/ChangeLog,v 1.2 2004/06/25 00:57:20 agriffis Exp $
 
 *Regexp-Shellish-0.93 (14 Mar 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/tie-encryptedhash/tie-encryptedhash-1.21.ebuild,v 1.5 2004/05/30 17:01:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/tie-encryptedhash/tie-encryptedhash-1.21.ebuild,v 1.6 2004/06/25 01:06:19 agriffis Exp $
 
 inherit perl-module
 

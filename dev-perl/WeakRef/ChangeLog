@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/WeakRef
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WeakRef/ChangeLog,v 1.1 2004/06/05 19:38:26 mcummings Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WeakRef/ChangeLog,v 1.2 2004/06/25 01:09:12 agriffis Exp $
 
 *WeakRef-0.01 (05 Jun 2004)
 

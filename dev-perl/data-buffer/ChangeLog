@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/data-buffer
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/data-buffer/ChangeLog,v 1.4 2004/05/30 15:45:39 kloeri Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/data-buffer/ChangeLog,v 1.5 2004/06/25 00:19:57 agriffis Exp $
 
   30 May 2004; Bryan Østergaard <kloeri@gentoo.org> data-buffer-0.04.ebuild:
   Stable on alpha.

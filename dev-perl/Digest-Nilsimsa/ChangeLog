@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Digest-Nilsimsa
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Nilsimsa/ChangeLog,v 1.9 2003/07/12 10:49:57 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Nilsimsa/ChangeLog,v 1.10 2004/06/25 00:25:16 agriffis Exp $
 
 *Digest-Nilsimsa-0.06-r1 (21 Jun 2003)
  

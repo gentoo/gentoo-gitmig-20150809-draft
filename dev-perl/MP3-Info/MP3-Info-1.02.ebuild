@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/MP3-Info-1.02.ebuild,v 1.3 2003/07/11 20:02:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/MP3-Info-1.02.ebuild,v 1.4 2004/06/25 00:47:21 agriffis Exp $
 
 inherit perl-module
 

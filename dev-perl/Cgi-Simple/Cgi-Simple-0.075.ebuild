@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/Cgi-Simple-0.075.ebuild,v 1.1 2004/06/05 14:32:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/Cgi-Simple-0.075.ebuild,v 1.2 2004/06/25 00:10:56 agriffis Exp $
 
 inherit perl-module
 

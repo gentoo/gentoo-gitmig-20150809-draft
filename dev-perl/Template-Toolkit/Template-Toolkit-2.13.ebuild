@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.13.ebuild,v 1.1 2004/04/10 03:03:39 esammer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.13.ebuild,v 1.2 2004/06/25 01:01:05 agriffis Exp $
 
 inherit perl-module
 

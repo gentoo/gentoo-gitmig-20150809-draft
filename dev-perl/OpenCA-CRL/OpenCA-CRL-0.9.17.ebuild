@@ -1,6 +1,6 @@
-# Copyright 2001-2004 Gentoo Technologies, Inc.
+# Copyright 2001-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-CRL/OpenCA-CRL-0.9.17.ebuild,v 1.1 2004/06/06 13:17:45 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-CRL/OpenCA-CRL-0.9.17.ebuild,v 1.2 2004/06/25 00:51:55 agriffis Exp $
 
 inherit perl-module
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/Clone-0.13.ebuild,v 1.4 2004/05/24 00:44:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/Clone-0.13.ebuild,v 1.5 2004/06/25 00:14:19 agriffis Exp $
 
 inherit perl-module
 

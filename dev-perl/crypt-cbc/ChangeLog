@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/crypt-cbc
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.5 2004/06/05 16:31:46 mcummings Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.6 2004/06/25 00:16:50 agriffis Exp $
 
 *crypt-cbc-2.11 (05 Jun 2004)
 

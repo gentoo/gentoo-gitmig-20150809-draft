@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/cdk-perl-20010421-r1.ebuild,v 1.6 2004/04/18 02:16:02 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/cdk-perl-20010421-r1.ebuild,v 1.7 2004/06/25 00:10:24 agriffis Exp $
 
 inherit perl-module
 

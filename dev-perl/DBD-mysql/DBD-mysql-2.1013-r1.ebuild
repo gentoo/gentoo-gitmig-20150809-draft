@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/DBD-mysql-2.1013-r1.ebuild,v 1.9 2004/03/21 10:20:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/DBD-mysql-2.1013-r1.ebuild,v 1.10 2004/06/25 00:22:10 agriffis Exp $
 
 inherit perl-module
 

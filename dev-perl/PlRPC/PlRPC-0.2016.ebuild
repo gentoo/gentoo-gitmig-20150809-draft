@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/PlRPC-0.2016.ebuild,v 1.6 2004/02/04 10:36:23 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/PlRPC-0.2016.ebuild,v 1.7 2004/06/25 00:55:28 agriffis Exp $
 
 inherit perl-module
 

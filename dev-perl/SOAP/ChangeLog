@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/SOAP
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP/ChangeLog,v 1.10 2003/06/01 01:32:32 mcummings Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP/ChangeLog,v 1.11 2004/06/25 00:59:14 agriffis Exp $
 
 *SOAP-0.28-r2 (31 May 2003)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/RPC-XML
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.13 2004/06/06 14:46:58 mcummings Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.14 2004/06/25 00:57:31 agriffis Exp $
 
 *RPC-XML-0.54 (06 Jun 2004)
 

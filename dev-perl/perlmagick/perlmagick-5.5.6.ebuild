@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/perlmagick-5.5.6.ebuild,v 1.7 2004/06/17 01:57:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/perlmagick-5.5.6.ebuild,v 1.8 2004/06/25 00:54:18 agriffis Exp $
 
 inherit perl-module flag-o-matic
 replace-flags k6-3 i586

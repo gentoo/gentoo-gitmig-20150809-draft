@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Pod-Simple
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Simple/ChangeLog,v 1.2 2004/06/06 13:41:00 mcummings Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Simple/ChangeLog,v 1.3 2004/06/25 00:56:08 agriffis Exp $
 
 *Pod-Simple-3.02 (06 Jun 2004)
 

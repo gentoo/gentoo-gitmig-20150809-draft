@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Text-Shellwords
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Shellwords/ChangeLog,v 1.5 2004/06/06 23:54:19 mcummings Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Shellwords/ChangeLog,v 1.6 2004/06/25 01:05:39 agriffis Exp $
 
 *Text-Shellwords-1.07 (06 Jun 2004)
 

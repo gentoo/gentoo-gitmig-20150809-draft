@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.21.ebuild,v 1.6 2004/06/02 00:33:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.21.ebuild,v 1.7 2004/06/25 00:27:19 agriffis Exp $
 
 DESCRIPTION="MakeMaker Perl Module"
 HOMEPAGE="http://cpan.valueclick.com/modules/by-module/ExtUtils/${P}.readme"

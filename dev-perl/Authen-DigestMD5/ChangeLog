@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Authen-DigestMD5
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-DigestMD5/ChangeLog,v 1.2 2004/04/10 03:42:50 esammer Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-DigestMD5/ChangeLog,v 1.3 2004/06/25 00:07:56 agriffis Exp $
 
   09 Apr 2004; Eric Sammer <esammer@gentoo.org> ChangeLog:
   Fixed changelog header.

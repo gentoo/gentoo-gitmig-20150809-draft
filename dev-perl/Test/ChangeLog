@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Test
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test/ChangeLog,v 1.4 2004/06/06 23:41:07 mcummings Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test/ChangeLog,v 1.5 2004/06/25 01:01:55 agriffis Exp $
 
 *Test-1.25 (06 Jun 2004)
 

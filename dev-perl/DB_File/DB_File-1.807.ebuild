@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DB_File/DB_File-1.807.ebuild,v 1.7 2004/03/27 02:18:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DB_File/DB_File-1.807.ebuild,v 1.8 2004/06/25 00:22:42 agriffis Exp $
 
 inherit perl-module
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Archive-Zip
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.15 2004/06/05 14:22:38 mcummings Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.16 2004/06/25 00:06:33 agriffis Exp $
 
 *Archive-Zip-1.10 (05 Jun 2004)
 

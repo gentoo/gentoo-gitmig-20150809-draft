@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/sdl-perl
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.12 2003/03/05 16:18:13 vapier Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.13 2004/06/25 00:58:22 agriffis Exp $
 
 *sdl-perl-1.20.0 (05 Mar 2003)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.47.ebuild,v 1.1 2004/06/06 13:00:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.47.ebuild,v 1.2 2004/06/25 00:48:01 agriffis Exp $
 
 inherit perl-module
 

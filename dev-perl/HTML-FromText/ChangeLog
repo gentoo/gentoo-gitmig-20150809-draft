@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/HTML-FromText
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/ChangeLog,v 1.4 2004/06/06 03:35:09 mcummings Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/ChangeLog,v 1.5 2004/06/25 00:35:51 agriffis Exp $
 
 *HTML-FromText-2.05 (05 Jun 2004)
 

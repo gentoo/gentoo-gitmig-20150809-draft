@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/crypt-idea
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.4 2004/04/16 20:23:17 randy Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.5 2004/06/25 00:17:52 agriffis Exp $
 
   16 Apr 2004; Michael McCabe <randy@gentoo.org> crypt-idea-1.02.ebuild:
   adding s390 keywords

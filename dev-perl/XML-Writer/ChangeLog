@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/XML-Writer
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.17 2004/06/11 13:50:53 mcummings Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.18 2004/06/25 01:14:44 agriffis Exp $
 
 *XML-Writer-0.510 (11 Jun 2004)
 

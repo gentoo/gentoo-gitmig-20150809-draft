@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Class-Autouse
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Autouse/ChangeLog,v 1.4 2004/05/24 00:27:16 kloeri Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Autouse/ChangeLog,v 1.5 2004/06/25 00:11:37 agriffis Exp $
 
   24 May 2004; Bryan Østergaard <kloeri@gentoo.org> Class-Autouse-1.03.ebuild:
   Stable on alpha.

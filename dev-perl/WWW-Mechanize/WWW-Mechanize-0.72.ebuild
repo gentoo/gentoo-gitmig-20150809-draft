@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-0.72.ebuild,v 1.5 2004/03/24 23:12:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-0.72.ebuild,v 1.6 2004/06/25 01:09:33 agriffis Exp $
 
 inherit perl-module
 

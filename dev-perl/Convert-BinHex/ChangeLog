@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Convert-BinHex
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/ChangeLog,v 1.1 2004/04/10 16:42:59 esammer Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/ChangeLog,v 1.2 2004/06/25 00:15:51 agriffis Exp $
 
 *Convert-BinHex-1.119 (10 Apr 2004)
 

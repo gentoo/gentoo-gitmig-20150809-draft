@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-1.20.0.ebuild,v 1.3 2004/01/29 09:34:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-1.20.0.ebuild,v 1.4 2004/06/25 00:58:22 agriffis Exp $
 
 inherit perl-module
 

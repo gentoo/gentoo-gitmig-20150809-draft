@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/Finance-Quote-1.07.ebuild,v 1.8 2003/08/07 02:13:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/Finance-Quote-1.07.ebuild,v 1.9 2004/06/25 00:30:54 agriffis Exp $
 
 inherit perl-module
 

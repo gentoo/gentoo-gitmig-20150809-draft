@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/XML-Writer-0.4-r1.ebuild,v 1.14 2004/01/16 04:22:39 esammer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/XML-Writer-0.4-r1.ebuild,v 1.15 2004/06/25 01:14:44 agriffis Exp $
 
 inherit perl-module
 

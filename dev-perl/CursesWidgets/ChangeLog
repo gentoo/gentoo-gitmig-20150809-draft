@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/CursesWidgets
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CursesWidgets/ChangeLog,v 1.4 2004/04/18 02:11:13 randy Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CursesWidgets/ChangeLog,v 1.5 2004/06/25 00:19:47 agriffis Exp $
 
   17 Apr 2004; Michael McCabe <randy@gentoo.org>
   CursesWidgets-1.997.ebuild:

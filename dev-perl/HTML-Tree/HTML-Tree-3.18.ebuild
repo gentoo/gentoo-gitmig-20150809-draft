@@ -1,7 +1,7 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/HTML-Tree-3.18.ebuild,v 1.1 2004/06/06 12:14:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/HTML-Tree-3.18.ebuild,v 1.2 2004/06/25 00:37:54 agriffis Exp $
 
 inherit perl-module
 
