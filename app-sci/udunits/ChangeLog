@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/udunits
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/ChangeLog,v 1.10 2004/06/24 22:19:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/ChangeLog,v 1.11 2004/10/30 15:34:37 ribosome Exp $
+
+  30 Oct 2004; Olivier Fisette <ribosome@gentoo.org> udunits-1.12.0.ebuild:
+  Q.A.: Removed RDEPEND=$DEPEND.
 
   06 Jun 2004; Steve Arnold <nerdboy@gentoo.org> udunits-1.12.1.ebuild:
   bump to x86, corrected depend, added einfo

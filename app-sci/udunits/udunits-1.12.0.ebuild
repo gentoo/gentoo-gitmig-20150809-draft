@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/udunits-1.12.0.ebuild,v 1.8 2004/06/24 22:19:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/udunits-1.12.0.ebuild,v 1.9 2004/10/30 15:34:37 ribosome Exp $
 
 inherit eutils
 
@@ -23,8 +23,6 @@ LICENSE="UCAR-Unidata"
 KEYWORDS="x86 ~ppc ~sparc alpha ~mips ~hppa"
 
 DEPEND="dev-lang/perl"
-
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.4.ebuild,v 1.7 2004/08/03 11:47:22 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.4.ebuild,v 1.8 2004/10/30 15:28:15 ribosome Exp $
 
 inherit perl-module eutils
 
@@ -36,8 +36,6 @@ DEPEND="
 			dev-perl/GD-SVG
 		)
 	mysql? ( >=dev-perl/DBD-mysql-2.1004-r3 )"
-
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	yes "" | perl Makefile.PL ${myconf} \
