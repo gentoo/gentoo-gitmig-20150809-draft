@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.0.3.ebuild,v 1.2 2002/07/02 03:18:00 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.0.3.ebuild,v 1.3 2002/07/02 03:18:41 jnelson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An agent/software robot and a high level policy language for building expert systems to administrate and configure large computer networks"
@@ -27,5 +27,5 @@ src_install () {
 	dodoc doc/*.html
 	doinfo doc/*.info*
         dodoc ${D}/usr/share/cfengine/*.example
-        rm -rf ${D}/usr/share/cfengine
+        rm -rf ${D}/usr/share/cfengine ${D}/usr/doc
 }
