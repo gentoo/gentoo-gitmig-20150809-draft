@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-themes
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-themes/ChangeLog,v 1.6 2003/11/16 02:07:31 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-themes/ChangeLog,v 1.7 2003/12/19 01:18:24 weeve Exp $
+
+  18 Dec 2003; Jason Wever <weeve@gentoo.org> xfce4-themes-4.0.0.ebuild:
+  Marked stable on sparc.
 
 *xfce4-themes-4.0.0 (25 Sep 2003)
 

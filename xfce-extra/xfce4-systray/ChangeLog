@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-systray
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systray/ChangeLog,v 1.9 2003/12/18 17:12:02 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systray/ChangeLog,v 1.10 2003/12/19 01:18:24 weeve Exp $
+
+  18 Dec 2003; Jason Wever <weeve@gentoo.org> xfce4-systray-4.0.1.ebuild:
+  Marked stable on sparc.
 
   18 Dec 2003; Guy Martin <gmsoft@gentoo.org> xfce4-systray-4.0.1.ebuild:
   Marked stable on hppa.

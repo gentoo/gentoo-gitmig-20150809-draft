@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-trigger-launcher
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-trigger-launcher/ChangeLog,v 1.8 2003/12/18 17:10:00 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-trigger-launcher/ChangeLog,v 1.9 2003/12/19 01:18:24 weeve Exp $
+
+  18 Dec 2003; Jason Wever <weeve@gentoo.org>
+  xfce4-trigger-launcher-4.0.1.ebuild:
+  Marked stable on sparc.
 
   18 Dec 2003; Guy Martin <gmsoft@gentoo.org>
   xfce4-trigger-launcher-4.0.1.ebuild:

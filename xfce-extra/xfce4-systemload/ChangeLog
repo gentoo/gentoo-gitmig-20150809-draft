@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-systemload
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/ChangeLog,v 1.5 2003/11/16 02:03:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload/ChangeLog,v 1.6 2003/12/19 01:18:24 weeve Exp $
+
+  18 Dec 2003; Jason Wever <weeve@gentoo.org> xfce4-systemload-0.3.2.ebuild:
+  Marked stable on sparc.
 
 *xfce4-systemload-0.3.4 (14 Nov 2003)
 
