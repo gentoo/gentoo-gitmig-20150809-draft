@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.55 2002/05/15 17:13:32 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.56 2002/05/15 17:24:32 drobbins Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -141,12 +141,10 @@ pkg_preinst() {
 	then
 		cp -ax ${WEBROOT} ${WEBROOT}.bak
 	fi
-}
-
-pkg_postinst() {
 	if [ "`hostname`" = "chiba.3jane.net" ]
 	then
 		echo '>>> Syncing up images to ibiblio...'
-		su - drobbins rsync -ave ssh ${WEBROOT}/images drobbins@login.ibiblio.org:gentoo/images/
+		source ~drobbins/.ssh-agent-chiba.3jane.net
+		rsync --delete -ave ssh ${D}/${WEBROOT}/images/ drobbins@login.ibiblio.org:gentoo/images/
 	fi
 }
