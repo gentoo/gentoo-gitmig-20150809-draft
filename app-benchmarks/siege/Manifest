@@ -1,4 +1,4 @@
 MD5 4aebf8c1efbfd38b632e0861ccff739d files/siege-gentoo_openssl.patch 304
 MD5 f2fd20cd35c2a0514b5e37150182f32b files/digest-siege-2.55 62
-MD5 988461372895dd1f5f4b5b9b8695c9c7 siege-2.55.ebuild 984
-MD5 39b83817aab7e804b3fc8459bcc0fc6a ChangeLog 607
+MD5 7d0fde75d0a336ebe9f7e6a33d1f6197 siege-2.55.ebuild 1038
+MD5 ab69921f60c300710b7283a4bda6259f ChangeLog 700
