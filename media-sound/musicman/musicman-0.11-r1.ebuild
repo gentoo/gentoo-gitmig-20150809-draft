@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/musicman-0.11-r1.ebuild,v 1.7 2005/01/14 23:55:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/musicman-0.11-r1.ebuild,v 1.8 2005/01/18 20:14:13 greg_g Exp $
 
 IUSE=""
 
@@ -22,14 +22,11 @@ DEPEND="|| ( kde-base/kdebase-meta >=kde-base/kdebase-3.2.1 )
 	virtual/fam
 	>=media-libs/libart_lgpl-2.3.16"
 
+need-kde 3.2
+
 src_unpack() {
 	unpack ${A}
 
 	epatch ${FILESDIR}/${P}-gcc34.patch
 	epatch ${FILESDIR}/${P}-amd64.patch
-}
-
-src_install() {
-	einstall || die
-	dodoc AUTHORS ChangeLog README TODO
 }
