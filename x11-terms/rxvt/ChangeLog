@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.8 2002/10/21 14:46:01 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.9 2003/01/07 20:48:22 agriffis Exp $
+
+  07 Jan 2003; Aron Griffis <agriffis@gentoo.org> rxvt-2.7.8-r5.ebuild :
+  Add alpha to KEYWORDS
 
 *rxvt-2.7.8-r5 (16 Jul 2002)
 
