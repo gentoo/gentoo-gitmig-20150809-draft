@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/gtk-cpuspeedy
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtk-cpuspeedy/ChangeLog,v 1.1 2004/03/29 04:15:57 dragonheart Exp $
+
+*gtk-cpuspeedy-0.1 (29 Mar 2004)
+
+  29 Mar 2004; Daniel Black <dragonheart@gentoo.org> gtk-cpuspeedy-0.1.ebuild,
+  metadata.xml:
+  Inital import - thanks to Lukasz Strzygowski <lucass@gentoo.pl> in bug #46036
+
