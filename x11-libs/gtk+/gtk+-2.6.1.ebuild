@@ -1,24 +1,24 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.14.ebuild,v 1.3 2005/01/12 16:56:35 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.1.ebuild,v 1.1 2005/01/12 16:56:35 foser Exp $
 
 inherit libtool flag-o-matic eutils
 
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
-SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2
-	mirror://gentoo/gtk+-2.4-smoothscroll-r1.patch
+SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.6/${P}.tar.bz2
+	mirror://gentoo/gtk+-2.6-smoothscroll-r2.patch
 	amd64? ( http://dev.gentoo.org/~lv/gtk+-2.4.1-lib64.patch.bz2 )"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
-IUSE="doc tiff jpeg"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
+IUSE="doc tiff jpeg static"
 
 RDEPEND="virtual/x11
-	>=dev-libs/glib-2.4
+	>=dev-libs/glib-2.6
 	>=dev-libs/atk-1.0.1
-	>=x11-libs/pango-1.4
+	>=x11-libs/pango-1.8
 	x11-misc/shared-mime-info
 	>=media-libs/libpng-1.2.1
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
@@ -37,12 +37,12 @@ src_unpack() {
 	cd ${S}
 	# Turn of --export-symbols-regex for now, since it removes
 	# the wrong symbols
-	epatch ${FILESDIR}/gtk+-2.0.6-exportsymbols.patch
+#	epatch ${FILESDIR}/gtk+-2.0.6-exportsymbols.patch
 	# beautifying patch for disabled icons
 	epatch ${FILESDIR}/${PN}-2.2.1-disable_icons_smooth_alpha.patch
 	# add smoothscroll support for usability reasons
 	# http://bugzilla.gnome.org/show_bug.cgi?id=103811
-	epatch ${DISTDIR}/${PN}-2.4-smoothscroll-r1.patch
+	epatch ${DISTDIR}/${PN}-2.6-smoothscroll-r2.patch
 
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
@@ -69,6 +69,7 @@ src_compile() {
 		`use_enable doc gtk-doc` \
 		`use_with jpeg libjpeg` \
 		`use_with tiff libtiff` \
+		`use_enable static` \
 		--with-png \
 		--with-gdktarget=x11 \
 		--with-xinput \

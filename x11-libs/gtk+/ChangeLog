@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.138 2004/12/28 21:58:33 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.139 2005/01/12 16:56:35 foser Exp $
+
+*gtk+-2.6.1 (12 Jan 2005)
+
+  12 Jan 2005; foser <foser@gentoo.org> gtk+-2.6.1.ebuild :
+  New release, closes a whole lot of empty bugs
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
