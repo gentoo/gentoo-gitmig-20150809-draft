@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.14 2004/07/02 08:42:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.45-r2.ebuild,v 1.15 2004/07/15 03:35:32 agriffis Exp $
 
 IUSE=""
 
@@ -9,7 +9,6 @@ EPATCH_SOURCE="${FILESDIR}"
 EPATCH_SUFFIX="patch"
 
 MY_P="${PN}_${PV}-11"
-S="${WORKDIR}/${P}"
 
 DESCRIPTION="BSD build tool to create programs in parallel"
 HOMEPAGE="http://www.netbsd.org/"
