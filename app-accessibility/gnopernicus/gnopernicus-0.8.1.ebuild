@@ -1,12 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.8.1.ebuild,v 1.3 2004/04/23 23:27:35 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.8.1.ebuild,v 1.4 2004/04/24 08:58:29 eradicator Exp $
 
 inherit eutils gnome2
 
-IUSE="ipv6"
-# Local USE flags
-IUSE="${IUSE} brltty"
+IUSE="ipv6 brltty"
 
 DESCRIPTION="Software tools for blind and visually impaired in Gnome 2"
 HOMEPAGE="http://www.baum.ro/gnopernicus.html"
