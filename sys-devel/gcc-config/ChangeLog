@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.9 2002/12/17 13:06:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.10 2002/12/23 01:49:50 azarah Exp $
+
+*gcc-config-1.2.5 (23 Dec 2002)
+
+  23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> gcc-config-1.2.5.ebuild :
+
+  Add --print-environ switch.  Add /usr/bin/cpp wrapper.  Fix the wrapper
+  to setup PATH if it cannot find cpp, or if 'which cpp' give /usr/bin/cpp.
 
   17 Dec 2002; Martin Schlemmer <azarah@gentoo.org> gcc-config-1.2.4 :
 
