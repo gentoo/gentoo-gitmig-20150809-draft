@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ladebug-4.0.67.ebuild,v 1.3 2003/06/15 11:51:20 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ladebug-4.0.67.ebuild,v 1.4 2003/06/23 17:07:50 taviso Exp $
 #
 # Submitted By Tavis Ormandy <taviso@gentoo.org>
 #
 
-inherit elisp 
+inherit elisp
 
 DESCRIPTION="Linux port of the Famous Tru64 Debugger"
 HOMEPAGE="http://www.support.compaq.com/alpha-tools"
@@ -15,7 +15,7 @@ SRC_URI=""
 LICENSE="PLDSPv2"
 SLOT="0"
 # NOTE: ALPHA Only!
-KEYWORDS="-* ~alpha"
+KEYWORDS="-* alpha"
 DEPEND="virtual/glibc
 		app-arch/rpm2targz
 		emacs? ( virtual/emacs )"
