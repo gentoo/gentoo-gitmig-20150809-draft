@@ -17,6 +17,7 @@ app-pda
 app-sci
 app-shells 
 app-text 
+app-vim
 app-xemacs
 dev-ada
 dev-cpp
