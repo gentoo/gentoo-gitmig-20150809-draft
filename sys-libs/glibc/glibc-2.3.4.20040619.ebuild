@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.11 2004/07/09 22:47:31 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.12 2004/07/12 02:25:12 tgall Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
 
@@ -700,6 +700,8 @@ EOF
 
 	# Some things want this, notably ash.
 	dosym /usr/lib/libbsd-compat.a /usr/lib/libbsd.a
+
+    use ppc64 && dosym /lib/ld64.so.1 /lib/ld.so.1
 
 	# This is our new config file for building locales
 	insinto /etc
