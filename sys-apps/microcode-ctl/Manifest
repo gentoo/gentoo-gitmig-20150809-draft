@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f05cb94bafe3844a45c84eac3426d7ee ChangeLog 2435
+MD5 46861b4fb632e925e1fee37c41c02ee7 microcode-ctl-1.11.ebuild 1186
+MD5 431ee48d27140d818558e362a12e0a94 ChangeLog 2561
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 465d692ac8702596ac216b3eb2320490 microcode-ctl-1.11.ebuild 1165
 MD5 95e076b988c73349d2606d4ecd052a56 files/digest-microcode-ctl-1.11 70
-MD5 e8b0bb1b0be1aef5fcb99663b9457b35 files/microcode_ctl.rc 618
 MD5 23438cd1b63d7190967405e42ad1a0f6 files/microcode_ctl.conf.d 267
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB3zTRroRuSHgZdywRAnouAJ9m8wpAPhmwEXGC3eunSGWknAew4wCfe+Aq
-3FXUrFC6GLebdNE/vtryMzY=
-=kTOx
------END PGP SIGNATURE-----
+MD5 e8b0bb1b0be1aef5fcb99663b9457b35 files/microcode_ctl.rc 618
