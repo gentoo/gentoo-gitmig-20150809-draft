@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 c8e97596995768ad129c28c293d3b570 ChangeLog 327
-MD5 bd6b97dd3fd44070b256ad27cdb88752 ezm3-1.2.ebuild 2198
+MD5 e4557b0e80c1fa2376bb604975b344a5 ezm3-1.2.ebuild 2219
 MD5 76be14d520fa8faafe6f02e09f20323e metadata.xml 295
-MD5 5cb3092c2d71d381f7f9adb6b14f29bf files/digest-ezm3-1.2 217
+MD5 f203f577cc77069c4649a5acb239ab59 files/digest-ezm3-1.2 294
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFA8WHLHTu7gpaalycRAp2iAJ9QNjDg5KetuXgMKmI0gfIN2d1fBwCgul3i
-LGrAnsLR2ToYGe7MjNFx58c=
-=cqPh
+iD8DBQFA8y+QHTu7gpaalycRAuDUAJ9oGMpbd9wRtXXOzpqdTqq5VxGh2ACgkscD
+H58vCNs5HuKiLfdeUnnlEbQ=
+=Dl0Z
 -----END PGP SIGNATURE-----
