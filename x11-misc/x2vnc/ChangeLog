@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/x2vnc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.12 2003/05/15 17:54:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.13 2003/08/25 11:48:20 weeve Exp $
+
+  25 Aug 2003; Jason Wever <weeve@gentoo.org> x2vnc-1.31.ebuild,
+  x2vnc-1.5.1.ebuild:
+  Added ~sparc to 1.5.1 and removed ~sparc from 1.31 to help with the versioning
+  problem.
 
   15 May 2003; Aron Griffis <agriffis@gentoo.org> x2vnc-1.5.1.ebuild:
   Mark stable on alpha
