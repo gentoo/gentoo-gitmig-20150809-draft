@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.15.ebuild,v 1.6 2004/06/24 22:56:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.15.ebuild,v 1.7 2004/11/14 20:21:42 kloeri Exp $
 
 IUSE=""
 S=${WORKDIR}/${PN}
@@ -13,7 +13,7 @@ DEPEND=">=app-admin/gkrellm-2*
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc ~alpha amd64"
+KEYWORDS="x86 ppc sparc alpha amd64"
 
 src_compile() {
 	emake || die
