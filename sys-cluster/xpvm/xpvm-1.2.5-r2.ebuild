@@ -14,7 +14,7 @@ DEPEND=">=sys-cluster/pvm-3.4.1-r1
 RDEPEND=""
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="LGPL-2"
 
 src_unpack() {
