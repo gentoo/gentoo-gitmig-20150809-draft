@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.2.1.ebuild,v 1.2 2004/06/25 00:08:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.2.1.ebuild,v 1.3 2004/09/02 10:18:18 usata Exp $
 
 IUSE="doc"
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~x86 ~ppc"
 
 RDEPEND=">=dev-util/guile-1.6.4
 	virtual/ghostscript
-	>=app-text/tetex-2.0.2
+	virtual/tetex
 	>=dev-lang/python-2.2.3-r1"
 
 DEPEND="${RDEPEND}
