@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/livecd-kconfigs/livecd-kconfigs-2005.0.ebuild,v 1.1 2005/03/28 01:07:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/livecd-kconfigs/livecd-kconfigs-2005.0.ebuild,v 1.2 2005/03/30 15:28:40 wolf31o2 Exp $
 
 inherit eutils
 
 DESCRIPTION="Gentoo Linux official release spec files"
 HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst"
-SRC_URI="http://dev.gentoo.org/~wolf31o2/sources/livecd-specs/${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~wolf31o2/sources/livecd-kconfigs/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
