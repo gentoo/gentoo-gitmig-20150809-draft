@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-lib/xine-lib-0.9.4.ebuild,v 1.2 2001/11/14 03:43:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-lib/xine-lib-0.9.4.ebuild,v 1.3 2001/11/14 04:00:02 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
@@ -15,18 +15,22 @@ DEPEND="virtual/glibc
 	esd? ( media-sound/esound )
 	aalib? ( media-libs/aalib )
 	arts? ( kde-base/kdelibs )
-	alsa? ( media-libs/alsa-lib )"
+	alsa? ( media-libs/alsa-lib )
+	ogg? ( media-libs/libogg )
+	vorbis? ( media-libs/libvorbis )"
 
 
 src_compile() {
 
 	# Most of these are not working currently, but are here for completeness
 	local myconf
-	use X     || myconf="${myconf} --disable-x11 --disable-xv"
-	use alsa  || myconf="${myconf} --disable-alsa --disable-alsatest"
-	use esd   || myconf="${myconf} --disable-esd --disable-esdtest"
-	use aalib || myconf="${myconf} --disable-aalib --disable-aalibtest"
-	use arts  || myconf="${myconf} --disable-arts --disable-artstest"
+	use X      || myconf="${myconf} --disable-x11 --disable-xv"
+	use alsa   || myconf="${myconf} --disable-alsa --disable-alsatest"
+	use esd    || myconf="${myconf} --disable-esd --disable-esdtest"
+	use aalib  || myconf="${myconf} --disable-aalib --disable-aalibtest"
+	use arts   || myconf="${myconf} --disable-arts --disable-artstest"
+	use ogg    || myconf="${myconf} --disable-ogg --disable-oggtest"
+	use vorbis || myconf="${myconf} --disable-vorbis --disable-vorbistest"
 	 
 	./configure --host=${CHOST} 					\
 		    --prefix=/usr					\
@@ -43,14 +47,12 @@ src_install() {
 	make prefix=${D}/usr						\
 	     mandir=${D}/usr/share/man					\
 	     infodir=${D}/usr/share/info				\
+	     docdir=${D}/usr/share/doc/${P}/html			\
 	     sysconfdir=${D}/etc					\
 	     install || die
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
 	cd ${S}/doc
-	dodoc dataflow.dia FAQ* MRL.txt README*
-	docinto xine-lib-API/html
-	rm -f xine-lib-API/html/Makefile*
-	dodoc xine-lib-API/html/*
+	dodoc dataflow.dia README*
 }
 
