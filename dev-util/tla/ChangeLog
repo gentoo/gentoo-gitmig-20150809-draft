@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/tla
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.9 2004/03/29 18:25:05 rphillips Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.10 2004/04/15 16:52:25 kugelfang Exp $
+
+  15 Apr 2004; <dvandyk@gentoo.org> tla-1.2-r1.ebuild:
+  marked ~amd64
 
 *tla-1.2-r1 (29 Mar 2004)
 
