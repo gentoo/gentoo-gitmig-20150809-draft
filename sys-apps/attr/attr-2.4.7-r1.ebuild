@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.7-r1.ebuild,v 1.12 2004/02/21 23:30:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.7-r1.ebuild,v 1.13 2004/02/22 06:32:23 mr_bones_ Exp $
 
 inherit eutils
 
@@ -49,7 +49,7 @@ src_compile() {
 	[ `use sparc` ] && unset PLATFORM
 	econf ${myconf} || die
 
-	
+
 	sed -i \
 		-e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' \
 		-e 's:-O1::' -e 's:../$(INSTALL) -S \(.*\) $(PKG_.*_DIR)/\(.*$\)::' \
