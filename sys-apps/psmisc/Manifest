@@ -1,15 +1,25 @@
-MD5 5becc3b03eb9d38842ae54d751a397da ChangeLog 5380
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 133ac651e4cdc801d6d4de7dd4ac4cf6 ChangeLog 5496
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 22b02fe46517ddaa64943da063201e9b psmisc-21.2-r3.ebuild 1158
 MD5 0a088775a9ba8a5283bd77eeb05dda71 psmisc-21.2-r4.ebuild 2002
-MD5 897592a547a0f506a857d88680c02661 psmisc-21.4.ebuild 1476
+MD5 5569846de0b07d95a3a980b00cdebc82 psmisc-21.4.ebuild 1497
 MD5 056073bdd75042db6a6484fab28f6210 files/digest-psmisc-21.2-r3 63
 MD5 056073bdd75042db6a6484fab28f6210 files/digest-psmisc-21.2-r4 63
 MD5 b27975d795b1253e70ef1133dde797d0 files/digest-psmisc-21.4 63
 MD5 c3fc900b7ebf1f4231b1ea416d908ce2 files/psmisc-21.2-fix-realloc.patch 368
 MD5 b3c372e1b1ef54a8798b8526a2aa92d1 files/psmisc-21.2-gcc33.patch 547
-MD5 75e16053b4cd5c14c747413ee46dbaa1 files/psmisc-21.2-selinux.diff.bz2 10102
-MD5 5d788fbdf401f203822bee5d8dc8c504 files/psmisc-21.4-selinux.diff.bz2 7841
 MD5 06fa2daf8fe69cf2890ccd85ed77369a files/psmisc-21.2-no-nls.patch 1268
+MD5 75e16053b4cd5c14c747413ee46dbaa1 files/psmisc-21.2-selinux.diff.bz2 10102
 MD5 78083673f5555f5363baa0cf4d907a8b files/psmisc-21.4-no-nls-selinux.patch 1580
 MD5 329287c0414da4ba155403a97d65dbff files/psmisc-21.4-no-nls.patch 1594
+MD5 5d788fbdf401f203822bee5d8dc8c504 files/psmisc-21.4-selinux.diff.bz2 7841
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBecEzGFJQsIJWJy4RAtiGAJ0bYOuZb7kZAO4Y/+KZuTK+f4Y+MgCfXcHb
+BXoP431p1g3SjXOe808SS+I=
+=ADsi
+-----END PGP SIGNATURE-----

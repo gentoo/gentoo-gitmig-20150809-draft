@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.15 2004/09/26 22:16:15 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.16 2004/10/23 02:26:30 pebenito Exp $
 
 inherit eutils gnuconfig
 
@@ -16,7 +16,9 @@ KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ~ppc64 s390"
 IUSE="nls selinux"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
-	selinux? ( sys-libs/libselinux )
+	selinux? ( sys-libs/libselinux
+		sys-devel/libtool
+		)
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
