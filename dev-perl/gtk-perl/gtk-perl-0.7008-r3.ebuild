@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008-r3.ebuild,v 1.1 2002/05/06 17:41:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008-r3.ebuild,v 1.2 2002/05/06 22:16:44 seemant Exp $
 
 # Inherit the perl-module.eclass functions
 . /usr/portage/eclass/inherit.eclass || die
@@ -16,6 +16,6 @@ SLOT="0"
 newdepend ">=x11-libs/gtk+-1.2.10-r4 \
 	dev-perl/XML-Writer \
 	dev-perl/XML-Parser \
-	gnome? ( gnome-base/gnome-libs )"
+	gnome-base/gnome-libs"
 
 mydoc="VERSIONS WARNING NOTES"
