@@ -1,13 +1,15 @@
 # ChangeLog for media-sound/liteamp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/liteamp/ChangeLog,v 1.4 2003/02/18 20:23:05 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/liteamp/ChangeLog,v 1.5 2003/03/02 21:38:06 seo Exp $
 
 *liteamp-0.2.1 (19 Feb 2003)
+
+  02 Mar 2003; Jungmin Seo <seo@gentoo.org> liteamp-0.2.1.ebuild :
+  it is stable on x86 and ppc now
 
   19 Feb 2003; Jungmin Seo <seo@gentoo.org> liteamp-0.2.1.ebuild,
   files/liteamp-0.2.1 :
   new version
-
 
 *liteamp-0.2 (17 Feb 2003)
 
