@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/selinux-small
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.16 2003/05/22 20:20:18 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.17 2003/05/25 21:34:18 pebenito Exp $
+
+  25 May 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-small-2003011510-r4.ebuild, selinux-small-2003040709-r1.ebuild,
+  selinux-small-2003040709-r2.ebuild:
+  Fix license to GPL-2, from GPL-1
 
 *selinux-small-2003040709-r2 (22 May 2003)
 

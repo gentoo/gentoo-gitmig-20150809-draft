@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003040709-r1.ebuild,v 1.1 2003/05/14 19:13:15 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003040709-r1.ebuild,v 1.2 2003/05/25 21:34:18 pebenito Exp $
 
 DESCRIPTION="SELinux libraries and policy compiler"
 HOMEPAGE="http://www.nsa.gov/selinux"
 SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz
 	 http://www.coker.com.au/selinux/selinux-small/selinux-small_${PV}-5.diff.gz"
 
-LICENSE="GPL-1"
+LICENSE="GPL-2"
 SLOT="0"
 S="${WORKDIR}/selinux"
 
