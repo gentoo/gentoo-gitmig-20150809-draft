@@ -1,45 +1,48 @@
-# this qt hasn't been tested
-#=x11-libs/qt-x11-2.3.1
-
-# this requires the incompatible readline version 4.2
->=sys-apps/bash-2.05
-
-# this version does not work with nls
->=sys-apps/procps-2.0.7
-
 # in development
 >=sys-devel/gcc-2.96
 
 # incompatible
+>=sys-apps/bash-2.05
+>=app-text/pspell-0.12
+>=app-text/aspell-0.33
 >=sys-libs/readline-4.2
 >sys-devel/automake-1.4-r2
 >=media-libs/mesa-glu-3.5
+>=net-nds/openldap-2.0
+>=app-text/ghostscript-7
+>=sys-devel/autoconf-2.50
+>=net-www/mozilla-0.9.2
 
 # broken
 app-admin/powertweak
 media-video/avi-xmms
 >=dev-libs/pilot-link-0.9.1
+app-text/sgml2x
+>=sys-apps/procps-2.0.7
+
 # unfinished
 app-admin/va-systemimager-server
 app-admin/va-systemimager-client
 <media-video/avifile-0.7.0
-
-# broken
-app-editors/gtk-xemacs
-
-# incompatible
->=app-text/pspell-0.12
->=app-text/aspell-0.33
-# broken
-app-text/sgml2x
-
-# incompatible
->=net-nds/openldap-2.0
->=app-text/ghostscript-7
-# unfinished
 >=dev-lang/python-2.1
 >=sys-libs/ncurses-5.2-r4
 >=sys-apps/texinfo-4.0c
+>=media-libs/pdflib-4.0.0
+>=berlin-base/berlin-0.2.2
+
+# broken
+app-editors/gtk-xemacs
+>=net-dialup/isdn4k-utils-3.1_p1-r2
+>=net-news/knews-1.0.1b
+>=net-www/konqueror-embedded-20010207
+>=sys-apps/vcron-3.0_p1-r2
+>=media-video/mpeg2-movie-1.5
+>=media-gfx/autotrace-0.26
+
+# untested
+>=x11-base/xfree-4.1.0-r1
+>=sys-devel/libtool-1.4
+
 #OK, I assume that the XFS in 2.4.4-r5 is hosed; alkaline?
 
 =sys-kernel/linux-sources-2.4.4-r5
@@ -53,30 +56,13 @@ app-text/sgml2x
 =sys-kernel/linux-extras-2.4.5
 
 #I (drobbins) added this one; 2.4.5.5 locks up regularly, even from console
-#All I need to to is extract a bzip2'd tarball of the kernel sources, and 
+#All I need to to is extract a bzip2'd tarball of the kernel sources, and
 #the system semi-locks up.  I assume no one else should be using it either.
 
 =sys-kernel/linux-sources-2.4.5.5
 =sys-kernel/linux-2.4.5.5
 =sys-kernel/linux-extras-2.4.5.5
 
-# unfinished
->=media-libs/pdflib-4.0.0
-# broken
->=net-dialup/isdn4k-utils-3.1_p1-r2
->=net-news/knews-1.0.1b
->=net-www/konqueror-embedded-20010207
->=sys-apps/vcron-3.0_p1-r2
->=media-video/mpeg2-movie-1.5
-# unfinished
->=berlin-base/berlin-0.2.2
-# broken
->=media-gfx/autotrace-0.26
-# untested
->=x11-base/xfree-4.1.0-r1
-# incompatible
->=sys-devel/autoconf-2.50
->=net-www/mozilla-0.9.2
-# untested
->=sys-devel/libtool-1.4
+
+
 
