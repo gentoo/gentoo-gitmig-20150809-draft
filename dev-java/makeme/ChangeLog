@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/makeme
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/ChangeLog,v 1.4 2003/05/24 04:21:00 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/ChangeLog,v 1.5 2003/08/15 06:19:30 strider Exp $
+
+  15 Aug 2003; Adrian Almenar <strider@gentoo.org> makeme-0.02-r2.ebuild:
+  Fixes bug 21887, That makes the ebuild to build with jikes java compiler,
+  Thanks to Jonas Berlin <jberlin@cc.hut.fi> for the patch
 
 *makeme-0.02-r2 (24 May 2003)
 
