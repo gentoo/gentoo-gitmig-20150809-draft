@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.06c.ebuild,v 1.1 2004/03/16 11:38:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.06c.ebuild,v 1.2 2004/03/30 20:06:15 spyderous Exp $
 
 RESTRICT="nomirror"
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""
-RDEPEND="x11-base/xfree
+RDEPEND="virtual/x11
 	sys-libs/lib-compat
 	sys-libs/glibc"
 
