@@ -56,7 +56,9 @@ pfpro
 solid
 sybase
 sybase-ct
+fdftk
+cpdflib
+qdbm
 
 hardened
 djbfft
-fdftk
