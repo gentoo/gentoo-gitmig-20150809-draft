@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/zinf
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.7 2003/02/12 07:35:46 vapier Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.8 2003/02/14 13:16:32 danarmak Exp $
+
+  14 Feb 2003; Dan Armak <danarmak@gentoo.org> zinf-2.2.3.ebuild:
+
+  Enable arts output support with the makefile fixes needed for it.
+  This resolves bug #9675.
 
 *zinf-2.2.3 (07 Feb 2003)
 

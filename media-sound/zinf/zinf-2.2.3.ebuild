@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.3.ebuild,v 1.3 2003/02/13 13:22:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.3.ebuild,v 1.4 2003/02/14 13:16:32 danarmak Exp $
 
-IUSE="esd X gtk oggvorbis gnome"
+IUSE="esd X gtk oggvorbis gnome arts"
 
 inherit kde-functions 
 
@@ -21,8 +21,8 @@ RDEPEND="=dev-libs/glib-1.2*
 	esd? ( media-sound/esound ) 
 	gtk? ( >=media-libs/gdk-pixbuf-0.8 )
 	gnome? ( gnome-base/ORBit )
-	oggvorbis? ( media-libs/libvorbis )"
-	#arts? ( kde-base/arts ) # doesn't work anymore? see bug #9675
+	oggvorbis? ( media-libs/libvorbis )
+	arts? ( kde-base/arts )" # doesn't work anymore? see bug #9675
 	#alsa? ( media-libs/alsa-lib ) # it only supports alsa 0.5.x, so support disabled
 
 DEPEND="$RDEPEND x86? ( dev-lang/nasm ) 
@@ -45,7 +45,7 @@ src_unpack() {
 #    if [ "`use arts`" ]; then
 #	cd ${S}/io/arts/src
 #	cp artspmo.cpp 1
-#	sed -e 's:artsc/artsc.h:artsc.h:g' 1 > artspmo.cpp
+#	sed -e 's:artsc/artsc.h:artsc.h:g' -e 's:artspmo.h:../include/artspmo.h:g' 1 > artspmo.cpp
 #    fi
 
 }
@@ -58,12 +58,23 @@ src_compile() {
 	#use alsa || 
 	myconf="${myconf} --disable-alsa"
 	use esd  || myconf="${myconf} --disable-esd"
-#	use arts && export ARTSCCONFIG="$KDEDIR/bin/artsc-config" && myconf="${myconf} --with-extra-includes=${KDEDIR}/include --enable-arts" || \
-	myconf="$myconf --disable-arts"
+	
+	if [ -n "`use arts`" ]; then
+	    export ARTSCCONFIG="$KDEDIR/bin/artsc-config"
+	    myconf="${myconf} --enable-arts"
+	else
+	    myconf="$myconf --disable-arts"
+	fi
 
 	./configure --prefix=/usr --host=${CHOST} ${myconf} || die
 	make || die
-#	use arts && ( CPATH=${KDEDIR}/include/artsc:${S}/io/arts/include make -f Makefile-plugins plugins/arts.pmo || die )
+	
+	if [ -n "`use arts`" ]; then
+	    export CPATH="${CPATH}:${KDEDIR}/include/artsc:${S}/io/arts/include"
+	    cp Makefile.header 1
+	    sed -e "s:ARTS_LIBS =:ARTS_LIBS = -lartsc -L${KDEDIR}/lib:" 1 > Makefile.header
+	    make -f Makefile-plugins plugins/arts.pmo || die
+	fi
 
 }
 
