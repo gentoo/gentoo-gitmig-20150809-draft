@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r2.ebuild,v 1.3 2002/12/03 07:35:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r2.ebuild,v 1.4 2002/12/03 20:33:01 azarah Exp $
 
 IUSE=""
 
@@ -141,7 +141,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	[ "${FORCE_SYSTEMAUTH_UPDATE}" != "yes" ] && return 0
 	
 	ewarn "Due to a security issue, ${ROOT}etc/pam.d/system-auth "
 	ewarn "is being updated automatically. Your old "
@@ -152,7 +151,7 @@ pkg_postinst() {
 	local CHECK1="$(md5sum ${ROOT}/etc/pam.d/system-auth | cut -d ' ' -f 1)"
 	local CHECK2="$(md5sum ${ROOT}/etc/pam.d/system-auth.new | cut -d ' ' -f 1)"
 
-	if [ "${CHECK1}" != "${CHECK2}" ];
+	if [ "${CHECK1}" != "${CHECK2}" -a "${FORCE_SYSTEMAUTH_UPDATE}" = "yes" ]
 	then
 		cp -a ${ROOT}/etc/pam.d/system-auth \
 	              ${ROOT}/etc/pam.d/system-auth.bak;

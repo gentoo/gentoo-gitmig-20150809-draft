@@ -1,11 +1,13 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.18 2002/12/03 07:35:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.19 2002/12/03 20:33:01 azarah Exp $
 
   03 Dec 2002; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.3-r2.ebuild :
 
   Mark as stable.  Update pam.d/su to use pam_filelist.so if uncommented.
   This can be used as a type of /etc/suauth.  Should close bug #4210.
+
+  Fix an issue where /etc/pam.d/system-auth.new was still being installed.
 
 *shadow-4.0.3-r1 (20 Oct 2002)
 
