@@ -1,38 +1,38 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvrec/nvrec-0.1_pre20030217.ebuild,v 1.1 2003/03/18 14:36:56 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvrec/nvrec-0.1_pre20030217.ebuild,v 1.2 2003/04/25 15:59:22 vapier Exp $
+
+inherit eutils		
 
 MY_VER="20030217"
 DESCRIPTION="High quality video capture for Linux"
 HOMEPAGE="http://${PN}.sourceforge.net/"
 SRC_URI="http://${PN}.sourceforge.net/downloads/${PN}-${MY_VER}.tar.gz
-		mirror://sourceforge/ffmpeg/ffmpeg-0.4.6.tar.gz"
+	mirror://sourceforge/ffmpeg/ffmpeg-0.4.6.tar.gz"
+
 LICENSE="GPL-2"
-S="${WORKDIR}/${PN}"
-IUSE="avi quicktime sdl oggvorbis"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE="avi quicktime sdl oggvorbis"
 
 DEPEND="dev-lang/perl
-		>=sys-devel/automake-1.6.1
-		>=sys-devel/autoconf-2.53
-		avi? ( media-video/avifile )
-		quicktime? ( media-libs/libquicktime )
-		sdl? ( media-libs/libsdl )
-		sdl? ( media-sound/mad )
-		media-libs/divx4linux
-		media-sound/lame
-		media-video/ffmpeg
-		"
+	>=sys-devel/automake-1.6.1
+	>=sys-devel/autoconf-2.53
+	avi? ( media-video/avifile )
+	quicktime? ( media-libs/libquicktime )
+	sdl? ( media-libs/libsdl )
+	sdl? ( media-sound/mad )
+	media-libs/divx4linux
+	media-sound/lame
+	media-video/ffmpeg"
 RDEPEND="avi? ( media-video/avifile )
-		quicktime? ( media-libs/libquicktime )
-		sdl? ( media-libs/libsdl )
-		sdl? ( media-sound/mad )
-		media-libs/divx4linux
-		media-sound/lame"
-					
-		
-inherit eutils		
+	quicktime? ( media-libs/libquicktime )
+	sdl? ( media-libs/libsdl )
+	sdl? ( media-sound/mad )
+	media-libs/divx4linux
+	media-sound/lame"
+
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	local ffversion
