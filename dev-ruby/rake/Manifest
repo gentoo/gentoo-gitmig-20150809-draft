@@ -1,4 +1,16 @@
-MD5 30ad84d5f54fbce8bbbb216b622229d0 ChangeLog 478
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 960656b62c4bb4f4f620b269f1953707 ChangeLog 751
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 6c6276a0f07d9e220984c6d9eb140833 rake-0.4.4.ebuild 805
+MD5 f1c2978f33af158bf1791e77991aab45 rake-0.4.4.ebuild 850
+MD5 2b3cbd5104bff828da1e9095627e6804 rake-0.4.11.ebuild 853
 MD5 00c6aeabefa3a5baaabd35b9afb162ac files/digest-rake-0.4.4 58
+MD5 073b59e1c530d30f2b79902d5a73d7ee files/digest-rake-0.4.11 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBnlOMVWNWqTUmv+0RAs5YAKCzo/uoGggSzYSL3Ci98uYVnKr2SACeMm4b
+HRnsoAn2IE+R4xstXKeW0hE=
+=/n3E
+-----END PGP SIGNATURE-----
