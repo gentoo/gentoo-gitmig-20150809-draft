@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2005.01.29.ebuild,v 1.1 2005/01/30 17:02:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2005.01.29.ebuild,v 1.2 2005/02/02 10:28:37 eradicator Exp $
 
 IUSE=""
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils toolchain-funcs multilib
 
 MY_P=${P/-/.}
 DESCRIPTION="Source-code libraries for standards-based RTP/RTCP/RTSP multimedia streaming, suitable for embedded and/or low-cost streaming applications"
@@ -42,7 +42,9 @@ src_unpack() {
 src_compile() {
 	./genMakefiles linux
 	# emake doesn't work
-	make || die
+	make CPLUSPLUS_COMPILER="$(tc-getCXX)" \
+	     C_COMPILER="$(tc-getCXX)" \
+	     LINK="$(tc-getCXX) -o" || die
 }
 
 src_install() {
@@ -58,10 +60,10 @@ src_install() {
 		local dir
 		dir=$(basename $(dirname ${lib}))
 
-		insinto "/usr/lib/live/${dir}"
+		insinto "/usr/$(get_libdir)/live/${dir}"
 		doins "${lib}"
 
-		insinto "/usr/lib/live/${dir}/include"
+		insinto "/usr/$(get_libdir)/live/${dir}/include"
 		doins ${S}/${dir}/include/*h
 	done
 

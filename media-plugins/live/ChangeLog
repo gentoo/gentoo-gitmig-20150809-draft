@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/live
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.43 2005/01/30 17:02:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.44 2005/02/02 10:28:37 eradicator Exp $
+
+  02 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  live-2005.01.29.ebuild:
+  Multilib and toolchain-funcs updates.
 
 *live-2005.01.29 (30 Jan 2005)
 
