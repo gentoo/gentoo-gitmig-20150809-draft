@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.25 2003/04/03 19:14:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.26 2003/04/27 23:12:18 azarah Exp $
+
+  28 Apr 2003; Martin Schlemmer <azarah@gentoo.org> man-1.5l-fix :
+  Updated this patch again.  I did it this time by rather using the hex
+  value than a quoted value, thanks to idea from giggles1 <bevdv@yahoo.com>,
+  bug #19039.
 
   03 Apr 2003; Martin Schlemmer <azarah@gentoo.org> man-1.5l-r2.ebuild :
   Mark stable for all other arch's, as -r1 that is, is broken.
