@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/ecb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.5 2003/09/21 03:52:32 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.6 2003/12/08 07:30:53 usata Exp $
+
+*ecb-2.11 (08 Dec 2003)
+
+  08 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> ecb-2.11.ebuild,
+  files/70ecb-gentoo.el:
+  Version bumped. Removed help patch (use sed instead). Closing bug #34348
 
 *ecb-1.96 (20 Sep 2003)
 
