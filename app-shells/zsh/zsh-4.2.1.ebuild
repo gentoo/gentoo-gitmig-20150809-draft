@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.1.ebuild,v 1.4 2004/10/12 14:04:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.1.ebuild,v 1.5 2004/10/13 22:30:30 usata Exp $
 
 inherit eutils
 
@@ -60,6 +60,7 @@ src_compile() {
 		--enable-site-fndir=/usr/share/zsh/site-functions \
 		--enable-function-subdirs \
 		--enable-ldflags="${LDFLAGS}" \
+		--with-tcsetpgrp \
 		$(use_with ncurses curses-terminfo) \
 		$(use_enable maildir maildir-support) \
 		$(use_enable pcre) \

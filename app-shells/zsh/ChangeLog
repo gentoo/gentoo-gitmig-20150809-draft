@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.61 2004/10/12 14:04:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.62 2004/10/13 22:30:30 usata Exp $
+
+  14 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> zsh-4.2.1.ebuild:
+  Added --with-tcsetpgrp; bug #67308.
 
   12 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org> zsh-4.2.1.ebuild:
   Stable on sparc
