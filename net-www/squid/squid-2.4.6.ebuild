@@ -1,6 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.6.ebuild,v 1.2 2002/03/21 01:32:39 woodchip Exp $
+# Maintainer: Donny Davies <woodchip@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.6.ebuild,v 1.3 2002/03/21 01:44:59 woodchip Exp $
 
 # this could be cleaner..
 MY_P=${PN}-2.4.STABLE6
