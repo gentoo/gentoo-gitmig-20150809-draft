@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/efax-gtk-2.2.4.ebuild,v 1.1 2004/02/02 07:16:51 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/efax-gtk-2.2.4.ebuild,v 1.2 2004/02/19 18:36:19 brad Exp $
 
 DESCRIPTION="GTK+2 frontend for the efax program."
 
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.cvine.freeserve.co.uk/efax-gtk"
 SRC_URI="http://www.cvine.freeserve.co.uk/efax-gtk/${P}.src.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 DEPEND=">=dev-cpp/gtkmm-2.0.5
 	>=x11-libs/gtk+-2*"
