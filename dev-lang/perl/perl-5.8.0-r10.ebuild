@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r10.ebuild,v 1.5 2003/04/07 18:23:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.0-r10.ebuild,v 1.6 2003/04/23 21:44:58 rac Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -53,7 +53,7 @@
 # Martin Schlemmer <azarah@gentoo.org> (28 Dec 2002).
 
 
-IUSE="berkdb gdbm"
+IUSE="berkdb doc gdbm"
 
 inherit eutils flag-o-matic 
 
@@ -129,7 +129,6 @@ pkg_setup() {
 		ewarn "that compile against perl. You use threading at "
 		ewarn "your own discretion. "
 		ewarn ""
-		sleep 10
 	fi
 
 	if [ "${PN}" = "perl" -a ! -f /usr/lib/${LIBPERL} ]
@@ -349,7 +348,7 @@ EOF
 	
 	dodoc Changes* Artistic Copying README Todo* AUTHORS
 
-	if [ "${PN}" = "perl" ]
+	if [[ "${PN}" = "perl" && -n "`use doc`" ]]
 	then
 		# HTML Documentation
 		# We expect errors, warnings, and such with the following. 
@@ -451,7 +450,6 @@ pkg_postinst() {
 		eerror "the problem, please check http://bugs.gentoo.org/"
 		eerror "for more information or to report a bug."
 		eerror ""
-		sleep 5
 		eerror ""
 		
 	fi
