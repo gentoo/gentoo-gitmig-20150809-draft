@@ -1,4 +1,6 @@
+MD5 5a8c4c417087f1f52584b210c4b2a299 gnome-mag-0.10.4.ebuild 842
+MD5 5a8c4c417087f1f52584b210c4b2a299 gnome-mag-0.10.3.ebuild 842
 MD5 599a0ad9de49706c44c90a5c9ba48720 ChangeLog 456
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 5a8c4c417087f1f52584b210c4b2a299 gnome-mag-0.10.3.ebuild 842
 MD5 fdaaee780264e27d2282f53bc3ca663c files/digest-gnome-mag-0.10.3 69
+MD5 dd17a4f017682f71040d7136f48265d6 files/digest-gnome-mag-0.10.4 69
