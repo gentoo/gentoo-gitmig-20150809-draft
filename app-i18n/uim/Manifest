@@ -5,8 +5,11 @@ MD5 a33592ec90394b74e3ecf254a22563c4 uim-2023.ebuild 770
 MD5 130156c35dbce9a5811865d26c49b93d uim-0.0.2.1.ebuild 1324
 MD5 d95dc7035135baaa9c0edb33a2762f5a uim-2018.ebuild 735
 MD5 59d92a2c6e0855b6a24d2774cd643024 metadata.xml 551
+MD5 6b14c4e28f51daed71643805d4458d58 uim-0.0.4.ebuild 1322
+MD5 14efd3569a55996e00a2a950d59ad042 uim-0.0.4.ebuild.bak 1322
 MD5 3bb8c1a4834e31c177de4931379f26e6 files/digest-uim-2013 60
 MD5 71b0142ac8f4c533875e57f62fd33b83 files/digest-uim-2018 60
 MD5 c7c39e7fbaae8dc42b41b2119acc139b files/digest-uim-2023 60
 MD5 e71d0f4d6bad6b99043ac2b32fb4ff64 files/digest-uim-0.0.2.1 63
 MD5 d94c21ed0d6165727a0cee07f18343d7 files/digest-uim-0.0.3 61
+MD5 9754fdb90fd0f136a56c840d8a7e36b0 files/digest-uim-0.0.4 61
