@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.269 2004/01/06 06:23:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.270 2004/01/06 06:27:54 spyderous Exp $
+
+  06 Jan 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xfree-4.3.99.902.ebuild:
+  Marking ~amd64 at Brad House's request.
 
   06 Jan 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xfree-4.3.99.902.ebuild:
