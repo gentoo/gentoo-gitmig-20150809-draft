@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/stellarium
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/stellarium/ChangeLog,v 1.8 2004/07/29 00:00:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/stellarium/ChangeLog,v 1.9 2004/08/03 12:06:58 dholm Exp $
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> stellarium-0.6.0.ebuild:
+  Added to ~ppc.
 
   28 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   stellarium-0.6.0.ebuild:
