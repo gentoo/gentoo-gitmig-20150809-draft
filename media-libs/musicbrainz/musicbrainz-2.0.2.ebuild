@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.2.ebuild,v 1.2 2004/01/26 00:37:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.2.ebuild,v 1.3 2004/02/06 02:42:05 spider Exp $
 
 inherit libtool
 
@@ -12,9 +12,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
-DEPEND="virtual/glibc
+RDEPEND="virtual/glibc
 	dev-libs/expat"
-RDEPEND="dev-util/pkgconfig"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/lib${P}
 
