@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/OpenCA-OpenSSL
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-OpenSSL/ChangeLog,v 1.12 2004/06/06 13:29:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-OpenSSL/ChangeLog,v 1.13 2004/06/06 22:26:48 mcummings Exp $
+
+  06 Jun 2004; Michael Cummings <mcummings@gentoo.org>
+  OpenCA-OpenSSL-0.9.91.ebuild:
+  Removed tests. These tests rely on an install of openca (http://openca.org/),
+  but openca isn't actually necessary for the module to work with a remote ca.
+  There is currently no ebuild for openca.
 
 *OpenCA-OpenSSL-0.9.91 (06 Jun 2004)
 
