@@ -1,5 +1,5 @@
-MD5 42603c519da16255ae6f915014e311e0 ChangeLog 1698
-MD5 ebefbc3a4a3a92b31e9efe9b543a2ad8 ming-0.2a.ebuild 1079
+MD5 0328cff9e0336aee1049a9e7fc43a514 ChangeLog 1773
+MD5 66c9dee17f805dbeb39b63578f1d34f8 ming-0.2a.ebuild 1080
 MD5 6a50642c5c8129217df944bf99398c6e files/digest-ming-0.2a 58
 MD5 0d2b63f032d402518c9384d5db4404b1 files/ming-0.2a-fpic.patch 1814
 MD5 e086353fa9ba2b2e6b9ca9c87b04a367 files/ming-0.2a-gentoo.diff 369

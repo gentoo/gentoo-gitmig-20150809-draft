@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ming
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.14 2004/07/01 08:01:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.15 2004/08/20 04:03:07 tgall Exp $
+
+  19 Aug 2004; Tom Gall <tgall@gentoo.org> ming-0.2a.ebuild:
+  stable on ppc64
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ming-0.2a.ebuild:
   virtual/glibc -> virtual/libc
