@@ -1,8 +1,13 @@
 # ChangeLog for app-i18n/skkserv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/ChangeLog,v 1.9 2003/06/29 22:12:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/ChangeLog,v 1.10 2003/08/01 16:32:40 usata Exp $
 
 *skkserv-9.6-r2 (17 May 2003)
+
+  02 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> skkserv-9.6-r2.ebuild,
+  files/skkserv-9.6-segfault-gentoo.patch, files/skkserv.initd:
+  Applied a patch that fixes segfault problem with inappropriate /etc/hosts
+  file, cf. http://www.jp.FreeBSD.ORG/QandA/HTML/1285.html
 
   17 May 2003; Masatomo Nakano <nakano@gentoo.org> skkserv-9.6-r2.ebuild:
   Fixed bug.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/skkserv-9.6-r2.ebuild,v 1.1 2003/05/17 11:04:02 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/skkserv-9.6-r2.ebuild,v 1.2 2003/08/01 16:32:40 usata Exp $
 
 S="${WORKDIR}/skk-${PV}mu"
 MY_P="skk${PV}mu"
@@ -16,11 +16,14 @@ DEPEND="virtual/glibc
 
 PROVIDE="virtual/skkserv"
 
+src_unpack(){
+	unpack ${A}
+	cd ${S}/skkserv
+	epatch ${FILESDIR}/${P}-segfault-gentoo.patch
+}
+
 src_compile() {
-	./configure \
-	       --host=${CHOST} \
-	       --prefix=/usr \
-		   --libexecdir=/usr/sbin || die "./configure failed"
+	econf --libexecdir=/usr/sbin || die "econf failed"
 	cd skkserv
 
 	emake || die
@@ -31,6 +34,6 @@ src_install () {
 	cd skkserv
 	dosbin skkserv
 
-	# install rc script and its config file
-	exeinto /etc/init.d ; newexe ${FILESDIR}/${P}/skkserv.initd skkserv
+	# install rc script
+	exeinto /etc/init.d ; newexe ${FILESDIR}/skkserv.initd skkserv
 }
