@@ -1,7 +1,8 @@
 MD5 ebd7911a1480468c712883a1ffaf53cd libbonobo-2.2.2.ebuild 718
+MD5 810057c4685f79fadcaf3aa157361467 libbonobo-2.4.3.ebuild 762
 MD5 ff26a6227212182faeacdca5754be76f libbonobo-2.4.0.ebuild 731
 MD5 dbbb540abc23a6476e15a5d882f5f5a7 libbonobo-2.2.1.ebuild 704
-MD5 853aca48feca212aa53afd0b7479c4c5 libbonobo-2.4.2.ebuild 761
+MD5 810057c4685f79fadcaf3aa157361467 libbonobo-2.4.2.ebuild 762
 MD5 2914d7683a06bfe50cf00ae5dee3ccb3 libbonobo-2.2.3.ebuild 704
 MD5 f81fa87b79bd7ae95e00f31f01b4e639 ChangeLog 4046
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
@@ -14,3 +15,4 @@ MD5 fbfd96ec1e527fe0c75f5ce1ce2e520d files/digest-libbonobo-2.2.3 68
 MD5 459e143116e6c24cb2b8ba09ecbee242 files/digest-libbonobo-2.4.0 69
 MD5 b687f79d60ac9b476915a8a986442731 files/digest-libbonobo-2.4.1 69
 MD5 828bf9459d163e0c2813b0a44632431a files/digest-libbonobo-2.4.2 69
+MD5 fd8f9a004c154106e0b886f3b045e4d0 files/digest-libbonobo-2.4.3 69
