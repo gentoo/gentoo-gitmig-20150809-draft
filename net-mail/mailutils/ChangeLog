@@ -1,0 +1,11 @@
+# ChangeLog for net-mail/mailutils
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.1 2003/03/27 01:30:00 avenj Exp $
+
+*mailutils-0.3 (26 Mar 2003)
+
+  26 Mar 2003; Jon Portnoy <avenj@gentoo.org> mailutils-0.3.ebuild, 
+	digest-mailutils-0.3 :
+  Initial import of GNU mailutils, a suite of mail-related tools
+  including POP3 and IMAP servers, parsing tools, and a mailx
+  replacement.
