@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.1_pre1.ebuild,v 1.3 2005/01/25 08:19:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.1_pre2.ebuild,v 1.1 2005/01/26 05:38:40 eradicator Exp $
 
 inherit multilib toolchain-funcs
 
@@ -35,9 +35,12 @@ pkg_preinst() {
 	OABI="${ABI}"
 	for ABI in $(get_abi_order); do
 		if [ -e "${ROOT}/usr/$(get_libdir)/opengl/xorg-x11/lib/libMesaGL.so" ]; then
-			einfo "Removing libMesaGL* from xorg-x11 profile.  See bug #47598."
-			rm -f ${ROOT}/usr/$(get_libdir)/opengl/xorg-x11/lib/libMesaGL*
-			rm -f ${ROOT}/usr/$(get_libdir)/libMesaGL*
+			einfo "Removing libMesaGL.so from xorg-x11 profile.  See bug #47598."
+			rm -f ${ROOT}/usr/$(get_libdir)/opengl/xorg-x11/lib/libMesaGL.so
+		fi
+		if [ -e "${ROOT}/usr/$(get_libdir)/libMesaGL.so" ]; then
+			einfo "Removing libMesaGL.so from /usr/$(get_libdir).  See bug #47598."
+			rm -f ${ROOT}/usr/$(get_libdir)/libMesaGL.so
 		fi
 	done
 	ABI="${OABI}"
