@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.48-r4.ebuild,v 1.5 2004/04/06 01:02:27 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.48-r4.ebuild,v 1.6 2004/04/20 18:52:18 zul Exp $
 
 inherit flag-o-matic eutils
-has_version =sys-libs/glibc-2.2* && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
 DESCRIPTION="Apache Web Server, Version 2.0.x"
 HOMEPAGE="http://www.apache.org/"
@@ -26,6 +25,11 @@ DEPEND="dev-util/yacc
 	gdbm? ( sys-libs/gdbm )
 	!mips? ( ldap? ( =net-nds/openldap-2* ) )"
 IUSE="berkdb gdbm ldap"
+
+pkg_setup() {
+	has_version =sys-libs/glibc-2.2* && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGE
+	FILE_SOURCE
+}
 
 src_unpack() {
 	unpack ${A} || die
