@@ -1,0 +1,13 @@
+# ChangeLog for sys-apps/lcdutils
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdutils/ChangeLog,v 1.1 2004/02/01 07:29:10 kumba Exp $
+
+*lcdutils-0.2 (01 Feb 2004)
+
+  01 Feb 2004; Joshua Kinard <kumba@gentoo.org> lcdutils-0.2.ebuild,
+  metadata.xml:
+  Initial revision (probably the only known revision). These tools are used on
+  Cobalt Microserver systems, specififcally the RaQ2 and Qube2 to write text to
+  the front LCD panel (RaQ2) or Rear panel (Qube2), or read button input from
+  the machines.
+
