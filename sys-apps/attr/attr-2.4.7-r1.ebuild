@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.7-r1.ebuild,v 1.11 2004/01/25 00:29:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.7-r1.ebuild,v 1.12 2004/02/21 23:30:05 weeve Exp $
 
 inherit eutils
 
@@ -46,16 +46,14 @@ src_compile() {
 	fi
 
 	local myconf="`use_enable nls gettext`"
+	[ `use sparc` ] && unset PLATFORM
 	econf ${myconf} || die
 
+	
 	sed -i \
 		-e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' \
 		-e 's:-O1::' -e 's:../$(INSTALL) -S \(.*\) $(PKG_.*_DIR)/\(.*$\)::' \
 		include/builddefs
-
-	if [ "${ARCH}" = "sparc" ]; then
-		sed -i -e 's/sparc.*$/linux/' include/builddefs
-	fi
 
 	make || die
 }
