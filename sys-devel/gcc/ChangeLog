@@ -1,12 +1,18 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.134 2003/10/14 19:50:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.135 2003/10/15 09:05:37 kumba Exp $
+
+
+*gcc-3.3.1-r5 (14 Oct 2003)
+
+  15 Oct 2003; Joshua Kinard <kumba@gentoo.org> gcc-3.3.1-r4.ebuild,
+  gcc-3.3.1-r5.ebuild, gcc-3.3.1.ebuild:
+  Added ~sparc to KEYWORDS
+  This will only affect sparc64 users using the gcc33-sparc64 profile
 
   14 Oct 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.1-r5.ebuild,
   files/3.3.1/gcc331-pp-fixup.patch:
   Actually add gcc331-pp-fixup.patch for public use.
-
-*gcc-3.3.1-r5 (14 Oct 2003)
 
   14 Oct 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.1-r5.ebuild:
   Update CVS snapshot.
