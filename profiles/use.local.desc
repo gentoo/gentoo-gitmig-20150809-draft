@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.258 2004/03/03 18:36:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.259 2004/03/04 19:12:43 pappy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -255,7 +255,7 @@ sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:uclibc - Compile with uclibc
 sys-apps/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
-sys-devel/gcc:hardened - Enable Hardened GCC specfiles
+sys-devel/gcc:hardened - automatically create default PIE (position independent executables) and SSP (stack smashing protector) executables and libraries using a Gentoo Hardened specs file
 sys-devel/gcc:multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
 sys-devel/gcc:nogcj - Do not build gcj (java compiler included with gcc package)
 sys-devel/gdb:objc - If you want to be able to debug Objective C code.

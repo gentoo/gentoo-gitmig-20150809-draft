@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.141 2004/03/04 18:01:50 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.142 2004/03/04 19:12:43 pappy Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -71,6 +71,7 @@ gtk - Adds support for x11-libs/gtk+ (The GIMP Toolkit)
 gtk2 - Use gtk+-2.0.0 over gtk+-1.2 in cases where a program supports both.
 gtkhtml - Adds support for gnome-extra/gtkhtml
 guile - Adds support for dev-util/guile (interpreter for Scheme)
+hardened - activate the default security implementation of specific Gentoo Hardened patches (kernel, gcc, glibc, binutils)
 icc - Add support for the Intel C++ Compiler (does _not_ set $CC)
 icc-pgo - Enable PGO data generation or use when use icc.
 icq - Enable ICQ IM protocol support
