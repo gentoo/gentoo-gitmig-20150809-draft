@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.1.3-r1.ebuild,v 1.3 2005/01/01 15:57:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.1.3-r1.ebuild,v 1.4 2005/02/05 11:23:14 ka0ttic Exp $
 
 inherit eutils versionator flag-o-matic toolchain-funcs
 
@@ -19,8 +19,9 @@ LICENSE="BSD"
 KEYWORDS="x86 ~ppc"
 IUSE="diet static"
 
-DEPEND="diet? ( dev-libs/dietlibc )
-	!diet? ( virtual/libc )
+RDEPEND="diet? ( dev-libs/dietlibc )
+	!diet? ( virtual/libc )"
+DEPEND="${RDEPEND}
 	sys-apps/sed
 	dev-util/yacc"
 

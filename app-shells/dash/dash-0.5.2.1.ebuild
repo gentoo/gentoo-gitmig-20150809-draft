@@ -1,16 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.1.3.ebuild,v 1.4 2005/01/01 15:57:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.2.1.ebuild,v 1.1 2005/02/05 11:23:14 ka0ttic Exp $
 
-inherit eutils versionator
-
-IUSE=""
+inherit eutils versionator flag-o-matic toolchain-funcs
 
 DEB_P="${PN}_$(replace_version_separator 3 '-')"
 MY_P2="${DEB_P%-*}"
-MY_P=${MY_P2/_/-}
+MY_P="${MY_P2/_/-}"
 
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="Debian-version of NetBSD's lightweight bourne shell"
 HOMEPAGE="http://ftp.debian.org/debian/pool/main/d/dash/"
 SRC_URI="mirror://debian/pool/main/d/dash/${MY_P2}.orig.tar.gz \
@@ -18,10 +15,16 @@ SRC_URI="mirror://debian/pool/main/d/dash/${MY_P2}.orig.tar.gz \
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
+IUSE="diet static"
 
-DEPEND="sys-apps/sed
+RDEPEND="diet? ( dev-libs/dietlibc )
+	!diet? ( virtual/libc )"
+DEPEND="${RDEPEND}
+	sys-apps/sed
 	dev-util/yacc"
+
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
@@ -29,11 +32,19 @@ src_unpack() {
 	epatch ${WORKDIR}/${DEB_P}.diff
 }
 
+src_compile() {
+	use static && append-ldflags -static
+
+	CC="$(tc-getCC)"
+	use diet && CC="diet ${CC}"
+
+	econf CC="${CC}" || die "econf failed"
+	emake CFLAGS="${CFLAGS}" || die "emake failed"
+}
+
 src_install() {
 	exeinto /bin
 	newexe src/dash dash
-
 	newman src/dash.1 dash.1
-
-	dodoc COPYING debian/changelog
+	dodoc COPYING ChangeLog
 }
