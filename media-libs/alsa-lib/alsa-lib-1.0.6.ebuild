@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.6.ebuild,v 1.5 2004/10/12 19:27:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.6.ebuild,v 1.6 2004/11/02 20:09:00 eradicator Exp $
 
 IUSE="static jack"
 
@@ -20,7 +20,7 @@ RDEPEND="virtual/alsa
 DEPEND=">=sys-devel/automake-1.7.2
 	>=sys-devel/autoconf-2.57-r1"
 
-PDEPEND="!ppc? ( jack? ( =media-plugins/alsa-jack-${PV}* ) )"
+PDEPEND="jack? ( =media-plugins/alsa-jack-${PV}* )"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.2.ebuild,v 1.11 2004/07/24 05:32:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.2.ebuild,v 1.12 2004/11/02 20:09:00 eradicator Exp $
 
 inherit libtool gnuconfig
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2 LGPL-2.1"
 
 IUSE="jack"
 
-RDEPEND="!ppc? ( jack? ( media-sound/jack-audio-connection-kit ) )"
+RDEPEND="jack? ( media-sound/jack-audio-connection-kit )"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.7.2

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.5.ebuild,v 1.9 2004/07/24 05:32:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.5.ebuild,v 1.10 2004/11/02 20:09:00 eradicator Exp $
 
 inherit libtool
 
@@ -18,7 +18,7 @@ RDEPEND="virtual/libc"
 DEPEND=">=sys-devel/automake-1.7.2
 	>=sys-devel/autoconf-2.57-r1"
 
-PDEPEND="!ppc? ( jack? ( =media-plugins/alsa-jack-${PV}* ) )"
+PDEPEND="jack? ( =media-plugins/alsa-jack-${PV}* )"
 
 MY_P=${P/_rc/rc}
 #SRC_URI="ftp://ftp.alsa-project.org/pub/lib/${MY_P}.tar.bz2"
