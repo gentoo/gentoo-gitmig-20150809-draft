@@ -1,10 +1,20 @@
-MD5 168ea0b28bb89bf4e644544b55fe21c3 ChangeLog 756
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 76a44fe4a562d935b2a913205271b632 ChangeLog 898
 MD5 c3b07fc1e74fb5c3542061c9c57f84d7 activesupport-1.0.0.ebuild 670
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 268221445c48985fa3702a5133f3b880 activesupport-1.0.1.ebuild 676
 MD5 f6d8b72124574977e587b22454003f25 activesupport-1.0.2.ebuild 671
-MD5 eaa6a1df6eb143fc001cb5060ebbe6c3 activesupport-1.0.3.ebuild 700
+MD5 a9fc49064d34dc8e0ab4102317c1eade activesupport-1.0.3.ebuild 705
 MD5 a30d1d838386d1ab86533cf73a414b1b files/digest-activesupport-1.0.0 67
 MD5 71f8448bc93c1d85234c36468c3644f8 files/digest-activesupport-1.0.1 67
 MD5 aa2ee8710f3597464448c8355f16d2e6 files/digest-activesupport-1.0.2 67
 MD5 545b2791d0ba7f6e740d5213a9f3d268 files/digest-activesupport-1.0.3 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSD9qz2gxt1z4IGYRAkQ8AJ9HF80V+0XyNxP8vfX4XN6QGpYIQwCgg7XV
+nDJwiAXS1E2RJKGRn/U1ftA=
+=6zKS
+-----END PGP SIGNATURE-----
