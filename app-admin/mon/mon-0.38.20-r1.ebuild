@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.38.20-r1.ebuild,v 1.3 2001/05/30 18:24:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.38.20-r1.ebuild,v 1.4 2001/08/11 04:42:31 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Highly configurable service monitoring daemon"
@@ -14,7 +14,7 @@ RDEPEND="$DEPEND >=dev-perl/Mon-0.9"
 src_compile() {
 
     cd ${S}/mon.d
-    try make CC=\"gcc $CFLAGS\"
+    try make CC="gcc $CFLAGS"
 
 }
 

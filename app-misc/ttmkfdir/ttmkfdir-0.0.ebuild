@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ttmkfdir/ttmkfdir-0.0.ebuild,v 1.2 2001/05/27 02:58:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ttmkfdir/ttmkfdir-0.0.ebuild,v 1.3 2001/08/11 04:42:31 drobbins Exp $
 
 #P=
 A=ttmkfdir.tar.gz
@@ -21,7 +21,7 @@ src_unpack() {
 
 src_compile() {
     try make clean
-    try make OPT=\""${CFLAGS}"\"
+    try make OPT="${CFLAGS}"
 }
 
 src_install () {

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Grant Goodyear <grant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_krb5/pam_krb5-1.0.ebuild,v 1.2 2001/07/15 19:02:04 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_krb5/pam_krb5-1.0.ebuild,v 1.3 2001/08/11 04:42:31 drobbins Exp $
 
 #P=
 A=${P}.tar.gz
@@ -14,10 +14,8 @@ DEPEND="app-crypt/krb5
         sys-libs/pam"
 
 src_compile() {
-
     patch -p0 < ${FILESDIR}/${P}-gentoo.diff    
-    try make CFLAGS=\"$CFLAGS\"
-
+    try make CFLAGS="$CFLAGS"
 }
 
 src_install () {

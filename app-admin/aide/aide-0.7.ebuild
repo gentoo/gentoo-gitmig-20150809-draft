@@ -17,7 +17,7 @@ src_compile() {
 
   #if [ -z "`use postgres`" ] ; then
 	try ./configure --prefix=/usr --with-zlib 
-	try make CFLAGS=\"$CFLAGS\" all
+	try make CFLAGS="$CFLAGS" all
   #else
   #	try ./configure --prefix=/usr --with-zlib --with-psql
   #	try make CFLAGS=\"$CFLAGS -I/usr/include/postgresql\" all

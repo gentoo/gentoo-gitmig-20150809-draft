@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.0.1.ebuild,v 1.2 2001/06/07 01:45:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.0.1.ebuild,v 1.3 2001/08/11 04:42:31 drobbins Exp $
 
 A=${P}.src.tar.gz
 S=${WORKDIR}/${P}
@@ -21,7 +21,7 @@ src_unpack() {
 
 src_compile() {
    try make clean
-   try make CFLAGS=\"$CFLAGS -I. -Iregexp\"
+   try make CFLAGS="$CFLAGS -I. -Iregexp"
 }
 
 src_install() {

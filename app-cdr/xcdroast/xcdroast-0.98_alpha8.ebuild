@@ -17,7 +17,7 @@ DEPEND=">=app-cdr/cdrecord-1.9
 
 
 src_compile () {
-	try make ${MAKEOPTS} CC=\"gcc $CFLAGS\"
+	try make ${MAKEOPTS} CC="gcc $CFLAGS"
 
 }
 

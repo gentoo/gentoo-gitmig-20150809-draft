@@ -20,7 +20,7 @@ src_compile() {
     try ./configure --prefix=/usr --host=${CHOST} --with-sys-screenrc=/etc/screen/screenrc \
 	--mandir=/usr/share --libexecdir=/usr/lib/misc\
 	--host=${CHOST}
-    try make CFLAGS=\"$CFLAGS\"
+    try make CFLAGS="$CFLAGS"
 
 }
 

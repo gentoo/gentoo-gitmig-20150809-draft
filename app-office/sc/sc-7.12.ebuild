@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/sc/sc-7.12.ebuild,v 1.1 2001/05/16 14:51:39 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/sc/sc-7.12.ebuild,v 1.2 2001/08/11 04:42:31 drobbins Exp $
 
 #P=
 A=${P}.tar.gz
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc
         >=sys-libs/ncurses-5.2"
 
 src_compile() {
-    try make CFLAGS=\"-DSYSV3 $CFLAGS\" prefix=/usr
+    try make CFLAGS="-DSYSV3 $CFLAGS" prefix=/usr
 }
 
 src_install () {

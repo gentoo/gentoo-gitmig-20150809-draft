@@ -14,7 +14,7 @@ DEPEND="${RDEPEND} sys-devel/flex"
 src_compile() {
 
   try ./configure --host=${CHOST} --prefix=/usr
-  try make CFLAGS=\"${CFLAGS} -I/usr/include/libol -D_GNU_SOURCE\" ${MAKEOPTS} prefix=${D}/usr all
+  try make CFLAGS="${CFLAGS} -I/usr/include/libol -D_GNU_SOURCE" ${MAKEOPTS} prefix=${D}/usr all
 
 }
 
