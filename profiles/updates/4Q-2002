@@ -80,3 +80,4 @@ move app-sci/kstars kde-base/kdeedu
 move gnome-extra/mc app-misc/mc
 move media-sound/freeamp media-sound/zinf
 move app-text/xmltex app-text/passivetex
+move x11-libs/xaw x11-libs/Xaw3d
