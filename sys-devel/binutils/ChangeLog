@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.55 2003/06/14 08:44:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.56 2003/06/25 22:35:44 azarah Exp $
+
+*binutils-2.14.90.0.4.1 (25 Jun 2003)
+
+  25 Jun 2003; Martin Schlemmer <azarah@gentoo.org>
+  binutils-2.11.92.0.12.3-r2.ebuild, binutils-2.13.90.0.20-r1.ebuild,
+  binutils-2.14.90.0.2.ebuild, binutils-2.14.90.0.4.1.ebuild,
+  binutils-2.14.90.0.4.ebuild:
+  New version with some amd64 fixes. Also fix SRC_URI for some of the newer
+  ebuilds.
 
   14 Jun 2003; Joshua Kinard <kmba@gentoo.org> binutils-2.14.90.0.2.ebuild:
   Changes ~mips to mips in KEYWORDS
