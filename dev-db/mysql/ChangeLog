@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.191 2005/03/14 18:27:51 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.192 2005/03/14 18:51:30 kloeri Exp $
+
+  14 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> mysql-4.0.24.ebuild:
+  Stable on alpha, bug 84819.
 
   14 Mar 2005; Guy Martin <gmsoft@gentoo.org> mysql-4.0.24.ebuild:
   Stable on hppa. clamav-0.83.ebuild
