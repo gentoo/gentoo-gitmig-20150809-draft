@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.33.2-r2.ebuild,v 1.1 2005/02/10 09:18:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.33.2-r2.ebuild,v 1.2 2005/03/12 21:52:37 ndimiduk Exp $
 
 inherit flag-o-matic common-lisp-common-2 eutils gcc
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/clisp/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~ppc-macos"
 IUSE="X fastcgi nls pcre postgres readline"
 
 DEPEND="dev-libs/libsigsegv
@@ -70,8 +70,8 @@ src_compile() {
 		--with-unicode
 		--with-module=regexp
 		--with-module=syscalls
-		--with-module=wildcard
-		--with-module=bindings/glibc"
+		--with-module=wildcard"
+	use ppc-macos || myconf="${myconf} --with-module=bindings/glibc"
 	use readline || myconf="${myconf} --with-noreadline"
 	use nls || myconf="${myconf} --with-nogettext"
 	use X && myconf="${myconf} --with-module=clx/new-clx"

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.30 2005/01/02 07:33:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.31 2005/03/12 21:52:37 ndimiduk Exp $
+
+*clisp-2.33.2-r2 (12 Mar 2005)
+
+  12 Mar 2005; Nick Dimiduk <ndimiduk@gentoo.org> clisp-2.33.2-r2.ebuild:
+  keyword ~ppc-macos
 
   02 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org> clisp-2.33.2-r1.ebuild:
   Provide virtual/commonlisp; Resolves Bug #75014
