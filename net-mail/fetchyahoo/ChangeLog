@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/fetchyahoo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.9 2004/03/26 18:25:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.10 2004/05/10 19:19:54 kanaka Exp $
+
+*fetchyahoo-2.8.0 (10 May 2004)
+
+  10 May 2004; Joel Martin <kanaka@gentoo.org> fetchyahoo-2.5-r1.ebuild,
+  fetchyahoo-2.5.ebuild, fetchyahoo-2.8.0.ebuild:
+  Bumped revision, updated einfo messages, fixed copyrights
 
   26 Mar 2004; Jason Wever <weeve@gentoo.org> fetchyahoo-2.5.5.ebuild:
   Added ~sparc keyword.
