@@ -1,3 +1,4 @@
-MD5 26115375ae8e84687d673fbed29683fc cpudyn-0.4.6.ebuild 777
-MD5 984c976ada631b978a3ef0c2d3aa2703 files/cpudyn.init 1226
+MD5 083ae0f788f190d16154e2d8e6e1c8bd cpudyn-0.4.6.ebuild 871
+MD5 0c26312d25134befa7c43692a1578fa3 ChangeLog 401
+MD5 1571f484ce2c296bd9da8173fa187d77 files/cpudyn.init 2219
 MD5 b013c06b8e09ed9137d72775c991aff1 files/digest-cpudyn-0.4.6 60
