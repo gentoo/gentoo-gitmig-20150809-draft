@@ -13,3 +13,4 @@ sys-apps/texinfo	sys-devel/gcc
 virtual/jdk		dev-java/blackdown-jdk
 virtual/jre		dev-java/blackdown-jre
 virtual/imap		net-mail/courier-imap
+virtual/x11-web-browser	net-www/mozilla
