@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xt
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/ChangeLog,v 1.9 2004/11/14 18:55:28 axxo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/ChangeLog,v 1.10 2005/02/05 13:06:53 luckyduck Exp $
+
+  05 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> xt-20020426a.ebuild:
+  stable on amd64 and x86
 
 *xt-20020426a (14 Nov 2004)
 
