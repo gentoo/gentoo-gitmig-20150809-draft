@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/h5utils
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/h5utils/ChangeLog,v 1.1 2004/01/16 09:34:57 george Exp $
+
+*h5utils-1.7.2.ebuild (16 Jan 2004)
+
+  16 Jan 2004; George Shapovalov <george@gentoo.org> h5utils-1.7.2.ebuild, Manifest, files/{digest-h5utils-1.7.2} :
+  initial release (#36378)
+  utilities for visualization and conversion of scientific data in the HDF5 format
+  ebuild submitted by Peter Bienstman <Peter.Bienstman@rug.ac.be>
