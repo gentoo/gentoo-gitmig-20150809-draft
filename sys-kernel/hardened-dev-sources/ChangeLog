@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.47 2004/12/06 01:48:12 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.48 2004/12/25 00:50:28 plasmaroo Exp $
+
+*hardened-dev-sources-2.6.7-r18 (25 Dec 2004)
+
+  25 Dec 2004; <plasmaroo@gentoo.org> hardened-dev-sources-2.6.7-r17.ebuild,
+  +hardened-dev-sources-2.6.7-r18.ebuild:
+  Marking -r17 stable. Adding -r18 with more security fixes, thank tocharian for
+  rolling the new patchset...
 
 *hardened-dev-sources-2.6.7-r17 (05 Dec 2004)
 
