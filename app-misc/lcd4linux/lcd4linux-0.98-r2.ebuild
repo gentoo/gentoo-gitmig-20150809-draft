@@ -1,24 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.98-r2.ebuild,v 1.7 2002/10/19 15:48:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.98-r2.ebuild,v 1.8 2002/11/30 21:09:02 vapier Exp $
 
-IUSE="kde pda png"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="system and ISDN information is shown on an external display or in a X11 window."
 SRC_URI="mirror://sourceforge/lcd4linux/${P}.tar.gz"
-HOMEPAGE="http://lcd4linux.sourceforge.net"
+HOMEPAGE="http://lcd4linux.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE="kde pda png"
 
 DEPEND="png? ( media-libs/libpng
 		sys-libs/zlib
 		media-libs/libgd )"
 
 src_compile() {
-
 	local myconf
 	
 	use png || myconf=",!PNG"
@@ -26,15 +23,13 @@ src_compile() {
 
 	econf \
 		--sysconfdir=/etc/lcd4linux \
-		--with-drivers="all${myconf}" || die
+		--with-drivers="all${myconf}"
 		
 	emake || die
-
 }
 
-src_install () {
-
-	einstall || die
+src_install() {
+	einstall
 
 	insinto /etc/lcd4linux
 	cp lcd4linux.conf.sample lcd4linux.conf 
@@ -43,7 +38,7 @@ src_install () {
 	dodoc README* NEWS COPYING INSTALL TODO CREDITS FAQ
 	dodoc lcd4linux.conf.sample lcd4linux.kdelnk lcd4linux.xpm
 
-	use kde && ( \
+	if [ `use kde` ] ; then
 		insinto /etc/lcd4linux
 		insopts -o root -g root -m 0600
 		doins lcd4kde.conf
@@ -52,6 +47,5 @@ src_install () {
 		insinto ${KDEDIR}/share/icons
 		doins lcd4linux.xpm 
 		touch ${D}/etc/lcd4linux/lcd4X11.conf 
-	)
-
+	fi
 }
