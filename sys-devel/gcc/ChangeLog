@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.391 2005/03/20 20:35:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.392 2005/03/21 15:13:50 solar Exp $
+
+  21 Mar 2005; <solar@gentoo.org> gcc-3.4.3-r1.ebuild,
+  gcc-3.4.3.20050110-r1.ebuild:
+  - mark ppc pp64 stable for pie/ssp use
 
 *gcc-3.4.3.20050110-r1 (20 Mar 2005)
 

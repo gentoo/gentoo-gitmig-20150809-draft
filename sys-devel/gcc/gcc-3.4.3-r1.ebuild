@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.32 2005/03/19 01:46:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.33 2005/03/21 15:13:50 solar Exp $
 
 MAN_VER="3.4.3"
 BRANCH_UPDATE="20041125"
@@ -17,9 +17,9 @@ GCC_LIBSSP_SUPPORT="true"
 ETYPE="gcc-compiler"
 
 # arch/libc configurations known to be stable with {PIE,SSP}-by-default
-SSP_STABLE="x86 sparc amd64"
+SSP_STABLE="x86 sparc amd64 ppc ppc64"
 SSP_UCLIBC_STABLE="arm mips ppc x86"
-PIE_GLIBC_STABLE="x86 sparc amd64"
+PIE_GLIBC_STABLE="x86 sparc amd64 ppc ppc64"
 PIE_UCLIBC_STABLE="x86 mips ppc"
 
 # arch/libc configurations known to be broken with {PIE,SSP}-by-default
