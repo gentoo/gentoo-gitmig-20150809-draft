@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/pen
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pen/ChangeLog,v 1.1 2004/03/12 00:16:06 tantive Exp $
+
+*pen-0.12.1 (12 Mar 2004)
+
+  12 Mar 2004; Michael Imhof <tantive@gentoo.org> pen-0.12.1.ebuild:
+  Initial import. Ebuild submitted in #40531 by Mark Dierolf <smark@3e0.com>.
+
