@@ -1,6 +1,9 @@
 # ChangeLog for net-news/pan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.42 2004/07/15 18:19:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.43 2004/07/15 22:09:02 swegener Exp $
+
+  16 Jul 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
+  Making net-news the primary herd.
 
   15 Jul 2004; Sven Wegener <swegener@gentoo.org> pan-0.14.2.91.ebuild:
   Added dev-libs/libpcre to dependencies. Thanks to Tom Wesley <tom@tomaw.org>
