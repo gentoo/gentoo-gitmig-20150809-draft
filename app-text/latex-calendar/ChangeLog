@@ -1,6 +1,6 @@
 # ChangeLog for app-text/latex-calendar
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/latex-calendar/ChangeLog,v 1.5 2003/01/08 23:29:46 satai Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/latex-calendar/ChangeLog,v 1.6 2003/02/12 05:32:01 vapier Exp $
 
   08 Jan 2003; Matthew Turk <satai@gentoo.org> :
   Marked as stable.

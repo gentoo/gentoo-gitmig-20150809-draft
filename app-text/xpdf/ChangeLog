@@ -1,6 +1,6 @@
 # ChangeLog for app-text/xpdf
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.14 2003/01/13 18:41:19 agriffis Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.15 2003/02/12 05:36:15 vapier Exp $
 
   13 Jan 2003; Aron Griffis <agriffis@gentoo.org> xpdf-2.01-r1.ebuild :
   Add alpha to KEYWORDS

@@ -1,6 +1,6 @@
 # ChangeLog for app-text/jadetex
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.9 2003/02/07 17:25:02 satai Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.10 2003/02/12 05:31:35 vapier Exp $
 
   07 Feb 2003; Matthew Turk <satai@gentoo.org> jadetex-3.12.ebuild :
   Added some more addwrite lines in order to generate font metrics.
