@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-nebulus
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nebulus/ChangeLog,v 1.14 2004/06/24 23:44:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nebulus/ChangeLog,v 1.15 2004/07/07 00:33:26 eradicator Exp $
+
+  06 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-nebulus-0.6.0.ebuild:
+  -sparc
 
   17 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-nebulus-0.6.0.ebuild:
