@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/atftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.5 2003/06/08 18:15:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.6 2003/06/18 08:57:56 aliz Exp $
+
+  18 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> files/atftp-0.6-security.patch :
+  Updated patch to a more proper one.
 
 *atftp-0.6-r2 (08 Jun 2003)
 

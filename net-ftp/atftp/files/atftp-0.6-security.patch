@@ -1,12 +1,23 @@
---- tftpd_file.c	Tue Mar 12 05:26:18 2002
-+++ tftpd_file_diff.c	Thu Jun  5 20:31:06 2003
-@@ -357,7 +357,8 @@
-      else
-      {
-           strcpy(filename, directory);
--          strncat(filename, data->tftp_options[OPT_FILENAME].value, VAL_SIZE);
-+          strncat(filename, data->tftp_options[OPT_FILENAME].value, 
-+		VAL_SIZE - strlen( directory ) - 1 );
-      }
- 
-      /* If the filename contain /../ sequences, we forbid the access */
+--- tftp.c	2003-06-17 00:13:52.000000000 +0200
++++ tftp.patch.c	2003-06-17 00:09:50.000000000 +0200
+@@ -827,17 +827,17 @@ int tftp_cmd_line_options(int argc, char
+                process_cmd(ac, av);            
+                break;
+           case 'T':
+-               sprintf(string, "timeout %s", optarg);
++               snprintf(string, sizeof(string), "timeout %s", optarg);
+                make_arg(string, &ac, &av);
+                process_cmd(ac, av);
+                break;
+           case 't':
+-               sprintf(string, "option timeout %s", optarg);
++               snprintf(string, sizeof(string), "option timeout %s", optarg);
+                make_arg(string, &ac, &av);
+                process_cmd(ac, av);
+                break;
+           case 'b':
+-               sprintf(string, "option blksize %s", optarg);
++               snprintf(string, sizeof(string), "option blksize %s", optarg);
+                make_arg(string, &ac, &av);
+                process_cmd(ac, av);
+                break;
