@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.7-r1.ebuild,v 1.4 2004/07/01 08:41:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.7-r1.ebuild,v 1.5 2004/10/06 09:17:27 phosphan Exp $
 
 inherit eutils
 
@@ -18,10 +18,16 @@ IUSE="gtk qt"
 DEPEND="virtual/libc
 	sys-devel/autoconf
 	gtk? ( =x11-libs/gtk+-2* )
-	qt? ( x11-libs/qt )"
+	qt? ( =x11-libs/qt-3* )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/configure.in.diff
+	epatch ${FILESDIR}/callbacks.patch
+}
 
 src_compile() {
-	epatch ${FILESDIR}/configure.in.diff || die
 	mv configure.in configure.ac
 	./autogen.sh || die
 
@@ -43,7 +49,7 @@ src_install() {
 	cp ${FILESDIR}/nvclock_initd ${D}/etc/init.d/nvclock
 	cp ${FILESDIR}/nvclock_confd ${D}/etc/conf.d/nvclock
 
-	chmod u+x ${D}/etc/init.d/nvclock
+	chmod a+x ${D}/etc/init.d/nvclock
 
 	dodoc AUTHORS COPYING README
 }

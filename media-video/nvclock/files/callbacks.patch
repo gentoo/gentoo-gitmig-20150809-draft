@@ -1,0 +1,33 @@
+--- src/gtk/callbacks.c.old	2004-10-05 18:57:05 -0400
++++ src/gtk/callbacks.c	2004-10-05 18:58:40 -0400
+@@ -36,11 +36,12 @@
+ {
+     va_list arg;
+     char* message;
++    GtkWidget *dialog;
++
+     va_start(arg, format);
+ 
+     message = g_strdup_vprintf(format, arg);
+     
+-    GtkWidget *dialog;
+     switch(code)
+     {
+ 	case ERROR:
+@@ -106,6 +107,7 @@
+ 
+ void timer()
+ {
++    gint result;
+     GtkWidget *label;
+     Timeout *timeout;
+     timeout = g_malloc(sizeof(Timeout));
+@@ -126,7 +128,7 @@
+     /* Create the real timeout */
+     timeout->timeout_id = g_timeout_add(1000, timeout_callback, timeout);
+ 
+-    gint result = gtk_dialog_run(GTK_DIALOG(timeout->dialog));
++    result = gtk_dialog_run(GTK_DIALOG(timeout->dialog));
+ 
+     /* Stop the timer because we got an answer back */
+     g_source_remove(timeout->timeout_id);
