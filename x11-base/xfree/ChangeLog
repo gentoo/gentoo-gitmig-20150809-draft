@@ -1,12 +1,13 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.24 2002/06/07 21:18:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.25 2002/06/07 22:25:07 azarah Exp $
 
 *xfree-4.2.0-r11 (28 May 2002)
 
   7 Jun 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.0-r11.ebuild :
 
-  Add Nvidia GeForce2Go support; bug #2732.
+  Add Nvidia GeForce2Go support; bug #2732.  Fix gcc-3.1 compile problem
+  thanks to Verwilst.
 
   6 Jun 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.0-r11.ebuild :
 
