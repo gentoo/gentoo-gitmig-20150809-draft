@@ -1,6 +1,13 @@
 # ChangeLog for net-news/leafnode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.19 2003/11/17 08:41:05 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.20 2003/11/20 06:55:26 blkdeath Exp $
+
+*leafnode-2.0.0_alpha20031028 (20 Nov 2003)
+
+  20 Nov 2003; Stewart Honsberger <blkdeath@gentoo.org>
+  leafnode-2.0.0_alpha20031028.ebuild:
+  Removed slot'ing due to file incompatabilities. This version should be
+  installed by itself.
 
   17 Nov 2003; Stewart Honsberger <blkdeath@gentoo.org> metadata.xml:
   Version bump, ${S} and mkdir fixes
