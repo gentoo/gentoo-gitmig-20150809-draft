@@ -1,8 +1,12 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.52 2003/07/17 14:18:38 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.53 2003/07/19 20:03:31 raker Exp $
 
-*avifile-0.7.27.20030522-r2 (17 Jul 2003)
+  19 Jul 2003; Nick Hadaway <raker@gentoo.org>
+  avifile-0.7.37.20030522-r2.ebuild:
+  Fixed mad dep
+
+*avifile-0.7.37.20030522-r2 (17 Jul 2003)
 
   17 Jul 2003; Nick Hadaway <raker@gentoo.org> 
   avifile-0.7.27.20030522-r2.ebuild:
