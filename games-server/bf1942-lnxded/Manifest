@@ -1,5 +1,17 @@
-MD5 c4d9a421c6523a29bb1563e0d379afaa ChangeLog 487
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 092b1d72f8112591f912941ef0b56f79 bf1942-lnxded-1.5.ebuild 997
+MD5 782d56c234901f2b644907517e41e140 ChangeLog 620
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 3ae4022c4198eca3682f6bbc8f91618f files/bf1942-lnxded 50
+MD5 67132ff23dc9ef70f1c8cd94303460de bf1942-lnxded-1.6_rc2.ebuild 938
 MD5 0669df7b7948cc1f7cec66bd1b94a7cc files/digest-bf1942-lnxded-1.5 72
+MD5 3ae4022c4198eca3682f6bbc8f91618f files/bf1942-lnxded 50
+MD5 000e0248643fbae005e9f9c189703403 files/digest-bf1942-lnxded-1.6_rc2 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBM98RHTu7gpaalycRAq/AAKDGBMVjk8NDa4xFLD4Ltus5UYHJJgCghHyt
+XX7V/JzQMSklmZgcv+e7twA=
+=gX58
+-----END PGP SIGNATURE-----
