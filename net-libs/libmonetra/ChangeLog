@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmonetra
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmonetra/ChangeLog,v 1.6 2004/11/07 14:48:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmonetra/ChangeLog,v 1.7 2004/11/14 21:03:00 weeve Exp $
+
+  14 Nov 2004; Jason Wever <weeve@gentoo.org> libmonetra-4.1.ebuild:
+  Added ~sparc keyword.
 
   07 Nov 2004; Markus Rothe <corsair@gentoo.org> libmonetra-4.1.ebuild:
   Stable on ppc64; bug #60442
