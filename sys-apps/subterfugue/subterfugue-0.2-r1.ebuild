@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/subterfugue/subterfugue-0.2-r1.ebuild,v 1.15 2003/06/21 21:19:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/subterfugue/subterfugue-0.2-r1.ebuild,v 1.16 2003/09/07 01:02:56 msterret Exp $
 
 IUSE="gtk"
 
@@ -21,7 +21,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-    
+
 	cp Makefile Makefile.orig
 	sed "s/python1.5/python${PYVER}/" < Makefile.orig > Makefile
 }
@@ -29,7 +29,7 @@ src_unpack() {
 src_compile() {
 	# breaks down with emake
 	make || die
-    
+
 	cp dsf dsf.orig
 	sed -e "s:SUBTERFUGUE_ROOT=.*:SUBTERFUGUE_ROOT=/usr/share/subterfuge/:" \
 		< dsf.orig > sf
