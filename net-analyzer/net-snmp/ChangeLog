@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.60 2004/10/17 01:50:28 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.61 2004/10/25 14:10:45 eldad Exp $
+
+  25 Oct 2004; Eldad Zack <eldad@gentoo.org> net-snmp-5.1.1-r1.ebuild,
+  net-snmp-5.1.1.ebuild:
+  Fixed net-snmp-config to include tcp-wrappers libs (if used), wrt Bug #68254.
 
   16 Oct 2004; <solar@gentoo.org> net-snmp-5.1.1-r1.ebuild:
   removed erroneous RDEPEND on sed4
