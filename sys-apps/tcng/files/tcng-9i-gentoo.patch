@@ -1,0 +1,12 @@
+diff -ur tcng.orig/tcsim/Makefile.unclean tcng/tcsim/Makefile.unclean
+--- tcng.orig/tcsim/Makefile.unclean	2003-11-21 19:51:01.000000000 -0800
++++ tcng/tcsim/Makefile.unclean	2003-12-17 02:05:38.000000000 -0800
+@@ -33,7 +33,7 @@
+   -I../shared
+ 
+ LDFLAGS=-Wl,-E
+-LIBS=-lfl -lm -ldl -L../shared -ltcngmisc $(LD_OPTS)
++LIBS=-lfl -lm -ldl -latm -L../shared -ltcngmisc $(LD_OPTS)
+ 
+ .PHONY:			modules depend dep
+ 

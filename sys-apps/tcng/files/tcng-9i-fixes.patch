@@ -1,0 +1,90 @@
+diff -ur tcng.orig/tcc/tcc.c tcng/tcc/tcc.c
+--- tcng.orig/tcc/tcc.c	2002-10-10 09:52:41.000000000 -0700
++++ tcng/tcc/tcc.c	2003-12-17 02:13:25.000000000 -0800
+@@ -219,7 +219,7 @@
+ 	 *
+          * (and we'd actually need one less, because we count argv[0] twice)
+          */
+-    cpp_argv[cpp_argc++] = "-$";
++    //cpp_argv[cpp_argc++] = "-$";
+     tcng_topdir = getenv("TCNG_TOPDIR");
+     include = alloc_sprintf("%s/" TCNG_INC_DIR,
+       tcng_topdir ? tcng_topdir : TOPDIR);
+@@ -333,7 +333,11 @@
+ 	if (optind < argc) usage(argv[0]);
+     }
+     if (input) cpp_argv[cpp_argc++] = input;
+-    cpp_argv[0] = argv[0];
++
++    // ARGV[0] must be the program that execvp is calling!
++    //cpp_argv[0] = argv[0];
++    cpp_argv[0] = CPP;
++
+     if (include_default) {
+ 	cpp_argv[cpp_argc++] = "-include";
+ 	cpp_argv[cpp_argc++] = alloc_sprintf("%s/default.tc",include);
+diff -ur tcng.orig/tcsim/setup.ulib tcng/tcsim/setup.ulib
+--- tcng.orig/tcsim/setup.ulib	2003-01-14 07:25:05.000000000 -0800
++++ tcng/tcsim/setup.ulib	2003-12-17 02:03:06.000000000 -0800
+@@ -199,4 +199,7 @@
+     perl -pi -e 's/exit\(0\);/return 0;/;' iproute2/tc/$n
+ done
+ 
++# Sometimes 'offsetof' is NOT defined, and we need to import it
++sed -i iproute2/tc/tc_qdisc.c -e '1i#include <stddef.h>'
++
+ touch .ready
+diff -ur tcng.orig/tcsim/tcsim.c tcng/tcsim/tcsim.c
+--- tcng.orig/tcsim/tcsim.c	2002-11-14 07:49:52.000000000 -0800
++++ tcng/tcsim/tcsim.c	2003-12-17 02:13:16.000000000 -0800
+@@ -299,7 +299,7 @@
+ 	 * +2 for -i dev
+ 	 * +1 for terminating NULL
+ 	 */
+-    cpp_argv[cpp_argc++] = "-$";
++    //cpp_argv[cpp_argc++] = "-$";
+     tcng_topdir = getenv("TCNG_TOPDIR");
+     include = alloc_sprintf("%s/lib/tcng/include",
+       tcng_topdir ? tcng_topdir : TOPDIR);
+@@ -380,7 +380,11 @@
+     if (set_printk_threshold != -1) printk_threshold = set_printk_threshold;
+     if (kernel_init()) errorf("oops, trouble");
+     if (verbose) setup_tracing();
+-    cpp_argv[0] = argv[0];
++    
++    // ARGV[0] must be the program that execvp is calling!
++    //cpp_argv[0] = argv[0];
++    cpp_argv[0] = CPP;
++    
+     if (include_default) {
+ 	cpp_argv[cpp_argc++] = "-include";
+ 	cpp_argv[cpp_argc++] = alloc_sprintf("%s/default.tcsim",include);;
+--- tcng.orig/tests/tstcond	2002-09-19 12:14:55.000000000 -0700
++++ tcng/tests/tstcond	2003-12-17 02:55:09.000000000 -0800
+@@ -142,7 +142,7 @@
+ ERROR
+ EOF in conditional block
+ # conditional tests: neither warn nor skip ------------------------------------
+-runtests | tail -1
++runtests | tail -n 1
+ |BEGIN CONDITIONAL
+ |true
+ |EOF
+@@ -153,7 +153,7 @@
+ EOF
+ Passed the test
+ # conditional tests: warn only ------------------------------------------------
+-runtests | tail -1
++runtests | tail -n 1
+ |BEGIN CONDITIONAL
+ |true
+ |EOF
+@@ -166,7 +166,7 @@
+ EOF
+ Passed the test (1 warning)
+ # conditional tests: warn and skip --------------------------------------------
+-runtests | tail -1
++runtests | tail -n 1
+ |BEGIN CONDITIONAL
+ |false
+ |EOF
