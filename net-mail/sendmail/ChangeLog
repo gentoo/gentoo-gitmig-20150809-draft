@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/sendmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.19 2003/01/20 14:25:03 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.20 2003/01/23 09:55:14 raker Exp $
+
+  23 Jan 2003; Nick Hadaway <raker@gentoo.org> files/sendmail-r1 :
+  Added -9 to the kill statement as suggested on bug #14411
 
 *sendmail-8.12.7-r1 (20 Jan 2003)
 
