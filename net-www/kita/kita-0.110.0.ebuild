@@ -1,30 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.10.1.1.ebuild,v 1.2 2004/03/14 10:05:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kita/kita-0.110.0.ebuild,v 1.1 2004/04/11 14:45:30 usata Exp $
 
 IUSE=""
 
-inherit kde-functions
-
-export KDELIBSDIR=/usr/kde/3.1
-need-kde 3.1
-
-MY_PV="`echo ${PV} | sed 's/\([0-9]*\).\([0-9]*\).\(.*\)/\1.\2\3/g'`"
-
-MY_P="${PN}-${MY_PV}"
-
 DESCRIPTION="Kita - 2ch client for KDE"
 HOMEPAGE="http://kita.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/kita/7938/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/kita/9093/${P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND="virtual/glibc
 	>=x11-libs/qt-3.1
-	=kde-base/kdebase-3.1*
-	=kde-base/kdelibs-3.1*
+	>=kde-base/kdebase-3.1
+	>=kde-base/kdelibs-3.1
 	>=kde-base/arts-1.1.4
 	>=sys-devel/gcc-3.2
 	>=dev-libs/libpcre-4.2
@@ -40,8 +31,6 @@ DEPEND="virtual/glibc
 # Never depend on a meta package
 #	>=kde-base/kde-3.1
 # see http://dev.gentoo.org/~liquidx/ebuildmistakes.html
-
-S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	addwrite ${QTDIR}/etc
