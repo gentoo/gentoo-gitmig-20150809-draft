@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.27 2005/02/26 19:54:02 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.28 2005/02/27 17:42:47 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -261,8 +261,9 @@ function kde-meta_src_unpack() {
 	unpack)
 		
 		# kdepim packages all seem to rely on libkdepim/kdepimmacros.h
+		# also, all kdepim Makefile.am's reference doc/api/Doxyfile.am
 		if [ "$KMNAME" == "kdepim" ]; then
-			KMEXTRACTONLY="$KMEXTRACTONLY libkdepim/kdepimmacros.h"
+			KMEXTRACTONLY="$KMEXTRACTONLY libkdepim/kdepimmacros.h doc/api"
 		fi
 		
 		# Create final list of stuff to extract
