@@ -1,7 +1,12 @@
 # ChangeLog for app-dicts/ispell-lt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-lt/ChangeLog,v 1.7 2004/06/24 21:43:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-lt/ChangeLog,v 1.8 2004/07/15 18:58:42 arj Exp $
 
+*ispell-lt-1.0 (15 Jul 2004)
+
+  15 Jul 2004; Anders Rune Jensen <arj@gentoo.org> ispell-lt-1.0.ebuild:
+  New version, closes #55275.
+	
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *ispell-lt-0.5 (14 Nov 2002)
