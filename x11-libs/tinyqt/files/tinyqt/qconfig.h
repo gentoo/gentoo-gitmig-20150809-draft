@@ -27,7 +27,7 @@
 #define QT_NO_TRANSLATION
 #define QT_NO_MIME
 #define QT_NO_SOUND
-//#define QT_NO_PROPERTIES
+#define QT_NO_PROPERTIES
 
 #define QT_NO_QWS_GFX_SPEED
 #define QT_NO_NETWORK //??????????????
@@ -42,7 +42,7 @@
 //#define QT_NO_DIR
 
 //#define QT_NO_TEXTSTREAM
-#define QT_NO_DATASTREAM
+//#define QT_NO_DATASTREAM
 #define QT_NO_QWS_SAVEFONTS
 //#define QT_NO_STRINGLIST
 #define QT_NO_SESSIONMANAGER
@@ -82,7 +82,7 @@
 #define QT_NO_DRAGANDDROP 
 #define QT_NO_CLIPBOARD 
 #define QT_NO_QWS_CURSOR 
-//#define QT_NO_NETWORKPROTOCOL 
+#define QT_NO_NETWORKPROTOCOL 
 #define QT_NO_NETWORKPROTOCOL_FTP 
 #define QT_NO_NETWORKPROTOCOL_HTTP 
 #define QT_NO_PSPRINTER 
