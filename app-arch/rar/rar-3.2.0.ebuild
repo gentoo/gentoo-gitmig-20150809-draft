@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.2.0.ebuild,v 1.3 2004/01/02 18:47:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.2.0.ebuild,v 1.4 2004/01/03 17:04:38 vapier Exp $
 
 S=${WORKDIR}/${PN}
 MY_P=${PN}linux-${PV}
 DESCRIPTION="RAR compressor/uncompressor"
-SRC_URI="http://www.rarlab.com/rar/${MY_P}.tar.gz"
 HOMEPAGE="http://www.rarsoft.com/"
+SRC_URI="http://www.rarlab.com/rar/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="RAR"
-KEYWORDS="~x86 ~amd64 -ppc -sparc -alpha"
+SLOT="0"
+KEYWORDS="-* x86 ~amd64"
 
 RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs )"
 
