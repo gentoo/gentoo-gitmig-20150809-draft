@@ -1,0 +1,9 @@
+# ChangeLog for net-mail/drac
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/drac/ChangeLog,v 1.1 2003/01/19 10:16:20 raker Exp $
+
+*drac-1.12 (19 Jan 2003)
+
+  19 Jan 2003; Nick Hadaway <raker@gentoo.org> drac-1.12.ebuild,
+  files/digest-drac-1.12 : 
+  New ebuild added for a more robust tpop3d build.
