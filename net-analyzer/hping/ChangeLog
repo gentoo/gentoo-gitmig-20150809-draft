@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.20 2004/07/08 01:53:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.21 2004/07/08 06:28:55 eldad Exp $
+
+  08 Jul 2004; Eldad Zack <eldad@gentoo.org> hping-2.0.0_rc2-r1.ebuild,
+  hping-2.0.0_rc2.ebuild, hping-2.0.0_rc3.ebuild:
+  added debug to IUSE
 
   07 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> hping-2.0.0_rc3.ebuild:
   fix use invocation (again); IUSE; tidy
