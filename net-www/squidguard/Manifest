@@ -1,5 +1,5 @@
-MD5 ebd5fcd465ab1669a597bb375b2521df ChangeLog 344
-MD5 06a829d949e55b311cabadbdc9c8b4f8 squidguard-1.2.0.ebuild 1300
+MD5 2b15795a2d9fc37760fe16f5f1b513a3 ChangeLog 470
+MD5 d9d82c75eb7a37cd0a204abd71c46d73 squidguard-1.2.0.ebuild 1301
 MD5 127270fbe0d0bfbc141ffaf56313f3e6 files/blockedsites 8
 MD5 bca506ead890af8fe52e0fdf5e73440f files/digest-squidguard-1.2.0 69
 MD5 3e17e52277c56640bb3a9a24da57dae9 files/squidGuard.conf.blocksites 192
