@@ -1,0 +1,6 @@
+MD5 f2960413d4843a1d7396354648fa5999 ChangeLog 1029
+MD5 9da5b1b893e5cee73342ecba8b020c52 mm-1.1.3-r1.ebuild 794
+MD5 db847e5af58617bd1cd28a41c2e560ea mm-1.2.1.ebuild 814
+MD5 9dcc4118ef52f38091621206f9892d9b files/digest-mm-1.1.3-r1 60
+MD5 4cba82fb44026dfe43715f2b8b01fbd1 files/digest-mm-1.2.1 60
+MD5 215647dc369567375551c92e5bac68e1 files/mm-1.1.3-shtool.patch 479

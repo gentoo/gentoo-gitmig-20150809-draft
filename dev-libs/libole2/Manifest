@@ -1,0 +1,7 @@
+MD5 4d161fb43142f7a4256ea0f2fa70d92f ChangeLog 1559
+MD5 3af284c7ec6fc24e1373daee9e9bfe6c libole2-0.2.3-r1.ebuild 641
+MD5 f48957ccaa53714195271fcf64f26f43 libole2-0.2.4-r1.ebuild 1149
+MD5 e32dd56211ae2f00d3fddf9189caa0c0 libole2-0.2.4.ebuild 968
+MD5 fbf66bc8d1b2f4bb160d936813b712fb files/digest-libole2-0.2.3-r1 65
+MD5 615e88687c2f2fed007b0910e9b02fb0 files/digest-libole2-0.2.4 66
+MD5 615e88687c2f2fed007b0910e9b02fb0 files/digest-libole2-0.2.4-r1 66

@@ -1,0 +1,6 @@
+MD5 0dd5ed3ba278a0e7cec88d841315cc4c ChangeLog 644
+MD5 6f8f67e57d8c610661a26d84e5d6f4b4 vdk-2.0.2-r1.ebuild 933
+MD5 25588efc91008f44bf3d21710830ced7 vdk-2.0.2.ebuild 893
+MD5 99848ddbdb27f9085a04d4be864953c8 files/digest-vdk-2.0.2 61
+MD5 99848ddbdb27f9085a04d4be864953c8 files/digest-vdk-2.0.2-r1 61
+MD5 ce2f3ecb79a589ce3ac4bbd88f7bc2fd files/vdk-2.0.2-makefile.in.patch 445

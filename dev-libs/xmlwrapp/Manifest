@@ -1,0 +1,5 @@
+MD5 bf21b4843cf46cb8426d5eff542f204a ChangeLog 348
+MD5 b561e79000f91ef32182cd8267b1eaf6 xmlwrapp-0.4.0.ebuild 758
+MD5 b1480b5669c77166f57fc32f47bea65f files/digest-xmlwrapp-0.4.0 65
+MD5 55066e7026cd8b9a9f6820015d0a986c files/gentoo-0.4.0.patch 469
+MD5 f6290244a90a00fe306a84ae7b1659fb files/mkmf 18879

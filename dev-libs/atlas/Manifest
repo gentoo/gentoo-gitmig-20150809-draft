@@ -1,0 +1,7 @@
+MD5 7485be0d4f0550143281dc288908a2d2 ChangeLog 1036
+MD5 0f001f64c47558b719ca70467bd31204 atlas-3.2.1-r1.ebuild 1903
+MD5 f20fcc6cc6415a2db3201318dc94faaa atlas-3.2.1.ebuild 1908
+MD5 316b0e46f5d1dfee37a45328e580258a atlas-3.4.1.ebuild 1979
+MD5 99e22e655a340b245ed25e144a5f07af files/digest-atlas-3.2.1 60
+MD5 99e22e655a340b245ed25e144a5f07af files/digest-atlas-3.2.1-r1 60
+MD5 ab8ce0151b53d1da05325b0f7294da48 files/digest-atlas-3.4.1 64

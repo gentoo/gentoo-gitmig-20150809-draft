@@ -1,0 +1,6 @@
+MD5 cf987228e0f5fad8c9fa92dc2dc3a9bd ChangeLog 691
+MD5 e1924a8c31bd2f0b076f8d4368ad589b coldsync-2.2.5-r1.ebuild 1169
+MD5 670d7a696c122aea0e98428d01b92a25 coldsync-2.2.5.ebuild 967
+MD5 15805854248ab052b1cb5635f97cf5bd files/coldsync-2.2.5-gcc3.diff 306
+MD5 04ecb777d14c4aa748b305fa0d64adea files/digest-coldsync-2.2.5 66
+MD5 04ecb777d14c4aa748b305fa0d64adea files/digest-coldsync-2.2.5-r1 66

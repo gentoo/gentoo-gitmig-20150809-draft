@@ -1,0 +1,7 @@
+MD5 c18926c87c686f1f0b1a6900ed8afa9a ChangeLog 2137
+MD5 855badbf5e80bf0d074762c8865bf923 popt-1.5.ebuild 674
+MD5 fd824cc0024a3d9aafe62568a4956f96 popt-1.6.3.ebuild 701
+MD5 6c8d172a60fc62aa3a5c65cb13459383 popt-1.7-r1.ebuild 744
+MD5 3544b985258bada5be203123264e3fff files/digest-popt-1.5 60
+MD5 60f13b6822e9d1bf71be36a3611e5221 files/digest-popt-1.6.3 62
+MD5 0933441e77d0a43c85e3d1471bbc2633 files/digest-popt-1.7-r1 60
