@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.14.ebuild,v 1.5 2004/06/25 23:55:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.14.ebuild,v 1.6 2004/06/30 03:21:15 agriffis Exp $
 
 inherit eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.gnu.org/gnu/tar/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="x86 ~ppc ~sparc ~mips alpha arm ~hppa ~amd64 ia64 ~ppc64 ~s390"
 IUSE="nls static build"
 
 DEPEND="virtual/libc
