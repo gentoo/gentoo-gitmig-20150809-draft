@@ -1,8 +1,11 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.27 2003/03/21 21:39:06 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.28 2003/04/06 08:20:54 absinthe Exp $
 
 *ant-1.5.2 (21 Mar 2003)
+
+  06 Apr 2003; Dylan Carlson <absinthe@gentoo.org> ant-1.5.2.ebuild:
+  ppc sparc moved to stable.
 
   21 Mar 2003; Dylan Carlson <absinthe@gentoo.org> ant-1.5.2.ebuild, 
   files/1.5.2/ant:
