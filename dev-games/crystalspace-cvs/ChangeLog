@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/crystalspace-cvs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/ChangeLog,v 1.4 2004/03/31 06:55:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/ChangeLog,v 1.5 2004/04/30 00:06:54 mr_bones_ Exp $
+
+  29 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  crystalspace-cvs-0.97.ebuild:
+  broken makefiles upstream (bug #49446)
 
   30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   crystalspace-cvs-0.97.ebuild:
