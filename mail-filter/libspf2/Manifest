@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 69a9175a0e65a34f1e972d030decf0d8 ChangeLog 351
-MD5 02852f15841c037e3bb8c2129040a60b metadata.xml 744
+MD5 7592cdf7e52f0ff74af7d26ef10ac79d metadata.xml 673
 MD5 9490844a6067c4faaba93900f2f00df3 libspf2-1.0.4.ebuild 1099
 MD5 7e5b1b94c60f5c981f62872ba6e3f59d files/digest-libspf2-1.0.4 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBw0k3I1lqEGTUzyQRAgenAKDKDYr7PfKuj7xwtXmRGZzmdm4fRQCfQhad
+6OZr43oMJbZ1nhNQsgJLodw=
+=XhTi
+-----END PGP SIGNATURE-----
