@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.26 2002/10/11 14:02:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.27 2002/10/13 11:57:31 seemant Exp $
 # The perl-module eclass is designed to allow easier installation of perl
 # modules, and their incorporation into the Gentoo Linux system.
 
@@ -15,13 +15,8 @@ EXPORT_FUNCTIONS src_compile src_install src_test
 
 eval `perl '-V:version'`
 echo "Version is: ${version}"
-if [ ${version} == '5.6.1' ];
-        then
-		DEPEND="${DEPEND} >=sys-devel/perl-5 \
-		=dev-perl/ExtUtils-MakeMaker-6.03-r1"
-	else
-		DEPEND="${DEPEND} >=sys-devel/perl-5"
-fi
+	DEPEND="${DEPEND}
+		>=sys-devel/perl-5"
 SRC_PREP="no"
 
 perl-module_src_prep() {
@@ -47,50 +42,39 @@ perl-module_src_install() {
 	dodir ${POD_DIR}
 	
 	test -z ${mytargets} && mytargets="install"
-	eval `perl '-V:installsitearch'`
-	SITE_ARCH=${installsitearch}
 	
 	make \
-	PREFIX=${D}/usr \
-	INSTALLMAN1DIR=${D}/usr/share/man/man1 \
-	INSTALLMAN1DIR=${D}/usr/share/man/man1 \
-	INSTALLMAN2DIR=${D}/usr/share/man/man2 \
-	INSTALLMAN3DIR=${D}/usr/share/man/man3 \
-	INSTALLMAN4DIR=${D}/usr/share/man/man4 \
-	INSTALLMAN5DIR=${D}/usr/share/man/man5 \
-	INSTALLMAN6DIR=${D}/usr/share/man/man6 \
-	INSTALLMAN7DIR=${D}/usr/share/man/man7 \
-	INSTALLMAN8DIR=${D}/usr/share/man/man8 \
-	INSTALLSITEMAN1DIR=${D}/usr/share/man/man1 \
-	INSTALLSITEMAN2DIR=${D}/usr/share/man/man2 \
-	INSTALLSITEMAN3DIR=${D}/usr/share/man/man3 \
-	INSTALLSITEMAN4DIR=${D}/usr/share/man/man4 \
-	INSTALLSITEMAN5DIR=${D}/usr/share/man/man5 \
-	INSTALLSITEMAN6DIR=${D}/usr/share/man/man6 \
-	INSTALLSITEMAN7DIR=${D}/usr/share/man/man7 \
-	INSTALLSITEMAN8DIR=${D}/usr/share/man/man8 \
-	INSTALLSITEARCH=${D}/${SITE_ARCH} \
-	INSTALLSCRIPT=${D}/usr/bin \
-	${myinst} \
-	${mytargets} || die
+		PREFIX=${D}/usr \
+		INSTALLMAN1DIR=${D}/usr/share/man/man1 \
+		INSTALLMAN2DIR=${D}/usr/share/man/man2 \
+		INSTALLMAN3DIR=${D}/usr/share/man/man3 \
+		INSTALLMAN4DIR=${D}/usr/share/man/man4 \
+		INSTALLMAN5DIR=${D}/usr/share/man/man5 \
+		INSTALLMAN6DIR=${D}/usr/share/man/man6 \
+		INSTALLMAN7DIR=${D}/usr/share/man/man7 \
+		INSTALLMAN8DIR=${D}/usr/share/man/man8 \
+		${myinst} \
+		${mytargets} || die
 
 
 	if [ -f ${D}${ARCH_LIB}/perllocal.pod ];
 	then
-	touch ${D}/${POD_DIR}/${P}.pod
-	sed -e "s:${D}::g" ${D}${ARCH_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
-	touch ${D}/${POD_DIR}/${P}.pod.arch
-	cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.arch
-	rm -f ${D}/${ARCH_LIB}/perllocal.pod
+		touch ${D}/${POD_DIR}/${P}.pod
+		sed -e "s:${D}::g" \
+			${D}${ARCH_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
+		touch ${D}/${POD_DIR}/${P}.pod.arch
+		cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.arch
+		rm -f ${D}/${ARCH_LIB}/perllocal.pod
 	fi
 	
 	if [ -f ${D}${SITE_LIB}/perllocal.pod ];
 	then 
-	touch ${D}/${POD_DIR}/${P}.pod
-	sed -e "s:${D}::g" ${D}${SITE_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
-	touch ${D}/${POD_DIR}/${P}.pod.site
-	cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.site
-	rm -f ${D}/${SITE_LIB}/perllocal.pod
+		touch ${D}/${POD_DIR}/${P}.pod
+		sed -e "s:${D}::g" \
+			${D}${SITE_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
+		touch ${D}/${POD_DIR}/${P}.pod.site
+		cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.site
+		rm -f ${D}/${SITE_LIB}/perllocal.pod
 	fi
 
 	dodoc Change* MANIFEST* README* ${mydoc}
