@@ -1,6 +1,13 @@
 # ChangeLog for app-office/magicpoint
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.7 2004/06/24 22:42:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.8 2004/09/15 09:42:36 usata Exp $
+
+*magicpoint-1.11a (15 Sep 2004)
+
+  15 Sep 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -files/magicpoint-1.10a-gentoo.diff, +files/magicpoint-1.11a-gentoo.diff,
+  +magicpoint-1.11a.ebuild:
+  Version bumped. Added m17n-lib USE flag.
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> magicpoint-1.10a-r1.ebuild:
   Fix use invocation
