@@ -1,6 +1,6 @@
 # ChangeLog for dev-ruby/rdoc
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.6 2004/02/24 01:52:34 pylon Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.7 2004/06/25 01:55:38 agriffis Exp $
 
   24 Feb 2004; Lars Weiler <pylon@gentoo.org> rdoc-0.9.0.ebuild:
   Added ~ppc to keywords

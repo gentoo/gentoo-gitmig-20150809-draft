@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdchart/ruby-gdchart-0.0.9_beta.ebuild,v 1.3 2004/04/16 23:51:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdchart/ruby-gdchart-0.0.9_beta.ebuild,v 1.4 2004/06/25 01:58:38 agriffis Exp $
 
 inherit ruby
 

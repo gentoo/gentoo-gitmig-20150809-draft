@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/devel-logger/devel-logger-1.0.1.ebuild,v 1.6 2004/04/10 08:38:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/devel-logger/devel-logger-1.0.1.ebuild,v 1.7 2004/06/25 01:53:17 agriffis Exp $
 
 MY_P=${PN}-${PV//./_}
 DESCRIPTION="Lightweight logging utility"

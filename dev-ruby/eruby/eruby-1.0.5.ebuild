@@ -1,7 +1,7 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Maintaner: Tools Team <tools@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-1.0.5.ebuild,v 1.5 2004/06/09 19:54:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-1.0.5.ebuild,v 1.6 2004/06/25 01:53:27 agriffis Exp $
 
 inherit ruby
 

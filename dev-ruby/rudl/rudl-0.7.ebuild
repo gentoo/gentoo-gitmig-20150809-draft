@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rudl/rudl-0.7.ebuild,v 1.5 2004/04/10 15:50:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rudl/rudl-0.7.ebuild,v 1.6 2004/06/25 02:04:22 agriffis Exp $
 
 inherit ruby eutils
 

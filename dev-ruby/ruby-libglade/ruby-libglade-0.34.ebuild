@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ruby-libglade-0.34.ebuild,v 1.5 2004/06/24 19:35:23 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ruby-libglade-0.34.ebuild,v 1.6 2004/06/25 02:01:20 agriffis Exp $
 
 inherit ruby
 

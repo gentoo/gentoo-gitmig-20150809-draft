@@ -1,6 +1,6 @@
 # ChangeLog for dev-ruby/mod-ruby
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/ChangeLog,v 1.14 2004/06/08 21:41:47 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/ChangeLog,v 1.15 2004/06/25 01:54:08 agriffis Exp $
 
   08 Jun 2004; Aron Griffis <agriffis@gentoo.org> mod-ruby-1.0.7.ebuild,
   mod-ruby-1.1.3-r1.ebuild, mod-ruby-1.2.0.ebuild:

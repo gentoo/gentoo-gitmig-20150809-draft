@@ -1,7 +1,7 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Maintaner: Tools Team <tools@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-1.0.4.ebuild,v 1.4 2004/04/10 08:42:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-1.0.4.ebuild,v 1.5 2004/06/25 01:53:27 agriffis Exp $
 
 DESCRIPTION="eRuby interprets a Ruby code embedded text file"
 HOMEPAGE="http://www.modruby.net/"

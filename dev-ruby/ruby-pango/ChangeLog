@@ -1,6 +1,6 @@
 # ChangeLog for dev-ruby/ruby-pango
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.7 2004/04/12 05:45:31 usata Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.8 2004/06/25 02:02:22 agriffis Exp $
 
   12 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-pango-0.8.1.ebuild:
   Added ruby.eclass support.

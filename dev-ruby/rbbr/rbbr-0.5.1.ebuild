@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.; acid DOT punk AT gmx DOT net
+# Copyright 1999-2004 Gentoo Foundation; acid DOT punk AT gmx DOT net
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/rbbr-0.5.1.ebuild,v 1.3 2004/04/24 17:58:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/rbbr-0.5.1.ebuild,v 1.4 2004/06/25 01:55:28 agriffis Exp $
 
 DESCRIPTION="Ruby Browser for modules/classes hierarchy and their constants and methods"
 HOMEPAGE="http://ruby-gnome2.sourceforge.jp/hiki.cgi?rbbr"

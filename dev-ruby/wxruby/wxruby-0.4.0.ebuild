@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/wxruby-0.4.0.ebuild,v 1.1 2004/06/18 21:31:54 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/wxruby-0.4.0.ebuild,v 1.2 2004/06/25 02:05:52 agriffis Exp $
 
 MY_P="${PN}-${PV}-src"
 DESCRIPTION="Ruby language bindings for the wxWidgets GUI toolkit"

@@ -1,6 +1,6 @@
 # ChangeLog for dev-ruby/rbbr
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/ChangeLog,v 1.6 2004/04/24 17:58:54 usata Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/ChangeLog,v 1.7 2004/06/25 01:55:28 agriffis Exp $
 
   25 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> rbbr-0.4.0.ebuild,
   rbbr-0.5.1.ebuild, rbbr-0.6.0.ebuild:

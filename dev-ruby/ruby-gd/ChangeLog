@@ -1,6 +1,6 @@
 # ChangeLog for dev-ruby/ruby-gd
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.1 2004/05/01 12:19:04 usata Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.2 2004/06/25 01:58:28 agriffis Exp $
 
 *ruby-gd-0.7.4 (01 May 2004)
 

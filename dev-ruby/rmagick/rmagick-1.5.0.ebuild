@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-1.5.0.ebuild,v 1.1 2004/04/25 11:50:06 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-1.5.0.ebuild,v 1.2 2004/06/25 01:56:38 agriffis Exp $
 
 MY_P="RMagick-${PV}"
 DESCRIPTION="An interface between Ruby and the ImageMagick(TM) image processing library"
