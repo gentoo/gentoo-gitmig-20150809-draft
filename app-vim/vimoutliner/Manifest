@@ -1,4 +1,16 @@
-MD5 5d36dd569237aedbc8885164b98084e5 ChangeLog 495
-MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f45e8f3b921e0e4d06edc2bfddda2ff6 vimoutliner-0.3.3.ebuild 1054
+MD5 42bee7de2f4af720e7ea111b4ba79406 ChangeLog 636
+MD5 7f1effb5efdc62c43e45bbed10e85461 vimoutliner-0.3.3a.ebuild 1055
+MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 dff564f942c557805a4254359c428756 files/digest-vimoutliner-0.3.3 68
+MD5 1eb384041125b0ae91304ec2ff5d84e6 files/digest-vimoutliner-0.3.3a 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCG4QsLLFUmVNQ7rkRApGGAJ9v9rbVPQcmr9w4OmPJBwRFRY2pGQCfcQlr
+23u3vrU+pQ5gyX8uyrTUR14=
+=+h3Y
+-----END PGP SIGNATURE-----
