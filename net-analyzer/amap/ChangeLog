@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/amap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.10 2004/07/01 16:10:31 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.11 2004/07/31 21:51:51 tgall Exp $
+
+  31 Jul 2004; Tom Gall <tgall@gentoo.org> amap-4.5.ebuild:
+  stable on ppc64, bug #57452
 
 *amap-4.5 (01 Jul 2004)
 
