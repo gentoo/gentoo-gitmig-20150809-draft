@@ -2,6 +2,7 @@
 # These packages overwrite collision-protected files
 ##
 
+app-shells/zsh
 
 ##
 # end collision-protect
