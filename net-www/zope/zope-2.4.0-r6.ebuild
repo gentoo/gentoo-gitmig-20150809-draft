@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Holger Brueckner <darks@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.4.0-r6.ebuild,v 1.1 2001/09/19 18:16:44 darks Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.4.0-r6.ebuild,v 1.2 2002/07/03 03:06:19 jnelson Exp $
 
 A="Zope-${PV}-src.tgz ZEO-1.0b3.tgz"
 S=${WORKDIR}/Zope-${PV}-src
@@ -11,8 +11,8 @@ SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-src.tgz
 HOMEPAGE="http://www.zope.org"
 
 DEPEND="virtual/glibc 
-        >=dev-lang/python-2.1"
-RDEPEND=">=dev-lang/python-2.1"
+        =dev-lang/python-2.1*"
+RDEPEND="=dev-lang/python-2.1*"
 
 src_unpack() {
 
@@ -27,7 +27,7 @@ src_unpack() {
 }
 
 src_compile() {
-    try python w_pcgi.py
+    python2.1 w_pcgi.py || die
 }
 
 src_install () {
