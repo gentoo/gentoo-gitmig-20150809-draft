@@ -104,4 +104,4 @@ virtual/logger
 *sys-libs/zlib
 *virtual/ssh
 *virtual/dev-manager
-*=sys-kernel/linux26-headers-2.6.6-r1
+*>=sys-kernel/linux26-headers-2.6.6-r1
