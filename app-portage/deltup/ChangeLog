@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/deltup
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.3 2004/01/24 00:58:27 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.4 2004/02/21 10:56:55 ferringb Exp $
+
+  21 Feb 2004; Brian Harring <ferringb@gentoo.org> deltup-0.4.0.ebuild, 
+  deltup-0.3.7: Added warning about deltup's imminent demise, and url for glep9
 
   23 Jan 2004; Brian Harring <ferringb@gentoo.org> deltup-0.3.7.ebuild,
   deltup-0.4.0.ebuild, metadata.xml:
