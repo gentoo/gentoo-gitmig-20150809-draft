@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.34 2003/10/17 13:07:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.35 2003/10/20 09:08:13 obz Exp $
+
+*gnome-media-2.4.1.1 (20 Oct 2003)
+
+  20 Oct 2003; Mike Gardiner <obz@gentoo.org> gnome-media-2.4.1.1.ebuild:
+  New version
 
   17 Oct 2003; Aron Griffis <agriffis@gentoo.org> gnome-media-2.4.0.ebuild:
   Stable on alpha
