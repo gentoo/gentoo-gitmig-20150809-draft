@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.986 2005/03/03 17:25:38 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.987 2005/03/03 18:04:53 ciaranm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -680,7 +680,6 @@ sys-apps/busybox:floppyboot - builds a busybox binary for use on floppy drives.
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/busybox:savedconfig - Adds support to user defined configs
 sys-apps/checkpolicy:mls - Add experimental multi level security policy support
-sys-apps/daemontools-scripts:withsamplescripts - Installs sample supervise scripts
 sys-apps/iproute2:atm - Add support for ATM qdisc manager
 sys-apps/lm_sensors:rrdtool - Builds sensord (Needs RRDTool).
 sys-apps/memtest86+:serial - Compile with serial console support
@@ -689,7 +688,6 @@ sys-apps/module-init-tools:no-old-linux - Don't support modules for Linux 2.4 an
 sys-apps/parted:noreiserfs - Do not include reiserfs support
 sys-apps/partimage:nologin - Do not include login support
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
-sys-process/procps:n32 - Enable n32 ABI support on mips
 sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/util-linux:old-crypt - build support for the older cryptoapi that earlier util-linux's included
@@ -747,6 +745,8 @@ sys-libs/pam:pam_console - Builds the pam_console module (enables per-user devic
 sys-libs/pam:pam_timestamp - Builds the pam_timestamp module (enables recent successful attempt authentication)
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 sys-libs/uclibc:xattr - enables extended attributes
+sys-process/daemontools-scripts:withsamplescripts - Installs sample supervise scripts
+sys-process/procps:n32 - Enable n32 ABI support on mips
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/mediawiki:math - Adds math rendering support
 www-apps/nut:cgi - Add CGI script support
