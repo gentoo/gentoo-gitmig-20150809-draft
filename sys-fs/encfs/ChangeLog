@@ -1,0 +1,11 @@
+# ChangeLog for sys-fs/encfs
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.1 2004/11/20 19:45:13 genstef Exp $
+
+*encfs-1.1.10 (20 Nov 2004)
+
+  20 Nov 2004; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +encfs-1.1.10.ebuild:
+  Adding encfs thanks to Vaclav Slavik <vaclav.slavik@matfyz.cz> and Daniel
+  Webert <rockoo@rockoo.homelinux.org> in bug 45070
+
