@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Time-modules-2002.1001
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-modules/ChangeLog,v 1.1 2002/12/22 16:36:22 mcummings Exp $
+
+*Time-modules-2002.1001 (21 Dec 2002)
+
+  22 Dec 2002; Michael Cummings <mcummings@gentoo.org>
+  Time-modules-2002.1001.ebuild:
+
+  Initial import.  Ebuild submitted by bnelson@itministry.org (Brian
+  Nelson) bug 10108 - future dep
