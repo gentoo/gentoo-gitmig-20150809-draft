@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-base-policy
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.32 2004/11/24 01:26:55 pebenito Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.33 2005/01/20 01:00:48 pebenito Exp $
+
+  19 Jan 2005; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20041123.ebuild:
+  Mark stable.
 
 *selinux-base-policy-20041123 (23 Nov 2004)
 
