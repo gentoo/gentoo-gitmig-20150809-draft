@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.12 2005/02/20 11:45:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.13 2005/03/06 02:49:03 josejx Exp $
+
+  06 Mar 2005; Joseph Jezak <josejx@gentoo.org>
+  +files/qemacs-0.3.1-gcc-3.4.patch, qemacs-0.3.1-r1.ebuild,
+  qemacs-0.3.1.ebuild:
+  Added patch to fix compiling on gcc 3.4.
 
 *qemacs-0.3.1-r1 (20 Feb 2005)
 
