@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/files/festival.rc,v 1.1 2004/03/17 03:37:32 eradicator Exp $
+
+depend() {
+	need net
+	use alsasound esound
+}
+
+start() {
+	ebegin "Starting festival"
+	start-stop-daemon --start --quiet --background --make-pidfile --pidfile /var/run/festival.pid \
+		--exec /usr/bin/festival -- --server -b /etc/festival/server.scm
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping festival"
+	start-stop-daemon --stop --quiet --pidfile /var/run/festival.pid
+	eend $?
+}

@@ -1,0 +1,116 @@
+# ChangeLog for media-sound/festival
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /home/cvsroot/gentoo-x86/media-sound/festival/ChangeLog,v 1 2002/05/07
+# 03:58:19 naz Exp $
+
+*festival-1.4.3 (16 Mar 2004)
+
+  16 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-1.4.3-r1.ebuild, festival-1.4.3.ebuild, metadata.xml,
+  files/festival-1.4.2.patch, files/festival-1.4.3-asterisk.patch,
+  files/festival-gcc3.3.diff, files/festival.rc, files/server.scm:
+  Moved from media-sound/festival to app-accessibility/festival.
+
+  13 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> files/server.scm:
+  fixed sticky keyboard typo.  bug #44557.
+
+  13 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-1.4.2-r3.ebuild:
+  Removing borked ebuild to fix bug #41228.
+
+*festival-1.4.3-r1 (12 Mar 2004)
+
+  12 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-1.4.3-r1.ebuild, files/festival.rc, files/server.scm:
+  Adding init script and configuration to use festival server... part of the fix
+  for bug #43374.
+
+  25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> festival-1.4.3.ebuild:
+  DEPEND media-sounds/speech-tools is broken on sparc, see bug #41329.
+
+  18 Feb 2004; <augustus@gentoo.org> festival-1.4.3.ebuild:
+  Added amd64 to keywords. festival works fine on AMD64. Marked stable since
+  it's the only release.
+
+  12 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-1.4.3.ebuild:
+  Fixed RDEPEND/DEPEND to close bug #41412
+
+  11 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-1.4.2-r1.ebuild, festival-1.4.2-r2.ebuild,
+  festival-1.4.2-r3.ebuild, festival-1.4.2.ebuild, festival-1.4.3.ebuild:
+  Removing crusty ebuilds.
+
+  10 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-1.4.3.ebuild, metadata.xml, files/festival-1.4.3-asterisk.patch:
+  Added optional patch that adds a new command named tts_textasterisk that is
+  required by Asterisk to communicate with the Festival server. Submitted by Ray
+  Russell Reese III <anti@gentoo.org> in bug #30456.
+
+  25 Jan 2004; <carpaski@gentoo.org> festival-1.4.2*: Fixed all references
+	to $T as that is a portage variable and yields AccessViolations when set
+	incorrectly.
+
+  08 Jan 2004; <gustavoz@gentoo.org> festival-1.4.2-r3.ebuild:
+  the parrot is stable on sparc
+
+  10 Nov 2003; Ciaran McCreesh <ciaranm@gentoo.org> festival-1.4.2-r3.ebuild:
+  Moving to ~sparc, thanks to gust4voz in #gentoo-sparc
+
+*festival-1.4.3 (20 Jul 2003)
+
+  20 Jul 2003; jje <jje@gentoo.org> festival-1.4.3.ebuild:
+  Version bump. Speech-tools is now split out into a seperate build.
+  
+  Submitted by: Paul Giordano <giordano@covad.net>
+
+*festival-1.4.2-r3 (01 Dec 2002)
+
+  01 Dec 2002; Matt Keadle <mkeadle@gentoo.org> festival-1.4.2-r3.ebuild
+  files/digest-festival-1.4.2-r3 ChangeLog
+
+  -r2 was an attempt at building for all arch types, but it just didn't cut it.
+  Thanks to J Robert Ray and his wicked CyrixIII/VIA-C3/VIA-C5 processor for
+  pointing this out.
+
+*festival-1.4.2-r2 (16 Nov 2002)
+
+  16 Nov 2002; Matt Keadle <mkeadle@gentoo.org> festival-1.4.2-r2.ebuild
+  files/digest-festival-1.4.2-r2 ChangeLog
+
+  -r1 was hardcoded to i686. This build should check your arch type and build
+  accordingly. Also added IUSE="" for completeness.
+
+*festival-1.4.2-r1 (16 Nov 2002)
+
+  16 Nov 2002; Sascha Schwabbauer <cybersystem@gentoo.org> festival-1.4.2-r1.ebuild, festival-1.4.2.ebuild :
+
+  Added -ppc to keywords.
+
+*festivial-1.4.2-r1 (14 Nov 2002)
+
+	John P. Davis <zhen@gentoo.org>
+	I changed emake to make in the top of the src_compile function. (it is commented)
+	This change is made to force festival to use -jX where X <=2.
+
+*festival-1.4.2-r1 (23 Oct 2002)
+
+  23 Oct 2002; Matt Keadle <mkeadle@gentoo.org> festival-1.4.2-r1.ebuild
+  files/digest-festival-1.4.2-r1 files/festival-1.4.2.patch
+
+  This should take care of issues with gcc3.2, killing bug #8280. Thanks to
+  Paul Thompson, Rigo Ketelings, Tom Ribbens, Julian J., Chris Bruner,
+  Paul Oswald and Michal Maruska for all the comments made and support and
+  testing provided.
+
+*festival-1.4.2 (24 Aug 2002)
+
+  24 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> festival-1.4.2.ebuild :
+
+  Added ppc to keywords.
+
+*festival-1.4.2.ebuild (28 May 2002)
+
+  28 May 2002; Michael Nazaroff <naz@gentoo.org> Initial release of festival
+  package, requires patch's to install and build properly on a our system.
+ 
