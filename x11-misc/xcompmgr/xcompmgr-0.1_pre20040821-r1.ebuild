@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/xcompmgr-0.1_pre20040821-r1.ebuild,v 1.1 2004/08/22 07:15:52 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/xcompmgr-0.1_pre20040821-r1.ebuild,v 1.2 2004/08/29 19:09:45 seemant Exp $
 
 inherit eutils
 
@@ -19,7 +19,8 @@ RDEPEND=">=x11-base/xorg-x11-6.7.99.902"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.7
-	>=sys-devel/autoconf-2.5"
+	>=sys-devel/autoconf-2.5
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
