@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/hxt-4.02.ebuild,v 1.1 2005/02/26 17:37:05 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/hxt-4.02.ebuild,v 1.2 2005/03/19 22:09:42 kosmikus Exp $
 
 inherit fixheadtails base eutils ghc-package
 
@@ -17,6 +17,7 @@ KEYWORDS="~x86"
 IUSE="doc"
 
 DEPEND=">=virtual/ghc-6.2
+	!>=virtual/ghc-6.4
 	doc? ( >=dev-haskell/haddock-0.6-r2 )"
 RDEPEND=">=virtual/ghc-6.2"
 
@@ -32,6 +33,10 @@ src_compile() {
 	if use doc; then
 		emake doc || die "emake doc failed"
 	fi
+}
+
+src_test() {
+	make test || die "at least one test failed"
 }
 
 src_install() {

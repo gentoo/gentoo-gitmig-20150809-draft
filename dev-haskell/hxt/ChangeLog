@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hxt
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.1 2005/02/26 17:37:05 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.2 2005/03/19 22:09:42 kosmikus Exp $
+
+  19 Mar 2005; Andres Loeh <kosmikus@gentoo.org> hxt-4.02.ebuild:
+  This ebuild is currently blocked by ghc-6.4 because of incompatibilities.
+  Added a test phase for the ebuild.
 
 *hxt-4.02 (26 Feb 2005)
 

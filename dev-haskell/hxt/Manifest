@@ -1,4 +1,14 @@
-MD5 5c55c3a2b4163b337f11010013bc92dc hxt-4.02.ebuild 1254
-MD5 a6aef055792944fc7e21caec36bb6186 ChangeLog 409
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 85e9eeb44ee7f85d5a1e6bd3d2cf7cc8 hxt-4.02.ebuild 1335
+MD5 bfe379678a2fcee2b9695cd38cbc7587 ChangeLog 589
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 2f65e69140f9283519e29cafc73dbd6b files/digest-hxt-4.02 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCPKQ4OKSBj1ObwosRAlQuAKCLnr9v5WWF+iXs2gFFVIih6T5VTgCeIhLD
+GHHvMFUE4EfPZVDOfpU2xKY=
+=E9Qn
+-----END PGP SIGNATURE-----
