@@ -1,0 +1,28 @@
+diff -ruN lib.orig/modules/fglrx/build_mod/agpgart_be.c lib/modules/fglrx/build_mod/agpgart_be.c
+--- lib.orig/modules/fglrx/build_mod/agpgart_be.c	2004-03-04 18:25:44.000000000 +0100
++++ lib/modules/fglrx/build_mod/agpgart_be.c	2004-05-27 16:10:56.874535000 +0200
+@@ -1402,7 +1402,8 @@
+     }
+ #endif
+ 
+-    atomic_inc(&page->count);
++    //atomic_inc(&page->count);
++    get_page(page);
+     set_bit(PG_locked, &page->flags);
+     atomic_inc(&agp_bridge.current_memory_agp);
+ 
+diff -ruN lib.orig/modules/fglrx/build_mod/firegl_public.c lib/modules/fglrx/build_mod/firegl_public.c
+--- lib.orig/modules/fglrx/build_mod/firegl_public.c	2004-05-27 16:24:10.879828208 +0200
++++ lib/modules/fglrx/build_mod/firegl_public.c	2004-05-27 16:11:33.393983000 +0200
+@@ -2059,8 +2059,8 @@
+     pMmPage = virt_to_page(kaddr);
+ #endif /* LINUX_VERSION_CODE < 0x020400 */
+ 
+-    atomic_inc(&(pMmPage->count));  /* inc usage count of page */
+-
++//    atomic_inc(&(pMmPage->count));  /* inc usage count of page */
++    get_page(pMmPage);
+ #if LINUX_VERSION_CODE >= 0x020400
+   //  __KE_DEBUG3("vm-address 0x%08lx => kernel-page-address 0x%p\n",
+     //    address, page_address(pMmPage));
+
