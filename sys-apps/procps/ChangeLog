@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.77 2004/08/13 15:28:25 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.78 2004/08/18 02:33:19 kumba Exp $
+
+  17 Aug 2004; Joshua Kinard <kumba@gentoo.org>
+  files/procps-mips-define-pagesize.patch:
+  Tweak patch to add #ifndef lines.
 
   13 Aug 2004; Brandon Low <lostlogic@gentoo.org> procps-3.2.3.ebuild:
   Make the sysctl.conf a doc not an /etc file

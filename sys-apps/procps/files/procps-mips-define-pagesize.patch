@@ -1,11 +1,12 @@
-diff -Naurp procps-3.2.3.orig/ps/common.h procps-3.2.3/ps/common.h
---- procps-3.2.3.orig/ps/common.h	2004-04-25 17:03:18.000000000 -0400
-+++ procps-3.2.3/ps/common.h	2004-08-12 14:14:15.000000000 -0400
-@@ -16,6 +16,8 @@
+--- ps/common.h.orig	2004-08-17 22:28:05.459171904 -0400
++++ ps/common.h	2004-08-17 22:28:34.370776672 -0400
+@@ -16,6 +16,10 @@
  #include "../proc/readproc.h"
  #include <asm/page.h>  /* looks safe for glibc, we need PAGE_SIZE */
  
-+#define PAGE_SIZE sysconf(_SC_PAGESIZE)
++#ifndef PAGE_SIZE
++#define PAGE_SIZE (sysconf(_SC_PAGESIZE))
++#endif
 +
  #if 0
  #define trace(args...) printf(## args)
