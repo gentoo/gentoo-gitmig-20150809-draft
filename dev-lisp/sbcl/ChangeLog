@@ -1,11 +1,19 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.2 2002/07/16 16:08:59 phoenix Exp $
+
+*sbcl-0.7.5 (16 Jul 2002)
+
+  16 Jul 2002; phoen][x <phoenix@gentoo.org> sbcl-0.7.5.ebuild, files/digest-sbcl-0.7.5 :  
+  Bumped to new Version.
+  
+  Ebuild contributed by Marius Bernklev <mariube@unixcore.com>.
+  Thanks for the contribution.
+
 
 *sbcl-0.6.12 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
