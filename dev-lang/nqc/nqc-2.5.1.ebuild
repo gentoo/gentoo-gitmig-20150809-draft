@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-2.5.1.ebuild,v 1.3 2003/09/29 21:10:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-2.5.1.ebuild,v 1.4 2004/01/01 16:28:56 lu_zero Exp $
 
 My_PV="`echo $PV|cut -d. -f1,2`.r`echo $PV|cut -d. -f3`"
 My_P="${PN}-${My_PV}"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.baumfamily.org/nqc/"
 
 SLOT="0"
 LICENSE="MPL-1.0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/glibc"

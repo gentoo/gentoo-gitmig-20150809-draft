@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/nqc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.1 2003/06/21 07:03:06 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.2 2004/01/01 16:28:56 lu_zero Exp $
+
+  01 Jan 2004; Luca Barbato <lu_zero@gentoo.org> nqc-2.5.1.ebuild:
+  Marked ~ppc
 
 *nqc-2.5.1.ebuild (20 Jun 2003)
 
