@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.60a-r1.ebuild,v 1.6 2005/03/25 22:52:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.60a-r1.ebuild,v 1.7 2005/03/30 23:09:38 gustavoz Exp $
 
 IUSE="jabber ssl"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://search.cpan.org/~byrne/${P}"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 amd64 ~ppc ~sparc alpha"
+KEYWORDS="x86 amd64 ~ppc sparc alpha"
 
 myconf="${myconf} --noprompt"
 
