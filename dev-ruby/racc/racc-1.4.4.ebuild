@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.4.ebuild,v 1.3 2004/03/13 19:49:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.4.ebuild,v 1.4 2004/04/10 12:06:11 usata Exp $
 
 inherit ruby
 
@@ -19,4 +19,5 @@ DEPEND="|| ( >=dev-lang/ruby-1.8
 		( =dev-lang/ruby-1.6*
 		>=dev-ruby/amstd-1.9.5
 		>=dev-ruby/strscan-0.6.5 )
+		dev-lang/ruby-cvs
 	)"

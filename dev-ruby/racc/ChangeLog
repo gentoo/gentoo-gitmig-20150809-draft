@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.12 2004/03/13 19:49:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.13 2004/04/10 12:06:11 usata Exp $
+
+  10 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> racc-1.4.3-r1.ebuild,
+  racc-1.4.3.ebuild, racc-1.4.4.ebuild:
+  virtual/ruby fix
 
 *racc-1.4.4 (22 Jan 2004)
 
