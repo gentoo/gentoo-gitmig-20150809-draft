@@ -165,3 +165,4 @@
 >=net-fs/samba-winbind-20010329-r6
 >=net-www/wwwoffle-2.6d-r6
 >=net-www/squid-2.4.2s-r6
+>=net-dialup/ppp-2.4.1-r6

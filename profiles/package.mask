@@ -16,10 +16,6 @@ media-libs/id3lib-docs
 #still not working:
 =sys-libs/ncurses-5.2-r4
 
-#wget-1.7-r2 works, but Aron wants to make sure there's no impact to
-#buildcd, etc.
-=net-misc/wget-1.7-r2
-
 #db-3.2.9 is untested by the system team
 >=sys-libs/db-3.2.9
 
@@ -239,7 +235,4 @@ gnome-apps/gnapster
 # Moved, use from app-text instead:
 app-doc/gmanedit
 app-doc/tkinfo
-
-# This really needs some testing
-=net-dialup/ppp-2.4.1-r6
 
