@@ -1,6 +1,11 @@
 # ChangeLog for net-im/ayttm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ChangeLog,v 1.12 2004/06/24 22:49:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ChangeLog,v 1.13 2004/07/01 11:37:03 usata Exp $
+
+*ayttm-0.4.6-r1 (01 Jul 2004)
+
+  01 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> ayttm-0.4.6-r1.ebuild:
+  Updated source tarball for yahoo new authentication protocol
 
   05 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> ayttm-0.4.4.ebuild,
   ayttm-0.4.5.ebuild:
