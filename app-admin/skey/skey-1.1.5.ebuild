@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5.ebuild,v 1.2 2003/09/05 13:45:09 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5.ebuild,v 1.3 2003/09/14 17:10:21 taviso Exp $
 
 inherit flag-o-matic ccc
 
 DESCRIPTION="Linux Port of OpenBSD Single-key Password System"
 HOMEPAGE="http://www.sparc.spb.su/solaris/skey/"
-SRC_URI="http://www.sparc.spb.su/solaris/skey/${P}.tar.bz2
+SRC_URI="mirror://gentoo/${P}.tar.bz2
 		doc? ( http://www.ietf.org/rfc/rfc1938.txt )"
 
 LICENSE="BSD X11"
