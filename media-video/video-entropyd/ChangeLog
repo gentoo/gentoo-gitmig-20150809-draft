@@ -1,0 +1,10 @@
+# ChangeLog for media-video/video-entropyd
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/video-entropyd/ChangeLog,v 1.1 2004/11/21 02:30:07 robbat2 Exp $
+
+*video-entropyd-0.7 (20 Nov 2004)
+
+  20 Nov 2004; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +video-entropyd-0.7.ebuild:
+  Initial ebuild by Robin H. Johnson <robbat2@gentoo.org>
+

@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fc273822a7121894305e00e208d999ba video-entropyd-0.7.ebuild 853
+MD5 fc4cfb3d427ef5bd5c964941d91358be ChangeLog 418
+MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
+MD5 fac71a46004abf5f42c8410c35507dd4 files/digest-video-entropyd-0.7 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFBn/22PpIsIjIzwiwRAko2AKDmqxODGLZc/Bi0S1xl8z7y4wsX0wCfeSTK
+pY6mcK3Rcj1/d3vcJU3V+v8=
+=gGcC
+-----END PGP SIGNATURE-----
