@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>python</herd>
+<maintainer>
+	<email>satya@gentoo.org</email>
+	<name>Christian Andreetta</name>
+</maintainer>
+<longdescription>
+Approximate String Matching in Python: identifies typing and spelling errors, closely related vocabularies, genetic mutations (GAG ACT), abbreviations. While it implements the same algorithm as the agrep program, Apse lets the user choose how many edits (substitutions, deletions, additions) will be acceptable as 'match'.
+</longdescription>
+</pkgmetadata>

@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/apse
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.1 2005/01/24 17:58:59 satya Exp $
+
+*apse-0.2 (24 Jan 2005)
+
+  24 Jan 2005; Christian Andreetta <satya@gentoo.org> +metadata.xml,
+  +apse-0.2.ebuild:
+  New package submission
+
