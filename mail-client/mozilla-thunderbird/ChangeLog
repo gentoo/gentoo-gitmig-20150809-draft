@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.35 2004/11/15 02:23:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.36 2004/11/16 16:08:54 agriffis Exp $
+
+  16 Nov 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-thunderbird-0.9-r2.ebuild:
+  Remove IUSE=gtk2 because we always depend on gtk2 now
 
   14 Nov 2004; Aron Griffis <agriffis@gentoo.org>
   mozilla-thunderbird-0.9-r2.ebuild:

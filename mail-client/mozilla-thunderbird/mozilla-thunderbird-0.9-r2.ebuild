@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.9-r2.ebuild,v 1.2 2004/11/15 02:22:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.9-r2.ebuild,v 1.3 2004/11/16 16:08:54 agriffis Exp $
 
-IUSE="crypt gtk2"
+IUSE="crypt"
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozconfig mozilla-launcher makeedit
