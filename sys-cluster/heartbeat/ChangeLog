@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.9 2003/10/16 02:14:15 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.10 2003/11/13 14:24:50 tuxus Exp $
+
+  13 Nov 2003; <tuxus@gentoo.org> heartbeat-1.1.3.ebuild:
+  added mips to KEYWORDS
 
   15 Oct 2003; <iggy@gentoo.org> heartbeat-1.0.4.ebuild:
   I had to fasttrack this to arch due to a known vulerability in the 1.0.3 and earlier
