@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squidguard/squidguard-1.2.0-r1.ebuild,v 1.3 2004/06/25 01:12:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squidguard/squidguard-1.2.0-r1.ebuild,v 1.4 2004/07/15 04:10:51 cyfred Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A} || die "unpack problem"
 	cd ${S}
 	epatch ${FILESDIR}/${P}-db4.patch
+	epatch ${FILESDIR}/${P}-db41.patch
 	autoconf || die "autoconf problem"
 }
 

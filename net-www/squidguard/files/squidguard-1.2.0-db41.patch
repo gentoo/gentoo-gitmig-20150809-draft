@@ -1,0 +1,24 @@
+--- src/sgDb.c	2004-07-04 11:36:19.020675285 +0100
++++ src/sgDb.ok.c	2004-07-04 11:40:25.011222369 +0100
+@@ -98,13 +98,21 @@
+     if(createdb)
+       flag = flag | DB_TRUNCATE;
+     if ((ret = 
++#if DB_VERSION_MINOR == 1
++	 Db->dbp->open(Db->dbp, NULL, dbfile, NULL, DB_BTREE, flag, 0664)) != 0) {
++#else
+ 	 Db->dbp->open(Db->dbp, dbfile, NULL, DB_BTREE, flag, 0664)) != 0) {
++#endif
+       (void) Db->dbp->close(Db->dbp, 0);
+       sgLogFatalError("Error db_open: %s", strerror(ret));
+     }
+   } else {
+     if ((ret = 
++#if DB_VERSION_MINOR == 1
++	 Db->dbp->open(Db->dbp, NULL, dbfile, NULL, DB_BTREE, DB_CREATE, 0664)) != 0) {
++#else
+ 	 Db->dbp->open(Db->dbp, dbfile, NULL, DB_BTREE, DB_CREATE, 0664)) != 0) {
++#endif
+       sgLogFatalError("Error db_open: %s", strerror(ret));
+     }
+   }
