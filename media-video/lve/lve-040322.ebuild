@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lve/lve-040322.ebuild,v 1.8 2004/09/05 18:06:43 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lve/lve-040322.ebuild,v 1.9 2005/01/11 20:28:06 chriswhite Exp $
 
 inherit eutils gcc
 
@@ -49,7 +49,17 @@ src_unpack() {
 src_compile() {
 	cd ${WORKDIR}/lve
 
-	make || die
+	make config
+
+	cd src
+	make global_config
+	cd ..
+
+	sed -e "s:CFLAGS.*:CFLAGS = ${CFLAGS}:" \
+	-i src/global_config \
+	|| die "Could not patch in CFLAGS"
+
+	make CLFAGS="${CFLAGS}" || die
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/lve
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lve/ChangeLog,v 1.8 2004/09/05 18:06:43 malc Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/lve/ChangeLog,v 1.9 2005/01/11 20:28:06 chriswhite Exp $
+
+  12 Jan 2005; Chris White <chriswhite@gentoo.org> lve-040322.ebuild:
+  Fixed lots of broken things as far as CFLAGS and configuration.
 
   05 Sep 2004; Malcolm Lashley <malc@gentoo.org> lve-040322.ebuild:
   ~amd64 closes 59091
