@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <danarmak@gentoo.org> ( 26 Nov 2002)
+# masking because I'm not a libxml2/gnome guy, so bugs created by me would have to be solved
+# by someone else. Hopefully a gnome guy will look at it and unmask it. i need it to fix a bug
+# in previous versions.
+=dev-libs/libxml2-2.4.28
+
 # <bcowan@gentoo.org> (25 Nov 2002)
 # masking until db-4* are unmasked
 # that way emerge -pu world works
