@@ -1,6 +1,19 @@
 # ChangeLog for dev-util/gambas
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.18 2004/10/11 04:15:07 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.19 2004/11/14 08:49:54 genone Exp $
+
+*gambas-1.0_rc2 (14 Nov 2004)
+
+  14 Nov 2004; Marius Mauch <genone@gentoo.org> -files/Makefile.am-0.90,
+  -files/Makefile.am-0.93, -files/Makefile.am-0.94,
+  +files/Makefile.am-1.0_rc2, -files/gbx_exec_enum-0.92.patch,
+  -files/info-location-0.90.patch, -files/non-symlink-0.90.patch,
+  -files/non-symlink-0.94.patch, -files/non-symlink-0.95.patch,
+  -gambas-0.95.ebuild, -gambas-0.97a.ebuild, gambas-0.99.ebuild, 
+  +gambas-1.0_rc2.ebuild:
+  - version bump
+  - marking 0.99 stable
+  - cleaning old versions and old auxiliary files
 
 *gambas-0.99 (11 Oct 2004)
 

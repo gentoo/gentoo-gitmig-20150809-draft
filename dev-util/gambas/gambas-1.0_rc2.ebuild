@@ -1,16 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.95.ebuild,v 1.2 2004/08/23 08:06:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0_rc2.ebuild,v 1.1 2004/11/14 08:49:54 genone Exp $
 
 inherit eutils
 
+MY_P="${PN}-0.99.RC2"
+S="${WORKDIR}/${MY_P}"
+
 DESCRIPTION="a RAD tool for BASIC"
 HOMEPAGE="http://gambas.sourceforge.net"
-SRC_URI="http://gambas.sourceforge.net/${P}.tar.bz2"
+SRC_URI="http://gambas.sourceforge.net/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="postgres mysql sdl doc curl debug sqlite"
 
 DEPEND=">=sys-devel/automake-1.7.5
@@ -26,11 +29,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i 's:-Os::' configure
-	# replace braindead Makefile
+	# replace braindead Makefile (it's getting better, but 
+	# still has the stupid symlink stuff)
 	rm Makefile*
-	cp "${FILESDIR}/Makefile.am-0.94" ./Makefile.am
-	# patches against hardcoded paths
-	epatch ${FILESDIR}/non-symlink-0.95.patch
+	cp "${FILESDIR}/Makefile.am-1.0_rc2" ./Makefile.am
 
 	automake
 }
@@ -70,6 +72,6 @@ src_install() {
 		dohtml ${FILESDIR}/WebHome.html
 	fi
 	rm -rf ${D}/usr/share/${PN}/help ${D}/usr/share/${PN}/examples
-	dosym /usr/share/doc/${PF}/html /usr/share/${PN}/help
-	dosym /usr/share/doc/${PF}/examples /usr/share/${PN}/examples
+	dosym ../doc/${PF}/html /usr/share/${PN}/help
+	dosym ../doc/${PF}/examples /usr/share/${PN}/examples
 }

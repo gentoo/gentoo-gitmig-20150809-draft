@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.99.ebuild,v 1.1 2004/10/11 04:15:07 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.99.ebuild,v 1.2 2004/11/14 08:49:54 genone Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://gambas.sourceforge.net/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="postgres mysql sdl doc curl debug sqlite"
 
 DEPEND=">=sys-devel/automake-1.7.5

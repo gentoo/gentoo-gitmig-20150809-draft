@@ -1,0 +1,49 @@
+SUBDIRS = libltdl src
+EXTRA_DIST = TODO reconf app examples spec help debian README README.REDHAT README.DEBIAN
+##AUTOMAKE_OPTIONS = dist-bzip2
+
+install-exec-local:
+	@if test "x$(ROOT)" != "x"; then \
+	 echo "Installing with ROOT=$(ROOT)"; \
+         echo; \
+        fi
+
+	@if test "x$(DESTDIR)" != "x"; then \
+	 echo "Installing with DESTDIR=$(DESTDIR)"; \
+         echo; \
+	 ROOT=$DESTDIR; \
+        fi
+
+	@echo
+	@echo "Creating the library info files..."
+	@rm -rf $(DESTDIR)$(pkgdatadir)/info
+	@$(INSTALL) -d $(DESTDIR)$(pkgdatadir)/info
+	@$(DESTDIR)$(bindir)/gbi -a -r $(prefix)
+	@rm -f $(DESTDIR)$(pkglibdir)/lib.gb.la
+	@rm -f $(DESTDIR)$(pkglibdir)/lib.gb.so*
+
+	@echo
+	@echo "Installing the development environment..."
+	@(cd $(srcdir)/app; d=`pwd`; for p in *; do echo "Compiling $$p..."; cd $$d/$$p; \
+	  $(DESTDIR)$(bindir)/gbc -ag; $(DESTDIR)$(bindir)/gba; rm -rf .gambas; $(INSTALL) $$p $(DESTDIR)$(bindir); done)
+	@if test "$(bindir)" != "$(ROOT)/usr/bin" && test "$(bindir)" != "$(ROOT)/usr/bin/"; then \
+	 rm -f $(ROOT)/usr/bin/gambas; \
+	 ln -s $(DESTDIR)$(bindir)/gambas $(ROOT)/usr/bin/gambas; \
+        fi
+
+	@echo
+	@echo "Installing the gambas help files..."
+	@$(INSTALL) -d $(DESTDIR)$(pkgdatadir)/help
+	@rm -rf $(DESTDIR)$(pkgdatadir)/help
+	@cp -R $(srcdir)/help $(DESTDIR)$(pkgdatadir)
+
+	@echo
+	@echo "Installing the gambas examples..."
+	@rm -rf $(DESTDIR)$(pkgdatadir)/examples
+	@$(INSTALL) -d $(DESTDIR)$(pkgdatadir)/examples
+	@cp -R $(srcdir)/examples $(DESTDIR)$(pkgdatadir)
+	@(cd $(DESTDIR)$(pkgdatadir)/examples; d=`pwd`; for p in */ */*/; do cd $$d/$$p; \
+	  if test -e .project; then \
+	    echo "Compiling $$p..."; cd $$d/$$p; $(DESTDIR)$(bindir)/gbc -ag; $(DESTDIR)$(bindir)/gba; \
+	  fi \
+	done)
