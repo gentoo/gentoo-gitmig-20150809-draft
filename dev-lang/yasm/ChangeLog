@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/yasm
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.1 2004/02/09 08:02:58 augustus Exp $
+
+*yasm-0.3.0 (09 Feb 2004)
+
+  09 Feb 2004; <augustus@gentoo.org> yasm-0.3.0.ebuild:
+  New ebuild for yasm. Keyworded ~amd64 and ~x86. Ran tests that came with
+  package. All seems well. Needs testing with some real code.
+
