@@ -33,10 +33,6 @@
 # uses old libnet and may contain secuirty hole.
 <=net-analyzer/hogwash-0.4
 
-# scandium@gentoo.org (20 Aug 2003)
-# Final testing prior to stable.
->=sys-apps/portage-2.0.49_pre19
-
 # scandium@gentoo.org (19 Aug 2003)
 # security holes !
 <=net-p2p/xmule-1.4.3
