@@ -1,10 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.12 2002/07/05 06:07:37 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.13 2002/07/05 14:41:15 lostlogic Exp $
 
-*openssh-3.4_p1-r1 (02 July 2002)
+*openssh-3.4_p1-r2 (04 July 2002)
 
-  02 July 2002; Brandon Low <lostlogic@gentoo.org> : openssh-3.4_p1-r1.ebuild
+  04 July 2002; Brandon Low <lostlogic@gentoo.org> : openssh-3.4_p1-r2.ebuild
 
   Fixes problem of /var/empty being removed if immediately do emerge openssh
   emerge openssh.  Not an urgent upgrade, but recommended.
