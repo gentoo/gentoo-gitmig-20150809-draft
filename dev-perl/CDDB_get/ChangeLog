@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/CDDB_get
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB_get/ChangeLog,v 1.6 2003/02/12 06:14:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB_get/ChangeLog,v 1.7 2003/06/01 00:04:09 rac Exp $
+
+*CDDB_get-1.66-r2 (31 May 2003)
+
+  31 May 2003; <rac@gentoo.org> CDDB_get-1.66-r1.ebuild,
+  CDDB_get-1.66-r2.ebuild, CDDB_get-2.10-r1.ebuild, CDDB_get-2.10-r2.ebuild:
+  Clean old versions, as 2.10-r2 is marked stable on every arch mentioned in any
+  older ebuild versions. Also eliminating duplicate SLOT definition. Thanks to
+  mcummings for finding this.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
