@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.54 2005/02/05 20:51:21 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.55 2005/02/15 14:04:00 ka0ttic Exp $
+
+  15 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> vixie-cron-4.1-r5.ebuild:
+  Fix dopamd invocation since the semantics were changed.
 
   05 Feb 2005; Aaron Walker <ka0ttic@gentoo.org>
   -vixie-cron-3.0.1-r1.ebuild, -vixie-cron-3.0.1-r3.ebuild,

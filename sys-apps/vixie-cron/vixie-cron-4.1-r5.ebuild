@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r5.ebuild,v 1.1 2005/01/15 12:42:14 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r5.ebuild,v 1.2 2005/02/15 14:04:00 ka0ttic Exp $
 
 inherit cron toolchain-funcs debug
 
@@ -64,7 +64,7 @@ src_install() {
 	newins ${FILESDIR}/${P}-cron.deny cron.deny
 
 	keepdir /etc/cron.d
-	use pam && dopamd ${FILESDIR}/cron.pam.d cron
+	newpamd ${FILESDIR}/cron.pam.d cron
 	newinitd ${FILESDIR}/vixie-cron.rc6 vixie-cron
 
 	# doc stuff
@@ -74,7 +74,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ -f ${ROOT}/etc/init.d/vcron ]
+	if [[ -f ${ROOT}/etc/init.d/vcron ]]
 	then
 		ewarn "Please run:"
 		ewarn "rc-update del vcron"
@@ -82,7 +82,7 @@ pkg_postinst() {
 	fi
 
 	# bug 71326
-	if [ -u ${ROOT}/etc/pam.d/cron ] ; then
+	if [[ -u ${ROOT}/etc/pam.d/cron ]] ; then
 		echo
 		ewarn "Warning: previous ebuilds didn't reset permissions prior"
 		ewarn "to installing crontab, resulting in /etc/pam.d/cron being"

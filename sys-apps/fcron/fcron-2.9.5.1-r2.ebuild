@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.9.5.1-r2.ebuild,v 1.2 2005/01/24 00:19:42 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.9.5.1-r2.ebuild,v 1.3 2005/02/15 14:04:21 ka0ttic Exp $
 
 inherit cron
 
@@ -81,10 +81,8 @@ src_install() {
 	doins ${FILESDIR}/fcron.{allow,deny}
 	newins ${FILESDIR}/fcron.conf-${PV} fcron.conf
 
-	if use pam ; then
-		dopamd ${FILESDIR}/fcron.pam fcron
-		dopamd ${FILESDIR}/fcrontab.pam fcrontab
-	fi
+	newpamd ${FILESDIR}/fcron.pam fcron
+	newpamd ${FILESDIR}/fcrontab.pam fcrontab
 
 	insinto /etc
 	doins ${FILESDIR}/crontab
