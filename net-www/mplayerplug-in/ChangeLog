@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.11 2003/10/26 19:22:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.12 2003/12/03 02:12:10 seemant Exp $
+
+*mplayerplug-in-1.0 (02 Dec 2003)
+
+  02 Dec 2003; Seemant Kulleen <seemant@gentoo.org>
+  mplayerplug-in-0.80.ebuild, mplayerplug-in-1.0.ebuild:
+  version bump
 
 *mplayerplug-in-1.0_pre2 (26 Oct 2003)
 
