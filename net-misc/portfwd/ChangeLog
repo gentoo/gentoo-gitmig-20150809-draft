@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/portfwd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/ChangeLog,v 1.4 2003/12/03 21:23:14 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/ChangeLog,v 1.5 2003/12/11 16:35:38 avenj Exp $
+
+	11 Dec 2003; Jon Portnoy <avenj@gentoo.org> files/portfwd.init :
+	Another fix, bug 33994.
 
 *portfwd-0.26_rc6-r1 (03 Dec 2003)
 
