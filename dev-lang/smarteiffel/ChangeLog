@@ -1,8 +1,19 @@
 # ChangeLog for dev-lang/smarteiffel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/ChangeLog,v 1.1 2002/11/22 08:46:34 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/ChangeLog,v 1.2 2002/12/10 08:45:49 george Exp $
 
 *smarteiffel-1.00beta5 (16 Nov 2002)
+
+  09 Dec 2002; George Shapovalov <george@gentoo.org> smarteiffel-1.0.ebuild, files/digest-smarteiffel-1.0 :
+
+  smarteiffel-1.0 released, version update. Changes to ebuild (by Per Wigren <wigren@home.se>):
+  * Support for TinyCC as default compiler using "tcc"-useflag.   - problematic at the moment, commented uot (George)
+  * Added a SE_DIR environment-variable so all extra-packages can depend on it.
+  * Changed SE_DIR to /usr/lib/SmartEiffel, because that is the default dir if the
+  SmartEiffel-variable is not set, and a few 3rd-party-packages expect it.
+  * Don't rename compile to se-compile anymore! This breaks ALL 3rd-party-packages!
+  * SmartEiffel is now distributed with versionnumbered filenames so there's no
+  need to rename+mirror anymore! ;)
 
   22 Nov 2002; George Shapovalov <george@gentoo.org> smarteiffel-1.0_beta5.ebuild, files/digest-smarteiffel-1.0_beta5 :
   cleaned up and committed to portage.
