@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcalendar
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.12 2004/07/18 22:03:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.13 2004/08/24 02:00:26 tgall Exp $
+
+  22 Aug 2004; Tom Gall <tgall@gentoo.org> xcalendar-4.0.ebuild:
+  stable on ppc64, bug #58695
 
   18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> xcalendar-4.0.ebuild:
   Added amd64 keyword, closing #57484.
