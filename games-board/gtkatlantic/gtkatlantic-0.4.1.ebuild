@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkatlantic/gtkatlantic-0.4.1.ebuild,v 1.1 2004/07/21 09:01:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkatlantic/gtkatlantic-0.4.1.ebuild,v 1.2 2004/07/22 21:04:07 dholm Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://gtkatlantic.gradator.net/downloads/v0.4/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND="=x11-libs/gtk+-2*
