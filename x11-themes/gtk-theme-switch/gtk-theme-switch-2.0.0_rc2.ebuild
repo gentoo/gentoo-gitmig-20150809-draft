@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-2.0.0_rc2.ebuild,v 1.1 2002/06/29 09:27:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-2.0.0_rc2.ebuild,v 1.2 2002/07/07 02:46:34 seemant Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -12,6 +12,7 @@ LICENSE="GPL"
 DEPEND="=x11-libs/gtk+-2*"
 RDEPEND="${DEPEND}"
 SLOT="2"
+KEYWORDS="*"
 
 src_compile() {
 	make || die
