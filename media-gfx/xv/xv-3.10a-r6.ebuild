@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r6.ebuild,v 1.5 2004/02/02 19:46:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r6.ebuild,v 1.6 2004/02/17 23:02:05 agriffis Exp $
 
 inherit ccc flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.cis.upenn.edu/pub/xv/${P}.tar.gz"
 
 LICENSE="xv"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 mips hppa"
+KEYWORDS="~x86 ~ppc ~sparc alpha ~amd64 mips hppa ia64"
 IUSE="jpeg tiff png"
 
 DEPEND="virtual/x11

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.26 2004/02/02 19:46:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.27 2004/02/17 23:02:05 agriffis Exp $
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> xv-3.10a-r6.ebuild:
+  stable on alpha and ia64
 
   02 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> xv-3.10a-r3.ebuild,
   xv-3.10a-r5.ebuild, xv-3.10a-r6.ebuild:
