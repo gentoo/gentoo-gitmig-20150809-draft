@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.0.ebuild,v 1.4 2003/07/09 00:18:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.0-r1.ebuild,v 1.1 2003/07/09 00:18:23 liquidx Exp $
 
 IUSE="ssl"
 
@@ -13,9 +13,9 @@ SLOT="0"
 LICENSE="MPL-1.1"
 KEYWORDS="~x86 ~ppc -sparc "
 
-# FIXME: dep on ffmpeg but ./configure does not detect it properly
 DEPEND=">=sys-apps/sed-4
 	>=dev-libs/pwlib-1.5.0
+	>=media-libs/ffmpeg-0.4.7_pre20030624
 	ssl? ( dev-libs/openssl )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
@@ -39,9 +39,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	sed -i -e "s:/usr/local/include/ffmpeg:/usr/include/ffmpeg:" configure
-	epatch ${FILESDIR}/${P}-ptracing.patch
+	# enabling ffmpeg/h263 support
+	cd ${S}; sed -i -e "s:/usr/local/include/ffmpeg:/usr/include/ffmpeg:" configure
 }
 
 src_compile() {
@@ -50,7 +49,8 @@ src_compile() {
 	export PWLIBDIR=/usr/share/pwlib
 	export OPENH323DIR=${S}
 
-	makeopts="${makeopts} ASNPARSER=/usr/bin/asnparser"
+	# NOTRACE avoid compilation problems, we disable PTRACING using NOTRACE=1
+	makeopts="${makeopts} ASNPARSER=/usr/bin/asnparser NOTRACE=1"
 
 	
 	if [ "`use ssl`" ]; then
@@ -64,10 +64,14 @@ src_compile() {
 }
 
 src_install() {
-
+	local OPENH323_ARCH ALT_ARCH
+	# make NOTRACE=1 opt ==> linux_$ARCH_n
+	# make opt           ==> linux_$ARCH_r
+	OPENH323_ARCH="linux_${ARCH}_n"
+	
 	dodir /usr/bin /usr/lib/ /usr/share
 	make PREFIX=${D}/usr install || die "install failed"
-	dobin ${S}/simple/obj_linux_x86_r/simph323
+	dobin ${S}/samples/simple/obj_${OPENH323_ARCH}/simph323
 
 	find ${D} -name 'CVS' -type d | xargs rm -rf
 
@@ -76,13 +80,16 @@ src_install() {
 	newins ${FILESDIR}/openh323-1.11.7-emptyMakefile Makefile
 
 	rm ${D}/usr/lib/libopenh323.so
-	if [ ${ARCH} = "ppc" ] ; then
-		dosym /usr/lib/libh323_linux_ppc_r.so.${PV} /usr/lib/libopenh323.so
-	else
-		dosym /usr/lib/libh323_linux_x86_r.so.${PV} /usr/lib/libopenh323.so
-	fi
-
-
+	dosym /usr/lib/libh323_${OPENH323_ARCH}.so.${PV} /usr/lib/libopenh323.so
+	
+	# for backwards compatibility with _r versioned libraries
+	ALT_ARCH=${OPENH323_ARCH/_n/_r}
+	for pv in ${PV} ${PV%.[0-9]} ${PV%.[0-9]*.[0-9]}; do
+		einfo "creating /usr/lib/libh323_${ALT_ARCH}.so.${pv} symlink"
+		dosym /usr/lib/libh323_${OPENH323_ARCH}.so.${PV} /usr/lib/libh323_${ALT_ARCH}.so.${pv}
+	done
+	dosym /usr/lib/libh323_${OPENH323_ARCH}.so.${PV} /usr/lib/libh323_${ALT_ARCH}.so
+	
 }
 
 
