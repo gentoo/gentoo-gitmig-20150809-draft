@@ -1,0 +1,16 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/files/skkserv-9.6/skkserv.initd,v 1.1 2002/11/06 03:31:45 nakano Exp $
+
+start() {
+	ebegin "Starting skkserv"
+	start-stop-daemon --start --quiet --exec /usr/sbin/skkserv
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping skkserv"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/skkserv
+	eend $?
+}
