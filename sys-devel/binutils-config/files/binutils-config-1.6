@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.6,v 1.1 2005/01/02 03:42:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.6,v 1.2 2005/01/02 06:06:27 vapier Exp $
 
 # Format of /etc/env.d/binutils/:
 #  config-TARGET:	CURRENT=version for TARGET
@@ -73,7 +73,9 @@ switch_profile() {
 	mkdir -p "${ROOT}"/usr/${TARGET}/bin
 	for x in * ; do
 		ln -sf "${BINPATH}/${x}" "${ROOT}"/usr/${TARGET}/bin/${x}
+		ln -sf ../${TARGET}/bin/${x} "${ROOT}"/usr/bin/${TARGET}-${x}
 		for fake in ${FAKE_TARGETS} ; do
+			[[ -f ${ENV_D}/config-${fake} ]] && continue
 			ln -sf ../${TARGET}/bin/${x} "${ROOT}"/usr/bin/${fake}-${x}
 		done
 		if [[ ${TARGET} = "${HOST}" ]] ; then
