@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7b.ebuild,v 1.6 2003/09/24 18:28:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7b.ebuild,v 1.7 2003/09/29 03:52:58 vapier Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ warning() {
 	ewarn "should download them with emerge -f prior to the installation of ${P}."
 	ewarn "This is becuse wget may be linked against ${PN}."
 	ewarn "To generate a list of packages that links against ${PN} you can download"
-	ewarn "and run the script from http://cvs.gentoo.org/~aliz/openssl_update.sh"
+	ewarn "and run the script from http://dev.gentoo.org/~aliz/openssl_update.sh"
 	ewarn "If you are using binary packages you need to rebuild those against the"
 	ewarn "new version of ${PN}"
 	sleep 10
