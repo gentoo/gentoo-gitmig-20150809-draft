@@ -1,6 +1,12 @@
 # ChangeLog for media-video/xmovie
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/ChangeLog,v 1.2 2002/03/27 10:20:25 seemant Exp $
+
+*xmovie-1.8-r2 (27 Mar 2002)
+
+  27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> xmovie-1.8-r2.ebuild :
+
+  HTML documentation is not gzipped.
 
 *xmovie-1.8-r1 (1 Feb 2002)
 
