@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r4.ebuild,v 1.2 2004/05/20 10:18:40 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r4.ebuild,v 1.3 2004/05/21 12:19:02 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc"
 
@@ -60,7 +60,7 @@ DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
 STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
 # PIE support
-PIE_VER="8.7.6"
+PIE_VER="8.7.6.2"
 
 # ProPolice version
 PP_VER="3_4"
@@ -285,7 +285,6 @@ src_unpack() {
 	ewarn "a bad way to do things. I added it as a temporary fix until a real one"
 	ewarn "could be implemented, but it breaks on a number of archs."
 	ewarn "It would be a /very/ good idea to keep gcc 3.3.x or 3.2.x installed."
-	ewarn "NOTE: the piessp patch isnt as complete as the 3.3.3 version"
 
 	if [ -n "${PP_VER}" ] && [ "${ARCH}" != "hppa" ]
 	then
@@ -352,10 +351,11 @@ src_unpack() {
 
 	if [ -n "${PIE_VER}" ]
 	then
-		# broken as of the moment...
 		mkdir ${WORKDIR}/piepatch/skip
-		mv ${WORKDIR}/piepatch/upstream/*arm* ${WORKDIR}/piepatch/skip
-		mv ${WORKDIR}/piepatch/def/*arm* ${WORKDIR}/piepatch/skip
+		if ! use uclibc
+		then
+			mv ${WORKDIR}/piepatch/upstream/04_* ${WORKDIR}/piepatch/skip
+		fi
 		# corrects startfile/endfile selection and shared/static/pie flag usage
 		epatch ${WORKDIR}/piepatch/upstream
 		# adds non-default pie support (for now only rs6000)
