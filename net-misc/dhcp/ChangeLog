@@ -1,8 +1,13 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.5 2002/07/06 14:51:36 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.6 2002/07/21 21:07:39 owen Exp $
 
 *dhcp-3.0-r2 (16 Jun 2002)
+
+  21 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added PPC to KEYWORDS.
+
 
   6 Jul 2002; phoen][x <phoenix@gentoo.org>: dhcp-3.0-r2.ebuild:
   Added KEYWORDS.
