@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/gtk-perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.2 2002/05/04 16:00:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.3 2002/05/05 10:59:45 seemant Exp $
+
+*gtk-perl-0.7008-r2 (5 May 2002)
+
+  5 May 2002; Seemant Kulleen <seemant@gentoo.org> gtk-perl-0.7008-r2.ebuild
+  files/digest-gtk-perl-0.7008-r2 :
+
+  Switch to using the perl-module.eclass instead.  This will be adopted by
+  all the ebuilds under dev-perl
 
 *gtk-perl-0.7008-r1 (4 May 2002)
 
