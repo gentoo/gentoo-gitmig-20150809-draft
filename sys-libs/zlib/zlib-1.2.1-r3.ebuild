@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r3.ebuild,v 1.11 2004/09/23 03:51:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r3.ebuild,v 1.12 2004/09/25 03:58:11 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,10 +10,12 @@ SRC_URI="http://www.gzip.org/zlib/${P}.tar.bz2"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="alpha arm amd64 hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="build"
 
-DEPEND="virtual/libc"
+RDEPEND="virtual/libc"
+DEPEND="${RDEPEND}
+	>=sys-devel/binutils-2.14.90.0.6"
 
 src_unpack() {
 	unpack ${A}
@@ -30,7 +32,7 @@ src_unpack() {
 	#security fix. bug #61749
 	epatch ${FILESDIR}/${P}-CAN-2004-0797.patch
 	# fix shared library test on -fPIC dependant archs
-	epatch ${FILESDIR}/zlib-1.2.1-fPIC.patch
+	epatch ${FILESDIR}/${P}-fPIC.patch
 }
 
 src_compile() {
