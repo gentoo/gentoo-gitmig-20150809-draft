@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.16 2005/03/23 16:33:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.17 2005/03/26 18:04:37 kugelfang Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to & look in proper $(get_libdir))
@@ -34,3 +34,5 @@
 <sys-libs/pam-0.77-r7
 <sys-libs/pwdb-0.62-r1
 <www-client/mozilla-firefox-1.0.1
+<dev-libs/libxml2-2.6.18
+<dev-libs/libxslt-1.1.13-r1
