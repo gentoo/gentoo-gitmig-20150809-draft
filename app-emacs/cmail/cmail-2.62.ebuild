@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cmail/cmail-2.62.ebuild,v 1.1 2004/05/01 12:23:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cmail/cmail-2.62.ebuild,v 1.2 2004/05/01 19:33:31 mr_bones_ Exp $
 
 inherit elisp
 
@@ -19,8 +19,6 @@ RDEPEND="${DEPEND}
 	virtual/flim
 	virtual/semi"
 
-S=${WORKDIR}/${P}
-
 SITEFILE="70cmail-gentoo.el"
 
 src_compile() {
@@ -35,7 +33,7 @@ src_install() {
 
 	elisp-site-file-install ${FILESDIR}/${SITEFILE} || die
 
-	dodoc ChangeLog INTRO* README* RELNOTES* 
+	dodoc ChangeLog INTRO* README* RELNOTES*
 	dodoc doc/FAQ doc/README* doc/cmail-r2c* doc/glossary
 	dodoc sample*
 }
