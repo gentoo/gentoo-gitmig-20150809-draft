@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.8.0.1.ebuild,v 1.5 2004/11/12 01:54:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.8.0.1.ebuild,v 1.6 2004/12/11 09:37:39 kloeri Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ppc ~alpha sparc ~hppa ~amd64 ~ia64 ~mips ~ppc64 ~arm"
+KEYWORDS="x86 ppc alpha sparc ~hppa ~amd64 ~ia64 ~mips ~ppc64 ~arm"
 IUSE="doc"
 
 RDEPEND=">=x11-libs/gtk+-2.1
