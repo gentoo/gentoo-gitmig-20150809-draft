@@ -1,6 +1,6 @@
-# ChangeLog for <net-analyzer>/<gensink>
+# ChangeLog for net-analyzer/gensink
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gensink/ChangeLog,v 1.1 2003/02/21 18:59:26 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gensink/ChangeLog,v 1.2 2003/04/22 10:24:13 vapier Exp $
 
 *gensink-4.1	(21 Feb 2003)
 
