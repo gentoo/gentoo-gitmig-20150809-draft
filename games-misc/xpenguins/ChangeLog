@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/xpenguins
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/xpenguins/ChangeLog,v 1.5 2004/06/24 22:59:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/xpenguins/ChangeLog,v 1.6 2004/12/28 23:06:52 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *xpenguins-2.2-r1 (03 Jun 2004)
 
@@ -31,7 +34,7 @@
   03 Nov 2002; Jon Nall <nall@gentoo.org> xpenguins-2.2.ebuild :
   added ppc to KEYWORDS
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> xpenguins-2.2.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> xpenguins-2.2.ebuild :
   Added LICENSE, KEYWORDS.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :

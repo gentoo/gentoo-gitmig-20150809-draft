@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/fortune-mod-gentoo-forums
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/ChangeLog,v 1.7 2004/12/07 21:03:59 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/ChangeLog,v 1.8 2004/12/28 23:03:37 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *fortune-mod-gentoo-forums-20041207 (07 Dec 2004)
 
@@ -8,7 +11,7 @@
   +fortune-mod-gentoo-forums-20041207.ebuild:
   Version bump.
 
-  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  19 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   fortune-mod-gentoo-forums-20040922.ebuild:
   Alpha keyword, bug 67731.
 

@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/fortune-mod-homer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-homer/ChangeLog,v 1.4 2004/06/24 22:55:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-homer/ChangeLog,v 1.5 2004/12/28 23:04:33 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *fortune-mod-homer-0.1 (12 Aug 2002)
 
@@ -10,8 +13,8 @@
   03 Nov 2002; Jon Nall <nall@gentoo.org> fortune-mod-homer-0.1.ebuild :
   changed PPC to ppc in keywords
 
-  13 Aug 2002; J. Alberto Suárez López <bass@gentoo.org> fortune-mod-homer-0.1.ebuild :
+  13 Aug 2002; J. Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> fortune-mod-homer-0.1.ebuild :
   Fix dir problems in install.
 
-  12 Aug 2002; J. Alberto Suárez López <bass@gentoo.org> fortune-mod-homer-0.1.ebuild :
+  12 Aug 2002; J. Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> fortune-mod-homer-0.1.ebuild :
   First relase.
