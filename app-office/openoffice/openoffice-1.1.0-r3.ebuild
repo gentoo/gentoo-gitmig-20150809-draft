@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r2.ebuild,v 1.8 2004/01/24 10:53:59 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0-r3.ebuild,v 1.3 2004/01/24 10:53:59 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -26,22 +26,21 @@
 #   Get support going for installing a custom language pack.  Also
 #   need to be able to install more than one language pack.
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils gcc
+
 # Compile problems with these ...
 filter-flags "-funroll-loops"
 filter-flags "-fomit-frame-pointer"
 filter-flags "-fprefetch-loop-arrays"
 append-flags "-fno-strict-aliasing"
 replace-flags "-O3" "-O2"
+replace-flags "-Os" "-O2"
 
 # Enable Bytecode Interpreter for freetype ...
 append-flags "-DTT_CONFIG_OPTION_BYTECODE_INTERPRETER"
 
-inherit gcc
 # We want gcc3 if possible!!!!
 export WANT_GCC_3="yes"
-
-inherit virtualx
 
 # Set $ECPUS to amount of processes multiprocessing build should use.
 # NOTE:  Setting this too high might cause dmake to segfault!!
@@ -51,20 +50,16 @@ inherit virtualx
 
 
 LOC="/opt"
-FT_VER="2.1.4"
-STLP_VER="4.5.3"
-MY_PV="${PV/_rc/rc}"
 INSTDIR="${LOC}/OpenOffice.org${PV}"
-S="${WORKDIR}/oo_${MY_PV/1.1.0/1.1}_src"
+S="${WORKDIR}/oo_${PV/1.1.0/1.1}_src"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
-SRC_URI="mirror://openoffice/stable/${MY_PV}/OOo_${MY_PV}_source.tar.bz2
-	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/gpc231.tar.Z
-	mirror://sourceforge/freetype/freetype-${FT_VER}.tar.bz2"
+SRC_URI="mirror://openoffice/stable/${PV}/OOo_${PV}_source.tar.bz2
+	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/gpc231.tar.Z"
 HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="~x86"
 IUSE="gnome kde"
 
 RDEPEND=">=sys-libs/glibc-2.1
@@ -82,14 +77,7 @@ RDEPEND=">=sys-libs/glibc-2.1
 DEPEND="${RDEPEND}
 	app-shells/tcsh
 	!app-office/openoffice-bin
-	sys-apps/findutils
-	!app-arch/star"
-
-# fix a bug with tcsh and dircolors
-#
-# Azarah -- 10 April 2002
-export LS_COLORS=""
-
+	sys-apps/findutils"
 
 pkg_setup() {
 
@@ -261,18 +249,16 @@ src_unpack() {
 	oo_setup
 
 	cd ${WORKDIR}
-	unpack OOo_${MY_PV}_source.tar.bz2 gpc231.tar.Z
+	unpack OOo_${PV}_source.tar.bz2 gpc231.tar.Z
 
 	# Install gpc
 	cd ${WORKDIR}/gpc231
 	cp gpc.* ${S}/external/gpc
 
 	cd ${S}
-
-	cd ${S}/stlport
-	rm STLport-4.5.3.patch
+	rm stlport/STLport-4.5.3.patch
 	epatch ${FILESDIR}/${PV}/newstlportfix.patch
-	cd ${S}
+
 	epatch ${FILESDIR}/${PV}/no-mozab.patch
 
 	epatch ${FILESDIR}/${PV}/nptl.patch
@@ -283,27 +269,18 @@ src_unpack() {
 		epatch ${FILESDIR}/${PV}/openoffice-1.1.0-sparc64-fix.patch
 	fi
 
-	#The gcc-3.2.3 version in gentoo is fixed for the internal error that
-	#blocks compilation with it, so remove the check from the configure script
-#	epatch ${FILESDIR}/${PV}/fixed-gcc.patch
-
-#	epatch ${FILESDIR}/${PV}/no-crashrep.patch
-
-#	einfo "Fixing up crashrep/source/unx/makefile.mk"
-#	sed -i -e "s,\(PRODUCT[^a-zA-Z]*\)\(FULL\),\1full," ${S}/crashrep/source/unx/makefile.mk||die
-#	einfo "Removing crashrep from the installed set"
-#	sed -i -e "s,\(crashrep \),," ${S}/instsetoo/prj/build.lst
-
 	if [ "$(gcc-version)" == "3.2" ]; then
 		einfo "You use a buggy gcc, so replacing -march=pentium4 with -march=pentium3"
 		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
 	fi
 
 	# Now for our optimization flags ...
-	perl -pi -e "s|^CFLAGSOPT=.*|CFLAGSOPT=${CFLAGS}|g" \
-		${S}/solenv/inc/unxlngi3.mk
+	export CXXFLAGS="${CXXFLAGS} -fno-for-scope -fpermissive -fno-rtti"
 	perl -pi -e "s|^CFLAGSOPT=.*|CFLAGSOPT=${CFLAGS}|g" \
 		${S}/solenv/inc/unxlngi4.mk
+	perl -pi -e "s|^CFLAGSCXX=.*|CFLAGSCXX=${CXXFLAGS}|g" \
+		${S}/solenv/inc/unxlngi4.mk
+
 
 	# Some makefiles are not multiprocess ready (Mandrake)
 	cd ${S}; einfo "Fixing makefiles for multiprocess builds..."
@@ -321,15 +298,16 @@ src_unpack() {
 get_EnvSet() {
 
 	# Determine what Env file we should be using (Az)
-	export LinuxEnvSet="LinuxIntelEnv.Set"
-	use sparc && export LinuxEnvSet="LinuxSparcEnv.Set"
-	use sparc64 && export LinuxEnvSet="LinuxSparcEnv.Set"
-	use ppc && export LinuxEnvSet="LinuxPPCEnv.Set"
-	use alpha && export LinuxEnvSet="LinuxAlphaEnv.Set"
+	export LinuxEnvSet="LinuxIntelEnv.Set.sh"
+	use sparc && export LinuxEnvSet="LinuxSparcEnv.Set.sh"
+	use sparc64 && export LinuxEnvSet="LinuxSparcEnv.Set.sh"
+	use ppc && export LinuxEnvSet="LinuxPPCEnv.Set.sh"
+	use alpha && export LinuxEnvSet="LinuxAlphaEnv.Set.sh"
 
 	# Get build specific stuff (Az)
-	export SOLVER="$(awk '/^setenv UPD / {gsub(/\"/, ""); print $3}' ${LinuxEnvSet})"
-	export SOLPATH="$(awk '/^setenv INPATH / {gsub(/\"/, ""); print $3}' ${LinuxEnvSet})"
+	export SOLVER="$(awk '/^UPD=/ {gsub(/\"/, ""); gsub(/UPD=/, ""); print $0}' ${LinuxEnvSet})"
+	export SOLPATH="$(awk '/^INPATH=/ {gsub(/\"/, ""); gsub(/INPATH=/, ""); print $0}' ${LinuxEnvSet})"
+
 }
 
 src_compile() {
@@ -346,21 +324,12 @@ src_compile() {
 	export CC="$(gcc-getCC)"
 	export CXX="$(gcc-getCXX)"
 
-	# Enable ccache for this build (Az)
-	if [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
-	     "${FEATURES/ccache/}" != "${FEATURES}" -a \
-	     -d /usr/bin/ccache -a -x /usr/bin/ccache/ccache ]
-	then
-		# Build uses its own env with $PATH, etc, so
-		# we take the easy way out. (Az)
-		export CC="/usr/bin/ccache/ccache ${CC}"
-		export CXX="/usr/bin/ccache/ccache ${CXX}"
-
 	# Enable new ccache for this build
-	elif [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
+	if [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
 	     "${FEATURES/ccache/}" != "${FEATURES}" -a \
 	     -x /usr/bin/ccache -a ! -d /usr/bin/ccache ]
 	then
+		einfo "We're using ccache for this build..."
 		# Build uses its own env with $PATH, etc, so
 		# we take the easy way out. (Az)
 		export CC="/usr/bin/ccache ${CC}"
@@ -372,6 +341,7 @@ src_compile() {
 	     "${FEATURES/distcc/}" != "${FEATURES}" -a \
 		 -x /usr/bin/distcc ]
 	then
+		einfo "We're using distcc for this build..."
 		# Do not bump ECPUS if the user did not touch it, as currently
 		# it -PP do not work properly (segfaulting). (Az)
 		[ "$(echo ${DISTCC_HOSTS} | wc -w)" -gt 1 -a "${ECPUS}" -qt 1 ] && \
@@ -398,23 +368,6 @@ src_compile() {
 	cd ${S}
 	get_EnvSet
 
-	# Do not include /usr/include in header search path, and
-	# same thing for internal gcc include dir, as gcc3 handles
-	# it correctly by default! (Az)
-	perl -pi -e "s| -I/usr/include||g" ${LinuxEnvSet}
-#	perl -pi -e "s| -I$(gcc-libpath)/include||g" ${LinuxEnvSet}
-
-	if [ "${NEW_GCC}" -eq "1" ]
-	then
-		local gcc_path="$(/usr/sbin/gcc-config --get-bin-path ${GCC_PROFILE})"
-
-		# Setup path for new gcc layout in $LinuxEnvSet, else the build
-		# environment will not find gcc ... (Az)
-		perl -pi -e "s|PATH \.:\$SOLARVER|PATH \.:${gcc_path}:\$SOLARVER|" ${LinuxEnvSet}
-		# New builds start quoting stuff ...
-		perl -pi -e "s|PATH \"\.:\$SOLARVER|PATH \"\.:${gcc_path}:\$SOLARVER|" ${LinuxEnvSet}
-	fi
-
 	# Should the build use multiprocessing?
 	# We use build.pl directly, as dmake tends to segfault. (Az)
 	if [ "${ECPUS}" -gt 1 ]
@@ -427,47 +380,19 @@ src_compile() {
 	if [ -z "$(grep 'CCCOMP' ${S}/${LinuxEnvSet})" ]
 	then
 		# Set CCCOMP and CXXCOMP.  This is still needed for STLport
-		echo "setenv CCCOMP \"${CC}\"" >> ${S}/${LinuxEnvSet}
-		echo "setenv CXXCOMP \"${CXX}\"" >> ${S}/${LinuxEnvSet}
-	fi
-
-	if [ "$(gcc-major-version)" -eq 3 ]
-	then
-		mkdir -p ${S}/solver/${SOLVER}/${SOLPATH}/{lib,inc}
-
-		einfo "Installing GCC related libs..."
-		# Workaround for missing libs with GCC3 (thanks to Debian) (Az)
-		cd ${S}/solver/${SOLVER}/${SOLPATH}/lib
-		cp $(gcc-libpath)/libstdc++.so.$(gcc-libstdcxx-major-version)* . || \
-			die "Could not copy gcc-libs!"
-		cp $(gcc-libpath)/libgcc_s.so* . || die "Could not copy gcc-libs!"
-		cd ${S}
+		export CCCOMP=${CC}
+		export CXXCOMP=${CXX}
 	fi
 
 	einfo "Bootstrapping OpenOffice.org..."
 	# Get things ready for bootstrap (Az)
 	chmod 0755 ${S}/solenv/bin/*.pl
-	mkdir -p ${S}/solver/${SOLVER}/${SOLPATH}/inc
-	touch ${S}/solver/${SOLVER}/${SOLPATH}/inc/minormkchanged.flg
 	# Bootstrap ...
 	./bootstrap
 
-	if [ "$(gcc-major-version)" -eq 3 ]
-	then
-		local LIBFILE="$(readlink `gcc-libpath`/libstdc++.so.`gcc-libstdcxx-major-version`)"
-		local LIBVERSION="$(echo ${LIBFILE} | sed -e 's|libstdc++\.so\.||g')"
-		# Get this beast to use the right version of libstdc++ ... (Az)
-		echo "LIBSTDCPP3:=${LIBVERSION}" >> \
-			${S}/solver/${SOLVER}/${SOLPATH}/inc/comp_ver.mk
-		cd ${S}
-	fi
-
 	einfo "Building OpenOffice.org..."
-	# Setup virtualmake
-	export maketype="tcsh"
-	echo "source ${S}/${LinuxEnvSet} && cd ${S}/instsetoo && ${buildcmd}" > build.tcsh
-	# Build needs X to compile! (Az)
-	virtualmake build.tcsh || die "Build failed!"
+	echo "source ${S}/${LinuxEnvSet} && cd ${S}/instsetoo && ${buildcmd}" > build.sh
+	sh build.sh || die "Build failed!"
 
 	[ -d ${S}/instsetoo/${SOLPATH} ] || die "Cannot find build directory!"
 }
@@ -481,22 +406,13 @@ src_install() {
 	addpredict "/usr/bin/soffice"
 	addpredict "/pspfontcache"
 
-	# This allows us to change languages without editing the ebuild.
-	#
-	#   languages1="ENUS,FREN,GERM,SPAN,ITAL,DTCH,PORT,SWED,POL,RUSS"
-	#   languages2="DAN,GREEK,TURK,CHINSIM,CHINTRAD,JAPN,KOREAN,CZECH,CAT"
-	#
-	# Supported languages for localized help files
-	#
-	#   helplangs="ENUS,FREN,GERM,SPAN,ITAL,SWED"
-	#
 	set_languages
 
 	get_EnvSet
 
 	# The install part should now be relatively OK compared to
 	# what it was.  Basically we use autoresponse files to install
-	# unattended, running under a Xvfb if needed.  Afterwards we
+	# unattended.  Afterwards we
 	# just cleanout ${D} from the registry, etc.  This way we
 	# do not need pre-generated registry, and also fixes some weird
 	# bugs related to the old way we did things.
@@ -517,7 +433,7 @@ src_install() {
 		JavaSupport=preinstalled_or_none
 	END_RS
 
-	# Autoresponse file for user isntallation
+	# Autoresponse file for user installation
 	cat > ${T}/rsfile-local <<-"END_RS"
 		[ENVIRONMENT]
 		INSTALLATIONMODE=INSTALL_WORKSTATION
@@ -535,10 +451,7 @@ src_install() {
 	einfo "Installing OpenOffice.org into build root..."
 	dodir ${INSTDIR}
 	cd ${S}/instsetoo/${SOLPATH}/${LANGNO}/normal
-	# Setup virtualmake
-	export maketype="./setup"
-	# We need X to install...
-	virtualmake "-v -r:${T}/autoresponse" ||die
+	./setup -v -noexit -nogui -r:${T}/autoresponse || die "Setup failed"
 
 	echo
 	einfo "Removing build root from registry..."
@@ -564,7 +477,7 @@ src_install() {
 
 	# Install user autoresponse file
 	insinto /etc/openoffice
-	sed -e "s|<pv>|${PV//_rc3/.0}|g" ${T}/rsfile-local > ${T}/autoresponse-${PV}.conf
+	sed -e "s|<pv>|${PV}|g" ${T}/rsfile-local > ${T}/autoresponse-${PV}.conf
 	doins ${T}/autoresponse-${PV}.conf
 
 	# Install wrapper script
@@ -572,15 +485,11 @@ src_install() {
 	sed -e "s|<pv>|${PV}|g" \
 		${FILESDIR}/${PV}/ooffice-wrapper-1.3 > ${T}/ooffice
 	doexe ${T}/ooffice
+
 	# Component symlinks
-	dosym ooffice /usr/bin/oocalc
-	dosym ooffice /usr/bin/oodraw
-	dosym ooffice /usr/bin/ooimpress
-	dosym ooffice /usr/bin/oomath
-	dosym ooffice /usr/bin/oowriter
-	dosym ooffice /usr/bin/ooweb
-	dosym ooffice /usr/bin/oosetup
-	dosym ooffice /usr/bin/oopadmin
+	for app in calc draw impress math writer web setup padmin; do
+		dosym ooffice /usr/bin/oo${app}
+	done
 
 	einfo "Installing Menu shortcuts (need \"gnome\" or \"kde\" in USE)..."
 	if [ -n "`use gnome`" ]
@@ -623,14 +532,9 @@ src_install() {
 		done
 	fi
 
-	# Unneeded, as they get installed into /usr/share...
-	# They are needed else user installation fails.
-#	rm -rf ${D}${INSTDIR}/share/{cde,gnome,kde}
+
+	# Remove unneeded stuff
 	rm -rf ${D}${INSTDIR}/share/cde
-#
-#	for f in ${D}/usr/share/gnome/apps/OpenOffice.org/* ; do
-#		echo 'Categories=Application;Office;' >> ${f}
-#	done
 
 	# Make sure these do not get nuked.
 	keepdir ${INSTDIR}/user/registry/res/en-us/org/openoffice/{Office,ucb}
