@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.0-r1.ebuild,v 1.2 2004/06/24 22:54:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.0-r1.ebuild,v 1.3 2004/06/30 22:48:55 kugelfang Exp $
 
 IUSE="atlas X tcltk gnome zlib bzlib pcre"
 
@@ -22,6 +22,7 @@ DEPEND="virtual/glibc
 		x86? ( atlas? ( dev-libs/atlas ) )
 		sparc? ( atlas? ( dev-libs/atlas ) )
 		~amd64? ( atlas? ( dev-libs/atlas ) )
+		~amd64? ( !f77? ( dev-lang/f2c >=dev-libs/libf2c-20021004-r1) )
 		X? ( virtual/x11 )
 		tcltk? ( dev-lang/tk )
 		pcre? ( dev-libs/libpcre )
