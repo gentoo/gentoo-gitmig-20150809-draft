@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dtd/docbook-dtd41-sgml-1.0.ebuild,v 1.1 2000/10/19 15:59:08 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dtd/docbook-dtd41-sgml-1.0.ebuild,v 1.2 2000/11/02 02:17:12 achim Exp $
 
 A="docbk41.zip ${P}.catalog.patch ${P}.Makefile"
 S=${WORKDIR}/${P}
@@ -12,6 +12,7 @@ SRC_URI="ftp://ftp.kde.org/pub/kde/devel/docbook/SOURCES/docbk41.zip
 
 HOMEPAGE="http://www.oasis-open.org/docbook/"
 
+DEPEND=">=app-arch/unzip-5.41"
 
 src_unpack() {
   mkdir ${S}

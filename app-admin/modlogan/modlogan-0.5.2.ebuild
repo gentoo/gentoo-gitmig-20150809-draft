@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.5.2.ebuild,v 1.4 2000/11/01 04:44:10 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.5.2.ebuild,v 1.5 2000/11/02 02:17:12 achim Exp $
 
 P=modlogan-0.5.2
 A="${P}.tar.gz gd-1.8.1.tar.gz"
@@ -9,6 +9,14 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Logfile Analyzer"
 SRC_URI="http://www.kneschke.de/projekte/modlogan/download/${P}.tar.gz
 	 http://www.kneschke.de/projekte/modlogan/download/gd-1.8.1.tar.gz"
+
+DEPEND=">=sys-libs/glibc-2.1.3
+	>=media-libs/freetype-1.3.1
+	>=media-libs/jpeg-6b
+	>=media-libs/libpng-1.0.8
+	>=dev-libs/libpcre-3.2
+	>=dev-db/mysql-3.23.26
+	>=x11-base/xfree-4.0.1"
 
 src_unpack() {
   unpack ${A}

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-2.20.ebuild,v 1.1 2000/10/19 15:59:08 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-2.20.ebuild,v 1.2 2000/11/02 02:17:12 achim Exp $
 
 A="${P}.zip ${P}-makefile.patch"
 S=${WORKDIR}/${P}
@@ -9,6 +9,9 @@ DESCRIPTION="TeX macros used by Jade TeX output."
 SRC_URI="http://www.tug.org/applications/jadetex/jadetex-2.20.zip
 	 ftp://ftp.kde.org/pub/kde/devel/docbook/SOURCES/${P}-makefile.patch"
 HOMEPAGE="http://"
+
+DEPEND=">=app-arch/unzip-5.41
+	>=app-text/tetex-1.0.7"
 
 src_unpack() {
 

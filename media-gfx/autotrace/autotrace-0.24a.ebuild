@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.24a.ebuild,v 1.1 2000/09/20 19:57:21 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.24a.ebuild,v 1.2 2000/11/02 02:17:12 achim Exp $
 
 A=${P}.tgz
 S=${WORKDIR}/${P}
@@ -9,6 +9,11 @@ DESCRIPTION="Converts Bitmaps to vector-grahics"
 SRC_URI="http://homepages.go.com/homepages/m/a/r/martweb/${A}"
 HOMEPAGE="http://homepages.go.com/homepages/m/a/r/martweb/AutoTrace.htm"
 
+DEPEND=">=sys-libs/glibc-2.1.3
+	>=dev-libs/glib-1.2.8
+	>=x11-libs/gtkDPS-0.3.3
+	>=x11-libs/gtk+-1.2.8
+	>=x11-base/xfree-4.0.1"
 
 src_compile() {
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-1.5.2-r2.ebuild,v 1.2 2000/10/20 09:19:41 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-1.5.2-r2.ebuild,v 1.3 2000/11/02 02:17:12 achim Exp $
 
 P=python-1.5.2      
 A="py152.tgz python-fchksum-1.1.tar.gz"
@@ -14,7 +14,14 @@ SRC_URI="http://www.python.org/ftp/python/src/py152.tgz
 HOMEPAGE="http://www.python.org
 	  http://www.azstarnet.com/~donut/programs/fchksum/"
 
-
+DEPEND=">=sys-apps/bash-2.04
+	>=sys-libs/gdbm-1.8.0
+	>=sys-libs/glibc-2.1.3
+	>=sys-libs/gpm-1.19.3
+	>=sys-libs/ncurses-5.1
+	>=dev-lang/tcl-tk-8.1.1
+	>=x11-base/xfree-4.0.1"
+	
 src_compile() {                           
     try ./configure --prefix=/usr --with-threads
     cp Makefile Makefile.orig
