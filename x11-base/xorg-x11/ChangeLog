@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.264 2005/01/11 23:24:11 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.265 2005/01/12 07:10:58 geoman Exp $
+
+  12 Jan 2005; Stephen P. Becker <geoman@gentoo.org>
+  xorg-x11-6.8.0-r4.ebuild:
+  forgot newport in 6.8.0-r4, added
 
   11 Jan 2005; Stephen P. Becker <geoman@gentoo.org>
   xorg-x11-6.7.0-r3.ebuild, xorg-x11-6.8.0-r3.ebuild,
