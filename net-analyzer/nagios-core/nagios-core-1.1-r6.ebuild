@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r6.ebuild,v 1.1 2004/02/11 13:38:13 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r6.ebuild,v 1.2 2004/02/15 11:45:49 tigger Exp $
 
 inherit eutils
 
@@ -106,8 +106,9 @@ src_compile() {
 src_install() {
 	dodoc Changelog INSTALLING LEGAL LICENSE README UPGRADING
 
-	use noweb || (
-		make DESTDIR=${D} install-html
+	use noweb && (
+		sed -i -e 's/cd $(SRC_CGI) && $(MAKE) $@/# line removed due to noweb use flag/' Makefile
+		sed -i -e 's/cd $(SRC_HTM) && $(MAKE) $@/# line removed due to noweb use flag/' Makefile
 	)
 
 	make DESTDIR=${D} install
