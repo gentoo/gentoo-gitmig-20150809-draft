@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 06aa37b9cb896b83a0ceb5a7a6b2ada7 comedi-0.7.68.ebuild 682
-MD5 50a807df2d3d0a79d4fb9b3ad4c29c4b comedi-0.7.67.ebuild 592
-MD5 207560e5ad2a77c5c3f83433acf9002a ChangeLog 639
+MD5 b45d53724f62a330e24b6ef6e6c29f1e comedi-0.7.68.ebuild 687
+MD5 7022ba8cfbf929ee23751664b4eb625a comedi-0.7.67.ebuild 593
+MD5 092d014168eb5dc95ecb32bc8e487a95 ChangeLog 840
 MD5 2134be6a8452efc15d542b70b134dcc7 metadata.xml 249
 MD5 804f8a7a298030bd85bd7f91df6388ac files/digest-comedi-0.7.67 65
 MD5 6c65ff5c4dd2926c5e7773cf22b307c4 files/digest-comedi-0.7.68 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBYMIcMSkoRwEucGERApBbAKCpWaEdvdMS6h6hUNfx/AAmR634OQCg7fIw
-9mcbAzyU1rMMZtmZV8c7dOw=
-=ulGq
+iD8DBQFB0NVoI1lqEGTUzyQRApGIAJ96cSAs9NDpiOAz3kJdKw4QSwCOsACgm9oJ
+onhRtfOhapg+iTaauERIp/4=
+=Am/i
 -----END PGP SIGNATURE-----

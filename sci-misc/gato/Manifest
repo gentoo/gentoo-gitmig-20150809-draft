@@ -1,4 +1,14 @@
-MD5 092835287eb324b7020f5da19b653ad7 gato-0.98i.ebuild 763
-MD5 664819b233a4a6a91b25ee0ce9f53d78 ChangeLog 347
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 955a4a37877dd4f8601f03d5ea0bcffb gato-0.98i.ebuild 764
+MD5 2c093d7abc0ecf5a4cd7827fb8d3525e ChangeLog 511
 MD5 af33d597ab06b0501f0f64e5f3025410 metadata.xml 218
 MD5 b4f7fc39383244105cafd3b73f8516d8 files/digest-gato-0.98i 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0NWGI1lqEGTUzyQRAhFsAKCMVwnUO5dZ1j+wrqhyfEoPNRe0dwCfZMn+
+IUKqcNb7l+iIAIACfGPH268=
+=zb6n
+-----END PGP SIGNATURE-----

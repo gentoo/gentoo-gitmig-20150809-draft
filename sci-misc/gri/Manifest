@@ -1,7 +1,17 @@
-MD5 d9d2dc7c650ca499fe7cf8b0b5076692 gri-2.12.5.ebuild 960
-MD5 e8a16c216c086ad2861ae74cb385c272 gri-2.12.7.ebuild 828
-MD5 8b15c013990650fb75660e5e76bf0968 ChangeLog 1455
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b6cca1e2cc4d2adc0f69f5a53e34ef9a gri-2.12.5.ebuild 961
+MD5 f23b872178acccfee9f934801d1c6052 gri-2.12.7.ebuild 829
+MD5 c60d551a4ef38938549fefb01e05cd1f ChangeLog 1663
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 014ac9c6c2924d77992d8b95b2df5ba8 files/digest-gri-2.12.5 60
 MD5 d0cd5ef601b56e6b711ad0cbb150d22a files/digest-gri-2.12.7 60
 MD5 640cc8c322700bef964a58c84d47dfab files/info-install.patch 395
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0NXSI1lqEGTUzyQRAoaEAJoDajygGWN3MTFm2KKhbRdKjFnS3wCfcgFd
+qZRIwL+jGiEU/UOaszPMfl8=
+=kNKw
+-----END PGP SIGNATURE-----

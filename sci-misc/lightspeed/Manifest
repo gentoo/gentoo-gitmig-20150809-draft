@@ -1,4 +1,14 @@
-MD5 26ddf994b537632716cd748a5a762110 lightspeed-1.2a.ebuild 1167
-MD5 6e40d43d37c95e274d40c190e216dbb4 ChangeLog 655
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 362aafe6804dbac03bc6aee4765f1486 lightspeed-1.2a.ebuild 1168
+MD5 a7eb36d6f4dafbae4372efd1b38147f6 ChangeLog 841
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 31ecec601dfd11e746121559c07fabe2 files/digest-lightspeed-1.2a 128
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0NY3I1lqEGTUzyQRAgbLAJwJ4EQfB3pFrRIWctSvpR2MDSjA9QCfbBVu
+Tr5LpVfLYVQDxU9XPZEG5Ag=
+=1ASZ
+-----END PGP SIGNATURE-----
