@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3-r1.ebuild,v 1.3 2000/09/05 18:01:10 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3-r1.ebuild,v 1.4 2000/09/15 20:08:47 drobbins Exp $
 
 P=openjade-1.3
 A=${P}.tar.gz
@@ -17,17 +17,17 @@ src_unpack() {
 src_compile() {                           
   cd ${S}
   SGML_PREFIX=/usr/share/sgml
-  ./configure --host=${CHOST} --prefix=/usr --datadir=/usr/share/sgml/jade --enable-http 
+  try ./configure --host=${CHOST} --prefix=/usr --datadir=/usr/share/sgml/jade --enable-http 
 #	--enable-default-catalog=$SGML_PREFIX/dtd/docbook/docbook.cat:$SGML_PREFIX/stylesheets/docbook/catalog:$SGML_PREFIX/jade/dsssl/catalog:
 #	--enable-default-search-path=/usr/share/sgml/stylesheets/docbook/:/usr/share/sgml/dtd/docbook/:/usr/share/sgml/jade/dsssl/:
-  make
+  try make
 }
 
 src_install() {                               
   cd ${S}
   dodir /usr
   dodir /usr/lib
-  make prefix=${D}/usr datadir=${D}/usr/share/sgml/jade install
+  try make prefix=${D}/usr datadir=${D}/usr/share/sgml/jade install
   dosym openjade /usr/bin/jade
   dodir /usr/share/sgml/jade
 #  rm ${D}usr/share/builtins.dsl

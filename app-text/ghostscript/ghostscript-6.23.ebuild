@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-6.23.ebuild,v 1.2 2000/08/25 15:49:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-6.23.ebuild,v 1.3 2000/09/15 20:08:46 drobbins Exp $
 
 P=ghostscript-6.23
 A="${P}.tar.gz ghostscript-fonts-std-6.0.tar.gz"
@@ -40,13 +40,13 @@ src_compile() {
   cp unix-gcc.mak unix-gcc.mak.orig
   sed    -e "s:-O2:${CFLAGS}:" unix-gcc.mak.orig > unix-gcc.mak
   cd ..
-  make -f src/all-arch.mak linux prefix=/usr
+  try make -f src/all-arch.mak linux prefix=/usr
 }
 
 src_install() {                               
   cd ${S}
   dobin bin/gs
-  make -f src/all-arch.mak prefix=${D}/usr BINDIR=${D}/usr/bin install
+  try make -f src/all-arch.mak prefix=${D}/usr BINDIR=${D}/usr/bin install
   cd ${WORKDIR}
   cp -a fonts ${D}/usr/share/ghostscript
   cd ${S}
