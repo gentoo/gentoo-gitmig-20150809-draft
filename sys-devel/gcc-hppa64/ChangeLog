@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc-hppa64
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/ChangeLog,v 1.5 2004/06/22 13:13:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/ChangeLog,v 1.6 2004/06/23 15:34:57 gmsoft Exp $
+
+*gcc-hppa64-3.3.2-r1 (23 Jun 2004)
+
+  23 Jun 2004; Guy Martin <gmsoft@gentoo.org> gcc-hppa64-3.3.2-r1.ebuild:
+  Fixed rtl-optimization for gcc 3.3.2 as well.
 
 *gcc-hppa64-3.4.0 (22 Jun 2004)
 
