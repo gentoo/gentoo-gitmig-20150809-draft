@@ -1,17 +1,35 @@
 # ChangeLog for sys-kernel/pfeifer-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.2 2003/04/15 20:56:14 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.3 2003/05/03 15:19:34 pfeifer Exp $
 
   TODO:
     ht support
     better ide chipset support (ie. CSB6)
-    fix remaining usagi issues
-    add additional netfilter patches from latest pom
+    fine tune gcc optimizations (yes, there is a bit more to look @)
   * Maybe:
     Re-add XFS (extremely doubtful)
     RSBAC
     NPTL (doubtful)
     skas
+
+*pfeifer-sources-2.4.20.1_pre8 (03 May 2003)
+
+ Changes:
+ * Added a few updates for ck6
+ * Updated SuperFreeS/WAN to 1,99,7rc2
+ * Updated to patch-o-matic from 01May2003 lotsa new goodies
+ * Updated USAGI to 28Apr2003 snapshot
+ * Made USAGI installable by a USE flag 'USAGI'
+   - if you use USAGI, you *cannot* use {freeswan/patch-int/loop-jari}
+   - the ebuild will drop either/or depending on your use flags :)
+ * Updated adaptec 79xxx to 01May2003
+ * Updated ntfs to 2.1.4a
+ * Updated grsecurity to 1.99g
+ * Added initial support for systrace v1.2
+ * Updated bluetooth support fro MH to 2.4.20-MH7
+ * Added kraxel patch which is v4l2 & other updates - see the docs
+ * Fixed broken gcc optimizations... the overoptimization was breaking things
+ * Other things I am forgetting to mention :)
 
 *pfeifer-sources-2.4.20.1_pre7 (15 Apr 2003)
 
