@@ -1,0 +1,2438 @@
+diff -ruN NVIDIA_kernel-1.0-4363/Makefile NVIDIA_kernel-1.0-4363-2.5/Makefile
+--- NVIDIA_kernel-1.0-4363/Makefile	2003-04-20 03:57:20.000000000 +0200
++++ NVIDIA_kernel-1.0-4363-2.5/Makefile	1970-01-01 01:00:00.000000000 +0100
+@@ -1,169 +0,0 @@
+-# This Makefile is automatically generated; do not edit
+-#   Generated on 'builder3.nvidia.com' on Sat Apr 19 17:46:47 PDT 2003
+-
+-LINUX_MODULE=nv-linux.o
+-DEFINES=-D__KERNEL__ -DMODULE -D_LOOSE_KERNEL_NAMES -DNTRM -D_GNU_SOURCE -D_LOOSE_KERNEL_NAMES -D__KERNEL__ -DMODULE  -DNV_MAJOR_VERSION=1 -DNV_MINOR_VERSION=0 -DNV_PATCHLEVEL=4363  -DNV_UNIX   -DNV_LINUX   -DNV_INT64_OK   -DNVCPU_X86     
+-INCLUDES=-I.
+-
+-OBJECTS=nv.o os-agp.o os-interface.o os-registry.o 
+-HEADERS=os-agp.h os-interface.h nv-linux.h nv-misc.h nv.h  rmretval.h nvtypes.h  $(VERSION_HDR)
+-
+-CFLAGS=-Wall -Wimplicit -Wreturn-type -Wswitch -Wformat -Wchar-subscripts -Wparentheses -Wpointer-arith -Wcast-qual -Wno-multichar  -O -MD $(DEFINES) $(INCLUDES) -Wno-cast-qual
+-
+-RESMAN_KERNEL_MODULE=nv-kernel.o
+-
+-KERNDIR=/lib/modules/$(shell uname -r)
+-
+-# check for newer paths. if found, use them, otherwise use old paths
+-# these wouldn't work with the gnu make included with rh6.2
+-# KERNINC=$(if -d $(KERNDIR)/build, $(KERNDIR)/build/include, /usr/src/linux/include)
+-# INSTALLDIR=$(if -d $(KERNDIR)/kernel, $(KERNDIR)/kernel/drivers/video, $(KERNDIR)/video)
+-
+-# this is slightly more brain-dead, but works..
+-ifeq ($(shell if test -d $(KERNDIR)/build; then echo yes; fi),yes)
+-KERNINC=$(KERNDIR)/build/include
+-else
+-KERNINC=/usr/src/linux/include
+-endif
+-
+-ifeq ($(shell if test -d $(KERNDIR)/kernel; then echo yes; fi),yes)
+-INSTALLDIR=$(KERNDIR)/kernel/drivers/video
+-else
+-INSTALLDIR=$(KERNDIR)/video
+-endif
+-
+-ifeq ($(shell echo $(NVDEBUG)),1)
+-  ifeq ($(shell test -z $(RMDEBUG) && echo yes),yes)
+-    RMDEBUG=1
+-  endif
+-endif
+-
+-ifeq ($(shell echo $(RMDEBUG)),1)
+-CFLAGS += -DDEBUG -g -fno-common
+-endif
+-
+-# this is just plain wrong, get rid of it
+-BROKENDIR=$(KERNDIR)/kernel/video
+-
+-INSTALL=$(shell which install)
+-
+-# determine gcc versions used (kernel, nvidia.o)
+-module_cc:=$(shell $(CC) -v 2>&1 | tail -1)
+-version="^Linux version [^(]* (.*@.*) (\(.*\)) .*"
+-kernel_cc:=$(shell cat /proc/version | sed "s/"$(version)"/\1/")
+-
+-module_cc:=$(shell echo "$(module_cc)" | cut -d ' ' -f 3)
+-kernel_cc:=$(shell echo "$(kernel_cc)" | cut -d ' ' -f 3)
+-
+-# allow specification of alternate include file tree on command line and extra defines
+-ifdef SYSINCLUDE
+-INCLUDES += -I$(SYSINCLUDE)
+-else
+-INCLUDES += -I$(KERNINC)
+-endif
+-
+-ifeq ($(shell sh conftest.sh remap_page_range $(INCLUDES)), 5)
+-  DEFINES += -DREMAP_PAGE_RANGE_5
+-endif
+-
+-ifeq ($(shell sh conftest.sh remap_page_range $(INCLUDES)), 4)
+-  DEFINES += -DREMAP_PAGE_RANGE_4
+-endif
+-
+-DEFINES+=$(EXTRA_DEFINES)
+-
+-# allow build parameters to be passed in through the environment
+-ifdef BUILD_PARAMS
+-    DEFINES+=-D$(BUILD_PARAMS)
+-endif
+-
+-VERSION_HDR=nv_compiler.h
+-
+-all: install
+-
+-install: package-install
+-
+-package-install: nvidia.o rmmod-check
+-	@if [ `id -ur` != 0 ]; then \
+-		echo Please run \"make install\" as root.; \
+-	else \
+-		if [ -d $(BROKENDIR) ]; then \
+-			rm -f $(BROKENDIR)/NVdriver; \
+-			rmdir --ignore-fail-on-non-empty $(BROKENDIR); \
+-		fi && \
+-		mkdir -p $(INSTALLDIR) && \
+-		rm -f $(INSTALLDIR)/NVdriver && \
+-		$(INSTALL) -m 0664 -o root -g root nvidia.o $(INSTALLDIR)/nvidia.o$(O) && \
+-		/sbin/depmod -a && \
+-		/sbin/modprobe nvidia && \
+-		sh makedevices.sh && \
+-		echo "nvidia.o installed successfully."; \
+-	fi
+-
+-RMMOD_ERROR=\
+-	echo ""; \
+-	echo "Unable to remove existing NVIDIA kernel module."; \
+-	echo "Please be sure you have exited X before attempting"; \
+-	echo "to install the NVIDIA kernel module."; \
+-	echo ""; \
+-	echo -en "\033[1;31m"; \
+-	echo -e  "*** Failed rmmod sanity check. Bailing out! ***"; \
+-	echo -en "\033[0m"; \
+-	exit 1;
+-
+-rmmod-check:
+-	@if /sbin/lsmod | grep nvidia > /dev/null; then \
+-		if ! /sbin/rmmod nvidia > /dev/null; then $(RMMOD_ERROR) fi \
+-	fi; \
+-	if /sbin/lsmod | grep NVdriver > /dev/null; then \
+-		if ! /sbin/rmmod NVdriver > /dev/null; then $(RMMOD_ERROR) fi \
+-	fi
+-
+-gcc-check:
+-	@if [ -z $(IGNORE_CC_MISMATCH) ]; then \
+-	 if [ $(kernel_cc) != $(module_cc) ]; then \
+-	echo "                                                           "; \
+-	echo "You appear to be compiling the NVIDIA kernel module with   "; \
+-	echo "a compiler different from the one that was used to compile "; \
+-	echo "the running kernel. This may be perfectly fine, but there  "; \
+-	echo "are cases where this can lead to unexpected behaviour and  "; \
+-	echo "system crashes.                                            "; \
+-	echo "                                                           "; \
+-	echo "If you know what you are doing and want to override this   "; \
+-	echo "check, you can do so by setting IGNORE_CC_MISMATCH.        "; \
+-	echo "                                                           "; \
+-	echo "In any other case, set the CC environment variable to the  "; \
+-	echo "name of the compiler that was used to compile the kernel.  "; \
+-	echo "                                                           "; \
+-	echo -en "\033[1;31m"; \
+-	echo -e  "*** Failed cc sanity check. Bailing out! ***"; \
+-	echo -en "\033[0m"; \
+-	exit 1; \
+-	 fi \
+-	fi
+-
+-nvidia.o: gcc-check $(LINUX_MODULE) $(RESMAN_KERNEL_MODULE) 
+-	ld -r -o $@ $(LINUX_MODULE) $(RESMAN_KERNEL_MODULE)
+-
+-$(VERSION_HDR): 
+-	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -1`\" > $@
+-
+-$(LINUX_MODULE): $(OBJECTS)
+-	ld -r -o $@ $(OBJECTS)
+-
+-%.o: %.c $(HEADERS)
+-	$(CC) -c $(CFLAGS) $<
+-
+-# debug tool to preprocess the file and leave .i to make it easier to untangle #defines
+-%.i: %.c
+-	$(CC) $(CFLAGS) -E $< > $@
+-
+-%.s: %.c
+-	$(CC) $(CFLAGS) -S $< > $@
+-
+-
+-clean:
+-	$(RM) $(OBJECTS) $(LINUX_MODULE) $(VERSION_HDR) *.d NVdriver nvidia.o
+-
+-
+--include $(OBJECTS:%.o=%.d)
+diff -ruN NVIDIA_kernel-1.0-4363/Makefile.kbuild NVIDIA_kernel-1.0-4363-2.5/Makefile.kbuild
+--- NVIDIA_kernel-1.0-4363/Makefile.kbuild	1970-01-01 01:00:00.000000000 +0100
++++ NVIDIA_kernel-1.0-4363-2.5/Makefile.kbuild	2003-06-14 23:42:40.000000000 +0200
+@@ -0,0 +1,258 @@
++#
++# KBUILD Makefile for the NVIDIA Linux kernel module.
++#
++# The motivation for replacing the original Makefile is the hope that this
++# version will simplify the build and installation process. In the past,
++# many architectural and cosmetic changes to the Linux kernel have made it
++# difficult to maintain compatibility or required duplication of logic.
++#
++# Linux 2.5 introduces numerous such changes, many of which impact modules.
++# Relying on KBUILD, some aspects of the build system otherwise difficult
++# to support (for example, module versioning) are abstracted away and dealt
++# with elsewhere, making life significantly easier here.
++#
++# The new approach currently has its own share of problems, some of which
++# are architectural difficulties with KBUILD, others minor annoyances. For
++# this reason, an improved version of the NVIDIA Makefile is available to
++# those experiencing difficulties.
++#
++# Please report any problems you may be experiencing with this experimental
++# Makefile to either one (or, preferably, both) of us:
++#
++# Alistair J Strachan (alistair@devzero.co.uk) (first pass, enhancements)
++# Christian Zander (zander@mail.minion.de) (enhancements)
++#
++
++all: install
++install: package-install
++
++#
++# The NVIDIA kernel module base name and static file names. KBUILD will go
++# ahead and append ".o" or ".ko" to form the final module name.
++#
++
++MODULE_NAME := nvidia
++VERSION_HEADER := nv_compiler.h
++
++#
++# List of object files to link into NVIDIA kernel module; make sure KBUILD
++# understands that we want a module.
++#
++
++RESMAN_CORE_OBJS := nv-kernel.o
++RESMAN_GLUE_OBJS := nv.o os-agp.o os-interface.o os-registry.o
++
++$(MODULE_NAME)-objs := $(RESMAN_CORE_OBJS) $(RESMAN_GLUE_OBJS)
++
++#
++# A bug in KBUILD 2.4 means that leaving obj-m set in top-level context
++# will cause Rules.make to call pathdown.sh, which is wrong. So, we only
++# set this conditional of a kernel-level instance.
++#
++
++ifdef TOPDIR
++obj-m += $(MODULE_NAME).o
++endif
++
++#
++# Include local source directory in $(CC)'s include path and set disable any
++# warning types that are of little interest to us.
++#
++
++EXTRA_CFLAGS += -I$(src)
++EXTRA_CFLAGS += -Wno-cast-qual -Wno-strict-prototypes
++
++#
++# Determine location of the Linux kernel source tree. Allow users to override
++# the default (i.e. automatically determined) kernel source location with the
++# KERNDIR directive; this new directive replaces NVIDIA's SYSINCLUDE.
++#
++
++ifdef KERNDIR
++  KERNEL_SOURCES := $(KERNDIR)
++  KERNEL_HEADERS := -I$(KERNEL_SOURCES)/include
++  MODULE_ROOT    := /lib/modules/$(shell uname -r)/kernel/drivers # XXX
++else
++  KERNEL_SOURCES := /lib/modules/$(shell uname -r)/build
++  KERNEL_HEADERS := -I$(KERNEL_SOURCES)/include
++  MODULE_ROOT    := /lib/modules/$(shell uname -r)/kernel/drivers
++endif
++
++#
++# We rely on these two definitions below; if they aren't set, we set them to
++# reasonable defaults (Linux 2.4's KBUILD, and top-level passes will not set
++# these).
++#
++
++src ?= .
++obj ?= .
++
++#
++# Sets any internal variables left unset by KBUILD (e.g. this happens during
++# a top-level run).
++#
++
++TOPDIR ?= $(KERNEL_SOURCES)
++PATCHLEVEL ?= $(shell sh $(src)/conftest.sh kernel_patch_level $(TOPDIR))
++
++#
++# Linux 2.4 uses the .o module extension. Linux 2.5, however, uses the .ko
++# module extension. Handle these gracefully.
++#
++
++ifeq ($(PATCHLEVEL), 4)
++  MODULE_OBJECT := $(MODULE_NAME).o
++else
++  MODULE_OBJECT := $(MODULE_NAME).ko
++endif
++
++#
++# NVIDIA specific CFLAGS and #define's. The remap_page_range check has become
++# necessary with the introduction of the five argument version to Linux 2.4
++# distribution kernels; this conflicting change cannot be detected at compile
++# time.
++#
++
++EXTRA_CFLAGS += -DNTRM -D_LOOSE_KERNEL_NAMES -D__KERNEL__ -DMODULE  -DNV_MAJOR_VERSION=1 -DNV_MINOR_VERSION=0 -DNV_PATCHLEVEL=4348  -DNV_UNIX   -DNV_LINUX   -DNV_INT64_OK   -DNVCPU_X86
++
++ifeq ($(shell echo $(NVDEBUG)),1)
++  ifeq ($(shell test -z $(RMDEBUG) && echo yes),yes)
++    RMDEBUG=1
++  endif
++endif
++
++ifeq ($(shell echo $(RMDEBUG)),1)
++  EXTRA_CFLAGS += -DDEBUG -g -fno-common
++endif
++
++ifeq ($(shell sh $(src)/conftest.sh remap_page_range $(KERNEL_HEADERS)), 5)
++  EXTRA_CFLAGS += -DREMAP_PAGE_RANGE_5
++endif
++
++ifeq ($(shell sh $(src)/conftest.sh remap_page_range $(KERNEL_HEADERS)), 4)
++  EXTRA_CFLAGS += -DREMAP_PAGE_RANGE_4
++endif
++
++#
++# NVIDIA binary object file includes .common section.
++#
++
++EXTRA_LDFLAGS := -d
++
++#
++# Miscellaneous NVIDIA kernel module build support targets. They are needed
++# to satisfy KBUILD requirements and to support NVIDIA specifics.
++#
++
++$(obj)/nv-kernel.o:
++	cp $(src)/$(RESMAN_CORE_OBJS) $(obj)/$(RESMAN_CORE_OBJS)
++
++$(obj)/$(VERSION_HEADER):
++	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -1`\" > $@
++
++$(obj)/nv.o: $(obj)/$(VERSION_HEADER)
++
++#
++# More quirks for Linux 2.4 KBUILD, which doesn't link automatically.
++#
++
++ifeq ($(PATCHLEVEL), 4)
++$(obj)/$(MODULE_NAME).o: $($(MODULE_NAME)-objs)
++	$(LD) $(EXTRA_LDFLAGS) -r -o $@ $($(MODULE_NAME)-objs)
++endif
++
++#
++# KBUILD build parameters.
++#
++
++KBUILD_PARAMS := -C $(KERNEL_SOURCES) SUBDIRS=$(PWD)
++
++#
++# NVIDIA sanity checks.
++#
++
++suser-sanity-check:
++	@if ! sh conftest.sh suser_sanity_check; then \
++	  echo; \
++	  echo "You have insufficient privileges for this operation. Please "; \
++	  echo "run \"make install\" as root!                               "; \
++	  echo; \
++	  exit 1; \
++	fi
++
++rmmod-sanity-check:
++	@if ! sh conftest.sh rmmod_sanity_check $(MODULE_NAME); then \
++	  echo; \
++	  echo "Unable to unload the currently loaded NVIDIA kernel module! "; \
++	  echo "Please be certain that you have exited X before attempting  "; \
++	  echo "to install this version.                                    "; \
++	  echo; \
++	  exit 1; \
++	fi
++
++cc-sanity-check:
++	@if ! sh conftest.sh cc_sanity_check $(CC); then \
++	  echo; \
++	  echo "You appear to be building the NVIDIA kernel module with a  "; \
++	  echo "compiler different from the one that was used to build the "; \
++	  echo "running kernel. This may be perfectly fine, but there are  "; \
++	  echo "cases where this can lead to unexpected behaviour and      "; \
++	  echo "system crashes.                                            "; \
++	  echo; \
++	  echo "If you know what you are doing and want to override this   "; \
++	  echo "check, you can do so by setting IGNORE_CC_MISMATCH.        "; \
++	  echo; \
++	  echo "In any other case, set the CC environment variable to the  "; \
++	  echo "name of the compiler that was used to build the kernel.    "; \
++	  echo; \
++	  exit 1; \
++	fi
++
++#
++# Build the NVIDIA kernel module using Linux KBUILD. This target is used by
++# the "package-install" target below.
++#
++
++module: cc-sanity-check
++	@make $(KBUILD_PARAMS) modules; \
++	if ! [ -f $(MODULE_OBJECT) ]; then \
++	  echo "$(MODULE_OBJECT) failed to build!"; \
++	  exit 1; \
++	fi
++
++#
++# Build the NVIDIA kernel module with KBUILD. Verify that the user posesses
++# sufficient privileges. Rebuild the module dependency file.
++#
++
++module-install: suser-sanity-check module
++	@mkdir -p $(MODULE_ROOT)/video; \
++	install -m 0664 -o root -g root $(MODULE_OBJECT) $(MODULE_ROOT)/video; \
++	/sbin/depmod -ae;
++
++#
++# This target builds, then installs, then creates device nodes and inserts
++# the module, if successful.
++#
++
++package-install: module-install rmmod-sanity-check
++	@sh makedevices.sh; \
++	/sbin/modprobe $(MODULE_NAME) && \
++	echo "$(MODULE_OBJECT) installed successfully.";
++
++#
++# Support hack, KBUILD isn't prepared to clean up after external modules.
++#
++
++clean:
++	@rm -f $(RESMAN_GLUE_OBJS) .*.{cmd,flags}
++	@rm -f $(MODULE_NAME).{o,ko,mod.{o,c}} built-in.o $(VERSION_HEADER) *~
++
++#
++# Linux 2.4 KBUILD requires the inclusion of Rules.make; Linux 2.5's KBUILD
++# includes dependencies automatically.
++#
++
++ifeq ($(PATCHLEVEL), 4)
++include $(KERNEL_SOURCES)/Rules.make
++endif
+diff -ruN NVIDIA_kernel-1.0-4363/Makefile.nvidia NVIDIA_kernel-1.0-4363-2.5/Makefile.nvidia
+--- NVIDIA_kernel-1.0-4363/Makefile.nvidia	1970-01-01 01:00:00.000000000 +0100
++++ NVIDIA_kernel-1.0-4363-2.5/Makefile.nvidia	2003-06-02 00:10:13.000000000 +0200
+@@ -0,0 +1,154 @@
++# This Makefile is automatically generated; do not edit
++#   Generated on 'builder3.nvidia.com' on Mon Mar 24 16:36:51 PST 2003
++
++LINUX_MODULE=nv-linux.o
++DEFINES=-D__KERNEL__ -DMODULE -D_LOOSE_KERNEL_NAMES -DKBUILD_MODNAME="nvidia" -DNTRM -D_GNU_SOURCE -D_LOOSE_KERNEL_NAMES -D__KERNEL__ -DMODULE  -DNV_MAJOR_VERSION=1 -DNV_MINOR_VERSION=0 -DNV_PATCHLEVEL=4348  -DNV_UNIX   -DNV_LINUX   -DNV_INT64_OK   -DNVCPU_X86     
++INCLUDES=-I.
++
++OBJECTS=nv.o os-agp.o os-interface.o os-registry.o 
++HEADERS=os-agp.h os-interface.h nv-linux.h nv-misc.h nv.h  rmretval.h nvtypes.h  $(VERSION_HDR)
++
++CFLAGS=-Wall -Wimplicit -Wreturn-type -Wswitch -Wformat -Wchar-subscripts -Wparentheses -Wcast-qual -Wno-multichar  -O -MD $(DEFINES) $(INCLUDES) -Wno-cast-qual
++
++RESMAN_KERNEL_MODULE=nv-kernel.o
++
++KERNDIR=/lib/modules/$(shell uname -r)
++
++# check for newer paths. if found, use them, otherwise use old paths
++# these wouldn't work with the gnu make included with rh6.2
++# KERNINC=$(if -d $(KERNDIR)/build, $(KERNDIR)/build/include, /usr/src/linux/include)
++# INSTALLDIR=$(if -d $(KERNDIR)/kernel, $(KERNDIR)/kernel/drivers/video, $(KERNDIR)/video)
++
++# this is slightly more brain-dead, but works..
++ifeq ($(shell if test -d $(KERNDIR)/build; then echo yes; fi),yes)
++KERNINC=$(KERNDIR)/build/include
++else
++KERNINC=/usr/src/linux/include
++endif
++
++ifeq ($(shell if test -d $(KERNDIR)/kernel; then echo yes; fi),yes)
++INSTALLDIR=$(KERNDIR)/kernel/drivers/video
++else
++INSTALLDIR=$(KERNDIR)/video
++endif
++
++ifeq ($(shell echo $(NVDEBUG)),1)
++  ifeq ($(shell test -z $(RMDEBUG) && echo yes),yes)
++    RMDEBUG=1
++  endif
++endif
++
++ifeq ($(shell echo $(RMDEBUG)),1)
++CFLAGS += -DDEBUG -g -fno-common
++endif
++
++# this is just plain wrong, get rid of it
++BROKENDIR=$(KERNDIR)/kernel/video
++
++INSTALL=$(shell which install)
++
++# allow specification of alternate include file tree on command line and extra defines
++ifdef SYSINCLUDE
++INCLUDES += -I$(SYSINCLUDE)
++INCLUDES += -I$(SYSINCLUDE)/asm/mach-default
++else
++INCLUDES += -I$(KERNINC)
++INCLUDES += -I$(KERNINC)/asm/mach-default
++endif
++
++ifeq ($(shell sh conftest.sh remap_page_range $(INCLUDES)), 5)
++  DEFINES += -DREMAP_PAGE_RANGE_5
++endif
++
++ifeq ($(shell sh conftest.sh remap_page_range $(INCLUDES)), 4)
++  DEFINES += -DREMAP_PAGE_RANGE_4
++endif
++
++DEFINES+=$(EXTRA_DEFINES)
++
++# allow build parameters to be passed in through the environment
++ifdef BUILD_PARAMS
++    DEFINES+=-D$(BUILD_PARAMS)
++endif
++
++VERSION_HDR=nv_compiler.h
++
++all: install
++
++install: package-install
++
++suser-sanity-check:
++	@if ! sh conftest.sh suser_sanity_check; then \
++	  echo; \
++	  echo "You have insufficient privileges for this operation. Please "; \
++	  echo "run \"make install\" as root!                               "; \
++	  echo; \
++	  exit 1; \
++	fi
++
++rmmod-sanity-check:
++	@if ! sh conftest.sh rmmod_sanity_check nvidia; then \
++	  echo; \
++	  echo "Unable to unload the currently loaded NVIDIA kernel module! "; \
++	  echo "Please be certain that you have exited X before attempting  "; \
++	  echo "to install this version.                                    "; \
++	  echo; \
++	  exit 1; \
++	fi
++
++cc-sanity-check:
++	@if ! sh conftest.sh cc_sanity_check $(CC); then \
++	  echo; \
++	  echo "You appear to be building the NVIDIA kernel module with a  "; \
++	  echo "compiler different from the one that was used to build the "; \
++	  echo "running kernel. This may be perfectly fine, but there are  "; \
++	  echo "cases where this can lead to unexpected behaviour and      "; \
++	  echo "system crashes.                                            "; \
++	  echo; \
++	  echo "If you know what you are doing and want to override this   "; \
++	  echo "check, you can do so by setting IGNORE_CC_MISMATCH.        "; \
++	  echo; \
++	  echo "In any other case, set the CC environment variable to the  "; \
++	  echo "name of the compiler that was used to build the kernel.    "; \
++	  echo; \
++	  exit 1; \
++	fi
++
++package-install: suser-sanity-check nvidia.o rmmod-sanity-check
++	if [ -d $(BROKENDIR) ]; then \
++		rm -f $(BROKENDIR)/NVdriver; \
++		rmdir --ignore-fail-on-non-empty $(BROKENDIR); \
++	fi && \
++	mkdir -p $(INSTALLDIR) && \
++	rm -f $(INSTALLDIR)/NVdriver && \
++	$(INSTALL) -m 0664 -o root -g root nvidia.o $(INSTALLDIR)/nvidia.o$(O) && \
++	/sbin/depmod -a && \
++	/sbin/modprobe nvidia && \
++	sh makedevices.sh && \
++	echo "nvidia.o installed successfully."; \
++
++nvidia.o: cc-sanity-check $(LINUX_MODULE) $(RESMAN_KERNEL_MODULE) 
++	ld -d -r -o $@ $(LINUX_MODULE) $(RESMAN_KERNEL_MODULE)
++
++$(VERSION_HDR): 
++	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -1`\" > $@
++
++$(LINUX_MODULE): $(OBJECTS)
++	ld -r -o $@ $(OBJECTS)
++
++%.o: %.c $(HEADERS)
++	$(CC) -c $(CFLAGS) $<
++
++# debug tool to preprocess the file and leave .i to make it easier to untangle #defines
++%.i: %.c
++	$(CC) $(CFLAGS) -E $< > $@
++
++%.s: %.c
++	$(CC) $(CFLAGS) -S $< > $@
++
++
++clean:
++	$(RM) $(OBJECTS) $(LINUX_MODULE) $(VERSION_HDR) *.d NVdriver nvidia.o
++
++
++-include $(OBJECTS:%.o=%.d)
+diff -ruN NVIDIA_kernel-1.0-4363/conftest.sh NVIDIA_kernel-1.0-4363-2.5/conftest.sh
+--- NVIDIA_kernel-1.0-4363/conftest.sh	2003-04-20 03:57:19.000000000 +0200
++++ NVIDIA_kernel-1.0-4363-2.5/conftest.sh	2003-06-02 00:10:13.000000000 +0200
+@@ -37,5 +37,78 @@
+           exit 1
+         fi
+     ;;
++
++    cc_sanity_check)
++        shift
++        #
++        # Verify that the same compiler is used for the kernel and kernel
++        # module.
++        #
++        if test -n "$IGNORE_CC_MISMATCH"; then
++          #
++          # The user chose to disable this test; this may or may not be
++          # a wise decision...
++          #
++          exit 0
++        fi
++
++        VERSION="^Linux version [^(]* (.*@.*) (\(.*\)) .*"
++        KERNEL=$(cat /proc/version | sed "s/$VERSION/\1/" | cut -d ' ' -f 3)
++        MODULE=$($* -v 2>&1 | tail -1 | cut -d ' ' -f 3)
++
++        if test "$KERNEL" != "$MODULE"; then
++          #
++          # The kernel seems to have been built with a different version
++          # of the C compiler, which may be a problem.
++          #
++          exit 1
++        else
++          exit 0
++        fi
++    ;;
++
++    kernel_patch_level)
++        shift
++        #
++        # Determine the kernel's major patch level; this is only done if we
++        # aren't told by KBUILD.
++        #
++        echo $(cat "$1"/Makefile | grep "PATCHLEVEL =" | cut -d " " -f 3)
++        exit 0
++    ;;
++
++    suser_sanity_check)
++        shift
++        #
++        # Determine the caller's user id to determine if we have sufficient
++        # privileges for the requested operation.
++        #
++        if test $(id -ur) != 0; then
++          exit 1
++        else
++          exit 0
++        fi
++    ;;
++
++    rmmod_sanity_check)
++        shift
++        #
++        # Make sure that any currently loaded NVIDIA kernel module can be
++        # unloaded.
++        #
++        if /sbin/lsmod | grep -q "$1"; then
++          /sbin/rmmod "$1" >& /dev/null
++        fi
++
++        if /sbin/lsmod | grep -q "$1"; then
++          #
++          # The NVIDIA kernel module is still loaded, most likely because
++          # it is busy.
++          #
++          exit 1
++        else
++          exit 0
++        fi
++    ;;
+ esac
+ 
+diff -ruN NVIDIA_kernel-1.0-4363/nv-linux.h NVIDIA_kernel-1.0-4363-2.5/nv-linux.h
+--- NVIDIA_kernel-1.0-4363/nv-linux.h	2003-04-20 03:57:19.000000000 +0200
++++ NVIDIA_kernel-1.0-4363-2.5/nv-linux.h	2003-07-13 14:07:33.000000000 +0200
+@@ -20,35 +20,20 @@
+ #  define MODVERSIONS
+ #endif
+ 
+-#if defined (MODVERSIONS)
+-#include <linux/modversions.h>
+-#endif
+-
+ #include <linux/kernel.h>
+ #include <linux/module.h>
+ #include <linux/version.h>
+ 
+-#if LINUX_VERSION_CODE < KERNEL_VERSION(2, 2, 12)
+-#  error This driver does not support 2.2.11 or earlier kernels!
+-#elif LINUX_VERSION_CODE < KERNEL_VERSION(2, 3, 0)
+-#  define KERNEL_2_2
+-#  warning NVIDIA is considering dropping support for linux-2.2 
+-#  warning kernels. While end users are free to maintain their 
+-#  warning own patches, or stick with current drivers, our new 
+-#  warning drivers will not work "out of the box." If you are 
+-#  warning concerned about lack of support for 2.2 kernels, 
+-#  warning please let us know at linux-bugs@nvidia.com; we would
+-#  warning like to know how many users would be seriously 
+-#  warning impacted by this decision.
++#if   LINUX_VERSION_CODE < KERNEL_VERSION(2, 3, 0)
++#  error This driver does not support 2.2.x kernels!
+ #elif LINUX_VERSION_CODE < KERNEL_VERSION(2, 4, 0)
+-#  error This driver does not support 2.3.x development kernels!
++#  error This driver does not support 2.3.x kernels!
+ #elif LINUX_VERSION_CODE < KERNEL_VERSION(2, 5, 0)
+ #  define KERNEL_2_4
+ #elif LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 0)
+-#  error This driver does not support 2.5.x development kernels!
+ #  define KERNEL_2_5
+ #else
+-#  error This driver does not support 2.6.x or newer kernels!
++#  error This driver does not support development kernels!
+ #endif
+ 
+ #if defined (__ia64)
+@@ -61,12 +46,15 @@
+ #define __SMP__
+ #endif
+ 
++#if defined (MODVERSIONS) && !defined (KERNEL_2_5)
++#include <linux/modversions.h>
++#endif
++
+ #include <linux/types.h>            /* pic_t, size_t, __u32, etc        */
+ #include <linux/errno.h>            /* error codes                      */
+ #include <linux/list.h>             /* circular linked list             */
+ #include <linux/stddef.h>           /* NULL, offsetof                   */
+ #include <linux/wait.h>             /* wait queues                      */
+-#include <linux/tqueue.h>           /* struct tq_struct                 */
+ 
+ #include <linux/slab.h>             /* kmalloc, kfree, etc              */
+ #include <linux/vmalloc.h>          /* vmalloc, vfree, etc              */
+@@ -74,9 +62,15 @@
+ #include <linux/poll.h>             /* poll_wait                        */
+ #include <linux/delay.h>            /* mdelay, udelay                   */
+ 
++#ifdef KERNEL_2_5
++#include <linux/sched.h>            /* suser(), capable() replacement   */
++#include <linux/moduleparam.h>      /* module_param()                   */
++#include <linux/smp_lock.h>         /* kernel_locked                    */
++#include <asm/kmap_types.h>         /* page table entry lookup          */
++#endif
++
+ #include <linux/pci.h>              /* pci_find_class, etc              */
+-#include <linux/wrapper.h>          /* mem_map_reserve                  */
+-#include <linux/interrupt.h>        /* mark_bh, init_bh, remove_bh      */
++#include <linux/interrupt.h>        /* tasklets, interrupt helpers      */
+ #include <linux/timer.h>
+ 
+ #include <asm/system.h>             /* cli, sli, save_flags             */
+@@ -85,14 +79,9 @@
+ #include <asm/page.h>               /* PAGE_OFFSET                      */
+ #include <asm/pgtable.h>            /* pte bit definitions              */
+ 
+-#if !defined (KERNEL_2_2)
+ #include <linux/spinlock.h>
+ #include <asm/semaphore.h>
+ #include <linux/highmem.h>
+-#else
+-#include <asm/spinlock.h>
+-#include <asm/semaphore.h>
+-#endif
+ 
+ #ifdef CONFIG_PROC_FS
+ #include <linux/proc_fs.h>
+@@ -132,70 +121,125 @@
+         for (pos = (head)->next; pos != (head); pos = (pos)->next)
+ #endif
+ 
+-#if LINUX_VERSION_CODE < KERNEL_VERSION(2, 2, 18)
+-#define vmalloc_32 vmalloc
+-#endif
++#define NV_VMA_OFFSET(vma)            (((vma)->vm_pgoff) << PAGE_SHIFT)
++#define GET_MODULE_SYMBOL(mod,sym)    (const void *) inter_module_get(sym)
++#define PUT_MODULE_SYMBOL(sym)        inter_module_put((char *) sym)
++#define NV_VMA_PRIVATE(vma)           ((vma)->vm_private_data)
++
++#ifdef KERNEL_2_5
++#  define NV_DEVICE_NUMBER(_minor)      ((kdev_val(_minor)) & 0x0f)
++#  define NV_IS_CONTROL_DEVICE(_minor)  (((kdev_val(_minor)) & 0xff) == 0xff)
++#  define NV_IS_SUSER()                 capable(CAP_SYS_ADMIN)
++#  define NV_PCI_DEVICE_NAME(x)         ((x)->dev.name)
++#  define NV_CLI()                      local_irq_disable()
++#  define NV_SAVE_FLAGS(x)              local_save_flags(x)
++#  define NV_RESTORE_FLAGS(x)           local_irq_restore(x)
++#  define NV_MAY_SLEEP()                (!in_interrupt() && !in_atomic())
++#  define NV_SMP_NUM_CPUS               num_online_cpus()
++#  define NV_MODULE_PARAMETER(x)        module_param(x, int, 0)
++#else
++#  define NV_DEVICE_NUMBER(_minor)      ((_minor) & 0x0f)
++#  define NV_IS_CONTROL_DEVICE(_minor)  (((_minor) & 0xff) == 0xff)
++#  define NV_IS_SUSER()                 suser()
++#  define NV_PCI_DEVICE_NAME(x)         ((x)->name)
++#  define NV_CLI()                      cli()
++#  define NV_SAVE_FLAGS(x)              save_flags(x)
++#  define NV_RESTORE_FLAGS(x)           restore_flags(x)
++#  define NV_MAY_SLEEP()                (!in_interrupt())
++#  define NV_SMP_NUM_CPUS               smp_num_cpus
++#  define NV_MODULE_PARAMETER(x)        MODULE_PARM(x, "i")
++#endif
++
++#ifndef KERNEL_2_5
++  typedef void irqreturn_t;
++# define IRQ_NONE
++# define IRQ_RETVAL(x)
++# define IRQ_HANDLED
++#else
++#ifdef AGPGART
++  typedef struct agp_kern_info agp_kern_info;
++  typedef struct agp_memory agp_memory;
++#endif
++  typedef void* devfs_handle_t;
++#endif
++
++#ifdef KERNEL_2_5
++#define NV_DEVFS_REGISTER(_name, _minor)                            \
++({                                                                  \
++    devfs_handle_t __handle = NULL;                                 \
++    devfs_mk_cdev(MKDEV(NV_MAJOR_DEVICE_NUMBER, _minor),            \
++            S_IFCHR | S_IRUGO | S_IWUGO, _name);                    \
++    __handle;                                                       \
++})
++
++#define NV_DEVFS_REMOVE_DEVICE(i) devfs_remove("nvidia%d", i)
++#define NV_DEVFS_REMOVE_CONTROL() devfs_remove("nvidiactl")
++#else
++#define NV_DEVFS_REGISTER(_name, _minor)                            \
++({                                                                  \
++    devfs_handle_t __handle =                                       \
++        devfs_register(NULL, _name, DEVFS_FL_DEFAULT,               \
++                NV_MAJOR_DEVICE_NUMBER, _minor,                     \
++                S_IFCHR | S_IRUGO | S_IWUGO, &nv_fops, NULL);       \
++    __handle;                                                       \
++ })
+ 
+-#if !defined (KERNEL_2_2)
+-#  define LINUX_VMA_OFFS(vma)           (((vma)->vm_pgoff) << PAGE_SHIFT)
+-#  define GET_MODULE_SYMBOL(mod,sym)	(const void *) inter_module_get(sym)
+-#  define PUT_MODULE_SYMBOL(sym)        inter_module_put((char *) sym)
+-#  define GET_MAP_NR(phys_page)         virt_to_page(__va(phys_page))
+-#  define MEM_MAP_READ_COUNT(map_nr)    (atomic_read(&(map_nr)->count))
+-#  define MEM_MAP_INC_COUNT(map_nr)     (atomic_inc(&(map_nr)->count))
+-#  define MEM_MAP_DEC_COUNT(map_nr)     (atomic_dec(&(map_nr)->count))
+-#  define GET_EVENT_QUEUE(nv)           ((struct __wait_queue_head *) ((nv)->event_queue))
+-#  define VMA_PRIVATE(vma)              ((vma)->vm_private_data)
+-#else
+-#  define in_irq()                      (local_irq_count[smp_processor_id()])
+-#  define LINUX_VMA_OFFS(vma)           ((vma)->vm_offset)
+-#  define GET_MODULE_SYMBOL(mod, sym)   (void*) get_module_symbol((mod), (sym))
+-#  define PUT_MODULE_SYMBOL(sym)
+-#  define GET_MAP_NR(phys_page)         MAP_NR(__va(phys_page))
+-#  define MEM_MAP_READ_COUNT(map_nr)    (atomic_read(&mem_map[map_nr].count))
+-#  define MEM_MAP_INC_COUNT(map_nr)     (atomic_inc(&mem_map[map_nr].count))
+-#  define MEM_MAP_DEC_COUNT(map_nr)     (atomic_dec(&mem_map[map_nr].count))
+-#  define GET_EVENT_QUEUE(nv)           ((struct wait_queue **) &((nv)->event_queue))
+-#  define VMA_PRIVATE(vma)              ((void*)((vma)->vm_pte))
++#define NV_DEVFS_REMOVE_DEVICE(i) devfs_unregister(nv_devfs_handles[i+1])
++#define NV_DEVFS_REMOVE_CONTROL() devfs_unregister(nv_devfs_handles[0])
+ #endif
+ 
++/*
++ * Linux 2.5 introduced the five argument version of remap_page_range, all
++ * relevant releases to date use it. This version was backported to 2.4 by
++ * RedHat without means to identify the change, hence this hack.
++ */
++#ifdef KERNEL_2_5
++#define NV_REMAP_PAGE_RANGE(a, b...) remap_page_range(vma, a, ## b)
++#else
+ #if defined(REMAP_PAGE_RANGE_5)
+-#define NV_REMAP_PAGE_RANGE(a, b...)    remap_page_range(vma, a, ## b)
++#define NV_REMAP_PAGE_RANGE(a, b...) remap_page_range(vma, a, ## b)
+ #elif defined(REMAP_PAGE_RANGE_4)
+-#define NV_REMAP_PAGE_RANGE(a, b...)    remap_page_range(a, ## b)
++#define NV_REMAP_PAGE_RANGE(a, b...) remap_page_range(a, ## b)
+ #else
+-#error "Couldn't determine number of arguments expected by remap_page_range!"
++#warning "conftest.sh failed, assuming old Linux 2.4 remap_page_range(4)!"
++
++#define NV_REMAP_PAGE_RANGE(a, b...) remap_page_range(a, ## b)
+ #endif
++#endif /* KERNEL_2_5 */
+ 
+ #if defined(pte_offset_atomic)
+-#define NV_PTE_OFFSET(addres, pg_mid_dir, pte) \
++#define NV_PTE_OFFSET(addres, pmd, pte) \
+     { \
+-        pte_t *pte__ = pte_offset_atomic(pg_mid_dir, address); \
++        pte_t *pte__ = pte_offset_atomic(pmd, address); \
+         pte = *pte__; \
+         pte_kunmap(pte__); \
+-    }
++    } 
+ #elif defined(pte_offset)
+-#define NV_PTE_OFFSET(addres, pg_mid_dir, pte) \
+-    pte = *pte_offset(pg_mid_dir, address)
++#define NV_PTE_OFFSET(addres, pmd, pte) \
++    pte = *pte_offset(pmd, address)
+ #else
+-#define NV_PTE_OFFSET(addres, pg_mid_dir, pte) \
++#define NV_PTE_OFFSET(addres, pmd, pte) \
+     { \
+-        pte_t *pte__ = pte_offset_map(pg_mid_dir, address); \
++        pte_t *pte__ = pte_offset_map(pmd, address); \
+         pte = *pte__; \
+         pte_unmap(pte__); \
+     }
+ #endif
+ 
+-#define NV_PAGE_ALIGN(addr)             ( ((addr) + PAGE_SIZE - 1) / PAGE_SIZE)
+-#define NV_MASK_OFFSET(addr)            ( (addr) & (PAGE_SIZE - 1) )
+-
+-#ifndef MAXMEM  /* temporary define for 2.2 kernels */
+-#define MAXMEM  (-PAGE_OFFSET - (64 * 1024 * 1024))
++#if defined(pmd_offset_map)
++#define NV_PMD_OFFSET(address, pgd, pmd) \
++    { \
++        pmd_t *pmd__ = pmd_offset_map(pgd, address); \
++        pmd = *pmd__; \
++        pmd_unmap(pgd__); \
++    }
++#else
++#define NV_PMD_OFFSET(address, pgd, pmd) \
++    pmd = *pmd_offset(pgd, address)
+ #endif
+ 
+-#ifndef NV01_ROOT
+-#define NV01_ROOT 0x00000000
+-#endif 
++#define NV_PAGE_ALIGN(addr)             ( ((addr) + PAGE_SIZE - 1) / PAGE_SIZE)
++#define NV_MASK_OFFSET(addr)            ( (addr) & (PAGE_SIZE - 1) )
+ 
+ #if defined(NVCPU_IA64)
+ #define NV_GFP_HW (GFP_KERNEL | __GFP_DMA)
+@@ -252,7 +296,7 @@
+ static inline int NV_IRQL_IS_RAISED()
+     {
+         unsigned long int eflags;
+-        __save_flags(eflags);
++        NV_SAVE_FLAGS(eflags);
+         return !(eflags & NV_CPU_INTERRUPT_FLAGS_BIT);
+     }
+  
+@@ -310,16 +354,17 @@
+ 
+     nv_alloc_t *alloc_queue;
+ 
+-    // bottom half interrupt handler info; per device
+-    /* keep track of any pending bottom-halves */
+-    struct tq_struct *bh;
++    /* keep track of any pending bottom halfes */
++    struct tasklet_struct tasklet;
++
++    /* active bottom half counter */
+     atomic_t bh_count;
+ 
+     U032 vblank_notifier;
+     U032 waiting_for_vblank;
+ 
+     /* queue for for NV's OS events */
+-    void *event_queue;
++    wait_queue_head_t waitqueue;
+ 
+     /* get a timer callback every second */
+     struct timer_list rc_timer;
+diff -ruN NVIDIA_kernel-1.0-4363/nv.c NVIDIA_kernel-1.0-4363-2.5/nv.c
+--- NVIDIA_kernel-1.0-4363/nv.c	2003-04-20 03:57:19.000000000 +0200
++++ NVIDIA_kernel-1.0-4363-2.5/nv.c	2003-07-13 13:54:18.000000000 +0200
+@@ -16,11 +16,14 @@
+ #include "os-agp.h"
+ 
+ 
++MODULE_LICENSE("NVIDIA");
++
+ /*
+  * our global state; one per device
+  */
+ 
+ nv_linux_state_t nv_linux_devices[NV_MAX_DEVICES] = { { { 0 } } };
++static int nv_num_devices;
+ 
+ #ifdef CONFIG_PM
+ /* XXX PM do we only need one, or one for each device? */
+@@ -36,27 +39,15 @@
+ // keep track of opened clients and their process id so they
+ //   can be free'd up on abnormal close
+ nv_client_t       nv_clients[NV_MAX_CLIENTS];
+-struct tq_struct  nv_bottom_halves[NV_MAX_CLIENTS];
+ 
+ #ifdef CONFIG_PROC_FS
+ struct proc_dir_entry *proc_nvidia;
+ #endif
+ 
+ #ifdef CONFIG_DEVFS_FS
+-devfs_handle_t  nv_dev_handle[NV_MAX_DEVICES];
+-devfs_handle_t  nv_ctl_handle;
++devfs_handle_t nv_devfs_handles[NV_MAX_DEVICES+1];
+ #endif
+ 
+-/*
+- * pick apart our minor device number
+- * low 3 bits is NV device
+- * if 255, then its the control device
+- */
+-
+-#define NV_DEVICE_NUMBER(_minor) ((_minor) & 0x0f)
+-#define NV_DEVICE_IS_CONTROL_DEVICE(_minor) \
+-             (((_minor) & 0xFF) == 0xFF)
+-
+ // #define NV_DBG_MEM 1
+ #undef NV_DBG_MEM
+ 
+@@ -107,10 +98,6 @@
+  *** EXPORTS to Linux Kernel
+  ***/
+ 
+-/* linux module interface functions (called by linux kernel) */
+-int           init_module(void);
+-void          cleanup_module(void);
+-
+ /* nv_kern_ functions, interfaces used by linux kernel */
+ void          nv_kern_vma_open(struct vm_area_struct *vma);
+ void          nv_kern_vma_release(struct vm_area_struct *vma);
+@@ -121,7 +108,7 @@
+ unsigned int  nv_kern_poll(struct file *, poll_table *);
+ int           nv_kern_ioctl(struct inode *, struct file *, unsigned int, unsigned long);
+ void          nv_kern_bh(void *);
+-void          nv_kern_isr(int, void *, struct pt_regs *);
++irqreturn_t   nv_kern_isr(int, void *, struct pt_regs *);
+ void          nv_kern_rc_timer(unsigned long);
+ #ifdef CONFIG_PM
+ int           nv_kern_pm(struct pm_dev *dev, pm_request_t rqst, void *data);
+@@ -144,6 +131,7 @@
+ /* character driver entry points */
+ 
+ static struct file_operations nv_fops = {
++    owner:          THIS_MODULE,
+     poll:           nv_kern_poll,
+     ioctl:          nv_kern_ioctl,
+     mmap:           nv_kern_mmap,
+@@ -298,8 +286,8 @@
+     {
+         nv_printf(NV_DBG_MEMINFO, "  0x%x: count %d flags 0x%x\n", 
+             *page_ptr, 
+-            (GET_MAP_NR(*page_ptr))->count,
+-            (GET_MAP_NR(*page_ptr))->flags);
++            (virt_to_page(__va(*page_ptr)))->count,
++            (virt_to_page(__va(*page_ptr)))->flags);
+         num_pages--;
+         page_ptr++;
+     }
+@@ -370,7 +358,7 @@
+         phys_addr = virt_to_phys((void *) virt_addr);
+ 
+         /* lock the page for dma purposes */
+-        mem_map_reserve(GET_MAP_NR(phys_addr));
++        SetPageReserved(virt_to_page(__va(phys_addr)));
+ 
+         *page_ptr++ = phys_addr;
+         pages_needed--;
+@@ -383,7 +371,7 @@
+     while (page_ptr != (unsigned long *) page_list)
+     {
+         page_ptr--;
+-        mem_map_unreserve(GET_MAP_NR(*page_ptr));
++        ClearPageReserved(virt_to_page(__va(*page_ptr)));
+         free_page((unsigned long) phys_to_virt(*page_ptr));
+     }
+ 
+@@ -403,7 +391,7 @@
+ 
+     while (pages_left)
+     {
+-        mem_map_unreserve(GET_MAP_NR(*page_list));
++        ClearPageReserved(virt_to_page(__va(*page_list)));
+         page_list++;
+         pages_left--;
+     }
+@@ -569,11 +557,6 @@
+     nv_linux_state_t *nvl;
+     nv_linux_state_t *nv_max_devices;
+ 
+-#if defined (KERNEL_2_2)
+-    struct proc_dir_entry *proc_root_driver;
+-    proc_root_driver = create_proc_entry("driver", flags, &proc_root);
+-#endif
+-
+     proc_nvidia = create_proc_entry("nvidia", flags, proc_root_driver);
+     proc_nvidia_cards = create_proc_entry("cards", flags, proc_nvidia);
+     proc_nvidia_agp = create_proc_entry("agp", flags, proc_nvidia);
+@@ -635,9 +618,6 @@
+ {
+ #ifdef CONFIG_PROC_FS
+     nvos_proc_remove_all(proc_nvidia);
+-#if defined (KERNEL_2_2)
+-    remove_proc_entry("driver", &proc_root);
+-#endif
+ #endif
+ }
+ 
+@@ -726,71 +706,75 @@
+  *** EXPORTS to Linux Kernel
+  ***/
+ 
+-int init_module(void)
++static int __init nvidia_init_module(void)
+ {
+-    nv_linux_state_t *nvl;
+-    int rc;
+-    int num_devices;
++    int i, rc;
+ 
+     memset(nv_linux_devices, 0, sizeof(nv_linux_devices));
+-    num_devices = nvos_probe_devices();
++    nv_num_devices = nvos_probe_devices();
+ 
+-    if (num_devices == 0) {
++    if (nv_num_devices == 0) {
+         nv_printf(NV_DBG_ERRORS, "nvidia: no NVIDIA graphics adapter found\n");
+         return -ENODEV;
+     }
+ 
+     nv_printf(NV_DBG_ERRORS, "nvidia: loading %s\n", pNVRM_ID);
+ 
+-#ifdef CONFIG_DEVFS_FS
++#if defined(CONFIG_DEVFS_FS) && !defined(KERNEL_2_5)
+     rc = devfs_register_chrdev(nv_major, "nvidia", &nv_fops);
+ #else
+     rc = register_chrdev(nv_major, "nvidia", &nv_fops);
+ #endif
+ 
+     if (rc < 0) {
+-        nv_printf(NV_DBG_ERRORS, "init_module: register failed\n");
++        nv_printf(NV_DBG_ERRORS, "nvidia_init_module: register failed\n");
+         return rc;
+     }
+ 
+ #ifdef CONFIG_DEVFS_FS
+-    memset(nv_dev_handle, 0, sizeof(devfs_handle_t) * NV_MAX_DEVICES);
+     do {
++        /*
++         * XXX This code isn't pretty, but neither is dealing with the
++         * various Linux devfs implemenation(s). While Linux APIs are
++         * known to be anything but stable and oftentimes anything but
++         * well designed, the devfs interface has been more painful to
++         * deal with than most other APIs.
++         */
+         char name[10];
+-        int i;
+ 
+-        nv_ctl_handle = devfs_register(NULL, "nvidiactl",
+-                            DEVFS_FL_DEFAULT, nv_major, 255,
+-                            S_IFCHR | S_IRUGO | S_IWUGO,
+-                            &nv_fops, NULL);
++        nv_devfs_handles[0] = NV_DEVFS_REGISTER("nvidiactl", 255);
+ 
+-        for (i = 0; i < num_devices; i++) {
++        for (i = 0; i < nv_num_devices; i++) {
+             sprintf(name, "nvidia%d", i);
+-            nv_dev_handle[i] = devfs_register(NULL, name,
+-                                  DEVFS_FL_DEFAULT, nv_major, i,
+-                                  S_IFCHR | S_IRUGO | S_IWUGO,
+-                                  &nv_fops, NULL);
++            nv_devfs_handles[i+1] = NV_DEVFS_REGISTER(name, i);
+         }
+     } while(0);
+ #endif
+ 
+-    nv_printf(NV_DBG_INFO, "init_module: major number %d\n", nv_major);
++    nv_printf(NV_DBG_INFO, "nvidia_init_module: major number %d\n", nv_major);
+ 
+-    // init all the bottom half structures
+-    for (nvl = nv_linux_devices; nvl < nv_linux_devices + NV_MAX_DEVICES; nvl++)
+-    {
+-        nvl->bh = &nv_bottom_halves[nvl - nv_linux_devices];
+-        nvl->bh->routine = nv_kern_bh;
+-        nvl->bh->data = (void *) nvl;
+-        nvl->bh->sync = 0;
++    /* instantiate tasklets */
++    for (i = 0; i < NV_MAX_DEVICES; i++) {
++        /*
++         * We keep one tasklet per card to avoid latency issues with more
++         * than one device; no two instances of a single tasklet are ever
++         * executed concurrently.
++         */
++        atomic_set(&nv_linux_devices[i].tasklet.count, 1);
++
++        /*
++         * Initialize the event queue for this device. This only needs to
++         * happen once for every device.
++         */
++        init_waitqueue_head(&nv_linux_devices[i].waitqueue);
+     }
+ 
+     // init the nvidia control device
+     {
+         nv_state_t *nv_ctl = NV_STATE_PTR(&nv_ctl_device);
+-        nv_ctl_device.event_queue = NULL;
+         nv_ctl->os_state = (void *) &nv_ctl_device;
+         nv_lock_init_locks(nv_ctl);
++        init_waitqueue_head(&nv_ctl_device.waitqueue);
+     }
+ 
+ #ifdef CONFIG_PM
+@@ -815,14 +799,14 @@
+     /* create /proc/driver/nvidia */
+     nvos_proc_create();
+ 
+-#if defined(DEBUG) && !defined(KERNEL_2_2)
++#if defined(DEBUG)
+     inter_module_register("nv_linux_devices", THIS_MODULE, nv_linux_devices);
+ #endif
+ 
+     return 0;
+ 
+  failed:
+-#ifdef CONFIG_DEVFS_FS
++#if defined(CONFIG_DEVFS_FS) && !defined(KERNEL_2_5)
+     devfs_unregister_chrdev(nv_major, "nvidia");
+ #else
+     unregister_chrdev(nv_major, "nvidia");
+@@ -830,18 +814,18 @@
+     return rc;
+ }
+ 
+-void cleanup_module(void)
++static void __exit nvidia_exit_module(void)
+ {
+-    int rc;
+     nv_linux_state_t *nvl;
+     nv_linux_state_t *max_devices;
++    int rc;
+ 
+     /* remove /proc/driver/nvidia */
+     nvos_proc_remove();
+ 
+-    nv_printf(NV_DBG_INFO, "cleanup_module\n");
++    nv_printf(NV_DBG_INFO, "nvidia_exit_module\n");
+ 
+-#if defined(DEBUG) && !defined(KERNEL_2_2)
++#if defined(DEBUG)
+     inter_module_unregister("nv_linux_devices");
+ #endif
+ 
+@@ -866,33 +850,34 @@
+                 continue;
+ 
+             nv_printf(NV_DBG_ERRORS,
+-                    "still have vm que at cleanup_module(): 0x%x to 0x%x\n",
++                    "still have vm que at nvidia_exit_module(): 0x%x to 0x%x\n",
+                     nvl->alloc_queue->vma->vm_start,
+                     nvl->alloc_queue->vma->vm_end);
+         }
+     }
+ 
+-#ifdef CONFIG_DEVFS_FS
++#if defined(CONFIG_DEVFS_FS) && !defined(KERNEL_2_5)
+     rc = devfs_unregister_chrdev(nv_major, "nvidia");
+ #else
+     rc = unregister_chrdev(nv_major, "nvidia");
+ #endif
+ 
+     if (rc < 0) {
+-        nv_printf(NV_DBG_ERRORS, "cleanup_module: unregister nv failed\n");
++        nv_printf(NV_DBG_ERRORS, "nvidia_exit_module: unregister nv failed\n");
+     }
+ 
+ #ifdef CONFIG_DEVFS_FS
+     do {
+         int i;
+-        for (i = 0; nv_dev_handle[i] != 0; i++) {
+-            devfs_unregister(nv_dev_handle[i]);
+-        }
+-    } while(0);
+-    devfs_unregister(nv_ctl_handle);
++        NV_DEVFS_REMOVE_CONTROL();
++        for (i = 0; i < nv_num_devices; i++)
++            NV_DEVFS_REMOVE_DEVICE(i);
++    } while (0);
+ #endif
+ }
+ 
++module_init(nvidia_init_module);
++module_exit(nvidia_exit_module);
+ 
+ /* this is only called when the vmas are duplicated.
+  * this appears to only happen when the process is cloned to create
+@@ -906,11 +891,11 @@
+ nv_kern_vma_open(struct vm_area_struct *vma)
+ {
+     nv_printf(NV_DBG_MEMINFO, "vma_open for 0x%x - 0x%x, offset 0x%x\n",
+-        vma->vm_start, vma->vm_end, LINUX_VMA_OFFS(vma));
++        vma->vm_start, vma->vm_end, NV_VMA_OFFSET(vma));
+ 
+-    if (VMA_PRIVATE(vma))
++    if (NV_VMA_PRIVATE(vma))
+     {
+-        nv_alloc_t *at = (nv_alloc_t *) VMA_PRIVATE(vma);
++        nv_alloc_t *at = (nv_alloc_t *) NV_VMA_PRIVATE(vma);
+         at->usage_count++;
+ 
+         nv_printf(NV_DBG_MEMINFO, "  at 0x%x, usage count %d, page_table 0x%x\n",
+@@ -918,8 +903,6 @@
+ 
+         nvos_list_page_count(at->page_table, at->num_pages);
+     }
+-
+-    MOD_INC_USE_COUNT;
+ }
+ 
+ 
+@@ -927,11 +910,11 @@
+ nv_kern_vma_release(struct vm_area_struct *vma)
+ {
+     nv_printf(NV_DBG_MEMINFO, "vma_release for 0x%x - 0x%x, offset 0x%x\n",
+-        vma->vm_start, vma->vm_end, LINUX_VMA_OFFS(vma));
++        vma->vm_start, vma->vm_end, NV_VMA_OFFSET(vma));
+ 
+-    if (VMA_PRIVATE(vma))
++    if (NV_VMA_PRIVATE(vma))
+     {
+-        nv_alloc_t *at = (nv_alloc_t *) VMA_PRIVATE(vma);
++        nv_alloc_t *at = (nv_alloc_t *) NV_VMA_PRIVATE(vma);
+ 
+         at->usage_count--;
+ 
+@@ -949,22 +932,12 @@
+             if (at->page_table)
+                 nvos_unlock_pages(at->page_table, at->num_pages);
+             nvos_free_alloc(at);
+-            VMA_PRIVATE(vma) = NULL;
++            NV_VMA_PRIVATE(vma) = NULL;
+         }
+     }
+-
+-    MOD_DEC_USE_COUNT;
+ }
+ 
+ 
+-/* at this point, this code just plain won't work with 2.2 kernels.
+- * additionally, only ia64 & the 460GX need a nopage handler, and 2.2 doesn't
+- * work on ia64 anyways. It's expected that at some point other agp chipsets
+- * will work similar to the 460GX (AGP 3.0 spec), so pre-emptively make sure
+- * this works on our standard ia32 driver.
+- */
+-#if !defined(KERNEL_2_2)
+-
+ /* AGP allocations under the 460GX are not mapped to the aperture
+  * addresses by the CPU.  This nopage handler will fault on CPU
+  * accesses to AGP memory and map the address to the correct page.
+@@ -977,7 +950,7 @@
+     struct page *page_ptr;
+     int rm_status, index;
+ 
+-    at = VMA_PRIVATE(vma);
++    at = NV_VMA_PRIVATE(vma);
+     if (at == NULL)
+     {
+         nv_printf(NV_DBG_ERRORS, "NVRM: nopage handler called without an at: "
+@@ -1016,7 +989,7 @@
+         // far again
+         nv_printf(NV_DBG_ERRORS, "NVRM: nopage handler called on a freed"
+                   "address: vm_start 0x%x, at 0x%x\n", vma->vm_start, at);
+-        VMA_PRIVATE(vma) = NULL;
++        NV_VMA_PRIVATE(vma) = NULL;
+         return NOPAGE_SIGBUS;
+     }
+ 
+@@ -1038,14 +1011,11 @@
+ 
+     return page_ptr;
+ }
+-#endif
+ 
+ struct vm_operations_struct nv_vm_ops = {
+     nv_kern_vma_open,
+     nv_kern_vma_release,  /* "close" */
+-#if !defined(KERNEL_2_2)
+     nv_kern_vma_nopage,
+-#endif
+ };
+ 
+ 
+@@ -1076,7 +1046,7 @@
+ 
+     /* for control device, just jump to its open routine */
+     /* after setting up the private data */
+-    if (NV_DEVICE_IS_CONTROL_DEVICE(inode->i_rdev))
++    if (NV_IS_CONTROL_DEVICE(inode->i_rdev))
+         return nv_kern_ctl_open(inode, file);
+ 
+     /* what device are we talking about? */
+@@ -1087,9 +1057,6 @@
+         goto failed;
+     }
+ 
+-
+-    MOD_INC_USE_COUNT;
+-
+     nvl = &nv_linux_devices[devnum];
+     nv = NV_STATE_PTR(nvl);
+ 
+@@ -1137,16 +1104,9 @@
+             goto failed;
+         }
+ 
+-#if !defined (KERNEL_2_2)
+-        NV_KMALLOC(nvl->event_queue, sizeof(struct __wait_queue_head));
+-        if (nvl->event_queue == NULL)
+-            goto failed;
+-        memset(nvl->event_queue, 0, sizeof(struct __wait_queue_head));
+-
+-        init_waitqueue_head(GET_EVENT_QUEUE(nvl));
+-#else
+-        nvl->event_queue = NULL;
+-#endif
++        nvl->tasklet.func = (void *) rm_isr_bh;
++        nvl->tasklet.data = (unsigned long) nv->pdev;
++        tasklet_enable(&nvl->tasklet);
+ 
+         nv->flags |= NV_FLAG_OPEN;
+     }
+@@ -1157,7 +1117,6 @@
+     return rc;
+ 
+  failed:
+-    MOD_DEC_USE_COUNT;
+     nv_unlock_ldata(nv);
+     return rc;
+ }
+@@ -1179,7 +1138,7 @@
+ 
+     /* for control device, just jump to its open routine */
+     /* after setting up the private data */
+-    if (NV_DEVICE_IS_CONTROL_DEVICE(inode->i_rdev))
++    if (NV_IS_CONTROL_DEVICE(inode->i_rdev))
+         return nv_kern_ctl_close(inode, file);
+ 
+     nv_printf(NV_DBG_INFO, "nv_kern_close on device %d\n", NV_DEVICE_NUMBER(inode->i_rdev));
+@@ -1189,28 +1148,22 @@
+     nv_lock_ldata(nv);
+     if (--nv->usage_count == 0)
+     {
+-        int counter = 0;
+-
+-        /* turn off interrupts.
+-        ** be careful to make sure any pending bottom half gets run
+-        **  or disabled before calling rm_shutdown_adapter() since
+-        **  it will free up the pdev.  This is hard to see on single
+-        **  cpu systems, but easy on dual cpu :-)
+-        */
++        /*
++         * The usage count for this device has dropped to zero, it can be shut
++         * down safely; disable its interrupts.
++         */
+         rm_disable_adapter(nv);
+ 
+-        /* give it a moment to allow any bottom half to run */
+-
+-#define MAX_BH_TASKS 10
+-        while (NV_ATOMIC_READ(nvl->bh_count) && (counter < MAX_BH_TASKS))
+-        {
+-            current->state = TASK_INTERRUPTIBLE;
+-            schedule_timeout(HZ/50);
+-            counter++;
+-        }
++        /*
++         * Disable this device's tasklet to make sure that no bottom half will
++         * run with undefined device state.
++         */
++        tasklet_disable(&nvl->tasklet);
+ 
+-        /* free the irq, which may block until any pending interrupts */
+-        /* are done being processed. */
++        /*
++         * Free the IRQ, which may block until all pending interrupt processing
++         * has completed.
++         */
+         free_irq(nv->interrupt_line, (void *) nv);
+ 
+         rm_shutdown_adapter(nv);
+@@ -1230,12 +1183,6 @@
+             }
+         }
+ 
+-#if !defined (KERNEL_2_2)
+-        /* this only needs to be freed on 2.4 and later kernels */
+-        NV_KFREE(nvl->event_queue);
+-        nvl->event_queue = NULL;
+-#endif
+-
+         /* leave INIT flag alone so we don't reinit every time */
+         nv->flags &= ~(NV_FLAG_OPEN | NV_FLAG_WAITING);
+     }
+@@ -1246,8 +1193,6 @@
+         NV_KFREE(file->private_data);
+     file->private_data = (void *) 0;
+ 
+-    MOD_DEC_USE_COUNT;
+-
+     return 0;
+ }
+ 
+@@ -1264,10 +1209,10 @@
+     nv_printf(NV_DBG_INFO, "mmap([0x%lx-0x%lx] off=0x%lx)\n",
+         vma->vm_start,
+         vma->vm_end,
+-        LINUX_VMA_OFFS(vma));
++        NV_VMA_OFFSET(vma));
+ 
+     // be a bit paranoid for now
+-    if ((NV_MASK_OFFSET(LINUX_VMA_OFFS(vma))) ||
++    if ((NV_MASK_OFFSET(NV_VMA_OFFSET(vma))) ||
+         (NV_MASK_OFFSET(vma->vm_start)) ||
+         (NV_MASK_OFFSET(vma->vm_end)))
+     {
+@@ -1285,7 +1230,7 @@
+ 
+ 
+     /* NV reg space */
+-    if (IS_REG_OFFSET(nv, LINUX_VMA_OFFS(vma), vma->vm_end - vma->vm_start))
++    if (IS_REG_OFFSET(nv, NV_VMA_OFFSET(vma), vma->vm_end - vma->vm_start))
+     {
+         /* truncate to size of registers */
+         if (pages > nv->regs->size / PAGE_SIZE)
+@@ -1293,7 +1238,7 @@
+ 
+         vma->vm_page_prot = pgprot_noncached(vma->vm_page_prot);
+         if (NV_REMAP_PAGE_RANGE(vma->vm_start,
+-                             LINUX_VMA_OFFS(vma),
++                             NV_VMA_OFFSET(vma),
+                              vma->vm_end - vma->vm_start,
+                              vma->vm_page_prot))
+             return -EAGAIN;
+@@ -1303,7 +1248,7 @@
+     }
+ 
+     /* NV fb space */
+-    else if (IS_FB_OFFSET(nv, LINUX_VMA_OFFS(vma), vma->vm_end - vma->vm_start))
++    else if (IS_FB_OFFSET(nv, NV_VMA_OFFSET(vma), vma->vm_end - vma->vm_start))
+     {
+ 
+         /* truncate to size of framebuffer */
+@@ -1312,7 +1257,7 @@
+ 
+         vma->vm_page_prot = pgprot_noncached(vma->vm_page_prot);
+         if (NV_REMAP_PAGE_RANGE(vma->vm_start,
+-                             LINUX_VMA_OFFS(vma),
++                             NV_VMA_OFFSET(vma),
+                              vma->vm_end - vma->vm_start,
+                              vma->vm_page_prot))
+             return -EAGAIN;
+@@ -1322,10 +1267,10 @@
+     }
+ 
+     /* AGP allocator */
+-    else if (IS_AGP_OFFSET(nv, LINUX_VMA_OFFS(vma), vma->vm_end - vma->vm_start))
++    else if (IS_AGP_OFFSET(nv, NV_VMA_OFFSET(vma), vma->vm_end - vma->vm_start))
+     {
+         nv_lock_at(nv);
+-        at = nvl_find_alloc(nvl, LINUX_VMA_OFFS(vma), NV_ALLOC_TYPE_AGP);
++        at = nvl_find_alloc(nvl, NV_VMA_OFFSET(vma), NV_ALLOC_TYPE_AGP);
+ 
+         if (at == NULL)
+         {
+@@ -1343,7 +1288,7 @@
+         }
+ 
+         at->vma = vma;
+-        VMA_PRIVATE(vma) = at;
++        NV_VMA_PRIVATE(vma) = at;
+         at->usage_count++;
+ 
+         if (NV_OSAGP_ENABLED(nv))
+@@ -1366,13 +1311,13 @@
+     }
+ 
+     /* Magic allocator */
+-    else // if (LINUX_VMA_OFFS(vma) == NV_MMAP_ALLOCATION_OFFSET)
++    else // if (NV_VMA_OFFSET(vma) == NV_MMAP_ALLOCATION_OFFSET)
+     {
+         unsigned long page = 0, pos, start;
+         int i = 0;
+ 
+         nv_lock_at(nv);
+-        at = nvl_find_alloc(nvl, LINUX_VMA_OFFS(vma), NV_ALLOC_TYPE_PCI);
++        at = nvl_find_alloc(nvl, NV_VMA_OFFSET(vma), NV_ALLOC_TYPE_PCI);
+ 
+         if (at == NULL)
+         {
+@@ -1390,7 +1335,7 @@
+         }
+ 
+         at->vma = vma;
+-        VMA_PRIVATE(vma) = at;
++        NV_VMA_PRIVATE(vma) = at;
+         at->usage_count++;
+ 
+         nv_printf(NV_DBG_INFO, "remapping %d system pages for at 0x%x\n", pages, at);
+@@ -1412,9 +1357,6 @@
+ 
+     vma->vm_file = file;
+ 
+-    /* just increment usage count, rather than calling vma_open */
+-    MOD_INC_USE_COUNT;
+-
+     return 0;
+ }
+ 
+@@ -1439,7 +1381,7 @@
+         return nv_kern_ctl_poll (file, wait);
+ 
+     // add us to the list
+-    poll_wait(file, GET_EVENT_QUEUE(nvl), wait);
++    poll_wait(file, &nvl->waitqueue, wait);
+ 
+     nv_lock_ldata(nv);
+ 
+@@ -1519,12 +1461,13 @@
+ 
+     switch (_IOC_NR(cmd))
+     {
++#if !defined(KERNEL_2_5)
+         /* debug tool; zap the module use count so we can unload driver */
+         /*             even if it is confused */
+         case _IOC_NR(NV_IOCTL_MODULE_RESET):
+             atomic_set(&__this_module.uc.usecount, 1);
+             break;
+-
++#endif
+         /* pass out info about the card */
+         case _IOC_NR(NV_IOCTL_CARD_INFO):
+         {
+@@ -1651,7 +1594,7 @@
+  * driver receives an interrupt
+  *    if someone waiting, then hand it off.
+  */
+-void nv_kern_isr(
++irqreturn_t nv_kern_isr(
+     int   irq,
+     void *arg,
+     struct pt_regs *regs
+@@ -1665,9 +1608,10 @@
+     if (need_to_run_bottom_half)
+     {
+         NV_ATOMIC_INC(nvl->bh_count);
+-        queue_task(nvl->bh, &tq_immediate);
+-        mark_bh(IMMEDIATE_BH);
++        tasklet_schedule(&nvl->tasklet);
+     }
++
++    return IRQ_HANDLED;
+ }
+ 
+ void nv_kern_bh(
+@@ -1760,26 +1704,6 @@
+     /* save the nv away in file->private_data */
+     NV_HIDE_IN_FILEP(file, nv);
+ 
+-    MOD_INC_USE_COUNT;
+-
+-    /* if this is the first time the control device has been opened,
+-     * allocate the wait queue
+-     */
+-
+-    if (! nvl->event_queue) {
+-
+-#if !defined (KERNEL_2_2)
+-        NV_KMALLOC(nvl->event_queue, sizeof(struct __wait_queue_head));
+-        if (nvl->event_queue == NULL)
+-            return -ENOMEM;
+-        memset(nvl->event_queue, 0, sizeof(struct __wait_queue_head));
+-
+-        init_waitqueue_head(GET_EVENT_QUEUE(nvl));
+-#else
+-        nvl->event_queue = NULL;
+-#endif
+-    }
+-
+     nv->flags |= NV_FLAG_OPEN + NV_FLAG_CONTROL;
+ 
+     /* turn off the hotkey occurred bit */
+@@ -1807,15 +1731,7 @@
+ 
+     nv_lock_ldata(nv);
+     if (--nv->usage_count == 0)
+-    {
+-#if !defined (KERNEL_2_2)
+-        nv_linux_state_t *nvl = NV_GET_NVL_FROM_NV_STATE(nv);
+-        /* this only needs to be freed on 2.4 and later kernels */
+-        NV_KFREE(nvl->event_queue);
+-        nvl->event_queue = 0;
+-#endif
+         nv->flags = 0;
+-    }
+     nv_unlock_ldata(nv);
+ 
+     rm_free_unused_clients(nv, current->pid, (void *) file);
+@@ -1825,8 +1741,6 @@
+         NV_KFREE(file->private_data);
+     file->private_data = (void *) 0;
+ 
+-    MOD_DEC_USE_COUNT;
+-
+     return 0;
+ }
+ 
+@@ -1851,7 +1765,7 @@
+     if (file->f_flags & O_NONBLOCK)
+         return -EAGAIN;
+ 
+-    poll_wait(file, GET_EVENT_QUEUE(nvl), wait);
++    poll_wait(file, &nvl->waitqueue, wait);
+ 
+     nv_lock_ldata(nv);
+ 
+@@ -1881,7 +1795,7 @@
+     nv_ctl_device.nv_state.flags |= NV_FLAG_HOTKEY_OCCURRED;
+     nv_unlock_ldata(&(nv_ctl_device.nv_state));
+ 
+-    wake_up_interruptible(GET_EVENT_QUEUE(&nv_ctl_device));
++    wake_up_interruptible(&nv_ctl_device.waitqueue);
+ }
+ 
+ int nv_kern_read_cardinfo(char *page, char **start, off_t off,
+@@ -1960,7 +1874,7 @@
+         len += sprintf(page+len, "Host Bridge: \t ");
+ 
+ #if defined(CONFIG_PCI_NAMES)
+-        len += sprintf(page+len, "%s\n", dev->name);
++        len += sprintf(page+len, "%s\n", NV_PCI_DEVICE_NAME(dev));
+ #else
+         len += sprintf(page+len, "PCI device %04x:%04x\n",
+                 dev->vendor, dev->device);
+@@ -2088,18 +2002,21 @@
+             {
+                 unsigned long retaddr = (unsigned long) at->page_table[i];
+ 
+-                if (retaddr <= MAXMEM)
+-                {
+-                    return __va((retaddr + offset));
+-                }
+-   
+-                // if we've allocated via vmalloc on a highmem system, the 
+-                // physical address may not be accessible via PAGE_OFFSET, 
+-                // that's ok, we have a simple linear pointer already.
++                /*
++                 * XXX This routine should be more straight-forward; as it
++                 * is, it returns a pointer into the kernel linear mapping if
++                 * the incoming address belongs to a vmalloc() allocation or
++                 * the kernel logical mapping of the corresponding page if it
++                 * was allocated with alloc_pages(); third case below.
++                 */
+                 if (at->flags & NV_ALLOC_TYPE_VMALLOC)
+                 {
+                     return (void *)((unsigned char *) at->key_mapping + (i << PAGE_SHIFT) + offset);
+                 }
++                else if (!(at->flags & NV_ALLOC_TYPE_CONTIG))
++                {
++                    return __va((retaddr + offset));
++                }
+ 
+                 // ?? this may be a contiguous allocation, fall through
+                 // to below? or should I just check at->flag here?
+@@ -2169,9 +2086,9 @@
+ unsigned long
+ nv_get_phys_address(unsigned long address)
+ {
+-    pgd_t *pg_dir;
+-    pmd_t *pg_mid_dir;
+-    pte_t pte;
++    pgd_t *pgd;
++    pmd_t pmd;
++    pte_t pte; 
+ 
+ #if defined(NVCPU_IA64)
+     if (address > __IA64_UNCACHED_OFFSET)
+@@ -2184,18 +2101,19 @@
+         return __pa(address);
+ 
+     if (address > VMALLOC_START)
+-       pg_dir = pgd_offset_k(address);
++       pgd = pgd_offset_k(address);
+     else
+-       pg_dir = pgd_offset(current->mm, address);
++       pgd = pgd_offset(current->mm, address);
+ 
+-    if (pgd_none(*pg_dir))
++    if (pgd_none(*pgd))
+         goto failed;
+ 
+-    pg_mid_dir = pmd_offset(pg_dir, address);
+-    if (pmd_none(*pg_mid_dir))
++    NV_PMD_OFFSET(address, pgd, pmd);
++
++    if (pmd_none(pmd))
+         goto failed;
+ 
+-    NV_PTE_OFFSET(address, pg_mid_dir, pte);
++    NV_PTE_OFFSET(address, &pmd, pte);
+ 
+     if (!pte_present(pte))
+         goto failed;
+@@ -2567,7 +2485,7 @@
+ 
+     nvfp->any_fired_notifiers++;
+ 
+-    wake_up_interruptible(GET_EVENT_QUEUE(nvl));
++    wake_up_interruptible(&nvl->waitqueue);
+ }
+ 
+ /*
+@@ -2584,7 +2502,7 @@
+     if (nvl->waiting_for_vblank)
+         nvl->vblank_notifier++;
+ 
+-    wake_up_interruptible(GET_EVENT_QUEUE(nvl));
++    wake_up_interruptible(&nvl->waitqueue);
+ }
+ 
+ 
+@@ -2633,12 +2551,8 @@
+     if ( (NV_AGP_DISABLED(nv)) && (config & NVOS_AGP_CONFIG_NVAGP) )
+     {
+         /* make sure the user does not have agpgart loaded */
+-#if !defined (KERNEL_2_2)
+         if (inter_module_get("drm_agp")) {
+             inter_module_put("drm_agp");
+-#else
+-        if (GET_MODULE_SYMBOL(0, __MODULE_STRING(agp_enable))) {
+-#endif
+             nv_printf(NV_DBG_WARNINGS, "NVRM: not using NVAGP, AGPGART is loaded!!\n");
+         } else
+             status = rm_init_agp(nv);
+diff -ruN NVIDIA_kernel-1.0-4363/os-agp.c NVIDIA_kernel-1.0-4363-2.5/os-agp.c
+--- NVIDIA_kernel-1.0-4363/os-agp.c	2003-04-20 03:57:19.000000000 +0200
++++ NVIDIA_kernel-1.0-4363-2.5/os-agp.c	2003-06-13 23:02:14.000000000 +0200
+@@ -45,44 +45,9 @@
+     int  ready;
+ } agp_gart;
+ 
+-typedef struct {
+-    int           (*backend_acquire)(void);
+-    void          (*backend_release)(void);
+-    void          (*copy_info)(agp_kern_info *);
+-    agp_memory *  (*allocate_memory)(size_t, unsigned int);
+-    void          (*free_memory)(agp_memory *);
+-    int           (*bind_memory)(agp_memory *, off_t);
+-    int           (*unbind_memory)(agp_memory *);
+-    void          (*enable)(unsigned int);
+-} agp_operations_struct;
+-
+-agp_operations_struct agp_ops;
+ agp_kern_info         agpinfo;
+ agp_gart              gart;
+-#if !defined (KERNEL_2_2)
+ const drm_agp_t       *drm_agp_p;
+-#endif
+-
+-#if defined (KERNEL_2_2)
+-    #define GET_AGPGART_SYMBOL(sym, sym_string)                     \
+-        sym = (void*) GET_MODULE_SYMBOL(0, sym_string);             \
+-        if (sym == NULL)                                            \
+-        {                                                           \
+-            nv_printf(NV_DBG_ERRORS,                                \
+-                "NVRM: AGPGART: unable to retrieve symbol %s\n",    \
+-                sym_string);                                        \
+-            return 1;                                               \
+-        }
+-
+-    #define AGP_BACKEND_ACQUIRE_SYM   __MODULE_STRING(agp_backend_acquire)
+-    #define AGP_BACKEND_RELEASE_SYM   __MODULE_STRING(agp_backend_release)
+-    #define AGP_COPY_INFO_SYM         __MODULE_STRING(agp_copy_info)
+-    #define AGP_ALLOCATE_MEMORY_SYM   __MODULE_STRING(agp_allocate_memory)
+-    #define AGP_FREE_MEMORY_SYM       __MODULE_STRING(agp_free_memory)
+-    #define AGP_BIND_MEMORY_SYM       __MODULE_STRING(agp_bind_memory)
+-    #define AGP_UNBIND_MEMORY_SYM     __MODULE_STRING(agp_unbind_memory)
+-    #define AGP_ENABLE_SYM            __MODULE_STRING(agp_enable)
+-#endif
+ 
+ #if defined(CONFIG_MTRR)
+ #define MTRR_DEL(gart) if ((gart).mtrr > 0) mtrr_del((gart).mtrr, 0, 0);
+@@ -105,13 +70,17 @@
+     U032  agp_rate;
+     U032  agp_sba;
+     U032  agp_fw;
+-    char* chipset;
+     VOID *bitmap;
+     U032 bitmap_size;
+ 
+     memset( (void *) &gart, 0, sizeof(agp_gart));
+ 
+-#if !defined (KERNEL_2_2)
++    /*
++     * XXX The inter_module_* mechanism has been deprecated and replaced with
++     * a different mechanism in Linux 2.5; it will go away eventually.
++     * Also, the Linux 2.5 AGP GART driver is modularized, agpgart.o does not
++     * include backend drivers.
++     */
+     if (!(drm_agp_p = inter_module_get_request("drm_agp", "agpgart")))
+     {
+         nv_printf(NV_DBG_ERRORS,
+@@ -119,48 +88,13 @@
+         return 1;
+     }
+     
+-    agp_ops.backend_acquire = drm_agp_p->acquire;
+-    agp_ops.backend_release = drm_agp_p->release;
+-    agp_ops.allocate_memory = drm_agp_p->allocate_memory;
+-    agp_ops.free_memory     = drm_agp_p->free_memory;
+-    agp_ops.bind_memory     = drm_agp_p->bind_memory;
+-    agp_ops.unbind_memory   = drm_agp_p->unbind_memory;
+-    agp_ops.enable          = drm_agp_p->enable;
+-
+-    // looks like some newer kernels (for example mandrake 9.0's 2.4.19-16mdk)
+-    // have updated copy_info to return an integer value, and of course didn't
+-    // bother bumping the agpgart revision up. The return value is pretty 
+-    // harmless (backend_acquire would have already failed and caused us to
+-    // bail), so cast the function pointer to avoid compiler warnings.
+-    // we may need to revisit this in the future.
+-    agp_ops.copy_info       = (void (*)(agp_kern_info *)) drm_agp_p->copy_info;
+-
+-#else
+-#if defined(CONFIG_KMOD)
+-    if ( request_module("agpgart") )
+-    {
+-        nv_printf(NV_DBG_ERRORS, "NVRM: AGPGART: not loading agpgart.o\n");
+-        return 1;
+-    }
+-#endif
+-
+-    GET_AGPGART_SYMBOL(agp_ops.backend_acquire, AGP_BACKEND_ACQUIRE_SYM);
+-    GET_AGPGART_SYMBOL(agp_ops.backend_release, AGP_BACKEND_RELEASE_SYM);
+-    GET_AGPGART_SYMBOL(agp_ops.copy_info,       AGP_COPY_INFO_SYM);
+-    GET_AGPGART_SYMBOL(agp_ops.allocate_memory, AGP_ALLOCATE_MEMORY_SYM);
+-    GET_AGPGART_SYMBOL(agp_ops.free_memory,     AGP_FREE_MEMORY_SYM);
+-    GET_AGPGART_SYMBOL(agp_ops.bind_memory,     AGP_BIND_MEMORY_SYM);
+-    GET_AGPGART_SYMBOL(agp_ops.unbind_memory,   AGP_UNBIND_MEMORY_SYM);
+-    GET_AGPGART_SYMBOL(agp_ops.enable,          AGP_ENABLE_SYM);
+-#endif
+-
+     /* NOTE: from here down, return an error code of '-1'
+      * that indicates that agpgart is loaded, but we failed to use it
+      * in some way. This is so we don't try to use nvagp and lock up
+      * the memory controller.
+      */
+ 
+-    if ( (*(agp_ops.backend_acquire))() )
++    if (drm_agp_p->acquire())
+     {
+         nv_printf(NV_DBG_ERRORS, "NVRM: AGPGART: backend in use\n");
+         return -1;
+@@ -178,44 +112,21 @@
+         agp_fw = 1;
+     agp_fw &= 0x00000001;
+     
+-    (*(agp_ops.copy_info))(&agpinfo);
+-
+-    switch ( agpinfo.chipset )
+-    {
+-        case INTEL_GENERIC:    chipset = "Intel";            break;
+-        case INTEL_LX:         chipset = "Intel 440LX";      break;
+-        case INTEL_BX:         chipset = "Intel 440BX";      break;
+-        case INTEL_GX:         chipset = "Intel 440GX";      break;
+-        case INTEL_I810:       chipset = "Intel i810";       break;
+-        case INTEL_I840:       chipset = "Intel i840";       break;
+-#if !defined (KERNEL_2_2)
+-        case INTEL_I815:       chipset = "Intel i815";       break;
+-#if !defined(__rh_config_h__)
+-        case INTEL_I850:       chipset = "Intel i850";       break;
+-#endif
+-#endif
+-#if defined(NVCPU_IA64)
+-        case INTEL_460GX:      chipset = "Intel 460GX";      break;
+-#endif
+-        case VIA_GENERIC:      chipset = "VIA";              break;
+-        case VIA_VP3:          chipset = "VIA VP3";          break;
+-        case VIA_MVP3:         chipset = "VIA MVP3";         break;
+-        case VIA_MVP4:         chipset = "VIA MVP4";         break;
+-#if !defined (KERNEL_2_2)
+-        case VIA_APOLLO_KX133: chipset = "VIA Apollo KX133"; break;
+-        case VIA_APOLLO_KT133: chipset = "VIA Apollo KT133"; break;
+-#endif
+-        case VIA_APOLLO_PRO:   chipset = "VIA Apollo Pro";   break;
+-        case SIS_GENERIC:      chipset = "SiS";              break;
+-        case AMD_GENERIC:      chipset = "AMD";              break;
+-        case AMD_IRONGATE:     chipset = "AMD Irongate";     break;
+-        case ALI_M1541:        chipset = "ALi M1541";        break;
+-        case ALI_GENERIC:      chipset = "ALi";              break;
+-        case NOT_SUPPORTED:    chipset = "unsupported";      break;
+-        default:               chipset = "unknown";
++#if defined(KERNEL_2_4)
++    /*
++     * The original Linux 2.4 AGP GART driver interface declared copy_info to
++     * return nothing. This changed in Linux 2.5, which reports unsupported
++     * chipsets via this function. If this Linux 2.4 kernels behaves the same
++     * way, we have no way to know.
++     */
++    drm_agp_p->copy_info(&agpinfo);
++#else
++    if (drm_agp_p->copy_info(&agpinfo)) {
++        drm_agp_p->release();
++        inter_module_put("drm_agp");
++        return -1;
+     }
+-
+-    nv_printf(NV_DBG_SETUP, "NVRM: AGPGART: %s chipset\n", chipset);
++#endif
+ 
+ #ifdef CONFIG_MTRR
+     if ((gart.mtrr = mtrr_add(agpinfo.aper_base,
+@@ -229,7 +140,8 @@
+          */
+         nv_printf(NV_DBG_ERRORS, 
+             "NVRM: AGPGART: unable to set MTRR write-combining\n");
+-        (*(agp_ops.backend_release))();
++        drm_agp_p->release();
++        inter_module_put("drm_agp");
+         return -1;
+     }
+ #endif
+@@ -244,7 +156,8 @@
+     {
+         nv_printf(NV_DBG_ERRORS, "NVRM: AGPGART: unable to remap aperture\n");
+         MTRR_DEL(gart);
+-        (*(agp_ops.backend_release))();
++        drm_agp_p->release();
++        inter_module_put("drm_agp");
+         return -1;
+     }
+ 
+@@ -255,7 +168,8 @@
+         nv_printf(NV_DBG_ERRORS, "NVRM: AGPGART: unable to allocate bitmap\n");
+         iounmap(gart.aperture);
+         MTRR_DEL(gart);
+-        (*(agp_ops.backend_release))();
++        drm_agp_p->release();
++        inter_module_put("drm_agp");
+         return -1;
+     }
+ 
+@@ -266,39 +180,19 @@
+         os_free_mem(bitmap);
+         iounmap(gart.aperture);
+         MTRR_DEL(gart);
+-        (*(agp_ops.backend_release))();
++        drm_agp_p->release();
++        inter_module_put("drm_agp");
+         return -1;
+     }
+ 
+-    nv_printf(NV_DBG_SETUP,
+-        "NVRM: AGPGART: aperture: %ldM @ 0x%08lx\n",
+-        (unsigned long)agpinfo.aper_size,
+-        (unsigned long)agpinfo.aper_base);
+-
+-    nv_printf(NV_DBG_SETUP, 
+-        "NVRM: AGPGART: aperture mapped from 0x%08lx to 0x%08lx\n",
+-        agpinfo.aper_base,
+-        (unsigned long) gart.aperture);
+-
+     if (!agp_sba) agpinfo.mode &= ~0x00000200;
+     if (!agp_fw)  agpinfo.mode &= ~0x00000010;
+ 
+     if (!(agp_rate & 0x00000004)) agpinfo.mode &= ~0x00000004;
+     if (!(agp_rate & 0x00000002)) agpinfo.mode &= ~0x00000002;
+     
+-    (*(agp_ops.enable))(agpinfo.mode);
++    drm_agp_p->enable(agpinfo.mode);
+     
+-    if (agpinfo.mode & 0x00000200)
+-        nv_printf(NV_DBG_SETUP, "NVRM: AGPGART: backend supports sba\n");
+-    if (agpinfo.mode & 0x00000010)
+-        nv_printf(NV_DBG_SETUP, "NVRM: AGPGART: backend supports fw\n");
+-    if (agpinfo.mode & 0x00000004)
+-        nv_printf(NV_DBG_SETUP, "NVRM: AGPGART: mode 4x\n");
+-    else if (agpinfo.mode & 0x00000002)
+-        nv_printf(NV_DBG_SETUP, "NVRM: AGPGART: mode 2x\n");
+-    else if (agpinfo.mode & 0x00000001)
+-        nv_printf(NV_DBG_SETUP, "NVRM: AGPGART: mode 1x\n");
+-
+     *ap_phys_base   = (void*) agpinfo.aper_base;
+     *ap_mapped_base = (void*) gart.aperture;
+     *apsize         = (agpinfo.aper_size * 0x100000) - 1;
+@@ -332,11 +226,13 @@
+         iounmap(gart.aperture);
+     }
+ 
+-    (*(agp_ops.backend_release))();
++    drm_agp_p->release();
+ 
+-#if !defined (KERNEL_2_2)
++    /*
++     * XXX Same as above; the inter_module_* mechanism will go away at some
++     * point, it has been deprecated in Linux 2.5.
++     */
+     inter_module_put("drm_agp");
+-#endif
+ 
+     if (rm_clear_agp_bitmap(nv, &bitmap))
+     {
+@@ -383,7 +279,7 @@
+         return RM_ERROR;
+     }
+ 
+-    ptr = (*agp_ops.allocate_memory)(PageCount, AGP_NORMAL_MEMORY);
++    ptr = drm_agp_p->allocate_memory(PageCount, AGP_NORMAL_MEMORY);
+     if (ptr == NULL)
+     {
+         *pAddress = (void*) 0;
+@@ -391,7 +287,7 @@
+         return RM_ERR_NO_FREE_MEM;
+     }
+     
+-    err = (*(agp_ops.bind_memory))(ptr, *Offset);
++    err = drm_agp_p->bind_memory(ptr, *Offset);
+     if (err)
+     {
+         // this happens a lot when the aperture itself fills up..
+@@ -408,7 +304,7 @@
+     if (status != RM_OK)
+     {
+         nv_printf(NV_DBG_ERRORS, "NVRM: memory allocation failed\n");
+-        (*(agp_ops.unbind_memory))(ptr);
++        drm_agp_p->unbind_memory(ptr);
+         goto fail;
+     }
+ 
+@@ -423,7 +319,7 @@
+     return RM_OK;
+ 
+ fail:
+-    (*(agp_ops.free_memory))(ptr);
++    drm_agp_p->free_memory(ptr);
+     *pAddress = (void*) 0;
+ 
+     return RM_ERROR;
+@@ -462,7 +358,7 @@
+     {
+         nv_printf(NV_DBG_ERRORS, "NVRM: AGPGART: unable to remap %lu pages\n",
+             (unsigned long)agp_data->num_pages);
+-        (*(agp_ops.unbind_memory))(agp_data->ptr);
++        drm_agp_p->unbind_memory(agp_data->ptr);
+         goto fail;
+     }
+     
+@@ -480,9 +376,6 @@
+ #endif /* AGPGART */
+ }
+ 
+-
+-#if !defined(KERNEL_2_2)
+-
+ RM_STATUS 
+ KernMapAGPNopage(
+     VOID *address,
+@@ -529,9 +422,6 @@
+ #endif
+ }
+ 
+-#endif /* !defined(KERNEL_2_2) */
+-
+-
+ RM_STATUS KernFreeAGPPages(
+     nv_state_t *nv,
+     VOID **pAddress,
+@@ -557,8 +447,8 @@
+     {
+         size_t pages = ptr->page_count;
+ 
+-        (*(agp_ops.unbind_memory))(ptr);
+-        (*(agp_ops.free_memory))(ptr);
++        drm_agp_p->unbind_memory(ptr);
++        drm_agp_p->free_memory(ptr);
+ 
+         nv_printf(NV_DBG_INFO, "NVRM: AGPGART: freed %ld pages\n",
+             (unsigned long)pages);
+diff -ruN NVIDIA_kernel-1.0-4363/os-interface.c NVIDIA_kernel-1.0-4363-2.5/os-interface.c
+--- NVIDIA_kernel-1.0-4363/os-interface.c	2003-04-20 03:57:19.000000000 +0200
++++ NVIDIA_kernel-1.0-4363-2.5/os-interface.c	2003-06-02 00:10:13.000000000 +0200
+@@ -56,7 +56,7 @@
+     PHWINFO pDev
+ )
+ {
+-    return suser();
++    return NV_IS_SUSER();
+ }
+ 
+ U032 os_get_page_size(VOID)
+@@ -209,6 +209,11 @@
+     U032 size
+ )
+ {
++    /*
++     * XXX This needs to be !NV_MAY_SLEEP() rather than in_interrupt(); that
++     * requires quite a bit of locking to be rearranged, however, which is why
++     * I'll leave it alone for now.
++     */
+     if (in_interrupt()) {
+         if (size <= KMALLOC_LIMIT) {
+             /*
+@@ -286,7 +291,7 @@
+     *address = (void *) va;
+ 
+     for (i = 0; i < count; i++) {
+-        mem_map_reserve(GET_MAP_NR(__pa((va))));
++        SetPageReserved(virt_to_page(va));
+         va += PAGE_SIZE;
+     }
+ 
+@@ -310,7 +315,7 @@
+     unsigned long va = (unsigned long) address;
+ 
+     for (i = 0; i < count; i++) {
+-        mem_map_unreserve(GET_MAP_NR(__pa((va))));
++        ClearPageReserved(virt_to_page(va));
+         va += PAGE_SIZE;
+     }
+ 
+@@ -416,7 +421,7 @@
+     if (in_irq() && MilliSeconds > NV_MAX_ISR_MDELAY)
+         return RM_ERROR;
+ 
+-    if (in_interrupt()) 
++    if (!NV_MAY_SLEEP()) 
+     {
+         mdelay(MilliSeconds);
+         return RM_OK;
+@@ -514,8 +519,8 @@
+ // The current debug display level (default to maximum debug level)
+ int cur_debuglevel = 0xaaaaaaaa;
+ 
+-MODULE_PARM(silence_nvidia_output, "1i");
+ static int silence_nvidia_output = 0;
++NV_MODULE_PARAMETER(silence_nvidia_output);
+ 
+ 
+ //
+@@ -698,14 +703,14 @@
+ 
+ ULONG os_cli(ULONG flags)
+ {
+-    save_flags(flags);
+-    cli();
++    NV_SAVE_FLAGS(flags);
++    NV_CLI();
+     return flags;
+ }
+ 
+ ULONG os_sti(ULONG flags)
+ {
+-    restore_flags(flags);
++    NV_RESTORE_FLAGS(flags);
+     return flags;
+ }
+ 
+@@ -838,16 +843,6 @@
+         vaddr = ioremap_nocache(start, size_bytes);
+     }
+ 
+-#if defined (KERNEL_2_2)
+-    if ((vaddr == NULL)) // && (mode == NV_MEMORY_DEFAULT))
+-    {
+-        unsigned long map_nr = MAP_NR(__va(start));
+-        if (map_nr < max_mapnr) {
+-            vaddr = __va(start);
+-        }
+-    }
+-#endif
+-
+ #ifdef DEBUG
+     if (mode == NV_MEMORY_WRITECOMBINED) {
+         nv_printf(NV_DBG_ERRORS, 
+@@ -868,16 +863,7 @@
+     U032 size_bytes
+ )
+ {
+-#if defined (KERNEL_2_2)
+-    if (MAP_NR(addr) < max_mapnr) {
+-        // if we didn't want the memory cached, this isn't necessary
+-        // but we shouldn't be in a timing critical piece of code.
+-        asm volatile("wbinvd":::"memory");
+-    } else 
+-#endif
+-    {
+-        iounmap(addr);
+-    }
++    iounmap(addr);
+ }
+ 
+ VOID* os_map_user_space(
+@@ -981,7 +967,7 @@
+ 
+ U032 os_get_cpu_count()
+ {
+-    return smp_num_cpus;
++    return NV_SMP_NUM_CPUS;
+ }
+ 
+ 
+@@ -1044,12 +1030,15 @@
+     if (sgi_funcs.add_barrier == NULL)
+     {
+ #if defined(TESTING_SWAP)
+-#if !defined (KERNEL_2_2)
++        /*
++         * XXX The inter_module_* mechanism has been deprecated in Linux 2.5, a
++         * new mechanism is in place; this code will need to be updated at some
++         * point.
++         */
+         inter_module_register(ADD_BARRIER_FUNC,    THIS_MODULE, sgitest_add_barrier);
+         inter_module_register(REMOVE_BARRIER_FUNC, THIS_MODULE, sgitest_remove_barrier);
+         inter_module_register(SWAP_READY_FUNC,     THIS_MODULE, sgitest_swap_ready);
+ #endif
+-#endif
+         sgi_funcs.add_barrier = GET_MODULE_SYMBOL(0, ADD_BARRIER_FUNC);
+         sgi_funcs.remove_barrier = GET_MODULE_SYMBOL(0, REMOVE_BARRIER_FUNC);
+         sgi_funcs.swap_ready = GET_MODULE_SYMBOL(0, SWAP_READY_FUNC);
+diff -ruN NVIDIA_kernel-1.0-4363/os-registry.c NVIDIA_kernel-1.0-4363-2.5/os-registry.c
+--- NVIDIA_kernel-1.0-4363/os-registry.c	2003-04-20 03:57:19.000000000 +0200
++++ NVIDIA_kernel-1.0-4363-2.5/os-registry.c	2003-06-02 00:10:13.000000000 +0200
+@@ -48,24 +48,6 @@
+  *   This could be changed to work on a per-device basis.
+  */
+ 
+-/*
+- * The 2nd argument to MODULE_PARM is used to verify parameters passed
+- * to the module at load time. It should be a string in the following 
+- * format:
+- *
+- *   	[min[-max]]{b,h,i,l,s}
+- *
+- * The MIN and MAX specifiers delimit the length of the array. If MAX
+- * is omitted, it defaults to MIN; if both are omitted, the default is
+- * 1. The final character is a type specifier.
+- *
+- *  b   byte
+- *  h   short
+- *  i   int
+- *  l   long
+- *  s   string
+- */
+-
+ /* 
+  * Option: VideoMemoryTypeOverride
+  * 
+@@ -92,7 +74,7 @@
+  */
+ 
+ static int NVreg_VideoMemoryTypeOverride = 1;
+-MODULE_PARM(NVreg_VideoMemoryTypeOverride, "i");
++NV_MODULE_PARAMETER(NVreg_VideoMemoryTypeOverride);
+ 
+ /*
+  * Option: EnableVia4x
+@@ -111,7 +93,7 @@
+  */
+ 
+ static int NVreg_EnableVia4x = 0;
+-MODULE_PARM(NVreg_EnableVia4x, "i");
++NV_MODULE_PARAMETER(NVreg_EnableVia4x);
+ 
+ /*
+  * Option: EnableALiAGP
+@@ -134,7 +116,7 @@
+  */
+ 
+ static int NVreg_EnableALiAGP = 0;
+-MODULE_PARM(NVreg_EnableALiAGP, "i");
++NV_MODULE_PARAMETER(NVreg_EnableALiAGP);
+ 
+ /* 
+  * Option: ReqAGPRate
+@@ -164,7 +146,7 @@
+  */
+ 
+ static int NVreg_ReqAGPRate = 7;
+-MODULE_PARM(NVreg_ReqAGPRate, "i");
++NV_MODULE_PARAMETER(NVreg_ReqAGPRate);
+ 
+ /* 
+  * Option: UpdateKernelAGP
+@@ -193,7 +175,7 @@
+  */
+ 
+ static int NVreg_UpdateKernelAGP = 1;
+-MODULE_PARM(NVreg_UpdateKernelAGP, "i");
++NV_MODULE_PARAMETER(NVreg_UpdateKernelAGP);
+ 
+ /* 
+  * Option: EnableAGPSBA
+@@ -226,7 +208,7 @@
+ static int NVreg_EnableAGPSBA = 0;
+ #endif
+ 
+-MODULE_PARM(NVreg_EnableAGPSBA, "i");
++NV_MODULE_PARAMETER(NVreg_EnableAGPSBA);
+ 
+ /*
+  * Option: EnableAGPFW
+@@ -250,7 +232,7 @@
+  */
+ 
+ static int NVreg_EnableAGPFW = 0;
+-MODULE_PARM(NVreg_EnableAGPFW, "i");
++NV_MODULE_PARAMETER(NVreg_EnableAGPFW);
+ 
+ /*
+  * Option: SoftEDIDs
+@@ -269,7 +251,7 @@
+  */
+ 
+ static int NVreg_SoftEDIDs = 1;
+-MODULE_PARM(NVreg_SoftEDIDs, "i");
++NV_MODULE_PARAMETER(NVreg_SoftEDIDs);
+ 
+ /* 
+  * Option: Mobile
+@@ -293,14 +275,14 @@
+  */
+ 
+ static int NVreg_Mobile = ~0;
+-MODULE_PARM(NVreg_Mobile, "i");
++NV_MODULE_PARAMETER(NVreg_Mobile);
+ 
+ 
+ static int NVreg_ResmanDebugLevel = ~0;
+-MODULE_PARM(NVreg_ResmanDebugLevel, "i");
++NV_MODULE_PARAMETER(NVreg_ResmanDebugLevel);
+ 
+ static int NVreg_FlatPanelMode = 0;
+-MODULE_PARM(NVreg_FlatPanelMode, "i");
++NV_MODULE_PARAMETER(NVreg_FlatPanelMode);
+ 
+ /*
+  * You can enable any of the registry options disabled by default by
