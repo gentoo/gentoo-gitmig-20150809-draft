@@ -1,22 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/turck-mmcache-2.3.19.ebuild,v 1.5 2003/07/22 02:10:04 robbat2 Exp $
-
-DESCRIPTION="Turck MMCache is a free open source PHP accelerator, optimizer, encoder and dynamic content cache for PHP. It increases performance of PHP scripts by caching them in compiled state, so that the overhead of compiling is almost completely eliminated. Also it uses some optimizations to speed up execution of PHP scripts. Turck MMCache typically reduces server load and increases the speed of your PHP code by 1-10 times."
-SRC_URI="mirror://sourceforge/turck-mmcache/${P}.tar.gz"
-HOMEPAGE="http://turck-mmcache.sourceforge.net/"
-
-IUSE=""
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~x86"
+# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/turck-mmcache-2.3.19.ebuild,v 1.6 2003/07/26 06:24:44 vapier Exp $
 
 PHP_EXT_NAME="mmcache"
 PHP_EXT_ZENDEXT="yes"
-
 [ -z "${MMCACHE_CACHEDIR}" ] && MMCACHE_CACHEDIR=/var/cache/mmcache
-
 inherit php-ext
+
+DESCRIPTION="open source PHP accelerator, optimizer, encoder and dynamic content cache"
+HOMEPAGE="http://turck-mmcache.sourceforge.net/"
+SRC_URI="mirror://sourceforge/turck-mmcache/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86"
 
 src_compile() {
 	myconf="--enable-mmcache=shared"
@@ -24,7 +21,6 @@ src_compile() {
 }
 
 src_install() {
-	
 	php-ext_src_install
 
 	# create Cache dir if it does not exist
@@ -39,9 +35,9 @@ src_install() {
 	fowners root.root ${MMCACHE_CACHEDIR}
 	fperms 1777 ${MMCACHE_CACHEDIR}
 
-    insinto /usr/share/${PN}
+	insinto /usr/share/${PN}
 	doins encoder.php mmcache.php mmcache.gif
-	
+
 	dodoc CREDITS LICENSE README TODO EXPERIMENTAL
 }
 
