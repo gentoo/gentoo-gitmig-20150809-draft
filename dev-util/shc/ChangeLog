@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/shc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.4 2003/05/17 05:59:31 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.5 2003/12/29 12:36:40 mholzer Exp $
+
+*shc-3.7 (29 Dec 2003)
+
+  29 Dec 2003; Martin Holzer <mholzer@gentoo.org> shc-3.7.ebuild:
+  Version bumped. Closes 28377
 
 *shc-3.6 (16 May 2003)
 
