@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/xchm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xchm/ChangeLog,v 1.1 2003/09/09 19:21:06 mholzer Exp $
+
+*xchm-0.7.1 (09 Sep 2003)
+
+  09 Sep 2003; Martin Holzer <mholzer@gentoo.org> xchm-0.7.1.ebuild:
+  Adding initial ebuild. Submitted by Kevin Carlson <kcarlson@kevinga.com>
+  in #27940.
