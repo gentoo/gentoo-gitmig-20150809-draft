@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r1.ebuild,v 1.16 2003/08/03 04:41:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r1.ebuild,v 1.17 2003/08/16 21:17:47 g2boojum Exp $
 
 inherit eutils flag-o-matic
 filter-flags -fno-exceptions
@@ -36,7 +36,7 @@ src_compile() {
 		${myconf} || die "configure failed"
 
 	# do not work with -j2 on P4 - <azarah@gentoo.org> (23 Oct 2002)
-	make || die "parallel make failed"
+	make || die "make failed"
 }
 
 src_install() {

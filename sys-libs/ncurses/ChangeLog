@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.31 2003/08/04 19:15:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.32 2003/08/16 21:17:47 g2boojum Exp $
+
+  16 Aug 2003; Nick Hadaway <raker@gentoo.org> ncurses-5.3-r{1-4}.ebuild:
+  Changed the die message for make so users aren't confused.
 
 *ncurses-5.3-r4 (04 Aug 2003)
 
