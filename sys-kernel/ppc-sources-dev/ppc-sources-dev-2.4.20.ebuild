@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ppc-sources-dev-2.4.20.ebuild,v 1.1 2002/11/08 11:10:33 trance Exp $ 
+# $Id: ppc-sources-dev-2.4.20.ebuild,v 1.2 2002/11/08 11:15:13 trance Exp $ 
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -88,4 +88,7 @@ pkg_postinst() {
 	einfo " before they make it to ppc-sources. This is a use at your own"
 	einfo " risk kernel for the devs and tester to try." 
 	einfo " If it eats your computer, You have been warned. =)"
+	einfo " "
+	einfo " Please submit successes or failures via http://bugs.gentoo.org"
+	einfo " and assign the bug to trance@gentoo.org. Thank you."
 }
