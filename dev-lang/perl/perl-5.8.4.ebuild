@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.12 2004/06/24 22:53:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.13 2004/06/25 14:21:04 solar Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64 ~ppc64 s390"
 IUSE="berkdb doc gdbm threads uclibc"
 
-DEPEND="!uclibc ( sys-apps/groff )
+DEPEND="!uclibc? ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	>=sys-apps/portage-2.0.48-r4
@@ -110,8 +110,8 @@ src_compile() {
 	# Arm and -O do not mix :)
 	use arm && replace-flags -O? -O1
 	use ppc && replace-flags -O? -O1
-	# Perl has problems compiling with -Os in your flags
-	replace-flags "-Os" "-O2"
+	# Perl has problems compiling with -Os in your flags with glibc
+	use uclibc || replace-flags "-Os" "-O2"
 	# This flag makes compiling crash in interesting ways
 	filter-flags -malign-double
 
