@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2003.11.ebuild,v 1.8 2004/11/16 12:23:28 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2003.11.ebuild,v 1.9 2004/12/08 19:50:09 hansmi Exp $
 
 inherit base flag-o-matic eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://cvs.haskell.org/Hugs/downloads/Nov2003/${MY_P}.tar.gz"
 HOMEPAGE="http://www.haskell.org/hugs/"
 
 SLOT="0"
-KEYWORDS="x86 ~sparc ~amd64"
+KEYWORDS="x86 ~sparc ~amd64 ~ppc"
 LICENSE="as-is"
 
 DEPEND="virtual/libc

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/hugs98
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/ChangeLog,v 1.17 2004/11/16 12:23:28 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/ChangeLog,v 1.18 2004/12/08 19:50:09 hansmi Exp $
+
+  08 Dec 2004; Michael Hanselmann <hansmi@gentoo.org> hugs98-2003.11.ebuild:
+  Added to ~ppc
 
   16 Nov 2004; Andres Loeh <kosmikus@gentoo.org> hugs98-2003.11.ebuild:
   Added ~amd64 keyword (bug #65074).
