@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.18-r2.ebuild,v 1.11 2004/03/30 09:42:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.18-r2.ebuild,v 1.12 2004/04/27 18:56:51 pvdabeel Exp $
 
 IUSE="arts gtk gnome nls tcltk"
 inherit gnuconfig
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.xfce.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips"
+KEYWORDS="x86 ppc sparc ~mips"
 
 DEPEND="virtual/x11
 	=x11-libs/gtk+-1.2*
