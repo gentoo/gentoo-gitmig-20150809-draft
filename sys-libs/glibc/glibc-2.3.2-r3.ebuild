@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.3 2003/07/28 01:42:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r3.ebuild,v 1.4 2003/07/31 20:19:23 frogger Exp $
 
 IUSE="nls pic build nptl"
 
@@ -203,14 +203,6 @@ pkg_setup() {
 		eerror "As of glibc-2.3, gcc-3.2 or later is needed"
 		eerror "for the build to succeed."
 		die "GCC too old"
-	fi
-
-	if [ -n "`is-flag "-fstack-protector"`" -a -n "`has "sandbox" $FEATURES`" ]
-	then
-		eerror "You have both -fstack-protector and sandbox enabled"
-		eerror "glibc will not compile correctly with both of these enabled"
-		eerror "Please disable sandbox by calling emerge with FEATURES=\"-sandbox\""
-		die "Have -fstack-protector and sandbox enabled"
 	fi
 
 	if use_nptl
