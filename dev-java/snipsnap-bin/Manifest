@@ -1,0 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 93689b9f7567874d95b6d4c41610cf94 snipsnap-bin-0.4.2a.ebuild 664
+MD5 d9c922e590c32d9da5bb59dc069dd9cc ChangeLog 900
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 e4858ee636d1cc0677350d82e8edfcf8 snipsnap-bin-0.5.1a.ebuild 667
+MD5 cc134e4e6259afd24f6813ccb42939de files/0.4.2a-snipsnap 568
+MD5 3277b2bd71b9b75a519d72b099cc03cf files/0.5.1a-snipsnap 568
+MD5 0a1abd3a75a98c94389512eb4bd9a1ea files/0.4.2a-run.sh 1844
+MD5 36af28823473d41a150d20fbceba3ba0 files/digest-snipsnap-bin-0.4.2a 74
+MD5 5b47f6680b38ea95f097319cab50a00a files/digest-snipsnap-bin-0.5.1a 74
+MD5 ab4b8d9f503c24fb0b5f16479e373aca files/0.5.1a-run.sh 1763
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCsOM/rLF9B432nYRAtAaAJ9oA7Vkmjvl0iezvj76chfuRM2ROwCfQIVA
+hEvAPI0ZyUYQfSPQscUuANU=
+=nXUO
+-----END PGP SIGNATURE-----

@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/snipsnap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/snipsnap/ChangeLog,v 1.4 2004/06/24 22:42:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/snipsnap-bin/ChangeLog,v 1.1 2004/07/30 21:52:34 axxo Exp $
+
+*snipsnap-bin-0.4.2a (30 Jul 2004)
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +files/0.4.2a-run.sh, +files/0.4.2a-snipsnap, +files/0.5.1a-run.sh,
+  +files/0.5.1a-snipsnap, +snipsnap-bin-0.4.2a.ebuild,
+  +snipsnap-bin-0.5.1a.ebuild:
+  move dev-java/snipsnap dev-java/snipsnap-bin
 
   19 Jun 2004; David Holm <dholm@gentoo.org> snipsnap-0.5.1a.ebuild:
   Added to ~ppc.
