@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.59 2004/12/14 00:30:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.60 2004/12/16 20:15:13 wolf31o2 Exp $
+
+  16 Dec 2004; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
+  Changing ownership to livecd herd.
 
   13 Dec 2004; Mike Frysinger <vapier@gentoo.org> parted-1.6.15.ebuild:
   Clean up and push into stable.
