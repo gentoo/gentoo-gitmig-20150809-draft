@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0_rc2-r3.ebuild,v 1.1 2004/10/25 08:29:24 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0_rc2-r3.ebuild,v 1.2 2004/10/26 09:23:19 phosphan Exp $
 
 inherit eutils
 
@@ -45,9 +45,10 @@ src_compile () {
 }
 
 src_install () {
+	ls -l lib
 	dolib lib/libqwt.so.${QWTVER}
 	dosym libqwt.so.${QWTVER} /usr/lib/libqwt.so
-	dosym libqwt.so.${QWTVER} /usr/lib/libqwt.so.${QWTVER/.\*/}
+	dosym libqwt.so.${QWTVER} /usr/lib/libqwt.so.${QWTVER/.*/}
 	use doc && (dodir /usr/share/doc/${PF}
 				cp -a examples ${D}/usr/share/doc/${PF}/
 				dohtml doc/html/*)

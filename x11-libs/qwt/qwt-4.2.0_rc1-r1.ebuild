@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0_rc1-r1.ebuild,v 1.4 2004/08/18 07:52:48 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0_rc1-r1.ebuild,v 1.5 2004/10/26 09:23:19 phosphan Exp $
 
 MY_PV="${PV/_r/r}"
 
@@ -41,7 +41,7 @@ src_compile () {
 src_install () {
 	dolib lib/libqwt.so.${QWTVER}
 	dosym libqwt.so.${QWTVER} /usr/lib/libqwt.so
-	dosym libqwt.so.${QWTVER} /usr/lib/libqwt.so.${QWTVER/.\*/}
+	dosym libqwt.so.${QWTVER} /usr/lib/libqwt.so.${QWTVER/.*/}
 	use doc && (dodir /usr/share/doc/${PF}
 				cp -a examples ${D}/usr/share/doc/${PF}/
 				find ${D}/usr/share/doc/ -type f -exec gzip {} \;

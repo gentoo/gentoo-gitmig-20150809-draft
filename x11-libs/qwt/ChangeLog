@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.17 2004/10/25 08:29:24 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.18 2004/10/26 09:23:19 phosphan Exp $
+
+  26 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> qwt-4.2.0_rc1-r1.ebuild,
+  qwt-4.2.0_rc2-r3.ebuild:
+  Little change in bash patterns because of bug #68798
 
 *qwt-4.2.0_rc2-r3 (25 Oct 2004)
 
