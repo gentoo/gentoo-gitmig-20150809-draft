@@ -1,10 +1,10 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.16 2003/07/22 12:50:17 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.17 2003/07/22 12:54:18 joker Exp $
 
-  22 Jul 2003; Christian Birchinger <joker@gentoo.org> stunnel-4.02.ebuild,
+  22 Jul 2003; Christian Birchinger <joker@gentoo.org>
   stunnel-4.04-r1.ebuild, files/stunnel.rc6:
-  Added sparc stable keyword
+  Added sparc stable keyword. Fixed wrong "net-snmp" stop-message in stunnel.rc6
 
   11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> stunnel-4.04-r1.ebuild :
   Fixed path to patch. Closes #23702.
