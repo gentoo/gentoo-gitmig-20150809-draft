@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.9 2005/02/11 05:15:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.10 2005/02/12 05:15:20 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -93,11 +93,9 @@ get_glibc_src_uri() {
 	GENTOO_TOOLCHAIN_BASE_URI=${GENTOO_TOOLCHAIN_BASE_URI:-${devspace_uri}}
 
 	GLIBC_SRC_URI="http://ftp.gnu.org/gnu/glibc/${PN}-${GLIBC_RELEASE_VER}.tar.bz2
-	               !nptl? ( http://ftp.gnu.org/gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2 )
-								 !nptlonly? ( http://ftp.gnu.org/gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2 )"
+	               http://ftp.gnu.org/gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2"
 #	GLIBC_SRC_URI="mirror://gnu/glibc/${PN}-${GLIBC_RELEASE_VER}.tar.bz2
-#	               !nptl? ( mirror://gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2 )
-#								 !nptlonly? ( mirror://gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2 )"
+#	               mirror://gnu/glibc/${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2"
 
 	if [[ -n ${BRANCH_UPDATE} ]]; then
 		GLIBC_SRC_URI="${GLIBC_SRC_URI}
@@ -132,10 +130,8 @@ toolchain-glibc_src_unpack() {
 
 	unpack ${PN}-${GLIBC_RELEASE_VER}.tar.bz2
 
-	if use !nptl || use !nptlonly; then
-		cd ${S}
-		unpack ${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
-	fi
+	cd ${S}
+	unpack ${PN}-linuxthreads-${GLIBC_RELEASE_VER}.tar.bz2
 
 	if [[ -n ${PATCH_VER} ]]; then
 		cd ${WORKDIR}

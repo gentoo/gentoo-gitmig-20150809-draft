@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.313 2005/02/10 23:35:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.314 2005/02/12 05:15:20 eradicator Exp $
+
+  11 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  glibc-2.3.4.20050125.ebuild:
+  Always grab/unpack the linuxthreads tarball so the infopages can install
+  right. See bug #81661.
 
   10 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.4.20050125.ebuild:
