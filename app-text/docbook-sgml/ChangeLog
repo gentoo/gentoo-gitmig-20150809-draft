@@ -1,6 +1,9 @@
 # ChangeLog for app-text/docbook-sgml
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml/ChangeLog,v 1.12 2004/07/16 03:19:08 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml/ChangeLog,v 1.13 2004/07/30 03:08:29 tgall Exp $
+
+  29 Jul 2004; Tom Gall <tgall@gentoo.org> docbook-sgml-1.0.ebuild:
+  stable on ppc64, bug #55676
 
   15 Jul 2004; Tom Gall <tgall@gentoo.org> docbook-sgml-1.0.ebuild:
   added ~ppc64, bug #55676
