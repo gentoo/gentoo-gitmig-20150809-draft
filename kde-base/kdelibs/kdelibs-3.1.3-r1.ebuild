@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.3-r1.ebuild,v 1.2 2003/09/06 23:54:21 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.3-r1.ebuild,v 1.3 2003/09/08 01:47:26 caleb Exp $
 inherit kde
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
 IUSE="alsa cups ipv6 ssl"
 DESCRIPTION="KDE libraries needed by all kde programs"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa"
 HOMEPAGE="http//www.kde.org/"
 SLOT="3.1"
 LICENSE="GPL-2 LGPL-2"

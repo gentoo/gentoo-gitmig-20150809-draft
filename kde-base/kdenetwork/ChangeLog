@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.44 2003/08/13 12:32:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.45 2003/09/08 01:52:27 caleb Exp $
+
+  07 Sep 2003; Caleb Tennis <caleb@gentoo.org> kdenetwork-3.1.3.ebuild:
+  x86 stable
 
   13 Aug 2003; Jason Wever <weeve@gentoo.org> kdenetwork-3.1.1-r1.ebuild:
   Marked for sparc to fix repoman dep issues.
