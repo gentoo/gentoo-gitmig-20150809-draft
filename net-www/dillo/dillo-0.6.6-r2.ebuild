@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.6.6-r2.ebuild,v 1.1 2002/10/17 03:29:08 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.6.6-r2.ebuild,v 1.2 2003/01/07 05:18:35 bcowan Exp $
 
 S=${WORKDIR}/${P}
 S2=${WORKDIR}/gentoo-extra-patch
@@ -13,7 +13,7 @@ HOMEPAGE="http://dillo.cipsga.org.br"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/jpeg-6b
