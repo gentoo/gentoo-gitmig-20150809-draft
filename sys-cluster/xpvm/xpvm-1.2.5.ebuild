@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xpvm/xpvm-1.2.5.ebuild,v 1.1 2003/06/22 20:56:33 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xpvm/xpvm-1.2.5.ebuild,v 1.2 2003/06/26 15:47:38 tantive Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XPVM: A graphical console and monitor for PVM"
@@ -19,7 +19,7 @@ LICENSE="LGPL-2"
 
 src_unpack() {
 	unpack ${A}
-	patch -p0 <${DISTDIR}/xpvm-1.2.5-gentoo.diff || die
+	patch -p0 <${FILESDIR}/xpvm-1.2.5-gentoo.diff || die
 }
 
 src_compile() {
@@ -29,7 +29,7 @@ src_compile() {
 	export PVM_ARCH="LINUX"
 	export XPVM_ROOT=${WORKDIR}"/xpvm"
 
-	make xpvm || die
+	emake xpvm || die
 }
 
 src_install() {

@@ -1,5 +1,20 @@
---- xpvm/src/Makefile.aimk	1998-04-09 23:11:22.000000000 +0200
-+++ /opt/pvm3/xpvm/src/Makefile.aimk	2003-05-31 11:53:31.000000000 +0200
+diff -ur test/xpvm/Makefile xpvm/Makefile
+--- test/xpvm/Makefile	1998-04-09 23:11:23.000000000 +0200
++++ xpvm/Makefile	2003-06-02 10:45:26.000000000 +0200
+@@ -2,6 +2,10 @@
+ # $Id: xpvm-1.2.5-gentoo.diff,v 1.2 2003/06/26 15:47:38 tantive Exp $
+ #
+ 
++xpvm:
++	cd src ; $(PVM_ROOT)/lib/aimk trclib
++	cd src ; $(PVM_ROOT)/lib/aimk xpvm
++
+ install:
+ 	cd src ; $(PVM_ROOT)/lib/aimk install
+ 
+diff -ur test/xpvm/src/Makefile.aimk xpvm/src/Makefile.aimk
+--- test/xpvm/src/Makefile.aimk	1998-04-09 23:11:22.000000000 +0200
++++ xpvm/src/Makefile.aimk	2003-06-02 10:45:26.000000000 +0200
 @@ -25,8 +25,8 @@
  CFLOPTS		=	-O
  #CFLOPTS	=	-g
@@ -84,3 +99,17 @@
  # IBM Shared Library Systems
  #SHLIB		=	-lld
  # HP, Some Linux Shared Library Systems
+diff -ur test/xpvm/src/Makefile.xpvm xpvm/src/Makefile.xpvm
+--- test/xpvm/src/Makefile.xpvm	1998-04-09 23:11:23.000000000 +0200
++++ xpvm/src/Makefile.xpvm	2003-06-02 10:45:26.000000000 +0200
+@@ -2,6 +2,10 @@
+ # $Id: xpvm-1.2.5-gentoo.diff,v 1.2 2003/06/26 15:47:38 tantive Exp $
+ #
+ 
++xpvm:
++	cd src ; $(PVM_ROOT)/lib/aimk trclib
++	cd src ; $(PVM_ROOT)/lib/aimk xpvm
++
+ install:
+ 	cd src ; $(PVM_ROOT)/lib/aimk install
+ 
