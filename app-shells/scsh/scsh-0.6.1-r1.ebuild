@@ -2,12 +2,13 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Matthew Kennedy <mbkennedy@ieee.org>
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.1-r1.ebuild,v 1.1 2002/03/06 17:54:10 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.1-r1.ebuild,v 1.2 2002/07/07 12:00:29 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Scsh is a Unix shell embedded in Scheme"
 SRC_URI="ftp://ftp.scsh.net/pub/scsh/0.6/scsh-${PV}.tar.gz"
 HOMEPAGE="http://www.scsh.net/"
+LICENSE="SCSH"
 
 DEPEND="virtual/glibc"
 
