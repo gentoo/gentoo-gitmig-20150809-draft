@@ -1,6 +1,9 @@
 # ChangeLog for app-text/docbook-xml-simple-dtd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/ChangeLog,v 1.23 2005/01/01 16:10:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/ChangeLog,v 1.24 2005/01/02 21:55:29 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *docbook-xml-simple-dtd-4.1.2.4-r2 (16 Nov 2004)
 
@@ -28,7 +31,7 @@
   29 Jun 2004; Tom Gall <tgall@gentoo.org> docbook-xml-simple-dtd-4.1.2.4.ebuild:
   stable on ppc64, bug #54799
 
-  12 May 2004; Bryan ƒŠstergaard <kloeri@gentoo.org>
+  12 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   docbook-xml-simple-dtd-1.0.ebuild:
   Stable on alpha.
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aiksaurus
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.19 2005/01/01 16:02:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.20 2005/01/02 21:49:57 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Corrected metadata.xml to match DTD.
@@ -16,7 +19,7 @@
   should also fix bug #48758 by Mikko Tiihonen <mikko.tiihonen@hut.fi> and bug
   #51999 by Josh Glover <jmglov@gentoo.org>
 
-  12 May 2004; Bryan Østergaard <kloeri@gentoo.org> aiksaurus-1.0.1-r1.ebuild:
+  12 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> aiksaurus-1.0.1-r1.ebuild:
   Stable on alpha.
 
 *aiksaurus-1.0.1-r1 (24 Apr 2004)

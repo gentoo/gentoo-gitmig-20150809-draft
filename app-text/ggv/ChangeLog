@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.81 2005/01/01 16:14:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.82 2005/01/02 22:02:13 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Guy Martin <gmsoft@gentoo.org> ggv-2.8.1.ebuild:
   Stable on hppa.
@@ -40,7 +43,7 @@
   16 Sep 2004; foser <foser@gentoo.org> ggv-2.8.0.ebuild :
   Gnome 2.8 release
 
-  08 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> ggv-2.6.1.ebuild:
+  08 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ggv-2.6.1.ebuild:
   Stable on alpha.
 
   05 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> ggv-2.6.1.ebuild:
@@ -52,7 +55,7 @@
   31 Jul 2004; <spider@gentoo.org> ggv-2.6.1.ebuild:
   stable on x86 for gnome 2.6.2
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> ggv-2.6.0.ebuild:
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ggv-2.6.0.ebuild:
   Stable on alpha.
 
   03 Jun 2004; Stephen P. Becker <geoman@gentoo.org> ggv-2.6.0.ebuild:
