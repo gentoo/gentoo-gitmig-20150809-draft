@@ -1,15 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f.ebuild,v 1.3 2004/03/16 17:22:31 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f-r5.ebuild,v 1.1 2004/03/16 17:22:31 zul Exp $
 
-S="${WORKDIR}/${P}"
+MY_P="bacula-1.32f-5"
+S="${WORKDIR}/${MY_P}"
 DESCRIPTION="featureful client/server network backup suite"
 HOMEPAGE="http://www.bacula.org/"
-SRC_URI="mirror://sourceforge/bacula/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/bacula/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE="readline tcpd ssl gnome mysql sqlite X static"
 
 #theres a local sqlite use flag. use it -OR- mysql, not both.
@@ -28,18 +29,6 @@ DEPEND="sys-libs/libtermcap-compat
 RDEPEND="${DEPEND}
 	sys-apps/mtx
 	app-arch/mt-st"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	einfo "Using ${PV}-1-weekofmonth.patch"
-	patch -p0 < ${FILESDIR}/1.32f/${PV}-1-weekofmonth.patch
-
-	einfo "Using ${PV}-2-eom-nextvol.patch"
-	patch -p0 < ${FILESDIR}/1.32f/${PV}-2-eom-nextvol.patch
-
-}
 
 src_compile() {
 	local myconf=""
