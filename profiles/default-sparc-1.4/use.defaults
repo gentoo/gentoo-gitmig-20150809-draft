@@ -33,7 +33,7 @@ mysql		dev-db/mysql
 postgres	dev-db/postgresql
 X		x11-base/xfree
 sdl		media-libs/libsdl
-gpm		sys-libs/gpm
+#gpm		sys-libs/gpm
 tcpd		sys-apps/tcp-wrappers
 pam		sys-libs/pam
 libwww		net-libs/libwww

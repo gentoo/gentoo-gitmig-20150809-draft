@@ -5,11 +5,5 @@
 *sys-apps/sparc-utils
 *sys-apps/silo
 
-# VNC is broken on x86, maintainer uses i386 specific makefile
-!net-misc/vnc
-
-# Get a decent editor - BROKEN
-#*app-editors/levee
-
 # Sed replacement
 *sys-apps/supersed
