@@ -1,6 +1,9 @@
 # ChangeLog for games-action/koth
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/koth/ChangeLog,v 1.5 2004/05/24 12:21:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/koth/ChangeLog,v 1.6 2004/06/01 12:00:05 wolf31o2 Exp $
+
+  01 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org> koth-0.8.0.ebuild:
+  Marking stable on alpha (no bugs in 478 days).
 
   24 May 2004; Chris Gianelloni <wolf31o2@gentoo.org> koth-0.8.0.ebuild:
   Adding amd64 KEYWORD and closing bug #51893.
