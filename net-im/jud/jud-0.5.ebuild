@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jud/jud-0.5.ebuild,v 1.1 2004/01/12 01:35:05 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jud/jud-0.5.ebuild,v 1.2 2004/01/14 14:57:20 rizzo Exp $
 
 DESCRIPTION="Open Source Jabber User Directory"
 HOMEPAGE="http://jud.jabberstudio.org/"
@@ -28,7 +28,7 @@ src_install() {
 		 insinto /usr/lib/jabberd
 		 doins jud.so
 		 insinto /etc/jabber
-		 dodoc README ${FILESDIR}/README.Gentoo
+		 dodoc README ChangeLog ${FILESDIR}/README.Gentoo
 }
 
 pkg_postinst() {

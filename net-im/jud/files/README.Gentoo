@@ -24,8 +24,8 @@ And this to the browse section:
 </service>
 
 (By know you know you have to change localhost for you FQDN).
-One very importante thing: even if it is the same machine the name's for the 
-various services must be diferent, that means that there must be valid aliases 
+One very important thing: even if it is the same machine the name's for the 
+various services must be different, that means that there must be valid aliases 
 for jud.FQDN.
 
 If you need help with configuration you can try the Jabber Admin Mailling list:
