@@ -1,7 +1,19 @@
-MD5 2f69b0e7ab884037ec0dfe338a325ff9 ChangeLog 1216
-MD5 aaceb950c519fc57e5930be67391c668 caps-plugins-0.1.10.ebuild 715
-MD5 4e1fed8daf558f604145b0d8dfb8bb0a caps-plugins-0.1.5.ebuild 617
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 aab5acc53f7100fba2c50ffaeb18a213 caps-plugins-0.2.1.ebuild 713
+MD5 f55e267fada271f3cf74d0d7d2878f45 caps-plugins-0.1.5.ebuild 618
+MD5 73e118166106218945e84883b04da67a caps-plugins-0.1.10.ebuild 714
+MD5 345db43e5380de2b5af5b9d645301900 ChangeLog 1370
 MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
 MD5 e3bed48f33adc69fe401b245dca8a2a2 files/digest-caps-plugins-0.1.10 63
-MD5 3ce9657a31ddfb46eb62af12277639c3 files/digest-caps-plugins-0.1.5 62
 MD5 e6f951f4aa31c9482b8cafafa280cde6 files/caps-plugins-0.1.10-fpic.patch 293
+MD5 3ce9657a31ddfb46eb62af12277639c3 files/digest-caps-plugins-0.1.5 62
+MD5 7d9315ae31052c00fdbc6759716b1575 files/digest-caps-plugins-0.2.1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSTjk06ebR+OMO78RAlnUAJ0YufYFK8crEdEEzSUPDepom8UZ1gCfWX34
+6Q3nMBoag2zMvi3epWRKP88=
+=wVY/
+-----END PGP SIGNATURE-----
