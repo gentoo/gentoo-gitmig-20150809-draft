@@ -5,6 +5,7 @@ acl
 afs
 3dfx
 3dnow
+directfb
 avi
 emacs
 icc
