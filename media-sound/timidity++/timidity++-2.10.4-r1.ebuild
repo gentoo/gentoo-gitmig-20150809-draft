@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.10.4-r1.ebuild,v 1.1 2001/10/06 10:08:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.10.4-r1.ebuild,v 1.2 2001/11/17 11:28:28 danarmak Exp $
 
 #P=
 A=TiMidity++-${PV}.tar.bz2
@@ -14,7 +14,7 @@ DEPEND=">=sys-libs/ncurses-5.0
 	X? ( >=x11-base/xfree-4.0 )
 	motif? ( >=x11-libs/openmotif-2.1 )
 	tcltk? ( >=dev-lang/tcl-tk-8.1 )
-	nas? ( >=media-sound/nas-1.4 )
+	nas? ( >=media-libs/nas-1.4 )
 	alsa? ( >=media-libs/alsa-lib-0.5.10 )
 	esd? ( >=media-sound/esound-0.2.22 )
 	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )

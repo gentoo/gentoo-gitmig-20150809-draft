@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.1.1.ebuild,v 1.8 2001/10/06 10:41:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.1.1.ebuild,v 1.9 2001/11/17 11:28:28 danarmak Exp $
 
 
 A=${P}.tar.bz2
@@ -18,7 +18,7 @@ DEPEND=">=kde-base/kdelibs-${PV}
         >=media-sound/cdparanoia-3.9.8
         >=media-libs/libvorbis-1.0_beta4
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )
-	nas? ( >=media-sound/nas-1.4.1 )
+	nas? ( >=media-libs/nas-1.4.1 )
 	esd? ( >=media-sound/esound-0.2.22 )
 	motif? ( >=x11-libs/openmotif-2.1.30 )
 	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )

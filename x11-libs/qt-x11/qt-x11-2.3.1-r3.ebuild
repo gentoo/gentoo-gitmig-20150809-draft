@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-2.3.1-r3.ebuild,v 1.2 2001/11/03 19:38:31 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-2.3.1-r3.ebuild,v 1.3 2001/11/17 11:28:28 danarmak Exp $
 # note: this is the new revision that installs into /usr
 
 S=${WORKDIR}/qt-${PV}
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.trolltech.com/"
 DEPEND=">=media-libs/libpng-1.0.9
 	>=media-libs/libmng-1.0.0
 	opengl? ( virtual/opengl virtual/glu )
-	nas? ( >=media-sound/nas-1.4.1 )
+	nas? ( >=media-libs/nas-1.4.1 )
 	objprelink? ( dev-util/objprelink )
 	virtual/x11"
 

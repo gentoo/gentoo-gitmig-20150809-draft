@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.0_p7.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.0_p7.ebuild,v 1.4 2001/11/17 11:28:28 danarmak Exp $
 
 
 A=${PN}-3.0p7.tar.gz
@@ -11,7 +11,7 @@ SRC_URI="ftp://mud.stack.nl/pub/mp3blaster/${A}"
 HOMEPAGE="http://www.stack.nl/~brama/mp3blaster"
 
 DEPEND=">=sys-libs/ncurses-5.2
-	nas? ( >=media-sound/nas-1.4.1 )
+	nas? ( >=media-libs/nas-1.4.1 )
 	mysql? ( >=dev-db/mysql-3.23.36 )"
 
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-3.0.0.ebuild,v 1.1 2001/11/16 14:27:49 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-3.0.0.ebuild,v 1.2 2001/11/17 11:28:28 danarmak Exp $
 
 # TODO: any beta6 -> final upgrades - none known of
 # TODO: figure out sql support
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.trolltech.com/"
 DEPEND=">=media-libs/libpng-1.0.9
 	>=media-libs/libmng-1.0.0
 	opengl? ( virtual/opengl virtual/glu )
-	nas? ( >=media-sound/nas-1.4.1 )
+	nas? ( >=media-libs/nas-1.4.1 )
 	objprelink? ( dev-util/objprelink )
 	virtual/x11"
 
