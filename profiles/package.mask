@@ -8,7 +8,7 @@
 >=kde-base/kdeaddons-3.0.1
 >=kde-base/kdeadmin-3.0.1
 >=kde-base/kdeartwork-3.0.1
->=kde-base/kdebase-3.0.1
+=kde-base/kdebase-3.0.1 # Quite a lot of changes, better test first.. digest ok.
 >=kde-base/kdebindings-3.0.1
 >=kde-base/kdeedu-3.0.1
 >=kde-base/kdegames-3.0.1
