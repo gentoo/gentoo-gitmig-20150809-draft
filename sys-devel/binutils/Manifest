@@ -38,11 +38,11 @@ MD5 c013cc4711373f43cb426e8b08d69ae1 files/2.13/binutils-2.13.90.0.18-testsuite-
 MD5 feebd067c397d519e1ca9340606968a8 files/2.13/binutils-2.13.90.0.20-array-sects-compat.patch 1054
 MD5 c98edbd5a87f00832a367a40a6e576d1 files/2.14/binutils-2.14.90.0.1-eh-frame-ro.patch 17942
 MD5 e941bf2e41367989d389e2988672f87a files/2.14/binutils-2.14.90.0.1-sparc-nonpic.patch 3147
+MD5 1835ff629b956356a771fb7146d828c3 files/2.14/binutils-2.14.90.0.6-conf.patch 25485
 MD5 04ed3642c4bebee3fe6de9e9e6e2f23b files/2.14/binutils-2.14.90.0.4-eh-frame-ro.patch 16503
 MD5 60ff948d89725566178e8149375c3f31 files/2.14/binutils-2.14.90.0.4-gas-execstack.patch 3379
 MD5 69161dd93a78ddede56256e0de28d282 files/2.14/binutils-2.14.90.0.4-gas-pred.patch 1104
 MD5 fed0711b95edc0c64ee93ccfbc8e6268 files/2.14/binutils-2.14.90.0.4-ltconfig-multilib.patch 878
-MD5 ee0529757cf72b4d4f8c30733cda49c7 files/2.14/binutils-2.14.90.0.4-pie.patch 24448
 MD5 3793ff770ff2fca80a2238f8de0a165e files/2.14/binutils-2.14.90.0.4-pie2.patch 1011
 MD5 4aa97425036b8c3fb98975ab06cab3ae files/2.14/binutils-2.14.90.0.4-pni.patch 16030
 MD5 b42bde8fcae8815f106b6c1f78e68134 files/2.14/binutils-2.14.90.0.4-ppc-bigplt.patch 628
@@ -62,7 +62,6 @@ MD5 d5afbb421242988c33551fdb2054581b files/2.14/binutils-2.14.90.0.5-s390-pie.pa
 MD5 16fb9c43491e0ce0d22c9cba008ca983 files/2.14/binutils-2.14.90.0.6-bfd-elf-interp-3.patch 637
 MD5 2bc2ff3c3e1b608f1c3776246a5000c1 files/2.14/binutils-2.14.90.0.6-bfd-elf-interp-4.patch 1284
 MD5 f9b9a43d7cd42c79b7f8144c6611f31c files/2.14/binutils-2.14.90.0.6-bfd-elf-interp.patch 391
-MD5 951847a76c7f1ad39d4eb7eeff4b9ca2 files/2.14/binutils-2.14.90.0.6-cxx-speedup.patch 24221
 MD5 559bf684bf26c292862d4287f047111c files/2.14/binutils-2.14.90.0.6-dont-crash-on-null-owner.patch 822
 MD5 e3d1a3d9743bd5831241af6920bef2ee files/2.14/binutils-2.14.90.0.6-eh-frame-ro-2.patch 14702
 MD5 09de3fa664f792872af4d6a029909315 files/2.14/binutils-2.14.90.0.6-eh-frame-ro.patch 14503
@@ -79,7 +78,6 @@ MD5 03d6c934577cf40ec75b41bfc38b48a0 files/2.14/binutils-mips-openssl-got-fix.pa
 MD5 a911368168c533afc8a3292b66558b03 files/2.14/binutils-2.14.90.0.7-bfd-pt-gnu-segment-fix.patch 1130
 MD5 37856b4142539ef22682d43cf880a0bf files/2.14/binutils-2.14.90.0.6-build_modules.patch 939
 MD5 f2b54c4e03c2df44407beec56efbc2bd files/2.14/binutils-2.14.90.0.6-cflags.patch 1645
-MD5 1835ff629b956356a771fb7146d828c3 files/2.14/binutils-2.14.90.0.6-conf.patch 25485
 MD5 8dfe15fc6599a60b3330ab9fdabaf60f files/2.14/binutils-2.14.90.0.6-debian.patch 7090
 MD5 907ce8c972e2a984590d4bfc04181c1d files/2.15/40_all_binutils-uclibc-linker.patch 530
 MD5 bad6ba9f63eb3a86d7006191848a47b8 files/2.15/52_all_binutils-20040527-uclibc-100-conf.patch 21576
@@ -87,7 +85,7 @@ MD5 8f619fc0c409a5ba768f126f172ee6bc files/2.15/05_all_binutils-2.15-elf32-arm-t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBdomJHTu7gpaalycRAifIAJ9PXouhwZbmkcFW42CJ2ZL3M0kywwCgpbd8
-fiCjeVqOHl4f+xlNV+YmHfU=
-=urbS
+iD8DBQFBdox3HTu7gpaalycRAneYAJ97mBCM8opRItdLP/kCR9xNWhsIMwCg+vTK
+MrrIw9hR0wyZ7UyPZJTEBc8=
+=NkO4
 -----END PGP SIGNATURE-----
