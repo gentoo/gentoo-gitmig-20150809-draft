@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.0.ebuild,v 1.2 2002/10/01 18:23:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.0.ebuild,v 1.3 2002/10/04 04:40:40 azarah Exp $
 
 S="${WORKDIR}/fcpackage.${PV/\./_}/fontconfig"
 DESCRIPTION="A library for configuring and customizing font access."
@@ -12,7 +12,8 @@ SLOT="1.0"
 KEYWORDS="x86"
 
 DEPEND=">=media-libs/freetype-2.0.9
-	>=dev-libs/expat-1.95.3"
+	>=dev-libs/expat-1.95.3
+	>=sys-apps/ed-0.2"
 
 
 src_compile() {
