@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0-r1.ebuild,v 1.4 2004/07/04 23:08:59 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0-r1.ebuild,v 1.5 2004/07/05 06:21:23 eradicator Exp $
 
 inherit gnuconfig
 
@@ -15,7 +15,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="x86 ~ppc amd64 sparc"
 IUSE="oss nas esd motif X gtk oggvorbis tcltk slang alsa arts jack portaudio emacs"
 
 RDEPEND=">=sys-libs/ncurses-5.0
@@ -108,10 +108,10 @@ src_install() {
 
 pkg_postinst() {
 	einfo ""
-	einfo "A timidity config file has been installed in"
-	einfo "/usr/share/timidity/config/timidity.cfg. This"
-	einfo "file must to copied into /usr/share/timidity/"
-	einfo "and edited to match your configuration."
+	einfo "A timidity config file has been installed in /etc/timidity.cfg."
+	einfo ""
+	einfo "Youu need to edit this config file to reference your sound fonts."
+	einfo "If youu don't know what this means, try emerging timidity-eawpatches."
 	einfo ""
 	einfo "An init script for the alsa timidity sequencer has been installed."
 	einfo "If you wish to use the timidity virtual sequencer, edit /etc/conf.d/timidity"
