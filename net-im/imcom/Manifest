@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8b4a45053a4f8aa988453f5f6927b8f3 imcom-1.33.ebuild 839
+MD5 f74c6eb4f533ddc5122893cee64790cf ChangeLog 2924
+MD5 64875e8c743495910e2c50f1a956b61e imcom-1.33.ebuild 834
 MD5 4a441ae9b47d30b644db5b30e80b9046 imcom-1.32.ebuild 885
-MD5 1a399bd7d7fe2ee825099d44edff2f4b ChangeLog 2840
 MD5 9af42db5fb20d6fd8ab9824306a06578 metadata.xml 257
 MD5 3034003b5e28e3d66787f708dbc8dec6 files/Makefile-1.31 1308
-MD5 676db07a2ae5bb34a2f01aae8628ad30 files/digest-imcom-1.32 62
 MD5 bd6785363171ef7929a0990f52223f24 files/digest-imcom-1.33 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBw0uHI1lqEGTUzyQRAn/6AKCxgAau2T5cGUqt7w6DDNu1nVbadACg2aTK
-9VO7lob+m/C0DX8cNO/TEK4=
-=xbEX
------END PGP SIGNATURE-----
+MD5 676db07a2ae5bb34a2f01aae8628ad30 files/digest-imcom-1.32 62
