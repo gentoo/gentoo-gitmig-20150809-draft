@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1-r1.ebuild,v 1.1 2003/09/19 17:37:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1-r1.ebuild,v 1.2 2003/10/01 13:08:11 caleb Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -122,7 +122,8 @@ src_compile() {
 	./configure -sm -thread -stl -system-zlib -system-libjpeg -verbose \
 		-qt-imgfmt-{jpeg,mng,png} -tablet -system-libmng \
 		-system-libpng -ldl -lpthread -xft -platform linux-g++ -xplatform \
-		linux-g++ -xrender -prefix ${D}${QTBASE} -fast ${myconf} || die
+		linux-g++ -xrender -prefix ${D}${QTBASE} -plugindir ${QTBASE}/plugins \
+		-fast ${myconf} || die
 
 	export QTDIR=${S}
 	emake src-qmake src-moc sub-src sub-tools || die
