@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Maintainer: Grant Goodyear <g2boojum@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-020124.ebuild,v 1.3 2002/08/16 19:53:04 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-020124.ebuild,v 1.4 2002/10/04 06:12:46 vapier Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="Network monitoring tools including ping and ping6"

@@ -1,6 +1,6 @@
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Maintainer: Mike Jones <ashmodai@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.3.1.ebuild,v 1.2 2002/08/14 12:08:08 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.3.1.ebuild,v 1.3 2002/10/04 06:14:31 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="OpenVPN is a robust and highly flexible tunneling application"

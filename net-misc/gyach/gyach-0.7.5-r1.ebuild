@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gyach/gyach-0.7.5-r1.ebuild,v 1.5 2002/08/14 12:08:07 murphy Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gyach/gyach-0.7.5-r1.ebuild,v 1.6 2002/10/04 06:11:55 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+-based Yahoo! chat client"

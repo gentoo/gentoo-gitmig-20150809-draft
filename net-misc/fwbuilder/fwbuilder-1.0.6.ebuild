@@ -1,5 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # $Header: /home/cvsroot/gentoo-x86/net-misc/fwbuilder/fwbuilder-1.0.4.ebuild,v 1.0
 
 DESCRIPTION="A firewall GUI"
