@@ -848,3 +848,7 @@ x11-libs/gdkxft
 # masking sendmail because I don't know that it works
 net-mail/sendmail
 
+# g2boojum@gentoo.org 10 June 2002
+# masking because I can't test it.
+net-mail/qmail-scanner
+
