@@ -1,6 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 10023c8dd52af96bbfa11a06c9f7a29a ChangeLog 3382
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
-MD5 217c29ca36e39a9346bc3babcddfb60a vorbis-tools-1.0-r2.ebuild 890
-MD5 b834e767ccf02bbd8d618bdbf9b14c2a vorbis-tools-1.0.1.ebuild 1223
-MD5 59ac94a6db4621c0ebd90d8b8fe8d9c0 files/digest-vorbis-tools-1.0-r2 68
+MD5 de3bcc5fb15b8a5ea9c7a4ae7085f187 vorbis-tools-1.0.1.ebuild 1230
 MD5 fe964c53d3bcfcd7ddece26fa6ea9a3e files/digest-vorbis-tools-1.0.1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBk9QlArHZZzCEUG0RAnJHAJ4wJwRkl3ibwHvBhaLOE11fvGJOpgCdHeWc
+PNyWOuqmADljzOPkIva25NA=
+=CSgl
+-----END PGP SIGNATURE-----

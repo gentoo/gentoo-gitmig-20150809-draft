@@ -2,21 +2,19 @@
 Hash: SHA1
 
 MD5 c38188568556bf83dfb703d0629dcaab ChangeLog 5593
-MD5 1da36b17ad3de7a3dd66325a008acafd aumix-2.8-r1.ebuild 1534
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 1cbce98d41749006c5ea758ac2763b9a aumix-2.8-r2.ebuild 1848
-MD5 a685fd4f0649bfb0c7fd4860eda0caa7 files/aumix-2.8-nls.patch 829
 MD5 f39abfbf49ff4a33e109eeb14a4325c2 files/aumix.desktop 124
 MD5 8e3a1693ed2d3ff2941578494362b0a7 files/aumix.rc6 1140
-MD5 00da88dc336799f1385f518dd005dd5a files/aumix-2.8-close-dialogs.patch 613
 MD5 857a1fe260905ab09b7befd877affafd files/digest-aumix-2.8-r2 62
-MD5 857a1fe260905ab09b7befd877affafd files/digest-aumix-2.8-r1 62
-MD5 221509621be1606c1a61dfc8fcd4991e files/aumix-2.8-save_load.patch 1331
 MD5 6c8d691beb495257d8309e58c127acd2 files/aumix-2.8-nohome.patch 529
+MD5 00da88dc336799f1385f518dd005dd5a files/aumix-2.8-close-dialogs.patch 613
+MD5 221509621be1606c1a61dfc8fcd4991e files/aumix-2.8-save_load.patch 1331
+MD5 a685fd4f0649bfb0c7fd4860eda0caa7 files/aumix-2.8-nls.patch 829
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBk8NougEuf3OQ0akRAoazAJ9tTY4tptjSfkbusR5egKNvZfjt9gCgmgfU
-Eu72JDGCgAuvq4GrpIkM6NE=
-=LDyw
+iD8DBQFBk9NSArHZZzCEUG0RAkDvAJ9XChBRe8GF34VrflPSwrNuzRC0OQCfeSMU
+P5D7YeS0RKuABk6VvrHNQ0k=
+=fkxt
 -----END PGP SIGNATURE-----
