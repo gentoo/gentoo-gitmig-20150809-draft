@@ -1,0 +1,42 @@
+diff -Naur dmalloc-5.3.0.orig/Makefile.in dmalloc-5.3.0/Makefile.in
+--- dmalloc-5.3.0.orig/Makefile.in	2004-02-28 15:37:40.000000000 +0100
++++ dmalloc-5.3.0/Makefile.in	2004-02-28 15:39:04.000000000 +0100
+@@ -318,17 +318,17 @@
+ # special _th versions of objects with the LOCK_THREADS variable defined to 1
+ chunk_th.o : $(srcdir)/chunk.c
+ 	rm -f $@
+-	$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) $(INCS) -DLOCK_THREADS=1 \
++	$(CC) $(CFLAGS) -fPIC $(CPPFLAGS) $(DEFS) $(INCS) -DLOCK_THREADS=1 \
+ 		-c $(srcdir)/chunk.c -o ./$@
+ 
+ error_th.o : $(srcdir)/error.c
+ 	rm -f $@
+-	$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) $(INCS) -DLOCK_THREADS=1 \
++	$(CC) $(CFLAGS) -fPIC $(CPPFLAGS) $(DEFS) $(INCS) -DLOCK_THREADS=1 \
+ 		-c $(srcdir)/error.c -o ./$@
+ 
+ malloc_th.o : $(srcdir)/malloc.c
+ 	rm -f $@
+-	$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) $(INCS) -DLOCK_THREADS=1 \
++	$(CC) $(CFLAGS) -fPIC $(CPPFLAGS) $(DEFS) $(INCS) -DLOCK_THREADS=1 \
+ 		-c $(srcdir)/malloc.c -o ./$@
+ 
+ tests : $(TEST)
+@@ -354,7 +354,7 @@
+ 
+ .c.o :
+ 	rm -f $@
+-	$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) $(INCS) -c $< -o ./$@
++	$(CC) $(CFLAGS) -fPIC $(CPPFLAGS) $(DEFS) $(INCS) -c $< -o ./$@
+ 
+ #
+ # .cc.o auto-target doesn't work on some systems. 
+@@ -362,7 +362,7 @@
+ #
+ dmallocc.o : $(srcdir)/dmallocc.cc
+ 	rm -f $@
+-	$(CXX) $(CFLAGS) $(CPPFLAGS) $(DEFS) $(INCS) -c $(srcdir)/dmallocc.cc \
++	$(CXX) $(CFLAGS) -fPIC $(CPPFLAGS) $(DEFS) $(INCS) -c $(srcdir)/dmallocc.cc \
+ 		-o ./$@
+ 
+ .texi.info :
