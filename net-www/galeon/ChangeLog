@@ -1,6 +1,11 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.6 2002/03/31 10:14:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.7 2002/04/23 22:27:02 spider Exp $
+
+*galeon-1.2.1 (24 Apr 2002)
+  24 Apr 2002; Spider <spider@gentoo.org> galeon-1.2.1.ebuild :
+  add --disable-werror to the build
+  update with latest and greatest mozilla
 
 *galeon-1.2.0-r3 (31 Mar 2002)
 
