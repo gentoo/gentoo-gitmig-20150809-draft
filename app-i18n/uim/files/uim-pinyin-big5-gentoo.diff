@@ -1,8 +1,8 @@
 --- scm/pyload.scm	2004-05-26 10:55:38.000000000 +0900
-+++ scm/pyload.scm-zh_CN	2004-08-14 10:06:54.000000000 +0900
++++ scm/pyload.scm-zh	2004-08-14 10:06:54.000000000 +0900
 @@ -67,4 +67,4 @@
        #f)))
  
  (generic-register-im
 - 'pinyin-big5 "*" "UTF-8" pinyin-big5-init-handler)
-+ 'pinyin-big5 "zh_CN" "UTF-8" pinyin-big5-init-handler)
++ 'pinyin-big5 "zh" "UTF-8" pinyin-big5-init-handler)
