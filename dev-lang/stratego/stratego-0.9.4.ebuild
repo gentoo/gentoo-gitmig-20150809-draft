@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/stratego-0.9.4.ebuild,v 1.1 2004/03/20 21:59:38 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/stratego-0.9.4.ebuild,v 1.2 2004/05/15 02:58:16 kloeri Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.stratego-language.org/pub/stratego/StrategoXT/strategoxt-0.9.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~alpha"
 
 DEPEND=">=dev-libs/aterm-2.0
 	>=dev-libs/sdf2-bundle-1.6
