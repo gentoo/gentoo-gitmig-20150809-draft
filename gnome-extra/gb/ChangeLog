@@ -1,6 +1,6 @@
 # ChangeLog for gnome-extra/gb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gb/ChangeLog,v 1.7 2003/02/12 06:52:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gb/ChangeLog,v 1.8 2003/07/12 16:12:09 aliz Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -24,3 +24,9 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
+
+*gb-0.0.17 (13 Feb 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.2.0.ebuild,v 1.5 2003/07/09 16:23:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.2.0.ebuild,v 1.6 2003/07/12 16:12:09 aliz Exp $
 
 #FIXME SANDBOX
 #addwrite /usr/share/
@@ -11,7 +11,7 @@ DESCRIPTION="Multimedia related programs for the Gnome2 desktop"
 HOMEPAGE="http://www.prettypeople.org/~iain/gnome-media/"
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND=">=media-sound/esound-0.2.23
 	>=dev-libs/glib-2
