@@ -696,6 +696,7 @@ dev-libs/libmrproject
 gnome-extra/libgail-gnome
 gnome-extra/at-spi
 gnome-extra/at-poke
+media-libs/monkey-sound
 media-sound/rhythmbox
 
 # This application is broken and has been removed
