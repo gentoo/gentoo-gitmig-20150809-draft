@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.41 2003/06/18 04:34:58 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.42 2003/06/18 14:16:22 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -97,7 +97,7 @@ perl-module_src_install() {
 	fi
 
 	for FILE in `find ${D} -type f -name "*.html" -o -name ".packlist"`; do
-    	sed -ie "s:${D}:/:g" ${FILE}
+    	sed -i -e "s:${D}:/:g" ${FILE}
 	done
 
 	dodoc Change* MANIFEST* README* ${mydoc}
