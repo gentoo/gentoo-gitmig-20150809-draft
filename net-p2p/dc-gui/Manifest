@@ -3,6 +3,6 @@ MD5 cb3bc002e76652f2e7f8f3574a5ff199 files/digest-dc-gui-0.66 63
 MD5 a4b60954144b24aaa58bc66b9a126f3c files/digest-dc-gui-0.75 64
 MD5 944c9c18fa141b462ed40d25236fe0ea files/digest-dc-gui-0.79 64
 MD5 698c87b0fbd4a6ce9f6947170320a90f files/split_interface_fast.pl 2608
-MD5 121972c3cb63b1bc9a9661b6335e3be4 dc-gui-0.79.ebuild 1190
+MD5 5e62e616e6e08874976703835ced4b52 dc-gui-0.79.ebuild 1188
 MD5 ae5debafe1e9c78a18b1fdfbbbb9560c ChangeLog 3382
 MD5 3845164c0f09fdcad62432d0eed75a19 dc-gui-0.75.ebuild 961

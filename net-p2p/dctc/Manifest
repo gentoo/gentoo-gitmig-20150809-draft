@@ -4,4 +4,4 @@ MD5 9d63b962e95ba3d5a8eace9accc667e5 files/digest-dctc-0.85.8 63
 MD5 62dd2f2ef02f3bd93a946ad99f3345ec dctc-0.85.4.ebuild 631
 MD5 abe4c0c103ff064a6a2ed722aff9e3c2 dctc-0.85.6.ebuild 899
 MD5 2050c483da41af540628be451a9668a6 ChangeLog 3160
-MD5 1bb15817ffb962bd3e296fb83f566d0a dctc-0.85.8.ebuild 913
+MD5 f6814092e0b49603f5864b08f8c24e20 dctc-0.85.8.ebuild 911
