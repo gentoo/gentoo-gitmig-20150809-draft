@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-4.0.ebuild,v 1.6 2004/06/30 17:29:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-4.0.ebuild,v 1.7 2004/07/03 01:04:50 g2boojum Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="X svga xemacs pdflib ggi png gd readline plotutils doc"
 
 DEPEND="
-	xemacs? ( app-editors/xemacs )
+	xemacs? ( virtual/xemacs )
 	pdflib? ( media-libs/pdflib )
 	ggi? ( media-libs/libggi )
 	png? ( media-libs/libpng )
