@@ -1,6 +1,13 @@
 # ChangeLog for net-www/wwwoffle
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.1 2002/02/01 21:53:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.2 2002/03/04 20:58:09 danarmak Exp $
+
+*wwwoffle-2.7 (4 Mar 2002)
+
+  4 Mar 2002; Dan Armak <danarmak@gentoo.org> Changelog:
+  
+  New upstream version, which adds some new features and bugfixes. Also cleaned up
+  ebuild in various small ways.
 
 *wwwoffle-2.6d-r6 (1 Feb 2002)
 
