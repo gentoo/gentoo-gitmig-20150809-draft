@@ -1,6 +1,16 @@
-MD5 f1d178de323826ac1ca724ebde19db00 ChangeLog 388
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 54b5c7fbaf4615df3d49e15ace2e8832 ChangeLog 545
 MD5 cf770d71587c51d11992c592aa9980b6 metadata.xml 544
-MD5 f097373c546ba853b3a686256471c2a1 selinux-asterisk-20050219.ebuild 322
-MD5 90074002c18fd1e6e6b67d645849d80a selinux-asterisk-20041211.ebuild 441
+MD5 93e3683bb964235cae82cfb26872089a selinux-asterisk-20050219.ebuild 441
+MD5 9d4175a35654cc84609385d88a1dc711 selinux-asterisk-20041211.ebuild 441
 MD5 15af1d520147ec8624363e877e06a109 files/digest-selinux-asterisk-20050219 75
 MD5 7ad67216d3c19bac764ebbe868cd89c6 files/digest-selinux-asterisk-20041211 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCHvvPGSBEIeh4AEYRAv06AJwLec9BQa8uOanulR4EAOdKdMH0kQCgjG7/
+zhN4JUF+hFXL1wIntwub798=
+=/IKi
+-----END PGP SIGNATURE-----

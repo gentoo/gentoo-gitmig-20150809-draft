@@ -1,6 +1,9 @@
-MD5 b1c9eddd78480e06ed90f1d4cddb3fe4 ChangeLog 1181
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9fdd010db0c69091b97915b1be7ae533 ChangeLog 1330
 MD5 2578a997bc90b7068228ad83d664c215 metadata.xml 542
-MD5 5560a456d6e538cbe08ee455ad72952a selinux-bind-20050219.ebuild 271
+MD5 ad6f503fdeb5d34d5f92949184fc9c2d selinux-bind-20050219.ebuild 382
 MD5 8e3b204a40a09b5675ae7785b01d7347 selinux-bind-20040428.ebuild 378
 MD5 3151a13402b0fa596cab605fccf9c574 selinux-bind-20040925.ebuild 431
 MD5 ca0a71da485729ff353c22588729cbf1 selinux-bind-20041120.ebuild 431
@@ -8,3 +11,10 @@ MD5 644c3b6f3edad8ff3bf816a892abe52a files/digest-selinux-bind-20050219 72
 MD5 e3f94bd06c76ad3637716662af4c12cc files/digest-selinux-bind-20040428 72
 MD5 64511c68ecd55045e382366c578e797b files/digest-selinux-bind-20040925 72
 MD5 796de9cfba32ab842115ab3da83665e1 files/digest-selinux-bind-20041120 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCHvv9GSBEIeh4AEYRAu9ZAJ4qj4FQgFHy3elsfLslzGuIlO+lgQCfeCFm
+nRDq/kBbnXiQy5Ipi/zbBcc=
+=uRZ/
+-----END PGP SIGNATURE-----
