@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Slurp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/ChangeLog,v 1.2 2005/01/22 15:20:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/ChangeLog,v 1.3 2005/03/14 15:44:53 mcummings Exp $
+
+  14 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  File-Slurp-9999.06.ebuild:
+  Adding keywords that were added by other devs to packages that dep this one(?)
 
   22 Jan 2005; Michael Cummings <mcummings@gentoo.org>
   File-Slurp-9999.06.ebuild:
