@@ -1,6 +1,16 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL-sdlpl/ChangeLog,v 1.5 2002/06/04 21:09:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL-sdlpl/ChangeLog,v 1.6 2002/06/05 13:40:13 seemant Exp $
+
+*SDL-sdlpl-1.18.4 (5 Jun 2002)
+
+  5 Jun 2002; Seemant Kulleen <seemant@gentoo.org> SDL-sdlpl-1.18.4.ebuild
+  files/digest-SDL-sdlpl-1.18.4 :
+
+  Dave Goehrig of sdlperl.org has kindly issued this release to help us sort
+  the silly Mesa headers thing.  It turns out, however, that we need to
+  supply sdl-perl's compilation process the headers to nvidia's gl.h and
+  glu.h files.
 
 *SDL-sdlpl-1.18.3 (4 Jun 2002)
 
