@@ -191,10 +191,12 @@ class depgraph:
 def post_emerge(retval=0):
 	root=portage.root
 	print
-	print ">>> \x1b[32;01mRegenerating GNU info directory index...\x1b[0m"
 	if not os.path.isdir(root+"usr/share/info"):
-		print "    "+root+"usr/share/info doesn't exist, skipping"
+		print "    "+root+"usr/share/info doesn't exist, skipping info regeneration."
+	elif not os.path.exists("/usr/bin/install-info"):
+		print "    /usr/bin/install-info doesn't exist; skipping info regeneration."
 	else:
+		print ">>> \x1b[32;01mRegenerating GNU info directory index...\x1b[0m"
 		if os.path.exists(root+"usr/share/info/dir"):
 			os.rename(root+"usr/share/info/dir",root+"usr/share/info/dir.old")
 		icount=0
