@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mailx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.27 2005/01/27 08:00:02 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.28 2005/01/27 21:18:46 ferdy Exp $
+
+*mailx-8.1.2.20040524-r1 (27 Jan 2005)
+
+  27 Jan 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  -files/mailx-2004-cflags.diff, mailx-8.1.2.20040524-r1.ebuild:
+  Removed cflags patch. Using sed to do the task still #79655 thanks again to
+  Stefan Briesenick <sbriesen@gmx.de>
 
   27 Jan 2005; Fernando J. Pereda <ferdy@gentoo.org>
   +files/mailx-2004-cflags.diff:

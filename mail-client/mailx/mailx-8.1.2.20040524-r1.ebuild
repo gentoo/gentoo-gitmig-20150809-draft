@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20040524-r1.ebuild,v 1.1 2005/01/27 08:00:02 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20040524-r1.ebuild,v 1.2 2005/01/27 21:18:46 ferdy Exp $
 
 inherit ccc eutils flag-o-matic
 
@@ -30,7 +30,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${DISTDIR}/${PN}-20040524-cvs.diff.bz2 || die "epatch failed"
-	epatch ${FILESDIR}/${PN}-2004-cflags.diff || die "epatch failed"
+	sed -i -e "s: -O2: ${CFLAGS}:g" Makefile
 }
 
 src_compile() {
