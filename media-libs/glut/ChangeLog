@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glut
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/ChangeLog,v 1.14 2004/06/25 03:07:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/ChangeLog,v 1.15 2004/07/30 03:15:49 tgall Exp $
+
+  29 Jul 2004; Tom Gall <tgall@gentoo.org> glut-3.7.1.ebuild:
+  stable on ppc64, bug #57012
 
   23 May 2004; Daniel Ostrow <dostrow@gentoo.org> glut-3.7.1.ebuild:
   Stable on ppc.
