@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-0.9.5.ebuild,v 1.4 2004/04/13 12:33:29 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-0.9.5.ebuild,v 1.5 2004/04/14 04:09:05 mr_bones_ Exp $
 
 inherit eutils games
 
-EXTRAS1=eboard-extras-1pl2
-EXTRAS2=eboard-extras-2
+EXTRAS1="eboard-extras-1pl2"
+EXTRAS2="eboard-extras-2"
 DESCRIPTION="chess interface for POSIX systems"
 HOMEPAGE="http://eboard.sourceforge.net/"
 SRC_URI="mirror://sourceforge/eboard/${P}.tar.gz
@@ -17,11 +17,12 @@ SLOT="0"
 KEYWORDS="x86 ppc ~amd64"
 IUSE="nls"
 
-DEPEND="=x11-libs/gtk+-1*
+RDEPEND="=x11-libs/gtk+-1*
 	>=media-libs/imlib-1.9.7
 	dev-lang/perl
-	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
@@ -29,11 +30,11 @@ src_unpack() {
 	sed -i \
 		-e "/DATADIR/ s:\$prefix/share:${GAMES_DATADIR}:" \
 		-e "s:(\"-O6\"):split(' ', \"${CXXFLAGS}\"):" configure \
-		|| die "sed configure failed"
+			|| die "sed configure failed"
 }
 
 src_compile() {
-	egamesconf `use_enable nls` || die
+	egamesconf $(use_enable nls) || die
 	emake || die "emake failed"
 }
 
