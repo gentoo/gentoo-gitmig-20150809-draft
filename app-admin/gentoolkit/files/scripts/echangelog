@@ -9,16 +9,37 @@
 #   >
 
 use strict;
-use POSIX qw(strftime);
+use POSIX qw(strftime getcwd);
 
 my @files = ();
 my ($entry, $user, $date, $text, $version);
 my %versions = ();
 
 # Read the current ChangeLog
-open I, '<ChangeLog' or die "Can't open ChangeLog for input: $!\n";
-{ local $/ = undef; $text = <I>; }
-close I;
+if (-f 'ChangeLog') {
+	open I, '<ChangeLog' or die "Can't open ChangeLog for input: $!\n";
+	{ local $/ = undef; $text = <I>; }
+	close I;
+} else {
+	# No ChangeLog here, maybe we should make one...
+	if (<*.ebuild>) {
+		open I, '<../../skel.ChangeLog' 
+			or die "Can't open ../../skel.ChangeLog for input: $!\n";
+		{ local $/ = undef; $text = <I>; }
+		close I;
+		my ($cwd) = getcwd();
+		$cwd =~ m|.*/(\w+-\w+)/([^/]+)| 
+			or die "Can't figure out category/package.. sorry!\n";
+		my ($category, $package_name) = ($1, $2);
+		$text =~ s/^\*.*//ms;	# don't need the fake entry
+		$text =~ s/<CATEGORY>/$category/;
+		$text =~ s/<PACKAGE_NAME>/$package_name/;
+		# Okay, now we have a starter ChangeLog to work with.
+		# The entry will be added just like with any other ChangeLog.
+	} else {
+		die "This should be run in a directory with ebuilds...\n";
+	}
+}
 
 # Figure out what has changed around here
 open C, 'cvs diff --brief 2>&1 |' or die "Can't run cvs diff: $!\n";
@@ -32,11 +53,11 @@ while (<C>) {
     }
 }
 close C;
-die "No changed files found\n" unless @files;
+die "No changed files found (did you forget to cvs add?)\n" unless @files;
 
 # Get the entry from the cmdline or stdin
 if ($ARGV[0]) {
-    $entry = $ARGV[0];
+    $entry = "@ARGV";
 } else {
     local $/ = undef;
     print "Please type the log entry, finish with ctrl-d\n";
@@ -48,7 +69,7 @@ die "Empty entry; aborting\n" unless $entry =~ /\S/;
 $user = $ENV{'ECHANGELOG_USER'} ||
         sprintf("%s <%s\@gentoo.org>", (getpwuid($<))[6,0]);
 $date = strftime("%d %b %Y", localtime);
-$entry =~ s/^\s*(.*?)\s*\z/$1/;  # trim whitespace
+$entry =~ s/^\s*(.*?)\s*\z/$1/s; # trim whitespace
 $entry = "$date; $user @files :\n$entry";
 $entry =~ s/^/  /gm;             # add indentation
 
@@ -68,7 +89,8 @@ if (!defined $version) {
         or die "Failed to insert new entry\n";
 } elsif ($versions{$version} > -1) {
     # Insert after the *version line
-    $text =~ s/^\*$version\s.*\n/$&\n$entry\n/m 
+	# Sometimes the version line includes . or even .ebuild
+    $text =~ s/^\*\Q$version\E\.?(?:ebuild)?\s.*\n/$&\n$entry\n/m 
         or die "Failed to insert new entry\n";
 } else {
     # Insert at the top with a new version marker
@@ -82,5 +104,5 @@ print O $text            or die "Can't write ChangeLog.new: $!\n";
 close O                  or die "Can't close ChangeLog.new: $!\n";
 
 # Move things around
-system 'diff -u ChangeLog ChangeLog.new';
+system 'diff -Nu ChangeLog ChangeLog.new';
 rename 'ChangeLog.new', 'ChangeLog' or die "Can't rename: $!\n";

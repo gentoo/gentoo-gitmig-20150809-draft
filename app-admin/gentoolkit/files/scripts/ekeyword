@@ -14,6 +14,8 @@ die "syntax: ekeyword { arch | ~arch | -arch } ebuild...\n" unless @ARGV > 1;
 my $kw = shift @ARGV;
 (my $arch = $kw) =~ s|^[-~]||;
 
+die "$kw doesn't look like a keyword to me\n" unless $kw =~ /^\w+$/;
+
 for my $f (@ARGV) {
     open I, "<$f"       or die "Can't read $f: $!\n";
     open O, ">$f.new"   or die "Can't create $f.new: $!\n";
@@ -28,6 +30,6 @@ for my $f (@ARGV) {
     close I;
     close O;
 
-    system "diff $f $f.new"     or die "Can't run diff: $!\n";
+    system "diff $f $f.new"; # don't die because the files might be the same
     rename "$f.new", "$f"       or die "Can't rename: $!\n";
 }
