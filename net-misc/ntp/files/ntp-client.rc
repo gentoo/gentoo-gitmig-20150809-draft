@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntp-client.rc,v 1.6 2004/06/26 16:38:45 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntp-client.rc,v 1.7 2004/07/24 05:44:56 vapier Exp $
 
 depend() {
 	before cron
@@ -27,6 +27,9 @@ start() {
 	checkconfig || return $?
 
 	ebegin "Setting clock via the NTP client '${NTPCLIENT_CMD}'"
-	${NTPCLIENT_CMD} ${NTPCLIENT_OPTS} >/dev/null
+	${NTPCLIENT_CMD} ${NTPCLIENT_OPTS} >/dev/null &
+	local pid=$!
+	(sleep ${NTPCLIENT_TIMEOUT:-30}; kill -9 ${pid} >&/dev/null) &
+	wait ${pid}
 	eend $? "Failed to set clock"
 }

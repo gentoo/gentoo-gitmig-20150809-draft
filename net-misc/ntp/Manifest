@@ -10,8 +10,8 @@ MD5 4e13c1a5fa0fa54e3b65ec311dd7270a files/broadcastclient.patch 451
 MD5 af48491e8d6820a3d8eba16a771e5c26 files/digest-ntp-4.1.2 129
 MD5 dded11ceec4b8f2c1b140341a357f507 files/linux-config-phone.patch 747
 MD5 e82bbe682098cf66f513ca2d11e4bc36 files/ntp-4.1.1b-syscall-libc.patch 522
-MD5 49c79dc1d430c2ac21fdd2e7f714aa3a files/ntp-client.confd 937
-MD5 0d18be1b2fff79bb8f6965237233ef96 files/ntp-client.rc 835
+MD5 92100aaf48c36e36c2224bd919d84b8f files/ntp-client.confd 1038
+MD5 2965cff99d89c28ae19c1a967f697777 files/ntp-client.rc 925
 MD5 76c7ef6d15cd17b4a94b4925a4db3913 files/ntp.conf 1422
 MD5 83dde3b948b28c278d496252494c935f files/ntpd.confd 393
 MD5 0ac690ae52fe02f336ae73f9857461ec files/4.2.0-droproot.patch 13908
@@ -25,7 +25,7 @@ MD5 5fc28af5c2a508eeb67a4d5d0ffab341 files/digest-ntp-4.2.0-r2 135
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFA+hEQHTu7gpaalycRAiVYAKCqFDU8e8Zn0O8yBTu84wB6sFK7KQCgidNN
-qF1AxzvrqgsN/Vda6dt1wZw=
-=+2mx
+iD8DBQFBAfdeHTu7gpaalycRApziAJ0U7fw2JS8ITO9zyjorr/hrsiqGeACglK6B
+X9Sls61ffJGkfbnGQCuNEAw=
+=jUBS
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2         
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntp-client.confd,v 1.5 2004/07/15 00:05:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntp-client.confd,v 1.6 2004/07/24 05:44:56 vapier Exp $
 
 # Command to run to set the clock initially
 # Most people should just leave this line alone ...
@@ -14,10 +14,15 @@ NTPCLIENT_CMD="ntpdate"
 # can aquire from the URL's below
 #NTPCLIENT_OPTS="-Q -b someserver"
 
+# How long to wait (in seconds) before giving up.
+# Useful for when you boot and DNS/internet isn't
+# really available but you have your net interface
+# come up with say a static IP.
+NTPCLIENT_TIMEOUT=30
+
 ##
-# A list of available servers is available here:
-# http://www.eecis.udel.edu/~mills/ntp/clock2a.html
-# http://www.eecis.udel.edu/~mills/ntp/servers.html
-# Please follow the rules of engagement and use a
-# Stratum 2 server (unless you qualify for Stratum 1)
+# A list of available servers can be found here:
+# http://www.pool.ntp.org/
+# A good way to get servers for your machine is:
+# netselect -s 3 pool.ntp.org
 ##
