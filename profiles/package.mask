@@ -35,10 +35,6 @@ dev-perl/perl-ldap
 >=media-video/ogle-0.8.5
 >=media-video/ogle-gui-0.8.5
 
-# <agenkin@gentoo.org> (21 Sep 2002)
-# Masking pending freeze.
->=app-cdr/cdrtools-1.11.33
-
 # <spider@gentoo.org> (20 Sep 2002)
 # masking for ppc / sparc64 testing
 =x11-wm/metacity-2.4.1
