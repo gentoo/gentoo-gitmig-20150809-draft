@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.25-r1.ebuild,v 1.1 2004/04/15 07:30:13 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.25-r1.ebuild,v 1.2 2004/04/15 07:40:00 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -8,8 +8,8 @@ IUSE=""
 ETYPE="sources"
 inherit kernel
 OKV="2.4.25"
-KV="2.4.25-win4lin"
-EXTRAVERSION="-win4lin"
+KV="2.4.25-win4lin-${PR}"
+EXTRAVERSION="-win4lin-${PR}"
 
 S=${WORKDIR}/linux-${KV}
 
@@ -25,10 +25,10 @@ src_unpack() {
 	unpack linux-${OKV}.tar.bz2
 	mv linux-${OKV} linux-${KV} || die
 
-	epatch ${DISTDIR}/Kernel-Win4Lin3-${OKV}.patch || die "Error: Win4Lin3 patch failed."
-
 	cd linux-${KV}
+	epatch ${DISTDIR}/Kernel-Win4Lin3-${OKV}.patch || die "Error: Win4Lin3 patch failed."
 	patch -Np1 -i ${DISTDIR}/mki-adapter.patch >/dev/null 2>&1 || die "Error: mki-adapter patch failed."
+	epatch ${FILESDIR}/${P}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
 
 	kernel_universal_unpack
 }
