@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.42 2003/12/09 17:56:05 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.43 2004/01/15 03:55:07 agriffis Exp $
+
+  14 Jan 2004; Aron Griffis <agriffis@gentoo.org> courier-0.44.2.ebuild:
+  add ~alpha (bug 21240)
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> courier-0.44.0.ebuild,
   courier-0.44.2.ebuild:

@@ -1,4 +1,4 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /home/cvsroot/gentoo-x86/net-mail/courier/courier-0.41.0.ebuild
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.courier-mta.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc -sparc ~amd64 ~ia64"
+KEYWORDS="~x86 -ppc -sparc ~amd64 ~ia64 ~alpha"
 IUSE="tcltk postgres ldap mysql pam nls tcltk ipv6 spell fax crypt"
 
 PROVIDE="virtual/mta
