@@ -1,15 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 06b7374a870ba4e628682056281e02c1 kadu-0.4.0_rc3.ebuild 7763
 MD5 6b57537cbf49758ceae23a4510f6598a kadu-0.3.7.ebuild 820
 MD5 6f738bedd198819888c44c1b8d31b07c kadu-0.4.0_rc2-r1.ebuild 7814
 MD5 16ac3d0adb42d86b1f231af467d2931c kadu-0.3.9.ebuild 2093
 MD5 4cd31fb88974954e268028c5b1dd663d kadu-0.4.0_rc2.ebuild 7631
 MD5 5dea796a7f3e380693bd0185bd5b35cd kadu-0.3.6.ebuild 609
 MD5 92e6b2c409481dba26af02a7b685af6b kadu-0.3.8.ebuild 867
-MD5 1b894a2513ebe19eec7a124f54f06167 ChangeLog 2873
+MD5 7822269b23205bcc87484eda312a94af ChangeLog 3000
 MD5 a574ec2607edf5e80117d65415e01d3c metadata.xml 159
 MD5 2b6dd9d889e66221f2f9d82d5653889b files/digest-kadu-0.4.0_rc2 1638
+MD5 0b7c1b741e9bd306dbff42d1b217dd7b files/digest-kadu-0.4.0_rc3 1638
 MD5 2b6dd9d889e66221f2f9d82d5653889b files/digest-kadu-0.4.0_rc2-r1 1638
 MD5 878470dcf216da170b3878d17b0f59a2 files/kadu-0.4.0_rc2-nas-gentoo.diff 986
 MD5 a749836353c0aa03308822bdcbd08422 files/kadu-0.4.0_rc2-libgsm-amd64.patch 331
@@ -22,7 +24,7 @@ MD5 878470dcf216da170b3878d17b0f59a2 files/kadu-0.3.9-nas-gentoo.diff 986
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCPha6Z/iYVBmujdURAhMIAKC3Pr5neQ43guwwyRnJ82d/Wja/rACcCx+F
-UZR8k7Ch4aWRC/8eK7P2CIw=
-=bQpc
+iD8DBQFCSxSlZ/iYVBmujdURAvx8AJ9xXuSchUTHGl/zyCOKhJDZZw/ynwCfQyGN
+gqpNXLdVHJYWQ0gjDxTHmyM=
+=376Y
 -----END PGP SIGNATURE-----
