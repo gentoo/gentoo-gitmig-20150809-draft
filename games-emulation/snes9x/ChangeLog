@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/snes9x
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.12 2004/06/24 22:36:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.13 2004/11/11 01:31:42 josejx Exp $
+
+  11 Nov 2004; Joseph Jezak <josejx@gentoo.org> snes9x-1.42-r1.ebuild:
+  Marked ppc stable.
 
   11 Jun 2004; Travis Tilley <lv@gentoo.org> snes9x-1.42-r1.ebuild:
   added ~amd64 keyword
