@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/atftp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/ChangeLog,v 1.14 2004/06/24 23:35:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/ChangeLog,v 1.15 2004/07/31 19:09:37 malc Exp $
+
+  31 Jul 2004; <malc@gentoo.org> atftp-0.7.ebuild:
+  ~amd64 - closes bug #57702
 
   22 Apr 2004; Chuck Short <zul@gentoo.org> atftp-0.6.2.ebuild:
   Fixes typo. Closes #48660.
