@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.2 2002/03/21 11:14:12 seemant Exp $
+
+*readline-4.1-r4 (21 Mar 2002)
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> readline-4.1-r4.ebuild :
+
+  stefan@mdy.univie.ac.at discovered that html documentation was getting
+  gzipped.  This fixes that.
 
 *readline-4.1-r3 (1 Feb 2002)
 
