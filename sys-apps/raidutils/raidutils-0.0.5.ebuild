@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/raidutils-0.0.5.ebuild,v 1.1 2005/01/10 21:59:01 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/raidutils-0.0.5.ebuild,v 1.2 2005/01/12 00:02:00 johnm Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ IUSE=""
 SLOT="0"
 LICENSE="Adaptec"
 
-DEPEND="sys-kernel/linux26-headers"
+DEPEND="|| ( >=sys-kernel/linux-sources-2.6 sys-kernel/linux26-headers )"
 RDEPEND=""
 
 src_unpack () {
