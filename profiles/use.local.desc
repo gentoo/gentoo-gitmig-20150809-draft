@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.527 2004/08/04 23:47:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.528 2004/08/05 09:49:00 solar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -16,6 +16,7 @@ app-admin/sdsc-syslog:beep - Use beep libraries (net-libs/roadrunner)
 app-admin/webalizer:geoip - Enable support for IP country lookup
 app-admin/webmin:webmin-minimal - Install the minimal webmin distribution
 app-antivirus/clamav:milter - Build sendmail mail filter (milter) support
+app-arch/bzip2:cross - Enable cross compiler workarounds and patches
 app-cdr/k3b:monkey - Enable support for Monkey's audio codec
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
 app-crypt/gnupg:smartcard - Enables smartcard support
