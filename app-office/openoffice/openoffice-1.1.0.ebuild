@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0.ebuild,v 1.8 2003/10/25 20:23:06 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.0.ebuild,v 1.9 2003/10/27 19:54:49 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -315,9 +315,11 @@ get_EnvSet() {
 }
 
 src_compile() {
+	echo "old CFLAGS: ${CFLAGS}"
 	if [ "$(gcc-version)" == "3.2" ]; then
 		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
 	fi
+	echo "new CFLAGS: ${CFLAGS}"
 	addpredict /bin
 	local buildcmd=""
 
