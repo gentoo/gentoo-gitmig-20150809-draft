@@ -1,3 +1,7 @@
 MD5 9c22700d2c878ba38b9a158f7fbd5615 ChangeLog 794
 MD5 158b61ca1c3bf6e095343a121c52483a proj-4.4.7.ebuild 612
+MD5 0673e088d6627cb1d2a6ed2c53f8b491 metadata.xml 426
+MD5 16488184f65b46cc5ec2342d4d061911 proj-4.4.7-r1.ebuild 1333
 MD5 771bff3ae8a11925a2627c37da8ca6da files/digest-proj-4.4.7 62
+MD5 a057c46d8075728c0cfd3e97917c633c files/proj-4.4.7-gentoo.patch 914
+MD5 ac50ff8c7d1e1aee4f500e2046eb3ac4 files/digest-proj-4.4.7-r1 129
