@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r2.ebuild,v 1.1 2004/08/15 08:51:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r2.ebuild,v 1.2 2004/08/15 18:20:48 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -68,6 +68,10 @@ src_install() {
 		|| die "make install failed"
 	dodoc BUGS CODING_STYLE HARDWARE NEWS PATCHES PORTING README* ROADMAP INSTALL.linux
 
-	dodir /etc/env.d
-	echo "LDPATH=/usr/lib/${P}" > ${D}/etc/env.d/91clanlib-${PV}
+	# setup links for runtime
+	cd ${D}/usr/lib
+	local l
+	for l in ${P}/*.2 ; do
+		ln -s ${l}
+	done
 }
