@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.142 2004/07/09 02:36:14 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.143 2004/07/22 12:27:08 solar Exp $
+
+  22 Jul 2004; <solar@gentoo.org> binutils-2.14.90.0.8-r2.ebuild:
+  uclibc update
 
   08 Jul 2004; Travis Tilley <lv@gentoo.org> binutils-2.15.91.0.1-r1.ebuild:
   adding ~amd64 keyword for wider testing
