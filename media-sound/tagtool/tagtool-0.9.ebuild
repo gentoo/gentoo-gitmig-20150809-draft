@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.9.ebuild,v 1.1 2004/08/19 21:38:25 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.9.ebuild,v 1.2 2004/08/19 21:45:07 chriswhite Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://pwp.netcabo.pt/paol/tagtool/"
 SRC_URI="http://pwp.netcabo.pt/paol/tagtool/${P}.tar.gz
 		mirror://gentoo/tagtool-0.9-configure.patch.tar.bz2"
 
-RDEPEND=">=x11-libs/gtk+-2.4.0-r1
+DEPEND=">=x11-libs/gtk+-2.4.0-r1
 	>=gnome-base/libglade-2.4.0
 	mp3? ( >=media-libs/id3lib-3.8.3-r2 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0.1 )"

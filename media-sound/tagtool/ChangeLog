@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/tagtool
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.1 2004/08/19 21:38:25 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.2 2004/08/19 21:45:07 chriswhite Exp $
+
+*tagtool-0.9 (20 Aug 2004)
+
+  20 Aug 2004; Chris White <chriswhite@gentoo.org> tagtool-0.9.ebuild:
+  Fixed RDEPEND v. DEPEND logic.
 
   20 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Initial import into the tree. Thanks to Justin <yoosty69@netzero.net> for
