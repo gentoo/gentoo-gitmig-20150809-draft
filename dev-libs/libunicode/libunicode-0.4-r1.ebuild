@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunicode/libunicode-0.4-r1.ebuild,v 1.26 2004/07/02 04:50:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunicode/libunicode-0.4-r1.ebuild,v 1.27 2004/07/14 14:48:46 agriffis Exp $
 
 inherit gnuconfig
 
@@ -11,14 +11,14 @@ HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="x86 ppc sparc alpha hppa amd64"
+IUSE=""
 
 DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A} || die
 	cd ${S}
-	use alpha && gnuconfig_update
-	use amd64 && gnuconfig_update
+	gnuconfig_update
 }
 
 src_compile() {
