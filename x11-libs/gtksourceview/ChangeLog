@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.16 2004/03/07 12:29:45 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.17 2004/03/17 00:03:19 geoman Exp $
+
+  16 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
+  gtksourceview-0.7.1.ebuild:
+  Added ~mips keyword.
 
 *gtksourceview-0.7.1 (07 Mar 2004)
 
