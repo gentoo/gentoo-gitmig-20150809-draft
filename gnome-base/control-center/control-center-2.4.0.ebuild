@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.4.0.ebuild,v 1.9 2004/03/12 07:57:16 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.4.0.ebuild,v 1.10 2004/03/17 00:31:53 geoman Exp $
 
 inherit gnome2 eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="the gnome2 Desktop configuration tool"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64"
+KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64 ~mips"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
