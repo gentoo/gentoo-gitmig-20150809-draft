@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/jack-cvs-0.7.ebuild,v 1.2 2003/05/15 11:33:02 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-cvs/jack-cvs-0.7.ebuild,v 1.3 2003/05/18 12:43:48 jje Exp $
 
 IUSE="doc"
 
@@ -31,8 +31,6 @@ PROVIDE="virtual/jack"
 S="${WORKDIR}/${PN/-cvs/}"
 
 src_compile() {
-	export LDFLAGS="-L/usr/lib/fltk-1.1"                                   	       
-	export CPPFLAGS="-I/usr/include/fltk-1.1"
 	export WANT_AUTOCONF_2_5=1
 	sh autogen.sh
 
