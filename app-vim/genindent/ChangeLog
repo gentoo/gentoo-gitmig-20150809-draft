@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/genindent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/genindent/ChangeLog,v 1.7 2005/02/18 19:57:15 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/genindent/ChangeLog,v 1.8 2005/04/06 18:15:16 corsair Exp $
+
+  06 Apr 2005; Markus Rothe <corsair@gentoo.org> genindent-1.0.ebuild:
+  Stable on ppc64
 
   18 Feb 2005; Tom Martin <slarti@gentoo.org> genindent-1.0.ebuild:
   amd64 stable.

@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/help-extra-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/help-extra-syntax/ChangeLog,v 1.4 2005/02/18 20:49:00 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/help-extra-syntax/ChangeLog,v 1.5 2005/04/06 18:19:44 corsair Exp $
+
+  06 Apr 2005; Markus Rothe <corsair@gentoo.org>
+  help-extra-syntax-20050106.ebuild:
+  Stable on ppc64
 
   18 Feb 2005; Tom Martin <slarti@gentoo.org>
   help-extra-syntax-20050106.ebuild:
