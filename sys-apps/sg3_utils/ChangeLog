@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.8 2004/08/30 23:32:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.9 2004/11/07 20:19:10 plasmaroo Exp $
+
+*sg3_utils-1.10 (07 Nov 2004)
+
+  07 Nov 2004; <plasmaroo@gentoo.org> -sg3_utils-1.06.ebuild,
+  sg3_utils-1.08.ebuild, +sg3_utils-1.10.ebuild:
+  Added "Contains rescan_scsi_bus." to ${DESCRIPTION} and added 1.10 - bugs
+  #70012, #70019. Marked 1.08 stable on x86.
 
   31 Aug 2004; David Holm <dholm@gentoo.org> sg3_utils-1.08.ebuild:
   Added to ~ppc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.08.ebuild,v 1.3 2004/11/07 20:19:10 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.10.ebuild,v 1.1 2004/11/07 20:19:10 plasmaroo Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.torque.net/sg/p/${P}.tgz
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 IUSE=""
 
 DEPEND=""
@@ -32,5 +32,5 @@ src_compile() {
 src_install() {
 	exeinto /usr/bin
 	doexe ${DISTDIR}/rescan-scsi-bus.sh || die 'Failed to install rescan-scsi-bus.sh!'
-	einstall INSTDIR=${D}/usr/bin MANDIR=${D}/usr/man || die 'Failed to install sg3_utils!'
+	einstall DESTDIR=${D} PREFIX=/usr || die 'Failed to install sg3_utils!'
 }
