@@ -6,7 +6,7 @@
 KEYMAP="us"
 CONSOLEFONT="grfixed"
 
-#pete lives in the USE, and uses these settings
+#pete lives in the USA, and uses these settings
 #KEYMAP="us"
 #CONSOLEFONT="t -m straight-to-font"
 

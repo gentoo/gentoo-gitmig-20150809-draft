@@ -381,6 +381,7 @@ src_compile() {
 		try make mrproper
 	    fi
 	    try ./configure --with-kernel=\"${S}\" --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
+	    mkdir -p modules
 	    try make
 	fi
 	if [ "`use pcmcia-cs`" ]
