@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/magicdev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicdev/ChangeLog,v 1.4 2004/02/27 18:06:13 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicdev/ChangeLog,v 1.5 2004/03/10 02:32:57 leonardop Exp $
+
+*magicdev-1.1.6 (09 Mar 2004)
+
+  09 Mar 2004; L. Boshell <leonardop@gentoo.org> magicdev-1.1.6.ebuild:
+  New release. Minor dependencies fixes.
 
   27 Feb 2004; L. Boshell <leonardop@gentoo.org> magicdev-1.1.5.ebuild :
   Marking stable on x86.
@@ -9,7 +14,7 @@
 
   15 Jan 2004; L. Boshell <leonardop@gentoo.org> magicdev-1.1.4.ebuild,
   magicdev-1.1.5.ebuild :
-  Revision bump. Closes bug #37744. Marked 1.1.4 as x86 stable..
+  Revision bump. Closes bug #37744. Marked 1.1.4 as x86 stable.
 
   01 Nov 2003; L. Boshell <leonardop@gentoo.org> magicdev-1.1.4.ebuild :
   Apply Redhat patches. Closes bug #32413.
