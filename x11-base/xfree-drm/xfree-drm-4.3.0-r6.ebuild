@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.16 2004/01/19 07:20:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.17 2004/02/09 01:54:55 spyderous Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -8,7 +8,7 @@
 
 # Removing USE as soon as VIDEO_CARDS shows up in make.conf
 IUSE="3dfx gamma i8x0 matrox rage128 radeon sis"
-# VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis"
+IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis"
 
 inherit eutils xfree
 
@@ -42,31 +42,33 @@ SLOT="${KV}"
 LICENSE="X11"
 KEYWORDS="x86 alpha ppc ia64"
 
+# Need new portage for USE_EXPAND
 DEPEND=">=x11-base/xfree-${PV}
-	virtual/linux-sources"
+	virtual/linux-sources
+	>=sys-apps/portage-2.0.49-r13"
 
 PROVIDE="virtual/drm"
 
 
 VIDCARDS=""
 
-if [ `use matrox || vcards matrox` ]
+if [ `use matrox || use video_cards_matrox` ]
 then
 	VIDCARDS="${VIDCARDS} mga.o"
 fi
-if [ `use 3dfx || vcards 3dfx` ]
+if [ `use 3dfx || use video_cards_3dfx` ]
 then
 	VIDCARDS="${VIDCARDS} tdfx.o"
 fi
-if [ `use rage128 || vcards rage128` ]
+if [ `use rage128 || use video_cards_rage128` ]
 then
 	VIDCARDS="${VIDCARDS} r128.o"
 fi
-if [ `use radeon || vcards radeon` ]
+if [ `use radeon || use video_cards_radeon` ]
 then
 	VIDCARDS="${VIDCARDS} radeon.o"
 fi
-if [ `use sis || vcards sis` ]
+if [ `use sis || use video_cards_sis` ]
 then
 	VIDCARDS="${VIDCARDS} sis.o"
 fi
@@ -74,13 +76,13 @@ if use i8x0
 then
 	VIDCARDS="${VIDCARDS} i810.o i830.o"
 fi
-if [ `use gamma || vcards gamma` ]
+if [ `use gamma || use video_cards_gamma` ]
 then
 	VIDCARDS="${VIDCARDS} gamma.o"
 fi
 
-vcards i810 && VIDCARDS="${VIDCARDS} i810.o"
-vcards i830 && VIDCARDS="${VIDCARDS} i830.o"
+use video_cards_i810 && VIDCARDS="${VIDCARDS} i810.o"
+use video_cards_i830 && VIDCARDS="${VIDCARDS} i830.o"
 
 src_unpack() {
 	# 2.6 kernels are broken for now
@@ -183,11 +185,11 @@ pkg_postinst() {
 	if [ -z "VIDEO_CARDS" ]
 	then
 		einfo "USE is deprecated. Please set your video cards using VIDEO_CARDS."
-		einfo "Possible VIDEO_CARDS values are matrox, 3dfx, rage128, radeon, sis, i810, i830, and gamma."
+		einfo "Possible VIDEO_CARDS values are: ${IUSE_VIDEO_CARDS}."
 		echo
 	fi
 
-	if vcards sis
+	if use video_cards_sis
 	then
 		einfo "SiS direct rendering only works on 300/305, 540, 630/S/ST, 730/S chipsets."
 		einfo "SiS framebuffer also needs to be enabled in the kernel."

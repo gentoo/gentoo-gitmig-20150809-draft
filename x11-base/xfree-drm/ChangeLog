@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.50 2004/01/23 17:15:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.51 2004/02/09 01:54:55 spyderous Exp $
+
+  08 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xfree-drm-4.3.0-r6.ebuild:
+  Use portage internal USE_EXPAND instead of xfree.eclass vcards(), add
+  IUSE_VIDEO_CARDS line.
 
   23 Jan 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xfree-drm-4.3.0-r7.ebuild:
