@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.15 2004/02/12 15:45:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.16 2004/02/17 13:38:21 lanius Exp $
+
+  17 Feb 2004; Heinrich Wendel <lanius@gentoo.org> zope-2.6.4.ebuild:
+  mark stable, it fixes some serious bugs from 2.6.3
 
 *zope-2.6.4 (12 Feb 2004)
 
