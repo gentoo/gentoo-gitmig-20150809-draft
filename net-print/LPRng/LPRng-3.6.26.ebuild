@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.6.26.ebuild,v 1.1 2000/11/26 22:48:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.6.26.ebuild,v 1.2 2000/12/11 15:43:00 achim Exp $
 
 A=${P}.tgz
 S=${WORKDIR}/${P}
@@ -28,12 +28,36 @@ src_compile() {
 
 src_install() {                               
   cd ${S}
-  try make INSTALL_PREFIX=${D} datadir=${D}/usr/share gnulocaledir=${D}/usr/share/locale install
+  try make INSTALL_PREFIX=${D} datadir=${D}/usr/share \
+		gnulocaledir=${D}/usr/share/locale \
+		sysconfdir=${D}/etc/lprng \
+		POSTINSTALL="NO" install
 
 #  rm -rf ${D}/usr/share/locale
 #  MOPREFIX=LPRng
 #  domo po/fr.po
-  cp ${O}/files/lprng ${D}/etc/rc.d/init.d/lprng
+  cd ${D}/usr/bin
+  chgrp lp lpr lprm
+  chmod g+s lpr lprm
+  cd ${D}/usr/sbin
+  chgrp lp lpc
+  chmod 744 lpd
+  chmod 555 lpc
+  chmod g+s lpc
+  dodir /var/spool/lpd/lp
+  chmod 775 ${D}/var/spool/lpd
+  chmod 755 ${D}/var/spool/lpd/lp
+  chgrp -R lp ${D}/var/spool/lpd
+
+  cd ${S}
+  dodir /etc/rc.d/init.d
+  cp ${FILESDIR}/lprng ${D}/etc/rc.d/init.d/lprng
+  insopts -m 755
+  insinto /usr/bin
+  doins ${FILESDIR}/lpdomatic
+  insinto /etc/lprng
+  insopts -m 644
+  doins printcap lpd.conf lpd.perms
   cd ${S}
   dodoc ABOUT-NLS.LPRng CHANGES CONTRIBUTORS COPYRIGHT LICENSE LINK README* UPDATE VERSION
   dodoc HOWTO/*.txt HOWTO/*.ppt

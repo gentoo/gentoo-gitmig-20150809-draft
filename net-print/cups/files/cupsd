@@ -1,0 +1,38 @@
+#!/bin/sh
+#
+
+. /etc/rc.d/config/functions
+
+SERVICE="Common Unix Printing System"
+EXE="/usr/sbin/cupsd"
+opts="start stop"
+
+
+# Start or stop the CUPS server based upon the first argument to the script.
+
+start() {
+		pid=`ps ax | awk '{print $1,$5}' | grep cupsd | awk '{print $1}'`
+		if test "$pid" == ""; then
+                  ebegin "Starting $SERVICE..."
+                  start-stop-daemon --start --quiet --exec $EXE
+                  eend $? "Started $SERVICE." "Error Starting $SERVICE."     
+		fi
+}
+
+stop() {
+		pid=`ps ax | awk '{print $1,$5}' | grep cupsd | awk '{print $1}'`
+		if test "$pid" != ""; then
+	          ebegin "Stopping $SERVICE..."
+                  start-stop-daemon --stop --quiet --exec $EXE
+                  eend $? "Stopping $SERVICE. $pid" "Error Stopping $SERVICE." 
+    
+		fi
+}
+
+restart() {
+  	  stop
+	  start
+}
+
+doservice ${@}
+
