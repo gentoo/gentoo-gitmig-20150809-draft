@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla-launcher
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.14 2004/06/16 15:11:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.15 2004/06/16 15:14:12 agriffis Exp $
+
+  16 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-launcher-1.13.ebuild:
+  Add my public_html as an alternate download site for the sake of being able to
+  release before the mirrors are fully populated
 
 *mozilla-launcher-1.13 (16 Jun 2004)
 
