@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3779 2005/03/31 17:41:52 latexer Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3780 2005/04/01 07:22:28 chriswhite Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -50,7 +50,7 @@ dev-util/gcvs
 
 # Luca Barbato <lu_zero@gentoo.org> (22 March 2005)
 # Experimental ebuild
-=media-video/mplayer-1.0_pre6-r2
+#=media-video/mplayer-1.0_pre6-r2
 
 # Peter Johanson <latexer@gentoo.org> (22 March 2005)
 # Mask version that deps on gnome-2.10 release of gtksourceview
