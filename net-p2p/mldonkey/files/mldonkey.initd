@@ -39,7 +39,7 @@ start() {
 	fi
 	for i in `pgrep -u ${USER} mlnet`
 	do
-		renice -p $i ${NICE}
+		renice ${NICE} -p $i > /dev/null
 	done
 	eend $?
 }
