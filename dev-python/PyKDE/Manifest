@@ -1,4 +1,4 @@
-MD5 90817816a66c0641febd02add97bbcfe PyKDE-3.5.2.ebuild 1065
-MD5 9ad64ce5b610544273bfdd2b999378e9 ChangeLog 279
+MD5 c8dfde5df190d64a8bbacf17c369a9ac PyKDE-3.5.2.ebuild 1162
+MD5 e71aa9fbc09b6248bb7d34ff3bbea494 ChangeLog 367
 MD5 0724bcacc7dc67d7071ec4a38828db1a files/digest-PyKDE-3.5.2 63
 MD5 87cf4dfaa7eb6c2dc39268151690e347 files/PyKDE-3.5.2-sandbox-patch.diff 763
