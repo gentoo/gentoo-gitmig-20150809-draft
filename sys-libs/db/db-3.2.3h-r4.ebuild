@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h-r3.ebuild,v 1.2 2001/06/01 14:00:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h-r4.ebuild,v 1.1 2001/06/16 03:00:20 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}/build_unix
@@ -70,5 +70,12 @@ src_install () {
     fi
     prepalldocs
 
+	#for some reason, db.so's are *not* readable by group or others, resulting in no one
+	#but root being able to use them!!! This fixes it -- DR 15 Jun 2001
+	cd ${D}/usr/lib
+	chmod go+rx *.so
+	#.la's aren't go readable either
+	chmod go+r *.la
+	#ok, everything should be fixed now :)
 }
 
