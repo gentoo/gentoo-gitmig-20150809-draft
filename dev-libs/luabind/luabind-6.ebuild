@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/luabind/luabind-6.ebuild,v 1.1 2004/04/06 19:14:04 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/luabind/luabind-6.ebuild,v 1.2 2004/04/06 21:35:52 rphillips Exp $
 
 S=${WORKDIR}/luabind
 DESCRIPTION="C++ library that helps to create bindings for Lua"
@@ -10,7 +10,8 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
-DEPEND="dev-libs/boost"
+DEPEND="dev-lang/lua
+	dev-libs/boost"
 
 src_compile() {
 	einfo "No compilation necessary"
