@@ -7,10 +7,10 @@ S=${WORKDIR}/${P}
 
 DESCRIPTION="C++ API interface to the MySQL database"
 
-SRC_URI="http://mysql.he.net/Downloads/mysql++/mysql++-1.7.9.tar.gz
-	http://mysql.adgrafix.com/Downloads/mysql++/mysql++-1.7.9.tar.gz
-	http://mysql.fastmirror.com/Downloads/mysql++/mysql++-1.7.9.tar.gz
-	http://mysql.oms-net.nl/Downloads/mysql++/mysql++-1.7.9.tar.gz
+SRC_URI="http://mysql.he.net/Downloads/${PN}/${P}.tar.gz
+	http://mysql.adgrafix.com/Downloads/${PN}/${P}.tar.gz
+	http://mysql.fastmirror.com/Downloads/${PN}/${P}.tar.gz
+	http://mysql.oms-net.nl/Downloads/${PN}/${P}.tar.gz
 	mirror://gentoo/mysql++-gcc-3.0.patch.gz"
 
 # This is the download page but includes links to other places
