@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r2.ebuild,v 1.5 2004/01/17 22:28:45 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r2.ebuild,v 1.6 2004/06/15 08:01:06 kloeri Exp $
 
 inherit eutils
 
@@ -24,8 +24,6 @@ DEPEND="
 	=dev-libs/glib-1.2*
 	>=media-libs/giflib-3.0
 	>=app-cdr/cdrtools-2.01_alpha17"
-
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${P/_/}.tar.gz
