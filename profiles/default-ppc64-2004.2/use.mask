@@ -24,5 +24,12 @@ firebird
 # must use a SELinux profile
 selinux
 
+# technically there is fine but there are dependancy issues
+java
+#
+# for now tgall@gentoo.org
+jikes
+junit
+
 media-sound/alsa-driver
 uclibc
