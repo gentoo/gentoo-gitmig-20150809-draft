@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.48 2003/07/08 20:11:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.49 2003/07/23 21:27:46 gmsoft Exp $
 
   08 Jul 2003; Alastair Tse <liquidx@gentoo.org> glib-2.2.1-r1.ebuild,
   glib-2.2.1.ebuild, glib-2.2.2.ebuild:
@@ -10,6 +10,9 @@
   set stable on sparc
 
 *glib-2.2.2 (10 Jun 2003)
+
+  23 Jul 2003; Guy Martin <gmsoft@gentoo.org> glib-2.2.2.ebuild :
+  Marked stable on hppa.
 
   10 Jun 2003; foser <foser@gentoo.org> glib-2.2.2.ebuild :
   New version
