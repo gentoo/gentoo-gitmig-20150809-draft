@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.6_beta.ebuild,v 1.4 2004/06/24 23:00:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.6_beta.ebuild,v 1.5 2004/08/08 00:02:07 slarti Exp $
 
 MY_PV="${PV/_beta/beta}"
-DESCRIPTION="Tkabber is a Free and Open Source client for the Jabber instant messaging system, writen in Tcl/Tk."
+DESCRIPTION="Tkabber is a Free and Open Source client for the Jabber instant messaging system, written in Tcl/Tk."
 HOMEPAGE="http://tkabber.jabber.ru/"
 SRC_URI="http://www.jabberstudio.org/files/tkabber/${PN}-${MY_PV}.tar.gz"
 IUSE="crypt ssl"
