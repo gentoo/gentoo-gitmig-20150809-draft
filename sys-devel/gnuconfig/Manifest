@@ -1,5 +1,5 @@
-MD5 cd2c6d2d311cae45bfc77699b90c1efa gnuconfig-20030708.ebuild 625
-MD5 8dfd1c52f440d64f6ffd9881f1c04564 gnuconfig-20040214.ebuild 877
+MD5 2bece1febd3bc0a4063627fc93434ce6 gnuconfig-20030708.ebuild 616
+MD5 c89bb6dd50a91aa3d455caa064488234 gnuconfig-20040214.ebuild 884
 MD5 18a0021af07503681a029e965443d5f6 ChangeLog 1949
 MD5 323cecb82ceb410827b44855ef1b123f metadata.xml 381
 MD5 d576cbc9cda51d6288db8b8569eb9e2a files/automake-1.8.5-config-guess-uclibc.patch 4693

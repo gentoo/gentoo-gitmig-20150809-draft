@@ -1,16 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/gcc-hppa64-3.3.2.ebuild,v 1.6 2004/07/02 09:32:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/gcc-hppa64-3.3.2.ebuild,v 1.7 2004/07/15 03:23:32 agriffis Exp $
 
 inherit eutils
 
 
-# Variables 
+# Variables
 MYARCH="$(echo ${PN} | cut -d- -f2)"
 TMP_P="${P/-${MYARCH}/}"
 TMP_PN="${PN/-${MYARCH}/}"
 I="/usr"
-S="${WORKDIR}/${P}"
 
 
 DESCRIPTION="Gcc for 64bit hppa kernels"
@@ -20,6 +19,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
 KEYWORDS="-* hppa"
+IUSE="build"
 
 DEPEND="virtual/libc
 	>=sys-devel/binutils-hppa64-2.14.90.0.7
