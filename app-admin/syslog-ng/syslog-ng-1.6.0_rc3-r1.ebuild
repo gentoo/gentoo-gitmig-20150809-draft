@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.0_rc3-r1.ebuild,v 1.6 2003/11/11 23:59:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.0_rc3-r1.ebuild,v 1.7 2003/12/17 03:42:18 brad_mssw Exp $
 
 IUSE="tcpd"
 # The release candidates are named syslog-ng-1.6.0rc1 for example
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.balabit.com/products/syslog_ng/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa mips ~amd64 ia64"
+KEYWORDS="x86 ppc sparc alpha hppa mips ~amd64 ia64 ppc64"
 
 DEPEND=">=dev-libs/libol-0.3.9
 	sys-devel/flex
