@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/tilp-6.09.ebuild,v 1.5 2003/11/04 11:30:44 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tilp/tilp-6.68.ebuild,v 1.1 2003/11/04 11:30:44 phosphan Exp $
 
 DESCRIPTION="TiLP is a linking program for Texas Instruments' graphing calculators."
 HOMEPAGE="http://tilp.sourceforge.net/"
@@ -9,13 +9,13 @@ SRC_URI="mirror://sourceforge/tilp/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-# Only tested on x86 so far...
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 DEPEND="dev-libs/libticables
-	dev-libs/libticalcs
-	dev-libs/libtifiles
-	=x11-libs/gtk+-1.2*"
+		dev-libs/libticalcs
+		dev-libs/libtifiles
+		app-text/dos2unix
+		=x11-libs/gtk+-2.2*"
 
 src_compile() {
 	# Note the special option --with-fontpath-prefix below.
@@ -31,7 +31,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	# the SHARE_DIR is required cause it isn't set properly in a makefile
+	einstall SHARE_DIR=${D}/usr/share/tilp || die
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README* RELEASE THANKS TODO
 }
 
