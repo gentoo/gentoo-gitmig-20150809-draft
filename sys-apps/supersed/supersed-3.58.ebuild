@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.58.ebuild,v 1.2 2002/08/12 11:35:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/supersed-3.58.ebuild,v 1.3 2002/08/14 04:40:34 murphy Exp $
 
 MY_P=${P/super/}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnu.org/software/sed/sed.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND="dev-libs/libpcre
 	nls? ( sys-devel/gettext )"

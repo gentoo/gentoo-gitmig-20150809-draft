@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/quota-3.04.ebuild,v 1.7 2002/08/01 11:40:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/quota-3.04.ebuild,v 1.8 2002/08/14 04:40:34 murphy Exp $
 
 S=${WORKDIR}/quota-tools
 DESCRIPTION="Linux quota tools"
 SRC_URI="mirror://sourceforge/linuxquota/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/linuxquota/"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 LICENSE="GPL-2"
 

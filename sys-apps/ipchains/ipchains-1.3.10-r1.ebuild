@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipchains/ipchains-1.3.10-r1.ebuild,v 1.7 2002/07/21 19:58:55 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipchains/ipchains-1.3.10-r1.ebuild,v 1.8 2002/08/14 04:40:34 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="legacy Linux firewall/packet mangling tools"
 SRC_URI="http://netfilter.kernelnotes.org/ipchains/${P}.tar.gz"
 HOMEPAGE="http://netfilter.filewatcher.org/ipchains/"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 LICENSE="GPL-2"
 

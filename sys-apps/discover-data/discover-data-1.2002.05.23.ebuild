@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.debian.org/debian/pool/main/d/discover-data/discover-data_1.2
 
 LICENSE="GPL"
 SLOT="1"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND="bash"
 

@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.0-r3.ebuild,v 1.1 2002/07/21 16:36:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.0-r3.ebuild,v 1.2 2002/08/14 04:40:34 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU awk pattern-matching language"
 SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/gawk/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gawk/gawk.html"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 LICENSE="GPL-2"
 

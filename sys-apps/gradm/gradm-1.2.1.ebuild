@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-1.2.1.ebuild,v 1.6 2002/08/01 11:40:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-1.2.1.ebuild,v 1.7 2002/08/14 04:40:34 murphy Exp $
 
 DESCRIPTION="Administratinve interface to grsecurity"
 SRC_URI="http://www.grsecurity.net/gradm-1.2.1.tar.gz
 	http://pageexec.virtualave.net/chpax.c"
 HOMEPAGE="http://www.grsecurity.net"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 #DEPEND=""
 LICENSE="GPL-2"
