@@ -1,0 +1,8 @@
+# ChangeLog for games-roguelike/moria
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/ChangeLog,v 1.1 2003/12/31 20:28:17 vapier Exp $
+
+*moria-5.5.2 (31 Dec 2003)
+
+  31 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Cory Visi <cory@visi.name> #35418.
