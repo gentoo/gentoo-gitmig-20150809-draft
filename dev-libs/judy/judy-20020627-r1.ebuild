@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/judy-20020627-r1.ebuild,v 1.1 2004/07/06 19:42:37 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/judy-20020627-r1.ebuild,v 1.2 2004/07/13 21:11:22 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="A C library that implements a dynamic array"
 HOMEPAGE="http://judy.sourceforge.net/"
