@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.66 2005/03/09 05:02:25 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.67 2005/04/02 03:30:28 geoman Exp $
+
+  02 Apr 2005; Stephen P. Becker <geoman@gentoo.org>
+  gnome-icon-theme-2.8.0.ebuild:
+  stable on mips
 
 *gnome-icon-theme-2.10.0 (08 Mar 2005)
 
