@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/star
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/ChangeLog,v 1.15 2003/07/18 20:38:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/ChangeLog,v 1.16 2003/08/13 15:33:40 agriffis Exp $
+
+  13 Aug 2003; Aron Griffis <agriffis@gentoo.org> star-1.5_alpha14.ebuild:
+  Mark stable on alpha for LiveCD
 
   18 Jul 2003; Olivier Crete <tester@gentoo.org> star-1.5_alpha14.ebuild:
   Added config file for amd64

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/star-1.5_alpha14.ebuild,v 1.4 2003/07/18 20:38:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/star-1.5_alpha14.ebuild,v 1.5 2003/08/13 15:33:40 agriffis Exp $
 
 S=${WORKDIR}/${P/_alpha[0-9][0-9]}
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/${PN}/alpha/${PN}-${PV/_alpha/a}.tar.bz2"
 #SRC_URI="ftp://ftp.berlios.de/pub/${PN}/${P}.tar.bz2"
 
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/star.html"
-KEYWORDS="x86 amd64 ~ppc ~sparc hppa ~alpha"
+KEYWORDS="x86 amd64 ~ppc ~sparc hppa alpha"
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND="virtual/glibc"
