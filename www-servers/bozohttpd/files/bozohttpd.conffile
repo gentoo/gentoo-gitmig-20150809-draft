@@ -8,4 +8,4 @@ LISTEN_PORT=80
 # optional stuff
 #USER=daemon
 #INDEX_DEFAULT=index.php
-#APPEND="-a -C .php /usr/bin/php"
+#APPEND="-C .php /usr/bin/php"

@@ -1,17 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9083440547841152fa2d76dfab0d8f26 bozohttpd-20040218.ebuild 973
+MD5 c7e92cd45ba3639bfa80a731ffbdbaa8 bozohttpd-20040218.ebuild 973
+MD5 16ee4e163b283d35f66a814d389696f5 bozohttpd-20040823.ebuild 1122
+MD5 f545eb1e3f2a42ff71129a9c51315ce1 ChangeLog 1205
 MD5 ffba251b6da886350adc55397a7e9500 metadata.xml 401
-MD5 8bc75a6799955ac0a020f1c828cb6ab3 ChangeLog 956
-MD5 c099ee5b2237f0c0e202fe25980e3877 files/bozohttpd-20040218.Makefile 534
-MD5 8ba8e430cb53030e75557268c3b5d472 files/bozohttpd-20040218.conffile 221
-MD5 db14cb5b528010b946f182ca2b5f0df8 files/bozohttpd-20040218.initscript 1075
+MD5 0b1d33fc83f51ee200a0aae3119463d0 files/bozohttpd.initscript 1063
 MD5 10a103f61bdbfd7cd72c44bd9da660b4 files/digest-bozohttpd-20040218 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBHhj/I1lqEGTUzyQRAhTdAKDdo+mANvciICU0bBp5iviKiBeg3wCfV35j
-B8nKGb5CqwPYBHxtZAm0tQM=
-=efUy
------END PGP SIGNATURE-----
+MD5 97dc29cc543991265a88b535badc631f files/digest-bozohttpd-20040823 70
+MD5 b87f6a7e77eb9397384dbd2e0ad33aaf files/bozohttpd.conffile 218
+MD5 e5b17810911c15b6cf6b237a88707d7f files/bozohttpd-20040823.patch 409
+MD5 c099ee5b2237f0c0e202fe25980e3877 files/bozohttpd.Makefile 534
