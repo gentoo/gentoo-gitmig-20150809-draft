@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fceultra/fceultra-080.ebuild,v 1.5 2002/10/04 04:12:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fceultra/fceultra-080.ebuild,v 1.6 2002/10/16 23:31:49 vapier Exp $
 
 SLOT="0"
 KEYWORDS="x86 -ppc"
@@ -13,6 +13,7 @@ SRC_URI="http://fceultra.sourceforge.net/dev/${MY_P}${PV}src.tar.gz"
 HOMEPAGE="http://fceultra.sourceforge.net"
 
 DEPEND=">=media-libs/svgalib-1.4.2"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	mv Makefile.base Makefile.orig
