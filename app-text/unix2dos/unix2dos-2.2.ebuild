@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/unix2dos-2.2.ebuild,v 1.17 2004/07/23 20:13:14 erik_swanson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/unix2dos-2.2.ebuild,v 1.18 2004/07/28 23:24:59 vapier Exp $
 
 inherit gcc eutils
 
 DESCRIPTION="UNIX to DOS text file format converter"
-HOMEPAGE=""
+HOMEPAGE="I HAVE NO HOME :("
 SRC_URI="mirror://gentoo/${P}.src.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 ppc alpha amd64 sparc hppa ~mips ppc64 macos"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ppc64 macos"
 IUSE=""
 
 DEPEND=""
