@@ -1,0 +1,17 @@
+diff -urN dvipdfmx-20030813.ORIG/data/config/dvipdfmx.cfg dvipdfmx-20030813/data/config/dvipdfmx.cfg
+--- dvipdfmx-20030813.ORIG/data/config/dvipdfmx.cfg	2003-01-15 15:55:40.000000000 +0900
++++ dvipdfmx-20030813/data/config/dvipdfmx.cfg	2003-06-19 03:29:34.000000000 +0900
+@@ -76,10 +76,10 @@
+ 
+ % Font map files
+ %
+-f cmr.map
+-f psbase14.map
++% f cmr.map
++% f psbase14.map
+ % Most distributions now use these names
+-f lw35urw.map
++% f lw35urw.map
+ % Some use these names
+ % f lw35urwa.map
+ f cid-x.map
