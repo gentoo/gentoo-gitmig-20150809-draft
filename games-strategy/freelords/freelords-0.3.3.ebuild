@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.3.ebuild,v 1.3 2004/09/24 08:30:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.3.ebuild,v 1.4 2004/11/08 02:13:17 josejx Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Free Warlords clone"
 HOMEPAGE="http://www.freelords.org/"
 SRC_URI="mirror://sourceforge/freelords/${P}.tar.bz2"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="nls"
@@ -33,6 +33,7 @@ src_unpack() {
 	sed -i \
 		-e "s:\$(prefix)/share/locale:/usr/share/locale:" src/Makefile.in \
 		|| die "sed src/Makefile.in failed"
+	epatch ${FILESDIR}/${P}-gcc-3.4.patch
 }
 
 src_compile() {

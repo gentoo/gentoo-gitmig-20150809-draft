@@ -1,0 +1,11 @@
+--- src/ObjectList.cpp.old	2004-11-05 07:17:55.928861736 +0000
++++ src/ObjectList.cpp	2004-11-05 07:06:58.624787144 +0000
+@@ -27,7 +27,7 @@
+ 
+ template<class T> T* ObjectList<T>::getObjectAt(int x, int y) 
+ {
+-    for (typename ObjectList<T>::iterator it = begin(); it != end(); ++it)
++    for (typename ObjectList<T>::iterator it = this->begin(); it != this->end(); ++it)
+     {
+         PG_Point p = (*it).getPos();
+         int size = (*it).getSize() - 1;
