@@ -1,9 +1,14 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.1 2002/11/08 22:43:41 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.2 2002/11/12 08:18:30 cretin Exp $
 
 *usermin-0.940 (8 Nov 2002)
 
-  1 Feb 2002; S.A.Jones <cretin@gentoo.org> ChangeLog :
+  12 Nov 2002: S.A.Jones <cretin@gentoo.org> :
+  
+  Added configuration stuff to ebuild and extra files usermin-init and setup.sh.
+  Mods by James <zeurx@hotmail.com>.
+
+  10 Nov 2002; S.A.Jones <cretin@gentoo.org> ChangeLog :
  
   Added ebuild by James <zeurx@hotmail.com>

@@ -1,6 +1,6 @@
 # Copyright 2002, Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-0.970.ebuild,v 1.1 2002/11/08 23:27:41 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-0.970.ebuild,v 1.2 2002/11/12 08:18:30 cretin Exp $
 
 IUSE="ssl"
 
@@ -24,7 +24,10 @@ src_install() {
 	mv *.* ${D}/usr/libexec/usermin
 	mv * ${D}/usr/libexec/usermin
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/usermin usermin
+	newexe ${FILESDIR}/patch/usermin usermin
+	exeinto /usr/libexec/usermin
+	newexe ${FILESDIR}/patch/setup.sh setup.sh
+	newexe ${FILESDIR}/patch/usermin-init usermin-init
 	dosym /usr/libexec/usermin /etc/usermin
 	dosym /usr/libexec/usermin/usermin-init /usr/sbin/usermin
 }
@@ -36,9 +39,20 @@ pkg_postinst() {
 	einfo "**********************************************************"
 	echo  ""
 	einfo "***********************************************"
-	einfo "*  Configure by running /etc/usermin/setup.sh *"
+	einfo "*        You Need To Run The Configure        *"
+	einfo "*      Configure by running usermin setup     *"
+	einfo "***********************************************"
 	einfo "*     To start usermin type usermin start     *"
 	einfo "*      To stop usermin type usermin stop      *"
 	einfo "*   To restart usermin type usermin restart   *"
 	einfo "***********************************************"
+}
+
+pkg_prerm() {
+	echo "Uninstalling usermin 0.970 .."
+	usermin stop;
+}
+
+pkg_postrm() {
+	/usr/libexec/usermin/uninstall.sh;
 }
