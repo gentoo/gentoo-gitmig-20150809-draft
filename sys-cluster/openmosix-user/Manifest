@@ -5,6 +5,7 @@ MD5 a55667fa40e0c902ca6cb8237ab4ce60 openmosix-user-0.3.3.ebuild 2378
 MD5 8628c27722f2e475c7d8d5b6f7a70311 openmosix-user-0.3.4-r1.ebuild 2382
 MD5 395ada0e940c71d48ff4133eda5b0f94 openmosix-user-0.3.4.ebuild 2379
 MD5 196363a1dcef6f56185bf94c2702f5ef openmosix-user-0.3.5.ebuild 2413
+MD5 38b957083e1ef45fb26caf2c8d5638a9 openmosix-user-0.3.6.ebuild 2413
 MD5 04d066799df9a26748327c14ec14f908 files/digest-openmosix-user-0.3.2 73
 MD5 93de05f0abb949a9bdb9822fb7240cac files/digest-openmosix-user-0.3.3 73
 MD5 25dcd82590aa8f31e939aa58097be907 files/digest-openmosix-user-0.3.4 74
@@ -12,3 +13,4 @@ MD5 25dcd82590aa8f31e939aa58097be907 files/digest-openmosix-user-0.3.4-r1 74
 MD5 8130b6c26605a3b4d73a3be174b398ed files/digest-openmosix-user-0.3.5 74
 MD5 4f77eed9a34fe36f0394844cfb859e37 files/openmosix.init 2858
 MD5 8bba8ee22957c18e2fce4c810644323e files/openmosix.map 382
+MD5 8ece54a0c6777777a3904d3f61d8861c files/digest-openmosix-user-0.3.6 73
