@@ -6,7 +6,8 @@ IUSE=""
 
 MY_P=${P/wm/WM}
 DESCRIPTION="A Window Maker dock app client for Music Player Daemon(media-sound/mpd)"
-SRC_URI="http://mercury.chem.pitt.edu/~shank/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/musicpd/${MY_P}.tar.gz"
+RESTRICT="nomirror"
 HOMEPAGE="http://www.musicpd.org"
 
 DEPEND="virtual/x11"
