@@ -1,15 +1,17 @@
 # ChangeLog for app-sci/oregano
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/oregano/ChangeLog,v 1.2 2002/09/22 18:53:52 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/oregano/ChangeLog,v 1.3 2002/09/22 18:57:21 blocke Exp $
+
+*oregano-0.23-r1 (22 Sep 2002) 
+
+  22 Sep 2002; Bruce A. Locke <blocke@shivan.org> oregano-0.23-r1.ebuild:
+  Overhaul of oregeno ebuild.  Please note the upstream version is
+  no longer supported and its author encourages users to move to other
+  programs. 
 
 *oregano-0.23 (13 Jun 2002)
 
-  22 Sep 2002; Bruce A. Locke <blocke@shivan.org> oregano-0.23.ebuild:
-
-  In place overhaul of existing ebuild, it was not working for many people.
-
   13 Jun 2002; Brandon Low <lostlogic@gentoo.org> oregano-0.23.ebuild:
-
   Initial ebuild, this seems like a very nice schematic editing program
   I was working a lab report this morning, tried to emerge xcircuit, but
   got SegFaults so I decided to find something else.  Then I made an
