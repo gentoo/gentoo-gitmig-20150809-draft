@@ -52,5 +52,6 @@ move media-video/linuxtv-dvb media-tv/linuxtv-dvb
 move media-video/nvtv media-tv/nvtv
 move media-video/rivatv media-tv/rivatv
 move media-video/tvtime media-tv/tvtime
+move media-video/vcr media-tv/vcr
 move media-video/xawdecode media-tv/xawdecode
 move media-video/xawtv media-tv/xawtv
