@@ -1,3 +1,4 @@
+MD5 72efcb18005f7cce89b02dad70fba9d8 gimp-2.0_pre2.ebuild 3410
 MD5 98e58808202ec45561b20ba1adddbf5c gimp-1.3.23.ebuild 3080
 MD5 f2435ea78fe2898d558c4e427e2d2c28 gimp-1.2.5.ebuild 3220
 MD5 afaef441b50efcf144b3c644592c626b gimp-2.0_pre1.ebuild 3385
@@ -14,6 +15,7 @@ MD5 9696bde4a1b70dd2816d46bed477ebc0 files/gimp.desktop 2404
 MD5 cdda0b1cc179cf75eabb63945efdae0e files/gimp-1.2.3-libgimpi-libtool.diff 1365
 MD5 7cb224c3321fc461565ba31831ed87a8 files/digest-gimp-1.3.23 66
 MD5 306a002fbdf9b01208b181663474dbe4 files/digest-gimp-2.0_pre1 67
+MD5 d75b2f3860a49663eec5ad4a3a1aae07 files/digest-gimp-2.0_pre2 67
 MD5 edd3aa0572ed45191d25b99712a875d9 files/gimp-1.2.3-r2-gentoo.diff 427
 MD5 f8c14ef5c45d029ac5abc6c614701d5e files/gimp-1.3.20-screenshot_fix.patch 20024
 MD5 86551dc2402aaed28ccf3612e8fe7b7a files/digest-gimp-1.2.4 65
