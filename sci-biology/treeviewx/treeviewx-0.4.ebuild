@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/treeviewx-0.4.ebuild,v 1.3 2005/02/20 02:31:40 ribosome Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/treeviewx-0.4.ebuild,v 1.4 2005/02/23 01:57:46 ribosome Exp $
 
 DESCRIPTION="A phylogenetic tree viewer"
 HOMEPAGE="http://darwin.zoology.gla.ac.uk/~rpage/treeviewx/"
@@ -25,12 +23,6 @@ pkg_setup() {
 		eerror "the \"gtk2\" \"USE\" flag enabled."
 		die "Could not find non Unicode, gtk2-enabled wxGTK library."
 	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}/TreeLib
-	epatch ${FILESDIR}/nodeiterator.h.patch
 }
 
 src_compile() {
