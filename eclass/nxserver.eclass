@@ -76,15 +76,15 @@ nxserver_pkg_postinst() {
 	enewuser nx -1 /usr/NX/bin/nxserver /usr/NX/nxhome
 
 	einfo "Changing permissions for files under /usr/NX"
-	chown nx.root /usr/NX/etc/passwd
-	chown -R nx.root /usr/NX/nxhome
-	chown -R nx.root /usr/NX/var/sessions
+	chown nx:root /usr/NX/etc/passwd
+	chown -R nx:root /usr/NX/nxhome
+	chown -R nx:root /usr/NX/var/sessions
 
 	einfo "Generating SSH keys for the 'nx' user"
 	if [ ! -f /usr/NX/etc/users.id_dsa ]; then
 		ssh-keygen -q -t dsa -N '' -f /usr/NX/etc/users.id_dsa
 	fi
-	chown nx.root /usr/NX/etc/users.id_dsa
+	chown nx:root /usr/NX/etc/users.id_dsa
 	cp -f /usr/NX/nxhome/.ssh/server.id_dsa.pub.key /usr/NX/nxhome/.ssh/authorized_keys2
 
 	if [ ! -f /usr/NX/var/broadcast.txt ]; then
