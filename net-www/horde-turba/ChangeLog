@@ -1,6 +1,10 @@
 # ChangeLog for net-www/horde-turba
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-turba/ChangeLog,v 1.12 2004/02/26 18:22:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-turba/ChangeLog,v 1.13 2004/03/29 01:41:35 zx Exp $
+
+  01 Apr 2004; Chris Aniszczyk <zx@gentoo.org> horde-turba-1.2.1.ebuild,
+  horde-turba-1.2.2.ebuild:
+  Clean up + Marking ~hppa
 
 *horde-turba-1.2.2 (26 Feb 2004)
 
