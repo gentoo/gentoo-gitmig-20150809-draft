@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.1.1a.ebuild,v 1.1 2005/03/01 17:54:54 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.1.1b.ebuild,v 1.1 2005/03/02 21:17:24 plasmaroo Exp $
 
 VERSION_DMAP='1.00.17'
-VERSION_DMRAID='1.0.0-rc5f'
+VERSION_DMRAID='1.0.0.rc6'
 VERSION_LVM2='2.00.25'
 
 DESCRIPTION="Gentoo autokernel script"
