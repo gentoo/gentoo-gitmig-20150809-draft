@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysqlnavigator
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.6 2003/07/16 11:37:25 joker Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.7 2004/04/25 23:44:20 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> mysqlnavigator-1.4.1.ebuild,
+  mysqlnavigator-1.4.2.ebuild:
+  Add die following econf for bug 48950
 
   16 Jul 2003; Christian Birchinger <joker@gentoo.org>
   mysqlnavigator-1.4.2.ebuild:
