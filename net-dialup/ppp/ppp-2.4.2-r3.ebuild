@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r3.ebuild,v 1.2 2004/09/25 07:02:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r3.ebuild,v 1.3 2004/09/27 10:35:31 lanius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -30,7 +30,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/control_c.patch
 	epatch ${FILESDIR}/${PV}/stdopt-mppe-mppc-0.82.patch.gz
 
-	if use atm && use x86; then
+	if use atm; then
 		einfo "Enabling PPPoATM support"
 		epatch ${FILESDIR}/${PV}/pppoatm-2.diff.gz
 		sed -i -e "s/^LIBS =/LIBS = -latm/" pppd/Makefile.linux || die
@@ -104,7 +104,7 @@ src_install() {
 	dolib.so pppd/plugins/minconn.so
 	dolib.so pppd/plugins/passprompt.so
 	dolib.so pppd/plugins/rp-pppoe/rp-pppoe.so
-	if use atm && use x86; then
+	if use atm; then
 		dolib.so pppd/plugins/pppoatm.so
 	fi
 	dodir /usr/lib/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
