@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/vkeybd
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/ChangeLog,v 1.9 2003/12/20 17:42:57 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/ChangeLog,v 1.10 2004/02/01 11:52:58 ferringb Exp $
+
+  01 Feb 2004; Brian Harring <ferringb@gentoo.org> vkeybd-0.1.12.ebuild,
+  vkeybd-0.1.13-r1.ebuild, vkeybd-0.1.15.ebuild, 
+  files/vkeybd-0.1.13-alsa-fix.patch:
+  Closing bugs 23468 and 39119.  Adjusted copyright headers to 2004.
 
 *vkeybd-0.1.15 (20 Dec 2003)
 
