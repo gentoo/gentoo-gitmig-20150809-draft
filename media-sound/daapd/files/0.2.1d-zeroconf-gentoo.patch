@@ -1,0 +1,199 @@
+diff -u daapd-0.2.1d.makefile/daapd.cc daapd-0.2.1d/daapd.cc
+--- daapd-0.2.1d.makefile/daapd.cc	2003-12-02 16:43:55.000000000 -0500
++++ daapd-0.2.1d/daapd.cc	2003-12-20 17:22:08.000000000 -0500
+@@ -38,6 +38,12 @@
+ #include <daap/tagoutput.h>
+ #include <daap/registry.h>
+ 
++#ifdef HOWL_DNSREGISTRATION
++#include <rendezvous/rendezvous.h>
++#include <rendezvous/text_record.h>
++#include <salt/salt.h>
++#endif
++
+ 
+ const int   DAAP_OK	  = 200;
+ const char* DAAPD_VERSION = "daapd 0.2.1b";
+@@ -775,6 +781,39 @@
+ 	return &initParams;
+ }
+ 
++#ifdef HOWL_DNSREGISTRATION
++static sw_result
++my_service_reply(
++		sw_rendezvous_publish_handler	handler,
++		sw_rendezvous			rendezvous,
++		sw_rendezvous_publish_status	status,
++		sw_rendezvous_publish_id	id,
++		sw_opaque			extra)
++{
++	static sw_string
++		status_text[] =
++		{
++			"Started",
++			"Stopped",
++			"Name Collision",
++			"Invalid"
++		};
++
++	fprintf(stderr, "publish reply: %s\n", status_text[status]);
++	return SW_OKAY;
++}
++
++int addTextRecord( sw_text_record text_record, sw_const_string key, sw_const_string val )
++{
++	sw_result	result;
++	if ((result = sw_text_record_add_key_and_string_value(text_record, key, val)) != SW_OKAY)
++	{
++		fprintf(stderr, "sw_text_record_add_string(%s, %s) failed with: %lu\n", key, val, result);
++		return result;
++	}
++	return 0;
++}
++#endif
+ 
+ ////////////
+ // main
+@@ -786,6 +825,14 @@
+ 	int buflen = 255;
+ 	char buffer[buflen];
+ 
++#ifdef HOWL_DNSREGISTRATION
++	sw_rendezvous			session;
++	sw_salt				salt;
++	sw_text_record			text_record;
++	sw_result			result;
++	sw_rendezvous_publish_id	id;
++#endif
++
+ 	if( gethostname( buffer, buflen ) == 0 ) {
+ 		initParams.serverName = (char *)buffer;
+ 		initParams.dbName = (char *)buffer;
+@@ -800,6 +847,25 @@
+ 		initParams.dirs->push_back( dir );
+ 	}
+ 
++#ifdef HOWL_DNSREGISTRATION
++	if (sw_rendezvous_init(&session) != SW_OKAY)
++	{
++		fprintf(stderr, "sw_rendezvous_init() failed\n");
++		return -1;
++	}
++	if (sw_rendezvous_salt(session, &salt) != SW_OKAY)
++	{
++		fprintf(stderr, "sw_rendezvous_salt() failed\n");
++		return -1;
++	}
++
++	if (sw_text_record_init(&text_record) != SW_OKAY)
++	{
++		fprintf(stderr, "sw_text_record_init() failed\n");
++		return -1;
++	}
++#endif
++
+ 	cout << "scanning " << initParams.dirs << " for mp3s... " << flush;
+ 	Database db( initParams );
+ 	cout << "done. " << endl;
+@@ -818,12 +884,67 @@
+ 	httpdAddCSiteContent( server, parseRequest, (void*)&db );
+ 	httpdSetContentType( server, "application/x-dmap-tagged" );
+ 
++#ifdef HOWL_DNSREGISTRATION
++	// Set up the DNS-SD TXT records
++	if ((result = addTextRecord(text_record, "txtvers", "1")) != SW_OKAY)
++	{
++		return result;
++	}
++
++	if ((result = addTextRecord(text_record, "Version", "131072")) != SW_OKAY)
++	{
++		return result;
++	}
++
++	char tmpstr[16];
++	sprintf(tmpstr, "%i", db.id);
++	if ((result = addTextRecord(text_record, "Database ID", tmpstr)) != SW_OKAY)
++	{
++		return result;
++	}
++
++	// TODO Add 'Machine ID' record like iTunes does.
++
++	if ((result = addTextRecord(text_record, "Machine Name", initParams.serverName.c_str())) != SW_OKAY)
++	{
++		return result;
++	}
++
++	if ((result = addTextRecord(text_record, "Password", (initParams.password.length() > 0) ? "true" : "false")) != SW_OKAY)
++	{
++		return result;
++	}
++
++	if ((result = sw_rendezvous_publish(session,
++					initParams.serverName.c_str(),
++					"_daap._tcp",
++					NULL,
++					NULL,
++					initParams.port,
++					sw_text_record_bytes(text_record),
++					sw_text_record_len(text_record),
++					NULL,
++					my_service_reply,
++					NULL,
++					&id)) != SW_OKAY)
++	{
++		fprintf(stderr, "sw_rendezvous_publish() failed: %ld\n", result);
++		return -1;
++	}
++#endif
++
++
+ 	struct timeval timeout;
+ 
+ 	timeout.tv_sec  = 10;
+ 	timeout.tv_usec = 0;
+ 
+ 	while( true ) {
++#ifdef HOWL_DNSREGISTRATION
++		sw_ulong msecs = 0; // Tells sw_salt_step to simply poll
++		sw_salt_step(salt, &msecs);
++#endif
++
+ 		httpdSelectLoop( server, timeout );
+ 		// stuff like regular db updates could be added here
+ 	}
+diff -u daapd-0.2.1d.makefile/makefile daapd-0.2.1d/makefile
+--- daapd-0.2.1d.makefile/makefile	2003-12-19 15:38:10.000000000 -0500
++++ daapd-0.2.1d/makefile	2003-12-20 17:26:20.000000000 -0500
+@@ -1,22 +1,24 @@
+ CC = g++
+ TARGET = daapd
+ OBJS = daapd.o db.o dboutput.o songcache.o parsemp3.o
+-LIBS = -ldaaplib -lhttpd-persistent -lid3tag -lz
+-LIBPATH = -L. -L/usr/local/lib
+-INCPATH = -I. -I/usr/local/include
++OBJS2 = /usr/lib/libsalt.so /usr/lib/libcorby.so /usr/lib/librendezvous.so
++LIBS = -ldaaplib -lhttpd-persistent -lid3tag -lz -lcorby -lsalt -lrendezvous -lpthread
++LIBPATH = -L. -L/usr/lib -L/usr/local/lib
++INCPATH = -I. -I/usr/local/include -I/usr/include/howl-0.9
+ DEPLOY = /usr/local/bin
+ CFLAGS = -Wall -Wno-multichar
++DEFS = -DHOWL_DNSREGISTRATION # Comment this out to disable Howl DNS-SD Registration
+ 
+ .cc.o:
+-	$(CC) $(CFLAGS) $(INCPATH) -c $<
++	$(CC) $(CFLAGS) $(DEFS) $(INCPATH) -c $<
+ 
+ $(TARGET): $(OBJS)
+-	$(CC) $(CFLAGS) $(LIBPATH) -o $(TARGET) $(OBJS) $(LIBS)
++	$(CC) $(CFLAGS) $(DEFS) $(LIBPATH) -o $(TARGET) $(OBJS) $(OBJS2) $(LIBS)
+ 
+ $(OBJS): types.h dboutput.h songcache.h parsemp3.h
+ 
+ clean:
+-	rm $(OBJS) $(TARGET)
++	rm -f $(OBJS) $(TARGET)
+ 
+ install: $(TARGET)
+ 	cp $(TARGET) $(DEPLOY)

@@ -1,0 +1,9 @@
+diff -u daapd-0.2.1d.orig/makefile daapd-0.2.1d/makefile
+--- daapd-0.2.1d.orig/makefile	2003-12-02 16:43:14.000000000 -0500
++++ daapd-0.2.1d/makefile	2003-12-19 15:38:10.000000000 -0500
+@@ -1,4 +1,4 @@
+-CC = c++
++CC = g++
+ TARGET = daapd
+ OBJS = daapd.o db.o dboutput.o songcache.o parsemp3.o
+ LIBS = -ldaaplib -lhttpd-persistent -lid3tag -lz

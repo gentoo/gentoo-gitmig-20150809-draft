@@ -1,0 +1,20 @@
+# ChangeLog for net-misc/daapd
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/ChangeLog,v 1.1 2004/03/31 02:20:20 eradicator Exp $
+
+*daapd-0.2.1d (30 Mar 2004)
+
+  30 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> daapd-0.2.1d.ebuild,
+  metadata.xml, files/0.2.1d-makefile-gentoo.patch,
+  files/0.2.1d-zeroconf-gentoo.patch, files/daapd.conf.d, files/daapd.init.d:
+  Initial version committed to portage.
+
+  20 Dec 2003; Sandy McArthur <sandymac@gentoo.org> 0.2.1d-zeroconf-gentoo.patch :
+  Improved DNS-SD support so that the TXT records are also published.
+
+  19 Dec 2003; Sandy McArthur <sandymac@gentoo.org> :
+  Initial import.  Ebuild submitted by Sandy McArthur <sandymac@gentoo.org>.
+  New upstream relase: "Added support for comments / the ID3 comment field"
+  Reworked ebuild to use patches and support the Howl zeroconf implementation
+  when 'zeroconf' is in your USE flags.
+
