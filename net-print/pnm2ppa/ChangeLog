@@ -1,7 +1,13 @@
 # ChangeLog for net-print/pnm2ppa
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/ChangeLog,v 1.7 2002/12/05 20:58:39 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/ChangeLog,v 1.8 2002/12/13 01:44:18 avenj Exp $
 
+*pnm2ppa-1.12 (12 Dec 2002)
+
+  12 Dec 2002; Jon Portnoy <avenj@gentoo.org> pnm2ppa-1.12.ebuild :
+  Version bump. Ebuild contributed by Dylan Carlson (absinthe@pobox.com).
+
+*
   05 Dec 2002; Dan Armak <danarmak@gentoo.org> pnm2ppa-1.0.91.ebuild,
   pnm2ppa-1.0.91-r1.ebuild, pnm2ppa-1.0.91-r2.ebuild :
 
