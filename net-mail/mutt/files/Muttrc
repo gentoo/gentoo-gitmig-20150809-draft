@@ -1,26 +1,20 @@
-set mbox_type = Maildir
-set use_8bitmime
+# Some minimal Mutt settings, Gentoo-style.  These reflect the Gentoo
+# predilection for maildir folders.
+#
+# Please don't add settings to this file to change other user
+# preferences (such as colors), since those can be hard for a user to
+# undo if their preference doesn't match yours!  For example, it is
+# *impossible* currently in mutt to remove color settings from objects
+# other than the index.
+
+set mbox_type=Maildir
 set folder=~/.maildir
 set spoolfile=~/.maildir/
-unset mbox
-source /etc/mutt/Muttrc.color
 set record=~/.maildir-sent/
+unset mbox
 set move=no
-set sort=date-received
-unset use_domain
-set abort_nosubject=no
-set abort_unmodified=no
-ignore *
-unignore from date subject to cc lines
-unignore organization organisation
-unignore posted-to:
-hdr_order to cc organization organisation date from subject
+
+# Maybe we shouldn't set index_format here, but this is a recommended
+# one for maildir-style folders.
+
 set index_format="%4C %Z %{%b %d} %-16.16L  %s"
-
-bind pager <home> top
-bind pager <end> bottom
-bind pager <up> previous-line
-bind pager <down> next-line
-set pager_index_lines=6
-
-
