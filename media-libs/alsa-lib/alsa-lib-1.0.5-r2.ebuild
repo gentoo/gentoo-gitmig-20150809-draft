@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.5-r2.ebuild,v 1.2 2004/07/01 19:08:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.5-r2.ebuild,v 1.3 2004/07/03 00:40:06 eradicator Exp $
 
 inherit libtool
 
@@ -25,7 +25,8 @@ MY_P=${P/_rc/rc}
 SRC_URI="mirror://alsaproject/lib/${MY_P}.tar.bz2"
 S=${WORKDIR}/${MY_P}
 
-pkg_setup() {
+#pkg_setup() {
+pkg_postinst() {
 	# This is kinda hackish, so if someone else has a better idea,
 	# feel free to implement it.  We need to detect if /usr/include/sound
 	# exists.  If it does, then we leave it alone.  If it doesn't, we
@@ -48,8 +49,9 @@ pkg_setup() {
 		echo "yes"
 		eerror "Your version of:"
 		eerror "  /usr/include/sound/asound.h"
-		eerror "is broken (from a user space perspective).  Please apply"
-		eerror "the following patch:"
+		eerror "is broken (from a user space perspective).  Programs which"
+		eerror "rely on the alsa driver headers will fail to compile. Please"
+		eerror "apply the following patch:"
 		echo
 		eerror "*******************************************************"
 		cat ${FILESDIR}/fix-asound_h.patch
@@ -59,7 +61,17 @@ pkg_setup() {
 		eerror "cd /usr/include/sound"
 		eerror "patch -p0 < ${FILESDIR}/fix-asound_h.patch"
 		echo
-		die "Broken sound/asound.h header included in kernel sources!"
+		eerror "If that doesn't work, please apply the patch by hand by"
+		eerror "editing /usr/include/sound/asound.h in a text editor."
+		echo
+#		die "Broken sound/asound.h header included in kernel sources!"
+
+		eerror "Continuting in 10 seconds to let you read this note: "
+		for d in 10 9 8 7 6 5 4 3 2 1; do
+			echo -n "$d "
+			sleep 1
+		done
+		echo
 	else
 		echo "no"
 	fi
