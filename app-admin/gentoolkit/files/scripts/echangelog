@@ -10,6 +10,7 @@
 
 use strict;
 use POSIX qw(strftime getcwd);
+use Text::Wrap;
 
 my @files = ();
 my ($entry, $user, $date, $text, $version);
@@ -17,28 +18,28 @@ my %versions = ();
 
 # Read the current ChangeLog
 if (-f 'ChangeLog') {
-	open I, '<ChangeLog' or die "Can't open ChangeLog for input: $!\n";
-	{ local $/ = undef; $text = <I>; }
-	close I;
+    open I, '<ChangeLog' or die "Can't open ChangeLog for input: $!\n";
+    { local $/ = undef; $text = <I>; }
+    close I;
 } else {
-	# No ChangeLog here, maybe we should make one...
-	if (<*.ebuild>) {
-		open I, '<../../skel.ChangeLog' 
-			or die "Can't open ../../skel.ChangeLog for input: $!\n";
-		{ local $/ = undef; $text = <I>; }
-		close I;
-		my ($cwd) = getcwd();
-		$cwd =~ m|.*/(\w+-\w+)/([^/]+)| 
-			or die "Can't figure out category/package.. sorry!\n";
-		my ($category, $package_name) = ($1, $2);
-		$text =~ s/^\*.*//ms;	# don't need the fake entry
-		$text =~ s/<CATEGORY>/$category/;
-		$text =~ s/<PACKAGE_NAME>/$package_name/;
-		# Okay, now we have a starter ChangeLog to work with.
-		# The entry will be added just like with any other ChangeLog.
-	} else {
-		die "This should be run in a directory with ebuilds...\n";
-	}
+    # No ChangeLog here, maybe we should make one...
+    if (<*.ebuild>) {
+        open I, '<../../skel.ChangeLog' 
+            or die "Can't open ../../skel.ChangeLog for input: $!\n";
+        { local $/ = undef; $text = <I>; }
+        close I;
+        my ($cwd) = getcwd();
+        $cwd =~ m|.*/(\w+-\w+)/([^/]+)| 
+            or die "Can't figure out category/package.. sorry!\n";
+        my ($category, $package_name) = ($1, $2);
+        $text =~ s/^\*.*//ms;   # don't need the fake entry
+        $text =~ s/<CATEGORY>/$category/;
+        $text =~ s/<PACKAGE_NAME>/$package_name/;
+        # Okay, now we have a starter ChangeLog to work with.
+        # The entry will be added just like with any other ChangeLog.
+    } else {
+        die "This should be run in a directory with ebuilds...\n";
+    }
 }
 
 # Figure out what has changed around here
@@ -65,6 +66,14 @@ if ($ARGV[0]) {
 }
 die "Empty entry; aborting\n" unless $entry =~ /\S/;
 
+# If there are any long lines, then wrap the entry at 76 chars
+# (leaving 2 chars on each end after adding indentation below).
+if ($entry =~ /^.{77}/m) {
+    local $Text::Wrap::columns = 76;
+    local $Text::Wrap::unexpand = 0;
+    $entry = Text::Wrap::fill('', '', $entry);
+}
+
 # Prepend the user info to the entry
 $user = $ENV{'ECHANGELOG_USER'} ||
         sprintf("%s <%s\@gentoo.org>", (getpwuid($<))[6,0]);
@@ -84,18 +93,21 @@ if (%versions) {
 
 if (!defined $version) {
     # Changing a patch or something, not an ebuild, so put the entry
-    # at the top of the file.
-    $text =~ s/^.*?\n(?=\s)/$&\n$entry\n/s
-        or die "Failed to insert new entry\n";
+    # after the first *version line
+	$text =~ s/^\*.*\n/$&\n$entry\n/m
+        or die "Failed to insert new entry (1)\n";
+	# If we were putting it at the top of the file, the following
+	# regex would work well.
+	# $text =~ s/^.*?\n(?=\s)/$&\n$entry\n/s;
 } elsif ($versions{$version} > -1) {
     # Insert after the *version line
-	# Sometimes the version line includes . or even .ebuild
+    # Sometimes the version line includes . or even .ebuild
     $text =~ s/^\*\Q$version\E\.?(?:ebuild)?\s.*\n/$&\n$entry\n/m 
-        or die "Failed to insert new entry\n";
+        or die "Failed to insert new entry (2)\n";
 } else {
     # Insert at the top with a new version marker
     $text =~ s/^.*?\n(?=\s)/$&\n*$version ($date)\n\n$entry\n/s
-        or die "Failed to insert new entry\n";
+        or die "Failed to insert new entry (3)\n";
 }
 
 # Write the new ChangeLog
