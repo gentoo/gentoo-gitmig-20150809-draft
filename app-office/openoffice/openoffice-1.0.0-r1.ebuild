@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors: Preston A. Elder <prez@goth.net>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.0-r1.ebuild,v 1.1 2002/06/07 18:16:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.0-r1.ebuild,v 1.2 2002/06/10 19:43:35 azarah Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -252,7 +252,17 @@ pkg_setup() {
 
 	if [ "`gcc-version`" = "2.95" ]
 	then
-		die "Cannot find gcc version 3.0 or later"
+		eerror
+		eerror "This build needs gcc-3.0.4 or later, but due to profile"
+		eerror "settings, it cannot DEPEND on it, so please merge it"
+		eerror "manually:"
+		eerror
+		eerror "  ebuild /usr/portage/sys-devel/gcc/gcc-3.\?.ebuild merge"
+		eerror
+		eerror "As of writing, gcc-3.0.4 seemed to create the most stable"
+		eerror "builds (more so than gcc-3.1)."
+		eerror
+		die
 	fi
 
 	# This gets in our way ... we MUST use the JDK version, not gcj's
