@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.37 2004/09/02 23:49:24 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.38 2004/09/24 17:20:40 lu_zero Exp $
+
+  24 Sep 2004; Luca Barbato <lu_zero@gentoo.org> files/kismet_gcc34.gz:
+  Updated the gcc-3.4 fixes
 
   02 Sep 2004; Malcolm Lashley <malc@gentoo.org> +files/kismet_amd64.patch,
   kismet-2004.04.1.ebuild:
