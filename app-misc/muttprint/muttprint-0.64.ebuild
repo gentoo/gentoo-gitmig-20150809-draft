@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.64.ebuild,v 1.3 2003/09/05 12:10:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.64.ebuild,v 1.4 2003/09/19 16:18:15 usata Exp $
 
 DESCRIPTION="pretty printing of your mails"
 HOMEPAGE="http://muttprint.sf.net/"
@@ -10,7 +10,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND="app-text/tetex"
+DEPEND="virtual/tetex"
 
 src_unpack() {
 	unpack ${A}
@@ -28,6 +28,14 @@ src_unpack() {
 		cd ${S}
 	done
 
+}
+
+src_compile() {
+
+	if has_version 'app-text/ptex' ; then
+		cp muttprint muttprint.in
+		sed -e "s/latex/platex/g" muttprint.in > muttprint
+	fi
 }
 
 src_install() {
