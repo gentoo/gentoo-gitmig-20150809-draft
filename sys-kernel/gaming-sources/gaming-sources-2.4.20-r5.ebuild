@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/gaming-sources-2.4.20-r5.ebuild,v 1.6 2003/10/27 13:49:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/gaming-sources-2.4.20-r5.ebuild,v 1.7 2003/10/28 00:08:50 plasmaroo Exp $
 
 IUSE="build"
 
@@ -24,6 +24,7 @@ KEYWORDS="-* ~x86"
 SLOT="${KV}"
 
 src_unpack() {
+
 	unpack linux-${OKV}.tar.bz2 patches-${KV}.tar.bz2
 	bzcat ${DISTDIR}/ck${CKV}.patch.bz2 | patch -p0 || die "-patch failed"
 
@@ -31,6 +32,8 @@ src_unpack() {
 
 	cd ${KV} || die #enter the patch directory and go!
 	kernel_src_unpack
+
+	# Bug #32135
+	sed -i '1201d' ../linux-${KV}/drivers/net/fealnx.c
+
 }
-
-
