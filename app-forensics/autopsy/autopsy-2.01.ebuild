@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/autopsy/autopsy-2.01.ebuild,v 1.1 2004/09/12 07:18:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/autopsy/autopsy-2.01.ebuild,v 1.2 2004/09/12 07:40:08 dragonheart Exp $
 
 inherit eutils
 
@@ -16,12 +16,12 @@ IUSE=""
 # Runtime depend on grep and file deliberate
 
 RDEPEND="dev-lang/perl
-	app-admin/sleuthkit
+	app-forensics/sleuthkit
 	sys-apps/grep
 	sys-apps/file"
 
 DEPEND="dev-lang/perl
-	app-admin/sleuthkit
+	app-forensics/sleuthkit
 	>=sys-apps/sed-4"
 
 src_unpack() {
