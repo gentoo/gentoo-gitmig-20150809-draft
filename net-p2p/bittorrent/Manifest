@@ -2,6 +2,5 @@ MD5 04f5fd903263c6fef2ddc80a1b81c2ef ChangeLog 3515
 MD5 1ef3280d9fc0f1c5a58329920f4aa130 bittorrent-3.4.ebuild 1709
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 b8435e57c0b439d46729e05a3e21de0d bittorrent-3.3.0.ebuild 1699
-MD5 dfb7c0c50cc6abc6efd5cf380f4615a0 files/bittorrent-stats-3.2.1b.patch 26140
 MD5 31bd68c1e5483131e9b345cfabf3843a files/digest-bittorrent-3.4 63
 MD5 5552dfd01545331cd268d47a8a18165e files/digest-bittorrent-3.3.0 66
