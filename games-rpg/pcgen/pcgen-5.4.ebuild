@@ -1,11 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/pcgen-5.3.9.ebuild,v 1.2 2003/09/19 00:17:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/pcgen-5.4.ebuild,v 1.1 2003/10/28 14:21:48 vapier Exp $
 
 inherit games
 
-MY_PV="${PV//./}"
-S=${WORKDIR}
+MY_PV="${PV//.}"
 DESCRIPTION="D&D character generator"
 HOMEPAGE="http://pcgen.sourceforge.net"
 SRC_URI="mirror://sourceforge/pcgen/pcgen${MY_PV}_part1of3.zip
@@ -16,12 +15,14 @@ SRC_URI="mirror://sourceforge/pcgen/pcgen${MY_PV}_part1of3.zip
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc ~sparc ~alpha"
 
 RDEPEND="|| ( >=virtual/jdk-1.3.1 >=virtual/jre-1.3.1 )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	app-arch/unzip"
+
+S=${WORKDIR}
 
 src_unpack() {
 	PDF_FILES="pdf_new.zip"
