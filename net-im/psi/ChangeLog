@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.46 2004/12/28 19:33:07 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.47 2004/12/31 18:46:05 fmccor Exp $
+
+  31 Dec 2004; Ferris McCormick <fmccor@gentoo.org> psi-0.9.2-r1.ebuild:
+  Add ~sparc keyword at developer's (humpback's) request. Builds fine and runs.
 
   28 Dec 2004; Gustavo Felisberto <humpback@gentoo.org>; psi-0.9.2-r1.ebuild:
   Stable on x86
