@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmmplayer
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmmplayer/ChangeLog,v 1.7 2004/04/22 06:17:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmmplayer/ChangeLog,v 1.8 2004/04/22 17:58:13 eradicator Exp $
+
+  22 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmmplayer-0.3.3.ebuild:
+  Stable x86.
 
   21 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml:
   Fixed metadata media-tv -> media-video
