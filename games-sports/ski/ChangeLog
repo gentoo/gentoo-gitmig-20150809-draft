@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/ski
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ChangeLog,v 1.1 2004/01/04 20:53:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ChangeLog,v 1.2 2004/01/13 00:45:30 mr_bones_ Exp $
+
+*ski-6.5 (12 Jan 2004)
+
+  12 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> ski-6.5.ebuild:
+  version bump
 
 *ski-6.3 (04 Jan 2004)
 
