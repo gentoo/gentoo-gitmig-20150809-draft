@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r10.ebuild,v 1.2 2004/03/01 15:49:52 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r10.ebuild,v 1.3 2004/03/08 20:11:07 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -27,6 +27,15 @@ DEPEND=">=x11-libs/gtk+-2.0
 	|| ( dev-libs/nss net-www/mozilla )
 	gnome? ( >=gnome-base/libgnome-2.4.0 )"
 PDEPEND="ssl? ( net-im/gaim-encryption )"
+
+pkg_setup() {
+	ewarn
+	ewarn "If you experience problems with gaim, file them as bugs with"
+	ewarn "Gentoo's bugzilla, http://bugs.gentoo.org.  DO NOT report them"
+	ewarn "as bugs with gaim's sourceforge tracker, and by all means DO NOT"
+	ewarn "seek help in #gaim."
+	ewarn
+}
 
 src_unpack() {
 	unpack ${P}.tar.bz2 || die
@@ -97,6 +106,6 @@ pkg_postinst() {
 	ewarn "If you experience problems with gaim, file them as bugs with"
 	ewarn "Gentoo's bugzilla, http://bugs.gentoo.org.  DO NOT report them"
 	ewarn "as bugs with gaim's sourceforge tracker, and by all means DO NOT"
-	ewarn "seek help in #gaim.  gaim developers do not like gentoo users."
+	ewarn "seek help in #gaim."
 	ewarn
 }
