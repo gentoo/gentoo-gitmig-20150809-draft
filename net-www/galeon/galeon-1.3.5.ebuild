@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.5.ebuild,v 1.1 2003/06/10 22:49:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.5.ebuild,v 1.2 2003/07/09 17:42:25 liquidx Exp $
 
 inherit gnome2 libtool
 
@@ -32,6 +32,7 @@ RDEPEND="virtual/x11
 	>=gnome-base/libglade-2.0"
         
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
     >=sys-devel/gettext-0.11"
 
 pkg_setup () {
