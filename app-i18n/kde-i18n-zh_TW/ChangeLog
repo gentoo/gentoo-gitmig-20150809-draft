@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/kde-i18n-ar
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-zh_TW/ChangeLog,v 1.1 2002/05/03 14:21:33 danarmak Exp $
+
+*kde-i18n-kde-i18n-zh_TW-3.0 (4 Apr 2002)
+
+  4 Apr 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
+  
+  KDE 3.0 version.
+
