@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MP3-Tag
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/ChangeLog,v 1.1 2004/10/20 03:50:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Tag/ChangeLog,v 1.2 2004/11/05 08:20:43 eradicator Exp $
+
+  05 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  MP3-Tag-0.94.ebuild:
+  Stable amd64, sparc, x86.
 
 *MP3-Tag-0.94 (19 Oct 2004)
 
