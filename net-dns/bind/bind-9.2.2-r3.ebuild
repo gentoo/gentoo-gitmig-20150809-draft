@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2-r3.ebuild,v 1.13 2004/10/09 17:32:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2-r3.ebuild,v 1.14 2004/10/19 10:42:40 absinthe Exp $
 
 inherit eutils gnuconfig libtool
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE="doc ipv6 selinux ssl"
 
 DEPEND="sys-apps/groff
