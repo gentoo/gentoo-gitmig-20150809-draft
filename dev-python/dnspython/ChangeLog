@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dnspython
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.10 2005/02/12 11:46:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.11 2005/03/21 21:31:12 weeve Exp $
+
+  21 Mar 2005; Jason Wever <weeve@gentoo.org> dnspython-1.3.3.ebuild:
+  Added ~sparc keyword wrt bug #86127.
 
   12 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
   -dnspython-1.3.0.ebuild, -dnspython-1.3.1.ebuild:
