@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 43ac1da445fc6269c1dfc439bcfbf563 mutella-0.4.3.ebuild 731
-MD5 17e8bb1d667bd54ef3967aa5e3a65ede mutella-0.4.5.ebuild 695
-MD5 e46ed25a0c23272cbd0b1cf0fd58e44a ChangeLog 2258
+MD5 2c1b381b80f051582444b957c21d253a mutella-0.4.5.ebuild 694
+MD5 74d25a65b73dfe6249cd780b748867a3 ChangeLog 2345
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 f6949cc6d13e52921434cd6a51a0dd45 files/mutella-gcc33-fix.gz 330
 MD5 1223ea0ad977a9b14c16fdc718d2a270 files/digest-mutella-0.4.3 65
@@ -11,7 +11,7 @@ MD5 fb6713b1e9fe31af7c832a63609fac8e files/digest-mutella-0.4.5 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBYs79cAgAdbxYsnERAlpWAJwLRDXdCglEJev0NDeRpj2N1rRAoQCfQZ7V
-bNOEACHgdg9wJAnBG/KdjLA=
-=5W8d
+iD8DBQFBo6i1cAgAdbxYsnERAuxlAJ9FjCsMQv869lSkAxhYo26tv/157gCfQsJI
+bjogNJcc8EIohjgkjq+uboA=
+=+Nnp
 -----END PGP SIGNATURE-----

@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 cb0acdf2c46a32d90ef2728ce9deeae2 gnome-btdownload-0.0.17.ebuild 761
 MD5 e572f84f344d4cadd34012a02a9f9b74 gnome-btdownload-0.0.16.ebuild 761
 MD5 fa765c02313b3adc969fa6cb55d5d9e8 gnome-btdownload-0.0.11.ebuild 760
-MD5 2a20092042bf3950af58154024939165 ChangeLog 905
+MD5 7d48d4c0eca67a13a4dae4d8f5c66e75 ChangeLog 1044
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 7dbbf8233a94b880b3548c48c958cb5a files/digest-gnome-btdownload-0.0.11 75
 MD5 4b140ad2f7d4ae2d239912c0e85e6b3d files/digest-gnome-btdownload-0.0.16 75
+MD5 1a16eb1a7a3284384812225b64cb97a3 files/digest-gnome-btdownload-0.0.17 75
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBK9R7cAgAdbxYsnERAksyAJ0bwiAZUu5rxNTU5oOEfZOUYLpKngCfeyYA
-pEas/j+5rFqLwhmrATwjHKM=
-=F1Rd
+iD8DBQFBo6gAcAgAdbxYsnERAhMRAKCK565mH95ahVl8/aIp9yOnp5UjpwCffKar
+jQCnIwFfVFThMqDPZQczpP4=
+=Ojx9
 -----END PGP SIGNATURE-----
