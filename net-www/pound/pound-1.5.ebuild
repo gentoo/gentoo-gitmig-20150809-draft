@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/pound/pound-1.5.ebuild,v 1.1 2003/11/01 20:49:30 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/pound/pound-1.5.ebuild,v 1.2 2003/11/16 23:16:59 pyrania Exp $
 
 MY_P=${P/p/P}
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.apsis.ch/pound/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 IUSE="ssl"
 
 DEPEND="virtual/glibc
