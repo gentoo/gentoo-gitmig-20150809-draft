@@ -1,8 +1,11 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.7 2002/12/20 21:07:26 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.8 2002/12/23 02:35:00 joker Exp $
 
 *kismet-2.6.2-r1 (20 Dec 2002)
+
+  23 Dec 2002; Christian Birchinger <joker@gentoo.org> :     
+  Removed sparc64 keyword.
 
   20 Dec 2002; Jared Hudson <jhhudso@gentoo.org> : Bug ID #12459. Credit goes
   to Nate Lynch <ntl@swt.edu>. Added dependency on >=net-libs/libpcap-0.7.1-r1.
