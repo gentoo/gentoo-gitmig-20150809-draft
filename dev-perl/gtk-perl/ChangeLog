@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gtk-perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.20 2003/12/22 08:17:25 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.21 2003/12/22 21:45:30 rac Exp $
+
+  22 Dec 2003; <rac@gentoo.org> gtk-perl-0.7008-r10.ebuild:
+  add IUSE
 
 *gtk-perl-0.7008-r10 (22 Dec 2003)
 
