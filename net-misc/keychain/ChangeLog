@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/keychain
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.1 2002/02/02 05:25:15 woodchip Exp $
+
+*keychain-1.8 (1 Feb 2002)
+
+  1 Feb 2002; Donny Davies <woodchip@gentoo.org> :
+  
+  Added Daniel Robbins' keychain utility to portage.  Feels weird but
+  hey, somebody's gotta do it right?  :)
+
