@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.124 2003/09/27 00:58:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.125 2003/09/28 09:39:25 liquidx Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -99,6 +99,7 @@ net-irc/xchat:xchattext - Enables the text/console front end to XChat.
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-libs/libnvcserver:nobackchannel - disable backchannel support
 net-libs/libnvcserver:no24bpp - disable 24bpp support
+net-libs/libsoup:gnutls - Use GnuTLS instead of OpenSSL for SSL support.
 net-mail/amavisd-new:milter - Enable Sendmail milter support
 net-mail/courier:fax - Enables fax support in the courier mail server
 net-mail/exim:exiscan - Patch providing support for content scanning backward-compatability
