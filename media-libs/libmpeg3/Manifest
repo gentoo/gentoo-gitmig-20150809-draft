@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 94834684a070c571c039fa0ae52889e3 ChangeLog 4683
+MD5 3e36843a66b87f015f320172e7a4cbb7 ChangeLog 4843
 MD5 e76a83a10bc9f809a7e1da2212554f78 libmpeg3-1.5-r1.ebuild 1417
 MD5 f1a2d80d7720b1fb586d7b1d3eb452bd libmpeg3-1.5.1.ebuild 1497
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 dd1b4ae622d95934edc08ea09001f608 libmpeg3-1.5.2-r1.ebuild 2327
+MD5 5dab1a0e57dd4ba97df66b90236304bc libmpeg3-1.5.2-r1.ebuild 2405
 MD5 86cf602270d3f2a2e8ca221aeaff11c6 libmpeg3-1.5.2.ebuild 2133
 MD5 d3a05866020d3e1f064974f5363c6c53 files/1.5.1-gentoo-mpeg3split.patch 2315
 MD5 8c1c4667609bae1089a66ea6c8ee1f28 files/1.5.1-gentoo-p1.patch 1376
@@ -31,7 +31,7 @@ MD5 81b6cc87dac447d9be64d2327bd6193c files/digest-libmpeg3-1.5.2-r1 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCROuuArHZZzCEUG0RAtHtAJwOJ19u6mK7GB2DPqP6BcoctLm/CgCaA4M3
-/83SjjH9AeoUR5R6o8LAZ60=
-=qUxn
+iD8DBQFCRclLArHZZzCEUG0RAlMaAJwKOXPV1KKxaWywd0STVso+zoOuawCeMqoY
+Fegtni18N8mZu4KQBNF0RcU=
+=L6wd
 -----END PGP SIGNATURE-----
