@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ibm-jre
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ChangeLog,v 1.19 2003/07/11 21:41:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ChangeLog,v 1.20 2003/11/20 04:21:44 strider Exp $
+
+*ibm-jre-1.4.1 (20 Nov 2003)
+
+  20 Nov 2003; Adrian Almenar <strider@gentoo.org> ibm-jre-1.4.1.ebuild:
+  Update JRE version
 
 *ibm-jre-1.4.0-r2 (23 Dec 2002)
 
