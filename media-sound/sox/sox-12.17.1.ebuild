@@ -1,12 +1,15 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.1.ebuild,v 1.10 2002/07/11 06:30:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.1.ebuild,v 1.11 2002/07/12 21:19:52 phoenix Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="The swiss army knife of sound processing programs"
 SRC_URI="http://download.sourceforge.net/sox/${A}"
 HOMEPAGE="http://home.sprynet.com/~cgabwell/sox.html"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="LPGL-2.1"
 
 DEPEND="virtual/glibc alsa? ( virtual/alsa )"
 
@@ -22,7 +25,6 @@ src_compile() {
 }
 
 src_install () {
-
     into /usr
     dobin sox play soxeffect
     doman sox.1 soxexam.1
@@ -30,6 +32,12 @@ src_install () {
 
 }
 
+pkg_postinst () {
+        # the rec binary doesnt exist anymore
+        if([ ! -e /usr/bin/rec ]) then
+                ln -s /usr/bin/play /usr/bin/rec
+        fi
+}
 
 
 
