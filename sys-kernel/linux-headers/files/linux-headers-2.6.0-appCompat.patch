@@ -1,24 +1,10 @@
-## BEGIN ##
+Authors: Tim Yamin <plasmaroo@gentoo.org>
+         Mike Frysinger <vapier@gentoo.org>
+         Martin Schlemmer <azarah@gentoo.org>
 
-Copyright 2003 Tim Yamin <plasmaroo@gentoo.org>
-               Martin Schlemmer <azarah@gentoo.org>
+This patch neatens up the 2.6.0 headers for user-space usage and allows backward
+compatibility on a variety of applications which are designed for 2.4 headers.
 
-This file may freely be distributed under the conditions of the 
-GPLv2 as long as this header, and the following disclaimer is preserved.
-
-THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY 
-EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR 
-PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE FREEBSD PROJECT OR 
-CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, 
-EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, 
-PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
-PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
-LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
-NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-## END ##
 diff -ur linux-2.6.0/include/linux/bitmap.h linux-2.6.0/include/linux.gentoo/bitmap.h
 --- linux-2.6.0/include/linux/bitmap.h	2003-12-27 19:22:38.000000000 +0000
 +++ linux-2.6.0/include/linux.gentoo/bitmap.h	2003-12-27 19:19:31.000000000 +0000
@@ -89,18 +75,18 @@ diff -ur linux-2.6.0/include/linux/compiler-gcc3.h linux-2.6.0/include/linux.gen
  #define __attribute_pure__	__attribute__((pure))
 +
 +#endif /* __KERNEL__ */
-diff -ur linux-2.6.0/include/linux/cpumask.h linux-2.6.0/include/linux.gentoo/cpumask.h
---- linux-2.6.0/include/linux/cpumask.h	2003-12-27 19:22:38.000000000 +0000
-+++ linux-2.6.0/include/linux.gentoo/cpumask.h	2003-12-27 19:19:31.000000000 +0000
+diff -ur linux-2.6.1/include/linux/cpumask.h linux-2.6.1/include/linux.gentoo/cpumask.h
+--- linux-2.6.1/include/linux/cpumask.h	2003-12-27 19:22:38.000000000 +0000
++++ linux-2.6.1/include/linux.gentoo/cpumask.h	2003-12-27 19:19:31.000000000 +0000
 @@ -1,6 +1,8 @@
  #ifndef __LINUX_CPUMASK_H
  #define __LINUX_CPUMASK_H
  
 +#ifdef __KERNEL__
 +
- #include <linux/config.h>
- #include <linux/kernel.h>
  #include <linux/threads.h>
+ #include <asm/cpumask.h>
+ #include <asm/bug.h>
 @@ -68,4 +70,5 @@
  		cpu < NR_CPUS;						\
  		cpu = next_online_cpu(cpu,map))
@@ -286,6 +272,23 @@ diff -ur linux-2.6.0/include/linux/time.h linux-2.6.0/include/linux.gentoo/time.
  #ifdef __KERNEL__
  
  #include <linux/spinlock.h>
+@@ -281,6 +281,8 @@
+  * machines were long is 32-bit! (However, as time_t is signed, we
+  * will already get problems at other places on 2038-01-19 03:14:08)
+  */
++
++#ifndef _TIME_H
+ static inline unsigned long
+ mktime (unsigned int year, unsigned int mon,
+ 	unsigned int day, unsigned int hour,
+@@ -298,6 +300,7 @@
+ 	  )*60 + min /* now have minutes */
+ 	)*60 + sec; /* finally seconds */
+ }
++#endif
+ 
+ extern struct timespec xtime;
+ extern struct timespec wall_to_monotonic;
 @@ -351,15 +358,19 @@
  #define	ITIMER_VIRTUAL	1
  #define	ITIMER_PROF	2
@@ -344,3 +347,276 @@ diff -ur linux-2.6.0/include/linux/workqueue.h linux-2.6.0/include/linux.gentoo/
 +
  #endif
  
+diff -ur linux-2.6.0/include/asm-i386/mpspec.h linux-2.6.0/include/asm-i386/mpspec.h
+--- linux-2.6.0/include/asm-i386/mpspec.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.0/include/asm-i386/mpspec.h	2004-01-19 20:01:11.000000000 +0000
+@@ -3,7 +3,7 @@
+ 
+ #include <linux/cpumask.h>
+ #include <asm/mpspec_def.h>
+-#include <mach_mpspec.h>
++#include <asm/mach-generic/mach_mpspec.h>
+ 
+ extern int mp_bus_id_to_type [MAX_MP_BUSSES];
+ extern int mp_bus_id_to_node [MAX_MP_BUSSES];
+diff -ur linux-2.6.0/include/asm-i386/processor.h linux-2.6.0/include/asm-i386/processor.h
+--- linux-2.6.0/include/asm-i386/processor.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.0/include/asm-i386/processor.h	2004-01-19 20:01:11.000000000 +0000
+@@ -8,7 +8,9 @@
+ #define __ASM_I386_PROCESSOR_H
+ 
+ #include <asm/vm86.h>
++#ifdef __KERNEL__
+ #include <asm/math_emu.h>
++#endif
+ #include <asm/segment.h>
+ #include <asm/page.h>
+ #include <asm/types.h>
+diff -ur linux-2.6.0/include/asm-i386/semaphore.h linux-2.6.0/include/asm-i386/semaphore.h
+--- linux-2.6.0/include/asm-i386/semaphore.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.0/include/asm-i386/semaphore.h	2004-01-19 20:01:11.000000000 +0000
+@@ -3,8 +3,6 @@
+ 
+ #include <linux/linkage.h>
+ 
+-#ifdef __KERNEL__
+-
+ /*
+  * SMP- and interrupt-safe semaphores..
+  *
+@@ -214,4 +212,3 @@
+ }
+ 
+ #endif
+-#endif
+diff -ur linux-2.6.0/include/asm-i386/signal.h linux-2.6.0/include/asm-i386/signal.h
+--- linux-2.6.0/include/asm-i386/signal.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.0/include/asm-i386/signal.h	2004-01-19 20:01:11.000000000 +0000
+@@ -26,7 +26,9 @@
+ /* Here we must cater to libcs that poke about in kernel headers.  */
+ 
+ #define NSIG		32
++#ifndef __sigset_t_defined
+ typedef unsigned long sigset_t;
++#endif
+ 
+ #endif /* __KERNEL__ */
+ 
+@@ -155,6 +157,7 @@
+ #else
+ /* Here we must cater to libcs that poke about in kernel headers.  */
+ 
++#ifndef _SIGNAL_H
+ struct sigaction {
+ 	union {
+ 	  __sighandler_t _sa_handler;
+@@ -164,17 +167,20 @@
+ 	unsigned long sa_flags;
+ 	void (*sa_restorer)(void);
+ };
++#endif
+ 
+ #define sa_handler	_u._sa_handler
+ #define sa_sigaction	_u._sa_sigaction
+ 
+ #endif /* __KERNEL__ */
+ 
++#ifndef _SIGNAL_H
+ typedef struct sigaltstack {
+ 	void *ss_sp;
+ 	int ss_flags;
+ 	size_t ss_size;
+ } stack_t;
++#endif
+ 
+ #ifdef __KERNEL__
+ #include <asm/sigcontext.h>
+diff -ur linux-2.6.0/include/asm-i386/smp.h linux-2.6.0/include/asm-i386/smp.h
+--- linux-2.6.0/include/asm-i386/smp.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.0/include/asm-i386/smp.h	2004-01-19 20:01:11.000000000 +0000
+@@ -70,7 +70,7 @@
+ #ifdef APIC_DEFINITION
+ extern int hard_smp_processor_id(void);
+ #else
+-#include <mach_apicdef.h>
++#include <asm/mach-generic/mach_apicdef.h>
+ static inline int hard_smp_processor_id(void)
+ {
+ 	/* we don't want to mark this access volatile - bad code generation */
+diff -ur linux-2.6.0/include/linux/types.h linux-2.6.0/include/linux.gentoo/types.h
+--- linux-2.6.0/include/linux/types.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/types.h	2004-01-19 20:01:11.000000000 +0000
+@@ -19,12 +19,24 @@
+ 
+ typedef __u32 __kernel_dev_t;
+ 
++#ifndef _SYS_SELECT_H
+ typedef __kernel_fd_set		fd_set;
++#endif
++#ifndef __dev_t_defined
+ typedef __kernel_dev_t		dev_t;
++#endif
++#ifndef __ino_t_defined
+ typedef __kernel_ino_t		ino_t;
++#endif
++#ifndef __mode_t_defined
+ typedef __kernel_mode_t		mode_t;
++#endif
++#ifndef __nlink_t_defined
+ typedef __kernel_nlink_t	nlink_t;
++#endif
++#ifndef __off_t_defined
+ typedef __kernel_off_t		off_t;
++#endif
+ typedef __kernel_pid_t		pid_t;
+ typedef __kernel_daddr_t	daddr_t;
+ typedef __kernel_key_t		key_t;
+@@ -34,7 +46,9 @@
+ 
+ #ifdef __KERNEL__
+ typedef __kernel_uid32_t	uid_t;
++#define __uid_t_defined
+ typedef __kernel_gid32_t	gid_t;
++#define __gid_t_defined
+ typedef __kernel_uid16_t        uid16_t;
+ typedef __kernel_gid16_t        gid16_t;
+ 
+@@ -49,7 +63,9 @@
+  */
+ #else
+ typedef __kernel_uid_t		uid_t;
++#define __uid_t_defined
+ typedef __kernel_gid_t		gid_t;
++#define __gid_t_defined
+ #endif /* __KERNEL__ */
+ 
+ #if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+diff -ur linux-2.6.0/include/asm-generic/siginfo.h linux-2.6.0/include/asm-generic/siginfo.h
+--- linux-2.6.0/include/asm-generic/siginfo.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.0/include/asm-generic/siginfo.h	2004-01-19 20:01:11.000000000 +0000
+@@ -4,10 +4,12 @@
+ #include <linux/compiler.h>
+ #include <linux/types.h>
+ 
++#ifndef _SIGNAL_H
+ typedef union sigval {
+ 	int sival_int;
+ 	void *sival_ptr;
+ } sigval_t;
++#endif
+ 
+ /*
+  * This is the size (including padding) of the part of the
+@@ -31,7 +33,7 @@
+ #endif
+ 
+ #ifndef HAVE_ARCH_SIGINFO_T
+-
++#ifndef _SIGNAL_H
+ typedef struct siginfo {
+ 	int si_signo;
+ 	int si_errno;
+@@ -86,7 +88,7 @@
+ 		} _sigpoll;
+ 	} _sifields;
+ } siginfo_t;
+-
++#endif
+ #endif
+ 
+ /*
+@@ -238,7 +240,7 @@
+ #endif
+ 
+ #ifndef HAVE_ARCH_SIGEVENT_T
+-
++#ifndef _SIGNAL_H
+ typedef struct sigevent {
+ 	sigval_t sigev_value;
+ 	int sigev_signo;
+@@ -253,7 +255,7 @@
+ 		} _sigev_thread;
+ 	} _sigev_un;
+ } sigevent_t;
+-
++#endif
+ #endif
+ 
+ #define sigev_notify_function	_sigev_un._sigev_thread._function
+diff -ur linux-2.6.0/include/linux/jiffies.h linux-2.6.0/include/linux.gentoo/jiffies.h
+--- linux-2.6.0/include/linux/jiffies.h	2004-01-19 20:18:36.000000000 +0000
++++ linux-2.6.0/include/linux.gentoo/jiffies.h	2004-01-19 20:01:11.000000000 +0000
+@@ -13,15 +13,15 @@
+  * without holding read_lock_irq(&xtime_lock).
+  * get_jiffies_64() will do this for you as appropriate.
+  */
+-extern u64 jiffies_64;
++extern __u64 jiffies_64;
+ extern unsigned long volatile jiffies;
+ 
+ #if (BITS_PER_LONG < 64)
+-u64 get_jiffies_64(void);
++__u64 get_jiffies_64(void);
+ #else
+-static inline u64 get_jiffies_64(void)
++static inline __u64 get_jiffies_64(void)
+ {
+-	return (u64)jiffies;
++	return (__u64)jiffies;
+ }
+ #endif
+ 
+diff -ur linux-2.6.0/include/linux/i2c.h linux-2.6.0/include/linux.gentoo/i2c.h
+--- linux-2.6.0/include/linux/i2c.h	2004-02-07 13:29:15.099504640 -0500
++++ linux-2.6.0/include/linux.gentoo/i2c.h	2004-02-07 13:35:53.956869104 -0500
+@@ -28,10 +28,18 @@
+ #ifndef _LINUX_I2C_H
+ #define _LINUX_I2C_H
+ 
+-#include <linux/module.h>
+-#include <linux/types.h>
++#ifdef __KERNEL__
++#	include <linux/module.h>
++#	include <linux/types.h>
++#else
++#	define __KERNEL__
++#	include <linux/types.h>
++#	undef __KERNEL__
++#endif
+ #include <linux/i2c-id.h>
++#ifdef __KERNEL__
+ #include <linux/device.h>	/* for struct device */
++#endif
+ #include <asm/semaphore.h>
+ 
+ /* --- General options ------------------------------------------------	*/
+@@ -109,6 +117,7 @@
+  * events.
+  */
+ 
++#ifdef __KERNEL__
+ struct i2c_driver {
+ 	struct module *owner;
+ 	char name[32];
+@@ -268,6 +277,7 @@
+ {
+ 	dev_set_drvdata (&dev->dev, data);
+ }
++#endif
+ 
+ /*flags for the driver struct: */
+ #define I2C_DF_NOTIFY	0x01		/* notify on bus (de/a)ttaches 	*/
+@@ -599,11 +609,13 @@
+ #define i2c_is_isa_adapter(adapptr) \
+         ((adapptr)->algo->id == I2C_ALGO_ISA)
+ 
++#ifdef __KERNEL__
+ /* Tiny delay function used by the i2c bus drivers */
+ static inline void i2c_delay(signed long timeout)
+ {
+ 	set_current_state(TASK_INTERRUPTIBLE);
+ 	schedule_timeout(timeout);
+ }
++#endif
+ 
+ #endif /* _LINUX_I2C_H */
