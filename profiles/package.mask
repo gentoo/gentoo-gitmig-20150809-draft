@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <utx@gentoo.org> (17 Apr 2003)
+# new tcl/tk should be quite stable, but requires fixes and updates of other ebuilds
+>=dev-lang/tcl-8.4.0
+>=dev-lang/tk-8.4.0
+
 # <vapier@gentoo.org> (17 Apr 2003)
 # ebuild is incomplete ... currently only compiles ...
 dev-lang/cm3
