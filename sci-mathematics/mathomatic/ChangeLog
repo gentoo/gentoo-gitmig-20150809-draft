@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/mathomatic
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.2 2004/12/28 20:21:40 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.3 2005/01/28 09:26:50 phosphan Exp $
+
+*mathomatic-11.7 (28 Jan 2005)
+
+  28 Jan 2005; Patrick Kursawe <phosphan@gentoo.org> +mathomatic-11.7.ebuild:
+  Version bump (bug #69483) with little changes
 
 *mathomatic-11.1c (28 Dec 2004)
 
