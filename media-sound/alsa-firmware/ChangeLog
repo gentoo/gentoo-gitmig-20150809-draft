@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsa-firmware
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.10 2004/06/24 23:48:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.11 2004/11/19 11:30:43 eradicator Exp $
+
+*alsa-firmware-1.0.7 (19 Nov 2004)
+
+  19 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -alsa-firmware-1.0.2.ebuild, -alsa-firmware-1.0.3.ebuild,
+  alsa-firmware-1.0.4.ebuild, +alsa-firmware-1.0.7.ebuild:
+  Version bump.
 
   24 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-firmware-1.0.4.ebuild:

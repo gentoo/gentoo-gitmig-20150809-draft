@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.3.ebuild,v 1.4 2004/06/24 23:48:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.7.ebuild,v 1.1 2004/11/19 11:30:43 eradicator Exp $
+
+IUSE=""
 
 MY_P=${P/_rc/rc}
 S="${WORKDIR}/${MY_P}"
@@ -8,15 +10,14 @@ S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Advanced Linux Sound Architecture firmware"
 HOMEPAGE="http://www.alsa-project.org/"
 SRC_URI="mirror://alsaproject/firmware/${P}.tar.bz2"
-RESTRICT="nomirror"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
-IUSE=""
+
 DEPEND=""
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc README
 }
