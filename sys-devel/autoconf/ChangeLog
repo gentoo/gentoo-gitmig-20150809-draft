@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.7 2002/09/23 18:28:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.8 2002/10/20 08:29:19 azarah Exp $
+
+autoconf-2.54 (20 Oct 2002)
+
+  20 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Update version.
 
   23 Sep 2002; Martin Schlemmer <azarah@gentoo.org> ac-wrapper.pl :
 
