@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/pwcrypt
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwcrypt/ChangeLog,v 1.1 2004/03/08 12:37:15 hattya Exp $
+
+*pwcrypt-1.2.2 (08 Mar 2004)
+
+  08 Mar 2004; Akinori Hattori <hattya@gentoo.org> metadata.xml,
+  pwcrypt-1.2.2.ebuild:
+  Initial revision. Ebuild submitted by Greg Bowyer <bg115@gre.ac.uk> in bug
+  #37701.
+
