@@ -1,7 +1,12 @@
 # ChangeLog for dev-python/pygame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.5 2002/07/30 00:50:10 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.6 2002/09/04 15:25:26 jnelson Exp $
 
+*pygame-1.5.3 (4 Sep 2002)
+  
+  4 Sep 2002; Jon Nelson <jnelson@gentoo.org> pygame-1.5.3.ebuild, ChangeLog
+  New upstream fixes some licensing issues and closes some bugs
+  
 *pygame-1.5 (30 May 2002)
 
   29 Jul 2002; George Shapovalov <george@gentoo.org> pygame-1.2.ebuild, pygame-1.4.ebuild, pygame-1.4.9.ebuild, pygame-1.5.ebuild :
