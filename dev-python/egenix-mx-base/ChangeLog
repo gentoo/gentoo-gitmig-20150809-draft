@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.12 2003/08/06 12:20:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.13 2003/09/09 17:04:09 liquidx Exp $
+
+*egenix-mx-base-2.0.5 (06 Sep 2003)
+
+  06 Sep 2003; Alastair Tse <liquidx@gentoo.org> egenix-mx-base-2.0.5.ebuild:
+  version bump
 
   19 Jul 2003; Alastair Tse <liquidx@gentoo.org> egenix-mx-base-2.0.3.ebuild,
   egenix-mx-base-2.0.4.ebuild:
