@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r1.ebuild,v 1.6 2003/12/08 07:40:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r1.ebuild,v 1.7 2004/02/17 22:08:19 usata Exp $
 
 IUSE="X nls motif leim gnome Xaw3d"
 
@@ -32,10 +32,11 @@ SANDBOX_DISABLED="1"
 
 DFILE=emacs.desktop
 
-# -fstack-protector gets internal compiler error at xterm.c (bug 33265)
-filter-flags -fstack-protector
-
 src_compile() {
+
+	# -fstack-protector gets internal compiler error at xterm.c (bug 33265)
+	filter-flags -fstack-protector
+
 	local myconf
 	use nls || myconf="${myconf} --disable-nls"
 	use X && myconf="${myconf} \
