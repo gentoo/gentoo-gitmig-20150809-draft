@@ -5,8 +5,11 @@
 		The gnustep-apps category contains GNUstep applications.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie gnustep-apps enthält Applikationen für die
+		Die Kategorie gnustep-apps enthÃ€lt Applikationen fÃŒr die
 		GNUstep-Umgebung.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría gnustep-apps contiene aplicaciones de GNUstep.
 	</longdescription>
 </catmetadata>
 

@@ -5,8 +5,11 @@
 		The gnustep-base category contains GNUstep base packages.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie gnustep-base enthält die Basispakete der
+		Die Kategorie gnustep-base enthÃ€lt die Basispakete der
 		GNUstep-Umgebung.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría gnustep-base contiene los paquetes base de GNUstep.
 	</longdescription>
 </catmetadata>
 
