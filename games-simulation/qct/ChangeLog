@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/qct
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/qct/ChangeLog,v 1.1 2004/04/01 22:09:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/qct/ChangeLog,v 1.2 2004/04/02 10:50:37 dholm Exp $
+
+  02 Apr 2004; David Holm <dholm@gentoo.org> qct-0.7.ebuild:
+  Added to ~ppc.
 
 *qct-0.7 (01 Apr 2004)
 
