@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7eae9329d4499db382d23aa5611e62a0 ChangeLog 2651
-MD5 44d075a7ec8dc46d21f7550cad8ea910 taglist-3.2.ebuild 603
-MD5 495a8552501bc5dfc16c0dd5821efae9 taglist-3.3.ebuild 458
-MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
-MD5 5658c0a7ebee470fc9ae940bb56f9f60 taglist-3.0.ebuild 587
 MD5 f818bddc99102fa67ab0e08935f68a80 taglist-3.1.ebuild 594
-MD5 13e07aaa174d9d15359697d158218944 files/digest-taglist-3.3 63
+MD5 57828d81f2e6715d7aca657b7b960db7 taglist-3.3.ebuild 456
+MD5 5658c0a7ebee470fc9ae940bb56f9f60 taglist-3.0.ebuild 587
+MD5 44d075a7ec8dc46d21f7550cad8ea910 taglist-3.2.ebuild 603
+MD5 bf6b75c6de610060b68320bf4919e4ec ChangeLog 2742
+MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
 MD5 1959df873c7b76886a2e6380b743002c files/digest-taglist-3.0 63
 MD5 d191735fbcd8d66ce413875feb00a279 files/digest-taglist-3.1 63
 MD5 a8c9972ab8a6aa542e7f995c49677047 files/digest-taglist-3.2 63
+MD5 13e07aaa174d9d15359697d158218944 files/digest-taglist-3.3 63
 MD5 c7f319a44a948c29f40f341c69126fd9 files/taglist-2.6-exuberant.patch 349
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA9t+JLLFUmVNQ7rkRAvjYAJ9m9lVgBlkr8jY6d9JUUsICgpj5oQCgjMux
-fU9uXHd5WGho0Xe+JbcPyKg=
-=5Xck
------END PGP SIGNATURE-----
