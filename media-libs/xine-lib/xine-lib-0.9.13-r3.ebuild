@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r3.ebuild,v 1.13 2004/06/29 19:08:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r3.ebuild,v 1.14 2004/08/14 01:08:40 squinky86 Exp $
 
 
 inherit libtool flag-o-matic eutils gcc
@@ -116,8 +116,8 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "Please note, a new version of xine-lib has been installed,"
-	einfo "for library consistency you need to unmerge old versions"
+	einfo "Please note, a new version of xine-lib has been installed."
+	einfo "For library consistency, you need to unmerge old versions"
 	einfo "of xine-lib before merging xine-ui."
 	einfo
 }

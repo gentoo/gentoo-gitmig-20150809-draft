@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r2.ebuild,v 1.13 2004/08/12 19:33:02 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r2.ebuild,v 1.14 2004/08/14 01:08:40 squinky86 Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -156,15 +156,15 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "Please note, a new version of xine-lib has been installed,"
-	einfo "for library consistency you need to unmerge old versions"
+	einfo "Please note, a new version of xine-lib has been installed."
+	einfo "For library consistency, you need to unmerge old versions"
 	einfo "of xine-lib before merging xine-ui."
 	einfo
-	einfo "This library version 1 is incompatible with the plugins,"
-	einfo "designed for the prior library versions (such as xine-d4d,"
+	einfo "This library version 1 is incompatible with the plugins"
+	einfo "designed for the prior library versions such as xine-d4d,"
 	einfo "xine-d5d, xine-dmd, and xine-dvdnav."
 	einfo
-	einfo "Also make sure to remove your ~/.xine if upgrading from"
+	einfo "Also, make sure to remove your ~/.xine if upgrading from"
 	einfo "a previous version."
 	einfo
 }
