@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 55f511bd15fc331a5221d7cbbfbf0231 kasablanca-0.4.0.1.ebuild 1453
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 27d1f5b1c69a02644470b46f240b8fc1 kasablanca-0.4.0.2.ebuild 651
 MD5 0ddf303fe798df3fcc49bc38e1b9c5bb ChangeLog 2072
-MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 386f5c1b7f72dccddc10e6fbd86018d7 files/kasablanca-0.4.0.2-64bit.patch 583
+MD5 55f511bd15fc331a5221d7cbbfbf0231 kasablanca-0.4.0.1.ebuild 1453
 MD5 9ebcacc290d963ccd9b9b8c44e531cb0 files/digest-kasablanca-0.4.0.1 70
-MD5 4effac21d296e66943284c5d8a8478f7 files/digest-kasablanca-0.4.0.2 70
+MD5 386f5c1b7f72dccddc10e6fbd86018d7 files/kasablanca-0.4.0.2-64bit.patch 583
 MD5 5f8e1cd88abe579e22770b96f5cc706d files/kasablanca-0.4.0.1-64bit.patch 517
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD4DBQFCQiGb06ebR+OMO78RAmr0AJ93c50JivOYcczSoksVVKFJ9gSyUwCYiKfS
-IrMCCserwDScQWSazVhhxQ==
-=bU3r
------END PGP SIGNATURE-----
+MD5 4effac21d296e66943284c5d8a8478f7 files/digest-kasablanca-0.4.0.2 70
