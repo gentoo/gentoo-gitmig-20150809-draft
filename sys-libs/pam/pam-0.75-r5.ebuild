@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r5.ebuild,v 1.1 2002/04/03 09:46:40 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r5.ebuild,v 1.2 2002/04/03 09:48:09 gbevin Exp $
 
 S=${WORKDIR}/Linux-PAM-${PV}
 S2=${WORKDIR}/pam
@@ -33,6 +33,8 @@ src_unpack() {
 	done
 
 	autoconf
+
+	# for gcc3 compatibility
 	cp configure configure_old
 	sed -e "s:-lpwdb:-lpwdb -lcrypt -L/lib -L/usr/lib:" \
 		configure_old > configure
@@ -56,6 +58,7 @@ src_compile() {
 		-e "s:-Wpointer-arith::" \
 		-e "s:^CFLAGS=:CFLAGS=${CFLAGS} :" \
 		Make.orig > Make.Rules
+	# for gcc3 compatibility
 	cp modules/pam_pwdb/Makefile modules/pam_pwdb/Makefile_orig
 	sed -e "s:-lpwdb:-lpwdb -lcrypt -lnsl:g" \
 		modules/pam_pwdb/Makefile_orig > modules/pam_pwdb/Makefile
