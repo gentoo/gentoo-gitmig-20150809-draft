@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.10 2004/06/24 22:01:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.11 2004/07/09 12:32:26 eldad Exp $
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> fping-2.4_beta2-r1.ebuild:
+  added missing IUSE
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> fping-2.4_beta2-r1.ebuild:
   stable on alpha and ia64
