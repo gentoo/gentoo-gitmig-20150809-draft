@@ -1,21 +1,20 @@
-MD5 87ea0cc1a3b63ed2834d64115e054279 ChangeLog 4129
-MD5 ab59365f7f92becce9ea574af606ca09 metadata.xml 270
-MD5 0651b48b38196b479bc36565d9f3e746 ypserv-1.3.12.ebuild 1585
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e77adb20cf8249c29daf297009514d23 ChangeLog 4406
 MD5 c69cd609b18b8c4f98cecd6a0660c1e2 ypserv-2.13-r1.ebuild 1887
-MD5 c61dcbddd566afec7c7d07cead13bde3 ypserv-2.13.ebuild 1721
-MD5 481a50f78e0941ea9977d90afc7d908e ypserv-2.8.ebuild 1562
-MD5 d65fdf73994b1d6d96d9820cbcae02ef files/defs.sed 856
-MD5 d8a2530491cec60a01a03e74b63b37c7 files/digest-ypserv-1.3.12 65
-MD5 45967caf49de0b5bc203268a007e97fa files/digest-ypserv-2.13 64
+MD5 ab59365f7f92becce9ea574af606ca09 metadata.xml 270
 MD5 45967caf49de0b5bc203268a007e97fa files/digest-ypserv-2.13-r1 64
-MD5 c4e764aff5598d93c05d8c74f878b5ce files/digest-ypserv-2.8 62
-MD5 9b59a75c00e0f1ba50cc9aca9fc4ba33 files/rpc.yppasswdd 515
 MD5 694f6f542233227781bd04bba4b915da files/rpc.yppasswdd-r1 609
 MD5 f38a0f43a932ff1e4f39d8694cdb0846 files/rpc.yppasswdd.confd 260
 MD5 b2693c779a268938115d9eee775c9dc8 files/rpc.ypxfrd 586
-MD5 7dc8e37a39eb21d796894f89ffd53262 files/rpc.ypxfrd.confd 122
-MD5 3f3f1488115fa4837c7963811e876db7 files/ypserv 577
-MD5 723eea6eeee5a020cd9ff8cc3959fb6a files/ypserv-confd 216
-MD5 384ce85ca37bc1bfe5778644b081cc3d files/ypserv-initd 1080
 MD5 e5bb4de1f10631c93c5920f87059229a files/ypserv.confd 95
-MD5 5950ee3a17fa970f3c76bc615b024b6c files/1.3.12/volatile-fix-gcc-3.2.diff 385
+MD5 3f3f1488115fa4837c7963811e876db7 files/ypserv 577
+MD5 7dc8e37a39eb21d796894f89ffd53262 files/rpc.ypxfrd.confd 122
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBojQwArHZZzCEUG0RApWFAJ9+fG4e/5EjOIubS+PJ9swN9RpzRQCbBxFz
+GWF+nIGZdYHgzsoW/OFCTQM=
+=LO/+
+-----END PGP SIGNATURE-----
