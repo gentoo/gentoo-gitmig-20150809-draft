@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Storable
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/ChangeLog,v 1.18 2003/07/26 19:19:16 rac Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/ChangeLog,v 1.19 2004/01/18 22:32:39 tuxus Exp $
+
+  18 Jan 2004; <tuxus@gentoo.org> Storable-2.07-r1.ebuild:
+  Added ~mips to KEYWORDS.
 
 *Storable-2.07-r1 (26 Jul 2003)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.54-r1.ebuild,v 1.3 2003/09/06 22:37:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.54-r1.ebuild,v 1.4 2004/01/18 22:45:16 tuxus Exp $
 
 
 inherit perl-module
@@ -14,7 +14,7 @@ HOMEPAGE="http://search.cpan.org/src/PHISH/XML-LibXML-1.54_0/README"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 amd64 ~alpha ppc ~sparc "
+KEYWORDS="x86 amd64 ~alpha ppc ~sparc ~mips"
 
 DEPEND="${DEPEND}
 	>=dev-perl/XML-SAX-0.12
