@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/commonbox-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/commonbox-utils/ChangeLog,v 1.1 2002/07/14 22:05:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/commonbox-utils/ChangeLog,v 1.2 2002/07/14 22:10:37 seemant Exp $
 
 *commonbox-utils-0.1 (14 Jul 2002)
 
@@ -8,4 +8,5 @@
   commonbox-utils-0.1.ebuild ChangeLog files/digest-commonbox-utils-0.1 :
 
   New package which provide the utilities that all the box window managers
-  use. It also adds a menu generator script from fluxbox.
+  use. It also adds a menu generator script from fluxbox.  MANY THANKS to
+  Matt Keadle (mkeadle@mkeadle.org) for making this package.
