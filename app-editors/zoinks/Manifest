@@ -1,18 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 86f3b8e448df4f68608c07eb3572b4de ChangeLog 1110
 MD5 622720c5c5e309d4457ff037f8a4175f metadata.xml 222
-SHA1 4ea78b62f3093848c2ee5a72d51dacf569c5fccf metadata.xml 222
-MD5 333159309ede7860c9f38cad8d554731 ChangeLog 981
-SHA1 924bdb951fbaa150f1ad0abeb8ff7f77dd091d67 ChangeLog 981
-MD5 e7e33cf6cf6e110a126823cd2af01931 zoinks-0.3.8.ebuild 712
-SHA1 c5f0419a8dbe8fc4460fe28d61f8b47fab7070b7 zoinks-0.3.8.ebuild 712
+MD5 fe1e447132060b38c0b576be73db0ef2 zoinks-0.3.8.ebuild 713
 MD5 41be15f654ab14667b95746025c36512 files/digest-zoinks-0.3.8 137
-SHA1 6d5df018688126ca2e20a217fdb3186ad6bfc607 files/digest-zoinks-0.3.8 137
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBK5Fj6J2i8a8J4okRAvXTAJ9/dwr//T3nDYRRI7R9AGJsGkozTgCgmqb2
-d1oX3buy9j+9Lpj6XIBAz5E=
-=zjyB
------END PGP SIGNATURE-----
