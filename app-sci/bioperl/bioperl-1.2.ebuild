@@ -1,6 +1,6 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.2.ebuild,v 1.1 2003/04/25 23:27:45 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.2.ebuild,v 1.2 2003/06/07 01:22:13 avenj Exp $
 
 inherit perl-module debug
 
@@ -13,11 +13,10 @@ HOMEPAGE="http://www.bioperl.org"
 SRC_URI="http://bioperl.org/ftp/DIST/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 LICENSE="Artistic GPL-2"
 
-DEPEND="${DEPEND}
-	dev-perl/File-Temp
+DEPEND="dev-perl/File-Temp
 	dev-perl/Graph
 	dev-perl/HTML-Parser
 	dev-perl/IO-String
@@ -34,8 +33,6 @@ DEPEND="${DEPEND}
 	dev-perl/Text-Shellwords
 	gd? ( >=dev-perl/GD-1.32-r1 )
 	mysql? ( >=dev-perl/DBD-mysql-2.1004-r3 )"
-
-RDEPEND=${DEPEND}
 
 # uncomment this if you'd like to access bioperl docs via man in addition to
 # perldoc.
