@@ -1,10 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-pre-0.7.0.ebuild,v 1.3 2000/12/21 08:22:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.0_pre.ebuild,v 1.1 2001/02/27 03:06:16 drobbins Exp $
 
-P=entity-pre0.7.0
-A=${P}.tar.gz
+A=entity-pre0.7.0.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="An XML Framework"
 SRC_URI="http://entity.evilplan.org/Download/files/${A}"
