@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/teknap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/ChangeLog,v 1.10 2004/06/28 03:47:20 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/ChangeLog,v 1.11 2004/07/31 02:11:02 squinky86 Exp $
+
+  30 Jul 2004; Jon Hood <squinky86@gentoo.org> teknap-1.4.1-r1.ebuild:
+  Stable on x86.
 
   27 Jun 2004; Jon Hood <squinky86@gentoo.org> -teknap-1.3g.ebuild,
   teknap-1.4.1-r1.ebuild, -teknap-1.4.1.ebuild:
