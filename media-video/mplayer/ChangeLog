@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.16 2002/05/01 22:00:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.17 2002/05/05 09:13:38 azarah Exp $
+
+*mplayer-0.90_pre2-r2 (5 May 2002)
+
+  5 May 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre2-r2.ebuild :
+
+  Resolve bug #2386 (hopefully); also fix a vidix problem I and other users
+  on gentoo-user experienced.
 
 *mplayer-0.90_pre2-r1 (1 May 2002)
 

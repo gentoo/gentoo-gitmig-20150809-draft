@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre1.ebuild,v 1.3 2002/04/29 21:39:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre2-r2.ebuild,v 1.1 2002/05/05 09:13:38 azarah Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -50,31 +50,6 @@ src_unpack() {
 		cd ${WORKDIR}/default
 		patch < ${FILESDIR}/default-skin.diff || die "gtk patch failed"
 	)
-
-
-	#
-	# The next two patches can fail, as I havent tested them yet!!
-	#
-	# This seems to be already applied in the upstream package - sandymac
-	#use matrox && ( \
-	#	cd ${S}/drivers
-	#	patch < ${FILESDIR}/mga_vid_devfs.patch || die "matrox patch failed"
-	#)
-	
-	#patch mplayer with the DXR3 patch
-	local module=""
-	local dxr=""
-	for module in `lsmod` ; do
-		if [ ${module} = "em8300" ] ; then
-			dxr=true
-		fi
-	done
-	if [ $dxr ] ; then
-		cd ${WORKDIR};
-		mv ${S} ${S}a
-		patch -p0 < ${DISTDIR}/dxr3.patch || die "dxr3 patch failed"
-		mv ${S}a ${S}
-	fi
 }
 
 src_compile() {
@@ -153,6 +128,7 @@ src_compile() {
 		--disable-runtime-cpudetection \
 		--enable-largefiles \
 		--enable-linux-devfs \
+		--disable-vidix \
 		${myconf} || die
 
 	CFLAGS="" \ 
@@ -224,13 +200,15 @@ src_install() {
 	)
 
 	use sdl && audio="sdl" \
-	|| use alsa && audio="alsa5" \
-	|| use oss audio="oss" \
+	|| use alsa && (
+		[ -e /usr/lib/libasound.so.2 ] && audio="alsa9" \
+		|| audio="alsa5"
+	) || use oss audio="oss" \
 	
 	# Note to myself:  do not change " into '
-	sed -e "s/vo=xv/vo=${video}/"					\
-	    -e "s/ao=oss/ao=${audio}/"					\
-	    -e 's/include =/#include =/'				\
+	sed -e "s/vo=xv/vo=${video}/" \
+	    -e "s/ao=oss/ao=${audio}/" \
+	    -e 's/include =/#include =/' \
 	    ${S}/etc/example.conf > ${T}/mplayer.conf
 
 	insinto /etc
