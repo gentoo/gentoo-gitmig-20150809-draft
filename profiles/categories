@@ -52,6 +52,7 @@ net-wireless
 net-www 
 packages
 sys-apps 
+sys-cluster
 sys-devel
 sys-kernel 
 sys-libs 
