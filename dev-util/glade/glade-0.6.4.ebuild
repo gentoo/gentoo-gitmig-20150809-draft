@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.4.ebuild,v 1.12 2003/04/23 16:17:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.4.ebuild,v 1.13 2003/04/29 05:23:27 tberman Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ src_compile() {
 	econf \
 		--disable-gnome-db \
 		`use_enable gnome` \
-		`use_with bonobo`
+		`use_with bonobo` \
 		`use_enable nls` \
 		`use_enable debug` \
 		${myconf}  || die
