@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1.ebuild,v 1.6 2001/06/03 09:54:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r1.ebuild,v 1.1 2001/10/07 17:29:36 danarmak Exp $
 
 A="xanim2801.tar.gz xa1.0_cyuv_linuxELFg21.o.gz xa2.0_cvid_linuxELFg21.o.gz
    xa2.1_iv32_linuxELFg21.o.gz"
@@ -35,10 +35,10 @@ src_compile() {
 
 src_install () {
 
-    into /usr/X11R6
+    into /usr
     dobin xanim
     newman docs/xanim.man xanim.1
-    insinto /usr/X11R6/lib/xanim/mods
+    insinto /usr/lib/xanim/mods
     doins mods/*
     dodoc README
     dodoc docs/README.* docs/*.readme docs/*.doc
