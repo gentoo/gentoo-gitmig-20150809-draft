@@ -2,10 +2,10 @@ MD5 e17d94a31ec95ba063e25a5e7bb14cc5 perl-5.6.1-r12.ebuild 7227
 MD5 4457fd8c00fb066cfaa2fe1f5dd5fefe perl-5.8.1_rc1.ebuild 10250
 MD5 ebec498837d1da4d4e8ae44d2b5670a2 perl-5.8.0-r10.ebuild 14043
 MD5 e0b0be0ba81d5c7749ec696b9119a8b1 perl-5.8.0-r9.ebuild 13570
-MD5 68a28a1567fffdef303c92113e6cc975 perl-5.8.0-r12.ebuild 10287
+MD5 6dca203ccdc6ea7d32eade2fef111478 perl-5.8.0-r12.ebuild 10281
 MD5 fdccad58d0969a57dc5a284b9e385889 perl-5.6.1-r11.ebuild 6276
 MD5 f6da2e6c4f0c608666cd18db97bf8f41 perl-5.8.1_rc2.ebuild 10253
-MD5 0c4ee89af491379286784d1502ffb5f2 ChangeLog 17942
+MD5 0ab9874e8615dfc243f78782c63666e8 ChangeLog 18040
 MD5 21790711352b89f31e8891cffc966701 perl-5.8.0-r11.ebuild 9908
 MD5 01b216e82ad890302a0becdc19244a10 perl-5.6.1-r10.ebuild 6819
 MD5 d9412dab085f22309997c8f08ea1ac85 files/perl-5.8.1_rc2-reorder-INC.patch 2211
