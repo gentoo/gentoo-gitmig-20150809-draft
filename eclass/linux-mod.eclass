@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.31 2005/03/11 23:11:05 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.32 2005/03/28 09:27:31 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -106,9 +106,10 @@ use_m() {
 }
 
 convert_to_m() {
-	[ ! -f "${1}" ] && die "convert_to_m() requires a filename as an argument"
 	if use_m
 	then
+		[ ! -f "${1}" ] && \
+			die "convert_to_m() requires a filename as an argument"
 		ebegin "Converting ${1/${WORKDIR}\//} to use M= instead of SUBDIRS="
 		sed -i 's:SUBDIRS=:M=:g' ${1}
 		eend $?
