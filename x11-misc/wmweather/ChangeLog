@@ -1,0 +1,13 @@
+# ChangeLog for x11-misc/wmweather
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmweather/ChangeLog,v 1.1 2002/02/10 09:21:37 vitaly Exp $
+
+*wmweather-1.31 (9-Feb-2002)
+
+  9 Feb 2002; Arcady Genkin <agenkin@thpoon.com> wmweather-1.31.ebuild :
+
+  Fixed to make use of CFLAGS.
+
+  7 Feb 2002; Arcady Genkin <agenkin@thpoon.com>  wmweather-1.31.ebuild :
+
+  First version of the package.
