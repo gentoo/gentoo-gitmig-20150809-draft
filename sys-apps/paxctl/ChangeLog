@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paxctl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.5 2004/07/22 00:07:12 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.6 2004/07/22 21:08:16 solar Exp $
+
+  22 Jul 2004; <solar@gentoo.org> paxctl-0.2.ebuild:
+  marked paxctl stable on x86 now that min-version binutils is in stable
 
   21 Jul 2004; Travis Tilley <lv@gentoo.org> paxctl-0.2.ebuild:
   stable on amd64
