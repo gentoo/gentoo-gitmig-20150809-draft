@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.52 2003/12/09 10:05:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.53 2003/12/10 02:56:39 seemant Exp $
+
+  09 Dec 2003; Seemant Kulleen <seemant@gentoo.org> coreutils-5.0-r5.ebuild,
+  coreutils-5.0-r6.ebuild, coreutils-5.0.91-r2.ebuild:
+  patch added to prevent the installation of the following inferior man pages:
+  chgrp, chmod, chown, cp, dd, df, dir, dircolors, du, install, ln, ls, mkdir,
+  mkfifo, mknod, mv, rm, rmdir, touch and vdir. Those man pages will be supplied
+  by the man-pages package instead.  This should close most of bug #32096
+  by Radek Podgorny <radek@podgorny.cz>
 
   09 Dec 2003; Seemant Kulleen <seemant@gentoo.org>
   coreutils-5.0.91-r2.ebuild:
