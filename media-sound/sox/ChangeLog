@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sox
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.15 2003/11/29 04:35:53 brad_mssw Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.16 2004/03/31 19:37:15 eradicator Exp $
+
+  31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  sox-12.17.3-r1.ebuild, sox-12.17.4-r1.ebuild, sox-12.17.4.ebuild:
+  Stable on x86.  Removing old ebuilds.
 
 *sox-12.17.4-r1 (28 Nov 2003)
 
