@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.2.ebuild,v 1.3 2003/05/16 21:06:02 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.2.ebuild,v 1.4 2003/05/16 21:44:46 danarmak Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
@@ -41,8 +41,7 @@ use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$m
 PATCHES="$FILESDIR/$PVR/sftp.patch $FILESDIR/$PVR/fontconfig-2.2-support.patch"
 
 src_compile() {
-	rm -f configure configure.in
-	make -f admin/Makefile.common
+	rm -f configure configure.in # to make sure the fontconfig patch takes effect
 	kde_src_compile myconf configure
 	kde_remove_flag kdm/kfrontend -fomit-frame-pointer
 	kde_src_compile make
