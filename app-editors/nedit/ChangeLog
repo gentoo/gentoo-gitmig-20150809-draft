@@ -1,11 +1,20 @@
 # ChangeLog for app-editors/nedit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.7 2002/12/13 10:56:06 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.8 2003/01/20 02:05:29 seemant Exp $
+
+*nedit-5.3-r2 (19 Jan 2003)
+
+  19 Jan 2003; Seemant Kulleen <seemant@gentoo.org> nedit-5.3-r2.ebuild
+  files/nedit-5.3-gentoo.diff files/digest-nedit-5.3-r2 :
+
+  Added a patch to use aspell instead of ispell for spell checking.  The
+  patch also makes nedit use /bin/sh by default instead of /bin/csh, which
+  closes bug #11526 by webmaster@multi-air.com (Tom Ribbens)
+
+*nedit-5.3-r1 (22 Oct 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*nedit-5.3-r1 (22 Oct 2002)
-
   22 Oct 2002; Seemant Kulleen <seemant@gentoo.org> nedit-5.3-r1.ebuild
   files/digest-nedit-5.3-r1 :
 
