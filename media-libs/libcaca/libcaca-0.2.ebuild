@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.2.ebuild,v 1.2 2004/01/17 17:01:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.2.ebuild,v 1.3 2004/04/16 09:41:39 eradicator Exp $
+
+inherit gcc eutils
 
 IUSE="ncurses slang"
 
@@ -11,8 +13,6 @@ SRC_URI="http://sam.zoy.org/projects/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-
-inherit gcc eutils
 
 DEPEND="
 	ncurses? ( >=sys-libs/ncurses-5.3 )
