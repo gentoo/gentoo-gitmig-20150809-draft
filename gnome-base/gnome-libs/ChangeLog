@@ -1,6 +1,8 @@
 # ChangeLog for gnome-base/gnome-libs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/ChangeLog,v 1.9 2002/04/28 23:47:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/ChangeLog,v 1.10 2002/05/21 22:23:19 azarah Exp $
+
+*gnome-libs-1.4.1.7 (21 May 2002)
 
 *gnome-libs-1.4.1.6 (29 Apr 2002)
 
