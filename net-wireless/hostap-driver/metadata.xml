@@ -6,6 +6,10 @@
     <email>wschlich@gentoo.org</email>
     <name>Wolfram Schlich</name>
   </maintainer>
+  <maintainer>
+    <email>latexer@gentoo.org</email>
+    <name>Peter Johanson</name>
+  </maintainer>
   <longdescription>This is a Linux driver for wireless LAN cards based on
   Intersil's Prism2/2.5/3 chipset. The driver supports a so called Host AP mode,
   i.e., it takes care of IEEE 802.11 management functions in the host computer
