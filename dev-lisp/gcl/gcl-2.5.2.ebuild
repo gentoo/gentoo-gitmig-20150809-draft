@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.5.2.ebuild,v 1.5 2003/10/11 13:21:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.5.2.ebuild,v 1.6 2004/05/12 11:11:10 pappy Exp $
 
 inherit elisp-common
 
