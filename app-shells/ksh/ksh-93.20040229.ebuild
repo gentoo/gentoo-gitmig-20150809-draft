@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20040229.ebuild,v 1.12 2004/10/23 10:43:36 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20040229.ebuild,v 1.13 2004/10/26 14:17:22 taviso Exp $
 
-inherit ccc eutils flag-o-matic
+inherit ccc eutils flag-o-matic toolchain-funcs
 
 RELEASE="2004-02-29"
 DESCRIPTION="The Original Korn Shell, 1993 revision (ksh93)"
@@ -48,7 +48,7 @@ src_compile() {
 
 	# set the optimisations for the build process
 	export CCFLAGS="${CFLAGS}"
-	cd ${S}; ./bin/package only make ast-ksh CC=${CC:-gcc} || die
+	cd ${S}; ./bin/package only make ast-ksh CC="$(tc-getCC)" || die
 
 	# install the optional locale data.
 	# heh, check out locale fudd, or piglatin :)

@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.17 2004/10/23 10:43:36 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.18 2004/10/26 14:17:22 taviso Exp $
+
+  26 Oct 2004; Tavis Ormandy <taviso@gentoo.org> ksh-93.20040229.ebuild:
+  use toolchain-funcs to determine compiler
 
   23 Oct 2004; Akinori Hattori <hattya@gentoo.org> ksh-93.20040229.ebuild:
   add ~ia64, bug #68321.
