@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a3a7a6188f26285efb36a71ea63c0a22 ChangeLog 349
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 30a3e2b0b8d1ba44f6aaff81ac78a430 ggz-kde-games-0.0.9.ebuild 577
+MD5 230107ab0c2b276b464dd2759cc877b9 files/digest-ggz-kde-games-0.0.9 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBz1mfroRuSHgZdywRAudJAJwIF6gB5j+wqpVKFyvVU2bKnjqVHgCdF6Vf
+IK9f1kb529OvSX61yueP36c=
+=tF4Y
+-----END PGP SIGNATURE-----
