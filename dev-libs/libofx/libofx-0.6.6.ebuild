@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.6.6.ebuild,v 1.1 2004/01/23 03:11:33 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.6.6.ebuild,v 1.2 2004/04/10 21:30:28 weeve Exp $
 
 DESCRIPTION="Library to support the Open Financial eXchange XML Format"
 HOMEPAGE="http://libofx.sourceforge.net/"
@@ -9,7 +9,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc alpha"
+KEYWORDS="~x86 ~ppc alpha ~sparc"
 IUSE=""
 DEPEND=">=app-text/opensp-1.5
 	>=sys-apps/sed-4"
