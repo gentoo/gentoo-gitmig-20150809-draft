@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.1 2004/12/05 04:19:34 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.2 2004/12/31 03:21:36 eradicator Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -125,6 +125,10 @@ src_unpack() {
 
 	# misc patches that havent made it into a patch tarball yet
 	epatch ${FILESDIR}/gcc-spec-env.patch
+
+	# fix an incorrect prototype of ffecom_gfrt_basictype() which causes
+	# 3.3.5 to not compile on some configurations.
+	epatch ${FILESDIR}/3.3.5/gcc-3.3.5-ffecom_gfrt_basictype-prototype.patch
 
 	if [ "${ARCH}" = "ppc" -o "${ARCH}" = "ppc64" ] ; then
 		epatch ${FILESDIR}/3.3.3/gcc333_pre20040408-stack-size.patch

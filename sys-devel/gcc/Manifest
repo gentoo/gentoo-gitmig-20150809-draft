@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 01363b91954043f8500d418d44e277fa ChangeLog 75939
+MD5 5742445ebf6837fb7b8e3c644b211ee7 ChangeLog 76175
 MD5 174a113e9053c5b695257f31f08ce64c gcc-2.95.3-r8.ebuild 8432
 MD5 f804f416c7c486569541c7cc81b07cbb gcc-3.2.3-r4.ebuild 19729
 MD5 9241e3b0a55a6e6bde420c99a3d7ca38 gcc-3.4.2-r2.ebuild 13482
@@ -14,7 +14,7 @@ MD5 29624f1668b5f1aa3a04095a13b94f9a gcc-3.3.2.ebuild 16693
 MD5 e893197355b12c30dbabaf78c297434e gcc-3.3.3-r3.ebuild 23403
 MD5 6d021c1f93d3b1c470df3d9c9db7cfd5 gcc-3.4.1-r3.ebuild 31269
 MD5 1ec0c895ede6e3ca6be928c7eefd938b gcc-3.3.3-r6.ebuild 24793
-MD5 cc2341f3a38875b9cd63c500dba7467e gcc-3.3.5-r1.ebuild 12280
+MD5 16f071711f57d1a31408eaefa165918a gcc-3.3.5-r1.ebuild 12481
 MD5 605d72bfc5aca7748ab63170c2707392 gcc-3.4.3.ebuild 13250
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 e505a6373b22cbb0724981d334d0fccc gcc-3.3.4-r1.ebuild 24684
@@ -43,6 +43,7 @@ MD5 6df16eb92245a931ecfc4cbcc73c84cf files/digest-gcc-3.3.4-r1 442
 MD5 ea2cf3df0d89a26d5fdc1a531176e395 files/pro-police-docs.patch 3287
 MD5 b1a242694f56184cbcdd40ba25800d50 files/2.95.3/gcc-2.95.3-alpha.diff 14345
 MD5 523970c128b929fe7c7cf36508ebd1d5 files/2.95.3/gcc-2.95.3-new-atexit.diff 13604
+MD5 7c29f54dd8d50385ac42fae65459c744 files/3.3.5/gcc-3.3.5-ffecom_gfrt_basictype-prototype.patch 538
 MD5 007c62d92efd70fd44c4d2e6a326036b files/3.4.3/libffi-without-libgcj.patch 1658
 MD5 7434140298091f759eba5e9706264130 files/3.4.3/libssp.patch 2029
 MD5 3f6d070c2a4a899e7d879fdb55eecba4 files/3.4.3/libffi-nogcj-lib-path-fix.patch 1691
@@ -114,7 +115,7 @@ MD5 97d7409ba5038bea85f9cabe023e28a6 files/3.4.1/gcc-3.4.1-spec-env.patch 755
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBy/XnArHZZzCEUG0RAmAJAJ4/KIs2l7bC+Mfk5RfgZR8QFB+90QCeOGcn
-H+YTIUOIXRaAleUm4riYhpk=
-=2+Wr
+iD8DBQFB1MXLArHZZzCEUG0RAkXPAKCBXTo0FpAYVACLUQB7paQWfKBxHwCeKr22
+rv0QkAKQ7CCKMFeY3cOoe9o=
+=gmo+
 -----END PGP SIGNATURE-----

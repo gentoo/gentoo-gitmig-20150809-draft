@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.363 2004/12/24 10:56:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.364 2004/12/31 03:21:36 eradicator Exp $
+
+  30 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/3.3.5/gcc-3.3.5-ffecom_gfrt_basictype-prototype.patch,
+  gcc-3.3.5-r1.ebuild:
+  Fixing bad function prototype which causes compilation to fail on some
+  configurations.
 
   24 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   gcc-3.4.3-r1.ebuild:
