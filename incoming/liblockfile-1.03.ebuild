@@ -7,25 +7,22 @@ DESCRIPTION="Implements functions designed to lock the standard mailboxes."
 SRC_URI="ftp://ftp.debian.org/debian/pool/main/libl/liblockfile/liblockfile_1.03.tar.gz"
 HOMEPAGE="http://www.debian.org"
 
-DEPEND=""
+DEPEND="virtual/glibc"
 
-src_unpack() {
-	unpack ${A}
-	
-	cd ${S}
-}
+RDEPEND="virtual/glibc"
+
 
 src_compile() {
-	cd ${S}
 
 	./configure --with-mailgroup=mail --prefix=/usr --mandir=/usr/share/man
 	make || die
+	
 }
 
 src_install () {
-	cd ${S}
 	
 	dodir /usr/bin /usr/include /usr/lib /usr/share/man/man1 /usr/share/man/man3
 	make  ROOT=${D} install || die
+	
 }
 

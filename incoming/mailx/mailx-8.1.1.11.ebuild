@@ -10,9 +10,12 @@ HOMEPAGE="http://www.debian.org"
 DEPEND="virtual/glibc
 	>=sys-libs/liblockfile-1.03"
 
-RDEPEND="$DEPEND"
+RDEPEND="virtual/glibc
+	>=sys-libs/liblockfile-1.03"
+
 
 src_unpack() {
+
 	unpack ${A}
 	
 	cd ${S}
@@ -22,19 +25,19 @@ src_unpack() {
 	# It needs to install to /bin/mail (else conflicts with Postfix)
 	# Also man pages go to /usr/share/man for FHS compliancy
 	patch -p0 <${FILESDIR}/${PF}-Makefile.diff || die
+	
 }
 
 src_compile() {
-	cd ${S}
 	
 	# Can't compile mailx with optimizations
 	_CFLAGS=$(echo $CFLAGS|sed 's/-O.//g')
 	
 	make CFLAGS="$_CFLAGS" || die
+	
 }
 
 src_install () {
-	cd ${S}
 	
 	dodir /bin /usr/share/man/man1 /etc /usr/lib
 	make BINDIR=/bin DESTDIR=${D} install || die
