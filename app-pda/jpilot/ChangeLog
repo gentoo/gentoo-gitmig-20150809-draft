@@ -1,6 +1,14 @@
 # ChangeLog for app-pda/jpilot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.18 2004/06/27 00:56:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.19 2004/07/05 17:08:12 agriffis Exp $
+
+*jpilot-0.99.7-r1 (05 Jul 2004)
+
+  05 Jul 2004; Aron Griffis <agriffis@gentoo.org> +jpilot-0.99.7-r1.ebuild:
+  Split out the jpilot-syncmal plugin since there are other jpilot plugins and
+  it doesn't make sense to tie them all into this ebuild. Remove useless sed
+  from src_compile. Make installation simpler with DESTDIR. Remove unnecessary
+  jpilot.xpm symlink.
 
   26 Jun 2004; Alastair Tse <liquidx@gentoo.org> jpilot-0.99.7.ebuild:
   install icons in the right place (#54264)
