@@ -1,6 +1,6 @@
 # Copyright 2002 moto kawasaki <kawasaki@kawasaki3.org>
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/flim/flim-1.14.4.ebuild,v 1.4 2002/08/01 19:35:50 karltk Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/flim/flim-1.14.4.ebuild,v 1.5 2002/10/04 05:18:14 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library to provide basic features about message representation or encoding -- FLIM"
