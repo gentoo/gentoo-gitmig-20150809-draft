@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.2.0-r1.ebuild,v 1.4 2002/10/17 00:24:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.2.0-r1.ebuild,v 1.5 2002/10/19 15:48:49 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard informational utilities and process-handling tools"
-SRC_URI="http://telia.dl.sourceforge.net/sourceforge/uptimed/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/uptimed/${P}.tar.bz2"
 HOMEPAGE="http://unixcode.org/uptimed"
 
 SLOT="0"

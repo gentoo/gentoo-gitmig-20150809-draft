@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.98-r2.ebuild,v 1.6 2002/10/17 00:39:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.98-r2.ebuild,v 1.7 2002/10/19 15:48:49 aliz Exp $
 
 IUSE="kde pda png"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="system and ISDN information is shown on an external display or in a X11 window."
-SRC_URI="http://download.sourceforge.net/lcd4linux/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/lcd4linux/${P}.tar.gz"
 HOMEPAGE="http://lcd4linux.sourceforge.net"
 
 SLOT="0"

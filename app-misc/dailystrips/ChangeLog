@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/dailystrips
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dailystrips/ChangeLog,v 1.3 2002/10/13 16:29:03 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dailystrips/ChangeLog,v 1.4 2002/10/19 15:48:49 aliz Exp $
 
 *dailystrips-1.0.25 <13 Oct 2002>
   13 Oct 2002; Phil Bordelon <sunflare@gentoo.org> dailystrips-1.0.25.ebuild:
@@ -14,6 +14,9 @@
 	John Duksta updated the ebuild to also install the dailystrips-clean script.
 
 *dailystrips-1.0.24 <24 May 2002>
+
+  19 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> dailystrips-1.0.24.ebuild :
+  Updated to mirror://sourceforge in SRC_URI.
 
   24 May 2002; Justin Lambert <jlambert@eml.cc> ChangeLog, dailystrips-1.0.24 :
 
