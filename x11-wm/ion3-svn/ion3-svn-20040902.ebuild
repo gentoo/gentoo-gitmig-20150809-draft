@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ion3-svn-20040902.ebuild,v 1.1 2004/09/02 11:53:10 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ion3-svn-20040902.ebuild,v 1.2 2004/09/05 10:58:52 malc Exp $
 
 inherit eutils subversion
 
@@ -8,7 +8,7 @@ DESCRIPTION="A tiling tabbed window manager designed with keyboard users in mind
 HOMEPAGE="http://www.iki.fi/tuomov/ion/"
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~ppc ~sparc ~x86 ~amd64"
 IUSE="xinerama"
 DEPEND="virtual/x11
 	app-misc/run-mailcap
