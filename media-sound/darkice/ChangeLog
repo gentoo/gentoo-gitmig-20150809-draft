@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/darkice
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.1 2002/08/13 18:34:47 agenkin Exp $
+
+*darkice-0.10.1 (13 Aug 2002)
+
+  13 Aug 2002; Arcady Genkin <agenkin@thpoon.com> darkice-0.10.1.ebuild :
+
+  Initial version, submitted by Blake Watters <sbw@ibiblio.org>.
