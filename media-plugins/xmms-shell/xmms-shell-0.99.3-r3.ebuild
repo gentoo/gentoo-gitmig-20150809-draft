@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/xmms-shell-0.99.3-r3.ebuild,v 1.6 2004/09/14 07:14:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/xmms-shell-0.99.3-r3.ebuild,v 1.7 2004/10/04 23:13:31 pvdabeel Exp $
 
 IUSE="readline"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.loganh.com/xmms-shell/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 sparc ~ppc"
+KEYWORDS="x86 amd64 sparc ppc"
 
 RDEPEND=">=media-sound/xmms-1.2.7
 	readline? ( >=sys-libs/readline-4.1 )"
