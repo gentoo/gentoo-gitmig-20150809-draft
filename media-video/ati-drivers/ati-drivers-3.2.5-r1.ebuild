@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5-r1.ebuild,v 1.2 2003/10/01 22:51:32 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5-r1.ebuild,v 1.3 2003/10/02 21:36:06 mr_bones_ Exp $
 
 IUSE="qt kde gnome"
 
@@ -52,7 +52,7 @@ src_unpack() {
 	einfo "applying fglrx-2.6-iminor.patch"
 	patch -p1 < ${FILESDIR}/fglrx-2.6-iminor.patch
 	einfo "applying fglrx-2.6-tsk_euid.patch"
-	patch < ${FILESDIR}/3.2.5-linux-2.6.0-test6-mm.patch 
+	patch < ${FILESDIR}/3.2.5-linux-2.6.0-test6-mm.patch
 	fi
 }
 
