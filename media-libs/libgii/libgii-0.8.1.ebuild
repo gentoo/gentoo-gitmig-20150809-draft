@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.8.1.ebuild,v 1.13 2004/01/28 20:56:35 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.8.1.ebuild,v 1.14 2004/02/17 21:30:50 agriffis Exp $
 
 IUSE="X"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ggi-project.org/"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 
 DEPEND="X? ( virtual/x11 )"
 

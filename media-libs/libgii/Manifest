@@ -1,4 +1,4 @@
-MD5 f875cdc1afcefa72b474f3785769fd3d ChangeLog 1288
-MD5 db3920bd745c62bde5a16db1f99be286 libgii-0.8.1.ebuild 1006
-MD5 0efbb1b588b2633d7b9722573858f7d5 files/libgii-linux-headers-2.6.patch 477
+MD5 9ce9c6218ba064e81b490b5ef50b681f ChangeLog 1376
+MD5 1d17e715b01bfaf3aefdabc35f516a63 libgii-0.8.1.ebuild 1010
 MD5 fdf3bfd43030906b7ee6b8c918575f0d files/digest-libgii-0.8.1 65
+MD5 0efbb1b588b2633d7b9722573858f7d5 files/libgii-linux-headers-2.6.patch 477
