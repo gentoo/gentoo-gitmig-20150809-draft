@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/errsign
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/errsign/ChangeLog,v 1.1 2004/11/05 20:42:26 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/errsign/ChangeLog,v 1.2 2004/11/24 17:43:01 ciaranm Exp $
+
+  24 Nov 2004; Ciaran McCreesh <ciaranm@gentoo.org> errsign-0.1.ebuild:
+  mips, sparc, x86 stable
 
 *errsign-0.1 (05 Nov 2004)
 
