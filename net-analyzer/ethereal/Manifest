@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 994b7ec0531c8ed429b36b3d9725aab7 ethereal-0.10.8.ebuild 2421
-MD5 e70cd283dc61b8b8ffdaba5e82ceb873 ethereal-0.10.5.ebuild 2580
+MD5 e5a28b574f597a8cfefe889de1581b10 ChangeLog 4796
 MD5 b446bf1da665d7c903e7bf3b3f3b9f41 ethereal-0.10.6.ebuild 2420
-MD5 867d55bf4785219d083f2bc2fc60e4db ChangeLog 4682
+MD5 ed5149d568cf871fe7abf159154404e5 ethereal-0.10.8.ebuild 2420
 MD5 ac5ab068efc12615cf18dfcb44aad2e8 ethereal-0.10.5-r1.ebuild 2594
 MD5 17a9be2cf8cb9f24e7e5b398392483b4 metadata.xml 224
-MD5 5a73274ec255373b4e618388cd057275 files/0.10.4-gcc34.patch 458
-MD5 56d5feedd5047dd2b7bcd4c9295addef files/digest-ethereal-0.10.5-r1 69
-MD5 56d5feedd5047dd2b7bcd4c9295addef files/digest-ethereal-0.10.5 69
+MD5 e70cd283dc61b8b8ffdaba5e82ceb873 ethereal-0.10.5.ebuild 2580
 MD5 5bc98004e6492e3349a16bf0591c743e files/digest-ethereal-0.10.6 69
 MD5 8f052b2e09156338ef122fbfd4cfa975 files/digest-ethereal-0.10.8 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBwMUDT+MN7JbqCpMRAmD2AJ9mR3O998zTaC3uMctouJAxtM9LtQCfbACR
-+V4qDR3ETtf2Nc3dn1lD3lw=
-=uxJu
------END PGP SIGNATURE-----
+MD5 5a73274ec255373b4e618388cd057275 files/0.10.4-gcc34.patch 458
+MD5 56d5feedd5047dd2b7bcd4c9295addef files/digest-ethereal-0.10.5 69
+MD5 56d5feedd5047dd2b7bcd4c9295addef files/digest-ethereal-0.10.5-r1 69

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.89 2004/12/15 23:14:02 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.90 2004/12/16 02:17:52 weeve Exp $
+
+  15 Dec 2004; Jason Wever <weeve@gentoo.org> ethereal-0.10.8.ebuild:
+  Stable on sparc wrt security bug #74443.
 
   16 Dec 2004; Eldad Zack <eldad@gentoo.org> -ethereal-0.10.7.ebuild:
   security purge
