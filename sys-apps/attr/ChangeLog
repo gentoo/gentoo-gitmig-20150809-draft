@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/attr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.37 2004/08/11 00:57:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.38 2004/08/31 10:39:15 robbat2 Exp $
+
+*attr-2.4.16 (31 Aug 2004)
+
+  31 Aug 2004; Robin H. Johnson <robbat2@gentoo.org> +attr-2.4.16.ebuild:
+  Cleanup of XFS-related apps: dmapi, acl, xfsdump, attr.
 
   10 Aug 2004; Travis Tilley <lv@gentoo.org> attr-2.4.7-r1.ebuild,
   attr-2.4.8.ebuild:
