@@ -2,8 +2,8 @@ MD5 dc6dc2dfc15431cd10f425b526db15bf hardened-sources-2.4.27-r2.ebuild 1032
 MD5 466238e40bed9071a61227e357ed6095 hardened-sources-2.4.28-r1.ebuild 1022
 MD5 d7a5e7625d9ce5a4d72f118220d46aee hardened-sources-2.4.27-r3.ebuild 1033
 MD5 9b45f8ff020930324af8c15412fa2e2e hardened-sources-2.4.28-r2.ebuild 1029
-MD5 28ec99a475105b50f43e0bd4aa2cdd12 hardened-sources-2.4.28.ebuild 1792
-MD5 60a220112b3ab15123684f80e98b01ee ChangeLog 11241
+MD5 55881cfbd40c45d2037994bf20bdc931 hardened-sources-2.4.28.ebuild 1791
+MD5 0c4acd9a520030de04e8518487c8f37c ChangeLog 11347
 MD5 0a473e60c059cb41c96a6bbcbff84769 metadata.xml 459
 MD5 4a0215139f9aebfe2cc2747743763f08 files/2.4.28-grsec-binfmt_a.out.patch 1887
 MD5 c8985a5695cfda1c35d1b433d62604ce files/2.4.28-selinux-binfmt_a.out.patch 1743
