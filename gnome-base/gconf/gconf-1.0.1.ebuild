@@ -24,32 +24,30 @@ RDEPEND=">=sys-libs/db-3.2.3h
 	>=gnome-base/gnome-libs-1.2.10"
 
 src_unpack() {
-  unpack ${A}
-  # for some reason, the GConf package doesn't come w/ an intl directory,
-  # so I copied it from another package, and made a diff
-  cd ${S}
-  try patch -p1 < ${FILESDIR}/${PF}-gentoo-intl.diff
+	unpack ${A}
+	# for some reason, the GConf package doesn't come w/ an intl 
+	# directory, so I copied it from another package, and made a diff
+
+	cd ${S}
+	patch -p1 < ${FILESDIR}/${PF}-gentoo-intl.diff || die
 }
 
 src_compile() {
+	local myconf
+	
+	if [ -z "`use nls`" ]
+	then
+		myconf="--disable-nls"
+	fi
 
-  local myconf
-  if [ -z "`use nls`" ]
-  then
-    myconf="--disable-nls"
-  fi
-  try ./configure --host=${CHOST} --prefix=/opt/gnome  --sysconfdir=/etc/opt/gnome ${myconf}
-  try make   # Doesn't work with -j 4 (hallski)
+	./configure --host=${CHOST} --prefix=/opt/gnome  		\
+	            --sysconfdir=/etc/opt/gnome ${myconf} || die
+
+	make || die  # Doesn't work with -j 4 (hallski)
 }
 
 src_install() {
+	make DESTDIR=${D} install || die
 
-  try make DESTDIR=${D} install
-  dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
-
+	dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
 }
-
-
-
-
-

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.8.ebuild,v 1.6 2001/08/31 20:39:41 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.8.ebuild,v 1.7 2001/08/31 21:40:07 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -15,31 +15,40 @@ DEPEND="virtual/glibc
 	>=dev-libs/glib-1.2.8
 	>=gnome-base/gnome-env-1.0"
 
-RDEPEND="virtual/glibc >=gnome-base/gnome-env-1.0
-	 >=dev-libs/glib-1.2.8"
+RDEPEND="virtual/glibc 
+	>=gnome-base/gnome-env-1.0
+	>=dev-libs/glib-1.2.8"
+
 
 src_compile() {
-  if [ -z "`use nls`" ] ; then
-    myconf="--disable-nls"
-  fi
-  try ./configure --host=${CHOST} --prefix=/opt/gnome \
-        --sysconfdir=/etc/opt/gnome $myconf
-  try make  # Doesn't work with -j 4 (hallski)
+	if [ -z "`use nls`" ] ; then
+		myconf="--disable-nls"
+	fi
+
+	./configure --host=${CHOST} --prefix=/opt/gnome \
+        	    --sysconfdir=/etc/opt/gnome $myconf
+
+	assert "Configure failed."
+
+	make || die "Building failed.  # Doesn't work with -j 4 (hallski)
 }
 
 src_install() {
+	make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome \
+	     install
+	assert "Installation failed."
 
-  try make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome \
-  install
-  dosed /opt/gnome/lib/*.la
-  dodoc AUTHORS COPYING* ChangeLog README NEWS TODO
-  dodoc docs/*.txt docs/IDEA1
-  docinto idl
-  cd libIDL
-  dodoc AUTHORS BUGS COPYING NEWS README*
-  docinto popt
-  cd ../popt
-  dodoc CHANGES COPYING README
+	dosed /opt/gnome/lib/*.la
+	dodoc AUTHORS COPYING* ChangeLog README NEWS TODO
+	dodoc docs/*.txt docs/IDEA1
+	docinto idl
+
+	cd libIDL
+	dodoc AUTHORS BUGS COPYING NEWS README*
+	docinto popt
+	
+	cd ../popt
+	dodoc CHANGES COPYING README
 }
 
 
