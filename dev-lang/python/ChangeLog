@@ -1,18 +1,13 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.3 2002/03/30 17:00:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.4 2002/04/07 05:52:01 drobbins Exp $
 
+  06 Apr 2002; Daniel Robbins <drobbins@gentoo.org> : the 2.2-r4 ebuild now
+  disables C++ support if we are creating a new build image (since we have no
+  C++ in that case).
+  
   30 Mar 2002; Daniel Robbins <drobbins@gentoo.org> : changed PROVIDE from
   virtual/python-2.2 to virtual/python.  No rev bump.
-
-*python-2.2-r5 (17 Mar 2002)
-
-  17 Mar 2002; Daniel Robbins <drobbins@gentoo.org> : new release with a
-  /usr/lib/python/site-packages directory; /usr/lib/python2.2/site-packages is
-  a symlink pointing to this new directory.  This allows new versions of python
-  (2.3, etc) to also point to the generic site-packages directory, allowing
-  already-installed python modules to be available to all installed versions of
-  python.
 
 *python-2.2-r4 (1 Feb 2002)
 

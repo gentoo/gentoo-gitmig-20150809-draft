@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r4.ebuild,v 1.2 2002/03/31 00:12:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2-r4.ebuild,v 1.3 2002/04/07 05:52:01 drobbins Exp $
 
 PYVER="`echo ${PV} | cut -d '.' -f 1,2`"
 S=${WORKDIR}/Python-${PV}
@@ -98,11 +98,17 @@ src_compile() {
 	scmd="$scmd  s:#\(resource .*\):\1:;" # Jeremy Hylton's rlimit interface
 	sed "$scmd" Modules/Setup.dist > Modules/Setup
 	
+	local myopts
+	#if we are creating a new build image, we remove the dependency on g++
+	if [ "`use build`" -a ! "`use bootstrap`" ]
+	then
+		myopts="--with-cxx=no"
+	fi
 	./configure \
 		--prefix=/usr \
 		--without-libdb \
 		--infodir='${prefix}'/share/info \
-		--mandir='${prefix}'/share/man
+		--mandir='${prefix}'/share/man $myopts
 	assert "Configure failed"
 	# kill the -DHAVE_CONFIG_H flag
 	mv Makefile Makefile.orig
