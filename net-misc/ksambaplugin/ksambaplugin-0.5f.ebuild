@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksambaplugin/ksambaplugin-0.5f.ebuild,v 1.6 2004/07/12 02:36:33 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksambaplugin/ksambaplugin-0.5f.ebuild,v 1.7 2004/08/30 19:38:07 carlo Exp $
 
 inherit kde eutils gcc
 
@@ -15,7 +15,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
 IUSE="debug"
 
-DEPEND=">=kde-base/kdebase-3"
+DEPEND=">=kde-base/kdebase-3
+	!>=kde-base/kdenetwork-3.3.0"
 RDEPEND="${DEPEND}
 	>=net-fs/samba-2.2.7"
 need-kde 3

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ksambaplugin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksambaplugin/ChangeLog,v 1.14 2004/07/12 02:36:33 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksambaplugin/ChangeLog,v 1.15 2004/08/30 19:38:07 carlo Exp $
+
+  30 Aug 2004; Carsten Lohrke <carlo@gentoo.org> ksambaplugin-0.5f.ebuild:
+  block >=kde-base/kdenetwork-3.3.0
 
   11 Jul 2004; Daniel Goller <morfic@gentoo.org>
   +files/ksambaplugin-gcc3.4-fix.patch, ksambaplugin-0.5f.ebuild:
