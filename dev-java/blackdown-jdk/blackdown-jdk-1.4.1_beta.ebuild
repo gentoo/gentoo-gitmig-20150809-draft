@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1_beta.ebuild,v 1.1 2002/10/18 21:40:19 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1_beta.ebuild,v 1.2 2002/10/18 21:46:41 karltk Exp $
 
 . /usr/portage/eclass/inherit.eclass
 inherit java
@@ -20,6 +20,7 @@ PROVIDE="virtual/jdk-1.4.1
 SLOT="1.4.1"
 LICENSE="sun-bcla"
 KEYWORDS="~x86 -ppc -sparc -sparc64"
+IUSE="mozilla doc"
 
 src_unpack () {
 	tail +350 ${DISTDIR}/${A} | tar xjf -
