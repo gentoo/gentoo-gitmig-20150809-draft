@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>hardened</herd>
+	<maintainer>
+		<email>solar@gentoo.org</email>
+		<description>Primary Maintainer</description>
+	</maintainer>
+<longdescription>
+Middleman is a robust proxy server with many features designed to
+remove unwanted content, increase privacy, and to simply make surfing
+the Web a more pleasant experience. Some of the highlights include
+banner and popup blocking, HTTP and FTP content caching, NTLM and
+Basic authentication when forwarding through another proxy server,
+regular expression substitution in downloaded files and HTTP headers,
+regular expression substitution on requested URLs, many URL commands
+to temporarily change the proxy settings or to view information about
+a requested file, complete support for HTTP/1.1 including persistent
+connections and gzip encoding, and an intutive Web interface for
+configuring the proxy.
+</longdescription>
+</pkgmetadata>

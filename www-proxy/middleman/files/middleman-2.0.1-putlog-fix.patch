@@ -1,0 +1,155 @@
+--- middleman-2.0.1/src/log.c.orig	2004-07-28 15:42:46.389571608 -0400
++++ middleman-2.0.1/src/log.c	2004-07-28 15:43:11.422765984 -0400
+@@ -30,6 +30,8 @@
+ #include <syslog.h>
+ #endif				/* USE_SYSLOG */
+ 
++#define LINELEN		512
++
+ int logfd = -1;
+ extern int loglevel;
+ extern int daemonize;
+@@ -46,105 +48,99 @@
+ 	time_t tt;
+ 	struct tm *tv;
+ #endif
+-	int ret;
+ 	va_list valist;
+-	char buf[1024], *ptr;
++	char ptr[LINELEN], tmp[LINELEN];
+ 
+ 	pthread_mutex_lock(&logfile_lock);
+ 
+-	ptr = buf;
+-
+ #ifndef USE_SYSLOG
+ 	time(&tt);
+ 	tv = localtime(&tt);
+ 
+-	ptr += strftime(ptr, 24, TIMEFORMAT, tv);
++	strftime(ptr, 24, TIMEFORMAT, tv);
++	sprintf(tmp, " [%u] ", (unsigned int) getpid());
++	strcat(ptr, tmp);
+ 
+-	ptr += sprintf(ptr, " [%u] ", (unsigned int) getpid());
+ #endif
+ 
+ 	switch (level) {
+ 	case MMLOG_REQUEST:
+-		ptr += sprintf(ptr, "request: ");
++		strcat(ptr, "request: ");
+ 		break;
+ 	case MMLOG_NETWORK:
+-		ptr += sprintf(ptr, "network: ");
++		strcat(ptr, "network: ");
+ 		break;
+ 	case MMLOG_FILTER:
+-		ptr += sprintf(ptr, "url filter: ");
++		strcat(ptr, "url filter: ");
+ 		break;
+ 	case MMLOG_HEADER:
+-		ptr += sprintf(ptr, "header: ");
++		strcat(ptr, "header: ");
+ 		break;
+ 	case MMLOG_MIME:
+-		ptr += sprintf(ptr, "mime filter: ");
++		strcat(ptr, "mime filter: ");
+ 		break;
+ 	case MMLOG_COOKIE:
+-		ptr += sprintf(ptr, "cooke filter: ");
++		strcat(ptr, "cooke filter: ");
+ 		break;
+ 	case MMLOG_REDIRECT:
+-		ptr += sprintf(ptr, "redirect: ");
++		strcat(ptr, "redirect: ");
+ 		break;
+ 	case MMLOG_TEMPLATE:
+-		ptr += sprintf(ptr, "template: ");
++		strcat(ptr, "template: ");
+ 		break;
+ 	case MMLOG_KEYWORDS:
+-		ptr += sprintf(ptr, "keyword filter: ");
++		strcat(ptr, "keyword filter: ");
+ 		break;
+ 	case MMLOG_REWRITE:
+-		ptr += sprintf(ptr, "rewriting: ");
++		strcat(ptr, "rewriting: ");
+ 		break;
+ 	case MMLOG_LIMITS:
+-		ptr += sprintf(ptr, "limits: ");
++		strcat(ptr, "limits: ");
+ 		break;
+ 	case MMLOG_PREFETCH:
+-		ptr += sprintf(ptr, "prefetch: ");
++		strcat(ptr, "prefetch: ");
+ 		break;
+ 	case MMLOG_CACHE:
+-		ptr += sprintf(ptr, "cache: ");
++		strcat(ptr, "cache: ");
+ 		break;
+ 	case MMLOG_ICP:
+-		ptr += sprintf(ptr, "ICP: ");
++		strcat(ptr, "ICP: ");
+ 		break;
+ 	case MMLOG_FORWARD:
+-		ptr += sprintf(ptr, "forwarding: ");
++		strcat(ptr, "forwarding: ");
+ 		break;
+ 	case MMLOG_SECURITY:
+-		ptr += sprintf(ptr, "security: ");
++		strcat(ptr, "security: ");
+ 		break;
+ 	case MMLOG_WARN:
+-		ptr += sprintf(ptr, "warning: ");
++		strcat(ptr, "warning: ");
+ 		break;
+ 	case MMLOG_ERROR:
+-		ptr += sprintf(ptr, "error: ");
++		strcat(ptr, "error: ");
+ 		break;
+ 	case MMLOG_DEBUG:
+-		ptr += sprintf(ptr, "debug: ");
++		strcat(ptr, "debug: ");
+ 		break;
+ 	}
+ 
+ 	va_start(valist, fmt);
+-	ret = vsnprintf(ptr, sizeof(buf) - (ptr - buf), fmt, valist);
++	vsnprintf(tmp, LINELEN - strlen(ptr) - 1, fmt, valist);
+ 	va_end(valist);
++	s_strncat(ptr, tmp, LINELEN - strlen(ptr) - 1);
++	strcat(ptr, "\n");
+ 
+-	ptr += (ret > sizeof(buf) || ret == -1) ? sizeof(buf) - (ptr - buf) : ret;
+ 
+ 	if (level != MMLOG_DEBUG)
+-		logbuffer_add(global->logbuffer, buf);
+-
+-	if (*(ptr - 1) != '\n') {
+-		*(ptr++) = '\n';
+-		*ptr = '\0';
+-	}
++		logbuffer_add(global->logbuffer, ptr);
+ 
+ 	if ((loglevel & level) && daemonize == FALSE)
+-		printf("%s", buf);
++		printf("%s", ptr);
+ 
+ 	if (!*logfile || !(loglevel & level))
+ 		goto out;
+ 
+ #ifdef USE_SYSLOG
+-	syslog(LOG_INFO, "%s", buf);
++	syslog(LOG_INFO, "%s", ptr);
+ #else
+ 	if (logfd == -1) {
+ 		logfd = open(logfile, O_RDWR | O_CREAT, 0640);
+@@ -154,7 +150,7 @@
+ 		lseek(logfd, 0, SEEK_END);
+ 	}
+ 
+-	write(logfd, buf, strlen(buf));
++	write(logfd, ptr, strlen(ptr));
+ #endif
+       out:
+ 	pthread_mutex_unlock(&logfile_lock);
