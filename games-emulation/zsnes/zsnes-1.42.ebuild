@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.42.ebuild,v 1.5 2005/03/22 05:11:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.42.ebuild,v 1.6 2005/04/06 22:20:30 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
@@ -36,6 +36,7 @@ pkg_setup() {
 		eerror "    USE=multilib FEATURES=-sandbox"
 		die "Cannot produce 32bit code"
 	fi
+	games_pkg_setup
 }
 
 src_unpack() {
