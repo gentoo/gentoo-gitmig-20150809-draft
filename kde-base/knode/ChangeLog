@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knode
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/ChangeLog,v 1.1 2005/01/15 02:24:35 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/ChangeLog,v 1.2 2005/01/17 14:44:43 danarmak Exp $
+
+  17 Jan 2005; Dan Armak <danarmak@gentoo.org> knode-3.4.0_beta1.ebuild:
+  Added missing dep on libkmime.
 
 *knode-3.4.0_beta1 (15 Jan 2005)
 
