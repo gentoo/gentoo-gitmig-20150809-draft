@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.5.ebuild,v 1.2 2004/02/20 07:33:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.5.ebuild,v 1.3 2004/06/03 21:06:51 agriffis Exp $
 
 inherit eutils games
 
@@ -29,7 +29,7 @@ src_unpack() {
 	unpack csmash-${PV}.tar.gz
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-loadparts.patch
-	if [ `use oggvorbis` ] ; then
+	if use oggvorbis ; then
 		cp ${DISTDIR}/${MY_OGG} ${S}/ || die "unpacking ogg"
 		sed -i "s:${MY_OGG}:${GAMES_DATADIR}/csmash/${MY_OGG}:" ttinc.h || die "setting ogg loc"
 	fi
@@ -47,7 +47,7 @@ src_install() {
 	egamesinstall \
 		datadir=${D}/${GAMES_DATADIR_BASE} \
 		|| die
-	if [ `use oggvorbis` ] ; then
+	if use oggvorbis ; then
 		insinto ${GAMES_DATADIR}/csmash
 		doins ${MY_OGG}
 	fi
