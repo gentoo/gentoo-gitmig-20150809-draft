@@ -1,7 +1,7 @@
 #!/bin/bash
 for x in "$USE"
 do
-	if [ "${1}" = "${x} ]
+	if [ "${1}" = "${x}" ]
 	then
 		echo "${x}"
 		exit
