@@ -1,8 +1,11 @@
 # ChangeLog for gnome-base/gnome-desktop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.31 2003/06/15 19:02:42 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.32 2003/07/04 21:06:59 gmsoft Exp $
 
 *gnome-desktop-2.2.2 (15 May 2003)
+
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> gnome-desktop-2.2.2.ebuild :
+  Added ~hppa to KEYWORDS.
 
   16 Jun 2003; foser <foser@gentoo.org> gnome-desktop-2.2.2.ebuild :
   Added automake-1.7.2 dep because of reports the ebuilds might fail with older versions
@@ -14,6 +17,9 @@
   New version : fixed vendor stuff, now actually works
 
 *gnome-desktop-2.2.1-r1 (02 apr 2003)
+
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> gnome-desktop-2.2.1-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   02 apr 2003; <spider@gentoo.org> gnome-desktop-2.2.1-r1.ebuild,
   files/00_all_gentoo-vendor.patch:
