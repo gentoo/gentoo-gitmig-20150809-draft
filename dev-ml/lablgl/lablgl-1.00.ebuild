@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.15 2004/08/25 21:41:38 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.16 2005/02/14 19:11:54 sekretarz Exp $
+
+inherit eutils
 
 IUSE="tcltk glut doc"
 
@@ -23,14 +25,15 @@ pkg_setup()
 	if ( use tcltk )
 	then
 		#lablgl requires ocaml compiled with tk support while ocaml has it as an optional dependency
-		if ( ! which labltk )
+		if ( ! built_with_use dev-lang/ocaml tcltk )
 		then
-			eerror "It seems you don't have ocaml compiled with tk support"
+			eerror "You don't have ocaml compiled with tk support"
 			eerror ""
 			eerror "lablgl requires ocaml be built with tk support."
 			eerror ""
 			eerror "Please make sure that ocaml is installed with tk support."
-			false;
+			sleep 5;
+			die "Ocaml is missing tk support";
 		fi
 	fi
 }
