@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4.ebuild,v 1.7 2004/07/02 04:22:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4.ebuild,v 1.8 2004/07/14 02:44:00 agriffis Exp $
 
 inherit java
 
@@ -16,6 +16,7 @@ DEPEND=">=dev-libs/gmp-3.1
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc ~ppc hppa"
+IUSE="alsa esd"
 
 PROVIDE="virtual/jdk-1.4
 		virtual/jre-1.4
