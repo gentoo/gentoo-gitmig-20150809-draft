@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0_pre20020115.ebuild,v 1.7 2004/09/28 09:20:43 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0_pre20020115.ebuild,v 1.8 2004/11/07 02:41:20 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ DESCRIPTION="Basilisk II Macintosh Emulator"
 HOMEPAGE="http://www.uni-mainz.de/~bauec002/B2Main.html"
 SRC_URI="http://iphcip1.physik.uni-mainz.de/~cbauer/BasiliskII_src_15012002.tar.gz"
 
-LICENSE="GPL-2 | LGPL-2.1"
+LICENSE="|| ( GPL-2 LGPL-2.1 )"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="X gtk xv esd dga"
