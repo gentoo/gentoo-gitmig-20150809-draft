@@ -1,0 +1,9 @@
+# ChangeLog for app-xemacs/eterm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eterm/ChangeLog,v 1.5 2003/06/16 00:38:58 rac Exp $
+
+*eterm-1.13 (15 Jun 2003)
+
+  15 Jun 2003; <rac@gentoo.org> eterm-1.13.ebuild:
+  Resurrect pending portage patch for ambiguous package name handling
+
