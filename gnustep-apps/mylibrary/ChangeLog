@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-apps/mylibrary
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/mylibrary/ChangeLog,v 1.1 2004/09/25 21:17:33 fafhrd Exp $
+
+*mylibrary-0.4.5g (25 Sep 2004)
+
+  25 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
+  +mylibrary-0.4.5g.ebuild:
+  New package; key'd for ~x86.
+
