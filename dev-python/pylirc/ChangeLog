@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylirc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylirc/ChangeLog,v 1.4 2004/06/25 01:40:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylirc/ChangeLog,v 1.5 2004/09/11 09:59:05 blubb Exp $
+
+  11 Sep 2004; <blubb@gentoo.org> pylirc-0.0.4.ebuild:
+  added ~amd64
 
   04 May 2004; Bryan Østergaard <kloeri@gentoo.org> pylirc-0.0.4.ebuild:
   Add missing IUSE.
