@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/prism54-20040208.ebuild,v 1.3 2004/02/09 06:58:20 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/prism54-20040208.ebuild,v 1.4 2004/02/25 04:46:18 latexer Exp $
 
 MY_P=${P/prism54-/prism54-cvs}
 DESCRIPTION="Driver for Intersil Prism GT / Prism Duette wireless chipsets"
@@ -9,7 +9,7 @@ HOMEPAGE="http://prism54.org/"
 # nomirror for firmware issues. Emails sent to inquire about this.
 RESTRICT="nomirror"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2
-		http://prism54.org/firmware/isl3890"
+		http://prism54.org/~mcgrof/firmware/isl3890"
 
 LICENSE="GPL-2"
 SLOT="0"

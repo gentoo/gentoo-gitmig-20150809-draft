@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/prism54
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/ChangeLog,v 1.3 2004/02/09 06:58:20 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/ChangeLog,v 1.4 2004/02/25 04:46:18 latexer Exp $
+
+  24 Feb 2004; Peter Johanson <latexer@gentoo.org> prism54-20040208.ebuild:
+  Fixed the location of the firmware file. bug #41956
 
   09 Feb 2004; Peter Johanson <latexer@gentoo.org> prism54-20040208.ebuild:
   Change installation location to where prism54 people put it.
