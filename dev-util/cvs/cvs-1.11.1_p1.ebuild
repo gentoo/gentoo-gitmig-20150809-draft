@@ -1,11 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.1_p1.ebuild,v 1.4 2002/10/04 05:31:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.1_p1.ebuild,v 1.5 2002/10/14 09:49:03 aliz Exp $
 
 S=${WORKDIR}/${P/_}
 DESCRIPTION="Concurrent Versions System - source code revision control tools"
-SRC_URI="http://ftp.cvshome.org/${P/_}/${P/_}.tar.gz
+SRC_URI="http://ftp.cvshome.org/${P/"_p1"}/${P/_}.tar.gz
 		 mirror://gentoo/cvs-1.11.1p1-extzlib.patch.bz2"
 HOMEPAGE="http://www.cvshome.org/"
 DEPEND="virtual/glibc 
