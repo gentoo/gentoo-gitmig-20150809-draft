@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.29.ebuild,v 1.4 2004/12/16 04:38:16 usata Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.30.ebuild,v 1.1 2004/12/16 04:38:16 usata Exp $
 
 IUSE="zlib doc"
 
@@ -12,22 +10,18 @@ SRC_URI="mirror://sourceforge/lout/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="zlib? ( >=sys-libs/zlib-1.1.4 )"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	# Apply the makefile patch
-	epatch ${FILESDIR}/${P}-makefile-gentoo.patch
-}
-
 src_compile() {
 	local myconf
-	myconf="BASEDIR=/usr"
 	use zlib && myconf="$myconf PDF_COMPRESSION=1 ZLIB=/usr/lib/libz.a"
-	emake prg2lout lout ${myconf} || die "emake prg2lout lout failed"
+	emake BINDIR=/usr/bin \
+		LIBDIR=/usr/share/lout \
+		DOCDIR=/usr/share/doc/${P} \
+		MANDIR=/usr/share/man/man1 \
+		${myconf} lout prg2lout || die "emake prg2lout lout failed"
 }
 
 compile_doc() {
@@ -47,15 +41,21 @@ compile_doc() {
 }
 
 src_install() {
-	local docdir
+	local bindir libdir docdir mandir
+	bindir=${D}/usr/bin
+	libdir=${D}/usr/share/lout
 	docdir=${D}/usr/share/doc/${P}
+	mandir=${D}/usr/share/man/man1
+	export LOUTLIB=${libdir}
+	export PATH="${bindir}:${PATH}"
 
-	emake BASEDIR=${D}/usr DOCDIR=${docdir} \
-		installbin installlib installdoc installman \
-		|| die "emake install failed"
+	mkdir -p ${bindir} ${docdir} ${mandir}
 
-	export LOUTLIB=${D}/usr/share/lout/
-	export PATH="${D}/usr/bin:${PATH}"
+	make BINDIR=${bindir} \
+		LIBDIR=${libdir} \
+		DOCDIR=${docdir} \
+		MANDIR=${mandir} \
+		install installdoc installman || die "make install failed"
 
 	lout -x -s ${D}/usr/share/lout/include/init || die "lout init failed"
 
