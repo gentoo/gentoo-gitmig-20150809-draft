@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.11 2005/04/01 03:30:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.12 2005/04/02 04:53:33 solar Exp $
+
+*pax-utils-0.0.5 (01 Apr 2005)
+
+  01 Apr 2005; <solar@gentoo.org> +pax-utils-0.0.5.ebuild:
+  - major source code cleanup. combine scanexec/scanrexec/pttool into unified
+  scanelf tool. manpage updates. fixed memleak in readelf function. new options
+  to detect TEXTREL's, display RPATH info, make display of pax flags markings
+  optional. A new recursive option was added to scan subdirs. All sorts of good
+  stuff that makes grandma happy. Many thanks to vapier.
 
   31 Mar 2005; Aron Griffis <agriffis@gentoo.org> pax-utils-0.0.4.ebuild:
   stable on ia64
