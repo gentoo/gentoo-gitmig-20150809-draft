@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r5.ebuild,v 1.9 2004/12/30 04:45:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r5.ebuild,v 1.10 2005/03/14 05:33:21 mr_bones_ Exp $
 
 inherit flag-o-matic eutils games
 
@@ -11,8 +11,8 @@ SRC_URI="http://www.reptilelabour.com/software/files/chromium/chromium-src-${PV}
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 ppc amd64 ~sparc"
-IUSE="qt sdl oggvorbis"
+KEYWORDS="amd64 ppc ~sparc x86"
+IUSE="oggvorbis qt sdl"
 
 DEPEND="virtual/libc
 	|| (
@@ -30,6 +30,7 @@ S="${WORKDIR}/Chromium-0.9"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	cp data/png/hero.png "${T}/chromium.png" || die "cp failed"
 	epatch "${FILESDIR}/${PV}-gcc3-gentoo.patch"
 	epatch "${FILESDIR}/${PV}-proper-options.patch"
 	has_version '=x11-libs/qt-3*' && epatch "${FILESDIR}/${PV}-qt3.patch"
@@ -74,5 +75,7 @@ src_install() {
 	dogamesbin bin/chromium* || die "dogamesbin failed"
 	dodir "${GAMES_DATADIR}/${PN}"
 	cp -r data "${D}/${GAMES_DATADIR}/${PN}/" || die "cp failed"
+	doicon "${T}/chromium.png"
+	make_desktop_entry chromium "Chromium B.S.U"
 	prepgamesdirs
 }
