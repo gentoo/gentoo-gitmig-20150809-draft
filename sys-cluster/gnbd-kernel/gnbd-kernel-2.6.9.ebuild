@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-2.6.9.ebuild,v 1.2 2005/01/27 18:13:48 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-2.6.9.ebuild,v 1.3 2005/03/09 17:46:05 xmerlin Exp $
 
-inherit eutils linux-mod check-kernel
+inherit eutils linux-mod
 
 MY_PV="${PV}-0"
 MY_P="${PN}-${MY_PV}"
@@ -22,8 +22,7 @@ RDEPEND=""
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	if is_2_4_kernel || is_2_5_kernel
-	then
+	if kernel_is 2 4; then
 		die "${P} supports only 2.6 kernels"
 	fi
 }

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.10.ebuild,v 1.3 2005/03/02 18:33:25 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.10.ebuild,v 1.4 2005/03/09 17:41:45 xmerlin Exp $
 
-inherit eutils versionator linux-mod check-kernel
+inherit eutils versionator linux-mod
 
 LICENSE="GPL-2"
 KEYWORDS="x86"
@@ -36,7 +36,7 @@ src_compile() {
 	einfo "Please don't use XFS with drbd (see drbd mailing list archives)"
 	einfo ""
 
-	if is_2_5_kernel || is_2_6_kernel; then
+	if kernel_is 2 6; then
 		emake KDIR=${KERNEL_DIR} || die "compile problem"
 	else
 		cp -R /usr/src/linux-${KV} ${WORKDIR}
