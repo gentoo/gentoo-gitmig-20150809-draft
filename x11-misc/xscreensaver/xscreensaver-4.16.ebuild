@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.16.ebuild,v 1.14 2004/12/17 06:38:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.16.ebuild,v 1.15 2005/01/25 22:56:45 greg_g Exp $
 
 inherit eutils flag-o-matic
 
@@ -153,8 +153,6 @@ src_compile() {
 }
 
 src_install() {
-	[ -n "${KDEDIR}" ] && dodir ${KDEDIR}/bin
-
 	make install_prefix="${D}" install || die
 
 	# install correctly in gnome2
