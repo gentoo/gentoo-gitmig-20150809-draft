@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.60 2004/02/15 08:04:15 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.61 2004/03/14 21:18:10 tgall Exp $
+
+  14 Mar 2004; Tom Gall <tgall@gentoo.org> samba-3.0.0-r1.ebuild,
+  samba-3.0.1-r1.ebuild, samba-3.0.1.ebuild, samba-3.0.2a.ebuild:
+  remove ppc64 for now
 
 *samba-3.0.2a (15 Feb 2004)
 
