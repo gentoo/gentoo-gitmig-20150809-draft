@@ -57,7 +57,7 @@ java-utils_get-vm-vendor() {
 }
 
 java-utils_get-vm-version() {
-	local version=$(java-config -f | sed -r "s/^[a-zA-Z-]+//")
+	local version=$(java-config -f | sed -e "s/.*-\([0-9].*\)/\1/")
 	echo ${version}
 }
 
