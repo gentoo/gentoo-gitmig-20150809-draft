@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a13e1ed8d45342d18139cacf990e6568 freehdl-20040113.ebuild 664
-MD5 7734a1adc4090a7ebdde1216db432e14 ChangeLog 877
+MD5 507e936bdfbc2192059cf501a4d2848d freehdl-20040113.ebuild 686
+MD5 910b2088d2f2fa80a89019f4e2dff879 ChangeLog 1000
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 a5da60bdf2fc896ba518737305f59a4d files/digest-freehdl-20040113 69
 MD5 d07d33aebd4d5adb56d7c24dbe9c0f78 files/freehdl-20040113-gcc3.4.patch 16484
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0HabI1lqEGTUzyQRAh/MAJ4kgqYxS32TzURSerHJ5KxAmhLsMwCgrc1f
-hbVyTMQ9MOdqVh2pZHiuClg=
-=pare
------END PGP SIGNATURE-----

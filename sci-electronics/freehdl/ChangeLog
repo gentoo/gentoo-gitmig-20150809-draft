@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/freehdl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/ChangeLog,v 1.2 2004/12/27 20:54:45 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/ChangeLog,v 1.3 2005/01/05 10:00:21 phosphan Exp $
+
+  05 Jan 2005; Patrick Kursawe <phosphan@gentoo.org> freehdl-20040113.ebuild:
+  Adding guile to dependencies (bug #75809)
 
 *freehdl-20040113 (27 Dec 2004)
 
