@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libwmf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.15 2003/05/13 05:18:22 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.16 2003/06/06 13:44:10 agriffis Exp $
+
+  06 Jun 2003; Aron Griffis <agriffis@gentoo.org> libwmf-0.2.8.ebuild:
+  Mark stable on alpha
 
 *libwmf-0.2.8 (24 Mar 2003)
 
