@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.287 2004/07/14 18:34:15 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.288 2004/07/19 22:51:23 lv Exp $
+
+  19 Jul 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.0-r6.ebuild,
+  gcc-3.4.1-r1.ebuild, gcc-3.4.1.ebuild:
+  changed use of gtk2 USE flag to gtk
 
   14 Jul 2004; <solar@gentoo.org> gcc-3.3.4-r1.ebuild:
   gcc-3.3.4-r1 marked -hppa ~x86 ~amd64 ~mips ~arm, ~sparc desired

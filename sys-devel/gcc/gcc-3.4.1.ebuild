@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.8 2004/07/14 23:28:59 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1.ebuild,v 1.9 2004/07/19 22:51:23 lv Exp $
 
-IUSE="static nls bootstrap build multilib gcj gtk2 f77 objc hardened uclibc n32 n64"
+IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -173,7 +173,7 @@ DEPEND="virtual/libc
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
-	!build? ( gcj? ( gtk2? ( >=x11-libs/gtk+-2.2 ) ) )
+	!build? ( gcj? ( gtk? ( >=x11-libs/gtk+-2.2 ) ) )
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 
@@ -531,7 +531,7 @@ src_compile() {
 	# GTK+ is preferred over xlib in 3.4.x (xlib is unmaintained
 	# right now). Much thanks to <csm@gnu.org> for the heads up.
 	# Travis Tilley <lv@gentoo.org>  (11 Jul 2004)
-	if ! use build && use gcj && use gtk2
+	if ! use build && use gcj && use gtk
 	then
 		myconf="${myconf} --enable-java-awt=gtk"
 	fi
