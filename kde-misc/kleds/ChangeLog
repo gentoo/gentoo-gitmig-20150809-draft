@@ -1,0 +1,32 @@
+# ChangeLog for app-misc/kleds
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kleds/ChangeLog,v 1.1 2004/10/30 16:55:27 carlo Exp $
+
+*kleds-0.8.0 (30 Oct 2004)
+
+  30 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
+  +kleds-0.7.1.ebuild, +kleds-0.8.0.ebuild:
+  Moved from app-misc/kleds to kde-misc/kleds.
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> kleds-0.8.0.ebuild:
+  Added to ~ppc.
+
+*kleds-0.8.0 (03 Oct 2004)
+
+  03 Oct 2004; Dominik Stadler <centic@gentoo.org> +kleds-0.8.0.ebuild:
+  Add new Version 0.8.0, fixes Bug 33653
+
+  18 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> kleds-0.7.1.ebuild:
+  Add missing IUSE and SLOT
+
+  21 Mar 2004; Jason Wever <weeve@gentoo.org> kleds-0.7.1.ebuild:
+  Added ~sparc keyword.
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> kleds-0.7.1.ebuild:
+  inherit kde instead of deprecated kde-base
+
+*kleds-0.7.1 (05 Jul 2002)
+
+  05 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  User submission by Johannes Findeisen (#4535)
