@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.21 2004/11/02 23:29:37 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.22 2004/11/03 09:12:48 eradicator Exp $
+
+  03 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -kaffeine-0.4.2.ebuild, -kaffeine-0.4.3.ebuild, -kaffeine-0.5_rc1.ebuild,
+  kaffeine-0.4.3b-r1.ebuild:
+  Stable amd64 for security fix.  Removing insecure versions.
 
 *kaffeine-0.4.3b-r1 (03 Nov 2004)
 

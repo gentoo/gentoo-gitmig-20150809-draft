@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.4.3b-r1.ebuild,v 1.1 2004/11/02 23:29:37 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.4.3b-r1.ebuild,v 1.2 2004/11/03 09:12:48 eradicator Exp $
+
+IUSE=""
 
 inherit kde
 
@@ -10,11 +12,11 @@ SRC_URI="mirror://sourceforge/kaffeine/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~amd64"
-IUSE=""
+KEYWORDS="x86 ~ppc ~sparc amd64"
 
 DEPEND=">=media-libs/xine-lib-1_rc4
 	sys-devel/gettext"
+
 need-kde 3.1
 
 src_unpack() {
