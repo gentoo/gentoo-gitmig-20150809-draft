@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.16.ebuild,v 1.16 2005/01/27 00:32:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.16.ebuild,v 1.17 2005/02/24 20:45:34 rizzo Exp $
 
 inherit eutils flag-o-matic
 
@@ -38,9 +38,9 @@ RDEPEND="virtual/x11
 		!gtk2? (
 			=x11-libs/gtk+-1.2*
 			=gnome-base/libglade-0.17*
+			>=media-libs/gdk-pixbuf-0.18
 			gnome? (
 				=gnome-base/control-center-1.4*
-				>=media-libs/gdk-pixbuf-0.18
 				>=gnome-base/gnome-libs-1.4
 			)
 		)

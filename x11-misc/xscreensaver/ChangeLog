@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.72 2005/01/27 00:32:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.73 2005/02/24 20:45:34 rizzo Exp $
+
+  24 Feb 2005; Don Seiler <rizzo@gentoo.org> xscreensaver-4.16.ebuild:
+  Fixing dependency so it matches the terms of configure flags. Bug was
+  occuring where +gtk -gtk2 -gnome was configuring with gdk-pixbuf but not
+  depending on it.
 
   26 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org>
   xscreensaver-4.16.ebuild:
