@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-1.5.ebuild,v 1.6 2005/01/28 14:52:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-1.5.ebuild,v 1.7 2005/03/31 02:46:44 compnerd Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jabref.sourceforge.net/"
 SRC_URI="mirror://sourceforge/jabref/Jabref-${PV}-src.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="jikes"
 
 DEPEND=">=virtual/jdk-1.4
