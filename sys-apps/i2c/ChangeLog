@@ -1,8 +1,9 @@
 # ChangeLog for sys-apps/i2c
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.14 2004/03/27 15:13:32 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.15 2004/04/27 09:18:39 aliz Exp $
 
 *i2c-2.8.3 (27 Mar 2004)
+*i2c-2.8.4 (27 Mar 2004)
 
   27 Mar 2004; <plasmaroo@gentoo.org> +i2c-2.8.3.ebuild, +i2c-2.8.4.ebuild:
   Version bump.

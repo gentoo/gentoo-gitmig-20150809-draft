@@ -1,6 +1,8 @@
 # ChangeLog for sys-apps/s390-oco
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-oco/ChangeLog,v 1.1 2004/04/18 04:12:09 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-oco/ChangeLog,v 1.2 2004/04/27 09:18:39 aliz Exp $
+
+*s390-oco-2.4.21 (18 Apr 2004)
 
   18 Apr 2004; Michael McCabe <randy@gentoo.org> :
   New ebuild submitted by Jochen Eisinger <jochen@penguin-breeder.org>

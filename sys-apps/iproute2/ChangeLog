@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/iproute
+# ChangeLog for sys-apps/iproute2
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.7 2004/04/20 19:31:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.8 2004/04/27 09:18:39 aliz Exp $
 
 *iproute2-2.4.7.20020116 (20 Apr 2004)
 
@@ -8,7 +8,7 @@
   Version bump #40589 by tempone@isg.si.
   Also rename / reversion to fit the way upstream has it.
 
-*iproute-20010824-r5 (06 Apr 2004)
+*iproute2-2.4.7-20010824-r5 (06 Apr 2004)
 
   06 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
   Version bump to clean up bugs and all that fun stuff.
