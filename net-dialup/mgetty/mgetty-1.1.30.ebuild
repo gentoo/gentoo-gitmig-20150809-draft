@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.30.ebuild,v 1.8 2004/01/15 03:49:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.30.ebuild,v 1.9 2004/01/23 12:19:24 lanius Exp $
 
 inherit flag-o-matic eutils
 
@@ -20,6 +20,11 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc ~alpha ~ia64"
 IUSE="doc"
 
+pkg_setup() {
+	enewgroup fax
+	enewuser fax -1 /bin/false /dev/null fax
+}
+
 src_unpack() {
 	unpack ${A}
 
@@ -32,6 +37,7 @@ src_unpack() {
 		-e 's:\/\* \(\#define CNDFILE "dialin.config"\) \*\/:\1:' \
 		-e 's:\(\#define FAX_NOTIFY_PROGRAM\).*:\1 "/etc/mgetty+sendfax/new_fax":' \
 		policy.h-dist > policy.h
+	sed -i -e "s:phone_group phone:phone_group fax:g" voice/voice.conf-dist
 }
 
 src_compile() {
@@ -63,8 +69,6 @@ src_compile() {
 }
 
 src_install () {
-	enewuser fax
-
 	dodir /var/spool
 	dodir /usr/share/info
 	make prefix=${D}/usr \
