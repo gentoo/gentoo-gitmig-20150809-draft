@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.69 2004/07/29 14:54:47 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.70 2004/08/27 18:29:39 sejo Exp $
+
+  27 Aug 2004; <SeJo@gentoo.org> ant-1.6.0-r3.ebuild, ant-1.6.2-r2.ebuild:
+  stable on ppc
 
 *ant-1.6.2-r2 (29 Jul 2004)
 

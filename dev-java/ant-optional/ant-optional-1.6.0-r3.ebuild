@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.0-r3.ebuild,v 1.14 2004/07/31 21:21:10 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.0-r3.ebuild,v 1.15 2004/08/27 18:27:58 sejo Exp $
 
 inherit java-pkg eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/ant/source/apache-ant-${PV}-src.tar.bz2"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ppc"
 IUSE="javamail"
 
 DEPEND="=dev-java/ant-1.6.0-r3
