@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eimil/eimil-12.0.1_pre1891.ebuild,v 1.1 2004/09/13 19:49:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eimil/eimil-12.0.1_pre1891.ebuild,v 1.2 2004/10/17 09:23:09 dholm Exp $
 
 inherit iiimf
 
 DESCRIPTION="A generic library for EIMIL services for IIIMF"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND="sys-devel/automake
