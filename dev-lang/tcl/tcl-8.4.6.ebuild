@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.6.ebuild,v 1.8 2004/04/28 01:41:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.6.ebuild,v 1.9 2004/05/31 22:35:03 tgall Exp $
 
 DESCRIPTION="Tool Command Language"
 HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/tcl/${PN}${PV}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc mips ~alpha arm ~hppa amd64 ~ia64 ~ppc64 s390"
+KEYWORDS="~x86 ~ppc ~sparc mips ~alpha arm ~hppa amd64 ~ia64 ppc64 s390"
 IUSE="threads"
 
 DEPEND="virtual/glibc"
