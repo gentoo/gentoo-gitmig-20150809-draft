@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.10 2004/10/23 14:56:58 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.11 2004/11/04 00:03:22 geoman Exp $
+
+# Stephen P. Becker <geoman@gentoo.org>
+# masked because I say so, gnome--
+pda
 
 # Ciaran McCreesh <ciaranm@gentoo.org>
 # not even slightly reliable, bug #65216
