@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/pacmanarena-0.15.ebuild,v 1.3 2004/04/29 19:36:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/pacmanarena-0.15.ebuild,v 1.4 2004/06/07 04:03:09 agriffis Exp $
 
 inherit games
 
@@ -41,7 +41,7 @@ src_install() {
 	prepgamesdirs
 }
 
-pkg_postins() {
+pkg_postinst() {
 	games_pkg_postinst
 	echo
 	ewarn "You need oggvorbis in your USE var and sdl components build"
