@@ -1,3 +1,4 @@
-MD5 cbaf90f9aa62ffc37499fdf5e004a6aa cisco-vpnclient-3des-4.0.1a.ebuild 1478
-MD5 050bfd2b317e8ad13bd744689cefaafa ChangeLog 454
 MD5 71958f1bfd76d8fc63b6c5c1a3069b0b files/digest-cisco-vpnclient-3des-4.0.1a 79
+MD5 34a7023b3ddddcad893558b295eb8a50 files/4.0.1a-linux26.patch 681
+MD5 81afdd32c35b1e47ffbc10fcae47f8f8 ChangeLog 551
+MD5 79ac000cf9c0ba5676c8af0f464f257f cisco-vpnclient-3des-4.0.1a.ebuild 1586
