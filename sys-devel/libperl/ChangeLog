@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.14 2003/09/17 21:08:48 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.15 2003/09/27 23:15:16 rac Exp $
+
+*libperl-5.8.1 (27 Sep 2003)
+
+  27 Sep 2003; <rac@gentoo.org> libperl-5.8.1.ebuild,
+  files/libperl-5.8.1-create-libperl-soname.patch:
+  New upstream release
 
 *libperl-5.8.1_rc2 (23 Jul 2003)
 
