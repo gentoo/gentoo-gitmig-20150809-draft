@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/radiusclient
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/ChangeLog,v 1.1 2004/11/21 08:29:49 mrness Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/ChangeLog,v 1.2 2005/01/22 03:05:16 mrness Exp $
+
+*radiusclient-0.4.8 (22 Jan 2005)
+
+  22 Jan 2005; Alin Nastac <mrness@gentoo.org> +radiusclient-0.4.8.ebuild:
+  Version bumped using radiusclient-ng sources (see bug #78386).
 
 *radiusclient-0.3.2 (21 Nov 2004)
 

@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/radiusclient-0.3.2.ebuild,v 1.3 2005/01/22 03:05:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/radiusclient-0.4.8.ebuild,v 1.1 2005/01/22 03:05:16 mrness Exp $
 
 inherit eutils
 
 DESCRIPTION="A library for writing RADIUS clients accompanied with several client utilities."
-HOMEPAGE="http://freshmeat.net/projects/radiusclient/"
-SRC_URI="ftp://ftp.cityline.net/pub/radiusclient/${P}.tar.gz"
+HOMEPAGE="http://developer.berlios.de/projects/radiusclient-ng/"
+SRC_URI="http://download.berlios.de/radiusclient-ng/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="virtual/libc"
