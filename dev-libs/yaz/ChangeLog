@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/yaz
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.14 2004/08/20 04:14:04 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.15 2004/11/03 06:42:21 psi29a Exp $
+
+  03 Nov 2004; Bret Curtis <psi29a@gentoo.org> yaz-2.0.19.ebuild,
+  yaz-2.0.8.ebuild:
+  added to ~mips for testing
 
   19 Aug 2004; Tom Gall <tgall@gentoo.org> yaz-2.0.19.ebuild:
   stable on ppc64

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/yaz-2.0.8.ebuild,v 1.11 2004/06/25 03:14:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/yaz-2.0.8.ebuild,v 1.12 2004/11/03 06:42:21 psi29a Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.indexdata.dk/${PN}"
 SRC_URI="http://ftp.indexdata.dk/pub/${PN}/${P}.tar.gz"
 LICENSE="YAZ"
 SLOT="0"
-KEYWORDS="x86 ppc amd64 alpha ia64 hppa sparc"
+KEYWORDS="x86 ppc amd64 alpha ia64 hppa sparc ~mips"
 IUSE="tcpd"
 RDEPEND="dev-libs/libxml2
 		dev-libs/openssl
