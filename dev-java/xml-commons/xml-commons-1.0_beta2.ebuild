@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2.ebuild,v 1.1 2004/12/22 23:26:55 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2.ebuild,v 1.2 2004/12/22 23:31:27 karltk Exp $
 
 inherit java-pkg
 
@@ -25,7 +25,7 @@ src_compile() {
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} javadoc"
 
-	ant ${antflags} jar || die "Compile failed"
+	ant ${antflags} || die "Compile failed"
 }
 
 src_install() {
