@@ -1,0 +1,6 @@
+MD5 09dfcd144a554cca81ea299701c4c789 ChangeLog 875
+MD5 e57d959a921852c282341b6c7c97609c watchdog-5.2.ebuild 1375
+MD5 b8a1e49beda941e07c53020b8fb7a1a9 files/digest-watchdog-5.2 64
+MD5 a9e8cf348af5828fbdc72e8c1a3bb730 files/sundries.diff 874
+MD5 96232179b747a1bcacf83442f9217ec4 files/watchdog-5.2-alpha.diff 329
+MD5 f144a28b2b44fcd813216a02e4f69b0c files/5.2/watchdog 579
