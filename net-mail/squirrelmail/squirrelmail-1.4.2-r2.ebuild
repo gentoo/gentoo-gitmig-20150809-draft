@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r2.ebuild,v 1.5 2004/03/23 19:01:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r2.ebuild,v 1.6 2004/04/01 17:14:22 eradicator Exp $
 
 inherit webapp-apache
 
@@ -20,7 +20,6 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 	http://www.squirrelmail.org/plugins/gpg.${GPG_VER}.tar.gz
 	http://www.squirrelmail.org/plugins/ldapuserdata-${LDAP_VER}.tar.gz"
 
-RESTRICT="nomirror"
 HOMEPAGE="http://www.squirrelmail.org/"
 
 IUSE="crypt virus-scan ldap"
