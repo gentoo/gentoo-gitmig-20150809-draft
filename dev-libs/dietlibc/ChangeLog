@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.41 2005/01/21 22:12:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.42 2005/03/09 01:51:23 vapier Exp $
+
+*dietlibc-0.28 (08 Mar 2005)
+
+  08 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/dietlibc-0.28-Makefile.patch, +files/gcc-33-r3.patch,
+  +dietlibc-0.28.ebuild:
+  Version bump.
 
   21 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> dietlibc-0.25.ebuild:
   Stable on alpha.
