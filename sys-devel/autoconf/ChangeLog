@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.64 2005/02/07 00:12:13 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.65 2005/02/15 19:24:01 kito Exp $
+
+  15 Feb 2005; Kito <kito@gentoo.org> autoconf-2.13.ebuild,
+  autoconf-2.59-r6.ebuild:
+  ~ppc-macos keyword
 
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> autoconf-2.13.ebuild,
   autoconf-2.59-r6.ebuild:
