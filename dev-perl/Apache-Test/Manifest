@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 55f0078f7d522f6e562c1eb51821e389 ChangeLog 1601
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 9ac44eeac038206d3d5f4c12e400f7b8 Apache-Test-1.15.ebuild 775
 MD5 c44307d19c5c80bc828048ac1d343c8e Apache-Test-1.03.ebuild 765
-MD5 15bd92d3f3e54f05687a7eaed6324a25 Apache-Test-1.07.ebuild 780
 MD5 a3fb0e047f6474bcf76612e3f3446015 Apache-Test-1.11.ebuild 785
-MD5 bee25966afba82126ceb965b5d3af00b ChangeLog 1504
-MD5 98df8b9ef8f61c811e5746a4675208bb Apache-Test-1.15.ebuild 779
+MD5 15bd92d3f3e54f05687a7eaed6324a25 Apache-Test-1.07.ebuild 780
 MD5 6a84fba1190e8a3bbf4bcf1f5d143121 files/digest-Apache-Test-1.03 67
 MD5 b5cdf8077185b98bef4daa08faf8facd files/digest-Apache-Test-1.07 67
 MD5 393cfce45f7c5ed48291421b204291d8 files/digest-Apache-Test-1.11 68
 MD5 f63ddebaf06de3d9772484b7636bc8a7 files/digest-Apache-Test-1.15 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB8VTatG5z4I8BtQoRAqCXAJ9hlninAtXcD0LHw4CJdBbUvdF1/ACeO/vX
-jzv95TlBNxxEwbG06+dldkY=
-=4aZE
+iD8DBQFB8ZbiugEuf3OQ0akRAqgBAJ0QAWhJQ28nEH4YiARCoguwpXyjvACeK4K2
+TGQ5S2KEH6tiA/g0xkdaft0=
+=NBQs
 -----END PGP SIGNATURE-----
