@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.0.065-r2.ebuild,v 1.5 2003/03/29 04:46:07 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.0.065-r2.ebuild,v 1.6 2003/04/05 02:14:59 avenj Exp $
 
 S=${WORKDIR}
 
-DESCRIPTION="Intel C++ Compiler - The Pentium optimized compiler for Linux"
+DESCRIPTION="Intel C++ Compiler - Intel's Pentium optimized compiler for Linux"
 
 SRC_URI1="ftp://download.intel.com/software/products/compilers/downloads/l_cc_p_7.0.065.tar"
 SRC_URI2="ftp://download.intel.co.jp/software/products/compilers/downloads/l_cc_p_7.0.065.tar"
