@@ -1,5 +1,5 @@
 MD5 431f967320e5f44bb05e163ca0fc9fef gkrellm-reminder-0.3.5.ebuild 686
-MD5 6325cf7c0808120669a75eb334957726 ChangeLog 1704
-MD5 4475d2dd787901033b7bba4271a66b21 gkrellm-reminder-2.0.0.ebuild 621
+MD5 64b0ac636884ff25da45eb9cb9e285e1 ChangeLog 1797
+MD5 67e7f80726d78fefaae39ce249893b23 gkrellm-reminder-2.0.0.ebuild 627
 MD5 d042144fa195e9b3058d5d950fadebf3 files/digest-gkrellm-reminder-0.3.5 65
 MD5 27fc8389ef51f891924671711028a81f files/digest-gkrellm-reminder-2.0.0 73
