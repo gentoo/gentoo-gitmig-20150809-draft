@@ -1,0 +1,85 @@
+# ChangeLog for net-www/orion
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/ChangeLog,v 1.1 2004/08/08 17:51:02 stuart Exp $
+
+*orion-2.0.2 (08 Aug 2004)
+
+  08 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/2.0/2.0-gentoo.patch, +files/2.0/orion.conf, +files/2.0/orion.init,
+  +files/2.0/start_orion.sh, +files/2.0/stop_orion.sh,
+  +files/2.0.1/2.0.1-gentoo.patch, +files/2.0.1/orion.conf,
+  +files/2.0.1/orion.init, +files/2.0.1/start_orion.sh,
+  +files/2.0.1/stop_orion.sh, +files/2.0.2/2.0.2-gentoo.patch,
+  +files/2.0.2/orion.conf, +files/2.0.2/orion.init,
+  +files/2.0.2/start_orion.sh, +files/2.0.2/stop_orion.sh,
+  +orion-2.0.1.ebuild, +orion-2.0.2.ebuild:
+  Moved from net-www/orion to www-servers/orion.
+
+  26 Jul 2004; Thomas Matthijs <axxo@gentoo.org> orion-2.0.1.ebuild,
+  orion-2.0.2.ebuild, -orion-2.0.ebuild:
+  ebuilds cleanup
+
+*orion-2.0.2 (16 Jul 2004)
+
+  16 Jul 2004; Thomas Matthijs <axxo@gentoo.org> :
+  Version Bump
+
+  16 May 2004; Chris Aniszczyk <zx@gentoo.org> orion-2.0.1.ebuild,
+  orion-2.0.ebuild:
+  Fix QA Violations, closes #48357
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> orion-2.0.1.ebuild,
+  orion-2.0.ebuild:
+  Add inherit eutils
+
+  15 Dec 2003; <spider@gentoo.org> orion-2.0.1.ebuild, orion-2.0.ebuild:
+  QA: fixing chown user.group to user:group, bug #35127
+
+*orion-2.0.1 (01 May 2003)
+
+  01 May 2003; Dylan Carlson <absinthe@gentoo.org> orion-2.0.1.ebuild,
+  files/2.0.1/2.0.1-gentoo.patch, files/2.0.1/orion.conf,
+  files/2.0.1/orion.init, files/2.0.1/start_orion.sh,
+  files/2.0.1/stop_orion.sh:
+  Version bump.  Will fetch automatically now as well.
+
+*orion-2.0 (21 Mar 2003)
+
+  06 Apr 2003; Dylan Carlson <absinthe@gentoo.org> orion-2.0.ebuild:
+  x86 ppc sparc moved to stable.
+
+  03 Apr 2003; Dylan Carlson <absinthe@gentoo.org> files/2.0/orion.conf:
+  Fix to orion.conf to automatically pull system JVM by default.
+
+  03 Apr 2003; Dylan Carlson <absinthe@gentoo.org> orion-2.0.ebuild:
+  Digest updates; change to ebuild to temporarily remove userdel until a proper
+  solution is ready.
+
+  21 Mar 2003; Dylan Carlson <absinthe@gentoo.org> orion-2.0.ebuild,
+  files/2.0/2.0-gentoo.patch, files/2.0/orion.conf, files/2.0/orion.init,
+  files/2.0/start_orion.sh, files/2.0/stop_orion.sh:
+  Version bump.  Improved post-install notices, and user/group add and remove.
+
+*orion-1.5.2b-r1 (13 Mar 2003)
+
+  14 Mar 2003; Dylan Carlson <absinthe@gentoo.org> files/1.5.2b/orion.conf,
+  files/1.5.2b/orion.init, files/1.5.2b/start_orion.sh,
+  files/1.5.2b/stop_orion.sh:
+  Fixed start_orion.sh to correctly source conf.d/orion.  Added cvs keywords.
+
+  13 Mar 2003; Dylan Carlson <absinthe@gentoo.org> ChangeLog  :
+
+  Log directory gets properly created now.  init.d/conf.d is fixed.
+  Improved post_install notices.  Changed JDK requirement to virtual/jdk-1.4.
+  /opt/orion/persistence/ is now created properly.  Added necessary delay to 
+  'stop' in /etc/init.d/orion.
+
+  11 Mar 2003; Dylan Carlson <absinthe@gentoo.org> ChangeLog  :
+
+  This package needs testers!  If you encounter problems, please report
+  them to http://bugs.gentoo.org/.   Also note that this ebuild creates a
+  new user and group on your system.
+
+  11 Mar 2003; Dylan Carlson <absinthe@gentoo.org> ChangeLog  :
+
+  Initial import.
