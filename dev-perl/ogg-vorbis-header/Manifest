@@ -1,5 +1,5 @@
-MD5 a266602c3bb88d503b6c388c17630dec ogg-vorbis-header-0.02.ebuild 670
-MD5 ff89afe86a0292b36176bdec11b4a5da ogg-vorbis-header-0.03.ebuild 687
+MD5 b9486b44bd03e1069c2b1be7d2aaed88 ogg-vorbis-header-0.02.ebuild 678
+MD5 941b0fac0d77146dffb8325b698c4179 ogg-vorbis-header-0.03.ebuild 695
 MD5 44bb44a824a4d698a1034218b1b3c60d ChangeLog 924
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 53ef8293adb4df3459ca51873e306e8f files/digest-ogg-vorbis-header-0.02 73
