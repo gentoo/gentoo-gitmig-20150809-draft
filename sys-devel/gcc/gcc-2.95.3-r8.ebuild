@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.24 2004/04/22 02:27:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.25 2004/04/22 02:32:36 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -24,11 +24,20 @@ inherit eutils flag-o-matic gcc
 # problems.
 #
 # <azarah@gentoo.org> (13 Oct 2002)
-strip-flags
+do_filter_flags() {
+	strip-flags
 
-# Are we trying to compile with gcc3 ?  CFLAGS and CXXFLAGS needs to be
-# valid for gcc-2.95.3 ...
-gcc2-flags
+	# In general gcc does not like optimization, and add -O2 where
+	# it is safe.
+	filter-flags -O?
+
+	# Compile problems with these (bug #6641 among others)...
+	filter-flags -fno-exceptions -fomit-frame-pointer -ggdb
+
+	# Are we trying to compile with gcc3 ?  CFLAGS and CXXFLAGS needs to be
+	# valid for gcc-2.95.3 ...
+	gcc2-flags
+}
 
 # Theoretical cross compiler support
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
@@ -67,7 +76,6 @@ DEPEND="virtual/glibc
 	>=sys-devel/gcc-config-1.2
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
-
 RDEPEND="virtual/glibc
 	>=sys-devel/gcc-config-1.2.3
 	>=sys-libs/zlib-1.1.4
@@ -99,11 +107,12 @@ src_unpack() {
 	#
 	# Azarah - 30 Jun 2002
 	#
-	if ! use alpha >/dev/null ;then
+	if ! use alpha ; then
 		epatch ${FILESDIR}/${P}-new-atexit.diff
 	else
 		epatch ${FILESDIR}/${P}-alpha.diff
 	fi
+
 	# Currently if any path is changed via the configure script, it breaks
 	# installing into ${D}.  We should not patch it in src_install() with
 	# absolute paths, as some modules then gets rebuild with the wrong
@@ -132,24 +141,18 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	if [ -z "`use build`" ]
-	then
-		myconf="${myconf} --enable-shared"
-	else
-		myconf="${myconf} --enable-languages=c"
-	fi
-	if [ -z "`use nls`" ] || [ "`use build`" ]
+	use build \
+		&& myconf="${myconf} --enable-languages=c" \
+		|| myconf="${myconf} --enable-shared"
+	if ! use nls || use build
 	then
 		myconf="${myconf} --disable-nls"
 	else
 		myconf="${myconf} --enable-nls --without-included-gettext"
 	fi
 
-	# In general gcc does not like optimization, and add -O2 where
-	# it is safe.
-	filter-flags -O?
-	# Compile problems with these (bug #6641 among others)...
-	filter-flags -fno-exceptions -fomit-frame-pointer -ggdb
+	# Make sure we have sane CFLAGS
+	do_filter_flags
 
 	# Build in a separate build tree
 	mkdir -p ${WORKDIR}/build
@@ -178,7 +181,7 @@ src_compile() {
 	get_number_of_jobs
 
 	einfo "Building GCC..."
-	if [ -z "`use static`" ]
+	if ! use static
 	then
 		# Fix for our libtool-portage.patch
 		S="${WORKDIR}/build" \
@@ -239,7 +242,7 @@ src_install() {
 
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${D}${LIBPATH}
 
@@ -276,16 +279,16 @@ src_install() {
 	fi
 
 	cd ${S}
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
 		docinto /
-		dodoc COPYING COPYING.LIB README* FAQ MAINTAINERS
+		dodoc README* FAQ MAINTAINERS
 		docinto html
 		dodoc faq.html
 		docinto gcc
 		cd ${S}/gcc
-		dodoc BUGS ChangeLog* COPYING* FSFChangeLog* LANGUAGES NEWS PROBLEMS README* SERVICE TESTS.FLUNK
+		dodoc BUGS ChangeLog* FSFChangeLog* LANGUAGES NEWS PROBLEMS README* SERVICE TESTS.FLUNK
 		cd ${S}/libchill
 		docinto libchill
 		dodoc ChangeLog
@@ -313,7 +316,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	if [ "${ROOT}" = "/" -a "${COMPILER}" != "gcc3" -a "${CHOST}" == "${CCHOST}" ]
 	then
 		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}
