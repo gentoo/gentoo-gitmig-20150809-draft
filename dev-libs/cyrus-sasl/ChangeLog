@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.96 2004/10/04 16:49:19 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.97 2004/10/09 14:10:02 joker Exp $
+
+  09 Oct 2004; Christian Birchinger <joker@gentoo.org>
+  cyrus-sasl-2.1.19-r1.ebuild:
+  Added sparc stable keyword
 
   04 Oct 2004; Tuan Van <langthang@gentoo.org> cyrus-sasl-2.1.19-r1.ebuild:
   remove !arch? in *DEPEND, use.mask instead.
