@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre20041203.ebuild,v 1.1 2004/12/04 20:22:12 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre20041203.ebuild,v 1.2 2005/01/09 10:57:53 swegener Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="Sophos.ca:/opt/cvsroot"
@@ -27,7 +27,7 @@ DEPEND="${GS_DEPEND}
 	=gnustep-libs/pantomime-${PV}
 	gnustep-apps/addresses"
 RDEPEND="${GS_RDEPEND}
-	crypt? app-crypt/gnupg
+	crypt? ( app-crypt/gnupg )
 	=gnustep-libs/pantomime-${PV}
 	gnustep-apps/addresses"
 
