@@ -1,12 +1,10 @@
-diff -u -r cups-1.1.10.orig/configure cups-1.1.10/configure
---- configure.orig	Fri Aug 17 12:54:44 2001
-+++ configure	Mon Oct  8 15:55:28 2001
-@@ -3461,7 +3461,7 @@
-   cat > conftest.$ac_ext <<EOF
- #line 3463 "configure"
+--- configure~	2002-06-17 03:43:29.000000000 -0400
++++ configure	2002-06-17 03:42:55.000000000 -0400
+@@ -6359,7 +6359,6 @@
+ #line $LINENO "configure"
  #include "confdefs.h"
+ $ac_includes_default
 -#include <jpeglib.h>
-+/* #include <jpeglib.h> */
- EOF
- ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
- { (eval echo configure:3468: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
