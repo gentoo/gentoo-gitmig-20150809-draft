@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.3.ebuild,v 1.1 2003/08/15 13:17:08 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.3.ebuild,v 1.2 2003/09/07 03:12:20 msterret Exp $
 
 DESCRIPTION="Gentoo Linux USE flags editor"
 HOMEPAGE="http://www.gentoo.org"
@@ -24,7 +24,7 @@ src_install() {
 	#remove CVS dirs for the moment
 	find ${S} -name CVS -xtype d -exec rm -rf \{} \; 2>/dev/null
 	#--- end of fixes
-	
+
 	newsbin ufed.pl ufed
 	doman ufed.8
 	dodoc COPYING docs/* ChangeLog

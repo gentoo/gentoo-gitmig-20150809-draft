@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/portagemaster-0.2.0.ebuild,v 1.1 2003/08/15 12:56:48 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/portagemaster-0.2.0.ebuild,v 1.2 2003/09/07 03:12:20 msterret Exp $
 
 DESCRIPTION="A java portage browser and installer"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -34,10 +34,10 @@ src_unpack() {
 
 src_compile() {
 	if [ -z "`use jikes`" ] ; then
-		einfo "Configuring build for Jikes"	
+		einfo "Configuring build for Jikes"
 		cp build.xml build.xml.orig
 		sed 's!<property name="build.compiler" value="jikes"/>!<property name="build.compiler" value="modern"/>!' < build.xml.orig > build.xml
-	fi	
+	fi
 	ant
 	cp src/portagemaster src/portagemaster.orig
 	sed -e s:/usr/share/portagemaster/portagemaster.jar:/usr/share/portagemaster/lib/portagemaster-${PV}.jar: \

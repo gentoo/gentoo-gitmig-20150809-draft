@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.1.30.ebuild,v 1.2 2003/08/15 12:56:47 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.1.30.ebuild,v 1.3 2003/09/07 03:12:20 msterret Exp $
 
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/"
@@ -72,7 +72,7 @@ src_install() {
 pkg_postinst() {
 	ewarn "The 'useflag' utility has been removed, pending an overhaul. It has proven to be too brittle to be used safely."
 	einfo ""
-	einfo "since epm is now it's own package please emerge it yourself app-portage/epm" 
+	einfo "since epm is now it's own package please emerge it yourself app-portage/epm"
 	einfo ""
 	einfo "if you are upgrading from gentoolkit-0.1.17-r7 or earlier and"
 	einfo "you're using mkebuild, please remove ~/.mkebuild to update your settings"

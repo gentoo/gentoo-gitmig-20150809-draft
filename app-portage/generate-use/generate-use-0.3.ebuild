@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/generate-use/generate-use-0.3.ebuild,v 1.1 2003/08/15 12:14:04 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/generate-use/generate-use-0.3.ebuild,v 1.2 2003/09/07 03:12:20 msterret Exp $
 
 DESCRIPTION="A USE var generator for Gentoo Linux(gtk+2)"
 HOMEPAGE="http://www.lordvan.com/Projects/Linux/Gentoo/gentoolkit-gui/"
@@ -24,5 +24,5 @@ src_compile() {
 src_install() {
     dobin generate-use
     dodoc AUTHORS  ChangeLog  LICENSE  README  TODO
-   	
+
 }
