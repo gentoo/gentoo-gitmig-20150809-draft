@@ -2,12 +2,12 @@
 Hash: SHA1
 
 MD5 e7bce4b8478b1128e86efb8bf43a7d08 c-client-2002e-r2.ebuild 2039
-MD5 1f17131717d381fea23ce8a065acf1a2 c-client-2004a.ebuild 2182
+MD5 ecdbce3ee2598f6cf9d5f037333c9766 c-client-2004a.ebuild 2183
 MD5 81f0f9656a107854fa3ddf25217525a6 c-client-2002e-r1.ebuild 1974
 MD5 5fb5acd5c2e0b78dbaca4aa75cb36b74 c-client-2002e.ebuild 1893
 MD5 47ac744573c05e8e5c5dc6b471bde3fa c-client-2002d-r1.ebuild 1869
 MD5 4f41fccb86faf1807f69e9e7695866a8 c-client-2004a-r1.ebuild 2589
-MD5 63e9e9e6c33eb4037c6357e7686273fa ChangeLog 2854
+MD5 b0943d5c1c2a45d1f549972839c81587 ChangeLog 2946
 MD5 6b964abdc013cf2bb64040e8e33215ae metadata.xml 242
 MD5 cc926ec2e710759c314acd92cd84b770 c-client-2002d.ebuild 1853
 MD5 1fc1132a6fb90046b701e9196e7a96b0 files/digest-c-client-2002d-r1 62
@@ -22,7 +22,7 @@ MD5 c8cf618ac210e06a1641871b30550e8f files/2002d-Makefile.patch 2174
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB/6FantT9W3vfTuoRAp14AJ0SOOF+lhPM3QRN78JdZbKe17//9QCgqi8W
-mfROganeUfuEVVxlAp+9s9w=
-=hpbO
+iD8DBQFCGV1gM+I1L6GK/u4RAqB8AKCEwOdhJ07e0D9iBNbZdW+yZwv0NACfY0GT
+MBCb4J2BxJVl/jp21A27noQ=
+=AzlU
 -----END PGP SIGNATURE-----
