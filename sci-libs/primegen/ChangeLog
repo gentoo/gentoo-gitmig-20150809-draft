@@ -1,0 +1,22 @@
+# ChangeLog for app-sci/primegen
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/primegen/ChangeLog,v 1.1 2004/12/28 19:19:55 ribosome Exp $
+
+*primegen-0.97 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +primegen-0.97.ebuild:
+  Moved from app-sci/primegen to sci-libs/primegen.
+
+  21 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> primegen-0.97.ebuild:
+  Added to ~amd64, bug #71866
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> primegen-0.97.ebuild:
+  virtual/glibc -> virtual/libc
+
+*primegen-0.97 (13 Mar 2003)
+
+  13 Mar 2003; George Shapovalov <george@gentoo.org> ChangeLog, primegen-0.97.ebuild, files/{digest-primegen-0.97} :
+  initial release (#16300)
+  A small, fast library to generate primes in order
+  ebuild submitted by Tom Payne <gentoo@tompayne.org>
