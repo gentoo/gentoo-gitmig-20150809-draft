@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4.ebuild,v 1.3 2003/05/18 20:53:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4.ebuild,v 1.4 2003/05/24 19:14:02 taviso Exp $
 
 IUSE="X jpeg truetype"
 
@@ -26,6 +26,9 @@ src_unpack() {
 
 	local compopts
 	local libsopts
+
+	use alpha \
+		&& [ "${CC}" == "ccc" ] && epatch ${FILESDIR}/gd-${PV}-dec-alpha-compiler.diff
 
 	use X \
 		&& compopts="${compopts} -DHAVE_XPM" \
@@ -53,6 +56,7 @@ src_unpack() {
 	else
 		sed -e "s:^\(CFLAGS\)=.*:\1=${CFLAGS} ${compopts} :" \
 		-e "s:^\(LIBS\)=.*:\1=-lm -lgd -lz ${libsopts}:" \
+		-e "s:\(COMPILER=\)gcc:\1${CC:-gcc}:" \
 		Makefile.old > Makefile || die
 	fi
 
