@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2842 2004/05/04 12:21:13 usata Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2843 2004/05/04 12:22:41 usata Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -232,11 +232,6 @@ net-p2p/teknap
 # waiting for a new micro release
 =app-office/abiword-2.0.4
 
-# <usata@gentoo.org> (08 Mar 2004)
-# uim-skk included in this version messes up user dictionary if it fails
-# to study new word
-=app-i18n/uim-0.3.1
-
 # <rajiv@gentoo.org> (03 Mar 2004)
 # security problems. see bug #43658.
 <net-ftp/proftpd-1.2.9
@@ -325,10 +320,6 @@ media-video/sinek
 # <robbat2@gentoo.org> (22 Jan 2004)
 # masked because these don't work atm
 <net-analyzer/ns-2.27
-
-# <usata@gentoo.org> (22 Jan 2004)
-# masked because of chkfontpath, bug #36109
-=media-fonts/unifont-1.0
 
 # <net-im@gentoo.org> (20 Jan 2004)
 # doesnt work with current msn protocol #38747
