@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.55 2004/11/26 15:06:17 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.56 2004/11/26 16:01:46 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -87,7 +87,8 @@ kernel_is() {
 }
 
 kernel_is_2_4() {
-	[  `kernel_is 2 4` ] && return 0 || return 1
+	kernel_is 2 4
+	return $?
 }
 
 kernel_is_2_6() {
@@ -678,9 +679,14 @@ detect_arch() {
 #==============================================================
 kernel-2_src_unpack() {
 	universal_unpack
-	[ -n "${UNIPATCH_LIST}" -o -n "${UNIPATCH_LIST_DEFAULT}" ] && unipatch "${UNIPATCH_LIST_DEFAULT} ${UNIPATCH_LIST}"
-	[ -z "${K_NOSETEXTRAVERSION}" ] && unpack_set_extraversion
-	[ $(kernel_is_2_4) $? == 0 ] && unpack_2_4
+	
+	[ -n "${UNIPATCH_LIST}" -o -n "${UNIPATCH_LIST_DEFAULT}" ] && \
+		unipatch "${UNIPATCH_LIST_DEFAULT} ${UNIPATCH_LIST}"
+		
+	[ -z "${K_NOSETEXTRAVERSION}" ] && \
+		unpack_set_extraversion
+
+	kernel_is 2 4 && unpack_2_4
 }
 
 kernel-2_src_compile() {
