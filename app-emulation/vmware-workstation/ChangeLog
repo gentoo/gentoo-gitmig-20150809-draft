@@ -1,8 +1,13 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.18 2003/07/26 00:48:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.19 2003/07/30 14:30:16 vapier Exp $
 
-*vmware-workstation-4.0.4460-r1 (25 Jul 2003)
+*vmware-workstation-4.0.1.5289 (30 Jul 2003)
+
+  30 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
+
+*vmware-workstation-4.0.0.4460-r1 (25 Jul 2003)
 
   25 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
   Add 2.5/2.6 kernel support.
