@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-extra
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-extra/ChangeLog,v 1.5 2004/06/24 23:39:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-extra/ChangeLog,v 1.6 2004/07/06 23:18:58 eradicator Exp $
+
+  06 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-extra-0.1.ebuild:
+  ~sparc.  Fixed description.
 
   10 May 2004; Travis Tilley <lv@gentoo.org> xmms-extra-0.1.ebuild:
   added gnuconfig_update and ~amd64 keyword
