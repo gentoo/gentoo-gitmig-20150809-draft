@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/tornado/tornado-1.2.1a.ebuild,v 1.4 2004/06/24 23:29:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/tornado/tornado-1.2.1a.ebuild,v 1.5 2004/06/28 20:10:18 vapier Exp $
 
 inherit games
 
@@ -9,14 +9,13 @@ HOMEPAGE="http://home.kcore.de/~kiza/linux/tornado/"
 SRC_URI="http://home.kcore.de/~kiza/linux/tornado/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
 SLOT="0"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.3"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
-	sys-apps/textutils"
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -24,18 +23,17 @@ src_unpack() {
 
 	sed -i \
 		-e "s:/usr/local:/usr:" \
-		-e "s:-O2:${CFLAGS}:" Makefile || \
-			die "sed Makefile failed"
-
+		-e "s:-O2:${CFLAGS}:" \
+		Makefile || die "sed Makefile failed"
 	sed -i \
 		-e "s:PREFIX/bin:${GAMES_BINDIR}:" \
 		-e "s:PREFIX/man:/usr/man:" \
-		-e "s:/usr/local:/usr:" doc/man/tornado.6.in || \
-			die "sed doc/man/tornado.6 failed"
+		-e "s:/usr/local:/usr:" \
+		doc/man/tornado.6.in || die "sed doc/man/tornado.6 failed"
 }
 
 src_install() {
-	dogamesbin tornado
+	dogamesbin tornado || die
 	doman doc/man/tornado.6
 	dodoc AUTHOR CREDITS Changelog README TODO
 	insinto ${GAMES_STATEDIR}
