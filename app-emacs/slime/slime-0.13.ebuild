@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-0.13.ebuild,v 1.5 2004/07/14 01:07:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-0.13.ebuild,v 1.6 2004/07/25 20:57:03 mkennedy Exp $
 
 inherit elisp
 
@@ -15,7 +15,6 @@ IUSE=""
 DEPEND="virtual/emacs
 	dev-lisp/common-lisp-controller
 	virtual/commonlisp"
-
 
 CLPACKAGE=swank
 

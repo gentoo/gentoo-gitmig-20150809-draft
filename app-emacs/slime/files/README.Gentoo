@@ -1,0 +1,8 @@
+SLIME notes for Gentoo
+----------------------
+
+If you're interested in hacking this port, please note that this port
+uses its own swank.asd and swank-loader.lisp.  For this reason, always
+report problems to the Gentoo Bugzilla http://bugs.gentoo.org and not
+to the upstream authors.
+

@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.4 2004/06/30 02:47:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.5 2004/07/25 20:57:03 mkennedy Exp $
+
+*slime-1.0_alpha (25 Jul 2004)
+
+  25 Jul 2004; <mkennedy@gentoo.org> +files/README.Gentoo, slime-0.13.ebuild,
+  +slime-1.0_alpha.ebuild:
+  New upstream version; Ebuild refined to make use of elisp and common-lisp
+  eclasses
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> slime-0.13.ebuild:
   sync IUSE (missing)
