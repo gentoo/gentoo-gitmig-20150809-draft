@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.5 2004/10/22 02:49:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.6 2004/12/23 10:17:36 bass Exp $
 
 inherit webapp
 
@@ -31,7 +31,20 @@ src_compile() {
 src_install () {
 	webapp_src_preinst
 
-	make DESTDIR=${D} install || die
+#	make DESTDIR=${D} install || die
+
+	cp MIDASa/MIDASa.cd.dist ${D}/usr/etc
+	cp MIDASb/MIDASb.cd.dist ${D}/usr/etc
+	cp MIDASc/MIDASc.cd.dist ${D}/usr/etc
+	cp MIDASd/MIDASd.cd.dist ${D}/usr/etc
+	cp MIDASs/MIDASs.cd.dist ${D}/usr/etc
+	cp MIDASn/MIDASn.cd.dist ${D}/usr/etc
+	cp MIDASa/MIDASa ${D}/usr/bin
+	cp MIDASb/MIDASb ${D}/usr/bin
+	cp MIDASc/MIDASc ${D}/usr/bin
+	cp MIDASd/MIDASd ${D}/usr/bin
+	cp MIDASs/MIDASs ${D}/usr/bin
+	cp MIDASn/MIDASn ${D}/usr/bin
 
 	dodir /usr/share/midas-nms
 	dodir /usr/share/midas-nms/sql
