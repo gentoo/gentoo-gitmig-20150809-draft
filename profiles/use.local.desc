@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.492 2004/07/17 03:05:59 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.493 2004/07/17 05:04:02 chriswhite Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -288,6 +288,7 @@ media-video/ffmpeg:faad - Enables faad2 support
 media-video/mjpegtools:dv - Enables support for a codec used by many camcorders
 media-video/mjpegtools:yv12 - Enables support for the YV12 pixel format
 media-video/mpeg4ip:v4l2 - Enable video4linux2 support
+media-video/mplayer:dvdread - Enables usage of Ogle's libdvdread for DVD playback
 media-video/mplayer:libcaca - Enables libcaca support, colored ASCII-art graphics
 media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:matroska - Use external libmatroska, rather then bundled version
