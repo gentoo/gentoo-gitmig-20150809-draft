@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxmms
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/ChangeLog,v 1.14 2004/10/10 18:39:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/ChangeLog,v 1.15 2004/10/19 17:43:26 kloeri Exp $
+
+  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> pyxmms-2.02.ebuild:
+  Stable on alpha.
 
   10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> pyxmms-2.02.ebuild:
   Add ~alpha keyword.

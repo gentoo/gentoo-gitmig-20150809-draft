@@ -1,10 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aac375ddd19dccdeb5ee7d65bc755eb9 pyxmms-1.06.ebuild 745
 MD5 d5ee260da42004f10cc5fc96c233fa12 pyxmms-1.07.ebuild 745
 MD5 72449c562b30ea2bb3f5570423673e8b metadata.xml 178
 MD5 47d499a95ae7c4423047e453bacbf5e1 pyxmms-2.01.ebuild 753
-MD5 b6d3e015a4c467d2b3f268e93cecc84b pyxmms-2.02.ebuild 761
-MD5 4aa92223d92f61befff82583db2de53c ChangeLog 1552
+MD5 22d106b5fed02928a388100ea24903fe pyxmms-2.02.ebuild 760
+MD5 6649264433f6f268aa592814866312e4 ChangeLog 1644
 MD5 e045a62bba6751534024556bc39282e2 files/digest-pyxmms-1.07 63
 MD5 be942fd3af551a40337b4c27fbd80fce files/digest-pyxmms-2.01 63
 MD5 0504b079041c2a77e5b46ca6fdf3eab1 files/digest-pyxmms-1.06 62
 MD5 dd205861a4c28a4363fc26a3f01ddde3 files/digest-pyxmms-2.02 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdVJJugEuf3OQ0akRAi+OAJ9lnKK3zSR6Gr7HRh+B3XKoADexOACfTb4t
+yXyzBfcI7RCsNANE8fcjOJU=
+=2QE8
+-----END PGP SIGNATURE-----

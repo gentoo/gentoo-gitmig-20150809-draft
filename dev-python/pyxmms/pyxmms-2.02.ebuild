@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/pyxmms-2.02.ebuild,v 1.8 2004/10/10 18:39:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/pyxmms-2.02.ebuild,v 1.9 2004/10/19 17:43:26 kloeri Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://people.via.ecp.fr/~flo/2002/PyXMMS/dist/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ppc amd64 ~alpha"
+KEYWORDS="x86 sparc ppc amd64 alpha"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.2.2
