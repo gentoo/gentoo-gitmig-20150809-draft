@@ -2,9 +2,9 @@ MD5 6b1e054bd4a54e9705eef29889eb8d9d ChangeLog 4211
 MD5 42c777ae654196e02a69556045798633 audiofile-0.2.3-r1.ebuild 781
 MD5 faf526e53972f56a50f0e5180591b393 audiofile-0.2.4.ebuild 835
 MD5 26a14217f140b0ebac44409a290c13b1 audiofile-0.2.5.ebuild 835
-MD5 7ad7328d7661c222939e1f293446311d audiofile-0.2.6-r1.ebuild 956
-MD5 efb6ddebe1e5eaf05f97ca9fc264c826 audiofile-0.2.6.ebuild 783
 MD5 b263ff7675308d90b75a170acae3f5ff metadata.xml 177
+MD5 efb6ddebe1e5eaf05f97ca9fc264c826 audiofile-0.2.6.ebuild 783
+MD5 fa57703952f66ca6e5b841bf8f8809e1 audiofile-0.2.6-r1.ebuild 951
 MD5 970090dcbe2b745a5b3940fdae30e6be files/digest-audiofile-0.2.3-r1 67
 MD5 229f6edb9a272909dd6c3f847c52c89f files/digest-audiofile-0.2.4 67
 MD5 bd21c46ede9b8210a6706ceda2b44659 files/digest-audiofile-0.2.5 67
