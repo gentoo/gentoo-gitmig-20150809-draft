@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-210.ebuild,v 1.5 2004/07/01 11:16:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-210.ebuild,v 1.6 2004/07/19 16:41:41 augustus Exp $
 
 inherit games
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://3dgamers.in-span.net/pub/3dgamers5/games/${PN/-/}/${MY_P}
 
 LICENSE="Army-EULA"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 RESTRICT="nostrip nomirror"
 
 # dedicated is unused at this time until I can find some good generic dedicated
@@ -25,7 +25,8 @@ IUSE="opengl" # dedicated
 DEPEND="virtual/libc
 	app-arch/unzip"
 RDEPEND="virtual/libc
-	opengl? ( virtual/opengl )"
+	opengl? ( virtual/opengl )
+	amd64? ( app-emulation/emul-linux-x86-xlibs )"
 
 S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/${PN}
