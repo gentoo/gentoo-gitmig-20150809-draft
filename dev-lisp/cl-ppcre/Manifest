@@ -4,7 +4,7 @@ MD5 4e3d59a33bf60492a04942f03ed5a194 cl-ppcre-0.7.8.ebuild 734
 MD5 ab687932c79643892bbb8728128d836b cl-ppcre-0.7.3-r1.ebuild 753
 MD5 3d31c461623a4fa1d5da14152f1a7f80 cl-ppcre-0.7.9.ebuild 734
 MD5 4789408ebf13ca57bcc95deb2593b6aa cl-ppcre-0.8.0.ebuild 734
-MD5 90d94a91af0772a130563e4ae48ec7b7 ChangeLog 2709
+MD5 cbc514fe2f9afd9dc795e8ae43b38f2a ChangeLog 2740
 MD5 4c279c0310d05cfbc77dd13023832a0e cl-ppcre-0.7.4.ebuild 729
 MD5 11927dbc9b84347135f9609d09bd08ce metadata.xml 457
 MD5 2d68be0ffdbf844aa83a0631d70de5b2 files/digest-cl-ppcre-0.7.8 71
