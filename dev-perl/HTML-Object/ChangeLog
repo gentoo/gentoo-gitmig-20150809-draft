@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Object
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Object/ChangeLog,v 1.11 2004/06/25 00:36:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Object/ChangeLog,v 1.12 2004/12/23 11:09:44 nigoro Exp $
+
+  23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> HTML-Object-2.15-r1.ebuild:
+  added ~ppc64
 
 *HTML-Object-2.15-r1 (21 Jun 2003)
  
