@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.0_pre10.ebuild,v 1.3 2003/02/14 22:28:04 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.0_rc3.ebuild,v 1.1 2003/03/11 00:48:00 livewire Exp $
 
 IUSE="build"
 
@@ -11,7 +11,7 @@ ETYPE="sources"
 inherit kernel || die
 
 OKV=2.4.20
-EXTRAVERSION=-wolk4.0s-pre10
+EXTRAVERSION=-wolk4.0s-rc3
 KV=${OKV}${EXTRAVERSION}
 S=${WORKDIR}/linux-${KV}
 DESCRIPTION="Working Overloaded Linux Kernel"
