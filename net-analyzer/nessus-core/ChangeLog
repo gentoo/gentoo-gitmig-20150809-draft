@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.41 2004/08/01 22:09:32 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.42 2004/08/12 12:14:24 sejo Exp $
+
+  12 Aug 2004; <SeJo@gentoo.org> nessus-core-2.0.12.ebuild:
+  stable masking ppc for bug 58014
 
   01 Aug 2004; Tom Gall <tgall@gentoo.org> nessus-core-2.0.11.ebuild:
   stable on ppc64, bug #57456

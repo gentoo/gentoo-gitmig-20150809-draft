@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/libnasl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.29 2004/07/31 22:26:05 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.30 2004/08/12 12:16:30 sejo Exp $
+
+  12 Aug 2004; <SeJo@gentoo.org> libnasl-2.0.12.ebuild:
+  stable masking ppc for bug 58014
 
   31 Jul 2004; Tom Gall <tgall@gentoo.org> libnasl-2.0.11.ebuild:
   stable on ppc64, bug #57454
