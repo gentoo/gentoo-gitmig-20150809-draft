@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.57 2004/09/04 21:33:45 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.58 2004/09/25 06:10:02 kumba Exp $
+
+  25 Sep 2004; Joshua Kinard <kumba@gentoo.org> man-1.5m-r1.ebuild:
+  Marked stable on mips.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> man-1.5m-r1.ebuild,
   man-1.5m.ebuild:
