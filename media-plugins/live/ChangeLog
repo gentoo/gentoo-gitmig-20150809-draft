@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/live
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.10 2004/03/16 06:47:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.11 2004/03/22 19:24:46 kanaka Exp $
+
+*live-2004.03.17 (22 Mar 2004)
+
+  22 Mar 2004; Joel Martin <kanaka@gentoo.org> live-2003.01.28.ebuild,
+  live-2003.04.11.ebuild, live-2003.06.26.ebuild, live-2003.09.01.ebuild,
+  live-2004.03.17.ebuild, metadata.xml:
+  Version bump, fixed copyrights, added metadata.xml with herd as media-video.
 
   16 Mar 2004; Luca Barbato <lu_zero@gentoo.org> live-2004.03.05.ebuild:
   Made sure that qtParse binary is removed

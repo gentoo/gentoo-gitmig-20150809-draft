@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2003.04.11.ebuild,v 1.4 2004/03/22 19:24:46 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2004.03.17.ebuild,v 1.1 2004/03/22 19:24:46 kanaka Exp $
 
 DESCRIPTION="Source-code libraries for standards-based RTP/RTCP/RTSP multimedia streaming, suitable for embedded and/or low-cost streaming applications"
 
@@ -9,7 +9,7 @@ MY_P=${P/-/.}
 SRC_URI="http://www.live.com/liveMedia/public/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND=">=sys-apps/sed-4"
 S=${WORKDIR}/${PN}
@@ -18,6 +18,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -i.orig -e "s:-O:${CFLAGS} -Wno-deprecated:" config.linux
+	epatch ${FILESDIR}/gcc-3.3.patch
+	#quick fix, something better will follow.
+	rm testProgs/qtParse
 }
 
 src_compile() {
