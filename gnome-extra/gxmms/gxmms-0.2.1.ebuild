@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gxmms/gxmms-0.1.1.ebuild,v 1.3 2005/03/21 23:03:49 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gxmms/gxmms-0.2.1.ebuild,v 1.1 2005/03/21 23:03:49 luckyduck Exp $
 
 inherit gnome2
 DESCRIPTION="XMMS applet for Gnome2 panel"
@@ -11,7 +11,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 sparc ~ppc"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
 IUSE=""
 USE_DESTDIR="1"
 
