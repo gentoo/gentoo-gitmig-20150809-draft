@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Joe Bormolini <lordjoe@bigfoot.com>
+# Author Joe Bormolini <lordjoe@gentoo.org>
 
 S=${WORKDIR}/${P}
 DESCRIPTION="bbkeys"
@@ -29,7 +29,6 @@ src_install () {
       cd ${S}
     fi
     try make DESTDIR=${D} install
-    exeinto /usr/X11R6/bin/wm
-    doexe ${FILESDIR}/blackbox
+    sed -e s:.*blackbox:"exec /usr/X11R6/bin/bbkeys \&\n&": blackbox.bak > blackbox
 }
 
