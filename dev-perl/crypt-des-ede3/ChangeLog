@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-des-ede3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-des-ede3/ChangeLog,v 1.5 2004/06/25 00:17:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-des-ede3/ChangeLog,v 1.6 2004/12/24 14:43:14 nigoro Exp $
+
+  24 Dec 2004; Yuta SATOH <nigoro@gentoo.org> crypt-des-ede3-0.01.ebuild:
+  added ~ppc64
 
   28 May 2004; Bryan Østergaard <kloeri@gentoo.org>
   crypt-des-ede3-0.01.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-cbc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.6 2004/06/25 00:16:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.7 2004/12/24 14:39:34 nigoro Exp $
+
+  24 Dec 2004; Yuta SATOH <nigoro@gentoo.org> crypt-cbc-2.11.ebuild:
+  added ~ppc64
 
 *crypt-cbc-2.11 (05 Jun 2004)
 
