@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/files/asuka.init.d,v 1.1 2003/10/27 19:55:17 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/files/asuka.init.d,v 1.2 2004/01/02 13:52:35 zul Exp $
 
 opts="depend start stop"
 

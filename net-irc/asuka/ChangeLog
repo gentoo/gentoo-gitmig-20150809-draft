@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/asuka
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/ChangeLog,v 1.1 2003/10/27 19:55:17 zul Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/ChangeLog,v 1.2 2004/01/02 13:52:35 zul Exp $
+
+*asuka-1.0.6 (02 Jan 2004)
+
+  02 Jan 2004; Chuck Short <zul@gentoo.org> asuka-1.0.6.ebuild,
+  files/asuka.conf.d, files/asuka.init.d:
+  Updated copyright years, marked stable.
 
   27 Oct 2003; Chuck Short <zul@gentoo.org> files/asuka.conf.d,
   files/asuka.init.d:

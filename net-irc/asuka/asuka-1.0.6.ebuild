@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/asuka-1.0.6.ebuild,v 1.1 2003/10/27 19:55:17 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/asuka-1.0.6.ebuild,v 1.2 2004/01/02 13:52:35 zul Exp $
 
 DESCRIPTION="The QuakeNet IRC Server"
 HOMEPAGE="http://dev-com.quakenet.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://dev-com.quakenet.org/releases/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE="debug"
 DEPEND="virtual/glibc"
