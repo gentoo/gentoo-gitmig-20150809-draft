@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/proofgeneral
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.4 2004/06/20 12:37:09 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.5 2004/06/20 13:15:13 mattam Exp $
+
+*proofgeneral-3.5 (20 Jun 2004)
+
+  20 Jun 2004; Matthieu Sozeau <mattam@gentoo.org> proofgeneral-3.5.ebuild:
+  New version, we now use their makefile (not always non-interactive) and
+  site file.
 
   20 Jun 2004; Matthieu Sozeau <mattam@gentoo.org> proofgeneral-3.4.ebuild:
   Move to stable.
