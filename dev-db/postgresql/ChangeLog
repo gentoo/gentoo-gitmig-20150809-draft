@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.90 2004/03/21 01:57:24 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.91 2004/03/21 11:30:41 kumba Exp $
+
+  21 Mar 2004; Joshua Kinard <kumba@gentoo.org> postgresql-7.3.6.ebuild:
+  Marked 7.3.6 stable on mips (repoman deps).
 
   21 Mar 2004; Masatomo Nakano <nakano@gentoo.org> postgresql-7.4.1-r4.ebuild,
   postgresql-7.4.2.ebuild:
