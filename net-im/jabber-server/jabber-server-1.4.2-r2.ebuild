@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.6 2002/11/13 18:22:16 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.7 2002/11/13 20:35:11 verwilst Exp $
 
 IUSE="ssl"
 
-ICQv7="0.2.9.5"
+ICQv7="0.3.0pre2"
 
 S="${WORKDIR}/jabber-${PV}"
 DESCRIPTION="Open Source Jabber Server & MUC,AIM,MSN,ICQ and Yahoo transports"
@@ -17,8 +17,10 @@ SRC_URI="http://jabberd.jabberstudio.org/downloads/jabber-${PV}.tar.gz
 	 http://files.jabberstudio.org/mu-conference/muconference-0.3.tar.gz
 	 mirror://sourceforge/icqv7-t/icqv7-t-${ICQv7}.tar.gz"
 
-DEPEND=">=dev-libs/pth-1.4.0
+DEPEND="=dev-libs/pth-1.4.0
 	>=dev-libs/glib-2
+	~dev-libs/libsigc++-1.0.4
+	>=net-libs/libicq2000-0.3.1
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 SLOT="0"
@@ -35,6 +37,7 @@ src_unpack() {
 	unpack yahoo-t-2.1.1.tar.gz
 	unpack muconference-0.3.tar.gz
 	unpack icqv7-t-${ICQv7}.tar.gz
+	patch -p0 < ${FILESDIR}/hash_map_gcc32.patch
 	mv ${S}/aim-transport-stable-20021012 ${S}/aim-transport
 	cd ${S}/aim-transport
 	cp ${DISTDIR}/Install_AIM_3.5.1670.exe .
@@ -71,9 +74,8 @@ src_compile() {
 
 	if [ "${COMPILER}" = "gcc3" ]; then
 		cd ${S}/icqv7-t-${ICQv7}
-		./configure || die
-	        make || die
-	        make install
+		./configure --bindir=${D}/usr --sbindir=${D}/usr --with-jabberd=../jabberd || die
+	        make CFLAGS="${CFLAGS} -I../../jabberd " || die
 	fi
 
 }
@@ -84,10 +86,16 @@ src_install() {
         cd ${S}
         exeinto /etc/init.d ; newexe ${FILESDIR}/jabber.rc6-r1 jabber
         mkdir -p ${D}/usr/sbin
+	
 	mkdir -p ${D}/etc/jabber
 	mkdir -p ${D}/usr/lib/jabber
 	mkdir -p ${D}/var/log/jabber
 	mkdir -p ${D}/var/run
+	if [ "${COMPILER}" = "gcc3" ]; then
+                cd ${S}/icqv7-t-${ICQv7}
+		make DESTDIR=${D} install || die
+        fi
+
 	cp ${S}/jabberd/jabberd ${D}/usr/sbin/
 	cp ${S}/aim-transport/src/aimtrans.so ${D}/usr/lib/jabber/
 	cp ${S}/aim-transport/Install_AIM_3.5.1670.exe ${D}/usr/lib/jabber/
