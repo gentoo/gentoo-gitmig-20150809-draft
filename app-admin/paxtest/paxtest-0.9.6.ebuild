@@ -1,11 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.6.ebuild,v 1.4 2005/01/01 11:17:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.6.ebuild,v 1.5 2005/01/06 19:30:52 vapier Exp $
 
 inherit eutils
-
-# pax flags are not strip safe.
-RESTRICT="nostrip"
 
 DESCRIPTION="PaX regression test suite"
 HOMEPAGE="http://www.adamantix.org/paxtest/"
@@ -13,8 +10,10 @@ SRC_URI="http://www.adamantix.org/paxtest/paxtest-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 amd64"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
+# pax flags are not strip safe.
+RESTRICT="nostrip"
 
 DEPEND="virtual/libc
 	>=sys-apps/chpax-0.5"
@@ -29,9 +28,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} BINDIR=/usr/bin RUNDIR=/usr/lib/paxtest install
+	make DESTDIR="${D}" BINDIR=/usr/bin RUNDIR=/usr/lib/paxtest install || die
 	for doc in Changelog README ;do
-		[ -f "${doc}" ] && dodoc ${doc}
+		[[ -f ${doc} ]] && dodoc ${doc}
 	done
 }
-
