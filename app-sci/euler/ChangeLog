@@ -1,8 +1,11 @@
 # ChangeLog for app-sci/euler
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/ChangeLog,v 1.2 2002/11/08 00:06:58 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/ChangeLog,v 1.3 2002/12/07 05:58:57 jmorgan Exp $
 
 *euler-1.60.6 (07 Nov 2002)
+  
+  07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> euler-1.60.6.ebuild:
+  Removed ~sparc64 keyword
 
   07 Nov 2002; George Shapovalov <george@gentoo.org> euler-1.60.6.ebuild :
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.60.6.ebuild,v 1.1 2002/11/08 00:06:58 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.60.6.ebuild,v 1.2 2002/12/07 05:58:58 jmorgan Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://euler.sf.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~sparx64"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="virtual/glibc
 	virtual/x11
