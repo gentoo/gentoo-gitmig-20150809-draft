@@ -41,10 +41,10 @@ global $uid, $dbusername; ?>
 <title>Gentoo Linux Dev-Wiki - <?=$title;?></title>
 <style type="text/css">
 <!--
-	a:link		{font-weight: bold; font-size: xx-small; color: blue; }
-	a:visited	{font-weight: bold; font-size: xx-small; color: blue; }
-	a:hover		{font-weight: bold; font-size: xx-small; color: red; }
-	a:active	{font-weight: bold; font-size: xx-small; color: red; }
+	a:link		{font-weight: bold; font-size: x-small; color: blue; }
+	a:visited	{font-weight: bold; font-size: x-small; color: blue; }
+	a:hover		{font-weight: bold; font-size: x-small; color: red; }
+	a:active	{font-weight: bold; font-size: x-small; color: red; }
 
 	body		{background-color: #dddaec; color: black; font-size: x-small;
 			font-family: Verdana, Helvetica, Sans-serif; margin:0;
