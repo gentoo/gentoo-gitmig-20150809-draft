@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21.ebuild,v 1.27 2004/10/06 21:55:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21.ebuild,v 1.28 2005/01/12 02:09:16 vapier Exp $
 
 ETYPE="headers"
 inherit kernel eutils
