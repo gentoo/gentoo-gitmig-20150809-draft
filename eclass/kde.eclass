@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.76 2003/03/15 17:38:29 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.77 2003/04/02 10:46:10 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -82,7 +82,12 @@ kde_src_compile() {
 				myconf="$myconf --host=${CHOST} --prefix=${PREFIX} --with-x --enable-mitshm --with-xinerama --with-qt-dir=${QTDIR} --enable-mt"
 				# calculate dependencies separately from compiling, enables ccache to work on kde compiles
 				myconf="$myconf --disable-dependency-tracking"
-				[ -n "$DEBUG" ] && myconf="$myconf --enable-debug=full --with-debug"	|| myconf="$myconf --disable-debug --without-debug"
+				# use debug is replacing $DEBUG
+				if [ -n "$DEBUG" -o -n "`use debug`" ]; then
+				    myconf="$myconf --enable-debug=full --with-debug"
+				else
+				    myconf="$myconf --disable-debug --without-debug"
+				fi
 				debug-print "$FUNCNAME: myconf: set to ${myconf}"
 				;;
 			configure)
