@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.04.ebuild,v 1.1 2003/09/24 06:44:59 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.04.ebuild,v 1.2 2003/10/11 01:43:29 hillster Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="displays GPS position on a map"
@@ -13,8 +13,9 @@ KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
 
 IUSE="nls"
 DEPEND="sys-devel/gettext
-		>=x11-libs/gtk+-2.0
-		>=media-libs/gdk-pixbuf-0.21.0"
+	>=x11-libs/gtk+-2.0
+	>=media-libs/gdk-pixbuf-0.21.0
+	>=dev-libs/libpcre-4.2"
 
 
 src_unpack() {
@@ -30,7 +31,7 @@ src_unpack() {
 
 src_compile() {
 	econf `use_enable nls`
-	emake || die
+	emake || die "compile failed"
 
 }
 
