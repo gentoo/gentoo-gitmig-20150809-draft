@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo/mondo-0.9a.ebuild,v 1.2 2005/02/12 04:21:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo/mondo-0.9a.ebuild,v 1.3 2005/02/27 12:34:50 brix Exp $
 
 DESCRIPTION="A System Health Monitor"
 HOMEPAGE="http://mondo-daemon.sourceforge.net/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=">=sys-apps/lm-sensors-2.6.3"
+DEPEND=">=sys-apps/lm_sensors-2.6.3"
 
 pkg_setup() {
 	if [[ ${KV:0:3} != "2.4" ]] ; then

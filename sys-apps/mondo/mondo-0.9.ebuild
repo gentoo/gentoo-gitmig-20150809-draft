@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo/mondo-0.9.ebuild,v 1.8 2005/02/27 12:34:50 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo/mondo-0.9.ebuild,v 1.9 2005/02/27 12:35:19 brix Exp $
 
 DESCRIPTION="A System Health Monitor"
 HOMEPAGE="http://mondo-daemon.sourceforge.net/"
@@ -9,7 +9,7 @@ IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND=">=sys-apps/lm-sensors-2.6.3"
+DEPEND=">=sys-apps/lm_sensors-2.6.3"
 
 SRC_URI="mirror://sourceforge/mondo-daemon/${P}.tar.bz2"
 
