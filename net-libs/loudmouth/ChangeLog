@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.10 2003/11/18 19:08:32 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.11 2003/12/07 15:41:24 spider Exp $
+
+*loudmouth-0.14.1 (07 Dec 2003)
+
+  07 Dec 2003; <spider@gentoo.org> loudmouth-0.14.1.ebuild:
+  Moving to stable x86
 
   18 Nov 2003; <spider@gentoo.org> :
   Updated version, removed gnutls patch
