@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.10-r5.ebuild,v 1.1 2005/02/23 17:17:01 azarah Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.10-r5.ebuild,v 1.2 2005/03/09 02:13:41 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
-inherit eutils gnuconfig libtool
+inherit eutils libtool
 
 DESCRIPTION="A shared library tool for developers"
 HOMEPAGE="http://www.gnu.org/software/libtool/libtool.html"
@@ -10,10 +10,10 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1.5"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="uclibc"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE=""
 
-DEPEND="virtual/libc
+DEPEND="sys-devel/gnuconfig
 	>=sys-devel/autoconf-2.59
 	>=sys-devel/automake-1.9"
 # the autoconf dep is due to it complaining 'configure.ac:55: error: Autoconf version 2.58 or higher is required'
@@ -127,10 +127,9 @@ src_unpack() {
 		done
 		eend 0
 	done
-	cd ${S}
+	cd "${S}"
 
 	uclibctoolize
-	gnuconfig_update ${WORKDIR}
 	epunt_cxx
 }
 
@@ -144,13 +143,11 @@ src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog* NEWS README THANKS TODO doc/PLATFORMS
 
-	if use uclibc ; then
-		for x in $(find ${D} -name config.guess -o -name config.sub) ; do
-			rm -f ${x}; ln -sf ../gnuconfig/$(basename ${x}) ${x}
-		done
-		cd ${D}/usr/share/libtool/libltdl
-		for x in config.guess config.sub ; do
-			rm -f ${x} ; ln -sfn ../${x} ${x}
-		done
-	fi
+	for x in $(find "${D}" -name config.guess -o -name config.sub) ; do
+		rm -f "${x}" ; ln -sf ../gnuconfig/$(basename "${x}") "${x}"
+	done
+	cd "${D}"/usr/share/libtool/libltdl
+	for x in config.guess config.sub ; do
+		rm -f ${x} ; ln -sfn ../${x} ${x}
+	done
 }
