@@ -46,7 +46,7 @@
 +					"type", "cpu"
 +				#endif
 +				#if defined(__mips__)
-+					"processor", "system type"
++					"cpu model", "system type"
 +				#endif
 +				#if defined(PPC)
 +					"processor", "cpu"
