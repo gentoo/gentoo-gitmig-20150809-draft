@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.1 2001/12/31 23:43:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.2 2002/01/04 12:06:28 danarmak Exp $
 # The autotools eclass enables building of the apps that needs the latest autconf/automake.
 #
 # NOTES:
@@ -22,7 +22,7 @@
 #    # Copyright 1999-2002 Gentoo Technologies, Inc.
 #    # Distributed under the terms of the GNU General Public License, v2 or later
 #    # Maintainer:  John Doe <john@foo.com>
-#    # $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.1 2001/12/31 23:43:41 azarah Exp $
+#    # $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.2 2002/01/04 12:06:28 danarmak Exp $
 #
 #    # If you need to set the versions different from in here, it *must*
 #    # be done before inherit.eclass is sourced
@@ -30,8 +30,8 @@
 #    #AMAKEVER=1.5b
 #
 #    # Source inherit.eclass and inherit AutoTools
-#    . /usr/portage/eclass/inherit.eclass || die
-#    inherit autotools || die
+#    . /usr/portage/eclass/inherit.eclass 
+#    inherit autotools 
 #
 #    # This is pretty standard.
 #    S=${WORKDIR}/${P}

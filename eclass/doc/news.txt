@@ -1,3 +1,7 @@
+04/01/2002
+merged virtual.eclass -> inherit.eclass.
+added || die to source statement in inherit(), so it's no longer needed when calling it.
+
 28/12
 v5.1
 Really big changes. Most of what has been added in the last versions has been deleted. Summary of changes:

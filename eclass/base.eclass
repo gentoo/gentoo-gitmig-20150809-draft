@@ -1,10 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.8 2001/12/22 14:52:29 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.9 2002/01/04 12:06:28 danarmak Exp $
 # The base eclass defines some default functions and variables. Nearly everything
 # else inherits from here.
-inherit virtual || die
 ECLASS=base
 
 S=${WORKDIR}/${P}

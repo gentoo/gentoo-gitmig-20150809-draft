@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.30 2002/01/03 20:31:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.31 2002/01/04 12:06:28 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
-inherit autoconf base || die
+inherit autoconf base
 ECLASS=kde
 
 DESCRIPTION="Based on the $ECLASS eclass"
@@ -28,6 +28,17 @@ kde_src_compile() {
 		configure)
 			debug-print-section configure
 			debug-print "$FUNCNAME::configure: myconf=$myconf"
+
+			# This can happen with e.g. a cvs snapshot			
+			if [ ! -f "./configure" ]; then
+			    for x in admin/Makefile.common; do
+				if [ -f "$x" ]; then
+				    make -f $x # don't || die here!
+				fi
+			    done
+			    [ -f "./configure" ] || die
+			fi
+			
 			export PATH="${KDEDIR}/bin:${PATH}"
 			./configure ${myconf} || die
 			;;
