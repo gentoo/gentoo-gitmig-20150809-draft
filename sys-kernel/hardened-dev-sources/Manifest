@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b09409014ed98f22c634f3a2d7a3a48f ChangeLog 3010
-MD5 3475794bbcae2bbb067cee5a1a24f2b1 hardened-dev-sources-2.6.5-r3.ebuild 1032
+MD5 379bfe3851254dc59bce1d1db30f5fe4 hardened-dev-sources-2.6.5-r3.ebuild 1031
 MD5 302fb13cf538f346733216dd44caac40 metadata.xml 279
 MD5 2447af4c8ca3aebec11de1a7d650dcd9 hardened-dev-sources-2.6.4-r4.ebuild 882
 MD5 c962459db4e7e6aedd9b2d00e1376d2a files/digest-hardened-dev-sources-2.6.4-r4 143
 MD5 31ec7b4310dd7be3e34aab0204f9b1e8 files/hardened-dev-sources-2.6.5.CAN-2004-0109.patch 2072
 MD5 a92fc762071f8bc409d44efbb07385ef files/digest-hardened-dev-sources-2.6.5-r3 220
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFAvOT6I9RrrOsOLvcRAqekAJ9CxPPWje5dcOYSunkcjNegIbZC6wCeJPJj
+KnTvBRK30HLaFsubMJhBWls=
+=3U5z
+-----END PGP SIGNATURE-----
