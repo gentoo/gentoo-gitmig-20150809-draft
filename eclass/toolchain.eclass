@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.47 2004/11/09 21:18:31 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.48 2004/11/14 09:13:52 vapier Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -954,12 +954,15 @@ gcc_do_configure() {
 
 	# reasonably sane globals (hopefully)
 	confgcc="${confgcc} \
-		--enable-shared \
 		--with-system-zlib \
 		--disable-checking \
 		--disable-werror \
-		--disable-libunwind-exceptions \
-		--enable-threads=posix"
+		--disable-libunwind-exceptions"
+	if [ "${CHOST}" != "${CTARGET}" ] ; then
+		confgcc="${confgcc} --disable-shared --disable-threads"
+	else
+		confgcc="${confgcc} --enable-shared --enable-threads=posix"
+	fi
 
 	# default arch support
 	#use sparc && confgcc="${confgcc} --with-cpu=v7"
