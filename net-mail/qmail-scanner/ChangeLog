@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/qmail-scanner
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/ChangeLog,v 1.8 2003/02/15 19:36:57 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/ChangeLog,v 1.9 2003/04/19 23:18:35 prez Exp $
+
+*qmail-scanner-1.16-r1 (19 Apr 2003)
+
+  19 Apr 2003; Preston A. Elder <prez@gentoo.org> qmail-scanner-1.16-r1.ebuild,
+  Made dependant on virtual/virus not f-prot specifically.
 
 *qmail-scanner-1.16 (15 Feb 2003)
 
