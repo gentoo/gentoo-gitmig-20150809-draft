@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.39 2003/02/17 00:00:23 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.40 2003/02/17 07:33:55 lostlogic Exp $
+
+*lolo-sources-2.4.20.2_pre2 (17 Feb 2003)
+
+  Changes from _pre1:
+  * Fix stupid dumb forgot #ifdef problem in grsecurity
 
 *lolo-sources-2.4.20.2_pre1 (16 Feb 2003)
 
