@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.1_rc1.ebuild,v 1.4 2004/01/05 18:19:56 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.1_rc1.ebuild,v 1.5 2004/01/05 18:35:28 brad_mssw Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -55,7 +55,7 @@ SLOT="${KV}"
 KEYWORDS="-*"
 #KEYWORDS="-* ~x86 ~amd64 ~mips ~hppa ~sparc ~alpha"
 PROVIDE="virtual/linux-sources virtual/alsa"
-
+RESTRICT="nomirror"
 if [ "${KEYWORDS}" = "-*" ]
 then
 	ewarn "------------------READ THIS BEFORE CONTINUING!!!!!---------------------"
