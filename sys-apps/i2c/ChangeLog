@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/i2c
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.22 2004/09/06 00:42:53 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.23 2004/09/09 20:11:04 blubb Exp $
+
+  09 Sep 2004; <blubb@gentoo.org> i2c-2.8.7.ebuild:
+  added ~amd64 keyword
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> i2c-2.8.4.ebuild,
   i2c-2.8.7.ebuild:
