@@ -23,6 +23,10 @@
 ##
 
 # <seemant@gentoo.org> (05 Aug 2002)
+# masked for testing
+=net-analyzer/rdtool-1.0.39
+
+# <seemant@gentoo.org> (05 Aug 2002)
 # masked for testing custom CFLAGS
 =media-libs/xpm-3.4k-r1
 
