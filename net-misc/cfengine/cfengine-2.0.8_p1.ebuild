@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.0.8_p1.ebuild,v 1.1 2003/09/30 01:57:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.0.8_p1.ebuild,v 1.2 2003/09/30 21:54:13 spyderous Exp $
 PARCH=${P/_/}
 DESCRIPTION="An agent/software robot and a high level policy language for building expert systems to administrate and configure large computer networks"
 HOMEPAGE="http://www.iu.hio.no/cfengine/"
@@ -20,17 +20,16 @@ src_compile() {
 		--localstatedir=/var/lib/cfengine \
 		--with-workdir=/var/lib/cfengine \
 		--with-berkeleydb=/usr || die
-		emake || die
+	emake || die
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog COPYING DOCUMENTATION NEWS README TODO
-	dodoc doc/*.html
-	doinfo doc/*.info*
+	make DESTDIR=${D} install || die
+	dodoc AUTHORS ChangeLog COPYING DOCUMENTATION README TODO
+	dohtml ${D}/usr/share/cfengine/html/*.html
 	dodoc ${D}/usr/share/cfengine/*.example
 	rm -rf ${D}/usr/share/cfengine ${D}/usr/doc
-	keepdir /var/lib/cfengine
+	mkdir -p ${D}/var/lib/cfengine
 	fperms 700 /var/lib/cfengine
 	keepdir /var/lib/cfengine/bin
 	keepdir /var/lib/cfengine/inputs
