@@ -52,11 +52,6 @@
 # bug #34599
 <app-misc/screen-4.0.1-r1
 
-# <souder@gentoo.org>  (08 Dec 2003)
-# Unmaintained upstream since > year
-gnome-extra/apotheke
-
-
 # <pyrania@gentoo.org> (07 Dec 2003)
 # see bug #32469
 # preparing to drop
@@ -375,10 +370,6 @@ dev-python/japanesecodecs
 # <rac@gentoo.org> (24 Jun 2003)
 # needs testing - fairly radical reconfiguring
 =dev-perl/mod_perl-1.27-r3
-
-# <foser@gentoo.org> (24 Jun 2003)
-# New GNOME cups stuff needs proper testing
-=gnome-base/nautilus-2.2.4-r5
 
 # <liquidx@gentoo.org> (21 Jun 2003)
 # doesn't compile under gcc3 and is unsupported anymore
