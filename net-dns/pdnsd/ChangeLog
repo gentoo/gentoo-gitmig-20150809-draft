@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.18 2004/02/24 01:59:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.19 2004/03/15 23:40:47 dragonheart Exp $
+
+  16 Mar 2004; Daniel Black <dragonheart@gentoo.org> pdnsd-1.1.10.ebuild,
+  pdnsd-1.1.9.ebuild:
+  Added inherit eutils. Thanks to <aliz@gentoo.org>'s script for finding it
 
   24 Feb 2004; Daniel Black <dragonheart@gentoo.org> pdnsd-1.1.10.ebuild:
   As cachedir has changed to /var/cache, change the user's config ready for
