@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.96 2004/03/07 23:35:54 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.97 2004/03/07 23:42:01 tseng Exp $
+
+*fluxbox-0.9.8-r1 (07 Mar 2004)
+
+  07 Mar 2004; Brandon Hale <tseng@gentoo.org> fluxbox-0.9.8-r1.ebuild,
+  files/fluxbox.desktop:
+  Add .desktop file in preperation for new GDM, bug #40711
 
   07 Mar 2004; Brandon Hale <tseng@gentoo.org> fluxbox-0.9.6.ebuild,
   fluxbox-0.9.7-r1.ebuild:
