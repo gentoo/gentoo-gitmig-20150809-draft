@@ -1,11 +1,11 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: System Team <system@gentoo.org>
-# Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.2.ebuild,v 1.4 2001/11/24 18:40:50 drobbins Exp $
+# Maintainer: Grant Goodyear <g2boojum@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4.ebuild,v 1.1 2002/03/01 16:15:04 g2boojum Exp $
 
 TV=4.0
-SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
+SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
+		 ftp://ftp.funet.fi/pub/mirrors/sourceware.cygnus.com/pub/gcc/releases/${P}/${P}.tar.bz2
 	ftp://ftp.gnu.org/pub/gnu/texinfo/texinfo-${TV}.tar.gz"
 
 S=${WORKDIR}/${P}
@@ -23,11 +23,8 @@ then
 fi
 
 src_unpack() {
-	unpack ${P}.tar.gz
+	unpack ${P}.tar.bz2
 	cd ${S}
-	#Looks like the commented-out patch has been incorporated.
-	# A patch for the atexit problem occured with glibc-2.2.3
-	#patch -l -p0 < ${FILESDIR}/${P}-atexit.diff || die
 	# Now we integrate texinfo-${TV} into gcc.  It comes with texinfo-3.12.
 	cd ${S}
 	tar xzf ${DISTDIR}/texinfo-${TV}.tar.gz || die
@@ -66,8 +63,10 @@ src_compile() {
 	mkdir build
 	cd build
 
+	addwrite "/dev/zero"
 	${S}/configure --prefix=${LOC} --mandir=${LOC}/share/man --infodir=${LOC}/share/info \
-	--enable-version-specific-runtime-libs --host=${CHOST} --build=${CHOST} --target=${CHOST} --enable-threads  \
+	--enable-shared --host=${CHOST} --build=${CHOST} --target=${CHOST} \
+	--enable-threads=posix --disable-checking  \
 	--with-local-prefix=${LOC}/local ${myconf} || die
 
 	if [ -z "`use static`" ]
