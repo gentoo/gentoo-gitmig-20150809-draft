@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/cmfforum
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfforum/ChangeLog,v 1.4 2004/06/25 01:18:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfforum/ChangeLog,v 1.5 2004/11/23 00:12:11 swegener Exp $
+
+  23 Nov 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed digest.
 
   05 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> cmfforum-1.0.ebuild:
   down to ~ppc until deps are stable

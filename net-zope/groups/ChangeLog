@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/groups
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/groups/ChangeLog,v 1.5 2004/06/25 01:21:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/groups/ChangeLog,v 1.6 2004/11/23 00:13:08 swegener Exp $
+
+  23 Nov 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed digest.
 
   05 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> groups-0.3.1.ebuild:
   down to ~ppc until deps are stable

@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/issuetrackerproduct
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/issuetrackerproduct/ChangeLog,v 1.5 2004/10/23 22:53:54 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/issuetrackerproduct/ChangeLog,v 1.6 2004/11/23 00:13:52 swegener Exp $
+
+  23 Nov 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed digest.
 
 *issuetrackerproduct-0.5.2 (24 Oct 2004)
 
