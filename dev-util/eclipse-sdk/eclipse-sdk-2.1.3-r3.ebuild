@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r3.ebuild,v 1.4 2004/05/19 13:55:37 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r3.ebuild,v 1.5 2004/05/26 21:00:06 karltk Exp $
 
 inherit eutils
 
@@ -39,9 +39,9 @@ set_dirs() {
 
 	case $ARCH in
 		sparc)
-			gtk_swt_dest_dir="plugins/org.eclipse.swt.gtk/os/solaris/sparc"
-			motif_swt_dest_dir="plugins/org.eclipse.swt.motif/os/solaris/sparc"
-			core_dest_dir="plugins/org.eclipse.core.resources.linux/os/solaris/sparc"
+			gtk_swt_dest_dir="plugins/org.eclipse.swt.gtk/os/linux/sparc"
+			motif_swt_dest_dir="plugins/org.eclipse.swt.motif/os/linux/sparc"
+			core_dest_dir="plugins/org.eclipse.core.resources.linux/os/linux/sparc"
 			;;
 		x86)
 			gtk_swt_dest_dir="plugins/org.eclipse.swt.gtk/os/linux/x86"
