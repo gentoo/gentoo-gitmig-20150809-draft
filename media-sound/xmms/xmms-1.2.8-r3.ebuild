@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r3.ebuild,v 1.10 2004/01/30 06:37:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r3.ebuild,v 1.11 2004/01/30 08:10:05 mr_bones_ Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
@@ -31,10 +31,10 @@ RDEPEND="${DEPEND}
 	directfb? ( dev-libs/DirectFB )
 	nls? ( dev-util/intltool )
 	app-arch/unzip"
-	
+
 #We want these things in DEPEND only
-DEPEND="$DEPEND 
-	>=sys-devel/automake-1.7.8 
+DEPEND="$DEPEND
+	>=sys-devel/automake-1.7.8
 	>=sys-devel/autoconf-2.58"
 
 PATCHDIR=${WORKDIR}/patches

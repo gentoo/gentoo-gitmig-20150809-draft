@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r23.ebuild,v 1.13 2004/01/30 06:37:22 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r23.ebuild,v 1.14 2004/01/30 08:10:05 mr_bones_ Exp $
 
 inherit libtool flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -30,10 +30,10 @@ RDEPEND="${DEPEND}
 	directfb? ( dev-libs/DirectFB )
 	nls? ( dev-util/intltool )
 	app-arch/unzip"
-	
+
 #We want these things in DEPEND only
-DEPEND="$DEPEND 
-	>=sys-devel/automake-1.7.7 
+DEPEND="$DEPEND
+	>=sys-devel/automake-1.7.7
 	>=sys-devel/autoconf-2.58"
 
 PATCHDIR=${WORKDIR}/patches
