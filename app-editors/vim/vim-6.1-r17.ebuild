@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r17.ebuild,v 1.9 2002/12/16 21:08:15 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r17.ebuild,v 1.10 2002/12/16 21:13:21 rphillips Exp $
 
 VIMPATCH="vimpatch-1-263.tar.bz2"
 inherit vim
@@ -16,10 +16,11 @@ DEPEND="app-editors/vim-core
 	python? ( dev-lang/python )
 	ruby?	( >=dev-lang/ruby-1.6.4 )"
 #	tcltk?	( dev-lang/tcl )"
+IUSE="nls perl python ruby tcltk gpm X"
 
 src_compile() {
 	local myconf
-	myconf="--without-x --with-features=big --enable-multibyte"
+	myconf="--with-features=big --enable-multibyte"
 	use nls    && myconf="$myconf --enable-multibyte"
 	use nls    || myconf="$myconf --disable-nls"
 	use perl   && myconf="$myconf --enable-perlinterp"
@@ -32,6 +33,12 @@ src_compile() {
 # Added back gpm for temporary will remove if necessary, I think that I have
 # fixed most of gpm so it should be fine.
 	use gpm    || myconf="$myconf --disable-gpm"
+	
+	# the console vim will change the caption of a terminal in X.
+	# the configure script should autodetect X being installed, so
+	# we'll specifically turn it off if X is not in the USE vars.
+	# -rphillips
+	use X      && myconf="$myconf --without-x"
 
 	# This should fix a sandbox violation. 
 	addwrite "${SSH_TTY}"
