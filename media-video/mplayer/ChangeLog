@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.63 2003/07/15 21:09:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.64 2003/07/15 21:11:17 mholzer Exp $
+
+  16 Jul 2003; Martin Holzer <mholzer@gentoo.org> mplayer-0.90-r2.ebuild:
+  Marked x86 stable.
 
 *mplayer-0.90-r3 (16 Jul 2003)
 
