@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/pmars-sdl/pmars-sdl-0.9.2e.ebuild,v 1.5 2004/07/01 11:24:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/pmars-sdl/pmars-sdl-0.9.2e.ebuild,v 1.6 2004/09/23 09:33:50 mr_bones_ Exp $
 
 inherit games gcc
 
@@ -85,6 +85,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
+	echo
 	ewarn "There are some macros in ${GAMES_DATADIR}/${MY_PN}/macros"
 	ewarn "which you should make accessible to pmars by typing"
 	ewarn "export PMARSHOME=${GAMES_DATADIR}/${MY_PN}/macros\n"
