@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.1 2002/02/01 21:53:00 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.2 2002/09/20 00:52:12 vapier Exp $
+
+*seahorse-0.5.0 (19 Sept 2002)
+
+  19 Sept 2002; Mike Frysinger <vapier@gentoo.org> :
+  Fixed HOMEPAGE variable spelling
 
 *seahorse-0.5.0 (1 Feb 2002)
 
