@@ -1,0 +1,18 @@
+diff -urN hotplug-2003_08_05/etc/hotplug/hotplug.functions hotplug-2003_08_05.new/etc/hotplug/hotplug.functions
+--- hotplug-2003_08_05/etc/hotplug/hotplug.functions	2003-12-21 21:01:32.936579696 -0700
++++ hotplug-2003_08_05.new/etc/hotplug/hotplug.functions	2003-12-21 21:02:59.632399928 -0700
+@@ -88,13 +88,7 @@
+     FILENAME=$2
+     DESCRIPTION=$3
+ 
+-    # should we use usbmodules, pcimodules?  not on 2.5+, because sysfs
+-    # ought to expose the data we need to find all candidate drivers.
+-    # (on 2.5.48 it does for usb; but maybe not yet for pci.)
+-    case "$KERNEL" in
+-    2.2*|2.3*|2.4*)	LISTER=`type -p ${TYPE}modules` ;;
+-    *)			LISTER="" ;;
+-    esac
++    LISTER=`type -p ${TYPE}modules` 
+ 
+     if [ "$LISTER" != "" ]; then
+ 	# lister programs MIGHT be preferable to parsing from shell scripts:
