@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1-r2.ebuild,v 1.5 2002/07/17 21:48:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1-r2.ebuild,v 1.6 2002/08/07 03:02:59 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window Maker"
@@ -21,9 +21,16 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-src_compile() {
+src_unpack() {
 
-	patch -p1 < ${FILESDIR}/wmfpo-80.patch
+        unpack ${A}
+        cd ${WORKDIR}
+        patch -p0 < ${FILESDIR}/${P}-gentoo.patch
+	patch -p0 < ${FILESDIR}/wmfpo-81.patch
+
+}
+
+src_compile() {
 
 	local myconf
 
@@ -133,8 +140,8 @@ pkg_postinst() {
 
     echo
 	echo '######################################################################'
-	echo '# If do you want trans globes and other trans elements do you need   #'
-	echo '# the libxpm (media-libs/xpm). 									   #'
+	echo '# If do you want trans globes and other trans elements you need      #'
+	echo '# libxpm (media-libs/xpm).                                           #'
 	echo '######################################################################'
 	}
 			
