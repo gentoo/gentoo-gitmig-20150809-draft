@@ -3,11 +3,12 @@ MD5 0e273fec6f80838f4556e7114868d8d8 autoconf-2.57.ebuild 3212
 MD5 512a24f6969c9f497f2d94c77a7b549c autoconf-2.53a.ebuild 2782
 MD5 0e3dddf05f2b4efa229843d9a1201410 autoconf-2.54.ebuild 3205
 MD5 f73eea253e36a72484edff7fe1ca1086 autoconf-2.13-r2.ebuild 989
-MD5 b442e17e5d80e6b8024bb928bee1398b autoconf-2.57a.ebuild 3269
-MD5 41ba869f2cca29f418ca30a954a6a475 ChangeLog 4137
+MD5 154a8e475e893a398434d0b77f6bc9fc autoconf-2.57a.ebuild 3269
+MD5 f2f706827d64d4418644e9c1e6e931b0 ChangeLog 4313
 MD5 98662b30b8641482848514c4b26efede autoconf-2.57-r1.ebuild 3216
 MD5 28795f22763ef0683a8a1e72e8dd4646 files/ac-wrapper.pl 2133
 MD5 f2802f3155defa9299baf6e5d0d79571 files/digest-autoconf-2.57a 132
+MD5 c98042870fa4228b40ce57442d91ca47 files/autoconf-2.57a-infopage-namechange.patch 5119
 MD5 02c192b9ea3e4945d007a8cfde221c73 files/digest-autoconf-2.13-r2 65
 MD5 ac8caa17f05e56e10927af757cf12f99 files/digest-autoconf-2.54 131
 MD5 12f8fb67eaf50f87ed7825356503e8d7 files/autoconf-2.13-configure-gentoo.diff 958
