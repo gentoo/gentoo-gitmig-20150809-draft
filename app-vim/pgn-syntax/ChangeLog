@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/pgn-syntax
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/pgn-syntax/ChangeLog,v 1.1 2005/02/27 20:43:19 ciaranm Exp $
+
+*pgn-syntax-1.0 (27 Feb 2005)
+
+  27 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +pgn-syntax-1.0.ebuild:
+  New package
+
