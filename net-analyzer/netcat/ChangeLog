@@ -1,12 +1,19 @@
 # ChangeLog for net-analyzer/netcat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.17 2003/08/18 20:36:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.18 2003/08/21 04:03:37 vapier Exp $
+
+*netcat-110-r4 (21 Aug 2003)
+
+  21 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Grab debian patches to add support for broadcasting and -q #24236.
+  Had to redo a few deb patches since we also use ipv6 patch ... thats
+  why we've got a custom debian tarball of patches :)
+
+*netcat-110-r3 (08 Apr 2003)
 
   18 Aug 2003; Martin Holzer <mholzer@gentoo.org> netcat-110-r1.ebuild,
   netcat-110-r2.ebuild, netcat-110-r3.ebuild:
   Upated SRC_URI and HP.
-
-*netcat-110-r3 (08 Apr 2003)
 
   28 Jul 2003; Guy Martin <gmsoft@gentoo.org> netcat-110-r3.ebuild :
   Marked stable on hppa.
