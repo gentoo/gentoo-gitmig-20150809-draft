@@ -1,6 +1,12 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.14 2002/05/26 14:05:33 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.15 2002/06/24 20:15:55 azarah Exp $
+
+*avifile-0.7.7.20020523 (25 Jun 2002)
+
+  25 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  New version closing bug #3855.
 
 *avifile-0.7.4-20020426-r2 (26 May 2002)
 

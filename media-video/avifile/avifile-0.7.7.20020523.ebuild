@@ -1,16 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.4.20020426-r1.ebuild,v 1.1 2002/05/25 19:30:38 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.7.20020523.ebuild,v 1.1 2002/06/24 20:15:55 azarah Exp $
 
 MY_P=${P/.200/-200}
-MY_S=${PN}0.7-0.7.4
+MY_S=${PN}0.7-0.7.7
 S=${WORKDIR}/${MY_S}
 DESCRIPTION="Library for AVI-Files"
 SRC_URI="http://avifile.sourceforge.net/${MY_P}.tgz"
 HOMEPAGE="http://avifile.sourceforge.net/"
 
-DEPEND=">media-libs/divx4linux-20011025
+DEPEND=">=media-libs/divx4linux-20020418
 	media-libs/jpeg
 	media-libs/win32codecs
 	qt? ( >=x11-libs/qt-3.0.3 )
@@ -20,20 +20,13 @@ DEPEND=">media-libs/divx4linux-20011025
 
 SLOT="0.7"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	patch -p1 <${FILESDIR}/avifile-0.7.4.20020426-gcc3.1-gentoo.patch
-}
 
 src_compile() {
 
 	einfo "${S}"
 
-	local myconf
-	local kdepre 
-	
-	myconf="--program-suffix=0.7"
+	local myconf=""
+	local kdepre=""
 	
 	( use mmx || use sse || use 3dnow ) && myconf="${myconf} --enable-x86opt"
 
@@ -65,9 +58,6 @@ src_compile() {
 			&& LDFLAGS="${LDFLAGS}"
 		)
 
-	
-	# this version has b0rked a52 support -- author recommends disabling it
-	myconf="${myconf} --disable-a52"
 	
 	export CFLAGS=${CFLAGS/-O?/-O2}
 	export LDFLAGS
