@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.3 2003/04/08 23:36:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.4 2003/04/09 01:23:37 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -12,6 +12,8 @@ IUSE="3dfx sse mmx 3dnow xml truetype"
 inherit eutils flag-o-matic gcc
 
 filter-flags "-funroll-loops"
+
+ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O2 -O3 -pipe"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -38,7 +40,7 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="1.0"
+PATCH_VER="1.0.1"
 FT2_VER="2.1.3"
 SISDRV_VER="060403-1"
 SAVDRV_VER="1.1.27t"
