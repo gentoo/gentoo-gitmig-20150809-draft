@@ -44,7 +44,67 @@ net-www/zope
 
 # committed to facilitate testing by several devs, mostly Verwilst and me.
 # testing should be over in 24h so don't unmask without good reason.
+>=kde-base/arts-1.0.0
+>=kde-base/kdelibs-3.0
+>=kde-base/kdebase-3.0
+>=kde-base/kde-3.0
+>=kde-base/kdeartwork-3.0
+>=kde-base/kdebindings-3.0
+>=kde-base/kdeedu-3.0
+>=kde-base/kdegames-3.0
+>=kde-base/kdegraphics-3.0
+>=kde-base/kdemultimedia-3.0
+>=kde-base/kdenetwork-3.0
+>=kde-base/kdepim-3.0
+>=kde-base/kdesdk-3.0
+>=kde-base/kdetoys-3.0
+>=kde-base/kdeutils-3.0
+>=kde-base/kdoc-3.0
+>=dev-util/kdevelop-2.1
 
+>=app-i18n/kde-i18n-3.0
+>=app-i18n/kde-i18n-af-3.0
+>=app-i18n/kde-i18n-az-3.0
+>=app-i18n/kde-i18n-bg-3.0
+>=app-i18n/kde-i18n-ca-3.0
+>=app-i18n/kde-i18n-cs-3.0
+>=app-i18n/kde-i18n-da-3.0
+>=app-i18n/kde-i18n-de-3.0
+>=app-i18n/kde-i18n-el-3.0
+>=app-i18n/kde-i18n-en_GB-3.0
+>=app-i18n/kde-i18n-eo-3.0
+>=app-i18n/kde-i18n-es-3.0
+>=app-i18n/kde-i18n-et-3.0
+>=app-i18n/kde-i18n-fi-3.0
+>=app-i18n/kde-i18n-fr-3.0
+>=app-i18n/kde-i18n-he-3.0
+>=app-i18n/kde-i18n-hu-3.0
+>=app-i18n/kde-i18n-is-3.0
+>=app-i18n/kde-i18n-it-3.0
+>=app-i18n/kde-i18n-ja-3.0
+>=app-i18n/kde-i18n-ko-3.0
+>=app-i18n/kde-i18n-lt-3.0
+>=app-i18n/kde-i18n-lv-3.0
+>=app-i18n/kde-i18n-mt-3.0
+>=app-i18n/kde-i18n-nl-3.0
+>=app-i18n/kde-i18n-no-3.0
+>=app-i18n/kde-i18n-no_NY-3.0
+>=app-i18n/kde-i18n-pl-3.0
+>=app-i18n/kde-i18n-pt-3.0
+>=app-i18n/kde-i18n-pt_BR-3.0
+>=app-i18n/kde-i18n-ro-3.0
+>=app-i18n/kde-i18n-ru-3.0
+>=app-i18n/kde-i18n-sk-3.0
+>=app-i18n/kde-i18n-sl-3.0
+>=app-i18n/kde-i18n-sr-3.0
+>=app-i18n/kde-i18n-sv-3.0
+>=app-i18n/kde-i18n-ta-3.0
+>=app-i18n/kde-i18n-th-3.0
+>=app-i18n/kde-i18n-tr-3.0
+>=app-i18n/kde-i18n-uk-3.0
+>=app-i18n/kde-i18n-xh-3.0
+>=app-i18n/kde-i18n-zh_CN.GB2312-3.0
+>=app-i18n/kde-i18n-zh_TW.Big5-3.0
 
 # Waiting for kde3 ebuilds. These ebuilds are ok themselves and if you're using
 # my kde3pre ebuilds, you can unmask and emerge these as well. - danarmak
