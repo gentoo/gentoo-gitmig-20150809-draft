@@ -3,7 +3,7 @@ MD5 43547a823c9df631ab7a6308bf64e7d0 fam-2.7.0-r2.ebuild 2144
 MD5 ba964b2f14dda1e074ac4f90307f83d1 ChangeLog 6625
 MD5 68a04e23ccfb7971cff8ce012aee659c metadata.xml 221
 MD5 4d1b2c159a798e794f7045b237db72ab fam-2.7.0.ebuild 1900
-MD5 894ce263618ad960c3d0874259cd1b54 files/famd 506
+MD5 4c750113abbc289ee93c3aa378692f07 files/famd 490
 MD5 a7434bbb78ba9e735212e8b1e5bb0a0f files/digest-fam-2.7.0 61
 MD5 a7434bbb78ba9e735212e8b1e5bb0a0f files/digest-fam-2.7.0-r1 61
 MD5 a7434bbb78ba9e735212e8b1e5bb0a0f files/digest-fam-2.7.0-r2 61
