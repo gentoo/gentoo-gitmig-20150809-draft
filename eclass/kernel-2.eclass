@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.32 2004/03/14 06:43:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.33 2004/04/16 18:14:00 plasmaroo Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -33,6 +33,7 @@
 # UNIPATCH_STRICTORDER	- if this is set places patches into directories of order, so they are applied in the order passed
 
 ECLASS="kernel-2"
+INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst
 
 # to prevent errors if theres no sources in /usr/src
@@ -53,9 +54,31 @@ KV_PATCH=${KV_PATCH/[-_]*/}
 # set LINUX_HOSTCFLAGS if not already set
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"
 
-
-#eclass functions only from here onwards.
+#Eclass functions only from here onwards...
 #==============================================================
+kernel_is() {
+	local RESULT
+	RESULT=1
+	
+	if [ -n "${1}" ]
+	then
+		[ "${1}" = "${KV_MAJOR}" ] && RESULT=0
+	fi
+	
+	if [ -n "${2}" ]
+	then
+		RESULT=1
+		[ "${2}" = "${KV_MINOR}" ] && RESULT=0
+	fi
+	
+	if [ -n "${3}" ]
+	then
+		RESULT=1
+		[ "${3}" = "${KV_PATCH}" ] && RESULT=0
+	fi
+	return ${RESULT}
+}
+
 kernel_is_2_4() {
 	[ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -eq 4 ] && return 0 || return 1
 }
@@ -64,12 +87,13 @@ kernel_is_2_6() {
 	[ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -eq 5 -o ${KV_MINOR} -eq 6 ] && return 0 || return 1
 }
 
-# capture the sources type and set depends
+# Capture the sources type and set DEPENDs
 if [ "${ETYPE}" == "sources" ]
 then
-	#kbd is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
+	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND="!build? ( sys-apps/sed
-		>=sys-devel/binutils-2.11.90.0.31 )"
+		>=sys-devel/binutils-2.11.90.0.31 )
+		>=sys-kernel/config-kernel-0.3.3"
 
 	RDEPEND="${DEPEND}
 		 !build? ( >=sys-libs/ncurses-5.2
@@ -99,6 +123,16 @@ unpack_2_4() {
 }
 
 universal_unpack() {
+	[ -z "${OKV}" ] && OKV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
+
+	cd ${WORKDIR}
+	unpack linux-${OKV}.tar.bz2
+	if [ "${OKV}" != "${KV}" ]
+	then
+		mv linux-${OKV} linux-${KV} || die "Unable to move source tree to ${KV}."
+	fi
+	cd ${S}
+
 	# remove all backup files
 	find . -iname "*~" -exec rm {} \; 2> /dev/null
 
@@ -211,7 +245,10 @@ preinst_headers() {
 # pkg_postinst functions
 #==============================================================
 postinst_sources() {
-	if [ ! -h ${ROOT}usr/src/linux ]
+	if [ -x "${ROOT}/usr/bin/config-kernel" ]
+	then
+		${ROOT}/usr/bin/config-kernel --eclass-symlink ${KV}
+	elif [ ! -h ${ROOT}usr/src/linux ]
 	then
 		ln -sf ${ROOT}usr/src/linux-${KV} ${ROOT}usr/src/linux
 	fi
@@ -237,6 +274,15 @@ postinst_sources() {
 			einfo "${ELINE}"
 		done
 
+		echo
+	fi
+
+	# Show policy version, if this kernel has SELinux...
+	local secfile="${ROOT}usr/src/linux-${KV}/security/selinux/include/security.h"
+	if [ -n "`use selinux`" -a -f "$secfile" ]
+	then
+		local polver=$(awk '/POLICYDB_VERSION /{print $3}' $secfile)
+		einfo "The SELinux policy version of this kernel is $polver."
 		echo
 	fi
 
@@ -413,7 +459,7 @@ unipatch() {
 			ebegin "Applying ${i/*\//}"
 			while [ ${PATCH_DEPTH} -lt 5 ]
 			do
-				echo "Attempting Dry-run:" > ${STDERR_T}
+				echo "Attempting Dry-run:" >> ${STDERR_T}
 				echo "cmd: patch -p${PATCH_DEPTH} --dry-run -f < ${i}" >> ${STDERR_T}
 				echo "=======================================================" >> ${STDERR_T}
 				if [ $(patch -p${PATCH_DEPTH} --dry-run -f < ${i} >> ${STDERR_T}) $? -eq 0 ]
@@ -469,7 +515,12 @@ detect_version() {
 	RELEASE=${PV/${OKV}/}
 	RELEASE=${RELEASE/_beta/}
 	RELEASE=${RELEASE/_rc/-rc}
+	if [ $(kernel_is_2_4) $? == 0 ]
+	then
+		RELEASE=${RELEASE/_pre/-pre}
+	else
 	RELEASE=${RELEASE/_pre/-bk}
+	fi
 	RELEASETYPE=${RELEASE//[0-9]/}
 	
 	EXTRAVERSION="${RELEASE}"
@@ -488,7 +539,7 @@ detect_version() {
 	# these cannot be supported, but the code here can handle it up until this point
 	# and theoretically thereafter.
 	
-	if [ "${RELEASETYPE}" == "-rc" ]
+	if [ "${RELEASETYPE}" == "-rc" -o "${RELEASETYPE}" == "-pre" ]
 	then
 		OKV="${KV_MAJOR}.${KV_MINOR}.$([ $((${KV_PATCH} - 1)) -lt 0 ] && echo ${KV_PATCH} || echo $((${KV_PATCH} - 1)))"
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${PV//_/-}.bz2
@@ -520,7 +571,6 @@ detect_version() {
 	S=${WORKDIR}/linux-${KV}
 }
 
-
 detect_arch() {
 	# This function sets ARCH_URI and ARCH_PATCH
 	# with the neccessary info for the arch sepecific compatibility
@@ -529,60 +579,65 @@ detect_arch() {
 	local ALL_ARCH
 	local LOOP_ARCH
 	local COMPAT_URI
+	local i
 
-	ALL_ARCH="X86 PPC PCC64 SPARC MIPS ALPHA ARM HPPA AMD64 IA64 X86OBSD"
+	# COMPAT_URI is the contents of ${ARCH}_URI
+	# ARCH_URI is the URI for all the ${ARCH}_URI patches
+	# ARCH_PATCH is ARCH_URI broken into files for UNIPATCH
+
+	ARCH_URI=""
+	ARCH_PATCH=""
+	ALL_ARCH="X86 PPC PPC64 SPARC MIPS ALPHA ARM HPPA AMD64 IA64 X86OBSD S390"
+
 	for LOOP_ARCH in ${ALL_ARCH}
 	do
 		COMPAT_URI="${LOOP_ARCH}_URI"
 		COMPAT_URI="${!COMPAT_URI}"
-		ARCH_URI="${ARCH_URI} $(echo ${LOOP_ARCH} | tr [A-Z] [a-z])? ( ${COMPAT_URI} )"
 		
-		[ "${LOOP_ARCH}" == "$(echo ${ARCH} | tr [a-z] [A-Z])" ] && ARCH_PATCH="${DISTDIR}/${COMPAT_URI/*\//}"
+		[ -n "${COMPAT_URI}" ] && ARCH_URI="${ARCH_URI} $(echo ${LOOP_ARCH} | tr [A-Z] [a-z])? ( ${COMPAT_URI} )"
+		
+		if [ "${LOOP_ARCH}" == "$(echo ${ARCH} | tr [a-z] [A-Z])" ]
+		then
+			for i in ${COMPAT_URI}
+			do
+				ARCH_PATCH="${ARCH_PATCH} ${DISTDIR}/${i/*\//}"
+			done
+		fi
 	done
 }
 
 
 # common functions
 #==============================================================
-src_unpack() {
-	[ -z "${OKV}" ] && OKV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
-
-	cd ${WORKDIR}
-	unpack linux-${OKV}.tar.bz2
-	if [ "${OKV}" != "${KV}" ]
-	then
-		mv linux-${OKV} linux-${KV} || die "Unable to move source tree to ${KV}."
-	fi
-	cd ${S}
-
+kernel-2_src_unpack() {
 	universal_unpack
 	[ -n "${UNIPATCH_LIST}" -o -n "${UNIPATCH_LIST_DEFAULT}" ] && unipatch "${UNIPATCH_LIST_DEFAULT} ${UNIPATCH_LIST}"
 	[ -z "${K_NOSETEXTRAVERSION}" ] && unpack_set_extraversion
 	[ $(kernel_is_2_4) $? == 0 ] && unpack_2_4
 }
 
-src_compile() {
+kernel-2_src_compile() {
 	[ "${ETYPE}" == "headers" ] && compile_headers
 }
 
-pkg_preinst() {
+kernel-2_pkg_preinst() {
 	[ "${ETYPE}" == "headers" ] && preinst_headers
 }
 
-src_install() {
+kernel-2_src_install() {
 	install_universal
 	[ "${ETYPE}" == "headers" ] && install_headers
 	[ "${ETYPE}" == "sources" ] && install_sources
 }
 
-pkg_postinst() {
+kernel-2_pkg_postinst() {
 	[ "${ETYPE}" == "headers" ] && postinst_headers
 	[ "${ETYPE}" == "sources" ] && postinst_sources
 }
 
-pkg_setup() {
+kernel-2_pkg_setup() {
 	[ "${ETYPE}" == "headers" ] && setup_headers
 
-	# this is to fix some weird portage bug? in stable versions of portage.
+	# This is to fix some weird portage bug? in stable versions of portage.
 	[ "${ETYPE}" == "sources" ] && echo ">>> Preparing to unpack..."
 }
