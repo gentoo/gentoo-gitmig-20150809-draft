@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1.ebuild,v 1.2 2004/01/23 19:51:06 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1.ebuild,v 1.3 2004/01/24 16:54:13 azarah Exp $
 
 IUSE="pam selinux"
 
@@ -105,7 +105,7 @@ src_install() {
 	dosym /usr/sbin/useradd /usr/sbin/adduser
 	dosym /usr/sbin/vipw /usr/sbin/vigr
 	# Remove dead links
-	rm -f ${D}/bin/{sg,vipw}
+	rm -f ${D}/bin/{sg,vipw,vigr}
 
 	insinto /etc
 	# Using a securetty with devfs device names added
