@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.48 2004/02/18 22:41:31 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.49 2004/02/19 00:56:35 joker Exp $
+
+  19 Feb 2004; Christian Birchinger <joker@gentoo.org>
+  sparc-sources-2.4.24-r2.ebuild:
+  Marked stable
 
 *sparc-sources-2.4.24-r2 (18 Feb 2004)
 
