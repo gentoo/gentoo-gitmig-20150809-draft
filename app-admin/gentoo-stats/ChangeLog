@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/gentoo-stats
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/ChangeLog,v 1.2 2002/08/13 19:29:58 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/ChangeLog,v 1.3 2002/08/25 22:38:15 gerk Exp $
 
 *gentoo-stats-0.1 (28 Jul 2002)
+
+  25 Aug 2002; Mark Guertin <gerk@gentoo.org> gentoo-stats-0.1.ebuild :
+  Added -ppc for now, until bug #5822 is resolved
 
   13 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> : Added ppc keyword.
 
