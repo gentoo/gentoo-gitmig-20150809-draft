@@ -36,8 +36,7 @@ usb
 java
 
 # 19 Mar 2003 Guy Martin <gmsoft@gentoo.org>
-# Ldap and acl not tested yet
-ldap
+# acl not tested yet
 acl
 
 # 14 Mar 2003 Guy Martin <gmsoft@gentoo.org>
