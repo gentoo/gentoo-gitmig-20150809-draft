@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r2.ebuild,v 1.4 2002/10/05 05:39:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r2.ebuild,v 1.5 2002/11/18 12:34:26 hannes Exp $
 
 IUSE="nas nls postgres opengl mysql odbc gif"
 
@@ -78,8 +78,10 @@ src_compile() {
 
 	export YACC='byacc -d'
 	
-	./configure -sm -thread -stl -system-zlib -system-libjpeg -qt-imgfmt-{jpeg,mng,png} ${myconf} \
-		-tablet -system-libmng -system-libpng -ldl -lpthread -xft -platform linux-g++ -xplatform linux-g++ || die
+	./configure -sm -thread -stl -system-zlib -system-libjpeg -tablet \
+	-system-libmng -system-libpng -ldl -lpthread -xft -platform linux-g++ \
+	-qt-imgfmt-{jpeg,mng,png} -xplatform linux-g++ -prefix ${QTBASE} \
+	${myconf} || die
 
 	export QTDIR=${S}
 
