@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.0-r1.ebuild,v 1.2 2004/04/22 17:02:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.0-r1.ebuild,v 1.3 2004/04/24 09:07:20 vapier Exp $
 
 inherit eutils flag-o-matic
-
-IUSE="nls build acl selinux static"
 
 PATCH_VER=0.1
 I18N_VER=i18n-0.1
@@ -20,15 +18,15 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 	mirror://gentoo/${P}-${I18N_VER}.patch.gz
 	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64 ~amd64 ~ppc64 s390"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha arm ~hppa ~ia64 ~amd64 s390"
+IUSE="nls build acl selinux static"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( !hppa? ( sys-apps/acl sys-apps/attr ) )
 	nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.3-r5"
-
 DEPEND="${RDEPEND}
 	virtual/glibc
 	>=sys-apps/portage-2.0.49
@@ -135,10 +133,10 @@ src_install() {
 	cd usr/bin
 	ln -s ../../bin/* .
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
-		dodoc AUTHORS ChangeLog* COPYING NEWS README* THANKS TODO
+		dodoc AUTHORS ChangeLog* NEWS README* THANKS TODO
 	else
 		rm -rf ${D}/usr/share
 	fi
