@@ -3,7 +3,6 @@ MD5 cf2c9e85e2f8d79ff3e73fac938a93c7 ChangeLog 6735
 MD5 5df277d0dd4f6b32cded989d223e241f autoconf-2.57-r1.ebuild 3227
 MD5 c787626b1e0a3f2e490acc0ed05a312f autoconf-2.57a-r1.ebuild 3383
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 f3bce77a88077f845fb539c192e70eda autoconf-2.59.ebuild 3499
 MD5 dfae766cd78a357d40bcc8697b7c882f autoconf-2.59-r1.ebuild 3502
 MD5 28795f22763ef0683a8a1e72e8dd4646 files/ac-wrapper.pl 2133
 MD5 c98042870fa4228b40ce57442d91ca47 files/autoconf-2.57a-infopage-namechange.patch 5119
@@ -13,7 +12,6 @@ MD5 b310d32d1d5c26cb84206bfda473da1c files/digest-autoconf-2.59-r1 131
 MD5 c39fbf4a2c9bd249b6062e5b1cb67eae files/autoconf-2.57-infopage-namechange.patch 4628
 MD5 372cd1fdd18a95f5a6af7cb36bfd12de files/autoconf-2.58-infopage-namechange.patch 5117
 MD5 d7f6caec3dfd602a77238546246b91b7 files/digest-autoconf-2.58 131
-MD5 b310d32d1d5c26cb84206bfda473da1c files/digest-autoconf-2.59 131
 MD5 e3137dce2883f1c5fa9adbee73a86113 files/autoconf-2.5-infopage-namechange.patch 4043
 MD5 1422b6254949efd29ea2de7eae1782b9 files/ac-wrapper-2.pl 2767
 MD5 1e532467a5e16fbc8acf85b00d89ca85 files/autoconf-2.57a-AC_HELP_STRING.patch 403
