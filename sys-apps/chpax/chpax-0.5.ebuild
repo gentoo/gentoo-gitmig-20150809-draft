@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.5.ebuild,v 1.5 2003/12/09 05:48:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.5.ebuild,v 1.6 2004/01/02 08:43:29 solar Exp $
 
 # S=${WORKDIR}/chpax
 
