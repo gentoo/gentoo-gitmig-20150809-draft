@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/skipstone-0.8.3.ebuild,v 1.7 2002/10/09 21:29:02 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/skipstone-0.8.3.ebuild,v 1.8 2002/11/03 05:07:18 seemant Exp $
 
 IUSE="nls"
 
@@ -12,7 +12,7 @@ KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND=">=net-www/mozilla-0.9.9
+DEPEND="=net-www/mozilla-0.9.9*
 	=x11-libs/gtk+-1.2*"
 
 RDEPEND="${DEPEND}
@@ -39,7 +39,7 @@ src_compile() {
 
 	econf ${myconf} || die
 	
-	emake \
+	make \
 		PREFIX="/usr/lib/mozilla" || die
 }
 
