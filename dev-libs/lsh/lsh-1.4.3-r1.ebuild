@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lsh/lsh-1.4.3-r1.ebuild,v 1.4 2004/11/22 04:45:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lsh/lsh-1.4.3-r1.ebuild,v 1.5 2004/11/23 02:25:04 vapier Exp $
 
 inherit eutils
 
@@ -14,13 +14,15 @@ SLOT="0"
 KEYWORDS="x86 ~sparc ~ppc"
 IUSE="pam tcpd ipv6 zlib X"
 
-DEPEND="dev-libs/gmp
+RDEPEND="dev-libs/gmp
 	dev-libs/liboop
 	zlib? ( sys-libs/zlib )
 	X? ( virtual/x11 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	pam? ( sys-libs/pam )"
 #	kerberos? ( virtual/krb5 )
+DEPEND="${RDEPEND}
+	>=sys-apps/portage-2.0.51"
 
 src_unpack() {
 	unpack ${A}
@@ -49,6 +51,9 @@ src_compile() {
 src_install() {
 	emake install DESTDIR=${D} || die
 	dodoc ANNOUNCE AUTHORS ChangeLog FAQ NEWS README
+
+	newinitd ${FILESDIR}/lsh.rc lshd
+	newconfd ${FILESDIR}/lsh.confd lshd
 
 	# remove bundled crap #56156
 	cd ${D}/usr

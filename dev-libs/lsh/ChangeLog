@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/lsh
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lsh/ChangeLog,v 1.7 2004/11/22 04:45:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lsh/ChangeLog,v 1.8 2004/11/23 02:25:04 vapier Exp $
+
+  22 Nov 2004; Mike Frysinger <vapier@gentoo.org> +files/lsh.confd,
+  +files/lsh.rc, lsh-1.4.3-r1.ebuild:
+  Add init.d scripts #71088 by Grzegorz Artur Daszuta.
 
   21 Nov 2004; Mike Frysinger <vapier@gentoo.org>
   +files/1.4.3-configure.patch, files/1.4.3-gcc34.patch,
