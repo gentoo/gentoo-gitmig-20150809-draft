@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131-r1.ebuild,v 1.8 2004/06/24 22:49:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131-r1.ebuild,v 1.9 2004/07/02 16:18:07 humpback Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ KEYWORDS="x86 ~ppc hppa"
 
 IUSE=""
 
-DEPEND=">=net-im/jabberd-1.4.3-r3"
+DEPEND="=net-im/jabberd-1.4*"
 
 src_unpack() {
 	unpack ${A}
