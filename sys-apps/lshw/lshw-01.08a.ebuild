@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-01.08a.ebuild,v 1.2 2004/12/20 15:44:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-01.08a.ebuild,v 1.3 2005/01/03 21:19:56 vapier Exp $
 
 inherit flag-o-matic
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lshw
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.14 2004/12/21 22:15:01 vapier Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.15 2005/01/03 21:19:56 vapier Exp $
+
+  03 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/02.00b-cpuid-PIC.patch, lshw-02.00b.ebuild:
+  Add patch to enable PIC building #61947.
 
   21 Dec 2004; Mike Frysinger <vapier@gentoo.org> +files/02.00b-dev.patch,
   lshw-02.00b.ebuild:
