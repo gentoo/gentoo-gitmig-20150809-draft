@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.6-r2.ebuild,v 1.1 2004/05/30 02:51:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.6-r2.ebuild,v 1.2 2004/06/08 19:05:31 agriffis Exp $
 
 IUSE="ssl nls slang crypt imap mbox nntp vanilla"
 
@@ -69,7 +69,7 @@ src_unpack() {
 		autoheader						|| die "autoheader failed"
 		make -C m4 -f Makefile.am.in	|| die "make in m4 failed"
 		automake --foreign				|| die "automake failed"
-		autoconf						|| die "autoconf failed"
+		WANT_AUTOCONF=2.5 autoconf		|| die "autoconf failed"
 	fi
 
 	# Fix a slang problem that is already fixed in upstream cvs
