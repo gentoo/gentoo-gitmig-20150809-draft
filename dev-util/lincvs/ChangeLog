@@ -1,10 +1,11 @@
 # ChangeLog for dev-util/lincvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.4 2002/12/13 10:56:49 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.5 2002/12/30 12:00:51 mholzer Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *lincvs-0.9.90 (23 Jul 2002)
+
+  30 Dec 2002; Martin Holzer <mholzer@gentoo.org> lincvs-0.9.90.ebuild ChangeLog :
+  Updated SRC_URI.
 
   23 Jul 2002; Nick Hadaway <raker@gentoo.org>
   lincvs-0.9.90.ebuild, files/digest-lincvs-0.9.90, files/nodefaults.diff :
