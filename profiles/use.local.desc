@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1026 2005/03/21 19:36:09 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1027 2005/03/21 21:31:50 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -412,6 +412,7 @@ media-sound/mpd:droproot - Run the daemon as non-root by default.
 media-sound/musepack-tools:16bit - Higher quality sound output using dithering and noise-shaping
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-sound/rezound:soundtouch - compile with support for soundtouch
+media-sound/timidity++:ao - Use libao for sound playback
 media-tv/freevo:matrox - Enable output support on Matrox cards
 media-tv/mythfrontend:cle266 - Enable viaslice hardware MPEG decoding support
 media-tv/mythfrontend:ieee1394 - Enable firewire capture support
