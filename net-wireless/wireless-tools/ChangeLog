@@ -1,7 +1,13 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.22 2003/11/11 20:08:29 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.23 2003/12/29 22:52:19 latexer Exp $
 
+*wireless-tools-27_pre7 (29 Dec 2003)
+
+  29 Dec 2003; Peter Johanson <latexer@gentoo.org> 
+  wireless-tools-27_pre7.ebuild:
+  New version that creates libiw.so now again instead of libiw${WE-VERSION}.so
+  
   11 Nov 2003; Peter Johanson <latexer@gentoo.org> metadata.xml:
   Added metadata.xml
 
