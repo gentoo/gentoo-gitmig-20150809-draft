@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r4.ebuild,v 1.4 2003/04/12 03:35:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r4.ebuild,v 1.5 2003/04/12 11:09:18 seemant Exp $
 
 IUSE="nls build afs selinux"
 
@@ -67,4 +67,10 @@ src_install() {
 	else
 		rm -rf ${D}/usr/share
 	fi
+}
+
+pkg_postinst() {
+	ewarn "Please note that the locate and updatedb binaries"
+	ewarn "are not longer provided by findutils."
+	ewarn "Please emerge slocate"
 }
