@@ -1,2 +1,6 @@
-MD5 263eb7926bb0360bb6f1561a8018f475 asuka-1.0.6.ebuild 1238
+MD5 c316e4f7e8340807619c28bf2f729dcf asuka-1.0.6.ebuild 1340
+MD5 ff6433037f305b9f191dc2ef6a41a7c0 ChangeLog 330
+MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+MD5 ad0936ed9d596a44cf6c3001518a492c files/asuka.conf.d 274
+MD5 ff7f2fe86c48a52b4483293702917008 files/asuka.init.d 600
 MD5 b6b9f176be538c92cd9eeb70dd6f768d files/digest-asuka-1.0.6 64
