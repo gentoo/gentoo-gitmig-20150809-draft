@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.185 2004/08/05 23:34:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.186 2004/08/08 19:15:42 agriffis Exp $
+
+*mozilla-1.7.2 (08 Aug 2004)
+
+  08 Aug 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/ipc-1.0.7-nsPipeChannel.patch, +mozilla-1.7.2.ebuild:
+  Bump to 1.7.2 using source2 tarball, completed using 'make -f client.mk
+  checkout'
 
   05 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> mozilla-1.7.ebuild:
   Stable on sparc
