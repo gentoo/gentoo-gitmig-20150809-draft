@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.2.0.ebuild,v 1.2 2003/07/01 22:08:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.2.0.ebuild,v 1.3 2004/02/11 20:33:27 caleb Exp $
 
 IUSE="kde"
 
@@ -26,6 +26,9 @@ src_compile() {
 
 	qmake -o Makefile lincvs.pro
 	sed -e "s/^\tstrip/#\tstrip/" -i Makefile
+
+	addpredict ${QTDIR}/etc/settings
+
 	emake || die "make failed"
 	emake install || die "make install failed"
 }
