@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.1 2003/12/11 16:19:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.2 2003/12/12 18:07:26 pebenito Exp $
+
+  12 Dec 2003; Chris PeBenito <pebenito@gentoo.org> files/crontab,
+  files/crontab-3.0.1-r4:
+  Changed daily, weekly, and monthly runtimes to FreeBSD times (3:01, 4:15,
+  5:30, respectively) per #3296.
 
 *vixie-cron-3.0.1-r3 (11 Dec 2003)
 
