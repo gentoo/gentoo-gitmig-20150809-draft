@@ -1,44 +1,34 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8e48bc60a542000e2ca8ca2173a21113 kdegraphics-3.2.3.ebuild 1226
-MD5 95743565d819a7a20261d9ba7b978afb ChangeLog 17625
-MD5 749ee0be0aab8c1f4ee11978a8d16ae2 kdegraphics-3.2.3-r1.ebuild 1278
-MD5 5a60aa7288a3e688931b84fce55c4b6a kdegraphics-3.3.0.ebuild 1430
-MD5 537bc1e79063d3a641cbcae454c8f6ae kdegraphics-3.3.0-r2.ebuild 1485
-MD5 e569d030aaa73e0b0e4aa114cd90454b kdegraphics-3.2.3-r2.ebuild 1278
-MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 e51ccc8107c6549670adb17d0a10c2dd kdegraphics-3.3.1-r2.ebuild 1490
-MD5 0dcbff375e401ca8c354637670a32c43 kdegraphics-3.3.1-r1.ebuild 1485
-MD5 0c557af25ca14e9133483d1ff8414c74 kdegraphics-3.2.2.ebuild 1224
-MD5 6b3fabad5f11df10503b136be549dc16 kdegraphics-3.3.1.ebuild 1434
-MD5 d34737e0c554fe641ce3a353c8b7fe8d kdegraphics-3.2.0.ebuild 1330
-MD5 f8ea687ae1a7ff4a4771f5cf4050a125 kdegraphics-3.3.0-r1.ebuild 1499
+MD5 a209b55b8bdb230cc2c161ce4d3afabf ChangeLog 17723
 MD5 feb2b4270d15a98a32173a5ae04a19fb kdegraphics-3.1.5.ebuild 1048
-MD5 33d7a652f3ae6f9e66d79fb818b684f6 files/digest-kdegraphics-3.3.0-r2 71
-MD5 33d7a652f3ae6f9e66d79fb818b684f6 files/digest-kdegraphics-3.3.0-r1 71
-MD5 fecf5cb3209323e56be3368df325411a files/digest-kdegraphics-3.3.1-r1 71
+MD5 d34737e0c554fe641ce3a353c8b7fe8d kdegraphics-3.2.0.ebuild 1330
+MD5 0c557af25ca14e9133483d1ff8414c74 kdegraphics-3.2.2.ebuild 1224
+MD5 749ee0be0aab8c1f4ee11978a8d16ae2 kdegraphics-3.2.3-r1.ebuild 1278
+MD5 e569d030aaa73e0b0e4aa114cd90454b kdegraphics-3.2.3-r2.ebuild 1278
+MD5 8e48bc60a542000e2ca8ca2173a21113 kdegraphics-3.2.3.ebuild 1226
+MD5 f8ea687ae1a7ff4a4771f5cf4050a125 kdegraphics-3.3.0-r1.ebuild 1499
+MD5 537bc1e79063d3a641cbcae454c8f6ae kdegraphics-3.3.0-r2.ebuild 1485
+MD5 5a60aa7288a3e688931b84fce55c4b6a kdegraphics-3.3.0.ebuild 1430
+MD5 0dcbff375e401ca8c354637670a32c43 kdegraphics-3.3.1-r1.ebuild 1485
+MD5 8f3bb24f526b8cc862aa56808d112b63 kdegraphics-3.3.1-r2.ebuild 1490
+MD5 6b3fabad5f11df10503b136be549dc16 kdegraphics-3.3.1.ebuild 1434
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 78ab0a172f24863df0ba35300e95a890 files/digest-kdegraphics-3.1.5 71
+MD5 8c9db7f8d52169b544da66be07e9979a files/digest-kdegraphics-3.2.0 71
+MD5 80f49f2fcc0bb31559666e47fc28b047 files/digest-kdegraphics-3.2.2 71
+MD5 e43eeb201ab38aa05917d4de1573ff59 files/digest-kdegraphics-3.2.3 71
+MD5 e43eeb201ab38aa05917d4de1573ff59 files/digest-kdegraphics-3.2.3-r1 71
 MD5 e43eeb201ab38aa05917d4de1573ff59 files/digest-kdegraphics-3.2.3-r2 71
 MD5 33d7a652f3ae6f9e66d79fb818b684f6 files/digest-kdegraphics-3.3.0 71
-MD5 e43eeb201ab38aa05917d4de1573ff59 files/digest-kdegraphics-3.2.3-r1 71
-MD5 06573d3829a3009c879f870746607056 files/post-3.3.0-kdegraphics_2.diff 3586
-MD5 d97c962408abd235435f6857fc405ebf files/kdegraphics-3.2.3-gcc34-compile.patch 7162
-MD5 870d90051bb236753070fb553890f95d files/post-3.2.3-kdegraphics_2.diff 3205
-MD5 651fba579516ea947fbefee373f40a6c files/post-3.3.1-kdegraphics.diff 1533
-MD5 8c9db7f8d52169b544da66be07e9979a files/digest-kdegraphics-3.2.0 71
-MD5 fecf5cb3209323e56be3368df325411a files/digest-kdegraphics-3.3.1-r2 71
+MD5 33d7a652f3ae6f9e66d79fb818b684f6 files/digest-kdegraphics-3.3.0-r1 71
+MD5 33d7a652f3ae6f9e66d79fb818b684f6 files/digest-kdegraphics-3.3.0-r2 71
 MD5 fecf5cb3209323e56be3368df325411a files/digest-kdegraphics-3.3.1 71
-MD5 4f854adb507f4d04e997702e44ffc2ea files/post-3.2.3-kdegraphics.diff 3853
+MD5 fecf5cb3209323e56be3368df325411a files/digest-kdegraphics-3.3.1-r1 71
+MD5 fecf5cb3209323e56be3368df325411a files/digest-kdegraphics-3.3.1-r2 71
 MD5 eb03ab721af71700a0b445f1c50b55f8 files/kdegraphics-3.2.2-gcc34-compile.patch 7723
-MD5 8d995a343d5083ba8ac84f1d4136d359 files/xpdf-3.3.0-kdegraphics.diff 1630
-MD5 e43eeb201ab38aa05917d4de1573ff59 files/digest-kdegraphics-3.2.3 71
+MD5 d97c962408abd235435f6857fc405ebf files/kdegraphics-3.2.3-gcc34-compile.patch 7162
+MD5 4f854adb507f4d04e997702e44ffc2ea files/post-3.2.3-kdegraphics.diff 3853
+MD5 870d90051bb236753070fb553890f95d files/post-3.2.3-kdegraphics_2.diff 3205
+MD5 06573d3829a3009c879f870746607056 files/post-3.3.0-kdegraphics_2.diff 3586
+MD5 651fba579516ea947fbefee373f40a6c files/post-3.3.1-kdegraphics.diff 1533
 MD5 6c3f55477c5f566c711563caa3c51296 files/post-3.3.1-kdegraphics_2.diff 3887
-MD5 78ab0a172f24863df0ba35300e95a890 files/digest-kdegraphics-3.1.5 71
-MD5 80f49f2fcc0bb31559666e47fc28b047 files/digest-kdegraphics-3.2.2 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBmzcsugEuf3OQ0akRAnoOAJ9K9otwDgbxxO7G9OceupGE6DMS8gCfaK5G
-Q9Hh4PbgpArB4EHrLMEviVI=
-=mZBl
------END PGP SIGNATURE-----
+MD5 8d995a343d5083ba8ac84f1d4136d359 files/xpdf-3.3.0-kdegraphics.diff 1630
