@@ -1,0 +1,10 @@
+# ChangeLog for media-video/camstream
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.1 2003/03/19 14:28:16 phosphan Exp $
+
+*camstream-0.26.2 (19 Mar 2003)
+
+  19 Mar 2003; Patrick Kursawe <phosphan@gentoo.org> ChangeLog,
+  camstream-0.26.2.ebuild, files/digest-camstream-0.26.2 :
+  Initial import. This closes bug #13059 - let's see if it has
+  to be reopened if someone else has Burton's problems.
