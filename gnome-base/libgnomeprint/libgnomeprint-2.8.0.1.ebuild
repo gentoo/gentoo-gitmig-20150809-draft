@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.4.0.ebuild,v 1.11 2004/11/08 19:18:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.8.0.1.ebuild,v 1.1 2004/11/24 17:00:55 obz Exp $
 
 inherit gnome2
 
@@ -9,23 +9,27 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="2.2"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64 arm"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips ~ppc64 ~arm"
 IUSE="cups doc"
 
 RDEPEND=">=dev-libs/glib-2
-	>=x11-libs/pango-1
+	sys-libs/zlib
+	dev-libs/popt
+	>=x11-libs/pango-1.6
 	>=media-libs/fontconfig-1
 	>=media-libs/libart_lgpl-2.3.7
 	>=dev-libs/libxml2-2.4.23
 	>=media-libs/freetype-2.0.5
-	cups? ( >=net-print/cups-1.1 )"
+	cups? ( >=net-print/cups-1.1.20
+		net-print/libgnomecups )"
 
 DEPEND="${RDEPEND}
+	sys-devel/gettext
+	>=dev-util/intltool-0.29
 	>=dev-util/pkgconfig-0.12.0
-	doc? ( >=dev-util/gtk-doc-0.9 )"
+	doc? ( =app-text/docbook-sgml-dtd-3.0*
+		>=dev-util/gtk-doc-0.9 )"
 
-use cups \
-	&& G2CONF="${G2CONF} --with-cups" \
-	|| G2CONF="${G2CONF} --without-cups"
+G2CONF="${G2CONF} `use_with cups`"
 
 DOCS="AUTHORS COPYING* ChangeLog* INSTALL NEWS README"
