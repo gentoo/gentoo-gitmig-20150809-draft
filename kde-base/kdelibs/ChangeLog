@@ -1,9 +1,19 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.137 2004/05/15 15:27:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.138 2004/05/17 13:09:23 caleb Exp $
 
   15 May 2004; Jason Wever <weeve@gentoo.org> kdelibs-3.2.2.ebuild:
   Stable on sparc.
+
+*kdelibs-3.1.5-r1 (17 May 2004)
+
+  17 May 2004; Caleb Tennis <caleb@gentoo.org> kdelibs-3.1.5-r1.ebuild,
+  kdelibs-3.1.5.ebuild, kdelibs-3.2.2-r1.ebuild,
+  files/post-3.1.5-kdelibs-kapplication.patch,
+  files/post-3.1.5-kdelibs-ktelnetservice.patch,
+  files/post-3.2.2-kdelibs-kapplication.patch,
+  files/post-3.2.2-kdelibs-ktelnetservice.patch:
+  Add two patches for KDE security update, 3.2.2 and 3.1.5
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> kdelibs-3.1.5.ebuild,
   kdelibs-3.2.0.ebuild, kdelibs-3.2.2.ebuild:
