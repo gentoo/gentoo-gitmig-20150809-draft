@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/snes9express-1.42.ebuild,v 1.1 2004/03/03 21:47:01 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/snes9express-1.42.ebuild,v 1.2 2004/04/05 08:35:20 dholm Exp $
 
 DESCRIPTION="A graphical interface for the X11 versions of snes9x"
 SRC_URI="mirror://sourceforge/snes9express/${P}.tar.gz"
@@ -10,7 +10,7 @@ DEPEND=">=x11-libs/gtk+-2.0.0"
 RDEPEND="games-emulation/snes9x"
 IUSE="gtk2"
 SLOT="0"
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~x86"
 
 src_compile() {
 	econf || die "./configure failed"
