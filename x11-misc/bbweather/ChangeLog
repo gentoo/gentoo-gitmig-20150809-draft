@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbweather
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.20 2005/03/17 08:44:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.21 2005/03/19 09:52:44 kloeri Exp $
+
+  19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> bbweather-0.6.2.ebuild:
+  Stable on alpha.
 
   17 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> bbweather-0.6.2.ebuild:
   Stable on ppc.
