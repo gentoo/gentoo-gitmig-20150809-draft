@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.33 2003/11/04 22:02:06 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.34 2003/11/06 05:04:31 brad_mssw Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -11,40 +11,35 @@ ECLASS=kernel
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
-[ -z "${OKV}" ] && OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
-
-if [ -z "${EXTRAVERSION}" ]
-then
+[ -z "${OKV}" ] && \
+	OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
+if [ -z "${EXTRAVERSION}" ]; then
 	EXTRAVERSION="`echo ${PN}-${PV}-${PR} | \
 		sed -e 's:^\(.*\)-\(.*\)-[0-9]\+\.[0-9]\+\.[0-9]\+.r*\([0-9]\+\)\(_[^-_]\+\)\?\(-r[0-9]\+\)\?$:-\1-r\3\4:'`"
 	KV=${OKV}${EXTRAVERSION}
 fi
-
 S=${WORKDIR}/linux-${KV}
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
-IUSE="${IUSE} build"
-#IUSE="${IUSE} doc tcltk"
-KERNEL_DIR="${KERNEL_DIR:-${S}}"
-
+IUSE="${IUSE} doc tcltk"
 if [ "${ETYPE}" = "sources" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND="!build? ( sys-apps/sed
 			  >=sys-devel/binutils-2.11.90.0.31 )
-		app-admin/addpatches"
-		# This causes kernels to pull X when they really shouldn't
-		# doc? ( app-text/docbook-sgml-utils
-		#        media-gfx/transfig )
+			app-admin/addpatches"
+# This causes kernels to pull X when they really shouldn't
+#			doc? ( app-text/docbook-sgml-utils
+#				media-gfx/transfig )
 	RDEPEND="${DEPEND}
 		 !build? ( >=sys-libs/ncurses-5.2
 			   dev-lang/perl
 			   virtual/modutils
 			   sys-devel/make )"
-		# This also causes kernels to pull X when it shouldn't...
-		# tcltk? dev-lang/tk
+# This also causes kernels to pull X when it shouldn't...
+#			   tcltk? dev-lang/tk
 	PROVIDE="virtual/linux-sources"
-	
+
 elif [ "${ETYPE}" = "headers" ]
 then
 	PROVIDE="virtual/kernel virtual/os-headers"
@@ -55,39 +50,9 @@ fi
 
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -Os -fomit-frame-pointer -I${S}/include"
 
-
-kernel_getversion() {
-	local KERNEL_VERSION
-
-	[ -h ${KERNEL_DIR} ] && KERNEL_DIR="$(readlink -f ${KERNEL_DIR})"
-	if [ ! -d ${KERNEL_DIR} ]
-	then
-		eerror "Unable to locate kernel directory"
-		die
-	fi
-	KERNEL_VERSION="${KERNEL_DIR/*\linux-/}"
-	KERNEL_VERSION="${KERNEL_VERSION/-*/}"
-	
-	KV_MAJOR="$(echo ${KERNEL_VERSION} | cut -d. -f1)"
-	KV_MINOR="$(echo ${KERNEL_VERSION} | cut -d. -f2)"
-	KV_PATCH="$(echo ${KERNEL_VERSION} | cut -d. -f3)"
-}
-
-kernel_is_2.4() {
-	kernel_getversion
-	[ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -eq 4 ] && return 0 || return 1
-}
-
-kernel_is_2.6() {
-	kernel_getversion
-	[ ${KV_MAJOR} -eq 2 -a ${KV_MINOR} -eq 5 -o ${KV_MINOR} -eq 6 ] && return 0 || return 1
-}
-
 kernel_exclude() {
-	for mask in ${KERNEL_EXCLUDE}
-	do
-		for patch in *${mask}*
-		do
+	for mask in ${KERNEL_EXCLUDE}; do
+		for patch in *${mask}*; do
 			einfo "Excluding: ${patch}"
 			rm ${patch}
 		done
@@ -95,31 +60,33 @@ kernel_exclude() {
 }
 
 kernel_universal_unpack() {
-	find . -iname "*~" -exec rm {} \; 2> /dev/null
+	find . -iname "*~" | xargs rm 2> /dev/null
 
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
 	# also fix the EXTRAVERSION
 	cd ${S}
 	mv Makefile Makefile.orig
 	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
-	    -e "s:^\(EXTRAVERSION =\).*:\1 -$(echo ${KV} | cut -d- -f2,3,4,5):" \
+	    -e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" \
 		Makefile.orig >Makefile || die # test, remove me if Makefile ok
 	rm Makefile.orig
 	
-	if [ -d "${S}/Documentation/DocBook" ]
-	then
-		cd ${S}/Documentation/DocBook
-		sed -e "s:db2:docbook2:g" Makefile > Makefile.new \
+	cd  ${S}/Documentation/DocBook
+	sed -e "s:db2:docbook2:g" Makefile > Makefile.new \
 			&& mv Makefile.new Makefile
-		cd ${S}
-	fi
+	cd ${S}
+	
+	#This is needed on > 2.5
+	MY_ARCH=${ARCH}
+	unset ${ARCH}
+	#sometimes we have icky kernel symbols; this seems to get rid of them
+	make mrproper || die "make mrproper died"
+	ARCH=${MY_ARCH}
 
-	if [ $(kernel_is_2.4) ]
-	then
-		# this file is required for other things to build properly, 
-		# so we autogenerate it
-		make include/linux/version.h || die "make include/linux/version.h failed"
-	fi
+	# this file is required for other things to build properly, 
+	#  so we autogenerate it
+	make include/linux/version.h || die "make include/linux/version.h failed"
+
 }
 
 kernel_src_unpack() {
@@ -134,13 +101,14 @@ kernel_src_unpack() {
 }
 
 kernel_src_compile() {
-	if [ ${ETYPE} == "headers" ]
+	if [ "$ETYPE" = "headers" ]
 	then
+		#This is needed on > 2.5
 		MY_ARCH=${ARCH}
 		unset ${ARCH}
-		make mrproper || die "make mrproper died"
-		yes "" | make oldconfig
+		yes "" | make oldconfig		
 		ARCH=${MY_ARCH}
+		echo "Ignore any errors from the yes command above."
 	fi
 }
 
@@ -155,21 +123,10 @@ kernel_src_install() {
 	then
 		dodir /usr/src
 		echo ">>> Copying sources..."
-		if [ -d "${WORKDIR}/${KV}/docs/" ]
-		then
-			for file in $(ls -1 ${WORKDIR}/${KV}/docs/)
-			do
-				echo "XX_${file}*" >> patches.txt
-				cat ${WORKDIR}/${KV}/docs/${file} >> patches.txt
-			done
-		fi
-		
-		if [ ! -f patches.txt ]
-		then
-			# patches.txt is empty so lets use our ChangeLog
-			[ -f ${FILESDIR}/../ChangeLog ] && echo "Please check out the changelog for this package to find out more" > patches.txt
-		fi
-			
+		for file in `ls -1 ${WORKDIR}/${KV}/docs/`; do
+			echo "XX_${file}*" >> patches.txt
+			cat ${WORKDIR}/${KV}/docs/${file} >> patches.txt
+		done
 		if [ -f patches.txt ]; then
 			dodoc patches.txt
 		fi
@@ -200,13 +157,8 @@ kernel_pkg_postinst() {
 		rm -f ${ROOT}usr/src/linux
 		ln -sf linux-${KV} ${ROOT}/usr/src/linux
 	fi
-
-	KERNEL_DIR="${ROOT}/usr/src/linux"
-	kernel_getversion
 	einfo "After installing a new kernel of any version, it is important"
 	einfo "that you have the appropriate /etc/modules.autoload.d/kernel-X.Y"
 	einfo "created (X.Y is the first 2 parts of your new kernel version)"
-	echo
-	einfo "For example, this kernel will require:"
-	einfo "/etc/modules.autoload.d/kernel-${KV_MAJOR}.${KV_MINOR}"
 }
+
