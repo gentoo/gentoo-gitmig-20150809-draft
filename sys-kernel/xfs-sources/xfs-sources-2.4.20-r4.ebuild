@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.20-r2.ebuild,v 1.8 2003/12/02 23:27:50 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.20-r4.ebuild,v 1.1 2003/12/02 23:27:50 iggy Exp $
 
 IUSE="build crypt"
 
@@ -19,7 +19,7 @@ ETYPE="sources"
 
 inherit kernel
 OKV=2.4.20
-EXTRAVERSION=-xfs-r2
+EXTRAVERSION=-xfs-r4
 KV=${OKV}${EXTRAVERSION}
 S=${WORKDIR}/linux-${KV}
 
@@ -28,12 +28,13 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the XFS Specialized Gentoo Linux kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 mirror://gentoo/patches-${KV}.tar.bz2"
+	 mirror://gentoo/patches-${KV/-r4/-r3}.tar.bz2"
 KEYWORDS="x86 -ppc -sparc "
 SLOT="${KV}"
 
 src_unpack() {
 	unpack ${A}
+	mv ${WORKDIR}/${KV/-r4/-r3} ${WORKDIR}/${KV}
 	mv linux-${OKV} linux-${KV} || die
 
 	cd ${KV}
@@ -66,6 +67,7 @@ src_unpack() {
 	kernel_src_unpack
 
 	cd ${S}
-	#IMPORTANT! Root Exploit!
-	epatch ${FILESDIR}/do_brk_fix.patch
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
+	epatch ${FILESDIR}/xfs-sources-2.4.20-gcc33.patch
+
 }
