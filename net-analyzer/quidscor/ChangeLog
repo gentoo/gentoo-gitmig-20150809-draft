@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/quidscor
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/ChangeLog,v 1.2 2004/06/24 22:16:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/ChangeLog,v 1.3 2004/07/10 11:41:29 eldad Exp $
+
+  10 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
+  quidscor-1.2.48.ebuild:
+  Tidy. x86 stable
 
 *quidscor-1.2.48 (01 Dec 2003)
 
