@@ -2,6 +2,12 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # /space/gentoo/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp
 
+*libpng-1.2.2 (16 Apr 2002)
+
+  16 Apr 2002; Seemant Kulleen <seemant@gentoo.org>
+
+  Quick version update (new version fixes many bugs; whatever)
+
 *libpng-1.0.12-r1 and libpng-1.2.1-r1 (13 April 2002)
 
   13 April 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
