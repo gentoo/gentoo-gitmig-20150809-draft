@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.3-r1.ebuild,v 1.2 2003/05/22 06:52:30 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.3-r1.ebuild,v 1.3 2003/07/02 11:01:11 kosmikus Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -95,22 +95,26 @@ GHCPATH="${PATH}:/opt/ghc/bin"
 src_unpack() {
 	base_src_unpack
 
-	# Create our own lndir if none installed.
-	local LNDIR
-	if which lndir; then
-		LNDIR=lndir
-	else
-		# Current directory should be $WORKDIR.
-		echo "You don\'t seem to have lndir available, building my own"
-		echo "version..."
-		cp ${FILESDIR}/lndir.c . || die
-		make lndir || die
-		LNDIR=./lndir
-	fi
-
 	# apply patch to Linker.c to fix a problem with undefined symbols
 	# when starting GHCi
 	patch -p0 < ${FILESDIR}/ghc-5.04.3-r1.patch
+
+}
+
+src_compile() {
+	local LNDIR
+	local myconf
+
+	# Create GHC's lndir if none installed
+
+	if which lndir; then
+		LNDIR=lndir
+	else
+		echo "You don\'t seem to have lndir available (yet) ..."
+		PATH="${GHCPATH}" econf || die "lndir configure failed"
+		make glafp-utils || die "glafp-utils make failed"
+		LNDIR="${S}/glafp-utils/lndir/lndir"
+	fi
 
 	# Create build directories.
 	if test x$need_stage1 = xyes; then
@@ -122,10 +126,6 @@ src_unpack() {
 	mkdir ${STAGE2_B} || die
 	${LNDIR} ${S} ${STAGE2_B} || die
 
-}
-
-src_compile() {
-	local myconf
 	use opengl && myconf="--enable-hopengl" || myconf="--disable-hopengl"
 
 	if test x$need_stage1 = xyes; then

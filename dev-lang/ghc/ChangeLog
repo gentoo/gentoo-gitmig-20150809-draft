@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.15 2003/06/01 09:17:50 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.16 2003/07/02 11:01:11 kosmikus Exp $
+
+  02 Jul 2003; Andres Loeh <kosmikus@gentoo.org> ghc-5.04.3-r1.ebuild:
+  Removed implicit X11 dependency (bug 23708). Thanks to Aaron Son
+  <aaron@clamp.net> for discovering the problem.
 
 *ghc-6.0 (01 Jun 2003)
 
