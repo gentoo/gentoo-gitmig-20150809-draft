@@ -1,0 +1,61 @@
+Index: src/awk/cachedepends.awk
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/src/awk/cachedepends.awk,v
+retrieving revision 1.20
+retrieving revision 1.21
+diff -u -r1.20 -r1.21
+--- src/awk/cachedepends.awk	23 Feb 2005 17:47:43 -0000	1.20
++++ src/awk/cachedepends.awk	10 Mar 2005 17:00:04 -0000	1.21
+@@ -1,6 +1,6 @@
+ # Copyright 1999-2004 Gentoo Foundation
+ # Distributed under the terms of the GNU General Public License v2
+-# $Header: /var/cvsroot/gentoo-src/rc-scripts/src/awk/cachedepends.awk,v 1.20 2005/02/23 17:47:43 azarah Exp $
++# $Header: /var/cvsroot/gentoo-src/rc-scripts/src/awk/cachedepends.awk,v 1.21 2005/03/10 17:00:04 azarah Exp $
+ 
+ function print_start() {
+ 	print "source /sbin/functions.sh" >> TMPCACHE
+@@ -106,7 +106,7 @@
+ 
+ 	if (RCCOUNT == 0) {
+ 		eerror("No scripts to process!")
+-		system("rm -f "TMPCACHE)
++		dosystem("rm -f "TMPCACHE)
+ 		exit 1
+ 	}
+ 
+@@ -206,8 +206,8 @@
+ 	}
+ 
+ 	
+-	assert(system("rm -f "SVCDIR"/depcache"), "system(rm -f "SVCDIR"/depcache)")
+-	assert(system("mv "TMPCACHE" "SVCDIR"/depcache"), "system(mv "TMPCACHE" "SVCDIR"/depcache)")
++	assert(dosystem("rm -f "SVCDIR"/depcache"), "system(rm -f "SVCDIR"/depcache)")
++	assert(dosystem("mv "TMPCACHE" "SVCDIR"/depcache"), "system(mv "TMPCACHE" "SVCDIR"/depcache)")
+ }
+ 
+ 
+Index: src/awk/gendepends.awk
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/src/awk/gendepends.awk,v
+retrieving revision 1.25
+retrieving revision 1.26
+diff -u -r1.25 -r1.26
+--- src/awk/gendepends.awk	23 Feb 2005 17:47:43 -0000	1.25
++++ src/awk/gendepends.awk	10 Mar 2005 17:00:04 -0000	1.26
+@@ -1,6 +1,6 @@
+ # Copyright 1999-2004 Gentoo Foundation
+ # Distributed under the terms of the GNU General Public License v2
+-# $Header: /var/cvsroot/gentoo-src/rc-scripts/src/awk/gendepends.awk,v 1.25 2005/02/23 17:47:43 azarah Exp $
++# $Header: /var/cvsroot/gentoo-src/rc-scripts/src/awk/gendepends.awk,v 1.26 2005/03/10 17:00:04 azarah Exp $
+ 
+ # bool check_service(name)
+ #
+@@ -498,7 +498,7 @@
+ 	close(CACHEDTREE)
+ 
+ 	assert(dosystem("rm -f "ORIGCACHEDTREE), "system(rm -f "ORIGCACHEDTREE")")
+-	assert(system("mv "CACHEDTREE" "ORIGCACHEDTREE), "system(mv "CACHEDTREE" "ORIGCACHEDTREE")")
++	assert(dosystem("mv "CACHEDTREE" "ORIGCACHEDTREE), "system(mv "CACHEDTREE" "ORIGCACHEDTREE")")
+ }
+ 
+ 
