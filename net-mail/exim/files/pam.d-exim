@@ -1,3 +1,0 @@
-# You may need to remove the "md5"
-auth required pam_unix.so shadow md5
-account required pam_unix.so
