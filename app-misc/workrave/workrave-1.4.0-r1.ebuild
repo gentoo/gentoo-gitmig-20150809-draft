@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.0-r1.ebuild,v 1.7 2004/05/06 07:57:17 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.4.0-r1.ebuild,v 1.8 2004/05/06 16:35:00 leonardop Exp $
 
 inherit eutils
 
@@ -54,12 +54,12 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 
-	use debug           && myconf="${myconf} --enable-debug"
-	use distribution    || myconf="${myconf} --disable-distribution"
-	use nls             || myconf="${myconf} --disable-nls"
-	use no-exercises    || myconf="${myconf} --enable-exercises"
-	use no-experimental && myconf="${myconf} --disable-experimental"
-	use xml2            && myconf="${myconf} --enable-xml"
+	use debug          && myconf="${myconf} --enable-debug"
+	use distribution   || myconf="${myconf} --disable-distribution"
+	use nls            || myconf="${myconf} --disable-nls"
+	use noexercises    || myconf="${myconf} --enable-exercises"
+	use noexperimental && myconf="${myconf} --disable-experimental"
+	use xml2           && myconf="${myconf} --enable-xml"
 
 	if [ `use gnome` ]
 	then

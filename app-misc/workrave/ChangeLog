@@ -1,7 +1,10 @@
 # ChangeLog for app-misc/workrave
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.15 2004/05/06 07:57:17 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.16 2004/05/06 16:35:00 leonardop Exp $
 
+  06 May 2004; L. Boshell <leonardop@gentoo.org> workrave-1.4.0-r1.ebuild:
+  Fix local USE flags.
+  
 *workrave-1.6.0 (06 May 2004)
 
   06 May 2004; L. Boshell <leonardop@gentoo.org> workrave-1.6.0.ebuild:
