@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/entice/entice-0.7.0.20030220.ebuild,v 1.3 2003/03/13 19:48:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/entice/entice-0.7.0.20030220.ebuild,v 1.4 2003/03/27 09:43:38 seemant Exp $
 
 DESCRIPTION="the E image browser"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha"
-IUSE="pic"
+IUSE=""
 
 DEPEND="virtual/glibc
 	sys-devel/gcc
@@ -30,7 +30,7 @@ pkg_setup() {
 
 src_compile() {
 	env PATH="${T}:${PATH}" WANT_AUTOCONF_2_5=1 NOCONFIGURE=yes ./autogen.sh || die
-	econf `use_with pic` --with-gnu-ld || die
+	econf --with-gnu-ld || die
 	emake || die
 }
 
