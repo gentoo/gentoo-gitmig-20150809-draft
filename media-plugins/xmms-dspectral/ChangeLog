@@ -1,9 +1,15 @@
 # ChangeLog for media-plugins/xmms-dspectral
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectral/ChangeLog,v 1.4 2003/02/12 07:21:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectral/ChangeLog,v 1.5 2003/03/29 04:01:07 seemant Exp $
 
 
 *dspectral-1.2,  (22 May 2002)
+
+  28 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
+  xmms-dspectral-1.2.ebuild :
+
+  HOMEPAGE fix thanks to: Frantz Dhin <tragedy_rm@hotmail.com> in bug
+  #18299
 
   25 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> xmms-dspectral-1.2.ebuild :
 
