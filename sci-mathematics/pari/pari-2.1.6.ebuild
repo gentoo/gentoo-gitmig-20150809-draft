@@ -1,18 +1,27 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.5-r2.ebuild,v 1.1 2004/12/28 15:08:39 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.6.ebuild,v 1.1 2005/01/06 10:34:52 phosphan Exp $
+
+inherit eutils
 
 DESCRIPTION="pari (or pari-gp) : a software package for computer-aided number theory"
-HOMEPAGE="http://www.parigp-home.de/"
-SRC_URI="http://www.gn-50uma.de/ftp/pari-2.1/${P}.tar.gz"
+HOMEPAGE="http://pari.math.u-bordeaux.fr/"
+SRC_URI="http://pari.math.u-bordeaux.fr/pub/pari/unix/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~mips ~hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64"
 
-IUSE="doc"
+IUSE="doc emacs"
 
 DEPEND="doc? ( virtual/tetex )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/docs.patch
+	epatch ${FILESDIR}/wrong_functype.patch
+}
 
 src_compile() {
 	./Configure \
@@ -31,6 +40,12 @@ src_compile() {
 		emake CFLAGS="${CFLAGS} -DGCC_INLINE -fPIC" lib-dyn || die "Building shared library failed!"
 		einfo "Building executables..."
 		emake CFLAGS="${CFLAGS} -DGCC_INLINE" gp ../gp || die "Building exectuables failed!"
+	elif use alpha; then
+		einfo "Building shared library..."
+		cd Olinux-alpha
+		emake CFLAGS="${CFLAGS} -DGCC_INLINE -fPIC" lib-dyn || die "Building shared library failed!"
+		einfo "Building executables..."
+		emake CFLAGS="${CFLAGS} -DGCC_INLINE" gp ../gp || die "Building exec  tu  ables failed!"
 	else
 		emake CFLAGS="${CFLAGS} -DGCC_INLINE" gp || die
 	fi
@@ -40,5 +55,9 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
+	if use emacs; then
+		insinto /usr/share/emacs/site-lisp
+		doins emacs/pari.el
+	fi
 	dodoc AUTHORS Announce.2.1 CHANGES README TODO
 }

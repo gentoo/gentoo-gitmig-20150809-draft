@@ -1,0 +1,35 @@
+diff -ru src/gp/gp_rl.c src.new/gp/gp_rl.c
+--- src/gp/gp_rl.c	2001-04-27 15:55:38.000000000 +0200
++++ src.new/gp/gp_rl.c	2005-01-06 11:04:45.198086689 +0100
+@@ -79,11 +79,13 @@
+ #endif
+ 
+ #ifdef HAS_RL_COMPLETION_MATCHES
+-#  define COMPLETION_MATCHES ((CF)rl_completion_matches)
++#  define COMPLETION_MATCHES(a,b) \
++ (completion_matches((char *)(a),(b)))
+ #  define FILE_COMPLETION ((GF)rl_filename_completion_function)
+ #  define USER_COMPLETION ((GF)rl_username_completion_function)
+ #else
+-#  define COMPLETION_MATCHES ((CF)completion_matches)
++#  define COMPLETION_MATCHES(a,b) \
++  (completion_matches((char *)(a),(b)))
+ #  define FILE_COMPLETION ((GF)filename_completion_function)
+ #  define USER_COMPLETION ((GF)username_completion_function)
+ #endif
+diff -ru src.old/gp/gp_rl.c src/gp/gp_rl.c
+--- src.old/gp/gp_rl.c	2005-01-06 11:07:18.000000000 +0100
++++ src/gp/gp_rl.c	2005-01-06 11:15:10.509112328 +0100
+@@ -625,10 +625,8 @@
+   /* we always want the whole list of completions under emacs */
+   if (under_emacs) rl_completion_query_items = 0x8fff;
+ 
+-#define Bind(a,b,c) (((void(*)(int,Function*,Keymap)) rl_bind_key_in_map)\
+-  ((a), (Function*)(b), (c)))
+-#define Defun(a,b,c) (((void(*)(const char*,Function*,int)) rl_add_defun)\
+-  ((a), (Function*)(b), (c)))
++#define Bind(a,b,c) (rl_bind_key_in_map((a), (Function*)(b), (c)))
++#define Defun(a,b,c) (rl_add_defun((char*)(a), (Function*)(b), (c)))
+ 
+   Defun("short-help", rl_short_help, -1);
+   Defun("long-help", rl_long_help, -1);
