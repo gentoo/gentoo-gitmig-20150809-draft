@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.71 2004/02/29 16:22:14 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.72 2004/03/03 14:54:06 gustavoz Exp $
+
+  03 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> openbox-3.1.ebuild:
+  stable on sparc
 
   29 Feb 2004; Brandon Hale <tseng@gentoo.org> openbox-3.1.ebuild:
   Keyword x86 for real this time.
