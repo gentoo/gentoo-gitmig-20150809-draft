@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.3.ebuild,v 1.1 2005/04/01 17:30:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.3.ebuild,v 1.2 2005/04/01 22:54:58 vapier Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="GNU macro processor"
 HOMEPAGE="http://www.gnu.org/software/m4/m4.html"
@@ -17,6 +17,12 @@ IUSE="nls"
 DEPEND="nls? ( sys-devel/gettext )"
 RDEPEND=""
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-autotools.patch
+}
+
 src_compile() {
 	econf \
 		$(use_enable nls) \
@@ -26,6 +32,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make install DESTDIR="${D}" || die
 	dodoc BACKLOG ChangeLog NEWS README* THANKS TODO
 }
