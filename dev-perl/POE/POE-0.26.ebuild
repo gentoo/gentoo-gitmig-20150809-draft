@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.26.ebuild,v 1.6 2004/06/25 00:56:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.26.ebuild,v 1.7 2004/07/14 20:15:43 agriffis Exp $
 
-IUSE="gtk tcltk libwww ncurses"
+IUSE="gtk ipv6 libwww ncurses tcltk"
 
 inherit perl-module
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A framework for creating multitasking programs in Perl"
 HOMEPAGE="http://poe.perl.org"
 SRC_URI="mirror://sourceforge/poe/${P}.tar.gz"
