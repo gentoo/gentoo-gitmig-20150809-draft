@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/tct
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/tct/ChangeLog,v 1.6 2005/01/01 14:24:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/tct/ChangeLog,v 1.7 2005/01/31 11:24:07 ka0ttic Exp $
+
+  31 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> tct-1.15-r1.ebuild,
+  -tct-1.15.ebuild:
+  Marked 1.15-r1 stable on x86; removed 1.15.
 
   10 Nov 2004; Aaron Walker <ka0ttic@gentoo.org>
   files/tct-1.15-r1-gentoo.diff:
