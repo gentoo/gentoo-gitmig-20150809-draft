@@ -1,4 +1,14 @@
-MD5 d91327b0ac151c0e76d55e3f694dbb50 ChangeLog 1199
-MD5 ce0a498b4ab0b2f905dd87487762cb14 jack-3.0.0.ebuild 1154
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d2e2e30011d0c66e0c85b6d560bdf376 ChangeLog 1296
+MD5 2868aed89c5aac74fd0bc12385ff117f jack-3.0.0.ebuild 1174
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
 MD5 e9353981f9cfeeae48a5377c9335e9b6 files/digest-jack-3.0.0 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBZLfxArHZZzCEUG0RAhL/AJwNPLlxkVkqtxKipvGAc9cgqBc14gCdHcsW
+mLWA5B2vK3zmQOg5Sz/l+Co=
+=qsY2
+-----END PGP SIGNATURE-----
