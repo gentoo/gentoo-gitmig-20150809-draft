@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ddcxinfo-knoppix
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ddcxinfo-knoppix/ChangeLog,v 1.6 2005/03/05 16:58:46 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ddcxinfo-knoppix/ChangeLog,v 1.7 2005/03/16 21:07:17 wolf31o2 Exp $
+
+  16 Mar 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  ddcxinfo-knoppix-0.6.ebuild:
+  Install ddcprobe and close bug #85475.
 
   05 Mar 2005; Mike Doty <kingtaco@gentoo.org> ddcxinfo-knoppix-0.6.ebuild:
   -amd64 because of very x86 centric code, won't build on amd64

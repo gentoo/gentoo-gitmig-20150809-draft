@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7a62b126e1a036bbbadceed0deaf72d0 ChangeLog 919
-MD5 7e98dd01eea8e09b3346da48a82c5faa ddcxinfo-knoppix-0.6.ebuild 713
+MD5 502ed6b51b0e9c6e8113f76d6197d02c ddcxinfo-knoppix-0.6.ebuild 722
+MD5 b399380e027dc366796b1e712306df65 ChangeLog 1046
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
 MD5 dcdb2bfc109960ea73a1ed3d7256a569 files/digest-ddcxinfo-knoppix-0.6 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCKeVS0K3RJaeXx6cRAsPWAJ9JurhPrabilfCOX08J2aisoePgXwCfesGU
-g1LI2WQWRDZV08PvcdOQtLU=
-=Oo4X
------END PGP SIGNATURE-----
