@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.9 2004/04/11 05:46:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.10 2004/04/30 12:07:04 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -11,7 +11,7 @@
 #
 # Description:
 #   If you use this eclass, the ${S} is ${WORKDIR}/${P}.
-#   It is necessary to define the ESVN_REPOURI variable at least.
+#   It is necessary to define the ESVN_REPO_URI variable at least.
 #
 ## --------------------------------------------------------------------------- #
 
