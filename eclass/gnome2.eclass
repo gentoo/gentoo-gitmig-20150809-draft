@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.44 2004/07/23 04:52:37 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.45 2004/09/14 12:10:22 foser Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
 # Spidler <spider@gentoo.org>
 
-inherit libtool gnome.org debug
+inherit libtool gnome.org debug fdo-mime
 
 # Gnome 2 ECLASS
 ECLASS="gnome2"
@@ -22,7 +22,9 @@ use debug && G2CONF="${G2CONF} --enable-debug=yes"
 DEPEND="${DEPEND} >=sys-apps/sed-4"
 
 gnome2_src_configure() {
+
 	elibtoolize ${ELTCONF}
+
 	# doc keyword for gtk-doc
 	use doc \
 		&& G2CONF="${G2CONF} --enable-gtk-doc" \
@@ -72,10 +74,14 @@ gnome2_src_install() {
 
 	# regenerate these in pkg_postinst()
 	rm -rf ${D}/var/lib/scrollkeeper
+	# make sure this one doesn't get in the portage db
+	rm -fr ${D}/usr/share/applications/mimeinfo.cache
+
 }
 
 
 gnome2_gconf_install() {
+
 	if [ -x ${ROOT}/usr/bin/gconftool-2 ]
 	then
 		unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
@@ -86,6 +92,7 @@ gnome2_gconf_install() {
 			${ROOT}/usr/bin/gconftool-2  --makefile-install-rule ${F} 1>/dev/null
 		done
 	fi
+
 }
 
 gnome2_gconf_uninstall() {
@@ -104,6 +111,7 @@ gnome2_gconf_uninstall() {
 }
 
 gnome2_omf_fix() {
+
 	# workaround/patch against omf.make or omf-install/Makefile.in
 	# in order to remove redundant scrollkeeper-updates.
 	# - <liquidx@gentoo.org>
@@ -127,19 +135,26 @@ gnome2_omf_fix() {
 		einfo "Fixing OMF Makefile: ${omf#${S}/}"
 		sed -i -e 's:-scrollkeeper-update.*::' ${omf}
 	done
+
 }
 
 gnome2_scrollkeeper_update() {
+
 	if [ -x ${ROOT}/usr/bin/scrollkeeper-update ] && [ "${SCROLLKEEPER_UPDATE}" = "1" ]
 	then
 		echo ">>> Updating Scrollkeeper"
 		scrollkeeper-update -q -p ${ROOT}/var/lib/scrollkeeper
 	fi
+
 }
 
 gnome2_pkg_postinst() {
+
 	gnome2_gconf_install
 	gnome2_scrollkeeper_update
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+
 }
 
 #gnome2_pkg_prerm() {
@@ -149,7 +164,11 @@ gnome2_pkg_postinst() {
 #}
 
 gnome2_pkg_postrm() {
+
 	gnome2_scrollkeeper_update
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+
 }
 
 
