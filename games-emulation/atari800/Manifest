@@ -1,7 +1,17 @@
-MD5 950df2637166855a5eca42cfa53da9ae ChangeLog 2435
-MD5 8cabf7bab14a39d0286de04debc312c8 atari800-1.3.5.ebuild 2373
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3e34f92f94ef04fe78f7c0204f62bd92 atari800-1.3.5.ebuild 2380
+MD5 92c840bdbd328b174f5b42f92bce0eee atari800-1.3.4.ebuild 2373
+MD5 06a5f68d73c6f413b43153d51d8fe695 ChangeLog 2553
 MD5 d1fb8b39c231a1671ed7c95f426130e6 metadata.xml 866
-MD5 1bc2a749559c024531526a8b911b508d atari800-1.3.4.ebuild 2373
+MD5 5dbf9ebfa0b38c8d39e1b1a6fa9fce38 files/digest-atari800-1.3.4 120
 MD5 849d0429b9151cfeeba97049ab911bed files/digest-atari800-1.3.5 120
 MD5 c985421e05510bde42a8ed91774884b6 files/atari800.cfg 467
-MD5 5dbf9ebfa0b38c8d39e1b1a6fa9fce38 files/digest-atari800-1.3.4 120
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSKm506ebR+OMO78RArcmAJ9DkrF3dDowg+PK7vabgf7e0z5qsgCgmUY3
+8JVT65mvsQkJR0cIKYBAiDQ=
+=AIrc
+-----END PGP SIGNATURE-----
