@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10-r1.ebuild,v 1.2 2004/02/11 01:30:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10-r1.ebuild,v 1.3 2004/02/21 23:37:07 brad_mssw Exp $
 
 inherit gnome.org libtool
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2 LGPL-2.1"
 # not compile, so not sure as to what to set SLOT to .. it could be
 # that new versions will support 1.[12] of gtkhtml ...
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64"
 IUSE="nls gnome"
 
 # peg gtkhtml at gal-0.23 because it might get confused with gal-1.99
