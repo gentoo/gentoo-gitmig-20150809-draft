@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 b74741d12396484d867af85095a16eab ChangeLog 1660
+MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
 MD5 f4d092dfebacb0a81b338b4ec32098e0 tre-0.6.6.ebuild 965
 MD5 149bf747125ab5add54cc4d5454b2239 tre-0.6.8.ebuild 1194
-MD5 aa5f67cb7652207d84725a3ff6103e28 ChangeLog 1468
-MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 b60e1dc7ab6d96f81c2428eb26320ac1 files/digest-tre-0.6.6 62
+MD5 f4e88f2f987f21c58ffd6515af5f06a0 tre-0.7.0.ebuild 1200
 MD5 50afdfdea1dbb2f1cbf0fedb7d127e4a files/digest-tre-0.6.8 62
+MD5 b60e1dc7ab6d96f81c2428eb26320ac1 files/digest-tre-0.6.6 62
+MD5 6e56039a6668c1f9a9c58117436ae97e files/digest-tre-0.7.0 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBOPMoCHk4+ZoBpvsRAkxYAKC/o+UqymZaLCTqrjeQJ0tfQAbcaQCZAUHM
-hpmyJjV2YRNbq+JCR+LsTRM=
-=8Jpn
+iD8DBQFBgLsGmdTrptrqvGERApXkAJ42gCx3rFJfTTPoeF0NkWleQfZbAgCfQJbw
++W1089WViYJMx0CwcXnyjik=
+=yWfI
 -----END PGP SIGNATURE-----

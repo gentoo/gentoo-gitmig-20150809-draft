@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/tre
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.9 2004/09/03 22:40:47 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.10 2004/10/28 09:25:20 dragonheart Exp $
+
+*tre-0.7.0 (28 Oct 2004)
+
+  28 Oct 2004; Daniel Black <dragonheart@gentoo.org> +tre-0.7.0.ebuild:
+  version bump as per bug #66523. Bug report by Antonio Dolcetta
+  <zagarna@yahoo.com>
 
   03 Sep 2004; Tom Martin <slarti@gentoo.org> tre-0.6.8.ebuild:
   Marked ~amd64, resolves #58522. Thanks to Gabriel Ebner <ge@gabrielebner.at>
