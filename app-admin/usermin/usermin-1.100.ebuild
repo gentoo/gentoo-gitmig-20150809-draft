@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.100.ebuild,v 1.5 2005/01/01 11:33:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.100.ebuild,v 1.6 2005/03/03 14:59:31 ciaranm Exp $
 
 IUSE="ssl"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~ppc ~ppc64 sparc x86 ~hppa"
 
 RDEPEND="dev-lang/perl
-	sys-apps/lsof
+	sys-process/lsof
 	>=sys-apps/sed-4
 	dev-perl/Authen-PAM
 	ssl? ( dev-perl/Net-SSLeay )"
