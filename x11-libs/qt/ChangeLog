@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.175 2004/10/31 05:39:12 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.176 2004/12/02 12:07:42 caleb Exp $
+
+  02 Dec 2004; Caleb Tennis <caleb@gentoo.org> :
+  Change CC to (tc-getCC)
 
   31 Oct 2004; Daniel Goller <morfic@gentoo.org> qt-3.3.3-r1.ebuild,
   qt-3.3.3.ebuild:

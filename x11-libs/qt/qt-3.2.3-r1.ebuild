@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.3-r1.ebuild,v 1.10 2004/10/25 17:29:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.3-r1.ebuild,v 1.11 2004/12/02 12:07:42 caleb Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -49,12 +49,12 @@ src_unpack() {
 
 	cd mkspecs/linux-g++
 	# use env's $CC, $CXX
-	if [ -n "$CXX" ]; then
+	if [ -n "$(tc-getCCX)" ]; then
 		einfo 'Using environment definition of $CXX'
 		cp qmake.conf qmake.conf.orig
 		sed -e "s:= g++:= ${CXX}:" qmake.conf.orig > qmake.conf
 	fi
-	if [ -n "$CC" ]; then
+	if [ -n "$(tc-getCC)" ]; then
 		einfo 'Using environment definition of $CC'
 		cp qmake.conf qmake.conf.orig
 		sed -e "s:= gcc:= ${CC}:" qmake.conf.orig > qmake.conf
