@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <lordvan@gentoo.org> (14 Dec 2002)
+# changed Version scheme from 305 to 4.0.0
+>=net-misc/omniORB-304
+
 # <mkennedy@gentoo.org> (14 Dec 2002)
 # needs to be assimilated with app-emacs/psgml
 app-text/psgml
