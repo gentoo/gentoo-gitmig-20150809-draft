@@ -182,6 +182,34 @@ class depgraph:
 				if retval:
 					print "!!! emerge aborting on ",y,"."
 					sys.exit(1)
+
+def post_emerge(retval=0):
+	root=portage.root
+	print
+	print ">>> \x1b[32;01mRegenerating GNU info directory index...\x1b[0m"
+	if not os.path.isdir(root+"usr/share/info"):
+		print "    "+root+"usr/share/info doesn't exist, skipping"
+	else:
+		if os.path.exists(root+"usr/share/info/dir"):
+			os.rename(root+"usr/share/info/dir",root+"usr/share/info/dir.old")
+		icount=0
+		for x in os.listdir(root+"usr/share/info"):
+			if (x[-5:]==".info") or (x[-8:]==".info.gz"):
+				myso=commands.getstatusoutput("/usr/bin/install-info --dir-file="+root+"usr/share/info/dir "+root+"usr/share/info/"+x)[1]
+				if myso!="":
+					print myso
+				icount=icount+1
+		print "    Processed",icount,"files."
+	if portage.settings["CONFIG_PROTECT"]:
+		print
+		print ">>> \x1b[32;01mNote:\x1b[0m"
+		print "    Config file protection is enabled."
+		print "    \x1b[32;01mdirs:\x1b[0m "+portage.settings["CONFIG_PROTECT"]
+		print "    \x1b[32;01mmasked-out dirs:\x1b[0m",portage.settings["CONFIG_PROTECT_MASK"]
+		print "    /etc/env.d is hard-coded; type \"emerge --help config\" more information."
+		print
+	sys.exit(retval)
+
 opts=["--help","--pretend","--buildpkg","--usepkg","--autoclean","--clean","--debug"]
 modes=["rsync","system","update","config"]
 myopts=[]
@@ -384,16 +412,7 @@ if ("system" in mymode) or ("update" in mymode):
 		mydepgraph.display(mydepgraph.altlist())
 	else:
 		mydepgraph.merge(mydepgraph.altlist())
-	
-	if portage.settings["CONFIG_PROTECT"]:
-		print
-		print ">>> \x1b[32;01mNote:\x1b[0m"
-		print "    Config file protection is enabled for these"
-		print "    directories: \x1b[32;01m"+portage.settings["CONFIG_PROTECT"]+"\x1b[0m"
-		print "    Type \"emerge --help config\" more information."
-		print
-	sys.exit(0)
-
+	post_emerge()
 mydepgraph=depgraph(mymode,myopts)
 for mypkg in myfiles:
 	if mypkg[-5:]==".tbz2":
@@ -413,3 +432,4 @@ for mypkg in myfiles:
 		mydepgraph.display(mydepgraph.altlist())
 	else:
 		mydepgraph.merge(mydepgraph.altlist())
+	post_emerge()
