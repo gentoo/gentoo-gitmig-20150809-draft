@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/nucleo/nucleo-0.1_p20041130.ebuild,v 1.3 2005/02/10 08:39:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/nucleo/nucleo-0.1_p20041216.ebuild,v 1.1 2005/02/10 08:39:16 usata Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="virtual/x11
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc"
+KEYWORDS="~x86 ~ppc"
 
 S="${WORKDIR}/${P/_p*/}"
 

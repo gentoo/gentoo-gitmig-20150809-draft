@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/nucleo
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/nucleo/ChangeLog,v 1.7 2004/12/03 10:58:25 usata Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/nucleo/ChangeLog,v 1.8 2005/02/10 08:39:16 usata Exp $
+
+*nucleo-0.1_p20041216 (10 Feb 2005)
+
+  10 Feb 2005; Mamoru KOMACHI <usata@gentoo.org>
+  nucleo-0.1_p20041130.ebuild, +nucleo-0.1_p20041216.ebuild:
+  Verion bumped. Marked previous version stable.
 
   03 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> +files/nucleo-0.1-nv.patch,
   nucleo-0.1_p20041130.ebuild:
