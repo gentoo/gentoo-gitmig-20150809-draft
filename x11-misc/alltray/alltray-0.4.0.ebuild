@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.4.0.ebuild,v 1.1 2005/02/24 20:08:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.4.0.ebuild,v 1.2 2005/03/18 21:28:42 swegener Exp $
 
 inherit versionator
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.4"
