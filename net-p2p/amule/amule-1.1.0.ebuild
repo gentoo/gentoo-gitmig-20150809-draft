@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-1.1.0.ebuild,v 1.1 2003/10/22 16:47:36 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-1.1.0.ebuild,v 1.2 2003/11/10 14:13:51 malverian Exp $
 
 MY_P=${P/m/M}
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 
