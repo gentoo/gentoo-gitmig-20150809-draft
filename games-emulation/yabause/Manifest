@@ -1,6 +1,4 @@
-MD5 3f555457d161f60ed427a42d0ad336c6 ChangeLog 480
+MD5 ee239ab5ab6a29fa4677e542770cb72a ChangeLog 580
 MD5 7efefbbe81a05cbc5d4e96203f047fda metadata.xml 245
-MD5 27c3f036350ed82af7742d9acd933282 yabause-0.0.5.ebuild 572
 MD5 86578cf962cca953237701254a97616e yabause-0.0.6.ebuild 612
-MD5 f20b9e676d7a2b08d1398122dd0bcd72 files/digest-yabause-0.0.5 65
 MD5 0364a8a0e4ef244b37813c680312f6fc files/digest-yabause-0.0.6 65
