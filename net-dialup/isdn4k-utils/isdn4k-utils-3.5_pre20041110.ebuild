@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.5_pre20041110.ebuild,v 1.2 2004/11/22 20:56:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.5_pre20041110.ebuild,v 1.3 2004/11/23 05:47:40 mrness Exp $
 
 inherit eutils
 
@@ -17,15 +17,14 @@ LICENSE="GPL-2"
 IUSE="X unicode"
 SLOT="0"
 
-RDEPEND="virtual/modutils
+DEPEND="virtual/linux-sources
 	virtual/libc
 	sys-libs/ncurses
 	sys-libs/gdbm
 	dev-lang/tcl
 	X? ( virtual/x11 )"
-
-DEPEND="${RDEPEND}
-	virtual/linux-sources"
+RDEPEND="${DEPEND}
+	virtual/modutils"
 
 src_setup() {
 	# Get country code from I4L_CC variable
