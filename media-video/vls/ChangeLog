@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vls
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vls/ChangeLog,v 1.15 2004/06/25 00:52:39 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vls/ChangeLog,v 1.16 2005/01/29 00:27:08 luckyduck Exp $
+
+  29 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> vls-0.5.6-r1.ebuild:
+  restructered DEPEND to fix #48087.
 
 *vls-0.5.6-r2 (02 May 2004)
 
