@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/gnome-netstatus
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.21 2004/09/13 16:36:39 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.22 2004/09/16 20:09:39 foser Exp $
+
+*gnome-netstatus-2.8.0 (16 Sep 2004)
+
+  16 Sep 2004; foser <foser@gentoo.org> gnome-netstatus-2.8.0.ebuild :
+  Gnome 2.8 release
 
 *gnome-netstatus-2.6.2.1 (14 Sep 2004)
 
