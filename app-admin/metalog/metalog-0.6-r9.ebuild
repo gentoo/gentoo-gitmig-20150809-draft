@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry A! <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.6-r9.ebuild,v 1.1 2002/03/11 22:30:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.6-r9.ebuild,v 1.2 2002/04/24 09:03:17 bangert Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A highly configurable replacement for syslogd/klogd"
@@ -33,8 +33,11 @@ src_install () {
 	dodoc AUTHORS COPYING ChangeLog README
 	newdoc metalog.conf metalog.conf.sample
 
-	insinto /etc/metalog ; doins metalog.conf
+	insinto /etc/metalog ; doins ${FILESDIR}/metalog.conf
 	exeinto /etc/init.d ; newexe ${FILESDIR}/metalog.rc6 metalog
 	insinto /etc/conf.d ; newins ${FILESDIR}/metalog.confd metalog
+	
+	exeinto /usr/sbin
+	doexe ${FILESDIR}/consolelog.sh
 }
 
