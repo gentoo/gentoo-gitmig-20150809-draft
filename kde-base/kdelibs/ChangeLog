@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.177 2004/12/28 19:03:32 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.178 2004/12/29 02:41:11 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> kdelibs-3.3.2-r1.ebuild:
   Stable on amd64.
@@ -161,7 +164,7 @@
   +kdelibs-3.3.0_beta1.ebuild:
   New beta, remove alpha
 
-  07 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> kdelibs-3.2.2-r1.ebuild:
+  07 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> kdelibs-3.2.2-r1.ebuild:
   Stable on alpha.
 
 *kdelibs-3.2.3 (10 Jun 2004)

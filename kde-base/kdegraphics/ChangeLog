@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.134 2004/12/28 19:11:51 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.135 2004/12/29 02:39:45 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org>
   kdegraphics-3.3.2-r1.ebuild:
@@ -80,7 +83,7 @@
   24 Oct 2004; Jason Wever <weeve@gentoo.org> kdegraphics-3.2.3-r1.ebuild:
   Stable on sparc wrt security bug #68558.
 
-  24 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  24 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   kdegraphics-3.2.3-r1.ebuild:
   Stable on alpha, bug 68558.
 
@@ -166,7 +169,7 @@
   -kdegraphics-3.3.0_alpha1.ebuild, +kdegraphics-3.3.0_beta1.ebuild:
   Add beta, remove alpha
 
-  07 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> kdegraphics-3.2.2.ebuild:
+  07 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> kdegraphics-3.2.2.ebuild:
   Stable on alpha.
 
 *kdegraphics-3.2.3 (10 Jun 2004)

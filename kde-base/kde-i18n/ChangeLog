@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.49 2004/12/28 20:35:16 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.50 2004/12/29 02:33:58 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   28 Dec 2004; Caleb Tennis <caleb@gentoo.org> kde-i18n-3.3.2.ebuild:
   x86 stable
@@ -81,7 +84,7 @@
   09 Aug 2004; Guy Martin <gmsoft@gentoo.org> kde-i18n-3.2.3.ebuild:
   Stable on hppa.
 
-  07 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> kde-i18n-3.2.2.ebuild:
+  07 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> kde-i18n-3.2.2.ebuild:
   Stable on alpha.
 
   26 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> kde-i18n-3.2.2.ebuild:

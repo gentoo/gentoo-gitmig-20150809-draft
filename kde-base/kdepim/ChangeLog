@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.130 2004/12/28 19:09:52 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.131 2004/12/29 02:44:10 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> kdepim-3.3.2.ebuild:
   Stable on amd64.
@@ -159,7 +162,7 @@
   +kdepim-3.3.0_beta1.ebuild:
   New beta, remove alpha
 
-  07 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> kdepim-3.2.2.ebuild:
+  07 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> kdepim-3.2.2.ebuild:
   Stable on alpha.
 
   16 Jun 2004; Jason Wever <weeve@gentoo.org> kdepim-3.2.3.ebuild:
