@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.9.11-r1.ebuild,v 1.7 2004/07/01 11:57:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.9.11-r1.ebuild,v 1.8 2004/07/13 20:46:19 agriffis Exp $
 
 inherit gnuconfig
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://sourceforge/dict/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc sparc alpha ~hppa ~mips amd64 ia64 ~ppc64"
+IUSE=""
 
 DEPEND="virtual/libc"
 
