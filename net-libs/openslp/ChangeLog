@@ -1,11 +1,15 @@
 # ChangeLog for net-libs/openslp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.4 2002/10/25 15:24:52 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.5 2002/11/02 13:13:45 verwilst Exp $
+
+*openslp-1.0.9a (2 Nov 2002) Bart Verwilst <verwilst@gentoo.org>
+
+  New version, + fixed license
+
+*openslp-1.0.8a (27 Apr 2002)
 
   25 Oct 2002; Donny Davies <woodchip@gentoo.org> slpd-init :
   Created an initscript; as requested in #9256.
-
-*openslp-1.0.8a (27 Apr 2002)
 
   19 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> openslp-1.0.8a.ebuild :
   Added ppc to KEYWORDS.
