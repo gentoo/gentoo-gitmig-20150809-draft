@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.13 2003/05/20 01:58:24 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.14 2003/05/23 01:45:32 tberman Exp $
+
+  22 May 2003; Todd Berman <tberman@gentoo.org> mailman-2.1.2.ebuild:
+  Added INSTALL to documentation. Closed bug #18351
 
 *mailman-2.1.2 (19 May 2003)
 
