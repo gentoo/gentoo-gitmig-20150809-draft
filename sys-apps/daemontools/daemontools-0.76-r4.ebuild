@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r4.ebuild,v 1.1 2004/01/30 08:06:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r4.ebuild,v 1.2 2004/02/06 21:33:17 vapier Exp $
 
 inherit eutils gcc
 
@@ -49,5 +49,5 @@ src_install() {
 	dodoc CHANGES ../package/README TODO
 
 	exeinto /etc/init.d
-	doexe ${FILESDIR}/svscan-0.76-r4
+	newexe ${FILESDIR}/svscan-0.76-r4 svscan
 }
