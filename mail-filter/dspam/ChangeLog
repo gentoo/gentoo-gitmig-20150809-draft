@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.5 2004/07/21 07:01:47 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.6 2004/07/21 08:22:07 st_lim Exp $
+
+*dspam-3.1.0_beta11 (21 Jul 2004)
+
+  21 Jul 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.0.0.ebuild,
+  dspam-3.1.0_beta11.ebuild:
+  Fixed problem with myconf not taking the delivery-agent options seriously
 
   21 Jul 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.0.0.ebuild:
   Added information to use the user dspam

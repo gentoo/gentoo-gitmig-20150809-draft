@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.0_beta11.ebuild,v 1.1 2004/07/21 07:01:47 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.0_beta11.ebuild,v 1.2 2004/07/21 08:22:07 st_lim Exp $
 
 inherit eutils
 
@@ -38,17 +38,18 @@ pkg_setup() {
 
 src_compile() {
 	local myconf
+	local agent
 
 	# these are the default settings
 	myconf="${myconf} --with-signature-life=14"
 	if use cyrus; then
-		myconf="${myconf} --with-delivery-agent='/usr/lib/cyrus/deliver \$u'"
+		agent="/usr/lib/cyrus/deliver %u"
 	elif use exim; then
-		myconf="${myconf} --with-delivery-agent='/usr/sbin/exim -oMr spam-scanned'"
+		agent="/usr/sbin/exim -oMr spam-scanned"
 	elif use maildrop; then
-		myconf="${myconf} --with-delivery-agent='/usr/bin/maildrop -d \$u'"
+		agent="/usr/bin/maildrop -d %u"
 	elif use procmail; then
-		myconf="${myconf} --with-delivery-agent=/usr/bin/procmail"
+		agent="/usr/bin/procmail"
 	fi
 	myconf="${myconf} --enable-homedir-dotfiles"
 	myconf="${myconf} --enable-spam-subject"
@@ -86,7 +87,8 @@ src_compile() {
 		myconf="${myconf} --with-db4-libraries=/usr/lib"
 	fi
 
-	econf ${myconf} || die
+	econf ${myconf} \
+		--with-delivery-agent="${agent}" || die
 	emake || die
 
 }
@@ -122,13 +124,13 @@ src_install () {
 	insopts -m0640 -o dspam -g dspam
 	doins ${FILESDIR}/trusted.users
 	if use cyrus; then
-		echo "/usr/lib/cyrus/deliver $u" > ${T}/untrusted.mailer_args
+		echo "/usr/lib/cyrus/deliver %u" > ${T}/untrusted.mailer_args
 	elif use exim; then
 		echo "/usr/sbin/exim -oMr spam-scanned" > ${T}/untrusted.mailer_args
 	elif use courier; then
-		echo "/usr/bin/maildrop -d $u" > ${T}/untrusted.mailer_args
+		echo "/usr/bin/maildrop -d %u" > ${T}/untrusted.mailer_args
 	elif use procmail; then
-		echo "/usr/bin/procmail -d $u" > ${T}/untrusted.mailer_args
+		echo "/usr/bin/procmail -d %u" > ${T}/untrusted.mailer_args
 	fi
 
 	# database related configuration and scripts
