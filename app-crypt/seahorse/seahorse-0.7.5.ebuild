@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.5.ebuild,v 1.4 2004/11/16 08:51:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.7.5.ebuild,v 1.5 2004/12/18 23:32:02 dragonheart Exp $
 
 inherit gnome2
 
@@ -24,7 +24,8 @@ RDEPEND="virtual/x11
 	>=gnome-base/gnome-vfs-2
 	>=app-editors/gedit-2.8.0
 	dev-util/intltool
-	dev-libs/glib"
+	dev-libs/glib
+	x11-misc/shared-mime-info"
 
 #no ~ppc64 keyword yet 	>=gnome-base/bonobo-activation-2
 
@@ -34,3 +35,12 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README TODO THANKS"
 IUSE="doc"
+
+
+src_install() {
+	gnome2_src_install
+
+	# remove conflicts with x11-misc/shared-mime-info
+	rm -rf ${D}/usr/share/mime/application ${D}/usr/share/mime/magic ${D}/usr/share/mime/globs \
+		${D}/usr/share/mime/XMLnamespaces
+}

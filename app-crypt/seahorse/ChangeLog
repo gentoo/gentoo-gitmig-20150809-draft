@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.27 2004/11/30 12:04:17 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.28 2004/12/18 23:32:02 dragonheart Exp $
+
+  19 Dec 2004; Daniel Black <dragonheart@gentoo.org> seahorse-0.7.5.ebuild:
+  Elimitate package conflict with x11-misc/shared-mime-info as per bug #74793.
+  Thanks to Jon Lund Steffensen <jonls@users.sourceforge.net> for the bug report
 
   30 Nov 2004; Mike Gardiner <obz@gentoo.org> -seahorse-0.6.3.ebuild:
   Removed, see bug #72620
