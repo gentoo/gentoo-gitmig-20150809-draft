@@ -1,0 +1,200 @@
+diff -urNd j2sdk/hotspot/src/share/vm/c1/c1_FrameMap.hpp j2sdk-new/hotspot/src/share/vm/c1/c1_FrameMap.hpp
+--- j2sdk/hotspot/src/share/vm/c1/c1_FrameMap.hpp	Tue Feb 12 07:53:20 2002
++++ j2sdk-new/hotspot/src/share/vm/c1/c1_FrameMap.hpp	Fri Jun  7 03:16:23 2002
+@@ -171,7 +171,7 @@
+ //--------------------------------------------------------
+ 
+ class ArgumentLocation VALUE_OBJ_CLASS_SPEC {
+-  friend CallingConvention;
++  friend class CallingConvention;
+  private:
+   int _n;         // either a register number 0-5 (I0-I5 or O0-O5), or an offset (in words) from SP/FP
+ 
+@@ -221,7 +221,7 @@
+ //--------------------------------------------------------
+ 
+ class CallingConvention: public ResourceObj {
+-  friend FrameMap;
++  friend class FrameMap;
+ 
+  private:
+   intStack* _args;
+diff -urNd j2sdk/hotspot/src/share/vm/opto/loopnode.hpp j2sdk-new/hotspot/src/share/vm/opto/loopnode.hpp
+--- j2sdk/hotspot/src/share/vm/opto/loopnode.hpp	Tue Feb 12 07:53:44 2002
++++ j2sdk-new/hotspot/src/share/vm/opto/loopnode.hpp	Fri Jun  7 03:16:23 2002
+@@ -308,7 +308,7 @@
+ // Computes the mapping from Nodes to IdealLoopTrees.  Organizes IdealLoopTrees into a
+ // loop tree.  Drives the loop-based transformations on the ideal graph.
+ class PhaseIdealLoop : public PhaseTransform {
+-  friend IdealLoopTree;
++  friend class IdealLoopTree;
+   // Pre-computed def-use info
+   PhaseIterGVN &_igvn;
+ 
+diff -urNd j2sdk/hotspot/src/share/vm/prims/jvmdi.cpp j2sdk-new/hotspot/src/share/vm/prims/jvmdi.cpp
+--- j2sdk/hotspot/src/share/vm/prims/jvmdi.cpp	Tue Feb 12 07:53:48 2002
++++ j2sdk-new/hotspot/src/share/vm/prims/jvmdi.cpp	Fri Jun  7 03:16:23 2002
+@@ -3770,7 +3770,8 @@
+       }
+       // remove the frame's entry
+       JvmdiFramePops* fps = thread->jvmdi_thread_state()->get_jvmdi_frame_pops();
+-      fps->clear(JvmdiFramePop(cur_frame_number));
++      JvmdiFramePop tmp(cur_frame_number);
++      fps->clear(tmp);
+       // recompute method entry and exit flags if no more frame pops
+       if (fps->length() == 0) {
+         recompute_method_entry_and_exit_on();
+diff -urNd j2sdk/j2se/ext/plugin/oji-plugin/src/motif/common/utils.c j2sdk-new/j2se/ext/plugin/oji-plugin/src/motif/common/utils.c
+--- j2sdk/j2se/ext/plugin/oji-plugin/src/motif/common/utils.c	Tue Feb 12 08:10:26 2002
++++ j2sdk-new/j2se/ext/plugin/oji-plugin/src/motif/common/utils.c	Fri Jun  7 02:06:33 2002
+@@ -11,6 +11,7 @@
+ #include <sys/socket.h>
+ #include <locale.h>
+ #include <errno.h>
++#include <string.h>
+ #include <strings.h>
+ #include <dlfcn.h>
+ #include "plugin_defs.h"
+diff -urNd j2sdk/j2se/ext/plugin/oji-plugin/src/motif/navig5/remotejni.cpp j2sdk-new/j2se/ext/plugin/oji-plugin/src/motif/navig5/remotejni.cpp
+--- j2sdk/j2se/ext/plugin/oji-plugin/src/motif/navig5/remotejni.cpp	Tue Feb 12 08:10:28 2002
++++ j2sdk-new/j2se/ext/plugin/oji-plugin/src/motif/navig5/remotejni.cpp	Fri Jun  7 02:06:33 2002
+@@ -16,6 +16,7 @@
+ #include <sys/ipc.h>
+ #include <sys/types.h>
+ #include <sys/time.h>
++#include <time.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <unistd.h>
+diff -urNd j2sdk/j2se/ext/plugin/oji-plugin/src/motif/resources/zh_TW/sunw_java_plugin.po j2sdk-new/j2se/ext/plugin/oji-plugin/src/motif/resources/zh_TW/sunw_java_plugin.po
+--- j2sdk/j2se/ext/plugin/oji-plugin/src/motif/resources/zh_TW/sunw_java_plugin.po	Tue Feb 12 08:10:28 2002
++++ j2sdk-new/j2se/ext/plugin/oji-plugin/src/motif/resources/zh_TW/sunw_java_plugin.po	Fri Jun  7 02:06:33 2002
+@@ -21,8 +21,6 @@
+ msgstr "plugin: java 嶂囥儸х媢磍�娾�"
+ msgid  "  a core file was generated"
+ msgstr "  儸雰ら淭鰾麔淰"
+-msgid  "Plugin: trouble with work request from child"
+-msgstr "Plugin: 騵麷伀邴衭忴柁齡汃僛ら棯纕"
+ msgid  "Plugin: can't find IP address for current host"
+ msgstr "Plugin: 岊攜怉ァ虳饜鞥柁 IP �篽�"
+ msgid  "Plugin: trouble reading Netscape proxy  configuration URL from\n"
+diff -urNd j2sdk/j2se/ext/plugin/oji-plugin/src/motif/resources/zh_TW.BIG5/sunw_java_plugin.po j2sdk-new/j2se/ext/plugin/oji-plugin/src/motif/resources/zh_TW.BIG5/sunw_java_plugin.po
+--- j2sdk/j2se/ext/plugin/oji-plugin/src/motif/resources/zh_TW.BIG5/sunw_java_plugin.po	Tue Feb 12 08:10:28 2002
++++ j2sdk-new/j2se/ext/plugin/oji-plugin/src/motif/resources/zh_TW.BIG5/sunw_java_plugin.po	Fri Jun  7 02:06:33 2002
+@@ -21,8 +21,6 @@
+ msgstr "plugin: java 程序已因訊號而毀"
+ msgid  "  a core file was generated"
+ msgstr "  已產生核心檔案"
+-msgid  "Plugin: trouble with work request from child"
+-msgstr "Plugin: 子類別所要求的工作發生問題"
+ msgid  "Plugin: can't find IP address for current host"
+ msgstr "Plugin: 找不到目前主機的 IP 位址"
+ msgid  "Plugin: trouble reading Netscape proxy  configuration URL from\n"
+diff -urNd j2sdk/j2se/make/common/Defs-linux.gmk j2sdk-new/j2se/make/common/Defs-linux.gmk
+--- j2sdk/j2se/make/common/Defs-linux.gmk	Tue Feb 12 07:55:14 2002
++++ j2sdk-new/j2se/make/common/Defs-linux.gmk	Fri Jun  7 02:07:54 2002
+@@ -38,7 +38,7 @@
+ CMP            = $(USRBIN_PATH)cmp
+ COMPRESS       = $(USRBIN_PATH)compress
+ CP             = $(UNIXCOMMAND_PATH)cp
+-CPIO           = $(UNIXCOMMAND_PATH)cpio
++CPIO           = $(USRBIN_PATH)cpio
+ CUT            = $(USRBIN_PATH)cut
+ DATE           = $(UNIXCOMMAND_PATH)date
+ DF             = $(UNIXCOMMAND_PATH)df
+diff -urNd j2sdk/j2se/make/common/Library.gmk j2sdk-new/j2se/make/common/Library.gmk
+--- j2sdk/j2se/make/common/Library.gmk	Tue Feb 12 07:55:14 2002
++++ j2sdk-new/j2se/make/common/Library.gmk	Fri Jun  7 02:06:33 2002
+@@ -42,6 +42,19 @@
+ 
+ $(OPTIMIZED) $(DEBUG):: $(INIT) $(OBJDIR) $(TMPDIR) $(LIBDIR) $(EXTDIR) $(BINDIR) classheaders
+ 
++#
++# Note that we have to link -lthread even when USE_PTHREADS is true.
++# This is becuase checkForCorrectLibthread() croaks otherwise.
++#
++ifneq ($(PLATFORM), win32)
++LIBTHREAD = -lthread
++ifeq ($(USE_PTHREADS),true)
++THREADLIBS = -lpthread $(LIBTHREAD)
++else # USE_PTHREADS
++THREADLIBS = $(LIBTHREAD)
++endif # USE_PTHREADS
++endif # PLATFORM
++
+ ifeq ($(PLATFORM), win32)
+ 
+ #
+@@ -131,9 +144,9 @@
+ 	$(AR) -r $@ $(FILES_o)
+ else # LIBRARY
+ ifeq ($(CC_VERSION), gcc)
+-	$(LINKER) -shared -mimpure-text -o $@ $(FILES_o) $(LDLIBS)
++	$(LINKER) -shared -mimpure-text -o $@ $(FILES_o) $(THREADLIBS) $(LDLIBS)
+ else # CC_VERSION
+-	$(LINKER) -G -o $@ $(FILES_o) $(LDLIBS)
++	$(LINKER) -G -o $@ $(FILES_o) $(THREADLIBS) $(LDLIBS)
+ endif # CC_VERSION
+ 	$(POST_PROCESS)
+ 
+diff -urNd j2sdk/j2se/make/common/Sanity.gmk j2sdk-new/j2se/make/common/Sanity.gmk
+--- j2sdk/j2se/make/common/Sanity.gmk	Tue Feb 12 07:55:14 2002
++++ j2sdk-new/j2se/make/common/Sanity.gmk	Fri Jun  7 02:07:26 2002
+@@ -695,6 +695,7 @@
+ # Check for existence of DEVTOOLS_PATH
+ ######################################################
+ devtools_path:
++ifneq ($(PLATFORM), linux)
+ 	@if [ ! -r $(DEVTOOLS_PATH) ]; then \
+ 	  $(ECHO) "ERROR: You do not have a valid DEVTOOLS_PATH setting. \n" \
+ 	    "      Please check your access to \n" \
+@@ -702,6 +703,7 @@
+ 	    "      and/or check your value of ALT_DEVTOOLS_PATH. \n" \
+ 	    "" >> $(ERROR_FILE) ; \
+ 	fi
++endif
+ 
+ ######################################################
+ # Check for existence of COMPILER_PATH
+@@ -902,16 +904,7 @@
+ 	@#
+ 	@# On Linux we need egcs-2.91.66
+ 	@#
+-	@if [ -r $(CC) ]; then \
+-	  if [ ! "$(CC_VER)" = 2.91.66 ]; then \
+-	    $(ECHO) "ERROR: The Linux GCC compiler must be version  egcs-2.91.66. \n" \
+-	      "      You are using the following compiler version: $(CC_VER) \n" \
+-	      "      The compiler was obtained from the following location: \n" \
+-	      "      $(COMPILER_PATH) \n" \
+-	      "      Please change your compiler. \n" \
+-	      "" >> $(ERROR_FILE) ; \
+-	  fi \
+-	else \
++	@if [ ! -r $(CC) ]; then \
+ 	  $(ECHO) "ERROR: There is no GNU CC compiler at the location: \n" \
+ 	    "      $(COMPILER_PATH) \n" \
+ 	    "" >> $(ERROR_FILE) ; \
+diff -urNd j2sdk/j2se/src/share/native/sun/awt/font/fontmanager/fontobjects/fontObject.cpp j2sdk-new/j2se/src/share/native/sun/awt/font/fontmanager/fontobjects/fontObject.cpp
+--- j2sdk/j2se/src/share/native/sun/awt/font/fontmanager/fontobjects/fontObject.cpp	Tue Feb 12 08:06:58 2002
++++ j2sdk-new/j2se/src/share/native/sun/awt/font/fontmanager/fontobjects/fontObject.cpp	Fri Jun  7 02:06:33 2002
+@@ -900,7 +900,7 @@
+ /*
+  * u_strncmpi - Compare unicode strings case independent
+  */
+-u_strncmpi(const Unicode * n1, const Unicode * n2, int len) {
++int u_strncmpi(const Unicode * n1, const Unicode * n2, int len) {
+     int  len2 = 0;
+     const Unicode * str2 = n2;
+ 
+diff -urNd j2sdk/j2se/src/solaris/back/exec_md.c j2sdk-new/j2se/src/solaris/back/exec_md.c
+--- j2sdk/j2se/src/solaris/back/exec_md.c	Tue Feb 12 08:08:22 2002
++++ j2sdk-new/j2se/src/solaris/back/exec_md.c	Fri Jun  7 02:06:33 2002
+@@ -72,7 +72,7 @@
+     }
+     argv[i] = NULL;  /* NULL terminate */
+ 
+-    if ((pid = fork1()) == 0) {
++    if ((pid = fork()) == 0) {
+         /* Child process */
+         int i, max_fd;
+ 

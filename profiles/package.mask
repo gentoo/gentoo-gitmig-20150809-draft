@@ -1185,3 +1185,8 @@ app-cdr/eroaster
 # stroke@gentoo.org 19 Aug 2002
 # Anjuta 1.0-beta1 (preview). masked for testing
 >=dev-util/anjuta-0.9.99
+
+# prez@gentoo.org 29 Aug 2002
+# Does not build successfully in an ebuild (but builds just fine outside of one)
+# Needs more investigation as to why.
+dev-java/sun-j2sdk

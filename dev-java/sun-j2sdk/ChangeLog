@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/sun-jdk
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.1 2002/08/29 09:52:11 prez Exp $
+
+*sun-j2sdk-1.4.0 (29 Aug 2002)
+
+  29 Aug 2002; Preston A. Elder <prez@gentoo.org> sun-j2sdk-1.4.0.ebuild:
+
+  Initial check in, it doesnt work, but at lease we can work on it.
