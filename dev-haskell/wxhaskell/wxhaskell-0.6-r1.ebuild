@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.6-r1.ebuild,v 1.1 2004/03/03 22:21:39 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.6-r1.ebuild,v 1.2 2004/06/02 21:46:56 agriffis Exp $
 
 DESCRIPTION="a portable and native GUI library for Haskell"
 HOMEPAGE="http://wxhaskell.sourceforge.net/"
@@ -46,7 +46,7 @@ src_compile() {
 	# emake doesn't work
 	make || die "make failed"
 	# create documentation
-	if [ `use doc` ]; then
+	if use doc; then
 		make doc || die "make doc failed"
 	fi
 }
@@ -54,7 +54,7 @@ src_compile() {
 src_install() {
 	make install || die "make install failed"
 	mv ${D}/usr/lib/${ghc_version}/libwxc-${PV}.so ${D}/usr/lib
-	if [ `use doc` ]; then
+	if use doc; then
 		dohtml -A haddock -r out/doc/*
 		cp -r samples ${D}/usr/share/doc/${PF}
 	fi
