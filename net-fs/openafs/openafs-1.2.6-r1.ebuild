@@ -36,7 +36,8 @@ src_unpack() {
 }
 
 src_compile() {
-	export HOSTNAME=""
+	patch -p0 < ${FILESDIR}/openafs-1.2.6.patch
+
 	./configure \
 		--with-afs-sysname=i386_linux24 \
 		--enable-transarc-paths || die

@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.8 2002/09/16 05:03:31 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.9 2002/10/02 04:48:41 rphillips Exp $
+
+*openafs-1.2.6-r1 (1 Oct 2002)
+
+  1 Oct 2002; Ryan Phillips <rphillips@gentoo.org> openafs-1.2.6-r1.ebuild:
+
+  Thanks to everyone involved, especially conteb @ alum.rpi.edu for submitting
+  the patch.  Hopefully bug #7775 can be laid to rest.
 
 *openafs-1.2.6 (03 Aug 2002)
 
