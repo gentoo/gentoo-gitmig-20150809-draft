@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiftags/exiftags-0.99.1.ebuild,v 1.1 2004/06/16 17:30:40 liquidx Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiftags/exiftags-0.99.1.ebuild,v 1.2 2004/06/17 23:21:59 vapier Exp $
 
 DESCRIPTION="Extracts JPEG EXIF headers from digital camera photos"
 HOMEPAGE="http://johnst.org/sw/exiftags/"
@@ -19,7 +18,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin exiftags exifcom exiftime
+	dobin exiftags exifcom exiftime || die
 	doman exiftags.1 exifcom.1 exiftime.1
 	dodoc README CHANGES
 }

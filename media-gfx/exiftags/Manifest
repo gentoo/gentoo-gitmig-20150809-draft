@@ -1,6 +1,16 @@
-MD5 f6edc3a688ba67ea23aac0a922cc9cdf exiftags-0.99.1.ebuild 618
-MD5 b9f911b74ef75f6a07acea4d905fe74e exiftags-0.97.ebuild 624
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 90b5f69562cb99f943584ed628fe932d ChangeLog 632
+MD5 44f2bcdcecbb8a675cd456e14fd3155d exiftags-0.97.ebuild 613
+MD5 6111670a16123d8379907342783406f0 exiftags-0.99.1.ebuild 623
 MD5 4394578b73ca26cc2d724704f536bf7c metadata.xml 223
 MD5 c3395bd33944cc769dc040ae12146fb2 files/digest-exiftags-0.97 64
 MD5 740013c9c097d469094b0ee9b33f7ef3 files/digest-exiftags-0.99.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA0iegHTu7gpaalycRAqk4AKCi+/oXdFnfY8kE0iMvMfIlGuF/uwCg5Bcm
+ndVPoDiHdHLyDilcSXeAXGA=
+=AD3S
+-----END PGP SIGNATURE-----
