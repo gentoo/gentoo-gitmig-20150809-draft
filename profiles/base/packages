@@ -95,6 +95,7 @@
 *sys-libs/pam
 *sys-libs/readline
 *sys-libs/zlib
+*virtual/dev-manager
 *virtual/editor
 *virtual/glibc
 *virtual/modutils

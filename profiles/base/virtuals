@@ -5,6 +5,7 @@ virtual/bittorrent				net-p2p/bittorrent
 virtual/blackbox				x11-wm/blackbox
 virtual/cron					sys-apps/vixie-cron
 virtual/dhcpc					net-misc/dhcpcd
+virtual/dev-manager				sys-fs/devfsd
 virtual/editor					app-editors/nano
 virtual/emacs					app-editors/emacs
 virtual/flim					app-emacs/flim
