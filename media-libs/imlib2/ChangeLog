@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.34 2004/08/31 22:28:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.35 2004/11/25 10:23:18 usata Exp $
+
+  25 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> imlib2-1.1.2.ebuild:
+  Added to ~ppc-macos.
 
 *imlib2-1.1.2 (31 Aug 2004)
 
