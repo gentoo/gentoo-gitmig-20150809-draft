@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.3.ebuild,v 1.8 2003/11/27 03:42:26 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.3.ebuild,v 1.9 2003/11/30 22:22:14 pebenito Exp $
 
 IUSE="ssl ipv6 doc"
 
@@ -16,6 +16,8 @@ DEPEND="sys-apps/groff
 	>=sys-apps/sed-4
 	ssl? ( >=dev-libs/openssl-0.9.6e )"
 
+RDEPEND="${DEPEND}
+	selinux? ( sec-policy/selinux-bind )"
 
 src_unpack() {
 	unpack ${A} && cd ${S}
