@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/libhttpd-persistent-1.3p-r8.ebuild,v 1.3 2004/10/19 07:40:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/libhttpd-persistent-1.3p-r8.ebuild,v 1.4 2004/10/19 16:36:01 eradicator Exp $
 
 IUSE=""
 
@@ -36,14 +36,10 @@ src_compile() {
 		$(tc-getCXX) ${CFLAGS} -D_OS_UNIX -fPIC -c ${FILE} -o ${FILE//.c/.lo} || die
 	done
 
-#	echo $(tc-getAR) rc libhttpd-persistent.a ${OFILES} || die
-#	$(tc-getAR) rc libhttpd-persistent.a ${OFILES} || die
-#	echo $(tc-getRANLIB) libhttpd-persistent.a || die
-#	$(tc-getRANLIB) libhttpd-persistent.a || die
-	echo ar rc libhttpd-persistent.a ${OFILES} || die
-	ar rc libhttpd-persistent.a ${OFILES} || die
-	echo ranlib libhttpd-persistent.a || die
-	ranlib libhttpd-persistent.a || die
+	echo $(tc-getAR) rc libhttpd-persistent.a ${OFILES} || die
+	$(tc-getAR) rc libhttpd-persistent.a ${OFILES} || die
+	echo $(tc-getRANLIB) libhttpd-persistent.a || die
+	$(tc-getRANLIB) libhttpd-persistent.a || die
 
 	echo $(tc-getCXX) -shared -Wl,-shared,-soname,libhttpd-persistent.so \
 		${LOFILES} -o libhttpd-persistent.so || die
