@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/schedutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedutils/ChangeLog,v 1.6 2003/04/12 14:41:19 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedutils/ChangeLog,v 1.7 2003/04/12 14:54:23 lostlogic Exp $
 
 *schedutils-1.1.0 (12 Apr 2003)
+
+  12 Apr 2003; Brandon Low <lostlogic@gentoo.org> schedutils-1.1.0.ebuild:
+  Needed some fixes, seth and I nailed them down.  It actually builds now.
 
   12 Apr 2003; Brandon Low <lostlogic@gentoo.org> Manifest,
   schedutils-1.1.0.ebuild:
