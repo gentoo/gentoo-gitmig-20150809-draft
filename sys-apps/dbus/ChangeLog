@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.27 2005/01/13 17:37:52 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.28 2005/01/20 23:39:04 foser Exp $
+
+*dbus-0.23-r1 (21 Jan 2005)
+
+  21 Jan 2005; foser <foser@gentoo.org> dbus-0.23-r1.ebuild :
+  Keep the right services dir
 
   13 Jan 2005; Heinrich Wendel <lanius@gentoo.org> +files/dbus-0.23-qt.patch,
   dbus-0.23.ebuild:
