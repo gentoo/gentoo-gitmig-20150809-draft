@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Config-IniFiles
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/ChangeLog,v 1.7 2004/01/20 13:46:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/ChangeLog,v 1.8 2004/05/14 01:08:45 pylon Exp $
+
+  14 May 2004; Lars Weiler <pylon@gentoo.org> Config-IniFiles-2.38.ebuild:
+  Stable on ppc
 
   20 Jan 2004; <gustavoz@gentoo.org> Config-IniFiles-2.38.ebuild:
   stable on sparc
