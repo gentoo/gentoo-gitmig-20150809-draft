@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/netkit-base
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.9 2003/01/19 20:14:28 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.10 2003/02/09 02:11:32 gmsoft Exp $
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
+  Added hppa to keywords.
 
 *netkit-base-0.17-r7 (22 Dec 2002)
 
