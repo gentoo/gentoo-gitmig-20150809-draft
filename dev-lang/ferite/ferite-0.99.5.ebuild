@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-0.99.5.ebuild,v 1.7 2003/01/24 22:33:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-0.99.5.ebuild,v 1.8 2003/02/13 10:25:05 vapier Exp $
 
 DESCRIPTION="scripting engine and language written in c for complete portability"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
