@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.10 2003/04/14 04:46:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.11 2003/04/14 05:30:41 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -317,8 +317,8 @@ src_unpack() {
 	if [ "${ARCH}" = "alpha" ]
 	then
 		echo "#define XF86CardDrivers mga nv tga s3virge sis rendition \
-			neomagic i170 tdfx cirrus tseng trident chips apm fbdev ati \
-			vga v4l glint" >> config/cf/host.def
+			i740 tdfx cirrus tseng fbdev \
+			ati vga v4l glint" >> config/cf/host.def
 	fi
 
 	if [ "${ARCH}" = "ppc" ]
