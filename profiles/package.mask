@@ -1040,7 +1040,8 @@ app-cdr/eroaster
 =dev-python/python-fchksum-1.6.1-r1
 
 # rphillips@gentoo.org 2 Aug 2002
-# doesn't entirely work yet... but is a start
+# package works on my machine... Needs testing for PPC platform and with
+# ICC compiler.
 =media-gfx/povray-3.50a
 
 # christoph@gentoo.org 2 Aug 2002
