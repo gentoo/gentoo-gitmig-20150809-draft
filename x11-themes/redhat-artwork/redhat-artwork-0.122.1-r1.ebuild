@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.122.1.ebuild,v 1.1 2005/04/04 16:07:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.122.1-r1.ebuild,v 1.1 2005/04/06 13:48:57 greg_g Exp $
 
 inherit eutils rpm versionator kde-functions
 
@@ -12,11 +12,11 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
-IUSE="gtk gtk2 kde xmms"
+IUSE="gtk kde xmms"
 
 RDEPEND=">=x11-libs/gtk+-2.0
-	gtk? ( !gtk2? ( >=media-libs/gdk-pixbuf-0.2.5
-			=x11-libs/gtk+-1.2* ) )
+	gtk? ( >=media-libs/gdk-pixbuf-0.2.5
+	       =x11-libs/gtk+-1.2* )
 	kde? ( || ( ( kde-base/kcontrol kde-base/kwin )
 	            kde-base/kdebase ) )"
 
@@ -62,8 +62,7 @@ src_compile() {
 			art/Makefile.am
 	fi
 
-	# enable gtk 1.x support only if gtk2 flag is not set
-	if ! use gtk || use gtk2; then
+	if ! use gtk; then
 		sed -i -e "s|AM_PATH_GTK(1.2.9, ,||" \
 		       -e "s|AC_MSG_ERROR(.*GTK+-1.*||" \
 		       -e "s|AC_CHECK_LIB(gtk, gtk_style_set_prop_experimental, :,||" \
