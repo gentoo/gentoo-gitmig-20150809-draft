@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2997 2004/07/09 13:01:30 caleb Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2998 2004/07/10 16:26:30 lucass Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <lucass@gentoo.org> (10 July 2004)
+# unstable branch of pygtk.
+=dev-python/pygtk-2.3*
 
 # <langthang@gentoo.org> (8 July 2004)
 # mailutils-0.3 doesn't compile with gcc-3.3, bug #53807. Mask for removal.
