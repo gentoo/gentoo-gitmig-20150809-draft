@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.47 2004/03/16 03:00:33 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.48 2004/03/21 17:01:09 foser Exp $
+
+*gnome-utils-2.5.90 (21 Mar 2004)
+
+  21 Mar 2004; foser <foser@gentoo.org> gnome-utils-2.5.90.ebuild :
+  Gnome 2.6 commit
 
   15 Mar 2004; Stephen P. Becker <geoman@gentoo.org> gnome-utils-2.4.1.ebuild:
   Added ~mips keyword.

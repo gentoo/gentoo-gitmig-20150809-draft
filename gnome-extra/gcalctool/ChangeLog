@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gcalctool
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.22 2004/03/16 23:31:14 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.23 2004/03/21 17:04:35 foser Exp $
+
+*gcalctool-4.3.50 (21 Mar 2004)
+
+  21 Mar 2004; foser <foser@gentoo.org> gcalctool-4.3.50.ebuild :
+  Gnome 2.6 commit
 
   16 Mar 2004; Stephen P. Becker <geoman@gentoo.org> gcalctool-4.3.44.ebuild:
   Added ~mips keyword.
