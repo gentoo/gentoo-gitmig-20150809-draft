@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta3.ebuild,v 1.3 2004/03/27 03:02:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta3.ebuild,v 1.4 2004/04/17 18:21:48 eradicator Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 
 KEYWORDS="~x86"
 
-IUSE="oggvorbis alsa opengl esd"
+IUSE="oggvorbis alsa opengl esd jack"
 
 DEPEND=">=x11-libs/gtk+-2.0
 	oggvorbis? ( >=media-sound/vorbis-tools-1.0 )
