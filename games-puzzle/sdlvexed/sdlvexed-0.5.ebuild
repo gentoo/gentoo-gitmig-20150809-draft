@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sdlvexed/sdlvexed-0.5.ebuild,v 1.3 2004/06/24 23:09:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sdlvexed/sdlvexed-0.5.ebuild,v 1.4 2004/07/01 05:24:56 mr_bones_ Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=dev-lang/perl-5.6.1
 	>=media-libs/sdl-mixer-1.2.3
 	>=dev-perl/sdl-perl-1.19.0"
