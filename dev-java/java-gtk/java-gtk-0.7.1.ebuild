@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/java-gtk-0.7.1.ebuild,v 1.10 2003/05/03 19:13:35 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/java-gtk-0.7.1.ebuild,v 1.11 2003/06/08 04:56:34 tberman Exp $
 
 S=${WORKDIR}/java-gnome-${PV}
 DESCRIPTION="GTK+ bindings for Java"
@@ -8,12 +8,13 @@ SRC_URI="mirror://sourceforge/java-gnome/java-gnome-0.7.1.tar.gz"
 HOMEPAGE="http://java-gnome.sourceforge.net/"
 DEPEND="virtual/glibc
 	virtual/jdk
-	=x11-libs/gtk+-1.2*
-	>=dev-java/jikes-1.0"
+	=x11-libs/gtk+-1.2*"
 RDEPEND="$DEPEND"
 SLOT="0.7"
 LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~ppc ~sparc"
+
+IUSE=""
 
 src_compile() {
 	local myconf
