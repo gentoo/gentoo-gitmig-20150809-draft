@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ef7b3856d0b00d2c8617d8df6b29d3b5 fox-1.0.49.ebuild 1178
-MD5 412479a1e6084de16e9fbe48d11dee46 ChangeLog 3574
-MD5 1120a5fb58c7b009b93a3fcf0147bc3c fox-1.2.6-r2.ebuild 1444
-MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
-MD5 978fd96085910566f4d927e3144a6824 fox-1.0.40.ebuild 1147
 MD5 c32b3406b312afd1ebdb218579f61847 fox-1.0.43.ebuild 1146
 MD5 fe93bbee6598b941bfe90923236296cf fox-1.2.4.ebuild 1205
-MD5 70f3d73defc6189bbc075d615bde3594 files/digest-fox-1.0.49 63
-MD5 7a002248b0d876eef33d56604799ab64 files/digest-fox-1.2.6-r2 62
-MD5 fb1e5d65f9c5bfd6f2f4e1b710c857d3 files/digest-fox-1.0.43 63
-MD5 dfa6f7b6f4106903b051128fd8838422 files/digest-fox-1.2.4 62
+MD5 978fd96085910566f4d927e3144a6824 fox-1.0.40.ebuild 1147
+MD5 9b8237b74537915c02d04b9b76b75978 fox-1.2.6-r2.ebuild 1443
+MD5 ef7b3856d0b00d2c8617d8df6b29d3b5 fox-1.0.49.ebuild 1178
+MD5 d92ba18667c5e53a8810527f93e2b36b ChangeLog 3661
+MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
 MD5 e66ac5665267aa76e1efc8da12cc8928 files/digest-fox-1.0.40 63
+MD5 fb1e5d65f9c5bfd6f2f4e1b710c857d3 files/digest-fox-1.0.43 63
+MD5 70f3d73defc6189bbc075d615bde3594 files/digest-fox-1.0.49 63
+MD5 dfa6f7b6f4106903b051128fd8838422 files/digest-fox-1.2.4 62
+MD5 7a002248b0d876eef33d56604799ab64 files/digest-fox-1.2.6-r2 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBemcIugEuf3OQ0akRAp8mAJ9zbdxcAKwx7JGMrB6cazPFO4wovQCgkYAw
-6HmzkfwVeTsZMT1TCuKma10=
-=ERtS
+iD8DBQFBeop1CHk4+ZoBpvsRAlswAJ9u2thMLG6bDk6Gi8UwZeSzpN1PBwCeNsI/
+fMR3jZL2eslXhDAN4Nxs1GU=
+=/Zaa
 -----END PGP SIGNATURE-----
