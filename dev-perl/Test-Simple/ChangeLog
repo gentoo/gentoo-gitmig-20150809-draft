@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Simple
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.15 2004/02/24 10:41:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.16 2004/03/20 03:02:25 esammer Exp $
+
+  19 Mar 2004; Eric Sammer <esammer@gentoo.org> Test-Simple-0.47-r1.ebuild:
+  Fixed category-less dependencies as per bug #45110.
 
   24 Feb 2004; Joshua Kinard <kumba@gentoo.org> Test-Simple-0.47-r1.ebuild:
   Added ~mips to satisfy repoman deps.
