@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.3.ebuild,v 1.10 2004/04/24 09:08:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.3.ebuild,v 1.11 2004/04/27 02:52:31 randy Exp $
 
 inherit eutils
 
@@ -63,7 +63,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="1.5"
-KEYWORDS="x86 ppc ~ppc64 sparc mips alpha arm hppa amd64 ia64 ~s390"
+KEYWORDS="x86 ppc ~ppc64 sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE=""
 
 DEPEND="dev-lang/perl
