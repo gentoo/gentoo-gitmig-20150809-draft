@@ -175,7 +175,7 @@ x11-themes/gtk-xfce-engine
 # seems that stroke got theese released before my changed ebuilds made it into the tree
 # theese remove debugging information from the builds, and change libtool behaviour.
 
->=gnome-base/gnome-2.0.1-rc1
+>=gnome-base/gnome-2.0.1_rc1
 >=dev-libs/glib-2.0.6
 >=x11-libs/gtk+-2.0.6
 >=x11-libs/pango-1.0.4
