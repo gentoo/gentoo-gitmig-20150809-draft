@@ -6,8 +6,12 @@
 		Lisp programming language.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie dev-lisp enthält Bibliotheken und Werkzeuge für die 
+		Die Kategorie dev-lisp enthÃ¤lt Bibliotheken und Werkzeuge fÃ¼r die 
 		Programmiersprache Lisp.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría dev-lisp contiene librerias y utilidades referentes al
+		lenguaje de programación Lisp.
 	</longdescription>
 </catmetadata>
 
