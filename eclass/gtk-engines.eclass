@@ -1,8 +1,23 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.15 2003/01/08 07:33:12 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.16 2003/01/14 05:39:07 leonardop Exp $
 
-# The gtk-engines eclass is inheritd by all gtk-engines-* ebuilds.
+# The gtk-engines eclass is inherited by all gtk-engines-* ebuilds.
+#
+# Please note that Gtk engines are special packages that mainly provide
+# common libraries for Gtk themes, and there is a special meta-package
+# that have what you're probably looking for: gtk-themes.
+#
+# If you want themes to make your GTK 2 apps look pretty, you can do
+# something like the following, and everything will be taken care of:
+#
+#   emerge gtk-themes
+#
+# If themes for GTK 1 programs is what you're looking for, then something
+# like this should help you:
+#
+#   emerge =gtk-themes-1*
+
 
 ECLASS=gtk-engines
 INHERITED="$INHERITED $ECLASS"
@@ -202,6 +217,17 @@ gtk-engines_src_install() {
 			rm -rf ${D}/usr/lib/gtk ${D}/usr/share/themes/Geramik/gtk
 		else
 			rm -rf ${D}/usr/lib/gtk-2.0 ${D}/usr/share/themes/Geramik/gtk-2.0
+		fi
+		
+	elif [ "X${ENGINE}" = "Xlighthouseblue" ]
+	then
+		if [ "$SLOT" -eq "2" ]
+		then
+			rm -rf ${D}/usr/lib/gtk ${D}/usr/share/themes/LighthouseBlue/gtk
+		else
+			rm -rf \
+				${D}/usr/lib/gtk-2.0 \
+				${D}/usr/share/themes/LighthouseBlue/gtk-2.0
 		fi
 	fi
 	
