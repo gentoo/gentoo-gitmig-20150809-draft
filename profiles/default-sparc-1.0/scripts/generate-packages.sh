@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/scripts/generate-packages.sh,v 1.4 2002/04/18 21:05:52 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/scripts/generate-packages.sh,v 1.5 2002/04/19 23:30:02 murphy Exp $
 #
 # New packages file
 NEWPACKAGESBUILD=packages.build
@@ -37,11 +37,11 @@ sed -e 's:.*sys-apps/grub:#*sys-apps/grub:' \
 	${from_dir}/packages >> $NEWPACKAGES
 cat >> $NEWPACKAGES <<_EOF_
 
-# These lines added by $0 -----------------------
+# These lines added by $0
 _EOF_
 cat >> $NEWPACKAGES < packages.sparc
 cat >> $NEWPACKAGES <<_EOF_
-# End of lines added by $0 ----------------------
+# End of lines added by $0
 _EOF_
 
 
@@ -52,11 +52,11 @@ echo "" >> $NEWDEFAULTS
 sed -e 's:ARCH=.*::' ${from_dir}/make.defaults >> $NEWDEFAULTS
 cat >> $NEWDEFAULTS <<_EOF_
 
-# These lines added by $0 -----------------------
+# These lines added by $0
 _EOF_
 cat >> $NEWDEFAULTS < make.defaults.sparc
 cat >> $NEWDEFAULTS <<_EOF_
-# End of lines added by $0 ----------------------
+# End of lines added by $0
 _EOF_
 
 # 3) use.defaults
