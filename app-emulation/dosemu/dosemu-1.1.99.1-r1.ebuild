@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.99.1-r1.ebuild,v 1.1 2003/10/07 17:45:39 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.99.1-r1.ebuild,v 1.2 2003/10/11 11:39:45 hanno Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/dosemu/${P_FD}.tgz
 
 LICENSE="GPL-2 | LGPL-2.1"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 IUSE="X svga"
 
 DEPEND="X? ( virtual/x11 )
