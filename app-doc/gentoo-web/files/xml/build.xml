@@ -270,14 +270,7 @@ available at <path>/usr/portage</path>.</p>
 <title>Bootstrap</title>
 <section>
 <body>
-<p>Now, it's time to bootstrap the system build tools.</p>
-<pre>
-# <i>vim /etc/make.conf</i>
-# <i>cd /usr/portage</i>
-# <i>ls files</i>
-# <i>./bootstrap.sh ./files/bootstrap-xxxxxx.packages</i>
-</pre>
-<p>
+<p>Now, it's time to bootstrap the system build tools.
 One of the best features of Gentoo Linux is that <e>everything</e>
 is a package, and the build tools are no different.  Before building
 packages it is important to edit <path>/etc/make.conf</path> and make
@@ -294,6 +287,12 @@ and <c>glibc</c>, rebuilding <c>binutils</c>, <c>gcc</c>, and <c>gettext</c>
 after <c>glibc</c> is built.  Needless to say, this process takes a while.
 Have a nice nap.
 </p>
+<pre>
+# <i>vim /etc/make.conf</i>
+# <i>cd /usr/portage</i>
+# <i>ls files</i>
+# <i>./bootstrap.sh ./files/bootstrap-xxxxxx.packages</i>
+</pre>
 </body>
 </section>
 </chapter>
