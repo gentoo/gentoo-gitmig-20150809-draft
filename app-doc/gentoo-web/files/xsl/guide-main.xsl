@@ -17,7 +17,16 @@
 		Documentation
 	</xsl:otherwise>
 	</xsl:choose>
--- <xsl:value-of select="title"/></title>
+-- 
+	<xsl:choose>
+		<xsl:when test="subtitle">
+			<xsl:value-of select="title"/>: <xsl:value-of select="subtitle"/>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="title"/>
+		</xsl:otherwise>
+	</xsl:choose>
+</title>
 </head>
 <body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff">
 	<!--<table border="0" width="100%" cellspacing="0" cellpadding="0">-->
@@ -47,7 +56,16 @@
 				</xsl:otherwise>
 				</xsl:choose>
 				::<br/>
-				&#160;&#160;<a class="highlight" href="{$mylink}"><xsl:value-of select="title"/></a>
+				&#160;&#160;<a class="highlight" href="{$mylink}">
+				<xsl:choose>
+				<xsl:when test="subtitle">
+					<xsl:value-of select="title"/>: <xsl:value-of select="subtitle"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="title"/>
+				</xsl:otherwise>
+				</xsl:choose>
+				</a>
 				</p>
 			</td>
 		</tr>
@@ -60,12 +78,17 @@
 <!--<table border="0" cellspacing="5" cellpadding="0" height="100%" width="100%">-->
 <table border="0" cellspacing="5" cellpadding="0" width="100%">
 <tr><td class="content" valign="top" align="left">
-		<table class="infotab" align="right" cellpadding="0" cellspacing="0" border="0">
+		<table width="30%" class="infotab" align="right" cellpadding="0" cellspacing="0" border="0">
 		<tr>
 			<td class="infohead" align="center" bgcolor="#7a5ada">About this Document</td>
 		</tr>
 		<tr valign="top" bgcolor="#ddddff">
 			<td class="infotext">
+				<br/>
+				<p class="infosub">Summary:</p>
+				<p class="infolist">
+				<xsl:apply-templates select="abstract"/>
+				</p>
 				<br/>
 				<p class="infosub">Document Authors:</p>
 				<p class="infolist">
@@ -84,7 +107,16 @@
                 </td>
 		</tr>
 	</table>
-		<p class="dochead"><xsl:value-of select="/guide/title"/></p>
+		<p class="dochead">
+			<xsl:choose>
+				<xsl:when test="/guide/subtitle">
+					<xsl:value-of select="/guide/title"/>: <xsl:value-of select="/guide/subtitle"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="/guide/title"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</p>
 <xsl:apply-templates select="chapter"/> 
 <br/>
 <br/>
@@ -177,9 +209,9 @@
 
 	
 						<p class="infosub">Mailing Lists (click to subscribe/access archive):</p>
-						<p class="infolist"><a href="http://www.gentoo.org/mailman/listinfo/gentoo-dev">Developer discussion</a></p>
-						<p class="infolist"><a href="http://www.gentoo.org/mailman/listinfo/gentoo-announce">Announcements</a></p>
-						<p class="infolist"><a href="http://www.gentoo.org/mailman/listinfo/gentoo-cvs">Daily CVS log</a></p>
+						<p class="infolist"><a href="http://cvs.gentoo.org/mailman/listinfo/gentoo-dev">Developer discussion</a></p>
+						<p class="infolist"><a href="http://cvs.gentoo.org/mailman/listinfo/gentoo-announce">Announcements</a></p>
+						<p class="infolist"><a href="http://cvs.gentoo.org/mailman/listinfo/gentoo-cvs">Daily CVS log</a></p>
 
 												<p class="infosub">Other Resources:</p>
 						<p class="infolist">Use <a href="http://cvs.gentoo.org/cgi-bin/cvsweb.cgi">cvsweb</a> to browse our repository</p>
@@ -268,6 +300,7 @@
 <xsl:template match="figure">
 	<xsl:variable name="fignum"><xsl:number level="any"/></xsl:variable>
 	<xsl:variable name="figid">doc_fig<xsl:number/></xsl:variable>
+	<br/>
 	<a name="{$figid}"/>
 	<table cellspacing="0" cellpadding="0" border="0">
 	<tr><td class="infohead" bgcolor="#7a5ada">
@@ -292,6 +325,7 @@
 		</xsl:otherwise>
 	</xsl:choose>
 	</td></tr></table>
+	<br/>
 </xsl:template>
 	
 <xsl:template match="note">
@@ -378,13 +412,14 @@
 </xsl:template>
 
 <xsl:template match="uri">
+	<!-- expand templates to handle things like <uri link="http://bar"><c>foo</c></uri> -->
 	<xsl:choose>
 		<xsl:when test="@link">
-			<a href="{@link}"><xsl:value-of select="."/></a>
+			<a href="{@link}"><xsl:apply-templates /></a>
 		</xsl:when>
 		<xsl:otherwise>
 			<xsl:variable name="loc" select="."/>
-			<a href="{$loc}"><xsl:value-of select="."/></a>
+			<a href="{$loc}"><xsl:apply-templates /></a>
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
