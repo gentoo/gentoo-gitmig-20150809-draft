@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Convert-TNEF
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.1 2002/10/23 15:30:21 raker Exp $
+
+*Convert-TNEF-0.17 (23 Oct 2002)
+
+  23 Oct 2002; Nick Hadaway <raker@gentoo.org> Convert-TNEF-0.17.ebuild,
+  files/digest-Convert-TNEF-0.17 :
+  New ebuild.  Added to support net-mail/amavis
