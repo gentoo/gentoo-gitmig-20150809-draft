@@ -50,3 +50,4 @@ move app-admin/envtest app-portage/envtest
 move app-admin/kemerge app-portage/kemerge
 move app-admin/kportage app-portage/kportage
 move app-admin/genlop app-portage/genlop
+move app-admin/generate-use app-portage/generate-use
