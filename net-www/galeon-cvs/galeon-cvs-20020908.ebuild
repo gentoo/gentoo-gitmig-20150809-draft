@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/galeon-cvs-20020908.ebuild,v 1.11 2002/12/08 00:32:29 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/galeon-cvs-20020908.ebuild,v 1.12 2002/12/22 19:16:00 foser Exp $
 
 
 # ECVS_TOP_DIR="${PORTAGE_TMPDIR}"
@@ -19,7 +19,7 @@ HOMEPAGE="http://galeon.sf.net/"
 SRC_URI=""
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 LICENSE="GPL-2"
 
 DEPEND="virtual/x11
