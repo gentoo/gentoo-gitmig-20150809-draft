@@ -9,7 +9,7 @@ DEPEND="app-text/tetex"
 RDEPEND=""
 SRC_URI="http://www.gn-50uma.de/ftp/pari-2.1/${P}.tar.gz"
 KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
-
+SLOT="0"
 S=${WORKDIR}/${P}
 
 src_compile() {
