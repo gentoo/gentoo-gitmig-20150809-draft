@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Algorithm-Diff
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Diff/ChangeLog,v 1.1 2003/09/29 15:51:00 sediener Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Diff/ChangeLog,v 1.2 2004/04/19 13:25:02 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org>
+  Algorithm-Diff-1.15.ebuild:
+  Removed S=... with no effect, added IUSE
 
 *Algorithm-Diff-1.15 (29 Sep 2003)
 
