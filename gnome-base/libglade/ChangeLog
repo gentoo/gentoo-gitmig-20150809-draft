@@ -1,9 +1,15 @@
 # ChangeLog for gnome-base/libglade
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.5 2002/04/25 07:48:25 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.6 2002/04/30 03:27:32 spider Exp $
+
+*libglade-1.99.11 (29 Apr 2002) 
+  29 Apr 2002; Spider <spider@gentoo.org> libglade-1.99.11.ebuild :
+  new version (.10 too, forgot the changelog)
+  a patch for xml stuff as to not break sandbox
+  lintool fixes
 
 *libglade-0.17-r5 (24 Apr 2002)
-  24 Apr 2002; Spider <spider@gentoo.org> libglade-0.17-r5.ebuild
+  24 Apr 2002; Spider <spider@gentoo.org> libglade-0.17-r5.ebuild :
   SLOTify
 
 *libglade-0.17-r5 (9 Apr 2002)
