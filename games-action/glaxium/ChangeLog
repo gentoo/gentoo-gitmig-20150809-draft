@@ -1,6 +1,9 @@
 # ChangeLog for games-action/glaxium
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/ChangeLog,v 1.5 2004/01/12 20:38:05 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/glaxium/ChangeLog,v 1.6 2004/02/04 20:51:53 dholm Exp $
+
+  04 Feb 2004; David Holm <dholm@gentoo.org> glaxium-0.5.ebuild:
+  Added to ~ppc.
 
 *glaxium-0.5 (19 Jun 2003)
 

@@ -1,5 +1,5 @@
-MD5 f45251f4354b045ee2fd5f1b13af236e ChangeLog 722
-MD5 01de6bde63e26a05c677fc1f5cd1f8cf glaxium-0.5.ebuild 1223
+MD5 cf719501232dd185fbe1572394895b15 ChangeLog 804
+MD5 bd1ae0f6dfaa08ef9bec511e104e2a89 glaxium-0.5.ebuild 1224
 MD5 b244cf1c41a78cacb62296d573935c07 metadata.xml 245
 MD5 ef110a66a7eac137dd399eca0a4aede3 files/0.5-glx.patch 2299
 MD5 0ab557289a7610d1984e43634d0be398 files/digest-glaxium-0.5 64
