@@ -1,6 +1,6 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.15 2002/09/18 18:54:25 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.16 2002/10/05 11:14:00 verwilst Exp $
 
 *ghostscript-7.05.5 (18 Sep 2002)
 
@@ -13,6 +13,12 @@
   enabled in use variables.  (Didn't want to create another use
   variable and gimp-print is important to high quality printing)
   Currently masked.  Please test especially in a cups environment.
+
+  5 Okt 2002; Bart Verwilst <verwilst@gentoo.org>
+
+  I don't want gnome-libs installed just to have ghostscript!
+  Changed the X dep to gnome, people with -gnome now aren't forced
+  anymore to install gnome :o) yay! :o)
 
 *ghostscript-7.05.3 (19 Jul 2002)
 
