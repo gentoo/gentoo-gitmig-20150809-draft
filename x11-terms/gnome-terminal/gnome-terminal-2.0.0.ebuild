@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.0.0.ebuild,v 1.2 2002/07/09 08:28:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.0.0.ebuild,v 1.3 2002/08/02 17:54:23 seemant Exp $
 
 inherit gnome2
 S=${WORKDIR}/${P}
 DESCRIPTION="The Gnome Terminal"
 
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2
-         ftp://archive.progeny.com/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
+	 ftp://archive.progeny.com/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 
 HOMEPAGE="http://www.gnome.org/"
 KEYWORDS="x86"
