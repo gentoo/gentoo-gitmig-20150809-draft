@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-5.8.11.ebuild,v 1.1 2001/07/03 11:53:03 crux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-5.8.11.ebuild,v 1.2 2001/08/31 18:48:14 g2boojum Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="fetchmail"
@@ -21,7 +21,10 @@ src_compile() {
     if [ -z "`use nls`" ] ; then
 	myconf="$myconf --disable-nls"
     fi
-    try ./configure --prefix=/usr --host=${CHOST} --enable-inet6 \
+    if [ "`use ipv6`" ] ; then
+	myconf="$myconf --enable-inet6"
+    fi
+    try ./configure --prefix=/usr --host=${CHOST} \
         --mandir=/usr/share/man \
 	--infodir=/usr/share/info \
 	--enable-RPA --enable-NTLN \
