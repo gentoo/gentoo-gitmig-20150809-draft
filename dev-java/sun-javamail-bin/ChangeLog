@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-javamail-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail-bin/ChangeLog,v 1.7 2004/12/18 09:04:08 corsair Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail-bin/ChangeLog,v 1.8 2005/01/26 21:00:51 corsair Exp $
+
+  26 Jan 2005; Markus Rothe <corsair@gentoo.org>
+  sun-javamail-bin-1.3.1.ebuild:
+  Stable on ppc64
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org>
   sun-javamail-bin-1.3.1.ebuild:
