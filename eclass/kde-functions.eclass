@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.109 2005/02/11 19:23:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.110 2005/02/26 20:38:39 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -27,6 +27,7 @@ kde-base/kdeaddons kde-base/kdeaddons-docs-konq-plugins
 kde-base/kdeaddons kde-base/kdeaddons-kfile-plugins
 kde-base/kdeaddons kde-base/kicker-applets
 kde-base/kdeaddons kde-base/knewsticker-scripts
+kde-base/kdeaddons kde-base/konq-plugins
 kde-base/kdeaddons kde-base/konqueror-akregator
 kde-base/kdeaddons kde-base/konqueror-arkplugin
 kde-base/kdeaddons kde-base/konqueror-autorefresh
