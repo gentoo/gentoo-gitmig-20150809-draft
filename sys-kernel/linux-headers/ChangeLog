@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.13 2003/02/14 23:23:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.14 2003/03/11 11:31:40 zwelch Exp $
+
+*linux-headers-2.4.17-r4 (11 Mar 2003)
+
+  11 Mar 2003; Zach Welch <zwelch@gentoo.org> linux-headers-2.2.20.ebuild,
+  linux-headers-2.2.21_pre3.ebuild, linux-headers-2.4.16-r1.ebuild,
+  linux-headers-2.4.16-r3.ebuild, linux-headers-2.4.16.ebuild,
+  linux-headers-2.4.17-r3.ebuild, linux-headers-2.4.17-r4.ebuild,
+  linux-headers-2.4.17-r5.ebuild, linux-headers-2.4.18-r1.ebuild,
+  linux-headers-2.4.18-r2.ebuild, linux-headers-2.4.18.ebuild,
+  linux-headers-2.4.19-r1.ebuild, linux-headers-2.4.19.ebuild,
+  linux-headers-2.4.20.ebuild:
+  add virtual/os-headers PROVIDE
 
   15 Feb 2003; Guy Martin <gmsoft@gentoo.org> linux-headers-2.4.20.ebuild :
   Updated hppa patch level from 23 to 26.

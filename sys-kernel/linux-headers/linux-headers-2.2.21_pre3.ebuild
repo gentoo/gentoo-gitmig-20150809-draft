@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.21_pre3.ebuild,v 1.9 2003/02/13 16:38:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.21_pre3.ebuild,v 1.10 2003/03/11 11:31:40 zwelch Exp $
 #OKV=original kernel version, KV=patched kernel version. They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -27,7 +27,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.2/linux-${OKV}.tar.bz2
 	http://www.kernel.org/pub/linux/kernel/v2.2/testing/${PAC}.gz
 	ftp://ftp.atnf.csiro.au/pub/people/rgooch/linux/kernel-patches/v2.2/${PDEVFS}.gz
 	ftp://ftp.namesys.com/pub/reiserfs-for-2.2/${PREISERFS}.bz2"
-PROVIDE="virtual/kernel"
+PROVIDE="virtual/kernel virtual/os-headers"
 HOMEPAGE="http://www.kernel.org/ 
 	http://www.atnf.csiro.au/~rgooch/linux/kernel-patches.html/
 	http://www.namesys.com" 

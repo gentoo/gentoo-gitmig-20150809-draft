@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.16-r1.ebuild,v 1.8 2003/02/13 16:38:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.16-r1.ebuild,v 1.9 2003/03/11 11:31:40 zwelch Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -34,7 +34,7 @@ SRC_URI="http://www.de.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 [ "$PREEV" ] && { SRC_URI="$SRC_URI http://www.kernel.org/pub/linux/kernel/people/rml/preempt-kernel/v2.4/preempt-kernel-rml-${PREEV}.patch" PATCHES="$PATCHES ${DISTDIR}/preempt-kernel-rml-${PREEV}.patch"; }
 [ "$XFSV" ] && { SRC_URI="$SRC_URI http://www.ibiblio.org/gentoo/distfiles/XFS-${XFSV}.patch.bz2" PATCHES="$PATCHES ${DISTDIR}/XFS-${XFSV}.patch.bz2"; }
 	
-PROVIDE="virtual/kernel"
+PROVIDE="virtual/kernel virtual/os-headers"
 HOMEPAGE="http://www.kernel.org/ http://www.namesys.com http://www.sistina.com/lvm/ http://developer.intel.com/technology/iapc/acpi/" 
 
 if [ $PN = "linux-sources" ] && [ -z "`use build`" ]
