@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 37cc7f02b75f246527860d2f0716abef ChangeLog 7681
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 519d9e68d2fcfb01b3708b67a253320e pango-1.4.1.ebuild 1136
+MD5 da9ab2a4bcd01de739c779da59ae17c7 pango-1.4.1.ebuild 1135
 MD5 0d8448ba534b03d0c00997fd4906cc45 pango-1.4.0.ebuild 1080
-MD5 941770096c4a3927b2acb1b81f90b915 files/digest-pango-1.4.1 64
-MD5 54a56a572951b08340d08e10e4d93414 files/pango-1.0.99.020606-xfonts.patch 4560
+MD5 2190e58788c063009a7ba232c2009e73 ChangeLog 7783
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 ee91ace9933dbdbea591e08b6a82bb44 files/pango-1.2.2-slighthint.patch 1124
+MD5 54a56a572951b08340d08e10e4d93414 files/pango-1.0.99.020606-xfonts.patch 4560
 MD5 e9f4296ef1d6b9bb32c33badffec7dc1 files/digest-pango-1.4.0 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFBF2OTHTu7gpaalycRAqcKAKDyGuDa8cTJejLXYHnBnwuC3RoAZQCgze1n
-UAyR8SSX4fpChS2As8V1f9g=
-=PzVb
------END PGP SIGNATURE-----
+MD5 941770096c4a3927b2acb1b81f90b915 files/digest-pango-1.4.1 64
