@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.3.1.ebuild,v 1.5 2004/09/22 17:52:59 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.3.1.ebuild,v 1.6 2004/10/17 09:59:24 dholm Exp $
 
 DESCRIPTION="A GTK+-based frontend to Portage"
 HOMEPAGE="http://porthole.sourceforge.net"
 SRC_URI="mirror://sourceforge/porthole/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 DEPEND=">=dev-lang/python-2.3
 		>=dev-python/pygtk-2.0.0
