@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgnomeuimm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomeuimm/ChangeLog,v 1.6 2003/02/12 06:55:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomeuimm/ChangeLog,v 1.7 2003/04/26 21:02:53 liquidx Exp $
+
+*libgnomeuimm-1.3.16 (26 Apr 2003)
+
+  26 Apr 2003; Alastair Tse <liquidx@gentoo.org> libgnomeuimm-1.3.16.ebuild:
+  version bump
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
