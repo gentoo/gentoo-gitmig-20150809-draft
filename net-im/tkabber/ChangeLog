@@ -1,13 +1,19 @@
 # ChangeLog for net-im/tkabber
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.8 2003/03/02 07:31:55 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.9 2003/04/23 17:02:47 utx Exp $
 
 *tkabber-0.9.4b (02 Mar 2003)
+
+  23 Apr 2003; Stanislav Brabec <utx@gentoo.org> tkabber-0.9.4b.ebuild:
+  Fixed DEPEND for tcl/tk 8.4 (#19558).
 
   02 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version update.
 
 *tkabber-0.9.3b-r1 (31 Jan 2003)
+
+  23 Apr 2003; Stanislav Brabec <utx@gentoo.org> tkabber-0.9.3b-r1.ebuild:
+  Fixed DEPEND for tcl/tk 8.4 (#19558).
 
   04 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :
   Wrapped SSL and GPG support in the corresponding USE flags.
