@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-outpost/xmms-outpost-0.15.ebuild,v 1.9 2004/09/14 07:08:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-outpost/xmms-outpost-0.15.ebuild,v 1.10 2005/01/25 17:03:23 greg_g Exp $
 
 IUSE=""
 
@@ -18,6 +18,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc amd64 sparc"
 
 DEPEND="media-sound/xmms"
+RDEPEND="${DEPEND}"
 need-kde 3
 
 src_unpack() {
