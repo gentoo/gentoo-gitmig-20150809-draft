@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.23.ebuild,v 1.8 2004/06/24 23:04:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.23.ebuild,v 1.9 2004/07/14 14:15:43 agriffis Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -11,6 +11,7 @@ HOMEPAGE="http://www.fefe.de/dietlibc/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc ~hppa ~amd64 ~alpha"
+IUSE=""
 
 src_unpack() {
 	filter-flags "-fstack-protector"
