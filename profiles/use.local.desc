@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.164 2003/11/06 15:55:55 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.165 2003/11/06 16:41:57 coredumb Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -224,10 +224,8 @@ x11-libs/wxGTK:unicode - Adds Unicode support. Must be used in combination with 
 x11-terms/eterm:etwin - enable twin support
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
 x11-themes/gaim-smileys:offensive - Install possibly offensive smiley themes
-x11-wm/fvwm:bidi - Enable bidirectional language support
 x11-wm/fvwm:nosm - Disable support for Session Management (xsm protocol)
 x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png images are to be used)
 x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
-x11-term/mlterm:bidi - Enable bidirectional language support
 x11-term/mlterm:nopixbuf - If you do NOT want to link gdk_pixbuf
