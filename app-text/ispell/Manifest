@@ -1,0 +1,7 @@
+MD5 8f65ded83b7c40e28904776a6dcab843 ChangeLog 2516
+MD5 2599dea0f188c0d7a96a04962c16744a ispell-3.2.06-r4.ebuild 1462
+MD5 0b8ee428b8eac6ccbd09e72be485927a ispell-3.2.06-r5.ebuild 1494
+MD5 f9c42a05f39a3308a690c96369f256f1 files/digest-ispell-3.2.06-r4 137
+MD5 f9c42a05f39a3308a690c96369f256f1 files/digest-ispell-3.2.06-r5 137
+MD5 76e85c717e3103ccdd49401f0930dd54 files/ispell-3.1.20.diff 51067
+MD5 912424a0edd789568666782416a410a2 files/local.h.gentoo 6015

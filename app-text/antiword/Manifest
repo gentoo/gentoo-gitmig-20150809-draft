@@ -1,0 +1,6 @@
+MD5 8f962b8a267965424b594dfdd0596f63 ChangeLog 1521
+MD5 07967bf9829cd7a49cefcf8c69e65234 antiword-0.32.ebuild 942
+MD5 a9fc1dd8151d0ea91c2adf00b57f93c2 antiword-0.33.ebuild 868
+MD5 42137a66e123962509d6c276660105b8 files/digest-antiword-0.32 65
+MD5 2d50040aeb4b967c6019f4d56ab6d3e3 files/digest-antiword-0.33 65
+MD5 dc4b195386deeddbd406c7aa5afb8a60 files/gentoo-antiword.diff 380

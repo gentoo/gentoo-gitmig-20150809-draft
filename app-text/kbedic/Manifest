@@ -1,0 +1,7 @@
+MD5 721388f75ecad5405b21187253571e1d ChangeLog 1253
+MD5 6fb73430f8b6ae4fcdbeae95ecc96035 kbedic-2.1.ebuild 902
+MD5 b6015cf38b1532da3c30f5c0e620f434 kbedic-3.1.ebuild 1006
+MD5 9964b098988b74e453e34298dcf9e7b3 files/digest-kbedic-2.1 63
+MD5 2b59c5d0b88e59010fbb1f2b6052edba files/digest-kbedic-3.1 63
+MD5 dc706f56c46025d45cdf6918bde9fd7e files/kbedic-3.1-gcc3.diff 4009
+MD5 fc90d2bd7719168f5821f02e64af3a6f files/kbedic-3.1-location.diff 1189

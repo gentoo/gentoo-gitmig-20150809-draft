@@ -1,0 +1,7 @@
+MD5 dd094b68a5adece56898110a78c6c98c ChangeLog 1104
+MD5 9bb056e8366993dab50829a2b887bf59 ghostview-1.5-r1.ebuild 1177
+MD5 4f968d06bb54f39cab800e1b4bb7db06 ghostview-1.5.ebuild 1084
+MD5 0a6983343be936ed5c9144c59a9bca0c files/digest-ghostview-1.5 65
+MD5 0a6983343be936ed5c9144c59a9bca0c files/digest-ghostview-1.5-r1 65
+MD5 a964b4a03027f0ef87901d43921e0eef files/ghostview-1.5-gentoo.diff 7765
+MD5 a964b4a03027f0ef87901d43921e0eef files/ghostview-1.5-r1-gentoo.diff 7765

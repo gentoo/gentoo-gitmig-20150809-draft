@@ -1,0 +1,6 @@
+MD5 35bdde775ea5a52c994387708ec94cad ChangeLog 3914
+MD5 212b7c28ef520d08e35b888e53f019db sgmltools-lite-3.0.3-r5.ebuild 2559
+MD5 ef755e8912240fedccb07ef2851a0671 sgmltools-lite-3.0.3-r6.ebuild 2174
+MD5 4068e19bd2400f18c7b90fc071c31619 files/digest-sgmltools-lite-3.0.3-r5 139
+MD5 4068e19bd2400f18c7b90fc071c31619 files/digest-sgmltools-lite-3.0.3-r6 139
+MD5 5a72138dcb78d9d707c734eaf04d248b files/sgmltools-lite-3.0.3-gentoo.diff 679

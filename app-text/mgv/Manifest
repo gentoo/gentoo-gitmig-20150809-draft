@@ -1,0 +1,4 @@
+MD5 a6b5256667779a3ff500907244c51d82 ChangeLog 1019
+MD5 02bdd77bd720523d7ea1a8fe65803e59 mgv-3.1.5.ebuild 828
+MD5 bd520677adbd1e3f716bd9074bc9cd83 files/digest-mgv-3.1.5 61
+MD5 cd17d72e2674842cecb8182a758620fc files/mgv-3.1.5-stderr.patch 376

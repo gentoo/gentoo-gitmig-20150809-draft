@@ -1,0 +1,6 @@
+MD5 dea0a62d085be3950a22fcce57992d4c ChangeLog 1129
+MD5 abe826fd46eac9003d74a37944e0f57c htmldoc-1.8.19.ebuild 831
+MD5 2901732d26ec1bbfe24d3b1573fe4838 htmldoc-1.8.20.ebuild 1149
+MD5 86ae7168499a7aed0980b69d04839ea7 files/digest-htmldoc-1.8.19 75
+MD5 4fd3b7ec1b30af0be9c2fd4695062c0c files/digest-htmldoc-1.8.20 77
+MD5 06678439bd4de915b822ec99aa90b426 files/fonts.diff 353

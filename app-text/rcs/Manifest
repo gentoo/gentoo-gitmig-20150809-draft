@@ -1,0 +1,6 @@
+MD5 d6229d5ba663c9df07de1a806b374076 ChangeLog 1383
+MD5 71061a96e5e9081d597dc2428415d528 rcs-5.7-r1.ebuild 854
+MD5 b1f350b5db4aaaff5066d81b9b6c4020 rcs-5.7-r2.ebuild 860
+MD5 ce5aff3b9047dcbd676481dc5ebc6453 files/conf.sh 53669
+MD5 548c484ca9438cdadb3ca5101805f15f files/digest-rcs-5.7-r1 59
+MD5 548c484ca9438cdadb3ca5101805f15f files/digest-rcs-5.7-r2 59

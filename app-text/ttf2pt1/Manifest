@@ -1,0 +1,7 @@
+MD5 6cacaffb9a09092a668f60f010010be6 ChangeLog 1411
+MD5 8ca86832045a5a49cd1b07953153f902 ttf2pt1-3.3.3.ebuild 861
+MD5 16abd347c42e8507f634762acdeef2c4 ttf2pt1-3.4.0.ebuild 897
+MD5 70a68cff133872cdf8743b63425beffe files/digest-ttf2pt1-3.3.3 62
+MD5 abb6440d86a5663c3148eba7976a1f59 files/digest-ttf2pt1-3.4.0 62
+MD5 0199933f9e9763b60bfd6120daaead19 files/ttf2pt1-3.3.3-Makefile-gentoo.diff 1203
+MD5 d8a381f600cd8b500edd31175e462ada files/ttf2pt1-3.4.0-Makefile-gentoo.diff 1347

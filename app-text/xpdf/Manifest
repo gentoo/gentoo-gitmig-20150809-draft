@@ -1,0 +1,5 @@
+MD5 2f3f472f9db2a111c2fdc490ad55db51 ChangeLog 2580
+MD5 8011f9370b13859ac314c62b76da5b0a xpdf-2.02.ebuild 1104
+MD5 54aabb74693687ed93c536d192ee7527 files/FTFont-freetype2.1-fix.patch 522
+MD5 e231c3f77b475fdbe1307694e55e8542 files/digest-xpdf-2.02 61
+MD5 7c0787e730fecfb5b6ebc5a7a69cd64e files/xpdfrc 1092
