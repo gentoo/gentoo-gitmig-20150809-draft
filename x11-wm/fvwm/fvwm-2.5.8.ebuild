@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.8 2003/11/07 13:52:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8.ebuild,v 1.9 2003/11/11 12:01:42 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -59,6 +59,13 @@ src_unpack() {
 	# planned on disabling these debug statements before the release, but
 	# never got around to it.
 	cd ${S}; epatch ${FILESDIR}/disable-debug-statements.diff
+
+	# FvwmTabs uses /tmp/.fvwmtabs.state for storing state files by default, 
+	# this probably isnt a good idea security wise, allowing someone to do 
+	# damage with symlinks. It will also break if multiple users try using 
+	# the same location simultaneously...probably should use File::Temp, but 
+	# moving it into ~/.fvwmtabs.state will do for now.
+	cd ${WORKDIR}; epatch ${FILESDIR}/fvwmtabs-insecure-tmp-handling.diff
 
 	# build fails on alpha with certain options without this.
 	use alpha && append-flags -fPIC
