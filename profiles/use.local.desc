@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.193 2003/12/26 17:53:02 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.194 2003/12/27 19:48:50 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -79,7 +79,9 @@ dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-fps/duke3d:nophysfs - Disables support for physfs
-games-fps/quake2-relnev:noqmax - Do not build the pretty version (quake max)
+games-fps/quake2-icculus:noqmax - Do not build the pretty version (quake max)
+games-fps/quake2-icculus:rogue - Build support for the 'The Reckoning' Mission Pack (xatrix)
+games-fps/quake2-icculus:xatrix - Build support for the 'Ground Zero' Mission Pack (rogue)
 games-fps/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3)
 games-misc/fortune-mod:offensive - Allow fortune to offend you
 games-rpg/nwn:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
