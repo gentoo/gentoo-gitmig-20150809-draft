@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.68 2004/12/13 19:58:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.69 2004/12/15 10:06:37 eradicator Exp $
 
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -597,6 +597,8 @@ create_gcc_env_entry() {
 	use ppc64 && multilib_dirnames="64 32"
 	# same here.
 	use mips && multilib_dirnames="o32 32 64"
+	# in theory, sparc can have either as default, so add both
+	use sparc && multilib_dirnames="64 32"
 
 	LDPATH="${LIBPATH}"
 
@@ -1039,7 +1041,7 @@ gcc-library-configure() {
 
 gcc-compiler-configure() {
 	# multilib support
-	if use multilib && (use amd64 || use mips)
+	if use multilib && (use amd64 || use mips || use sparc)
 	then
 		confgcc="${confgcc} --enable-multilib"
 	else
