@@ -1,6 +1,13 @@
-# ChangeLog for app-admin/chkrootkit
+# ChangeLog for app-forensics/chkrootkit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.7 2004/09/18 18:16:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.8 2004/09/18 21:02:05 ka0ttic Exp $
+
+*chkrootkit-0.44 (18 Sep 2004)
+
+  18 Sep 2004; Aaron Walker <ka0ttic@gentoo.org>
+  -files/chkrootkit-0.37-gentoo.diff, -chkrootkit-0.37.ebuild,
+  +chkrootkit-0.44.ebuild:
+  Version bump and clean up.
 
   18 Sep 2004; Travis Tilley <lv@gentoo.org> chkrootkit-0.43-r3.ebuild:
   stable on amd64
