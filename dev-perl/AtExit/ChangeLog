@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AtExit
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AtExit/ChangeLog,v 1.1 2003/08/19 00:45:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AtExit/ChangeLog,v 1.2 2003/12/31 10:44:27 mcummings Exp $
+
+  31 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org> AtExit-2.01.ebuild:
+  Tested on sparc and x86
 
 *AtExit-2.01 (18 Aug 2003)
 
