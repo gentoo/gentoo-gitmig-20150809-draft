@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.8.ebuild,v 1.8 2003/09/17 20:03:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.8.ebuild,v 1.9 2003/09/17 23:39:07 liquidx Exp $
 
 inherit eutils libtool gnome.org
 
@@ -21,7 +21,7 @@ src_compile() {
 	elibtoolize
 
 	# filter seemingly problematic CFLAGS (#26320)
-	filter-flags "-fprefetch-loop-arrays" "-funroll-lopos"
+	filter-flags "-fprefetch-loop-arrays" "-funroll-loops"
 
 	if [ "${ARCH}" == "alpha" -a "${CC}" == "ccc" ]; then
 		# i think the author assumes __DECC is defined only on Tru64.
