@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2004
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.20 2004/11/24 13:21:35 wolf31o2 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.21 2005/01/18 22:24:04 wolf31o2 Exp $
+
+  18 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3339.ebuild:
+  Added ROOT to dosym.
 
 *ut2004-3339 (24 Nov 2004)
 
