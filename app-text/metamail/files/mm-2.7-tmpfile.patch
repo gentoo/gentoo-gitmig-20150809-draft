@@ -1,0 +1,114 @@
+diff -d -r -u -P mm2.7.orig/src/bin/mailserver mm2.7/src/bin/mailserver
+--- mm2.7.orig/src/bin/mailserver	Mon Jun 15 00:30:47 1998
++++ mm2.7/src/bin/mailserver	Mon Jun 15 18:54:01 1998
+@@ -28,7 +28,15 @@
+ rehash
+ set FromName=""
+ set Subject=""
+-set TmpFile=/tmp/ms.$$
++#  Generate temporary file name:
++if ( -x /bin/mktemp ) then
++    set TmpFile=`/bin/mktemp /tmp/ms.XXXXXXX` || exit 1
++else if ( -x /usr/bin/mktemp ) then
++    set TmpFile=`/usr/bin/mktemp /tmp/ms.XXXXXXX` || exit 1
++else
++    set TmpFile=/tmp/ms.$$
++    rm -rf $TmpFile
++endif
+ set FOORAW=$<
+ while ("$FOORAW" != "") 
+ set FOO=(` echo "$FOORAW" | tr "[" "x"`)
+@@ -149,4 +157,5 @@
+ The file: $Subject 
+ was sent to: $FromName
+ !
++rm -f $TmpFile
+ exit 0
+diff -d -r -u -P mm2.7.orig/src/bin/showaudio mm2.7/src/bin/showaudio
+--- mm2.7.orig/src/bin/showaudio	Mon Jun 15 00:30:47 1998
++++ mm2.7/src/bin/showaudio	Mon Jun 15 19:06:25 1998
+@@ -127,9 +127,18 @@
+     if ($#argv >= 1) then
+ 	exec /usr/sbin/sfplay -i mu-law chan 1 rate 8000 end $*
+     else
+-	cat > ${METAMAIL_TMPDIR}/audio.$$
+-	/usr/sbin/sfplay -i mu-law chan 1 rate 8000 end ${METAMAIL_TMPDIR}/audio.$$
+-	rm ${METAMAIL_TMPDIR}/audio.$$
++	# Generate temporary file name:
++	if ( -x /bin/mktemp ) then
++	    set TmpAudio=`/bin/mktemp ${METAMAIL_TMPDIR}/audio.XXXXXXX` || exit 1
++	else if ( -x /usr/bin/mktemp ) then
++	    set TmpAudio=`/usr/bin/mktemp ${METAMAIL_TMPDIR}/audio.XXXXXXX` || exit 1
++	else
++	    set TmpAudio=${METAMAIL_TMPDIR}/audio.$$
++	    rm -rf $TmpAudio
++	endif
++	cat > $TmpAudio
++	/usr/sbin/sfplay -i mu-law chan 1 rate 8000 end $TmpAudio
++	rm $TmpAudio
+ 	exit 0
+     endif
+ else if (-d /usr/sony) then
+@@ -198,7 +207,15 @@
+ echo ""
+ if (! $?MM_NOTTTY) set MM_NOTTTY=0
+ if ($MM_NOTTTY == 1) then
+-    set fname=/tmp/mm.aud.$$
++    # Generate unique file name:
++    if ( -x /bin/mktemp ) then
++        set fname=`/bin/mktemp /tmp/mm.aud.XXXXXXX` || exit 1
++    else if ( -x /usr/bin/mktemp ) then
++        set fname=`/usr/bin/mktemp /tmp/mm.aud.XXXXXXX` || exit 1
++    else
++        set fname=/tmp/mm.aud.$$
++        rm -rf $fname
++    endif
+ else
+     echo -n "Do you want to write the audio out to a file [y] ? "
+     set ANS=$<
+diff -d -r -u -P mm2.7.orig/src/bin/sun-message.csh mm2.7/src/bin/sun-message.csh
+--- mm2.7.orig/src/bin/sun-message.csh	Mon Jun 15 00:30:47 1998
++++ mm2.7/src/bin/sun-message.csh	Mon Jun 15 19:02:09 1998
+@@ -8,6 +8,10 @@
+ # $2 is untrustworthy data. Quote it.
+ #
+ mkdir /tmp/decode.$$
++if ( $? != 0 ) then
++    echo "Error: cannot create temporary directory"
++    exit 1
++endif
+ cd /tmp/decode.$$
+ 
+ if (! $?METAMAIL_PAGER) then
+diff -u -d -r -P mm2.7.orig/src/metamail/splitmail.c mm2.7/src/metamail/splitmail.c
+--- mm2.7.orig/src/metamail/splitmail.c	Sun Jun 14 12:00:20 1998
++++ mm2.7/src/metamail/splitmail.c	Sun Jun 14 12:01:09 1998
+@@ -26,6 +26,7 @@
+ #include <config.h>
+ #include <ctype.h>
+ #include <time.h>
++#include <fcntl.h>
+ 
+ #define MINCHUNKSIZE 20000 /* Better be enough to hold the headers, or we die! */
+ extern char *malloc(), *index(), *getmyname();
+@@ -243,6 +244,7 @@
+ char *deliverycmd, *prefix, *SharedHeaders, *SubjectBuf, *id, *MessageID, *bigbuf, *OrigID;
+ {
+     FILE *fpout;
++    int fd;
+     char OutputFile[1000];
+     int code;
+ #if defined(sequent)
+@@ -255,7 +257,10 @@
+         fpout = popen(deliverycmd, "w");
+     } else {
+         sprintf(OutputFile, "%s%d", prefix, whichpart);
+-        fpout = fopen(OutputFile, "w");
++	remove(OutputFile);
++	fpout = NULL ;
++	fd = open(OutputFile, O_WRONLY|O_CREAT|O_EXCL, 0600);
++	if ( fd > -1 ) fpout = fdopen(fd, "w");
+     }
+     if (!fpout) {
+ 	fprintf(stderr, "splitmail: Can't open %s for writing\n", DoDeliver ? deliverycmd : OutputFile);
+
