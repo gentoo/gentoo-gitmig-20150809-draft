@@ -1,3 +1,5 @@
 MD5 760ea73d1952ca4dd77c9961315b7192 evolvotron-0.2.2.ebuild 988
-MD5 49b14f79f1c60fa1f1a088588f2bf69d ChangeLog 527
+MD5 93ef5209cdfba80c789c58c0b683485d ChangeLog 673
+MD5 7f6111b6a68b90834e9942a976b55d1b evolvotron-0.3.1.ebuild 938
 MD5 79eda2716fb8315e43833885b0c44416 files/digest-evolvotron-0.2.2 68
+MD5 03a2ea7677c6b7bd6dd2a5fad7519e5f files/digest-evolvotron-0.3.1 68
