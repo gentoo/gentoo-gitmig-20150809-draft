@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.17.ebuild,v 1.8 2004/02/26 14:08:54 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.17.ebuild,v 1.9 2004/03/21 10:26:46 kumba Exp $
 
 inherit eutils
 #to accomodate -laadeedah releases
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.mysql.com/"
 SRC_URI="mirror://mysql/Downloads/${SDIR}/${NEWP}.tar.gz"
 RESTRICT="nomirror"
 
-KEYWORDS="ia64 x86 sparc ~ppc amd64 hppa ~alpha ~mips"
+KEYWORDS="ia64 x86 sparc ~ppc amd64 hppa ~alpha mips"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="static readline innodb berkdb tcpd ssl perl debug"
