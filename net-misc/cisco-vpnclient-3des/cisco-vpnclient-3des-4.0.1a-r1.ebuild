@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.1a-r1.ebuild,v 1.1 2003/11/19 20:18:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.1a-r1.ebuild,v 1.2 2003/12/12 23:54:44 wolf31o2 Exp $
 
 MY_PV=${PV/a/.A-k9}
 DESCRIPTION="Cisco VPN Client (3DES)"
@@ -31,7 +31,12 @@ pkg_nofetch() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	[ "${KV:0:3}" == "2.6" ] && epatch ${FILESDIR}/${PV}-linux26.patch
+	[ "${KV:0:3}" == "2.6" ] && epatch ${FILESDIR}/${PV}-linux26-gentoo.patch
+
+	# Patch to allow use of alternate CC.  Patch submitted to bug #33488 by
+	# Jesse Becker (jbecker@speakeasy.net)
+	epatch ${FILESDIR}/driver_build_CC.patch
+
 }
 
 src_compile () {

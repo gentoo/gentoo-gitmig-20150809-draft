@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.1a.ebuild,v 1.3 2003/10/27 20:13:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.0.3b.ebuild,v 1.1 2003/12/12 23:54:44 wolf31o2 Exp $
 
-MY_PV=${PV/a/.A-k9}
+MY_PV=${PV/b/.B-k9}
 DESCRIPTION="Cisco VPN Client (3DES)"
 HOMEPAGE="http://www.cisco.com/en/US/products/sw/secursw/ps2308/index.html"
 SRC_URI="vpnclient-linux-${MY_PV}.tar.gz"
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 
 S=${WORKDIR}/vpnclient
 
-VPNDIR=/etc/CiscoSystemsVPNClient
+VPNDIR="/etc/CiscoSystemsVPNClient"
 
 pkg_nofetch() {
 	eerror "Please goto:"
@@ -31,7 +31,10 @@ pkg_nofetch() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	[ "${KV:0:3}" == "2.6" ] && epatch ${FILESDIR}/${PV}-linux26.patch
+
+	# Patch to allow use of alternate CC.  Patch submitted to bug #33488 by
+	# Jesse Becker (jbecker@speakeasy.net)
+	epatch ${FILESDIR}/driver_build_CC.patch
 }
 
 src_compile () {
