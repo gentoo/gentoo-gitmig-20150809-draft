@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 14a9e8cf2c0a54f659f729270f0cd3eb packit-0.7.ebuild 820
 MD5 abcded64438893423567025976fd5620 ChangeLog 1716
 MD5 828add64d896c29b87566ae8c0842d9d metadata.xml 291
-MD5 f2cdb4853f77dbe990eda302e8c5bdac packit-1.0.ebuild 833
+MD5 14a9e8cf2c0a54f659f729270f0cd3eb packit-0.7.ebuild 820
+MD5 8b5978ff6ca8a7de639c5741879f55b8 packit-1.0.ebuild 847
 MD5 9691a62ad1380ccfcbc34b3c0e88f46a files/digest-packit-0.7 59
 MD5 7eb74f02f5f953dd695526486d7ceed6 files/digest-packit-1.0 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBIJGWT+MN7JbqCpMRAnoxAKCKWir/1MK6sVDyz7Viv7ulwRUpfgCdEHii
-iUdyZHxVf86Fzr4Cv2/Yk10=
-=M8ce
------END PGP SIGNATURE-----
