@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libmrproject
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/ChangeLog,v 1.3 2002/07/06 20:25:39 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/ChangeLog,v 1.4 2002/08/07 18:15:22 stroke Exp $
+
+*libmrproject-0.5 (07 Aug 2002)
+  07 Aug 2002; Gabriele Giorgetti <stroke@gentoo.org> libmrproject-0.5.ebuild :
+  New version.
 
 *libmrproject-0.4 (06 Jul 2002)
   06 Jul 2002; Spider <spider@gentoo.org> libmrproject-0.4.ebuild :
