@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.0-r3.ebuild,v 1.8 2003/06/01 17:34:40 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.0-r3.ebuild,v 1.9 2003/06/13 20:51:28 caleb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/qt-x11-free-${PV}
 
 DESCRIPTION="QT version ${PV}"
 SLOT="3"
-LICENSE="QPL-1.0"
+LICENSE="QPL-1.0 | GPL-2"
 KEYWORDS="x86 ppc ~alpha sparc hppa"
 
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.bz2"

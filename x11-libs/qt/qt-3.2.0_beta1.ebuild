@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.0_beta1.ebuild,v 1.1 2003/05/30 13:06:35 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.0_beta1.ebuild,v 1.2 2003/06/13 20:51:28 caleb Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="QT version ${PV}"
 SLOT="3"
-LICENSE="QPL-1.0"
+LICENSE="QPL-1.0 | GPL-2"
 
 KEYWORDS="~x86"
 
