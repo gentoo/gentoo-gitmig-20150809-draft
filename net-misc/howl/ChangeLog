@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/howl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.9 2004/08/04 12:28:24 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.10 2004/09/20 13:46:35 lisa Exp $
+
+*howl-0.9.6-r1 (20 Sep 2004)
+
+  20 Sep 2004; Lisa Seelye <lisa@gentoo.org> +howl-0.9.6-r1.ebuild:
+  Revision bump to close bug 64207
 
   04 Aug 2004; Travis Tilley <lv@gentoo.org> howl-0.9.6.ebuild:
   added ~amd64 keyword
