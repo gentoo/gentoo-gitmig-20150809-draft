@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 beceacdeec552e85b93d6eb14b12440c modplugplay-1.0.ebuild 804
+MD5 67a34a1809f536d7737ab328c20e40df ChangeLog 388
+MD5 53bae16c517e3a8b9b5a3ca824f5c7df files/digest-modplugplay-1.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBk+hgArHZZzCEUG0RAunkAJ9Gq2vP2ONV+bd2aMdgxL93o3zSyQCfSKSC
+LRfEzQWNGwFvVMBD47TihTI=
+=89YT
+-----END PGP SIGNATURE-----

@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/modplugplay
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/modplugplay/ChangeLog,v 1.1 2004/11/11 22:28:14 eradicator Exp $
+
+*modplugplay-1.0 (11 Nov 2004)
+
+  11 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  +modplugplay-1.0.ebuild:
+  Initial ebuild provided by me.
+
