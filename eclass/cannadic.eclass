@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.2 2003/12/29 15:50:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.3 2004/02/17 07:36:54 mr_bones_ Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -22,7 +22,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="public-domain"
 # I added all keywords form /usr/portage/profiles/keyword.desc atm since
 # cannadic source is basically plain text and will run on any platform
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hpps ~arm ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hpps ~amd64"
 SLOT="0"
 
 S="${WORKDIR}"

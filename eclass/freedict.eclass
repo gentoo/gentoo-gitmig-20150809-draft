@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freedict.eclass,v 1.4 2003/07/22 00:32:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freedict.eclass,v 1.5 2004/02/17 07:36:54 mr_bones_ Exp $
 
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # This eclass exists to ease the installation of freedict translation
@@ -22,7 +22,7 @@ SRC_URI="http://freedict.sourceforge.net/download/linux/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
 newdepend "app-text/dictd"
 
