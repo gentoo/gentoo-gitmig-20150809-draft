@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/gtklife
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gtklife/ChangeLog,v 1.4 2004/08/26 01:44:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gtklife/ChangeLog,v 1.5 2004/12/17 15:41:28 slarti Exp $
+
+  17 Dec 2004; Tom Martin <slarti@gentoo.org> gtklife-4.0.ebuild:
+  Marked ~amd64, resolves bug 74387.
 
 *gtklife-4.0 (25 Aug 2004)
 
