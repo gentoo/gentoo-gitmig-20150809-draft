@@ -1,8 +1,11 @@
 # ChangeLog for net-www/galeon-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/ChangeLog,v 1.10 2003/02/12 08:47:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon-cvs/ChangeLog,v 1.11 2003/02/24 14:24:04 foser Exp $
 
 *galeon-20020908 (08 September 2002)
+
+  24 Feb 2003; foser <foser@gentoo.org> galeon-cvs-20020908.ebuild :
+  Updated to use mozilla-1.3b
 
   07 Dec 2002; foser <foser@gentoo.org> galeon-cvs-20020908.ebuild :
   Fixes to make sure it compiles with mozilla 1.2
