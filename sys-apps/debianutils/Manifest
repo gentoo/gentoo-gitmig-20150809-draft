@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8df8435b95a0193d003754e8d1786589 ChangeLog 6525
-MD5 4a9eb737382c9bb86b6c4b822fd5bb5b debianutils-1.16.7-r4.ebuild 1479
+MD5 f8eb58ba1c90c77ad3edc9724d5260f0 ChangeLog 6657
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 baad3294810d63cf754e08ef0f620fc5 debianutils-2.13.1.ebuild 1042
+MD5 4a9eb737382c9bb86b6c4b822fd5bb5b debianutils-1.16.7-r4.ebuild 1479
 MD5 a497960da56a8ef8cb07158e15407c18 files/debianutils-1.16.7-gcc33.patch 2588
 MD5 61f8a46fc4a88304676eb068580fe842 files/debianutils-1.16.7-gentoo.patch 3274
 MD5 3f67e66ea1d7aa13843f253310322f51 files/debianutils-compress.patch 743
 MD5 f668f7cf3760bd5f131cec5de5602523 files/digest-debianutils-1.16.7-r4 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBtmgmroRuSHgZdywRAh04AJ9qSLEJQMlpMr7ow8Eb0iXFA0c3LQCfXnfJ
-yxA75kTf/RDz0NOd1KRT59M=
-=o7Z5
------END PGP SIGNATURE-----
+MD5 930d33ac394a1a72aa0023368f998b2d files/digest-debianutils-2.13.1 70
