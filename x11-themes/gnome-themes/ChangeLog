@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.23 2003/10/05 15:06:10 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.24 2003/10/07 22:56:48 liquidx Exp $
+
+  07 Oct 2003; Alastair Tse <liquidx@gentoo.org> gnome-themes-0.3.ebuild,
+  gnome-themes-2.2.1.ebuild, gnome-themes-2.2.2.ebuild,
+  gnome-themes-2.2.ebuild, gnome-themes-2.4.0.ebuild:
+  removing gtk-engines-thinice dep from 2.4.0 since it includes it now
 
   05 Oct 2003; Mike Gardiner <obz@gentoo.org> gnome-themes-2.4.0.ebuild:
   Marked stable on x86
