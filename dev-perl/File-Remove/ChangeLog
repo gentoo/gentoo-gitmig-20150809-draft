@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Remove
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Remove/ChangeLog,v 1.4 2004/10/17 03:09:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Remove/ChangeLog,v 1.5 2004/12/23 07:33:26 nigoro Exp $
+
+  23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> File-Remove-0.21.ebuild:
+  added ~ppc64
 
 *File-Remove-0.21 (16 Oct 2004)
 
