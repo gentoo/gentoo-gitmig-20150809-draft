@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/iverilog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.3 2005/01/02 01:27:51 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.4 2005/01/12 20:39:41 plasmaroo Exp $
+
+  12 Jan 2005; <plasmaroo@gentoo.org> iverilog-0.8.ebuild:
+  Marking 0.8 stable on x86 as the stable 0.7 snapshot is problematic;
+  bug #77577.
 
 *iverilog-0.8 (02 Jan 2005)
 
