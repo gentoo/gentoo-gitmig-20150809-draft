@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.5.ebuild,v 1.4 2004/10/18 12:30:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.5.ebuild,v 1.5 2005/01/01 22:31:40 aliz Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ IUSE="ssl mozilla gnutls"
 DEPEND=">=sys-devel/autoconf-2.2
 	>=dev-libs/libxml2-2.4.2
 	>=dev-libs/libxslt-1.0.20
+	dev-util/pkgconfig
 	ssl? ( >=dev-libs/openssl-0.9.6c )
 	gnutls? ( >=net-libs/gnutls-0.8.1 )
 	mozilla? ( >=dev-libs/nspr-4.0
@@ -40,7 +41,7 @@ src_compile() {
 		myconf="--disable-aes"
 	fi
 
-	myconf="$myconf --enable-xkms --disable-pkgconfig --enable-gnutls `use_with mozilla nss` `use_with mozilla nspr` \
+	myconf="$myconf --enable-xkms --enable-gnutls `use_with mozilla nss` `use_with mozilla nspr` \
 		`use_enable ssl openssl` --with-html-dir=${D}/usr/share/doc/${PF}"
 
 	econf ${myconf} || die "configure failed"
