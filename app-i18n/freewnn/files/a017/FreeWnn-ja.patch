@@ -1,0 +1,133 @@
+--- FreeWnn-1.1.1-a017.orig/Xsi/Wnn/etc/msg.c	Mon Mar 20 17:31:33 2000
++++ FreeWnn-1.1.1-a017/Xsi/Wnn/etc/msg.c	Fri Aug 18 15:20:20 2000
+@@ -457,12 +457,12 @@
+ {
+   struct msg_cat *cd;
+ 
+-  cd = msg_open ("msg", "%L", "ja_JP");
++  cd = msg_open ("msg", "%L", "ja");
+ 
+-  printf (msg_get (cd, 5, "message not found\n", "ja_JP"), 555);
++  printf (msg_get (cd, 5, "message not found\n", "ja"), 555);
+   printf (msg_get (cd, 6, "message not found\n", "zh_CN"));
+   printf (msg_get (cd, -1, "", "ja_JP"), 555);
+-  printf (msg_get (cd, 2, "message not found\n", "ja_JP"), "abc");
++  printf (msg_get (cd, 2, "message not found\n", "ja"), "abc");
+   printf (msg_get (cd, 100, "message not found\n", "zh_CN"), "abc");
+ }
+ #endif /* not_use */
+--- FreeWnn-1.1.1-a017.orig/Xsi/Wnn/include/jd_sock.h	Wed Feb 23 16:31:29 2000
++++ FreeWnn-1.1.1-a017/Xsi/Wnn/include/jd_sock.h	Fri Aug 18 15:41:45 2000
+@@ -67,7 +67,7 @@
+ #ifdef  JAPANESE                /* Japanese */
+ # define WNN_PORT_IN    (0x5701)
+ static char *sockname = "/tmp/jd_sockV4";       /* for jserver */
+-# define LANG_NAME      "ja_JP"
++# define LANG_NAME      "ja"
+ # define SERVERNAME     "wnn4"
+ # define MESSAGE_FILE   "jserver.msg"
+ #else /* JAPANESE */
+@@ -98,7 +98,7 @@
+ 
+ # define WNN_PORT_IN    (0x5701)
+ static char *sockname = "/tmp/jd_sockV4";       /* for jserver */
+-# define LANG_NAME      "ja_JP"
++# define LANG_NAME      "ja"
+ # define SERVERNAME     "wnn4"
+ # define MESSAGE_FILE   "jserver.msg"
+ #endif /* KOREAN */
+--- FreeWnn-1.1.1-a017.orig/Xsi/Wnn/include/jslib.h	Wed Feb 23 16:31:30 2000
++++ FreeWnn-1.1.1-a017/Xsi/Wnn/include/jslib.h	Fri Aug 18 15:42:49 2000
+@@ -394,8 +394,8 @@
+ /*
+   JSLIB function declaration
+ */
+-#define js_open(server, timeout)        js_open_lang(server, "ja_JP", timeout)
+-#define js_connect(server,env_name)     js_connect_lang(server, env_name, "ja_JP")
++#define js_open(server, timeout)        js_open_lang(server, "ja", timeout)
++#define js_connect(server,env_name)     js_connect_lang(server, env_name, "ja")
+ 
+ extern WNN_JSERVER_ID *js_open_lang ();
+ extern int js_close ();
+--- FreeWnn-1.1.1-a017.orig/Xsi/Wnn/include/msg.h	Wed Feb 23 16:31:30 2000
++++ FreeWnn-1.1.1-a017/Xsi/Wnn/include/msg.h	Fri Aug 18 15:43:29 2000
+@@ -50,7 +50,7 @@
+ /*
+ #define DEF_LANG "C"
+ */
+-#define DEF_LANG "ja_JP"
++#define DEF_LANG "ja"
+ 
+ extern struct msg_cat *msg_open ();
+ extern char *msg_get ();
+--- FreeWnn-1.1.1-a017.orig/Xsi/Wnn/include/wnn_config.h	Wed Feb 23 16:31:30 2000
++++ FreeWnn-1.1.1-a017/Xsi/Wnn/include/wnn_config.h	Fri Aug 18 15:46:02 2000
+@@ -44,7 +44,7 @@
+ #define WNN_CSERVER_ENV         "CSERVER"
+ #define WNN_KSERVER_ENV         "KSERVER"
+ #define WNN_TSERVER_ENV         "TSERVER"
+-#define WNN_J_LANG              "ja_JP"
++#define WNN_J_LANG              "ja"
+ #define WNN_C_LANG              "zh_CN"
+ #define WNN_K_LANG              "ko_KR"
+ #define WNN_T_LANG              "zh_TW"
+@@ -79,7 +79,7 @@
+ /* for jserver */
+ #ifndef SERVER_INIT_FILE
+ # ifdef JAPANESE
+-#  define SERVER_INIT_FILE      "/ja_JP/jserverrc"
++#  define SERVER_INIT_FILE      "/ja/jserverrc"
+ # else /* JAPANESE */
+ # ifdef CHINESE
+ # ifdef TAIWANESE
+@@ -91,7 +91,7 @@
+ # ifdef KOREAN
+ #  define SERVER_INIT_FILE      "/ko_KR/kserverrc"
+ # else /* KOREAN */
+-#  define SERVER_INIT_FILE      "/ja_JP/jserverrc"      /* Default */
++#  define SERVER_INIT_FILE      "/ja/jserverrc"      /* Default */
+ # endif /* KOREAN */
+ # endif /* CHINESE */
+ # endif /* JAPANESE */
+@@ -109,7 +109,7 @@
+ 
+ #define ENVRCFILE               "/wnnenvrc"
+ #ifndef HINSIDATA_FILE
+-# define HINSIDATA_FILE         "/ja_JP/hinsi.data"
++# define HINSIDATA_FILE         "/ja/hinsi.data"
+ #endif /* HINSIDATA_FILE */
+ 
+ #define USR_DIC_DIR_VAR "@USR"
+--- FreeWnn-1.1.1-a017.orig/Xsi/Wnn/jd/serverdefs	Sun Jan 30 04:40:48 2000
++++ FreeWnn-1.1.1-a017/Xsi/Wnn/jd/serverdefs	Fri Aug 18 15:46:43 2000
+@@ -30,7 +30,7 @@
+ ;
+ 
+ ;lang_name	machine_name	unix_domain_socket_name	service_name	port_num
+-ja_JP		jserver		/tmp/jd_sockV4		wnn4		22273
++ja		jserver		/tmp/jd_sockV4		wnn4		22273
+ japanese	jserver		/tmp/jd_sockV4		wnn4		22273
+ nihongo		jserver		/tmp/jd_sockV4		wnn4		22273
+ zh_CN		cserver		/tmp/cd_sockV4		wnn4_Cn		22289
+--- FreeWnn-1.1.1-a017.orig/Xsi/Wnn/jlib/jl.c	Mon Mar 20 17:21:12 2000
++++ FreeWnn-1.1.1-a017/Xsi/Wnn/jlib/jl.c	Fri Aug 18 15:47:44 2000
+@@ -442,7 +442,7 @@
+   if (!lang || !*lang)
+     {
+ /* Sorry! Default is Japanese. :-) */
+-      strcpy (p_lang, "ja_JP");
++      strcpy (p_lang, "ja");
+     }
+   else
+     {
+--- FreeWnn-1.1.1-a017.orig/Xsi/Wnn/uum/header.c	Wed Feb 23 16:31:42 2000
++++ FreeWnn-1.1.1-a017/Xsi/Wnn/uum/header.c	Fri Aug 18 15:48:36 2000
+@@ -131,7 +131,7 @@
+ 
+ FuncDataBase function_db[] = {
+ #ifdef JAPANESE
+-  {"ja_JP",
++  {"ja",
+    {NULL, NULL, call_t_redraw_move_normal,
+     call_t_redraw_move_1_normal, call_t_redraw_move_2_normal,
+     call_t_print_l_normal, NULL, char_len_normal, char_q_len_normal,
