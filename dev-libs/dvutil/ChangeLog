@@ -1,6 +1,6 @@
-# ChangeLog for app-admin/addpatches
+# ChangeLog for dev-libs/dvutil
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.3 2003/03/28 13:38:33 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.4 2003/04/22 10:22:26 vapier Exp $
 
 
 *dvutil-0.13.6 (28 Mar 2003)
