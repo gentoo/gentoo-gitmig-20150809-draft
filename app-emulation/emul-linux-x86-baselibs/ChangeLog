@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.4 2003/10/17 03:26:51 brad_mssw Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.5 2004/04/13 16:48:42 kugelfang Exp $
+
+*emul-linux-x86-baselibs-1.1 (13 Apr 2004)
+
+  13 Apr 2004; <dvandyk@gentoo.org> emul-linux-x86-baselibs-1.1.ebuild:
+  Repackaged baselibs, compiled with CFLAGS="-mcpu=athlon-xp -msse -msse2".
+  GCC Version 3.3.2, all libraries used are stable on x86.
 
   16 Oct 2003; Brad House <brad_mssw@gentoo.org> files/75emul-linux-x86-base:
   wrong gcc lib path
