@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/scrot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.13 2004/10/04 10:30:48 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.14 2004/11/04 00:19:06 ka0ttic Exp $
+
+  03 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> scrot-0.8.ebuild:
+  Updated to use bash-completion.eclass
 
   04 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> scrot-0.8.ebuild:
   Fixed minor bug where make install installs docs in /usr/doc/${PN}.

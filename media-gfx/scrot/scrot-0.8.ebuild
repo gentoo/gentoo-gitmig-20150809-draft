@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/scrot-0.8.ebuild,v 1.9 2004/10/04 10:30:48 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/scrot-0.8.ebuild,v 1.10 2004/11/04 00:19:06 ka0ttic Exp $
+
+inherit bash-completion
 
 DESCRIPTION="Screen Shooter"
 SRC_URI="http://www.linuxbrit.co.uk/downloads/${P}.tar.gz"
@@ -20,8 +22,7 @@ src_install () {
 
 	dodoc TODO README AUTHORS ChangeLog
 
-	insinto /usr/share/bash-completion
-	newins ${FILESDIR}/${PN}.bash-completion ${PN}
+	dobashcompletion ${FILESDIR}/${PN}.bash-completion ${PN}
 }
 
 pkg_postinst() {
