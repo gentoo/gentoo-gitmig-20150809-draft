@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r4.ebuild,v 1.1 2003/01/08 23:08:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r4.ebuild,v 1.2 2003/01/08 23:58:03 seemant Exp $
 
 DESCRIPTION="RealPlayer 8 is a streaming media player"
 HOMEPAGE="http://forms.real.com/real/player/unix/unix.html"
@@ -10,16 +10,16 @@ HOMEPAGE="http://forms.real.com/real/player/unix/unix.html"
 # form in order to be able to download the binary. When done, you should copy
 # or move the binary into /usr/portage/distfiles. No need to chmod +x
 
-if use x86 &>/dev/null
+if use x86
 then
 	MY_P=rp8_linux20_libc6_i386_cs2.bin
-elif use ppc &>/dev/null
+elif use ppc
 then
 	MY_P=rp8_linux_powerpc_cs1.bin
-elif use sparc &>/dev/null
+elif use sparc
 then
 	MY_P=rp8_linux_sparc_cs1.bin
-elif use alpha &>/dev/null
+elif use alpha
 then
 	MY_P=rp8_linux_alpha_rh62_cs1.bin
 fi
