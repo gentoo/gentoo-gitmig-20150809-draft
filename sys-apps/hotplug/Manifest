@@ -1,4 +1,4 @@
-MD5 d74c3bee494820a0fdde783355c51719 ChangeLog 5880
+MD5 40952953231923739fe7671420f36c32 ChangeLog 6145
 MD5 20c3f8b015678d0bf9d6463fef97dcd7 hotplug-20020826-r2.ebuild 1561
 MD5 b0a484d63057d74095ddeb36f7700ce6 hotplug-20030501-r2.ebuild 1515
 MD5 da047afd1a129c6f8ace01cd8627e401 hotplug-20030805-r1.ebuild 1743
@@ -19,7 +19,7 @@ MD5 f9303a2467242ed310370ddcd63414b6 files/digest-hotplug-20040105 151
 MD5 687c2739aaf462dc70058802f4d65ca1 files/digest-hotplug-20040311 151
 MD5 d8a0d8878d8904a779bda401d86268b1 files/firmware.agent 1188
 MD5 7c4681458effb34f299cbc4b9245098c files/hotplug.functions.patch 522
-MD5 f7087ab58af3a1afc7e23b668c29e3fb files/hotplug.rc 799
+MD5 e906434f0ef7ac28170c0115a22f3978 files/hotplug.rc 843
 MD5 9f13f3363b85caac03bfb623c652b4fa files/kernel-26-fix.patch 816
 MD5 92547b2263d5423d874565504d2324f7 files/usb.agent.diff 886
 MD5 1bd9ddb0959318fe56dec239c8265fb1 files/usb.confd 291

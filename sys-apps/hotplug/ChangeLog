@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.35 2004/03/30 00:27:50 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.36 2004/03/30 01:11:28 gregkh Exp $
+
+  29 Mar 2004; Greg Kroah-Hartman <gregkh@gentoo.org> files/hotplug.rc:
+  Change the hotplug init.d script to show what subsystem it is starting
+  and stopping to help out in finding problems (and letting people know
+  exactly what is happening on their systems.)
 
 *hotplug-20040329 (29 Mar 2004)
 

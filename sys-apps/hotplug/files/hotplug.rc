@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/files/hotplug.rc,v 1.7 2004/03/06 04:09:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/files/hotplug.rc,v 1.8 2004/03/30 01:11:28 gregkh Exp $
 
 depend() {
 	need modules
@@ -17,23 +17,25 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 	
-	ebegin "Starting USB and PCI hotplugging"
 	for RC in /etc/hotplug/*.rc
 	do
+		NAME=`basename $RC .rc`
+		ebegin "Starting $NAME hotplugging"
 		# We do not want to check the return status, as
 		# some of the scripts may fail due to drivers not
 		# compiled as modules ...
 		$RC start
+		eend 0
 	done
-	eend 0
 }
 
 stop() {
 	local error
-	ebegin "Stopping USB and PCI hotplugging"
 	for RC in /etc/hotplug/*.rc
 	do
+		NAME=`basename $RC .rc`
+		ebegin "Stopping $NAME hotplugging"
 		$RC stop
+		eend 0
 	done
-	eend 0
 }
