@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <micke@hallendal.net>
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.4e.ebuild,v 1.1 2001/12/31 00:48:22 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.4e-r1.ebuild,v 1.1 2002/01/07 09:54:27 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Kerberos 5 implementation from KTH"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.pdc.kth.se/pub/${PN}/src/${P}.tar.gz"
 HOMEPAGE="http://www.pdc.kth.se/heimdal/"
 
 DEPEND="virtual/glibc
-	>=app-crypt/kth-krb-1.1
+	>=app-crypt/kth-krb-1.1-r1
 	ssl? ( dev-libs/openssl-0.9.6b )
 	ldap? ( net-nds/openldap )
 	berkdb? ( sys-libs/db )"
