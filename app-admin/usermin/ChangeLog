@@ -1,11 +1,21 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.4 2002/12/13 10:55:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.5 2002/12/15 01:04:26 seemant Exp $
+
+
+*usermin-0.970 (14 Dec 2002)
+
+  14 Dec 2002; Seemant Kulleen <seemant@gentoo.org> usermin-0.970.ebuild
+  files/usermin.pam :
+
+  Who did this upgrade?  Please put a ChangeLog entry next time.  Put a
+  usermin.pam file for PAM auths, and also added lsof to DEPEND" Thanks to:
+  flx-linuxnews@ifrance.com (Franc,ois-Xavier LAMARE) in bug #11976.
+
+*usermin-0.940 (8 Nov 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*usermin-0.940 (8 Nov 2002)
-
   12 Nov 2002: S.A.Jones <cretin@gentoo.org> :
   
   Added configuration stuff to ebuild and extra files usermin-init and setup.sh.

@@ -1,20 +1,19 @@
 # Copyright 2002, Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-0.970.ebuild,v 1.4 2002/12/09 04:17:36 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-0.970.ebuild,v 1.5 2002/12/15 01:04:26 seemant Exp $
 
 IUSE="ssl"
 
 DESCRIPTION="Usermin, a web-based user administration interface"
-
 SRC_URI="http://twtelecom.dl.sourceforge.net/sourceforge/webadmin/${P}.tar.gz"
-
 HOMEPAGE="http://www.webmin.com/index6.html"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 sparc  alpha ppc"
+KEYWORDS="x86 sparc alpha ppc"
 
 DEPEND="sys-devel/perl
+	sys-apps/lsof
 	ssl? ( dev-perl/Net-SSLeay )
 	dev-perl/Authen-PAM"
 
@@ -30,6 +29,10 @@ src_install() {
 	newexe ${FILESDIR}/patch/usermin-init usermin-init
 	dosym /usr/libexec/usermin /etc/usermin
 	dosym /usr/libexec/usermin/usermin-init /usr/sbin/usermin
+
+	insinto /etc/pam.d
+	newins ${FILESDIR}/${PN}.pam ${PN}
+	
 }
 
 pkg_postinst() {
