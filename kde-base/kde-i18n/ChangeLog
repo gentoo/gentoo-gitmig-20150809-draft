@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.48 2004/12/28 19:18:08 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.49 2004/12/28 20:35:16 caleb Exp $
+
+  28 Dec 2004; Caleb Tennis <caleb@gentoo.org> kde-i18n-3.3.2.ebuild:
+  x86 stable
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> kde-i18n-3.3.2.ebuild:
   Stable on amd64.
