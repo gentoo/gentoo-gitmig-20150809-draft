@@ -1,3 +1,13 @@
-03 Jul 2002; Christoph Lameter. <christoph@gentoo.org> livecd-0.5.1.ebuild:
+# ChangeLog for apps/livecd
+# Copyright 2002 TelmetryBox Corporation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/livecd/ChangeLog,v 1.2 2002/07/31 16:57:12 christoph Exp $
 
-  Add ebuild 
+*livecd-0.5.1 (29 July 2002)
+
+  30 July 2002; Christoph Lameter <christoph@gentoo.org> livecd-0.5.1.ebuild
+
+  Create livecd-ebuild and initial submit to tree
+ 
+  31 July 2002; Christoph Lameter <christoph@gentoo.org> livecd-0.5.1.ebuild
+
+  Adapt things to gentoo standards.
