@@ -1,6 +1,16 @@
-MD5 5648d8111d14f500b2d8363b2b0168b1 spawn-fcgi-1.1.0.ebuild 965
-MD5 25a91f045d24e2d984c68dfc925c62c4 ChangeLog 787
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6d82a1ffe315995efb079641bee0618e ChangeLog 952
 MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
-MD5 8223b103a8f66ecdd0f287c6538c7c9a files/spawn-fcgi-1.1.0.conf 1086
-MD5 e6cd43c3510de885db92846dca1ed2bd files/spawn-fcgi-1.1.0.initd 1243
+MD5 5648d8111d14f500b2d8363b2b0168b1 spawn-fcgi-1.1.0.ebuild 965
 MD5 177bc4801d074bf86a89089bf4447fc0 files/digest-spawn-fcgi-1.1.0 67
+MD5 297d2df57766c1f90de329d23f81e03e files/spawn-fcgi-1.1.0.conf 1080
+MD5 b771211dd5ddda119c692db878b9b7cc files/spawn-fcgi-1.1.0.initd 1237
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBWMHwI1lqEGTUzyQRAgEXAKChs4IbPmCgfGrFdSXba+H7Mf8AZACfTPk3
+hBgHa5U31k3aNFjAZZQxo/s=
+=FXNy
+-----END PGP SIGNATURE-----
