@@ -1,0 +1,11 @@
+--- liblockfile-1.03/maillock.h.in.orig	2003-07-28 20:15:46.000000000 +0200
++++ liblockfile-1.03/maillock.h.in	2003-07-28 20:16:02.000000000 +0200
+@@ -21,7 +21,7 @@
+ @PATHMAILDIR@
+ #endif
+ 
+-#define MAILDIR		_PATH_MAILDIR ## "/"
++#define MAILDIR		_PATH_MAILDIR"/"
+ 
+ /*
+  *	Prototypes.
