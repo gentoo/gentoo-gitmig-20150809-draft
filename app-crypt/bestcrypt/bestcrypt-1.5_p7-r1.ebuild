@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.5_p7-r1.ebuild,v 1.2 2004/10/31 16:23:58 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.5_p7-r1.ebuild,v 1.3 2005/01/01 12:25:49 eradicator Exp $
 
 inherit flag-o-matic eutils check-kernel
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/quintuple-agent-1.0.3.ebuild,v 1.9 2004/10/05 11:46:56 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/quintuple-agent-1.0.3.ebuild,v 1.10 2005/01/01 12:38:00 eradicator Exp $
 
 DESCRIPTION="Quintuple Agent stores your (GnuPG) secrets in a secure manner."
 HOMEPAGE="http://www.vibe.at/tools/q-agent"

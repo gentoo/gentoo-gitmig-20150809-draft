@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/bcwipe
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.10 2005/01/01 04:06:53 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.11 2005/01/01 12:25:07 eradicator Exp $
 
   31 Dec 2004; Jason Wever <weeve@gentoo.org> bcwipe-1.5_p2.ebuild:
   Added ~sparc keyword.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/cryptplug-0.3.16-r1.ebuild,v 1.10 2004/11/16 21:20:14 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/cryptplug-0.3.16-r1.ebuild,v 1.11 2005/01/01 12:28:16 eradicator Exp $
 
 inherit eutils
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/pgpdump
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.7 2004/12/26 00:41:54 matsuu Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.8 2005/01/01 12:36:43 eradicator Exp $
 
 *pgpdump-0.24 (26 Dec 2004)
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/ccrypt
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.3 2004/12/21 16:18:46 ndimiduk Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.4 2005/01/01 12:26:45 eradicator Exp $
 
   21 Dec 2004; Nick Dimiduk <ndimiduk@gentoo.org> ccrypt-1.7.ebuild:
   added ~ppc-macos keyword as per bug #71007

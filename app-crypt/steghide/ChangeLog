@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/steghide
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/ChangeLog,v 1.5 2004/07/30 17:54:55 chainsaw Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/ChangeLog,v 1.6 2005/01/01 12:39:36 eradicator Exp $
 
   30 Jul 2004; Tony Vroon <chainsaw@gentoo.org>
   +files/fix-libtool-invocation.patch, steghide-0.5.1.ebuild:

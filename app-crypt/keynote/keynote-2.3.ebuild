@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/keynote-2.3.ebuild,v 1.6 2004/06/27 21:32:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/keynote-2.3.ebuild,v 1.7 2005/01/01 12:32:49 eradicator Exp $
 
 DESCRIPTION="The KeyNote Trust-Management System"
 HOMEPAGE="http://www1.cs.columbia.edu/~angelos/keynote.html"

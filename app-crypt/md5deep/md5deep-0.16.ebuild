@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/md5deep-0.16.ebuild,v 1.7 2004/10/05 11:46:56 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/md5deep-0.16.ebuild,v 1.8 2005/01/01 12:34:08 eradicator Exp $
 
 DESCRIPTION="Expanded md5sum program that has recursive and comparison options"
 HOMEPAGE="http://md5deep.sourceforge.net"

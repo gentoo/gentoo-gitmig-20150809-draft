@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_ssh/pam_ssh-1.91.ebuild,v 1.3 2004/06/24 21:36:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_ssh/pam_ssh-1.91.ebuild,v 1.4 2005/01/01 12:36:28 eradicator Exp $
 
 DESCRIPTION="Uses ssh-agent to provide single sign-on"
 HOMEPAGE="http://pam-ssh.sourceforge.net/"
