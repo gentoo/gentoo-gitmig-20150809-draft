@@ -1,6 +1,8 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.1 2002/02/01 21:53:28 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.2 2002/02/17 01:38:10 azarah Exp $
+
+*intltool-0.15 (17 Feb 2002)
 
 *intltool-0.14 (1 Feb 2002)
 
