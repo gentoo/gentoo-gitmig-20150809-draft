@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.83 2003/08/16 03:18:58 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.84 2003/09/02 03:16:27 lostlogic Exp $
+
+*postfix-2.0.14 (01 Sep 2003)
+
+  01 Sep 2003; Brandon Low <lostlogic@gentoo.org> postfix-2.0.14.ebuild:
+  Bump
 
   15 Aug 2003; Nick Hadaway <raker@gentoo.org>  
   files/2.0.0/master.cf.diff, files/postfix-2.0.13-r1.ebuild:
