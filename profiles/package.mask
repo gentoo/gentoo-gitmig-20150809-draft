@@ -21,6 +21,14 @@
 ##   End example
 ##
 
+# <genone@gentoo.org> (30 Nov 2003)
+# unmaintained package
+app-portage/kemerge
+
+# <genone@gentoo.org> (30 Nov 2003)
+# Service is down, current versions won't work with the new service
+<=app-portage/gentoo-stats-0.4
+
 # <robbat2@gentoo.org> (30 Nov 2003)
 # Need external testing
 =net-mail/qmail-1.03-r14
