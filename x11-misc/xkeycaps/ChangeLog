@@ -1,10 +1,13 @@
 # ChangeLog for x11-misc/xkeycaps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/ChangeLog,v 1.4 2003/02/12 09:33:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/ChangeLog,v 1.5 2003/02/15 08:16:40 gerk Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *xkeycaps-2.46 (1 Feb 2002)
+
+  15 Feb 2003; Mark Guertin <gerk@gentoo.org> xkeycaps-2.46.ebuild :
+  set ppc in keywords
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
