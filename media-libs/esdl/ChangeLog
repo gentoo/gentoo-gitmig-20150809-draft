@@ -1,12 +1,17 @@
 # ChangeLog for media-libs/esdl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/ChangeLog,v 1.4 2003/06/18 19:46:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/ChangeLog,v 1.5 2003/06/19 18:42:28 vapier Exp $
+
+*esdl-0.93.0526 (19 Jun 2003)
+
+  19 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + CFLAG fix + opengl fix.
+
+*esdl-0.93.0314 (10 May 2003)
 
   17 Jun 2003; George Shapovalov <george@gentoo.org> esdl-0.93.0314.ebuild :
   nvidia headers fix (#22933).
  
-*esdl-0.93.0314 (10 May 2003)
-
   10 May 2003; George Shapovalov <george@gentoo.org> esdl-0.93.0314.ebuild, files/{esdl-0.93.0314.patch.bz2,digest-esdl-0.93.0314} :
   update and fix to build sdl library correctly (see also #20663)
   Thanks to Jeremy Huddleston <jeremyhu@cory.eecs.berkeley.edu> for the patch
