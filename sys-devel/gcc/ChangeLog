@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.96 2003/05/16 04:44:56 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.97 2003/05/16 06:01:38 frogger Exp $
+
+  16 May 2003; Matthew Rickard <frogger@gentoo.org> gcc-3.2.2-r3.ebuild:
+  - Updated ProPolice to Protector-3.2.2-7, fixing the PPC bug and
+      parallel make bug - again we no longer need to apply these
+      separately.
+    - Converted to the new patch implementation as used in the 
+      gcc-3.2.3-r1 ebuild making for easier patch management.  Thanks
+      to Martin Schlemmer <azarah@gentoo.org> for this cleanup.
 
   16 May 2003; Matthew Rickard <frogger@gentoo.org> gcc-3.2.3-r1.ebuild:
   Updated ProPolice to Protector-3.2.2-7. This revision includes the PPC bug fix
