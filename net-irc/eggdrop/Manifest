@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3dd3492660b1a1395891d71acdc24de9 eggdrop-1.6.17.ebuild 2183
-MD5 6d21e3e58c7b29848c6be56b71b3d105 ChangeLog 6321
+MD5 62f31d8a6a61e414ccdf004363b59563 eggdrop-1.6.17.ebuild 2188
+MD5 1e53626aa34666422c13562a2e456358 eggdrop-1.6.17-r2.ebuild 2274
+MD5 8e963d6365ff1d9b2dfde7e89ecf0abb ChangeLog 6726
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 6b1308dc13633239bd7c16c54b497795 eggdrop-1.6.17-r1.ebuild 2270
-MD5 5b8b9111c2d45de7c0794fac9c830820 files/digest-eggdrop-1.6.17-r1 145
+MD5 553b1bc88e6b98c27766e4e361c41490 files/digest-eggdrop-1.6.17-r2 145
 MD5 6b09026c13cde0090d7b943e6a4e1535 files/digest-eggdrop-1.6.17 145
-MD5 a0c1fc8d184c3a0214e009cf56fc86b1 files/eggdrop-installer 2264
+MD5 d1c7b90b504d49b5f9f19cab742f227c files/eggdrop-installer 2268
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCUDIKI1lqEGTUzyQRAtH/AKC82Qtg4M1M0NBHEyZYxzRxA67yygCdGZch
-nnJKDOuRtbG8yADOd58E9Qw=
-=AIZX
+iD8DBQFCUFkYI1lqEGTUzyQRAoZNAJ9fNOxTpDP3uNgDw3ZYMmtJoMUKzACbBkf8
+GKf+00WfJJqoheaef8rLArg=
+=J0xv
 -----END PGP SIGNATURE-----

@@ -1,6 +1,15 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.38 2005/04/03 18:12:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.39 2005/04/03 20:58:39 swegener Exp $
+
+*eggdrop-1.6.17-r2 (03 Apr 2005)
+
+  03 Apr 2005; Sven Wegener <swegener@gentoo.org> files/eggdrop-installer,
+  eggdrop-1.6.17.ebuild, -eggdrop-1.6.17-r1.ebuild,
+  +eggdrop-1.6.17-r2.ebuild:
+  Revision bump for an updated patchset. Only change is the removal of the
+  longer handles patch, because it breaks linking with other bots that are not
+  patched, bug 86579. Rewrote the eggdrop-installer script.
 
   03 Apr 2005; Sven Wegener <swegener@gentoo.org>
   -files/eggdrop-1.6.15-botchk.patch, -files/eggdrop-1.6.15-config.patch,

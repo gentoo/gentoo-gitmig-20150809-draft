@@ -1,7 +1,7 @@
 #!/bin/bash
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/files/eggdrop-installer,v 1.8 2004/09/12 15:31:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/files/eggdrop-installer,v 1.9 2005/04/03 20:58:39 swegener Exp $
 
 source /etc/init.d/functions.sh || {
 	echo "${0}: Could not source /etc/init.d/functions.sh!"
@@ -10,19 +10,14 @@ source /etc/init.d/functions.sh || {
 
 # Checks to see if user is trying to install eggdrop as root.
 root_check() {
-	einfo "Installing Eggdrop"
-	einfo
-
-	if [ "${HOME}" = "/root" ] || [ "$(whoami)" == "root" ]
+	if [ "${HOME}" = "/root" ] || [ "$(whoami)" = "root" ]
 	then
-		einfo "You should not be installing eggdrop as root."
-		einfo
-		einfo "Installing eggdrop as root leaves your computer vulnerable"
-		einfo "to attack from other irc clients. Please use the eggdrop-installer"
-		einfo "script as the user who you wish to run eggdrop with"
+		ewarn "You should not be installing eggdrop as root."
+		ewarn
+		ewarn "Installing eggdrop as root leaves your computer vulnerable"
+		ewarn "to attack from other irc clients. Please use the eggdrop-installer"
+		ewarn "script as the user who you wish to run eggdrop with"
 		exit 1
-	else
-		install_eggdrop
 	fi
 }
 
@@ -36,8 +31,12 @@ USAGE_END
 	exit 1
 }
 
+# Install eggdrop
 install_eggdrop() {
-	bot_dir="${HOME}/.eggdrop/${bot_name}"
+	einfo "Installing Eggdrop"
+	einfo
+
+	root_check
 
 	if [ -d "${bot_dir}" ]
 	then
@@ -45,7 +44,7 @@ install_eggdrop() {
 		exit 1
 	fi
 
-	einfo "Creating directories for your ${bot_name}..."
+	einfo "Creating directories for your eggdrop..."
 	for dir in logs filesys/incoming text tmp scripts var
 	do
 		mkdir -p "${bot_dir}/${dir}"
@@ -75,10 +74,11 @@ install_eggdrop() {
 	einfo "eggdrop website at http://www.egghelper.org/"
 }
 
-if [ ! -n "${1}" ]
+if [ -z "${1}" ]
 then
 	usage
 else
 	bot_name="${1}"
-	root_check
+	bot_dir="${HOME}/.eggdrop/${bot_name}"
+	install_eggdrop
 fi
