@@ -1,18 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/redhat-sources-2.4.18.0.13.ebuild,v 1.5 2002/05/08 05:59:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/redhat-sources-2.4.18-r4.ebuild,v 1.1 2002/05/21 07:07:34 blocke Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
 OKV=2.4.18
-KV=2.4.19-0.13-redhat
+KV=2.4.19-redhat-r4
 S=${WORKDIR}/linux-${KV}
 ETYPE="sources"
 
 # INCLUDED:
-# Redhat Skipjack Beta 2 Kernel
+# Redhat 7.3 Kernel Sources (Update Version)
 
 DESCRIPTION="Full sources for the Redhat Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2  http://www.ibiblio.org/gentoo/distfiles/linux-${KV}.patch.bz2"
