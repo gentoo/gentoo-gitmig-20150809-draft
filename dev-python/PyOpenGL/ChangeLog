@@ -1,9 +1,10 @@
 # ChangeLog for dev-python/PyOpenGL
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/ChangeLog,v 1.8 2003/05/16 19:31:36 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/ChangeLog,v 1.9 2003/05/18 09:53:06 utx Exp $
 
   16 May 2003; Stanislav Brabec <utx@gentoo.org> files/config.diff:
-  Patch updated to build with tk-8.4.
+  Patch updated to build with tk-8.4 (from Chad Netzer
+  <chad.netzer@stanfordalumni.org>, bugs #20248).
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
