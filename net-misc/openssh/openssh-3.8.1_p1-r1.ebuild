@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1-r1.ebuild,v 1.2 2004/06/01 23:39:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8.1_p1-r1.ebuild,v 1.3 2004/06/15 06:50:04 solar Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://openssh/${PARCH}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm hppa ~amd64 ~ia64 ~ppc64 s390"
-IUSE="ipv6 static pam tcpd kerberos skey selinux chroot X509 ldap smartcard"
+IUSE="ipv6 static pam tcpd kerberos skey selinux chroot X509 ldap smartcard uclibc"
 
 # openssh recognizes when openssl has been slightly upgraded and refuses to run.
 # This new rev will use the new openssl.
@@ -37,7 +37,7 @@ RDEPEND="virtual/glibc
 DEPEND="${RDEPEND}
 	virtual/os-headers
 	dev-lang/perl
-	sys-apps/groff
+	!uclibc? ( sys-apps/groff )
 	>=sys-apps/sed-4
 	sys-devel/autoconf"
 PROVIDE="virtual/ssh"
@@ -56,6 +56,7 @@ src_unpack() {
 }
 
 src_compile() {
+	addwrite /dev/ptmx
 	gnuconfig_update
 
 	# make sure .sbss is large enough
@@ -103,7 +104,7 @@ src_install() {
 	make install-files DESTDIR=${D} || die
 	chmod 600 ${D}/etc/ssh/sshd_config
 	dodoc ChangeLog CREDITS OVERVIEW README* TODO sshd_config
-	insinto /etc/pam.d  ; newins ${FILESDIR}/sshd.pam sshd
+	use pam && ( insinto /etc/pam.d  ; newins ${FILESDIR}/sshd.pam sshd )
 	exeinto /etc/init.d ; newexe ${FILESDIR}/sshd.rc6 sshd
 	keepdir /var/empty
 	dosed "/^#Protocol /s:.*:Protocol 2:" /etc/ssh/sshd_config
