@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.2.ebuild,v 1.1 2004/09/10 19:45:18 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.2.ebuild,v 1.2 2004/09/10 23:20:56 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -24,24 +24,6 @@ RDEPEND=">=virtual/jdk-1.4
 
 S="${WORKDIR}/apache-ant-${PV}"
 
-pkg_setup() {
-	if [ -n "$JAVA_HOME" ] ; then
-		export CLASSPATH=".:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/jre/lib/rt.jar:."
-	else
-		einfo "Warning: JAVA_HOME environment variable is not set (or not exported)."
-		einfo "  If build fails because sun.* classes could not be found"
-		einfo "  you will need to set the JAVA_HOME environment variable"
-		einfo "  to the installation directory of java."
-		einfo "  Try using java-config script"
-		die
-	fi
-
-	if [ `arch` == "ppc" ] ; then
-		# We're compiling _ON_ PPC
-		export THREADS_FLAG="green"
-	fi
-}
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -53,13 +35,17 @@ src_unpack() {
 
 src_compile() {
 	addwrite "/proc/self/maps"
+	if [ `arch` == "ppc" ] ; then
+		# We're compiling _ON_ PPC
+		export THREADS_FLAG="green"
+	fi
+
 
 	local myc
 	myc="${myc} -Ddist.dir=${D}/usr/share/${PN}"
 	myc="${myc} -Djavac.target=1.4"
-
 	echo $CLASSPATH
-	./build.sh -Ddist.dir=${D}/usr/share/${PN} || die
+	CLASSPATH="." ./build.sh -Ddist.dir=${D}/usr/share/${PN} || die
 }
 
 src_install() {

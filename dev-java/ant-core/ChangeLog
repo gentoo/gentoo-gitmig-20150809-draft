@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.1 2004/09/10 19:45:18 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.2 2004/09/10 23:20:56 axxo Exp $
+
+  11 Sep 2004; Thomas Matthijs <axxo@gentoo.org> ant-core-1.6.2.ebuild:
+  removed pkg_setup, not used anyway, moved the ppc threads_flags to
+  src_compile. Don't use global classpath when compiling
 
 *ant-core-1.6.2 (10 Sep 2004)
 
