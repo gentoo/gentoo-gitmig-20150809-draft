@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/qmail-ldap-1.03-r1.ebuild,v 1.2 2003/09/05 02:33:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/qmail-ldap-1.03-r1.ebuild,v 1.3 2003/12/14 23:11:37 spider Exp $
 
 IUSE="ssl"
 
@@ -284,16 +284,16 @@ pkg_postinst() {
 
 	dd if=/dev/zero of=${ROOT}/var/qmail/queue/lock/tcpto bs=1024 count=1
 	chmod 644 ${ROOT}/var/qmail/queue/lock/tcpto
-	chown qmailr.qmail ${ROOT}/var/qmail/queue/lock/tcpto
+	chown qmailr:qmail ${ROOT}/var/qmail/queue/lock/tcpto
 
 	touch ${ROOT}/var/qmail/queue/lock/sendmutex
 	chmod 600 ${ROOT}/var/qmail/queue/lock/sendmutex
-	chown qmails.qmail ${ROOT}/var/qmail/queue/lock/sendmutex
+	chown qmails:qmail ${ROOT}/var/qmail/queue/lock/sendmutex
 
 	if [ ! -p ${ROOT}/var/qmail/queue/lock/trigger ] ; then
 	mkfifo ${ROOT}/var/qmail/queue/lock/trigger
 	chmod 622 ${ROOT}/var/qmail/queue/lock/trigger
-	chown qmails.qmail ${ROOT}/var/qmail/queue/lock/trigger
+	chown qmails:qmail ${ROOT}/var/qmail/queue/lock/trigger
 	fi
 
 	if [ `getent passwd ldapauth | cut -d: -f1` != ldapauth ]; then
@@ -322,14 +322,14 @@ pkg_postinst() {
 		echo "Creating a self-signed ssl-cert:"
 		/usr/bin/openssl req -new -x509 -nodes -out /var/qmail/control/servercert.pem -days 366 -keyout /var/qmail/control/servercert.pem
 		chmod 640 /var/qmail/control/servercert.pem
-		chown qmaild.qmail /var/qmail/control/servercert.pem
+		chown qmaild:qmail /var/qmail/control/servercert.pem
 		ln -s /var/qmail/control/servercert.pem /var/qmail/control/clientcert.pem
 
 		echo -e "\e[32;01m If You want to have a signed cert, do the following: \033[0m"
 		echo -e "\e[32;01m openssl req -new -nodes -out req.pem \ \033[0m"
 		echo -e "\e[32;01m -keyout /var/qmail/control/servercert.pem \033[0m"
 		echo -e "\e[32;01m chmod 640 /var/qmail/control/servercert.pem \033[0m"
-		echo -e "\e[32;01m chown qmaild.qmail /var/qmail/control/servercert.pem \033[0m"
+		echo -e "\e[32;01m chown qmaild:qmail /var/qmail/control/servercert.pem \033[0m"
 		echo -e "\e[32;01m ln -s /var/qmail/control/servercert.pem /var/qmail/control/clientcert.pem \033[0m"
 		echo -e "\e[32;01m Send req.pem to your CA to obtain signed_req.pem, and do: \033[0m"
 		echo -e "\e[32;01m cat signed_req.pem >> /var/qmail/control/servercert.pem \033[0m"

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/xmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/ChangeLog,v 1.9 2003/10/18 04:48:20 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/ChangeLog,v 1.10 2003/12/14 23:09:41 spider Exp $
+
+  15 Dec 2003; <spider@gentoo.org> files/xmail.initd:
+  QA: fixing chown user.group to user:group, bug #35127
 
   17 Oct 2003; Nick Hadaway <raker@gentoo.org> xmail-1.16.ebuild:
   Marked stable for x86.
