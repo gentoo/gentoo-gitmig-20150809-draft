@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.5 2004/04/18 08:13:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.6 2004/04/27 14:50:25 pvdabeel Exp $
 
   18 Apr 2004; Guy Martin <gmsoft@gentoo.org> livecd-tools-1.0.1.ebuild:
   Marked stable on hppa.
@@ -11,6 +11,9 @@
 
 *livecd-tools-1.0.1 (21 Mar 2004)
 
+  27 Mar 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> livecd-tools-1.0.1:
+  mark as stable on ppc and ppc64
+
   21 Mar 2004; John Davis <zhen@gentoo.org> livecd-tools-1.0.0_beta1.ebuild,
   livecd-tools-1.0.0_beta2.ebuild, livecd-tools-1.0.1.ebuild, metadata.xml:
   fix for bug #43647, #39893
@@ -20,6 +23,9 @@
   cleaned up syntax and point SRC_URI to gentoo mirrors
 
 *livecd-tools-1.0.0_beta2 (25 Jan 2004)
+
+  27 Mar 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> livecd-tools-1.0.0_beta2.ebuild:
+  mark as incompatible with ppc and ppc64
 
   25 Jan 2004; Brad House <brad_mssw@gentoo.org>
   livecd-tools-1.0.0_beta2.ebuild:
