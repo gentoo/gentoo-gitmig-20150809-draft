@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-urbanterror/quake3-urbanterror-3.6.ebuild,v 1.1 2004/06/05 21:30:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-urbanterror/quake3-urbanterror-3.6.ebuild,v 1.2 2004/06/24 22:46:01 agriffis Exp $
 
 MOD_DESC="total transformation realism based MOD"
 MOD_NAME=q3ut3

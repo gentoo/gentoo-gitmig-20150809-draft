@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/blackshades-cvs-20031110.ebuild,v 1.5 2004/06/13 20:39:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/blackshades-cvs-20031110.ebuild,v 1.6 2004/06/24 22:41:01 agriffis Exp $
 
 #ECVS_PASS="anonymous"
 #ECVS_SERVER="icculus.org:/cvs/cvsroot"

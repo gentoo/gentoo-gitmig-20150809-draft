@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r2.ebuild,v 1.3 2004/06/03 11:35:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r2.ebuild,v 1.4 2004/06/24 22:48:53 agriffis Exp $
 
 inherit games
 

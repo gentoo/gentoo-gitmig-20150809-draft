@@ -1,6 +1,6 @@
 # ChangeLog for games-fps/wmquake
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/wmquake/ChangeLog,v 1.3 2004/06/15 10:15:08 mr_bones_ Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/wmquake/ChangeLog,v 1.4 2004/06/24 22:50:27 agriffis Exp $
 
   15 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> wmquake-1.1.ebuild:
   stablize; use generic src_compile; error check

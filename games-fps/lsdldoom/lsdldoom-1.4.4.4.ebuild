@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/lsdldoom-1.4.4.4.ebuild,v 1.8 2004/06/03 22:55:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/lsdldoom-1.4.4.4.ebuild,v 1.9 2004/06/24 22:42:28 agriffis Exp $
 
 DESCRIPTION="Port of ID's doom to SDL"
 HOMEPAGE="http://firehead.org/~jessh/lsdldoom/"

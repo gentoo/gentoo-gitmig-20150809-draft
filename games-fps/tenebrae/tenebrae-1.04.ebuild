@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.4 2004/06/03 19:59:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.5 2004/06/24 22:47:07 agriffis Exp $
 
 #ECVS_SERVER="cvs.tenebrae.sourceforge.net:/cvsroot/tenebrae"
 #ECVS_MODULE="tenebrae_0"
