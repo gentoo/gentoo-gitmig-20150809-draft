@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3671 2005/02/27 20:40:14 pauldv Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3672 2005/03/01 01:34:32 carpaski Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -158,10 +158,6 @@ dev-lisp/cl-albert
 # Aron Griffis <agriffis@gentoo.org> (07 Feb 2005)
 # Mask offlineimap testing versions
 =net-irc/ctrlproxy-2.7*
-
-# Nicholas Jones <carpaski@gentoo.org> (06 Feb 2005)
-# Making for a brief testing and normalizing period.
->=sys-apps/portage-2.0.51.16
 
 # <trapni@gentoo.org> (4 Feb 2005)
 # Apache herd package refresh
