@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-skk/iiimf-skk-0.1.22.95.ebuild,v 1.2 2004/09/14 08:27:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-skk/iiimf-skk-0.1.22.95.ebuild,v 1.3 2004/11/10 10:35:27 usata Exp $
 
 inherit eutils
 
@@ -31,14 +31,17 @@ src_unpack() {
 
 src_compile() {
 
+	local myconf
+	# configure script is broken wrt --disable-*
+	use nls && myconf="${myconf} --enable-nls"
+	use gtk2 && myconf="${myconf} --enable-gtk2"
+	use debug && myconf="${myconf} --enable-debug"
+	use canna && myconf="${myconf} --enable-canna"
+
 	econf \
-		`use_enable nls` \
-		`use_enable gtk2` \
-		`use_enable debug` \
-		`use_enable canna` \
 		--with-skkserv-host="localhost" \
 		--with-skkserv-port=1178 \
-		|| die "econf failed"
+		${myconf} || die "econf failed"
 	emake -j1 || die
 }
 
