@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.2-r1.ebuild,v 1.12 2004/10/23 06:25:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.2-r1.ebuild,v 1.13 2005/04/01 04:00:15 agriffis Exp $
 
 S=${WORKDIR}/gc${PV/_/}
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.130 2005/03/26 20:05:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.131 2005/04/01 04:07:45 agriffis Exp $
+
+  31 Mar 2005; Aron Griffis <agriffis@gentoo.org> glib-2.6.3.ebuild:
+  stable on ia64
 
   26 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> glib-2.6.2-r1.ebuild:
   Stable on alpha.

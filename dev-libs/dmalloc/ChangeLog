@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dmalloc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.20 2005/02/06 02:11:30 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.21 2005/04/01 04:01:42 agriffis Exp $
+
+  31 Mar 2005; Aron Griffis <agriffis@gentoo.org> dmalloc-5.4.2.ebuild:
+  stable on ia64
 
   05 Feb 2005; Aaron Walker <ka0ttic@gentoo.org>
   +files/dmalloc-5.4.2-sandbox.patch, dmalloc-5.4.2.ebuild:
