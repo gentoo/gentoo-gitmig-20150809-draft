@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/cpio-2.5.ebuild,v 1.16 2003/09/18 00:00:00 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/cpio-2.5.ebuild,v 1.17 2003/10/19 09:23:53 mholzer Exp $
 
 DESCRIPTION="A file archival tool which can also read and write tar files"
 SRC_URI="mirror://gnu/cpio/${P}.tar.gz"
@@ -10,15 +10,16 @@ KEYWORDS="x86 amd64 ppc sparc alpha hppa arm mips ia64"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 
+DEPEND="virtual/glibc"
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	mv rmt.c rmt.c.orig
-	sed -e "78d" rmt.c.orig > rmt.c
+	sed -i "78d" rmt.c
 }
 
 src_compile() {
-	econf
+	econf || die
 	emake || die
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/cpio
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/ChangeLog,v 1.17 2003/06/23 22:28:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/ChangeLog,v 1.18 2003/10/19 09:23:53 mholzer Exp $
+
+  19 Oct 2003; Martin Holzer <mholzer@gentoo.org> cpio-2.4.2-r4.ebuild,
+  cpio-2.5.ebuild:
+  adding DEPEND="virtual/glibc" Closes #31474.
 
   23 Jun 2003; Aron Griffis <agriffis@gentoo.org> cpio-2.5.ebuild:
   Mark stable on alpha

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/cpio-2.4.2-r4.ebuild,v 1.18 2003/09/18 00:00:00 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpio/cpio-2.4.2-r4.ebuild,v 1.19 2003/10/19 09:23:53 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A file archival tool which can also read and write tar files"
@@ -11,15 +11,12 @@ SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 
 DEPEND="virtual/glibc"
-RDEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	mv rmt.c rmt.c.orig
-	sed -e "78d" rmt.c.orig > rmt.c
-	mv userspec.c userspec.c.orig
-	sed -e "85d" userspec.c.orig > userspec.c
+	sed -i "78d" rmt.c
+	sed -i "85d" userspec.c
 }
 
 src_compile() {
