@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.18 2004/04/05 20:26:27 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.19 2004/04/08 16:27:21 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -412,8 +412,8 @@ src_unpack() {
 	fi
 
 	echo "#define CcCmd ${CC}" >> config/cf/host.def
-	echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
-	echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS}" >> config/cf/host.def
+	echo "#define OptimizedCDebugFlags ${CFLAGS} GccAliasingArgs" >> config/cf/host.def
+	echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS} GccAliasingArgs" >> config/cf/host.def
 
 	if use static
 	then

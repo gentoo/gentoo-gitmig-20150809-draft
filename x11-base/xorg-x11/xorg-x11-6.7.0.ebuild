@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.11 2004/04/08 05:41:05 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.12 2004/04/08 16:25:40 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -449,8 +449,8 @@ fi
 		fi
 
 		echo "#define CcCmd ${CC}" >> config/cf/host.def
-		echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
-		echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS}" >> config/cf/host.def
+		echo "#define OptimizedCDebugFlags ${CFLAGS} GccAliasingArgs" >> config/cf/host.def
+		echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS}" GccAliasingArgs" >> config/cf/host.def
 
 		if use static
 		then
