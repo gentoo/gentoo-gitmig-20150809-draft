@@ -1,15 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 095b7d5bc03bfe34b64dbcbe4368f0dd ChangeLog 1754
-MD5 c132a750577527d57e9e3ce8747b212c metadata.xml 212
 MD5 144de4bbceec78fa613208feee423e12 ns-2.27-r1.ebuild 2527
-MD5 cbd46edc227114c8538b564b0bdf1ae6 files/digest-ns-2.27-r1 65
+MD5 28b5af55cc2d7a1f31b37b8798b187f0 ChangeLog 1844
+MD5 289416ac6a7266e340817717927762a8 metadata.xml 279
 MD5 f7b94c91182a6e9cf19719c8abd4dfda files/ns-2.27-gentoo.diff 11242
+MD5 cbd46edc227114c8538b564b0bdf1ae6 files/digest-ns-2.27-r1 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
 
-iD8DBQFB+xtcmdTrptrqvGERAmZXAKCKyPCRa60z2hQoAmtiti4P0J45EwCfXErz
-xaCbTAyBIr7Zbqyfebf4LDo=
-=jriu
+iD8DBQFCD9P6PpIsIjIzwiwRAoz9AJ9dYBmDd142f5K+oSYDIZXsVg4t5QCgujBM
+80TQYOYI2sVosOOfVwK5JdM=
+=BzHb
 -----END PGP SIGNATURE-----
