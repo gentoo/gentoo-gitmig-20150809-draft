@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.18-r4.ebuild,v 1.5 2003/04/07 11:58:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.18-r4.ebuild,v 1.6 2003/07/16 14:31:38 pvdabeel Exp $
 
 IUSE="ssl slp pam"
 
@@ -23,7 +23,7 @@ RDEPEND="${DEPEND} !virtual/lpr"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha hppa"
+KEYWORDS="x86 ppc ~sparc alpha hppa"
 
 inherit flag-o-matic
 filter-flags -fomit-frame-pointer

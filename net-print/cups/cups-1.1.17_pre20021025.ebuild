@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.17_pre20021025.ebuild,v 1.7 2003/02/13 15:23:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.17_pre20021025.ebuild,v 1.8 2003/07/16 14:31:38 pvdabeel Exp $
 
 IUSE="ssl slp pam"
 
@@ -25,7 +25,7 @@ DEPEND="virtual/glibc
 RDEPEND="${DEPEND} !virtual/lpr"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc ~sparc ~alpha"
 
 src_unpack() {
 	unpack ${PORIG}-source.tar.bz2 || die
