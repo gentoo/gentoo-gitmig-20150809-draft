@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kjsembed
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.8 2005/03/06 02:10:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.9 2005/03/06 11:07:05 motaboy Exp $
+
+*kjsembed-3.4.0_rc1 (06 Mar 2005)
+
+  06 Mar 2005; Simone Gotti <motaboy@gentoo.org>
+  kjsembed-3.4.0_beta2.ebuild, kjsembed-3.4.0_rc1.ebuild:
+  Change deprange to deprange-dual for kwin as it's provided by an external
+  module (kdebase). Fixes bug #84218.
 
   06 Mar 2005; Joseph Jezak <josejx@gentoo.org> kjsembed-3.3.1.ebuild:
   Marked ~ppc for bug #84197.
