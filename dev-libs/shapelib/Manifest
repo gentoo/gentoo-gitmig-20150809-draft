@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8aba00259562165122cee504a1e0510f ChangeLog 441
+MD5 d02cd0cd61362755acbe7849becba085 ChangeLog 525
 MD5 8cfef0e9a4540e9d7cc628e70e95c49a metadata.xml 429
-MD5 8a716e8781ce7ee7c8683795ca26d134 shapelib-1.2.10.ebuild 695
+MD5 cd0d76c83107a02718e52244f8e476b7 shapelib-1.2.10.ebuild 699
 MD5 8e119a24844842e421d7b400ff138974 files/digest-shapelib-1.2.10 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4iE+HTu7gpaalycRAtXoAKCS40dmml5yfFUr/eFhI5pdSV05MQCeP4zn
-qif2LUA7o7NP6AueHMfs8LY=
-=+FzH
------END PGP SIGNATURE-----
