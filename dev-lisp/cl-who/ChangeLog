@@ -1,6 +1,17 @@
 # ChangeLog for dev-lisp/cl-who
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-who/ChangeLog,v 1.5 2004/06/24 23:56:46 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-who/ChangeLog,v 1.6 2005/02/03 09:20:58 mkennedy Exp $
+
+*cl-who-0.4.4 (03 Feb 2005)
+
+  03 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> -cl-who-0.3.0.ebuild,
+  -cl-who-0.4.0.ebuild, +cl-who-0.4.4.ebuild:
+  New upstream version; Removed old ebuilds.
+
+*cl-who-0.4.4 (03 Feb 2005)
+
+  03 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> +cl-who-0.4.4.ebuild:
+  New upstream version.
 
 *cl-who-0.4.0-r1 (12 Feb 2004)
 
