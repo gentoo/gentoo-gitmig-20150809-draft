@@ -402,11 +402,6 @@ app-misc/ldapbrowser
 # Moz 1.1beta (don't kill me Azarah for putting this here!)
 =net-www/mozilla-1.1_beta
 
-# <jayskwak@gentoo.org> (25 Jul 2002)
-# masked for korean input testing
-# <agenkin@gentoo.org> (15 Aug 2002)
-=x11-libs/qt-3.0.5-r1
-
 # <azarah@gentoo.org> (25 Jul 2002)
 # gawk is very flexible and can be used instead
 # of cut, etc that is not in /bin, and also much
