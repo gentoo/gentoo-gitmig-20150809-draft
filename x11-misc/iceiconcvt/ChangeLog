@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/iceiconcvt
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/iceiconcvt/ChangeLog,v 1.5 2003/06/23 13:34:10 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/iceiconcvt/ChangeLog,v 1.6 2003/07/01 12:00:13 phosphan Exp $
+
+*iceiconcvt-1.0 (01 Jul 2003)
+
+  01 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> iceiconcvt-1.0.ebuild:
+  Version bump
 
   23 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> iceiconcvt-0.9.ebuild:
   Dependency was missing category
