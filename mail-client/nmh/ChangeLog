@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/nmh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.6 2004/07/27 15:11:00 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.7 2004/07/27 17:47:09 langthang Exp $
+
+  27 Jul 2004; Tuan Van <langthang@gentoo.org>
+  +files/nmh-1.0.4-configure-vitest.patch, nmh-1.0.4-r3.ebuild:
+  add patch to fix access violation.
 
 *nmh-1.0.4-r3 (27 Jul 2004)
 
