@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/jmax
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/ChangeLog,v 1.9 2004/09/15 19:03:48 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/ChangeLog,v 1.10 2005/01/09 11:43:24 luckyduck Exp $
+
+  09 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> jmax-4.1.0.ebuild:
+  added use_enable jack call to econf, fixes #67371.
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   files/jmax-4.1.0-fix-java-check.patch:
