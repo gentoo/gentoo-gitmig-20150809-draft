@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-0.43.ebuild,v 1.13 2004/07/14 02:10:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-0.43.ebuild,v 1.14 2004/08/21 15:41:14 foser Exp $
 
 IUSE="nls"
 
@@ -18,7 +18,7 @@ DEPEND=">=gnome-base/gnome-libs-1.2
 	=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
 	>=gnome-base/oaf-0.6.8
-	>=gnome-base/ORBit-0.5.14
+	=gnome-base/orbit-0*
 	=gnome-base/gnome-vfs-1.0*
 	>=dev-libs/libxml-1.8.17"
 
