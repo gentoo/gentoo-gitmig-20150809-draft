@@ -47,6 +47,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A} ; cd ${S}
 	epatch ${FILESDIR}/gentoo.diff.bz2
+
+	# this is needed for borkeness of configure script
 	sed -i -e s:rootcheck\=\"yes\":rootcheck\=\"no\": \
 		-e s:rootcheck\=\"\$withval\":rootcheck\=\"no\": \
 		configure

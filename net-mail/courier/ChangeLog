@@ -1,10 +1,13 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.38 2003/12/07 23:53:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.39 2003/12/08 04:20:08 iggy Exp $
 
 
   07 Dec 2003; foser <foser@gentoo.org> courier-0.*.ebuild :
   Fix fam-oss > fam, due to move
+
+  07 Dec 2003; Brian Jackson <iggy@gentoo.org> courier-0.44.2.ebuild:
+  add note about recent sed magic
 
   30 Nov 2003; Brian Jackson <iggy@gentoo.org> courier-0.44.0.ebuild:
   bump 0.44.0 to x86
