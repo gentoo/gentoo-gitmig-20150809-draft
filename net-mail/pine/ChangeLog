@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/pine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.17 2003/01/03 09:27:07 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.18 2003/01/03 20:05:51 mholzer Exp $
 
 *pine-4.51 (03 Jan 2002)
+
+  03 Jan 2002; Martin Holzer <mholzer@gentoo.org> pine-4.51.ebuild files/digest-pine-4.51 ChangeLog :
+  Added lynx dep. Changed from tar.gz to tar.bz2. Closes #13157
 
   03 Jan 2002; Nick Hadaway <raker@gentoo.org> pine-4.51.ebuild,
   files/digest-pine-4.51 :
