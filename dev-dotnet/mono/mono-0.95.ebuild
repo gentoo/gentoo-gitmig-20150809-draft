@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.95.ebuild,v 1.1 2004/06/02 16:02:57 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.95.ebuild,v 1.2 2004/06/02 20:06:38 dholm Exp $
 
 inherit eutils mono flag-o-matic
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.go-mono.com/"
 LICENSE="GPL-2 | LGPL-2 | X11"
 SLOT="0"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
 DEPEND="virtual/glibc
 	>=dev-libs/glib-2.0
