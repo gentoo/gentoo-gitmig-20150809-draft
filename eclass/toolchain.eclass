@@ -1,18 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.71 2005/01/09 18:47:17 kumba Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.72 2005/01/10 11:18:57 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
-
 
 #---->> eclass stuff <<----
 inherit eutils versionator libtool
 ECLASS=toolchain
 INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the ${ECLASS} eclass"
-EXPORT_FUNCTIONS src_unpack pkg_setup src_compile src_install
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst
+FEATURES="${FEATURES/multilib-strict/}"
 
 toolchain_src_install() {
 	${ETYPE}-src_install
@@ -25,6 +24,12 @@ toolchain_src_unpack() {
 }
 toolchain_pkg_setup() {
 	gcc_pkg_setup
+}
+toolchain_pkg_preinst() {
+	${ETYPE}-pkg_preinst
+}
+toolchain_pkg_postinst() {
+	${ETYPE}-pkg_postinst
 }
 #----<< eclass stuff >>----
 
@@ -92,6 +97,8 @@ elif [ "${GCC_VAR_TYPE}" == "non-versioned" ] ; then
 	DATAPATH="${DATAPATH:="${PREFIX}/share/"}"
 	STDCXX_INCDIR="${STDCXX_INCDIR:="${PREFIX}/include/g++-v3/"}"
 fi
+
+XGCC="${WORKDIR}/build/gcc/xgcc"
 #----<< globals >>----
 
 
@@ -407,7 +414,7 @@ glibc_have_pie() {
 # smashing protection support.
 libc_has_ssp() {
 	local libc_prefix
-	use ppc64 && libc_prefix="/lib64/"
+	[ "${ARCH}" = "ppc64" -a -z "${ABI}" ] && libc_prefix="/lib64/"
 	libc_prefix="${libc_prefix:="/$(get_libdir)/"}"
 
 	echo 'int main(){}' > ${T}/libctest.c
@@ -444,8 +451,6 @@ gcc-lang-supported() {
 }
 
 #----<< support checks >>----
-
-
 
 #---->> specs + env.d logic <<----
 
@@ -589,29 +594,24 @@ create_gcc_env_entry() {
 	echo "PATH=\"${BINPATH}\"" > ${gcc_envd_file}
 	echo "ROOTPATH=\"${BINPATH}\"" >> ${gcc_envd_file}
 
-	# Thanks to multilib, setting ldpath just got a little bit nuttier.
-	use amd64 && multilib_dirnames="32"
-	# we dont support this kind of amd64 multilib
-	#use x86 && multilib_dirnames="64"
-	# I'm unsure which of these is the default, so lets add both
-	use ppc64 && multilib_dirnames="64 32"
-	# same here.
-	use mips && multilib_dirnames="o32 32 64"
-	# in theory, sparc can have either as default, so add both
-	use sparc && multilib_dirnames="64 32"
-
 	LDPATH="${LIBPATH}"
 
-	if [ -n "${multilib_dirnames}" ] ; then
-		for path in ${multilib_dirnames} ; do
-			LDPATH="${LDPATH}:${LIBPATH}/${path}"
+	if [ -n "${MULTILIB_ABIS}" ]; then
+		local abi=
+		for abi in ${MULTILIB_ABIS}; do
+			local MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
+			[ "${MULTIDIR}" != "." -a -d "${LIBPATH}/${MULTIDIR}" ] && LDPATH="${LDPATH}:${LIBPATH}/${MULTIDIR}"
+		done
+	else
+		for path in 32 64 o32; do
+			[ -d "${LIBPATH}/${path}" ] && LDPATH="${LDPATH}:${LIBPATH}/${path}"
 		done
 	fi
 
 	local mbits=
-	has_m32 && mbits="${mbits} 32"
-	has_m64 && mbits="${mbits} 64"
-	echo "GCCBITS=\"${mbits}\"" >> ${gcc_envd_file}
+	CC=${XGCC} has_m32 && mbits="${mbits} 32"
+	CC=${XGCC} has_m64 && mbits="${mbits} 64"
+	echo "GCCBITS=\"${mbits:1}\"" >> ${gcc_envd_file}
 
 	echo "LDPATH=\"${LDPATH}\"" >> ${gcc_envd_file}
 	echo "MANPATH=\"${DATAPATH}/man\"" >> ${gcc_envd_file}
@@ -628,10 +628,7 @@ create_gcc_env_entry() {
 
 #----<< specs + env.d logic >>----
 
-
-
-#---->> unorganised crap in need of refactoring follows
-
+#---->> pkg_* <<----
 gcc_pkg_setup() {
 	if [ "${ETYPE}" == "gcc-compiler" ] ; then
 		# Must compile for mips64-linux target if we want n32/n64 support
@@ -659,6 +656,841 @@ gcc_pkg_setup() {
 		die "libssp cannot be used with a glibc that has been patched to provide ssp symbols"
 }
 
+gcc-compiler_pkg_preinst() {
+	if [ ! -f "${WORKDIR}/.chkgccversion" ]
+	then
+		mkdir -p ${WORKDIR}
+		chk_gcc_version
+	fi
+
+	export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
+	${ROOT}/sbin/ldconfig
+}
+
+gcc-compiler-pkg_postinst() {
+	export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
+	should_we_gcc_config && do_gcc_config
+
+	# Update libtool linker scripts to reference new gcc version ...
+	if [ "${ROOT}" = "/" ] && \
+	   [ -f "${WORKDIR}/.oldgccversion" -o -f "${WORKDIR}/.oldgccchost" ]
+	then
+		local OLD_GCC_VERSION=
+		local OLD_GCC_CHOST=
+
+		if [ -f "${WORKDIR}/.oldgccversion" ] && \
+		   [ -n "$(cat "${WORKDIR}/.oldgccversion")" ]
+		then
+			OLD_GCC_VERSION="$(cat "${WORKDIR}/.oldgccversion")"
+		else
+			OLD_GCC_VERSION="${MY_PV_FULL}"
+		fi
+
+		if [ -f "${WORKDIR}/.oldgccchost" ] && \
+		   [ -n "$(cat "${WORKDIR}/.oldgccchost")" ]
+		then
+			OLD_GCC_CHOST="--oldarch $(cat "${WORKDIR}/.oldgccchost")"
+		fi
+
+		/sbin/fix_libtool_files.sh ${OLD_GCC_VERSION} ${OLD_GCC_CHOST}
+	fi
+}
+
+#---->> pkg_* <<----
+
+#---->> src_* <<----
+
+# generic GCC src_unpack, to be called from the ebuild's src_unpack.
+# BIG NOTE regarding hardened support: ebuilds with support for hardened are
+# expected to export the following variable:
+#
+#	HARDENED_GCC_WORKS
+#			This variable should be set to the archs on which hardened should
+#			be allowed. For example: HARDENED_GCC_WORKS="x86 sparc amd64"
+#			This allows for additional archs to be supported by hardened when
+#			ready.
+#
+# Travis Tilley <lv@gentoo.org> (03 Sep 2004)
+#
+gcc-compiler-src_unpack() {
+	# fail if using pie patches, building hardened, and glibc doesnt have
+	# the necessary support
+	[ -n "${PIE_VER}" ] && use hardened && glibc_have_pie
+
+	if ! want_boundschecking ; then
+		if use hardened ; then
+			einfo "updating configuration to build hardened GCC"
+			make_gcc_hard || die "failed to make gcc hard"
+		fi
+	fi
+}
+gcc-library-src_unpack() {
+	:
+}
+gcc_src_unpack() {
+	local release_version="Gentoo Linux ${PVR}"
+
+	gcc_quick_unpack
+	exclude_gcc_patches
+
+	cd ${S:="$(gcc_get_s_dir)"}
+
+	if [ -n "${PATCH_VER}" ] ; then
+		epatch ${WORKDIR}/patch
+	fi
+
+	if ! want_boundschecking ; then
+		if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" -a -n "${PP_VER}" ] ; then
+			do_gcc_SSP_patches
+		fi
+
+		if [ -n "${PIE_VER}" ] ; then
+			do_gcc_PIE_patches
+		fi
+	else
+		if [ -n "${HTB_VER}" ] ; then
+			do_gcc_HTB_boundschecking_patches
+		fi
+	fi
+
+	${ETYPE}-src_unpack || die "failed to ${ETYPE}-src_unpack"
+
+	if [ "${ARCH}" = "amd64" -a -z "${SKIP_MULTILIB_HACK}" ] && use multilib; then
+		disgusting_gcc_multilib_HACK || die "multilib hack failed"
+	fi
+
+	einfo "patching gcc version: ${BRANCH_UPDATE} (${release_version})"
+	gcc_version_patch "${BRANCH_UPDATE} (${release_version})"
+
+	# Misdesign in libstdc++ (Redhat)
+	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
+
+	# disable --as-needed from being compiled into gcc specs
+	# natively when using >=sys-devel/binutils-2.15.90.0.1 this is
+	# done to keep our gcc backwards compatible with binutils. 
+	# gcc 3.4.1 cvs has patches that need back porting.. 
+	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
+	sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
+
+	# Fixup libtool to correctly generate .la files with portage
+	cd ${S}
+	elibtoolize --portage --shallow
+
+	gnuconfig_update
+
+	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
+
+	disable_multilib_libjava || die "failed to disable multilib java"
+}
+
+gcc-library-configure() {
+	# multilib support
+	if [ "${GCC_TARGET_NO_MULTILIB}" == "true" ]
+	then
+		confgcc="${confgcc} --disable-multilib"
+	else
+		confgcc="${confgcc} --enable-multilib"
+	fi
+}
+
+gcc-compiler-configure() {
+	# multilib support
+	case "${ARCH}" in
+		amd64|mips|sparc)
+		confgcc="${confgcc} $(use_enable multilib)"
+		;;
+	esac
+
+	# GTK+ is preferred over xlib in 3.4.x (xlib is unmaintained
+	# right now). Much thanks to <csm@gnu.org> for the heads up.
+	# Travis Tilley <lv@gentoo.org>  (11 Jul 2004)
+	if ! use build && use gcj && use gtk
+	then
+		confgcc="${confgcc} --enable-java-awt=gtk"
+	fi
+
+	use build || use !gcj && confgcc="${confgcc} --disable-libgcj"
+
+	# Add --with-abi flags to enable respective MIPS ABIs
+	case "${CTARGET}" in
+		mips*)
+		use multilib && confgcc="${confgcc} --with-abi=32"
+		use n64 && confgcc="${confgcc} --with-abi=n64"
+		use n32 && confgcc="${confgcc} --with-abi=n32"
+		;;
+	esac
+
+	if ! use build ; then
+		GCC_LANG="c"
+		use !nocxx && GCC_LANG="${GCC_LANG},c++"
+
+		# fortran support just got sillier! the lang value can be f77 for
+		# fortran77, f95 for fortran95, or just plain old fortran for the
+		# currently supported standard depending on gcc version.
+		if use fortran ; then
+			if gcc-lang-supported f95 ; then
+				GCC_LANG="${GCC_LANG},f95"
+			elif gcc-lang-supported f77 ; then
+				GCC_LANG="${GCC_LANG},f77"
+			elif gcc-lang-supported fortran ; then
+				GCC_LANG="${GCC_LANG},fortran"
+			else
+				die "GCC doesnt support fortran"
+			fi
+		fi
+
+		use objc && gcc-lang-supported objc && GCC_LANG="${GCC_LANG},objc"
+		use gcj && gcc-lang-supported java && GCC_LANG="${GCC_LANG},java"
+		# We do NOT want 'ADA support' in here!
+		# use ada  && gcc_lang="${gcc_lang},ada"
+	else
+		GCC_LANG="c"
+	fi
+
+	einfo "configuring for GCC_LANG: ${GCC_LANG}"
+}
+
+# Other than the variables described for gcc_setup_variables, the following
+# will alter tha behavior of gcc_do_configure:
+#
+#	CTARGET
+#	CBUILD
+#			Enable building for a target that differs from CHOST
+#
+#	GCC_TARGET_NO_MULTILIB
+#			Disable multilib. Useful when building single library targets.
+#
+#	GCC_LANG
+#			Enable support for ${GCC_LANG} languages. defaults to just "c"
+#
+# Travis Tilley <lv@gentoo.org> (04 Sep 2004)
+#
+gcc_do_configure() {
+	local confgcc
+
+	if [ "${GCC_VAR_TYPE}" == "versioned" ] ; then
+		confgcc="--enable-version-specific-runtime-libs"
+	elif [ "${GCC_VAR_TYPE}" == "non-versioned" ] ; then
+		confgcc="--libdir=/${LIBPATH}"
+	else
+		die "bad GCC_VAR_TYPE"
+	fi
+
+	# Set configuration based on path variables
+	confgcc="${confgcc} \
+		--prefix=${PREFIX} \
+		--bindir=${BINPATH} \
+		--includedir=${INCLUDEPATH} \
+		--datadir=${DATAPATH} \
+		--mandir=${DATAPATH}/man \
+		--infodir=${DATAPATH}/info \
+		--with-gxx-include-dir=${STDCXX_INCDIR}"
+
+	# Incredibly theoretical cross-compiler support
+	confgcc="${confgcc} --host=${CHOST}"
+	if [ "${CTARGET}" != "${CHOST}" ] ; then
+		# Straight from the GCC install doc:
+		# "GCC has code to correctly determine the correct value for target 
+		# for nearly all native systems. Therefore, we highly recommend you
+		# not provide a configure target when configuring a native compiler."
+		confgcc="${confgcc} --target=${CTARGET}"
+	fi
+	if [ "${CBUILD}" != "" ] ; then
+		confgcc="${confgcc} --build=${CBUILD}"
+	fi
+
+	# ppc altivec support
+	confgcc="${confgcc} $(use_enable altivec)"
+
+	# Fix linking problem with c++ apps which where linked
+	# against a 3.2.2 libgcc
+	[ "${ARCH}" = "hppa" ] && confgcc="${confgcc} --enable-sjlj-exceptions"
+
+	# Native Language Support
+	if use nls && use !build ; then
+		confgcc="${confgcc} --enable-nls --without-included-gettext"
+	else
+		confgcc="${confgcc} --disable-nls"
+	fi
+
+	# __cxa_atexit is "essential for fully standards-compliant handling of
+	# destructors", but apparently requires glibc.
+	# --enable-sjlj-exceptions : currently the unwind stuff seems to work 
+	# for statically linked apps but not dynamic
+	# so use setjmp/longjmp exceptions by default
+	# uclibc uses --enable-clocale=uclibc (autodetected)
+	# --disable-libunwind-exceptions needed till unwind sections get fixed. see ps.m for details
+	if use !uclibc ; then
+		confgcc="${confgcc} --enable-__cxa_atexit --enable-clocale=gnu"
+	else
+		confgcc="${confgcc} --disable-__cxa_atexit --enable-target-optspace \
+			--enable-sjlj-exceptions"
+	fi
+
+	# reasonably sane globals (hopefully)
+	confgcc="${confgcc} \
+		--with-system-zlib \
+		--disable-checking \
+		--disable-werror \
+		--disable-libunwind-exceptions"
+	if use nocxx && [[ ${CHOST} != ${CTARGET} ]] ; then
+		confgcc="${confgcc} --disable-shared --disable-threads"
+	else
+		confgcc="${confgcc} --enable-shared --enable-threads=posix"
+	fi
+
+	# etype specific configuration
+	einfo "running ${ETYPE}-configure"
+	${ETYPE}-configure || die
+
+	# if not specified, assume we are building for a target that only
+	# requires C support
+	GCC_LANG="${GCC_LANG:=c}"
+	confgcc="${confgcc} --enable-languages=${GCC_LANG}"
+
+	# Nothing wrong with a good dose of verbosity
+	echo
+	einfo "PREFIX:          ${PREFIX}"
+	einfo "BINPATH:         ${BINPATH}"
+	einfo "LIBPATH:         ${LIBPATH}"
+	einfo "DATAPATH:        ${DATAPATH}"
+	einfo "STDCXX_INCDIR:   ${STDCXX_INCDIR}"
+	echo
+	einfo "Configuring GCC with: ${confgcc} ${@} ${EXTRA_ECONF}"
+	echo
+
+	# Build in a separate build tree
+	mkdir -p ${WORKDIR}/build
+	pushd ${WORKDIR}/build > /dev/null
+
+	# and now to do the actual configuration
+	addwrite "/dev/zero"
+	${S}/configure ${confgcc} "${@}" ${EXTRA_ECONF} \
+		|| die "failed to run configure"
+
+	# return to whatever directory we were in before
+	popd > /dev/null
+}
+
+# This function accepts one optional argument, the make target to be used.
+# If ommitted, gcc_do_make will try to guess whether it should use all,
+# profiledbootstrap, or bootstrap-lean depending on CTARGET and arch. An
+# example of how to use this function:
+#
+#	gcc_do_make all-target-libstdc++-v3
+#
+# In addition to the target to be used, the following variables alter the
+# behavior of this function:
+#
+#	LDFLAGS
+#			Flags to pass to ld
+#
+#	STAGE1_CFLAGS
+#			CFLAGS to use during stage1 of a gcc bootstrap
+#
+#	BOOT_CFLAGS
+#			CFLAGS to use during stages 2+3 of a gcc bootstrap.
+#
+# Travis Tilley <lv@gentoo.org> (04 Sep 2004)
+#
+gcc_do_make() {
+	# Setup -j in MAKEOPTS
+	get_number_of_jobs
+
+	# Only build it static if we are just building the C frontend, else
+	# a lot of things break because there are not libstdc++.so ....
+	if use static && [ "${GCC_LANG}" = "c" ] ; then
+		LDFLAGS="${LDFLAGS:="-static"}"
+	fi
+	
+	STAGE1_CFLAGS="${STAGE1_CFLAGS:="-O"}"
+
+	if [ -z "${CTARGET}" -o "${CTARGET}" == "${CHOST}" ] ; then
+		# we only want to use the system's CFLAGS if not building a
+		# cross-compiler.
+		BOOT_CFLAGS="${BOOT_CFLAGS:="${CFLAGS}"}"
+	else
+		BOOT_CFLAGS="${BOOT_CFLAGS:="-O2"}"
+	fi
+
+	# Fix for libtool-portage.patch
+	local OLDS="${S}"
+	S="${WORKDIR}/build"
+
+	# Set make target to $1 if passed
+	[ "$1" != "" ] && GCC_MAKE_TARGET="$1"
+	# default target
+	if [ "${CTARGET}" != "${CHOST}" ] ; then
+		# 3 stage bootstrapping doesnt quite work when you cant run the
+		# resulting binaries natively ^^;
+		GCC_MAKE_TARGET="${GCC_MAKE_TARGET:=all}"
+	elif use x86 || use amd64 || use ppc64; then
+		GCC_MAKE_TARGET="${GCC_MAKE_TARGET:=profiledbootstrap}"
+	else
+		GCC_MAKE_TARGET="${GCC_MAKE_TARGET:=bootstrap-lean}"
+	fi
+
+	# the gcc docs state that parallel make isnt supported for the
+	# profiledbootstrap target, as collisions in profile collecting may occur.
+	if [ "${GCC_MAKE_TARGET}" == "profiledbootstrap" ] ; then
+		MAKE_COMMAND="make"
+	else
+		MAKE_COMMAND="emake"
+	fi
+
+	pushd ${WORKDIR}/build
+	einfo "Running ${MAKE_COMMAND} LDFLAGS=\"${LDFLAGS}\" STAGE1_CFLAGS=\"${STAGE1_CFLAGS}\" LIBPATH=\"${LIBPATH}\" BOOT_CFLAGS=\"${BOOT_CFLAGS}\" ${GCC_MAKE_TARGET}"
+
+	${MAKE_COMMAND} LDFLAGS="${LDFLAGS}" STAGE1_CFLAGS="${STAGE1_CFLAGS}" \
+		LIBPATH="${LIBPATH}" BOOT_CFLAGS="${BOOT_CFLAGS} ${GCC_MAKE_TARGET}" \
+		|| die
+	popd
+}
+
+# This function will add ${PV} to the names of all shared libraries in the
+# directory specified to avoid filename collisions between multiple slotted 
+# non-versioned gcc targets. If no directory is specified, it is assumed that
+# you want -all- shared objects to have ${PV} added. Example
+#
+#	add_version_to_shared ${D}/usr/$(get_libdir)
+#
+# Travis Tilley <lv@gentoo.org> (05 Sep 2004)
+#
+add_version_to_shared() {
+	local sharedlib
+	if [ "$1" == "" ] ; then
+		local sharedlibdir="${D}"
+	else
+		local sharedlibdir="$1"
+	fi
+
+	for sharedlib in `find ${sharedlibdir} -name *.so.*` ; do
+		if [ ! -L "${sharedlib}" ] ; then
+			einfo "Renaming `basename "${sharedlib}"` to `basename "${sharedlib/.so*/}-${PV}.so.${sharedlib/*.so./}"`"
+			mv "${sharedlib}" "${sharedlib/.so*/}-${PV}.so.${sharedlib/*.so./}" \
+				|| die
+			pushd `dirname "${sharedlib}"` > /dev/null || die
+			ln -sf "`basename "${sharedlib/.so*/}-${PV}.so.${sharedlib/*.so./}"`" \
+				"`basename "${sharedlib}"`" || die
+			popd > /dev/null || die
+		fi
+	done
+}
+
+# This is mostly a stub function to be overwritten in an ebuild
+gcc_do_filter_flags() {
+	strip-flags
+
+	# In general gcc does not like optimization, and add -O2 where
+	# it is safe.  This is especially true for gcc 3.3 + 3.4
+	replace-flags -O? -O2
+
+	# ...sure, why not?
+	strip-unsupported-flags
+
+	filter-flags "-mabi*"
+	filter-flags "-m32"
+	filter-flags "-m64"
+	
+	export GCJFLAGS="${CFLAGS}"
+}
+
+gcc_src_compile() {
+	gcc_do_filter_flags
+	einfo "CFLAGS=\"${CFLAGS}\""
+	einfo "CXXFLAGS=\"${CXXFLAGS}\""
+
+	# Build in a separate build tree
+	mkdir -p ${WORKDIR}/build
+	pushd ${WORKDIR}/build > /dev/null
+
+	# Install our pre generated manpages if we do not have perl ...
+	if [ ! -x /usr/bin/perl -a "${GCC_MANPAGE_VERSION}" != "none" ] ; then
+		unpack gcc-${GCC_MANPAGE_VERSION}-manpages.tar.bz2 || \
+			die "Failed to unpack man pages"
+	fi
+
+	einfo "Configuring ${PN} ..."
+	gcc_do_configure
+
+	touch ${S}/gcc/c-gperf.h
+
+	# Do not make manpages if we do not have perl ...
+	if [ ! -x /usr/bin/perl ] ; then
+		find ${WORKDIR}/build -name '*.[17]' -exec touch {} \; || :
+	fi
+
+	einfo "Compiling ${PN} ..."
+	gcc_do_make ${GCC_MAKE_TARGET}
+
+	# Do not create multiple specs files for PIE+SSP if boundschecking is in
+	# USE, as we disable PIE+SSP when it is.
+	if [ "${ETYPE}" == "gcc-compiler" -a "${SPLIT_SPECS}" == "true" ]  && ! want_boundschecking ; then
+		split_out_specs_files || die "failed to split out specs"
+	fi
+
+	popd > /dev/null
+}
+
+gcc-library-src_install() {
+	einfo "Installing ${PN} ..."
+	# Do the 'make install' from the build directory
+	cd ${WORKDIR}/build
+	S="${WORKDIR}/build" \
+	make DESTDIR="${D}" \
+		prefix=${PREFIX} \
+		bindir=${BINPATH} \
+		includedir=${LIBPATH}/include \
+		datadir=${DATAPATH} \
+		mandir=${DATAPATH}/man \
+		infodir=${DATAPATH}/info \
+		LIBPATH="${LIBPATH}" \
+		${GCC_INSTALL_TARGET} || die
+
+	if [ "${GCC_LIB_COMPAT_ONLY}" == "true" ] ; then
+		rm -rf ${D}/${INCLUDEPATH}
+		rm -rf ${D}/${DATAPATH}
+		pushd ${D}/${LIBPATH}/
+		rm *.a *.la *.so
+		popd
+	fi
+
+	if [ -n "${GCC_LIB_USE_SUBDIR}" ] ; then
+		mkdir -p ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/
+		mv ${D}/${LIBPATH}/* ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/
+		mv ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/ ${D}/${LIBPATH}
+		
+		mkdir -p ${D}/etc/env.d/
+		echo "LDPATH=\"${LIBPATH}/${GCC_LIB_USE_SUBDIR}/\"" >> ${D}/etc/env.d/99${PN}
+	fi
+
+	if [ "${GCC_VAR_TYPE}" == "non-versioned" ] ; then
+		# if we're not using versioned directories, we need to use versioned
+		# filenames.
+		add_version_to_shared
+	fi
+}
+
+
+gcc-compiler-src_install() {
+	local x=
+
+	# Do allow symlinks in ${PREFIX}/lib/gcc-lib/${CHOST}/${PV}/include as
+	# this can break the build.
+	for x in ${WORKDIR}/build/gcc/include/*
+	do
+		if [ -L ${x} ]
+		then
+			rm -f ${x}
+			continue
+		fi
+	done
+	# Remove generated headers, as they can cause things to break
+	# (ncurses, openssl, etc).
+	for x in `find ${WORKDIR}/build/gcc/include/ -name '*.h'`
+	do
+		if grep -q 'It has been auto-edited by fixincludes from' ${x}
+		then
+			rm -f ${x}
+		fi
+	done
+
+	einfo "Installing GCC..."
+	# Do the 'make install' from the build directory
+	cd ${WORKDIR}/build
+	S="${WORKDIR}/build" \
+	make DESTDIR="${D}" install || die
+
+	if [ "${CHOST}" == "${CTARGET}" ] ; then
+		[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
+	fi
+
+	dodir /lib /usr/bin
+	dodir /etc/env.d/gcc
+	create_gcc_env_entry
+
+	if want_split_specs ; then
+		if use hardened ; then
+			create_gcc_env_entry vanilla
+		fi
+		use !hardened && hardened_gcc_works && create_gcc_env_entry hardened
+		if hardened_gcc_works || hardened_gcc_works pie ; then
+			create_gcc_env_entry hardenednossp
+		fi
+		if hardened_gcc_works || hardened_gcc_works ssp ; then
+			create_gcc_env_entry hardenednopie
+		fi
+
+		cp ${WORKDIR}/build/*.specs ${D}/${LIBPATH}
+	fi
+
+	# Move the libraries to the proper location
+	gcc_movelibs
+
+	# Make sure we dont have stuff lying around that
+	# can nuke multiple versions of gcc
+	if ! use build; then
+		cd ${D}${LIBPATH}
+
+		# Move Java headers to compiler-specific dir
+		for x in ${D}${PREFIX}/include/gc*.h ${D}${PREFIX}/include/j*.h
+		do
+			[ -f "${x}" ] && mv -f ${x} ${D}${LIBPATH}/include/
+		done
+		for x in gcj gnu java javax org
+		do
+			if [ -d "${D}${PREFIX}/include/${x}" ]
+			then
+				dodir /${LIBPATH}/include/${x}
+				mv -f ${D}${PREFIX}/include/${x}/* ${D}${LIBPATH}/include/${x}/
+				rm -rf ${D}${PREFIX}/include/${x}
+			fi
+		done
+
+		if [ -d "${D}${PREFIX}/lib/security" ]
+		then
+			dodir /${LIBPATH}/security
+			mv -f ${D}${PREFIX}/lib/security/* ${D}${LIBPATH}/security
+			rm -rf ${D}${PREFIX}/lib/security
+		fi
+
+		# Move libgcj.spec to compiler-specific directories
+		[ -f "${D}${PREFIX}/lib/libgcj.spec" ] && \
+			mv -f ${D}${PREFIX}/lib/libgcj.spec ${D}${LIBPATH}/libgcj.spec
+
+		# Rename jar because it could clash with Kaffe's jar if this gcc is
+		# primary compiler (aka don't have the -<version> extension)
+		cd ${D}${PREFIX}/${CTARGET}/gcc-bin/${MY_PV_FULL}
+		[ -f jar ] && mv -f jar gcj-jar
+
+		# Move <cxxabi.h> to compiler-specific directories
+		[ -f "${D}${STDCXX_INCDIR}/cxxabi.h" ] && \
+			mv -f ${D}${STDCXX_INCDIR}/cxxabi.h ${D}${LIBPATH}/include/
+
+		# These should be symlinks
+		cd ${D}${BINPATH}
+		for x in gcc g++ c++ g77 gcj
+		do
+			# For some reason, g77 gets made instead of ${CTARGET}-g77... this makes it safe
+			if [ -f "${x}" ]
+			then
+				mv "${x}" "${CTARGET}-${x}"
+			fi
+
+			if [ "${CHOST}" == "${CTARGET}" ] && [ -f "${CTARGET}-${x}" ]
+			then
+				[ ! -f "${x}" ] && mv "${CTARGET}-${x}" "${x}"
+				ln -sf ${x} ${CTARGET}-${x}
+			fi
+
+			if [ -f "${CTARGET}-${x}-${PV}" ]
+			then
+				rm -f ${CTARGET}-${x}-${PV}
+				ln -sf ${CTARGET}-${x} ${CTARGET}-${x}-${PV}
+			fi
+		done
+
+		# I do not know if this will break gcj stuff, so I'll only do it for
+		#   objc for now; basically "ffi.h" is the correct file to include,
+		#   but it gets installed in .../GCCVER/include and yet it does 
+		#   "#include <ffitarget.h>" which (correctly, as it's an "extra" file)
+		#   is installed in .../GCCVER/include/libffi; the following fixes
+		#   ffi.'s include of ffitarget.h - Armando Di Cianno <fafhrd@gentoo.org>
+		if use objc && ! use gcj; then
+			#dosed "s:<ffitarget.h>:<libffi/ffitarget.h>:g" /${LIBPATH}/include/ffi.h
+			mv ${D}/${LIBPATH}/include/libffi/* ${D}/${LIBPATH}/include
+			rm -Rf ${D}/${LIBPATH}/include/libffi
+		fi
+	fi
+
+	cd ${S}
+	if ! use build && [ "${CHOST}" == "${CTARGET}" ] ; then
+		prepman ${DATAPATH}
+		prepinfo ${DATAPATH}
+	else
+		rm -rf ${D}/usr/share/{man,info}
+		rm -rf ${D}${DATAPATH}/{man,info}
+	fi
+
+	# Rather install the script, else portage with changing $FILESDIR
+	# between binary and source package borks things ....
+	if [ "${CHOST}" == "${CTARGET}" ] ; then
+		insinto /lib/rcscripts/awk
+		doins ${FILESDIR}/awk/fixlafiles.awk
+		exeinto /sbin
+		doexe ${FILESDIR}/fix_libtool_files.sh
+	fi
+
+	chown -R root:root ${D}${LIBPATH}
+}
+
+# Move around the libs to the right location.
+gcc_movelibs() {
+	# This one comes with binutils
+	rm -f ${D}${PREFIX}/lib/libiberty.a
+	rm -f ${D}${PREFIX}/lib/*/libiberty.a
+	rm -f ${D}${LIBPATH}/libiberty.a
+	rm -f ${D}${LIBPATH}/*/libiberty.a
+
+	if [ -n "${MULTILIB_ABIS}" ]; then
+		for abi in ${MULTILIB_ABIS}; do
+			local OS_MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-os-directory)
+			local MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
+			local TODIR=${D}/${LIBPATH}/${MULTIDIR}
+			local FROMDIR=
+
+			[ -d "${TODIR}" ] || mkdir -p ${TODIR}
+
+			FROMDIR=${D}/${LIBPATH}/${OS_MULTIDIR}
+			if [ "${FROMDIR}" != "${TODIR}" -a -d "${FROMDIR}" ]; then
+				mv ${FROMDIR}/*.a ${FROMDIR}/*.so* ${FROMDIR}/*.la ${TODIR} &> /dev/null
+				rmdir ${FROMDIR} &> /dev/null
+			fi
+
+			FROMDIR=${D}/${LIBPATH}/../${MULTIDIR}
+			if [ -d "${FROMDIR}" ]; then
+				mv ${FROMDIR}/*.a ${FROMDIR}/*.so* ${FROMDIR}/*.la ${TODIR} &> /dev/null
+				rmdir ${FROMDIR} &> /dev/null
+			fi
+
+			FROMDIR=${D}/${PREFIX}/lib/${OS_MULTIDIR}
+			if [ -d "${FROMDIR}" ]; then
+				mv ${FROMDIR}/*.a ${FROMDIR}/*.so* ${FROMDIR}/*.la ${TODIR} &> /dev/null
+				rmdir ${FROMDIR} &> /dev/null
+			fi
+
+			FROMDIR=${D}/${PREFIX}/lib/${MULTIDIR}
+			if [ -d "${FROMDIR}" ]; then
+				# The only thing that ends up here is libiberty.a (which is deleted)
+				# Lucky for us nothing mistakenly gets placed here that we need...
+				# otherwise we'd have a potential conflict when OS_MULTIDIR=../lib and
+				# MULTIDIR=. for different ABI.  If this happens, the fix is to patch
+				# the gcc Makefiles to behave with LIBDIR properly.
+				#mv ${FROMDIR}/*.a ${FROMDIR}/*.so* ${FROMDIR}/*.la ${TODIR} &> /dev/null
+				rmdir ${FROMDIR} &> /dev/null
+			fi
+		done
+	else
+		# No multilib or older multilib...
+
+		# we dont want these in freaky non-versioned paths that dont ever get used
+		fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 32
+		fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 64
+		# and mips is just freaky in general ;p
+		fix_freaky_non_versioned_library_paths_that_dont_ever_get_used o32
+		# and finally, the non-bitdepth-or-ABI-specific freaky path
+
+		if [ -d ${D}/${PREFIX}/lib32 -a -d ${D}/${LIBPATH}/32 ] ; then
+			mv ${D}/${PREFIX}/lib32/* ${D}/${LIBPATH}/32/
+		elif [ -d ${D}/${PREFIX}/lib32 -a ! -d ${D}/${LIBPATH}/32 ] ; then
+			mv ${D}/${PREFIX}/lib32/* ${D}/${LIBPATH}/
+		fi
+
+		if [ -d ${D}/${PREFIX}/lib64 -a -d ${D}/${LIBPATH}/64 ] ; then
+			mv ${D}/${PREFIX}/lib64/* ${D}/${LIBPATH}/64/
+		elif [ -d ${D}/${PREFIX}/lib64 -a ! -d ${D}/${LIBPATH}/64 ] ; then
+			mv ${D}/${PREFIX}/lib64/* ${D}/${LIBPATH}/
+		fi
+
+		mv ${D}/${PREFIX}/lib/*.a ${D}/${PREFIX}/lib/*.so* ${D}/${PREFIX}/lib/*.la ${D}/${LIBPATH}/
+
+		# and sometimes crap ends up here too :|
+		mv ${D}/${LIBPATH}/../*.a ${D}/${LIBPATH}/../*.la ${D}/${LIBPATH}/../*so* \
+			${D}/${LIBPATH}/
+
+		rm -rf ${D}/${PREFIX}/lib64
+		rm -rf ${D}/${PREFIX}/lib32
+		rm -rf ${D}/${PREFIX}/lib/o32
+		rm -rf ${D}/${PREFIX}/lib/32
+		rm -rf ${D}/${PREFIX}/lib/64
+		rm -rf ${D}/${LIBPATH}/../o32
+		rm -rf ${D}/${LIBPATH}/../32
+		rm -rf ${D}/${LIBPATH}/../64
+	fi
+
+	# make sure the libtool archives have libdir set to where they actually
+	# -are-, and not where they -used- to be.
+	fix_libtool_libdir_paths "$(find ${D}/${LIBPATH} -name *.la)"
+}
+
+#----<< src_* >>----
+
+#---->> unorganised crap in need of refactoring follows
+
+# This is only used by the backwards-compatible stuff above...
+fix_freaky_non_versioned_library_paths_that_dont_ever_get_used() {
+	# first the multilib case
+	if [ -d ${D}/${LIBPATH}/../$1 -a -d ${D}/${LIBPATH}/$1 ] ; then
+		mv ${D}/${LIBPATH}/../$1/* ${D}/${LIBPATH}/$1/
+		rm -rf ${D}/${LIBPATH}/../$1
+	fi
+	if [ -d ${D}/${LIBPATH}/../lib$1 -a -d ${D}/${LIBPATH}/$1 ] ; then
+		mv ${D}/${LIBPATH}/../lib$1/* ${D}/${LIBPATH}/$1/
+		rm -rf ${D}/${LIBPATH}/../lib$1
+	fi
+	# and now to fix up the non-multilib case
+	if [ -d ${D}/${LIBPATH}/../$1 -a ! -d ${D}/${LIBPATH}/$1 ] ; then
+		mv ${D}/${LIBPATH}/../$1/* ${D}/${LIBPATH}/
+		rm -rf ${D}/${LIBPATH}/../$1
+	fi
+	if [ -d ${D}/${LIBPATH}/../lib$1 -a ! -d ${D}/${LIBPATH}/$1 ] ; then
+		mv ${D}/${LIBPATH}/../lib$1/* ${D}/${LIBPATH}/
+		rm -rf ${D}/${LIBPATH}/../lib$1
+	fi
+}
+
+gcc_do_filter_flags() {
+	strip-flags
+
+	# In general gcc does not like optimization, and add -O2 where
+	# it is safe.  This is especially true for gcc 3.3 + 3.4
+	replace-flags -O? -O2
+
+	# -mcpu is deprecated on these archs, and possibly others
+	if use amd64 || use x86 ; then
+		setting="`get-flag mcpu`"
+		[ ! -z "${setting}" ] && \
+			replace-flags -mcpu="${setting}" -mtune="${setting}" && \
+			ewarn "-mcpu is deprecated on your arch\a\a\a" && \
+			epause 5
+	fi
+
+	strip-unsupported-flags
+
+	# If we use multilib on mips, we shouldn't pass -mabi flag - it breaks
+	# build of non-default-abi libraries.
+	use mips && use multilib && filter-flags "-mabi*"
+
+	# Compile problems with these (bug #6641 among others)...
+	#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
+
+	export GCJFLAGS="${CFLAGS}"
+}
+
+chk_gcc_version() {
+	mkdir -p "${WORKDIR}"
+
+	# This next bit is for updating libtool linker scripts ...
+	local OLD_GCC_VERSION="`gcc -dumpversion`"
+	local OLD_GCC_CHOST="$(gcc -v 2>&1 | egrep '^Reading specs' |\
+	                       sed -e 's:^.*/gcc[^/]*/\([^/]*\)/[0-9]\+.*$:\1:')"
+
+	if [ "${OLD_GCC_VERSION}" != "${MY_PV_FULL}" ]
+	then
+		echo "${OLD_GCC_VERSION}" > "${WORKDIR}/.oldgccversion"
+	fi
+
+	if [ -n "${OLD_GCC_CHOST}" ]
+	then
+		if [ "${CHOST}" = "${CTARGET}" -a "${OLD_GCC_CHOST}" != "${CHOST}" ]
+		then
+			echo "${OLD_GCC_CHOST}" > "${WORKDIR}/.oldgccchost"
+		fi
+	fi
+
+	# Did we check the version ?
+	touch "${WORKDIR}/.chkgccversion"
+}
 
 # gcc_quick_unpack will unpack the gcc tarball and patches in a way that is
 # consistant with the behavior of get_gcc_src_uri. The only patch it applies
@@ -930,11 +1762,13 @@ gcc_version_patch() {
 # Travis Tilley <lv@gentoo.org> (03 Sep 2004)
 #
 disgusting_gcc_multilib_HACK() {
-	einfo "updating multilib directories to be: $(get_all_libdirs)"
 	local libdirs
-	for libdir in $(get_all_libdirs); do
-		libdirs="${libdirs} ../${libdir}"
-	done
+	if [ -n "${MULTILIB_ABIS}" ]; then
+		libdirs="../$(get_abi_LIBDIR amd64) ../$(get_abi_LIBDIR x86)"
+	else
+		libdirs="../$(get_libdir) ../$(get_multilibdir)"
+	fi
+	einfo "updating multilib directories to be: ${libdirs}"
 	sed -i -e "s:^MULTILIB_OSDIRNAMES.*:MULTILIB_OSDIRNAMES = ${libdirs}:" ${S}/gcc/config/i386/t-linux64
 }
 
@@ -950,474 +1784,10 @@ disable_multilib_libjava() {
 	popd > /dev/null
 }
 
-# generic GCC src_unpack, to be called from the ebuild's src_unpack.
-# BIG NOTE regarding hardened support: ebuilds with support for hardened are
-# expected to export the following variable:
-#
-#	HARDENED_GCC_WORKS
-#			This variable should be set to the archs on which hardened should
-#			be allowed. For example: HARDENED_GCC_WORKS="x86 sparc amd64"
-#			This allows for additional archs to be supported by hardened when
-#			ready.
-#
-# Travis Tilley <lv@gentoo.org> (03 Sep 2004)
-#
-gcc-compiler-src_unpack() {
-	# fail if using pie patches, building hardened, and glibc doesnt have
-	# the necessary support
-	[ -n "${PIE_VER}" ] && use hardened && glibc_have_pie
-
-	if ! want_boundschecking ; then
-		if use hardened ; then
-			einfo "updating configuration to build hardened GCC"
-			make_gcc_hard || die "failed to make gcc hard"
-		fi
-	fi
-}
-gcc-library-src_unpack() {
-	:
-}
-gcc_src_unpack() {
-	local release_version="Gentoo Linux ${PVR}"
-
-	gcc_quick_unpack
-	exclude_gcc_patches
-
-	cd ${S:="$(gcc_get_s_dir)"}
-
-	if [ -n "${PATCH_VER}" ] ; then
-		epatch ${WORKDIR}/patch
-	fi
-
-	if ! want_boundschecking ; then
-		if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" -a -n "${PP_VER}" ] ; then
-			do_gcc_SSP_patches
-		fi
-
-		if [ -n "${PIE_VER}" ] ; then
-			do_gcc_PIE_patches
-		fi
-	else
-		if [ -n "${HTB_VER}" ] ; then
-			do_gcc_HTB_boundschecking_patches
-		fi
-	fi
-
-	${ETYPE}-src_unpack || die "failed to ${ETYPE}-src_unpack"
-
-	if use amd64 && [ -z "${SKIP_MULTILIB_HACK}" ] ; then
-		disgusting_gcc_multilib_HACK || die "multilib hack failed"
-	fi
-
-	einfo "patching gcc version: ${BRANCH_UPDATE} (${release_version})"
-	gcc_version_patch "${BRANCH_UPDATE} (${release_version})"
-
-	# Misdesign in libstdc++ (Redhat)
-	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
-
-	# disable --as-needed from being compiled into gcc specs
-	# natively when using >=sys-devel/binutils-2.15.90.0.1 this is
-	# done to keep our gcc backwards compatible with binutils. 
-	# gcc 3.4.1 cvs has patches that need back porting.. 
-	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
-	sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
-
-	# Fixup libtool to correctly generate .la files with portage
-	cd ${S}
-	elibtoolize --portage --shallow
-
-	gnuconfig_update
-
-	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
-
-	disable_multilib_libjava || die "failed to disable multilib java"
-}
-
-gcc-library-configure() {
-	# multilib support
-	if [ "${GCC_TARGET_NO_MULTILIB}" == "true" ]
-	then
-		confgcc="${confgcc} --disable-multilib"
-	else
-		confgcc="${confgcc} --enable-multilib"
-	fi
-}
-
-gcc-compiler-configure() {
-	# multilib support
-	if use multilib && (use amd64 || use mips || use sparc)
-	then
-		confgcc="${confgcc} --enable-multilib"
-	else
-		confgcc="${confgcc} --disable-multilib"
-	fi
-
-	# GTK+ is preferred over xlib in 3.4.x (xlib is unmaintained
-	# right now). Much thanks to <csm@gnu.org> for the heads up.
-	# Travis Tilley <lv@gentoo.org>  (11 Jul 2004)
-	if ! use build && use gcj && use gtk
-	then
-		confgcc="${confgcc} --enable-java-awt=gtk"
-	fi
-
-	use build || use !gcj && confgcc="${confgcc} --disable-libgcj"
-
-	# Add --with-abi flags to enable respective MIPS ABIs
-	case "${CTARGET}" in
-		mips*)
-		use multilib && confgcc="${confgcc} --with-abi=32"
-		use n64 && confgcc="${confgcc} --with-abi=n64"
-		use n32 && confgcc="${confgcc} --with-abi=n32"
-		;;
-	esac
-
-	if ! use build ; then
-		GCC_LANG="c"
-		use !nocxx && GCC_LANG="${GCC_LANG},c++"
-
-		# fortran support just got sillier! the lang value can be f77 for
-		# fortran77, f95 for fortran95, or just plain old fortran for the
-		# currently supported standard depending on gcc version.
-		if use fortran ; then
-			if gcc-lang-supported f95 ; then
-				GCC_LANG="${GCC_LANG},f95"
-			elif gcc-lang-supported f77 ; then
-				GCC_LANG="${GCC_LANG},f77"
-			elif gcc-lang-supported fortran ; then
-				GCC_LANG="${GCC_LANG},fortran"
-			else
-				die "GCC doesnt support fortran"
-			fi
-		fi
-
-		use objc && gcc-lang-supported objc && GCC_LANG="${GCC_LANG},objc"
-		use gcj && gcc-lang-supported java && GCC_LANG="${GCC_LANG},java"
-		# We do NOT want 'ADA support' in here!
-		# use ada  && gcc_lang="${gcc_lang},ada"
-	else
-		GCC_LANG="c"
-	fi
-
-	einfo "configuring for GCC_LANG: ${GCC_LANG}"
-}
-
-# Other than the variables described for gcc_setup_variables, the following
-# will alter tha behavior of gcc_do_configure:
-#
-#	CTARGET
-#	CBUILD
-#			Enable building for a target that differs from CHOST
-#
-#	GCC_TARGET_NO_MULTILIB
-#			Disable multilib. Useful when building single library targets.
-#
-#	GCC_LANG
-#			Enable support for ${GCC_LANG} languages. defaults to just "c"
-#
-# Travis Tilley <lv@gentoo.org> (04 Sep 2004)
-#
-gcc_do_configure() {
-	local confgcc
-
-	if [ "${GCC_VAR_TYPE}" == "versioned" ] ; then
-		confgcc="--enable-version-specific-runtime-libs"
-	elif [ "${GCC_VAR_TYPE}" == "non-versioned" ] ; then
-		confgcc="--libdir=/${LIBPATH}"
-	else
-		die "bad GCC_VAR_TYPE"
-	fi
-
-	# Set configuration based on path variables
-	confgcc="${confgcc} \
-		--prefix=${PREFIX} \
-		--bindir=${BINPATH} \
-		--includedir=${INCLUDEPATH} \
-		--datadir=${DATAPATH} \
-		--mandir=${DATAPATH}/man \
-		--infodir=${DATAPATH}/info \
-		--with-gxx-include-dir=${STDCXX_INCDIR}"
-
-	# Incredibly theoretical cross-compiler support
-	confgcc="${confgcc} --host=${CHOST}"
-	if [ "${CTARGET}" != "${CHOST}" ] ; then
-		# Straight from the GCC install doc:
-		# "GCC has code to correctly determine the correct value for target 
-		# for nearly all native systems. Therefore, we highly recommend you
-		# not provide a configure target when configuring a native compiler."
-		confgcc="${confgcc} --target=${CTARGET}"
-	fi
-	if [ "${CBUILD}" != "" ] ; then
-		confgcc="${confgcc} --build=${CBUILD}"
-	fi
-
-	# ppc altivec support
-	confgcc="${confgcc} $(use_enable altivec)"
-
-	# Fix linking problem with c++ apps which where linked
-	# against a 3.2.2 libgcc
-	[ "${ARCH}" = "hppa" ] && confgcc="${confgcc} --enable-sjlj-exceptions"
-
-	# Native Language Support
-	if use nls && use !build ; then
-		confgcc="${confgcc} --enable-nls --without-included-gettext"
-	else
-		confgcc="${confgcc} --disable-nls"
-	fi
-
-	# __cxa_atexit is "essential for fully standards-compliant handling of
-	# destructors", but apparently requires glibc.
-	# --enable-sjlj-exceptions : currently the unwind stuff seems to work 
-	# for statically linked apps but not dynamic
-	# so use setjmp/longjmp exceptions by default
-	# uclibc uses --enable-clocale=uclibc (autodetected)
-	# --disable-libunwind-exceptions needed till unwind sections get fixed. see ps.m for details
-	if use !uclibc ; then
-		confgcc="${confgcc} --enable-__cxa_atexit --enable-clocale=gnu"
-	else
-		confgcc="${confgcc} --disable-__cxa_atexit --enable-target-optspace \
-			--enable-sjlj-exceptions"
-	fi
-
-	# reasonably sane globals (hopefully)
-	confgcc="${confgcc} \
-		--with-system-zlib \
-		--disable-checking \
-		--disable-werror \
-		--disable-libunwind-exceptions"
-	if use nocxx && [[ ${CHOST} != ${CTARGET} ]] ; then
-		confgcc="${confgcc} --disable-shared --disable-threads"
-	else
-		confgcc="${confgcc} --enable-shared --enable-threads=posix"
-	fi
-
-	# default arch support
-	#use sparc && confgcc="${confgcc} --with-cpu=v7"
-	#use ppc && confgcc="${confgcc} --with-cpu=common"
-
-	# etype specific configuration
-	einfo "running ${ETYPE}-configure"
-	${ETYPE}-configure || die
-
-	# if not specified, assume we are building for a target that only
-	# requires C support
-	GCC_LANG="${GCC_LANG:=c}"
-	confgcc="${confgcc} --enable-languages=${GCC_LANG}"
-
-	# Nothing wrong with a good dose of verbosity
-	echo
-	einfo "PREFIX:          ${PREFIX}"
-	einfo "BINPATH:         ${BINPATH}"
-	einfo "LIBPATH:         ${LIBPATH}"
-	einfo "DATAPATH:        ${DATAPATH}"
-	einfo "STDCXX_INCDIR:   ${STDCXX_INCDIR}"
-	echo
-	einfo "Configuring GCC with: ${confgcc} ${@} ${EXTRA_ECONF}"
-	echo
-
-	# Build in a separate build tree
-	mkdir -p ${WORKDIR}/build
-	pushd ${WORKDIR}/build > /dev/null
-
-	# and now to do the actual configuration
-	addwrite "/dev/zero"
-	${S}/configure ${confgcc} "${@}" ${EXTRA_ECONF} \
-		|| die "failed to run configure"
-
-	# return to whatever directory we were in before
-	popd > /dev/null
-}
-
-# This function accepts one optional argument, the make target to be used.
-# If ommitted, gcc_do_make will try to guess whether it should use all,
-# profiledbootstrap, or bootstrap-lean depending on CTARGET and arch. An
-# example of how to use this function:
-#
-#	gcc_do_make all-target-libstdc++-v3
-#
-# In addition to the target to be used, the following variables alter the
-# behavior of this function:
-#
-#	LDFLAGS
-#			Flags to pass to ld
-#
-#	STAGE1_CFLAGS
-#			CFLAGS to use during stage1 of a gcc bootstrap
-#
-#	BOOT_CFLAGS
-#			CFLAGS to use during stages 2+3 of a gcc bootstrap.
-#
-# Travis Tilley <lv@gentoo.org> (04 Sep 2004)
-#
-gcc_do_make() {
-	# Setup -j in MAKEOPTS
-	get_number_of_jobs
-
-	# Only build it static if we are just building the C frontend, else
-	# a lot of things break because there are not libstdc++.so ....
-	if use static && [ "${GCC_LANG}" = "c" ] ; then
-		LDFLAGS="${LDFLAGS:="-static"}"
-	fi
-	
-	STAGE1_CFLAGS="${STAGE1_CFLAGS:="-O"}"
-
-	if [ -z "${CTARGET}" -o "${CTARGET}" == "${CHOST}" ] ; then
-		# we only want to use the system's CFLAGS if not building a
-		# cross-compiler.
-		BOOT_CFLAGS="${BOOT_CFLAGS:="${CFLAGS}"}"
-	else
-		BOOT_CFLAGS="${BOOT_CFLAGS:="-O2"}"
-	fi
-
-	# Fix for libtool-portage.patch
-	local OLDS="${S}"
-	S="${WORKDIR}/build"
-
-	# Set make target to $1 if passed
-	[ "$1" != "" ] && GCC_MAKE_TARGET="$1"
-	# default target
-	if [ "${CTARGET}" != "${CHOST}" ] ; then
-		# 3 stage bootstrapping doesnt quite work when you cant run the
-		# resulting binaries natively ^^;
-		GCC_MAKE_TARGET="${GCC_MAKE_TARGET:=all}"
-	elif use x86 || use amd64 || use ppc64 ; then
-		GCC_MAKE_TARGET="${GCC_MAKE_TARGET:=profiledbootstrap}"
-	else
-		GCC_MAKE_TARGET="${GCC_MAKE_TARGET:=bootstrap-lean}"
-	fi
-
-	# the gcc docs state that parallel make isnt supported for the
-	# profiledbootstrap target, as collisions in profile collecting may occur.
-	if [ "${GCC_MAKE_TARGET}" == "profiledbootstrap" ] ; then
-		MAKE_COMMAND="make"
-	else
-		MAKE_COMMAND="emake"
-	fi
-
-	pushd ${WORKDIR}/build
-	einfo "Running ${MAKE_COMMAND} LDFLAGS=\"${LDFLAGS}\" STAGE1_CFLAGS=\"${STAGE1_CFLAGS}\" LIBPATH=\"${LIBPATH}\" BOOT_CFLAGS=\"${BOOT_CFLAGS}\" ${GCC_MAKE_TARGET}"
-
-	${MAKE_COMMAND} LDFLAGS="${LDFLAGS}" STAGE1_CFLAGS="${STAGE1_CFLAGS}" \
-		LIBPATH="${LIBPATH}" BOOT_CFLAGS="${BOOT_CFLAGS} ${GCC_MAKE_TARGET}" \
-		|| die
-	popd
-}
-
-# This function will add ${PV} to the names of all shared libraries in the
-# directory specified to avoid filename collisions between multiple slotted 
-# non-versioned gcc targets. If no directory is specified, it is assumed that
-# you want -all- shared objects to have ${PV} added. Example
-#
-#	add_version_to_shared ${D}/usr/$(get_libdir)
-#
-# Travis Tilley <lv@gentoo.org> (05 Sep 2004)
-#
-add_version_to_shared() {
-	local sharedlib
-	if [ "$1" == "" ] ; then
-		local sharedlibdir="${D}"
-	else
-		local sharedlibdir="$1"
-	fi
-
-	for sharedlib in `find ${sharedlibdir} -name *.so.*` ; do
-		if [ ! -L "${sharedlib}" ] ; then
-			einfo "Renaming `basename "${sharedlib}"` to `basename "${sharedlib/.so*/}-${PV}.so.${sharedlib/*.so./}"`"
-			mv "${sharedlib}" "${sharedlib/.so*/}-${PV}.so.${sharedlib/*.so./}" \
-				|| die
-			pushd `dirname "${sharedlib}"` > /dev/null || die
-			ln -sf "`basename "${sharedlib/.so*/}-${PV}.so.${sharedlib/*.so./}"`" \
-				"`basename "${sharedlib}"`" || die
-			popd > /dev/null || die
-		fi
+fix_libtool_libdir_paths() {
+	local dirpath
+	for archive in ${*} ; do
+		dirpath=$(dirname ${archive} | sed -e "s:^${D}::")
+		sed -i ${archive} -e "s:^libdir.*:libdir=\'${dirpath}\':"
 	done
 }
-
-# This is mostly a stub function to be overwritten in an ebuild
-gcc_do_filter_flags() {
-	strip-flags
-
-	# In general gcc does not like optimization, and add -O2 where
-	# it is safe.  This is especially true for gcc 3.3 + 3.4
-	replace-flags -O? -O2
-
-	# ...sure, why not?
-	strip-unsupported-flags
-}
-
-gcc_src_compile() {
-	gcc_do_filter_flags
-	einfo "CFLAGS=\"${CFLAGS}\""
-	einfo "CXXFLAGS=\"${CXXFLAGS}\""
-
-	# Build in a separate build tree
-	mkdir -p ${WORKDIR}/build
-	pushd ${WORKDIR}/build > /dev/null
-
-	# Install our pre generated manpages if we do not have perl ...
-	if [ ! -x /usr/bin/perl -a "${GCC_MANPAGE_VERSION}" != "none" ] ; then
-		unpack gcc-${GCC_MANPAGE_VERSION}-manpages.tar.bz2 || \
-			die "Failed to unpack man pages"
-	fi
-
-	einfo "Configuring ${PN} ..."
-	gcc_do_configure
-
-	touch ${S}/gcc/c-gperf.h
-
-	# Do not make manpages if we do not have perl ...
-	if [ ! -x /usr/bin/perl ] ; then
-		find ${WORKDIR}/build -name '*.[17]' -exec touch {} \; || :
-	fi
-
-	einfo "Compiling ${PN} ..."
-	gcc_do_make ${GCC_MAKE_TARGET}
-
-	# Do not create multiple specs files for PIE+SSP if boundschecking is in
-	# USE, as we disable PIE+SSP when it is.
-	if [ "${ETYPE}" == "gcc-compiler" -a "${SPLIT_SPECS}" == "true" ]  && ! want_boundschecking ; then
-		split_out_specs_files || die "failed to split out specs"
-	fi
-
-	popd > /dev/null
-}
-
-gcc-library-src_install() {
-	einfo "Installing ${PN} ..."
-	# Do the 'make install' from the build directory
-	cd ${WORKDIR}/build
-	S="${WORKDIR}/build" \
-	make DESTDIR="${D}" \
-		prefix=${PREFIX} \
-		bindir=${BINPATH} \
-		includedir=${LIBPATH}/include \
-		datadir=${DATAPATH} \
-		mandir=${DATAPATH}/man \
-		infodir=${DATAPATH}/info \
-		LIBPATH="${LIBPATH}" \
-		${GCC_INSTALL_TARGET} || die
-
-	if [ "${GCC_LIB_COMPAT_ONLY}" == "true" ] ; then
-		rm -rf ${D}/${INCLUDEPATH}
-		rm -rf ${D}/${DATAPATH}
-		pushd ${D}/${LIBPATH}/
-		rm *.a *.la *.so
-		popd
-	fi
-
-	if [ -n "${GCC_LIB_USE_SUBDIR}" ] ; then
-		mkdir -p ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/
-		mv ${D}/${LIBPATH}/* ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/
-		mv ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/ ${D}/${LIBPATH}
-		
-		mkdir -p ${D}/etc/env.d/
-		echo "LDPATH=\"${LIBPATH}/${GCC_LIB_USE_SUBDIR}/\"" >> ${D}/etc/env.d/99${PN}
-	fi
-
-	if [ "${GCC_VAR_TYPE}" == "non-versioned" ] ; then
-		# if we're not using versioned directories, we need to use versioned
-		# filenames.
-		add_version_to_shared
-	fi
-}
-
-
