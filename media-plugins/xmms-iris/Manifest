@@ -1,6 +1,16 @@
-MD5 2878a571ea760fb05fd2967e41717651 ChangeLog 1760
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e4282148f114117dca4f84295f9ab262 ChangeLog 1993
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 37cf19ff18d0167234d6a1d9934edc6e xmms-iris-0.10.ebuild 748
-MD5 390c2e406cd87c9bf40102722a9186e3 xmms-iris-0.11.ebuild 772
-MD5 cd6c648ffd3710fc235c00df0f4aaa95 files/digest-xmms-iris-0.10 61
+MD5 d255c2bc46987ad649728383511c6b71 xmms-iris-0.12.ebuild 858
+MD5 c58129b3be644cc4f8e9bee9d6574442 xmms-iris-0.11.ebuild 856
+MD5 735a96a26b1298a28cac69a31351facf files/digest-xmms-iris-0.12 61
 MD5 067025435661205f5722a2ad5b133f1c files/digest-xmms-iris-0.11 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCSRcoArHZZzCEUG0RArt6AJ418T0y5mFP+5LQf4rgE46wcawFewCgibPU
+7HfDeo10lTp5zh7Tgwu8AwQ=
+=gStp
+-----END PGP SIGNATURE-----

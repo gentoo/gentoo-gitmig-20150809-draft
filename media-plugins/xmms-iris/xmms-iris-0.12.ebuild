@@ -1,8 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-iris/xmms-iris-0.10.ebuild,v 1.8 2004/06/24 23:41:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-iris/xmms-iris-0.12.ebuild,v 1.1 2005/03/29 08:51:33 eradicator Exp $
 
 IUSE=""
+
+inherit toolchain-funcs
 
 MY_P=${P/xmms-/}
 S=${WORKDIR}/${MY_P}
@@ -12,17 +14,17 @@ HOMEPAGE="http://cdelfosse.free.fr/xmms-iris/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+#-sparc: 0.11: enabling causes xmms to segfault - eradicator
+KEYWORDS="~amd64 ~ppc -sparc ~x86"
 
 DEPEND="virtual/opengl
 	=x11-libs/gtk+-1.2*
-	>=media-sound/xmms-1.2.6-r1"
+	>=media-sound/xmms-1.2.6"
 
 src_compile() {
-	econf || die
-	emake || die
+	econf
+	emake CC="$(tc-getCC)" || die
 }
-
 
 src_install () {
 	dodir /usr/lib/xmms/Visualization
