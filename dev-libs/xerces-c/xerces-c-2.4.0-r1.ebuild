@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.4.0-r1.ebuild,v 1.1 2004/02/17 00:07:59 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.4.0-r1.ebuild,v 1.2 2004/02/22 15:45:22 brad_mssw Exp $
 
 MY_PV=${PV//./_}
 
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc
 		doc? ( app-doc/doxygen )"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc amd64"
 IUSE="doc"
 
 S=${WORKDIR}/${PN}-src${MY_PV}
