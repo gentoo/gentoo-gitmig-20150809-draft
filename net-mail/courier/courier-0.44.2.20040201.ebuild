@@ -2,26 +2,27 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /home/cvsroot/gentoo-x86/net-mail/courier/courier-0.41.0.ebuild
 
-inherit flag-o-matic eutils
+#inherit flag-o-matic eutils
 
-filter-flags -fomit-frame-pointer
-filter-flags -funroll-loops
+#filter-flags -fomit-frame-pointer
+#filter-flags -funroll-loops
 
 DESCRIPTION="An MTA designed specifically for maildirs"
-SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
+SRC_URI="http://www.courier-mta.org/beta/courier/${P}.tar.bz2"
 HOMEPAGE="http://www.courier-mta.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc -sparc ~ia64 -amd64"
-IUSE="tcltk postgres ldap mysql pam nls tcltk ipv6 spell fax crypt"
+KEYWORDS="~x86"
+IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt"
 
 PROVIDE="virtual/mta
 	 virtual/imapd"
 
-RDEPEND="virtual/glibc
+DEPEND="virtual/glibc
 	>=dev-libs/openssl-0.9.6
 	>=sys-libs/gdbm-1.8.0
+	>=dev-tcltk/expect-5.33.0
 	crypt? ( >=app-crypt/gnupg-1.0.4 )
 	fax? (	>=media-libs/netpbm-9.12
 		virtual/ghostscript
@@ -33,21 +34,10 @@ RDEPEND="virtual/glibc
 	spell? ( virtual/aspell-dict )
 	!virtual/imapd"
 
-	# Removed these from RDEP until the tcltk situation is clarified.
-	# They are only necessary for non-virtual users to be able to change
-	# passwords via webmail. Hopefully not a highly used feature.
-	#>=dev-tcltk/expect-5.33.0
-	#tcltk? ( >=dev-tcltk/expect-5.33.0 )
-
-DEPEND="${RDEPEND}
+RDEPEND="${DEPEND}
 	app-admin/fam
 	dev-lang/perl
 	sys-apps/procps"
-
-src_unpack() {
-	unpack ${A} ; cd ${S}
-	epatch ${FILESDIR}/gentoo.diff.bz2
-}
 
 src_compile() {
 	local myconf
@@ -165,10 +155,6 @@ src_install() {
 	make install DESTDIR=${D} || die
 	# fix bug #15873 bad owner on /var/run/courier
 	diropts -o mail -g mail
-	keepdir /var/run/courier
-	# make install creates a ton of dirs that we want to keep
-	# and we don't want to run keepdir 900 times
-	#find ${D} -type d -exec touch {}/.keep \;
 	for dir2keep in `(cd ${D} && find . -type d)` ; do
 		keepdir $dir2keep || die "failed running keepdir: $dir2keep"
 	done
@@ -219,6 +205,8 @@ src_install() {
 
 	# fixes bug #25028 courier doesn't symlink sendmail to /usr/sbin
 	dosym /usr/bin/sendmail /usr/sbin/sendmail
+
+	echo "MAILDIR=\$HOME/.maildir" >> ${D}/etc/courier/courierd
 }
 
 pkg_preinst() {
@@ -263,7 +251,7 @@ pkg_postinst() {
 	# old portages
 	/etc/init.d/depscan.sh
 
-	einfo "The following command will setup courier for you system:"
+	einfo "The following command will setup courier for your system:"
 	einfo "ebuild /var/db/pkg/${CATEGORY}/${PN}-${PV}/${PN}-${PV}.ebuild config"
 	echo
 	einfo "To enable webmail/webadmin, run the following commands:"
@@ -271,7 +259,7 @@ pkg_postinst() {
 	einfo "$ chmod a+rx /usr/lib/courier/courier/webmail"
 	einfo "Then visit: http(s)://localhost/courier/webmail"
 	echo
-	einfo "imap behavior has changed, you may need to have you imap clients logoff"
+	einfo "imap behavior has changed, you may need to have your imap clients logoff"
 	einfo "and back on again"
 	echo
 	echo
