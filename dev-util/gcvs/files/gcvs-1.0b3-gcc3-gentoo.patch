@@ -1,0 +1,12 @@
+diff -ur gcvs-1.0b3.orig/common/UCvsFolders.cpp gcvs-1.0b3/common/UCvsFolders.cpp
+--- gcvs-1.0b3.orig/common/UCvsFolders.cpp	2002-01-03 02:29:18.000000000 -0600
++++ gcvs-1.0b3/common/UCvsFolders.cpp	2002-07-24 20:52:19.000000000 -0500
+@@ -865,7 +865,7 @@
+ 	} while(item != 0L);
+ }
+ 
+-void UCvsFolders::DeleteAllItems(UTREEITEM root = 0L)
++void UCvsFolders::DeleteAllItems(UTREEITEM root)
+ {
+ 	// we don't want the file view to be notified when things get deleted
+ 	CTempToggleBool toggler(sTemporaryTurnOffNotify);
