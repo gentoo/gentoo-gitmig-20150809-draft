@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020710-r1.ebuild,v 1.6 2002/07/28 04:29:17 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020710-r1.ebuild,v 1.7 2002/08/02 14:36:01 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Wine is a free implementation of Windows on Unix."
@@ -82,6 +82,8 @@ src_install () {
 	doins ${S}/winedefault.reg
 	
 	dodir /etc/skel/.wine
+	insinto /etc/wine
+	doins ${S}/documentation/samples/config
 	dosym /etc/wine/config /etc/skel/.wine/config
 	
 	insinto /etc/env.d
