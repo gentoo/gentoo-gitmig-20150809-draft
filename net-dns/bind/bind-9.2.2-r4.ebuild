@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2-r4.ebuild,v 1.2 2004/06/24 22:33:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2-r4.ebuild,v 1.3 2004/07/14 23:18:19 agriffis Exp $
 
 inherit eutils
 
-IUSE="ssl ipv6 doc mysql"
+IUSE="doc ipv6 mysql selinux ssl"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz ftp://ftp.isc.org/isc/bind9/${PV}/patch.${PV}-P1"
@@ -175,4 +175,3 @@ pkg_config() {
 		einfo
 	fi
 }
-

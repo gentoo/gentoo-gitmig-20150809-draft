@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.0_rc2.ebuild,v 1.1 2004/07/11 13:35:37 jforman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.0_rc2.ebuild,v 1.2 2004/07/14 23:18:19 agriffis Exp $
 
-IUSE="ssl ipv6 doc caps"
+IUSE="caps doc ipv6 selinux ssl"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 MY_P="${P/_/}"

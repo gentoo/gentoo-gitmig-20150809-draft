@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2.ebuild,v 1.13 2004/06/24 22:33:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2.ebuild,v 1.14 2004/07/14 23:18:19 agriffis Exp $
 
-IUSE="ssl ipv6 doc"
+IUSE="doc ipv6 selinux ssl"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz"
