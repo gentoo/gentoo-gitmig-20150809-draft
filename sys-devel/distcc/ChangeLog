@@ -1,7 +1,16 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.19 2003/02/12 09:14:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.20 2003/02/13 23:00:18 zwelch Exp $
 
+*distcc-1.1-r8 (10 Feb 2003)
+  
+  10 Feb 2003; Zach Welch <zwelch@gentoo.org> :
+  Includes wrapper-1.1.patch from bug 13897; now installs symlinks
+  in /usr/lib/distcc/bin to gcc, g++, and others.  Users should no 
+  longer set CC or CXX to distcc; instead, for non-portage builds,
+  set PATH="/usr/lib/distcc/bin:$PATH".  See the follow for more info:
+  http://gentoo.superlucidity.net/www/distcc.html
+  
 *distcc-1.1 (26 Jan 2003)
 
   26 Jan 2003; Brad Cowan <bcowan@gentoo.org> distcc-1.1.ebuild,
