@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.33.ebuild,v 1.2 2005/01/02 23:52:22 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.33.ebuild,v 1.3 2005/01/03 14:18:58 vapier Exp $
 
 DESCRIPTION="control and monitor storage systems using the Self-Monitoring, Analysis and Reporting Technology System (S.M.A.R.T.)"
 HOMEPAGE="http://smartmontools.sourceforge.net/"
@@ -11,14 +11,19 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
+RDEPEND=""
+DEPEND=">=sys-apps/portage-2.0.51"
+
 src_install() {
 	dosbin smart{ctl,d} || die "dosbin"
 	doman *.[58]
 	dodoc AUTHORS CHANGELOG NEWS README TODO WARNINGS
+	newdoc smartd.conf smartd.conf.example
 
 	insinto /etc
 	doins smartd.conf
 
-	exeinto /etc/init.d; newexe ${FILESDIR}/smartd.rc smartd
-	insinto /etc/conf.d; newins ${FILESDIR}/smartd.confd smartd
+	dodir /etc/init.d /etc/conf.d
+	newinitd ${FILESDIR}/smartd.rc smartd
+	newconfd ${FILESDIR}/smartd.confd smartd
 }
