@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.2.ebuild,v 1.8 2001/10/06 17:22:52 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.5.ebuild,v 1.1 2001/10/30 05:55:12 drobbins Exp $
 
-SV=1.1.5
+SV=1.1.8
 S=${WORKDIR}/rc-scripts-${SV}
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts)"
 SRC_URI="http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
@@ -96,7 +96,7 @@ src_install()
 		#end FHS compatibility symlinks stuff
 		
 		doman ${FILESDIR}/MAKEDEV.8
-		dodoc ${FILESDIR}/copyright ${FILESDIR}/changelog.Debian
+		dodoc ${FILESDIR}/copyright 
 		keepdir /usr/X11R6/lib /usr/X11R6/man
 		keepdir /var/log/news
 		
@@ -213,6 +213,10 @@ src_install()
 			[ -e ${S}/init.d/${bar} ] && dosym /etc/init.d/${bar} /etc/runlevels/${foo}/${bar}
 		done
 	done
+
+	cat << EOF >> ${D}/etc/hosts
+127.0.0.1	localhost
+EOF
 }
 
 pkg_postinst() {
