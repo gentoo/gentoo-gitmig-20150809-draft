@@ -1,8 +1,11 @@
 # ChangeLog for net-dialup/wvdial
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.9 2003/05/23 07:55:36 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.10 2003/07/28 15:57:14 gmsoft Exp $
 
 *wvdial-1.53-r1 (10 Dec 2002)
+
+  28 Jul 2003; Guy Martin <gmsoft@gentoo.org> wvdial-1.53-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   23 May 2003; Chuck Brewer <killian@gentoo.org>:
   Added manifest.

@@ -1,4 +1,4 @@
-MD5 59638980fae8976a1d238564fedf15cb wvdial-1.53-r1.ebuild 1022
-MD5 d478c04b7de9aec5b77df28a7f11cd27 ChangeLog 1432
-MD5 10b5850b5a52a665bc8cb8ffc7b06bd9 files/wvdial-1.53-crypt.patch 381
+MD5 e5213984c7d3c8779ef382ea4c79a9c2 ChangeLog 1529
+MD5 b070ec7810f53a9ff9dd1847bc2e8466 wvdial-1.53-r1.ebuild 1027
 MD5 dd6d40650ac9dab6a45f71a9cadbc7a9 files/digest-wvdial-1.53-r1 62
+MD5 10b5850b5a52a665bc8cb8ffc7b06bd9 files/wvdial-1.53-crypt.patch 381

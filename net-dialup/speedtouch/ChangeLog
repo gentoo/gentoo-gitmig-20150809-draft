@@ -1,8 +1,11 @@
 # ChangeLog for net-dialup/speedtouch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.6 2003/05/26 01:21:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.7 2003/07/28 15:59:10 gmsoft Exp $
 
 *speedtouch-1.2_beta1 (25 May 2003)
+
+  28 Jul 2003; Guy Martin <gmsoft@gentoo.org> speedtouch-1.2_beta1.ebuild :
+  Added hppa to KEYWORDS.
 
   25 May 2003; Luca Barbato <lu_zero@gentoo.org> speedtouch-1.2_beta1.ebuild :
   New Version, should support more models. Filtered some flags that break on 
