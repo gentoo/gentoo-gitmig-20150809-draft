@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e3f59fbac4340fb90879f5ec715bc798 msmtp-1.2.3.ebuild 1218
-MD5 1a75095adfea2f32fbb1cc4c37f08e25 ChangeLog 3147
 MD5 570c3b91cefa46a71ea570343906ccc3 metadata.xml 247
-MD5 e8deb22f82de9c58052007eb32847187 msmtp-1.2.4.ebuild 1155
-MD5 0553a19313bf7527b1bbb9e1539f2021 files/digest-msmtp-1.2.4 63
+MD5 95758f8e1993de9fedd95ed6e991cb3a ChangeLog 3258
+MD5 38eb9eeeceb6a02b72eb34fbea661f41 msmtp-1.2.4.ebuild 1163
+MD5 e3f59fbac4340fb90879f5ec715bc798 msmtp-1.2.3.ebuild 1218
 MD5 7c72ffdb691739c7e527ec1c06c22efd files/digest-msmtp-1.2.3 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBwEQtQlM6RnzZP+IRAvMgAJ9dy4Cz1mk0cN+kkK1Fr7ZV88AckQCgtpH6
-vX5BFDe6xkMFRImprtWCQB4=
-=g2hr
------END PGP SIGNATURE-----
+MD5 0553a19313bf7527b1bbb9e1539f2021 files/digest-msmtp-1.2.4 63
