@@ -1,6 +1,18 @@
-MD5 cf7620cff23f61fdfd8f81088ab65919 ChangeLog 1219
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d2d77c97aedad8f9e468b86e9d487380 ChangeLog 1360
+MD5 366728604e0665d8c26c378cb910aa1b latex-unicode-20041017.ebuild 1484
 MD5 a43370bbb57cb967dbffe1a084475550 metadata.xml 181
 MD5 646c92b54140253ceb1a12f8a9d7014c latex-unicode-20040307.ebuild 1484
 MD5 ebb84301159d80faf1833c08fbdfe57a latex-unicode-20030605.ebuild 1184
 MD5 ee773e58992bb7ec580593e339d568cc files/digest-latex-unicode-20030605 75
 MD5 aae1bb411ff5864dfeb2a27c6fe77400 files/digest-latex-unicode-20040307 135
+MD5 2ac41b92ccce38450eb50ec24d35b7ec files/digest-latex-unicode-20041017 135
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBm2IUVWNWqTUmv+0RAu04AJ434iWuMv4EGSn0foiqS7IQTBCV9wCfZKjH
+i6hdCFZlUFvxkIrcmSnRqRg=
+=ghxF
+-----END PGP SIGNATURE-----
