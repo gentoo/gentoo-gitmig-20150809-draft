@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libelysium
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysium/ChangeLog,v 1.2 2003/06/20 04:19:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysium/ChangeLog,v 1.3 2003/06/20 08:49:00 liquidx Exp $
+
+  20 Jun 2003; Alastair Tse <liquidx@gentoo.org> libelysium-0.99.5.ebuild:
+  not a gnome2 package, so shouldn't inherit gnome2. also added deps
 
 *libelysium-0.99.5 (01 May 2003)
 
