@@ -1,7 +1,13 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.2 2002/02/07 06:50:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.3 2002/03/21 16:33:20 seemant Exp $
 
+*libsdl-1.2.3-r1 (21 Mar 2002)
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> libsdl-1.2.3-r1.ebuild :
+
+  HTML documentation no longer gzipped.
+  
 *libsdl-1.2.3-r1 (6 Feb 2002)
 
   6 Feb 2002; Daniel Robbins <drobbins@gentoo.org> libsdl-1.2.3-r1.ebuild: 

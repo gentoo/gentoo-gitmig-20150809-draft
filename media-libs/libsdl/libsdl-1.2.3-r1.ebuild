@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.3-r1.ebuild,v 1.1 2002/02/07 06:50:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.3-r1.ebuild,v 1.2 2002/03/21 16:33:20 seemant Exp $
 
 S=${WORKDIR}/SDL-${PV}
 DESCRIPTION="Simple Direct Media Layer"
@@ -116,8 +116,5 @@ src_install() {
 	make DESTDIR=${D} install || die
 	preplib /usr
 	dodoc BUGS COPYING CREDITS README* TODO WhatsNew
-	docinto html
-	dodoc *.html
-	docinto html/docs
-	dodoc docs/*.html
+	dohtml -r ./
 }
