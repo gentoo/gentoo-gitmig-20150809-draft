@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11o-r3.ebuild,v 1.13 2003/02/13 16:21:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11o-r3.ebuild,v 1.14 2003/03/11 06:21:01 seemant Exp $
+
+inherit eutils
 
 IUSE="nls"
 
@@ -24,7 +26,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${WORKDIR}
 	cd ${S}
-	gunzip -c ${DISTDIR}/${P}.patch.gz | patch -p0
+	epatch ${DISTDIR}/${P}.patch.gz
 	cp MCONFIG MCONFIG.orig
 	sed -e "s:-pipe -O2 \$(CPUOPT) -fomit-frame-pointer:${CFLAGS}:" \
 		-e "s:CPU=.*:CPU=${CHOST%%-*}:" \
