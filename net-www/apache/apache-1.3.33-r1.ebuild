@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.13 2005/03/20 21:10:44 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.14 2005/03/20 21:20:17 beu Exp $
 
 # Gentoo ARCH teams
 #
@@ -51,7 +51,7 @@ src_unpack() {
 	cd ${S} || die
 
 	EPATCH_SUFFIX="patch"
-	epatch ${WORKDIR}/apache-patches-${PVR} || die
+	epatch ${WORKDIR}/apache-patches-1.3.33 || die
 
 	#Obsolete 'head -1' and 'tail -1' calls.
 	ht_fix_file src/Configure src/helpers/getuid.sh \
