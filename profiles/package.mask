@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <chadh@gentoo.org> (23 Jan 2003)
+# new pcmcia-cs ebuilds need testing and acceptance
+=sys-apps/pcmcia-cs-tools
+=sys-app/pcmcia-cs-drivers
+
 
 # <lu_zero@gentoo.org> (23 Jan 2003)
 #Not enough mature
