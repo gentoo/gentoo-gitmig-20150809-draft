@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.8j.ebuild,v 1.11 2005/01/02 06:45:19 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/gnuplot-3.8j.ebuild,v 1.12 2005/02/02 23:13:54 j4rg0n Exp $
 
 MY_P="${P}.0"
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz"
 
 LICENSE="gnuplot"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc alpha amd64 ia64 ppc64"
+KEYWORDS="x86 ppc ~sparc alpha amd64 ia64 ppc64 ~ppc-macos"
 IUSE="X readline svga plotutils pdflib doc"
 
 # Old png driver seems to have problems; switching to gd instead
