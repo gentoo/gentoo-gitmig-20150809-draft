@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.9-r1.ebuild,v 1.5 2005/01/31 15:21:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.9-r1.ebuild,v 1.6 2005/02/04 00:08:25 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -25,7 +25,7 @@ src_unpack() {
 		-e "/^@setfilename/s|automake|automake${SLOT}|" \
 		-e "s|automake: (automake)|automake v${SLOT}: (automake${SLOT})|" \
 		-e "s|aclocal: (automake)|aclocal v${SLOT}: (automake${SLOT})|" \
-		automake.texi || die "sed failed"
+		automake.texi || die "sed texi failed"
 	epatch ${FILESDIR}/${P}-infopage-namechange.patch
 	gnuconfig_update
 	export WANT_AUTOCONF=2.5
@@ -36,7 +36,7 @@ src_install() {
 	rm -f "${D}"/usr/bin/{aclocal,automake}
 
 	dodoc NEWS README THANKS TODO AUTHORS ChangeLog
-	mv "${D}"/usr/share/info/automake{,${SLOT}}.info
+	doinfo automake${SLOT}.info
 
 	# remove all config.guess and config.sub files replacing them
 	# w/a symlink to a specific gnuconfig version

@@ -1,37 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 483caed603678b6f138a329b05d49498 ChangeLog 11823
 MD5 0c979821ecc4b3f4d7cc87a91bc5063c automake-1.4_p6.ebuild 1824
-MD5 8b7414008b90a3bdf53b79496f354b92 automake-1.9.4.ebuild 1481
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 4b7fb66c05ba72ca9364bc82defad76b automake-1.5.ebuild 1647
 MD5 2ff7877afe3b68c8c3e89c3f00ce2558 automake-1.6.3.ebuild 1450
+MD5 5d0aeacd89d7a6335b82c2e1464c1bb1 automake-1.8.5-r3.ebuild 1517
 MD5 5eb69c185025d1b2ce1eb295119e04ba automake-1.8.5-r1.ebuild 12921
-MD5 483caed603678b6f138a329b05d49498 ChangeLog 11823
-MD5 1c7fe4f2448493fd7788beb479ae4dc4 automake-1.8.5-r3.ebuild 1583
-MD5 979d71329909f38c31ce9ad73c6d1d3e automake-1.7.9-r1.ebuild 1538
-MD5 b04899a3860b0623bd45c705258ceabd files/automake-1.4-ansi2knr-stdlib.patch 249
-MD5 dc11390dc4c156e317629428080cbbad files/digest-automake-1.9.4 67
-MD5 91bfbe9a39ed2eee6bfa0254bad56d5d files/automake-1.4-libtoolize.patch 542
-MD5 a4327436d159f9262364994c88489ee6 files/automake-1.4-subdirs-89656.patch 944
-MD5 fbf3743bc8590dcb5bd34c675cb9d9f0 files/automake-1.5-target_hook.patch 1132
-MD5 9587f00ace066c11b5c22d72afe630a9 files/automake-1.8.2-infopage-namechange.patch 1131
-MD5 252f1212a83cc74c42cd557bc3f65e32 files/digest-automake-1.4_p6 67
+MD5 e126918fe3bc5c8a45171202a7150272 automake-1.7.9-r1.ebuild 1520
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 3c2e80e8c0f48f3c7e2f18b0eca55d35 automake-1.9.4.ebuild 1415
 MD5 a56b2416416ab1f0bdc71cb7ab0454d6 files/automake-1.5-slot.patch 1191
-MD5 5c2fe79f8f664efdb7e2736e88c10f09 files/automake-1.5-test-fixes.patch 2303
-MD5 e93136e02eb000c938f564484d306d76 files/automake-1.7.9-infopage-namechange.patch 592
-MD5 a591fd70f20b40a46667f57326ad4b7c files/digest-automake-1.6.3 67
-MD5 61706a6ada025b2f032fb24668457cef files/digest-automake-1.5 64
+MD5 252f1212a83cc74c42cd557bc3f65e32 files/digest-automake-1.4_p6 67
+MD5 91bfbe9a39ed2eee6bfa0254bad56d5d files/automake-1.4-libtoolize.patch 542
+MD5 fbf3743bc8590dcb5bd34c675cb9d9f0 files/automake-1.5-target_hook.patch 1132
 MD5 2b5aa34b9c688d919f6b06df0c428cc4 files/am-wrapper.pl 6165
-MD5 d576cbc9cda51d6288db8b8569eb9e2a files/automake-1.8.5-config-guess-uclibc.patch 4693
+MD5 61706a6ada025b2f032fb24668457cef files/digest-automake-1.5 64
+MD5 a591fd70f20b40a46667f57326ad4b7c files/digest-automake-1.6.3 67
 MD5 0fe9854b3a6384ef4c7b0bd2bad72c59 files/digest-automake-1.8.5-r3 67
-MD5 7abe94459d460b0af03ee8720383607b files/digest-automake-1.8.5-r1 332
 MD5 29dec70b283dffd42358d3643b1754c3 files/digest-automake-1.7.9-r1 67
+MD5 dc11390dc4c156e317629428080cbbad files/digest-automake-1.9.4 67
+MD5 7abe94459d460b0af03ee8720383607b files/digest-automake-1.8.5-r1 332
 MD5 4c0ad89956f0b70972c19a60c65f9275 files/automake-1.9.3-infopage-namechange.patch 1109
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB/kz4KRy60XGEcJIRAoyNAJ9D1dGHQSqkIgYi5go5ZZG7OACwiQCcD3JS
-lxVoulsmm0FAFUaZnXPg16U=
-=gM5E
------END PGP SIGNATURE-----
+MD5 b04899a3860b0623bd45c705258ceabd files/automake-1.4-ansi2knr-stdlib.patch 249
+MD5 e93136e02eb000c938f564484d306d76 files/automake-1.7.9-infopage-namechange.patch 592
+MD5 9587f00ace066c11b5c22d72afe630a9 files/automake-1.8.2-infopage-namechange.patch 1131
+MD5 a4327436d159f9262364994c88489ee6 files/automake-1.4-subdirs-89656.patch 944
+MD5 d576cbc9cda51d6288db8b8569eb9e2a files/automake-1.8.5-config-guess-uclibc.patch 4693
+MD5 5c2fe79f8f664efdb7e2736e88c10f09 files/automake-1.5-test-fixes.patch 2303
