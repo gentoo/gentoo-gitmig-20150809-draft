@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.18.ebuild,v 1.5 2005/02/03 17:39:00 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.18.ebuild,v 1.6 2005/03/28 14:27:51 gustavoz Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.jcraft.com/jsch/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV}.zip"
 LICENSE="jcraft"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc ~sparc ppc64"
+KEYWORDS="x86 amd64 ~ppc sparc ppc64"
 IUSE="doc jikes"
 
 DEPEND=">=virtual/jdk-1.4
