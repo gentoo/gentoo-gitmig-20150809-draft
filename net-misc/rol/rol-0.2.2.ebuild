@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rol/rol-0.2.2.ebuild,v 1.12 2004/07/15 03:24:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rol/rol-0.2.2.ebuild,v 1.13 2004/12/16 01:47:53 ticho Exp $
 
 DESCRIPTION="A RSS/RDF Newsreader"
 HOMEPAGE="http://unknown-days.com/rol/"
@@ -16,6 +16,12 @@ DEPEND="virtual/x11
 	dev-libs/libxml
 	>=x11-libs/gtk+-2.0.9
 	>=gnome-base/gconf-2"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i -e "s:-DGTK_DISABLE_DEPRECATED ::" src/Makefile
+}
 
 src_compile() {
 	emake || die
