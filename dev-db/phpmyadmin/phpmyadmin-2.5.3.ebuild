@@ -1,8 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.3.ebuild,v 1.2 2003/09/10 20:21:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.3.ebuild,v 1.3 2003/09/11 21:08:04 twp Exp $
 
 inherit eutils
+inherit webapp-apache
 
 MY_P=phpMyAdmin-${PV/_p/-pl}
 DESCRIPTION="Web-based administration for MySQL database in PHP"
@@ -16,6 +17,22 @@ DEPEND=">=net-www/apache-1.3
 	>=dev-php/mod_php-3.0.8
 	sys-apps/findutils"
 S=${WORKDIR}/${MY_P}
+
+webapp-detect || NO_WEBSERVER=1
+
+pkg_setup() {
+	webapp-pkg_setup "${NO_WEBSERVER}"
+
+	if [ -d ${HTTPD_ROOT}/phpmyadmin ] ; then
+		echo ""
+		eerror "phpmyadmin directory detected in ${HTTPD_ROOT}."
+		eerror "You must unmerge your older version first,"
+		eerror "and remove the directory before continuing."
+		die "Will not overwrite previous installation."
+	fi
+
+	einfo "Installing into ${HTTPD_ROOT}."
+}
 
 src_unpack() {
 	unpack ${A}
@@ -33,7 +50,7 @@ src_compile() {
 
 src_install() {
 
-	local DocumentRoot=/home/httpd/htdocs
+	local DocumentRoot=${HTTPD_ROOT}
 	local destdir=${DocumentRoot}/phpmyadmin
 	local docs="ANNOUNCE.txt CREDITS Documentation.txt README RELEASE-DATE-${PV} TODO"
 
@@ -78,7 +95,8 @@ pkg_postinst() {
 }
 
 pkg_config() {
+	einfo "This will execute the contents of ${ROOT}etc/phpmyadmin/mysql-setup.sql"
 	einfo "Type in your MySQL root password:"
-	mysql -u root -p < ${ROOT}/etc/phpmyadmin/mysql-setup.sql || die
+	mysql -u root -p < ${ROOT}etc/phpmyadmin/mysql-setup.sql || die
 	einfo "You need to reload MySQL for the changes to take effect"
 }
