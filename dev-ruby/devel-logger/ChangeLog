@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/devel-logger
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/devel-logger/ChangeLog,v 1.4 2004/04/10 08:38:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/devel-logger/ChangeLog,v 1.5 2004/04/10 22:48:02 dholm Exp $
+
+  11 Apr 2004; David Holm <dholm@gentoo.org> devel-logger-1.0.1-r1.ebuild:
+  Added to ~ppc.
 
 *devel-logger-1.0.1-r1 (10 Apr 2004)
 
