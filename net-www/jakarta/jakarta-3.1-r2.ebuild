@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/jakarta/jakarta-3.1-r2.ebuild,v 1.1 2001/01/16 00:36:21 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jakarta/jakarta-3.1-r2.ebuild,v 1.2 2001/01/19 22:07:16 achim Exp $
 
 P=jakarta-3.1
 A="jakarta-tomcat.tar.gz jakarta-ant.tar.gz"
@@ -47,7 +47,7 @@ src_install() {
   insinto /usr/lib/apache
   doins ${S}/jakarta-tomcat/src/native/apache/jserv/mod_jserv.so
   insinto /etc/httpd
-  doins ${O}/files/tomcat.conf
+  doins ${O}/files/httpd.tomcat
   insinto /etc/rc.d/init.d
   insopts -m755
   doins ${O}/files/jakarta
