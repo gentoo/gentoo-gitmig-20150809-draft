@@ -1,0 +1,11 @@
+--- util-linux-2.12a/mount/mount.c.sopwith	2004-03-04 20:28:22.000000000 -0500
++++ util-linux-2.12a/mount/mount.c	2004-07-16 16:50:18.792814782 -0400
+@@ -191,6 +191,8 @@
+   { "diratime",	0, 1, MS_NODIRATIME },	/* Update dir access times */
+   { "nodiratime", 0, 0, MS_NODIRATIME },/* Do not update dir access times */
+ #endif
++  { "kudzu", 0, 0, 0 },			/* Silently remove this option (backwards compat use only) */
++  { "managed", 0, 0, 0 },			/* Silently remove this option */
+   { NULL,	0, 0, 0		}
+ };
+ 

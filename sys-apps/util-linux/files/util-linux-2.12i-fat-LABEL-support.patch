@@ -1,0 +1,69 @@
+--- mount-2.12-fat.patch.orig	2004-11-11 20:16:07.165232227 -0500
++++ mount-2.12-fat.patch	2004-11-11 20:18:47.717923660 -0500
+@@ -1,11 +1,10 @@
+ diff -uNr util-linux-2.12/mount/get_label_uuid.c ../patch/util-linux-2.12/mount/get_label_uuid.c
+ --- util-linux-2.12/mount/get_label_uuid.c	2002-11-26 12:18:01.000000000 +0100
+ +++ ../patch/util-linux-2.12/mount/get_label_uuid.c	2003-10-20 18:27:56.000000000 +0200
+-@@ -43,7 +43,139 @@
+- #endif
++@@ -43,6 +43,137 @@
++ 	return rc;
+  }
+  
+--/* for now, only ext2, ext3, xfs, ocfs are supported */
+ +/* Remove trailing spaces */
+ +static void remtrailspc(char *label) {
+ +    char *c;
+@@ -137,29 +136,23 @@
+ +    return -1;
+ +}
+ +
+-+
+-+/* for now, only ext2, ext3, xfs, ocfs, fat, fat32 are supported */
+- int
+- get_label_uuid(const char *device, char **label, char *uuid) {
+- 	int fd;
+-@@ -54,8 +186,10 @@
+- 	struct jfs_super_block jfssb;
+- 	struct ocfs_volume_header ovh;	/* Oracle */
++ /*
++  * Get both label and uuid.
++  * For now, only ext2, ext3, xfs, ocfs, ocfs2, reiserfs are supported
++@@ -54,6 +186,8 @@
+  	struct ocfs_volume_label olbl;
++ 	struct ocfs2_super_block osb;
++ 	struct reiserfs_super_block reiserfssb;
+ +        struct fat_super_block fatsb;
+ +        struct fat32_super_block fat32sb;
+  
+--	fd = open(device, O_RDONLY);
+-+        fd = open(device, O_RDONLY);
++ 	fd = open(device, O_RDONLY);
+  	if (fd < 0)
+- 		return rv;
+- 
+-@@ -111,7 +245,87 @@
+- 			    memcpy(*label, jfssb.s_label, namesize);
++@@ -111,6 +245,87 @@
+  		}
+  		rv = 0;
+--	}
+-+        } else if (lseek(fd, 0, SEEK_SET) == 0
++ 	}
+++        else if (lseek(fd, 0, SEEK_SET) == 0
+ +                   && read(fd, (char*) &fat32sb, sizeof(fat32sb)) == sizeof(fat32sb)
+ +                   && fat32sb.s_sig[0] == 0x55
+ +                   && fat32sb.s_sig[1] == 0xAA
+@@ -240,9 +233,9 @@
+ +                rv = 0;
+ +            }
+ +        }
+- 
+- 	close(fd);
+- 	return rv;
++ 	else if (lseek(fd, REISERFS_DISK_OFFSET_IN_BYTES, SEEK_SET)
++ 		 == REISERFS_DISK_OFFSET_IN_BYTES
++ 	    && read(fd, (char *) &reiserfssb, sizeof(reiserfssb))
+ diff -uNr util-linux-2.12/mount/linux_fs.h ../patch/util-linux-2.12/mount/linux_fs.h
+ --- util-linux-2.12/mount/linux_fs.h	2003-07-05 22:16:32.000000000 +0200
+ +++ ../patch/util-linux-2.12/mount/linux_fs.h	2003-10-20 18:07:06.000000000 +0200
