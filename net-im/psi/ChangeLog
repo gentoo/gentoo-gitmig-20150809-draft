@@ -1,6 +1,12 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.18 2003/10/21 00:56:16 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.19 2003/10/24 16:50:42 hanno Exp $
+
+*psi-0.9-r1 (24 Oct 2003)
+
+  24 Oct 2003; Hanno Boeck <hanno@gentoo.org> psi-0.9-r1.ebuild,
+  files/psi_gpg_fix:
+  Fix for latest gnupg versions, provided by Martin Ehmsen in bug 27359.
 
   21 Oct 2003; Luke-Jr <luke-jr@gentoo.org> psi-0.9.ebuild,
   files/gen2-branding-0.9.patch:
