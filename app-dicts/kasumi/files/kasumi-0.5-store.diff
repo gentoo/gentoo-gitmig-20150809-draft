@@ -1,0 +1,11 @@
+--- KasumiDic.cxx	5 Nov 2004 08:44:35 -0000	1.3
++++ KasumiDic.cxx	6 Nov 2004 06:47:15 -0000	1.4
+@@ -130,6 +130,8 @@
+   for(i=0; i<WordList.size(); i++){
+     ostringstream ostr;
+ 
++    if(WordList[i] == NULL)
++      continue;
+     ret += WordList[i]->getSound() + " ";
+     ostr << WordList[i]->getFrequency();
+     ret += ostr.str() + " ";
