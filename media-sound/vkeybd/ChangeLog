@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/vkeybd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/ChangeLog,v 1.10 2004/02/01 11:52:58 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/ChangeLog,v 1.11 2004/04/01 08:42:06 eradicator Exp $
+
+  01 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  vkeybd-0.1.13-r1.ebuild, vkeybd-0.1.15.ebuild:
+  inherit eutils.  Stable on x86.
 
   01 Feb 2004; Brian Harring <ferringb@gentoo.org> vkeybd-0.1.12.ebuild,
   vkeybd-0.1.13-r1.ebuild, vkeybd-0.1.15.ebuild, 
