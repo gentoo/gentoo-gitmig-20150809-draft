@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.851 2005/01/09 00:53:44 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.852 2005/01/09 18:32:31 kumba Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -707,11 +707,13 @@ sys-devel/gcc:boundschecking - enable HTB (Haj Ten Brugge) runtime bounds checki
 sys-devel/gcc:fortran - Build support for the fortran language
 sys-devel/gcc:gcj - Build gcj (java compiler included with gcc package)
 sys-devel/gcc:hardened - activate default PIE (position independent executables) and SSP (stack smashing protector)
+sys-devel/gcc:ip28 - Enable building a compiler capable of building an SGI IP28 kernel
 sys-devel/gcc:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
 sys-devel/gcc:n32 - Enable n32 ABI support on mips
 sys-devel/gcc:n64 - Enable n64 ABI support on mips
 sys-devel/gcc:nomultilib - Disables multilib support in gcc
 sys-devel/gcc:objc - Build support for the Objective C code language
+sys-devel/gcc-mips64:ip28 - Enable building a compiler capable of building an SGI IP28 kernel
 sys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
 sys-fs/e2fsprogs:diet - Compile and link with dietlibc
@@ -730,6 +732,7 @@ sys-kernel/gentoo-sources:usagi - adds USAGI (Linux IPv6 Development Project) su
 sys-kernel/gentoo-sources:xfs - If you want XFS filesystem support
 sys-kernel/mips-headers:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-kernel/mips-sources:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
+sys-kernel/mips-sources:ip28 - Enables support for SGI Indigo2 Impact R10000
 sys-kernel/mips-sources:ip30 - Enables support for SGI Octane (IP30, 'Speedracer')
 sys-kernel/ppc-development-sources:extlib - If you want to use gcloop a external lib is needed
 sys-kernel/ppc64-sources:extlib - If you want to use gcloop a external lib is needed
