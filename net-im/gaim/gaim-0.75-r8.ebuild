@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r8.ebuild,v 1.2 2004/01/29 02:56:22 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r8.ebuild,v 1.3 2004/01/29 07:18:18 vapier Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils gcc
 
 IUSE="nls perl spell nas mozilla cjk debug ssl"
 
