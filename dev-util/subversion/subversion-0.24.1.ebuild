@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.24.1.ebuild,v 1.1 2003/06/18 19:21:18 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.24.1.ebuild,v 1.2 2003/06/19 17:58:37 pauldv Exp $
 
 inherit libtool
 
+DB_VERSION="4.0.14"
 DESCRIPTION="A compelling replacement for CVS"
-SRC_URI="http://www.sleepycat.com/update/snapshot/db-4.0.14.tar.gz
+SRC_URI="http://www.sleepycat.com/update/snapshot/db-${DB_VERSION}.tar.gz
 	http://subversion.tigris.org/files/documents/15/4761/${P}.tar.gz"
 HOMEPAGE="http://subversion.tigris.org/"
 
@@ -14,7 +15,7 @@ LICENSE="Apache-1.1"
 KEYWORDS="~x86 ~ppc"
 IUSE="ssl apache2 berkdb python"
 
-S_DB="${WORKDIR}/db-4.0.14/build_unix"
+S_DB="${WORKDIR}/db-${DB_VERSION}/build_unix"
 
 DEPEND="python? ( >=dev-lang/python-2.0 )
 	>=sys-apps/diffutils-2.7.7
@@ -47,7 +48,7 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack ${P}.tar.gz
 	use berkdb && ( has_version =db-4* || (
-		unpack db-4.0.14.tar.gz
+		unpack db-${DB_VERSION}.tar.gz
 	) )
 	cd ${S}
 	elibtoolize ${S}
@@ -193,6 +194,11 @@ pkg_postinst() {
 			einfo ""
 		fi
 		einfo "A repository needs to be created using the ebuild ${PN} config command"
+		if has_version =sys-libs/db-4*; then
+			einfo "If you upgraded from an older version of berkely db and experience"
+			einfo "problems with your repository then run the following command:"
+			einfo "    su apache -c \"db4_recover -h /path/to/repos\""
+		fi
 		if use apache; then
 			einfo "To allow web access a htpasswd file needs to be created using the"
 			einfo "following command:"
