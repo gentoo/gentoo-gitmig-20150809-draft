@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.6-r1.ebuild,v 1.9 2003/10/04 09:24:46 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.6-r1.ebuild,v 1.10 2003/10/22 14:02:01 joker Exp $
 
 inherit libtool flag-o-matic
 replace-flags k6-3 i586
@@ -24,7 +24,7 @@ HOMEPAGE="http://www.imagemagick.org/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc ~sparc ~alpha ~mips hppa amd64"
+KEYWORDS="x86 ppc sparc ~alpha ~mips hppa amd64"
 
 DEPEND=">=sys-apps/sed-4
 	media-libs/jbigkit

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.52 2003/10/04 09:24:46 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.53 2003/10/22 14:02:01 joker Exp $
+
+  22 Oct 2003; Christian Birchinger <joker@gentoo.org>
+  imagemagick-5.5.6-r1.ebuild:
+  Added sparc stable keyword
 
   04 Oct 2003; Heinrich Wendel <lanius@gentoo.org>
   imagemagick-5.5.6-r1.ebuild, imagemagick-5.5.7-r2.ebuild,
