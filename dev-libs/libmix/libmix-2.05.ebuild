@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/libmix-2.05.ebuild,v 1.1 2004/05/05 21:48:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/libmix-2.05.ebuild,v 1.2 2004/05/05 21:49:42 vapier Exp $
 
 DESCRIPTION="Programs Crypto/Network/Multipurpose Library"
 HOMEPAGE="http://mixter.void.ru/"
@@ -8,7 +8,7 @@ SRC_URI="http://mixter.void.ru/${P/.}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64"
 IUSE="no-net2"
 
 DEPEND="!no-net2? ( net-libs/libpcap net-libs/libnet )"
