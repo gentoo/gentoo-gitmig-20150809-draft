@@ -1,0 +1,11 @@
+--- Sources/Network/Socket/ip_address_getsock.h.orig	2003-11-15 17:33:34.075094400 -0500
++++ Sources/Network/Socket/ip_address_getsock.h	2003-11-15 17:33:39.688241072 -0500
+@@ -105,7 +105,7 @@
+ 	unsigned int ip;
+ 
+ 	// IP port in host byte order.
+-	unsigned short port;
++	unsigned int port;
+ };
+ 
+ #endif
