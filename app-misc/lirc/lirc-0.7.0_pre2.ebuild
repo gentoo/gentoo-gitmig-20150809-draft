@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.6.5.ebuild,v 1.6 2003/09/08 21:59:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre2.ebuild,v 1.1 2003/10/11 21:53:03 lanius Exp $
 
 inherit eutils
 
@@ -8,8 +8,16 @@ DESCRIPTION="LIRC is a package that allows you to decode and send infra-red \
 	signals of many (but not all) commonly used remote controls."
 HOMEPAGE="http://www.lirc.org"
 
-[ "x${LIRC_OPTS}" = x ] && LIRC_OPTS="--with-driver=any \
+[ "x${LIRC_OPTS}" = x ] && LIRC_OPTS="--with-driver=serial \
 	--with-port=0x3f8 --with-irq=4"
+
+# We have a SMP enabled kernel?
+if [ ! -z "`uname -v | grep SMP`" ]
+then
+	export SMP=1
+else
+	export SMP=0
+fi
 
 # This are the defaults. With this support for all supported remotes
 # will be build.
@@ -43,25 +51,24 @@ HOMEPAGE="http://www.lirc.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/linux-sources"
 
-SRC_URI="mirror://sourceforge/lirc/${P}.tar.bz2"
+MY_P=${P/_/}
 
-S=${WORKDIR}/${P}
+SRC_URI="http://lirc.sourceforge.net/software/snapshots/${MY_P}.tar.bz2"
+
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
-	unpack ${P}.tar.bz2
-	epatch ${FILESDIR}/${P}-gentoo.diff.bz2 || die
-
-	# You need my little patch, because with it:
-	# - lirc compiles with gentoo 2.4.19pre-ac and vanilla kernels
+	unpack ${A}
+	cd ${S}
+	sed	-i "s:-O2 -g:${CFLAGS}:" configure
+	sed -i "s:-O2 -g:${CFLAGS}:" configure.in
 }
 
-
 src_compile() {
-
 	#Let portage tell us where to put our modules
 	check_KV
 
@@ -80,8 +87,16 @@ src_compile() {
 	case ${LIRC_OPTS}
 	in
 	  *"any"*)
-		emake -C drivers "SUBDIRS=lirc_dev lirc_serial \
-		lirc_parallel lirc_sir lirc_it87 lirc_i2c lirc_gpio" || die
+		if [ "${SMP}" = 1 ]; then
+			# The parallel driver will not work with SMP kernels
+			# so we need to compile without it
+			emake -C drivers "SUBDIRS=lirc_dev lirc_serial \
+			lirc_sir lirc_it87 lirc_i2c lirc_gpio" || die
+		else
+			emake -C drivers "SUBDIRS=lirc_dev lirc_serial \
+			lirc_parallel lirc_sir lirc_it87 lirc_i2c \
+			lirc_gpio" || die
+		fi
 	;;
 	esac
 }
@@ -93,16 +108,26 @@ src_install() {
 	in
 	  *"any"*)
 		insinto /lib/modules/${KV}/misc
-		for i in lirc_dev lirc_serial \
-			lirc_parallel lirc_sir lirc_it87 lirc_i2c lirc_gpio
-		do
+		if [ "${SMP}" = 1 ]; then
+			for i in lirc_dev lirc_serial \
+				lirc_sir lirc_it87 lirc_i2c lirc_gpio
+			do
 			doins drivers/${i}/${i}.o
-		done
+			done
+		else
+			for i in lirc_dev lirc_serial \
+				lirc_parallel lirc_sir lirc_it87 lirc_i2c lirc_gpio
+			do
+			doins drivers/${i}/${i}.o
+			done
+		fi
 	;;
 	esac
 
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/lircd
+
+	dohtml doc/html/*.html
 }
 
 pkg_postinst () {
@@ -118,4 +143,3 @@ pkg_postinst () {
 	einfo "variable to your needs."
 	einfo
 }
-
