@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.7.3-r1.ebuild,v 1.5 2004/06/25 00:49:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.7.3-r1.ebuild,v 1.6 2004/11/06 00:18:54 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Webcam application that uses the SDL library"
-HOMEPAGE="http://raph.darktech.org/SDLcam/"
-SRC_URI="http://raph.darktech.org/SDLcam/downloads/${P}.tar.gz"
+HOMEPAGE="http://sdlcam.raphnet.net/"
+SRC_URI="http://sdlcam.raphnet.net/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
