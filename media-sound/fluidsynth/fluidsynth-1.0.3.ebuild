@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.3.ebuild,v 1.9 2004/04/17 18:18:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.3.ebuild,v 1.10 2004/04/29 07:47:22 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,12 +16,10 @@ IUSE="alsa jack sse ladcca"
 
 DEPEND="jack? ( virtual/jack )
 	media-libs/ladspa-sdk
-	amd64? ( ladcca? ( =media-libs/ladcca-0.3* ) )
+	!ppc? ( ladcca? ( =media-libs/ladcca-0.3* ) )
 	alsa? ( media-libs/alsa-lib )"
 
-# Removed as it doesn't support new ladcca yet ... bug #46916
-# ladcca? ( media-libs/ladcca ) \
-
+# ladcca-0.4 support is broken.  bug #46916
 
 src_unpack() {
 	unpack ${A}
