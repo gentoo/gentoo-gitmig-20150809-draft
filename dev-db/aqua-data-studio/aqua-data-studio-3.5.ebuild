@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/aqua-data-studio/aqua-data-studio-3.5.ebuild,v 1.3 2004/05/08 11:01:37 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/aqua-data-studio/aqua-data-studio-3.5.ebuild,v 1.4 2004/06/02 17:48:07 agriffis Exp $
 
 DESCRIPTION="An SQL editor and developer tool"
 HOMEPAGE="http://www.aquafold.com"
@@ -17,13 +17,13 @@ src_install() {
 	insinto /opt/${PN}/lib
 	doins lib/*
 
-	if [ `use gnome || use kde` ] ; then
+	if use gnome || use kde; then
 		einfo "Adding icon..."
 		insinto /opt/${PN}/lib
 		doins datastudio.ico
 	fi
 
-	if [ `use gnome` ] ; then
+	if use gnome; then
 
 		einfo "Adding GNOME support..."
 		echo "[Desktop Entry]" > ${PN}.desktop
@@ -38,7 +38,7 @@ src_install() {
 		doins ${PN}.desktop
 	fi
 
-	if [ `use kde` ] ; then
+	if use kde; then
 		einfo "Adding KDE support..."
 		echo "Name=Aqua Data Studio" > ${PN}-kde.desktop
 		echo "Exec=/opt/bin/${PN}" >> ${PN}-kde.desktop
