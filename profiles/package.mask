@@ -1120,9 +1120,6 @@ media-sound/rhythmbox
 # not fit for release (working on it though)
 app-cdr/cddump
 
-# spider@gentoo.org 26 Apr 2002
-# alpha release, go get it ;)
->=x11-wm/blackbox-0.65.0_alpha1
 
 # seemant@gentoo.org 26 Apr 2002
 # the old ebuild of puregui was mis-versioned to 1, when it was actually
@@ -1189,9 +1186,6 @@ x11-base/xdirectfb
 # masked since package is not released
 >=dev-db/mysql-4.0.1_alpha
 
-# seemant@gentoo.org 02 Jul 2002
-# masked coz it's a cvs release
-=x11-wm/blackbox-0.65.0.20020702
 
 # agriffis@gentoo.org 06 Jul 2002
 # ruby-libglade-1.2 is OLD.  The 0.2[789] versions represent new
