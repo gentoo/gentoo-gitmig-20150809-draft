@@ -1,5 +1,15 @@
-MD5 6e5875f691ced8ecac86ccc41c443a3b files/digest-hexedit-1.2.2 65
-MD5 44c497343ccc5a908e95b4fe44f46f5e files/digest-hexedit-1.2.9 65
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bed5c35a9493e6fdd3fcde59a679eafc ChangeLog 859
 MD5 8f6140267f16aebf4795cd3e82ce662e hexedit-1.2.2.ebuild 621
-MD5 a9bd6d63f6fc878027cf942eeead0788 hexedit-1.2.9.ebuild 615
+MD5 f7aa34ec68f45806812a4cff61ad9ef5 hexedit-1.2.9.ebuild 617
+MD5 6e5875f691ced8ecac86ccc41c443a3b files/digest-hexedit-1.2.2 65
+MD5 44c497343ccc5a908e95b4fe44f46f5e files/digest-hexedit-1.2.9 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFAv58iHTu7gpaalycRApocAJ9G9T3uc0RESYujEx95jtcGsTlqFQCg6KgE
+tfEMiJeQJniKXhin/5kDrAc=
+=CYHW
+-----END PGP SIGNATURE-----
