@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.2-r2.ebuild,v 1.7 2005/01/01 12:33:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.2.2-r2.ebuild,v 1.8 2005/01/26 21:35:15 rphillips Exp $
 
 inherit eutils
 
@@ -28,7 +28,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-fPIC.patch
 	epatch ${FILESDIR}/${P}-no_libedit.patch
 
-	autoconf || die
+	autoreconf || die
+	libtoolize --copy --force
 }
 
 src_compile() {
