@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-1.0.1.ebuild,v 1.6 2003/02/13 17:42:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-1.0.1.ebuild,v 1.7 2003/03/16 18:40:25 foser Exp $
 S=${WORKDIR}/${P}
 
 DESCRIPTION="Application for easy change of GTK-Themes"
@@ -13,7 +13,7 @@ LICENSE="GPL"
 
 DEPEND="=x11-libs/gtk+-1.2*"
 SLOT="1.2"
-KEYWORDS="* alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 src_compile() {
 	make || die
