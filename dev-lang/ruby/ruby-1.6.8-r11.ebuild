@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r11.ebuild,v 1.8 2004/10/03 15:11:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r11.ebuild,v 1.9 2004/10/10 09:06:17 usata Exp $
 
 IUSE="cjk"
 
@@ -29,7 +29,7 @@ DEPEND="virtual/libc
 PROVIDE="virtual/ruby"
 
 # oniguruma patch breaks make test
-use cjk && RESTRICT="maketest"
+#RESTRICT="maketest"
 
 src_unpack() {
 	unpack ${A}
@@ -41,6 +41,9 @@ src_unpack() {
 	if use cjk ; then
 		einfo "Applying ${ONIGURUMA}"
 		cd ${WORKDIR}/oniguruma
+		if use ppc || use ppc64 ; then
+			epatch ${FILESDIR}/oniguruma-2.3.1-fix-ppc.patch
+		fi
 		econf --with-rubydir=${S} || die "econf failed"
 		make ${SLOT/./}
 	fi

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r7.ebuild,v 1.9 2004/10/03 13:32:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r7.ebuild,v 1.10 2004/10/10 09:06:17 usata Exp $
 
-ONIGURUMA="onigd2_2_8"
+ONIGURUMA="onigd2_3_2"
 SNAP_DATE="2004.05.02"
 
 inherit flag-o-matic alternatives eutils gnuconfig
@@ -40,6 +40,9 @@ src_unpack() {
 	if use cjk ; then
 		einfo "Applying ${ONIGURUMA}"
 		pushd ${WORKDIR}/oniguruma
+		if use ppc || use ppc64 ; then
+			epatch ${FILESDIR}/oniguruma-2.3.1-fix-ppc.patch
+		fi
 		econf --with-rubydir=${S} || die "econf failed"
 		make ${SLOT/./}
 		popd
@@ -71,7 +74,7 @@ src_compile() {
 	econf \
 		--program-suffix=${SLOT/./} \
 		--enable-shared \
-		`use_enable socks5 socks` \
+		$(use_enable socks5 socks) \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
