@@ -1,24 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.3-r1.ebuild,v 1.7 2003/02/24 20:46:47 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.3-r1.ebuild,v 1.8 2003/03/11 06:29:05 seemant Exp $
+
+inherit eutils
 
 IUSE="nls build"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GNU info program and utilities"
+HOMEPAGE="http://www.gnu.org/software/texinfo/"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/texinfo/${P}.tar.gz
 	ftp://alpha.gnu.org/pub/gnu/texinfo/${P}.tar.gz"
-HOMEPAGE="http://www.gnu.org/software/texinfo/"
 
-KEYWORDS="x86 ppc sparc sparc64 alpha hppa arm mips"
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc sparc64 alpha hppa arm mips"
 
-DEPEND="virtual/glibc 
-	!build? ( >=sys-libs/ncurses-5.2-r2
-	          nls? ( sys-devel/gettext ) )"
-RDEPEND="virtual/glibc 
-	!build? ( >=sys-libs/ncurses-5.2-r2 )"
+DEPEND="!build? ( >=sys-libs/ncurses-5.2-r2
+		nls? ( sys-devel/gettext ) )"
 
 src_unpack() {
 	unpack ${A}
@@ -33,7 +32,7 @@ src_unpack() {
 		-e 's:texinfo\::texinfo.info\::' \
 		Makefile.in.orig > Makefile.in
 	cd ${S}/util
-	patch -p0 < ${FILESDIR}/install-info.patch
+	epatch ${FILESDIR}/install-info.patch
 }
 
 src_compile() {
