@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.11 2004/06/25 01:28:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.12 2004/07/20 18:23:59 g2boojum Exp $
+
+*docutils-0.3.3-r1 (20 Jul 2004)
+
+  20 Jul 2004; Grant Goodyear <g2boojum@gentoo.org> +files/glep-0.3.3/glep.py,
+  +files/glep-0.3.3/glep_htmlwrite.py, +files/glep-0.3.3/glepread.py,
+  +files/glep-0.3.3/glepstrans.py, +docutils-0.3.3-r1.ebuild,
+  -docutils-0.3.3.ebuild:
+  kloeri broke GLEP stuff w/ 0.3.3; bad boy!
 
 *docutils-0.3.3 (12 Jun 2004)
 

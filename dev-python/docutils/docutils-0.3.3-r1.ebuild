@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.3.ebuild,v 1.2 2004/06/25 01:28:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.3-r1.ebuild,v 1.1 2004/07/20 18:23:59 g2boojum Exp $
 
 inherit distutils eutils
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=">=dev-lang/python-2.1"
 
 # GLEP version
-GLEP_SRC=${FILESDIR}/glep-${PVR}
+GLEP_SRC=${FILESDIR}/glep-${PV}
 
 src_unpack() {
 	unpack ${A}
@@ -59,11 +59,11 @@ src_install() {
 
 	# installing Gentoo GLEP tools. Uses versioned GLEP distribution
 	distutils_python_version
-	newbin ${GLEP_SRC}/glep.py docutils-glep.py
+	newbin ${GLEP_SRC}/glep.py docutils-glep.py || die "newbin failed"
 	insinto /usr/lib/python${PYVER}/site-packages/docutils/readers
-	newins ${GLEP_SRC}/glepread.py glep.py
+	newins ${GLEP_SRC}/glepread.py glep.py || die "newins reader failed"
 	insinto /usr/lib/python${PYVER}/site-packages/docutils/transforms
-	newins ${GLEP_SRC}/glepstrans.py gleps.py
+	newins ${GLEP_SRC}/glepstrans.py gleps.py || "newins transform failed"
 	insinto /usr/lib/python${PYVER}/site-packages/docutils/writers
-	newins ${GLEP_SRC}/glep_htmlwrite.py glep_html.py
+	newins ${GLEP_SRC}/glep_htmlwrite.py glep_html.py || die "newins writer failed"
 }
