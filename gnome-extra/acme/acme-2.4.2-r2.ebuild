@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/acme/acme-2.4.2-r2.ebuild,v 1.4 2004/06/24 22:02:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/acme/acme-2.4.2-r2.ebuild,v 1.5 2004/07/14 15:21:53 agriffis Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="GNOME tool to make use of the multimedia buttons on laptops and internet keyboards"
 HOMEPAGE="http://www.hadess.net/misc-code.php3"
 
-IUSE=""
+IUSE="alsa"
 LICENSE="GPL-2"
 SLOT="0"
 
