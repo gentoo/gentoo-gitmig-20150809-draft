@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/files/rc-multipathd,v 1.1 2005/02/21 15:03:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/files/rc-multipathd,v 1.2 2005/02/21 15:10:57 azarah Exp $
 
 depend() {
 	need localmount
@@ -15,6 +15,6 @@ start() {
 
 stop() {
 	ebegin "Stopping multipathd"
-	start-stop-daemon --stop --quiet --exec /usr/sbin/multipathd
+	start-stop-daemon --stop --quiet --pid /var/run/multipathd.pid
 	eend $?
 }
