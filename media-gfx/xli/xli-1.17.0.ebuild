@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.13 2004/06/24 22:52:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.14 2004/07/14 18:33:40 agriffis Exp $
 
 inherit alternatives
 
-S=${WORKDIR}/${P}
 DESCRIPTION="X Load Image: view images or load them to root window"
 SRC_URI="ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/${P}.tar.gz"
 HOMEPAGE="http://pantransit.reptiles.org/prog/"
@@ -12,6 +11,7 @@ HOMEPAGE="http://pantransit.reptiles.org/prog/"
 SLOT="0"
 LICENSE="X11"
 KEYWORDS="x86 ppc hppa ~amd64"
+IUSE=""
 
 DEPEND="virtual/x11
 	>=sys-libs/zlib-1.1.4

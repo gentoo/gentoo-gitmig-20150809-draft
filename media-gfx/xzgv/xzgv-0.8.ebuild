@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.8.ebuild,v 1.4 2004/06/24 22:53:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.8.ebuild,v 1.5 2004/07/14 18:34:44 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="An X image viewer."
 SRC_URI="http://xzgv.browser.org/${P}.tar.gz"
 HOMEPAGE="http://xzgv.browser.org/"
@@ -10,6 +9,7 @@ HOMEPAGE="http://xzgv.browser.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
+IUSE=""
 
 DEPEND="virtual/x11
 	sys-apps/gawk

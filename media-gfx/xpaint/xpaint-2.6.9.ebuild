@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.6.9.ebuild,v 1.6 2004/06/24 22:52:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.6.9.ebuild,v 1.7 2004/07/14 18:33:55 agriffis Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="XPaint is an image editor which supports most standard paint program options."
 SRC_URI="mirror://sourceforge/sf-xpaint/${P}.tar.bz2"
 HOMEPAGE="http://sf-xpaint.sourceforge.net/"
@@ -10,6 +9,7 @@ HOMEPAGE="http://sf-xpaint.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND=">=media-libs/tiff-3.2
 	virtual/x11
