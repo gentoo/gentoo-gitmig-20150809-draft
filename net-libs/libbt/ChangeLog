@@ -1,0 +1,9 @@
+# ChangeLog for net-libs/libbt
+# Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/ChangeLog,v 1.1 2004/04/11 01:09:28 squinky86 Exp $
+
+*libbt-1.01 (10 Apr 2004)
+
+  10 Apr 2004; Jon Hood <squinky86@gentoo.org> libbt-1.01.ebuild:
+  Initial ebuild for libbt.
+  Thanks to José Romildo Malaquias for this ebuild
