@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1_beta1.ebuild,v 1.1 2002/08/22 21:13:57 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1_beta1.ebuild,v 1.2 2002/09/06 12:00:35 danarmak Exp $
 inherit kde kde.org 
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -36,7 +36,8 @@ newdepend "/autotools"
 RDEPEND="$RDEPEND
 	app-text/sgml-common
 	cups? ( net-print/cups )
-	dev-lang/python"
+	dev-lang/python
+	>=sys-apps/portage-2.0.36" # for #7359
 
 myconf="$myconf --with-distribution=Gentoo --enable-libfam --enable-dnotify"
 #myconf="$myconf --enable-final"
@@ -81,7 +82,8 @@ src_install() {
 echo "PATH=${PREFIX}/bin
 ROOTPATH=${PREFIX}/sbin:${PREFIX}/bin
 LDPATH=${PREFIX}/lib
-KDEDIRS=${PREFIX}" > ${D}/etc/env.d/49kdelibs-${PV} # number goes down with version upgrade
+KDEDIRS=${PREFIX}
+CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/49kdelibs-${PV} # number goes down with version upgrade
 
 	echo "KDEDIR=$PREFIX" > ${D}/etc/env.d/56kdedir-${PV} # number goes up with version upgrade
 	

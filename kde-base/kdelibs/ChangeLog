@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.18 2002/08/19 09:36:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.19 2002/09/06 12:00:35 danarmak Exp $
+
+*kdelibs-3.0.3-r1 (04 Sep 2002)
+
+  04 Sep 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix bug #7359: add /share/config to CONFIG_PROTECT in our env.d file. After
+  everyone upgrades, the setting in make.globals can go away. Because of this,
+  an RDEPEND on >=sys-apps/portage-2.0.36 has been added.
 
 *kdelibs-3.0.3 (19 Aug 2002)
 
