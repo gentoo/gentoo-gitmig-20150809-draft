@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.54 2004/11/25 19:28:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.55 2004/11/25 21:34:15 lv Exp $
 
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -160,9 +160,10 @@ gcc_get_s_dir() {
 #			has a _pre suffix.
 #
 #	PATCH_VER
+#	PATCH_GCC_VER
 #			This should be set to the version of the gentoo patch tarball.
 #			The resulting filename of this tarball will be:
-#			${P}-patches-${PATCH_VER}.tar.bz2
+#			${PN}-${PATCH_GCC_VER:=${PV}}-patches-${PATCH_VER}.tar.bz2
 #
 #	PIE_VER
 #	PIE_CORE
@@ -245,7 +246,7 @@ get_gcc_src_uri() {
 	# various gentoo patches
 	if [ -n "${PATCH_VER}" ] ; then
 		GCC_SRC_URI="${GCC_SRC_URI}
-			${GENTOO_TOOLCHAIN_BASE_URI}/${P}-patches-${PATCH_VER}.tar.bz2"
+			${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-${PATCH_GCC_VER:=${PV}}-patches-${PATCH_VER}.tar.bz2"
 	fi
 
 	# strawberry pie, Cappuccino and a Gauloises
@@ -663,7 +664,7 @@ gcc_quick_unpack() {
 
 	if [ -n "${PATCH_VER}" ]
 	then
-		unpack ${P}-patches-${PATCH_VER}.tar.bz2
+		unpack ${PN}-${PATCH_GCC_VER:=${PV}}-patches-${PATCH_VER}.tar.bz2
 	fi
 
 	if [ -n "${PP_VER}" ]
