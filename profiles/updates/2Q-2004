@@ -79,3 +79,4 @@ move net-mail/bogofilter mail-filter/bogofilter
 move net-mail/dcc mail-filter/dcc
 move net-mail/disspam mail-filter/disspam
 move net-mail/imapfilter mail-filter/imapfilter
+move net-mail/maildrop mail-filter/maildrop
