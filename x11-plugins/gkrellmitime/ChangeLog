@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gkrellmitime
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/ChangeLog,v 1.6 2003/09/17 22:12:11 dholm Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/ChangeLog,v 1.7 2004/01/18 15:37:11 mholzer Exp $
+
+*gkrellmitime-1.0.1 (18 Jan 2004)
+
+  18 Jan 2004; Martin Holzer <mholzer@gentoo.org> gkrellmitime-1.0.1.ebuild:
+  Version bumped. Closes 38340
 
   18 Sep 2003; David Holm <dholm@gentoo.org> gkrellmitime-1.0.ebuild:
   Added to ~ppc.
