@@ -12,7 +12,7 @@ MD5 df4f73693b725799675e37ba3f90643f samba-3.0.2a-r2.ebuild 12249
 MD5 045d2504d92e3846f34e35c094721c44 samba-3.0.6.ebuild 13730
 MD5 55c08f2d48b50d7af452664decd8793a samba-3.0.6-r2.ebuild 13989
 MD5 fb357b885ebd5c7e7c6093156812efb1 samba-3.0.6-r3.ebuild 14194
-MD5 d30fcdd85877da6092251add11ec8bed samba-3.0.6-r4.ebuild 14145
+MD5 7d15df1a0dde76a367ea9146f9cf6b4b samba-3.0.6-r4.ebuild 14150
 MD5 fd2382184b6a07e63cb07ff26b578fd2 files/config-svc-smbd+nmbd 784
 MD5 a86336201c2eced7a6e5a5138514e2f7 files/digest-samba-3.0.4-r1 203
 MD5 de43ff30dd5f1431590fd62a997e71b4 files/samba-3.0.4-python-setup.patch 833
@@ -60,7 +60,7 @@ MD5 2539fea7a9f177544b05ee84f7dac0e2 files/smb.conf.example-samba3.gz 7840
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBPncVHTu7gpaalycRAl/GAJ0WNcvz4i+Y4CTH083kk+cJH+e64gCeODtb
-1mp3EUODs38tSyIjqN2hNcY=
-=jkqp
+iD8DBQFBPn1cHTu7gpaalycRAikJAJ9SOhZg/uHe3mESISHFtb3bM4GYSwCgwTfG
+9O+w9xLlHJVICFynxwqK+S8=
+=VwXY
 -----END PGP SIGNATURE-----
