@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r8.ebuild,v 1.2 2005/02/17 13:23:00 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r8.ebuild,v 1.3 2005/02/17 13:33:02 lanius Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -45,7 +45,7 @@ src_unpack() {
 	eend $? || die
 
 	ebegin "setting up site.def"
-	cp ${FILESDIR}/site.def.1 ${S}/config/cf/site.def && \
+	cp ${FILESDIR}/site.def ${S}/config/cf/site.def && \
 	echo >>$cfg && \
 	echo >>$cfg "#undef  OptimizedCDebugFlags" && \
 	echo >>$cfg "#define OptimizedCDebugFlags ${CFLAGS}" && \
