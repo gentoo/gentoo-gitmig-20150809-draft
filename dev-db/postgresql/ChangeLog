@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.22 2002/08/13 19:35:57 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.23 2002/08/13 19:43:43 pvdabeel Exp $
 
 * postgresql-7.2.1-r2 (31 Jul 2002)                                      
 
@@ -111,6 +111,11 @@
 
   5 Feb 2002; G.Bevin <gbevin@gentoo.org> files/7.1.3/postgresql :
   Fixed wrong data dir in init script.
+
+*postgresql-7.1-r1 (1 Feb 2002)
+ 
+ 13 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> postgresql-7.1-r1.ebuild :
+ removed broken jaxp dependency
 
 *postgresql-7.1.3-r3 (1 Feb 2002)
 
