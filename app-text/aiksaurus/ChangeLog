@@ -1,6 +1,12 @@
 # ChangeLog for app-text/aiksaurus
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.12 2004/04/21 23:32:55 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.13 2004/04/24 09:05:27 robbat2 Exp $
+
+*aiksaurus-1.0.1-r1 (24 Apr 2004)
+
+  24 Apr 2004; Robin H. Johnson <robbat2@gentoo.org>
+  aiksaurus-1.0.1-r1.ebuild:
+  support USE=-gtk
 
   21 Apr 2004; <khai@gentoo.org> aiksaurus-1.0.1.ebuild:
   Fixed -DGTK_DISABLE_DEPRECATED problems, closes bug #46766
