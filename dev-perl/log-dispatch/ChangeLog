@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/log-dispatch
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/log-dispatch/ChangeLog,v 1.7 2004/12/30 19:02:46 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/log-dispatch/ChangeLog,v 1.8 2005/03/15 14:40:19 mcummings Exp $
+
+  15 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  log-dispatch-2.06.ebuild, log-dispatch-2.08.ebuild,
+  log-dispatch-2.10.ebuild:
+  Removed style=builder
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
