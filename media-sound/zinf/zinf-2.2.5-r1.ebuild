@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5-r1.ebuild,v 1.4 2004/07/01 07:44:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.5-r1.ebuild,v 1.5 2004/07/15 08:24:21 eradicator Exp $
 
 inherit kde-functions eutils flag-o-matic
 
@@ -33,6 +33,7 @@ DEPEND="${RDEPEND}
 	>=media-libs/id3lib-3.8.0
 	dev-libs/boost
 	dev-db/metakit
+	>=sys-devel/automake-1.7
 	dev-lang/perl"
 
 src_unpack() {
@@ -40,10 +41,28 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-cdplay.patch
+	epatch ${FILESDIR}/${P}-configure.patch
+
+	export WANT_AUTOMAKE=1.7
+	export WANT_AUTOCONF=2.5
+
+	ebegin "Running aclocal (${WANT_AUTOMAKE})"
+	aclocal -I m4
+	eend $?
+
+	ebegin "Running automake (${WANT_AUTOMAKE})"
+	automake
+	eend $?
+
+	ebegin "Running autoconf (${WANT_AUTOCONF})"
+	autoconf
+	eend $?
 }
 
 src_compile() {
 	local myconf="--enable-cmdline"
+
+	use x86 || myconf="${myconf} --disable-x86opts"
 
 	myconf="${myconf} `use_enable debug`"
 	myconf="${myconf} `use_enable esd`"
@@ -52,7 +71,7 @@ src_compile() {
 	myconf="${myconf} `use_enable gnome corba`"
 	myconf="${myconf} `use_enable ipv6`"
 
-	if [ $ARCH == "amd64" ]; then
+	if use amd64; then
 		replace-flags -O? -O
 		append-flags -frerun-cse-after-loop
 	fi

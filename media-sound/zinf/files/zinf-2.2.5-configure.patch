@@ -1,0 +1,154 @@
+diff -Naur zinf-2.2.5.orig/configure.ac zinf-2.2.5/configure.ac
+--- zinf-2.2.5.orig/configure.ac	2004-02-17 14:09:01.000000000 -0800
++++ zinf-2.2.5/configure.ac	2004-07-15 01:16:18.803000641 -0700
+@@ -260,7 +260,11 @@
+ AC_ARG_ENABLE(x86opts, 
+ 	      AC_HELP_STRING([--disable-x86opts], 
+ 			     [Don't use any x86 assembly optimizations]), 
+-	      true, enable_x86=yes)
++	[case "${enableval}" in
++	  yes) enable_x86="yes" ;;
++	  no) enable_x86="no" ;;
++	  *) AC_MSG_ERROR(bad value ${enableval} for --enable-x86opts) ;;
++	esac], enable_x86=yes)
+ 
+ if test "x$enable_x86" = "xyes"; then
+   if expr "$host_cpu" : "i.86$" > /dev/null; then
+@@ -387,7 +391,11 @@
+ dnl ALSA
+ AC_ARG_ENABLE(alsa, AC_HELP_STRING([--disable-alsa], 
+ 				   [Don't compile the ALSA output plugin]),
+-	      true, enable_alsa=yes)
++	[case "${enableval}" in
++	  yes) enable_alsa="yes" ;;
++	  no) enable_alsa="no" ;;
++	  *) AC_MSG_ERROR(bad value ${enableval} for --enable-alsa) ;;
++	esac], enable_alsa=yes)
+ 
+ if test "$enable_alsa" = "yes"; then
+   dnl AM_PATH_ALSA sets some vars we don't want set
+@@ -405,7 +413,11 @@
+ 
+ AC_ARG_ENABLE(esd, AC_HELP_STRING([--disable-esd], 
+ 		                  [Don't compile the EsounD output plugin]),
+-	      true, enable_esd=yes)
++	[case "${enableval}" in
++	  yes) enable_esd="yes" ;;
++	  no) enable_esd="no" ;;
++	  *) AC_MSG_ERROR(bad value ${enableval} for --enable-esd) ;;
++	esac], enable_esd=yes)
+ 
+ if test "$enable_esd" = "yes"; then
+   AM_PATH_ESD(0.2.12, have_esound=true, have_esound=false)
+@@ -420,7 +432,11 @@
+ 
+ AC_ARG_ENABLE(arts, AC_HELP_STRING([--disable-arts], 
+ 				   [Don't try to compile the arts plugin]), 
+-	      true, enable_arts=yes)
++	[case "${enableval}" in
++	  yes) enable_arts="yes" ;;
++	  no) enable_arts="no" ;;
++	  *) AC_MSG_ERROR(bad value ${enableval} for --enable-esd) ;;
++	esac], enable_arts=yes)
+ 
+ if test "x$enable_arts" = "xyes"; then
+     AC_PATH_PROG(ARTSCCONFIG, artsc-config, [not found])
+@@ -519,17 +535,19 @@
+ dnl corba UI
+ AC_ARG_ENABLE(corba, AC_HELP_STRING([--enable-corba], 
+ 				    [Compile the CORBA UI plugin]),
+-  [AM_PATH_ORBIT(0.5.0, have_orbit=true, have_orbit=false)
+-   if "$have_orbit" = yes; then
+-     enable_corba_ui=yes
+-   else
+-     enable_corba_ui=no
+-     AC_MSG_ERROR(Need ORBIT to build the corba UI)
+-   fi],
+-   [enable_corba_ui=no])
++	[case "${enableval}" in
++	  yes) enable_corba_ui="yes" ;;
++	  no) enable_corba_ui="no" ;;
++	  *) AC_MSG_ERROR(bad value ${enableval} for --enable-corba) ;;
++	esac], enable_corba_ui=no)
+ 
+ if test "$enable_corba_ui" = "yes"; then
+-   UI_PLUGINS="$UI_PLUGINS corba"
++  AM_PATH_ORBIT(0.5.0, have_orbit=true, have_orbit=false)
++  if "$have_orbit" = yes; then
++    UI_PLUGINS="$UI_PLUGINS corba"
++  else
++    AC_MSG_ERROR(Need ORBIT to build the corba UI)
++  fi
+ else
+    AC_MSG_NOTICE(Not building the CORBA UI plugin)
+ fi
+@@ -537,22 +555,22 @@
+ dnl xosd
+ AC_ARG_ENABLE(xosd, AC_HELP_STRING([--enable-xosd], 
+ 				    [Compile the XOSD On Screen Display]),
+-    [AM_PATH_LIBXOSD(have_xosd=true,have_xosd=false)
+-     if test "$have_xosd" = "true" ; then
+-        enable_xosd_ui=yes
+-      else
+-        enable_xosd_ui=no
+-        AC_MSG_ERROR(Need libxosd to build xosd)
+-      fi],
+-     [enable_xosd_ui=no])
+-
+-if test "$enable_xosd_ui" == "yes"; then
++	[case "${enableval}" in
++	  yes) enable_xosd_ui="yes" ;;
++	  no) enable_xosd_ui="no" ;;
++	  *) AC_MSG_ERROR(bad value ${enableval} for --enable-corba) ;;
++	esac], enable_xosd_ui=no)
++
++if test "$enable_xosd_ui" = "yes"; then
++  AM_PATH_LIBXOSD(have_xosd=true,have_xosd=false)
++  if "$have_xosd" = yes; then
+     UI_PLUGINS="$UI_PLUGINS xosd"
++  else
++    AC_MSG_ERROR(Need xosd to build the xosd UI)
++  fi
+ else
+    AC_MSG_NOTICE(Not building the XOSD plugin)
+-fi 
+-    
+-    
++fi
+ 
+ AC_SUBST(UI_PLUGINS)
+ 
+diff -Naur zinf-2.2.5.orig/m4/libxosd.m4 zinf-2.2.5/m4/libxosd.m4
+--- zinf-2.2.5.orig/m4/libxosd.m4	1969-12-31 16:00:00.000000000 -0800
++++ zinf-2.2.5/m4/libxosd.m4	2004-07-15 01:16:41.275272219 -0700
+@@ -0,0 +1,30 @@
++# Oron Peled (Sun Jun 30 2002)
++# Taken from libglade.m4
++
++# a macro to get the libs/cflags for libxosd
++
++dnl AM_PATH_LIBXOSD([ACTION-IF-FOUND [, ACTION-IF-NOT-FOUND]])
++dnl Test to see if libxosd is installed, and define LIBXOSD_CFLAGS, LIBXOSDLIBS
++dnl
++AC_DEFUN(AM_PATH_LIBXOSD,
++[dnl
++dnl Get the cflags and libraries from the xosd-config script
++dnl
++AC_ARG_WITH(xosd-config,
++AC_HELP_STRING([--with-xosd-config=LIBXOSD_CONFIG],[Location of xosd-config]),
++LIBXOSD_CONFIG="$withval")
++
++AC_PATH_PROG(LIBXOSD_CONFIG, xosd-config, no)
++AC_MSG_CHECKING(for libxosd)
++if test "$LIBXOSD_CONFIG" = "no"; then
++  AC_MSG_RESULT(no)
++  ifelse([$2], , :, [$2])
++else
++  LIBXOSD_CFLAGS=`$LIBXOSD_CONFIG --cflags`
++  LIBXOSD_LIBS=`$LIBXOSD_CONFIG --libs`
++  AC_MSG_RESULT(yes)
++  ifelse([$1], , :, [$1])
++fi
++AC_SUBST(LIBXOSD_CFLAGS)
++AC_SUBST(LIBXOSD_LIBS)
++])
