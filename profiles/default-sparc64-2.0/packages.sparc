@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-2.0/packages.sparc,v 1.3 2002/08/16 01:44:57 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-2.0/packages.sparc,v 1.4 2002/08/16 14:19:06 murphy Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
@@ -15,3 +15,6 @@
 
 # Get a decent editor
 *app-editors/nvi
+
+# Sed replacement
+*sys-apps/supersed
