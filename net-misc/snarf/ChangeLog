@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/snarf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/ChangeLog,v 1.7 2003/04/15 23:10:33 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/snarf/ChangeLog,v 1.8 2003/08/01 15:50:57 taviso Exp $
+
+*snarf-7.0-r2 (01 Aug 2003)
+
+  01 Aug 2003; Tavis Ormandy <taviso@gentoo.org> snarf-7.0-r2.ebuild,
+  files/snarf-basename-patch.diff, files/snarf-unlink-empty.diff:
+  Adding a new ebuild that contains two new patches i've created, 
+  a patch that unlinks empty files (essential for developer use with 
+  snarf as a FETCHCOMMAND), and a patch that adds a -b/-B option to 
+  only display the basename of the output, useful for use with 
+  FETCHCOMMAND.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
