@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.53.ebuild,v 1.1 2001/06/21 15:32:20 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.53.ebuild,v 1.2 2001/06/21 15:59:30 achim Exp $
 
 A=xawtv_${PV}.tar.gz
 S=${WORKDIR}/${P}
@@ -15,7 +15,8 @@ DEPEND="virtual/glibc
         >=media-libs/libpng-1.0.8
 	>=x11-base/xfree-4.0.1
 	motif? ( x11-libs/openmotif )
-	aalib? ( media-libs/aalib )"
+	aalib? ( media-libs/aalib )
+	quicktime? ( media-libs/quicktime4linux )"
 
 src_compile() {
 
@@ -30,8 +31,13 @@ src_compile() {
   else
     myconf="$myconf --disable-aa"
   fi
+  if [ "`use quicktime`" ] ; then
+    myconf="$myconf --enable-quicktime"
+  else
+    myconf="$myconf --disable-quicktime"
+  fi
   touch src/Xawtv.h src/MoTV.h
-  try ./configure --host=${CHOST} --prefix=/usr --disable-quicktime --disable-lirc \
+  try ./configure --host=${CHOST} --prefix=/usr --disable-lirc \
 	--enable-jpeg --enable-xfree-ext --enable-xvideo --with-x ${myconf}
   try make
 }
