@@ -3,7 +3,7 @@
 #   Copyright (c) 2001-2003 The Apache Software Foundation.  All rights
 #   reserved.
 #   Edited for Gentoo Linux
-#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/files/1.5.4-ant,v 1.1 2004/09/10 19:45:18 axxo Exp $
+#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/files/1.5.4-ant,v 1.2 2004/09/17 16:02:33 axxo Exp $
 
 if [ -f $HOME/.gentoo/java-env ] ; then
   source $HOME/.gentoo/java-env
@@ -55,7 +55,7 @@ if [ -n "$CLASSPATH" ] ; then
 fi
 
 # add in the dependency .jar files
-LOCALCLASSPATH="${LOCALCLASSPATH}:`java-config --classpath=ant`"
+LOCALCLASSPATH="${LOCALCLASSPATH}:`java-config --classpath=ant-core`"
 
 if [ -n "$JAVA_HOME" ] ; then
   if [ -f "$JAVA_HOME/lib/tools.jar" ] ; then
