@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2         
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/files/nifd.conf.d,v 1.2 2004/07/14 23:59:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/files/nifd.conf.d,v 1.3 2004/10/06 23:39:38 latexer Exp $
 
 # NOTES:
 # nifd mornitors the network interfaces for an IP or link change.
@@ -11,4 +11,4 @@
 # 
 # -n            don't run ifdown/ifup on relink
 # -i interval   poll interval in seconds
-NTPD_OPTS="-n"
+NIFD_OPTS="-n"

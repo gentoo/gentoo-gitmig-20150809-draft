@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/howl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.11 2004/09/30 19:36:21 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.12 2004/10/06 23:39:38 latexer Exp $
+
+*howl-0.9.6-r2 (06 Oct 2004)
+
+  06 Oct 2004; <peter@gentoo.org> files/mDNSResponder.init.d,
+  files/nifd.conf.d, files/nifd.init.d, +howl-0.9.6-r2.ebuild:
+  Fix some typos and problems with the init scripts and do a revision bump to
+  propogate changes. See bug #66524.
 
   30 Sep 2004; Stephen P. Becker <geoman@gentoo.org> howl-0.9.6-r1.ebuild:
   added ~mips keyword
