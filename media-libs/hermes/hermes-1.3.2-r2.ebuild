@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/hermes-1.3.2-r2.ebuild,v 1.21 2004/07/01 07:56:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/hermes-1.3.2-r2.ebuild,v 1.22 2004/07/14 19:45:25 agriffis Exp $
 
 inherit eutils gnuconfig
 
@@ -13,6 +13,7 @@ SRC_URI="http://dark.x.dtu.dk/~mbn/clanlib/download/download-sphair/${MY_P}.tar.
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha ~mips amd64 ~hppa"
+IUSE=""
 
 DEPEND="sys-devel/libtool
 	sys-devel/automake
@@ -24,9 +25,7 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
 	epatch ${FILESDIR}/hermes-1.3.2-amd64.patch
-	use alpha && gnuconfig_update
-	use amd64 && gnuconfig_update
-	use hppa && gnuconfig_update
+	gnuconfig_update
 	aclocal || die "aclocal failed"
 	env WANT_AUTOMAKE=1.4 automake -a || die "automake failed"
 	autoconf || die "autoconf failed"
