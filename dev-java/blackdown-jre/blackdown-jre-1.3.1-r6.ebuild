@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r5.ebuild,v 1.2 2002/03/23 19:20:10 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r6.ebuild,v 1.1 2002/04/09 21:58:31 karltk Exp $
 
 A=j2re-1.3.1-FCS-linux-i386.tar.bz2
 S=${WORKDIR}/j2re1.3.1
@@ -137,6 +137,12 @@ src_install () {
 		dodir /usr/lib/mozilla/plugins
 		dosym /opt/${P}/plugin/i386/mozilla/javaplugin_oji.so /usr/lib/mozilla/plugins/javaplugin_oji.so
 	fi
+
+	mv ${D}/opt/${P}/lib/font.properties ${D}/opt/${P}/lib/font.properties.orig
+	sed "s/standard symbols l/symbol/g" \
+		< ${D}/opt/${P}/lib/font.properties.orig \
+		> ${D}/opt/${P}/lib/font.properties
+	rm ${D}/opt/${P}/lib/font.properties.orig
 	
         dodir /etc/env.d/java
         sed \
