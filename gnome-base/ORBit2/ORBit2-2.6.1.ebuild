@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ORBit2-2.6.1.ebuild,v 1.5 2003/04/26 17:34:29 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ORBit2-2.6.1.ebuild,v 1.6 2003/05/30 01:04:28 lu_zero Exp $
 
 inherit gnome2 
 
@@ -21,6 +21,6 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~alpha sparc"
+KEYWORDS="x86 ppc ~alpha sparc"
 
 DOCS="AUTHORS ChangeLog COPYING* README* HACKING INSTALL NEWS TODO MAINTAINERS"
