@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/etherwake
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/etherwake/ChangeLog,v 1.1 2003/04/26 19:26:41 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/etherwake/ChangeLog,v 1.2 2003/09/07 16:16:36 iggy Exp $
+
+  07 Sep 2003; <iggy@gentoo.org> etherwake-1.08.ebuild:
+  changed the ebuild around a little, fixes some compile errors and bug #24270
 
 *etherwake-1.08 (26 Apr 2003)
 
