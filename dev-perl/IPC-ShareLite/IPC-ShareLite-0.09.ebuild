@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-ShareLite/IPC-ShareLite-0.09.ebuild,v 1.2 2003/06/21 21:36:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-ShareLite/IPC-ShareLite-0.09.ebuild,v 1.3 2004/01/20 17:29:59 gustavoz Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.cpan.org/authors/id/M/MA/MAURICE/"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 amd64 ~ppc sparc ~alpha"
 
 DEPEND="${DEPEND}"
 
