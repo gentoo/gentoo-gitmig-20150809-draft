@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.25 2003/08/15 09:22:49 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.26 2003/09/15 21:12:57 agriffis Exp $
+
+  15 Sep 2003; Aron Griffis <agriffis@gentoo.org> fltk-1.1.4_rc2.ebuild:
+  Add ~alpha
 
   15 Aug 2003; Nick Hadaway <raker@gentoo.org> fltk-1.1.4_rc2.ebuild:
   Added nptl to IUSE.  Only enable threading if nptl isn't in use.
