@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.7.ebuild,v 1.1 2001/11/12 16:30:04 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.7.ebuild,v 1.2 2001/11/12 16:38:59 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -16,6 +16,7 @@ DEPEND="virtual/glibc sys-devel/perl >=media-libs/freetype-2.0.1 >=media-libs/jp
 
 RDEPEND="virtual/glibc >=media-libs/freetype-2.0.1 >=media-libs/jpeg-6
 	>=media-libs/libpng-1.0.10 >=media-libs/libflash-0.4.10
+	>=dev-util/pkgconfig-0.8.0
 	avifile? ( >=media-video/avifile-0.6.0 )
 	libmpeg3? ( >=media-libs/libmpeg3-1.2.3 )"
 
