@@ -16,7 +16,7 @@ src_compile() {
 }
 
 src_install () {
-	insinto /usr/share/gkrellm/plugins
+	insinto /usr/lib/gkrellm/plugins
 	doins reminder.so
 	dodoc README ChangeLog COPYING 
 }
