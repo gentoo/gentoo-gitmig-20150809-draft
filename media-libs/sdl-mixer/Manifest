@@ -1,8 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3906732f2b4394cd152f201be19ddc60 ChangeLog 3639
-MD5 aae8bb49c35dca337e97e029be2ec020 sdl-mixer-1.2.5-r1.ebuild 1355
+MD5 375360d31ec4aa8f404bb421dc7bc39b sdl-mixer-1.2.5-r1.ebuild 1421
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 355495a2b780fa93aa5dfd13592d99a3 sdl-mixer-1.2.6.ebuild 1258
 MD5 f026901e029ec31037b0bca6dc7f07d8 files/1.2.5-gcc3.patch 1235
 MD5 53b2015dae19981548f34d124a734f8e files/digest-sdl-mixer-1.2.5-r1 67
-MD5 1ca1975170b01d4da4056cc84635b608 files/digest-sdl-mixer-1.2.6 68
 MD5 b20854212133319dd5b400f71a372bcb files/sdl-mixer-1.2.5-amd64-mikmod.patch 929
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBwlevroRuSHgZdywRAi42AJ0a8IFqRVeNAns0dx2Au+tkkQTWBQCePWjm
+n3s2y6bX38D5TG+oUezzMwM=
+=UDIX
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.17 2004/11/08 05:53:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.18 2004/12/17 03:51:01 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -27,7 +27,9 @@ src_unpack() {
 	cd ${S}
 	epatch "${FILESDIR}/${PV}-gcc3.patch"
 	epatch "${FILESDIR}/${P}-amd64-mikmod.patch"
-	autoreconf -i || die
+	aclocal || die "aclocal"
+	automake -a -c || die "automake"
+	autoconf || die "autoconf"
 	sed -i \
 		-e 's:/usr/local/lib/timidity:/usr/share/timidity:' \
 		timidity/config.h \
