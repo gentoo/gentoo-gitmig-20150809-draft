@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.2-r1.ebuild,v 1.1 2001/02/21 06:19:57 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.2-r1.ebuild,v 1.2 2001/02/21 10:39:18 achim Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -75,14 +75,14 @@ src_install() {
     try make PARALELLMFLAGS=${MAKEOPTS} install_root=${D} install -C buildhere
     try make PARALELLMFLAGS=${MAKEOPTS} install_root=${D} info -C buildhere
     try make PARALELLMFLAGS=${MAKEOPTS} install_root=${D} localedata/install-locales -C buildhere
-    try make PARALELLMFLAGS=${MAKEOPTS} -C linuxthreads/man
-
-    cd ${S}/linuxthreads/man
-    for i in *.3thr
+    dodir /usr/share/man/man3
+    try make PARALELLMFLAGS=${MAKEOPTS} MANDIR=${D}/usr/share/man/man3 install -C linuxthreads/man
+    cd ${D}/usr/share/man/man3
+    for i in *.3thr 
     do
-      newman $i ${i%.3thr}.3
+      mv ${i} ${i%.3thr}.3
     done
-
+   
     cd ${S}
     chmod 755 ${D}/usr/lib/misc/pt_chown
     install -m 644 nscd/nscd.conf ${D}/etc
