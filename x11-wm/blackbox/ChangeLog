@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.36 2004/06/24 23:40:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.37 2004/12/31 10:24:11 corsair Exp $
+
+*blackbox-0.65.0-r4 (31 Dec 2004)
+
+  31 Dec 2004; Markus Rothe <corsair@gentoo.org>
+  +files/blackbox-0.65.0-gcc34.patch, +blackbox-0.65.0-r4.ebuild:
+  Added gcc34 patch from bug #64747 and marked new revision as ~ppc64
 
   06 May 2004; Brandon Hale <tseng@gentoo.org> blackbox-0.65.0-r3.ebuild:
   Remove explicit S= and remove NLS from IUSE.
