@@ -10,7 +10,7 @@ HOMEPAGE="http://fluxbg.sourceforge.net/"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND="virtual/x11
 	x11-misc/commonbox-utils
