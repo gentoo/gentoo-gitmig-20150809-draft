@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/electric/electric-6.08-r1.ebuild,v 1.4 2004/08/18 07:48:10 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/electric/electric-6.08-r1.ebuild,v 1.5 2004/09/29 11:18:39 blubb Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.gnu.org/pub/gnu/electric/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 
 DEPEND="virtual/libc
 	!qt? ( x11-libs/openmotif )
