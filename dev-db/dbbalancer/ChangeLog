@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/dbbalancer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/ChangeLog,v 1.4 2004/03/16 08:01:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbbalancer/ChangeLog,v 1.5 2004/03/20 07:03:04 mr_bones_ Exp $
+
+  19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  dbbalancer-0.4.4.ebuild:
+  fix depend (bug #45110)
 
   16 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   dbbalancer-0.4.4.ebuild:
