@@ -8,7 +8,7 @@ MD5 f18a68edbe338cae044acc49ae9fdd2b isdn4k-utils-3.2_p1-r4.ebuild 3553
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 f1cac015a1fd0ca2da5a4712ec6b24fa isdn4k-utils-20041024.ebuild 3525
 MD5 18e1229fe631fbf89555a54ddf4757be isdn4k-utils-20041024-r1.ebuild 3373
-MD5 6d16576d0e701e8c2416b718f262b36f isdn4k-utils-3.5_p20041024.ebuild 3414
+MD5 25e734017cd86e4def771bbfd2954306 isdn4k-utils-3.5_p20041024.ebuild 3414
 MD5 e2cc85397eb8ff285f383213ab00cdad files/digest-isdn4k-utils-3.2_p1-r2 73
 MD5 12a790e7cfe579394ff02019abcdf95d files/digest-isdn4k-utils-3.2_p1-r3 136
 MD5 12a790e7cfe579394ff02019abcdf95d files/digest-isdn4k-utils-3.2_p1-r4 136
@@ -45,8 +45,8 @@ MD5 76e9b700a1600d4b74dea30751934c83 files/3.5_p20041024/gentoo.patch 2383
 MD5 92412760dfacc81cfac908d522ac8e39 files/3.5_p20041024/ioptions 86
 MD5 0fea1d14ab99bdbbbb5b6e652e105bd3 files/3.5_p20041024/ip-up 1083
 MD5 115bcf317b18a9c362ef37acf5cd4c4b files/3.5_p20041024/isdn4linux.conf 105
-MD5 4183c8198a49b738531a11c462cc69e7 files/3.5_p20041024/isdn4linux.init 712
-MD5 1c9b32ba3c1b3d083d5352af736f36cb files/3.5_p20041024/net.ippp0 2423
+MD5 5be734aa0bdd1a4817775806a6c50b54 files/3.5_p20041024/isdn4linux.init 717
+MD5 786c52d03809635b0a5617d7608c54a5 files/3.5_p20041024/net.ippp0 2428
 MD5 48266d44ebe70519d3fc67a6b0e260ff files/3.5_p20041024/options.ippp0 443
 MD5 56b93c0cc4cc17b12c6add0237283271 files/3.5_p20041024/pathfix.patch 641
 MD5 15ef676fec91271f9a48dc7a1b7e82a2 files/3.5_p20041024/vbox-makefile.am.patch 1211
@@ -54,7 +54,7 @@ MD5 a3751d222be8dc6eb7633a2b222ae45d files/3.5_p20041024/ip-down 940
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBkPGzjtv59x0+BrURAiY2AJ42OMzuf5zoIv7ioo24RFz/s3K3+ACgkMna
-P+TJPX04/jQLh0jpGkxMOrE=
-=8Ry2
+iD8DBQFBkPMijtv59x0+BrURAu/WAJ48JI3btlln68vXWyJV6dpzGeKRzwCcC5vA
+LSkL5Cz8EBP+HYLBTJ91NhQ=
+=4OXD
 -----END PGP SIGNATURE-----
