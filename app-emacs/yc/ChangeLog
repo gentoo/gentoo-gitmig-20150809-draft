@@ -1,17 +1,23 @@
 # ChangeLog for app-emacs/yc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/ChangeLog,v 1.3 2003/02/12 03:58:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/ChangeLog,v 1.4 2003/03/27 13:57:50 nakano Exp $
+
+*yc-3.5.1 (27 Mar 2003)
+
+  27 Mar 2003; Masatomo Nakano <nakano@gentoo.org> ChangeLog, yc-3.5.1.ebuild:
+
+  Version bump.
 
 *yc-3.5.0 (20 Dec 2002)
 
   24 Dec 2002; Masatomo Nakano <nakano@gentoo.org> ChangeLog,
-  yc-3.5.0.ebuild
+  yc-3.5.0.ebuild:
 
-	Changed Keywords from ~x86 to x86.
+  Changed Keywords from ~x86 to x86.
 
   20 Dec 2002; Masatomo Nakano <nakano@gentoo.org> ChangeLog,
   yc-3.5.0.ebuild, files/30yc-gentoo.el, files/sample.dot.emacs, 
-	files/sample.hosts.canna, files/digest-yc-3.5.0 :
+  files/sample.hosts.canna, files/digest-yc-3.5.0 :
 
   Initial import. Ebuild submitted by ni_naoto@ybb.ne.jp (Nishimura Naoto).
 
