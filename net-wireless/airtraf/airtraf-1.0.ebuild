@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/airtraf-1.0.ebuild,v 1.7 2004/09/03 15:12:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/airtraf-1.0.ebuild,v 1.8 2004/09/22 14:59:28 blubb Exp $
+
+inherit eutils
 
 DESCRIPTION="AirTraf 802.11b Wireless traffic sniffer"
 HOMEPAGE="http://www.elixar.com/"
@@ -10,9 +12,17 @@ IUSE=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 
 DEPEND=">=net-libs/libpcap-0.7.1"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	if use amd64 ; then
+		epatch ${FILESDIR}/${PN}-amd64.patch
+	fi
+}
 
 src_compile() {
 	cd ${S}/src

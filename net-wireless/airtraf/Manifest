@@ -1,3 +1,4 @@
-MD5 fea6977e4db84dcaa290680abdbaafa4 ChangeLog 577
-MD5 e4fca765e93c4b3dd72304cc4c75b7cb airtraf-1.0.ebuild 884
+MD5 c83c321abb5182c1cb801b1e4427f44d ChangeLog 679
+MD5 68ed15a8c72fd21f7357c17dfc628c1d airtraf-1.0.ebuild 1011
 MD5 92f9aeb2621275bceb1c4707f6530049 files/digest-airtraf-1.0 63
+MD5 7753e78fafa0ea42690623c8e2618b2f files/airtraf-amd64.patch 1485
