@@ -1,0 +1,8 @@
+# ChangeLog for app-sci/xephem
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/ChangeLog,v 1.1 2003/01/04 11:31:55 tantive Exp $
+
+*zetagrid-1.0 (04 Jan 2003)
+
+  04 Jan 2003; Michael Imhof <tantive@gentoo.org> :
+  Initial release.
