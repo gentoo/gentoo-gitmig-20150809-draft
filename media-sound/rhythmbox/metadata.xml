@@ -3,4 +3,5 @@
 <pkgmetadata>
 <herd>gnome</herd>
 <herd>sound</herd>
+<herd>gstreamer</herd>
 </pkgmetadata>
