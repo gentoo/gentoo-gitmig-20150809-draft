@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.0.91.ebuild,v 1.9 2002/10/04 06:18:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.0.91.ebuild,v 1.10 2002/12/05 20:58:39 danarmak Exp $
 # Note: this also d/ls the hp-ppa-howto and installs it under /usr/share/doc/${P}
 
 # pnm2ppa is a print filter for HP's line of Winprinters which use a proprietary
@@ -28,8 +28,8 @@ LICENSE="GPL-2"
 # note: this doesn't depend on virtual/lpr, because it can work on its own,
 # just without queueing etc. since it's not just a driver but a standalone
 # executable.
-DEPEND="sys-libs/glibc sys-devel/ld.so"
-RDEPEND="sys-libs/glibc sys-devel/ld.so app-text/enscript"
+DEPEND="sys-libs/glibc"
+RDEPEND="sys-libs/glibc app-text/enscript"
 
 src_unpack() {
     

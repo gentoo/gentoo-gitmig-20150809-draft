@@ -1,6 +1,11 @@
 # ChangeLog for net-print/pnm2ppa
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/ChangeLog,v 1.6 2002/10/29 14:56:39 aliz Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/ChangeLog,v 1.7 2002/12/05 20:58:39 danarmak Exp $
+
+  05 Dec 2002; Dan Armak <danarmak@gentoo.org> pnm2ppa-1.0.91.ebuild,
+  pnm2ppa-1.0.91-r1.ebuild, pnm2ppa-1.0.91-r2.ebuild :
+
+  Remove obsolete dep on ld.so.
 
 *pnm2ppa-1.11pre2 (29 Oct 2002)
 
