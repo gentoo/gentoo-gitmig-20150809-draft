@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gtkhtml/gtkhtml-0.7.ebuild,v 1.2 2000/11/25 12:57:02 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gtkhtml/gtkhtml-0.7.ebuild,v 1.3 2000/11/25 16:42:09 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -12,7 +12,9 @@ DEPEND=">=gnome-base/gal-0.2.2
 	>=gnome-base/libglade-0.15
 	>=gnome-base/libunicode-0.4
 	>=gnome-base/control-center-1.2.2
-	>=gnome-base/glibwww-0.2"
+	>=gnome-base/glibwww-0.2
+	>=app-text/pspell-0.11.2"
+	
 
 src_unpack() {
   	unpack ${A}
