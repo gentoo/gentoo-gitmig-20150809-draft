@@ -1,14 +1,19 @@
 # ChangeLog for sys-kernel/redhat-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/ChangeLog,v 1.7 2003/02/12 09:17:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/ChangeLog,v 1.8 2003/02/18 03:06:11 blocke Exp $
+
+*redhat-sources-2.4.18.24.8.0 (17 Feb 2003)
+
+  17 Feb 2003; Bruce A. Locke <blocke@shivan.org> redhat-sources-2.4.18.24.8.0.ebuild:
+  Red Hat 8.0 kernel - 2.4.18-24.8.0 from updates
+
+*redhat-sources-2.4.18-r4 (21 May 2002)
 
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*redhat-sources-2.4.18-r4 (21 May 2002)
-
   15 Jul 2002; Mark Guertin <gerk@gentoo.org>
   Added arch keywords (-ppc -sparc -sparc64)
 
