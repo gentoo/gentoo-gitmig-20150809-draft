@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.95 2005/01/06 07:12:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.96 2005/01/08 08:51:22 mrness Exp $
+
+  08 Jan 2005; Alin Nastac <mrness@gentoo.org> -files/ppp-2.4.1-r10.patch,
+  -ppp-2.4.2-r9.ebuild:
+  Remove old ebuild.
 
   06 Jan 2005; Alin Nastac <mrness@gentoo.org> ppp-2.4.2-r10.ebuild:
   Mark stable on all arches.
