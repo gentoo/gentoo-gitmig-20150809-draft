@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 #        Chad Huneycutt <chad.huneycutt@acm.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.20 2003/06/21 22:06:04 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r5.ebuild,v 1.21 2003/06/22 05:10:31 seemant Exp $
 
 inherit gnuconfig
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://prep.ai.mit.edu/gnu/gdbm/${P}.tar.gz"
 
 HOMEPAGE="http://www.gnu.org/software/gdbm/gdbm.html"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 SLOT="0"
 
 DEPEND="virtual/glibc

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.0.ebuild,v 1.6 2003/06/21 22:06:04 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.0.ebuild,v 1.7 2003/06/22 05:10:31 seemant Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 -ppc"
+KEYWORDS="x86 -ppc"
 
 DEPEND="app-text/docbook-sgml-utils
 	>=app-text/docbook-sgml-dtd-4.1

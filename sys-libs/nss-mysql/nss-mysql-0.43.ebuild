@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Written for Portage by Christian Skarby (Interhost ANS, Norway) christian.skarby@interhost.no
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/nss-mysql-0.43.ebuild,v 1.5 2003/06/21 22:06:04 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/nss-mysql-0.43.ebuild,v 1.6 2003/06/22 05:10:31 seemant Exp $
 
 IUSE="static"
 DESCRIPTION="NSS MySQL Module"
 HOMEPAGE="http://savannah.gnu.org/projects/nss-mysql"
 SRC_URI="http://savannah.gnu.org/download/nss-mysql/nss-mysql.pkg/0.43/${P}.tar.gz"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86"
 DEPEND=">=virtual/glibc-2.1* >=dev-db/mysql-3.23.51-r1"
 LICENSE="GPL-2"
 

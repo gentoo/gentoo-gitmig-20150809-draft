@@ -1,5 +1,5 @@
 MD5 5d6f0389887bb3f8284c8843bb8d71a3 ChangeLog 428
-MD5 0e692bf7e59cdea419ebdb6a01b765bd lrmi-0.6.ebuild 674
-MD5 dd90c2aa32846996e70f4dcc5b3238ed lrmi-0.7.ebuild 674
+MD5 8ae5a372c719fcc9d1a4ac6837537869 lrmi-0.6.ebuild 666
+MD5 12507496521435a6a3cb7488a54c38c3 lrmi-0.7.ebuild 666
 MD5 c2587bd78295f2acb8207bd8875dc762 files/digest-lrmi-0.6 58
 MD5 2bd5cbd06eeb3edcb25852c477959924 files/digest-lrmi-0.7 58

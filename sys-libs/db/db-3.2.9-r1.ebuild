@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r1.ebuild,v 1.13 2003/06/21 22:06:04 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r1.ebuild,v 1.14 2003/06/22 05:10:30 seemant Exp $
 
 S=${WORKDIR}/${P}/build_unix
 DESCRIPTION="Berkeley DB for transaction support in MySQL"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.sleepycat.com/"
 
 SLOT="3"
 LICENSE="DB"
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}

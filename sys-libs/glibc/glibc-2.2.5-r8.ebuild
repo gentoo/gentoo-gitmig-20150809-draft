@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r8.ebuild,v 1.9 2003/06/21 22:06:04 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r8.ebuild,v 1.10 2003/06/22 05:10:31 seemant Exp $
 
 IUSE="nls pic build"
 
@@ -40,7 +40,7 @@ SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/glibc-${PV}.tar.bz2
 	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="x86 amd64 ppc sparc alpha arm"
+KEYWORDS="x86 ppc sparc alpha arm"
 SLOT="2.2"
 LICENSE="LGPL-2"
 

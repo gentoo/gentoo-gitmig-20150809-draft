@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10.ebuild,v 1.2 2003/06/21 22:06:04 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10.ebuild,v 1.3 2003/06/22 05:10:31 seemant Exp $
 
 inherit base
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://linux.kernel.org/pub/linux/libs/security/linux-privs/"
 SRC_URI="http://www.kernel.org/pub/linux/libs/security/linux-privs/kernel-2.4/${P}.tar.bz2"
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="x86 amd64 ~arm ~mips ~hppa ~sparc ~ppc ~alpha"
+KEYWORDS="x86 ~arm ~mips ~hppa ~sparc ~ppc ~alpha"
 IUSE="python"
 
 #patch is in recent 2.2 kernels so it works there

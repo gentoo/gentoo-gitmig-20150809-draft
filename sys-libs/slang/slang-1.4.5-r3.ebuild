@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.5-r3.ebuild,v 1.2 2003/06/21 22:06:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.5-r3.ebuild,v 1.3 2003/06/22 05:10:31 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console display library used by most text viewer"
 SRC_URI="ftp://space.mit.edu/pub/davis/slang/v1.4/${P}.tar.gz"
 LICENSE="GPL-2 | Artistic"
-KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 SLOT="0"
 HOMEPAGE="http://space.mit.edu/~davis/slang/"
 
