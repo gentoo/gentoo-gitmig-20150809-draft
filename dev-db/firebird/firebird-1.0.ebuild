@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Geert Bevin <gbevin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.0.ebuild,v 1.1 2002/03/20 19:19:43 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.0.ebuild,v 1.2 2002/03/21 12:09:39 gbevin Exp $
 
 S=${WORKDIR}/firebird-1.0.0.796
 
@@ -39,7 +39,7 @@ src_compile() {
 	cd ${S}
 	source Configure_SetupEnv.sh
 	make LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$INTERBASE/lib" firebird || die
-	make classicpackages || die
+	make classictarfile || die
 }
 
 src_install () {
