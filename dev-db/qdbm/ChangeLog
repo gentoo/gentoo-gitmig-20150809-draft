@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.16 2004/12/06 01:12:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.17 2004/12/06 03:29:16 weeve Exp $
+
+  05 Dec 2004; Jason Wever <weeve@gentoo.org> qdbm-1.8.17.ebuild:
+  Added ~sparc keyword wrt bug #73460.
 
   06 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> qdbm-1.8.17.ebuild:
   ~alpha keyword, bug 73460.
