@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-1.11.33-r1.ebuild,v 1.2 2003/08/05 18:08:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-1.11.33-r1.ebuild,v 1.3 2003/09/05 01:30:20 msterret Exp $
 
 inherit eutils
 
@@ -23,9 +23,9 @@ src_unpack() {
 	cd ${S}/DEFAULTS
 	sed -e "s:/opt/schily:/usr:g" < Defaults.linux > Defaults.linux.hacked
 	mv Defaults.linux.hacked Defaults.linux
-	
+
 	cd ${S}
-	epatch ${FILESDIR}/cdrecord-scsiopen-format.patch 
+	epatch ${FILESDIR}/cdrecord-scsiopen-format.patch
 }
 
 src_compile() {
