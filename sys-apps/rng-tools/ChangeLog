@@ -1,0 +1,7 @@
+# ChangeLog for sys-apps/rng-tools
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.1 2003/08/20 14:06:58 hanno Exp $
+
+  20 Aug 2003; Hanno Boeck <hanno@gentoo.org> files/rngd:
+  New package for using random number generators.
+
