@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/pycdf-0.5.2.ebuild,v 1.2 2004/06/25 01:37:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/pycdf-0.5.2.ebuild,v 1.3 2004/12/05 12:24:17 kloeri Exp $
 
 inherit distutils
 
@@ -17,7 +17,8 @@ KEYWORDS="~x86"
 IUSE="doc"
 
 DEPEND="virtual/python
-	>=app-sci/netcdf-3.5.0-r3"
+		>=app-sci/netcdf-3.5.0-r3
+		dev-python/numeric"
 
 DOCS="CHANGES doc/pycdf.txt"
 
