@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.3.7-r1.ebuild,v 1.1 2004/07/23 06:33:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.3.7-r1.ebuild,v 1.2 2004/08/01 20:53:56 dholm Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://freshmeat.net/projects/lfhex"
 SRC_URI="http://home.earthlink.net/~eyekode/data/${P}.tar.gz"
 LICENSE="QPL-1.0"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
