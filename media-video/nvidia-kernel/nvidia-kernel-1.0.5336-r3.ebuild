@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.5336-r3.ebuild,v 1.1 2004/05/11 03:32:12 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.5336-r3.ebuild,v 1.2 2004/05/16 02:14:22 cyfred Exp $
 
 inherit eutils kmod
 
@@ -55,7 +55,11 @@ ck_kern_write() {
 		ewarn "unfortunately this means that older kernels will be omitted from"
 		ewarn "the sandbox for this build.\n"
 		ewarn "This will be over come with newer driver releases from nvidia."
-
+		echo
+		ewarn "THIS BUILD WILL NOT WORK WITH FEATURES=\"userpriv\""
+		echo
+		ewarn "We are working to resolve this issue, please disable userpriv"
+		ewarn "if you use it while building nvidia-kernel."
 		return 0
 	else
 		return 1
