@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.108 2004/03/06 06:24:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.109 2004/03/14 09:55:27 kumba Exp $
+
+  14 Mar 2004; Joshua Kinard <kumba@gentoo.org> :
+  Added a patch to the patchball for mips that reverses a patch added in
+  Dec-2003 that seemingly makes unbootable kernels. The issue needs to be
+  investigated further to make sure that this doesn't not affect 2.6 kernels as
+  well (tested with 2.4 kernels for now).
 
 *binutils-2.15.90.0.1.1 (06 Mar 2004)
 
