@@ -1,0 +1,4414 @@
+diff -urN qt-x11-free-3.3.2/configure qt-x11-immodule-bc/configure
+--- qt-x11-free-3.3.2/configure	2004-04-01 01:40:12.000000000 +0900
++++ qt-x11-immodule-bc/configure	2004-06-23 01:10:27.058123680 +0900
+@@ -217,7 +217,7 @@
+ fi
+ 
+ # licensed modules depend on type of commercial license
+-MODULES="styles tools kernel widgets dialogs iconview workspace"
++MODULES="styles tools kernel widgets dialogs iconview workspace input"
+ [ "$PLATFORM_QWS" = "yes" ] && [ "$Products" = "qt-professional" ] && MODULES="$MODULES network"
+ [ "$Products" != "qt-professional" ] && MODULES="$MODULES network canvas table xml opengl sql"
+ CFG_MODULES_AVAILABLE=$MODULES
+@@ -2999,7 +2999,7 @@
+ #     minimal-config small-config medium-config large-config full-config
+ #
+ #   Modules:
+-#     styles tools kernel widgets dialogs iconview workspace
++#     styles tools kernel widgets dialogs iconview workspace input
+ #
+ #   Enterprise/Free edition modules:
+ #     network canvas table xml opengl sql
+@@ -3031,7 +3031,7 @@
+ #     X11     : xftnameunparse x11sm xinerama xcursor xrandr xrender xftfreetype xkb
+ #     Embedded: embedded ft
+ #
+-ALL_OPTIONS="styles tools kernel widgets dialogs iconview workspace network canvas table xml opengl sql stl"
++ALL_OPTIONS="styles tools kernel widgets dialogs iconview workspace input network canvas table xml opengl sql stl"
+ BUILD_CONFIG=
+ BUILD_OPTIONS=
+ 
+@@ -3045,7 +3045,7 @@
+ 	BUILD_CONFIG="$config_option"
+ 	;;
+ 
+-    styles|tools|kernel|widgets|dialogs|iconview|workspace|network|canvas|table|xml|opengl|sql|stl)
++    styles|tools|kernel|widgets|dialogs|iconview|workspace|input|network|canvas|table|xml|opengl|sql|stl)
+ 	# these config options affect the Qt API/ABI. they should influence
+ 	# the generation of the buildkey, so we don't skip them
+    	SKIP="no"
+diff -urN qt-x11-free-3.3.2/src/input/qinputcontextfactory.cpp qt-x11-immodule-bc/src/input/qinputcontextfactory.cpp
+--- qt-x11-free-3.3.2/src/input/qinputcontextfactory.cpp	1970-01-01 09:00:00.000000000 +0900
++++ qt-x11-immodule-bc/src/input/qinputcontextfactory.cpp	2004-06-23 01:54:29.544404704 +0900
+@@ -0,0 +1,151 @@
++/****************************************************************************
++** $Id: qt-x11-immodule-bc-qt3.3.2-20040623.diff,v 1.1 2004/08/04 16:15:05 usata Exp $
++**
++** Implementation of QInputContextFactory class
++**
++** Created : 001103
++**
++** Copyright (C) 1992-2002 Trolltech AS.  All rights reserved.
++**
++** This file is part of the widgets module of the Qt GUI Toolkit.
++**
++** This file may be distributed under the terms of the Q Public License
++** as defined by Trolltech AS of Norway and appearing in the file
++** LICENSE.QPL included in the packaging of this file.
++**
++** This file may be distributed and/or modified under the terms of the
++** GNU General Public License version 2 as published by the Free Software
++** Foundation and appearing in the file LICENSE.GPL included in the
++** packaging of this file.
++**
++** Licensees holding valid Qt Enterprise Edition licenses may use this
++** file in accordance with the Qt Commercial License Agreement provided
++** with the Software.
++**
++** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
++** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
++**
++** See http://www.trolltech.com/pricing.html or email sales@trolltech.com for
++**   information about Qt Commercial License Agreements.
++** See http://www.trolltech.com/qpl/ for QPL licensing information.
++** See http://www.trolltech.com/gpl/ for GPL licensing information.
++**
++** Contact info@trolltech.com if any conditions of this licensing are
++** not clear to you.
++**
++**********************************************************************/
++
++#include "qinputcontextinterface_p.h" // up here for GCC 2.7.* compatibility
++#include "qinputcontextfactory.h"
++
++#ifndef QT_NO_IM
++
++#include "qapplication.h"
++#include "qpopupmenu.h"
++#ifdef Q_WS_X11
++#include "qximinputcontext_p.h"
++#endif
++
++#ifdef QT_THREAD_SUPPORT
++#include <private/qmutexpool_p.h>
++#endif // QT_THREAD_SUPPORT
++
++#include <stdlib.h>
++
++#include "qcleanuphandler.h"
++#include <private/qpluginmanager_p.h>
++#ifndef QT_NO_COMPONENT
++
++
++static QPluginManager<QInputContextFactoryInterface> *manager = 0;
++static QSingleCleanupHandler< QPluginManager<QInputContextFactoryInterface> > cleanup_manager;
++
++static void create_manager()
++{
++    if( manager ) // already created
++	            return;
++
++#ifdef QT_THREAD_SUPPORT
++    // protect manager creation
++    QMutexLocker locker( qt_global_mutexpool ?
++			 qt_global_mutexpool->get( &manager ) : 0);
++
++    // we check the manager pointer again to make sure that another thread
++    // has not created the manager before us.
++
++    if ( manager ) // already created
++        return;
++#endif
++
++    manager = new QPluginManager<QInputContextFactoryInterface>( IID_QInputContextFactory, QApplication::libraryPaths(), "/input", FALSE );
++
++    Q_CHECK_PTR( manager );
++    cleanup_manager.set( &manager );
++}
++
++#endif //QT_NO_COMPONENT
++
++
++/*!
++    This function generates InputMethod with the name which is in agreement
++    with key of the first argument. widget of the second argument is client
++    widget of QInputContext.
++*/
++QInputContext *QInputContextFactory::create( const QString& key, QWidget *widget )
++{
++    QInputContext *ret = 0;
++    QString inputcontext = key;
++#ifdef Q_WS_X11
++    if ( inputcontext == "XIM" ) {
++	ret = new QXIMInputContext( widget );
++	ret->setHolderWidget( widget );
++    }
++#endif
++    { } // Keep these here - they make the #ifdefery above work
++
++#ifndef QT_NO_COMPONENT
++    if(!ret) {
++	// make sure the manager is created
++	create_manager();
++
++	QInterfacePtr<QInputContextFactoryInterface> iface;
++	manager->queryInterface( inputcontext, &iface );
++
++	if ( iface ) {
++	    ret = iface->create( inputcontext );
++#ifdef Q_WS_X11
++	    ret->setHolderWidget( widget );
++#endif
++	}
++    }
++#endif
++    return ret;
++}
++
++
++/*!
++    This function returns the list of the names input methods.
++    Only input methods included in default and putted below
++    $QTDIR/plugins/input are listed.
++*/
++#ifndef QT_NO_STRINGLIST
++QStringList QInputContextFactory::keys()
++{
++    QStringList list;
++#ifndef QT_NO_COMPONENT
++    // make sure the manager is created
++    create_manager();
++
++    list = manager->featureList();
++#endif //QT_NO_COMPONENT
++
++#ifdef Q_WS_X11
++    if ( !list.contains( "XIM" ) )
++	list << "XIM";
++#endif // Q_WS_X11
++
++    return list;
++}
++#endif // QT_NO_STRINGLIST
++
++#endif // QT_NO_IM
+diff -urN qt-x11-free-3.3.2/src/input/qinputcontextfactory.h qt-x11-immodule-bc/src/input/qinputcontextfactory.h
+--- qt-x11-free-3.3.2/src/input/qinputcontextfactory.h	1970-01-01 09:00:00.000000000 +0900
++++ qt-x11-immodule-bc/src/input/qinputcontextfactory.h	2004-06-23 01:10:27.059123528 +0900
+@@ -0,0 +1,60 @@
++/****************************************************************************
++** $Id: qt-x11-immodule-bc-qt3.3.2-20040623.diff,v 1.1 2004/08/04 16:15:05 usata Exp $
++**
++** Definition of QInputContextPlugin class
++**
++** Copyright (C) 2000-2002 Trolltech AS.  All rights reserved.
++**
++** This file is part of the widgets module of the Qt GUI Toolkit.
++**
++** This file may be distributed under the terms of the Q Public License
++** as defined by Trolltech AS of Norway and appearing in the file
++** LICENSE.QPL included in the packaging of this file.
++**
++** This file may be distributed and/or modified under the terms of the
++** GNU General Public License version 2 as published by the Free Software
++** Foundation and appearing in the file LICENSE.GPL included in the
++** packaging of this file.
++**
++** Licensees holding valid Qt Enterprise Edition or Qt Professional Edition
++** licenses may use this file in accordance with the Qt Commercial License
++** Agreement provided with the Software.
++**
++** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
++** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
++**
++** See http://www.trolltech.com/pricing.html or email sales@trolltech.com for
++**   information about Qt Commercial License Agreements.
++** See http://www.trolltech.com/qpl/ for QPL licensing information.
++** See http://www.trolltech.com/gpl/ for GPL licensing information.
++**
++** Contact info@trolltech.com if any conditions of this licensing are
++** not clear to you.
++**
++**********************************************************************/
++
++#ifndef QINPUTCONTEXTFACTORY_H
++#define QINPUTCONTEXTFACTORY_H
++
++#ifndef QT_H
++#include "qstringlist.h"
++#endif // QT_H
++
++#ifndef QT_NO_IM
++
++class QInputContext;
++class QPopupMenu;
++
++
++class Q_EXPORT QInputContextFactory
++{
++public:
++#ifndef QT_NO_STRINGLIST
++    static QStringList keys();
++#endif
++    static QInputContext *create( const QString&, QWidget*); // should be a toplevel widget
++
++};
++#endif //QT_NO_IM
++
++#endif //QINPUTCONTEXTFACTORY_H
+diff -urN qt-x11-free-3.3.2/src/input/qinputcontextinterface_p.h qt-x11-immodule-bc/src/input/qinputcontextinterface_p.h
+--- qt-x11-free-3.3.2/src/input/qinputcontextinterface_p.h	1970-01-01 09:00:00.000000000 +0900
++++ qt-x11-immodule-bc/src/input/qinputcontextinterface_p.h	2004-06-23 01:10:27.060123376 +0900
+@@ -0,0 +1,74 @@
++/****************************************************************************
++** $Id: qt-x11-immodule-bc-qt3.3.2-20040623.diff,v 1.1 2004/08/04 16:15:05 usata Exp $
++**
++** ...
++**
++** Copyright (C) 2000-2002 Trolltech AS.  All rights reserved.
++**
++** This file is part of the widgets module of the Qt GUI Toolkit.
++**
++** This file may be distributed under the terms of the Q Public License
++** as defined by Trolltech AS of Norway and appearing in the file
++** LICENSE.QPL included in the packaging of this file.
++**
++** This file may be distributed and/or modified under the terms of the
++** GNU General Public License version 2 as published by the Free Software
++** Foundation and appearing in the file LICENSE.GPL included in the
++** packaging of this file.
++**
++** Licensees holding valid Qt Enterprise Edition or Qt Professional Edition
++** licenses may use this file in accordance with the Qt Commercial License
++** Agreement provided with the Software.
++**
++** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
++** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
++**
++** See http://www.trolltech.com/pricing.html or email sales@trolltech.com for
++**   information about Qt Commercial License Agreements.
++** See http://www.trolltech.com/qpl/ for QPL licensing information.
++** See http://www.trolltech.com/gpl/ for GPL licensing information.
++**
++** Contact info@trolltech.com if any conditions of this licensing are
++** not clear to you.
++**
++**********************************************************************/
++
++#ifndef QINPUTCONTEXTINTERFACE_P_H
++#define QINPUTCONTEXTINTERFACE_P_H
++
++//
++//  W A R N I N G
++//  -------------
++//
++// This file is not part of the Qt API.  This header file may
++// change from version to version without notice, or even be
++// removed.
++//
++// We mean it.
++//
++//
++
++#ifndef QT_H
++#include <private/qcom_p.h>
++#endif // QT_H
++
++#ifndef QT_NO_IM
++#ifndef QT_NO_COMPONENT
++
++class QWidget;
++class QInputContext;
++
++// {6C2B9EDE-B63C-14c9-A729-3C7643739C4C}
++#ifndef IID_QInputContextFactory
++#define IID_QInputContextFactory QUuid(0x6c2b9ede, 0xb63c, 0x14c9, 0xa7, 0x29, 0x3c, 0x76, 0x43, 0x73, 0x9c, 0x4c)
++#endif
++
++struct Q_EXPORT QInputContextFactoryInterface : public QFeatureListInterface
++{
++    virtual QInputContext* create( const QString& inputcontext ) = 0;
++};
++
++#endif //QT_NO_COMPONENT
++#endif //QT_NO_IM
++
++#endif //QINPUTCONTEXTINTERFACE_P_H
+diff -urN qt-x11-free-3.3.2/src/input/qinputcontextplugin.cpp qt-x11-immodule-bc/src/input/qinputcontextplugin.cpp
+--- qt-x11-free-3.3.2/src/input/qinputcontextplugin.cpp	1970-01-01 09:00:00.000000000 +0900
++++ qt-x11-immodule-bc/src/input/qinputcontextplugin.cpp	2004-06-23 01:10:27.060123376 +0900
+@@ -0,0 +1,158 @@
++/****************************************************************************
++** $Id: qt-x11-immodule-bc-qt3.3.2-20040623.diff,v 1.1 2004/08/04 16:15:05 usata Exp $
++**
++** Implementation of QInputContextPlugin class
++**
++** Created : 010920
++**
++** Copyright (C) 2001 Trolltech AS.  All rights reserved.
++**
++** This file is part of the widgets module of the Qt GUI Toolkit.
++**
++** This file may be distributed under the terms of the Q Public License
++** as defined by Trolltech AS of Norway and appearing in the file
++** LICENSE.QPL included in the packaging of this file.
++**
++** This file may be distributed and/or modified under the terms of the
++** GNU General Public License version 2 as published by the Free Software
++** Foundation and appearing in the file LICENSE.GPL included in the
++** packaging of this file.
++**
++** Licensees holding valid Qt Enterprise Edition or Qt Professional Edition
++** licenses may use this file in accordance with the Qt Commercial License
++** Agreement provided with the Software.
++**
++** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
++** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
++**
++** See http://www.trolltech.com/pricing.html or email sales@trolltech.com for
++**   information about Qt Commercial License Agreements.
++** See http://www.trolltech.com/qpl/ for QPL licensing information.
++** See http://www.trolltech.com/gpl/ for GPL licensing information.
++**
++** Contact info@trolltech.com if any conditions of this licensing are
++** not clear to you.
++**
++**********************************************************************/
++
++#include "qinputcontextplugin.h"
++
++#ifndef QT_NO_IM
++#ifndef QT_NO_COMPONENT
++
++#include "qinputcontextinterface_p.h"
++
++/*!
++    \class QInputContextPlugin qinputcontextplugin.h
++    \brief The QInputContextPlugin class provides an abstract base for custom QInputContext plugins.
++    \reentrant
++    \ingroup plugins
++
++    The input context plugin is a simple plugin interface that makes it
++    easy to create custom input contexts that can be loaded dynamically
++    into applications.
++
++    Writing a input context plugin is achieved by subclassing this base
++    class, reimplementing the pure virtual functions keys(),
++    create(), and exporting the class with the \c Q_EXPORT_PLUGIN macro.
++    See the \link plugins-howto.html Qt Plugins documentation \endlink
++    for details.
++*/
++
++/*!
++    \fn QStringList QInputContextPlugin::keys() const
++
++    Returns the list of InputContext keys this plugin supports.
++
++    These keys are usually the class names of the custom input context
++    that are implemented in the plugin.
++
++    \sa create()
++*/
++
++/*!
++    \fn QInputContext* QInputContextPlugin::create( const QString& key )
++
++    Creates and returns a QInputContext object for the InputContext key \a key.
++    The InputContext key is usually the class name of the required input method.
++
++    \sa keys()
++*/
++
++
++
++class QInputContextPluginPrivate : public QInputContextFactoryInterface
++{
++public:
++    QInputContextPluginPrivate( QInputContextPlugin *p )
++	: plugin( p )
++    {
++    }
++
++    virtual ~QInputContextPluginPrivate();
++
++    QRESULT queryInterface( const QUuid &iid, QUnknownInterface **iface );
++    Q_REFCOUNT;
++
++    QStringList featureList() const;
++    QInputContext *create( const QString &key );
++
++private:
++    QInputContextPlugin *plugin;
++};
++
++QRESULT QInputContextPluginPrivate::queryInterface( const QUuid &iid, QUnknownInterface **iface )
++{
++    *iface = 0;
++
++    if ( iid == IID_QUnknown )
++	*iface = this;
++    else if ( iid == IID_QFeatureList )
++	*iface = this;
++    else if ( iid == IID_QInputContextFactory )
++	*iface = this;
++    else
++	return QE_NOINTERFACE;
++
++    (*iface)->addRef();
++    return QS_OK;
++}
++
++QInputContextPluginPrivate::~QInputContextPluginPrivate()
++{
++    delete plugin;
++}
++
++QStringList QInputContextPluginPrivate::featureList() const
++{
++    return plugin->keys();
++}
++
++QInputContext *QInputContextPluginPrivate::create( const QString &key )
++{
++    return plugin->create( key );
++}
++
++
++/*!
++    Constructs a InputContext plugin. This is invoked automatically by the
++    \c Q_EXPORT_PLUGIN macro.
++*/
++QInputContextPlugin::QInputContextPlugin()
++    : QGPlugin( d = new QInputContextPluginPrivate( this ) )
++{
++}
++
++/*!
++    Destroys the InputContext plugin.
++
++    You never have to call this explicitly. Qt destroys a plugin
++    automatically when it is no longer used.
++*/
++QInputContextPlugin::~QInputContextPlugin()
++{
++    // don't delete d, as this is deleted by d
++}
++
++#endif // QT_NO_COMPONENT
++#endif // QT_NO_IM
+diff -urN qt-x11-free-3.3.2/src/input/qinputcontextplugin.h qt-x11-immodule-bc/src/input/qinputcontextplugin.h
+--- qt-x11-free-3.3.2/src/input/qinputcontextplugin.h	1970-01-01 09:00:00.000000000 +0900
++++ qt-x11-immodule-bc/src/input/qinputcontextplugin.h	2004-06-23 01:10:27.061123224 +0900
+@@ -0,0 +1,64 @@
++/****************************************************************************
++** $Id: qt-x11-immodule-bc-qt3.3.2-20040623.diff,v 1.1 2004/08/04 16:15:05 usata Exp $
++**
++** Definition of QInputContextPlugin class
++**
++** Created : 010920
++**
++** Copyright (C) 2001 Trolltech AS.  All rights reserved.
++**
++** This file is part of the tools module of the Qt GUI Toolkit.
++**
++** This file may be distributed under the terms of the Q Public License
++** as defined by Trolltech AS of Norway and appearing in the file
++** LICENSE.QPL included in the packaging of this file.
++**
++** This file may be distributed and/or modified under the terms of the
++** GNU General Public License version 2 as published by the Free Software
++** Foundation and appearing in the file LICENSE.GPL included in the
++** packaging of this file.
++**
++** Licensees holding valid Qt Enterprise Edition or Qt Professional Edition
++** licenses may use this file in accordance with the Qt Commercial License
++** Agreement provided with the Software.
++**
++** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
++** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
++**
++** See http://www.trolltech.com/pricing.html or email sales@trolltech.com for
++**   information about Qt Commercial License Agreements.
++** See http://www.trolltech.com/qpl/ for QPL licensing information.
++** See http://www.trolltech.com/gpl/ for GPL licensing information.
++**
++** Contact info@trolltech.com if any conditions of this licensing are
++** not clear to you.
++**
++**********************************************************************/
++
++#ifndef QINPUTCONTEXTPLUGIN_H
++#define QINPUTCONTEXTPLUGIN_H
++
++#ifndef QT_H
++#include "qgplugin.h"
++#include "qstringlist.h"
++#endif // QT_H
++
++#ifndef QT_NO_IM
++class QInputContext;
++class QInputContextPluginPrivate;
++
++class Q_EXPORT QInputContextPlugin : public QGPlugin
++{
++    Q_OBJECT
++public:
++    QInputContextPlugin();
++    ~QInputContextPlugin();
++
++    virtual QStringList keys() const = 0;
++    virtual QInputContext *create( const QString &key ) = 0;
++
++private:
++    QInputContextPluginPrivate *d;
++};
++#endif // QT_NO_TEXTCODECPLUGIN
++#endif // QTEXTCODECPLUGIN_H
+diff -urN qt-x11-free-3.3.2/src/input/qt_input.pri qt-x11-immodule-bc/src/input/qt_input.pri
+--- qt-x11-free-3.3.2/src/input/qt_input.pri	1970-01-01 09:00:00.000000000 +0900
++++ qt-x11-immodule-bc/src/input/qt_input.pri	2004-06-23 01:10:27.061123224 +0900
+@@ -0,0 +1,13 @@
++# Qt inputcontext module
++
++input {
++	INPUT_P = input
++	HEADERS +=$$INPUT_H/qinputcontextfactory.h \
++		  $$INPUT_P/qinputcontextinterface_p.h \
++		  $$INPUT_H/qinputcontextplugin.h \
++		  $$INPUT_H/qximinputcontext_p.h
++	SOURCES +=$$INPUT_CPP/qinputcontextfactory.cpp \
++		  $$INPUT_CPP/qinputcontextplugin.cpp \
++		  $$INPUT_CPP/qximinputcontext_x11.cpp
++
++}
+diff -urN qt-x11-free-3.3.2/src/input/qximinputcontext_p.h qt-x11-immodule-bc/src/input/qximinputcontext_p.h
+--- qt-x11-free-3.3.2/src/input/qximinputcontext_p.h	1970-01-01 09:00:00.000000000 +0900
++++ qt-x11-immodule-bc/src/input/qximinputcontext_p.h	2004-06-23 02:07:02.819889424 +0900
+@@ -0,0 +1,133 @@
++/****************************************************************************
++** $Id: qt-x11-immodule-bc-qt3.3.2-20040623.diff,v 1.1 2004/08/04 16:15:05 usata Exp $
++**
++** Definition of QXIMInputContext
++**
++** Copyright (C) 1992-2002 Trolltech AS.  All rights reserved.
++**
++** This file is part of the kernel module of the Qt GUI Toolkit.
++**
++** This file may be distributed under the terms of the Q Public License
++** as defined by Trolltech AS of Norway and appearing in the file
++** LICENSE.QPL included in the packaging of this file.
++**
++** This file may be distributed and/or modified under the terms of the
++** GNU General Public License version 2 as published by the Free Software
++** Foundation and appearing in the file LICENSE.GPL included in the
++** packaging of this file.
++**
++** Licensees holding valid Qt Enterprise Edition or Qt Professional Edition
++** licenses may use this file in accordance with the Qt Commercial License
++** Agreement provided with the Software.
++**
++** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
++** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
++**
++** See http://www.trolltech.com/pricing.html or email sales@trolltech.com for
++**   information about Qt Commercial License Agreements.
++** See http://www.trolltech.com/qpl/ for QPL licensing information.
++** See http://www.trolltech.com/gpl/ for GPL licensing information.
++**
++** Contact info@trolltech.com if any conditions of this licensing are
++** not clear to you.
++**
++**********************************************************************/
++
++#ifndef QXIMINPUTCONTEXT_P_H
++#define QXIMINPUTCONTEXT_P_H
++
++
++//
++//  W A R N I N G
++//  -------------
++//
++// This file is not part of the Qt API.  It exists for the convenience
++// of internal files.  This header file may change from version to version
++// without notice, or even be removed.
++//
++// We mean it.
++//
++//
++
++#if !defined(Q_NO_IM)
++
++#include "qglobal.h"
++#include <qinputcontext.h>
++#include <qfont.h>
++#include <qcstring.h>
++
++class QKeyEvent;
++class QWidget;
++class QFont;
++class QString;
++
++
++#ifdef Q_WS_X11
++#include "qarray.h"
++#include "qwindowdefs.h"
++#include <private/qt_x11_p.h>
++#endif
++
++class QXIMInputContext : public QInputContext
++{
++public:
++#ifdef Q_WS_X11
++    QXIMInputContext( QWidget * ); // should be a toplevel widget
++    ~QXIMInputContext();
++
++    QString name();
++    QCString language();
++
++    bool x11FilterEvent( QWidget *keywidget, XEvent *event );
++    void reset();
++
++    void setFocus();
++    void unsetFocus();
++    void setMicroFocus( int x, int y, int w, int h, QFont *f = 0 );
++    void mouseHandler( int x, QEvent::Type type,
++		       Qt::ButtonState butoon, Qt::ButtonState state );
++
++    bool hasFocus() const;
++    bool isComposing() const;
++    void resetClientState();
++
++    void sendIMEvent( QEvent::Type type,
++		      const QString &text = QString::null,
++		      int cursorPosition = -1, int selLength = 0 );
++
++    static void init_xim();
++    static void create_xim();
++    static void close_xim();
++
++    void *ic;
++    QString composingText;
++    QFont font;
++    XFontSet fontset;
++    QMemArray<bool> selectedChars;
++
++protected:
++    bool isPreeditRelocationEnabled();
++    virtual bool isPreeditPreservationEnabled();  // not a QInputContext func
++
++    QCString _language;
++
++private:
++    void setComposePosition(int, int);
++    void setComposeArea(int, int, int, int);
++    void setXFontSet(const QFont &);
++
++    int lookupString(XKeyEvent *, QCString &, KeySym *, Status *) const;
++
++#endif // Q_WS_X11
++};
++
++
++inline QString QXIMInputContext::name()
++{
++    return "XIM";
++}
++
++
++#endif //Q_NO_IM
++
++#endif // QXIMINPUTCONTEXT_P_H
+diff -urN qt-x11-free-3.3.2/src/input/qximinputcontext_x11.cpp qt-x11-immodule-bc/src/input/qximinputcontext_x11.cpp
+--- qt-x11-free-3.3.2/src/input/qximinputcontext_x11.cpp	1970-01-01 09:00:00.000000000 +0900
++++ qt-x11-immodule-bc/src/input/qximinputcontext_x11.cpp	2004-06-23 02:10:35.916493816 +0900
+@@ -0,0 +1,895 @@
++/****************************************************************************
++** $Id: qt-x11-immodule-bc-qt3.3.2-20040623.diff,v 1.1 2004/08/04 16:15:05 usata Exp $
++**
++** Implementation of QXIMInputContext class
++**
++** Copyright (C) 2000-2003 Trolltech AS.  All rights reserved.
++**
++** This file is part of the kernel module of the Qt GUI Toolkit.
++**
++** This file may be distributed under the terms of the Q Public License
++** as defined by Trolltech AS of Norway and appearing in the file
++** LICENSE.QPL included in the packaging of this file.
++**
++** This file may be distributed and/or modified under the terms of the
++** GNU General Public License version 2 as published by the Free Software
++** Foundation and appearing in the file LICENSE.GPL included in the
++** packaging of this file.
++**
++** Licensees holding valid Qt Enterprise Edition or Qt Professional Edition
++** licenses for Unix/X11 may use this file in accordance with the Qt Commercial
++** License Agreement provided with the Software.
++**
++** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
++** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
++**
++** See http://www.trolltech.com/pricing.html or email sales@trolltech.com for
++**   information about Qt Commercial License Agreements.
++** See http://www.trolltech.com/qpl/ for QPL licensing information.
++** See http://www.trolltech.com/gpl/ for GPL licensing information.
++**
++** Contact info@trolltech.com if any conditions of this licensing are
++** not clear to you.
++**
++**********************************************************************/
++
++
++#include "qximinputcontext_p.h"
++
++const int XKeyPress = KeyPress;
++const int XKeyRelease = KeyRelease;
++#undef KeyPress
++#undef KeyRelease
++
++#if !defined(QT_NO_IM)
++
++#include "qplatformdefs.h"
++
++#include "qapplication.h"
++#include "qwidget.h"
++#include "qptrlist.h"
++#include "qintdict.h"
++#include "qtextcodec.h"
++#include "qlocale.h"
++
++#include <stdlib.h>
++#include <limits.h>
++
++#if !defined(QT_NO_XIM)
++
++#define XK_MISCELLANY
++#define XK_LATIN1
++#include <X11/keysymdef.h>
++
++// #define QT_XIM_DEBUG
++
++// from qapplication_x11.cpp
++static XIM	qt_xim = 0;
++extern XIMStyle	qt_xim_style;
++extern XIMStyle	xim_preferred_style;
++extern char    *ximServer;
++static bool isInitXIM = FALSE;
++static QPtrList<QXIMInputContext> *ximContextList = 0;
++#endif
++extern int composingKeycode;
++extern QTextCodec * input_mapper;
++
++
++#if !defined(QT_NO_XIM)
++
++#if defined(Q_C_CALLBACKS)
++extern "C" {
++#endif // Q_C_CALLBACKS
++
++    // These static functions should be rewritten as member of
++    // QXIMInputContext
++
++#ifdef USE_X11R6_XIM
++    static void xim_create_callback(XIM /*im*/,
++				    XPointer /*client_data*/,
++				    XPointer /*call_data*/)
++    {
++	// qDebug("xim_create_callback");
++	QXIMInputContext::create_xim();
++    }
++
++    static void xim_destroy_callback(XIM /*im*/,
++				     XPointer /*client_data*/,
++				     XPointer /*call_data*/)
++    {
++	// qDebug("xim_destroy_callback");
++	QXIMInputContext::close_xim();
++	Display *dpy = QPaintDevice::x11AppDisplay();
++	XRegisterIMInstantiateCallback(dpy, 0, 0, 0,
++				       (XIMProc) xim_create_callback, 0);
++    }
++
++#endif // USE_X11R6_XIM
++
++#if defined(Q_C_CALLBACKS)
++}
++#endif // Q_C_CALLBACKS
++
++#endif // QT_NO_XIM
++
++#ifndef QT_NO_XIM
++
++/* The cache here is needed, as X11 leaks a few kb for every
++   XFreeFontSet call, so we avoid creating and deletion of fontsets as
++   much as possible
++*/
++static XFontSet fontsetCache[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
++static int fontsetRefCount = 0;
++
++static const char * const fontsetnames[] = {
++    "-*-fixed-medium-r-*-*-16-*,-*-*-medium-r-*-*-16-*",
++    "-*-fixed-medium-i-*-*-16-*,-*-*-medium-i-*-*-16-*",
++    "-*-fixed-bold-r-*-*-16-*,-*-*-bold-r-*-*-16-*",
++    "-*-fixed-bold-i-*-*-16-*,-*-*-bold-i-*-*-16-*",
++    "-*-fixed-medium-r-*-*-24-*,-*-*-medium-r-*-*-24-*",
++    "-*-fixed-medium-i-*-*-24-*,-*-*-medium-i-*-*-24-*",
++    "-*-fixed-bold-r-*-*-24-*,-*-*-bold-r-*-*-24-*",
++    "-*-fixed-bold-i-*-*-24-*,-*-*-bold-i-*-*-24-*"
++};
++
++static XFontSet getFontSet( const QFont &f )
++{
++    int i = 0;
++    if (f.italic())
++	i |= 1;
++    if (f.bold())
++	i |= 2;
++
++    if ( f.pointSize() > 20 )
++	i += 4;
++
++    if ( !fontsetCache[i] ) {
++	Display* dpy = QPaintDevice::x11AppDisplay();
++	int missCount;
++	char** missList;
++	fontsetCache[i] = XCreateFontSet(dpy, fontsetnames[i], &missList, &missCount, 0);
++	if(missCount > 0)
++	    XFreeStringList(missList);
++	if ( !fontsetCache[i] ) {
++	    fontsetCache[i] = XCreateFontSet(dpy,  "-*-fixed-*-*-*-*-16-*", &missList, &missCount, 0);
++	    if(missCount > 0)
++		XFreeStringList(missList);
++	    if ( !fontsetCache[i] )
++		fontsetCache[i] = (XFontSet)-1;
++	}
++    }
++    return (fontsetCache[i] == (XFontSet)-1) ? 0 : fontsetCache[i];
++}
++
++
++#ifdef Q_C_CALLBACKS
++extern "C" {
++#endif // Q_C_CALLBACKS
++
++    static int xic_start_callback(XIC, XPointer client_data, XPointer) {
++	QXIMInputContext *qic = (QXIMInputContext *) client_data;
++	if (! qic) {
++#ifdef QT_XIM_DEBUG
++	    qDebug("compose start: no qic");
++#endif // QT_XIM_DEBUG
++
++	    return 0;
++	}
++
++	qic->resetClientState();
++	qic->sendIMEvent( QEvent::IMStart );
++
++#ifdef QT_XIM_DEBUG
++	qDebug("compose start");
++#endif // QT_XIM_DEBUG
++
++	return 0;
++    }
++
++    static int xic_draw_callback(XIC, XPointer client_data, XPointer call_data) {
++	QXIMInputContext *qic = (QXIMInputContext *) client_data;
++	if (! qic) {
++#ifdef QT_XIM_DEBUG
++	    qDebug("compose event: invalid compose event %p", qic);
++#endif // QT_XIM_DEBUG
++
++	    return 0;
++	}
++
++	bool send_imstart = FALSE;
++	if( ! qic->isComposing() && qic->hasFocus() ) {
++	    qic->resetClientState();
++	    send_imstart = TRUE;
++	} else if ( ! qic->isComposing() || ! qic->hasFocus() ) {
++#ifdef QT_XIM_DEBUG
++	    qDebug( "compose event: invalid compose event composing=%d hasFocus=%d",
++		    qic->isComposing(), qic->hasFocus() );
++#endif // QT_XIM_DEBUG
++
++	    return 0;
++	}
++
++	if ( send_imstart )
++	    qic->sendIMEvent( QEvent::IMStart );
++
++	XIMPreeditDrawCallbackStruct *drawstruct =
++	    (XIMPreeditDrawCallbackStruct *) call_data;
++	XIMText *text = (XIMText *) drawstruct->text;
++	int cursor = drawstruct->caret, sellen = 0;
++
++	if ( ! drawstruct->caret && ! drawstruct->chg_first &&
++	     ! drawstruct->chg_length && ! text ) {
++	    if( qic->composingText.isEmpty() ) {
++#ifdef QT_XIM_DEBUG
++		qDebug( "compose emptied" );
++#endif // QT_XIM_DEBUG
++		// if the composition string has been emptied, we need
++		// to send an IMEnd event
++		qic->sendIMEvent( QEvent::IMEnd );
++		qic->resetClientState();
++		// if the commit string has coming after here, IMStart
++		// will be sent dynamically
++	    }
++	    return 0;
++	}
++
++	if (text) {
++	    char *str = 0;
++	    if (text->encoding_is_wchar) {
++		int l = wcstombs(NULL, text->string.wide_char, text->length);
++		if (l != -1) {
++		    str = new char[l + 1];
++		    wcstombs(str, text->string.wide_char, l);
++		    str[l] = 0;
++		}
++	    } else
++		str = text->string.multi_byte;
++
++	    if (! str)
++		return 0;
++
++	    QString s = QString::fromLocal8Bit(str);
++
++	    if (text->encoding_is_wchar)
++		delete [] str;
++
++	    if (drawstruct->chg_length < 0)
++		qic->composingText.replace(drawstruct->chg_first, UINT_MAX, s);
++	    else
++		qic->composingText.replace(drawstruct->chg_first, drawstruct->chg_length, s);
++
++	    if ( qic->selectedChars.size() < qic->composingText.length() ) {
++		// expand the selectedChars array if the compose string is longer
++		uint from = qic->selectedChars.size();
++		qic->selectedChars.resize( qic->composingText.length() );
++		for ( uint x = from; from < qic->selectedChars.size(); ++x )
++		    qic->selectedChars[x] = 0;
++	    }
++
++	    uint x;
++	    bool *p = qic->selectedChars.data() + drawstruct->chg_first;
++	    // determine if the changed chars are selected based on text->feedback
++	    for ( x = 0; x < s.length(); ++x )
++		*p++ = ( text->feedback ? ( text->feedback[x] & XIMReverse ) : 0 );
++
++	    // figure out where the selection starts, and how long it is
++	    p = qic->selectedChars.data();
++	    bool started = FALSE;
++	    for ( x = 0; x < qic->selectedChars.size(); ++x ) {
++		if ( started ) {
++		    if ( *p ) ++sellen;
++		    else break;
++		} else {
++		    if ( *p ) {
++			cursor = x;
++			started = TRUE;
++			sellen = 1;
++		    }
++		}
++		++p;
++	    }
++	} else {
++	    if (drawstruct->chg_length == 0)
++		drawstruct->chg_length = -1;
++
++	    qic->composingText.remove(drawstruct->chg_first, drawstruct->chg_length);
++	    bool qt_compose_emptied = qic->composingText.isEmpty();
++	    if ( qt_compose_emptied ) {
++#ifdef QT_XIM_DEBUG
++		qDebug( "compose emptied" );
++#endif // QT_XIM_DEBUG
++		// if the composition string has been emptied, we need
++		// to send an IMEnd event
++		qic->sendIMEvent( QEvent::IMEnd );
++		qic->resetClientState();
++		// if the commit string has coming after here, IMStart
++		// will be sent dynamically
++		return 0;
++	    }
++	}
++
++	qic->sendIMEvent( QEvent::IMCompose,
++			  qic->composingText, cursor, sellen );
++
++	return 0;
++    }
++
++    static int xic_done_callback(XIC, XPointer client_data, XPointer) {
++	QXIMInputContext *qic = (QXIMInputContext *) client_data;
++	if (! qic)
++	    return 0;
++
++	// Don't send IMEnd here. QXIMInputContext::x11FilterEvent()
++	// handles IMEnd with commit string.
++#if 0
++	if ( qic->isComposing() )
++	    qic->sendIMEvent( QEvent::IMEnd );
++	qic->resetClientState();
++#endif
++
++	return 0;
++    }
++
++#ifdef Q_C_CALLBACKS
++}
++#endif // Q_C_CALLBACKS
++
++#endif // !QT_NO_XIM
++
++
++
++QXIMInputContext::QXIMInputContext(QWidget *widget)
++    : QInputContext(), ic(0), fontset(0)
++{
++    if(!isInitXIM)
++	QXIMInputContext::init_xim();
++
++#if !defined(QT_NO_XIM)
++    fontsetRefCount++;
++    if (! qt_xim) {
++	qWarning("QInputContext: no input method context available");
++	return;
++    }
++
++    if (! widget->isTopLevel()) {
++	qWarning("QInputContext: cannot create input context for non-toplevel widgets");
++	return;
++    }
++
++    XPoint spot;
++    XRectangle rect;
++    XVaNestedList preedit_attr = 0;
++    XIMCallback startcallback, drawcallback, donecallback;
++
++    font = widget->font();
++    fontset = getFontSet( font );
++
++    if (qt_xim_style & XIMPreeditArea) {
++	rect.x = 0;
++	rect.y = 0;
++	rect.width = widget->width();
++	rect.height = widget->height();
++
++	preedit_attr = XVaCreateNestedList(0,
++					   XNArea, &rect,
++					   XNFontSet, fontset,
++					   (char *) 0);
++    } else if (qt_xim_style & XIMPreeditPosition) {
++	spot.x = 1;
++	spot.y = 1;
++
++	preedit_attr = XVaCreateNestedList(0,
++					   XNSpotLocation, &spot,
++					   XNFontSet, fontset,
++					   (char *) 0);
++    } else if (qt_xim_style & XIMPreeditCallbacks) {
++	startcallback.client_data = (XPointer) this;
++	startcallback.callback = (XIMProc) xic_start_callback;
++	drawcallback.client_data = (XPointer) this;
++	drawcallback.callback = (XIMProc)xic_draw_callback;
++	donecallback.client_data = (XPointer) this;
++	donecallback.callback = (XIMProc) xic_done_callback;
++
++	preedit_attr = XVaCreateNestedList(0,
++					   XNPreeditStartCallback, &startcallback,
++					   XNPreeditDrawCallback, &drawcallback,
++					   XNPreeditDoneCallback, &donecallback,
++					   (char *) 0);
++    }
++
++    if (preedit_attr) {
++	ic = XCreateIC(qt_xim,
++		       XNInputStyle, qt_xim_style,
++		       XNClientWindow, widget->winId(),
++		       XNPreeditAttributes, preedit_attr,
++		       (char *) 0);
++	XFree(preedit_attr);
++    } else
++	ic = XCreateIC(qt_xim,
++		       XNInputStyle, qt_xim_style,
++		       XNClientWindow, widget->winId(),
++		       (char *) 0);
++
++    if (! ic)
++	qFatal("Failed to create XIM input context!");
++
++    // when resetting the input context, preserve the input state
++    (void) XSetICValues((XIC) ic, XNResetState, XIMPreserveState, (char *) 0);
++
++    if( ! ximContextList )
++	ximContextList = new QPtrList<QXIMInputContext>;
++    ximContextList->append( this );
++#endif // !QT_NO_XIM
++}
++
++
++QXIMInputContext::~QXIMInputContext()
++{
++
++#if !defined(QT_NO_XIM)
++    if (ic)
++	XDestroyIC((XIC) ic);
++
++    if ( --fontsetRefCount == 0 ) {
++	Display *dpy = QPaintDevice::x11AppDisplay();
++	for ( int i = 0; i < 8; i++ ) {
++	    if ( fontsetCache[i] && fontsetCache[i] != (XFontSet)-1 ) {
++		XFreeFontSet(dpy, fontsetCache[i]);
++		fontsetCache[i] = 0;
++	    }
++	}
++    }
++
++    if( ximContextList ) {
++	ximContextList->remove( this );
++	if(ximContextList->isEmpty()) {
++	    // Calling XCloseIM gives a Purify FMR error
++	    // XCloseIM( qt_xim );
++	    // We prefer a less serious memory leak
++	    if( qt_xim ) {
++		qt_xim = 0;
++		isInitXIM = FALSE;
++	    }
++
++	    delete ximContextList;
++	    ximContextList = 0;
++	}
++    }
++#endif // !QT_NO_XIM
++
++    ic = 0;
++}
++
++void QXIMInputContext::init_xim()
++{
++#ifndef QT_NO_XIM
++    if(!isInitXIM)
++	isInitXIM = TRUE;
++
++    qt_xim = 0;
++    QString ximServerName(ximServer);
++    if (ximServer)
++	ximServerName.prepend("@im=");
++    else
++	ximServerName = "";
++
++    if ( !XSupportsLocale() )
++	qWarning("Qt: Locales not supported on X server");
++
++#ifdef USE_X11R6_XIM
++    else if ( XSetLocaleModifiers (ximServerName.ascii()) == 0 )
++	qWarning( "Qt: Cannot set locale modifiers: %s",
++		  ximServerName.ascii());
++    else {
++	Display *dpy = QPaintDevice::x11AppDisplay();
++	XRegisterIMInstantiateCallback(dpy, 0, 0, 0,
++				       (XIMProc) xim_create_callback, 0);
++    }
++#else // !USE_X11R6_XIM
++    else if ( XSetLocaleModifiers ("") == 0 )
++	qWarning("Qt: Cannot set locale modifiers");
++    else
++	QXIMInputContext::create_xim();
++#endif // USE_X11R6_XIM
++#endif // QT_NO_XIM
++}
++
++
++/*! \internal
++  Creates the application input method.
++ */
++void QXIMInputContext::create_xim()
++{
++#ifndef QT_NO_XIM
++    Display *appDpy = QPaintDevice::x11AppDisplay();
++    qt_xim = XOpenIM( appDpy, 0, 0, 0 );
++    if ( qt_xim ) {
++
++#ifdef USE_X11R6_XIM
++	XIMCallback destroy;
++	destroy.callback = (XIMProc) xim_destroy_callback;
++	destroy.client_data = 0;
++	if ( XSetIMValues( qt_xim, XNDestroyCallback, &destroy, (char *) 0 ) != 0 )
++	    qWarning( "Xlib doesn't support destroy callback");
++#endif // USE_X11R6_XIM
++
++	XIMStyles *styles = 0;
++	XGetIMValues(qt_xim, XNQueryInputStyle, &styles, (char *) 0, (char *) 0);
++	if ( styles ) {
++	    int i;
++	    for ( i = 0; !qt_xim_style && i < styles->count_styles; i++ ) {
++		if ( styles->supported_styles[i] == xim_preferred_style ) {
++		    qt_xim_style = xim_preferred_style;
++		    break;
++		}
++	    }
++	    // if the preferred input style couldn't be found, look for
++	    // Nothing
++	    for ( i = 0; !qt_xim_style && i < styles->count_styles; i++ ) {
++		if ( styles->supported_styles[i] == (XIMPreeditNothing |
++						     XIMStatusNothing) ) {
++		    qt_xim_style = XIMPreeditNothing | XIMStatusNothing;
++		    break;
++		}
++	    }
++	    // ... and failing that, None.
++	    for ( i = 0; !qt_xim_style && i < styles->count_styles; i++ ) {
++		if ( styles->supported_styles[i] == (XIMPreeditNone |
++						     XIMStatusNone) ) {
++		    qt_xim_style = XIMPreeditNone | XIMStatusNone;
++		    break;
++		}
++	    }
++
++	    // qDebug("QApplication: using im style %lx", qt_xim_style);
++	    XFree( (char *)styles );
++	}
++
++	if ( qt_xim_style ) {
++
++#ifdef USE_X11R6_XIM
++	    XUnregisterIMInstantiateCallback(appDpy, 0, 0, 0,
++					     (XIMProc) xim_create_callback, 0);
++#endif // USE_X11R6_XIM
++
++	} else {
++	    // Give up
++	    qWarning( "No supported input style found."
++		      "  See InputMethod documentation.");
++	    QXIMInputContext::close_xim();
++	}
++    }
++#endif // QT_NO_XIM
++}
++
++
++/*! \internal
++  Closes the application input method.
++*/
++void QXIMInputContext::close_xim()
++{
++#ifndef QT_NO_XIM
++    QApplication::close_xim();
++#endif // QT_NO_XIM
++}
++
++
++bool QXIMInputContext::x11FilterEvent( QWidget *keywidget, XEvent *event )
++{
++#ifndef QT_NO_XIM
++    int xkey_keycode = event->xkey.keycode;
++    if ( XFilterEvent( event, keywidget->topLevelWidget()->winId() ) ) {
++	composingKeycode = xkey_keycode; // ### not documented in xlib
++
++	// Cancel of the composition is realizable even if
++	// follwing codes don't exist
++#if 0
++	if ( event->type != XKeyPress || ! (qt_xim_style & XIMPreeditCallbacks) )
++	    return TRUE;
++
++	/*
++	 * The Solaris htt input method will transform a ClientMessage
++	 * event into a filtered KeyPress event, in which case our
++	 * keywidget is still zero.
++	 */
++	QETWidget *widget = (QETWidget*)QWidget::find( (WId)event->xany.window );
++        if ( ! keywidget ) {
++ 	    keywidget = (QETWidget*)QWidget::keyboardGrabber();
++	    if ( keywidget ) {
++	        grabbed = TRUE;
++	    } else {
++	        if ( focus_widget )
++		    keywidget = (QETWidget*)focus_widget;
++	        if ( !keywidget ) {
++		    if ( qApp->inPopupMode() ) // no focus widget, see if we have a popup
++		        keywidget = (QETWidget*) qApp->activePopupWidget();
++		    else if ( widget )
++		        keywidget = (QETWidget*)widget->topLevelWidget();
++	        }
++	    }
++        }
++
++	/*
++	  if the composition string has been emptied, we need to send
++	  an IMEnd event.  however, we have no way to tell if the user
++	  has cancelled input, or if the user has accepted the
++	  composition.
++
++	  so, we have to look for the next keypress and see if it is
++	  the 'commit' key press (keycode == 0).  if it is, we deliver
++	  an IMEnd event with the final text, otherwise we deliver an
++	  IMEnd with empty text (meaning the user has cancelled the
++	  input).
++	*/
++	if ( composing && focusWidget && qt_compose_emptied ) {
++	    XEvent event2;
++	    bool found = FALSE;
++	    if ( XCheckTypedEvent( QPaintDevice::x11AppDisplay(),
++				   XKeyPress, &event2 ) ) {
++		if ( event2.xkey.keycode == 0 ) {
++		    // found a key event with the 'commit' string
++		    found = TRUE;
++		    XPutBackEvent( QPaintDevice::x11AppDisplay(), &event2 );
++		}
++	    }
++
++	    if ( !found ) {
++		// no key event, so the user must have cancelled the composition
++		QIMEvent endevent( QEvent::IMEnd, QString::null, -1 );
++		QApplication::sendEvent( focusWidget, &endevent );
++
++		focusWidget = 0;
++	    }
++
++	    qt_compose_emptied = FALSE;
++	}
++#endif
++	return TRUE;
++    } else if ( focusWidget() ) {
++        if ( event->type == XKeyPress && event->xkey.keycode == 0 ) {
++	    // input method has sent us a commit string
++	    QCString data(513);
++	    KeySym sym;    // unused
++	    Status status; // unused
++	    QString inputText;
++	    int count = lookupString( &(event->xkey), data, &sym, &status );
++	    if ( count > 0 )
++	        inputText = input_mapper->toUnicode( data, count );
++
++	    if ( ! ( qt_xim_style & XIMPreeditCallbacks ) || ! isComposing() ) {
++		// there is no composing state
++		sendIMEvent( QEvent::IMStart );
++	    }
++
++	    sendIMEvent( QEvent::IMEnd, inputText );
++	    resetClientState();
++
++	    return TRUE;
++	}
++    }
++#endif // !QT_NO_XIM
++
++    return FALSE;
++}
++
++
++void QXIMInputContext::sendIMEvent( QEvent::Type type, const QString &text,
++				    int cursorPosition, int selLength )
++{
++    QInputContext::sendIMEvent( type, text, cursorPosition, selLength );
++    if ( type == QEvent::IMCompose )
++	composingText = text;
++}
++
++
++void QXIMInputContext::reset()
++{
++#if !defined(QT_NO_XIM)
++    if ( focusWidget() && isComposing() && ! composingText.isNull() ) {
++#ifdef QT_XIM_DEBUG
++	qDebug("QXIMInputContext::reset: composing - sending IMEnd (empty) to %p",
++	       focusWidget() );
++#endif // QT_XIM_DEBUG
++
++	QInputContext::reset();
++	resetClientState();
++
++	char *mb = XmbResetIC((XIC) ic);
++	if (mb)
++	    XFree(mb);
++    }
++#endif // !QT_NO_XIM
++}
++
++
++void QXIMInputContext::resetClientState()
++{
++#if !defined(QT_NO_XIM)
++    composingText = QString::null;
++    if ( selectedChars.size() < 128 )
++	selectedChars.resize( 128 );
++    selectedChars.fill( 0 );
++#endif // !QT_NO_XIM
++}
++
++
++bool QXIMInputContext::hasFocus() const
++{
++    return ( focusWidget() != 0 );
++}
++
++
++// to break access permission
++bool QXIMInputContext::isComposing() const
++{
++    return QInputContext::isComposing();
++}
++
++void QXIMInputContext::setMicroFocus(int x, int y, int w, int h, QFont *f)
++{
++    QWidget *widget = focusWidget();
++    if ( qt_xim && widget ) {
++	QPoint p( x, y );
++	QPoint p2 = widget->mapTo( widget->topLevelWidget(), QPoint( 0, 0 ) );
++	p = widget->topLevelWidget()->mapFromGlobal( p );
++	setXFontSet( f ? *f : widget->font() );
++	setComposePosition(p.x(), p.y() + h);
++	setComposeArea(p2.x(), p2.y(), widget->width(), widget->height());
++    }
++
++}
++
++void QXIMInputContext::mouseHandler( int x, QEvent::Type type,
++				     Qt::ButtonState button,
++				     Qt::ButtonState state )
++{
++    if ( type == QEvent::MouseButtonPress ||
++	 type == QEvent::MouseButtonDblClick ) {
++	// Don't reset Japanese input context here. Japanese input
++	// context sometimes contains a whole paragraph and has
++	// minutes of lifetime different to ephemeral one in other
++	// languages. The input context should be survived until
++	// focused again.
++	if ( ! isPreeditPreservationEnabled() )
++	    reset();
++    }
++}
++
++void QXIMInputContext::setComposePosition(int x, int y)
++{
++#if !defined(QT_NO_XIM)
++    if (qt_xim && ic) {
++	XPoint point;
++	point.x = x;
++	point.y = y;
++
++	XVaNestedList preedit_attr =
++	    XVaCreateNestedList(0,
++				XNSpotLocation, &point,
++
++				(char *) 0);
++	XSetICValues((XIC) ic, XNPreeditAttributes, preedit_attr, (char *) 0);
++	XFree(preedit_attr);
++    }
++#endif // !QT_NO_XIM
++}
++
++
++void QXIMInputContext::setComposeArea(int x, int y, int w, int h)
++{
++#if !defined(QT_NO_XIM)
++    if (qt_xim && ic) {
++	XRectangle rect;
++	rect.x = x;
++	rect.y = y;
++	rect.width = w;
++	rect.height = h;
++
++	XVaNestedList preedit_attr = XVaCreateNestedList(0,
++							 XNArea, &rect,
++
++							 (char *) 0);
++	XSetICValues((XIC) ic, XNPreeditAttributes, preedit_attr, (char *) 0);
++	XFree(preedit_attr);
++    }
++#endif
++}
++
++
++void QXIMInputContext::setXFontSet(const QFont &f)
++{
++#if !defined(QT_NO_XIM)
++    if (font == f) return; // nothing to do
++    font = f;
++
++    XFontSet fs = getFontSet(font);
++    if (fontset == fs) return; // nothing to do
++    fontset = fs;
++
++    XVaNestedList preedit_attr = XVaCreateNestedList(0, XNFontSet, fontset, (char *) 0);
++    XSetICValues((XIC) ic, XNPreeditAttributes, preedit_attr, (char *) 0);
++    XFree(preedit_attr);
++#else
++    Q_UNUSED( f );
++#endif
++}
++
++
++int QXIMInputContext::lookupString(XKeyEvent *event, QCString &chars,
++				KeySym *key, Status *status) const
++{
++    int count = 0;
++
++#if !defined(QT_NO_XIM)
++    if (qt_xim && ic) {
++	count = XmbLookupString((XIC) ic, event, chars.data(),
++				chars.size(), key, status);
++
++	if ((*status) == XBufferOverflow ) {
++	    chars.resize(count + 1);
++	    count = XmbLookupString((XIC) ic, event, chars.data(),
++				    chars.size(), key, status);
++	}
++    }
++
++#endif // QT_NO_XIM
++
++    return count;
++}
++
++void QXIMInputContext::setFocus()
++{
++#if !defined(QT_NO_XIM)
++    if ( qt_xim && ic )
++	XSetICFocus((XIC) ic);
++#endif // !QT_NO_XIM
++}
++
++void QXIMInputContext::unsetFocus()
++{
++#if !defined(QT_NO_XIM)
++    if (qt_xim && ic)
++	XUnsetICFocus((XIC) ic);
++#endif // !QT_NO_XIM
++
++    // Don't reset Japanese input context here. Japanese input context
++    // sometimes contains a whole paragraph and has minutes of
++    // lifetime different to ephemeral one in other languages. The
++    // input context should be survived until focused again.
++    if ( ! isPreeditPreservationEnabled() )
++	reset();
++}
++
++
++bool QXIMInputContext::isPreeditRelocationEnabled()
++{
++    return ( language() == "ja" );
++}
++
++
++bool QXIMInputContext::isPreeditPreservationEnabled()
++{
++    return ( language() == "ja" );
++}
++
++
++QCString QXIMInputContext::language()
++{
++#if !defined(QT_NO_XIM)
++    if ( qt_xim ) {
++	QLocale locale = QLocale( XLocaleOfIM( qt_xim ) );
++
++	if ( locale.language() == QLocale::Chinese ) {
++	    // Chinese language should be formed as "zh_CN", "zh_TW", "zh_HK"
++	    _language = locale.name();
++	} else {
++	    // other languages should be two-letter ISO 639 language code
++	    _language = locale.name().left( 2 );
++	}
++    }
++#endif
++    return _language;
++}
++
++#endif //QT_NO_IM
++
+diff -urN qt-x11-free-3.3.2/src/kernel/qapplication.cpp qt-x11-immodule-bc/src/kernel/qapplication.cpp
+--- qt-x11-free-3.3.2/src/kernel/qapplication.cpp	2004-04-19 18:36:11.000000000 +0900
++++ qt-x11-immodule-bc/src/kernel/qapplication.cpp	2004-06-23 01:10:27.065122616 +0900
+@@ -3498,6 +3498,7 @@
+ #ifdef Q_WS_WIN
+ 	QInputContext::accept( tmp );
+ #endif
++	tmp->unfocusInputContext();
+ 	QApplication::sendSpontaneousEvent( tmp, &out );
+     } else if ( active_window ) {
+ 	QWidget *w = active_window->focusWidget();
+diff -urN qt-x11-free-3.3.2/src/kernel/qapplication_x11.cpp qt-x11-immodule-bc/src/kernel/qapplication_x11.cpp
+--- qt-x11-free-3.3.2/src/kernel/qapplication_x11.cpp	2004-04-19 18:36:02.000000000 +0900
++++ qt-x11-immodule-bc/src/kernel/qapplication_x11.cpp	2004-06-23 01:10:27.069122008 +0900
+@@ -89,7 +89,10 @@
+ #include "qfileinfo.h"
+ 
+ // Input method stuff - UNFINISHED
+-#include "qinputcontext_p.h"
++#ifndef QT_NO_IM
++class QInputContext;
++#include "qinputcontext.h"
++#endif // QT_NO_IM
+ #include "qinternal_p.h" // shared double buffer cleanup
+ 
+ #if defined(QT_THREAD_SUPPORT)
+@@ -189,10 +192,9 @@
+ static const char *mwGeometry	= 0;		// main widget geometry
+ static const char *mwTitle	= 0;		// main widget title
+ //Ming-Che 10/10
+-static char    *ximServer	= 0;		// XIM Server will connect to
++char    *ximServer	= 0;		// XIM Server will connect to
+ static bool	mwIconic	= FALSE;	// main widget iconified
+ //Ming-Che 10/10
+-static bool	noxim		= FALSE;	// connect to xim or not
+ static Display *appDpy		= 0;		// X11 application display
+ static char    *appDpyName	= 0;		// X11 display name
+ static bool	appForeignDpy	= FALSE;        // we didn't create display
+@@ -386,15 +388,18 @@
+ 
+ 
+ 
++#if !defined(QT_NO_IM)
++QString   defaultIM  = "XIM"; // default input method's name
++#endif
+ #if !defined(QT_NO_XIM)
+-XIM		qt_xim			= 0;
++//XIM		qt_xim			= 0;
+ XIMStyle	qt_xim_style		= 0;
++XIMStyle	xim_preferred_style	= 0;
+ static XIMStyle xim_default_style	= XIMPreeditCallbacks | XIMStatusNothing;
+-static XIMStyle	xim_preferred_style	= 0;
+ #endif
+ 
+-static int composingKeycode=0;
+-static QTextCodec * input_mapper = 0;
++int composingKeycode=0;
++QTextCodec * input_mapper = 0;
+ 
+ Q_EXPORT Time	qt_x_time = CurrentTime;
+ Q_EXPORT Time	qt_x_user_time = CurrentTime;
+@@ -503,8 +508,7 @@
+     void setWFlags( WFlags f )		{ QWidget::setWFlags(f); }
+     void clearWFlags( WFlags f )	{ QWidget::clearWFlags(f); }
+     bool translateMouseEvent( const XEvent * );
+-    bool translateKeyEventInternal( const XEvent *, int& count, QString& text, int& state, char& ascii, int &code,
+-				    QEvent::Type &type, bool willRepeat=FALSE );
++    bool translateKeyEventInternal( const XEvent *, int& count, QString& text, int& state, char& ascii, int &code, QEvent::Type &type, bool willRepeat=FALSE, bool statefulTranslation=TRUE );
+     bool translateKeyEvent( const XEvent *, bool grab );
+     bool translatePaintEvent( const XEvent * );
+     bool translateConfigEvent( const XEvent * );
+@@ -521,115 +525,27 @@
+ 
+ 
+ // ************************************************************************
+-// X Input Method support
++// Input Method support
+ // ************************************************************************
+ 
+-#if !defined(QT_NO_XIM)
+-
+-#if defined(Q_C_CALLBACKS)
+-extern "C" {
+-#endif // Q_C_CALLBACKS
+-
+-#ifdef USE_X11R6_XIM
+-    static void xim_create_callback(XIM /*im*/,
+-				    XPointer /*client_data*/,
+-				    XPointer /*call_data*/)
+-    {
+-	// qDebug("xim_create_callback");
+-	QApplication::create_xim();
+-    }
+-
+-    static void xim_destroy_callback(XIM /*im*/,
+-				     XPointer /*client_data*/,
+-				     XPointer /*call_data*/)
+-    {
+-	// qDebug("xim_destroy_callback");
+-	QApplication::close_xim();
+-	XRegisterIMInstantiateCallback(appDpy, 0, 0, 0,
+-				       (XIMProc) xim_create_callback, 0);
+-    }
+-
+-#endif // USE_X11R6_XIM
+-
+-#if defined(Q_C_CALLBACKS)
+-}
+-#endif // Q_C_CALLBACKS
+-
+-#endif // QT_NO_XIM
+-
+-
+ /*! \internal
+-  Creates the application input method.
+- */
++    Creates the application input method.
++*/
+ void QApplication::create_xim()
+ {
+ #ifndef QT_NO_XIM
+-    qt_xim = XOpenIM( appDpy, 0, 0, 0 );
+-    if ( qt_xim ) {
+-
+-#ifdef USE_X11R6_XIM
+-	XIMCallback destroy;
+-	destroy.callback = (XIMProc) xim_destroy_callback;
+-	destroy.client_data = 0;
+-	if ( XSetIMValues( qt_xim, XNDestroyCallback, &destroy, (char *) 0 ) != 0 )
+-	    qWarning( "Xlib dosn't support destroy callback");
+-#endif // USE_X11R6_XIM
+-
+-	XIMStyles *styles = 0;
+-	XGetIMValues(qt_xim, XNQueryInputStyle, &styles, (char *) 0, (char *) 0);
+-	if ( styles ) {
+-	    int i;
+-	    for ( i = 0; !qt_xim_style && i < styles->count_styles; i++ ) {
+-		if ( styles->supported_styles[i] == xim_preferred_style ) {
+-		    qt_xim_style = xim_preferred_style;
+-		    break;
+-		}
+-	    }
+-	    // if the preferred input style couldn't be found, look for
+-	    // Nothing
+-	    for ( i = 0; !qt_xim_style && i < styles->count_styles; i++ ) {
+-		if ( styles->supported_styles[i] == (XIMPreeditNothing |
+-						     XIMStatusNothing) ) {
+-		    qt_xim_style = XIMPreeditNothing | XIMStatusNothing;
+-		    break;
+-		}
+-	    }
+-	    // ... and failing that, None.
+-	    for ( i = 0; !qt_xim_style && i < styles->count_styles; i++ ) {
+-		if ( styles->supported_styles[i] == (XIMPreeditNone |
+-						     XIMStatusNone) ) {
+-		    qt_xim_style = XIMPreeditNone | XIMStatusNone;
+-		    break;
+-		}
+-	    }
+-
+-	    // qDebug("QApplication: using im style %lx", qt_xim_style);
+-	    XFree( (char *)styles );
+-	}
+-
+-	if ( qt_xim_style ) {
++    if ( ! xim_preferred_style ) // no configured input style, use the default
++	xim_preferred_style = xim_default_style;
++#endif // QT_NO_XIM
+ 
+-#ifdef USE_X11R6_XIM
+-	    XUnregisterIMInstantiateCallback(appDpy, 0, 0, 0,
+-					     (XIMProc) xim_create_callback, 0);
+-#endif // USE_X11R6_XIM
+-
+-	    QWidgetList *list= qApp->topLevelWidgets();
+-	    QWidgetListIt it(*list);
+-	    QWidget * w;
+-	    while( (w=it.current()) != 0 ) {
+-		++it;
+-		w->createTLSysExtra();
+-	    }
+-	    delete list;
+-	} else {
+-	    // Give up
+-	    qWarning( "No supported input style found."
+-		      "  See InputMethod documentation.");
+-	    close_xim();
+-	}
++    QWidgetList *list= qApp->topLevelWidgets();
++    QWidgetListIt it(*list);
++    QWidget * w;
++    while( (w=it.current()) != 0 ) {
++	++it;
++	w->createTLSysExtra();
+     }
+-#endif // QT_NO_XIM
++    delete list;
+ }
+ 
+ 
+@@ -643,7 +559,10 @@
+     // XCloseIM( qt_xim );
+     // We prefer a less serious memory leak
+ 
+-    qt_xim = 0;
++    // if ( qt_xim )
++    // 	qt_xim = 0;
++
++#endif // QT_NO_XIM
+     QWidgetList *list = qApp->topLevelWidgets();
+     QWidgetListIt it(*list);
+     while(it.current()) {
+@@ -651,7 +570,6 @@
+ 	++it;
+     }
+     delete list;
+-#endif // QT_NO_XIM
+ }
+ 
+ 
+@@ -1033,6 +951,13 @@
+ 	xim_preferred_style = XIMPreeditArea | XIMStatusArea;
+     else if ( ximInputStyle == "root" )
+ 	xim_preferred_style = XIMPreeditNothing | XIMStatusNothing;
++
++    /*
++        The name of InputMethod set up as a default is acquired from
++	a configuration file. However, If not set up, "XIM" become
++	the name of default InputMethod. 
++     */
++    defaultIM = settings.readEntry( "/qt/DefaultInputMethod", QObject::trUtf8( "XIM" ) );
+ #endif
+ 
+     if (update_timestamp) {
+@@ -1500,6 +1425,7 @@
+ 
+ #define XK_MISCELLANY
+ #define XK_LATIN1
++#define XK_KOREAN
+ #include <X11/keysymdef.h>
+ 
+ // ### This should be static but it isn't because of the friend declaration
+@@ -1586,9 +1512,6 @@
+ 	    } else if ( arg == "-im" ) {
+ 		if ( ++i < argc )
+ 		    ximServer = argv[i];
+-	    } else if ( arg == "-noxim" ) {
+-		noxim=TRUE;
+-		//
+ 	    } else if ( arg == "-iconic" ) {
+ 		mwIconic = !mwIconic;
+ 	    } else if ( arg == "-ncols" ) {   // xv and netscape use this name
+@@ -2065,34 +1988,9 @@
+ 
+ 	qt_set_x11_resources( appFont, appFGCol, appBGCol, appBTNCol);
+ 
+-#ifndef QT_NO_XIM
+-	if ( ! xim_preferred_style ) // no configured input style, use the default
+-	    xim_preferred_style = xim_default_style;
+-
+-	qt_xim = 0;
+-	QString ximServerName(ximServer);
+-	if (ximServer)
+-	    ximServerName.prepend("@im=");
+-	else
+-	    ximServerName = "";
+-
+-	if ( !XSupportsLocale() )
+-	    qWarning("Qt: Locales not supported on X server");
+-
+-#ifdef USE_X11R6_XIM
+-	else if ( XSetLocaleModifiers (ximServerName.ascii()) == 0 )
+-	    qWarning( "Qt: Cannot set locale modifiers: %s",
+-		      ximServerName.ascii());
+-	else if (! noxim)
+-	    XRegisterIMInstantiateCallback(appDpy, 0, 0, 0,
+-					   (XIMProc) xim_create_callback, 0);
+-#else // !USE_X11R6_XIM
+-	else if ( XSetLocaleModifiers ("") == 0 )
+-	    qWarning("Qt: Cannot set locale modifiers");
+-	else if (! noxim)
+-	    QApplication::create_xim();
+-#endif // USE_X11R6_XIM
+-#endif // QT_NO_XIM
++#if !defined(QT_NO_IM)
++    QApplication::create_xim();
++#endif
+ 
+ #if defined (QT_TABLET_SUPPORT)
+ 	int ndev,
+@@ -2341,9 +2239,8 @@
+ 	XCloseDevice( appDpy, devEraser );
+ #endif
+ 
+-#if !defined(QT_NO_XIM)
+-    if ( qt_xim )
+-	QApplication::close_xim();
++#if !defined(QT_NO_IM)
++    QApplication::close_xim();
+ #endif
+ 
+     if ( qt_is_gui_used ) {
+@@ -3198,77 +3095,45 @@
+ 	}
+     }
+ 
+-    int xkey_keycode = event->xkey.keycode;
+-    if ( XFilterEvent( event,
+-		       keywidget ? keywidget->topLevelWidget()->winId() : None ) ) {
+-	if ( keywidget )
+-	    composingKeycode = xkey_keycode; // ### not documented in xlib
+-
+-#ifndef QT_NO_XIM
+- 	if ( event->type != XKeyPress || ! (qt_xim_style & XIMPreeditCallbacks) )
+-	    return 1;
+-
+-	/*
+-	 * The Solaris htt input method will transform a ClientMessage
+-	 * event into a filtered KeyPress event, in which case our
+-	 * keywidget is still zero.
+-	 */
+-        if ( ! keywidget ) {
+- 	    keywidget = (QETWidget*)QWidget::keyboardGrabber();
+-	    if ( keywidget ) {
+-	        grabbed = TRUE;
+-	    } else {
+-	        if ( focus_widget )
+-		    keywidget = (QETWidget*)focus_widget;
+-	        if ( !keywidget ) {
+-		    if ( inPopupMode() ) // no focus widget, see if we have a popup
+-		        keywidget = (QETWidget*) activePopupWidget();
+-		    else if ( widget )
+-		        keywidget = (QETWidget*)widget->topLevelWidget();
+-	        }
+-	    }
+-        }
++#ifndef QT_NO_IM
++    if( keywidget && keywidget->isEnabled() && keywidget->isInputMethodEnabled() ) {
++	if( ( event->type==XKeyPress || event->type==XKeyRelease ) &&
++	    sm_blockUserInput ) // block user interaction during session management
++	    return TRUE;
+ 
+-	/*
+-	  if the composition string has been emptied, we need to send
+-	  an IMEnd event.  however, we have no way to tell if the user
+-	  has cancelled input, or if the user has accepted the
+-	  composition.
+-
+-	  so, we have to look for the next keypress and see if it is
+-	  the 'commit' key press (keycode == 0).  if it is, we deliver
+-	  an IMEnd event with the final text, otherwise we deliver an
+-	  IMEnd with empty text (meaning the user has cancelled the
+-	  input).
+-	*/
+ 	QInputContext *qic =
+-	    (QInputContext *) keywidget->topLevelWidget()->topData()->xic;
+-	extern bool qt_compose_emptied; // qinputcontext_x11.cpp
+-	if ( qic && qic->composing && qic->focusWidget && qt_compose_emptied ) {
+-	    XEvent event2;
+-	    bool found = FALSE;
+-	    if ( XCheckTypedEvent( QPaintDevice::x11AppDisplay(),
+-				   XKeyPress, &event2 ) ) {
+-		if ( event2.xkey.keycode == 0 ) {
+-		    // found a key event with the 'commit' string
+-		    found = TRUE;
+-		    XPutBackEvent( QPaintDevice::x11AppDisplay(), &event2 );
+-		}
+-	    }
++            (QInputContext *) keywidget->topLevelWidget()->topData()->xic;
++	if( qic && qic->x11FilterEvent( keywidget, event ) )
++	    return TRUE;
+ 
+-	    if ( !found ) {
+-		// no key event, so the user must have cancelled the composition
+-		QIMEvent endevent( QEvent::IMEnd, QString::null, -1 );
+-		QApplication::sendEvent( qic->focusWidget, &endevent );
++	// filterEvent() accepts QEvent *event rather than preexpanded
++	// key event values. This is intended to pass other IM-related
++	// events in future. The IM-related events are supposed as
++	// QWheelEvent, QTabletEvent and so on. Other non IM-related
++	// events should not be forwarded to input contexts to prevent
++	// weird event handling.
++	if ( ( event->type == XKeyPress || event->type == XKeyRelease ) ) {
++	    int code = -1;
++	    int count = 0;
++	    int state;
++	    char ascii = 0;
++	    QEvent::Type type;
++	    QString text;
++
++	    keywidget->translateKeyEventInternal( event, count, text,
++						  state, ascii, code, type,
++						  FALSE, FALSE );
+ 
+-		qic->focusWidget = 0;
+-	    }
++	    QKeyEvent keyevent( type, code, ascii, state, text, FALSE, count );
+ 
+-	    qt_compose_emptied = FALSE;
++	    if( qic && qic->filterEvent( &keyevent ) )
++		return TRUE;
+ 	}
+-#endif // QT_NO_XIM
+-
+-	return 1;
++    } else
++#endif // QT_NO_IM
++    {
++	if ( XFilterEvent( event, None ) )
++	    return TRUE;
+     }
+ 
+     if ( qt_x11EventFilter(event) )		// send through app filter
+@@ -3419,34 +3284,8 @@
+     case XKeyRelease:
+ 	{
+ 	    if ( keywidget && keywidget->isEnabled() ) { // should always exist
+-#ifndef QT_NO_XIM
+-		QInputContext *qic =
+-		    (QInputContext *) keywidget->topLevelWidget()->topData()->xic;
+-
+-		if ((qt_xim_style & XIMPreeditCallbacks) && event->xkey.keycode == 0 &&
+-		    qic && qic->composing && qic->focusWidget) {
+-		    // input method has sent us a commit string
+-		    QCString data(513);
+-		    KeySym sym;    // unused
+-		    Status status; // unused
+-		    QString text;
+-		    int count = qic->lookupString( &(event->xkey), data,
+-						   &sym, &status );
+-		    if ( count > 0 )
+-			text = input_mapper->toUnicode( data, count );
+-
+-		    // qDebug( "sending IMEnd with %d chars", text.length() );
+-		    QIMEvent endevent( QEvent::IMEnd, text, -1 );
+-		    QApplication::sendEvent( qic->focusWidget, &endevent );
+-
+-		    qic->focusWidget = 0;
+-		    qic->text = QString::null;
+-		} else
+-#endif // !QT_NO_XIM
+-		    {
+-			// qDebug( "sending key event" );
+-			keywidget->translateKeyEvent( event, grabbed );
+-		    }
++	        // qDebug( "sending key event" );
++	        keywidget->translateKeyEvent( event, grabbed );
+ 	    }
+ 	    break;
+ 	}
+@@ -4733,6 +4572,61 @@
+     XK_Help,		Qt::Key_Help,
+     0x1000FF74,         Qt::Key_BackTab,     // hardcoded HP backtab
+ 
++    // International input method support keys
++
++    // International & multi-key character composition
++    XK_Multi_key,		Qt::Key_Multi_key,
++    XK_Codeinput,		Qt::Key_Codeinput,
++    XK_SingleCandidate,		Qt::Key_SingleCandidate,
++    XK_MultipleCandidate,	Qt::Key_MultipleCandidate,
++    XK_PreviousCandidate,	Qt::Key_PreviousCandidate,
++
++    // Misc Functions
++    XK_Mode_switch,		Qt::Key_Mode_switch,
++    //XK_script_switch,		Qt::Key_script_switch,
++
++    // Japanese keyboard support
++    XK_Kanji,			Qt::Key_Kanji,
++    XK_Muhenkan,		Qt::Key_Muhenkan,
++    //XK_Henkan_Mode,		Qt::Key_Henkan_Mode,
++    XK_Henkan,			Qt::Key_Henkan,
++    XK_Romaji,			Qt::Key_Romaji,
++    XK_Hiragana,		Qt::Key_Hiragana,
++    XK_Katakana,		Qt::Key_Katakana,
++    XK_Hiragana_Katakana,	Qt::Key_Hiragana_Katakana,
++    XK_Zenkaku,			Qt::Key_Zenkaku,
++    XK_Hankaku,			Qt::Key_Hankaku,
++    XK_Zenkaku_Hankaku,		Qt::Key_Zenkaku_Hankaku,
++    XK_Touroku,			Qt::Key_Touroku,
++    XK_Massyo,			Qt::Key_Massyo,
++    XK_Kana_Lock,		Qt::Key_Kana_Lock,
++    XK_Kana_Shift,		Qt::Key_Kana_Shift,
++    XK_Eisu_Shift,		Qt::Key_Eisu_Shift,
++    XK_Eisu_toggle,		Qt::Key_Eisu_toggle,
++    //XK_Kanji_Bangou,		Qt::Key_Kanji_Bangou,
++    //XK_Zen_Koho,		Qt::Key_Zen_Koho,
++    //XK_Mae_Koho,		Qt::Key_Mae_Koho,
++
++#ifdef XK_KOREAN
++    // Korean support
++    XK_Hangul,			Qt::Key_Hangul,
++    XK_Hangul_Start,		Qt::Key_Hangul_Start,
++    XK_Hangul_End,		Qt::Key_Hangul_End,
++    XK_Hangul_Hanja,		Qt::Key_Hangul_Hanja,
++    XK_Hangul_Jamo,		Qt::Key_Hangul_Jamo,
++    XK_Hangul_Romaja,		Qt::Key_Hangul_Romaja,
++    XK_Hangul_Codeinput,	Qt::Key_Hangul_Codeinput,
++    XK_Hangul_Jeonja,		Qt::Key_Hangul_Jeonja,
++    XK_Hangul_Banja,		Qt::Key_Hangul_Banja,
++    XK_Hangul_PreHanja,		Qt::Key_Hangul_PreHanja,
++    XK_Hangul_PostHanja,	Qt::Key_Hangul_PostHanja,
++    XK_Hangul_SingleCandidate,	Qt::Key_Hangul_SingleCandidate,
++    XK_Hangul_MultipleCandidate, Qt::Key_Hangul_MultipleCandidate,
++    XK_Hangul_PreviousCandidate, Qt::Key_Hangul_PreviousCandidate,
++    XK_Hangul_Special,		Qt::Key_Hangul_Special,
++    //XK_Hangul_switch,		Qt::Key_Hangul_switch,
++#endif  // XK_KOREAN
++
+     // Special multimedia keys
+     // currently only tested with MS internet keyboard
+ 
+@@ -4950,7 +4844,7 @@
+ bool QETWidget::translateKeyEventInternal( const XEvent *event, int& count,
+ 					   QString& text,
+ 					   int& state,
+-					   char& ascii, int& code, QEvent::Type &type, bool willRepeat )
++					   char& ascii, int& code, QEvent::Type &type, bool willRepeat, bool statefulTranslation )
+ {
+     QTextCodec *mapper = input_mapper;
+     // some XmbLookupString implementations don't return buffer overflow correctly,
+@@ -4999,6 +4893,11 @@
+ 
+     if ( type == QEvent::KeyPress ) {
+ 	bool mb=FALSE;
++	// commit string handling is done by
++	// QXIMInputContext::x11FilterEvent() and are passed to
++	// widgets via QIMEvent regardless of XIM style, so the
++	// following code is commented out.
++#if 0
+ 	if ( qt_xim ) {
+ 	    QTLWExtra*  xd = tlw->topData();
+ 	    QInputContext *qic = (QInputContext *) xd->xic;
+@@ -5007,6 +4906,7 @@
+ 		count = qic->lookupString(&xkeyevent, chars, &key, &status);
+ 	    }
+ 	}
++#endif
+ 	if ( !mb ) {
+ 	    count = XLookupString( &xkeyevent,
+ 				   chars.data(), chars.size(), &key, 0 );
+@@ -5090,7 +4990,7 @@
+     state = translateButtonState( keystate );
+ 
+     static int directionKeyEvent = 0;
+-    if ( qt_use_rtl_extensions && type == QEvent::KeyRelease ) {
++    if ( qt_use_rtl_extensions && type == QEvent::KeyRelease && statefulTranslation ) {
+ 	if (directionKeyEvent == Key_Direction_R || directionKeyEvent == Key_Direction_L ) {
+ 	    type = QEvent::KeyPress;
+ 	    code = directionKeyEvent;
+@@ -5108,7 +5008,7 @@
+     // (to figure out whether the Ctrl modifier is held while Shift is pressed,
+     // or Shift is held while Ctrl is pressed) since the 'state' doesn't tell
+     // us whether the modifier held is Left or Right.
+-    if (qt_use_rtl_extensions && type  == QEvent::KeyPress)
++    if ( qt_use_rtl_extensions && type  == QEvent::KeyPress && statefulTranslation )
+         if (key == XK_Control_L || key == XK_Control_R || key == XK_Shift_L || key == XK_Shift_R) {
+            if (!directionKeyEvent)
+ 	      directionKeyEvent = key;
+@@ -5176,7 +5076,7 @@
+ 	    chars[0] = 0;
+ 	}
+ 
+-	if ( qt_use_rtl_extensions && type  == QEvent::KeyPress ) {
++	if ( qt_use_rtl_extensions && type  == QEvent::KeyPress && statefulTranslation ) {
+ 	    if ( directionKeyEvent ) {
+ 		if ( key == XK_Shift_L && directionKeyEvent == XK_Control_L ||
+ 		     key == XK_Control_L && directionKeyEvent == XK_Shift_L ) {
+@@ -5330,8 +5230,18 @@
+ 	translateKeyEventInternal( event, count, text, state, ascii, code, type );
+     }
+ 
++#ifndef QT_NO_IM
++    QInputContext *qic =
++        (QInputContext *) topLevelWidget()->topData()->xic;
++#endif
++
+     // compress keys
+     if ( !text.isEmpty() && testWState(WState_CompressKeys) &&
++#ifndef QT_NO_IM
++	 // input methods need discrete key events
++	 // TODO: describe design decision
++	 ! qic &&
++#endif // QT_NO_IM
+ 	 // do not compress keys if the key event we just got above matches
+ 	 // one of the key ranges used to compute stopCompression
+ 	 ! ( ( code >= Key_Escape && code <= Key_SysReq ) ||
+@@ -5419,7 +5329,13 @@
+ 
+     // autorepeat compression makes sense for all widgets (Windows
+     // does it automatically .... )
+-    if ( event->type == XKeyPress && text.length() <= 1 ) {
++    if ( event->type == XKeyPress && text.length() <= 1
++#ifndef QT_NO_IM
++	 // input methods need discrete key events
++	 // TODO: describe design decision
++	 && ! qic
++#endif// QT_NO_IM
++	 ) {
+ 	XEvent dummy;
+ 
+         for (;;) {
+diff -urN qt-x11-free-3.3.2/src/kernel/qinputcontext.cpp qt-x11-immodule-bc/src/kernel/qinputcontext.cpp
+--- qt-x11-free-3.3.2/src/kernel/qinputcontext.cpp	1970-01-01 09:00:00.000000000 +0900
++++ qt-x11-immodule-bc/src/kernel/qinputcontext.cpp	2004-06-23 03:00:46.715782752 +0900
+@@ -0,0 +1,382 @@
++/****************************************************************************
++** $Id: qt-x11-immodule-bc-qt3.3.2-20040623.diff,v 1.1 2004/08/04 16:15:05 usata Exp $
++**
++** Implementation of QInputContext class
++**
++** Copyright (C) 2000-2003 Trolltech AS.  All rights reserved.
++**
++** This file is part of the kernel module of the Qt GUI Toolkit.
++**
++** This file may be distributed under the terms of the Q Public License
++** as defined by Trolltech AS of Norway and appearing in the file
++** LICENSE.QPL included in the packaging of this file.
++**
++** This file may be distributed and/or modified under the terms of the
++** GNU General Public License version 2 as published by the Free Software
++** Foundation and appearing in the file LICENSE.GPL included in the
++** packaging of this file.
++**
++** Licensees holding valid Qt Enterprise Edition or Qt Professional Edition
++** licenses for Unix/X11 may use this file in accordance with the Qt Commercial
++** License Agreement provided with the Software.
++**
++** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
++** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
++**
++** See http://www.trolltech.com/pricing.html or email sales@trolltech.com for
++**   information about Qt Commercial License Agreements.
++** See http://www.trolltech.com/qpl/ for QPL licensing information.
++** See http://www.trolltech.com/gpl/ for GPL licensing information.
++**
++** Contact info@trolltech.com if any conditions of this licensing are
++** not clear to you.
++**
++**********************************************************************/
++
++//#define QT_NO_IM_PREEDIT_RELOCATION
++
++#include "qinputcontext.h"
++
++#ifndef QT_NO_IM
++
++#include "qplatformdefs.h"
++
++#include "qapplication.h"
++#include "qwidget.h"
++
++#include <stdlib.h>
++#include <limits.h>
++
++class QInputContextPrivate 
++{
++public:
++    QInputContextPrivate()
++	: holderWidget( 0 ), composingWidget( 0 ), hasFocus( FALSE ),
++	  isComposing( FALSE ) 
++#if !defined(QT_NO_IM_PREEDIT_RELOCATION)
++	  , preeditString( QString::null ),
++	  cursorPosition( -1 ), selLength ( 0 )
++#endif
++    {}
++
++    QWidget *holderWidget; // widget to which QInputContext instance belongs.
++    QWidget *composingWidget;
++    bool hasFocus;
++    bool isComposing;
++
++    void updateComposingState( const QString &text,
++			       int newCursorPosition, int newSelLength ) {
++#if !defined(QT_NO_IM_PREEDIT_RELOCATION)
++	preeditString = text;
++	cursorPosition = newCursorPosition;
++	selLength = newSelLength;
++#endif
++    }
++
++    void resetComposingState() {
++	isComposing = FALSE;
++#if !defined(QT_NO_IM_PREEDIT_RELOCATION)
++	preeditString = QString::null;
++	cursorPosition = -1;
++	selLength = 0;
++#endif
++    }
++
++#if !defined(QT_NO_IM_PREEDIT_RELOCATION)
++    QString preeditString;
++    int cursorPosition;
++    int selLength;
++#endif
++};
++
++
++/*!
++    This constructor sets widget of the first argument to the
++    holderWidget, state of the second argument to the imState,
++    respectively. holderWidget is widget holding QInputContext
++    (itself). imState is state of InputMethod.
++*/
++QInputContext::QInputContext()
++{
++    d = new QInputContextPrivate;
++}
++
++
++QInputContext::~QInputContext()
++{
++    delete d;
++}
++
++QWidget* QInputContext::holderWidget() const
++{
++    return d->holderWidget;
++}
++
++void QInputContext::setHolderWidget( QWidget *w )
++{
++    d->holderWidget = w;
++}
++
++QWidget* QInputContext::focusWidget() const
++{
++    return d->hasFocus ? d->composingWidget : 0;
++}
++
++
++void QInputContext::setFocusWidget( QWidget *w )
++{
++    if ( w ) {
++	bool isFocusingBack = ( w == d->composingWidget );
++	bool isPreeditRelocation = ( ! isFocusingBack  && isComposing() &&
++				     d->composingWidget );
++	// invoke sendIMEventInternal() rather than sendIMEvent() to
++	// avoid altering the composing state
++	if ( isPreeditRelocation == TRUE ) {
++	    // clear preedit of previously focused text
++	    // widget. preserved preedit may be exist even if
++	    // isPreeditRelocationEnabled() == FALSE.
++	    sendIMEventInternal( QEvent::IMEnd );
++	}
++	d->composingWidget = w;  // changes recipient of QIMEvent
++	if ( isPreeditRelocation == TRUE ) {
++#if !defined(QT_NO_IM_PREEDIT_RELOCATION)
++	    if ( isPreeditRelocationEnabled() ) {
++		// copy preedit state to the widget that gaining focus
++		sendIMEventInternal( QEvent::IMStart );
++		sendIMEventInternal( QEvent::IMCompose, d->preeditString,
++				     d->cursorPosition, d->selLength );
++	    } else
++#endif
++	    {
++		// reset input context when the shared context has
++		// focused on another text widget
++		reset();
++	    }
++	}
++    }
++    d->hasFocus = w ? TRUE : FALSE;
++}
++
++
++void QInputContext::releaseComposingWidget( QWidget *w )
++{
++    if ( d->composingWidget == w ) {
++	d->composingWidget = 0;
++	d->hasFocus = FALSE;
++    }
++}
++
++bool QInputContext::isPreeditRelocationEnabled()
++{
++    return FALSE;
++}
++
++bool QInputContext::isComposing() const
++{
++    return d->isComposing;
++}
++
++
++/*!
++    This function must be implemented in subclasses to handle key
++    input (except for input method used only on a specific
++    platform). If an event is filtered, it must return TRUE.
++
++    keywidget is client widget into which a text is inputted. type
++    shows whether inputted event is KeyPress or KeyRelease. code show
++    inputted key code. state show keyboard modifiers (OR-ed together).
++
++    In principle, only when composition is finished, the input is
++    committed by QIMEvent (IMEnd). Otherwise, the input set to
++    arguments, such as text, ascii, count, etc. The purpose of this
++    specification is to take adjustment with key compression.
++*/
++bool QInputContext::filterEvent( QEvent *event )
++{
++    return FALSE;
++}
++
++
++void QInputContext::sendIMEventInternal( QEvent::Type type,
++					 const QString &text,
++					 int cursorPosition, int selLength )
++{
++#if defined(Q_WS_X11)
++    if ( ! d->composingWidget )
++	return;
++#endif
++
++    if ( type == QEvent::IMStart ) {
++	qDebug( "sending IMStart with %d chars to %p",
++		text.length(), d->composingWidget );
++#if defined(Q_WS_X11)
++	QIMEvent event( type, text, cursorPosition );
++	QApplication::sendEvent( d->composingWidget, &event );
++#elif defined(Q_WS_QWS)
++	// just a placeholder for now
++	//qwsServer->sendIMEvent( QWSServer::IMCompose,
++	//			  text, cursorPosition, selLength );
++#endif
++    } else if ( type == QEvent::IMEnd ) {
++	qDebug( "sending IMEnd with %d chars to %p, text=%s",
++		text.length(), d->composingWidget,
++		(const char*)text.local8Bit() );
++#if defined(Q_WS_X11)
++	QIMEvent event( type, text, cursorPosition );
++	QApplication::sendEvent( d->composingWidget, &event );
++#elif defined(Q_WS_QWS)
++	//qwsServer->sendIMEvent( QWSServer::IMEnd,
++	//			  text, cursorPosition, selLength );
++#endif
++    } else if ( type == QEvent::IMCompose ) {
++	qDebug( "sending IMCompose to %p with %d chars, cpos=%d, sellen=%d, text=%s",
++		d->composingWidget,
++		text.length(), cursorPosition, selLength,
++		(const char*)text.local8Bit() );
++#if defined(Q_WS_X11)
++	QIMComposeEvent event( type, text, cursorPosition, selLength );
++	QApplication::sendEvent( d->composingWidget, &event );
++#elif defined(Q_WS_QWS)
++	//qwsServer->sendIMEvent( QWSServer::IMCompose,
++	//			  text, cursorPosition, selLength );
++#endif
++    }
++}
++
++
++void QInputContext::sendIMEvent( QEvent::Type type, const QString &text,
++                                 int cursorPosition, int selLength )
++{
++#if defined(Q_WS_X11)
++    if ( !focusWidget() )
++	return;
++#endif
++
++    if ( type == QEvent::IMStart ) {
++	sendIMEventInternal( type, text, cursorPosition, selLength );
++	d->isComposing = TRUE;
++    } else if ( type == QEvent::IMEnd ) {
++	d->resetComposingState();
++	sendIMEventInternal( type, text, cursorPosition, selLength );
++    } else if ( type == QEvent::IMCompose ) {
++	d->updateComposingState( text, cursorPosition, selLength );
++	sendIMEventInternal( type, text, cursorPosition, selLength );
++    }
++}
++
++
++
++/*!
++    \fn void QInputContext::setFocus()
++
++    This function must be implemented in subclasses to set focus.
++
++    \sa unsetFocus()
++*/
++void QInputContext::setFocus()
++{
++    // focusWidget is already set by QWidget::focusInputContext()
++}
++
++
++/*!
++    \fn void QInputContext::unsetFocus()
++
++    This function must be implemented in subclasses to unset focus.
++
++    \sa setFocus()
++*/
++void QInputContext::unsetFocus()
++{
++    reset();
++    // focusWidget is set to 0 after return by QWidget::unfocusInputContext()
++}
++
++
++/*!
++    \fn void QInputContext::setMicroFocus( int x, int y, int w, int h, QFont *f )
++
++    This function must be implemented in subclasses to handle
++    focusHint changes.
++
++    x and y are cursor's positions. w is cursor's width, and h is
++    cursor's height.  widget is client widget. f is a font on the
++    cursor's position.
++*/
++void QInputContext::setMicroFocus( int x, int y, int w, int h, QFont *f )
++{
++}
++
++
++/*!
++  \fn void QWSInputMethod::mouseHandler( int x, int state )
++
++  Implemented in subclasses to handle mouse
++  presses/releases/doubleclicks/moves within the on-the-spot text. The
++  parameter \a x is the offset within the string that was sent with
++  the IMCompose event.  \a state is either \c QEvent::MouseButtonPress
++  or \c QEvent::MouseButtonRelease or \c QEvent::MouseButtonDblClick
++  or \c QEvent::MouseButtonMove. The method interface is imported from
++  QWSInputMethod::mouseHandler() of Qt/Embedded 2.3.7 and extended for
++  desktop system.
++ */
++void QInputContext::mouseHandler( int x, QEvent::Type type,
++				  Qt::ButtonState button,
++				  Qt::ButtonState state )
++{
++    // Default behavior for simple ephemeral input contexts. Some
++    // complex input contexts should not be reset here.
++    if ( type == QEvent::MouseButtonPress ||
++	 type == QEvent::MouseButtonDblClick )
++	reset();
++}
++
++
++/*!
++  Returns the font of the current input widget
++ */
++QFont QInputContext::font() const
++{
++    if ( !focusWidget() )
++        return QApplication::font(); //### absolutely last resort
++
++    return focusWidget()->font();
++}
++
++
++/*!
++    \fn void QInputContext::reset()
++
++    This function must be implemented in subclasses to reset the state
++    of the input method.
++*/
++void QInputContext::reset()
++{
++    if ( isComposing() )
++        sendIMEvent( QEvent::IMEnd );
++}
++
++
++/*!
++    \fn QString QInputContext::name()
++
++    This function must be implemented in subclasses to return the name
++    of the input method.
++*/
++QString QInputContext::name()
++{
++}
++
++
++/*!
++    \fn QCString QInputContext::language()
++
++    This function must be implemented in subclasses to return a
++    language code (e.g. "zh_CN", "zh_TW", "zh_HK", "ja", "ko", ...) of
++    the input method.
++*/
++QCString QInputContext::language()
++{
++}
++
++#endif //Q_NO_IM
+diff -urN qt-x11-free-3.3.2/src/kernel/qinputcontext.h qt-x11-immodule-bc/src/kernel/qinputcontext.h
+--- qt-x11-free-3.3.2/src/kernel/qinputcontext.h	1970-01-01 09:00:00.000000000 +0900
++++ qt-x11-immodule-bc/src/kernel/qinputcontext.h	2004-06-23 03:07:02.936588496 +0900
+@@ -0,0 +1,116 @@
++/****************************************************************************
++** $Id: qt-x11-immodule-bc-qt3.3.2-20040623.diff,v 1.1 2004/08/04 16:15:05 usata Exp $
++**
++** Definition of QInputContext
++**
++** Copyright (C) 1992-2002 Trolltech AS.  All rights reserved.
++**
++** This file is part of the kernel module of the Qt GUI Toolkit.
++**
++** This file may be distributed under the terms of the Q Public License
++** as defined by Trolltech AS of Norway and appearing in the file
++** LICENSE.QPL included in the packaging of this file.
++**
++** This file may be distributed and/or modified under the terms of the
++** GNU General Public License version 2 as published by the Free Software
++** Foundation and appearing in the file LICENSE.GPL included in the
++** packaging of this file.
++**
++** Licensees holding valid Qt Enterprise Edition or Qt Professional Edition
++** licenses may use this file in accordance with the Qt Commercial License
++** Agreement provided with the Software.
++**
++** This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
++** WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
++**
++** See http://www.trolltech.com/pricing.html or email sales@trolltech.com for
++**   information about Qt Commercial License Agreements.
++** See http://www.trolltech.com/qpl/ for QPL licensing information.
++** See http://www.trolltech.com/gpl/ for GPL licensing information.
++**
++** Contact info@trolltech.com if any conditions of this licensing are
++** not clear to you.
++**
++**********************************************************************/
++
++#ifndef QINPUTCONTEXT_H
++#define QINPUTCONTEXT_H
++
++#ifndef QT_NO_IM
++
++#ifndef QT_H
++#include "qglobal.h"
++#include "qevent.h"
++#endif
++
++class QWidget;
++class QFont;
++class QString;
++class QInputContextPrivate;
++
++
++/*
++    QInputContext holds the data which input method uses and offers
++    the function which input method has. And, in order to enable
++    useing each input method, it is necessary to inherit QInputContext
++    and to implement InputContext corresponding to it.
++*/
++class QInputContext
++{
++public:
++    QInputContext();
++    virtual ~QInputContext();
++
++    virtual QString name();
++    virtual QCString language();
++
++#if defined(Q_WS_X11)
++    virtual bool x11FilterEvent( QWidget *keywidget, XEvent *event );
++#endif // Q_WS_X11
++    virtual bool filterEvent( QEvent *event );
++    virtual void reset();
++
++    virtual void setFocus();
++    virtual void unsetFocus();
++    virtual void setMicroFocus( int x, int y, int w, int h, QFont *f = 0 );
++    virtual void mouseHandler( int x, QEvent::Type type,
++			       Qt::ButtonState button, Qt::ButtonState state );
++    virtual QFont font() const;
++
++protected:
++#if defined(Q_WS_X11)
++    // not recommended to use these functions
++    QWidget *focusWidget() const;
++    QWidget *holderWidget() const;
++#endif
++
++    bool isComposing() const;
++    virtual bool isPreeditRelocationEnabled();
++    virtual void sendIMEvent( QEvent::Type type,
++			      const QString &text = QString::null,
++			      int cursorPosition = -1, int selLength = 0 );
++
++private:
++    void sendIMEventInternal( QEvent::Type type,
++			      const QString &text = QString::null,
++			      int cursorPosition = -1, int selLength = 0 );
++#if defined(Q_WS_X11)
++    void setFocusWidget( QWidget *w );
++    void setHolderWidget( QWidget *w );
++    void releaseComposingWidget( QWidget *w );
++#endif
++    
++    QInputContextPrivate *d;
++
++    friend class QWidget;
++    friend class QInputContextFactory;
++
++private:   // Disabled copy constructor and operator=
++    QInputContext( const QInputContext & );
++    QInputContext &operator=( const QInputContext & );
++
++};
++
++#endif //Q_NO_IM
++
++#endif // QINPUTCONTEXT_H
+diff -urN qt-x11-free-3.3.2/src/kernel/qinputcontext_x11.cpp qt-x11-immodule-bc/src/kernel/qinputcontext_x11.cpp
+--- qt-x11-free-3.3.2/src/kernel/qinputcontext_x11.cpp	2004-04-19 18:36:08.000000000 +0900
++++ qt-x11-immodule-bc/src/kernel/qinputcontext_x11.cpp	2004-06-23 01:10:27.072121552 +0900
+@@ -33,500 +33,37 @@
+ **
+ **********************************************************************/
+ 
++#include "qinputcontext.h"
++
++#ifndef QT_NO_IM
++
+ #include "qplatformdefs.h"
+ 
+ #include "qapplication.h"
+ #include "qwidget.h"
+-#include "qinputcontext_p.h"
+-
+-#include <stdlib.h>
+-#include <limits.h>
+ 
++#include "qt_x11_p.h"
+ 
+-bool qt_compose_emptied = FALSE;
++/*!
++    This function, only if input method is depending on X11, must be overridden
++    in subclasses. Otherwise, this function must not.
+ 
+-#if !defined(QT_NO_XIM)
++    By default, this function translates key code and keyboard modifiers from
++    the event which is the 2nd argument, and pass the value to QInputContext::filterEvent().
+ 
+-#define XK_MISCELLANY
+-#define XK_LATIN1
+-#include <X11/keysymdef.h>
++    keywidget is client widget into which a text is inputted. event is inputted XEvent.
+ 
+-// #define QT_XIM_DEBUG
++    In principle, only when composition is finished, the input is committed
++    by QIMEvent (IMEnd). Otherwise, the input set to arguments, such as code,
++    state, text, ascii, count, etc. The purpose of this specification is to
++    take adjustment with key compression.
+ 
+-// from qapplication_x11.cpp
+-extern XIM	qt_xim;
+-extern XIMStyle	qt_xim_style;
+-
+-/* The cache here is needed, as X11 leaks a few kb for every
+-   XFreeFontSet call, so we avoid creating and deletion of fontsets as
+-   much as possible
++    type shows whether inputted event is KeyPress or KeyRelease. code show
++    inputted key code. state show keyboard modifiers (OR-ed together).
+ */
+-static XFontSet fontsetCache[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
+-static int fontsetRefCount = 0;
+-
+-static const char * const fontsetnames[] = {
+-    "-*-fixed-medium-r-*-*-16-*,-*-*-medium-r-*-*-16-*",
+-    "-*-fixed-medium-i-*-*-16-*,-*-*-medium-i-*-*-16-*",
+-    "-*-fixed-bold-r-*-*-16-*,-*-*-bold-r-*-*-16-*",
+-    "-*-fixed-bold-i-*-*-16-*,-*-*-bold-i-*-*-16-*",
+-    "-*-fixed-medium-r-*-*-24-*,-*-*-medium-r-*-*-24-*",
+-    "-*-fixed-medium-i-*-*-24-*,-*-*-medium-i-*-*-24-*",
+-    "-*-fixed-bold-r-*-*-24-*,-*-*-bold-r-*-*-24-*",
+-    "-*-fixed-bold-i-*-*-24-*,-*-*-bold-i-*-*-24-*"
+-};
+-
+-static XFontSet getFontSet( const QFont &f )
+-{
+-    int i = 0;
+-    if (f.italic())
+-	i |= 1;
+-    if (f.bold())
+-	i |= 2;
+-
+-    if ( f.pointSize() > 20 )
+-	i += 4;
+-
+-    if ( !fontsetCache[i] ) {
+-	Display* dpy = QPaintDevice::x11AppDisplay();
+-	int missCount;
+-	char** missList;
+-	fontsetCache[i] = XCreateFontSet(dpy, fontsetnames[i], &missList, &missCount, 0);
+-	if(missCount > 0)
+-	    XFreeStringList(missList);
+-	if ( !fontsetCache[i] ) {
+-	    fontsetCache[i] = XCreateFontSet(dpy,  "-*-fixed-*-*-*-*-16-*", &missList, &missCount, 0);
+-	    if(missCount > 0)
+-		XFreeStringList(missList);
+-	    if ( !fontsetCache[i] )
+-		fontsetCache[i] = (XFontSet)-1;
+-	}
+-    }
+-    return (fontsetCache[i] == (XFontSet)-1) ? 0 : fontsetCache[i];
+-}
+-
+-
+-#ifdef Q_C_CALLBACKS
+-extern "C" {
+-#endif // Q_C_CALLBACKS
+-
+-    static int xic_start_callback(XIC, XPointer client_data, XPointer) {
+-	QInputContext *qic = (QInputContext *) client_data;
+-	if (! qic) {
+-#ifdef QT_XIM_DEBUG
+-	    qDebug("compose start: no qic");
+-#endif // QT_XIM_DEBUG
+-
+-	    return 0;
+-	}
+-
+-	qic->composing = TRUE;
+-	qic->text = QString::null;
+-	qic->focusWidget = 0;
+-
+-	if ( qic->selectedChars.size() < 128 )
+-	    qic->selectedChars.resize( 128 );
+-	qic->selectedChars.fill( 0 );
+-
+-#ifdef QT_XIM_DEBUG
+-	qDebug("compose start");
+-#endif // QT_XIM_DEBUG
+-
+-	return 0;
+-    }
+-
+-    static int xic_draw_callback(XIC, XPointer client_data, XPointer call_data) {
+-	QInputContext *qic = (QInputContext *) client_data;
+-	if (! qic) {
+-#ifdef QT_XIM_DEBUG
+-	    qDebug("compose event: invalid compose event %p", qic);
+-#endif // QT_XIM_DEBUG
+-
+-	    return 0;
+-	}
+-
+-	bool send_imstart = FALSE;
+-	if (qApp->focusWidget() != qic->focusWidget && qic->text.isEmpty()) {
+-	    if (qic->focusWidget) {
+-#ifdef QT_XIM_DEBUG
+-		qDebug( "sending IMEnd (empty) to %p", qic->focusWidget );
+-#endif // QT_XIM_DEBUG
+-
+-		QIMEvent endevent(QEvent::IMEnd, QString::null, -1);
+-		QApplication::sendEvent(qic->focusWidget, &endevent);
+-	    }
+-
+-	    qic->text = QString::null;
+-	    qic->focusWidget = qApp->focusWidget();
+-	    qic->composing = FALSE;
+-
+-	    if ( qic->selectedChars.size() < 128 )
+-		qic->selectedChars.resize( 128 );
+-	    qic->selectedChars.fill( 0 );
+-
+-	    if (qic->focusWidget) {
+-		qic->composing = TRUE;
+-		send_imstart = TRUE;
+-	    }
+-	}
+-
+-	if (! qic->composing || ! qic->focusWidget) {
+-#ifdef QT_XIM_DEBUG
+-	    qDebug("compose event: invalid compose event %d %p",
+-		   qic->composing, qic->focusWidget);
+-#endif // QT_XIM_DEBUG
+-
+-	    return 0;
+-	}
+-
+-	if ( send_imstart ) {
+-#ifdef QT_XIM_DEBUG
+-            qDebug( "sending IMStart to %p", qic->focusWidget );
+-#endif // QT_XIM_DEBUG
+-
+-	    qt_compose_emptied = FALSE;
+-	    QIMEvent startevent(QEvent::IMStart, QString::null, -1);
+-	    QApplication::sendEvent(qic->focusWidget, &startevent);
+-	}
+-
+-	XIMPreeditDrawCallbackStruct *drawstruct =
+-	    (XIMPreeditDrawCallbackStruct *) call_data;
+-	XIMText *text = (XIMText *) drawstruct->text;
+-	int cursor = drawstruct->caret, sellen = 0;
+-
+-	if ( ! drawstruct->caret && ! drawstruct->chg_first &&
+-	     ! drawstruct->chg_length && ! text ) {
+-	    // nothing to do
+-	    return 0;
+-	}
+-
+-	if (text) {
+-	    char *str = 0;
+-	    if (text->encoding_is_wchar) {
+-		int l = wcstombs(NULL, text->string.wide_char, text->length);
+-		if (l != -1) {
+-		    str = new char[l + 1];
+-		    wcstombs(str, text->string.wide_char, l);
+-		    str[l] = 0;
+-		}
+-	    } else
+-		str = text->string.multi_byte;
+-
+-	    if (! str)
+-		return 0;
+-
+-	    QString s = QString::fromLocal8Bit(str);
+-
+-	    if (text->encoding_is_wchar)
+-		delete [] str;
+-
+-	    if (drawstruct->chg_length < 0)
+-		qic->text.replace(drawstruct->chg_first, UINT_MAX, s);
+-	    else
+-		qic->text.replace(drawstruct->chg_first, drawstruct->chg_length, s);
+-
+-	    if ( qic->selectedChars.size() < qic->text.length() ) {
+-		// expand the selectedChars array if the compose string is longer
+-		uint from = qic->selectedChars.size();
+-		qic->selectedChars.resize( qic->text.length() );
+-		for ( uint x = from; from < qic->selectedChars.size(); ++x )
+-		    qic->selectedChars[x] = 0;
+-	    }
+-
+-	    uint x;
+-	    bool *p = qic->selectedChars.data() + drawstruct->chg_first;
+-	    // determine if the changed chars are selected based on text->feedback
+-	    for ( x = 0; x < s.length(); ++x )
+-		*p++ = ( text->feedback ? ( text->feedback[x] & XIMReverse ) : 0 );
+-
+-	    // figure out where the selection starts, and how long it is
+-	    p = qic->selectedChars.data();
+-	    bool started = FALSE;
+-	    for ( x = 0; x < qic->selectedChars.size(); ++x ) {
+-		if ( started ) {
+-		    if ( *p ) ++sellen;
+-		    else break;
+-		} else {
+-		    if ( *p ) {
+-			cursor = x;
+-			started = TRUE;
+-			sellen = 1;
+-		    }
+-		}
+-		++p;
+-	    }
+-	} else {
+-	    if (drawstruct->chg_length == 0)
+-		drawstruct->chg_length = -1;
+-
+-	    qic->text.remove(drawstruct->chg_first, drawstruct->chg_length);
+-	    qt_compose_emptied = qic->text.isEmpty();
+-	    if ( qt_compose_emptied ) {
+-#ifdef QT_XIM_DEBUG
+-		qDebug( "compose emptied" );
+-#endif // QT_XIM_DEBUG
+-
+-		// don't send an empty compose, since we will send an IMEnd with
+-		// either the correct compose text (or null text if the user has
+-		// cancelled the compose or deleted all chars).
+-		return 0;
+-	    }
+-	}
+-
+-#ifdef QT_XIM_DEBUG
+-	qDebug( "sending IMCompose to %p with %d chars",
+-                qic->focusWidget, qic->text.length() );
+-#endif // QT_XIM_DEBUG
+-
+-	QIMComposeEvent event( QEvent::IMCompose, qic->text, cursor, sellen );
+-	QApplication::sendEvent(qic->focusWidget, &event);
+-	return 0;
+-    }
+-
+-    static int xic_done_callback(XIC, XPointer client_data, XPointer) {
+-	QInputContext *qic = (QInputContext *) client_data;
+-	if (! qic)
+-	    return 0;
+-
+-	if (qic->composing && qic->focusWidget) {
+-#ifdef QT_XIM_DEBUG
+-	    qDebug( "sending IMEnd (empty) to %p", qic->focusWidget );
+-#endif // QT_XIM_DEBUG
+-
+-       	    QIMEvent event(QEvent::IMEnd, QString::null, -1);
+-	    QApplication::sendEvent(qic->focusWidget, &event);
+-	}
+-
+-	qic->composing = FALSE;
+-	qic->focusWidget = 0;
+-
+-	if ( qic->selectedChars.size() < 128 )
+-	    qic->selectedChars.resize( 128 );
+-	qic->selectedChars.fill( 0 );
+-
+-	return 0;
+-    }
+-
+-#ifdef Q_C_CALLBACKS
+-}
+-#endif // Q_C_CALLBACKS
+-
+-#endif // !QT_NO_XIM
+-
+-
+-
+-QInputContext::QInputContext(QWidget *widget)
+-    : ic(0), focusWidget(0), composing(FALSE), fontset(0)
+-{
+-#if !defined(QT_NO_XIM)
+-    fontsetRefCount++;
+-    if (! qt_xim) {
+-	qWarning("QInputContext: no input method context available");
+-	return;
+-    }
+-
+-    if (! widget->isTopLevel()) {
+-	qWarning("QInputContext: cannot create input context for non-toplevel widgets");
+-	return;
+-    }
+-
+-    XPoint spot;
+-    XRectangle rect;
+-    XVaNestedList preedit_attr = 0;
+-    XIMCallback startcallback, drawcallback, donecallback;
+-
+-    font = widget->font();
+-    fontset = getFontSet( font );
+-
+-    if (qt_xim_style & XIMPreeditArea) {
+-	rect.x = 0;
+-	rect.y = 0;
+-	rect.width = widget->width();
+-	rect.height = widget->height();
+-
+-	preedit_attr = XVaCreateNestedList(0,
+-					   XNArea, &rect,
+-					   XNFontSet, fontset,
+-					   (char *) 0);
+-    } else if (qt_xim_style & XIMPreeditPosition) {
+-	spot.x = 1;
+-	spot.y = 1;
+-
+-	preedit_attr = XVaCreateNestedList(0,
+-					   XNSpotLocation, &spot,
+-					   XNFontSet, fontset,
+-					   (char *) 0);
+-    } else if (qt_xim_style & XIMPreeditCallbacks) {
+-	startcallback.client_data = (XPointer) this;
+-	startcallback.callback = (XIMProc) xic_start_callback;
+-	drawcallback.client_data = (XPointer) this;
+-	drawcallback.callback = (XIMProc)xic_draw_callback;
+-	donecallback.client_data = (XPointer) this;
+-	donecallback.callback = (XIMProc) xic_done_callback;
+-
+-	preedit_attr = XVaCreateNestedList(0,
+-					   XNPreeditStartCallback, &startcallback,
+-					   XNPreeditDrawCallback, &drawcallback,
+-					   XNPreeditDoneCallback, &donecallback,
+-					   (char *) 0);
+-    }
+-
+-    if (preedit_attr) {
+-	ic = XCreateIC(qt_xim,
+-		       XNInputStyle, qt_xim_style,
+-		       XNClientWindow, widget->winId(),
+-		       XNPreeditAttributes, preedit_attr,
+-		       (char *) 0);
+-	XFree(preedit_attr);
+-    } else
+-	ic = XCreateIC(qt_xim,
+-		       XNInputStyle, qt_xim_style,
+-		       XNClientWindow, widget->winId(),
+-		       (char *) 0);
+-
+-    if (! ic)
+-	qFatal("Failed to create XIM input context!");
+-
+-    // when resetting the input context, preserve the input state
+-    (void) XSetICValues((XIC) ic, XNResetState, XIMPreserveState, (char *) 0);
+-#endif // !QT_NO_XIM
+-}
+-
+-
+-QInputContext::~QInputContext()
+-{
+-
+-#if !defined(QT_NO_XIM)
+-    if (ic)
+-	XDestroyIC((XIC) ic);
+-
+-    if ( --fontsetRefCount == 0 ) {
+-	Display *dpy = QPaintDevice::x11AppDisplay();
+-	for ( int i = 0; i < 8; i++ ) {
+-	    if ( fontsetCache[i] && fontsetCache[i] != (XFontSet)-1 ) {
+-		XFreeFontSet(dpy, fontsetCache[i]);
+-		fontsetCache[i] = 0;
+-	    }
+-	}
+-    }
+-
+-#endif // !QT_NO_XIM
+-
+-    ic = 0;
+-    focusWidget = 0;
+-    composing = FALSE;
+-}
+-
+-
+-void QInputContext::reset()
+-{
+-#if !defined(QT_NO_XIM)
+-    if (focusWidget && composing && ! text.isNull()) {
+-#ifdef QT_XIM_DEBUG
+-	qDebug("QInputContext::reset: composing - sending IMEnd (empty) to %p",
+-	       focusWidget);
+-#endif // QT_XIM_DEBUG
+-
+-	QIMEvent endevent(QEvent::IMEnd, QString::null, -1);
+-	QApplication::sendEvent(focusWidget, &endevent);
+-	focusWidget = 0;
+-	text = QString::null;
+-	if ( selectedChars.size() < 128 )
+-	    selectedChars.resize( 128 );
+-	selectedChars.fill( 0 );
+-
+-	char *mb = XmbResetIC((XIC) ic);
+-	if (mb)
+-	    XFree(mb);
+-    }
+-#endif // !QT_NO_XIM
+-}
+-
+-
+-void QInputContext::setComposePosition(int x, int y)
+-{
+-#if !defined(QT_NO_XIM)
+-    if (qt_xim && ic) {
+-	XPoint point;
+-	point.x = x;
+-	point.y = y;
+-
+-	XVaNestedList preedit_attr =
+-	    XVaCreateNestedList(0,
+-				XNSpotLocation, &point,
+-
+-				(char *) 0);
+-	XSetICValues((XIC) ic, XNPreeditAttributes, preedit_attr, (char *) 0);
+-	XFree(preedit_attr);
+-    }
+-#endif // !QT_NO_XIM
+-}
+-
+-
+-void QInputContext::setComposeArea(int x, int y, int w, int h)
++bool QInputContext::x11FilterEvent( QWidget *keywidget, XEvent *event )
+ {
+-#if !defined(QT_NO_XIM)
+-    if (qt_xim && ic) {
+-	XRectangle rect;
+-	rect.x = x;
+-	rect.y = y;
+-	rect.width = w;
+-	rect.height = h;
+-
+-	XVaNestedList preedit_attr = XVaCreateNestedList(0,
+-							 XNArea, &rect,
+-
+-							 (char *) 0);
+-	XSetICValues((XIC) ic, XNPreeditAttributes, preedit_attr, (char *) 0);
+-	XFree(preedit_attr);
+-    }
+-#endif
++    return FALSE;
+ }
+ 
+-
+-int QInputContext::lookupString(XKeyEvent *event, QCString &chars,
+-				KeySym *key, Status *status) const
+-{
+-    int count = 0;
+-
+-#if !defined(QT_NO_XIM)
+-    if (qt_xim && ic) {
+-	count = XmbLookupString((XIC) ic, event, chars.data(),
+-				chars.size(), key, status);
+-
+-	if ((*status) == XBufferOverflow ) {
+-	    chars.resize(count + 1);
+-	    count = XmbLookupString((XIC) ic, event, chars.data(),
+-				    chars.size(), key, status);
+-	}
+-    }
+-
+-#endif // QT_NO_XIM
+-
+-    return count;
+-}
+-
+-void QInputContext::setFocus()
+-{
+-#if !defined(QT_NO_XIM)
+-    if (qt_xim && ic)
+-	XSetICFocus((XIC) ic);
+-#endif // !QT_NO_XIM
+-}
+-
+-void QInputContext::setXFontSet(const QFont &f)
+-{
+-#if !defined(QT_NO_XIM)
+-    if (font == f) return; // nothing to do
+-    font = f;
+-
+-    XFontSet fs = getFontSet(font);
+-    if (fontset == fs) return; // nothing to do
+-    fontset = fs;
+-
+-    XVaNestedList preedit_attr = XVaCreateNestedList(0, XNFontSet, fontset, (char *) 0);
+-    XSetICValues((XIC) ic, XNPreeditAttributes, preedit_attr, (char *) 0);
+-    XFree(preedit_attr);
+-#else
+-    Q_UNUSED( f );
+-#endif
+-}
++#endif //Q_NO_IM
+diff -urN qt-x11-free-3.3.2/src/kernel/qnamespace.h qt-x11-immodule-bc/src/kernel/qnamespace.h
+--- qt-x11-free-3.3.2/src/kernel/qnamespace.h	2004-04-19 18:36:09.000000000 +0900
++++ qt-x11-immodule-bc/src/kernel/qnamespace.h	2004-06-23 01:10:27.073121400 +0900
+@@ -397,6 +397,61 @@
+ 	Key_Help = 0x1058,
+ 	Key_Direction_L = 0x1059,
+ 	Key_Direction_R = 0x1060,
++
++	// International input method support (X keycode - 0xEE00)
++	// Only interesting if you are writing your own input method
++
++	// International & multi-key character composition
++	Key_Multi_key           = 0x1120,  // Multi-key character compose
++	Key_Codeinput           = 0x1137,
++	Key_SingleCandidate     = 0x113c,
++	Key_MultipleCandidate   = 0x113d,
++	Key_PreviousCandidate   = 0x113e,
++
++	// Misc Functions
++	Key_Mode_switch         = 0x117e,  // Character set switch
++	//Key_script_switch       = 0x117e,  // Alias for mode_switch
++
++	// Japanese keyboard support
++	Key_Kanji               = 0x1121,  // Kanji, Kanji convert
++	Key_Muhenkan            = 0x1122,  // Cancel Conversion
++	//Key_Henkan_Mode         = 0x1123,  // Start/Stop Conversion
++	Key_Henkan              = 0x1123,  // Alias for Henkan_Mode
++	Key_Romaji              = 0x1124,  // to Romaji
++	Key_Hiragana            = 0x1125,  // to Hiragana
++	Key_Katakana            = 0x1126,  // to Katakana
++	Key_Hiragana_Katakana   = 0x1127,  // Hiragana/Katakana toggle
++	Key_Zenkaku             = 0x1128,  // to Zenkaku
++	Key_Hankaku             = 0x1129,  // to Hankaku
++	Key_Zenkaku_Hankaku     = 0x112a,  // Zenkaku/Hankaku toggle
++	Key_Touroku             = 0x112b,  // Add to Dictionary
++	Key_Massyo              = 0x112c,  // Delete from Dictionary
++	Key_Kana_Lock           = 0x112d,  // Kana Lock
++	Key_Kana_Shift          = 0x112e,  // Kana Shift
++	Key_Eisu_Shift          = 0x112f,  // Alphanumeric Shift
++	Key_Eisu_toggle         = 0x1130,  // Alphanumeric toggle
++	//Key_Kanji_Bangou        = 0x1137,  // Codeinput
++	//Key_Zen_Koho            = 0x113d,  // Multiple/All Candidate(s)
++	//Key_Mae_Koho            = 0x113e,  // Previous Candidate
++
++	// Korean support
++	Key_Hangul              = 0x1131,  // Hangul start/stop(toggle)
++	Key_Hangul_Start        = 0x1132,  // Hangul start
++	Key_Hangul_End          = 0x1133,  // Hangul end, English start
++	Key_Hangul_Hanja        = 0x1134,  // Start Hangul->Hanja Conversion
++	Key_Hangul_Jamo         = 0x1135,  // Hangul Jamo mode
++	Key_Hangul_Romaja       = 0x1136,  // Hangul Romaja mode
++	Key_Hangul_Codeinput    = 0x1137,  // Hangul code input mode
++	Key_Hangul_Jeonja       = 0x1138,  // Jeonja mode
++	Key_Hangul_Banja        = 0x1139,  // Banja mode
++	Key_Hangul_PreHanja     = 0x113a,  // Pre Hanja conversion
++	Key_Hangul_PostHanja    = 0x113b,  // Post Hanja conversion
++	Key_Hangul_SingleCandidate   = 0x113c,  // Single candidate
++	Key_Hangul_MultipleCandidate = 0x113d,  // Multiple candidate
++	Key_Hangul_PreviousCandidate = 0x113e,  // Previous candidate
++	Key_Hangul_Special      = 0x113f,  // Special symbols
++	//Key_Hangul_switch       = 0x117e,  // Alias for mode_switch
++
+ 	Key_Space = 0x20,		// 7 bit printable ASCII
+ 	Key_Any = Key_Space,
+ 	Key_Exclam = 0x21,
+diff -urN qt-x11-free-3.3.2/src/kernel/qrichtext.cpp qt-x11-immodule-bc/src/kernel/qrichtext.cpp
+--- qt-x11-free-3.3.2/src/kernel/qrichtext.cpp	2004-04-19 18:36:05.000000000 +0900
++++ qt-x11-immodule-bc/src/kernel/qrichtext.cpp	2004-06-23 01:10:27.077120792 +0900
+@@ -657,7 +657,7 @@
+ 	pop();
+ }
+ 
+-bool QTextCursor::place( const QPoint &p, QTextParagraph *s, bool link )
++bool QTextCursor::place( const QPoint &p, QTextParagraph *s, bool link, bool loosePlacing, bool matchBetweenCharacters )
+ {
+     QPoint pos( p );
+     QRect r;
+@@ -675,7 +675,7 @@
+ 	    str = s;
+ 	if ( pos.y() >= r.y() && pos.y() <= r.y() + r.height() )
+ 	    break;
+-	if ( !s->next() ) {
++	if ( loosePlacing == TRUE && !s->next() ) {
+ #ifdef Q_WS_MACX
+ 	    pos.setX( s->rect().x() + s->rect().width() );
+ #endif
+@@ -716,7 +716,7 @@
+     if ( pos.x() < x )
+ 	pos.setX( x + 1 );
+     int cw;
+-    int curpos = s->length()-1;
++    int curpos = -1;
+     int dist = 10000000;
+     bool inCustom = FALSE;
+     while ( i < nextLine ) {
+@@ -738,14 +738,21 @@
+ 		cpos += cw;
+ 	    int d = cpos - pos.x();
+ 	    bool dm = d < 0 ? !chr->rightToLeft : chr->rightToLeft;
+-	    if ( (QABS( d ) < dist || (dist == d && dm == TRUE )) && para->string()->validCursorPosition( i ) ) {
++	    if ( ( matchBetweenCharacters == TRUE && (QABS( d ) < dist || (dist == d && dm == TRUE )) && para->string()->validCursorPosition( i ) ) ||
++		 ( matchBetweenCharacters == FALSE && ( d == 0 || dm == TRUE ) ) ) {
+ 		dist = QABS( d );
+-		if ( !link || pos.x() >= x + chr->x )
++		if ( !link || ( pos.x() >= x + chr->x && ( loosePlacing == TRUE || pos.x() < cpos ) ) )
+ 		    curpos = i;
+ 	    }
+ 	}
+ 	i++;
+     }
++    if ( curpos == -1 ) {
++	if ( loosePlacing == TRUE )
++	    curpos = s->length()-1;
++	else
++	    return FALSE;
++    }
+     setIndex( curpos );
+ 
+ #ifndef QT_NO_TEXTCUSTOMITEM
+@@ -4828,6 +4835,9 @@
+ 		    tmpw = fullSelectionWidth - xleft;
+ 		painter.fillRect( xleft, y, tmpw, h, color );
+ 		painter.drawText( xstart, y + baseLine, str, start, len, dir );
++                // draw preedit's underline
++                if (selection == QTextDocument::IMCompositionText)
++                    painter.drawLine(xstart, y + baseLine + 1, xstart + w, y + baseLine + 1);
+ 		if (selStart != start || selEnd != start + len || selWrap)
+ 		    painter.restore();
+ 	    }
+diff -urN qt-x11-free-3.3.2/src/kernel/qrichtext_p.h qt-x11-immodule-bc/src/kernel/qrichtext_p.h
+--- qt-x11-free-3.3.2/src/kernel/qrichtext_p.h	2004-04-19 18:36:05.000000000 +0900
++++ qt-x11-immodule-bc/src/kernel/qrichtext_p.h	2004-06-23 01:10:27.078120640 +0900
+@@ -358,7 +358,8 @@
+     int totalOffsetY() const; // total document offset
+ 
+     bool place( const QPoint &pos, QTextParagraph *s ) { return place( pos, s, FALSE ); }
+-    bool place( const QPoint &pos, QTextParagraph *s, bool link );
++    bool place( const QPoint &pos, QTextParagraph *s, bool link ) { return place( pos, s, link, TRUE, TRUE ); }
++    bool place( const QPoint &pos, QTextParagraph *s, bool link, bool loosePlacing, bool matchBetweenCharacters );
+     void restoreState();
+ 
+ 
+diff -urN qt-x11-free-3.3.2/src/kernel/qt_kernel.pri qt-x11-immodule-bc/src/kernel/qt_kernel.pri
+--- qt-x11-free-3.3.2/src/kernel/qt_kernel.pri	2003-12-08 23:44:24.000000000 +0900
++++ qt-x11-immodule-bc/src/kernel/qt_kernel.pri	2004-06-23 01:10:27.079120488 +0900
+@@ -34,7 +34,6 @@
+ 		  $$KERNEL_H/qimage.h \
+ 		  $$KERNEL_P/qimageformatinterface_p.h \
+ 		  $$KERNEL_H/qimageformatplugin.h \
+-		  $$KERNEL_P/qinputcontext_p.h \
+ 		  $$KERNEL_H/qkeycode.h \
+ 		  $$KERNEL_H/qkeysequence.h \
+ 		  $$KERNEL_H/qlayout.h \
+@@ -99,6 +98,12 @@
+ 		  $$KERNEL_CPP/qfontengine_p.h \
+ 		  $$KERNEL_CPP/qtextlayout_p.h
+ 
++	unix:x11 {
++		HEADERS += $$KERNEL_H/qinputcontext.h
++	} else {
++		HEADERS += $$KERNEL_P/qinputcontext_p.h
++	}
++
+ 	win32:SOURCES += $$KERNEL_CPP/qapplication_win.cpp \
+ 		  $$KERNEL_CPP/qclipboard_win.cpp \
+ 		  $$KERNEL_CPP/qcolor_win.cpp \
+@@ -130,6 +135,7 @@
+ 			  $$KERNEL_CPP/qdesktopwidget_x11.cpp \
+ 			  $$KERNEL_CPP/qeventloop_x11.cpp \
+ 			  $$KERNEL_CPP/qfont_x11.cpp \
++			  $$KERNEL_CPP/qinputcontext.cpp \
+ 			  $$KERNEL_CPP/qinputcontext_x11.cpp \
+ 			  $$KERNEL_CPP/qmotifdnd_x11.cpp \
+ 			  $$KERNEL_CPP/qpixmap_x11.cpp \
+diff -urN qt-x11-free-3.3.2/src/kernel/qwidget.cpp qt-x11-immodule-bc/src/kernel/qwidget.cpp
+--- qt-x11-free-3.3.2/src/kernel/qwidget.cpp	2004-04-19 18:36:08.000000000 +0900
++++ qt-x11-immodule-bc/src/kernel/qwidget.cpp	2004-06-23 01:10:27.081120184 +0900
+@@ -3282,8 +3282,24 @@
+     if ( isActiveWindow() ) {
+ 	QWidget * prev = qApp->focus_widget;
+ 	if ( prev ) {
+-	    if ( prev != this )
++	    // This part is never executed when Q_WS_X11? Preceding XFocusOut
++	    // had already reset focus_widget when received XFocusIn
++
++	    // Don't reset input context explicitly here. Whether reset or not
++	    // when focusing out is a responsibility of input methods. For
++	    // example, Japanese input context should not be reset here. The
++	    // context sometimes contains a whole paragraph and has minutes of
++	    // lifetime different to ephemeral one in other languages. The
++	    // input context should be survived until focused again. So we
++	    // delegate the responsibility to input context via
++	    // unfocusInputContext().
++	    if ( prev != this ) {
++#if 0
+ 		prev->resetInputContext();
++#else
++		prev->unfocusInputContext();
++#endif
++	    }
+ 	}
+ #if defined(Q_WS_WIN)
+ 	else {
+@@ -3291,9 +3307,7 @@
+ 	}
+ #endif
+ 	qApp->focus_widget = this;
+-#if defined(Q_WS_X11)
+ 	focusInputContext();
+-#endif
+ 
+ #if defined(Q_WS_WIN)
+ 	if ( !topLevelWidget()->isPopup() )
+@@ -3341,6 +3355,7 @@
+ 	focusProxy()->clearFocus();
+ 	return;
+     } else if ( hasFocus() ) {
++	unfocusInputContext();
+ 	QWidget* w = qApp->focusWidget();
+ 	// clear active focus
+ 	qApp->focus_widget = 0;
+@@ -4661,7 +4676,13 @@
+ 	    break;
+ 
+ 	case QEvent::MouseButtonPress:
++	    // Don't reset input context here. Whether reset or not is
++	    // a responsibility of input method. reset() will be
++	    // called by mouseHandler() of input method if necessary
++	    // via mousePressEvent() of text widgets.
++#if 0
+ 	    resetInputContext();
++#endif
+ 	    mousePressEvent( (QMouseEvent*)e );
+ 	    if ( ! ((QMouseEvent*)e)->isAccepted() )
+ 		return FALSE;
+diff -urN qt-x11-free-3.3.2/src/kernel/qwidget.h qt-x11-immodule-bc/src/kernel/qwidget.h
+--- qt-x11-free-3.3.2/src/kernel/qwidget.h	2004-04-19 18:36:06.000000000 +0900
++++ qt-x11-immodule-bc/src/kernel/qwidget.h	2004-06-23 01:10:27.082120032 +0900
+@@ -536,6 +536,9 @@
+     int		 metric( int )	const;
+ 
+     void	 resetInputContext();
++    void	 sendMouseEventToInputContext( int x, QEvent::Type type,
++					       Qt::ButtonState button,
++					       Qt::ButtonState state );
+ 
+     virtual void create( WId = 0, bool initializeWindow = TRUE,
+ 			 bool destroyOldWindow = TRUE );
+@@ -573,6 +576,7 @@
+     void	 createInputContext();
+     void	 destroyInputContext();
+     void	 focusInputContext();
++    void	 unfocusInputContext();
+     void	 checkChildrenDnd();
+ #elif defined(Q_WS_MAC)
+     uint    own_id : 1, macDropEnabled : 1;
+diff -urN qt-x11-free-3.3.2/src/kernel/qwidget_x11.cpp qt-x11-immodule-bc/src/kernel/qwidget_x11.cpp
+--- qt-x11-free-3.3.2/src/kernel/qwidget_x11.cpp	2004-04-19 18:36:07.000000000 +0900
++++ qt-x11-immodule-bc/src/kernel/qwidget_x11.cpp	2004-06-23 01:10:27.084119728 +0900
+@@ -61,11 +61,11 @@
+ bool qt_wstate_iconified( WId );
+ void qt_updated_rootinfo();
+ 
+-#ifndef QT_NO_XIM
+-#include "qinputcontext_p.h"
++#ifndef QT_NO_IM
++#include "qinputcontext.h"
++#include "qinputcontextfactory.h"
+ 
+-extern XIM qt_xim;
+-extern XIMStyle qt_xim_style;
++extern QString defaultIM;
+ #endif
+ 
+ // Paint event clipping magic
+@@ -940,22 +940,18 @@
+ void QWidget::setMicroFocusHint(int x, int y, int width, int height,
+ 				bool text, QFont *f )
+ {
+-#ifndef QT_NO_XIM
++#ifndef QT_NO_IM
+     if ( text ) {
+ 	QWidget* tlw = topLevelWidget();
+ 	QTLWExtra *topdata = tlw->topData();
+ 
+ 	// trigger input context creation if it hasn't happened already
+ 	createInputContext();
+-	QInputContext *qic = (QInputContext *) topdata->xic;
+ 
+-	if ( qt_xim && qic ) {
+-	    QPoint p( x, y );
+-	    QPoint p2 = mapTo( topLevelWidget(), QPoint( 0, 0 ) );
+-	    p = mapTo( topLevelWidget(), p);
+-	    qic->setXFontSet( f ? *f : fnt );
+-	    qic->setComposePosition(p.x(), p.y() + height);
+-	    qic->setComposeArea(p2.x(), p2.y(), this->width(), this->height());
++	QInputContext *qic = (QInputContext *) topdata->xic;
++	if(qic) {
++	    QPoint gp = mapToGlobal( QPoint( x, y ) );
++	    qic->setMicroFocus(gp.x(), gp.y(), width, height, f);
+ 	}
+     }
+ #endif
+@@ -1424,16 +1420,8 @@
+     QWidget *tlw = topLevelWidget();
+     if ( tlw->isVisible() && !tlw->topData()->embedded && !qt_deferred_map_contains(tlw) ) {
+ 	XSetInputFocus( x11Display(), tlw->winId(), RevertToNone, qt_x_time);
+-
+-#ifndef QT_NO_XIM
+-	// trigger input context creation if it hasn't happened already
+-	createInputContext();
+-
+-	if (tlw->topData()->xic) {
+-	    QInputContext *qic = (QInputContext *) tlw->topData()->xic;
+-	    qic->setFocus();
+-	}
+-#endif
++	// tlw->focusInputContext();
++	focusInputContext();
+     }
+ }
+ 
+@@ -2625,62 +2613,81 @@
+ }
+ 
+ 
++/*!
++  \internal
++    This is an internal function, you should never call this.
++
++    This function is called when generating InputContext
++    according to a configuration of default InputMethod.
++    (e.g. when setMicroFocusHint() and so on is executed.)
++
++    InputContext is generated only when isInputMethodEnabled()
++    return TRUE.
++*/
+ void QWidget::createInputContext()
+ {
++    if( !isInputMethodEnabled() )
++	return;
++
+     QWidget *tlw = topLevelWidget();
+     QTLWExtra *topdata = tlw->topData();
+ 
+-#ifndef QT_NO_XIM
+-    if (qt_xim) {
+-	if (! topdata->xic) {
+-	    QInputContext *qic = new QInputContext(tlw);
+-	    topdata->xic = (void *) qic;
+-	}
+-    } else
+-#endif // QT_NO_XIM
+-	{
+-	    // qDebug("QWidget::createInputContext: no xim");
+-	    topdata->xic = 0;
+-	}
++#ifndef QT_NO_IM
++    if (! topdata->xic) {
++	// InputContext corresponding to the name of default
++	// InputMethod of the Application in present is generated.
++	QInputContext *qic = QInputContextFactory::create(defaultIM, tlw);
++
++	topdata->xic = (void *) qic;
++    }
++#endif // QT_NO_IM
+ }
+ 
+ 
+ void QWidget::destroyInputContext()
+ {
+-#ifndef QT_NO_XIM
++#ifndef QT_NO_IM
+     QInputContext *qic = (QInputContext *) extra->topextra->xic;
+-    delete qic;
+-#endif // QT_NO_XIM
++    if(qic)
++	delete qic;
++
++#endif // QT_NO_IM
+     extra->topextra->xic = 0;
+ }
+ 
+ 
+ /*!
+-    This function is called when the user finishes input composition,
+-    e.g. changes focus to another widget, moves the cursor, etc.
++    This function is called when text widgets need to be neutral state to
++    execute text operations properly. See qlineedit.cpp and qtextedit.cpp as
++    example. Ordinary reset such as along with changes focus to another
++    widget, moves the cursor, etc, is implicitly handled via
++    unfocusInputContext() because whether reset or not when such situation is
++    a responsibility of input methods. For example, Japanese input context
++    should not be reset when focus out. The context sometimes contains a whole
++    paragraph and has minutes of lifetime different to ephemeral one in other
++    languages. The input context should be survived until focused again. So we
++    delegate the responsibility to the input context via unfocusInputContext().
+ */
+ void QWidget::resetInputContext()
+ {
+-#ifndef QT_NO_XIM
+-    if (qt_xim_style & XIMPreeditCallbacks) {
+-	QWidget *tlw = topLevelWidget();
+-	QTLWExtra *topdata = tlw->topData();
++#ifndef QT_NO_IM
++    QWidget *tlw = topLevelWidget();
++    QTLWExtra *topdata = tlw->topData();
+ 
+-	// trigger input context creation if it hasn't happened already
+-	createInputContext();
++     // trigger input context creation if it hasn't happened already
++    createInputContext();
+ 
+-	if (topdata->xic) {
+-	    QInputContext *qic = (QInputContext *) topdata->xic;
+-	    qic->reset();
+-	}
++    if (topdata->xic) {
++	QInputContext *qic = (QInputContext *) topdata->xic;
++	qic->reset();
+     }
+-#endif // QT_NO_XIM
++#endif // QT_NO_IM
+ }
+ 
+ 
+ void QWidget::focusInputContext()
+ {
+-#ifndef QT_NO_XIM
++#ifndef QT_NO_IM
+     QWidget *tlw = topLevelWidget();
+     QTLWExtra *topdata = tlw->topData();
+ 
+@@ -2689,11 +2696,56 @@
+ 
+     if (topdata->xic) {
+ 	QInputContext *qic = (QInputContext *) topdata->xic;
++
++	if( qic->focusWidget() != this)
++	    qic->setFocusWidget( this );
+ 	qic->setFocus();
+     }
+-#endif // QT_NO_XIM
++#endif // QT_NO_IM
+ }
+ 
++
++void QWidget::unfocusInputContext()
++{
++#ifndef QT_NO_IM
++    QWidget *tlw = topLevelWidget();
++    QTLWExtra *topdata = tlw->topData();
++
++    // trigger input context creation if it hasn't happened already
++    createInputContext();
++
++    if (topdata->xic) {
++	QInputContext *qic = (QInputContext *) topdata->xic;
++
++	// may be caused reset() in some input methods
++	qic->unsetFocus();
++	qic->setFocusWidget( 0 );
++    }
++#endif // QT_NO_IM
++}
++
++
++void QWidget::sendMouseEventToInputContext( int x, QEvent::Type type,
++					    Qt::ButtonState button,
++					    Qt::ButtonState state )
++{
++#ifndef QT_NO_IM
++    QWidget *tlw = topLevelWidget();
++    QTLWExtra *topdata = tlw->topData();
++
++    // trigger input context creation if it hasn't happened already
++    createInputContext();
++
++    if (topdata->xic) {
++	QInputContext *qic = (QInputContext *) topdata->xic;
++
++	// may be causing reset() in some input methods
++	qic->mouseHandler( x, type, button, state );
++    }
++#endif // QT_NO_IM
++}
++
++
+ void QWidget::setWindowOpacity(double)
+ {
+ }
+diff -urN qt-x11-free-3.3.2/src/qt.pro qt-x11-immodule-bc/src/qt.pro
+--- qt-x11-free-3.3.2/src/qt.pro	2004-03-01 19:20:58.000000000 +0900
++++ qt-x11-immodule-bc/src/qt.pro	2004-06-23 01:10:27.085119576 +0900
+@@ -37,6 +37,7 @@
+ TOOLS_CPP	= tools
+ CODECS_CPP	= codecs
+ WORKSPACE_CPP	= workspace
++INPUT_CPP	= input
+ XML_CPP	        = xml
+ STYLES_CPP	= styles
+ EMBEDDED_CPP	= embedded
+@@ -54,6 +55,7 @@
+ 		TOOLS_H		= $$TOOLS_CPP
+ 		CODECS_H	= $$CODECS_CPP
+ 		WORKSPACE_H	= $$WORKSPACE_CPP
++                #INPUT_H 	= $$INPUT_CPP
+ 		XML_H		= $$XML_CPP
+ 		CANVAS_H	= $$CANVAS_CPP
+ 		STYLES_H	= $$STYLES_CPP
+@@ -70,6 +72,7 @@
+ 		TOOLS_H		= $$WIN_ALL_H
+ 		CODECS_H	= $$WIN_ALL_H
+ 		WORKSPACE_H	= $$WIN_ALL_H
++                #INPUT_H 	= $$WIN_ALL_H
+ 		XML_H		= $$WIN_ALL_H
+ 		CANVAS_H	= $$WIN_ALL_H
+ 		STYLES_H	= $$WIN_ALL_H
+@@ -98,6 +101,7 @@
+ 	TOOLS_H		= $$TOOLS_CPP
+ 	CODECS_H	= $$CODECS_CPP
+ 	WORKSPACE_H	= $$WORKSPACE_CPP
++        INPUT_H 	= $$INPUT_CPP
+ 	XML_H		= $$XML_CPP
+ 	STYLES_H	= $$STYLES_CPP
+ 	!embedded:!mac:CONFIG	   += x11 x11inc
+@@ -112,7 +116,7 @@
+ 	EMBEDDED_H	= $$EMBEDDED_CPP
+ }
+ 
+-DEPENDPATH += ;$$NETWORK_H;$$KERNEL_H;$$WIDGETS_H;$$SQL_H;$$TABLE_H;$$DIALOGS_H;
++DEPENDPATH += ;$$NETWORK_H;$$KERNEL_H;$$WIDGETS_H;$$INPUT_H;$$SQL_H;$$TABLE_H;$$DIALOGS_H;
+ DEPENDPATH += $$ICONVIEW_H;$$OPENGL_H;$$TOOLS_H;$$CODECS_H;$$WORKSPACE_H;$$XML_H;
+ DEPENDPATH += $$CANVAS_H;$$STYLES_H
+ embedded:DEPENDPATH += ;$$EMBEDDED_H
+@@ -147,6 +151,7 @@
+ include($$DIALOGS_CPP/qt_dialogs.pri)
+ include($$ICONVIEW_CPP/qt_iconview.pri)
+ include($$WORKSPACE_CPP/qt_workspace.pri)
++include($$INPUT_CPP/qt_input.pri)
+ include($$NETWORK_CPP/qt_network.pri)
+ include($$CANVAS_CPP/qt_canvas.pri)
+ include($$TABLE_CPP/qt_table.pri)
+diff -urN qt-x11-free-3.3.2/src/widgets/qlineedit.cpp qt-x11-immodule-bc/src/widgets/qlineedit.cpp
+--- qt-x11-free-3.3.2/src/widgets/qlineedit.cpp	2004-04-19 18:36:19.000000000 +0900
++++ qt-x11-immodule-bc/src/widgets/qlineedit.cpp	2004-06-23 01:10:27.087119272 +0900
+@@ -245,12 +245,17 @@
+ 
+     // input methods
+     int imstart, imend, imselstart, imselend;
++    bool composeMode() const { return preeditLength(); }
++    bool hasIMSelection() const { return imSelectionLength(); }
++    int preeditLength() const { return ( imend - imstart ); }
++    int imSelectionLength() const { return ( imselend - imselstart ); }
+ 
+     // complex text layout
+     QTextLayout textLayout;
+     void updateTextLayout();
+     void moveCursor( int pos, bool mark = FALSE );
+     void setText( const QString& txt );
++    int xToPosInternal( int x, QTextItem::CursorPosition ) const;
+     int xToPos( int x, QTextItem::CursorPosition = QTextItem::BetweenCharacters ) const;
+     inline int visualAlignment() const { return alignment ? alignment : int( isRightToLeft() ? AlignRight : AlignLeft ); }
+     QRect cursorRect() const;
+@@ -1411,6 +1416,8 @@
+ */
+ void QLineEdit::mousePressEvent( QMouseEvent* e )
+ {
++    if ( sendMouseEventToInputContext( e ) )
++	return;
+     if ( e->button() == RightButton )
+ 	return;
+     if ( d->tripleClickTimer && ( e->pos() - d->tripleClick ).manhattanLength() <
+@@ -1440,7 +1447,8 @@
+ */
+ void QLineEdit::mouseMoveEvent( QMouseEvent * e )
+ {
+-
++    if ( sendMouseEventToInputContext( e ) )
++	return;
+ #ifndef QT_NO_CURSOR
+     if ( ( e->state() & MouseButtonMask ) == 0 ) {
+ 	if ( !d->readOnly && d->dragEnabled
+@@ -1469,6 +1477,8 @@
+ */
+ void QLineEdit::mouseReleaseEvent( QMouseEvent* e )
+ {
++    if ( sendMouseEventToInputContext( e ) )
++	return;
+ #ifndef QT_NO_DRAGANDDROP
+     if ( e->button() == LeftButton ) {
+ 	if ( d->dndTimer ) {
+@@ -1495,6 +1505,8 @@
+ */
+ void QLineEdit::mouseDoubleClickEvent( QMouseEvent* e )
+ {
++    if ( sendMouseEventToInputContext( e ) )
++	return;
+     if ( e->button() == Qt::LeftButton ) {
+ 	deselect();
+ 	d->cursor = d->xToPos( e->pos().x() );
+@@ -1763,6 +1775,33 @@
+ 	e->ignore();
+ }
+ 
++
++/*!
++  This function is not intended as polymorphic usage. Just a shared code
++  fragment that calls QWidget::sendMouseEventToInputContext() as easy for this
++  class.
++ */
++bool QLineEdit::sendMouseEventToInputContext( QMouseEvent *e )
++{
++#ifndef QT_NO_IM
++    if ( d->composeMode() ) {
++	int cursor = d->xToPosInternal( e->pos().x(), QTextItem::OnCharacters );
++	int mousePos = cursor - d->imstart;
++	if ( mousePos >= 0 && mousePos < d->preeditLength() ) {
++	    QWidget::sendMouseEventToInputContext( mousePos, e->type(),
++						   e->button(), e->state() );
++	} else if ( e->type() != QEvent::MouseMove ) {
++	    // send button events on out of preedit
++	    QWidget::sendMouseEventToInputContext( -1, e->type(),
++						   e->button(), e->state() );
++	}
++	return TRUE;
++    }
++#endif
++    return FALSE;
++}
++
++
+ /*! \reimp
+  */
+ void QLineEdit::imStartEvent( QIMEvent *e )
+@@ -1788,7 +1827,16 @@
+     d->imend = d->imstart + e->text().length();
+     d->imselstart = d->imstart + e->cursorPos();
+     d->imselend = d->imselstart + e->selectionLength();
++#if 0
+     d->cursor = e->selectionLength() ? d->imend : d->imselend;
++#else
++    // Cursor placement code is changed for Asian input method that
++    // shows candidate window. This behavior is same as Qt/E 2.3.7
++    // which supports Asian input methods. Asian input methods need
++    // start point of IM selection text to place candidate window as
++    // adjacent to the selection text.
++    d->cursor = d->imselstart;
++#endif
+     d->updateTextLayout();
+     update();
+ }
+@@ -1822,6 +1870,8 @@
+     }
+     if( !hasSelectedText() || style().styleHint( QStyle::SH_BlinkCursorWhenTextSelected ) )
+ 	d->setCursorVisible( TRUE );
++    if ( d->hasIMSelection() )
++	d->cursor = d->imselstart;
+     d->updateMicroFocusHint();
+ }
+ 
+@@ -1898,6 +1948,14 @@
+     } else if ( widthUsed - d->hscroll < lineRect.width() ) {
+ 	d->hscroll = widthUsed - lineRect.width() + 1;
+     }
++    // This updateMicroFocusHint() is corresponding to update() at
++    // IMCompose event. Although the function is invoked from various
++    // other points, some situations such as "candidate selection on
++    // AlignHCenter'ed text" need this invocation because
++    // updateMicroFocusHint() requires updated contentsRect(), and
++    // there are no other chances in such situation that invoke the
++    // function.
++    d->updateMicroFocusHint();
+     // the y offset is there to keep the baseline constant in case we have script changes in the text.
+     QPoint topLeft = lineRect.topLeft() - QPoint(d->hscroll, d->ascent-fm.ascent());
+ 
+@@ -1938,7 +1996,7 @@
+ 	}
+ 
+ 	// input method edit area
+-	if ( d->imstart < d->imend && (last >= d->imstart && first < d->imend ) ) {
++	if ( d->composeMode() && (last >= d->imstart && first < d->imend ) ) {
+ 	    QRect highlight = QRect( QPoint( tix + ti.cursorToX( QMAX( d->imstart - first, 0 ) ), lineRect.top() ),
+ 			      QPoint( tix + ti.cursorToX( QMIN( d->imend - first, last - first + 1 ) )-1, lineRect.bottom() ) ).normalize();
+ 	    p->save();
+@@ -1951,11 +2009,16 @@
+ 	    imCol.setHsv( h1, s1, ( v1 + v2 ) / 2 );
+ 	    p->fillRect( highlight, imCol );
+ 	    p->drawTextItem( topLeft, ti, textflags );
++            // draw preedit's underline
++            if (d->imend - d->imstart > 0) {
++                p->setPen( cg.text() );
++                p->drawLine( highlight.bottomLeft(), highlight.bottomRight() );
++            }
+ 	    p->restore();
+ 	}
+ 
+ 	// input method selection
+-	if ( d->imselstart < d->imselend && (last >= d->imselstart && first < d->imselend ) ) {
++	if ( d->hasIMSelection() && (last >= d->imselstart && first < d->imselend ) ) {
+ 	    QRect highlight = QRect( QPoint( tix + ti.cursorToX( QMAX( d->imselstart - first, 0 ) ), lineRect.top() ),
+ 			      QPoint( tix + ti.cursorToX( QMIN( d->imselend - first, last - first + 1 ) )-1, lineRect.bottom() ) ).normalize();
+ 	    p->save();
+@@ -1982,7 +2045,11 @@
+     }
+ 
+     // draw cursor
+-    if ( d->cursorVisible && !supressCursor ) {
++    // 
++    // Asian users regard IM selection text as cursor on candidate
++    // selection phase of input method, so ordinary cursor should be
++    // invisible if IM selection text exists.
++    if ( d->cursorVisible && !supressCursor && !d->hasIMSelection() ) {
+ 	QPoint from( topLeft.x() + cix, lineRect.top() );
+ 	QPoint to = from + QPoint( 0, lineRect.height() );
+ 	p->drawLine( from, to );
+@@ -2090,6 +2157,10 @@
+ void QLineEdit::contextMenuEvent( QContextMenuEvent * e )
+ {
+ #ifndef QT_NO_POPUPMENU
++#ifndef QT_NO_IM
++    if ( d->composeMode() )
++	return;
++#endif
+     d->separate();
+ 
+     QGuardedPtr<QPopupMenu> popup = createPopupMenu();
+@@ -2274,7 +2345,7 @@
+     textLayout.endLine(0, 0, Qt::AlignLeft|Qt::SingleLine, &ascent);
+ }
+ 
+-int QLineEditPrivate::xToPos( int x, QTextItem::CursorPosition betweenOrOn ) const
++int QLineEditPrivate::xToPosInternal( int x, QTextItem::CursorPosition betweenOrOn ) const
+ {
+     x-= q->contentsRect().x() - hscroll + innerMargin;
+     for ( int i = 0; i < textLayout.numItems(); ++i ) {
+@@ -2283,7 +2354,13 @@
+ 	if ( x >= tir.left() && x <= tir.right() )
+ 	    return ti.xToCursor( x - tir.x(), betweenOrOn ) + ti.from();
+     }
+-    return x < 0 ? 0 : text.length();
++    return x < 0 ? -1 : text.length();
++}
++
++int QLineEditPrivate::xToPos( int x, QTextItem::CursorPosition betweenOrOn ) const
++{
++    int pos = xToPosInternal( x, betweenOrOn );
++    return ( pos < 0 ) ? 0 : pos;
+ }
+ 
+ 
+diff -urN qt-x11-free-3.3.2/src/widgets/qlineedit.h qt-x11-immodule-bc/src/widgets/qlineedit.h
+--- qt-x11-free-3.3.2/src/widgets/qlineedit.h	2004-04-19 18:36:18.000000000 +0900
++++ qt-x11-immodule-bc/src/widgets/qlineedit.h	2004-06-23 01:10:27.087119272 +0900
+@@ -196,6 +196,7 @@
+     void dropEvent( QDropEvent * );
+ #endif
+     void contextMenuEvent( QContextMenuEvent * );
++    bool sendMouseEventToInputContext( QMouseEvent *e );
+     virtual QPopupMenu *createPopupMenu();
+     void windowActivationChange( bool );
+ #ifndef QT_NO_COMPAT
+diff -urN qt-x11-free-3.3.2/src/widgets/qtextedit.cpp qt-x11-immodule-bc/src/widgets/qtextedit.cpp
+--- qt-x11-free-3.3.2/src/widgets/qtextedit.cpp	2004-04-19 18:36:18.000000000 +0900
++++ qt-x11-immodule-bc/src/widgets/qtextedit.cpp	2004-06-23 01:10:27.091118664 +0900
+@@ -107,6 +107,8 @@
+     int id[ 7 ];
+     int preeditStart;
+     int preeditLength;
++    bool composeMode() const { return ( preeditLength > 0 ); }
++
+     uint ensureCursorVisibleInShowEvent : 1;
+     uint tabChangesFocus : 1;
+     QString scrollToAnchor; // used to deferr scrollToAnchor() until the show event when we are resized
+@@ -1080,6 +1082,10 @@
+ 	    l += v;
+ 	}
+     }
++
++    // This invocation is required to follow dragging of active window
++    // by the showed candidate window.
++    updateMicroFocusHint();
+ }
+ 
+ /*!
+@@ -1554,6 +1560,35 @@
+ }
+ 
+ /*!
++  This function is not intended as polymorphic usage. Just a shared code
++  fragment that calls QWidget::sendMouseEventToInputContext() as easy for this
++  class.
++ */
++bool QTextEdit::sendMouseEventToInputContext( QMouseEvent *e )
++{
++#ifndef QT_NO_IM
++    if ( d->composeMode() ) {
++	QTextCursor c( doc );
++	if ( c.place( e->pos(), doc->firstParagraph(), FALSE, FALSE, FALSE ) ) {
++	    int mousePos = c.index() - d->preeditStart;
++	    if ( cursor->globalY() == c.globalY() &&
++		 mousePos >= 0 && mousePos < d->preeditLength ) {
++		QWidget::sendMouseEventToInputContext( mousePos, e->type(),
++						       e->button(), e->state() );
++	    }
++	} else if ( e->type() != QEvent::MouseMove ) {
++	    // send button events on out of preedit
++	    QWidget::sendMouseEventToInputContext( -1, e->type(),
++						   e->button(), e->state() );
++	}
++	return TRUE;
++    }
++#endif
++    return FALSE;
++}
++
++
++/*!
+     \reimp
+ */
+ void QTextEdit::imStartEvent( QIMEvent *e )
+@@ -1581,10 +1616,16 @@
+     doc->removeSelection( QTextDocument::IMCompositionText );
+     doc->removeSelection( QTextDocument::IMSelectionText );
+ 
+-    if ( d->preeditLength > 0 && cursor->paragraph() )
++    if ( d->composeMode() && cursor->paragraph() )
+ 	cursor->paragraph()->remove( d->preeditStart, d->preeditLength );
+     cursor->setIndex( d->preeditStart );
+-    insert( e->text() );
++
++    int sellen = e->selectionLength();
++    uint insertionFlags = CheckNewLines | RemoveSelected | AsIMCompositionText;
++    if ( sellen > 0 ) {
++      insertionFlags |= WithIMSelection;
++    }
++    insert( e->text(), insertionFlags );
+     d->preeditLength = e->text().length();
+ 
+     cursor->setIndex( d->preeditStart + d->preeditLength );
+@@ -1595,17 +1636,28 @@
+ 
+     cursor->setIndex( d->preeditStart + e->cursorPos() );
+ 
+-    int sellen = e->selectionLength();
+     if ( sellen > 0 ) {
+ 	cursor->setIndex( d->preeditStart + e->cursorPos() + sellen );
+ 	c = *cursor;
+ 	cursor->setIndex( d->preeditStart + e->cursorPos() );
+ 	doc->setSelectionStart( QTextDocument::IMSelectionText, *cursor );
+ 	doc->setSelectionEnd( QTextDocument::IMSelectionText, c );
++#if 0
++        // Disabled for Asian input method that shows candidate
++        // window. This behavior is same as Qt/E 2.3.7 which supports
++        // Asian input methods. Asian input methods need start point
++        // of IM selection text to place candidate window as adjacent
++        // to the selection text.
+ 	cursor->setIndex( d->preeditStart + d->preeditLength );
++#endif
+     }
+ 
+     repaintChanged();
++
++    // microFocusHint is required to place candidate window for Asian
++    // input methods. Cursor position and IM selection text are
++    // updated by the event.
++    updateMicroFocusHint();
+ }
+ 
+ /*!
+@@ -1618,10 +1670,12 @@
+ 	return;
+     }
+ 
++    qWarning( "receiving IMEnd with %d chars", e->text().length() );
++
+     doc->removeSelection( QTextDocument::IMCompositionText );
+     doc->removeSelection( QTextDocument::IMSelectionText );
+ 
+-    if ( d->preeditLength > 0 && cursor->paragraph() )
++    if ( d->composeMode() && cursor->paragraph() )
+ 	cursor->paragraph()->remove( d->preeditStart, d->preeditLength );
+     if ( d->preeditStart >= 0 ) {
+         cursor->setIndex( d->preeditStart );
+@@ -2113,6 +2167,13 @@
+ 	 isReadOnly() )
+ 	return;
+ 
++    // Asian users regard selection text as cursor on candidate
++    // selection phase of input method, so ordinary cursor should be
++    // invisible if IM selection text exists.
++    if ( doc->hasSelection( QTextDocument::IMSelectionText ) ) {
++        visible = FALSE;
++    }
++
+     QPainter p( viewport() );
+     QRect r( cursor->topParagraph()->rect() );
+     cursor->paragraph()->setChanged( TRUE );
+@@ -2187,6 +2248,9 @@
+     }
+ #endif
+ 
++    if ( sendMouseEventToInputContext( e ) )
++	return;
++
+     if ( d->trippleClickTimer->isActive() &&
+ 	 ( e->globalPos() - d->trippleClickPoint ).manhattanLength() <
+ 	 QApplication::startDragDistance() ) {
+@@ -2292,7 +2356,9 @@
+ 	return;
+     }
+ #endif
+-    if ( mousePressed ) {
++    if ( sendMouseEventToInputContext( e ) ) {
++	// running through intended to avoid cursor vanishing
++    } else if ( mousePressed ) {
+ #ifndef QT_NO_DRAGANDDROP
+ 	if ( mightStartDrag ) {
+ 	    dragStartTimer->stop();
+@@ -2345,7 +2411,7 @@
+ 
+ void QTextEdit::contentsMouseReleaseEvent( QMouseEvent * e )
+ {
+-    if ( !inDoubleClick ) { // could be the release of a dblclick
++    if ( !inDoubleClick && !d->composeMode() ) { // could be the release of a dblclick
+ 	int para = 0;
+ 	int index = charAt( e->pos(), &para );
+ 	emit clicked( para, index );
+@@ -2356,6 +2422,8 @@
+ 	return;
+     }
+ #endif
++    if ( sendMouseEventToInputContext( e ) )
++	return;
+     QTextCursor oldCursor = *cursor;
+     if ( scrollTimer->isActive() )
+ 	scrollTimer->stop();
+@@ -2448,7 +2516,7 @@
+ 
+ void QTextEdit::contentsMouseDoubleClickEvent( QMouseEvent * e )
+ {
+-    if ( e->button() != Qt::LeftButton ) {
++    if ( e->button() != Qt::LeftButton && !d->composeMode() ) {
+ 	e->ignore();
+ 	return;
+     }
+@@ -2479,6 +2547,9 @@
+     } else
+ #endif
+     {
++	if ( sendMouseEventToInputContext( e ) )
++	    return;
++
+ 	QTextCursor c1 = *cursor;
+ 	QTextCursor c2 = *cursor;
+ #if defined(Q_OS_MAC)
+@@ -2653,10 +2724,15 @@
+ */
+ void QTextEdit::contentsContextMenuEvent( QContextMenuEvent *e )
+ {
++    e->accept();
++#ifndef QT_NO_IM
++    if ( d->composeMode() )
++	return;
++#endif
++
+     clearUndoRedo();
+     mousePressed = FALSE;
+ 
+-    e->accept();
+ #ifndef QT_NO_POPUPMENU
+     QPopupMenu *popup = createPopupMenu( e->pos() );
+     if ( !popup )
+@@ -2802,8 +2878,15 @@
+ void QTextEdit::updateMicroFocusHint()
+ {
+     QTextCursor c( *cursor );
++#if 0
++    // Disabled for Asian input method that shows candidate
++    // window. This behavior is same as Qt/E 2.3.7 which supports
++    // Asian input methods. Asian input methods need start point of IM
++    // selection text to place candidate window as adjacent to the
++    // selection text.
+     if ( d->preeditStart != -1 )
+ 	c.setIndex( d->preeditStart );
++#endif
+ 
+     if ( hasFocus() || viewport()->hasFocus() ) {
+ 	int h = c.paragraph()->lineHeightOfChar( cursor->index() );
+@@ -2968,6 +3051,8 @@
+     bool indent = insertionFlags & RedoIndentation;
+     bool checkNewLine = insertionFlags & CheckNewLines;
+     bool removeSelected = insertionFlags & RemoveSelected;
++    bool imComposition = insertionFlags & AsIMCompositionText;
++    bool imSelection = insertionFlags & WithIMSelection;
+     QString txt( text );
+     drawCursor( FALSE );
+     if ( !isReadOnly() && doc->hasSelection( QTextDocument::Standard ) && removeSelected )
+@@ -3001,7 +3086,10 @@
+     formatMore();
+     repaintChanged();
+     ensureCursorVisible();
+-    drawCursor( TRUE );
++    // Asian users regard selection text as cursor on candidate
++    // selection phase of input method, so ordinary cursor should be
++    // invisible if IM selection text exists.
++    drawCursor( !imSelection );
+ 
+     if ( undoEnabled && !isReadOnly() ) {
+ 	undoRedoInfo.d->text += txt;
+@@ -3023,7 +3111,13 @@
+ 	doc->setSelectionEnd( QTextDocument::Standard, *cursor );
+ 	repaintChanged();
+     }
+-    updateMicroFocusHint();
++    // updateMicroFocusHint() should not be invoked here when this
++    // function is invoked from imComposeEvent() because cursor
++    // postion is incorrect yet. imComposeEvent() invokes
++    // updateMicroFocusHint() later.
++    if ( !imComposition ) {
++      updateMicroFocusHint();
++    }
+     setModified();
+     emit textChanged();
+ }
+diff -urN qt-x11-free-3.3.2/src/widgets/qtextedit.h qt-x11-immodule-bc/src/widgets/qtextedit.h
+--- qt-x11-free-3.3.2/src/widgets/qtextedit.h	2004-04-19 18:36:18.000000000 +0900
++++ qt-x11-immodule-bc/src/widgets/qtextedit.h	2004-06-23 01:10:27.092118512 +0900
+@@ -211,7 +211,9 @@
+     enum TextInsertionFlags {
+ 	RedoIndentation = 0x0001,
+ 	CheckNewLines = 0x0002,
+-	RemoveSelected = 0x0004
++	RemoveSelected = 0x0004,
++	AsIMCompositionText = 0x0008,  // internal use
++	WithIMSelection = 0x0010       // internal use
+     };
+ 
+     QTextEdit( const QString& text, const QString& context = QString::null,
+@@ -439,6 +441,7 @@
+     void contentsDropEvent( QDropEvent *e );
+ #endif
+     void contentsContextMenuEvent( QContextMenuEvent *e );
++    bool sendMouseEventToInputContext( QMouseEvent *e );
+     bool focusNextPrevChild( bool next );
+     QTextDocument *document() const;
+     QTextCursor *textCursor() const;
+diff -urN qt-x11-free-3.3.2/tools/qtconfig/mainwindow.cpp qt-x11-immodule-bc/tools/qtconfig/mainwindow.cpp
+--- qt-x11-free-3.3.2/tools/qtconfig/mainwindow.cpp	2003-12-08 18:49:15.000000000 +0900
++++ qt-x11-immodule-bc/tools/qtconfig/mainwindow.cpp	2004-06-23 01:10:27.093118360 +0900
+@@ -27,6 +27,7 @@
+ #include <qapplication.h>
+ #include <qcombobox.h>
+ #include <qstylefactory.h>
++#include <qinputcontextfactory.h>
+ #include <qobjectlist.h>
+ #include <qfontdatabase.h>
+ #include <qlineedit.h>
+@@ -362,9 +363,50 @@
+ 
+ #ifdef Q_WS_X11
+     inputStyle->setCurrentText( settings.readEntry( "/qt/XIMInputStyle", trUtf8( "On The Spot" ) ) );
++
++
++    /*
++        This code makes it possible to set up default InputMethod.
++
++	The list of names of InputMethod which can be used is acquired
++	using QInputContextFactory::keys(). And it is set to inputMethodCombo
++	which displays the list of InputMethod.
++     */
++    QStringList inputmethods = QInputContextFactory::keys();
++    inputmethods.sort();
++    inputMethodCombo->insertStringList(inputmethods);
++
++    /*
++        InputMethod set up as a default in the past is chosen.
++	If nothing is set up, default InputMethod in the platform is chosen. 
++     */
++    QString currentIM = settings.readEntry("/qt/DefaultInputMethod");
++    if (currentIM.isNull())
++        currentIM = "XIM"; // default InputMethod is XIM in X11.
++    {
++        int s = 0;
++	QStringList::Iterator imIt = inputmethods.begin();
++	while (imIt != inputmethods.end()) {
++	    if (*imIt == currentIM)
++		break;
++	    s++;
++	    imIt++;
++	}
++
++	// set up Selected InputMethod.
++	if (s < inputMethodCombo->count()) {
++	    inputMethodCombo->setCurrentItem(s);
++	} else {
++	    // we give up. But, probably this code is not executed.
++	    inputMethodCombo->insertItem("Unknown");
++	    inputMethodCombo->setCurrentItem(inputMethodCombo->count() - 1);
++	}
++    }
+ #else
+     inputStyle->hide();
+     inputStyleLabel->hide();
++    inputMethodCombo->hide();
++    inputMethodLabel->hide();
+ #endif
+ 
+     fontembeddingcheckbox->setChecked( settings.readBoolEntry("/qt/embedFonts", TRUE) );
+@@ -443,6 +485,8 @@
+ 	else if ( style == trUtf8( "Root" ) )
+ 	    str = "Root";
+         settings.writeEntry( "/qt/XIMInputStyle", inputStyle->currentText() );
++
++	settings.writeEntry("/qt/DefaultInputMethod", inputMethodCombo->currentText());
+ #endif
+ 
+ 	QStringList effects;
+diff -urN qt-x11-free-3.3.2/tools/qtconfig/mainwindowbase.ui qt-x11-immodule-bc/tools/qtconfig/mainwindowbase.ui
+--- qt-x11-free-3.3.2/tools/qtconfig/mainwindowbase.ui	2003-11-12 05:01:02.000000000 +0900
++++ qt-x11-immodule-bc/tools/qtconfig/mainwindowbase.ui	2004-06-23 01:10:27.094118208 +0900
+@@ -1016,6 +1016,19 @@
+                             <number>0</number>
+                         </property>
+                     </widget>
++                    <widget class="QLabel">
++                        <property name="name">
++                            <cstring>inputMethodLabel</cstring>
++                        </property>
++                        <property name="text">
++                            <string>Default Input Method:</string>
++                        </property>
++                    </widget>
++                    <widget class="QComboBox">
++                        <property name="name">
++                            <cstring>inputMethodCombo</cstring>
++                        </property>
++                    </widget>
+                     <spacer>
+                         <property name="name">
+                             <cstring>spacer5</cstring>
+@@ -1029,7 +1042,7 @@
+                         <property name="sizeHint">
+                             <size>
+                                 <width>20</width>
+-                                <height>40</height>
++                                <height>30</height>
+                             </size>
+                         </property>
+                     </spacer>
+@@ -1705,6 +1718,12 @@
+         <slot>somethingModified()</slot>
+     </connection>
+     <connection>
++        <sender>inputMethodCombo</sender>
++        <signal>activated(int)</signal>
++        <receiver>MainWindowBase</receiver>
++        <slot>somethingModified()</slot>
++    </connection>
++    <connection>
+         <sender>gstylecombo</sender>
+         <signal>activated(const QString&amp;)</signal>
+         <receiver>MainWindowBase</receiver>

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.2.ebuild,v 1.12 2004/07/27 03:03:39 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.2.ebuild,v 1.13 2004/08/04 16:15:05 usata Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2"
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
 KEYWORDS="x86 alpha ppc amd64 sparc hppa ~mips ppc64"
-IUSE="cups debug doc firebird gif icc ipv6 mysql nas odbc opengl postgres sqlite xinerama zlib"
+IUSE="cups debug doc firebird gif icc ipv6 mysql nas odbc opengl postgres sqlite xinerama zlib cjk"
 
 DEPEND="virtual/x11 virtual/xft
 	media-libs/libpng media-libs/jpeg media-libs/libmng
@@ -48,6 +48,18 @@ src_unpack() {
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
 
 	epatch ${FILESDIR}/qt-no-rpath-uic.patch
+
+	if use cjk ; then
+		epatch ${FILESDIR}/qt-x11-immodule-bc-qt3.3.2-20040623.diff
+		pushd include/
+		ln -s ../src/kernel/qinputcontext.h .
+		ln -s ../src/input/qinputcontextfactory.h .
+		ln -s ../src/input/qinputcontextplugin.h .
+		cd private/
+		ln -s ../../src/input/qinputcontextinterface_p.h .
+		ln -s ../../src/input/qximinputcontext_p.h .
+		popd
+	fi
 
 	# mips requires this patch to pass a CFLAG to gcc/g++ (which passes it to the assembler).
 	# It tells the assembler to relax branches on mips, otherwise we get build errors.
