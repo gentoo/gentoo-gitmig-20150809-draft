@@ -1,4 +1,5 @@
-MD5 a8eb0edfadc5d753af83e70d8a68a383 ChangeLog 425
-MD5 f97337edcfe423a137f668b68b914409 tclgpgme-1.0.ebuild 786
+MD5 37a93895f6294e2dc943cd18dcb2ad21 ChangeLog 509
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 41b41c78ba4702855eb4970c36c67527 tclgpgme-1.0.ebuild 785
 MD5 4e3e9586fdec9cf9cb7630c99969095b files/1.0-Makefile.in.diff 796
 MD5 6999cca5e670e9e7ea1f6483633b38a3 files/digest-tclgpgme-1.0 61
