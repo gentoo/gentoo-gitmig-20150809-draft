@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>mail-filter</herd>
+<herd>net-mail</herd>
 <maintainer>
   <email>st_lim@gentoo.org</email>
 </maintainer>

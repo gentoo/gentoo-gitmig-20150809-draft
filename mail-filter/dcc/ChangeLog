@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dcc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.10 2004/09/25 15:51:40 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.11 2004/09/27 22:22:19 ticho Exp $
+
+  28 Sep 2004; Andrej Kacian <ticho@gentoo.org> metadata.xml:
+  Fixed herd name in metadata.xml.
 
 *dcc-1.2.28-r1 (25 Sep 2004)
 
