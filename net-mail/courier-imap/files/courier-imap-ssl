@@ -2,7 +2,7 @@
 #RCUPDATE:3 4:72:Required for rc-update
 . /etc/rc.d/config/functions
 
-SERVICE=courier-imapd
+SERVICE=courier-imapd-ssl
 opts="start stop"
 
 prefix=/usr
@@ -21,7 +21,17 @@ then
 	export MAILDIR=".maildir"
 fi
 
+gencert() {
+	if [ ! -e /etc/courier-imap/imapd.pem ]
+	then
+		ebegin "Generating $SERVICE certificate (make take 1-2 minutes)"
+		/usr/sbin/mkimapdcert > /dev/null 2> /dev/null
+		eend $? "Generated certificate."  "Error generating certificate."
+	fi
+}
+
 start() {	
+	gencert
 	ebegin "Starting $SERVICE"
 	LIBAUTHMODULES=""
 	for f in `echo $AUTHMODULES`
@@ -37,23 +47,24 @@ start() {
 	ulimit -d $IMAP_ULIMITD
 	/usr/bin/env - /bin/sh -c " . /etc/courier-imap/imapd ; \
 				. /etc/courier-imap/imapd-ssl ; \
-		IMAP_STARTTLS=$IMAPDSTARTTLS ; export IMAP_STARTTLS ; \
+		IMAP_TLS=1 ; export IMAP_TLS ; \
 		`sed -n '/^#/d;/=/p' </etc/courier-imap/imapd | \
 			sed 's/=.*//;s/^/export /;s/$/;/'`
 		`sed -n '/^#/d;/=/p' </etc/courier-imap/imapd-ssl | \
 			sed 's/=.*//;s/^/export /;s/$/;/'`
-		/usr/lib/courier-imap/couriertcpd -address=$ADDRESS \
+		/usr/lib/courier-imap/couriertcpd -address=$SSLADDRESS \
 			-stderrlogger=/usr/lib/courier-imap/logger \
 			-maxprocs=$MAXDAEMONS -maxperip=$MAXPERIP \
-			-pid=$PIDFILE $TCPDOPTS \
-			$PORT ${exec_prefix}/sbin/imaplogin $LIBAUTHMODULES \
+			-pid=$SSLPIDFILE $TCPDOPTS \
+			$SSLPORT $COURIERTLS -server -tcpd \
+				${exec_prefix}/sbin/imaplogin $LIBAUTHMODULES \
 				/usr/sbin/imapd $MAILDIR"
 	eend $? "Started $SERVICE." "Error starting $SERVICE."
 }
 
 stop() {
 	ebegin "Stopping $SERVICE"
-	/usr/lib/courier-imap/couriertcpd -pid=$PIDFILE -stop
+	/usr/lib/courier-imap/couriertcpd -pid=$SSLPIDFILE -stop
 	if test -x ${libexecdir}/authlib/authdaemond
 	then
 		${libexecdir}/authlib/authdaemond stop
