@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/i8krellm/i8krellm-2.2.ebuild,v 1.4 2003/09/06 05:45:17 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/i8krellm/i8krellm-2.5.ebuild,v 1.1 2003/10/02 14:09:55 lanius Exp $
 
 IUSE="gtk2"
 
@@ -23,12 +23,12 @@ src_compile() {
 
 	if [ -f /usr/bin/gkrellm ]
 	then
-		emake || die
+		emake i8krellm1 || die
 	fi
 
 	if [ -f /usr/bin/gkrellm2 ]
 	then
-		emake i8krellm2 || die
+		emake || die
 	fi
 }
 
@@ -37,13 +37,18 @@ src_install () {
 	if [ -f /usr/bin/gkrellm ]
 	then
 		insinto /usr/lib/gkrellm/plugins
-		doins i8krellm.so
+		doins i8krellm1.so
 	fi
 
 	if [ -f /usr/bin/gkrellm2 ]
 	then
 		insinto /usr/lib/gkrellm2/plugins
-		doins i8krellm2.so
+		doins i8krellm.so
 	fi
 	dodoc README Changelog AUTHORS
+
+	einfo "PLEASE NOTE that the module is renamed:"
+	einfo "       gkrellm2: i8krellm (it was i8krellm2 in the past)"
+	einfo "       grellm:   i8krellm1 (the former i8krellm)"
+	einfo "Make sure to switch your plugin to the new one."
 }
