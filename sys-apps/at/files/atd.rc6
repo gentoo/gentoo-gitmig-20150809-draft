@@ -12,6 +12,7 @@ start() {
 
 stop() {
     ebegin "Shutting down atd"
-    start-stop-daemon --stop --quiet --pidfile /var/run/atd.pid
+    #dont kill with --pidfile, as it does not always get created -- Azarah
+    start-stop-daemon --stop --quiet --exec /usr/sbin/atd
     eend $?
 }
