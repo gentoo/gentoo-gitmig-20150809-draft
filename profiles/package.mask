@@ -19,7 +19,6 @@ sys-kernel/linux-sources-vanilla
 >=net-nds/openldap-2.0
 >=app-text/ghostscript-7
 >=sys-devel/autoconf-2.50
->=gnome-base/bonobo-1.0.6
 
 # broken
 app-admin/powertweak
