@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.902.ebuild,v 1.4 2003/12/30 14:19:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.902.ebuild,v 1.5 2004/01/06 06:23:55 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -40,7 +40,7 @@ strip-flags
 USE_SNAPSHOT="yes"
 
 FILES_VER="0.1"
-PATCH_VER="0.1"
+PATCH_VER="0.3"
 FT2_VER="2.1.4"
 XCUR_VER="0.3.1"
 SISDRV_VER="021203-1"
@@ -199,6 +199,12 @@ src_unpack() {
 	if use debug
 	then
 		mv -f ${PATCH_DIR}/5901*acecad-debug* ${PATCH_DIR}/excluded
+	fi
+
+	# Only apply for hppa/alpha (exclude for others)
+	if [ ! "${ARCH}" = "hppa" -o ! "${ARCH}" = "alpha" ]
+	then
+		mv -f ${PATCH_DIR}/0251*build-zlib-with-fpic* ${PATCH_DIR}/excluded
 	fi
 
 	# TDFX_RISKY - 16-bit, 1024x768 or higher on low-memory voodoo3's
