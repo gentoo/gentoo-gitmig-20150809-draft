@@ -1,6 +1,9 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/ChangeLog,v 1.10 2004/08/23 16:36:58 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/ChangeLog,v 1.11 2004/08/28 22:45:50 dholm Exp $
+
+  29 Aug 2004; David Holm <dholm@gentoo.org> devel-chroots-1.0.1.ebuild:
+  Added to ~ppc.
 
 *devel-chroots-1.0.1 (23 Aug 2004)
 
