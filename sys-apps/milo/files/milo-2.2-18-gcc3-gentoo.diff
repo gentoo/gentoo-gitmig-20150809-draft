@@ -157,7 +157,7 @@ diff -u -r --minimal milo-2.2-18.orig/tools/scripts/build milo-2.2-18/tools/scri
 -	"Ruffian	RUFFIAN"	\
 -	"Platform2000	P2K"		\
 -	"UDB		UDB"
-+for i in ${MILO_ARCH}
++for i in __MILO_ARCHES__
  do
  	short=`echo $i | awk '{print $1}'`
  	long=`echo $i | awk '{print $2}'`
