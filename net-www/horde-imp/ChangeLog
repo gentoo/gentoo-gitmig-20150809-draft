@@ -1,8 +1,13 @@
 # ChangeLog for net-www/horde-imp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/ChangeLog,v 1.7 2003/02/12 08:48:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/ChangeLog,v 1.8 2003/02/19 00:13:27 alron Exp $
 
-*horde-imp-3.2_rc1 (10 Feb 2003)
+*horde-imp-3.2_rc3 (18 Feb 2003)
+  18 Feb 2003; Dean Bailey <alron@gentoo.org> horde-imp-3.2_rc3 :
+  Added 3.2-RC3 of IMP. Masked as -x86 so on. This is just a minor version bump.
+  Same as previous RC.
+
+*horde-imp-3.2_rc2 (10 Feb 2003)
   10 Feb 2003; Dean Bailey <alron@gentoo.org> horde-imp-3.2_rc2 :
   Added 3.2-RC2 of IMP. Masked as -x86 so on. This is just a minor version bump. Same reasons as previous
   RC.
