@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/nmh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.10 2004/08/07 12:55:35 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.11 2004/09/23 09:39:42 ticho Exp $
+
+  23 Sep 2004; Andrej Kacian <ticho@gentoo.org> nmh-1.1.ebuild:
+  Stable on x86.
 
   07 Aug 2004; Tom Knight <tomk@gentoo.org> nmh-1.1.ebuild:
   SRC_URI and HOMEPAGE have changed
