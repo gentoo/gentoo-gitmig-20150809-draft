@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/exuserfolder
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/exuserfolder/ChangeLog,v 1.1 2003/10/09 18:55:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/exuserfolder/ChangeLog,v 1.2 2003/12/05 20:24:03 lanius Exp $
+
+  05 Dec 2003; Heinrich Wendel <lanius@gentoo.org> exuserfolder-0.20.0.ebuild:
+  fixed chown syntax
 
 *exuserfolder-0.20.0 (09 Oct 2003)
 

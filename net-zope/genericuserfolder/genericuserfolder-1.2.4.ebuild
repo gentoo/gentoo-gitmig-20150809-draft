@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/genericuserfolder/genericuserfolder-1.2.4.ebuild,v 1.2 2003/10/10 00:10:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/genericuserfolder/genericuserfolder-1.2.4.ebuild,v 1.3 2003/12/05 20:24:33 lanius Exp $
 
 inherit zproduct
 
@@ -21,7 +21,7 @@ src_install() {
 	zproduct_src_install
 	# fix permissions on files
 	DIR=${D}/usr/share/zproduct/${PF}
-	find ${DIR} -exec chown zope.root \{} \;
+	find ${DIR} -exec chown zope:root \{} \;
 	find ${DIR} -exec chmod 644 \{} \;
 	find ${DIR} -type d -exec chmod +x \{} \;
 }

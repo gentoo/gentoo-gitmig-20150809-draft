@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/simpleuserfolder
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/simpleuserfolder/ChangeLog,v 1.1 2003/10/09 18:45:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/simpleuserfolder/ChangeLog,v 1.2 2003/12/05 20:24:54 lanius Exp $
+
+  05 Dec 2003; Heinrich Wendel <lanius@gentoo.org>
+  simpleuserfolder-0.9.0.ebuild:
+  fixed chown syntax
 
 *simpleuserfolder-0.9.0 (09 Oct 2003)
 
