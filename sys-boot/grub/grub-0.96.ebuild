@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96.ebuild,v 1.2 2005/03/05 21:05:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96.ebuild,v 1.3 2005/03/11 04:29:25 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic gcc gnuconfig toolchain-funcs
 
@@ -48,6 +48,8 @@ src_unpack() {
 }
 
 src_compile() {
+	unset BLOCK_SIZE #73499
+
 	### i686-specific code in the boot loader is a bad idea; disabling to ensure
 	### at least some compatibility if the hard drive is moved to an older or
 	### incompatible system.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.93.20030118.ebuild,v 1.10 2005/03/11 04:17:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.93.20030118.ebuild,v 1.11 2005/03/11 04:29:25 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic
 
@@ -45,6 +45,8 @@ src_unpack() {
 src_compile() {
 	filter-flags -fstack-protector
 	filter-flags -fPIC
+
+	unset BLOCK_SIZE #73499
 
 	### i686-specific code in the boot loader is a bad idea; disabling to ensure
 	### at least some compatibility if the hard drive is moved to an older or

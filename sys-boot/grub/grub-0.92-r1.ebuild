@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.92-r1.ebuild,v 1.7 2005/01/20 18:37:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.92-r1.ebuild,v 1.8 2005/03/11 04:29:25 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic gcc
 
@@ -11,13 +11,12 @@ SRC_URI="ftp://alpha.gnu.org/gnu/grub/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2
 	http://dev.gentoo.org/~seemant/extras/${P}-gentoo-${PATCHVER}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -amd64 -ppc -sparc -alpha -mips"
+SLOT="0"
+KEYWORDS="-* x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2-r5"
-
 PROVIDE="virtual/bootloader"
 
 src_unpack() {
@@ -32,8 +31,9 @@ src_unpack() {
 }
 
 src_compile() {
-
 	filter-flags "-fstack-protector"
+
+	unset BLOCK_SIZE #73499
 
 	#i686-specific code in the boot loader is a bad idea; disabling to ensure
 	#at least some compatibility if the hard drive is moved to an older or
