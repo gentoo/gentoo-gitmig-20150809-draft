@@ -32,3 +32,4 @@ virtual/editor		app-editors/nano
 virtual/os-headers	sys-kernel/hppa-headers
 virtual/modutils 	sys-apps/modutils
 virtual/inetd		sys-apps/netkit-base
+virtual/virus			net-mail/clamav

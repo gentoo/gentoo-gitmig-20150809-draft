@@ -38,3 +38,4 @@ virtual/ghc             dev-lang/ghc-bin
 #virtual/modutils		sys-apps/module-init-tools
 virtual/modutils		sys-apps/modutils
 virtual/inetd			sys-apps/netkit-base
+virtual/virus			net-mail/clamav
