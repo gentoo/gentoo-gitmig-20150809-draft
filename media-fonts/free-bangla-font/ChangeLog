@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/free-bangla-font
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/free-bangla-font/ChangeLog,v 1.1 2004/07/05 05:54:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/free-bangla-font/ChangeLog,v 1.2 2004/07/05 16:00:17 dholm Exp $
+
+  05 Jul 2004; David Holm <dholm@gentoo.org> free-bangla-font-0.2.ebuild:
+  Added to ~ppc.
 
 *free-bangla-font-0.2 (05 Jul 2004)
 
