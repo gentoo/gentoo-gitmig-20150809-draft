@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.9 2004/11/13 00:14:11 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.10 2004/12/13 20:02:51 latexer Exp $
+
+*mod_mono-1.0.5 (13 Dec 2004)
+
+  13 Dec 2004; Peter Johanson <latexer@gentoo.org> +mod_mono-1.0.5.ebuild:
+  Bump.
 
   12 Nov 2004; Peter Johanson <latexer@gentoo.org> mod_mono-1.0.4.ebuild:
   Actually install mod_mono.conf. See bug #70922
