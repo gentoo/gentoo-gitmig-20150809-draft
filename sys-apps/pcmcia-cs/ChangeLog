@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.77 2005/01/08 03:31:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.78 2005/01/17 10:53:40 robbat2 Exp $
+
+  17 Jan 2005; Robin H. Johnson <robbat2@gentoo.org>
+  pcmcia-cs-3.2.7-r2.ebuild:
+  ~mips for my XXS1500 hardware.
 
   08 Jan 2005; Daniel Black <dragonheart@gentoo.org> files/ppc.config.opts:
   Bad char in config file as per bug #77085. Thanks to Hugo Herbelin
