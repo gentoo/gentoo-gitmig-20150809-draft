@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.205 2004/11/30 01:34:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.206 2004/12/08 00:37:25 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -43,7 +43,6 @@ cdb - Adds support for the CDB database engine from the author of qmail
 cdr - Adds support for CD writer hardware (e.g. compile the koncd app in kdemultimedia)
 cjk - Adds support for Multi-byte character languages (Chinese, Japanese, Korean)
 cpdflib -  Adds support for clibpdf
-cross - Enable cross compiler workarounds and patches
 crypt - Add support for encryption -- using mcrypt or gpg where applicable
 cscope - Enables cscope interface -- in vim for example
 ctype - Enables ctype functions 
