@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.14 2004/04/11 17:08:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.15 2004/04/11 18:28:48 spyderous Exp $
+
+  11 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-184.ebuild:
+  Workaround for broken configure script that doesn't take --without for a
+  --with (#47398).
 
   11 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-184.ebuild:
   Revert Xaw3d change after further investigation.
