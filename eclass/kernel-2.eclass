@@ -16,6 +16,7 @@
 # K_NOSETEXTRAVERSION	- if this is set then EXTRAVERSION will not be automatically set within the kernel Makefile
 # K_NOUSENAME		- if this is set then EXTRAVERSION will not include the first part of ${PN} in EXTRAVERSION
 # K_EXTRAEINFO		- this is a new-line seperated list of einfo displays in postinst and can be used to carry additional postinst messages
+# K_EXTRAEWARN		- same as K_EXTRAEINFO except ewarn's instead of einfo's
 # UNIPATCH_LIST		- space delimetered list of patches to be applied to the kernel
 # UNIPATCH_DOCS		- space delimemeted list of docs to be installed to the doc dir
 
@@ -207,6 +208,8 @@ postinst_sources() {
 		do
 			einfo "${ELINE}"
 		done
+
+		echo
 	fi
 
 	# if K_EXTRAEWARN is set then lets display it now
@@ -215,8 +218,10 @@ postinst_sources() {
 		echo ${K_EXTRAEWARN} | fmt |
 		while read -s ELINE
 		do
-			einfo "${ELINE}"
+			ewarn "${ELINE}"
 		done
+
+		echo
 	fi
 }
 
