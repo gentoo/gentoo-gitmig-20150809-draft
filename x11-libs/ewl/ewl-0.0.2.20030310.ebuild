@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ewl-0.0.2.20030310.ebuild,v 1.1 2003/03/10 17:59:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ewl-0.0.2.20030310.ebuild,v 1.2 2003/03/14 19:21:53 agriffis Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="simple-to-use general purpose widget library"
 HOMEPAGE="http://www.enlightenment.org/pages/ewl.html"
@@ -9,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha"
 IUSE="pic"
 
 DEPEND="virtual/glibc
@@ -27,6 +29,8 @@ src_compile() {
 	cp autogen.sh{,.old}
 	sed -e 's:.*configure.*::' autogen.sh.old > autogen.sh
 	env USER=BLAH WANT_AUTOCONF_2_5=1 ./autogen.sh || die "could not autogen"
+
+	use alpha && append-flags -fPIC
 
 	econf `use_with pic` --with-gnu-ld || die
 	emake || die

@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/ewl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ChangeLog,v 1.3 2003/03/10 17:59:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ChangeLog,v 1.4 2003/03/14 19:21:53 agriffis Exp $
 
 *ewl-0.0.2.20030310 (10 Mar 2003)
+
+  14 Mar 2003; Aron Griffis <agriffis@gentoo.org> ewl-0.0.2.20030310.ebuild:
+  Add ~alpha to KEYWORDS and use -fPIC on alpha
 
   10 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
   More bugfixes/updates from CVS.
