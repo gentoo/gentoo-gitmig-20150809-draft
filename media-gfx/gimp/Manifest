@@ -2,6 +2,7 @@ MD5 789c502d34f4e1a21f1d225da50e5864 gimp-1.3.17.ebuild 2413
 MD5 df9bc36615a041850ff9feaf1d0df2c5 gimp-1.2.5.ebuild 3257
 MD5 c3dc61c814aa0cc40bf9b53c95128d8b gimp-1.3.16.ebuild 2425
 MD5 3ffcb6910a8be02857177f4179725ca8 gimp-1.2.3-r3.ebuild 4717
+MD5 789c502d34f4e1a21f1d225da50e5864 gimp-1.3.18.ebuild 2413
 MD5 b0e19c97a61c41bd47f0783ca135d07d gimp-1.2.4.ebuild 3091
 MD5 360a8f4c1d431bf4a6d0993c553c7901 ChangeLog 7637
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
@@ -13,6 +14,7 @@ MD5 9696bde4a1b70dd2816d46bed477ebc0 files/gimp.desktop 2404
 MD5 cdda0b1cc179cf75eabb63945efdae0e files/gimp-1.2.3-libgimpi-libtool.diff 1365
 MD5 e8adce46a21cdb214def668b6577902c files/digest-gimp-1.3.16 66
 MD5 bc0cf9570b3e8a71b95426095b0ca86c files/digest-gimp-1.3.17 66
+MD5 067de92aa202ecaed5618d0718667dcb files/digest-gimp-1.3.18 66
 MD5 edd3aa0572ed45191d25b99712a875d9 files/gimp-1.2.3-r2-gentoo.diff 427
 MD5 86551dc2402aaed28ccf3612e8fe7b7a files/digest-gimp-1.2.4 65
 MD5 662e7b51f4c882429b73dea3263b39de files/digest-gimp-1.2.5 65
