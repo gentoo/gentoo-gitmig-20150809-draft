@@ -1,20 +1,30 @@
-MD5 a8404a835647b5b78199a9bf35230973 ChangeLog 6887
-MD5 677fabb53514adcdea9a6c829b667cff jabberd-1.4.3-r3.ebuild 5585
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a03630095343a5591602fbb2cf171f00 jabberd-1.4.3-r4.ebuild 5807
 MD5 e78d7f76504f4998311bfcaaa6055068 jabberd-2.0-r2.ebuild 4920
+MD5 9a7d67231f2427b1077c8b1051ba66f6 ChangeLog 6964
 MD5 073710b6dd1869d3930f8f2e857341e8 metadata.xml 411
-MD5 1a325b6068e591bc222376a7d70f6e17 files/README.Gentoo 984
+MD5 677fabb53514adcdea9a6c829b667cff jabberd-1.4.3-r3.ebuild 5585
+MD5 0d59ca6b46e061b4b1d1673fce93487f files/digest-jabberd-2.0-r2 65
+MD5 40ed7d521eda61aa9f67390099e5b693 files/patch-c2s-buffers 12112
 MD5 c0945b1bc206e13be453cd2c1bb7e3f1 files/digest-jabberd-1.4.3-r3 129
 MD5 264b9719c0773f480ee42d8a61c34d0a files/digest-jabberd-1.4.3-r4 201
-MD5 0d59ca6b46e061b4b1d1673fce93487f files/digest-jabberd-2.0-r2 65
+MD5 5aeafd17644a405b363de0ea1eb22d8b files/multiple-xml-patch-00 5934
+MD5 0067018951674e703063f0f4337c5a2c files/multiple-xml-patch-01 303
+MD5 a8408aaabc3453cfd3cbe3df1a65f67e files/xml-stream-patch-00 726
+MD5 92ba69168d2fb8c1384e8e13e03dcbc2 files/xdb-ldap.xml 985
+MD5 73c38af347fdcf7d7cb6dd3490344bfa files/multiple.xml 15387
 MD5 3a5219d7870e60f5b16d6aefb1c63a0e files/jabber-conf.d 525
+MD5 1a325b6068e591bc222376a7d70f6e17 files/README.Gentoo 984
+MD5 6ec1c588cf732d89e8bc7b5864842ab9 files/self-cert.sh 494
 MD5 8d4ca5fb6338d837674ab33c8f969273 files/jabber.rc6-r5 874
 MD5 6912454f1d1d480cbb711f715292e3cc files/jabber.rc6-r6 953
 MD5 4ea516e4527dd2de19281709704238ee files/jabber.rc6-r7 1842
-MD5 5aeafd17644a405b363de0ea1eb22d8b files/multiple-xml-patch-00 5934
-MD5 0067018951674e703063f0f4337c5a2c files/multiple-xml-patch-01 303
-MD5 73c38af347fdcf7d7cb6dd3490344bfa files/multiple.xml 15387
-MD5 40ed7d521eda61aa9f67390099e5b693 files/patch-c2s-buffers 12112
-MD5 6ec1c588cf732d89e8bc7b5864842ab9 files/self-cert.sh 494
-MD5 92ba69168d2fb8c1384e8e13e03dcbc2 files/xdb-ldap.xml 985
-MD5 a8408aaabc3453cfd3cbe3df1a65f67e files/xml-stream-patch-00 726
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpLOgI1lqEGTUzyQRAntsAKDLMyVvTi782mQmXqCrp1ojodUsuACg1sAI
+TlRnXXOQCysdhAXVKlgy4IQ=
+=sC10
+-----END PGP SIGNATURE-----
