@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.31.ebuild,v 1.1 2004/03/01 22:16:59 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.31.ebuild,v 1.2 2004/03/27 19:28:41 spock Exp $
 
 IUSE="png jpeg gif tiff curl lirc"
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="fbi a framebuffer image viewer"
 SRC_URI="http://bytesex.org/misc/${P/-/_}.tar.gz"
 HOMEPAGE="http://bytesex.org/fbi.html"
