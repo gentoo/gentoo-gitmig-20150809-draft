@@ -1,11 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-padxwin/psemu-padxwin-1.4.ebuild,v 1.2 2002/07/11 06:30:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-padxwin/psemu-padxwin-1.4.ebuild,v 1.3 2002/07/27 15:11:25 stubear Exp $
 
 DESCRIPTION="PSEmu plugin to use the keyboard as a gamepad"
 HOMEPAGE="http://www.pcsx.net"
-LICENSE="" # No mention of a license...
+LICENSE="freedist" # ReadMe.txt says "The Plugin is free source code"
+KEYWORDS="x86"
+SLOT="0"  
 DEPEND="x11-libs/gtk+"
+RDEPEND="${DEPEND}"
 SRC_URI="http://linux.pcsx.net/downloads/plugins/padXwin-${PV}.tgz"
 S=${WORKDIR}
 

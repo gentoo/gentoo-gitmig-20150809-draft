@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/psemu-padxwin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-padxwin/ChangeLog,v 1.1 2002/06/03 02:53:20 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/psemu-padxwin/ChangeLog,v 1.2 2002/07/27 15:11:25 stubear Exp $
+
+*psemu-padxwin-1.4 (27 Jul 2002)
+
+  27 Jul 2002; Stuart Bouyer <stubear@gentoo.org> psemu-padxwin-1.4.ebuild :
+
+  Added LICENSE, KEYWORDS="x86", SLOT and RDEPEND.
 
 *psemu-padxwin-1.4 (2 June 2002)
 
