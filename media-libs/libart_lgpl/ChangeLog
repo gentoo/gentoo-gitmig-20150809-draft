@@ -1,7 +1,11 @@
 # ChangeLog for media-libs/libart_lgpl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.1 2002/05/22 19:58:08 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.2 2002/06/23 23:57:34 spider Exp $
 
+*libart_lgpl-2.3.8-r3 (22 Jun 2002)
+  22 Jun 2002; Spider <spider@gentoo.org> libart_lgpl-2.3.8-r3.ebuild :
+  using the gnome2.eclass will hopefully solve some libtool bugs
+  
 *libart_lgpl-2.3.8-r2 (22 May 2002)
   22 May 2002; Spider <spider@gentoo.org> libart_lgpl-2.3.8-r2.ebuild :
   Added libart_lgpl . the lgpl version of libart
