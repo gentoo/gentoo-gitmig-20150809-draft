@@ -28,10 +28,10 @@ while (pos<len(mylines)) and (entry<10):
 		continue
 	elif splitline[0]=="new":
 		pkgsplit=string.split(splitline[1],"/")
-		print "<b>New package",pkgsplit[1]+"</b><br>"
+		print "<b>New package",splitline[1]+"</b><br>"
 	elif splitline[0]=="upd":
 		pkgsplit=string.split(splitline[1],"/")
-		print "<b>Updated package",pkgsplit[1],"to",splitline[3]+"</b><br>"
+		print "<b>Updated package",splitline[1],"to",splitline[3]+"</b><br>"
 	elif splitline[0]=="rel":
 		print "<h2>New Release! Gentoo Linux",splitline[1]+"</h2><br>"
 		desc=""

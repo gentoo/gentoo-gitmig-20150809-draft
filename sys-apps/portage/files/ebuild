@@ -638,7 +638,7 @@ dyn_rpm () {
 
 dyn_help() {
 	echo
-	echo "Portage v1.0-r1"
+	echo "Portage"
 	echo "Copyright 2000 Gentoo Technologies, Inc."
 	echo 
 	echo "How to use the ebuild command:"
@@ -774,27 +774,27 @@ src_menu() {
 	    ;;
 
  	merge)
-
+		merge_check
 	    dyn_check
 	    dyn_unpack
 	    dyn_compile
-            dyn_install
-            dyn_merge
+   		dyn_install
+		dyn_merge
 	    ;;
 
 	rpm)
 
 	    dyn_check
-            dyn_fetch
+		dyn_fetch
 	    dyn_unpack
-	    dyn_compile
-            dyn_install	
-	    dyn_rpm
+		dyn_compile
+		dyn_install	
+		dyn_rpm
 	    ;;
 	*)
 	    echo "Please specify a valid command."
-	    echo
-            dyn_help
+		echo
+		dyn_help
 	esac
     done
     cd $MYDIR
