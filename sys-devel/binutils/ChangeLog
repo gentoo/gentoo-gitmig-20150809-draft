@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.30 2003/02/19 21:46:47 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.31 2003/02/21 22:09:08 agriffis Exp $
 
 
   18 Feb 2003; Zach Welch <zwelch@gentoo.org> :
@@ -10,6 +10,9 @@
   Added hppa to keywords.
 
 *binutils-2.13.90.0.18 (26 Jan 2003)
+
+  21 Feb 2003; Aron Griffis <agriffis@gentoo.org> binutils-2.13.90.0.18.ebuild :
+  Mark stable on alpha
 
   01 Feb 2003; Jon Nall <nall@gentoo.org> binutils-2.13.90.0.18.ebuild :
   made stable for ppc. this is to allow kde to compile happily and closes bug
