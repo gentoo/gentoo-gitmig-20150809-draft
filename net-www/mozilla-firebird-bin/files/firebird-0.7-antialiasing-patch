@@ -1,0 +1,28 @@
+--- unix.js~	2003-05-17 13:08:50.000000000 +0200
++++ unix.js	2003-05-17 13:16:56.000000000 +0200
+@@ -228,21 +228,20 @@
+ pref("font.scale.outline.min",      6);
+ 
+ // TrueType
+-pref("font.FreeType2.enable", false);
++pref("font.FreeType2.enable", true);
+ pref("font.freetype2.shared-library", "libfreetype.so.6");
+ // if libfreetype was built without hinting compiled in
+ // it is best to leave hinting off
+ pref("font.FreeType2.autohinted", false);
+-pref("font.FreeType2.unhinted", true);
++pref("font.FreeType2.unhinted", false);
+ // below a certian pixel size anti-aliased fonts produce poor results
+ pref("font.antialias.min",        10);
+ pref("font.embedded_bitmaps.max", 1000000);
+ pref("font.scale.tt_bitmap.dark_text.min", 64);
+ pref("font.scale.tt_bitmap.dark_text.gain", "0.8");
+ // sample prefs for TrueType font dirs
+-//pref("font.directory.truetype.1", "/u/sam/tt_font1");
+-//pref("font.directory.truetype.2", "/u/sam/tt_font2");
+-//pref("font.directory.truetype.3", "/u/sam/tt_font3");
++pref("font.directory.truetype.1", "/usr/X11R6/lib/X11/fonts/truetype");       
++pref("font.directory.truetype.2", "/usr/X11R6/lib/X11/fonts/TTF");
+ pref("font.FreeType2.printing", true);
+ 
+ // below a certian pixel size anti-aliased bitmat scaled fonts 
