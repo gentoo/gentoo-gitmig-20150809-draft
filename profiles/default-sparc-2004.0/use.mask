@@ -26,6 +26,7 @@ trusted
 uml
 voodoo3
 wavelan
+xine
 
 
 # And arch keyword flags that don't work
