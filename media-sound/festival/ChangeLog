@@ -3,6 +3,13 @@
 # $Header: /home/cvsroot/gentoo-x86/media-sound/festival/ChangeLog,v 1 2002/05/07
 # 03:58:19 naz Exp $
 
+*festival-1.4.3-r1 (12 Mar 2004)
+
+  12 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-1.4.3-r1.ebuild, files/festival.rc, files/server.scm:
+  Adding init script and configuration to use festival server... part of the fix
+  for bug #43374.
+
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> festival-1.4.3.ebuild:
   DEPEND media-sounds/speech-tools is broken on sparc, see bug #41329.
 
