@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.5 2005/01/27 19:29:13 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.6 2005/02/16 05:37:51 pythonhead Exp $
+
+*rake-0.4.15-r1 (15 Feb 2005)
+
+  15 Feb 2005; Rob Cakebread <pythonhead@gentoo.org> +rake-0.4.15-r1.ebuild:
+  Added gems version for rails
 
 *rake-0.4.15 (27 Jan 2005)
 
