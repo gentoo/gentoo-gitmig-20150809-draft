@@ -1,5 +1,5 @@
-MD5 28aa06a218f18ba3010215efedfd78bd ChangeLog 1790
+MD5 9c068f9711e17213e29a0bf0e9001b0a ChangeLog 1789
 MD5 bccd496b5f226b555131ff60de1fdc21 silc-client-0.9.11.ebuild 1350
-MD5 2af8e3ad8ddb4ba279f82db6c1b26dc0 silc-client-0.9.12.1.ebuild 1755
+MD5 86c06910f2e55f72c3a079f07ab6641e silc-client-0.9.12.1.ebuild 1754
 MD5 fb190d39f5c608735fb3650027e4499f files/digest-silc-client-0.9.11 72
 MD5 c0de3b6dda921ad76210c11a653f40ee files/digest-silc-client-0.9.12.1 74
