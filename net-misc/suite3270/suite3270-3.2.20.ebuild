@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.2.20.ebuild,v 1.3 2003/12/23 01:25:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.2.20.ebuild,v 1.4 2004/05/13 15:48:15 randy Exp $
 
 IUSE="tcltk X"
 
