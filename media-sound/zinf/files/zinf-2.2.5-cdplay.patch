@@ -1,0 +1,29 @@
+diff -uNr zinf-2.2.5-r1/io/cd/unix/include/cdpmo.h zinf-2.2.5/io/cd/unix/include/cdpmo.h
+--- zinf-2.2.5/io/cd/unix/include/cdpmo.h	2004-04-14 17:42:17.000000000 +0300
++++ zinf-2.2.5-r1/io/cd/unix/include/cdpmo.h	2004-04-14 17:43:43.000000000 +0300
+@@ -59,7 +59,7 @@
+    virtual void  Pause(void);
+    virtual void  Resume(void);
+    virtual Error ChangePosition(int32_t);
+-   virtual Error SetTo(const char *url); 
++   virtual Error SetUrl(const std::string& track_url);
+ 
+    struct disc_info *GetDiscInfo();
+    uint32_t  GetCDDBDiscID();
+diff -uNr zinf-2.2.5-r1/io/cd/unix/src/cdpmo.cpp zinf-2.2.5/io/cd/unix/src/cdpmo.cpp
+--- zinf-2.2.5/io/cd/unix/src/cdpmo.cpp	2004-04-14 17:42:17.000000000 +0300
++++ zinf-2.2.5-r1/io/cd/unix/src/cdpmo.cpp	2004-04-14 17:44:43.000000000 +0300
+@@ -106,10 +106,12 @@
+     }
+ } 
+ 
+-Error CDPMO::SetTo(const char *url)
++Error CDPMO::SetUrl(const std::string& track_url)
+ {
+    OutputInfo blah;
+ 
++   const char* url = track_url.c_str();
++
+    if (IsError(Init(&blah))) 
+        return kError_CDInitFailed;
+ 

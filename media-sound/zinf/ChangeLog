@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/zinf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.24 2004/03/31 17:04:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/ChangeLog,v 1.25 2004/04/16 10:00:34 eradicator Exp $
+
+*zinf-2.2.5-r1 (16 Apr 2004)
+
+  16 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> zinf-2.2.5-r1.ebuild,
+  zinf-2.2.5.ebuild, files/zinf-2.2.5-cdplay.patch:
+  Bump to include cdplaying bugfix reported by Anatoly <aanatoly@users.sf.net>
+  in bug #47808.
 
   31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> zinf-2.2.5.ebuild:
   Stable x86.
