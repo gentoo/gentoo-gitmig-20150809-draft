@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qpopper
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.8 2003/03/29 16:38:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.9 2003/06/12 21:31:23 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> qpopper-4.0.5.ebuild:
+  add Header
 
 *qpopper-4.0.5 (14 Mar 2003)
 

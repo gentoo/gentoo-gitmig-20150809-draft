@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/rblcheck
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/rblcheck/ChangeLog,v 1.2 2003/02/12 08:15:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/rblcheck/ChangeLog,v 1.3 2003/06/12 21:32:03 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> rblcheck-1.5.ebuild:
+  add Header
 
 *rblcheck-1.5 (14 Aug 2002)
 
