@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r10.ebuild,v 1.5 2004/09/08 01:16:25 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r11.ebuild,v 1.1 2004/09/08 01:16:25 carpaski Exp $
 
 IUSE="build multilib selinux"
 
