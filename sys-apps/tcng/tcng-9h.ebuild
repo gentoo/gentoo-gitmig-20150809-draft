@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9h.ebuild,v 1.6 2004/04/27 21:32:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9h.ebuild,v 1.7 2004/05/17 16:17:23 usata Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SLOT="0"
 # block this to phase it out very shortly
 KEYWORDS="-*"
 IUSE=""
-DEPEND="doc? ( virtual/ghostscript app-text/tetex media-gfx/transfig )
+DEPEND="doc? ( virtual/ghostscript virtual/tetex media-gfx/transfig )
 	dev-lang/perl
 	virtual/os-headers
 	sys-apps/iproute2"

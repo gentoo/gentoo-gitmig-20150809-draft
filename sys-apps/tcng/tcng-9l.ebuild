@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9l.ebuild,v 1.4 2004/04/27 21:32:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9l.ebuild,v 1.5 2004/05/17 16:17:23 usata Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND_COMMON="dev-lang/perl
 				sys-devel/gcc
 				sys-devel/binutils"
 
-DEPEND="doc? ( virtual/ghostscript app-text/tetex media-gfx/transfig )
+DEPEND="doc? ( virtual/ghostscript virtual/tetex media-gfx/transfig )
 	sys-devel/make
 	dev-util/yacc
 	sys-devel/flex
