@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.24-r9.ebuild,v 1.1 2004/08/08 18:58:18 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.24-r10.ebuild,v 1.1 2004/08/09 23:47:13 plasmaroo Exp $
 
 IUSE=""
 
@@ -69,6 +69,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0565.patch || die "Failed to add the CAN-2004-0565 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0685.patch || die "Failed to add the CAN-2004-0685 patch!"
+	epatch ${FILESDIR}/${P}.cmdlineLeak.patch || die "Failed to apply the /proc/cmdline patch!"
 	kernel_universal_unpack
 }
 

@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/ia64-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.22 2004/08/08 18:58:18 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.23 2004/08/09 23:47:13 plasmaroo Exp $
+
+*ia64-sources-2.4.24-r10 (10 Aug 2004)
+
+  10 Aug 2004; <plasmaroo@gentoo.org> +ia64-sources-2.4.24-r10.ebuild,
+  -ia64-sources-2.4.24-r9.ebuild,
+  +files/ia64-sources-2.4.24.cmdlineLeak.patch:
+  Version bump for the /proc/cmdline leak vulnerability; bug #59905.
 
 *ia64-sources-2.4.24-r9 (08 Aug 2004)
 
