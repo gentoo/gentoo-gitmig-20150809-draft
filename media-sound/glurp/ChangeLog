@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/glurp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/ChangeLog,v 1.9 2004/10/19 10:37:14 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/ChangeLog,v 1.10 2004/11/23 05:13:04 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  glurp-0.11.3.ebuild:
+  Added to ~sparc.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> glurp-0.11.3.ebuild:
   Stable on amd64.
