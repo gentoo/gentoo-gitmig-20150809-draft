@@ -1,6 +1,19 @@
 # ChangeLog for dev-perl/Attribute-Handlers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Attribute-Handlers/ChangeLog,v 1.10 2005/03/12 11:01:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Attribute-Handlers/ChangeLog,v 1.11 2005/03/14 11:55:15 mcummings Exp $
+
+*Attribute-Handlers-0.78.01 (14 Mar 2005)
+
+  14 Mar 2005; Michael Cummings <mcummings@gentoo.org> metadata.xml,
+  +files/Attribute-Handlers-0.78_01.diff, +Attribute-Handlers-0.78.01.ebuild:
+  This (hack) ebuild is to provide Attribute-Handlers-0.78_01 and should not be
+  DEP'd on at all. This hack patches the last release of this module with the
+  version that is provided by the perl core releases. As far back as perl-5.8.4
+  Attribute-Handlers-0.78_01 has been provided by the perl core only - the
+  external module is no longer maintained seperately, at least not at this time.
+  All DEP's on this package have been removed, but as there are users that have
+  it installed I have bumped the package with the patch (corrects a croak line)
+  so that everyone can be back on a fair playing field.
 
   12 Mar 2005; Markus Rothe <corsair@gentoo.org>
   Attribute-Handlers-0.78-r1.ebuild:

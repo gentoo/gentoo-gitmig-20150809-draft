@@ -1,0 +1,44 @@
+--- Attribute-Handlers-0.78/lib/Attribute/Handlers.pm	2002-10-05 01:40:19.000000000 -0400
++++ Attribute-Handlers-0.78_01/lib/Attribute/Handlers.pm	2005-03-14 06:28:54.406095384 -0500
+@@ -2,7 +2,7 @@ package Attribute::Handlers;
+ use 5.006;
+ use Carp;
+ use warnings;
+-$VERSION = '0.78';
++$VERSION = '0.78_01';
+ # $DB::single=1;
+ 
+ my %symcache;
+@@ -103,7 +103,7 @@ sub AUTOLOAD {
+ 	my ($class) = $AUTOLOAD =~ m/(.*)::/g;
+ 	$AUTOLOAD =~ m/_ATTR_(.*?)_(.*)/ or
+ 	    croak "Can't locate class method '$AUTOLOAD' via package '$class'";
+-	croak "Attribute handler '$3' doesn't handle $2 attributes";
++	croak "Attribute handler '$2' doesn't handle $1 attributes";
+ }
+ 
+ sub DESTROY {}
+@@ -137,7 +137,8 @@ sub _gen_handler_AH_() {
+ 			%lastattr=(pkg=>$pkg,ref=>$ref,type=>$data);
+ 		}
+ 		else {
+-			my $handler = $pkg->can($attr);
++			my $type = ref $ref;
++			my $handler = $pkg->can("_ATTR_${type}_${attr}");
+ 			next unless $handler;
+ 		        my $decl = [$pkg, $ref, $attr, $data,
+ 				    $raw{$handler}, $phase{$handler}];
+@@ -164,9 +165,10 @@ sub _gen_handler_AH_() {
+ 	}
+ }
+ 
+-*{"MODIFY_${_}_ATTRIBUTES"} = _gen_handler_AH_ foreach @{$validtype{ANY}};
+-push @UNIVERSAL::ISA, 'Attribute::Handlers'
+-	unless grep /^Attribute::Handlers$/, @UNIVERSAL::ISA;
++*{"Attribute::Handlers::UNIVERSAL::MODIFY_${_}_ATTRIBUTES"} =
++       _gen_handler_AH_ foreach @{$validtype{ANY}};
++push @UNIVERSAL::ISA, 'Attribute::Handlers::UNIVERSAL'
++       unless grep /^Attribute::Handlers::UNIVERSAL$/, @UNIVERSAL::ISA;
+ 
+ sub _apply_handler_AH_ {
+ 	my ($declaration, $phase) = @_;

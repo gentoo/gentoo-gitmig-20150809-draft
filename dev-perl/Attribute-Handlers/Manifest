@@ -1,6 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 da9d237fc507abc27a1bafeec3622096 ChangeLog 1913
 MD5 89add841c5e2f68b4e20270f3ba949db Attribute-Handlers-0.78-r1.ebuild 584
 MD5 610aeff0dd806633e398396915316cf8 Attribute-Handlers-0.78.ebuild 541
-MD5 e282c794fd0675f98efb37190fc801b2 ChangeLog 1110
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 b0dcfecd7aa097691746fdca5f978d48 files/digest-Attribute-Handlers-0.78 74
+MD5 341fe2e64ad46e9f53e90e1ab55062bf metadata.xml 450
+MD5 0696ee85437bdd9816b8c20b9cf5fa0f Attribute-Handlers-0.78.01.ebuild 743
 MD5 b0dcfecd7aa097691746fdca5f978d48 files/digest-Attribute-Handlers-0.78-r1 74
+MD5 b0dcfecd7aa097691746fdca5f978d48 files/digest-Attribute-Handlers-0.78 74
+MD5 263a6c5ddf96cd001ba8f5d479aa467b files/Attribute-Handlers-0.78_01.diff 1561
+MD5 b0dcfecd7aa097691746fdca5f978d48 files/digest-Attribute-Handlers-0.78.01 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCNXustG5z4I8BtQoRArIYAKCQXDTeCFWcVyFPq3HFdQi9lfVe9wCfQhMO
+mnBlQadEZiKRgDcPZO6dOIg=
+=WopC
+-----END PGP SIGNATURE-----
