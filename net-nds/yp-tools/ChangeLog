@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/yp-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.4 2002/05/28 00:15:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.5 2002/07/18 23:26:51 seemant Exp $
+
+*yp-tools-2.7-r1 (18 Jul 2002)
+
+  18 Jul 2002; Seemant Kulleen <seemant@gentoo.orG> yp-tools-2.7-r1.ebuild
+  files/digest-yp-tools-2.7-r1 :
+
+  NLS fixes.
 
 *yp-tools-2.7 (27 May 2002)
 
