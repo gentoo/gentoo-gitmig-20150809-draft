@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/wmifs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/ChangeLog,v 1.10 2004/06/24 23:10:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/ChangeLog,v 1.11 2004/07/31 22:24:35 s4t4n Exp $
+
+*wmifs-1.3_beta1-r2 (01 Aug 2004)
+
+  01 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmifs-1.3_beta1-r2.ebuild:
+  New revision that honours Gentoo CFLAGS. Stable for x86. Didn't touch other
+  arch keywords as this change should not impact stability...
+  wmifs-1.3_beta1-r1.ebuild:
+  Remove older revision.
 
   12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> wmifs-1.3_beta1-r1.ebuild:
   Stable on alpha.
