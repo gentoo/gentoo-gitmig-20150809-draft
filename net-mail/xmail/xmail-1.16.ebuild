@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/xmail-1.16.ebuild,v 1.5 2004/02/26 03:58:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/xmail-1.16.ebuild,v 1.6 2004/02/29 22:38:50 vapier Exp $
 
-IUSE=""
+inherit eutils
 
 DESCRIPTION="The world's fastest email server"
 HOMEPAGE="http://www.xmailserver.org/"
@@ -16,21 +16,14 @@ DEPEND="virtual/glibc"
 PROVIDE="virtual/mta"
 
 pkg_setup() {
-	if ! grep -q ^xmail: /etc/group
-	then
-		groupadd xmail || die "problem adding group xmail"
-	fi
-	if ! grep -q ^xmail: /etc/passwd
-	then
-		useradd -g xmail -d /dev/null -s /bin/false xmail \
-			|| die "problem adding user xmail"
-	fi
+	enewgroup xmail
+	enewuser xmail -1 /bin/false /dev/null xmail
 }
 
 src_compile() {
-	if [ `use x86`] ; then
+	if use x86 ; then
 		emake -f Makefile.lnx || die
-	elif [ `use sparc` ]; then
+	elif use sparc ; then
 		emake -f Makefile.slx || die
 	fi
 	sed -e "s:/var/MailRoot:/etc/xmail:g" sendmail.sh > sendmail.sh.new
