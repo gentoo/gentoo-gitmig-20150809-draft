@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/blackdown-jre
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.21 2003/05/30 19:39:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.22 2003/09/01 11:54:37 weeve Exp $
+
+  01 Sep 2003; Jason Wever <weeve@gentoo.org> blackdown-jre-1.4.1.ebuild:
+  Added fix for bug #26629.
 
   30 May 2003; Jason Wever <weeve@gentoo.org> files/digest-blackdown-jre-1.4.1:
   Added digest for blackdown-jre-1.4.1 for sparc.

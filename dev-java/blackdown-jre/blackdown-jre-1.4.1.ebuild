@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1.ebuild,v 1.3 2003/05/24 06:37:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1.ebuild,v 1.4 2003/09/01 11:54:37 weeve Exp $
 
 inherit java nsplugins gcc
 
@@ -57,6 +57,13 @@ src_install () {
 	rm ${D}/opt/${P}/lib/font.properties.orig
 
 	set_java_env ${FILESDIR}/${VMHANDLE}
+
+	# Fix for bug #26629.
+	if [ "${PROFILE_ARCH}" = "sparc64" ]
+	then
+		sed -i -e 's/\/\//\/sparc\//g' \
+			${D}/etc/env.d/java/20blackdown-jre-1.4.1
+	fi
 }
 
 pkg_postinst () {
