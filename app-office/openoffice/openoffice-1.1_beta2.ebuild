@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_beta.ebuild,v 1.4 2003/04/09 23:12:17 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1_beta2.ebuild,v 1.1 2003/06/18 19:32:30 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -53,10 +53,11 @@ FT_VER="2.1.3"
 STLP_VER="4.5.3"
 MY_PV="${PV/_/}"
 INSTDIR="${LOC}/OpenOffice.org${PV}"
-S="${WORKDIR}/oo_${MY_PV}_src"
+S="${WORKDIR}/ooo_${MY_PV}_src"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
 SRC_URI="http://ny1.mirror.openoffice.org/stable/${MY_PV}/OOo_${MY_PV}_source.tar.bz2
 	http://sf1.mirror.openoffice.org/stable/${MY_PV}/OOo_${MY_PV}_source.tar.bz2
+	http://niihau.student.utwente.nl/openoffice/stable/${MY_PV}/OOo_${MY_PV}_source.tar.bz2
 	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/gpc231.tar.Z
 	mirror://sourceforge/freetype/freetype-${FT_VER}.tar.bz2"
 HOMEPAGE="http://www.openoffice.org/"
@@ -92,7 +93,7 @@ pkg_setup() {
 	if [ "$(gcc-version)" != "3.2" ]
 	then
 		eerror
-		eerror "This build needs gcc-3.2 or later, but due to profile"
+		eerror "This build needs gcc-3.2.x, but due to profile"
 		eerror "settings, it cannot DEPEND on it, so please merge it"
 		eerror "manually:"
 		eerror
@@ -102,8 +103,8 @@ pkg_setup() {
 		eerror "gcc-3.2.  Thus if there is already a gcc-3.2.1-r2 out, use this"
 		eerror "rather than 3.2.1, etc."
 		eerror
-		eerror "As of writing, gcc-3.2.1 seemed to create the most stable builds."
-		eerror "Also, because OO is such a complex build, ONLY gcc-3.2.1 will be"
+		eerror "As of writing, gcc-3.2.3-r1 seemed to create the most stable builds."
+		eerror "Also, because OO is such a complex build, ONLY gcc-3.2.3-r1 will be"
 		eerror "supported!"
 		eerror
 		eerror "This process is not highly recomended, as upgrading your compiler"
@@ -162,7 +163,7 @@ oo_setup() {
 			export GCC_PROFILE="$(/usr/sbin/gcc-config --get-current-profile)"
 
 			# Just recheck gcc version ...
-			if [ "$(gcc-version)" != "3.2" ]
+			if [ "$(gcc-version)" != "3.2" ] 
 			then
 				# See if we can get a gcc profile we know is proper ...
 				if /usr/sbin/gcc-config --get-bin-path ${CHOST}-3.2.1 &> /dev/null
@@ -203,8 +204,9 @@ src_unpack() {
 	rm STLport-4.5.3.patch
 	epatch ${FILESDIR}/${PV}/newstlportfix.patch
 	cd ${S}
-	epatch ${FILESDIR}/${PV}/openoffice-xrender.patch
-	
+	epatch ${FILESDIR}/${PV}/no-mozab.patch
+
+
 	# Now for our optimization flags ...
 	perl -pi -e "s|^CFLAGSOPT=.*|CFLAGSOPT=${CFLAGS}|g" \
 		${S}/solenv/inc/unxlngi3.mk
@@ -236,7 +238,7 @@ get_EnvSet() {
 }
 
 src_compile() {
-
+	addpredict /bin
 	local buildcmd=""
 
 	oo_setup
@@ -254,6 +256,17 @@ src_compile() {
 		# we take the easy way out. (Az)
 		export CC="/usr/bin/ccache/ccache ${CC}"
 		export CXX="/usr/bin/ccache/ccache ${CXX}"
+	fi
+    
+	# Enable new ccache for this build 
+	if [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
+	     "${FEATURES/ccache/}" != "${FEATURES}" -a \
+	     -x /usr/bin/ccache ]
+	then
+		# Build uses its own env with $PATH, etc, so
+		# we take the easy way out. (Az)
+		export CC="/usr/bin/ccache ${CC}"
+		export CXX="/usr/bin/ccache ${CXX}"
 	fi
     
 	# Enable distcc for this build (Az)
@@ -364,6 +377,9 @@ src_install() {
 	addpredict "/user"
 	addpredict "/share"
 	addpredict "/dev/dri"
+	addpredict "/usr/bin/soffice"
+	addpredict "/pspfontcache"	
+
 	# This allows us to change languages without editing the ebuild.
 	#
 	#   languages1="ENUS,FREN,GERM,SPAN,ITAL,DTCH,PORT,SWED,POL,RUSS"
@@ -447,13 +463,13 @@ src_install() {
 
 	# Install user autoresponse file
 	insinto /etc/openoffice
-	sed -e "s|<pv>|${PV}|g" ${T}/rsfile-local > ${T}/autoresponse.conf
-	doins ${T}/autoresponse.conf
+	sed -e "s|<pv>|${PV//_beta2}|g" ${T}/rsfile-local > ${T}/autoresponse-${PV}.conf
+	doins ${T}/autoresponse-${PV}.conf
 	
 	# Install wrapper script
 	exeinto /usr/bin
-	sed -e "s|<pv>|${PV}|g" \
-		${FILESDIR}/${PV}/ooffice-wrapper-1.2 > ${T}/ooffice
+	sed -e "s|<pv>|${PV//_beta2}|g" \
+		${FILESDIR}/${PV}/ooffice-wrapper-1.3 > ${T}/ooffice
 	doexe ${T}/ooffice
 	# Component symlinks
 	dosym ooffice /usr/bin/oocalc
@@ -484,10 +500,10 @@ src_install() {
 
 	if [ -n "`use kde`" ]
 	then
-		local kdeloc="${D}${INSTDIR}/share/kde/net/applnk/OpenOffice.org${PV}"
+		local kdeloc="${D}${INSTDIR}/share/kde/net/"
 	
 		# Portage do not work with the space ..
-		mv ${D}${INSTDIR}/share/kde/net/applnk/OpenOffice.org\ ${PV} ${kdeloc}
+#		mv ${D}${INSTDIR}/share/kde/net/applnk/OpenOffice.org\ ${PV//_beta/Beta} ${kdeloc}
 		
 		insinto /usr/share/applnk/OpenOffice.org
 		# Install the files needed for the catagory
@@ -495,7 +511,7 @@ src_install() {
 		doins ${kdeloc}/.order
 		dodir /usr/share
 		# Install the icons and mime info
-		cp -a ${D}${INSTDIR}/share/kde/net/mimelnk/share/* ${D}/usr/share
+		cp -a ${D}${INSTDIR}/share/kde/net/share/mimelnk ${D}${INSTDIR}/share/kde/net/share/icons ${D}/usr/share
 		
 		for x in ${kdeloc}/*.desktop
 		do
@@ -508,25 +524,16 @@ src_install() {
 	fi
 
 	# Unneeded, as they get installed into /usr/share...
-	rm -rf ${D}${INSTDIR}/share/{cde,gnome,kde}
-
-	for f in ${D}/usr/share/gnome/apps/OpenOffice.org/* ; do
-		echo 'Categories=Application;Office;' >> ${f}
-	done
+	# They are needed else user installation fails.
+#	rm -rf ${D}${INSTDIR}/share/{cde,gnome,kde}
+#
+#	for f in ${D}/usr/share/gnome/apps/OpenOffice.org/* ; do
+#		echo 'Categories=Application;Office;' >> ${f}
+#	done
 
 	# Make sure these do not get nuked.
-	keepdir ${INSTDIR}/user/config/registry/instance/org/openoffice/{Office,ucb}
 	keepdir ${INSTDIR}/user/psprint/{driver,fontmetric}
 	keepdir ${INSTDIR}/user/{autocorr,backup,plugin,store,temp,template}
-}
-
-pkg_preinst() {
-
-	# The one with OO-1.0.0 was not valid
-	if [ -f ${ROOT}/etc/openoffice/autoresponse.conf ]
-	then
-		rm -f ${ROOT}/etc/openoffice/autoresponse.conf
-	fi
 }
 
 pkg_postinst() {

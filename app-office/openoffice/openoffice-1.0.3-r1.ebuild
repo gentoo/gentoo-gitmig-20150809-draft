@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3-r1.ebuild,v 1.1 2003/05/25 08:11:53 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3-r1.ebuild,v 1.2 2003/06/18 19:32:30 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -578,6 +578,10 @@ src_install() {
 	sed -e "s|<pv>|${PV}|g" \
 		${FILESDIR}/${PV}/ooffice-wrapper-1.3 > ${T}/ooffice
 	doexe ${T}/ooffice
+	sed -e "s|/soffice|/spadmin|g" \
+		${T}/ooffice > ${T}/oopadmin
+	doexe ${T}/oopadmin
+	
 	# Component symlinks
 	dosym ooffice /usr/bin/oocalc
 	dosym ooffice /usr/bin/oodraw
@@ -585,7 +589,6 @@ src_install() {
 	dosym ooffice /usr/bin/oomath
 	dosym ooffice /usr/bin/oowriter
 	dosym ooffice /usr/bin/oosetup
-	dosym ooffice /usr/bin/oopadmin
 
 	einfo "Installing Menu shortcuts (need \"gnome\" or \"kde\" in USE)..."
 	if [ -n "`use gnome`" ]

@@ -121,38 +121,43 @@ LOCALEOO=`echo $LOCALE | sed 's/_/-/'`
 ## install OO for this user if needed
 ##
 if [ -z "$OOHOME" ] ; then
-  if [ -e /etc/openoffice/autoresponse.conf ] && \
-    grep -q DESTINATIONPATH /etc/openoffice/autoresponse.conf ; then
-    # first install
-    OOHOME=`grep DESTINATIONPATH /etc/openoffice/autoresponse.conf | \
-           sed -e 's/DESTINATIONPATH=//' -e "s|<home>|$HOME|"`
+  if [ -e /etc/openoffice/autoresponse-<pv>.conf ] && \
+    grep -q DESTINATIONPATH /etc/openoffice/autoresponse-<pv>.conf ; then
 
-    if [ -d "$OOHOME" ]; then
-      echo "openoffice.org:  You have no entry for $OOVERSION in ~/.sversionrc, "
-      echo "yet the directory $OOHOME exists." 
-      echo "Please remove $OOHOME and try again."
-      exit 1
+#	Do not take old settings as migration results in broken behaviour
+#
+	UPDATEFLAG=""
+    if oldhome="`get_settings_dir "OpenOffice.org 1.0.3"`" ; then
+#      OOHOME="$oldhome"
+      echo "Using settings from 1.0.3: /${oldhome}"
+#      /bin/echo -e "OpenOffice.org <pv>=file://$oldhome\r" >> ~/.sversionrc
+		UPDATEFLAG="-update:/$oldhome"
     fi
+      # first install
+      OOHOME=`grep DESTINATIONPATH /etc/openoffice/autoresponse-<pv>.conf | \
+             sed -e 's/DESTINATIONPATH=//' -e "s|<home>|$HOME|"`
 
-    if oldhome="`get_settings_dir "OpenOffice.org 1.0.1"`" ; then
-      OOHOME="$oldhome"
-      echo "Using settings from 1.0.1"
-      /bin/echo -e "OpenOffice.org <pv>=file://$oldhome\r" >> ~/.sversionrc
-    else
+      if [ -d "$OOHOME" ]; then
+        echo "openoffice.org:  You have no entry for $OOVERSION in ~/.sversionrc, "
+        echo "yet the directory $OOHOME exists." 
+        echo "Please remove $OOHOME and try again."
+        exit 1
+      fi
+
       echo "running openoffice.org setup..."
-      if ! /opt/OpenOffice.org<pv>/program/setup -R:/etc/openoffice/autoresponse.conf >& /dev/null; then
+      if ! /opt/OpenOffice.org<pv>/program/setup ${UPDATEFLAG} -R:/etc/openoffice/autoresponse-<pv>.conf >& /dev/null; then
         echo "setup failed.. abort"
         exit 1
       fi
 
 
-    fi
+#    fi
     
     echo "Setup complete.  Running openoffice.org..."
 
 else
     echo "openoffice.org: Damnit! I can't find OpenOffice's user files. Did you break"
-    echo "the /etc/openoffice/autoresponse.conf file manually ?"
+    echo "the /etc/openoffice/autoresponse-<pv>.conf file manually ?"
     echo "This file should contain DESTINATIONPATH"
     exit 1
   fi
@@ -177,34 +182,38 @@ fi
 ## Previous dead installation?
 [ -d $HOME/.openoffice/user ] && echo "Warning: you have a user settings directory from 1.0.0 in ~/.openoffice/user - this is no longer used"
 
-SETUPFILE="$OOHOME/user/config/registry/instance/org/openoffice/Setup.xml"
-mv $SETUPFILE $SETUPFILE.tmp
-
-if ! grep -q "\<ooLocale" $SETUPFILE.tmp ; then
-	# Set ooLocale to nothing in $SETUPFILE. The UI language is handled by LANG.
-	# A good value for ooLocale will be set before starting.
-	cat $SETUPFILE.tmp | \
-	perl -e "while (<>) { /<Office>/ && print \" <L10N>\n  <ooLocale cfg:type=\\\"string\\\"/>\n </L10N>\n\";print \$_;}" > \
-	$SETUPFILE
-	rm -f $SETUPFILE.tmp
-	mv $SETUPFILE $SETUPFILE.tmp
-fi
-
 ## Change the ooLocale key in SETUPFILE acording to LOCALE
-cat $SETUPFILE.tmp | \
-  sed 's#<ooLocale\>[^/]*/[^>]*>#<ooLocale cfg:type="string">'$LOCALEOO'</ooLocale>#'\
-  > $SETUPFILE
-rm -f $SETUPFILE.tmp
+TMPFILE=`mktemp -t oooLocale.XXXXXXXXXX` && {
+	cat >${TMPFILE} <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<oor:node xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" oor:name="Setup" oor:package="org.openoffice">
+ <node oor:name="L10N">
+  <prop oor:name="ooLocale" oor:type="xs:string">
+   <value>$LOCALEOO</value>
+  </prop>
+ </node>
+</oor:node>
+EOF
+	ooconfigimport $TMPFILE >dev/null
+	rm -f ${TMPFILE}
+}
 
 ##
 ## That's it. Launch the beast (with the given args)
 ##
 LANG=$LOCALE
 export LANG
-export LD_PRELOAD=/usr/lib/libfreetype.so
-exec "$OOHOME/soffice" "$@"
-
+case `basename $0` in
+    oosetup) exec "$OOHOME/setup"
+    ;;
+    oopadmin) exec "$OOHOME/spadmin"
+    ;;
+    *) exec "$OOHOME/soffice" "$@"
+    ;;
+esac
 ## Changelog
+# 2003/04/01 halls
+#   * Version 1.1beta
 # 2003/02/03 halls
 #   * Check for nonexistent ooLocale every run
 # 2003/01/09 halls
