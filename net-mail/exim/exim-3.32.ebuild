@@ -52,6 +52,7 @@ src_unpack() {
         -e "s:CONFIGURE_FILE=/usr/exim/configure:CONFIGURE_FILE=/etc/exim/configure:" \
         -e "s:EXIM_MONITOR=eximon.bin:# EXIM_MONITOR=eximon.bin:" \
         -e "s:# EXIM_PERL=perl.o:EXIM_PERL=perl.o:" \
+		  -e "s:# INFO_DIRECTORY=/usr/local/info:INFO_DIRECTORY=/usr/share/info:" \
         -e "s:# LOG_FILE_PATH=syslog:LOG_FILE_PATH=syslog:" \
         -e "s:# PID_FILE_PATH=/var/lock/exim%s.pid:PID_FILE_PATH=/var/run/exim%s.pid:" \
         -e "s:# SPOOL_DIRECTORY=/var/spool/exim:SPOOL_DIRECTORY=/var/spool/exim:" \
@@ -77,7 +78,9 @@ src_unpack() {
     fi
 
     cd ..
-    try make
+
+# Why the heck is this here?
+#		try make
 
     if [ -n "`use mta-tls`" ]; then
         cp Local/Makefile Local/Makefile.tmp
@@ -101,8 +104,7 @@ src_unpack() {
 }
 
 src_compile() {
-    cd ${S}
-    try pmake
+    try make
 }
 
 src_install () {
