@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.26.ebuild,v 1.2 2005/02/24 17:21:24 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.26.ebuild,v 1.3 2005/03/09 00:41:56 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/d/dpkg/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~arm amd64"
+KEYWORDS="amd64 arm ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.6.0
