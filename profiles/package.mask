@@ -696,12 +696,9 @@ dev-libs/libmrproject
 >=media-gfx/gthumb-1.100
 >=net-mail/balsa-2.0.0_pre1
 
-
-# at-spi doesn't install all headers so libgail-gnome doesn't build ok.
-# therefore at-poke isn't in portage since it can't be tested
 gnome-extra/libgail-gnome
 gnome-extra/at-spi
-
+gnome-extra/at-poke
 
 # mkennedy@gentoo.org 14 Apr 2002
 # Beta, so masked for now. See also bug 1662.
