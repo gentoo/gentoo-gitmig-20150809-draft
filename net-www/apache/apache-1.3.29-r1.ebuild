@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.29-r1.ebuild,v 1.13 2004/05/05 12:48:31 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.29-r1.ebuild,v 1.14 2004/05/24 01:11:03 zul Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ SRC_URI="http://httpd.apache.org/dist/httpd/apache_${PV}.tar.gz
 # The mod_ssl archive is only for providing the EAPI patch in here.
 # You should install the net-www/mod_ssl package for the actual DSO.
 
-DEPEND="dev-lang/perl <sys-libs/db-4.1
+DEPEND="dev-lang/perl <=sys-libs/db-4.1
 	>=dev-libs/mm-1.1.3
 	>=sys-libs/gdbm-1.8
 	sys-libs/db

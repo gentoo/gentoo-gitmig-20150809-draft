@@ -1,9 +1,13 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.168 2004/05/23 19:14:23 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.169 2004/05/24 01:11:03 zul Exp $
 
   23 May 2004; Christian Birchinger <joker@gentoo.org> apache-1.3.31.ebuild:
   Added sparc stable keyword
+
+  25 May 2004; <chuck@gentoo.org> apache-1.3.29-r1.ebuild,
+  apache-1.3.29-r2.ebuild:
+  Updated depends.
 
   23 May 2004; Luca Barbato <lu_zero@gentoo.org> apache-1.3.31.ebuild:
   Marked ppc
