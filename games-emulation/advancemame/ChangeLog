@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/advancemame
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.17 2004/08/25 05:38:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.18 2004/09/01 02:30:10 mr_bones_ Exp $
+
+*advancemame-0.86.0 (31 Aug 2004)
+
+  31 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +advancemame-0.86.0.ebuild:
+  version bump
 
 *advancemame-0.85.0 (24 Aug 2004)
 

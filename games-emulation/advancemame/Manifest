@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0bf79059dff66d2da024588c422a2e1c ChangeLog 3485
+MD5 04e2cd1194a80c495f69610b10b96feb ChangeLog 3621
+MD5 c7a56ad2d4cb791e613869debc9e18df advancemame-0.86.0.ebuild 1823
 MD5 972b8c9f939a33a7074e0819fb55455c metadata.xml 962
 MD5 a67ea9d0aba6813bf7099ba0533ba44d advancemame-0.85.0.ebuild 1820
+MD5 cfcb101ca859965c03e4c39303d3c481 files/digest-advancemame-0.86.0 72
 MD5 0fcd53e6dc55e784545e640310890175 files/digest-advancemame-0.85.0 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBMoTDHTu7gpaalycRAgZEAJ0RMiEir+70b7ZQrgF4WjwFRGX4sgCgvrfn
-zdBBYZCf60Afh4r04JE3kYY=
-=ZWJU
------END PGP SIGNATURE-----
