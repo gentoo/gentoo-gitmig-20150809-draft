@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.0_rc1-r1.ebuild,v 1.1 2003/03/11 04:05:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.0_rc1-r1.ebuild,v 1.2 2003/03/28 10:10:53 pvdabeel Exp $
 
 # The release candidates are named syslog-ng-1.6.0rc1 for example
 MY_P=${P/_/} 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.balabit.com/products/syslog_ng/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc alpha"
+KEYWORDS="x86 ppc ~sparc alpha"
 IUSE="tcpd"
 
 DEPEND=">=dev-libs/libol-0.3.9
