@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.5_pre20040515.ebuild,v 1.1 2004/05/15 22:46:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.5_pre20040515.ebuild,v 1.2 2004/05/17 17:15:46 gmsoft Exp $
 
 MY_V=${PV/_pre/-CVS}
 DESCRIPTION="PALO : PArisc Linux Loader"
@@ -16,6 +16,11 @@ DEPEND="virtual/glibc"
 PROVIDE="virtual/bootloader"
 
 S=${WORKDIR}/palo
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${PN}-remove-HOME-TERM.patch
+}
 
 src_compile() {
 	emake -C palo CFLAGS="${CFLAGS} -I../include -I../lib" || die

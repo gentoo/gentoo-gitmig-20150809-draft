@@ -1,0 +1,95 @@
+diff -uNr palo.orig/Makefile palo/Makefile
+--- palo.orig/Makefile	2004-05-17 13:39:00.431714000 +0200
++++ palo/Makefile	2004-05-17 13:39:45.221714000 +0200
+@@ -56,7 +56,7 @@
+     ROOT=root=/dev/nfs nfsroot=${NFSROOT} ip=bootp
+ endif
+ 
+-CMDLINE = 0/vmlinux HOME=/ TERM=linux $(ROOT) $(EISAIRQ) $(CONSOLE)
++CMDLINE = 0/vmlinux $(ROOT) $(EISAIRQ) $(CONSOLE)
+ 
+ all: makepalo README palo.conf
+ 	
+diff -uNr palo.orig/README palo/README
+--- palo.orig/README	2004-05-17 13:39:00.431714000 +0200
++++ palo/README	2004-05-17 13:40:09.341714000 +0200
+@@ -42,13 +42,13 @@
+        files to it, unmount.
+      * Use palo to make the disk bootable:
+         $ palo \
+-             -c "5/vmlinux HOME=/ TERM=linux console=tty" \
++             -c "5/vmlinux console=tty" \
+              -k path/to/vmlinux \
+              -I /dev/your-disk
+ 
+       On a self-hosted system, you can accomplish the same thing by placing
+       the following into /etc/palo.conf:
+-   --commandline=5/vmlinux HOME=/ TERM=linux console=tty
++   --commandline=5/vmlinux console=tty
+    --recoverykernel=/boot/vmlinux
+    --init-partitioned=/dev/your-disk
+ 
+diff -uNr palo.orig/README.html palo/README.html
+--- palo.orig/README.html	2004-05-17 13:39:00.431714000 +0200
++++ palo/README.html	2004-05-17 13:40:27.801714000 +0200
+@@ -52,13 +52,13 @@
+     <p><li>Use <i>palo</i> to make the disk bootable:
+     <pre>
+ 	$ palo \
+-	     -c "5/vmlinux HOME=/ TERM=linux console=tty" \
++	     -c "5/vmlinux console=tty" \
+ 	     -k path/to/vmlinux \
+ 	     -I /dev/your-disk</pre>
+ <center><table border=1 bgcolor=yellow width=80%><tr><td>
+ On a self-hosted system, you can accomplish the same thing by placing
+ the following into <tt>/etc/palo.conf</tt>:
+-<pre>--commandline=5/vmlinux HOME=/ TERM=linux console=tty
++<pre>--commandline=5/vmlinux console=tty
+ --recoverykernel=/boot/vmlinux
+ --init-partitioned=/dev/your-disk</pre>
+ and running <i>palo</i>.
+diff -uNr palo.orig/ipl/ipl.c palo/ipl/ipl.c
+--- palo.orig/ipl/ipl.c	2004-05-17 13:39:00.491714000 +0200
++++ palo/ipl/ipl.c	2004-05-17 13:39:19.681714000 +0200
+@@ -481,9 +481,6 @@
+ 	        chk_strcat(commandline, "ttyB0", CMDLINELEN, &ok);
+             else
+ 	        chk_strcat(commandline, "ttyS0", CMDLINELEN, &ok);
+-
+-	    if (strstr(commandline, " TERM=") == 0)
+-	        chk_strcat(commandline, " TERM=vt102", CMDLINELEN, &ok);
+ 	}
+ 	else
+ 	{
+@@ -519,8 +516,6 @@
+ 	    }
+ 	    if (strstr(commandline, " sti_font=") == 0)
+ 	        chk_strcat(commandline, " sti_font=VGA8x16", CMDLINELEN, &ok);
+-	    if (strstr(commandline, " TERM=") == 0)
+-	        chk_strcat(commandline, " TERM=linux", CMDLINELEN, &ok);
+ 	}
+     }
+ 
+diff -uNr palo.orig/palo.conf palo/palo.conf
+--- palo.orig/palo.conf	2004-05-17 13:39:00.431714000 +0200
++++ palo/palo.conf	2004-05-17 13:41:01.541714000 +0200
+@@ -8,7 +8,7 @@
+ # recovery kernel, and the default dynamically-booted kernel.
+ # --recoverykernel=/boot/vmlinux
+ # --init-partitioned=/dev/sda
+-# --commandline=3/boot/vmlinux HOME=/ TERM=linux root=/dev/sda3
++# --commandline=3/boot/vmlinux root=/dev/sda3
+ 
+ #
+ #Usage: palo [options]
+@@ -18,8 +18,8 @@
+ #		Maximum 127 characters.
+ #    -k, --recoverykernel=path to recovery kernel (perhaps /boot/vmlinux)
+ #    -b, --bootloader=path to boot loader
+-		Defaults to /usr/share/palo/iplboot -- you usually don't
+-		need to use -b or --bootloader
++#		Defaults to /usr/share/palo/iplboot -- you usually don't
++#		need to use -b or --bootloader
+ #    -r, --ramdisk=path to initial ramdisk image
+ #    -I, --init-partitioned=partitioned device or file
+ #    		Initialize a pre-partitioned device, usually a hard disk.

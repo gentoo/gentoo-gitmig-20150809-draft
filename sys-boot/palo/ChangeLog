@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/palo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.5 2004/05/15 22:46:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.6 2004/05/17 17:15:46 gmsoft Exp $
+
+  17 May 2004; Guy Martin <gmsoft@gentoo.org> palo-1.5_pre20040515.ebuild,
+  files/palo-remove-HOME-TERM.patch, files/palo.conf:
+  Removed the use of HOME and TERM variable in kernel command line to save some
+  chars.
 
 *palo-1.5_pre20040515 (15 May 2004)
 
