@@ -1,5 +1,5 @@
-MD5 307ed5ce5170577c5485d9a6e8ba897f ChangeLog 2844
-MD5 389e81d5c3439e8efbc41eae6101172f enigma-0.81.ebuild 1286
+MD5 4b9660b08ea7f8a4a86f5f50f077e1df ChangeLog 2931
+MD5 3da520b95430d6b0e5506eec03633d12 enigma-0.81.ebuild 1291
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 43e970bb89bb24c634b411cf29b5cb7f files/0.70-gcc3.patch 258
 MD5 a6926b0172a634b74980c6df03de48e4 files/digest-enigma-0.81 64
