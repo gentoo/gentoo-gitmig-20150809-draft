@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 be1dcf2a8019d9c3db1b14a3a9d21df6 ChangeLog 1399
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 201756dca0dbb4bcc2dc8c7b8b49693a xmms-crystality-0.92.ebuild 1028
+MD5 0a79800c930d7451893c43ae357cc1a0 xmms-crystality-0.92.ebuild 1028
 MD5 defb2590e99c2f2eb7604180fb52e379 files/digest-xmms-crystality-0.92 73
 MD5 b160c8a029fa126ecb79661a6dbf1dbc files/xmms-crystality-0.92-gcc3.patch 2548
 MD5 efba8448e71a2ebc3d6659c52e26d24a files/xmms-crystality-0.92-PIC.patch 1380
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBkzaHArHZZzCEUG0RAmusAJwPb7iQ7rd3u11iEctAsWWI4EOTcwCeIzMD
+C8wSGB7s7e6y+0SaMhHB1L4=
+=cZEY
+-----END PGP SIGNATURE-----

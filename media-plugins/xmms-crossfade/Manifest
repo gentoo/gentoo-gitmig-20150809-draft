@@ -1,8 +1,18 @@
-MD5 f577855e799b283fe3ad80e052ec05c8 ChangeLog 2687
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d22689fe176584d86bdec7ff2032ad1c ChangeLog 2804
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 0e6a164f967e5f15908c1663f24633ef xmms-crossfade-0.3.8.ebuild 694
+MD5 1e799f9d29c42ec812c8095008e3b5a3 xmms-crossfade-0.3.8.ebuild 692
 MD5 a632c8ee128cfb941b4233433440b6dc xmms-crossfade-0.3.4.ebuild 626
 MD5 70651091e29c0baf7a2c2c87a9e03d20 xmms-crossfade-0.3.5.ebuild 599
 MD5 9bd20128f860dc9821976ce49fd6f70f files/digest-xmms-crossfade-0.3.8 72
 MD5 fca01d6a0ca85be3532efac855b1869f files/digest-xmms-crossfade-0.3.4 72
 MD5 d6f4eef9737f3bb2e7b02dc1a6d90101 files/digest-xmms-crossfade-0.3.5 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBkzYLArHZZzCEUG0RAtJAAKCD0MG+eWSp75jVmzMB16T/z6OF9gCdHC//
+OqY3qKKtQCBNyTwoC7xnPYI=
+=nXIK
+-----END PGP SIGNATURE-----

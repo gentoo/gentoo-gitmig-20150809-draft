@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-btexmms
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-btexmms/ChangeLog,v 1.4 2004/07/19 20:16:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-btexmms/ChangeLog,v 1.5 2004/11/11 09:49:53 eradicator Exp $
+
+  11 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-btexmms-0.5.ebuild:
+  Stable amd64, sparc.
 
   19 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-btexmms-0.5.ebuild:
