@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.80_beta1.ebuild,v 1.1 2003/09/17 06:06:35 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.80_beta1.ebuild,v 1.2 2003/09/24 20:42:07 msterret Exp $
 
 inherit games
 
@@ -14,9 +14,11 @@ KEYWORDS="~x86"
 SLOT="0"
 
 DEPEND="virtual/glibc
+	sys-libs/zlib
+	media-libs/sdl-ttf
 	>=media-libs/libsdl-1.2.0
-	media-libs/sdl-mixer
-	media-libs/sdl-image
+	>=media-libs/sdl-mixer-1.2.4
+	>=media-libs/sdl-image-1.2.0
 	>=dev-lang/lua-4.0"
 
 src_unpack() {
@@ -26,6 +28,7 @@ src_unpack() {
 	# I've notified upstream of the need for this patch so hopefully
 	# the next release will have it included in the distributed tarball.
 	epatch ${FILESDIR}/0.70-gcc3.patch
+	epatch ${FILESDIR}/enigma-0.80-beta.patch
 }
 
 src_compile() {

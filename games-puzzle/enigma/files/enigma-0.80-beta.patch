@@ -1,0 +1,26 @@
+Index: src/display.cc
+===================================================================
+RCS file: /cvsroot/enigma/enigma/src/display.cc,v
+retrieving revision 1.34
+retrieving revision 1.35
+diff -c -u -r1.34 -r1.35
+--- src/display.cc	17 Jul 2003 20:22:01 -0000	1.34
++++ src/display.cc	17 Sep 2003 17:06:26 -0000	1.35
+@@ -15,7 +15,7 @@
+  * with this program; if not, write to the Free Software Foundation, Inc.,
+  * 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
+  *
+- * $Id: enigma-0.80-beta.patch,v 1.1 2003/09/24 20:42:07 msterret Exp $
++ * $Id: enigma-0.80-beta.patch,v 1.1 2003/09/24 20:42:07 msterret Exp $
+  */
+ 
+ /*
+@@ -631,8 +631,6 @@
+ //----------------------------------------------------------------------
+ // RUBBER BANDS
+ //----------------------------------------------------------------------
+-
+-#include "SDL_gfxPrimitives.h"
+ 
+ void
+ DL_Lines::draw_onepass (px::GC &gc)//, const WorldArea &a, int x, int y)
