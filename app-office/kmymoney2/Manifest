@@ -1,24 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 de972adf3afb281ef34649958f49f5ba ChangeLog 2881
-MD5 100f03c765bcf1f527fba855e86bff00 kmymoney2-0.5.1.ebuild 501
-MD5 19948e9a346a9e7771f851fa61075d43 kmymoney2-0.6.1.ebuild 509
-MD5 cf6957b9d1269e64c19f382e83592545 kmymoney2-0.6.2.ebuild 603
-MD5 1cf8252cb871da92ca8b8a341113b4b5 kmymoney2-0.6.ebuild 517
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
+MD5 de972adf3afb281ef34649958f49f5ba ChangeLog 2881
 MD5 7365fdc0aa0d31be91a90ff11f42981f kmymoney2-0.6.4.ebuild 604
-MD5 1e021f274fd4522ebc21d1efaa886126 files/digest-kmymoney2-0.5.1 69
-MD5 e391b736d19e1bcd73809df2505d4f7c files/digest-kmymoney2-0.6 67
-MD5 59b72e89be9d093eff803ee409e03f79 files/digest-kmymoney2-0.6.1 69
-MD5 b3fe7b1c928e0834b5821b639e3bd586 files/digest-kmymoney2-0.6.2 69
 MD5 4858dd29941b51d0944ff1066f30af13 files/digest-kmymoney2-0.6.4 69
-MD5 c3b80300877c3e8f27d4b4a87895799a files/kmymoney2-0.6.2-configure-arts.patch 3565
 MD5 c3b80300877c3e8f27d4b4a87895799a files/kmymoney2-0.6.4-configure-arts.patch 3565
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCI2frKRy60XGEcJIRAmoLAJ42hECSN8RBQk6kqZRnzAoXV9z1KgCfaxH0
-L3sdnceESSOOhipUbTKJo3E=
-=gZlQ
------END PGP SIGNATURE-----
