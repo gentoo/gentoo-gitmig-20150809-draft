@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2954 2004/06/21 20:55:00 humpback Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2955 2004/06/22 12:55:06 wolf31o2 Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# <wolf31o2@gentoo.org>
+# Breaks with sandbox, needs investigation
+net-misc/pxes
+
 # <humpback@gentoo.org>
 # Needs testing
 =net-im/skype-*
