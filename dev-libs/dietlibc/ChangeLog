@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.36 2004/08/21 21:25:36 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.37 2004/10/01 21:23:53 robbat2 Exp $
+
+*dietlibc-0.27 (01 Oct 2004)
+
+  01 Oct 2004; Robin H. Johnson <robbat2@gentoo.org> +files/gcc-33-r2.patch,
+  +dietlibc-0.27.ebuild:
+  Version bump, add debug support, do CFLAGS properly, do gcc3[34] patch
+  properly, ssp.c merged upstream, mips in unstable, and add cross-compile
+  stuff.
 
 *dietlibc-0.26-r1 (21 Aug 2004)
 
