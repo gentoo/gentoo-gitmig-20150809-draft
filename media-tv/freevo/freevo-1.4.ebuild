@@ -1,8 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.4.ebuild,v 1.1 2003/12/03 08:10:29 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.4.ebuild,v 1.2 2003/12/03 19:05:44 seemant Exp $
 
 inherit distutils
+
+IUSE="matrox dvd encode lirc X nls"
 
 DESCRIPTION="Digital video jukebox (PVR, DVR)."
 HOMEPAGE="http://www.freevo.org/"
@@ -12,7 +14,6 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="matrox dvd encode lirc X"
 
 DEPEND="${DEPEND}
 	>=dev-python/pygame-1.5.6
@@ -72,6 +73,8 @@ src_install() {
 	dodoc BUGS COPYING ChangeLog FAQ INSTALL PKG-INFO README TODO \
 		Docs/{CREDITS,NOTES,plugins/*.txt}
 	cp -r Docs/{installation,plugin_writing} "${D}/usr/share/doc/${PF}"
+
+	use nls || rm -rf ${D}/usr/share/locale
 }
 
 pkg_postinst() {
@@ -85,16 +88,16 @@ pkg_postinst() {
 	einfo "    freevo setup"
 	echo
 
-	if [ -e "/opt/freevo" ] ; then
-		ewarn "Please remove /opt/freevo because it is no longer used."
+	if [ -e "${ROOT}/opt/freevo" ] ; then
+		ewarn "Please remove ${ROOT}/opt/freevo because it is no longer used."
 	fi
-	if [ -e "/etc/freevo/freevo_config.py" ] ; then
-		ewarn "Please remove /etc/freevo/freevo_config.py."
+	if [ -e "${ROOT}/etc/freevo/freevo_config.py" ] ; then
+		ewarn "Please remove ${ROOT}/etc/freevo/freevo_config.py."
 	fi
-	if [ -e "/etc/init.d/freevo-record" ] ; then
-		ewarn "Please remove /etc/init.d/freevo-record"
+	if [ -e "${ROOT}/etc/init.d/freevo-record" ] ; then
+		ewarn "Please remove ${ROOT}/etc/init.d/freevo-record"
 	fi
-	if [ -e "/etc/init.d/freevo-web" ] ; then
-		ewarn "Please remove /etc/init.d/freevo-web"
+	if [ -e "${ROOT}/etc/init.d/freevo-web" ] ; then
+		ewarn "Please remove ${ROOT}/etc/init.d/freevo-web"
 	fi
 }

@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/freevo
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.10 2003/12/03 08:10:29 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.11 2003/12/03 19:05:44 seemant Exp $
+
+  03 Dec 2003; Seemant Kulleen <seemant@gentoo.org> freevo-1.4.ebuild:
+  added nls IUSE -- remove /usr/share/locale stuff if nls is not in USE. Also,
+  tweaked the postinst check and messages to be correct for relocatable root
+  dirs
 
 *freevo-1.4 (03 Dec 2003)
 
