@@ -1,5 +1,5 @@
 default-linux/x86/xbox
-# upgrade to portage >=2.0.51
+# emerge -n '>=sys-apps/portage-2.0.51'
 # cd /etc/
 # rm make.profile
 # ln -s ../usr/portage/profiles/default-linux/x86/xbox make.profile
