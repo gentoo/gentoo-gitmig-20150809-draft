@@ -1,0 +1,19 @@
+--- setup.py.orig	2004-02-23 03:50:20.555071326 -0500
++++ setup.py	2004-02-23 03:50:32.898341811 -0500
+@@ -46,16 +46,6 @@
+ otherFiles = glob.glob(os.path.join('others', '*.py'))
+ pluginFiles = glob.glob(os.path.join('plugins', '*.py'))
+ 
+-# This is a terrible hack.
+-previousInstall = os.path.join(get_python_lib(), 'supybot')
+-if os.path.exists(previousInstall):
+-    try:
+-        shutil.rmtree(previousInstall)
+-    except Exception, e:
+-        print 'Couldn\'t remove former installation: %s' % e
+-        print 'Remove by hand and then run this script.'
+-        sys.exit(-1)
+-
+ setup(
+     # Metadata
+     name='supybot',

@@ -1,0 +1,5 @@
+MD5 7a9c94ae0be7ceeaceda448edab07f43 ChangeLog 411
+MD5 eccd3e44b1e8fc954692d4faf329cf38 metadata.xml 218
+MD5 e5d24310612caaef6e3b91206aeac494 supybot-0.77.0.ebuild 906
+MD5 67a13f83c4ad67ef8e6e25c06b67cf3e files/digest-supybot-0.77.0 67
+MD5 e723df2ced2db8d65e4b8ed5026d2b2b files/supybot-0.77.0-setup.py.patch 629
