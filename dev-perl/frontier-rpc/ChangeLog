@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/frontier-rpc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/frontier-rpc/ChangeLog,v 1.1 2003/10/06 10:16:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/frontier-rpc/ChangeLog,v 1.2 2003/11/19 20:12:30 rac Exp $
+
+  19 Nov 2003; <rac@gentoo.org> frontier-rpc-0.07_beta4.ebuild:
+  keyword x86
 
 *frontier-rpc-0.07_beta4 (06 Oct 2003)
 
