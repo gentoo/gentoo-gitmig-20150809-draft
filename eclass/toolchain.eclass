@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.45 2004/11/08 05:54:25 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.46 2004/11/09 18:54:23 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -137,6 +137,8 @@ gcc-library-pkg_setup() {
 gcc_pkg_setup() {
 	gcc_setup_static_vars
 	gcc_setup_variables
+
+	S="$(gcc_get_s_dir)"
 
 	${ETYPE}-pkg_setup || die "${ETYPE}-pkg_setup failed"
 }
