@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.17 2004/07/13 22:35:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.18 2004/09/27 14:05:17 vapier Exp $
 
 inherit libtool eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://oss.sgi.com/projects/fam/download/stable/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha hppa ~amd64 ia64"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc s390 sparc x86"
 IUSE=""
 
 DEPEND=">=net-nds/portmap-5b-r6"
