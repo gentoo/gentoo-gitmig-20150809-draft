@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/ami
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ami/ChangeLog,v 1.3 2002/12/13 11:00:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ami/ChangeLog,v 1.4 2003/01/27 20:49:24 jayskwak Exp $
+
+*ami-1.1.0 (27 Jan 2003)
+  
+  27 Jan 2003: Jay Kwak <jayskwak@gentoo.org> ami-1.1.0.ebuild :
+  
+  Version update. Added ami-1.1.0_imhangul_status patch (if you use gnome)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
