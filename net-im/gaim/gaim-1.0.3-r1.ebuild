@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.0.3-r1.ebuild,v 1.1 2004/11/15 20:45:08 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.0.3-r1.ebuild,v 1.2 2004/11/16 20:18:01 rizzo Exp $
 
 inherit flag-o-matic eutils gcc debug
 
@@ -25,7 +25,7 @@ DEPEND=">=x11-libs/gtk+-2.0
 			!<dev-perl/ExtUtils-MakeMaker-6.17 )
 	spell? ( >=app-text/gtkspell-2.0.2 )
 	gnutls? ( net-libs/gnutls )
-	!gnutls? ( dev-libs/nss )
+	!gnutls? ( >=dev-libs/nss-3.9.2-r1 )
 	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )"
 	#eds? ( gnome-extra/evolution-data-server )"
 
