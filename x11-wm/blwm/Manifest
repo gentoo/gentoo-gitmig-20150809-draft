@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 19d1be361d8a133f0e79f3a2746cbae9 ChangeLog 607
-MD5 99bf1dbf3971af09d86a10b8d9df1f9f blwm-1.0.4.ebuild 1012
+MD5 5304c867a26cea5a552cde18b77630a2 blwm-1.0.4.ebuild 1081
 MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
+MD5 843beb7cedf62f27282b9be60f1f5a7e ChangeLog 732
 MD5 3636649a1d2bc2acc79b52149356033d files/digest-blwm-1.0.4 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCR+JAVWNWqTUmv+0RAlzDAKCKWoLiOmiwNTXB9rkGtjuTTl6FmwCgr1id
-g0ifRq3FepS7nJNULS+hSNw=
-=rm3R
+iD8DBQFCT/x7VWNWqTUmv+0RAsArAKCha1/zSpotojTCR5IIl3lrCT1eVQCgnFoa
+YXH+/uxK14DB+cVOKRxoMW0=
+=rZU/
 -----END PGP SIGNATURE-----

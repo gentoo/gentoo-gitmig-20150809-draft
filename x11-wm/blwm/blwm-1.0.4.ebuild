@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blwm/blwm-1.0.4.ebuild,v 1.2 2005/03/28 10:53:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blwm/blwm-1.0.4.ebuild,v 1.3 2005/04/03 14:33:37 usata Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="BLWM is a Windows 2000 like window manager localized for Brazil."
 HOMEPAGE="http://www.blanes.com.br"
@@ -25,7 +27,8 @@ src_compile(){
 	aclocal || die
 	autoheader || die
 	autoconf || die
-	automake || die
+	# automake fails on some systems, but harmless to build
+	automake
 
 	econf --with-blwmdir=/usr/share/blwm --with-confdir=/etc/blwm || die
 	emake || die
