@@ -234,3 +234,4 @@ move net-www/w3mir www-client/w3mir
 move net-www/kazehakase-cvs www-client/kazehakase-cvs
 move net-www/mozilla-bin www-client/mozilla-bin
 move net-www/mozilla-firefox-bin www-client/mozilla-firefox-bin
+move net-www/epiphany-extensions www-client/epiphany-extensions
