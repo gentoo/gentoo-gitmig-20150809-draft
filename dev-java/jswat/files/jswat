@@ -1,0 +1,48 @@
+#!/bin/sh
+# jswat Launch Script
+# Author: Dylan Carlson
+# May 2003
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/files/jswat,v 1.1 2003/05/24 10:45:47 absinthe Exp $
+
+JSWAT_VER="1.7.1"
+
+JAVA_HOME=`/usr/bin/java-config --jdk-home`
+if [ -z "${JAVA_HOME}" ] ; then
+	JAVA_HOME=`/usr/bin/java-config --jre-home`
+fi
+CLASSPATH="${JAVA_HOME}/lib/tools.jar:`/usr/bin/java-config --classpath=jswat-${JSWAT_VER}`:${CLASSPATH}"
+
+if [ ! -f ${JAVA_HOME}/bin/java ] ; then
+	echo " "
+	echo "I tried using the following Java Runtime:"
+	echo "${JAVA_HOME}/bin/java" 
+	echo " "
+	echo "Java Runtime missing.  Please run java-config(1) and ensure"
+	echo "your environment is configured properly."
+	exit 1
+else
+	echo " "
+	echo "Using Java Runtime:"
+	echo "${JAVA_HOME}/bin/java" 
+	echo " "
+	echo "Using CLASSPATH:"
+	echo "${CLASSPATH}"
+	echo " "
+fi
+
+# Make sure we're using 1.3 JDK
+
+if [ -z `echo ${JAVA_HOME} | grep "1.3"` ] ; then
+	echo "!!!  JDK 1.2 or 1.3 is required for this     "
+	echo "!!!  version of jswat (${JSWAT_VER}).        "
+	echo "!!!                                          "
+	echo "!!!  Please run java-config(1) and configure "
+	echo "!!!  your system to use a 1.2 or 1.3 JDK.    "
+	echo "!!!                                          "
+	echo "!!!  Emerge jswat-2.* for 1.4 JDKs, and use  "
+	echo "!!!  jswat2 to launch.                       "
+	echo " "
+	exit 1
+fi
+
+${JAVA_HOME}/bin/java com.bluemarsh.jswat.Main $@
