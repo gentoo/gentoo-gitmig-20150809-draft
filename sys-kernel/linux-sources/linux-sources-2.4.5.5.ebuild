@@ -95,7 +95,7 @@ fi
 if [ "${PN}" = "linux-extras" ]
 then
     DEPEND=">=sys-kernel/linux-sources-${PVR}"
-    RDEPEND=" "
+    RDEPEND="alsa? ( media-sound/alsa-utils )"
 #### XFS
 #    if [ "`use xfs`" ]
 #    then
