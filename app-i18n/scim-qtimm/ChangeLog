@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/scim-qtimm
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.4 2004/08/16 14:09:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.5 2004/08/21 20:24:09 usata Exp $
+
+*scim-qtimm-0.6_pre20040820 (22 Aug 2004)
+
+  22 Aug 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +scim-qtimm-0.6_pre20040820.ebuild:
+  Updated svn snapshot.
 
   16 Aug 2004; Mamoru KOMACHI <usata@gentoo.org>
   scim-qtimm-0.6_pre20040813.ebuild:
