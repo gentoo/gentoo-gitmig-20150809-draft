@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.34 2003/09/04 02:29:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.35 2003/09/07 10:02:33 pappy Exp $
+
+  07 Sep 2003; Alexander Gabert <pappy@gentoo.org> openoffice-1.0.3-r1.ebuild:
+  added hardened-gcc exclude flags
 
   03 Sep 2003; Jason Wever <weeve@gentoo.org> openoffice-1.0.3-r1.ebuild,
   files/1.0.3/openoffice-1.0.1-sparc.patch.bz2,
