@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.10 2003/04/13 16:50:37 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.11 2003/07/04 22:08:50 gmsoft Exp $
 
 *libao-0.8.3-r1 (12 Apr 2003)
+
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> libao-0.8.3-r1.patch :
+  Added hppa to KEYWORDS.
 
   13 Apr 2003; Philip Walls <malverian@gentoo.org> libao-0.8.3-r1.patch :
   Patch now looks for files in non-absolute path: thanks to Heinrich 

@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libvorbis
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.10 2003/03/12 22:10:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.11 2003/07/04 22:06:56 gmsoft Exp $
 
 *libvorbis-1.0-r2 (12 Mar 2003)
+
+  04 Jul 2003; Guy Martin <gmsoft@gentoo.org> libvorbis-1.0-r2.ebuild :
+  Added hppa to KEYWORDS.
 
   12 Mar 2003; Martin Holzer <mholzer@gentoo.org> libvorbis-1.0-r2.ebuild,
   files/libvorbis-1.0-r2-m4.patch:
