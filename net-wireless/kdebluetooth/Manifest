@@ -1,4 +1,6 @@
+MD5 b536444d6b55eb3f61bf2910a71a6239 kdebluetooth-20040128.ebuild 1046
 MD5 c2e4a9cbfc5a0beb260967df0f74a07b kdebluetooth-20031218.ebuild 649
 MD5 feb04efae1714bfb123403ad8391b0e2 ChangeLog 398
 MD5 96a4184e1e3325923219a5f96a5511a5 metadata.xml 163
 MD5 852dbaa21ac4ff445f4ea25c77275825 files/digest-kdebluetooth-20031218 74
+MD5 5ecabd818ab238731c65407850941cfc files/digest-kdebluetooth-20040128 74
