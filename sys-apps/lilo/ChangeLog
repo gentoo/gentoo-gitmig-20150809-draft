@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lilo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.21 2003/04/03 17:26:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.22 2003/06/23 22:25:18 azarah Exp $
+
+*lilo-22.5.5 (24 Jun 2003)
+
+  24 Jun 2003; Martin Schlemmer <azarah@gentoo.org> lilo-22.5.5.ebuild:
+  New version.
 
   03 Apr 2003; Martin Schlemmer <azarah@gentoo.org> lilo-22.5.1.ebuild :
   Set OPTS down to -O1 to fix a problem where lilo sometimes locked at
