@@ -1,6 +1,11 @@
 # ChangeLog for net-im/guifications
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/guifications/ChangeLog,v 1.7 2004/06/24 22:53:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/guifications/ChangeLog,v 1.8 2004/06/26 02:19:07 rizzo Exp $
+
+*guifications-1.9 (25 Jun 2004)
+
+  25 Jun 2004; Don Seiler <rizzo@gentoo.org> +guifications-1.9.ebuild:
+  Version bump
 
 *guifications-1.8 (31 May 2004)
 
