@@ -1,4 +1,4 @@
-MD5 af451d125672d84f4e34de81d99a15da files/digest-squishdot-1.5.0 67
-MD5 0028a90816d130f0cfc80554ba05f581 squishdot-1.5.0.ebuild 534
-MD5 ff69ebaba063596b61160066a9a83c2f ChangeLog 651
+MD5 b7448af99adedb436879d41459785bc3 squishdot-1.5.0.ebuild 525
+MD5 d9ec726fac63bc91234d81c3a0b287ea ChangeLog 648
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+MD5 af451d125672d84f4e34de81d99a15da files/digest-squishdot-1.5.0 67
