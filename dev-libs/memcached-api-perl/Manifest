@@ -2,6 +2,8 @@ MD5 bdefb75eb7dfb68f17919256ce162ba7 ChangeLog 1119
 MD5 97cf353f9a3c35cc93ad33a67ebaeb4b memcached-api-perl-1.0.6.ebuild 677
 MD5 0c8d9131278e1bb00f3d29d9cb0507cf memcached-api-perl-1.0.7.ebuild 669
 MD5 eb0f4c38ea5616c504e639d796b49967 memcached-api-perl-1.0.8.ebuild 618
+MD5 eb0f4c38ea5616c504e639d796b49967 memcached-api-perl-1.0.9.ebuild 618
 MD5 21c13508a0fb2afa7e991699f8e8686d files/digest-memcached-api-perl-1.0.6 71
 MD5 93571def91c3403c0e8030637101b37a files/digest-memcached-api-perl-1.0.7 71
 MD5 197776684debc2ada4a67279da438624 files/digest-memcached-api-perl-1.0.8 71
+MD5 91ef796dead61d295a818a5411d469aa files/digest-memcached-api-perl-1.0.9 71
