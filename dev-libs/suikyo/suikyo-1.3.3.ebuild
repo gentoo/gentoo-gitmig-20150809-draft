@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/suikyo-1.3.3.ebuild,v 1.2 2004/09/23 23:58:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/suikyo-1.3.3.ebuild,v 1.3 2004/10/23 10:14:29 usata Exp $
 
 inherit ruby elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="http://prime.sourceforge.jp/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~ppc ~x86"
+KEYWORDS="alpha ppc x86"
 IUSE="emacs"
 
 DEPEND="virtual/ruby

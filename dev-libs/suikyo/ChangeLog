@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/suikyo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/ChangeLog,v 1.13 2004/08/29 19:42:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/ChangeLog,v 1.14 2004/10/23 10:14:29 usata Exp $
+
+  23 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> suikyo-1.3.3.ebuild:
+  Marked as stable.
 
 *suikyo-1.3.3 (30 Aug 2004)
 

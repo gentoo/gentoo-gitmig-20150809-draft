@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1ddbe481538bdecadab1fb7339233648 ChangeLog 1800
+MD5 bd2af5738e35a1a1ce30139fd86bc7a4 ChangeLog 1891
 MD5 8afe4eded45a484580ce855f24ffea2e metadata.xml 265
+MD5 68cd60169d25854767dd9dbdb80590da suikyo-1.3.3.ebuild 858
 MD5 c653b3301feab40f0687721e9ec07a68 suikyo-1.3.2.ebuild 859
-MD5 5515f315882fb1c355479fae67a5090e suikyo-1.3.3.ebuild 862
 MD5 4d03ee45f5b90d7f41f711bd5a383d7e files/50suikyo-gentoo.el 61
-MD5 87616c470cc4f94a942b549aa165faff files/digest-suikyo-1.3.2 64
 MD5 2ea95a56cfbb066372b29d0bdeed37e9 files/digest-suikyo-1.3.3 64
+MD5 87616c470cc4f94a942b549aa165faff files/digest-suikyo-1.3.2 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBU2MfHTu7gpaalycRAlSYAKD8u+ykGmXi4GqNN9uApPIJAX5mqgCcCgRH
-0kmolueXtxD34Y8fUkX9egg=
-=y+Fj
+iD8DBQFBei2fVWNWqTUmv+0RAmlsAKCHJgy+7sz9YeARZ2o9rBn9YO3r+gCfRWzM
+dtsnAbEiju0XWrVYPlxlESI=
+=WYP1
 -----END PGP SIGNATURE-----
