@@ -9,7 +9,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION="HTML embedded scripting language"
 SRC_URI="http://www.php.net/distributions/${P}.tar.gz"
 HOMEPAGE="http://www.php.net/"
+LICENSE="PHP"
 SLOT="0"
+KEYWORDS="x86"
 
 DEPEND=">=dev-libs/gmp-3.1.1
 	~media-libs/freetype-1.3.1
