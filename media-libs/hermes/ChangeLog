@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/hermes
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/ChangeLog,v 1.8 2003/09/29 17:27:55 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/ChangeLog,v 1.9 2004/02/19 15:26:46 brad_mssw Exp $
+
+  19 Feb 2004; Brad House <brad_mssw@gentoo.org> hermes-1.3.2-r2.ebuild,
+  files/hermes-1.3.2-amd64.patch:
+  patch for amd64. GCC would ICE because of bad casting. The rest of this
+  package probably needs to be cleaned up too
 
   29 Sep 2003; Aron Griffis <agriffis@gentoo.org> hermes-1.3.2-r2.ebuild:
   Stable on alpha

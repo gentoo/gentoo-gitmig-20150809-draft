@@ -1,0 +1,168 @@
+diff -ruN Hermes-1.3.2/src/c_genrc.c Hermes-1.3.2.fixed/src/c_genrc.c
+--- Hermes-1.3.2/src/c_genrc.c	2000-03-08 14:26:24.000000000 -0500
++++ Hermes-1.3.2.fixed/src/c_genrc.c	2004-02-19 10:12:25.749387576 -0500
+@@ -44,7 +44,7 @@
+ 
+ void ConvertC_Generic32_Generic24(HermesConverterInterface *iface)
+ { int32 s_pixel,r,g,b;
+-  char8 *d_ptr=(char8 *)((int)&s_pixel);
++  char8 *d_ptr=(char8 *)(&s_pixel);
+   unsigned int count;
+   char8 *source=iface->s_pixels,*dest=iface->d_pixels;
+ 
+@@ -338,7 +338,7 @@
+ 
+ void ConvertC_Generic16_Generic24(HermesConverterInterface *iface)
+ { int32 s_pixel,r,g,b;
+-  char8 *d_ptr=(char8 *)((int)&s_pixel);
++  char8 *d_ptr=(char8 *)(&s_pixel);
+   unsigned int count;
+   char8 *source=iface->s_pixels,*dest=iface->d_pixels;
+ 
+diff -ruN Hermes-1.3.2/src/c_genrc_a.c Hermes-1.3.2.fixed/src/c_genrc_a.c
+--- Hermes-1.3.2/src/c_genrc_a.c	2000-06-22 04:46:44.000000000 -0400
++++ Hermes-1.3.2.fixed/src/c_genrc_a.c	2004-02-19 10:16:25.703908944 -0500
+@@ -46,7 +46,7 @@
+ 
+ void ConvertC_Generic32_A_Generic24_A(HermesConverterInterface *iface)
+ { int32 s_pixel,r,g,b,a;
+-  char8 *d_ptr=(char8 *)((int)&s_pixel);
++  char8 *d_ptr=(char8 *)(&s_pixel);
+   unsigned int count;
+   char8 *source=iface->s_pixels,*dest=iface->d_pixels;
+   DEBUG_PRINT("Conversion for 32A to 24A\n","");
+@@ -350,7 +350,7 @@
+ 
+ void ConvertC_Generic16_A_Generic24_A(HermesConverterInterface *iface)
+ { int32 s_pixel,r,g,b,a;
+-  char8 *d_ptr=(char8 *)((int)&s_pixel);
++  char8 *d_ptr=(char8 *)(&s_pixel);
+   unsigned int count;
+   char8 *source=iface->s_pixels,*dest=iface->d_pixels;
+   DEBUG_PRINT("Conversion for 16A to 24A\n","");
+diff -ruN Hermes-1.3.2/src/c_genrc_ac.c Hermes-1.3.2.fixed/src/c_genrc_ac.c
+--- Hermes-1.3.2/src/c_genrc_ac.c	2000-01-03 19:32:37.000000000 -0500
++++ Hermes-1.3.2.fixed/src/c_genrc_ac.c	2004-02-19 10:13:12.472284616 -0500
+@@ -51,7 +51,7 @@
+ 
+ void ConvertC_Generic32_A_Generic24_C(HermesConverterInterface *iface)
+ { int32 s_pixel,r,g,b,a;
+-  char8 *d_ptr=(char8 *)((int)&s_pixel);
++  char8 *d_ptr=(char8 *)(&s_pixel);
+   unsigned int count;
+   char8 *source=iface->s_pixels,*dest=iface->d_pixels;
+   int32 dc = iface->d_colorkey;
+@@ -407,7 +407,7 @@
+ 
+ void ConvertC_Generic16_A_Generic24_C(HermesConverterInterface *iface)
+ { int32 s_pixel,r,g,b,a;
+-  char8 *d_ptr=(char8 *)((int)&s_pixel);
++  char8 *d_ptr=(char8 *)(&s_pixel);
+   unsigned int count;
+   char8 *source=iface->s_pixels,*dest=iface->d_pixels;
+   int32 dc = iface->d_colorkey;
+diff -ruN Hermes-1.3.2/src/c_genrc_ao_blit.c Hermes-1.3.2.fixed/src/c_genrc_ao_blit.c
+--- Hermes-1.3.2/src/c_genrc_ao_blit.c	2000-06-23 19:54:17.000000000 -0400
++++ Hermes-1.3.2.fixed/src/c_genrc_ao_blit.c	2004-02-19 10:19:54.806120576 -0500
+@@ -93,7 +93,7 @@
+ { unsigned long s_pixel, d_pixel, r, g, b, a;
+   long sr, sg, sb, dr, dg, db, da;
+   float sa;
+-  char8 *d_ptr=(char8 *)((int)&s_pixel);
++  char8 *d_ptr=(char8 *)(&s_pixel);
+   unsigned int count;
+   char8 *source=iface->s_pixels,*dest=iface->d_pixels;    
+   DEBUG_PRINT("ConvertC_Generic32_A_Generic24_O_Blit called\n","");
+@@ -421,7 +421,7 @@
+ 
+ void ConvertC_Generic16_A_Generic24_O_Blit(HermesConverterInterface *iface)
+ { int32 s_pixel,r,g,b,a;
+-  char8 *d_ptr=(char8 *)((int)&s_pixel);
++  char8 *d_ptr=(char8 *)(&s_pixel);
+   unsigned int count;
+   char8 *source=iface->s_pixels,*dest=iface->d_pixels;
+ 
+diff -ruN Hermes-1.3.2/src/c_genrc_ca.c Hermes-1.3.2.fixed/src/c_genrc_ca.c
+--- Hermes-1.3.2/src/c_genrc_ca.c	2000-06-23 19:39:57.000000000 -0400
++++ Hermes-1.3.2.fixed/src/c_genrc_ca.c	2004-02-19 10:15:49.168463176 -0500
+@@ -49,7 +49,7 @@
+ 
+ void ConvertC_Generic32_C_Generic24_A(HermesConverterInterface *iface)
+ { int32 s_pixel,r,g,b;
+-  char8 *d_ptr=(char8 *)((int)&s_pixel);
++  char8 *d_ptr=(char8 *)(&s_pixel);
+   unsigned int count;
+   char8 *source=iface->s_pixels,*dest=iface->d_pixels;
+   int32 sc = iface->s_colorkey;
+@@ -400,7 +400,7 @@
+ 
+ void ConvertC_Generic16_C_Generic24_A(HermesConverterInterface *iface)
+ { int32 s_pixel,r,g,b;
+-  char8 *d_ptr=(char8 *)((int)&s_pixel);
++  char8 *d_ptr=(char8 *)(&s_pixel);
+   unsigned int count;
+   char8 *source=iface->s_pixels,*dest=iface->d_pixels;
+   int32 sc = iface->s_colorkey;
+diff -ruN Hermes-1.3.2/src/c_genrc_cc.c Hermes-1.3.2.fixed/src/c_genrc_cc.c
+--- Hermes-1.3.2/src/c_genrc_cc.c	1999-12-05 13:01:54.000000000 -0500
++++ Hermes-1.3.2.fixed/src/c_genrc_cc.c	2004-02-19 10:17:44.274964328 -0500
+@@ -49,7 +49,7 @@
+ 
+ void ConvertC_Generic32_C_Generic24_C(HermesConverterInterface *iface)
+ { int32 s_pixel,r,g,b;
+-  char8 *d_ptr=(char8 *)((int)&s_pixel);
++  char8 *d_ptr=(char8 *)(&s_pixel);
+   unsigned int count;
+   char8 *source=iface->s_pixels,*dest=iface->d_pixels;
+   int32 sc = iface->s_colorkey;
+@@ -400,7 +400,7 @@
+ 
+ void ConvertC_Generic16_C_Generic24_C(HermesConverterInterface *iface)
+ { int32 s_pixel,r,g,b;
+-  char8 *d_ptr=(char8 *)((int)&s_pixel);
++  char8 *d_ptr=(char8 *)(&s_pixel);
+   unsigned int count;
+   char8 *source=iface->s_pixels,*dest=iface->d_pixels;
+   int32 sc = iface->s_colorkey;
+diff -ruN Hermes-1.3.2/src/c_genrc_cc_blit.c Hermes-1.3.2.fixed/src/c_genrc_cc_blit.c
+--- Hermes-1.3.2/src/c_genrc_cc_blit.c	1999-12-07 18:45:25.000000000 -0500
++++ Hermes-1.3.2.fixed/src/c_genrc_cc_blit.c	2004-02-19 10:18:14.864314040 -0500
+@@ -47,7 +47,7 @@
+ //TODO: dv: add real code
+ void ConvertC_Generic32_C_Generic24_C_Blit(HermesConverterInterface *iface)
+ { int32 s_pixel,r,g,b;
+-  char8 *d_ptr=(char8 *)((int)&s_pixel);
++  char8 *d_ptr=(char8 *)(&s_pixel);
+   unsigned int count;
+   char8 *source=iface->s_pixels,*dest=iface->d_pixels;
+   int32 sc = iface->s_colorkey;
+@@ -351,7 +351,7 @@
+ //TODO: dv: add real code
+ void ConvertC_Generic16_C_Generic24_C_Blit(HermesConverterInterface *iface)
+ { int32 s_pixel,r,g,b;
+-  char8 *d_ptr=(char8 *)((int)&s_pixel);
++  char8 *d_ptr=(char8 *)(&s_pixel);
+   unsigned int count;
+   char8 *source=iface->s_pixels,*dest=iface->d_pixels;
+   int32 sc = iface->s_colorkey;
+diff -ruN Hermes-1.3.2/src/c_genrc_co_blit.c Hermes-1.3.2.fixed/src/c_genrc_co_blit.c
+--- Hermes-1.3.2/src/c_genrc_co_blit.c	1999-12-04 22:36:36.000000000 -0500
++++ Hermes-1.3.2.fixed/src/c_genrc_co_blit.c	2004-02-19 10:18:42.136168088 -0500
+@@ -46,7 +46,7 @@
+ 
+ void ConvertC_Generic32_C_Generic24_O_Blit(HermesConverterInterface *iface)
+ { int32 s_pixel,r,g,b;
+-  char8 *d_ptr=(char8 *)((int)&s_pixel);
++  char8 *d_ptr=(char8 *)(&s_pixel);
+   unsigned int count;
+   char8 *source=iface->s_pixels,*dest=iface->d_pixels;
+   int32 sc = iface->s_colorkey;
+@@ -375,7 +375,7 @@
+ 
+ void ConvertC_Generic16_C_Generic24_O_Blit(HermesConverterInterface *iface)
+ { int32 s_pixel,r,g,b;
+-  char8 *d_ptr=(char8 *)((int)&s_pixel);
++  char8 *d_ptr=(char8 *)(&s_pixel);
+   unsigned int count;
+   char8 *source=iface->s_pixels,*dest=iface->d_pixels;
+   int32 sc = iface->s_colorkey;
