@@ -1,12 +1,20 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.19 2002/06/12 12:11:26 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.20 2002/06/15 03:57:23 stroke Exp $
+
+*evolution-1.0.7 (15 Jun 2002)
+
+  15 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> :
+
+  New version
+
 
 *evolution-1.0.5-r3 (12 Jun 2002)
 
   12 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> :
 
-  Updateed dep to the new gtkhtml revision. Bug #3659 related.
+  Updated dep to the new gtkhtml revision. Bug #3659 related.
+
 
 *evolution-1.0.5-r2 (09 Jun 2002)
 
