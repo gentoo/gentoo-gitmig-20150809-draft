@@ -1,4 +1,14 @@
-MD5 7dfe09bfdb9120115b844476488a0fb3 ChangeLog 417
-MD5 ec8fbaa708ab0aef898e29e6ef71c6ac mpglen-0.1.ebuild 660
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4a1baa1ddde7392cb7380dc7d3baf0b4 ChangeLog 517
 MD5 446c2ccebfd17f0cf3aa8e8d8b815635 metadata.xml 233
+MD5 2bacf426cf5168d7b22b3b21e436cd90 mpglen-0.1.ebuild 673
 MD5 f2eedfb2e2a712991121c442e5465a9c files/digest-mpglen-0.1 57
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBZFIfArHZZzCEUG0RAua9AJ9Z1Ldr7S8qo7Wun+F2oarrDvo7RACeMmVM
+HRSE0HR/m1G6IYzd6UvFL0s=
+=8qIX
+-----END PGP SIGNATURE-----
