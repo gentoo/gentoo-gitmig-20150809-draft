@@ -1,11 +1,16 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for net-mail/uw-imap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.2 2002/04/15 20:13:40 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.3 2002/06/07 02:01:38 woodchip Exp $
+
+*uw-imap-2001a-r2 (6 Jun 2002)
+  6 Jun 2002; Donny Davies <woodchip@gentoo.org> uw-imap-2001a-r2.ebuild,
+  uw-imap.pam, uw-imap.pam-system-auth, uw-imap.xinetd, uw-imaps.xinetd,
+  uw-ipop2.xinetd, uw-ipop3.xinetd :
+  Default pam.d/ snippet should use system-auth; close #3218.  Add
+  $Header's, LICENSE, SLOT.
 
 *uw-imap-2001a-r1 (15 Apr 2002)
-
-  15 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org> :
-  
+  15 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org> :  
   Made uw-imap install more headers, so that php with imap
   support will properly compile. Bug #1759
   Removed virtual/imapUW PROVIDE because php will only DEPEND on
@@ -13,7 +18,5 @@
   now.
 
 *uw-imap-2001a (23 Feb. 2002)
-
   22 Feb 2002; Grant Goodyear <g2boojum@gentoo.org>  :
-  
-  New ebuild.  Thanks to CFuga.
+  New ebuild; submitted by Cristian Martinez <cfuga@itam.mx>.
