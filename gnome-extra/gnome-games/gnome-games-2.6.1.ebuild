@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.6.1.ebuild,v 1.1 2004/05/04 15:54:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.6.1.ebuild,v 1.2 2004/05/04 20:51:16 foser Exp $
 
 inherit gnome2
 
@@ -34,7 +34,7 @@ src_unpack() {
 
 	cd ${S}/aisleriot
 	# fix aisleriot crash #46738
-	epatch ${FILESDIR}/${PN}--2.6.0.1-aisleriot.patch
+	epatch ${FILESDIR}/${PN}-2.6.0.1-aisleriot.patch
 
 }
 
