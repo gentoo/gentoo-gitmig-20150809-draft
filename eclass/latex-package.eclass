@@ -77,7 +77,9 @@ latex-package_src_doinstall() {
             "dvi" | "ps" | "pdf")
                 for i in `find . -maxdepth 1 -type f -name "*.${1}"`
                 do
-                    dodoc $i
+                    insinto /usr/share/doc/${P}
+                    doins $i
+                    #dodoc -u $i
                 done
                 ;;
 	    "tex" | "dtx")
