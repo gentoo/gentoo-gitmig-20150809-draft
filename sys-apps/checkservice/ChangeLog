@@ -1,0 +1,8 @@
+# ChangeLog for sys-apps/checkservice
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkservice/ChangeLog,v 1.1 2004/10/10 02:35:07 vapier Exp $
+
+*checkservice-1.2.0 (09 Oct 2004)
+
+  09 Oct 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Diego Garcia #40340.
