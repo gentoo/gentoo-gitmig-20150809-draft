@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/papuawm/papuawm-0.3.1.ebuild,v 1.6 2004/07/15 01:14:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/papuawm/papuawm-0.3.1.ebuild,v 1.7 2005/03/28 11:07:24 usata Exp $
 
 DESCRIPTION="PapuaWM, a minimalistic, though useable window manager"
 MY_P="${P/papuawm/PapuaWM}"

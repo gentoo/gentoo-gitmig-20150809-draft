@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/papuawm
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/papuawm/ChangeLog,v 1.6 2004/06/24 23:43:52 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/papuawm/ChangeLog,v 1.7 2005/03/28 11:07:24 usata Exp $
+
+  28 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> papuawm-0.4.ebuild:
+  Fixed compilation error (papuawm doesn't find X libs); bug #86594. Thanks to
+  Francisco José Cañizares Santofimia <telefrancisco@lycos.es> for the patch.
 
 *papuawm-0.4 (27 Apr 2004)
 
