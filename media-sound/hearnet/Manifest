@@ -1,4 +1,14 @@
-MD5 4ca812d39f24b62b27a0ee384a9b85e2 ChangeLog 906
-MD5 00942906dc0d7e4b4311aebdcde1940d hearnet-0.0.2.ebuild 868
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e92ff9e0e3aabe5ad4854369d8a63c7a ChangeLog 1048
+MD5 b2812acff31f51a1926764115c276a98 hearnet-0.0.2.ebuild 867
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 3d52d7932f2eaf092421d0a83e1bbb8a files/digest-hearnet-0.0.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB/AOvmdTrptrqvGERAvC3AJ441KSboHNGT6BPpLW8g3dilGlOBACdECM/
+QuoLsYmzy6qK652hcF7a1qU=
+=pxFM
+-----END PGP SIGNATURE-----
