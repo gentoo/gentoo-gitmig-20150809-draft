@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r2.ebuild,v 1.6 2002/08/17 02:04:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r2.ebuild,v 1.7 2002/08/17 02:10:59 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Use this to try make tarballs :)"
@@ -11,13 +11,20 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
 
-DEPEND="nls? ( >=sys-devel/gettext-0.10.35 )"
+DEPEND="sys-apps/gzip
+	sys-apps/bzip2
+	app-arch/ncompress"
+
+RDEPEND="nls? ( >=sys-devel/gettext-0.10.35 )"
 
 src_compile() {
 	local myconf
 	[ -z "`use nls`" ] && myconf="--disable-nls"
-	./configure --prefix=/usr --bindir=/bin --libexecdir=/usr/lib/misc \
-	--infodir=/usr/share/info --host=${CHOST} ${myconf} || die
+	econf \
+		--bindir=/bin \
+		--libexecdir=/usr/lib/misc \
+		${myconf} || die
+
 	if [ -z "`use static`" ]
 	then
 		emake || die
