@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/mailfilter
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/ChangeLog,v 1.14 2004/12/29 00:22:45 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/ChangeLog,v 1.15 2005/01/03 21:49:25 gustavoz Exp $
+
+  03 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> mailfilter-0.6.2.ebuild:
+  Stable on sparc
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

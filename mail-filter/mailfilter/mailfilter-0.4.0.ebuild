@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/mailfilter-0.4.0.ebuild,v 1.5 2004/10/04 09:28:10 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/mailfilter-0.4.0.ebuild,v 1.6 2005/01/03 21:49:25 gustavoz Exp $
 
 DESCRIPTION="Mailfilter is a utility to get rid of unwanted spam mails"
 HOMEPAGE="http://mailfilter.sourceforge.net/index.html"
