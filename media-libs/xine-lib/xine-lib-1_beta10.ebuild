@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta10.ebuild,v 1.4 2003/07/16 16:43:15 pvdabeel Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta10.ebuild,v 1.5 2003/07/22 20:11:58 vapier Exp $ 
 
 DESCRIPTION="Core libraries for Xine movie player."
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -35,7 +35,7 @@ S=${WORKDIR}/${PN}-${PV/_/-}
 SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}.tar.gz"
 
 # this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
-inherit flag-o-matic  || die "I lost my inheritance"
+inherit flag-o-matic 
 filter-flags "-maltivec -mabi=altivec"
 replace-flags k6-3 i686
 replace-flags k6-2 i686

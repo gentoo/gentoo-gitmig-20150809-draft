@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r3.ebuild,v 1.1 2003/03/23 22:05:42 agenkin Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r3.ebuild,v 1.2 2003/07/22 20:12:04 vapier Exp $ 
 
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa"
 
-inherit libtool || die "I lost my inheritance"
+inherit libtool
 
 # this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
-inherit flag-o-matic  || die "I lost my inheritance"
+inherit flag-o-matic 
 filter-flags "-maltivec -mabi=altivec" 
 replace-flags k6-3 i686
 replace-flags k6-2 i686
