@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r5.ebuild,v 1.2 2003/03/06 18:38:17 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r5.ebuild,v 1.3 2003/03/26 19:55:04 seemant Exp $
 
 inherit flag-o-matic
 
@@ -24,13 +24,14 @@ DEPEND="${RDEPEND}
 
 filter-flags -fPIC
 
+export WANT_AUTOCONF_2_1=1
+
 src_unpack() {
-	export WANT_AUTOCONF_2_1=1
 
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}-system-popt.diff || die
-	patch -p1 < ${FILESDIR}/${P}-glibc2.3.diff || die
+	epatch ${FILESDIR}/${P}-system-popt.diff
+	epatch ${FILESDIR}/${P}-glibc2.3.diff
 	rm -rf ${S}/popt
 	# Suppress pointer warnings
 	cp configure configure.orig
@@ -38,9 +39,8 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-	use nls || myconf="--disable-nls"
-	econf ${myconf}
+
+	econf `use_enable nls` || die
 	make || die
 }
 
