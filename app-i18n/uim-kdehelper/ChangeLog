@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/uim-kdehelper
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-kdehelper/ChangeLog,v 1.1 2004/11/03 08:35:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-kdehelper/ChangeLog,v 1.2 2004/11/09 18:05:42 usata Exp $
+
+*uim-kdehelper-0.1.0-r1 (10 Nov 2004)
+
+  10 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +uim-kdehelper-0.1.0-r1.ebuild:
+  Fixed compilation without arts; bug #70502. Thanks to Simone Gotti
+  <motaboy@gentoo.org> for the ebuild.
 
 *uim-kdehelper-0.1.0 (03 Nov 2004)
 
