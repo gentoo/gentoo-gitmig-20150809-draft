@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r2.ebuild,v 1.3 2004/10/16 17:01:53 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r2.ebuild,v 1.4 2004/10/20 07:17:44 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -22,8 +22,13 @@ src_unpack() {
 	epatch ${WORKDIR}/bsf-rhino-1.5.patch
 
 	cd ${S}/src/build/lib
-	java-pkg_jar-from rhino || die "Missing rhino"
-	java-pkg_jar-from jython || die "Missing jython"
+	if use rhino; then
+		java-pkg_jar-from rhino || die "Missing rhino"
+	fi
+
+	if use jython; then
+		java-pkg_jar-from jython || die "Missing jython"
+	fi
 }
 
 src_compile() {
