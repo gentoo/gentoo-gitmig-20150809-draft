@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/aquapfont-2.5-r1.ebuild,v 1.9 2004/11/01 09:58:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/aquapfont-2.5-r1.ebuild,v 1.10 2005/01/20 02:57:33 usata Exp $
 
 inherit font
 
@@ -21,6 +21,7 @@ FONT_SUFFIX="ttf"
 DOCS="readme.txt"
 
 DEPEND="app-arch/lha"
+RDEPEND=""
 
 src_unpack(){
 
