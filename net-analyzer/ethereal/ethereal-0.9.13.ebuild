@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.13.ebuild,v 1.2 2003/06/14 21:55:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.13.ebuild,v 1.3 2003/06/15 15:42:56 bcowan Exp $
 
 IUSE="gtk ipv6 snmp ssl gtk2"
 
@@ -48,9 +48,6 @@ src_compile() {
 	use snmp || myconf="${myconf} --without-ucdsnmp"
 	use ipv6 && myconf="${myconf} --enable-ipv6"
 
-	echo $myconf
-exit 1
-	
 	addwrite "/usr/share/snmp/mibs/.index" 
 	
 	econf \
