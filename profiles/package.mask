@@ -44,12 +44,6 @@ app-misc/gtk-theme-switch-2.0.0-r2
 # old version isn't available, new version doesn't compile - danarmak
 media-libs/nurbs++
 
-# This one causes a lot of problems ... svgalib gives problems
-# when used by user (not root), and it just dies randomly.
-#
-# Azarah (26 May 2002)
->=sys-libs/gpm-1.20.0
-
 # Mask this one, as it seems users dont emerge --clean rsync
 #
 # Azarah (26 May 2002)
