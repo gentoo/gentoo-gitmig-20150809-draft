@@ -1,0 +1,10 @@
+# ChangeLog for app-benchmarks/piozone
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/piozone/ChangeLog,v 1.1 2003/08/11 20:11:43 mholzer Exp $
+
+*piozone-1.0-r2 (12 Aug 2003)
+
+  12 Aug 2003; Martin Holzer <mholzer@gentoo.org> piozone-1.0-r2.ebuild,
+  files/piozone-1.0-gentoo.diff:
+  Initial version. Submitted by Marcelo Góes <blueboard@terra.com.br> in #24250
+
