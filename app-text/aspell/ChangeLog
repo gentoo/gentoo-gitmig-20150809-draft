@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.48 2004/07/16 03:19:29 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.49 2004/07/24 19:33:43 liquidx Exp $
+
+  24 Jul 2004; Alastair Tse <liquidx@gentoo.org> aspell-0.50.5-r2.ebuild:
+  fixed SRC_URI to use mirror://gnu (#55523)
 
   16 Jun 2004; Anders Rune Jensen <arj@gentoo.org> aspell-0.50.5-r2.ebuild:
   filter -fno-rtti. Fixes bug #48033.

@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r2.ebuild,v 1.5 2004/07/16 03:19:29 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r2.ebuild,v 1.6 2004/07/24 19:33:43 liquidx Exp $
 
 inherit libtool eutils flag-o-matic
 
 DESCRIPTION="A spell checker replacement for ispell"
 HOMEPAGE="http://aspell.net/"
-SRC_URI="http://aspell.net/${P}.tar.gz"
+SRC_URI="mirror://gnu/aspell/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
