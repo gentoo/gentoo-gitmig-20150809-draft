@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.4 2004/07/07 02:34:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.5 2004/07/17 10:03:55 dholm Exp $
+
+  17 Jul 2004; David Holm <dholm@gentoo.org> pyro-3.3-r1.ebuild:
+  Added to ~ppc.
 
 *pyro-3.3-r1 (07 Jul 2004)
 
