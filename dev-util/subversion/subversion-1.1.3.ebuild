@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3.ebuild,v 1.1 2005/01/18 19:29:13 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3.ebuild,v 1.2 2005/01/31 10:58:05 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion
 
@@ -116,7 +116,7 @@ src_compile() {
 	# So not specifying it at all when not building apache modules and only
 	# specify it for internal parts otherwise.
 	if use apache2; then
-		( emake external-all && emake LT_LDFLAGS="-L${D}/usr/lib" local-all ) || die "make of subversion failed"
+		( emake LT_LDFLAGS="-L${D}/usr/lib" external-all && emake LT_LDFLAGS="-L${D}/usr/lib" local-all ) || die "make of subversion failed"
 	else
 		( emake external-all && emake local-all ) || die "make of subversion failed"
 	fi
