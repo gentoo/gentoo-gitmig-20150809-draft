@@ -1,11 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gamma/xemacs-gamma-21.4.6.ebuild,v 1.4 2002/07/29 16:11:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gamma/xemacs-gamma-21.4.6.ebuild,v 1.5 2002/08/01 12:51:21 seemant Exp $
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"
-
-LICENSE="GPL-2"
 
 REAL_P=${P//-gamma/}
 S="${WORKDIR}/${REAL_P}"
@@ -18,6 +16,10 @@ SRC_URI="http://ftp.us.xemacs.org/ftp/pub/xemacs/xemacs-21.4/${REAL_P}.tar.gz
 	http://ftp.us.xemacs.org/ftp/pub/xemacs/packages/xemacs-base-${BASE}-pkg.tar.gz
 	http://ibiblio.org/pub/packages/editors/xemacs/packages/mule-base-${MULE}-pkg.tar.gz"
 HOMEPAGE="http://www.xemacs.org"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND=">=sys-libs/gdbm-1.8.0
 	>=sys-libs/zlib-1.1.4
