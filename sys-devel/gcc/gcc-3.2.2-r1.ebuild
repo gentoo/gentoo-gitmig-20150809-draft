@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r1.ebuild,v 1.6 2003/03/24 21:31:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r1.ebuild,v 1.7 2003/04/12 19:47:21 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -424,8 +424,8 @@ src_install() {
 	fi
 
 	cd ${S}
-    if [ -z "`use build`" ]
-    then
+	if [ -z "`use build`" ]
+	then
 		cd ${S}
 		docinto /${CCHOST}
 		dodoc COPYING COPYING.LIB ChangeLog FAQ GNATS MAINTAINERS README
@@ -440,17 +440,17 @@ src_install() {
 		docinto ${CCHOST}/gcc
 		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS README* SERVICE
 		cd ${S}/libf2c
-	    docinto ${CCHOST}/libf2c
-	    dodoc ChangeLog README TODO *.netlib
+		docinto ${CCHOST}/libf2c
+		dodoc ChangeLog README TODO *.netlib
 		cd ${S}/libffi
-	    docinto ${CCHOST}/libffi
-	    dodoc ChangeLog* LICENSE README
-	    cd ${S}/libiberty
-	    docinto ${CCHOST}/libiberty
-	    dodoc ChangeLog COPYING.LIB README
-	    cd ${S}/libobjc
-	    docinto ${CCHOST}/libobjc
-	    dodoc ChangeLog README* THREADS*
+		docinto ${CCHOST}/libffi
+		dodoc ChangeLog* LICENSE README
+		cd ${S}/libiberty
+		docinto ${CCHOST}/libiberty
+		dodoc ChangeLog COPYING.LIB README
+		cd ${S}/libobjc
+		docinto ${CCHOST}/libobjc
+		dodoc ChangeLog README* THREADS*
 		cd ${S}/libstdc++-v3
 		docinto ${CCHOST}/libstdc++-v3
 		dodoc ChangeLog* README
@@ -459,17 +459,17 @@ src_install() {
 		cp -f docs/html/17_intro/[A-Z]* \
 			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
 		
-        if [ -n "`use java`" ]
-        then
+		if [ -n "`use java`" ]
+		then
 			cd ${S}/fastjar
 			docinto ${CCHOST}/fastjar
 			dodoc AUTHORS CHANGES COPYING ChangeLog NEWS README
 			cd ${S}/libjava
 			docinto ${CCHOST}/libjava
 			dodoc ChangeLog* COPYING HACKING LIBGCJ_LICENSE NEWS README THANKS
-        fi
-    else
-        rm -rf ${D}/usr/share/{man,info}
+		fi
+	else
+		rm -rf ${D}/usr/share/{man,info}
 	fi
 
 	# Rather install the script, else portage with changing $FILESDIR
@@ -479,8 +479,8 @@ src_install() {
 	exeinto /sbin
 	doexe ${FILESDIR}/fix_libtool_files.sh
 
-    # Fix ncurses b0rking
-    find ${D}/ -name '*curses.h' -exec rm -f {} \;
+	# Fix ncurses b0rking
+	find ${D}/ -name '*curses.h' -exec rm -f {} \;
 }
 
 pkg_preinst() {
