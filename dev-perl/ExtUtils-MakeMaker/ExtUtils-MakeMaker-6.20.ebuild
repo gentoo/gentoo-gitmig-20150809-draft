@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.20.ebuild,v 1.8 2004/02/22 20:39:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.20.ebuild,v 1.9 2004/03/15 09:00:20 kumba Exp $
 
 DESCRIPTION="MakeMaker Perl Module"
 SRC_URI="http://cpan.valueclick.com/modules/by-module/ExtUtils/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-module/ExtUtils/${P}.readme"
 IUSE=""
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 amd64 sparc ~ppc ~alpha ~mips hppa ppc64"
+KEYWORDS="x86 amd64 sparc ~ppc ~alpha mips hppa ppc64"
 
 DEPEND=">=dev-lang/perl-5.8.0-r12 >=sys-apps/sed-4"
 
