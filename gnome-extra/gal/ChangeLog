@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.35 2003/06/05 13:36:50 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.36 2003/06/10 13:53:59 liquidx Exp $
+
+*gal-1.99.7 (10 Jun 2003)
+
+  10 Jun 2003; Alastair Tse <liquidx@gentoo.org> gal-1.99.7.ebuild:
+  version bump for evo 1.4
 
   05 Jun 2003; Luca Barbato <lu_zero@gentoo.org> gal-1.99.6.ebuild:
   Added ~ppc keyword 
