@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.4.ebuild,v 1.3 2003/10/29 10:41:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.4.ebuild,v 1.4 2003/11/14 04:04:59 brad_mssw Exp $
 
 # IMPORTANT
 #
@@ -67,6 +67,7 @@ src_compile() {
 	replace-flags "-O3" "-O2"
 	filter-flags "-fprefetch-loop-arrays" # see bug 22249
 	use alpha && append-flags "-fPIC"
+	use amd64 && append-flags "-fPIC"
 
 	gst-plugins_src_configure --program-suffix=-${PV_MAJ_MIN}
 
