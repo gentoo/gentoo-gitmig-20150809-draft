@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.7 2003/03/09 19:50:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.8 2003/05/17 07:18:38 jje Exp $
+
+*lilypond-1.6.9 (17 May 2003)
+
+  17 May 2003; jje <jje@gentoo.org> lilypond-1.6.9.ebuild:
+  Simplified src_compile to reflect current compiler usage.
+  
+  The web-doc target is also being built.
 
   18 Jan 2003; Aron Griffis <agriffis@gentoo.org> lilypond-1.6.6.ebuild :
   Fix bug 13396 by requiring tetex-1.0.7-r12 which should fix the missing
