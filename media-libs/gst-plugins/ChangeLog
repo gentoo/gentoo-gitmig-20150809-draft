@@ -1,5 +1,10 @@
 # ChangeLog for media-libs/gstreamer-plugins
 
+*gst-plugins-0.4.2 (02 Nov 2002)
+
+  02 Nov 2002; foser <foser@gentoo.org> gst-plugins-0.4.2.ebuild :
+  New minor version
+
 *gst-plugins-0.4.1-r1 (17 Oct 2002)
 
   17 Oct 2002; foser <foser@gentoo.org> gst-plugins-0.4.1-r1.ebuild :
