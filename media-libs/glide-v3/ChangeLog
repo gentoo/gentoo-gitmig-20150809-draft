@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/glide-v3
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.4 2002/04/15 10:23:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.5 2002/04/25 18:58:43 azarah Exp $
+
+*glide-v3-3.10-r3 (26 Apr 2002)
+
+  26 Apr 2002; M.Schlemmer <azarah@gentoo.org> glide-v3-3.10-r3.ebuild :
+
+  Resolve bug #2012.  Optimizations applied to the build caused it to be
+  very unstable.
 
 *glide-v3-3.10-r2 (15 Apr 2002)
 
