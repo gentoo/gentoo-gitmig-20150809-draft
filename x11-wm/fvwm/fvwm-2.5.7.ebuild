@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.7 2003/07/30 22:28:10 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.8 2003/07/30 22:29:17 taviso Exp $
 
 inherit gnuconfig
 
-IUSE="readline gtk gnome rplay xinerama cjk perl nls png"
+IUSE="readline gtk gnome rplay xinerama cjk perl nls png bidi"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="an extremely powerful ICCCM-compliant multiple virtual desktop window manager"
