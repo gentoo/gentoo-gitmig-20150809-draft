@@ -3,6 +3,10 @@
 # alsa will more than likely never compile on os x
 alsa
 
+# kde is still a ways off
+arts
+kde
+
 # mach does not need caps
 caps
 
