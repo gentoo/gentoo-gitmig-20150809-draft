@@ -1,0 +1,22 @@
+diff -ur knock-0.3/src/knock.c knock-0.3-fix/src/knock.c
+--- knock-0.3/src/knock.c	2004-05-07 00:56:03.000000000 +0200
++++ knock-0.3-fix/src/knock.c	2004-08-04 00:53:25.663567392 +0200
+@@ -30,6 +30,7 @@
+ #include <string.h>
+ #include <resolv.h>
+ #include <getopt.h>
++#include <fcntl.h>
+ 
+ static char version[] = "0.3";
+ 
+@@ -79,7 +80,10 @@
+ 		if(o_udp) {
+ 			sd = socket(PF_INET, SOCK_DGRAM, 0); 
+ 		} else {
++			int flags;
+ 			sd = socket(PF_INET, SOCK_STREAM, 0); 
++			flags = fcntl(sd, F_GETFL, 0);
++			fcntl(sd, F_SETFL, flags | O_NONBLOCK);
+ 		}
+ 		memset(&addr, 0, sizeof(addr));
+ 		addr.sin_family = AF_INET;

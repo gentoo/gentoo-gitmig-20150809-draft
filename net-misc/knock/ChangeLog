@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/knock
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.10 2004/07/18 17:30:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.11 2004/08/27 11:18:55 pyrania Exp $
+
+  27 Aug 2004; <pyrania@gentoo.org> +files/knock-0.3-nonblock.patch,
+  knock-0.3.ebuild:
+  Added patch to make use of non-blocking TCP connections. Thanks to Per
+  Cederberg <per@percederberg.net> in bug #59315.
 
   18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> knock-0.3.ebuild:
   Added amd64 keyword, closing #57090.
