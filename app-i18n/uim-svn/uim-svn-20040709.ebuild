@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20040709.ebuild,v 1.6 2005/01/01 14:43:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20040709.ebuild,v 1.7 2005/01/14 23:34:14 danarmak Exp $
 
 inherit subversion flag-o-matic
 
@@ -27,7 +27,7 @@ RDEPEND="!app-i18n/uim
 	gtk? ( >=x11-libs/gtk+-2 )
 	kde? (
 		=x11-libs/qt-3*
-		=kde-base/kdebase-3*
+		|| ( kde-base/kdebase-meta =kde-base/kdebase-3* )
 		=kde-base/kdelibs-3*
 	)
 	m17n-lib? ( dev-libs/m17n-lib )"
