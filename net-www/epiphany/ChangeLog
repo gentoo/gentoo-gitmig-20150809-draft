@@ -1,6 +1,10 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.7 2003/06/29 22:02:45 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.8 2003/07/09 15:43:33 liquidx Exp $
+
+  09 Jul 2003; Alastair Tse <liquidx@gentoo.org> epiphany-0.7.0.ebuild,
+  epiphany-0.7.3.ebuild:
+  moved scrollkeeper to RDEPEND since we need it at postinst
 
 *epiphany-0.7.3 (29 Jun 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-0.7.3.ebuild,v 1.1 2003/06/29 22:02:45 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-0.7.3.ebuild,v 1.2 2003/07/09 15:43:33 liquidx Exp $
 
 inherit gnome2 debug
 
@@ -23,11 +23,11 @@ RDEPEND=">=gnome-base/gconf-1.2
 	>=gnome-base/libbonoboui-2.1.1
 	>=gnome-base/ORBit2-2
 	>=gnome-base/gnome-vfs-2
-	=net-www/mozilla-1.3*"
+	=net-www/mozilla-1.3*
+	app-text/scrollkeeper"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	app-text/scrollkeeper"
+	dev-util/pkgconfig"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README TODO"
 
