@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.103 2005/01/26 17:11:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.104 2005/01/26 18:30:41 mcummings Exp $
+
+  26 Jan 2005; Michael Cummings <mcummings@gentoo.org> files/perl-cleaner:
+  tmpdir fix - thanks Mr. B.
 
 *perl-5.8.4-r2 (26 Jan 2005)
 

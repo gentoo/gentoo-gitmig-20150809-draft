@@ -10,7 +10,8 @@ eval `perl '-V:version'`
 PERL_VERSION=${version}
 
 
-TMPDIR="/tmp"
+TMPDIR=${TMPDIR:-/tmp}
+
 PKGDIR="/var/db/pkg"
 DATESTAMP=`date +"%Y%m%d%H%M%S"`
 LOG="${TMPDIR}/perl-cleaner.log.$DATESTAMP"
