@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.4.0_beta1.ebuild,v 1.1 2005/01/14 00:19:30 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.4.0_beta1.ebuild,v 1.2 2005/01/15 10:23:39 greg_g Exp $
 
 inherit kde eutils
 
@@ -42,10 +42,6 @@ src_compile() {
 	local _S=${S}
 	for dir in `ls ${WORKDIR}`; do
 		S=${WORKDIR}/${dir}
-
-		# why the Makefiles where generated with unsermake?
-		# we must regenerate them.
-		cd ${S} && autoreconf && perl am_edit
 
 		kde_src_compile myconf
 		myconf="${myconf} --prefix=${KDEDIR}"
