@@ -1,5 +1,5 @@
-MD5 9c86ad50c560ee945616349a04b6615f ChangeLog 332
-MD5 4d744b3bbf73259ca2a59ca4aba7f53d sulu-0.15.ebuild 1070
 MD5 fbb9264abbe9f1c59fd0f265805e66c7 files/digest-sulu-0.15 57
 MD5 99cbf17175441e086c66a38f0d48e4df files/uproar 120
 MD5 97b575f4dede79a805133e1e3bbdf132 files/uproar.usermap 604
+MD5 9c86ad50c560ee945616349a04b6615f ChangeLog 332
+MD5 b021da657111dce7ff6ac9ac82b4c598 sulu-0.15.ebuild 1068
