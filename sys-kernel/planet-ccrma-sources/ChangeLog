@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/planet-ccrma-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/ChangeLog,v 1.20 2004/07/09 15:52:25 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/planet-ccrma-sources/ChangeLog,v 1.21 2004/08/02 11:17:37 plasmaroo Exp $
+
+*planet-ccrma-sources-2.4.21-r12 (02 Aug 2004)
+
+  02 Aug 2004; <plasmaroo@gentoo.org> -planet-ccrma-sources-2.4.21-r11.ebuild,
+  +planet-ccrma-sources-2.4.21-r12.ebuild,
+  +files/planet-ccrma-sources.CAN-2003-0643.patch:
+  Patched for CAN-2003-0643.
 
 *planet-ccrma-sources-2.4.21-r11 (09 Jul 2004)
 
