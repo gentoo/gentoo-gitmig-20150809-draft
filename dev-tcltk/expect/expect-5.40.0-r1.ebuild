@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.40.0-r1.ebuild,v 1.2 2004/07/14 21:43:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.40.0-r1.ebuild,v 1.3 2004/08/12 00:33:37 mr_bones_ Exp $
 
 inherit gnuconfig
 
@@ -21,17 +21,17 @@ S=${WORKDIR}/${NON_MICRO_V}
 
 src_unpack() {
 	unpack ${A}
-	sed -i 's#/usr/local/bin#/usr/bin#' ${S}/expect.man
-	sed -i 's#/usr/local/bin#/usr/bin#' ${S}/expectk.man
+	cd ${S}
+	sed -i 's#/usr/local/bin#/usr/bin#' expect.man
+	sed -i 's#/usr/local/bin#/usr/bin#' expectk.man
 	#stops any example scripts being installed by default
-	sed -i '/^install:/s/install-libraries //' ${S}/Makefile.in
-	sed -i 's/^SCRIPTS_MANPAGES = /_&/' ${S}/Makefile.in
+	sed -i \
+		-e '/^install:/s/install-libraries //' \
+		-e 's/^SCRIPTS_MANPAGES = /_&/' Makefile.in
+	gnuconfig_update
 }
 
 src_compile() {
-	use amd64 && gnuconfig_update
-	use ppc64 && gnuconfig_update
-
 	local myconf
 	local tclv
 	local tkv

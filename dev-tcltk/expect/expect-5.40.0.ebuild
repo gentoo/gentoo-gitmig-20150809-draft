@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.40.0.ebuild,v 1.5 2004/06/25 02:06:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.40.0.ebuild,v 1.6 2004/08/12 00:33:37 mr_bones_ Exp $
 
 inherit gnuconfig
 
@@ -18,10 +18,13 @@ DEPEND=">=dev-lang/tcl-8.2
 
 S=${WORKDIR}/${P%.0}
 
-src_compile() {
-	use amd64 && gnuconfig_update
-	use ppc64 && gnuconfig_update
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	gnuconfig_update
+}
 
+src_compile() {
 	local myconf
 	local tclv
 	local tkv
