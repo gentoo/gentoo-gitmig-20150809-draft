@@ -1,6 +1,13 @@
 # ChangeLog for net-www/straw
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.29 2004/06/26 22:27:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.30 2004/08/06 23:46:43 tester Exp $
+
+*straw-0.25.1 (06 Aug 2004)
+
+  06 Aug 2004; Olivier Crete <tester@gentoo.org> +straw-0.25.1.ebuild:
+  Bumped 0.25.1 and made the compile and make parts go through virtualX.
+  Thanks to Haplo <haplo@mindstab.net> and Eddy Mulyono <eddymulyono@mail.com>
+  from bug #57199
 
   26 Jun 2004; Alastair Tse <liquidx@gentoo.org> straw-0.22.1.ebuild,
   straw-0.23.ebuild:
