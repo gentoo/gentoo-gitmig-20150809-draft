@@ -1,11 +1,11 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.6 2002/11/17 08:43:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.7 2002/11/29 18:41:27 lostlogic Exp $
 
-*vanilla-sources-2.4.18 (12 Aug 2002)
+*vanilla-sources-2.4.20 (29 Nov 2002)
 
-  12 Aug 2002; Jack Morgan <jmorgan@gentoo.org>
-  Added arch keywords (sparc64)
+  29 Nov 2002; Brandon Low <lostlogic@gentoo.org>
+  Update to 2.4.20, use new kernel.eclass.
 
 *vanilla-sources-2.4.19 (02 Aug 2002)
 
@@ -14,6 +14,9 @@
   does that now. 
 
 *vanilla-sources-2.4.18 (09 Jul 2002)
+
+  12 Aug 2002; Jack Morgan <jmorgan@gentoo.org>
+  Added arch keywords (sparc64)
 
   15 Jul 2002; Mark Guertin <gerk@gentoo.org>
   Added arch keywords (x86 ppc)
