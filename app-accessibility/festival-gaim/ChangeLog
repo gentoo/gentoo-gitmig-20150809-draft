@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/festival-gaim
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.13 2004/08/13 17:47:28 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-gaim/ChangeLog,v 1.14 2004/08/14 20:11:08 squinky86 Exp $
+
+  14 Aug 2004; Jon Hood <squinky86@gentoo.org> -festival-gaim-0.77.ebuild,
+  festival-gaim-0.81.ebuild:
+  Stable on x86 because of new gaim version being stable.
 
 *festival-gaim-0.81 (13 Aug 2004)
 
