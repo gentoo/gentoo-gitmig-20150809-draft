@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.4.ebuild,v 1.1 2004/04/02 21:43:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.4.ebuild,v 1.2 2004/04/12 18:17:43 weeve Exp $
 
 inherit games flag-o-matic
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://flightgear/Source/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="=dev-games/simgear-0.3.5*
 	>=sys-apps/sed-4"
