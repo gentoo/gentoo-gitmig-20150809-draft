@@ -1,10 +1,20 @@
-MD5 e90d7b59d2ea89fb8fbf0574901b255c ChangeLog 2581
-MD5 080dc994f8bea08e2aec8fca72f956af ghex-1.2.1.ebuild 1007
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3510e5185ac77e00a852e39af4867201 ghex-2.2.1.ebuild 670
+MD5 2ba3c9510b917c3d9a8717e176a1e436 ghex-2.4.1.ebuild 788
 MD5 c6095bb342cb460060a1154ae7c3cdf7 ghex-2.4.0.1.ebuild 772
-MD5 a60cc58919607f2b9a35a14d8833a430 ghex-2.4.1.ebuild 783
+MD5 90daf557f13c92ab889b6b9be7b6a839 ChangeLog 2677
+MD5 080dc994f8bea08e2aec8fca72f956af ghex-1.2.1.ebuild 1007
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 03fbd46972450f035f67135507be454b files/digest-ghex-2.4.0.1 65
 MD5 22a11afdebbfb2354881e9d76f88a06e files/digest-ghex-1.2.1 62
 MD5 1e32613b88b86755c0dabc522af1ef41 files/digest-ghex-2.2.1 63
-MD5 03fbd46972450f035f67135507be454b files/digest-ghex-2.4.0.1 65
 MD5 dae8a4e35e7d660455c9b1f2ff755c80 files/digest-ghex-2.4.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfYO8CHk4+ZoBpvsRApAIAJ90BfVBv9VSHjD2D1Ug1eTfIJduPwCgg/ZH
+4Wvtqucq8ZoQC7LlPaZ0xJQ=
+=hJ7D
+-----END PGP SIGNATURE-----
