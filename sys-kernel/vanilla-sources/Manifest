@@ -1,4 +1,4 @@
-MD5 0a57c6e46789210d9940ead0fae7dc2e ChangeLog 7437
+MD5 d9585c50175f318d04985e4a04549e60 ChangeLog 7575
 MD5 17fc2980dd0bf3e634c8dab8f8d22b65 vanilla-sources-2.4.20.ebuild 879
 MD5 772463fc3a1dcbcb004c4bcaff974133 vanilla-sources-2.4.24.ebuild 797
 MD5 fdbdd9830f72911fb7be348515b25096 vanilla-sources-2.4.25.ebuild 903
@@ -6,6 +6,7 @@ MD5 19a83aded0f333176b03602ecf108587 vanilla-sources-2.0.40.ebuild 2744
 MD5 17ded3e049cc5ea4571a590f031fd463 metadata.xml 449
 MD5 e24cfa4f03333daaf04140a711807e60 vanilla-sources-2.4.21.ebuild 891
 MD5 8243008c3bb786135019cca050325f29 vanilla-sources-2.4.23.ebuild 798
+MD5 8c4779f5ac5b2aa05fa13b21de83e97b vanilla-sources-2.4.28.ebuild 800
 MD5 8a87614d397407b0085d54ced87f73ce vanilla-sources-2.4.27.ebuild 798
 MD5 d9d9d65723e64fe5ad7b48c0af6f7af4 vanilla-sources-2.4.26.ebuild 797
 MD5 13ea261e6311c7a4206175a3d4961bc4 vanilla-sources-2.2.26.ebuild 2743
@@ -22,5 +23,6 @@ MD5 2574d3f1b776f2df365737f456bfe435 files/digest-vanilla-sources-2.4.26 67
 MD5 1d8193a0ded31699ec3b7bf85dd6cbfa files/digest-vanilla-sources-2.0.40 66
 MD5 14e2a1ac85955957aae295a309749807 files/digest-vanilla-sources-2.4.27 67
 MD5 d8266c3fd31880277da566681a943098 files/digest-vanilla-sources-2.4.24 67
+MD5 6228c1417a2403fb6ea20450802429b1 files/digest-vanilla-sources-2.4.28 67
 MD5 79ee1ad9f4629595cd8d0cd20ca56dc1 files/digest-vanilla-sources-2.4.23 67
 MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242
