@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r1.ebuild,v 1.12 2005/01/08 23:37:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r1.ebuild,v 1.13 2005/01/25 13:33:50 vericgar Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -81,7 +81,7 @@ src_unpack() {
 	sed -i -e 's:(" PLATFORM "):(Gentoo/Linux):g' server/core.c
 
 	#fix perl with perl!
-	find -type f | xargs perl -pi -e \
+	find . -type f | xargs perl -pi -e \
 		"s|/usr/local/bin/perl|/usr/bin/perl|g; \
 		s|/usr/local/bin/perl5|/usr/bin/perl|g; \
 		s|/path/to/bin/perl|/usr/bin/perl|g;"
