@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.48 2005/01/05 18:29:46 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.49 2005/01/05 18:34:45 plasmaroo Exp $
+
+  05 Jan 2005; <plasmaroo@gentoo.org> -linux26-headers-2.6.5.ebuild,
+  -linux26-headers-2.6.6-r1.ebuild,
+  -files/linux26-headers-2.6.4-appCompat.patch,
+  -files/linux26-headers-2.6.4-unistd-nptl-fix.patch,
+  -files/linux26-headers-2.6.6-appCompat.patch,
+  -files/linux26-headers-2.6.6-tcp_info-DRS-backport.patch:
+  Cleanup; removing old unsupported headers.
 
   05 Jan 2005; <plasmaroo@gentoo.org>
   files/linux26-headers-2.6.8.1-appCompat.patch:
