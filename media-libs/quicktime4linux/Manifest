@@ -4,5 +4,5 @@ MD5 108d3e9d9e220d8415e069fb6232eeea files/quicktime_makefile.patch 420
 MD5 18f6f22f1a711f5be21eed00582cf61e files/1.6.2-gentoo-libmpeg3.patch 647
 MD5 947ef42daabc28f6c58cbccd4f7bb911 files/1.6.2-gentoo-sharedlib.patch 1072
 MD5 8fc75a24a8ebe6217011390d7400429b quicktime4linux-1.5.5-r1.ebuild 885
-MD5 e509581355f2a85aa0b915533be4e934 quicktime4linux-1.6.2.ebuild 915
+MD5 841da2060bab0ad58efd6229d41a9b62 quicktime4linux-1.6.2.ebuild 944
 MD5 dcc3d51f08d70d6c56e7c481aa9f2252 ChangeLog 2459
