@@ -1,6 +1,18 @@
 # ChangeLog for app-admin/bacula
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.14 2004/02/11 23:38:03 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.15 2004/03/16 17:22:31 zul Exp $
+
+*bacula-1.32f-r5 (16 Mar 2004)
+
+  16 Mar 2004; Chuck Short <zul@gentoo.org> bacula-1.32f-r5.ebuild,
+  bacula-1.32f.ebuild:
+  Version bump, closes #44580.
+  
+  Bacula 1.32f-r5 is 1.32f-5 and bacula 1.32f is 1.32f. The 
+  next release 1.32f-6 will be 1.32f-r6.
+
+  14 Mar 2004; Chuck Short <zul@gentoo.org> bacula-1.32f.ebuild:
+  Marked stable for x86.
 
   11 Feb 2004; Chuck Short <zul@gentoo.org> bacula-1.29.ebuild:
   For some reason console does not get installed to /usr/sbin. Added depend on
