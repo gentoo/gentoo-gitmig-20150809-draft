@@ -30,10 +30,6 @@ dev-dotnet/glib-sharp
 # Need to fix patches
 =dev-db/mysql-4.0.14
 
-# <carpaski@gentoo.org> (22 Jul 2003)
-# Masking 2.0.48-r6 for heavy+quick testing.
->=sys-apps/portage-2.0.48-r6
-
 # <caleb@gentoo.org> (20 July 2003)
 # Masked until announcement is made
 =kde-base/kdelibs-3.1.2-r1
