@@ -1,12 +1,13 @@
 # ChangeLog for sys-devel/bison
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.5 2002/10/20 09:05:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.6 2002/10/20 21:26:48 blizzy Exp $
+
+  20 Oct 2002; Maik Schreiber <blizzy@gentoo.org> bison-1.75.ebuild:
+  Fixed KEYWORDS.
 
 *bison-1.75 (20 Oct 2002)
 
-  20 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
-
-  Update version.
+  20 Oct 2002; Martin Schlemmer <azarah@gentoo.org> : Update version.
 
 *bison-1.35 (09 Aug 2002)
 
