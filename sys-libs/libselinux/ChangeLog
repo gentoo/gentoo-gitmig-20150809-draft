@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.13 2003/12/06 20:13:37 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.14 2003/12/16 20:42:08 pebenito Exp $
+
+  16 Dec 2003; Chris PeBenito <pebenito@gentoo.org> libselinux-1.4.ebuild:
+  Mark stable.
 
 *libselinux-1.4 (06 Dec 2003)
 
