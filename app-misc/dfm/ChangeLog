@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/dfm
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dfm/ChangeLog,v 1.1 2002/07/12 01:29:16 stroke Exp $
+
+*dfm-0.99.9 (12 Jul 2002)
+
+  12 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> dfm-0.99.9.ebuild :
+  
+  New package
+  Ebuild submitted by: <jjosegutierrez@terra.es>
