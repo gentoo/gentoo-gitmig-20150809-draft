@@ -1,47 +1,48 @@
-diff -urN Canna36p3.ORIG/Canna.conf Canna36p3/Canna.conf
---- Canna36p3.ORIG/Canna.conf	2003-01-25 17:47:47.000000000 +0900
-+++ Canna36p3/Canna.conf	2003-05-05 19:48:58.000000000 +0900
-@@ -133,7 +133,7 @@
+diff -Naur Canna36p1.orig/Canna.conf Canna36p1/Canna.conf
+--- Canna36p1.orig/Canna.conf	2002-12-02 09:44:59.000000000 +0900
++++ Canna36p1/Canna.conf	2002-12-02 22:03:25.000000000 +0900
+@@ -132,20 +132,26 @@
+ 
  /* rootにならずにインストールする時はこれを定義して下さい */
  /* #define InstallAsUser */
- /* 従来と互換のディレクトリ構造にする場合はこれを定義してください */
--#define ObsoleteInstallDir
-+/* #define ObsoleteInstallDir */
- #ifdef InstallAsUser
- # define DefCannaPrefix $(HOME)/canna
- # define DefErrDir $(cannaPrefix)/log
-@@ -144,7 +144,7 @@
- #  define DefErrDir /usr/spool/canna
- #  define DefLibCannaDir /usr/lib
- # else
--#  define DefErrDir /var/log
-+#  define DefErrDir /var/log/canna
- #  define DefLibCannaDir $(cannaExecPrefix)/lib
- # endif
- #endif
-@@ -156,16 +156,18 @@
- # define DefCannaLibDir $(cannaPrefix)/share/canna
- #endif
- 
--cannaPrefix = DefCannaPrefix
+-cannaPrefix = /usr/local/canna
 +cannaPrefix = /usr
  cannaExecPrefix = $(cannaPrefix)
  cannaBinDir = $(cannaExecPrefix)/bin
- cannaSrvDir = DefCannaSrvDir
- XCOMM cannaLibDir = /var/lib/canna
- XCOMM cannaLibDir = /var/db/canna
- cannaLibDir = DefCannaLibDir
--XCOMM cannaManDir = $(cannaPrefix)/share/man
+-cannaSrvDir = $(cannaExecPrefix)/bin
+-cannaLibDir = $(cannaPrefix)/lib
 -cannaManDir = $(cannaPrefix)/man
++cannaSrvDir = $(cannaExecPrefix)/sbin
++cannaLibDir = /etc/canna
++cannaEtcDir = /etc/canna
 +cannaManDir = $(cannaPrefix)/share/man
-+XCOMM cannaManDir = $(cannaPrefix)/man
  cannaIncDir = $(cannaPrefix)/include/canna
-+cannaDocDir = $(cannaPrefix)/share/doc/canna-3.6_p3
++cannaDocDir = $(cannaPrefix)/share/doc/canna-3.6
 +cannaShareDir = $(cannaPrefix)/share/canna
++
++LockDir = /tmp/.iroha_unix
++LockFile = IROHA 
  
- libCannaDir = DefLibCannaDir
- ErrDir  = DefErrDir
-@@ -248,7 +250,7 @@
+ #ifdef InstallAsUser
+ libCannaDir = $(cannaExecPrefix)/lib
+ ErrDir  = $(cannaExecPrefix)/log
+ #else
+ libCannaDir = /usr/lib
+-ErrDir  = /usr/spool/canna
++ErrDir  = /var/log/canna
+ #endif
+ 
+ /* 次の3行は変更しないでください */
+@@ -164,7 +170,7 @@
+ 
+ pointerIntegerDef =
+ 
+-cannaDsoRev = 1
++cannaDsoRev = 1.0
+     /* SunOS 4.x をお使いの方で shared object を利用する場合には
+             cannaDsoRev = 1.1
+     と指定してください。また、FreeBSD を利用する場合は、
+@@ -231,7 +237,7 @@
  /* #define UseInstalledLibCanna YES */
  #define UseInstalledLibCanna NO
  
@@ -50,7 +51,43 @@ diff -urN Canna36p3.ORIG/Canna.conf Canna36p3/Canna.conf
  
  #ifdef NeXT
  #define NO_X_ENV
-@@ -561,6 +563,7 @@
+@@ -348,6 +354,9 @@
+ 	 echo "s%@(UnixSockDir)%$(UnixSockDir)%g"; \			@@\
+ 	 echo "s%@(UnixSockName)%$(UnixSockName)%g"; \			@@\
+ 	 echo "s%@(AccessFile)%$(AccessFile)%g"; \			@@\
++	 echo "s%@(DicDir)%$(DicDir)%g"; \				@@\
++	 echo "s%@(LockDir)%$(LockDir)%g"; \				@@\
++	 echo "s%@(LockFile)%$(LockFile)%g"; \				@@\
+ 	 echo "s%@(ErrDir)%$(ErrDir)%g") > $(MANUALSED)			@@\
+ clean::									@@\
+ 	$(RM) $(MANUALSED)
+@@ -364,11 +373,16 @@
+ 	echo "s%@(UnixSockDir)%$(UnixSockDir)%g" >> $(MANUALSED)	@@\
+ 	echo "s%@(UnixSockName)%$(UnixSockName)%g" >> $(MANUALSED)	@@\
+ 	echo "s%@(AccessFile)%$(AccessFile)%g" >> $(MANUALSED)		@@\
++	echo "s%@(DicDir)%$(DicDir)%g" >> $(MANUALSED)			@@\
++	echo "s%@(LockDir)%$(LockDir)%g" >> $(MANUALSED)		@@\
++	echo "s%@(LockFile)%$(LockFile)%g" >> $(MANUALSED)		@@\
+ 	echo "s%@(ErrDir)%$(ErrDir)%g" >> $(MANUALSED)			@@\
+ clean::									@@\
+ 	$(RM) $(MANUALSED)
+ #endif
+ 
++MANSUFFIX = 1 /* man section for user programs */
++
+ #ifdef InstallManPageLong
+ #undef InstallManPageLong
+ #endif
+@@ -401,6 +415,8 @@
+ #define	InstallManPage(file,destdir)					@@\
+ InstallManPageLong(file,destdir,file)
+ 
++LIBMANSUFFIX = 3 /* man section for libraries */
++
+ #ifdef InstallLibManPageLong
+ #undef InstallLibManPageLong
+ #endif
+@@ -527,6 +543,7 @@
  	echo "#define CANNAHOSTFILE '$(cannaLibDir)/cannahost'" >> junk	@@\
  	echo "/* for lib/canna */" >> junk				@@\
  	echo "#define CANNALIBDIR '$(cannaLibDir)'" >> junk		@@\
@@ -58,7 +95,7 @@ diff -urN Canna36p3.ORIG/Canna.conf Canna36p3/Canna.conf
  	echo "/* for scripts */" >> junk				@@\
  	echo "#define CANNABINDIR $(cannaBinDir)" >> junk		@@\
  	echo "/* others */" >> junk					@@\
-@@ -587,6 +590,7 @@
+@@ -553,6 +570,7 @@
  	 echo "#define CANNAHOSTFILE \"$(cannaLibDir)/cannahost\"";\	@@\
  	 echo "/* for lib/canna */";\					@@\
  	 echo "#define CANNALIBDIR \"$(cannaLibDir)\""; \		@@\
@@ -66,11 +103,11 @@ diff -urN Canna36p3.ORIG/Canna.conf Canna36p3/Canna.conf
  	 echo "/* for scripts */";\					@@\
  	 echo "#define CANNABINDIR $(cannaBinDir)"; \			@@\
  	 echo "/* others */";\					@@\
-diff -urN Canna36p3.ORIG/cmd/catdic/Imakefile Canna36p3/cmd/catdic/Imakefile
---- Canna36p3.ORIG/cmd/catdic/Imakefile	2002-12-28 11:52:40.000000000 +0900
-+++ Canna36p3/cmd/catdic/Imakefile	2003-05-05 18:39:54.000000000 +0900
+diff -Naur Canna36p1.orig/cmd/catdic/Imakefile Canna36p1/cmd/catdic/Imakefile
+--- Canna36p1.orig/cmd/catdic/Imakefile	2002-11-07 23:46:02.000000000 +0900
++++ Canna36p1/cmd/catdic/Imakefile	2002-12-02 22:03:25.000000000 +0900
 @@ -1,6 +1,9 @@
- /* $Id: Imakefile,v 1.2.2.3 2002/12/28 02:52:40 aida_s Exp $ */
+ /* $Id: canna-3.6_p1-gentoo.diff,v 1.1 2003/09/22 21:12:03 usata Exp $ */
  #include "../../Canna.conf"
  
 +/* gentoo: use hard links so that the image can be merged correctly */
@@ -79,18 +116,9 @@ diff -urN Canna36p3.ORIG/cmd/catdic/Imakefile Canna36p3/cmd/catdic/Imakefile
         CANNAROOT = ../..
          CANNASRC = $(CANNAROOT)/lib/canna
            RKCSRC = $(CANNAROOT)/lib/RKC
-diff -urN Canna36p3.ORIG/cmd/catdic/cannakill.man Canna36p3/cmd/catdic/cannakill.man
---- Canna36p3.ORIG/cmd/catdic/cannakill.man	2002-10-23 00:19:13.000000000 +0900
-+++ Canna36p3/cmd/catdic/cannakill.man	2003-05-05 18:41:06.000000000 +0900
-@@ -20,7 +20,7 @@
- .\" PERFORMANCE OF THIS SOFTWARE.
- .\"
- .\" $Id: cannakill.man,v 1.2 2002/10/22 15:19:13 aida_s Exp $
--.TH CANNAKILL 1M
-+.TH CANNAKILL 1
- .SH "NAME"
- cannakill \- Terminate operation of the Kana-Kanji conversion server
- cannaserver
+diff -Naur Canna36p1.orig/cmd/catdic/cannakill.man Canna36p1/cmd/catdic/cannakill.man
+--- Canna36p1.orig/cmd/catdic/cannakill.man	2002-10-23 00:19:13.000000000 +0900
++++ Canna36p1/cmd/catdic/cannakill.man	2002-12-02 22:03:25.000000000 +0900
 @@ -29,14 +29,14 @@
  .SH "DESCRIPTION"
  .PP
@@ -110,9 +138,9 @@ diff -urN Canna36p3.ORIG/cmd/catdic/cannakill.man Canna36p3/cmd/catdic/cannakill
  .PP
 -cannaserver(1M), cannastat(1), cannacheck(1)
 +cannaserver(1), cannastat(1), cannacheck(1)
-diff -urN Canna36p3.ORIG/cmd/catdic/catdic.man Canna36p3/cmd/catdic/catdic.man
---- Canna36p3.ORIG/cmd/catdic/catdic.man	2002-10-19 17:27:33.000000000 +0900
-+++ Canna36p3/cmd/catdic/catdic.man	2003-05-05 18:41:39.000000000 +0900
+diff -Naur Canna36p1.orig/cmd/catdic/catdic.man Canna36p1/cmd/catdic/catdic.man
+--- Canna36p1.orig/cmd/catdic/catdic.man	2002-10-19 17:27:33.000000000 +0900
++++ Canna36p1/cmd/catdic/catdic.man	2002-12-02 22:03:25.000000000 +0900
 @@ -30,7 +30,7 @@
  catdic downloads a dictionary file to the current directory. 
  The file downloaded is a dictionary file the dictionary name of which is
@@ -128,9 +156,9 @@ diff -urN Canna36p3.ORIG/cmd/catdic/catdic.man Canna36p3/cmd/catdic/catdic.man
  .PP
 -cannaserver(1M), lsdic(1), mkdic(1)
 +cannaserver(1), lsdic(1), mkdic(1)
-diff -urN Canna36p3.ORIG/cmd/catdic/mkdic.man Canna36p3/cmd/catdic/mkdic.man
---- Canna36p3.ORIG/cmd/catdic/mkdic.man	2002-10-19 17:27:33.000000000 +0900
-+++ Canna36p3/cmd/catdic/mkdic.man	2003-05-05 18:42:01.000000000 +0900
+diff -Naur Canna36p1.orig/cmd/catdic/mkdic.man Canna36p1/cmd/catdic/mkdic.man
+--- Canna36p1.orig/cmd/catdic/mkdic.man	2002-10-19 17:27:33.000000000 +0900
++++ Canna36p1/cmd/catdic/mkdic.man	2002-12-02 22:03:25.000000000 +0900
 @@ -28,7 +28,7 @@
  .SH "DESCRIPTION"
  .PP
@@ -146,9 +174,9 @@ diff -urN Canna36p3.ORIG/cmd/catdic/mkdic.man Canna36p3/cmd/catdic/mkdic.man
  .PP
 -catdic(1), cannaserver(1M), lsdic(1)
 +catdic(1), cannaserver(1), lsdic(1)
-diff -urN Canna36p3.ORIG/cmd/cshost/cshost.man Canna36p3/cmd/cshost/cshost.man
---- Canna36p3.ORIG/cmd/cshost/cshost.man	2002-10-19 17:27:34.000000000 +0900
-+++ Canna36p3/cmd/cshost/cshost.man	2003-05-05 18:42:29.000000000 +0900
+diff -Naur Canna36p1.orig/cmd/cshost/cshost.man Canna36p1/cmd/cshost/cshost.man
+--- Canna36p1.orig/cmd/cshost/cshost.man	2002-10-19 17:27:34.000000000 +0900
++++ Canna36p1/cmd/cshost/cshost.man	2002-12-02 22:03:25.000000000 +0900
 @@ -6,9 +6,9 @@
  .SH "DESCRIPTION"
  .PP
@@ -161,9 +189,22 @@ diff -urN Canna36p3.ORIG/cmd/cshost/cshost.man Canna36p3/cmd/cshost/cshost.man
  running on the same machine or machines listed in the file
  /etc/hosts.canna.  If /etc/hosts.canna does not exist or the file
  is empty, access is granted to everyone.
-diff -urN Canna36p3.ORIG/dic/phono/Imakefile Canna36p3/dic/phono/Imakefile
---- Canna36p3.ORIG/dic/phono/Imakefile	2002-10-19 17:27:40.000000000 +0900
-+++ Canna36p3/dic/phono/Imakefile	2003-05-05 20:35:00.000000000 +0900
+diff -Naur Canna36p1.orig/dic/ideo/grammar/Imakefile Canna36p1/dic/ideo/grammar/Imakefile
+--- Canna36p1.orig/dic/ideo/grammar/Imakefile	2002-10-19 17:27:34.000000000 +0900
++++ Canna36p1/dic/ideo/grammar/Imakefile	2002-12-02 22:03:25.000000000 +0900
+@@ -85,6 +85,6 @@
+ InstallMultipleFlags($(ALLDIC),$(CANNADICDIR),-m 0664 $(cannaOwnerGroup))
+ 
+ install::
+-	$(CHGRP) $(cannaGroup) $(CANNADICDIR)
+-	$(CHOWN) $(cannaOwner) $(CANNADICDIR)
+-	$(CHMOD) ug+w $(CANNADICDIR)
++	$(CHGRP) $(cannaGroup) $(DESTDIR)$(CANNADICDIR)
++	$(CHOWN) $(cannaOwner) $(DESTDIR)$(CANNADICDIR)
++	$(CHMOD) ug+w $(DESTDIR)$(CANNADICDIR)
+diff -Naur Canna36p1.orig/dic/phono/Imakefile Canna36p1/dic/phono/Imakefile
+--- Canna36p1.orig/dic/phono/Imakefile	2002-10-19 17:27:40.000000000 +0900
++++ Canna36p1/dic/phono/Imakefile	2002-12-02 22:03:32.000000000 +0900
 @@ -27,9 +27,10 @@
  
         ROMAJI_DIC_DEF = -DSHIFT
@@ -187,9 +228,9 @@ diff -urN Canna36p3.ORIG/dic/phono/Imakefile Canna36p3/dic/phono/Imakefile
  
  #ifdef USE_OBSOLETE_STYLE_FILENAME
  InstallNonExec(default.kpdef,$(SAMPLESRCDIR))
-diff -urN Canna36p3.ORIG/lib/canna/Imakefile Canna36p3/lib/canna/Imakefile
---- Canna36p3.ORIG/lib/canna/Imakefile	2002-10-20 17:20:33.000000000 +0900
-+++ Canna36p3/lib/canna/Imakefile	2003-05-05 18:45:37.000000000 +0900
+diff -Naur Canna36p1.orig/lib/canna/Imakefile Canna36p1/lib/canna/Imakefile
+--- Canna36p1.orig/lib/canna/Imakefile	2002-10-20 17:20:33.000000000 +0900
++++ Canna36p1/lib/canna/Imakefile	2002-12-02 22:03:32.000000000 +0900
 @@ -116,8 +116,8 @@
  #endif /* ProjectX */
  #endif /* DoSharedLib */
@@ -201,9 +242,24 @@ diff -urN Canna36p3.ORIG/lib/canna/Imakefile Canna36p3/lib/canna/Imakefile
  
  clean::
  	$(RM) y.tab.h y.tab.c lex.yy.c gram.h gram.c lex.c sglobal.h
-diff -urN Canna36p3.ORIG/lib/canna/romaji.c Canna36p3/lib/canna/romaji.c
---- Canna36p3.ORIG/lib/canna/romaji.c	2003-01-17 17:48:19.000000000 +0900
-+++ Canna36p3/lib/canna/romaji.c	2003-05-05 19:17:15.000000000 +0900
+diff -Naur Canna36p1.orig/lib/canna/ebind.c Canna36p1/lib/canna/ebind.c
+--- Canna36p1.orig/lib/canna/ebind.c	2002-10-19 17:27:48.000000000 +0900
++++ Canna36p1/lib/canna/ebind.c	2002-12-02 22:03:32.000000000 +0900
+@@ -205,9 +205,9 @@
+     }
+   }
+ 
+-  inbuf[0] = (wchar_t)buffer_return[0];
++  inbuf[0] = (wchar_t)(buffer_return[0] & 0xff);
+   for (i = 1 ; i < nbytes ; i++) {
+-    inbuf[i] = (wchar_t)buffer_return[i];
++    inbuf[i] = (wchar_t)(buffer_return[i] & 0xff);
+   }
+   ch = buffer_return[0] & 0xff;
+   ret = XwcLookupKanji2(dpy, win, inbuf, inbufsize, nbytes, functionalChar,
+diff -Naur Canna36p1.orig/lib/canna/romaji.c Canna36p1/lib/canna/romaji.c
+--- Canna36p1.orig/lib/canna/romaji.c	2002-10-21 03:00:21.000000000 +0900
++++ Canna36p1/lib/canna/romaji.c	2002-12-02 22:03:32.000000000 +0900
 @@ -438,7 +438,7 @@
  	}
        }
@@ -213,10 +269,10 @@ diff -urN Canna36p3.ORIG/lib/canna/romaji.c Canna36p3/lib/canna/romaji.c
        if (retval == (struct RkRxDic *)NULL) { /* added for Debian by ISHIKAWA Mutsumi <ishikawa@linux.or.jp> */
          extern jrUserInfoStruct *uinfo;
  	
-diff -urN Canna36p3.ORIG/misc/Imakefile Canna36p3/misc/Imakefile
---- Canna36p3.ORIG/misc/Imakefile	2003-01-13 14:34:30.000000000 +0900
-+++ Canna36p3/misc/Imakefile	2003-05-05 19:19:27.000000000 +0900
-@@ -34,14 +34,14 @@
+diff -Naur Canna36p1.orig/misc/Imakefile Canna36p1/misc/Imakefile
+--- Canna36p1.orig/misc/Imakefile	2002-10-21 03:00:21.000000000 +0900
++++ Canna36p1/misc/Imakefile	2002-12-02 22:03:32.000000000 +0900
+@@ -34,11 +34,11 @@
  MakeLintLibSubdirs($(SUBDIRS))
  MakeLintSubdirs($(SUBDIRS),install.ln,install.ln)
  
@@ -230,14 +286,21 @@ diff -urN Canna36p3.ORIG/misc/Imakefile Canna36p3/misc/Imakefile
 +InstallNamedNonExec(cMakefile,Makefile,$(cannaDocDir)/sample/src)
  #endif /* nec_ews_svr4 */
  
+ #ifdef USE_OBSOLETE_STYLE_FILENAME
+@@ -49,8 +49,8 @@
+ 	$(CP) default.ca default.canna
+ #endif
+ 
+-InstallNonExec(default.canna,$(cannaLibDir))
 -InstallNonExec(is.c,$(cannaLibDir)/sample/src)
++InstallNonExec(default.canna,$(cannaEtcDir))
 +InstallNonExec(is.c,$(cannaDocDir)/sample/src)
  
  clean::
  	$(RM) $(PROGRAMS)
-diff -urN Canna36p3.ORIG/misc/initfiles/Imakefile Canna36p3/misc/initfiles/Imakefile
---- Canna36p3.ORIG/misc/initfiles/Imakefile	2003-01-21 19:57:03.000000000 +0900
-+++ Canna36p3/misc/initfiles/Imakefile	2003-05-05 19:21:20.000000000 +0900
+diff -Naur Canna36p1.orig/misc/initfiles/Imakefile Canna36p1/misc/initfiles/Imakefile
+--- Canna36p1.orig/misc/initfiles/Imakefile	2002-10-19 17:27:52.000000000 +0900
++++ Canna36p1/misc/initfiles/Imakefile	2002-12-02 22:03:32.000000000 +0900
 @@ -6,7 +6,7 @@
  #endif
  
@@ -247,36 +310,9 @@ diff -urN Canna36p3.ORIG/misc/initfiles/Imakefile Canna36p3/misc/initfiles/Imake
  
  all::
  
-@@ -22,7 +22,7 @@
- Install: 1.1.cob 1.2.cob fixer.cob jdemon.cob just.cob lan5.cob modes.cob \
-          matsu.cob sample.cob skk.cob tut.cob unix.cob vje.cob wx2+.cob \
-          default.cob
--InstallNamedNonExec(default.cob,default.canna,$(cannaLibDir))
-+InstallNamedNonExec(default.cob,default.canna,$(cannaShareDir))
- InstallNamedNonExec(1.1.cob,1.1.canna,$(SAMPLEDIR))
- InstallNamedNonExec(1.2.cob,1.2.canna,$(SAMPLEDIR))
- InstallNamedNonExec(fixer.cob,fixer.canna,$(SAMPLEDIR))
-@@ -38,7 +38,7 @@
- InstallNamedNonExec(vje.cob,vje.canna,$(SAMPLEDIR))
- InstallNamedNonExec(wx2+.cob,wx2+.canna,$(SAMPLEDIR))
- #else
--InstallNamedNonExec(default.ca,default.canna,$(cannaLibDir))
-+InstallNamedNonExec(default.ca,default.canna,$(cannaShareDir))
- InstallNonExec(1.1.canna,$(SAMPLEDIR))
- InstallNonExec(1.2.canna,$(SAMPLEDIR))
- InstallNonExec(fixer.canna,$(SAMPLEDIR))
-diff -urN Canna36p3.ORIG/server/server.man Canna36p3/server/server.man
---- Canna36p3.ORIG/server/server.man	2002-11-01 17:32:06.000000000 +0900
-+++ Canna36p3/server/server.man	2003-05-05 19:21:54.000000000 +0900
-@@ -20,7 +20,7 @@
- .\" PERFORMANCE OF THIS SOFTWARE. 
- .\"
- .\" $Id: server.man,v 1.6 2002/11/01 08:32:06 zu2 Exp $
--.TH CANNASERVER 1M
-+.TH CANNASERVER 1
- .SH "NAME"
- cannaserver \- Kana-Kanji conversion server
- .SH "SYNOPSIS"
+diff -Naur Canna36p1.orig/server/server.man Canna36p1/server/server.man
+--- Canna36p1.orig/server/server.man	2002-11-01 17:32:06.000000000 +0900
++++ Canna36p1/server/server.man	2002-12-02 22:09:56.000000000 +0900
 @@ -28,19 +28,19 @@
  .SH "DESCRIPTION"
  .PP
