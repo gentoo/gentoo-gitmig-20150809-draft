@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/gproftpd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/ChangeLog,v 1.4 2004/06/05 00:49:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/ChangeLog,v 1.5 2004/06/08 22:25:45 dragonheart Exp $
+
+*gproftpd-8.1.6 (09 Jun 2004)
+
+  09 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  gproftpd-8.1.4.ebuild, +gproftpd-8.1.6.ebuild:
+  x86 stable 8.1.4. Fixes to 8.1.4 and version bump thanks to
+  scootersmk@chartertn.net in bug 33798
 
   04 Jun 2004; Jason Wever <weeve@gentoo.org> gproftpd-8.1.4.ebuild:
   Added ~sparc keyword to resolve bug #53022.
