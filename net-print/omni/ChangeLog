@@ -1,6 +1,9 @@
 # ChangeLog for net-print/omni
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/omni/ChangeLog,v 1.4 2004/03/02 14:07:32 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/omni/ChangeLog,v 1.5 2004/06/15 02:47:46 agriffis Exp $
+
+  14 Jun 2004; Aron Griffis <agriffis@gentoo.org> omni-0.9.0.ebuild:
+  Fix use invocation, make use of use_enable, clean up ebuild
 
   02 Mar 2004; Heinrich Wendel <lanius@gentoo.org> omni-0.9.0.ebuild:
   sed -i

@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.0.ebuild,v 1.6 2004/03/02 14:07:32 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.0.ebuild,v 1.7 2004/06/15 02:47:46 agriffis Exp $
 
 DESCRIPTION="Omni provides support for many printers with a pluggable framework (easy to add devices)"
 HOMEPAGE="http://sourceforge.net/projects/omniprint"
-MY_P=${P/o/O}
-SRC_URI="mirror://sourceforge/omniprint/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/omniprint/${P/o/O}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86"
@@ -23,38 +22,28 @@ S=${WORKDIR}/Omni
 IUSE="cups X ppds foomaticdb static"
 
 src_compile() {
-	use X \
-		&& myconf="${myconf} --enable-jobdialog" \
-		|| myconf="${myconf} --disable-jobdialog"
-	use cups \
-		&& myconf="${myconf} --enable-cups" \
-		|| myconf="${myconf} --disable-cups"
-	use static \
-		&& myconf="${myconf} --enable-static" \
-		|| myconf="${myconf} --disable-static"
+	local myconf=" \
+		$(use_enable X jobdialog) \
+		$(use_enable cups) \
+		$(use_enable static)"
 
 	./setupOmni ${myconf} || die
 
-	if [ "`use ppds`" -a "`use cups`" ]; then
-		cd CUPS
-		sed -i -e "s/model\/foomatic/model\/omni/g" Makefile
-
-		make generateBuildPPDs || die
-		cd ..
+	if use ppds || use cups; then
+		sed -i -e "s/model\/foomatic/model\/omni/g" CUPS/Makefile \
+			|| die 'sed failed'
+		make -C CUPS generateBuildPPDs || die
 	fi
-	if [ `use foomaticdb` ]; then
-		cd Foomatic
-		make generateFoomaticData || die
-		cd ..
+
+	if use foomaticdb; then
+		make -C Foomatic generateFoomaticData || die
 	fi
 }
 
 src_install () {
 	make DESTDIR=${D} install || die
 
-	if [ `use foomaticdb` ]; then
-		cd Foomatic
-		make DESTDIR=${D} localInstall || die
-		cd ..
+	if use foomaticdb; then
+		make -C foomaticdb DESTDIR=${D} localInstall || die
 	fi
 }
