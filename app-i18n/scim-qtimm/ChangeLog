@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-qtimm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.16 2005/03/22 16:39:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.17 2005/03/28 05:24:59 usata Exp $
+
+*scim-qtimm-0.8.5-r1 (28 Mar 2005)
+
+  28 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> +scim-qtimm-0.8.5-r1.ebuild:
+  Fixed bug #86450.
 
   22 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> scim-qtimm-0.8.5.ebuild:
   Fixed arts USE flag. Thanks to Mathieu Bonnet <mathieu.bonnet@nalkym.org>;

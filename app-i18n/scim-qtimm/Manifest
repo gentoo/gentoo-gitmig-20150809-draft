@@ -1,8 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7e709c9ff55cfef07d5b8b5e53448394 scim-qtimm-0.8.5-r1.ebuild 1462
+MD5 b7d86eca05f4f07b581779dd5d71d203 ChangeLog 2746
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 fa3c9e7aa1924524794846fbade68fa9 ChangeLog 2611
-MD5 34d056675d93eafb353bb7ef06c2688b scim-qtimm-0.7.5.ebuild 1296
 MD5 d8f58fc5303ddd82feb7ae77d634dcd2 scim-qtimm-0.8.0.ebuild 1294
+MD5 34d056675d93eafb353bb7ef06c2688b scim-qtimm-0.7.5.ebuild 1296
 MD5 f6618e4b7852553415f0950e87d99b2f scim-qtimm-0.8.5.ebuild 1349
-MD5 0c45b47a16e7addab7c3281aef50c4a3 files/digest-scim-qtimm-0.7.5 69
 MD5 e91296468ae49c0d28dfb281178f0956 files/digest-scim-qtimm-0.8.0 69
+MD5 0c45b47a16e7addab7c3281aef50c4a3 files/digest-scim-qtimm-0.7.5 69
 MD5 4430f786f093fcbd11d2a6507f8fa076 files/digest-scim-qtimm-0.8.5 69
+MD5 4430f786f093fcbd11d2a6507f8fa076 files/digest-scim-qtimm-0.8.5-r1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCR5U0VWNWqTUmv+0RArpeAJ9GHyHPcY7xEjxaEGmqKBaE/0txdQCfc87X
+FpU+Bwn2QvJykA/4azdvZKw=
+=n0bU
+-----END PGP SIGNATURE-----
