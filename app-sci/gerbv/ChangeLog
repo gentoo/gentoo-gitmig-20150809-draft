@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/gerbv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gerbv/ChangeLog,v 1.6 2004/06/24 22:00:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gerbv/ChangeLog,v 1.7 2004/10/23 22:08:20 plasmaroo Exp $
+
+  23 Oct 2004; <plasmaroo@gentoo.org> gerbv-0.15.ebuild:
+  Added "media-libs/gdk-pixbuf" dependency; bug #67304.
 
 *gerbv-0.16 (24 Jun 2004)
 
