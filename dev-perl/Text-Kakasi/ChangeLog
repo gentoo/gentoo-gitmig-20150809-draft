@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Text-Kakasi
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Kakasi/ChangeLog,v 1.1 2003/06/20 16:46:03 yakina Exp $
+
+*Text-Kakasi-2.04 (21 Jun 2003)
+
+  21 Jun 2003; YAMAKURA Makoto <yakina@gentoo.org> Text-Kakasi-2.04.ebuild,
+  ChangeLog,Manifest,files/digest-Text-Kakasi-2.04:
+
+  Initial import. Ebuild submitted by me
+
