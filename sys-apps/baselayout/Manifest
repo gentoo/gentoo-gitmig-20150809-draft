@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 51eda172b73463b8b53be2417b73053d ChangeLog 43946
-MD5 757faa7ef3f4c0edbaeac5f07079b51b baselayout-1.11.7-r2.ebuild 15735
+MD5 03598cb7f42925d271d258b732f21739 baselayout-1.11.7-r2.ebuild 15743
 MD5 5a6e60d4a0e6baf8f051488786595d0c baselayout-1.9.4-r6.ebuild 16833
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
 MD5 14278861a1ae53f620f07c07e168ac8c baselayout-1.11.6-r1.ebuild 16524
@@ -21,7 +21,7 @@ MD5 91e3a9eebc03ba2f2d2226ee4f78a177 files/digest-baselayout-1.11.6-r1 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBtRdXroRuSHgZdywRAmnQAJ9oM9kQWKzOtAMJp/tnPpkA9dfSVQCfel8V
-kvYBRhXjYVULWneliUfEbBs=
-=suTq
+iD8DBQFBtSAVroRuSHgZdywRAgsMAJ95crJFnBzxZnoRC9aNLii4RNCdCgCggkJs
+lSIs+LRHIlKkcTcSnVLIyns=
+=s6yI
 -----END PGP SIGNATURE-----

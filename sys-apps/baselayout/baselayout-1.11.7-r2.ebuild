@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.7-r2.ebuild,v 1.2 2004/12/07 02:36:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.7-r2.ebuild,v 1.3 2004/12/07 03:14:22 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -138,13 +138,13 @@ src_install() {
 	kdir /etc/modules.d
 	kdir /etc/opt
 	kdir /home
-	kdir ${libdir}
-	kdir ${libdir}/dev-state
-	kdir ${libdir}/udev-state
-	kdir ${libdir}/rcscripts/awk
-	kdir ${libdir}/rcscripts/sh
-	dodir ${libdir}/rcscripts/net.modules.d	# .keep file messes up net.lo
-	dodir ${libdir}/rcscripts/net.modules.d/helpers.d
+	kdir /${libdir}
+	kdir /${libdir}/dev-state
+	kdir /${libdir}/udev-state
+	kdir /${libdir}/rcscripts/awk
+	kdir /${libdir}/rcscripts/sh
+	dodir /${libdir}/rcscripts/net.modules.d	# .keep file messes up net.lo
+	dodir /${libdir}/rcscripts/net.modules.d/helpers.d
 	kdir /mnt
 	kdir -m 0700 /mnt/cdrom
 	kdir -m 0700 /mnt/floppy
@@ -194,7 +194,7 @@ src_install() {
 	# Symlinks so that LSB compliant apps work
 	# /lib64 is especially required since its the default place for ld.so
 	if [[ ${ARCH} = ppc64 ]] || [[ ${ARCH} = amd64 ]] ; then
-		dosym ${libdir} ${other_libdir}
+		dosym ${libdir} /${other_libdir}
 		dosym ${libdir} /usr/${other_libdir}
 		dosym ${libdir} /usr/X11R6/${other_libdir}
 		# this will eventually exist, so remember to fix it Travis...
