@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3fa95824b735820a48924d3d835a72ce ChangeLog 9802
+MD5 777ac010eadc42ef90e9436371aedf09 ChangeLog 9616
 MD5 4ca6147093ac258a81490fd7c2e2d9a9 rsync-2.6.0-r3.ebuild 2599
 MD5 ba44be54bd154c959b7daf835e8c8720 rsync-2.6.3.ebuild 2058
 MD5 9118ed78f07b5bae1f8daa09226771b0 files/2.6.0-sanitize.patch 5842
@@ -14,7 +14,7 @@ MD5 85d62854c15e2e275184c9af7e5d6d18 files/rsyncd.init.d 438
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB7uy/roRuSHgZdywRAlHsAKCTb8RDpEFHJfdk6dgjfkA+/cZmAgCff8mf
-EynpekvG4HkQAEi5PaPhzxA=
-=IWFB
+iD8DBQFB8ECXroRuSHgZdywRApZMAJ9wAJ5GGSIv4X+q2Xa2cY6IuhzHxQCeL4LD
+jgiyVVQsNj8BLlrFRfqTb/U=
+=Z3Pk
 -----END PGP SIGNATURE-----
