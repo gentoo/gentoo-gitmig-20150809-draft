@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.80 2004/08/19 22:24:08 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.81 2004/08/20 05:53:46 langthang Exp $
+
+*courier-imap-3.0.7 (19 Aug 2004)
+
+  19 Aug 2004; Tuan Van <langthang@gentoo.org>
+  +files/courier-imap-3.0.7-db4-bdbobj_configure.in.patch,
+  +files/courier-imap-3.0.7-db4-configure.in.patch,
+  +files/courier-imap-3.0.7-disable-fam-configure.in.patch,
+  +courier-imap-3.0.7.ebuild:
+  Version bump. Add patches to support db4. Add gdbm USE flag back.
+  Add logic to default to gdbm if both 'berkdb' and 'gdmb' USE flags present.
 
   20 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> courier-imap-3.0.5.ebuild:
   Marked stable on amd64.
