@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.69 2004/02/22 20:50:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.70 2004/02/27 19:28:37 seemant Exp $
+
+  27 Feb 2004; Seemant Kulleen <seemant@gentoo.org>
+  util-linux-2.11z-r8.ebuild:
+  move the filter-flags statement into src_compile
 
   22 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> util-linux-2.12-r5.ebuild:
   Add installation of rdev on amd64. Closing #35902.

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r8.ebuild,v 1.2 2004/02/23 00:53:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r8.ebuild,v 1.3 2004/02/27 19:28:37 seemant Exp $
 
 IUSE="crypt nls static pam"
 
@@ -8,7 +8,6 @@ inherit eutils flag-o-matic
 
 ## see below for details on pic.patch
 # Added back for now until other archs can be tested.
-filter-flags -fPIC
 
 S="${WORKDIR}/${P}"
 CRYPT_PATCH_P="${P}-crypt-gentoo"
@@ -94,6 +93,8 @@ src_unpack() {
 }
 
 src_compile() {
+
+	filter-flags -fPIC
 
 	if [ "`use static`" ] ; then
 		append-ldflags "-static"
