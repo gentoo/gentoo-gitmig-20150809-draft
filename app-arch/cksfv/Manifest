@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5e41799b2b493b19ee6fd9388c28a531 ChangeLog 1110
-MD5 ed6fb5f1c6397799ae411f81bd07d0b8 cksfv-1.3.ebuild 693
-MD5 428cbd9a2a41c250d23662113bee5828 files/digest-cksfv-1.3 60
+MD5 af4125970a327577e6e84766f33a3913 cksfv-1.3.ebuild 691
+MD5 649c448ad94580f7c18f548af6eae17a ChangeLog 1230
 MD5 f72b0ebd2532d65ef4b3008017731802 files/cksfv-1.3-64bit-fix.patch 3705
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3Ln1HTu7gpaalycRArOVAJsGZFY+3fcMd60vfdj76FJ+voQingCg3VsZ
-aVSIt1NmRUGNNavovpBbJnQ=
-=N22N
------END PGP SIGNATURE-----
+MD5 428cbd9a2a41c250d23662113bee5828 files/digest-cksfv-1.3 60
