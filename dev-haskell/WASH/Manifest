@@ -1,4 +1,6 @@
+MD5 1b6f631b689e2bfcdcdc6ddf8cdfabbf WASH-2.0.5-r1.ebuild 1347
 MD5 146a7a47e9e36a6007e352025f69ac86 WASH-2.0.5.ebuild 2730
-MD5 1b9b9a531f5d6950ccbfc89e9a076ca4 ChangeLog 365
+MD5 44effdb37de40d55fda82fe4c0a6c58f ChangeLog 533
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
+MD5 17b177468da822de7bb9ba89a644b9ce files/digest-WASH-2.0.5-r1 62
 MD5 17b177468da822de7bb9ba89a644b9ce files/digest-WASH-2.0.5 62

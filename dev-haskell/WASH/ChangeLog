@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/WASH
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/WASH/ChangeLog,v 1.1 2004/10/26 17:47:26 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/WASH/ChangeLog,v 1.2 2004/11/18 16:08:31 kosmikus Exp $
+
+*WASH-2.0.5-r1 (18 Nov 2004)
+
+  18 Nov 2004; Andres Loeh <kosmikus@gentoo.org> +WASH-2.0.5-r1.ebuild:
+  Updated ebuild to make use of ghc-package eclass (bug #69270).
 
 *WASH-2.0.5 (26 Oct 2004)
 
