@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.3d-r1.ebuild,v 1.2 2002/04/13 00:46:17 seemant Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.3d-r1.ebuild,v 1.3 2002/07/23 05:18:07 seemant Exp $
 
 MY_P=${P/transfig-/transfig.}
 S=${WORKDIR}/${MY_P}
@@ -10,8 +8,12 @@ DESCRIPTION="A set of tools for creating TeX documents with graphics which can b
 SRC_URI="http://www.xfig.org/xfigdist/${MY_P}.tar.gz"
 HOMEPAGE="http://www.xfig.org"
 
+SLOT="0"
+LICENSE="BSD"
+KEYWORDS="x86"
+
 DEPEND="virtual/x11
-    >=media-libs/jpeg-6
+	>=media-libs/jpeg-6
 	media-libs/libpng"
 
 src_unpack() {
@@ -21,27 +23,26 @@ src_unpack() {
 }
 
 src_compile() {
-    xmkmf || die
-    make Makefiles || die
-    make || die
+	xmkmf || die
+	make Makefiles || die
+	make || die
 }
 
 src_install () {
-    # gotta set up the dirs for it....
-    dodir /usr/bin
-    dodir /usr/sbin
-    dodir /usr/share/man/man1
-    dodir /usr/X11R6/lib/fig2dev
+	# gotta set up the dirs for it....
+	dodir /usr/bin
+	dodir /usr/sbin
+	dodir /usr/share/man/man1
+	dodir /usr/X11R6/lib/fig2dev
 
-    #Now install it.
-    make    \
-        DESTDIR=${D}    \
-        install || die
+	#Now install it.
+	make	\
+		DESTDIR=${D}	\
+		install || die
 
-    #Install docs
-    dodoc README CHANGES LATEX.AND.XFIG NOTES
-    doman doc/fig2dev.1
-    doman doc/fig2ps2tex.1
-    doman doc/pic2tpic.1
-
+	#Install docs
+	dodoc README CHANGES LATEX.AND.XFIG NOTES
+	doman doc/fig2dev.1
+	doman doc/fig2ps2tex.1
+	doman doc/pic2tpic.1
 }

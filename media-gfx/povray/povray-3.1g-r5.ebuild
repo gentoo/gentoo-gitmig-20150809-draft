@@ -1,23 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r5.ebuild,v 1.2 2002/07/11 06:30:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r5.ebuild,v 1.3 2002/07/23 05:18:07 seemant Exp $
 
 S=${WORKDIR}/povray31
 DESCRIPTION="POV Ray- The Persistance of Vision Ray Tracer"
 SRC_URI="ftp://ftp.povray.org/pub/povray/Official/Unix/povuni_s.tgz
 	ftp://ftp.povray.org/pub/povray/Official/Unix/povuni_d.tgz"
 HOMEPAGE="http://www.povray.org/"
+
 SLOT="0"
 LICENSE="povlegal-3.1g"
+KEYWORDS="x86"
 
 
 DEPEND="media-libs/libpng
-	svga?   ( media-libs/svgalib )
-	X?      ( virtual/x11 )
-	icc?    ( dev-lang/icc )
-	sys-libs/zlib"
-RDEPEND="${DEPEND}"
-
+	sys-libs/zlib
+	X?	  ( virtual/x11 )
+	icc?	( dev-lang/icc )
+	svga?   ( media-libs/svgalib )"
 
 src_compile() {
 	patch -p1 < ${FILESDIR}/gentoo.patch

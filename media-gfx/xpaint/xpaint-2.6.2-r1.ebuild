@@ -1,13 +1,15 @@
 #Copyright 2002 Gentoo Technologies, Inc.
 #Distributed under the terms of the GNU General Public License, v2 or later
-#Author John Stalker <stalker@math.princeton.edu>
-#$Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.6.2-r1.ebuild,v 1.1 2002/04/13 00:51:29 seemant Exp $
+#$Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.6.2-r1.ebuild,v 1.2 2002/07/23 05:18:07 seemant Exp $
 
 S=${WORKDIR}/xpaint
 DESCRIPTION="XPaint is an image editor which supports most standard paint program options."
 SRC_URI="http://home.worldonline.dk/~torsten/xpaint/${P}.tar.gz"
 HOMEPAGE="http://home.worldonline.dk/~torsten/xpaint/"
+
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND=">=media-libs/tiff-3.2 
 	virtual/x11 

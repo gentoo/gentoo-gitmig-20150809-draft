@@ -1,18 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/zgv-5.6.ebuild,v 1.2 2002/07/11 06:30:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/zgv-5.6.ebuild,v 1.3 2002/07/23 05:18:07 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A svgalib console image viewer."
 SRC_URI="http://www.svgalib.org/rus/zgv/${P}.tar.gz"
 HOMEPAGE="http://www.svgalib.org/rus/zgv"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
 DEPEND=">=media-libs/svgalib-1.4.2
 	>=media-libs/jpeg-6b-r2
 	media-libs/libpng
 	>=media-libs/tiff-3.5.5
 	>=sys-libs/zlib-1.1.4"
-
 
 src_unpack() {
 

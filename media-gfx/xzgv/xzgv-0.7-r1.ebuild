@@ -1,14 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.7-r1.ebuild,v 1.1 2002/06/29 02:13:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.7-r1.ebuild,v 1.2 2002/07/23 05:18:07 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An X image viewer."
 SRC_URI="http://xzgv.browser.org/${P}.tar.gz"
 HOMEPAGE="http://xzgv.browser.org/"
 
-SLOT=""
+SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND="virtual/x11
 	media-libs/libpng
@@ -38,9 +39,9 @@ src_compile() {
 src_install() {
 
 	dodir /usr/bin /usr/share/info /usr/share/man/man1
-	make PREFIX=${D}/usr	\
-		 SHARE_INFIX=/share	\
-		 INFO_DIR_UPDATE=no	\
+	make PREFIX=${D}/usr \
+		 SHARE_INFIX=/share \
+		 INFO_DIR_UPDATE=no \
 		 MANDIR=${D}/usr/share/man/man1 \
 	     install || die
 	
@@ -50,8 +51,8 @@ src_install() {
 	do
 		mv xzgv-$i.gz xzgv.info-$i.gz
 	done
-	gzip -dc xzgv.gz |	\
-		sed -e 's:^xzgv-:xzgv\.info-:g' |	\
+	gzip -dc xzgv.gz | \
+		sed -e 's:^xzgv-:xzgv\.info-:g' | \
 		gzip -9c > xzgv.info.gz
 	rm xzgv.gz
 
@@ -59,4 +60,3 @@ src_install() {
 	
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README* TODO
 }
-

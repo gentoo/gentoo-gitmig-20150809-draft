@@ -1,15 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/propaganda/propaganda-1.0.ebuild,v 1.3 2002/07/11 06:30:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/propaganda/propaganda-1.0.ebuild,v 1.4 2002/07/23 05:18:07 seemant Exp $
 
-# Source directory; the dir where the sources can be found
-# (automatically unpacked) inside ${WORKDIR}.  Usually you can just
-# leave this as-is.
 S=${WORKDIR}/Propaganda
-
-# Short one-line description of this package.
 DESCRIPTION="Propaganda Volume 1-14 + E. Tiling images for your desktop"
-
+HOMEPAGE="http://www.resexcellence.com/propaganda/index.shtml"
 SITE="http://www.resexcellence.com/propaganda/"
 # Point to any required sources; these will be automatically
 # downloaded by Portage.
@@ -28,14 +23,12 @@ SRC_URI="${SITE}Propaganda-Vol-01.tar.gz
 	${SITE}Propaganda-13.tar.gz
 	${SITE}Propaganda-14.tar.gz
 	${SITE}Propaganda-For-E.tar.gz"
-	
-# Homepage, not used by Portage directly but handy for developer reference
-HOMEPAGE="http://www.resexcellence.com/propaganda/index.shtml"
 
-DEPEND=""
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
-# Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
-#RDEPEND=""
+DEPEND="virtual/glibc"
 
 src_compile() {
 	rm -fr ${S}/../Propaganda-Vol-11/.finderinfo

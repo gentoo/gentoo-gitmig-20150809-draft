@@ -1,4 +1,6 @@
+# Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.2 2002/07/23 05:18:07 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X Load Image: view images or load them to root window"
@@ -9,11 +11,10 @@ SLOT="0"
 LICENSE="X11"
 KEYWORDS="x86"
 
-DEPEND="virtual/glibc \
-		virtual/x11 \
-		>=sys-libs/zlib-1.1.4
-		>=media-libs/libpng-1.0.5 \
-		>=media-libs/jpeg-6b-r2"
+DEPEND="virtual/x11
+	>=sys-libs/zlib-1.1.4
+	>=media-libs/libpng-1.0.5
+	>=media-libs/jpeg-6b-r2"
 
 src_compile() {
 	cp Imakefile Imakefile.orig
@@ -52,4 +53,3 @@ src_install () {
 		>> ${D}/usr/X11R6/lib/X11/app-defaults/Xli
 	chmod a+r ${D}/usr/X11R6/lib/X11/app-defaults/Xli
 }
-
