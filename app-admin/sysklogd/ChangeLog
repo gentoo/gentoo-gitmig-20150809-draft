@@ -1,11 +1,14 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.9 2003/02/12 11:50:11 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.10 2003/02/24 22:23:47 zwelch Exp $
 
   12 Feb 2003; Guy Martin <gmsoft@gentoo.org> sysklogd-1.4.1-r3.ebuild :
   Added hppa to keywords.
 
 *sysklogd-1.4.1-r3.ebuild (16 Dec 2002)
+
+  24 Feb 2003; Zach Welch <zwelch@gentoo.org> sysklogd-1.4.1-r3.ebuild :
+  Add arm keyword
 
   09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
 
