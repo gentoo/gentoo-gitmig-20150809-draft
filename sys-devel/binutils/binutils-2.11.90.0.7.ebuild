@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.90.0.7.ebuild,v 1.3 2001/09/08 18:52:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.11.90.0.7.ebuild,v 1.4 2001/09/10 16:54:13 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools necessary to build programs"
@@ -36,7 +36,7 @@ src_install() {
 	#and create the appropriate symlinks.  Things are cleaner that way.
 	cd ${D}/usr/bin
 	local x
-	for x in *
+	for x in * strip
 	do
 		if [ ! -e ../${CHOST}/bin/${x} ]
 		then
