@@ -1,6 +1,6 @@
 # Copyright 2003 A.Sleep <a.sleep@asleep.net>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/windowmaker-themes-0.1.ebuild,v 1.2 2003/06/28 19:01:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/windowmaker-themes-0.1.ebuild,v 1.3 2003/06/30 05:58:03 vapier Exp $
 
 # TODO: Break themes up by author and into sub-dirs named after
 # the author
@@ -8,22 +8,7 @@
 DESCRIPTION="Collection of Window Maker themes"
 HOMEPAGE="http://www.windowmaker.org/"
 THEME_URI="http://gentoo.asleep.net/windowmaker-themes/"
-SRC_URI="pr0n? (
-		${THEME_URI}AllyBaggettBrown.tar.gz
-		${THEME_URI}tif-pur.tar.gz
-		${THEME_URI}tiff.4.tar.gz
-		${THEME_URI}brushednude.tar.gz
-		${THEME_URI}derriere.tar.gz
-		${THEME_URI}Pride.tar.gz
-		${THEME_URI}CityLife.tar.gz
-		${THEME_URI}Eros.tar.gz
-		${THEME_URI}FineArt.tar.gz
-		${THEME_URI}ouat.tar.gz
-		${THEME_URI}SeeingRed.tar.gz
-		${THEME_URI}reddream.tar.gz
-		${THEME_URI}Wash.tar.gz
-	)
-	${THEME_URI}3white.tar.gz
+SRC_URI="${THEME_URI}3white.tar.gz
 	${THEME_URI}AM.tar.gz
 	${THEME_URI}Alpha.tar.gz
 	${THEME_URI}Amiga.tar.gz
@@ -107,7 +92,6 @@ SRC_URI="pr0n? (
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha"
-IUSE="pr0n"
 
 DEPEND=""
 RDEPEND="x11-wm/windowmaker"
