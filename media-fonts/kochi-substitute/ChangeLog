@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/kochi-substitute
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.7 2003/12/07 23:05:50 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.8 2003/12/14 14:39:05 gmsoft Exp $
+
+  14 Dec 2003; Guy Martin <gmsoft@gentoo.org>
+  kochi-substitute-20030809.ebuild:
+  Marked stable on hppa.
 
 *kochi-substitute-20030809 (09 Aug 2003)
 
