@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.0-r2.ebuild,v 1.2 2003/01/08 20:26:40 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.0-r2.ebuild,v 1.3 2003/01/13 08:54:19 aliz Exp $
 
 IUSE="truetype postgres tiff libwww nls jpeg readline ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.php.net/"
 LICENSE="PHP"
 SLOT="0"
 PROVIDE="virtual/php"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ppc sparc"
 
 	# too many users not being able to compile with gmp support
 	# - rphillips

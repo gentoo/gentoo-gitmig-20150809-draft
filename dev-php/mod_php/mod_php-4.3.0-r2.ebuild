@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0-r2.ebuild,v 1.1 2003/01/10 18:32:24 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0-r2.ebuild,v 1.2 2003/01/13 08:54:19 aliz Exp $
 
 IUSE="apache2 truetype postgres tiff libwww nls jpeg ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Apache module for PHP"
 SRC_URI="http://us3.php.net/distributions/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.php.net/"
 LICENSE="PHP"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ppc alpha"
 SLOT="0"
 PROVIDE="virtual/php"
 
