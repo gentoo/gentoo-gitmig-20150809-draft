@@ -1,8 +1,11 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.20 2003/11/06 14:59:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.21 2003/11/16 01:07:28 gmsoft Exp $
 
 *a2ps-4.13c (27 Sep 2003)
+
+  16 Nov 203; Guy Martin <gmsoft@gento.org> a2ps-4.13c.ebuild :
+  Marked stable on hppa.
 
   29 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> a2ps-4.13c.ebuild:
   Use make instead of emake. Changed -alpha keyword to ~alpha.
