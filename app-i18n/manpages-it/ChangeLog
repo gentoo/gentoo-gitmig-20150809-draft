@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/manpages-it
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-it/ChangeLog,v 1.1 2004/06/17 18:10:28 lu_zero Exp $
+
+*manpages-it-0.3.4 (17 Jun 2004)
+
+  17 Jun 2004; Luca Barbato <lu_zero@gentoo.org> +metadata.xml,
+  +manpages-it-0.3.4.ebuild:
+  First commit, ebuild provided by Ilya Cassina <ilya.cassina@epfl.ch>
+
