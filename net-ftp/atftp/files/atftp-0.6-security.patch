@@ -1,0 +1,12 @@
+--- tftpd_file.c	Tue Mar 12 05:26:18 2002
++++ tftpd_file_diff.c	Thu Jun  5 20:31:06 2003
+@@ -357,7 +357,8 @@
+      else
+      {
+           strcpy(filename, directory);
+-          strncat(filename, data->tftp_options[OPT_FILENAME].value, VAL_SIZE);
++          strncat(filename, data->tftp_options[OPT_FILENAME].value, 
++		VAL_SIZE - strlen( directory ) - 1 );
+      }
+ 
+      /* If the filename contain /../ sequences, we forbid the access */
