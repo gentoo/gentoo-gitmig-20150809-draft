@@ -8,7 +8,6 @@ COMPILER="gcc3"
 #
 ARCH="sparc"
 CHOST=sparc-unknown-linux-gnu
-
 PLATFORM=sparc64-unknown-linux-gnu
 PROFILE_ARCH="sparc64"
 
@@ -26,3 +25,4 @@ CXXFLAGS=${CFLAGS}
 
 # USE arch:xxx keyword
 ACCEPT_KEYWORDS="sparc"
+FEATURES="buildpkg sandbox ccache"
