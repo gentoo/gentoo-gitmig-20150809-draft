@@ -1,0 +1,8 @@
+# ChangeLog for app-misc/proxyper
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/proxyper/ChangeLog,v 1.1 2003/04/29 21:27:51 mholzer Exp $
+
+*proxyper-333 (29 Apr 2003)
+
+  29 Apr 2003; Martin Holzer <mholzer@gentoo.org> proxyper-333.ebuild:
+  Initial ebuild. Submitted by Radek Podgorny <radek@podgorny.cz> in #16248. 
