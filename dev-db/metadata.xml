@@ -6,8 +6,12 @@
 		related programming.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie dev-db enhält Bibliotheken und Werkzeuge für die
+		Die Kategorie dev-db enhÃ¤lt Bibliotheken und Werkzeuge fÃ¼r die
 		Datenbank-Programmierung.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría dev-db contiene librerias y utilidades para programación
+		referente a bases de datos.
 	</longdescription>
 </catmetadata>
 
