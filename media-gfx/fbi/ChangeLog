@@ -1,8 +1,14 @@
 # ChangeLog for media-gfx/fbi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/ChangeLog,v 1.27 2005/03/08 00:58:54 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/ChangeLog,v 1.28 2005/03/23 14:24:18 spock Exp $
 
-  08 Mar 2005; Michael Januszewski <spock@gentoo.org> -fbi-1.25.ebuild,
+*fbi-1.31-r1 (23 Mar 2005)
+
+  23 Mar 2005; Michał Januszewski <spock@gentoo.org> fbi-1.31.ebuild,
+  +fbi-1.31-r1.ebuild:
+  Added a dependency on libexif. Removed the dep on libungif in 1.31-r1.
+
+  08 Mar 2005; Michał Januszewski <spock@gentoo.org> -fbi-1.25.ebuild,
   fbi-1.31.ebuild:
   Removed old ebuild. Added a block on media-gfx/fbida (bug #84417).
 
@@ -15,7 +21,7 @@
   22 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> fbi-1.31.ebuild:
   Add ~alpha keyword.
 
-  17 Jan 2005; Michael Januszewski <spock@gentoo.org> fbi-1.31.ebuild:
+  17 Jan 2005; Michał Januszewski <spock@gentoo.org> fbi-1.31.ebuild:
   Added giflib to the dependencies as a fix for bug #78243.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
@@ -30,7 +36,7 @@
   23 Oct 2004; Simon Stelling <blubb@gentoo.org> fbi-1.31.ebuild:
   added ~amd64
 
-  20 Jul 2004; Michael Januszewski <spock@gentoo.org> -fbi-1.21-r1.ebuild,
+  20 Jul 2004; Michał Januszewski <spock@gentoo.org> -fbi-1.21-r1.ebuild,
   fbi-1.31.ebuild:
   Fixed SRC_URI, HOMEPAGE and DESCRIPTION, removed an old release that is no
   longer available for download.
@@ -41,23 +47,23 @@
   05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> fbi-1.25.ebuild:
   Stable on alpha.
 
-  13 Apr 2004; Michael Januszewski <spock@gentoo.org> fbi-1.21-r1.ebuild,
+  13 Apr 2004; Michał Januszewski <spock@gentoo.org> fbi-1.21-r1.ebuild,
   fbi-1.25.ebuild, fbi-1.31.ebuild:
   Fixed minor IUSE issues in all ebuilds.
 
   03 Apr 2004; Lars Weiler <pylon@gentoo.org> fbi-1.31.ebuild:
   stable on ppc
 
-  27 Mar 2004; Michael Januszewski <spock@gentoo.org> fbi-1.21-r1.ebuild,
+  27 Mar 2004; Michał Januszewski <spock@gentoo.org> fbi-1.21-r1.ebuild,
   fbi-1.21.ebuild, fbi-1.25.ebuild, fbi-1.29.ebuild, fbi-1.31.ebuild:
   Ebuild clean-ups.
 
 *fbi-1.31 (01 Mar 2004)
 
-  01 Mar 2004; Michael Januszewski <spock@gentoo.org> fbi-1.31.ebuild:
+  01 Mar 2004; Michał Januszewski <spock@gentoo.org> fbi-1.31.ebuild:
   Version bump, closes #43380.
 
-  18 Feb 2004; Michael Januszewski <spock@gentoo.org> fbi-1.29.ebuild:
+  18 Feb 2004; Michał Januszewski <spock@gentoo.org> fbi-1.29.ebuild:
   Marked stable on x86.
 
   15 Feb 2004; David Holm <dholm@gentoo.org> fbi-1.29.ebuild:
@@ -65,7 +71,7 @@
 
 *fbi-1.29 (26 Jan 2004)
 
-  26 Jan 2004; Michael Januszewski <spock@gentoo.org>
+  26 Jan 2004; Michał Januszewski <spock@gentoo.org>
   fbi-1.21-r1.ebuild, fbi-1.21.ebuild, fbi-1.25.ebuild, fbi-1.29.ebuild,
   metadata.xml:
   Version bump, added metadata.xml.
