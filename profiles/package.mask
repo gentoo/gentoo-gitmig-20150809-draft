@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2877 2004/05/28 01:27:14 lv Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2878 2004/05/28 02:32:58 lv Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -23,8 +23,9 @@
 ##
 
 # <lv@gentoo.org> (27 May 2004)
-# this version is for testing only
-=sys-devel/gcc-3.4.0-r5
+# these versions are for testing only
+>=sys-devel/gcc-3.4.0-r5
+>=sys-libs/glibc-2.3.3_pre20040527
 
 # <games@gentoo.org> (26 May 2004)
 # Using system libmikmod breaks mod music #52064
