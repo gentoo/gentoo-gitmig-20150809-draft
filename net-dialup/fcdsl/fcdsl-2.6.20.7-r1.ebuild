@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r1.ebuild,v 1.2 2004/11/21 21:24:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r1.ebuild,v 1.3 2004/11/21 21:31:49 mrness Exp $
 
 inherit kernel-mod rpm eutils
 
@@ -78,8 +78,6 @@ pkg_setup() {
 		die "For using the driver you need a kernel with enabled CAPI support."
 	fi
 	kernel-mod_check_modules_supported
-
-	detect_fcdsl_card
 }
 
 src_unpack() {
@@ -88,16 +86,11 @@ src_unpack() {
 
 src_compile() {
 	set_arch_to_kernel
-	if [ "${FCDSL_MODULE}" == "" ]; then
-		for ((CARD=0; CARD < ${#FCDSL_IDS[*]}; CARD++)); do
-			einfo "Compiling driver for ${FCDSL_NAMES[CARD]}"
-			cd ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/src || die "Could not change to ${FCDSL_NAMES[CARD]} source directory."
-			kernel-mod_src_compile || die "Could not compile driver for ${FCDSL_NAMES[CARD]}."
-		done
-	else
-		cd ${WORKDIR}/${FCDSL_MODULE/fc/fritz.}/src || die "Could not change to driver source directory."
-		kernel-mod_src_compile || die "Could not compile driver."
-	fi
+	for ((CARD=0; CARD < ${#FCDSL_IDS[*]}; CARD++)); do
+		einfo "Compiling driver for ${FCDSL_NAMES[CARD]}"
+		cd ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/src || die "Could not change to ${FCDSL_NAMES[CARD]} source directory."
+		kernel-mod_src_compile || die "Could not compile driver for ${FCDSL_NAMES[CARD]}."
+	done
 	set_arch_to_portage
 }
 
@@ -151,7 +144,7 @@ pkg_postinst() {
 	einfo "    drdsl -n"
 	einfo "    nano /etc/modules.d/fcdsl"
 	einfo "    update-modules"
-	sleep 10
+	epause 10
 }
 
 readpassword() {
