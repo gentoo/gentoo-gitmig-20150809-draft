@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.26 2004/03/21 11:23:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.27 2004/03/22 05:19:45 kumba Exp $
+
+  22 Mar 2004; Joshua Kinard <kumba@gentoo.org> expat-1.95.7.ebuild:
+  I was dumb, forgot to add econf and emake to the src_compile() function I
+  added to fix a mips issue.
 
   21 Mar 2004; Joshua Kinard <kumba@gentoo.org> expat-1.95.6-r1.ebuild,
   expat-1.95.7.ebuild:
