@@ -169,8 +169,10 @@ sys-apps/sysvinit
 #(12/22/01 - drobbins)
 
 #incomplete and very dangerous < Danarmak >
->=app-office/openoffice-641b
->=app-office/openoffice-bin-641d
+#
+# 20020430 (PreZ) Several people have reported the 641d build and bin
+# works installs work fine.  So the 641b one will remain masked alone.
+=app-office/openoffice-641b
 
 #apparently has an fs unmount corruption bug
 =sys-kernel/linux-sources-2.4.15
