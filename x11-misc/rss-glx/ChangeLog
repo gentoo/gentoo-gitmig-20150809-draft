@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.9 2003/09/02 19:47:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.10 2003/09/06 18:08:13 liquidx Exp $
+
+*rss-glx-0.7.6 (06 Sep 2003)
+
+  06 Sep 2003; Alastair Tse <liquidx@gentoo.org> rss-glx-0.7.6.ebuild,
+  files/rss-glx-0.7.6-kdedesktop.patch:
+  version bump. thanks to rizzo@gentoo.org
 
   02 Sep 2003; Alastair Tse <liquidx@gentoo.org> rss-glx-0.7.5.ebuild:
   added imagemagick dep (#27720)
