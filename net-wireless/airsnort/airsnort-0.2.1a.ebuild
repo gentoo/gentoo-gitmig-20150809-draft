@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/airsnort-0.2.1a.ebuild,v 1.10 2005/01/19 18:32:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/airsnort-0.2.1a.ebuild,v 1.11 2005/01/29 21:28:22 dragonheart Exp $
 
 MY_P=${P/a/A}
 S=${WORKDIR}/${MY_P}
@@ -15,7 +15,7 @@ IUSE="pcmcia"
 
 DEPEND=">=sys-devel/autoconf-2.13
 	=x11-libs/gtk+-1*
-	>=net-libs/libpcap-0.7.1
+	virtual/libpcap
 	pcmcia? ( >=sys-apps/pcmcia-cs-3.1.33 )"
 
 src_compile() {

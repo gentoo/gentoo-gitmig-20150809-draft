@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/airtraf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/ChangeLog,v 1.8 2005/01/12 09:58:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/ChangeLog,v 1.9 2005/01/29 21:29:01 dragonheart Exp $
+
+  30 Jan 2005; Daniel Black <dragonheart@gentoo.org> airtraf-1.0.ebuild,
+  airtraf-1.1.ebuild:
+  Transition dependancy from net-libs/libpcap to virtual/libpcap
 
   12 Jan 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   -files/airtraf-amd64.patch, +files/airtraf.patch, airtraf-1.1.ebuild:

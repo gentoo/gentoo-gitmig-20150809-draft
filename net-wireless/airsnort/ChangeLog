@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/airsnort
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.16 2005/01/19 18:32:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.17 2005/01/29 21:28:22 dragonheart Exp $
+
+  30 Jan 2005; Daniel Black <dragonheart@gentoo.org> airsnort-0.2.1a.ebuild,
+  airsnort-0.2.1b.ebuild, airsnort-0.2.2.ebuild, airsnort-0.2.3c.ebuild,
+  airsnort-0.2.4a.ebuild, airsnort-0.2.7c.ebuild:
+  Transition dependancy from net-libs/libpcap to virtual/libpcap
 
 *airsnort-0.2.7c (19 Jan 2005)
 
