@@ -21,14 +21,14 @@ src_compile() {
           myconf="$myconf --enable-html"
         fi
 	try ./configure --prefix=/opt/gnome $myconf
-	try make ${MAKEOPTS}
+	try make
 
 }
 
 src_install () {
 
 	try make prefix=${D}/opt/gnome install
-	dodoc AUTHORS COPYING Changelog NEWS README TODO
+	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 
 }
 
