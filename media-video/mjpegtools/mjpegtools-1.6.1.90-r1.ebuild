@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.90-r1.ebuild,v 1.5 2003/12/29 02:44:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.90-r1.ebuild,v 1.6 2004/01/15 01:52:38 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic gcc
 
 DESCRIPTION="Tools for MJPEG video."
 HOMEPAGE="http://mjpeg.sourceforge.net/"
@@ -35,7 +35,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	[ `use x86` ] && append-flags -mno-sse2
+	[ `use x86` ] && [ `gcc-major-version` -eq 3 ] && append-flags -mno-sse2
 
 	myconf="${myconf} `use_with X x`"
 	myconf="${myconf} `use_with quicktime`"
