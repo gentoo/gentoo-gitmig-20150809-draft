@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/libmcal-0.7-r3.ebuild,v 1.7 2005/02/20 22:18:40 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/libmcal-0.7-r3.ebuild,v 1.8 2005/03/29 01:36:40 vapier Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI_BASE}/${P}.tar.gz ${SRC_URI_BASE}/${DRIVERS}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc mips alpha arm hppa amd64 ~ia64 ~s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ~ppc s390 sparc x86"
 IUSE="pam"
 
 DEPEND="pam? ( sys-libs/pam )"
@@ -49,7 +49,7 @@ src_compile() {
 
 src_install() {
 	einstall DESTDIR=${D} || die
-	dodoc CHANGELOG FAQ-MCAL FEATURE-IMPLEMENTATION HOW-TO-MCAL LICENSE README
+	dodoc CHANGELOG FAQ-MCAL FEATURE-IMPLEMENTATION HOW-TO-MCAL README
 	newdoc mstore/README mstore-README
 	newdoc mstore/Changelog mstore-Changelog
 	newdoc icap/Changelog icap-Changelog
