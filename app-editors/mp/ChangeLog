@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/mp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.32 2005/02/05 00:54:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.33 2005/02/20 17:03:05 compnerd Exp $
+
+*mp-3.3.11 (20 Feb 2005)
+
+  20 Feb 2005; Saleem Abdulrasool <compnerd@gentoo.org> +mp-3.3.11.ebuild:
+  Version bumped; Compile time patches removed, added upstream
 
   05 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> mp-3.3.10.ebuild:
   ~alpha keyword, bug 78859.
