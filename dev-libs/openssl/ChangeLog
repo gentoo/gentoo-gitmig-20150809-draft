@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.19 2002/12/19 15:23:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.20 2003/01/05 14:19:07 aliz Exp $
+
+*openssl-0.9.7 (05 Jan 2003)
+
+  05 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> files/digest-openssl-0.9.7 :
+  Version bump. Found by jochem prins <j.prins@gmx.net> in #12973. Masked.
+
+  05 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> files/digest-openssl-0.9.6h :
+  Removed masking in packages.mask and marked it unstable.
 
   19 Dec 2002; Daniel Ahlberg <aliz@gentoo.org> files/digest-openssl-0.9.6h :
   Re-made digest. The new md5 sum is the same as the md5sum in the announcement
