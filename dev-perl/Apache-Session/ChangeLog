@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-Session
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.7 2004/09/27 10:31:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.8 2004/10/16 21:48:30 rac Exp $
+
+  16 Oct 2004; Robert Coie <rac@gentoo.org> Apache-Session-1.60.ebuild:
+  keyword amd64
 
   27 Sep 2004; Michael Cummings <mcummings@gentoo.org>
   Apache-Session-1.54.ebuild, Apache-Session-1.60.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/Apache-Session-1.60.ebuild,v 1.4 2004/09/27 10:31:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/Apache-Session-1.60.ebuild,v 1.5 2004/10/16 21:48:30 rac Exp $
 
 inherit perl-module
 MY_PV=${PV/0/}
@@ -14,7 +14,7 @@ HOMEPAGE="http://search.cpan.org/~jbaker/${MY_P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 amd64 ~ppc ~sparc ~alpha"
 
 DEPEND="${DEPEND}
 	dev-perl/Digest-MD5
