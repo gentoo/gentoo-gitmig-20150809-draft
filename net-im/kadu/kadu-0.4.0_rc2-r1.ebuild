@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.0_rc2-r1.ebuild,v 1.1 2005/03/20 11:24:30 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.0_rc2-r1.ebuild,v 1.2 2005/03/20 11:47:02 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
@@ -235,6 +235,5 @@ src_install() {
 	    mv ${WORKDIR}/kadu-theme-piolnet ${D}/usr/share/kadu/themes/icons
 	    mv ${WORKDIR}/kadu-theme-real_gg ${D}/usr/share/kadu/themes/icons
 	    mv ${WORKDIR}/alt_cryst ${D}/usr/share/kadu/themes/icons
-	    chmod -R 644 ${D}/usr/share/kadu/themes/icons
 	fi
 }
