@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha19.ebuild,v 1.2 2002/07/09 14:14:39 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha19.ebuild,v 1.3 2002/10/20 18:40:02 vapier Exp $
 
 KEYWORDS="x86"
 
@@ -9,7 +9,6 @@ HOMEPAGE="http://www.freewnn.org/"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}"
 
 SLOT=0
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/skk-jisyo-200207.ebuild,v 1.3 2002/09/30 15:04:56 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/skk-jisyo-200207.ebuild,v 1.4 2002/10/20 18:40:03 vapier Exp $
 
 DESCRIPTION="Jisyo (dictionary) files for the SKK Japanese-input software"
 
@@ -16,7 +16,6 @@ KEYWORDS="x86"
 SLOT="0"    
 
 DEPEND="virtual/emacs"
-RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P}
 

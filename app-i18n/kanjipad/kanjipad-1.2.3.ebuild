@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/kanjipad-1.2.3.ebuild,v 1.1 2002/07/10 14:18:04 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/kanjipad-1.2.3.ebuild,v 1.2 2002/10/20 18:40:03 vapier Exp $
 
 KEYWORDS="x86"
 
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 
 DEPEND=">=gtk+-1.2.10-r8 >=glib-1.2.10-r4"
 
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 

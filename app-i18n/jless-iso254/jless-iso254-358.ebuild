@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless-iso254/jless-iso254-358.ebuild,v 1.3 2002/10/04 06:41:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless-iso254/jless-iso254-358.ebuild,v 1.4 2002/10/20 18:40:03 vapier Exp $
 
 KEYWORDS="x86"
 A=less-${PV}.tar.gz
@@ -12,7 +12,6 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/less/less-${PV}.tar.gz
 HOMEPAGE="http://www.io.com/~kazushi/less/"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2"
-RDEPEND="${DEPEND}"
 LICENSE="as-is"
 SLOT="0"
 
