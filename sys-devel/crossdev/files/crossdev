@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.7 2005/03/10 04:27:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.8 2005/03/10 04:51:43 vapier Exp $
 
 source /sbin/functions.sh || exit 1
 die() {
@@ -53,6 +53,9 @@ parse_target() {
 	# Let's accept ARCH in both the portage and the standard forms ...
 	# CTARGET is in the standard form while TARCH is in the portage form
 	case ${CPRE} in
+
+		#####################
+		### linux targets ###
 		alpha*)     TARCH=alpha;;
 		arm*)       TARCH=arm;;
 		hppa*)      TARCH=hppa;;
@@ -70,9 +73,19 @@ parse_target() {
 		sh*)        TARCH=sh;;
 		x86_64*)    TARCH=amd64;;
 		amd64)      TARCH=amd64;  CPRE="x86_64";;
-		*)          usage 1;;
+
+		#####################
+		### other targets ###
+		avr*) TARCH=${HARCH};
+		      CPOST=""; STAGE=1; GUSE="-fortran -gtk nocxx -gcj -objc";;
+
+		#######################
+		### unknown targets ###
+		*) usage 1;;
 	esac
-	CTARGET=${CPRE}-${CPOST}
+	
+	CTARGET=${CPRE}
+	[[ -n ${CPOST} ]] && CTARGET=${CTARGET}-${CPOST}
 }
 hr() {
 	local c=${COLUMNS:-0}
@@ -96,7 +109,7 @@ UOPTS=
 TARCH=
 HARCH=$(env -uARCH portageq envvar ARCH)
 CTARGET=
-STAGE=3
+STAGE=4
 BVER="[latest]" ; BUSE=""
 GVER="[latest]" ; GUSE=""
 KVER="[latest]" ; KUSE=""
@@ -111,7 +124,7 @@ while [[ $# -gt 0 ]] ; do
 	--g|--gcc)      shift; GVER=$1;;
 	--k|--kernel)   shift; KVER=$1;;
 	--l|--libc)     shift; LVER=$1;;
-	-s?|--stage?)   STAGE=${1:0-1};;
+	-s?|--stage?)   [[ ${STAGE} -eq 4 ]] && STAGE=${1:0-1};;
 	-a|-b|-p|-v)    UOPTS="${UOPTS} $1";;
 	-h|--help)      usage;;
 	*)              eerror "UNKNOWN OPTION: '$1'" ; usage 1;;
