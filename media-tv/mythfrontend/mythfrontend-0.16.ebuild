@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.16.ebuild,v 1.4 2004/09/12 10:06:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.16.ebuild,v 1.5 2004/09/15 14:25:23 aliz Exp $
 
-inherit myth
+inherit myth flag-o-matic
 
 DESCRIPTION="Homebrew PVR project frontend."
 HOMEPAGE="http://www.mythtv.org/"
