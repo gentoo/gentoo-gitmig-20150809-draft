@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cf06797169058e134ca7b05aa98fade4 ChangeLog 2811
-MD5 63b62ce55009b463247b259a0321c44b unzip-5.50-r2.ebuild 1125
+MD5 652bcf7dbdfbed38e996d865221d936b unzip-5.50-r2.ebuild 1127
+MD5 b75272a3e4037210142f46347af0a25f ChangeLog 2933
 MD5 583a5d8bbc70fb1d858c5e40d686e8ce files/digest-unzip-5.50-r2 61
 MD5 3b01796cbe10d9492bd8c0825bc83544 files/unzip-5.50-dotdot.patch 3236
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3LvNHTu7gpaalycRAsVqAJ9fJJsyTvhQvzPJLU92dcqMLXS9ggCg060e
-F1s+CX7BhIqoeZYNoWQSn60=
-=pups
------END PGP SIGNATURE-----
