@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdaemon
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.12 2005/01/25 11:57:52 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.13 2005/03/15 14:28:52 seemant Exp $
+
+  15 Mar 2005; Seemant Kulleen <seemant@gentoo.org> libdaemon-0.3.ebuild,
+  libdaemon-0.5.ebuild, libdaemon-0.7.ebuild:
+  Dependency update: net-www/lynx -> www-client/lynx.
 
   25 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> libdaemon-0.7.ebuild:
   Marked stable on x86.
