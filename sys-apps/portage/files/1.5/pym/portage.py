@@ -1665,6 +1665,8 @@ class dblink:
 					os.chown(rootfile,mystat[4],mystat[5])
 					print "<<<",rootfile+"/"
 				else:
+					#update atime/mtime so that empty dirs don't disappear on remerge
+					os.utime(rootfile,mystat[-3:-1])
 					print "---",rootfile+"/"
 				#mtime doesn't mean much for directories -- we don't store it
 				outfile.write("dir "+relfile+"\n")
