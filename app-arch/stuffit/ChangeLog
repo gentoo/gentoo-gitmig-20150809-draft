@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/stuffit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.12 2005/01/11 11:14:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.13 2005/01/13 01:45:39 jhuebel Exp $
+
+  12 Jan 2005; Jason Huebel <jhuebel@gentoo.org> stuffit-5.2.0.611.ebuild:
+  fixed SRC_URI
 
   11 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   stuffit-5.2.0.611.ebuild:
