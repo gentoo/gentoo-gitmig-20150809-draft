@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/maven
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven/ChangeLog,v 1.14 2004/07/18 13:15:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.1 2004/07/30 21:14:11 axxo Exp $
+
+*maven-bin-1.0_rc3 (30 Jul 2004)
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +files/25maven, +maven-bin-1.0.ebuild, +maven-bin-1.0_rc3.ebuild,
+  +maven-bin-1.0_rc4.ebuild:
+  move dev-java/maven dev-java/maven-bin
 
   18 Jul 2004; Thomas Matthijs <axxo@gentoo.org> maven-1.0.ebuild:
   ~amd64

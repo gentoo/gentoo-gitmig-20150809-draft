@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven/maven-1.0.ebuild,v 1.2 2004/07/18 13:15:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-1.0_rc3.ebuild,v 1.1 2004/07/30 21:14:11 axxo Exp $
 
 DESCRIPTION="Project Management and Comprehension Tool for Java"
-SRC_URI="mirror://apache/maven/binaries/${PN}-${PV/_/-}.tar.gz"
+SRC_URI="mirror://apache/maven/binaries/${PN/-bin}-${PV/_/-}.tar.gz"
 HOMEPAGE="http://maven.apache.org/"
 LICENSE="Apache-2.0"
 SLOT="1.0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ppc"
 DEPEND=">=virtual/jdk-1.3"
 RDEPEND=">=virtual/jdk-1.3"
 IUSE=""
 RESTRICT="nomirror"
 
-S="${WORKDIR}/${PN}-${PV/_/-}"
+S="${WORKDIR}/${PN/-bin}-${PV/_/-}"
 
 src_compile() { :; }
 
