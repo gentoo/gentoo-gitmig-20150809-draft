@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.79 2004/08/09 03:10:06 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.80 2004/08/18 17:08:21 usata Exp $
+
+*ruby-1.6.8-r11 (19 Aug 2004)
+
+  19 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +ruby-1.6.8-r11.ebuild,
+  -ruby-1.8.2_pre1.ebuild:
+  New snapshot and oniguruma patch. Removed previous prerelease ebuild.
 
   08 Aug 2004; Tom Gall <tgall@gentoo.org> ruby-1.8.1-r7.ebuild:
   stable on ppc64, bug #57676
