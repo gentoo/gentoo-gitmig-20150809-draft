@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dirs.eclass,v 1.1 2002/01/10 20:41:29 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dirs.eclass,v 1.2 2002/01/16 20:45:37 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 ECLASS=kde-dirs
 
@@ -28,8 +28,8 @@ set-kdedir() {
 	[ -z "$KDE2DIR" ] && export KDE2DIR="/usr/kde/2"
 	[ -z "$KDE3DIR" ] && export KDE3DIR="/usr/kde/3"
 	# not defined at all by default
-	[ -z "$KDE2LIBSDIR" ] && export KDE2LIBSDIR="$KDE2DIR"
-	[ -z "$KDE3LIBSDIR" ] && export KDE2LIBSDIR="$KDE3DIR"
+	[ -z "$KDE2LIBSDIR" ] && export KDE2LIBSDIR="$KDE2DIR" 
+	[ -z "$KDE3LIBSDIR" ] && export KDE3LIBSDIR="$KDE3DIR" 
 	
 	local KDEVER
 	KDEVER=$1
@@ -47,6 +47,10 @@ set-kdedir() {
 	    2) export KDEDIR=${KDE2LIBSDIR};;
 	    3) export KDEDIR=${KDE3LIBSDIR};;
 	esac
+	
+	echo in set-kdedir, info:
+	echo "KDEDIR=$KDEDIR; KDE2DIR=$KDE2DIR; KDE3DIR=$KDE3DIR"
+	echo "KDE2LIBSDIR=$KDE2LIBSDIR KDE3LIBSDIR=$KDE3LIBSDIR; KDEMAJORVER=$KDEMAJORVER; KDEVER=$KDEVER"
 	
 	debug-print "$FUNCNAME: result: KDEDIR=$KDEDIR"
 
