@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.10-r1.ebuild,v 1.12 2004/08/21 15:14:08 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.10-r1.ebuild,v 1.13 2004/08/23 10:24:34 kloeri Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.inference.phy.cam.ac.uk/dasher/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc amd64 ~alpha hppa"
+KEYWORDS="x86 ~ppc sparc amd64 alpha hppa"
 IUSE="accessibility gnome"
 
 # The package claims to support 'qte', but it hasn't been tested.
