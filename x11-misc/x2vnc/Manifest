@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8fbb41b1da569a8343cf45936114adc4 ChangeLog 3016
-MD5 73306e20ac1b1ef3b82127d6585e9431 metadata.xml 229
 MD5 413fe97a69afe94703a2fe31f153688c x2vnc-1.6.1.ebuild 638
+MD5 d3fbdb25141e06fbbc915cfa650cd9d5 ChangeLog 3121
+MD5 73306e20ac1b1ef3b82127d6585e9431 metadata.xml 229
 MD5 264f33db6a52266febcbbb6bd8b8fcdf files/digest-x2vnc-1.6.1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBhHhdHTu7gpaalycRAtKCAJ4qaiqllHW8dFpqh6cOJ7+fXxEI+ACgoMXV
-B9jadJYEShCvN5kD0mKon18=
-=dq66
------END PGP SIGNATURE-----
