@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/canna-2ch-20030827.ebuild,v 1.5 2003/10/04 12:29:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/canna-2ch-20030827.ebuild,v 1.6 2003/11/12 20:28:35 usata Exp $
 
 inherit cannadic
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~usata/distfiles/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha"
+KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND=""
 # You cannot use 2ch.cbd as its name. Canna doesn't load dictionaries
