@@ -1,8 +1,13 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.29 2002/11/19 22:26:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.30 2002/11/21 01:03:07 foser Exp $
 
-*xchat-1.9.5 (19 Nov 2002)
+*xchat-1.9.5-r2 (20 Nov 2002)
+
+  20 Nov 2002; foser <foser@gentoo.org> xchat-1.9.5-r2.ebuild :
+  Added private chat logging patch
+
+*xchat-1.9.5-r1 (19 Nov 2002)
 
   19 Nov 2002; foser <foser@gentoo.org> xchat-1.9.5-r1.ebuild :
   They fixed the plugins, removed the symlinks to make them work again
