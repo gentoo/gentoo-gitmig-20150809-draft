@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/i8kutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/ChangeLog,v 1.4 2004/08/04 21:39:54 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/ChangeLog,v 1.5 2004/12/08 17:44:14 tester Exp $
+
+  08 Dec 2004; Olivier Crete <tester@gentoo.org> i8kutils-1.25.ebuild:
+  Mark stable on x86 since 1.17 doesnt build on 2.6.. Fixes bug 58093
 
 *i8kutils-1.25 (04 Aug 2004)
 
