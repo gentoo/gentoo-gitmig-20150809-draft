@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.21.ebuild,v 1.6 2004/08/27 10:12:52 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.25.ebuild,v 1.1 2004/08/27 10:12:52 axxo Exp $
 
 inherit java-pkg eutils
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jswat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/ChangeLog,v 1.12 2004/08/27 09:56:30 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/ChangeLog,v 1.13 2004/08/27 10:12:52 axxo Exp $
+
+*jswat-2.25 (27 Aug 2004)
+
+  27 Aug 2004; Thomas Matthijs <axxo@gentoo.org> +files/build.xml.patch,
+  +files/jswat2, jswat-2.21.ebuild, +jswat-2.25.ebuild:
+  bit of files/ cleanup, disabled junit because it runs inside a X program which
+  is unacceptable, version bump
 
   27 Aug 2004; Thomas Matthijs <axxo@gentoo.org> files/jswat,
   -files/jswat-2.21.diff, -files/jswat2, +files/2.21/build.xml.diff,
