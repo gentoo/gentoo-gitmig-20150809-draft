@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/copyfs
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/copyfs/ChangeLog,v 1.1 2004/12/16 22:21:34 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/copyfs/ChangeLog,v 1.2 2004/12/18 21:20:05 stuart Exp $
+
+  18 Dec 2004; Stuart Herbert <stuart@gentoo.org>
+  files/copyfs-1.0-unlink.patch:
+  Updated the unlink patch to prevent it leaking memory
 
 *copyfs-1.0 (16 Dec 2004)
 
