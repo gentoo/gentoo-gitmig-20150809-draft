@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.79 2005/01/13 16:56:11 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.80 2005/01/14 13:45:35 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -49,6 +49,11 @@ need-autoconf() {
 # Note that only the kde versioning scheme is supported - ie x.y, and we only iterate through y
 # (i.e. x can contain more . separators).
 deprange() {
+	echo -n "|| ( "
+	deprange-list $@
+	echo -n " )"
+}
+deprange-list() {
 
 	# Assign, parse params
 	local MINVER=$1
@@ -154,7 +159,7 @@ deprange() {
 		# then from lowest normal version to lowest suffix.
 		# Cf. the blocks that initialize MAXALPHA, MINBETA etc above to understand why
 		# the loops below work.
-		local NEWDEP="|| ( "
+		local NEWDEP=""
 		local i
 
 		# max version's allowed suffixes
@@ -203,7 +208,6 @@ deprange() {
 			done
 		fi
 
-		NEWDEP="$NEWDEP ) "
 		echo -n $NEWDEP
 	done
 }
@@ -254,7 +258,7 @@ need-kde() {
 		# Also, split kde-base ebuilds are not updated with every KDE release, and so
 		# can require support of different versions of kdelibs.
 		# KM_DEPRANGE should contain 2nd and 3rd parameter to deprange:
-		# max and min KDE versions. E.g. KM_DEPRANGE="3.3.4 $PV".
+		# max and min KDE versions. E.g. KM_DEPRANGE="$PV $MAXKDEVER".
 		if [ -n "$KM_DEPRANGE" ]; then
 			DEPEND="$DEPEND $(deprange $KM_DEPRANGE kde-base/kdelibs)"
 			RDEPEND="$RDEPEND $(deprange $KM_DEPRANGE kde-base/kdelibs)"
