@@ -1,4 +1,4 @@
-MD5 b95344c2a95e2466f57e5f49ada39097 files/digest-jmdns-0.2 60
-MD5 3c22be6f3b224c336d64e3d41d96a21e ChangeLog 411
-MD5 e52ccf5c08a99bb0a29876d5b4eeb821 jmdns-0.2.ebuild 1108
+MD5 d5319aa37754c7e4a39e163cc10068ea jmdns-0.2.ebuild 1105
+MD5 3d98e2a28bcd1e0c032f65e89e36814f ChangeLog 408
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 b95344c2a95e2466f57e5f49ada39097 files/digest-jmdns-0.2 60

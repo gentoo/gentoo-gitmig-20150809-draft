@@ -1,4 +1,4 @@
-MD5 96778981695f92599ce9eac1c669a9b0 files/digest-jdbc-mysql-3.0.11 86
-MD5 479d9dfd5431e7714d73ccf86ed875a4 ChangeLog 4084
+MD5 b2aa6ed9219eeb8312622c3ef4e97791 jdbc-mysql-3.0.11.ebuild 645
+MD5 08b1ced5dcf8025220975d7a9cd4db22 ChangeLog 4081
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 abcdea5f110972489af2b3fe42df79ad jdbc-mysql-3.0.11.ebuild 648
+MD5 96778981695f92599ce9eac1c669a9b0 files/digest-jdbc-mysql-3.0.11 86

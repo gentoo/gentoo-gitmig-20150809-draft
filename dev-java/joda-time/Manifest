@@ -1,4 +1,4 @@
-MD5 d999a843cd11311464e92b51af174d3a files/digest-joda-time-0.95 70
-MD5 57c06e52e3a158985e135cd8946852ea ChangeLog 517
-MD5 5409b74d0241559c080d573a6c19b7ee joda-time-0.95.ebuild 850
+MD5 2290eff38dae3027784333fbd79df551 joda-time-0.95.ebuild 847
+MD5 3750007c30a94657863f59fa6dcc0361 ChangeLog 514
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 d999a843cd11311464e92b51af174d3a files/digest-joda-time-0.95 70

@@ -1,4 +1,4 @@
-MD5 276671ae9ccf96d2b40482786f50071d files/digest-log4j-1.2.8 72
-MD5 d4862b112fbc1c4b45a77c558fa11c78 ChangeLog 1799
-MD5 19d24ecba847b8a22a439b1ed296fe25 log4j-1.2.8.ebuild 628
+MD5 89ac809e3cf5cbe2e0197ffb1e57d024 log4j-1.2.8.ebuild 626
+MD5 979a094f9e5c85d298a2a0bc6af4eec2 ChangeLog 1796
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 276671ae9ccf96d2b40482786f50071d files/digest-log4j-1.2.8 72

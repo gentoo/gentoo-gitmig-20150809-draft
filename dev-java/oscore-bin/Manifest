@@ -1,4 +1,4 @@
-MD5 f5be5cac1c9dc3f3dc45282461e392f4 files/digest-oscore-bin-2.2.4 61
-MD5 ee0646209a715d57cf6a5aa9c2d61ad5 ChangeLog 450
+MD5 93ba9e27392b015fe1a9923204094af1 oscore-bin-2.2.4.ebuild 641
+MD5 db1ab7f3be7973414ec81c7f79b7727b ChangeLog 447
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 968e38b9c92bfba2020fa21f6ebe69e1 oscore-bin-2.2.4.ebuild 644
+MD5 f5be5cac1c9dc3f3dc45282461e392f4 files/digest-oscore-bin-2.2.4 61

@@ -1,5 +1,5 @@
-MD5 76f3e8dba24996e4be737bbbf5811beb junit-3.8.1.ebuild 933
-MD5 40316471549842e45e32c0ee05d1a6a2 ChangeLog 2229
+MD5 81c02466430dd9ef70195c2b5f158c6e junit-3.8.1.ebuild 925
+MD5 bb6070e68f191634a5cf69069ad19a0c ChangeLog 2221
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 0325b468b0d03b4ad6924d32d0479047 files/junit-3.7-build.xml 2938
 MD5 1c7ec0b03d2615cf8ca8450b475c276d files/digest-junit-3.8.1 189
