@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfsmount,v 1.5 2004/07/24 06:03:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfsmount,v 1.6 2005/03/23 04:12:57 eradicator Exp $
 
 depend() {
 	need net portmap
@@ -42,6 +42,6 @@ stop() {
 }
 
 restart() {
-	stop
-	start
+	svc_stop
+	svc_start
 }

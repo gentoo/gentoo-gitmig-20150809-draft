@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.68 2005/03/15 12:30:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.69 2005/03/23 04:12:57 eradicator Exp $
+
+  23 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org> files/nfsmount:
+  Corrected init script to use 'svc_stop; svc_start' and not 'stop; start'.
 
   15 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
   nfs-utils-1.0.7-r1.ebuild:
