@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/winex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.27 2003/06/23 18:36:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.28 2003/06/24 18:22:31 coronalvr Exp $
+
+  24 Jun 2003; coronalvr <coronalvr@gentoo.org> winex-20030328.ebuild:
+  cleanups and minor fixes
 
   23 Jun 2003; Martin Holzer <mholzer@gentoo.org> winex-20030328.ebuild:
   Doing silly things before holiday is always very bad.

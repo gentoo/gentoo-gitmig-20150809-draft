@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20030328.ebuild,v 1.5 2003/06/23 18:36:47 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20030328.ebuild,v 1.6 2003/06/24 18:22:31 coronalvr Exp $
 
 inherit base
 
@@ -32,11 +32,6 @@ S=${WORKDIR}/wine
 
 src_unpack() {
 	base_src_unpack
-	# Unpacking the miscellaneous files
-	mkdir misc
-	cd misc
-	tar jxvf ${DISTDIR}/${P}-misc.tar.bz2 &> /dev/null
-	chown root:root *
 	cd ${S}
 	epatch ${DISTDIR}/${P}-xopenfont.patch
 }
@@ -98,14 +93,14 @@ src_install () {
 
 	# moving the wrappers to bin/
 	insinto /usr/bin
-	dobin ${WORKDIR}/misc/regedit-winex ${WORKDIR}/misc/winex
+	dobin ${WORKDIR}/regedit-winex ${WORKDIR}/winex
 
 	### Set up the remaining files
 	cd ${S}
 
 	# copying the winedefault.reg into .data
 	insinto /usr/lib/winex/.data
-	doins winedefault.reg ${WORKDIR}/misc/config
+	doins winedefault.reg ${WORKDIR}/config
 
 	# Set up this dynamic data
 	insinto /usr/lib/wine/.data/fake_windows/Windows
@@ -118,7 +113,7 @@ src_install () {
 	dodoc ANNOUNCE AUTHORS BUGS ChangeLog DEVELOPERS-HINTS LICENSE README
 
 	# Manpage setup
-	cp ${D}/usr/lib/${PN}/man/man1/wine.1 ${D}/usr/lib/${PN}/man/man1/${PN}.1
+	mv ${D}/usr/lib/${PN}/man/man1/wine.1 ${D}/usr/lib/${PN}/man/man1/${PN}.1
 	doman ${D}/usr/lib/${PN}/man/man1/${PN}.1
 	rm ${D}/usr/lib/${PN}/man/man1/${PN}.1
 	
@@ -130,8 +125,8 @@ src_install () {
 pkg_postinst() {
 	einfo "Use /usr/bin/winex to start winex."
 	einfo "This is a wrapper-script which will take care of everything"
-	einfo "else. If you have further questions, enhancements or patches"
-	einfo "send an email to phoenix@gentoo.org"
+	einfo "else. If you have bugs, enhancements or patches"
+	einfo "send a bug report and assign it to wine@gentoo.org"
 	einfo ""
 	einfo "Manpage has been installed to the system."
 	einfo "\"man winex\" should show it."
