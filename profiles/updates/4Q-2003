@@ -1,3 +1,4 @@
+move dev-perl/Class-MakeMethods-Template dev-perl/Class-MakeMethods
 move net-ftp/lukemftp net-ftp/tnftp
 move dev-util/eclipse-sdk-bin dev-util/eclipse-sdk
 move app-emacs/wl app-emacs/wanderlust
