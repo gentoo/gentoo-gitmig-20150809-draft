@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.22 2004/03/25 04:07:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.23 2004/03/26 05:19:17 eradicator Exp $
+
+*faad2-2.0-r1 (25 Mar 2004)
+
+  25 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> faad2-2.0-r1.ebuild,
+  files/faad2-2.0-noext.patch:
+  Added a patch to stop the xmms plugin from segfaulting on files lacking
+  extentions. See bug #40726.
 
   24 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> faad2-2.0.ebuild:
   Using elibtoolize instead of old hack for xmms plugin.
