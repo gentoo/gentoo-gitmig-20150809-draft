@@ -65,6 +65,14 @@ if ($ENV{WANT_AUTOCONF} ne '2.1') {
     }
 }
 
+# Set AUTOM4TE to the proper version (bug #40983).
+# Do not set it for 2.13 though, as it does not ship autom4te.
+if(($ENV{AUTOM4TE} eq "")
+   && ($ENV{WANT_AUTOCONF} = '2.5')
+   && ($0 ne 'autom4te')) {
+	$ENV{AUTOM4TE} = "autom4te-2.5x";
+}
+
 $ENV{WANT_ACWRAPPER_DEBUG} and print STDERR "ac-wrapper: will execute <$binary>\n";
 
 exec $binary, @ARGV;

@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.42 2004/02/16 05:20:54 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.43 2004/02/16 17:48:12 azarah Exp $
+
+*autoconf-2.59-r3 (16 Feb 2004)
+
+  16 Feb 2004; Martin Schlemmer <azarah@gentoo.org> autoconf-2.59-r3.ebuild,
+  files/ac-wrapper-2.pl, files/ac-wrapper-3.pl:
+  Add back fix for testing AC_PREREQ(2.50) to ac-wrapper-2.pl. Add
+  ac-wrapper-3.pl with fixed fix for bug #40983.
 
 *autoconf-2.59-r2 (16 Feb 2004)
 
