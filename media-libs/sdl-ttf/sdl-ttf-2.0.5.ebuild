@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.5.ebuild,v 1.7 2003/01/16 02:53:08 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.5.ebuild,v 1.8 2003/01/31 06:09:11 gerk Exp $
 
 MY_P="${P/sdl-/SDL_}"
 S="${WORKDIR}/${MY_P}"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.libsdl.org/projects/SDL_ttf/"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="x86 sparc ppc"
 
 DEPEND=">=media-libs/libsdl-1.2.4
 	>=media-libs/freetype-2.0.1"

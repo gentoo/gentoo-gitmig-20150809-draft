@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-ttf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.5 2003/01/16 02:53:08 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.6 2003/01/31 06:09:11 gerk Exp $
+
+  31 Jan 2003; Mark GUertin <gerk@gentoo.org> sdl-ttf-2.0.5.ebuild :
+  Set to ppc stable
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
