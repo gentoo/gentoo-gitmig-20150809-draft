@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/canna-cannadic
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.21 2005/02/24 18:09:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.22 2005/03/26 21:25:23 kloeri Exp $
+
+  26 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  canna-cannadic-0.95c.ebuild:
+  Stable on alpha.
 
   24 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   canna-cannadic-0.95c.ebuild:
