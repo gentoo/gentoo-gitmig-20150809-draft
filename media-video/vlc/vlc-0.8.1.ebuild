@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1.ebuild,v 1.5 2005/01/08 15:57:48 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1.ebuild,v 1.6 2005/01/09 09:16:16 luckyduck Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -58,7 +58,7 @@ DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		sys-libs/zlib
 		media-libs/libpng
 		media-libs/libdvbpsi
-		"
+		faad?( >=media-libs/faad2-2.0-r2 )"
 
 src_unpack() {
 	unpack ${A}
@@ -171,9 +171,10 @@ src_compile () {
 	# looks for xpidl in /usr/lib/mozilla/xpidl
 	# and doesn't find it there because it's
 	# in /usr/bin! - ChrisWhite
-	use mozilla && \
-	sed -e "s:^XPIDL = .*:XPIDL = /usr/bin/xpidl:" -i mozilla/Makefile \
-	|| die "could not fix XPIDL path"
+	if use mozilla; then
+		sed -e "s:^XPIDL = .*:XPIDL = /usr/bin/xpidl:" -i mozilla/Makefile \
+		|| die "could not fix XPIDL path"
+	fi
 
 	MAKEOPTS="${MAKEOPTS} -j1"
 	emake || die "make of VLC failed"
