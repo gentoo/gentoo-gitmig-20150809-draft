@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Id: xanim-2.80.1-r3.ebuild,v 1.2 2002/04/27 11:41:41 pvdabeel Exp $
+# $Id: xanim-2.80.1-r3.ebuild,v 1.3 2002/05/09 19:47:53 blauwers Exp $
 
 _XA_CYUV_SPARC=xa1.0_cyuv_sparcELF.o
 _XA_CVID_SPARC=xa2.0_cvid_sparcELF.o
@@ -63,19 +63,22 @@ SRC_URI="ftp://xanim.va.pubnix.com/xanim2801.tar.gz
 	 ftp://xanim.va.pubnix.com/modules/${_XA_IV32_I386}${_XA_I386_EXT}"
 HOMEPAGE="http://xanim.va.pubnix.com"
 
-DEPEND="virtual/glibc virtual/x11 >=sys-libs/zlib-1.1.3"
-
 case $ARCH in 
   sparc)
-	RDEPEND="app-arch/ncompress"
+	ARCHDEPS="app-arch/ncompress"
 	;;
   sparc64)
-	RDEPEND="app-arch/ncompress"
+	ARCHDEPS="app-arch/ncompress"
 	;;
   ppc)
-	RDEPEND="app-arch/ncompress"
+	ARCHDEPS="app-arch/ncompress"
+	;;
+  *)
+	ARCHDEPS=""
 	;;
 esac
+
+DEPEND="virtual/glibc virtual/x11 >=sys-libs/zlib-1.1.3 ${ARCHDEPS}"
   	
 src_unpack() {
   unpack xanim2801.tar.gz
