@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3gain
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.6 2004/07/01 10:59:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.7 2004/08/14 14:42:29 swegener Exp $
+
+  14 Aug 2004; Sven Wegener <swegener@gentoo.org> mp3gain-1.4.3.ebuild:
+  Trimmed trailing whitespace.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> mp3gain-1.4.3.ebuild:
   virtual/glibc -> virtual/libc

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/zynaddsubfx
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/ChangeLog,v 1.10 2004/06/25 00:31:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/ChangeLog,v 1.11 2004/08/14 14:44:38 swegener Exp $
+
+  14 Aug 2004; Sven Wegener <swegener@gentoo.org> zynaddsubfx-1.4.3.ebuild:
+  Trimmed trailing whitespace.
 
   13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   zynaddsubfx-1.4.3.ebuild:
