@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speechd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/ChangeLog,v 1.8 2004/06/24 21:24:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/ChangeLog,v 1.9 2004/07/22 11:35:25 eradicator Exp $
+
+  22 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  speechd-0.56-r1.ebuild:
+  Added to ~sparc.  Moved config stuff to postinst.
 
   14 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   speechd-0.56-r1.ebuild:
