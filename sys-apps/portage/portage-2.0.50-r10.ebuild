@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r10.ebuild,v 1.1 2004/08/21 07:23:17 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.50-r10.ebuild,v 1.2 2004/08/21 07:26:16 carpaski Exp $
 
 IUSE="build multilib selinux"
 
@@ -11,7 +11,7 @@ export SANDBOX_DISABLED="1"
 S=${WORKDIR}/${PF}
 SLOT="0"
 DESCRIPTION="Portage ports system"
-SRC_URI="http://gentoo.twobit.net/portage/${PF}.tar.bz2 mirror://gentoo/${PF}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~carpaski/${PF}.tar.bz2 mirror://gentoo/${PF}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
 
 # Contact carpaski with a reason before you modify any of these.
