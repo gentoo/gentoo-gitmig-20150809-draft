@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.6.4.ebuild,v 1.10 2004/06/25 00:01:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.6.4.ebuild,v 1.11 2004/07/24 05:46:11 eradicator Exp $
 
 IUSE="nls gnome"
 
@@ -16,11 +16,11 @@ KEYWORDS="x86"
 RDEPEND=">=dev-util/guile-1.4-r3
 	dev-libs/libxml2
 	>=media-sound/esound-0.2
-	>=sys-devel/autoconf-2.58
 	media-libs/audiofile
 	gnome? ( <gnome-base/libglade-2 gnome-base/gnome-libs )"
 
 DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.58
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
