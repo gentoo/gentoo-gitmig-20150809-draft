@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.127 2003/09/25 02:14:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.128 2003/09/28 21:14:08 azarah Exp $
+
+*gcc-3.3.1-r4 (28 Sep 2003)
+
+  28 Sep 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.1-r4.ebuild:
+  Update revision. Update ProPolice to 3.3-4. I also took the time and reaped
+  a few of non applied pr fixes for gcc-3_3-branch that is not yet applied to
+  gcc-3_3-rhl-branch we use. I also ported a few fixes that was fixed only 3.4
+  side, and testing my side at least shows no regressions.
 
   25 Sep 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.3.1-r3.ebuild:
   Add gcc-unsharing_lhs.patch resolving bug #29467.  Also marked this ~x86.

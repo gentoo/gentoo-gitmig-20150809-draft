@@ -11,6 +11,7 @@ MD5 c44c493b629be3a1abbc1eb4d3cb00d1 gcc-3.1-r8.ebuild 9776
 MD5 459fe070924cbfd485139f84f2dd47ff gcc-3.0.4-r6.ebuild 8738
 MD5 25a95ad59dc52c9ec23faf193ea4f168 gcc-3.3.ebuild 16642
 MD5 4e0f0058ffaa6fb901f384422b79857b gcc-3.3-r1.ebuild 16467
+MD5 4de4cfb80ca4bd71100b2bfab48be2a6 gcc-3.3.1-r4.ebuild 16093
 MD5 079abbc45c914fdad6c90540fe82302c gcc-2.95.3-r8.ebuild 9213
 MD5 89c5294c24b323cf6c28e507fef6d59d gcc-3.2-r5.ebuild 12876
 MD5 9120d543f8b966ed6a5a2d32902fd5cf gcc-3.2.2.ebuild 16053
@@ -37,6 +38,7 @@ MD5 12d4b0c4fc49fad52850ab007c3c7371 files/digest-gcc-3.3-r1 353
 MD5 44a31b67ec75b5d2890cff6430650005 files/digest-gcc-3.3.1-r3 361
 MD5 0d683280daf95e6bb9712549352a200c files/digest-gcc-3.1.1-r1 140
 MD5 33df162e1767e168f4f39442785071af files/texinfo-4.0-no-ncurses-gentoo.diff 51748
+MD5 1e3aa3b864f28785fa66b64af11996a3 files/digest-gcc-3.3.1-r4 361
 MD5 f0b73e4542862243a43920fd6fd0cb99 files/digest-gcc-3.1-r8 62
 MD5 c589fe6a54dc88cf40463cf85a32e81e files/specs-3.3-amd64-unilib 3953
 MD5 2d5af6fe0b03d39a94cb4c4d4b03e226 files/gcc-2.95.3-atexit.diff 1731
