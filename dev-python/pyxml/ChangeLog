@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxml
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.9 2004/03/09 23:18:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.10 2004/03/14 17:14:16 geoman Exp $
+
+  14 Mar 2004; Stephen P. Becker <geoman@gentoo.org> pyxml-0.8.3.ebuild:
+  Added ~mips keyword.
 
   09 Mar 2004; <agriffis@gentoo.org> pyxml-0.8.3.ebuild:
   stable on alpha and ia64
