@@ -6,7 +6,7 @@
 GPV="4.1.1"
 A1=jpegsrc.v6b.tar.gz
 A2=zlib-1.1.3.tar.gz
-A3=libpng-1.0.11.tar.gz
+A3=libpng-1.0.12.tar.gz
 A="${P}.tar.gz ghostscript-fonts-std-6.0.tar.gz print-${GPV}.tar.gz
    ${A1} ${A2} ${A3}"
 
@@ -20,7 +20,7 @@ SRC_URI="http://download.sourceforge.net/ghostscript/${P}.tar.gz
         ftp://ftp.freesoftware.com/pub/infozip/zlib/${A2}"
 
 DEPEND="virtual/glibc
-	=media-libs/libpng-1.0.11
+	=media-libs/libpng-1.0.12
 	virtual/x11"
 
 src_unpack() {

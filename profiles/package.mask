@@ -14,6 +14,7 @@ app-admin/powertweak
 # unfinished
 app-admin/va-systemimager-server
 app-admin/va-systemimager-client
+>=media-video/avifile-0.6.0
 # broken
 app-editors/gtk-xemacs
 # incompatible
