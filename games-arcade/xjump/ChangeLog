@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/xjump
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xjump/ChangeLog,v 1.1 2005/03/28 21:00:13 mr_bones_ Exp $
+
+*xjump-2.7.5 (28 Mar 2005)
+
+  28 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +xjump-2.7.5.ebuild:
+  initial commit (bug #55745)
+
