@@ -10,4 +10,4 @@ if [ ! -d ${HOME}/.mldonkey ] ; then
 	fi
 fi
 
-cd ${HOME}/.mldonkey && /usr/bin/mlnet
+cd ${HOME}/.mldonkey && exec /usr/bin/mlnet
