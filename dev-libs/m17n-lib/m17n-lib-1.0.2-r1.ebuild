@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.0.2-r1.ebuild,v 1.7 2004/07/19 02:25:27 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.0.2-r1.ebuild,v 1.8 2004/07/31 17:09:33 usata Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.m17n.org/m17n-lib/download/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc ~amd64 ppc64"
+KEYWORDS="x86 alpha ppc ~amd64 ppc64"
 IUSE=""
 
 DEPEND="virtual/x11
