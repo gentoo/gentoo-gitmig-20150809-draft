@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.8 2004/11/14 10:04:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r1.ebuild,v 1.9 2004/11/29 03:02:43 eradicator Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="0"
 PROVIDE="virtual/kernel virtual/os-headers"
-KEYWORDS="-* amd64 arm hppa ~ia64 ~ppc ppc64 sh ~x86"
+KEYWORDS="-* amd64 arm hppa ~ia64 ~ppc ppc64 ~sparc sh ~x86"
 IUSE=""
 
 DEPEND="!virtual/os-headers"
@@ -61,6 +61,9 @@ src_unpack() {
 
 	# Fixes
 	case "${ARCH}" in
+		sparc*)
+			epatch ${FILESDIR}/${P}-sparc-signal_h.patch
+		;;
 		*)
 			headers___fix ${S}/include/asm-ia64/*
 			headers___fix ${S}/include/asm-ppc64/*
