@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.504 2004/07/23 03:50:41 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.505 2004/07/23 11:11:58 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -297,6 +297,7 @@ media-video/mjpegtools:yv12 - Enables support for the YV12 pixel format
 media-video/motiontrack:libgd - Enables gd library support for debug purposes
 media-video/mpeg4ip:v4l2 - Enable video4linux2 support
 media-video/mplayer:cdparanoia - Enables cdparanoia support
+media-video/mplayer:dvdread - Enables usage of Ogle's libdvdread rather than mpdvdkit for DVD playback
 media-video/mplayer:edl - Enables usage of Edit Decision Lists
 media-video/mplayer:libcaca - Enables libcaca support, colored ASCII-art graphics
 media-video/mplayer:live - Enables live.com streaming media support
