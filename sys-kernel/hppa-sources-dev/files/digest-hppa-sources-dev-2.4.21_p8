@@ -1,5 +1,4 @@
 MD5 f51e12efa18bb828cf57d9d4a81b2fb1 linux-2.4.21.tar.bz2 28533733
 MD5 7ba65d0bf885ab820235c8234fbccb44 patch-2.4.21-pa7.diff.gz 688086
 MD5 d23ac4f2d5e20cf3dbebe838ebe40fb8 patch-2.4.21-pa7-pa8.gz 5027
-MD5 8de133892cbf81aa9207f9461f7a3f63 parisc-linux-2.4.21-pa8-grsecurity-1.9.11.patch 389356
-MD5 538ab062d7ad630f3ff96c801ed0d578 usagi-linux24-s20030721-2.4.21.diff.bz2 392223
+MD5 17150f750357f9e0180d1d83823b55fc patch-2.4.21-pa8-grsecurity-1.9.11.patch 200729
