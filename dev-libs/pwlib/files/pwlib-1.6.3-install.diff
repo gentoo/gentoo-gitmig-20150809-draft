@@ -1,0 +1,11 @@
+--- Makefile.in.orig	2004-03-06 01:13:28.763115720 +0100
++++ Makefile.in	2004-03-06 01:13:42.349050344 +0100
+@@ -233,7 +233,7 @@
+ 	ln -sf $(PTLIB_FILE) libpt.@SHAREDLIBEXT@ \
+ 	)
+ ###	cp -df lib/*@SHAREDLIBEXT@* $(DESTDIR)$(LIBDIR)/
+-	cp -rf plugins/pwlib         $(DESTDIR)$(LIBDIR)
++###	cp -rf plugins/pwlib         $(DESTDIR)$(LIBDIR)
+ 	cp -rf include/ptclib        $(DESTDIR)$(PREFIX)/include/
+ 	cp -rf include/ptlib         $(DESTDIR)$(PREFIX)/include/
+ 	cp -rf include/ptbuildopts.h $(DESTDIR)$(PREFIX)/include/
