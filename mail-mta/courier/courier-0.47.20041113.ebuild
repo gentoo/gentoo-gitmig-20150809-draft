@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.20041113.ebuild,v 1.4 2004/11/18 04:39:15 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.20041113.ebuild,v 1.5 2004/11/20 00:45:23 swtaylor Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ PROVIDE="virtual/mta
 	 virtual/imapd"
 
 DEPEND="virtual/libc
-	mail-mta/courier-authlib
+	net-libs/courier-authlib
 	>=dev-libs/openssl-0.9.6
 	>=sys-libs/gdbm-1.8.0
 	crypt? ( >=app-crypt/gnupg-1.0.4 )
