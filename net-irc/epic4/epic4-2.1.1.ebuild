@@ -1,40 +1,39 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.2.6.ebuild,v 1.6 2004/08/02 21:12:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.1.1.ebuild,v 1.1 2004/11/13 18:37:34 swegener Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="Epic4 IRC Client"
 HOMEPAGE="http://epicsol.org/"
 SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC4-BETA/${P}.tar.bz2
-	 ftp://prbh.org/pub/epic/EPIC4-PRODUCTION/epic4-help-20030114.tar.gz"
+	 ftp://prbh.org/pub/epic/EPIC4-PRODUCTION/epic4-help-20040801.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~ia64 ~alpha ~hppa"
-IUSE="ipv6 perl ssl tcltk"
+KEYWORDS="~x86 ~ppc ~ia64 ~alpha ~hppa ~sparc ~amd64 ~ppc-macos"
+IUSE="ipv6 perl ssl"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	perl? ( >=dev-lang/perl-5.6.1 )
-	ssl? ( >=dev-libs/openssl-0.9.5 )
-	tcltk? ( dev-lang/tcl )"
+	ssl? ( >=dev-libs/openssl-0.9.5 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/epic-defaultserver.patch
+}
 
 src_compile() {
 	replace-flags "-O?" "-O"
 
-	myconf=""
-
-	myconf="${myconf} `use_with ipv6`"
-	myconf="${myconf} `use_with perl`"
-	myconf="${myconf} `use_with ssl`"
-	myconf="${myconf} `use_with tcltk`"
-
-	epatch ${FILESDIR}/epic-defaultserver.patch || die "patch failed"
-
 	econf \
 		--libexecdir=/usr/lib/misc \
-		${myconf} || die "econf failed"
-
+		$(use_with ipv6) \
+		$(use_with perl) \
+		$(use_with ssl) \
+		|| die "econf failed"
 	make || die "make failed"
 }
 
@@ -49,14 +48,14 @@ src_install () {
 	dodoc BUG_FORM COPYRIGHT README KNOWNBUGS VOTES
 	docinto doc
 	cd doc
-	dodoc *.txt colors EPIC* IRCII_VERSIONS local_vars missing new-load
-	dodoc nicknames outputhelp server_groups SILLINESS TS4
+	dodoc \
+		*.txt colors EPIC* IRCII_VERSIONS local_vars missing new-load \
+		nicknames outputhelp server_groups SILLINESS TS4
 
 	dodir /usr/share/epic
-	tar zxvf ${DISTDIR}/epic4-help-20030114.tar.gz -C ${D}/usr/share/epic
+	tar zxvf ${DISTDIR}/epic4-help-20040801.tar.gz -C ${D}/usr/share/epic
 
-	rm -f ${D}/usr/share/epic/help/Makefile
-	rm -rf ${D}/usr/share/epic/help/CVS
+	rm -rf ${D}/usr/share/epic/help/{CVS,Makefile}
 
 	chown -R root:root ${D}/usr/share/epic/help
 }
@@ -71,4 +70,7 @@ pkg_postinst() {
 	if [ ! -f ${ROOT}/usr/share/epic/script/local ]; then
 		cp ${FILESDIR}/local ${ROOT}/usr/share/epic/script/
 	fi
+
+	# Fix for bug 59075
+	chmod 755 ${ROOT}/usr/share/epic/help
 }

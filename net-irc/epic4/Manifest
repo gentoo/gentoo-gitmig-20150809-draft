@@ -1,14 +1,21 @@
-MD5 a5418f988d7e1475555e1564656ccdda ChangeLog 7791
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f2fccf33340a1c7b9094bc84eb1e7fc5 ChangeLog 8010
+MD5 b0d3e9d98200475e4c744bf1ef46b87f epic4-1.1.16-r1.ebuild 2071
 MD5 48a9633e83b359c67f4b517ad2e8ac8a epic4-2.0-r1.ebuild 2126
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 3d8a658ef2f439aac818ddd74768a745 epic4-1.1.14-r1.ebuild 2031
-MD5 b0d3e9d98200475e4c744bf1ef46b87f epic4-1.1.16-r1.ebuild 2071
-MD5 62d7c77553c86131f67ca28beda17843 epic4-1.2.6.ebuild 2110
+MD5 fa9b6300590202c0dc9353d501264bc6 epic4-2.1.1.ebuild 2048
 MD5 202b467aa8e4fa72afb00aa40b4f423d files/2.0-toggle-stop-screen.patch 1628
-MD5 cbb9caa10a6573474c6e18ca5e01b85e files/digest-epic4-2.0-r1 133
-MD5 33df45dcbc3a9e94246c4ee10474f332 files/epic4-1.0.1-gcc33.patch 850
-MD5 1d5075abb862c8b98c2b16df96e37407 files/local 21043
-MD5 b18fec6f550fe601efccc79f5526b2e7 files/digest-epic4-1.1.14-r1 136
 MD5 8668b72bb8d4af8c83ddcbb8fc606022 files/digest-epic4-1.1.16-r1 136
+MD5 cbb9caa10a6573474c6e18ca5e01b85e files/digest-epic4-2.0-r1 133
 MD5 a0a06abf43f925f0472c026573bf622f files/epic-defaultserver.patch 620
-MD5 5892130581f76c4e2c4fa1dea13e7410 files/digest-epic4-1.2.6 135
+MD5 1d5075abb862c8b98c2b16df96e37407 files/local 21043
+MD5 932d329df41bd4d84dadb5620b751c3f files/digest-epic4-2.1.1 135
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBllR2I1lqEGTUzyQRAvt1AKCHHzR5HQiKoIwqQLHJe8ESZjFeAACfZcWy
+HthM0eD8syyQlmISYfbUGUY=
+=7rwm
+-----END PGP SIGNATURE-----
