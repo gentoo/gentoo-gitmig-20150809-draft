@@ -1,0 +1,47 @@
+
+# Chris PeBenito <pebenito@gentoo.org>
+# must use a SELinux profile
+selinux
+hardened
+
+# Paul de Vrieze <pauldv@gentoo.org>
+# There is no java in this profile (if there is it must be available). Without
+# this repoman will fail on apps like sys-libs/db
+java
+
+3dnow
+icc
+icc-pgo
+mmx
+svga
+sse
+uclibc
+
+# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
+# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
+# all of these are binary-only, and not presently available on this
+# architecture.
+php
+adabas
+birdstep
+cpdflib
+db2
+dbmaker
+empress
+empress-bcs
+esoob
+filepro
+frontbase
+hyperwave
+informix
+ingres
+oracle7
+oci8
+pfpro
+solid
+sybase
+sybase-ct
+fdftk
+djbfft
+qdbm
+mzscheme

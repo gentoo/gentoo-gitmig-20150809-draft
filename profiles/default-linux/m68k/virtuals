@@ -1,0 +1,7 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/m68k/virtuals,v 1.1 2004/11/04 22:09:48 vapier Exp $
+
+virtual/dev-manager			sys-fs/udev
+virtual/kernel				sys-kernel/development-sources
+virtual/os-headers			sys-kernel/linux26-headers
