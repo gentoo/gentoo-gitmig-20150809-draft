@@ -1,6 +1,25 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.22 2003/07/10 09:47:18 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.23 2003/08/31 07:04:03 pylon Exp $
+
+*mol-0.9.69_pre4 (31 Aug 2003)
+
+  31 Aug 2003; Lars Weiler <pylon@gentoo.org> mol-0.9.69_pre4.ebuild:
+  Another snapshot of MOL. New features (beside other bugfixes):
+  - SCSI access (which also allows you to write CD-Rs with scsi-emu enabled) 
+  - USB support 
+  - ALSA sound support 
+  
+  The ebuild has been changed a bit.  It now makes use of several USE-flags: 
+  - alsa: builds MOL with alsa sound driver support 
+  - debug: builds the MOL debugger 
+  - esd: builds MOL with ESounD support 
+  - oldworld (local USE-flag): includes OldWorld support 
+  - X: uses the X Window System
+  
+  Due to problems with the MOLAudio driver ("Incompatible MOLAudio version!")
+  this ebuild is masked in package.mask.  We will do a re-snapshot later and
+  hope that the problem is fixed then.
 
 *mol-0.9.69_pre3 (10 Jul 2003)
 
