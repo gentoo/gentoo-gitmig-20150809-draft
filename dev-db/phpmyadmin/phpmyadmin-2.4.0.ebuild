@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.4.0.ebuild,v 1.4 2003/05/09 11:15:40 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.4.0.ebuild,v 1.5 2003/05/10 11:29:31 twp Exp $
 
 inherit eutils
 
@@ -32,36 +32,24 @@ src_compile() {
 
 src_install () {
 
-	# Attempt to guess DocumentRoot (bug # 20642)
-	# 1. Use DOCUMENT_ROOT env var if set
-	# 2. Grep apache.conf/apache2.conf as appropriate
-	# 3. Fallback on /home/httpd/htdocs
-	if [ -z "${DOCUMENT_ROOT}" ]; then
-		if [ "`use apache2`" ]; then
-			DOCUMENT_ROOT="`grep '^DocumentRoot' /etc/apache2/conf/apache2.conf | cut -d\  -f2`"
-		else
-			DOCUMENT_ROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`"
-		fi
-	fi
-	einfo "DOCUMENT_ROOT=${DOCUMENT_ROOT}"
-	[ -z "${DOCUMENT_ROOT}" ] && DOCUMENT_ROOT="/home/httpd/htdocs"
+	local DocumentRoot="/home/httpd/htdocs"
 
-	insinto ${DOCUMENT_ROOT}/phpmyadmin
+	insinto ${DocumentRoot}/phpmyadmin
 	doins *.{php,html} ChangeLog
 
-	insinto ${DOCUMENT_ROOT}/phpmyadmin/images
+	insinto ${DocumentRoot}/phpmyadmin/images
 	doins images/*.{gif,png}
 
-	insinto ${DOCUMENT_ROOT}/phpmyadmin/scripts
+	insinto ${DocumentRoot}/phpmyadmin/scripts
 	doins scripts/*.sh
 
-	insinto ${DOCUMENT_ROOT}/phpmyadmin/lang
+	insinto ${DocumentRoot}/phpmyadmin/lang
 	doins lang/*.{php,sh}
 
-	insinto ${DOCUMENT_ROOT}/phpmyadmin/libraries
+	insinto ${DocumentRoot}/phpmyadmin/libraries
 	doins libraries/*.{php,js}
 
-	insinto ${DOCUMENT_ROOT}/phpmyadmin/libraries/auth
+	insinto ${DocumentRoot}/phpmyadmin/libraries/auth
 	doins libraries/auth/*.php
 
 	dodoc ANNOUNCE.txt CREDITS ChangeLog TODO Documentation.{txt,html} \
@@ -70,7 +58,7 @@ src_install () {
 	insinto /etc/phpmyadmin
 	doins config.inc.php mysql-setup.sql
 
-	dosym /etc/phpmyadmin/config.inc.php ${DOCUMENT_ROOT}/phpmyadmin/config.inc.php
+	dosym /etc/phpmyadmin/config.inc.php ${DocumentRoot}/phpmyadmin/config.inc.php
 	
 }
 
