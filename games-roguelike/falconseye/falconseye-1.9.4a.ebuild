@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/falconseye-1.9.4a.ebuild,v 1.1 2003/12/02 01:20:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/falconseye-1.9.4a.ebuild,v 1.2 2003/12/02 02:29:03 mr_bones_ Exp $
 
 inherit games
 
@@ -42,7 +42,7 @@ src_compile() {
 	cd doc
 	emake || die "doc failed"
 }
- 
+
 src_install() {
 	emake \
 		GAMEPERM=0755 \
