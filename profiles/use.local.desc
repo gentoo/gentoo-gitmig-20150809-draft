@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.873 2005/01/17 16:14:49 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.874 2005/01/17 16:29:24 luckyduck Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -474,7 +474,6 @@ media-video/transcode:a52 - Enables support for decoding ATSC A/52 streams used 
 media-video/transcode:dv - Enables support for a codec used by many camcorders
 media-video/transcode:dvdread - Enables usage of Ogle's libdvdread rather than mpdvdkit for DVD playback
 media-video/transcode:fame - Enables libfame support
-media-video/transcode:freetype - Enables Freetype font support
 media-video/transcode:lzo - Enables LZO compression support
 media-video/transcode:mjpeg - Enables mjpegtools support
 media-video/transcode:network - Enables network streaming support
