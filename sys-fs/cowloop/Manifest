@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8eb2e210b008e2f40e9a9a9d9da112e2 cowloop-2.11.ebuild 1100
+MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 88dd82bd9643f8e6cfcb8966459ce950 ChangeLog 458
+MD5 5b1d181cd462a69063fe74fd3179a116 files/digest-cowloop-2.11 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB1rvZmdTrptrqvGERAs/nAJ4+4LJ3Xte/ePhsOMCc4kAgm26RUwCeOimQ
+uInJEFnKvRSpb1RtP0KguYs=
+=73mK
+-----END PGP SIGNATURE-----
