@@ -1,0 +1,22 @@
+--- 1/cscope-15.5/src/main.c	2005-02-03 23:38:39 +0200
++++ 2/cscope-15.5/src/main.c	2005-02-03 23:39:26 +0200
+@@ -128,6 +128,8 @@
+ 	char	path[PATHLEN + 1];	/* file path */
+ 	FILE	*oldrefs;	/* old cross-reference file */
+ 	char	*s;
++	char template[] = "cscope.XXXXXX";
++	char *ret;
+ 	int	c, i;
+ 	pid_t	pid;
+ 	struct stat	stat_buf;
+@@ -313,10 +315,8 @@
+ 	lineflag = mygetenv("CSCOPE_LINEFLAG", LINEFLAG);
+ 	lineflagafterfile = getenv("CSCOPE_LINEFLAG_AFTER_FILE")?1:0;
+ 
+-	char template[] = "cscope.XXXXXX";
+ 	snprintf(tmpdir, sizeof(tmpdir), "%s/%s", mygetenv("TMPDIR", TMPDIR), template);
+ 	tmpdir[sizeof(tmpdir)-1] = '\0';
+-	char *ret;
+ 	ret = mkdtemp(tmpdir);
+ 	if (ret == NULL)
+ 	{

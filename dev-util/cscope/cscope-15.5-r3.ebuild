@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.5-r3.ebuild,v 1.9 2004/12/16 18:51:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.5-r3.ebuild,v 1.10 2005/02/03 22:11:35 ciaranm Exp $
 
 inherit gnuconfig elisp-common eutils
 
@@ -27,6 +27,9 @@ src_unpack() {
 
 	#rphillips - tempfile security patch
 	epatch ${FILESDIR}/${PN}-${PV}-tempfile.patch
+
+	# make it happy with ansi c (from azarah)
+	epatch ${FILESDIR}/${PN}-${PV}-gcc295.patch
 }
 
 src_compile() {
