@@ -1,5 +1,5 @@
-MD5 b4b04ec480b01313f67bcf1d1af3d574 linux-ntfs-1.6.0.ebuild 1055
 MD5 530e952c8f94b29852a8f6b8007fca96 ChangeLog 928
-MD5 8b38aca4e779e11e0569c860f8f851a4 metadata.xml 204
+MD5 b4b04ec480b01313f67bcf1d1af3d574 linux-ntfs-1.6.0.ebuild 1055
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 9ba7db6e2242b6eec4de0d5f8d5d8eac files/digest-linux-ntfs-1.6.0 68
 MD5 f2dc9e4ce99630231fc2247b68c4eee5 files/linux-ntfs-1.6.0-gcc3.2.patch 493
