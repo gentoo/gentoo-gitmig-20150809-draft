@@ -1,6 +1,6 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.ebuild,v 1.2 2002/11/20 14:06:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.ebuild,v 1.3 2002/11/23 14:01:54 danarmak Exp $
 inherit kde-dist flag-o-matic 
 
 DESCRIPTION="KDE multimedia apps: noatun, kscd, artsbuilder..."
@@ -33,8 +33,9 @@ myinterface="--enable-interface=xaw,ncurses"
 myconf="$myconf --enable-xaw --enable-ncurses"
 #myconf="$myconf --with-xine-prefix=/usr"
 
-# make -j2 fails
-#export MAKEOPTS="-j1"
+# make -j2 fails, at least on ppc
+export MAKEOPTS="$MAKEOPTS -j1"
+
 PATCHES="$FILESDIR/$P-gentoo-timidity.diff
 	$FILESDIR/$P-ln-sf.diff"
 
