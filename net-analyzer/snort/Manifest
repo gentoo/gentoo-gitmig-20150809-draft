@@ -7,7 +7,7 @@ MD5 74c5b90ce4a7829b9fbe2e22a779f240 snort-2.1.0.ebuild 3467
 MD5 927dc6b501ab7f4bf7923c84d1a73705 ChangeLog 9275
 MD5 f629e6b9c8a922659de794d67f0cd115 metadata.xml 928
 MD5 fe6a25fdd3c6d4b527d89c51d78b8f36 files/2.1.0-libnet-1.0.patch 2753
-MD5 b13a978800f443b01a7d8d5efa583637 files/snort.rc6 770
+MD5 919058894f4983c35900bc8bb98a96d4 files/snort.rc6 764
 MD5 ea783bd276257a20df5b6537d3ff5d49 files/snort-drop-calculation.diff 4957
 MD5 fe6a25fdd3c6d4b527d89c51d78b8f36 files/2.0.6-libnet-1.0.patch 2753
 MD5 202dd3be05b16c852303a04284eba720 files/digest-snort-2.0.6 150

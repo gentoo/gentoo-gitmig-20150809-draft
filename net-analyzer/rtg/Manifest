@@ -4,6 +4,6 @@ MD5 74e2823d5d9ee33441c3d6546c319e51 ChangeLog 874
 MD5 e25c84fd1a2a0c0e81cacb709f6cbbbe metadata.xml 260
 MD5 95d2926c7d784e64b502842c3d3597b5 files/rtg-0.7.4-pathfix.patch 4074
 MD5 6692acdf355eb282398b0e09eee80d02 files/digest-rtg-0.7.4-r1 61
-MD5 eea9f733acdfbc2bda7f19141f003b0e files/rtgpoll.confd 359
-MD5 7fad628889e19689df29f6139690a020 files/rtgpoll.initd 1262
+MD5 a5df7a7397ca4a83811ff6c0e2d50a3f files/rtgpoll.confd 355
+MD5 004f47ae719ca8079ce11b5a14593274 files/rtgpoll.initd 1258
 MD5 6692acdf355eb282398b0e09eee80d02 files/digest-rtg-0.7.4 61

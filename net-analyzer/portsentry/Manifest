@@ -4,7 +4,7 @@ MD5 9413096c9c7f5c7c1f1d8cbb33282edf ChangeLog 2554
 MD5 820fffc34c138058aa87c6961441319f metadata.xml 241
 MD5 9691bf3afd1961580f9a18046bdd5fac files/portsentry.8 4227
 MD5 3a37d2e787a817dda71341ee0cfd08b8 files/portsentry.confd 361
-MD5 8ae5cc406da8334f0ddc4a41528e4185 files/portsentry.rc6 968
+MD5 ceab2160031affd70cfc8f05726a238f files/portsentry.rc6 962
 MD5 0b2f598dd7ce683db92192999d740b82 files/digest-portsentry-1.2 65
 MD5 1f257fa8874e73f2cf5f9eeea009755a files/portsentry.conf.5 8385
 MD5 78771791b063cd2784d6b60d5ad9f89f files/digest-portsentry-1.1-r7 65

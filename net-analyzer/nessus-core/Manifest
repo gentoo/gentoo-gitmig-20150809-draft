@@ -10,6 +10,6 @@ MD5 23192ff5f68a5dcd5ac8483ee86a03eb files/digest-nessus-core-2.0.7-r1 138
 MD5 5c6426f630e46de4a016d442909c36bd files/digest-nessus-core-2.0.8a 139
 MD5 9679a5b09be067d39a0c15b4354fa1ab files/digest-nessus-core-2.0.7 69
 MD5 0c4cce8e9656d4bf24a4a080521da952 files/digest-nessus-core-2.0.9 138
-MD5 a663697ed0347d6d2507a600c3f93a55 files/nessusd-r6 492
+MD5 9a0fe4028467fdee9187dbcc20107278 files/nessusd-r6 486
 MD5 02fce1d620b03f7d03f3ae84fdeea4d6 files/patch_1.nessus-core.2.0.7 787
 MD5 5c3b75512d095ff2ff65bbe535fe63b3 files/nessus-core-2.0.7.patch 448

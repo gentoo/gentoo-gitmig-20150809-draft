@@ -6,7 +6,7 @@ MD5 6eb7cf1ed0a2e05fc402aeecfa0d6641 nagios-core-1.2-r1.ebuild 6618
 MD5 438710d052bd5b2d7fd5c86da55bace1 nagios-core-1.1-r4.ebuild 5741
 MD5 dad3fb46e8f73ac54d9239a542bc82e0 files/nagios.conf 362
 MD5 565ce2a690d50aeb542e7afe44b8c733 files/Makefile-distclean.diff.bz2 1133
-MD5 7d2fb7655d8cc9a0dc953a5531879960 files/nagios 922
+MD5 00bd7731c70a158315e70338cee561a4 files/nagios 916
 MD5 673bda0ac6ab9230d23331e7f3846b7b files/99_nagios.conf 350
 MD5 93fc29972ca48db69fc84adba9754c62 files/nagios.cfg-sample 22287
 MD5 f4f0b07e1a52477f83cbb9158db70391 files/tac.cgi.diff.bz2 204

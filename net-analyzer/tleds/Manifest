@@ -3,7 +3,7 @@ MD5 10d52137ccb8dcab005322f58352e0a9 ChangeLog 1618
 MD5 1c666943e2fd156b434ed7ca34a8691e metadata.xml 294
 MD5 4cc7bd9b7a7f34d47fc1232fc13ec10f tleds-1.04-r1.ebuild 873
 MD5 e9bf6ffef211a35d6b024bcd355e2cc3 files/digest-tleds-1.05_beta11 133
-MD5 edb4e2ecaceed873d3173f551afdd120 files/tleds.conf.d 260
-MD5 0abeb5086407a2b909b7fa9df81f725f files/tleds.init.d 460
+MD5 0b6ad0ff74307a277e6338d2978b661e files/tleds.conf.d 259
+MD5 f46a1c71c42561200bc03d4c622a341e files/tleds.init.d 454
 MD5 1177e4e6d4091cef0df1228a62bdb21b files/tleds-1.05_beta11-gentoo.patch 920
 MD5 04fa7127edb78543ecc90237a824883a files/digest-tleds-1.04-r1 127

@@ -8,7 +8,7 @@ MD5 6329656330d06c7467a8d624b6b251ed files/ipac.conf 1817
 MD5 ac210e9fd37f1a10dc14dd5e32df8170 files/digest-ipac-ng-1.27_p1-r1 68
 MD5 ac210e9fd37f1a10dc14dd5e32df8170 files/digest-ipac-ng-1.27_p1-r2 68
 MD5 612a2be3ed3184f88ff8c9489e73de7f files/rules.conf 1802
-MD5 b4b0679c4d872685eb9bd05d18a4a82f files/ipac-ng.rc 832
+MD5 7162c7dc1c32393afef0e407b670497f files/ipac-ng.rc 826
 MD5 14f7198390eb83035027a5aa44dbbb69 files/ipac-ng.cron.1.27_p1-r2 223
-MD5 385409ab3858c71d9419db7b1584a567 files/ipac-ng.rc.1.27_p1-r2 913
+MD5 0a8be2604f4c00ae679eb98928dfe126 files/ipac-ng.rc.1.27_p1-r2 907
 MD5 3b1a7de81326927d709b5691ec799683 files/rules.conf.1.27_p1-r2 7074
