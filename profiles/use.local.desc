@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.843 2005/01/07 19:17:38 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.844 2005/01/07 21:44:13 mkennedy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -210,9 +210,8 @@ dev-lisp/gcl:custreloc - build a GCL which uses custom GCL code for linking
 dev-lisp/gcl:dlopen - build a GCL which uses dlopen for linking
 dev-lisp/gcl:gprof - build a GCL with profiling support
 dev-lisp/sbcl:ldb - include support for the SBCL low level debugger
-dev-lisp/sbcl:nosbcl-af - don't build SBCL with support for Thomas Burdick's Alien Function package
 dev-lisp/sbcl:nosource - don't include source code for SBCL in the installation
-dev-lisp/sbcl:nounicode - don't build SBCL with support for Unicode
+dev-lisp/sbcl:unicode - build SBCL with support for Unicode
 dev-lisp/sbcl:threads - build SBCL with support for native threads (x86 only)
 dev-ml/lablgl:glut - Enable glut support.
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
