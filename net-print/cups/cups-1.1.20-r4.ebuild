@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.20-r2.ebuild,v 1.8 2004/09/23 04:04:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.20-r4.ebuild,v 1.1 2004/10/21 14:02:38 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.easysw.com/pub/cups/${PV}/${P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ~ppc64"
+KEYWORDS="x86 ppc sparc ~mips alpha ~arm hppa amd64 ~ia64 ~s390 ~ppc64"
 IUSE="ssl slp pam"
 
 DEP="virtual/libc
@@ -32,6 +32,8 @@ src_unpack() {
 	epatch ${FILESDIR}/disable-strip.patch
 	epatch ${FILESDIR}/${P}-str633.patch
 	epatch ${FILESDIR}/${P}-zero-len-udp-dos.patch
+	epatch ${FILESDIR}/str920.patch
+	( cd pdftops; epatch ${FILESDIR}/${P}-xpdf-CESA-2004-007.patch.bz2 )
 	WANT_AUTOCONF=2.5 autoconf || die
 }
 
