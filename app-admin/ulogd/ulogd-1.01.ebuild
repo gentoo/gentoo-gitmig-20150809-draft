@@ -1,24 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.01.ebuild,v 1.2 2003/08/25 13:32:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.01.ebuild,v 1.3 2003/08/28 13:41:24 liquidx Exp $
 
 DESCRIPTION="iptables daemon for ULOG target for userspace iptables filter logging"
-SRC_URI="ftp://ftp.netfilter.org/pub/ulogd/${P}.tar.bz2"
+SRC_URI="http://ftp.netfilter.org/pub/ulogd/${P}.tar.bz2"
 HOMEPAGE="http://www.gnumonks.org/gnumonks/projects/project_details?p_id=1"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="mysql"
+
 DEPEND="net-firewall/iptables"
-RDEPEND=${DEPEND}
+
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_compile() {
-	local myconf
-	use mysql && myconf="--with-mysql"
-
-	econf ${myconf}
-	make all || die "make failed"
+	econf `use_with mysql` || die "configure failed"
+	emake || die "make failed"
 }
 
 src_install() {
@@ -28,7 +27,7 @@ src_install() {
 
 	make DESTDIR=${D} install || die "install failed"
 	
-	cp ${FILESDIR}/ulogd-${PV} ${D}/etc/init.d/ulogd
+	cp ${FILESDIR}/ulogd-0.98 ${D}/etc/init.d/ulogd
 
 	dodoc README AUTHORS Changes 
 	cd doc/
