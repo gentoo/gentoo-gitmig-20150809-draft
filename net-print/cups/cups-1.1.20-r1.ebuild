@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.20-r1.ebuild,v 1.7 2004/07/01 22:40:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.20-r1.ebuild,v 1.8 2004/09/02 21:23:08 kugelfang Exp $
 
 inherit eutils flag-o-matic
 
@@ -58,7 +58,7 @@ src_install() {
 	LOCALEDIR=${D}/usr/share/locale \
 	DOCDIR=${D}/usr/share/cups/docs \
 	REQUESTS=${D}/var/spool/cups \
-	SERVERBIN=${D}/usr/lib/cups \
+	SERVERBIN=${D}/usr/$(get_libdir)/cups \
 	DATADIR=${D}/usr/share/cups \
 	INCLUDEDIR=${D}/usr/include \
 	AMANDIR=${D}/usr/share/man \
@@ -69,7 +69,7 @@ src_install() {
 	SBINDIR=${D}/usr/sbin \
 	PAMDIR=${D}/etc/pam.d \
 	EXEC_PREFIX=${D}/usr \
-	LIBDIR=${D}/usr/lib \
+	LIBDIR=${D}/usr/$(get_libdir) \
 	BINDIR=${D}/usr/bin \
 	bindir=${D}/usr/bin \
 	INITDIR=${D}/etc \
