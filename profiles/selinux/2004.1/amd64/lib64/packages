@@ -1,0 +1,20 @@
+# Copyright 1999-2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/amd64/lib64/packages,v 1.1 2004/09/20 00:38:34 pebenito Exp $
+
+##############################################################################
+# SELinux required versionings
+
+# Critical xattr fixes:
+>=sys-boot/grub-0.94
+
+# New API SELinux kernels
+>=sys-kernel/gentoo-dev-sources-2.6.0
+>=sys-kernel/hardened-dev-sources-2.6.0
+##############################################################################
+
+*>=sys-apps/baselayout-1.9.4
+*>=sys-apps/portage-2.0.50-r10
+*>=sys-devel/binutils-2.15.90.0.1.1-r1
+*>=sys-devel/gcc-3.3.4
+*>=sys-libs/glibc-2.3.4.20040619-r1
