@@ -1,6 +1,13 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.50 2003/11/04 08:33:52 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.51 2003/11/12 21:49:13 usata Exp $
+
+*tetex-2.0.2-r3 (13 Nov 2003)
+
+  13 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> tetex-2.0.2-r3.ebuild:
+  inherit tetex.eclass (app-text/ptex and app-text/cstetex inherit it
+  too). Mostly identical to tetex-2.0.2-r2, but take care of symlinks
+  left behind /usr/bin after unmerge. See bug #31657.
 
 *tetex-2.0.2-r2 (04 Nov 2003)
 
