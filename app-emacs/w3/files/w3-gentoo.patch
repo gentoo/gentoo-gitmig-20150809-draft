@@ -1,0 +1,29 @@
+diff -ur w3-4.0pre.47.orig/lisp/docomp.el w3-4.0pre.47/lisp/docomp.el
+--- w3-4.0pre.47.orig/lisp/docomp.el	2001-11-28 14:04:22.000000000 -0600
++++ w3-4.0pre.47/lisp/docomp.el	2003-05-19 01:26:38.000000000 -0500
+@@ -1,22 +1,8 @@
+-;;; First things first - if they do not have the WIDGETDIR environment
+-;;; variable set, choke, scream, and die.
+-(if (or (not (getenv "WIDGETDIR"))
+- 	(string= (getenv "WIDGETDIR") "no"))
+-    (progn
+-      (message "Could not find custom libraries.")
+-      (message "Please rerun `configure' in the top level directory, and")
+-      (message "provide the `--with-custom=XXX' flag.")
+-      (kill-emacs 1)))
+-
+ (setq load-path (append (list (expand-file-name 
+-			       (or (getenv "W3SRCDIR") "./"))
++ 			       (or (getenv "W3SRCDIR") "./"))
+ 			      "."
+-			      (or (getenv "WIDGETDIR")
+-				  (expand-file-name "../widget"))
+-			      (or (getenv "GNUSDIR")
+-				  (expand-file-name "../gnus"))
+-			      )
+-			load-path))
++ 			      )
++ 			load-path))
+ 
+ (setq max-specpdl-size (* 10 max-specpdl-size)
+       max-lisp-eval-depth (* 10 max-lisp-eval-depth))

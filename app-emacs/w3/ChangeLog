@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/w3
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3/ChangeLog,v 1.2 2003/02/12 03:57:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3/ChangeLog,v 1.3 2003/05/19 15:30:25 mkennedy Exp $
+
+*w3-4.0_pre47-r1 (19 May 2003)
+
+  19 May 2003; Matthew Kennedy <mkennedy@gentoo.org> w3-4.0_pre47-r1.ebuild,
+  files/w3-gentoo.patch:
+  build fix
 
 *w3-4.0_pre47 (31 Oct 2002)
 
