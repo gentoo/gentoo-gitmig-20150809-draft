@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dns2go
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dns2go/ChangeLog,v 1.4 2004/04/10 03:34:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dns2go/ChangeLog,v 1.5 2004/04/15 23:40:25 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org> dns2go-1.1-r2.ebuild:
+  adding s390 keywords
 
   10 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org> dns2go-1.1-r2.ebuild:
   x86 binary, just x86 & amd64 are valid, added -* and removed sparc
