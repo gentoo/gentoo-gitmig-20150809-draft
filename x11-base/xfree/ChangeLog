@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.37 2002/08/11 23:23:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.38 2002/08/12 23:11:45 azarah Exp $
+
+  12 Aug 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Add XFree86-imake-tmpdir.patch, which should resolve bug #5736.
 
   11 Aug 2002; Martin Schlemmer <azarah@gentoo.org> :
   Add XFree86-4.2.0-r128-lockup.patch, which should resolve bug #4518.

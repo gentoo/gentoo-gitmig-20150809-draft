@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.12 2002/08/10 22:38:34 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.13 2002/08/12 23:11:45 azarah Exp $
 
 inherit flag-o-matic
 
@@ -109,7 +109,7 @@ src_unpack () {
 	if [ "`gcc -dumpversion`" != "2.95.3" ]
 	then
 		# should fix bug #4189.  gcc-3.x have problems with -march=pentium4
-		echo "#define OptimizedCDebugFlags ${CFLAGS/pentium4/pentium3} -fno-merge-constants" >> \
+		echo "#define OptimizedCDebugFlags ${CFLAGS/pentium4/pentium4 -mno-mmx} -fno-merge-constants" >> \
 			config/cf/host.def
 	else
 		echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
