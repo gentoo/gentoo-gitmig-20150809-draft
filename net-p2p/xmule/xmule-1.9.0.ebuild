@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.9.0.ebuild,v 1.1 2004/08/23 00:47:29 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.9.0.ebuild,v 1.2 2004/08/23 17:51:15 squinky86 Exp $
 
 inherit wxwidgets
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 
-IUSE="nls gtk2"
+IUSE="nls gtk2 debug"
 
 DEPEND=">=x11-libs/wxGTK-2.4.2-r2
 	nls? ( sys-devel/gettext )
@@ -33,10 +33,9 @@ src_compile () {
 		need-wxwidgets gtk2
 	fi
 
-	use nls \
-		|| myconf="${myconf} --disable-nls"
-
 	myconf="${myconf} --with-zlib=/tmp/zlib/"
+
+	myconf="${myconf} `use_enable debug` `use_enable nls`"
 
 	econf ${myconf} || die
 	emake || die
