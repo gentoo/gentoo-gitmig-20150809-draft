@@ -1,6 +1,14 @@
 # ChangeLog for net-www/wwwoffle
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/ChangeLog,v 1.1 2004/08/15 19:11:58 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/ChangeLog,v 1.2 2004/09/03 16:06:50 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  wwwoffle-2.7h.ebuild, wwwoffle-2.8b.ebuild:
+  Masked wwwoffle-2.8b.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  wwwoffle-2.7h.ebuild:
+  Masked wwwoffle-2.7h.ebuild stable for ppc
 
 *wwwoffle-2.8b (15 Aug 2004)
 

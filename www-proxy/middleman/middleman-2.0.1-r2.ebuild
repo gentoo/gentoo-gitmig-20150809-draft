@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/middleman/middleman-2.0.1-r2.ebuild,v 1.1 2004/08/15 18:52:50 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/middleman/middleman-2.0.1-r2.ebuild,v 1.2 2004/09/03 16:06:50 pvdabeel Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://sourceforge.net/projects/middle-man"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 IUSE="${IUSE} pam zlib"
 
 #S=${WORKDIR}/

@@ -1,6 +1,14 @@
 # ChangeLog for net-www/middleman
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/middleman/ChangeLog,v 1.1 2004/08/15 18:52:50 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/middleman/ChangeLog,v 1.2 2004/09/03 16:06:50 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  middleman-2.0.1-r1.ebuild, middleman-2.0.1-r2.ebuild:
+  Masked middleman-2.0.1-r2.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  middleman-2.0.1-r1.ebuild:
+  Masked middleman-2.0.1-r1.ebuild stable for ppc
 
 *middleman-1.9.1-r1 (15 Aug 2004)
 

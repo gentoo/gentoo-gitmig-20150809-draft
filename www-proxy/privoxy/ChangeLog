@@ -1,6 +1,10 @@
 # ChangeLog for net-www/privoxy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/ChangeLog,v 1.2 2004/08/15 18:35:46 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/ChangeLog,v 1.3 2004/09/03 16:06:50 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  privoxy-3.0.2.ebuild:
+  Masked privoxy-3.0.2.ebuild stable for ppc
 
   15 Aug 2004; Stuart Herbert <stuart@gentoo.org> privoxy-2.9.14_beta.ebuild,
   privoxy-3.0.2.ebuild, privoxy-3.0.3.ebuild:

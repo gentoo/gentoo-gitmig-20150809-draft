@@ -1,6 +1,10 @@
 # ChangeLog for net-www/adzapper
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/adzapper/ChangeLog,v 1.2 2004/08/15 23:32:05 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/adzapper/ChangeLog,v 1.3 2004/09/03 16:06:50 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  adzapper-20040408.ebuild:
+  Masked adzapper-20040408.ebuild stable for ppc
 
   16 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>; adzapper-20031105.ebuild,
   adzapper-20040104.ebuild, adzapper-20040408.ebuild:
