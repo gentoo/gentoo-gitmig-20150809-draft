@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/nut
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.3 2002/07/09 10:10:21 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.4 2002/08/04 03:07:31 woodchip Exp $
+
+*nut-0.50.1 (3 Aug 2002)
+
+  3 Aug 2002; Donny Davies <woodchip@gentoo.org> nut-0.50.1.ebuild,
+  upsd-init, upsmon-init :
+
+  This release adds proper initscripts, the USE cgi-bin option
+  for building the web monitoring programs, and proper shutdown
+  sequence merged into the baselayout halt.sh shutdown script.
+  Pending release of a new baselayout, this package is masked.
 
 *nut-0.44.1-r1 (12 Apr 2002)
 
