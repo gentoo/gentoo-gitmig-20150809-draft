@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/files/perforce-2002.2/init.d/perforce,v 1.1 2003/10/01 08:59:03 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce/files/perforce-2002.2/init.d/perforce,v 1.2 2003/10/02 08:54:49 stuart Exp $
 #
 # NB: Configuration is in /etc/conf.d/perforce
 
@@ -18,9 +18,9 @@ start() {
     # depot root
     P4D="`echo ${P4D} | sed -e 's#-d##' -e 's#-r [^[:space:]]*##'`"
     start-stop-daemon --start --quiet --chuid perforce:perforce \
-                      --pidfile ${PIDFILE} --make-pidfile --background \
+                      --pidfile ${PIDFILE} --make-pidfile \
                       --exec /usr/sbin/p4d \
-                      -- ${P4D} -r /var/lib/perforce
+                      -- ${P4D} -d -r /var/lib/perforce
     eend $?
 }
 
