@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-1.5.27-r4.ebuild,v 1.1 2002/05/21 21:12:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-1.5.27-r4.ebuild,v 1.2 2002/05/23 16:26:21 azarah Exp $
 
 DESCRIPTION="The Cyrus SASL (Simple Authentication and Security Layer)"
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/"
@@ -25,6 +25,12 @@ src_unpack() {
 	patch -p1 < ${FILESDIR}/${PN}-saslauthd.patch || die
 	patch -p1 < ${FILESDIR}/${PN}-1.5.24-rpath.patch || die
 	patch -p0 < ${FILESDIR}/${PN}-1.5.27-scram.patch || die
+
+	# this script distributed with the package is too
+	# old, so remove it, as "automake --add-missing"
+	# will install the new one if its not found.
+	rm -f ${S}/config/missing
+	
 	libtoolize --copy --force
 	export WANT_AUTOMAKE_1_5=1
 	aclocal -I cmulocal || die
