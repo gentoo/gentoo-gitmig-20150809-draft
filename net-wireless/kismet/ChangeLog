@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.51 2004/12/18 13:30:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.52 2004/12/19 09:17:58 brix Exp $
+
+  19 Dec 2004; Henrik Brix Andersen <brix@gentoo.org> -kismet-2.8.1-r1.ebuild:
+  Removed last vulnerable version wrt bug #74443.
 
   18 Dec 2004; Jason Wever <weeve@gentoo.org> kismet-2.8.1-r1.ebuild:
   Masked on sparc wrt security bug #74443 because it's unknown if this
