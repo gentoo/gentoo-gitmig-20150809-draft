@@ -39,7 +39,7 @@
 +			struct hostent *hp = NULL;
 +			
 +			if (gethostname(host, HOSTNAME_LENGTH) || !(hp = gethostbyname(host))) {
-+				domain = "unknown_domain";
++				domain = " unknown_domain";
 +			} else {
 +				/* get the substring after the first . */
 +				domain = strchr(hp->h_name, '.');
