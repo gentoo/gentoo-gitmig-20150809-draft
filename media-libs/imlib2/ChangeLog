@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.37 2005/02/21 05:49:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.38 2005/03/01 00:02:04 vapier Exp $
+
+*imlib2-1.2.0-r2 (28 Feb 2005)
+
+  28 Feb 2005; Mike Frysinger <vapier@gentoo.org> +imlib2-1.2.0-r2.ebuild:
+  Make sure the imlib2.pc isnt installed with bad mojo #83107 by Heath H Holcomb.
 
 *imlib2-1.2.0-r1 (21 Feb 2005)
 
