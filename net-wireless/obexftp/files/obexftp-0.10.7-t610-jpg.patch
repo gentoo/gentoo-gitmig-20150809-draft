@@ -1,0 +1,11 @@
+--- obexftp/object.c~	2004-11-18 23:37:36.000000000 +0100
++++ obexftp/object.c	2005-01-09 18:01:01.000000000 +0100
+@@ -200,7 +200,7 @@
+ 
+ 	if (create == 0) {
+ 		// set the 'Don't Create' bit
+-		setpath_nohdr_data[1] ^= 2;
++		setpath_nohdr_data[0] |= 2;
+ 	}
+ 	if (name) {
+ 		ucname_len = strlen(name)*2 + 2;

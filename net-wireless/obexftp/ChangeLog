@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/obexftp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/obexftp/ChangeLog,v 1.7 2005/02/07 06:45:35 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/obexftp/ChangeLog,v 1.8 2005/02/11 14:57:16 ticho Exp $
+
+*obexftp-0.10.7-r1 (11 Feb 2005)
+
+  11 Feb 2005; Andrej Kacian <ticho@gentoo.org>
+  +files/obexftp-0.10.7-t610-jpg.patch, +obexftp-0.10.7-r1.ebuild:
+  Apply patch for t610 file retrieval via BT. Bug #81514, reported by Doug
+  Hilton <doug@shoutstudios.com>, patch taken from debian sources.
 
   07 Feb 2005; Andrej Kacian <ticho@gentoo.org> obexftp-0.10.7.ebuild:
   Stable on x86.

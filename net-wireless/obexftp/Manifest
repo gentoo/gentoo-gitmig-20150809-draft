@@ -1,20 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 dc8f9995f60737d65c346eb90f0ced48 ChangeLog 3384
 MD5 aec9a52d20d7f204957e238cc3a270bc obexftp-0.10.3.ebuild 857
 MD5 2f63a0bd8946e790aa5df59f85296be1 metadata.xml 254
 MD5 02eebe5524ee48ff397261db9daa7e34 obexftp-0.10.6.ebuild 828
 MD5 d714a8c7e6bcd0590a303851bb1f3e45 obexftp-0.10.4.ebuild 828
+MD5 466d99e48aa68f5ca7cfb759864518ae obexftp-0.10.7-r1.ebuild 858
 MD5 d35a71597b149c026464261329e81b22 obexftp-0.10.7.ebuild 857
+MD5 c133b8829ba299b03a0e6ab757ab5f22 files/digest-obexftp-0.10.7-r1 66
 MD5 c133b8829ba299b03a0e6ab757ab5f22 files/digest-obexftp-0.10.7 66
 MD5 21065b2b485bd0bd772f31fb61d70671 files/digest-obexftp-0.10.4 66
 MD5 4f052623c34ea5070306f62688ea7e2b files/digest-obexftp-0.10.6 66
+MD5 520b09e250d549cadd0b0a39118225ec files/obexftp-0.10.7-t610-jpg.patch 307
+MD5 2229e3d35a59a2ab6e7ca564923c9f08 files/obexftp-0.10.7_versionstring.patch 1276
+MD5 4a9a761b4aacd22458e6c491632aedec files/obexftp-0.10.7-txt2html.patch 543
 MD5 1a91e6d9dbf01c32de61c94e801f7548 files/digest-obexftp-0.10.3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCBw6YQlM6RnzZP+IRAk9DAJ42z5+v6oKXcSuW09cxH9gX+MBMigCfdCIg
-dKAQSpWTwUUTGCNxaXxwoco=
-=ARjw
------END PGP SIGNATURE-----
