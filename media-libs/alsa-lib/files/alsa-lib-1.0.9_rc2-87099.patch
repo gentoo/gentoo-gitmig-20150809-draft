@@ -1,0 +1,12 @@
+diff -urN alsa-lib-1.0.9rc2/src/pcm/pcm_direct.c alsa-lib-1.0.9rc1/src/pcm/pcm_direct.c
+--- alsa-lib-1.0.9rc2/src/pcm/pcm_direct.c	2005-03-15 12:39:51.000000000 +0100
++++ alsa-lib-1.0.9rc1/src/pcm/pcm_direct.c	2005-01-19 14:43:25.000000000 +0100
+@@ -848,7 +840,7 @@
+ 				snd_pcm_info_get_card(info),
+ 				snd_pcm_info_get_device(info),
+ 				snd_pcm_info_get_subdevice(info) * 2 + capture);
+-	ret = snd_timer_open(&dmix->timer, name, SND_TIMER_OPEN_NONBLOCK | SND_TIMER_OPEN_TREAD);
++	ret = snd_timer_open(&dmix->timer, name, SND_TIMER_OPEN_NONBLOCK);
+ 	if (ret < 0) {
+ 		SNDERR("unable to open timer '%s'", name);
+ 		return ret;

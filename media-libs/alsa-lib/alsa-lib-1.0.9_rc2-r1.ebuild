@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.9_rc2.ebuild,v 1.2 2005/04/04 17:49:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.9_rc2-r1.ebuild,v 1.1 2005/04/06 10:29:56 eradicator Exp $
 
 IUSE="jack doc"
 
@@ -29,6 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch ${FILESDIR}/${P}-87099.patch
 }
 
 src_compile() {
