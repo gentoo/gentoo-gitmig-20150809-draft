@@ -1,6 +1,9 @@
 # ChangeLog for app-office/khacc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/khacc/ChangeLog,v 1.7 2004/05/02 18:03:10 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/khacc/ChangeLog,v 1.8 2004/06/19 07:33:30 weeve Exp $
+
+  19 Jun 2004; Jason Wever <weeve@gentoo.org> khacc-1.7.8.ebuild:
+  Stable on sparc.
 
   02 May 2004; David Holm <dholm@gentoo.org> khacc-1.7.9.ebuild:
   Added to ~ppc.
