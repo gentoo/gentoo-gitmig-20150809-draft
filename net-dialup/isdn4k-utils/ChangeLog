@@ -1,6 +1,6 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.14 2004/02/18 19:03:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.15 2004/03/19 09:07:23 aliz Exp $
 
   18 Feb 2004; Martin Schlemmer <azarah@gentoo.org>
   isdn4k-utils-3.2_p1-r4.ebuild:
@@ -17,6 +17,8 @@
   14 Dec 2003; Heinrich Wendel <lanius@gentoo.org>
   isdn4k-utils-3.2_p1-r2.ebuild, isdn4k-utils-3.2_p1-r3.ebuild:
   added tcl dep
+
+*isdn4k-utils-3.2_p1-r3 (23 Nov 2003)
 
   23 Nov 2003; Heinrich Wendel <lanius@gentoo.org> isdn4k-utils-3.2_p1-r3.ebuild:
   replaced vbox with vbox3

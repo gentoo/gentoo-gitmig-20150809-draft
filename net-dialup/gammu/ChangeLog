@@ -1,6 +1,8 @@
 # ChangeLog for net-dialup/gammu
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/ChangeLog,v 1.1 2004/03/13 08:03:15 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gammu/ChangeLog,v 1.2 2004/03/19 09:07:23 aliz Exp $
+
+*gammu-0.94.0 (13 Mar 2004)
 
   13 Mar 2004; Lim Swee Tat <st_lim@gentoo.org> :
   First release
