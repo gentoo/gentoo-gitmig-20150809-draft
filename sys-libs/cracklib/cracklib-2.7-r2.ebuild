@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r2.ebuild,v 1.1 2001/02/07 16:10:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r2.ebuild,v 1.2 2001/02/27 14:11:21 achim Exp $
 
 A=cracklib2_${PV}.orig.tar.gz
 A0=${P}-redhat.patch
@@ -16,13 +16,14 @@ src_unpack() {
   unpack ${A}
   cd ${S}
   patch -p1 <${FILESDIR}/${A0}
+  patch -p1 <${FILESDIR}/${P}-gentoo.diff
 
 }
 
 src_compile() {
 
   # Parallel make does not work for 2.7
-  try RPM_OPT_FLAGS=\"${CFLAGS}\" make DICTPATH=\"/usr/share/cracklib/pw_dict\" all
+  try make all
 
 }
 
@@ -33,7 +34,7 @@ src_install() {
   dodir /usr/include
   dodir /usr/share/cracklib
 
-  ROOT=${D} try make DICTPATH=\"/usr/share/cracklib/pw_dict\" install
+  try make DESTDIR=${D} install
 
   mv ${D}/usr/lib ${D}
   preplib /
