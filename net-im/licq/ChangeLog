@@ -1,6 +1,14 @@
 # ChangeLog for net-im/licq
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.21 2003/02/12 08:02:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.22 2003/04/22 22:36:11 drobbins Exp $
+
+*licq-1.2.6 (22 Apr 2003)
+
+  22 Apr 2003; Daniel Robbins <drobbins@gentoo.org> licq-1.2.6.ebuild: A
+  tricky hack to fix the illegal "need kde && inherit kde-base". newdepend()
+  tweaks the DEPEND line, and we can't tweak dependencies in a conditional
+  as this messes up our dependency caching. This closes bugs #12436, #17925,
+  #18205.
 
 *licq-1.2.4-r2 (07 Feb 2003)
 
