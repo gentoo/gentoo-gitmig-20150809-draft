@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-0.6.4.ebuild,v 1.11 2004/06/25 02:33:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-0.6.4.ebuild,v 1.12 2004/07/14 23:35:02 agriffis Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://distro.ibiblio.org/pub/linux/distributions/sorcerer/sources/${P}
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc"
+IUSE=""
 
 DEPEND="=dev-util/glade-0.6*
 	=x11-libs/gtk+-1.2*
@@ -29,7 +30,7 @@ src_unpack() {
 		[ "`gcc --version|grep gcc|cut -f1 -d.|cut -f3 -d\ `" == "3" ]
 	then
 		cd ${WORKDIR}
-		# Fix supplied by "Nicholas Wourms" <nwourms@netscape.net> 
+		# Fix supplied by "Nicholas Wourms" <nwourms@netscape.net>
 		epatch ${FILESDIR}/glademm-0.6.4b-gcc3.patch
 	fi
 
