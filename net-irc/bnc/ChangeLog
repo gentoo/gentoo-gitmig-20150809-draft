@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bnc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.7 2004/06/21 21:56:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.8 2004/06/21 22:52:56 kloeri Exp $
+
+  22 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> +bnc-2.8.6-r1.ebuild files/bncsetup.patch:
+  Add patch to bncsetup, thanks to redeeman and GurliGebis.
 
   21 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
   +files/bnc-2.8.6-gotofail-labelfix.patch, bnc-2.8.6.ebuild:
