@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0_beta1-r1.ebuild,v 1.1 2003/11/10 18:54:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0_beta1-r1.ebuild,v 1.2 2003/11/12 17:18:04 caleb Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
@@ -83,10 +83,11 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 	cd ${D}/${KDEDIR}/share/config/kdm || die
 	dodir ${KDEDIR}/share/config/kdm/sessions
 	sed -e "s:_PREFIX_:${PREFIX}:g" \
-	    -e "s:_VERSION_:${VERSION}:g" \
 	    -e "s:_RANDOM_:${RANDOM}${RANDOM}:g" \
 	${FILESDIR}/${PVR}/kdmrc > kdmrc
 	sed -e "s:_PREFIX_:${PREFIX}:g" ${FILESDIR}/${PVR}/Xsetup > Xsetup
+
+	cp ${FILESDIR}/${PVR}/backgroundrc .
 
 	#backup splashscreen images, so they can be put back when unmerging
 	#mosfet or so.
