@@ -1,28 +1,15 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.4 2004/09/03 15:58:51 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.5 2004/09/03 16:27:04 axxo Exp $
 
-  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
-  tomcat-3.3.2-r2.ebuild, tomcat-4.1.30-r4.ebuild, tomcat-4.1.30-r5.ebuild,
-  tomcat-5.0.27-r3.ebuild, tomcat-5.0.27-r4.ebuild:
-  Masked tomcat-5.0.27-r4.ebuild stable for ppc
+  03 Sep 2004; Thomas Matthijs <axxo@gentoo.org> tomcat-3.3.2-r2.ebuild,
+  -tomcat-4.1.30-r4.ebuild, tomcat-4.1.30-r5.ebuild, -tomcat-5.0.27-r3.ebuild:
+  remove broken + keyword x86
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   tomcat-3.3.2-r2.ebuild, tomcat-4.1.30-r4.ebuild, tomcat-4.1.30-r5.ebuild,
   tomcat-5.0.27-r3.ebuild:
-  Masked tomcat-5.0.27-r3.ebuild stable for ppc
-
-  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
-  tomcat-3.3.2-r2.ebuild, tomcat-4.1.30-r4.ebuild, tomcat-4.1.30-r5.ebuild:
-  Masked tomcat-4.1.30-r5.ebuild stable for ppc
-
-  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
-  tomcat-3.3.2-r2.ebuild, tomcat-4.1.30-r4.ebuild:
-  Masked tomcat-4.1.30-r4.ebuild stable for ppc
-
-  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
-  tomcat-3.3.2-r2.ebuild:
-  Masked tomcat-3.3.2-r2.ebuild stable for ppc
+  Masked stable for ppc
 
   01 Sep 2004; Thomas Matthijs <axxo@gentoo.org> tomcat-4.1.30-r5.ebuild,
   tomcat-5.0.27-r4.ebuild:
