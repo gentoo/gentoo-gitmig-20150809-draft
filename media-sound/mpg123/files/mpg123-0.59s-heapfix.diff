@@ -1,0 +1,11 @@
+--- httpget.c   2000-10-30 18:45:12.000000000 +0100
++++ httpget.c.patch     2004-02-09 10:05:56.000000000 +0100
+@@ -55,7 +55,7 @@ void readstring (char *string, int maxle
+ #endif
+	int pos = 0;
+
+-	while(1) {
++	while(maxlen>pos) {
+		if( read(fileno(f),string+pos,1) == 1) {
+			pos++;                        
+			if(string[pos-1] == '\n') {

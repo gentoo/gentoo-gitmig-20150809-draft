@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.29 2004/02/15 20:59:24 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.30 2004/02/15 21:10:47 solar Exp $
+
+  15 Feb 2004; <solar@gentoo.org> mpg123-0.59r-r2.ebuild,
+  mpg123-0.59r-r3.ebuild, files/mpg123-0.59s-heapfix.diff:
+  fix heap overflow... bug #40631
 
   15 Feb 2004; Luca Barbato <lu_zero@gentoo.org> mpg123-0.59s-r1.ebuild:
   Marked stable on ppc to fix bug #40631
