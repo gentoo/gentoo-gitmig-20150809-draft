@@ -1,33 +1,35 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.3.ebuild,v 1.2 2002/05/27 17:27:39 drobbins Exp
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.8.ebuild,v 1.1 2003/02/19 05:54:41 azarah Exp $
 
 IUSE="nls"
-S=${WORKDIR}/${P}
-DESCRIPTION="A small web-browser for gnome that uses mozillas render engine"
+
+inherit eutils libtool
+
+S="${WORKDIR}/${P}"
+DESCRIPTION="A GNOME Web browser based on gecko (mozilla's rendering engine)"
 SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz
 	 mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://galeon.sourceforge.net"
 
-LICENSE="gpl-2"
-KEYWORDS="x86"
+LICENSE="GPL-2"
+KEYWORDS="~x86 ~ppc ~alpha"
 SLOT="0"
 
-# dont merge mozilla-1.0, as it wont work with galeon, rather start
-# with mozilla-1.0-r1
-DEPEND="~net-www/mozilla-1.0
-	>net-www/mozilla-1.0
+RDEPEND="=net-www/mozilla-1.2*
 	>=gnome-base/gnome-libs-1.4.1.4
 	<=gnome-base/libglade-0.99.0
 	=gnome-base/gnome-vfs-1.0*
 	=gnome-base/gconf-1.0*
-	>=gnome-base/oaf-0.6.7
-	>=dev-libs/libxml-1.8.16
-	>=media-libs/gdk-pixbuf-0.16.0-r1
+	>=gnome-base/oaf-0.6.10
+	>=dev-libs/libxml-1.8.17
+	>=media-libs/gdk-pixbuf-0.18.0
 	nls? ( sys-devel/gettext
-	>=dev-util/intltool-0.11 )"
-
+	>=dev-util/intltool-0.17 )"
 	# bonobo? ( >=gnome-base/bonobo-1.0.19-r1 )
+
+DEPEND="${RDEPEND}
+	app-text/scrollkeeper"
 
 pkg_setup() {
 
@@ -35,7 +37,7 @@ pkg_setup() {
 	then
 		eerror
 		eerror "It seems that your Mozilla was not compiled against gtk+-1.2,"
-		eerror "but rather gtk+-2.0. As Galeon does not support this setup yet,"
+		eerror "but rather gtk+-2.0.  As Galeon does not support this setup yet,"
 		eerror "you will have to remerge Mozilla with gtk+-1.2 support.  This"
 		eerror "can be done by taking \"gtk2\" out of your USE flags:"
 		eerror
@@ -48,27 +50,35 @@ pkg_setup() {
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
-	# These patches break on this version of galeon.
-	# Are they needed for gcc3/3.1 support?
-	#patch -p1 < ${FILESDIR}/galeon-1.2.0-gcc3.patch || die
-	#patch -p1 < ${FILESDIR}/galeon-1.2.1-gcc3.1.patch || die
+
+	# Add UTF8 support to the google smart bookmarks.  Note that
+	# it will probibly only work for a newly created bookmark ...
+	# <azarah@gentoo.org> (26 Dec 2002)
+	cd ${S}; epatch ${FILESDIR}/${PN}-1.2.7-google-UTF8.patch
 }
 
 src_compile() {
+
+	elibtoolize
 
 	local myconf=""
 
 	use nls || myconf="${myconf} --disable-nls"
 	# use bonobo && myconf="${myconf} --enable-gnome-file-selector"
 
-	econf \
+	./configure --host=${CHOST} \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--sysconfdir=/etc \
+		--localstatedir=/var/lib \
 		--with-mozilla-libs=${MOZILLA_FIVE_HOME} \
 		--with-mozilla-includes=${MOZILLA_FIVE_HOME}/include \
 		--without-debug	--disable-werror \
 		--disable-applet \
+		--disable-werror \
 		--disable-install-schemas \
 		--enable-nautilus-view=no \
+		--with-mozilla-snapshot=1.2 \
 		${myconf} || die
 
 	emake || make || die
@@ -81,7 +91,11 @@ src_install() {
 	# fine without it (at least it seems like it... *sigh*)
 	#gconftool --shutdown
 
-	einstall || die
+	make prefix=${D}/usr \
+	     mandir=${D}/usr/share/man \
+	     sysconfdir=${D}/etc \
+	     localstatedir=${D}/var/lib \
+	     install || die
 
 	dodoc AUTHORS ChangeLog COPYING* FAQ NEWS README TODO THANKS
 }
@@ -94,8 +108,8 @@ pkg_postinst() {
 	
 	if [ -z "`use gnome`" ]
 	then
-		einfo "Please remerge libglade with gnome support, or else galeon"
-		einfo "will not be able to start up."
+		einfo "Please make sure libglade was built with gnome support, or"
+		einfo "else galeon will not be able to start up."
 		einfo
 		einfo 'To do this, type: '
 		einfo 'USE="gnome" emerge libglade'
