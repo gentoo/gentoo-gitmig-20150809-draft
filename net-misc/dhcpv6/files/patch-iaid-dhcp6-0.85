@@ -1,0 +1,56 @@
+diff -urN dhcp6-0.85/lease_token.l dhcp6/lease_token.l
+--- dhcp6-0.85/lease_token.l	2003-07-01 19:21:25.000000000 -0700
++++ dhcp6/lease_token.l	2003-07-16 12:09:53.000000000 -0700
+@@ -1,4 +1,4 @@
+-/*	$Id: lease_token.l,v 1.12 2003/07/02 02:21:25 shirleyma Exp $	*/
++/*	$Id: lease_token.l,v 1.13 2003/07/16 19:09:53 shirleyma Exp $	*/
+ 
+ /*
+  * Copyright (C) International Business Machines  Corp., 2003
+@@ -203,7 +203,7 @@
+ <S_DUID>. {ABORT;}
+ <S_SDUID>{duid_id} {configure_duid(yytext, &client6_info.serverid);}
+ <S_SDUID>. {ABORT;}
+-<S_IAID>{number} {client6_info.iaidinfo.iaid = atoll(yytext);
++<S_IAID>{number} {client6_info.iaidinfo.iaid = strtoll(yytext, NULL, 10);
+ 		lease_flags |= LEASE_IAID_FLAG;}
+ <S_IAID>"type:" {BEGIN S_IATYPE;}
+ <S_IAID>. {ABORT;}
+diff -urN dhcp6-0.85/server6_parse.y dhcp6/server6_parse.y
+--- dhcp6-0.85/server6_parse.y	2003-05-23 12:00:37.000000000 -0700
++++ dhcp6/server6_parse.y	2003-07-16 12:09:53.000000000 -0700
+@@ -1,4 +1,4 @@
+-/*	$Id: server6_parse.y,v 1.6 2003/05/23 19:00:37 shirleyma Exp $	*/
++/*	$Id: server6_parse.y,v 1.7 2003/07/16 19:09:53 shirleyma Exp $	*/
+ 
+ /*
+  * Copyright (C) International Business Machines  Corp., 2003
+@@ -112,7 +112,7 @@
+ %type	<dhcp6addr>	hostaddr6 hostprefix6 addr6para v6address
+ 
+ %union {
+-	int	num;
++	unsigned int	num;
+ 	int 	snum;
+ 	char	*str;
+ 	int 	dec;
+diff -urN dhcp6-0.85/server6_token.l dhcp6/server6_token.l
+--- dhcp6-0.85/server6_token.l	2003-04-18 13:33:17.000000000 -0700
++++ dhcp6/server6_token.l	2003-07-16 12:09:53.000000000 -0700
+@@ -1,4 +1,4 @@
+-/*	$Id: server6_token.l,v 1.4 2003/04/18 20:33:17 shirleyma Exp $	*/
++/*	$Id: server6_token.l,v 1.5 2003/07/16 19:09:53 shirleyma Exp $	*/
+ 
+ /*
+  * Copyright (C) International Business Machines  Corp., 2003
+@@ -139,8 +139,8 @@
+ 			return IPV6ADDR;
+ 		}
+ 
+-{number}	{ sfyylval.num = atoi(sfyytext); return NUMBER; }
+-{snum}	{ sfyylval.snum = atoi(sfyytext); return SIGNEDNUMBER; }
++{number}	{ sfyylval.num = strtoll(sfyytext, NULL, 10); return NUMBER; }
++{snum}	{ sfyylval.snum = strtoll(sfyytext, NULL, 10); return SIGNEDNUMBER; }
+ {decimal} { sfyylval.dec = atof(sfyytext); return DECIMAL; }
+ {string}	{
+ 			static char name[MAXDNAME];
