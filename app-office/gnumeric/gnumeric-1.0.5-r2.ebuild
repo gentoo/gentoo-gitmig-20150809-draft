@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.5-r2.ebuild,v 1.1 2002/04/09 20:59:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.5-r2.ebuild,v 1.2 2002/04/09 21:22:13 azarah Exp $
 
 #provide Xmake and Xemake
 . /usr/portage/eclass/inherit.eclass
@@ -60,38 +60,38 @@ src_compile() {
 	if [ -z "`use nls`" ] ; then
 		myconf="--disable-nls"
 	fi
-  	if [ "`use gb`" ]; then
+  	if [ -n "`use gb`" ]; then
     		myconf="${myconf} --with-gb"
   	else
     		myconf="${myconf} --without-gb"
   	fi
 	#broken as we cannot use guile-1.5 (break gnucash)
-	if [ "`use guile`" ]; then
+	if [ -n "`use guile`" ]; then
 		myconf="${myconf} --without-guile"
 	else
 		myconf="${myconf} --without-guile"
 	fi
-  	if [ "`use perl`" ]; then
+  	if [ -n "`use perl`" ]; then
     		myconf="${myconf} --with-perl"
   	else
     		myconf="${myconf} --without-perl"
   	fi
-  	if [ "`use python`" ]; then
+  	if [ -n "`use python`" ]; then
     		myconf="${myconf} --with-python"
   	else
     		myconf="${myconf} --without-python"
   	fi
-  	if [ "`use libgda`" ]; then
+  	if [ -n "`use libgda`" ]; then
     		myconf="${myconf} --with-gda --with-bonobo"
   	else
     		myconf="${myconf} --without-gda"
   	fi
-	if [ "`use evo`" ]; then
+	if [ -n "`use evo`" ]; then
 		myconf="${myconf} --with-evolution"
 	fi
-	if [ "`use bonobo`" ]; then
+	if [ -n "`use bonobo`" ]; then
 		myconf="${myconf} --with-bonobo"
-	else
+	elif [ -z "`use libgda`" ]; then
 		myconf="${myconf} --without-bonobo"
 	fi
 
