@@ -1,0 +1,21 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/files/bossogg.initd,v 1.1 2004/03/05 02:49:12 eradicator Exp $
+
+depend() {
+   after alsasound
+}
+
+start() {
+   ebegin "Starting Boss Ogg"
+   HOME="/var/bossogg" start-stop-daemon --chuid bossogg --quiet --start --exec /usr/bin/bossogg -- --pidfile /var/bossogg/bossogg.pid -d
+   eend $?
+}
+
+stop() {
+   ebegin "Stopping Boss Ogg"
+   start-stop-daemon --quiet --stop --pidfile /var/bossogg/bossogg.pid
+   rm -f /var/bossogg/bossogg.pid
+   eend $?
+} 
