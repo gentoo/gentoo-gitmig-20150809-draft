@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.11.ebuild,v 1.5 2004/07/02 04:24:13 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.11.ebuild,v 1.6 2004/08/20 01:27:00 pvdabeel Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 HOMEPAGE="http://www.riverbankcomputing.co.uk/pyqt/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha amd64"
+KEYWORDS="~x86 ppc ~sparc ~alpha amd64"
 
 DEPEND="virtual/libc
 	sys-devel/libtool
