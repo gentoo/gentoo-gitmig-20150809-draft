@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/mysqlcc-0.8.10-r1.ebuild,v 1.1 2003/03/05 03:41:44 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlcc/mysqlcc-0.8.10-r1.ebuild,v 1.2 2003/03/07 11:29:34 aliz Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}-src
 DESCRIPTION="a MySQL GUI Client"
@@ -9,15 +11,13 @@ SRC_URI="ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MyCC/$
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="X qt"
 
 DEPEND="virtual/glibc
 	>=x11-libs/qt-3.0.5
 	>=dev-db/mysql-4.0.0"
 RDEPEND=""
-
-inherit eutils
 
 src_unpack() {
 	unpack ${A}
