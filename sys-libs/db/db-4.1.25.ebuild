@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25.ebuild,v 1.9 2003/07/03 08:29:19 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25.ebuild,v 1.10 2003/08/01 14:03:55 pauldv Exp $
 
 IUSE="tcltk java"
 
@@ -52,15 +52,15 @@ src_install () {
 	einstall || die
 	for fname in ${D}/usr/bin/db_*
 	do
-		mv ${fname} ${fname//\/db_/\/db41_}
+		mv ${fname} ${fname//\/db_/\/db${SLOT}_}
 	done
 
-	dodir /usr/include/db4
-	mv ${D}/usr/include/*.h ${D}/usr/include/db4/
+	dodir /usr/include/db${SLOT}
+	mv ${D}/usr/include/*.h ${D}/usr/include/db${SLOT}/
 	
 	dodir /usr/share/doc/${PF}/html
 	mv ${D}/usr/docs/* ${D}/usr/share/doc/${PF}/html/
-	ln -s /usr/include/db4/db.h ${D}/usr/include/db.h
+	ln -s /usr/include/db${SLOT}/db.h ${D}/usr/include/db.h
 }
 
 fix_so () {
