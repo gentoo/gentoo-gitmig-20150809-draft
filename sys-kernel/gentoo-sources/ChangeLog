@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.61 2004/03/16 23:03:05 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.62 2004/03/21 03:12:28 livewire Exp $
+
+*gentoo-sources-2.4.26_pre5 (20 Mar 2004)
+
+  20 Mar 2004; Bob Johnson <livewire@gentoo.org>
+  gentoo-sources-2.4.26_pre5.ebuild, gentoo-sources-2.4.26_pre3.ebuild,
+  gentoo-sources-2.4.25.ebuild:
+  Bumped ~x86 to pre5
+  changed mis-named ebuilds -rc3 > -pre3
+  marked 2.4.25 stable
 
 *gentoo-sources-2.4.25 (16 Mar 2004)
 
