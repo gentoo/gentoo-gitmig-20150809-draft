@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.4 2002/07/30 13:32:20 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.5 2002/10/07 13:41:23 raker Exp $
 
 *vpopmail-5.2.1 (24 Jul 2002)
+
+  07 Oct 2002; Nick Hadaway <raker@gentoo.org> vpopmail-5.2.1-r2.ebuild :
+  Added vpopmail_set_homedir to pkg_postrm so comments display correct
+  variable values.
 
   30 Jul 2002; Nick Hadaway <raker@gentoo.org>
   files/vpopmail.diff, vpopmail-5.2.1-r2.ebuild :

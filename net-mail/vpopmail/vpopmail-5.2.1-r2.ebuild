@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.8 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.9 2002/10/07 13:41:23 raker Exp $
 
 IUSE="mysql"
 
@@ -175,8 +175,12 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
+
+	vpopmail_set_homedir
+
 	sed "/^40.*\/usr\/bin\/clearopensmtp.*null$/d" /var/spool/cron/crontabs/root > /var/spool/cron/crontabs/root.new
 	mv --force /var/spool/cron/crontabs/root.new /var/spool/cron/crontabs/root
 	einfo "The vpopmail DATA will NOT be removed automatically."
 	einfo "You can delete them manually by removing the ${VPOP_HOME} directory."
+
 }
