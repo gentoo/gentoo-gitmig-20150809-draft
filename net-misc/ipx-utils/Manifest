@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8fbb605a58dfad19a38d665625e660a2 ChangeLog 1063
-MD5 7e747ba041c2472830a02b75d798b4fc ipx-utils-1.1-r1.ebuild 924
+MD5 ecf67256a60bc2f873b72d7081a02769 ChangeLog 1187
+MD5 eb61c891bee68bbaa1bb90ed5856d627 ipx-utils-1.1-r2.ebuild 924
 MD5 621ddf456883c9bb8ff0f2a516c47c0d files/ipx-utils-1.1-makefile.patch 822
-MD5 92018f349d5f554db2cbe96cb53bee87 files/ipx-utils-1.1-proc.patch 430
+MD5 1f41f7a629f0b3a35e27d4c4173e0641 files/ipx-utils-1.1-proc.patch 426
 MD5 09ac2581b478d6ca4fb33002ecd34a2a files/ipx.confd 663
 MD5 12d5c69423f199bf025dfc6be9233d7a files/ipx.init 950
-MD5 78845a00cf7ab6edd46bd2e705fd55ea files/digest-ipx-utils-1.1-r1 57
+MD5 78845a00cf7ab6edd46bd2e705fd55ea files/digest-ipx-utils-1.1-r2 57
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBcVgkHTu7gpaalycRAm7sAKCF/XOPGHgJm892XgrfytkODPnN1QCbBabe
-WlmUA2dAt2sp/o0rmSkpDLo=
-=DMD+
+iD8DBQFBgZFEHTu7gpaalycRAhdbAKDZ6GLuWOul3KuiKFLTNDRpRjP3iACfaiSd
+sAp8RJa4Vewscu4+FQwUF0c=
+=JYG9
 -----END PGP SIGNATURE-----

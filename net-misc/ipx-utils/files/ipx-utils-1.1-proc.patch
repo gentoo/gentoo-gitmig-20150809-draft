@@ -5,7 +5,7 @@
  	}
  
 -	fp = fopen("/proc/net/ipx_interface", "r");
-+	fp = fopen("/proc/net/ipx/ipx_interface", "r");
++	fp = fopen("/proc/net/ipx/interface", "r");
 +	if (fp == NULL)
 +		fp = fopen("/proc/net/ipx_interface", "r");
  	if (fp == NULL) {
