@@ -1,0 +1,12 @@
+--- scripts/ptal-init.in.org	2003-12-22 16:36:49.981003792 +0100
++++ scripts/ptal-init.in	2003-12-22 16:38:02.786653659 +0100
+@@ -42,7 +42,8 @@
+ 	);
+ my @usbWildcards=(
+ 	"/dev/usb/lp[0-9]*",
+-	"/dev/usblp[0-9]*"
++	"/dev/usblp[0-9]*",
++	"/dev/lp[0-9]*"
+ 	);
+ # These wildcards are only used as a last resort for the ptal-printd
+ # "-like" template.
