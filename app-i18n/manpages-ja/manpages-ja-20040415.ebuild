@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20031115.ebuild,v 1.4 2004/04/03 19:28:07 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040415.ebuild,v 1.1 2004/04/18 18:47:40 usata Exp $
 
 IUSE=""
 
@@ -10,10 +10,10 @@ HOMEPAGE="http://www.linux.or.jp/JM/
 	http://www.gentoo.gr.jp/jpmain/translation.xml"
 DESCRIPTION="A collection of manual pages translated into Japanese"
 SRC_URI="http://www.linux.or.jp/JM/${MY_P}.tar.gz
-	http://dev.gentoo.org/~usata/distfiles/portage-${PN}-20031115.tar.gz"
+	http://dev.gentoo.org/~usata/distfiles/portage-${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha mips hppa amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
@@ -37,16 +37,14 @@ src_install () {
 		done
 	done
 
-	insinto /usr/share/man/ja/man1
-	for y in ${WORKDIR}/portage/man/ja/*.1; do
-		einfo install $y:  /usr/share/man/ja/man1
+	cd ${WORKDIR}/man
+	for y in man[1-9]/*.[1-9]; do
+		einfo install ${y##*/}:  /usr/share/man/ja/${y%%/*}/
+		insinto /usr/share/man/ja/${y%%/*}
 		doins $y
 	done
-	insinto /usr/share/man/ja/man5
-	for z in ${WORKDIR}/portage/man/ja/*.5; do
-		einfo install $z:  /usr/share/man/ja/man5
-		doins $z
-	done
+	cd -
+
 	dodoc ChangeLog INSTALL README
 }
 
