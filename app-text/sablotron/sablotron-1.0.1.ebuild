@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.1.ebuild,v 1.3 2004/05/03 08:08:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.1.ebuild,v 1.4 2004/06/01 14:11:09 vapier Exp $
 
 inherit libtool gnuconfig
 
@@ -9,14 +9,14 @@ MY_P="${MY_PN}-${PV}"
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="An XSLT Parser in C++"
-SRC_URI="http://download-1.gingerall.cz/download/sablot/${MY_P}.tar.gz"
 HOMEPAGE="http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act"
+SRC_URI="http://download-1.gingerall.cz/download/sablot/${MY_P}.tar.gz"
+
 # Sablotron can optionally be built under GPL, using MPL for now
 LICENSE="MPL-1.1"
-
 SLOT="0"
+KEYWORDS="~x86 ~sparc ~ppc ~mips ~alpha arm ~hppa ~amd64 ~ia64 s390"
 IUSE="doc perl"
-KEYWORDS="~x86 ~sparc ~ppc ~mips ~hppa ~alpha ~amd64 ~ia64 s390"
 
 DEPEND=">=dev-libs/expat-1.95.6-r1
 	>=dev-perl/XML-Parser-2.3"
@@ -24,7 +24,6 @@ DEPEND=">=dev-libs/expat-1.95.6-r1
 DOCS="INSTALL README README_JS RELEASE src/TODO"
 
 src_compile() {
-
 	local myconf=
 
 	# Detect mips systems properly
@@ -49,12 +48,9 @@ src_compile() {
 
 	econf ${myconf} || die "Configure failed"
 	emake || die "Make failed"
-
 }
 
 src_install() {
-
 	einstall || die "Install failed"
 	dodoc ${DOCS}
-
 }
