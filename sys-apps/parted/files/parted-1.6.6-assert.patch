@@ -1,0 +1,141 @@
+diff -Nru parted-1.6.6/libparted/fs_reiserfs/geom_dal.c parted-1.6.6-assert/libparted/fs_reiserfs/geom_dal.c
+--- parted-1.6.6/libparted/fs_reiserfs/geom_dal.c	Sat Aug 10 02:47:33 2002
++++ parted-1.6.6-assert/libparted/fs_reiserfs/geom_dal.c	Mon Oct 27 23:25:05 2003
+@@ -34,21 +34,29 @@
+ }
+ 
+ static int __read(dal_t *dal, void *buff, blk_t block, blk_t count) {
+-    blk_t k = dal->block_size / PED_SECTOR_SIZE;
+-    PedSector block_pos = (PedSector)(block * k);
+-    PedSector block_count = (PedSector)(count * k);
++    blk_t k;
++    PedSector block_pos;
++    PedSector block_count;
+     
+     PED_ASSERT(dal != NULL, return 0);
+     
++    k = dal->block_size / PED_SECTOR_SIZE;
++    block_pos = (PedSector)(block * k);
++    block_count = (PedSector)(count * k);
++    
+     return ped_geometry_read((PedGeometry *)dal->dev, buff, block_pos, block_count);
+ }
+ 
+ static int __write(dal_t *dal, void *buff, blk_t block, blk_t count) {
+-    blk_t k = dal->block_size / PED_SECTOR_SIZE;
+-    PedSector block_pos = (PedSector)(block * k);
+-    PedSector block_count = (PedSector)(count * k);
++    blk_t k;
++    PedSector block_pos;
++    PedSector block_count;
+     
+     PED_ASSERT(dal != NULL, return 0);
++    
++    k = dal->block_size / PED_SECTOR_SIZE;
++    block_pos = (PedSector)(block * k);
++    block_count = (PedSector)(count * k);
+     
+     return ped_geometry_write((PedGeometry *)dal->dev, buff, block_pos, 
+ 	block_count);
+diff -Nru parted-1.6.6/libparted/geom.c parted-1.6.6-assert/libparted/geom.c
+--- parted-1.6.6/libparted/geom.c	Mon Apr  8 12:08:46 2002
++++ parted-1.6.6-assert/libparted/geom.c	Mon Oct 27 23:25:05 2003
+@@ -183,12 +183,14 @@
+ 		   PedSector count)
+ {
+ 	int		exception_status;
+-	PedSector	real_start = geom->start + start;
++	PedSector	real_start;
+ 
+ 	PED_ASSERT (geom != NULL, return 0);
+ 	PED_ASSERT (buffer != NULL, return 0);
+ 	PED_ASSERT (start >= 0, return 0);
+ 	PED_ASSERT (count >= 0, return 0);
++	
++	real_start = geom->start + start;
+ 
+ 	if (real_start + count - 1 > geom->end) {
+ 		exception_status = ped_exception_throw (
+@@ -217,12 +219,14 @@
+ 		    PedSector count)
+ {
+ 	int		exception_status;
+-	PedSector	real_start = geom->start + start;
++	PedSector	real_start;
+ 
+ 	PED_ASSERT (geom != NULL, return 0);
+ 	PED_ASSERT (buffer != NULL, return 0);
+ 	PED_ASSERT (start >= 0, return 0);
+ 	PED_ASSERT (count >= 0, return 0);
++	
++	real_start = geom->start + start;
+ 
+ 	if (real_start + count - 1 > geom->end) {
+ 		exception_status = ped_exception_throw (
+diff -Nru parted-1.6.6/libparted/gnu.c parted-1.6.6-assert/libparted/gnu.c
+--- parted-1.6.6/libparted/gnu.c	Thu Jun 26 05:57:34 2003
++++ parted-1.6.6-assert/libparted/gnu.c	Mon Oct 27 23:25:05 2003
+@@ -733,13 +733,15 @@
+ static int
+ gnu_sync (PedDevice* dev)
+ {
+-	GNUSpecific*		arch_specific = GNU_SPECIFIC (dev);
++	GNUSpecific*		arch_specific;
+ 	error_t			err;
+ 	PedExceptionOption	ex_status;
+ 	static char *last_failure = NULL;
+ 
+ 	PED_ASSERT (dev != NULL, return 0);
+ 	PED_ASSERT (!dev->external_mode, return 0);
++	
++	arch_specific = GNU_SPECIFIC (dev);
+ 
+ 	if (dev->read_only || ! dev->dirty)
+ 		return 1;
+diff -Nru parted-1.6.6/libparted/linux.c parted-1.6.6-assert/libparted/linux.c
+--- parted-1.6.6/libparted/linux.c	Sat Feb 15 22:30:03 2003
++++ parted-1.6.6-assert/libparted/linux.c	Mon Oct 27 23:25:05 2003
+@@ -1011,10 +1011,12 @@
+ static int
+ _device_seek (PedDevice* dev, PedSector sector)
+ {
+-	LinuxSpecific*	arch_specific = LINUX_SPECIFIC (dev);
++	LinuxSpecific*	arch_specific;
+ 
+ 	PED_ASSERT (dev != NULL, return 0);
+ 	PED_ASSERT (!dev->external_mode, return 0);
++	
++	arch_specific = LINUX_SPECIFIC (dev);
+ 
+ #if SIZEOF_OFF_T < 8
+ 	if (sizeof (off_t) < 8) {
+@@ -1031,11 +1033,13 @@
+ static int
+ _read_lastoddsector (PedDevice* dev, void* buffer)
+ {
+-	LinuxSpecific*			arch_specific = LINUX_SPECIFIC (dev);
++	LinuxSpecific*			arch_specific;
+ 	struct blkdev_ioctl_param	ioctl_param;
+ 
+ 	PED_ASSERT(dev != NULL, return 0);
+ 	PED_ASSERT(buffer != NULL, return 0);
++	
++	arch_specific = LINUX_SPECIFIC (dev);
+ 
+ retry:
+ 	ioctl_param.block = 0; /* read the last sector */
+@@ -1135,11 +1139,13 @@
+ static int
+ _write_lastoddsector (PedDevice* dev, const void* buffer)
+ {
+-	LinuxSpecific*			arch_specific = LINUX_SPECIFIC (dev);
++	LinuxSpecific*			arch_specific;
+ 	struct blkdev_ioctl_param	ioctl_param;
+ 
+ 	PED_ASSERT(dev != NULL, return 0);
+ 	PED_ASSERT(buffer != NULL, return 0);
++	
++	arch_specific = LINUX_SPECIFIC (dev);
+ 
+ retry:
+ 	ioctl_param.block = 0; /* write the last sector */
