@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/CursesWidgets
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CursesWidgets/ChangeLog,v 1.1 2003/03/22 02:44:53 pylon Exp $
+
+*CursesWidgets-1.997 (22 Mär 2003)
+
+  22 Mär 2003; Lars Weiler <pylon@gentoo.org> CursesWidgets-1.997.ebuild:
+  Initial ChangeLog
+
