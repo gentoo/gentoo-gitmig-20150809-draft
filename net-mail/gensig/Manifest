@@ -1,6 +1,16 @@
-MD5 f8691af1908379c119f879a9dbacdcbf gensig-2.2.ebuild 504
-MD5 0d3ea5047c3bb23e4d01ac873965c912 gensig-2.3.ebuild 505
-MD5 378f415aa846ede7b6d58b920aaf7fe2 ChangeLog 660
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bac222f0bb156efd3b75f83e9e22cf32 ChangeLog 740
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 f8a5df91ba912beed9e97ed0d8621352 files/digest-gensig-2.2 61
+MD5 e53ce193ff2cffb5855158f52abc5d0b gensig-2.3.ebuild 501
+MD5 f8691af1908379c119f879a9dbacdcbf gensig-2.2.ebuild 504
 MD5 7dc06ff9d3cee1a25edea6e97dc1acc7 files/digest-gensig-2.3 61
+MD5 f8a5df91ba912beed9e97ed0d8621352 files/digest-gensig-2.2 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBUCkZ10xuJSrg3/sRAjb5AJ423ZIVcT7JUcBiIr5/uyRrRGFamgCfWF6Z
+TLKP7ECztp0vKNUQXDtYAoo=
+=Msj1
+-----END PGP SIGNATURE-----
