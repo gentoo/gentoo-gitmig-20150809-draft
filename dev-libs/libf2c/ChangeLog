@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libf2c
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.13 2004/08/06 12:23:27 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.14 2004/09/09 12:02:22 tchiwam Exp $
+
+  09 Sep 2004; Philippe Trottier <tchiwam@gentoo.org> libf2c-20021004-r1.ebuild:
+  Marked ~ppc64
 
   06 Aug 2004; Ferris McCormick <fmccor@gentoo.org> libf2c-20021004-r1.ebuild:
   Stable for sparc (part of bug 55386).
