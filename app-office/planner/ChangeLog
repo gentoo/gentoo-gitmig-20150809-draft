@@ -1,6 +1,9 @@
 # ChangeLog for app-office/planner
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.18 2005/03/07 23:55:45 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.19 2005/03/31 18:41:06 kloeri Exp $
+
+  31 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> planner-0.12.1.ebuild:
+  Stable on alpha.
 
   08 Mar 2005; foser <foser@gentoo.org> planner-0.12.1.ebuild :
   Ugly fix for #83947
