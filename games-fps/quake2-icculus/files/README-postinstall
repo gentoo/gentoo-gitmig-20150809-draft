@@ -9,7 +9,7 @@ To install the Quake2 demo data:
 --------------------------------
 1. download ftp://ftp.idsoftware.com/idstuff/quake2/q2-314-demo-x86.exe
 2. unzip -L q2-314-demo-x86.exe into a temp directory
-3. cp baseq2/pak0.pak to /usr/share/games/quake2/baseq2/pak0.pak
+3. cp baseq2/pak0.pak to /usr/share/games/quake2-data/baseq2/pak0.pak
 
 ===============================================================================
 
@@ -17,18 +17,18 @@ To install the Quake2 gamedata from game CD:
 -------------------------------
 (assuming the cdrom is mounted at /cdrom)
 
-1. cp /cdrom/Install/Data/baseq2/pak0.pak  /usr/share/games/quake2/baseq2/
+1. cp /cdrom/Install/Data/baseq2/pak0.pak  /usr/share/games/quake2-data/baseq2/
 
-2. cp /cdrom/Install/Data/baseq2/video/    /usr/share/games/quake2/baseq2/
+2. cp /cdrom/Install/Data/baseq2/video/    /usr/share/games/quake2-data/baseq2/
    (optional)
    
 3. Download ftp://ftp.idsoftware.com/idstuff/quake2/q2-3.20-x86-full.exe
    and extract the contents to a temporary directory (use unzip -L, as this 
    is a standard zip file).
 
-4. cp <temp directory>/baseq2/pak1.pak /usr/share/games/quake2/baseq2/
-5. cp <temp directory>/baseq2/pak2.pak /usr/share/games/quake2/baseq2/
-6. cp <temp directory>/baseq2/players/ /usr/share/games/quake2/baseq2/
+4. cp <temp directory>/baseq2/pak1.pak /usr/share/games/quake2-data/baseq2/
+5. cp <temp directory>/baseq2/pak2.pak /usr/share/games/quake2-data/baseq2/
+6. cp <temp directory>/baseq2/players/ /usr/share/games/quake2-data/baseq2/
 
 7. if you really want to use the crakhor model, you can find the
    skins/sounds on websites like http://www.mike-d.com/games/modskins.html
@@ -42,7 +42,7 @@ To run Capture The Flag, you need to do the following:
 
 1. Download ftp://ftp.idsoftware.com/idstuff/quake2/q2-3.20-x86-full-ctf.exe
 2. unzip that file (using unzip -L) into a temp directory
-3. cp <temp directory>/ctf /usr/share/games/quake2/
+3. cp <temp directory>/ctf /usr/share/games/quake2-data/
 
 Execute quake2 with:
 
@@ -66,4 +66,3 @@ There are four command line settings for joystick:
    forward back (freelock off)
 4. j_throttle [3] set the axis which controls the players forward backward 
    throttle (if free-look is true)
-
