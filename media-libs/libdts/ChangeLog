@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdts
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.7 2004/12/27 00:47:59 kloeri Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.8 2005/02/06 17:52:46 corsair Exp $
+
+  06 Feb 2005; Markus Rothe <corsair@gentoo.org> libdts-0.0.2.ebuild:
+  Stable on ppc64
 
   27 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> libdts-0.0.2.ebuild:
   ~alpha keyword, bug 75669.
