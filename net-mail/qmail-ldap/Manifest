@@ -1,6 +1,5 @@
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/Manifest,v 1.6 2003/12/26 01:15:15 robbat2 Exp $
-MD5 7f3931ccdee538ee5fcef1346a032009 qmail-ldap-1.03-r1.ebuild 11628
-MD5 a1dfc8f8d93c58b96aac427c543fab8f ChangeLog 632
+MD5 1428882a2044577b8c740e5c185ba488 qmail-ldap-1.03-r1.ebuild 11628
+MD5 1e0033dd027cbf1b5734d86b94895c11 ChangeLog 789
 MD5 f42a779e5c708c2d7bf38de66dfb93f5 files/rc 108
 MD5 931b3ed00571e8e2a22b550fcd1d7137 files/qmail-queue.patch.bz2 722
 MD5 3866e15deb8a69d44cacb5b3680d1b61 files/qmail-linksync.patch.bz2 687
@@ -28,7 +27,7 @@ MD5 44f0ea3c13cabc96782b1e26042865c4 files/control/defaultdelivery 11
 MD5 6d7fce9fee471194aa8b5b6e47267f03 files/control/qmail-pop3d-loglevel 2
 MD5 6d7fce9fee471194aa8b5b6e47267f03 files/control/qmail-start-loglevel 2
 MD5 0ae1000c6026575b9a847a9cfa0badb4 files/control/qmail-smtpd-softlimit 8
-MD5 a04bed51dfb2bedba57a5b42e7eb71b9 files/supervise/run-qmailpop3d 448
+MD5 99265fec7ddb774069ae45afb9c010ca files/supervise/run-qmailpop3d 451
 MD5 cc0cf4631ac9d86397660f91c62332b2 files/supervise/run-qmailsmtpd 270
 MD5 f43900d79a0aacb5e0d71b0bb6c06fea files/supervise/run-qmailsmtpdlog 97
 MD5 834dad5113515d0f00981fdc1d07fa84 files/supervise/run-qmailsendlog 96
