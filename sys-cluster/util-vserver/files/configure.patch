@@ -1,0 +1,11 @@
+diff -Naur util-vserver-0.29-orig/configure.ac util-vserver-0.29/configure.ac
+--- util-vserver-0.29-orig/configure.ac 2004-02-11 22:06:17.000000000 +0100
++++ util-vserver-0.29/configure.ac      2004-03-18 19:50:35.000000000 +0100
+@@ -41,2 +41,2 @@
+-ENSC_CHECK_CC_FLAG([-std=c99 -Wall -pedantic -W -Wno-unused-parameter])
+-ENSC_CHECK_CXX_FLAG([-ansi   -Wall -pedantic -W -fmessage-length=0])
++ENSC_CHECK_CC_FLAG([-std=c99 -Wall -W -Wno-unused-parameter])
++ENSC_CHECK_CXX_FLAG([-ansi   -Wall -W -fmessage-length=0])
+
+ AC_ARG_VAR(CC, [The C compiler])
+ ENSC_KERNEL_HEADERS(kernelincludedir)
