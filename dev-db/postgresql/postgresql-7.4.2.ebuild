@@ -1,7 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2.ebuild,v 1.1 2004/03/11 20:11:28 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2.ebuild,v 1.2 2004/03/21 01:57:24 nakano Exp $
 
+inherit eutils gnuconfig
 DESCRIPTION="sophisticated Object-Relational DBMS."
 
 RESTRICT="nomirror"
@@ -17,7 +18,6 @@ LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~hppa ~ia64 ~mips"
 IUSE="ssl nls java python tcltk perl libg++ pam readline zlib doc pg-hier pg-vacuumdelay pg-intdatetime"
-inherit eutils gnuconfig
 
 DEPEND="virtual/glibc
 	sys-devel/autoconf
