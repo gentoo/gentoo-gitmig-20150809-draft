@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/liece/liece-1.4.7-r1.ebuild,v 1.3 2004/04/06 03:46:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/liece/liece-1.4.7-r1.ebuild,v 1.4 2004/06/17 23:26:41 swegener Exp $
 
 inherit elisp eutils
 
@@ -15,8 +15,6 @@ KEYWORDS="x86"
 
 DEPEND="virtual/emacs
 	app-emacs/apel"
-
-S="${WORKDIR}/${P}"
 
 src_unpack() {
 

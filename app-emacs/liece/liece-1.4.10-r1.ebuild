@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/liece/liece-1.4.10-r1.ebuild,v 1.4 2004/04/06 03:46:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/liece/liece-1.4.10-r1.ebuild,v 1.5 2004/06/17 23:26:41 swegener Exp $
 
 inherit elisp eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://www.unixuser.org/~ueno/liece/dist/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
+IUSE=""
 
 DEPEND="virtual/emacs
 	app-emacs/apel"
