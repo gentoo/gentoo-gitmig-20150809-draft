@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/shtool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/ChangeLog,v 1.5 2004/06/25 02:46:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/ChangeLog,v 1.6 2004/07/13 17:04:52 seemant Exp $
+
+*shtool-2.0.0 (13 Jul 2004)
+
+  13 Jul 2004; Seemant Kulleen <seemant@gentoo.org> +shtool-2.0.0.ebuild:
+  Version bump, thanks to: Josh Glover <jmglov@gentoo.org> in bug #56889
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
