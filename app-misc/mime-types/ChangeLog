@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mime-types
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.4 2004/04/06 18:05:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.5 2004/04/10 09:45:33 mr_bones_ Exp $
+
+  10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> mime-types-1.0.ebuild:
+  don't assign default to S; tidy
 
   06 Apr 2004; Aron Griffis <agriffis@gentoo.org> mime-types-1.0.ebuild:
   Add ia64 and ~hppa keywords for sylpheed-0.9.9-r1
