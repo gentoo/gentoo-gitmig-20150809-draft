@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0e4104fe48843eea6329d48a3719aaf9 ChangeLog 1156
+MD5 349d24a3cc1cc07bf986c2139acce540 vnc2swf-0.4.2.ebuild 599
+MD5 240638c36bc133676406c6471efd671f ChangeLog 1281
+MD5 733504663df56f36a51e48db4df691a9 vnc2swf-0.4.2-r1.ebuild 1053
 MD5 427e58a2a402d09cdf22976c7d733f46 metadata.xml 685
 MD5 2b60faf13f649d139eec06a6250ab18b vnc2swf-0.3.ebuild 694
-MD5 1f41e13af49064abfd43518a87df241a vnc2swf-0.4.2-r1.ebuild 1049
-MD5 349d24a3cc1cc07bf986c2139acce540 vnc2swf-0.4.2.ebuild 599
 MD5 e05e7fbd6825ae9524ca79ee7b5772fe files/digest-vnc2swf-0.3 63
-MD5 e74ce76e3c172ee7681b82394d3e5002 files/digest-vnc2swf-0.4.2 65
 MD5 e74ce76e3c172ee7681b82394d3e5002 files/digest-vnc2swf-0.4.2-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCBlxzxtZcznfol0URAnIrAKCxLL0aYsGisyhdJ6Fq1N5Gn/FUHwCfaD9F
-6t3Jx/EPrlKuFehBPl2gMk0=
-=wFwv
------END PGP SIGNATURE-----
+MD5 e74ce76e3c172ee7681b82394d3e5002 files/digest-vnc2swf-0.4.2 65

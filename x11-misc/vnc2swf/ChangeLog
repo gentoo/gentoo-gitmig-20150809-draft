@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/vnc2swf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.9 2005/02/06 18:05:16 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.10 2005/02/13 05:52:57 swtaylor Exp $
+
+  12 Feb 2005; Scott W Taylor <swtaylor@gentoo.org> vnc2swf-0.4.2-r1.ebuild:
+  was downgrading ming due to = dependancy
 
 *vnc2swf-0.4.2-r1 (06 Feb 2005)
 
