@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/blight_input/blight_input-0.0.4.ebuild,v 1.3 2004/06/24 22:24:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/blight_input/blight_input-0.0.4.ebuild,v 1.4 2004/07/14 14:32:15 agriffis Exp $
 
 DESCRIPTION="An input plugin for the mupen64 N64 emulator"
 SRC_URI="http://deltaanime.ath.cx/~blight/n64/blight_input_plugin/${P}.tar.gz"
@@ -9,6 +9,7 @@ HOMEPAGE="http://mupen64.emulation64.com/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc -sparc"
+IUSE=""
 
 DEPEND="media-libs/libsdl
 	media-libs/freetype"
