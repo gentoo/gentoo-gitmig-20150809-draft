@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.57 2003/11/06 10:19:07 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.58 2003/11/12 09:20:41 aliz Exp $
+
+  12 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7c.ebuild, openssl-0.9.7c-r1.ebuild :
+  Make test removes the built libraries to be rebuilt later with make install, this was not the case with 
+  0.9.6 libraries as they where only inserted into ${D}. Now we run make again before installing those 
+  libraries to make sure they exist. Closing #32858.
 
   06 Nov 2003; Paul de Vrieze <pauldv@gentoo.org> openssl-0.9.7c-r1.ebuild:
   Add checks so that missing 0.9.6 libs when they should be there will cause the

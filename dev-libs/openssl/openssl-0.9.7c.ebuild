@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c.ebuild,v 1.5 2003/10/29 07:37:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c.ebuild,v 1.6 2003/11/12 09:20:41 aliz Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -142,6 +142,8 @@ src_install() {
 
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
+		cd ${WORKDIR}/${OLD_096_P}
+		make || die
 		dolib.so ${WORKDIR}/${OLD_096_P}/libcrypto.so.0.9.6
 		dolib.so ${WORKDIR}/${OLD_096_P}/libssl.so.0.9.6
 	}
