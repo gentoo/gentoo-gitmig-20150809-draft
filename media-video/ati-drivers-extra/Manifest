@@ -1,6 +1,7 @@
 MD5 1b650ba446c0a79c2b564f1bb0680781 ati-drivers-extra-3.14.1.ebuild 2699
 MD5 036128e0098c209af7334ffa7899c7ca ati-drivers-extra-3.7.6.ebuild 2684
-MD5 8d49fbac99422b66eb1c679f1c1b851e ChangeLog 2901
+MD5 89e06e901d29e422eb2e9d2559461ab4 ati-drivers-extra-3.14.6.ebuild 2623
+MD5 e217affe5baa3a3da8384baf68ad20ff ChangeLog 3211
 MD5 a2a9c4ddd4562efd9ca3b290459e7196 metadata.xml 219
 MD5 762af86e7dc081ecafe97307c76124b3 ati-drivers-extra-3.14.1-r1.ebuild 2754
 MD5 c28c5867bdc7da77868abe2913ced125 ati-drivers-extra-3.2.8-r1.ebuild 2035
@@ -10,6 +11,8 @@ MD5 ee52c59e510dcdaae1d959daf92f162c ati-drivers-extra-3.11.1.ebuild 2700
 MD5 4765a7db326f308f862b1fe3e211ef0d files/fglrx-3.7.0-fix-fglrx_panel-includes.patch 2168
 MD5 54de36d07576ae34efa953192b450dd9 files/digest-ati-drivers-extra-3.11.1 73
 MD5 119541f0c7966bb5474cb42167103ded files/digest-ati-drivers-extra-3.14.1 73
+MD5 3aa542eecb0d477f099932d4340b7493 files/digest-ati-drivers-extra-3.14.6 73
+MD5 6d101e30f74b2208e76b3e8cb329d15d files/ati-drivers-extra-3.14.6-improvements.patch.bz2 10581
 MD5 aa891a7464224bd9a07fe0e96f40ef7b files/digest-ati-drivers-extra-3.7.6 72
 MD5 41782adae08060611f324e8c8ddf3de9 files/fireglcontrol.desktop 149
 MD5 119541f0c7966bb5474cb42167103ded files/digest-ati-drivers-extra-3.14.1-r1 73

@@ -1,6 +1,14 @@
 # ChangeLog for media-video/ati-drivers-extra
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ChangeLog,v 1.19 2004/10/20 12:21:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ChangeLog,v 1.20 2004/11/12 00:35:35 lu_zero Exp $
+
+*ati-drivers-extra-3.14.6 (12 Nov 2004)
+
+  12 Nov 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/ati-drivers-extra-3.14.6-improvements.patch.bz2,
+  +ati-drivers-extra-3.14.6.ebuild:
+  New version, thanks to Erdroh Moshan <ErDroh@gmx.de> and Ernst Persson
+  <ernstp@gmail.com> for the notice and the patches
 
   20 Oct 2004; Luca Barbato <lu_zero@gentoo.org>
   ati-drivers-extra-3.14.1-r1.ebuild:
