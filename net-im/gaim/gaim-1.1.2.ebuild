@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.1.2.ebuild,v 1.12 2005/02/06 10:40:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.1.2.ebuild,v 1.13 2005/02/11 15:19:31 rizzo Exp $
 
 inherit flag-o-matic eutils gcc debug
 
@@ -29,7 +29,9 @@ DEPEND=">=x11-libs/gtk+-2.0
 	eds? ( gnome-extra/evolution-data-server )"
 
 # List of plugins
+#	app-accessibility/festival-gaim
 #	net-im/gaim-blogger
+#	net-im/gaim-bnet
 #	net-im/gaim-meanwhile
 #	net-im/gaim-snpp
 #	x11-plugins/autoprofile

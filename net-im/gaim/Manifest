@@ -1,5 +1,5 @@
 MD5 9d5e25dbea48a9e4ed6db6edf6f8049c ChangeLog 44610
+MD5 8ee86b531b08047e75a4db5671eb9395 gaim-1.1.2.ebuild 3633
 MD5 19b3cafbbe380403d46cccc45a984b80 metadata.xml 481
-MD5 96102421b173a9c52e01c6d00696d60b gaim-1.1.2.ebuild 3581
-MD5 afc682711efed5d09a9229bd06a7a13b files/gaim-0.76-xinput.patch 644
 MD5 63540ba1527c8935186ff9fd54d166a5 files/digest-gaim-1.1.2 64
+MD5 afc682711efed5d09a9229bd06a7a13b files/gaim-0.76-xinput.patch 644
