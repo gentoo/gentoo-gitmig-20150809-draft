@@ -1,0 +1,28 @@
+diff -urN gramps-0.8.0.orig/Makefile.am gramps-0.8.0/Makefile.am
+--- gramps-0.8.0.orig/Makefile.am	Thu Sep  5 15:32:01 2002
++++ gramps-0.8.0/Makefile.am	Thu Sep  5 15:32:51 2002
+@@ -15,13 +15,6 @@
+ dist-hook: gramps.spec
+ 	cp gramps.spec $(distdir)
+ 
+-# Build/rebuild the catalog
+-install-data-hook:
+-	rm -rf $(DESTDIR)$(scrollkeeper_localstate_dir)
+-	$(mkinstalldirs) $(DESTDIR)$(scrollkeeper_localstate_dir)
+-	$(mkinstalldirs) $(DESTDIR)$(localstatedir)/log
+-	scrollkeeper-rebuilddb -p $(DESTDIR)$(scrollkeeper_localstate_dir)
+-
+ # Remove generated files
+ uninstall-local:
+ 	-rm -rf $(DESTDIR)$(gramps_localstate_dir)
+diff -urN gramps-0.8.0.orig/omf-install/Makefile.am gramps-0.8.0/omf-install/Makefile.am
+--- gramps-0.8.0.orig/omf-install/Makefile.am	Thu Sep  5 15:32:01 2002
++++ gramps-0.8.0/omf-install/Makefile.am	Thu Sep  5 15:32:18 2002
+@@ -5,7 +5,6 @@
+ 	-for file in $(srcdir)/*.omf; do \
+ 		$(INSTALL_DATA) $(srcdir)/$$file $(DESTDIR)$(omf_dest_dir); \
+ 	done
+-	-scrollkeeper-update -p $(localstatedir)/scrollkeeper
+ 
+ uninstall-local:
+ 	-for file in $(srcdir)/*.omf; do \
