@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnet
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.32 2004/04/02 00:32:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.33 2004/05/08 21:19:03 kumba Exp $
+
+  08 May 2004; Joshua Kinard <kumba@gentoo.org> libnet-1.1.2.1.ebuild:
+  Added gnuconfig support for mips.
 
 *libnet-1.1.2.1 (01 Apr 2004)
 
