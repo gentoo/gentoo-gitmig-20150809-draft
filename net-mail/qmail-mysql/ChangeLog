@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/qmail-mysql
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/ChangeLog,v 1.5 2003/12/26 01:13:53 robbat2 Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/ChangeLog,v 1.6 2004/01/19 00:58:54 robbat2 Exp $
+
+  18 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
+  qmail-mysql-1.03-r13.ebuild, qmail-mysql-1.03.ebuild:
+  fixup for correct library list to solve bug #36562, where mysql is linked
+  against ssl, but we aren't building ssl support into qmail-mysql.
 
   25 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> qmail-mysql-1.03.ebuild:
   change to keepdir as per bug #35308

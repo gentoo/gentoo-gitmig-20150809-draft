@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.9 2003/12/26 01:13:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-mysql/qmail-mysql-1.03.ebuild,v 1.10 2004/01/19 00:58:54 robbat2 Exp $
 
 inherit eutils
 
@@ -69,7 +69,7 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}
-	emake it man || die
+	emake MYSQL_LIBS="`mysql_config --libs`" it man || die
 }
 
 
