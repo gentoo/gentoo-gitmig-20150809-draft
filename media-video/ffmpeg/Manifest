@@ -2,10 +2,7 @@ MD5 b8d4df63af0f0633787736a258c9dfd3 ChangeLog 2653
 MD5 2d75291c4685dc1a93c5e91901df57c0 ffmpeg-0.4.5.ebuild 693
 MD5 6c484228a17602440a3c7967e3eabd33 ffmpeg-0.4.6-r1.ebuild 1561
 MD5 f25e86f18c90204cd2da37a3c131b829 ffmpeg-0.4.6.ebuild 1526
-MD5 feb482b09e002972d3aad3523d05811e ffmpeg-0.4.6.20030304.ebuild 1970
 MD5 57e0978ef4a4ff1662572740a8d94ed7 files/digest-ffmpeg-0.4.5 64
 MD5 566133b90b840d9da9452facbfef0d6e files/digest-ffmpeg-0.4.6 64
 MD5 566133b90b840d9da9452facbfef0d6e files/digest-ffmpeg-0.4.6-r1 64
 MD5 30ba42e8d259ef5fe8c439670f685c1f files/ffmpeg-0.4.6-Makefiles.diff 3429
-MD5 33a085015b0495eeacfe3232499d9d6e files/ffmpeg-0.4.6.20030304-Makefiles.diff 3681
-MD5 706ff3758cc43215be55f96444770ef5 files/digest-ffmpeg-0.4.6.20030304 67
