@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/oroborus
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.4 2002/10/21 17:05:46 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.5 2002/10/21 17:06:45 blizzy Exp $
+
+*oroborus-2.0.9 (21 Oct 2002)
+
+  21 Oct 2002; Maik Schreiber <blizzy@gentoo.org> : New version.
 
   21 Oct 2002; Maik Schreiber <blizzy@gentoo.org> oroborus-2.0.7.ebuild:
   Changed "x86" to "~x86" in KEYWORDS.
