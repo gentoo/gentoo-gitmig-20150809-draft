@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jrockit
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit/ChangeLog,v 1.1 2003/05/23 17:27:50 tberman Exp $
+
+*jrockit-8.1 (23 May 2003)
+
+  23 May 2003; Todd Berman <tberman@gentoo.org> jrockit-8.1.ebuild,
+  files/jrockit-8.1:
+  Initial Import, based on ebuild submitted by Matthew Humphrey <matth@pobox.com>
+
