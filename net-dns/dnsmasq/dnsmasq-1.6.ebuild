@@ -1,14 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-1.6.ebuild,v 1.1 2002/06/29 00:55:03 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-1.6.ebuild,v 1.2 2002/07/17 10:05:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Proxy DNS server"
 SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${P}.tar.gz"
 HOMEPAGE="http://www.thekelleys.org.uk/dnsmasq/"
+
 DEPEND="virtual/glibc"
-LICENSE="GPL-2"
+
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}

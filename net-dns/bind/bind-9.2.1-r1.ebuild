@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.1-r1.ebuild,v 1.2 2002/07/09 21:38:29 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.1-r1.ebuild,v 1.3 2002/07/17 10:05:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="BIND - Name Server"
@@ -11,8 +11,7 @@ KEYWORDS="x86"
 LICENSE="as-is"
 SLOT="0"
 
-DEPEND="virtual/glibc sys-apps/groff"
-RDEPEND="virtual/glibc"
+DEPEND="sys-apps/groff"
 
 src_compile() {                           
 	local myconf

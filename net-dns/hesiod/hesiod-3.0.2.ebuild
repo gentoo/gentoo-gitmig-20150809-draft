@@ -1,17 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/hesiod-3.0.2.ebuild,v 1.1 2002/06/29 00:55:03 bangert Exp $
-
-DESCRIPTION="Hesiod is a system which uses existing DNS functionality to provide access to databases of information that changes infrequently."
-
-HOMEPAGE="ftp://athena-dist.mit.edu/pub/ATHENA/hesiod"
-LICENSE="ISC"
-DEPEND="virtual/glibc"
-#RDEPEND=""
-SRC_URI="ftp://athena-dist.mit.edu/pub/ATHENA/${PN}/${P}.tar.gz"
-SLOT="0"
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/hesiod-3.0.2.ebuild,v 1.2 2002/07/17 10:05:46 seemant Exp $
 
 S=${WORKDIR}/${P}
+DESCRIPTION="Hesiod is a system which uses existing DNS functionality to provide access to databases of information that changes infrequently."
+SRC_URI="ftp://athena-dist.mit.edu/pub/ATHENA/${PN}/${P}.tar.gz"
+HOMEPAGE="ftp://athena-dist.mit.edu/pub/ATHENA/hesiod"
+
+SLOT="0"
+LICENSE="ISC"
+KEYWORDS="x86"
+
+DEPEND="virtual/glibc"
+
 
 src_unpack() {
 	unpack ${A}
@@ -50,11 +51,4 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
-	#make \
-	#	prefix=${D}/usr \
-	#	mandir=${D}/usr/share/man \
-	#	infodir=${D}/usr/share/info \
-	#	install || die
-	# Again, verify the Makefiles!  We don't want anything falling
-	# outside of ${D}.
 }

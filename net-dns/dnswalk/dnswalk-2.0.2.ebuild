@@ -1,19 +1,24 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnswalk/dnswalk-2.0.2.ebuild,v 1.2 2002/07/11 06:30:46 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnswalk/dnswalk-2.0.2.ebuild,v 1.3 2002/07/17 10:05:46 seemant Exp $
 
 S=${WORKDIR}
 DESCRIPTION="dnswalk is a DNS database debugger"
 SRC_URI="http://www.visi.com/~barr/dnswalk/${P}.tar.gz"
 HOMEPAGE="http://www.visi.com/~barr/dnswalk/"
 
-DEPEND=">=sys-devel/perl-5.6.1 >=dev-perl/Net-DNS-0.12"  
-RDEPEND="${DEPEND}"
+DEPEND=">=dev-perl/Net-DNS-0.12"  
+
+
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="x86"
 
 src_compile() {
 
 	mv dnswalk dnswalk.orig
-	sed 's/#!\/usr\/contrib\/bin\/perl/#!\/usr\/bin\/perl/' dnswalk.orig > dnswalk
+	sed 's:#!/usr/contrib/bin/perl:#!/usr/bin/perl:' \
+		dnswalk.orig > dnswalk
 
 }
 
@@ -21,7 +26,8 @@ src_install () {
 
 	dobin dnswalk
 
-	dodoc CHANGES README TODO do-dnswalk makereports sendreports rfc1912.txt dnswalk.errors
+	dodoc CHANGES README TODO \
+		do-dnswalk makereports sendreports rfc1912.txt dnswalk.errors
 	doman dnswalk.1
 
 }
