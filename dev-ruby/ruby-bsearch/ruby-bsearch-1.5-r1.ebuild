@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bsearch/ruby-bsearch-1.5-r1.ebuild,v 1.4 2004/02/22 22:24:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bsearch/ruby-bsearch-1.5-r1.ebuild,v 1.5 2004/04/10 14:01:37 usata Exp $
 
 inherit ruby
 
@@ -11,6 +11,6 @@ LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="alpha ~hppa ~mips ~ppc sparc x86 ia64"
 IUSE=""
-DEPEND="dev-lang/ruby"
+DEPEND="virtual/ruby"
 
 DOCS="ChangeLog *.rd bsearch.png"
