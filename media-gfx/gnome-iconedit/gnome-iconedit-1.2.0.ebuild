@@ -7,11 +7,11 @@ DESCRIPTION="Edits icons, what more can you say?"
 SRC_URI="http://210.77.60.218/ftp/ftp.debian.org/pool/main/g/gnome-iconedit/gnome-iconedit_${PV}.orig.tar.gz"
 HOMEPAGE="www.advogato.org/proj/GNOME-Iconedit/"
 
-DEPEND="gnome-base/gnome-libs
-	x11-libs/gtk+
-	media-libs/gdk-pixbuf
+DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
+	>=x11-libs/gtk+-1.2.10-r4
+	>=media-libs/gdk-pixbuf-0.11.0-r1
 	media-libs/libpng
-	gnome-base/gnome-print"
+	>=gnome-base/gnome-print-0.30"
 # Bonobo support is broken
 #	bonobo? ( gnome-base/bonobo )"
 
@@ -24,30 +24,27 @@ src_unpack() {
 	# Fix some compile / #include errors
 	cd ${S}
 	patch -p1 <${FILESDIR}/gnome-iconedit.diff || die
-
+	automake
+	autoconf
 }
 
 src_compile() {
-        	
 	local myconf
+
 	use nls || myconf="--disable-nls"
+	
+	CFLAGS="${CFLAGS} `gnome-config --cflags print`"	
 
-	# Needed by .diff
-	automake
-	autoconf
-
-	./configure --host=${CHOST} --prefix=/opt/gnome  --mandir=/usr/share/man \
-		--infodir=/usr/share/info --with-sysconfdir=/etc/opt/gnome \
-		$myconf || die
+	./configure --host=${CHOST} 					\
+		    --prefix=/usr					\
+		    --with-sysconfdir=/etc				\
+		    $myconf || die
 
 	emake || die
 }
 
 src_install () {
-	
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} prefix=${D}/usr install || die
 
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
-
 }
-
