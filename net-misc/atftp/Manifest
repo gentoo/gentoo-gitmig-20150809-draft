@@ -1,4 +1,6 @@
-MD5 eceaed06c47cbc5facb73c6f8e987fb9 ChangeLog 1254
+MD5 4596680c47494ea415d49904f21e635a ChangeLog 1366
 MD5 94e14e20e605f9ca1252c8c88bad30ea atftp-0.6-r3.ebuild 986
+MD5 6fdb52e9a74654d77cc5c1c634a63388 atftp-0.6.2.ebuild 905
 MD5 ef1244d13cccdfbe2dff44442e0c3d1f files/atftp-0.6-security.patch 1019
 MD5 6edbe26f81fbd488b6fbffd1bbd27ca9 files/digest-atftp-0.6-r3 61
+MD5 e14c6bca387e9af7d2734fb9f08a67ee files/digest-atftp-0.6.2 63
