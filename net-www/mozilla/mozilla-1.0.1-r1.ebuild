@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r1.ebuild,v 1.8 2002/10/13 13:00:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1-r1.ebuild,v 1.9 2002/10/15 13:24:31 hanno Exp $
 
 IUSE="mozxmlterm moznomail java mozp3p crypt ipv6 gtk2 mozinterfaceinfo ssl ldap mozaccess mozctl gnome mozsvg"
 
@@ -177,6 +177,7 @@ src_compile() {
 	fi
 
 	if [ -n "`use mozsvg`" ] ; then
+		export MOZ_INTERNAL_LIBART_LGPL="1"
 		myconf="${myconf} --enable-svg"
 	else
 		myconf="${myconf} --disable-svg"
