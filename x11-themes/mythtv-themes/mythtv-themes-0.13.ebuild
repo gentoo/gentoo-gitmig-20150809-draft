@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.13.ebuild,v 1.1 2004/01/02 09:32:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.13.ebuild,v 1.2 2004/01/15 18:05:35 max Exp $
+
+RESTRICT="nomirror"
 
 DESCRIPTION="A collection of themes for the MythTV project."
 HOMEPAGE="http://www.mythtv.org/"
@@ -11,7 +13,7 @@ SRC_URI="http://www.mythtv.org/myththemes/purgalaxy/PurpleGalaxy.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 RDEPEND="|| ( >=media-tv/mythtv-${PV} >=media-tv/mythfrontend-${PV} )"
 
 src_install() {
