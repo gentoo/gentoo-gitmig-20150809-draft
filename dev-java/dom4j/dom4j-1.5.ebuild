@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.5.ebuild,v 1.1 2004/10/17 07:27:43 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.5.ebuild,v 1.2 2004/10/17 08:54:38 axxo Exp $
 
 inherit java-pkg
 
@@ -16,8 +16,10 @@ RDEPEND=">=virtual/jdk-1.3"
 
 src_compile() {
 	cd ${WORKDIR}/dom4j-${PV}
-	ant -f build.xml all || die "Compilation Failed"
-	use doc && ant -f build.xml javadoc || die "Javadoc Failed"
+	ant -f build.xml package || die "Compilation Failed"
+	if use doc; then
+		ant -f build.xml javadoc || die "Javadoc Failed"
+	fi
 }
 
 src_install() {
