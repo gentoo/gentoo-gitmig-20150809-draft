@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/vim-core-6.3_beta2.ebuild,v 1.6 2004/05/28 16:44:25 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/vim-core-6.3_beta2.ebuild,v 1.7 2004/06/07 20:07:49 ciaranm Exp $
 
 inherit vim
 
@@ -18,5 +18,5 @@ SRC_URI="${SRC_URI}
 
 S=${WORKDIR}/vim${VIM_VERSION/.}
 DESCRIPTION="vim and gvim shared files"
-KEYWORDS="~x86 ~sparc ~mips ~ppc ~alpha ~amd64 ~ia64"
+KEYWORDS="~x86 ~sparc ~mips ~ppc ~alpha ~amd64 ~ia64 ~arm ~hppa ~ppc64 ~s390"
 DEPEND="${DEPEND}"  # all the deps for vim-core are in vim.eclass
