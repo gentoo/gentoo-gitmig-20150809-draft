@@ -1,9 +1,10 @@
-MD5 56cfbafe64adf34f062dcdd1f2229f4f ChangeLog 10272
+MD5 753d77f2c08a6a1c826450fbc6f4543e ChangeLog 10411
 MD5 f1cae297e40943ab7250caf03f4fb51b alsa-utils-0.5.10-r8.ebuild 935
 MD5 8f4d45d64587cd64abf27a7328f2875f alsa-utils-0.9.0_rc2.ebuild 821
 MD5 6e78cc615da0fc4b10fdea171f211534 alsa-utils-0.9.2.ebuild 788
 MD5 282bcad49a0354a9556e16e7b42e22e7 alsa-utils-0.9.8.ebuild 1640
 MD5 5acaa72cd5478b0a9b3553ebb4a60d2f alsa-utils-1.0.2.ebuild 1687
+MD5 afb1cec1242a691a97b89f61b164ec34 alsa-utils-1.0.6.ebuild 1709
 MD5 2c30d8f51a7295775ff269f3962c7c1e alsa-utils-1.0.5.ebuild 1705
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 dcc66ee6a9db24006a4158e2be0da3f2 files/alsa-0.5.10 392
@@ -16,4 +17,5 @@ MD5 59a93bf64737644e4001cbb6ad5387b4 files/digest-alsa-utils-0.9.0_rc2 71
 MD5 55414f65ffecf5f44fa35295dae8bf19 files/digest-alsa-utils-0.9.2 69
 MD5 c393c831cb8bcda375cd4690e85b3495 files/digest-alsa-utils-0.9.8 69
 MD5 937332cbdb9fab58e9e43a58a3f965de files/digest-alsa-utils-1.0.2 69
+MD5 fb7f68ad1c0d4ad52a9de4477b47c5c8 files/digest-alsa-utils-1.0.6 69
 MD5 c6aff50de146998a737abed55b3dd9f1 files/digest-alsa-utils-1.0.5 69
