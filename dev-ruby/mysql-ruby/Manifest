@@ -1,8 +1,18 @@
-MD5 c1ee70bd1b3fbd8561610b937051ea25 mysql-ruby-2.5.2.ebuild 932
-MD5 8eae0f0d263c7512802912551496b93a mysql-ruby-2.5.ebuild 929
-MD5 e3c4cb3731dac5e6c23b04faf4247011 mysql-ruby-2.4.5.ebuild 608
-MD5 bc8067d60fe1bb2a0d85cf7d815083e0 ChangeLog 1280
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 aa70405cc5d437bc9dd00d4285d9d4f9 mysql-ruby-2.5.ebuild 931
+MD5 05ea9827fc29596f39f9c26bdcfc3d6f ChangeLog 1379
+MD5 c1ee70bd1b3fbd8561610b937051ea25 mysql-ruby-2.5.2.ebuild 932
+MD5 e3c4cb3731dac5e6c23b04faf4247011 mysql-ruby-2.4.5.ebuild 608
 MD5 1555f15ad051802c7c329642b88a3e84 files/digest-mysql-ruby-2.4.5 67
-MD5 ef7c62b80081983e0e194f9ff2d65165 files/digest-mysql-ruby-2.5.2 67
 MD5 ab99745bd26911f9145102259bb33e19 files/digest-mysql-ruby-2.5 65
+MD5 ef7c62b80081983e0e194f9ff2d65165 files/digest-mysql-ruby-2.5.2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCMf2TKRy60XGEcJIRAqZ9AKCa116EZtXQi+jKnL0ZsUYNfAIlqgCgnr+Y
+ixuXTJIRbipTO/4NJZ4OpLM=
+=kj23
+-----END PGP SIGNATURE-----
