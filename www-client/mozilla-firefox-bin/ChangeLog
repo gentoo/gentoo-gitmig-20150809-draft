@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.5 2005/03/24 02:27:50 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.6 2005/03/25 10:57:18 blubb Exp $
+
+  25 Mar 2005; <blubb@gentoo.org> mozilla-firefox-bin-1.0.2.ebuild:
+  stable on amd64 wrt bug #86148
 
 *mozilla-firefox-bin-1.0.2 (23 Mar 2005)
 
