@@ -1,0 +1,11 @@
+# ChangeLog for net-wireless/gkismet
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gkismet/ChangeLog,v 1.1 2004/10/20 21:40:50 brix Exp $
+
+*gkismet-0.0.8 (20 Oct 2004)
+
+  20 Oct 2004; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml,
+  +gkismet-0.0.8.ebuild:
+  Initial check-in based on an ebuild by Fridtjof Busse <gentoo@fbunet.de> in
+  bug #56419
+
