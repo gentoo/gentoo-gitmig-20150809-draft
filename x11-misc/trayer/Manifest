@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d7740ab668a8bf17a4a918950807235f ChangeLog 446
+MD5 c290d8c21fb2eceab1e913bb68adeb9d ChangeLog 542
+MD5 f5faee21a5edd8ae9cef4699c5a2ecd1 trayer-1.0.ebuild 672
 MD5 96240b4a85c446c00ba6c73fa3329494 metadata.xml 221
-MD5 4a20d9f719662c85bf45cf8ca4fc0e27 trayer-1.0.ebuild 669
 MD5 6137c4d7246eb98901197e7b27682e8e files/digest-trayer-1.0 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCLHTOKRy60XGEcJIRAl0jAJ4ji4M731c65roC6STfb7ooePrOfQCfWKZh
-YL6v1s19gWrxlpYMerKJx0k=
-=ooG+
------END PGP SIGNATURE-----
