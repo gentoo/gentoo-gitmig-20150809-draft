@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hpoj
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.13 2004/03/02 13:46:37 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.14 2004/03/27 17:33:46 lanius Exp $
+
+  27 Mar 2004; Heinrich Wendel <lanius@gentoo.org> hpoj-0.91-r2.ebuild,
+  files/hpoj.init:
+  add dep to hotplug if usb in use; fix hotplug dep in init script
 
   02 Mar 2004; Heinrich Wendel <lanius@gentoo.org> hpoj-0.91-r2.ebuild:
   stable on x86

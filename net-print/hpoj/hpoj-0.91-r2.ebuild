@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r2.ebuild,v 1.3 2004/03/09 06:51:03 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/hpoj-0.91-r2.ebuild,v 1.4 2004/03/27 17:33:46 lanius Exp $
 
 DESCRIPTION="HP OfficeJet Linux driver"
 HOMEPAGE="http://hpoj.sourceforge.net/"
@@ -16,7 +16,7 @@ DEPEND="qt?      ( >=x11-libs/qt-3.1.0-r1 )
 	scanner? ( || ( X? ( >=media-gfx/xsane-0.89 ) >=media-gfx/sane-frontends-1.0.9 ) )
 	snmp?    ( virtual/snmp )
 	cups?    ( >=net-print/cups-1.1.18-r2 )
-	usb?     ( dev-libs/libusb )"
+	usb?     ( dev-libs/libusb sys-apps/hotplug )"
 
 src_compile() {
 	epatch ${FILESDIR}/udev.patch
