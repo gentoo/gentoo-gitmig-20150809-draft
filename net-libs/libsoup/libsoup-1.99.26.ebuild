@@ -1,40 +1,48 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-1.99.26.ebuild,v 1.1 2003/09/24 14:28:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-1.99.26.ebuild,v 1.2 2003/09/28 10:05:14 liquidx Exp $
 
-#IUSE="ssl"
-IUSE=""
 
 inherit gnome.org libtool
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Soup is a SOAP implementation"
 HOMEPAGE="http://www.gnome.org/"
 
-SLOT="2"
+IUSE="gnutls"
+SLOT="0"
+LICENSE="LGPL-2"
+KEYWORDS="~x86 ~sparc  ~ppc ~alpha ~hppa"
+
 RDEPEND=">=dev-libs/glib-2.0
-	dev-libs/openssl"
+	!gnutls? ( dev-libs/openssl )
+	gnutls?  ( net-libs/gnutls )"
+	
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	dev-libs/popt
 	${RDEPEND}"
 
-LICENSE="LGPL-2"
-SLOT="0"
-KEYWORDS="~x86 ~sparc  ~ppc ~alpha ~hppa"
+src_unpack() {
+	unpack ${A}
+	# added --with-ssl=openssl|gnutls to choose between the two.
+	epatch ${FILESDIR}/${P}-with_ssl.patch
+	cd ${S}; aclocal; automake; autoconf
+}
 
 src_compile() {
-	elibtoolize
-
-	local myconf=""
-
+	local myconf
+	elibtoolize	
+	
 	# current build system deems ssl as NOT AN OPTION.
 	# use ssl && myconf="--enable-ssl --enable-openssl"
+	use gnutls \
+		&& myconf="${myconf} --with-ssl=gnutls" \
+		|| myconf="${myconf} --with-ssl=openssl"
 
-	econf ${myconf} || die
-	emake || die
+	econf ${myconf} || die "configure failed"
+	emake || die "make failed"
 }
 
 src_install() {
-	einstall || die
+	einstall || die "install failed"
 	dodoc AUTHORS COPYING* ChangeLog README* TODO
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.9 2003/09/24 14:28:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.10 2003/09/28 10:05:14 liquidx Exp $
+
+  28 Sep 2003; Alastair Tse <liquidx@gentoo.org> libsoup-1.99.26.ebuild,
+  files/libsoup-1.99.26-with_ssl.patch:
+  add patch to switch between openssl and gnutls
 
 *libsoup-1.99.26 (24 Sep 2003)
 
