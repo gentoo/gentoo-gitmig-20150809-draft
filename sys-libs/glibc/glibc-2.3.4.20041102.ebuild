@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.3 2004/11/05 16:38:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.4 2004/11/10 09:20:22 kumba Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -40,7 +40,7 @@ SRC_URI="http://dev.gentoo.org/~lv/${PN}-${BASE_PV}.tar.bz2
 
 LICENSE="LGPL-2"
 SLOT="2.2"
-KEYWORDS="~amd64 ~ppc64 -hppa ~ia64 ~ppc ~x86 -*"
+KEYWORDS="~amd64 ~ppc64 -hppa ~ia64 ~ppc ~x86 ~mips -*"
 IUSE="nls pic build nptl nptlonly erandom hardened multilib debug userlocales nomalloccheck"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
@@ -348,17 +348,22 @@ do_arch_mips_patches() {
 	cd ${S}
 
 	# A few patches only for the MIPS platform.  Descriptions of what they
-	# do can be found in the patch headers.
-	# <tuxus@gentoo.org> thx <dragon@gentoo.org> (11 Jan 2003)
-	# <kumba@gentoo.org> remove tst-rndseek-mips & ulps-mips patches
-	# <iluxa@gentoo.org> add n32/n64 patches, remove pread patch
-	epatch ${FILESDIR}/2.3.3/mips-addabi.diff
-	epatch ${FILESDIR}/2.3.3/mips-syscall.h.diff
-	epatch ${FILESDIR}/2.3.3/mips-sysify.diff
+	# do can (probably) be found in the patch headers.
+	epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
+	epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-fpu-cw-mips.patch
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-addabi.diff
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-syscall.h.diff
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-sysify.diff
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-semtimedop.diff
+	epatch ${FILESDIR}/2.3.4/${PN}-2.3.4-mips-update-__throw.patch
+	epatch ${FILESDIR}/2.3.4/${PN}-2.3.4-mips-prot_grows-undefined.patch
+	epatch ${FILESDIR}/2.3.4/${PN}-2.3.4-mips-rtld_deepbind-undefined.patch
+	epatch ${FILESDIR}/2.3.4/${PN}-2.3.4-mips-add-missing-sgidefs_h.patch
+	epatch ${FILESDIR}/2.3.4/${PN}-2.3.4-mips-add-glibc_2.0-to-librt.patch
 
 	# Need to install into /lib for n32-only userland for now.
 	# Propper solution is to make all userland /lib{32|64}-aware.
-	use multilib || epatch ${FILESDIR}/2.3.3/mips-nolib3264.diff
+	use multilib || epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-nolib3264.diff
 }
 
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.10 2004/10/19 19:52:14 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.11 2004/11/10 09:20:22 kumba Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -364,13 +364,13 @@ do_arch_mips_patches() {
 	# <tuxus@gentoo.org> thx <dragon@gentoo.org> (11 Jan 2003)
 	# <kumba@gentoo.org> remove tst-rndseek-mips & ulps-mips patches
 	# <iluxa@gentoo.org> add n32/n64 patches, remove pread patch
-	epatch ${FILESDIR}/2.3.3/mips-addabi.diff
-	epatch ${FILESDIR}/2.3.3/mips-syscall.h.diff
-	epatch ${FILESDIR}/2.3.3/mips-sysify.diff
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-addabi.diff
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-syscall.h.diff
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-sysify.diff
 
 	# Need to install into /lib for n32-only userland for now.
 	# Propper solution is to make all userland /lib{32|64}-aware.
-	use multilib || epatch ${FILESDIR}/2.3.3/mips-nolib3264.diff
+	use multilib || epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-nolib3264.diff
 
 	# Found this on Google (yay google!) and it fixes glibc not building
 	# a correct bits/syscall.h from 2.6.x headers.  It possibly breaks older

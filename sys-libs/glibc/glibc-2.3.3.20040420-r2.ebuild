@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420-r2.ebuild,v 1.1 2004/10/07 22:24:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420-r2.ebuild,v 1.2 2004/11/10 09:20:22 kumba Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -407,11 +407,11 @@ src_unpack() {
 		epatch ${FILESDIR}/2.3.2/${LOCAL_P}-mips-configure-for-n64-symver.patch
 		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040420-mips-dl-machine-calls.diff
 		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040420-mips-incl-sgidefs.diff
-		epatch ${FILESDIR}/2.3.3/mips-addabi.diff
-		epatch ${FILESDIR}/2.3.3/mips-syscall.h.diff
-		epatch ${FILESDIR}/2.3.3/semtimedop.diff
-		epatch ${FILESDIR}/2.3.3/mips-sysify.diff
-#####		epatch ${FILESDIR}/2.3.3/mips-n32n64regs.diff
+		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-addabi.diff
+		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-syscall.h.diff
+		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-semtimedop.diff
+		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-sysify.diff
+#####		epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-n32n64regs.diff
 	fi
 
 	if [ "${ARCH}" = "alpha" ]

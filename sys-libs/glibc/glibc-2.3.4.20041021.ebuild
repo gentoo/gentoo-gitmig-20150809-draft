@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041021.ebuild,v 1.7 2004/11/05 14:04:45 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041021.ebuild,v 1.8 2004/11/10 09:20:22 kumba Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -40,7 +40,7 @@ SRC_URI="http://dev.gentoo.org/~lv/${PN}-${BASE_PV}.tar.bz2
 
 LICENSE="LGPL-2"
 SLOT="2.2"
-KEYWORDS="-* ~amd64 -hppa ~ia64 -ppc ~ppc64 ~x86"
+KEYWORDS="-* ~amd64 -hppa ~ia64 -ppc ~ppc64 ~x86 -mips"
 IUSE="nls pic build nptl nptlonly erandom hardened multilib debug userlocales"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
@@ -378,13 +378,13 @@ do_arch_mips_patches() {
 	# <tuxus@gentoo.org> thx <dragon@gentoo.org> (11 Jan 2003)
 	# <kumba@gentoo.org> remove tst-rndseek-mips & ulps-mips patches
 	# <iluxa@gentoo.org> add n32/n64 patches, remove pread patch
-	epatch ${FILESDIR}/2.3.3/mips-addabi.diff
-	epatch ${FILESDIR}/2.3.3/mips-syscall.h.diff
-	epatch ${FILESDIR}/2.3.3/mips-sysify.diff
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-addabi.diff
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-syscall.h.diff
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-sysify.diff
 
 	# Need to install into /lib for n32-only userland for now.
 	# Propper solution is to make all userland /lib{32|64}-aware.
-	use multilib || epatch ${FILESDIR}/2.3.3/mips-nolib3264.diff
+	use multilib || epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-mips-nolib3264.diff
 }
 
 
