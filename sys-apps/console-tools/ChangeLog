@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/console-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/ChangeLog,v 1.12 2003/05/18 19:56:09 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/ChangeLog,v 1.13 2003/06/09 23:17:38 msterret Exp $
+
+  09 Jun 2003; <msterret@gentoo.org> console-tools-0.3.2.ebuild:
+  DEPEND on sed >= 4
 
   18 May 2003; Nicholas Wourms <dragon@gentoo.org> console-tools-0.3.2.ebuild,
   files/console-tools-0.3.2-multi-line-string-fix.diff:

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.3.2.ebuild,v 1.3 2003/05/18 19:56:09 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.3.2.ebuild,v 1.4 2003/06/09 23:17:38 msterret Exp $
 
 inherit libtool eutils
 
@@ -16,6 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips"
 
 DEPEND="sys-devel/autoconf
+	>=sys-apps/sed-4
 	sys-devel/automake
 	sys-devel/libtool
 	nls? ( sys-devel/gettext )"
