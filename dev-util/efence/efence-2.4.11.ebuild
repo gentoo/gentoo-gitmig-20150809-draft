@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/efence-2.4.11.ebuild,v 1.2 2005/01/15 06:35:27 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/efence-2.4.11.ebuild,v 1.3 2005/01/17 00:42:53 ka0ttic Exp $
 
-inherit versionator toolchain-funcs
+inherit eutils versionator toolchain-funcs
 
 MY_P="${PN}_$(replace_all_version_separators '_')"
 S="${WORKDIR}/${PN}"
