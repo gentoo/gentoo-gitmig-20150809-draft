@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.32 2003/10/17 13:22:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.33 2003/10/22 16:06:18 darkspecter Exp $
+
+  22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org>
+  libwnck-2.4.0.1-r1.ebuild:
+  set ppc in keywords
 
   17 Oct 2003; Aron Griffis <agriffis@gentoo.org> libwnck-2.4.0.1-r1.ebuild:
   Stable on alpha
