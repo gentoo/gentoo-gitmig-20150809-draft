@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r3.ebuild,v 1.6 2004/04/01 02:35:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r3.ebuild,v 1.7 2004/04/06 17:19:57 avenj Exp $
 
 inherit gcc flag-o-matic
 
@@ -59,6 +59,7 @@ src_install() {
 		dolib.so ${S}/libbz2.so.${PV}
 		dosym /usr/lib/libbz2.so.${PV} /usr/lib/libbz2.so.1.0
 		dosym /usr/lib/libbz2.so.${PV} /usr/lib/libbz2.so
+		dosym /usr/lib/libbz2.so.${PV} /usr/lib/libbz2.so.1
 
 		dodoc README LICENSE CHANGES Y2K_INFO
 		docinto txt
