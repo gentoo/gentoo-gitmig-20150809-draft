@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_pre8-r1.ebuild,v 1.2 2004/05/10 20:59:47 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r2.ebuild,v 1.1 2004/05/10 20:59:47 karltk Exp $
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
-SRC_URI="http://download.eclipse.org/downloads/drops/S-3.0M8-200403261517/eclipse-sourceBuild-srcIncluded-3.0M8.zip"
+SRC_URI="http://download.eclipse.org/downloads/drops/R-2.1.3-200403101828/eclipse-sourceBuild-srcIncluded-2.1.3.zip"
 IUSE="gtk motif gnome kde mozilla jikes"
-SLOT="3"
+SLOT="2"
 LICENSE="CPL-1.0"
 KEYWORDS="~x86"
 
@@ -17,7 +17,6 @@ RDEPEND=">=virtual/jdk-1.3
 		motif? ( x11-libs/openmotif )
 		>=x11-libs/gtk+-2.2.4
 		)
-	mozilla? ( >=net-www/mozilla-1.5 )
 	gnome? ( =gnome-base/gnome-vfs-2* )
 	"
 
@@ -25,6 +24,7 @@ DEPEND="${RDEPEND}
 	>=dev-java/ant-1.5.3
 	>=sys-apps/findutils-4.1.7
 	>=app-shells/tcsh-6.11
+	net-www/mozilla
 	app-arch/unzip"
 
 pkg_setup() {
@@ -66,11 +66,11 @@ src_unpack() {
 	unpack ${A}
 
 	# karltk: Is this really needed?
-	addwrite "/proc/self/maps"
+#	addwrite "/proc/self/maps"
 
 	# Clean up all pre-built code
-	ant -q -DinstallWs=gtk -DinstallOs=linux clean
-	ant -q -DinstallWs=motif -DinstallOs=linux clean
+	ant -q -Dws=gtk -Dos=linux clean
+	ant -q -Dws=motif -Dos=linux clean
 	find ${S} -name '*.so' -exec rm -f {} \;
 	find ${S} -name '*.so.*' -exec rm -f {} \;
 	find ${S} -type f -name 'eclipse' -exec rm {} \;
@@ -82,31 +82,24 @@ src_unpack() {
 	# Move around some source code that should have been handled by the build system
 	cd ${S}/"${gtk_swt_src_dir}" || die "Directory ${gtk_swt_src_dir} not found"
 	cp ${S}/plugins/org.eclipse.swt/Eclipse\ SWT/common/library/* .
-	cp ${S}/plugins/org.eclipse.swt/Eclipse\ SWT\ Mozilla/common/library/* .
-	cp ${S}/plugins/org.eclipse.swt/Eclipse\ SWT\ Program/gnome/library/* .
-	cp ${S}/plugins/org.eclipse.swt/Eclipse\ SWT\ AWT/gtk/library/* .
+#	cp ${S}/plugins/org.eclipse.swt/Eclipse\ SWT\ Mozilla/common/library/* .
+#	cp ${S}/plugins/org.eclipse.swt/Eclipse\ SWT\ Program/gnome/library/* .
+#	cp ${S}/plugins/org.eclipse.swt/Eclipse\ SWT\ AWT/gtk/library/* .
 
 	if use gnome ; then
 	    gnome_lib=`pkg-config --libs gnome-vfs-module-2.0 libgnome-2.0 libgnomeui-2.0 | sed -e "s:-pthread:-lpthread:" -e "s:-Wl,--export:--export:"`
 	fi
 
 	if use gtk ; then
-		gtk_lib=`pkg-config --libs gtk+-2.0 gthread-2.0 | sed -e "s:-pthread:-lpthread:" -e "s:-Wl,--export:--export:"`
-		atk_lib=`pkg-config --libs atk gtk+-2.0 | sed -e "s:-Wl,--export:--export:"`
+		gthread_lib=`pkg-config --libs gtk+-2.0 gthread-2.0 | sed -e "s:-pthread:-lpthread:" -e "s:-Wl,--export:--export:"`
 	fi
 
-	sed -e "s:/bluebird/teamswt/swt-builddir/IBMJava2-141:$JAVA_HOME:" \
-		-e "s:/bluebird/teamswt/swt-builddir/jdk1.5.0:$JAVA_HOME:" \
-		-e "s:/mozilla/mozilla/1.6/linux_gtk2/mozilla/dist:$MOZILLA_FIVE_HOME:" \
-		-e "s:/usr/lib/mozilla-1.6:$MOZILLA_FIVE_HOME:" \
-		-e "s:\`pkg-config --libs gtk+-2.0 gthread-2.0\`:${gtk_lib}:" \
-		-e "s:\`pkg-config --libs atk gtk+-2.0\`:${atk_lib}:" \
-		-e "s:\`pkg-config --libs gnome-vfs-module-2.0 libgnome-2.0 libgnomeui-2.0\`:${gnome_lib}:" \
-		-e "s:-I\$(JAVA_HOME)/include:-I\$(JAVA_HOME)/include -I\$(JAVA_HOME)/include/linux:" \
-		-e "s:-I\$(JAVA_HOME)\t:-I\$(JAVA_HOME)/include -I\$(JAVA_HOME)/include/linux:" \
-		-e "s:-L\$(MOZILLA_HOME)/lib -lembed_base_s:-L\$(MOZILLA_HOME):" \
-		-e "s:MOZILLACFLAGS = -O:MOZILLACFLAGS = -O -fPIC:" \
-		-e "s:\$(JAVA_HOME)/jre/bin:\$(JAVA_HOME)/jre/lib/i386:" \
+
+	sed -e "s:/bluebird/teamswt/swt-builddir/ive:$JAVA_HOME:" \
+		-e "s:JAVA_JNI=\$(IVE_HOME)/bin/include:JAVA_JNI=\$(IVE_HOME)/include:" \
+		-e "s:\`pkg-config --libs gthread-2.0\`:${gthread_lib}:" \
+		-e "s:\`pkg-config --libs gnome-vfs-2.0\`:${gnome_lib}:" \
+		-e "s:-I\$(JAVA_JNI):-I\$(JAVA_JNI) -I\$(JAVA_JNI)/linux:" \
 		-i make_gtk.mak
 
 	# Extra patching if the gtk+ installed is 2.4 or newer
@@ -116,22 +109,21 @@ src_unpack() {
 		einfo "Applying gtk+-2.4 patches"
 		sed -r \
 			-e "s:#define GTK_DISABLE_DEPRECATED::g" \
-			-e "s:(^void gtk_progress_bar_set_bar_style.*):/* \1 */:" \
-			-i os.h
+			-i swt.c
 	fi
 
 	cd ${S}/"${motif_swt_src_dir}"
 	cp ${S}/plugins/org.eclipse.swt/Eclipse\ SWT/common/library/* .
-	sed -e "s:/bluebird/teamswt/swt-builddir/IBMJava2-141:$JAVA_HOME:" \
+
+	sed -e "s:/bluebird/teamswt/swt-builddir/ive/bin:$JAVA_HOME:" \
+		-e "s:-I\$(JAVA_HOME)/include:-I\$(JAVA_HOME)/include -I\$(JAVA_HOME)/include/linux:" \
 		-e "s:/bluebird/teamswt/swt-builddir/motif21:/usr/X11R6:" \
-		-e "s:/usr/lib/qt-3.1:/usr/qt/3:" \
+	   	-e "s:\`pkg-config --libs gthread-2.0\`:${gthread_lib}:" \
+	    -e "s:\`pkg-config --libs gnome-vfs-2.0\`:${gnome_lib}:" \
+		-e "s:/usr/lib/qt3:/usr/qt/3:" \
 		-e "s:-lkdecore:-L\`kde-config --prefix\`/lib -lkdecore:" \
 		-e "s:-I/usr/include/kde:-I\`kde-config --prefix\`/include:" \
-		-e "s:-I\$(JAVA_HOME)/include:-I\$(JAVA_HOME)/include -I\$(JAVA_HOME)/include/linux:" \
-		-e "s:-I\$(JAVA_HOME)\t:-I\$(JAVA_HOME)/include -I\$(JAVA_HOME)/include/linux:" \
-		-e "s:-L\$(MOZILLA_HOME)/lib -lembed_base_s:-L\$(MOZILLA_HOME):" \
-		-e "s:-L\$(JAVA_HOME)/jre/bin:-L\$(JAVA_HOME)/jre/lib/i386:" \
-		-i make_linux.mak
+	-i make_linux.mak
 
 	cd ${S}
 	find -type f -name about.mappings -exec sed -e "s/@build@/Gentoo Linux ${PV}/" -i \{\} \;
@@ -147,17 +139,15 @@ build_gtk_frontend() {
 
 	cd ${S}/"${gtk_swt_src_dir}"
 	make -f make_gtk.mak make_swt || die "Failed to build platform-independent SWT support"
-	make -f make_gtk.mak make_atk || die "Failed to build atk support"
-
-	if use gnome ; then
-		einfo "Building GNOME VFS support"
-		make -f make_gtk.mak make_gnome || die "Failed to build GNOME VFS support"
-	fi
-
-	if use mozilla ; then
-		einfo "Building Mozilla component"
-		make -f make_gtk.mak make_mozilla || die "Failed to build Mozilla support"
-	fi
+#	make -f make_gtk.mak make_atk || die "Failed to build atk support"
+#	if use gnome ; then
+#		einfo "Building GNOME VFS support"
+#		make -f make_gtk.mak make_gnome || die "Failed to build GNOME VFS support"
+#	fi
+#	if use mozilla ; then
+#		einfo "Building Mozilla component"
+#		make -f make_gtk.mak make_mozilla || die "Failed to build Mozilla support"
+#	fi
 
 	# move the *.so files to the right path so eclipse can find them
 	mkdir -p ${S}/"${gtk_swt_dest_dir}"
@@ -187,7 +177,7 @@ build_motif_frontend() {
 
 src_compile() {
 
-	addwrite "/proc/self/maps"
+#	addwrite "/proc/self/maps"
 
 	# Figure out correct boot classpath
 	if [ ! -z "`java-config --java-version | grep IBM`" ] ; then
@@ -206,24 +196,24 @@ src_compile() {
 
 	set_dirs
 
-	# First build all java code
-
+	# karltk: Do we really need to rebuild all of this if both motif and
+	# gtk are specified?
 
 	if ( use gtk || ! ( use gtk || use motif || use kde ) ); then
-		einfo "Building GTK+ frontend"
+		einfo "Building platform suited for the GTK+ frontend"
 		ant -q \
 			-buildfile build.xml \
-			-DinstallOs=linux \
-			-DinstallWs=gtk \
+			-Dos=linux \
+			-Dws=gtk \
 			-DinstallArch=$ARCH \
 			${ant_extra_opts} compile || die "Failed to compile java code (gtk+)"
 	fi
 	if use motif ; then
-		einfo "Building Motif frontend"
+		einfo "Building platform suited for the Motif frontend"
 		ant -q \
 			-buildfile build.xml \
-			-DinstallOs=linux \
-			-DinstallWs=motif \
+			-Dos=linux \
+			-Dws=motif \
 			-DinstallArch=$ARCH \
 			${ant_extra_opts} compile || die "Failed to compile java code (Motif)"
 	fi
@@ -271,7 +261,13 @@ src_install() {
 	# Install features
 	dodir ${eclipse_dir}/features
 	einfo "Copying features"
-	cp -dpR features/org.eclipse.{sdk,jdt,pde,platform} ${D}/${eclipse_dir}/features/
+	cp -dpR features/org.eclipse.{jdt,platform,team.extras}-feature ${D}/${eclipse_dir}/features/
+	if use gtk ; then
+		cp -dpR features/org.eclipse.{platform,sdk}.linux.gtk-feature ${D}/${eclipse_dir}/features/
+	fi
+	if use motif ; then
+		cp -dpR features/org.eclipse.{platform,sdk}.linux.motif-feature ${D}/${eclipse_dir}/features/
+	fi
 
 	# Install plugins
 	einfo "Creating directory structure"
@@ -305,7 +301,3 @@ src_install() {
 		sed -e "s/@PV@/${PV}/" -i ${D}/usr/share/gnome/apps/Development
 	fi
 }
-
-# TODO
-# - check MOZILLACFLAGS
-
