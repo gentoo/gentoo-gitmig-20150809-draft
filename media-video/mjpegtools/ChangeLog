@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.32 2003/08/26 00:56:47 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.33 2003/09/10 19:05:06 max Exp $
+
+*mjpegtools-1.6.1.90 (10 Sep 2003)
+
+  10 Sep 2003; Max Kalika <max@gentoo.org> mjpegtools-1.6.1.90.ebuild:
+  Bump to version 1.6.1.90.
 
   25 Aug 2003; Max Kalika <max@gentoo.org> mjpegtools-1.6.0-r7.ebuild,
   mjpegtools-1.6.1.ebuild:
