@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.11.ebuild,v 1.1 2004/03/30 23:07:38 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.11.ebuild,v 1.2 2004/06/15 07:52:01 kloeri Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A realtime Apache log analyzer"
 HOMEPAGE="http://clueful.shagged.org/apachetop/"
 SRC_URI="http://clueful.shagged.org/apachetop/files/${P}.tar.gz"
