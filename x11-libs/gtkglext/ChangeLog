@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkglext
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.29 2004/06/24 22:02:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.30 2004/08/08 00:52:07 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> gtkglext-1.0.3.ebuild,
+  gtkglext-1.0.4.ebuild, gtkglext-1.0.5.ebuild, gtkglext-1.0.6.ebuild:
+  Typo in DESCRIPTION: extention -> extension. Bug 59717.
 
   19 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> gtkglext-1.0.6.ebuild:
   marked ~amd64

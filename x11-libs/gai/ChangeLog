@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gai
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/ChangeLog,v 1.8 2004/06/24 22:01:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/ChangeLog,v 1.9 2004/08/08 00:50:25 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> gai-0.5.2.ebuild,
+  gai-0.5.3.ebuild, gai-0.5.5.ebuild:
+  Typo in DESCRIPTION: alot -> a lot. Bug 59717.
 
   10 May 2004; David Holm <dholm@gentoo.org> gai-0.5.5.ebuild:
   Added to ~ppc.

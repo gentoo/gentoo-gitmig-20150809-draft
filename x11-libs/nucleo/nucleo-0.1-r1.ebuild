@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/nucleo/nucleo-0.1-r1.ebuild,v 1.2 2004/08/04 09:32:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/nucleo/nucleo-0.1-r1.ebuild,v 1.3 2004/08/08 00:52:56 slarti Exp $
 
 IUSE=""
 
 DATE="20040721"
 
-DESCRIPTION="Nucleo is some libary for metisse"
+DESCRIPTION="Nucleo is some library for metisse"
 SRC_URI="http://insitu.lri.fr/~chapuis/software/metisse/${P}-${DATE}.tar.bz2"
 HOMEPAGE="http://insitu.lri.fr/~chapuis/metisse"
 
