@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <agenkin@gentoo.org> (26 Sep 2002)
+# Masking pending portage tree unfreeze.
+>=media-sound/grip-3.0.3
+
 # <raker@gentoo.org> (25 Sep 2002)
 # version bump.  ssl and other fixes
 =net-mail/courier-imap-1.5.3
@@ -57,7 +61,7 @@ dev-perl/perl-ldap
 =sys-apps/jfsutils-1.0.22
 
 # <agenkin@gentoo.org> (21 Sep 2002)
-# Masking pending freeze.
+# Masking pending unfreeze.
 >=media-video/ogle-0.8.5
 >=media-video/ogle-gui-0.8.5
 
