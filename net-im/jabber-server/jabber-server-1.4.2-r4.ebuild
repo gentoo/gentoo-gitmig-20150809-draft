@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r4.ebuild,v 1.2 2003/10/06 11:13:27 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r4.ebuild,v 1.3 2003/10/11 01:54:13 luke-jr Exp $
 
 S="${WORKDIR}/jabber-${PV}"
 DESCRIPTION="Open Source Jabber Server & JUD,MUC,AIM,MSN,ICQ and Yahoo transports"
@@ -17,7 +17,7 @@ SRC_URI="http://jabberd.jabberstudio.org/downloads/jabber-${PV}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-*"
+KEYWORDS="~x86"
 IUSE="ssl ldap"
 # Internal USE flags that I do not really want to advertise ...
 IUSE="${IUSE} j-nomsn j-noaim j-noyahoo j-nomuconf j-nojud"
