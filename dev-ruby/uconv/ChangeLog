@@ -1,10 +1,11 @@
 # ChangeLog for dev-ruby/uconv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.8 2004/11/01 20:08:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.9 2004/12/16 09:36:21 corsair Exp $
 
-  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+  16 Dec 2004; Markus Rothe <corsair@gentoo.org> uconv-0.4.12.ebuild:
+  Stable on ppc64
 
-  uconv-0.4.12.ebuild:
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org> uconv-0.4.12.ebuild:
   Marked ~ppc64; bug #66439
 
   07 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> -uconv-0.4.11-r1.ebuild,

@@ -1,13 +1,14 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.10 2004/11/23 00:00:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.11 2004/12/16 09:41:22 corsair Exp $
+
+  16 Dec 2004; Markus Rothe <corsair@gentoo.org> rdoc-0.9.0.ebuild:
+  Stable on ppc64
 
   23 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed digest.
 
-  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
-
-  rdoc-0.9.0.ebuild:
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org> rdoc-0.9.0.ebuild:
   Marked ~ppc64; bug #66442
 
   25 Aug 2004; Sven Wegener <swegener@gentoo.org> rdoc-0_beta2.ebuild:
