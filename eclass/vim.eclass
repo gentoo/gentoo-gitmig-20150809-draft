@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.37 2003/09/09 21:53:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.38 2003/09/10 13:58:21 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -25,7 +25,7 @@ if [ ${PN} != vim-core ]; then
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
 		python?  ( dev-lang/python )"
-# Vim versions after 6.2d should work with Ruby 1.8 because of a local
+	# Vim versions after 6.2d should work with Ruby 1.8 because of a local
 	# Gentoo patch; working on putting it upstream (22 May 2003 agriffis)
 	if [[ "$PV" < 6.2 || ( "$PV" == 6.2_pre* && "${PV#*pre}" -lt 4 ) ]]; then
 		DEPEND="$DEPEND ruby? ( =dev-lang/ruby-1.6* )" # 1.8 doesn't work
