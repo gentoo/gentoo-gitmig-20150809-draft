@@ -1,3 +1,5 @@
+MD5 ec52dcb0bd95ae84831aceb03918c0c1 ChangeLog 510
 MD5 0fdb295fd7d7e5aaff3bcb30520e2b0e xrmap-2.10.ebuild 1741
-MD5 ba02be66848c78d8423f28429b977fb8 ChangeLog 391
+MD5 aabe1b37799cdf0c571a363e1bcfce9f xrmap-2.29.ebuild 1809
+MD5 6a9054a1b0da3f3c1577719984fbf63c files/digest-xrmap-2.29 125
 MD5 d3d071db1ec04cf25a797313b25b8f49 files/digest-xrmap-2.10 121
