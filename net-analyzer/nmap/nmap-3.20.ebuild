@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.20.ebuild,v 1.1 2003/03/19 20:28:06 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.20.ebuild,v 1.2 2003/03/29 12:13:38 mholzer Exp $
 
 inherit gcc
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.insecure.org/nmap/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa"
 IUSE="gtk gnome"
 
 DEPEND="virtual/glibc
@@ -35,6 +35,6 @@ src_install() {
 		|| die
 	use gnome || rm -rf ${D}/usr/share/gnome/
 
-	dodoc CHANGELOG COPYING HACKING README* docs/*.txt
+	dodoc CHANGELOG COPYING HACKING INSTALL README* docs/README docs/*.txt
 	dohtml docs/*.html
 }
