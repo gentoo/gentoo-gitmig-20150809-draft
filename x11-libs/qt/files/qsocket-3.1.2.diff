@@ -1,0 +1,128 @@
+--- src/network/qsocket.cpp.orig	2003-02-24 09:30:06.000000000 +0100
++++ src/network/qsocket.cpp	2002-12-09 10:40:38.000000000 +0100
+@@ -1,5 +1,5 @@
+ /****************************************************************************
+-** $Id: qsocket-3.1.2.diff,v 1.1 2003/04/12 23:20:25 brain Exp $
++** $Id: qsocket-3.1.2.diff,v 1.1 2003/04/12 23:20:25 brain Exp $
+ **
+ ** Implementation of QSocket class.
+ **
+@@ -112,9 +112,7 @@
+ public:
+     QSocketPrivate();
+    ~QSocketPrivate();
+-    void closeSocket();
+     void close();
+-    void connectionClosed();
+ 
+     QSocket::State	state;			// connection state
+     QString		host;			// host name
+@@ -153,7 +151,7 @@
+ #endif
+ }
+ 
+-void QSocketPrivate::closeSocket()
++void QSocketPrivate::close()
+ {
+     // Order is important here - the socket notifiers must go away
+     // before the socket does, otherwise libc or the kernel will
+@@ -163,25 +161,11 @@
+     delete wsn;
+     wsn = 0;
+     socket->close();
+-}
+-
+-void QSocketPrivate::close()
+-{
+-    closeSocket();
+     rsize = wsize = 0;
+     rba.clear(); wba.clear();
+     rindex = windex = 0;
+ }
+ 
+-void QSocketPrivate::connectionClosed()
+-{
+-    // We keep the open state in case there's unread incoming data
+-    state = QSocket::Idle;
+-    closeSocket();
+-    wba.clear();
+-    windex = wsize = 0;
+-}
+-
+ /*!
+     \class QSocket qsocket.h
+     \brief The QSocket class provides a buffered TCP connection.
+@@ -591,7 +575,7 @@
+     }
+     setFlags( IO_Sequential );
+     setStatus( IO_Ok );
+-    d->close();
++	d->close();
+     d->state = Idle;
+ }
+ 
+@@ -1201,7 +1185,15 @@
+ #if defined(QSOCKET_DEBUG)
+ 	    qDebug( "QSocket (%s): sn_read: Connection closed", name() );
+ #endif
+-	    d->connectionClosed();
++	    // We keep the open state in case there's unread incoming data
++	    d->state = Idle;
++	    if ( d->rsn )
++		d->rsn->setEnabled( FALSE );
++	    if ( d->wsn )
++		d->wsn->setEnabled( FALSE );
++	    d->socket->close();
++	    d->wba.clear();			// clear write buffer
++	    d->windex = d->wsize = 0;
+ 	    emit connectionClosed();
+ 	    QSocketPrivate::sn_read_alreadyCalled.removeRef( this );
+ 	    return;
+@@ -1215,7 +1207,7 @@
+ #if defined(QSOCKET_DEBUG)
+ 		qWarning( "QSocket::sn_read (%s): Close error", name() );
+ #endif
+-		if ( d->rsn )
++		if (d->rsn)
+ 		    d->rsn->setEnabled( FALSE );
+ 		emit error( ErrSocketRead );
+ 		QSocketPrivate::sn_read_alreadyCalled.removeRef( this );
+@@ -1242,13 +1234,7 @@
+ 		memcpy(a->data(),buf,nread);
+ 	    }
+ 	}
+-	if ( nread == 0 ) {
+-#if defined(QSOCKET_DEBUG)
+-	    qDebug( "QSocket (%s): sn_read: Connection closed", name() );
+-#endif
+-	    d->connectionClosed();
+-	    emit connectionClosed();
+-	} else if ( nread < 0 ) {
++	if ( nread <= 0 ) {
+ 	    if ( d->socket->error() == QSocketDevice::NoError ) {
+ 		// all is fine
+ 		QSocketPrivate::sn_read_alreadyCalled.removeRef( this );
+@@ -1258,7 +1244,7 @@
+ 	    qWarning( "QSocket::sn_read: Read error" );
+ #endif
+ 	    delete a;
+-	    if ( d->rsn )
++	    if (d->rsn)
+ 		d->rsn->setEnabled( FALSE );
+ 	    emit error( ErrSocketRead );
+ 	    QSocketPrivate::sn_read_alreadyCalled.removeRef( this );
+@@ -1273,13 +1259,8 @@
+     }
+     d->rba.append( a );
+     d->rsize += nread;
+-    if ( !force ) {
+-	if ( d->rsn )
+-	    d->rsn->setEnabled( FALSE );
++    if ( !force )
+ 	emit readyRead();
+-	if ( d->rsn )
+-	    d->rsn->setEnabled( TRUE );
+-    }
+ 
+     QSocketPrivate::sn_read_alreadyCalled.removeRef( this );
+ }
