@@ -1,2 +1,0 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/use.mask,v 1.1 2005/03/05 03:04:20 eradicator Exp $
-nptl
