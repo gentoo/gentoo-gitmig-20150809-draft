@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/framerd/framerd-2.4.3-r1.ebuild,v 1.10 2004/06/24 21:53:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/framerd/framerd-2.4.3-r1.ebuild,v 1.11 2004/06/29 16:00:16 agriffis Exp $
 
 DESCRIPTION="FramerD is a portable distributed object-oriented database designed to support the maintenance and sharing of knowledge bases."
 HOMEPAGE="http://www.framerd.org/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="readline"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	readline? >=sys-libs/readline-4.1-r4"
 
 src_compile() {
