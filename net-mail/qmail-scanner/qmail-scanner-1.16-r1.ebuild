@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.16-r1.ebuild,v 1.1 2003/04/19 23:18:35 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-scanner/qmail-scanner-1.16-r1.ebuild,v 1.2 2003/04/19 23:24:40 prez Exp $
 
 S=${WORKDIR}/${P}
 
@@ -22,7 +22,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc"
 
 src_compile () {
-    yes | PATH=${PATH}:/opt/f-prot ./configure \
+    yes | PATH=${PATH}:/opt/f-prot:/opt/vlnx ./configure \
         --domain localhost \
            || die "./configure failed!"
 }
