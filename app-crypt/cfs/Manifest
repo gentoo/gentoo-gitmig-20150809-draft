@@ -1,7 +1,17 @@
-MD5 27ee5b64c6a34ce2549ede727337d37b ChangeLog 513
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 611c6c2ee8dc717c2621e29d7ccf3bde ChangeLog 630
 MD5 7bd9c248558ff6726670e9965ccdc247 cfs-1.4.1.14.ebuild 2141
 MD5 2bfae1e5bb975f12d5062aa546c12884 metadata.xml 224
 MD5 0b0cdabd6032b25050b45428de2ec859 files/README.Gentoo 1584
-MD5 32480c3ff8af77c971dae9a2462a812d files/cfsd.init 679
 MD5 70c0837e5af2754645bdea19b6d56fec files/cfsd.conf 341
+MD5 ad87219b91e2eb64c01cbc79752a4b88 files/cfsd.init 671
 MD5 bcd821c98dd591791c23f41cb449078e files/digest-cfs-1.4.1.14 129
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBWK3NI1lqEGTUzyQRArnaAJ4oyE+k1m84TVAQ3mbBrbqVvumEbACgnGaI
+eaH27CtSVk7fmSQaCSmLXuc=
+=9o74
+-----END PGP SIGNATURE-----
