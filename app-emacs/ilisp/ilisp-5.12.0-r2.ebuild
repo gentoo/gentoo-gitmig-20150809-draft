@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ilisp-5.12.0-r2.ebuild,v 1.4 2003/10/12 21:06:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ilisp-5.12.0-r2.ebuild,v 1.5 2004/02/29 16:31:29 aliz Exp $
 
 inherit elisp
 
@@ -12,7 +12,7 @@ DEBCVS=cvs.2003.06.05
 
 DESCRIPTION="A comprehensive Emacs interface for an inferior Common Lisp, or other Lisp based languages."
 HOMEPAGE="http://sourceforge.net/projects/ilisp/"
-SRC_URI="http://ftp.debian.org/debian/pool/main/i/ilisp/${PN}_${PV}+${DEBCVS}.tar.gz"
+SRC_URI="mirror://debian/pool/main/i/ilisp/${PN}_${PV}+${DEBCVS}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"

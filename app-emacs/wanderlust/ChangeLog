@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/wanderlust
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.8 2004/02/09 16:19:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.9 2004/02/29 16:31:29 aliz Exp $
 
 *wanderlust-2.11.24_pre20040209 (10 Feb 2004)
 
@@ -59,7 +59,7 @@
   29 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> wl-2.11.4.20030728.ebuild:
   New beta version (This branch, 2.11.x, shouldn't be marked as stable).
 
-*wl-2.10.1-r1 (09 Jul 2003)
+*wanderlust-2.10.1-r1 (09 Jul 2003)
 
   25 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> wl-2.10.1-r1.ebuild,
   wl-2.10.1.ebuild:
