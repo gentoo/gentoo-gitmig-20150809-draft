@@ -1,3 +1,7 @@
+# 07 Apr 2003 Guy Martin <gmsoft@gentoo.org>
+# I don't have the hardware to test usb support. So, this is disabled for now.
+usb
+
 # 20 Mar 2003 Guy Martin <gmsoft@gentoo.org>
 # Many java apps need java => 1.3 and hppa has only 1.1 right now
 java

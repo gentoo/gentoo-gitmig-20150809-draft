@@ -1,5 +1,5 @@
-sys-apps/baselayout
 sys-libs/glibc
+sys-apps/baselayout
 sys-libs/ncurses
 sys-apps/texinfo
 app-shells/bash
