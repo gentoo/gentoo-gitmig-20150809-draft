@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aafa8f35d39e3d5d1758484186657a99 ChangeLog 2927
-MD5 7ea342348ae948e0c1de3981a38eda2b egenix-mx-base-2.0.3.ebuild 787
-MD5 73862c4738f997987cfde5aa54fffff7 egenix-mx-base-2.0.4.ebuild 740
-MD5 db04368a4eb2ea18253013b1cf245ff2 egenix-mx-base-2.0.5.ebuild 677
+MD5 eec60f8ec8bb2f332d20e6dc88b450b0 egenix-mx-base-2.0.3.ebuild 780
+MD5 b01f4f65f5987c3e36e3714d24d684a9 egenix-mx-base-2.0.5.ebuild 670
+MD5 37ff1ad015b368ef01a3ff7b93bf2b53 egenix-mx-base-2.0.4.ebuild 733
+MD5 0060d6c414d13d6cafb56e05603c0f18 ChangeLog 2921
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 d35a8b52f34e9f071b7488d8f683f97b files/digest-egenix-mx-base-2.0.3 72
 MD5 dbf897ee982aacf0446fb44b1fca6dc8 files/digest-egenix-mx-base-2.0.4 72
 MD5 af47a948e9145473f867071766ddee18 files/digest-egenix-mx-base-2.0.5 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAvfhgHTu7gpaalycRAtfkAKCa5sHBcowvV4g1tTRu3e9dob70oQCeIZje
-RNvny5S6FnuS2tfxCl1Sags=
-=fn05
------END PGP SIGNATURE-----
