@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.13 2004/12/14 05:04:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.14 2004/12/14 05:31:32 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -92,7 +92,7 @@ tc-is-cross-compiler() {
 	local ret tmpfile=$(emktemp).c
 	echo 'int main(){return 0;}' > "${tmpfile}"
 	$(tc-getCC) "${tmpfile}" -o "${tmpfile}".bin
-	"${tmpfile}".bin &>/dev/null
+	! "${tmpfile}".bin &>/dev/null
 	ret=$?
 	rm -f "${tmpfile}" "${tmpfile}".bin
 	return ${ret}
