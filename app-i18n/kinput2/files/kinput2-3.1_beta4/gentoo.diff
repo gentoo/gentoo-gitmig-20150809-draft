@@ -1,0 +1,79 @@
+Index: Kinput2.conf
+===================================================================
+RCS file: /var/lib/cvs/kinput2/Kinput2.conf,v
+retrieving revision 1.1.1.1
+diff -u -r1.1.1.1 Kinput2.conf
+--- Kinput2.conf	18 May 2002 03:23:46 -0000	1.1.1.1
++++ Kinput2.conf	18 May 2002 03:27:57 -0000
+@@ -18,7 +18,7 @@
+ /* #define UseWnn */	/* define if you are going to use Wnn (v4, v6 or v7) */
+ /* #define UseWnn6 */	/* define if you are going to use Wnn6 or above */
+ #define UseCanna	/* define if you are going to use Canna */
+-#define UseSj3		/* define if you are going to use Sj3 */
++/* #define UseSj3 */	/* define if you are going to use Sj3 */
+ /* #define UseAtok */	/* define if you are going to use Atok */
+ 
+ 
+@@ -60,9 +60,9 @@
+  * Or, use library in the source tree..
+  */
+ XCOMM use library in the source tree
+-WNNSRC = $(CONTRIBSRC)/programs/Xsi/Wnn
+-WNNINCDIR = $(WNNSRC)/include
+-WNNLIB = $(WNNSRC)/jlib/libwnn.a
++XCOMM WNNSRC = $(CONTRIBSRC)/programs/Xsi/Wnn
++XCOMM WNNINCDIR = $(WNNSRC)/include
++XCOMM WNNLIB = $(WNNSRC)/jlib/libwnn.a
+ 
+ 
+ XCOMM Canna configuration
+@@ -79,16 +79,16 @@
+  */
+ XCOMM use installed headers/libraries
+ XCOMM CANNAINSTDIR = /usr/local/canna
+-XCOMM CANNASRC = $(CANNAINSTDIR)/include
+-XCOMM CANNALIB = -lcanna16
++CANNASRC = /usr/include
++CANNALIB = -lcanna16
+ 
+ /*
+  * If you have compiled Canna that came with X11R6 (contrib/programs/Canna),
+  * but not installed yet..
+  */
+ XCOMM use headers/libraries in the source tree
+-CANNASRC = $(CONTRIBSRC)/programs/Canna32
+-CANNALIB = -L$(CANNASRC)/lib/canna16 -lcanna16
++XCOMM CANNASRC = $(CONTRIBSRC)/programs/Canna32
++XCOMM CANNALIB = -L$(CANNASRC)/lib/canna16 -lcanna16
+ 
+ 
+ XCOMM SJ3 configuration
+@@ -100,7 +100,7 @@
+  *		   definition files are to be installed
+  */
+ 
+-SJ3DEF_DIR = $(LIBDIR)/sj3def
++XCOMM SJ3DEF_DIR = $(LIBDIR)/sj3def
+ 
+ /*
+  * If you have installed SJ3 library and header file,
+@@ -117,8 +117,8 @@
+  * Use compiled library in the source tree..
+  */
+ XCOMM use library in the source tree
+-SJ3SRC = $(CONTRIBSRC)/programs/sj3
+-SJ3LIB = $(SJ3SRC)/sj3lib/libsj3lib.a
++XCOMM SJ3SRC = $(CONTRIBSRC)/programs/sj3
++XCOMM SJ3LIB = $(SJ3SRC)/sj3lib/libsj3lib.a
+ 
+ 
+ XCOMM Atok configuration
+@@ -134,7 +134,7 @@
+ XCOMM use installed headers/libraries
+ XCOMM ATOKINCDIR = /usr/include/atok
+ XCOMM ATOKLIBDIR = /usr/jp/lib
+-ATOKLIB = -latok12n -latok12util
++XCOMM ATOKLIB = -latok12n -latok12util
+ 
+ 
+ /**
