@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.5 2004/09/26 02:46:57 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.6 2004/09/28 00:51:18 swegener Exp $
+
+  28 Sep 2004; Sven Wegener <swegener@gentoo.org>
+  files/config-gnustep-base.sh:
+  Gentoo Technologies, Inc. -> Gentoo Foundation
 
   25 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org>
   gnustep-base-1.10.0.ebuild:
