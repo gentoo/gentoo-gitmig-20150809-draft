@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MIME-tools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.16 2004/10/28 11:50:28 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.17 2004/10/28 12:40:04 mcummings Exp $
+
+  28 Oct 2004; Michael Cummings <mcummings@gentoo.org>
+  MIME-tools-5.415.ebuild:
+  marking stable on x86 and sparc - bug 69181
 
   28 Oct 2004; <SeJo@gentoo.org> MIME-tools-5.415.ebuild:
   stable on ppc gsla: 69181
