@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.6-r1.ebuild,v 1.1 2002/04/01 17:01:15 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.7-r4.ebuild,v 1.1 2002/05/04 03:55:29 woodchip Exp $
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org/"
@@ -10,17 +9,21 @@ POSTFIX_TLS_VER="0.8.7-${PV}-0.9.6c"
 
 S=${WORKDIR}/${P}
 SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${P}.tar.gz
-	mta-tls? ( ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/pfixtls-${POSTFIX_TLS_VER}.tar.gz )"
+	ssl? ( ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/pfixtls-${POSTFIX_TLS_VER}.tar.gz )"
 
 PROVIDE="virtual/mta"
-DEPEND="virtual/glibc
-	>=sys-libs/db-3.2
+DEPEND=">=sys-libs/db-3.2
 	>=dev-libs/libpcre-3.4
 	>=dev-libs/cyrus-sasl-1.5.27
-	mta-ldap? ( >=net-nds/openldap-1.2 )
-	mta-mysql? ( >=dev-db/mysql-3.23.28 )
-	mta-tls? ( >=dev-libs/openssl-0.9.6c )"
-RDEPEND="${DEPEND} >=net-mail/mailbase-0.00 !virtual/mta"
+	ldap? ( >=net-nds/openldap-1.2 )
+	mysql? ( >=dev-db/mysql-3.23.28 )
+	ssl? ( >=dev-libs/openssl-0.9.6c )"
+
+RDEPEND="${DEPEND} 
+	>=net-mail/mailbase-0.00
+	!virtual/mta"
+LICENSE="IPL-1"
+SLOT="0"
 
 pkg_setup() {
 	if ! grep -q ^postdrop: /etc/group ; then
@@ -31,10 +34,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	if [ "`use mta-tls`" ] ; then
+	use ssl && ( \
 		cd ${S}
 		patch -p1 < ${WORKDIR}/pfixtls-${POSTFIX_TLS_VER}/pfixtls.diff || die
-	fi
+	)
 
 	cd ${S}/conf
 	cp main.cf main.cf.orig
@@ -44,25 +47,21 @@ src_unpack() {
 	cp mail_params.h mail_params.h.orig
 	sed -e "s:/usr/libexec/postfix:/usr/lib/postfix:" mail_params.h.orig > mail_params.h
 
-	if [ "`use mta-mysql`" ] ; then
-		CCARGS="${CCARGS} -DHAS_MYSQL -I/usr/include/mysql"
-		AUXLIBS="${AUXLIBS} -lmysqlclient -lm"
-	fi
+	use mysql \
+		&& CCARGS="${CCARGS} -DHAS_MYSQL -I/usr/include/mysql" \
+		&& AUXLIBS="${AUXLIBS} -lmysqlclient -lm"
 
-	if [ "`use mta-ldap`" ] ; then
-		CCARGS="${CCARGS} -DHAS_LDAP"
-		AUXLIBS="${AUXLIBS} -lldap -llber"
-	fi
+	use ldap \
+		&& CCARGS="${CCARGS} -DHAS_LDAP" \
+		&& AUXLIBS="${AUXLIBS} -lldap -llber"
 
-	if [ "`use mta-tls`" ] ; then
-		CCARGS="${CCARGS} -DHAS_SSL"
-		AUXLIBS="${AUXLIBS} -lssl"
-	fi
+	use ssl \
+		&& CCARGS="${CCARGS} -DHAS_SSL" \
+		&& AUXLIBS="${AUXLIBS} -lssl"
 
 	# note: if sasl is built w/ pam, then postfix _MUST_ be built w/ pam
-	if [ "`use pam`" ] ; then
-		AUXLIBS="${AUXLIBS} -lpam"
-	fi
+	use pam \
+		&& AUXLIBS="${AUXLIBS} -lpam"
 
 	# stuff we always want...
 	CCARGS="${CCARGS} -I/usr/include -DHAS_PCRE -DUSE_SASL_AUTH"
@@ -100,7 +99,7 @@ src_install () {
 	doman man*/*
 
 	cd ${S}
-	dodoc *README COMPATIBILITY HISTORY LICENSE PORTING RELEASE_NOTES
+	dodoc *README COMPATIBILITY HISTORY LICENSE PORTING RELEASE_NOTES INSTALL
 	dohtml html/*
 
 	cd ${S}/conf
@@ -125,8 +124,8 @@ pkg_postinst() {
 	einfo "***************************************************************"
 	einfo "* NOTE: If config file protection is enabled and you upgraded *"
 	einfo "*       from an earlier version of postfix you must update    *"
-	einfo "*       /etc/postfix/master.cf to the latest version          *"
+	einfo "*       /etc/postfix/master.cf to the latest version	     *"
 	einfo "*       (/etc/postfix/._cfg????_master.cf). Otherwise postfix *"
-	einfo "*       will not work correctly.                              *"
+	einfo "*       will not work correctly. 			     *"
 	einfo "***************************************************************"
 }

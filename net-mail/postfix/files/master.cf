@@ -1,3 +1,4 @@
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/files/master.cf,v 1.2 2002/05/04 03:55:29 woodchip Exp $
 #
 # Postfix master process configuration file.  Each line describes how
 # a mailer component program should be run. The fields that make up
