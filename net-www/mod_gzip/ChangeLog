@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_gzip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_gzip/ChangeLog,v 1.6 2002/12/13 11:00:27 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_gzip/ChangeLog,v 1.7 2003/01/22 05:17:34 woodchip Exp $
+
+*mod_gzip-1.3.26.1a (22 Jan 2003)
+
+  22 Jan 2003; Donny Davies <woodchip@gentoo.org> : Version bump; #13378.
+  Also fixes #11685.  Thanks xtango@netcombbs.com.ar (Ernesto).  
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
