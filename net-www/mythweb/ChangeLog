@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mythweb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/ChangeLog,v 1.5 2003/12/15 20:55:29 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mythweb/ChangeLog,v 1.6 2003/12/15 21:02:57 stuart Exp $
+
+  15 Dec 2003; Stuart Herbert <stuart@gentoo.org> mythweb-0.11.ebuild:
+  Missed one ;-)
 
   15 Dec 2003; Stuart Herbert <stuart@gentoo.org> mythweb-0.12.ebuild,
   mythweb-0.13.ebuild:
