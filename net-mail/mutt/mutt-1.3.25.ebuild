@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.3.25.ebuild,v 1.1 2002/01/03 18:52:42 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.3.25.ebuild,v 1.2 2002/01/04 06:24:42 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a small but very powerful text-based mail client"
@@ -31,13 +31,13 @@ src_compile() {
 src_install () {
 	cd ${S}
 	make DESTDIR=${D} install || die
-	dodir /usr/share/doc/${PVF}
-    mv ${D}/usr/doc/mutt/* ${D}/usr/share/doc/${PVF}
+	dodir /usr/share/doc/${PF}
+    mv ${D}/usr/doc/mutt/* ${D}/usr/share/doc/${PF}
     mv ${D}/usr/man ${D}/usr/share
 	rm -rf ${D}/usr/doc/mutt
-    gzip ${D}/usr/share/doc/${PVF}/html/*
-    gzip ${D}/usr/share/doc/${PVF}/samples/*
-    gzip ${D}/usr/share/doc/${PVF}/*
+    gzip ${D}/usr/share/doc/${PF}/html/*
+    gzip ${D}/usr/share/doc/${PF}/samples/*
+    gzip ${D}/usr/share/doc/${PF}/*
 	insinto /etc/mutt
 	doins ${FILESDIR}/Muttrc*
 }
