@@ -1,12 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.3.2-r4.ebuild,v 1.1 2001/10/07 11:51:57 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.3.2-r4.ebuild,v 1.2 2001/10/07 22:15:58 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Display Manager"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gdm/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=sys-libs/pam-0.72
@@ -44,7 +43,8 @@ src_compile() {
 src_install() {                               
 	make DESTDIR=${D}						\
 	     sysconfdir=${D}/etc/X11					\
-	     localstatedir=${D}/var/lib install || die
+	     localstatedir=${D}/var/lib					\
+	     install || die
 
 	rm -rf ${D}/etc/X11/pam.d
 

@@ -3,14 +3,12 @@
 # Author Achim Gottinger <achim@gentoo.org>
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
 # /home/cvsroot/gentoo-x86/gnome-apps/nautilus/nautilus-1.0.ebuild,v 1.3 2001/04/29 18:42:54 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.4-r4.ebuild,v 1.2 2001/10/07 20:45:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.4-r4.ebuild,v 1.3 2001/10/07 22:15:58 hallski Exp $
 
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="nautilus"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}
-	 ftp://rpmfind.net/linux/gnome.org/stable/latest/sources/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 
 HOMEPAGE="http://www.gnome.org/"
 
@@ -57,6 +55,7 @@ src_compile() {
 	./configure --host=${CHOST} 					\
 		    --prefix=/usr					\
 		    --sysconfdir=/etc					\
+		    --localstatedir=/var/lib				\
 		    --enable-eazel-services=0 				\
 		    ${myconf} || die
 
@@ -64,7 +63,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make prefix=${D}/usr						\
+	     sysconfdir=${D}/etc					\
+	     localstatedir=${D}/var/lib					\
+	     install || die
 
 	# Fix missing icon in Gnome Spash
 	insinto /usr/share/pixmaps
