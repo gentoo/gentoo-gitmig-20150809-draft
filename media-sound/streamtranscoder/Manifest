@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fb458821cec5a96048ee93fb6fd98cf6 streamtranscoder-1.2.4.ebuild 735
+MD5 42b57b79f38dbd42802b39f72ca1e44c streamtranscoder-1.2.8.ebuild 725
+MD5 b93c443949e506153377ebf75e3f414e ChangeLog 837
+MD5 0a9724402264904ff3c38dd5b9deead1 streamtranscoder-1.2.4.ebuild 734
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 fab197ee976c13e85618c225d91081e9 ChangeLog 721
 MD5 4b27cbe42d2e621e2e6cd7463cdbc893 files/digest-streamtranscoder-1.2.4 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxSSXArHZZzCEUG0RAhxQAJ0cLfwxEo8pgBVuDfNHnriceGX4QwCdGuJn
-CRW3k0kxD7SKs4dwMvjD4xY=
-=Muc6
------END PGP SIGNATURE-----
+MD5 c1ffbe331a371c687777fb9691286f3b files/digest-streamtranscoder-1.2.8 74
