@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f4394c15f2a0e1df46e9894aaef5ad5a ChangeLog 20117
+MD5 2e589555c3a7b2e097179e311218e7f3 ChangeLog 20337
 MD5 d388a1b0706024ddccccc99045b976f9 alsa-driver-0.9.8.ebuild 2341
 MD5 f290aa99c4fa3d4650c008edfdf6788b alsa-driver-1.0.7-r3.ebuild 3431
 MD5 e5de43659b629d1e9f0ee8d3f1864840 alsa-driver-1.0.3.ebuild 3363
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 9f0283e4e9611766ad3110532d4976d7 alsa-driver-1.0.5a.ebuild 3603
 MD5 45f95cf50aad5f544f0fa05dcf94d1ad alsa-driver-1.0.6a.ebuild 3501
-MD5 0e3de515e49e01db460ca33e8cc55383 files/alsa-driver-1.0.7-configure.patch 21425
+MD5 bc0105e64f35a41aa0602c43e7f09733 files/alsa-driver-1.0.7-configure.patch 21924
 MD5 8c120f7730b91118d0a8148d2deb3a43 files/alsa-driver-0.9.8-au-fix.patch 1267
 MD5 1d70561326ef89e94179634d92782610 files/alsa-driver-1.0.4-devfix.patch 2756
 MD5 08af7cfec9cd33819c62880d6219f3a5 files/alsa-driver-1.0.5-devfix.patch 763
@@ -27,7 +27,7 @@ MD5 479ee887025f4ce7944adee1e4a6fdf3 files/digest-alsa-driver-1.0.7-r3 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBsPuEArHZZzCEUG0RAuTGAJ4p73FYJ96/Rjtqnay6J24tUejEaACdFn58
-sy2LnGGCKYh+7I1XDdYJwCs=
-=CzjV
+iD8DBQFBsY2/ArHZZzCEUG0RApYmAJ9fe2A7MlpueB1LA98I0X9H4ln2RQCfaQYk
+am62wRz7sl3a8v/R7xsBs9w=
+=nThP
 -----END PGP SIGNATURE-----
