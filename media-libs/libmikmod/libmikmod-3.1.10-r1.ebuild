@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.10-r1.ebuild,v 1.1 2003/05/24 10:18:40 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.10-r1.ebuild,v 1.2 2003/05/26 09:33:05 killian Exp $
 
 inherit gnuconfig
 inherit flag-o-matic
@@ -21,7 +21,7 @@ LICENSE="LGPL-2.1 | LGPL-2"
 KEYWORDS="~x86"
 
 src_compile() {
-	filterflags -Os
+	filter-flags -Os
 
 	local myconf
 	myconf="--enable-af" # include AudioFile driver

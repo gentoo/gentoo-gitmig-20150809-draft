@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.10 2003/05/24 10:18:40 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.11 2003/05/26 09:33:05 killian Exp $
 
 *libmikmod-3.1.10-r1 (24 May 2003)
+
+  26 May 2003; Chuck Brewer <killian@gentoo.org> libmikmod-3.1.10-r1.ebuild:
+  Fixed filter-flags typo.
 
   24 May 2003; root <root@gentoo.org> libmikmod-3.1.10-r1.ebuild:
   Filtering -Os.
