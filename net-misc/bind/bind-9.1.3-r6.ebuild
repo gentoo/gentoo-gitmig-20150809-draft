@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>, Parag Mehta <pm@gnuos.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-9.1.3.ebuild,v 1.4 2001/09/10 01:00:09 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-9.1.3-r6.ebuild,v 1.1 2001/09/10 01:00:09 woodchip Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -55,6 +55,6 @@ src_install() {
 	insinto /var/bind/pri ; doins ${FILESDIR}/localhost
 	insinto /var/bind/pri ; doins ${FILESDIR}/127.0.0
 
-	exeinto /etc/rc.d/init.d
-	newexe ${FILESDIR}/named.rc5 named
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/named.rc6 named
 }

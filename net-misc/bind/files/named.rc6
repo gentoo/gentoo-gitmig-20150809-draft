@@ -1,0 +1,25 @@
+#!/sbin/runscript
+
+depend() {
+    need net
+}
+
+checkconfig() {
+    if [ ! -e /etc/bind/named.conf ] ; then
+        eerror "You need an /etc/bind/named.conf file first"
+        return 1
+    fi
+}
+
+start() {
+    checkconfig || return 1
+    ebegin "Starting named"
+    start-stop-daemon --start --quiet --exec /usr/sbin/named --user named
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping named"
+    start-stop-daemon --stop --quiet --pidfile /var/run/named.pid
+    eend $?
+}
