@@ -1,8 +1,12 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.42 2003/01/08 20:53:16 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.43 2003/01/09 01:01:30 seemant Exp $
 
 * perl-5.8.0-r8 (06 Jan 2003)
+
+  08 Jan 2003; Seemant Kulleen <seemant@gentoo.org> perl-5.8.0-r8.ebuild :
+
+  Unmasked for sparc.
 
   08 Jan 2003; Brandon Low <lostlogic@gentoo.org> perl-5.8.0-r8:
   Later that day:  dosed smells funny, switch some of it
