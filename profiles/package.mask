@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3488 2005/01/14 11:29:43 danarmak Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3489 2005/01/14 12:16:26 hollow Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <hollow@gentoo.org> (14 Jan 2005)
+# experimental vserver patches
+=sys-kernel/vserver-sources-1.9.3.*
 
 # <danarmak@gentoo.org> (14 Jan 2005)
 # Beta release of KDE 3.4 - split ebuilds
