@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.129 2004/04/20 18:52:18 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.130 2004/04/20 19:04:03 zul Exp $
+
+  20 Apr 2004; Chuck Short <zul@gentoo.org> files/common/config.layout:
+  Fix another typo.
 
   20 Apr 2004; Chuck Short <zul@gentoo.org> apache-2.0.48-r4.ebuild:
   Fixes qa issue in 48335.
