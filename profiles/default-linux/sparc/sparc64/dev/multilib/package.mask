@@ -1,5 +1,11 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/multilib/package.mask,v 1.1 2005/03/07 00:05:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/multilib/package.mask,v 1.2 2005/03/08 23:57:33 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org> 2005.03.06
 # sys-devel/gcc brings in our 64bit compiler
 sys-devel/gcc-sparc64
+
+# Jeremy Huddleston <eradicator@gentoo.org> 2005.03.08
+# Older perl versions don't set the correct archlib path for multilib
+# profiles where CHOST != $(get_abi_CHOST)
+<dev-lang/perl-5.8.6-r3
+<sys-devel/libperl-5,8,6
