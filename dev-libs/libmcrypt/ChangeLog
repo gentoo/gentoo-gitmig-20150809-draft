@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcrypt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.23 2004/06/24 23:19:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.24 2004/07/20 05:51:46 robbat2 Exp $
+
+  19 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  add metadata.xml
 
   01 Apr 2004; <randy@gentoo.org> libmcrypt-2.5.7.ebuild:
   adding s390 keywords
@@ -88,7 +91,7 @@
 
   5 May 2002: Martin Schlemmer <azarah@gentoo.org> libmcrypt-2.4.19-r1.ebuild :
 
-  Resolve bug #2276.  Add $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.23 2004/06/24 23:19:49 agriffis Exp $.
+  Resolve bug #2276.  Add $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.24 2004/07/20 05:51:46 robbat2 Exp $.
 
 *libmcrypt-2.4.19 (1 Feb 2002)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/yaz
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.12 2004/06/25 03:14:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.13 2004/07/20 05:52:38 robbat2 Exp $
+
+  19 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  add metadata.xml
 
   11 May 2004; Michael McCabe <randy@gentoo.org> yaz-2.0.19.ebuild:
   Added s390 keywords
