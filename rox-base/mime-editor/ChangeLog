@@ -1,0 +1,11 @@
+# ChangeLog for rox-base/mime-editor
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/mime-editor/ChangeLog,v 1.1 2004/11/27 10:09:30 sergey Exp $
+
+*mime-editor-0.1.3 (27 Nov 2004)
+
+  27 Nov 2004; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
+  +mime-editor-0.1.3.ebuild:
+  First commit of mimer-editor. Thanks to Alexandr Simonov <devil@gentoo.org.ua>
+  (Bug #51996) for the ebuild.
+
