@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r8.ebuild,v 1.2 2004/11/11 01:06:15 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r8.ebuild,v 1.3 2004/12/15 02:28:27 solar Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -11,8 +11,9 @@ inherit eutils flag-o-matic gcc
 # rm -rf uClibc-0.9.26-cvs-update-`date +%Y%m%d`.patch.bz2  uClibc uClibc-0.9.26
 
 MY_P="${P/ucl/uCl}"
-CVS_VER="20041110"
-PATCH_VER="1.2"
+# only CVS_VER >= 20041117 is supported
+CVS_VER="20041209"
+PATCH_VER="1.4"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
 SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2
@@ -23,9 +24,10 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="-*"
 #KEYWORDS="~x86 ~ppc ~sparc ~mips ~arm"
-IUSE="build hardened ipv6 static debug" # nls is not supported yet
+IUSE="build debug hardened ipv6 static xattr" # nls is not supported yet
 RESTRICT="nostrip"
 
+# 2004/11/16 the only binutils w/ relro support for uclibc
 DEPEND="sys-devel/gcc"
 RDEPEND=""
 PROVIDE="virtual/glibc virtual/libc"
@@ -74,18 +76,6 @@ check_cpu_opts() {
 	fi
 }
 
-check_main_libc() {
-	if [ "${CHOST/uclibc}" != "${CHOST}" ] ; then
-		SYS_LIBC=uClibc
-	else
-		SYS_LIBC=glibc
-	fi
-	export SYS_LIBC
-	echo
-	einfo "We are building for ${SYS_LIBC} system library"
-	echo
-}
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -96,31 +86,12 @@ src_unpack() {
 	[ -n "${CVS_VER}" ] && \
 		epatch ${DISTDIR}/${MY_P}-cvs-update-${CVS_VER}.patch.bz2
 
-	cp ${FILESDIR}/0.9.26/ssp.c ${S}/libc/sysdeps/linux/common/ \
-		|| die "failed to copy ssp.c to ${S}/libc/sysdeps/linux/common/"
-	# gcc 3.4 nukes ssp without this patch
-	[ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -ge "4" ] && \
-		epatch ${FILESDIR}/0.9.26/uclibc-0.9.26-ssp-gcc34-after-frandom.patch
-
 	if [ -n "${PATCH_VER}" ] ; then
 		unpack ${MY_P}-patches-${PATCH_VER}.tar.bz2
-		mv ${WORKDIR}/patch/*frandom* ${WORKDIR}/patch/exclude/
-		# zdefs/main patches, not yet properly tested
-		mv ${WORKDIR}/patch/*{zdefs,main}* ${WORKDIR}/patch/exclude/
-		# needed for gcc-3.4 after frandom
-		mv ${WORKDIR}/patch/*attribute* ${WORKDIR}/patch/exclude/
 		epatch ${WORKDIR}/patch
-		# for math functions (j2sdk/xorg-x11)
-		#epatch ${WORKDIR}/patch/math
+		# math functions (sinf,cosf,tanf,atan2f,powf,fabsf,copysignf,scalbnf,rem_pio2f)
+		use build || epatch ${WORKDIR}/patch/math
 	fi
-
-	# support archs which dont implement all syscalls
-	[ -z "${CVS_VER}" ] \
-		&& epatch ${FILESDIR}/${PV}/arm-fix-missing-syscalls.patch \
-		|| epatch ${FILESDIR}/${PV}/uclibc-0.9.26-arm-dl-sysdep.patch
-
-	# fixup for install perms
-	sed -i -e "s:-fa:-dRf:g" Makefile
 
 	########## CPU SELECTION ##########
 
@@ -159,8 +130,7 @@ src_unpack() {
 	echo "UCLIBC_HAS_FULL_RPC=y" >> .config
 	echo "PTHREADS_DEBUG_SUPPORT=y" >> .config
 
-	#if use nls
-	#then
+	#if use nls ; then
 	#	sed -i -e "s:# UCLIBC_HAS_LOCALE is not set:UCLIBC_HAS_LOCALE=y:" .config
 	#	echo "UCLIBC_HAS_XLOCALE=n" >> .config
 	#	echo "UCLIBC_HAS_GLIBC_DIGIT_GROUPING=y" >> .config
@@ -175,34 +145,47 @@ src_unpack() {
 
 	use ipv6 && sed -i -e "s:# UCLIBC_HAS_IPV6 is not set:UCLIBC_HAS_IPV6=y:" .config
 
+	# uncomment if you miss wordexp (alsa-lib)
+	#use build || sed -i -e "s:# UCLIBC_HAS_WORDEXP is not set:UCLIBC_HAS_WORDEXP=y:" .config
+
+	# we need to do it independently of hardened to get ssp.c built into libc
+	sed -i -e "s:# UCLIBC_SECURITY.*:UCLIBC_SECURITY=y:" .config
+	einfo "Enable Stack Smashing Protections support in ${P}"
+	echo "UCLIBC_HAS_SSP=y:" >> .config
+	echo "PROPOLICE_BLOCK_ABRT=n" >> .config
+	if use debug ; then
+		echo "PROPOLICE_BLOCK_SEGV=y" >> .config
+		echo "PROPOLICE_BLOCK_KILL=n" >> .config
+	else
+		echo "PROPOLICE_BLOCK_SEGV=n" >> .config
+		echo "PROPOLICE_BLOCK_KILL=y" >> .config
+	fi
+
 	if use hardened ; then
-		sed -i -e "s:# UCLIBC_SECURITY.*:UCLIBC_SECURITY=y:" .config
-		if has ${ARCH} x86 ppc mips; then
-			einfo "Enable Position Independent Executable support in ${P}"
+		if has ${ARCH} mips ppc x86 ; then
 			echo "UCLIBC_BUILD_PIE=y" >> .config
+		else
+			echo "UCLIBC_BUILD_PIE=n" >> .config
 		fi
 
-		einfo "Enable Stack Smashing Protections support in ${P}"
-		echo "UCLIBC_HAS_SSP=y:" >> .config
-		echo "PROPOLICE_BLOCK_ABRT=n" >> .config
-		if use debug ; then
-			echo "PROPOLICE_BLOCK_SEGV=y" >> .config
-			echo "PROPOLICE_BLOCK_KILL=n" >> .config
-		else
-			echo "PROPOLICE_BLOCK_SEGV=n" >> .config
-			echo "PROPOLICE_BLOCK_KILL=y" >> .config
-		fi
 		echo "UCLIBC_BUILD_SSP=y" >> .config
 		echo "UCLIBC_BUILD_RELRO=y" >> .config
 		echo "UCLIBC_BUILD_NOW=y" >> .config
 		echo "UCLIBC_BUILD_NOEXECSTACK=y" >> .config
+	else
+		echo "UCLIBC_BUILD_PIE=n" >> .config
+		echo "UCLIBC_BUILD_SSP=n" >> .config
+		echo "UCLIBC_BUILD_RELRO=n" >> .config
+		echo "UCLIBC_BUILD_NOW=n" >> .config
+		echo "UCLIBC_BUILD_NOEXECSTACK=n" >> .config
 	fi
+
+	use xattr && echo "UCLIBC_XATTR=y" >> .config
 
 	# we are building against system installed kernel headers
 	sed -i -e 's:KERNEL_SOURCE.*:KERNEL_SOURCE="/usr":' .config
 
-	check_main_libc
-	if [ "${SYS_LIBC}" = "uClibc" ] ; then
+	if [ "${PORTAGE_LIBC}" = "uClibc" ] ; then
 		sed -i \
 			-e 's:SHARED_LIB_LOADER_PREFIX=.*:SHARED_LIB_LOADER_PREFIX="/lib":' \
 			-e 's:DEVEL_PREFIX=.*:DEVEL_PREFIX="/usr":' \
@@ -224,8 +207,7 @@ src_compile() {
 	use build || addwrite /dev/ptmx
 	cp myconfig .config
 
-	#if use nls
-	#then
+	#if use nls ; then
 	#	# these can be built only if the build system supports locales (as of 0.9.26)
 	#	emake -j1 headers
 	#	cd extra/locale
@@ -237,15 +219,13 @@ src_compile() {
 	#fi
 
 	emake -j1 || die "could not make"
-	check_main_libc
-	if [ "${SYS_LIBC}" = "uClibc" ]
-	then
+	if [ "${PORTAGE_LIBC}" = "uClibc" ] ; then
 		emake -j1 utils || die "could not make utils"
 	fi
 
 	if ! use build ; then
 		if ! hasq maketest $RESTRICT ; then
-			# assert test fails on pax enabled kernels - normal
+			# assert test fails on pax/grsec enabled kernels - normal
 			# vfork test fails in sandbox (both glibc/uclibc)
 			cd test; make; cd ..
 		fi
@@ -257,9 +237,7 @@ src_install() {
 
 	# remove files coming from kernel-headers
 	# scsi is uclibc's own directory since cvs 20040212
-	check_main_libc
-	if [ "${SYS_LIBC}" = "uClibc" ]
-	then
+	if [ "${PORTAGE_LIBC}" = "uClibc" ] ; then
 		rm -rf ${D}/usr/include/{asm,linux}
 		rm -f ${D}/usr/lib/lib*_pic.a
 		! use static && use build && rm -f ${D}/usr/lib/lib*.a
@@ -267,27 +245,42 @@ src_install() {
 		emake PREFIX=${D} install_utils || die "install-utils failed"
 		dodir /usr/bin
 		exeinto /usr/bin
-		doexe docs/getent
+		doexe extra/scripts/getent
 	fi
 
-	if ! use build
-	then
+	if ! use build ; then
 		dodoc Changelog* README TODO docs/*.txt DEDICATION.mjn3
 		doman debian/*.1
 	fi
 }
 
-#pkg_postinst() {
-#check_main_libc
-#if [ "${SYS_LIBC}" = "uClibc" ] ; then
-#	if [ "${ROOT}" = "/" ] ; then
-#		# should we create ld.so.conf and/or preload?
-#		# currently the option is not enabled
-#		/sbin/ldconfig
-#		[ ! -e /etc/TZ ] && echo UTC > /etc/TZ
-#		# reload init?
-#	fi
+pkg_postinst() {
+if [ "${PORTAGE_LIBC}" = "uClibc" ] ; then
+	# remove invalid symlinks if any
+	#local x=
+	#for x in TZ ld.so.conf ld.so.preload ; do
+	#	[ ! -e "${ROOT}/etc/${x}" ] && rm -f ${ROOT}/etc/${x}
+	#done
+
+	if [ ! -e "${ROOT}/etc/TZ" ] ; then
+		echo "Please remember to set your timezone in /etc/TZ."
+		echo "UTC" > ${ROOT}/etc/TZ
+	fi
+
+	if [ ! -e "${ROOT}/etc/ld.so.conf" ] ; then
+		[ -d "${ROOT}/usr/X11R6/lib" ] \
+			&& echo "/usr/X11R6/lib" > ${ROOT}/etc/ld.so.conf \
+			|| > ${ROOT}/etc/ld.so.conf
+	fi
+
+	if [ "${ROOT}" = "/" ] ; then
+		# update cache before reloading init
+		/sbin/ldconfig
+		# reload init ...
+		[ -x /sbin/init ] && /sbin/init U &> /dev/null
+		# add entries for alternatives (like minit)
+	fi
 #else
-#should we add the lib dir to ld.so.conf?
-#fi
-#}
+#should we add the libdir on a non-uclibc based system to ld.so.conf?
+fi
+}

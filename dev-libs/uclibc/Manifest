@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 d98118dbcb77466679b07fd6eb029f9f uclibc-9999.ebuild 5443
-MD5 dec526b45cd6a3adb8a7e59c26f0972e uclibc-0.9.26-r8.ebuild 9084
+MD5 8f504f01c1cb586217db109896a60ca0 uclibc-0.9.26-r8.ebuild 9084
 MD5 7ba6e2f7dbe4f241de617f5ebfa35fa0 uclibc-0.9.26-r5.ebuild 7658
-MD5 299cda881c945bffd33fda5406d65b35 ChangeLog 7882
+MD5 ddeed663eb1a390fa3aa5dd91076ba6b ChangeLog 8011
 MD5 7fde305dfd21aeac12e0eb721e0f6a17 uclibc-0.9.21.ebuild 1096
 MD5 e96b4dfc373a1cdf7735aeae52c4cf7e metadata.xml 999
 MD5 59d40f2d78a6bbdb5e3fc3f0efe960ef uclibc-0.9.26-r7.ebuild 7861
@@ -12,7 +12,7 @@ MD5 d16f404e56abc9f0ab5c372b88a6905d files/Makefile-cp-order-fix.patch 897
 MD5 0b733285f186f31c1be9ffcc42f1064e files/getent 973
 MD5 6d2b5c523d34c86df9bc37747d9261dc files/digest-uclibc-0.9.26-r5 231
 MD5 6d2b5c523d34c86df9bc37747d9261dc files/digest-uclibc-0.9.26-r7 231
-MD5 8ffd115eb23763c99de8a8230f7a7495 files/digest-uclibc-0.9.26-r8 232
+MD5 e0556dd58957468793213ab327c590d3 files/digest-uclibc-0.9.26-r8 232
 MD5 799adc7fb6ec9ffd653831cea1d32dd5 files/digest-uclibc-0.9.21 67
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-uclibc-9999 0
 MD5 df59fcf3a02c17b7dac6999bd9262d05 files/cvs/22_all_uClibc-ld-now.patch 1072
@@ -37,7 +37,9 @@ MD5 b9df87c681aa3a1ef3033cb195e516df files/0.9.26/uclibc-0.9.26-arm-dl-sysdep.pa
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBkrsH94CCfB4KcwwRAu9NAKDBEWv9IcwpdmgCwFcb3CR0dobolgCgjeSr
-Qop8eMv6bAlTrp0HnUig0LM=
-=6VyF
+iQCVAwUBQb+hIJ4WFLgrx1GWAQKMGAP+PIfl72Xd9BPFqzT6PE3065pOQC/EA3rC
+WLaFbw3dq33shDUnTSEmoXQ6bzaKCDyOGZNIIxbrhAk68/L7bm5MA1blbGETHcsF
+MJpQiTd9bQb7peP8Z/0nqry3ASfOoYfigQRZh5Tg8/07gQRN1+DrFTY7zJ2pwnW+
+ckijJTDUvx0=
+=3lIc
 -----END PGP SIGNATURE-----
