@@ -6,7 +6,7 @@ MD5 c43d635d5a652147971486b2b09e8345 metadata.xml 873
 MD5 c18fe3cbc803b1fd81a42148cf2f0733 cfengine-2.1.7.ebuild 1629
 MD5 389730dfdcf3263ba10f3a7656873e51 ChangeLog 5684
 MD5 6c31e6f9b325f1b429d06f85e6f1988b cfengine-2.1.9.ebuild 1625
-MD5 b600ea5015b6d1726eb252abec7a162f cfengine-2.1.10.ebuild 1630
+MD5 3b7865bb7815cefaff6ebeab02e327b3 cfengine-2.1.10.ebuild 1629
 MD5 f4fe82c710efac73c0895ad268c54196 files/cfportage.README 2294
 MD5 c95df57a119e762a238f89210448914e files/digest-cfengine-2.1.1 67
 MD5 0e4089dc686aa3db08565e1b64db2ea0 files/digest-cfengine-2.1.3 67
