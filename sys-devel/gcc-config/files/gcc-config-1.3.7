@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.7,v 1.4 2004/10/26 04:05:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.7,v 1.5 2004/11/28 16:39:49 lv Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 
 trap ":" INT QUIT TSTP
@@ -486,10 +486,14 @@ fi
 
 CC_COMP_NO_SPECS=$(echo ${CC_COMP} | awk -F- '{ print $1"-"$2"-"$3"-"$4"-"$5 }')
 
-if [ ! -d "${ROOT}/usr/lib/gcc-lib/${CC_COMP_NO_SPECS%-*}/${CC_COMP_NO_SPECS##*-}" -o \
+GCC_LIB=$(source "${GCC_ENV_D}/${CC_COMP}" 
+	cmd_setup
+	echo ${LDPATH} | ${AWK} -F/ '{ print  "/"$2"/"$3"/"$4"/" }')
+
+if [ ! -d "${ROOT}/${GCC_LIB}/${CC_COMP_NO_SPECS%-*}/${CC_COMP_NO_SPECS##*-}" -o \
      ! -f "${GCC_ENV_D}/${CC_COMP}" ]
 then
-	eerror "$0: Profile does not exist or invalid setting for ${GCC_ENV_D}/${CC_COMP}"
+	eerror "$0: Profile does not exist or invalid setting for ${GCC_ENV_D}/${CC_COMP}" 1>&2
 	#exit 1
 fi
 
