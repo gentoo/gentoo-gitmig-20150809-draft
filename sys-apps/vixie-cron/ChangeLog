@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.19 2004/08/17 21:04:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.20 2004/08/18 02:28:41 pebenito Exp $
+
+  17 Aug 2004; Chris PeBenito <pebenito@gentoo.org>
+  files/vixie-cron-3.0.1-selinux.diff.bz2:
+  Update SELinux patch due to collision with PAM patch.
 
 *vixie-cron-3.0.1-r5 (17 Aug 2004)
 
