@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/fhist
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.8 2004/06/25 02:31:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.9 2004/06/28 05:17:55 ciaranm Exp $
+
+  28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> fhist-1.10.ebuild,
+  fhist-1.8.ebuild:
+  Added ~mips. QA: Added IUSE.
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> fhist-1.10.ebuild,
   fhist-1.8.ebuild:
