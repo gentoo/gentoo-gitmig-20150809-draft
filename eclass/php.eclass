@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.71 2003/08/02 19:47:05 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.72 2003/08/11 07:50:33 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -344,7 +344,7 @@ php_src_compile() {
 	myconf="${myconf} --with-xml"
 
 	#Some extensions need mbstring statically built
-	myconf="${myconf} --enable-mbstring --enable-mbregex"
+	myconf="${myconf} --enable-mbstring=all --enable-mbregex"
 
 	# Somebody might want safe mode, but it causes some problems, so I disable it by default
 	#myconf="${myconf} --enable-safe-mode"
