@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.44 2003/07/18 18:42:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.45 2003/07/18 20:43:00 wolf31o2 Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -875,18 +875,4 @@ unpack_makeself() {
 	# to tar which will make tar not extract anything and exit with 0
 	local out="`tail +${skip} ${src} | gzip -cd | tar -x --no-same-owner -v -f -`"
 	[ -z "${out}" ] && die "failure unpacking makeself ${shrtsrc} ('${ver}' +${skip})"
-}
-
-# Add a function to force the user to press RETURN.
-# I basically needed this for the UT2003 ebuild to pause
-# the ebuild until the user swapped the CD in the drive.
-# I put it here in case anyone else could use it.
-# wolf31o2@gentoo.org
-
-pressreturn()
-{
-	local REPLY
-
-	echo -n "Press <RETURN> to continue..."
-	read REPLY
 }
