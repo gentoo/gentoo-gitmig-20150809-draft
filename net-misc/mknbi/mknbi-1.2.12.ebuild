@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.2.12.ebuild,v 1.4 2004/06/24 23:56:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.2.12.ebuild,v 1.5 2004/07/15 03:04:35 agriffis Exp $
 
 DESCRIPTION="Utility for making tagged kernel images useful for netbooting"
 HOMEPAGE="http://etherboot.sourceforge.net"
@@ -11,7 +11,7 @@ SRC_FILE="mknbi-1.2.tar.gz"
 SRC_URI="mirror://sourceforge/etherboot/${SRC_FILE}"
 
 KEYWORDS="~x86"
-IUSE="perl"
+IUSE=""
 
 DEPEND=">=dev-lang/perl-5.6.1
 	dev-lang/nasm"
@@ -39,4 +39,3 @@ src_install()
 	export BUILD_ROOT=${D}
 	make install || die
 }
-
