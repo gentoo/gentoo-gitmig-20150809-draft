@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.4 2002/12/13 11:00:11 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.5 2003/01/03 23:47:31 aliz Exp $
+
+*iputils-020927 (03 Jan 2003)
+
+  03 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> iputils-020927.ebuild :
+  Version bump, found by Torgeir Hansen <torgeir@trenger.ro> in #13052.
+  Made use of "doc" use variable to decide whetever to depend on openjade to
+  compile and install documentation.
+
+  03 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> iputils-020124-r1.ebuild :
+  Changed where the bins are installed. Also made ping and traceroute tools setuid.
+  Closes #10090.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
