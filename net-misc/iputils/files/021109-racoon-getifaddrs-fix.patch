@@ -1,0 +1,14 @@
+--- racoon/grabmyaddr.c.orig	2004-04-07 02:08:50.522354976 -0400
++++ racoon/grabmyaddr.c	2004-04-07 02:09:30.272312064 -0400
+@@ -50,3 +50,3 @@
+ #include <netdb.h>
+-#ifdef HAVE_GETIFADDRS
++#ifndef HAVE_GETIFADDRS
+ #include <ifaddrs.h>
+@@ -67,6 +67,2 @@
+ 
+-#ifdef __linux__
+-#define HAVE_GETIFADDRS
+-#endif
+-
+ #ifndef HAVE_GETIFADDRS

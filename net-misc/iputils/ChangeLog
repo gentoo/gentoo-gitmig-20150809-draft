@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.22 2004/03/23 15:58:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.23 2004/04/07 06:34:43 vapier Exp $
+
+*iputils-021109-r2 (07 Apr 2004)
+
+  07 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Clean up src_unpack and src_compile steps and add flex/openssl to DEPEND #38774.
 
   23 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> iputils-021109-r1.ebuild:
   Closing #44555.
