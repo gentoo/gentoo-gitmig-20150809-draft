@@ -259,6 +259,7 @@ dev-lisp/cmucl-bin
 =kde-base/kdeedu-3.2.0_beta2
 =kde-base/kdegames-3.2.0_beta2
 =kde-base/kdegraphics-3.2.0_beta2
+=kde-base/kdesdk-3.2.0_beta2
 =kde-base/kdetoys-3.2.0_beta2
 =kde-base/kdeutils-3.2.0_beta2
 =kde-base/kdemultimedia-3.2.0_beta2
