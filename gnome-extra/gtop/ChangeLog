@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gtop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtop/ChangeLog,v 1.10 2004/06/24 22:07:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtop/ChangeLog,v 1.11 2004/11/22 17:02:34 obz Exp $
+
+  22 Nov 2004; Mike Gardiner <obz@gentoo.org> gtop-1.0.13-r2.ebuild:
+  Fixed SRC_URI as requested in bug #71908
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> gtop-1.0.13-r2.ebuild:
   Fix use invocation
