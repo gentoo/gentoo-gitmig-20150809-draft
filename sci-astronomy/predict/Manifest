@@ -1,0 +1,7 @@
+MD5 924e1f2dd2db7354c60387a184afed28 predict-2.2.2-r2.ebuild 4306
+MD5 24c3d657d30449ed0321b17d572f4789 predict-2.2.1.ebuild 4536
+MD5 3b11fed66c210826812569d86c292cac ChangeLog 1384
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 729e9f2e1ecbb139b17f650d2916da21 files/digest-predict-2.2.2-r2 66
+MD5 e9851bdcd10870d0cf8dd12a543acb05 files/digest-predict-2.2.1 65
+MD5 95dc86360de601d5c7c9d2f7d87c2c79 files/predict-update 4037
