@@ -160,7 +160,7 @@ net-misc/rsync
 >=sys-apps/apmd-3.0.1-r6
 #>=net-mail/postfix-20010228.5-r6
 >=net-misc/portsentry-1.1-r6
->=sys-apps/noflushd-2.4-r6
+>=sys-block/noflushd-2.4-r6
 >=app-text/dictd-1.5.5-r6
 >=net-fs/samba-winbind-20010329-r6
 >=net-www/wwwoffle-2.6d-r6
