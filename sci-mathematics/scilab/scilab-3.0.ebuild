@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.0.ebuild,v 1.2 2004/12/28 22:08:15 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.0.ebuild,v 1.3 2005/03/08 18:49:50 vapier Exp $
 
 DESCRIPTION="Scientific software package for numerical computations (Matlab lookalike)"
 SRC_URI="ftp://ftp.inria.fr/INRIA/Scilab/distributions/${P}.src.tar.gz"
@@ -40,7 +40,7 @@ pkg_setup() {
 		echo
 		eerror "The Fortran compiler \"${F77:-g77}\" could not be found on your system."
 		if [ -z ${F77} ] || [ ${F77} = g77 ]; then
-			eerror 'Please reinstall "sys-devel/gcc" with the "f77" "USE" flag enabled.'
+			eerror 'Please reinstall "sys-devel/gcc" with the "fortran" "USE" flag enabled.'
 		elif [ ${F77} = ifc ] && ! use ifc &> /dev/null; then
 			eerror 'Please set the "ifc" "USE" flag if you want to use the Intel Fortran'
 			eerror 'Compiler to build this package. This will ensure the "dev-lang/ifc"'
