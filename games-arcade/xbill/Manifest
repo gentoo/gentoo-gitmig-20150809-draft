@@ -1,4 +1,6 @@
 MD5 4da3888e514f093ce1e7e855bef152e1 ChangeLog 659
 MD5 c4b07bdc697bc7d83ff2338086abdcc9 xbill-2.1.ebuild 752
 MD5 b244cf1c41a78cacb62296d573935c07 metadata.xml 245
+MD5 054ade01ecce358f41ccfc410fd408cf xbill-2.1-r1.ebuild 635
 MD5 fef877d1db2cac3ff0f25ab2301c0147 files/digest-xbill-2.1 60
+MD5 fef877d1db2cac3ff0f25ab2301c0147 files/digest-xbill-2.1-r1 60

@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/xbill
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbill/ChangeLog,v 1.4 2004/01/24 13:17:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbill/ChangeLog,v 1.5 2004/01/24 13:20:39 mr_bones_ Exp $
+
+*xbill-2.1-r1 (24 Jan 2004)
+
+  24 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> xbill-2.1-r1.ebuild:
+  use games eclass
 
   24 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> xbill-2.1.ebuild:
   tidy
