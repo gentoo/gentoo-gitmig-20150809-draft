@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/testdisk
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.4 2004/07/17 09:27:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.5 2004/07/17 19:08:33 dholm Exp $
+
+  17 Jul 2004; David Holm <dholm@gentoo.org> testdisk-5.3.ebuild:
+  Added to ~ppc.
 
   17 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> testdisk-5.2.ebuild:
   stable old version.
