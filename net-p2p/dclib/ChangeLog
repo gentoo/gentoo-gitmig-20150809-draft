@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/dclib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.3 2002/10/07 17:33:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.4 2002/10/25 02:38:04 vapier Exp $
+
+*dclib-0.2_beta1 (23 Oct 2002)
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #9622
 
 *dclib-0.1 (07 Oct 2002)
 
@@ -16,6 +21,5 @@
 
   05 Jul 2002; Seemant Kulleen <seemant@gentoo.org> dclib-01_beta8.ebuild
   files/digest-dclib-0.1_beta8 ChangeLog :
-
   New package, for a Qt-based DirectConnect client.  Submitted by:
   mikael.grahn@telia.com (Mikael Grahn) in bug #4203.
