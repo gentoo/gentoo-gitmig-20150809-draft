@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.24 2004/06/30 02:41:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.25 2004/08/26 15:41:10 usata Exp $
+
+*mew-4.0.67 (27 Aug 2004)
+
+  27 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +mew-4.0.67.ebuild:
+  Version bumped.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> mew-3.1.ebuild:
   sync IUSE (missing), trim trailing whitespace
