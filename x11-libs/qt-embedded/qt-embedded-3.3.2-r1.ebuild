@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.2-r1.ebuild,v 1.3 2004/07/06 11:29:31 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.2-r1.ebuild,v 1.4 2004/07/07 10:07:57 chrb Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -58,6 +58,9 @@ src_compile() {
 		use debug && myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
 		case ${ARCH} in
 		x86)
+			myconf="$myconf -embedded x86"
+			;;
+		amd64)
 			myconf="$myconf -embedded x86"
 			;;
 		ppc)
