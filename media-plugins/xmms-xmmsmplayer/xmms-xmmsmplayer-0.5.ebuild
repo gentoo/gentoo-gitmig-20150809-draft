@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-xmmsmplayer/xmms-xmmsmplayer-0.5.ebuild,v 1.1 2004/06/08 03:30:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-xmmsmplayer/xmms-xmmsmplayer-0.5.ebuild,v 1.2 2004/06/08 20:45:18 dholm Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="media-sound/xmms
 	media-video/mplayer"
