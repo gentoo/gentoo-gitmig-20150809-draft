@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/nxtvepg
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/nxtvepg/ChangeLog,v 1.1 2003/05/09 12:53:20 phosphan Exp $
+
+*nxtvepg-2.5.1 (09 May 2003)
+
+  09 May 2003; Patrick Kursawe <phosphan@gentoo.org> nxtvepg-2.5.1.ebuild,
+  files/nxtvepg-2.5.1.patch :
+  Initial import, ebuild provided by Torsten <t_veller@gmx.de> in bug 20683.
+
