@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/lwp-1.10.ebuild,v 1.2 2004/01/02 10:47:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/lwp-1.10.ebuild,v 1.3 2004/02/22 12:35:25 mr_bones_ Exp $
 
 DESCRIPTION="Light weight process library (used by Coda).  This is NOT libwww-perl."
 HOMEPAGE="http://www.coda.cs.cmu.edu/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.coda.cs.cmu.edu/pub/lwp/src/${P}.tar.gz"
 
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
 
 DEPEND="virtual/glibc"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-1.2.3.ebuild,v 1.17 2004/01/11 14:01:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-1.2.3.ebuild,v 1.18 2004/02/22 12:36:16 mr_bones_ Exp $
 
 MY_PN="termcap-compat"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -10,7 +10,7 @@ HOMEPAGE="http://packages.debian.org/stable/oldlibs/termcap-compat.html"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa mips arm"
+KEYWORDS="x86 ppc sparc alpha hppa mips"
 
 DEPEND="virtual/glibc"
 

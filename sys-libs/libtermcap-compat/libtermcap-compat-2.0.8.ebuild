@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8.ebuild,v 1.4 2004/01/11 14:01:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8.ebuild,v 1.5 2004/02/22 12:36:16 mr_bones_ Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ SRC_URI="http://www.catb.org/~esr/terminfo/termtypes.tc.gz
 
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ~ia64 ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ~ppc64"
 
 DEPEND="virtual/glibc"
 
