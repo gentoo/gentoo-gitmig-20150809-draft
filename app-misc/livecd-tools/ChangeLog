@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.20 2004/07/27 12:19:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.21 2004/09/05 18:06:25 kloeri Exp $
+
+  05 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> livecd-tools-1.0.2.ebuild:
+  Add ~alpha keyword.
 
 *livecd-tools-1.0.5 (27 Jul 2004)
 
