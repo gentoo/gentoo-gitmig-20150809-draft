@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.0.ebuild,v 1.7 2004/08/23 14:47:13 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.0.ebuild,v 1.8 2004/08/25 15:14:47 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -475,11 +475,13 @@ src_install() {
 	done
 	sed -i -e s/'=oo'/'=xoo'/g *.desktop
 
-	einfo "Installing Menu shortcuts and mime info (need \"gnome\" or \"kde\" in USE)..."
+	einfo "Installing menu shortcuts"
+	insinto /usr/share/applications
+	doins *.desktop
+
+	einfo "Installing mime info (need \"gnome\" or \"kde\" in USE)..."
 	if use gnome
 	then
-		insinto /usr/share/applications
-		doins *.desktop
 		insinto /usr/share/application-registry
 		doins ${FILESDIR}/${OO_VER}/ximian-openoffice.applications
 		insinto /usr/share/mime-info
@@ -488,8 +490,6 @@ src_install() {
 
 	if use kde
 	then
-		insinto /usr/share/applnk/Ximian-OpenOffice.org
-		doins *.desktop
 		insinto /usr/share/mimelnk/application
 		doins ${S}/sysui/${SOLPATH}/misc/kde/share/mimelnk/application/*
 	fi
