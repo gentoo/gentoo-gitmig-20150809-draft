@@ -1,6 +1,12 @@
 # ChangeLog for net-www/bugzilla
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.1 2004/08/15 09:44:27 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.2 2004/08/17 22:23:09 rl03 Exp $
+
+*bugzilla-2.18.0_rc2 (17 Aug 2004)
+
+  17 Aug 2004; Renat Lumpau <rl03@gentoo.org> +files/2.18.0_rc2/apache.htaccess,
+  +files/2.18.0_rc2/reconfig, +bugzilla-2.18.0_rc2.ebuild:
+  Version bump (bug 59165). Cleaned up dependancies.
 
 *bugzilla-2.18.0_rc1 (15 Aug 2004)
 
