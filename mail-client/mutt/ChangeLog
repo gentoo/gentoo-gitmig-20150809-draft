@@ -1,0 +1,284 @@
+# ChangeLog for net-mail/mutt
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.1 2004/05/30 02:51:41 seemant Exp $
+
+*mutt-1.5.6 (29 May 2004)
+
+  29 May 2004; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  +files/8patch-1.5.6.dyc.source_stat, +files/Muttrc, +files/Muttrc.mbox,
+  +files/slang.patch, +mutt-1.4.2.1.ebuild, +mutt-1.5.6-r2.ebuild,
+  +mutt-1.5.6.ebuild:
+  Moved from net-mail/mutt to mail-client/mutt.
+
+  26 May 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.5.6-r2.ebuild:
+  Fix bug 52008 (again): Require gdbm instead of bothering with Berkeley DB,
+  which seems to be a maze of twisty passages
+
+  26 May 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.5.6-r2.ebuild:
+  Update patch-1.5.6.vvv.nntp-gentoo-r1.bz2 to coincide with
+  mutt-cvs-maildir-header-cache.16
+
+*mutt-1.5.6-r2 (25 May 2004)
+
+  25 May 2004; Aron Griffis <agriffis@gentoo.org> -mutt-1.5.4-r1.ebuild,
+  -mutt-1.5.4.ebuild, -mutt-1.5.5.1.ebuild, -mutt-1.5.6-r1.ebuild,
+  +mutt-1.5.6-r2.ebuild:
+  Fix bug 52008 by bumping mutt-cvs-maildir-header-cache from .15 to .16 --
+  thanks to khai for debugging
+
+  24 May 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.5.6-r1.ebuild,
+  mutt-1.5.6.ebuild:
+  Change doins to newins for Muttrc.mbox
+
+  24 May 2004; Aron Griffis <agriffis@gentoo.org> -files/Muttrc.color,
+  +files/Muttrc.mbox, mutt-1.5.6-r1.ebuild, mutt-1.5.6.ebuild:
+  Fix bug 47121 (mutt installs strange Muttrc when USE=mbox) by installing
+  files/Muttrc.mbox in that case
+
+*mutt-1.5.6-r1 (24 May 2004)
+
+  24 May 2004; Aron Griffis <agriffis@gentoo.org> +mutt-1.5.6-r1.ebuild:
+  Add maildir header caching patch from
+  http://wwwcip.informatik.uni-erlangen.de/~sithglan/mutt/ for bug 46842
+
+  14 May 2004; Lars Weiler <pylon@gentoo.org> mutt-1.5.6.ebuild:
+  Stable on ppc
+
+  07 May 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.5.6.ebuild:
+  Add mailbase to DEPEND for bug 45513
+
+  27 Mar 2004; Guy Martin <gmsoft@gentoo.org> mutt-1.5.6.ebuild:
+  Marked stable on hppa.
+
+  26 Mar 2004; <tuxus@gentoo.org> mutt-1.5.6.ebuild:
+  Added mips to KEYWORDS.
+
+  09 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> mutt-1.5.6.ebuild:
+  Bumping amd64 to stable. Closing #43469.
+
+  27 Feb 2004; Sven Blumenstein <bazik@gentoo.org> mutt-1.5.6.ebuild:
+  Stable on sparc.
+
+  26 Feb 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.5.6.ebuild:
+  stable on x86, alpha and ia64
+
+  26 Feb 2004; Guy Martin <gmsoft@gentoo.org> mutt-1.5.5.1.ebuild:
+  Marked stable on hppa.
+
+  25 Feb 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.5.6.ebuild,
+  files/8patch-1.5.6.dyc.source_stat:
+  Fix bug #42738 with patch submitted by José Romildo Malaquias
+
+  25 Feb 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.5.6.ebuild:
+  Always apply slang fix, even when USE=vanilla
+
+*mutt-1.4.2.1 (17 Feb 2004)
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.4.2.1.ebuild,
+  mutt-1.5.5.1.ebuild, mutt-1.5.6.ebuild:
+  Add 1.4.2.1 since 1.5.x is officially the devel series
+
+  13 Feb 2004; Lars Weiler <pylon@gentoo.org> mutt-1.5.6.ebuild,
+  files/slang.patch:
+  Fast and dirty patch for those who use mutt with USE="slang".  See bug
+  #41312.  There should be an upstream patch soon.
+
+  11 Feb 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.4.1-r1.ebuild,
+  mutt-1.4.1.ebuild:
+  remove insecurity-afflicted versions
+
+  11 Feb 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.5.4-r1.ebuild,
+  mutt-1.5.5.1.ebuild, mutt-1.5.6.ebuild:
+  use WANT_AUTOCONF, not WANT_AUTOMAKE (bug 33919)
+
+  11 Feb 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.5.4-r1.ebuild,
+  mutt-1.5.4.ebuild, mutt-1.5.5.1.ebuild:
+  change edit_threads URL, thanks to Tom Knight-Markiegi in bug 38320
+
+*mutt-1.5.6 (11 Feb 2004)
+
+  11 Feb 2004; Aron Griffis <agriffis@gentoo.org> mutt-1.5.6.ebuild:
+  version bump to 1.5.6
+
+  22 Feb 2004; Greg Fitzgerald <gregf@gentoo.org> mutt-1.5.5.1.ebuild:
+  Bumped stable version to 1.5.5.1 this should fix some problems with
+  WANT_AUTOCONF in version 1.4.1-r1
+
+  18 Jan 2004; <tuxus@gentoo.org> mutt-1.4.1-r1.ebuild:
+  Added ~mips to KEYWORDS.
+
+  15 Jan 2004; Jon Portnoy <avenj@gentoo.org> mutt-1.5.4-r1.ebuild,
+  mutt-1.5.5.1.ebuild :
+  AMD64 keywords.
+
+*mutt-1.5.5.1 (19 Nov 2003)
+
+  19 Nov 2003; Greg Fitzgerald <gregf@gentoo.org> mutt-1.5.5.1.ebuild:
+  Version bump.
+
+  02 Oct 2003; Brad House <brad_mssw@gentoo.org> mutt-1.5.4.ebuild:
+  add ~amd64 flag
+
+  02 Oct 2003; Brad House <brad_mssw@gentoo.org> mutt-1.5.4.ebuild:
+  add ~amd64 flag
+
+  17 Sep 2003; Hallgrimur H. Gunnarsson <hhg@gentoo.org> mutt-1.5.4-r1.ebuild:
+  Don't gzip manual. Added maildir to IUSE. See bug #28186
+
+  09 Sep 2003; Aron Griffis <agriffis@gentoo.org> mutt-1.5.4-r1.ebuild:
+  Mark stable on alpha
+
+  15 Jul 2003; Christian Birchinger <joker@gentoo.org> mutt-1.5.4-r1.ebuild:
+  Added sparc stable keyword
+
+  07 Jul 2003; Peter Johanson <latexer@gentoo.org> mutt-1.5.4-r1.ebuild:
+  unset WANT_AUTOMAKE_2_5 to fix compilation. bug #22787
+
+*mutt-1.5.4-r1 (29 May 2003)
+
+  05 Aug 2003; Guy Martin <gmsoft@gentoo.org> mutt-1.5.4-r1.ebuild :
+  Marked stable on hppa.
+
+  29 May 2003; Stanislav Brabec <utx@gentoo.org> mutt-1.4.1-r1.ebuild,
+  mutt-1.5.4-r1.ebuild: Fixed mbox build (from mutt-1.4-r3). Added message
+  about transparent background.
+
+  26 Mar 2003; Peter Johanson <latexer@gentoo.org> :
+  Changed 'use_enable ssl' to 'use_with ssl'. bug #18253
+
+*mutt-1.5.4 (25 Mar 2003)
+
+  31 Mar 2003; Aron Griffis <agriffis@gentoo.org> mutt-1.4.1.ebuild,
+  mutt-1.5.4.ebuild:
+  Fix bug 18427 on alpha by restricting optimization to -O2. This seems to be
+  the same as bug 11170 on ppc.
+
+  29 Mar 2003; Aron Griffis <agriffis@gentoo.org> mutt-1.5.4.ebuild:
+  Disable on alpha until we debug it. At the moment it just segfaults when
+  sorting the inbox.  See bug #18427
+
+  29 Mar 2003; Masatomo Nakano <nakano@gentoo.org> mutt-1.5.4.ebuild:
+  fixed bug. #18317
+
+  25 Mar 2003; Peter Johanson <latexer@gentoo.org> mutt-1.5.4.ebuild:
+  Version bump. thanks to knghtbrd for the ebuild
+
+  14 Feb 2003; Guy Martin <gmsoft@gentoo.org> mutt-1.4-r3.ebuild :
+  Added hppa to keywords.
+
+*mutt-1.4.1-r1 (29 May 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+*mutt-1.4.1 (22 Mar 2003)
+
+  29 Mar 2003; Masatomo Nakano <nakano@gentoo.org> mutt-1.4.1.ebuild:
+  fixed bug. #18317
+
+  22 Mar 2003; Lars Weiler <pylon@gentoo.org> mutt-1.4.1.ebuild:
+  version bump
+  
+  closes security bug 17857
+  
+  adds a feature for thread editing (bug 12165)
+  change on ppc -O3 to -O2 so that it won't segfault on config-files with
+  lines larger than 255 characters (closes bug 11170)
+
+*mutt-1.4-r3 (03 Sept 2002)
+
+  27 Feb 2003; Aron Griffis <agriffis@gentoo.org> mutt-1.4-r3.ebuild:
+  Mark stable on alpha
+
+  14 Feb 2003; Jungmin Seo <seo@gentoo.org> mutt-1.4-r3.ebuild :
+  added pkg_setup. Now it needs WANT_JA variable to use the
+  japanese patch.  This is to avoid the patch for korean or
+  chinese.
+
+  28 Jan 2003; Martin Holzer <mholzer@gentoo.org> mutt-1.4-r3.ebuild :
+  Added mbox support. Closes #13234.
+
+  14 Dec 2002; Aron Griffis <agriffis@gentoo.org> mutt-1.4-r3.ebuild :
+
+  Added ~alpha to KEYWORDS
+
+  07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> mutt-1.4-r2.ebuild, mutt-1.4-r3.ebuild :
+  Changed sparc64 to sparc keyword
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+  16 Nov 2002; Calum Selkirk <cselkirk@gentoo.org> mutt-1.4-r3.ebuild :
+
+  Changed the ebuild not to install an /etc/Muttrc if USE="mbox" is defined.
+  "mbox" is the default behavior with mutt.
+
+  22 Oct 2002; Seemant Kulleen <seemant@gentoo.org> mutt-1.4-r3.ebuild :
+
+  SRC_URI fix by: jeffthorsett@hotmail.com (Jeff Thorsett) in bug #9503.
+
+  03 Sept 2002; Calum Selkirk <cselkirk@gentoo.org> mutt-1.4-r3.ebuild 
+  files/digest-mutt-1.4-r3 :
+
+  Added the compressed folder patch. This closes bug #7398
+
+*mutt-1.4-r2 (28 Jul 2002) 
+
+  28 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> mutt-1.4-r2.ebuild :
+
+  Tested the jp.patch on ppc
+  Added ppc to keywords.
+
+  28 Jul 2002; Stuart Bouyer <stubear@gentoo.org> mutt-1.4-r2.ebuild :
+
+  Added patch for Japanese support (submitted by Cong 
+  <vo.chi.cong-linux@is.titech.ac.jp> ). 
+  Removed PPC from KEYWORDS, cause I can't test that the patch works on PPC.
+
+*mutt-1.4-r1 (27 Jul 2002)
+
+  28 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> mutt-1.4-r1.ebuild,
+  mutt-1.3.28.ebuild, mutt-1.4.ebuild :
+
+  Added PPC to KEYWORDS
+  Seemant: the compressed folder patch author is Roland Rosenfeld
+  <roland@spinnaker.de>.
+
+  27 Jul 2002; Seemant Kulleen <seemant@gentoo.org> mutt-1.4-r1.ebuild :
+
+  Enabled support for compressed folders.  Submitted by Lim Swee Tat
+  <st_lim@eXtropia.com> in an email to me.
+
+*mutt-1.4 (29 May 2002)
+
+  29 Apr 2002; Ryan Phillips <rphillips@gentoo.org> mutt-1.4.ebuild :
+
+  new version
+  
+*mutt-1.3.28-r1 (25 Apr 2002)
+
+  25 Apr 2002; Ryan Phillips <rphillips@gentoo.org> mutt-1.3.28-r1.ebuild :
+
+  Mutt couldn't fcntl() the ~/Mail directory on a NFS volume.  Changed
+  ebuild to enable flock() support per bug #2005.
+
+*mutt-1.3.28 (21 Mar 2002)
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> mutt-1.3.28.ebuild :
+
+  Version upgrade to release candidate version.  Copied over the .25 ebuild.
+
+*mutt-1.3.25 (21 Mar 2002)
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> mutt-1.3.25.ebuild :
+
+  HTML documentation need not be gzipped.
+
+*mutt-1.3.25 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
