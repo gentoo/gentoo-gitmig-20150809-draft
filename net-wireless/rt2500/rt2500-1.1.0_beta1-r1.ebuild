@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta1.ebuild,v 1.4 2005/02/13 20:49:04 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta1-r1.ebuild,v 1.1 2005/02/19 20:08:21 genstef Exp $
 
 inherit eutils linux-mod kde-functions
 set-qtdir 3
@@ -19,7 +19,7 @@ DEPEND="net-wireless/wireless-tools
 S=${WORKDIR}/${MY_P}
 MODULE_NAMES="rt2500(net:${S}/Module)"
 CONFIG_CHECK="NET_RADIO"
-MODULESD_RT2500_ALIASES=('ra* rt2500')
+MODULESD_RT2500_ALIASES=('ra? rt2500')
 
 
 pkg_setup() {
