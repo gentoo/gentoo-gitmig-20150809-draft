@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.21 2002/06/05 21:14:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.22 2002/06/06 20:41:32 azarah Exp $
+
+*mozilla-1.0-r2 (6 Jun 2002)
+  6 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Add xfree-4.2.0-r11 suppport.
 
 *mozilla-1.0-r1 (5 Jun 2002)
   5 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
