@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.50 2003/12/08 03:40:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.51 2003/12/09 13:02:47 agriffis Exp $
+
+  09 Dec 2003; Aron Griffis <agriffis@gentoo.org> gvim-6.2-r5.ebuild:
+  Revert to vim-6.2.069-gentoo-patches.tar.bz2 because the autoconf/EGREP patch
+  requires autoconf-2.5, and we don't want to depend on that.  This change
+  goes along with a modification to vim.eclass to force autoconf-2.13
 
   07 Dec 2003; Aron Griffis <agriffis@gentoo.org> gvim-6.2-r5.ebuild:
   Use vim-6.2.140-gentoo-patches.tar.bz2 to fix bug 34505: Patch
