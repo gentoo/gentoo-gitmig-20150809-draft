@@ -1,0 +1,13 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/package.mask,v 1.1 2005/01/23 05:06:46 eradicator Exp $
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# multilib aware versions (install to & look in proper $(get_libdir))
+<app-editors/emacs-21.3-r5
+<dev-db/postgresql-7.4.6
+<dev-lang/tcl-8.4.6-r1
+<dev-lang/tk-8.4.6-r1
+<dev-tcltk/expect-5.42.1
+<media-video/transcode-0.6.14
+<net-libs/courier-authlib-0.52
+<sys-apps/iproute2-2.6.10.20050112
+<sys-devel/flex-2.5.4a-r6

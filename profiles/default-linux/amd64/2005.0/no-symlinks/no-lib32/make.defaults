@@ -1,0 +1,5 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/no-lib32/make.defaults,v 1.1 2005/01/23 05:06:46 eradicator Exp $
+
+LIBDIR_x86="lib"
