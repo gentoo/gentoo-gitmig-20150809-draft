@@ -1,0 +1,11 @@
+# ChangeLog for net-dns/updatedd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/updatedd/ChangeLog,v 1.1 2005/01/08 00:46:21 dragonheart Exp $
+
+*updatedd-2.3 (08 Jan 2005)
+
+  08 Jan 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +files/updatedd-2.3-makefile.patch, +updatedd-2.3.ebuild:
+  Initial import as per bug #76941 by  
+  Lars Geiger <lars.geiger@gmx.net>
+

@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e792c36b699664645ee3563cc10f05eb updatedd-2.3.ebuild 821
+MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 8daf0a8060de6c5306102a3a27171d37 ChangeLog 444
+MD5 eb4a7c2c05f74ce62fcb00391abd19d5 files/digest-updatedd-2.3 64
+MD5 82a2354d2d4b5f0fcd5c117f1e7377f7 files/updatedd-2.3-makefile.patch 3527
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB3y1jmdTrptrqvGERAo2FAJ0Tnw6ESKelgdbWNRJsMxxuSulpvgCfVCpB
+OMVhcxpDOhhqZxHfOazVEWM=
+=43uD
+-----END PGP SIGNATURE-----
