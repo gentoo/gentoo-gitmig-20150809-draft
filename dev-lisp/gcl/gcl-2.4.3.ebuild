@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.4.3.ebuild,v 1.3 2002/10/04 05:18:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.4.3.ebuild,v 1.4 2002/10/18 20:29:46 george Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU Common Lisp"
@@ -27,6 +27,12 @@ src_compile() {
 			sed -e 's|./configure: emacs: command not found|${prefix}/share/emacs/site-lisp/gcl|g' > $i
 	done
 
+	for i in  makedefs makedefc ; do 
+		mv $i $i.libs.orig ;
+		cat $i.libs.orig | \
+			sed -e 's|/usr/lib/gcc-lib/i686-pc-linux-gnu/3.2/../../../libbfd.a /usr/lib/gcc-lib/i686-pc-linux-gnu/3.2/libiberty.a|-liberty -lbfd|g' > $i
+	done
+
 	cd ${S}
 	make ${MAKEOPTS} || die
 
@@ -38,9 +44,11 @@ src_install() {
 	dodir /usr/share/emacs/site-lisp/gcl
 
 	make install prefix=${D}/usr MANDIR=${D}/usr/share/man \
-		INFO_DIR=${D}/usr/info EMACS_SITE_LISP=${D}/usr/share/emacs/site-lisp/gcl \
+		INFO_DIR=${D}/usr/share/info EMACS_SITE_LISP=${D}/usr/share/emacs/site-lisp/gcl \
 		EMACS_DEFAULT_EL=${D}/usr/share/emacs/site-lisp/gcl/default.el \
 		|| die
+
+	rm -f ${D}/usr/share/infodir
 
 	mv ${D}/usr/lib/${P}/info/* ${D}/usr/share/info
 	rm ${D}/usr/share/info/texinfo.tex

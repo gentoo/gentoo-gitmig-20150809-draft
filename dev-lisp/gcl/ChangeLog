@@ -1,12 +1,17 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.6 2002/09/05 03:09:03 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.7 2002/10/18 20:29:46 george Exp $
 
 *gcl-2.4.3 (03 Sep 2002)
 
+  18 Oct 2002; George Shapovalov <george@gentoo.org> gcl-2.4.3.ebuild :
+
+  Fix for problematic linking on some systems, see #7793 (Thanks  Michal Maruska, Felix Breuer!).
+  Few cosmetic fixes to make install docs in proper places.
+
   04 Sep 2002; George Shapovalov <george@gentoo.org> gcl-2.4.3.ebuild :
 
-  fex more run-time fixes submitted by Lars S. Jensen <larssj@nospam.dk>,
+  few more run-time fixes submitted by Lars S. Jensen <larssj@nospam.dk>,
   added gmp dependency
 
   03 Sep 2002; George Shapovalov <george@gentoo.org> gcl-2.4.3.ebuild :
