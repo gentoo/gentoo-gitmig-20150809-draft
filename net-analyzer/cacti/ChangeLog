@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.30 2004/08/23 10:02:16 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.31 2004/10/14 04:41:29 eldad Exp $
+
+*cacti-0.8.6b (14 Oct 2004)
+
+  14 Oct 2004; Eldad Zack <eldad@gentoo.org> +cacti-0.8.6b.ebuild:
+  Version bump. Updated deps (cron, php). Check useflags of php/mod_php. Got rid
+  of version detection, and corrrected a few postinst instructions.
 
 *cacti-0.8.5a-r2 (23 Aug 2004)
 
