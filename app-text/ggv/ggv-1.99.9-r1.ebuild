@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-1.99.9-r1.ebuild,v 1.2 2002/08/15 03:49:08 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-1.99.9-r1.ebuild,v 1.3 2002/09/05 21:39:11 spider Exp $
 
 inherit gnome2
 
 S=${WORKDIR}/${P}
 DESCRIPTION="your favourite PostScript previewer"
-SRC_URI="mirror://gnome/sources/ggv/${P}.tar.gz"
+SRC_URI="mirror://gnome/2.0.0/sources/ggv/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="1"
