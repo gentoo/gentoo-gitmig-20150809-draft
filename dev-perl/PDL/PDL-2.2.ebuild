@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.2.ebuild,v 1.3 2001/04/23 19:59:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.2.ebuild,v 1.4 2001/04/24 00:07:03 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -17,10 +17,9 @@ DEPEND=">=sys-devel/perl-5
 src_unpack() {
 
   unpack ${A}
-  if [ "`use opengl`" ]
+  cp ${FILESDIR}/perldl.conf ${S}
+  if [ -z "`use opengl`" ]
   then
-    cp ${FILESDIR}/perldl.conf ${S}
-  else
     sed -e "s:WITH_3D => undef:WITH_3D => 0:" ${FILESDIR}/perldl.conf > ${S}/perldl.conf
   fi
 
@@ -36,7 +35,8 @@ src_compile() {
 
 src_install () {
 
-    try make PREFIX=${D}/usr install
+    try make PREFIX=${D}/usr INSTALLMAN3DIR=/usr/share/man/man3 \
+	INSTALLMAN1DIR=${D}/usr/share/man/man1 install
 
     dodoc COPYING Changes DEPENDENCIES DEVELOPMENT README MANIFEST*
     dodoc Release_Notes TODO
