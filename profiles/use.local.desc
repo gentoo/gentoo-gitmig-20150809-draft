@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.208 2004/01/05 11:06:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.209 2004/01/08 04:27:24 george Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -41,6 +41,7 @@ app-sci/octave-forge:ginac - Adds app-sci/ginac (symbolic math) support
 app-sci/octave-forge:qhull - Adds media-libs/qhull (geometric extentions) support
 app-sci/opendx:cdf - Adds cdf data exchange format to app-sci/opendx
 app-sci/opendx:hdf - Adds support for the Hierarchical Data Format to app-sci/opendx
+app-sci/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to app-sci/octave (may be merged with hdf when opendx is completed)
 app-text/namazu:chasen - Enable chasen support for namazu
 app-text/namazu:kakasi - Enable kakasi support for namazu
 dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY' feature.
