@@ -1,2 +1,5 @@
-default-x86-2004.2
-http://www.gentoo.org/doc/en/gentoo-upgrading.xml#doc_chap3
+default-linux/x86/gcc31
+# emerge -n '>=sys-apps/portage-2.0.51'
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-linux/x86/gcc31 make.profile

@@ -1,4 +1,5 @@
-default-ppc-2004.1
+default-linux/ppc/2004.3
+# emerge -n '>=sys-apps/portage-2.0.51'
 # cd /etc/
 # rm make.profile
-# ln -s ../usr/portage/profiles/default-ppc-2004.1 make.profile
+# ln -s ../usr/portage/profiles/default-linux/ppc/2004.3 make.profile
