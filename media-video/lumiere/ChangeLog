@@ -1,6 +1,6 @@
 # ChangeLog for media-video/lumiere
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-
+# $Header
 *lumiere-0.3.0 (20 Jan 2003)
 
   20 Jan 2003; Luca Barbato <lu_zero@gentoo.org> lumiere-0.3.0.ebuild :
