@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.0.0.ebuild,v 1.1 2004/08/23 14:14:01 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.0.0.ebuild,v 1.2 2005/01/05 01:11:53 st_lim Exp $
 
 inherit webapp
 
@@ -8,9 +8,9 @@ MY_PN=${PN/-web/}
 MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Web based administration and user controls for dspam"
-SRC_URI="http://www.nuclearelephant.com/projects/dspam/sources/${MY_P}.tar.gz"
+SRC_URI="http://dspam.nuclearelephant.com/sources/${MY_P}.tar.gz"
 
-HOMEPAGE="http://www.nuclearelephant.com/projects/dspam/index.html"
+HOMEPAGE="http://dspam.nuclearelephant.com/"
 LICENSE="GPL-2"
 DEPEND=">=mail-filter/dspam-3.1.0_beta11
 	>=net-www/apache-1.3
