@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/lpe
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/ChangeLog,v 1.1 2003/10/04 15:22:15 pyrania Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/ChangeLog,v 1.2 2004/04/11 14:45:13 pyrania Exp $
+
+  11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> lpe-1.2.6.ebuild:
+  Marking stable.
 
 *lpe-1.2.6 (04 Oct 2003)
 
