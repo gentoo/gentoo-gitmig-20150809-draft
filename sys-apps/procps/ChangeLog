@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.90 2004/10/06 13:16:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.91 2004/10/20 12:09:14 chrb Exp $
+
+  20 Oct 2004; Chris Bainbridge <chrb@gentoo.org> procps-3.2.3-r1.ebuild:
+  fix compile error when $NAME is set
 
   06 Oct 2004; Guy Martin <gmsoft@gentoo.org> procps-3.2.3-r1.ebuild:
   Stable on hppa.

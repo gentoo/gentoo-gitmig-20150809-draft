@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.3-r1.ebuild,v 1.9 2004/10/06 13:16:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.3-r1.ebuild,v 1.10 2004/10/20 12:09:14 chrb Exp $
 
 inherit flag-o-matic eutils
 
@@ -36,6 +36,7 @@ src_unpack() {
 
 src_compile() {
 	replace-flags -O3 -O2
+	unset NAME
 	emake -e || die
 }
 
