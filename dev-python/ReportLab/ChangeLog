@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/ReportLab
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ReportLab/ChangeLog,v 1.7 2003/03/19 12:52:48 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ReportLab/ChangeLog,v 1.8 2003/04/04 12:29:00 liquidx Exp $
 
 *ReportLab-1.17 (02 Mar 2003)
+
+  04 Apr 2003; Alastair Tse <liquidx@gentoo.org> ReportLab-1.17.ebuild:
+  bumping to stable
 
   02 Mar 2003; Troy Dack <tad@gentoo.org> ReportLab-1.17.ebuild,
   files/1.17/setup.py:
