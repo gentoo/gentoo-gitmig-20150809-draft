@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.266 2005/01/13 06:20:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.267 2005/01/13 20:04:19 spyderous Exp $
+
+  13 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.1.901-r1.ebuild:
+  Keyword ~x86 ~sparc ~ppc64 ~ppc ~amd64 ~alpha, like 6.8.1.901 is. No
+  arch-dependent source-code changes. The migration particularly needs to be
+  tested on amd64, but I've had multiple success reports.
 
 *xorg-x11-6.8.1.901-r1 (12 Jan 2005)
 
