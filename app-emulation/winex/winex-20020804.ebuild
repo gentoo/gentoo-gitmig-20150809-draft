@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020804.ebuild,v 1.3 2002/08/04 19:03:32 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020804.ebuild,v 1.4 2002/08/06 18:25:13 phoenix Exp $
 
 S=${WORKDIR}/wine
 DESCRIPTION="WineX is a distribution of Wine with enhanced DirectX for gaming"
@@ -33,8 +33,8 @@ src_compile() {
 	[ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" || myconf="$myconf --enable-trace --enable-debug"
 
 	# the folks at #winehq were really angry about custom optimization
-	unset CFLAGS=""
-	unset CXXFLAGS=""
+	unset CFLAGS
+	unset CXXFLAGS
 	
 	./configure --prefix=/usr/lib/winex \
 	--sysconfdir=/etc/winex \
@@ -43,11 +43,16 @@ src_compile() {
 	--with-x \
 	${myconf} || die "configure failed"
 
-	#From the old ebuild - not sure if we still need that. Needs testing.
+	# Fixes a winetest issue
 	cd ${S}/programs/winetest
 	cp Makefile 1
 	sed -e 's:wine.pm:include/wine.pm:' 1 > Makefile
-	
+
+	# This persuades wineshelllink that "winex" is a better loader :)
+	cd ${S}/tools
+	cp wineshelllink 1
+	sed -e 's/\(WINE_LOADER=\)\(\${WINE_LOADER:-wine}\)/\1winex/' 1 > wineshelllink
+
 	cd ${S}	
 	make depend all || die "make depend all failed"
 	cd programs && emake || die "emake died"
