@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.1.ebuild,v 1.3 2004/03/11 20:43:15 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.1.ebuild,v 1.4 2004/03/12 02:51:02 zx Exp $
 
 inherit java-pkg
 
@@ -55,7 +55,7 @@ src_compile() {
 	for i in "ant,antlr,bcel,bsh,commons-beanutils,commons-logging,javamail,jaf,jdepend,jsch,junit,jython,log4j,oro,regexp,rhino,xalan,xerces"; do
 		export CLASSPATH="${CLASSPATH}`java-config --classpath=${i}`"
 	done
-	./build.sh -Ddist.dir=${D}/usr/share/ant || die
+	./build.sh -Ddist.dir=${D}/usr/share/ant -lib ${CLASSPATH} || die
 }
 
 src_install() {
