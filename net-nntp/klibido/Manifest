@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 b70888caf3063830a3986c5f527cfd53 ChangeLog 891
 MD5 9380c2a3c6d9b12af5d90913727ce07b klibido-0.2.0.ebuild 600
-MD5 26a218d4270057c6dfa2d8e8ab380d5a klibido-0.2.0-r1.ebuild 736
-MD5 bc9650adbcee6b720d8ba6b99e89bdd5 ChangeLog 806
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
-MD5 a1279b9654cf71671843eb84edb39b7c files/0.2.0-nntpthreadsocket.cpp.diff 504
-MD5 266652e9c7738532ff1efc6c4dd81b83 files/digest-klibido-0.2.0-r1 65
-MD5 1c3a78d0eb80e4a38c6d687d973e65a4 files/0.2.0-qmgr.cpp.diff 430
+MD5 40f7f06091359d04a1a0ca7b57af1cea klibido-0.2.0-r1.ebuild 738
 MD5 266652e9c7738532ff1efc6c4dd81b83 files/digest-klibido-0.2.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCE/4UI1lqEGTUzyQRAuf3AJ9qOyMLqxrFSFTHqeKKq16LVNyW0wCfbhNt
-+72JhmbuZwp9kEHjDj2EhEk=
-=BT5k
------END PGP SIGNATURE-----
+MD5 a1279b9654cf71671843eb84edb39b7c files/0.2.0-nntpthreadsocket.cpp.diff 504
+MD5 1c3a78d0eb80e4a38c6d687d973e65a4 files/0.2.0-qmgr.cpp.diff 430
+MD5 266652e9c7738532ff1efc6c4dd81b83 files/digest-klibido-0.2.0-r1 65
