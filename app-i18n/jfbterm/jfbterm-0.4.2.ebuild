@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/jfbterm-0.4.1.ebuild,v 1.3 2003/09/14 15:43:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/jfbterm-0.4.2.ebuild,v 1.1 2003/09/14 15:43:11 usata Exp $
 
 inherit flag-o-matic
 replace-flags "-march=pentium3" "-mcpu=pentium3"
 
-DESCRIPTION="The J Framebuffer Terminal/Multilingual Enhancement"
+DESCRIPTION="The J Framebuffer Terminal/Multilingual Enhancement with UTF-8 support"
 HOMEPAGE="http://jfbterm.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/${PN}/5803/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/${PN}/5925/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4
@@ -33,6 +33,7 @@ src_compile() {
 src_install() {
 
 	dodir /etc
+	dodir /usr/share/fonts/jfbterm
 	einstall || die
 
 	if [ ! -e /usr/share/terminfo/j/jfbterm ] ; then
