@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Tree-Simple
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-Simple/ChangeLog,v 1.1 2004/08/25 11:57:14 rl03 Exp $
+
+*Tree-Simple-1.05 (25 Aug 2004)
+
+  25 Aug 2004; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
+  +Tree-Simple-1.05.ebuild:
+  Initial ebuild. RT dependency. OK'd by mcummings.
+
