@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3612 2005/02/12 11:08:56 joem Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3613 2005/02/12 20:47:37 vapier Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1026,10 +1026,6 @@ dev-lisp/cl-rsm-genetic-alg
 # emacs-unicode-2 branch is not stable and SLOT support for emacs
 # is imcomplete. info directory handling should be reconsidered.
 =app-editors/emacs-cvs-22.0.0*
-
-# <mr_bones_@gentoo.org> (25 June 2004)
-# No worky for me.  Needs some love from Spanky.
-games-arcade/mtp-target-bin
 
 # <swegener@gentoo.org> (20 June 2004)
 # alpha software, which is very buggy
