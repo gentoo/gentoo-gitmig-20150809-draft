@@ -1,0 +1,32 @@
+#! /bin/bash
+#RCUPDATE:2 3 4:95:This line is required for script management
+# Let this start as late as possible, but before those services 
+# which must start last e.g. xdm/kdm
+# If it starts too early, it may do so before a working internet
+# connection is up
+
+. /etc/rc.d/config/basic
+. /etc/rc.d/config/functions
+
+opts="start stop restart"
+
+start() {
+	ebegin "Starting wwwoffled"
+	#start-stop-daemon --start --quiet --exe `which wwwoffled` -c /var/spool/wwwoffle/wwwoffle.conf 1>&2
+	wwwoffled -c /var/spool/wwwoffle/wwwoffle.conf
+        eend $? "Error starting wwwoffled, perhaps it's already running?"
+}
+
+stop() {
+	ebegin "Stopping wwwoffled"
+	#start-stop-daemon --stop --quiet --exe `which wwwoffled` -c /var/spool/wwwoffle/wwwoffle.conf 1>&2
+	wwwoffle -kill
+	eend $? "Error stopping wwwoffled, perhaps it wasn't running?"
+}
+
+restart() {
+	stop
+	start
+}
+
+doservice ${@}

@@ -1,0 +1,100 @@
+--- Makefile.orig	Tue May 29 21:29:03 2001
++++ Makefile	Wed Jul 18 00:17:57 2001
+@@ -18,11 +18,14 @@
+ LOCALHOST=localhost:8080
+ 
+ # For UNIX.
+-INSTDIR=/usr/local
+-SPOOLDIR=/var/spool/wwwoffle
+-CONFDIR=/var/spool/wwwoffle
+-MANDIR=$(INSTDIR)/man
+-DOCDIR=$(INSTDIR)/doc/wwwoffle
++INSTDIR=${DESTDIR}/usr
++SPOOLDIR=${DESTDIR}/var/spool/wwwoffle
++CONFDIR=${DESTDIR}/var/spool/wwwoffle
++MANDIR=$(INSTDIR)/share/man
++DOCDIR=$(INSTDIR)/share/doc/wwwoffle
++
++REALSPOOLDIR=/var/spool/wwwoffle
++REALCONFDIR=/var/spool/wwwoffle
+ 
+ # For Cygwin (win32).
+ #INSTDIR=/wwwoffle
+@@ -54,7 +57,7 @@
+ ########
+ 
+ CC=gcc
+-CFLAGS=-O2 -Wall -g
++NEWCFLAGS=-O2 -Wall -g ${CFLAGS}
+ 
+ # This is used in the FreeBSD port (http://www.freebsd.org/ports/).
+ #CFLAGS=-O2 -Wall
+@@ -106,7 +109,7 @@
+ # For Solaris you need the following instead.
+ #LIBRARY=-lnsl -lsocket -lz
+ 
+-COMPILE=$(CC) -c $(CFLAGS)
++COMPILE=$(CC) -c $(NEWCFLAGS)
+ 
+ LINK=$(LD) $(LDFLAGS)
+ 
+@@ -340,7 +343,7 @@
+ 	[ -x $(MANDIR)/man1 ] || $(INSTALL) -d -m 755 $(MANDIR)/man1
+ 	$(INSTALL) -c -m 644 wwwoffle.man $(MANDIR)/man1/wwwoffle.1
+ 	[ -x $(MANDIR)/man5 ] || $(INSTALL) -d -m 755 $(MANDIR)/man5
+-	sed -e 's%SPOOLDIR%$(SPOOLDIR)%' -e 's%CONFDIR%$(CONFDIR)%' < wwwoffle.conf.man > wwwoffle.conf.man.install
++	sed -e 's%SPOOLDIR%$(TRUESPOOLDIR)%' -e 's%CONFDIR%$(TRUECONFDIR)%' < wwwoffle.conf.man > wwwoffle.conf.man.install
+ 	$(INSTALL) -c -m 644 wwwoffle.conf.man.install $(MANDIR)/man5/wwwoffle.conf.5
+ 	[ -x $(MANDIR)/man8 ] || $(INSTALL) -d -m 755 $(MANDIR)/man8
+ 	$(INSTALL) -c -m 644 wwwoffled.man $(MANDIR)/man8/wwwoffled.8
+@@ -356,7 +359,7 @@
+ 	  done )
+ 
+ install_cache :
+-	@[ ! -d $(SPOOLDIR) ] || [ ! -d $(SPOOLDIR)/outgoing ] || [ -d $(SPOOLDIR)/prevtime1 ] || \
++	@[ ! -d $(REALSPOOLDIR) ] || [ ! -d $(REALSPOOLDIR)/outgoing ] || [ -d $(REALSPOOLDIR)/prevtime1 ] || \
+ 	 (echo "WWWOFFLE: " ;\
+ 	  echo "WWWOFFLE: Your existing cache looks earlier than version 2.2, cannot continue." ;\
+ 	  echo "WWWOFFLE: Read the file NEWS for details." ;\
+@@ -373,12 +376,13 @@
+ 	done
+ 
+ install_html : html
+-	@[ ! -x $(SPOOLDIR)/html.old ] || \
+-	 (echo "WWWOFFLE: " ;\
+-	  echo "WWWOFFLE: There is already a directory $(SPOOLDIR)/html.old." ;\
+-	  echo "WWWOFFLE: Remove it and re-run make." ;\
+-	  echo "WWWOFFLE: " ;\
+-	  exit 1 )
++	# This is handled in the ebuild to avoid writing out of ${D}.
++	#@[ ! -x $(REALSPOOLDIR)/html.old ] || \
++	# (echo "WWWOFFLE: " ;\
++	#  echo "WWWOFFLE: There is already a directory $(REALSPOOLDIR)/html.old." ;\
++	#  echo "WWWOFFLE: Remove it and re-run make." ;\
++	#  echo "WWWOFFLE: " ;\
++	#  exit 1 )
+ 	[ ! -x $(SPOOLDIR)/html ] || mv $(SPOOLDIR)/html $(SPOOLDIR)/html.old
+ 	[ -x $(SPOOLDIR)/html ] || mkdir $(SPOOLDIR)/html
+ 	tar cf $(SPOOLDIR)/html.tar html && cd $(SPOOLDIR) && tar xpf html.tar && rm html.tar
+@@ -391,15 +395,15 @@
+ 	-chgrp -R 0 $(SPOOLDIR)/html > /dev/null 2>&1
+ 
+ install_config :
+-	sed -e 's%SPOOLDIR%$(SPOOLDIR)%' -e 's%CONFDIR%$(CONFDIR)%' < wwwoffle.conf > wwwoffle.conf.install
++	sed -e 's%SPOOLDIR%$(REALSPOOLDIR)%' -e 's%CONFDIR%$(REALCONFDIR)%' < wwwoffle.conf > wwwoffle.conf.install
+ 	[ -x $(CONFDIR) ] || $(INSTALL) -d -m 750 $(CONFDIR)
+-	@[ ! -f $(CONFDIR)/wwwoffle.conf ] || \
++	@[ ! -f $(REALCONFDIR)/wwwoffle.conf ] || \
+ 	 (echo "WWWOFFLE: " ;\
+-	  echo "WWWOFFLE: There is already a config file $(CONFDIR)/wwwoffle.conf." ;\
+-	  echo "WWWOFFLE: Run 'upgrade-config.pl $(CONFDIR)/wwwoffle.conf' to upgrade it." ;\
++	  echo "WWWOFFLE: There is already a config file $(REALCONFDIR)/wwwoffle.conf." ;\
++	  echo "WWWOFFLE: Run 'upgrade-config.pl $(REALCONFDIR)/wwwoffle.conf' to upgrade it." ;\
+ 	  echo "WWWOFFLE: " )
+-	[  ! -f $(CONFDIR)/wwwoffle.conf ] || $(INSTALL) -c -m 640 wwwoffle.conf.install $(CONFDIR)/wwwoffle.conf.install
+-	[    -f $(CONFDIR)/wwwoffle.conf ] || $(INSTALL) -c -m 640 wwwoffle.conf.install $(CONFDIR)/wwwoffle.conf
++	[  ! -f $(REALCONFDIR)/wwwoffle.conf ] || $(INSTALL) -c -m 640 wwwoffle.conf.install $(CONFDIR)/wwwoffle.conf.install
++	[    -f $(REALCONFDIR)/wwwoffle.conf ] || $(INSTALL) -c -m 640 wwwoffle.conf.install $(CONFDIR)/wwwoffle.conf
+ 
+ install_fixup-win32:
+ 	for file in $(DOCDIR)/* ; do \
