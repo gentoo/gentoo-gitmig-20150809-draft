@@ -1,6 +1,8 @@
 # ChangeLog for net-www/mod_dav
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/ChangeLog,v 1.7 2003/02/12 08:49:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_dav/ChangeLog,v 1.8 2003/02/23 19:17:46 woodchip Exp $
+
+  23 Feb 2003; Donny Davies <woodchip@gentoo.org> : Fix #14574.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
