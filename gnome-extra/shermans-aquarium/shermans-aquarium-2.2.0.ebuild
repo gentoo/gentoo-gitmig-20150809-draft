@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/shermans-aquarium-2.2.0.ebuild,v 1.4 2003/11/22 07:22:16 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/shermans-aquarium-2.2.0.ebuild,v 1.5 2004/04/03 23:31:49 spyderous Exp $
 
 MY_P=${PN/-/_}-${PV}
 DESCRIPTION="A gnome/wm applet displaying comical fish"
@@ -18,7 +18,7 @@ KEYWORDS="x86"
 # as outlined in the INSTALL file provided with the source
 IUSE="gtk2 sdl"
 
-DEPEND="x11-base/xfree
+DEPEND="virtual/x11
 		!gtk2? (  =x11-libs/gtk+-1.2*
 				   media-libs/gdk-pixbuf
 				  =gnome-base/gnome-applets-1.4* )

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/shermans-aquarium
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/ChangeLog,v 1.2 2003/11/22 07:22:16 obz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/ChangeLog,v 1.3 2004/04/03 23:31:49 spyderous Exp $
+
+  03 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  shermans-aquarium-2.2.0.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   22 Nov 2003; Mike Gardiner <obz@gentoo.org> shermans-aquarium-2.2.0.ebuild:
   Removed 'gtk' use flag, it isn't used
