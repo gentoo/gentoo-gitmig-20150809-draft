@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.07.ebuild,v 1.7 2004/06/28 03:55:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.07.ebuild,v 1.8 2004/07/20 14:29:53 spock Exp $
 
 MY_P=${PN/-/_}-${PV}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="Displays an ansi or an ascii logo and some system information"
+DESCRIPTION="A utility that displays an ANSI/ASCII logo and some system information"
 HOMEPAGE="http://www.deater.net/weave/vmwprod/linux_logo/"
 SRC_URI="http://www.deater.net/weave/vmwprod/linux_logo/${MY_P}.tar.gz"
 
