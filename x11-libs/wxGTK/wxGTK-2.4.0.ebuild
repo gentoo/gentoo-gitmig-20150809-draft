@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.0.ebuild,v 1.5 2003/01/22 03:22:32 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.0.ebuild,v 1.6 2003/02/07 20:59:29 raker Exp $
 
 DESCRIPTION="GTK+ version of wxWindows, a cross-platform C++ GUI toolkit."
 SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
@@ -50,9 +50,16 @@ src_compile() {
 		&& myconf="${myconf} --enable-static" \
 		|| myconf="${myconf} --disable-static"
 
-	use odbc \
-		&& myconf="${myconf} --with-odbc" \
-		|| myconf="${myconf} --without-odbc"
+	if [ `use odbc` ] && [ ! `use gtk2` ]; then
+		myconf="${myconf} --with-odbc"
+	elif [ `use odbc` ] && [ `use gtk2` ]; then
+		einfo "you cannot specify both odbc and gtk2"
+		einfo "Choosing gtk2 over odbc"
+		einfo "re-run with USE="-gtk2" to enable odbc"
+		myconf="${myconf} --without-odbc"
+	else
+		myconf="${myconf} --without-odbc"
+	fi
 
 	use opengl \
 		&& myconf="${myconf} --with-opengl" \

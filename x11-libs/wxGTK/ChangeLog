@@ -1,8 +1,12 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.25 2003/01/22 03:22:32 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.26 2003/02/07 20:59:29 raker Exp $
 
 *wxGTK-2.4.0 (01 Jan 2003)
+
+  04 Feb 2003; Nick Hadaway <raker@gentoo.org> wxGTK-2.4.0.ebuild :
+  If odbc and gtk2 are both specified, disable odbc and enable gtk2.
+  They are not compatible.
 
   21 Jan 2003; Nick Hadaway <raker@gentoo.org> wxGTK-2.4.0.ebuild :
   Changed to emake.
