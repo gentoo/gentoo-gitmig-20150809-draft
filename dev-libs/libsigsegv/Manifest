@@ -1,4 +1,4 @@
-MD5 72d5386950cba387b612500ff37aa004 ChangeLog 1394
-MD5 e81d2c3d1bbaa02b0238b4e401fc809e libsigsegv-2.1.ebuild 770
+MD5 de6a31d41269d10463ed7dd8cf5c5e01 ChangeLog 1484
+MD5 3aa810d3a9bfa1911630f9f6b96fd3c9 libsigsegv-2.1.ebuild 767
 MD5 ab150e95621479ef341ba173f9182181 files/digest-libsigsegv-2.1 66
 MD5 dda0160f1d6fde7b52e5985e13713ffb files/libsigsegv-2.1-darwin-7.x.patch 3526
