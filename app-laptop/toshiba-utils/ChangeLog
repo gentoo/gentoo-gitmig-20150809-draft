@@ -1,0 +1,19 @@
+# ChangeLog for app-misc/toshiba-utils
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/ChangeLog,v 1.1 2004/03/08 05:52:22 latexer Exp $
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*toshiba-utils-2.0.1-r1 (3 May 2002)
+
+  3 May 2002; Donny Davies <woodchip@gentoo.org> :
+  
+  Add LICENSE, SLOT, $Headers.
+
+*toshiba-utils-2.0.1 (8 Feb 2002)
+
+  8 Feb 2002; Donny Davies :
+
+  Checkin new package, first version.  Created a patch to ignore the
+  X programs if you dont USE=X.
+
