@@ -1,0 +1,49 @@
+--- linux-2.6.0/include/asm-i386/byteorder.h	2003-07-10 21:11:31.000000000 +0100
++++ linux-2.6.0/include/asm-i386/byteorder.h	2003-12-26 22:58:17.000000000 +0000
+@@ -35,7 +35,7 @@
+ }
+ 
+ 
+-static inline __u64 ___arch__swab64(__u64 val) 
++static __inline__ __u64 ___arch__swab64(__u64 val) 
+ { 
+ 	union { 
+ 		struct { __u32 a,b; } s;
+@@ -43,13 +43,13 @@
+ 	} v;
+ 	v.u = val;
+ #ifdef CONFIG_X86_BSWAP
+-	asm("bswapl %0 ; bswapl %1 ; xchgl %0,%1" 
++	__asm__("bswapl %0 ; bswapl %1 ; xchgl %0,%1" 
+ 	    : "=r" (v.s.a), "=r" (v.s.b) 
+ 	    : "0" (v.s.a), "1" (v.s.b)); 
+ #else
+-   v.s.a = ___arch__swab32(v.s.a); 
++	v.s.a = ___arch__swab32(v.s.a); 
+ 	v.s.b = ___arch__swab32(v.s.b); 
+-	asm("xchgl %0,%1" : "=r" (v.s.a), "=r" (v.s.b) : "0" (v.s.a), "1" (v.s.b));
++	__asm__("xchgl %0,%1" : "=r" (v.s.a), "=r" (v.s.b) : "0" (v.s.a), "1" (v.s.b));
+ #endif
+ 	return v.u;	
+ } 
+--- linux-2.6.0/include/asm-i386/types.h	2003-07-10 21:11:00.000000000 +0100
++++ linux-2.6.0/include/asm-i386/types.h	2003-12-26 23:09:38.000000000 +0000
+@@ -19,10 +19,14 @@
+ typedef __signed__ int __s32;
+ typedef unsigned int __u32;
+ 
+-#if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+-typedef __signed__ long long __s64;
+-typedef unsigned long long __u64;
+-#endif
++#ifndef __GNUC__
++# ifndef __extension__
++#  define __extension__
++# endif /* __extension__ */
++#endif /* __GNUC__ */
++
++__extension__ typedef __signed__ long long __s64;
++__extension__ typedef unsigned long long __u64;
+ 
+ #endif /* __ASSEMBLY__ */
+ 
