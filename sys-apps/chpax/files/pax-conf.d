@@ -28,7 +28,7 @@ VERBOSE="no"
 PSE_wine=/usr/lib/wine/bin/{wine{,build,clipsrv,dump,gcc,server,wrap,-{k,p}thread},w{mc,rc,idl}}
 PSE_blkdwn_java=/opt/blackdown-{jdk-*/{,jre/},jre-*/}bin/{java{,_vm,c},keytool,kinit,klist,ktab,orbd,policytool,rmi{d,registry},servertool,tnameserv}
 PSE_openoffice=/opt/OpenOffice.org*/program/soffice.bin
-PSE_misc="/usr/X11R6/bin/XFree86 /usr/bin/xmms /usr/bin/{,g}mplayer \
+PSE_misc="/usr/X11R6/bin/XFree86 /usr/bin/{,g}mplayer \
  /usr/bin/blender /usr/bin/gxine /usr/bin/xine /usr/bin/totem /usr/bin/acme \
  /usr/bin/gnome-sound-recorder /usr/games/bin/bzflag /usr/bin/xfce4-panel"
 
@@ -36,7 +36,7 @@ RE_blkdwn_java="${SPE_blkdwn_java} /usr/X11R6/bin/XFree86"
 
 ME_blkdwn_java="${PSE_blkdwn_java}"
 # or plug-ins don't work
-ME_misc=/usr/lib/MozillaFirefox/firefox{,-bin}
+ME_misc="/usr/lib/MozillaFirefox/firefox{,-bin} /usr/bin/xmms"
 
 XE_blkdwn_java="${PSE_blkdwn_java} /usr/X11R6/bin/XFree86"
 
