@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r2.ebuild,v 1.4 2003/02/13 14:19:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r2.ebuild,v 1.5 2003/04/17 22:41:57 sethbc Exp $
 
 S=${WORKDIR}/Libnet-1.0.2a
 DESCRIPTION="library to provide an API for commonly used low-level network
 functions (mainly packet injection). Used by packet scrubbers and the like,
 not to be confused with the perl libnet"
 SRC_URI="http://www.packetfactory.net/${PN}/dist/${PN}.tar.gz"
-HOMEPAGE="http://www.packefactory.net/${PN}/"
+HOMEPAGE="http://www.packetfactory.net/${PN}/"
 
 DEPEND=""
 
