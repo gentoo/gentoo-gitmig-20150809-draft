@@ -1,8 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.6.6a.ebuild,v 1.5 2004/07/18 22:57:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.6.6a.ebuild,v 1.6 2004/09/23 14:14:31 dragonheart Exp $
 
 inherit kde
+
 
 DESCRIPTION="Graphical IDE for PIC-based application development"
 HOMEPAGE="http://pikdev.free.fr/"
@@ -27,7 +28,8 @@ RDEPEND="sys-libs/zlib
 	media-libs/libmng
 	media-libs/libpng
 	sys-devel/gcc
-	dev-embedded/gputils"
+	dev-embedded/gputils
+	>=kde-base/kdelibs-3"
 
 # Ebuild will evily link to these if present
 #	media-libs/nas
