@@ -1,6 +1,16 @@
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 bca1db84748ed1e2221636af7d267bb1 yiff-2.14.2.ebuild 1120
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4e5d6405da7d7c300d258862965a1a83 ChangeLog 905
+MD5 b540e567f1bff34b16a1231ea051e922 yiff-2.14.2.ebuild 1114
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 8bf3317f7549f6be736e2a237a5ed26d files/2.14.2-gcc3.patch 3137
 MD5 731dde7e0d27725a199275a23aaec33e files/digest-yiff-2.14.2 64
 MD5 e02e251b89e6fcfb2c260727647689fe files/yiff-2.14.2-PIC.patch 1242
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA9LTCHTu7gpaalycRAvL1AJ9iC0oxbK35Y04nrLoJlUDsuQ1CmQCgiBZo
+RSf65NQJOuFTVSb/lha6JyU=
+=QOr0
+-----END PGP SIGNATURE-----
