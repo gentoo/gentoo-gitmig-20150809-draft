@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.8-r1.ebuild,v 1.3 2004/04/27 08:05:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.8-r1.ebuild,v 1.4 2004/05/14 01:32:35 lv Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/cdrdao/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 IUSE="gnome debug"
 RESTRICT="nostrip"
 
@@ -36,6 +36,14 @@ src_unpack() {
 	cd scsilib/include
 	sed -i -e 's:HAVE_SCANSTACK:NO_FRIGGING_SCANSTACK:g' xmconfig.h
 	sed -i -e 's:HAVE_SCANSTACK:NO_FRIGGING_SCANSTACK:g' mconfig.h
+
+	if [ "${ARCH}" = "amd64" ]
+	then
+		cd ${S}
+		epatch ${FILESDIR}/${P}-cast.patch
+		cd scsilib/RULES
+		cp i686-linux-cc.rul x86_64-linux-cc.rul
+	fi
 }
 
 src_compile() {
