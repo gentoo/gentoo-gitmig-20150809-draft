@@ -1,0 +1,15 @@
+# ChangeLog for app-sci/gato
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/ChangeLog,v 1.1 2004/12/27 21:11:53 ribosome Exp $
+
+*gato-0.98i (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +gato-0.98i.ebuild:
+  Moved from app-sci/gato to sci-misc/gato.
+
+*gato-0.98i (17 Dec 2003)
+
+  17 Dec 2003; Brandy Westcott brandy@gentoo.org gato-0.98i.ebuild:
+  Initial import of Gato - Graph Animation Toolbox.
+
