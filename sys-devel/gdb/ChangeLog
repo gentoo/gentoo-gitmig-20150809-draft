@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.58 2004/11/10 02:19:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.59 2004/11/28 02:43:26 solar Exp $
+
+*gdb-6.3 (27 Nov 2004)
+
+  27 Nov 2004; <solar@gentoo.org> +files/gdb-6.3-relative-paths.patch,
+  +files/gdb-6.3-scanmem.patch, +files/gdb-6.3-uclibc.patch, +gdb-6.3.ebuild:
+  initial commit gdb-6.3. - Adds new ~/.gdbinit file for x86 users. - Adds a
+  forward port of antilove's scanmem gdb-6.1 patch. Forward ported every patch,
+  minus the gdb-6.x-crash.patch
 
   09 Nov 2004; Mike Frysinger <vapier@gentoo.org>
   +files/gdb-6.2.1-pass-libdir.patch, +files/gdb-6.2.1-relative-paths.patch,
