@@ -1,8 +1,11 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.15 2003/03/29 11:21:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.16 2003/04/05 18:13:17 frogger Exp $
 
 *cracklib-2.7-r6 (25 Oct 2002)
+
+  05 Apr 2003; Matthew Rickard <frogger@gentoo.org> cracklib-2.7-r6.ebuild:
+  Filter the -fstack-protector flag since this causes build failure.
 
   29 Mar 2003; Seemant Kulleen <seemant@gentoo.org> cracklib-2.7-r6.ebuild:
   HOMEPAGE fix by Frantz Dhin <tragedy_rm@hotmail.com> in bug #18299
