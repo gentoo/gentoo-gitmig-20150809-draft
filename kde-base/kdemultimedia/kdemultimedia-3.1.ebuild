@@ -1,10 +1,10 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.ebuild,v 1.3 2002/11/23 14:01:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1.ebuild,v 1.4 2002/12/04 23:26:52 doctomoe Exp $
 inherit kde-dist flag-o-matic 
 
 DESCRIPTION="KDE multimedia apps: noatun, kscd, artsbuilder..."
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 newdepend ">=sys-libs/ncurses-5.2
 	>=media-sound/cdparanoia-3.9.8
