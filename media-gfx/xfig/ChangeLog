@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/xfig
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.2 2002/04/14 03:54:07 seemant Exp $
+
+*xfig-3.2.3d-r1 (13 Apr 2002)
+
+  13 Apr 2002; Seemant Kulleen <seemant@gentoo.org> xfig-3.2.3d-r1.ebuild :
+
+  Added transfig to the RDEPEND. Did not bump version numbers though.
+  Closes bug #1619 by ekoontz@hiro-tan.dhs.org (Eugene Koontz)
 
 *xfig-3.2.3d (1 Feb 2002)
 
