@@ -1,12 +1,13 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.28 2004/08/14 00:04:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.29 2004/08/14 00:36:10 usata Exp $
 
 *scim-0.99.6 (14 Aug 2004)
 
   14 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> scim-0.99.4.ebuild,
   +scim-0.99.6.ebuild:
-  Version bumped. Marked 0.99.4 stable.
+  Version bumped. Marked 0.99.4 stable. Added information about
+  app-i18n/skim.
 
   09 Aug 2004; Tom Martin <slarti@gentoo.org> scim-0.99.5.ebuild:
   Marked ~amd64, bug 55845
