@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3485 2005/01/13 13:22:05 trapni Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3486 2005/01/13 23:29:52 greg_g Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,29 @@
 ##
 ##   End example
 ##
+
+# <greg_g@gentoo.org> (14 Jan 2005)
+# Beta release of KDE 3.4
+>=kde-base/arts-3.4.0_beta
+>=kde-base/kde-3.4.0_beta
+>=kde-base/kde-i18n-3.4.0_beta
+>=kde-base/kdeaccessibility-3.4.0_beta
+>=kde-base/kdeaddons-3.4.0_beta
+>=kde-base/kdeadmin-3.4.0_beta
+>=kde-base/kdeartwork-3.4.0_beta
+>=kde-base/kdebase-3.4.0_beta
+>=kde-base/kdeedu-3.4.0_beta
+>=kde-base/kdegames-3.4.0_beta
+>=kde-base/kdegraphics-3.4.0_beta
+>=kde-base/kdelibs-3.4.0_beta
+>=kde-base/kdemultimedia-3.4.0_beta
+>=kde-base/kdenetwork-3.4.0_beta
+>=kde-base/kdepim-3.4.0_beta
+>=kde-base/kdesdk-3.4.0_beta
+>=kde-base/kdetoys-3.4.0_beta
+>=kde-base/kdeutils-3.4.0_beta
+>=kde-base/kdewebdev-3.4.0_beta
+>=dev-util/kdevelop-3.2.0_beta
 
 # <trapni@gentoo.org> (13 Jan 2005)
 # Apache herd package refresh
