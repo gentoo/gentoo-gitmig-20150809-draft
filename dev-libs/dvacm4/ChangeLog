@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dvacm4
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvacm4/ChangeLog,v 1.6 2004/06/01 21:18:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvacm4/ChangeLog,v 1.7 2004/06/01 21:19:14 mr_bones_ Exp $
+
+  01 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> dvacm4-0.3.5.ebuild:
+  don't assign default to S; fix depend; tidy
 
   01 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> dvacm4-0.3.1.ebuild,
   dvacm4-0.3.3.ebuild, dvacm4-0.3.4.ebuild:
