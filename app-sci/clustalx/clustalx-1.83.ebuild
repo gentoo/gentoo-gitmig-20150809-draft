@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalx/clustalx-1.83.ebuild,v 1.1 2004/10/06 12:35:01 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalx/clustalx-1.83.ebuild,v 1.2 2004/10/14 14:35:24 ribosome Exp $
+
+inherit gcc
 
 DESCRIPTION="Graphical interface for the ClustalW multiple alignment program"
 HOMEPAGE="http://www-igbmc.u-strasbg.fr/BioInfo/ClustalX/"
@@ -21,7 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	cp makefile.linux makefile
-	sed -i -e "s/CC	= cc/CC	= ${CC:gcc}/" makefile
+	sed -i -e "s/CC	= cc/CC	= $(gcc-getCC)/" makefile
 	sed -i -e "s/CFLAGS  = -c -O/CFLAGS  = -c ${CFLAGS}/" makefile
 	sed -i -e "s/LFLAGS	= -O -lm/LFLAGS	= -lm ${CFLAGS}/" makefile
 	sed -i -e "s%-I/usr/bio/src/ncbi/include%-I/usr/include/ncbi%" makefile
