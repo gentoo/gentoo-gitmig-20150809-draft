@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cdmp3
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdmp3/ChangeLog,v 1.1 2003/11/26 02:07:37 mkennedy Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdmp3/ChangeLog,v 1.2 2004/02/10 11:28:43 eradicator Exp $
+
+  10 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> cdmp3-0.4.1.ebuild:
+  DEPEND -> RDEPEND since it's not needed to compile.  Moved to stable x86.
 
 *cdmp3-0.4.1 (25 Nov 2003)
 
