@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.5.ebuild,v 1.2 2004/02/22 22:32:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.5.ebuild,v 1.3 2004/03/09 18:01:38 mkennedy Exp $
 
 inherit gnuconfig elisp-common
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://cscope.sourceforge.net"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa -mips ~amd64 ~ia64"
 
 IUSE="emacs"
 
@@ -27,7 +27,7 @@ src_compile() {
 	gnuconfig_update
 
 	# This fix is no longer needed as of cscope-15.5 which now should
-	# work with bison directly.  (04 Feb 2004 agriffis)
+	# work with bison directly.	 (04 Feb 2004 agriffis)
 	#sed -i -e "s:={:{:" src/egrep.y
 
 	econf || die
@@ -47,7 +47,7 @@ src_install() {
 	if use emacs; then
 		cd ${S}/contrib/xcscope || die
 		elisp-install xcscope *.el *.elc || die
-		elisp-site-file-install ${FILESDIR}/${SITEFILE} || die
+		PN=xcscope elisp-site-file-install ${FILESDIR}/${SITEFILE} || die
 		dobin cscope-indexer || die
 	fi
 	cp -r ${S}/contrib/webcscope ${D}/usr/share/doc/${P}/ || die

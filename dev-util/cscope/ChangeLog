@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.15 2004/02/04 16:23:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.16 2004/03/09 18:01:38 mkennedy Exp $
+
+  09 Mar 2004; <mkennedy@gentoo.org> cscope-15.5.ebuild, metadata.xml:
+  Changed ~mips to -mips since there is no virtual/emacs for ~mips
+
+  09 Mar 2004; <mkennedy@gentoo.org> cscope-15.5.ebuild, metadata.xml:
+  Corrected regression on GNU Emacs xcscope compilation;  Added some metadata.
 
 *cscope-15.5 (04 Feb 2004)
 
