@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/increment
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/increment/ChangeLog,v 1.1 2003/12/07 01:53:46 ciaranm Exp $
+
+*increment-1.0 (07 Dec 2003)
+
+  07 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org> increment-1.0.ebuild,
+  metadata.xml:
+  Initial version. Have confirmed the licence with the author via email.
+
