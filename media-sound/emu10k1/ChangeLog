@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/emu10k1
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/ChangeLog,v 1.12 2003/10/28 14:14:15 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/ChangeLog,v 1.13 2004/02/05 07:44:07 eradicator Exp $
+
+  04 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  emu10k1-0.20a-r5.ebuild:
+  Unset $ARCH in src_compile() to fix bug #40424.
 
   28 Oct 2003; Martin Holzer <mholzer@gentoo.org> emu10k1-0.20a-r5.ebuild:
   adding gcc3 fix.

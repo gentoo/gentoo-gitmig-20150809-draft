@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r5.ebuild,v 1.3 2003/10/28 14:14:15 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r5.ebuild,v 1.4 2004/02/05 07:44:07 eradicator Exp $
 
 MY_P="${P/-/-v}"
 DESCRIPTION="Drivers, utilities, and effects for Sound Blaster cards (SBLive!, SB512, Audigy)"
@@ -34,6 +34,9 @@ src_compile() {
 	echo "SEQUENCER_SUPPORT := y" > config
 	echo "MODVERSIONS := y" >> config
 	echo "DBGEMU := n" >> config
+
+	# Unset ARCH to prevent conflict.  See bug #40424
+	unset ARCH
 
 	export KERNEL_SOURCE=/usr/src/linux
 	make || die "make failed"
