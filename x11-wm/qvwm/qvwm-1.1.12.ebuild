@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/qvwm/qvwm-1.1.12.ebuild,v 1.1 2003/10/17 22:34:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/qvwm/qvwm-1.1.12.ebuild,v 1.2 2003/11/07 17:08:18 usata Exp $
 
 DESCRIPTION="Qvwm is a Windows 9X like window manager for X Window System."
 HOMEPAGE="http://www.qvwm.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.qvwm.org/archive/qvwm/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE="imlib alsa esd"
 
 RDEPEND="virtual/x11
