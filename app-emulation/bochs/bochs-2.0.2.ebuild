@@ -1,25 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.0.2.ebuild,v 1.6 2003/09/29 20:28:26 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.0.2.ebuild,v 1.7 2003/11/12 14:15:51 vapier Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="Bochs is a pc emulator.
-This ebuild is set up to emulate a Pentium, with a NE2000 network card, and a
-CDROM drive. It also comes with a disk image using dlxlinux."
+DESCRIPTION="a LGPL-ed pc emulator"
+HOMEPAGE="http://bochs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/bochs/${P}.tar.gz
 	 http://bochs.sourceforge.net/guestos/dlxlinux3.tar.gz"
-HOMEPAGE="http://bochs.sourceforge.net"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
+KEYWORDS="x86 ~ppc ~alpha"
 IUSE="sdl gtk"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=x11-base/xfree-4.0.1
 	>=sys-apps/sed-4
 	sdl? media-libs/libsdl
-	gtk?  x11-libs/wxGTK
-	"
-KEYWORDS="x86 ~ppc ~alpha"
+	gtk?  x11-libs/wxGTK"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -46,7 +43,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 	dodoc CHANGES COPYING CVS README TESTFORM.txt
 }
