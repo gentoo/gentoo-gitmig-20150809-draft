@@ -4,6 +4,16 @@
 addwrite /usr/lib64/conftest
 addwrite /usr/lib64/cf
 
+
+# currently theoretical multilib stuff only available if using portage 2.0.51
+CHOST32="i686-pc-linux-gnu"
+CONF_MULTILIBDIR="${CONF_MULTILIBDIR:=lib32}"
+CONF_LIBDIR="${CONF_LIBDIR:=lib64}"
+ARCH_WRAPPER="linux32"
+CC32="gcc32"
+CPP32="g++32"
+
+
 setup_multilib_variables() {
 	# if run via linux32, uname -m will always return i686
 	if [ "$(uname -m)" == "i686" ] ; then
