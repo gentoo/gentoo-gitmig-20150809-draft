@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/xmms-spc
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/ChangeLog,v 1.1 2002/10/31 14:47:27 seemant Exp $
+
+*xmms-spc-0.2.1 (31 Oct 2002)
+
+  31 Oct 2002; Seemant Kulleen <seemant@gentoo.org> xmms-spc-0.2.1.ebuild
+  ChangeLog files/digest-xmms-spc-0.2.1 :
+
+  XMMS plugin to play Super Nintendo Sound Bank Files (.spc). Thanks to:
+  jaquadro@penguinia.net (Justin Aquadro) in bug #7377.
