@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/cdrecord-prodvd-2.01_alpha24.ebuild,v 1.7 2004/06/24 21:31:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/cdrecord-prodvd-2.01_beta31.ebuild,v 1.1 2004/08/24 02:56:51 pylon Exp $
 
-X86_FILENAME="cdrecord-prodvd-2.01a24-i686-pc-linux-gnu"
+X86_FILENAME="cdrecord-prodvd-2.01b31-i686-pc-linux-gnu"
 
 DESCRIPTION="Enhancement of cdrecord for writing DVDs"
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
@@ -10,7 +10,7 @@ SRC_URI="x86? ( ftp://ftp.berlios.de/pub/cdrecord/ProDVD/${X86_FILENAME} )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~amd64 -ppc -sparc -hppa -mips -alpha"
 IUSE=""
 
 DEPEND=">=app-cdr/cdrtools-2.01_alpha24"

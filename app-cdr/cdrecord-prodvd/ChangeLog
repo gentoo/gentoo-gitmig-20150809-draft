@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/cdrecord-prodvd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.7 2004/08/20 09:13:28 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.8 2004/08/24 02:56:51 pylon Exp $
+
+*cdrecord-prodvd-2.01_beta31 (24 Aug 2004)
+
+  24 Aug 2004; Lars Weiler <pylon@gentoo.org> files/cdrecord-wrapper.sh,
+  -cdrecord-prodvd-2.01_alpha24.ebuild, +cdrecord-prodvd-2.01_beta31.ebuild:
+  The free available key has expired. Updated the cdrecord-wrapper.sh.
+  Furthermore a version bump to the current beta-version.
 
   20 Aug 2004; Danny van Dyk <kugelfang@gentoo.org>
   cdrecord-prodvd-2.01_alpha27.ebuild:
