@@ -3,7 +3,7 @@
 # Header: $
 
 MY_P="bxform-${PV}-glibc21"
-S=${WORKDIR}/${PN}
+S=${WORKDIR}/${PN/-ppc/}
 DESCRIPTION="A GUI Toolkit based on Xlib"
 SRC_URI="ftp://ncmir.ucsd.edu/pub/xforms/linux-ppc/${MY_P}.tgz"
 HOMEPAGE="http://world.std.com/~xforms/"
