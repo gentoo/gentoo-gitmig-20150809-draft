@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.5 2002/10/08 07:48:46 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.6 2002/10/11 18:50:20 azarah Exp $
 
 IUSE="moznomail java mozp3p crypt ldap gtk2 mozinterfaceinfo ssl mozaccess mozxmlterm mozctl gnome"
 
@@ -203,7 +203,7 @@ src_compile() {
 		--with-java-supplement \
 		--with-pthreads \
 		--with-extensions="${myext}" \
-		--enable-optimize="-O3" \
+		--enable-optimize="-O2" \
 		--with-default-mozilla-five-home=/usr/lib/mozilla \
 		${myconf} || die
 
