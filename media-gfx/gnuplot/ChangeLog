@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gnuplot
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.33 2005/01/02 06:45:19 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.34 2005/01/30 08:29:54 corsair Exp $
+
+  30 Jan 2005; Markus Rothe <corsair@gentoo.org> gnuplot-4.0-r1.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   02 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> gnuplot-4.0-r1.ebuild:
   Unstable ppc-macos.
