@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1992-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.5 2004/07/17 13:00:29 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.6 2004/07/24 10:03:21 sejo Exp $
 
 IUSE="X doc javacomm"
 
@@ -50,7 +50,7 @@ src_install() {
 	if use ppc; then
 		dosed s:/proc/cpuinfo:/etc//cpuinfo:g /opt/${P}/jre/bin/libjitc.so
 		dosed s:/proc/cpuinfo:/etc//cpuinfo:g /opt/${P}/jre/bin/libjitc_g.so
-		insinto ${D}/etc
+		insinto /etc
 		doins ${FILESDIR}/cpuinfo
 	else
 		# No java-plugin on ppc
