@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/lam-mpi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lam-mpi/ChangeLog,v 1.9 2003/03/25 07:20:55 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lam-mpi/ChangeLog,v 1.10 2003/06/03 11:56:31 tantive Exp $
+
+*lam-mpi-6.5.9-r1.ebuild (03 Jun 2003)
+
+  03 Jun 2003; Michael Imhof <imhofml@gentoo.org> lam-mpi-6.5.9-r1.ebuild, files/digest-lam-mpi-6.5.9-r1 :
+  corrected ebuild submitted by Marc St-Pierre <marc@cyberlogic.ca>
 
 *lam-mpi-6.5.7.ebuild (23 Mar 2003)
 
