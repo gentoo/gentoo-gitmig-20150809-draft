@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/unfoo
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.1 2003/04/01 17:38:40 vladimir Exp $
+
+*unfoo-1.0.4 (01 Apr 2003)
+
+  01 Apr 2003; Graham Forest <vladimir@gentoo.org> unfoo-1.0.4.ebuild:
+  Initial commit
+
