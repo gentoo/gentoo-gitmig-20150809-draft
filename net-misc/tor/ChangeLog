@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.21 2004/10/20 23:57:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.22 2004/10/21 00:07:22 latexer Exp $
+
+  20 Oct 2004; <peter@gentoo.org> -tor-0.0.6.1.ebuild, -tor-0.0.6.ebuild,
+  -tor-0.0.7.2.ebuild, -tor-0.0.7.3.ebuild, -tor-0.0.7.ebuild:
+  Remove old vulnerable versions. See bug #67756
 
   21 Oct 2004; Joseph Jezak <josejx@gentoo.org> tor-0.0.8.1.ebuild:
   Keyworded ppc-macos and macos due to vulnerability in previous versions.
