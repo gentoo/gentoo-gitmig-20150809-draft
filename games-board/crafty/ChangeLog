@@ -1,6 +1,11 @@
 # ChangeLog for games-board/crafty
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.8 2004/07/01 11:10:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.9 2004/07/20 10:30:16 mr_bones_ Exp $
+
+*crafty-19.15 (20 Jul 2004)
+
+  20 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> +crafty-19.15.ebuild:
+  version bump
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> crafty-19.1.ebuild,
   crafty-19.12.ebuild, crafty-19.8.ebuild:
