@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r1.ebuild,v 1.2 2002/11/04 23:14:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.8.2-r1.ebuild,v 1.3 2002/11/07 07:05:31 seemant Exp $
 
 IUSE="ssl nls static ipv6"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.cg.tuwien.ac.at/~prikryl/wget.html"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/wget/${P}.tar.gz
 	ftp://gatekeeper.dec.com/pub/GNU/wget/${P}.tar.gz
 	http://www.biscom.net/~cade/away/wget-new-percentage/wget-new-percentage-cvs-${NPVER}.tar.gz
-	ipv6? http://cvs.gentoo.org/~seemant/${P}-ipv6-debian.patch.bz2"
+	ipv6? mirror://gentoo/${P}-ipv6-debian.patch.bz2"
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )"
 DEPEND="nls? ( sys-devel/gettext )"
