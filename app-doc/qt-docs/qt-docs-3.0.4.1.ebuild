@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-3.0.4.1.ebuild,v 1.13 2004/06/24 21:49:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/qt-docs/qt-docs-3.0.4.1.ebuild,v 1.14 2004/06/30 02:05:11 agriffis Exp $
 # qt-copy-3.0.4 (released with kde-3.0.1)
 
 NPV=3.0.4
@@ -11,6 +11,7 @@ DEPEND="=x11-libs/qt-3*"
 RDEPEND="$DEPEND sys-devel/gcc"
 DESCRIPTION="Documentation for the QT ${NPV} API"
 KEYWORDS="x86 sparc ppc ia64 alpha"
+IUSE=""
 SLOT="3"
 LICENSE="QPL-1.0"
 
@@ -44,5 +45,3 @@ src_install() {
 	cp -r ${S}/tutorial ${D}/${QTBASE}
 
 }
-
-
