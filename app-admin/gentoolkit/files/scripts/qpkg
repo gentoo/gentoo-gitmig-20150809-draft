@@ -5,13 +5,14 @@
 # Copiright (c) Vitaly Kushneriuk <vitaly_kushneriuk@yahoo.com>
 # This program is distributed under the terms of GPL version 2.
 #
-ID='$Id: qpkg,v 1.1 2002/01/24 20:45:57 karltk Exp $'
+ID='$Id: qpkg,v 1.2 2002/02/03 11:32:39 vitaly Exp $'
 VERSION=0.`echo $ID | cut -d\  -f3`
 
 PROG=`basename $0`
 
 # Parse args
 verb=0
+group='*'
 while [ $# -gt 0 ]
 do
 	a=$1
@@ -42,6 +43,19 @@ do
 		inst=y
 		;;
 
+	-I|--installed)
+		inst=y
+		;;
+
+	-U|--uninstalled)
+		uninst=y
+		;;
+
+	-g|--group)
+		group=$1
+		shift
+		;;
+
 	-l|--list)
 		list=y
 		inst=y
@@ -70,14 +84,6 @@ do
 	-vv)
 		let $((verb++))
 		let $((verb++))
-		;;
-
-	-I|--installed)
-		inst=y
-		;;
-
-	-U|--uninstalled)
-		uninst=y
 		;;
 
 	-nc|--no-colors)
@@ -123,15 +129,21 @@ fi
 if [ "$usage" ]; then
 	echo -e "$CY$PROG v. $VERSION$NO
 ${BR}Usage:
-$T$CY$PROG$NO [$BR options$NO ] [$YL pkgname $NO|$BL-f$YL file$NO ]
+$T$CY$PROG$NO [$BR options$NO ] [$YL pkgname $NO|$BL-g$YL group$NO|$BL-f$YL <file>$NO ]
 $T$CY$PROG$NO $BL--dups$NO
-$T$CY$PROG$NO $BL--conlicts$NO
+$T$CY$PROG$NO  $BL-h$NO|$BL--help$NO
 
-${BR}Operation Modes:
-  $BL-h,  --help$NO$T$T This usage help
+${BR}Package Selection:
+  $BL-f,  --find-file$NO$T finds package that owns file <file>
+  $BL-fp, --find-pattern$NO$T finds to package that owns file matching *<file>*
+  $BL-I,  --installed$NO$T Include$YL only$NO installed packages
+  $BL-U,  --uninstalled$NO$T Include$YL only$NO uninstalled packages
+  $BL-g,  --group$NO$T$T Find by goup (can be combined with other searches)
   $BL--dups$NO$T$T print packages that have multiple versions installed
-  $BL-i,  --info$NO$T$T Get package description and home page.
+
+${BR}Information selection:
   $BL-l,  --list$NO$T$T List package content
+  $BL-i,  --info$NO$T$T Get package description and home page.
   $BL-ct, --check-time$NO
   $BL-tc, --time-check$NO$T Verify package files timestamps
   $BL-cm, --check-md5$NO
@@ -140,16 +152,12 @@ ${BR}Operation Modes:
 
 ${BR}Operation modifiers:
   $BL-nc,  --no-color$NO$T don't use colors
-  $BL-f,  --find-file$NO$T apply to package that owns file
-  $BL-fp, --find-pattern$NO$T apply to package that owns file that looks 'like' ...
-  $BL-I,  --installed$NO$T Include$YL only$NO installed packages
-  $BL-U,  --uninstalled$NO$T Include$YL only$NO uninstalled packages
   $BL-v,  --verbose$NO$T Be more verbose [ can be repeated twise ]
   $BL-vv$NO$T$T$T Same as $BL-v -v$NO
 
 ${YL}Notes$NO: 
 $YL*$NO $BL-l$NO, $BL-ct$NO, and $BL-cm$NO apply only to installed packages
-$YL*$NO When using$BL -f$NO with$BL-l$NO or $BL--check.. -v$NO options,
+$YL*$NO When using$BL -f$NO with $BL-l$NO or $BL--check.. -v$NO options,
   only matching files will be displayed, unless $BL-v$NO is doubled, 
   (yet more verbose) or $BL-vv$NO is used.
 
@@ -158,8 +166,9 @@ ${YL}Examples$NO:
   $PROG --dups		print duplicates
   $PROG --dups -v	.. with versions
   $PROG			print list of installed packages
-  $PROG porta		print versions of installed portage
-  $PROG -a porta -i	.. + versions in portage tree + descriptions and homepages
+  $PROG porta -I		print versions of installed portage
+  $PROG porta -i		.. + versions in portage tree + descriptions 
+			and homepages
   $PROG gawk -c -v	check integrity all installed versions of gawk
 			the older will have \"demaged\" files.
   $PROG -f /bin/ls	print package(s) that own /bin/ls
@@ -185,12 +194,15 @@ fi
 
 # get list of ebuilds to work on
 if [ "$ffind" ]; then
-	# file find mode - list all ebuilds for package/CONTENTS containing <arg>
+	# file find mode - list all ebuilds for 
+	# package/CONTENTS containing <arg>
 	if [ "$fpat" ]; then
-		dirs=`ls /var/db/pkg/*/*/CONTENTS | xargs grep -l "$arg" \
+		dirs=`ls /var/db/pkg/$group/*/CONTENTS \
+		| xargs grep -l "$arg" \
 		| xargs --no-run-if-empty -n 1 dirname`
 	else
-		dirs=`ls /var/db/pkg/*/*/CONTENTS | xargs grep -l " $arg " \
+		dirs=`ls /var/db/pkg/$group/*/CONTENTS \
+		| xargs grep -l " $arg " \
 		| xargs --no-run-if-empty -n 1 dirname`
 	fi
 	ipak=`(
@@ -202,9 +214,11 @@ else
 	# normal mode - list ebuilds for ebuild name containing <arg>
 
 	# installed packages
-	[ ! "$uninst" ] && ipak=`ls /var/db/pkg/*/*/*$arg*.ebuild 2>/dev/null`
+	[ ! "$uninst" ] && 
+	    ipak=`ls /var/db/pkg/*$group*/*/*$arg*.ebuild 2>/dev/null`
 	# not installed packages (yet:-)
-	[ ! "$inst" ] && upak=`ls /usr/portage/*/*/*$arg*.ebuild 2>/dev/null`
+	[ ! "$inst" ] && 
+	    upak=`ls /usr/portage/*$group*/*/*$arg*.ebuild 2>/dev/null`
 fi
 
 X="\([^/]*\)"
