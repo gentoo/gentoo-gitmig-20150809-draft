@@ -6,7 +6,7 @@
 #This breaks some packages; people, please don't add major gcc3 fixes
 #that affect core packages, esp. since we should be working on Gentoo 1.0
 #(drobbins, 24 Mar 2002)
-=sys-libs/ncurses-5.2.20020112a
+#=sys-libs/ncurses-5.2.20020112a
 
 # 23 Mar, m0rpheus: bind 8 keeps having serious problems.
 <net-misc/bind-9.0.0 
