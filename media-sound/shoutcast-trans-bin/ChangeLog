@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/shoutcast-trans-bin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/ChangeLog,v 1.6 2004/09/24 18:33:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/ChangeLog,v 1.7 2004/11/30 22:04:05 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org>
+  shoutcast-trans-bin-0.4.0-r1.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   24 Sep 2004; Sven Wegener <swegener@gentoo.org> files/shoutcast_trans:
   Fixed CVS keyword replacement.

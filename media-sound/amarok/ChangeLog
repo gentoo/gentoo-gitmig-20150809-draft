@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.36 2004/11/29 12:45:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.37 2004/11/30 22:01:11 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> amarok-1.1.1.ebuild,
+  amarok-1.2_beta1.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *amarok-1.2_beta1 (29 Nov 2004)
 

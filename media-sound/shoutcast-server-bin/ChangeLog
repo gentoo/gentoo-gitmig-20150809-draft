@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/shoutcast-server-bin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/ChangeLog,v 1.5 2004/09/16 16:12:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/ChangeLog,v 1.6 2004/11/30 22:03:00 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org>
+  shoutcast-server-bin-1.9.4-r1.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *shoutcast-server-bin-1.9.4-r1 (16 Sep 2004)
 

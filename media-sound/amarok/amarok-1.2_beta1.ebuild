@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2_beta1.ebuild,v 1.2 2004/11/29 12:46:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2_beta1.ebuild,v 1.3 2004/11/30 22:01:11 swegener Exp $
 
 IUSE="noamazon cjk xmms opengl xine arts gstreamer"
 
@@ -31,7 +31,7 @@ DEPEND=">=kde-base/kdemultimedia-3.2
 	>=kde-base/kdelibs-3.2
 	>=x11-libs/qt-3.3
 	gstreamer? ( >=media-libs/gst-plugins-0.8.1
-	             >=gst-plugins-mad-0.8.1 )"
+	             >=media-plugins/gst-plugins-mad-0.8.1 )"
 
 need-kde 3.2
 
