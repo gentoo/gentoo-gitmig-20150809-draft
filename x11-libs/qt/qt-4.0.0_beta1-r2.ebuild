@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r2.ebuild,v 1.1 2005/01/12 04:26:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r2.ebuild,v 1.2 2005/01/24 11:10:04 greg_g Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,12 +14,11 @@ SRC_URI="ftp://ftp.trolltech.com/qt/snapshots/qt-x11-${SRCTYPE}-${PV/_beta1/-b2}
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
 KEYWORDS="-*"
-IUSE="accessibility cups debug doc firebird gif icc ipv6 mysql nas nis odbc opengl postgres sqlite xinerama zlib"
+IUSE="accessibility cups debug doc firebird gif ipv6 mysql nas nis odbc opengl postgres sqlite xinerama zlib"
 
 DEPEND="virtual/x11 virtual/xft
 	media-libs/libpng media-libs/jpeg media-libs/libmng
 	>=media-libs/freetype-2
-	gif? ( media-libs/giflib media-libs/libungif )
 	nas? ( >=media-libs/nas-1.5 )
 	odbc? ( dev-db/unixODBC )
 	mysql? ( dev-db/mysql )
@@ -28,8 +27,7 @@ DEPEND="virtual/x11 virtual/xft
 	opengl? ( virtual/opengl virtual/glu )
 	postgres? ( dev-db/postgresql )
 	cups? ( net-print/cups )
-	zlib? ( sys-libs/zlib )
-	icc? ( dev-lang/icc )"
+	zlib? ( sys-libs/zlib )"
 
 S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV/_beta1/-b2}-snapshot-${SNAPSHOT}
 
@@ -98,15 +96,15 @@ src_compile() {
 	myconf="${myconf} $(qt_use opengl) $(qt_use nis)"
 
 	use nas		&& myconf="${myconf} -system-nas-sound"
-	use gif		&& myconf="${myconf} -qt-gif"
+	use gif		&& myconf="${myconf} -qt-gif" || myconf="${myconf} -no-gif"
 	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release"
 	use zlib	&& myconf="${myconf} -system-zlib" || myconf="${myconf} -qt-zlib"
 
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/$(get_libdir)/mysql" || myconf="${myconf} -no-sql-mysql"
-	use postgres && myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server -I/usr/include/postgresql/pgsql -I/usr/include/postgresql/pgsql/server" || myconf="${myconf} -no-sql-psql"
-	use firebird && myconf="${myconf} -plugin-sql-ibase" || myconf="${myconf} -no-sql-ibase"
+	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server -I/usr/include/postgresql/pgsql -I/usr/include/postgresql/pgsql/server" || myconf="${myconf} -no-sql-psql"
+	use firebird	&& myconf="${myconf} -plugin-sql-ibase" || myconf="${myconf} -no-sql-ibase"
 	use sqlite	&& myconf="${myconf} -plugin-sql-sqlite" || myconf="${myconf} -no-sql-sqlite"
-	use odbc		&& myconf="${myconf} -plugin-sql-odbc" || myconf="${myconf} -no-sql-odbc"
+	use odbc	&& myconf="${myconf} -plugin-sql-odbc" || myconf="${myconf} -no-sql-odbc"
 
 	export YACC='byacc -d'
 

@@ -1,6 +1,18 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.184 2005/01/18 05:11:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.185 2005/01/24 11:10:03 greg_g Exp $
+
+*qt-3.3.3-r3 (24 Jan 2005)
+
+  24 Jan 2005; Gregorio Guidi <greg@gentoo.org>
+  +files/qt-3.3.3-amd64-fullscreen.patch,
+  +files/qt-3.3.3-flickerfree_qiconview_buffered.patch,
+  +files/qt-3.3.3-flickerfree_qscrollview_fixwindowactivate.patch,
+  +files/qt-3.3.3-qclipboard-hack.patch, +qt-3.3.3-r3.ebuild,
+  qt-4.0.0_beta1-r2.ebuild:
+  Removed icc USE flag (#68664). Removed dependency on gif libraries (#78569).
+  Added patch for fullscreen problem on amd64 (kde bug 92992). Added patch for
+  kde freeze (kde bug 80072). Added performance patches (#64449).
 
   17 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org> qt-2.3.2-r2.ebuild,
   qt-3.3.3-r2.ebuild:
