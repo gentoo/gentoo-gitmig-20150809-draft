@@ -1,4 +1,4 @@
-MD5 f6c25512871dbf223795a4ed93e50080 ChangeLog 23856
+MD5 cf5dc4a11d7fd7e2ed9970a6d7774213 ChangeLog 24164
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
 MD5 5dee068fc8022a4447d6953ae1ccf398 qt-2.3.2-r1.ebuild 2287
 MD5 275bf64fb8919320ba75f00523281729 qt-3.0.5-r2.ebuild 3901
@@ -38,4 +38,4 @@ MD5 da2eb517a4c29a58002e92864ff966e5 files/qt-no-rpath-uic.patch 294
 MD5 e4b92fbf81b7fc94c5d337e1675476d7 files/qt-x11-free-3.0.5-ko_input.patch 12682
 MD5 87c645dbad7233316ff3340847a59f22 files/digest-qt-3.3.1-r2 72
 MD5 9bd231bda8dcf1508a797c80002bfaa3 files/qt-3.3.1-qclipboard-fix.patch 2878
-MD5 ab65c37e94ac512a1a772a491d3127bf files/qt-3.3.1-mips-relax-branches.patch 455
+MD5 33d20a19eba2cb13a7eb156d4eea10db files/qt-3.3.1-mips-relax-branches.patch 688
