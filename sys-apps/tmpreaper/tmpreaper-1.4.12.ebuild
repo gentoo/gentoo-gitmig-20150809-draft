@@ -21,7 +21,9 @@ src_install () {
 
    dosbin tmpreaper
    doman tmpreaper.8
+   dodoc ChangeLog 
    #added debian/* files for people who want cron.daily and related files.
-   dodoc ChangeLog debian/*
+   cd debian
+   dodoc changelog conffiles copyright cron.daily dirs
 
 }
