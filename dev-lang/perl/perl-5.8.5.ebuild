@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.5.ebuild,v 1.5 2004/09/22 17:52:01 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.5.ebuild,v 1.6 2004/09/25 00:46:57 rac Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -21,14 +21,14 @@ IUSE="berkdb doc gdbm ithreads uclibc"
 
 DEPEND="!uclibc? ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )
+	gdbm? ( >=sys-libs/gdbm-1.8.3 )
 	>=sys-apps/portage-2.0.48-r4
 	>=sys-devel/libperl-${PV}
 	!<dev-perl/ExtUtils-MakeMaker-6.17
 	!<dev-perl/File-Spec-0.84-r1
 	!<dev-perl/Test-Simple-0.47-r1"
 RDEPEND="berkdb? ( sys-libs/db )
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
+	gdbm? ( >=sys-libs/gdbm-1.8.3 )"
 
 pkg_setup() {
 	# I think this should rather be displayed if you *have* 'ithreads'

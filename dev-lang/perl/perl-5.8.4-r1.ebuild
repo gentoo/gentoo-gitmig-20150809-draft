@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4-r1.ebuild,v 1.11 2004/09/22 17:52:01 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4-r1.ebuild,v 1.12 2004/09/25 00:46:57 rac Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -99,7 +99,11 @@ src_unpack() {
 	cd ${S}; epatch ${FILESDIR}/${P}-noksh.patch
 
 	# see bug 52660
-	cd ${S}; epatch ${FILESDIR}/${P}-NDBM-GDBM-compat.patch
+	# i'm not entirely thrilled with this has_version, but can't see
+	# how else to handle it. attempting to link libgdbm_compat is
+	# fatal on systems where it doesn't exist.
+
+	has_version ">=sys-libs/gdbm-1.8.3" && epatch ${FILESDIR}/${P}-NDBM-GDBM-compat.patch
 
 	# uclibc support
 	epatch ${FILESDIR}/perl-5.8.2-uclibc.patch
