@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.32 2004/09/17 01:56:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.33 2004/10/10 17:30:48 usata Exp $
 
 inherit libtool gnuconfig flag-o-matic eutils
 
@@ -25,15 +25,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# Fixes some strange sed-, libtool- and ranlib-errors on
-	# Mac OS X
-	if use macos; then
-		glibtoolize
-	elif use ppc-macos; then
-		glibtoolize
-	else
-		elibtoolize
-	fi
+	elibtoolize
 
 	# elibtoolize breaks (see brad's comments below, left here for
 	# historical purposes) but libtoolize won't work either because
@@ -75,5 +67,9 @@ src_install() {
 	dohtml -r docs
 
 	cd ${D}/usr/$(get_libdir) || die
-	chmod 755 libgmodule-1.2.so.*
+	if use ppc-macos || use macos ; then
+		chmod 755 libgmodule-1.2.*.dylib
+	else
+		chmod 755 libgmodule-1.2.so.*
+	fi
 }
