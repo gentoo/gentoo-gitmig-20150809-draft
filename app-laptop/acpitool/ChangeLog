@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/acpitool
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpitool/ChangeLog,v 1.1 2004/09/27 19:33:21 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpitool/ChangeLog,v 1.2 2004/11/18 19:39:29 sekretarz Exp $
+
+  18 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> acpitool-0.2.5.ebuild:
+  Fixed fetching problems, bug #69623
 
 *acpitool-0.2.5 (27 Sep 2004)
 
