@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.8.5.ebuild,v 1.2 2005/03/08 01:00:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.8.5.ebuild,v 1.3 2005/03/21 08:46:35 usata Exp $
 
 inherit kde-functions
 
@@ -13,11 +13,12 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
-IUSE="nls"
+KEYWORDS="x86"
+IUSE="nls arts"
 
 DEPEND=">=app-i18n/scim-1.1.3
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	arts? ( kde-base/arts )"
 
 pkg_setup() {
 	if [ ! -e /usr/qt/3/plugins/inputmethods/libqimsw-none.so ] ; then
@@ -32,7 +33,8 @@ src_compile() {
 		export KDEDIR=$(kde-config --prefix)
 	fi
 
-	econf $(use_enable nls) || die
+	econf $(use_enable nls) \
+		$(use_enable arts) || die
 	emake -j1 || die "make failed."
 }
 
