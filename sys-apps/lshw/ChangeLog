@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/lshw
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.1 2003/04/15 15:15:46 mholzer Exp $
+
+*lshw-01.00 (15 Apr 2003)
+
+  15 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest, lshw-01.00.ebuild:
+  Adding initial ebuild submitted by Marc Hildebrand
+  <marc.hildebrand@t-online.de> in #19200.
+
