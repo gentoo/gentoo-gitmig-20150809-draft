@@ -11,7 +11,7 @@
 (when (featurep 'highline)
   (require 'highline))
 
-(add-hook 'mldonkey-mode-hook 'highline-local-mode)
+;; (add-hook 'mldonkey-mode-hook 'highline-local-mode)
 
 (setq mldonkey-host "localhost")
 (setq mldonkey-port 4000) ; use the port of the telnet interface here
