@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/rox-lib-1.9.16.ebuild,v 1.1 2004/11/26 19:44:56 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/rox-lib-1.9.16.ebuild,v 1.2 2005/03/05 14:23:52 josejx Exp $
 
 DESCRIPTION="ROX-Lib2 - Shared code for ROX applications by Thomas Leonard"
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
