@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pcb/pcb-20031113-r1.ebuild,v 1.3 2004/03/30 19:40:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pcb/pcb-20031113-r1.ebuild,v 1.4 2004/04/19 12:10:16 phosphan Exp $
 
 DESCRIPTION="PCB is a tool for the layout of printed circuit boards."
 HOMEPAGE="http://sourceforge.net/projects/pcb/"
@@ -11,9 +11,8 @@ KEYWORDS="x86"
 RDEPEND="virtual/x11"
 DEPEND="${RDEPEND}
 	=dev-lang/tk-8*"
+IUSE=""
 SLOT="0"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	econf || die
