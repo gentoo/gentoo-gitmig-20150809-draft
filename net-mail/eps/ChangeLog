@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/eps
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/eps/ChangeLog,v 1.1 2004/09/25 15:02:46 ticho Exp $
+
+*eps-1.2 (25 Sep 2004)
+
+  25 Sep 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +eps-1.2.ebuild:
+  Initial version. Ebuild submitted by Mark Gilbert <mg_gentoo@yahoo.com>.
+
