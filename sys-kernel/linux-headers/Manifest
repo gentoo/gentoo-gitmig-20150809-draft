@@ -19,8 +19,8 @@ MD5 681c761c0afe60e1022ac44d37d3370a linux-headers-2.0.40.ebuild 1820
 MD5 213c9243211da20b5a7611507539e99b linux-headers-2.4.22.ebuild 4029
 MD5 57e8b81485f8a1ba10d41dd7949d40a8 files/linux-headers-2.6.8.1-strict-ansi-fix.patch 4132
 MD5 8a065c0dc3b8fac8747de35f1af75a2c files/linux-headers-2.6.0-fb.patch 386
-MD5 2658a3a1909ad5c7f722bd00a949b04f files/digest-linux-headers-2.6.8.1-r2 203
-MD5 2658a3a1909ad5c7f722bd00a949b04f files/digest-linux-headers-2.6.8.1-r4 203
+MD5 fb33a0ba21375f190137b9f478ad9799 files/digest-linux-headers-2.6.8.1-r2 146
+MD5 fb33a0ba21375f190137b9f478ad9799 files/digest-linux-headers-2.6.8.1-r4 146
 MD5 64566ac83b9929cb29c658f140117ee0 files/linux-headers-2.6.10-generic-arm-prepare.patch 1022
 MD5 9854e47afccae85e887bcb970fc68890 files/digest-linux-headers-2.4.21-r1 67
 MD5 6ef3887ee4018c06c18e8726767189c7 files/digest-linux-headers-2.4.22-r1 67
@@ -48,7 +48,7 @@ MD5 6dd79a655f006aebb7206203f3654976 files/linux-headers-2.6.7-generic-arm-prepa
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCU2nwI1lqEGTUzyQRAtLkAKCbEIvx0v4XKTXuVuHKXwTbkf0Q+ACfZ3N0
-48yoRKcyvk2O2FmzV4QqncI=
-=ad10
+iD8DBQFCU/iSz7mlh8wQzGMRAntNAKCPTNIlBx8nKmAS3LB6K7qcPljIPwCgg7uF
+0sUD+km0fjs6qhvuPdSmuo4=
+=by73
 -----END PGP SIGNATURE-----
