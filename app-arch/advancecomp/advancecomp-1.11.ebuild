@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/advancecomp-1.11.ebuild,v 1.1 2004/08/24 21:58:57 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/advancecomp-1.11.ebuild,v 1.2 2004/08/25 18:44:19 mr_bones_ Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="sys-libs/zlib app-arch/bzip2"
 
 src_unpack() {
 	unpack ${A}
-	
+
 	# bzip2 support wont compile, heres a quick patch.
 	cd ${S}; epatch ${FILESDIR}/${P}-bzip2-compile-plz-k-thx.diff
 
@@ -33,7 +33,7 @@ src_install() {
 	dobin advdef advzip
 
 	use png && {
-		dobin advpng 
+		dobin advpng
 		doman doc/advpng.1
 	}
 
