@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.5 2004/08/12 20:08:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.6 2004/08/16 11:53:46 dragonheart Exp $
 
 DESCRIPTION="GnuPG Made Easy (GPGME) is a library designed to make access to GnuPG easier for applications."
 HOMEPAGE="http://www.gnupg.org/gpgme.html"
@@ -49,7 +49,6 @@ src_unpack() {
 		doc/gpgme.texi configure.ac
 
 	sed -i -e 's:gpgme\.m4:gpgme3.m4:g' \
-		-e 's:gpgme\.h:gpgme3.h:g' \
 		gpgme/Makefile.am configure.ac doc/gpgme.texi \
 		gpgme/mkerrors \
 		`find . -name \*.c -o -name \*.h`
@@ -59,7 +58,7 @@ src_unpack() {
 	mv doc/gpgme{,3}.texi
 	mv gpgme/gpgme{,3}-config.in
 	mv gpgme/gpgme{,3}.m4
-	mv gpgme/gpgme{,3}.h
+	# mv gpgme/gpgme{,3}.h
 }
 
 
@@ -75,8 +74,8 @@ src_compile() {
 		myconf="${myconf} --with-gpg=${ROOT}usr/bin/gpg"
 	fi
 
-	aclocal || die "Aclocal failed"
 	autoconf || die "autoconf failed"
+	aclocal || die "Aclocal failed"
 	automake || die "automake failed"
 
 	# For gnugpg-1.9+
@@ -89,8 +88,6 @@ src_compile() {
 		${myconf} \
 		|| die "econf failed"
 
-
-	econf ${myconf} || die "econf failed"
 	emake || die "make failed"
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.41 2004/08/12 20:08:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.42 2004/08/16 11:53:46 dragonheart Exp $
+
+  16 Aug 2004; Daniel Black <dragonheart@gentoo.org> gpgme-0.3.14-r1.ebuild:
+  Have modified gpgme-0.3.14-r1 a bit to make it easier. REmoved duplicat econf
+  as well bug #57193 refers
 
   13 Aug 2004; Daniel Black <dragonheart@gentoo.org> gpgme-0.3.14-r1.ebuild:
   Misses fix on gpgme/mkerror. Thanks to fix by Mihai Limbasan
