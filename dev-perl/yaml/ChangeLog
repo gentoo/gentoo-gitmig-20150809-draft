@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/yaml
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.1 2003/06/26 16:11:30 mcummings Exp $
+
+*yaml-0.35 (26 Jun 2003)
+
+  26 Jun 2003; Michael Cummings <mcummings@gentoo.org> yaml-0.35.ebuild:
+  YAML is a dep for alzabo
+
