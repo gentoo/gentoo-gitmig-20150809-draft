@@ -610,10 +610,6 @@ net-mail/exmh
 # New ebuild for CCMSN. Masked For Testing.
 =net-im/ccmsn-0.3
 
-#<george@gentoo.org> ( 28 Jun 2002 )
-# tested Ok, will remove this entry soon
-#=dev-util/netbeans-3.3.2
-
 # Masked for testing of the ACL parts (styx 21 Jun 2002)
 >=sys-apps/e2fsprogs-1.27-r1
 
