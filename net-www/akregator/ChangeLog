@@ -1,6 +1,11 @@
 # ChangeLog for net-www/akregator
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/akregator/ChangeLog,v 1.10 2005/01/14 23:06:08 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/akregator/ChangeLog,v 1.11 2005/03/22 08:47:39 greg_g Exp $
+
+*akregator-1.0.1 (22 Mar 2005)
+
+  22 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> +akregator-1.0.1.ebuild:
+  New version (#82349).
 
   15 Jan 2005; Dan Armak <danarmak@gentoo.org> akregator-1.0_beta3.ebuild,
   akregator-1.0_beta6.ebuild, akregator-1.0_beta7.ebuild,
