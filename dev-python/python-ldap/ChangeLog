@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.9 2003/05/22 08:53:08 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.10 2003/07/01 10:35:12 liquidx Exp $
+
+*python-ldap-2.0.0_pre13 (01 Jul 2003)
+
+  01 Jul 2003; Alastair Tse <liquidx@gentoo.org>
+  python-ldap-2.0.0_pre13.ebuild:
+  version bump. adds sasl and ssl USE flags to correspond with openldap's USE
+  flags
 
   22 May 2003; Alastair Tse <liquidx@gentoo.org>
   python-ldap-2.0.0_pre06.ebuild:
