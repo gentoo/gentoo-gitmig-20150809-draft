@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.3 2004/06/02 14:17:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.4 2004/06/05 23:08:32 george Exp $
 
 inherit eutils
 
@@ -17,8 +17,7 @@ KEYWORDS="~x86"
 IUSE="ifc doc"
 
 DEPEND="virtual/glibc
-	ifc? ( >=sys-devel/libtool-1.5 )
-	!ifc? ( sys-devel/libtool )
+	>=sys-devel/libtool-1.5
 	=app-sci/blas-atlas-3.6.0
 	app-sci/lapack-config
 	ifc? ( dev-lang/ifc )"
@@ -56,10 +55,12 @@ ifc_info() {
 }
 
 pkg_setup() {
-	use ifc || if [ -z `which g77` ]; then
-		#if ifc is defined then the dep was already checked
-		eerror "No fortran compiler found on the system!"
-		eerror "Please add g77 to your USE flags and reemerge gcc!"
+	# We need g77 to compile the LAPACK routines from ATLAS.
+	# `use ifc` only causes the non-ATLAS routines (from the
+	#  reference set) to be built with ifc.
+	if [ -z `which g77` ]; then
+		eerror "g77 not found on the system!"
+		eerror "Please add f77 to your USE flags and reemerge gcc!"
 		die
 	fi
 }

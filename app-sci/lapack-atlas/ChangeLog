@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/lapack-atlas
 # Copyright 2004-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/ChangeLog,v 1.4 2004/06/02 14:17:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/ChangeLog,v 1.5 2004/06/05 23:08:32 george Exp $
+
+  05 Jun 2004; George Shapovalov <george@gentoo.org> lapack-atlas-3.6.0.ebuild :
+  fixed check for g77 - it is always necessary, even if ifc is installed (#30459)
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> lapack-atlas-3.6.0.ebuild:
   Fix use invocation

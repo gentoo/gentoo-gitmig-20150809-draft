@@ -1,5 +1,5 @@
-MD5 dc4fb9d24d38d5b1029f20b1a3964ee8 lapack-atlas-3.6.0.ebuild 4597
-MD5 66ec00040df5415dc689106e61635975 ChangeLog 848
+MD5 456eace6092c3cf8243c9aeb770b0e16 lapack-atlas-3.6.0.ebuild 4637
+MD5 5b70801e6fba93181a9ebcdb6906a22b ChangeLog 1010
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 13d26350d75e6993f1b3ec48ca97f14e files/war 545
 MD5 4192870be88e09ba8c6a805eb31fcfb4 files/lapack-gentoo.patch 1272
