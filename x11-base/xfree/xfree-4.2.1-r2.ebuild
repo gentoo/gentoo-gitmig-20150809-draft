@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.22 2003/02/17 19:44:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.23 2003/02/24 00:07:24 azarah Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -172,6 +172,10 @@ src_unpack() {
 	# Remove 082 patch which b0rks keycodes,
 	# see bug #13073
 	rm -f ${WORKDIR}/patch/082*
+
+	# Do not disable DRI for 3dfx cards if resolution higher than 1024x768,
+	# bug #15001.
+	rm -f ${WORKDIR}/patch/035*
 
 	# Various Patches from all over
 	epatch ${WORKDIR}/patch/
