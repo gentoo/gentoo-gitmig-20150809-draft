@@ -1,6 +1,9 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.74 2004/10/06 09:53:12 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.75 2004/10/06 19:57:31 phosphan Exp $
+
+  06 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> files/throw.patch:
+  Patch was broken (bug #64893)
 
   06 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> +files/throw.patch,
   avifile-0.7.41.20041001.ebuild:
