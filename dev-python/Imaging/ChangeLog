@@ -1,10 +1,16 @@
 # ChangeLog for dev-python/Imaging
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/ChangeLog,v 1.7 2003/02/12 06:30:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/ChangeLog,v 1.8 2003/03/06 03:00:37 kutsuya Exp $
+
+*Imaging-1.1.3-r1 (05 Mar 2003)
+
+  05 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> Imaging-1.1.3-r1.ebuild:
+  Modified to take advantage of distutils.eclass. Removed all but ~x86 arch,
+  because of the major revision.
+
+*Imaging-1.1.3 (3 Nov 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*Imaging-1.1.3 (3 Nov 2002)
   
   3 Nov 2002; Nicholas Henke <roughneck@gentoo.org> Imaging-1.1.3.ebuild :
   Bumped version to 1.1.3.
