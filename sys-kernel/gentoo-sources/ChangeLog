@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.34 2003/10/11 13:40:22 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.35 2003/10/11 20:31:18 plasmaroo Exp $
+
+  11 Oct 2003; <plasmaroo@gentoo.org> gentoo-sources-2.4.20-r7.ebuild,
+  files/gentoo-sources-2.4.20-cs46xx-gcc33.patch:
+  Added CS46xx patch to fix the GCC 3.3 problems in the driver: Bug 29970
 
   11 Oct 2003; <plasmaroo@gentoo.org> gentoo-sources-2.4.20-r7.ebuild,
   files/gentoo-sources-2.4.20-devfs-snd-fix.patch:
