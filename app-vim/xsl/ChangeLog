@@ -1,0 +1,12 @@
+# ChangeLog for app-vim/xsl
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/xsl/ChangeLog,v 1.1 2003/08/12 02:10:45 agriffis Exp $
+
+*xsl-0.3.11 (11 Aug 2003)
+
+  11 Aug 2003; Aron Griffis <agriffis@gentoo.org> xsl-0.3.11.ebuild:
+  Initial import of app-vim/xsl. Attempted to contact the author regarding the
+  license of this plugin, but was unsuccessful so far. Considering the file
+  bears no copyright or license information, and the file is freely available
+  from vim.org, assuming the vim license is sufficient until otherwise informed.
+
