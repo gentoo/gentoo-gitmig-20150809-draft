@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.69 2004/09/14 02:06:36 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.70 2004/09/25 07:37:19 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -22,7 +22,7 @@ IUSE="${IUSE} debug"
 #### replace-flags <orig.flag> <new.flag> ###
 # Replace a flag by another one
 #
-#### replace-cpu-flags <new.cpu> <old.cpus> ###
+#### replace-cpu-flags <old.cpus> <new.cpu> ###
 # Replace march/mcpu flags that specify <old.cpus>
 # with flags that specify <new.cpu>
 #
@@ -161,13 +161,14 @@ replace-flags() {
 }
 
 replace-cpu-flags() {
-	local oldcpu newcpu="$1" ; shift
-	for oldcpu in "$@" ; do
+	local newcpu="$#" ; newcpu="${!newcpu}"
+	while [ $# -gt 1 ] ; do
 		# quote to make sure that no globbing is done (particularly on
 		# ${oldcpu} prior to calling replace-flags
-		replace-flags "-march=${oldcpu}" "-march=${newcpu}"
-		replace-flags "-mcpu=${oldcpu}" "-mcpu=${newcpu}"
-		replace-flags "-mtune=${oldcpu}" "-mtune=${newcpu}"
+		replace-flags "-march=${1}" "-march=${newcpu}"
+		replace-flags "-mcpu=${1}" "-mcpu=${newcpu}"
+		replace-flags "-mtune=${1}" "-mtune=${newcpu}"
+		shift
 	done
 	return 0
 }
