@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.97.ebuild,v 1.1 2002/05/23 19:37:31 ashmodai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.97.ebuild,v 1.2 2002/05/23 19:53:36 ashmodai Exp $
 
 S=${WORKDIR}/freeswan-1.97
 DESCRIPTION="FreeS/WAN IPSec Userspace Utilities"
@@ -23,6 +23,8 @@ pkg_setup() {
 }
 
 src_compile() {
+
+    patch -p1 < ${FILESDIR}/freeswan-libdes-location.patch || die
 
 	make	 						   	\
 		DESTDIR=${D}					\
