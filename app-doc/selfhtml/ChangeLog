@@ -1,6 +1,6 @@
 # ChangeLog for app-doc/selfhtml
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/selfhtml/ChangeLog,v 1.7 2004/11/05 04:07:02 pylon Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/selfhtml/ChangeLog,v 1.8 2005/01/01 13:20:17 eradicator Exp $
 
   05 Nov 2004; Lars Weiler <pylon@gentoo.org> selfhtml-8.0-r1.ebuild:
   Added app-arch/unzip to DEPEND, bug #69831.

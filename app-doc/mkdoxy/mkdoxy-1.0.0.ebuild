@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/mkdoxy/mkdoxy-1.0.0.ebuild,v 1.7 2004/06/24 21:48:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/mkdoxy/mkdoxy-1.0.0.ebuild,v 1.8 2005/01/01 13:17:50 eradicator Exp $
 
 DESCRIPTION="mkDoxy generates Doxygen-compatible HTML documentation for makefiles"
 HOMEPAGE="http://sourceforge.net/projects/mkdoxy/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack/phrack-25.ebuild,v 1.7 2004/12/20 04:10:26 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack/phrack-25.ebuild,v 1.8 2005/01/01 13:19:07 eradicator Exp $
 
 MY_P=${PN}${PV}
 DESCRIPTION="...a Hacker magazine by the community, for the community...."

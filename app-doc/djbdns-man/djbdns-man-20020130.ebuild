@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/djbdns-man/djbdns-man-20020130.ebuild,v 1.14 2004/06/30 00:59:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/djbdns-man/djbdns-man-20020130.ebuild,v 1.15 2005/01/01 13:05:46 eradicator Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Man pages for djbdns"

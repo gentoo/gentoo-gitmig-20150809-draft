@@ -1,6 +1,6 @@
 # ChangeLog for app-doc/phrack
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack/ChangeLog,v 1.9 2004/12/20 04:10:26 jhuebel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack/ChangeLog,v 1.10 2005/01/01 13:19:07 eradicator Exp $
 
   19 Dec 2004; Jason Huebel <jhuebel@gentoo.org> phrack-01.ebuild,
   phrack-02.ebuild, phrack-03.ebuild, phrack-04.ebuild, phrack-05.ebuild,

@@ -1,6 +1,6 @@
 # ChangeLog for app-doc/afsdoc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/afsdoc/ChangeLog,v 1.8 2004/12/20 02:29:28 jhuebel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/afsdoc/ChangeLog,v 1.9 2005/01/01 13:04:34 eradicator Exp $
 
   19 Dec 2004; Jason Huebel <jhuebel@gentoo.org> afsdoc-3.6-r1.ebuild:
   amd64, just docs, no need for testing

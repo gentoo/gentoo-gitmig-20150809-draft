@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-base/linux-gazette-base-105.ebuild,v 1.1 2004/08/24 02:48:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-base/linux-gazette-base-105.ebuild,v 1.2 2005/01/01 13:17:38 eradicator Exp $
 
 # the SRC_URI always has the same file name ... make sure you
 # `rm ${DISTDIR}/lg-base.tar.gz` and make a new digest with

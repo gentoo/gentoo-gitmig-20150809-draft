@@ -1,6 +1,6 @@
 # ChangeLog for app-doc/jargon
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/jargon/ChangeLog,v 1.4 2004/06/24 21:47:14 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/jargon/ChangeLog,v 1.5 2005/01/01 13:14:17 eradicator Exp $
 
   23 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> jargon-4.4.7.ebuild:
   Don't install twice the graphics (bug #44336)
