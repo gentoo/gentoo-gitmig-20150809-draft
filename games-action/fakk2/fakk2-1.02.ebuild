@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/fakk2-1.02.ebuild,v 1.2 2004/02/15 23:20:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/fakk2-1.02.ebuild,v 1.3 2004/06/03 07:49:05 mr_bones_ Exp $
 
 inherit games
 
@@ -25,7 +25,7 @@ Ddir=${D}/${dir}
 
 pkg_setup() {
 	check_license || die "License check failed"
-	if [ "`use nocd`" ]; then
+	if use nocd ; then
 		ewarn "The installed game takes about 378MB of space!"
 	fi
 	cdrom_get_cds fakk
@@ -42,7 +42,7 @@ src_install() {
 	dodir ${dir}/fakk
 	exeinto /opt/fakk2/fakk
 	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/fakk/{c,f}game.so
-	if [ "`use nocd`" ]; then
+	if use nocd ; then
 		insinto /opt/fakk2/fakk
 		doins ${CDROM_ROOT}/fakk/pak{0,1,2,3}.pk3
 	fi

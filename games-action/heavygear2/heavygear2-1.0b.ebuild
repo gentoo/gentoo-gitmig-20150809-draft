@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.3 2004/02/15 23:23:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.4 2004/06/03 07:47:44 mr_bones_ Exp $
 
 inherit games
 
@@ -28,7 +28,7 @@ Ddir=${D}/${dir}
 pkg_setup() {
 	check_license || die "License check failed"
 	cdrom_get_cds shell/movies/asteroid.mpg
-	if [ "`use videos`" ]; then
+	if use videos ; then
 		ewarn "The installed game takes about 500MB of space!"
 	else
 		ewarn "The installed game takes about 400MB of space!"
@@ -77,7 +77,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ ! "`use videos`" ]; then
+	if ! use videos ; then
 		einfo "You will need to mount the Heavy Gear II CD to see the cut-scene videos."
 		echo
 	fi

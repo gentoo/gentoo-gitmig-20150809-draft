@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b.ebuild,v 1.4 2004/04/04 07:10:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b.ebuild,v 1.5 2004/06/03 07:51:07 mr_bones_ Exp $
 
 inherit games
 
@@ -23,13 +23,13 @@ dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
 pkg_setup() {
-	if [ "`use videos`" ]; then
+	if use videos ; then
 		ewarn "The installed game takes about 1.2GB of space!"
 		cdrom_get_cds missions/d3.mn3 movies/level1.mve
 	else
 		cdrom_get_cds missions/d3.mn3
 	fi
-	if [ "`use nocd`" ]; then
+	if use nocd ; then
 		ewarn "The installed game takes about 510MB of space!"
 	else
 		ewarn "The installed game takes about 220MB of space!"
@@ -62,7 +62,7 @@ src_install() {
 
 	use nocd && cp ${CDROM_ROOT}/missions/* ${Ddir}/missions
 
-	if [ "`use videos`" ]; then
+	if use videos ; then
 		cdrom_load_next_cd
 		cp ${CDROM_ROOT}/movies/* ${Ddir}/movies || die "copying movies"
 	fi
