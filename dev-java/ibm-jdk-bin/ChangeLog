@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.14 2004/09/06 18:12:45 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.15 2004/09/23 15:40:24 axxo Exp $
+
+  23 Sep 2004; Thomas Matthijs <axxo@gentoo.org> -ibm-jdk-bin-1.4.1-r1.ebuild,
+  -ibm-jdk-bin-1.4.1.ebuild:
+  prune older ebuilds
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   ibm-jdk-bin-1.4.1-r1.ebuild, ibm-jdk-bin-1.4.1-r2.ebuild,
