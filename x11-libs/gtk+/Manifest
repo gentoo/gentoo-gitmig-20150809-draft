@@ -8,7 +8,7 @@ MD5 dab380359be57a8b0234710651374e96 files/digest-gtk+-2.2.1 64
 MD5 621a7db3e7e6856c66eec5caeea1e88e files/digest-gtk+-1.2.10-r10 138
 MD5 36d00cf3b4035e6cb9873ade9ed1a9ce files/gtkrc 627
 MD5 5e3ff7fa761495300d3f30c9207c13f8 files/gtk+-1.2-locale_fix.patch 419
-MD5 a4959dbeffec4104260bc308b085c949 files/gtk+-2.2.2-revert_gtkwidget.patch 2190
+MD5 60abaa583c04f16be6d0703cc9684e45 files/gtk+-2.2.2-gtkwidget_pixmap_expose.patch 757
 MD5 a0e14ed281fc891fd169e2bf7e247ad4 files/gtk+-2.2.1-gdkpixbuf-bigendian.patch 724
 MD5 69a6335566f344b004a5db02b68008ed files/gtk+-2.0.6-exportsymbols.patch 558
 MD5 c979d9262eccf5bdf8dbfa50b8d57b13 files/gtk+-2-xftprefs.patch 6711

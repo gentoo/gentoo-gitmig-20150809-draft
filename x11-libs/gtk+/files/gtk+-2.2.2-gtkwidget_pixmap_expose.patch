@@ -1,0 +1,17 @@
+diff -ur gtk+-2.2.2/gtk/gtkwidget.c gtk+-2.2.2.patched/gtk/gtkwidget.c
+--- gtk+-2.2.2/gtk/gtkwidget.c	2003-06-09 03:54:48.000000000 +0200
++++ gtk+-2.2.2.patched/gtk/gtkwidget.c	2003-06-16 00:14:23.000000000 +0200
+@@ -3041,6 +3041,13 @@
+ static gboolean
+ event_window_is_still_viewable (GdkEvent *event)
+ {
++   /* Some programs, such as gnome-theme-manager, fake widgets
++   * into exposing onto a pixmap by sending expose events with
++   * event->window pointing to a pixmap
++   */
++  if (GDK_IS_PIXMAP (event->any.window))
++    return event->type == GDK_EXPOSE;
++
+   /* Check that we think the event's window is viewable before
+    * delivering the event, to prevent suprises. We do this here
+    * at the last moment, since the event may have been queued
