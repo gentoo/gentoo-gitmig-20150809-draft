@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc5-r1.ebuild,v 1.3 2004/06/24 21:57:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc5-r1.ebuild,v 1.4 2004/07/15 00:28:16 agriffis Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ HOMEPAGE="http://www.directfb.org"
 SLOT="0"
 LICENSE="X11"
 KEYWORDS="x86 -sparc ~alpha ~ppc"
+IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
