@@ -1,3 +1,5 @@
-MD5 c67678326a8f587d5b4c40880b59c7b4 ChangeLog 351
-MD5 68a8868661cb686cfe4c1997884e6e50 psyco-1.0.0_beta1.ebuild 550
+MD5 030a843bf28e4d82019cc3e0dc335f2a ChangeLog 487
+MD5 b14fea0aa3057aa2dfccfec8dc79e266 psyco-1.0.0_beta1.ebuild 548
+MD5 f5a5b4e95649e19e2cf6202da738e9c4 psyco-1.0.ebuild 601
+MD5 d01d141cde6e4bbd46258905f4140192 files/digest-psyco-1.0 65
 MD5 4c8829b71b8338e8841cd4db577357fb files/digest-psyco-1.0.0_beta1 69
