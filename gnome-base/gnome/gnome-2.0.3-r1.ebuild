@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.0.3-r1.ebuild,v 1.4 2003/01/05 01:17:54 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.0.3-r1.ebuild,v 1.5 2003/01/18 12:39:40 bjb Exp $
 
 S=${WORKDIR}
 DESCRIPTION="GNOME 2.0 - merge this package to merge the Gnome2 desktop"
@@ -10,7 +10,7 @@ SLOT="2.0"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc alpha"
 
 
 #  Note to developers:
