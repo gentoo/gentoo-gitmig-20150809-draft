@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.5 2004/04/10 03:56:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.6 2004/04/12 07:00:30 plasmaroo Exp $
+
+  12 Apr 2004; <plasmaroo@gentoo.org> files/racoon.conf.d,
+  files/racoon.init.d:
+  Changed the initialization scripts to flush the tables when racoon is 
+  stopped - closes bug #47089.
 
   09 Apr 2004; Jason Wever <weeve@gentoo.org> ipsec-tools-0.2.5.ebuild:
   It only takes a ~sparc, to get an ipsec tunnel going...

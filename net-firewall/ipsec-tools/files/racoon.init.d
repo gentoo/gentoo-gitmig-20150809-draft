@@ -49,4 +49,10 @@ stop() {
 	ebegin "Stopping racoon"
 	kill `cat /var/run/racoon.pid`
 	eend $?
+	if [ -n "${RACOON_RESET_TABLES}" ]; then
+		ebegin "Flushing policy entries"
+		/usr/sbin/setkey -F
+		/usr/sbin/setkey -FP
+		eend $?
+	fi
 }
