@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.2 2002/03/21 12:02:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.3 2002/05/06 08:20:25 kain Exp $
+
+*nasm-0.98.30 (06 May 2002)
+
+  06 May 2002; Kain <kain@kain.org> nasm-0.98.30.ebuild :
+
+  New NASM releases are being made off SourceForge.  0.98.30 fixes a number of
+  compatibility bugs in 0.98 and also has various enhancements.
 
 *nasm-0.98-r4 (21 Mar 2002)
 
