@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ChangeLog,v 1.7 2003/02/12 09:51:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ChangeLog,v 1.8 2003/05/24 00:10:53 hanno Exp $
+
+  24 May 2003; Hanno Boeck <hanno@gentoo.org> ion-20020207-r1.ebuild:
+  Fixed license var.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

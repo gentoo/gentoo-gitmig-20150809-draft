@@ -7,7 +7,7 @@ SRC_URI="http://www.students.tut.fi/~tuomov/dl/${P}.tar.gz"
 HOMEPAGE="http://www.students.tut.fi/~tuomov/ion/"
 DEPEND="virtual/glibc"
 RDEPEND="virtual/x11"
-LICENSE="Artistic"
+LICENSE="Clarified-Artistic"
 SLOT="0"
 KEYWORDS="x86 sparc "
 

@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ion-20020207-r1.ebuild,v 1.5 2003/02/13 17:49:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ion-20020207-r1.ebuild,v 1.6 2003/05/24 00:10:53 hanno Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A keyboard-based window manager"
 SRC_URI="http://www.students.tut.fi/~tuomov/dl/${P}.tar.gz"
 HOMEPAGE="http://www.students.tut.fi/~tuomov/ion/"
-
+IUSE=""
 SLOT="0"
-LICENSE="Artistic"
-KEYWORDS="x86 ~ppc sparc "
+LICENSE="Clarified-Artistic"
+KEYWORDS="x86 ~ppc sparc"
 
 DEPEND="virtual/x11"
 
@@ -18,7 +18,7 @@ src_unpack() {
 	cd ${S}
 	patch -p1 < ${FILESDIR}/${P}-gentoo.diff || die
 }
-	
+
 
 src_compile() {
 	# Edit system.mk
