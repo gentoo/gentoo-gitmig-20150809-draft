@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 59a2a1c0f8ec935b2f81ac90052206c7 ChangeLog 1019
-MD5 c378217638aa9b5056b3a33f8859b8bc gphpedit-0.4.3.ebuild 648
-MD5 56c07b77b23c278b36a6967016ed812f gphpedit-0.9.6.ebuild 683
+MD5 1cc4c10ee401abe1aef841427cd18d18 ChangeLog 1022
+MD5 6adf5e143ef5f7143eca2c3babdc8e10 gphpedit-0.4.3.ebuild 650
+MD5 67e010684978ea7985894d634f127b55 gphpedit-0.9.6.ebuild 686
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 30bfa319d73d46d2121f57d99c5fd48e gphpedit-0.9.50.ebuild 680
+MD5 5c410d30b72ad9978875572d3ada4b2a gphpedit-0.9.50.ebuild 683
 MD5 fd6d197b7562ef3b534e1db2f822744e files/digest-gphpedit-0.4.3 66
 MD5 f44408eb5e7c8472ca40c70423599872 files/digest-gphpedit-0.9.6 66
 MD5 3b9ce5b0bf71a09118fb67c7669cf8b9 files/digest-gphpedit-0.9.50 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBmRjARkyva5PS18kRAuQqAKDL8N3WAXSFfvYjQe9qmx60YpA7vACgoTC7
-f3iA64u9v+Tul+GKZQpFgb8=
-=1Zrg
------END PGP SIGNATURE-----

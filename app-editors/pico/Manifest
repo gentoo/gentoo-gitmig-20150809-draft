@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 050125cb5ec8b21de13194abd4f263b7 ChangeLog 766
-MD5 c206c7b5cf83ef38de429460de5af799 pico-0.0.1.ebuild 770
+MD5 679094401f2117d1aa22c5ad3848212d ChangeLog 769
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 0600d089c4584a38f8da72d9ffab12fe pico-0.0.1.ebuild 774
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-pico-0.0.1 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA30e4HTu7gpaalycRAk4/AKCwS4gNxy6bJkw+mO56mKZ17ezOhQCguAbb
-P7tRMh0eRl5ZX/pGYSmCC1o=
-=ZdV8
------END PGP SIGNATURE-----

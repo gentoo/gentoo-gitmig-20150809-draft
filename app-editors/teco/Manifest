@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dd4231cbadf17a5c6572a4f2f0820068 ChangeLog 1242
+MD5 0cce82495dd1afa07eccb24c24c27bab ChangeLog 1247
 MD5 7510851e62ed9c830d82a0e6d068052a metadata.xml 1324
-MD5 f4c299dc3bb579e1188afcc7cc4a4950 teco-1.00-r2.ebuild 1328
+MD5 fea56c160a0c009d6b3ef28838f04b9a teco-1.00-r2.ebuild 1332
 MD5 cbaebc6d51eb71e4aaaea9737b9d88f6 files/digest-teco-1.00-r2 282
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBcYHaHTu7gpaalycRAj99AJ43Ze7wAuw9fOLHpSS5tJDrxUy4jwCcCPJT
-sJJk/keCwVn5H8IorLAbb48=
-=J5oY
------END PGP SIGNATURE-----

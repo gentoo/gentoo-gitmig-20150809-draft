@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ca315b68b0f24f7e67191614c293d48b jext-3.2_pre3.ebuild 1063
-MD5 84625b0aecddac12ba39ca87f00a985e ChangeLog 1177
+MD5 e72f711d9d2eaeb28dab6955cd6333e3 ChangeLog 1183
+MD5 9110bcae4cc4cd82d0613a86e9ace2e2 jext-3.2_pre3.ebuild 1069
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 ba19c214a7e8f8ccb21f74bc3b3b1626 files/jext-gentoo.sh 1351
 MD5 88b56bf3784153591e9487638ded6dfe files/digest-jext-3.2_pre3 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcWsT/rLF9B432nYRAriAAKCWRW1g05DJ0XkngWXTHTC2KXmz5wCfRa0r
-HLbLDMLVGzNLcdRMi9bSCyk=
-=x0mZ
------END PGP SIGNATURE-----
+MD5 ba19c214a7e8f8ccb21f74bc3b3b1626 files/jext-gentoo.sh 1351

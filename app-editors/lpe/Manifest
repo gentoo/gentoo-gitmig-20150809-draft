@@ -1,5 +1,5 @@
-MD5 c9a0423842377d256c061d19a1be3ce2 ChangeLog 567
-MD5 4cd6bedf77ec36040c34a77f099e9ecc lpe-1.2.6.ebuild 869
+MD5 5133a0c199ea70b1a7032cd0ca1b455d ChangeLog 569
+MD5 d3426a8da8ef783fe7deace8dc8b59d1 lpe-1.2.6.ebuild 871
 MD5 4dc6d4e1ef0c431973c5d0dbbbeb81c8 metadata.xml 351
 MD5 a678618369e633c350fc7a1c51bb0e68 files/digest-lpe-1.2.6 61
 MD5 c2d1499e89218cbe880b75ca499a63b7 files/lpe-1.2.6-gentoo.patch 766

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 afa89fbee6c97969e1da1aae125f7621 ChangeLog 480
-MD5 c2e032076440b4606516d68ab429978d qe-0.1.1.ebuild 684
+MD5 f18550d442361604ba2f745ee15f3ae2 ChangeLog 482
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 b4ccb48d0cf4a657cf782baab7f9f506 qe-0.1.1.ebuild 688
 MD5 3a8d6d60fbb983eaeebaeff653d39c0a files/digest-qe-0.1.1 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA30fJHTu7gpaalycRAsWKAKC4doF+e+pPBW0JLtm2SyKI884QtQCfQhw1
-lGL2iMsVIhofHrmS9Z5OtxM=
-=ZEHw
------END PGP SIGNATURE-----

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 71a69cac25260a8f4e0f1933a1cca9e1 ChangeLog 3576
-MD5 46df141c9f0aa3d6d1cc17f680639d1d kvim-6.2.14.ebuild 1598
+MD5 56650617882fd3fa4eeadfa0abaaf47e ChangeLog 3580
+MD5 36b0065f36b3054a89e79fa773aaf0d0 kvim-6.2.14.ebuild 1602
 MD5 471a9143084c4f51ac51e3c29e6738dd metadata.xml 179
 MD5 e2dea441da69d0dacb672cb8a7dc5c5b files/digest-kvim-6.2.14 65
 MD5 4d2459727266d29b61b856ee4dfc31e0 files/kvim-6.2.14-gcc2.patch 505
 MD5 fb704603c1b2aba318c776935868e006 files/kvim-6.2.14-perl582.patch 862
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBcXY8HTu7gpaalycRAnuuAJ45/tnXisqL8YDuLTorYtiE9RfEEgCcDOx0
-i9PeQnYIN0eAknMyLUTgAnM=
-=viV8
------END PGP SIGNATURE-----

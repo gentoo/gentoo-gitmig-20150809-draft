@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 14515e5c8ce49c08d6d9ca602b4d2b76 bvi-1.3.2.ebuild 810
-MD5 17cd14279b5bc963f7a29c9ef37cf1a8 bvi-1.3.1.ebuild 781
-MD5 5663f3fbb0c77b25f3b57027276d0e16 ChangeLog 1001
+MD5 c0c37b7140f7775e2ecebcfa870375f1 ChangeLog 1005
+MD5 e71e2ef1833583d2d0e4919e90d02924 bvi-1.3.1.ebuild 783
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 93218bd3141d1f3f51524062e63090b5 bvi-1.3.2.ebuild 813
 MD5 c36c1c8f8a389ccfc4fd612b55b9effd files/digest-bvi-1.3.1 65
 MD5 e899f182241e85185ebb736793b613ef files/digest-bvi-1.3.2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBzV8aEZCkKN40op4RAvBLAJ9IUSw9+aabZZT/fa97vzLXUu/QMACfaciB
-gu4mbaKomBClYvUnAFMSML4=
-=joV/
------END PGP SIGNATURE-----
