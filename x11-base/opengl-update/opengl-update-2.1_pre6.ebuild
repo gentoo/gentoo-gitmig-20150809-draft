@@ -1,19 +1,26 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.1_pre5.ebuild,v 1.2 2005/02/07 08:32:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-2.1_pre6.ebuild,v 1.1 2005/02/07 08:51:15 eradicator Exp $
 
 inherit multilib toolchain-funcs
 
 DESCRIPTION="Utility to change the OpenGL interface being used"
 HOMEPAGE="http://www.gentoo.org/"
-GLEXT="20040830"
-SRC_URI="http://dev.gentoo.org/~cyfred/distfiles/glext.h-${GLEXT}.bz2"
+
+# Source:
+# http://oss.sgi.com/projects/ogl-sample/ABI/glext.h
+# http://oss.sgi.com/projects/ogl-sample/ABI/glxext.h
+
+GLEXT="26"
+GLXEXT="10"
+
+SRC_URI="http://dev.gentoo.org/~eradicator/opengl/glext.h-${GLEXT}.bz2
+	 http://dev.gentoo.org/~eradicator/opengl/glxext.h-${GLXEXT}.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-#KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-KEYWORDS="-*"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 #Removed: ~arm ~hppa ~ia64 due to insufficient xorg-x11 version
 IUSE=""
 RESTRICT="multilib-pkg-force"
@@ -24,10 +31,6 @@ DEPEND="virtual/libc
 RDEPEND="!x11-base/xfree86
 	 !<x11-base/xorg-x11-6.8.0-r4
 	 !<media-video/ati-drivers-8.8.25-r3"
-
-src_unpack() {
-	bzcat ${DISTDIR}/glext.h-${GLEXT}.bz2 > ${WORKDIR}/glext.h || die
-}
 
 pkg_preinst() {
 	# It needs to be before 04multilib
@@ -58,13 +61,15 @@ src_install() {
 		for ABI in $(get_install_abis); do
 			# Install default glext.h
 			insinto /usr/$(get_libdir)/opengl/global/include
-			doins ${WORKDIR}/glext.h || die
+			newins ${WORKDIR}/glext.h-${GLEXT} glext.h || die
+			newins ${WORKDIR}/glxext.h-${GLXEXT} glxext.h || die
 		done
 		ABI="${OABI}"
 		unset OABI
 	else
 		# Install default glext.h
 		insinto /usr/$(get_libdir)/opengl/global/include
-		doins ${WORKDIR}/glext.h || die
+		newins ${WORKDIR}/glext.h-${GLEXT} glext.h || die
+		newins ${WORKDIR}/glxext.h-${GLXEXT} glxext.h || die
 	fi
 }
