@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.15 2004/04/01 23:44:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.16 2004/04/02 00:11:34 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
 # 	TARGET: 4.3.0-r6
-# 		spy: #43491
-# 		cyfred: #43177, #41962
+# 		spy: #43491, #44274, #46392
 # 	TARGET: 4.3.0-r7
 # 		spy: External zlib
 # 		spy: Add Alan Cox's VIA 2D+3D driver from XFree86-4.3.0-57.src.rpm, use
