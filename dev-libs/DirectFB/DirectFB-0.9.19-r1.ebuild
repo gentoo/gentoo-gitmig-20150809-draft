@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.19-r1.ebuild,v 1.4 2003/10/02 06:09:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.19-r1.ebuild,v 1.5 2003/10/02 15:28:52 vapier Exp $
+
+IUSE_VIDEO_CARDS="ati128 cyber5k i810 matrox neomagic nsc nvidia radeon savage tdfx"
 
 DESCRIPTION="Thin library on top of the Linux framebuffer devices"
 HOMEPAGE="http://www.directfb.org/"
@@ -18,18 +20,22 @@ DEPEND="dev-lang/perl
 	mpeg? ( media-libs/libmpeg3 )
 	truetype? ( >=media-libs/freetype-2.0.1 )"
 
-src_unpack() {
-	unpack ${A}
-#	cd ${S}
-#	cp configure ${T}
-#	sed -e 's:ac_safe=`echo "libmpeg3.h:ac_safe=`echo "libmpeg3/libmpeg3.h:' \
-#		-e 's:#include <libmpeg3.h>:#include <libmpeg3/libmpeg3.h>:' \
-#		${T}/configure > configure
+pkg_setup() {
+	if [ -z "${VIDEO_CARDS}" ] ; then
+		ewarn "All video drivers will be built since you did not specify"
+		ewarn "via the VIDEO_CARDS variable what video card you use."
+		einfo "DirectFB supports: ${IUSE_VIDEO_CARDS} all none"
+	fi
 }
 
 src_compile() {
+	local vidcards
+	[ -z "${VIDEO_CARDS}" ] \
+		&& vidcards="all" \
+		|| vidcards="${VIDEO_CARDS// /,}"
+
 	local mycppflags
-	use mpeg && mycppflags="-I /usr/include/libmpeg3"
+	use mpeg && mycppflags="-I/usr/include/libmpeg3"
 	econf CPPFLAGS="${mycppflags}" \
 		`use_enable mmx` \
 		`use_enable sse` \
@@ -38,17 +44,13 @@ src_compile() {
 		`use_enable png` \
 		`use_enable gif` \
 		`use_enable truetype freetype` \
-		 || die
+		--with-gfxdrivers="${vidcards}" \
+		|| die
 
-	use mpeg && { \
-		cd ${S}/interfaces/IDirectFBVideoProvider
-		cp idirectfbvideoprovider_libmpeg3.c ${T}
-
-		sed s':#include <libmpeg3.h>:#include <libmpeg3/libmpeg3.h>:' \
-			${T}/idirectfbvideoprovider_libmpeg3.c > \
-				idirectfbvideoprovider_libmpeg3.c
-		cd ${S}
-	}
+	use mpeg && \
+		sed -i \
+			s':#include <libmpeg3.h>:#include <libmpeg3/libmpeg3.h>:' \
+			${S}/interfaces/IDirectFBVideoProvider/idirectfbvideoprovider_libmpeg3.c
 
 	# add extra -lstdc++ so libpng/libflash link correctly
 	make CPPFLAGS="${mycppflags}" LDFLAGS="${LDFLAGS} -lstdc++" || die
