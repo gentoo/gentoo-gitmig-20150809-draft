@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.10.ebuild,v 1.1 2005/02/27 05:55:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.10.ebuild,v 1.2 2005/03/19 20:38:22 vapier Exp $
 
 # Eclass bits
 ETYPE="headers"
@@ -26,7 +26,7 @@ SRC_URI="mirror://gentoo/mipscvs-${OKV}-${CVSDATE}.diff.bz2
 
 HOMEPAGE="http://www.linux-mips.org/ http://www.kernel.org/ http://www.gentoo.org/"
 SLOT="0"
-PROVIDE="virtual/os-headers"
+[[ ${CTARGET} == ${CHOST} ]] && PROVIDE="virtual/os-headers"
 KEYWORDS="-* ~mips"
 IUSE="cobalt ip30"
 
