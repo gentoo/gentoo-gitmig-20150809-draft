@@ -6,10 +6,4 @@
 	<email>genone@gentoo.org</email>
 	<description>Primary maintainer</description>
 </maintainer>
-<maintainer>
-	<email>seemant@gentoo.org</email>
-</maintainer>
-<maintainer>
-	<email>bcowan@gentoo.org</email>
-</maintainer>
 </pkgmetadata>
