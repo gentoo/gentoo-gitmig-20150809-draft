@@ -1,6 +1,14 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.12 2002/04/26 08:42:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.13 2002/05/16 17:29:52 sandymac Exp $
+
+*gaim-0.58 (16 May 2002)
+
+  16 May 2002; William McArthur <sandymac@gentoo.org> gaim-0.58.ebuild :
+
+  The src_install function was installing files into /var/tmp/portage/...
+  fixed that. The ebuild also used econf which I belive has been deprecatied and
+  removed. I highly suggest you merge this version as it is much better.
 
 *gaim-0.57 (26 Apr 2002)
 
