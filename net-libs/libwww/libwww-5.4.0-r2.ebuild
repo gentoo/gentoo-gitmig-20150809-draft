@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.17 2004/07/01 13:33:52 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r2.ebuild,v 1.18 2004/07/11 06:44:58 pvdabeel Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.w3.org/Library/Distribution/${MY_P}.tgz
 
 LICENSE="W3C"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ppc64"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ppc64 ~macos"
 IUSE="ssl mysql"
 
 RDEPEND="dev-lang/perl
@@ -34,9 +34,23 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-automake-gentoo.diff	# bug #41959
 	epatch ${FILESDIR}/${P}-disable-ndebug-gentoo.diff	# bug #50483
 
-	libtoolize -c -f || die "libtoolize failed"
+	# I can't get this part work correctly - stupid autotools 
+	# The HAVE_APPKIT_APPKIT_H macro is automatically set to 1, but it shouldn't be because appkit is not 
+	# what autotools think it is. I have tried everything from patching, to sed. Please help me out here
+
+	use macos && sed -e "s:#undef HAVE_APPKIT_APPKIT_H:#undef HAV_H:g" wwwconf.h.in > wwwconf.h.in
+
+	# The following works as expected
+
+	if use macos; then 
+		glibtoolize -c -f || die "libtoolize failed"
+	else
+		libtoolize -c -f || die "libtoolize failed"
+	fi
+
 	aclocal || die "aclocal failed"
 	autoconf || die "autoconf failed"
+
 }
 
 src_compile() {
@@ -48,7 +62,8 @@ src_compile() {
 		--with-expat \
 		`use_with mysql` \
 		`use_with ssl` \
-		|| die
+		|| die	
+
 	emake || die
 }
 
