@@ -2,6 +2,9 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header:
 
+  28 Sep 2003; Markus Nigbur <pyrania@gentoo.org> commonbox-styles-0.6.ebuild:
+  Added ~amd64 keyword. request by brad@mainstreetsoftworks.com in bug #29806.
+
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *commonbox-styles-0.6 (26 Nov 2002)
