@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/txt2regex
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/txt2regex/ChangeLog,v 1.1 2004/05/24 20:44:51 ciaranm Exp $
+
+*txt2regex-0.7 (24 May 2004)
+
+  24 May 2004; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +txt2regex-0.7.ebuild:
+  New package, thanks to Emil Erlandsson <emil@buglix.org> in bug #50552
+
