@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-hcidump
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.7 2004/03/29 02:12:07 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.8 2004/04/26 14:18:50 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> bluez-hcidump-1.5.ebuild,
+  bluez-hcidump-1.8.ebuild:
+  Add die following econf for bug 48950
 
 *bluez-hcidump-1.8 (29 Mar 2004)
 

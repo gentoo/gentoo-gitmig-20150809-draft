@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.5.ebuild,v 1.1 2004/03/29 02:08:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.5.ebuild,v 1.2 2004/04/26 14:22:36 agriffis Exp $
 
 DESCRIPTION="bluetooth utilities"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -42,7 +42,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.30 2004/04/10 00:09:20 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.31 2004/04/26 14:23:54 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> kismet-2.6.2-r1.ebuild:
+  Add die following econf for bug 48950
 
 *kismet-2004.04.1 (09 Apr 2004)
 

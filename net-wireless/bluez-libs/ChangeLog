@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-libs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.10 2004/04/24 18:42:08 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.11 2004/04/26 14:20:03 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> bluez-libs-2.4.ebuild,
+  bluez-libs-2.5.ebuild:
+  Add die following econf for bug 48950
 
   24 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> bluez-libs-2.5.ebuild:
   Minor change in src/Makefile.in to allow compilation with -fPIC. Marked ~amd64.

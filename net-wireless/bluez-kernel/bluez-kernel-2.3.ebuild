@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-kernel/bluez-kernel-2.3.ebuild,v 1.6 2004/02/15 12:51:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-kernel/bluez-kernel-2.3.ebuild,v 1.7 2004/04/26 14:19:28 agriffis Exp $
 
 DESCRIPTION="bluetooth kernel drivers"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 
