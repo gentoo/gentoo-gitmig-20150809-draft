@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/pv
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pv/ChangeLog,v 1.1 2004/04/20 00:53:03 avenj Exp $
+
+*pv-0.8.1 (19 Apr 2004)
+
+  19 Apr 2004; Jon Portnoy <avenj@gentoo.org> pv-0.8.1.ebuild :
+  Initial import. Bug 36317. Submitted by Eric Harney
+  <eharney@clemson.edu>.
