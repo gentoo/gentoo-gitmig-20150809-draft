@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/showimg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.21 2004/11/30 18:29:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/ChangeLog,v 1.22 2004/12/31 19:15:04 weeve Exp $
+
+  31 Dec 2004; Jason Wever <weeve@gentoo.org> showimg-0.9.4.ebuild:
+  Added ~sparc keyword.
 
   30 Nov 2004; Carsten Lohrke <carlo@gentoo.org> showimg-0.9.4.ebuild:
   dependency correction

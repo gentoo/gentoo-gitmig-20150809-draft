@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.6 2004/12/29 02:05:13 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.7 2004/12/31 19:12:57 weeve Exp $
+
+  31 Dec 2004; Jason Wever <weeve@gentoo.org> dcraw-6.19.ebuild:
+  Added ~sparc keyword.
 
 *dcraw-6.19 (29 Dec 2004)
 
