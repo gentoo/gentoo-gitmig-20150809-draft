@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.64.ebuild,v 1.11 2004/07/14 16:21:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.64.ebuild,v 1.12 2005/02/13 03:41:19 mkennedy Exp $
 
 DESCRIPTION="Common Lisp Controller"
 HOMEPAGE="http://packages.debian.org/unstable/devel/common-lisp-controller.html"

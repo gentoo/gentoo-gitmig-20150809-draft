@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-18e-r4.ebuild,v 1.8 2004/11/30 21:50:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-18e-r4.ebuild,v 1.9 2005/02/13 03:44:44 mkennedy Exp $
 
 inherit common-lisp-common eutils
 

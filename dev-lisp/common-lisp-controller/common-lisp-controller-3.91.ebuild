@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.91.ebuild,v 1.4 2004/11/28 02:32:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.91.ebuild,v 1.5 2005/02/13 03:41:19 mkennedy Exp $
 
 inherit eutils
 
