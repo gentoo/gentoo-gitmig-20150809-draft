@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.51 2004/10/02 17:47:48 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.52 2004/12/02 15:38:56 vapier Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -13,9 +13,11 @@ inherit eutils
 ECLASS=kernel
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 
+export CTARGET="${CTARGET:-${CHOST}}"
+
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
-IUSE="${IUSE} build"
+IUSE="build"
 
 if [ "${ETYPE}" = "sources" ]
 then
@@ -154,13 +156,16 @@ kernel_src_install() {
 		fi
 		mv ${WORKDIR}/linux* ${D}/usr/src
 	else
-		#linux-headers
-		dodir /usr/include/linux
-		cp -ax ${S}/include/linux/* ${D}/usr/include/linux
-		rm -rf ${D}/usr/include/linux/modules
-		dodir /usr/include/asm
-		cp -ax ${S}/include/asm/* ${D}/usr/include/asm
-		use arm && dosym arch-ebsa110 /usr/include/asm/arch
+		# linux-headers
+		local dir
+		[ "${CTARGET}" = "${CHOST}" ] \
+			&& dir=/usr/include \
+			|| dir=/usr/${CTARGET}/include
+		dodir ${dir}/linux
+		cp -ax ${S}/include/linux/* ${D}/${dir}/linux
+		rm -rf ${D}/${dir}/linux/modules
+		dodir ${dir}/asm
+		cp -ax ${S}/include/asm/* ${D}/${dir}/asm
 	fi
 }
 
