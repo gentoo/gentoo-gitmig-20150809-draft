@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/nmrview/nmrview-5.2.2.ebuild,v 1.1 2004/12/16 16:26:30 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/nmrview/nmrview-5.2.2-r1.ebuild,v 1.1 2004/12/18 16:32:03 ribosome Exp $
 
 DESCRIPTION="NMRView - Visualisation and analysis of processed NMR data"
 LICENSE="as-is"
@@ -13,9 +13,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="-* ~x86"
 
-DEPEND="virtual/x11
-	=dev-lang/tcl-8.4*
-	=dev-lang/tk-8.4*"
+RDEPEND="virtual/x11"
 
 S=${WORKDIR}
 
@@ -34,16 +32,18 @@ pkg_nofetch() {
 }
 
 src_compile() {
+	echo
 	einfo "Nothing to compile."
+	echo
 }
 
 src_install() {
+	exeinto /usr/bin
+	newexe ${FILESDIR}/${PN}.sh ${PN}
 	exeinto ${INSTDIR}/bin
-	newexe ${PN}${PV//./_}_01_linux nmrview
+	newexe ${PN}${PV//./_}_01_linux ${PN}
 	DIRS="help html images nvtcl nvtclC nvtclExt reslib star tcl8.4 tk8.4 tools"
 	cp -r ${DIRS} ${D}/${INSTDIR}
 	dodoc README
 	dosym ${INSTDIR}/html /usr/share/doc/${PF}/html
-	insinto /etc/env.d
-	newins ${FILESDIR}/${PN}-env ${PN}
 }
