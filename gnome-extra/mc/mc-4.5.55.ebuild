@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55.ebuild,v 1.4 2001/10/19 21:52:35 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55.ebuild,v 1.5 2001/10/22 17:35:44 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Midnight Commander"
@@ -48,7 +48,7 @@ src_compile() {
 
 	LDFLAGS="-lcrypt -lncurses" ./configure --host=${CHOST} 	 \
 						--prefix=/usr		 \
-						--sysconfidir=/etc	 \
+						--sysconfdir=/etc	 \
 						--localstatedir=/var/lib \
 						--with-samba 		 \
 						--with-vfs 		 \
