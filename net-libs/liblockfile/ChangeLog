@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/liblockfile
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.8 2003/08/03 15:38:42 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.9 2004/03/25 09:53:41 kumba Exp $
+
+  25 Mar 2004; Joshua Kinard <kumba@gentoo.org> liblockfile-1.03-r1.ebuild,
+  liblockfile-1.03.ebuild:
+  Added ~mips to KEYWORDS.
 
 *liblockfile-1.03-r1 (28 Jul 2003)
 
