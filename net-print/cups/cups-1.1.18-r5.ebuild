@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.18-r5.ebuild,v 1.1 2003/05/30 09:28:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.18-r5.ebuild,v 1.2 2003/06/14 19:32:35 aliz Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND} !virtual/lpr"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 filter-flags -fomit-frame-pointer
 
