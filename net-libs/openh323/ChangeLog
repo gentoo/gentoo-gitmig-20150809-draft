@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/openh323
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.30 2004/03/09 02:06:52 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.31 2004/03/12 01:44:13 stkn Exp $
+
+*openh323-1.13.2-r1 (12 Mar 2004)
+
+  12 Mar 2004; Stefan Knoblich <stkn@gentoo.org> openh323-1.13.2-r1.ebuild,
+  openh323-1.13.2.ebuild:
+  this update fixes bug #44125 and a lot of compile time problems, which may be
+  caused by some (major) changes in openh323.
 
 *openh323-1.13.2 (09 Mar 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2.ebuild,v 1.2 2004/03/12 01:44:13 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.2-r1.ebuild,v 1.1 2004/03/12 01:44:13 stkn Exp $
 
 IUSE="ssl"
 
@@ -13,12 +13,11 @@ SRC_URI="http://www.gnomemeeting.org/admin/downloads/latest/sources/sources/${P}
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="-x86"
+KEYWORDS="~x86"
 
 DEPEND=">=sys-apps/sed-4
-	>=dev-libs/pwlib-1.6.3
+	>=dev-libs/pwlib-1.6.3-r1
 	>=media-video/ffmpeg-0.4.7
-	>=media-libs/speex-1.0.0
 	ssl? ( dev-libs/openssl )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
@@ -76,7 +75,10 @@ src_compile() {
 		export OPENSSLLIBS="-lssl -lcrypt"
 	fi
 
-	econf || die
+	# use shipped speex version
+	econf \
+		--enable-localspeex || die
+
 	emake ${makeopts} opt || die "make failed"
 }
 
@@ -90,9 +92,8 @@ src_install() {
 	make PREFIX=${D}/usr install || die "install failed"
 	dobin ${S}/samples/simple/obj_${OPENH323_ARCH}/simph323
 
-	# remove CVS stuff (not needed, we don't copy things to
-	# /usr/share/openh323 anymore...)
-	#find ${D} -name 'CVS' -type d | xargs rm -rf
+	# remove CVS stuff
+	find ${D} -name 'CVS' -type d | xargs rm -rf
 
 	# mod to keep gnugk happy
 	insinto /usr/share/openh323/src
@@ -119,5 +120,8 @@ src_install() {
 	dosed "s:^OH323_LIBDIR = \$(OPENH323DIR).*:OH323_LIBDIR = /usr/lib:" \
 		/usr/share/openh323/openh323u.mak
 	dosed "s:^OH323_INCDIR = \$(OPENH323DIR).*:OH323_INCDIR = /usr/include/openh323:" \
+		/usr/share/openh323/openh323u.mak
+	# this is hardcoded now? nice...
+	dosed "s:^\(OPENH323DIR[ \t]\+=\) ${S}:\1 /usr/share/openh323:" \
 		/usr/share/openh323/openh323u.mak
 }
