@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.86 2005/01/24 04:46:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.87 2005/01/24 23:19:34 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -149,14 +149,12 @@ then
 	# binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND="!build? ( sys-apps/sed
 		>=sys-devel/binutils-2.11.90.0.31 )
-		doc? ( !arm? ( !s390? ( app-text/docbook-sgml-utils ) ) )"
-
+		doc? ( app-text/docbook-sgml-utils )"
 	RDEPEND="${DEPEND}
 		!build? ( >=sys-libs/ncurses-5.2
 		dev-lang/perl
 		virtual/modutils
 		sys-devel/make )"
-
 
 	PROVIDE="virtual/linux-sources"
 	kernel_is gt 2 4 && PROVIDE="${PROVIDE} virtual/alsa"
@@ -457,7 +455,7 @@ postinst_headers() {
 setup_headers() {
 	[[ -z ${H_SUPPORTEDARCH} ]] && H_SUPPORTEDARCH=${PN/-*/}
 	for i in ${H_SUPPORTEDARCH} ; do
-		[[ $(tc-arch-kernel) == "${i}" ]] && H_ACCEPT_ARCH="yes"
+		[[ $(tc-arch) == "${i}" ]] && H_ACCEPT_ARCH="yes"
 	done
 
 	if [[ ${H_ACCEPT_ARCH} != "yes" ]] ; then
