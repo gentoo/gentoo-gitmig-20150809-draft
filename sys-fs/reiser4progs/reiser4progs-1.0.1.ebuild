@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.1.ebuild,v 1.5 2004/09/24 14:52:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.1.ebuild,v 1.6 2004/10/01 01:32:51 vapier Exp $
 
 DESCRIPTION="reiser4progs: mkfs, fsck, etc..."
 HOMEPAGE="http://www.namesys.com/v4/v4.html"
@@ -51,5 +51,6 @@ src_install() {
 	for l in libreiser4-alone libreiser4 librepair ; do
 		mv ${D}/lib/${l}.{a,la} ${D}/usr/lib/
 		dosym ../usr/lib/${l}.a /lib/${l}.a
+		gen_usr_ldscript ${l}.so
 	done
 }
