@@ -1,8 +1,13 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.2 2002/05/09 15:37:06 daybird Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.3 2002/06/22 00:24:43 gerk Exp $
 
 *mol-0.9.63 (5 May 2002)
+
+  22 June 2002; Gerk (gerk@gentoo.org)
+
+  Added ARCH checks and missing env vars to build, no revision
+  bump as no need to rebild for this
 
   5 May 2002; David Chamberlain <daybird@gentoo.org> ChangeLog :
   
