@@ -1,20 +1,25 @@
 # ChangeLog for app-emulation/win4lin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/ChangeLog,v 1.17 2004/06/30 03:19:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/ChangeLog,v 1.18 2004/08/26 20:00:09 bass Exp $
+
+*win4lin-5.1.1 (18 Mar 2004)
+
+  26 Aug 2004; José Alberto Suárez López <bass@gentoo.org> :
+  Updated to version 5.1.18c. Added new info to ebuild.
+
+*win4lin-5.1 (18 Mar 2004)
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> win4lin-5.0.1.ebuild,
   win4lin-5.0.4.ebuild, win4lin-5.0.8.ebuild, win4lin-5.1.ebuild:
   sync IUSE (-doc)
-
+  
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> win4lin-4.0.12.ebuild,
   win4lin-4.0.16.ebuild, win4lin-4.0.20.ebuild, win4lin-4.0.22.ebuild,
   win4lin-5.0.1.ebuild, win4lin-5.0.4.ebuild, win4lin-5.0.8.ebuild,
   win4lin-5.1.ebuild:
   Fix use invocation
-
-*win4lin-5.1 (18 Mar 2004)
-
-  18 Mar 2004; Jos� Alberto Su�rez L�pez <bass@gentoo.org> win4lin-5.1.ebuild:
+  
+  18 Mar 2004; José Alberto Suárez López <bass@gentoo.org> win4lin-5.1.ebuild:
   New version
 
   30 Dec 2003; Sven Blumenstein <bazik@gentoo.org> win4lin-5.0.1.ebuild,
