@@ -1,5 +1,8 @@
 
 
+  14 Feb 2004; Aron Griffis <agriffis@gentoo.org> files/firefox:
+  Roll fix over from MozillaFirebird script for bug 41074
+
   14 Feb 2004; Brad Laue <brad@gentoo.org> files/icon/firefox-icon.png:
   Make the firefox icon have a transparent background.
 

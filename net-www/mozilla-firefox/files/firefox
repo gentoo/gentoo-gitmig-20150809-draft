@@ -2,14 +2,15 @@
 #
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/files/firefox,v 1.1 2004/02/10 07:21:13 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/files/firefox,v 1.2 2004/02/15 01:41:04 agriffis Exp $
 
-# Set to "window" if you prefer new Firefox windows instead of new tabs
+# Set MOZILLA_NEWTYPE to "window" in your environment if you prefer
+# new Firefox windows instead of new tabs
 newtype=${MOZILLA_NEWTYPE:-"tab"}
 
 # Point this to your Firefox installation if not using the default
 export MOZILLA_FIVE_HOME="/usr/lib/MozillaFirefox"
-fbpath=${MOZILLA_FIVE_HOME}
+ffpath=${MOZILLA_FIVE_HOME}
 
 # Sanity check
 if [[ -z $DISPLAY ]]; then
@@ -17,28 +18,22 @@ if [[ -z $DISPLAY ]]; then
   exit 1
 fi
 
-# Validate the args and extract the url
-url=''
-declare -a args=($@)
+# Validate the args and extract the urls
+args=()
+urls=()
 while [[ $# -ne 0 ]] ; do
   if [[ $1 == -* ]] ; then
-    case ${1#-} in
+    case "${1#-}" in
       height|width|CreateProfile|P|UILocale|contentLocale|remote|edit|chrome)
+        args=("${args[@]}" "$1" "$2")
         shift 2 ;;
       *)
+        args=("${args[@]}" "$1")
         shift 1 ;;
     esac
   else
-    if [[ -n $url ]] ; then
-      echo "Usage error: more than one URL given" >&2
-      exit 255
-    else
-      url=$1
-      shift 1
-      if [[ $url != *:* ]] ; then
-        url=http://$url
-      fi
-    fi
+    urls=("${urls[@]}" $1)
+    shift
   fi
 done
 
@@ -56,10 +51,10 @@ declare -a screens=(
 # Attempt to fix bug 39797 by making sure MozillaFirefox is running
 # on the DISPLAY prior to calling mozilla-xremote-client.  The
 # problem here is that mozilla-xremote-client will return a zero
-# exit status if it contacts a Thunderfox-0.3 instance, even though
-# Thunderfox can't handle the openURL request.  :-(
+# exit status if it contacts a Thunderbird-0.3 instance, even though
+# Thunderbird can't handle the openURL request.  :-(
 #
-# Note: This seems to be fixed with Thunderfox-0.4, which rejects the
+# Note: This seems to be fixed with Thunderbird-0.4, which rejects the
 # openURL request appropriately.
 declare -a candidates=()
 for s in $DISPLAY "${screens[@]}"; do 
@@ -68,28 +63,61 @@ for s in $DISPLAY "${screens[@]}"; do
   fi
 done
 
-if [[ ${#candidates[@]} > 0 ]]; then
-  for s in "${candidates[@]}"; do 
-    DISPLAY=${s} ${fbpath}/mozilla-xremote-client "openURL($url, new-$newtype)" \
-    && exit 0
-  done
-  retval=$?
-else
-  # simulate mozilla-xremote-client's response when it can't find an instance
-  retval=2
-fi
+# Make sure we'll get at least an empty window/tab
+[[ ${#urls[@]} == 0 ]] && urls=('')
 
-if [[ $retval -eq 2 || $retval -eq 3 ]] ; then
+# Handle multiple URLs by looping over the xremote call
+for u in "${urls[@]}"; do
+
+  # prepend http:// if needed
+  [[ $u == ? && $u != *:* ]] && u=http://$u
+
+  # try mozila-xremote-client on each candidate screen
+  if [[ ${#candidates[@]} > 0 ]]; then
+    for s in "${candidates[@]}"; do 
+      DISPLAY=${s} \
+        ${fbpath}/mozilla-xremote-client "openURL($u, new-$newtype)" \
+        && break
+    done
+    retval=$?
+  else
+    # simulate mozilla-xremote-client's response when it can't find an instance
+    retval=2
+  fi
+
   # 2 = No running windows found, so start a new instance
-  # 3 = Thunderfox is running, but doesn't handle openURL command
+  # 3 = Thunderbird is running, but doesn't handle openURL command
   #     (or it might be an unresponsive Firefox)
-  ${fbpath}/firefox "${args[@]}" && exit 0
+  if [[ $retval -eq 2 || $retval -eq 3 ]] ; then
+
+    # Handle case of multiple URLs
+    if [[ ${#urls[@]} > 1 ]]; then
+      ${fbpath}/firefox "${args[@]}" "$u" &
+      if [[ -x /usr/bin/xtoolwait ]]; then
+        xtoolwait sleep 10
+      else
+        sleep 10   # totally arbitrary! :-(
+      fi
+      candidates=$DISPLAY
+      continue
+    fi
+
+    # Handle case of single URL
+    ${fbpath}/firefox "${args[@]}" "$u" &
+    break
+
+  elif [[ $retval -eq 1 ]]; then
+    echo "Unable to connect to X server" >&2
+  elif [[ $retval -ne 0 ]]; then
+    echo "Unknown error $retval from mozilla-xremote-client" >&2
+  fi
+
+done
+
+# Will only wait here if firefox was started by this script
+if ! wait; then
   retval=$?
-  echo "firefox exited with non-zero status ($retval)" >&2
-elif [[ $retval -eq 1 ]] ; then
-  echo "Unable to connect to X server" >&2
-else
-  echo "Unknown error $retval from mozilla-xremote-client" >&2
+  echo "firefox exited with non-zero status ($?)" >&2
 fi
 
 exit $retval
