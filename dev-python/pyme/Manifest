@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f6c55763c6dcf06bf32a5c6f4910d3eb ChangeLog 983
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 b3d3320cb704df0593f06e5d1d278b7c pyme-0.5.1.ebuild 877
 MD5 4271c79c2947354afd0fd1e05e94ebe1 pyme-0.6.0.ebuild 804
-MD5 ea2a010c31e7739c292d9f2863b89011 files/digest-pyme-0.5.1 62
+MD5 b3d3320cb704df0593f06e5d1d278b7c pyme-0.5.1.ebuild 877
+MD5 6f24c1b88514eea350ffe36b2bf900e4 ChangeLog 1086
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 1efe3c48516f11592d4c741b8bd065d2 files/digest-pyme-0.6.0 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBmrxNz2gxt1z4IGYRAlW9AJ9opdmhJT1j8qtP31z8FATtrfatRwCeLBI2
-8MVkrZkepEkkMJNByxhfZHM=
-=x0gp
------END PGP SIGNATURE-----
+MD5 ea2a010c31e7739c292d9f2863b89011 files/digest-pyme-0.5.1 62

@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b04a534270696c7c08f1ef168fcb06a0 ChangeLog 1531
-MD5 09e01ad7a6f5b371601f0ac4f6b9ffba pyx-0.7.1.ebuild 977
 MD5 9be0a9b000a254e04f1e54f4f173e294 pyx-0.6.3.ebuild 686
-MD5 efb565b5394bcf6412b0389c86261a92 metadata.xml 445
 MD5 c3b3bba4d2a4191bec9eef885bbf4151 pyx-0.6.1.ebuild 672
-MD5 1e8ad4caf14ac87fdda7709c2d3330df files/pyx-0.7.1.patch 3768
+MD5 b779f22601a8ecb845e770f697cb9d92 ChangeLog 1638
+MD5 09e01ad7a6f5b371601f0ac4f6b9ffba pyx-0.7.1.ebuild 977
+MD5 efb565b5394bcf6412b0389c86261a92 metadata.xml 445
 MD5 38b4424ad0a10c8e987231286f2edcaa files/digest-pyx-0.6.3 62
 MD5 709e65698a4cd367d0a7260414515a6a files/digest-pyx-0.6.1 61
+MD5 1e8ad4caf14ac87fdda7709c2d3330df files/pyx-0.7.1.patch 3768
 MD5 b1f9c1c64dfbbc629a354643a0dae13e files/digest-pyx-0.7.1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxt1eugEuf3OQ0akRAjh3AJ4gQkVPC1P/P2tmI+bWWrNNhl7AjQCfRaNE
-Ad7UDyp1rDhxgqME4GU3pgc=
-=psSQ
------END PGP SIGNATURE-----

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 81a80b8151e0a35ee63050a426ca0c5a ChangeLog 2663
-MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 6d881f10c33f45f12512b69aad3df55c ChangeLog 2768
 MD5 0c922525060996da103ec5a007d9278c python-fchksum-1.6.1-r1.ebuild 762
 MD5 47af15d46151d1ad559d0fa8905a3c04 python-fchksum-1.7.1.ebuild 789
-MD5 d385f87a09888e9614199dfe5e129862 files/digest-python-fchksum-1.6.1-r1 71
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 71d0d6422a7854aabce965fa4891fa0d files/digest-python-fchksum-1.7.1 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBvrZiArHZZzCEUG0RAmOAAJ96YvQGy1JNvVDHKg+ko6XBFA9xOgCeLrrA
-ewL6N2f9WPnGT/vLtzcB41I=
-=W4NT
------END PGP SIGNATURE-----
+MD5 d385f87a09888e9614199dfe5e129862 files/digest-python-fchksum-1.6.1-r1 71

@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eb05ef08acfb13dbc26100f9f022ea0a python-xlib-0.12.ebuild 639
+MD5 9dccfb1af11d91266e0184ebf28c7413 ChangeLog 1128
 MD5 040a1d24d04fcefd91e00bd6330887e6 python-xlib-0.12-r1.ebuild 688
-MD5 720cb4bc2b96c4beb5c41e5ac18562c4 ChangeLog 1020
+MD5 eb05ef08acfb13dbc26100f9f022ea0a python-xlib-0.12.ebuild 639
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 716ec6da435f0eac82444eefdd7ae0d8 files/digest-python-xlib-0.12-r1 68
 MD5 716ec6da435f0eac82444eefdd7ae0d8 files/digest-python-xlib-0.12 68
 MD5 b19a4b8209587ec222338c3ef3bd3ea7 files/python-xlib-0.12-info.patch 3003
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBwuz6CHk4+ZoBpvsRAnXKAJsGRzV1zVW8NXsd3baztwJ1Ix992ACfeAww
-kgXQoA/JaaTW6t0urE0yrxk=
-=Xarz
------END PGP SIGNATURE-----

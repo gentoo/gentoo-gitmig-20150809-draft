@@ -1,6 +1,6 @@
 MD5 09d413b3768ededfc25a21f92dc62931 pypgsql-2.4.ebuild 640
 MD5 e24c8e7197832c0757368e6357ac27ca pypgsql-2.3.ebuild 706
-MD5 12413433644f246e1a0fc36d96fb318e ChangeLog 867
+MD5 14346718258754755db7637fd9085a1e ChangeLog 976
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 8ba85a072c6fa7661c25fd47f134281c files/digest-pypgsql-2.3 63
 MD5 990f5f467539ed2c71f62a6eaa9fbe44 files/digest-pypgsql-2.4 63
