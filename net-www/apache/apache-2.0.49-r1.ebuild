@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.7 2004/04/28 17:48:56 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.8 2004/04/30 16:14:19 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.apache.org/"
 
 S="${WORKDIR}/httpd-${PV}"
 SRC_URI="http://www.apache.org/dist/httpd/httpd-${PV}.tar.gz"
-KEYWORDS="~x86 ~ppc ~alpha ~hppa ~mips ~sparc ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc ~alpha ~hppa ~mips ~sparc ~amd64 ~ia64"
 LICENSE="Apache-2.0"
 SLOT="2"
 
