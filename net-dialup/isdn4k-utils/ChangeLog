@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.20 2004/09/24 02:14:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.21 2004/09/27 12:56:17 dragonheart Exp $
+
+  27 Sep 2004; Daniel Black <dragonheart@gentoo.org>
+  files/3.2_p1-r2/isdn4linux.init:
+  opts added to init script as per bug #65522. Thanks to marchino
+  <marchino@tin.it>
 
   24 Sep 2004; Daniel Black <dragonheart@gentoo.org>
   +files/3.2_p1-r4/pathfix.patch, +files/3.2_p1-r4/vbox-makefile.am.patch,
