@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/libosip-2.0.7.ebuild,v 1.5 2004/09/02 13:18:33 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/libosip-2.0.7.ebuild,v 1.6 2004/10/23 01:44:41 weeve Exp $
 
 IUSE="debug"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/osip/libosip2-${PV}.tar.gz"
 S="${WORKDIR}/libosip2-${PV}"
 
 SLOT="2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 LICENSE="LGPL-2"
 
 DEPEND="virtual/libc
