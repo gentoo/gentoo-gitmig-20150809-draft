@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r6.ebuild,v 1.3 2002/07/11 06:30:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r6.ebuild,v 1.4 2002/07/19 13:02:25 stroke Exp $
 
 #provide Xmake and Xemake
 
@@ -11,7 +11,10 @@ DESCRIPTION="libglade allows programs to load their UIs from an XMLS description
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://developer.gnome.org/doc/API/libglade/libglade.html"
 
+KEYWORDS="x86"
+LICENSE="LGPL-2.1"
 SLOT="0"
+
 #please dont add gnome-libs as an optional DEPEND, as
 #it causes too many problems.
 RDEPEND=">=dev-libs/libxml-1.8.15

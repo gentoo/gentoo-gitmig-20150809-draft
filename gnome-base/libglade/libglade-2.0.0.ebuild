@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.0.ebuild,v 1.1 2002/06/06 19:07:33 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.0.ebuild,v 1.2 2002/07/19 13:02:26 stroke Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -14,7 +14,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="GLADE is a interface builder"
 SRC_URI="http://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
-
+KEYWORDS="x86"
 SLOT="2.0"
 
 RDEPEND=">=dev-libs/glib-2.0.3
