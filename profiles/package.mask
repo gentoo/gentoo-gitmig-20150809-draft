@@ -182,7 +182,7 @@ sys-apps/coreutils
 
 # <method@gentoo.org> (05 Mar 2003)
 # gcc with optimizations
->=sys-devel/gcc-3.2.2-r3
+=sys-devel/gcc-3.2.2-r3
 
 # <lordvan@gentoo.org> (05 Mar 2003)
 # breaks ghostscript 7.05.[56]
