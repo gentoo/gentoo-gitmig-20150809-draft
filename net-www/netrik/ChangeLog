@@ -1,0 +1,7 @@
+*netrik (19 JUN 2003)
+
+  19 JUN 2003; Carl Perry <edolnx@gentoo.org> netrik-1.10.2.ebuild:
+  Version bumped, works for me.  Bug #18503
+
+  29 Mar 2003; Chuck Short <chuck_short@rogers.com> netrik-1.6.0.ebuild:
+  Initial Release.
