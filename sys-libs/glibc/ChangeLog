@@ -1,9 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.126 2004/02/09 19:27:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.127 2004/02/09 19:34:30 brad_mssw Exp $
 
 *glibc-2.3.3_pre20040207 (09 Feb 2004)
- 
+
   09 Feb 2004; Brad House <brad_mssw@gentoo.org>
   glibc-2.3.3_pre20031210.ebuild, glibc-2.3.3_pre20031222.ebuild,
   glibc-2.3.3_pre20040117.ebuild, glibc-2.3.3_pre20040207.ebuild:
