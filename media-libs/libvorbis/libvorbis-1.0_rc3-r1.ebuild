@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pbg1854@garnet.acns.fsu.edu>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0_rc3-r1.ebuild,v 1.1 2002/03/21 12:14:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0_rc3-r1.ebuild,v 1.2 2002/03/30 14:03:52 seemant Exp $
 
 
 S=${WORKDIR}/${PN}-1.0rc3
@@ -30,5 +30,3 @@ src_install () {
 	dodoc doc/*.txt
 	dohtml -r doc
 }
-
-
