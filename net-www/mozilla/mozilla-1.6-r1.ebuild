@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6-r1.ebuild,v 1.10 2004/04/26 18:30:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.6-r1.ebuild,v 1.11 2004/06/19 20:43:57 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama"
 # Internal USE flags that I do not really want to advertise ...
@@ -61,7 +61,7 @@ PATCH_VER="1.0"
 MY_PV1="${PV/_}"
 MY_PV2="${MY_PV1/eta}"
 S="${WORKDIR}/mozilla"
-DESCRIPTION="The Mozilla Web Browser"
+DESCRIPTION="The Mozilla Application Suite - web browser, email, HTML editor, IRC"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.bz2
 	crypt? ( http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
 			 http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz )"
@@ -113,7 +113,7 @@ moz_setup() {
 	export BUILD_OFFICIAL=1
 
 	# make sure the nss module gets build (for NSS support)
-	if [ -n "`use ssl`" ]
+	if use ssl
 	then
 		export MOZ_PSM="1"
 	fi
@@ -174,7 +174,7 @@ src_compile() {
 	local myconf=
 	# NOTE: QT and XLIB toolkit seems very unstable, leave disabled until
 	#       tested ok -- azarah
-	if [ -n "`use gtk2`" ]
+	if use gtk2
 	then
 		myconf="${myconf} --enable-toolkit-gtk2 \
 		                  --enable-default-toolkit=gtk2 \
@@ -189,12 +189,12 @@ src_compile() {
 			              --disable-toolkit-gtk2"
 	fi
 
-	if [ -z "`use ldap`" ]
+	if ! use ldap
 	then
 		myconf="${myconf} --disable-ldap"
 	fi
 
-	if [ -z "`use debug`" ]
+	if ! use debug
 	then
 		myconf="${myconf} --enable-strip-libs \
 			              --disable-debug \
@@ -212,9 +212,9 @@ src_compile() {
 	fi
 
 	# Check if we should enable Xft support ...
-	if [ -z "`use moznoxft`" ]
+	if ! use moznoxft
 	then
-		if [ -n "`use gtk2`" ]
+		if use gtk2
 		then
 			local pango_version=""
 
@@ -248,7 +248,7 @@ src_compile() {
 		myconf="${myconf} --disable-xft `use_enable truetype freetype2`"
 	fi
 
-	if [ -n "`use ipv6`" ]
+	if use ipv6
 	then
 		myconf="${myconf} --enable-ipv6"
 	fi
@@ -274,33 +274,33 @@ src_compile() {
 		sleep 3
 
 	local myext="default"
-	if [ -n "`use mozxmlterm`" ]
+	if use mozxmlterm
 	then
 		myext="${myext},xmlterm"
 	fi
-	if [ -n "`use mozaccess`" ]
+	if use mozaccess
 	then
 		myext="${myext},access-builtin"
 	fi
-	if [ -n "`use moznoirc`" ]
+	if use moznoirc
 	then
 		myext="${myext},-irc"
 	fi
 
 # Disable SVG until it's properly implemented
-#	if [ -n "`use mozsvg`" ]
+#	if use mozsvg
 #	then
 #		export MOZ_INTERNAL_LIBART_LGPL="1"
 #		myconf="${myconf} --enable-svg"
 #	else
 #		myconf="${myconf} --disable-svg"
 #	fi
-	if [ -n "`use mozcalendar`" ]
+	if use mozcalendar
 	then
 		myconf="${myconf} --enable-calendar"
 	fi
 
-	if [ -n "`use moznomail`" ]
+	if use moznomail
 	then
 		myconf="${myconf} --disable-mailnews"
 	fi
@@ -325,7 +325,7 @@ src_compile() {
 		fi
 	fi
 
-	if [ -n "`use alpha`" ]
+	if use alpha
 	then
 		# mozilla wont link with X11 on alpha, for some crazy reason.
 		# set it to link explicitly here.
@@ -334,7 +334,7 @@ src_compile() {
 	fi
 
 	# Check for xinerama - closes #19369
-	if [ -n "`use xinerama`" ] ; then
+	if use xinerama ; then
 		myconf="${myconf} --enable-xinerama=yes"
 	else
 		myconf="${myconf} --enable-xinerama=no"
@@ -390,7 +390,7 @@ src_compile() {
 	# *********************************************************************
 
 	# Build the NSS/SSL support
-	if [ "`use ssl`" ]
+	if use ssl
 	then
 		einfo "Building Mozilla NSS..."
 		cd ${S}/security/coreconf
@@ -453,7 +453,7 @@ src_install() {
 	mv ${D}/usr/lib/mozilla/{xpcshell,xpidl,xpt_dump,xpt_link} ${D}/usr/bin
 
 	# Install the NSS/SSL libs, headers and tools
-	if [ "`use ssl`" ]
+	if use ssl
 	then
 		einfo "Installing Mozilla NSS..."
 		# Install the headers ('make install' do not work for headers ...)
@@ -534,7 +534,7 @@ src_install() {
 	doins ${S}/build/package/rpm/SOURCES/mozicon50.xpm
 
 	# Install icon and .desktop for menu entry
-	if [ "`use gnome`" ]
+	if use gnome
 	then
 		insinto /usr/share/pixmaps
 		doins ${S}/build/package/rpm/SOURCES/mozilla-icon.png

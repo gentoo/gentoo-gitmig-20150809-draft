@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc1-r1.ebuild,v 1.7 2004/06/09 19:21:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc1-r1.ebuild,v 1.8 2004/06/19 20:43:57 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
@@ -18,7 +18,7 @@ MY_PV=${PV/_alpha/a} 	# handle alpha
 MY_PV=${MY_PV/_beta/b}	# handle beta
 MY_PV=${MY_PV/_rc/rc}	# handle rc
 
-DESCRIPTION="The Mozilla Web Browser"
+DESCRIPTION="The Mozilla Application Suite - web browser, email, HTML editor, IRC"
 HOMEPAGE="http://www.mozilla.org"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV}/src/${PN}-source-${MY_PV}.tar.bz2
 	crypt? ( !moznomail? (
