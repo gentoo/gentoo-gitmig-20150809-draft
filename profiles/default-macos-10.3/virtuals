@@ -18,4 +18,4 @@ virtual/snmp		net-analyzer/net-snmp
 virtual/ssh		net-misc/openssh
 virtual/tetex		app-text/tetex
 virtual/textbrowser	net-www/links
-virtual/x11		sys-darwin/x11
+virtual/x11		sys-darwin/X11
