@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.10 2002/06/16 00:24:09 rphillips Exp $
+# /space/gentoo/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.10 2002/06/16 00:24:09 rphillips Exp
+
+*sun-jdk-1.4.0-r4 (19 Jun 2002)
+
+  19 Jun 2002; Doug Goldstein (Cardoe) <dougg@ufl.edu> sun-jdk-1.4.0-r4.ebuild :
+
+  Updated the filename of the binary file used to install this as Sun has changed it.
+  Also updated the symlink that all browsers use to use the Java Plugin from here because it was broke.
+  
+  Also updated the ebuild to conform to lintool.
 
 *sun-jdk-1.3.1-r3 (15 Jun 2002)
 
