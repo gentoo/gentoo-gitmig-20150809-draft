@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/crystalspace-cvs-0.97.ebuild,v 1.4 2003/07/20 05:15:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace-cvs/crystalspace-cvs-0.97.ebuild,v 1.5 2003/08/18 01:13:52 vapier Exp $
 
 inherit cvs
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/crystal"
@@ -43,4 +43,5 @@ src_install() {
 	make INSTALL_DIR=${D}/${CRYSTAL_PREFIX} install || die
 	dodir /usr/bin
 	dosym ${CRYSTAL_PREFIX}/bin/cs-config /usr/bin/cs-config
+	echo "CRYSTAL=\"${CRYSTAL_PREFIX}\"" > 90crystalspace
 }
