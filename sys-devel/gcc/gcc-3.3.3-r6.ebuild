@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r6.ebuild,v 1.2 2004/06/04 14:41:56 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r6.ebuild,v 1.3 2004/06/08 15:03:09 tseng Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc pic hardened uclibc debug"
 
@@ -109,7 +109,7 @@ LICENSE="GPL-2 LGPL-2.1"
 ## SpanKY says hppa is a no go with any 3.3.x
 ## desired KEYWORDS="~sparc ~x86"
 ## KEYWORDS="-* -hppa arm ~x86 ~sparc ~amd64"
-KEYWORDS="-*"
+KEYWORDS="-* ~x86"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -137,6 +137,7 @@ fi
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
 DEPEND="virtual/glibc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
+	hardened? ( >=sys-libs/glibc-2.3.2-r9 )
 	( !sys-devel/hardened-gcc )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
@@ -147,6 +148,7 @@ DEPEND="virtual/glibc
 
 RDEPEND="virtual/glibc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
+	hardened? ( >=sys-libs/glibc-2.3.2-r9 )
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
