@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-0.9.1.ebuild,v 1.1 2003/04/23 22:01:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-0.9.1.ebuild,v 1.2 2003/07/04 12:18:55 liquidx Exp $
 
 inherit gnome2
 
@@ -17,7 +17,7 @@ DEPEND=">=dev-lang/python-2.0
 	>=dev-python/gnome-python-1.99
 	dev-python/PyXML
 	dev-python/Imaging
-	dev-python/ReportLab"
+	dev-python/reportlab"
 
 DOCS="COPYING NEWS README TODO"
 
