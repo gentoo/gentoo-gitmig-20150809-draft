@@ -44,7 +44,6 @@ gd - Adds support for sys-libs/gdbm (GNU database libraries)
 gdbm - Adds support for sys-libs/gdbm (GNU database libraries)
 ggi - Adds support for media-libs/libggi (non-X video api/drivers)
 gif - Adds GIF image support
-glide - Adds media-libs/glide support to Xfree86
 gnome - Adds GNOME support
 gpg - Adds support for gpg (GnuPG encryption system)
 gphoto2 - Adds digital camera support
