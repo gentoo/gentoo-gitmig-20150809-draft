@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.23.ebuild,v 1.1 2002/07/07 02:55:14 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.23.ebuild,v 1.2 2002/07/17 23:04:41 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libxml2"
@@ -22,7 +22,7 @@ src_compile() {
 		    --sysconfdir=/etc \
 		    --with-zlib  || die
 
-	emake || die
+	MAKEOPTS="-j1" emake || die
 }
 
 src_install() {
