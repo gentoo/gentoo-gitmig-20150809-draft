@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.1_p1.ebuild,v 1.7 2004/01/09 16:28:10 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.1_p1.ebuild,v 1.8 2004/01/10 09:53:04 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -29,16 +29,21 @@ KEYWORDS="~x86"
 
 RDEPEND="!gnome-base/gnome-core
 
-	>=gnome-base/gconf-2.4.0.1
-	>=gnome-base/ORBit2-2.8.3
+	>=dev-libs/glib-2.2.3
 	>=dev-libs/atk-1.4.1
+	>=x11-libs/pango-1.2.5-r1
+	>=x11-libs/gtk+-2.2.4-r1
+
+	>=gnome-base/gconf-2.4.0.1
+
+	>=dev-libs/libIDL-0.8.2
+	>=gnome-base/ORBit2-2.8.3
+
 	>=media-libs/audiofile-0.2.4
 	>=media-sound/esound-0.2.32
 	>=gnome-base/gail-1.4.1
-	>=dev-libs/glib-2.2.3
 	>=gnome-base/gnome-mime-data-2.4.1
 	>=gnome-base/gnome-vfs-2.4.1
-	>=x11-libs/gtk+-2.2.4-r1
 	>=media-libs/libart_lgpl-2.3.16
 
 	>=gnome-base/libbonobo-2.4.3
@@ -48,10 +53,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/libgnomecanvas-2.4
 	>=gnome-base/libgnomeui-2.4.0.1
 
-	>=dev-libs/libIDL-0.8.2
-	>=dev-libs/libxml2-2.5.11
-	>=dev-libs/libxslt-1.0.33
-	>=x11-libs/pango-1.2.5-r1
+	>=dev-libs/libxml2-2.6.4
+	>=dev-libs/libxslt-1.1.2
 
 	>=gnome-extra/acme-2.4.2
 	>=gnome-extra/bug-buddy-2.4.1
