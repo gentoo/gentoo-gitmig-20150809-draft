@@ -1,13 +1,21 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.1 2002/02/01 21:52:59 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.2 2002/02/20 02:11:25 agriffis Exp $
+
+*gkrellm-1.2.9 (19 Feb 2002)
+
+	19 Feb 2002; Aron Griffis <agriffis@gentoo.org> gkrellm-1.2.9.ebuild:
+
+	Updated to new version of gkrellm.  Fixed up the dependencies to include
+	gettext.  Thanks to Seemant Kulleen for the ebuild.
 
 *gkrellm-1.2.5 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+	1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+	
+	Added initial ChangeLog which should be updated whenever the package is
+	updated in any way. This changelog is targetted to users. This means that
+	the comments should well explained and written in clean English. The
+	details about writing correct changelogs are explained in the
+	skel.ChangeLog file which you can find in the root directory of the
+	portage repository.
