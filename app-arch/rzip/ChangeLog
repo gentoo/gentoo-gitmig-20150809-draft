@@ -1,0 +1,11 @@
+# ChangeLog for app-arch/rzip
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/ChangeLog,v 1.1 2004/04/11 18:28:41 seemant Exp $
+
+*rzip-2.0 (11 Apr 2004)
+
+  11 Apr 2004; Seemant Kulleen <seemant@gentoo.org> rzip-2.0.ebuild:
+  compression programme from the rsync makers. shows good compression ratios
+  compared with bzip2 and gzip. Ebuild submitted by: Ben de Groot
+  <ben@stijlstek.nl> in bug #47499
+
