@@ -1,0 +1,11 @@
+Do NOT use this profile.  Doing so will break your machine, you will cry,
+and nobody will be there to comfort you because you were warned.  This profile
+exists to help in the development of a 64bit userland.  If you are not 100%
+certain you know what you're getting into by using this profile, then don't.
+It will most certainly render your machine utterly useless and will break
+things, so you should only use it in a chroot jail.
+
+If you have any questions, please contact me on IRC
+
+--Jeremy
+eradicator@gentoo.org.
