@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/afio-2.4.7.ebuild,v 1.7 2002/08/14 07:42:55 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/afio-2.4.7.ebuild,v 1.8 2002/08/16 02:34:18 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="makes cpio-format archives and deals somewhat gracefully with input data corruption."
@@ -9,7 +9,7 @@ HOMEPAGE="http://freshmeat.net/projects/afio/"
 
 SLOT="0"
 LICENSE="Artistic|LGPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND="sys-apps/gzip"
 
