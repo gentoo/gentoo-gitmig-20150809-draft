@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.0.3.ebuild,v 1.2 2003/11/10 20:54:46 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.0.3.ebuild,v 1.3 2004/01/03 18:39:27 iggy Exp $
 
 DESCRIPTION="A scalable configuration management system."
 HOMEPAGE="http://www.bitkeeper.com/"
