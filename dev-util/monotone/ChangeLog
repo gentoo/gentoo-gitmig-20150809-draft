@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.4 2005/01/03 21:24:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.5 2005/03/24 08:18:37 dragonheart Exp $
+
+*monotone-0.17 (24 Mar 2005)
+
+  24 Mar 2005; Daniel Black <dragonheart@gentoo.org> +monotone-0.17.ebuild:
+  Version bump as per bug #85998. Ebuild thanks to Wojciech Milkowski
+  <wmilkowski@gazeta.pl>
 
   04 Jan 2005; Daniel Black <dragonheart@gentoo.org> monotone-0.16.ebuild:
   enabled self test with a warning about test #62 cause it failed for Wojciech
