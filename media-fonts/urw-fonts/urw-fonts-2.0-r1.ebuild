@@ -1,16 +1,18 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.0-r1.ebuild,v 1.4 2003/09/08 07:40:26 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.0-r1.ebuild,v 1.5 2004/02/06 23:15:18 vapier Exp $
 
 DESCRIPTION="free good quality fonts gpl'd by URW++"
-SRC_URI="mirror://gentoo/urw-fonts-2.0-29.src.rpm"
 HOMEPAGE=""
-KEYWORDS="x86 ~ppc"
-LICENSE="GPL-2"
-DEPEND="rpm2targz"
-SLOT="0"
+SRC_URI="mirror://gentoo/urw-fonts-2.0-29.src.rpm"
 
-S="${WORKDIR}"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~amd64"
+
+DEPEND="app-arch/rpm2targz"
+
+S=${WORKDIR}
 
 src_unpack() {
 	cp ${DISTDIR}/${A} ${WORKDIR}
