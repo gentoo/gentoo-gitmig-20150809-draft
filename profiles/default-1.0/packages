@@ -35,7 +35,6 @@
 sys-fs/ntfsprogs
 <media-gfx/graphviz-1.9
 <app-arch/rar-3.2.0
-=dev-libs/elfutils
 
 *>=sys-apps/baselayout-1.7.3
 *>=sys-apps/portage-1.8.9_pre25
@@ -172,7 +171,7 @@ dev-lang/perl
 ~dev-util/gnustep-make
 
 # Needs gcc-3
-~dev-libs/elfutils-0.5
+dev-libs/elfutils
 ~sys-devel/prelink
 <=app-arch/rpm-4.1
 <=games-emulation/fceultra-0.90
