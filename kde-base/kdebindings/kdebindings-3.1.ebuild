@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.ebuild,v 1.5 2003/01/15 01:33:14 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.ebuild,v 1.6 2003/01/21 21:08:42 danarmak Exp $
 # TODO: add gnustep, objc bindings
 inherit kde-dist 
 
@@ -28,16 +28,17 @@ export DO_NOT_COMPILE="$DO_NOT_COMPILE qtsharp"
 
 export LIBPYTHON="`python-config`"
 
-#src_unpack()
-#{
-#    base_src_unpack
-#    
-#    if [ -z "`use mozilla`" ]; then
-#	# disable mozilla bindings/xpart
-#	cd ${S}
-#	cp configure configure.orig
-#	sed -e 's:mozilla_incldirs=:# mozilla_incldirs=:' configure.orig > configure
-#	chmod +x configure
-#    fi
-#}
+src_unpack()
+{
+    base_src_unpack
+    
+    if [ -z "`use mozilla`" ]; then
+	# disable mozilla bindings/xpart, because configure doesn't seem to do so
+	# even when it doesn't detect the mozilla headers
+	cd ${S}/xparts
+	cp Makefile.am Makefile.am.orig
+	sed -e 's:mozilla::' Makefile.am.orig > Makefile.am
+    fi
+    
+}
 
