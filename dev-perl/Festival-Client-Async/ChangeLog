@@ -1,6 +1,6 @@
-# ChangeLog for dev-perl/FileHandle-rollback
+# ChangeLog for dev-perl/Festival-Client-Async
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Festival-Client-Async/ChangeLog,v 1.1 2003/07/27 18:33:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Festival-Client-Async/ChangeLog,v 1.2 2003/07/31 04:52:12 vapier Exp $
 
 *Festival-Client-Async-0.0303 (25 Jul 2003)
 
