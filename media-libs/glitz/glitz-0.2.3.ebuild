@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/glitz-0.2.3.ebuild,v 1.2 2004/12/20 13:01:20 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/glitz-0.2.3.ebuild,v 1.3 2004/12/21 12:50:09 twp Exp $
 
 inherit eutils
 
@@ -15,16 +15,19 @@ IUSE=""
 DEPEND="virtual/opengl"
 
 src_compile() {
+	epatch ${FILESDIR}/glitz-0.2.3-link.patch
 	WANT_AUTOMAKE=1.8 ./autogen.sh --prefix=/usr \
 								   --host=${CHOST} \
 								   --mandir=/usr/share/man \
 								   --infodir=/usr/share/info \
 								   --datadir=/usr/share \
 								   --sysconfdir=/etc \
-								   --localstatedir=/var/lib || die "autogen.sh failed"
+								   --localstatedir=/var/lib
+								   ${EXTRA_ECONF} || die "autogen.sh failed"
 	emake || die "emake failed"
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
+	dodoc AUTHORS ChangeLog README TODO
 }

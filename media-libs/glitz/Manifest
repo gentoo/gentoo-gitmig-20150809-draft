@@ -1,4 +1,5 @@
-MD5 5338f448b9bce0233683d2a24d6e51fb ChangeLog 446
-MD5 1bdbab1b234d23171b144a5b8e7b1969 glitz-0.2.3.ebuild 892
+MD5 c3f366f2da23d092d9c3494c1aba129a ChangeLog 628
+MD5 c701744a2945bf4ce3cf35c3e04e7d5a glitz-0.2.3.ebuild 998
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
+MD5 8b32d586372b0115d1090d99c01b558f files/glitz-0.2.3-link.patch 703
 MD5 da3806ac5f02e88b51d0e0a91077f7ab files/digest-glitz-0.2.3 63
