@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.78 2005/03/18 02:25:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.79 2005/03/21 11:19:06 lu_zero Exp $
+
+  21 Mar 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.10.19.ebuild:
+  Marked x86
 
   18 Mar 2005; Luca Barbato <lu_zero@gentoo.org>
   -files/fglrx-3.2.8-fix-amd-adv-spec.patch,
