@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/otcl-1.8-r3.ebuild,v 1.2 2004/08/28 18:14:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/otcl-1.8-r3.ebuild,v 1.3 2004/10/26 22:02:17 sekretarz Exp $
 
 inherit eutils
 
@@ -10,14 +10,16 @@ HOMEPAGE="http://sourceforge.net/projects/${SF_PN}/"
 SRC_URI="mirror://sourceforge/${SF_PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 sparc ~ppc"
+KEYWORDS="~x86 sparc ~ppc ~amd64"
 IUSE=""
 DEPEND=">=dev-lang/tcl-8.3.2
 		>=dev-lang/tk-8.3.2"
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/otcl-1.8-badfreefix.patch
+	libtoolize -f
 }
 
 src_compile() {

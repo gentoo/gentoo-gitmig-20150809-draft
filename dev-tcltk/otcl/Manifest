@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 08286e1ef9899977742b19cfc3758b83 otcl-1.8-r1.ebuild 1067
-MD5 e5d975b17ef3d9a38c3dc9535ac80b03 otcl-1.8-r3.ebuild 1380
+MD5 dfee444844214f6dfc6fff0948849eb1 otcl-1.8-r3.ebuild 1414
 MD5 b541d6fb00bbdab66e5a36ca2a4385ef otcl-1.8-r2.ebuild 1207
+MD5 37188d63c76aa9a501c22f73dfb674f0 ChangeLog 1944
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 1cf7a8e4489a4e481bec8541ecb1e672 ChangeLog 1851
+MD5 08286e1ef9899977742b19cfc3758b83 otcl-1.8-r1.ebuild 1067
+MD5 64a71b4bb60017c2d8802e771d31cedc files/digest-otcl-1.8-r1 60
+MD5 64a71b4bb60017c2d8802e771d31cedc files/digest-otcl-1.8-r2 60
 MD5 64a71b4bb60017c2d8802e771d31cedc files/digest-otcl-1.8-r3 60
 MD5 090aa64d1486dc3d916b9b5176179d30 files/otcl-1.8-badfreefix.patch 7469
-MD5 64a71b4bb60017c2d8802e771d31cedc files/digest-otcl-1.8-r2 60
-MD5 64a71b4bb60017c2d8802e771d31cedc files/digest-otcl-1.8-r1 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBMMv6Fhz/XBeRBtARArgMAJ9AIkbljYgf5DbRtsC28TU3+BTP4ACgjFEW
-XxdYC62YYCKnr7WxDWQskl0=
-=KZ1D
------END PGP SIGNATURE-----
