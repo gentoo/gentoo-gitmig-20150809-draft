@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/e100
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/e100/ChangeLog,v 1.10 2003/10/10 16:31:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/e100/ChangeLog,v 1.11 2003/10/30 11:27:45 mholzer Exp $
+
+*e100-2.3.30 (30 Oct 2003)
+
+  30 Oct 2003; Martin Holzer <mholzer@gentoo.org> e100-2.3.13.ebuild,
+  e100-2.3.18.ebuild, e100-2.3.27.ebuild, e100-2.3.30.ebuild:
+  Version bumped.
+
+  30 Oct 2003; Martin Holzer <mholzer@gentoo.org> e100-2.3.13.ebuild,
+  e100-2.3.18.ebuild, e100-2.3.27.ebuild:
+  adding restrict nomirror.
 
 *e100-2.3.27 (10 Oct 2003)
 
