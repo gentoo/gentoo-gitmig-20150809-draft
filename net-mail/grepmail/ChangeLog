@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/grepmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.11 2004/06/24 23:23:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.12 2004/09/03 17:15:10 ticho Exp $
+
+*grepmail-5.30 (03 Sep 2004)
+
+  03 Sep 2004; Andrej Kacian <ticho@gentoo.org> +grepmail-5.30.ebuild:
+  Version bump to 5.30. Closes #32262, reported by Jose Romildo Malaquias
+  <romildo@uber.com.br>. Depends on dev-perl/Mail-Mbox-MessageParser instead of
+  dev-perl/Parse-RecDescent, which is no more needed.
 
 *grepmail-4.91 (09 Mar 2003)
 
