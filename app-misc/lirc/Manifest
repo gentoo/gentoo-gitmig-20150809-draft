@@ -2,9 +2,9 @@ MD5 5e539917b39eb09df933bdecdd59d1c1 lirc-0.7.0_pre6.ebuild 4624
 MD5 050ca2b5cc30cd4de5d29b064b0a8e96 lirc-0.7.0.ebuild 3702
 MD5 5adb6128699ed88532f646ab315b8aff lirc-0.7.0_pre8.ebuild 3333
 MD5 8ba235e48086e255757eef73b17f30d1 lirc-0.7.0_pre3.ebuild 4434
-MD5 12b62ecff0bf008f4cb1a0376bd7a1a2 lirc-0.7.0-r1.ebuild 3860
+MD5 7163c209eef04eb3ea8fee2f5f00b004 lirc-0.7.0-r1.ebuild 4015
 MD5 606c8449f22c9f78956ba16517806943 lirc-0.7.0_pre7.ebuild 3526
-MD5 042e56cf3387b096fba091c7c3d1fa72 ChangeLog 8347
+MD5 083bb35c9a8a2ad00e610ce8fb7a15e2 ChangeLog 8440
 MD5 40a6e0a06901a627d29f4c528e40c9ad metadata.xml 265
 MD5 8b5ccb169d823795a11450a1c052da55 files/digest-lirc-0.7.0-r1 63
 MD5 d0d865cbe48f328fb4cfb41e22d4407b files/lirc-0.7.0_pre2-i2c.patch.gz 705

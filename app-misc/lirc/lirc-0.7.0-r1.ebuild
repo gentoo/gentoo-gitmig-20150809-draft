@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.6 2005/01/20 21:33:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.7 2005/01/26 17:21:44 lanius Exp $
 
-inherit eutils linux-mod
+inherit eutils linux-mod flag-o-matic
 
 DESCRIPTION="LIRC is a package that allows you to decode and send infra-red \
 	signals of many (but not all) commonly used remote controls."
@@ -43,7 +43,7 @@ HOMEPAGE="http://www.lirc.org"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="debug doc streamzap"
-KEYWORDS="x86 ~ppc ~alpha ~ia64 ~amd64 ~ppc64"
+KEYWORDS="x86 ~ppc ~alpha ~ia64 amd64 ~ppc64"
 
 RDEPEND="virtual/libc
 	X11? ( virtual/x11 )"
@@ -57,10 +57,18 @@ SRC_URI="mirror://sourceforge/lirc/${P}.tar.bz2"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use streamzap && epatch ${FILESDIR}/lirc-0.7.0-streamzap.patch.bz2
+	if use streamzap; then
+		if kernel_is 2 6; then
+			ewarn "Streamzap is not Kernel 2.6 ready and will not be compiled"
+		else
+			epatch ${FILESDIR}/lirc-0.7.0-streamzap.patch.bz2
+		fi
+	fi
 	if [ "${PROFILE_ARCH}" == "xbox" ]; then
 		epatch ${FILESDIR}/lirc-0.7.0-xbox.patch.bz2
 	fi
+
+	filter-flags -Wl,-O1
 	sed	-i -e "s:-O2 -g:${CFLAGS}:" configure configure.in
 }
 
