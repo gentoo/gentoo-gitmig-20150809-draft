@@ -1,0 +1,16 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/files/verynice,v 1.1 2003/10/18 06:12:36 mr_bones_ Exp $
+
+start() {
+	ebegin "Starting verynice"
+	/usr/sbin/verynice -d /var/run/verynice.pid
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping verynice"
+	start-stop-daemon --stop --quiet --pidfile=/var/run/verynice.pid
+	eend $?
+}
