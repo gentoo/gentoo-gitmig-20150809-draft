@@ -1,4 +1,0 @@
-PATH=/opt/berlin/bin:/opt/berlin/sbin
-ROOTPATH=/opt/berlin/bin:/opt/berlin/sbin
-MANPATH=/opt/berlin/share/man
-LDPATH=/opt/berlin/lib
