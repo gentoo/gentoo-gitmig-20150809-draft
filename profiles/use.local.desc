@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.826 2004/12/29 02:28:32 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.827 2004/12/29 04:47:24 ribosome Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -70,7 +70,6 @@ app-i18n/uim-svn:fep - Build uim-fep
 app-i18n/uim-svn:m17n-lib - Enable m17n-lib support
 app-i18n/uim:m17n-lib - Enable m17n-lib support
 app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
-app-misc/grass:nviz - support GLw functionality
 app-misc/lirc:streamzap - add the streamzap driver to lirc
 app-misc/screen:nethack - Express error messages in nethack style
 app-misc/towitoko:moneyplex - Makes libtowitoko work for the moneyplex home banking software
@@ -626,6 +625,7 @@ sci-geosciences/gmt:gmtfull - Full resolution bathimetry database;
 sci-geosciences/gmt:gmthigh - Adds high resolution bathimetry database
 sci-geosciences/gmt:gmtsuppl - Supplement functions for GMT;
 sci-geosciences/gmt:gmttria - Non GNU triangulation method, more efficient;
+sci-geosciences/grass:nviz - support GLw functionality
 sci-mathematics/coq:ide - Build the Coq IDE, a clone of proof general using lablgtk2.
 sci-mathematics/coq:norealanalysis - Do not build real analysis modules (faster compilation).
 sci-mathematics/coq:translator - Install the translator script from coq-7.4 to coq-8.0, and its documentation if doc is set too.
