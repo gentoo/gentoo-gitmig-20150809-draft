@@ -2,6 +2,11 @@
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.5 2002/05/31 01:48:14 seemant Exp
 
+  20 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> rar-3.3.0.ebuild:
+  Upstream makefile now ships with a single target: 'install' which
+  automatically runs when you do make as implied by the default src_compile().
+  This breaks sandbox, so force src_compile() to be empty.
+
   27 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> rar-3.0.ebuild,
   rar-3.1.0.ebuild, rar-3.1.1.ebuild, rar-3.2.0.ebuild, files/10rar:
   Added IUSE, removed some old ebuilds.
