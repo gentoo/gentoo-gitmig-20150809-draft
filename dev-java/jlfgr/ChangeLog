@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jlfgr
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jlfgr/ChangeLog,v 1.1 2004/10/06 22:09:42 axxo Exp $
+
+*jlfgr-1.0 (07 Oct 2004)
+
+  07 Oct 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +jlfgr-1.0.ebuild:
+  Initial import, added as a dep
+
