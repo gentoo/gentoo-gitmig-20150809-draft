@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0_beta1.ebuild,v 1.2 2005/01/14 17:01:34 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0_beta1.ebuild,v 1.3 2005/01/14 19:42:18 greg_g Exp $
 
 inherit kde eutils flag-o-matic
 set-kdedir 3.4
@@ -36,7 +36,14 @@ RDEPEND="arts? ( ~kde-base/arts-${PV} )
 	virtual/ghostscript
 	media-libs/libart_lgpl
 	net-dns/libidn"
-# waiting for mDNSResponder to be in portage...
+# TODO
+# - add dependency on mDNSResponder when it enters portage
+#   ('dnssd' local USE flag?)
+# - add support for dbus/hal for 'media:' ioslave:
+#     hal? ( >=sys-apps/dbus-0.22-r3    (for proper Qt support)
+#            >=sys-apps/hal-0.4 )
+#   the 'hal' flag should become global,
+#   since it's already used by 5 ebuilds.
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58
