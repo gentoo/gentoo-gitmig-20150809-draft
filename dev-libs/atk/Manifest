@@ -1,6 +1,16 @@
-MD5 2188bb858be3097dff95cb282b95a234 ChangeLog 6494
-MD5 c7a1e71e8db9414ebd458fedd4ed8986 atk-1.6.1.ebuild 621
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 03ea468cd3bcc0268f276b2672df1c08 ChangeLog 6583
+MD5 b25a29c7a54ec856c77f514c995c048a atk-1.8.0.ebuild 580
 MD5 72e62f4df8c037e6ea57309ac6d81d77 metadata.xml 174
-MD5 d91650c404716fe39c4e8e554bab4a7e atk-1.8.0.ebuild 583
+MD5 c7a1e71e8db9414ebd458fedd4ed8986 atk-1.6.1.ebuild 621
 MD5 c7f6fe60bae9432f5ac07355ba10a5ae files/digest-atk-1.8.0 62
 MD5 3a1c0bfede3ee5b267426cbabd0e9a00 files/digest-atk-1.6.1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBurt2ugEuf3OQ0akRAsymAJ91quXqbm9V6tKL43N/cumdrJ3oWACdHIHu
+d2X6Fs+jhscCTdBPM/kFo00=
+=VD6m
+-----END PGP SIGNATURE-----
