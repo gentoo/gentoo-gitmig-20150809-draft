@@ -1,6 +1,6 @@
 # ChangeLog for net-fs/ftpfs
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ftpfs/ChangeLog,v 1.4 2002/12/04 02:44:02 nall Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ftpfs/ChangeLog,v 1.5 2003/02/12 07:56:25 vapier Exp $
 
 *ftpfs-0.6.2-r3 (03 Dec 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-fs/nfs-utils
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.9 2002/12/13 10:59:54 blizzy Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.10 2003/02/12 07:56:55 vapier Exp $
 
 *nfs-utils-1.0.1 (12 Dec 2002)
 
