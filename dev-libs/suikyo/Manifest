@@ -1,21 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9f9f28b066424df56f42fe1d845a23a4 ChangeLog 2459
+MD5 8d529fc7cc7b9966d1f6045c808bc8ec ChangeLog 2633
 MD5 8afe4eded45a484580ce855f24ffea2e metadata.xml 265
 MD5 2c5551d3499a2aad72ef84f2f5f1000f suikyo-1.3.3.ebuild 858
-MD5 f1ac070ab665bdeced6d047fa160f08a suikyo-2.0.0.1.ebuild 849
+MD5 a05866986e0f47a13398a1a05d8899f5 suikyo-2.0.0.1.ebuild 846
 MD5 fe128e0800482e36fddd4e13c85c79ba suikyo-1.3.3_p20041117.ebuild 1092
 MD5 2d93e8d223b0a6eb1505e70966fbf581 suikyo-2.0.1_alpha2.ebuild 893
+MD5 278c164ce6e9b7ae47de1d7867ad9937 suikyo-2.0.1.2.ebuild 888
 MD5 4d03ee45f5b90d7f41f711bd5a383d7e files/50suikyo-gentoo.el 61
 MD5 2ea95a56cfbb066372b29d0bdeed37e9 files/digest-suikyo-1.3.3 64
 MD5 4982fe65cd281e7f9e940eadfda657b9 files/digest-suikyo-2.0.0.1 66
 MD5 3a7d24a02f2e889e1831d2f51fb081dd files/digest-suikyo-1.3.3_p20041117 73
 MD5 bd0921e94b751edaa73cebb1a56093d7 files/digest-suikyo-2.0.1_alpha2 71
+MD5 59e814832cc49d5eefc10a41f9b85e7a files/digest-suikyo-2.0.1.2 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB27XgVWNWqTUmv+0RAnJUAJ968VKW6sk0OR+qFKKP5LwpBa5s9gCfYOcm
-fUJdVq6UiMztn+BDV0F0xVE=
-=bK9j
+iD8DBQFB7x81VWNWqTUmv+0RAs9nAKCPOgvJmV37BAsbQiLMI/lzxwDyXwCgoGKu
+P56uM2NSQV2eouRkUefFKmI=
+=kGtL
 -----END PGP SIGNATURE-----
