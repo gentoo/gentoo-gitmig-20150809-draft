@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/Archive-Zip-1.06.ebuild,v 1.4 2004/02/29 10:54:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/Archive-Zip-1.06.ebuild,v 1.5 2004/05/16 23:50:30 kloeri Exp $
 
 inherit perl-module
 
@@ -10,6 +10,6 @@ SRC_URI="http://www.cpan.org/modules/by-module/Archive/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~amd64"
+KEYWORDS="x86 ~ppc sparc ~amd64 ~alpha"
 
 DEPEND="dev-perl/Compress-Zlib"
