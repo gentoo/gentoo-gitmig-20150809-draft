@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-2.0a.ebuild,v 1.11 2004/11/11 16:45:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-2.0a.ebuild,v 1.12 2005/03/29 23:54:48 vapier Exp $
 
 inherit eutils
 
@@ -13,36 +13,34 @@ SRC_URI="http://www.muppetlabs.com/~breadbox/pub/software/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc hppa ~mips"
-IUSE=""
+KEYWORDS="amd64 hppa ~mips sparc x86"
+IUSE="doc"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	# custom made patch to keep the compiler warnings down
-	epatch ${FILESDIR}/${P}.diff
-}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}.diff
 
-src_compile() {
-	emake -C ebfc
-	emake -C elfls
-	emake -C elftoc
-	emake -C rebind
-	emake -C sstrip
-	# emake -C tiny
+	sed -i -e '/^SUBDIRS/s:tiny::' Makefile
+	use x86 || sed -i -e '/^SUBDIRS/s:ebfc::' Makefile
 }
 
 src_install() {
-	cd ${S}
-	mv -f ebfc/README README.ebfc
-	mv -f elfls/README README.elfls
-	mv -f elftoc/README README.elftoc
-	mv -f rebind/README README.rebind
-	mv -f sstrip/README README.sstrip
-	insinto /usr
-	dobin ebfc/ebfc sstrip/sstrip elfls/elfls elftoc/elftoc rebind/rebind
+	for d in elfls elftoc rebind sstrip ; do
+		newdoc ${d}/README README.${d}
+		dobin ${d}/${d} || die "dobin ${d} failed"
+	done
+	if use x86 ; then
+		newdoc ebfc/README README.ebfc
+		dobin ebfc/ebfc || die "dobin ebfc failed"
+	fi
+
 	doman */*.1
-	dodoc Changelog README
-	dodoc README.ebfc README.elfls README.elftoc README.rebind README.sstrip ebfc/elfparts.txt
+	dodoc Changelog README ebfc/elfparts.txt
+	if use doc ; then
+		docinto tiny
+		dodoc tiny/*.asm
+	fi
 }

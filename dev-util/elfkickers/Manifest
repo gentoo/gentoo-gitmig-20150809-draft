@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 05f6be6b25d1f27308faa7096195914b elfkickers-2.0a.ebuild 1270
 MD5 697e42f8e97e27e828fac33ecdd07e23 ChangeLog 1174
+MD5 6470a1ee3980268cf831f8b5fc089d27 elfkickers-2.0a.ebuild 1149
 MD5 cab7f0e6a2b67731af8abbadf0ee9ff2 metadata.xml 566
-MD5 65a7291d3386a2c43915f548ad4ed187 files/elfkickers-2.0a.diff 3264
 MD5 b77d338ef8265dec78deb87c866b2a43 files/digest-elfkickers-2.0a 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBk5ew94CCfB4KcwwRAtZNAJwN+4FkBjfQCGY1yslQrHorEJMUwgCfXwvR
-dt2Awb52pUqTCcGgSDVLl0U=
-=rEeM
------END PGP SIGNATURE-----
+MD5 65a7291d3386a2c43915f548ad4ed187 files/elfkickers-2.0a.diff 3264
