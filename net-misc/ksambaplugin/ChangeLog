@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/ksambaplugin
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksambaplugin/ChangeLog,v 1.15 2004/08/30 19:38:07 carlo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksambaplugin/ChangeLog,v 1.16 2005/01/15 00:10:45 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> ksambaplugin-0.5f.ebuild:
+  Changed dep on a kde-base monolithic package to accept the equivalent split
+  or -meta package. KDE 3.4 has 'split' packages as well as monolithic, and
+  either alternative may provide the same files. This dep may have to be
+  narrowed down in the future to the precise split packages required.
 
   30 Aug 2004; Carsten Lohrke <carlo@gentoo.org> ksambaplugin-0.5f.ebuild:
   block >=kde-base/kdenetwork-3.3.0
