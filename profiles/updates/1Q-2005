@@ -13,3 +13,4 @@ move sci-biology/njplot-unrooted sci-biology/njplot
 move www-proxy/dnrd net-dns/dnrd
 move net-mail/poppassd_pam net-mail/poppassd_ceti
 move sys-kernel/pegasos-dev-sources sys-kernel/pegasos-sources
+move sys-kernel/hppa-headers sys-kernel/linux-headers
