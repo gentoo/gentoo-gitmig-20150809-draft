@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18-r1.ebuild,v 1.4 2004/05/30 05:21:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18-r1.ebuild,v 1.5 2004/05/30 06:11:41 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -81,9 +81,13 @@ src_compile() {
 	if use !build && kernel_supports_modules
 	then
 		cd ${S}/kernel/svgalib_helper
-		env -u ARCH \
-			make -f Makefile.alt INCLUDEDIR="/usr/src/linux/include" \
-				clean modules || die "Failed to build kernel module!"
+		if [[ `KV_to_int ${KV}` -lt `KV_to_int 2.6.6` ]] ; then
+			env -u ARCH \
+				make -f Makefile.alt INCLUDEDIR="/usr/src/linux/include" \
+					clean modules || die "Failed to build kernel module!"
+		else
+			env -u ARCH make || die "Failed to build kernel module!"
+		fi
 		cd ${S}
 	fi
 
@@ -102,10 +106,15 @@ src_install() {
 	if use !build && kernel_supports_modules
 	then
 		cd ${S}/kernel/svgalib_helper
-		env -u ARCH \
-			make -f Makefile.alt TOPDIR=${D} \
-				INCLUDEDIR="/usr/src/linux/include" \
-				modules_install || die "Failed to install svgalib module!"
+		if [[ `KV_to_int ${KV}` -lt `KV_to_int 2.6.6` ]] ; then
+			env -u ARCH \
+				make -f Makefile.alt TOPDIR=${D} \
+					INCLUDEDIR="/usr/src/linux/include" \
+					modules_install || die "Failed to install svgalib module!"
+		else
+			insinto /lib/modules/${KV}/kernel/misc
+			doins svgalib_helper.ko
+		fi
 		cd ${S}
 	fi
 
