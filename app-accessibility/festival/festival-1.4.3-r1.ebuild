@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r1.ebuild,v 1.2 2004/03/17 04:02:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3-r1.ebuild,v 1.3 2004/03/21 20:16:08 eradicator Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Festival Text to Speech engine"
@@ -50,59 +52,29 @@ src_unpack() {
 	unpack festvox_us1.tar.gz
 	unpack festvox_us2.tar.gz
 	unpack festvox_us3.tar.gz
+
+	cd ${S}
+
+	use doc && unpack festdoc-1.4.2.tar.gz && mv festdoc-1.4.2 festdoc
+
 	epatch ${FILESDIR}/${PN}-gcc3.3.diff
 
 	use asterisk && epatch ${FILESDIR}/${P}-asterisk.patch
+
+	sed -i 's@EST=$(TOP)/../speech_tools@EST=/usr/lib/speech-tools@' config/config.in
+
+	# testsuite still fails to build under gcc-3.2
+	# sed -i '/^BUILD_DIRS =/s/testsuite//' Makefile || die
+
+	sed -i '/^const char \*festival_libdir/s:FTLIBDIR:"/usr/lib/festival":' src/arch/festival/festival.cc
+	sed -i '/^MODULE_LIBS/s/-ltermcap/-lncurses/' config/modules/editline.mak || die
 }
 
 src_compile() {
+	econf || die
 
-	mv config/config.in config/config.in.org
-	cat config/config.in.org | sed 's@EST=$(TOP)/../speech_tools@EST=/usr/lib/speech-tools@' > config/config.in
-
-	econf
-
-	# testsuite still fails to build under gcc-3.2
-	mv Makefile Makefile.orig
-	sed -e '/^BUILD_DIRS =/s/testsuite//' Makefile.orig > Makefile
-
-	pushd config/modules/
-	cp editline.mak editline.mak.orig
-	sed -e '/^MODULE_LIBS/s/-ltermcap/-lncurses/' editline.mak.orig \
-		> editline.mak
-	popd
-
-	# emake worked for me on SMP
-	#emake did not work for me because I had -j5. If there is anything greater than
-	#-j2, emake dies.
-	#zhen@gentoo.org
+	# emake does not work if you have anything larger then -j2
 	make || die
-
-	cd ${S}
-	econf
-	pushd src/arch/festival/
-	cp festival.cc festival.cc.orig
-	sed -e '/^const char \*festival_libdir/s:FTLIBDIR:"/usr/lib/festival":' \
-		festival.cc.orig  > festival.cc
-	pushd
-	pushd config/modules/
-	cp editline.mak editline.mak.orig
-	sed -e '/^MODULE_LIBS/s/-ltermcap/-lncurses/' editline.mak.orig \
-		> editline.mak
-	pushd
-
-	# emake failed for me on SMP
-	make || die
-
-	# Need to fix saytime to look for festival in the correct spot
-	cp examples/saytime examples/saytime.orig
-	sed "s:${WORKDIR}/festival/bin/festival:/usr/bin/festival:" \
-		examples/saytime.orig > examples/saytime
-
-	# And do the same thing for text2wave
-	cp bin/text2wave bin/text2wave.orig
-	sed "s:${WORKDIR}/festival/bin/festival:/usr/bin/festival:" \
-		bin/text2wave.orig > bin/text2wave
 }
 
 src_install() {
@@ -185,15 +157,6 @@ src_install() {
 	insinto ${DESTLIB}/us3_mbrola/festvox
 	doins ${FESTLIB}/us3_mbrola/festvox/*
 
-	# Install the docs
-	cd ${S} # needed
-	into /usr
-	dodoc ACKNOWLEDGMENTS COPYING NEWS README
-	doman doc/festival.1 doc/festival_client.1
-
-	cd ${WORKDIR}/festdoc-1.4.2/festival/html
-	dohtml *.html
-
 	# Sample server.scm configuration for the server
 	dodir /etc/festival
 	insinto /etc/festival
@@ -202,6 +165,25 @@ src_install() {
 	# Install the init script
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/festival.rc festival
+
+	# Need to fix saytime to look for festival in the correct spot
+	dosed "s:${WORKDIR}/festival/bin/festival:/usr/bin/festival:" /usr/bin/saytime
+	dosed "s:${WORKDIR}/festival/bin/festival:/usr/bin/festival:" /usr/bin/text2wave
+
+	# Install the docs
+	cd ${S} # needed
+	into /usr
+	dodoc ACKNOWLEDGMENTS COPYING NEWS README
+	doman doc/festival.1 doc/festival_client.1
+
+	if use doc; then
+		cd ${S}/festdoc/festival/html
+		dohtml *.html
+		cd ${S}/festdoc/festival
+		dodoc festival.ps
+		cd ${S}/festdoc/festival/info
+		doinfo *
+	fi
 }
 
 pkg_postinst() {
@@ -218,7 +200,6 @@ pkg_postinst() {
 	einfo "    You must setup the server's port, access list, etc in this file:"
 	einfo "       /etc/festival/server.scm"
 	einfo
-	einfo "    Emerge mbrola to enable some additional voices"
+	einfo "    Emerge mbrola to enable some additional voices."
 	einfo
 }
-
