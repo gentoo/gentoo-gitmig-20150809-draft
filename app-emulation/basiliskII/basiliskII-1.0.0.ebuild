@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0.ebuild,v 1.2 2003/09/26 18:27:18 vapier Exp $
-
-IUSE="X gtk xv esd dga"
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0.ebuild,v 1.3 2003/12/08 19:03:09 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -10,14 +8,16 @@ inherit flag-o-matic
 ### Mac OS 7.5.3r2 is available freely from the Apple Homepage
 ### System ROMS can be retreived from a 'real' Mac, See info/man pages
 
+S="${WORKDIR}/BasiliskII-jit-1.0/src/Unix"
 DESCRIPTION="BasiliskII Macintosh Emulator"
 HOMEPAGE="http://gwenole.beauchesne.online.fr/basilisk2/"
+SRC_URI="http://hometown.aol.de/wimdk/files/BasiliskII-jit-1.0-mdk-src.tar.bz2"
+
 LICENSE="GPL-2 | LGPL-2.1"
 KEYWORDS="x86 -ppc"
 SLOT="0"
 
-### We'll set $S Manually, it's version dependant, and nested strangely.
-S=${WORKDIR}/BasiliskII-jit-1.0/src/Unix
+IUSE="X gtk xv esd dga"
 
 ### fbdev support in the stable release...  the cvs branch is broken, period!
 ### gtk and esd support are compile time options, we'll check the usual
@@ -27,7 +27,14 @@ DEPEND="gtk? ( x11-libs/gtk+ )
 	esd? ( media-sound/esound )
 	>=sys-apps/sed-4"
 
-SRC_URI="http://hometown.aol.de/wimdk/files/BasiliskII-jit-1.0-mdk-src.tar.bz2"
+src_unpack() {
+	unpack ${A}
+
+	# Fix up the vendor (bug 35352)
+	sed -i \
+		-e "s/Mandrake/Gentoo/g" ${S}/keycodes || \
+			die "sed keycods failed"
+}
 
 src_compile() {
 	#fpu_x86 doesnt compile properly if -O3 or greater :(
