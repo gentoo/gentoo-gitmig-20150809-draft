@@ -1,0 +1,8 @@
+# ChangeLog for dev-libs/qsa
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/ChangeLog,v 1.1 2003/05/24 11:31:17 brain Exp $
+
+*qsa-1.0_pre20030513 (24 May 2003)
+
+  24 May 2003; Michele Balistreri >brain@gentoo.org> qsa_1.o_pre20030513.ebuild :
+  Initial import.
