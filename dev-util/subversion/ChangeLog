@@ -1,6 +1,18 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.138 2005/01/22 04:36:34 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.139 2005/01/28 20:55:40 pauldv Exp $
+
+  28 Jan 2005; Paul de Vrieze <pauldv@gentoo.org>
+  -subversion-1.1.2-r1.ebuild:
+  Remove broken testing ebuild
+
+  28 Jan 2005; Paul de Vrieze <pauldv@gentoo.org>
+  subversion-1.1.3-r1.ebuild:
+  Redo the apr ebuild so that it is based upon the latest normal ebuild. Also 
+  this ebuild will actually build the apache2 module. The other ebuild should 
+  never have been put in cvs. Even masked. The removal of apache2 has been 
+  rather simplistic. The optional apache2 dependency is still there, it just 
+  isn't overloaded anymore.
 
 *subversion-1.1.3-r1 (22 Jan 2005)
 
