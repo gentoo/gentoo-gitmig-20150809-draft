@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/mzscheme
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/ChangeLog,v 1.10 2003/10/14 20:23:37 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/ChangeLog,v 1.11 2004/04/05 14:41:12 lanius Exp $
+
+  05 Apr 2004; Heinrich Wendel <lanius@gentoo.org> mzscheme-205.ebuild:
+  mark stable on x86
 
 *mzscheme-205 (14 Oct 2003)
 
