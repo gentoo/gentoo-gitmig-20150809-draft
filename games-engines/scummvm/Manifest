@@ -1,3 +1,4 @@
-MD5 a05cefcb4e86dbf7d1c4592029bf7195 files/digest-scummvm-0.5.1 67
-MD5 c2ae875a3ad3ad276aaf20ae69df2281 scummvm-0.5.1.ebuild 1336
 MD5 359639ce97ddf14c6e82e5f605a3c18f ChangeLog 2504
+MD5 c2ae875a3ad3ad276aaf20ae69df2281 scummvm-0.5.1.ebuild 1336
+MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
+MD5 a05cefcb4e86dbf7d1c4592029bf7195 files/digest-scummvm-0.5.1 67
