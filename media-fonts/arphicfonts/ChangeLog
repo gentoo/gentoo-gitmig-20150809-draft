@@ -1,0 +1,31 @@
+# ChangeLog for media-fonts/arphicfonts
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.1 2003/06/02 13:45:18 seemant Exp $
+
+*arphicfonts-0.1 (02 Jun 2003)
+
+  02 Jun 2003; Seemant Kulleen <seemant@gentoo.org> arphicfonts-0.1-r1.ebuild,
+  arphicfonts-0.1.ebuild, files/CN-fonts.scale, files/TW-fonts.scale:
+  relocated to media-fonts
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*arphicfonts-0.1 (27 June 2002)
+
+  16 Mar 2003; Mark Guertin <gerk@gentoo.org> arphicfonts-0.1-r1.ebuild,
+  arphicfonts-0.1.ebuild:
+  set ppc in keywords
+
+  07 Nov 2002; Stuart Bouyer <stubear@gentoo.org> arphicfonts-0.1-r1.ebuild:
+  Added check for existing fonts.scale instead of blindly overwriting.
+ 
+
+  22 Aug 2002; Stuart Bouyer <stubear@gentoo.org> arphicfonts-0.1-r1.ebuild,
+  files/CN-fonts.scale, files/TW-fonts.scale:
+
+  Marko Daniel <mdaniel@soton.ac.uk> has updated the ebuild to install the
+  fonts in their own directory and fixed a bug where the font encoding info
+  wasn't being correctly produced for big5 and gb encodings. Closes bug 6281. 
+
+  27 June 2002; Stuart Bouyer <stubear@gentoo.org> arphicfonts-0.1.ebuild:
+  First ebuild added
