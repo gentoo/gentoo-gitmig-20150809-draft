@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kbounce
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.2 2005/02/05 11:39:13 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.3 2005/02/27 20:21:31 danarmak Exp $
+
+*kbounce-3.4.0_rc1 (27 Feb 2005)
+
+  27 Feb 2005; Dan Armak <danarmak@gentoo.org> +kbounce-3.4.0_rc1.ebuild:
+  Ebuild for 3.4.0 RC1.
 
 *kbounce-3.4.0_beta2 (05 Feb 2005)
 

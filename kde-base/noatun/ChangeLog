@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/noatun
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.4 2005/02/12 15:59:02 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun/ChangeLog,v 1.5 2005/02/27 20:21:43 danarmak Exp $
+
+  27 Feb 2005; Dan Armak <danarmak@gentoo.org> :
+  Ebuild for 3.4.0 RC1.
 
 *noatun-3.4.0_beta2 (05 Feb 2005)
 

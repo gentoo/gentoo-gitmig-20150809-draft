@@ -2,5 +2,7 @@ MD5 92b1d79b8c91d6c83f2087fa0c487964 kbounce-3.4.0_beta1.ebuild 526
 MD5 d68a3ef2614d470acd6daaeb4657869e ChangeLog 726
 MD5 8d08556fef9f0442abbe317f1d19ba84 kbounce-3.4.0_beta2.ebuild 521
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 8d08556fef9f0442abbe317f1d19ba84 kbounce-3.4.0_rc1.ebuild 521
+MD5 8b19b23f6a048c71e6c5d2550695c013 files/digest-kbounce-3.4.0_rc1 378
 MD5 039057bfd4af6b157cd2b7b08f08d23d files/digest-kbounce-3.4.0_beta1 216
 MD5 9e3853561c1b7e9a926fdc6dd8e5434d files/digest-kbounce-3.4.0_beta2 294

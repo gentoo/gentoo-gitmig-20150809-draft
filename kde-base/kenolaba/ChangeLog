@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kenolaba
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kenolaba/ChangeLog,v 1.2 2005/02/05 11:39:17 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kenolaba/ChangeLog,v 1.3 2005/02/27 20:21:35 danarmak Exp $
+
+*kenolaba-3.4.0_rc1 (27 Feb 2005)
+
+  27 Feb 2005; Dan Armak <danarmak@gentoo.org> +kenolaba-3.4.0_rc1.ebuild:
+  Ebuild for 3.4.0 RC1.
 
 *kenolaba-3.4.0_beta2 (05 Feb 2005)
 

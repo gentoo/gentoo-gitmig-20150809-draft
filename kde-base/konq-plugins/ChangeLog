@@ -1,6 +1,16 @@
 # ChangeLog for kde-base/konq-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.1 2005/02/27 19:21:09 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.2 2005/02/27 20:21:38 danarmak Exp $
+
+  27 Feb 2005; Dan Armak <danarmak@gentoo.org> :
+  Ebuild for 3.4.0 RC1.
+
+*konq-plugins-3.4.0_rc1 (27 Feb 2005)
+
+  27 Feb 2005; Dan Armak <danarmak@gentoo.org>
+  +konq-plugins-3.4.0_rc1.ebuild:
+  Adding the split ebuilds to portage. For KDE 3.4, we've created separate
+  ebuilds for all the KDE apps.
 
 *konq-plugins-3.4.0_beta2 (27 Feb 2005)
 

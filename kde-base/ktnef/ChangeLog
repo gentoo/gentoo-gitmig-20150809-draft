@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktnef
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.4 2005/02/12 01:15:40 motaboy Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.5 2005/02/27 20:21:41 danarmak Exp $
+
+  27 Feb 2005; Dan Armak <danarmak@gentoo.org> :
+  Ebuild for 3.4.0 RC1.
 
   29 Sep 2004; Simone Gotti <motaboy@gentoo.org> ktnef-3.4.0_beta2.ebuild:
   Remove the dep on kde-base/libkdepim as it's not needed and the issue was

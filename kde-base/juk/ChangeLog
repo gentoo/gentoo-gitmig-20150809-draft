@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.4 2005/02/07 21:24:46 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.5 2005/02/27 20:21:30 danarmak Exp $
+
+*juk-3.4.0_rc1 (27 Feb 2005)
+
+  27 Feb 2005; Dan Armak <danarmak@gentoo.org> +juk-3.4.0_rc1.ebuild:
+  Ebuild for 3.4.0 RC1.
 
   07 Feb 2005; Simone Gotti <motaboy@gentoo.org> juk-3.4.0_beta2.ebuild:
   Now juk has a fixed dep on akode, so it needs its libs and its headers.

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/akode
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akode/ChangeLog,v 1.3 2005/02/06 11:41:28 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akode/ChangeLog,v 1.4 2005/02/27 20:21:29 danarmak Exp $
+
+*akode-3.4.0_rc1 (27 Feb 2005)
+
+  27 Feb 2005; Dan Armak <danarmak@gentoo.org> +akode-3.4.0_rc1.ebuild:
+  Ebuild for 3.4.0 RC1.
 
   06 Feb 2005; Carsten Lohrke <carlo@gentoo.org> akode-3.4.0_beta2.ebuild:
   media-sound/jack != media-sound/jack-audio-connection-kit

@@ -1,3 +1,4 @@
+MD5 2c590ac48ee77918dca733c5a66ac542 korundum-3.4.0_rc1.ebuild 1096
 MD5 5ecb5fc15a161160d836849c8dcbfc40 korundum-3.3.1.ebuild 748
 MD5 eb15c0d4539fdbe6a7c7b6bd10820f7a korundum-3.3.2-r1.ebuild 1086
 MD5 956936cc9cd4d2241c2c5e1eec84e31e korundum-3.4.0_beta2.ebuild 754
@@ -13,3 +14,4 @@ MD5 5df0d0efdefb5dedceecfbda5539c7ce files/digest-korundum-3.4.0_beta2 307
 MD5 ffe26fb6d5d193883dfebd69250df2e5 files/no-gtk-glib-check.diff 949
 MD5 5df0d0efdefb5dedceecfbda5539c7ce files/digest-korundum-3.4.0_beta2-r1 307
 MD5 10ed49fd5738679f78bf8008f8975537 files/digest-korundum-3.3.2-r1 301
+MD5 3946152f4855210898ab9178271cf802 files/digest-korundum-3.4.0_rc1 394

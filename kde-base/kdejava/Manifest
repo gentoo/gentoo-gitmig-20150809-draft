@@ -1,3 +1,4 @@
+MD5 831c7453ef58775d131df7ba55f406c5 kdejava-3.4.0_rc1.ebuild 1435
 MD5 e3ad32e72065b892d2fe02daebcf73d0 kdejava-3.3.1.ebuild 1537
 MD5 831c7453ef58775d131df7ba55f406c5 kdejava-3.4.0_beta2.ebuild 1435
 MD5 e4e904e756a197a8fac59ed2dfd15e8e kdejava-3.4.0_beta1.ebuild 1450
@@ -10,3 +11,5 @@ MD5 4877266a41162d4c439090a71dcc66bc files/digest-kdejava-3.4.0_beta1 225
 MD5 5df0d0efdefb5dedceecfbda5539c7ce files/digest-kdejava-3.4.0_beta2 307
 MD5 9598e813037e1a6ea89142a23ac4018a files/kdejava-3.4.0_beta1-classpath.diff 460
 MD5 9598e813037e1a6ea89142a23ac4018a files/kdejava-3.3.1-classpath.diff 460
+MD5 98aaced38286ff2403d813b121aa1380 files/kdejava-3.4.0_rc1-classpath.diff 471
+MD5 3946152f4855210898ab9178271cf802 files/digest-kdejava-3.4.0_rc1 394
