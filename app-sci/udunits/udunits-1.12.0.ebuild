@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/udunits-1.12.0.ebuild,v 1.3 2004/02/22 07:16:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/udunits-1.12.0.ebuild,v 1.4 2004/04/19 12:37:57 phosphan Exp $
 
 inherit eutils
 
@@ -9,9 +9,9 @@ inherit eutils
 # manipulation of unit specifications, and conversion of values between 
 # compatible scales of measurement.
 
-IUSE="perl"
 #inherit perl-module
 
+IUSE=""
 S=${WORKDIR}/${P}/src
 SP=${WORKDIR}/${P}/src/perl
 DESCRIPTION="The UCAR/Unidata Units library"
