@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsidplay
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.15 2004/07/03 08:23:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.16 2004/07/03 08:38:01 eradicator Exp $
+
+  03 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libsidplay-2.1.0-r1.ebuild, libsidplay-2.1.1.ebuild:
+  --with-pic for xmms-sid to work with libsidplay2 on amd64.
 
 *libsidplay-2.1.0-r1 (03 Jul 2004)
 *libsidplay-2.1.1 (03 Jul 2004)
