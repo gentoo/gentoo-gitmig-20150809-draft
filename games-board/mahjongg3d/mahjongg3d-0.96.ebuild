@@ -1,0 +1,43 @@
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/mahjongg3d-0.96.ebuild,v 1.1 2004/06/21 19:00:30 mr_bones_ Exp $
+
+inherit kde games
+
+DESCRIPTION="An implementation of the classical chinese game Mah Jongg with 3D OpenGL graphics"
+HOMEPAGE="http://www.reto-schoelly.de/mahjongg3d/"
+SRC_URI="http://www.reto-schoelly.de/${PN}/${PN}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
+IUSE=""
+
+RDEPEND=">=qt-3.2.0
+	virtual/opengl"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
+
+S="${WORKDIR}/${PN}.release"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i \
+		-e "/GAMEDATA_BASE_PATH/ s:\.:${GAMES_DATADIR}/${PN}:" \
+		src/gamedata_path.h || die "sed src/gamedata_path.h failed"
+}
+
+src_compile() {
+	qmake -o Makefile mahjongg3d.pro
+	kde_src_compile none
+	emake || die "emake failed"
+}
+
+src_install () {
+	dogamesbin bin/{mahjongg3d,mahjongg3d-install-*} || die "dogamesbin failed"
+	dodir "${GAMES_DATADIR}/${PN}"
+	cp -r bin/{[a-l]*,t*} "${D}${GAMES_DATADIR}/${PN}" || die "cp failed"
+	dodoc README Changelog
+	prepgamesdirs
+}
