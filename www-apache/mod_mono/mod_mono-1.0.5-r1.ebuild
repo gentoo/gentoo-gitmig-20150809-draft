@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-1.0.5-r1.ebuild,v 1.1 2005/02/17 02:28:59 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-1.0.5-r1.ebuild,v 1.2 2005/02/17 05:56:24 trapni Exp $
 
 inherit apache-module
 
@@ -15,11 +15,11 @@ DEPEND=">=dev-dotnet/mono-${PV}
 		>=dev-dotnet/xsp-${PV}"
 
 APACHE1_MOD_FILE="${S}/src/.libs/mod_mono.so"
-APACHE1_MOD_CONF="70_mod_mono"
+APACHE1_MOD_CONF="${PVR}/70_mod_mono"
 APACHE1_MOD_DEFINE="MONO"
 
 APACHE2_MOD_FILE="${S}/src/.libs/mod_mono.so"
-APACHE2_MOD_CONF="70_mod_mono"
+APACHE2_MOD_CONF="${PVR}/70_mod_mono"
 APACHE2_MOD_DEFINE="MONO"
 
 DOCFILES="AUTHORS ChangeLog COPYING INSTALL NEWS README"
@@ -57,6 +57,6 @@ src_install() {
 pkg_postinst() {
 	apache-module_pkg_postinst
 
-	einfo "To view the sameples, uncomment the commented blocks in the above"
-	einfo "configuration file."
+	einfo "To view the sameples, add \"-D MONO_DEMO\" at your apache's"
+	einfo "conf.d configuration file."
 }

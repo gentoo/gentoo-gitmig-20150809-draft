@@ -1,14 +1,11 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.13 2005/02/17 05:36:55 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.14 2005/02/17 05:56:24 trapni Exp $
 
   17 Feb 2005; Christian Parpart <trapni@gentoo.org>
-  files/mod_mono-1.0.5-70_mod_mono.conf:
-  adopted to changes recommented in bug 70943
-
-  17 Feb 2005; Christian Parpart <trapni@gentoo.org>
-  files/mod_mono-1.0.5-70_mod_mono.conf:
-  module .conf cleanup
+  files/1.0.5-r1/70_mod_mono.conf, files/mod_mono-1.0.5-r1.ebuild:
+  * adopted to changes recommented in bug 70943
+  * module .conf cleanup
 
 *mod_mono-1.0.5-r1 (17 Feb 2005)
 
