@@ -1,6 +1,6 @@
 # ChangeLog for app-sci/gmt
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/ChangeLog,v 1.1 2003/02/07 04:40:47 george Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/ChangeLog,v 1.2 2003/02/12 05:16:15 vapier Exp $
 
 *gmt-3.4.2.ebuild (06 Feb 2003)
 
