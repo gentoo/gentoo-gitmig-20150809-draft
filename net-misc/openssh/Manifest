@@ -1,9 +1,11 @@
-MD5 0af3b2a974683c67ec7dd98924cb5952 ChangeLog 19205
+MD5 8141ca24ab8ee5240c4ec15cfd7dcf38 ChangeLog 19414
 MD5 0feff9b09e482567359625301bddce1c metadata.xml 1329
+MD5 fe490d871f95429eebc900fa7452265c openssh-4.0_p1.ebuild 4202
 MD5 52731cbb5903dc7b0ef3dca7ffd31bad openssh-3.9_p1-r1.ebuild 4349
 MD5 d1055a8536e068dc46b4c99f5bc8be04 openssh-3.8.1_p1-r1.ebuild 4239
 MD5 7c16095191b5dc9d653dcb658650c88c files/digest-openssh-3.8.1_p1-r1 141
 MD5 2cce94a742ab0721d87b1ff63c32d0f9 files/digest-openssh-3.9_p1-r1 136
+MD5 36dfd65d0fff82b925e529c6ee3e3e70 files/digest-openssh-4.0_p1 140
 MD5 5b057f6a1a7c2c0f94f83bc19c4d6a9b files/openssh-3.5_p1-gentoo-sshd-gcc3.patch.bz2 253
 MD5 7880e18b2a91e5927810dddc7bda270f files/openssh-3.7.1_p1-selinux.diff.bz2 1353
 MD5 6d3c9b201c2e89b7156b2fc37ade9721 files/openssh-3.8.1_p1-chroot.patch.bz2 1119
@@ -31,3 +33,4 @@ MD5 3a36e663618004d3c7f599fe43b100f3 files/openssh-3.9_p1-sftplogging-1.2-gentoo
 MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.9_p1-skey.patch.bz2 270
 MD5 f58807d5d75bc9929883e6876c7ddd46 files/openssh-3.9_p1-terminal_restore.patch.bz2 332
 MD5 c326cd447fb5f86124295ef943d3bf35 files/openssh-3.9_p1-kerberos-detection.patch 593
+MD5 2b40bc37836d6ad0054742844e7b4c8e files/openssh-4.0_p1-sftplogging-1.2-gentoo.patch.bz2 5774

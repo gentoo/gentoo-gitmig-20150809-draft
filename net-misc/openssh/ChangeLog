@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.115 2005/03/13 11:05:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.116 2005/03/15 00:23:22 vapier Exp $
+
+*openssh-4.0_p1 (15 Mar 2005)
+
+  15 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-4.0_p1-sftplogging-1.2-gentoo.patch.bz2,
+  +openssh-4.0_p1.ebuild:
+  Version bump #84717 by Michail A.Baikov.
 
   13 Mar 2005; Mike Frysinger <vapier@gentoo.org>
   +files/openssh-3.9_p1-kerberos-detection.patch, openssh-3.9_p1-r1.ebuild:
