@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/xclass-0.8.2-r1.ebuild,v 1.3 2004/06/24 22:09:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/xclass-0.8.2-r1.ebuild,v 1.4 2004/06/28 19:45:27 agriffis Exp $
 
 DESCRIPTION="a C++ GUI toolkit for the X windows environment"
 HOMEPAGE="http://xclass.sourceforge.net/"
@@ -12,7 +12,8 @@ KEYWORDS="x86 ppc sparc alpha"
 IUSE="static"
 
 DEPEND="virtual/x11
-	virtual/glibc"
+	virtual/libc
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
