@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.91 2005/03/22 18:44:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.92 2005/04/03 07:26:38 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -34,8 +34,11 @@ export GAMES_USER_DED=${GAMES_USER_DED:-games}
 export GAMES_GROUP=${GAMES_GROUP:-games}
 
 egamesconf() {
+	local myconf
 	if [[ -x ./configure ]] ; then
 		gnuconfig_update
+		[[ -n ${CBUILD} ]] && myconf="${myconf} --build=${CBUILD}"
+		[[ -n ${CTARGET} ]] && myconf="${myconf} --target=${CTARGET}"
 		echo \
 		./configure \
 			--prefix="${GAMES_PREFIX}" \
@@ -45,8 +48,9 @@ egamesconf() {
 			--datadir="${GAMES_DATADIR}" \
 			--sysconfdir="${GAMES_SYSCONFDIR}" \
 			--localstatedir="${GAMES_STATEDIR}" \
-			${EXTRA_ECONF} \
-			"$@"
+			${myconf} \
+			"$@" \
+			${EXTRA_ECONF}
 		./configure \
 			--prefix="${GAMES_PREFIX}" \
 			--host=${CHOST} \
@@ -55,8 +59,10 @@ egamesconf() {
 			--datadir="${GAMES_DATADIR}" \
 			--sysconfdir="${GAMES_SYSCONFDIR}" \
 			--localstatedir="${GAMES_STATEDIR}" \
+			${myconf} \
+			"$@" \
 			${EXTRA_ECONF} \
-			"$@" || die "egamesconf failed"
+			|| die "egamesconf failed"
 	else
 		die "no configure script found"
 	fi
