@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r2.ebuild,v 1.8 2004/02/24 09:19:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r2.ebuild,v 1.9 2004/03/03 03:38:38 weeve Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ IUSE="apache2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc ~alpha"
+KEYWORDS="x86 sparc ~ppc ~alpha"
 
 DEPEND="virtual/glibc
 	dev-lang/perl
