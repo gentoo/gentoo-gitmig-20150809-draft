@@ -1,0 +1,179 @@
+--- syna_core.c.orig	2004-07-15 17:31:40.375165032 +0100
++++ syna_core.c		2001-04-26 21:46:13.000000000 +0100
+@@ -150,20 +150,17 @@
+ 
+ static void fadeFade()
+ {
+-	register unsigned int *ptr = (unsigned int *) output;
++	register unsigned long *ptr = (unsigned long *) output;
+ 	int i = outWidth * outHeight * 2 / 4;
+ 
+ 	do
+ 	{
+ /*    //Bytewize version was: *(ptr++) -= *ptr+(*ptr>>1)>>4;*/
+ 		if (*ptr)
+-                {
+ /*      //if (*ptr & 0xf0f0f0f0ul)*/
+-			*(ptr) -=
++			*(ptr++) -=
+ 				((*ptr & 0xf0f0f0f0ul) >> 4) +
+ 				((*ptr & 0xe0e0e0e0ul) >> 5);
+-			ptr++;
+-                }
+ /*      //else {
+       //  *(ptr++) = (*ptr * 14 >> 4) & 0x0f0f0f0ful;
+       //}*/
+@@ -206,13 +203,9 @@
+ 	gint x, y, i, j, start, end;
+ 	gint step = outWidth * 2;
+ 
+-        synx_output[2]=synx_output[1];
+-        synx_output[1]=synx_output[0];
+-        synx_output[0]=t;
+-
+-//	lastLastOutput = lastOutput;
+-//	lastOutput = output;
+-//	output = t;
++	lastLastOutput = lastOutput;
++	lastOutput = output;
++	output = t;
+ 
+ 	for (x = 0, i = 0, j = outWidth * (outHeight - 1) * 2; x < outWidth; x++, i += 2, j += 2)
+ 	{
+@@ -280,18 +273,13 @@
+ 
+ static void fadeHeat()
+ {
+-//	guint16 *t = (guint16 *) lastLastOutput;
+-	guint16 *t=synx_output[2];
++	guint16 *t = (guint16 *) lastLastOutput;
+ 	gint x, y, i, j, start, end;
+ 	gint step = outWidth * 2;
+ 
+-	synx_output[2]=synx_output[1];
+-	synx_output[1]=synx_output[0];
+-	synx_output[0]=t;
+-
+-//	lastLastOutput = lastOutput;
+-//	lastOutput = output;
+-//	output = t;
++	lastLastOutput = lastOutput;
++	lastOutput = output;
++	output = t;
+ 
+ 	for (x = 0, i = 0, j = outWidth * (outHeight - 1) * 2; x < outWidth; x++, i += 2, j += 2)
+ 	{
+--- syna_xmms.c.orig	2004-07-15 17:31:47.527077776 +0100
++++ syna_xmms.c		2004-07-15 20:01:25.380236640 +0100
+@@ -20,8 +20,6 @@
+ #include <gdk/gdkkeysyms.h>
+ #include <pthread.h>
+ #include <string.h>
+-#include <stdlib.h>
+-#include <string.h>
+ #include "math.h"
+ #include <xmms/plugin.h>
+ #include <xmms/util.h>
+@@ -287,7 +285,6 @@
+                 case SYNX_MENU_FULLSCRN:
+ 			synx_fullscreen_toggle();
+                         break;
+-			break;
+                 default:
+ 			break;
+                         /* ugh */
+@@ -388,32 +385,22 @@
+ 	gdk_draw_pixmap(area->window, area->style->white_gc, bg_pixmap, 0, 0, (win_w-LOGO_OWIDTH)/2, (win_h-LOGO_OHEIGHT)/2, LOGO_WIDTH, LOGO_HEIGHT);
+ }
+ 
+-static void *synx_main_thread(void *arg)
+-{
+-	guchar *tmpscr=NULL;
+-	int	cursize=0;
++static void *synx_main_thread(void *arg) {
+ 	/* I don't care about lost conditions, darn it! */
+ 	pthread_mutex_lock(&dummy_mutex);
+ 
+-	for (;;)
+-        {
++	for (;;) {
+ 		pthread_cond_wait(&update_signal, &dummy_mutex);
+ 		if (synx_quit) break;
+ 
+ 		GDK_THREADS_ENTER();
+ 		SYNX_LOCK();
+-		if (GTK_WIDGET_REALIZED(window))
+-		{
+-//			guchar tmpscr[synx_img_w*synx_img_h];	/* FIXME: Probably GCC-specific. */
+-			if((tmpscr==NULL)||(cursize!=(synx_img_w*synx_img_h)))
+-			{
+-				tmpscr=(guchar *)realloc(tmpscr,synx_img_w*synx_img_h);
+-				cursize=synx_img_w*synx_img_h;
+-				memset(tmpscr,0x80,cursize);
+-			}
++		if (GTK_WIDGET_REALIZED(window)) {
++			guchar tmpscr[synx_img_w*synx_img_h];	/* FIXME: Probably GCC-specific. */
+ 
+ 			syna_fade();
+ 			syna_coreGo(pcm_data);
++
+ 			synx_screenShow(synx_output[0], tmpscr);
+ 			gdk_draw_indexed_image(area->window,area->style->white_gc,(win_w-synx_img_w)/2,(win_h-synx_img_h)/2,synx_img_w,synx_img_h,GDK_RGB_DITHER_NONE,tmpscr,synx_img_w,cmap);
+ 		}
+@@ -421,9 +408,6 @@
+ 		GDK_THREADS_LEAVE();
+ 	}
+ 
+-	if(tmpscr!=NULL)
+-		free(tmpscr);
+-
+ 	pthread_mutex_unlock(&dummy_mutex);
+ 
+ 	pthread_exit(NULL);
+@@ -496,19 +480,16 @@
+ 	SYNX_UNLOCK();
+ }
+ 
+-static void synx_playback_start(void)
+-{
++static void synx_playback_start(void) {
+ 	SYNX_LOCK();
+ 	synx_playing = TRUE;
+-	if (GTK_WIDGET_REALIZED(window) && synx_cfg.auto_fullscreen)
+-	{
++	if (GTK_WIDGET_REALIZED(window) && synx_cfg.auto_fullscreen) {
+ 		if (!synx_am_fullscreen) synx_fullscreen_toggle();
+ 	}
+ 	SYNX_UNLOCK();
+ }
+ 
+-static void synx_playback_stop(void)
+-{
++static void synx_playback_stop(void) {
+ 	SYNX_LOCK();
+ 	synx_playing = FALSE;
+ 
+@@ -522,10 +503,9 @@
+ 	SYNX_UNLOCK();
+ }
+ 
+-static void synx_screenShow(guint16 *src, unsigned char *dest)
+-{
+-	register unsigned int *ptr2 = (unsigned int*)src;
+-	unsigned int *ptr1 = (unsigned int*)dest;
++static void synx_screenShow(guint16 *src, unsigned char *dest) {
++	register unsigned long *ptr2 = (unsigned long*)src;
++	unsigned long *ptr1 = (unsigned long*)dest;
+ 	int i = synx_img_w*synx_img_h/4;
+ 
+ 	/* Asger Alstrup Nielsen's (alstrup@diku.dk)
+@@ -583,8 +563,7 @@
+ 	}
+ }
+ 
+-static void synx_about(void)
+-{
++static void synx_about(void) {
+ 	GtkWidget *dialog, *button, *label;
+ 
+ 	dialog = gtk_dialog_new();

@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/xmms-synaesthesia
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-synaesthesia/ChangeLog,v 1.6 2004/07/07 21:36:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-synaesthesia/ChangeLog,v 1.7 2004/07/15 19:45:54 slarti Exp $
+
+  15 Jul 2004; Tom Martin <slarti@gentoo.org>
+  xmms-synaesthesia-0.0.3_rc3.ebuild:
+  Added amd64 patches, thanks to Tyler Montbriand <tsm@accesscomm.ca> in bug
+  54937. Added ~amd64 keyword.
 
   07 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/xmms-synaesthesia-0.0.3_rc3-gcc34.patch:
