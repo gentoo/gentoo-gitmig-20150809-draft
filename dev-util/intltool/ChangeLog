@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.46 2004/11/10 23:16:04 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.47 2004/11/11 18:11:51 obz Exp $
+
+  11 Nov 2004; Mike Gardiner <obz@gentoo.org> intltool-0.31.2.ebuild:
+  Keyworded ppc for GNOME 2.8
 
 *intltool-0.32.1 (11 Nov 2004)
 
