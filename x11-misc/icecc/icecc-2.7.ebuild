@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/icecc-2.7.ebuild,v 1.1 2004/07/27 12:10:20 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/icecc-2.7.ebuild,v 1.2 2004/07/27 12:36:04 phosphan Exp $
 
 inherit eutils
 
@@ -18,11 +18,7 @@ DEPEND=">=x11-libs/qt-3.0.0"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -e "s:/usr/local:${D}/usr:" -i ${PN}.pro || die "sed failed"
-	local file
-	for file in *.cpp; do
-		sed -e 's:PREFIX:"/usr":' -i ${file}
-	done
+	sed -e "s:/usr/local:/usr:" -i ${PN}.pro || die "sed failed"
 }
 
 src_compile() {
@@ -31,7 +27,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make INSTALL_ROOT="${D}" install || die
 
 	rm -rf ${D}/usr/doc
 	dohtml ${PN}/docs/en/*.{html,sgml}
