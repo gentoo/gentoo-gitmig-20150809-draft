@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/irc-client
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/ChangeLog,v 1.1 2003/09/10 23:56:26 zul Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/ChangeLog,v 1.2 2004/01/30 17:47:23 zul Exp $
+
+*irc-client-2.10.3_p3 (29 Jan 2004)
+
+  29 Jan 2004; Chuck Short <zul@gentoo.org> irc-client-2.10.3_p3.ebuild:
+  Header cleanups, marked stable for x86.
 
   10 Sep 2003; Chuck Short <zul@gentoo.org> :
   Initial Version, ebuild written by Jesus Perez <jesus.pr@worldonline.es>
