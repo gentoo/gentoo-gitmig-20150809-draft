@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/quickswitch-0.10.ebuild,v 1.13 2003/03/11 21:11:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/quickswitch-0.10.ebuild,v 1.14 2004/02/22 17:42:04 agriffis Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Utility to switch network profiles on the fly"
@@ -9,7 +9,7 @@ HOMEPAGE="http://edgesolutions.ca/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 DEPEND="dev-lang/perl"
 

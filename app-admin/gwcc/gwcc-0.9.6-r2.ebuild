@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gwcc/gwcc-0.9.6-r2.ebuild,v 1.6 2003/09/20 19:56:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gwcc/gwcc-0.9.6-r2.ebuild,v 1.7 2004/02/22 17:40:27 agriffis Exp $
 
 DESCRIPTION="GNOME Workstation Command Center"
 SRC_URI="mirror://sourceforge/gwcc/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://gwcc.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 IUSE="nls"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1"
