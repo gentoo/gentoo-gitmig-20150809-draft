@@ -60,3 +60,6 @@ move media-video/zapping media-tv/zapping
 move x11-misc/nxtvepg media-tv/nxtvepg
 move media-video/tuxzap_programs media-video/tuxzap-programs
 move dev-util/libxml++ dev-cpp/libxmlpp
+move x11-themes/Silver-XCursrors-3D x11-themes/silver-xcursors
+move x11-themes/BlueGlass-XCursrors-3D x11-themes/blueglass-xcursors
+move x11-themes/Golden-XCursrors-3D x11-themes/golden-xcursors
