@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.10.ebuild,v 1.1 2003/10/14 15:50:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.10.ebuild,v 1.2 2003/10/14 19:13:03 caleb Exp $
 
 inherit kde-base
 need-kde 3.1
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/k3b/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86"
-IUSE="debug dvd oggvorbis mad"
+IUSE="debug dvd oggvorbis mad dvdr"
 
 newdepend ">=media-sound/mpg123-0.59
 	>=media-sound/cdparanoia-3.9.8
@@ -23,7 +23,7 @@ RDEPEND="$RDEPEND sys-apps/eject
 	>=app-cdr/cdrtools-1.11
 	>=app-cdr/cdrdao-1.1.5
 	media-sound/normalize
-	app-cdr/dvd+rw-tools
+	dvdr? ( app-cdr/dvd+rw-tools )
 	dvd? ( media-video/transcode media-libs/xvid )"
 
 myconf="$myconf --enable-sso"
