@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r5.ebuild,v 1.11 2004/02/22 19:57:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r5.ebuild,v 1.12 2004/06/24 22:22:55 agriffis Exp $
 
 inherit eutils flag-o-matic
 

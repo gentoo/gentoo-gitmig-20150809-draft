@@ -1,6 +1,6 @@
 # ChangeLog for app-shells/ash
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.7 2004/05/12 19:18:44 kloeri Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.8 2004/06/24 22:22:44 agriffis Exp $
 
   12 May 2004; Bryan Østergaard <kloeri@gentoo.org> ash-1.6.ebuild:
   Stable on alpha.

@@ -1,6 +1,6 @@
 # ChangeLog for app-shells/smrsh
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/ChangeLog,v 1.4 2004/02/12 22:45:44 max Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/ChangeLog,v 1.5 2004/06/24 22:25:56 agriffis Exp $
 
   12 Feb 2004; Max Kalika <max@gentoo.org> smrsh-8.12.10.ebuild,
   smrsh-8.12.9.ebuild:
