@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.13.ebuild,v 1.3 2004/04/26 04:07:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.13.ebuild,v 1.4 2004/06/08 02:02:04 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -53,27 +53,27 @@ src_compile() {
 		sed -e "s:pentiumpro:${cpu}:g" -i "settings.pro" || die "sed failed"
 	fi
 
-	if [ "`use alsa`" ] ; then
+	if use alsa ; then
 		sed -e "s:#CONFIG += using_alsa:CONFIG += using_alsa:" \
 			-e "s:#ALSA_LIBS = -lasound:ALSA_LIBS = -lasound:" \
 			-i "settings.pro" || die "enable alsa sed failed"
 	fi
-	if [ "`use lcd`" ] ; then
+	if use lcd ; then
 		sed -e "s:#DEFINES += LCD_DEVICE:DEFINES += LCD_DEVICE:" \
 			-i "settings.pro" || die "enable lcd sed failed"
 	fi
-	if [ "`use lirc`" ] ; then
+	if use lirc ; then
 		sed -e "s:#CONFIG += using_lirc:CONFIG += using_lirc:" \
 			-e "s:#LIRC_LIBS = -llirc_client:LIRC_LIBS = -llirc_client:" \
 			-i "settings.pro" || die "enable lirc sed failed"
 	fi
-	if [ "`use nvidia`" ] ; then
+	if use nvidia ; then
 		sed -e "s:#CONFIG += using_xvmc:CONFIG += using_xvmc:" \
 			-e "s:#EXTRA_LIBS += -lXvMCNVIDIA:EXTRA_LIBS += -lXvMCNVIDIA:" \
 			-i "settings.pro" || die "enable xvmc sed failed"
 	fi
 	# Needs a VIA supported kernel driver.
-	#if [ "`use via`" ] ; then
+	#if use via ; then
 	#	sed -e "s:#CONFIG += using_via:CONFIG += using_via:"
 	#		-e "s:#EXTRA_LIBS += -lddmpeg:EXTRA_LIBS += -lddmpeg:"
 	#		-i "settings.pro" || die "enable lirc sed failed"

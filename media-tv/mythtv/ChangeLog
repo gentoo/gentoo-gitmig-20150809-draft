@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.22 2004/06/02 21:45:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.23 2004/06/08 02:05:09 agriffis Exp $
+
+  07 Jun 2004; Aron Griffis <agriffis@gentoo.org> mythtv-0.13-r1.ebuild,
+  mythtv-0.14-r1.ebuild, mythtv-0.15.1.ebuild:
+  Fix use invocation
 
   02 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> mythtv-0.15.1.ebuild:
   + Added check for OpenGL implementation, closing #52722.

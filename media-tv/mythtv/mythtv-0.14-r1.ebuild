@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.14-r1.ebuild,v 1.5 2004/04/26 18:38:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.14-r1.ebuild,v 1.6 2004/06/08 02:05:09 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -63,12 +63,12 @@ src_compile() {
 		fi
 	fi
 
-	if [ "`use alsa`" ] ; then
+	if use alsa ; then
 		sed -e 's:#CONFIG += using_alsa:CONFIG += using_alsa:' \
 			-e 's:#ALSA_LIBS = -lasound:ALSA_LIBS = -lasound:' \
 			-i 'settings.pro' || die "enable alsa sed failed"
 	fi
-	if [ "`use arts`" ] ; then
+	if use arts ; then
 		sed -e 's:artsc/artsc.h:artsc.h:' \
 			-i "libs/libmyth/audiooutputarts.h" || die "sed failed"
 		sed -e 's:#CONFIG += using_arts:CONFIG += using_arts:' \
@@ -77,34 +77,34 @@ src_compile() {
 			-e 's:#INCLUDEPATH += /opt/.*:QMAKE_CXXFLAGS += `artsc-config --cflags`:' \
 			-i 'settings.pro' || die "enable arts sed failed"
 	fi
-	if [ "`use directfb`" ] ; then
+	if use directfb ; then
 		sed -e 's:#CONFIG += using_directfb:CONFIG += using_directfb:' \
 			-e 's:#EXTRA_LIBS += `directfb:EXTRA_LIBS += `directfb:' \
 			-e 's:#QMAKE_CXXFLAGS += `directfb:QMAKE_CXXFLAGS += `directfb:' \
 			-i 'settings.pro' || die "enable arts sed failed"
 	fi
-	if [ "`use dvb`" ] ; then
+	if use dvb ; then
 		sed -e 's:#CONFIG += using_dvb:CONFIG += using_dvb:' \
 			-e 's:#DEFINES += USING_DVB:DEFINES += USING_DVB:' \
 			-e 's:#INCLUDEPATH += /usr/src/.*:INCLUDEPATH += /usr/include:' \
 			-i 'settings.pro' || die "enable dvb sed failed"
 	fi
-	if [ "`use lcd`" ] ; then
+	if use lcd ; then
 		sed -e 's:#DEFINES += LCD_DEVICE:DEFINES += LCD_DEVICE:' \
 			-i 'settings.pro' || die "enable lcd sed failed"
 	fi
-	if [ "`use lirc`" ] ; then
+	if use lirc ; then
 		sed -e 's:#CONFIG += using_lirc:CONFIG += using_lirc:' \
 			-e 's:#LIRC_LIBS = -llirc_client:LIRC_LIBS = -llirc_client:' \
 			-i 'settings.pro' || die "enable lirc sed failed"
 	fi
-	if [ "`use nvidia`" ] ; then
+	if use nvidia ; then
 		sed -e 's:#CONFIG += using_xvmc:CONFIG += using_xvmc:' \
 			-e 's:#DEFINES += USING_XVMC:DEFINES += USING_XVMC:' \
 			-e 's:#EXTRA_LIBS += -lXvMCNVIDIA:EXTRA_LIBS += -lXvMCNVIDIA:' \
 			-i 'settings.pro' || die "enable xvmc sed failed"
 	fi
-	if [ "`use cle266`" ] ; then
+	if use cle266 ; then
 		sed -e 's:#CONFIG += using_viahwslice:CONFIG += using_viahwslice:' \
 			-e 's:#DEFINES += USING_VIASLICE:DEFINES += USING_VIASLICE:' \
 			-e 's:#EXTRA_LIBS += -lddmpeg:EXTRA_LIBS += -lddmpeg:' \

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.91-r1.ebuild,v 1.1 2004/06/04 15:26:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.91-r1.ebuild,v 1.2 2004/06/08 02:03:24 agriffis Exp $
 
 inherit virtualx
 
@@ -76,7 +76,7 @@ src_install() {
 		dodoc ${FILESDIR}/webcamrc
 	fi
 
-	if [ -z "`use nls`" ]
+	if ! use nls
 	then
 		rm -f ${D}/usr/share/man/fr
 		rm -f ${D}/usr/share/man/es

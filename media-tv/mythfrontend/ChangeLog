@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythfrontend
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.16 2004/06/02 21:45:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.17 2004/06/08 02:02:04 agriffis Exp $
+
+  07 Jun 2004; Aron Griffis <agriffis@gentoo.org> mythfrontend-0.13.ebuild,
+  mythfrontend-0.14-r1.ebuild, mythfrontend-0.15.1.ebuild:
+  Fix use invocation
 
   02 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> mythfrontend-0.15.1.ebuild:
   + Added check for OpenGL implementation, closing #52722.
