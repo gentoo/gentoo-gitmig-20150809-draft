@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/gtkdiskfree-1.9.3.ebuild,v 1.10 2004/11/30 02:00:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/gtkdiskfree-1.9.3.ebuild,v 1.11 2004/12/16 10:50:01 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://gtkdiskfree.tuxfamily.org/src_tgz/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc ~ppc64 x86"
+KEYWORDS="ppc ppc64 x86"
 IUSE="nls"
 
 DEPEND=">=x11-libs/gtk+-2
