@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.22-r3.ebuild,v 1.1 2004/12/29 18:42:56 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.22-r3.ebuild,v 1.2 2004/12/30 16:57:58 lanius Exp $
 
 # because of the experimental nature debug by default
 inherit debug eutils mono python
@@ -41,8 +41,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 
 	unpack ${A}
-
 	cd ${S}
+
 	epatch ${FILESDIR}/${P}-python_int64.patch
 
 	local cs
@@ -61,9 +61,8 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-qt.patch
 
-	cd ${S}
+	autoconf || die
 	automake || die
-
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 MD5 f30a48ba3a091f1e1472804d8fefba8d dbus-0.22-r2.ebuild 3213
 MD5 161dbdd90b13a224e0ed46d87d3426cf dbus-0.22-r1.ebuild 2857
-MD5 6ebae9721e8ff9321e78db8f349cfab1 dbus-0.22-r3.ebuild 3232
+MD5 c5531b6a096eff2f86084195544b6ace dbus-0.22-r3.ebuild 3239
 MD5 711309510b4be681a1a58b1980bcd9b3 ChangeLog 3502
 MD5 5b5bcd9c1a432b2c8157b0004a073f72 metadata.xml 224
 MD5 5ad50ae94f784548fc0d6f1364ce23bb files/dbus 544
