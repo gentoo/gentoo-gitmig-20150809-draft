@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achime Gottinger <achim@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-de/ispell-de-20011124.ebuild,v 1.2 2002/04/17 18:47:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-de/ispell-de-20011124.ebuild,v 1.3 2002/04/27 05:11:16 seemant Exp $
 
 MY_P=igerman98-${PV}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ DEPEND="app-text/ispell"
 
 src_compile() {
 
-    make || die
+	make || die
 
 	make \
 		SQ=`pwd`/bin/sq.pl \
@@ -28,10 +28,9 @@ src_install () {
 		DESTDIR=${D} \
 		install swiss-install || die
 	
-    insinto /usr/lib/ispell
-    doins german.aff german.hash
+	insinto /usr/lib/ispell
+	doins german.aff german.hash
  
-    dodoc Documentation/*
+	dodoc Documentation/*
 
 }
-

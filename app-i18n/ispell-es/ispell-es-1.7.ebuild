@@ -3,10 +3,10 @@
 # Maintainer: Leonardo Boshell <p@kapcoweb.com>
 # /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.4 2002/03/12 16:05:09 tod Exp
 
-MYP="espa~nol-"${PV}
-S=${WORKDIR}/${MYP}
+MY_P="espa~nol-"${PV}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="A Spanish dictionary for ispell"
-SRC_URI="ftp://ftp.fi.upm.es/pub/unix/${MYP}.tar.gz"
+SRC_URI="ftp://ftp.fi.upm.es/pub/unix/${MY_P}.tar.gz"
 HOMEPAGE="http://www.datsi.fi.upm.es/~coes/"
 
 DEPEND="app-text/ispell"
