@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.12-r1.ebuild,v 1.3 2003/09/05 08:38:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.12-r1.ebuild,v 1.4 2003/11/05 00:54:30 wwoods Exp $
 
 IUSE="ssl mysql sasl ldap ipv6 maildir mbox"
 
@@ -20,7 +20,7 @@ SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${P}.tar.gz
 
 SLOT="0"
 LICENSE="IPL-1"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha"
 
 PROVIDE="virtual/mta
 	virtual/mda"
