@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.0b.ebuild,v 1.7 2004/07/01 07:56:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.0b.ebuild,v 1.8 2004/07/14 20:51:16 agriffis Exp $
 
 IUSE="debug nls alsa"
 
@@ -18,8 +18,6 @@ DEPEND="virtual/libc
 	~media-libs/libid3tag-${PV}
 	nls? ( >=sys-devel/gettext-0.11.2 )
 	alsa? ( >=media-libs/alsa-lib-0.9.0 )"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	local myconf

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/aseqview-0.1.4.ebuild,v 1.5 2004/06/24 23:51:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/aseqview-0.1.4.ebuild,v 1.6 2004/07/14 20:46:30 agriffis Exp $
 
 IUSE=""
 
@@ -15,7 +15,6 @@ SLOT="0"
 KEYWORDS="x86"
 
 SRC_URI="http://www.alsa-project.org/~iwai/${P}.tar.gz"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	econf || die "./configure failed"

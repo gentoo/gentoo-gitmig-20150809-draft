@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/rplay-3.3.2.ebuild,v 1.12 2004/07/01 07:58:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/rplay-3.3.2.ebuild,v 1.13 2004/07/14 20:53:07 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,8 +14,6 @@ KEYWORDS="x86 alpha sparc ppc amd64"
 IUSE=""
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}"
-
-S=${WORKDIR}/${P}
 
 pkg_setup() {
 		enewgroup "rplayd" ""
