@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.139 2005/01/10 02:40:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.140 2005/01/11 04:24:39 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1483,6 +1483,10 @@ strip-linguas() {
 
 # set's ARCH to match what the kernel expects
 set_arch_to_kernel() {
+	i=10
+	while ((i--)) ; do
+		ewarn "PLEASE UPDATE TO YOUR PACKAGE TO USE linux-info.eclass"
+	done
 	export EUTILS_ECLASS_PORTAGE_ARCH="${ARCH}"
 	case ${ARCH} in
 		x86)	export ARCH="i386";;
@@ -1495,6 +1499,10 @@ set_arch_to_kernel() {
 
 # set's ARCH back to what portage expects
 set_arch_to_portage() {
+	i=10
+	while ((i--)) ; do
+		ewarn "PLEASE UPDATE TO YOUR PACKAGE TO USE linux-info.eclass"
+	done
 	export ARCH="${EUTILS_ECLASS_PORTAGE_ARCH}"
 }
 
