@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2899 2004/05/31 12:09:22 twp Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2900 2004/06/01 11:56:58 g2boojum Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -25,16 +25,6 @@
 # <twp@gentoo.org> (31 May 2004)
 # Pending resolution of bug # 52544
 =app-text/man2html-1.5l-r2
-
-# <g2boojum@gentoo.org> (30 May 2004)
-# New USE=mailwrapper stuff, to be unmasked all at once.
->=net-mail/mailwrapper-0.2
->=mail-mta/sendmail-8.12.11-r3
->=mail-mta/ssmtp-2.60.7-r1
->=mail-mta/postfix-2.0.19-r3
->=mail-mta/exim-4.34-r1
->=mail-mta/nullmailer-1.00_rc7-r4
-
 
 # <games@gentoo.org> (26 May 2004)
 # Using system libmikmod breaks mod music #52064
