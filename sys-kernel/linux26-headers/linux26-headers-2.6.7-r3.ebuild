@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.7-r3.ebuild,v 1.2 2004/07/19 19:00:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.7-r3.ebuild,v 1.3 2004/07/20 15:12:27 vapier Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -47,10 +47,10 @@ src_unpack() {
 	kernel_universal_unpack
 
 	# User-space patches for various things
-	epatch ${FILESDIR}/${PN}-2.6.7-appCompat.patch
 	epatch ${FILESDIR}/${PN}-2.6.3-strict-ansi-fix.patch
 	epatch ${FILESDIR}/${PN}-2.6.0-sysctl_h-compat.patch
 	epatch ${FILESDIR}/${PN}-2.6.0-fb.patch
+	epatch ${FILESDIR}/${PN}-2.6.7-generic-arm-prepare.patch
 }
 
 src_compile() {
@@ -63,7 +63,11 @@ src_compile() {
 	set_arch_to_kernel
 	ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
 	make defconfig HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include/"
+	make prepare || die "prepare failed"
 	set_arch_to_portage
+
+	# this must happen after `make prepare`
+	epatch ${FILESDIR}/${PN}-2.6.7-appCompat.patch
 }
 
 src_install() {
