@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.11 2002/11/17 01:52:17 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.12 2002/11/17 02:54:49 leonardop Exp $
 
 # The gtk-engines eclass is inheritd by all gtk-engines-* ebuilds.
 
@@ -8,6 +8,8 @@ inherit base
 
 ECLASS=gtk-engines
 INHERITED="$INHERITED $ECLASS"
+
+[ -n "$DEBUG" ] && einfo "Entering gtk-engines.eclass"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 HOMEPAGE="http://www.gnome.org/"
@@ -25,9 +27,13 @@ case "${SLOT}" in
 		newdepend x11-libs/gtk+ ;;
 esac
 
+[ -n "$DEBUG" ] && einfo "SLOT is ${SLOT}"
+
 MY_PN="${PN}"
 INSTALL_FONTS=0
 ENGINE=${PN/gtk-engines-/}
+
+[ -n "$DEBUG" ] && einfo "ENGINE is ${ENGINE}"
 
 case "${ENGINE}" in
 	"cleanice" )
@@ -103,6 +109,8 @@ esac
 
 MY_P="${MY_PN}-${PV}"
 
+[ -n "$DEBUG" ] && einfo "MY_P is ${MY_P}"
+
 if [ "X${ENGINE}" = "Xthinice" ] && [ "$SLOT" -eq "2" ]
 then
 	SRC_URI="http://thinice.sourceforge.net/${MY_P}.tar.gz"
@@ -141,6 +149,7 @@ else
 	SRC_URI="http://ftp.debian.org/debian/pool/main/$SRC_PATH"
 fi
 
+[ -n "$DEBUG" ] && einfo "SRC_URI is ${SRC_URI}"
 
 gtk-engines_src_unpack() {
 	unpack ${A}
