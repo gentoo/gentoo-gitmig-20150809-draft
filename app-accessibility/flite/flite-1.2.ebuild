@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.2.ebuild,v 1.7 2004/06/24 21:22:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.2.ebuild,v 1.8 2004/06/25 15:57:07 vapier Exp $
 
 DESCRIPTION="Flite text to speech engine"
 HOMEPAGE="http://www.speech.cs.cmu.edu/flite/index.html"
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 IUSE="static"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 S=${WORKDIR}/${P}-release
 
@@ -26,8 +26,8 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf;
-	if ! use static; then
+	local myconf
+	if ! use static ; then
 		myconf="${myconf} --enable-shared"
 	fi
 
@@ -36,11 +36,11 @@ src_compile() {
 	emake -j1 || die "Failed compilation"
 }
 
-src_install () {
-	dobin bin/*
+src_install() {
+	dobin bin/* || die
 	dodoc ACKNOWLEDGEMENTS README
 
-	if use static; then
+	if use static ; then
 		dolib.a lib/*.a
 	else
 		for lib in lib/*.so*; do

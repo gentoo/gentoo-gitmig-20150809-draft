@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/yasr-0.6.5.ebuild,v 1.8 2004/06/24 21:25:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/yasr-0.6.5.ebuild,v 1.9 2004/06/25 15:58:50 vapier Exp $
 
 DESCRIPTION="general-purpose console screen reader"
 HOMEPAGE="http://yasr.sourceforge.net/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-devel/make-3.80
 	>=sys-devel/autoconf-2.58"
 RDEPEND=""

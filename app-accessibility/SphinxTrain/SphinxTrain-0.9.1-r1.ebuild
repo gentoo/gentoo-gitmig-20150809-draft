@@ -1,44 +1,37 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/SphinxTrain-0.9.1-r1.ebuild,v 1.4 2004/06/24 21:25:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/SphinxTrain-0.9.1-r1.ebuild,v 1.5 2004/06/25 15:53:10 vapier Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${PN}
-DESCRIPTION="SphinxTrain - Speech Recognition (Training Module)"
+DESCRIPTION="Speech Recognition (Training Module)"
 HOMEPAGE="http://www.speech.cs.cmu.edu/SphinxTrain/"
 SRC_URI="http://www.speech.cs.cmu.edu/${PN}/${P}-beta.tar.gz"
-SLOT="0"
+
 LICENSE="BSD as-is"
+SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	app-accessibility/sphinx2
 	app-accessibility/festival"
+
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
 	epatch ${FILESDIR}/gcc.patch
 }
 
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
-}
-
-src_install () {
-	dodoc etc/*cfg
-	dobin bin.*/*
-	dodoc README
+src_install() {
+	dobin bin.*/* || die
+	dodoc README etc/*cfg
 	dohtml doc/*[txt html sgml]
 }
 
 pkg_postinst() {
-	einfo
 	einfo "Detailed usage and training instructions can be found at"
 	einfo "http://www.speech.cs.cmu.edu/SphinxTrain/"
-	einfo
 }

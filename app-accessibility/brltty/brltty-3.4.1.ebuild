@@ -1,20 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.4.1.ebuild,v 1.8 2004/06/24 21:17:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.4.1.ebuild,v 1.9 2004/06/25 15:55:35 vapier Exp $
 
-IUSE="gpm"
-
-DESCRIPTION="BRLTTY is a background process (daemon) which provides access to the Linux/Unix console (when in text mode) for a blind person "
-HOMEPAGE="http://mielke.cc/brltty"
+DESCRIPTION="daemon that provides access to the Linux/Unix console for a blind person"
+HOMEPAGE="http://mielke.cc/brltty/"
 SRC_URI="http://mielke.cc/brltty/releases/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa ~mips amd64 ~ia64 ~ppc64"
+SLOT="0"
+KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64 ~ia64 ~ppc64"
+IUSE="gpm"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	gpm? ( >=sys-libs/gpm-1.20 )"
-
 
 src_unpack() {
 	unpack ${A}
@@ -23,8 +21,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf \
-		`use_enable gpm` || die
+	econf `use_enable gpm` || die
 	make || die
 }
 

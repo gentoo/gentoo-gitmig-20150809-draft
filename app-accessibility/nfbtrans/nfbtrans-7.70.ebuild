@@ -1,17 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/nfbtrans/nfbtrans-7.70.ebuild,v 1.4 2004/06/24 21:23:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/nfbtrans/nfbtrans-7.70.ebuild,v 1.5 2004/06/25 16:00:45 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="The braille translator from the National Federation of the Blind"
+DESCRIPTION="braille translator from the National Federation of the Blind"
 HOMEPAGE="http://www.nfb.org/nfbtrans.htm"
 SRC_URI="http://www.nfb.org/braille/nfbtrans/nfbtr770.zip"
+
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
-RDEPEND="virtual/glibc"
+
+RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 	>=app-arch/unzip-5.50-r2"
 
@@ -30,7 +32,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin nfbtrans
+	dobin nfbtrans || die
 	dodoc *fmt readme.txt makedoc
 	insinto /etc/nfbtrans
 	doins *cnf *tab *dic spell.dat *zip
