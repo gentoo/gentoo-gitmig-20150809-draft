@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.8 2003/03/25 10:25:27 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.9 2003/04/23 09:09:46 aliz Exp $
+
+  23 Apr 2003; Daniel Ahlberg <aliz@gentoo.org> stunnel-4.04.ebuild :
+  Added static support from #19561.
 
 *stunnel-4.04 (25 Mar 2003)
 
