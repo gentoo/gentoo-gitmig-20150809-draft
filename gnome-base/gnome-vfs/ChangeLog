@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.72 2004/01/29 04:47:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.73 2004/02/05 18:16:15 foser Exp $
+
+*gnome-vfs-2.4.2 (05 Feb 2004)
+
+  05 Feb 2004; foser <foser@gentoo.org> gnome-vfs-2.4.2.ebuild :
+  New release
 
   28 Jan 2004; Aron Griffis <agriffis@gentoo.org> gnome-vfs-2.4.1.ebuild:
   stable on alpha and ia64
