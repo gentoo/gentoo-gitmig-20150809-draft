@@ -1,6 +1,6 @@
-# ChangeLog for net-fs/kasablanca
+# ChangeLog for net-ftp/kasablanca
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/ChangeLog,v 1.1 2004/04/30 00:05:43 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/ChangeLog,v 1.2 2004/05/12 08:19:07 aliz Exp $
 
   30 Apr 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +kasablanca-0.3.1.ebuild:
