@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/libgail-gnome-0.5.0.ebuild,v 1.2 2002/05/23 23:21:52 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/libgail-gnome-0.5.0.ebuild,v 1.3 2002/07/25 04:11:01 spider Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -14,8 +14,10 @@ DESCRIPTION="GAIL libraries for Gnome2 "
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
+KEYWORDS="x86 ppc"
+LICENSE="LGPL-2"
 
-RDEPEND=">=gnome-base/libgnomeui-1.112.1
+rdepenD=">=gnome-base/libgnomeui-1.112.1
 	>=gnome-base/libbonoboui-1.112.1
 	>=gnome-extra/at-spi-0.0.8
 	>=dev-libs/atk-1.0.0
