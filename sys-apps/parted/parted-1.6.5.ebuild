@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.5.ebuild,v 1.8 2003/09/15 17:58:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.5.ebuild,v 1.9 2003/09/19 11:25:24 vapier Exp $
 
 DESCRIPTION="Create, destroy, resize, check, copy partitions and file systems"
 HOMEPAGE="http://www.gnu.org/software/parted"
@@ -17,7 +17,7 @@ DEPEND=">=sys-fs/e2fsprogs-1.27
 	nls? ( sys-devel/gettext )
 	readline? ( >=sys-libs/readline-4.1-r4 )"
 RDEPEND="${DEPEND}
-	=dev-libs/progsreiserfs-0.3.0*"
+	=sys-fs/progsreiserfs-0.3.0*"
 
 src_compile() {
 	local myconf
