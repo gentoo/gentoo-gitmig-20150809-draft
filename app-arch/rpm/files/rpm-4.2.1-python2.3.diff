@@ -1,7 +1,7 @@
-diff -ur rpm-4.2/python/Makefile.in rpm-4.2.new/python/Makefile.in
---- rpm-4.2/python/Makefile.in	2003-03-10 11:09:42.000000000 -0800
-+++ rpm-4.2.new/python/Makefile.in	2004-10-23 18:16:25.802568264 -0700
-@@ -209,7 +209,8 @@
+diff -ru rpm-4.2.1/python/Makefile.in rpm-4.2.1.new/python/Makefile.in
+--- rpm-4.2.1/python/Makefile.in	2003-07-16 19:05:47.000000000 +0200
++++ rpm-4.2.1.new/python/Makefile.in	2004-01-24 21:38:59.000000000 +0100
+@@ -258,7 +258,8 @@
  
  PYVER = @WITH_PYTHON_VERSION@
  
@@ -11,7 +11,7 @@ diff -ur rpm-4.2/python/Makefile.in rpm-4.2.new/python/Makefile.in
  pyincdir = $(prefix)/include/python${PYVER}
  
  SUBDIRS = rpmdb test
-@@ -242,10 +243,9 @@
+@@ -291,10 +292,9 @@
  
  LDADD = 
  
@@ -23,11 +23,10 @@ diff -ur rpm-4.2/python/Makefile.in rpm-4.2.new/python/Makefile.in
  rpmdb_PROGRAMS = _rpmdb.so
  
  noinst_PROGRAMS = poptmodule.so
-Only in rpm-4.2.new/python: Makefile.in.orig
-diff -ur rpm-4.2/python/rpmdb/Makefile.in rpm-4.2.new/python/rpmdb/Makefile.in
---- rpm-4.2/python/rpmdb/Makefile.in	2003-03-10 11:09:42.000000000 -0800
-+++ rpm-4.2.new/python/rpmdb/Makefile.in	2004-10-23 18:16:25.803568112 -0700
-@@ -207,13 +207,13 @@
+diff -ru rpm-4.2.1/python/rpmdb/Makefile.in rpm-4.2.1.new/python/rpmdb/Makefile.in
+--- rpm-4.2.1/python/rpmdb/Makefile.in	2003-07-16 19:05:47.000000000 +0200
++++ rpm-4.2.1.new/python/rpmdb/Makefile.in	2004-01-24 22:06:07.000000000 +0100
+@@ -256,13 +256,13 @@
  
  PYVER = @WITH_PYTHON_VERSION@
  
@@ -43,4 +42,3 @@ diff -ur rpm-4.2/python/rpmdb/Makefile.in rpm-4.2.new/python/rpmdb/Makefile.in
  rpmdb_SCRIPTS = \
  	__init__.py dbobj.py db.py dbrecio.py dbshelve.py dbtables.py dbutils.py
  
-Only in rpm-4.2.new/python/rpmdb: Makefile.in.orig

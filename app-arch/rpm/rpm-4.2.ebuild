@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.18 2004/10/24 01:53:43 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.ebuild,v 1.9 2004/10/24 01:53:43 cretin Exp $
 
 inherit python flag-o-matic libtool eutils
 
 DESCRIPTION="Red Hat Package Management Utils"
 HOMEPAGE="http://www.rpm.org/"
-SRC_URI="mirror://gentoo/rpm-4.2.1.tar.gz"
+SRC_URI="mirror://gentoo/rpm-4.2.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc s390 sparc -x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc s390 sparc x86"
 IUSE="nls python doc"
 
 RDEPEND="=sys-libs/db-3.2*
@@ -26,7 +26,7 @@ RDEPEND="=sys-libs/db-3.2*
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/rpm-4.2.1-python2.3.diff
+	epatch ${FILESDIR}/rpm-4.2-python2.3.diff
 }
 
 src_compile() {
