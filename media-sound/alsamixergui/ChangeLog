@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsamixergui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/ChangeLog,v 1.21 2004/11/22 22:04:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/ChangeLog,v 1.22 2004/12/06 13:13:55 josejx Exp $
+
+  07 Dec 2004; Joseph Jezak <josejx@gentoo.org>
+  +files/segfault-on-exit.patch, alsamixergui-0.9.0.1.2-r4.ebuild:
+  Added fix for bug #67307 and marked ppc stable.
 
   22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsamixergui-0.9.0.1.2-r4.ebuild:

@@ -1,0 +1,11 @@
+--- src/alsamixer.cxx	2004-12-07 00:02:52.649159520 +1100
++++ /home/jjezak/alsamixer.cxx	2004-12-07 00:00:26.385394992 +1100
+@@ -1869,7 +1869,7 @@
+ 			if (procWindow) delete procWindow;
+ 			if (mainWindow) delete mainWindow;
+ 			mainWindow = 0; procWindow = 0; helpWindow = 0;
+-			return 0;
++			mixer_abort (ERR_NONE, "", 0);
+ #endif /* #ifdef ALSAMIXER_GUI */
+       break;
+     case 13:	/* Return */
