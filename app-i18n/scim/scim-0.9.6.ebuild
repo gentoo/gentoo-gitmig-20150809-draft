@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.9.6.ebuild,v 1.4 2004/06/24 21:53:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-0.9.6.ebuild,v 1.5 2004/06/27 05:59:48 usata Exp $
 
 inherit gnome2 eutils
 
@@ -20,7 +20,8 @@ RDEPEND="virtual/x11
 	>=x11-libs/gtk+-2
 	>=dev-libs/atk-1
 	>=x11-libs/pango-1
-	>=dev-libs/glib-2"
+	>=dev-libs/glib-2
+	!app-i18n/scim-cvs"
 DEPEND="${RDEPEND}
 	dev-lang/perl"
 PDEPEND=">=app-i18n/scim-tables-0.3.5"
