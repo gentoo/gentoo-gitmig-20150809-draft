@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.6 2004/09/29 02:01:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.7 2004/09/29 03:10:14 wolf31o2 Exp $
 
 inherit games
 
@@ -40,15 +40,15 @@ src_install() {
 	dodir ${dir}
 	einfo "Copying files... this may take a while..."
 	exeinto ${dir}
-	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/{t2launch,tribes2,tribes2.dynamic,tribes2d,tribes2d-restart.sh,tribes2d.dynamic}
+	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/{t2launch,tribes2,tribes2.dynamic,tribes2d,tribes2d-restart.sh,tribes2d.dynamic} || die "doexe failed"
 
-	cp ${CDROM_ROOT}/{README,README.tribes2d,Tribes2_Manual.pdf,console_start.cs,kver.pub} ${Ddir}
+	cp ${CDROM_ROOT}/{README,README.tribes2d,Tribes2_Manual.pdf,console_start.cs,kver.pub} ${Ddir} || die "copy failed"
 
 	# Video card profiles
 	tar xzf ${CDROM_ROOT}/profiles.tar.gz -C ${Ddir} || die "uncompressing profiles"
 
 	# Base (Music, Textures, Maps, etc.)
-	cp -rf ${CDROM_ROOT}/base ${CDROM_ROOT}/menu ${Ddir}
+	cp -rf ${CDROM_ROOT}/base ${CDROM_ROOT}/menu ${Ddir} || die "copying data"
 
 	cd ${S}
 	loki_patch --verify patch.dat
@@ -58,14 +58,6 @@ src_install() {
 	# be different ... that means portage will try to unmerge some files (!)
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
 	find ${Ddir} -exec touch '{}' \;
-
-	#dodir ${GAMES_BINDIR}
-	#dosym ${dir}/t2launch ${GAMES_BINDIR}/t2launch
-	#dosym ${dir}/tribes2 ${GAMES_BINDIR}/tribes2
-	#dosym ${dir}/tribes2.dynamic ${GAMES_BINDIR}/tribes2.dynamic
-	#dosym ${dir}/tribes2d ${GAMES_BINDIR}/tribes2d
-	#dosym ${dir}/tribes2d-restart.sh ${GAMES_BINDIR}/tribes2d-restart.sh
-	#dosym ${dir}/tribes2d.dynamic ${GAMES_BINDIR}/tribes2d.dynamic
 
 	games_make_wrapper t2launch ./t2launch ${dir}
 
