@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-0.6.4.1-r1.ebuild,v 1.1 2004/10/30 18:00:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-0.6.4.1-r1.ebuild,v 1.2 2005/01/21 17:25:49 carlo Exp $
 
 inherit kde
 need-kde 3
