@@ -145,3 +145,4 @@ move net-www/screem dev-util/screem
 move net-www/webcpp dev-util/webcpp
 move net-www/prozilla www-client/prozilla
 move net-www/davfs2 net-fs/davfs2
+move net-www/bookmarksync www-misc/bookmarksync
