@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mcvs
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mcvs/ChangeLog,v 1.4 2004/06/08 07:46:23 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mcvs/ChangeLog,v 1.5 2004/06/08 16:29:20 mkennedy Exp $
+
+  08 Jun 2004; <mkennedy@gentoo.org> mcvs-1.0.13.ebuild:
+  Marking stable x86
 
 *mcvs-1.0.13 (08 Jun 2004)
 
