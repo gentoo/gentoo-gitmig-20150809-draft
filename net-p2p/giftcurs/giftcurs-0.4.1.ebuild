@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/giftcurs-0.4.1.ebuild,v 1.1 2002/06/25 10:26:11 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/giftcurs-0.4.1.ebuild,v 1.2 2002/06/25 11:22:15 bangert Exp $
 
 S="${WORKDIR}/giFTcurs-${PV}"
 DESCRIPTION="a cursed frontend to the giFT (OpenFT) daemon"
@@ -11,7 +11,7 @@ SLOT="0"
 
 DEPENDS="virtual/glibc
 	>=sys-libs/ncurses-5.2
-	>=net-misc/gift-0.10.0_pre020527"
+	>=net-p2p/gift-0.10.0_pre020527"
 
 src_compile() {
 	local myconf
