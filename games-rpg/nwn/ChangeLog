@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.11 2004/05/17 18:43:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.12 2004/05/18 11:45:55 wolf31o2 Exp $
+
+  18 May 2004; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.62.ebuild:
+  Added RDEPEND for app-emulation/emul-linux-x86-baselibs on amd64.
 
   17 May 2004; Chris Gianelloni <wolf31o2@gentoo.org> +files/nwn.png,
   nwn-1.62.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.62.ebuild,v 1.4 2004/05/17 18:43:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.62.ebuild,v 1.5 2004/05/18 11:45:55 wolf31o2 Exp $
 
 inherit games
 
@@ -19,7 +19,8 @@ RESTRICT="nostrip nomirror"
 
 RDEPEND="virtual/x11
 	virtual/opengl
-	>=media-libs/libsdl-1.2.5"
+	>=media-libs/libsdl-1.2.5
+	amd64? ( app-emulation/emul-linux-x86-baselibs )"
 
 S="${WORKDIR}/nwn"
 
