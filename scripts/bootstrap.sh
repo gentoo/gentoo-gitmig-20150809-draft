@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.64 2004/11/27 21:26:17 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.65 2004/12/23 05:19:32 vapier Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -160,12 +160,16 @@ for opt in ${ORIGUSE} ; do
 	case "${opt}" in
 		nls) myGETTEXT="gettext";;
 		nptl)
-			if [ -z "`portageq best_visible / '>=sys-kernel/linux26-headers-2.6.0'`" ]; then
+			if [[ -z $(portageq best_visible / '>=sys-kernel/linux26-headers-2.6.0') ]] ; then
 				eerror "You need to have >=sys-kernel/linux26-headers-2.6.0 unmasked!"
 				eerror "Please edit the latest >=sys-kernel/linux26-headers-2.6.0 package,"
 				eerror "and add your ARCH to KEYWORDS."
 				echo
 				cleanup 1
+			fi
+			if [[ -n $(portageq best_version / sys-kernel/linux-headers) ]] ; then
+				emerge -C sys-kernel/linux-headers
+				emerge --nodeps --oneshot sys-kernel/linux26-headers
 			fi
 			USE_NPTL=1
 		;;
