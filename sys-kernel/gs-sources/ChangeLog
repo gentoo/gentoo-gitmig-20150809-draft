@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.10 2003/04/05 14:32:21 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.11 2003/04/20 04:43:04 livewire Exp $
+
+*gs-sources-2.4.21_pre7-r1 (19 April 2003)
+
+  19 Apr 2003; Bob Johnson <livewire@gentoo.org> 
+
+	- added latest cset from bkbits (many fixes)
+	- bumped bootsplash to 3.0.7
 
 *gs-sources-2.4.21_pre7 (05 April 2003)
 
