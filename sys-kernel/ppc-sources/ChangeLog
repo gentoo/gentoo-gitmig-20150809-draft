@@ -1,12 +1,18 @@
 # ChangeLog for sys-kernel/ppc-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.24 2003/06/12 22:14:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.25 2003/06/26 00:41:28 kain Exp $
 
   12 Jun 2003; <msterret@gentoo.org> ppc-sources-2.4.19-r3.ebuild,
   ppc-sources-2.4.19-r4.ebuild, ppc-sources-2.4.19-r5.ebuild,
   ppc-sources-2.4.19-r6.ebuild, ppc-sources-2.4.19.ebuild,
   ppc-sources-2.4.20-r1.ebuild:
   fix Header
+
+*ppc-sources-2.4.21-r2 (25 Jun 2003)
+
+  25 Jun 2003; Kain <kain@gentoo.org> ppc-sources-2.4.21-r2.ebuild:
+  2.4.21 release update from benh bitkeeper 1.897. This may fix some bugs newest
+  series powerbook users are having.
 
 *ppc-sources-2.4.21-r1 (29 May 2003)
 
