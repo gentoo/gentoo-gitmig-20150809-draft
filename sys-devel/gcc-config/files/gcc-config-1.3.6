@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.6,v 1.7 2004/10/05 12:25:45 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.6,v 1.8 2004/10/11 14:36:40 vapier Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 
 source /etc/init.d/functions.sh || {
@@ -258,18 +258,22 @@ get_current_profile() {
 
 list_profiles() {
 	local i=1
-	
+
 	if [ ! -f /etc/env.d/gcc/config ]
 	then
 		eerror "$0:  No gcc profile is active!"
 		return 1
 	fi
 
+	get_current_profile > /dev/null
+
 	for x in /etc/env.d/gcc/*
 	do
 		if [ -f "${x}" -a "${x}" != "/etc/env.d/gcc/config" ]
 		then
-			echo "[${i}] ${x##*/}"
+			x="${x##*/}"
+			[ "${x}" == "${CURRENT}" ] && x="${x} *"
+			echo "[${i}] ${x}"
 			i=$((i + 1))
 		fi
 	done
