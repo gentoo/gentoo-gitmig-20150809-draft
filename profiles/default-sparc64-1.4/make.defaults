@@ -21,7 +21,7 @@ CFLAGS="-O2 -pipe"
 CXXFLAGS=${CFLAGS}
 
 USE="arts apm avi berkdb crypt cups encode esd fbcon gdbm gif gtk gnome imlib java jpeg kde
- libwww mikmod motif mpeg ncurses nls oggvorbis oss opengl pam perl png python pdflib qt readline 
+ libwww mad mikmod motif mpeg ncurses nls oggvorbis oss opengl pam perl png python pdflib qt readline 
  slang sdl spell ssl tcpd truetype X xv xml2 xmms zlib"
 
 
