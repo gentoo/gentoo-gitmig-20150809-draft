@@ -1,6 +1,7 @@
 MD5 c3c09076e07a14a4b1816f1bd7619514 ChangeLog 2026
 MD5 742c6582a6c7564c49a0322de0832bb4 compface-1.4.ebuild 834
 MD5 522806fb5ab287724f92598089282093 compface-1.5.ebuild 828
+MD5 eec73fbea3403356a034bd509fe1a022 metadata.xml 436
 MD5 92cd926808b9b818d1a0228938edd8e4 files/compface-1.4-destdir.diff 1759
 MD5 99136b248ff383abec90471de2c701ac files/compface-1.4-errno.diff 908
 MD5 a08ef9d3bed4c1672cdb05afa215160d files/compface-1.5-destdir.diff 1793
