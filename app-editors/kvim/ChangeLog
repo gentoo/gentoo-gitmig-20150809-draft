@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kvim
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/ChangeLog,v 1.16 2003/11/12 14:30:14 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/ChangeLog,v 1.17 2004/01/29 02:43:57 lu_zero Exp $
+
+  29 Jan 2004; Luca Barbato <lu_zero@gentoo.org> kvim-6.2.14.ebuild:
+  Marked ~ppc
 
   12 Nov 2003; Aron Griffis <agriffis@gentoo.org> kvim-6.1.141.ebuild,
   kvim-6.1.141_rc1.ebuild, kvim-6.1.141_rc2.ebuild, files/kvim-6.1.141.patch, 
