@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.1.ebuild,v 1.7 2003/01/03 19:55:42 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.1.ebuild,v 1.8 2003/02/13 17:50:32 vapier Exp $
 
 inherit gnome2
 

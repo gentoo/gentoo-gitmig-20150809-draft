@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20010309.ebuild,v 1.10 2003/02/03 10:32:30 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20010309.ebuild,v 1.11 2003/02/13 17:53:55 vapier Exp $
 
 NPV=20010309
 S=${WORKDIR}/pwm-${NPV}

@@ -1,7 +1,7 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.00-r2.ebuild,v 1.7 2002/10/24 23:23:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.00-r2.ebuild,v 1.8 2003/02/13 17:48:41 vapier Exp $
 
 IUSE="opengl"
 

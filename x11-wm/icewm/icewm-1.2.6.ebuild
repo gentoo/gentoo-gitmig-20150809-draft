@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.6.ebuild,v 1.1 2003/01/26 23:03:37 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.6.ebuild,v 1.2 2003/02/13 17:49:47 vapier Exp $
 
 DESCRIPTION="Ice Window Manager"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"

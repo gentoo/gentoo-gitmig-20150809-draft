@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.14-r1.ebuild,v 1.1 2002/12/10 19:02:32 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.14-r1.ebuild,v 1.2 2003/02/13 17:48:29 vapier Exp $
 
 IUSE="nls"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.16.ebuild,v 1.13 2002/12/09 12:04:58 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.16.ebuild,v 1.14 2003/02/13 17:55:41 vapier Exp $
 
 IUSE="arts gtk gnome nls"
  
