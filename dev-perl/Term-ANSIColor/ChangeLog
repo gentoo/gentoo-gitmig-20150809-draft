@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Term-ANSIColor
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIColor/ChangeLog,v 1.1 2004/06/26 18:43:18 stuart Exp $
+
+*Term-ANSIColor-1.08 (26 Jun 2004)
+
+  26 Jun 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +Term-ANSIColor-1.08.ebuild:
+  Initial import; required for dev-db/mytop
+
