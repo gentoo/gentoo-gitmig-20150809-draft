@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.5-r1.ebuild,v 1.4 2004/06/25 23:50:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.5-r1.ebuild,v 1.5 2004/06/28 15:57:32 solar Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://debian/pool/main/g/gzip/gzip_${PV}.orig.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
-IUSE="nls build static"
+IUSE="nls build static pic"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
@@ -30,6 +30,8 @@ src_unpack() {
 
 src_compile() {
 	use static && append-flags -static
+	# avoid text relocation in gzip
+	use pic && export DEFS="NO_ASM"
 	econf --exec-prefix=/ $(use_enable nls) || die
 	emake || die
 }
