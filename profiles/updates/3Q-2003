@@ -76,3 +76,4 @@ move gnome-extra/gnome-pilot app-pda/gnome-pilot
 move gnome-extra/gnome-pilot-conduits app-pda/gnome-pilot-conduits
 move dev-libs/pilot-link app-pda/pilot-link
 move dev-python/Numeric dev-python/numeric
+move app-text/gtksourceview x11-libs/gtksourceview
