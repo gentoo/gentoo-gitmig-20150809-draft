@@ -1,0 +1,40 @@
+--- providers/firebird/gda-firebird-provider.c_old	2004-11-19 08:23:39.164945104 +0900
++++ providers/firebird/gda-firebird-provider.c	2004-11-19 08:24:18.867909336 +0900
+@@ -346,6 +346,20 @@
+ 	return model;
+ }
+ 
++isc_tr_handle *
++gda_firebird_command_get_transaction (GdaCommand *cmd)
++{
++	GdaTransaction *xaction;
++	isc_tr_handle *itr;
++
++	xaction = gda_command_get_transaction (cmd);
++	if (!GDA_IS_TRANSACTION (xaction))
++		return NULL;
++
++	itr = g_object_get_data (G_OBJECT (xaction), TRANSACTION_DATA);
++	return itr;
++}
++
+ /* execute_command handler for the GdaFirebirdProvider class */
+ static GList *
+ gda_firebird_provider_execute_command (GdaServerProvider *provider,
+@@ -547,16 +561,3 @@
+ 	gda_connection_add_error (cnc, error);
+ }
+ 
+-isc_tr_handle *
+-gda_firebird_command_get_transaction (GdaCommand *cmd)
+-{
+-	GdaTransaction *xaction;
+-	isc_tr_handle *itr;
+-
+-	xaction = gda_command_get_transaction (cmd);
+-	if (!GDA_IS_TRANSACTION (xaction))
+-		return NULL;
+-
+-	itr = g_object_get_data (G_OBJECT (xaction), TRANSACTION_DATA);
+-	return itr;
+-}

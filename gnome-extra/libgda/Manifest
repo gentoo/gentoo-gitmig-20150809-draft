@@ -1,8 +1,11 @@
-MD5 68bb26148286efe7ab82f17211284d36 ChangeLog 8339
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1766d28be4707d9e4b3a8ba20d2a6824 ChangeLog 8499
 MD5 d0438930f010eab60bbc5b319fcb1d22 libgda-0.2.96-r2.ebuild 3424
 MD5 9dbecc1f94a890f7f01a80cb22460d47 libgda-1.0.2.ebuild 2601
 MD5 626977fd74e56d7a8f390ecfe28f8ddb libgda-1.0.3.ebuild 2752
-MD5 6378d9eae25d9e112b4546cf30b503ea libgda-1.0.4.ebuild 2841
+MD5 8bad9c7b85984f3e67193225b2a54c2e libgda-1.0.4.ebuild 2938
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 e92331f7677fcfc3e82541f08676bb32 files/digest-libgda-0.2.96-r2 66
 MD5 46b8c0b40219635d47ca4583d42dc814 files/digest-libgda-1.0.2 66
@@ -13,3 +16,11 @@ MD5 adf80d651f1d75c9745c44264f58708e files/libgda-1.0.2-gcc2_fix.patch 641
 MD5 f2110a1cc61b61b9f52a346427e19874 files/libgda-1.0.3-gcc3.4.patch 4236
 MD5 a3ad0589779cdb39f897e554dd9862fb files/libgda-1.0.3-gtkdoc_fixes.patch 15598
 MD5 42fbab3bc532505fcd7e85aafb9c5a41 files/libgda-1.0.4-freetds-0.6x.patch 482
+MD5 b87a0e5fdf7e23d29ee4452e694140c4 files/libgda-1.0.4-firebird-provider.patch 1055
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBo3ErRkyva5PS18kRAglgAJ4yYifaaoJWVJgIYob95q8UBQf3NwCfbFMK
+QVxwbtU7aXv1blE8SVd8teE=
+=kpzr
+-----END PGP SIGNATURE-----
