@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 dc3a400b38e391b6c7c76bd85b7e83e0 ChangeLog 14167
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 8b92dabf362d229cf37abb0e09630278 module-init-tools-3.1.ebuild 5363
+MD5 2581ed2f27f384ee6f2d04e21fc5073f module-init-tools-3.1.ebuild 5495
 MD5 5710fb42e858a845378c3fb2d024f796 module-init-tools-3.0-r2.ebuild 5336
 MD5 813f2779e10e8f29d9e1d58dda93a5e3 files/digest-module-init-tools-3.1 142
 MD5 34f20e2837caff74cef9cca766e1e0c4 files/3.1-modprobe.d.5.bz2 2288
@@ -15,7 +15,7 @@ MD5 060ce311606657915548168939e965b4 files/modutils-2.4.22-no-above-below.patch 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBojnEHTu7gpaalycRAsFgAJ952WLVk2o5GXNKeAC1TFq/pcZV6QCbBqGO
-qA/d5oVMWRi9Xywxl+r5Lck=
-=Hr/j
+iD8DBQFBssknroRuSHgZdywRAgXUAJ9xc7R6466jQTN8F5CSVG6P19OXQQCggzq/
+XdDLvgEzToWAVhYDhrf2WGk=
+=vyqa
 -----END PGP SIGNATURE-----
