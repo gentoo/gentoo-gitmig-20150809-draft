@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.22.ebuild,v 1.3 2003/02/13 12:16:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.22.ebuild,v 1.4 2003/03/04 18:17:50 liquidx Exp $
 
 IUSE="nls alsa"
 
@@ -14,13 +14,11 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc "
 
-DEPEND="virtual/python
-	nls? ( sys-devel/gettext )
+DEPEND="nls? ( sys-devel/gettext )
 	>=dev-util/intltool-0.11
 	sys-devel/perl
     <gnome-base/gnome-vfs-1.9.0
 	>=dev-libs/libunicode-0.4-r1
-	alsa? ( >=media-libs/alsa-lib-0.5.10 )
 	>=gnome-base/gnome-print-0.34
 	=gnome-base/libglade-0*
 	>=dev-libs/libxml-1.8.16"
