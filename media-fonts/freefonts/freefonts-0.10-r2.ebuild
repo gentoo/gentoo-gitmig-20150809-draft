@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/freefonts-0.10-r2.ebuild,v 1.8 2004/05/15 11:02:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefonts/freefonts-0.10-r2.ebuild,v 1.9 2004/06/07 20:58:28 agriffis Exp $
 
 S=${WORKDIR}/freefont
 DESCRIPTION="A Collection of Free Type1 Fonts"
@@ -15,7 +15,7 @@ src_install () {
 	insinto /usr/share/fonts/freefont
 	doins *.pfb
 
-	if [ -n "`use X`" ] ;
+	if use X ;
 	then
 		mkfontscale
 		mkfontdir

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90.ebuild,v 1.6 2004/02/04 00:19:33 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90.ebuild,v 1.7 2004/06/07 20:57:55 agriffis Exp $
 
 IUSE="truetype"
 
@@ -44,7 +44,7 @@ src_install(){
 	newins fonts.alias.mona fonts.alias
 	dodoc README*
 
-	if [ -n "`use truetype`" ] ; then
+	if use truetype ; then
 		cd ${WORKDIR}
 		insinto ${TTFONTDIR}
 		doins mona.ttf
