@@ -1,17 +1,27 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b024660fd2067edc9a0415547d5f5406 blender-2.35.ebuild 2802
+MD5 6d75817c07a0fc06c4a49fbcb211945a blender-2.36-r1.ebuild 3309
 MD5 66a5b30c7230910dfe5d35c16ee19763 blender-2.34.ebuild 2819
-MD5 d319a736c17f64760fe7cfcfaf4d9ba5 blender-2.34-r1.ebuild 2931
 MD5 99ad2f8fe7c190a54f498946071a613b blender-2.36.ebuild 2929
+MD5 d319a736c17f64760fe7cfcfaf4d9ba5 blender-2.34-r1.ebuild 2931
 MD5 f1a296d708706a3c1b78877885fde8d6 ChangeLog 7441
 MD5 d3eba695aaee4c4ce9eac27c6a7c5ad3 metadata.xml 588
-MD5 b024660fd2067edc9a0415547d5f5406 blender-2.35.ebuild 2802
-MD5 6550280954b6c125fbb0d90c81cd71ec blender-2.36-r1.ebuild 3307
-MD5 ef66b38c216b9ab1d78968353025116f files/digest-blender-2.34-r1 66
-MD5 705b95605426ad9d562457fdbbff5460 files/blender-2.32.patch 2562
-MD5 f65e9e32429f06fd611b9902f9d7852b files/digest-blender-2.36 65
-MD5 2fbf0a94ba625bce0c2af487d90cf7f5 files/digest-blender-2.35 66
-MD5 b8e304980dc2bfd9a7157037d6ead44b files/blender.desktop 197
-MD5 ef66b38c216b9ab1d78968353025116f files/digest-blender-2.34 66
-MD5 ee3557021be75082093de0d643b32260 files/blender-2.36-dirs.patch 1970
-MD5 f65e9e32429f06fd611b9902f9d7852b files/digest-blender-2.36-r1 65
 MD5 d95ef10fee53b71576c6da6c8163e748 files/blender.png 2119
 MD5 b5356307d35d0bfe73149428cafe23ff files/configure-fix.patch 754
+MD5 ef66b38c216b9ab1d78968353025116f files/digest-blender-2.34-r1 66
+MD5 f65e9e32429f06fd611b9902f9d7852b files/digest-blender-2.36-r1 65
+MD5 ef66b38c216b9ab1d78968353025116f files/digest-blender-2.34 66
+MD5 2fbf0a94ba625bce0c2af487d90cf7f5 files/digest-blender-2.35 66
+MD5 f65e9e32429f06fd611b9902f9d7852b files/digest-blender-2.36 65
+MD5 b8e304980dc2bfd9a7157037d6ead44b files/blender.desktop 197
+MD5 ee3557021be75082093de0d643b32260 files/blender-2.36-dirs.patch 1970
+MD5 705b95605426ad9d562457fdbbff5460 files/blender-2.32.patch 2562
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB7iNkI1lqEGTUzyQRAlvwAKC3SQDdXvqua1yg+ET8IBW7s1mm3wCffKjO
+iKI4l0AynTpnbTR0i4om2oc=
+=zrsj
+-----END PGP SIGNATURE-----
