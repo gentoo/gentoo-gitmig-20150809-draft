@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.7 2005/03/03 18:44:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.8 2005/03/04 02:59:52 vapier Exp $
+
+*crossdev-0.9-r1 (03 Mar 2005)
+
+  03 Mar 2005; Mike Frysinger <vapier@gentoo.org> files/crossdev,
+  +crossdev-0.9-r1.ebuild:
+  Make sure we use a custom PKGDIR so we dont overwrite the users normal
+  toolchain binpkgs.
 
 *crossdev-0.9 (03 Mar 2005)
 
