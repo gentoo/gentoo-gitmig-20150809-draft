@@ -1,4 +1,4 @@
-MD5 5920883d405c9218bd0ca48eb0bcfa34 ChangeLog 3864
+MD5 8c4aaea55a2080580435bd87df486ddc ChangeLog 4109
 MD5 f82ebf2f2efd7d3a3fc7bce6452f7779 sh-utils-2.0.11-r4.ebuild 2137
 MD5 516b9956ba8f9c14754f152c7b4bad4d sh-utils-2.0.11-r5.ebuild 2499
 MD5 d7867bbfe1bf59befd44079672ac3a5d sh-utils-2.0.15.ebuild 2339
@@ -6,4 +6,4 @@ MD5 d6eda1bd1680bfdbd753892f6c450b25 files/digest-sh-utils-2.0.11-r4 68
 MD5 d6eda1bd1680bfdbd753892f6c450b25 files/digest-sh-utils-2.0.11-r5 68
 MD5 5fdc646eb14d3f40c0a6f81eb897d339 files/digest-sh-utils-2.0.15 68
 MD5 3862186589a94a3a12eec30eb838bd0a files/sh-utils-2.0.11-gentoo.diff 3922
-MD5 6a59f9c37e61f15336f9d4cf9b6e9cdf files/sh-utils-2.0.15-gentoo.diff 2585
+MD5 b0454d28beed9edd23c9facdd154174f files/sh-utils-2.0.15-gentoo.diff 2585

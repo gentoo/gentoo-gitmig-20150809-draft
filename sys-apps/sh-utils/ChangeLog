@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/sh-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.20 2003/02/21 02:34:19 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.21 2003/06/23 22:50:16 kumba Exp $
+
+
+*sh-utils-2.0.15 (24 Aug 2002)
+
+  23 Jun 2003; Joshua Kinard <kumba@gentoo.org> files/sh-utils-2.0.15-gentoo.diff:
+  Tweaked patch so 'uname -a' on MIPS systems accurately displays cpuinfo
+  It looked for "processor" when it should be looking for "cpu model" in /proc/cpuinfo
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> sh-utils-2.0.15.ebuild :
   Not applying patch for arm because it breaks uname.
@@ -13,8 +20,6 @@
   Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*sh-utils-2.0.15 (24 Aug 2002)
 
   18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
   Added mips to keywords
