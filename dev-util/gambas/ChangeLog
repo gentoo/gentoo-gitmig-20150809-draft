@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/gambas
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.1 2003/11/18 00:24:27 genone Exp $
+
+*gambas-0.71 (18 Nov 2003)
+
+  18 Nov 2003; Marius Mauch <genone@gentoo.org> gambas-0.71.ebuild,
+  files/non-symlink-0.71.patch:
+  initial commit, closing bug #21633
+
