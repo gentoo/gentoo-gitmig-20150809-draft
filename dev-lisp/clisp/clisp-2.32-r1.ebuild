@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.32-r1.ebuild,v 1.1 2004/01/26 19:21:44 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.32-r1.ebuild,v 1.2 2004/01/29 04:50:47 mkennedy Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic common-lisp-common
 
 IUSE="X threads fastcgi postgres ldap nls berkdb"
 
@@ -17,7 +17,7 @@ $(expr "$CFLAGS" : '.*\(-falign-functions=[[:digit:]]\+\)')/\
 fi
 
 # Fails to compile without -falign-functions=4 when -march=pentium4
-# (or -march=pentium3, sometimes??) is defined.  Bugs 33425 and 34630.
+# (or -march=pentium3, sometimes??) is defined.	 Bugs 33425 and 34630.
 
 if (is-flag '-march=pentium4' || is-flag '-march=pentium3') \
 	&& ! is-flag '-falign-functions=4'; then
@@ -47,7 +47,7 @@ DEPEND="dev-libs/libsigsegv
 	berkdb? ( =sys-libs/db-4* )"
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A}
@@ -118,7 +118,7 @@ pkg_postinst() {
 	chown cl-builder:cl-builder /usr/lib/common-lisp/clisp
 	rm -rf /usr/lib/common-lisp/clisp/* || true
 	/usr/bin/clc-autobuild-impl clisp yes
-	/usr/sbin/register-common-lisp-implementation clisp
+	register-common-lisp-implementation clisp
 }
 
 pkg_prerm() {
