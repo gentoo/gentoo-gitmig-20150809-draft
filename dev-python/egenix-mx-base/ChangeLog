@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.10 2003/07/12 12:49:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.11 2003/07/19 03:59:21 liquidx Exp $
+
+  19 Jul 2003; Alastair Tse <liquidx@gentoo.org> egenix-mx-base-2.0.3.ebuild,
+  egenix-mx-base-2.0.4.ebuild:
+  filter excessive optmisations thanks to bug #24168 by Priit Laes <amd@tt.ee>
 
   11 Feb 2003; Bryon Roche <kain@kain.org> egenix-mx-base-2.0.4.ebuild :
 

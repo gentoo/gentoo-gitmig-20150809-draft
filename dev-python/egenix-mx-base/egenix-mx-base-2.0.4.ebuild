@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.4.ebuild,v 1.7 2003/06/22 12:15:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.4.ebuild,v 1.8 2003/07/19 03:59:21 liquidx Exp $
 
-inherit distutils
+inherit distutils flag-o-matic
 
 IUSE=""
 DESCRIPTION="egenix utils for Python."
@@ -15,6 +15,10 @@ KEYWORDS="x86 ~sparc ~alpha ~ppc"
 LICENSE="eGenixPublic"
 #please note, there is also a possibility to buy a commercial license
 #from egenix.com
+src_compile() {
+	replace-flags "-O[3s]" "-O2"
+	distutils_src_compile
+}	
 
 src_install() {
 	distutils_src_install
