@@ -1,20 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvattr/xvattr-1.3-r1.ebuild,v 1.5 2004/06/25 00:54:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvattr/xvattr-1.3-r1.ebuild,v 1.6 2004/07/13 22:24:02 mr_bones_ Exp $
 
 DESCRIPTION="X11 XVideo Querying/Setting Tool from Ogle project"
-SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/${P}.tar.gz"
 HOMEPAGE="http://www.dtek.chalmers.se/groups/dvd/"
-SLOT=0
+SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT=0
 KEYWORDS="x86"
 IUSE="gtk"
+
 DEPEND="virtual/x11
 	gtk? ( =x11-libs/gtk+-1.2*
 	=dev-libs/glib-1.2* )"
-RDEPEND="${DEPEND}"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
 	# If no gtk then modify the necessary parts so that gtk isn't needed anymore
 	if ! use gtk
 	then
@@ -30,11 +32,9 @@ src_compile() {
 	    automake
 	    autoconf
 	fi
-	econf || die
-	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
-	dodoc AUTHORS ChangeLog COPYING NEWS README
+	make DESTDIR="${D}" install || die "make install failed"
+	dodoc AUTHORS ChangeLog NEWS README
 }
