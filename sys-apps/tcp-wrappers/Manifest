@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ff0780e39a0eca8e49bd6e1fc0f660d3 ChangeLog 5015
+MD5 eded6e6c261fe2e32ffe174661f4ea16 ChangeLog 5172
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 2d7830db011bc50602d527bb0577903b tcp-wrappers-7.6-r8.ebuild 2287
+MD5 b1ab4eaf71a1a2b8f2a9881380009b21 tcp-wrappers-7.6-r8.ebuild 2255
 MD5 b4d27b4d9d3d841a7199217735e52049 files/digest-tcp-wrappers-7.6-r8 146
 MD5 da6fe337f8e6ddda00b5d52c588ca70a files/hosts.allow.example 585
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFA+1whHTu7gpaalycRAqGkAKCEetPrWYl5Okr4b9BboZTXyuTTrACffRmG
-GmKlEv+jOEBXHvwoEQ6p6sk=
-=OX1m
+iD8DBQFBvb3IroRuSHgZdywRAqARAJ4jSbYwXd7iweEgdvNGj7kYWL870gCff9C+
+cpuPxNA7Yo7LdJ/eqLA1qV0=
+=HO3e
 -----END PGP SIGNATURE-----

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r8.ebuild,v 1.16 2004/07/19 05:28:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6-r8.ebuild,v 1.17 2004/12/13 16:05:03 vapier Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_P="${P//-/_}"
 S="${WORKDIR}/${MY_P}"
@@ -13,12 +13,12 @@ SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz
 
 LICENSE="tcp_wrappers_license"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
-IUSE="ipv6 static"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+IUSE="ipv6"
 
-DEPEND="virtual/libc
-	>=sys-apps/sed-4"
 RDEPEND="virtual/libc"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -28,30 +28,26 @@ src_unpack() {
 	sed -i \
 		-e "s:-O:${CFLAGS}:" \
 		-e "s:AUX_OBJ=.*:AUX_OBJ= \\\:" \
-		Makefile \
-		|| die "sed Makefile failed"
+		Makefile || die "makefile patch prep"
 
 	PATCHDIR=${WORKDIR}/${PV}-patches
-
 	epatch ${PATCHDIR}/${P}-makefile.patch.bz2
-
 	epatch ${PATCHDIR}/generic
-
-	use static || epatch ${PATCHDIR}/${P}-shared.patch.bz2
+	epatch ${PATCHDIR}/${P}-shared.patch.bz2
 	use ipv6 && epatch ${PATCHDIR}/${P}-ipv6-1.14.diff.bz2
 
-	# make it parallel-friendly.
+	# make it parallel/cross-compile friendly.
 	sed -i \
+		-e 's:gcc:$(CC):' \
 		-e 's:@make :@$(MAKE) :' \
 		-e 's:make;:$(MAKE);:' \
-		Makefile \
-		|| die "sed Makefile failed"
+		Makefile || die "sed Makefile failed"
 }
 
 src_compile() {
-	local myconf=
+	tc-export CC
 
-	use static || myconf="${myconf} -DHAVE_WEAKSYMS"
+	local myconf="-DHAVE_WEAKSYMS"
 	use ipv6 && myconf="${myconf} -DINET6=1 -Dss_family=__ss_family -Dss_len=__ss_len"
 
 	emake \
@@ -80,14 +76,12 @@ src_install() {
 	into /usr
 	dolib.a libwrap.a
 
-	if ! use static ; then
-		into /
-		newlib.so libwrap.so libwrap.so.0.${PV}
-		dosym /lib/libwrap.so.0.${PV} /lib/libwrap.so.0
-		dosym /lib/libwrap.so.0 /lib/libwrap.so
-		# bug #4411
-		gen_usr_ldscript libwrap.so || die "gen_usr_ldscript failed"
-	fi
+	into /
+	newlib.so libwrap.so libwrap.so.0.${PV}
+	dosym /lib/libwrap.so.0.${PV} /lib/libwrap.so.0
+	dosym /lib/libwrap.so.0 /lib/libwrap.so
+	# bug #4411
+	gen_usr_ldscript libwrap.so || die "gen_usr_ldscript failed"
 
 	dodoc BLURB CHANGES DISCLAIMER README* ${FILESDIR}/hosts.allow.example
 }
