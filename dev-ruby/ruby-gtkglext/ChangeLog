@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtkglext
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkglext/ChangeLog,v 1.6 2004/06/30 20:30:50 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkglext/ChangeLog,v 1.7 2004/07/04 17:09:26 usata Exp $
+
+  05 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-gtkglext-0.8.0.ebuild,
+  ruby-gtkglext-0.8.1.ebuild, ruby-gtkglext-0.9.1.ebuild:
+  Added missing dependencies. This closes bug #54682
 
   30 Jun 2004; Ferris McCormick <fmccor@gentoo.org>
   ruby-gtkglext-0.9.1.ebuild:
