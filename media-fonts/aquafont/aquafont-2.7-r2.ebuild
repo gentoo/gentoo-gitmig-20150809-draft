@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/aquafont-2.7-r2.ebuild,v 1.1 2004/06/25 19:32:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/aquafont-2.7-r2.ebuild,v 1.2 2004/07/14 17:00:31 agriffis Exp $
 
 inherit font
 
-IUSE=""
+IUSE="X"
 MY_P="${PN/font/}${PV/\./_}"
 
 DESCRIPTION="Very pretty Japanese truetype font"
