@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.48 2003/08/25 13:39:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.49 2003/09/05 15:42:30 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -860,6 +860,10 @@ unpack_makeself() {
 				skip=`grep -a ^offset= ${src} | awk '{print $2}' | cut -b2-`
 				let skip="skip + 1"
 				;;
+			2.1.2)
+				skip=`grep -a ^offset= ${src} | awk '{print $3}' | head -n 1`
+				let skip="skip + 1"
+				;;
 			2.1.3)
 				skip=`grep -a ^offset= ${src} | awk '{print $3}'`
 				let skip="skip + 1"
@@ -877,10 +881,12 @@ unpack_makeself() {
 
 	# we do this because otherwise a failure in gzip will cause 0 bytes to be sent
 	# to tar which will make tar not extract anything and exit with 0
-	local out="`(tail +${skip} ${src} | gzip -cd | tar -x --no-same-owner -f -) 2>&1`"
-	if [ ! -z "${out}" ] ; then
+	tail -n +${skip} ${src} | gzip -cd | tar -x --no-same-owner -f - 2>/dev/null
+	local pipestatus="${PIPESTATUS[*]}"
+	pipestatus="${pipestatus// }"
+	if [ "${pipestatus//0}" != "" ] ; then
 		# maybe it isnt gzipped ... they usually are, but not always ...
-		tail +${skip} ${src} | tar -x --no-same-owner -f - \
+		tail -n +${skip} ${src} | tar -x --no-same-owner -f - \
 			|| die "failure unpacking makeself ${shrtsrc} ('${ver}' +${skip})"
 	fi
 }
