@@ -1,4 +1,14 @@
-MD5 06eaa2b161397fb4eb18d073e4b3c97a ChangeLog 396
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0ffe9b18d223ecc634bc635e46552dbb ChangeLog 387
 MD5 4c57e7d8ad807e2e601bb3c87d1a153d metadata.xml 397
-MD5 da4005711e69148f3ff0ed0491123abf selinux-privoxy-20030811.ebuild 395
+MD5 73e5aef247c39b56a3cec6c3958c8ca1 selinux-privoxy-20030811.ebuild 386
 MD5 4a54875359fdb78f76655de20b85f2aa files/digest-selinux-privoxy-20030811 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA32JpGFJQsIJWJy4RAgGHAJ9N8APPAU3UcV9XO05mjmE0d+17egCfaoXY
+3jfEMLYBzhfCSAft5smdhCY=
+=vRbM
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 59a5692a447c0bee335dba21e1a19c7f selinux-publicfile-20031221.ebuild 446
-MD5 a6243d885d6dfa37ce0bdc1be79335cb ChangeLog 436
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 15761202113a6d1dee287be6b41d4252 selinux-publicfile-20031221.ebuild 441
+MD5 1a3cd72d01e8b6f334b57febdb286960 ChangeLog 427
 MD5 fc07ad3203ee285a23750a371dbd8bdc metadata.xml 395
 MD5 8c6bca6f9ba3817e68373850af7a204d files/digest-selinux-publicfile-20031221 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA32JmGFJQsIJWJy4RArehAJ9iXbf12MNGiSGGYTN1R471JWbVjgCfVq4J
+Pb86PRNEagqBaJTPGEMD348=
+=h386
+-----END PGP SIGNATURE-----

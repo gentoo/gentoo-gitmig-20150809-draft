@@ -1,4 +1,14 @@
-MD5 4380ae04ee13a10a4351911e7a865165 selinux-clockspeed-20031221.ebuild 406
-MD5 e6f7d7ada3843ba7fd1e50af985bfb02 ChangeLog 436
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 74afc1f7e5113fb6b60da7689d976c87 ChangeLog 427
+MD5 2d4158c0831030595cb00e49fd89d3ef selinux-clockspeed-20031221.ebuild 401
 MD5 3e1ba07ac16b0e48af5fd042ff99db43 metadata.xml 395
 MD5 1f5ecf3157af9ae009cc0c5e3d4262b6 files/digest-selinux-clockspeed-20031221 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA32I1GFJQsIJWJy4RApHrAJ9nor4y+tdEXhEhBfdAkAsnocp5QwCeOcVd
+GFzxUPEW8k/zVFxq1gRG6CQ=
+=OBe0
+-----END PGP SIGNATURE-----
