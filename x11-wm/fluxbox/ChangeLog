@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.84 2004/01/06 21:42:29 tseng Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.85 2004/01/08 23:43:45 gustavoz Exp $
+
+  08 Jan 2004; <gustavoz@gentoo.org> fluxbox-0.9.7.ebuild:
+  marked stable on hppa
 
   06 Jan 2004; Brandon Hale <tseng@gentoo.org> fluxbox-0.9.7.ebuild:
   Marked stable on x86 in preperation for 2004.0 release.
