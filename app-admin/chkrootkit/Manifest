@@ -2,9 +2,11 @@ MD5 2ee22c3d498ffdca07f7d492c5a1c71e ChangeLog 1524
 MD5 24515d38d6a5fc2aa0a74ab5e335e4d9 chkrootkit-0.37.ebuild 746
 MD5 28584ac9a09024174e34831c7e42a22d chkrootkit-0.39a.ebuild 751
 MD5 0003afafcf9293d481917f71ebee03e1 chkrootkit-0.41.ebuild 779
+MD5 085fe4a029849a75b50c86260828cd2f chkrootkit-0.41-r1.ebuild 843
 MD5 f97957a94793b86fd018b32e44811f89 files/chkrootkit-0.37-gentoo.diff 4531
 MD5 e9f2cc0eace779d1cad291deb9d9c7e1 files/chkrootkit-0.39a-gentoo.diff 28218
 MD5 7cf45be07aafbbaa3252ce9ece31d5b6 files/digest-chkrootkit-0.37 66
 MD5 eb3187ff68ea9e3a781396eef5c19861 files/digest-chkrootkit-0.39a 67
 MD5 08a62e6267f83410bc08ecb9cb262b02 files/digest-chkrootkit-0.41 66
-MD5 f03fe3c168eba823238cc1fdd4e685ee files/chkrootkit-0.41-gentoo.diff 29651
+MD5 4a7462549213c3ef88c11df667b2eeda files/chkrootkit-0.41-gentoo.diff 30253
+MD5 08a62e6267f83410bc08ecb9cb262b02 files/digest-chkrootkit-0.41-r1 66
