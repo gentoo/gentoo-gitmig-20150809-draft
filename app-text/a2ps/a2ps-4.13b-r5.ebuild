@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.17 2004/06/24 22:26:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.18 2004/08/04 19:16:33 usata Exp $
 
 inherit gnuconfig eutils
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.enst.fr/pub/unix/a2ps/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ia64 x86 ppc sparc alpha hppa"
-IUSE="nls tetex cjk"
+IUSE="nls tetex cjk vanilla"
 
 RDEPEND="virtual/ghostscript
 	>=app-text/psutils-1.17
@@ -33,7 +33,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/a2ps-4.13-autoconf-gentoo.diff
-	epatch ${FILESDIR}/a2ps-4.13-stdout.diff
+	use vanilla || epatch ${FILESDIR}/a2ps-4.13-stdout.diff
 	use cjk && epatch ${DISTDIR}/a2ps-4.13-ja_nls.patch
 
 	#stop running autoconf (bug #24264)

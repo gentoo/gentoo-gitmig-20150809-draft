@@ -1,6 +1,11 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.31 2004/07/23 12:12:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.32 2004/08/04 19:16:33 usata Exp $
+
+  05 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> -a2ps-4.13b-r4.ebuild,
+  a2ps-4.13b-r5.ebuild, a2ps-4.13c.ebuild:
+  Added vanilla USE flag. This keeps you from applying stdout patch, which
+  changes default a2ps behaviour. See bug #47764 and #47691.
 
   23 Jul 2004; Aron Griffis <agriffis@gentoo.org> a2ps-4.13c.ebuild:
   Run gnuconfig_update regardless of arch

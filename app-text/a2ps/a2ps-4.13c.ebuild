@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c.ebuild,v 1.17 2004/07/23 12:12:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c.ebuild,v 1.18 2004/08/04 19:16:33 usata Exp $
 
 inherit gnuconfig eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ~ia64 ppc64"
-IUSE="nls tetex cjk"
+IUSE="nls tetex cjk vanilla"
 
 DEPEND=">=sys-devel/automake-1.6
 	>=sys-devel/autoconf-2.57
@@ -31,7 +31,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 	epatch ${FILESDIR}/${P}-locale-gentoo.diff
-	epatch ${FILESDIR}/a2ps-4.13-stdout.diff
+	use vanilla || epatch ${FILESDIR}/a2ps-4.13-stdout.diff
 	epatch ${FILESDIR}/${PV}-gcc34.patch
 	use cjk && epatch ${DISTDIR}/${P}-ja_nls.patch.gz
 	gnuconfig_update || die "gnuconfig_update failed"
