@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3_pre20030530-r1.ebuild,v 1.1 2003/06/01 03:55:14 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3_pre20030530-r2.ebuild,v 1.1 2003/06/01 14:00:11 g2boojum Exp $
 
 DESCRIPTION="Set of python tools for processing plaintext docs into HTML, XML, etc."
 HOMEPAGE="http://docutils.sourceforge.net/"
@@ -26,6 +26,7 @@ src_install() {
 	dobin *.py
 	popd
 	dobin ${FILESDIR}/glep.py
+	distutils_python_version
 	insinto /usr/lib/python${PYVER}/site-packages/docutils/readers
 	newins ${FILESDIR}/glepread.py glep.py
 	insinto /usr/lib/python${PYVER}/site-packages/docutils/transforms
