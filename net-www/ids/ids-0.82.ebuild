@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ids/ids-0.82.ebuild,v 1.3 2003/12/15 20:36:55 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ids/ids-0.82.ebuild,v 1.4 2004/03/07 21:06:13 mholzer Exp $
 
 inherit webapp-apache
 
@@ -20,14 +20,14 @@ RDEPEND=">=net-www/apache-1.3.27
 
 S=${WORKDIR}/${P}
 
-webapp-detect || NO_WEBSERVER=1
-
 pkg_setup() {
+	webapp-detect || NO_WEBSERVER=1
 	webapp-pkg_setup "${NO_WEBSERVER}"
 	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
 }
 
 src_install() {
+	webapp-detect || NO_WEBSERVER=1
 	webapp-mkdirs
 
 	local DocumentRoot=${HTTPD_ROOT}

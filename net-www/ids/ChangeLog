@@ -1,6 +1,10 @@
 # ChangeLog for net-www/ids
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ids/ChangeLog,v 1.4 2004/03/02 11:39:46 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/ids/ChangeLog,v 1.5 2004/03/07 21:06:13 mholzer Exp $
+
+  07 Mar 2004; Martin Holzer <mholzer@gentoo.org> ids-0.82.ebuild,
+  ids-0.83_beta2.ebuild:
+  moving webapp-detect into functions
 
   15 Dec 2003; Stuart Herbert <stuart@gentoo.org> ids-0.82.ebuild,
   ids-0.83_beta2.ebuild:
