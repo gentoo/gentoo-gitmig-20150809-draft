@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.11.ebuild,v 1.8 2003/09/06 22:02:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.11.ebuild,v 1.9 2003/09/11 01:23:41 msterret Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_compile() {
 			|| myopts="${myopts} --enable-gtkfe --disable-gnome --disable-zvt --disable-gdk-pixbuf"
 	else
 		myopts="${myopts} --disable-gnome"
-    fi
+	fi
 
 	use gtk \
 		|| myopts="${myopts} --disable-gtkfe"

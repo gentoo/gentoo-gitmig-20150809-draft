@@ -1,5 +1,5 @@
 MD5 28603c397510e59a6393d986ba5b43e0 ChangeLog 483
-MD5 8c814366fe540ed8daad6418fa400d38 eggdrop-1.6.15.ebuild 1604
+MD5 31f512f5ce8d9b82d591f64509eecff0 eggdrop-1.6.15.ebuild 1598
 MD5 e9830c3f4fb21aa6a8651d6e47bae613 files/digest-eggdrop-1.6.15 65
 MD5 39427a479d743e7e81bba1f9d58b2bae files/eggdrop-installer 2313
 MD5 1892518b7bb9c06cf7cfd46868012971 files/eggdrop-1.6.15-botchk.patch 2931

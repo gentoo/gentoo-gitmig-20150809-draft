@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15.ebuild,v 1.3 2003/09/08 07:01:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15.ebuild,v 1.4 2003/09/11 01:23:41 msterret Exp $
 
 DESCRIPTION="An IRC bot extensible with C or Tcl."
 HOMEPAGE="http://www.eggheads.org/"
@@ -59,14 +59,14 @@ src_install() {
 	for a in doc/*
 	do
 		[ -f $a ] && dodoc $a
-    done
+	done
 
 	for a in doc/html/*
 	do
 		[ -f $a ] && dohtml $a
 	done
 
-    dobin ${FILESDIR}/eggdrop-installer
+	dobin ${FILESDIR}/eggdrop-installer
 	doman doc/man1/eggdrop.1
 }
 

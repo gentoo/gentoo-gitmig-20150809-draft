@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.10 2003/09/08 07:01:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.11 2003/09/11 01:23:41 msterret Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ IUSE="${IUSE} xchattext xchatnogtk"
 # Added for to fix a sparc seg fault issue by Jason Wever <weeve@gentoo.org>
 if [ ${ARCH} = "sparc" ]
 then
-        replace-flags "-O3" "-O2"
+	replace-flags "-O3" "-O2"
 fi
 
 

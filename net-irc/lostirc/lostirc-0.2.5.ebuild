@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.2.5.ebuild,v 1.5 2003/07/13 12:54:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.2.5.ebuild,v 1.6 2003/09/11 01:23:41 msterret Exp $
 
 inherit base
 
@@ -13,10 +13,9 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 S=${WORKDIR}/${P}
 DEPEND=">=dev-cpp/gtkmm-2.0
-        >=dev-libs/libsigc++-1.2"
+	>=dev-libs/libsigc++-1.2"
 
 src_install() {
-        base_src_install
-        dodoc AUTHORS ChangeLog COPYING INSTALL README TODO NEWS
+	base_src_install
+	dodoc AUTHORS ChangeLog COPYING INSTALL README TODO NEWS
 }
-

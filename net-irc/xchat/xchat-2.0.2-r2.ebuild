@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.2-r2.ebuild,v 1.6 2003/09/08 07:01:23 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.2-r2.ebuild,v 1.7 2003/09/11 01:23:41 msterret Exp $
 
 IUSE="perl tcltk python ssl gtk mmx ipv6"
 
@@ -45,10 +45,10 @@ src_compile() {
 		|| myopts="${myopts} --disable-perl"
 	use python \
 		&& myopts="${myopts} --enable-python" \
-                || myopts="${myopts} --disable-python"
+		|| myopts="${myopts} --disable-python"
 	use tcltk \
 		&& myopts="${myopts} --enable-tcl" \
-                || myopts="${myopts} --disable-tcl"
+		|| myopts="${myopts} --disable-tcl"
 	use mmx	\
 		&& myopts="${myopts} --enable-mmx" \
 		|| myopts="${myopts} --disable-mmx"

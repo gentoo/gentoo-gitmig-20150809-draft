@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.10-r1.ebuild,v 1.13 2003/09/06 22:02:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.10-r1.ebuild,v 1.14 2003/09/11 01:23:41 msterret Exp $
 
 IUSE="ssl nls mmx gnome ipv6 python kde gtk perl"
 
@@ -50,7 +50,7 @@ src_compile() {
 			|| myopts="${myopts} --enable-gtkfe --disable-gnome --disable-zvt --disable-gdk-pixbuf"
 	else
 		myopts="${myopts} --disable-gnome"
-    fi
+	fi
 
 	use gtk \
 		|| myopts="${myopts} --disable-gtkfe"

@@ -1,6 +1,6 @@
 # Copyright 2002 Paul Belt
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ircmap-0.99.ebuild,v 1.2 2003/07/13 12:54:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ircmap-0.99.ebuild,v 1.3 2003/09/11 01:23:41 msterret Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 RDEPEND="virtual/glibc
-         media-gfx/graphviz"
+	media-gfx/graphviz"
 DEPEND="${RDEPEND}"
 S=${WORKDIR}/${PN}
 
