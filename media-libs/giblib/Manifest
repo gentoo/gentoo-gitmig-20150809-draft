@@ -1,7 +1,17 @@
-MD5 c16866abc713361065f25555424031a9 giblib-1.2.2.ebuild 670
-MD5 ee1613f8e8db1b5c6e439a784676fea4 giblib-1.2.3.ebuild 791
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ad6e6d73be11224aae9e2ada451366e8 ChangeLog 1630
+MD5 c16866abc713361065f25555424031a9 giblib-1.2.2.ebuild 670
+MD5 7b5ba1c91435f46517a2722cb0262c27 giblib-1.2.3.ebuild 788
 MD5 6b36114042766b590a929750635602fe metadata.xml 640
+MD5 bd2c6f3969e5aa806ef43f96c23f4ace files/imlib-x-test.c 84
 MD5 6f31ce14c952e21333c69c2c4d7d173d files/digest-giblib-1.2.2 64
 MD5 09fd67c47411427f2ed5fee63ef9b6d6 files/digest-giblib-1.2.3 64
-MD5 bd2c6f3969e5aa806ef43f96c23f4ace files/imlib-x-test.c 84
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBApVCHTu7gpaalycRAiNeAJ9i9j0K3rjjL/U9S+JDhhtRfvIuAwCg22nm
+c2EMScZX3f1kiDAqKOPrysM=
+=wwAj
+-----END PGP SIGNATURE-----
