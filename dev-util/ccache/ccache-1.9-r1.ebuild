@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-1.9.ebuild,v 1.3 2002/07/12 06:14:29 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-1.9-r1.ebuild,v 1.1 2002/07/12 06:14:29 phoenix Exp $
 
 DESCRIPTION="ccache is a fast compiler cache. It is used as a front end to your
 compiler to safely cache compilation output. When the same code is compiled
@@ -24,21 +24,46 @@ src_install () {
 	doexe ccache
 	doman ccache.1
 	dodoc COPYING README    
-	cd ${D}/usr/bin/ccache
-	ln -s ccache gcc
-	ln -s ccache cc
-	ln -s ccache c++
-	ln -s ccache g++
-	ln -s ccache ${CHOST}-c++
-	ln -s ccache ${CHOST}-g++
-	ln -s ccache ${CHOST}-gcc
+
 }
 
 pkg_postinst() {
+	cd /usr/bin/ccache
+
+	if([ -e /usr/bin/gcc ]) then
+		ln -s ccache gcc
+	fi
+
+	if([ -e /usr/bin/cc ]) then
+		ln -s ccache cc
+	fi
+
+	if([ -e /usr/bin/c++ ]) then
+		ln -s ccache c++
+	fi
+
+	if([ -e /usr/bin/g++ ]) then
+		ln -s ccache g++
+	fi
+
+	if([ -e /usr/bin/${CHOST}-gcc ]) then
+		ln -s ccache ${CHOST}-gcc
+	fi
+
+	if([ -e /usr/bin/${CHOST}-c++ ]) then
+		ln -s ccache ${CHOST}-c++
+	fi
+
+	if([ -e /usr/bin/${CHOST}-g++ ]) then
+		ln -s ccache ${CHOST}-g++
+	fi
+
 	if [ ! -d ${ROOT}root/.ccache ]
 	then
 		install -d -m0700 ${ROOT}root/.ccache
 	fi
+
+
 	einfo "To use ccache, add /usr/bin/ccache to your path before /usr/bin."
 	einfo "Portage 2.0.6+ will automatically take advantage of ccache with no additional steps."
 	einfo "If this is your first install of ccache, type something like this to set a maximum"
