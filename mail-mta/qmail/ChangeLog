@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/qmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.25 2005/01/08 00:19:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.26 2005/01/09 13:31:15 hansmi Exp $
+
+  09 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
+  files/1.03-r15/Makefile-relaymxlookup.patch,
+  files/1.03-r16/Makefile-relaymxlookup.patch:
+  Fixed bug 77159 -- wrong dependencies in Makefile-relaymxlookup.patch.
 
   08 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> qmail-1.03-r16.ebuild:
   Commented out the branding patch, bug 40879.

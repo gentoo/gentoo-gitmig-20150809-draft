@@ -5,7 +5,7 @@
  date822fmt.o now.o qmail.o cdb.a fd.a wait.a datetime.a open.a \
  getln.a sig.a case.a env.a stralloc.a alloc.a substdio.a error.a \
 -str.a fs.a auto_qmail.o
-+str.a fs.a auto_qmail.o dns.o ip.h ipalloc.h ipme.h byte_diff.o
++str.a fs.a auto_qmail.o dns.o ip.o ipalloc.o ipme.o byte_diff.o
  	./load qmail-qmtpd rcpthosts.o control.o constmap.o \
  	received.o date822fmt.o now.o qmail.o cdb.a fd.a wait.a \
  	datetime.a open.a getln.a sig.a case.a env.a stralloc.a \
@@ -20,7 +20,7 @@
  date822fmt.o now.o qmail.o cdb.a fd.a wait.a datetime.a getln.a \
  open.a sig.a case.a env.a stralloc.a alloc.a strerr.a substdio.a error.a str.a \
 -fs.a auto_qmail.o base64.o socket.lib
-+fs.a auto_qmail.o base64.o socket.lib dns.o ip.h ipalloc.h
++fs.a auto_qmail.o base64.o socket.lib dns.o ip.o ipalloc.o
  	./load qmail-smtpd qregex.o rcpthosts.o commands.o timeoutread.o \
  	timeoutwrite.o ip.o ipme.o ipalloc.o control.o constmap.o \
  	tls.o ssl_timeoutio.o ndelay.a -L/usr/local/ssl/lib -lssl -lcrypto \
