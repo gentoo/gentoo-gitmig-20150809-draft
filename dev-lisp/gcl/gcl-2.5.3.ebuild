@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.5.3.ebuild,v 1.2 2003/10/11 13:21:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.5.3.ebuild,v 1.3 2003/10/14 18:56:19 mkennedy Exp $
 
 inherit elisp-common
 
@@ -10,7 +10,8 @@ S=${WORKDIR}/${P}
 DESCRIPTION="GNU Common Lisp"
 SRC_URI="ftp://ftp.gnu.org/gnu/gcl/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gcl/gcl.html"
-PROVIDE="virtual/commonlisp"
+# uncomment and add to profiles when GCL is integrated into the common lisp controller
+# PROVIDE="virtual/commonlisp"
 
 DEPEND=">=app-text/texi2html-1.64
 	>=dev-libs/gmp-4.1

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.13 2003/10/11 13:21:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.14 2003/10/14 18:56:19 mkennedy Exp $
+
+  14 Oct 2003; Matthew Kennedy <mkennedy@gentoo.org> gcl-2.5.3.ebuild:
+  no longer provide virtual/commonlisp
 
 *gcl-2.5.3 (13 Jul 2003)
 
