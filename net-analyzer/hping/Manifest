@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6b858f3b5cb5f4f2627ed4568782c353 hping-2.0.0_rc3.ebuild 987
-MD5 a7d4dbce06c3d43693987b6c274267f5 hping-2.0.0_rc3-r1.ebuild 1030
+MD5 0d53f4a50c0494c359a56705b277f890 ChangeLog 4009
 MD5 60854d3a1fba6d9c7e389232a17e607f hping-2.0.0_rc2-r1.ebuild 910
-MD5 fcaa6dba7b378f113148a836e2449017 ChangeLog 3916
 MD5 51334b67d2cbed22e0efec4143bc6ff0 metadata.xml 245
+MD5 6b858f3b5cb5f4f2627ed4568782c353 hping-2.0.0_rc3.ebuild 987
+MD5 1bf16f181ef75f499077a258822320b4 hping-2.0.0_rc3-r1.ebuild 1029
 MD5 eef05cbe61a0adf5b65aced19f629085 files/digest-hping-2.0.0_rc2-r1 66
-MD5 f72fc3b23f30d84ba7210390cf3b4b57 files/digest-hping-2.0.0_rc3-r1 66
+MD5 cca06082ed7613b5803b6c7ff62a31bf files/wlan-header-fix.patch 848
 MD5 f72fc3b23f30d84ba7210390cf3b4b57 files/digest-hping-2.0.0_rc3 66
 MD5 9d855cb52e43027b417ebb95dbad5c72 files/bytesex.h.patch 623
-MD5 cca06082ed7613b5803b6c7ff62a31bf files/wlan-header-fix.patch 848
+MD5 f72fc3b23f30d84ba7210390cf3b4b57 files/digest-hping-2.0.0_rc3-r1 66
 MD5 b14544690b9c931e61b28dd0f6544f48 files/hping-bridge.patch 359
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBjM8yT+MN7JbqCpMRAl0iAJwLPeCJ35YovYAXLJhlNiE+MkXa6ACgj1bT
-pnNczq14GzchsHBO28A/iZA=
-=ywWN
------END PGP SIGNATURE-----
