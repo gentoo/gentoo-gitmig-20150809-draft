@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/autoprofile
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/autoprofile/ChangeLog,v 1.14 2004/09/13 20:07:59 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/autoprofile/ChangeLog,v 1.15 2004/09/23 14:27:33 rizzo Exp $
+
+*autoprofile-2.10 (23 Sep 2004)
+
+  23 Sep 2004; Don Seiler <rizzo@gentoo.org> +autoprofile-2.10.ebuild:
+  Version bump, works with 1.0.0
 
 *autoprofile-2.09 (13 Sep 2004)
 
