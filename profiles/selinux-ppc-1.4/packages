@@ -22,10 +22,10 @@
 # SELinux-patched packages
 *>=net-misc/openssh-3.7.1_p2
 *>=sys-apps/coreutils-5.0.91
-*sys-apps/findutils-4.1.20
+*>=sys-apps/findutils-4.1.20
 *=sys-apps/procps-3.1.12
-*sys-apps/psmisc-21.2-r4
-*sys-apps/util-linux-2.12
+*>=sys-apps/psmisc-21.2-r4
+*>=sys-apps/util-linux-2.12
 *>=sys-apps/pam-login-3.12-r1
 *>=sys-libs/pam-0.77
 *>=sys-libs/pwdb-0.61-r4
@@ -46,6 +46,7 @@
 >=sys-kernel/ppc-sources-dev-2.6.0_beta3
 >=sys-kernel/development-sources-2.6.0_beta3
 >=sys-kernel/mm-sources-2.6.0_beta3
+>=sys-kernel/vanilla-sources-2.6.0_beta3
 ###########################################################
 
 *app-arch/ncompress
