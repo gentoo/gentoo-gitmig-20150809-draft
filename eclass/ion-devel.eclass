@@ -1,11 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ion-devel.eclass,v 1.1 2003/12/07 16:03:39 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ion-devel.eclass,v 1.2 2003/12/10 11:17:40 twp Exp $
 
 ECLASS=ion-devel
 INHERITED="${INHERITED} ${ECLASS}"
 
+save_DESCRIPTION="${DESCRIPTION}"
 inherit eutils
+DESCRIPTION="${save_DESCRIPTION}"
 
 ION_DEVEL_VERSION=${ION_DEVEL_VERSION:-${PV}}
 
@@ -45,7 +47,7 @@ ion-devel-configure_20031121() {
 +MANDIR=\$(PREFIX)/share/man
  # Some documents
 -DOCDIR=\$(PREFIX)/doc/ion-devel
-+DOCDIR=\$(PREFIX)/share/doc/ion-devel-${ION_DEVEL_VERSION}
++DOCDIR=\$(PREFIX)/share/doc/${PF}
  # Nothing at the moment
  INCDIR=\$(PREFIX)/include/ion-devel
  # Nothing at the moment
