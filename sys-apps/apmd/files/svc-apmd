@@ -1,0 +1,44 @@
+#!/bin/sh
+#RCUPDATE:2 3 4:60:This line is required for script management
+
+# Based on apmd.init by Dirk Eddelbuettel <edd@debian.org> and
+# Avery Pennarun <apenwarr@debian.org>
+# Rewritten for gentoo by Craig Joly <joly@ee.ualberta.ca>
+
+. /etc/rc.d/config/functions
+
+SERVICE="apmd"
+opts="start stop"
+
+# apmd arguments go in /var/lib/supervise/services/apmd/run.
+# See the manual page apmd(8) for details.
+# APMD=""
+
+check_kernel() {
+	if [ ! -e /proc/apm ]
+	then
+		eerror "APM support has not been compiled into the kernel."
+		exit 1
+	fi
+}
+
+start() {
+	check_kernel
+
+	ebegin "Starting $SERVICE"
+	ln -sf ../services/${SERVICE} ${SVCDIR}/control/${SERVICE}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping $SERVICE"
+	if [ -e ${SVCDIR}/control/${SERVICE} ]
+	then
+		/usr/bin/svc -dx ${SVCDIR}/control/${SERVICE}
+		rm ${SVCDIR}/control/${SERVICE}
+	fi
+	eend $?
+}
+
+doservice ${@}
+

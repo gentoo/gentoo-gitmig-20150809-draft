@@ -7,6 +7,13 @@ DESCRIPTION="Advanced Power Management Daemon"
 SRC_URI="ftp://ftp.debian.org/debian/pool/main/a/apmd/apmd_3.0.1-1.tar.gz"
 HOMEPAGE="http://www.worldvisions.ca/~apenwarr/apmd/"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -e "s:PREFIX=\/usr:PREFIX=\$\{DESTDIR\}\/usr:" Makefile | cat > Makefile
+	sed -e "s:install\ \-b \-Vt:\#install\ \-b \-Vt:" Makefile | cat > Makefile
+}
+
 src_compile() {
 
     try emake
@@ -15,19 +22,7 @@ src_compile() {
 
 src_install () {
 
-	dodir /usr/
-	dobin apm
-	dobin on_ac_power
-	dobin xapm
-	dobin tailf
-	dobin apmsleep
-	dosbin apmd
-	doman *.{1,8}
-	dolib.a libapm.a
-
-	insinto /usr/include
-	insopts -m 0644
-	doins apm.h
+	try make DESTDIR=${D} install
 
 	insinto /etc/apm
 	insopts -m 0755
