@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.27.20030122-r1.ebuild,v 1.1 2003/01/31 05:12:46 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.27.20030122-r1.ebuild,v 1.2 2003/01/31 05:24:27 raker Exp $
 
 IUSE="static freetype xv sdl oss dvd mmx sse 3dnow zlib oggvorbis X qt"
 
-inherit libtool
+inherit libtool eutils
 
 MY_P="${P/.200/-200}"
 MY_S="${PN}0.7-0.7.27"
@@ -34,8 +34,15 @@ SLOT="0.7"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
+src_unpack() {
+        unpack ${MY_P}.tgz
+        cd ${S}
+        epatch ${DISTDIR}/20030130.diff.bz2 || die
+}
+
 src_compile() {
 
+	./autogen.sh
 	elibtoolize
 
 	local myconf=""
