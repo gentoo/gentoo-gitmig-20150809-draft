@@ -1,17 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2-r1.ebuild,v 1.8 2004/10/05 13:23:01 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2-r1.ebuild,v 1.9 2004/10/16 19:56:10 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="unix dialout program"
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/apps/serialcomm/dialout/"
 SRC_URI="http://www.ibiblio.org/pub/Linux/apps/serialcomm/dialout/${P}.tar.gz"
+
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 sparc mips ppc"
+KEYWORDS="mips ppc sparc x86"
 IUSE=""
-DEPEND="sys-libs/libtermcap-compat"
+
+DEPEND="sys-libs/ncurses"
 RDEPEND=""
 
 src_unpack() {
@@ -24,9 +26,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-add-115200.patch
 
 	# Fixes the Makefile to use gentoo CFLAGS
-	mv ${S}/Makefile ${S}/Makefile.orig
-	sed -e "s:GCCOPT\t= -pipe -O2 -fno-strength-reduce -fomit-frame-pointer:GCCOPT\t= ${CFLAGS} -fno-strength-reduce:g" \
-		${S}/Makefile.orig > ${S}/Makefile
+	sed -i \
+		-e "s:GCCOPT\t= -pipe -O2 -fno-strength-reduce -fomit-frame-pointer:GCCOPT\t= ${CFLAGS} -fno-strength-reduce:g" \
+		-e 's:-ltermcap:-lncurses:' \
+		Makefile || die
 }
 
 src_compile() {
