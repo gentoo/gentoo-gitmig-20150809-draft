@@ -1,0 +1,34 @@
+Index: bacon-video-widget-gst.c
+===================================================================
+RCS file: /cvs/gnome/totem/src/bacon-video-widget-gst.c,v
+retrieving revision 1.108
+diff -u -r1.108 bacon-video-widget-gst.c
+--- bacon-video-widget-gst.c	19 Nov 2004 12:09:29 -0000	1.108
++++ bacon-video-widget-gst.c	22 Nov 2004 14:16:28 -0000
+@@ -844,6 +844,9 @@
+         GstPad *pad = NULL;
+ 
+         g_object_get (info, "object", &pad, NULL);
++        /* hack for 0.8.5 */
++        if (!pad)
++          g_object_get (info, "pad", &pad, NULL);
+         if (pad != NULL && GST_PAD_REALIZE (pad) != NULL) {
+           g_assert (GST_IS_PAD (pad));
+ 
+@@ -2087,11 +2090,14 @@
+     g_object_get (info, "type", &type, NULL);
+     pspec = g_object_class_find_property (G_OBJECT_GET_CLASS (info), "type");
+     val = g_enum_get_value (G_PARAM_SPEC_ENUM (pspec)->enum_class, type);
+-                                                                                
++
+     if (strstr (val->value_name, "VIDEO")) {
+-      GstPad *pad;
++      GstPad *pad = NULL;
+ 
+       g_object_get (info, "object", &pad, NULL);
++      /* hack for 0.8.5 */
++      if (!pad)
++        g_object_get (info, "pad", &pad, NULL);
+       g_assert (GST_IS_PAD (pad));
+       from = gst_caps_copy (GST_PAD_CAPS (pad));
+     }

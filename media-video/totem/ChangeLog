@@ -1,6 +1,12 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.37 2004/11/22 01:07:30 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.38 2004/11/22 14:57:14 foser Exp $
+
+*totem-0.99.22-r1 (22 Nov 2004)
+
+  22 Nov 2004; foser <foser@gentoo.org> totem-0.99.22-r1.ebuild :
+  Add patch to fix gst backend for released gst-plugins versions 
+  http://bugzilla.gnome.org/show_bug.cgi?id=159049
 
 *totem-0.99.22 (22 Nov 2004)
 
