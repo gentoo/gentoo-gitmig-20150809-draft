@@ -132,4 +132,5 @@
 *sys-apps/iproute2
 #not required, since glibc depends on linux-headers and they come with the build image
 *sys-kernel/linux-headers
-<=sys-apps/xinetd-2.3.3
+#lesser versions are not rc6 compatible
+>=sys-apps/xinetd-2.3.3-r1

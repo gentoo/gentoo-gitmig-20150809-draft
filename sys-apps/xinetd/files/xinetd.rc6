@@ -7,17 +7,18 @@ depend() {
 autoconfig() {
 	if [ ! -e /etc/xinetd.conf ] ; then
 		if [ ! -e /etc/inetd.conf ] ; then
-			eerror "You need an /etc/xinetd.conf file to run xinetd!"
+			eerror "You need an /etc/xinetd.conf file to run xinetd"
 			return 1
 		else
 			einfo "Auto-creating xinetd.conf from your inetd.conf.."
 			/usr/sbin/xconv.pl < /etc/inetd.conf > /etc/xinetd.conf
 		fi
 	fi
+	return
 }
 
 start() {
-	autoconfig
+	autoconfig || return 1
 	ebegin "Starting xinetd"
 	start-stop-daemon --start --quiet --exec /usr/sbin/xinetd 1>&2
 	eend $? 
@@ -26,5 +27,31 @@ start() {
 stop() {
 	ebegin "Stopping xinetd"
 	start-stop-daemon --stop --quiet -u root -n xinetd 1>&2
+
+	#
+	# This will gracefully handle the case where the dependency
+	# engine thinks xinetd is running, when in fact it isn't.
+	# Under those circumstances the above command will fail.
+	# This will jam us into a situation where "xinetd stop"
+	# will never work and "xinetd start" will always think
+	# xinetd is running. We _want_ to protect integrity of
+	# the dependency init system.
+	#
+	# This phenomenon can happen a couple of ways:
+	# 1. The /etc/xinetd.conf exists, but it doesnt have any
+	#    service xxxx { ... } sections configured.
+	#    This is _exactly_ what will happen if for some reason
+	#    /etc/inetd.conf is either void of configured services
+	#    (everything commented) or it is 0-bytes long, and xconv.pl
+	#    is run against it (see autoconfig() above)
+	# 2. if xinetd is terminated behind the dependency engines
+	#    back. ie, killall xinetd.
+	# ~woodchip
+	#
+	if [ $? -eq 1 ] ; then
+		if [ -e /dev/shm/.init.d/started/xinetd ] ; then
+			eend 0
+		fi
+	fi
 	eend $? 
 }
