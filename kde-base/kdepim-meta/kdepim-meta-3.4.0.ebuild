@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-3.4.0.ebuild,v 1.5 2005/03/26 01:17:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-3.4.0.ebuild,v 1.6 2005/04/03 20:32:32 greg_g Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
-DESCRIPTION="kdepim 3.3.0 - merge this to pull in all kdepim-derived packages"
+DESCRIPTION="kdepim - merge this to pull in all kdepim-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"
 SLOT="3.4"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
-IUSE=""
+IUSE="pda"
 
 RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/certmanager)
@@ -24,7 +24,6 @@ RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/kitchensync)
 	$(deprange $PV $MAXKDEVER kde-base/kmail)
 	$(deprange $PV $MAXKDEVER kde-base/kmailcvt)
-	$(deprange $PV $MAXKDEVER kde-base/kmobile)
 	$(deprange $PV $MAXKDEVER kde-base/knode)
 	$(deprange $PV $MAXKDEVER kde-base/knotes)
 	$(deprange $PV $MAXKDEVER kde-base/kode)
@@ -33,7 +32,7 @@ RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/kontact-specialdates)
 	$(deprange $PV $MAXKDEVER kde-base/korganizer)
 	$(deprange $PV $MAXKDEVER kde-base/korn)
-	$(deprange $PV $MAXKDEVER kde-base/kpilot)
+	pda? ( $(deprange $PV $MAXKDEVER kde-base/kpilot) )
 	$(deprange $PV $MAXKDEVER kde-base/ksync)
 	$(deprange $PV $MAXKDEVER kde-base/ktnef)
 	$(deprange $PV $MAXKDEVER kde-base/libkcal)
@@ -47,3 +46,6 @@ RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/libksieve)
 	$(deprange $PV $MAXKDEVER kde-base/mimelib)
 	$(deprange $PV $MAXKDEVER kde-base/networkstatus)"
+
+# not compiled by default
+#	$(deprange $PV $MAXKDEVER kde-base/kmobile)
