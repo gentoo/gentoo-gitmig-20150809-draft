@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/udunits-1.12.1.ebuild,v 1.3 2004/06/24 22:19:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/udunits/udunits-1.12.1.ebuild,v 1.4 2004/11/08 23:13:28 nerdboy Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 IUSE=""
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://unidata.ucar.edu/pub/udunits/udunits-${PV}.tar.Z"
 
 SLOT="0"
 LICENSE="UCAR-Unidata"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa"
 
 DEPEND="dev-lang/perl
 	sys-apps/sed"
@@ -29,14 +29,19 @@ src_unpack() {
 
 src_compile() {
 	export CPPFLAGS="-Df2cFortran -D_POSIX_SOURCE"
+	append-flags -fPIC
 	econf || die "econf failed"
+
+	cd lib
+	emake || die
+	cd ..
 
 	cd perl
 	perl Makefile.PL PREFIX=${D}/usr
 	cd ..
 
-	make || die
-	make test || die
+	emake || die
+	emake test || die
 }
 
 src_install() {
