@@ -1,5 +1,15 @@
-MD5 f584b742eb61b9016c9f5cd8a8553696 davfs2-0.2.2.ebuild 808
-MD5 ecdcfef0547a76b43fc5f92f43fe28d5 davfs2-0.2.1.ebuild 804
-MD5 e2348f233eca840752b64a7fd51d555c ChangeLog 699
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d0057c0ad166e1aefc9bcf89ec876efe davfs2-0.2.2.ebuild 805
+MD5 ef94e04d2bfa9bb77cd4397541e0b513 davfs2-0.2.1.ebuild 801
+MD5 aaa66b919061d4e988d2d32f138cad94 ChangeLog 868
 MD5 222bb7c9a0ba144f42b188211d562cd3 files/digest-davfs2-0.2.1 64
 MD5 340445f0521e173e52743ac4f2889f56 files/digest-davfs2-0.2.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOe8p/rLF9B432nYRAiNVAJ4gJdi3FMn65mkz+2+XilwJNzO1zQCdH/ao
+dNSIwWcGxTqv66LBZItudG4=
+=WcW+
+-----END PGP SIGNATURE-----
