@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r5.ebuild,v 1.2 2004/01/15 07:56:29 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r5.ebuild,v 1.3 2004/01/19 02:21:34 iggy Exp $
 
 UNIPATCH_LIST="${DISTDIR}/gentoo-sources-${PVR}.patch.bz2"
 ETYPE="sources"
@@ -8,7 +8,7 @@ ETYPE="sources"
 inherit kernel-2
 detect_version
 
-RESTRICT="nomirror"
+#RESTRICT="nomirror"
 
 S=${WORKDIR}/linux-${KV}
 
