@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.9 2005/02/18 17:43:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.10 2005/02/19 10:04:20 usata Exp $
+
+*fontforge-20050209 (19 Feb 2005)
+
+  19 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> -fontforge-20040618.ebuild,
+  -fontforge-20040824.ebuild, +fontforge-20050209.ebuild:
+  Version bumped. Removed autotrace dependency and added pkg_postinst().
+  See bug #77133.
 
   18 Feb 2005; Aron Griffis <agriffis@gentoo.org> fontforge-20041231.ebuild:
   stable on x86 amd64 ia64 alpha
