@@ -2,6 +2,7 @@ MD5 5d00849601199fb8319e5d5c73763f2e ChangeLog 3438
 MD5 723a28b363792ae706ecfa1f5f24380b gnome-pilot-0.1.65-r3.ebuild 1184
 MD5 9d6e7807312876ee9338fed1da9d9c3c gnome-pilot-0.1.65-r5.ebuild 1371
 MD5 7c803723f85294eae00e7aa47f0f36ca gnome-pilot-0.1.71.ebuild 1393
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 13cab4b08771cc11f0b3b0ffce944546 gnome-pilot-2.0.8.ebuild 1415
 MD5 2247cb8be79ac3c4a9293bf537c64987 gnome-pilot-2.0.9.ebuild 1415
 MD5 6dd42dbe52e081c7ac130b8303cd84ac files/digest-gnome-pilot-0.1.65-r3 71

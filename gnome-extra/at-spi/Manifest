@@ -1,6 +1,7 @@
 MD5 235e6d8da8a6022b2bb45143034da5cc ChangeLog 1609
 MD5 4a2119fc2b20084e9fa910a37c897e82 at-spi-1.0.1.ebuild 704
 MD5 a47932cfbd125a0bfbb0ccb982d18d54 at-spi-1.0.2.ebuild 697
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 f992d2e3bdfc724455730a4e755a7d0b at-spi-1.1.8.ebuild 675
 MD5 970130f3de8c7c0e1077567ac433c17d files/digest-at-spi-1.0.1 65
 MD5 dfe189e4aef5e50aea20770e036bdd97 files/digest-at-spi-1.0.2 65

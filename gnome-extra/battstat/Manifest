@@ -1,6 +1,7 @@
 MD5 24c943d980b733d3a5643b6d4d34490b ChangeLog 1814
 MD5 4a5a86c72ce07b178679b2d1232fe56c battstat-2.0.11.ebuild 1043
 MD5 59cedb800474a7c358c0eeca3ed2c0d9 battstat-2.0.13.ebuild 1269
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 31d1f0e6dd4fc8a3dd521421db177727 files/battstat-acpi.diff 2058
 MD5 f0fbc49c008fdedfb7f3fa230f01f1ba files/digest-battstat-2.0.11 74
 MD5 b4f2a1f645aa4591b9b34e8a34c435f6 files/digest-battstat-2.0.13 128

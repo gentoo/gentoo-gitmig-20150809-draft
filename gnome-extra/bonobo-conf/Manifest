@@ -1,5 +1,6 @@
 MD5 a7504a683645c2ee123b1a1543e11492 ChangeLog 1272
 MD5 7cd71b562dc185e4b7d01a0b50c30240 bonobo-conf-0.14.ebuild 1203
 MD5 ced7bb5c8c4bfbc7d2313b0dbada5e7a bonobo-conf-0.16.ebuild 1068
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 aeca55f4f94d65d65ccc5482f4c6541c files/digest-bonobo-conf-0.14 68
 MD5 dfa7edf21e04d750f82339aa1743615e files/digest-bonobo-conf-0.16 68

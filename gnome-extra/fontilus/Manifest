@@ -1,6 +1,7 @@
 MD5 20397c797926b6db3cec41c85315e771 ChangeLog 736
 MD5 25e756980380a24a729cc1a50ca89fc6 fontilus-0.1.ebuild 597
 MD5 39a9903c5cf4c39923479e8cbc67a052 fontilus-0.3.ebuild 597
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 eccfd685d0804e4e1ca8256202a45737 fontilus-0.4.ebuild 596
 MD5 9a5ac8404fd2f2a5ce61938cf7b623b2 files/digest-fontilus-0.1 65
 MD5 f291f04561100a3ed251de0dd23b1bfa files/digest-fontilus-0.3 65

@@ -1,5 +1,6 @@
 MD5 462f15a9f9154f556079a46610c41a69 ChangeLog 1076
 MD5 cd3be216015ef130b3265cc2e84b07df gb-0.0.17.ebuild 882
 MD5 0b9576cb3b0c73788ca40d36de073907 gb-0.0.20-r1.ebuild 890
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 3d44f5cb77c2906d0f0d3dc4601ec60d files/digest-gb-0.0.17 61
 MD5 4761e18fbc0a48f470cedcf93f642d21 files/digest-gb-0.0.20-r1 61
