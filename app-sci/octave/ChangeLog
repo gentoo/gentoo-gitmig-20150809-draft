@@ -1,6 +1,14 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.5 2002/09/19 20:09:38 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/ChangeLog,v 1.6 2002/10/01 20:46:26 satai Exp $
+
+*octave-2.1.36-r1 (01 Oct 02)
+
+  01 Oct 2002; Matthew Turk <satai@gentoo.org> :
+  Closing bug 8486 by ripping out all references to dvips.  DVIPS generates
+  fonts on the fly, which causes massive sandbox failures.  Instead, we leave
+  docs in DVI format if USE=tetex, which are then installed uncompressed into
+  /usr/share/doc/octave-2.1.36-r1 .
 
 *octave-2.1.36 (15 Jul 2002)
 
