@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r1.ebuild,v 1.2 2003/10/31 17:14:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r1.ebuild,v 1.3 2003/11/02 16:33:38 usata Exp $
 
 inherit flag-o-matic alternatives eutils gnuconfig
 filter-flags -fomit-frame-pointer
@@ -13,7 +13,7 @@ SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz"
 LICENSE="Ruby"
 SLOT="1.8"
 KEYWORDS="~alpha ~arm ~hppa ~mips ~sparc ~x86"
-IUSE="socks5 tcltk"
+IUSE="socks5 tcltk ruby18"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/gdbm-1.8.0
@@ -30,6 +30,11 @@ pkg_setup() {
 	ewarn "<dev-lang/ruby-1.8.0-r1 (ruby-1.8 branch) please unmerge them first."
 	ewarn "SLOT supports >=ruby-1.6.8-r2 and >=ruby-1.8.0-r1 only."
 	ewarn
+	einfo
+	einfo "Also if you want to use ruby-1.8 by default you need to set"
+	einfo "\tUSE=\"ruby18\""
+	einfo "otherwise ruby-1.6 will be used."
+	einfo
 
 	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
 	echo -ne "\a" ; sleep 1
@@ -63,6 +68,12 @@ src_compile() {
 		unset SOCKS_SERVER
 	fi
 
+	# Increase GC_MALLOC_LIMIT if set (default is 8000000)
+	if [ -n "${RUBY_GC_MALLOC_LIMIT}" ] ; then
+		CFLAGS="${CFLAGS} -DGC_MALLOC_LIMIT=${RUBY_GC_MALLOC_LIMIT}"
+		export CFLAGS
+	fi
+
 	econf --program-suffix=18 --enable-shared \
 		`use_enable socks5 socks` \
 		|| die "econf failed"
@@ -79,13 +90,22 @@ src_install() {
 }
 
 ruby_alternatives() {
-	alternatives_makesym /usr/bin/ruby /usr/bin/ruby{18,16}
-	alternatives_makesym /usr/bin/irb /usr/bin/irb{18,16}
-	alternatives_auto_makesym /usr/bin/erb /usr/bin/erb*
-	alternatives_makesym /usr/lib/libruby.so \
-		/usr/lib/libruby{18,16}.so
-	alternatives_makesym /usr/share/man/man1/ruby.1.gz \
-		/usr/share/man/man1/ruby{18,16}.1.gz
+	if [ -n "`use ruby18`" ] ; then
+		alternatives_makesym /usr/bin/ruby /usr/bin/ruby{18,16}
+		alternatives_makesym /usr/bin/irb /usr/bin/irb{18,16}
+		alternatives_makesym /usr/lib/libruby.so \
+			/usr/lib/libruby{18,16}.so
+		alternatives_makesym /usr/share/man/man1/ruby.1.gz \
+			/usr/share/man/man1/ruby{18,16}.1.gz
+	else
+		alternatives_makesym /usr/bin/ruby /usr/bin/ruby{16,18}
+		alternatives_makesym /usr/bin/irb /usr/bin/irb{16,18}
+		alternatives_makesym /usr/lib/libruby.so \
+			/usr/lib/libruby{16,18}.so
+		alternatives_makesym /usr/share/man/man1/ruby.1.gz \
+			/usr/share/man/man1/ruby{16,18}.1.gz
+	fi
+	alternatives_auto_makesym /usr/bin/erb /usr/bin/erb?*
 }
 
 pkg_postinst() {
@@ -98,5 +118,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	ruby-alternatives
+	ruby_alternatives
 }
