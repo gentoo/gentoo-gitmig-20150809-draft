@@ -466,10 +466,11 @@ dev-lang/tcl-tk
 # Arcady Genkin <agenkin@thpoon.com> (May 2, 2002)
 # These need to be masked because portage thinks that 0.9.0.1_beta10
 # newer than 0.9.0_pre1, which is not the case here.
-~media-sound/alsa-utils-0.9.0.1_beta10
-~media-libs/alsa-lib-0.9.0.1_beta10
-~media-libs/alsa-oss-0.9.0.1_beta10
-
+# NOTE: don't use ~ deps in package masks because they break 1.8.8 portage and aren't
+# correct anyway -- drobbins, 02 May 2002
+=media-sound/alsa-utils-0.9.0.1_beta10*
+=media-libs/alsa-lib-0.9.0.1_beta10*
+=media-libs/alsa-oss-0.9.0.1_beta10*
 
 # This is an experimental patched version that is
 # supposed to work with both alsa 0.5 and alsa 0.9
