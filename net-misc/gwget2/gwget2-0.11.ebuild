@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget2/gwget2-0.6.ebuild,v 1.3 2004/05/31 23:06:02 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget2/gwget2-0.11.ebuild,v 1.1 2004/05/31 23:06:02 khai Exp $
 
 inherit gnome2
 
@@ -9,24 +9,25 @@ HOMEPAGE="http://gwget.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gwget/${P}.tar.gz"
 LICENSE="GPL-2"
 
-IUSE="nls"
+#IUSE="nls"
+IUSE=""
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND=">=net-misc/wget-1.8
-	>=x11-libs/gtk+-2.0
+	>=x11-libs/gtk+-2
 	>=gnome-base/gconf-2
-	>=gnome-base/libgnomeui-2.0
-	>=gnome-base/libglade-2.0"
+	>=gnome-base/libgnomeui-2
+	>=gnome-base/libglade-2"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	nls? ( sys-devel/gettext )"
+	>=sys-devel/gettext-0.10.4"
 
-DOCS="ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS TODO"
+DOCS="ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL README THANKS TODO"
 
 use nls \
-	&& G2CONF="${G2CONF} --with-included-gettext=no" \
+	&& G2CONF="${G2CONF} --enable-nls" \
 	|| G2CONF="${G2CONF} --disable-nls"
 
 src_unpack( ) {
@@ -47,5 +48,3 @@ src_install( ) {
 	rm -rf ${D}/usr/doc
 
 }
-
-
