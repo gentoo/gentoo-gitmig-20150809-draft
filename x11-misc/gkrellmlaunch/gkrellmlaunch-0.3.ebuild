@@ -1,10 +1,10 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Jerry A! <jerry@thehutt.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellmlaunch/gkrellmlaunch-0.3.ebuild,v 1.2 2002/02/25 00:38:06 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellmlaunch/gkrellmlaunch-0.3.ebuild,v 1.3 2002/04/14 14:07:27 seemant Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="a Program-Launcher Plugin for Gkrellm"
+DESCRIPTION="a Program-Launcher Plugin for GKrellM"
 SRC_URI="http://prdownloads.sourceforge.net/gkrellmlaunch/${P}.tar.gz"
 
 HOMEPAGE="http://gkrellmlaunch.sourceforge.net/"
@@ -15,8 +15,8 @@ src_compile() {
 }
 
 src_install () {
-	exeinto /usr/lib/gkrellm/plugins
-	doexe gkrellmlaunch.so
+	insinto /usr/lib/gkrellm/plugins
+	doins gkrellmlaunch.so
 
 	dodoc README  
 }
