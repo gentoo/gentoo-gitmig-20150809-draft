@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-OpenSSL-RSA
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/ChangeLog,v 1.7 2003/07/12 10:49:57 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/ChangeLog,v 1.8 2004/02/26 05:59:28 kumba Exp $
+
+  25 Feb 2004; Joshua Kinard <kumba@gentoo.org> Crypt-OpenSSL-RSA-0.19.ebuild:
+  Added ~mips to KEYWORDS to satisfy repoman deps.
 
 *Crypt-OpenSSL-RSA-0.19 (07 Jun 2003)
 
