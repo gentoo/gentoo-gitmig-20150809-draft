@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/klvemkdvd/klvemkdvd-0.4.ebuild,v 1.1 2004/05/01 14:35:39 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/klvemkdvd/klvemkdvd-0.4.ebuild,v 1.2 2004/05/02 17:39:23 dholm Exp $
 
 
 DESCRIPTION="DVD filesystem Builder"
@@ -9,7 +9,7 @@ SRC_URI="http://heanet.dl.sourceforge.net/sourceforge/lvempeg/klvemkdvd-0.4.src.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 inherit kde
 
