@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6-r1.ebuild,v 1.3 2003/09/30 13:26:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6-r1.ebuild,v 1.4 2003/11/14 21:23:15 seemant Exp $
 
 inherit elisp
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="virtual/emacs
-	sys-apps/gzip
+	app-arch/gzip
 	>=sys-apps/sed-4"
 RDEPEND="virtual/emacs
 	canna? ( app-i18n/canna )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6.ebuild,v 1.8 2003/09/30 13:26:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6.ebuild,v 1.9 2003/11/14 21:23:15 seemant Exp $
 
 inherit elisp
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.m17n.org/pub/tamago/${P}.tar.gz
 HOMEPAGE="http://www.m17n.org/tamago/"
 IUSE=""
 DEPEND="virtual/emacs
-	sys-apps/gzip"
+	app-arch/gzip"
 RDEPEND="virtual/emacs
 	canna? ( app-i18n/canna )"
 S="${WORKDIR}/${P}"
