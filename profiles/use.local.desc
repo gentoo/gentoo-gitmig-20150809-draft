@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1034 2005/03/23 16:15:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1035 2005/03/23 20:03:10 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -314,8 +314,8 @@ mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also 
 mail-client/mozilla-thunderbird:mozplaintext - Disallow HTML editing for email
 mail-client/mutt:buffysize - Enables buffysize workaround, see bug 72422
 mail-client/mutt:nntp - Adds support for nntp via patch
-mail-client/muttng:nntp - Enable support for nntp
 mail-client/muttng:gpgme - Enable support for gpgme
+mail-client/muttng:nntp - Enable support for nntp
 mail-client/muttng:smtp - Enable support for smtp
 mail-client/pine:largeterminal - Add support for large terminals by doubling the size of pine's internal display buffer
 mail-client/pine:passfile - Adds support for caching IMAP passwords into a file between sessions
@@ -621,9 +621,9 @@ net-misc/quagga:ospfapi - Enable OSPFAPI support for client applications accessi
 net-misc/quagga:tcpmd5 - Enable TCP MD5 checksumming
 net-misc/ssh:openssh - Allow ssh and openssh to be installed side by side
 net-misc/vnc:server - Build VNC client
-net-misc/yate:h323 - Build H.323 Channel plugin
 net-misc/yate:fax - Build fax plugin
 net-misc/yate:gsm - Build gsm codec plugin
+net-misc/yate:h323 - Build H.323 Channel plugin
 net-misc/yate:ortp - Build oRTP Channel plugin
 net-misc/yate:zaptel - Build zaptel Channel plugin
 net-misc/zaptel:bri - Enable ISDN BRI support (bristuff)
@@ -654,33 +654,11 @@ net-www/apache:mpm-threadpool - Adds support for the threadpool Apache MPM
 net-www/apache:mpm-worker - Adds support for the worker Apache MPM
 net-www/apache:no-suexec - Don't install suexec with apache
 net-www/apache:static-modules - Build modules into apache instead of having them load at run time
-www-client/elinks:lua - enable lua support
 net-www/gentoo-webroot-default:no-htdocs - Don't install anything in the default webroot (/var/www/localhost)
-www-client/kazehakase-cvs:estraier - enable estraier support for full-text search in history.
-www-client/kazehakase-cvs:thumbnail - enable thumbnail support.
-www-client/kazehakase:estraier - enable estraier support for full-text search in history.
-www-client/kazehakase:thumbnail - enable thumbnail support.
 net-www/mod_auth_ldap:disk-cache - Enables support for disk cache.
 net-www/mod_auth_ldap:mem-cache - Enables support for memory cache.
 net-www/mod_log_sql:dbi - Enables support for libDBI
-www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
-www-client/mozilla-firefox:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
-www-client/mozilla-firefox:mozsvg - Enable SVG support in mozilla and firefox
-www-client/mozilla-firefox:mozxmlterm - Enable mozilla's XML-based command-line terminal
-www-client/mozilla:mozaccess - Enable text-to-speech (and eventually to braille), http://mozilla.org/projects/ui/accessibility/
-www-client/mozilla:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
-www-client/mozilla:mozctl - adds in the ctl extension in older versions (1.1 or earlier)
-www-client/mozilla:mozdevelop - Enable features for web developers (e.g. Venkman)
-www-client/mozilla:moznocompose - Disable building of mozilla's web page composer
-www-client/mozilla:moznoirc - Disable building of mozilla's IRC client
-www-client/mozilla:moznomail - Disable building mozilla's mail client
-www-client/mozilla:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
-www-client/mozilla:mozp3p - Enable mozilla's Platform for Privacy Preferences, http://mozilla.org/projects/p3p/
-www-client/mozilla:mozplaintext - Disallow HTML editing for email
-www-client/mozilla:mozsvg - Enable SVG support in mozilla and firefox
-www-client/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
 net-www/nvu:moznoxft - placeholder until mozilla eclass is modified for nvu
-www-client/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
 sci-astronomy/orsa:cln - Use the Class Library for Numbers for calculations
 sci-astronomy/orsa:gsl - Use the GNU scientific library for calculations
 sci-astronomy/predict:xforms - Adds a "map" client which uses the xforms library for its GUI
@@ -783,12 +761,43 @@ sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 sys-libs/uclibc:xattr - enables extended attributes
 sys-process/daemontools-scripts:withsamplescripts - Installs sample supervise scripts
 sys-process/procps:n32 - Enable n32 ABI support on mips
+www-app/dspam-web:cyrus - Build delivery options for cyrus-imapd
+www-app/dspam-web:exim - Build with delivery options for exim
+www-app/dspam-web:large-domain - Builds for large domain rather than for domain scale
+www-app/dspam-web:maildrop - Build with delivery options for maildrop
+www-app/dspam-web:neural - Build neural support for dspam
+www-app/dspam-web:procmail - Build procmail filter support
+www-app/dspam-web:sqlite - Build sqlite 2 support
+www-app/dspam-web:sqlite3 - Build sqlite 2 support
+www-app/dspam-web:virtual-users  - Build with virtual-users support
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/mediawiki:math - Adds math rendering support
 www-apps/nut:cgi - Add CGI script support
 www-apps/websvn:enscript - Add enscript support to colourize code stored in the repository
+www-client/elinks:lua - enable lua support
+www-client/kazehakase-cvs:estraier - enable estraier support for full-text search in history.
+www-client/kazehakase-cvs:thumbnail - enable thumbnail support.
+www-client/kazehakase:estraier - enable estraier support for full-text search in history.
+www-client/kazehakase:thumbnail - enable thumbnail support.
+www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
+www-client/mozilla-firefox:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
+www-client/mozilla-firefox:mozsvg - Enable SVG support in mozilla and firefox
+www-client/mozilla-firefox:mozxmlterm - Enable mozilla's XML-based command-line terminal
+www-client/mozilla:mozaccess - Enable text-to-speech (and eventually to braille), http://mozilla.org/projects/ui/accessibility/
+www-client/mozilla:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
+www-client/mozilla:mozctl - adds in the ctl extension in older versions (1.1 or earlier)
+www-client/mozilla:mozdevelop - Enable features for web developers (e.g. Venkman)
+www-client/mozilla:moznocompose - Disable building of mozilla's web page composer
+www-client/mozilla:moznoirc - Disable building of mozilla's IRC client
+www-client/mozilla:moznomail - Disable building mozilla's mail client
+www-client/mozilla:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
+www-client/mozilla:mozp3p - Enable mozilla's Platform for Privacy Preferences, http://mozilla.org/projects/p3p/
+www-client/mozilla:mozplaintext - Disallow HTML editing for email
+www-client/mozilla:mozsvg - Enable SVG support in mozilla and firefox
+www-client/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
 www-client/netscape:aim - AOL Instant Messenger support
 www-client/netscape:moznomail - Do not install Netscape Mail
+www-client/opera:operanom2 - If you do NOT want the IRC and mail client installed with opera
 www-client/w3m-m17n:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
 www-client/w3m-m17n:nopixbuf - If you do NOT want to link gdk_pixbuf against w3mimgdisplay
 www-client/w3m:async - Enables asynchronous fetch
