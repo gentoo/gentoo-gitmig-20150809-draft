@@ -1,26 +1,23 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0_beta2.ebuild,v 1.1 2004/07/23 11:58:18 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.0_beta2.ebuild,v 1.2 2004/07/28 13:38:17 caleb Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
 KEYWORDS="~x86 ~amd64"
-IUSE="ldap pam motif encode cups ssl opengl samba java arts"
+IUSE="ldap pam motif cups ssl opengl samba java arts"
 
-DEPEND="media-sound/cdparanoia
-	ldap? ( net-nds/openldap )
+DEPEND="ldap? ( net-nds/openldap )
 	pam? ( sys-libs/pam )
 	motif? ( x11-libs/openmotif )
-	encode? ( media-sound/lame )
 	cups? ( net-print/cups )
 	ssl? ( dev-libs/openssl )
 	opengl? ( virtual/opengl )
-	samba? ( net-fs/samba )
+	samba? ( >=net-fs/samba-3.0.1 )
 	java? ( || ( virtual/jdk virtual/jre ) )
-	arts? ( ~kde-base/arts-${PV//3.3/1.3} )
-	>=media-libs/freetype-2"
+	arts? ( ~kde-base/arts-${PV//3.3/1.3} )"
 RDEPEND="${DEPEND}
 	sys-apps/eject"
 
