@@ -1,7 +1,13 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.3 2002/03/01 23:08:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.4 2002/03/06 07:43:50 drobbins Exp $
 
+*xfree-4.2.0-r7 (05 Mar 2002)
+
+  05 Mar 2002; Daniel Robbins <drobbins@gentoo.org> : New release of xfree.
+  Incorporated Xft quality fixes from http://www.cs.mcgill.ca/~dchest/xfthack/;
+  added Azarah's startDM.sh script.
+  
   28 Feb 2002; M.Schlemmer <azarah@gentoo.org> ${FILESDIR}/chooser.sh :
 
   Actually source /etc/conf.d/basic and /etc/rc.conf.
