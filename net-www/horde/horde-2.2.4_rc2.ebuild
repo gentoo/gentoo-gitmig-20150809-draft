@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde/horde-2.2.4_rc2.ebuild,v 1.1 2003/09/01 13:57:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde/horde-2.2.4_rc2.ebuild,v 1.2 2003/09/03 16:57:13 mholzer Exp $
 
+S=${WORKDIR}/${P/_rc2}
 MY_P=${P/_rc/-RC}
 
 DESCRIPTION="Horde Application Framework"
@@ -9,12 +10,12 @@ HOMEPAGE="http://www.horde.org"
 SRC_URI="http://ftp.horde.org/pub/horde/tarballs/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="~x86 ~ppc ~sparc"
 DEPEND=""
 RDEPEND=">=dev-php/mod_php-4.1.0
-         >=sys-devel/gettext-0.10.40
-         >=dev-libs/libxml2-2.4.21
-         >=net-www/horde-pear-1.0.1.1"
+	>=sys-devel/gettext-0.10.40
+	>=dev-libs/libxml2-2.4.21
+	>=net-www/horde-pear-1.0.1.1"
 IUSE=""
 
 # We will use these to set the permissions properly
@@ -41,7 +42,7 @@ pkg_setup() {
 
 src_install () {
 	dodir ${HTTPD_ROOT}/horde
-	cp -R . ${D}/${HTTPD_ROOT}/horde
+	cp -r . ${D}/${HTTPD_ROOT}/horde
 #	cp ${FILESDIR}/${PV}/vfs.sql ${D}/${HTTPD_ROOT}/horde/scripts/db
 	# protecting files
 	chown -R ${HTTPD_USER}.${HTTPD_GROUP} ${D}/${HTTPD_ROOT}/horde
@@ -59,5 +60,3 @@ pkg_postinst() {
 	einfo ""
 	einfo "Please read ${HTTPD_ROOT}/horde/docs/INSTALL !"
 }
-
-
