@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.53 2005/02/10 15:59:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.54 2005/02/14 00:08:34 plasmaroo Exp $
+
+  14 Feb 2005; <plasmaroo@gentoo.org> postfix-2.1.5-r2.ebuild:
+  Mark 2.1.5-r2 ~ia64.
 
   10 Feb 2005; Simon Stelling <blubb@gentoo.org> postfix-2.1.5-r2.ebuild:
   stable on amd64 wrt bug 81024
