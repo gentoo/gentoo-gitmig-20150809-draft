@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 54f3224a7dde89f0e86ea028084207d6 ChangeLog 3401
-MD5 2dda8aff491b221b695b39e31804e624 log4c-1.0.11.ebuild 1529
+MD5 0c4f4fee04c7b183ed4a4b5f7e7cde64 ChangeLog 3666
+MD5 6346dcad6ef8b4d29ffa7b5284b6cca7 log4c-1.0.11.ebuild 1531
 MD5 938777a64cf7065ccd8484c7a92d6eac log4c-1.0.12.ebuild 1174
 MD5 b18c56863e452cbe463de8ee6b53dcc5 log4c-1.0.6-r1.ebuild 1011
 MD5 4eafc1e08f52712fd036e73730b0a172 metadata.xml 435
-MD5 fc4ca7b30316ee39a9f07c1c1571ca8b log4c-1.0.10-r1.ebuild 1772
+MD5 b8b6eb37c8b270c9192bd7bb5ac38708 log4c-1.0.10-r1.ebuild 1771
 MD5 37d8d5f4cc1cf6074bcd576c3c294b99 files/configure.in.patch 854
 MD5 1f0fac7267c1cff0be0ee973376e272e files/digest-log4c-1.0.11 64
 MD5 fef7d3e32cce5efd15a56a6dcff9c4d1 files/digest-log4c-1.0.12 64
@@ -21,7 +21,7 @@ MD5 80234f09351af06e9eda20bf7dd1c2bd files/log4c-1.0.11-function.patch 998
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBr4A8mdTrptrqvGERAtqqAJ97k1TprlS96p5U8KvPlDWuwbU4GQCdEN8x
-t+tNz6KZpcEMYEq4q0sxy+o=
-=24vp
+iD8DBQFBsTZYmdTrptrqvGERAiRYAKCG07NONTavcY7PrwLZuyQxRlSyfwCeKH7i
+umhWyKXx9NmDiuVuVfvvtA8=
+=dNk7
 -----END PGP SIGNATURE-----
