@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.4 2002/06/01 03:50:29 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.5 2002/06/02 16:02:32 spider Exp $
 
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -13,9 +13,11 @@ ECLASS="gnome2"
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
 RESTRICT="nostrip"
+
+# Remove omit-frame-pointer as some useless folks define that all over the place. they should be shot with a 16 gauge slingshot at least :)
 # force debug information
-CFLAGS="${CFLAGS} -g"
-CXXFLAGS="${CXXFLAGS} -g"
+export CFLAGS="${CFLAGS/-fomit-frame-pointer/} -g"
+export CXXFLAGS="${CXXFLAGS/-fomit-frame-pointer/} -g"
 
 G2CONF="--enable-debug=yes"
 
