@@ -1,8 +1,9 @@
-MD5 ff0867d10f4f03344eea30727c5d284b ChangeLog 3843
+MD5 48dd7a57902f9cf0b3eef8e7ef72a4d7 ChangeLog 3944
+MD5 bcf0bd309706a9cd1fed6cdf3b190b36 sysklogd-1.4.1-r10.ebuild 1432
 MD5 dad35a6591b4f579a47a156987449b7a sysklogd-1.4.1-r7.ebuild 1249
 MD5 ec33f65ddf32f64755b0bba29d53708d sysklogd-1.4.1-r8.ebuild 1278
 MD5 664d561152badcc03d47dab13e493725 sysklogd-1.4.1-r9.ebuild 1324
-MD5 82d20f61e30186faac95880fab167b48 sysklogd-1.4.1-r10.ebuild 1432
+MD5 01d7ea5644c29972a910ab27e3ab4738 files/digest-sysklogd-1.4.1-r10 65
 MD5 01d7ea5644c29972a910ab27e3ab4738 files/digest-sysklogd-1.4.1-r7 65
 MD5 01d7ea5644c29972a910ab27e3ab4738 files/digest-sysklogd-1.4.1-r8 65
 MD5 01d7ea5644c29972a910ab27e3ab4738 files/digest-sysklogd-1.4.1-r9 65
@@ -14,4 +15,3 @@ MD5 1bcc8d6b60987b455f0defec45e0cf0b files/syslog-cron 706
 MD5 a4ca2a78eecd855928cc313d7c243819 files/syslog.conf 2332
 MD5 39526162728783b83aabc6754a6df208 files/syslogd-listfiles 2759
 MD5 5d4b89ceb689887a6cbb582b875bf3e7 files/syslogd-listfiles.8 2540
-MD5 01d7ea5644c29972a910ab27e3ab4738 files/digest-sysklogd-1.4.1-r10 65
