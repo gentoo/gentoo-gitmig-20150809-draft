@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.11 2005/02/18 04:10:19 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.12 2005/02/20 08:09:29 vericgar Exp $
 
 inherit eutils gnuconfig
 
@@ -163,7 +163,7 @@ src_install () {
 	# Credits to advx.org people for these scripts. Heck, thanks for
 	# the nice layout and everything else ;-)
 	exeinto /usr/sbin
-	for i in apache2logserverstatus apache2splitlogfile; do
+	for i in apache2logserverstatus apache2splitlogfile gentestcrt.sh; do
 		doexe ${GENTOO_PATCHDIR}/scripts/${i}
 	done
 
@@ -258,19 +258,19 @@ src_install () {
 		fperms 755 ${i}
 	done
 
-	useq ssl && keepdir /etc/apache2/ssl
+	# Automatically generate test ceritificates if ssl USE flag is beeing set
+	if useq ssl; then
+		keepdir /etc/apache2/ssl
+		cd /etc/apache2/ssl
+		einfo
+		einfo "Generating self-signed test certificate in /etc/apache2/ssl..."
+		yes "" 2>/dev/null | ${ROOT}/usr/sbin/gentestcrt.sh >/dev/null 2>&1
+		einfo
+	fi
 
 }
 
 pkg_postinst() {
-	# Automatically generate test ceritificates if ssl USE flag is beeing set
-	if useq ssl; then
-		cd ${ROOT}/etc/apache2/ssl
-		einfo
-		einfo "Generating self-signed test certificate in /etc/apache2/ssl..."
-		yes "" 2>/dev/null | ${ROOT}/usr/lib/ssl/apache2-mod_ssl/gentestcrt.sh >/dev/null 2>&1
-		einfo
-	fi
 
 	# Check for dual/upgrade install
 	if has_version '=net-www/apache-1*' || ! use apache2 ; then
