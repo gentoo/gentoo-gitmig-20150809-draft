@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.23.ebuild,v 1.7 2004/03/07 08:41:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.25.ebuild,v 1.1 2004/03/07 08:41:25 kumba Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="0"
 PROVIDE="virtual/kernel virtual/os-headers"
-KEYWORDS="-* ia64 ~alpha"
+KEYWORDS="-*"
 
 
 # Figure out what architecture we are, and set ARCH appropriately
@@ -47,9 +47,9 @@ src_unpack() {
 	# This patch fixes an issue involving the use of gcc's -ansi flag and the __u64 datatype.
 	# It only patches asm-i386, so we only apply it if x86.  Unknown if this is needed for other archs.
 	# Closes Bug #32246
-#	if [ -n "`use x86`" ]; then
+	if [ -n "`use x86`" ]; then
 		epatch ${FILESDIR}/${PN}-strict-ansi-fix.patch
-#	fi
+	fi
 
 
 	# Do Stuff
