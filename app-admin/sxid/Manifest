@@ -1,3 +1,6 @@
-MD5 2a1e1e97967e92922e98e13ffbfecb10 ChangeLog 549
+MD5 b894f741ec63c659394deab5f7941fae ChangeLog 749
 MD5 0e9706cefdb77b6283b9cfa2df5669a9 sxid-4.0.2.ebuild 907
+MD5 4bfd949851002d807b1d1f838234c277 sxid-4.0.4.ebuild 992
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 d6f1819b2a932dded8bf8054cd14a7ff files/digest-sxid-4.0.2 61
+MD5 c073a3f719de056034b9b96ce775a3c3 files/digest-sxid-4.0.4 61
