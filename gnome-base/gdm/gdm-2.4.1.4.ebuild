@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.4.ebuild,v 1.2 2003/07/04 22:40:11 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.4.ebuild,v 1.3 2003/07/09 17:32:37 liquidx Exp $
 
 inherit eutils gnome2
 
@@ -26,6 +26,7 @@ RDEPEND=">=sys-libs/pam-0.72
 	>=gnome-base/libgnomecanvas-2"
 
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	>=app-text/scrollkeeper-0.3.11
 	>=x11-base/xfree-4.2.0-r3"
 
