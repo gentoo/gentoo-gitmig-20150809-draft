@@ -1,14 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ca1d1f3f5bc4d004ce6cedc7996898f2 ChangeLog 3390
+MD5 98987f5bbd500c5282be50abd131e0f2 ChangeLog 3491
 MD5 7c0d6624a03ec8fcbf69ee497b15eed5 gnome-system-tools-0.33.0.ebuild 731
 MD5 985cc77b34068d3c8a11a6886d24419d gnome-system-tools-0.34.0-r1.ebuild 904
 MD5 f4fa045b8ea0e756c9de8bfe64244615 gnome-system-tools-0.92.0.ebuild 881
 MD5 b310414058ce19d4be4af4fac7bfba25 gnome-system-tools-1.0.0.ebuild 911
 MD5 0a88c243b3c32fba10c58cda47411101 metadata.xml 592
 MD5 51664d171ce5d68485dcf62a1354c9a9 gnome-system-tools-1.0.2.ebuild 912
-MD5 983e71cf80554d8368871e4b3e8c8a44 gnome-system-tools-1.0.2-r1.ebuild 1141
+MD5 f5173eb5a419e957b943eaad4243708d gnome-system-tools-1.0.2-r1.ebuild 1138
 MD5 b19810539e97be86cb285492ef7ccc7e files/digest-gnome-system-tools-0.33.0 79
 MD5 deb1440d16f3601aecdc1811cc3f6667 files/digest-gnome-system-tools-0.34.0-r1 79
 MD5 9511de777cfc95a4044ee4a201e595cc files/digest-gnome-system-tools-0.92.0 79
@@ -17,10 +14,3 @@ MD5 059a3d1a89445a1ff4fdf30964148ca8 files/gnome-system-tools-0.34.0-fix-nopassw
 MD5 791a751973698f6f84222f0ab66c0dd5 files/digest-gnome-system-tools-1.0.2 78
 MD5 791a751973698f6f84222f0ab66c0dd5 files/digest-gnome-system-tools-1.0.2-r1 78
 MD5 d260438372974645549ff9e1490cc855 files/gnome-system-tools-1.0.2-ntp.patch 11173
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByN+fKRy60XGEcJIRAs9aAJoDU8pQPZ+5sKcuG7XbXW8g+Vkw+wCdGo/L
-h4JxtdhU/ImZ6WamnmNUK4I=
-=NzL4
------END PGP SIGNATURE-----
