@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.10 2005/02/20 22:34:47 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.11 2005/03/09 19:07:54 corsair Exp $
 
 inherit eutils fixheadtails
 
@@ -23,7 +23,7 @@ SRC_URI="mirror://apache/httpd/apache_${PV}.tar.gz
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64"
 IUSE="doc ssl pam lingerd no-suexec static-modules apache2"
 
 DEPEND="dev-lang/perl
