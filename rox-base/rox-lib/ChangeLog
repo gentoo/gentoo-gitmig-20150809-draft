@@ -1,0 +1,10 @@
+# ChangeLog for rox-base/rox-lib
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.1 2004/11/26 19:44:56 sergey Exp $
+
+*rox-lib-1.9.16 (26 Nov 2004)
+
+  26 Nov 2004; Sergey Kuleshov <svyatogor@gentoo.org> +rox-lib-1.9.16.ebuild:
+  First commit of rox-lib. Thanks to Alexandr Simonov <devil@gentoo.org.ua> (Bug
+  #51996) for the ebuild.
+
