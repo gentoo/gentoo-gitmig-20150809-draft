@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.1 2004/03/16 09:18:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.2 2004/03/17 10:53:55 mr_bones_ Exp $
 
 inherit libtool flag-o-matic
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="sdl X"
 
-RDEPEND="sdl? ( media-libs/libsdl )
+RDEPEND="virtual/glibc
+	sdl? ( media-libs/libsdl )
 	X? ( virtual/x11 )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
@@ -35,10 +36,12 @@ src_compile() {
 	elibtoolize
 	econf \
 		--enable-shared \
+		--disable-dependency-tracking \
 		`use_enable sdl` \
 		`use_with X x` \
 			|| die
-	emake || die "emake failed"
+	# builds non-pic library by default? (bug #44934)
+	emake LIBMPEG2_CFLAGS= || die "emake failed"
 }
 
 src_install() {
