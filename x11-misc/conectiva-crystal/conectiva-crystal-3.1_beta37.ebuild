@@ -5,7 +5,7 @@
 
 S="${WORKDIR}/Crystal"
 DESCRIPTION="Conectiva Crystal - Icon theme"
-SRC_URI="ftp://ftp.everaldo.com/Crystal_beta3.5.tar.gz"
+SRC_URI="http://www.ibiblio.org/gentoo/distfiles/crystal-3.1_beta3.7.tar.gz"
 HOMEPAGE="http://www.conectiva.com.br"
 
 src_compile() {
