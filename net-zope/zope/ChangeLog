@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.10 2003/12/13 12:37:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.11 2003/12/14 23:36:33 spider Exp $
+
+  15 Dec 2003; <spider@gentoo.org> zope-2.4.0-r6.ebuild, zope-2.5.1.ebuild:
+  QA: fixing chown user.group to user:group, bug #35127
 
   13 Dec 2003; Heinrich Wendel <lanius@gentoo.org> zope-2.6.2-r1.ebuild:
   fixed depend stuff

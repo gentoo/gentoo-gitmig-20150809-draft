@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.4.0-r6.ebuild,v 1.4 2003/10/10 21:02:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.4.0-r6.ebuild,v 1.5 2003/12/14 23:36:33 spider Exp $
 
 S=${WORKDIR}/Zope-${PV}-src
 DESCRIPTION="Zope is web application platform used for building high-performance, dynamic web sites."
@@ -86,7 +86,7 @@ src_install () {
 	dodir /etc/init.d
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/zope.rc6 zope
-	chown nobody.users ${ZVAR}/var/*
+	chown nobody:users ${ZVAR}/var/*
 }
 
 pkg_postinst() {
@@ -97,7 +97,7 @@ pkg_postinst() {
 		cp Data.fs.in Data.fs
 		echo
 		echo "Fixing permissions..."
-		chown nobody.nogroup -R ${ROOT}/var/lib/zope/var
+		chown nobody:nogroup -R ${ROOT}/var/lib/zope/var
 		chmod 600 ${ROOT}/var/lib/zope/var/Data.fs
 		echo
 	fi
