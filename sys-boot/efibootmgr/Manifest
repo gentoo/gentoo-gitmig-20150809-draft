@@ -1,5 +1,17 @@
-MD5 cf32dcd4ec3da5b451f34896f4365e6d ChangeLog 767
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1c819115ca239de69c06a3c73fd71c5d ChangeLog 906
 MD5 b9b5fcf20acb023f6ac6aa6543ad3f78 efibootmgr-0.4.2.ebuild 1315
 MD5 78fc29bf052a5244c63204ddcdd7a1ac metadata.xml 157
+MD5 67bcb2317692e09f85d33179eae82c70 efibootmgr-0.5.0.ebuild 768
 MD5 8234d5c715dd59b7b135a7372b626de5 files/digest-efibootmgr-0.4.2 67
 MD5 52674d9178b4c50989bfc0724bdd879d files/efibootmgr-0.4.1-makefile.patch 548
+MD5 8a773da209c77878c6b3ca8da87d54d2 files/digest-efibootmgr-0.5.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhGjXHTu7gpaalycRAtj7AKDyIvV2vaTzpFl7OmkLbZjueG6eLQCgjVnv
+YtMZpOx1CyrRsI1MumTZfM8=
+=D1+3
+-----END PGP SIGNATURE-----

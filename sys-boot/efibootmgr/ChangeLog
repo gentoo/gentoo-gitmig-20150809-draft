@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/efibootmgr
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/ChangeLog,v 1.6 2004/07/01 21:45:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/ChangeLog,v 1.7 2004/10/31 04:23:08 vapier Exp $
+
+*efibootmgr-0.5.0 (31 Oct 2004)
+
+  31 Oct 2004; Mike Frysinger <vapier@gentoo.org> +efibootmgr-0.5.0.ebuild:
+  Version bump #69144 by splite.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   efibootmgr-0.4.2.ebuild:
