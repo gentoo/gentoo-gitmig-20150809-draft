@@ -1,0 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 999c9b311fc869b261b9b7c02cf16dbc ChangeLog 1160
+MD5 b47096f48d0a4a17d4f120439814edd4 ksmoothdock-3.2.ebuild 499
+MD5 7fe3eaf41168f0984b3efd54838ae0a1 ksmoothdock-3.5.1.ebuild 509
+MD5 92e7ca57e97c4be3aab14e716121e764 ksmoothdock-3.5.ebuild 505
+MD5 77a747b5fbf7edf698a0c698141ecf02 metadata.xml 163
+MD5 eb1ce10707fba71aa9c9c8b61e0e5790 files/digest-ksmoothdock-3.2 67
+MD5 4c09574bba5c29e4dd929b6420eda3c3 files/digest-ksmoothdock-3.5 67
+MD5 41352f1db4f71f715446f4ed052bf758 files/digest-ksmoothdock-3.5.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBXsy+I1lqEGTUzyQRAruCAJ4t92c7MSrRD/u/up0qnic7Uh0kowCdGVtI
+Wq7Kec1SRtAUP1zzpwisyu8=
+=nOvz
+-----END PGP SIGNATURE-----
