@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.51.ebuild,v 1.1 2004/12/16 15:09:37 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.51.ebuild,v 1.2 2005/02/10 22:27:26 motaboy Exp $
 
 inherit flag-o-matic kde
 
@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 
 # Adds support for Konqueror's right-click actions
 IUSE="kde"
-DEPEND="kde? ( >=kde-base/kdebase-3.2 )"
+DEPEND="kde? ( || ( ( kde-base/libkonq kde-base/kdebase-kioslaves ) >=kde-base/kdebase-3.2 ) )"
 
 need-kde 3.2
 

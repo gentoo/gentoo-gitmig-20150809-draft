@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/krusader
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.7 2004/12/16 15:09:37 carlo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.8 2005/02/10 22:27:26 motaboy Exp $
+
+  10 Feb 2005; Simone Gotti <motaboy@gentoo.org> krusader-1.50.ebuild,
+  krusader-1.51.ebuild:
+  Add deps on kde-base/libkonq kde-base/kdebase-kioslaves. Fixes bug #78782.
 
 *krusader-1.51 (16 Dec 2004)
 
