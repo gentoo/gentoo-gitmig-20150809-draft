@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8.ebuild,v 1.11 2004/01/26 13:30:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8.ebuild,v 1.12 2004/02/22 22:37:17 agriffis Exp $
 
 IUSE="alsa gtk gtk2 gnome gpm nls"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://jpj.net/~trevor/aumix/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 hppa amd64 ~mips sparc"
+KEYWORDS="x86 hppa amd64 ~mips sparc alpha ia64"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	gpm?  ( >=sys-libs/gpm-1.19.3 )
