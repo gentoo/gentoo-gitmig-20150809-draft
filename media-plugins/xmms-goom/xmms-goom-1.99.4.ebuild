@@ -1,23 +1,30 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-1.99.4.ebuild,v 1.3 2003/09/08 07:17:25 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-1.99.4.ebuild,v 1.4 2003/09/15 00:57:35 seemant Exp $
 
-DESCRIPTION="Trippy Vis for XMMS using SDL."
 MY_P=${P/xmms-/}
 S=${WORKDIR}/${MY_P}
-SRC_URI="http://ios.free.fr/goom/devel/${MY_P}-src.tgz"
+DESCRIPTION="Trippy Visualisation for XMMS using SDL."
 HOMEPAGE="http://ios.free.fr/?page=projet&quoi=1&lg=AN"
+SRC_URI="http://ios.free.fr/goom/devel/${MY_P}-src.tgz"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
 
 DEPEND="media-sound/xmms
 	media-libs/libsdl
 	sys-apps/sh-utils"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}/src
+
+	epatch ${FILESDIR}/${PN}-gcc-3.3.patch
+}
+
 src_compile() {
-	econf
+	econf || die
 
 	emake OPT="$CFLAGS" || die
 }
