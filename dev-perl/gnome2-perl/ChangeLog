@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/gnome2-perl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/ChangeLog,v 1.2 2003/07/20 16:26:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/ChangeLog,v 1.3 2003/07/22 11:43:06 mcummings Exp $
+
+*gnome2-perl-0.28 (22 Jul 2003)
+
+  22 Jul 2003; Michael Cummings <mcummings@gentoo.org>
+  gnome2-perl-0.28.ebuild:
+  CPAN version bump
 
 *gnome2-perl-0.26 (20 Jul 2003)
 

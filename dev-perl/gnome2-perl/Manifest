@@ -1,5 +1,7 @@
 MD5 faac68772308fde86b05022e99fcc54f gnome2-perl-0.03.ebuild 762
 MD5 eb5c006e62e452181eb7f30c2f14632a ChangeLog 617
 MD5 d0413ecde72f8e590e901b64c9883a10 gnome2-perl-0.26.ebuild 670
+MD5 d0413ecde72f8e590e901b64c9883a10 gnome2-perl-0.28.ebuild 670
 MD5 6a1bc11167259c063abef548685ec07e files/digest-gnome2-perl-0.03 62
 MD5 f8ec04e58631ccc99b554261ad694f79 files/digest-gnome2-perl-0.26 62
+MD5 5e3a0d0a2e7968dbd6e98619b5a4aaf5 files/digest-gnome2-perl-0.28 62
