@@ -96,3 +96,5 @@ pfpro
 solid
 sybase
 sybase-ct
+djbfft
+qdbm
