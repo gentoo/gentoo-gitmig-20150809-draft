@@ -6,7 +6,5 @@ MD5 bf8f03fb22b2f44fd5f6a4395ab001dd metadata.xml 483
 MD5 7f0e728ae9c6810cb9c61500fdc39fc9 files/digest-gnupg-1.2.4 117
 MD5 c3a43a1e5da266ef33222f721e05fd63 files/digest-gnupg-1.2.6 117
 MD5 8c88d9fdef69bdda173170c5a8abd59e files/digest-gnupg-1.9.10 65
-MD5 db3c4c4fe234f87d269216f6e0be8817 files/gnupg-1.2.3-hkp-format-string.diff 922
 MD5 c6114a5a40f10aeca63d07b59fed650f files/gnupg-1.2.4-hppa_unaligned_constant.patch 1213
-MD5 b12193638991111d4dc2c9864fa8e15a files/gnupg-1.2.3-disable-elgamal.diff 12554
 MD5 cdb57d67164c7a63a167c33426c0a7a3 files/gnupg-1.2.4.ppc64.patch 471
