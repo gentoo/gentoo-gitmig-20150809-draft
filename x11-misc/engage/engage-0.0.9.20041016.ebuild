@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/engage/engage-0.0.9.20041016.ebuild,v 1.1 2004/10/18 13:59:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/engage/engage-0.0.9.20041016.ebuild,v 1.2 2004/10/21 15:14:19 vapier Exp $
 
 inherit enlightenment
 
@@ -18,4 +18,10 @@ DEPEND=">=x11-libs/esmart-0.9.0.20041009
 src_compile() {
 	export MY_ECONF="$(use_enable xinerama)"
 	enlightenment_src_compile
+}
+
+src_install() {
+	enlightenment_src_install
+	exeinto /usr/share/engage
+	doexe build_icon.sh
 }
