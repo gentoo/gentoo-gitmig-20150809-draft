@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.0_p1.ebuild,v 1.3 2005/03/17 01:09:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.0_p1.ebuild,v 1.4 2005/03/24 23:14:14 vapier Exp $
 
 inherit eutils flag-o-matic ccc
 
@@ -99,14 +99,18 @@ src_compile() {
 src_install() {
 	make install-nokeys DESTDIR="${D}" || die
 	fperms 600 /etc/ssh/sshd_config
-	dodoc ChangeLog CREDITS OVERVIEW README* TODO sshd_config
-	newpamd "${FILESDIR}"/sshd.pam sshd
+	dobin contrib/ssh-copy-id
 	newinitd "${FILESDIR}"/sshd.rc6 sshd
 	keepdir /var/empty
+
+	newpamd "${FILESDIR}"/sshd.pam sshd
 	dosed "/^#Protocol /s:.*:Protocol 2:" /etc/ssh/sshd_config
 	use pam \
 		&& dosed "/^#UsePAM /s:.*:UsePAM yes:" /etc/ssh/sshd_config \
 		&& dosed "/^#PasswordAuthentication /s:.*:PasswordAuthentication no:" /etc/ssh/sshd_config
+
+	doman contrib/ssh-copy-id.1
+	dodoc ChangeLog CREDITS OVERVIEW README* TODO sshd_config
 }
 
 pkg_postinst() {
