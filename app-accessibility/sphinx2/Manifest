@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bb915df3ef3763cd6c14d9b582d1ce02 ChangeLog 931
+MD5 060f56dd1367eb2c17c407cfeff8a0b2 ChangeLog 1080
 MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
-MD5 1e24bb2b75a6576928f7d2ed09ebb30e sphinx2-0.4.ebuild 621
+MD5 e27ec6d1bb426c56e13cfd71266812ba sphinx2-0.4.ebuild 678
 MD5 661f3a7fe20835f0211d5b65728792ec files/digest-sphinx2-0.4 64
 MD5 5a2847b2fd0380db77d31a3111c5fdc9 files/sphinx2-gcc3.4.patch 892
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3EunHTu7gpaalycRArkrAKDFKFJ+O9FxCPmBRm4HRy2EeDYnLwCgv2OJ
-NKRd97vcATutDGg+WnWdIxA=
-=lLiE
------END PGP SIGNATURE-----
