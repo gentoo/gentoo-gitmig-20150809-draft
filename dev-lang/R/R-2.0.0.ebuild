@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.0.0.ebuild,v 1.2 2004/10/10 18:53:14 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.0.0.ebuild,v 1.3 2004/11/17 16:44:42 corsair Exp $
 
 inherit 64-bit fortran
 
@@ -39,7 +39,7 @@ DEPEND="virtual/libc
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~x86 ~sparc ~ppc ~ppc64 ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ppc64 ~amd64"
 
 64-bit || FORTRAN="f77 f2c" # No f2c on 64-bit systems :-/
 

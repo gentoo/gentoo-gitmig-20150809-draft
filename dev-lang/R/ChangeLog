@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.35 2004/10/10 18:53:14 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.36 2004/11/17 16:44:42 corsair Exp $
+
+  17 Nov 2004; Markus Rothe <corsair@gentoo.org> R-2.0.0.ebuild:
+  stable on ppc64
 
   10 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> -R-1.8.1.ebuild,
   R-1.9.0-r1.ebuild, R-2.0.0.ebuild:
