@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pwdb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.18 2003/11/09 18:48:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.19 2003/12/21 16:47:52 brad_mssw Exp $
+
+  21 Dec 2003; Brad House <brad_mssw@gentoo.org> pwdb-0.62.ebuild:
+  mark stable on amd64
 
 *pwdb-0.62 (09 Nov 2003)
 
