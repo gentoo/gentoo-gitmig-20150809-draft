@@ -48,7 +48,6 @@
 *sys-apps/which
 *sys-devel/autoconf
 *sys-devel/bc
-*sys-devel/bin86
 *sys-devel/bison
 *sys-devel/flex
 *sys-devel/m4
