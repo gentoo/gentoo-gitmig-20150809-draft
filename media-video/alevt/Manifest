@@ -1,10 +1,20 @@
-MD5 6e22184d319fb42e9b96d6943da42384 alevt-1.6.1.ebuild 998
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 54cfc05e2a662736fed361168c2a3d5f ChangeLog 2065
 MD5 0bf4828269ee8559adc44df0f5bcdfe0 alevt-1.6.0-r3.ebuild 971
-MD5 0b16c1d2c7012b12c0c3db6f42a27530 ChangeLog 1945
+MD5 6c35d05817bcd1988ae2bebe49f84d5e alevt-1.6.1.ebuild 1016
 MD5 5ef11878179d451985ee7157a416c27e metadata.xml 222
-MD5 9a3fcfb347b9abd5f81f793a18727c86 files/xio_timer.patch 382
-MD5 2eee39ac17210c63326ffee22c2cffb1 files/alevt.desktop 159
-MD5 4b33a59a4f04a8a1edaf6d18f71e7101 files/digest-alevt-1.6.1 63
 MD5 9b2908a22bc1aeee2713dd6447f077e4 files/alevt-1.6.0-gentoo.diff 1430
-MD5 55d9505c13b404139c9f9b2111482ca3 files/digest-alevt-1.6.0-r3 63
 MD5 8c88e060926481334f381229aa9c85c5 files/alevt-1.6.1-gentoo.diff 734
+MD5 2eee39ac17210c63326ffee22c2cffb1 files/alevt.desktop 159
+MD5 55d9505c13b404139c9f9b2111482ca3 files/digest-alevt-1.6.0-r3 63
+MD5 4b33a59a4f04a8a1edaf6d18f71e7101 files/digest-alevt-1.6.1 63
+MD5 9a3fcfb347b9abd5f81f793a18727c86 files/xio_timer.patch 382
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBp48AArHZZzCEUG0RAtoYAJ92vek/mgs8TQuYlNwJtkezPMy7fQCeL4bx
+pJcDQntLLz4kIOER8/RCqKk=
+=OXKn
+-----END PGP SIGNATURE-----
