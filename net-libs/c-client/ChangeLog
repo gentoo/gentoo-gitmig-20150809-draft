@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.24 2005/03/31 02:39:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.25 2005/03/31 20:03:56 gustavoz Exp $
+
+  31 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  c-client-2004a-r1.ebuild:
+  Stable on sparc
 
 *c-client-2004c (30 Mar 2005)
 
