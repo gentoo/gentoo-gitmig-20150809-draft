@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/groff
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.27 2003/06/24 14:31:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.28 2003/08/04 19:02:44 azarah Exp $
+
+*groff-1.18.1-r3 (04 Aug 2003)
+
+  04 Aug 2003; Martin Schlemmer <azarah@gentoo.org> groff-1.18.1-r3.ebuild,
+  files/groff-man-UTF-8.diff:
+  Fix 'man -t' having a blank page as first (bug #25735), thanks to splite
+  <splite-gentoo@sigint.cs.purdue.edu>.
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> groff-1.18.1-r2.ebuild:
   Mark stable on alpha
