@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/PyXML
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyXML/ChangeLog,v 1.4 2002/09/09 15:37:37 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyXML/ChangeLog,v 1.5 2002/10/18 18:26:40 raker Exp $
+
+*PyXML-0.8.1 (18 Oct 2002)
+
+  18 Oct 2002; Nick Hadaway <raker@gentoo.org PyXML-0.8.1.ebuild,
+  files/digest-PyXML-0.8.1 :
+  New ebuild.  Masking with ~.  See...
+  http://sourceforge.net/project/shownotes.php?group_id=6473&release_id=110994
+  for Changes.  Most notably, xslt is not installed by default anymore and it is
+  considered experimental.
 
 *PyXML-0.8 (9 Sep 2002)
 *PyXML-0.7.1 (9 Sep 2002)
