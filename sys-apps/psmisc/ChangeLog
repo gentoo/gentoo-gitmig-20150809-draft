@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/psmisc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.13 2003/03/20 13:22:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.14 2003/03/25 17:16:33 method Exp $
 
 *psmisc-21.2-r1 (20 Mar 2003)
+
+  25 Mar 2003; Joshua Brindle <method@gentoo.org> psmisc-21.2-r1.ebuild:
+  added selinux support, thanks sindian
 
   20 Mar 2003; Seemant Kulleen <seemant@gentoo.org> psmisc-19-r3.ebuild,
   psmisc-19-r3.ebuild, psmisc-21.2-r1.ebuild:
