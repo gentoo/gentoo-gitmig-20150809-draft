@@ -1,6 +1,6 @@
-# ChangeLog for app-admin/addpatches
+# ChangeLog for dev-libs/dvenv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvenv/ChangeLog,v 1.1 2003/03/06 18:54:14 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvenv/ChangeLog,v 1.2 2003/04/22 10:22:00 vapier Exp $
 
 *dvenv-0.2.2 (06 Mar 2003)
 
