@@ -1,8 +1,14 @@
 # ChangeLog for net-im/gnomemeeting
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.6 2002/09/11 15:25:22 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.7 2002/09/18 14:41:13 raker Exp $
 
 *gnomemeeting-0.93.1 (10 Aug 2002)
+
+  17 Sep 2002; Nick Hadaway <raker@gentoo.org>
+  gnomemeeting-0.93.1.ebuild :
+  Tightened dependancies further.  Added ssl and sdl use variables.
+  I am hoping with the adding of the sdl use flag bug #7444 will be
+  addressed.  Changed to econf.
 
   11 Sep 2002; Nick Hadaway <raker@gentoo.org>
   gnomemeeting-0.93.1.ebuild :
