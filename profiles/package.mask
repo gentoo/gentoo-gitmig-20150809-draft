@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <blizzy@gentoo.org> (30 Jul 2002)
+# masked for testing
+=net-im/gnomeicu-0.98.2-r4
+
 # Dan Armak <danarmak@gentoo.org> (30 Jul 2002)
 # masked for testing
 media-video/kxine
