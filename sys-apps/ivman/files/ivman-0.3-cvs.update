@@ -1,118 +1,6 @@
-diff -u ivman-0.3/src/manager.c.orig ivman-0.3/src/manager.c
---- ivman-0.3/src/manager.c.orig	2004-09-30 17:06:19.918758400 +0200
-+++ ivman-0.3/src/manager.c	2004-09-30 17:08:32.532598032 +0200
-@@ -11,7 +11,7 @@
-  * 
-  * See http://www.troll.no/qpl for QPL licensing information.
-  *
-- * $Id: ivman-0.3-cvs.update,v 1.1 2004/10/19 17:15:33 eradicator Exp $
-+ * $Id: ivman-0.3-cvs.update,v 1.1 2004/10/19 17:15:33 eradicator Exp $
-  *****************************************************************************/
- 
- #include <stdio.h>
-@@ -108,6 +108,9 @@
-         char *path;
-         gboolean retval;
- 
-+        DEBUG("Checking for DVD in '%s' mounted on '%s'", device,
-+              mount_point);
-+
-         path =
-             g_build_path(G_DIR_SEPARATOR_S, mount_point, "video_ts", NULL);
-         retval = g_file_test(path, G_FILE_TEST_IS_DIR);
-@@ -155,6 +158,10 @@
-         if (device2 != NULL)
-                 DEBUG("Mapped to %s", device2);
- 
-+
-+        // we said in the mailing list that we don't want to be calling
-+        // commands 
-+        // like that anymore, or did i get that wrong?
-         argv[0] = MOUNT_PATH;
-         argv[1] = (device2 == NULL) ? device : device2;
-         argv[2] = NULL;
-@@ -218,6 +225,19 @@
- 
-         media_type = hal_device_get_property_string(hal_ctx, udi,
-                                                     "storage.drive_type");
-+
-+        if ((hal_device_get_property_bool(hal_ctx, udi, "volume.is_disc")
-+             == TRUE) && (!media_type))
-+        {
-+                DEBUG("Forcing media type");
-+                media_type =
-+                    hal_device_get_property_string(hal_ctx,
-+                                                   hal_device_get_property_string
-+                                                   (hal_ctx, udi,
-+                                                    "block.storage_device"),
-+                                                   "storage.drive_type");
-+        }
-+
-         if (!media_type)
-         {
-                 warn("cannot get storage.drive_type\n");
-@@ -285,7 +305,23 @@
-         }
- }
- 
-+void ivm_eject_pressed(const char *udi)
-+{
-+        char *device = NULL;
- 
-+        device =
-+            hal_device_get_property_string(hal_ctx, udi, "block.device");
-+        if (device != NULL)
-+        {
-+                if (cfg_actions->handle_eject)
-+                        ivm_run_command(device, cfg_actions->eject_cmd,
-+                                        NULL);
-+                DEBUG("EjectPressed");
-+                // should we unlock?
-+                // what does the eject command do?
-+        }
-+        hal_free_string(device);
-+}
- 
- int main(int argc, char *argv[])
- {
-@@ -317,8 +353,7 @@
- 
- 
- 
--        printf
--            ("Ikke's Volume Manager pre-alpha, by Ikke (www.eikke.com)\n");
-+        printf("Ikke's Volume Manager, http://ivman.sf.net\n");
- 
-         log_notice("IVM started");
- 
-diff -u ivman-0.3/src/IvmConfig/IvmConfigActions.xml.orig ivman-0.3/src/IvmConfig/IvmConfigActions.xml
---- ivman-0.3/src/IvmConfig/IvmConfigActions.xml.orig	2004-09-30 17:28:17.838404160 +0200
-+++ ivman-0.3/src/IvmConfig/IvmConfigActions.xml	2004-09-30 17:28:29.899570584 +0200
-@@ -5,8 +5,10 @@
-     <ivm:Option name="autoplay_cda" value="true" />
-     <ivm:Option name="autoplay_cda_cmd" value="cdplay -d %d -c" />
-     <!-- Automagic DVD playback isn't supported yet (I have no DVD reader) -->
--    <ivm:Option name="autoplay_dvd" value="false" />
--    <ivm:Option name="autoplay_dvd_cmd" value="" />
-+    <ivm:Option name="autoplay_dvd" value="true" />
-+    <ivm:Option name="autoplay_dvd_cmd" value="mplayer dvd://1 -really-quiet -fs" />
-+    <ivm:Option name="handle_eject" value="true" />
-+    <ivm:Option name="eject_cmd" value="eject %d" />
-     
-     <!-- Specific actions on specific devices are configured here -->
-     <!--
-diff -u ivman-0.3/src/IvmConfig/IvmConfigActions.c.orig ivman-0.3/src/IvmConfig/IvmConfigActions.c
---- ivman-0.3/src/IvmConfig/IvmConfigActions.c.orig	2004-09-30 17:36:01.405931184 +0200
-+++ ivman-0.3/src/IvmConfig/IvmConfigActions.c	2004-09-30 17:36:12.374263744 +0200
-@@ -11,7 +11,7 @@
-  * 
-  * See http://www.troll.no/qpl for QPL licensing information.
-  *
-- * $Id: ivman-0.3-cvs.update,v 1.1 2004/10/19 17:15:33 eradicator Exp $
-+ * $Id: ivman-0.3-cvs.update,v 1.1 2004/10/19 17:15:33 eradicator Exp $
-  *****************************************************************************/
- 
- #include <glib.h>
+diff -Naur ivman-0.3.orig/src/IvmConfig/IvmConfigActions.c ivman-0.3/src/IvmConfig/IvmConfigActions.c
+--- ivman-0.3.orig/src/IvmConfig/IvmConfigActions.c	2004-06-10 00:29:33.000000000 -0700
++++ ivman-0.3/src/IvmConfig/IvmConfigActions.c	2004-10-20 02:10:21.858841348 -0700
 @@ -111,8 +111,7 @@
                          if (!xmlStrcmp
                              (name, (const xmlChar *) "autoplay_cda_cmd"))
@@ -274,19 +162,10 @@ diff -u ivman-0.3/src/IvmConfig/IvmConfigActions.c.orig ivman-0.3/src/IvmConfig/
 +	}
 +	return FALSE;
 +}
-\ Kein Zeilenumbruch am Dateiende.
-diff -u ivman-0.3/src/IvmConfig/IvmConfigActions.h.orig ivman-0.3/src/IvmConfig/IvmConfigActions.h
---- ivman-0.3/src/IvmConfig/IvmConfigActions.h.orig	2004-09-30 17:35:51.757397984 +0200
-+++ ivman-0.3/src/IvmConfig/IvmConfigActions.h	2004-09-30 17:36:12.375263592 +0200
-@@ -11,7 +11,7 @@
-  * 
-  * See http://www.troll.no/qpl for QPL licensing information.
-  *
-- * $Id: ivman-0.3-cvs.update,v 1.1 2004/10/19 17:15:33 eradicator Exp $
-+ * $Id: ivman-0.3-cvs.update,v 1.1 2004/10/19 17:15:33 eradicator Exp $
-  *****************************************************************************/
- 
- #ifndef _IVMCONFIGACTIONS_H
+\ No newline at end of file
+diff -Naur ivman-0.3.orig/src/IvmConfig/IvmConfigActions.h ivman-0.3/src/IvmConfig/IvmConfigActions.h
+--- ivman-0.3.orig/src/IvmConfig/IvmConfigActions.h	2004-06-10 00:29:33.000000000 -0700
++++ ivman-0.3/src/IvmConfig/IvmConfigActions.h	2004-10-20 02:10:21.859841187 -0700
 @@ -30,12 +30,13 @@
  
          gboolean autoplay_dvd;
@@ -305,18 +184,25 @@ diff -u ivman-0.3/src/IvmConfig/IvmConfigActions.h.orig ivman-0.3/src/IvmConfig/
 +int get_actions(const char *path, const char *key, const char *value, char ***ret);
  
  #endif
-diff -u ivman-0.3/src/hal_interface.c.orig ivman-0.3/src/hal_interface.c
---- ivman-0.3/src/hal_interface.c.orig	2004-09-30 17:35:32.373344808 +0200
-+++ ivman-0.3/src/hal_interface.c	2004-09-30 17:35:38.510411832 +0200
-@@ -11,7 +11,7 @@
-  * 
-  * See http://www.troll.no/qpl for QPL licensing information.
-  *
-- * $Id: ivman-0.3-cvs.update,v 1.1 2004/10/19 17:15:33 eradicator Exp $
-+ * $Id: ivman-0.3-cvs.update,v 1.1 2004/10/19 17:15:33 eradicator Exp $
-  *****************************************************************************/
- 
- #include <dbus/dbus.h>
+diff -Naur ivman-0.3.orig/src/IvmConfig/IvmConfigActions.xml ivman-0.3/src/IvmConfig/IvmConfigActions.xml
+--- ivman-0.3.orig/src/IvmConfig/IvmConfigActions.xml	2004-06-10 00:29:33.000000000 -0700
++++ ivman-0.3/src/IvmConfig/IvmConfigActions.xml	2004-10-20 02:10:21.854841994 -0700
+@@ -5,8 +5,10 @@
+     <ivm:Option name="autoplay_cda" value="true" />
+     <ivm:Option name="autoplay_cda_cmd" value="cdplay -d %d -c" />
+     <!-- Automagic DVD playback isn't supported yet (I have no DVD reader) -->
+-    <ivm:Option name="autoplay_dvd" value="false" />
+-    <ivm:Option name="autoplay_dvd_cmd" value="" />
++    <ivm:Option name="autoplay_dvd" value="true" />
++    <ivm:Option name="autoplay_dvd_cmd" value="mplayer dvd://1 -really-quiet -fs" />
++    <ivm:Option name="handle_eject" value="true" />
++    <ivm:Option name="eject_cmd" value="eject %d" />
+     
+     <!-- Specific actions on specific devices are configured here -->
+     <!--
+diff -Naur ivman-0.3.orig/src/hal_interface.c ivman-0.3/src/hal_interface.c
+--- ivman-0.3.orig/src/hal_interface.c	2004-06-10 00:29:35.000000000 -0700
++++ ivman-0.3/src/hal_interface.c	2004-10-20 02:10:21.861840864 -0700
 @@ -22,6 +22,7 @@
  #include "manager.h"
  #include "hal_interface.h"
@@ -404,4 +290,82 @@ diff -u ivman-0.3/src/hal_interface.c.orig ivman-0.3/src/hal_interface.c
 +	}
  }
  
+ 
+diff -Naur ivman-0.3.orig/src/manager.c ivman-0.3/src/manager.c
+--- ivman-0.3.orig/src/manager.c	2004-06-10 00:29:35.000000000 -0700
++++ ivman-0.3/src/manager.c	2004-10-20 02:10:21.854841994 -0700
+@@ -108,6 +108,9 @@
+         char *path;
+         gboolean retval;
+ 
++        DEBUG("Checking for DVD in '%s' mounted on '%s'", device,
++              mount_point);
++
+         path =
+             g_build_path(G_DIR_SEPARATOR_S, mount_point, "video_ts", NULL);
+         retval = g_file_test(path, G_FILE_TEST_IS_DIR);
+@@ -155,6 +158,10 @@
+         if (device2 != NULL)
+                 DEBUG("Mapped to %s", device2);
+ 
++
++        // we said in the mailing list that we don't want to be calling
++        // commands 
++        // like that anymore, or did i get that wrong?
+         argv[0] = MOUNT_PATH;
+         argv[1] = (device2 == NULL) ? device : device2;
+         argv[2] = NULL;
+@@ -218,6 +225,19 @@
+ 
+         media_type = hal_device_get_property_string(hal_ctx, udi,
+                                                     "storage.drive_type");
++
++        if ((hal_device_get_property_bool(hal_ctx, udi, "volume.is_disc")
++             == TRUE) && (!media_type))
++        {
++                DEBUG("Forcing media type");
++                media_type =
++                    hal_device_get_property_string(hal_ctx,
++                                                   hal_device_get_property_string
++                                                   (hal_ctx, udi,
++                                                    "block.storage_device"),
++                                                   "storage.drive_type");
++        }
++
+         if (!media_type)
+         {
+                 warn("cannot get storage.drive_type\n");
+@@ -285,7 +305,23 @@
+         }
+ }
+ 
++void ivm_eject_pressed(const char *udi)
++{
++        char *device = NULL;
+ 
++        device =
++            hal_device_get_property_string(hal_ctx, udi, "block.device");
++        if (device != NULL)
++        {
++                if (cfg_actions->handle_eject)
++                        ivm_run_command(device, cfg_actions->eject_cmd,
++                                        NULL);
++                DEBUG("EjectPressed");
++                // should we unlock?
++                // what does the eject command do?
++        }
++        hal_free_string(device);
++}
+ 
+ int main(int argc, char *argv[])
+ {
+@@ -317,8 +353,7 @@
+ 
+ 
+ 
+-        printf
+-            ("Ikke's Volume Manager pre-alpha, by Ikke (www.eikke.com)\n");
++        printf("Ikke's Volume Manager, http://ivman.sf.net\n");
+ 
+         log_notice("IVM started");
  
