@@ -3,8 +3,10 @@ MD5 e59c0eea8829d6765c54bf23641810d7 rdiff-backup-0.10.1-r1.ebuild 700
 MD5 1f5a8f2bd85910c17faf22b832b4e64a rdiff-backup-0.10.2.ebuild 629
 MD5 9f982f870f89ba211a5f1a15d315b465 rdiff-backup-0.8.0.ebuild 689
 MD5 24efd4df9b7a0cb77492c9982282b71b rdiff-backup-0.11.4.ebuild 630
+MD5 24efd4df9b7a0cb77492c9982282b71b rdiff-backup-0.12.0.ebuild 630
 MD5 0bb4e9493bd304457779ede7ad48ae98 files/digest-rdiff-backup-0.10.1-r1 71
 MD5 48a6fcf2e0338ed11a2680135d7f3cf8 files/digest-rdiff-backup-0.10.2 71
 MD5 27a4b1877434caf96bb409b5f6a1f511 files/digest-rdiff-backup-0.8.0 69
 MD5 5c6ac6488726f62288dc006e078d7507 files/rpath.patch 692
 MD5 41104b13cffa0d3c31bcfcfcfc83741e files/digest-rdiff-backup-0.11.4 71
+MD5 1525fa5e29145873a8d0c77703595436 files/digest-rdiff-backup-0.12.0 71
