@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.27 2003/11/15 02:21:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.28 2003/11/19 04:51:24 gmsoft Exp $
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> file-4.06.ebuild:
   Stable on ia64
@@ -15,6 +15,9 @@
   Yakovac <stonyy@tek.com> in bug #32513
 
 *file-4.06 (17 Oct 2003)
+
+  19 Nov 2003; Guy Martin <gmsoft@gentoo.org> file-4.06.ebuild :
+  Marked stable on hppa. It resolv some segfault problems.
 
   20 Oct 2003; Joshua Kinard <kumba@gentoo.org> file-4.06.ebuild:
   Added gnuconfig support for mips64
