@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sock/sock-1.1.ebuild,v 1.9 2004/06/25 00:13:11 agriffis Exp $
-
-S=${WORKDIR}/${P}
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sock/sock-1.1.ebuild,v 1.10 2004/07/15 03:36:53 agriffis Exp $
 
 DESCRIPTION="A shell interface to network sockets"
 SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/local/mj/net/${P}.tar.gz"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~mj/linux.shtml"
 KEYWORDS="x86 sparc "
+IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 
