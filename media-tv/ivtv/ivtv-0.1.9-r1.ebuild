@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.1.9-r1.ebuild,v 1.1 2004/03/08 05:09:02 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.1.9-r1.ebuild,v 1.2 2004/03/09 20:20:47 iggy Exp $
 
 # TODO
 # the "Gentoo way" is to use /usr/src/linux, not the running kernel
@@ -32,6 +32,7 @@ src_unpack() {
 
 	cd ${WORKDIR}/ivtv
 	epatch ${DISTDIR}/${PF}.patch || die "${PF} patch failed"
+	sed -i -e 's:include <linux/videodev2.h>:include "videodev2.h":' utils/radio.c
 }
 
 src_compile() {
@@ -62,9 +63,10 @@ src_install() {
 	dodoc README doc/*
 
 	cd ${WORKDIR}/ivtv/utils
-	dobin test_ioctl ivtvfbctl ivtvplay ptune-ui.pl ptune.pl record-v4l2.pl
+	dobin test_ioctl ivtvfbctl ivtvplay ptune-ui.pl ptune.pl record-v4l2.pl radio
 	newdoc README README.utils
-	dodoc README.mythtv-ivtv README.ptune
+	dodoc README.mythtv-ivtv README.ptune README.radio README.vbi
+	dodoc lircd-g.conf lircd.conf lircrc 
 
 	cd ${WORKDIR}/ivtv/driver
 	make DESTDIR=${D} install || die "installation of driver failed"
@@ -102,4 +104,5 @@ pkg_postinst() {
 	einfo "LIRC_OPTS=\"--with-x --with-driver=hauppauge --with-major=61"
 	einfo "	--with-port=none --with-irq=none\""
 	einfo "see http://ivtv.sourceforge.net for more info"
+	einfo "to use vbi, you'll need a few other things, check README.vbi in the docs dir"
 }
