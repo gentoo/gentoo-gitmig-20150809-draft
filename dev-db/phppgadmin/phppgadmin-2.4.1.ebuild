@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-2.4.1.ebuild,v 1.1 2002/04/27 16:44:51 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-2.4.1.ebuild,v 1.2 2002/04/27 16:58:57 woodchip Exp $
 
 MY_PN=phpPgAdmin
 MY_PV="`echo ${PV} | sed -e 's:\.:-:g'`"
@@ -26,5 +26,7 @@ src_install () {
 }
 
 pkg_postinst() {
+	einfo
 	einfo "Make sure you edit /home/httpd/htdocs/phppgadmin/config.inc.php"
+	einfo
 }
