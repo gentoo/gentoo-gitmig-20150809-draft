@@ -9,7 +9,7 @@
 #    Change the path below to point to the directory where dh.h is
 #    installed on your system.
 
-INCLUDE	= /usr/include/db1
+INCLUDE	= /usr/include/db3
 #INCLUDE	= /usr/local/BerkeleyDB/include
 #INCLUDE	= ./libraries/3.0.55
 
@@ -92,6 +92,6 @@ HASH	=	u_int32_t
 #    below (by removing the leading #) and edit the line to use the name
 #    you have picked.
  
-DBNAME = -ldb1
+DBNAME = -ldb-3.2
 
 # end of file config.in
