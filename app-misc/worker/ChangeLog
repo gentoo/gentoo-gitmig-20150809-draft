@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/worker
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.8 2003/10/08 04:14:26 hillster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.9 2003/11/28 04:56:02 hillster Exp $
+
+*worker-2.8.2 (27 Nov 2003)
+
+  27 Nov 2003; Joel Hill <hillster@gentoo.org> worker-2.8.2.ebuild:
+  version bump
 
   04 Oct 2003; Joel Hill <hillster@gentoo.org> metadata.xml,
   worker-2.8.1.ebuild, worker-2.3.1.ebuild:
