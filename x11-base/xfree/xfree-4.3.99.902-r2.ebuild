@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.902-r2.ebuild,v 1.1 2004/02/16 20:44:03 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.902-r2.ebuild,v 1.2 2004/02/17 22:51:27 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -79,7 +79,7 @@ MS_COREFONTS="./andale32.exe ./arial32.exe
 	./trebuc32.exe ./verdan32.exe
 	./webdin32.exe"
 #	./IELPKTH.CAB"
-# Need windows license to use this one
+# Need windows license to use Tahoma font
 MS_FONT_URLS="${MS_COREFONTS//\.\//mirror://sourceforge/corefonts/}"
 
 GENTOO_FILES="http://dev.gentoo.org/~spyderous/xfree/patchsets/${PV}/XFree86-${PV}-files-${FILES_VER}.tar.bz2"

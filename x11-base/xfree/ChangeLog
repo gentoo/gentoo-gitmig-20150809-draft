@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.286 2004/02/16 20:46:27 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.287 2004/02/17 22:51:27 spyderous Exp $
+
+  17 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.2.1-r3.ebuild,
+  xfree-4.2.1-r4.ebuild, xfree-4.3.0-r4.ebuild, xfree-4.3.0-r5.ebuild,
+  xfree-4.3.99.902-r2.ebuild:
+  Updating comment about tahoma font requiring a Windows license to actually
+  mention the word Tahoma.
 
   17 Feb 2004; Andrew Bevitt <cyfred@gentoo.org>; xfree-4.3.99.902-r1.ebuild:
   Pulling last vunerable version of 4.3.99.902
