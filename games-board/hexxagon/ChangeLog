@@ -1,6 +1,9 @@
 # ChangeLog for games-board/hexxagon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.7 2004/07/01 11:11:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.8 2004/11/05 04:42:17 josejx Exp $
+
+  05 Nov 2004; Joseph Jezak <josejx@gentoo.org> hexxagon-0.3.2.ebuild:
+  Added ~ppc.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   hexxagon-0.3.2.ebuild:
