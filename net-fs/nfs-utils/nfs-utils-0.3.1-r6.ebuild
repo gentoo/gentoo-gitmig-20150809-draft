@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Originally written by Achim Gottinger <achim@gentoo.org>
 # Heavily updated for nfs-utils-0.3.1 by Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.3.1-r6.ebuild,v 1.2 2001/09/16 19:39:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.3.1-r6.ebuild,v 1.3 2001/09/24 17:19:23 lamer Exp $
 
 A=$P.tar.gz
 S=$WORKDIR/$P
@@ -38,14 +38,16 @@ src_compile() {
 
 src_install() {
     # MANDIR doesn't pick up install_prefix
-    make install install_prefix=$D MANDIR=$D/usr/share/man || die
-    install -m 644 $FILESDIR/exports-$PVR $D/etc/exports || die
+    make install install_prefix=$D MANDIR=$D/usr/share/man 
+	 into /etc
+	 newins $FILESDIR/exports-${PVR} exports
     dodoc ChangeLog COPYING README
     docinto linux-nfs
     dodoc linux-nfs/*
-    # Install init scripts in the new rc6 location
-    mkdir -p $D/etc/init.d $D/etc/runlevels/default
-    install -m 755 $FILESDIR/nfs-$PVR $D/etc/init.d/nfs || die
-    install -m 755 $FILESDIR/nfsmount-$PVR $D/etc/init.d/nfsmount || die
-    ln -s ../../init.d/nfs{,mount} $D/etc/runlevels/default || die
+    dodir /etc/init.d 
+	 dodir /etc/runlevels/default
+	 exeinto /etc/init.d
+    newexe ${FILESDIR}/nfs-${PVR} nfs
+    newexe ${FILESDIR}/nfsmount-${PVR} nfsmount 
+    ln -s $D/etc/rc.d/init.d/nfs{,mount} $D/etc/runlevels/default 
 }
