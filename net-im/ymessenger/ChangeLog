@@ -1,6 +1,10 @@
 # ChangeLog for net-im/ymessenger
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ChangeLog,v 1.15 2003/10/02 00:51:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ChangeLog,v 1.16 2003/11/22 09:00:38 seemant Exp $
+
+  22 Nov 2003; Seemant Kulleen <seemant@gentoo.org> ymessenger-1.0.4.1.ebuild:
+  only need the kde-functions eclass, not the kde eclass. Closes bug #33825 by
+  Georgi Georgiev <chutz@chubaka.net>
 
   01 Oct 2003; Seemant Kulleen <seemant@gentoo.org> metadata.xml,
   ymessenger-0.99.19.1-r1.ebuild, ymessenger-1.0.4.1.ebuild:
