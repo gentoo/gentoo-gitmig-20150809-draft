@@ -1,6 +1,17 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.39 2004/06/08 19:04:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.40 2004/06/12 00:19:08 vapier Exp $
+
+*nfs-utils-1.0.6-r3 (11 Jun 2004)
+
+  11 Jun 2004; Mike Frysinger <vapier@gentoo.org> :
+  While i'm here, might as well fix more things :P.
+  Run make for the depend target so that we can then build everything 
+  else in parallel.  Add tweakable exportfs timeout to nfs init script 
+  #37004 by Vlastimil Holer.  Enable the '--enable-secure-statd' option 
+  by default (seems to work fine on my nfs3 machines) #49444 by Juergen 
+  Nagel.  Make sure the emtpy state dirs dont get autocleaned #30522 by 
+  Brave Cobra.
 
 *nfs-utils-1.0.6-r2 (08 Jun 2004)
 

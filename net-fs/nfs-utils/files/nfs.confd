@@ -1,3 +1,7 @@
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.confd,v 1.5 2004/06/12 00:19:08 vapier Exp $
+
 # Config file for /etc/init.d/nfs
 
 # Number of servers to be started up by default
@@ -10,3 +14,6 @@ RPCMOUNTDOPTS=""
 # Options to pass to rpc.statd
 # ex. RPCSTATDOPTS="-p 32765 -o 32766"
 RPCSTATDOPTS=""
+
+# Timeout (in seconds) for exportfs
+EXPORTFSTIMEOUT=30

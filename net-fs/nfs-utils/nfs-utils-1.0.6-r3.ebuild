@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r2.ebuild,v 1.1 2004/06/08 19:04:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r3.ebuild,v 1.1 2004/06/12 00:19:08 vapier Exp $
 
 inherit gnuconfig
 
@@ -19,20 +19,22 @@ RDEPEND="${DEPEND}
 	>=sys-apps/util-linux-2.11f"
 
 src_compile() {
-	use ppc64 && gnuconfig_update
+	gnuconfig_update
 	econf \
 		--mandir=/usr/share/man \
 		--with-statedir=/var/lib/nfs \
 		--disable-rquotad \
 		--enable-nfsv3 \
+		--enable-secure-statd \
 		|| die "Configure failed"
 
 	if ! use tcpd; then
 		sed -i "s:\(-lwrap\|-DHAVE_TCP_WRAPPER\)::" config.mk
 	fi
 
-	# parallel make still fails
-	emake -j1 || die "Failed to compile"
+	# parallel make fails for depend target
+	make depend || die "failed to make depend"
+	emake || die "Failed to compile"
 }
 
 src_install() {
@@ -42,6 +44,7 @@ src_install() {
 	# Don't overwrite existing xtab/etab, install the original
 	# versions somewhere safe...  more info in pkg_postinst
 	dodir /usr/lib/nfs
+	keepdir /var/lib/nfs/{sm,sm.bak}
 	mv ${D}/var/lib/nfs/* ${D}/usr/lib/nfs
 	keepdir /var/lib/nfs
 	keepdir /var/lib/nfs/v4root
@@ -56,7 +59,7 @@ src_install() {
 	insinto /etc ; doins ${FILESDIR}/exports
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/nfs-4 nfs
+	newexe ${FILESDIR}/nfs-5 nfs
 	newexe ${FILESDIR}/nfsmount nfsmount
 
 	insinto /etc/conf.d

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs-4,v 1.1 2004/06/08 19:04:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs-5,v 1.1 2004/06/12 00:19:08 vapier Exp $
 
 #---------------------------------------------------------------------------
 # This script starts/stops the following
@@ -57,6 +57,12 @@ stop_statd() {
 	eend $? "Error stopping NFS statd"
 }
 
+waitfor_exportfs() {
+	local pid=$1
+	( sleep ${EXPORTFSTIMEOUT}; kill -9 $pid &>/dev/null ) &
+	wait $1
+}
+
 start() {
 	# This is the new "kernel 2.6 way" to handle the exports file
 	if grep -q nfsd /proc/filesystems &>/dev/null; then
@@ -76,9 +82,7 @@ start() {
 	if grep -q '^/' /etc/exports &>/dev/null; then
 		ebegin "Exporting NFS directories"
 		$exportfs -r 1>&2 &
-		pid=$!
-		( sleep 30; kill -9 $pid &>/dev/null ) &
-		wait $pid
+		waitfor_exportfs $!
 		eend $? "Error exporting NFS directories"
 	fi
 
@@ -141,9 +145,7 @@ stop() {
 		# If that's the case, then try to kill it so the
 		# shutdown process can continue.
 		$exportfs -ua 1>&2 &
-		pid=$!
-		( sleep 30; kill -9 $pid &>/dev/null ) &
-		wait $pid
+		waitfor_exportfs $!
 		eend $? "Error unexporting NFS directories"
 	fi
 
@@ -156,9 +158,7 @@ reload() {
 	# bootup process can continue.
 	ebegin "Reloading /etc/exports"
 	$exportfs -r 1>&2 &
-	pid=$!
-	( sleep 30; kill -9 $pid &>/dev/null ) &
-	wait $pid
+	waitfor_exportfs $!
 	eend $? "Error exporting NFS directories"
 }
 
