@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exmh/exmh-2.5.ebuild,v 1.10 2003/07/31 19:08:15 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exmh/exmh-2.5.ebuild,v 1.11 2003/09/05 08:34:01 msterret Exp $
 
 DESCRIPTION="An X user interface for MH mail"
 SRC_URI="ftp://ftp.scriptics.com/pub/tcl/${PN}/${PN}-${PV}.tar.gz"
@@ -40,11 +40,11 @@ src_unpack() {
 	done
 }
 
-src_compile() {                           
+src_compile() {
 	echo 'auto_mkindex ./lib *.tcl' | tclsh
 }
 
-src_install() {                               
+src_install() {
 	into /usr
 	dobin exmh exmh-bg exmh-async ftp.expect
 

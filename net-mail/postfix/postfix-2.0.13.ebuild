@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.13.ebuild,v 1.3 2003/07/18 20:34:39 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.13.ebuild,v 1.4 2003/09/05 08:38:49 msterret Exp $
 
 IUSE="ssl mysql sasl ldap ipv6 maildir mbox postgres"
 
@@ -55,7 +55,7 @@ pkg_setup() {
 	if ! grep -q ^mail:.*postfix /etc/group ; then
 		usermod -G mail postfix || die "problem adding user postfix to group mail"
 	fi
-	
+
 	# Prevent mangling the smtpd.conf file
 	if [ ! -L ${ROOT}/usr/lib/sasl2/smtpd.conf ]
 	then
@@ -74,7 +74,7 @@ pkg_setup() {
 				rm ${ROOT}/etc/sasl2/smtpd.conf
 			fi
 
-			# If both files exist, make sure that we 
+			# If both files exist, make sure that we
 			# preserve a copy of each with the ._cfg
 			# system
 			if [ -f ${ROOT}/etc/sasl2/smtpd.conf ]
@@ -109,7 +109,7 @@ src_unpack() {
 	if [ "`use postgres`" ]; then
 		epatch ${FILESDIR}/${PGSQL_P}.patch.bz2
 		CCARGS="${CCARGS} -DHAS_PGSQL -I/usr/include/postgresql"
-                AUXLIBS="${AUXLIBS} -lpq"
+		AUXLIBS="${AUXLIBS} -lpq"
 	fi
 
 	cd ${S}/conf

@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Script Revised by Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-414e-r2.ebuild,v 1.14 2003/04/24 10:41:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-414e-r2.ebuild,v 1.15 2003/09/05 08:32:01 msterret Exp $
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P}
@@ -27,7 +27,7 @@ src_unpack() {
 	tar -xf ${DISTDIR}/dat-4240.tar
 }
 
-src_install() {															 
+src_install() {
 	dodir /usr/bin
 	insinto /opt/vlnx
 
@@ -37,7 +37,7 @@ src_install() {
 	dodoc *.txt *.pdf
 	doman uvscan.1
 	chmod 755 ${D}/opt/vlnx/uvscan
-	
+
 	dodir /etc/env.d
 	cp -f ${FILESDIR}/vlnx-${PV}-envd ${D}/etc/env.d/40vlnx
 }

@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Script Revised by Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-416e.ebuild,v 1.10 2003/04/24 10:41:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/vlnx-416e.ebuild,v 1.11 2003/09/05 08:32:01 msterret Exp $
 
 DAT_VER=4228
 
@@ -9,7 +9,7 @@ MY_P="${P/-/}"
 S="${WORKDIR}"
 DESCRIPTION="McAfee VirusScanner for Unix/Linux(Shareware)"
 SRC_URI="http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/version_4.16/${MY_P}.tar.Z
-         http://download.nai.com/products/datfiles/4.x/nai/dat-4240.tar"
+	http://download.nai.com/products/datfiles/4.x/nai/dat-4240.tar"
 HOMEPAGE="http://www.mcafeeb2b.com/"
 
 SLOT="0"
@@ -30,7 +30,7 @@ src_install() {
 
 	insopts -m755
 	doins uvscan
-	
+
 	dodoc *.{diz,lst,pdf,txt}
 	doman uvscan.1
 

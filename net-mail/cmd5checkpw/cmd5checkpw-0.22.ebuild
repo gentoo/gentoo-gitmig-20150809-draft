@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.22.ebuild,v 1.6 2003/07/22 02:51:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.22.ebuild,v 1.7 2003/09/05 08:39:55 msterret Exp $
 
 DESCRIPTION="A checkpassword compatible authentication program that used CRAM-MD5 authentication mode."
 HOMEPAGE="http://members.elysium.pl/brush/cmd5checkpw/"
@@ -13,11 +13,11 @@ DEPEND="virtual/glibc"
 S=${WORKDIR}/${P}
 
 pkg_preinst() {
-        if ! grep -q ^cmd5checkpw: /etc/passwd
-        then
-                useradd -d /dev/null -g bin  -s /dev/null cmd5checkpw \
-                        || die "problem adding user cmd5checkpw"
-        fi
+	if ! grep -q ^cmd5checkpw: /etc/passwd
+	then
+		useradd -d /dev/null -g bin  -s /dev/null cmd5checkpw \
+			|| die "problem adding user cmd5checkpw"
+	fi
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.85.ebuild,v 1.2 2003/07/13 13:32:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.85.ebuild,v 1.3 2003/09/05 08:33:37 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail server network protocol front-ends."
@@ -50,7 +50,7 @@ src_install () {
 pkg_config() {
 	cd /var/qmail/supervise/qmail-smtpd/
 	cp run run.old && cp run.mailfront run
-	
+
 	cd /var/qmail/supervise/qmail-pop3d/
 	cp run run.old && cp run.mailfront run
 }
@@ -58,7 +58,7 @@ pkg_config() {
 pkg_postinst() {
 	einfo ""
 	einfo "Run ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
-	einfo "to update you run files (backup are created) in" 
+	einfo "to update you run files (backup are created) in"
 	einfo "		/var/qmail/supervise/qmail-pop3d and"
 	einfo "		/var/qmail/supervise/qmail-smtpd"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020917.ebuild,v 1.7 2003/02/13 14:36:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020917.ebuild,v 1.8 2003/09/05 08:38:49 msterret Exp $
 
 IUSE="ssl mysql sasl ldap"
 
@@ -28,7 +28,7 @@ DEPEND=">=sys-libs/db-3.2
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	sasl? ( dev-libs/cyrus-sasl )"
 
-RDEPEND="${DEPEND} 
+RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00
 	!virtual/mta"
 
@@ -50,7 +50,7 @@ src_unpack() {
 
 	cd ${WORKDIR}
 	unpack ${DISTFILES}/${PF_P}.tar.gz
-	
+
 	if [ `use ssl` ] && [ `use ipv6` ]
 	then
 		cd ${S}
@@ -70,19 +70,19 @@ src_unpack() {
 	cp main.cf main.cf.orig
 	sed -e "s:/usr/libexec/postfix:/usr/lib/postfix:" main.cf.orig > main.cf
 
-if [ "`use sasl`" ]
-        then
-                if [ -e /usr/include/sasl/sasl.h ]
-                then
-                        # saslv2
-                        AUXLIBS="${AUXLIBS} -lsasl2"
-                        CCARGS="${CCARGS} -I/usr/include/sasl -DUSE_SASL_AUTH"
-                else
-                        # saslv1
-                        AUXLIBS="${AUXLIBS} -lsasl"
-                        CCARGS="${CCARGS} -DUSE_SASL_AUTH"
-                fi
-fi
+	if [ "`use sasl`" ]
+	then
+			if [ -e /usr/include/sasl/sasl.h ]
+			then
+					# saslv2
+					AUXLIBS="${AUXLIBS} -lsasl2"
+					CCARGS="${CCARGS} -I/usr/include/sasl -DUSE_SASL_AUTH"
+			else
+					# saslv1
+					AUXLIBS="${AUXLIBS} -lsasl"
+					CCARGS="${CCARGS} -DUSE_SASL_AUTH"
+			fi
+	fi
 
 	cd ${S}/src/global
 	cp mail_params.h mail_params.h.orig
@@ -151,19 +151,19 @@ src_install () {
 	exeinto /etc/init.d ; newexe ${FILESDIR}/postfix.rc6 postfix
 	insinto /etc/pam.d ; newins ${FILESDIR}/smtp.pam smtp
 
-        if [ "`use sasl`" ]
-        then
-                if [ -e /usr/include/sasl.h ]
-                then
-                        # saslv1
-                        insinto /etc/sasl ; doins ${FILESDIR}/smtpd.conf
-                fi
-                if [ -e /usr/include/sasl/sasl.h ]
-                then
-                        # saslv2
-                        insinto /etc/sasl2 ; doins ${FILESDIR}/smtpd.conf
-                fi
-        fi
+	if [ "`use sasl`" ]
+	then
+			if [ -e /usr/include/sasl.h ]
+			then
+					# saslv1
+					insinto /etc/sasl ; doins ${FILESDIR}/smtpd.conf
+			fi
+			if [ -e /usr/include/sasl/sasl.h ]
+			then
+					# saslv2
+					insinto /etc/sasl2 ; doins ${FILESDIR}/smtpd.conf
+			fi
+	fi
 
 }
 

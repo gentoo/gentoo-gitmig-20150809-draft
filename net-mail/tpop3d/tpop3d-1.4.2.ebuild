@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.4.2.ebuild,v 1.7 2003/08/03 04:44:34 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.4.2.ebuild,v 1.8 2003/09/05 08:35:13 msterret Exp $
 
 DESCRIPTION="An extensible POP3 server with vmail-sql/MySQL support."
 HOMEPAGE="http://www.ex-parrot.com/~chris/tpop3d/"
@@ -14,7 +14,7 @@ IUSE="ssl ldap mysql perl pam tcpd maildir debug"
 
 DEPEND="virtual/glibc
 	ssl?	( >=dev-libs/openssl-0.9.6 )
-        ldap? 	( >=net-nds/openldap-2.0.7 )
+	ldap? 	( >=net-nds/openldap-2.0.7 )
 	mysql? 	( >=dev-db/mysql-3.23.28 )
 	perl?	( >=dev-lang/perl-5.6.1 )
 	pam?	( >=sys-libs/pam-0.75 )
@@ -38,7 +38,7 @@ src_compile() {
 	if [ ! -z $ENABLE_PASSWD ]; then
 		myconf="${myconf} --enable-auth-passwd"
 	fi
-	# If you want to use /etc/shadow instead.  
+	# If you want to use /etc/shadow instead.
 	# Make sure you also set $ENABLE_PASSWD
 	if [ ! -z $ENABLE_SHADOW ]; then
 		myconf="${myconf} --enable-shadow-passwords"
@@ -51,7 +51,7 @@ src_compile() {
 	if [ ! -z $ENABLE_OTHER ]; then
 		myconf="${myconf} --enable-auth-other"
 	fi
-	# Make it Rated G and safe for the kids 
+	# Make it Rated G and safe for the kids
 	if [ ! -z $BE_NICE ]; then
 		myconf="${myconf} --disable-snide-comments"
 	fi
@@ -63,7 +63,7 @@ src_compile() {
 		myconf="${myconf} --enable-electric-fence --enable-backtrace"
 	fi
 	econf ${myconf} || die "./configure failed"
-	
+
 	emake || die
 }
 
@@ -79,4 +79,4 @@ src_install() {
 pkg_postinst() {
 	einfo "Read the tpop3d.conf manpage"
 	einfo "Please create /etc/tpop3d/tpop3d.conf to fit your Configuration"
-}				
+}

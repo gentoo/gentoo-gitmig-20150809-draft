@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c.ebuild,v 1.5 2003/06/21 18:50:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c.ebuild,v 1.6 2003/09/05 08:34:51 msterret Exp $
 
 S=${WORKDIR}/imap-2002c1
 
@@ -24,9 +24,9 @@ DEPEND="!net-mail/uw-imap
 src_unpack() {
 	unpack ${A}
 	# Tarball packed with bad file perms
-	chmod -R ug+w ${S} 
+	chmod -R ug+w ${S}
 	cd ${S}
-	bzcat ${FILESDIR}/imap-2002c-virtual.patch.bz2 | patch -p0 
+	bzcat ${FILESDIR}/imap-2002c-virtual.patch.bz2 | patch -p0
 	cd ${S}/src/osdep/unix/
 	cp Makefile Makefile.orig
 	sed \
@@ -37,7 +37,7 @@ src_unpack() {
 	cd ${S}
 }
 
-src_compile() {                           
+src_compile() {
 	if use ssl; then
 		cd ${S}
 		yes | make lnv SSLTYPE=unix || die
@@ -69,7 +69,7 @@ EOF
 	fi
 }
 
-src_install() {                               
+src_install() {
 	into /usr
 	dosbin imapd/imapd ipopd/ipop?d
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.22-r1.ebuild,v 1.1 2003/08/11 18:13:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.22-r1.ebuild,v 1.2 2003/09/05 08:39:55 msterret Exp $
 
 DESCRIPTION="A checkpassword compatible authentication program that used CRAM-MD5 authentication mode."
 HOMEPAGE="http://members.elysium.pl/brush/cmd5checkpw/"
@@ -13,9 +13,9 @@ DEPEND="virtual/glibc"
 S=${WORKDIR}/${P}
 
 douser() {
-        if  [ -z "`getent passwd cmd5checkpw`" ]; then
-				enewuser cmd5checkpw 212 /bin/false /dev/null bin
-        fi
+	if  [ -z "`getent passwd cmd5checkpw`" ]; then
+		enewuser cmd5checkpw 212 /bin/false /dev/null bin
+	fi
 }
 
 pkg_preinst() {
@@ -42,7 +42,7 @@ src_compile() {
 src_install() {
 	dodir /etc /bin /usr/share/man/man8
 	insinto /etc
-	doins ${FILESDIR}/poppasswd 
+	doins ${FILESDIR}/poppasswd
 	make install
 	fowners cmd5checkpw /etc/poppasswd /bin/cmd5checkpw
 	fperms 400 /etc/poppasswd

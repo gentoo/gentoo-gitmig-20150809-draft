@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.1.ebuild,v 1.3 2003/07/14 21:16:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.1.ebuild,v 1.4 2003/09/05 08:34:31 msterret Exp $
 
 DESCRIPTION="Webmail for nuts!"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -27,9 +27,9 @@ pkg_setup() {
 	fi
 }
 
-src_compile() {            
+src_compile() {
 	#we need to have this empty function ... default compile hangs
-	echo "Nothing to compile" 
+	echo "Nothing to compile"
 }
 
 src_install() {
