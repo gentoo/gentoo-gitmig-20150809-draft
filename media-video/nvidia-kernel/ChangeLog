@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.85 2004/08/16 12:06:50 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.86 2004/08/27 16:50:47 cyfred Exp $
+
+  28 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>;
+  +files/1.0.6111/power-suspend-2.6.9-changes.patch,
+  nvidia-kernel-1.0.6111.ebuild:
+  Patching to provide support for PM_SUSPEND in 2.6.9 kernels over PM_SAVE_STATE.
 
   16 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>;
   nvidia-kernel-1.0.5328-r1.ebuild, nvidia-kernel-1.0.5336-r4.ebuild:
