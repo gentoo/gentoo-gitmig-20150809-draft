@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.40/apache2.initd,v 1.12 2003/10/30 19:57:10 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.40/apache2.initd,v 1.13 2003/10/31 07:17:45 rajiv Exp $
 
 opts="${opts} reload"
 
@@ -14,7 +14,8 @@ depend() {
 start() {
 	ebegin "Starting apache2"
 	[ -f /var/log/apache2/ssl_scache ] && rm /var/log/apache2/ssl_scache
-	env -i /sbin/start-stop-daemon --quiet --start --startas /usr/sbin/apache2 \
+	env -i PATH=$PATH /sbin/start-stop-daemon --quiet \
+		--start --startas /usr/sbin/apache2 \
 		--pidfile /var/run/apache2.pid -- -k start ${APACHE2_OPTS}
 	eend $?
 }
