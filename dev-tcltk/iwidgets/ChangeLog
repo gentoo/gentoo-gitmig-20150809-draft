@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/iwidgets
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/ChangeLog,v 1.4 2004/04/14 11:32:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/ChangeLog,v 1.5 2004/04/22 20:11:54 kugelfang Exp $
+
+  22 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> iwidgets-4.0.1.ebuild:
+  marked ~amd64
 
   14 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> iwidgets-4.0.1.ebuild:
   Added IUSE=

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.2.1-r1.ebuild,v 1.5 2004/04/14 11:32:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.2.1-r1.ebuild,v 1.6 2004/04/22 20:09:23 kugelfang Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.tcltk.com/${PN}/"
 
 SLOT="0"
 LICENSE="as-is BSD"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="x86 ~ppc sparc ~amd64"
 DEPEND="dev-lang/tk"
 PDEPEND="dev-tcltk/iwidgets"
 
