@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/fetch-0.0.3.ebuild,v 1.1 2004/12/02 15:04:01 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/fetch-0.0.3.ebuild,v 1.2 2005/03/05 15:02:22 josejx Exp $
 
 DESCRIPTION="Fetch - an downloader for the ROX Desktop"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
