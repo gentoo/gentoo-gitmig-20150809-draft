@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/pyode-1.0.0.ebuild,v 1.2 2005/01/25 01:12:54 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/pyode-1.0.0.ebuild,v 1.3 2005/02/27 09:58:32 lucass Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="virtual/python
