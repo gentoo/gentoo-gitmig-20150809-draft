@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r2.ebuild,v 1.9 2003/10/08 23:32:51 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r2.ebuild,v 1.10 2003/11/01 21:31:10 puggy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Secure locate provides a secure way to index and quickly search for files on your system (drop-in replacement for 'locate')"
@@ -53,12 +53,12 @@ pkg_postinst() {
 		groupadd slocate 2> /dev/null || die "Failed to create slocate group"
 	fi
 
-	chown root.slocate /usr/bin/slocate
+	chown root:slocate /usr/bin/slocate
 
 	# If nobody else minds I'd like to see 2711 become the system wide default. -solar
 	has sfperms ${FEATURES} && chmod 2711 /usr/bin/slocate || chmod 2755 /usr/bin/slocate
 
-	chown -R root.slocate /var/lib/slocate
+	chown -R root:slocate /var/lib/slocate
 	chmod 0750 /var/lib/slocate
 
 	ewarn "If you merged slocate-2.7.ebuild, please remove"

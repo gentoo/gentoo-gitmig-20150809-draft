@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.26 2003/10/31 21:18:48 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.27 2003/11/01 21:31:10 puggy Exp $
+
+  01 Nov 2003; Douglas Russell <puggy@gentoo.org> slocate-2.7-r2.ebuild,
+  slocate-2.7-r3.ebuild:
+  Fixed a couple of user.group chown bugs to user:chown to work with usernames
+  containing a "."
 
   31 Oct 2003; Brian Jackson <iggy@gentoo.org> slocate-2.7-r3.ebuild
   files/updatedb.conf:
