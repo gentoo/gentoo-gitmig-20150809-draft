@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython-demo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-demo/ChangeLog,v 1.6 2004/07/16 00:27:55 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-demo/ChangeLog,v 1.7 2004/08/02 14:50:11 fmccor Exp $
+
+  02 Aug 2004; Ferris McCormick <fmccor@gentoo.org>
+  wxpython-demo-2.4.2.4.ebuild:
+  Add ~sparc keyword.  Pure python scripts to help with wxpython QC.
 
   15 Jul 2004; Rob Cakebread <pythonhead@gentoo.org>
   wxpython-demo-2.4.2.4.ebuild:
