@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.9 2004/10/02 18:44:02 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.10 2004/11/09 13:59:59 centic Exp $
+
+*firehol-1.214 (09 Nov 2004)
+
+  09 Nov 2004; Dominik Stadler <centic@gentoo.org> files/firehol.initrd,
+  +firehol-1.214.ebuild:
+  Add new Version 1.214, fix order of options in init-script
 
 *firehol-1.191-r2 (02 Oct 2004)
 
