@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/hlfl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hlfl/ChangeLog,v 1.5 2003/02/12 08:23:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hlfl/ChangeLog,v 1.6 2003/10/11 15:52:04 lanius Exp $
+
+*hlfl-0.60.1 (11 Oct 2003)
+
+  11 Oct 2003; Heinrich Wendel <lanius@gentoo.org> hlfl-0.60.1.ebuild:
+  version bump, ebuild cleanups
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
