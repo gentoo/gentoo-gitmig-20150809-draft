@@ -1,13 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/net-mail/autorespond/Manifest,v 1.1 2003/12/26 04:00:46 robbat2 Exp $
-MD5 96865b8b4fca005014ece7be3389be63 autorespond_2.0.4.orig.tar.gz 7884
-MD5 2ec64e17b4f7c7668d6a653e7e02921a autorespond-2.0.4.ebuild 819
-MD5 44d518a3b3546f9d3fd5345744cc87fd autorespond-2.0.2.ebuild~ 567
-MD5 4d1536e30fc6afc90b7a36af686ab634 files/digest-autorespond-2.0.2 67
+# $Header: /var/cvsroot/gentoo-x86/net-mail/autorespond/Manifest,v 1.2 2003/12/26 04:00:59 robbat2 Exp $
+MD5 4395509dd47d56d86de93c5e1ea0ead8 autorespond-2.0.4.ebuild 843
+MD5 dc47220ee06c480bfc804c2453afc060 ChangeLog 396
 MD5 43cfadac548b18767864b6c01797df5f files/digest-autorespond-2.0.4 137
-MD5 35c5d005241fe219f99ed5eb34dc157f autorespond-2.0.4/Makefile 374
-MD5 062a167ebd3dd943b84eaaed9e85bc38 autorespond-2.0.4/README 4065
-MD5 02291de884405e5f21dd8e45cb6e4ee6 autorespond-2.0.4/autorespond.1 1418
-MD5 cc2581bc60041e1da1aea8b36a14a897 autorespond-2.0.4/autorespond.c 16892
-MD5 76e27b894526f6f0b97185865d566020 autorespond-2.0.4/help_message 164
-MD5 7634b8c93193dbabac8da4b97e40a0ae autorespond-2.0.4/qmail-auto 81
-MD5 1e81eadec59d2516d2f7100dfe2efdcf autorespond-2.0.4/ChangeLog 241
