@@ -961,10 +961,6 @@ app-editors/xemacs-gamma
 # should be updated to 4.2 
 <sys-apps/texinfo-4.2
 
-# ashmodai@gentoo.org 22 May 2002
-# Masked until I can get the 'support' packages/patches merged.
-=net-dialup/ppp-2.4.1-r9
-
 # spider@gentoo.org 23 May 2002
 # This one doesn't build, looks abandondware
 app-arch/gnorpm
