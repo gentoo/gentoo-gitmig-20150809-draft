@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ispell
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.24 2004/08/22 07:54:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.25 2004/09/22 05:42:38 usata Exp $
+
+  22 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> ispell-3.2.06-r6.ebuild:
+  Added to ~ppc-macos.
 
   22 Aug 2004; Joshua Kinard <kumba@gentoo.org> ispell-3.2.06-r6.ebuild:
   Marked stable on mips.
