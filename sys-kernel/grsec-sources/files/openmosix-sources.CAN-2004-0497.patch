@@ -1,21 +1,22 @@
-# This is a BitKeeper generated diff -Nru style patch.
-#
 # ChangeSet
-#   2004/07/03 19:29:45-03:00 marcelo@logos.cnet 
-#     Add missing bracket to inode_change_ok() fix
-#   TAG: v2.4.27-rc3
+#
+# fs/attr.c
+#   2004/07/03 18:28:30-03:00 marcelo@logos.cnet +1 -0
+#   Thomas Biege: Fix missing DAC check on sys_chown
 # 
 # fs/attr.c
 #   2004/07/03 19:28:29-03:00 marcelo@logos.cnet +1 -1
 #   Add missing bracket to inode_change_ok() fix
 # 
---- fs/attr.c	2004-07-09 17:30:54.000000000 -0400
-+++ fs/attr.c	2004-07-09 16:17:05.000000000 -0400
-@@ -33,7 +33,7 @@
+diff -Nru a/fs/attr.c b.plasmaroo/fs/attr.c
+--- a/fs/attr.c	2004-07-08 17:05:20 -07:00
++++ b.plasmaroo/fs/attr.c	2004-07-08 17:05:20 -07:00
+@@ -35,7 +35,8 @@
  
  	/* Make sure caller can chgrp. */
  	if ((ia_valid & ATTR_GID) &&
 -	    (!in_group_p(attr->ia_gid) && attr->ia_gid != inode->i_gid) &&
++	    (current->fsuid != inode->i_uid ||
 +	    (!in_group_p(attr->ia_gid) && attr->ia_gid != inode->i_gid)) &&
  	    !capable(CAP_CHOWN))
  		goto error;
