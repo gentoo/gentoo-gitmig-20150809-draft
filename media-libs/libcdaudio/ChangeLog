@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcdaudio
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.15 2004/07/16 02:57:17 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.16 2004/08/12 00:44:28 mr_bones_ Exp $
+
+  11 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  libcdaudio-0.99.9.ebuild:
+  always gnuconfig_update and gnuconfig_update in src_unpack
 
   15 Jul 2004; Tom Gall <tgall@gentoo.org> libcdaudio-0.99.9.ebuild:
   stable on ppc64, bug #55566
