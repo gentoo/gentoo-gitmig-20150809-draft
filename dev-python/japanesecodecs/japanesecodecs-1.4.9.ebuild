@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/japanesecodecs/japanesecodecs-1.4.9.ebuild,v 1.3 2004/08/03 11:49:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/japanesecodecs/japanesecodecs-1.4.9.ebuild,v 1.4 2005/02/07 05:06:41 fserb Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.asahi-net.or.jp/~rd6t-kjym/python/"
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND=">=dev-lang/python-1.6"
 

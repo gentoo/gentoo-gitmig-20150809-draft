@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyds
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.14 2004/12/30 23:10:46 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.15 2005/02/07 04:59:04 fserb Exp $
+
+  07 Feb 2005; Fernando Serboncini <fserb@gentoo.org> pyds-0.6.5.ebuild:
+  stable on x86
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
