@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/hercules
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/ChangeLog,v 1.8 2003/10/12 18:27:22 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/ChangeLog,v 1.9 2004/02/11 11:30:15 lanius Exp $
+
+*hercules-3.01 (11 Feb 2004)
+
+  11 Feb 2004; Heinrich Wendel <lanius@gentoo.org> hercules-3.01.ebuild:
+  version bump, bug #39612
 
 *hercules-3.00 (12 Oct 2003)
 
