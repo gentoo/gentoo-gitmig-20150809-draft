@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/bglibs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.14 2004/07/20 05:51:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.15 2004/08/22 05:40:46 robbat2 Exp $
+
+*bglibs-1.017 (21 Aug 2004)
+
+  21 Aug 2004; Robin H. Johnson <robbat2@gentoo.org> +bglibs-1.017.ebuild:
+  Bug #61215, version bump.
 
   19 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   add metadata.xml
