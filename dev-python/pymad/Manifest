@@ -1,6 +1,18 @@
-MD5 80ca7ca377ea66494ffa6a57557d4fe9 pymad-0.4.1.ebuild 627
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6d35107374159da82bc664b993654090 ChangeLog 1164
 MD5 e7843a87114d7bbcfbf71669652f56ad pymad-0.5.1.ebuild 628
-MD5 4e6c1844411aba04ef46bf6addd59260 ChangeLog 1047
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 bab00ec8c0fcaa25bfd3f43ab2a6f822 files/digest-pymad-0.4.1 62
+MD5 304bc806527b824c11b1086a7999ab26 pymad-0.5.2.ebuild 626
+MD5 80ca7ca377ea66494ffa6a57557d4fe9 pymad-0.4.1.ebuild 627
 MD5 46fc0da4ef94a1fec49dd693a125a644 files/digest-pymad-0.5.1 62
+MD5 50db971afa39ae785474d20aa98ee4cb files/digest-pymad-0.5.2 62
+MD5 bab00ec8c0fcaa25bfd3f43ab2a6f822 files/digest-pymad-0.4.1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBtSA4ugEuf3OQ0akRApAfAKCasXFeABkgxy1HhLFD03+wBbQz4ACfQBwA
+9+H21Uj/PHRBGXhHeT2w4J0=
+=VVAm
+-----END PGP SIGNATURE-----
