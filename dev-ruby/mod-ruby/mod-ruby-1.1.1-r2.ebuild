@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-1.1.1-r2.ebuild,v 1.1 2003/06/11 00:15:17 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-1.1.1-r2.ebuild,v 1.2 2003/09/08 02:19:31 msterret Exp $
 
 MY_P=mod_ruby-${PV}
 DESCRIPTION="Embeds the Ruby interpreter into Apache"
@@ -27,7 +27,7 @@ src_compile() {
 	[ "`use apache2`" ] && two="2" || two=""
 
 	./configure.rb --with-apxs=/usr/sbin/apxs${two}
-	
+
 	cp Makefile Makefile.orig
 	sed -e "s:\(^APACHE_LIBEXECDIR = \$(DESTDIR)/usr/lib/apache${two}\):\1-extramodules:" \
 		Makefile.orig > Makefile
@@ -52,7 +52,7 @@ src_install() {
 		doins ${FILESDIR}/mod_ruby.conf
 	fi
 
-	dodoc ChangeLog COPYING README.* 
+	dodoc ChangeLog COPYING README.*
 
 	if [ "`use doc`" ]; then
 		dohtml doc/*.css doc/*.html

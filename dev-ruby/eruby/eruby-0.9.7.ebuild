@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintaner: Tools Team <tools@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-0.9.7.ebuild,v 1.7 2003/02/28 16:54:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-0.9.7.ebuild,v 1.8 2003/09/08 02:19:31 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="eRuby interprets a Ruby code embedded text file."
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc
 	>=dev-lang/ruby-1.6.1"
 
 src_compile() {
-	ruby ./configure.rb --with-charset=iso-8859-15 || die	
+	ruby ./configure.rb --with-charset=iso-8859-15 || die
 	make || die
 }
 
@@ -32,7 +32,7 @@ pkg_config() {
 	if [ -f "${ROOT}/etc/httpd/httpd.conf" ] ; then
 		einfo "Activating ruby interpretation for /ruby location"
 		cp ${ROOT}/etc/httpd/httpd.conf ${ROOT}/etc/httpd/httpd.conf.orig
-		echo "		
+		echo "
 <IfModule mod_ruby.c>
 RubyRequire apache/ruby-run
 

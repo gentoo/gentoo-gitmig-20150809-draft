@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/testunit/testunit-0.1.8.ebuild,v 1.2 2003/04/23 15:42:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/testunit/testunit-0.1.8.ebuild,v 1.3 2003/09/08 02:19:31 msterret Exp $
 
 DESCRIPTION="unit testing framework for the Ruby language"
 HOMEPAGE="http://testunit.talbott.ws/"
@@ -18,6 +18,6 @@ src_install() {
 	ruby setup.rb install || die
 	dodoc ChangeLog README TODO
 
-	dohtml -r doc/ 
+	dohtml -r doc/
 	dohtml -r examples
 }

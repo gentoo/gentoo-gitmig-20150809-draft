@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintaner: Tools Team <tools@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-1.0.3-r1.ebuild,v 1.1 2003/05/12 23:35:36 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-1.0.3-r1.ebuild,v 1.2 2003/09/08 02:19:31 msterret Exp $
 
 DESCRIPTION="eRuby interprets a Ruby code embedded text file"
 HOMEPAGE="http://www.modruby.net/"
@@ -12,7 +12,7 @@ KEYWORDS="alpha arm hppa mips sparc x86"
 DEPEND=">=dev-lang/ruby-1.6"
 
 src_compile() {
-	ruby configure.rb || die	
+	ruby configure.rb || die
 	make || die
 }
 

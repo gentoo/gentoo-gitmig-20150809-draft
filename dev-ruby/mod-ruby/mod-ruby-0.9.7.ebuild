@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-0.9.7.ebuild,v 1.7 2003/02/28 16:54:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/mod-ruby-0.9.7.ebuild,v 1.8 2003/09/08 02:19:31 msterret Exp $
 
 S=${WORKDIR}/mod_ruby-${PV}
 DESCRIPTION="A Ruby Module for Apache"
@@ -13,7 +13,7 @@ SLOT="0"
 DEPEND="=net-www/apache-1* >=dev-lang/ruby-1.6.1"
 
 src_compile() {
-	ruby ./configure.rb --with-apxs=/usr/sbin/apxs || die	
+	ruby ./configure.rb --with-apxs=/usr/sbin/apxs || die
 	make || die
 }
 
@@ -38,7 +38,7 @@ LoadModule ruby_module	      /usr/lib/apache/mod_ruby.so
 <IfDefine RUBY>
 AddModule mod_ruby.c
 </IfDefine>
-   
+
 <IfModule mod_ruby.c>
 RubyRequire apache/ruby-run
 
