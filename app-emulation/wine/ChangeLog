@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.19 2002/09/13 14:48:23 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.20 2002/10/12 13:12:23 phoenix Exp $
+
+*wine-20020904-r1 (12 Oct 2002)
+
+  12 Oct 2002; phoen][x <phoenix@gentoo.org> wine-20020 .ebuild, ChangeLog :
+
+  Bumped to new version.
 
 *wine-20020904-r1 (13 Sep 2002)
 
