@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.17 2004/06/24 21:59:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.18 2004/07/15 20:46:46 tgall Exp $
+
+  15 Jul 2004; Tom Gall <tgall@gentoo.org> mp-3.2.11.ebuild:
+  added ~ppc64, bug #55528
 
   15 Jun 2004; Jason Wever <weeve@gentoo.org> mp-3.2.11.ebuild:
   Stable on sparc.
