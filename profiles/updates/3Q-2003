@@ -1,2 +1,13 @@
 move dev-python/ReportLab dev-python/reportlab
 move x11-libs/gtkmm dev-cpp/gtkmm
+move dev-libs/KXL dev-games/KXL
+move dev-libs/cel-cvs dev-games/cel-cvs
+move dev-libs/cel dev-games/cel
+move app-games/clanlib dev-games/clanlib
+move dev-libs/crystalspace-cvs dev-games/crystalspace-cvs
+move dev-libs/crystalspace dev-games/crystalspace
+move dev-libs/ggz-client-libs dev-games/ggz-client-libs
+move dev-libs/hlsdk dev-games/hlsdk
+move dev-libs/libggz dev-games/libggz
+move dev-libs/libnw dev-games/libnw
+move dev-libs/simgear dev-gamessimgear/
