@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>voip</herd>
+<herd>gnome</herd>
 <maintainer><email>stkn@gentoo.org</email></maintainer>
 <longdescription>
 GnomeMeeting is an H.323 compatible videoconferencing and VoIP/IP
