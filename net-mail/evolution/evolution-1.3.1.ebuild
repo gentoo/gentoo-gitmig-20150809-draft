@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.1.ebuild,v 1.1 2003/03/14 02:01:20 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.3.1.ebuild,v 1.2 2003/03/19 14:11:10 liquidx Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos"
 
@@ -47,6 +47,25 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.20
 	sys-devel/gettext
 	doc? ( dev-util/gtk-doc )"
+
+pkg_setup() {
+    ewarn "This is a Preview Release. According to Ximian : "
+    echo
+    ewarn "These snapshots of Evolution are UNSTABLE. This means"
+    ewarn "that it will probably crash very often, and possibly eat"
+    ewarn "your mail, calendar, appointments, anything. The purpose"
+    ewarn "of this release is to help users to test the new code; use"
+    ewarn "at your own risk, but please do report the bugs."
+    echo
+    ewarn "It is highly recommended that you make a backup of your 1.2"
+    ewarn "~/evolution directory before switching to Evolution 1.3 to"
+    ewarn "prevent data loss. If you are using POP mail, please consider"
+    ewarn "using the \"Leave messages on server\" option to prevent your"
+    ewarn "mail from being erased on the server after download."
+    echo
+    ewarn "Please read this page for more info:"
+    ewarn "http://developer.ximian.com/projects/evolution/release_notes/1.3.1.html"
+}
 
 src_compile() {
 

@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.45 2003/03/14 02:01:20 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.46 2003/03/19 14:11:10 liquidx Exp $
 
 *evolution-1.3.1 (14 Mar 2003)
+
+  19 Mar 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.3.1.ebuild:
+  Add massive warning about the danger of using evo-1.3.1
 
   14 Mar 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.3.1.ebuild:
   version bump to gtk2 _beta_ evolution. this version can co-exist with
