@@ -1,25 +1,26 @@
 # ChangeLog for dev-ruby/mod-ruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/ChangeLog,v 1.5 2003/05/10 13:17:52 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod-ruby/ChangeLog,v 1.6 2003/06/11 00:15:17 twp Exp $
+
+  10 Jun 2003; Tom Payne <twp@gentoo.org> mod-ruby-1.1.1-r1.ebuild :
+  Build and install docs if USE=doc. Bug # 20805.
 
 *mod-ruby-1.1.1 (10 May 2003)
 
   10 May 2003; Tom Payne <twp@gentoo.org> mod-ruby-1.1.1.ebuild :
-
   Version bump. Ebuild tidy. Experimental apache-1.3 support. Bugs # 16539 and 18916.
 
 *mod-ruby-1.0.1 (29 Nov 2002)
 
-  29 Nov 2002; Donny Davies <woodchip@gentoo.org> : Updated for Apache2.
+  29 Nov 2002; Donny Davies <woodchip@gentoo.org> :
+  Updated for Apache2.
 
 *mod-ruby-0.9.7 (10 Mar 2002)
 
   10 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> all :
-  
   mod_ruby embeds the Ruby interpreter into the Apache web server, allowing 
   Ruby CGI scripts to be executed natively. These scripts will start up much
   faster than without mod_ruby.
 
   07 Jul 2002; Aron Griffis <agriffis@gentoo.org> mod-ruby-0.9.7.ebuild:
-
   Updated with LICENSE, KEYWORDS, SLOT.
