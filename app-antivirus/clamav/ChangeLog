@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.10 2004/08/03 20:29:35 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.11 2004/08/04 20:46:45 eradicator Exp $
+
+  04 Aug 2004; Jeremy Huddleston <eradicator@gentoo.org> files/clamd.rc:
+  Fixed missing { in init script.
 
   03 Aug 2004; Tom Martin <slarti@gentoo.org> :
   Marked stable on ~amd64, see bug 58960.
