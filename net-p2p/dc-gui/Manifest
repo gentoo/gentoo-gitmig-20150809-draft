@@ -1,5 +1,15 @@
-MD5 0ef0078742412a320b82b5ebbe3d4a65 ChangeLog 3593
-MD5 f497de29634bcb6eb486786ebedecc65 dc-gui-0.80.ebuild 1191
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4f27a7f6f3f447fbdd6eb2aaa71614b9 dc-gui-0.80.ebuild 1199
+MD5 2987f6e4c87ace183514ead188efd621 ChangeLog 3736
 MD5 875f23093b78af2d864a7a7ba464f126 metadata.xml 223
 MD5 ee6ae02e2f5b25158a642d633c4431b3 files/digest-dc-gui-0.80 65
 MD5 698c87b0fbd4a6ce9f6947170320a90f files/split_interface_fast.pl 2608
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBjQCccAgAdbxYsnERAg1gAJ9Qf2FHsUqKoQjv1vwcrsvS1x3xrwCfSKo4
+J/qdyqb7+st7oAZKw5EcjHI=
+=YS+H
+-----END PGP SIGNATURE-----
