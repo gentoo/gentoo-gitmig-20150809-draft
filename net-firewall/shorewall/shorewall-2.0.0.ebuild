@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-2.0.0.ebuild,v 1.2 2004/04/21 09:37:41 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-2.0.0.ebuild,v 1.3 2004/06/09 21:24:28 agriffis Exp $
 
 IUSE="doc"
 
@@ -31,7 +31,7 @@ src_install() {
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/shorewall shorewall
 	dodoc COPYING INSTALL changelog.txt releasenotes.txt
-	if [ "`use doc`" ]; then
+	if use doc; then
 		cd ${WORKDIR}/${MY_P_DOCS}
 		dohtml -r *
 	fi

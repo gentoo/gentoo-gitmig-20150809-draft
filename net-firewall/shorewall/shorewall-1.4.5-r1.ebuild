@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-1.4.5-r1.ebuild,v 1.8 2004/04/21 09:37:41 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-1.4.5-r1.ebuild,v 1.9 2004/06/09 21:24:28 agriffis Exp $
 
 DESCRIPTION="Full state iptables firewall"
 HOMEPAGE="http://www.shorewall.net/"
