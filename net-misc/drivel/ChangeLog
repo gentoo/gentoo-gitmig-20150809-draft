@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/drivel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.10 2004/10/17 12:14:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.11 2004/10/23 09:34:28 liquidx Exp $
+
+  23 Oct 2004; Alastair Tse <liquidx@gentoo.org> drivel-1.0.2.ebuild,
+  drivel-1.2.1.ebuild:
+  remove intltool (#68514)
+
+  18 Oct 2004; Alastair Tse <liquidx@gentoo.org> drivel-1.2.1.ebuild:
+  updated curl dep
 
   17 Oct 2004; Alastair Tse <liquidx@gentoo.org> drivel-1.2.1.ebuild:
   add missing deps like libxml and gtksourceview
