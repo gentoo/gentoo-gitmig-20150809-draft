@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.2.ebuild,v 1.2 2003/09/17 02:37:17 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.2.ebuild,v 1.3 2003/10/06 06:59:15 vapier Exp $
 
 inherit games eutils flag-o-matic gcc
 append-flags -I../include
@@ -12,9 +12,9 @@ HOMEPAGE="http://www.nethack.org/"
 SRC_URI="mirror://sourceforge/nethack/${PN}-${MY_PV}.tgz"
 #SRC_URI="ftp://ftp.nethack.org/pub/nethack/nh340/src/nethack-340.tgz"
 
-KEYWORDS="x86 ppc sparc"
-SLOT="0"
 LICENSE="nethack"
+SLOT="0"
+KEYWORDS="x86 ppc sparc"
 IUSE="X qt gnome"
 
 DEPEND="virtual/glibc

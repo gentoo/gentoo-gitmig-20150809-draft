@@ -18,3 +18,14 @@
 @@ -248 +248 @@
 -WINLIB = $(WINTTYLIB) $(WINX11LIB)
 +WINLIB = $(WINTTYLIB) $(WINX11LIB) $(WINQTLIB)
+diff -ur nethack-3.4.2/win/Qt/qt_win.cpp nethack-3.4.2-gentoo/win/Qt/qt_win.cpp
+--- win/Qt/qt_win.cpp.orig	2003-09-30 01:47:32.000000000 +1200
++++ win/Qt/qt_win.cpp	2003-09-30 02:16:34.000000000 +1200
+@@ -57,6 +57,7 @@
+ #include "dlb.h"
+ #include "patchlevel.h"
+ #include "tile2x11.h"
++#undef Invisible
+ #undef Warning
+ #undef red
+ #undef green
