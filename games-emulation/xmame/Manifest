@@ -1,32 +1,22 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a4d0d7c300429b9084aa7b42f1713a3 ChangeLog 6729
+MD5 ae8a5502693d72f26de6ee70ed37712f ChangeLog 6918
 MD5 0234d9024c471faf92bb1219242614ef metadata.xml 1566
-MD5 e086e427b269c37e2762cc9a3b91e587 xmame-0.86.ebuild 5850
 MD5 30e8d4b0106df48fc70f99beb5608280 xmame-0.82.1.ebuild 6437
 MD5 3bfc553fbd6d37187aba00e77fb80875 xmame-0.83.1.ebuild 6774
-MD5 93b9c4a740015eb7262b223c7b8b7bbf files/0.77.1-icc.patch 584
+MD5 e2199edcf0f9649ad51b09e7bbae0b81 xmame-0.86.ebuild 5843
 MD5 9bbbd2de60f0c41f643674a694cd2c90 files/0.77.1-alsa-1.0.0.patch 438
 MD5 13dc5b32bbff98dec74c41dd0c9b33a1 files/0.77.1-glx-fix.patch 597
-MD5 1c5281cca09cd38869fa3715b3839b1b files/digest-xmame-0.86 65
-MD5 240bd404f0deb6cd68bf6a98a5fb76db files/0.86-glx-fix.patch 386
+MD5 93b9c4a740015eb7262b223c7b8b7bbf files/0.77.1-icc.patch 584
+MD5 96b4074a6c4b94b57fb7c6258a36ef20 files/0.78.1-big_endian.patch 2969
 MD5 13dc5b32bbff98dec74c41dd0c9b33a1 files/0.78.1-glx-fix.patch 597
 MD5 93b9c4a740015eb7262b223c7b8b7bbf files/0.78.1-icc.patch 584
 MD5 0f77c568ca5f6a46b543e899c910d38a files/0.78.1-osd_die.patch 521
-MD5 96b4074a6c4b94b57fb7c6258a36ef20 files/0.78.1-big_endian.patch 2969
 MD5 13dc5b32bbff98dec74c41dd0c9b33a1 files/0.79.1-glx-fix.patch 597
 MD5 13dc5b32bbff98dec74c41dd0c9b33a1 files/0.80.1-glx-fix.patch 597
 MD5 a956d1afa6724941d56732f2b91f42eb files/0.80.1-make.patch 1243
 MD5 240bd404f0deb6cd68bf6a98a5fb76db files/0.81.1-glx-fix.patch 386
 MD5 240bd404f0deb6cd68bf6a98a5fb76db files/0.82.1-glx-fix.patch 386
-MD5 d60ae5dd2d8a993999a9a252d20507cf files/digest-xmame-0.82.1 67
 MD5 240bd404f0deb6cd68bf6a98a5fb76db files/0.83.1-glx-fix.patch 386
+MD5 240bd404f0deb6cd68bf6a98a5fb76db files/0.86-glx-fix.patch 386
+MD5 d60ae5dd2d8a993999a9a252d20507cf files/digest-xmame-0.82.1 67
 MD5 bd94e56aecab93b1d9e02b6fb3d8a0e9 files/digest-xmame-0.83.1 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBM7huHTu7gpaalycRAvxzAJ9PycKHneXxy2sNU6eDxEyLj2moEACfQNW4
-xKKCBnaWDVtBFmDwBVh2HTI=
-=LpFD
------END PGP SIGNATURE-----
+MD5 1c5281cca09cd38869fa3715b3839b1b files/digest-xmame-0.86 65

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.25 2004/08/30 23:29:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.26 2004/09/02 19:42:49 mr_bones_ Exp $
+
+  02 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> xmame-0.86.ebuild:
+  turn on joystick support always for libsdl; should fix bug #62620
+  (Works around a bug in the 0.86 release)
 
 *xmame-0.86 (30 Aug 2004)
 

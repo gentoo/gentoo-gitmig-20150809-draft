@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.86.ebuild,v 1.1 2004/08/30 23:29:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.86.ebuild,v 1.2 2004/09/02 19:42:49 mr_bones_ Exp $
 
 inherit flag-o-matic gcc eutils games
 
@@ -78,7 +78,7 @@ src_unpack() {
 			|| die "sed Makefile (ppc/LD) failed"
 	fi
 
-	toggle_feature2 joystick sdl JOY_SDL
+	toggle_feature sdl JOY_SDL
 	#toggle_feature net XMAME_NET
 	use net && ewarn "Network support is currently (0.86) broken :("
 	toggle_feature esd SOUND_ESOUND
