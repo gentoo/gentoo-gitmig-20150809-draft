@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.1.1.ebuild,v 1.7 2004/12/18 18:39:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.9.1.1.ebuild,v 1.8 2004/12/28 11:46:55 ka0ttic Exp $
 
 inherit versionator
 
@@ -23,7 +23,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	cd "${WORKDIR}"
-	rpm2targz "${DISTDIR}/${MY_P}-0.src.rpm" || die
+	rpm2targz "${DISTDIR}/${MY_P}-0.src.rpm" || die "rpm2targz failed"
 	tar zxf "${MY_P}-0.src.tar.gz" || die
 	tar zxf "${MY_P}.tar.gz" || die
 
@@ -36,14 +36,10 @@ src_unpack() {
 	sed -i 's|/sbin|/bin|' tmpwatch.8 || die "sed tmpwatch.8 failed"
 }
 
-src_compile() {
-	emake || die "emake failed"
-}
-
 src_install() {
 	preplib
-	dosbin tmpwatch || die
-	doman tmpwatch.8 || die
+	dosbin tmpwatch || die "dosbin failed"
+	doman tmpwatch.8 || die "doman failed"
 
 	exeinto /etc/cron.daily
 	newexe "${FILESDIR}/${PN}.cron" "${PN}" || die
