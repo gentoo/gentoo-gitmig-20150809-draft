@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sysinfo/desklet-sysinfo-0.21.2.ebuild,v 1.1 2003/09/30 11:24:46 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sysinfo/desklet-sysinfo-0.25.ebuild,v 1.1 2004/01/11 03:35:32 obz Exp $
 
 DESKLET_NAME="SysInfo"
 
@@ -14,22 +14,13 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
-DEPEND=">=gnome-extra/gdesklets-core-0.22"
+DEPEND=">=gnome-extra/gdesklets-core-0.24"
 
-DOCS="AUTHORS ChangeLog"
+DOCS="ChangeLog"
 
-src_unpack( ) {
-
-	# *grumble* if you compress an archive using gunzip,
-	# why would you suffix it .tar.bz2 ? <obz@gentoo.org>
-	cd ${WORKDIR}
-	tar zxfv ${DISTDIR}/${MY_P}.tar.bz2
-
-}
-
-src_install( ) {
+src_install() {
 
 	SYS_PATH="/usr/share/gdesklets"
 	INSTALL_BIN="Install_${DESKLET_NAME}_Sensor.bin"
@@ -46,8 +37,13 @@ src_install( ) {
 
 	# and finally the graphics
 	cp -R gfx/ ${D}${SYS_PATH}/Displays/${DESKLET_NAME}
+	# remove extraneous CVS dir
+	rm -rf ${D}${SYS_PATH}/Displays/${DESKLET_NAME}/gfx/CVS
 
 	dodoc ${DOCS}
+
+	# desklets unpack preserves the permissions of the archive
+	chown -R root:root ${D}${SYS_PATH}/Sensors/${DESKLET_NAME}
 
 }
 
