@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.5.ebuild,v 1.1 2005/03/23 15:30:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.5.ebuild,v 1.2 2005/03/23 21:42:40 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit
@@ -75,6 +75,11 @@ src_unpack() {
 	if has_version '>=x11-libs/cairo-0.3.0'; then
 		epatch ${FILESDIR}/svg-cairo-0.3.0-fix.patch
 	fi
+
+	# Fix scripts that call for /usr/local/bin/perl #51916
+	ebegin "Patching smime to call perl from /usr/bin"
+	sed -i -e '1s,usr/local/bin,usr/bin,' security/nss/cmd/smimetools/smime
+	eend || die "sed failed"
 
 	WANT_AUTOCONF=2.1 autoconf || die "WANT_AUTOCONF failed"
 
