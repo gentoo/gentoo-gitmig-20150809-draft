@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 f9f3a3810d057b0ad2d4468f2d2ae967 xvid-0.9.1.ebuild 1035
-MD5 05a45c221688a428d5aebb618263c20c xvid-0.9.2-r1.ebuild 1146
+MD5 f1709d43ce22947b29439974df47a17e xvid-1.0.2.ebuild 1176
 MD5 b426fe20edac2b6d51baa646eaa7a946 xvid-1.0.0_rc4.ebuild 1075
 MD5 8bd75d2532aeba3e3dbaa79dfd04b228 xvid-1.0.1.ebuild 1292
-MD5 994bfb6f25c8ef1eb57d9f3a3a1e7c1c ChangeLog 3837
-MD5 92c4cb8ada67aef64ec9cfe8e35b6af1 xvid-1.0.2.ebuild 1179
-MD5 8c100445a64d960693db8424931ff0eb files/1.0.0_rc4-DESTDIR.patch 1450
-MD5 8c100445a64d960693db8424931ff0eb files/1.0.1-DESTDIR.patch 1450
-MD5 e83498fda540ee61cdb0ce3fe79585c8 files/digest-xvid-0.9.1 67
-MD5 3943af38157fef55f9da6987560d2e77 files/digest-xvid-0.9.2-r1 67
-MD5 181053d1f28fcfb20d9a491c674d5064 files/digest-xvid-1.0.0_rc4 71
-MD5 ea0eb745946d70fea0c5dfd32d166ddb files/digest-xvid-1.0.1 67
-MD5 b2f1f286ed22acfa893dae382f47fee2 files/xvid-1.0.1-64bit-clean.patch 1723
+MD5 05a45c221688a428d5aebb618263c20c xvid-0.9.2-r1.ebuild 1146
+MD5 f9f3a3810d057b0ad2d4468f2d2ae967 xvid-0.9.1.ebuild 1035
+MD5 328b687eb118c5b3699414f729c059d4 ChangeLog 3936
+MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 8c100445a64d960693db8424931ff0eb files/1.0.2-DESTDIR.patch 1450
+MD5 e83498fda540ee61cdb0ce3fe79585c8 files/digest-xvid-0.9.1 67
+MD5 ea0eb745946d70fea0c5dfd32d166ddb files/digest-xvid-1.0.1 67
 MD5 3ed49831081a6eb29ccda7ec2956c592 files/digest-xvid-1.0.2 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBYvEKArHZZzCEUG0RAiE2AJ9QUeduzfJzByF7pLTmgkAiebQZOwCeJifa
-WCBQZTDRzidsqZaWfl+ye4Y=
-=VsAZ
------END PGP SIGNATURE-----
+MD5 3943af38157fef55f9da6987560d2e77 files/digest-xvid-0.9.2-r1 67
+MD5 b2f1f286ed22acfa893dae382f47fee2 files/xvid-1.0.1-64bit-clean.patch 1723
+MD5 181053d1f28fcfb20d9a491c674d5064 files/digest-xvid-1.0.0_rc4 71
+MD5 8c100445a64d960693db8424931ff0eb files/1.0.1-DESTDIR.patch 1450
+MD5 8c100445a64d960693db8424931ff0eb files/1.0.0_rc4-DESTDIR.patch 1450
