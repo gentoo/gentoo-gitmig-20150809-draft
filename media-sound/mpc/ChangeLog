@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.7 2003/10/31 14:21:13 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.8 2004/01/24 06:36:40 raker Exp $
+
+  24 Jan 2004; Nick Hadaway <raker@gentoo.org> mpg-0.9.2.ebuild:
+  Marked stable for x86.
 
 *mpc-0.9.2 (31 Oct 2003)
 
