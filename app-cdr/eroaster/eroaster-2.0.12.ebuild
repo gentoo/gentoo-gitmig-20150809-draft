@@ -1,32 +1,24 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.0.12.ebuild,v 1.5 2002/11/04 02:46:23 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.0.12.ebuild,v 1.6 2002/11/30 02:58:30 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Awesome CD burning frontend"
-SLOT="0"
 SRC_URI="ftp://eclipt.uni-klu.ac.at/pub/projects/eroaster/${P}.tar.gz"
+HOMEPAGE="http://eclipt.uni-klu.ac.at/eroaster.php"
+
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
+SLOT="0"
 
-HOMEPAGE="http://eclipt.uni-klu.ac.at/eroaster.php"
 DEPEND=">=dev-lang/python-2.0
 	app-cdr/cdrtools
 	dev-python/gnome-python"
 
 src_compile() {
-
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
+	econf
 	emake || die
 }
 
-src_install () {
-
+src_install() {
 	make DESTDIR=${D} install || die
-
 }
-
