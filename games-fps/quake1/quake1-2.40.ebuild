@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/quake1-2.40.ebuild,v 1.6 2004/11/03 00:24:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/quake1-2.40.ebuild,v 1.7 2004/11/20 09:33:44 mr_bones_ Exp $
 
-inherit games eutils gcc
+inherit eutils gcc games
 
 DESCRIPTION="The original Quake engine straight from id !"
 HOMEPAGE="http://www.idsoftware.com/games/quake/quake/"
@@ -32,21 +32,21 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/fix-sys_printf.patch
+	epatch "${FILESDIR}/fix-sys_printf.patch"
 
 	mv WinQuake/Makefile{.linuxi386,}
 	mv QW/Makefile{.Linux,}
 
-	epatch ${FILESDIR}/makefile-path-fixes.patch
+	epatch "${FILESDIR}/makefile-path-fixes.patch"
 
 	[ $(gcc-major-version) -eq 3 ] \
-		&& epatch ${FILESDIR}/makefile-gcc3-cflags.patch \
-		|| epatch ${FILESDIR}/makefile-gcc2-cflags.patch
+		&& epatch "${FILESDIR}/makefile-gcc3-cflags.patch" \
+		|| epatch "${FILESDIR}/makefile-gcc2-cflags.patch"
 	sed -i "s:GENTOO_CFLAGS:${CFLAGS} -DGL_EXT_SHARED=1:" {WinQuake,QW}/Makefile
 	cp QW/client/glquake.h{,.orig}
 	(echo "#define APIENTRY";cat QW/client/glquake.h.orig) > QW/client/glquake.h
 
-	epatch ${FILESDIR}/makefile-sedable.patch
+	epatch "${FILESDIR}/makefile-sedable.patch"
 	if ! use 3dfx ; then
 		sed -i 's:^   $(BUILDDIR)/bin/glquake ::' WinQuake/Makefile
 		sed -i 's:^   $(BUILDDIR)/bin/glquake.3dfxgl ::' WinQuake/Makefile
@@ -67,15 +67,12 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}/WinQuake
-	make build_release || die "failed to build WinQuake"
-	cd ${S}/QW
-	make build_release || die "failed to build QW"
+	make -C "${S}/WinQuake" build_release || die "failed to build WinQuake"
+	make -C "${S}/QW" build_release || die "failed to build QW"
 }
 
 src_install() {
-	dogamesbin WinQuake/release*/bin/*
-	dogamesbin QW/release*/*qw*
+	dogamesbin WinQuake/release*/bin/* QW/release*/*qw* || die "dogamesbin failed"
 	dodoc readme.txt {WinQuake,QW}/*.txt
 	prepgamesdirs
 }

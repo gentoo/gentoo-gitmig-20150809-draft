@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake1
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/ChangeLog,v 1.4 2004/06/24 22:43:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1/ChangeLog,v 1.5 2004/11/20 09:33:44 mr_bones_ Exp $
+
+  20 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> quake1-2.40.ebuild:
+  tidy; error check
 
   27 May 2004; Michael Sterrett <mr_bones_@gentoo.org> quake1-2.40.ebuild:
   use fixup
