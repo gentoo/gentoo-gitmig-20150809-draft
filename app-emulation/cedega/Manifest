@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 028afdab78e563817f8e6af6037f35ab ChangeLog 415
-MD5 ec8dbae8da8a7736d80b5a569d44fce6 cedega-4.0.ebuild 1952
+MD5 c9d9be4b7e707026164b50d47af19ed6 ChangeLog 505
+MD5 004baf5ffeb9ec3444feabac0e68eb1f cedega-4.0.ebuild 1962
 MD5 6525c48ba09d08599432ea6c299e52f4 metadata.xml 354
 MD5 7eccc393a8bb2164b799f66650fc2b54 files/digest-cedega-4.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA31H9HTu7gpaalycRAsT3AKDGHK553hqF2v8rBWuFS50jzeO0GQCgw97b
-ousAwGrRBG5GMeVdhnxmQRM=
-=tCjW
------END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/cedega-4.0.ebuild,v 1.4 2004/06/27 23:02:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/cedega-4.0.ebuild,v 1.5 2004/07/26 12:55:46 kugelfang Exp $
 
 MY_P="cedega_${PV}-1.i386"
 DESCRIPTION="Cedega replaces WineX, a distribution of Wine with enhanced DirectX for gaming"
@@ -9,7 +9,7 @@ SRC_URI="${MY_P}.tgz"
 
 LICENSE="Aladdin"
 SLOT="3"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="cups opengl"
 RESTRICT="fetch"
 
