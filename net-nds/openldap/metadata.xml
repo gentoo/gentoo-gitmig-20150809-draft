@@ -6,8 +6,4 @@
         <email>robbat2@gentoo.org</email>
         <name>Robin H. Johnson</name>
     </maintainer>
-    <maintainer>
-        <email>raker@gentoo.org</email>
-        <name>Nick Hadaway</name>
-    </maintainer>
 </pkgmetadata>
