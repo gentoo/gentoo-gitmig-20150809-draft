@@ -1,4 +1,4 @@
-#Doesn't compile.. <verwilst>
+#Doesn't compile.. <18 dec 2001 - verwilst>
 =app-office/koffice/koffice-1.1.ebuild
 
 #still playing with XFS, low latency patches (12/14/2001 - drobbins)
