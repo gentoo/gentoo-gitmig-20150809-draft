@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.36 2003/06/08 02:29:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.37 2003/06/08 20:04:59 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -36,10 +36,11 @@ fi
 IUSE="${IUSE} X cjk crypt curl firebird flash freetds gd gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit pic png postgres qt snmp spell ssl tiff truetype xml xml2 zlib "
 
 # Berkdb is disabled due to DB4 and changes in PHP4.3.2
-#DEPEND="${DEPEND} berkdb? ( >=sys-libs/db-4.1.25 )"
+#RDEPEND="${RDEPEND} berkdb? ( >=sys-libs/db-4.1.25 )"
 #IUSE="${IUSE} berkdb"
 
-DEPEND="${DEPEND}
+# Everything is in this list is dynamically linked agaist or needed at runtime in some other way
+RDEPEND="
 	>=sys-libs/cracklib-2.7-r7
 	sys-apps/bzip2
     X? ( virtual/x11 )
@@ -50,11 +51,9 @@ DEPEND="${DEPEND}
     freetds? ( >=dev-db/freetds-0.53 )
     gd? ( media-libs/libgd >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
     gdbm? ( >=sys-libs/gdbm-1.8.0 )
-    imap? ( >=net-mail/uw-imap-2001a-r1 )
 	java? ( =virtual/jdk-1.4* dev-java/java-config )
     jpeg? ( >=media-libs/jpeg-6b )
     ldap? ( >=net-nds/openldap-1.2.11 )
-	mcal? ( dev-libs/libmcal )
     mysql? ( >=dev-db/mysql-3.23.26 )
     nls? ( sys-devel/gettext )
     odbc? ( >=dev-db/unixODBC-1.8.13 )
@@ -69,14 +68,17 @@ DEPEND="${DEPEND}
     tiff? ( >=media-libs/tiff-3.5.5 )
     truetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
 	zlib? ( sys-libs/zlib )
-	!dev-libs/9libs
-	virtual/mta
+	virtual/mta"
+# These will become explicit soon, and not optional
+RDEPEND="${RDEPEND}
 	xml2? ( dev-libs/libxml2 >=dev-libs/libxslt-1.0.30 )
-    xml? ( >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.97 dev-libs/expat )
-	"
+    xml? ( >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.97 dev-libs/expat )"
+# These are extra bits we need only at compile time
+DEPEND="${RDEPEND} ${DEPEND}
+    imap? ( >=net-mail/uw-imap-2001a-r1 )
+	mcal? ( dev-libs/libmcal )"
 #9libs causes a configure error
-
-RDEPEND="${RDEPEND} ${DEPEND}"
+DEPEND="${DEPEND} !dev-libs/9libs"
 
 #Waiting for somebody to want this:
 #cyrus? ( net-mail/cyrus-imapd net-mail/cyrus-imap-admin dev-libs/cyrus-imap-dev ) 
