@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/battstat/battstat-2.0.13.ebuild,v 1.6 2002/12/09 04:22:39 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/battstat/battstat-2.0.13.ebuild,v 1.7 2003/01/06 15:05:13 jmorgan Exp $
 
 IUSE="nls"
 
@@ -11,7 +11,7 @@ http://download.sourceforge.net/sourceforge/battstat/acpi-linux.h"
 HOMEPAGE="http://battstat.sourceforge.net"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 	>=gnome-base/gnome-libs-1.4.1.7
