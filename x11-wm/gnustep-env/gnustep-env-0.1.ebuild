@@ -3,7 +3,7 @@
 
 DESCRIPTION="Exports GNUSTEP_LOCAL_ROOT"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 SLOT="0"
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.3.610-r1.ebuild,v 1.4 2002/08/05 09:22:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.3.610-r1.ebuild,v 1.5 2002/08/14 15:45:39 murphy Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -16,7 +16,7 @@ SRC_URI="http://people.redhat.com/~hp/metacity/${P}.tar.gz"
 HOMEPAGE="http://people.redhat.com/~hp/metacity/"
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 
 RDEPEND=">=dev-libs/glib-2.0.3

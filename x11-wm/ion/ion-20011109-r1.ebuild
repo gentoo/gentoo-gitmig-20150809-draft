@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ion-20011109-r1.ebuild,v 1.4 2002/08/01 11:40:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ion-20011109-r1.ebuild,v 1.5 2002/08/14 15:45:39 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A keyboard-based window manager"
@@ -10,7 +10,7 @@ DEPEND="virtual/glibc"
 RDEPEND="virtual/x11"
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
 	cd ${S}

@@ -1,5 +1,5 @@
 # Copyright 2001 theLeaf sprl/bvba
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/sawfish-merlin-1.0.1-r2.ebuild,v 1.4 2002/07/11 06:31:00 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/sawfish-merlin-1.0.1-r2.ebuild,v 1.5 2002/08/14 15:45:39 murphy Exp $
 
 MY_P=${P/-merlin/}
 S=${WORKDIR}/${MY_P}
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/sawmill/${MY_P}.tar.gz"
 HOMEPAGE="http://www.merlin.org/sawfish"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND=">=x11-libs/rep-gtk-0.15-r1
 	>=dev-libs/librep-0.14

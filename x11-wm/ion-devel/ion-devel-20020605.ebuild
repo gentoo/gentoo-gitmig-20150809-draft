@@ -12,7 +12,7 @@ RDEPEND="virtual/x11"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 pkg_setup() {
 	einfo "${GOOD}****************************************************************************** *${NORMAL}"

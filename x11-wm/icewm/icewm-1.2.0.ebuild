@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.0.ebuild,v 1.1 2002/07/07 01:41:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.0.ebuild,v 1.2 2002/08/14 15:45:39 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Ice Window Manager"
@@ -15,7 +15,7 @@ DEPEND="virtual/x11
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_unpack(){
 	unpack ${A}

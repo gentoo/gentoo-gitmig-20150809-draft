@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-1.2.4.ebuild,v 1.2 2002/07/26 04:58:40 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-1.2.4.ebuild,v 1.3 2002/08/14 15:45:39 murphy Exp $
 
 inherit commonbox
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://openbox.sunsite.dk"
 
 SLOT="1"
 LICENSE="BSD"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 myconf="--with-x \
 	--enable-shape \

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.7-r1.ebuild,v 1.3 2002/07/11 06:31:00 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.7-r1.ebuild,v 1.4 2002/08/14 15:45:39 murphy Exp $
 
 
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
 HOMEPAGE="http://www.fvwm.org/"
 LICENSE="GPL-2 & FVWM"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND=">=dev-libs/libstroke-0.4
 	gtk? ( =x11-libs/gtk+-1.2* )
