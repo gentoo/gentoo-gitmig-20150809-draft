@@ -67,7 +67,7 @@ augroup gentoo
   " Gentoo-specific settings for ebuilds.  These are the federally-mandated
   " required tab settings.  See the following for more information:
   " http://www.gentoo.org/doc/en/xml/gentoo-howto.xml
-  au BufRead,BufNewFile *.e{build,class} let is_bash=1|set ft=sh
+  au BufRead,BufNewFile *.e{build,class} let is_bash=1|setfiletype sh
   au BufRead,BufNewFile *.e{build,class} set ts=4 sw=4 noexpandtab
 
   " In text files, limit the width of text to 78 characters, but be careful
