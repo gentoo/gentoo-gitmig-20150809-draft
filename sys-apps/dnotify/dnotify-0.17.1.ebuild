@@ -1,31 +1,29 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/dnotify-0.16.0.ebuild,v 1.2 2004/09/18 17:26:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/dnotify-0.17.1.ebuild,v 1.1 2004/09/18 17:26:00 swegener Exp $
 
 DESCRIPTION="Execute a command when the contents of a directory change"
 SRC_URI="http://www.student.lu.se/~nbi98oli/src/${P}.tar.gz"
 HOMEPAGE="http://www.student.lu.se/~nbi98oli/dnotify.html"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc ~mips"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~mips"
 IUSE="nls"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc"
+DEPEND="${RDEPEND}
 	sys-apps/gawk
 	sys-apps/grep
 	sys-devel/gettext"
 
-RDEPEND="virtual/libc"
-
 src_compile() {
-	econf `use_enable nls` || die "failed to configure"
+	econf $(use_enable nls) || die "failed to configure"
 	emake || die "failed to make"
 }
 
 src_install() {
-	emake DESTDIR=${D} \
-		install || die
-	dodoc AUTHORS INSTALL TODO ChangeLog COPYING* NEWS README
+	emake DESTDIR=${D} install || die "make install failed"
+	dodoc AUTHORS TODO NEWS README || die "dodoc failed"
 }
 
 src_test() {
