@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.3.1.ebuild,v 1.2 2002/04/27 21:40:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.3.1.ebuild,v 1.3 2002/04/30 20:38:57 danarmak Exp $
 
 # qt-copy-3.0.3 ebuild (released with kde3)
 
@@ -13,7 +13,7 @@ SLOT="3"
 
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde.org
-SRC_URI=${SRC_URI//qt-x11-3.0.3.1/qt-copy-3.0.3}
+SRC_URI=${SRC_URI//qt-3.0.3.1/qt-copy-3.0.3}
 S=${WORKDIR}/qt-copy-3.0.3
 #SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/qt-x11-free-${PV}.tar.gz"
 
