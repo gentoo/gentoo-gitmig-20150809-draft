@@ -1,10 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.186 2005/02/23 20:26:13 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.187 2005/02/23 20:28:22 avenj Exp $
 
   23 Feb 2005; Jon Portnoy <avenj@gentoo.org> binutils-2.15.92.0.2-r3.ebuild :
   Reverted PATCHVER=1.4 to PATCHVER=1.3 due to bug
-  #83047.
+  #83047
 
 *binutils-2.15.92.0.2-r3 (20 Feb 2005)
 
