@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.46 2004/06/14 20:01:13 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.47 2004/06/16 13:01:48 voxus Exp $
+
+*openmosix-sources-2.4.22-r9 (16 Jun 2004)
+
+  16 Jun 2004; Konstantin Arkhipov <voxus@gentoo.org>
+  +files/openmosix-sources-2.4.22.pipe_bug.patch,
+  +openmosix-sources-2.4.22-r9.ebuild:
+  Pipe-bug and #53969 fixed.
 
 *openmosix-sources-2.4.22-r7 (14 Jun 2004)
 *openmosix-sources-2.4.22-r8 (14 Jun 2004)
