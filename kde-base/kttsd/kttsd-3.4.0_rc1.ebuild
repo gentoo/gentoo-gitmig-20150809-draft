@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/kttsd-3.4.0_rc1.ebuild,v 1.1 2005/02/27 20:21:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/kttsd-3.4.0_rc1.ebuild,v 1.2 2005/02/28 19:17:53 danarmak Exp $
 KMNAME=kdeaccessibility
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
@@ -22,14 +22,4 @@ app-accessibility/epos
 )"
 
 myconf="$(use_enable gstreamer kttsd-gstreamer)"
-
-# Couldn't get festival client/server mode to work, but then I didn't try very hard
-# myconf:	$(use_enable festival kttsd-festivalcs)"
-
-
-# The Festival engine plugin (not festivalint and festivalcs) doesn't compile,
-# as gentoo's festival ebuild doesn't install libFestival.a.
-# DEPEND:	festival? ( app-accessibility/festival app-accessibility/speech-tools )"
-# myconf:	$(use_enable festival kttsd-festival)
-#		$(use_with festival speech_tools-includes /usr/lib/speech-tools/include)
 
