@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ddclient
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.6 2003/11/15 09:15:32 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.7 2004/06/05 16:21:43 kloeri Exp $
+
+  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> ddclient-3.6.3.ebuild:
+  Stable on alpha.
 
 *ddclient-3.6.3 (15 Nov 2003)
 
