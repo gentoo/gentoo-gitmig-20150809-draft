@@ -1,0 +1,8 @@
+# ChangeLog for dev-java/xmojo-bin
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/radeox/ChangeLog,v 1.1 2004/05/03 18:14:38 karltk Exp $
+
+*radeox-1.0_beta2 (03 May 2004)
+
+  03 May 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  radeox-1.0_beta2.ebuild: Initial import. Ebuild submitted by myself.
