@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/dosbox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.15 2004/11/11 00:57:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.16 2004/11/19 01:33:41 mr_bones_ Exp $
+
+*dosbox-0.63 (18 Nov 2004)
+
+  18 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> +dosbox-0.63.ebuild:
+  version bump
 
   11 Nov 2004; Joseph Jezak <josejx@gentoo.org> dosbox-0.62.ebuild:
   Marked ppc stable.
