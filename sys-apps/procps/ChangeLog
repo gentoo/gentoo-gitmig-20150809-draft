@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.17 2002/12/21 17:25:04 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.18 2003/01/18 14:39:12 tuxus Exp $
 
 *procps-3.1.5 (21 Dec 2002)
 
@@ -70,6 +70,9 @@
   perm'd file (fakeroot issue).
 
 *procps-2.0.10-r1 (31 Oct 2002)
+
+  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   31 Oct 2002; Brad Cowan <bcowan@gentoo.org> procps-2.0.10-r1.ebuild :
   

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.3.ebuild,v 1.7 2002/12/15 10:44:23 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.3.ebuild,v 1.8 2003/01/18 14:42:52 tuxus Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Miscellaneous files"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/directory/miscfiles.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha mips"
 
 src_unpack() {
 	unpack ${A}
