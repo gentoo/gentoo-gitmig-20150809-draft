@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.20 2003/02/04 15:11:34 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.21 2003/02/05 21:56:40 foser Exp $
+
+*gstreamer-0.6.0-r2 (05 Feb 2003)
+
+  05 Feb 2003; foser <foser@gentoo.org> gstreamer-0.6.0-r2.ebuild :
+  Added patch to use opt scheduler as default
 
 *gstreamer-0.6.0-r1 (04 Feb 2003)
 
