@@ -1,4 +1,6 @@
 MD5 976fb097b3623e2b3eb49ad9cb353533 ChangeLog 516
 MD5 990a00814abc5864af379647ff63b951 php-mode-102.ebuild 915
+MD5 d4e324d16a5be595ac8c7cd8b4264122 php-mode-105.ebuild 706
 MD5 0761c3603c17ab6e347bca7eddd46f60 files/50php-mode-gentoo.el 112
 MD5 a97d5d118431d249d4297fcbc594481f files/digest-php-mode-102 64
+MD5 e6e77ec417063ecb34ba90345a42d05b files/digest-php-mode-105 63
