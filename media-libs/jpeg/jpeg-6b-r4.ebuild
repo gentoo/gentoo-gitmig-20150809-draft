@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r4.ebuild,v 1.4 2005/01/04 18:03:21 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r4.ebuild,v 1.5 2005/01/30 21:06:16 j4rg0n Exp $
 
 inherit flag-o-matic libtool eutils toolchain-funcs
 
@@ -32,6 +32,10 @@ src_unpack() {
 src_compile() {
 	replace-cpu-flags k6 k6-2 k6-3 i586
 	econf --enable-shared --enable-static || die "econf failed"
+	if use ppc-macos; then
+		cd ${S}
+		sed -i -e 's:LIBTOOL = libtool:LIBTOOL = /usr/bin/glibtool:' Makefile
+	fi
 	emake \
 		CC="$(tc-getCC)" \
 		AR="$(tc-getAR) rc" \
