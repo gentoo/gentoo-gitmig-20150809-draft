@@ -1,30 +1,31 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r1.ebuild,v 1.15 2003/09/07 00:06:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r1.ebuild,v 1.1 2003/09/30 07:42:52 seemant Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils
 
+S=${WORKDIR}/mpg123
 DESCRIPTION="Real Time mp3 player"
-SRC_URI="http://www.mpg123.de/mpg123/${P}.tar.gz"
 HOMEPAGE="http://www.mpg123.de/"
-
-DEPEND="virtual/glibc
-	sparc? ( media-libs/audiofile ) "
+SRC_URI="http://www.mpg123.de/mpg123/${PN}-pre${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="~x86 ~ia64 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
+
+DEPEND="virtual/glibc
+	>=sys-apps/sed-4"
 
 src_unpack () {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}-sparc.diff
-	use alpha && patch -p1 < ${FILESDIR}/${P}-alpha.diff
-	cp Makefile Makefile.orig
-	sed -e "s:-O2 -m486:${CFLAGS}:" \
-		-e "s:-O2 -mcpu=ppc:${CFLAGS}:g" \
-		-e "s:-O6:${CFLAGS}:" \
-		Makefile.orig > Makefile
+
+	# Apply security fix
+	epatch ${FILESDIR}/${P}-security.diff
+
+	sed -i \
+		-e "s:-O2 -m486:${CFLAGS}:" \
+		-e "s:-O2 -mcpu=ppc:${CFLAGS}:g" Makefile
 }
 
 src_compile() {
@@ -44,16 +45,21 @@ src_compile() {
 	fi
 
 	case $SYSTEM_ARCH in
-	  ppc)
-	   MAKESTYLE="-ppc";;
-	  i386)
-	   MAKESTYLE="-i486";;
-	  sparc)
-	   MAKESTYLE="-sparc";;
-	 alpha)
-	   MAKESTYLE="-alpha";;
-	  arm)
-	   ;;
+		ppc)
+			MAKESTYLE="-ppc";;
+		i386)
+			if [ -z "use mmx" ]
+			then
+				MAKESTYLE="-mmx"
+			else
+				MAKESTYLE="-i486"
+			fi;;
+		sparc64)
+			MAKESTYLE="-sparc";;
+		sparc)
+			MAKESTYLE="-sparc";;
+		arm)
+			;;
 	esac
 
 	make linux${MAKESTYLE}${MAKEOPT} || die
@@ -65,3 +71,4 @@ src_install () {
 	doman mpg123.1
 	dodoc BENCHMARKING BUGS CHANGES COPYING JUKEBOX README* TODO
 }
+
