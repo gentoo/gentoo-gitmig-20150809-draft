@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.18 2002/09/15 14:15:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.19 2002/09/16 14:44:20 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -206,18 +206,24 @@ cvs_src_unpack() {
     debug-print-function $FUNCNAME $*
 	cvs_fetch || die "died running cvs_fetch"
 
-    einfo "Copying module $ECVS_MODULE from $ECVS_TOP_DIR..."
-	debug-print "Copying module $ECVS_MODULE from $ECVS_TOP_DIR..."
+    einfo "Copying $ECVS_MODULE/$ECVS_SUBDIR from $ECVS_TOP_DIR..."
+	debug-print "Copying module $ECVS_MODULE subdir $ECVS_SUBDIR local_mode=$ECVS_LOCAL from $ECVS_TOP_DIR..."
+	
+	# probably redundant, but best to make sure
+	mkdir -p $WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR
 	
 	if [ -n "$ECVS_SUBDIR" ]; then
-			mkdir -p $WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR
-			cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR/* $WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR/
+	    if [ -n "$ECVS_LOCAL" ]; then
+		cp -f $ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR/* $WORKDIR/$ECVS_MODULE/$ECVS_SUBDIR
+	    else
+		cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE/$ECVS_SUBDIR $WORKDIR/$ECVS_MODULE
+	    fi    
 	else
-		if [ -n "$ECVS_LOCAL" ]; then
-			cp -f $ECVS_TOP_DIR/$ECVS_MODULE/* $WORKDIR/$ECVS_MODULE
-		else
-			cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE $WORKDIR
-		fi
+	    if [ -n "$ECVS_LOCAL" ]; then
+		cp -f $ECVS_TOP_DIR/$ECVS_MODULE/* $WORKDIR/$ECVS_MODULE
+	    else
+		cp -Rf $ECVS_TOP_DIR/$ECVS_MODULE $WORKDIR
+	    fi
 	fi
 	
 	# if the directory is empty, remove it; empty directories cannot exist in cvs.
