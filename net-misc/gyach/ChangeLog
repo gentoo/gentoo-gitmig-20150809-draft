@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/gyach
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gyach/ChangeLog,v 1.4 2002/09/09 05:08:10 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gyach/ChangeLog,v 1.5 2002/09/22 05:54:51 mkennedy Exp $
+
+*gyach-0.8.4 (22 Sep 2002)
+
+  22 Sep 2002; Matthew Kennedy <mkennedy@gentoo.org> gyach-0.8.4.ebuild,
+  ChangeLog, files/digest-gyach-0.8.4 :
+
+  Minor version bump. Resolves gcc3.2-related tab-completion bug.
 
 *gyach-0.8.2 (07 Sep 2002)
 
