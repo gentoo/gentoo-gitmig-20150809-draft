@@ -217,7 +217,7 @@ def pkgsplit(mypkg):
 				if ververify(x):
 					ERRPKG=x+" shouldn't look like a version part."
 					return None
-			return [string.join(myparts[:-1],"-"),myparts[-1],"0"]
+			return [string.join(myparts[:-1],"-"),myparts[-1],"r0"]
 	else:
 		ERRPKG=myparts[-1]+" doesn't appear to be a version or rev string."
 		return None
