@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.26 2003/08/28 13:54:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.27 2003/09/12 11:34:11 seemant Exp $
+
+*coreutils-5.0-r4 (12 Sep 2003)
+
+  12 Sep 2003; Seemant Kulleen <seemant@gentoo.org> coreutils-5.0-r4.ebuild:
+  ACL patches _finally_ added into coreutils.  A note about this.  If "acl"
+  and "selinux" are both in USE, then "selinux" will be preferred and "acl"
+  discarded.  Also, the progress-bar patch has been modified to work with
+  the acl stuff.  This modification was done by: Marcin Wisnicki
+  <wisnia21@freeshell.org> in bug #18151.  What I have done is put the acl
+  patches into the gentoo patch tarball and changed the layout.  Patches are
+  numbered to work with epatch's directory patching functionality, and if
+  acl is used, then the original progresspatch is discarded.  Marked -r3
+  stable on x86
 
 *coreutils-5.0-r3 (26 Aug 2003)
 
