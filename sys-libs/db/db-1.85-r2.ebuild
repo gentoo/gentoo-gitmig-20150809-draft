@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r2.ebuild,v 1.8 2005/01/30 19:39:20 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r2.ebuild,v 1.9 2005/03/14 23:42:09 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,10 +11,10 @@ SRC_URI="ftp://ftp.sleepycat.com/releases/db.${PV}.tar.gz
 
 LICENSE="DB"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 S=${WORKDIR}/db.${PV}
 
