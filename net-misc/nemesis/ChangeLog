@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nemesis
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/ChangeLog,v 1.8 2003/08/21 04:58:19 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/ChangeLog,v 1.9 2004/05/06 08:15:10 dragonheart Exp $
+
+  06 May 2004; Daniel Black <dragonheart@gentoo.org>
+  -files/nemesis-1.32-gentoo.diff, -nemesis-1.32.ebuild:
+  Removed old version to fix bug #50070 - thanks to James Cook
+  <james.cook@utoronto.ca>
 
 *nemesis-1.4_beta3 (21 Aug 2003)
 
