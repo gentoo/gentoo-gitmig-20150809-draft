@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.13-r1.ebuild,v 1.5 2003/09/08 11:31:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.13-r1.ebuild,v 1.6 2003/12/07 00:23:37 spider Exp $
 
 inherit virtualx libtool gnome.org
 
@@ -29,7 +29,6 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	bonobo? ( >=gnome-base/bonobo-1.0.17 )
 	perl?   ( >=dev-lang/perl-5.6 )
 	python? ( >=dev-lang/python-2.0 )
-	gb?     ( ~gnome-extra/gb-0.0.17 )
 	libgda? ( <gnome-extra/libgda-0.10.0
 	          >=gnome-base/bonobo-1.0.17 )
 	evo?    ( <net-mail/evolution-1.3 )
