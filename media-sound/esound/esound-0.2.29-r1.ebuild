@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.29-r1.ebuild,v 1.3 2003/05/30 22:55:56 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.29-r1.ebuild,v 1.4 2003/06/10 17:23:09 taviso Exp $
 
 IUSE="tcpd alsa"
 
@@ -16,13 +16,14 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha"
 
 DEPEND=" >=media-libs/audiofile-0.1.9
-	alsa? ( >=media-libs/alsa-lib-0.5.9 )
+	alsa? ( >=media-libs/alsa-lib-0.5.10b )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/esound-0.2.29-alsa-period.diff
+	epatch ${FILESDIR}/${P}-alsa-period.diff
+	epatch ${FILESDIR}/${P}-local-vs-remote.diff
 }
 
 src_compile() {
