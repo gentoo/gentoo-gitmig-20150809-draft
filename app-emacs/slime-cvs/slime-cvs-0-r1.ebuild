@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/slime-cvs-0-r1.ebuild,v 1.1 2004/01/26 18:10:54 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/slime-cvs-0-r1.ebuild,v 1.2 2004/01/26 19:46:12 mr_bones_ Exp $
 
 ECVS_SERVER="common-lisp.net:/project/slime/cvsroot"
 if [ -z "${ECVS_BRANCH}" ]; then # user configurable
@@ -69,7 +69,7 @@ You can elect to set the ECVS_BRANCH environment variable when
 emerging slime-cvs.	 If unset, the default is to pull the
 FAIRLY-STABLE tag. eg.
 
-   ECVS_BRANCH=HEAD emerge slime-cvs
+	ECVS_BRANCH=HEAD emerge slime-cvs
 
 While this ebuild attempts to work for the FAIRLY-STABLE tag, it may
 not always work with CVS HEAD.
