@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r2.ebuild,v 1.10 2004/06/28 19:23:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r2.ebuild,v 1.11 2004/07/17 05:25:11 mr_bones_ Exp $
 
 inherit eutils
 
@@ -56,7 +56,7 @@ src_compile() {
 		--datadir=/usr/share \
 		${myconf} || die
 
-	make || die
+	emake || die "emake failed"
 }
 
 src_install() {
