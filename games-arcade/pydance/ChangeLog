@@ -1,11 +1,16 @@
 # ChangeLog for games-arcade/pydance
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/ChangeLog,v 1.5 2004/01/14 17:40:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/ChangeLog,v 1.6 2004/02/22 10:21:38 vapier Exp $
+
+*pydance-0.9.1 (22 Feb 2004)
+
+  22 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #42219 by Arnaud JEANSEN.
 
 *pydance-0.8.4 (14 Jan 2004)
 
   14 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
-  Version bump #37661 Arnaud JEANSEN and Chris Aniszczyk.
+  Version bump #37661 by Arnaud JEANSEN and Chris Aniszczyk.
 
 *pydance-0.8.2 (21 Nov 2003)
 
