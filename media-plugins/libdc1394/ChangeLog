@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/libdc1394
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libdc1394/ChangeLog,v 1.8 2004/11/09 10:30:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libdc1394/ChangeLog,v 1.9 2004/12/04 20:07:12 corsair Exp $
+
+  04 Dec 2004; Markus Rothe <corsair@gentoo.org> libdc1394-1.0.0.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #72993
 
   09 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> libdc1394-1.0.0.ebuild:
   ~alpha keyword.
