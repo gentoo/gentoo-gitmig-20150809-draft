@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.1.52.ebuild,v 1.9 2004/08/01 14:13:41 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.1.52.ebuild,v 1.10 2004/08/01 14:22:40 suka Exp $
 
 inherit rpm
 
@@ -9,7 +9,7 @@ INSTDIR="/opt/Ximian-OpenOffice"
 S="${WORKDIR}/usr"
 DESCRIPTION="Ximian-ized version of OpenOffice.org, a full office productivity suite."
 HOMEPAGE="http://ooo.ximian.com"
-SRC_URI="ftp://ftp.ximian.com/pub/xd-unstable/suse-90-i586/ooo-1.1.1-0.ximian.8.1.1.53.i586.rpm
+SRC_URI="ftp://ftp.ximian.com/pub/xd-unstable/suse-90-i586/ooo-1.1.1-0.ximian.8.1.1.snap.1.1.52.1.i586.rpm
 	ftp://ftp.ximian.com/pub/xd-unstable/suse-90-i586/ooo-fonts-1.1.3-0.ximian.8.2.noarch.rpm
 	mirror://openoffice/contrib/dictionaries/dicooo/DicOOo.sxw"
 
