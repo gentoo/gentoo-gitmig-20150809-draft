@@ -1,3 +1,4 @@
+MD5 bbe90f07847a876c668976d7efabf2ab quixote-0.7_alpha2.ebuild 826
 MD5 dd3de9474d54e0b84ef0b1964765d885 quixote-0.5.1.ebuild 797
 MD5 028b922bf352cb661fa80096ecf22fac quixote-0.7_alpha1.ebuild 828
 MD5 c0b71a2f01bda80a8459b0fd073f66b5 quixote-0.6.1.ebuild 797
@@ -8,3 +9,4 @@ MD5 175e497da620b92648516645ffcbeb10 files/digest-quixote-0.6 63
 MD5 b93be01baa0719f7833f7b8a24395bef files/digest-quixote-0.5.1 65
 MD5 f0b85ab0bd5e039d101c49571e31286f files/digest-quixote-0.6.1 65
 MD5 adaf8209e35f7fc9ee6a585b57eba42f files/digest-quixote-0.7_alpha1 65
+MD5 33f15a5d576be02d530938f5ab8ed704 files/digest-quixote-0.7_alpha2 65
