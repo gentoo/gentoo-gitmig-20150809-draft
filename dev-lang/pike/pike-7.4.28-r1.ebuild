@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc., Emil Skoldberg (see ChangeLog)
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.28-r1.ebuild,v 1.3 2003/10/27 13:26:35 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.28-r1.ebuild,v 1.4 2003/10/27 16:15:23 scandium Exp $
 
 inherit flag-o-matic
 
 # -fomit-frame-pointer breaks the compilation
 filter-flags -fomit-frame-pointer
 
-IUSE="debug doc gdbm gif gnome gtk gtk2 java jpeg mysql oci8 odbc opengl pdflib postgres scanner tiff truetype zlib"
+IUSE="debug doc gdbm gif gnome gtk java jpeg mysql oci8 odbc opengl pdflib postgres scanner tiff truetype zlib"
 
 S="${WORKDIR}/Pike-v${PV}"
 HOMEPAGE="http://pike.ida.liu.se/"
@@ -33,7 +33,7 @@ DEPEND="dev-libs/gmp
 	opengl?	( virtual/opengl
 		virtual/glut )
 	gtk?	( =x11-libs/gtk+-1.2* )
-	gtk2?	( =x11-libs/gtk+-2* )
+	#gtk2?	( =x11-libs/gtk+-2* )
 	sdl?	( media-libs/libsdl )
 	sys-devel/gcc
 	sys-devel/make
@@ -41,11 +41,12 @@ DEPEND="dev-libs/gmp
 
 src_compile() {
 
-	if use gtk2; then
-		einfo 'If building pike with GTK+ 2.x support breaks try'
-		einfo 'USE="-gtk2" emerge pike'
-		sleep 3
-	fi
+#       disable gtk+-2 for now, it does not work
+#	if use gtk2; then
+#		einfo 'If building pike with GTK+ 2.x support breaks try'
+#		einfo 'USE="-gtk2" emerge pike'
+#		sleep 3
+#	fi
 
 	local myconf
 	use zlib  	|| myconf="${myconf} --without-zlib"
@@ -63,10 +64,11 @@ src_compile() {
 	use jpeg	|| myconf="${myconf} --without-jpeglib"
 	use tiff	|| myconf="${myconf} --without-tifflib"
 	use opengl	|| myconf="${myconf} --without-GL --without-GLUT"
-	use gtk		&& myconf="${myconf} --with-GTK" \
-			|| myconf="${myconf} --without-GTK"
-	use gtk2	&& myconf="${myconf} --with-GTK2" \
-			|| myconf="${myconf} --without-GTK2"
+	use gtk		&& myconf="${myconf} --with-GTK --without-GTK2" \
+			|| myconf="${myconf} --without-GTK --without-GTK2"
+#	disable gtk+-2 for now, it does not work
+#	use gtk2	&& myconf="${myconf} --with-GTK2" \
+#			|| myconf="${myconf} --without-GTK2"
 	use gnome	|| myconf="${myconf} --without-gnome"
 
 	# We have to use --disable-make_conf to override make.conf settings
