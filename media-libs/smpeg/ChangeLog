@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/smpeg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.2 2002/02/02 23:09:30 azarah Exp $
+
+*smpeg-0.4.4-r2 (3 Feb 2002)
+
+  3 Feb 2002; M.Schlemmer <azarah@gentoo.org> smpeg-0.4.4-r2.ebuild :
+
+  '--enable-mmx' causes test apps to crash on startup.  Disable this for now.
+  Resolves bug #470.  Some form fixes.
 
 *smpeg-0.4.4-r1 (1 Feb 2002)
 
