@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/scripts/build-rel.sh,v 1.3 2002/08/20 20:22:33 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/scripts/build-rel.sh,v 1.4 2002/08/26 15:42:17 murphy Exp $
 #
 # Where we get the sauce
 SOURCE=../default-x86-2.0
@@ -30,7 +30,8 @@ for f in $FILES; do
 		fi
 		if [ -s ${f}.sed ]; then
 			echo -n " sed"
-			sed -f ${f}.sed ${SOURCE}/${f} >> ${f}
+			sed -f ${f}.sed ${SOURCE}/${f} | \
+				egrep -e '[^\s]+' >> ${f}
 		else
 			echo -n " cat"
 			cat ${SOURCE}/${f} >> ${f}
