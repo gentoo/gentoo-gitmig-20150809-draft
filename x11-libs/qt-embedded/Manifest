@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5344618caffea42faeabb749866fb646 qt-embedded-3.3.2.ebuild 4614
-MD5 e944d78635ad46a9ccf47fc672c09f5e qt-embedded-3.3.2-r1.ebuild 4766
+MD5 499665dae4b2da8eb697e1b41b493712 ChangeLog 2176
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
-MD5 f31a0d03ba38445ce8244afcd93db107 ChangeLog 1992
-MD5 30c1f52a24ae025a677f62f8cdc3c75e qt-embedded-3.0.5.ebuild 4312
-MD5 ebcd52a12825d38d18ed865ae34710f6 qt-embedded-3.1.2.ebuild 4385
-MD5 1fcffbb83d84af4b0d6d074ec508db20 files/digest-qt-embedded-3.0.5 77
-MD5 fc553746a0c77730e1785fc7fc0da47d files/digest-qt-embedded-3.3.2 77
-MD5 097bb712d277f17864951d77b56ca46b files/tools-Makefile 2053
-MD5 fc553746a0c77730e1785fc7fc0da47d files/digest-qt-embedded-3.3.2-r1 77
-MD5 81e8e195b18cba662da2c540ce2a1dbc files/digest-qt-embedded-3.1.2 77
-MD5 5f0cacec360762cefef2d5219aee443a files/50qt-embeddeddir3 25
+MD5 55bdea2caffae2cb269f25f45f29515e qt-embedded-3.0.5.ebuild 4318
+MD5 616c7c1a19cb6ebc52d1fde9fc82e13e qt-embedded-3.1.2.ebuild 4394
+MD5 93269b1aa9694496199c162b2b494803 qt-embedded-3.3.2.ebuild 4619
+MD5 c901b061b2a25ed0c40b90be4344b3f2 qt-embedded-3.3.2-r1.ebuild 4776
 MD5 b0719cf6e99f249585e84430fbbc2883 files/47qt-embedded3 118
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD4DBQFBT7JHFhz/XBeRBtARAtc6AJiaMLnDpA4pgHevNKmD6Rj1IV+pAJ9vwOgM
-8/bXdKDCZucmtY45pfhKBA==
-=WOAm
------END PGP SIGNATURE-----
+MD5 1fcffbb83d84af4b0d6d074ec508db20 files/digest-qt-embedded-3.0.5 77
+MD5 81e8e195b18cba662da2c540ce2a1dbc files/digest-qt-embedded-3.1.2 77
+MD5 097bb712d277f17864951d77b56ca46b files/tools-Makefile 2053
+MD5 5f0cacec360762cefef2d5219aee443a files/50qt-embeddeddir3 25
+MD5 fc553746a0c77730e1785fc7fc0da47d files/digest-qt-embedded-3.3.2 77
+MD5 fc553746a0c77730e1785fc7fc0da47d files/digest-qt-embedded-3.3.2-r1 77

@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.0.5.ebuild,v 1.13 2004/06/24 22:07:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.0.5.ebuild,v 1.14 2004/11/06 07:44:32 mr_bones_ Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-embedded-free-${PV}.tar.bz2"
 
-LICENSE="QPL-1.0 | GPL-2"
+LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="3"
 KEYWORDS="x86"
 IUSE="gif opengl mysql odbc postgres debug build"
