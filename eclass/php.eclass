@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.11 2003/05/13 09:39:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.12 2003/05/14 20:31:05 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -29,8 +29,7 @@ S=${WORKDIR}/${MY_P}
 [ -z "$PROVIDE" ]	&& PROVIDE="virtual/php"
 
 
-IUSE="${IUSE} berkdb cjk crypt curl firebird flash freetds gd gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib pic png postgres qt snmp spell ssl tiff truetype X xml xml2 zlib"
-IUSE="${IUSE} phpmemlimit"
+IUSE="${IUSE} X berkdb cjk crypt curl cyrus firebird flash freetds gd gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit pic png postgres qt snmp spell ssl tiff truetype xml xml2 zlib "
 #removed: gmp
 #causes breakage
 
@@ -60,7 +59,7 @@ DEPEND="${DEPEND}
     pdflib? ( >=media-libs/pdflib-4.0.3 )
     png? ( >=media-libs/libpng-1.2.5 )
     postgres? ( >=dev-db/postgresql-7.1 )
-    qt? ( x11-libs/qt )
+    qt? ( >=x11-libs/qt-2.3.0 )
     snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
     spell? ( app-text/aspell )
     ssl? ( >=dev-libs/openssl-0.9.5 )
@@ -68,13 +67,10 @@ DEPEND="${DEPEND}
     truetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
     xml2? ( dev-libs/libxml2 )
     xml? ( >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.96 dev-libs/expat )
+	zlib? ( sys-libs/zlib )
 	!dev-libs/9libs
 	"
 #9libs causes a configure error
-
-RDEPEND="${RDEPEND}
-	xml? ( >=app-text/sablotron-0.95-r1 >=net-libs/libwww-5.3.2 )
-	qt? ( >=x11-libs/qt-2.3.0 )"
 
 #export this here so we can use it
 myconf="${myconf}"
@@ -116,6 +112,7 @@ PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules install-pear install-b
 
 #fixes bug #14067
 replace-flags "-march=k6*" "-march=i586"
+
 
 php_src_unpack() {
 	ewarn "This EBUILD is totally masked presently. Use it at your own risk.  I know it"
@@ -196,24 +193,21 @@ php_src_compile() {
 	use gdbm && myconf="${myconf} --with-gdbm=/usr"
 	use informix && [ -n "${INFORMIXDIR}" ] && myconf="${myconf} --with-informix=${INFORMIXDIR}"
 	use java && myconf="${myconf} --with-java=${JAVA_HOME}"
-	#--- check out this weirdness
-	#use jpeg && myconf="${myconf} --with-jpeg-dir=/usr/lib" || myconf="${myconf} --without-jpeg"
 	use jpeg && myconf="${myconf} --with-jpeg --with-jpeg-dir=/usr --enable-exif" || myconf="${myconf} --without-jpeg"
 	use jpeg && LDFLAGS="${LDFLAGS} -ljpeg"
-	#---
 	use mcal && myconf="${myconf} --with-mcal=/usr"
 	use mysql && myconf="${myconf} --with-mysql=/usr" || myconf="${myconf} --without-mysql"
 	use oci8 && [ -n "${ORACLE_HOME}" ] && myconf="${myconf} --with-oci8=${ORACLE_HOME}"
 	use odbc && myconf="${myconf} --with-unixODBC=/usr"
 	use pdflib && myconf="${myconf} --with-pdflib=/usr"
-	use phpmemlimit && myconf="${myconf} --enable-memory-limit"
+	use memlimit && myconf="${myconf} --enable-memory-limit"
 	use png && myconf="${myconf} --with-png-dir=/usr" || myconf="${myconf} --without-png"
 	use postgres && myconf="${myconf} --with-pgsql=/usr" || myconf="${myconf} --without-pgsql"
 	use snmp && myconf="${myconf} --with-snmp --enable-ucd-snmp-hack"
 	use tiff && LDFLAGS="${LDFLAGS} -ltiff"
 	use tiff && myconf="${myconf} --with-tiff-dir=/usr" || myconf="${myconf} --without-tiff"
 	use truetype && myconf="${myconf} --with-ttf --with-t1lib"
-	use xml2 && myconf="${myconf} --with-dom"
+	use xml2 && myconf="${myconf} --with-dom --with-dom-xslt"
 	use zlib && myconf="${myconf} --with-zlib --with-zlib-dir=/usr/lib"
 	
 	#use nls && myconf="${myconf} --with-gettext" || myconf="${myconf} --without-gettext"
@@ -228,15 +222,13 @@ php_src_compile() {
 	#use pic && myconf="${myconf} --with-pic"
 	myconf="${myconf} `use_with curl` `use_with imap` `use_with ldap` `use_with pam` `use_with pic` `use_with cyrus`"
 
+	# dbx AT LEAST one of mysql/odbc/postgres/oci8
 	use mysql || use odbc || use postgres || use oci8 \
 		&& myconf="${myconf} --enable-dbx" \
 		|| myconf="${myconf} --disable-dbx"
 
-
-	# This presently emits a WEIRD error:
-	# "strings:  : No such file or directory"
 	use imap && use ssl && \
-	if [ -n "`strings ${ROOT}/usr/lib/c-client.a \ | grep ssl_onceonlyinit`" ]; then
+	if [ -n "`strings ${ROOT}/usr/lib/c-client.a 2>/dev/null | grep ssl_onceonlyinit`" ]; then
 		myconf="${myconf} --with-imap-ssl"
 	else
 		ewarn "USE=\"imap ssl\" specified but IMAP is built WITHOUT ssl support."
