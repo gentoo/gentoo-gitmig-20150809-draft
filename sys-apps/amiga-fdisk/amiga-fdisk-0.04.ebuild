@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/amiga-fdisk/amiga-fdisk-0.04.ebuild,v 1.3 2003/09/08 08:04:11 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/amiga-fdisk/amiga-fdisk-0.04.ebuild,v 1.4 2004/01/17 07:39:18 darkspecter Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Amiga disklabel partitioning utility."
@@ -12,7 +12,7 @@ DEPEND="sys-libs/readline
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~ppc"
+KEYWORDS="ppc"
 
 src_unpack() {
 	unpack ${A}
