@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.7 2004/06/24 22:07:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.8 2004/07/01 11:52:59 eradicator Exp $
 
 inherit eutils
 
@@ -19,13 +19,13 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="ifc doc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-devel/libtool-1.5
 	=app-sci/blas-atlas-3.6.0
 	app-sci/lapack-config
 	ifc? ( dev-lang/ifc )"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	virtual/blas
 	ifc? ( dev-lang/ifc )" # Need Intel runtime libraries
 

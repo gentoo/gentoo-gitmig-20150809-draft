@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/koctave/koctave-0.65.ebuild,v 1.3 2004/06/24 22:05:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/koctave/koctave-0.65.ebuild,v 1.4 2004/07/01 11:52:32 eradicator Exp $
 
 inherit kde
 need-kde 3
@@ -15,6 +15,6 @@ S=${WORKDIR}/${PN}3-${PV}
 LICENSE="GPL-2"
 KEYWORDS="x86 ~amd64 ~ppc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	app-sci/octave
 	kde-base/kdebase"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas/blas-19980702-r1.ebuild,v 1.2 2004/06/24 21:53:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas/blas-19980702-r1.ebuild,v 1.3 2004/07/01 11:49:58 eradicator Exp $
 
 DESCRIPTION="Basic Linear Algebra Subprograms"
 HOMEPAGE="http://www.netlib.org/blas/"
@@ -11,7 +11,7 @@ IUSE=""
 SLOT="0"
 KEYWORDS="-* amd64"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}
 

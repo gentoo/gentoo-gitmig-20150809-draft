@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/orsa-0.5.0_rc2.ebuild,v 1.5 2004/06/24 22:13:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/orsa-0.5.0_rc2.ebuild,v 1.6 2004/07/01 11:54:00 eradicator Exp $
 
 inherit base flag-o-matic
 
@@ -15,7 +15,7 @@ IUSE="opengl mpi fftw ginac cln gsl qt"
 
 S="${WORKDIR}/${P/_/-}"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	fftw? ( =dev-libs/fftw-2.1* )
 	>=dev-libs/gsl-1.3
 	qt? ( >=x11-libs/qt-3.2 )

@@ -1,6 +1,14 @@
 # ChangeLog for app-sci/zetagrid
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/ChangeLog,v 1.23 2004/06/24 22:22:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/ChangeLog,v 1.24 2004/07/01 11:55:34 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  zetagrid-1.9.0.ebuild, zetagrid-1.9.1.ebuild:
+  virtual/glibc -> virtual/libc
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  zetagrid-1.9.0.ebuild, zetagrid-1.9.1.ebuild:
+  virtual/glibc -> virtual/libc
 
 *zetagrid-1.9.1 (28 Feb 2004)
 

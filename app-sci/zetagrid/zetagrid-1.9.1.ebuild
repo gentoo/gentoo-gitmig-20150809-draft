@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/zetagrid-1.9.1.ebuild,v 1.2 2004/06/24 22:22:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/zetagrid-1.9.1.ebuild,v 1.3 2004/07/01 11:55:34 eradicator Exp $
 
 S=${WORKDIR}/zetagrid-${PV}
 DESCRIPTION="An open source and platform independent grid system"
@@ -8,7 +8,7 @@ SRC_URI="http://www.zetagrid.net/zeta/zeta_cmd_${PV}.zip http://www.zetagrid.net
 HOMEPAGE="http://www.zetagrid.net http://cvs.gentoo.org/~tantive"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	app-arch/unzip"
 RDEPEND="virtual/jre
 	>=sys-libs/lib-compat-1.1"

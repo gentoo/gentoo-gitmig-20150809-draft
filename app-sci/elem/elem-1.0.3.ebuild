@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/elem/elem-1.0.3.ebuild,v 1.2 2004/06/24 21:57:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/elem/elem-1.0.3.ebuild,v 1.3 2004/07/01 11:50:56 eradicator Exp $
 
 DESCRIPTION="periodic table of the elements"
 HOMEPAGE="http://elem.sourceforge.net/"
@@ -11,7 +11,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="virtual/x11
-	virtual/glibc
+	virtual/libc
 	x11-libs/xforms"
 
 src_compile () {

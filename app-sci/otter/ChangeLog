@@ -1,6 +1,14 @@
 # ChangeLog for app-sci/otter
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/otter/ChangeLog,v 1.4 2004/06/24 22:13:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/otter/ChangeLog,v 1.5 2004/07/01 11:54:13 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> otter-3.2.ebuild,
+  otter-3.3.ebuild:
+  virtual/glibc -> virtual/libc
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> otter-3.2.ebuild,
+  otter-3.3.ebuild:
+  virtual/glibc -> virtual/libc
 
 *otter-3.3 (31 Dec 2003)
 

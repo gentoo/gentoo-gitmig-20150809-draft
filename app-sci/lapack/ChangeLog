@@ -1,6 +1,14 @@
 # ChangeLog for app-sci/lapack
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack/ChangeLog,v 1.8 2004/06/24 22:07:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack/ChangeLog,v 1.9 2004/07/01 11:52:46 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> lapack-3.0-r1.ebuild,
+  lapack-3.0.ebuild:
+  virtual/glibc -> virtual/libc
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> lapack-3.0-r1.ebuild,
+  lapack-3.0.ebuild:
+  virtual/glibc -> virtual/libc
 
   22 Apr 2004; David Holm <dholm@gentoo.org> lapack-3.0.ebuild:
   Added to ~ppc.

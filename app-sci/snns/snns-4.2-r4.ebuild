@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/snns/snns-4.2-r4.ebuild,v 1.6 2004/06/24 22:18:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/snns/snns-4.2-r4.ebuild,v 1.7 2004/07/01 11:54:39 eradicator Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ IUSE="X doc"
 DEPEND="X? ( virtual/x11
 	x11-libs/Xaw3d )
 	>=sys-apps/sed-4
-	virtual/glibc"
+	virtual/libc"
 
 S="${WORKDIR}/${MY_P}"
 

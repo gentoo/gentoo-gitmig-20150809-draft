@@ -1,6 +1,14 @@
 # ChangeLog for app-sci/chipmunksystem
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chipmunksystem/ChangeLog,v 1.4 2004/06/24 21:55:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chipmunksystem/ChangeLog,v 1.5 2004/07/01 11:50:13 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  chipmunksystem-20031105-r1.ebuild, chipmunksystem-20031105.ebuild:
+  virtual/glibc -> virtual/libc
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  chipmunksystem-20031105-r1.ebuild, chipmunksystem-20031105.ebuild:
+  virtual/glibc -> virtual/libc
 
   25 May 2004; David Holm <dholm@gentoo.org>
   chipmunksystem-20031105-r1.ebuild:

@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Author: Gontran Zepeda <gontran@gontran.net>
-# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/clustalw-1.83.ebuild,v 1.5 2004/06/24 21:55:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/clustalw/clustalw-1.83.ebuild,v 1.6 2004/07/01 11:50:28 eradicator Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ LICENSE="clustalw"
 SLOT="0"
 KEYWORDS="x86 sparc ppc alpha"
 IUSE=""
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}/${PN}${PV}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/fung-calc/fung-calc-1.3.2b.ebuild,v 1.5 2004/06/24 21:59:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/fung-calc/fung-calc-1.3.2b.ebuild,v 1.6 2004/07/01 11:51:53 eradicator Exp $
 
 IUSE="opengl"
 
@@ -16,7 +16,7 @@ DEPEND=">=sys-libs/zlib-1
 	>=media-libs/jpeg-6
 	>=kde-base/kdelibs-3.1
 	>=x11-libs/qt-3.1
-	virtual/glibc
+	virtual/libc
 	opengl? ( virtual/opengl )
 	>=kde-base/kdebase-3.1"
 

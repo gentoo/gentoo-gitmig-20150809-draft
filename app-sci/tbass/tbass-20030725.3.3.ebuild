@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030725.3.3.ebuild,v 1.8 2004/06/24 22:19:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030725.3.3.ebuild,v 1.9 2004/07/01 11:55:06 eradicator Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-devel/binutils
 	dev-libs/gmp
 	dev-lang/perl

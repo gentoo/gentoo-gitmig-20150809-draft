@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gibbs/gibbs-1995.9.ebuild,v 1.2 2004/06/24 22:00:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gibbs/gibbs-1995.9.ebuild,v 1.3 2004/07/01 11:52:06 eradicator Exp $
 
 DESCRIPTION="A Gibbs sampling algorithm for local alignment of subtle sequence signals in multiple protein sequences."
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S=${WORKDIR}/${SRC_NAME}/code
 

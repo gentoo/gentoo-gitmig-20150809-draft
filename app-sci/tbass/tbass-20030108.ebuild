@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030108.ebuild,v 1.10 2004/06/24 22:19:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030108.ebuild,v 1.11 2004/07/01 11:55:06 eradicator Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-devel/binutils
 	>=app-sci/lard-2.0.15
 	dev-libs/gmp

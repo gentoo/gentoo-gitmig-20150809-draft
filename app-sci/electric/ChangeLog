@@ -1,6 +1,16 @@
 # ChangeLog for app-sci/electric
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/electric/ChangeLog,v 1.8 2004/06/24 21:56:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/electric/ChangeLog,v 1.9 2004/07/01 11:50:42 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  electric-6.07-r1.ebuild, electric-6.07.ebuild, electric-6.08-r1.ebuild,
+  electric-6.08.ebuild:
+  virtual/glibc -> virtual/libc
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  electric-6.07-r1.ebuild, electric-6.07.ebuild, electric-6.08-r1.ebuild,
+  electric-6.08.ebuild:
+  virtual/glibc -> virtual/libc
 
 *electric-6.08-r1 (12 May 2004)
 

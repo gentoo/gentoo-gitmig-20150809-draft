@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.57-r1.ebuild,v 1.6 2004/06/24 22:12:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.57-r1.ebuild,v 1.7 2004/07/01 11:53:45 eradicator Exp $
 
 inherit flag-o-matic
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~ppc ~alpha ~sparc amd64"
 IUSE="emacs static readline zlib tetex hdf5 mpi"
 #IUSE="emacs static readline zlib tetex hdf5 mpi ifc blas" NOTE: Already added to use.local.desc.
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r3
 	>=media-gfx/gnuplot-3.7.1-r3
 	>=dev-libs/fftw-2.1.3
