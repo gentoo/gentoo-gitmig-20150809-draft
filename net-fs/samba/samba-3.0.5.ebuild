@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.5.ebuild,v 1.5 2004/07/29 00:11:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.5.ebuild,v 1.6 2004/07/29 04:04:40 vapier Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ SRC_URI="mirror://samba/${PN}${_CVS}.tar.gz
 	ldap? http://samba.idealx.org/dist/smbldap-tools-${SMBLDAP_TOOLS_VER}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ~ia64 ppc64"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ~ia64 ppc64"
 SLOT="0"
 IUSE="kerberos mysql postgres xml xml2 acl cups ldap pam readline python doc"
 IUSE="${IUSE} oav"

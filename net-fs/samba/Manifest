@@ -4,8 +4,8 @@ Hash: SHA1
 MD5 ea7dfbf31185b5984cae1c8300a0f03e ChangeLog 18207
 MD5 41299f246433a1a55c8fccc77ccd709e metadata.xml 491
 MD5 7d7c900829bc2bdf39895d5890a0d20d samba-3.0.4-r1.ebuild 11146
-MD5 454de7e8cda4a125cd5ee36d9636ef32 samba-3.0.5-r1.ebuild 13428
-MD5 3e50362e1316f7f50c89637e5e9f15ec samba-3.0.5.ebuild 11138
+MD5 631e7b8e2b12e959e327a07e1e1e78f4 samba-3.0.5-r1.ebuild 13434
+MD5 4505c7b9cd715168b75a4dfb5c4ac294 samba-3.0.5.ebuild 11142
 MD5 633511d04d7a7d7702c17089c85ba697 samba-3.0.1-r1.ebuild 11333
 MD5 df4f73693b725799675e37ba3f90643f samba-3.0.2a-r2.ebuild 12249
 MD5 fd2382184b6a07e63cb07ff26b578fd2 files/config-svc-smbd+nmbd 784
@@ -45,7 +45,7 @@ MD5 fcebd975211fecf647f6cecf26ba5c96 files/samba-3.0.x.patch 8086
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFBCEC1HTu7gpaalycRAjZhAKCgBw1O86OY1ugjBHboM12/8a4JUgCfaooh
-NRDEHYtQDAysXyROf5voMVw=
-=qlD5
+iD8DBQFBCHdkHTu7gpaalycRAnZPAJ4r4a9q5hjzPA+dFN7VozH6PuQOcACeLgku
+2nD4TdK5qDyLXHLOGhWtnXk=
+=eIOP
 -----END PGP SIGNATURE-----
