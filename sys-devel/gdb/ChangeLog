@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.49 2004/08/03 17:33:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.50 2004/08/08 23:59:09 solar Exp $
+
+*gdb-6.2 (08 Aug 2004)
+
+  08 Aug 2004; <solar@gentoo.org> gdb-6.2.ebuild:
+  version bump
 
   03 Aug 2004; Mike Frysinger <vapier@gentoo.org> gdb-6.0.ebuild,
   gdb-6.1.1.ebuild:
