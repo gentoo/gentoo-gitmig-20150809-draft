@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.49.2.ebuild,v 1.1 2004/01/14 10:03:47 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.49.2.ebuild,v 1.2 2004/01/14 10:48:46 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -26,22 +26,18 @@
 #   Get support going for installing a custom language pack.  Also
 #   need to be able to install more than one language pack.
 
-inherit flag-o-matic eutils kernel-mod
+inherit flag-o-matic eutils gcc virtualx
+
 # Compile problems with these ...
 filter-flags "-funroll-loops"
 filter-flags "-fomit-frame-pointer"
+filter-flags "-fprefetch-loop-arrays"
 append-flags "-fno-strict-aliasing"
 replace-flags "-O3" "-O2"
 replace-flags "-Os" "-O2"
 
-# Enable Bytecode Interpreter for freetype ...
-append-flags "-DTT_CONFIG_OPTION_BYTECODE_INTERPRETER"
-
-inherit gcc
 # We want gcc3 if possible!!!!
 export WANT_GCC_3="yes"
-
-inherit virtualx
 
 # Set $ECPUS to amount of processes multiprocessing build should use.
 # NOTE:  Setting this too high might cause dmake to segfault!!
@@ -49,18 +45,16 @@ inherit virtualx
 #        to segfault :(
 [ -z "${ECPUS}" ] && export ECPUS="1"
 
-
 OO_VER=1.1.0
-XIMIAN_VER=${PV}
 PATCHLEVEL=OOO_1_1_0
 ICON_VER=OOO_1_1-7
 INSTDIR="/opt/Ximian-OpenOffice"
-PATCHDIR=${WORKDIR}/ooo-build-${XIMIAN_VER}
+PATCHDIR=${WORKDIR}/ooo-build-${PV}
 ICONDIR=${WORKDIR}/ooo-icons-${ICON_VER}
 S="${WORKDIR}/oo_${OO_VER/1.1.0/1.1}_src"
 DESCRIPTION="Ximian-ized version of OpenOffice.org, a full office productivity suite."
 SRC_URI="mirror://openoffice/stable/${OO_VER}/OOo_${OO_VER}_source.tar.bz2
-	http://ooo.ximian.com/packages/${PATCHLEVEL}/ooo-build-${XIMIAN_VER}.tar.gz
+	http://ooo.ximian.com/packages/${PATCHLEVEL}/ooo-build-${PV}.tar.gz
 	http://ooo.ximian.com/packages/ooo-icons-${ICON_VER}.tar.gz"
 
 HOMEPAGE="http://ooo.ximian.com"
@@ -101,15 +95,9 @@ DEPEND="${RDEPEND}
 	!app-office/openoffice-bin
 	!app-office/openoffice
 	>=sys-apps/findutils-4.1.20-r1
-	!app-arch/star
 	dev-libs/libxslt
-	!=app-arch/tar-1.13.92-r1"
-
-# fix a bug with tcsh and dircolors
-#
-# Azarah -- 10 April 2002
-export LS_COLORS=""
-
+	net-ftp/curl
+	!dev-util/dmake"
 
 pkg_setup() {
 
@@ -243,7 +231,7 @@ src_unpack() {
 	oo_setup
 
 	cd ${WORKDIR}
-	unpack OOo_${OO_VER}_source.tar.bz2 ooo-build-${XIMIAN_VER}.tar.gz ooo-icons-${ICON_VER}.tar.gz
+	unpack OOo_${OO_VER}_source.tar.bz2 ooo-build-${PV}.tar.gz ooo-icons-${ICON_VER}.tar.gz
 
 	#Still needed: The STLport patch
 	cd ${S}
@@ -327,18 +315,8 @@ src_compile() {
 	export CC="$(gcc-getCC)"
 	export CXX="$(gcc-getCXX)"
 
-	# Enable ccache for this build (Az)
-	if [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
-	     "${FEATURES/ccache/}" != "${FEATURES}" -a \
-	     -d /usr/bin/ccache -a -x /usr/bin/ccache/ccache ]
-	then
-		# Build uses its own env with $PATH, etc, so
-		# we take the easy way out. (Az)
-		export CC="/usr/bin/ccache/ccache ${CC}"
-		export CXX="/usr/bin/ccache/ccache ${CXX}"
-
 	# Enable new ccache for this build
-	elif [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
+	if [ "${FEATURES/-ccache/}" = "${FEATURES}" -a \
 	     "${FEATURES/ccache/}" != "${FEATURES}" -a \
 	     -x /usr/bin/ccache -a ! -d /usr/bin/ccache ]
 	then
@@ -385,6 +363,7 @@ src_compile() {
 		--enable-fontconfig \
 		--with-system-zlib \
 		--with-system-freetype \
+		--with-system-curl \
 		--disable-java || die
 
 	cd ${S}
@@ -539,7 +518,7 @@ src_install() {
 	# Setup virtualmake
 	export maketype="./setup"
 	# We need X to install...
-	virtualmake "-v -noexit -r:${T}/autoresponse"
+	virtualmake "-v -noexit -r:${T}/autoresponse" || die "virtualmake failed"
 
 	echo
 	einfo "Removing build root from registry..."
@@ -567,14 +546,11 @@ src_install() {
 	sed -e "s|<pv>|${OO_VER}|g" \
 		${FILESDIR}/${OO_VER}/ooffice-wrapper-1.3 > ${T}/ooffice
 	doexe ${T}/ooffice
+
 	# Component symlinks
-	dosym ooffice /usr/bin/oocalc
-	dosym ooffice /usr/bin/oodraw
-	dosym ooffice /usr/bin/ooimpress
-	dosym ooffice /usr/bin/oomath
-	dosym ooffice /usr/bin/oowriter
-	dosym ooffice /usr/bin/ooweb
-	dosym ooffice /usr/bin/oosetup
+	for app in calc draw impress html math writer setup; do
+		dosym ooffice /usr/bin/oo${app}
+	done
 
 	# Install ximian icons
 	cd ${PATCHDIR}/desktop/
@@ -594,15 +570,8 @@ src_install() {
 		doins ${FILESDIR}/*.desktop
 	fi
 
-
-	# Unneeded, as they get installed into /usr/share...
-	# They are needed else user installation fails.
-#	rm -rf ${D}${INSTDIR}/share/{cde,gnome,kde}
+	# Remove unneeded stuff
 	rm -rf ${D}${INSTDIR}/share/cde
-#
-#	for f in ${D}/usr/share/gnome/apps/OpenOffice.org/* ; do
-#		echo 'Categories=Application;Office;' >> ${f}
-#	done
 
 	# Make sure these do not get nuked.
 	keepdir ${INSTDIR}/user/registry/res/en-us/org/openoffice/{Office,ucb}
@@ -620,9 +589,6 @@ pkg_postinst() {
 	einfo " Also, for individual components, you can use any of:"
 	einfo
 	einfo "   oocalc, oodraw, ooimpress, oomath, ooweb or oowriter"
-	einfo
-	einfo " If the fonts appear garbled in the user interface refer to "
-	einfo " Bug 8539, or http://www.openoffice.org/FAQs/fontguide.html#8"
 	einfo
 	einfo "******************************************************************"
 }
