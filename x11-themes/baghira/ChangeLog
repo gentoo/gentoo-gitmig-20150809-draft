@@ -1,6 +1,17 @@
 # ChangeLog for x11-themes/baghira
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.29 2005/03/13 11:01:58 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.30 2005/03/20 17:30:59 voxus Exp $
+
+*baghira-0.6e (20 Mar 2005)
+
+  20 Mar 2005; Konstantin Arkhipov <voxus@gentoo.org> -baghira-0.6.ebuild,
+  -baghira-0.6a.ebuild, -baghira-0.6b.ebuild, -baghira-0.6c.ebuild,
+  -baghira-0.6d.ebuild, -files/baghira-0.6b-3.3.patch,
+  -files/baghira-0.6c-compile-fix.patch,
+  -files/baghira-0.6d-compile-fix.patch,
+  +files/baghira-0.6e.ebuild:
+  Version bump, closing #85857.
+  Dropped old 0.6* ebuilds same masked as added 0.6e.
 
 *baghira-0.6d (13 Mar 2005)
 
