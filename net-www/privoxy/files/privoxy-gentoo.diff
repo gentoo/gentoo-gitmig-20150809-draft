@@ -1,0 +1,93 @@
+diff -ur privoxy-2.9.14-beta.orig/config privoxy-2.9.14-beta/config
+--- privoxy-2.9.14-beta.orig/config	Tue Apr  2 22:11:35 2002
++++ privoxy-2.9.14-beta/config	Mon Jul  8 17:55:11 2002
+@@ -1,3 +1,8 @@
++#
++# Small changes to the original for Gentoo ebuild
++#
++# i.e. only two directory locations
++
+ #  Sample Configuration file for Privoxy
+ 
+ #
+@@ -72,13 +77,13 @@
+ #  for CGI results.
+ #
+ #  No trailing /, please.
+-confdir .
++confdir /etc/privoxy
+ 
+ #
+ #  The directory where all logging (i.e. logfile and jarfile) takes place
+ #  No trailing /, please.
+ #
+-logdir .
++logdir /var/log/privoxy
+ 
+ #  Note that all file specifications below are relative to 
+ #  the above two directories!!!
+@@ -120,7 +125,7 @@
+ #
+ #  Default: Log to the standard error channel, not to a file
+ #
+-logfile logfile
++logfile privoxy.log
+ 
+ #
+ #  The jarfile defines where Privoxy stores the cookies it
+diff -ur privoxy-2.9.14-beta.orig/default.action privoxy-2.9.14-beta/default.action
+--- privoxy-2.9.14-beta.orig/default.action	Thu Apr 11 09:37:54 2002
++++ privoxy-2.9.14-beta/default.action	Mon Jul  8 18:00:25 2002
+@@ -1,3 +1,9 @@
++#
++# Small change for Gentoo ebuild
++
++# set +image-blocker{blank} in the Defaults section
++# for explanation see: http://www.privoxy.org/faq/configuration.html#AEN442
++
+ #############################################################################
+ #
+ # Bare-bones actions file for Privoxy pre release testdrive
+@@ -14,7 +20,6 @@
+ 
+ # Shops should be allowed to set persistent cookies
+ shop        = -filter -no-cookies-keep
+-
+ #############################################################################
+ # Defaults
+ #############################################################################
+@@ -22,28 +27,28 @@
+ -add-header \
+ -block \
+ +deanimate-gifs{last} \
+--downgrade \
+-+filter{html-annoyances} \
+-+filter{content-cookies} \
++-downgrade +filter{html-annoyances} \
+ +filter{js-annoyances} \
+++filter{content-cookies} \
+ +filter{no-popups} \
+ +filter{webbugs} \
+ +filter{nimda} \
+ +filter{banners-by-size} \
+-+no-compression \
+ +hide-forwarded \
+ +hide-from{block} \
+ +hide-referer{forge} \
+ -hide-user-agent \
+ -image \
+-+image-blocker{pattern} \
+++image-blocker{blank} \
+++no-compression \
+ +no-cookies-keep \
+ -no-cookies-read \
+ -no-cookies-set \
+ +no-popups \
+ -vanilla-wafer \
+--wafer \
++-wafer\
+ }
++
+ / # Match all URLs
+ 
+ {+filter{noflash}}
