@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.45 2003/11/26 22:16:43 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.46 2003/11/29 22:13:07 rac Exp $
+
+*perl-5.8.2-r1 (29 Nov 2003)
+
+  29 Nov 2003; <rac@gentoo.org> perl-5.8.2-r1.ebuild,
+  files/perl-5.8.2-picdl.patch:
+  Make CCCDLFLAGS apply to static archives like DynaLoader.a as well, even
+  though we are not building a shared libperl here, because we do have a shared
+  library elsewhere. Should make it so that arches like amd64 and hppa no longer
+  have to add -fPIC to all cflags blindly.
 
   26 Nov 2003; <rac@gentoo.org> perl-5.8.2.ebuild:
   Make perl depend on exact same libperl version, so that upgrading perl will
