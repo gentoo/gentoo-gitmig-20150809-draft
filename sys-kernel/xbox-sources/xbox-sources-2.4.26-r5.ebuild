@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.4.26-r4.ebuild,v 1.1 2004/08/05 12:17:09 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.4.26-r5.ebuild,v 1.1 2004/08/08 21:13:54 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel-2
 detect_version
 
-XBOX_PATCH="xbox-sources-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}-${PR/r4/r3}.patch.bz2"
+XBOX_PATCH="xbox-sources-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}-${PR/r5/r3}.patch.bz2"
 
 SRC_URI="${KERNEL_URI}
 	mirror://gentoo/${XBOX_PATCH}
@@ -23,4 +23,5 @@ UNIPATCH_LIST="
 	${FILESDIR}/${P}.CAN-2004-0495.patch
 	${FILESDIR}/${PN}.CAN-2004-0497.patch
 	${FILESDIR}/${P}.CAN-2004-0535.patch
+	${FILESDIR}/${P}.CAN-2004-0685.patch
 	${FILESDIR}/${P}.FPULockup-53804.patch"
