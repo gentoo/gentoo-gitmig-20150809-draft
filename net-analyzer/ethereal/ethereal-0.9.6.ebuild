@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.6.ebuild,v 1.1 2002/08/30 07:36:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.6.ebuild,v 1.2 2002/08/31 15:38:46 blocke Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A commercial-quality network protocol analyzer"
@@ -23,6 +23,18 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex
 	>=net-libs/libpcap-0.7.1"
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+
+	# gcc related configure script braindamage
+	mv configure configure.broken
+	sed "s|-I/usr/local/include||" configure.broken > configure
+	chmod +x ./configure
+
+}
 
 src_compile() {
 	local myconf
