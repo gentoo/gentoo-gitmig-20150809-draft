@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.38 2004/06/28 00:08:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.39 2004/06/30 17:24:12 vapier Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -82,7 +82,7 @@ RDEPEND="${RDEPEND}
    curl? ( >=net-misc/curl-7.10.2 )
    x86? ( firebird? ( >=dev-db/firebird-1.0 ) )
    freetds? ( >=dev-db/freetds-0.53 )
-   gd-external? ( media-libs/libgd >=media-libs/jpeg-6b 
+   gd-external? ( media-libs/gd >=media-libs/jpeg-6b 
                   >=media-libs/libpng-1.2.5 )
    gd? ( >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
    gdbm? ( >=sys-libs/gdbm-1.8.0 )
@@ -332,8 +332,8 @@ php-sapi_src_compile() {
 	if use gd-external; then
 		myconf="${myconf} --with-gd=/usr"
 		REQUIREPNG=1
-		if has_version '>=media-libs/libgd-2.0.17'; then
-			einfo "Fixing PHP for libgd function name changes"
+		if has_version '>=media-libs/gd-2.0.17'; then
+			einfo "Fixing PHP for gd function name changes"
 			sed -i 's:gdFreeFontCache:gdFontCacheShutdown:' ${S}/ext/gd/gd.c
 		fi
 	elif use gd; then
