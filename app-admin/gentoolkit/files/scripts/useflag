@@ -1,5 +1,5 @@
 #!/bin/bash
-# useflag v0.3.0
+# useflag v0.3.1
 # Script to help users manage USE flags in Gentoo Linux
 #
 # Distributed under the terms of the GNU General Public License, v2 or later
@@ -42,8 +42,9 @@ do_get_desc() {
 do_get_make() {
 	local parm1=$1
 	# Get the USE flags from make.conf
-	local get_make_out=`grep "USE=\"" ${make_conf} | grep -v "#" | \
-		cut -d "\"" -f2 -s`
+	# using `source` now instead of brain-damaged grepping
+	source ${make_conf}
+	local get_make_out=${USE}
 	# If called with "nodashes", then strip the leading dashes
 	if [ "${parm1}" = "nodashes" ]; then
 		for tr_sucks in ${get_make_out}; do
@@ -65,8 +66,8 @@ do_get_avail() {
 	grep -v "#" ${use_desc} | cut -d " " -f1 | tr '\n' ' '
 }
 
-# Get depreciated flags.
-# parm1 = flag to check for depreciation
+# Get deprecated flags.
+# parm1 = flag to check for deprecation
 # parm2 = list of available flags
 do_get_depr() {
 	local parm1=$1
@@ -159,10 +160,37 @@ do_write_make() {
 	local use_write="USE=\"$@\""
 	local old_use="USE=\"`do_get_make dashes`\""
 	if [ -w ${make_conf} ] && [ -w ${make_conf_dir} ]; then
-		cat ${make_conf} | \
-			sed -e "s/${old_use}/${use_write}/" > ${make_temp}
-		cp ${make_temp} ${make_conf}
-		rm ${make_temp}
+		local use_write="USE=\"$@\""
+		local old_use=`grep "USE=\"" ${make_conf} | grep -v "#"`
+		local start_line=`grep -n "USE=\"" ${make_conf} | \
+			grep -v "#" | cut -d ":" -f1`
+		if [ "${old_use:0-1}" != "\\" ]; then
+			sed -e "s/${old_use}/${use_write}/" ${make_conf} > \
+				${make_temp}
+		else
+			sed -e "s/${old_use}\\/${use_write}/" ${make_conf} > \
+				${make_temp}
+		fi
+		let start_line="${start_line} + 1"
+		if [ "${old_use:0-1}" != "\"" ]; then
+			del_line=`head -n ${start_line} ${make_temp} | \
+				tail -n 1`
+			until [ "${del_line:0-1}" != "\\" ]; do
+				let del_length="${#del_line} - 1"
+				del_line="${del_line:0:${del_length}}"
+				grep -v -w "${del_line}" ${make_temp} > \
+					${make_temp}.2
+				mv ${make_temp}.2 ${make_temp}
+				del_line=`head -n ${start_line} \
+					${make_temp} | tail -n 1`
+			done
+			let del_length="${#del_line} - 1"
+			del_line="${del_line:0:${del_length}}"
+			grep -v -x "${del_line}\"" ${make_temp} > \
+				${make_temp}.2
+			mv ${make_temp}.2 ${make_temp}
+		fi
+		mv ${make_temp} ${make_conf}
 	else
 		do_report_err ${make_conf} write
 	fi
@@ -257,7 +285,7 @@ elif [ "$1" = "add" ] || [ "$1" = "-a" ]; then
 	fi
 
 # lock:
-# This is the feature to lock a depreciated USE flag to prevent removal
+# This is the feature to lock a deprecated USE flag to prevent removal
 elif [ "$1" = "lock" ] || [ "$1" = "-l" ]; then
 	if [ -r ${make_conf} ]; then
 		make_use=`do_get_make nodashes`
@@ -280,7 +308,7 @@ elif [ "$1" = "lock" ] || [ "$1" = "-l" ]; then
 	do_write_lock ${lock_out}
 
 # unlock:
-# This is the feature to unlock a depreciated USE flag to allow removal
+# This is the feature to unlock a deprecated USE flag to allow removal
 elif [ "$1" = "unlock" ] || [ "$1" = "-k" ]; then
 	if [ -r ${lock_cache} ]; then
 		lock_out=`cat ${lock_cache}`
@@ -311,7 +339,7 @@ elif [ "$1" = "showlock" ] || [ "$1" = "-w" ]; then
 	fi
 
 # update:
-# This is the feature to update your USE by removing depreciated flags and
+# This is the feature to update your USE by removing deprecated flags and
 #  handling new flags.
 elif [ "$1" = "update" ] || [ "$1" = "-u" ]; then
 	if [ -r ${make_conf} ]; then
@@ -326,7 +354,7 @@ elif [ "$1" = "update" ] || [ "$1" = "-u" ]; then
 	else
 		do_report_err ${use_desc} read
 	fi
-	# First we check for depreciated flags.
+	# First we check for deprecated flags.
 	echo "Your USE variable currently looks like this:"
 	echo
 	echo `do_get_make dashes`
@@ -341,7 +369,7 @@ elif [ "$1" = "update" ] || [ "$1" = "-u" ]; then
 		fi
 	fi
 	echo
-	echo "*** Checking for depreciated USE flags ..."
+	echo "*** Checking for deprecated USE flags ..."
 	echo
 	for check_flag in ${make_use}; do
 		depr_ret=`do_get_depr ${check_flag} ${use_avail}`
@@ -358,16 +386,16 @@ elif [ "$1" = "update" ] || [ "$1" = "-u" ]; then
 	fi
 	make_use=`do_get_make dashes`
 	if [ "${flag_depr}" = "" ]; then
-		echo "!!! No depreciated flags were found."
+		echo "!!! No deprecated flags were found."
 	else
-		echo "The following USE flags appear to be depreciated:"
+		echo "The following USE flags appear to be deprecated:"
 		echo "${flag_depr}"
 		echo
 		echo "How would you like to handle them?"
 		echo "1) Handle them individually"
-		echo "2) Remove all depreciated flags"
-		echo "3) Don't remove any depreciated flags"
-		echo "4) Lock all depreciated flags"
+		echo "2) Remove all deprecated flags"
+		echo "3) Don't remove any deprecated flags"
+		echo "4) Lock all deprecated flags"
 		echo
 		echo -n "Type (1, 2, 3, or 4): "
 		while [ "${luser_input}" = "" ]; do
@@ -380,7 +408,7 @@ elif [ "$1" = "update" ] || [ "$1" = "-u" ]; then
 						${flag} ${make_use}`
 				done
 				echo
-				echo -n "*** All depreciated flags were "
+				echo -n "*** All deprecated flags were "
 				echo "removed."
 				;;
 			"3")
@@ -390,7 +418,7 @@ elif [ "$1" = "update" ] || [ "$1" = "-u" ]; then
 			"1")
 				for flag in ${flag_depr}; do
 					echo -n "${flag} appears to be "
-					echo -n "depreciated.  Remove it? "
+					echo -n "deprecated.  Remove it? "
 					echo -n "[Y]es/[N]o/[L]ock : "
 					luser_yn=""
 					while [ "${luser_yn}" = "" ]; do
@@ -414,13 +442,13 @@ elif [ "$1" = "update" ] || [ "$1" = "-u" ]; then
 					done
 				done
 				echo
-				echo -n "*** All depreciated flags "
+				echo -n "*** All deprecated flags "
 				echo "processed."
 				;;
 			"4")
 				wlk="${flag_depr}"
 				echo
-				echo "*** All depreciated flags were locked."
+				echo "*** All deprecated flags were locked."
 				;;
 			*)
 				luser_input=""
@@ -568,9 +596,9 @@ else
 	echo "variable."
 	echo -n "-d, del		Deletes the specified flag(s) from "
 	echo "the USE variable."
-	echo "-l, lock	Locks the specified flag(s) to prevent depreciation."
+	echo "-l, lock	Locks the specified flag(s) to prevent deprecation."
 	echo -n "-k, unlock 	Unlocks the specified flags to allow "
-	echo "depreciation."
+	echo "deprecation."
 	echo "-w, showlock 	Displays a list of locked flags."
 	echo -n "-u, update 	Interactively updates the USE variable to "
 	echo "reflect changes"

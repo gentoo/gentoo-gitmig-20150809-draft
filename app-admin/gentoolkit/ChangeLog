@@ -1,8 +1,14 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.24 2002/06/26 04:20:21 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.25 2002/07/03 23:46:03 karltk Exp $
 
 *gentoolkit-0.1.13 (25 Jun 2002)
+
+  04 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> files/scripts/useflag files/scripts/useflag.1 : 
+
+  useflag: Fixed problem with multiline USE vars, respelled
+  "depreciation" to "deprectation". Patch by Michael Thompson
+  <psionix@grandecom.net>.
 
   25 Jun 2002; Brandon Low <lostlogic@gentoo.org> gentoolkit-0.1.13.ebuild files/digest-gentoolkit-0.1.13:
 
