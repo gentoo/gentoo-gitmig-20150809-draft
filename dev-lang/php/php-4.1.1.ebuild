@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.1.ebuild,v 1.2 2002/01/23 20:06:16 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.1.1.ebuild,v 1.3 2002/01/24 19:39:32 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML embedded scripting language"
@@ -34,8 +34,8 @@ DEPEND="virtual/glibc
 	imap? ( virtual/imap )
 	flash? ( media-libs/libswf media-libs/ming )
 	xml2? ( dev-libs/libxml2 )
-#	java? ( virtual/jdk )
 	"
+#	java? ( virtual/jdk )
 
 RDEPEND="virtual/glibc
 	>=dev-libs/gmp-3.1.1
@@ -57,8 +57,8 @@ RDEPEND="virtual/glibc
 	libwww? ( >=net-libs/libwww-5.3.2 )
 	xml2? ( dev-libs/libxml2 )
 	imap? ( virtual/imap )
-#	java? ( virtual/jdk )
 	"
+#	java? ( virtual/jdk )
 
 src_compile() {
 
