@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.29 2003/09/23 15:31:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.30 2003/10/02 18:32:31 taviso Exp $
+
+  02 Oct 2003; Tavis Ormandy <taviso@gentoo.org> gnupg-1.2.2-r1.ebuild,
+  gnupg-1.2.2.ebuild, gnupg-1.2.3-r1.ebuild, gnupg-1.2.3.ebuild:
+  cleaning up old ebuilds, amd64 managed to escape the security bump from 1.2.2
+  to -r1 somehow, fixed.
 
   16 Sep 2003; Tavis Ormandy <taviso@gentoo.org> gnupg-1.2.3-r2.ebuild:
   marking stable x86 and alpha.
