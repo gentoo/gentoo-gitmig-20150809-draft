@@ -1,0 +1,47 @@
+--- meld-0.8.1.orig/meld
++++ meld-0.8.1/meld
+@@ -52,6 +52,12 @@
+     print "Due to incompatible API changes some functions may not operate as expected."
+ 
+ #
++# Add the library path to the system load path
++#
++import os
++sys.path = [os.curdir, '/usr/lib/meld'] + sys.path
++
++#
+ # main
+ #
+ import meldapp
+--- meld-0.8.1.orig/meld.desktop
++++ meld-0.8.1/meld.desktop
+@@ -6,6 +6,6 @@
+ Comment=Compare and merge your files.
+ TryExec=meld
+ Exec=meld
+-Path=/home/stephen/Projects/meld
+ Terminal=false
+ Categories=GNOME;Application;Development;
++Icon=/usr/share/meld/glade2/pixmaps/icon.png
+--- meld-0.8.1.orig/meldapp.py
++++ meld-0.8.1/meldapp.py
+@@ -441,7 +441,7 @@
+         gnome.url_show("http://meld.sourceforge.net")
+ 
+     def on_menu_users_manual_activate(self, button):
+-        gnome.url_show("file:///"+os.path.abspath(misc.appdir("manual/index.html") ) )
++        gnome.url_show("file:///usr/share/doc/meld-0.8.1/html/index.html")
+ 
+     def on_menu_about_activate(self, *extra):
+         about = gtk.glade.XML(misc.appdir("glade2/meld-app.glade"),"about").get_widget("about")
+--- meld-0.8.1.orig/misc.py
++++ meld-0.8.1/misc.py
+@@ -27,7 +27,7 @@
+ def appdir(path):
+     """Return where the application is installed.
+     """
+-    return os.path.join( os.path.dirname(sys.argv[0]), path )
++    return os.path.join( "/usr/share/meld", path )
+ 
+ class struct:
+     """Similar to a dictionary except that members may be accessed as s.member.
