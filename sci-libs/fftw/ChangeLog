@@ -1,0 +1,122 @@
+# ChangeLog for dev-libs/fftw
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.1 2004/12/29 01:12:04 ribosome Exp $
+
+*fftw-3.0.1 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/fftw-ppc-macos.patch, +fftw-2.1.5-r1.ebuild, +fftw-3.0.1-r1.ebuild,
+  +fftw-3.0.1.ebuild:
+  Moved from dev-libs/fftw to sci-libs/fftw.
+
+  23 Nov 2004; Guy Martin <gmsoft@gentoo.org> fftw-3.0.1-r1.ebuild:
+  Added ~hppa to KEYWORDS.
+
+  16 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> -fftw-2.1.3-r1.ebuild,
+  fftw-2.1.5-r1.ebuild, -fftw-2.1.5.ebuild:
+  Cleanup.
+  Fixing bug #70817 (missing fortran include file).
+
+  01 Oct 2004; kito@gentoo.org +files/fftw-ppc-macos.patch,
+  fftw-3.0.1-r1.ebuild:
+  added ~ppc-macos keyword and patch
+
+  09 Jul 2004; Michael Hanselmann <hansmi@gentoo.org> fftw-3.0.1-r1.ebuild:
+  Fixed a compilation-error with Altivec and gcc 3.4.1
+
+  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> fftw-3.0.1.ebuild:
+  Stable on alpha.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> fftw-3.0.1-r1.ebuild,
+  fftw-3.0.1.ebuild:
+  virtual/glibc -> virtual/libc
+
+  06 Jun 2004; Michael Hanselmann <hansmi@gentoo.org> fftw-3.0.1-r1.ebuild:
+  Added --enable-altivec to econf, if USE="altivec"
+
+  06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> fftw-2.1.5-r1.ebuild,
+  fftw-3.0.1-r1.ebuild:
+  Marked stable on amd64.
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> fftw-3.0.1-r1.ebuild,
+  fftw-3.0.1.ebuild:
+  Fix use invocation
+
+*fftw-3.0.1-r1 (19 Apr 2004)
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> fftw-3.0.1-r1.ebuild:
+  Substituting --enable-3dnow by --enable-k7 because of bug #38076
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> fftw-2.1.5-r1.ebuild:
+  Removing S=... with no effect
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> fftw-2.1.5-r1.ebuild:
+  Removing S=... with no effect
+
+  22 Mar 2004; Jason Wever <weeve@gentoo.org> fftw-3.0.1.ebuild:
+  Marked stable on sparc.
+
+  09 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> fftw-2.1.5-r1.ebuild:
+  Adding amd64 keyword. Closing #44068.
+
+*fftw-2.1.5-r1 (04 Mar 2004)
+
+  04 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> fftw-2.1.5-r1.ebuild:
+  Fixing info dir entries, changing keywords according to the comment (all
+  arches -> stable)
+
+  17 Feb 2004; Aron Griffis <agriffis@gentoo.org> fftw-3.0.1.ebuild:
+  add ~ia64
+
+  31 Dec 2003; George Shapovalov <george@gentoo.org> fftw-3.0.1.ebuild :
+  marked stable.
+  Note, stuff that needs MPI should DEPEND on 2.15 still! (but this is a task of 
+  dependatnt packages)
+
+*fftw-3.0.1 (23 Aug 2003)
+
+  23 Aug 2003; George Shapovalov <george@gentoo.org> fftw-3.0.1.ebuild, metadata.xml :
+  new version (#20048)
+  thanks to Ingo Luetkebohle gentoo@blank.pages.de and  Sam Yates <sam@quux.dropbear.id.au>
+  for ebuild submissions
+  added metadata.xml (herd sci)
+
+  22 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> fftw-2.1.5.ebuild :
+  Changed flag altering.
+
+  07 May 2003; George Shapovalov <george@gentoo.org> fftw-2.1.5.ebuild :
+  apparently fftw doesn't like -fpmath=sse on pentium-4 M based systems (#19523)
+  added corresponding filter, thanks to Christian Birchinger <joker@gentoo.org> for report.
+
+*fftw-2.1.5 (23 Mar 2003)
+
+  23 Mar 2003; George Shapovalov <george@gentoo.org> fftw-2.1.5.ebuild :
+  updated to latest stable
+
+*fftw-2.1.3-r1 (13 Feb 2003)
+
+  13 Feb 2003; Nick Hadaway <raker@gentoo.org> fftw-2.1.3-r1.ebuild,
+  files/digest-fftw-2.1.3 :
+  New ebuild which creates links to the standard fftw include/lib names.
+  If you specify SINGLE=yes on the emerge commandline the links will
+  be created to the single precision libs/includes, otherwise by default
+  to the double precision libs/includes.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*fftw-2.1.3.ebuild (20 June 2002)
+
+  10 Feb 2003; Peter Johanson <latexer@gentoo.org> fftw-2.1.3.ebuild :
+  Added ~alpha to KEYWORDS.
+
+  19 Sep 2002; Owen Stampflee <owen@gentoo.org> :
+  Added PPC to KEYWORDS.
+
+  20 June 2002; George Shapovalov <george@gentoo.org> fftw-2.1.3.ebuild :
+
+  updated ebuild to fix the top info file 
+  (added menu entry, thanks to Daniel Ahlberg)
+
+  27 Apr 2002; George Shapovalov <george@gentoo.org> fftw-2.1.3.ebuild :
+
+  Initial release
