@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws-ghostscript-viewer
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-ghostscript-viewer/ChangeLog,v 1.3 2004/10/19 10:17:06 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-ghostscript-viewer/ChangeLog,v 1.4 2004/10/19 19:37:07 kloeri Exp $
+
+  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  sylpheed-claws-ghostscript-viewer-0.8.ebuild:
+  ~alpha keyword, bug 66691.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   sylpheed-claws-ghostscript-viewer-0.8.ebuild:
