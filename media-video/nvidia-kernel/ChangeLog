@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.42 2003/07/28 22:47:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.43 2003/08/03 23:10:58 azarah Exp $
+
+  04 Aug 2003; Martin Schlemmer <azarah@gentoo.org>
+  files/1.0.4496/NVIDIA_kernel-1.0-4496-Makefile.diff:
+  Fix NVIDIA_kernel-1.0-4496-Makefile.diff to not revert the tail fixes for
+  coreutils.
 
 *nvidia-kernel-1.0.4496 (29 Jul 2003)
 

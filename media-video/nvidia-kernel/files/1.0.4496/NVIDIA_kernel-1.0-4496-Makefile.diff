@@ -156,7 +156,7 @@ diff -urpN nv/Makefile.nvidia nv-2.6/Makefile.nvidia
  
  $(VERSION_HDR): 
 -	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -n 1`\" > $@
-+	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -1`\" > $@
++	echo \#define NV_COMPILER \"`$(CC) -v 2>&1 | tail -n 1`\" > $@
  
  $(LINUX_MODULE): $(OBJECTS)
  	ld -r -o $@ $(OBJECTS)
