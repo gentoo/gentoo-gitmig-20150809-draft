@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.12 2002/05/05 12:01:52 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.13 2002/05/15 13:15:35 verwilst Exp $
+
+*kdebase-3.0.1 (14 May 2002)
+
+  14 May 2002; Bart Verwilst <verwilst@gentoo.org> Changelog :
+
+  Added kdebase 3.0.1, cleaned up the other versions/revisions, added 3.0.1 startkde diff.
 
   5 May 2002; Dan Armak <danarmak@gentoo.org> changelog:
   
