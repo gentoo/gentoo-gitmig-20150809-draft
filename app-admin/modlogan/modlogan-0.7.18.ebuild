@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.18.ebuild,v 1.2 2002/08/17 04:30:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/modlogan-0.7.18.ebuild,v 1.3 2002/08/17 04:46:56 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Logfile Analyzer"
@@ -69,12 +69,11 @@ src_install() {
 	doins doc/modlogan.searchengines
 	insinto /etc/httpd
 	newins ${FILESDIR}/modlogan.conf httpd.modlogan
-	dodir /usr/local/httpd/modlogan
+	dodir /home/httpd/modlogan
 	preplib /usr
 	dodoc AUTHORS COPYING ChangeLog README NEWS TODO
 	dodoc doc/*.txt doc/*.conf doc/glosar doc/stats
-	docinto html
-	dodoc doc/*.html
+	dohtml -r html
 }
 
 pkg_postinst() {
