@@ -1,12 +1,15 @@
 # ChangeLog for games-action/orbital-eunuchs-sniper
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/ChangeLog,v 1.3 2003/10/25 00:39:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/ChangeLog,v 1.4 2003/12/31 21:16:47 vapier Exp $
+
+*orbital-eunuchs-sniper-1.29 (22 Apr 2003)
+
+  31 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add patch to clean up the install ... now binaries are in /usr/games/bin while data is in /usr/share/games/<PN>.
 
   24 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org>
   orbital-eunuchs-sniper-1.29.ebuild:
   use more of games eclass; more error messages; tidy
-
-*orbital-eunuchs-sniper-1.29 (22 Apr 2003)
 
   22 Apr 2003; Phil Bordelon <sunflare@gentoo.org> orbital-eunuchs-sniper-1.29.ebuild:
   lu_zero tested it on PPC, and it worked.  Joy and rapture!  Added.
