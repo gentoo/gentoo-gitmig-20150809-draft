@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chipmunksystem/chipmunksystem-20031105-r1.ebuild,v 1.1 2004/05/19 06:37:49 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chipmunksystem/chipmunksystem-20031105-r1.ebuild,v 1.2 2004/05/25 17:30:25 dholm Exp $
 
 DESCRIPTION="Chipmunk System - circuit schematic and simulation environment"
 
@@ -29,7 +29,7 @@ SLOT="0"
 
 #ARCH: I only tested on x86, it's the only platform I have access, but it's
 #      supposed to work on other platforms, see HOMEPAGE
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
