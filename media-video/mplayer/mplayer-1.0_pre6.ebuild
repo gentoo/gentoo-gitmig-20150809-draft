@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.6 2005/01/05 23:24:19 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.7 2005/01/06 09:19:37 phosphan Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -11,9 +11,9 @@ SVGV=1.9.17
 
 # Handle PREversions as well
 MY_PV="${PV/_/}"
-MY_P="MPlayer-${MY_PV}"
+MY_P="MPlayer-${MY_PV}a"
 S="${WORKDIR}/${MY_P}"
-SRC_URI="mirror://mplayer/releases/${MY_P}a.tar.bz2
+SRC_URI="mirror://mplayer/releases/${MY_P}.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2

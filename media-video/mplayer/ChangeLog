@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.249 2005/01/05 23:24:19 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.250 2005/01/06 09:19:37 phosphan Exp $
+
+  06 Jan 2005; Patrick Kursawe <phosphan@gentoo.org> mplayer-1.0_pre6.ebuild:
+  Fixed unpack problem (bug #76854)
 
   06 Jan 2005; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre6.ebuild:
   MPlayer pre6 was missing docs upstream, adding an 'a' prefix to get the latest
