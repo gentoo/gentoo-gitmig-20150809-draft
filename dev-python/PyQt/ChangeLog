@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.32 2004/03/18 01:44:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.33 2004/04/21 12:05:45 aliz Exp $
+
+  21 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> PyQt-3.11.ebuild:
+  Mark stable on amd64.
 
 *PyQt-3.11 (17 Mar 2004)
 
