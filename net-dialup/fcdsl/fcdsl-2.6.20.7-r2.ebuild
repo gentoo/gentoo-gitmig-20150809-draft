@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r2.ebuild,v 1.1 2004/12/12 19:14:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r2.ebuild,v 1.2 2004/12/12 19:45:02 mrness Exp $
 
 inherit kernel-mod rpm eutils
 
@@ -130,7 +130,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /etc/drdsl /etc/modules.d /lib/modules/${KV_VERSION_FULL}/misc /usr/lib/isdn /lib/firmware /usr/sbin
+	dodir /etc/drdsl /etc/modules.d /lib/modules/${KV_VERSION_FULL}/misc /lib/firmware /usr/sbin
 
 	echo -e "# card\tfile\tproto\tio\tirq\tmem\tcardnr\toptions" >${D}/etc/capi.conf
 	echo "#" >>${D}/etc/capi.conf
