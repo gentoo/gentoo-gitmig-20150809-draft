@@ -10,7 +10,11 @@ GTWAY=192.168.1.254
 netup() {
 	/sbin/ifconfig $IFACE $IPNUM broadcast $BCAST netmask $NMASK
 	[ $GTWAY ] && /sbin/route add -net default gw $GTWAY netmask 0.0.0.0 metric 1
-	echo 1 > /proc/sys/net/ipv4/conf/${IFACE}/rp_filter
+	#enabling rp_filter causes wacky packets to be auto-dropped by the kernel
+	if [ -e /proc/sys/net/ipv4/conf/${IFACE}/rp_filter ]
+	then
+		echo 1 > /proc/sys/net/ipv4/conf/${IFACE}/rp_filter
+	fi
 }
 
 netdown() {
