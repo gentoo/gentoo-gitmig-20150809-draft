@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/aumix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.38 2004/10/15 11:59:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.39 2004/10/31 10:15:29 eradicator Exp $
+
+  31 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/aumix-2.8-nls.patch:
+  Only installing .desktop file to applications dir. Fixed building with -nls
+  to close bug #58897.
 
   15 Oct 2004; David Holm <dholm@gentoo.org> aumix-2.8-r2.ebuild:
   Added to ~ppc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r2.ebuild,v 1.6 2004/10/15 11:59:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r2.ebuild,v 1.7 2004/10/31 10:15:29 eradicator Exp $
 
 IUSE="gtk gtk2 gpm nls"
 
@@ -29,6 +29,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-nohome.patch
 	epatch ${FILESDIR}/${P}-close-dialogs.patch
 	epatch ${FILESDIR}/${P}-save_load.patch
+	epatch ${FILESDIR}/${P}-nls.patch
 }
 
 src_compile() {
@@ -60,10 +61,6 @@ src_install() {
 
 	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README TODO
 
-	insinto /usr/share/gnome/apps/Multimedia
-	doins ${FILESDIR}/aumix.desktop
-	insinto /usr/share/applnk/Multimedia
-	doins ${FILESDIR}/aumix.desktop
 	insinto /usr/share/applications
 	doins ${FILESDIR}/aumix.desktop
 
