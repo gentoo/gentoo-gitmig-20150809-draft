@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/atlas
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atlas/ChangeLog,v 1.9 2004/02/25 14:29:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atlas/ChangeLog,v 1.10 2004/04/01 09:47:28 phosphan Exp $
+
+  01 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> atlas-3.2.1-r1.ebuild,
+  atlas-3.2.1.ebuild, atlas-3.4.1.ebuild, atlas-3.4.2.ebuild,
+  atlas-3.5.11.ebuild, atlas-3.6.0.ebuild:
+  Cleanup, adding hint about keyword changing
 
 *atlas-3.6.0 (25 Feb 2004)
 
