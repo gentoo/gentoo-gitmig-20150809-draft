@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.64 2004/08/11 21:43:41 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.65 2004/11/10 16:49:32 joker Exp $
+
+*sparc-sources-2.4.27-r2 (10 Nov 2004)
+
+  10 Nov 2004; Christian Birchinger <joker@gentoo.org>
+  +sparc-sources-2.4.27-r2.ebuild:
+  Added a security fix for CAN-2004-0814 and a patch for the XDR NFS3 hole
 
 *sparc-sources-2.4.27-r1 (11 Aug 2004)
 
