@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.125 2005/03/09 18:42:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.126 2005/03/14 02:57:17 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -600,47 +600,94 @@ create_gcc_env_entry() {
 	echo "PATH=\"${BINPATH}\"" > ${gcc_envd_file}
 	echo "ROOTPATH=\"${BINPATH}\"" >> ${gcc_envd_file}
 
-	LDPATH="${LIBPATH}"
-
-	if has_multilib_profile ; then
-		local abi=
-		for abi in $(get_all_abis) ; do
-			local MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
-			[[ ${MULTIDIR} != "." && -d ${LIBPATH}/${MULTIDIR} ]] && LDPATH="${LDPATH}:${LIBPATH}/${MULTIDIR}"
-		done
-	else
+	if use multilib && ! has_multilib_profile; then
+		LDPATH="${LIBPATH}"
 		for path in 32 64 o32 ; do
 			[[ -d ${LIBPATH}/${path} ]] && LDPATH="${LDPATH}:${LIBPATH}/${path}"
 		done
+	else
+		local MULTIDIR
+		LDPATH="${LIBPATH}"
+
+		# We want to list the default ABI's LIBPATH first so libtool
+		# searches that directory first.  This is a temporary
+		# workaround for libtool being stupid and using .las from
+		# conflicting ABIs by using the first one in the search path
+
+		local abi=${DEFAULT_ABI}
+		local MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
+		if [[ ${MULTIDIR} != "." ]] ; then
+			LDPATH="${LIBPATH}"
+		else
+			LDPATH="${LIBPATH}/${MULTIDIR}"
+		fi
+
+		for abi in $(get_all_abis) ; do
+			[[ ${abi} == ${DEFAULT_ABI} ]] && continue
+
+			if [[ ${MULTIDIR} != "." ]] ; then
+				LDPATH="${LDPATH}:${LIBPATH}"
+			else
+				LDPATH="${LDPATH}:${LIBPATH}/${MULTIDIR}"
+			fi
+		done
 	fi
+
+	echo "LDPATH=\"${LDPATH}\"" >> ${gcc_envd_file}
 
 	local mbits
 	CC=${XGCC} has_m32 && mbits="${mbits:+${mbits} }32"
 	CC=${XGCC} has_m64 && mbits="${mbits:+${mbits} }64"
 	echo "GCCBITS=\"${mbits}\"" >> ${gcc_envd_file}
 
-	echo "LDPATH=\"${LDPATH}\"" >> ${gcc_envd_file}
 	echo "MANPATH=\"${DATAPATH}/man\"" >> ${gcc_envd_file}
 	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${gcc_envd_file}
 	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${gcc_envd_file}
 
 	if has_version '>=sys-devel/gcc-config-1.4.0' ; then
-		echo "CFLAGS_default=\"$(get_abi_CFLAGS ${DEFAULT_ABI})\"" >> ${gcc_envd_file}
-
 		echo "CTARGET=${CTARGET}" >> ${gcc_envd_file}
 
 		local ctarget_alias
 		local abi
 		local FAKE_TARGETS=""
-		for abi in $(get_all_abis) ; do
-			for ctarget_alias in $(get_abi_CHOST ${abi}) $(get_abi_FAKE_TARGETS ${abi}) ; do
-				if [[ ${ctarget_alias} != ${CHOST} ]] ; then
-					FAKE_TARGETS="${FAKE_TARGETS+${FAKE_TARGETS} }${ctarget_alias}"
-					local var="CFLAGS_${ctarget_alias//-/_}"
-					echo "${var}=\"$(get_abi_CFLAGS ${abi}) ${!var}\"" >> ${gcc_envd_file}
-				fi
+
+		if is_crosscompile; then
+			case ${CTARGET} in
+			x86_64*)
+				FAKE_TARGETS="i686-pc-linux-gnu"
+				echo "CFLAGS_i686_pc_linux_gnu=\"-m32\"" >> ${gcc_envd_file}
+			;;
+			sparc64*)
+				FAKE_TARGETS="sparc-unknown-linux-gnu"
+				echo "CFLAGS_sparc_unknown_linux_gnu=\"-m32\"" >> ${gcc_envd_file}
+			;;
+			mips64*)
+				FAKE_TARGETS="mips-unknown-linux-gnu"
+				echo "CFLAGS_mips_unknown_linux_gnu=\"-mabi=32\"" >> ${gcc_envd_file}
+			;;
+			powerpc64*)
+				FAKE_TARGETS="powerpc-unknown-linux-gnu"
+				echo "CFLAGS_powerpc_unknown_linux_gnu=\"-m32\"" >> ${gcc_envd_file}
+			;;
+			*)
+				FAKE_TARGETS=""
+			;;
+			esac
+
+			echo "CFLAGS_default=\"\"" >> ${gcc_envd_file}
+		else
+			for abi in $(get_all_abis) ; do
+				for ctarget_alias in $(get_abi_CHOST ${abi}) $(get_abi_FAKE_TARGETS ${abi}) ; do
+					if [[ ${ctarget_alias} != ${CHOST} ]] ; then
+						FAKE_TARGETS="${FAKE_TARGETS+${FAKE_TARGETS} }${ctarget_alias}"
+						local var="CFLAGS_${ctarget_alias//-/_}"
+						echo "${var}=\"$(get_abi_CFLAGS ${abi}) ${!var}\"" >> ${gcc_envd_file}
+					fi
+				done
 			done
-		done
+
+			echo "CFLAGS_default=\"$(get_abi_CFLAGS ${DEFAULT_ABI})\"" >> ${gcc_envd_file}
+		fi
 
 		if [[ -n ${FAKE_TARGETS} ]] ; then
 			echo "FAKE_TARGETS=\"${FAKE_TARGETS}\"" >> ${gcc_envd_file}
