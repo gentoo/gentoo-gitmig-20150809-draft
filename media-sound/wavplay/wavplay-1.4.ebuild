@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavplay/wavplay-1.4.ebuild,v 1.8 2004/07/01 08:00:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavplay/wavplay-1.4.ebuild,v 1.9 2004/09/06 18:11:48 sekretarz Exp $
 
 inherit eutils
 
@@ -17,6 +17,7 @@ IUSE=""
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}.patch
+	epatch ${FILESDIR}/${P}-gcc34.patch
 }
 
 src_compile() {
