@@ -1,5 +1,5 @@
 MD5 c590ddbb254ab9bb48de4008f716758b ChangeLog 757
-MD5 6ce733205e4b554b38176265355498c6 ddclient-3.6.2.ebuild 737
+MD5 ef9dcec0e70c3b01b11d0b5a10c07037 ddclient-3.6.2.ebuild 737
 MD5 c92c32c51f9e7178f456592ea0bef643 files/ddclient-3.6.2-gentoo.diff 427
 MD5 1659847a26dc08c91447c874823da59d files/ddclient.rc6 735
 MD5 e76dc7def07572534af2a567136a3e31 files/digest-ddclient-3.6.2 65
