@@ -1,0 +1,34 @@
+--- Makefile.orig	2003-08-19 01:31:28.963869296 -0400
++++ Makefile	2003-08-19 01:31:45.567345184 -0400
+@@ -11 +11 @@
+-	$(CC) $(CFLAGS) `libnet-config --defines` \
++	$(CC) $(CFLAGS) `libnet-1.0-config --defines` \
+@@ -13 +13 @@
+-		`libnet-config --libs` -lpcap
++		`libnet-1.0-config --libs` -lpcap
+--- tcptraceroute.c.orig	2003-08-19 01:31:32.991257040 -0400
++++ tcptraceroute.c	2003-08-19 01:32:02.723737016 -0400
+@@ -27,2 +27,2 @@
+- *	gcc -O2 -Wall `libnet-config --defines` \
+- *		-o tcptraceroute tcptraceroute.c `libnet-config --libs` -lpcap
++ *	gcc -O2 -Wall `libnet-1.0-config --defines` \
++ *		-o tcptraceroute tcptraceroute.c `libnet-1.0-config --libs` -lpcap
+@@ -201 +201 @@
+-#include <libnet.h>
++#include <libnet-1.0.h>
+@@ -394,4 +394,4 @@
+-    fatal("Usage: %s [-nNFSAE] [-i <interface>] [-f <first ttl>]
+-       [-l <packet length>] [-q <number of queries>] [-t <tos>]
+-       [-m <max ttl>] [-pP] <source port>] [-s <source address>]
+-       [-w <wait time>] <host> [destination port] [packet length]\n\n", name);
++    fatal("Usage: %s [-nNFSAE] [-i <interface>] [-f <first ttl>]\n"\
++"       [-l <packet length>] [-q <number of queries>] [-t <tos>]\n"\
++"       [-m <max ttl>] [-pP] <source port>] [-s <source address>]\n"\
++"       [-w <wait time>] <host> [destination port] [packet length]\n\n", name);
+@@ -1185,3 +1185,3 @@
+-	safe_snprintf(filter, TEXTSIZE, "
+-		(tcp and src host %s and src port %d and dst host %s)
+-		or ((icmp[0] == 11 or icmp[0] == 3) and dst host %s)",
++	safe_snprintf(filter, TEXTSIZE, \
++"		(tcp and src host %s and src port %d and dst host %s)\n"\
++"		or ((icmp[0] == 11 or icmp[0] == 3) and dst host %s)",
