@@ -1,8 +1,13 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.32 2003/05/13 08:10:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.33 2003/05/14 16:17:31 kumba Exp $
+
 
 *shadow-4.0.3-r5 (13 May 2003)
+
+  14 May 2003; Joshua Kinard <kumba@gentoo.org> shadow-4.0.3-r5.ebuild:
+  Added "gnuconfig" to inherit and "gnuconfig_update" to src_compile()
+  to make it detect mips systems correctly
 
   13 May 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Security update. Added nodelay to second line of pam.d/system-auth.
