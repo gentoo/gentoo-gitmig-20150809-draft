@@ -1,0 +1,12 @@
+# ChangeLog for app-misc/kalbum
+# Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kalbum/ChangeLog,v 1.1 2003/05/13 03:38:42 caleb Exp $
+
+*kalbum-0.8.0 (22 May 2003)
+
+  22 May 2003; Caleb Tennis <caleb@gentoo.org> ChangeLog :
+
+  Kalbum is a KDE application for generating Photo albums.  It can
+  generate & display "binary" albums, and create HTML albums with the
+  click of a button.  Initial import, thanks to Ed Cates (Bug # 14934)
+
