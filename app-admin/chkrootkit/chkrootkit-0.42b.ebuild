@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.42b.ebuild,v 1.2 2003/10/14 22:49:57 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.42b.ebuild,v 1.3 2003/10/17 02:59:45 agriffis Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="a tool to locally check for signs of a rootkit"
 SRC_URI="ftp://ftp.pangeia.com.br/pub/seg/pac/${P}.tar.gz"
 HOMEPAGE="http://www.chkrootkit.org/"
 IUSE=""
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc alpha ~ia64"
 LICENSE="AMS"
 SLOT="0"
 
