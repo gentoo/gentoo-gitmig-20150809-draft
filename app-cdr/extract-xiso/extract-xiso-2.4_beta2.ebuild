@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/extract-xiso/extract-xiso-2.4_beta2.ebuild,v 1.7 2004/10/23 08:19:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/extract-xiso/extract-xiso-2.4_beta2.ebuild,v 1.8 2004/11/12 20:27:49 blubb Exp $
 
 MY_PV=${PV/_beta/b}
 DESCRIPTION="Tool for extracting and creating optimised Xbox ISO images"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/extract-xiso/${PN}_src_v${MY_PV}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc ppc-macos"
+KEYWORDS="x86 ~ppc ppc-macos ~amd64"
 IUSE=""
 
 DEPEND=""
