@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r3.ebuild,v 1.5 2004/03/01 19:57:03 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r3.ebuild,v 1.6 2004/03/02 16:44:08 iggy Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.phystech.com/pub/${P/_p/-pl}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ppc64 s390"
 IUSE="build static"
 
 DEPEND="virtual/glibc"
