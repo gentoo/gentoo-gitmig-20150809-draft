@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.6 2002/06/04 06:41:01 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.7 2002/06/04 06:46:11 blocke Exp $
 
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -42,9 +42,9 @@ gnome2_src_install() {
 	einstall " scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/ ${1}"
 
 	# manual document installation
-	if [ -n "${DOC}" ]
+	if [ -n "${DOCS}" ]
 	then
-		dodoc ${DOC}
+		dodoc ${DOCS}
 	fi
 
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
@@ -54,16 +54,16 @@ gnome2_src_install() {
 gnome2_pkg_postinst() {
 
 	# schema installation
-	if [ -n "${SCHEMA}" ]
+	if [ -n "${SCHEMAS}" ]
 	then
 
 		export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
 
 		echo ">>> Updating GConf2 Schemas for ${P}"
-		for x in $SCHEMA
+		for x in $SCHEMAS
 		do
 			/usr/bin/gconftool-2  --makefile-install-rule \
-				/etc/gconf/schemas/${SCHEMA}
+				/etc/gconf/schemas/${x}
 		done
 	fi
 
