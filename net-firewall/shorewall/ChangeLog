@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.13 2003/05/29 16:20:20 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.14 2003/06/12 21:20:23 msterret Exp $
+
+*shorewall-1.4.4a (12 Jun 2003)
+
+  12 Jun 2003; <msterret@gentoo.org> shorewall-1.4.4.ebuild,
+  shorewall-1.4.4a.ebuild, shorewall-1.4.4b.ebuild:
+  fix Header
 
 *shorewall-1.4.4b (29 May 2003)
 
