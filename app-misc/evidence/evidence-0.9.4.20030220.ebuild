@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.4.20030220.ebuild,v 1.5 2003/03/14 21:21:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.4.20030220.ebuild,v 1.6 2003/03/26 10:14:45 seemant Exp $
 
 DESCRIPTION="GTK2 file-manager"
 HOMEPAGE="http://evidence.sourceforge.net/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~alpha"
-IUSE="pic oggvorbis perl X"
+IUSE="oggvorbis perl X"
 
 #	gnome? ( >=gnome-base/gnome-vfs-2.0 >=gnome-base/libgnomecanvas-2.0 )
 DEPEND=">=dev-util/pkgconfig-0.5
@@ -39,7 +39,6 @@ src_compile() {
 #	local gnomeconf
 #	use gnome && gnomeconf="${myconf} --enable-backend-gnomevfs"
 	econf \
-		`use_with pic` \
 		`use_enable oggvorbis plugin-vorbis` \
 		`use_enable perl pcre` \
 		`use_enable X x` \
