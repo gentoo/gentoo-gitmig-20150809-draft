@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.70 2004/09/02 01:35:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.71 2004/09/09 01:40:31 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -16,7 +16,6 @@ INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_postinst src_compile pkg_setup
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
-IUSE="dedicated"
 
 export GAMES_PREFIX="/usr/games"
 export GAMES_PREFIX_OPT="/opt"
@@ -122,9 +121,11 @@ EOF
 }
 
 games_pkg_setup() {
-	enewgroup ${GAMES_GROUP} 35
-	enewuser ${GAMES_USER} 35 /bin/false /usr/games ${GAMES_GROUP}
-	enewuser ${GAMES_USER_DED} 36 /bin/bash /usr/games ${GAMES_GROUP}
+	enewgroup "${GAMES_GROUP}" 35
+	[ "${GAMES_USER}" != "root" ] && \
+		enewuser "${GAMES_USER}" 35 /bin/false /usr/games "${GAMES_GROUP}"
+	[ "${GAMES_USER_DED}" != "root" ] && \
+		enewuser "${GAMES_USER_DED}" 36 /bin/bash /usr/games "${GAMES_GROUP}"
 }
 
 games_src_compile() {
@@ -178,14 +179,14 @@ games_umod_unpack() {
 
 # make a wrapper script ...
 games_make_wrapper() {
-	local wrapper=$1 ; shift
-	local bin=$1 ; shift
-	local chdir=$1 ; shift
+	local wrapper="$1" ; shift
+	local bin="$1" ; shift
+	local chdir="$1" ; shift
 	local tmpwrapper="`mymktemp ${T}`"
-	cat << EOF > ${tmpwrapper}
+	cat << EOF > "${tmpwrapper}"
 #!/bin/sh
 cd "${chdir}"
 exec ${bin} "\$@"
 EOF
-	newgamesbin ${tmpwrapper} ${wrapper}
+	newgamesbin "${tmpwrapper}" "${wrapper}"
 }
