@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsvg
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.4 2004/05/12 00:28:24 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.5 2004/06/04 17:58:52 twp Exp $
+
+  04 Jun 2004; <twp@gentoo.org> libsvg-0.1.2.ebuild:
+  Added media-libs/jpeg dependency. Bug # 52997.
 
   11 May 2004; Travis Tilley <lv@gentoo.org> libsvg-0.1.2.ebuild:
   added ~amd64 keyword
