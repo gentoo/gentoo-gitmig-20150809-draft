@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.9-r3.ebuild,v 1.7 2004/11/06 15:43:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.9-r4.ebuild,v 1.1 2004/11/06 15:43:02 usata Exp $
 
 inherit flag-o-matic eutils
 
-MYDATE="20040204"
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
 SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
@@ -16,8 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ppc ~sparc alpha"
 IUSE="maildir ncurses static doc cjk"
 
-RDEPEND="ncurses? ( >=sys-libs/ncurses-5.1 )
-	!app-shells/zsh-completion"
+RDEPEND="ncurses? ( >=sys-libs/ncurses-5.1 )"
 DEPEND="${RDEPEND}
 	virtual/libc
 	sys-apps/groff"
@@ -27,6 +25,7 @@ src_unpack() {
 	cd ${S}
 	use cjk && epatch ../${P}-euc-0.2.patch
 	epatch ${FILESDIR}/${PN}-strncmp.diff
+	epatch ${FILESDIR}/${PN}-init.d-gentoo.diff
 	cd ${S}/Doc
 	ln -sf . man1
 	# fix zshall problem with soelim
@@ -59,7 +58,10 @@ src_compile() {
 		${myconf} || die "configure failed"
 	# emake still b0rks
 	make || die "make failed"
-	#make check || die "make check failed"
+}
+
+src_test() {
+	make check || die "make check failed"
 }
 
 src_install() {
@@ -75,8 +77,6 @@ src_install() {
 	doins ${FILESDIR}/zprofile
 
 	keepdir /usr/share/zsh/site-functions
-	insinto /usr/share/zsh/site-functions
-	newins ${FILESDIR}/_portage-${MYDATE} _portage
 
 	dodoc ChangeLog* META-FAQ README INSTALL LICENCE config.modules
 

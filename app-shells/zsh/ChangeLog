@@ -1,6 +1,15 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.63 2004/10/16 14:25:16 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.64 2004/11/06 15:43:02 usata Exp $
+
+*zsh-4.2.1-r1 (07 Nov 2004)
+*zsh-4.0.9-r4 (07 Nov 2004)
+
+  07 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -files/zsh-4.1.1-gentoo.diff, +files/zsh-init.d-gentoo.diff,
+  +zsh-4.0.9-r4.ebuild, -zsh-4.1.1-r5.ebuild, +zsh-4.2.1-r1.ebuild:
+  Fixed _init_d completion. Thanks to Andrew D. Keyser (aka Legoguy
+  <andrewdk@comcast.net>; bug #69997. Removed zsh completions.
 
   16 Oct 2004; Tom Martin <slarti@gentoo.org> zsh-4.2.1.ebuild:
   Stable on amd64.

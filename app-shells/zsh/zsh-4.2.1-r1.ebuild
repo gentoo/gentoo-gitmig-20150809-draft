@@ -1,35 +1,36 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.1-r5.ebuild,v 1.8 2004/06/29 04:00:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.1-r1.ebuild,v 1.1 2004/11/06 15:43:02 usata Exp $
 
-inherit flag-o-matic eutils
+inherit eutils
 
-MYDATE="20040204"
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
 SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
-	cjk? ( http://www.ono.org/software/dist/${P}-euc-0.2.patch.gz )
+	cjk? ( http://www.ono.org/software/dist/${P}-euc-0.3.patch.gz )
 	doc? ( ftp://ftp.zsh.org/pub/${P}-doc.tar.bz2 )"
 
 LICENSE="ZSH"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa ~amd64"
-IUSE="cjk maildir ncurses static doc"
+KEYWORDS="x86 ppc sparc alpha ~arm hppa amd64"
+IUSE="maildir ncurses static doc pcre cap cjk"
 
-RDEPEND=">=dev-libs/libpcre-3.9
-	sys-libs/libcap
+RDEPEND="pcre? ( >=dev-libs/libpcre-3.9 )
+	cap? ( sys-libs/libcap )
 	ncurses? ( >=sys-libs/ncurses-5.1 )"
 DEPEND="sys-apps/groff
 	>=sys-apps/sed-4
 	${RDEPEND}"
+
+S="${WORKDIR}/${P}"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
 	use doc && unpack ${P}-doc.tar.bz2
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
-	use cjk && epatch ${DISTDIR}/${P}-euc-0.2.patch.gz
-	epatch ${FILESDIR}/${PN}-strncmp.diff
+	epatch ${FILESDIR}/${PN}-init.d-gentoo.diff
+	use cjk && epatch ${DISTDIR}/${P}-euc-0.3.patch.gz
 	cd ${S}/Doc
 	ln -sf . man1
 	# fix zshall problem with soelim
@@ -40,10 +41,8 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	use ncurses && myconf="--with-curses-terminfo"
-	use maildir && myconf="${myconf} --enable-maildir-support"
 	use static && myconf="${myconf} --disable-dynamic" \
-		&& append-ldflags -static
+		&& LDFLAGS="${LDFLAGS} -static"
 
 	econf \
 		--bindir=/bin \
@@ -54,10 +53,15 @@ src_compile() {
 		--enable-zlogout=/etc/zsh/zlogout \
 		--enable-zprofile=/etc/zsh/zprofile \
 		--enable-zshrc=/etc/zsh/zshrc \
-		--enable-fndir=/usr/share/zsh/${PV}/functions \
+		--enable-fndir=/usr/share/zsh/${PV%_*}/functions \
 		--enable-site-fndir=/usr/share/zsh/site-functions \
 		--enable-function-subdirs \
 		--enable-ldflags="${LDFLAGS}" \
+		--with-tcsetpgrp \
+		$(use_with ncurses curses-terminfo) \
+		$(use_enable maildir maildir-support) \
+		$(use_enable pcre) \
+		$(use_enable cap) \
 		${myconf} || die "configure failed"
 
 	if use static ; then
@@ -73,14 +77,17 @@ src_compile() {
 
 	# emake still b0rks
 	emake -j1 || die "make failed"
-	#make check || die "make check failed"
+}
+
+src_test() {
+	make check || die "make check failed"
 }
 
 src_install() {
 	einstall \
 		bindir=${D}/bin \
 		libdir=${D}/usr/lib \
-		fndir=${D}/usr/share/zsh/${PV}/functions \
+		fndir=${D}/usr/share/zsh/${PV%_*}/functions \
 		sitefndir=${D}/usr/share/zsh/site-functions \
 		install.bin install.man install.modules \
 		install.info install.fns || die "make install failed"
@@ -89,8 +96,15 @@ src_install() {
 	doins ${FILESDIR}/zprofile
 
 	keepdir /usr/share/zsh/site-functions
-	insinto /usr/share/zsh/site-functions
-	newins ${FILESDIR}/_portage-${MYDATE} _portage
+	insinto /usr/share/zsh/${PV%_*}/functions/Prompts
+	doins ${FILESDIR}/prompt_gentoo_setup || die
+
+	# install miscellaneous scripts; bug #54520
+	sed -i -e "s:/usr/local:/usr:g" {Util,Misc}/* || "sed failed"
+	insinto /usr/share/zsh/${PV%_*}/Util
+	doins Util/* || die "doins Util scripts failed"
+	insinto /usr/share/zsh/${PV%_*}/Misc
+	doins Misc/* || die "doins Misc scripts failed"
 
 	dodoc ChangeLog* META-FAQ README INSTALL LICENCE config.modules
 
@@ -108,12 +122,24 @@ pkg_preinst() {
 	# Our zprofile file does the job of the old zshenv file
 	# Move the old version into a zprofile script so the normal
 	# etc-update process will handle any changes.
-	if [ -f ${ROOT}/etc/zsh/zshenv -a ! -f ${ROOT}/etc/zsh/zprofile ]; then
-		mv ${ROOT}/etc/zsh/zshenv ${ROOT}/etc/zsh/zprofile
+	if [ -f /etc/zsh/zshenv -a ! -f /etc/zsh/zprofile ]; then
+		mv /etc/zsh/zshenv /etc/zsh/zprofile
 	fi
 }
 
 pkg_postinst() {
+	einfo
+	einfo "If you want to enable Portage completions and Gentoo prompt,"
+	einfo "emerge app-shells/zsh-completion and add"
+	einfo "	autoload -U compinit promptinit"
+	einfo "	compinit"
+	einfo "	promptinit; prompt gentoo"
+	einfo "to your ~/.zshrc"
+	einfo
+	einfo "Also, if you want to enable cache for the completions, add"
+	einfo "	zstyle ':completion::complete:*' use-cache 1"
+	einfo "to your ~/.zshrc"
+	einfo
 	# see Bug 26776
 	ewarn
 	ewarn "If you are upgrading from zsh-4.0.x you may need to"

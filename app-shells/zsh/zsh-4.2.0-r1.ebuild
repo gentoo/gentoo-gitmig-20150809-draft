@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0-r1.ebuild,v 1.7 2004/06/26 00:05:32 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0-r1.ebuild,v 1.8 2004/11/06 15:43:02 usata Exp $
 
 inherit eutils
 
@@ -19,7 +19,8 @@ IUSE="maildir ncurses static doc pcre cap cjk"
 
 RDEPEND="pcre? ( >=dev-libs/libpcre-3.9 )
 	cap? ( sys-libs/libcap )
-	ncurses? ( >=sys-libs/ncurses-5.1 )"
+	ncurses? ( >=sys-libs/ncurses-5.1 )
+	!app-shells/zsh-completion"
 DEPEND="sys-apps/groff
 	>=sys-apps/sed-4
 	${RDEPEND}"

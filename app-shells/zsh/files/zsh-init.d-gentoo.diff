@@ -1,0 +1,11 @@
+diff -urN zsh-4.2.1.ORIG/Completion/Unix/Command/_init_d zsh-4.2.1/Completion/Unix/Command/_init_d
+--- zsh-4.2.1.ORIG/Completion/Unix/Command/_init_d	2003-05-15 18:25:21.000000000 +0900
++++ zsh-4.2.1/Completion/Unix/Command/_init_d	2004-11-06 18:15:46.000000000 +0900
+@@ -23,6 +23,6 @@
+ #    cmds=( ${${(j:|:s:|:)${(M)${(f)"$(< $script)"}:#[[:blank:]]#(\'|)[a-z_|]##\'|)\)}}//[^a-z_]} )
+ 
+ (( $#cmds )) || zstyle -a ":completion:${curcontext}:commands" commands cmds ||
+-    cmds=(start stop)
++    cmds=(start stop restart pause zap status)
+ 
+ _sub_commands $cmds
