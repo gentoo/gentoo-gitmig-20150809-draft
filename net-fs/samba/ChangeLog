@@ -1,8 +1,14 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.24 2002/12/15 11:58:45 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.25 2002/12/16 18:19:18 woodchip Exp $
 
-*samba-2.2.7 (Nov 20 2002)
+*samba-2.2.7a (16 Dec 2002)
+
+  16 Dec 2002; Donny Davies <woodchip@gentoo.org> : Update to latest,
+  fixes large file copying bug, among others.  Changed the 'vscan'
+  USE flag to 'oav'.  Added description for that to use.desc.
+
+*samba-2.2.7 (20 Nov 2002)
 
   15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> samba-2.2.7.ebuild :
   Add alpha to KEYWORDS
@@ -17,19 +23,19 @@
   thanks Achim for #10819.  Marked as latest stable.  Fix problem with USE=ldap
   and export VISUAL.
 
-*samba-2.2.6-r2 (Nov 07 2002)
+*samba-2.2.6-r2 (07 Nov 2002)
 
   07 Nov 2002; Donny Davies <woodchip@gentoo.org> : Added patch to fix fd leak.
   Made pam support optional.  Added --with-sendfile-support.  Fixup digest (vscan).
   Fix for #9249.
 
-*samba-2.2.6-r1 (Oct 26 2002)
+*samba-2.2.6-r1 (26 Oct 2002)
 
   26 Oct 2002; Jon Nall <nall@gentoo.org> : samba expects ldap to depend on sasl
   in order for libresolv.so to get linked in, but ldap need not be compiled with
   sasl support. in this case samba needs to link in libresolv.so
 
-*samba-2.2.6 (Oct 24 2002)
+*samba-2.2.6 (24 Oct 2002)
 
   26 Oct 2002; Donny Davies <woodchip@gentoo.org> : Fix openldap dependency :)
 
