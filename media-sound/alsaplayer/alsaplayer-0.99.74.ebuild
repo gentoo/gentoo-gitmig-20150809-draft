@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.74.ebuild,v 1.1 2003/03/09 20:29:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.74.ebuild,v 1.2 2003/03/13 14:31:51 aliz Exp $
 
 IUSE="nas nls esd opengl doc oss gtk oggvorbis alsa"
 
@@ -67,13 +67,17 @@ src_compile() {
 		--disable-sgi \
 		${myconf}
 
+#	./configure --enable-gtk --libdir=/usr/lib/alsaplayer
+
 	emake || die
 }
 
 src_install() {
+
+	make DESTDIR=${D} docdir=${D}/usr/share/doc/${PF} install
 	
-	einstall \
-		docdir=${D}/usr/share/doc/${P}
+#	einstall \
+#		docdir=${D}/usr/share/doc/${P}
 
 	dodoc AUTHORS COPYING ChangeLog README TODO DONATION*
 	dodoc docs/sockmon.txt docs/wishlist.txt
