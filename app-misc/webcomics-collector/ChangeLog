@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/webcomics-collector
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/webcomics-collector/ChangeLog,v 1.8 2004/10/05 13:34:52 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/webcomics-collector/ChangeLog,v 1.9 2004/11/08 05:15:56 vapier Exp $
+
+*webcomics-collector-0.7.2 (08 Nov 2004)
+
+  08 Nov 2004; Mike Frysinger <vapier@gentoo.org>
+  +webcomics-collector-0.7.2.ebuild:
+  Version bump #70271.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   webcomics-collector-0.7.1.ebuild:
