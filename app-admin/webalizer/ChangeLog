@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.4 2002/04/19 17:21:51 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.5 2002/04/24 20:43:49 woodchip Exp $
+
+*webalizer-2.01.10-r1 (24 Apr 2002)
+
+  24 Apr 2002; Donny Davies <woodchip@gentoo.org> :
+
+  Added --enable-dns to ./configure, added small sed patch and sys-libs/db1
+  to the dependencies to facilitate this.
 
 *webalizer-2.01.10 (19 Apr 2002)
 

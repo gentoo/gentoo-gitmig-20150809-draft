@@ -1,10 +1,9 @@
 #
-# This is the config file for modlogan-statistics
+# This is the config snippet for Webalizer
 #
 <Directory "/home/httpd/htdocs/webalizer">
   Options None
   AllowOverride None
-
   Order allow,deny
   Allow from all
 </Directory>
