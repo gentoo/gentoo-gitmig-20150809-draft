@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.32.ebuild,v 1.3 2004/04/25 20:54:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.32.ebuild,v 1.4 2004/05/10 17:34:37 vapier Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils gcc
 
 DESCRIPTION="A portable, bytecode-compiled implementation of Common Lisp"
 HOMEPAGE="http://clisp.sourceforge.net/"
@@ -54,7 +54,7 @@ src_compile() {
 	fi
 
 	einfo "Using CFLAGS: ${CFLAGS}"
-	export CC="${CC} ${CFLAGS}"
+	export CC="$(gcc-getCC) ${CFLAGS}"
 	unset CFLAGS CXXFLAGS
 	local myconf="--with-dynamic-ffi
 		--with-unicode
