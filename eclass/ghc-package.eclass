@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.2 2004/11/03 20:38:35 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.3 2004/11/04 13:13:59 kosmikus Exp $
 #
 # Author: Andres Loeh <kosmikus@gentoo.org>
 #
@@ -51,10 +51,29 @@ ghc-localpkgconf() {
 	echo "${PF}.conf"
 }
 
-# creates an empty local (package-specific) package
-# configuration file
+# make a ghci foo.o file from a libfoo.a file
+ghc-makeghcilib() {
+	local outfile
+	outfile="$(dirname $1)/$(basename $1 | sed 's:^lib\?\(.*\)\.a$:\1.o:')"
+	ld --relocatable --discard-all --output="${outfile}" $1
+}
+
+# creates a local (package-specific) package
+# configuration file; the arguments should be
+# uninstalled package description files, each
+# containing a single package description; if
+# no arguments are given, the resulting file is
+# empty
 ghc-setup-pkg() {
-	echo '[]' > ${S}/$(ghc-localpkgconf)
+	local localpkgconf
+	localpkgconf="${S}/$(ghc-localpkgconf)"
+	echo '[' > ${localpkgconf}
+	while [ -n "$1" ]; do
+		cat "$1" >> ${localpkgconf}
+		shift
+		[ -n "$1" ] && echo ',' >> ${localpkgconf}
+	done
+	echo ']' >> ${localpkgconf}
 }
 
 # moves the local (package-specific) package configuration
@@ -69,7 +88,7 @@ ghc-install-pkg() {
 # package configuration file
 ghc-register-pkg() {
 	local localpkgconf
-	localpkgconf=$(ghc-confdir)/$1
+	localpkgconf="$(ghc-confdir)/$1"
 	for pkg in $(ghc-listpkg ${localpkgconf}); do
 		einfo "Registering ${pkg} ..."
 		$(ghc-getghcpkgbin) -f ${localpkgconf} -s ${pkg} \
@@ -93,7 +112,7 @@ ghc-reregister() {
 # unregisters ...
 ghc-unregister-pkg() {
 	local localpkgconf
-	localpkgconf=$(ghc-confdir)/$1
+	localpkgconf="$(ghc-confdir)/$1"
 	for pkg in $(ghc-reverse "$(ghc-listpkg ${localpkgconf})"); do
 		einfo "Unregistering ${pkg} ..."
 		$(ghc-getghcpkg) -r ${pkg} --force
