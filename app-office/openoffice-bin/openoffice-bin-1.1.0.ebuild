@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.0.ebuild,v 1.5 2003/11/14 16:51:58 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.0.ebuild,v 1.6 2003/11/18 10:37:29 pauldv Exp $
 
 IUSE="kde gnome"
 
@@ -90,7 +90,7 @@ src_install() {
 	# Setup virtualmake
 	export maketype="./setup"
 	# We need X to install...
-	virtualmake "-v -r:${T}/autoresponse"
+	virtualmake "-v -r:${T}/autoresponse" ||die "The setup program failed"
 
 	echo
 	einfo "Removing build root from registry..."
