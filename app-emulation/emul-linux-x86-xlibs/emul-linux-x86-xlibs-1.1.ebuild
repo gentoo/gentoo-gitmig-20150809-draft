@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-1.1.ebuild,v 1.8 2004/06/27 23:03:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-1.1.ebuild,v 1.9 2004/06/30 17:25:31 kugelfang Exp $
 
 DESCRIPTION="X11R6 libraries for emulation of 32bit x86 on amd64"
 HOMEPAGE="http://www.gentoo.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/distfiles/emul-linux-x86-xlibs-1.1.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="-* ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc"
