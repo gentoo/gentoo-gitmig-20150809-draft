@@ -1,20 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 71617c18bd15c89a4bffa04bf14c2385 ChangeLog 8187
-MD5 c0a47aca14159ac0ace864b9d5a3eadf grip-3.2.0.ebuild 1149
+MD5 587d306cb82c5843f0c5550e5742056b ChangeLog 8333
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
-MD5 2d1bee99af4545c43a871dbf864aa3b1 grip-3.2.0-r1.ebuild 1200
 MD5 c48f28d9ada787ac42065f97a6c665a2 grip-3.3.0.ebuild 1228
 MD5 994c1c45aa0d6d352db1b5dbd94b9248 files/grip-3.2.0-proxy.patch 1291
 MD5 c130fa68ebab7bcfec283e3daa759b65 files/3.3.0-crashfix.patch 845
 MD5 2ec6b15aa9b163f9c0a79e80038f987e files/digest-grip-3.3.0 62
-MD5 a96f76d77127d40bf0b43ba550a6f441 files/digest-grip-3.2.0 62
-MD5 a96f76d77127d40bf0b43ba550a6f441 files/digest-grip-3.2.0-r1 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCOUr9ugEuf3OQ0akRAoIlAJ9Pey4d3MwzwqDP6ydg+JKIeg++mACfcamG
-28Egb2AD9B1AqGUo4paTfHI=
-=Ahh3
+iD8DBQFCOdUwFdQwWVoAgN4RAmv5AKDbDUFJYYr5wWThEWKsIjuGYtvwQACdEF3Q
+G0aJqe3HZGagOlyuCSmkxYQ=
+=stXs
 -----END PGP SIGNATURE-----
