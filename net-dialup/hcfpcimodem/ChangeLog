@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/hcfpcimodem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/ChangeLog,v 1.14 2005/03/06 00:29:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/ChangeLog,v 1.15 2005/03/17 12:05:12 mrness Exp $
+
+*hcfpcimodem-1.05-r1 (17 Mar 2005)
+
+  17 Mar 2005; Alin Nastac <mrness@gentoo.org>
+  +files/hcfpcimodem-1.05-nvminstall.patch, +hcfpcimodem-1.05-r1.ebuild,
+  -hcfpcimodem-1.05.ebuild:
+  Fix missing region files (#84927). Remove /etc/hcfpcimodem/nvm before packet
+  installation.
 
 *hcfpcimodem-1.05 (06 Mar 2005)
 

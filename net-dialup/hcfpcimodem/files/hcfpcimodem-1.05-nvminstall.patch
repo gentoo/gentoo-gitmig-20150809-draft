@@ -1,0 +1,12 @@
+diff -Nru hcfpcimodem-1.05full.orig/nvm/makefile hcfpcimodem-1.05full/nvm/makefile
+--- hcfpcimodem-1.05full.orig/nvm/makefile	2004-12-14 09:51:07.000000000 +0200
++++ hcfpcimodem-1.05full/nvm/makefile	2005-03-17 13:40:01.689242088 +0200
+@@ -68,7 +68,7 @@
+ 	touch $(NVMCVTDIR)/.linksame
+ 
+ install: all $(CNXTNVMDIR)
+-	cd $(NVMCVTDIR) && (find $(patsubst %, $(CNXTTARGET)%, $(NVMDIRS)) | cpio -pdmu $(CNXTNVMDIR))
++	cp -a $(NVMCVTDIR)/* $(CNXTNVMDIR)
+ 
+ $(NVMCVTDIR) $(CNXTNVMDIR):
+ 	$(MKDIR) -p $@
