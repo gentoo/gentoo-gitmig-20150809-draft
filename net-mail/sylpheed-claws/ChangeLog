@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.45 2003/08/30 09:28:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.46 2003/09/06 15:05:18 seemant Exp $
+
+*sylpheed-claws-0.9.4-r1 (06 Sep 2003)
+
+  06 Sep 2003; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.9.4-r1.ebuild:
+  added the ghostviewer plugin. Should close bug #22827 by: Marius Mauch
+  <genone@genone.de>
 
   30 Aug 2003; Alastair Tse <liquidx@gentoo.org> sylpheed-claws-0.8.11.ebuild,
   sylpheed-claws-0.9.0-r1.ebuild, sylpheed-claws-0.9.0.ebuild,
