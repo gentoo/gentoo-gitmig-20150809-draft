@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkisofs/mkisofs-1.13-r2.ebuild,v 1.2 2002/04/27 21:33:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkisofs/mkisofs-1.13-r2.ebuild,v 1.3 2002/05/05 17:54:58 daybird Exp $
 # -r2 by Dan Armak
 
 S=${WORKDIR}/${P}
@@ -12,11 +12,16 @@ HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/pr
 src_install() {							   
 	
 	into /usr
-	
+
+	#looks like these are no longer used
 	[ -d mkisofs/OBJ/i686-linux-cc ] && DIR=i686-linux-cc
 	[ -d mkisofs/OBJ/i586-linux-cc ] && DIR=i586-linux-cc
 	[ -d mkisofs/OBJ/i486-linux-cc ] && DIR=i486-linux-cc
 	[ -d mkisofs/OBJ/i386-linux-cc ] && DIR=i386-linux-cc
+
+	#these should work instead (sparc guys need to add theirs here too)
+	[ -d mkisofs/OBJ/x86-linux-cc ] && DIR=x86-linux-cc
+	[ -d mkisofs/OBJ/ppc-linux-cc ] && DIR=ppc-linux-cc
 	
 	dobin mkisofs/OBJ/${DIR}/mkisofs
 	dobin mkisofs/diag/OBJ/${DIR}/devdump
