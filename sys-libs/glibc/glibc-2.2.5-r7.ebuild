@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.22 2002/11/02 21:18:16 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.23 2002/11/14 15:26:02 gerk Exp $
 
 IUSE="nls pic build"
 
@@ -105,11 +105,6 @@ src_unpack() {
 	        # http://sources.redhat.com/ml/libc-hacker/2002-05/msg00012.html
 	        einfo "Applying ppc-sqrtl patch..."
 	        cd ${S}; patch -p0 < ${FILESDIR}/${PV}/${P}-ppc-sqrtl.diff > /dev/null || die
-	
-	        # This patch fixes a SIGSEGV in semctl's va_arg processing
-	        # http://sources.redhat.com/ml/libc-alpha/2002-05/msg00065.html
-	        einfo "Applying ppc-semctl patch..."
-	        cd ${S}; patch -p0 < ${FILESDIR}/${PV}/${P}-ppc-semctl.diff > /dev/null || die
 	fi
 
 	

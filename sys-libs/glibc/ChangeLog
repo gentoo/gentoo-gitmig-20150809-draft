@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.26 2002/11/10 21:42:03 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.27 2002/11/14 15:26:02 gerk Exp $
 
 *glibc-2.3.1-r2 (7 Nov 2002)
 
@@ -36,6 +36,9 @@
   We should think about remoing it in the future after things have settled.
 
 *glibc-2.2.5-r7 (13 Oct 2002)
+
+  14 Nov 2002; Mark Guertin <gerk@gentoo.org> glibc-2.2.5-r7.ebuild :
+  backed out semctl patches for ppc, they cause problems with mozilla builds
 
   29 Oct 2002; Jon Nall <nall@gentoo.org> glibc-2.2.5-r7.ebuild :
 
