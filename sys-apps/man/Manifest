@@ -1,8 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 168d13a671b36066806629fe62e07992 ChangeLog 9728
-MD5 b09246080b18adba20d7636ed5c1fb3c man-1.5p.ebuild 2606
+MD5 258c38cf3e0fec574c920b8bfa329642 man-1.5p.ebuild 2594
 MD5 f7dab9ad0480c91649fa31517fbe300c man-1.5m-r2.ebuild 4277
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 e7327fedbe8071ba4ff5cf6393bcbe4e man-1.5o_p2.ebuild 3809
@@ -26,10 +23,3 @@ MD5 2a6b1a91ea6e3e46866a2a2f02ca9c70 files/man-1.5m-redhat-patches.patch 6782
 MD5 cbbd4de51a8359a1ae81f46f2dad6bd8 files/man-1.5m-search-order.patch 489
 MD5 fe9f5db8b8b6feaaac25563cb294c901 files/man-1.5m-util_c-segfault.patch 2276
 MD5 de02d99d60fb0e923c37e9130989b324 files/man-1.5m-wrong-quotes-v2.patch 328
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB5Wy6roRuSHgZdywRAt8yAJwP3iVlEpzw1QGO2QyMNUDfiVvPeACfVz8Q
-1kWW+2JzJkjP4Fg7GxNFjPM=
-=VmQD
------END PGP SIGNATURE-----
