@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.5.4.ebuild,v 1.4 2003/10/08 09:40:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.5.4.ebuild,v 1.5 2003/10/13 20:27:29 liquidx Exp $
 
 
 MY_PV=$(echo ${PV} | sed 's:\.::g')
@@ -29,7 +29,7 @@ src_unpack() {
 		-e 's#/gnome/apps/Applications#/applications#' \
 		-e "s#^CXXFLAGS=#CXXFLAGS=${CXXFLAGS} #" \
 		-e "s#^\(CXXFLAGS=.*\)-Os#\1#" \
-		-e "s#^CC =\(.*\)#CC = ${CXX}#" \
+		-e "s#^CC =\(.*\)#CC = ${CXX:-g++}#" \
 		|| die "error patching makefile"
 
 }
