@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dante
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.16 2003/12/08 22:00:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.17 2003/12/23 10:48:10 robbat2 Exp $
+
+*dante-1.1.14-r2 (23 Dec 2003)
+
+  23 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> dante-1.1.14-r1.ebuild,
+  dante-1.1.14-r2.ebuild, files/dante-sockd-conf-1.1.14-r2,
+  files/dante-sockd-init-1.1.14-r2:
+  take bug #19988, improve on it, and make some things better in general
 
 *dante-1.1.14-r1 (08 Dec 2003)
 
