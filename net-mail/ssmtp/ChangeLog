@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/ssmtp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.16 2003/07/09 20:22:54 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.17 2003/07/25 04:53:30 gmsoft Exp $
 
 
   09 Jul 2003; Nick Hadaway <raker@gentoo.org> ssmtp-2.60.3.ebuild:
@@ -29,6 +29,9 @@
   Added hppa to keywords.
 
 *ssmtp-2.48 (02 Feb 2003)
+
+  25 Jul 2003; Guy Lartin <gmsoft@gentoo.org> ssmtp-2.48.ebuild :
+  Marked stable on hppa.
 
   18 Apr 2003; Jan Seidel <tuxus@gentoo.org> ssmtp-2.48.ebuild :
   Added mips to keywords.
