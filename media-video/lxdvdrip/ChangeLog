@@ -1,6 +1,11 @@
 # ChangeLog for media-video/lxdvdrip
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.7 2004/09/19 16:01:38 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.8 2004/09/20 02:29:44 chriswhite Exp $
+
+  20 Sep 2004; Chris White <chriswhite@gentoo.org>
+  files/lxdvdrip-1.20_pre1-overflow.patch:
+  Fixed yet another issue. strncpy'ed buffers needed null terminated assurance.
+  Thanks to Florian Shilhabel that out for me.
 
   19 Sep 2004; Chris White <chriswhite@gentoo.org>
   files/lxdvdrip-1.20_pre1-overflow.patch:
