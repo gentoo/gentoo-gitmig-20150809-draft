@@ -1,0 +1,1429 @@
+Index: alsa-kernel/core/control.c
+===================================================================
+RCS file: /suse/tiwai/cvs/alsa/alsa-kernel/core/control.c,v
+retrieving revision 1.42
+diff -u -r1.42 control.c
+--- alsa-kernel/core/control.c	16 Jul 2004 16:50:36 -0000	1.42
++++ alsa-kernel/core/control.c	26 Nov 2004 14:05:44 -0000
+@@ -635,19 +635,13 @@
+ 	return result;
+ }
+ 
+-static int snd_ctl_elem_read(snd_card_t *card, snd_ctl_elem_value_t __user *_control)
++int snd_ctl_elem_read(snd_card_t *card, snd_ctl_elem_value_t *control)
+ {
+-	snd_ctl_elem_value_t *control;
+ 	snd_kcontrol_t *kctl;
+ 	snd_kcontrol_volatile_t *vd;
+ 	unsigned int index_offset;
+ 	int result, indirect;
+-	
+-	control = kmalloc(sizeof(*control), GFP_KERNEL);
+-	if (control == NULL)
+-		return -ENOMEM;	
+-	if (copy_from_user(control, _control, sizeof(*control)))
+-		return -EFAULT;
++
+ 	down_read(&card->controls_rwsem);
+ 	kctl = snd_ctl_find_id(card, &control->id);
+ 	if (kctl == NULL) {
+@@ -668,27 +662,37 @@
+ 		}
+ 	}
+ 	up_read(&card->controls_rwsem);
++	return result;
++}
++
++static int snd_ctl_elem_read_user(snd_card_t *card, snd_ctl_elem_value_t __user *_control)
++{
++	snd_ctl_elem_value_t *control;
++	int result;
++	
++	control = kmalloc(sizeof(*control), GFP_KERNEL);
++	if (control == NULL)
++		return -ENOMEM;	
++	if (copy_from_user(control, _control, sizeof(*control))) {
++		kfree(control);
++		return -EFAULT;
++	}
++	result = snd_ctl_elem_read(card, control);
+ 	if (result >= 0)
+ 		if (copy_to_user(_control, control, sizeof(*control)))
+-			return -EFAULT;
++			result = -EFAULT;
+ 	kfree(control);
+ 	return result;
+ }
+ 
+-static int snd_ctl_elem_write(snd_ctl_file_t *file, snd_ctl_elem_value_t __user *_control)
++int snd_ctl_elem_write(snd_ctl_file_t *file, snd_ctl_elem_value_t *control)
+ {
+ 	snd_card_t *card = file->card;
+-	snd_ctl_elem_value_t *control;
+ 	snd_kcontrol_t *kctl;
+ 	snd_kcontrol_volatile_t *vd;
+ 	unsigned int index_offset;
+ 	int result, indirect;
+ 
+-	control = kmalloc(sizeof(*control), GFP_KERNEL);
+-	if (control == NULL)
+-		return -ENOMEM;	
+-	if (copy_from_user(control, _control, sizeof(*control)))
+-		return -EFAULT;
+ 	down_read(&card->controls_rwsem);
+ 	kctl = snd_ctl_find_id(card, &control->id);
+ 	if (kctl == NULL) {
+@@ -711,16 +715,30 @@
+ 			if (result > 0) {
+ 				up_read(&card->controls_rwsem);
+ 				snd_ctl_notify(card, SNDRV_CTL_EVENT_MASK_VALUE, &control->id);
+-				result = 0;
+-				goto __unlocked;
++				return 0;
+ 			}
+ 		}
+ 	}
+ 	up_read(&card->controls_rwsem);
+-      __unlocked:
++	return result;
++}
++
++static int snd_ctl_elem_write_user(snd_ctl_file_t *file, snd_ctl_elem_value_t __user *_control)
++{
++	snd_ctl_elem_value_t *control;
++	int result;
++
++	control = kmalloc(sizeof(*control), GFP_KERNEL);
++	if (control == NULL)
++		return -ENOMEM;	
++	if (copy_from_user(control, _control, sizeof(*control))) {
++		kfree(control);
++		return -EFAULT;
++	}
++	result = snd_ctl_elem_write(file, control);
+ 	if (result >= 0)
+ 		if (copy_to_user(_control, control, sizeof(*control)))
+-			return -EFAULT;
++			result = -EFAULT;
+ 	kfree(control);
+ 	return result;
+ }
+@@ -1045,9 +1063,9 @@
+ 	case SNDRV_CTL_IOCTL_ELEM_INFO:
+ 		return snd_ctl_elem_info(ctl, argp);
+ 	case SNDRV_CTL_IOCTL_ELEM_READ:
+-		return snd_ctl_elem_read(ctl->card, argp);
++		return snd_ctl_elem_read_user(ctl->card, argp);
+ 	case SNDRV_CTL_IOCTL_ELEM_WRITE:
+-		return snd_ctl_elem_write(ctl, argp);
++		return snd_ctl_elem_write_user(ctl, argp);
+ 	case SNDRV_CTL_IOCTL_ELEM_LOCK:
+ 		return snd_ctl_elem_lock(ctl, argp);
+ 	case SNDRV_CTL_IOCTL_ELEM_UNLOCK:
+Index: alsa-kernel/core/pcm_lib.c
+===================================================================
+RCS file: /suse/tiwai/cvs/alsa/alsa-kernel/core/pcm_lib.c,v
+retrieving revision 1.57
+diff -u -r1.57 pcm_lib.c
+--- alsa-kernel/core/pcm_lib.c	24 Sep 2004 13:55:54 -0000	1.57
++++ alsa-kernel/core/pcm_lib.c	26 Nov 2004 13:42:21 -0000
+@@ -2660,6 +2660,7 @@
+ EXPORT_SYMBOL(snd_pcm_hw_param_near);
+ EXPORT_SYMBOL(snd_pcm_hw_param_set);
+ EXPORT_SYMBOL(snd_pcm_hw_refine);
++EXPORT_SYMBOL(snd_pcm_hw_params);
+ EXPORT_SYMBOL(snd_pcm_hw_constraints_init);
+ EXPORT_SYMBOL(snd_pcm_hw_constraints_complete);
+ EXPORT_SYMBOL(snd_pcm_hw_constraint_list);
+Index: alsa-kernel/core/pcm_native.c
+===================================================================
+RCS file: /suse/tiwai/cvs/alsa/alsa-kernel/core/pcm_native.c,v
+retrieving revision 1.85
+diff -u -r1.85 pcm_native.c
+--- alsa-kernel/core/pcm_native.c	16 Nov 2004 15:17:15 -0000	1.85
++++ alsa-kernel/core/pcm_native.c	26 Nov 2004 13:34:12 -0000
+@@ -329,8 +329,8 @@
+ 	return err;
+ }
+ 
+-static int snd_pcm_hw_params(snd_pcm_substream_t *substream,
+-			     snd_pcm_hw_params_t *params)
++int snd_pcm_hw_params(snd_pcm_substream_t *substream,
++		      snd_pcm_hw_params_t *params)
+ {
+ 	snd_pcm_runtime_t *runtime;
+ 	int err;
+Index: alsa-kernel/core/sound.c
+===================================================================
+RCS file: /suse/tiwai/cvs/alsa/alsa-kernel/core/sound.c,v
+retrieving revision 1.62
+diff -u -r1.62 sound.c
+--- alsa-kernel/core/sound.c	8 Nov 2004 11:37:34 -0000	1.62
++++ alsa-kernel/core/sound.c	26 Nov 2004 14:06:50 -0000
+@@ -475,6 +475,10 @@
+ EXPORT_SYMBOL(snd_ctl_notify);
+ EXPORT_SYMBOL(snd_ctl_register_ioctl);
+ EXPORT_SYMBOL(snd_ctl_unregister_ioctl);
++#ifdef CONFIG_COMPAT
++EXPORT_SYMBOL(snd_ctl_elem_read);
++EXPORT_SYMBOL(snd_ctl_elem_write);
++#endif
+   /* misc.c */
+ EXPORT_SYMBOL(snd_task_name);
+ #ifdef CONFIG_SND_VERBOSE_PRINTK
+Index: alsa-kernel/core/ioctl32/hwdep32.c
+===================================================================
+RCS file: /suse/tiwai/cvs/alsa/alsa-kernel/core/ioctl32/hwdep32.c,v
+retrieving revision 1.10
+diff -u -r1.10 hwdep32.c
+--- alsa-kernel/core/ioctl32/hwdep32.c	18 Oct 2004 14:31:33 -0000	1.10
++++ alsa-kernel/core/ioctl32/hwdep32.c	23 Nov 2004 14:22:41 -0000
+@@ -36,24 +36,24 @@
+ 
+ static inline int _snd_ioctl32_hwdep_dsp_image(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)
+ {
+-	struct sndrv_hwdep_dsp_image data;
+-	struct sndrv_hwdep_dsp_image32 data32;
+-	mm_segment_t oldseg;
+-	int err;
++	struct sndrv_hwdep_dsp_image __user *data, *dst;
++	struct sndrv_hwdep_dsp_image32 __user *data32, *src;
++	compat_caddr_t ptr;
+ 
+-	if (copy_from_user(&data32, (void __user *)arg, sizeof(data32)))
++	data32 = compat_ptr(arg);
++	data = compat_alloc_user_space(sizeof(*data));
++
++	/* index and name */
++	if (copy_in_user(data, data32, 4 + 64))
++		return -EFAULT;
++	if (__get_user(ptr, &data32->image) ||
++	    __put_user(compat_ptr(ptr), &data->image))
+ 		return -EFAULT;
+-	memset(&data, 0, sizeof(data));
+-	data.index = data32.index;
+-	memcpy(data.name, data32.name, sizeof(data.name));
+-	data.image = compat_ptr(data32.image);
+-	data.length = data32.length;
+-	data.driver_data = data32.driver_data;
+-	oldseg = get_fs();
+-	set_fs(KERNEL_DS);
+-	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)&data);
+-	set_fs(oldseg);
+-	return err;
++	src = data32;
++	dst = data;
++	COPY_CVT(length);
++	COPY_CVT(driver_data);
++	return file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)data);
+ }
+ 
+ DEFINE_ALSA_IOCTL_ENTRY(hwdep_dsp_image, hwdep_dsp_image, SNDRV_HWDEP_IOCTL_DSP_LOAD);
+Index: alsa-kernel/core/ioctl32/ioctl32.c
+===================================================================
+RCS file: /suse/tiwai/cvs/alsa/alsa-kernel/core/ioctl32/ioctl32.c,v
+retrieving revision 1.27
+diff -u -r1.27 ioctl32.c
+--- alsa-kernel/core/ioctl32/ioctl32.c	18 Oct 2004 14:31:33 -0000	1.27
++++ alsa-kernel/core/ioctl32/ioctl32.c	29 Nov 2004 11:49:50 -0000
+@@ -27,9 +27,27 @@
+ #include <linux/fs.h>
+ #include <sound/core.h>
+ #include <sound/control.h>
++#include <sound/minors.h>
+ #include <asm/uaccess.h>
+ #include "ioctl32.h"
+ 
++
++#if defined(CONFIG_SPARC64) && LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 8)
++size_t hack_copy_in_user(void __user *to, const void __user *from, size_t size)
++{
++	char tmp[64];
++	while (size) {
++		size_t s = sizeof(tmp) < size ? sizeof(tmp) : size;
++		if (copy_from_user(tmp, from, s) || copy_to_user(to, tmp, s))
++			break;
++		size -= s;
++		from += s;
++		to += s;
++	}
++	return size;
++}
++#endif
++
+ /*
+  * register/unregister mappers
+  * exported for other modules
+@@ -93,43 +111,28 @@
+ 	unsigned char reserved[50];
+ } /* don't set packed attribute here */;
+ 
+-#define CVT_sndrv_ctl_elem_list()\
+-{\
+-	COPY(offset);\
+-	COPY(space);\
+-	COPY(used);\
+-	COPY(count);\
+-	CPTR(pids);\
+-}
+-
+ static inline int _snd_ioctl32_ctl_elem_list(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)
+ {
+-	struct sndrv_ctl_elem_list32 data32;
+-	struct sndrv_ctl_elem_list data;
+-	mm_segment_t oldseg;
++	struct sndrv_ctl_elem_list32 __user *data32;
++	struct sndrv_ctl_elem_list __user *data;
++	compat_caddr_t ptr;
+ 	int err;
+ 
+-	if (copy_from_user(&data32, (void __user *)arg, sizeof(data32)))
++	data32 = compat_ptr(arg);
++	data = compat_alloc_user_space(sizeof(*data));
++
++	/* offset, space, used, count */
++	if (copy_in_user(data, data32, 4 * sizeof(u32)))
+ 		return -EFAULT;
+-	memset(&data, 0, sizeof(data));
+-	data.offset = data32.offset;
+-	data.space = data32.space;
+-	data.used = data32.used;
+-	data.count = data32.count;
+-	data.pids = compat_ptr(data32.pids);
+-	oldseg = get_fs();
+-	set_fs(KERNEL_DS);
+-	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)&data);
+-	set_fs(oldseg);
++	/* pids */
++	if (__get_user(ptr, &data32->pids) ||
++	    __put_user(compat_ptr(ptr), &data->pids))
++		return -EFAULT;
++	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)data);
+ 	if (err < 0)
+ 		return err;
+ 	/* copy the result */
+-	data32.offset = data.offset;
+-	data32.space = data.space;
+-	data32.used = data.used;
+-	data32.count = data.count;
+-	//data.pids = data.pids;
+-	if (copy_to_user((void __user *)arg, &data32, sizeof(data32)))
++	if (copy_in_user(data32, data, 4 * sizeof(u32)))
+ 		return -EFAULT;
+ 	return 0;
+ }
+@@ -170,54 +173,59 @@
+ 
+ static inline int _snd_ioctl32_ctl_elem_info(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)
+ {
+-	struct sndrv_ctl_elem_info data;
+-	struct sndrv_ctl_elem_info32 data32;
++	struct sndrv_ctl_elem_info __user *data, *src;
++	struct sndrv_ctl_elem_info32 __user *data32, *dst;
++	unsigned int type;
+ 	int err;
+-	mm_segment_t oldseg;
+ 
+-	if (copy_from_user(&data32, (void __user *)arg, sizeof(data32)))
++	data32 = compat_ptr(arg);
++	data = compat_alloc_user_space(sizeof(*data));
++
++	/* copy id */
++	if (copy_in_user(&data->id, &data32->id, sizeof(data->id)))
+ 		return -EFAULT;
+-	memset(&data, 0, sizeof(data));
+-	data.id = data32.id;
+ 	/* we need to copy the item index.
+ 	 * hope this doesn't break anything..
+ 	 */
+-	data.value.enumerated.item = data32.value.enumerated.item;
+-	oldseg = get_fs();
+-	set_fs(KERNEL_DS);
+-	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)&data);
+-	set_fs(oldseg);
++	if (copy_in_user(&data->value.enumerated.item,
++			 &data32->value.enumerated.item,
++			 sizeof(data->value.enumerated.item)))
++		return -EFAULT;
++	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)data);
+ 	if (err < 0)
+ 		return err;
+ 	/* restore info to 32bit */
+-	data32.id = data.id;
+-	data32.type = data.type;
+-	data32.access = data.access;
+-	data32.count = data.count;
+-	data32.owner = data.owner;
+-	switch (data.type) {
++	/* for COPY_CVT macro */
++	src = data;
++	dst = data32;
++	/* id, type, access, count */
++	if (copy_in_user(&data32->id, &data->id, sizeof(data->id)) ||
++	    copy_in_user(&data32->type, &data->type, 3 * sizeof(u32)))
++		return -EFAULT;
++	COPY_CVT(owner);
++	__get_user(type, &data->type);
++	switch (type) {
+ 	case SNDRV_CTL_ELEM_TYPE_BOOLEAN:
+ 	case SNDRV_CTL_ELEM_TYPE_INTEGER:
+-		data32.value.integer.min = data.value.integer.min;
+-		data32.value.integer.max = data.value.integer.max;
+-		data32.value.integer.step = data.value.integer.step;
++		COPY_CVT(value.integer.min);
++		COPY_CVT(value.integer.max);
++		COPY_CVT(value.integer.step);
+ 		break;
+ 	case SNDRV_CTL_ELEM_TYPE_INTEGER64:
+-		data32.value.integer64.min = data.value.integer64.min;
+-		data32.value.integer64.max = data.value.integer64.max;
+-		data32.value.integer64.step = data.value.integer64.step;
++		if (copy_in_user(&data32->value.integer64,
++				 &data->value.integer64,
++				 sizeof(data->value.integer64)))
++			return -EFAULT;
+ 		break;
+ 	case SNDRV_CTL_ELEM_TYPE_ENUMERATED:
+-		data32.value.enumerated.items = data.value.enumerated.items;
+-		data32.value.enumerated.item = data.value.enumerated.item;
+-		memcpy(data32.value.enumerated.name, data.value.enumerated.name,
+-		       sizeof(data.value.enumerated.name));
++		if (copy_in_user(&data32->value.enumerated,
++				 &data->value.enumerated,
++				 sizeof(data->value.enumerated)))
++			return -EFAULT;
+ 		break;
+ 	default:
+ 		break;
+ 	}
+-	if (copy_to_user((void __user *)arg, &data32, sizeof(data32)))
+-		return -EFAULT;
+ 	return 0;
+ }
+ 
+@@ -250,128 +258,172 @@
+ 
+ 
+ /* hmm, it's so hard to retrieve the value type from the control id.. */
+-static int get_ctl_type(struct file *file, snd_ctl_elem_id_t *id)
++static int get_ctl_type(snd_card_t *card, snd_ctl_elem_id_t *id)
+ {
+-	snd_ctl_file_t *ctl;
+ 	snd_kcontrol_t *kctl;
+ 	snd_ctl_elem_info_t info;
+ 	int err;
+ 
+-	ctl = file->private_data;
+-
+-	down_read(&ctl->card->controls_rwsem);
+-	kctl = snd_ctl_find_id(ctl->card, id);
++	down_read(&card->controls_rwsem);
++	kctl = snd_ctl_find_id(card, id);
+ 	if (! kctl) {
+-		up_read(&ctl->card->controls_rwsem);
++		up_read(&card->controls_rwsem);
+ 		return -ENXIO;
+ 	}
+ 	info.id = *id;
+ 	err = kctl->info(kctl, &info);
+-	up_read(&ctl->card->controls_rwsem);
++	up_read(&card->controls_rwsem);
+ 	if (err >= 0)
+ 		err = info.type;
+ 	return err;
+ }
+ 
++extern int snd_major;
+ 
+ static inline int _snd_ioctl32_ctl_elem_value(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)
+ {
+ 	struct sndrv_ctl_elem_value *data;
+-	struct sndrv_ctl_elem_value32 *data32;
++	struct sndrv_ctl_elem_value32 __user *data32;
++	snd_ctl_file_t *ctl;
+ 	int err, i;
+ 	int type;
+-	mm_segment_t oldseg;
+ 
+-	/* FIXME: check the sane ioctl.. */
++	/* sanity check */
++	if (imajor(file->f_dentry->d_inode) != snd_major ||
++	    SNDRV_MINOR_DEVICE(iminor(file->f_dentry->d_inode)) != SNDRV_MINOR_CONTROL)
++		return -ENOTTY;
+ 
++	if ((ctl = file->private_data) == NULL)
++		return -ENOTTY;
++
++	data32 = compat_ptr(arg);
+ 	data = kmalloc(sizeof(*data), GFP_KERNEL);
+-	data32 = kmalloc(sizeof(*data32), GFP_KERNEL);
+-	if (data == NULL || data32 == NULL) {
+-		err = -ENOMEM;
++	if (data == NULL)
++		return -ENOMEM;
++
++	if (copy_from_user(&data->id, &data32->id, sizeof(data->id))) {
++		err = -EFAULT;
+ 		goto __end;
+ 	}
+-
+-	if (copy_from_user(data32, (void __user *)arg, sizeof(*data32))) {
++	if (__get_user(data->indirect, &data32->indirect)) {
+ 		err = -EFAULT;
+ 		goto __end;
+ 	}
+-	memset(data, 0, sizeof(*data));
+-	data->id = data32->id;
+-	data->indirect = data32->indirect;
+-	if (data->indirect) /* FIXME: this is not correct for long arrays */
+-		data->value.integer.value_ptr = compat_ptr(data32->value.integer.value_ptr);
+-	type = get_ctl_type(file, &data->id);
++	/* FIXME: indirect access is not supported */
++	if (data->indirect) {
++		err = -EINVAL;
++		goto __end;
++	}
++	type = get_ctl_type(ctl->card, &data->id);
+ 	if (type < 0) {
+ 		err = type;
+ 		goto __end;
+ 	}
+-	if (! data->indirect) {
+-		switch (type) {
+-		case SNDRV_CTL_ELEM_TYPE_BOOLEAN:
+-		case SNDRV_CTL_ELEM_TYPE_INTEGER:
+-			for (i = 0; i < 128; i++)
+-				data->value.integer.value[i] = data32->value.integer.value[i];
+-			break;
+-		case SNDRV_CTL_ELEM_TYPE_INTEGER64:
+-			for (i = 0; i < 64; i++)
+-				data->value.integer64.value[i] = data32->value.integer64.value[i];
+-			break;
+-		case SNDRV_CTL_ELEM_TYPE_ENUMERATED:
+-			for (i = 0; i < 128; i++)
+-				data->value.enumerated.item[i] = data32->value.enumerated.item[i];
+-			break;
+-		case SNDRV_CTL_ELEM_TYPE_BYTES:
+-			memcpy(data->value.bytes.data, data32->value.bytes.data,
+-			       sizeof(data->value.bytes.data));
+-			break;
+-		case SNDRV_CTL_ELEM_TYPE_IEC958:
+-			data->value.iec958 = data32->value.iec958;
+-			break;
+-		default:
+-			printk("unknown type %d\n", type);
+-			break;
++
++	switch (type) {
++	case SNDRV_CTL_ELEM_TYPE_BOOLEAN:
++	case SNDRV_CTL_ELEM_TYPE_INTEGER:
++		for (i = 0; i < 128; i++) {
++			int val;
++			if (__get_user(val, &data32->value.integer.value[i])) {
++				err = -EFAULT;
++				goto __end;
++			}
++			data->value.integer.value[i] = val;
++		}
++		break;
++	case SNDRV_CTL_ELEM_TYPE_INTEGER64:
++		if (__copy_from_user(data->value.integer64.value,
++				     data32->value.integer64.value,
++				     sizeof(data->value.integer64.value))) {
++			err = -EFAULT;
++			goto __end;
++		}
++		break;
++	case SNDRV_CTL_ELEM_TYPE_ENUMERATED:
++		if (__copy_from_user(data->value.enumerated.item,
++				     data32->value.enumerated.item,
++				     sizeof(data32->value.enumerated.item))) {
++			err = -EFAULT;
++			goto __end;
++		}
++		break;
++	case SNDRV_CTL_ELEM_TYPE_BYTES:
++		if (__copy_from_user(data->value.bytes.data,
++				     data32->value.bytes.data,
++				     sizeof(data32->value.bytes.data))) {
++			err = -EFAULT;
++			goto __end;
+ 		}
++		break;
++	case SNDRV_CTL_ELEM_TYPE_IEC958:
++		if (__copy_from_user(&data->value.iec958,
++				     &data32->value.iec958,
++				     sizeof(data32->value.iec958))) {
++			err = -EFAULT;
++			goto __end;
++		}
++		break;
++	default:
++		printk(KERN_ERR "snd_ioctl32_ctl_elem_value: unknown type %d\n", type);
++		err = -EINVAL;
++		goto __end;
+ 	}
+ 
+-	oldseg = get_fs();
+-	set_fs(KERNEL_DS);
+-	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)data);
+-	set_fs(oldseg);
++	if (native_ctl == SNDRV_CTL_IOCTL_ELEM_READ)
++		err = snd_ctl_elem_read(ctl->card, data);
++	else
++		err = snd_ctl_elem_write(ctl, data);
+ 	if (err < 0)
+ 		goto __end;
+ 	/* restore info to 32bit */
+-	if (! data->indirect) {
+-		switch (type) {
+-		case SNDRV_CTL_ELEM_TYPE_BOOLEAN:
+-		case SNDRV_CTL_ELEM_TYPE_INTEGER:
+-			for (i = 0; i < 128; i++)
+-				data32->value.integer.value[i] = data->value.integer.value[i];
+-			break;
+-		case SNDRV_CTL_ELEM_TYPE_INTEGER64:
+-			for (i = 0; i < 64; i++)
+-				data32->value.integer64.value[i] = data->value.integer64.value[i];
+-			break;
+-		case SNDRV_CTL_ELEM_TYPE_ENUMERATED:
+-			for (i = 0; i < 128; i++)
+-				data32->value.enumerated.item[i] = data->value.enumerated.item[i];
+-			break;
+-		case SNDRV_CTL_ELEM_TYPE_BYTES:
+-			memcpy(data32->value.bytes.data, data->value.bytes.data,
+-			       sizeof(data->value.bytes.data));
+-			break;
+-		case SNDRV_CTL_ELEM_TYPE_IEC958:
+-			data32->value.iec958 = data->value.iec958;
+-			break;
+-		default:
+-			break;
++	switch (type) {
++	case SNDRV_CTL_ELEM_TYPE_BOOLEAN:
++	case SNDRV_CTL_ELEM_TYPE_INTEGER:
++		for (i = 0; i < 128; i++) {
++			int val;
++			val = data->value.integer.value[i];
++			if (__put_user(val, &data32->value.integer.value[i])) {
++				err = -EFAULT;
++				goto __end;
++			}
+ 		}
++		break;
++	case SNDRV_CTL_ELEM_TYPE_INTEGER64:
++		if (__copy_to_user(data32->value.integer64.value,
++				   data->value.integer64.value,
++				   sizeof(data32->value.integer64.value))) {
++			err = -EFAULT;
++			goto __end;
++		}
++		break;
++	case SNDRV_CTL_ELEM_TYPE_ENUMERATED:
++		if (__copy_to_user(data32->value.enumerated.item,
++				   data->value.enumerated.item,
++				   sizeof(data32->value.enumerated.item))) {
++			err = -EFAULT;
++			goto __end;
++		}
++		break;
++	case SNDRV_CTL_ELEM_TYPE_BYTES:
++		if (__copy_to_user(data32->value.bytes.data,
++				   data->value.bytes.data,
++				   sizeof(data32->value.bytes.data))) {
++			err = -EFAULT;
++			goto __end;
++		}
++		break;
++	case SNDRV_CTL_ELEM_TYPE_IEC958:
++		if (__copy_to_user(&data32->value.iec958,
++				   &data->value.iec958,
++				   sizeof(data32->value.iec958))) {
++			err = -EFAULT;
++			goto __end;
++		}
++		break;
+ 	}
+ 	err = 0;
+-	if (copy_to_user((void __user *)arg, data32, sizeof(*data32)))
+-		err = -EFAULT;
+       __end:
+-      	if (data32)
+-      		kfree(data32);
+ 	if (data)
+ 		kfree(data);
+ 	return err;
+Index: alsa-kernel/core/ioctl32/ioctl32.h
+===================================================================
+RCS file: /suse/tiwai/cvs/alsa/alsa-kernel/core/ioctl32/ioctl32.h,v
+retrieving revision 1.14
+diff -u -r1.14 ioctl32.h
+--- alsa-kernel/core/ioctl32/ioctl32.h	18 Oct 2004 14:31:33 -0000	1.14
++++ alsa-kernel/core/ioctl32/ioctl32.h	25 Nov 2004 10:53:58 -0000
+@@ -28,20 +28,37 @@
+ 
+ #include <linux/compat.h>
+ 
+-#define COPY(x)  (dst->x = src->x)
+-#define CPTR(x)	 (dst->x = compat_ptr(src->x))
++#define COPY(x) \
++	do { \
++		if (copy_in_user(&dst->x, &src->x, sizeof(dst->x))) \
++			return -EFAULT; \
++	} while (0)
++
++#define COPY_ARRAY(x) \
++	do { \
++		if (copy_in_user(dst->x, src->x, sizeof(dst->x))) \
++			return -EFAULT; \
++	} while (0)
++
++#define COPY_CVT(x) \
++	do { \
++		__typeof__(src->x) __val_tmp; \
++		if (get_user(__val_tmp, &src->x) || \
++		    put_user(__val_tmp, &dst->x))\
++			return -EFAULT; \
++	} while (0)
+ 
+ #define convert_from_32(type, dstp, srcp)\
+ {\
+-	struct sndrv_##type *dst = dstp;\
+-	struct sndrv_##type##32 *src = srcp;\
++	struct sndrv_##type __user *dst = dstp;\
++	struct sndrv_##type##32 __user *src = srcp;\
+ 	CVT_##sndrv_##type();\
+ }
+ 
+ #define convert_to_32(type, dstp, srcp)\
+ {\
+-	struct sndrv_##type *src = srcp;\
+-	struct sndrv_##type##32 *dst = dstp;\
++	struct sndrv_##type __user *src = srcp;\
++	struct sndrv_##type##32 __user *dst = dstp;\
+ 	CVT_##sndrv_##type();\
+ }
+ 
+@@ -49,65 +66,19 @@
+ #define DEFINE_ALSA_IOCTL(type) \
+ static inline int _snd_ioctl32_##type(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)\
+ {\
+-	struct sndrv_##type##32 data32;\
+-	struct sndrv_##type data;\
+-	mm_segment_t oldseg;\
++	struct sndrv_##type##32 __user *data32;\
++	struct sndrv_##type __user *data;\
+ 	int err;\
+-	if (copy_from_user(&data32, (void __user *)arg, sizeof(data32)))\
+-		return -EFAULT;\
+-	memset(&data, 0, sizeof(data));\
+-	convert_from_32(type, &data, &data32);\
+-	oldseg = get_fs();\
+-	set_fs(KERNEL_DS);\
+-	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)&data);\
+-	set_fs(oldseg);\
+-	if (err < 0) \
+-		return err;\
+-	if (native_ctl & (_IOC_READ << _IOC_DIRSHIFT)) {\
+-		convert_to_32(type, &data32, &data);\
+-		if (copy_to_user((void __user *)arg, &data32, sizeof(data32)))\
+-			return -EFAULT;\
+-	}\
+-	return 0;\
+-}
+-
+-#define DEFINE_ALSA_IOCTL_BIG(type) \
+-static inline int _snd_ioctl32_##type(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)\
+-{\
+-	struct sndrv_##type##32 *data32;\
+-	struct sndrv_##type *data;\
+-	mm_segment_t oldseg;\
+-	int err;\
+-	data32 = kmalloc(sizeof(*data32), GFP_KERNEL); \
+-	data = kmalloc(sizeof(*data), GFP_KERNEL); \
+-	if (data32 == NULL || data == NULL) { \
+-		err = -ENOMEM; \
+-		goto __end; \
+-	}\
+-	if (copy_from_user(data32, (void __user *)arg, sizeof(*data32))) { \
+-		err = -EFAULT; \
+-		goto __end; \
+-	}\
+-	memset(data, 0, sizeof(*data));\
++	data32 = compat_ptr(arg);\
++	data = compat_alloc_user_space(sizeof(*data));\
+ 	convert_from_32(type, data, data32);\
+-	oldseg = get_fs();\
+-	set_fs(KERNEL_DS);\
+ 	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)data);\
+-	set_fs(oldseg);\
+ 	if (err < 0) \
+-		goto __end;\
+-	err = 0;\
++		return err;\
+ 	if (native_ctl & (_IOC_READ << _IOC_DIRSHIFT)) {\
+ 		convert_to_32(type, data32, data);\
+-		if (copy_to_user((void __user *)arg, data32, sizeof(*data32)))\
+-			err = -EFAULT;\
+ 	}\
+-      __end:\
+-      	if (data)\
+-      		kfree(data);\
+-      	if (data32)\
+-      		kfree(data32);\
+-	return err;\
++	return 0;\
+ }
+ 
+ #define DEFINE_ALSA_IOCTL_ENTRY(name,type,native_ctl) \
+@@ -128,4 +99,12 @@
+ int snd_ioctl32_register(struct ioctl32_mapper *mappers);
+ void snd_ioctl32_unregister(struct ioctl32_mapper *mappers);
+ 
++#if defined(CONFIG_SPARC64) && LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 8)
++#ifdef copy_in_user
++#undef copy_in_user
++#endif
++size_t hack_copy_in_user(void __user *to, const void __user *from, size_t size);
++#define copy_in_user hack_copy_in_user
++#endif
++
+ #endif /* __ALSA_IOCTL32_H */
+Index: alsa-kernel/core/ioctl32/pcm32.c
+===================================================================
+RCS file: /suse/tiwai/cvs/alsa/alsa-kernel/core/ioctl32/pcm32.c,v
+retrieving revision 1.25
+diff -u -r1.25 pcm32.c
+--- alsa-kernel/core/ioctl32/pcm32.c	18 Oct 2004 14:36:00 -0000	1.25
++++ alsa-kernel/core/ioctl32/pcm32.c	29 Nov 2004 11:51:48 -0000
+@@ -24,6 +24,7 @@
+ #include <linux/compat.h>
+ #include <sound/core.h>
+ #include <sound/pcm.h>
++#include <sound/minors.h>
+ #include "ioctl32.h"
+ 
+ 
+@@ -41,23 +42,15 @@
+ 	u32 val;
+ };
+ 
+-#define CVT_sndrv_pcm_sframes_str() { COPY(val); }
+-#define CVT_sndrv_pcm_uframes_str() { COPY(val); }
++#define CVT_sndrv_pcm_sframes_str() { COPY_CVT(val); }
++#define CVT_sndrv_pcm_uframes_str() { COPY_CVT(val); }
+ 
+ 
+-struct sndrv_interval32 {
+-	u32 min, max;
+-	unsigned int openmin:1,
+-		     openmax:1,
+-		     integer:1,
+-		     empty:1;
+-};
+-
+ struct sndrv_pcm_hw_params32 {
+ 	u32 flags;
+ 	struct sndrv_mask masks[SNDRV_PCM_HW_PARAM_LAST_MASK - SNDRV_PCM_HW_PARAM_FIRST_MASK + 1]; /* this must be identical */
+ 	struct sndrv_mask mres[5];	/* reserved masks */
+-	struct sndrv_interval32 intervals[SNDRV_PCM_HW_PARAM_LAST_INTERVAL - SNDRV_PCM_HW_PARAM_FIRST_INTERVAL + 1];
++	struct sndrv_interval intervals[SNDRV_PCM_HW_PARAM_LAST_INTERVAL - SNDRV_PCM_HW_PARAM_FIRST_INTERVAL + 1];
+ 	struct sndrv_interval ires[9];	/* reserved intervals */
+ 	u32 rmask;
+ 	u32 cmask;
+@@ -69,31 +62,6 @@
+ 	unsigned char reserved[64];
+ } __attribute__((packed));
+ 
+-#define numberof(array) ARRAY_SIZE(array)
+-
+-#define CVT_sndrv_pcm_hw_params()\
+-{\
+-	unsigned int i;\
+-	COPY(flags);\
+-	for (i = 0; i < numberof(dst->masks); i++)\
+-		COPY(masks[i]);\
+-	for (i = 0; i < numberof(dst->intervals); i++) {\
+-		COPY(intervals[i].min);\
+-		COPY(intervals[i].max);\
+-		COPY(intervals[i].openmin);\
+-		COPY(intervals[i].openmax);\
+-		COPY(intervals[i].integer);\
+-		COPY(intervals[i].empty);\
+-	}\
+-	COPY(rmask);\
+-	COPY(cmask);\
+-	COPY(info);\
+-	COPY(msbits);\
+-	COPY(rate_num);\
+-	COPY(rate_den);\
+-	COPY(fifo_size);\
+-}
+-
+ struct sndrv_pcm_sw_params32 {
+ 	s32 tstamp_mode;
+ 	u32 period_step;
+@@ -113,13 +81,13 @@
+ 	COPY(tstamp_mode);\
+ 	COPY(period_step);\
+ 	COPY(sleep_min);\
+-	COPY(avail_min);\
+-	COPY(xfer_align);\
+-	COPY(start_threshold);\
+-	COPY(stop_threshold);\
+-	COPY(silence_threshold);\
+-	COPY(silence_size);\
+-	COPY(boundary);\
++	COPY_CVT(avail_min);\
++	COPY_CVT(xfer_align);\
++	COPY_CVT(start_threshold);\
++	COPY_CVT(stop_threshold);\
++	COPY_CVT(silence_threshold);\
++	COPY_CVT(silence_size);\
++	COPY_CVT(boundary);\
+ }
+ 
+ struct sndrv_pcm_channel_info32 {
+@@ -132,7 +100,7 @@
+ #define CVT_sndrv_pcm_channel_info()\
+ {\
+ 	COPY(channel);\
+-	COPY(offset);\
++	COPY_CVT(offset);\
+ 	COPY(first);\
+ 	COPY(step);\
+ }
+@@ -154,16 +122,16 @@
+ #define CVT_sndrv_pcm_status()\
+ {\
+ 	COPY(state);\
+-	COPY(trigger_tstamp.tv_sec);\
+-	COPY(trigger_tstamp.tv_nsec);\
+-	COPY(tstamp.tv_sec);\
+-	COPY(tstamp.tv_nsec);\
+-	COPY(appl_ptr);\
+-	COPY(hw_ptr);\
+-	COPY(delay);\
+-	COPY(avail);\
+-	COPY(avail_max);\
+-	COPY(overrange);\
++	COPY_CVT(trigger_tstamp.tv_sec);\
++	COPY_CVT(trigger_tstamp.tv_nsec);\
++	COPY_CVT(tstamp.tv_sec);\
++	COPY_CVT(tstamp.tv_nsec);\
++	COPY_CVT(appl_ptr);\
++	COPY_CVT(hw_ptr);\
++	COPY_CVT(delay);\
++	COPY_CVT(avail);\
++	COPY_CVT(avail_max);\
++	COPY_CVT(overrange);\
+ 	COPY(suspended_state);\
+ }
+ 
+@@ -173,61 +141,73 @@
+ DEFINE_ALSA_IOCTL(pcm_channel_info);
+ DEFINE_ALSA_IOCTL(pcm_status);
+ 
+-/* recalcuate the boundary within 32bit */
+-static void recalculate_boundary(struct file *file)
++/* sanity device check */
++extern int snd_major;
++static int sanity_check_pcm(struct file *file)
+ {
+-	snd_pcm_file_t *pcm_file;
+-	snd_pcm_substream_t *substream;
+-	snd_pcm_runtime_t *runtime;
++	unsigned short minor;
++	if (imajor(file->f_dentry->d_inode) != snd_major)
++		return -ENOTTY;
++	minor = iminor(file->f_dentry->d_inode);
++	if (minor >= 256 || 
++	    minor % SNDRV_MINOR_DEVICES < SNDRV_MINOR_PCM_PLAYBACK)
++		return -ENOTTY;
++	return 0;
++}
+ 
+-	/* FIXME: need to check whether fop->ioctl is sane */
+-	if (! (pcm_file = file->private_data))
+-		return;
+-	if (! (substream = pcm_file->substream))
+-		return;
+-	if (! (runtime = substream->runtime))
++/* recalcuate the boundary within 32bit */
++static void recalculate_boundary(snd_pcm_runtime_t *runtime)
++{
++	if (! runtime->buffer_size)
+ 		return;
+ 	runtime->boundary = runtime->buffer_size;
+ 	while (runtime->boundary * 2 <= 0x7fffffffUL - runtime->buffer_size)
+ 		runtime->boundary *= 2;
+ }
+ 
+-static inline int _snd_ioctl32_pcm_hw_params(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)
++/* both for HW_PARAMS and HW_REFINE */
++static int _snd_ioctl32_pcm_hw_params(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)
+ {
+-	struct sndrv_pcm_hw_params32 *data32;
++	struct sndrv_pcm_hw_params32 __user *data32;
+ 	struct sndrv_pcm_hw_params *data;
+-	mm_segment_t oldseg;
++	snd_pcm_file_t *pcm_file;
++	snd_pcm_substream_t *substream;
++	snd_pcm_runtime_t *runtime;
+ 	int err;
+ 
+-	data32 = kmalloc(sizeof(*data32), GFP_KERNEL);
++	if (sanity_check_pcm(file))
++		return -ENOTTY;
++	if (! (pcm_file = file->private_data))
++		return -ENOTTY;
++	if (! (substream = pcm_file->substream))
++		return -ENOTTY;
++	if (! (runtime = substream->runtime))
++		return -ENOTTY;
++
++	data32 = compat_ptr(arg);
+ 	data = kmalloc(sizeof(*data), GFP_KERNEL);
+-	if (data32 == NULL || data == NULL) {
+-		err = -ENOMEM;
+-		goto __end;
+-	}
+-	if (copy_from_user(data32, (void __user *)arg, sizeof(*data32))) {
++	if (data == NULL)
++		return -ENOMEM;
++	if (copy_from_user(data, data32, sizeof(*data32))) {
+ 		err = -EFAULT;
+-		goto __end;
++		goto error;
+ 	}
+-	memset(data, 0, sizeof(*data));
+-	convert_from_32(pcm_hw_params, data, data32);
+-	oldseg = get_fs();
+-	set_fs(KERNEL_DS);
+-	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)data);
+-	set_fs(oldseg);
++	if (native_ctl == SNDRV_PCM_IOCTL_HW_REFINE)
++		err = snd_pcm_hw_refine(substream, data);
++	else
++		err = snd_pcm_hw_params(substream, data);
+ 	if (err < 0)
+-		goto __end;
+-	err = 0;
+-	convert_to_32(pcm_hw_params, data32, data);
+-	if (copy_to_user((void __user *)arg, data32, sizeof(*data32)))
++		goto error;
++	if (copy_to_user(data32, data, sizeof(*data32)) ||
++	    __put_user((u32)data->fifo_size, &data32->fifo_size)) {
+ 		err = -EFAULT;
+-	else
+-		recalculate_boundary(file);
+-      __end:
+-      	if (data)
+-      		kfree(data);
+-      	if (data32)
+-      		kfree(data32);
++		goto error;
++	}
++
++	if (native_ctl == SNDRV_PCM_IOCTL_HW_PARAMS)
++		recalculate_boundary(runtime);
++ error:
++	kfree(data);
+ 	return err;
+ }
+ 
+@@ -240,27 +220,27 @@
+ 	u32 frames;
+ } __attribute__((packed));
+ 
+-static inline int _snd_ioctl32_xferi(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)
++static int _snd_ioctl32_xferi(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)
+ {
+ 	struct sndrv_xferi32 data32;
+-	struct sndrv_xferi data;
+-	mm_segment_t oldseg;
++	struct sndrv_xferi __user *data;
++	snd_pcm_sframes_t result;
+ 	int err;
+ 
+ 	if (copy_from_user(&data32, (void __user *)arg, sizeof(data32)))
+ 		return -EFAULT;
+-	memset(&data, 0, sizeof(data));
+-	data.result = data32.result;
+-	data.buf = compat_ptr(data32.buf);
+-	data.frames = data32.frames;
+-	oldseg = get_fs();
+-	set_fs(KERNEL_DS);
+-	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)&data);
+-	set_fs(oldseg);
++	data = compat_alloc_user_space(sizeof(*data));
++	if (put_user((snd_pcm_sframes_t)data32.result, &data->result) ||
++	    __put_user(compat_ptr(data32.buf), &data->buf) ||
++	    __put_user((snd_pcm_uframes_t)data32.frames, &data->frames))
++		return -EFAULT;
++	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)data);
+ 	if (err < 0)
+ 		return err;
+ 	/* copy the result */
+-	data32.result = data.result;
++	if (__get_user(result, &data->result))
++		return -EFAULT;
++	data32.result = result;
+ 	if (copy_to_user((void __user *)arg, &data32, sizeof(data32)))
+ 		return -EFAULT;
+ 	return 0;
+@@ -280,22 +260,24 @@
+  * handler there expands again the same 128 pointers on stack, so it is better
+  * to handle the function (calling pcm_readv/writev) directly in this handler.
+  */
+-static inline int _snd_ioctl32_xfern(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)
++static int _snd_ioctl32_xfern(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)
+ {
+ 	snd_pcm_file_t *pcm_file;
+ 	snd_pcm_substream_t *substream;
++	struct sndrv_xfern32 __user *srcptr = compat_ptr(arg);
+ 	struct sndrv_xfern32 data32;
+-	struct sndrv_xfern32 __user *srcptr = (void __user *)arg;
+-	void __user **bufs = NULL;
++	void __user **bufs;
+ 	int err = 0, ch, i;
+ 	u32 __user *bufptr;
+-	mm_segment_t oldseg;
+-
+-	/* FIXME: need to check whether fop->ioctl is sane */
+ 
+-	pcm_file = file->private_data;
+-	substream = pcm_file->substream;
+-	snd_assert(substream != NULL && substream->runtime, return -ENXIO);
++	if (sanity_check_pcm(file))
++		return -ENOTTY;
++	if (! (pcm_file = file->private_data))
++		return -ENOTTY;
++	if (! (substream = pcm_file->substream))
++		return -ENOTTY;
++	if (! substream->runtime)
++		return -ENOTTY;
+ 
+ 	/* check validty of the command */
+ 	switch (native_ctl) {
+@@ -312,22 +294,21 @@
+ 	}
+ 	if ((ch = substream->runtime->channels) > 128)
+ 		return -EINVAL;
+-	if (get_user(data32.frames, &srcptr->frames))
++	if (copy_from_user(&data32, (void __user *)arg, sizeof(data32)))
+ 		return -EFAULT;
+-	__get_user(data32.bufs, &srcptr->bufs);
+ 	bufptr = compat_ptr(data32.bufs);
+-	bufs = kmalloc(sizeof(void *) * 128, GFP_KERNEL);
++	bufs = kmalloc(sizeof(void __user *) * ch, GFP_KERNEL);
+ 	if (bufs == NULL)
+ 		return -ENOMEM;
+ 	for (i = 0; i < ch; i++) {
+ 		u32 ptr;
+-		if (get_user(ptr, bufptr))
++		if (get_user(ptr, bufptr)) {
++			kfree(bufs);
+ 			return -EFAULT;
++		}
+ 		bufs[ch] = compat_ptr(ptr);
+ 		bufptr++;
+ 	}
+-	oldseg = get_fs();
+-	set_fs(KERNEL_DS);
+ 	switch (native_ctl) {
+ 	case SNDRV_PCM_IOCTL_WRITEN_FRAMES:
+ 		err = snd_pcm_lib_writev(substream, bufs, data32.frames);
+@@ -336,109 +317,15 @@
+ 		err = snd_pcm_lib_readv(substream, bufs, data32.frames);
+ 		break;
+ 	}
+-	set_fs(oldseg);
+ 	if (err >= 0) {
+ 		if (put_user(err, &srcptr->result))
+ 			err = -EFAULT;
+ 	}
+ 	kfree(bufs);
+-	return 0;
+-}
+-
+-
+-struct sndrv_pcm_hw_params_old32 {
+-	u32 flags;
+-	u32 masks[SNDRV_PCM_HW_PARAM_SUBFORMAT -
+-			   SNDRV_PCM_HW_PARAM_ACCESS + 1];
+-	struct sndrv_interval32 intervals[SNDRV_PCM_HW_PARAM_TICK_TIME -
+-					SNDRV_PCM_HW_PARAM_SAMPLE_BITS + 1];
+-	u32 rmask;
+-	u32 cmask;
+-	u32 info;
+-	u32 msbits;
+-	u32 rate_num;
+-	u32 rate_den;
+-	u32 fifo_size;
+-	unsigned char reserved[64];
+-} __attribute__((packed));
+-
+-#define __OLD_TO_NEW_MASK(x) ((x&7)|((x&0x07fffff8)<<5))
+-#define __NEW_TO_OLD_MASK(x) ((x&7)|((x&0xffffff00)>>5))
+-
+-static void snd_pcm_hw_convert_from_old_params(snd_pcm_hw_params_t *params, struct sndrv_pcm_hw_params_old32 *oparams)
+-{
+-	unsigned int i;
+-
+-	memset(params, 0, sizeof(*params));
+-	params->flags = oparams->flags;
+-	for (i = 0; i < ARRAY_SIZE(oparams->masks); i++)
+-		params->masks[i].bits[0] = oparams->masks[i];
+-	memcpy(params->intervals, oparams->intervals, sizeof(oparams->intervals));
+-	params->rmask = __OLD_TO_NEW_MASK(oparams->rmask);
+-	params->cmask = __OLD_TO_NEW_MASK(oparams->cmask);
+-	params->info = oparams->info;
+-	params->msbits = oparams->msbits;
+-	params->rate_num = oparams->rate_num;
+-	params->rate_den = oparams->rate_den;
+-	params->fifo_size = oparams->fifo_size;
+-}
+-
+-static void snd_pcm_hw_convert_to_old_params(struct sndrv_pcm_hw_params_old32 *oparams, snd_pcm_hw_params_t *params)
+-{
+-	unsigned int i;
+-
+-	memset(oparams, 0, sizeof(*oparams));
+-	oparams->flags = params->flags;
+-	for (i = 0; i < ARRAY_SIZE(oparams->masks); i++)
+-		oparams->masks[i] = params->masks[i].bits[0];
+-	memcpy(oparams->intervals, params->intervals, sizeof(oparams->intervals));
+-	oparams->rmask = __NEW_TO_OLD_MASK(params->rmask);
+-	oparams->cmask = __NEW_TO_OLD_MASK(params->cmask);
+-	oparams->info = params->info;
+-	oparams->msbits = params->msbits;
+-	oparams->rate_num = params->rate_num;
+-	oparams->rate_den = params->rate_den;
+-	oparams->fifo_size = params->fifo_size;
+-}
+-
+-static inline int _snd_ioctl32_pcm_hw_params_old(unsigned int fd, unsigned int cmd, unsigned long arg, struct file *file, unsigned int native_ctl)
+-{
+-	struct sndrv_pcm_hw_params_old32 *data32;
+-	struct sndrv_pcm_hw_params *data;
+-	mm_segment_t oldseg;
+-	int err;
+-
+-	data32 = kcalloc(1, sizeof(*data32), GFP_KERNEL);
+-	data = kcalloc(1, sizeof(*data), GFP_KERNEL);
+-	if (data32 == NULL || data == NULL) {
+-		err = -ENOMEM;
+-		goto __end;
+-	}
+-	if (copy_from_user(data32, (void __user *)arg, sizeof(*data32))) {
+-		err = -EFAULT;
+-		goto __end;
+-	}
+-	snd_pcm_hw_convert_from_old_params(data, data32);
+-	oldseg = get_fs();
+-	set_fs(KERNEL_DS);
+-	err = file->f_op->ioctl(file->f_dentry->d_inode, file, native_ctl, (unsigned long)data);
+-	set_fs(oldseg);
+-	if (err < 0)
+-		goto __end;
+-	snd_pcm_hw_convert_to_old_params(data32, data);
+-	err = 0;
+-	if (copy_to_user((void __user *)arg, data32, sizeof(*data32)))
+-		err = -EFAULT;
+-	else
+-		recalculate_boundary(file);
+-      __end:
+-      	if (data)
+-      		kfree(data);
+-      	if (data32)
+-      		kfree(data32);
+ 	return err;
+ }
+ 
++
+ struct sndrv_pcm_mmap_status32 {
+ 	s32 state;
+ 	s32 pad1;
+@@ -469,15 +356,15 @@
+ 	COPY(flags);\
+ 	COPY(s.status.state);\
+ 	COPY(s.status.pad1);\
+-	COPY(s.status.hw_ptr);\
+-	COPY(s.status.tstamp.tv_sec);\
+-	COPY(s.status.tstamp.tv_nsec);\
++	COPY_CVT(s.status.hw_ptr);\
++	COPY_CVT(s.status.tstamp.tv_sec);\
++	COPY_CVT(s.status.tstamp.tv_nsec);\
+ 	COPY(s.status.suspended_state);\
+-	COPY(c.control.appl_ptr);\
+-	COPY(c.control.avail_min);\
++	COPY_CVT(c.control.appl_ptr);\
++	COPY_CVT(c.control.avail_min);\
+ }
+ 
+-DEFINE_ALSA_IOCTL_BIG(pcm_sync_ptr);
++DEFINE_ALSA_IOCTL(pcm_sync_ptr);
+ 
+ /*
+  */
+@@ -485,8 +372,6 @@
+ DEFINE_ALSA_IOCTL_ENTRY(pcm_hw_refine, pcm_hw_params, SNDRV_PCM_IOCTL_HW_REFINE);
+ DEFINE_ALSA_IOCTL_ENTRY(pcm_hw_params, pcm_hw_params, SNDRV_PCM_IOCTL_HW_PARAMS);
+ DEFINE_ALSA_IOCTL_ENTRY(pcm_sw_params, pcm_sw_params, SNDRV_PCM_IOCTL_SW_PARAMS);
+-DEFINE_ALSA_IOCTL_ENTRY(pcm_hw_refine_old, pcm_hw_params_old, SNDRV_PCM_IOCTL_HW_REFINE);
+-DEFINE_ALSA_IOCTL_ENTRY(pcm_hw_params_old, pcm_hw_params_old, SNDRV_PCM_IOCTL_HW_PARAMS);
+ DEFINE_ALSA_IOCTL_ENTRY(pcm_status, pcm_status, SNDRV_PCM_IOCTL_STATUS);
+ DEFINE_ALSA_IOCTL_ENTRY(pcm_delay, pcm_sframes_str, SNDRV_PCM_IOCTL_DELAY);
+ DEFINE_ALSA_IOCTL_ENTRY(pcm_channel_info, pcm_channel_info, SNDRV_PCM_IOCTL_CHANNEL_INFO);
+@@ -538,8 +423,6 @@
+ 	SNDRV_PCM_IOCTL_READI_FRAMES32 = _IOR('A', 0x51, struct sndrv_xferi32),
+ 	SNDRV_PCM_IOCTL_WRITEN_FRAMES32 = _IOW('A', 0x52, struct sndrv_xfern32),
+ 	SNDRV_PCM_IOCTL_READN_FRAMES32 = _IOR('A', 0x53, struct sndrv_xfern32),
+-	SNDRV_PCM_IOCTL_HW_REFINE_OLD32 = _IOWR('A', 0x10, struct sndrv_pcm_hw_params_old32),
+-	SNDRV_PCM_IOCTL_HW_PARAMS_OLD32 = _IOWR('A', 0x11, struct sndrv_pcm_hw_params_old32),
+ 	SNDRV_PCM_IOCTL_SYNC_PTR32 = _IOWR('A', 0x23, struct sndrv_pcm_sync_ptr32),
+ 
+ };
+@@ -551,8 +434,6 @@
+ 	MAP_COMPAT(SNDRV_PCM_IOCTL_TSTAMP),
+ 	{ SNDRV_PCM_IOCTL_HW_REFINE32, AP(pcm_hw_refine) },
+ 	{ SNDRV_PCM_IOCTL_HW_PARAMS32, AP(pcm_hw_params) },
+-	{ SNDRV_PCM_IOCTL_HW_REFINE_OLD32, AP(pcm_hw_refine_old) },
+-	{ SNDRV_PCM_IOCTL_HW_PARAMS_OLD32, AP(pcm_hw_params_old) },
+ 	MAP_COMPAT(SNDRV_PCM_IOCTL_HW_FREE),
+ 	{ SNDRV_PCM_IOCTL_SW_PARAMS32, AP(pcm_sw_params) },
+ 	{ SNDRV_PCM_IOCTL_STATUS32, AP(pcm_status) },
+Index: alsa-kernel/core/ioctl32/rawmidi32.c
+===================================================================
+RCS file: /suse/tiwai/cvs/alsa/alsa-kernel/core/ioctl32/rawmidi32.c,v
+retrieving revision 1.7
+diff -u -r1.7 rawmidi32.c
+--- alsa-kernel/core/ioctl32/rawmidi32.c	18 Jun 2003 10:34:08 -0000	1.7
++++ alsa-kernel/core/ioctl32/rawmidi32.c	23 Nov 2004 14:21:11 -0000
+@@ -38,9 +38,11 @@
+ #define CVT_sndrv_rawmidi_params()\
+ {\
+ 	COPY(stream);\
+-	COPY(buffer_size);\
+-	COPY(avail_min);\
+-	COPY(no_active_sensing);\
++	COPY_CVT(buffer_size);\
++	COPY_CVT(avail_min);\
++	if (copy_in_user(((size_t __user *)&dst->avail_min + 1),\
++			 ((size_t __user *)&src->avail_min + 1), 4)) \
++		return -EFAULT;\
+ }
+ 
+ struct sndrv_rawmidi_status32 {
+@@ -54,10 +56,10 @@
+ #define CVT_sndrv_rawmidi_status()\
+ {\
+ 	COPY(stream);\
+-	COPY(tstamp.tv_sec);\
+-	COPY(tstamp.tv_nsec);\
+-	COPY(avail);\
+-	COPY(xruns);\
++	COPY_CVT(tstamp.tv_sec);\
++	COPY_CVT(tstamp.tv_nsec);\
++	COPY_CVT(avail);\
++	COPY_CVT(xruns);\
+ }
+ 
+ DEFINE_ALSA_IOCTL(rawmidi_params);
+Index: alsa-kernel/core/ioctl32/seq32.c
+===================================================================
+RCS file: /suse/tiwai/cvs/alsa/alsa-kernel/core/ioctl32/seq32.c,v
+retrieving revision 1.8
+diff -u -r1.8 seq32.c
+--- alsa-kernel/core/ioctl32/seq32.c	6 Feb 2003 17:58:36 -0000	1.8
++++ alsa-kernel/core/ioctl32/seq32.c	23 Nov 2004 14:23:44 -0000
+@@ -42,13 +42,14 @@
+ 
+ 	u32 kernel;			/* reserved for kernel use (must be NULL) */
+ 	u32 flags;		/* misc. conditioning */
+-	char reserved[60];		/* for future use */
++	unsigned char time_queue;	/* queue # for timestamping */
++	char reserved[59];		/* for future use */
+ };
+ 
+ #define CVT_sndrv_seq_port_info()\
+ {\
+ 	COPY(addr);\
+-	memcpy(dst->name, src->name, sizeof(dst->name));\
++	COPY_ARRAY(name);\
+ 	COPY(capability);\
+ 	COPY(type);\
+ 	COPY(midi_channels);\
+@@ -57,6 +58,7 @@
+ 	COPY(read_use);\
+ 	COPY(write_use);\
+ 	COPY(flags);\
++	COPY(time_queue);\
+ }
+ 
+ DEFINE_ALSA_IOCTL(seq_port_info);
+Index: alsa-kernel/core/ioctl32/timer32.c
+===================================================================
+RCS file: /suse/tiwai/cvs/alsa/alsa-kernel/core/ioctl32/timer32.c,v
+retrieving revision 1.8
+diff -u -r1.8 timer32.c
+--- alsa-kernel/core/ioctl32/timer32.c	28 Mar 2004 15:57:48 -0000	1.8
++++ alsa-kernel/core/ioctl32/timer32.c	23 Nov 2004 14:12:47 -0000
+@@ -41,9 +41,9 @@
+ {\
+ 	COPY(flags);\
+ 	COPY(card);\
+-	memcpy(dst->id, src->id, sizeof(src->id));\
+-	memcpy(dst->name, src->name, sizeof(src->name));\
+-	COPY(resolution);\
++	COPY_ARRAY(id);\
++	COPY_ARRAY(name);\
++	COPY_CVT(resolution);\
+ }
+ 
+ struct sndrv_timer_status32 {
+@@ -57,8 +57,8 @@
+ 
+ #define CVT_sndrv_timer_status()\
+ {\
+-	COPY(tstamp.tv_sec);\
+-	COPY(tstamp.tv_nsec);\
++	COPY_CVT(tstamp.tv_sec);\
++	COPY_CVT(tstamp.tv_nsec);\
+ 	COPY(resolution);\
+ 	COPY(lost);\
+ 	COPY(overrun);\
+Index: alsa-kernel/include/control.h
+===================================================================
+RCS file: /suse/tiwai/cvs/alsa/alsa-kernel/include/control.h,v
+retrieving revision 1.9
+diff -u -r1.9 control.h
+--- alsa-kernel/include/control.h	29 Jun 2004 16:01:15 -0000	1.9
++++ alsa-kernel/include/control.h	26 Nov 2004 14:06:21 -0000
+@@ -122,6 +122,10 @@
+ int snd_ctl_register_ioctl(snd_kctl_ioctl_func_t fcn);
+ int snd_ctl_unregister_ioctl(snd_kctl_ioctl_func_t fcn);
+ 
++/* for ioctl32 */
++int snd_ctl_elem_read(snd_card_t *card, snd_ctl_elem_value_t *control);
++int snd_ctl_elem_write(snd_ctl_file_t *file, snd_ctl_elem_value_t *control);
++
+ static inline unsigned int snd_ctl_get_ioffnum(snd_kcontrol_t *kctl, snd_ctl_elem_id_t *id)
+ {
+ 	return id->numid - kctl->id.numid;
+Index: alsa-kernel/include/pcm.h
+===================================================================
+RCS file: /suse/tiwai/cvs/alsa/alsa-kernel/include/pcm.h,v
+retrieving revision 1.51
+diff -u -r1.51 pcm.h
+--- alsa-kernel/include/pcm.h	8 Nov 2004 11:39:35 -0000	1.51
++++ alsa-kernel/include/pcm.h	26 Nov 2004 13:41:20 -0000
+@@ -810,6 +810,7 @@
+ int snd_pcm_hw_params_choose(snd_pcm_substream_t *substream, snd_pcm_hw_params_t *params);
+ 
+ int snd_pcm_hw_refine(snd_pcm_substream_t *substream, snd_pcm_hw_params_t *params);
++int snd_pcm_hw_params(snd_pcm_substream_t *substream, snd_pcm_hw_params_t *params);
+ 
+ int snd_pcm_hw_constraints_init(snd_pcm_substream_t *substream);
+ int snd_pcm_hw_constraints_complete(snd_pcm_substream_t *substream);

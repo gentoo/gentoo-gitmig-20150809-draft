@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r1.ebuild,v 1.8 2004/11/29 13:57:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r2.ebuild,v 1.1 2004/11/29 13:57:34 eradicator Exp $
 
 IUSE="oss doc"
 
@@ -15,16 +15,18 @@ SRC_URI="mirror://alsaproject/driver/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
+#KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
+# 1.0.7-r2 just has more ioctl32 fixes from upstream cvs
+KEYWORDS="~amd64 ~mips ~sparc"
 
 RDEPEND="virtual/modutils
 	 ~media-sound/alsa-headers-${PV}"
 
 DEPEND="${RDEPEND}
-	sys-devel/patch
-	virtual/linux-sources
-	>=sys-devel/autoconf-2.50
-	sys-apps/debianutils"
+		sys-devel/patch
+		virtual/linux-sources
+		>=sys-devel/autoconf-2.50
+		sys-apps/debianutils"
 
 PROVIDE="virtual/alsa"
 
@@ -33,7 +35,6 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.0.5-devfix.patch
-	epatch ${FILESDIR}/${PN}-1.0.5a-cs46xx-passthrough.patch
 
 	[ "${PROFILE_ARCH}" == "xbox" ] && \
 		epatch ${FILESDIR}/${PN}-1.0.5a-xbox-ac97.patch
@@ -41,7 +42,7 @@ src_unpack() {
 	convert_to_m ${S}/Makefile
 
 	# Fix ioctl32 support
-	epatch ${FILESDIR}/${P}-ioctl32.patch-r1
+	epatch ${FILESDIR}/${P}-ioctl32.patch-r2
 
 	# Fix audigy 7.1 detection on some cards... bug #72433
 	epatch ${FILESDIR}/${P}-audigy71.patch

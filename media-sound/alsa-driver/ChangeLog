@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.113 2004/11/27 12:17:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.114 2004/11/29 13:57:34 eradicator Exp $
+
+*alsa-driver-1.0.7-r2 (29 Nov 2004)
+
+  29 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/alsa-driver-1.0.7-ioctl32.patch-r2, alsa-driver-1.0.7-r1.ebuild,
+  +alsa-driver-1.0.7-r2.ebuild:
+  Updated the ioctl32 patch to match what has gone into cvs ustream.  We also
+  no longer default to the new dsp for cs46xx.  To use it, set
+  ALSA_CARDS="cs46xx-new-dsp"
 
   27 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   alsa-driver-1.0.7-r1.ebuild:
