@@ -1,6 +1,20 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.47 2004/09/03 21:03:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.48 2004/09/21 00:13:46 gregkh Exp $
+
+*hotplug-20040920 (20 Sep 2004)
+
+  20 Sep 2004; Greg Kroah-Hartman <gregkh@gentoo.org> +files/hotplug.rc.empty,
+  +hotplug-20040920.ebuild:
+  Oh yeah, /etc/init.d/hotplug doesn't do anything anymore.
+  Use the coldplug package for loading modules at boot time
+  based on the devices in your system.
+
+*hotplug-20040920 (20 Sep 2004)
+
+  20 Sep 2004; Greg Kroah-Hartman <gregkh@gentoo.org> +files/hotplug.rc.empty,
+  +hotplug-20040920.ebuild:
+  new upstream release.  Fixes lots of Gentoo reported bugs.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   hotplug-20040401.ebuild:

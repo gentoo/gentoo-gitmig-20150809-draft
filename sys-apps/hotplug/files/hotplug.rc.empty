@@ -1,0 +1,27 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/files/hotplug.rc.empty,v 1.1 2004/09/21 00:13:47 gregkh Exp $
+
+#
+# nothing here anymore. Please use the coldplug package if you really want to
+# load modules for devices that are discovered by your kernel before init runs.
+#
+# However, please realize that if you have any problems, the developers
+# recommend just using the modules.autoload functionality to handle this in a
+# much simpler manner.
+#
+# Comments, flames, and fine beer should be directed at gregkh@gentoo.org
+#
+
+depend() {
+	need modules
+}
+
+start () {
+	# just verify that people build their kernel with hotplug support.
+	if [ ! -f /proc/sys/kernel/hotplug ] ; then
+		eerror "CONFIG_HOTPLUG not enabled for this kernel!"
+		return 1
+	fi
+}
