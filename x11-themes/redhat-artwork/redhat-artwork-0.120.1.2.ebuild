@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.120.1.2.ebuild,v 1.8 2005/04/03 21:35:38 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.120.1.2.ebuild,v 1.9 2005/04/04 12:50:58 greg_g Exp $
 
 inherit eutils rpm libtool versionator kde-functions
 
@@ -101,7 +101,7 @@ src_compile() {
 	autoreconf --force --install || die "autoreconf failed"
 
 	# paths have to be fixed for kde
-	if ! use kde; then
+	if use kde; then
 		# Fix paths...
 		_replace "/usr/lib/qt3"          "${QTDIR}"
 		_replace '${libdir}/qt3'         "${QTDIR}"
@@ -109,7 +109,6 @@ src_compile() {
 		_replace "/usr/lib/kde3"         "${KDEDIR}/lib"
 		_replace '${libdir}/kde3'        "${KDEDIR}/lib"
 		_replace "/usr/lib/kwin.la"      "${KDEDIR}/lib/kwin.la"
-		chmod +x configure
 	fi
 
 	# fix iconrc
