@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.9 2004/09/23 22:43:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.10 2004/10/24 13:26:25 lu_zero Exp $
 
 inherit eutils wxwidgets
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/bochs/${P}.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc alpha ~sparc ~amd64"
-IUSE="sdl wxwindows readline gtk2"
+IUSE="sdl wxwindows readline gtk2 debugger"
 
 DEPEND="virtual/libc
 	virtual/x11
@@ -43,9 +43,14 @@ src_compile() {
 	[ "$ARCH" == "x86" ] \
 		&& myconf="--enable-idle-hack --enable-fast-function-calls"
 	myconf="${myconf} `use_with sdl`"
-	use wxwindows && myconf="${myconf} --with-gtk --with-wx"
-	use wxwindows || myconf="${myconf} --without-gtk --without-wx"
 	myconf="${myconf} `use_enable readline`"
+	use wxwindows && \
+		myconf="${myconf} --with-gtk --with-wx"
+	use wxwindows || \
+		myconf="${myconf} --without-gtk --without-wx"
+	use bochs-debugger && \
+		myconf="$myconf --enable-debugger --enable-disasm
+	--enable-x86-debugger"
 
 	./configure \
 		--enable-fpu --enable-cdrom --enable-control-panel \

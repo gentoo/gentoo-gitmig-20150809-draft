@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.28 2004/09/23 22:43:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.29 2004/10/24 13:26:25 lu_zero Exp $
+
+  24 Oct 2004; Luca Barbato <lu_zero@gentoo.org> bochs-2.1.1.ebuild:
+  Added debugger useflag, should address the bug #25227
 
   24 Sep 2004; Luca Barbato <lu_zero@gentoo.org> :
   Start using wxwidgets eclass
