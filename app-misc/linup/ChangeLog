@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/linup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linup/ChangeLog,v 1.2 2003/02/12 05:03:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linup/ChangeLog,v 1.3 2003/07/01 21:44:08 mholzer Exp $
+
+*linup-1.1.1 (01 Jul 2003)
+
+  01 Jul 2003; Martin Holzer <mholzer@gentoo.org> linup-1.1.1.ebuild:
+  Version bumped. Closes #21929.
 
 *linup-1.1.0 (25 Oct 2002)
 
