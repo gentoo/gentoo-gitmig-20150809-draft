@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629.ebuild,v 1.7 2004/11/26 01:47:14 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629.ebuild,v 1.8 2004/11/28 09:52:13 johnm Exp $
 
 inherit eutils linux-mod
 
@@ -25,7 +25,6 @@ fi
 
 S="${WORKDIR}/${NV_PACKAGE}-${PKG_V}/usr/src/nv"
 
-# The slot needs to be set to $KV to prevent unmerges of modules for other kernels.
 LICENSE="NVIDIA"
 SLOT="0"
 KEYWORDS="-* ~x86 ~amd64"
@@ -36,11 +35,11 @@ DEPEND="virtual/linux-sources"
 export _POSIX2_VERSION="199209"
 
 MODULE_NAMES="nvidia(video:${S})"
-BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR}"
+BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR} SYSOUT=${KV_OUT_DIR}"
 
 mtrr_check() {
 	ebegin "Checking for MTRR support"
-	getfilevar_isset CONFIG_MTRR ${KV_DIR}/.config
+	getfilevar_isset CONFIG_MTRR ${KV_OUT_DIR}/.config
 	eend $?
 
 	if [ "$?" != 0 ]
