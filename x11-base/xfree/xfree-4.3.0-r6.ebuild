@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.3 2004/03/15 00:16:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.4 2004/03/15 00:26:52 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -19,46 +19,18 @@
 # 		battousai?: Backport IGP stuff from DRI CVS?
 # 		spy: Use all freedesktop.org xlibs
 
+inherit eutils flag-o-matic gcc xfree
+
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
 RESTRICT="nostrip"
 
 # IUSE="sse mmx 3dnow" were disabled in favor of autodetection
 IUSE="3dfx truetype nls cjk doc ipv6 debug static sdk gatos no-pam pie"
-
-filter-flags "-funroll-loops"
-
-ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O1 -O2 -O3 -pipe"
-
-# Recently there has been a lot of stability problem in Gentoo-land.  Many
-# things can be the cause to this, but I believe that it is due to gcc3
-# still having issues with optimizations, or with it not filtering bad
-# combinations (protecting the user maybe from themselves) yet.
-#
-# This can clearly be seen in large builds like glibc, where too aggressive
-# CFLAGS cause the tests to fail miserbly.
-#
-# Quote from Nick Jones <carpaski@gentoo.org>, who in my opinion
-# knows what he is talking about:
-#
-#   People really shouldn't force code-specific options on... It's a
-#   bad idea. The -march options aren't just to look pretty. They enable
-#   options that are sensible (and include sse,mmx,3dnow when apropriate).
-#
-# The next command strips CFLAGS and CXXFLAGS from nearly all flags.  If
-# you do not like it, comment it, but do not bugreport if you run into
-# problems.
-#
-# <azarah@gentoo.org> (13 Oct 2002)
-strip-flags
-
-# Are we using a snapshot ?
-USE_SNAPSHOT="no"
+IUSE_INPUT_DEVICES="synaptics wacom"
 
 PATCH_VER="2.1.26.14"
 FILES_VER="0.1.5"
-# Whether to drop in external render, xrender and xft from freedesktop.org
-EXT_XFT_XRENDER="yes"
 RENDER_VER="0.8"
 XRENDER_VER="0.8.4"
 XFT_VER="2.1.5"
@@ -139,9 +111,11 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 # unzip - needed for savage driver (version 1.1.27t)
 # x11-libs/xft -- blocked because of interference with xfree's
 
-PDEPEND="3dfx? ( >=media-libs/glide-v3-3.10 )
-	input_devices_synaptics? ( x11-misc/synaptics )
-	input_devices_wacom? ( x11-misc/linuxwacom )
+PDEPEND="x86? (
+			3dfx? ( >=media-libs/glide-v3-3.10 )
+			input_devices_synaptics? ( x11-misc/synaptics )
+			input_devices_wacom? ( x11-misc/linuxwacom )
+		)
 	media-fonts/ttf-bitstream-vera"
 
 PROVIDE="virtual/x11
@@ -149,17 +123,44 @@ PROVIDE="virtual/x11
 	virtual/glu
 	virtual/xft"
 
-#inherit needs to happen *after* DEPEND has been defined to have "newdepend"
-#do the right thing. Otherwise RDEPEND doesn't get set properly.
-inherit eutils flag-o-matic gcc xfree
-
 DESCRIPTION="XFree86: famous and free X server"
 
-PATCHDIR=${WORKDIR}/patch
-FILES_DIR=${WORKDIR}/files
-EXCLUDED="${PATCHDIR}/excluded"
-
 pkg_setup() {
+	# Whether to drop in external render, xrender and xft from freedesktop.org
+	# NOTE: The freedesktop versions are the CORRECT upstream versions to use.
+	# WARNING: Remember to add the external stuff to SRC_URI when in use.
+	EXT_XFT_XRENDER="yes"
+
+	PATCHDIR=${WORKDIR}/patch
+	FILES_DIR=${WORKDIR}/files
+	EXCLUDED="${PATCHDIR}/excluded"
+
+	filter-flags "-funroll-loops"
+
+	ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O1 -O2 -O3 -pipe"
+
+	# Recently there has been a lot of stability problem in Gentoo-land.  Many
+	# things can be the cause to this, but I believe that it is due to gcc3
+	# still having issues with optimizations, or with it not filtering bad
+	# combinations (protecting the user maybe from themselves) yet.
+	#
+	# This can clearly be seen in large builds like glibc, where too aggressive
+	# CFLAGS cause the tests to fail miserbly.
+	#
+	# Quote from Nick Jones <carpaski@gentoo.org>, who in my opinion
+	# knows what he is talking about:
+	#
+	#   People really shouldn't force code-specific options on... It's a
+	#   bad idea. The -march options aren't just to look pretty. They enable
+	#   options that are sensible (and include sse,mmx,3dnow when apropriate).
+	#
+	# The next command strips CFLAGS and CXXFLAGS from nearly all flags.  If
+	# you do not like it, comment it, but do not bugreport if you run into
+	# problems.
+	#
+	# <azarah@gentoo.org> (13 Oct 2002)
+	strip-flags
+
 	# See bug #35468, circular pam-xfree dep
 	if [ ! "`use no-pam`" -a "`has_version x11-base/xfree`" ]
 	then
