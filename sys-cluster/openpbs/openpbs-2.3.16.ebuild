@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16.ebuild,v 1.3 2002/11/06 10:56:11 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16.ebuild,v 1.4 2002/12/10 00:32:37 blauwers Exp $
 
 NAME=`echo ${P} | sed -e "s|openpbs-|OpenPBS_|; y|.|_|"`
 A=${NAME}.tar.gz
@@ -26,7 +26,7 @@ src_unpack() {
                 einfo "the appropriate openpbs archive:"
 		einfo "http://www.openpbs.org/UserArea/Download/"${A}
 		einfo ""
-                einfo "The archive should be placed into /usr/portage/distfiles."
+                einfo "The archive should be placed into ${DISTDIR}."
 
                 die "package archive not found"
         fi
