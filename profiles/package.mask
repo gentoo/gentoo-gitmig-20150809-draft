@@ -293,14 +293,6 @@ dev-python/pycrypto
 # many patches and fixes applied.  please test.
 =net-misc/vnc-3.3.3-r3
 
-# <azarah@gentoo.org> (03 Sep 2002)
-# new version. PLEASE test!
-# <woodchip@gentoo.org> (22 Sep 2002)
-# added a patch for animations and spiff
-# up everything a bit.  tests okay here,
-# will hopefully unmask very soon...
->=sys-apps/lilo-22.3.3
-
 # <phoenix@gentoo.org> (02 Sep 2002)
 # This needs a lot of testing
 =net-dialup/minicom-2.00.0
