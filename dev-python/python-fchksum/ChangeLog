@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/python-fchksum
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.9 2003/02/27 01:20:13 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.10 2003/04/04 02:41:12 liquidx Exp $
 
   07 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
@@ -17,6 +17,11 @@
   Add KEYWORDS, LICENSE, and SLOT to 1.6.1 as well
 
 *python-fchksum-1.6.1 (24 Apr 2002)
+
+  04 Apr 2003; Alastair Tse <liquidx@gentoo.org>
+  python-fchksum-1.6.1-r1.ebuild, python-fchksum-1.6.1.ebuild,
+  python-fchksum-1.6.1.ebuild:
+  added IUSE
 
   19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
   Added mips to keywords
