@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.25 2004/07/14 22:56:31 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.26 2004/07/15 00:29:37 robbat2 Exp $
+
+  14 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> php-cgi-4.3.8.ebuild:
+  stable on x86, security.
 
   15 Jul 2004; Christian Birchinger <joker@gentoo.org> php-cgi-4.3.8.ebuild:
   Added sparc stable keyword
