@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jaxen
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.1 2004/09/17 13:59:30 axxo Exp $
+
+*jaxen-1.0 (17 Sep 2004)
+
+  17 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +files/MANIFEST.MF, +files/build.xml.patch, +jaxen-1.0.ebuild:
+  initial import, ebuild created by me
+
