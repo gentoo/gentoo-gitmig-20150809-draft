@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.7.1.ebuild,v 1.4 2005/01/09 07:44:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.7.9.ebuild,v 1.1 2005/01/09 07:44:27 dragonheart Exp $
 
 DESCRIPTION="A network tool to gather ip traffic informations"
 HOMEPAGE="http://www.ba.cnr.it/~paolo/pmacct/"
@@ -8,10 +8,10 @@ SRC_URI="http://www.ba.cnr.it/~paolo/pmacct/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE="mysql postgres mmap"
 
-RDEPEND="net-libs/libpcap
+RDEPEND=">=net-libs/libpcap-0.6
 	mysql? ( dev-db/mysql )
 	postgres? ( dev-db/postgresql )"
 
@@ -28,7 +28,7 @@ src_install() {
 	make install DESTDIR=${D} || die "make install failed"
 	dodoc README EXAMPLES KNOWN-BUGS CONFIG-KEYS FAQS ChangeLog docs/SIGNALS docs/PLUGINS docs/INTERNALS TODO TOOLS || die "dodoc failed"
 
-	for dirname in examples sql pcap; do
+	for dirname in examples sql; do
 		docinto ${dirname}
 		dodoc ${dirname}/* || die "dodoc failed"
 	done
