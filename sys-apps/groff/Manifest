@@ -1,5 +1,5 @@
-MD5 1a3e12410025ff75609160d28b2deefc ChangeLog 6555
-MD5 22f4b48aba270560b6c61045b87e4f12 groff-1.19.1-r1.ebuild 2961
+MD5 e604a82a84ad768c1b3571b7391b1087 ChangeLog 6655
+MD5 19672333c0725006c39d04d3d9f18a1b groff-1.19.1-r1.ebuild 2963
 MD5 6095957ce1651ff7d72b6c285cddfbd9 groff-1.18.1-r4.ebuild 3140
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 b79e74dab8ceadf74f153032ad30eea3 files/digest-groff-1.19.1-r1 65
