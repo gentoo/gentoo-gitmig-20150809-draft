@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.11 2004/12/07 22:30:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.12 2004/12/13 23:49:07 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -85,6 +85,16 @@ tc-export() {
 	for var in "$@" ; do
 		eval tc-get${var}
 	done
+}
+
+# A simple way to see if we're using a cross-compiler ...
+tc-is-cross-compiler() {
+	local ret tmpfile=$(emktemp).c
+	echo 'int main(){return 0;}' > "${tmpfile}"
+	$(tc-getCC) "${tmpfile}" -o "${tmpfile}".bin
+	"${tmpfile}".bin &>/dev/null
+	ret=$?
+	rm -f "${tmpfile}" "${tmpfile}".bin
 }
 
 
