@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/linesrv
+# ChangeLog for net-dialup/linesrv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/ChangeLog,v 1.1 2004/12/05 15:56:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/ChangeLog,v 1.2 2004/12/05 22:17:35 swegener Exp $
 
 *linesrv-2.1.20 (05 Dec 2004)
 
