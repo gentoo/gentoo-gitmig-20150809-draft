@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.10.02.ebuild,v 1.3 2004/06/07 05:45:26 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.10.02-r1.ebuild,v 1.1 2004/06/15 13:16:57 phosphan Exp $
 
 inherit flag-o-matic eutils
 
@@ -168,4 +168,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} INSTALL="install" install || die "install failed"
+	dodir /etc/env.d
+	echo > ${D}/etc/env.d/99root "LDPATH=\"/usr/lib/root\""
 }
