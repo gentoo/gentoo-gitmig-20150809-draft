@@ -1,6 +1,15 @@
-# ChangeLog for net-irc/irssi
+# ChangeLog for homeblutgensgentoo-x86net-ircirssiChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.3 2002/06/23 19:59:16 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.4 2002/07/15 18:50:27 lamer Exp $
+
+irssi-0.8.5-r1 (15 Jul 2002)
+
+  15 Jul 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog  :
+
+  incremented the version number. Anyone with socks in use gets an additional
+  depend on net-misc/dante-1.1.13. It's needed for libsocks.so and socks.h
+  (otherwise toggling the option --with-socks does no good) needs more socks
+  testing however so it's getting masked)
 
 irssi-0.8.5 (23 Jun 2002)
 	23 Jun 2002; lamer <lamer@gentoo.org>
