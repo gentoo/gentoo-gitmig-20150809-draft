@@ -1,8 +1,11 @@
 # ChangeLog for app-emulation/zsnes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/zsnes/ChangeLog,v 1.11 2002/08/06 18:28:10 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/zsnes/ChangeLog,v 1.12 2002/11/03 18:26:02 vapier Exp $
 
 *zsnes-1.36 (21 Jul 2002)
+
+  03 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added pkg_setup fix for #9446.
 
   06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added -ppc -sparc -sparc64 BACK to keywords, when bumping please please

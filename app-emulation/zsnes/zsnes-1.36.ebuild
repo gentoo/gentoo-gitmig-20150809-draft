@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/zsnes/zsnes-1.36.ebuild,v 1.5 2002/10/17 01:18:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/zsnes/zsnes-1.36.ebuild,v 1.6 2002/11/03 18:26:02 vapier Exp $
 
 # Don't attempt to introduce $CFLAGS usage, docs say result will be slower.
 
@@ -23,14 +23,20 @@ RDEPEND="opengl? ( virtual/opengl )
 DEPEND="${RDEPEND}
 	>=dev-lang/nasm-0.98"
 	
+pkg_setup() {
+	# xfree should not install these, remove until the fixed
+	# xfree is in main use.
+	rm -f /usr/X11R6/include/{zconf.h,zlib.h}
+}
 
 src_compile() {
 	cd ${S}/src
 	use opengl || myconf="--without-opengl"
-	./configure --prefix=/usr --host=${CHOST} $myconf || die
+	econf $myconf
 	make || die
 }
-src_install () {
+
+src_install() {
 	cd ${S}/src
 	into /usr
 	dobin zsnes
