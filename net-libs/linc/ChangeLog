@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/linc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/ChangeLog,v 1.6 2002/07/29 02:14:39 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/ChangeLog,v 1.7 2002/08/05 20:54:59 spider Exp $
+
+*linc-0.5.2 (05 Aug 2002)
+  05 Aug 2002; Spider <spider@gentoo.org> linc-0.5.2.ebuild :
+  new version again
 
 *linc-0.5.1 (29 Jul 2002)
   29 Jul 2002; Spider <spider@gentoo.org> linc-0.5.1.ebuild :
