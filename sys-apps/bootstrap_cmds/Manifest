@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a5f2512be3bc798344df9dba19131918 ChangeLog 331
-MD5 63d08b2748136b302136227770d5df98 bootstrap_cmds-44.ebuild 1306
+MD5 5706ca8cae6dbb0be9deb8a03d4a03e5 bootstrap_cmds-44.ebuild 1373
 MD5 e526e84277cb8eb1bcf73840117ff45a metadata.xml 220
 MD5 476b98a9a8f0ba1fccda9ccdd2a58edc files/digest-bootstrap_cmds-44 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBcDRUI1lqEGTUzyQRAhFVAJ9OsMMTrLtsstWeaPyGMfB+16328ACbBBTf
-UgBSvOLmouhHTAcjr1MO08Y=
-=N7JV
------END PGP SIGNATURE-----
