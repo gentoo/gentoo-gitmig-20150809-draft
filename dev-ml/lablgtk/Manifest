@@ -1,0 +1,6 @@
+MD5 d54b10054f4927e22089ae6c5fa190c2 ChangeLog 851
+MD5 4929f1244b4fa762f1599cd1d9c6a91f lablgtk-1.2.3.ebuild 1230
+MD5 741783a69c4dbcadbb4825ff6ad60eba lablgtk-1.2.5.ebuild 1246
+MD5 424e314fd7cced60c111d5e2a220392b files/LablGTK-1.2.3-Makefile-destdir.patch 2124
+MD5 172783889b6b57cecf07de247ba7dcde files/digest-lablgtk-1.2.3 65
+MD5 58e497f72394c82abd2991deb196cb5d files/digest-lablgtk-1.2.5 65
