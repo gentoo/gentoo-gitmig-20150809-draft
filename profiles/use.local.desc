@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.945 2005/02/11 15:51:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.946 2005/02/11 16:22:03 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -367,6 +367,7 @@ media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-sound/rezound:soundtouch - compile with support for soundtouch
 media-tv/freevo:matrox - Enable output support on Matrox cards
 media-tv/mythfrontend:cle266 - Enable viaslice hardware MPEG decoding support
+media-tv/mythfrontend:ieee1394 - Enable firewire capture support
 media-tv/mythfrontend:lcd - Enable LCD display support using lcdproc
 media-tv/mythfrontend:nvidia - Enable nVidia XvMC decoding support
 media-tv/mythtv:cle266 - Enable viaslice hardware MPEG decoding support
