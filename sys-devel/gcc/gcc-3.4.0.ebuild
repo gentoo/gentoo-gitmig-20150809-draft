@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.9 2004/04/27 16:57:10 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.10 2004/04/27 23:39:00 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj hardened f77 objc uclibc"
 
@@ -398,9 +398,9 @@ src_compile() {
 	use hardened && append-flags -fPIC
 
 	# Default arch support
-	use amd64 && myconf="${myconf} --with-cpu=k8 --with-arch=k8"
+	use amd64 && myconf="${myconf} --with-arch=k8"
 	#use s390 && myconf="${myconf} --with-arch=nofreakingclue"
-	use x86 && myconf="${myconf} --with-cpu=pentium4 --with-arch=i586"
+	#use x86 && myconf="${myconf} --with-cpu=pentium4 --with-arch=i586"
 	#use mips && myconf="${myconf} --with-arch=mips3"
 
 	do_filter_flags
