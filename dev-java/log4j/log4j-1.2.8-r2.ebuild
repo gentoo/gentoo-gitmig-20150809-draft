@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.8-r2.ebuild,v 1.1 2004/09/18 10:03:16 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.8-r2.ebuild,v 1.2 2004/09/18 11:00:48 axxo Exp $
 
 inherit java-pkg
 
@@ -13,10 +13,10 @@ KEYWORDS="~x86"
 IUSE="jikes doc javamail jmx jms"
 DEPEND=">=virtual/jdk-1.4
 		dev-java/ant-core
-		javamail? ( dev-java/sun-javamail-bin dev-java/sun-jaf-bin 	)
+		javamail? ( dev-java/sun-javamail-bin dev-java/sun-jaf-bin )
 		jmx? ( dev-java/jmx )
 		jms? ( =dev-java/openjms-bin-0.7.6 )
-		jikes? ( dev-java/jikes)"
+		jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.4"
 
 S="${WORKDIR}/jakarta-${P}"
