@@ -1,4 +1,6 @@
+MD5 7c9fe6f4296633ebd8f28e39bf4a84ce sshfs-fuse-1.1.ebuild 593
 MD5 30910a45244d332198e0e47ef326143e sshfs-fuse-1.0.ebuild 593
-MD5 1d2b7ddf3b3eee30b21c9b0c7a07f805 ChangeLog 629
+MD5 4d717086e4cc70274e94b8301fe6fc9e ChangeLog 753
 MD5 6e89ba8198764bfd079a0cfa18dca593 metadata.xml 264
 MD5 f7f63bc701f32b3328d3556097a231f7 files/digest-sshfs-fuse-1.0 65
+MD5 607bd3d45b5a479f47cec37a272dbbc9 files/digest-sshfs-fuse-1.1 65
