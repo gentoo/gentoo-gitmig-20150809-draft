@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/oregano/oregano-0.23-r1.ebuild,v 1.1 2002/09/22 18:57:21 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/oregano/oregano-0.23-r1.ebuild,v 1.2 2002/09/23 04:25:44 blocke Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="ftp://ftp.codefactory.se/pub/CodeFactory/software/oregano/${P}.tar.gz"
@@ -20,10 +20,7 @@ KEYWORDS="x86"
 LICENSE="GPL-2"
 
 src_compile() {
-	local myconf
-	use nls || myconf="--disable-nls"
-
-	econf ${myconf} || die
+	econf || die
 	emake || die
 }
 
