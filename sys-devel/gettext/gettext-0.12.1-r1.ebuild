@@ -1,20 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r1.ebuild,v 1.2 2004/02/08 12:25:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r1.ebuild,v 1.3 2004/02/08 13:13:38 azarah Exp $
 
 inherit eutils
 
 IUSE="nls"
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="GNU locale utilities"
 HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-#KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm -amd64 ~ia64"
-KEYWORDS="-*"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm -amd64 ~ia64"
 
 DEPEND="virtual/glibc"
 
@@ -25,7 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=""
+	local myconf=
 	use nls || myconf="--disable-nls"
 
 	# Compaq Java segfaults trying to build gettext stuff, and there's
@@ -42,13 +41,15 @@ src_compile() {
 		myconf="--without-java"
 	fi
 
+	# Build with --without-included-gettext (will use that of glibc), as we
+	# need preloadable_libintl.so for new help2man, bug #40162.
+	# Also note that it only gets build with USE=nls ...
+	# Lastly, we need to build without --disable-shared ...
 	CXX=${CC} econf \
-		--disable-shared \
 		--without-included-gettext \
 		${myconf} || die
 
-	# Doesn't work with emake
-	make || die
+	emake || die
 }
 
 src_install() {
@@ -61,11 +62,11 @@ src_install() {
 	exeinto /usr/bin
 	doexe misc/gettextize
 
-	#glibc includes gettext; this isn't needed anymore
-	rm -rf ${D}/usr/include
-	rm -rf ${D}/usr/lib/*.{a,so}
+	# Glibc includes gettext; this isn't needed anymore
+#	rm -rf ${D}/usr/include
+#	rm -rf ${D}/usr/lib/lib*.{a,so}
 
-	#again, installed by glibc
+	# Again, installed by glibc
 	rm -rf ${D}/usr/share/locale/locale.alias
 
 	if [ -d ${D}/usr/doc/gettext ]
