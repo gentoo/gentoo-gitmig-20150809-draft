@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d3907cb670dab12bb56df5988677a0d3 ChangeLog 5878
+MD5 057d9fb587531329035959580527d583 ChangeLog 6023
 MD5 4a775604ab14b1e4979e1cbb41602e1c metadata.xml 240
-MD5 9760ae2794643bc27959f10943cc3baa pysoulseek-1.2.5.ebuild 980
-MD5 b53566be9796be57990525e16f1e82a4 files/pysoulseek.desktop 159
+MD5 13342fdd8dd7696d919e2939542cc6de pysoulseek-1.2.5.ebuild 958
 MD5 3351b7b2cda3650b0c7d57363ad2b75f files/digest-pysoulseek-1.2.5 63
+MD5 b53566be9796be57990525e16f1e82a4 files/pysoulseek.desktop 159
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBqpnCwDHaUUJ0mYMRArj5AJ0QJ/s8lXPBrLzZxLgFSKh+bGcTbgCeLFh1
-W4Ew6i8q/FAaI3UxB1KNeqc=
-=pSgc
+iD8DBQFBv1KPz2gxt1z4IGYRAhBwAKDQT4BvUncZ06FjfUQfuEo389nj9wCgpIqq
+sPIpo66Bbu9kG6padTNvWAg=
+=qjnR
 -----END PGP SIGNATURE-----
