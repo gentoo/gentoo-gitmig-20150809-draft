@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 513c80c89e7012037cd79bb5c99ecc20 ChangeLog 2152
+MD5 e22183e8190e5925d9054207e4e5e225 help2man-1.35.1.ebuild 821
 MD5 4e96980c9b1430edd5fa63e0e4b49be2 help2man-1.29.ebuild 580
+MD5 c0d472e7a9bc2cf97913f887f2c8b8a0 ChangeLog 2228
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 80ab203cfb11d347bca687099490085c help2man-1.33.1.ebuild 785
-MD5 e22183e8190e5925d9054207e4e5e225 help2man-1.35.1.ebuild 821
 MD5 6da3242e041f865b2523b9a12bcad64e files/digest-help2man-1.29 64
-MD5 a646ae235e082e137b9f8c7b8a6efe12 files/digest-help2man-1.33.1 66
+MD5 174fd92d4b9bde16f1f5a3fb01c069ad files/digest-help2man-1.33.1 66
 MD5 b82f50684175358ea878b6f962d37b48 files/digest-help2man-1.35.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB5Wz/roRuSHgZdywRAgOiAJ48eHOQZcHdXysZbZUpWo3wqW2j3wCggn+y
-SnCeNb2SUjj3UWM5R3V0qLw=
-=qN7B
------END PGP SIGNATURE-----
