@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.469 2004/07/08 00:28:30 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.470 2004/07/08 19:09:45 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -14,6 +14,7 @@ app-admin/amanda:xfs - Support for backing up raw XFS filesystems using xfsdump
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-admin/sdsc-syslog:beep - Use beep libraries (net-libs/roadrunner)
 app-admin/webalizer:geoip - Enable support for IP country lookup
+app-admin/webmin:webmin-minimal - Install the minimal webmin distribution
 app-antivirus/clamav:milter - Build sendmail mail filter (milter) support
 app-cdr/k3b:monkey - Enable support for Monkey's audio codec
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
