@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.5.ebuild,v 1.11 2004/06/24 22:42:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.5.ebuild,v 1.12 2004/09/20 18:20:23 robmoss Exp $
+
+inherit eutils
 
 DESCRIPTION="A set of libraries and utilities for reading Microsoft Access database (MDB) files"
 HOMEPAGE="http://sourceforge.net/projects/mdbtools/"
@@ -20,6 +22,12 @@ DEPEND=">=dev-libs/glib-2
 		>=gnome-base/libglade-2
 		>=gnome-base/libgnomeui-2 )
 	odbc? ( >=dev-db/unixODBC-2.0 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc34.patch
+}
 
 src_compile() {
 	local myconf

@@ -1,0 +1,43 @@
+diff -rU3 mdbtools-0.5-orig/src/gmdb2/sql.c mdbtools-0.5/src/gmdb2/sql.c
+--- mdbtools-0.5-orig/src/gmdb2/sql.c	2003-01-15 04:02:07.000000000 +0200
++++ mdbtools-0.5/src/gmdb2/sql.c	2004-07-12 19:40:53.075904976 +0300
+@@ -38,6 +38,8 @@
+ 
+ void gmdb_sql_tree_populate(MdbHandle *mdb, GladeXML *xml);
+ void gmdb_sql_load_query(GladeXML *xml, gchar *file_path);
++void gmdb_sql_save_as_cb(GtkWidget *w, GladeXML *xml);
++void gmdb_sql_save_query(GladeXML *xml, gchar *file_path);
+ 
+ void
+ gmdb_sql_close_all()
+diff -rU3 mdbtools-0.5-orig/src/gmdb2/table_export.c mdbtools-0.5/src/gmdb2/table_export.c
+--- mdbtools-0.5-orig/src/gmdb2/table_export.c	2003-01-14 19:37:44.000000000 +0200
++++ mdbtools-0.5/src/gmdb2/table_export.c	2004-07-12 19:40:19.912946512 +0300
+@@ -37,6 +37,8 @@
+ #define NEVER "Never"
+ #define AUTOMAT "Automatic (where necessary)"
+ 
++void gmdb_table_export_populate_dialog(GladeXML *xml);
++
+ void
+ gmdb_print_quote(FILE *outfile, int need_quote, char quotechar, char *colsep, char *str)
+ {
+diff -rU3 mdbtools-0.5-orig/src/odbc/odbc.c mdbtools-0.5/src/odbc/odbc.c
+--- mdbtools-0.5-orig/src/odbc/odbc.c	2003-01-15 04:02:09.000000000 +0200
++++ mdbtools-0.5/src/odbc/odbc.c	2004-07-12 19:41:51.520020120 +0300
+@@ -46,6 +46,7 @@
+ static SQLRETURN SQL_API _SQLFreeConnect(SQLHDBC hdbc);
+ static SQLRETURN SQL_API _SQLFreeEnv(SQLHENV henv);
+ static SQLRETURN SQL_API _SQLFreeStmt(SQLHSTMT hstmt, SQLUSMALLINT fOption);
++static void bind_columns(struct _hstmt *stmt);
+ 
+ #define MIN(a,b) (a>b ? b : a)
+ #define _MAX_ERROR_LEN 255
+@@ -1445,6 +1446,7 @@
+ 	case SQL_DECIMAL:
+ 	case SQL_NUMERIC:
+ 	case SQL_FLOAT:
++		;
+ 	}
+ }
+ static SQLSMALLINT _odbc_get_client_type(int srv_type)
