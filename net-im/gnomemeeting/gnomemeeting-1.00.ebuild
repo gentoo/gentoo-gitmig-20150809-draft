@@ -1,21 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.98.5.ebuild,v 1.6 2004/03/17 00:14:07 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.00.ebuild,v 1.1 2004/03/17 00:14:07 stkn Exp $
 
 inherit gnome2
 
 DESCRIPTION="Gnome NetMeeting client"
 HOMEPAGE="http://www.gnomemeeting.org"
 # now part of gnome-2.4
-#SRC_URI="http://www.gnomemeeting.org/downloads/latest/sources/${P}.tar.gz"
+SRC_URI="http://www.gnomemeeting.org/includes/clicks_counter.php?http://www.gnomemeeting.org/admin/downloads/latest/sources/sources/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86"
 IUSE="sdl ssl ipv6"
 
-DEPEND=">=dev-libs/pwlib-1.5.0
-	>=net-libs/openh323-1.12.0
+RDEPEND=">=dev-libs/pwlib-1.6.3-r1
+	>=net-libs/openh323-1.13.2-r1
 	>=net-nds/openldap-2.0.25
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	sdl? ( >=media-libs/libsdl-1.2.4 )
@@ -31,17 +31,13 @@ DEPEND=">=dev-libs/pwlib-1.5.0
 	>=media-sound/esound-0.2.28
 	>=gnome-base/ORBit2-2.5.0"
 
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.20
-	dev-lang/perl"
+	dev-lang/perl
+	app-text/scrollkeeper"
 
 MAKEOPTS="${MAKEOPTS} -j1"
-
-src_unpack() {
-	unpack ${A}
-	epatch ${FILESDIR}/${P}-libxml_2.6.patch
-}
 
 src_compile() {
 
@@ -65,7 +61,10 @@ src_compile() {
 		&& myconf="${myconf} --enable-ipv6" \
 		|| myconf="${myconf} --disable-ipv6"
 
-	econf ${myconf} || die "configure failed"
+	econf \
+		--prefix=/usr \
+		--host=${CHOST} \
+		${myconf} || die "configure failed"
 	emake || die
 }
 
