@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gst-editor/gst-editor-0.5.0.ebuild,v 1.1 2003/03/20 12:49:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gst-editor/gst-editor-0.5.0.ebuild,v 1.2 2003/03/20 13:53:36 lu_zero Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GStreamer graphical pipeline editor"
@@ -9,7 +9,7 @@ SRC_URI="http://www.gstreamer.net/releases/${PN}/${PV}/src/${P}.tar.gz"
 HOMEPAGE="http://www.gstreamer.net/apps/gst-editor/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=">=media-libs/gstreamer-0.4.1
