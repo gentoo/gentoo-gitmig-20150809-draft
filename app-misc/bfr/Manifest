@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 1bcf785dc1284f451f4f4e73d4ae49b6 ChangeLog 1352
 MD5 9713d087b6fda821cb1b4e0fc97c4729 bfr-1.5.ebuild 562
-MD5 0a5d2b842e0aa4e8c9c99786d137b43f bfr-1.6.ebuild 586
-MD5 58f1da46f1d3f3ac705f21e20e2326ea ChangeLog 1257
+MD5 a7a28584c698620b0177778820ecb275 bfr-1.6.ebuild 590
 MD5 dd3d9cc0fdfaa622a04cb071b1074feb metadata.xml 262
 MD5 ee28df28437904204ad60a3940eaf065 files/digest-bfr-1.5 59
 MD5 658525eb53ac2fb452588698f6466cab files/digest-bfr-1.6 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBbX0VCHk4+ZoBpvsRAhToAKDDbryyvfilKkawGCVM8YhSjbAFrgCgroEB
-Vg9fdFP1vkpeR901dhqwM+I=
-=5L8x
------END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bfr
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.8 2004/10/10 18:27:07 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.9 2004/11/04 20:40:35 corsair Exp $
+
+  04 Nov 2004; Markus Rothe <corsair@gentoo.org> bfr-1.6.ebuild:
+  Marked ~ppc64; bug #70048
 
   10 Oct 2004; Tom Martin <slarti@gentoo.org> metadata.xml:
   Changed <herd> from no-herd to shell-tools@gentoo.org.
