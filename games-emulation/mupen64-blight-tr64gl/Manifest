@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 efe3d84edfbb1cf3f8320a62e5a69a92 ChangeLog 956
 MD5 34fa5d293342dd6736350b7e73228475 mupen64-blight-tr64gl-0.7.4_pre1.ebuild 717
-MD5 db64ab5b4841eb684d080d9c41f6152c ChangeLog 874
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 a3e62bf537d9a02609601aa9ba76da7e metadata.xml 247
 MD5 408f2a595b0a70418853c2e07aeba30f files/digest-mupen64-blight-tr64gl-0.7.4_pre1 75
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB3kHOI1lqEGTUzyQRAtvxAJ9ichHuovpW5WmqCkQ9r1OQVwHqdACeJ6zw
-N+Pq59H+rDEUv/td/Yfuny4=
-=hXot
+iD8DBQFB3xBSUpKYMelfdYERAqggAJ9qyEqror4oZJpPrsiSl7bZQjwtBgCeJUhn
+qLD4gq/PVelNqZpLGfWhnWI=
+=HPcU
 -----END PGP SIGNATURE-----

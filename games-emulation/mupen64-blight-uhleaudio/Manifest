@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 9695c5bdfb90588c2f9a13df2d1581f7 ChangeLog 1177
 MD5 e33e6fc58abe2dad2692a555466ce08b mupen64-blight-uhleaudio-0.1a.ebuild 754
-MD5 3359356b21b0d529906206a770e73c2a ChangeLog 1095
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 a3e62bf537d9a02609601aa9ba76da7e metadata.xml 247
 MD5 00d866d7605426eed40b134a1a33e26d files/digest-mupen64-blight-uhleaudio-0.1a 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB3kH5I1lqEGTUzyQRAiDzAKCE1VxWQL2YicqyU6OY8LB2hC2u9wCdEcvH
-7+ORdm73WF8cDdEA/bYO2bE=
-=y0Rl
+iD8DBQFB3xDxUpKYMelfdYERAsLiAJ48Ip4yksrT5bpyI3c8WkoC8JLXzwCdF4BZ
+PcLnQx2TnJffR/kUZ01BRvY=
+=8cAT
 -----END PGP SIGNATURE-----

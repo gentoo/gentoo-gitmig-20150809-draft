@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 48e2705e2f1ece236069e56cfd10e337 mupen64-glide64-0.7.ebuild 1004
-MD5 3e42e2228d50cdebd8ad750ac8bf54be ChangeLog 502
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 48ce878150dc3523192d810a2056aad7 ChangeLog 586
+MD5 a3e62bf537d9a02609601aa9ba76da7e metadata.xml 247
 MD5 2f68b9e4d03102e87c1b845f4112b051 files/mupen64-glide64-0.7-compile.patch 4677
 MD5 42c247074d570fc3665a11d129a2e0d1 files/mupen64-glide64-0.7-gtk2.patch 1231
 MD5 ea5cfac2f37f3bea3a5a9ac9b6c06854 files/digest-mupen64-glide64-0.7 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB2WceUpKYMelfdYERAnHKAJ9XtjDG9Ss15pevpa1I2UzDUOuV8ACfWVWp
-jxvGAfssZzyWvXnw1LISnEA=
-=T0Gh
+iD8DBQFB3xLHUpKYMelfdYERAijdAKCAu90iJR+lSo3tEJSpOKjxDGzj3gCghwbr
+8zAhyMidpt1Bpf+iX87VMSM=
+=ojA7
 -----END PGP SIGNATURE-----
