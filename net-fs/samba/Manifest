@@ -28,4 +28,3 @@ MD5 b6cdc1468e45f92f19873e0c6c5b6e94 files/samba.pam 332
 MD5 a5650295e9d46255ca61463b1a2ec2da files/digest-samba-3.0_alpha24-r1 142
 MD5 8289eda694b35875eec6df5cc3f50c86 files/samba-2.2.6-libresolv.patch 540
 MD5 2d70ae9a31823d990cadd00f7e35ff22 files/digest-samba-3.0_alpha22 216
-MD5 9f80a723be975274daa62b9ccc07fbe0 files/digest-samba-3.0_alpha23 216
