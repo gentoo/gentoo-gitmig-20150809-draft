@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>games</herd>
+<maintainer>
+  <email>warpzero@gentoo.org</email>
+    <description>Sole maintainer</description>
+</maintainer>
+<longdescription>DDR Arcade Game simulator.</longdescription>
+</pkgmetadata>

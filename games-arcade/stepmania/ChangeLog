@@ -1,0 +1,9 @@
+# ChangeLog for games-arcade/stepmania
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.1 2004/11/08 04:58:58 warpzero Exp $
+
+*stepmania-rc2 (07 Nov 2004)
+
+  07 Nov 2004; Joshua Charles Campbell warpzero@gentoo.org stepmania-3.9-rc2a-gentoo.patch, stepmania-3.9_rc2.ebuild :
+  Initial import.  Ebuild submitted by Sean Burke sburke@onewest.net
+
