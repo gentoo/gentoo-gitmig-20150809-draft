@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/jcalendar
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcalendar/ChangeLog,v 1.1 2004/12/04 17:34:09 karltk Exp $
+
+*jcalendar-1.2.2 (04 Dec 2004)
+
+  04 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> jcalendar-1.2.2.ebuild:
+  Initial import. Ebuild submitted by the wonderful Jan Brinkmann 
+  <luck@the-luckduck.de> in his quest to squash #72403.
