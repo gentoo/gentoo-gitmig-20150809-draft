@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.ebuild,v 1.4 2003/03/26 10:52:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.ebuild,v 1.5 2003/03/26 11:07:31 seemant Exp $
 
 inherit flag-o-matic
 
@@ -47,7 +47,13 @@ src_install() {
 	# the symlink is still created incorrectly. ???
 	rm -f ${D}/usr/lib/rpmpopt
 	keepdir /var/lib/rpm
+	keepdir /usr/src/pc/{SRPMS,SPECS,SOURCES,RPMS,BUILD}
+	keepdir /usr/src/pc/RPMS/{noarch,i{3,4,5,6}86,athlon}
+	keepdir /usr/src/pc
 	dodoc CHANGES COPYING CREDITS GROUPS README* RPM* TODO
+
+	use nls || rm -rf ${D}/usr/share/man/{ko,ja,fr,pl,ru,sk}
+	
 }
 
 pkg_postinst() {
