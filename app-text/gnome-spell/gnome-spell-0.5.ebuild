@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-0.5.ebuild,v 1.10 2003/04/10 06:23:08 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-0.5.ebuild,v 1.11 2003/04/23 00:33:11 vladimir Exp $
 
 IUSE="nls"
 
@@ -20,7 +20,7 @@ DEPEND="!<net-mail/evolution-1.2.0
 	>=gnome-base/bonobo-1.0.19-r1
 	<gnome-base/libglade-2.0.0
 	>=gnome-extra/gal-0.19
-	>=app-text/aspell-0.50
+	virtual/aspell-dict
 	nls? ( sys-devel/gettext )"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.4.ebuild,v 1.4 2003/03/10 22:33:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.4.ebuild,v 1.5 2003/04/23 00:32:14 vladimir Exp $
 
 DESCRIPTION="spell library for GTK2"
 SRC_URI="http://${PN}.sourceforge.net/download/${P}.tar.gz"
@@ -12,7 +12,7 @@ SLOT="0"
 IUSE="doc"
 
 DEPEND=">=x11-libs/gtk+-2
-	>=app-text/aspell-0.50
+	virtual/aspell-dict
 	doc? ( >=dev-util/gtk-doc-0.6 )"
 
 src_unpack() {

@@ -1,0 +1,7 @@
+MD5 f6ed1f83bcb423f786f140ab5be67b96 ChangeLog 1813
+MD5 19a46d738f61b3168504b2059f9453ba gtkspell-2.0.0-r1.ebuild 670
+MD5 a732b61023abdc8200ed394a03760d43 gtkspell-2.0.2.ebuild 664
+MD5 93b72ed8875642b89fccf08483e714f7 gtkspell-2.0.4.ebuild 963
+MD5 6dfdf5c869d5b3381077e134fce58544 files/digest-gtkspell-2.0.0-r1 66
+MD5 776dac4f06c10cd4d6030bb0227604ca files/digest-gtkspell-2.0.2 66
+MD5 ae68a374d757954ed1b57e829bb90ea3 files/digest-gtkspell-2.0.4 66
