@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/burgerspace
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/ChangeLog,v 1.4 2004/12/21 13:08:08 josejx Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/ChangeLog,v 1.5 2005/01/18 04:02:13 weeve Exp $
+
+  17 Jan 2005; Jason Wever <weeve@gentoo.org> burgerspace-1.8.1.ebuild:
+  Added ~sparc keyword.
 
   22 Dec 2004; Joseph Jezak <josejx@gentoo.org> burgerspace-1.8.1.ebuild:
   Marked ppc stable.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/cavezofphear-0.1.ebuild,v 1.6 2004/12/22 08:54:21 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/cavezofphear-0.1.ebuild,v 1.7 2005/01/18 04:04:57 weeve Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.x86.no/cavezofphear/${P/cavezof/}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64 ~ppc64"
+KEYWORDS="x86 ppc ~amd64 ~ppc64 ~sparc"
 IUSE=""
 
 RDEPEND="sys-libs/ncurses"
