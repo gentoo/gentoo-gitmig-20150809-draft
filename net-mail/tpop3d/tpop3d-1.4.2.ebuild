@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.4.2.ebuild,v 1.8 2003/09/05 08:35:13 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.4.2.ebuild,v 1.9 2004/03/03 17:12:49 mholzer Exp $
 
 DESCRIPTION="An extensible POP3 server with vmail-sql/MySQL support."
 HOMEPAGE="http://www.ex-parrot.com/~chris/tpop3d/"
@@ -34,6 +34,7 @@ src_compile() {
 	use tcpd		&& myconf="${myconf} --enable-tcp-wrappers"
 	use pam			|| myconf="${myconf} --disable-auth-pam"
 	use maildir		&& myconf="${myconf} --enable-mbox-maildir"
+	use ssl			&& myconf="${myconf} --enable-tls"
 	# If you want plaintext /etc/passwd authentication
 	if [ ! -z $ENABLE_PASSWD ]; then
 		myconf="${myconf} --enable-auth-passwd"

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/tpop3d
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.7 2003/11/27 02:14:44 gregf Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.8 2004/03/03 17:12:49 mholzer Exp $
+
+  03 Mar 2004; Martin Holzer <mholzer@gentoo.org> tpop3d-1.4.2.ebuild,
+  tpop3d-1.5.3.ebuild:
+  adding ssl to config. Closes 43510
 
 *tpop3d-1.5.3 (26 Nov 2003)
 
