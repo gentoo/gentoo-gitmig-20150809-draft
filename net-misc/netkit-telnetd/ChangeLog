@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-telnetd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.31 2005/03/30 05:41:04 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.32 2005/03/30 07:07:22 corsair Exp $
+
+  30 Mar 2005; Markus Rothe <corsair@gentoo.org>
+  netkit-telnetd-0.17-r6.ebuild:
+  Stable on ppc64; bug #87211
 
   30 Mar 2005; Olivier Crête <tester@gentoo.org>
   netkit-telnetd-0.17-r6.ebuild:
