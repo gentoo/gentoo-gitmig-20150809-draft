@@ -1,4 +1,7 @@
-MD5 8a889c98133f2fd8c48d7e61cb6922dd ChangeLog 3213
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8684bf579ae72ec8d0430525148e2c91 ChangeLog 3294
 MD5 ae4bc626a0e60a274f0edcd798d9ad7f metadata.xml 252
 MD5 98ace03cecae95b125603b3d2e5514e5 xemacs-packages-sumo-2003.04.14.ebuild 997
 MD5 59f3c64d2d8149a571e4f89740eae4ba xemacs-packages-sumo-2003.06.29.ebuild 997
@@ -8,3 +11,10 @@ MD5 123706b91a161701cfa75c4f046b47a6 files/digest-xemacs-packages-sumo-2003.04.1
 MD5 000199e7085ae7f2a965a46d92ba8cc6 files/digest-xemacs-packages-sumo-2003.06.29 158
 MD5 ef504c5661092407b7150a3761aa6f4e files/digest-xemacs-packages-sumo-2003.08.31 158
 MD5 51c024ab16fd1ae87402597c47d68db4 files/digest-xemacs-packages-sumo-2003.11.13 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOqsjI1lqEGTUzyQRAvhzAKDSqtbk5+c2VtMfSj/K9Lp9RA4IrACglym8
+DiV+jTSANr1h6ZczbGrVU7s=
+=NSKW
+-----END PGP SIGNATURE-----
