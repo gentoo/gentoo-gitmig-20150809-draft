@@ -1,6 +1,16 @@
-MD5 53089ffa7d238e9c924d366043d61131 ChangeLog 934
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8d8a650631f1fcfacca4594d5268453f ChangeLog 1029
 MD5 9ea8ed90d382ba16acd02725889af016 libchewing-0.2.1.ebuild 637
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 b2f2b01d1380836665fe5827b1afe816 libchewing-0.2.3.ebuild 628
+MD5 9067ed8f7ae33f4d4bc2ad77396f5ea9 libchewing-0.2.3.ebuild 626
 MD5 4ccf4d3771ee61c2cae3d8eda0f0673c files/digest-libchewing-0.2.1 66
 MD5 d4145b679b5c77c59ab66e71800a75d1 files/digest-libchewing-0.2.3 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBYAdsVWNWqTUmv+0RAt2nAJ9Hzi4YSB7LYJeFWkRQgzbel+15nwCfVCBN
+NKovBg4OlASlCo0q55n8x4k=
+=NP3J
+-----END PGP SIGNATURE-----
