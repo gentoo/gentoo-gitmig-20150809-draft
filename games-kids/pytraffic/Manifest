@@ -1,5 +1,5 @@
-MD5 2aea0f8fb60a59ef65946a31fcd31216 ChangeLog 367
+MD5 d32c588b53d7654c5a55dfabaf1fc426 ChangeLog 453
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 fd6dbc59a24c01c80b7457e1abd36f70 pytraffic-1.2.1.ebuild 991
+MD5 99d00a17633bbfb2c97ebcd11dec6e9a pytraffic-1.2.1.ebuild 992
 MD5 435a1b2a65ae7fc35c83fbeb7397d829 files/1.2.1-gentoo-dirs.patch 1730
 MD5 23d02af40cdc1e4ebd9234573e05b7c2 files/digest-pytraffic-1.2.1 67
