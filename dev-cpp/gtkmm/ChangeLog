@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.43 2004/09/08 00:56:53 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.44 2004/09/08 17:50:40 gustavoz Exp $
+
+  08 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> gtkmm-2.2.12.ebuild:
+  Stable on sparc
 
   07 Sep 2004; Daniel Goller <morfic@gentoo.org> gtkmm-2.2.12.ebuild:
   stable on x86, closing bug# 49350

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.2.12.ebuild,v 1.5 2004/09/08 00:56:53 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.2.12.ebuild,v 1.6 2004/09/08 17:50:40 gustavoz Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gtkmm.sourceforge.net/"
 IUSE=""
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa amd64 ~ia64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~hppa amd64 ~ia64"
 
 RDEPEND=">=dev-libs/glib-2.2
 	>=x11-libs/gtk+-2.2
