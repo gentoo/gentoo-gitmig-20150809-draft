@@ -195,6 +195,7 @@ dev-lisp/cmucl-bin
 =kde-base/kde-i18n-3.2.0_beta1
 =kde-base/arts-1.2.0_beta1
 =kde-base/arts-1.2.0_beta1-r1
+=dev-util/kdevelop-3.0.0_beta1
 
 =kde-base/kdelibs-3.2.0_alpha2
 =kde-base/kdebase-3.2.0_alpha2
