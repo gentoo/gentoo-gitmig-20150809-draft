@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.5 2004/12/16 20:26:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.6 2004/12/30 21:03:58 wolf31o2 Exp $
+
+  30 Dec 2004; Chris Gianelloni <wolf31o2@gentoo.org> pyparted-1.6.6.ebuild:
+  Marking stable on x86 and amd64.
 
 *pyparted-1.6.9 (16 Dec 2004)
 
