@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r4.ebuild,v 1.10 2003/09/24 20:38:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r4.ebuild,v 1.11 2003/09/24 21:39:52 seemant Exp $
 
 inherit eutils
 
-IUSE="nls build acl selinux"
+IUSE="nls build acl selinux static"
 
 PATCH_VER=1.7
 
