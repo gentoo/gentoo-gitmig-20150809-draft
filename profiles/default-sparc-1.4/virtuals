@@ -33,4 +33,4 @@ virtual/os-headers		sys-kernel/linux-headers
 virtual/ghc             dev-lang/ghc-bin
 virtual/modutils 		sys-apps/modutils
 virtual/inetd			sys-apps/netkit-base
-virtual/virus			net-mail/clamav
+virtual/antivirus		net-mail/clamav
