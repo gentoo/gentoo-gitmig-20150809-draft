@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.6-r2.ebuild,v 1.1 2002/11/05 18:28:31 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.6-r2.ebuild,v 1.2 2002/11/08 15:33:21 phoenix Exp $
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 MYPATCH="zsh_4.0.6-15.diff"
@@ -12,7 +12,7 @@ LICENSE="ZSH"
 
 DEPEND=">=sys-libs/ncurses-5.1"
 
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="x86 alpha ~ppc ~sparc ~sparc64"
 
 src_unpack() {
 	unpack ${A}
