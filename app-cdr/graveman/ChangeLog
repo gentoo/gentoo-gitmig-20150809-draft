@@ -1,0 +1,11 @@
+# ChangeLog for app-cdr/graveman
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.1 2005/01/08 07:35:25 pylon Exp $
+
+*graveman-0.2-r20041227 (08 Jan 2005)
+
+  08 Jan 2005; Lars Weiler <pylon@gentoo.org> +metadata.xml,
+  +graveman-0.2-r20041227.ebuild:
+  New GTK+2 cd recording utility.
+  Thanks to Peter Gerbrandt for this ebuild!
+
