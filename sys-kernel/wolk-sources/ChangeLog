@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/wolk-sources
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.5 2003/01/26 23:50:50 livewire Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.6 2003/02/12 09:18:43 vapier Exp $
 
 *wolk-sources-4.0s-pre9
 

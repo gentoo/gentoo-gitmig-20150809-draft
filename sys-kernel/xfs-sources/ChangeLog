@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/xfs-sources
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.19 2003/01/31 03:06:38 livewire Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.20 2003/02/12 09:18:50 vapier Exp $
 
 *xfs-sources-2.4.20_pre6 (30 Jan 2003)
 

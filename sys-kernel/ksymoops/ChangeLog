@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/ksymoops
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.6 2003/02/10 06:37:50 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.7 2003/02/12 09:17:03 vapier Exp $
 
 *ksymoops-2.4.8 (25 Nov 2002)
  

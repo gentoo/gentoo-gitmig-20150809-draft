@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/development-sources
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.7 2003/01/18 18:01:25 lostlogic Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.8 2003/02/12 09:16:40 vapier Exp $
 
 *development-sources-2.5.59-r2 (18 Jan 2003)
 

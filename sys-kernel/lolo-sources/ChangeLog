@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/lolo-sources
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.37 2003/01/12 03:16:09 lostlogic Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.38 2003/02/12 09:17:14 vapier Exp $
 
   TODO before gentoo-sources-2.4.20-r1:
   * Documentation

@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/selinux-sources
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.6 2003/01/03 22:44:50 styx Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.7 2003/02/12 09:18:11 vapier Exp $
 
   03 Jan 2003; Joachim Blaabjerg <styx@gentoo.org>
   selinux-sources-2.4.19.ebuild, selinux-sources-2.4.20.ebuild, ChangeLog:
