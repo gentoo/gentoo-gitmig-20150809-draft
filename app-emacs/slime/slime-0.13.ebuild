@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-0.13.ebuild,v 1.6 2004/07/25 20:57:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-0.13.ebuild,v 1.7 2004/11/07 06:20:55 mr_bones_ Exp $
 
 inherit elisp
 
 DESCRIPTION="SLIME: The Superior Lisp Interaction Mode for Emacs"
 HOMEPAGE="http://common-lisp.net/project/slime/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
-LICENSE="GPL-2 | public-domain | LLGPL-2.1"
+LICENSE="|| ( GPL-2 public-domain LLGPL-2.1 )"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
