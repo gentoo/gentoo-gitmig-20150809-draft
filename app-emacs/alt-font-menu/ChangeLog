@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/alt-font-menu
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/alt-font-menu/ChangeLog,v 1.1 2003/11/12 08:15:58 mkennedy Exp $
+
+*alt-font-menu-0.4 (12 Nov 2003)
+
+  12 Nov 2003; <mkennedy@gentoo.org> alt-font-menu-0.4.ebuild, metadata.xml,
+  files/50alt-font-menu-gentoo.el:
+  initial import. ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
