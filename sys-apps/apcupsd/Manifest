@@ -1,4 +1,4 @@
-MD5 a3eef94c2b8b52204400429132c5e729 ChangeLog 2667
+MD5 ed27f8a872c32b4b8f3ed4e27fcd8754 ChangeLog 2781
 MD5 4effa1ef370a5b9b66d426e47d691e91 apcupsd-3.10.1.ebuild 2107
 MD5 361df6b22f22245f1ec92b65fc1faf3e apcupsd-3.10.5-r1.ebuild 2020
 MD5 747cdfb31cb71a8b6f7d1e247c5d0630 apcupsd-3.10.5-r2.ebuild 2028
@@ -7,7 +7,7 @@ MD5 4048e5545064ab002a8da3ec3187ffaf apcupsd-3.10.5.ebuild 1754
 MD5 ef5647259afecb9217631910e0a743a2 apcupsd-3.8.1.ebuild 1263
 MD5 8785aff29770187afbb5761b42dbe844 apcupsd-3.8.5.ebuild 1250
 MD5 b3e098cb7179d63d6c017deb7c9c6f08 files/apccontrol 4230
-MD5 9c27dcd72bd0102c3b270eed24704829 files/apcupsd 528
+MD5 cf72d7293783a82e1ca6e2f325e046aa files/apcupsd 560
 MD5 69493684d6acae200495da6c2e75863f files/digest-apcupsd-3.10.1 123
 MD5 f7092406e32869eb0535d85b4c09be0d files/digest-apcupsd-3.10.5 123
 MD5 f7092406e32869eb0535d85b4c09be0d files/digest-apcupsd-3.10.5-r1 123

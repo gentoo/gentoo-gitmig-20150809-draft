@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/apcupsd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.14 2003/02/28 03:24:07 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.15 2003/06/29 22:18:13 mholzer Exp $
+
+  30 Jun 2003; Martin Holzer <mholzer@gentoo.org> files/apcupsd:
+  Added depend into initscript. Closes #20771.
 
 *apcupsd-3.10.5-r3 (27 Feb 2003)
 
