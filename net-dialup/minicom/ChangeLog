@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.4 2003/02/03 21:54:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.5 2003/02/05 22:17:53 gerk Exp $
+
+  05 Feb 2003; Mark Guetin <gerk@gentoo.org> minicom-2.00.0.ebuild :
+  Added ppc to keywords, runs great
 
   03 Feb 2003; Aron Griffis <agriffis@gentoo.org> minicom-2.00.0.ebuild :
   Add alpha to KEYWORDS
