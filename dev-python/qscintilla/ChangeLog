@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.36 2005/02/20 15:58:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.37 2005/02/20 16:09:14 carlo Exp $
+
+  20 Feb 2005; Carsten Lohrke <carlo@gentoo.org> qscintilla-1.4.ebuild,
+  qscintilla-1.5.ebuild:
+  dropped  ppc64 keyword by accident
 
 *qscintilla-1.5 (20 Feb 2005)
 
