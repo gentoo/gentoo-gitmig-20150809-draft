@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.2.1-r2.ebuild,v 1.8 2003/02/13 10:38:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.2.1-r2.ebuild,v 1.9 2003/07/21 09:17:39 liquidx Exp $
 
 inherit libtool
 
@@ -9,7 +9,8 @@ DESCRIPTION="A tool for exporting C libraries into Scheme"
 SRC_URI="http://www.gnucash.org/pub/g-wrap/source/${P}.tar.gz"
 HOMEPAGE="http://www.gnucash.org"
 
-SLOT="1.2"
+# g-wrap should never have been slotted, since the files overlap significantly
+SLOT="1.3"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc "
 
