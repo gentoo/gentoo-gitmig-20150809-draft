@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ca75e7fbbc98b27b3b5c518780dfc855 pista-0.62b.ebuild 779
+MD5 97987245788711b09e6fa5e4b10544ce ChangeLog 416
+MD5 c7339df59a38ba2a7d6dacbf32e74898 metadata.xml 372
+MD5 a085065c020599b7c2459901c83a6f67 files/digest-pista-0.62b 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBPUmnmdTrptrqvGERAtWZAJ9ruFqKLeyCKhq1mFwebkwGyvaiLgCfWz+g
+6CG05MqasNFIz9CQt1paq9w=
+=FSuq
+-----END PGP SIGNATURE-----

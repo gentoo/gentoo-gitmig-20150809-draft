@@ -1,0 +1,10 @@
+# ChangeLog for dev-embedded/pista
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pista/ChangeLog,v 1.1 2004/09/07 05:35:04 dragonheart Exp $
+
+*pista-0.62b (07 Sep 2004)
+
+  07 Sep 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +pista-0.62b.ebuild:
+  Initial import thanks to Laurence Withers <lwithers@users.sf.net> in bug #61422
+
