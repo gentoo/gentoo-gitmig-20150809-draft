@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.1.19.ebuild,v 1.1 2004/08/06 19:22:54 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-3.1.19.ebuild,v 1.2 2004/08/21 15:05:32 foser Exp $
 
 inherit gnome2 eutils debug
 
@@ -29,7 +29,7 @@ RDEPEND=">=gnome-extra/gal-2.1.13
 	>=x11-themes/gnome-icon-theme-1.2.3
 	>=gnome-base/libglade-2
 	>=gnome-base/libbonoboui-2.2.4
-	>=gnome-base/ORBit2-2.5.6
+	>=gnome-base/orbit-2.5.6
 	>=gnome-base/gnome-vfs-2.1
 	>=gnome-base/gail-1
 	>=dev-libs/libxml2-2.5"

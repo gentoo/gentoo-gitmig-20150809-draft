@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.4.2.ebuild,v 1.9 2004/07/14 15:23:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.4.2.ebuild,v 1.10 2004/08/21 15:05:32 foser Exp $
 
 inherit gnome2
 
@@ -22,7 +22,7 @@ RDEPEND=">=gnome-base/libglade-2
 	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomecanvas-2
 	>=gnome-base/libgnomeui-2.1.0
-	>=gnome-base/ORBit2-2.4.0
+	>=gnome-base/orbit-2.4
 	>=sys-devel/gdb-5.1
 	>=sys-devel/gettext-0.10.40"
 

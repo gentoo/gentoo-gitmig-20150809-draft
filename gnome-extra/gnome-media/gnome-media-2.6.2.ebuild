@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.6.2.ebuild,v 1.4 2004/08/05 23:15:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.6.2.ebuild,v 1.5 2004/08/21 15:05:32 foser Exp $
 
 inherit gnome2
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/gnome-desktop-2
 	>=gnome-base/gnome-vfs-2
 	dev-libs/libxml2
-	>=gnome-base/ORBit2-2.4.1
+	>=gnome-base/orbit-2.4.1
 	>=gnome-base/libbonobo-2
 	>=gnome-base/gail-0.0.3
 	>=media-sound/esound-0.2.23

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-0.0.97.ebuild,v 1.2 2004/08/07 10:16:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-0.0.97.ebuild,v 1.3 2004/08/21 15:05:32 foser Exp $
 
 inherit debug gnome2 libtool
 
@@ -14,7 +14,7 @@ IUSE="doc ldap"
 
 RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/libbonobo-2.4
-	>=gnome-base/ORBit2-2.9.8
+	>=gnome-base/orbit-2.9.8
 	>=gnome-base/gnome-vfs-2.0
 	>=gnome-base/libgnome-2.0
 	>=gnome-base/gconf-2.0

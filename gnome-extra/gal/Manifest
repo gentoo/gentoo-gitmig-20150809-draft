@@ -1,3 +1,4 @@
+MD5 a7bcfd2cfaebd0d83ee22fd5cb85e875 gal-2.1.14.ebuild 1047
 MD5 ae45492535caad3aec2b6816de49b6d1 gal-1.99.11.ebuild 967
 MD5 a7bcfd2cfaebd0d83ee22fd5cb85e875 gal-2.1.13.ebuild 1047
 MD5 2b6e66b5a98de0c61a6f5e0030dd1037 gal-0.24.ebuild 2085
@@ -5,6 +6,7 @@ MD5 3ef77e022887ccd78ced61f61c16a345 ChangeLog 7882
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 78bec5aec485baac3fa825378fabb471 files/digest-gal-0.24 121
 MD5 d8bae7d1f416770456393bd52068fa3c files/digest-gal-2.1.13 64
+MD5 01b9663c943fd682b86f7711a62abba9 files/digest-gal-2.1.14 64
 MD5 b2f242d8b7015030276291e22e03aa48 files/gal-0.24-sgml-1.patch 1363
 MD5 95ab7cf92689f0cd2db97884cc53c423 files/digest-gal-1.99.11 64
 MD5 4690f5246b395401f10fd9082b676912 files/gal-1.99.3-docfix.patch 436
