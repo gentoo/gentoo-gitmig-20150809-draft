@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/aquapfont-2.5-r1.ebuild,v 1.6 2004/09/29 06:03:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/aquapfont-2.5-r1.ebuild,v 1.7 2004/09/29 17:26:55 gustavoz Exp $
 
 inherit font
 
@@ -11,7 +11,7 @@ DESCRIPTION="Very pretty Japanese proportional truetype font"
 HOMEPAGE="http://aquablue.milkcafe.to/"
 SRC_URI="http://aquablue.milkcafe.to/fnt/${MY_P}.lzh"
 
-KEYWORDS="x86 alpha ppc ~sparc ~amd64 ppc64"
+KEYWORDS="x86 alpha ppc sparc ~amd64 ppc64"
 LICENSE="aquafont"
 SLOT=0
 
