@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jmp
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmp/ChangeLog,v 1.1 2004/04/05 04:53:50 zx Exp $
+
+*jmp-0.41 (04 Apr 2004)
+
+  04 Apr 2004; Chris Aniszczyk <zx@gentoo.org> jmp-0.41.ebuild, metadata.xml:
+  Initial Import. Closes #46395.
+  Thanks to Paul Pacheco <paul.pacheco@wavecode.com> for the initial ebuild.
+
