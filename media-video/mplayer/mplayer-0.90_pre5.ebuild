@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre5.ebuild,v 1.1 2002/06/10 12:06:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre5.ebuild,v 1.2 2002/06/10 12:44:37 azarah Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -159,8 +159,9 @@ src_compile() {
 
 src_install() {
 
-	make prefix=${D}/usr/share \
+	make prefix=${D}/usr \
 	     BINDIR=${D}/usr/bin \
+		 LIBDIR=${D}/usr/lib \
 	     CONFDIR=${D}/usr/share/mplayer \
 	     DATADIR=${D}/usr/share/mplayer \
 	     MANDIR=${D}/usr/share/man \
