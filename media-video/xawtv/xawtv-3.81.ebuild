@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.81.ebuild,v 1.3 2002/12/15 21:18:06 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.81.ebuild,v 1.4 2002/12/16 01:06:43 seemant Exp $
 
 IUSE="aalib motif alsa opengl nls"
 
@@ -24,7 +24,8 @@ DEPEND=">=sys-libs/ncurses-5.1
 	sys-apps/supersed
 	alsa? ( media-libs/alsa-lib )
 	aalib? ( media-libs/aalib )
-	motif? ( x11-libs/openmotif )
+	motif? ( x11-libs/openmotif
+		app-text/recode )
 	opengl? ( virtual/opengl )
 	quicktime? ( media-libs/libquicktime )"
 
@@ -71,7 +72,7 @@ src_compile() {
 		--enable-zvbi \
 		${myconf} || die
 
-	emake || make || die
+	make || die
 
 	cd ${MY_FONT}
 	make || die
