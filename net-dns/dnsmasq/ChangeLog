@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.53 2004/10/03 23:12:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.54 2004/10/17 02:29:45 solar Exp $
+
+  16 Oct 2004; <solar@gentoo.org> dnsmasq-2.9.ebuild:
+  qa fix DEPEND/RDEPEND usage for embedded when installing into ROOT=/somedir
 
   03 Oct 2004; Jason Wever <weeve@gentoo.org> dnsmasq-2.15.ebuild:
   Stable on sparc.
