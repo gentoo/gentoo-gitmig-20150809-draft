@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.5 2002/03/24 02:52:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.6 2002/04/12 16:44:52 spider Exp $
+
+*gtk+-2.0.2 (11 Apr 2002)
+  11 Apr 2002; Spider <spider@gentoo.org> gtk+-2.0.2-r1.ebuild:
+  New release with new api
+  USE="doc" will build api documentation
+  needs libpng 1.2.1 and is masked because of that.
+  needs glib 2.0 as well
+
 
 *gtk+-1.2.10-r7 (23 Mar 2002)
 
