@@ -1,6 +1,16 @@
-MD5 dcd8bac6dc3fc6ad0b4b56427776cc16 ChangeLog 1743
-MD5 416452bedba085c06bd2502510370e1a metadata.xml 162
-MD5 28d5df48aebc5b924c7b68148000d27f obconf-1.5-r1.ebuild 702
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dcb2fc480e3e39f3fbeb03f97a09c741 ChangeLog 1846
 MD5 486d58ebff8ad5b92ac8b3e983c291d2 obconf-1.5.ebuild 694
-MD5 16f5548bb98f7f19887a99d6c931cb88 files/digest-obconf-1.5 62
+MD5 416452bedba085c06bd2502510370e1a metadata.xml 162
+MD5 15c5efda4f6765808b4443abdc663dc8 obconf-1.5-r1.ebuild 707
 MD5 16f5548bb98f7f19887a99d6c931cb88 files/digest-obconf-1.5-r1 62
+MD5 16f5548bb98f7f19887a99d6c931cb88 files/digest-obconf-1.5 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBs7juugEuf3OQ0akRAgrzAJ9codRHgwIf0+JrErLgeY9IuzDs+gCfYeLk
+x5FkHxyg6l3jouLw4VzUbOs=
+=U+Ql
+-----END PGP SIGNATURE-----
