@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.47.ebuild,v 1.8 2004/01/26 01:14:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.47.ebuild,v 1.9 2004/04/16 05:46:36 vapier Exp $
 
 RH_EXTRAVERSION="3"
 
 DESCRIPTION="RedHat's Bluecurve theme for GTK1, GTK2, KDE3, GDM, Metacity and Nautilus"
 HOMEPAGE="http://www.redhat.com"
 SRC_URI="ftp://ftp.sunet.se/pub/Linux/distributions/redhat/redhat/linux/rawhide/SRPMS/SRPMS/${P}-${RH_EXTRAVERSION}.src.rpm"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc alpha"
@@ -21,12 +22,9 @@ DEPEND="sys-devel/autoconf
 			=x11-libs/gtk+-1.2* )
 	kde? (	>=x11-libs/qt-3.0.5
 		>=kde-base/kdebase-3.0.2 )"
-
 # Because one may only want to use the theme with kde OR gtk OR Metacity
 # OR gdm, we don't want any run-time dependencies...
 RDEPEND=""
-
-S="${WORKDIR}/${P}"
 
 # We need to change some RedHat-specific stuff to Gentoo-style...
 _replace() {

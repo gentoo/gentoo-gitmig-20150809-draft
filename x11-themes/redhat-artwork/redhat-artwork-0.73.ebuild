@@ -1,12 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.73.ebuild,v 1.9 2004/01/30 07:33:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.73.ebuild,v 1.10 2004/04/16 05:46:36 vapier Exp $
+
+inherit eutils rpm
 
 RH_EXTRAVERSION="1"
 
 DESCRIPTION="RedHat's Bluecurve theme for GTK1, GTK2, KDE3, GDM, Metacity and Nautilus"
-HOMEPAGE="http://www.redhat.com"
+HOMEPAGE="http://www.redhat.com/"
 SRC_URI="ftp://ftp.redhat.com/pub/redhat/linux/9/en/os/i386/SRPMS/${P}-${RH_EXTRAVERSION}.src.rpm"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~alpha"
@@ -21,14 +24,9 @@ DEPEND=">=sys-devel/autoconf-2.58
 	kde? (	>=x11-libs/qt-3.0.5
 		>=kde-base/kdebase-3.0.2 )
 	gtk2? ( >=x11-libs/gtk+-2* )"
-
 # Because one may only want to use the theme with kde OR gtk OR Metacity
 # OR gdm, we don't want any run-time dependencies...
 RDEPEND=""
-
-inherit eutils rpm
-
-S="${WORKDIR}/${P}"
 
 # We need to change some RedHat-specific stuff to Gentoo-style...
 _replace() {
