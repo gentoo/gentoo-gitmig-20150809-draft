@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.2.010-r1.ebuild,v 1.10 2004/11/05 20:06:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.2.010-r1.ebuild,v 1.11 2004/12/20 23:53:29 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -28,7 +28,12 @@ export CEL_PREFIX=${CEL_PREFIX:-${CRYSTAL_PREFIX}}
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-fix-cast.diff"
+	sed -i \
+		-e 's:curl/types.h:curl/curl.h:' \
+		src/updater/httpclient/download.h \
+		|| die "sed failed"
 }
 
 src_compile() {
