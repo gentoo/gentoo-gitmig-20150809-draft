@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.8 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.9 2002/07/19 15:12:50 g2boojum Exp $
+
+  19 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  removed old version, closing bug 1044 the easy way
 
 *hdparm-5.2-r1 (08 Jul 2002)
 
