@@ -1,6 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.9.4-r1.ebuild,v 1.2 2001/10/29 18:23:13 azarah Exp $
 
 S=${WORKDIR}/${P}/abi
 DESCRIPTION="Text processor"
@@ -9,14 +10,14 @@ HOMEPAGE="http://www.abisource.com"
 
 DEPEND="virtual/glibc
 	>=sys-devel/gcc-2.95.2
-        =media-libs/freetype-1.3.1-r3
+	=media-libs/freetype-1.3.1-r3
 	>=media-libs/libpng-1.0.7
 	>=x11-libs/gtk+-1.2.10-r4
-        gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
-		 >=dev-libs/libunicode-0.4-r1
-                 >=gnome-base/bonobo-1.0.9-r1
-		 >=gnome-extra/gal-0.13-r1 )
-        spell? ( >=app-text/pspell-0.11.2 )
+	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
+		>=dev-libs/libunicode-0.4-r1
+		>=gnome-base/bonobo-1.0.9-r1
+		>=gnome-extra/gal-0.13-r1 )
+	spell? ( >=app-text/pspell-0.11.2 )
 	virtual/x11"
 
 
@@ -41,31 +42,31 @@ src_compile() {
 	echo "*************************************************"
 	echo
 
-	./configure --host=${CHOST}					\
-		    --prefix=/usr					\
-		    --mandir=/usr/share/man				\
-		    --infodir=/usr/share/info				\
-		    --sysconfdir=/etc					\
-		    --localstatedir=/var/lib				\
-		    --enable-extra-optimization\			\
-		    ${myconf} || die
+	./configure --host=${CHOST}			\
+		--prefix=/usr					\
+		--mandir=/usr/share/man			\
+		--infodir=/usr/share/info		\
+		--sysconfdir=/etc				\
+		--localstatedir=/var/lib		\
+		--enable-extra-optimization		\
+		${myconf} || die
 
 	# Doesn't work with -j 4 (hallski)
-	make UNIX_CAN_BUILD_STATIC=0					\
-	     OPTIMIZER="${CFLAGS}" || die
+	make UNIX_CAN_BUILD_STATIC=0	\
+		OPTIMIZER="${CFLAGS}" || die
 }
 
 src_install() {
 
-	make prefix=${D}/usr						\
-	     mandir=${D}/usr/share/man					\
-	     infodir=${D}/usr/share/info				\
-	     sysconfdir=${D}/etc					\
-	     localstatedir=${D}/var/lib					\
-	     install || die
-
-	cp ${D}/usr/bin/AbiWord ${D}/usr/bin/AbiWord.orig
-	sed -e "s:${D}::" ${D}/usr/bin/AbiWord.orig >${D}/usr/bin/AbiWord
+	make prefix=${D}/usr			\
+		mandir=${D}/usr/share/man	\
+		infodir=${D}/usr/share/info	\
+		sysconfdir=${D}/etc			\
+		localstatedir=${D}/var/lib	\
+		install || die
+	
+	cp ${D}/usr/bin/AbiWord ${WORKDIR}AbiWord.orig
+	sed -e "s:${D}::" ${WORKDIR}/AbiWord.orig > ${D}/usr/bin/AbiWord
 	
 	rm -f ${D}/usr/bin/abiword
 	dosym /usr/bin/AbiWord /usr/bin/abiword
@@ -80,4 +81,3 @@ src_install() {
 		doins ${FILESDIR}/AbiWord.desktop
 	fi
 }
-
