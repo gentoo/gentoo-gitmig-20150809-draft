@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.39 2003/08/16 04:44:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.40 2003/08/17 08:09:16 pauldv Exp $
+
+*db-3.2.9-r7 (17 Aug 2003)
+
+  17 Aug 2003; Paul de Vrieze <pauldv@gentoo.org> db-3.2.3h-r4.ebuild,
+  db-3.2.9-r1.ebuild, db-3.2.9-r5.ebuild, db-3.2.9-r7.ebuild, db-3.2.9.ebuild:
+  New stable version with support for db-4 and that actually installs the static
+  libraries
 
 *db-4.0.14-r1 (16 Aug 2003)
 

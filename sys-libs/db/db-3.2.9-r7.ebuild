@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r5.ebuild,v 1.11 2003/07/01 15:13:37 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r7.ebuild,v 1.1 2003/08/17 08:09:17 pauldv Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ SLOT="3"
 LICENSE="DB"
 # This ebuild is to be the compatibility ebuild for when db4 is put
 # in the tree.
-KEYWORDS="~x86 ~ppc sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm"
 
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}
@@ -103,6 +103,8 @@ src_install () {
 		install || die
 	
 	cd ${S}/build-static
+	cp libdb.a libdb-3.2.a
+	cp libdb_cxx.a libdb_cxx-3.2.a
 	dolib.a libdb-3.2.a libdb_cxx-3.2.a
 
 	dodir usr/include/db3
@@ -133,7 +135,7 @@ src_install () {
 	do
 		mv ${fname} ${fname//\/db_/\/db3_}
 	done
-	ln -sf /usr/include/db4/db.h ${D}/usr/include/db.h
+	ln -sf /usr/include/db3/db.h ${D}/usr/include/db.h
 }
 
 fix_so () {
@@ -148,8 +150,9 @@ fix_so () {
 	[ -n "${target}" ] && ln -sf ${target//.\//} libdb_java.so
 
 	cd ${ROOT}/usr/include
-	target=`ls -d db? |tail -n 1`
+	target=`ls -d db?|sort |tail -n 1`
 	[ -n "${target}" ] && ln -sf ${target}/db.h .
+	[ -n "${target}" ] && ln -sf ${target}/db_185.h .
 }
 
 pkg_postinst () {
