@@ -1,9 +1,13 @@
 # ChangeLog for misc-net/firestarter
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/firestarter/Changelog,v 1.4 2002/06/01 13:03:57 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/firestarter/Changelog,v 1.5 2002/06/03 17:13:08 bass Exp $
 
 *firestarter-0.8.2 (27 May 2002)
+
+  03 Jun 2002; J.Alberto S.L. <bass@gentoo.org> firestarter-0.8.2.ebuild:
+
+  Doc creation added
 
   01 Jun 2002;  J.Alberto S.L. <bass@gentoo.org> firestarter-0.8.2.ebuild:
 
