@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r2.ebuild,v 1.1 2002/02/17 15:30:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r2.ebuild,v 1.2 2002/02/17 15:31:50 azarah Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -16,7 +16,7 @@ DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder
-# Experimental USE flags dvd and decss
+# Experimental USE flag 'css' for DVD decription
 RDEPEND="virtual/glibc
 	>=media-libs/win32codecs-${PV}
 	>=media-libs/divx4linux-20011025
