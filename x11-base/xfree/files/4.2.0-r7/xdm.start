@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.0-r7/xdm.start,v 1.1 2002/03/06 07:43:51 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.0-r7/xdm.start,v 1.2 2002/03/06 21:58:35 azarah Exp $
 
 # This is here to serve as a note to myself, and future developers.
 #
@@ -13,16 +13,24 @@
 #
 # Resolution: add the following line to /etc/inittab
 #
-#  x:3:respawn:/etc/X11/startDM.sh
+#  x:a:once:/etc/X11/startDM.sh
 #
-# and have /etc/X11/startDM.sh start the DM in -nodaemon mode if
-# a lock is present, else just fall through (with a big enouth
-# delay so that init will not "detect" a respawning process and 
-# halt if for some odd time).
+# and have /etc/X11/startDM.sh start the DM in daemon mode if
+# a lock is present (with the info of what DM should be started),
+# else just fall through.
 #
-# We then use /etc/init.d/xdm to control the presence of this
-# lock, and this should ensure that the getty's is always started
-# *before* the DM.
+# How this basically works, is the "a" runlevel is a additional
+# runlevel that you can use to fork processes with init, but the
+# runlevel never gets changed to this runlevel.  Along with the "a"
+# runlevel, the "once" key word means that startDM.sh will only be
+# run when we specify it to run, thus eliminating respawning
+# startDM.sh when "xdm" is not added to the default runleve, as was
+# done previously.
+#
+# This script then just calls "tellinit a", and init will run
+# /etc/X11/startDM.sh after the current runlevel completes (this
+# script should only be added to the actual runlevel the user is
+# using).
 #
 # Martin Schlemmer
 # aka Azarah
@@ -58,24 +66,38 @@ setup_dm() {
 start() {
 	setup_dm
 	ebegin "Setting up ${SERVICE}"
+	#save the prefered DM
 	save_options service "$EXE"
+	#tell init to run /etc/X11/startDM.sh after current
+	#runlevel is finished (should *not* be in the "boot"
+	#                      runlevel).
+	/sbin/telinit a >/dev/null 2>&1
 	eend 0
 }
 
 stop() {
+	local retval=0
+	local curvt="`fgconsole`"
 	local myexe="`get_options service`"
 	local myservice=${myexe##*/}
 	ebegin "Stopping ${myservice}"
 	rm -f ${svcdir}/options/xdm/service
-	if [ "`ps -A | grep "${myservice}" `" ]
+	if [ "`ps -A | grep -e "${myservice}"`" ]
 	then
 		start-stop-daemon --stop --quiet \
-			--exe $myexe >/dev/null 2>/dev/null
+			--exe $myexe >/dev/null 2>&1
+		retval=$?
+	else
+		retval=1
 	fi
-	if [ "`ps -A | grep "X" `" ]
-	then
-		killall X >/dev/null 2>/dev/null
-	fi
-	eend $? "Error stopping ${myservice}."
+#	sleep 1
+#	if [ "`ps -A | grep -e "X"`" ]
+#	then
+#		killall X >/dev/null 2>&1
+#	fi
+	#switch back to original vt
+	chvt "$curvt" >/dev/null 2>&1
+	eend $retval "Error stopping ${myservice}."
+	return $retval
 }
 
