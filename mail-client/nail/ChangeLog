@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/nail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.1 2004/05/30 02:53:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.2 2004/06/04 09:07:44 dholm Exp $
+
+  04 Jun 2004; David Holm <dholm@gentoo.org> nail-9.30.ebuild:
+  Added to ~ppc.
 
 *nail-9.30 (29 May 2004)
 
