@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/xmltex
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.1 2004/02/01 13:53:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.2 2004/02/02 15:39:30 usata Exp $
+
+*xmltex-1.9 (03 Feb 2004)
+
+  03 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> xmltex-0.14-r1.ebuild,
+  xmltex-1.9.ebuild:
+  Version bumped due to passivetex requirement and fixed texmf.cnf
+  override problem
 
 *xmltex-0.14 (01 Feb 2004)
 
