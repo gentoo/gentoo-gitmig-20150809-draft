@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.4.27.ebuild,v 1.1 2004/08/09 12:40:59 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.4.27-r1.ebuild,v 1.1 2004/08/10 01:12:51 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel-2
 detect_version
 
-XBOX_PATCH="xbox-sources-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}-${PR}.patch.bz2"
+XBOX_PATCH="xbox-sources-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}-${PR/r1/r0}.patch.bz2"
 
 SRC_URI="${KERNEL_URI}
 	mirror://gentoo/${XBOX_PATCH}"
@@ -17,4 +17,4 @@ KEYWORDS="~x86 -*"
 
 UNIPATCH_LIST="
 	${DISTDIR}/${XBOX_PATCH}
-"
+	${FILESDIR}/${P}.cmdlineLeak.patch"
