@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.91.0.1-r1.ebuild,v 1.9 2004/10/30 22:44:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.91.0.1-r1.ebuild,v 1.10 2004/11/07 09:14:33 mr_bones_ Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 	mirror://kernel/linux/devel/binutils/test/${P}.tar.bz2
 	mirror://gentoo/${PN}-2.15.91.0.1-patches-${PATCHVER}.tar.bz2"
 
-LICENSE="GPL-2 | LGPL-2"
+LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
 KEYWORDS="-* -ppc"
 IUSE="bootstrap build hardened multitarget nls pic"
