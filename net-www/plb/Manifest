@@ -1,5 +1,5 @@
-MD5 bb7099ae4fcba033dd573365b4c35368 ChangeLog 542
 MD5 9b8f0987a9b9981a8014e8afd4939944 plb-0.3.ebuild 975
+MD5 bb7099ae4fcba033dd573365b4c35368 ChangeLog 542
 MD5 e9b720f638fa4922636a7b21acd816c3 files/digest-plb-0.3 59
 MD5 55e53cfddf06cc8f514a175581cc09bd files/plb.conf 2428
-MD5 7967e63147b9c188dc548f976dc3bb9e files/plb.rc6 400
+MD5 8e516d93ef83b6b288f203fec57c8e23 files/plb.rc6 392

@@ -8,14 +8,14 @@ MD5 16a563fee9101781e780f3d7909f999d files/digest-tomcat-5.0.18 75
 MD5 59c2cca5fed04f099567957c04297f51 files/digest-tomcat-5.0.25 75
 MD5 8e78596e41abd9a751733cc48570d1a4 files/4.1.29/gentoo.diff 5815
 MD5 219cd03e7fd965c15b668a1e41a6e867 files/4.1.29/tomcat.conf 2707
-MD5 8c6b16a4fa1cf234457cbb2e9dacaf42 files/4.1.29/tomcat.init 798
+MD5 9ac2f4222452976240d03bdc6c4743d8 files/4.1.29/tomcat.init 792
 MD5 d686b57da55c6d8da476981c6557a3a1 files/4.1.29/21tomcat 152
 MD5 d0b4b02720bc1672f97f846c44be219e files/5.0.18/gentoo.diff 6359
 MD5 1b106c8de8b8546675d60600f778fa28 files/5.0.18/tomcat.conf 2645
-MD5 646b56c2d0ff6cfb14ccb77d598f5646 files/5.0.18/tomcat.init 798
+MD5 47f0dc76c0c9be9c28edbc87dc55e85b files/5.0.18/tomcat.init 792
 MD5 05406ff27a96734864728d6ae8a95482 files/5.0.18/jikes.diff 904
 MD5 d686b57da55c6d8da476981c6557a3a1 files/5.0.18/21tomcat 152
 MD5 c6fdc8f282deaa092061b338cceb0517 files/5.0.25/gentoo.diff 464
 MD5 ac5c0959267483341ed731c0c100f338 files/5.0.25/tomcat.conf 2652
-MD5 344756097984a36b8a074dcb09b45836 files/5.0.25/tomcat.init 814
+MD5 5244a88702f03f69669c61c3efff888e files/5.0.25/tomcat.init 812
 MD5 6a2e3734b0dedcf684fb8f6e68b04293 files/5.0.25/21tomcat 155

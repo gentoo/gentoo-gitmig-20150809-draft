@@ -5,4 +5,4 @@ MD5 0395650cdf6ad11208dcddb344d31e7b files/digest-jetty-4.2.19 70
 MD5 c06bb0261951f980b4c2609682d49972 files/4.2.19/21jetty 52
 MD5 a381ae9ba82a2b10ea75e22acfafeedc files/4.2.19/jetty 948
 MD5 0ab3a07453141d8fab987dcd1f0cfd9e files/4.2.19/jetty.conf 41
-MD5 6368cd5389ec5bb8c4e0fbed07588495 files/4.2.19/jetty.init 1112
+MD5 5c60daab6efd3ff566ca07e68c8f6556 files/4.2.19/jetty.init 1110

@@ -1,6 +1,6 @@
 MD5 f57c840108e33c16120c41b2da53008c ntlmaps-0.9.8.ebuild 1016
 MD5 ef5b67907911883e8781d0ec6229fbb7 ChangeLog 501
 MD5 d9deb8db85ec3b52b53a3c21bd236125 metadata.xml 487
-MD5 324e239478bf9f27531e3466c8ae916b files/ntlmaps.init 792
+MD5 7d839c8d8ec6ab58509f43c1d801d1f2 files/ntlmaps.init 787
 MD5 584fc4f03ea3e2cb11cf5d155a86fab0 files/ntlmaps-0.9.8.patch 358
 MD5 547d2124c00f02458c472025ac835071 files/digest-ntlmaps-0.9.8 57

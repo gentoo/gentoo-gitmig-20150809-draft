@@ -5,6 +5,6 @@ MD5 e261f6007cf1491aead96c2138d1ee3d ChangeLog 2957
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 3633255c0f7643530768ad4edbc48b82 files/privoxy-gentoo.diff 2374
 MD5 a0be004362422bbf19e3cadf3cba42bd files/digest-privoxy-2.9.14_beta 75
-MD5 da37c9e96c632a4ac537f26d2b29ac1d files/privoxy.rc6 529
+MD5 dbb4193e3be24f0614f3f9781c8f5e03 files/privoxy.rc6 523
 MD5 498b2ae85af76ed736ac4979e28bfe8a files/digest-privoxy-3.0.2 77
 MD5 56d88e9a6970c67adde3386b83dcb2ae files/digest-privoxy-3.0.3 77

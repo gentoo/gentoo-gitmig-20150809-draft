@@ -3,5 +3,5 @@ MD5 f4e1994b7ee66891df1ce7d94057e8fa tux-2.2.7.ebuild 809
 MD5 5f4031105ba12950f4f06bc46df6535d ChangeLog 520
 MD5 105b5c4df8ee19e4502eec1c40e8bb57 files/tux.conf.d 1848
 MD5 5cdf6a00aa7a9f1a9c960054ddf17917 files/digest-tux-2.2.7 60
-MD5 2d377bd50a870b1971a894de98c5bb1f files/tux.init.d 1709
+MD5 ea5da7f38eafe7b43c2b6369f5f43d9a files/tux.init.d 1703
 MD5 eec61576fb028448bc45ca00fe54efeb files/digest-tux-3.2.16 61

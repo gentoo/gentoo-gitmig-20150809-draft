@@ -6,11 +6,11 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-orion-2.0 0
 MD5 5e78308ed1712b24bcced31b5097e7fc files/digest-orion-2.0.1 60
 MD5 24ec252a2b07e0bc92a2cf1550e1e25e files/2.0/stop_orion.sh 197
 MD5 28299874df680ef510c5d2b73da665f6 files/2.0/orion.conf 1486
-MD5 f55079d405cd5d629002372f225cc068 files/2.0/orion.init 628
+MD5 6c81f8112e67388a4f915d0bcab02d83 files/2.0/orion.init 622
 MD5 1274c79299b79939d7770f9e32468c90 files/2.0/start_orion.sh 325
 MD5 abd7c855a9b9601253916624d6f0e782 files/2.0/2.0-gentoo.patch 5301
 MD5 f6cfa8208d133acf6d2c1ff152212a87 files/2.0.1/stop_orion.sh 199
 MD5 abd7c855a9b9601253916624d6f0e782 files/2.0.1/2.0.1-gentoo.patch 5301
 MD5 55c3cb3ae8860c3902f8008434f53c02 files/2.0.1/orion.conf 1488
-MD5 2e5b4503b7eb23b3a485f4cc15a6cb94 files/2.0.1/orion.init 630
+MD5 74f811add4d32c9802cc4188c67cd6db files/2.0.1/orion.init 624
 MD5 11eff9738ed01861228b3ad325dd9cfe files/2.0.1/start_orion.sh 327
