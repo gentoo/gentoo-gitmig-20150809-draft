@@ -64,6 +64,7 @@
 gnome-extra/nautilus-media
 >=gnome-base/control-center-2.2.0
 >=gnome-extra/gnome-system-monitor-2.0.4-r1
+>=gnome-extra/acme-2.0.2
 
 # <lu_zero@gentoo.org> (28 Jan 2003)
 #not sure that it works now, sorry
