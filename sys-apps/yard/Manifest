@@ -1,7 +1,3 @@
-MD5 6604809edaf3ee3b079dc49d4f9d060f yard-2.2.ebuild 1773
-MD5 9ce7364a0194c584745e569fd8cb64e5 yard-2.0-r1.ebuild 2121
-MD5 dfa73880f7f8356d86c980a7e161c3ec ChangeLog 1486
-MD5 8b38aca4e779e11e0569c860f8f851a4 metadata.xml 204
 MD5 eda34ea95eabf113081ec403aed70a0b files/digest-yard-2.2 189
 MD5 44856cd22652caae3ceb10e80f67ede9 files/yard-2.0-doc-Makefile.in-gentoo.diff 607
 MD5 7ed8f631615f61edb17aa0c7b4b438e7 files/configure 8803
@@ -9,3 +5,7 @@ MD5 e46a919d11b886399ba4b98df28d016d files/yard-2.0-extras-Makefile.in-gentoo.di
 MD5 a36f501e02832272137a33c3786f0ef6 files/yard-2.2-gentoo.patch 4520
 MD5 13aa005d1c7816b36afa35b6a1494cc6 files/yard-2.0-Makefile.in-gentoo.diff 2638
 MD5 0d6193ebfb7238cec0350eb69fe32d0c files/digest-yard-2.0-r1 189
+MD5 6604809edaf3ee3b079dc49d4f9d060f yard-2.2.ebuild 1773
+MD5 9ce7364a0194c584745e569fd8cb64e5 yard-2.0-r1.ebuild 2121
+MD5 dfa73880f7f8356d86c980a7e161c3ec ChangeLog 1486
+MD5 e6543624c262cae90cc830cde90ad3ae metadata.xml 165

@@ -1,8 +1,3 @@
-MD5 6b43c88e6b545a1dbc0b06cc84d69c5b vcron-3.0.1-r3.ebuild 1590
-MD5 5bf52206e9e34a106ffe8fc2ef2d9f71 vcron-3.0.1-r4.ebuild 1655
-MD5 487bad624265ce2f943279713a687adc ChangeLog 3527
-MD5 8b38aca4e779e11e0569c860f8f851a4 metadata.xml 204
-MD5 0c1ced878df37a66b0cbc4ceff57b375 vcron-3.0.1-r1.ebuild 1371
 MD5 9495caecef1f8b925d19a1d34c4ff405 files/vcron-3.0.1-selinux.diff.bz2 1931
 MD5 7407233e1718a8e515022b9ada84bfa1 files/crontab-3.0.1-r4 564
 MD5 6a065c2a4012e573ebb852275516a1d4 files/crontab 563
@@ -12,3 +7,8 @@ MD5 42a9b1ba7246f2fb453203eaccbb0e08 files/digest-vcron-3.0.1-r4 68
 MD5 9d66b761d15afae9471d33509b712fe9 files/vcron-3.0.1-close_stdin.diff 810
 MD5 7f79290c2f51c9dcee459c8a5636f652 files/vcron.rc6 520
 MD5 c8e987ea566611c641316ff140c8d91c files/vixie-cron-3.0.1-gentoo.patch 27121
+MD5 6b43c88e6b545a1dbc0b06cc84d69c5b vcron-3.0.1-r3.ebuild 1590
+MD5 5bf52206e9e34a106ffe8fc2ef2d9f71 vcron-3.0.1-r4.ebuild 1655
+MD5 487bad624265ce2f943279713a687adc ChangeLog 3527
+MD5 e6543624c262cae90cc830cde90ad3ae metadata.xml 165
+MD5 0c1ced878df37a66b0cbc4ceff57b375 vcron-3.0.1-r1.ebuild 1371
