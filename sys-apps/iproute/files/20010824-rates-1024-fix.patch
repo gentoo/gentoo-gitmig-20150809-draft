@@ -1,0 +1,36 @@
+diff -urN a/tc/tc_util.c b/tc/tc_util.c
+--- a/tc/tc_util.c	2000-04-16 19:42:55.000000000 +0200
++++ b/tc/tc_util.c	2003-12-14 06:56:55.000000000 +0100
+@@ -108,13 +108,13 @@
+ 
+ 	if (*p) {
+ 		if (strcasecmp(p, "kbps") == 0)
+-			bps *= 1024;
++			bps *= 1000;
+ 		else if (strcasecmp(p, "mbps") == 0)
+-			bps *= 1024*1024;
++			bps *= 1000*1000;
+ 		else if (strcasecmp(p, "mbit") == 0)
+-			bps *= 1024*1024/8;
++			bps *= 1000*1000/8;
+ 		else if (strcasecmp(p, "kbit") == 0)
+-			bps *= 1024/8;
++			bps *= 1000/8;
+ 		else if (strcasecmp(p, "bps") != 0)
+ 			return -1;
+ 	} else
+@@ -158,10 +158,10 @@
+ {
+ 	double tmp = (double)rate*8;
+ 
+-	if (tmp >= 1024*1023 && fabs(1024*1024*rint(tmp/(1024*1024)) - tmp) < 1024)
+-		snprintf(buf, len, "%gMbit", rint(tmp/(1024*1024)));
+-	else if (tmp >= 1024-16 && fabs(1024*rint(tmp/1024) - tmp) < 16)
+-		snprintf(buf, len, "%gKbit", rint(tmp/1024));
++	if (tmp >= 1000*999 && fabs(1000*1000*rint(tmp/(1000*1000)) - tmp) < 1000)
++		snprintf(buf, len, "%gMbit", rint(tmp/(1000*1000)));
++	else if (tmp >= 1000-10 && fabs(1000*rint(tmp/1000) - tmp) < 10)
++		snprintf(buf, len, "%gKbit", rint(tmp/1000));
+ 	else
+ 		snprintf(buf, len, "%ubps", rate);
+ 	return 0;

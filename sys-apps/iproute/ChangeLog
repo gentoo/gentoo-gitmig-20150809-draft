@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/iproute
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.32 2004/03/25 10:41:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.33 2004/04/06 15:19:21 vapier Exp $
+
+*iproute-20010824-r5 (06 Apr 2004)
+
+  06 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to clean up bugs and all that fun stuff.
+  #33831 by Miguel Sousa Filipe - We use /usr/include instead of /usr/src/linux.
+  #34294 by Andrea Barisani - Fix local DoS exploit.
+  #37432 by Radek Podgorny - Update the debian patch that we pull.
+  #40230 by Sebastian Werner - Use system pkt_sched.h instead of bundled.
+  #40510 by valli - Use system glibc headers instead of bundled.
+  #45274 by David Pufer - Add HFSC support.
 
   25 Mar 2004; Joshua Kinard <kumba@gentoo.org> iproute-20010824-r4.ebuild:
   Marked stable on mips.
