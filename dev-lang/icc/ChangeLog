@@ -1,10 +1,18 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.5 2002/12/09 04:20:57 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.6 2002/12/10 19:52:58 avenj Exp $
+
+*icc-7.0.065-r1 (10 Dec 2002)
+
+  10 Dec 2002; Jon Portnoy <avenj@gentoo.org> icc-7.0.065-r1.ebuild:
+
+  Changed the naming to more accurately reflect the current ICC
+  version number. Also fixed the primary executable and added a warning
+  about compiling important applications with icc.
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
- 
+
 *icc-7.0 (8 Dec 2002)
 
   8 Dec 20002 Jon Portnoy <avenj@gentoo.org> icc-7.0.ebuild :
