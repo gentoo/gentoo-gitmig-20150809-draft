@@ -1,6 +1,10 @@
 # ChangeLog for media-video/camstream
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.9 2004/04/20 06:54:20 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.10 2004/04/20 07:06:06 phosphan Exp $
+
+  20 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> camstream-0.26.3.ebuild,
+  files/x86_64-asm.patch:
+  Now should work for amd64, see bug #48145
 
   20 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> camstream-0.26.2.ebuild,
   camstream-0.26.3.ebuild:

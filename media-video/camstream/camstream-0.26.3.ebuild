@@ -1,16 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-0.26.3.ebuild,v 1.3 2004/04/20 06:54:20 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-0.26.3.ebuild,v 1.4 2004/04/20 07:06:06 phosphan Exp $
+
+inherit eutils gnuconfig
 
 DESCRIPTION="Collection of tools for webcams and other video devices"
 HOMEPAGE="http://www.smcc.demon.nl/camstream/"
 SRC_URI="http://www.smcc.demon.nl/camstream/download/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 SLOT="0"
 IUSE="doc"
 
 DEPEND=">=x11-libs/qt-3"
+
+src_unpack () {
+	unpack ${A}
+	cd ${S}
+	use amd64 && gnuconfig_update
+	# Camstream has 32 bit asssembler normally.
+	use amd64 && epatch ${FILESDIR}/x86_64-asm.patch
+}
 
 src_compile () {
 	# Need to fake out Qt or we'll get sandbox problems
