@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.84 2003/09/28 23:46:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.85 2003/09/29 22:51:44 azarah Exp $
+
+  30 Sep 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r6.ebuild,
+  files/2.3.2/sysmacros.h:
+  Quick fix for last changes to sysmacros.h that breaks a few things like
+  sys-libs/pwdb and xfree among others.
 
 *glibc-2.3.2-r6 (28 Sep 2003)
 
