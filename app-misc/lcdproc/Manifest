@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3df9210284bab277015c7b5f805c57b4 ChangeLog 3694
 MD5 8e7b7910901432a7bcd2ea1d2fa53aef lcdproc-0.4.4-r1.ebuild 2672
-MD5 114b0638c6592c2aba70a935cea8d29c lcdproc-0.4.5.ebuild 2620
+MD5 d7ce7fcab282084aafc5bb1e06aa2551 ChangeLog 3795
+MD5 4413e0e1a91d718c18c746d723d82b5f lcdproc-0.4.5.ebuild 2623
 MD5 d3107f6fcc0b4c876e4ed05170177365 files/LCDd 544
 MD5 51af79cb647ae69176a97e1217b47d4c files/lcdproc 512
-MD5 6230f34f250e4f4c7026702e31047d27 files/lcdproc-0.4.3-gentoo.diff 2801
-MD5 041467af40c15c7a566f4c56bb369676 files/lcdproc.confd 331
 MD5 2f153440be0f08cd266c618d4f0e9d95 files/digest-lcdproc-0.4.4-r1 66
-MD5 93bc2139ae4ea5fdb0cc9cda7cdf1ec8 files/lcdproc-0.4.4-security.patch 372
 MD5 9e973338e7d705258bb4694f0dba0044 files/digest-lcdproc-0.4.5 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYx5jHTu7gpaalycRAhbWAKD1NPFdiTmqjP3nsQW1UrFDtFMABwCgyWYo
-gClDVm2Y9vqeGG2AWHO3Lao=
-=k+Sy
------END PGP SIGNATURE-----
+MD5 6230f34f250e4f4c7026702e31047d27 files/lcdproc-0.4.3-gentoo.diff 2801
+MD5 93bc2139ae4ea5fdb0cc9cda7cdf1ec8 files/lcdproc-0.4.4-security.patch 372
+MD5 041467af40c15c7a566f4c56bb369676 files/lcdproc.confd 331
