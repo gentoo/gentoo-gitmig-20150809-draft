@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.24 2003/07/09 19:03:19 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.25 2003/07/25 04:01:07 raker Exp $
+
+  24 Jul 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild:
+  Fixed a typo in the ebuild as noted on bug #25204.
 
   09 Jul 2003; Nick Hadaway <raker@gentoo.org> qmail-1.03-r10.ebuild:
   Changed hostname to hostname --fqdn in pkg_config.  Thanks to

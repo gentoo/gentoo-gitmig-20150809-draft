@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.17 2003/07/22 02:51:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.18 2003/07/25 04:01:07 raker Exp $
 
 inherit eutils
 
@@ -300,7 +300,7 @@ export qhost=`hostname --fqdn`
 	tcprules /etc/tcp.smtp.cdb /etc/tcp.smtp.tmp < /etc/tcp.smtp
 
 	if [ `use ssl` ]; then
-	if [ ! -f /var/qmail/controll/servercert.pem ]; then
+	if [ ! -f /var/qmail/control/servercert.pem ]; then
 		echo "Creating a self-signed ssl-cert:"
 		/usr/bin/openssl req -new -x509 -nodes -out /var/qmail/control/servercert.pem -days 366 -keyout /var/qmail/control/servercert.pem
 		chmod 640 /var/qmail/control/servercert.pem
