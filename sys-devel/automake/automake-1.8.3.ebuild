@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.3.ebuild,v 1.8 2004/04/07 19:36:20 kumba Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.3.ebuild,v 1.9 2004/04/21 14:15:09 vapier Exp $
 
 inherit eutils
 
@@ -56,23 +54,22 @@ OLD16_S="${WORKDIR}/${OLD16_P}"
 OLD15_S="${WORKDIR}/${OLD15_P}"
 OLD14_S="${WORKDIR}/${OLD14_P}"
 DESCRIPTION="Used to generate Makefile.in from Makefile.am"
+HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 	mirror://gnu/${PN}/${OLD17_P}.tar.bz2
 	mirror://gnu/${PN}/${OLD16_P}.tar.bz2
 	mirror://gnu/${PN}/${OLD15_P}.tar.gz
 	mirror://gnu/${PN}/${OLD14_P}.tar.gz"
-HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
 
 LICENSE="GPL-2"
 SLOT="1.5"
 KEYWORDS="amd64 x86 ppc sparc alpha mips hppa ia64 ~ppc64 ~s390"
+IUSE=""
 
 DEPEND="dev-lang/perl
 	>=sys-devel/autoconf-2.58"
 
-
 src_unpack() {
-
 	unpack ${A}
 
 	cd ${OLD15_S}
@@ -85,7 +82,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	#
 	# ************ automake-1.8x ************
 	#
@@ -104,12 +100,13 @@ src_compile() {
 	perl -pi -e 's|\* aclocal:|\* aclocal v1.8:|' doc/automake.texi
 	perl -pi -e 's:\(automake\):\(automake18\):' doc/automake.texi
 
-	./configure --prefix=/usr \
+	./configure \
+		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
-	--target=${CHOST} || die
-
-	emake || die
+		--target=${CHOST} \
+		|| die "configure 1.8x failed"
+	emake || die "emake 1.8x failed"
 
 	#
 	# ************ automake-1.7x ************
@@ -129,12 +126,13 @@ src_compile() {
 	perl -pi -e 's|\* aclocal:|\* aclocal v1.7:|' automake.texi
 	perl -pi -e 's:\(automake\):\(automake17\):' automake.texi
 
-	./configure --prefix=/usr \
+	./configure \
+		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
-		--target=${CHOST} || die
-
-	emake || die
+		--target=${CHOST} \
+		|| die "configure 1.7x failed"
+	emake || die "emake 1.7x failed"
 
 	#
 	# ************ automake-1.6x ************
@@ -154,12 +152,13 @@ src_compile() {
 	perl -pi -e 's|\* aclocal:|\* aclocal v1.6:|' automake.texi
 	perl -pi -e 's:\(automake\):\(automake16\):' automake.texi
 
-	./configure --prefix=/usr \
+	./configure \
+		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
-		--target=${CHOST} || die
-
-	emake || die
+		--target=${CHOST} \
+		|| die "configure 1.6x failed"
+	emake || die "emake 1.6x failed"
 
 	#
 	# ************ automake-1.5x ************
@@ -174,12 +173,13 @@ src_compile() {
 	perl -pi -e 's|\* aclocal:|\* aclocal v1.5:|' automake.texi
 	perl -pi -e 's:\(automake\):\(automake15\):' automake.texi
 
-	./configure --prefix=/usr \
+	./configure \
+		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
-		--target=${CHOST} || die
-
-	emake || die
+		--target=${CHOST} \
+		|| die "configure 1.5x failed"
+	emake || die "emake 1.5x failed"
 	unset WANT_AUTOCONF_2_5
 
 	#
@@ -194,12 +194,13 @@ src_compile() {
 #	perl -pi -e 's|\* automake: \(automake\)|\* Automake: \(automake\)|' \
 #		automake.texi
 
-	./configure --prefix=/usr \
+	./configure \
+		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
-		--target=${CHOST} || die
-
-	emake || die
+		--target=${CHOST} \
+		|| die "configure 1.4 failed"
+	emake || die "emake 1.4 failed"
 }
 
 # This basically fix aclocal and automake so that they
