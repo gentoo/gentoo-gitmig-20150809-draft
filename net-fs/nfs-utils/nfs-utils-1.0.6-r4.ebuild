@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r3.ebuild,v 1.2 2004/06/25 03:09:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r4.ebuild,v 1.1 2004/07/07 16:51:04 agriffis Exp $
 
 inherit gnuconfig
 

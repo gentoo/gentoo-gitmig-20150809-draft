@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.42 2004/06/25 20:24:15 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.43 2004/07/07 16:51:04 agriffis Exp $
+
+*nfs-utils-1.0.6-r4 (07 Jul 2004)
+
+  07 Jul 2004; Aron Griffis <agriffis@gentoo.org> files/nfs-5,
+  -nfs-utils-1.0.6-r3.ebuild, +nfs-utils-1.0.6-r4.ebuild:
+  Set a default timeout of 30 seconds in case EXPORTFSTIMEOUT is unset in
+  conf.d/nfs
 
   25 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> nfs-utils-1.0.6.ebuild:
   Marked stable on amd64.
