@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.1-r1.ebuild,v 1.1 2003/04/11 14:19:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.2.1-r1.ebuild,v 1.2 2003/04/19 19:26:09 foser Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -44,6 +44,8 @@ src_unpack() {
 		einfo "Fixing endianness issue in gdkpixbuf for 24-bit and 15-bit displays"
 		cd ${S}; epatch ${FILESDIR}/gtk+-2.2.1-gdkpixbuf-bigendian.patch
 	fi
+
+	autoconf || die
 }
 
 src_compile() {
