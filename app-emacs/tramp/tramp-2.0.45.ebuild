@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.1.1.ebuild,v 1.1 2004/08/26 12:04:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.0.45.ebuild,v 1.1 2004/11/04 15:58:57 usata Exp $
 
 inherit elisp
 
@@ -12,9 +12,7 @@ SRC_URI="http://savannah.nongnu.org/download/tramp/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~amd64 ~ppc"	# rewritten version of tramp
-
-DEPEND="virtual/emacs"
+KEYWORDS="~x86 ~alpha ~amd64 ~ppc"
 
 src_compile() {
 
