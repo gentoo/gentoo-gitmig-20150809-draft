@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/koffice-i18n
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.7 2003/10/14 13:48:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.8 2003/11/01 00:04:03 caleb Exp $
+
+*koffice-i18n-1.3_rc1 (31 Oct 2003)
+
+  31 Oct 2003; Caleb Tennis <caleb@gentoo.org> koffice-i18n-1.3_rc1.ebuild:
+  Version bump
 
   14 Oct 2003; Caleb Tennis <caleb@gentoo.org> koffice-i18n-1.3_beta4.ebuild:
   Better LINGUA handling for i18n stuff.
