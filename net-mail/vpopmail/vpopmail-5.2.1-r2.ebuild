@@ -1,25 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.10 2002/10/31 20:04:27 jrray Exp $
-
-IUSE="mysql"
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.11 2002/11/30 20:45:38 vapier Exp $
 
 # TODO: all ldap, sybase support
-S=${WORKDIR}/${P}
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
 HOMEPAGE="http://www.inter7.com/vpopmail"
-
 DESCRIPTION="A collection of programs to manage virtual email domains and accounts on your Qmail or Postfix mail servers."
 SRC_URI="http://www.inter7.com/vpopmail/${P}.tar.gz
 	http://gentoo.twobit.net/misc/vpopmail-5.2.1-mysql.diff"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 sparc sparc64"
+IUSE="mysql"
+
 DEPEND="sys-apps/sed
 	sys-apps/ucspi-tcp
 	mysql? ( =dev-db/mysql-3.23* )"
-
 RDEPEND="net-mail/qmail
 	virtual/cron
 	mysql? ( =dev-db/mysql-3.23* )"
@@ -107,7 +103,7 @@ src_compile() {
 		--enable-roaming-users=y --enable-relay-clear-minutes=60 \
 		--enable-tcprules-prog=/usr/bin/tcprules --enable-tcpserver-file=/etc/tcp.smtp \
 		--enable-logging=y \
-		--enable-log-name=vpopmail || die "./configure failed"
+		--enable-log-name=vpopmail
 
 	[ "`use mysql`" ] && echo '#define MYSQL_PASSWORD_FILE "/etc/vpopmail.conf"' >> config.h
 
@@ -129,11 +125,11 @@ src_install () {
 	chown vpopmail.vpopmail ${D}/${VPOP_HOME}/doc
 
 	# Create symlink in /usr/bin for executables
-	mkdir -p ${D}/usr/bin/
+	dodir /usr/bin/
 	for item in `ls -1 ${D}${VPOP_HOME}/bin`; do dosym ${VPOP_HOME}/bin/${item} usr/bin/${item} ; done
 
 	# Create /etc/vpopmail.conf
-	[ "`use mysql`" ] && mkdir ${D}/etc && cp ${FILESDIR}/vpopmail.conf ${D}/etc/
+	[ "`use mysql`" ] && dodir /etc && cp ${FILESDIR}/vpopmail.conf ${D}/etc/
 
 	# Configure b0rked. We'll do this manually
 	echo "-I${VPOP_HOME}/include" > ${D}/${VPOP_HOME}/etc/inc_deps
