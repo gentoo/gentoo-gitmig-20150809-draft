@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.2-r4.ebuild,v 1.12 2004/03/07 10:29:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.2-r4.ebuild,v 1.13 2004/03/21 02:55:32 mr_bones_ Exp $
+
+inherit eutils
 
 SELINUX_PATCH="psmisc-21.2-selinux.diff.bz2"
 
