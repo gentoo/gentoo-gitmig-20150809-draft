@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/cfs-1.4.1.14.ebuild,v 1.3 2004/09/17 21:55:39 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/cfs-1.4.1.14.ebuild,v 1.4 2004/10/14 20:08:06 dholm Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/cfs/cfs_${MY_PV}.orig.tar.gz
 	http://ftp.debian.org/debian/pool/main/c/cfs/cfs_${MY_PV}-${DEB_PV}.diff.gz"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND="net-fs/nfs-utils"
 
