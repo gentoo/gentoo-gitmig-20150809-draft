@@ -1,11 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/AfterStep/AfterStep-1.8.8.ebuild,v 1.2 2001/02/20 23:24:49 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-1.8.8.ebuild,v 1.1 2001/02/20 23:40:54 pete Exp $
 
 #P=
-A=${P}.tar.bz2
-S=${WORKDIR}/${P}
+A=AfterStep-${PV}.tar.bz2
+S=${WORKDIR}/AfterStep-${PV}
 DESCRIPTION="a window manager based on the NeXTStep interface"
 SRC_URI="ftp://ftp.afterstep.org/stable/${A}"
 HOMEPAGE="http://www.afterstep.org/"
