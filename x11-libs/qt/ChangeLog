@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.169 2004/08/21 20:08:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.170 2004/08/23 15:15:16 psi29a Exp $
+
+  23 Aug 2004; psi29a <psi29a@gentoo.org> qt-3.3.3.ebuild:
+  Removed mips patch, as it is no longer necessary with > 3.2.x and marked
+  stabled for mips
 
   22 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> qt-3.3.2.ebuild,
   +files/qt-3.3.2-immodule-20040819.patch,
