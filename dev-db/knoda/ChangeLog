@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/knoda
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.22 2004/11/08 22:30:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.23 2004/11/23 19:37:53 carlo Exp $
+
+  23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> knoda-0.7.1.ebuild:
+  stable on x86, QA: missing "inherit eutils"
 
 *knoda-0.7.2_alpha3 (08 Nov 2004)
 
