@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.4.ebuild,v 1.1 2003/06/03 16:41:17 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.4.ebuild,v 1.2 2003/06/04 23:01:41 aliz Exp $
 
 inherit libtool
 
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc
 	>=sys-devel/automake-1.7.2
 	>=sys-devel/autoconf-2.57-r1"
 
-SRC_URI="ftp://ftp.alsa-project.org/pub/lib/${P}.tar.bz2"
+SRC_URI="mirror://alsaproject/lib/${P}.tar.bz2"
 S=${WORKDIR}/${P}
 
 src_compile() {                           
