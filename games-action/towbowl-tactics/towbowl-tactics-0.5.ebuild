@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/towbowl-tactics/towbowl-tactics-0.5.ebuild,v 1.3 2004/06/24 21:59:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/towbowl-tactics/towbowl-tactics-0.5.ebuild,v 1.4 2004/06/30 02:32:13 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=dev-libs/libxml2-2.6.6
 	>=media-libs/smpeg-0.4.4
 	>=media-libs/sdl-net-1.2.5

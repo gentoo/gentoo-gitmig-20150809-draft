@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.7 2004/06/24 22:01:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.8 2004/06/30 02:32:13 mr_bones_ Exp $
 
 inherit gcc eutils games
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=media-sound/esound-0.2.23
 	virtual/x11"
 

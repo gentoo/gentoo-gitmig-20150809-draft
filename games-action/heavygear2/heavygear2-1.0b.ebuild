@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.5 2004/06/24 21:55:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.6 2004/06/30 02:32:13 mr_bones_ Exp $
 
 inherit games
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86"
 RESTRICT="nostrip"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
 	=media-libs/freetype-1*
 	virtual/opengl"

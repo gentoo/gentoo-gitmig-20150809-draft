@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x/d1x-20040118.ebuild,v 1.3 2004/06/24 21:53:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x/d1x-20040118.ebuild,v 1.4 2004/06/30 02:32:13 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="opengl"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	media-libs/libsdl
 	opengl? (
 		virtual/opengl
