@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gento.org> 
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-4.01.ebuild,v 1.1 2002/02/25 04:37:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-4.01-r1.ebuild,v 1.1 2002/03/03 21:59:27 agenkin Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="a modular screensaver for X11"
-SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
 HOMEPAGE="http://www.jwz.org/xscreensaver/"
+
+S="${WORKDIR}/${P}"
+SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
 
 DEPEND="virtual/x11 sys-devel/bc
 	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
@@ -59,7 +60,7 @@ src_compile() {
 
 	./configure --prefix=/usr \
 		--mandir=/usr/share/man \
-		--host=${CHOST} \
+		--host="${CHOST}" \
 		--enable-hackdir=/usr/lib/xscreensaver \
 		--with-mit-ext \
 		--with-dpms-ext \
@@ -79,12 +80,15 @@ src_compile() {
 src_install () {
 	if [ "$KDEDIR" ]
 	then
-		dodir $KDEDIR/bin
+		dodir "$KDEDIR/bin"
 	fi
-	make install_prefix=${D} install || die
+	make install_prefix="${D}" install || die
 
 	# Fix double Control Center entry
-	rm -f ${D}/usr/share/control-center/capplets/screensaver.desktop
+	rm -f "${D}/usr/share/control-center/capplets/screensaver.desktop"
+
+        insinto /etc/pam.d
+        doins "${FILESDIR}/pam.d/xscreensaver"
 	
 #	if [ "`use gnome`" ]
 #	then
@@ -93,4 +97,3 @@ src_install () {
 #		#      mv ${D}/usr/bin/screensaver-properties-capplet ${D}/usr/bin
 #	fi
 }
-
