@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.125 2004/02/06 22:39:20 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.126 2004/02/07 01:13:06 plasmaroo Exp $
+
+*mod_php-4.3.4-r4 (07 Feb 2004)
+
+  07 Feb 2004; <plasmaroo@gentoo.org> mod_php-4.3.4-r4.ebuild:
+  Bump and stable on X86 for GLSA 200402-01.
 
   06 Feb 2004; Lars Weiler <pylon@gentoo.org> mod_php-4.3.4-r3.ebuild:
   stable on ppc
