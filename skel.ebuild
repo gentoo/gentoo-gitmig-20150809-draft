@@ -98,7 +98,7 @@ src_compile() {
 	# Also note that it is cleaner and easier to use econf, which is the
 	# portage shortcut to the above ./configure statement:
 	#
-	# econf
+	# econf || die
 
 	# emake (previously known as pmake) is a script that calls the
 	# standard GNU make with parallel building options for speedier
@@ -129,5 +129,5 @@ src_install() {
 
 	# The portage shortcut to the above command is simply:
 	#
-	#einstall
+	#einstall || die
 }
