@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/xmltex
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.9 2004/12/28 21:23:13 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.10 2005/02/07 17:24:34 agriffis Exp $
+
+  07 Feb 2005; Aron Griffis <agriffis@gentoo.org> xmltex-1.9-r1.ebuild:
+  add ~alpha
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> xmltex-1.9-r1.ebuild:
   Keywords ~amd64.
