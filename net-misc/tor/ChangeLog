@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.20 2004/10/18 02:37:14 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.21 2004/10/20 23:57:01 josejx Exp $
+
+  21 Oct 2004; Joseph Jezak <josejx@gentoo.org> tor-0.0.8.1.ebuild:
+  Keyworded ppc-macos and macos due to vulnerability in previous versions.
+  Removed tsocks RDEPEND at the request of latexer. See bug #67756
 
 *tor-0.0.8.1 (17 Oct 2004)
 
