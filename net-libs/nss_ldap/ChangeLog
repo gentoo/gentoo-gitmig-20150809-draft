@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/nss_ldap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.22 2004/04/27 20:41:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.23 2004/04/28 21:21:23 raker Exp $
+
+  28 Apr 2004; Nick Hadaway <raker@gentoo.org> nss_ldap-215-r1.ebuild:
+  Marked stable for x86.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> nss_ldap-215-r1.ebuild:
   Add inherit eutils
