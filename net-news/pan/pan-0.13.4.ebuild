@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.13.4.ebuild,v 1.5 2003/04/06 04:07:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.13.4.ebuild,v 1.6 2003/09/04 23:52:15 spider Exp $
 
 IUSE="spell"
 
@@ -32,7 +32,7 @@ src_compile() {
 	if [ -z "`use nls`" ]; then
 		ewarn "Pan requires glibc to be merged with 'nls' in your USE flags."
 	fi
-    
+
 	use spell \
 		&& myconf="${myconf} --enable-gtkspell" \
 		|| myconf="${myconf} --disable-gtkspell"
@@ -44,6 +44,6 @@ src_compile() {
 
 src_install() {
 	einstall || die "Installation failed"
-    
+
 	dodoc ANNOUNCE AUTHORS ChangeLog COPYING CREDITS INSTALL NEWS README TODO
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.14.0.ebuild,v 1.6 2003/09/04 23:52:15 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.14.2.ebuild,v 1.1 2003/09/04 23:52:15 spider Exp $
 
 IUSE="spell"
 
@@ -9,7 +9,7 @@ SRC_URI="http://pan.rebelbase.com/download/releases/${PV}/SOURCE/${P}.tar.bz2"
 HOMEPAGE="http://pan.rebelbase.com"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 hppa ~ppc"
+KEYWORDS="~x86 ~hppa ~ppc"
 SLOT="0"
 
 RDEPEND=">=dev-libs/glib-2.0.4
@@ -44,6 +44,5 @@ src_compile() {
 
 src_install() {
 	einstall || die "Installation failed"
-
 	dodoc ANNOUNCE AUTHORS ChangeLog COPYING CREDITS INSTALL NEWS README TODO
 }
