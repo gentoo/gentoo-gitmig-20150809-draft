@@ -96,12 +96,15 @@ for pkgname in sys.argv[1:]:
 	for obj in mykeys:
 		obj=norm(obj)
 		if not os.path.islink(obj):
+			#we skip this if we're dealing with a symlink
+			#because os.path.exists() will operate on the
+			#link target rather than the link itself.
 			if not os.path.exists(obj):
 				print "--- !found", pkgfiles[obj][0], obj
 				continue
-			if (pkgfiles[obj][0] not in ("dir","fif","dev")) and (getmtime(obj) != pkgfiles[obj][1]):
-				print "--- !mtime", pkgfiles[obj][0], obj
-				continue
+		if (pkgfiles[obj][0] not in ("dir","fif","dev")) and (getmtime(obj) != pkgfiles[obj][1]):
+			print "--- !mtime", pkgfiles[obj][0], obj
+			continue
 		if pkgfiles[obj][0]=="dir":
 			if not os.path.isdir(obj):
 				print "--- !dir  ","dir", obj
