@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-arnesi/cl-arnesi-1.1.2.ebuild,v 1.3 2004/07/14 15:19:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-arnesi/cl-arnesi-1.2.3.ebuild,v 1.1 2004/12/28 20:54:42 mkennedy Exp $
 
 inherit common-lisp
 
 DESCRIPTION="arnesi is a collection of small bits and pieces of common lisp code."
-HOMEPAGE="http://www.common-lisp.net/project/bese/#arnesi"
-SRC_URI="ftp://ftp.common-lisp.net/pub/project/bese/arnesi/arnesi_${PV}.tar.gz"
+HOMEPAGE="http://common-lisp.net/project/bese/arnesi.html"
+SRC_URI="ftp://ftp.common-lisp.net/pub/project/bese/arnesi_${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"
