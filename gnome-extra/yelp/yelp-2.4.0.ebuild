@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.4.0.ebuild,v 1.8 2003/12/13 00:50:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.4.0.ebuild,v 1.9 2004/04/17 09:52:04 lv Exp $
 
 inherit gnome2
 

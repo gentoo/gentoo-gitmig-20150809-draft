@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/acme/acme-2.4.0.ebuild,v 1.8 2003/12/13 01:37:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/acme/acme-2.4.0.ebuild,v 1.9 2004/04/17 09:53:56 lv Exp $
 
 inherit gnome2
 
