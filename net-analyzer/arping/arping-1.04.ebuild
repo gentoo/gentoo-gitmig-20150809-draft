@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-1.04.ebuild,v 1.9 2003/02/13 13:38:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-1.04.ebuild,v 1.10 2003/03/07 22:41:16 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A utility to see if a specific IP address is taken and what MAC address owns it"
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
 
 DEPEND="net-libs/libpcap 
-	=net-libs/libnet-1.0.2a-r1"
+	=net-libs/libnet-1.0*"
 
 src_compile() {
 	mv Makefile Makefile.orig
