@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/chktex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.5 2004/06/25 02:11:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.6 2004/08/17 23:38:16 usata Exp $
+
+*chktex-1.6.2 (18 Aug 2004)
+
+  18 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +chktex-1.6.2.ebuild:
+  Version bumped. Thanks to Urs Joss <tschenturs@gmx.ch> for providing an
+  ebuild. This closes bug #58175.
 
   09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> chktex-1.5-r2.ebuild:
   added amd64 keyword.
