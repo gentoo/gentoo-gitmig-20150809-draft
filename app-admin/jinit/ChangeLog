@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/jinit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/ChangeLog,v 1.5 2003/02/12 02:23:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/ChangeLog,v 1.6 2003/05/24 14:21:38 mholzer Exp $
+
+*jinit-0.1.11 (24 May 2003)
+
+  24 May 2003; Martin Holzer <mholzer@gentoo.org> jinit-0.1.11.ebuild,
+  jinit-0.1.9-r1.ebuild, jinit-0.1.9-r1.ebuild:
+  Version bumped
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
