@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0.ebuild,v 1.5 2004/02/09 04:36:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.2.0.ebuild,v 1.6 2004/02/09 04:40:21 vapier Exp $
 
 inherit kde flag-o-matic
 set-kdedir 3.2
@@ -23,19 +23,6 @@ DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
 	>=x11-libs/qt-3.2
 	>=sys-apps/portage-2.0.49-r8"
 
-if [ "${COMPILER}" == "gcc3" ]; then
-	# GCC 3.1 kinda makes arts buggy and prone to crashes when compiled with
-	# these.. Even starting a compile shuts down the arts server
-	filter-flags -fomit-frame-pointer -fstrength-reduce
-fi
-
-#fix bug 13453
-filter-flags "-foptimize-sibling-calls"
-
-myconf="$myconf `use_enable alsa`"
-myconf="$myconf `use_enable oggvorbis vorbis`"
-myconf="$myconf `use_enable mad libmad`"
-
 # patch to configure.in.in that makes the vorbis, libmad deps optional
 # has no version number in its filename because it's the same for all
 # arts versions - the patched file hasn't changed in a year's time
@@ -46,6 +33,23 @@ src_unpack() {
 	kde_sandbox_patch ${S}/soundserver
 	# for the configure.in.in patch, for some reason it's not automatically picked up
 	# rm -f $S/configure
+}
+
+src_compile() {
+	if [ "${COMPILER}" == "gcc3" ]; then
+		# GCC 3.1 kinda makes arts buggy and prone to crashes when compiled with
+		# these.. Even starting a compile shuts down the arts server
+		filter-flags -fomit-frame-pointer -fstrength-reduce
+	fi
+
+	#fix bug 13453
+	filter-flags -foptimize-sibling-calls
+
+	myconf="$myconf `use_enable alsa`"
+	myconf="$myconf `use_enable oggvorbis vorbis`"
+	myconf="$myconf `use_enable mad libmad`"
+
+	kde_src_compile
 }
 
 src_install() {
