@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.4.20020601.ebuild,v 1.11 2002/12/09 04:26:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.4.20020601.ebuild,v 1.12 2003/01/16 13:45:39 seemant Exp $
 
 IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa directfb"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.libsdl.org/"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 RDEPEND=">=media-libs/audiofile-0.1.9
 	X? ( virtual/x11 )
