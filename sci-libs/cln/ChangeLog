@@ -1,6 +1,6 @@
-# ChangeLog for dev-libs/cln
+# ChangeLog for sci-libs/cln
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.1 2004/12/28 20:05:29 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.2 2004/12/28 21:09:11 swegener Exp $
 
 *cln-1.1.6 (28 Dec 2004)
 

@@ -1,6 +1,6 @@
-# ChangeLog for dev-libs/cfitsio
+# ChangeLog for sci-libs/cfitsio
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.1 2004/12/28 20:03:08 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.2 2004/12/28 21:04:53 swegener Exp $
 
 *cfitsio-2.500 (28 Dec 2004)
 
