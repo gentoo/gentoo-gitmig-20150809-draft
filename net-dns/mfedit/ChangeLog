@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/mfedit
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mfedit/ChangeLog,v 1.1 2003/11/02 05:23:08 matsuu Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mfedit/ChangeLog,v 1.2 2004/03/01 17:00:13 matsuu Exp $
+
+*mfedit-0.60.2 (02 Mar 2004)
+
+  02 Mar 2004; <matsuu@gentoo.org> mfedit-0.60.2.ebuild:
+  Version bumped.
+  Added ~amd64 to KEYWORDS.
 
 *mfedit-0.60.1 (02 Nov 2003)
 
