@@ -1,0 +1,13 @@
+Please edit ${MY_INSTALLDIR}/config_inc.php to configure Mantis for your
+system.
+
+If this a first time install, you must create the mantis database and then
+execute ${MY_SQLSCRIPTSDIR}/mysql/${PVR}_create.sql
+via mysql to create the tables. If you are upgrading from an earlier version
+you can use the upgrade scripts at admin/ to execute the pending database
+updates.
+
+Check your installation: http://${VHOST_HOSTNAME}/${PN}/admin
+Then log in: administrator/root.
+
+After you've finished these steps, please delete the admin/ directory.
