@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 917b7e0530336509a96c2000f22c1d75 ChangeLog 1187
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 845f4948e016057a7ec20bf3987e4253 setserial-2.17-r2.ebuild 880
+MD5 279435915a0914305c6099672f5923a4 setserial-2.17-r2.ebuild 811
 MD5 752580a351299fe15119ebcdaa13b3ea files/digest-setserial-2.17-r2 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBBmTNHTu7gpaalycRAkWEAJ4l6gDFOQslEodi75+D0C6fWtTuIwCg9d8Z
-iptijibn2T6CDoAxgDYsK8A=
-=fwM9
+iD8DBQFBmPzOHTu7gpaalycRAqo/AKD3JooV1Gsqh5YMaXvld4rpopgGTgCg1Nnf
+TAU1n3/gVmLfDrnIh4PlOps=
+=CGTn
 -----END PGP SIGNATURE-----
