@@ -1,6 +1,15 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.3 2002/04/26 06:45:15 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.4 2002/04/26 22:51:42 verwilst Exp $
+
+*koffice-1.2_beta1-r1 (27 April 2002)
+
+  27 April 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
+
+  Seemed i was still pointing to the kde-packagers URL..
+  And the real URL seems to have all patches included already..
+  This revision also fixes the docbook errors most of you were having.
+  And i changed the description of the ebuild :o)
 
 *koffice-1.2_beta1 (26 April 2002)
 
