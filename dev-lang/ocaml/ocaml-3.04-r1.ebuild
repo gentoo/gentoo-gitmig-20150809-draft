@@ -1,6 +1,6 @@
 # Copyright 20022 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.04-r1.ebuild,v 1.3 2002/07/23 05:02:15 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.04-r1.ebuild,v 1.4 2002/08/14 11:58:50 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Objective Caml is a fast modern type-inferring functional programming language descended from the ML (Meta Language) family."
@@ -13,7 +13,7 @@ RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="QPL-1.0 LGPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 # The unpack function is needed only so that we can apply a ppc patch from cvs.
 # This should be fixed in v.>3.04, so the function can be removed then.

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-6.0.ebuild,v 1.4 2002/08/02 04:32:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-6.0.ebuild,v 1.5 2002/08/14 11:58:50 murphy Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Intel Fortran Compiler - The Pentium optimized compiler for Linux"
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.intel.com/software/products/compilers/f60l/"
 # The ifc-6 license is the same copy with minimal name changes.
 LICENSE="icc-6.0"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 
 DEPEND=">=virtual/linux-sources-2.4

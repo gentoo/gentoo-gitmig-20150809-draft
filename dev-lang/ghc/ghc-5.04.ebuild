@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-$ $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.ebuild,v 1.1 2002/08/08 19:36:40 george Exp $
+$ $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.ebuild,v 1.2 2002/08/14 11:58:50 murphy Exp $
 
 
 # ebuild for Glorious Glasgow Haskell
@@ -34,7 +34,7 @@ HOMEPAGE="http://www.haskell.org/ghc/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 
 # FIXME: Add USE support for parallel haskell (requires PVM)

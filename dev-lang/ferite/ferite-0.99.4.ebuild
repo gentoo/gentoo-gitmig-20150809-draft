@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-0.99.4.ebuild,v 1.4 2002/08/02 04:44:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-0.99.4.ebuild,v 1.5 2002/08/14 11:58:50 murphy Exp $
 
 S=${WORKDIR}/${P}
 
@@ -16,7 +16,7 @@ RDEPEND="${DEPEND}"
 
 SLOT="1"
 LICENSE="as-is"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
 	./configure --host=${CHOST} \
