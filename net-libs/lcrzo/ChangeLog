@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/lcrzo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/lcrzo/ChangeLog,v 1.1 2002/02/01 21:53:34 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/lcrzo/ChangeLog,v 1.2 2002/02/18 20:07:46 karltk Exp $
+
+*lcrzo-4.04 (18 Feb 2002)
+
+  18 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog files/digest-lcrzo-4.04 lcrzo-4.04.ebuild:
+  
+  Lcrzo is a network library for network administrators and network hackers. 
+  It is designed to make it easy to create network programs. It supports 
+  spoofing, sniffing, and client/server creation. This library has been 
+  successfully installed under Linux, Windows, FreeBSD, OpenBSD, and Solaris.
 
 *lcrzo-4.03 (1 Feb 2002)
 
