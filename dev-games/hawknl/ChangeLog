@@ -1,0 +1,8 @@
+# ChangeLog for dev-games/hawknl
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/ChangeLog,v 1.1 2003/09/06 03:29:47 vapier Exp $
+
+*HawkNL-1.66 (05 Sep 2003)
+
+  05 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial ebuild.  Submitted by Richard Garand <richard@garandnet.net> #25560.
