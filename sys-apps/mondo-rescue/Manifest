@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9ded35eb147301ebf3bf5dab68855d2b ChangeLog 2468
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 42c4de8b775c28d38baba2049a7d40f0 mondo-rescue-1.47.ebuild 1374
-MD5 1ab8bf1cad5d1f3518723024f3886d27 mondo-rescue-1.61.ebuild 1818
-MD5 1b5e4def95115a7ee83e01608ed66b27 mondo-rescue-1.65.ebuild 1851
-MD5 c6c40da8cdf3fdb09fb8b8bfdaa4c05e mondo-rescue-2.03.ebuild 1822
-MD5 102519f0ca92c03e54a0a61bbea110ae mondo-rescue-2.10.ebuild 1822
-MD5 793981ec5119c1dce63bcabfef5cab2a files/digest-mondo-rescue-1.47 69
+MD5 d7d5989a72a1ec182f490069832ff64b mondo-rescue-2.04.ebuild 1819
+MD5 0711e11c94ae0df8a3d0143afb7ce3ba mondo-rescue-2.03.ebuild 1824
+MD5 5f07d7fd9cce91c8327e107e1bc7053c metadata.xml 441
+MD5 91d9995720aff113bf49179f648387af mondo-rescue-1.65.ebuild 1853
+MD5 84e708533ddd02575fbd5c20a8e42fd7 ChangeLog 2636
+MD5 d107c9398895e58830600bfb04a124c1 mondo-rescue-1.47.ebuild 1374
+MD5 21a5352b1def83c0d2a9d3b016313930 mondo-rescue-2.10.ebuild 1824
+MD5 608744ace604d30dd05387b0770bdb03 mondo-rescue-1.61.ebuild 1818
 MD5 f1e7eb21d8a8acea7d02ff3a7183d683 files/digest-mondo-rescue-1.61 60
-MD5 206daf65b2a21dedbf2f85d88ca50d8d files/digest-mondo-rescue-1.65 60
+MD5 e170f3b33e6837a7d9363745a5fd867f files/digest-mondo-rescue-2.04 60
 MD5 7a9f6aa05d0ce8c5db022b3f25a93b13 files/digest-mondo-rescue-2.03 60
+MD5 793981ec5119c1dce63bcabfef5cab2a files/digest-mondo-rescue-1.47 69
 MD5 1d28fb3b5cabc58bb39012cf6fe59b0d files/digest-mondo-rescue-2.10 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBdRoSHTu7gpaalycRAhFJAKDB7GJPrKVC11BmYqHZHtDuUbB6XACgjLho
-lRP6QCLXFTxtvu56NJhGWzA=
-=psle
------END PGP SIGNATURE-----
+MD5 206daf65b2a21dedbf2f85d88ca50d8d files/digest-mondo-rescue-1.65 60

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/mindi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.17 2005/01/22 10:24:42 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.18 2005/01/22 10:29:25 wschlich Exp $
+
+*mindi-1.04 (22 Jan 2005)
+
+  22 Jan 2005; Wolfram Schlich <wschlich@gentoo.org> +mindi-1.04.ebuild:
+  version bump of stable 1.0 branch
 
 *mindi-1.11 (22 Jan 2005)
 
