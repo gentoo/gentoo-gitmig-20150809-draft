@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.1.ebuild,v 1.8 2004/03/18 05:51:32 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.4.1.ebuild,v 1.9 2004/03/18 06:43:35 zx Exp $
 
 IUSE="doc"
 
@@ -11,7 +11,6 @@ if [ `use ppc` ]; then
 else
 	S=${WORKDIR}/IBMJava2-141
 fi;
-
 
 if [ `use ppc` ]; then
 	SRC_JAVA="IBMJava2-SDK-141.ppc.tgz"
