@@ -1,6 +1,8 @@
 # ChangeLog for net-p2p/giftcurs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.13 2002/12/13 11:00:20 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.14 2002/12/15 12:38:16 verwilst Exp $
+
+  15 Dec 2002; Bart Verwilst <verwilst@gentoo.org> : changed ~sparc to sparc
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

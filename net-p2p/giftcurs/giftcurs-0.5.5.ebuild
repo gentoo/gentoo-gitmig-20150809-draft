@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/giftcurs-0.5.5.ebuild,v 1.3 2002/12/09 04:33:19 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/giftcurs-0.5.5.ebuild,v 1.4 2002/12/15 12:38:16 verwilst Exp $
 
 MY_P="giFTcurs-${PV}"
 S="${WORKDIR}/${MY_P}"
@@ -10,7 +10,7 @@ HOMEPAGE="http://giftcurs.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="gpm nls"
-KEYWORDS="x86 ~sparc "
+KEYWORDS="x86 sparc"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2
