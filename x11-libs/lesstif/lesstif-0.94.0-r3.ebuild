@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.0-r3.ebuild,v 1.3 2005/03/02 17:27:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.0-r3.ebuild,v 1.4 2005/03/02 17:34:11 lanius Exp $
 
 inherit libtool flag-o-matic multilib
 
@@ -80,6 +80,7 @@ src_install() {
 	rm -f ${D}/usr/share/lesstif/mxmkmf
 	rm -fR ${D}/usr/share/aclocal/
 	rm -fR ${D}/usr/$(get_libdir)/lesstif/LessTif/
+	rm -fR ${D}/usr/$(get_libdir)/lesstif/X11/
 	rm -fR ${D}/usr/$(get_libdir)/X11/
 
 }
