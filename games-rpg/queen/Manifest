@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1060f86c6c4bc937d12d056f13bb75f0 ChangeLog 553
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 4e732bd76e8697015f89c55de4d7f3fa queen-0.ebuild 799
+MD5 c070a7b9d9250f8b622087639fcadde0 ChangeLog 637
+MD5 7932156929a8ecdd50db7f437519c0ab queen-0.ebuild 798
 MD5 b9e234c03cc80c7d4d666f4c5942f9ba files/digest-queen-0 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBiCcCHTu7gpaalycRAvvMAJ98zqK/dvVhbaC2shNC96kkVB7wXwCgo7dS
-EoQHYnWXmwGX+CXLSELQMe4=
-=ECOC
------END PGP SIGNATURE-----
