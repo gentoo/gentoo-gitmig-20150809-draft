@@ -1,3 +1,13 @@
-MD5 9b22d4cccba777e818a414c8ed0c7abd ChangeLog 884
-MD5 344d13c005346ef39325660448cad89c pdftohtml-0.36.ebuild 648
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 50489b7384a03de0ad8f1338f1fde809 pdftohtml-0.36.ebuild 651
+MD5 13720d1f217a5f141eac462e86d98e64 ChangeLog 1044
 MD5 89167430147d99e86ca445b23be50f1b files/digest-pdftohtml-0.36 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBNKUSCHk4+ZoBpvsRAlGYAJ9wNtQf3b98ZjSIJsrZw9ia7uWb5gCgrYUh
+OFkWs546c0opyHSCIiGGrec=
+=hoDe
+-----END PGP SIGNATURE-----
