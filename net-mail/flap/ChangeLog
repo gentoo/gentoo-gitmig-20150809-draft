@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/flap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/flap/ChangeLog,v 1.4 2003/02/12 08:11:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/flap/ChangeLog,v 1.5 2003/09/22 05:33:28 strider Exp $
+
+  22 Sep 2003; Adrian Almenar <strider@gentoo.org> flap-0.3.ebuild:
+  Added jikes build support.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

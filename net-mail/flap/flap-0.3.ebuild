@@ -1,22 +1,27 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/flap/flap-0.3.ebuild,v 1.7 2003/02/13 14:31:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/flap/flap-0.3.ebuild,v 1.8 2003/09/22 05:33:28 strider Exp $
 
 DESCRIPTION="mail user agent written in Java"
 HOMEPAGE="http://flap.sourceforge.net/"
 SRC_URI="mirror://sourceforge/flap/${P}-src.tar.gz"
 
 DEPEND=">=dev-java/ant-1.4.1
-	>=dev-java/jikes-1.15"
+	jikes? ( >=dev-java/jikes-1.15 )"
 RDEPEND="virtual/jdk"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
+IUSE="jikes"
 
 S="${WORKDIR}/${P}-src"
 
 src_compile() {
+	if [ -z "`use jikes`" ] ; then
+		cp build.xml build.xml.orig
+		sed 's!<property name="build.compiler" value="jikes"/>!<property name="build.compiler" value="modern"/>!' < build.xml.orig > build.xml
+	fi
 	ant || die
 }
 
