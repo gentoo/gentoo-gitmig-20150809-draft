@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/gst-plugins-a52dec
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/ChangeLog,v 1.1 2003/09/14 16:31:03 foser Exp $
+
+*gst-plugins-a52dec-0.6.3 (07 Sept 2003)
+
+  07 Sept 2003; foser <foser@gentoo.org> gst-plugins-a52dec-0.6.3.ebuild :
+  Initial commit, a52 decoder for gstreamer
+  part of the gnome herd
