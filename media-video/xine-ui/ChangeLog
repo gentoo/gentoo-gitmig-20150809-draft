@@ -1,6 +1,16 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.10 2002/05/31 13:41:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.11 2002/06/16 17:36:21 lostlogic Exp $
+
+*xine-ui-0.9.9-r2 (16 Jun 2002)
+
+  16 Jun 2002; Brandon Low <lostlogic@gentoo.org> xine-ui-0.9.9-r2.ebuild
+
+  Turn off directfb for real if it isn't in use, and also patch this
+  punk a little bit so that it works with gcc-3.1 (LDFLAGS issue)
+
+  gcc-3.1 users at this time will not be able to use directfb with xine, 
+  hopefully this will be resolved in the near future...
 
 *xine-ui-0.9.9-r1 (31 May 2002)
 
