@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.4.ebuild,v 1.2 2004/11/23 10:16:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.4.ebuild,v 1.3 2004/12/19 06:13:51 eradicator Exp $
 
 IUSE="X alsa debug"
 
@@ -17,7 +17,7 @@ SRC_URI="http://www-crca.ucsd.edu/~msp/Software/${MY_P}.src.tar.gz"
 
 LICENSE="|| ( BSD as-is )"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~ppc sparc x86"
 
 RDEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
