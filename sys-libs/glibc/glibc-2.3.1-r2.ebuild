@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r2.ebuild,v 1.13 2002/12/17 08:27:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r2.ebuild,v 1.14 2002/12/17 12:45:51 cretin Exp $
 
 IUSE="nls pic build"
 
@@ -123,7 +123,7 @@ src_compile() {
 	local myconf=""
 	
 	# If we build for the build system we use the kernel headers from the target
-	( use build || use sparc64 ) \
+	( use build || use sparc ) \
 		&& myconf="${myconf} --with-headers=${ROOT}usr/include"
 	# Set it without "build" as well, else it might use the current kernel's
 	# headers, which might just fail (the linux-headers package is usually well
