@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/qbankmanager-0.9.12_beta.ebuild,v 1.1 2004/12/21 17:35:41 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qbankmanager/qbankmanager-0.9.12_beta.ebuild,v 1.2 2004/12/21 19:04:14 hanno Exp $
 
 inherit eutils kde-functions
 need-qt 3
 
 DESCRIPTION="Onlinebanking frontend for aqbanking"
-HOMEPAGE="http://www.aqmaniacs.de/aqbanking/"
+HOMEPAGE="http://www.aquamaniacs.de/aqbanking/"
 SRC_URI="mirror://sourceforge/aqbanking/${P/_/}.tar.gz"
 
 LICENSE="GPL-2"
