@@ -97,4 +97,5 @@ RDEPEND="
 	=app-doc/linux-gazette-91
 	=app-doc/linux-gazette-92
 	=app-doc/linux-gazette-93
+	=app-doc/linux-gazette-94
 	"
