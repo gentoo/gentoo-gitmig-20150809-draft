@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.1 2002/06/29 04:39:55 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.2 2002/09/03 17:46:02 george Exp $
+
+*lablgl-0.98.ebuild (03 Sep 2002)
+
+  03 Sep 2002; G Shapovalov <george@gentoo.org> lablgl-0.98.ebuild, files/{LablGL-0.98-Makefile-destdir.patch,LablGL-0.98-Makefile.config,digest-lablgl-0.98} :
+
+  updated to 0.98. This fixes some build failures with ocaml-3.06.
 
 *lablgl-0.97.ebuild (28 Jun 2002)
 
