@@ -92,18 +92,6 @@ x11-libs/qt-embedded
 =gnome-base/gnome-applets-2.0.1-r1
 =media-libs/gst-plugins-0.4.0-r1
 
-# <stubear@gentoo.org> (16 Aug 2002)
-# masked for testing
-=app-text/xpdf-japanese-1
-=app-text/xpdf-chinese-simplified-1
-=app-text/xpdf-chinese-traditional-1
-=app-text/xpdf-cyrillic-1
-=app-text/xpdf-greek-1
-=app-text/xpdf-korean-1
-=app-text/xpdf-latin2-1
-=app-text/xpdf-thai-1
-=app-text/xpdf-turkish-1
-
 # <mjc@gentoo.org> (15 Aug 2002)
 # new ebuild, thanks to carpaski =)
 net-www/apache2
