@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.7.ebuild,v 1.2 2002/08/13 22:00:00 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.7.ebuild,v 1.3 2002/08/16 05:03:44 raker Exp $
 
 DESCRIPTION="The Cyrus SASL (Simple Authentication and Security Layer)"
 HOMEPAGE="http://asg.web.cmu.edu/sasl/"
@@ -36,7 +36,7 @@ src_compile() {
 		--with-configdir=/etc/sasl2 \
 		--with-openssl=/usr \
 		--with-plugindir=/usr/lib/sasl2 \
-		--with-dbpath=/etc/sasl2 \
+		--with-dbpath=/etc/sasl2/sasldb2 \
 		--with-des \
 		--with-rc4 \
 		--enable-pam \
@@ -54,9 +54,6 @@ src_compile() {
 		--disable-gssapi \
 		--disable-sample \
 		--with-dblib=berkeley \
-		--host=${CHOST} \
-		--build=${CHOST} \
-		--target=${CHOST} \
 		${myconf} || die "bad ./configure"
 
 	make || die "compile problem"
@@ -79,6 +76,4 @@ pkg_postinst() {
 	# empty directories..
 	install -d -m0755 ${ROOT}/var/lib/sasl2
 	install -d -m0755 ${ROOT}/etc/sasl2
-	chown root:mail ${ROOT}/etc/sasl2
-	chmod 640 ${ROOT}/etc/sasl2
 }
