@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/gnome-alsamixer
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/ChangeLog,v 1.1 2003/03/01 03:01:38 liquidx Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/ChangeLog,v 1.2 2004/01/17 03:27:33 darkspecter Exp $
+
+  17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org>
+  gnome-alsamixer-0.9.3.ebuild:
+  manifest fix
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org>
+  gnome-alsamixer-0.9.3.ebuild:
+  set ppc in keywords
 
 *gnome-alsamixer-0.9.3 (01 Mar 2003)
 
