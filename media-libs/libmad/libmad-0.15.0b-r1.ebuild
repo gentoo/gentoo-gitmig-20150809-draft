@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.0b-r1.ebuild,v 1.12 2004/07/01 07:58:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.0b-r1.ebuild,v 1.13 2004/11/08 20:29:33 vapier Exp $
 
 inherit eutils
-
-IUSE="debug"
 
 DESCRIPTION="\"M\"peg \"A\"udio \"D\"ecoder library"
 HOMEPAGE="http://mad.sourceforge.net"
@@ -13,7 +11,8 @@ SRC_URI="mirror://sourceforge/mad/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 mips ia64"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86"
+IUSE="debug"
 
 DEPEND="virtual/libc"
 
