@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r4.ebuild,v 1.1 2002/04/12 23:58:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r4.ebuild,v 1.2 2002/04/14 09:49:52 azarah Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 RDEPEND=">=media-libs/divx4linux-20011025
 	>=media-libs/win32codecs-${PV}
 	dvd? ( media-libs/libdvdread
-		media-libs/libdvdcss )
+	       media-libs/libdvdcss )
 	esd? ( media-sound/esound )
 	ggi? ( media-libs/libggi )
 	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
@@ -55,8 +55,8 @@ src_unpack() {
 	fi
 	
 	#patch mplayer with the DXR3 patch
-	local module=[]
-	local dxr=[]
+	local module=""
+	local dxr=""
 	for module in `lsmod` ; do
 		if [ ${module} = "em8300" ] ; then
 			dxr=true
@@ -110,8 +110,8 @@ src_compile() {
 	# The code have CPU detection code now, with CPU specific
 	# optimizations, so extra should not be needed and is not
 	# recommended by the authors
-	CFLAGS="-O2 -pipe"
-	CXXFLAGS="-O2 -pipe"
+	CFLAGS=""
+	CXXFLAGS=""
 	
 	./configure --host=${CHOST} \
 		--prefix=/usr \
