@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog-lite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/ChangeLog,v 1.15 2005/02/19 20:36:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/ChangeLog,v 1.16 2005/04/01 02:41:29 josejx Exp $
+
+  01 Apr 2005; Joseph Jezak <josejx@gentoo.org>
+  swi-prolog-lite-5.0.10.ebuild, swi-prolog-lite-5.2.11.ebuild:
+  Marked 5.0.10 ppc and marked 5.2.11 ~ppc for bug #87186.
 
   19 Feb 2005; Jason Wever <weeve@gentoo.org> swi-prolog-lite-5.2.11.ebuild:
   Added ~sparc keyword as it was dropped along the way.
