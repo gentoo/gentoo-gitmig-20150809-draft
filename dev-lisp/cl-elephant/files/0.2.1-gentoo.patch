@@ -1,17 +1,26 @@
 diff -ur elephant-0.2.1.orig/Makefile elephant-0.2.1/Makefile
---- elephant-0.2.1.orig/Makefile	2004-10-09 16:09:30.562205848 -0500
-+++ elephant-0.2.1/Makefile	2004-10-09 16:24:34.367806512 -0500
+--- elephant-0.2.1.orig/Makefile	2004-10-09 16:09:30.000000000 -0500
++++ elephant-0.2.1/Makefile	2004-10-20 00:49:58.000000000 -0500
+@@ -7,7 +7,7 @@
+ SHELL=/bin/sh
+ UNAME:=$(shell uname -s)
+ 
+-DB42DIR=/usr/local/BerkeleyDB.4.2
++DB42DIR=/usr/
+ DBLIBDIR=$(DB42DIR)/lib/
+ DBINCDIR=$(DB42DIR)/include/
+ 
 @@ -22,5 +22,5 @@
  endif
  
  libsleepycat.so: src/libsleepycat.c
 -	gcc $(SHARED) -L$(DBLIBDIR) -I$(DBINCDIR) -fPIC -O3 -o $@ $< -ldb -lm
-+	gcc $(SHARED) -L$(DBLIBDIR) -I$(DBINCDIR) -fPIC $(CFLAGS) -o $@ $< -ldb -lm
++	gcc $(SHARED) -L$(DBLIBDIR) -I$(DBINCDIR) -fPIC $(CFLAGS) -o $@ $< -ldb-4.2 -lm
  
-Only in elephant-0.2.1: Makefile.~1.5.~
+Only in elephant-0.2.1/doc: elephant.info
 diff -ur elephant-0.2.1.orig/src/sleepycat.lisp elephant-0.2.1/src/sleepycat.lisp
---- elephant-0.2.1.orig/src/sleepycat.lisp	2004-10-09 16:09:30.653192016 -0500
-+++ elephant-0.2.1/src/sleepycat.lisp	2004-10-09 17:52:55.593897648 -0500
+--- elephant-0.2.1.orig/src/sleepycat.lisp	2004-10-09 16:09:30.000000000 -0500
++++ elephant-0.2.1/src/sleepycat.lisp	2004-10-09 17:52:55.000000000 -0500
 @@ -114,43 +114,11 @@
    (proclaim '(optimize (ext:inhibit-warnings 3))))
  
@@ -60,4 +69,3 @@ diff -ur elephant-0.2.1.orig/src/sleepycat.lisp elephant-0.2.1/src/sleepycat.lis
  
    ;; fini on user editable part
  
-Only in elephant-0.2.1/src: sleepycat.lisp.~1.12.~
