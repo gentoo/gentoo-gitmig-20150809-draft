@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmonetra/libmonetra-4.1.ebuild,v 1.3 2004/09/25 07:32:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmonetra/libmonetra-4.1.ebuild,v 1.4 2004/09/25 07:46:30 vapier Exp $
 
 inherit eutils
 
@@ -18,5 +18,5 @@ DEPEND="dev-libs/openssl
 	sys-devel/gcc"
 
 src_install() {
-	einstall || die "einstall failed"
+	make install DESTDIR="${D}" || die "einstall failed"
 }
