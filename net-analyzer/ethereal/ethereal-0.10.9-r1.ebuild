@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.9-r1.ebuild,v 1.2 2005/01/25 10:39:17 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.9-r1.ebuild,v 1.3 2005/01/25 12:01:53 dragonheart Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -38,6 +38,11 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
 
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-mate.h-gcc2.patch || die "patch failed"
+}
 src_compile() {
 
 	replace-flags -O3 -O

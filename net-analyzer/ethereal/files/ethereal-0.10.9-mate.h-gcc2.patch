@@ -1,0 +1,11 @@
+--- ethereal-0.10.9/plugins/mate/mate.h~	2005-01-21 21:56:08 -0500
++++ ethereal-0.10.9/plugins/mate/mate.h	2005-01-21 21:56:56 -0500
+@@ -324,7 +324,7 @@
+ extern void initialize_mate_runtime(void);
+ extern mate_pdu* mate_get_pdus(guint32 framenum);
+ extern void mate_analyze_frame(packet_info *pinfo, proto_tree* tree);
+-extern int mate_packet(void* _U_, packet_info* _U_, epan_dissect_t* _U_,const void* _U_);
++extern int mate_packet(void *prs _U_, packet_info* tree _U_, epan_dissect_t *edt _U_, const void *dummy _U_);
+ 
+ /* from mate_setup.c */
+ extern mate_config* mate_make_config(guint8* filename);

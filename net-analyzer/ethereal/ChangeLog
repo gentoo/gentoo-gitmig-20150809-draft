@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.104 2005/01/25 10:39:17 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.105 2005/01/25 12:01:53 dragonheart Exp $
+
+  25 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/ethereal-0.10.9-mate.h-gcc2.patch, ethereal-0.10.9-r1.ebuild,
+  ethereal-0.10.9.ebuild:
+  gcc-2.95 patch as per bug #79032. Thanks to Matt Taylor <liverbugg@juno.com>
 
   25 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> ethereal-0.10.9-r1.ebuild:
   Fix access violation caused by libnetsnmp when USE=snmp, bug 79068.
