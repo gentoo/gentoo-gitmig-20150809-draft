@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r2.ebuild,v 1.2 2004/04/02 03:26:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r2.ebuild,v 1.3 2004/06/03 11:35:11 mr_bones_ Exp $
 
 inherit games
 
-IUSE="dedicated"
 DESCRIPTION="Unreal Tournament 2003 - Sequel to the 1999 Game of the Year multi-player first-person shooter"
 HOMEPAGE="http://www.unrealtournament2003.com/"
 SRC_URI="http://unreal.epicgames.com/linux/ut2003/${PN}lnx_2107to${PV}.sh.bin
@@ -14,6 +13,7 @@ SRC_URI="http://unreal.epicgames.com/linux/ut2003/${PN}lnx_2107to${PV}.sh.bin
 LICENSE="ut2003"
 SLOT="0"
 KEYWORDS="x86"
+IUSE="dedicated"
 RESTRICT="nostrip"
 
 DEPEND="virtual/glibc
@@ -21,10 +21,9 @@ DEPEND="virtual/glibc
 RDEPEND="dedicated? ( games-server/ut2003-ded )
 	!dedicated? ( virtual/opengl )"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
-dir=${GAMES_PREFIX_OPT}/${PN}
-Ddir=${D}/${dir}
+dir="${GAMES_PREFIX_OPT}/${PN}"
 
 pkg_setup() {
 	check_license || die "License check failed"
@@ -42,14 +41,15 @@ src_unpack() {
 }
 
 src_install() {
-	dodir ${dir}
+	local Ddir="${D}/${dir}"
+
 	dodir ${dir}/System
 
 	# Disk 1
 	einfo "Copying files from Disk 1..."
 	cp -r ${CDROM_ROOT}/{Animations,ForceFeedback,Help,KarmaData,Maps,Sounds,Textures,Web} ${Ddir} || die "copying files"
 	cp -r ${CDROM_ROOT}/System/{editorres,*.{bmp,dat,det,est,frt,ini,int,itt,md5,u,upl,url}} ${Ddir}/System || die "copying files"
-	mkdir -p ${Ddir}/Benchmark/Stuff || dir "creating benchamrk folders"
+	mkdir -p ${Ddir}/Benchmark/Stuff || die "creating benchamrk folders"
 	cp -r ${CDROM_ROOT}/Benchmark/Stuff/* ${Ddir}/Benchmark/Stuff || die "copying benchmark files"
 	cdrom_load_next_cd
 
