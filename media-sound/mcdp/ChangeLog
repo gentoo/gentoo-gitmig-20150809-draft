@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/mcdp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.1 2003/07/11 09:36:23 jje Exp $
+
+*mcdp-0.3j (11 Jul 2003)
+
+  11 Jul 2003; jje <jje@gentoo.org> mcdp-0.3j.ebuild:
+  Initial revision.
+  
+  Submitted by: Freyr Gunnar Ólafsson <gnarlin@utopia.is>
+
