@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.1.1.1790.ebuild,v 1.8 2002/08/11 22:45:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.1.1.1790.ebuild,v 1.9 2002/08/31 18:54:54 danarmak Exp $
 
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators."
 S=${WORKDIR}/vmware-distrib
@@ -89,17 +89,10 @@ src_install () {
 
 	if [ "`use kde`" ]
 	then
-		# KDE 2
-		dodir ${KDE2DIR}/share/applnk/Applications
-		insinto ${KDE2DIR}/share/applnk/Applications
-		doins "${FILESDIR}/${PVR}/VMwareWorkstation.desktop"
-		# KDE 3
-		dodir ${KDE3DIR}/share/applnk/Applications
-		insinto ${KDE3DIR}/share/applnk/Applications
-		doins "${FILESDIR}/${PVR}/VMwareWorkstation.desktop"
-		# KDE - This seems redundant but danarmak@gentoo.org seemed to suport it
-		dodir ${KDEDIR}/share/applnk/Applications
-		insinto ${KDEDIR}/share/applnk/Applications
+		# KDE 2 - not supported anymore
+		# recent setups:
+		dodir /usr/share/applnk/Applications
+		insinto /usr/share/applnk/Applications
 		doins "${FILESDIR}/${PVR}/VMwareWorkstation.desktop"
 	fi
 

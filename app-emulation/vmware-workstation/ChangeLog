@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-workstation
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.3 2002/08/06 18:40:13 gerk Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.4 2002/08/31 18:54:54 danarmak Exp $
+
+  31 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix part of bug #5359: remove deprecated KDE2DIR, KDE3DIR variables and
+  install into /usr
 
 *vmware-workstation-3.1.1.1790 (2002/4/13)
 
