@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.4.ebuild,v 1.2 2004/03/10 15:59:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.4.1.ebuild,v 1.1 2004/03/12 12:13:23 eradicator Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 RESTRICT="nomirror"
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="-x86 -ppc -alpha -sparc -amd64"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
 
 IUSE="X"
 
