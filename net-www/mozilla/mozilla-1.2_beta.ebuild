@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2_beta.ebuild,v 1.1 2002/11/18 20:16:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2_beta.ebuild,v 1.2 2002/11/18 22:19:33 azarah Exp $
 
 IUSE="mozxmlterm moznomail java mozp3p crypt ipv6 gtk2 mozinterfaceinfo ssl ldap mozaccess mozctl gnome mozsvg"
 
@@ -39,7 +39,7 @@ RDEPEND=">=x11-base/xfree-4.2.0-r11
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
-	>=media-libs/fontconfig-2.0-r3
+	!gtk2? ( >=media-libs/fontconfig-2.0-r3 )
 	>=sys-apps/portage-2.0.14
 	dev-libs/expat
 	app-arch/zip
@@ -60,7 +60,9 @@ export MOZILLA_OFFICIAL=1
 export BUILD_OFFICIAL=1
 
 # enable XFT
-[ "${DISABLE_XFT}" != "1" ] && export MOZ_ENABLE_XFT=1
+if [ -z "`use gtk2`" ]; then
+	[ "${DISABLE_XFT}" != "1" ] && export MOZ_ENABLE_XFT=1
+fi
 
 # make sure the nss module gets build (for NSS support)
 [ -n "`use ssl`" ] && export MOZ_PSM=1
@@ -93,7 +95,9 @@ src_unpack() {
 
 	# Get mozilla to link to Xft2.0 that we install in tmp directory
 	# <azarah@gentoo.org> (18 Nov 2002)
-	epatch ${FILESDIR}/1.2/mozilla-1.2b-Xft-includes.patch.bz2
+	if [ -z "`use gtk2`" ]; then
+		epatch ${FILESDIR}/1.2/mozilla-1.2b-Xft-includes.patch.bz2
+	fi
 
 	if [ -n "`use gtk2`" ]; then
 		epatch ${FILESDIR}/1.2/mozilla-1.2b-gtk2.patch.bz2
@@ -148,7 +152,7 @@ src_compile() {
 						  --disable-dtd-debug"
 	fi
 
-	if [ -n "${MOZ_ENABLE_XFT}" ] ; then
+	if [ -n "${MOZ_ENABLE_XFT}" -a -z "`use gtk2`" ] ; then
 		myconf="${myconf} --enable-xft"
 	fi
 
@@ -217,31 +221,34 @@ src_compile() {
 	#
 	# *********************************************************************
 
-	cd ${FC_S}
-	einfo "Configuring Xft2.0..."
-	mkdir -p ${WORKDIR}/Xft
-	./configure --prefix=${WORKDIR}/Xft || die
+	if [ -z "`use gtk2`" ]; then
 	
-	einfo "Building Xft2.0..."
-	emake || die
+		cd ${FC_S}
+		einfo "Configuring Xft2.0..."
+		mkdir -p ${WORKDIR}/Xft
+		./configure --prefix=${WORKDIR}/Xft || die
 	
-	einfo "Installing Xft2.0 in temp directory..."
-	make prefix=${WORKDIR}/Xft \
-		confdir=${WORKDIR}/Xft/etc/fonts \
-		datadir=${WORKDIR}/Xft/share \
-		install || die
+		einfo "Building Xft2.0..."
+		emake || die
+	
+		einfo "Installing Xft2.0 in temp directory..."
+		make prefix=${WORKDIR}/Xft \
+			confdir=${WORKDIR}/Xft/etc/fonts \
+			datadir=${WORKDIR}/Xft/share \
+			install || die
 
-	# We also need to update Xrender ..
-	cd ${FC_S}/../Xrender
-	einfo "Compiling Xrender..."
-	xmkmf
-	make
-	cp -df Xrender.h extutil.h region.h render.h renderproto.h \
-		${WORKDIR}/Xft/include
-	cp -df libXrender.so* ${WORKDIR}/Xft/lib
+		# We also need to update Xrender ..
+		cd ${FC_S}/../Xrender
+		einfo "Compiling Xrender..."
+		xmkmf
+		make
+		cp -df Xrender.h extutil.h region.h render.h renderproto.h \
+			${WORKDIR}/Xft/include
+		cp -df libXrender.so* ${WORKDIR}/Xft/lib
 
-	# Where is Xft2.0 located ?
-	export PKG_CONFIG_PATH="${WORKDIR}/Xft/lib/pkgconfig"
+		# Where is Xft2.0 located ?
+		export PKG_CONFIG_PATH="${WORKDIR}/Xft/lib/pkgconfig"
+	fi
 
 	# *********************************************************************
 	#
@@ -334,9 +341,11 @@ src_install() {
 	make MOZ_PKG_FORMAT="raw" TAR_CREATE_FLAGS="-chf" > /dev/null || die
 	mv -f ${S}/dist/mozilla ${D}/usr/lib/mozilla
 
-	einfo "Installing Xft2.0..."
-	cp -df ${WORKDIR}/Xft/lib/libXft.so.* ${D}/usr/lib/mozilla
-	cp -df ${WORKDIR}/Xft/lib/libXrender.so.* ${D}/usr/lib/mozilla
+	if [ -z "`use gtk2`" ]; then
+		einfo "Installing Xft2.0..."
+		cp -df ${WORKDIR}/Xft/lib/libXft.so.* ${D}/usr/lib/mozilla
+		cp -df ${WORKDIR}/Xft/lib/libXrender.so.* ${D}/usr/lib/mozilla
+	fi
 
 	einfo "Installing includes and idl files..."
 	# Copy the include and idl files
