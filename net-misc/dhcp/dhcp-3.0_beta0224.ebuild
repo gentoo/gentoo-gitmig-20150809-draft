@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_beta0224.ebuild,v 1.3 2001/04/15 13:31:08 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_beta0224.ebuild,v 1.4 2001/04/18 22:44:40 achim Exp $
 
 P=dhcp-3.0b2pl24
 A="${P}.tar.gz"
@@ -73,7 +73,7 @@ src_install () {
 
     cd ${S}/client
     insinto /etc/dhcp
-    newins dhclient.conf dhclient.conf.example
+    sed -e "s:/etc/dhclient-script:/sbin/dhclient-script:" dhclient.conf > ${D}/etc/dhcp/dhclient.conf.example
     exeinto /sbin
     newexe scripts/linux dhclient-script
 
