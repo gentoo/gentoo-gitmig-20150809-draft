@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.58.ebuild,v 1.3 2004/06/25 01:11:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.58.ebuild,v 1.4 2004/07/28 22:53:42 rac Exp $
 
 inherit perl-module
 
@@ -10,14 +10,17 @@ HOMEPAGE="http://cpan.org/modules/by-module/XML/${P}.readme"
 IUSE=""
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~amd64 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 amd64 alpha ppc sparc"
 
 DEPEND=">=dev-perl/XML-SAX-0.12
 	dev-perl/XML-LibXML-Common
 	>=dev-libs/libxml2-2.6.6
 	>=dev-perl/XML-NamespaceSupport-1.07"
 
-export PERL5LIB=`perl -e 'print map { ":$ENV{D}/$_" } @INC'`
+# rac can't discern any difference between the build with or without
+# this, and if somebody wants to reactivate it, get it out of global
+# scope.
+#export PERL5LIB=`perl -e 'print map { ":$ENV{D}/$_" } @INC'`
 mytargets="pure_install doc_install"
 
 pkg_postinst() {
