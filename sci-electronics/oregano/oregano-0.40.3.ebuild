@@ -1,18 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.40.1.ebuild,v 1.3 2005/01/26 15:27:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.40.3.ebuild,v 1.1 2005/02/02 15:55:59 gustavoz Exp $
 
 inherit eutils
 
 DESCRIPTION="Oregano is an application for schematic capture and simulation of electrical circuits."
-SRC_URI="http://gforge.lug.fi.uba.ar/frs/download.php/50/${P}.tar.bz2"
+SRC_URI="http://gforge.lug.fi.uba.ar/frs/download.php/56/${P}.tar.bz2"
 HOMEPAGE="http://oregano.gforge.lug.fi.uba.ar/"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 IUSE=""
 
 DEPEND=">=dev-libs/libxml2-2.6.0
+	>=app-text/scrollkeeper-0.3.14
 	>=x11-libs/gtk+-2.4
 	>=gnome-base/libglade-2.4
 	>=gnome-base/libgnome-2.4
@@ -22,12 +23,6 @@ DEPEND=">=dev-libs/libxml2-2.6.0
 	>=gnome-base/libgnomeprintui-2.4
 	>=x11-libs/cairo-0.1.23-r1
 	>=x11-libs/gtksourceview-1.0"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gtk2.6.patch
-}
 
 src_compile() {
 	econf || die "econf failed"

@@ -1,6 +1,13 @@
 # ChangeLog for sci-electronics/oregano
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.7 2005/01/31 20:51:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.8 2005/02/02 15:55:59 gustavoz Exp $
+
+*oregano-0.40.3 (02 Feb 2005)
+
+  02 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> -oregano-0.40.0.ebuild,
+  -oregano-0.40.1.ebuild, oregano-0.40.2.ebuild, +oregano-0.40.3.ebuild:
+  Removed older versions, added missing scrollkeeper dep wrt #80459, new
+  upstream version which works on amd64
 
 *oregano-0.40.2 (31 Jan 2005)
 
