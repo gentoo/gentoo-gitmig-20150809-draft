@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.7.4.ebuild,v 1.2 2001/12/12 06:51:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.6.ebuild,v 1.1 2002/01/23 10:41:09 gbevin Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage ports system"
@@ -21,6 +21,18 @@ src_unpack() {
 
 src_compile() {                           
 	cd ${S}/src; gcc ${CFLAGS} tbz2tool.c -o tbz2tool
+	cd ${S}/src/sandbox
+	emake || die
+}
+
+pkg_preinst() {
+	if [ -d /var/db/pkg/sys-apps/bash-2.05a ] && [ ! -d /var/db/pkg/sys-apps/bash-2.05a-r1 ]
+	then
+		eerror "You have to update your bash-2.05a installation."
+		eerror "Please execute 'emerge sys-apps/bash' as root"
+		eerror "before installing this version of portage."
+		die
+	fi
 }
 
 src_install() {
@@ -42,13 +54,23 @@ src_install() {
 #	try spython -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.0/site-packages')"
 #	try spython -O -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.0/site-packages')"
 	
-	#binaries and scripts
+	#binaries, libraries and scripts
 	dodir /usr/lib/portage/bin
 	cd ${S}/bin
 	exeinto /usr/lib/portage/bin
 	doexe *
 	dosym emake /usr/lib/portage/bin/pmake
 	doexe ${S}/src/tbz2tool
+	
+	into /usr/lib/portage
+	dobin ${S}/src/sandbox/sandbox
+	dodir /usr/lib/portage/lib
+	exeinto /usr/lib/portage/lib
+	doexe ${S}/src/sandbox/libsandbox.so
+	insinto //usr/lib/portage/lib
+	doins ${S}/src/sandbox/sandbox.bashrc
+	#reset into
+	into /usr
 
 	#symlinks
 	dodir /usr/bin /usr/sbin
@@ -89,4 +111,18 @@ pkg_postinst() {
 			rm ${ROOT}/usr/lib/python2.0/${x}.pyc
 		fi
 	done
+	
+	#remove possible previous sandbox files that could cause conflicts
+	if [ -d /usr/lib/sandbox ]; then
+		if [ -f /etc/ld.so.preload ]; then
+			mv /etc/ld.so.preload /etc/ld.so.preload_orig
+			grep -v libsandbox.so /etc/ld.so.preload_orig > /etc/ld.so.preload
+			rm /etc/ld.so.preload_orig
+		fi
+		
+		rm -f ${ROOT}/usr/lib/portage/bin/ebuild.sh.orig
+		rm -f ${ROOT}/usr/lib/portage/pym/portage.py.orig
+		rm -f ${ROOT}/usr/bin/sandbox
+		rm -rf ${ROOT}/usr/lib/sandbox
+	fi
 }
