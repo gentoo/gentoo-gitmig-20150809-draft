@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/milo/milo-2.4.18.ebuild,v 1.4 2003/06/05 19:07:28 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/milo/milo-2.4.18.ebuild,v 1.5 2003/06/27 14:06:25 vapier Exp $
+
+inherit flag-o-matic eutils ccc 
 
 # Currently tested Systems:
 # 	
@@ -17,8 +19,6 @@ HOMEPAGE="http://www.suse.de/~stepan/"
 kernel_version="2.2.25"
 milo_version="2.2-18"
 ldmilo_patch="20010430"
-
-inherit flag-o-matic eutils ccc 
 
 # milo-2.2-18.tar.bz2 :- latest milo sources 
 # linux-2.2.25.tar.bz2 :- latest linux 2.2 kernel sources
