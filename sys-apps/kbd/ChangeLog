@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.27 2004/06/01 17:29:31 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.28 2004/06/02 05:24:55 lv Exp $
+
+  02 Jun 2004; Travis Tilley <lv@gentoo.org> kbd-1.12-r2.ebuild:
+  stable on amd64
 
   01 Jun 2004; Tom Gall <tgall@gentoo.org> kbd-1.12-r2.ebuild:
   stable on ppc64 bug #52651
