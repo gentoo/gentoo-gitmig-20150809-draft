@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/libbt-1.01.ebuild,v 1.4 2004/06/24 23:11:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/libbt-1.01.ebuild,v 1.5 2004/08/08 00:11:54 slarti Exp $
 
-DESCRIPTION="libBT is an impementation of the BitTorrent core protocols in C"
+DESCRIPTION="libBT is an implementation of the BitTorrent core protocols in C"
 HOMEPAGE="http://libbt.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 RESTRICT="nomirror"
