@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/acpi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpi/ChangeLog,v 1.1 2003/07/27 17:02:51 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpi/ChangeLog,v 1.2 2003/08/28 19:42:27 twp Exp $
 
 *acpi-0.06 (27 Jul 2003)
+
+  28 Aug 2003; Tom Payne <twp@gentoo.org> acpi-0.06.ebuild :
+  Fix typo. Bug # 25451.
 
   27 Jul 2003; Tom Payne <twp@gentoo.org> acpi-0.06.ebuild :
   Initial version.
