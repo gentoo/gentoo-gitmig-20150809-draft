@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/smartsuite
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/smartsuite/ChangeLog,v 1.1 2002/07/23 23:28:34 agenkin Exp $
+
+*smartsuite-2.1 (23 Jul 2002)
+
+  23 Jul 2002; Arcady Genkin <agenkin@thpoon.com> smartsuite-2.1.ebuild :
+
+  Initial version, submitted by Alexander Gretencord <arutha@gmx.de>.
