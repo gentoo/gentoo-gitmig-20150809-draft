@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r2.ebuild,v 1.4 2003/02/10 09:58:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r2.ebuild,v 1.5 2003/02/27 09:27:49 aliz Exp $
 
 inherit eutils
 
@@ -59,6 +59,7 @@ src_compile() {
 }
 
 src_install() {
+	into /
 	cd ${S}/ip ; dosbin ifcfg ip routef routel rtacct rtmon rtpr
 	cd ${S}/tc ; dosbin tc
 	cd ${S} ; dodoc README* RELNOTES

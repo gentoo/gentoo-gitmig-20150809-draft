@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/iproute
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.13 2003/02/12 09:00:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.14 2003/02/27 09:27:49 aliz Exp $
+
+  27 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> iproute-20010824-r2.ebuild :
+  Move binaries to / instead of /usr. Closes #15430.
 
 *iproute-20010824-r2 (30 Aug 2002)
 
