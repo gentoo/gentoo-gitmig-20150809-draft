@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/gnusim8085-1.2.89.ebuild,v 1.1 2004/02/19 07:11:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/gnusim8085-1.2.89.ebuild,v 1.2 2004/03/23 18:11:07 dragonheart Exp $
 inherit eutils
 
 DESCRIPTION="A GTK2 8085 Simulator"
@@ -8,7 +8,7 @@ HOMEPAGE="http://sourceforge.net/projects/gnusim8085"
 SRC_URI="mirror://sourceforge/gnusim8085/GNUSim8085-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 RESTRICT="nomirror"
 
 IUSE="nls"
