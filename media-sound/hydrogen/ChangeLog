@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.14 2004/06/19 13:16:01 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.15 2004/06/23 01:28:49 fvdpol Exp $
+
+*hydrogen-0.8.2-r3 (23 Jun 2004)
+
+  23 Jun 2004; Frank van de Pol <fvdpol@gentoo.org> +hydrogen-0.8.2-r3.ebuild:
+  New revision with reworked installation of drumkits and demo songs. Includes
+  new kits, closing bug #54570.
 
   19 Jun 2004; David Holm <dholm@gentoo.org> hydrogen-0.8.2-r2.ebuild:
   Added to ~ppc.
