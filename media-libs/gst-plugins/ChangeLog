@@ -1,7 +1,10 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.36 2003/07/12 18:05:44 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.37 2003/08/12 22:32:28 weeve Exp $
+
+  12 Aug 2003; Jason Wever <weeve@gentoo.org> gst-plugins-0.6.1.ebuild:
+  Changed ~sparc keyword to sparc.
 
 *gst-plugins-0.5.2 (27 Jun 2003)
  
