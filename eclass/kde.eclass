@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.32 2002/01/08 10:29:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.33 2002/01/09 19:13:23 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit autoconf base
 ECLASS=kde
@@ -20,7 +20,12 @@ kde_src_compile() {
 	case $1 in
 		myconf)
 			debug-print-section myconf
-			myconf="$myconf --host=${CHOST} --with-x --enable-mitshm --with-xinerama --prefix=${KDEDIR} --with-qt-dir=${QTDIR}"
+			myconf="$myconf --host=${CHOST} --with-x --enable-mitshm --with-xinerama --with-qt-dir=${QTDIR} --with-kde-dir=${KDEDIR}"
+			case $KDEMAJORVER in
+			    2) myconf="$myconf --prefix=${KDE2DIR}";;
+			    3) myconf="$myconf --prefix=${KDE3DIR}";;
+			    *) echo "!!! $ECLASS: $FUNCNAME: myconf: could not set --prefix based on \$KDEMAJOVER=\"$KDEMAJORVER\"" && exit 1;;
+			esac
 			use qtmt 	&& myconf="$myconf --enable-mt"
 			[ -n "$DEBUG" ] && myconf="$myconf --enable-debug"	|| myconf="$myconf --disable-debug"
 			debug-print "$FUNCNAME: myconf: set to ${myconf}"
@@ -201,7 +206,7 @@ min-kde-ver() {
 	debug-print-function $FUNCNAME $*
 
 	case $1 in
-	    2*)	selected_version="2.2.2-r1";;
+	    2*)	selected_version="2.2.2-r2";;
 	    3*)	selected_version="3.0";;
 	    *)	echo "!!! error: $FUNCNAME() (kde.eclass) called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac

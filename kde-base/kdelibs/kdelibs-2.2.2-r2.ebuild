@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r1.ebuild,v 1.1 2001/12/29 17:41:37 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r2.ebuild,v 1.1 2002/01/09 19:13:23 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde kde.org || die
 #don't inherit kde-dist! it calls need-kde which adds kdelibs to depend -> circular deps!
@@ -37,32 +37,24 @@ DEPEND="$DEPEND
 RDEPEND="$RDEPEND
 	app-text/sgml-common
 	cups? ( net-print/cups )
-	dev-lang/python
-	~kde-base/kde-env-${PV}"
-
-BASE=/usr/kde/2
+	dev-lang/python"
 
 myconf="$myconf --enable-final"
 
 qtver-from-kdever $PV
 need-qt $selected_version
 
+set-kdedir $PV
+
 src_compile() {
     
-	#separate artsd
-	#cd ${S}
-	#cp subdirs subdirs.orig
-	#cat subdirs.orig | grep -v arts > subdirs
-
 	kde_src_compile myconf
 
-	myconf="$myconf --disable-libafm"
 	use ipv6	|| myconf="$myconf --with-ipv6-lookup=no"
 	use ssl		&& myconf="$myconf --with-ssl-dir=/usr"		|| myconf="$myconf --without-ssl"
 	use alsa	&& myconf="$myconf --with-alsa"			|| myconf="$myconf --without-alsa"
 	use cups	&& myconf="$myconf --enable-cups"		|| myconf="$myconf --disable-cups"
-	myconf="$myconf --prefix=${BASE}"
-	
+
 	kde_src_compile configure make
 
 }
@@ -74,9 +66,12 @@ src_install() {
 	docinto html
 	dodoc *.html
 	
-	insinto /etc/env.d
-	doins ${FILESDIR}/70kdelibs2
-
+	dodir /etc/env.d
+	echo "KDE2DIR=${KDEDIR}
+PATH=${KDEDIR}/bin
+ROOTPATH=${KDEDIR}/bin
+LDPATH=${KDEDIR}/lib" > ${D}/etc/env.d/70kdelibs-2.2.2
+	
 }
 
 
