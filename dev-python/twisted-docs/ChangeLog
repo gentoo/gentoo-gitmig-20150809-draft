@@ -1,7 +1,13 @@
 # ChangeLog for dev-python/twisted-docs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-docs/ChangeLog,v 1.3 2003/12/13 04:35:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-docs/ChangeLog,v 1.4 2004/03/05 20:07:15 lordvan Exp $
 
+*twisted-docs-1.2.0 (05 Mar 2004)
+
+  05 Mar 2004; Thomas Raschbacher <lordvan@gentoo.org>
+  twisted-docs-1.2.0.ebuild:
+  Version Bump (~arch for now)
+	
 *twisted-docs-1.1.1 (13 Dec 2003)
 
   13 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org>
