@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/librsync
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/librsync/ChangeLog,v 1.6 2003/08/17 14:41:58 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/librsync/ChangeLog,v 1.7 2004/03/25 01:09:41 weeve Exp $
+
+  24 Mar 2004; Jason Wever <weeve@gentoo.org> librsync-0.9.6.ebuild:
+  Marked stable on sparc.
 
 *librsync-0.9.6 (17 Aug 2003)
 
