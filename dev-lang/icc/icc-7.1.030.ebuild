@@ -1,17 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.1.030.ebuild,v 1.2 2003/10/15 18:52:23 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.1.030.ebuild,v 1.3 2003/11/12 15:59:53 drobbins Exp $
 
 inherit rpm
 
 S=${WORKDIR}
+RESTRICT=fetch
 #what dir to use in FILESDIR
 FILESV=7.1.029
 DESCRIPTION="Intel C++ Compiler - Intel's Pentium optimized compiler for Linux"
 
-SRC_URI1="ftp://download.intel.com/software/products/compilers/downloads/l_cc_pc_${PV}.tar"
-SRC_URI2="ftp://download.intel.co.jp/software/products/compilers/downloads/l_cc_pc_${PV}.tar"
-SRC_URI="${SRC_URI1} ${SRC_URI2}"
+#currently must be downloaded from premier.intel.com
+#SRC_URI1="ftp://download.intel.com/software/products/compilers/downloads/l_cc_pc_${PV}.tar"
+#SRC_URI2="ftp://download.intel.co.jp/software/products/compilers/downloads/l_cc_pc_${PV}.tar"
+#SRC_URI="${SRC_URI1} ${SRC_URI2}"
 
 HOMEPAGE="http://www.intel.com/software/products/compilers/clin/"
 
