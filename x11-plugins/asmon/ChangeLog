@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/asmon
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.4 2004/03/17 21:50:11 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.5 2004/06/13 04:13:11 pyrania Exp $
+
+*asmon-0.64 (13 Jun 2004)
+
+  13 Jun 2004; <pyrania@gentoo.org> +asmon-0.64.ebuild:
+  Version bump. Closing bug #51879.
 
   17 Mar 2004; Ciaran McCreesh <ciaranm@gentoo.org> asmon-0.62.ebuild:
   Added ~sparc (#44975)
