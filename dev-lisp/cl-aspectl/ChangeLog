@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-aspectl
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-aspectl/ChangeLog,v 1.1 2004/10/19 05:22:19 mkennedy Exp $
+
+*cl-aspectl-0.6.3 (18 Oct 2004)
+
+  18 Oct 2004; <mkennedy@gentoo.org> +metadata.xml,
+  +cl-aspectl-0.6.3.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
