@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-1.4.1.ebuild,v 1.1 2002/06/28 01:47:05 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-1.4.1.ebuild,v 1.2 2002/06/28 10:06:50 spider Exp $
 
 
 inherit libtool
@@ -13,7 +13,8 @@ SLOT="1.4"
 LICENSE="GPL-2"
 
 RDEPEND="=gnome-base/control-center-1.4*
-	 >=gnome-base/libglade-0.17-r1
+	  ( >=gnome-base/libglade-0.17-r1 
+	  	 <gnome-base/libglade-0.99.0 )
 	 >=gnome-base/gnome-libs-1.4.1.2-r1
 	 >=media-libs/gdk-pixbuf-0.16.0-r1"
 
