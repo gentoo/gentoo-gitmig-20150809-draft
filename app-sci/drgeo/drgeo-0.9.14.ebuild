@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/drgeo/drgeo-0.9.14.ebuild,v 1.1 2004/11/15 14:49:54 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/drgeo/drgeo-0.9.14.ebuild,v 1.2 2004/11/23 14:51:27 ribosome Exp $
 
 DOCN="${PN}-doc"
 DOCV="1.5"
@@ -14,13 +14,13 @@ SRC_URI="mirror://sourceforge/ofset/${P}.tar.gz
 
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
-IUSE="nls"
+IUSE="nls no-helpbrowser"
 
 DEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libglade-2
 	>=dev-libs/libxml2-2
 	>=dev-util/guile-1.4
-	www-client/dillo"
+	!no-helpbrowser? ( www-client/dillo )"
 
 src_compile() {
 	econf || die
