@@ -2,10 +2,12 @@ MD5 b038747197b5d117b75c612c39bedc6e ChangeLog 2706
 MD5 7a090ef24255a6303cbff1cc07e98631 gftp-2.0.13.ebuild 1032
 MD5 4965cb3d7d47ce48a9fa674ae66c4b86 gftp-2.0.14.ebuild 998
 MD5 6c4d39e5837686aeebc007e8b9494d58 gftp-2.0.14_rc1.ebuild 1022
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 848a8b8a59ff350a8028e8012a54b46a gftp-2.0.15.ebuild 1336
+MD5 848a8b8a59ff350a8028e8012a54b46a gftp-2.0.16.ebuild 1336
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 8e7b5678687f0a6685df59ecfc697c86 files/digest-gftp-2.0.13 63
 MD5 4a567cc97f7b5318979193135b98eafd files/digest-gftp-2.0.14 64
 MD5 35ad6821c6e09d90227714f8b087f565 files/digest-gftp-2.0.14_rc1 67
-MD5 ad3e717963c174555b2afb27f7c2a61e files/gftp-2.0.13-gtk2.2.patch 1013
 MD5 f016b30f08a26f30a03721cff7a19ac9 files/digest-gftp-2.0.15 65
+MD5 77ce85d4218034ac35a17bf59af5b790 files/digest-gftp-2.0.16 65
+MD5 ad3e717963c174555b2afb27f7c2a61e files/gftp-2.0.13-gtk2.2.patch 1013
