@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r3.ebuild,v 1.4 2004/12/07 04:03:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r3.ebuild,v 1.5 2004/12/23 08:18:03 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -251,7 +251,7 @@ host_def_setup() {
 		fi
 
 		if ( [ -e "${ROOT}/usr/src/linux" ] && \
-			[ ! `kernel_is "2" "2"` ] ) || \
+			! kernel_is "2" "2" ) || \
 			[ "`uname -r | cut -d. -f1,2`" != "2.2" ]
 		then
 			echo "#define HasLinuxInput YES" >> config/cf/host.def
