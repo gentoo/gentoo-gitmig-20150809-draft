@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.1.ebuild,v 1.2 2003/07/25 21:21:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.1.ebuild,v 1.3 2003/09/04 20:07:25 spider Exp $
 
 inherit gnome2
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.1
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-desktop-2.2
 	!gstreamer? ( >=media-libs/xine-lib-1_beta12 )
-	gstreamer? ( >=media-libs/gstreamer-0.6.1 
+	gstreamer? ( >=media-libs/gstreamer-0.6.1
 		>=media-libs/gst-plugins-0.6.1 )"
 
 DEPEND="${RDEPEND}
