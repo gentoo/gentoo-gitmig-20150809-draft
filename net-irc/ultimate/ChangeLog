@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ultimate
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.7 2004/07/01 22:23:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.8 2004/07/08 23:08:50 swegener Exp $
+
+  09 Jul 2004; Sven Wegener <swegener@gentoo.org> ultimate-2.8.7.ebuild:
+  Marked stable on x86.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ultimate-2.8.7.ebuild:
