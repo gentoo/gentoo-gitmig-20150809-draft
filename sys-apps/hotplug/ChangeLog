@@ -1,10 +1,11 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.4 2002/07/21 19:40:26 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.5 2002/08/11 13:22:59 phoenix Exp $
 
 *hotplug-200200401 (5 May 2002)
 
-  11 May 2002; Wout Mertens <wmertens@gentoo.org> hotplug-20020401.ebuild :
+  11 Aug 2002; phoen][x <phoenix@gentoo.org> hotplug-20020401.ebuild :  
+  Fixed bug 6183.
 
   21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
   updated keywords (ppc)
