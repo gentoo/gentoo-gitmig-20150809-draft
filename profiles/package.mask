@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3618 2005/02/13 19:54:27 luckyduck Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3619 2005/02/13 20:28:40 pylon Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# <pylon@gentoo.org> (13 Feb 2005)
+# From website: "We know that 0.4.x is a bit buggy on trades :), for people who
+# wish to play a stable game, please use 0.3.2"
+=games-board/gtkatlantic-0.4.1
 
 # <genone@gentoo.org> (25 Aug 2004)
 # Version including CVS snapshots for gtk2 support, masked until
