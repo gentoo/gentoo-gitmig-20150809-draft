@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha10-r2.ebuild,v 1.5 2002/10/17 12:55:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha10-r2.ebuild,v 1.6 2002/10/21 04:20:12 agenkin Exp $
 
 S=${WORKDIR}/xcdroast-0.98alpha10
 DESCRIPTION="Menu based front-end to mkisofs and cdrecord"
@@ -16,7 +16,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	=dev-libs/glib-1.2*
 	>=media-libs/gdk-pixbuf-0.16.0
 	>=media-libs/giflib-3.0
-	=app-cdr/cdrtools-1.11*"
+	<=app-cdr/cdrtools-1.11.33"
 
 RDEPEND="=app-cdr/cdrtools-1.11*"
 

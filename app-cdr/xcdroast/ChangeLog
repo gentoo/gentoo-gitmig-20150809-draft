@@ -4,6 +4,10 @@
 
 *xcdroast-0.98_alpha10 (16 Jun 2002)
   
+  21 Oct 2002; Arcady Genkin <agenkin@gentoo.org> xcdroast-0.98_alpha10-r2 :
+
+  xcdroast does not work with cdrtools above 1.11.33.
+
   16 Jun 2002; Doug Goldstein (Cardoe) <dougg@ufl.edu>
   xcdroast-0.98_alpha10-r2.ebuild: Changed the depends to the new version of
   cdrtools because of bugs reports and because the xcdroast site says there are
