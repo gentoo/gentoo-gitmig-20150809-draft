@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.8 2003/02/04 22:08:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.9 2003/02/06 03:56:19 nall Exp $
+
+  05 Feb 2003; Jon Nall <nall@gentoo.org> guile-1.4.1.ebuild :
+  added ~ppc
 
   04 Feb 2003; Aron Griffis <agriffis@gentoo.org> guile-1.4.1.ebuild :
   Mark stable on alpha
