@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.22 2004/02/04 15:36:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.23 2004/02/06 16:33:38 gustavoz Exp $
+
+  06 Feb 2004; <gustavoz@gentoo.org> gftp-2.0.16-r1.ebuild:
+  stable on sparc
 
   04 Feb 2004; Alastair Tse <liquidx@gentoo.org> gftp-2.0.16-r1.ebuild:
   stable bump, should solve (#39289)
