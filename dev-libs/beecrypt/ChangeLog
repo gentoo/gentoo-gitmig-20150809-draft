@@ -1,7 +1,10 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.15 2004/04/11 19:29:59 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.16 2004/04/12 19:19:01 cretin Exp $
 
+  12 Apr 2004; Stefan Jones <cretin@gentoo.org> beecrypt-3.1.0-r1.ebuild:
+  Fix athlon in mcpu or march, #47592
+  
   11 Apr 2004; Stefan Jones <cretin@gentoo.org> beecrypt-3.1.0-r1.ebuild:
   Mark as stable for the rest of the archs
   Also add scanning of CFLAGS to set optimisations

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-3.1.0-r1.ebuild,v 1.9 2004/04/11 19:29:59 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-3.1.0-r1.ebuild,v 1.10 2004/04/12 19:19:01 cretin Exp $
 
 inherit flag-o-matic
 
@@ -32,6 +32,10 @@ src_unpack() {
 	fi
 	# fix for python paths (#39282)
 	epatch ${FILESDIR}/beecrypt-3.1.0-python2.3.patch
+
+	# Athlons are i686
+	epatch ${FILESDIR}/beecrypt-3.1.0-athlon.diff
+	autoconf
 }
 
 src_compile() {
