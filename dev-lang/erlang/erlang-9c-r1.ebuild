@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c-r1.ebuild,v 1.2 2003/07/04 01:50:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c-r1.ebuild,v 1.3 2003/07/28 13:34:04 vapier Exp $
 
 MY_P=otp_src_R9B-1
 DESCRIPTION="Erlang programming language, runtime environment, and large collection of libraries"
@@ -12,18 +12,20 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="X ssl"
 
-src_unpack(){
-	unpack ${A}
-	cd ${S}
-	#combines nsswitch.conf parsing and a fix for strange install behaviour on some systems
-	gzcat ${FILESDIR}/${P}.patch.gz | patch -p1 || die
-}
-
 DEPEND=">=dev-lang/perl-5.6.1
 	X? ( >=x11-base/xfree-4.2.0-r12 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )"
 
 S=${WORKDIR}/${MY_P}
+
+addpredict /dev/pty # Bug #25366
+
+src_unpack(){
+	unpack ${A}
+	cd ${S}
+	#combines nsswitch.conf parsing and a fix for strange install behaviour on some systems
+	epatch ${FILESDIR}/${P}.patch.gz
+}
 
 src_compile() {
 	econf --enable-threads || die "./configure failed"
