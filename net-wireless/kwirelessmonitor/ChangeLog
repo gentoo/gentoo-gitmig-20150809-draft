@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kwirelessmonitor
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwirelessmonitor/ChangeLog,v 1.2 2004/12/09 15:23:45 motaboy Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwirelessmonitor/ChangeLog,v 1.3 2005/01/06 19:23:49 sekretarz Exp $
+
+  06 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  kwirelessmonitor-0.5.4.ebuild:
+  Added to ~amd64, bug #76830
 
   09 Dec 2004; Simone Gotti <motaboy@gentoo.org>
   kwirelessmonitor-0.5.4.ebuild:
