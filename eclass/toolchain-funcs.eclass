@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.34 2005/03/10 22:43:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.35 2005/03/11 02:03:55 eradicator Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -23,14 +23,11 @@ tc-getPROG() {
 		return 0
 	fi
 
-	local chost=$3
-	[[ -z ${chost} ]] && chost=$(get_abi_CHOST)
-	[[ -z ${chost} ]] && chost=${CHOST}
-	
-	if [[ -n ${chost} ]] ; then
-		local search=$(type -p "${chost}-${prog}")
-		[[ -n ${search} ]] && prog=${search##*/}
-	fi
+	local search=
+	[[ -n $3 ]] && search=$(type -p "$3-${prog}")
+	[[ -z ${search} && -n $(get_abi_CHOST) ]] && search=$(type -p "$(get_abi_CHOST)-${prog}")
+	[[ -z ${search} && -n ${CHOST} ]] && search=$(type -p "${CHOST}-${prog}")
+	[[ -n ${search} ]] && prog=${search##*/}
 
 	export ${var}=${prog}
 	echo "${!var}"
