@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.0.ebuild,v 1.9 2002/10/04 05:55:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.0.ebuild,v 1.10 2002/10/05 05:39:16 drobbins Exp $
+
+IUSE="arts esd x86 X gtk oggvorbis gnome alsa"
 
 inherit kde-functions 
 

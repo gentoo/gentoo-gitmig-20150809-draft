@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0.ebuild,v 1.4 2002/10/04 05:54:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0.ebuild,v 1.5 2002/10/05 05:39:16 drobbins Exp $
+
+IUSE="nas esd motif X gtk oggvorbis tcltk slang alsa"
 
 MY_P=TiMidity++-${PV}-pre1
 S=${WORKDIR}/${MY_P}

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # /home/cvsroot/gentoo-x86/skel.build,v 1.7 2001/08/25 21:15:08 chadh Exp
 
+IUSE="sdl svga esd alsa"
+
 S=${WORKDIR}/${P}
 DESCRIPTION="a program that represents music graphically in real time as coruscating field of fog and glowing lines"
 HOMEPAGE="http://yoyo.cc.monash.edu.au/~pfh/synaesthesia.html"

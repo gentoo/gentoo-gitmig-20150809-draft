@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r7.ebuild,v 1.2 2002/05/31 14:34:51 seemant Exp
 
+IUSE="xml nls esd avi opengl oggvorbis 3dnow gnome"
+
 inherit libtool
 
 PLO_VER="$(echo ${PV} | sed -e "s:\.::g")"

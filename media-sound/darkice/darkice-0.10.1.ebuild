@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.10.1.ebuild,v 1.3 2002/10/04 05:52:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.10.1.ebuild,v 1.4 2002/10/05 05:39:16 drobbins Exp $
+
+IUSE="encode oggvorbis"
 
 DESCRIPTION="IceCast live streamer delivering Ogg and mp3 streams simulatenously to multiple hosts."
 HOMEPAGE="http://darkice.sourceforge.net/"
