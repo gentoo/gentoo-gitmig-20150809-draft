@@ -32,7 +32,11 @@ MAKEOPTS="-j2"
 # Fetching command (5 tries, passive ftp for firewall compatibility)
 FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${x} -P \${DISTDIR}"
 # Compile programs with GNOME/SLANG extensions 
-#USE="gnome slang 3dnow mmx esd"
+#USE="gnome bonobo X qt kde"
+#USE="3dnow mmx esd"
+#USE="berkdb gdbm readline libg++ gpm tcpd slang"
+#USE="ssl postgres mysql ldap odbc"
+#USE="tex"
 USE="slang"
 
 # C Compiler flags
