@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/jetty/files/4.2.17/jetty.init,v 1.1 2004/03/07 03:43:00 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jetty/files/4.2.19/jetty.init,v 1.1 2004/03/27 18:13:09 zx Exp $
 
 JETTY_ENV="JAVA_HOME=${JAVA_HOME} JAVA_OPTIONS=\"${JAVA_OPTIONS}\""
 JETTY_ENV="${JETTY_ENV} JETTY_HOME=${JETTY_HOME} JETTY_CONSOLE=${JETTY_HOME}/logs/jetty.log"

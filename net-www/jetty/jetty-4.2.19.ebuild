@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jetty/jetty-4.2.17.ebuild,v 1.1 2004/03/07 03:43:00 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jetty/jetty-4.2.19.ebuild,v 1.1 2004/03/27 18:13:09 zx Exp $
 
 DESCRIPTION="A Lightweight Servlet Engine"
 SRC_URI="http://dl.sourceforge.net/sourceforge/jetty/${PN/j/J}-${PV}-all.tar.gz"

@@ -1,6 +1,14 @@
 # ChangeLog for net-www/jetty
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/jetty/ChangeLog,v 1.1 2004/03/07 03:43:00 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jetty/ChangeLog,v 1.2 2004/03/27 18:13:09 zx Exp $
+
+*jetty-4.2.19 (31 Mar 2004)
+
+  31 Mar 2004; Chris Aniszczyk <zx@gentoo.org> jetty-4.2.17.ebuild,
+  jetty-4.2.19.ebuild, files/4.2.17/21jetty, files/4.2.17/jetty,
+  files/4.2.17/jetty.conf, files/4.2.17/jetty.init, files/4.2.19/21jetty,
+  files/4.2.19/jetty, files/4.2.19/jetty.conf, files/4.2.19/jetty.init:
+  Version bump to remove security issue. Closes #45552
 
 *jetty-4.2.17 (04 Mar 2004)
 
