@@ -63,7 +63,7 @@ Run newaliases.
 	newaliases
     
 Copy the web icons:
-     cp /usr/local/mailman/icons/* /home/httpd/icons
+     cp /usr/local/mailman/icons/* /var/www/localhost/icons
 
 6) Start the mailman daemon:
 
