@@ -1,0 +1,13 @@
+# ChangeLog for dev-lang/gprologp
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.1 2002/10/27 09:20:03 george Exp $
+
+*gprolog-1.2.13
+
+  26 Oct 2002; George Shapovalov <george@gentoo.org> gprolog-1.2.13.ebuild :
+
+  new package: GNU Prolog
+
+  ebuilod submitted by Rigo Ketelings <rigo@home.nl>
+  modified by me for FHS compatibility
+  
