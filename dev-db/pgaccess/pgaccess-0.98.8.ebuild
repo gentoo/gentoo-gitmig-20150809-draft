@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/pgaccess-0.98.8.ebuild,v 1.9 2004/06/29 17:12:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/pgaccess-0.98.8.ebuild,v 1.10 2004/07/14 01:08:07 agriffis Exp $
 
 DESCRIPTION="a database frontend for postgresql"
 HOMEPAGE="http://www.pgaccess.org/"
@@ -16,7 +16,6 @@ DEPEND=">=dev-lang/tcl-8.3.4
 	>=dev-lang/tk-8.3.4
 	>=dev-db/postgresql-7.3"
 
-S=${WORKDIR}/${P}
 
 src_compile() {
 	cd ${S}

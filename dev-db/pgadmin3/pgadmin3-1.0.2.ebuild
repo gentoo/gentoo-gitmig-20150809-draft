@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.0.2.ebuild,v 1.6 2004/06/29 17:13:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.0.2.ebuild,v 1.7 2004/07/14 01:08:30 agriffis Exp $
 
 IUSE=""
 
-S=${WORKDIR}/${P}
 RESTRICT="nomirror"
 DESCRIPTION="wxWindows GUI for PostgreSQL"
 HOMEPAGE="http://www.pgadmin.org/"

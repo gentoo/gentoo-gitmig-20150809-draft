@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/mergeant-0.11.0.ebuild,v 1.5 2004/06/24 21:56:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/mergeant-0.11.0.ebuild,v 1.6 2004/07/14 01:05:05 agriffis Exp $
 
 IUSE=""
 
 inherit gnome2 gnome.org
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Database admin tool using libgnomedb and libgda"
 HOMEPAGE="http://www.gnome-db.org/"
 SLOT="0"
