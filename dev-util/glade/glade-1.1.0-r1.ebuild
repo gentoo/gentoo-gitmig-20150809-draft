@@ -1,17 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-1.1.0-r1.ebuild,v 1.1 2002/06/02 18:28:25 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-1.1.0-r1.ebuild,v 1.2 2002/07/23 11:22:17 seemant Exp $
 
 S=${WORKDIR}/${P}
-SLOT="0"
 DESCRIPTION="Glade is a GUI Builder. This release is for GTK+ 2 and GNOME 2."
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/glade/${P}.tar.bz2"
-
 HOMEPAGE="http://glade.gnome.org/"
 
+SLOT="1"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
-RDEPEND="=x11-libs/gtk+-2.0*
+DEPEND="=x11-libs/gtk+-2*
 	=dev-libs/libxml2-2.4*
 	gnome? ( >=gnome-base/libgnomeui-1.117.1
 		>=gnome-base/libgnomecanvas-1.117.0
@@ -19,33 +19,29 @@ RDEPEND="=x11-libs/gtk+-2.0*
 		>=gnome-base/libgnomeprint-1.114.0 
 		>=gnome-base/libgnomeprintui-1.114.0 )"
 
-DEPEND="${RDEPEND}
+RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext
 		>=dev-util/intltool-0.11 )
 	>=app-text/scrollkeeper-0.2"
 
 src_compile() {
-	local myopts
-	use gnome || myopts="--disable-gnome"
-	use nls || myopts="${myopts} --disable-nls"
+	local myconf
+	use gnome || myconf="--disable-gnome"
+	use nls || myconf="${myconf} --disable-nls"
 
 	if [ "$DEBUG" ]
 	then	
-		myopts="$myopts --enable-debug"
+		myconf="$myconf --enable-debug"
 	fi
 
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--sysconfdir=/etc \
+	econf \
 		--disable-gnome-db \
-		${myopts}  || die
+		${myconf}  || die
 
 	emake || die
 }
 
 src_install() {
-	make prefix=${D}/usr \
-		sysconfdir=${D}/etc \
-		install || die
+	einstall || die
 	dodoc AUTHORS COPYING* FAQ NEWS README* TODO
 }

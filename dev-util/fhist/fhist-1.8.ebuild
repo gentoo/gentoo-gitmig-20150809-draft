@@ -1,19 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header:#
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/fhist-1.8.ebuild,v 1.3 2002/07/23 11:22:17 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="File history and comparison tools"
 SRC_URI="http://www.canb.auug.org.au/~millerp/${P}.tar.gz"
 HOMEPAGE="http://www.canb.auug.org.au/~millerp/fhist.html"
 
-DEPEND="sys-devel/gettext sys-apps/groff sys-devel/bison"
-RDEPEND=""
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND="sys-devel/gettext 
+	sys-apps/groff 
+	sys-devel/bison"
+RDEPEND="${DEPEND}"
 
 src_compile() {
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/share/man || die "./configure failed"
+	econf || die "./configure failed"
 	make clean 
 	make || die
 }
@@ -28,6 +32,8 @@ src_install () {
 	rm -r ${D}/usr/share/fhist
 	
 	# move message catalogs into the usual gentoo place 
-	mkdir ${D}/usr/share/locale
+	dodir /usr/share/locale
 	mv ${D}/usr/lib/fhist/en ${D}/usr/share/locale/
+
+	dodoc LICENSE MANIFEST README
 }

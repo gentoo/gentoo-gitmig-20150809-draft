@@ -1,23 +1,26 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-1.2.5.3.ebuild,v 1.6 2002/05/27 17:27:38 drobbins Exp $
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-1.2.5.3.ebuild,v 1.7 2002/07/23 11:22:19 seemant Exp $
 
 # 1.2.5 version links against KDE3
 MY_PV=1.2.5
 MY_P=${PN}-${MY_PV}
 
- 
 inherit kde-base
 
 need-kde 3
 
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="A Graphical Debugger Interface to gdb"
 SRC_URI="mirror://sourceforge/kdbg/${MY_P}.tar.gz"
 HOMEPAGE="http://members.nextra.at/johsixt/kdbg.html"
-S=${WORKDIR}/${MY_P}
 
-myconf="$myconf --with-kde-version=3"
+myconf="${myconf} --with-kde-version=3"
 
 export LIBQTMT="-lqt-mt"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 RDEPEND=">=sys-devel/gdb-5.0"

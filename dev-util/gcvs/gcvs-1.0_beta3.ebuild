@@ -1,15 +1,26 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gcvs/gcvs-1.0_beta3.ebuild,v 1.2 2002/07/11 06:30:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gcvs/gcvs-1.0_beta3.ebuild,v 1.3 2002/07/23 11:22:17 seemant Exp $
 
-Z="gcvs-1.0b3"
-S=${WORKDIR}/${Z}
+MY_P=${P/eta/}
+MY_P=${MY_P/_/}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="GUI frontend for CVS from the CVSGUI project"
-SRC_URI="mirror://sourceforge/cvsgui/${Z}.tar.gz"
+SRC_URI="mirror://sourceforge/cvsgui/${MY_P}.tar.gz"
 HOMEPAGE="http://cvsgui.sourceforge.net/"
 
-DEPEND="=x11-libs/gtk+-1.2* >=dev-lang/tcl-8.3.3 sys-devel/perl sys-devel/bison dev-util/glademm"
-RDEPEND="=x11-libs/gtk+-1.2* >=dev-lang/tcl-8.3.3 >=dev-util/cvs-1.11-r1"
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND="=x11-libs/gtk+-1.2* 
+	>=dev-lang/tcl-8.3.3 
+	sys-devel/perl 
+	sys-devel/bison
+	dev-util/glademm"
+
+RDEPEND="${DEPEND}
+	>=dev-util/cvs-1.11-r1"
 
 src_compile() {
 
@@ -42,5 +53,3 @@ src_install () {
 
 	
 }
-
-

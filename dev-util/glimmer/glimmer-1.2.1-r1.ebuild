@@ -1,20 +1,20 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/glimmer-1.2.1-r1.ebuild,v 1.1 2002/07/04 13:20:55 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/glimmer-1.2.1-r1.ebuild,v 1.2 2002/07/23 11:22:18 seemant Exp $
 
-P_VERSION="1.2.1"
 S=${WORKDIR}/glimmer-${P_VERSION}
 DESCRIPTION="All-purpose gnome code editor."
-SRC_URI="mirror://sourceforge/glimmer/${PN}-${P_VERSION}.tar.gz"
+SRC_URI="mirror://sourceforge/glimmer/${P}.tar.gz"
 HOMEPAGE="http://glimmer.sourceforge.net"
-LICENSE="GPL-2"
+
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
+	=gnome-base/gnome-vfs-1*
 	>=gnome-base/gnome-libs-1.4.1.7
 	>=gnome-base/ORBit-0.5.16
-	( >=gnome-base/gnome-vfs-1.0.2-r1
-	<gnome-base/gnome-vfs-2.0.0 )
 	>=gnome-base/gnome-print-0.35"
 
 # These are requirements when build with --enable-python.
@@ -37,7 +37,8 @@ src_compile() {
 	sed -e 's/SUBDIRS \= regex gtkextext/SUBDIRS \= gtkextext/' src/Makefile.am.grep >src/Makefile.am
 	automake
 
-	./configure --disable-python --infodir=/usr/share/info --mandir=/usr/share/man --prefix=/usr --host=${CHOST} || die
+	econf \
+		--disable-python || die
 	
 	make || die
 }
@@ -46,4 +47,3 @@ src_install () {
 	make prefix=${D}/usr sysconfdir=${D}/etc/gnome install || die
 	dodoc AUTHORS ABOUT-NLS ChangeLog NEWS PROPS TODO README INSTALL COPYING
 }
-
