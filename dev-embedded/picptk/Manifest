@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0a88044980c1c3de41b533e4893dda8b ChangeLog 585
+MD5 adae7dc9b03d689a7593f1598498c772 picptk-0.5a.ebuild 1063
+MD5 3fdd0fc95039bb2be408ee04cf34c476 ChangeLog 675
 MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
-MD5 422bff0675660df5693adaedcc9536d0 picptk-0.5a.ebuild 1063
-MD5 39715da9bc8affddf1c77a6e68f4f65c files/digest-picptk-0.5a 62
 MD5 68d9a1dd472341c4c938e9e16d3f8680 files/picptk-0.5a-headerfix.patch 12453
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4W4JHTu7gpaalycRAue/AKDbDJOKKe5QP6GlxccLGpy25eK/OwCfQnq4
-PRw458fb31Vbo3llF3qIN1E=
-=LD3/
------END PGP SIGNATURE-----
+MD5 39715da9bc8affddf1c77a6e68f4f65c files/digest-picptk-0.5a 62
