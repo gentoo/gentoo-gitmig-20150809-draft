@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/pip
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/ChangeLog,v 1.1 2004/08/28 14:15:02 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/ChangeLog,v 1.2 2004/09/03 01:19:57 dholm Exp $
+
+*pip-1.2 (03 Sep 2004)
+
+  03 Sep 2004; David Holm <dholm@gentoo.org> pip-1.2.ebuild:
+  Added to ~ppc.
 
   28 Aug 2004; Tavis Ormandy <taviso@gentoo.org> :
   inital import
