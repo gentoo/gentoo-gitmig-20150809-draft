@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/hkscs-ming
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/ChangeLog,v 1.1 2004/02/07 09:32:49 liquidx Exp $
+
+*hkscs-ming-1.0_pre20030919 (07 Feb 2004)
+
+  07 Feb 2004; Alastair Tse <liquidx@gentoo.org>
+  hkscs-ming-1.0_pre20030919.ebuild:
+  initial ebuild. finally a good chinese font :)
+
