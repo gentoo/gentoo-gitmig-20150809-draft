@@ -1,6 +1,10 @@
 # ChangeLog for net-www/lynx
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.24 2004/01/19 13:14:30 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.25 2004/02/07 19:48:56 iggy Exp $
+
+  07 Feb 2004; Brian Jackson <iggy@gentoo.org> lynx-2.8.4.1c.ebuild,
+  lynx-2.8.4.1d-r1.ebuild, lynx-2.8.4.1d.ebuild:
+  marking x86
 
   19 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> lynx-2.8.4.1d-r1.ebuild:
   Various updates, removed an old version so that I could remove an old entry
