@@ -6,8 +6,12 @@
 		games programming.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie dev-games enthält Bibliotheken und Werkzeuge für die 
+		Die Kategorie dev-games enthÃ¤lt Bibliotheken und Werkzeuge fÃ¼r die 
 		Spieleprogrammierung.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría dev-games contiene librerias y utilidades referentes 
+		a la programación de juegos.
 	</longdescription>
 </catmetadata>
 
