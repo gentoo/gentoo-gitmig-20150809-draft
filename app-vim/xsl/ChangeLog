@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/xsl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/xsl/ChangeLog,v 1.1 2003/08/12 02:10:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/xsl/ChangeLog,v 1.2 2003/08/19 02:13:27 agriffis Exp $
+
+  18 Aug 2003; Aron Griffis <agriffis@gentoo.org> xsl-0.3.11.ebuild:
+  Mark stable on alpha and x86
 
 *xsl-0.3.11 (11 Aug 2003)
 
