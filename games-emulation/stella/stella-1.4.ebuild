@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-1.4.ebuild,v 1.1 2004/07/20 06:32:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-1.4.ebuild,v 1.2 2005/02/24 02:21:05 mr_bones_ Exp $
 
 inherit games
 
