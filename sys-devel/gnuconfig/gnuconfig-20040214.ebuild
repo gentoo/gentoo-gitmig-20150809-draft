@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-20040214.ebuild,v 1.4 2004/04/24 08:16:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-20040214.ebuild,v 1.5 2004/04/25 04:28:11 kumba Exp $
 
 DESCRIPTION="Updated config.sub and config.guess file from GNU"
 HOMEPAGE="ftp://ftp.gnu.org/pub/gnu/config"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ppc64 ~sparc ~mips ~alpha arm ~hppa amd64 ~ia64"
+KEYWORDS="x86 ~ppc ppc64 sparc mips ~alpha arm ~hppa amd64 ~ia64"
 IUSE=""
 
 src_install() {
