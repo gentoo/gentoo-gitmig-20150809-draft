@@ -1,13 +1,19 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.4 2002/08/31 18:54:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.5 2002/09/16 20:24:30 prez Exp $
+
+*vmware-workstation-3.2.0.2230 (2002/9/16)
+
+  16 Sep 2002; Preston A. Elder <prez@gentoo.org> :
+
+  Added VMware 3.2.0 (2230), a direct copy of 3.1.1 (1790).
+
+*vmware-workstation-3.1.1.1790 (2002/4/13)
 
   31 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
   Fix part of bug #5359: remove deprecated KDE2DIR, KDE3DIR variables and
   install into /usr
-
-*vmware-workstation-3.1.1.1790 (2002/4/13)
 
   06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added -ppc -sparc -sparc64 to keywords
