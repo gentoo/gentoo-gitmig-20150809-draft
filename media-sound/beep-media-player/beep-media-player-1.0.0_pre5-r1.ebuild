@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-1.0.0_pre5.ebuild,v 1.2 2004/02/05 02:57:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-1.0.0_pre5-r1.ebuild,v 1.1 2004/02/06 04:03:12 eradicator Exp $
 
 IUSE="nls esd gnome opengl oggvorbis mikmod"
 
