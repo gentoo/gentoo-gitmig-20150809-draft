@@ -1,0 +1,12 @@
+#!/bin/sh
+# UGLY UGLY UGLY, why oh why is postgres so fussy that it won't work nicely
+# with initscripts? oftpd gets started by root yet can run as ftp user. WHy
+# can't pgsql be that way?
+
+# Set this to whatever you like. Note: if you used pkg_config() from the
+# ebuild this value is what you want
+DATADIR="/var/db/pgsql/data"
+
+
+su postgres -c "/usr/bin/postmaster -D ${DATADIR} \
+	</dev/null >>/var/db/pgsql/data/pgsql.log 2>&1 </dev/null &"

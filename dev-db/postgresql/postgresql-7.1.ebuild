@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1.ebuild,v 1.5 2001/06/01 14:00:14 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1.ebuild,v 1.6 2001/07/24 03:33:22 lamer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -102,5 +102,15 @@ src_install () {
     dodoc src/graphics/*
     mv ${D}/usr/doc/postgresql/html ${D}/usr/share/doc/${PF}
     rm -rf ${D}/usr/doc ${D}/mnt
+    exeinto /usr/bin
+    doexe ${FILESDIR}/postmaster-wrapper
+    exeinto /etc/rc.d/init.d/
+    doexe ${FILESDIR}/pgsql
 }
 
+
+pkg_config() {
+	mkdir -p /var/db/pgsql/data
+	chown -R postgres /var/db/pgsql/data
+	su - postgres -c "/usr/bin/initdb -D /var/db/pgsql/data"
+}

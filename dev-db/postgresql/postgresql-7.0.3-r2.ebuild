@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.0.3-r2.ebuild,v 1.1 2001/01/30 14:26:55 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.0.3-r2.ebuild,v 1.2 2001/07/24 03:33:22 lamer Exp $
 
 #P=
 A=${P}.tar.gz
@@ -46,5 +46,15 @@ src_install () {
     dodoc FAQ* KNOWN_BUGS MISSING_FEATURES README*
     dodoc TODO* internals.ps bug.template
     dodoc *.tar.gz
+	 exeinto /usr/bin
+    doexe ${FILESDIR}/postmaster-wrapper
+    exeinto /etc/rc.d/init.d/
+    doexe ${FILESDIR}/pgsql
 }
 
+
+pkg_config() {
+   mkdir -p /var/db/pgsql/data
+   chown -R postgres /var/db/pgsql/data
+   su - postgres -c "/usr/bin/initdb -D /var/db/pgsql/data"
+}

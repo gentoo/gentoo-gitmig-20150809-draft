@@ -1,0 +1,33 @@
+#!/bin/sh
+#RCUPDATE:2 3 4:75:This line is required for script management
+
+. /etc/rc.d/config/functions
+. /etc/rc.d/config/basic
+
+SERVICE="pgsql"
+opts="start stop restart"
+EXE0=/usr/bin/postmaster-wrapper
+EXE1=/usr/bin/postmaster
+
+
+start() {
+
+		ebegin "Starting $SERVICE"
+     		start-stop-daemon --start --quiet --exec ${EXE0} 
+		eend $? "Started $SERVICE." "Error starting $SERVICE."
+}
+
+stop() {
+
+		ebegin "Stopping $SERVICE"
+		#pg_ctl stop 2>&1 </dev/null
+		start-stop-daemon --stop --quiet --exec ${EXE1}
+		eend $? "Stopped $SERVICE." "Error stopping $SERVICE."
+}
+
+restart() {
+		stop
+		start
+}
+
+doservice ${@}
