@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/ignorance
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ignorance/ChangeLog,v 1.1 2005/04/03 21:14:07 anarchy Exp $
+
+*ignorance-1.1.3_beta1 (03 Apr 2005)
+
+  03 Apr 2005; Jory A. Pratt <anarch@gentoo.org> +metadata.xml,
+  +ignorance-1.1.3_beta1.ebuild:
+  Initial port.  Ebuild contributed by Jory A Pratt <anarchy@gentoo.org>.
+
