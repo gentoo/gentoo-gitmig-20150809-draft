@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/set-scalar-1.17.ebuild,v 1.3 2004/02/27 15:51:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/set-scalar-1.17.ebuild,v 1.4 2004/04/15 18:01:55 randy Exp $
 
 inherit perl-module
 MY_P=Set-Scalar-${PV}
@@ -13,7 +13,7 @@ HOMEPAGE="http://search.cpan.org/author/JHI/Set-Scalar-1.17/"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha s390"
 
 DEPEND="${DEPEND}"
 RDEPEND="${DEPEND}"
