@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.10.38.ebuild,v 1.4 2001/08/22 02:25:13 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.10.38.ebuild,v 1.5 2001/11/24 18:40:50 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU locale utilities"
-SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/gettext/${A}
-	 ftp://prep.ai.mit.edu/gnu/gettext/${A}"
+SRC_URI="ftp://prep.ai.mit.edu/gnu/gettext/${A}"
 HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
 
 if [ -z "`use build`" ] ; then

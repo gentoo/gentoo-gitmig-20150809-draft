@@ -2,11 +2,10 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r5.ebuild,v 1.4 2001/09/29 15:41:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r5.ebuild,v 1.5 2001/11/24 18:40:50 drobbins Exp $
 
 TV=4.0
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
-	ftp://gatekeeper.dec.com/pub/GNU/texinfo/texinfo-${TV}.tar.gz
 	ftp://ftp.gnu.org/pub/gnu/texinfo/texinfo-${TV}.tar.gz"
 
 S=${WORKDIR}/${P}

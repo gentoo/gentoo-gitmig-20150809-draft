@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4-r3.ebuild,v 1.2 2001/11/10 12:45:09 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4-r3.ebuild,v 1.3 2001/11/24 18:40:50 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Guile is an interpreter for Scheme"
-SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/guile/${P}.tar.gz
-	 ftp://prep.ai.mit.edu/gnu/guile/${P}.tar.gz"
+SRC_URI="ftp://prep.ai.mit.edu/gnu/guile/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/guile/"
 
 DEPEND="virtual/glibc

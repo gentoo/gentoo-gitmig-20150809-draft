@@ -2,13 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
 #        Chad Huneycutt <chad.huneycutt@acm.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r3.ebuild,v 1.3 2001/08/12 18:32:42 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r3.ebuild,v 1.4 2001/11/24 18:40:50 drobbins Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU database libraries included for compatibility with Perl"
-SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/gdbm/${A}
-	 ftp://prep.ai.mit.edu/gnu/gdbm/${A}"
+SRC_URI="ftp://prep.ai.mit.edu/gnu/gdbm/${P}.tar.gz"
 
 HOMEPAGE="http://www.gnu.org/software/gdbm/gdbm.html"
 

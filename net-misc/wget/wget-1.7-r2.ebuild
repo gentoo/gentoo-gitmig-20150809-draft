@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.7-r2.ebuild,v 1.1 2001/10/12 00:35:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.7-r2.ebuild,v 1.2 2001/11/24 18:40:50 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Network utility to retrieve files from the WWW"
-SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/wget/${P}.tar.gz
-	 ftp://prep.ai.mit.edu/gnu/wget/${P}.tar.gz
+SRC_URI="ftp://prep.ai.mit.edu/gnu/wget/${P}.tar.gz
          http://www.biscom.net/~cade/away/wget-new-percentage/wget-new-percentage-1.7-20010606.diff"
 HOMEPAGE="http://www.cg.tuwien.ac.at/~prikryl/wget.html"
 

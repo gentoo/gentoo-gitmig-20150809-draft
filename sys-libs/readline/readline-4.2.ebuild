@@ -1,13 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.2.ebuild,v 1.1 2001/04/12 09:44:09 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.2.ebuild,v 1.2 2001/11/24 18:40:50 drobbins Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Another cute console display library"
-SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/readline/${A}
-	 ftp://ftp.gnu.org/gnu/readline/${A}"
+SRC_URI="ftp://ftp.gnu.org/gnu/readline/${P}.tar.gz"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r2"
