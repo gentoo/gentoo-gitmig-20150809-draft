@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.76.ebuild,v 1.6 2004/04/06 19:22:07 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.76.ebuild,v 1.7 2004/04/07 20:11:59 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -48,6 +48,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	cp ${FILESDIR}/gevolution.h plugins/gevolution/
+	epatch ${FILESDIR}/gaim-0.76-spellchk.diff
 }
 
 src_compile() {

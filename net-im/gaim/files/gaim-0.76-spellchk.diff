@@ -1,0 +1,19 @@
+===================================================================
+RCS file: /cvsroot/gaim/gaim/plugins/spellchk.c,v
+retrieving revision 1.54
+retrieving revision 1.55
+diff -u -r1.54 -r1.55
+--- gaim/gaim/plugins/spellchk.c	2003/11/25 07:16:09	1.54
++++ gaim/gaim/plugins/spellchk.c	2004/04/04 22:27:31	1.55
+@@ -386,9 +386,9 @@
+ 
+ 	load_conf();
+ 
+-	gaim_signal_connect(conv_handle, "displaying-im-msg",
++	gaim_signal_connect(conv_handle, "writing-im-msg",
+ 						plugin, GAIM_CALLBACK(substitute_words), NULL);
+-	gaim_signal_connect(conv_handle, "displaying-chat-msg",
++	gaim_signal_connect(conv_handle, "writing-chat-msg",
+ 						plugin, GAIM_CALLBACK(substitute_words), NULL);
+ 
+ 	return TRUE;
