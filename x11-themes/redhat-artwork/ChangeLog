@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/redhat-artwork 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.22 2003/09/15 13:45:28 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.23 2003/09/30 22:32:22 todd Exp $
+
+  30 Sep 2003; Todd Sunderlin <todd@gentoo.org> redhat-artwork-0.81.ebuild:
+  added ~sparc keyword
 
 *redhat-artwork-0.81 (15 Sep 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.81.ebuild,v 1.1 2003/09/15 13:45:53 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.81.ebuild,v 1.2 2003/09/30 22:32:22 todd Exp $
 
 RH_EXTRAVERSION="1"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.redhat.com"
 SRC_URI="http://ftp.redhat.com/pub/redhat/linux/rawhide/SRPMS/SRPMS/${P}-${RH_EXTRAVERSION}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 IUSE="kde gtk xmms gtk2"
 
 # Needed to build...
