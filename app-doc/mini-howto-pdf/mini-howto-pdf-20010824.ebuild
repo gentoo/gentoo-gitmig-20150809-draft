@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/mini-howto-pdf/mini-howto-pdf-20010824.ebuild,v 1.6 2002/10/04 04:03:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/mini-howto-pdf/mini-howto-pdf-20010824.ebuild,v 1.7 2002/10/17 13:09:06 vapier Exp $
 
 MY_P="Linux-mini-pdf-HOWTOs-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -9,13 +9,13 @@ DESCRIPTION="The LDP mini-howtos, pdf format."
 
 SRC_URI="http://www.ibiblio.org/pub/Linux/distributions/gentoo/gentoo-sources/${MY_P}.tar.gz"
 
-HOMEPAGE="http://www.linuxdoc.org"
+HOMEPAGE="http://www.linuxdoc.org/"
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2 LDP"
 KEYWORDS="x86 ppc sparc sparc64"
 
-src_install () {
+src_install() {
 	
 	dodir /usr/share/doc/howto/mini
 	dodir /usr/share/doc/howto/mini/pdf

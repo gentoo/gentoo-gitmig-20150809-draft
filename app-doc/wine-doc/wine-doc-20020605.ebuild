@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/wine-doc/wine-doc-20020605.ebuild,v 1.3 2002/07/29 17:42:33 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/wine-doc/wine-doc-20020605.ebuild,v 1.4 2002/10/17 13:09:06 vapier Exp $
 
 S=${WORKDIR}/wine-$PV
 DESCRIPTION="Wine is a free implementation of Windows on Unix."
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="x86"
 LICENSE="LGPL-2.1"
 
-DEPEND=""
+DEPEND="sys-apps/gzip sys-apps/tar"
 
 src_compile() {
 	
