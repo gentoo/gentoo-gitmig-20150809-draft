@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/octave-forge
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/ChangeLog,v 1.1 2003/06/09 21:53:15 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/ChangeLog,v 1.2 2003/06/10 18:18:08 msterret Exp $
+
+  10 Jun 2003; <msterret@gentoo.org> octave-forge-2003.02.22.ebuild:
+  DEPEND on sed >= 4
 
 *octave-forge-2003.02.22.ebuild (09 Jun 2003)
 

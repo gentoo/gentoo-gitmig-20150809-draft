@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2003.02.22.ebuild,v 1.1 2003/06/09 21:53:15 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2003.02.22.ebuild,v 1.2 2003/06/10 18:18:08 msterret Exp $
 
 DESCRIPTION="A collection of custom scripts, functions and extensions for GNU Octave"
 HOMEPAGE="http://octave.sourceforge.net/"
@@ -13,6 +13,7 @@ SLOT="0"
 IUSE="ginac qhull"
 
 DEPEND=">=app-sci/octave-2.1.44
+		>=sys-apps/sed-4
 		sys-libs/libtermcap-compat
 		ginac? ( app-sci/ginac )
 		qhull? ( >=media-libs/qhull-3.1-r1 )"
