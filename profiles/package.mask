@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3196 2004/09/28 16:13:45 twp Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3197 2004/09/28 19:13:25 rac Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,15 @@
 ##
 ##   End example
 ##
+
+# Robert Coie <rac@gentoo.org> (28 Sep 2004)
+# FEATURES=maketest is still dodgy, and even when I got the whole
+# shebang to actually build and install, it was segfaulting on me, so
+# there are some deep-seated issues here.  The Mason ebuild will go
+# in, but without the apache2 USE.  Also must decide whether or not to
+# depend on ApacheHandler2.
+>=dev-perl/mod_perl-1.99.16
+dev-perl/libapreq2
 
 # Tom Payne <twp@gentoo.org> (28 Sep 2004)
 # masked pending resolution of bug #65582
