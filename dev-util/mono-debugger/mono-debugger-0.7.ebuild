@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-0.7.ebuild,v 1.1 2004/05/05 16:29:13 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-0.7.ebuild,v 1.2 2004/05/06 22:42:23 latexer Exp $
 
 inherit mono libtool eutils
 
@@ -11,7 +11,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=">=dev-dotnet/mono-0.91"
+DEPEND=">=dev-dotnet/mono-0.91
+		sys-libs/libtermcap-compat"
 
 src_unpack() {
 	unpack ${A}
