@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pythoncard
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythoncard/ChangeLog,v 1.4 2003/09/02 23:28:15 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythoncard/ChangeLog,v 1.5 2003/10/03 03:51:17 pythonhead Exp $
+
+*pythoncard-0.7.2 (02 Oct 2003)
+
+  02 Oct 2003; Rob Cakebread <pythonhead@gentoo.org> pythoncard-0.7.2.ebuild:
+  Version bump (#29868) thanks Stephen Boulet <stephen@theboulets.net>
 
 *pythoncard-0.7.1 (03 Sep 2003)
 
