@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/liquid
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/liquid/ChangeLog,v 1.4 2005/02/07 19:29:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/liquid/ChangeLog,v 1.5 2005/03/21 20:25:21 luckyduck Exp $
+
+  21 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> liquid-0.9.7.ebuild:
+  stable on amd64
 
   07 Feb 2005; Simon Stelling <blubb@gentoo.org> liquid-0.9.7.ebuild:
   added ~amd64
