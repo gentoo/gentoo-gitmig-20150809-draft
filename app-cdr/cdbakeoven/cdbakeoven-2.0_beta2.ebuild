@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/cdbakeoven-2.0_beta2.ebuild,v 1.12 2004/02/25 16:04:11 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/cdbakeoven-2.0_beta2.ebuild,v 1.13 2004/03/30 00:11:28 mr_bones_ Exp $
 
-inherit kde
-
+inherit eutils kde
 need-kde 3
 
 IUSE=""

@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdbakeoven
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/ChangeLog,v 1.17 2004/02/25 16:04:11 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/ChangeLog,v 1.18 2004/03/30 00:11:28 mr_bones_ Exp $
+
+  29 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  cdbakeoven-1.8.9-r1.ebuild, cdbakeoven-1.8.9.ebuild,
+  cdbakeoven-2.0_beta2.ebuild:
+  inherit eutils for epatch
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org>
   cdbakeoven-2.0_beta2.ebuild:
