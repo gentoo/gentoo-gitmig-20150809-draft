@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.6.ebuild,v 1.10 2004/11/11 00:27:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.6.ebuild,v 1.11 2005/03/02 04:03:14 mr_bones_ Exp $
 
-inherit games flag-o-matic
+inherit flag-o-matic games
 
 DESCRIPTION="Port from an old amiga game"
 HOMEPAGE="http://www.methane.fsnet.co.uk/"
@@ -10,28 +10,29 @@ SRC_URI="http://www.methane.fsnet.co.uk/${PN}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~amd64 ppc"
+KEYWORDS="~amd64 x86"
 IUSE="mikmod"
 
-RDEPEND="=dev-games/clanlib-0.6.5*
+DEPEND="=dev-games/clanlib-0.6.5*
 	mikmod? ( media-libs/libmikmod )"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/source/linux
+	cd "${S}/source/linux"
 	if ! use mikmod ; then
 		sed -i \
 			-e 's/^\(MIKMOD_LIBS\)/#\1/g' \
 			-e 's/^\(METHANE_FLAGS\)/#\1/g' makefile \
-			|| die "mikmod sed failed"
+			|| die "sed failed"
 	fi
-	sed -i "s:-lclanCore:-lclanCore -L${ROOT}/usr/lib/clanlib-0.6.5:" makefile
+	sed -i \
+		-e "s:-lclanCore:-lclanCore -L${ROOT}/usr/lib/clanlib-0.6.5:" \
+		makefile \
+		|| die "sed failed"
 }
 
 src_compile() {
-	append-flags -I${ROOT}/usr/include/clanlib-0.6.5
+	append-flags -I"${ROOT}/usr/include/clanlib-0.6.5"
 	cd source/linux
 	emake -j1 || die "emake failed"
 }
