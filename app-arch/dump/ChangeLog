@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/dump
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.37 2005/02/05 19:15:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.38 2005/03/28 10:30:31 mholzer Exp $
+
+*dump-0.4.39 (28 Mar 2005)
+
+  28 Mar 2005; Martin Holzer <mholzer@gentoo.org> +dump-0.4.39.ebuild:
+  Version bumped. Cloeses 79761
 
   05 Feb 2005; <solar@gentoo.org> dump-0.4.37.ebuild:
   - q/a fix. os-headers are not needed in RDEPEND
