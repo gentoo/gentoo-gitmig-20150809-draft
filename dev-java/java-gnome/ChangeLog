@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.5 2003/02/12 05:52:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.6 2003/05/03 19:51:59 tberman Exp $
+
+  03 May 2003; Todd Berman <tberman@gentoo.org> java-gnome-0.7.1.ebuild:
+  Fixed up ebuild, closed bug #14119.
 
 *java-gnome-0.7.1 (1 Feb 2002)
 
