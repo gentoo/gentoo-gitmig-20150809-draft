@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde/horde-2.2.4.ebuild,v 1.2 2003/09/11 19:02:01 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde/horde-2.2.4.ebuild,v 1.3 2003/10/01 21:24:19 mholzer Exp $
 
 S=${WORKDIR}/${P}
 
@@ -40,6 +40,8 @@ pkg_setup() {
 }
 
 src_install () {
+	dodoc COPYING README docs/*
+	rm -rf COPYING README docs
 	dodir ${HTTPD_ROOT}/horde
 	cp -r . ${D}/${HTTPD_ROOT}/horde
 #	cp ${FILESDIR}/${PV}/vfs.sql ${D}/${HTTPD_ROOT}/horde/scripts/db
