@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.21.ebuild,v 1.7 2004/07/02 04:56:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.21.ebuild,v 1.8 2004/07/05 08:21:12 solar Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~mips"
 
 DEPEND="sys-devel/gcc"
-PROVIDE="virtual/libc virtual/libc"
+PROVIDE="virtual/libc"
 
 S=${WORKDIR}/${MY_P}
 
