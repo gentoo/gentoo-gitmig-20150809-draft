@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8063034ef76312dd5ca8d1d4a42ab83a libmad-0.15.0b-r1.ebuild 1343
-MD5 0d4ea0278e045e1e90a74b778ea4566c libmad-0.15.1b.ebuild 1479
-MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
 MD5 a16d530f2c8e1ce810cc0518f4251aff ChangeLog 2828
-MD5 905a86a6acbc90a60d520e923afcdc07 files/digest-libmad-0.15.0b-r1 138
+MD5 8063034ef76312dd5ca8d1d4a42ab83a libmad-0.15.0b-r1.ebuild 1343
+MD5 6da0804ab676cb053cd265dfd02ce05c libmad-0.15.1b.ebuild 1472
+MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
 MD5 6f5b0c06890c1b20c5867e933f2defcc files/digest-libmad-0.15.1b 138
+MD5 905a86a6acbc90a60d520e923afcdc07 files/digest-libmad-0.15.0b-r1 138
 MD5 89806934195402446d21d1a83f523b11 files/mad.pc 211
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBZLDjArHZZzCEUG0RAjhfAJ0Sb4bjSGudgzxKFhnq0gqn867IpACeNFa6
-tXzsn64BtZuzZcb5BzVppb0=
-=6kSF
------END PGP SIGNATURE-----

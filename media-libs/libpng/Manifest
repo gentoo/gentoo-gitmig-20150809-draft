@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 d493b8003d48a648aeec86ea8dafff26 ChangeLog 9384
-MD5 6fdcb6b30c180ecc12098472ccc81906 libpng-1.2.5-r8.ebuild 1899
+MD5 d8aabd6d662e8c974118e40db9cbed25 libpng-1.2.5-r8.ebuild 1896
 MD5 b0fcb7ac73ec47e7c7fab134b9d8d6a3 libpng-1.2.7.ebuild 1847
 MD5 7443cfcd027ad293e56ec7bed76ee21c files/macos.patch 589
 MD5 82c75412d0c6a4a86704a7a4545ee502 files/digest-libpng-1.2.5-r8 65
 MD5 d1cb64b64c0652863c89a3eb1f7c5f66 files/libpng-1.2.5-security.diff 10114
-MD5 b664d38f024a7b21f299727e4aa76d2e files/libpng-1.2.5-gentoo.diff 3470
-MD5 3338fff0166374e14ae138e6a1f4cd21 files/1.2.7-gentoo.diff 464
 MD5 cf98652d430c500b40470ffbcc2636e1 files/digest-libpng-1.2.7 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBb0XOHTu7gpaalycRAqk3AKCUbObopQUtTvFEIHgLcosjGF/WYgCfVroY
-PoAPn8oVQ7gT5nicQQ+kmEo=
-=QagK
------END PGP SIGNATURE-----
+MD5 3338fff0166374e14ae138e6a1f4cd21 files/1.2.7-gentoo.diff 464
+MD5 b664d38f024a7b21f299727e4aa76d2e files/libpng-1.2.5-gentoo.diff 3470
