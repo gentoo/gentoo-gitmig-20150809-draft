@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.0.2.ebuild,v 1.11 2004/08/21 16:05:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.0.2.ebuild,v 1.12 2004/08/22 19:43:50 lisa Exp $
 
 IUSE="nls"
 DESCRIPTION="A versatile Integrated Development Environment (IDE) for C and C++."
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc sparc"
 
 RDEPEND="=gnome-base/libglade-0*
-	=gnome-base/orbit-0*
+	>=gnome-base/ORBit-0.5.0
 	>=gnome-base/gnome-print-0.35
 	=gnome-base/gnome-vfs-1.0*
 	>=gnome-base/bonobo-1.0

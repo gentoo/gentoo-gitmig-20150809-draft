@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.2-r1.ebuild,v 1.3 2004/08/22 19:43:50 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.0-r1.ebuild,v 1.4 2004/08/22 19:43:50 lisa Exp $
 
 inherit eutils gnome2
 
@@ -12,7 +12,7 @@ IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 # Future versions will work with 64-bit archs, but 1.2.0 doesn't
-KEYWORDS="x86 ~ppc sparc ~amd64"
+KEYWORDS="x86 ~ppc"
 
 RDEPEND=">=dev-libs/glib-2.0.6
 	>=x11-libs/gtk+-2.0.8
@@ -42,10 +42,9 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-#lets see if this plays nice this version
-#	epatch ${FILESDIR}/${P}_xim.patch
-
-	epatch ${FILESDIR}/${P}-64bit.patch
+	epatch ${FILESDIR}/${P}_xim.patch
+	cd ${S}/global-tags
+	epatch ${FILESDIR}/anjuta-1.2.0.globaltagfix.diff.gz
 }
 
 pkg_postinst() {
