@@ -1,6 +1,16 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.9 2003/07/02 19:09:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.10 2003/07/06 09:14:49 kumba Exp $
+
+
+*bash-2.05b-r5 (01 May 2003)
+
+  06 Jul 2003; Joshua Kinard <kumba@gentoo.org> bash-2.05b-r5.ebuild:
+  Changed ~mips to mips in KEYWORDS
+  Cleaned up Changelog
+
+  02 Jul 2003; Guy Martin <gmsoft@gentoo.org> bash-2.05b-r5.ebuild :
+  Marked stable on hppa.
 
   01 Jul 2003; Todd Sunderlin <todd@gentoo.org> bash-2.05b-r5.ebuild:
   set stable on sparc
@@ -8,11 +18,6 @@
   15 Jun 2003; Seemant Kulleen <seemant@gentoo.org> bash-2.05b-r5.ebuild:
   added a symlink bashref.info.gz->bash.info.gz -- closes bug #22168 by Chris
   Kelso <devkelso@cox.net>
-
-*bash-2.05b-r5 (01 May 2003)
-
-  02 Jul 2003; Guy Martin <gmsoft@gentoo.org> bash-2.05b-r5.ebuild :
-  Marked stable on hppa.
 
   01 May 2003; Tavis Ormandy <taviso@gentoo.org> bash-2.05b-r5.ebuild,
   files/bash-2.05b-empty-herestring.patch:
