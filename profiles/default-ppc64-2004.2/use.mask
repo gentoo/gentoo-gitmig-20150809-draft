@@ -19,9 +19,6 @@ ruby
 svga
 sse
 scanner 
-tcltk
-tcl
-vim-with-x
 firebird
 
 # Chris PeBenito <pebenito@gentoo.org>
