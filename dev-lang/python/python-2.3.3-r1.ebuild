@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3-r1.ebuild,v 1.11 2004/06/07 03:26:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3-r1.ebuild,v 1.12 2004/06/08 19:55:49 vapier Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage 
@@ -29,7 +29,7 @@ KEYWORDS="x86 ~ppc ~sparc arm hppa amd64 s390 ~alpha ~ia64 mips"
 DEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.3
 	!build? (
-		!arm? ( X? ( tcltk? ( >=dev-lang/tk-8.0 ) ) )
+		X? ( tcltk? ( >=dev-lang/tk-8.0 ) )
 		doc? ( =dev-python/python-docs-${PV}* )
 		ncurses? ( >=sys-libs/ncurses-5.2 readline? ( >=sys-libs/readline-4.1 ) )
 		berkdb? ( >=sys-libs/db-3.1 )
