@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/mindi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.7 2003/09/02 10:12:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.8 2003/09/17 03:01:02 seemant Exp $
+
+  16 Sep 2003; Seemant Kulleen <seemant@gentoo.org> mindi-0.67.ebuild,
+  mindi-0.81.ebuild, mindi-0.85.ebuild, mindi-0.86.ebuild:
+  changed depends from app-admin/dosfstools to sys-fs/dosfstools, and cleared
+  out some crusty ebuilds
 
 *mindi-0.86 (02 Sep 2003)
 
