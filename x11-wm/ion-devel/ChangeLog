@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion-devel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ChangeLog,v 1.18 2003/09/29 16:07:35 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ChangeLog,v 1.19 2003/11/05 17:21:59 twp Exp $
+
+  05 Nov 2003; Tom Payne <twp@gentoo.org> ion-devel-20030814-r4.ebuild :
+  Added stacking patch.
 
   29 Sep 2003; Tom Payne <twp@gentoo.org> ion-devel-20030131.ebuild, ion-devel-20030327.ebuild, ion-devel-20030814.ebuild, ion-devel-20030814-r1.ebuild, ion-devel-20030814-r2.ebuild :
   Removed old versions.
