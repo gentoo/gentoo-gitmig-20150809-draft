@@ -6,7 +6,7 @@ else
 	ver=x86-1.4
 fi
 
-for x in `cat /usr/portage/profiles/default-${ver}/packages.build`
+for x in `cat /usr/portage/profiles/default-${ver}/packages.build | grep -v '^#'`
 do
 	myp=$(grep -E "${x}(-[^[:space:]]*)?[[:space:]]*$" /usr/portage/profiles/default-${ver}/packages | grep -v '^#' | sed -e 's:^\*::' | cat )
 	if [ "$myp" = "" ]
