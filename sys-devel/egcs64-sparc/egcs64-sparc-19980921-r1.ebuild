@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/egcs64-sparc/egcs64-sparc-19980921-r1.ebuild,v 1.11 2002/12/09 04:37:27 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/egcs64-sparc/egcs64-sparc-19980921-r1.ebuild,v 1.12 2002/12/14 02:51:24 jmorgan Exp $
 
 EGCSDATE=`echo $P| sed -e 's/egcs64-sparc-\([0-9]*\).*/\1/'`
 EGCSVER=2.92.11
@@ -17,7 +17,7 @@ KEYWORDS="sparc -x86 -ppc"
 DEPEND="sys-devel/autoconf"
 
 MYPREFIX=/usr
-MYCHOST=-unknown-linux-gnu
+MYCHOST=sparc-unknown-linux-gnu
 
 # Reset CFLAGS, gcc doesn't want that stuff
 CFLAGS=""
