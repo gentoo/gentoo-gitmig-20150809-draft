@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.2.0_beta2.ebuild,v 1.3 2003/12/26 01:57:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.2.0_beta2.ebuild,v 1.4 2003/12/26 12:25:40 caleb Exp $
 inherit kde-dist
 
 IUSE="pam"
@@ -8,8 +8,8 @@ DESCRIPTION="KDE administration tools (user manager, etc.)"
 KEYWORDS="~x86"
 
 DEPEND="~kde-base/kdebase-${PV}
-	pam? ( >=sys-libs/pam-0.72 )
-	sys-apps/lm-sensors"
+	pam? ( >=sys-libs/pam-0.72 )"
+#	sys-apps/lm-sensors"
 
 myconf="$myconf --without-rpm"
 DO_NOT_COMPILE="$DO_NOT_COMPILE kpackage ksysv"
