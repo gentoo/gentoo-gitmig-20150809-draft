@@ -1,0 +1,9 @@
+# ChangeLog for dev-lisp/cl-anaphora
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-anaphora/ChangeLog,v 1.1 2004/03/03 22:36:01 mkennedy Exp $
+
+*cl-anaphora-0.9.1 (03 Mar 2004)
+
+  03 Mar 2004; <mkennedy@gentoo.org> cl-anaphora-0.9.1.ebuild, metadata.xml:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
