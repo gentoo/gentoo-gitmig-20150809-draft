@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-defsystem3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/ChangeLog,v 1.14 2005/03/05 05:34:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/ChangeLog,v 1.15 2005/03/18 07:56:22 mkennedy Exp $
+
+  18 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-defsystem3-3.3i-r5.ebuild:
+  Keywording for ~amd64
 
   05 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org>
   cl-defsystem3-3.3i-r4.ebuild, cl-defsystem3-3.3i-r5.ebuild:
