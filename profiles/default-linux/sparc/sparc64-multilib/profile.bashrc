@@ -16,9 +16,16 @@ addpredict /usr/lib64/python2.4/
 addpredict /usr/lib64/python2.5/
 addpredict /usr/lib64/python3.0/
 
-if [ -z "${IWANTTOTRASHMYSYSTEM}" ]; then
-	echo "You are using a VERY development profile.  You probably"
-	echo "shouldn't be doing this.  Please see the README in"
-	echo "/usr/portage/profiles/default-linux/sparc/sparc64-multilib/dev"
-	exit 1
+# The version of profile in our 'packages' does not yet set ABI for us nor
+# export the CFLAGS_${ABI} envvars... The multilib-pkg patch does, but this
+# won't be in portage until atleast .52_pre
+if [ -n "${ABI}" ]; then
+	export ABI
+elif [ -n "${DEFAULT_ABI}" ]; then
+	export ABI="${DEFAULT_ABI}"
+else
+	export ABI="sparc32"
 fi
+
+export CFLAGS_sparc32
+export CFLAGS_sparc64

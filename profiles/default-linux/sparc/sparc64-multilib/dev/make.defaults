@@ -1,34 +1,5 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.16 2005/01/12 23:08:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.17 2005/01/23 11:30:47 eradicator Exp $
 
-FEATURES="sandbox ccache autoconfig multilib-pkg multilib-strict"
-
-# Catalyst stage/grp USE
-GRP_STAGE23_USE="berkdb gpm ipv6 -java multislot multilib ncurses nls -nptl pam perl python readline ssl tcpd zlib"
-
-# Sane, minimal USE settings
-USE="${GRP_STAGE23_USE} alsa bitmap-fonts crypt cups font-server fortran f77 fbcon gif jpeg nls opengl png tiff truetype truetype-fonts type1-fonts usb xpm xrandr xv"
-
-# Not all of this is implemented in portage/toolchain, yet. See 
-# http://bugs.gentoo.org/show_bug.cgi?id=75420
-
-# MULTILIB_ABIS lists all the ABIS you want to build for when
-# you emerge a package.  The libs that get installed will be for
-# all of these ABIs, but the bins will be for ${DEFAULT_ABI}.
-
-MULTILIB_ABIS="sparc32 sparc64"
-DEFAULT_ABI="sparc32"
-
-ARCH_WRAPPER_sparc64="sparc64"
-ASFLAGS_sparc64="-64 -no-undeclared-regs"
-CFLAGS_sparc64="-m64"
-LIBDIR_sparc64="lib64"
-
-ARCH_WRAPPER_sparc32="sparc32"
-ASFLAGS_sparc32="-32"
-CFLAGS_sparc32="-m32"
-LIBDIR_sparc32="lib"
-
-MULTILIB_STRICT_DIRS="/lib /usr/lib /usr/kde/*/lib /usr/qt/*/lib /usr/X11R6/lib"
-MULTILIB_STRICT_DENY="64-bit.*shared object"
+DEFAULT_ABI="sparc64"
