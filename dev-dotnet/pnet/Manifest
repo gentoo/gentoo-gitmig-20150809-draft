@@ -1,5 +1,4 @@
-MD5 7ccbd60ca5312cdde8d78761f04660d0 pnet-0.5.12.ebuild 1079
-MD5 75967ef91d6948732d0411ace1c9c858 ChangeLog 1907
+MD5 7acb77254fc6beaa9fbe6dbd1a0246d2 pnet-0.5.12.ebuild 1078
+MD5 8ca66002e4b680bef62c226d033f0af4 ChangeLog 1906
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 MD5 f5117bd09af5c6f31ae9fa7c09104a92 files/digest-pnet-0.5.12 64
-MD5 44ade6d192850bb87b1da250eddd2cf7 files/md5hash.patch 319
