@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/help2man-1.33.1.ebuild,v 1.1 2004/02/08 13:39:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/help2man-1.33.1.ebuild,v 1.2 2004/03/02 16:37:02 iggy Exp $
 
 MY_P="${P/-/_}"
 DESCRIPTION="GNU utility to convert program --help output to a man page"
 HOMEPAGE="http://www.gnu.org/software/help2man"
 SRC_URI="http://ftp.gnu.org/gnu/help2man/${MY_P}.tar.gz"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha s390"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="nls"

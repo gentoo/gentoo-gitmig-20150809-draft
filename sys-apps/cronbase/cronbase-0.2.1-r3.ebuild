@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/cronbase-0.2.1-r3.ebuild,v 1.4 2004/02/23 00:39:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/cronbase-0.2.1-r3.ebuild,v 1.5 2004/03/02 16:35:45 iggy Exp $
 
 DESCRIPTION="The is the base for all cron ebuilds."
 HOMEPAGE="http://www.gentoo.org/"
 
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips hppa ~ia64 ppc64"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips hppa ~ia64 ppc64 s390"
 SLOT="0"
 LICENSE="GPL-2"
 
