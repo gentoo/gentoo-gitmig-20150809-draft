@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/chpax
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.28 2004/10/04 03:08:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.29 2004/10/13 13:56:24 gmsoft Exp $
+
+  13 Oct 2004; Guy Martin <gmsoft@gentoo.org> chpax-0.7.ebuild:
+  Stable on hppa.
 
   03 Oct 2004; Jason Wever <weeve@gentoo.org> chpax-0.7.ebuild:
   Stable on sparc.
