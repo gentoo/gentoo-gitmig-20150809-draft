@@ -1,8 +1,8 @@
-MD5 0dde3fbffcf2804e0b6023e8d12b9d0a ChangeLog 3363
+MD5 918bb7883501321dfec7749bd393dbee ChangeLog 3562
 MD5 c43be6aa3ea10a656877920dfbb6f0ee xv-3.10a-r2.ebuild 1130
 MD5 1cfce42e36c27b0384ad8dff37b2ec69 xv-3.10a-r3.ebuild 1304
 MD5 29859f2d7d39a27a32928721ca1bbf21 xv-3.10a-r4.ebuild 1423
-MD5 d235904fe88066b3460089dbfb5bc725 xv-3.10a-r5.ebuild 1423
+MD5 c634e19d934b51d62a75694776795cf2 xv-3.10a-r5.ebuild 1423
 MD5 f0dfce1262042f01e76412c96ba62d25 files/digest-xv-3.10a-r2 125
 MD5 f0dfce1262042f01e76412c96ba62d25 files/digest-xv-3.10a-r3 125
 MD5 a533b616d1b8911f97cc37cd89dccd6f files/xv-3.10a-ppc.patch 1202
@@ -12,3 +12,4 @@ MD5 038271e3c5a7a3e94b5d1f5eb63c9f1e files/xv-3.10a-enhanced-Nu.patch 155050
 MD5 4613999032e0b97099ddb2cfefc9f631 files/xv-3.10a-gentoo-Nu.patch 35839
 MD5 14eb913966c7e03b1014219c2620cac5 files/xv-3.10a-r5-gentoo-Nu.patch 27873
 MD5 6d5302abe89d4c1586933d5694b0aab1 files/digest-xv-3.10a-r5 61
+MD5 4b034e22d5bb0502e383afcfeb8ea4b0 files/xv-3.10a-r5-ppc.patch 359

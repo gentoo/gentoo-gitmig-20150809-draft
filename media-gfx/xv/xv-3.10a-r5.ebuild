@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r5.ebuild,v 1.1 2003/08/07 07:16:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r5.ebuild,v 1.2 2003/08/14 14:33:35 usata Exp $
 
 inherit flag-o-matic eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-enhanced-Nu.patch || die
 	epatch ${FILESDIR}/${PF}-gentoo-Nu.patch || die
-	[ `use ppc` ] && epatch ${FILESDIR}/${P}-ppc.patch
+	[ `use ppc` ] && epatch ${FILESDIR}/${PF}-ppc.patch
 }
 
 src_compile() {
@@ -41,7 +41,7 @@ src_compile() {
 src_install() {
 	dodir /usr/bin
 	dodir /usr/share/man/man1
-	
+
 	make \
 		DESTDIR=${D} \
 		BINDIR=${D}/usr/bin \
