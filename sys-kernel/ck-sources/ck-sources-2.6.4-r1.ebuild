@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.4-r1.ebuild,v 1.1 2004/03/14 12:00:58 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.4-r1.ebuild,v 1.2 2004/04/17 19:03:26 aliz Exp $
 
 UNIPATCH_LIST="${DISTDIR}/patch-${KV}.bz2"
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
-
+IUSE=""
 K_NOUSENAME="yes"
 ETYPE="sources"
 inherit kernel-2

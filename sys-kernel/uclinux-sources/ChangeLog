@@ -1,8 +1,9 @@
 # ChangeLog for sys-kernel/uclinux-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.5 2004/04/17 13:43:24 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.6 2004/04/17 19:03:26 aliz Exp $
 
 *uclinux-sources-2.4.24_p0-r2 (17 Apr 2004)
+*uclinux-sources-2.6.5_p0-r1 (17 Apr 2004)
 
   17 Apr 2004; <plasmaroo@gentoo.org>
   +files/uclinux-sources-2.4.24_p0.CAN-2004-0010.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.19.ebuild,v 1.21 2004/04/12 16:36:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.19.ebuild,v 1.22 2004/04/17 19:03:26 aliz Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -10,7 +10,7 @@ OKV=${PVR}
 KV=2.4.19-r7
 S=${WORKDIR}/linux-${KV}
 ETYPE="sources"
-IUSE=""
+IUSE="build"
 
 # What's in this kernel?
 

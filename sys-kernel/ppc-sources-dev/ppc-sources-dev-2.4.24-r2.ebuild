@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.24-r2.ebuild,v 1.2 2004/04/12 16:36:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.24-r2.ebuild,v 1.3 2004/04/17 19:03:26 aliz Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 # Included patches:
@@ -46,10 +46,8 @@ src_unpack() {
 
 	mv linux-${OKV} ${PF}
 	cd ${PF}
-	bzcat ${DISTDIR}/patch-${KV/r2/r1}.patch.bz2 | patch -p1 || die "patch failed"
-	patch -p1 < ${FILESDIR}/${P}.pmac_pmu.patch || \
-		die "Failed to apply pmac_pmu fix"
-
+	epatch ${DISTDIR}/patch-${KV/r2/r1}.patch.bz2
+	epatch ${FILESDIR}/${P}.pmac_pmu.patch
 	epatch ${FILESDIR}/${P}.munmap.patch || die "Failed to apply munmap patch!"
 
 	cd ${WORKDIR}/${PF}
