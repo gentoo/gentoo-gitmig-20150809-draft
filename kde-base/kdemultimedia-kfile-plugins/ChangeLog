@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-kfile-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kfile-plugins/ChangeLog,v 1.3 2005/02/27 20:21:34 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kfile-plugins/ChangeLog,v 1.4 2005/02/28 14:39:21 greg_g Exp $
+
+  28 Feb 2005; Gregorio Guidi <greg_g@gentoo.org>
+  kdemultimedia-kfile-plugins-3.4.0_rc1.ebuild:
+  Add optional support for libtheora.
 
 *kdemultimedia-kfile-plugins-3.4.0_rc1 (27 Feb 2005)
 
