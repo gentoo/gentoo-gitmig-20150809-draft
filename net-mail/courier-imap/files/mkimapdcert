@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $Id: mkimapdcert,v 1.1 2001/01/02 03:54:25 drobbins Exp $
+# mkimapdcert,v 1.1 2001/01/02 03:54:25 drobbins Exp
 #
 # Copyright 2000 Double Precision, Inc.  See COPYING for
 # distribution information.

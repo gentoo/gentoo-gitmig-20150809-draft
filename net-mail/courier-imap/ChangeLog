@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.5 2002/05/01 03:56:05 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.6 2002/06/13 18:58:04 nitro Exp $
+
+
+*courier-imap-1.4.5-r1 (8 Jun 2002)
+
+  8 Jun 2002; Kyle Manna <nitro@gentoo.org> :
+
+    Added pop3 init scripts.
 
 *courier-imap-1.4.3-r1 (30 Apr 2002)
 
