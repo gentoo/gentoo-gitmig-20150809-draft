@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta3-r3.ebuild,v 1.3 2003/09/25 17:42:59 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta3-r3.ebuild,v 1.4 2003/09/26 16:02:18 tseng Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -12,7 +12,7 @@ EXTRAVERSION="`echo ${OKV}-${PR/r/mm} | \
 
 KV=${OKV}-${PR/r/mm}
 
-inherit kernel
+inherit kernel eutils
 
 # What's in this kernel?
 
@@ -34,7 +34,7 @@ src_unpack() {
 
 	mv linux-${OKV} linux-${KV}
 	cd ${S}
-	bzcat ${DISTDIR}/${KV}.bz2 | patch -p1 || die "mm patch failed"
+	epatch ${DISTDIR}/${KV}.bz2
 
 	unset ARCH
 	kernel_universal_unpack

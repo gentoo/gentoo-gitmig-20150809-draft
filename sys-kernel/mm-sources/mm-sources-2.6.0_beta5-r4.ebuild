@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta5-r4.ebuild,v 1.2 2003/09/25 17:42:59 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta5-r4.ebuild,v 1.3 2003/09/26 16:02:18 tseng Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -34,7 +34,7 @@ src_unpack() {
 
 	mv linux-${OKV} linux-${KV}
 	cd ${S}
-	bzcat ${DISTDIR}/${KV}.bz2 | patch -p1 || die "mm patch failed"
+	epatch ${DISTDIR}/${KV}.bz2
 	epatch ${FILESDIR}/2.6.0-test5-mm4-devfsd-fix
 
 	find . -iname "*~" | xargs rm 2> /dev/null
