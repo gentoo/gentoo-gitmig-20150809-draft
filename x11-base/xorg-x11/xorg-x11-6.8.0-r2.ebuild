@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.1 2004/10/11 08:10:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.2 2004/10/11 08:15:09 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -23,7 +23,7 @@ RESTRICT="nostrip"
 
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
 IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc hardened
-	insecure-drivers ipv6 mmx nls pam sdk sse static xprint"
+	insecure-drivers ipv6 mmx nls pam sdk sse static xfs xprint"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.2"
@@ -52,7 +52,7 @@ GENTOO_FILES="mirror://gentoo/${P}-files-${FILES_VER}.tar.bz2
 	http://dev.gentoo.org/~cyfred/distfiles/${P}-files-${FILES_VER}.tar.bz2"
 
 SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
-	http://dev.gentoo.org/~cyfred/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2
+	xfs? ( http://dev.gentoo.org/~cyfred/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 )
 	mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2
 	nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
 	${GENTOO_FILES}
@@ -475,6 +475,9 @@ host_def_setup() {
 		use_build bitmap-fonts Build75DpiFonts
 		use_build bitmap-fonts Build100DpiFonts
 
+		# X Font Server
+		use_build xfs BuildFontServer
+
 		use_build dmx BuildDmx
 
 		use_build insecure-drivers BuildDevelDRIDrivers
@@ -574,7 +577,10 @@ src_unpack() {
 			unpack gemini-koi8-u.tar.bz2 > /dev/null
 		fi
 		unpack eurofonts-X11.tar.bz2 > /dev/null
-		unpack xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 > /dev/null
+		if use xfs
+		then
+			unpack xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 > /dev/null
+		fi
 	eend 0
 
 	# Remove bum encoding
@@ -720,8 +726,11 @@ etc_files_install() {
 	doins ${FILES_DIR}/xinitrc
 	exeinto /etc/X11/xdm
 	doexe ${FILES_DIR}/Xsession ${FILES_DIR}/Xsetup_0
-	insinto /etc/X11/fs
-	newins ${FILES_DIR}/xfs.config config
+	if use xfs
+	then
+		insinto /etc/X11/fs
+		newins ${FILES_DIR}/xfs.config config
+	fi
 	if use pam
 	then
 		insinto /etc/pam.d
@@ -731,9 +740,12 @@ etc_files_install() {
 	fi
 	exeinto /etc/init.d
 	newexe ${FILES_DIR}/xdm.start xdm
-	newexe ${FILES_DIR}/xfs.start xfs
-	insinto /etc/conf.d
-	newins ${FILES_DIR}/xfs.conf.d xfs
+	if use xfs
+	then
+		newexe ${FILES_DIR}/xfs.start xfs
+		insinto /etc/conf.d
+		newins ${FILES_DIR}/xfs.conf.d xfs
+	fi
 }
 
 setup_dynamic_libgl() {
@@ -985,16 +997,19 @@ src_install() {
 	compose_files_setup
 
 	# Yet more Mandrake
-	ebegin "Encoding files for xfsft font server..."
-		dodir /usr/share/fonts/encodings
-		cp -a ${WORKDIR}/usr/share/fonts/encodings/* \
-			${D}/usr/share/fonts/encodings
+	if use xfs
+	then
+		ebegin "Encoding files for xfsft font server..."
+			dodir /usr/share/fonts/encodings
+			cp -a ${WORKDIR}/usr/share/fonts/encodings/* \
+				${D}/usr/share/fonts/encodings
 
-		for x in ${D}/usr/share/fonts/encodings/{.,large}/*.enc
-		do
-			[ -f "${x}" ] && gzip -9 -f ${x}
-		done
-	eend 0
+			for x in ${D}/usr/share/fonts/encodings/{.,large}/*.enc
+			do
+				[ -f "${x}" ] && gzip -9 -f ${x}
+			done
+		eend 0
+	fi
 
 	if use nls
 	then
