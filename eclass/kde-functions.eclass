@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.31 2002/09/10 19:15:48 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.32 2002/09/24 17:54:19 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
@@ -291,6 +291,8 @@ min-kde-ver() {
 	    3.0)	selected_version="3.0";;
 	    3.0.*)	selected_version="3.0";;
 	    3.1_alpha1)	selected_version="3.1_alpha1";;
+	    3.1_beta1)	selected_version="3.1_alpha1";;
+	    3.1_beta2)	selected_version="3.1_alpha1";;
 	    3.1.*)	selected_version="3.1";;
 	    3*)		selected_version="3.0";;
 	    5)		selected_version="5";;

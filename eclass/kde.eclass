@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.58 2002/09/10 09:56:12 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.59 2002/09/24 17:54:20 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base kde-functions
 ECLASS=kde
@@ -16,10 +16,12 @@ case $PN in
 		export KDEBASE="true"
 		
 		# fixups for certain versions
-		case $PV in
-			3.1_alpha1)	export S="$WORKDIR/$PN-3.0.6" ;;
-			3.1_beta1)	export S="$WORKDIR/$PN-3.0.7" ;;
-		esac
+		# already in kde-dist.eclass!
+		#case $PV in
+		#	3.1_alpha1)	export S="$WORKDIR/$PN-3.0.6" ;;
+		#	3.1_beta1)	export S="$WORKDIR/$PN-3.0.7" ;;
+		#	3.1_beta2)	export S="$WORKDIR/$PN-3.0.8" ;;
+		#esac
 
 	    ;;
 esac
