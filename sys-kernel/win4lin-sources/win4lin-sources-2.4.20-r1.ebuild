@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.20-r1.ebuild,v 1.5 2003/07/22 20:00:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.20-r1.ebuild,v 1.6 2003/09/29 18:39:40 mholzer Exp $
 
 IUSE="build"
 
@@ -16,7 +16,7 @@ OKV="2.4.20"
 #KERN_PATCH="patch-2.4.20-rc1.bz2"
 
 DESCRIPTION="Full sources for the linux kernel with win4lin support"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 https://www.netraverse.com/member/downloads/files/mki-adapter.patch
 	 https://www.netraverse.com/member/downloads/files/Kernel-Win4Lin3-${OKV}.patch"
 
