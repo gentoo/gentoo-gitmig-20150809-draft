@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/XML-SAX-Writer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Writer/ChangeLog,v 1.3 2004/07/08 23:40:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Writer/ChangeLog,v 1.4 2004/09/07 13:34:49 mcummings Exp $
+
+*XML-SAX-Writer-0.44-r1 (07 Sep 2004)
+
+  07 Sep 2004; Michael Cummings <mcummings@gentoo.org>
+  +files/Text-Iconv.patch, +XML-SAX-Writer-0.44-r1.ebuild:
+  -r1 includes a patch for newer versions of Text::Iconv, provided by Ian Perry
+  <ianperry@netspace.net.au>. Thanks for your patience everyone. This should
+  clsoe bug 59745.
 
   09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
   XML-SAX-Writer-0.44.ebuild:
