@@ -1,24 +1,24 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/nx-x11-1.4.0-r1.ebuild,v 1.2 2004/09/12 09:28:14 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/nx-x11-1.4.0-r2.ebuild,v 1.1 2004/09/12 09:28:14 stuart Exp $
 
 inherit eutils
 
 MY_PN="${PN//x11/X11}"
 MY_PV="${PV}-3"
-DESCRIPTION="Special version of the X11 libraries support NX compression technology"
+DESCRIPTION="A special version of the X11 libraries supporting NX compression technology"
 HOMEPAGE="http://www.nomachine.com/developers.php"
 URI_BASE="http://www.nomachine.com/download/snapshot/nxsources/"
 URI_BASE2="http://www.nomachine.com/download/nxsources/"
 SRC_NX_X11="${MY_PN}-${MY_PV}.tar.gz"
 SRC_NXAGENT="nxagent-1.4.0-47.tar.gz"
 SRC_NXAUTH="nxauth-1.4.0-1.tar.gz"
-SRC_NXCOMP="nxcomp-1.3.2-4.tar.gz"
+SRC_NXCOMP="nxcomp-1.4.0-23.tar.gz"
 SRC_NXCOMPEXT="nxcompext-1.4.0-3.tar.gz"
 SRC_NXVIEWER="nxviewer-1.4.0-2.tar.gz"
 SRC_NXDESKTOP="nxdesktop-1.4.0-36.tar.gz"
 SRC_NXESD="nxesd-1.4.0-1.tar.gz"
-SRC_URI="$URI_BASE/${SRC_NX_X11} $URI_BASE/${SRC_NXAGENT} $URI_BASE/${SRC_NXAUTH} $URI_BASE2/${SRC_NXCOMP} $URI_BASE/${SRC_NXCOMPEXT} $URI_BASE/${SRC_NXVIEWER} $URI_BASE/${SRC_NXDESKTOP} $URI_BASE/${SRC_NXESD}"
+SRC_URI="$URI_BASE/${SRC_NX_X11} $URI_BASE/${SRC_NXAGENT} $URI_BASE/${SRC_NXAUTH} $URI_BASE/${SRC_NXCOMP} $URI_BASE/${SRC_NXCOMPEXT} $URI_BASE/${SRC_NXVIEWER} $URI_BASE/${SRC_NXDESKTOP} $URI_BASE/${SRC_NXESD}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
@@ -79,6 +79,9 @@ src_install() {
 	dolib lib/Xrender/libXrender.so
 
 	preplib /usr/NX
+
+	into /usr/X11R6/include
+	doins ../nxcomp/NX.h
 
 	dodir /var/lib/nxserver
 
