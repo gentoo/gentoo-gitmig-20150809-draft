@@ -1,4 +1,4 @@
-MD5 edb3836a798dea556520c9231ad7a97e ChangeLog 4708
+MD5 cff0045a9440fd18cad0b7bcbaea2a56 ChangeLog 4963
 MD5 a0c025ab9651ddaf0f1dc593a48df94a lilo-22.1-r3.ebuild 1582
 MD5 9d48349e4847a7aa2a6824848c57e8f2 lilo-22.3.3-r1.ebuild 1998
 MD5 7dd6ff54cf104acb2bf33b4c22b85460 lilo-22.3.4.ebuild 2003
@@ -6,8 +6,7 @@ MD5 4ec5fe27915d3d095bcaf8d987d22d0c lilo-22.5.5.ebuild 4615
 MD5 126cd0a0a8dd63d12828d52767a095df lilo-22.5.1.ebuild 4532
 MD5 1d3b0333514cd06f5d53992c773c42cf lilo-22.5.6-r1.ebuild 4159
 MD5 01bd0c419e2f78240949543992494dc8 lilo-22.5.6-r2.ebuild 3540
-MD5 c4f3a8cdb37fe1f52426fc268dbf171f lilo-22.5.6-r3.ebuild 3687
-MD5 4a719441b7c9eb3fc71407abd312423a .lilo-22.5.6-r3.ebuild.swp 20480
+MD5 5c85da11054924fe83a98cf765212604 lilo-22.5.6-r3.ebuild 3724
 MD5 00de3473e03e180faad32ed00335cc7b files/digest-lilo-22.1-r3 61
 MD5 0a868ea4abd215e2181c6c756173b618 files/digest-lilo-22.3.3-r1 133
 MD5 e49971bcdc078d20a99ef4359d1fe78c files/lilo.conf 1718
@@ -17,3 +16,4 @@ MD5 23a4be524696dfdaefa80c1bdac39fc7 files/digest-lilo-22.5.6-r1 63
 MD5 8e75fea24b47485fd4185b9962745117 files/digest-lilo-22.5.1 63
 MD5 23a4be524696dfdaefa80c1bdac39fc7 files/digest-lilo-22.5.6-r2 63
 MD5 23a4be524696dfdaefa80c1bdac39fc7 files/digest-lilo-22.5.6-r3 63
+MD5 512ff9beb3f5b09dcf00302758d74584 files/lilo-22.5.6-animated-menu.patch 29945
