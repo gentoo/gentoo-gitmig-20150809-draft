@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.12 2005/01/08 20:00:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.13 2005/01/08 20:47:34 eradicator Exp $
 
 #unknowns
 afs
@@ -46,35 +46,6 @@ ifc
 
 # NOT NECESSARY - SECTION
 
-# 2004/11/24 - Jeremy Huddleston <eradicator@gentoo.org>
-ultra1
-
-# 2004/06/22 - Taken from 2004.0 profile
-# Too many packages assume that mmx/sse/sse2/3dnow are 86-32 only things to
-# make them useful on amd64. Anyway, all amd64 cpus have them, so they should
-# not be many flag dependant in this case
-mmx
-mmx2
-sse
-sse2
-3dnow
-3dnowex
-
-# 2004/06/22 - Taken from 2004.0 profile
-# Chris PeBenito <pebenito@gentoo.org>
-# must use a SELinux profile
-selinux
-
-# 2004/06/25 - Danny van Dyk <kugelfang@gentoo.org>
-uclibc
-
-# altivec is a ppc instruction set.
-altivec
-
-# n32 and n64 are mips ABIs
-n32
-n64
-
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
 # all of these are binary-only, and not presently available on this
@@ -101,3 +72,6 @@ tcc
 
 # gcc doesn't build if we have a multitarget binutils
 multitarget
+
+# Unmask emul-linux-x86
+-emul-linux-x86

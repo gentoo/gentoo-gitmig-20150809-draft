@@ -8,3 +8,5 @@ aqua
 
 # this seems to pull in pre compiled glibc libs.
 divx4linux
+
+emul-linux-x86

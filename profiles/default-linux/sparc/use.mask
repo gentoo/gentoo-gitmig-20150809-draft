@@ -1,15 +1,12 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.16 2004/12/09 03:57:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.17 2005/01/08 20:47:34 eradicator Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
 3dfx
-3dnow
-3dnowex
 acpi
 afs
-altivec
 apm
 directfb
 divx4linux
@@ -26,12 +23,8 @@ informix
 firebird
 lirc
 lm_sensors
-mmx
-mmx2
 oci8
 pic
-sse
-sse2
 svga
 tcc
 trusted
@@ -57,20 +50,10 @@ x86
 x86-obsd
 x86-fbsd
 
-# non-sparc arch things
-n32
-n64
-cobalt
-
 # Asterisk use flag masking
 resperl
 softfax
 zaptel
-
-# Chris PeBenito <pebenito@gentoo.org>
-# must use a SELinux profile
-selinux
-uclibc
 
 # Mono doesn't work on sparc
 # eradicator@gentoo.org
@@ -100,3 +83,5 @@ solid
 sybase
 sybase-ct
 
+# Unmask ultra1
+-ultra1

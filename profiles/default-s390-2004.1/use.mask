@@ -72,3 +72,5 @@ gtk2
 diet
 # aqua USE flag is only valid on Mac OS X
 aqua
+
+emul-linux-x86

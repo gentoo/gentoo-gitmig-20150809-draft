@@ -5,3 +5,5 @@ selinux
 uclibc
 # aqua USE flag is only valid on Mac OS X
 aqua
+
+emul-linux-x86

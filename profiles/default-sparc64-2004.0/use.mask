@@ -79,3 +79,5 @@ sybase-ct
 aqua
 
 multilib
+
+emul-linux-x86

@@ -3,7 +3,6 @@ cdr
 qt
 gpm
 3dfx
-3dnow
 acpi
 afs
 alsa
@@ -15,7 +14,6 @@ icc-pgo
 informix
 firebird
 lirc
-mmx
 oci8
 sse
 svga
@@ -28,11 +26,6 @@ hardened
 
 # don't quite know about this one, I'll need to revisit
 socks5
-
-# Chris PeBenito <pebenito@gentoo.org>
-# must use a SELinux profile
-selinux
-uclibc
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org

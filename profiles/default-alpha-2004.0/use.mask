@@ -83,3 +83,5 @@ gnustep
 
 # dev-lisp/mzscheme won't build
 mzscheme
+
+emul-linux-x86

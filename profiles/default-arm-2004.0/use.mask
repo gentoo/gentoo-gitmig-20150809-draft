@@ -51,3 +51,5 @@ aqua
 # rizzo@gentoo.org
 # masking per Bug 73135 per vapier's recommendation.
 mozilla
+
+emul-linux-x86

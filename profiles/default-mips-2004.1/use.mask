@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-2004.1/use.mask,v 1.18 2004/11/25 03:12:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips-2004.1/use.mask,v 1.19 2005/01/08 20:47:34 eradicator Exp $
 
 # Ciaran McCreesh <ciaranm@gentoo.org>
 # not even slightly reliable, bug #65216
@@ -105,3 +105,5 @@ bmp
 
 # aqua USE flag is only valid on Mac OS X
 aqua
+
+emul-linux-x86

@@ -1,6 +1,3 @@
-# Chris PeBenito <pebenito@gentoo.org>
-# must use a SELinux profile
-selinux
 hardened
 
 # Paul de Vrieze <pauldv@gentoo.org>
@@ -8,12 +5,9 @@ hardened
 # this repoman will fail on apps like sys-libs/db
 java
 
-3dnow
 icc
 icc-pgo
-mmx
 svga
-sse
 uclibc
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"

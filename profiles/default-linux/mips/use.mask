@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.16 2004/11/24 17:17:36 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.17 2005/01/08 20:47:34 eradicator Exp $
 
 # Stephen P. Becker <geoman@gentoo.org>
 # masked because it hoses xchat on 64-bit machines
@@ -36,10 +36,6 @@ hal
 # no nptl on mips yet
 nptl
 
-# Chris PeBenito <pebenito@gentoo.org>
-# must use a SELinux profile
-selinux
-
 # Paul de Vrieze <pauldv@gentoo.org>
 # There is no java in this profile (if there is it must be available). Without
 # this repoman will fail on apps like sys-libs/db
@@ -57,7 +53,6 @@ acl
 
 # Flags which aren't applicable to mips (Mostly copied from sparc)
 3dfx
-3dnow
 acpi
 afs
 altivec
@@ -71,9 +66,7 @@ informix
 firebird
 ggi
 lirc
-mmx
 oci8
-sse
 svga
 tcc
 trusted
@@ -123,3 +116,8 @@ solid
 sybase
 sybase-ct
 djbfft
+
+# Unmask our instruction sets
+-n32
+-n64
+-cobalt

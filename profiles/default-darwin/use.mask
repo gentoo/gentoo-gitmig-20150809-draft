@@ -76,3 +76,5 @@ solid
 nas
 odbc
 postgres
+
+emul-linux-x86

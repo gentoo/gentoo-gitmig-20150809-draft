@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/use.mask,v 1.4 2004/12/11 16:17:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/use.mask,v 1.5 2005/01/08 20:47:35 eradicator Exp $
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
@@ -14,3 +14,5 @@ aqua
 
 # We don't have any ppc sub profiles yet. bug #74103
 altivec
+
+emul-linux-x86

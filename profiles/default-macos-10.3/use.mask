@@ -54,3 +54,5 @@ solid
 svga
 sybase
 sybase-ct
+
+emul-linux-x86

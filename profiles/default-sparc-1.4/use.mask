@@ -78,3 +78,5 @@ mono
 aqua
 
 multilib
+
+emul-linux-x86

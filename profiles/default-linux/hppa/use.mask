@@ -58,24 +58,20 @@ acl
 
 # 14 Mar 2003 Guy Martin <gmsoft@gentoo.org>
 # USE flags not related to hppa
-3dnow
 acpi
 apm
 afs
 ev6
 icc
 icc-pgo
-mmx
 nocardbus
 pcmcia
 pda
-sse
 svga
 trusted
 wavelan
 x86
 firebird
-uclibc
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
