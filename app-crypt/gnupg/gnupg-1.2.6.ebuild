@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.5.ebuild,v 1.3 2004/08/05 18:34:29 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.1 2004/08/29 08:12:10 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,19 +17,17 @@ IUSE="X ldap nls static idea"
 RDEPEND="!static? ( ldap? ( net-nds/openldap )
 		app-arch/bzip2
 		sys-libs/zlib )
-	X? ( || ( media-gfx/xloadimage media-gfx/xli ) )
-	nls? ( sys-devel/gettext )
-	dev-lang/perl
-	virtual/libc"
-# XXX: libpcap earlier than 1.10-r3 did not provide libcap.a
-#	DEPEND="caps? ( static? ( >=sys-libs/libcap-1.10-r3 )
-#				!static? ( sys-libs/libcap ) )
+		X? ( || ( media-gfx/xloadimage media-gfx/xli ) )
+		nls? ( sys-devel/gettext )
+		dev-lang/perl
+		virtual/libc"
+
 DEPEND="ldap? ( net-nds/openldap )
-	nls? ( sys-devel/gettext )
-	!static? ( sys-libs/zlib )
-	app-arch/bzip2
-	dev-lang/perl
-	virtual/libc"
+		nls? ( sys-devel/gettext )
+		!static? ( sys-libs/zlib )
+		app-arch/bzip2
+		dev-lang/perl
+		virtual/libc"
 
 src_unpack() {
 	unpack ${A}
@@ -46,12 +44,6 @@ src_unpack() {
 	fi
 
 	use ppc64 && epatch ${FILESDIR}/gnupg-1.2.4.ppc64.patch
-
-	# trying to fix the install logic that breaks when nls
-	# is enabled. #59012
-	sed -i \
-	 's#\(\(mkinstalldirs\) = \).*#\1\$(SHELL) \$(top_srcdir)/scripts/\2#g' \
-	 ${S}/po/Makefile.in.in ${S}/intl/Makefile.in
 }
 
 src_compile() {
