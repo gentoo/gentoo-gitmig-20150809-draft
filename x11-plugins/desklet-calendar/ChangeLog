@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/desklet-calendar
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-calendar/ChangeLog,v 1.1 2004/07/15 09:03:43 obz Exp $
+
+*desklet-calendar-0.2.5.2 (15 Jul 2004)
+
+  15 Jul 2004; Mike Gardiner <obz@gentoo.org> +metadata.xml,
+  +desklet-calendar-0.2.5.2.ebuild:
+  First version in portage, as requested and helped out in bug #32681
+
