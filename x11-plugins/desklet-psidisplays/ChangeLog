@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-psidisplays
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psidisplays/ChangeLog,v 1.3 2003/11/16 07:30:57 obz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psidisplays/ChangeLog,v 1.4 2004/04/05 03:26:53 agriffis Exp $
+
+  04 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  desklet-psidisplays-20031028.ebuild:
+  Add ~alpha for bug 46601
 
 *desklet-psidisplays-20031028 (16 Nov 2003)
 

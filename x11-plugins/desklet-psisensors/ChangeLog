@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-psisensors
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psisensors/ChangeLog,v 1.4 2003/11/16 07:29:24 obz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psisensors/ChangeLog,v 1.5 2004/04/05 03:24:57 agriffis Exp $
+
+  04 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  desklet-psisensors-20031028.ebuild:
+  Add ~alpha for bug 46601
 
 *desklet-psisensors-20031028 (16 Nov 2003)
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-starterbar
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/ChangeLog,v 1.6 2003/11/12 10:57:25 obz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/ChangeLog,v 1.7 2004/04/05 03:24:12 agriffis Exp $
+
+  04 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  desklet-starterbar-0.22.1.ebuild:
+  Add ~alpha for bug 46601
 
 *desklet-starterbar-0.22.1 (12 Nov 2003)
 

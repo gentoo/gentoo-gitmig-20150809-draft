@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-goodweather
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-goodweather/ChangeLog,v 1.4 2003/11/24 11:53:51 obz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-goodweather/ChangeLog,v 1.5 2004/04/05 03:27:37 agriffis Exp $
+
+  04 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  desklet-goodweather-0.3.ebuild:
+  Add ~alpha for bug 46601
 
 *desklet-goodweather-0.3 (24 Nov 2003)
 

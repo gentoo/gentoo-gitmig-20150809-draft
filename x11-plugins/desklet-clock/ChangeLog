@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-clock
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/ChangeLog,v 1.6 2003/11/12 10:03:55 obz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/ChangeLog,v 1.7 2004/04/05 03:26:32 agriffis Exp $
+
+  04 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  desklet-clock-0.32-r1.ebuild:
+  Add ~alpha for bug 46601
 
 *desklet-clock-0.32-r1 (12 Nov 2003)
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-weather
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-weather/ChangeLog,v 1.4 2003/11/12 11:11:00 obz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-weather/ChangeLog,v 1.5 2004/04/05 03:23:23 agriffis Exp $
+
+  04 Apr 2004; Aron Griffis <agriffis@gentoo.org> desklet-weather-0.22.ebuild:
+  Add ~alpha for bug 46601
 
 *desklet-weather-0.22 (12 Nov 2003)
 
