@@ -1,4 +1,4 @@
-MD5 44d8fb752b0123dbd02a32c6ff70f952 gkrellmss-2.3.ebuild 891
-MD5 98f8ea424902a23c21f83a2010c5216f ChangeLog 631
-MD5 cb282a2d5fa1b98ccf24d938b8e6f5b5 files/gkrellmss-patch-2.3.diff 638
+MD5 d7e75071cc2f9ddf0138528c87e45d00 ChangeLog 717
+MD5 da44ff55c9e1ca3c0b5ae226e2b1154d gkrellmss-2.3.ebuild 902
 MD5 09497dcbb9e774c8877917883664d32f files/digest-gkrellmss-2.3 64
+MD5 cb282a2d5fa1b98ccf24d938b8e6f5b5 files/gkrellmss-patch-2.3.diff 638
