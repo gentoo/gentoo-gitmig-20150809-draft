@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.12 2002/12/17 22:55:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.13 2002/12/31 18:55:50 chouser Exp $
+
+  31 Dec 2002; Chris Houser <chouser@gentoo.org> rep-gtk-0.15-r3.ebuild :
+  Added alpha to KEYWORDS
 
   17 Dec 2002; Aron Griffis <agriffis@gentoo.org> rep-gtk-0.17.ebuild :
   Added ~alpha to KEYWORDS

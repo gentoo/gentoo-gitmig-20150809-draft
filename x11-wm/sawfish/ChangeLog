@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.22 2002/12/17 22:55:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.23 2002/12/31 18:55:50 chouser Exp $
+
+  31 Dec 2002; Chris Houser <chouser@gentoo.org> sawfish-1.0.1-r6.ebuild :
+  Added alpha to KEYWORDS
 
   17 Dec 2002; Aron Griffis <agriffis@gentoo.org> sawfish-1.2.ebuild :
   Added ~alpha to KEYWORDS
