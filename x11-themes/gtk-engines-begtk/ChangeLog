@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-begtk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-begtk/ChangeLog,v 1.4 2004/01/12 15:31:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-begtk/ChangeLog,v 1.5 2004/01/12 21:16:11 gustavoz Exp $
+
+  12 Jan 2004; <gustavoz@gentoo.org> gtk-engines-begtk-1.0.1-r1.ebuild:
+  stable on hppa
 
   12 Jan 2004; <gustavoz@gentoo.org> gtk-engines-begtk-1.0.1-r1.ebuild:
   stable on sparc
