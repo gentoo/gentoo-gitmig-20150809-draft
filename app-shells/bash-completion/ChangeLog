@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.65 2004/06/24 22:23:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.66 2004/07/01 11:54:30 joker Exp $
+
+  01 Jul 2004; Christian Birchinger <joker@gentoo.org>
+  bash-completion-20040526-r2.ebuild:
+  Replaced fperms with doexec and added ROOT variable to pkg_postinst tests.
 
 *bash-completion-20040526-r2 (16 Jun 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20040526-r2.ebuild,v 1.3 2004/06/29 03:51:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20040526-r2.ebuild,v 1.4 2004/07/01 11:54:30 joker Exp $
 
 GENCOMP_VERS="1.0_beta"
 
@@ -27,9 +27,8 @@ src_install() {
 	insinto /usr/share/bash-completion
 	doins contrib/*
 
-	insinto /etc/profile.d
-	doins ${FILESDIR}/bash-completion
-	fperms 755 /etc/profile.d/bash-completion
+	exeinto /etc/profile.d
+	doexe ${FILESDIR}/bash-completion
 
 	dodoc Changelog README
 
@@ -50,7 +49,7 @@ pkg_postinst() {
 	einfo "Additional complete functions can be enabled by symlinking them from"
 	einfo "/usr/share/bash-completion to /etc/bash_completion.d"
 
-	if [ -f /etc/bash_completion.d/gentoo.completion ]
+	if [ -f ${ROOT}/etc/bash_completion.d/gentoo.completion ]
 	then
 		echo
 		ewarn "The file 'gentoo.completion' in '/etc/bash_completion.d/' has been"
@@ -58,7 +57,7 @@ pkg_postinst() {
 	fi
 
 	local bcfile moved
-	for bcfile in /etc/bash_completion.d/{unrar,harbour,isql,larch,lilypond,p4,ri}
+	for bcfile in ${ROOT}/etc/bash_completion.d/{unrar,harbour,isql,larch,lilypond,p4,ri}
 	do
 
 		[ -f "${bcfile}" -a ! -L "${bcfile}" ] && moved="${bcfile##*/} ${moved}"
