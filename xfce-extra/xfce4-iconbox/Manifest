@@ -4,8 +4,8 @@ MD5 f8304704d43ffe6412a1fcb6ccdc96de xfce4-iconbox-4.1.91.ebuild 784
 MD5 be2b2087a288f0ba5005107ebf8f3191 xfce4-iconbox-4.0.4.ebuild 758
 MD5 783c853517214ceefc905ffb282b2844 xfce4-iconbox-4.0.6.ebuild 840
 MD5 5e6271ca47e11d57b1a0dc340d369dc2 xfce4-iconbox-4.1.90.ebuild 823
-MD5 74d91d9cf2cda16955852d84b197df7f ChangeLog 4753
-MD5 e026514715baa57262155dcc79b30cca xfce4-iconbox-4.1.99.2.ebuild 786
+MD5 96a5b310219a42096d32966fadc21b5d ChangeLog 4921
+MD5 fe386dc4e39a2fc7cbc26e2e7e15a836 xfce4-iconbox-4.1.99.2.ebuild 786
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 3fd43546ba46c09faf571c288759bfd9 files/digest-xfce4-iconbox-4.0.4 71
 MD5 b7ab5f96ef492ac2912c82a83e865ae7 files/digest-xfce4-iconbox-4.0.5 71
