@@ -1,8 +1,11 @@
 # ChangeLog for x11-base/xfree-drm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.5 2003/02/09 09:08:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.6 2003/02/19 21:59:02 gerk Exp $
 
 *xfree-drm-4.2.99.4-r1 (07 Feb 2003)
+
+  19 Feb 2003; Mark Guertin <gerk@gentoo.org> xfree-drm-4.2.99.4-r1.ebuild :
+  set -r1 to ~ppc only, had major issues with portage eating digests cause it couldn't deal with all the SRC_URI juggling with x86 vs. ppc.
 
   08 Feb 2003; Seemant Kulleen <seemant@gentoo.org>
   files/digest-xfree-drm-4.2.99.4-r1 :
