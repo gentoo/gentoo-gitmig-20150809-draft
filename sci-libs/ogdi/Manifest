@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bf592b35b75dd6edf61d100e81922674 ogdi-3.1.4.ebuild 1112
-MD5 610a3a231e61992edbc984ddb9e2b0bb ogdi-3.1.1.ebuild 1296
-MD5 46656600603e0c2aa4af298ce67de56c ChangeLog 840
+MD5 86a3575151326e9f2558c78a9dda7054 ogdi-3.1.4.ebuild 1112
+MD5 9ab19443f3fe41454003978b9b32677d ogdi-3.1.1.ebuild 1296
+MD5 f3368466b3bc60ff7dcc679509f56102 ChangeLog 1092
 MD5 fcb4229d5eb6d3026c97d2836dfd4f76 metadata.xml 224
 MD5 59e695f13d9d346bdd13a22bde58a3a6 files/digest-ogdi-3.1.1 62
 MD5 e328cdec7e54dc60be77116181727d5a files/digest-ogdi-3.1.4 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0fkuI1lqEGTUzyQRAlY4AKC+bY9ploHSezwTxbCzBSo0rlPf3QCfQ40E
-OACzvoXB6hf0oF+YRrj17X8=
-=Tg1U
------END PGP SIGNATURE-----
