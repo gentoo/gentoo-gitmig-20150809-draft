@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Builder-Tester
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Builder-Tester/ChangeLog,v 1.9 2005/03/16 16:10:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Builder-Tester/ChangeLog,v 1.10 2005/04/02 14:15:26 mcummings Exp $
+
+  02 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  Test-Builder-Tester-1.01.ebuild:
+  Marking stable for x86 - bug 82091
 
   16 Mar 2005; Michael Cummings <mcummings@gentoo.org>
   Test-Builder-Tester-1.00.ebuild, Test-Builder-Tester-1.01.ebuild:
