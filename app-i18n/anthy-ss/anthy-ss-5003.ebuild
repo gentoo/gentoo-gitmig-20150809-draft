@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-4819.ebuild,v 1.1 2003/12/21 10:22:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-5003.ebuild,v 1.1 2004/02/04 12:34:57 hattya Exp $
 
 inherit elisp-common
 
@@ -10,15 +10,14 @@ MY_P="${P/-ss/}"
 
 DESCRIPTION="Anthy -- free and secure Japanese input system"
 HOMEPAGE="http://anthy.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/anthy/7312/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/anthy/8010/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~sparc ~ppc"
+KEYWORDS="~x86"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
-DEPEND="virtual/glibc
-	emacs? ( virtual/emacs )
+DEPEND="emacs? ( virtual/emacs )
 	!app-i18n/anthy"
 
 src_compile() {
@@ -26,7 +25,7 @@ src_compile() {
 	local myconf
 	local cannadicdir=/var/lib/canna/dic/canna
 
-	use emacs || myconf="${myconf} EMACS=no"
+	use emacs || myconf="EMACS=no"
 
 	if has_version 'app-dicts/canna-zipcode'; then
 		einfo "Adding zipcode.t and jigyosyo.t to anthy.dic."
@@ -53,7 +52,7 @@ src_install() {
 
 	use emacs && elisp-site-file-install ${FILESDIR}/50anthy-gentoo.el
 
-	dodoc AUTHORS ChangeLog DIARY INSTALL NEWS README \
+	dodoc AUTHORS COPYING ChangeLog DIARY INSTALL NEWS README \
 		doc/[A-Z0-9][A-Z0-9]* doc/protocol.txt
 
 }
