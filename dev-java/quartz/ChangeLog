@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/quartz
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/ChangeLog,v 1.12 2004/12/27 14:49:20 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/ChangeLog,v 1.13 2005/02/14 04:49:30 st_lim Exp $
+
+*quartz-1.4.3-r1 (14 Feb 2005)
+
+  14 Feb 2005;  <>  quartz-1.4.3-r1.ebuild files/digest-quartz-1.4.3-r1
+  # INSERT ENTRY HERE
 
 *quartz-1.4.2 (27 Dec 2004)
 
