@@ -7,7 +7,7 @@ MD5 4aaae0ab832bc48fdf38131e0146a537 ardour-0.9_beta18.ebuild 1281
 MD5 85ae7ef7d14a7eee5260cac5e52a82be ardour-0.9_beta17.ebuild 1267
 MD5 ae6da285ffd7cfde5c24ce3f4d585fae ardour-0.9_beta14.ebuild 1175
 MD5 0d2b9b7cb8e300c9f8a2aff455de7b38 ChangeLog 4453
-MD5 aac458f88f62ba55a7c6e028008acce4 metadata.xml 245
+MD5 28188f1657f0547a15f682ed3626a397 metadata.xml 330
 MD5 70693c54e8c510859384503ff9ed10cc files/digest-ardour-0.9_beta14 72
 MD5 3e39c45e572cf4ec921e0554fd226f11 files/digest-ardour-0.9_beta16 72
 MD5 df7a09804b9e2413a2e3163cd6ee9c63 files/digest-ardour-0.9_beta17 72
@@ -17,7 +17,7 @@ MD5 d20e0aaa416ef820fd3c6767245288e8 files/digest-ardour-0.9_beta11-r1 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA/n5MT+MN7JbqCpMRAtcQAJ492F+EHw7vqzhe6WDnh+j0942AXwCfdvSC
-rmckyfGV7MB+tIKYUMLNmAo=
-=3uok
+iD8DBQFA/qDtT+MN7JbqCpMRAnRZAJ0X4drKqev7vtNqPBL8MWxnPgBi4gCfWxZo
+VaCxSOGhOoHrN1DO/njTtw8=
+=6i6v
 -----END PGP SIGNATURE-----
