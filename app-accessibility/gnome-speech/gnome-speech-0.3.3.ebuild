@@ -1,10 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.3.ebuild,v 1.2 2004/06/15 02:17:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.3.ebuild,v 1.3 2004/06/15 04:30:05 leonardop Exp $
 
 inherit java-pkg gnome2
 
-IUSE="${IUSE} java freetts"
+# Local USE flags: freetts
+IUSE="java freetts"
 
 DESCRIPTION="Simple general API for producing text-to-speech output"
 HOMEPAGE="http://www.gnome.org/"
