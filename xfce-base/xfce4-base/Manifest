@@ -1,23 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 21e25d679d5b9e375442b410067d3bd9 ChangeLog 4175
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 9dbb060c3e112b59c2819d778fd6dde6 xfce4-base-4.0.6.ebuild 1356
-MD5 3adfca8cc375edc31cfd99f8b776b453 xfce4-base-4.0.4.ebuild 1284
+MD5 254f94d7a4a59c55d83cd1053fdd1e7c xfce4-base-4.1.91.ebuild 740
+MD5 a9936af836c1ff778b0ac3bd0533602d xfce4-base-4.1.99.1.ebuild 742
 MD5 af032edd48eb05649675d10cf0ccd08a xfce4-base-4.0.5.ebuild 1350
 MD5 1110af4debe9c67995b494843f0efe9f xfce4-base-4.1.90.ebuild 1183
-MD5 254f94d7a4a59c55d83cd1053fdd1e7c xfce4-base-4.1.91.ebuild 740
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-base-4.0.6 0
+MD5 3adfca8cc375edc31cfd99f8b776b453 xfce4-base-4.0.4.ebuild 1284
+MD5 55a26d43482ab14cc7ff4acbb0f16b5b ChangeLog 4335
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 ac236cb047d76e050ec5df59fb6e10b1 files/XFCE4.desktop 194
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-base-4.0.4 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-base-4.0.5 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-base-4.1.90 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-base-4.1.91 0
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBiscpHTu7gpaalycRAoZuAJ0YV/MBMdxw0ypcsCloDoNG1wl/CgCdE/yy
-504B6SvvOdxETroKfqLDYis=
-=gwbX
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-base-4.1.99.1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-base-4.0.4 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-base-4.0.5 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-base-4.0.6 0

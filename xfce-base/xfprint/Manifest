@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a8cad70bf4a6ef5ffe5018a217071cc2 ChangeLog 4374
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 ba7fae36522a8c3c5faad97338de60c7 xfprint-4.0.6.ebuild 881
-MD5 214854485254b50ba77f264d340fb432 xfprint-4.0.4.ebuild 799
+MD5 dfbc105c39447b3cc36391c4ae6e3974 xfprint-4.1.91.ebuild 821
+MD5 fa2553339d7391515043bf0efe56719d xfprint-4.1.99.1.ebuild 823
 MD5 6850e304704dc73a07e5bbdb5418fcaf xfprint-4.0.5.ebuild 819
 MD5 a7a56a8948e2f9a576a37d6ea9b038fc xfprint-4.1.90.ebuild 853
-MD5 dfbc105c39447b3cc36391c4ae6e3974 xfprint-4.1.91.ebuild 821
-MD5 f27d66febf1deb61d2b218235e551b00 files/digest-xfprint-4.0.6 65
-MD5 0ead953e586694bf9b906413ae3661f1 files/digest-xfprint-4.0.4 65
-MD5 8ebc66b53e664cc48489ee5fc0b3a8c2 files/digest-xfprint-4.0.5 65
+MD5 214854485254b50ba77f264d340fb432 xfprint-4.0.4.ebuild 799
+MD5 5c3672623e516352c0e254c2fae95444 ChangeLog 4528
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 ba7fae36522a8c3c5faad97338de60c7 xfprint-4.0.6.ebuild 881
 MD5 f53c91584255eb332c40eb42ce007c5c files/digest-xfprint-4.1.90 66
 MD5 1e53bb32cced0ed4462a4ee8315f9062 files/digest-xfprint-4.1.91 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBirhDHTu7gpaalycRAqSSAJwPxeyferhpfILbJYf4gBue0Tp4tACgybwj
-2iUfJhyTN5jGjYjlJ2lW85M=
-=B+Sq
------END PGP SIGNATURE-----
+MD5 0cb35fbe96d3335e02b341440b68eea4 files/digest-xfprint-4.1.99.1 68
+MD5 0ead953e586694bf9b906413ae3661f1 files/digest-xfprint-4.0.4 65
+MD5 8ebc66b53e664cc48489ee5fc0b3a8c2 files/digest-xfprint-4.0.5 65
+MD5 f27d66febf1deb61d2b218235e551b00 files/digest-xfprint-4.0.6 65

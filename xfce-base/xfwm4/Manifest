@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0319c3ceb3dc10b9fba6c52511cf73a4 ChangeLog 4370
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 a5e52014426472193e225abb88f75f47 xfwm4-4.0.6.ebuild 1004
-MD5 d4cf8b1d1aa6d4e115f86dfa04ba3a7c xfwm4-4.0.4.ebuild 922
-MD5 3192442d252ff990b3cede23e3d0868d xfwm4-4.0.5.ebuild 942
-MD5 72137cb73c528b126afc703a21752237 xfwm4-4.1.90.ebuild 937
 MD5 e79180e97024556d68a1df7f460a647e xfwm4-4.1.91.ebuild 907
-MD5 6f4435fee2dcec61a3cca0459b98839c files/digest-xfwm4-4.0.6 63
+MD5 a5e52014426472193e225abb88f75f47 xfwm4-4.0.6.ebuild 1004
+MD5 3f9d5b55e09dbfd54e8bdcd20371ab02 xfwm4-4.1.99.1.ebuild 909
+MD5 72137cb73c528b126afc703a21752237 xfwm4-4.1.90.ebuild 937
+MD5 3192442d252ff990b3cede23e3d0868d xfwm4-4.0.5.ebuild 942
+MD5 e68fb69cdb13c62caa72f817d6700cb8 ChangeLog 4520
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 d4cf8b1d1aa6d4e115f86dfa04ba3a7c xfwm4-4.0.4.ebuild 922
 MD5 6b7dd87c085f56ddb38124b23bab3d89 files/digest-xfwm4-4.0.4 63
 MD5 d5e741e872511d37fa08323278bdb945 files/digest-xfwm4-4.0.5 63
+MD5 6f4435fee2dcec61a3cca0459b98839c files/digest-xfwm4-4.0.6 63
+MD5 04cda957e2a4bd18f965b198727ae56d files/digest-xfwm4-4.1.99.1 67
 MD5 e7b45ae79bc86e42fedefe93a38dbadf files/digest-xfwm4-4.1.90 65
 MD5 efd5ff5a279a301fd86b812b0e1191ad files/digest-xfwm4-4.1.91 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBirj4HTu7gpaalycRAj07AJ4xfv5mtFmegLsGFaS3Ggze4Y2kyACfQLTM
-V2XOkBCEKupGhBJXGXOgEj4=
-=MYo7
------END PGP SIGNATURE-----
