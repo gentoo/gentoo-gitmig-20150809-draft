@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e56840bbfe2821a9976d79d1e4d9f319 aimsniff-0.8.ebuild 1799
-MD5 b23886761e4ef6118bc16bfa71f5711b aimsniff-0.9-r1.ebuild 3132
-MD5 3c74ed699682c6c053b3ebcd5b18e9df ChangeLog 1799
-MD5 35f03d6f92cb85e235257b9e1aabe217 metadata.xml 373
+MD5 963a5d9c89cdedb10f576a7253b8ad00 aimsniff-0.9-r1.ebuild 3128
+MD5 819e26f4d9273c15023703087bfc1178 ChangeLog 1898
+MD5 eedbaff735e1d64aea7755d6d5c566a7 metadata.xml 372
 MD5 31171666587c48bf647abbddda0f9c91 files/digest-aimsniff-0.9-r1 125
 MD5 f62848279163f070089d6c81eb98260a files/digest-aimsniff-0.8 124
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBKfcMT+MN7JbqCpMRArmSAJsHnYmOs1ZXjIrizDfbAP7Nl8NXFQCeP62y
+uPMD5+NfBdBrrZxbXIFaEaY=
+=GLwl
+-----END PGP SIGNATURE-----
