@@ -701,15 +701,6 @@ dev-lang/tcl-tk
 # not fit for release (working on it though)
 app-cdr/cddump
 
-#seemant@gentoo.org 24 Apr 2002
-# people forget to --clean rsync, so this will need to be masked for a while
-=media-video/avifile-0.7.20020412
-
-#seemant@gentoo.org 25 Apr 2002
-# ugh, this package is just dirty with its installation
-# masking until the user and I can sort it out
-=net-irc/quirc-0.9.82
-
 # spider@gentoo.org 26 Apr 2002
 # alpha release, go get it ;)
 >=x11-wm/blackbox-0.65.0_alpha1
@@ -718,10 +709,6 @@ app-cdr/cddump
 # the old ebuild of puregui was mis-versioned to 1, when it was actually
 # 0.0.1
 =app-admin/puregui-1-r1
-
-# seemant@gentoo.org 29 Apr 2002
-# new package -- masking while testing.
-=x11-misc/bbrb-0.4.1
 
 # prez@gentoo.org 1 May, 2002
 # new package -- masking while testing
