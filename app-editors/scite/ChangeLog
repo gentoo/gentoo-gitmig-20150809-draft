@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.24 2004/07/08 21:34:29 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.25 2004/07/08 22:01:45 pythonhead Exp $
+
+  08 Jul 2004; Rob Cakebread <pythonhead@gentoo.org> scite-1.6.0.ebuild:
+  Fixed IUSE for lua
 
   08 Jul 2004; Rob Cakebread <pythonhead@gentoo.org> scite-1.6.0.ebuild:
   Added DEPEND for dev-lang/lua scripting support

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.6.0.ebuild,v 1.4 2004/07/08 21:34:29 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.6.0.ebuild,v 1.5 2004/07/08 22:01:45 pythonhead Exp $
 
 MY_PV=$(echo ${PV} | sed 's:\.::g')
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scintilla/${PN}${MY_PV}.tgz"
 LICENSE="PYTHON"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
-IUSE="gtk2"
+IUSE="gtk2 lua"
 DEPEND="gtk2? ( >=x11-libs/gtk+-2 )
 	!gtk2? ( =x11-libs/gtk+-1.2* )
 	>=sys-apps/sed-4
