@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.1.ebuild,v 1.3 2001/09/19 18:56:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-2.2.1.ebuild,v 1.4 2001/09/20 20:18:24 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="KDE ${PV} - Base"
@@ -19,7 +19,7 @@ DEPEND="~kde-base/kdelibs-${PV}
 	lame? ( =media-sound/lame-3.89b )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta1 )
 	cups? ( net-print/cups )
-	ssl? ( dev-libs/openssl )
+	ssl? ( >=dev-libs/openssl-0.9.6b )
 	objprelink? ( dev-util/objprelink )"
 
 src_unpack() {
