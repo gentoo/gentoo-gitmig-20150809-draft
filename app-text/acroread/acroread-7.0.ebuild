@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.ebuild,v 1.3 2005/03/15 19:21:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.ebuild,v 1.4 2005/03/15 20:00:17 genstef Exp $
 
 inherit nsplugins eutils
 
@@ -68,6 +68,7 @@ src_install() {
 			${D}${INSTALLDIR}/Reader/intellinux/plug_ins/PPKLite.api.disabled
 	fi
 
+	dodir /usr/bin
 	dosym ${INSTALLDIR}/acroread /usr/bin/acroread
 }
 
