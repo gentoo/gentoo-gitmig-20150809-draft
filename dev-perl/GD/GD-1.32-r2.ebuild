@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-1.32-r2.ebuild,v 1.1 2002/09/18 12:40:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-1.32-r2.ebuild,v 1.2 2002/09/21 19:11:31 mcummings Exp $
 
 inherit perl-module
 
@@ -30,7 +30,12 @@ src_unpack() {
 		cp Makefile.PL Makefile.PL.orig
 		sed -e "s:my \$XPM.*:my \$XPM='y';:" \
 			Makefile.PL.orig > Makefile.PL
+	) || ( \
+		cp Makefile.PL Makefile.PL.orig
+		sed -e "s:my \$XPM.*:my \$XPM='n';:" \
+			Makefile.PL.orig > Makefile.PL
 	)
+
 	perl-module_src_prep
 }
 
