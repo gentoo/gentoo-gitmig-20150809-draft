@@ -1,44 +1,62 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.1 2002/02/21 04:18:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.2 2002/04/19 06:22:50 sandymac Exp $
+
+*vmware-workstation-3.1.1.1790 (2002/4/13)
+
+  13 Apr 2002; William McArthur <sandymac@gentoo.org> /etc/init.d/vmare:
+  Rewrote the /etc/init.d/vmare script to not mangle error messages that aren't
+  in an expected format. Added ~dev-lang/tcl-8.3.3 to the DEPEND line.
+
+  11 Apr 2002; William McArthur <sandymac@gentoo.org> vmware-workstation-3.1.1.1790.ebuild:
+  New version of VMware Workstation released. The ebuild was updated for this
+  version. The Gentoo (/etc/init.d/vmware) init script was changed to capture
+  the output from the VMware (/etc/vmware/init.d/vmware) script and prettify
+  (Is that a word?) it's output to look more like the Gentoo boot output. Also,
+  any error lines from the vmware init script are sent to the system logger to
+  hopefully increase their chance of being noticed. I made an icon from the
+  logo off of vmware.com for use in "start" type menus. It can be found in
+  /opt/vmware/lib/icon/ .  If kde is in the USE var then menu items are
+  automatically added for the user.
 
 *vmware-workstation-3.0.0.1455-r1 (2002/2/20)
 
-  20 Feb 2002; William McArthur <leknor@leknor.com> vmware-workstation-3.0.0.1455-r1.ebuild :
+  20 Feb 2002; William McArthur <sandymac@gentoo.org> vmware-workstation-3.0.0.1455-r1.ebuild :
 
   If you had an existing vmware install there was a problem where the file 
-  /etc/vmware/not_configured would have a mtime different from what was in the locations
-  file. This is fixed by not having a mtime in the locations file for the not_configured
-  file.
+  /etc/vmware/not_configured would have a mtime different from what was in the
+  locations file. This is fixed by not having a mtime in the locations file for
+  the not_configured file.
 
-  At the end of the merge the new locations file is appended to the existing locations.
-  This plus the above should solve any problems that people with manual vmware installs
-  have.
+  At the end of the merge the new locations file is appended to the existing
+  locations. This plus the above should solve any problems that people with
+  manual vmware installs have.
 
-  If the user was to merge vmware twice without running vmware-config.pl the rc#.d dirs
-  in /etc/vmware/init.d/ would be remove despite config protection. To keep them around
-  I added .keep files in each of them.
+  If the user was to merge vmware twice without running vmware-config.pl the
+  rc#.d dirs in /etc/vmware/init.d/ would be remove despite config protection.
+  To keep them around I added .keep files in each of them.
   
 *vmware-workstation-3.0.0.1455 (2002/2/10)
 
-  10 Feb 2002; William McArthur <leknor@leknor.com> vmware-workstation-3.0.0.1455.ebuild :
+  10 Feb 2002; William McArthur <sandymac@gentoo.org> vmware-workstation-3.0.0.1455.ebuild :
 
   I don't remember the details but the following was written:
 
-  The ebuild bypassed the official install because it doesn't all a install prefix.
-  Basicly the files from the work dir are copyied to the image dir.
+  The ebuild bypassed the official install because it doesn't all a install
+  prefix.  Basicly the files from the work dir are copyied to the image dir.
 
-  DEBUG=true is set because the strip command line tool dumps core on the vmware
-  executable and setting DEBUG will disable it.
+  DEBUG=true is set because the strip command line tool dumps core on the
+  vmware executable and setting DEBUG will disable it.
 
-  After the files have had their mtime updated we scan the image dir and collect the
-  mtimes and add the info to the /etc/vmware/locations file. This file is used by vmware
-  to track config choices and it is used in upgrading. By creating this file we make sure
-  the vmware config tools work and I think you could do a non gentoo package install of
-  vmware and it would work.
+  After the files have had their mtime updated we scan the image dir and collect
+  the mtimes and add the info to the /etc/vmware/locations file. This file is
+  used by vmware to track config choices and it is used in upgrading. By
+  creating this file we make sure the vmware config tools work and I think you
+  could do a non gentoo package install of vmware and it would work.
 
-  The vmware-config tool insists on a set of init dirs named rc#.d so they are created in
-  /etc/vmware/init.d/ . The other option was edit vmware-config.pl .
+  The vmware-config tool insists on a set of init dirs named rc#.d so they are
+  created in /etc/vmware/init.d/ . The other option was edit vmware-config.pl .
 
-  VMWare needs some modules loaded so at boot an init script is run that is really just
-  glue to start the init script supplied from vmware which is at /etc/vmware/init.d/vmware
+  VMWare needs some modules loaded so at boot an init script is run that is
+  really just glue to start the init script supplied from vmware which is at
+  /etc/vmware/init.d/vmware
