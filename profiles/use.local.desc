@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.988 2005/03/05 04:47:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.989 2005/03/05 05:17:19 matsuu Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -18,6 +18,8 @@ app-admin/sdsc-syslog:beep - Use beep libraries (net-libs/roadrunner)
 app-admin/webmin:webmin-minimal - Install the minimal webmin distribution
 app-arch/dar:dar32 - Enables --enable-mode=32 option, which replace infinint by 32 bits integers.
 app-arch/dar:dar64 - Enables --enable-mode=64 option, which replace infinint by 64 bits integers.
+app-arch/kdar:dar32 - Support libdar32.so to use.
+app-arch/kdar:dar64 - Support libdar64.so to use.
 app-cdr/k3b:monkey - Enable support for Monkey's audio codec
 app-cdr/ogmrip:subp - Subtitle ripping preliminary support
 app-crypt/gnupg:bzip2 - use transparent bzip2 compression
