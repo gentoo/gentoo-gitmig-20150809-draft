@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r4.ebuild,v 1.12 2003/09/26 18:52:43 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r4.ebuild,v 1.13 2003/11/03 05:47:12 pebenito Exp $
 
 inherit eutils
 
-IUSE="nls build acl selinux static"
+IUSE="nls build acl static"
 
 PATCH_VER=1.7
 
@@ -12,8 +12,7 @@ S="${WORKDIR}/${P}"
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="http://ftp.gnu.org/pub/gnu/coreutils/${P}.tar.bz2
-	mirror://gentoo/${PN}-gentoo-${PATCH_VER}.tar.bz2
-	selinux? mirror://gentoo/${P}-r2-selinux.patch.bz2"
+	mirror://gentoo/${PN}-gentoo-${PATCH_VER}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -24,20 +23,13 @@ DEPEND="virtual/glibc
 	sys-devel/automake
 	sys-devel/autoconf
 	nls? ( sys-devel/gettext )
-	acl? ( sys-apps/acl )
-	selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
+	acl? ( sys-apps/acl )"
 
 PATCHDIR=${WORKDIR}/patch
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	if use acl && use selinux
-	then
-		ewarn "Both ACL and SELINUX are not supported together!"
-		ewarn "Will Select SELINUX instead"
-	fi
 
 	# HPPA and ARM platforms do not work well with the uname patch
 	# (see below about it)
@@ -53,8 +45,8 @@ src_unpack() {
 		if [ -z "`use nls`" ] ; then
 			mv ${PATCHDIR}/acl/004* ${PATCHDIR}/excluded
 		fi
-		use selinux || mv ${PATCHDIR}/001* ${PATCHDIR}/excluded
-		use selinux || EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/acl
+		mv ${PATCHDIR}/001* ${PATCHDIR}/excluded
+		EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/acl
 	fi
 
 	# patch to remove Stallman's su/wheel group rant (which doesn't apply,
@@ -64,9 +56,6 @@ src_unpack() {
 	# Patch to add processor specific info to the uname output
 
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
-
-	use selinux && epatch ${WORKDIR}/${P}-r2-selinux.patch
-
 }
 
 src_compile() {
@@ -75,17 +64,14 @@ src_compile() {
 
 	if use acl
 	then
-		if [ -z "`use selinux`" ]
+		if [ -z "`which cvs 2>/dev/null`" ]
 		then
-			if [ -z "`which cvs 2>/dev/null`" ]
-			then
-				# Fix issues with gettext's autopoint if cvs is not installed,
-				# bug #28920.
-				export AUTOPOINT="/bin/true"
-			fi
-			mv m4/inttypes.m4 m4/inttypes-eggert.m4
-			autoreconf --force --install || die
+			# Fix issues with gettext's autopoint if cvs is not installed,
+			# bug #28920.
+			export AUTOPOINT="/bin/true"
 		fi
+		mv m4/inttypes.m4 m4/inttypes-eggert.m4
+		autoreconf --force --install || die
 	fi
 
 	econf \

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.42 2003/10/29 03:14:07 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.43 2003/11/03 05:47:12 pebenito Exp $
+
+  02 Nov 2003; Chris PeBenito <pebenito@gentoo.org> coreutils-5.0-r4.ebuild:
+  Missed removing SELinux patch from 5.0-r4
 
   28 Oct 2003; Chris PeBenito <pebenito@gentoo.org> coreutils-5.0-r1.ebuild,
   coreutils-5.0-r2.ebuild, coreutils-5.0-r3.ebuild, coreutils-5.0.91.ebuild:
