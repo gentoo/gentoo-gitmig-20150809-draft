@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.58 2004/06/10 15:28:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.59 2004/06/25 00:18:04 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -107,6 +107,7 @@ filter-flags() {
 	done
 	CFLAGS="${CFLAGS:1:${#CFLAGS}-2}"
 	CXXFLAGS="${CXXFLAGS:1:${#CXXFLAGS}-2}"
+	export CFLAGS CXXFLAGS
 	return 0
 }
 
@@ -135,6 +136,7 @@ replace-flags() {
 	CXXFLAGS="${CXXFLAGS// ${1} / ${2} }"
 	CFLAGS="${CFLAGS:1:${#CFLAGS}-2}"
 	CXXFLAGS="${CXXFLAGS:1:${#CXXFLAGS}-2}"
+	export CFLAGS CXXFLAGS
 	return 0
 }
 
@@ -231,10 +233,6 @@ strip-flags() {
 	fi
 
 	set +f	# re-enable pathname expansion
-
-	useq debug \
-		&& einfo "CFLAGS=\"${NEW_CFLAGS}\"" \
-		&& einfo "CXXFLAGS=\"${NEW_CXXFLAGS}\""
 
 	export CFLAGS="${NEW_CFLAGS}"
 	export CXXFLAGS="${NEW_CXXFLAGS}"
@@ -347,10 +345,12 @@ replace-sparc64-flags() {
 			CXXFLAGS="${CXXFLAGS/-mcpu=${x}/-mcpu=v8 -mtune=${x}}"
 		done
 	fi
+
+	export CFLAGS CXXFLAGS
 }
 
 append-ldflags() {
-	LDFLAGS="${LDFLAGS} $*"
+	export LDFLAGS="${LDFLAGS} $*"
 	return 0
 }
 
@@ -364,6 +364,7 @@ filter-ldflags() {
 		LDFLAGS="${LDFLAGS// ${x} / }"
 	done
 	LDFLAGS="${LDFLAGS:1:${#LDFLAGS}-2}"
+	export LDFLAGS
 	return 0
 }
 
