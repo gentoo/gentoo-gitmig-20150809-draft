@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.7-r2.ebuild,v 1.3 2003/11/14 20:07:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.7-r2.ebuild,v 1.4 2003/12/09 17:50:52 lanius Exp $
 
 inherit libtool flag-o-matic
 replace-flags k6-3 i586
@@ -28,7 +28,7 @@ DEPEND=">=sys-apps/sed-4
 	sys-libs/zlib
 	X? ( virtual/x11
 		>=app-text/dgs-0.5.9.1 )
-	cups?   ( >=app-text/ghostscript-6.50 )
+	cups?   ( virtual/ghostscript )
 	jpeg? ( >=media-libs/jpeg-6b )
 	lcms? ( >=media-libs/lcms-1.06 )
 	mpeg? ( media-video/mpeg2vidcodec )
