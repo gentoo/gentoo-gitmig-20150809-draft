@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.54 2005/03/09 22:39:19 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.55 2005/03/11 06:47:57 lu_zero Exp $
+
+  11 Mar 2005; Luca Barbato <lu_zero@gentoo.org>
+  ffmpeg-0.4.9_p20050226-r1.ebuild:
+  Put back xvid support
 
 *ffmpeg-0.4.9_p20050226-r1 (10 Mar 2005)
 
