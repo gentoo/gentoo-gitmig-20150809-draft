@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/avalon-logkit
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.8 2005/02/22 16:15:01 luckyduck Exp $
+
+*avalon-logkit-1.2 (22 Feb 2005)
+
+  22 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/2.0-build.xml, +avalon-logkit-1.2.ebuild, +avalon-logkit-2.0.ebuild:
+  Initial import, ebuilds contributed by Mark Wolfe <mwolfe@netspace.net.au> and
+  Saleem A. <compnerd@gentoo.org>. fixes #63284
+

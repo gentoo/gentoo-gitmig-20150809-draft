@@ -1,0 +1,7 @@
+MD5 616a82b76ccfe387eba7d5fdb7bf3a12 ChangeLog 529
+MD5 b1e68828756caaa3dc12bae5294a188c avalon-logkit-1.2.ebuild 1666
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 872dcd9ccd94602b5dccd9916242bf53 avalon-logkit-2.0.ebuild 2166
+MD5 1d4fb92234d539c16377690ccc278dbb files/2.0-build.xml 1931
+MD5 59f31286545f93f7dfa4a5e40cfb19a4 files/digest-avalon-logkit-1.2 66
+MD5 f5ee024795ce428b5418141110096d4d files/digest-avalon-logkit-2.0 78
