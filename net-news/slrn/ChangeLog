@@ -1,8 +1,11 @@
 # ChangeLog for net-news/slrn
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.6 2002/12/17 19:44:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/ChangeLog,v 1.7 2002/12/22 16:22:12 cretin Exp $
 
 *slrn-slrn-0.7.7.4-r1 (04 Jul 2002)
+
+  22 Dec 2002; Stefan Jones <cretin@gentoo.org> slrn-slrn-0.7.7.4-r1.ebuild :
+  Added sparc KEYWORD
 
   04 Aug 2002; Calum Selkirk <cselkirk@gentoo.org>
   *slrn-slrn-0.7.7.4-r1.ebuild:

@@ -15,7 +15,7 @@ ${PATCH_URI}/${P}-po.diff"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc"
 
 HOMEPAGE="http://slrn.sourceforge.net/"
 DEPEND="virtual/glibc
