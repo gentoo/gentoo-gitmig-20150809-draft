@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-0.8.11.ebuild,v 1.2 2004/02/24 18:56:57 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xchm/xchm-0.8.11.ebuild,v 1.3 2004/06/24 00:42:00 agriffis Exp $
 
 DESCRIPTION="Utility for viewing Microsoft .chm files."
 HOMEPAGE="http://xchm.sf.net"
@@ -25,7 +25,7 @@ src_install() {
 	einstall || die
 	dodoc COPYING AUTHORS README
 
-	if [ "`use doc`" ]; then
+	if use doc; then
 	cd ${S}"-doc"
 	dohtml html/*
 	fi
