@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.0.ebuild,v 1.6 2005/04/03 08:26:23 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.0.ebuild,v 1.7 2005/04/03 17:06:33 luckyduck Exp $
 
 inherit java-pkg
 
 DESCRIPTION="Easy-to-use Java logging toolkit"
 HOMEPAGE="http://avalon.apache.org/"
 SRC_URI="mirror://apache/avalon/avalon-logkit/distributions/${PF}.dev-0-src.tar.gz"
-KEYWORDS="~x86 ~amd64 ~ppc64 ~sparc ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc64 ~sparc"
 LICENSE="Apache-2.0"
 SLOT="2.0"
 IUSE="doc jikes jms javamail"
