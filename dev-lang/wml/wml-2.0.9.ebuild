@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.9.ebuild,v 1.8 2003/11/24 17:39:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.9.ebuild,v 1.9 2004/01/30 05:26:53 drobbins Exp $
 
 inherit fixheadtails
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc"
 
-DEPEND="dev-lang/perl"
+DEPEND="dev-lang/perl >=sys-devel/autoconf-2.58"
 
 src_unpack() {
 	unpack ${A}

@@ -1,4 +1,4 @@
+MD5 896ff295e2d75f1690c2678d5bc87dd1 ChangeLog 1155
+MD5 c76320935bcff0d9dc6c0d9a9e6e3930 wml-2.0.9.ebuild 1009
 MD5 ea584f051a470445242165526961b55d files/digest-wml-2.0.9 62
 MD5 aefa456b69c01c50eca3fe8b497c1f59 files/2.0.9-fix-configure.in.patch 1411
-MD5 896ff295e2d75f1690c2678d5bc87dd1 ChangeLog 1155
-MD5 a5f8525a39a92f371c029b85070d6f18 wml-2.0.9.ebuild 981
