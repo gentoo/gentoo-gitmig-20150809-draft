@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-4.0.64.ebuild,v 1.1 2004/03/08 21:16:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-4.0.64.ebuild,v 1.2 2004/04/04 16:19:07 usata Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ DESCRIPTION="great MIME mail reader for Emacs/XEmacs"
 HOMEPAGE="http://www.mew.org/"
 SRC_URI="ftp://ftp.mew.org/pub/Mew/alpha/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="BSD"
 SLOT="0"
 # 4.x is meant to be a development branch, so please don't unmask it!
 KEYWORDS="~x86 ~alpha"
