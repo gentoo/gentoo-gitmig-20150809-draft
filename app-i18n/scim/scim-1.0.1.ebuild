@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.0.1.ebuild,v 1.3 2005/01/01 14:38:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.0.1.ebuild,v 1.4 2005/01/31 13:47:59 usata Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="Smart Common Input Method (SCIM) is an Input Method (IM) development platform"
-HOMEPAGE="http://freedesktop.org/~suzhe/"
+HOMEPAGE="http://www.scim-im.org/"
 SRC_URI="http://freedesktop.org/~suzhe/sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
