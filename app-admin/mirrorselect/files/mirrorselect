@@ -8,23 +8,50 @@
 # dynamic setup once the lists are in place to pull from
 
 MIRROR_LIST='
-http://distro.ibiblio.org/gentoo (USA) ""
-ftp://ftp.gtlib.cc.gatech.edu/pub/gentoo (USA) ""
-http://gentoo.oregonstate.edu (USA) ""
-ftp://ftp.oregonstate.edu/pub/gentoo (USA/ftp) ""
-http://mirrors.sunsite.dk/gentoo/ (Denmark) ""
-ftp://sunsite.dk/mirrors/gentoo/ (Denmark/ftp) ""
-http://gentoo.linux.no/ (Norway) ""
-ftp://gentoo.linux.no/pub/gentoo/ (Norway/ftp) ""
-http://ftp.tu-clausthal.de/pub/linux/gentoo/ (Germany) ""
-ftp://ftp.tu-clausthal.de/pub/linux/gentoo/ (Germany/ftp) ""
-http://ftp.gentoo.or.kr/ (South_Korea) ""
-http://gentoo.gnukorea.org/ (South_Korea) ""
-ftp://ftp.dale.ro/pub/mirrors/ftp.ibiblio.org/pub/Linux/distributions/gentoo/ (Romania/ftp) ""
-http://ftp.snt.utwente.nl/pub/os/linux/gentoo/ (Netherlands) ""
-ftp://ftp.snt.utwente.nl/pub/os/linux/gentoo/ (Netherlands/ftp) ""
-ftp://ftp.rez-gif.supelec.fr/pub/Linux/distrib/gentoo/ (France/ftp) ""
+http://distro.ibiblio.org/gentoo (USA)
+ftp://ftp.gtlib.cc.gatech.edu/pub/gentoo (USA)
+http://gentoo.oregonstate.edu (USA)
+ftp://ftp.oregonstate.edu/pub/gentoo (USA/ftp)
+http://mirrors.sunsite.dk/gentoo/ (Denmark)
+ftp://sunsite.dk/mirrors/gentoo/ (Denmark/ftp)
+http://gentoo.linux.no/ (Norway)
+ftp://gentoo.linux.no/pub/gentoo/ (Norway/ftp)
+http://ftp.tu-clausthal.de/pub/linux/gentoo/ (Germany)
+ftp://ftp.tu-clausthal.de/pub/linux/gentoo/ (Germany/ftp)
+http://ftp.gentoo.or.kr/ (South_Korea)
+http://gentoo.gnukorea.org/ (South_Korea)
+ftp://ftp.dale.ro/pub/mirrors/ftp.ibiblio.org/pub/Linux/distributions/gentoo/ (Romania/ftp)
+http://ftp.snt.utwente.nl/pub/os/linux/gentoo/ (Netherlands)
+ftp://ftp.snt.utwente.nl/pub/os/linux/gentoo/ (Netherlands/ftp) 
+ftp://ftp.rez-gif.supelec.fr/pub/Linux/distrib/gentoo/ (France/ftp)
 '
+
+# change "mirror (loc)" to "mirror(loc)" for bash loop below
+MIRROR_LOCS=`echo $MIRROR_LIST | sed -e "s/ (/(/g"`
+# grab the current GENTOO_MIRRORS from /etc/make.conf and remove "'s
+DEF_MIRROR_LOCS=`egrep -e "^[ \t]*GENTOO_MIRRORS=[^ \t\n]" /etc/make.conf | sed -e "s/.*GENTOO_MIRRORS=\"//" | sed -e "s/[\" ]/\n/g"`
+
+MIRROR_LIST=""
+for entry in `echo $MIRROR_LOCS`
+do
+    found="0"
+    for defentry in  `echo $DEF_MIRROR_LOCS`
+    do
+        if [ `echo $entry | egrep $defentry` ]
+	then
+		found="1"
+	fi
+    done
+
+    # split entries back into "mirror (loc)"
+    entry=`echo $entry | sed -e "s/(/ (/"`
+    if [ "${found}" = "1" ]
+    then
+    	MIRROR_LIST="${MIRROR_LIST} $entry ON"
+    else
+    	MIRROR_LIST="${MIRROR_LIST} $entry OFF"
+    fi
+done
 
 MIRRORS=`dialog --title "GENTOO MIRRORS LIST" \
   --checklist "Please select your desired mirror(s):" 20 80 12 \
@@ -39,8 +66,7 @@ fi
 echo "Selected: $MIRRORS"
 
 # adjust settings in make.conf, all in one command to avoid complaints of make.conf being moved
-mv /etc/make.conf /etc/make.conf.old && cat /etc/make.conf.old | grep -v "GENTOO_MIRRORS" > /etc/make.conf && \
-
+mv /etc/make.conf /etc/make.conf.old && cat /etc/make.conf.old | egrep -e "^[^#]*GENTOO_MIRRORS=[^ \t\n]" -v > /etc/make.conf && \
 echo "GENTOO_MIRRORS=\"$MIRRORS\"" >> /etc/make.conf
 
 # triple check, it make.conf doesn't exist and make.conf.old doesn, replace it and warn user that
@@ -59,4 +85,3 @@ else
 	fi
 
 fi
-
