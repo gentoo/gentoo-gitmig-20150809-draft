@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/evms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.26 2005/02/05 10:00:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.27 2005/02/26 11:17:35 eradicator Exp $
+
+  26 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org> evms-2.5.1.ebuild:
+  Stable amd64, x86.
 
 *evms-2.5.1 (05 Feb 2005)
 
