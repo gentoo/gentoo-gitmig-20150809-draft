@@ -1,27 +1,27 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-coverviewer/xmms-coverviewer-0.1.11_pre2.ebuild,v 1.2 2004/01/28 02:48:40 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-coverviewer/xmms-coverviewer-0.11_pre3.ebuild,v 1.1 2004/01/28 02:48:40 raker Exp $
 
 IUSE=""
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="An XMMS plugin for viewing album covers"
 HOMEPAGE="http://coverviewer.sourceforge.net/"
 SRC_URI="mirror://sourceforge/coverviewer/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	media-libs/gdk-pixbuf
 	media-sound/xmms"
 
 src_compile() {
-	local myconf="--with-gnu-ld"
 
-	econf ${myconf} || die "configure failed"
+	econf
 
 	emake || die "make failed"
 }
