@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/ne
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ChangeLog,v 1.4 2004/06/24 21:59:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ChangeLog,v 1.5 2004/07/31 14:18:53 zul Exp $
+
+*ne-1.35 (02 Aug 2004)
+
+  02 Aug 2004; Chuck Short <zul@gentoo.org> ne-1.35.ebuild:
+  Version bump. Closes #56526.
 
   13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> ne-1.19.ebuild:
   Don't assign default to S; header fix
