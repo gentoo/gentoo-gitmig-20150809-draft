@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.54 2003/06/13 01:42:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.55 2003/06/21 10:00:18 robbat2 Exp $
+
+*mysql-3.23.57 (17 Mar 2003)
+
+  12 Jun 2003; <robbat2@gentoo.org> mysql-3.23.57.ebuild:
+  Version bump.
 
 *mysql-4.0.13-r3 (12 Jun 2003)
 
