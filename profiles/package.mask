@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3683 2005/03/05 13:11:32 swegener Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3684 2005/03/05 16:41:30 sebastian Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Sebastian Bergmann <sebastian@gentoo.org> (05 Mar 2005)
+# Segfaults on module shutdown.
+=dev-php/PECL-imagick-0.9.11
 
 # solar <solar@gentoo> (01 Mar 2005)
 # security masked by request of bug #79720
