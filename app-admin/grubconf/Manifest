@@ -1,3 +1,5 @@
-MD5 5dd9a2ba10559a619ae2f9ffb2aaa629 grubconf-0.4.ebuild 636
-MD5 1dc068bcd150beb69f92d20498e23403 ChangeLog 362
+MD5 0077e9fd0cceb788d80cc9f4ee9e97ca grubconf-0.4.ebuild 619
+MD5 9266cef3e01da2b670d4d6946cfa8376 ChangeLog 477
+MD5 f9f6af2d12c82f7bf30f86d4c93854fc grubconf-0.5.ebuild 620
 MD5 814692e187e763f982ff196aa8b2089a files/digest-grubconf-0.4 64
+MD5 8e834ff21d70df2e213ad7ce43570d43 files/digest-grubconf-0.5 64
