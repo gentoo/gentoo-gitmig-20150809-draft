@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gok/gok-0.8.4.ebuild,v 1.1 2003/11/04 01:07:51 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gok/gok-0.8.4.ebuild,v 1.2 2003/11/06 21:00:09 leonardop Exp $
 
 inherit gnome2
 
@@ -28,3 +28,11 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper"
 
 DOCS="AUTHORS ChangeLog COPYING NEWS README"
+
+src_unpack()
+{
+	unpack ${A}
+	cd ${S}
+
+	sed -i 's:$pkgdatadir:/usr/share/gok:' gok-with-references.schemas.m4
+}
