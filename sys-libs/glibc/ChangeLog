@@ -1,6 +1,19 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.285 2004/10/31 15:51:47 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.286 2004/11/05 02:56:41 lv Exp $
+
+*glibc-2.3.4.20041102 (04 Nov 2004)
+
+  04 Nov 2004; Travis Tilley <lv@gentoo.org>
+  +files/2.3.4/glibc-2.3.4-features-header-fix.patch,
+  +files/2.3.4/glibc-2.3.4-fedora-branch-nomalloccheck.patch,
+  +files/2.3.4/glibc-2.3.4-mdns-resolver-20041102.diff,
+  +glibc-2.3.4.20041102.ebuild:
+  fedora-branch update. converted version checks to versionator.eclass. moved
+  all instances of CCHOST over to CTARGET. added the ability to disable the
+  malloc check at build-time with USE=nomalloccheck. remove
+  /$(get_libdir)/tls/ in preinst if migrating from nptl to nptlonly (bug
+  69258)
 
   31 Oct 2004; Tom Gall <tgall@gentoo.org> glibc-2.3.4.20041021.ebuild:
   build fix for ppc64
