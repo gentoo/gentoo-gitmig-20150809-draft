@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r6.ebuild,v 1.3 2004/10/20 14:40:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r7.ebuild,v 1.1 2004/10/20 16:55:35 swegener Exp $
 
 inherit flag-o-matic eutils
 

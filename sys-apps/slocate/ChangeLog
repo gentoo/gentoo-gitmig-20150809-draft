@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.51 2004/10/20 14:40:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.52 2004/10/20 16:55:35 swegener Exp $
+
+*slocate-2.7-r7 (20 Oct 2004)
+
+  20 Oct 2004; Sven Wegener <swegener@gentoo.org> -slocate-2.7-r6.ebuild,
+  +slocate-2.7-r7.ebuild:
+  Revision bump to distribute a fixed version for the suid root issue.
 
   20 Oct 2004; Sven Wegener <swegener@gentoo.org> slocate-2.7-r6.ebuild:
   Don't install slocate suid root but sgid slocate.
