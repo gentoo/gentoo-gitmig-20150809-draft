@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.25 2004/11/22 17:53:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.26 2004/11/22 18:43:29 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/ypbind.confd, -files/ypbind.rc5, -files/ypbind.rc6,
+  -ypbind-1.11-r1.ebuild, -ypbind-1.12.ebuild, -ypbind-1.17.2.ebuild:
+  Cleaning up old versions.
 
   22 Nov 2004; Markus Rothe <corsair@gentoo.org> ypbind-1.17.2-r1.ebuild:
   Stable on ppc64; bug #66786
