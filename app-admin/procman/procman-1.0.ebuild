@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/procman-1.0.ebuild,v 1.1 2002/02/17 01:41:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/procman-1.0.ebuild,v 1.2 2002/03/29 00:00:28 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Process viewer for GNOME"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/procman/${P}.tar.gz"
 HOMEPAGE="http://www.personal.psu.edu/kfv101/procman"
 
 DEPEND="nls? ( sys-devel/gettext )
-        >=gnome-extra/gal-0.13-r1
+	>=gnome-extra/gal-0.13-r1
 	>=gnome-base/libgtop-1.0.12-r1"
 
 src_compile() {
@@ -22,11 +22,11 @@ src_compile() {
 	CFLAGS="$CFLAGS `gdk-pixbuf-config --cflags`"
 
 	./configure --host=${CHOST} 					\
-		    --prefix=/usr					\
-		    --sysconfdir=/etc					\
-		    --localstatedir=/var/lib				\
-		    --disable-more-warnings				\
-		    $myconf || die
+		--prefix=/usr					\
+		--sysconfdir=/etc					\
+		--localstatedir=/var/lib				\
+		--disable-more-warnings				\
+		${myconf} || die
 
 	emake || die
 }
