@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.88 2004/12/31 02:28:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.89 2004/12/31 08:44:25 corsair Exp $
+
+  31 Dec 2004; Markus Rothe <corsair@gentoo.org>
+  +files/gnupg-1.2.6-ppc64.patch, gnupg-1.2.6.ebuild:
+  Added patch for ppc64; bug #75355
 
   31 Dec 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
   gnupg-1.2.6.ebuild:

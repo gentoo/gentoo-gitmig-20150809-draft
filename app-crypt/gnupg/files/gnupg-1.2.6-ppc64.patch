@@ -1,0 +1,15 @@
+--- mpi/config.links.orig	2004-12-31 08:35:14.690939440 +0000
++++ mpi/config.links	2004-12-31 08:36:32.005901592 +0000
+@@ -215,7 +215,11 @@
+ 	path="m68k/mc68020 m68k"
+ 	;;
+ 
+-    powerpc*-*-linux*)
++	powerpc64*-*-linux*)
++	path="powerpc64"
++	;;
++
++	powerpc*-*-linux*)
+ 	echo '/* configured for powerpc/ELF */' >>./mpi/asm-syntax.h
+ 	echo '#define ELF_SYNTAX'               >>./mpi/asm-syntax.h
+ 	cat   $srcdir/mpi/powerpc32/syntax.h	>>./mpi/asm-syntax.h
