@@ -1,0 +1,12 @@
+# ChangeLog for media-plugins/xmms-finespectrum
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-finespectrum/ChangeLog,v 1.1 2004/02/02 10:04:58 eradicator Exp $
+
+*xmms-finespectrum-1.0.1_alpha1 (02 Feb 2004)
+
+  02 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-finespectrum-1.0.1_alpha1.ebuild:
+  This is a visualization plugin similar to the simple spectrum analyzer that
+  comes with xmms, but this one uses fine lines instead of bars. Ebuild
+  submitted by Stefan Briesenick <sbriesen@gmx.de> in bug #39963.
+
