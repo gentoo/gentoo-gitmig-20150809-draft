@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-env
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.14 2005/03/17 20:55:59 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.15 2005/04/04 20:51:27 gustavoz Exp $
+
+  04 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnustep-env-0.1.4.ebuild:
+  Stable on sparc
 
 *gnustep-env-0.1.6 (17 Mar 2005)
 
