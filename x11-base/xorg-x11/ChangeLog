@@ -1,6 +1,22 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.217 2004/11/20 22:11:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.218 2004/11/21 07:43:00 spyderous Exp $
+
+  20 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r4.ebuild:
+  PATCH_VER 0.2.9. Add 1110_all_6.8.0-force-build-font-utils-if-needed.patch.
+  USE=minimal will now start successfully, because enough fonts are built.
+  When BuildClients is off and BuildFonts is on, mkfontscale and mkfontdir
+  aren't built. But mkfontscale is used during the build process and mkfontdir
+  is needed later, so we should build them anyway if UseInstalled isn't on.
+  This fixes the USE=minimal build. Also, build the RGB database and xinit for
+  a couple of non-essential but nearly always desired things. We require
+  bdftopcf too. Also add xauth so startx works nicely. Problems still remain
+  with switching back to the console using the ctrl-alt-Fn sequence, probably
+  because of us not doing something with xkb. Don't worry about changing
+  definition of i386Drivers because we don't use it anymore in USE=minimal.
+  Only add i810 for amd64, rather than for everyone. GLU depends on GL being
+  built, so fix that. XF86Rush similarly depends on XV.
 
   20 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild:

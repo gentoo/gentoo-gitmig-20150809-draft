@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.8 2004/11/20 22:11:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.9 2004/11/21 07:43:00 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -40,7 +40,7 @@ IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc font-server hardened
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.6"
-PATCH_VER="0.2.8"
+PATCH_VER="0.2.9"
 XCUR_VER="0.3.1"
 #MGADRV_VER="1_3_0beta"
 #VIADRV_VER="0.1"
@@ -588,7 +588,9 @@ host_def_setup() {
 		#	>> ${HOSTCONF}
 
 		# Enable i810 on x86_64 (RH #126687)
-		echo "#define XF86ExtraCardDrivers i810" >> ${HOSTCONF}
+		if use amd64; then
+			echo "#define XF86ExtraCardDrivers i810" >> ${HOSTCONF}
+		fi
 
 		# FHS install locations
 		echo "#define ManDirectoryRoot /usr/share/man" >> ${HOSTCONF}
@@ -749,6 +751,9 @@ host_def_setup() {
 		use_build opengl BuildGlxExt
 		use_build opengl BuildGLXLibrary
 		use_build opengl BuildXF86DRI
+		# Needs GL headers
+		use_build opengl BuildGLULibrary
+
 
 		if use hppa; then
 			echo "#define DoLoadableServer NO" >> ${HOSTCONF}
@@ -760,6 +765,9 @@ host_def_setup() {
 		# Make xv optional for more minimal builds
 		use_build xv BuildXvLibrary
 		use_build xv BuildXvExt
+		# Depends on X11/extensions/Xv.h
+		use_build xv BuildXF86RushExt
+		use_build xv BuildXF86RushLibrary
 
 		if use alpha; then
 			echo "#define XF86CardDrivers mga nv tga s3virge sis rendition \
@@ -862,14 +870,27 @@ host_def_setup() {
 
 		if use minimal; then
 			echo "#define BuildClients NO" >> ${HOSTCONF}
-			echo "#define BuildFonts NO" >> ${HOSTCONF}
+
+			# Without nls, truetype-fonts, type1-fonts, we only build misc
+			# Now let's try to reduce what gets built in misc
+			# iso8859-1 has the "fixed" font
+			echo "#define BuildISO8859_2Fonts NO" >> ${HOSTCONF}
+			echo "#define BuildISO8859_3Fonts NO" >> ${HOSTCONF}
+			echo "#define BuildISO8859_4Fonts NO" >> ${HOSTCONF}
+			# 5 is cyrillic, 6 isn't in misc, 7 is greek, 8 is hebrew
+			echo "#define BuildISO8859_9Fonts NO" >> ${HOSTCONF}
+			echo "#define BuildISO8859_10Fonts NO" >> ${HOSTCONF}
+			# 11 is thai, 12 isn't in misc
+			echo "#define BuildISO8859_13Fonts NO" >> ${HOSTCONF}
+			echo "#define BuildISO8859_14Fonts NO" >> ${HOSTCONF}
+			echo "#define BuildISO8859_15Fonts NO" >> ${HOSTCONF}
+			echo "#define BuildISO8859_16Fonts NO" >> ${HOSTCONF}
+
 			echo "#define XnestServer NO" >> ${HOSTCONF}
 			echo "#define XVirtualFramebufferServer NO" >> ${HOSTCONF}
 			echo "#define XInputDrivers mouse keyboard" >> ${HOSTCONF}
 			# Don't want to add to defaults for other archs, set above
 			if use x86; then
-				# Removed nsc
-				echo "#define i386Drivers i810" >> ${HOSTCONF}
 				# If you want more drivers built with minimal, file a bug
 				# -Donnie Berkholz <spyderous@gentoo.org>
 				# Remove glint, tga, s3, s3virge, rendition, neomagic, i740,
