@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.0.3.ebuild,v 1.2 2002/08/27 19:32:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.0.3.ebuild,v 1.3 2002/08/30 03:34:18 gerk Exp $
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - educational apps"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 
