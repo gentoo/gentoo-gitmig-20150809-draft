@@ -1,15 +1,18 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xmysqladmin/xmysqladmin-1.0.ebuild,v 1.2 2002/07/11 06:30:19 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xmysqladmin/xmysqladmin-1.0.ebuild,v 1.3 2002/07/22 08:24:36 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xforms based front end to mysql"
 SRC_URI="ftp://ftp.mysql.com/Contrib/${P}.tar.gz"
 HOMEPAGE="http://www.mysql.org"
-DEPEND="virtual/x11
-		 >=x11-libs/xforms-089"
 
-#RDEPEND=""
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="x86"
+
+DEPEND="virtual/x11
+	virtual/xforms"
 
 src_unpack() {
 	unpack ${A}
@@ -31,7 +34,11 @@ src_install () {
 	
 	dodir /usr/bin
 	dodir /usr/share/pixmaps
-    try make INSTALLPATH=${D}/usr/bin PIXMAPPATH=${D}/usr/share/pixmaps install
-	 dodoc README INSTALL CHANGES ANNOUNCE TODO
+	make \
+		INSTALLPATH=${D}/usr/bin \
+		PIXMAPPATH=${D}/usr/share/pixmaps \
+		install || die
+
+	dodoc README INSTALL CHANGES ANNOUNCE TODO
 }
 

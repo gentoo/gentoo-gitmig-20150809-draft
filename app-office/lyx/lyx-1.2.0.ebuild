@@ -1,25 +1,27 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.0.ebuild,v 1.4 2002/07/11 06:30:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.0.ebuild,v 1.5 2002/07/22 08:24:36 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LyX is an WYSIWYM frontend for LaTeX"
 SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.gz"
 HOMEPAGE="http://www.lyx.org/"
-LICENSE="GPL-2"
+
 SLOT="0"
-KEYWORDS="*"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 # This lyx-base ebuild only depends on the absolutely necessary packages.
 # The acompanying lyx-utils ebuild depends on lyx-base and on everything
 # else that lyx can use.
 DEPEND="virtual/x11
-	x11-libs/xforms
+	virtual/xforms
 	app-text/tetex 
 	>=sys-devel/perl-5
 	nls? ( sys-devel/gettext )
 	app-text/aiksaurus"
-RDEPEND="$DEPEND 
+
+RDEPEND="${DEPEND}
 	app-text/ghostscript
 	app-text/xpdf
 	app-text/ispell
