@@ -1,0 +1,11 @@
+# ChangeLog for app-dicts/wnn-ldic
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wnn-ldic/ChangeLog,v 1.1 2004/10/23 13:14:37 usata Exp $
+
+*wnn-ldic-1.04 (23 Oct 2004)
+
+  23 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +wnn-ldic-1.04.ebuild:
+  Initial import. Thanks to mft at GentooJP EbuildJP,
+  http://ebuild.gentoo.gr.jp/.
+
