@@ -1,0 +1,17 @@
+# ChangeLog for dev-java/libgtk-java
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/ChangeLog,v 1.1 2004/11/22 00:22:20 karltk Exp $
+
+*libgnome-java-2.8.2 (22 Nov 2004)
+
+  22 Nov 2004; <karltk@gentoo.org> +metadata.xml,
+  +files/libgnome-java-2.8.2_gentoo-PN-SLOT.patch,
+  +libgnome-java-2.8.2.ebuild:
+  Initial import. Fixes #70560.
+
+  08 Nov 2004; Andrew Cowie <andrew@operationaldynamics.com>
+  New ebuild. What used to be java-gnome is now multiplexed into various modular
+  subcomponents. Upstream CVS was all re-arranged, and now there is a release
+  tarball for each piece. This ebuild is the Java binding around the core GNOME
+  libraries.
+
