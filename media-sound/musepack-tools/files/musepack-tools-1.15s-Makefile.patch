@@ -1,15 +1,5 @@
-diff -ru sv7/Makefile sv7_nu/Makefile
---- sv7/Makefile	2004-03-18 00:17:54.000000000 +0200
-+++ sv7_nu/Makefile	2004-04-16 20:41:00.842641680 +0300
-@@ -12,7 +12,7 @@
- 
- # Select the compiler. Normally gcc is used.
- 
--CC       = cc   -pipe -L/lib
-+CC       = gcc   -pipe -L/lib
- CC3      = gcc3 -pipe -L/lib
- 
- 
+--- Makefile.orig	2004-06-18 23:27:10.227221536 +0300
++++ Makefile	2004-06-18 23:29:28.279234440 +0300
 @@ -20,8 +20,7 @@
  # If unset Intel 386 with optimization for Pentium is selected.
  
@@ -38,24 +28,6 @@ diff -ru sv7/Makefile sv7_nu/Makefile
  	-Wall                   \
  	-pedantic               \
  	-W                      \
-@@ -143,7 +142,7 @@
- 	-fstrength-reduce       \
- 	-fexpensive-optimizations \
- 	-funroll-all-loops -fmove-all-movables -fstrength-reduce \
--	-mpreferred-stack-boundary=2 -malign-jumps=5 -malign-loops=0 -malign-functions=5
-+	-mpreferred-stack-boundary=2 -falign-jumps=5 -falign-loops=0 -falign-functions=5
- 
- # -fcse-follow-jumps \
- 
-@@ -156,7 +155,7 @@
- 	-frerun-loop-opt        \
- 	-fstrength-reduce       \
- 	-fmove-all-movables -fstrength-reduce -fcse-follow-jumps \
--	-mpreferred-stack-boundary=2 -malign-jumps=5 -malign-loops=0 -malign-functions=5
-+	-mpreferred-stack-boundary=2 -falign-jumps=5 -falign-loops=0 -falign-functions=5
- 
- # Options to generate Assembly code for inspecting
- 
 @@ -189,7 +188,7 @@
  
  # Merge all options together for CFLAGS and CFLAG_SIZE
@@ -71,12 +43,13 @@ diff -ru sv7/Makefile sv7_nu/Makefile
  $(MPPDEC_TARGET): $(MPPDEC_OBJ)
 +ifndef BLDSTATIC
  	$(CC)         $(CFLAGS) $(MPPDEC_OBJ) -o $(MPPDEC_TARGET)        $(LDADD)
- 	-$(STRIP)     $(STRIPOPT)                $(MPPDEC_TARGET)
+-	-$(STRIP)     $(STRIPOPT)                $(MPPDEC_TARGET)
 -	$(CC) -static $(CFLAGS) $(MPPDEC_OBJ) -o $(MPPDEC_TARGET)-static $(LDADD)
 -	-$(STRIP)     $(STRIPOPT)                $(MPPDEC_TARGET)-static
++#	-$(STRIP)     $(STRIPOPT)                $(MPPDEC_TARGET)
 +else
 +	$(CC) -static $(CFLAGS) $(MPPDEC_OBJ) -o $(MPPDEC_TARGET) $(LDADD)
-+	-$(STRIP)     $(STRIPOPT)                $(MPPDEC_TARGET)
++#	-$(STRIP)     $(STRIPOPT)                $(MPPDEC_TARGET)
 +endif
  
  
@@ -87,22 +60,29 @@ diff -ru sv7/Makefile sv7_nu/Makefile
  $(MPPENC_TARGET): $(MPPENC_OBJ)
 +ifndef BLDSTATIC
  	$(CC)         $(CFLAGS) $(MPPENC_OBJ) -o $(MPPENC_TARGET)        $(LDADD)
- 	-$(STRIP)     $(STRIPOPT)                $(MPPENC_TARGET)
+-	-$(STRIP)     $(STRIPOPT)                $(MPPENC_TARGET)
 -	$(CC) -static $(CFLAGS) $(MPPENC_OBJ) -o $(MPPENC_TARGET)-static $(LDADD)
 -	-$(STRIP)     $(STRIPOPT)                $(MPPENC_TARGET)-static
++#	-$(STRIP)     $(STRIPOPT)                $(MPPENC_TARGET)
 +else
 +	$(CC) -static $(CFLAGS) $(MPPENC_OBJ) -o $(MPPENC_TARGET) $(LDADD)
-+	-$(STRIP)     $(STRIPOPT)                $(MPPENC_TARGET)
++#	-$(STRIP)     $(STRIPOPT)                $(MPPENC_TARGET)
 +endif
  
  
  $(MPPDEC_TARGET)-profiling: $(MPPDEC_OBJ)
-@@ -344,7 +349,7 @@
- 	-$(STRIP)     $(STRIPOPT)           $(TAGGER_TARGET)
+@@ -336,12 +341,12 @@
+ 
+ $(REPLAY_TARGET): $(REPLAY_OBJ) mpp.h config.c
+ 	$(CC) $(CFLAGS) $(REPLAY_OBJ) -o $(REPLAY_TARGET)      $(LDADD)
+-	-$(STRIP)     $(STRIPOPT)           $(REPLAY_TARGET)
++#	-$(STRIP)     $(STRIPOPT)           $(REPLAY_TARGET)
  
  
--$(CLIPSTAT_TARGET):
-+$(CLIPSTAT_TARGET): $(CLIPSTAT_OBJ)
- 	$(CC)         $(CFLAGS) $(CLIPSTAT_OBJ) -o $(CLIPSTAT_TARGET)  $(LDADD)
- 	-$(STRIP)     $(STRIPOPT)           $(CLIPSTAT_TARGET)
+ $(TAGGER_TARGET):
+ 	$(CC) -DMPP_DECODER $(CFLAGS) -o $(TAGGER_TARGET) $(TAGGER_TARGET).c
+-	-$(STRIP)     $(STRIPOPT)           $(TAGGER_TARGET)
++#	-$(STRIP)     $(STRIPOPT)           $(TAGGER_TARGET)
  
+ 
+ $(CLIPSTAT_TARGET):
