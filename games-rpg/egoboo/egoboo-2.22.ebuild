@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22.ebuild,v 1.6 2004/02/29 21:10:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.22.ebuild,v 1.7 2004/03/15 19:25:11 mr_bones_ Exp $
 
-inherit games flag-o-matic
+inherit eutils flag-o-matic games
 
 DESCRIPTION="A 3d dungeon crawling adventure in the spirit of NetHack"
 HOMEPAGE="http://egoboo.sourceforge.net/"
@@ -12,13 +12,15 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* x86 ppc"
 
-DEPEND="virtual/x11
+RDEPEND="virtual/glibc
+	virtual/x11
 	virtual/opengl
 	virtual/glu
-	media-libs/libsdl
+	media-libs/libsdl"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	replace-cpu-flags i686 'athlon*' pentium4
@@ -29,7 +31,7 @@ src_unpack() {
 	sed -i \
 		-e "/^CC=/ s:=.*:=${CC}:" \
 		-e "s:-ffast-math -funroll-loops -O3 -g:${CFLAGS}:" code/Makefile \
-		|| die "sed code/Makefile failed"
+			|| die "sed code/Makefile failed"
 	sed \
 		-e "s:GENTOODIR:${GAMES_DATADIR}:" "${FILESDIR}/${P}.sh" \
 			> "${T}/egoboo" || die "sed wrapper failed"

@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/egoboo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/ChangeLog,v 1.5 2004/02/15 14:36:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/ChangeLog,v 1.6 2004/03/15 19:25:11 mr_bones_ Exp $
+
+  15 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> egoboo-2.22.ebuild:
+  inherit eutils for epatch
 
   15 Feb 2004; David Holm <dholm@gentoo.org> egoboo-2.22.ebuild,
   files/2.22-endian.patch:
