@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.8.0.20030726.ebuild,v 1.1 2003/07/26 23:51:00 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.8.0.20030726.ebuild,v 1.2 2003/07/27 00:53:04 solar Exp $
 
 DESCRIPTION="(Prelude|Perl) IDS Web Interface"
 HOMEPAGE="http://www.prelude-ids.org"
@@ -24,7 +24,7 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${P}
+S=${WORKDIR}/
 
 src_install() {
 	into /home/httpd/htdocs/piwi || die
