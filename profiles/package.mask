@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3471 2005/01/10 05:19:10 joem Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3472 2005/01/10 12:14:26 hollow Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# <hollow@gentoo.org> (10 Jan 2005)
+# Apache herd package refresh (New ebuild)
+# Masked for user testing. Meta-bug #76457
+=www-apache/mod_proxy_html-2.4.3
 
 # <joem@gentoo.org> (09 Jan 2005)
 # masked pending removal, see bug #60658
