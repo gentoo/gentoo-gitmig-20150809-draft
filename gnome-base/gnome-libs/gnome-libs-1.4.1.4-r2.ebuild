@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.4-r2.ebuild,v 1.1 2002/03/21 06:36:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.1.4-r2.ebuild,v 1.2 2002/04/03 00:24:28 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Core Libraries"
@@ -26,8 +26,6 @@ src_compile() {
 
 	# libtoolize
 	libtoolize --copy --force
-	aclocal
-	autoconf
 
 	./configure --host=${CHOST} \
 		--prefix=/usr \
