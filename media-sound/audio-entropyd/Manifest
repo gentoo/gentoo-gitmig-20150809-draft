@@ -1,5 +1,5 @@
-MD5 fcbd9eea92d2df0b615aa2d6241292c6 ChangeLog 1367
-MD5 2bd7ac08226825e8b5f6aa3247f10b03 audio-entropyd-0.0.6.ebuild 934
+MD5 1daee84a26dcd5a75ef01990b5d5e44e ChangeLog 1471
+MD5 1146073ad0d96b69d6cadf79eaf57c8d audio-entropyd-0.0.6.ebuild 941
 MD5 96e29d7bb8e68a4c9e642e3b4029f762 metadata.xml 325
 MD5 8592534118c85eae46cc0e39483f1b90 files/audio-entropyd.conf 300
 MD5 9dc30db1d3f7578f8aefd1482b3dea86 files/audio-entropyd.init 775
