@@ -2,9 +2,9 @@ MD5 ec17af0fc75350e8f76ee88f40fe522b cdrtools-1.11.40.ebuild 1413
 MD5 867fe705060c601da4d74b972d5e9c3c cdrtools-2.01_alpha18-r1.ebuild 2041
 MD5 8c0f9475e4fca44fce7e15cbf2b5e5d0 cdrtools-2.01_alpha19.ebuild 2193
 MD5 77518f35fa3d3f6df4adb77535b4888f cdrtools-2.01_alpha14.ebuild 1655
-MD5 dce61de5323ad7e0d837a616272d935f ChangeLog 8587
+MD5 8c124a138e4fe8ab7cc6e30344a87912 ChangeLog 8583
 MD5 dbca373ea9623e091bd4193b24d6c82a metadata.xml 579
-MD5 28eb1b38df919a9722b488dcc76ec08f cdrtools-2.01_alpha20.ebuild 2240
+MD5 8e899e67a9a6c2e3e829889a102c30d0 cdrtools-2.01_alpha20.ebuild 2236
 MD5 e3b43dd5a5b48b4854646ce479e2b34b cdrtools-2.01_alpha16.ebuild 1814
 MD5 74271bb1ef690bf0f08146bf29a3ec35 cdrtools-1.11.39-r1.ebuild 1505
 MD5 3e09d97c263f22dbda9a67df209b533c files/cdrtools-2.01-kernel25-support.patch 602
