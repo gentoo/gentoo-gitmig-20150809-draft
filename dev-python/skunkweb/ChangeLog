@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/skunkweb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/ChangeLog,v 1.10 2004/09/28 00:41:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/ChangeLog,v 1.11 2004/10/08 16:43:09 pythonhead Exp $
+
+*skunkweb-3.4.0 (08 Oct 2004)
+
+  08 Oct 2004; Rob Cakebread <pythonhead@gentoo.org> files/skunkweb-init,
+  +skunkweb-3.4.0.ebuild:
+  Version bump. bug# 63686 Thanks Jacob Smullyan <smulloni@smullyan.org>
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> files/skunkweb-init:
   Gentoo Technologies, Inc. -> Gentoo Foundation
@@ -14,10 +20,6 @@
   03 Sep 2004; Christian Andreetta <satya@gentoo.org> metadata.xml,
   +files/skunkweb-init, skunkweb-3.4_beta5.ebuild:
   initscript added
-
-  02 Sep 2004; Seemant Kulleen <seemant@gentoo.org> skunkweb-3.4_beta5.ebuild:
-  remove sed from version calculation, it's
-  sooooooooooooooooooooooooooooooooooooo not necessary
 
   28 Jul 2004; Alastair Tse <liquidx@gentoo.org> skunkweb-3.4_beta5.ebuild:
   fix enewuser enewgroup issues (#58526)
