@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.7.ebuild,v 1.1 2004/02/21 01:02:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.7.ebuild,v 1.2 2004/03/23 07:14:41 eradicator Exp $
 
 IUSE="nls esd gnome oss alsa jack"
+
+inherit eutils
 
 S=${WORKDIR}/${P/_/-}
 
@@ -28,7 +30,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A}
@@ -36,6 +38,8 @@ src_unpack() {
 }
 
 src_compile() {
+	replace-flags "-O3" "-O2"
+
 	local myconf
 
 	use oss || myconf="--disable-oss"
