@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 d601fb59f91f62af1ce70620e7a29aa2 ChangeLog 1533
+MD5 01f811f1bd211ce19797d9fa3e62d77d ganglia-monitor-core-2.5.3.ebuild 1159
+MD5 3a1886bbacb945e3e4810d6c40fcb3e6 ganglia-monitor-core-2.5.5.ebuild 1170
 MD5 cde8b4e93c9339eb99fe3ad45941c99b metadata.xml 160
-MD5 6bb7ec586da680bf2eafa95db4999af1 ganglia-monitor-core-2.5.3.ebuild 1158
-MD5 c9c263df6c2e0576af86d573b7efc1a9 ChangeLog 1424
-MD5 0dedf82621622015fafa66496babf88e ganglia-monitor-core-2.5.5.ebuild 1162
-MD5 6ea88507b7ec6a23c51a280c9cfe5da4 files/gmetad.rc 328
 MD5 e23252239ffa30644727a70ca8abfc4f files/digest-ganglia-monitor-core-2.5.3 78
 MD5 c5fa1b2dd4786f2344a4ee34c04b4e82 files/digest-ganglia-monitor-core-2.5.5 78
+MD5 6ea88507b7ec6a23c51a280c9cfe5da4 files/gmetad.rc 328
 MD5 bdc9561d6348490789845f386576d97b files/gmond.rc 322
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBTeHvKtJO8LeSoosRAvnjAJ4+4LPq0LfonKygLw9PpZWRQcwmxQCffjMY
-F2mcn77GFWsREw92DzM3xLA=
-=h5d2
+iD8DBQFCGnSZ5mJXAu5GbtIRAo1BAJ0fWtyQAIpWBRGvHjCh/VeaVON2JgCfaA6Y
+TA9kauTcU8W179nWsCTdZjs=
+=z9L/
 -----END PGP SIGNATURE-----
