@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/struts
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.4 2004/07/13 17:42:05 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.5 2004/07/26 10:47:57 axxo Exp $
+
+  26 Jul 2004; Thomas Matthijs <axxo@gentoo.org> struts-1.1-r1.ebuild,
+  struts-1.1.ebuild:
+  fix depend
 
   13 Jul 2004; <SeJo@gentoo.org> struts-1.1.ebuild:
   added ~ppc keyword

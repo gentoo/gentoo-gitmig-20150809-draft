@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.1.ebuild,v 1.4 2004/07/13 17:42:05 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.1.ebuild,v 1.5 2004/07/26 10:47:57 axxo Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ DEPEND=">=virtual/jdk-1.4
 		>=dev-java/ant-1.5.4
 		>=dev-java/commons-beanutils-1.6.1
 		>=dev-java/commons-collections-2.1
-		>=dev-java/struts-legacy
+		dev-java/struts-legacy
 		>=dev-java/commons-digester-1.5
 		>=dev-java/commons-fileupload-1.0
 		>=dev-java/commons-lang-1.0
