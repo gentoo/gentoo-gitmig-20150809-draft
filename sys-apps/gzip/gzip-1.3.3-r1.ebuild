@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.3.3-r1.ebuild,v 1.10 2003/07/16 13:48:13 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.3.3-r1.ebuild,v 1.11 2003/09/07 01:32:20 msterret Exp $
 
 IUSE="nls build"
 
@@ -20,7 +20,7 @@ RDEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${WORKDIR}
 	epatch ${FILESDIR}/${P}-gentoo.diff
 }
@@ -29,9 +29,9 @@ src_compile() {
 	[ -z "`use nls`" ] && myconf="--disable-nls"
 
 	# Compiling with gcc3 and higher level of optimization seems to
-	# cause a segmentation fault in some very rare cases on alpha. 
+	# cause a segmentation fault in some very rare cases on alpha.
 	[ ${ARCH} = "alpha" ] && CFLAGS="-O -pipe"
-	
+
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--exec-prefix=/ \
@@ -48,7 +48,7 @@ src_install() {
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die
-	
+
 	cd ${D}/bin
 	for i in gzexe zforce zgrep zmore znew zcmp
 	do
@@ -66,7 +66,7 @@ src_install() {
 	dosym zdiff /bin/zcmp
 	dosym zgrep /bin/zegrep
 	dosym zgrep /bin/zfgrep
-	
+
 	if [ -z "`use build`" ]
 	then
 		cd ${D}/usr/share/man/man1

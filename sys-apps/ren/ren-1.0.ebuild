@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ren/ren-1.0.ebuild,v 1.8 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ren/ren-1.0.ebuild,v 1.9 2003/09/07 01:31:55 msterret Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Renames multiple files"
@@ -21,6 +21,6 @@ src_compile() {
 
 src_install() {
 	dobin ren
-	dodoc README 
+	dodoc README
 	doman ren.1
 }

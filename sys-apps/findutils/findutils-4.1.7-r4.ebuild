@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r4.ebuild,v 1.10 2003/07/16 13:44:20 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r4.ebuild,v 1.11 2003/09/07 01:34:23 msterret Exp $
 
 IUSE="nls build afs selinux"
 
@@ -58,7 +58,7 @@ src_compile() {
 
 src_install() {
 	einstall libexecdir=${D}/usr/lib/find || die
-		
+
 	prepallman
 
 	rm -rf ${D}/usr/var

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r1.ebuild,v 1.15 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r1.ebuild,v 1.16 2003/09/07 01:34:23 msterret Exp $
 
 IUSE="nls build"
 
@@ -40,10 +40,10 @@ src_install() {
 		localstatedir=/var/spool/locate \
 		libexecdir=${D}/usr/lib/find \
 		install || die
-		
+
 	dosed "s:TMPDIR=/usr/tmp:TMPDIR=/tmp:" usr/bin/updatedb
 	rm -rf ${D}/usr/var
-	if [ -z "`use build`" ] 
+	if [ -z "`use build`" ]
 	then
 		dodoc COPYING NEWS README TODO ChangeLog
 	else

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r3.ebuild,v 1.6 2003/07/16 13:44:20 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r3.ebuild,v 1.7 2003/09/07 01:34:23 msterret Exp $
 
 IUSE="nls build afs selinux"
 
@@ -37,7 +37,7 @@ src_compile() {
 		export LDFLAGS=-lpam
 		export LIBS=/usr/afsws/lib/pam_afs.so.1
 	fi
-		
+
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
@@ -55,12 +55,12 @@ src_install() {
 		localstatedir=${D}/var/spool/locate \
 		libexecdir=${D}/usr/lib/find \
 		|| die
-		
+
 	prepallman
 
 	dosed "s:TMPDIR=/usr/tmp:TMPDIR=/tmp:" usr/bin/updatedb
 	rm -rf ${D}/usr/var
-	if [ -z "`use build`" ] 
+	if [ -z "`use build`" ]
 	then
 		dodoc COPYING NEWS README TODO ChangeLog
 	else
