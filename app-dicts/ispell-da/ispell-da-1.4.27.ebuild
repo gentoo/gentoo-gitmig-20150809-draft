@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ispell-da-1.4.22.ebuild,v 1.4 2003/09/06 22:15:57 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ispell-da-1.4.27.ebuild,v 1.1 2003/10/29 01:46:53 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A danish dictionary for ispell"
-SRC_URI="http://da.speling.org/filer/${P}.tar.gz"
 HOMEPAGE="http://da.speling.org/"
+SRC_URI="http://da.speling.org/filer/${P}.tar.gz"
 
 DEPEND="app-text/ispell"
 
@@ -21,5 +21,5 @@ src_install () {
 	insinto /usr/lib/ispell
 	doins dansk.aff dansk.hash
 
-	dodoc Documentation/*
+	dodoc COPYING Copyright README contributors
 }
