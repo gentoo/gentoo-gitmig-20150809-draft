@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 a126c3c0871ef1c86aa59def849d58bd ChangeLog 1389
 MD5 399fc64a5e650ab7635343dd69a42250 cutg-143.ebuild 1182
-MD5 33b4e74742384c3f2e423400e0528cbe ChangeLog 1302
+MD5 7b806c76ecf38071fc9686c0a24aa064 cutg-144.ebuild 1192
 MD5 d14f29edef39d8d89b39a5787c3d141c metadata.xml 594
-MD5 742c6f54304d54264cbe2902965d2373 cutg-144.ebuild 1183
 MD5 94ad06877dbe9065273a7ee15904c7ec files/digest-cutg-143 63
 MD5 e35ab30eae79e0600feabc028e0db162 files/digest-cutg-144 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBy321I1lqEGTUzyQRAkG7AKCPWXs1tQkJcowdjhMmICH+ZizGvwCfayru
-CGxQmjilTMk+EIBf8xrbeqc=
-=Uf7a
------END PGP SIGNATURE-----
