@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2806 2004/04/07 16:46:48 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2807 2004/04/07 17:36:22 spyderous Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -26,10 +26,6 @@
 # <humpback@gentoo.org> (07 Apr 2004)
 # these are here waiting for jabberd2
 =net-im/jit-1.1.6-r3
-
-# <spyderous@gentoo.org> (07 Apr 2004)
-# few things still need fix
-x11-base/xorg-x11
 
 # <foser@gentoo.org> (07 Apr 2004)
 # still need to add some ch* stuff to make the init work
