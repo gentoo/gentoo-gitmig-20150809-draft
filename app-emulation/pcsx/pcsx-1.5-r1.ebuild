@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.1 2003/08/14 06:16:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.2 2003/08/18 00:37:26 vapier Exp $
 
 inherit games eutils
 
@@ -53,6 +53,8 @@ src_compile() {
 src_install() {
 	newgamesbin Linux/pcsx pcsx.bin
 	dogamesbin ${FILESDIR}/pcsx
+	insinto ${GAMES_DATADIR}/${PN}
+	doins Linux/.pixmaps/*
 	dodoc Docs/*
 	prepgamesdirs
 }
