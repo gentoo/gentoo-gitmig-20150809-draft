@@ -1,9 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b.ebuild,v 1.12 2004/11/11 19:50:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b.ebuild,v 1.13 2005/01/12 03:59:28 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="The MAD audio player"
-HOMEPAGE="http://mad.sourceforge.net"
+HOMEPAGE="http://mad.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mad/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -19,20 +21,25 @@ IUSE="debug nls esd"
 RDEPEND="esd? ( media-sound/esound )
 	~media-libs/libmad-0.15.1b
 	~media-libs/libid3tag-0.15.1b"
-
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.11.2 )"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epunt_cxx #74499
+}
+
 src_compile() {
 	econf \
-	      `use_enable nls` \
-	      `use_enable debug debugging` \
-	      `use_with esd` \
-	      || die "configure failed"
+		$(use_enable nls) \
+		$(use_enable debug debugging) \
+		$(use_with esd) \
+		|| die "configure failed"
 	emake || die "make failed"
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc CHANGES COPYRIGHT CREDITS README TODO VERSION
+	dodoc CHANGES CREDITS README TODO VERSION
 }
