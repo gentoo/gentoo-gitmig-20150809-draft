@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dante
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.20 2004/02/21 06:06:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.21 2004/02/21 20:37:31 seemant Exp $
+
+  21 Feb 2004; Seemant Kulleen <seemant@gentoo.org> dante-1.1.13.ebuild,
+  dante-1.1.14-r1.ebuild, dante-1.1.14-r2.ebuild:
+  add mips, for irssi repoman violation
 
 *dante-1.1.14-r2 (23 Dec 2003)
 
