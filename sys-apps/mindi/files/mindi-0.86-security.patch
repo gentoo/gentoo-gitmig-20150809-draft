@@ -1,0 +1,175 @@
+diff -Naur mindi-0.81/mindi mindi-0.81-patched/mindi
+--- mindi-0.81/mindi	2003-08-19 14:53:28.000000000 +0200
++++ mindi-0.81-patched/mindi	2003-08-19 14:58:52.000000000 +0200
+@@ -13,7 +13,7 @@
+ 
+ MINDI_VERSION=0.81_20021219
+ EXTRA_SPACE=16384          ; # increase if you run out of ramdisk space
+-TMP_ROOT=/tmp
++TMP_ROOT=`mktemp -d`
+ WRITE_BOOT_FLOPPIES="yes" ; # do you want to be propted to write floppy images
+ PROMPT_WRITE_BOOT_FLOPPIES="yes"
+     # do you want to be prompted to write
+@@ -357,9 +357,9 @@
+     mountpoint=$TMP_ROOT/mountpoint.$$
+     mkdir -p $mountpoint
+     dd if=/dev/zero of=$imagefile bs=1k count=1440 > /dev/null 2> /dev/null || LogIt "Cannot dd (CODI)\n"
+-    mke2fs -N 12 -F $imagefile > /tmp/mke2fs.$$ 2>> /tmp/mke2fs.$$
+-    [ "$?" -ne "0" ] && cat /tmp/mke2fs.$$
+-    rm -f /tmp/mke2fs.$$
++    mke2fs -N 12 -F $imagefile > $TMP_ROOT/mke2fs.$$ 2>> $TMP_ROOT/mke2fs.$$
++    [ "$?" -ne "0" ] && cat $TMP_ROOT/mke2fs.$$
++    rm -f $TMP_ROOT/mke2fs.$$
+     mount -t ext2 -o loop $imagefile $mountpoint || Die "Can't loopmount $mountpoint; does your kernel support loopfs? If not, please recompile your kernel. Your Linux distro is broken."
+     mv $tarball $mountpoint/
+     if [ "$?" -ne "0" ] ; then
+@@ -399,16 +399,16 @@
+     my_partitions=`mount | fgrep $$ | cut -f1 -d' '`
+     [ "$my_partitions" != "" ] && umount $my_partitions
+     [ "$TMP_ROOT" != "/tmp" ] && rm -Rf $TMP_ROOT
+-    cd /tmp
++    cd $TMP_ROOT
+     mkdir -p mindi.err
+-    for i in /tmp/mindi-needlist.txt /etc/fstab /etc/lilo.conf /etc/raidtab $LOGFILE /var/log/mondo-archive.log /tmp/mountlist.txt.$$ ; do
++    for i in $TMP_ROOT/mindi-needlist.txt /etc/fstab /etc/lilo.conf /etc/raidtab $LOGFILE /var/log/mondo-archive.log $TMP_ROOT/mountlist.txt.$$ ; do
+ 	[ -e "$i" ] && cp -f $i mindi.err/
+     done
+     rm -f mindi.err.*.tgz
+     tar -c mindi.err -f- | gzip -9 > mindi.err.$$.tgz
+     cd /
+-    rm -Rf mindi.err /tmp/mountlist.txt.$$
+-    LogIt "Please e-mail a copy of /tmp/mindi.err.$$.tgz to the mailing list."
++    rm -Rf mindi.err $TMP_ROOT/mountlist.txt.$$
++    LogIt "Please e-mail a copy of $TMP_ROOT/mindi.err.$$.tgz to the mailing list."
+     LogIt "See http://www.mondorescue.com for more information."
+     LogIt "WE CANNOT HELP unless you enclose that file."
+     exit 1
+@@ -673,7 +673,7 @@
+     progress=0
+     noof_lines=`cat $tempfile | wc -l`
+     for fname in `cat $tempfile` ; do
+-        tempdepfile=`mktemp /tmp/mindilinux/tempdepfile.XXXXXX`
++        tempdepfile=`mktemp $TMP_ROOT/mindilinux/tempdepfile.XXXXXX`
+         LocateDeps $fname > $tempdepfile
+ 	echo "$fname" >> $outfile.pre
+         cat $tempdepfile >> $outfile.pre
+@@ -984,7 +984,7 @@
+ 
+ 
+ 
+-# Called by TurnTgzIntoRdz, to make /tmp/mondo-restore.cfg
++# Called by TurnTgzIntoRdz, to make $TMP_ROOT/mondo-restore.cfg
+ 
+ MakeMondoConfigFile() {
+     local outfile use_lzo use_comp
+@@ -1327,17 +1327,17 @@
+     if [ -d "/home/MondoCD" ] ; then
+ 	cp -pRdu /home/MondoCD/* . || Die "Cannot do kung pow"
+     fi
+-    mkisofs -U -J -r -o $imagesdir/mindi.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table . > /dev/null 2> /tmp/$$.mk
++    mkisofs -U -J -r -o $imagesdir/mindi.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table . > /dev/null 2> $TMP_ROOT/$$.mk
+     if [ "$?" -ne "0" ] ; then
+ 	echo "----------- mkisofs's errors --------------" >> $LOGFILE
+-	cat /tmp/$$.mk >> $LOGFILE
++	cat $TMP_ROOT/$$.mk >> $LOGFILE
+ 	echo "mkisofs returned the following errors:-"
+-	cat /tmp/$$.mk
++	cat $TMP_ROOT/$$.mk
+ 	LogIt "Failed to create ISO image.\n"
+     else
+ 	echo "Created bootable ISO image at $imagesdir/mindi.iso\n" >> $LOGFILE
+     fi
+-    rm -f /tmp/$$.mk
++    rm -f $TMP_ROOT/$$.mk
+     cd $old_pwd
+ }
+ 
+@@ -1366,9 +1366,9 @@
+     mountpoint=$TMP_ROOT/mountpoint.$$
+     mkdir -p $mountpoint
+     dd if=/dev/zero of=$imagefile bs=1k count=$disksize > /dev/null 2> /dev/null || Die "Cannot dd blank file"
+-    mke2fs -N 26 -m 0 -F $imagefile > /tmp/mke2fs.$$ 2>> /tmp/mke2fs.$$
+-    [ "$?" -ne "0" ] && cat /tmp/mke2fs.$$
+-    rm -f /tmp/mke2fs.$$
++    mke2fs -N 26 -m 0 -F $imagefile > $TMP_ROOT/mke2fs.$$ 2>> $TMP_ROOT/mke2fs.$$
++    [ "$?" -ne "0" ] && cat $TMP_ROOT/mke2fs.$$
++    rm -f $TMP_ROOT/mke2fs.$$
+     mount -t ext2 -o loop $imagefile $mountpoint || LogIt "Cannot mount (PBDI)\n\n"
+ # copy Mindi's skeleton fs & lilo/syslinux/whatever stuff into it
+     mkdir -p $mountpoint/etc
+@@ -1501,15 +1501,15 @@
+ 	$LILO_EXE -r $mountpoint >> $LOGFILE 2>> $LOGFILE
+     fi
+     if [ $? -ne "0" ] ; then
+-	if [ "`cat $LOGFILE | fgrep "/tmp/dev.0"`" ] ; then
+-	    LogIt "The '/tmp/dev.0' error is NOT Mindi's fault. It is LILO's.\n"
++	if [ "`cat $LOGFILE | fgrep "$TMP_ROOT/dev.0"`" ] ; then
++	    LogIt "The '$TMP_ROOT/dev.0' error is NOT Mindi's fault. It is LILO's.\n"
+ 	    LogIt "Please reboot your PC as a workaround.\n"
+ 	    Die "LILO sneezed and Mindo caught a cold. Please read the README / FAQ.\n"
+ 	fi
+ 	LogIt "Cannot run lilo on $mountpoint\nPlease upgrade/downgrade your version of LILO. It has a bug.\n"
+ 	retval=$(($retval+1))
+     fi
+-    cp -f $liloconf /tmp/lilo.conf
++    cp -f $liloconf $TMP_ROOT/lilo.conf
+     umount $mountpoint || Die "Cannot unmount mountpoint ($mountpoint)"
+     echo -en "..."
+     rmdir $mountpoint || LogIt "Cannot rmdir (PBDI)\n"
+@@ -1671,7 +1671,7 @@
+ 	ListKernelModulePaths >> $needlist
+     fi
+     if [ "$res" -ne "0" ] ; then
+-	rm -f /tmp/mindi-needlist.txt
++	rm -f $TMP_ROOT/mindi-needlist.txt
+ 	Die "You have $res file`PluralOrNot $res` present in dependency list\nbut absent from filesystem."
+     fi
+     FindAndAddUserKeyboardMappingFile
+@@ -2104,9 +2104,6 @@
+     dd if=/dev/zero of=$tempfile bs=1k count=$ramdisk_size > /dev/null 2> /dev/null || Die "Not enough room for temporary ramdisk (TurnTgzIntoRdz)"
+     echo -en "..."
+     mke2fs -b 1024 -N 65536 -m 0 -F $tempfile >> $LOGFILE 2>> $LOGFILE
+-
+-    [ "$?" -ne "0" ] && cat /tmp/mke2fs.$$
+-    rm -f /tmp/mke2fs.$$
+     echo -en "..."
+     mkdir -p $mountpoint
+     mount -t ext2 -o loop $tempfile $mountpoint || Die "Cannot loopmount $tempfile to $mountpoint"
+@@ -2252,8 +2249,8 @@
+ AbortIfMkfsVfatMissing
+ FindIsolinuxBinary
+ FindLiloBinary
+-cat /proc/mounts | fgrep " $TMP_ROOT " | fgrep tmpfs > /dev/null 2> /dev/null && TMP_ROOT=/home && LogIt "Changing TMP_ROOT to $TMP_ROOT because you're using tmpfs for /tmp" ; # tmpfs doesn't like Mindi and /tmp, for some reason
+-rm -f /tmp/mindi_lo
++cat /proc/mounts | fgrep " $TMP_ROOT " | fgrep tmpfs > /dev/null 2> /dev/null && TMP_ROOT=`mktemp -d -p /var/tmp` && LogIt "Changing TMP_ROOT to $TMP_ROOT because you're using tmpfs for /tmp" ; # tmpfs doesn't like Mindi and /tmp, for some reason
++rm -f $TMP_ROOT/mindi_lo
+ trap "Aborted" SIGTERM
+ DONE="\r\t\t\t\t\t\t\t\t\tDone.         "
+ CHOPSIZE=160
+@@ -2262,7 +2259,7 @@
+ imagesdir=/root/images/mindi
+ mkdir -p $imagesdir
+ kernelpath=""
+-MONDO_ROOT=/tmp/mindilinux/mondo-root
++MONDO_ROOT="$TMP_ROOT/mindilinux/mondo-root"
+ mkdir -p $MONDO_ROOT
+ 
+ if [ "$#" -ne "0" ] ; then
+@@ -2405,7 +2402,7 @@
+ fi
+ echo -e "Mindi's temp dir = $TMP_ROOT \nMindi's output dir=$imagesdir" >> $LOGFILE
+ [ "$(($RANDOM%64))" -eq "0" ] && LogIt "Dude, I've looked inside your computer and it's really dusty..."
+-rm -f /tmp/mindi.err.*.tgz
++rm -f $TMP_ROOT/mindi.err.*.tgz
+ 
+ PrepareDataDiskImages $imagesdir
+ noof_disks=$?
+@@ -2450,7 +2447,7 @@
+     done
+ fi
+ [ "$TMP_ROOT" != "/tmp" ] && rm -Rf $TMP_ROOT
+-rm -Rf /tmp/mindi-needlist.txt /tmp/mountlist.txt.$$
++rm -Rf $TMP_ROOT/mindi-needlist.txt $TMP_ROOT/mountlist.txt.$$
+ LogIt "$FRIENDLY_OUTSTRING"
+ echo "Mindi is exiting" >> $LOGFILE
+ exit 0
