@@ -1,6 +1,16 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.24 2004/11/18 17:24:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.25 2004/11/20 17:47:31 usata Exp $
+
+*ptex-3.1.4.20041109-r1 (21 Nov 2004)
+
+  21 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/20fmtutil-platex.cnf, +files/20texmf-cmap.cnf,
+  +files/20updmap-ja.cfg, -ptex-3.1.4.20041026.ebuild,
+  +ptex-3.1.4.20041109-r1.ebuild:
+  Changed updmap.cfg, fmtutil.cnf and mktex.cnf to use
+  /etc/texmf/{updmap.d,fmtutil.d,mktex.d}.
+  This will close bug #21501 and bug #56440.
 
 *ptex-3.1.4.20041109 (19 Nov 2004)
 

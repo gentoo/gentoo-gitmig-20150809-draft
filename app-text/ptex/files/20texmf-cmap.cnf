@@ -1,0 +1,3 @@
+
+CMAPINPUTS = .;/opt/Acrobat5/Resource/Font//;/usr/share/xpdf//
+

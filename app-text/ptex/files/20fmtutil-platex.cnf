@@ -1,0 +1,6 @@
+
+# Japanese pLaTeX:
+ptex		ptex	-		ptex.ini
+platex		ptex	language.dat	platex.ini
+platex209	ptex	language.dat	plplain.ini
+
