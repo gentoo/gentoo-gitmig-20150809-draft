@@ -1,51 +1,41 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r4.ebuild,v 1.1 2003/07/20 13:43:30 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r4.ebuild,v 1.2 2003/08/03 03:21:06 vapier Exp $
+
 inherit eutils
 
 DESCRIPTION="Nagios $PV core - Host and service monitor cgi, docs etc..."
 HOMEPAGE="http://www.nagios.org/"
 SRC_URI="mirror://sourceforge/nagios/nagios-1.1.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc"
 IUSE="gd apache2 perl"
-DEPEND=">=mailx-8.1
 
+DEPEND=">=mailx-8.1
 	apache2? ( >=net-www/apache-2.0.43-r1 )  
-	
 	gd? ( 
-	>=jpeg-6b-r3
-	>=libpng-1.2.5-r4
-	>=libgd-1.8.3-r5 
+		>=jpeg-6b-r3
+		>=libpng-1.2.5-r4
+		>=libgd-1.8.3-r5 
 	) 
-	
 	perl? ( >=perl-5.6.1-r7 )
-	
 	mysql? ( >=dev-db/mysql-3.23.56 ) 
 	pgsql? ( >=dev-db/postgresql-7.3.2 )"
 	
-S="${WORKDIR}/nagios-1.1"
+S="${WORKDIR}/nagios-${PV}"
+
 pkg_setup() {
 	enewgroup nagios 
 	enewuser nagios -1 /bin/bash /dev/null nagios
-	# Old Style removed because of eutils class
-	#userdel nagios 2> /dev/null
-	#if ! groupmod nagios; then
-	#	groupadd -g 75 nagios 2> /dev/null || \
-	#		die "Failed to create nagios group"
-	#fi
-	#useradd -u 75 -g nagios -s /dev/null -d /var/empty -c "nagios" nagios || \
-	#	die "Failed to create nagios user"
 }
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	bzcat ${FILESDIR}/Makefile-distclean.diff.bz2 | patch -p1
-	if [ -n "`use gd`" ]; then
-	bzcat ${FILESDIR}/tac.cgi.diff.bz2 | patch -p1
-	fi
+	epatch ${FILESDIR}/Makefile-distclean.diff.bz2
+	[ `use gd` ] && epatch ${FILESDIR}/tac.cgi.diff.bz2
 }
 
 src_compile() {
@@ -100,14 +90,14 @@ src_install() {
 	doins ${FILESDIR}/nagios.cfg-sample
 	insinto /usr/nagios/contrib
 	doins contrib/*
-    insinto /usr/nagios/contrib/database
-    doins contrib/database/*
-    insinto /usr/nagios/contrib/eventhandlers
-    doins contrib/eventhandlers/*
-    insinto /usr/nagios/contrib/eventhandlers/distributed-monitoring
-    doins contrib/eventhandlers/distributed-monitoring/*
-    insinto /usr/nagios/contrib/eventhandlers/redundancy-scenario1
-    doins contrib/eventhandlers/redundancy-scenario1/*
+	insinto /usr/nagios/contrib/database
+	doins contrib/database/*
+	insinto /usr/nagios/contrib/eventhandlers
+	doins contrib/eventhandlers/*
+	insinto /usr/nagios/contrib/eventhandlers/distributed-monitoring
+	doins contrib/eventhandlers/distributed-monitoring/*
+	insinto /usr/nagios/contrib/eventhandlers/redundancy-scenario1
+	doins contrib/eventhandlers/redundancy-scenario1/*
 }
 
 pkg_preinst() {
