@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r3.ebuild,v 1.13 2004/11/12 14:55:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r3.ebuild,v 1.14 2004/12/06 06:01:55 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Standard (de)compression library"
 HOMEPAGE="http://www.gzip.org/zlib/"
@@ -14,8 +14,6 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="build"
 
 RDEPEND="virtual/libc"
-DEPEND="${RDEPEND}
-	>=sys-devel/binutils-2.14.90.0.6"
 
 src_unpack() {
 	unpack ${A}
@@ -36,19 +34,22 @@ src_unpack() {
 }
 
 src_compile() {
+	export CC="$(tc-getCC)" AR="$(tc-getAR) rc" RANLIB="$(tc-getRANLIB)"
+
 	./configure --shared --prefix=/usr --libdir=/$(get_libdir) || die
 	emake || die
-	make test || die
 
 	./configure --prefix=/usr --libdir=/$(get_libdir) || die
 	emake || die
 }
 
+src_test() {
+	make test || die
+}
+
 src_install() {
 	einstall libdir=${D}/$(get_libdir) || die
-	rm ${D}/$(get_libdir)/libz.a
-	into /usr
-	dodir /usr/include
+	rm "${D}"/$(get_libdir)/libz.a
 	insinto /usr/include
 	doins zconf.h zlib.h
 
@@ -61,7 +62,6 @@ src_install() {
 
 	# we don't need the static lib in /lib
 	# as it's only for compiling against
-	into /usr
 	dolib libz.a
 
 	# all the shared libs go into /lib
