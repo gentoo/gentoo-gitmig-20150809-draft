@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <foser@gentoo.org> (17 Mar 2003)
+# Bad ebuild, we are fixing a better one
+=app-office/gnucash-1.8.1
+
 # <lu_zero@gentoo.org> (16 Mar 2003)
 # to be tested, seems unstable
 net-dialup/hcfusbmodem
