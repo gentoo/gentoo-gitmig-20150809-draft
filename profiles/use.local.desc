@@ -1,15 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.15 2003/04/23 17:02:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.16 2003/04/23 19:32:26 danarmak Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 
-x11-base/xfree-drm:gamma - If you have a matrox video card
-x11-base/xfree-drm:i8x0 - If you have an ibm i810 or i830 video card
-x11-base/xfree-drm:rage128 - If you have an ATI Rage128 based video card
-x11-base/xfree-drm:radeon - If you have an ATI Radeon video card
-x11-base/xfree-drm:sis - If you have an SiS video card
+app-admin/lcap:lids - If you have the Linux Intrusion Detection System
+dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
+kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
+kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
 net-www/mozilla:moznoirc - If you do NOT want the IRC client built with mozilla
 net-www/mozilla:moznomail - If you do NOT want the mail client built with mozilla
 net-www/mozilla:moznocompose - If you do NOT want the web page composer built with mozilla
@@ -20,20 +19,21 @@ net-www/mozilla:mozinterfaceinfo - blank
 net-www/mozilla:mozaccess - blank
 net-www/mozilla:mozcalendar - blank
 net-www/mozilla:mozsvg - blank
+sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
+sys-devel/gdb:objc - If you want to be able to debug Objective C code.
 sys-devel/oskit:oskit-noassert - Disable assertions in debugging
 sys-devel/oskit:oskit-nobuild - Configure but don't build OSKit
 sys-devel/oskit:oskit-noconf - Unpack sources to /usr/src but don't configure OSKit
-sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
 sys-kernel/gentoo-sources:aavm - If you want aavm support
 sys-kernel/gentoo-sources:acpi4linux - If you want ACPI support
 sys-kernel/gentoo-sources:evms2 - If you want evms 2.0 support
 sys-kernel/gentoo-sources:xfs - If you want XFS filesystem support
-sys-devel/gdb:objc - If you want to be able to debug Objective C code.
+sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
 sys-libs/glibc:pic - If you want prelink support built into glibc
-app-admin/lcap:lids - If you have the Linux Intrusion Detection System
-sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
+x11-base/xfree-drm:gamma - If you have a matrox video card
+x11-base/xfree-drm:i8x0 - If you have an ibm i810 or i830 video card
+x11-base/xfree-drm:rage128 - If you have an ATI Rage128 based video card
+x11-base/xfree-drm:radeon - If you have an ATI Radeon video card
+x11-base/xfree-drm:sis - If you have an SiS video card
 x11-misc/lineakd:xosd - Sends display using the X On Screen Display library
-dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
-kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
-kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
