@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nhc98/nhc98-1.16.ebuild,v 1.1 2003/04/10 08:59:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nhc98/nhc98-1.16.ebuild,v 1.2 2003/04/10 23:20:56 george Exp $
 
 IUSE="readline"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.cs.york.ac.uk/fp/nhc98/"
 
 SLOT="0"
 LICENSE="nhc98"
-KEYWORDS="~x86 ~sparc "
+KEYWORDS="x86 ~sparc "
 
 DEPEND="virtual/glibc
 	readline? ( >=readline-4.1 )"
@@ -59,10 +59,16 @@ src_install () {
 		${D}/usr/lib/hmake/${MACHINE}/hmakerc \
 			default /usr/bin/nhc98
 	# remove temporary build version of nhc98 from config
-        ${D}/usr/bin/hmake-config \
+	${D}/usr/bin/hmake-config \
 		${D}/usr/lib/hmake/${MACHINE}/hmakerc \
 			delete ${S}/script/nhc98
 
+	#need to adjust paths in hmakerc
+	cd ${D}/usr/lib/hmake/${MACHINE}
+	mv hmakerc hmakerc.orig
+	sed -e "s:${S}/script/::" -e "s:${S}/include:/usr/include:" hmakerc.orig > hmakerc
+
+	cd ${S}
 	#install docs and man pages manually
 	dodoc README INSTALL COPYRIGHT
 	doman man/*
