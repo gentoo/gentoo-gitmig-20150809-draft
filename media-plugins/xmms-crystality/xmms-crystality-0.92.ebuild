@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-crystality/xmms-crystality-0.92.ebuild,v 1.7 2004/07/06 23:07:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-crystality/xmms-crystality-0.92.ebuild,v 1.8 2004/11/11 09:53:01 eradicator Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # -sparc: 0.92: static noise when enabled
 # ~amd64: 0.92: distortions in the effects... 
-KEYWORDS="x86 ~ppc -sparc ~amd64"
+KEYWORDS="~amd64 ~ppc -sparc x86"
 
 DEPEND="media-sound/xmms"
 
