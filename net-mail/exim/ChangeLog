@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.13 2002/09/15 15:07:26 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.14 2002/11/15 17:32:27 raker Exp $
+
+*exim-4.10 (15 Nov 2002)
+
+  15 Nov 2002; Nick Hadaway <raker@gentoo.org> exim-4.10.ebuild,
+  files/digest-exim-4.10, files/exiscan.conf :
+  New exim ebuild with support for exiscan patched in.  Marked unstable.
 
 *exim-4.05 (29 Aug 2002)
 
