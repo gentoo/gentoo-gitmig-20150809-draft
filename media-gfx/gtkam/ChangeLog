@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gtkam
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.14 2004/02/16 08:53:50 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.15 2004/03/28 18:11:49 liquidx Exp $
+
+*gtkam-0.1.11 (28 Mar 2004)
+
+  28 Mar 2004; Alastair Tse <liquidx@gentoo.org> gtkam-0.1.11.ebuild,
+  files/gtkam-0.1.11-gtk24.patch:
+  version bump plus gtk2.4 fixes (#45510)
 
   16 Feb 2004; Dylan Carlson <absinthe@gentoo.org> gtkam-0.1.10-r1.ebuild:
   added ~amd64 keyword.

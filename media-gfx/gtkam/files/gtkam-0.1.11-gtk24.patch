@@ -1,0 +1,25 @@
+diff -ur gtkam-0.1.11/src/Makefile.am gtkam-0.1.11.new/src/Makefile.am
+--- gtkam-0.1.11/src/Makefile.am	2004-01-13 07:08:20.000000000 +0000
++++ gtkam-0.1.11.new/src/Makefile.am	2004-03-28 17:59:32.525130400 +0000
+@@ -7,7 +7,6 @@
+  -DPACKAGE_DATA_DIR=\"$(datadir)/gtkam\"	\
+  -DPACKAGE_SOURCE_DIR=\"$(top_srcdir)\"		\
+  -DAPP_DATADIR=\"$(datadir)/\"		\
+- -DGTK_DISABLE_DEPRECATED			\
+  $(EXIF_CFLAGS) $(GNOME_CFLAGS) $(GTKAM_CFLAGS)	\
+  $(BONOBO_CFLAGS)				\
+  $(GTKAM_GIMP_CFLAGS)
+Only in gtkam-0.1.11.new/src: Makefile.am~
+diff -ur gtkam-0.1.11/src/Makefile.in gtkam-0.1.11.new/src/Makefile.in
+--- gtkam-0.1.11/src/Makefile.in	2004-03-06 22:36:27.000000000 +0000
++++ gtkam-0.1.11.new/src/Makefile.in	2004-03-28 17:59:28.246780808 +0000
+@@ -106,7 +106,7 @@
+ USE_NLS = @USE_NLS@
+ VERSION = @VERSION@
+ 
+-INCLUDES =   -I$(top_srcdir)/intl				 -DIMAGE_DIR=\"$(datadir)/images/gtkam\" 	 -DGTKAM_LOCALEDIR=\"$(datadir)/locale\"	 -DPACKAGE_DATA_DIR=\"$(datadir)/gtkam\"	 -DPACKAGE_SOURCE_DIR=\"$(top_srcdir)\"		 -DAPP_DATADIR=\"$(datadir)/\"		 -DGTK_DISABLE_DEPRECATED			 $(EXIF_CFLAGS) $(GNOME_CFLAGS) $(GTKAM_CFLAGS)	 $(BONOBO_CFLAGS)				 $(GTKAM_GIMP_CFLAGS)
++INCLUDES =   -I$(top_srcdir)/intl				 -DIMAGE_DIR=\"$(datadir)/images/gtkam\" 	 -DGTKAM_LOCALEDIR=\"$(datadir)/locale\"	 -DPACKAGE_DATA_DIR=\"$(datadir)/gtkam\"	 -DPACKAGE_SOURCE_DIR=\"$(top_srcdir)\"		 -DAPP_DATADIR=\"$(datadir)/\"		 			 $(EXIF_CFLAGS) $(GNOME_CFLAGS) $(GTKAM_CFLAGS)	 $(BONOBO_CFLAGS)				 $(GTKAM_GIMP_CFLAGS)
+ 
+ 
+ noinst_LIBRARIES = libgtkam.a
+Only in gtkam-0.1.11.new/src: Makefile.in~
