@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.6-r1.ebuild,v 1.1 2004/12/08 00:05:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.6-r1.ebuild,v 1.2 2004/12/08 00:06:30 eradicator Exp $
 
 IUSE=""
 
@@ -25,11 +25,11 @@ DEPEND="${RDEPEND}
 	virtual/linux-sources"
 
 pkg_setup() {
-        CONFIG_CHECK="NETFILTER"
-        NETFILTER_ERROR="Your kernel is not configured to support Netfilter."
+	CONFIG_CHECK="NETFILTER"
+	NETFILTER_ERROR="Your kernel is not configured to support Netfilter."
 	MODULE_NAMES="ipt_ipp2p"
 
-        linux-mod_pkg_setup
+	linux-mod_pkg_setup
 }
 
 src_unpack() {
@@ -41,8 +41,8 @@ src_unpack() {
 
 src_compile() {
 	xarch="${ARCH}"
-        unset ARCH      
-        emake KERNEL_SRC=${KV_DIR} || die "Parallel Make Failed"
+	unset ARCH
+	emake KERNEL_SRC=${KV_DIR} || die "Parallel Make Failed"
 	ARCH="${xarch}"
 }
 
