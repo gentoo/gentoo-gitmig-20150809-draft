@@ -1,10 +1,20 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.14 2002/07/03 07:57:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.15 2002/07/16 20:53:12 danarmak Exp $
+
+*kdelibs-3.0.2-r1 (16 Jul 2002)
+
+  16 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New version that works well with the latest eclass updates and is fully
+  forward compatible with the kde 3.1_alpha1 ebuilds now in testing. Also
+  removes the trick where kde style plugins were installed into the qt
+  plugin dir (it raises issues with mutliple kde versions being installed;
+  you can enable the faeture manually via qtconfig).
 
 *kdelibs-3.0.2 (03 Jul 2002)
 
-  03 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  : : : : : : : : : :
+  03 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
   New stability release.
 
