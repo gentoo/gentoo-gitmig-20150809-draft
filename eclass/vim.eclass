@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.53 2004/04/07 22:47:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.54 2004/04/30 22:56:36 rphillips Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -12,7 +12,7 @@ ECLASS=vim
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS src_unpack
 
-IUSE="$IUSE ncurses nls acl"
+IUSE="$IUSE selinux ncurses nls acl"
 
 if [ ${PN} != vim-core ]; then
 	IUSE="$IUSE cscope gpm perl python ruby"
@@ -21,12 +21,14 @@ if [ ${PN} != vim-core ]; then
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
 		python?  ( dev-lang/python )
+		selinux? ( sys-libs/libselinux )
 		acl?     ( sys-apps/acl )"
 	RDEPEND="$RDEPEND
 		cscope?  ( dev-util/cscope )
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
 		python?  ( dev-lang/python )
+		selinux? ( sys-libs/libselinux )
 		acl?     ( sys-apps/acl )"
 	# Vim versions after 6.2d should work with Ruby 1.8 because of a local
 	# Gentoo patch; working on putting it upstream (22 May 2003 agriffis)
@@ -248,6 +250,9 @@ src_compile() {
 	use ncurses \
 		&& myconf="${myconf} --with-tlib=ncurses" \
 		|| myconf="${myconf} --with-tlib=termcap"
+
+	use selinux \
+		|| myconf="${myconf} --disable-selinux"
 
 	econf ${myconf} || die "vim configure failed"
 
