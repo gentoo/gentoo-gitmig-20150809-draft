@@ -1,30 +1,28 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-text/psgml/psgml-1.2.2.ebuild,v 1.5 2002/04/27 23:08:35 bangert Exp $
+# Author Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-text/psgml/psgml-1.2.2.ebuild,v 1.6 2002/04/28 03:59:29 seemant Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="PSGML is a GNU Emacs Major Mode for editing SGML and XML coded documents."
-SRC_URI="http://ftp1.sourceforge.net/${PN}/${A}"
+SRC_URI="http://ftp1.sourceforge.net/${PN}/${P}.tar.gz"
 HOMEPAGE="http://psgml.sourceforge.net"
 
 DEPEND="virtual/emacs"
 
 src_compile() {
 
-    try ./configure --prefix=/usr --infodir=/usr/share/info --host=${CHOST}
-    try make
+    ./configure --prefix=/usr --infodir=/usr/share/info --host=${CHOST} || die
+    make || die
 
 }
 
 src_install () {
 
-    try make prefix=${D}/usr install
+    make prefix=${D}/usr install || die
     dodir /usr/share/info
-    try make infodir=${D}/usr/share/info install-info
+    make infodir=${D}/usr/share/info install-info || die
 
     dodoc ChangeLog README.psgml ${FILESDIR}/dot_emacs
 
 }
-

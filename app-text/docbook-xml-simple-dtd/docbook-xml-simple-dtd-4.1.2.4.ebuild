@@ -1,17 +1,15 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/docbook-xml-simple-dtd-4.1.2.4.ebuild,v 1.3 2001/06/08 01:08:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/docbook-xml-simple-dtd-4.1.2.4.ebuild,v 1.4 2002/04/28 03:59:29 seemant Exp $
 
-A="sdb4124.zip"
+MY_P="sdb4124"
 S=${WORKDIR}/${P}
 DESCRIPTION="Docbook DTD for XML"
-SRC_URI="http://www.nwalsh.com/docbook/simple/${PV}/${A}"
-
+SRC_URI="http://www.nwalsh.com/docbook/simple/${PV}/${MY_P}.zip"
 HOMEPAGE="http://www.oasis-open.org/docbook/"
 
 DEPEND=">=app-arch/unzip-5.41"
-RDEPEND=""
 
 src_unpack() {
   mkdir ${S}
@@ -21,21 +19,13 @@ src_unpack() {
 
 src_install() {
 
-    insinto /usr/share/sgml/docbook/xml-simple-dtd-${PV}
-    doins *.dtd *.mod *.css
-#    newins ${FILESDIR}/${P}.catalog catalog
-    insinto /usr/share/sgml/docbook/xml-simple-dtd-${PV}/ent
-    doins ent/*.ent
-    
-    dodoc README ChangeLog LostLog COPYRIGHT
+	insinto /usr/share/sgml/docbook/xml-simple-dtd-${PV}
+	doins *.dtd *.mod *.css
+
+	#newins ${FILESDIR}/${P}.catalog catalog
+
+	insinto /usr/share/sgml/docbook/xml-simple-dtd-${PV}/ent
+	doins ent/*.ent
+	
+	dodoc README ChangeLog LostLog COPYRIGHT
 }
-
-#pkg_postinst() {
-#    install-catalog --add /etc/sgml/xml-docbook.cat /usr/share/sgml/docbook/xml-simple-dtd-${PV}/catalog
-#    install-catalog --add /etc/sgml/xml-simple-docbook-${PV}.cat /usr/share/sgml/docbook/xml-simple-dtd-${PV}/catalog
-#}
-
-#pkg_prerm() {
-#    install-catalog --remove /etc/sgml/xml-docbook.cat /usr/share/sgml/docbook/xml-simple-dtd-${PV}/catalog
-#    install-catalog --remove /etc/sgml/xml-simple-docbook-${PV}.cat /usr/share/sgml/docbook/xml-simple-dtd-${PV}/catalog
-#}

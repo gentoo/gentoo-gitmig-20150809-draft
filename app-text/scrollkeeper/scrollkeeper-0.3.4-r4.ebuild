@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Spider  <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.4-r4.ebuild,v 1.2 2002/04/27 23:08:35 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.4-r4.ebuild,v 1.3 2002/04/28 03:59:30 seemant Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -17,10 +17,10 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/releases/gnome-2.0-desktop-bet
 HOMEPAGE="http://scrollkeeper.sourceforge.net"
 
 RDEPEND=">=dev-libs/libxml-1.8.11
-		>=sys-libs/zlib-1.1.3
-		>=app-text/docbook-xml-dtd-4.1.2-r2
-		>=app-text/docbook-sgml-utils-0.6.6
-		>=dev-util/intltool-0.17"
+	>=sys-libs/zlib-1.1.3
+	>=app-text/docbook-xml-dtd-4.1.2-r2
+	>=app-text/docbook-sgml-utils-0.6.6
+	>=dev-util/intltool-0.17"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"

@@ -1,27 +1,25 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/t1utils-1.23.ebuild,v 1.1 2001/06/21 14:50:41 achim Exp $
+# Author Achim Gottinger <achime@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/t1utils-1.23.ebuild,v 1.2 2002/04/28 03:59:30 seemant Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Type 1 Font utilities"
-SRC_URI="http://www.lcdf.org/~eddietwo/type/${A}"
+SRC_URI="http://www.lcdf.org/~eddietwo/type/${P}.tar.gz"
 HOMEPAGE="http://www.lcdf.org/~eddietwo/"
 
 DEPEND="virtual/glibc"
 
 src_compile() {
 
-    try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST}
-    try make
+	./configure --prefix=/usr --mandir=/usr/share/man || die
+	make || die
 
 }
 
 src_install () {
 
-    try make DESTDIR=${D} install
-    dodoc NEWS README
+	make DESTDIR=${D} install || die
+	dodoc NEWS README
 
 }
-

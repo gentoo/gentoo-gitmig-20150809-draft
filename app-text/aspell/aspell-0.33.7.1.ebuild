@@ -1,13 +1,13 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.33.7.1.ebuild,v 1.2 2002/04/27 23:08:35 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.33.7.1.ebuild,v 1.3 2002/04/28 03:59:29 seemant Exp $
 
 
-A=${PN}-.33.7.1.tar.gz
-S=${WORKDIR}/${PN}-.33.7.1
+MY_P=${PN}-.33.7.1
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="A spell checker replacement for ispell"
-SRC_URI="http://download.sourceforge.net/aspell/${A}"
+SRC_URI="http://download.sourceforge.net/aspell/${MY_P}.tar.gz"
 HOMEPAGE="http://aspell.sourceforge.net"
 
 DEPEND=">=app-text/pspell-0.12
@@ -15,21 +15,20 @@ DEPEND=">=app-text/pspell-0.12
 
 src_compile() {
 
-    try ./configure --prefix=/usr --sysconfdir=/etc/aspell --host=${CHOST} --enable-doc-dir=/usr/share/doc/${P}
-    try make
+	./configure --prefix=/usr --sysconfdir=/etc/aspell --host=${CHOST} --enable-doc-dir=/usr/share/doc/${P} || die
+	make || die
 
 }
 
 src_install () {
 
-    try make DESTDIR=${D} install
-    cd ${D}/usr/share/doc/${P}
-    mv man-html html
-    mv man-text txt
-    prepalldocs
-    cd ${S}
-    
-    dodoc README* TODO
+	make DESTDIR=${D} install || die
+	cd ${D}/usr/share/doc/${P}
+	mv man-html html
+	mv man-text txt
+	prepalldocs
+	cd ${S}
+	
+	dodoc README* TODO
 
 }
-

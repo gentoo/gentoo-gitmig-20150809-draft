@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.1-r1.ebuild,v 1.1 2002/03/31 12:13:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.1-r1.ebuild,v 1.2 2002/04/28 03:59:30 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Base ISO character entities and utilities for SGML"
@@ -11,9 +11,9 @@ HOMEPAGE="http://www.iso.ch/cate/3524030.html"
 
 src_unpack() {
 
-    unpack ${A}
-    # We use a hacked version of install-catalog that supports the ROOT variable
-    cp ${FILESDIR}/${P}-install-catalog.in ${S}/bin
+	unpack ${A}
+	# We use a hacked version of install-catalog that supports the ROOT variable
+	cp ${FILESDIR}/${P}-install-catalog.in ${S}/bin
 }
 
 src_compile() {
@@ -30,7 +30,7 @@ src_install () {
 		prefix=${D}/usr	\
 		sysconfdir=${D}/etc	\
 		mandir=${D}/usr/share/man \
-        docdir=${D}/usr/share/doc	\
+		docdir=${D}/usr/share/doc	\
 		install || die
 
 }

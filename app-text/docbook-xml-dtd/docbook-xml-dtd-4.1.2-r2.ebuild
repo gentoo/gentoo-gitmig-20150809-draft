@@ -1,21 +1,18 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Tools Team <tools@gentoo.org>
-# Author: Achim Gottinger <achim@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.1.2-r2.ebuild,v 1.1 2002/03/14 00:20:54 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.1.2-r2.ebuild,v 1.2 2002/04/28 03:59:29 seemant Exp $
 
-A="docbkx412.zip"
+MY_P="docbkx412"
 S=${WORKDIR}/${P}
 DESCRIPTION="Docbook DTD for XML"
-SRC_URI="http://www.oasis-open.org/docbook/xml/${PV}/${A}"
+SRC_URI="http://www.oasis-open.org/docbook/xml/${PV}/${MY_P}.zip"
 
 HOMEPAGE="http://www.oasis-open.org/docbook/"
 
 DEPEND=">=app-arch/unzip-5.41
 	>=dev-libs/libxml2-2.4
 	>=app-text/docbook-xsl-stylesheets-1.45"
-RDEPEND="" 
 
 src_unpack() {
 	mkdir ${S}

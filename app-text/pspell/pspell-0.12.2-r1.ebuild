@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspell/pspell-0.12.2-r1.ebuild,v 1.3 2002/04/27 23:08:35 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspell/pspell-0.12.2-r1.ebuild,v 1.4 2002/04/28 03:59:29 seemant Exp $
 
 #Remove leading zero from version number
 MYPV=${PV#0}
