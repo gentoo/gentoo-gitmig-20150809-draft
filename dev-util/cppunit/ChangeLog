@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cppunit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.6 2004/06/25 02:24:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.7 2004/07/30 23:26:03 george Exp $
+
+*cppunit-1.10.2 (30 Jul 2004)
+
+  30 Jul 2004; George Shapovalov <george@gentoo.org> cppunit-1.10.2.ebuild :
+  new version (#55726)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

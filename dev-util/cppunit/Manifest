@@ -1,3 +1,6 @@
 MD5 ed2d1287978f0b40b9416facea8e073f cppunit-1.8.0.ebuild 938
-MD5 e76e5a8089b91f06a384f7d5f68b2f58 ChangeLog 744
+MD5 34dea416500c1253e7d8ae6c78a49eeb cppunit-1.10.2.ebuild 926
+MD5 e4717461433ae5d19fc9d491022bb8bd ChangeLog 874
+MD5 c4c708e3dc384f836a21bfea63ae3288 metadata.xml 162
+MD5 2f66c625e1f7de63458cfb987e9b0d9d files/digest-cppunit-1.10.2 66
 MD5 b71249733f097340c7893dfdc0538885 files/digest-cppunit-1.8.0 65
