@@ -1,11 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3.ebuild,v 1.5 2002/02/15 08:48:09 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3.ebuild,v 1.6 2002/05/27 17:27:36 drobbins Exp $
 
 S=${WORKDIR}/${P}
-SRC_URI="http://prdownloads.sourceforge.net/sgmltools-lite/${P}.tar.gz
-		 http://prdownloads.sourceforge.net/sgmltools-lite/nw-eps-icons-0.0.1.tar.gz"
+SRC_URI="mirror://sourceforge/sgmltools-lite/${P}.tar.gz
+		 mirror://sourceforge/sgmltools-lite/nw-eps-icons-0.0.1.tar.gz"
 
 HOMEPAGE="sgmltools-lite.sourceforge.net"
 DESCRIPTION=""

@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.33.7.1-r1.ebuild,v 1.5 2002/04/28 03:59:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.33.7.1-r1.ebuild,v 1.6 2002/05/27 17:27:36 drobbins Exp $
 
 
 MY_P=${PN}-.33.7.1
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A spell checker replacement for ispell"
-SRC_URI="http://download.sourceforge.net/aspell/${MY_P}.tar.gz http://prdownloads.sourceforge.net/aspell/aspell-.33-fix2.diff"
+SRC_URI="http://download.sourceforge.net/aspell/${MY_P}.tar.gz mirror://sourceforge/aspell/aspell-.33-fix2.diff"
 HOMEPAGE="http://aspell.sourceforge.net"
 
 DEPEND=">=app-text/pspell-0.12

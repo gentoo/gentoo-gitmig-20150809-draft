@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.8.ebuild,v 1.1 2002/05/22 23:15:38 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.8.ebuild,v 1.2 2002/05/27 17:27:36 drobbins Exp $
 
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
@@ -12,7 +12,7 @@ CXXFLAGS="${CXXFLAGS} -g"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Scrollkeeper"
-SRC_URI="ftp://prdownloads.sourceforge.net/${PN}/${P}.tar.gz
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 http://telia.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz
 http://unc.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz
 http://belnet.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz"

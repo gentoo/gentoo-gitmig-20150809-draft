@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.50.0.ebuild,v 1.1 2002/04/28 03:20:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.50.0.ebuild,v 1.2 2002/05/27 17:27:36 drobbins Exp $
 
 S=${WORKDIR}/docbook-xsl-${PV}
 DESCRIPTION="XSL Stylesheets for Docbook"
-SRC_URI="http://prdownloads.sourceforge.net/docbook/docbook-xsl-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/docbook/docbook-xsl-${PV}.tar.gz"
 HOMEPAGE="http://www.oasis-open.org/docbook/"
 
 DEPEND="dev-libs/libxml2"
