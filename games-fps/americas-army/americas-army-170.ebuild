@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-170.ebuild,v 1.1 2003/09/09 18:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-170.ebuild,v 1.2 2003/11/01 16:30:05 mholzer Exp $
 
 inherit games
 
@@ -9,6 +9,7 @@ HOMEPAGE="http://www.americasarmy.com/"
 SRC_URI="ftp://ftp.stenstad.net/mirrors/icculus.org/armyops-lnx-${PV}.sh.bin
 	http://guinness.devrandom.net/%7Eprimus/armyops-lnx-${PV}.sh.bin
 	http://www.3ddownloads.com/linuxgames/americas_army/armyops-lnx-${PV}.sh.bin"
+RESTRICT="nomirror"
 
 LICENSE="Army-EULA"
 SLOT="0"
