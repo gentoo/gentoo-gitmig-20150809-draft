@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/wipe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.9 2004/10/05 13:34:52 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.10 2004/12/17 10:04:00 swegener Exp $
+
+  17 Dec 2004; Sven Wegener <swegener@gentoo.org> -wipe-2.1.0.ebuild:
+  Removed old ebuild.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> wipe-2.2.0.ebuild:
   Masked wipe-2.2.0.ebuild stable for ppc
