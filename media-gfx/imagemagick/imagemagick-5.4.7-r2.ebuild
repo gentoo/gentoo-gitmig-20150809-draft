@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.7-r1.ebuild,v 1.2 2002/09/24 22:32:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.7-r2.ebuild,v 1.1 2002/09/24 22:32:54 mcummings Exp $
 
 inherit libtool
 inherit perl-module
@@ -43,25 +43,28 @@ src_compile() {
 	cp configure configure.orig
 	sed -e 's:netscape:mozilla:g' configure.orig > configure
 
+	#patch to allow building by perl
+        patch -p0 < ${FILESDIR}/perlpatch.diff
+
 	econf \
 		--enable-shared \
 		--enable-static \
 		--enable-lzw \
 		--with-ttf \
-		--without-fpx \
+		--with-fpx \
 		--without-gslib \
 		--without-hdf \
-		--without-jbig \
-		--without-wmf \
+		--with-jbig \
+		--with-wmf \
 		--with-threads \
 		${myconf} || die "bad configure"
-
 	emake || die "compile problem"
 
-	cd ${S}/PerlMagick
+	# More perl stuff 
+	cd PerlMagick
 	make clean
 	perl-module_src_prep
-	cd ${S}
+	cd ..
 }
 
 src_install() {
@@ -73,11 +76,6 @@ src_install() {
 	myinst="${myinst} datadir=${D}/usr/share"
 
 	mydoc="*.txt"
-
-	cd ${S}
-	make ${myinst} install || die
-	cd ${S}
-	cd ${S}/PerlMagick
 	perl-module_src_install
 	
 	rm -f ${D}/usr/share/ImageMagick/*.txt
