@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.9.2.ebuild,v 1.5 2004/11/30 06:46:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.9.3.ebuild,v 1.1 2004/12/11 10:34:24 usata Exp $
 
 inherit ruby
 
@@ -15,9 +15,8 @@ SLOT="0"
 KEYWORDS="~alpha ~ppc ~x86"
 IUSE="emacs"
 
-DEPEND="virtual/ruby
-	app-dicts/prime-dict
-	>=dev-libs/suikyo-1.3.0
+DEPEND="app-dicts/prime-dict
+	>=dev-libs/suikyo-2.0.0
 	dev-ruby/ruby-progressbar"
 PDEPEND="emacs? ( app-emacs/prime-el )"
 
