@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.6 2002/04/16 13:47:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.7 2002/05/09 19:29:30 spider Exp $
+
+*libxml2-2.4.21 (9 MAy 2002)
+  9 May 2002; Spider <spider@gentoo.org> :
+  bump version, change from .tar.gz to .tar.bz2
 
 *libxml2-2.4.20 (16 Apr 2002)
 
