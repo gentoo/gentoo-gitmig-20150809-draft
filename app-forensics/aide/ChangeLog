@@ -1,0 +1,95 @@
+# ChangeLog for app-admin/aide
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.1 2004/09/12 06:44:02 dragonheart Exp $
+
+*aide-0.10 (12 Sep 2004)
+
+  12 Sep 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +files/aide-0.10-gentoo.diff, +files/aide-0.9-gentoo.diff,
+  +aide-0.10.ebuild, +aide-0.9.ebuild:
+  Moved from app-admin/aide to app-forensics/aide.
+
+  11 Sep 2004; Jon Hood <squinky86@gentoo.org> files/aide-0.10-gentoo.diff,
+  -aide-0.8.ebuild:
+  Fix mhash segfault irt #62194, thanks Gianluca <g.insolvibile@cpr.it>.
+
+  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> aide-0.10.ebuild:
+  Stable on alpha.
+
+  06 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  aide-0.10.ebuild:
+  x86 stable
+
+  13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> aide-0.10.ebuild:
+  marked ~amd64
+
+  30 Mar 2004; Chuck Short <zul@gentoo.org> files/aide-0.10-gentoo.diff:
+  Added missing patch.
+
+  29 Mar 2004; Chuck Short <zul@gentoo.org> aide-0.8.ebuild, aide-0.9.ebuild:
+  Header updates.
+
+*aide-0.10 (29 Mar 2004)
+
+  29 Mar 2004; Chuck Short <zul@gentoo.org> aide-0.10.ebuild:
+  Version bump, closes #46031.
+
+  14 Dec 2003; Martin Holzer <mholzer@gentoo.org> aide-0.9.ebuild:
+  more configure options with IUSE. closes #35700
+
+  16 Oct 2003; Aron Griffis <agriffis@gentoo.org> aide-0.9.ebuild:
+  Stable on alpha
+
+  12 Aug 2003; Martin Holzer <mholzer@gentoo.org> aide-0.9.ebuild:
+  Updated Homepage.
+
+  13 May 2003; Tavis Ormandy <taviso@gentoo.org> aide-0.9.ebuild:
+  marking ~alpha.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*aide-0.9 (21 Oct 2002)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> aide-0.9.ebuild :
+  Moved to stable
+
+  15 Jan 2003; Jason Wever <weeve@gentoo.org> aide-0.9.ebuild :
+  Changed ~sparc keyword to sparc as it fixes bug #12828
+
+  29 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> aide-0.9.ebuild :
+  Added patch to fix compilation. Found by Janos Milus <j.milus@chello.hu> in #9750.
+
+  21 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump. Found by Joshua Brindle <jbrindle@snu.edu> in #5372.
+  Also contains updates from Paul Belt <gaarde@yahoo.com> in #5372.
+
+*aide-0.8 (15 Mar 2002)
+
+  15 Jan 2003; Jason Wever <weeve@gentoo.org> aide-0.8 :
+
+  Changed sparc keyword to -sparc as aide --init is broken on sparc.
+
+  13 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> aide-0.8 :
+
+  Added ppc keyword
+
+  15 Mar 2002; Seemant Kulleen <seemant@gentoo.org> aide-0.8 :
+
+  Upgraded the package.
+
+*aide-0.7-r1 (15 Mar 2002)
+
+  12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> aide-0.7-r1 :
+
+  Fixed the conf file going into a weird directory.  It now gets placed into
+  /etc/aide/aide.conf.
+
+*aide-0.7 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
