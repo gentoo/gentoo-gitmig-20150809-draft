@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-382-r2.ebuild,v 1.8 2004/09/05 09:41:41 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-382-r2.ebuild,v 1.9 2004/09/11 16:39:59 slarti Exp $
 
 DESCRIPTION="Excellent text file viewer"
 HOMEPAGE="http://www.greenwoodsoftware.com/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.greenwoodsoftware.com/less/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha ~arm hppa ~amd64 ia64 ~ppc64 ~s390"
+KEYWORDS="x86 ppc sparc mips alpha ~arm hppa amd64 ia64 ~ppc64 ~s390"
 IUSE=""
 
 DEPEND="virtual/libc

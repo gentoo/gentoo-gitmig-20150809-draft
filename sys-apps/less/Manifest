@@ -1,15 +1,25 @@
-MD5 604bd83cc7a09c3cbfec3dcaf4b41f92 ChangeLog 4485
-MD5 89b94d8a1d249a7b5a33b46f6e542ee3 less-378-r1.ebuild 884
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 07505666728c6e1673b5a067c7002304 less-378-r2.ebuild 883
 MD5 871b82afe5b88d536fe2de0a0c254a57 less-381.ebuild 891
+MD5 89b94d8a1d249a7b5a33b46f6e542ee3 less-378-r1.ebuild 884
+MD5 9ff0a162a8a532ef621800649015736d less-382-r2.ebuild 791
 MD5 740c59254f00a0ceba3662f56c4c18c2 less-382.ebuild 792
+MD5 0f59a54f784178fa0322a32aebf30180 ChangeLog 4571
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 8daf5af6860ab30770abecc6937bb0a0 less-382-r2.ebuild 792
+MD5 0cc555c44c02b9b457e98ed39a63f1a2 files/lesspipe.sh-r1 1429
+MD5 b8fb86a866cd77b7fa51a24055b4bc1b files/lesspipe.sh-r2 1292
+MD5 24c3d68ec84e1fcd23ef6d95b0105a76 files/lesspipe.sh 1429
 MD5 8769c7864189f8c6f30907d60f350789 files/digest-less-378-r1 246
 MD5 f60badb5a4f71f62a360a728d0757ecd files/digest-less-378-r2 246
+MD5 6f05cb473c8bd03fb8fb5ba7466aa804 files/digest-less-382-r2 60
 MD5 ddd20ba8447e21d2e3d3368833c7180e files/digest-less-381 60
 MD5 6f05cb473c8bd03fb8fb5ba7466aa804 files/digest-less-382 60
-MD5 24c3d68ec84e1fcd23ef6d95b0105a76 files/lesspipe.sh 1429
-MD5 0cc555c44c02b9b457e98ed39a63f1a2 files/lesspipe.sh-r1 1429
-MD5 6f05cb473c8bd03fb8fb5ba7466aa804 files/digest-less-382-r2 60
-MD5 b8fb86a866cd77b7fa51a24055b4bc1b files/lesspipe.sh-r2 1292
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBQyp3CHk4+ZoBpvsRAscQAKCoqM7YPBbXZYKMRzjTZQVMTBy0tgCfWpu1
+pRVwl++FE9ortrwzx5glDs0=
+=AYMh
+-----END PGP SIGNATURE-----
