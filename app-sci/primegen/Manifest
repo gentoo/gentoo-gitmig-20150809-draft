@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e7658620721afb53be906611cf80b165 ChangeLog 599
+MD5 f96d8e953851a5ca73bfde42faad9369 primegen-0.97.ebuild 886
+MD5 383fb5bf36418239b5cc82a4cc0a2408 ChangeLog 707
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 e279107035405854de5467d4dddb50d9 primegen-0.97.ebuild 880
 MD5 ad11fcd9377b10d5a5e151a648608c5f files/digest-primegen-0.97 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBXsbxI1lqEGTUzyQRAvsGAKCNmB2IF+rn8PRFrlGkYNOJI8YB3QCeLpZD
-XI4xRMTvtAxf+YDenkKAIeU=
-=gX6N
+iD8DBQFBn9dTZ/iYVBmujdURAv7iAJ9JN6RCwd3dxMPtkpK+33a7CyqBigCgg+id
+70yEV7hIfZLzigwTvZg/YQA=
+=368p
 -----END PGP SIGNATURE-----
