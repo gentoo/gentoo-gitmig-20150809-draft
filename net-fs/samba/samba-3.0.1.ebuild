@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.1.ebuild,v 1.3 2004/03/14 21:18:10 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.1.ebuild,v 1.4 2004/03/23 15:11:15 avenj Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ SRC_URI="mirror://samba/${PN}${_CVS}.tar.bz2
 
 _COMMON_DEPS="dev-libs/popt
 	readline? sys-libs/readline
-	amd64? ( ) : ( kerberos? ( app-crypt/mit-krb5 ) )
+	kerberos? ( app-crypt/mit-krb5 )
 	mysql? ( dev-db/mysql sys-libs/zlib )
 	acl? sys-apps/acl
 	cups? net-print/cups
