@@ -1,0 +1,11 @@
+# This file contains a list of useflags that cannot be used on sparc.
+
+3dfx
+3dnow
+afs
+alsa
+mmx
+pic
+sse
+svga
+voodoo3
