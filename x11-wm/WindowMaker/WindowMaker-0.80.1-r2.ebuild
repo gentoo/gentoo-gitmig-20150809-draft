@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1-r2.ebuild,v 1.11 2002/09/17 14:07:38 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1-r2.ebuild,v 1.12 2002/09/28 04:23:17 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window Maker"
@@ -26,7 +26,7 @@ src_unpack() {
         unpack ${A}
         cd ${WORKDIR}
         patch -p0 < ${FILESDIR}/${P}-gentoo.patch
-	patch -p0 < ${FILESDIR}/wmfpo-81.patch
+	#patch -p0 < ${FILESDIR}/wmfpo-81.patch
 
 }
 
