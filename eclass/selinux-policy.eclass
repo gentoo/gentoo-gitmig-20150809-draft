@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.1 2003/07/29 02:55:56 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.2 2003/07/29 15:53:51 pebenito Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the policy
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 S="${WORKDIR}/policy"
 
-IUSE="loadpolicy"
+IUSE=""
 
 newrdepend sys-apps/selinux-small sec-policy/selinux-base-policy
 
@@ -62,7 +62,7 @@ selinux-policy_src_install() {
 }
 
 selinux-policy_pkg_postinst() {
-	if [ "`use loadpolicy`" ]; then
+	if [ "`has "loadpolicy" $FEATURES`" ]; then
 		ebegin "Automatically loading policy"
 		make -C ${POLICYDIR} load
 		eend $?
@@ -84,7 +84,7 @@ selinux-policy_pkg_postinst() {
 		eerror "that the policy be loaded before continuing!!"
 		echo
 		einfo "Automatic policy loading can be enabled by adding"
-		einfo "\"loadpolicy\" to the USE flags."
+		einfo "\"loadpolicy\" to the FEATURES in make.conf."
 		echo
 		echo
 		echo -ne "\a" ; sleep 0.1 ; echo -ne "\a" ; sleep 1
