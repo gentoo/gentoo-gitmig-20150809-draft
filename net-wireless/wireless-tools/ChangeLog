@@ -1,6 +1,6 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.26 2004/05/02 03:25:48 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.27 2004/05/12 08:57:35 aliz Exp $
 
 *wireless-tools-27_pre22 (01 May 2004)
 
@@ -10,6 +10,7 @@
   Bump to latest 27_pre, and remove a bunch of old ebuilds.
 
 *wireless-tools-27_pre2-r1 (18 Mar 2004)
+*wireless-tools-27_pre17 (18 Mar 2004)
 
   18 Mar 2004; Peter Johanson <latexer@gentoo.org> wireless-tools-24.ebuild,
   wireless-tools-25-r1.ebuild, wireless-tools-25.ebuild,
