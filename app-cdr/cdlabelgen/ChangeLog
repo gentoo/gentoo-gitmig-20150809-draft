@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdlabelgen
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/ChangeLog,v 1.14 2004/02/25 13:45:57 bazik Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/ChangeLog,v 1.15 2004/03/21 13:38:50 mholzer Exp $
+
+  21 Mar 2004; Martin Holzer <mholzer@gentoo.org> cdlabelgen-2.3.0.ebuild,
+  cdlabelgen-2.4.0.ebuild, cdlabelgen-2.6.0.ebuild, cdlabelgen-2.6.1.ebuild,
+  cdlabelgen-3.0.0.ebuild:
+  adding categorie. see 45110 for details
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> cdlabelgen-3.0.0.ebuild:
   All your stable keywords are belong to sparc!
