@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.59 2004/11/18 14:29:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.60 2004/12/22 15:59:06 foser Exp $
+
+  22 Dec 2004; foser <foser@gentoo.org> freetype-2.1.9.ebuild :
+  Add block for libwmf which wont build with this version
 
   20 Nov 2004; Aron Griffis <agriffis@gentoo.org> freetype-2.1.9.ebuild:
   Add RDEPEND to block versions of moz/ff/tb lacking the freetype-2.1.8+ binary

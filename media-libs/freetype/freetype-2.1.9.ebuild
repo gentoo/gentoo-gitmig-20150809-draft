@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.9.ebuild,v 1.6 2004/11/18 14:29:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.9.ebuild,v 1.7 2004/12/22 15:59:06 foser Exp $
 
 inherit eutils flag-o-matic gnuconfig libtool
 
@@ -26,7 +26,8 @@ DEPEND="virtual/libc
 RDEPEND="${DEPEND}
 	!<net-www/mozilla-1.7.3-r3
 	!<net-www/mozilla-firefox-1.0-r3
-	!<net-www/mozilla-thunderbird-0.9-r3"
+	!<net-www/mozilla-thunderbird-0.9-r3
+	!<media-libs/libwmf-0.2.8.2"
 
 src_unpack() {
 
