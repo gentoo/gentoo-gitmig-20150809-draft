@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.4.0.ebuild,v 1.5 2004/04/19 12:18:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/gtkradiant/gtkradiant-1.4.0.ebuild,v 1.6 2004/05/01 20:08:42 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -25,6 +25,8 @@ RDEPEND="media-libs/libpng
 	virtual/opengl"
 
 S=${WORKDIR}
+dir=${GAMES_PREFIX_OPT}/${PN}
+Ddir=${D}/${dir}
 
 src_unpack() {
 	unpack_makeself
@@ -32,17 +34,18 @@ src_unpack() {
 }
 
 src_install() {
-	local dir=/opt/${PN}
 	dodir ${dir}
-	cp -r bin/Linux/x86/* ${D}/${dir}/
-	chmod -R a+x ${D}/${dir}/
-	cp -r README license.txt core/* ${D}/${dir}/
-	echo ${PV:2:1} > ${D}/${dir}/RADIANT_MAJOR
-	echo ${PV:4} > ${D}/${dir}/RADIANT_MINOR
+	cp -r bin/Linux/x86/* ${Ddir}/
+	chmod -R a+x ${Ddir}/
+	cp -r README license.txt core/* ${Ddir}
+	echo ${PV:2:1} > ${Ddir}/RADIANT_MAJOR
+	echo ${PV:4} > ${Ddir}/RADIANT_MINOR
 
-	dobin ${FILESDIR}/{q3map2,radiant}
+	dogamesbin ${FILESDIR}/{q3map2,radiant}
 	insinto ${dir}/games
 	doins ${FILESDIR}/*.game
+	exeinto ${dir} || die "${dir}"
+	doexe ${FILESDIR}/{q3map2,radiant}
 
 	dodir ${GAMES_PREFIX_OPT}
 	cp -r et ${D}/${GAMES_PREFIX_OPT}/enemy-territory
@@ -52,8 +55,4 @@ src_install() {
 	cp -r q2 ${D}/${GAMES_DATADIR}/quake2-data
 
 	prepgamesdirs
-}
-
-pkg_postinst() {
-	games_pkg_postinst
 }
