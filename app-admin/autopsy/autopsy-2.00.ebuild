@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/autopsy/autopsy-2.00.ebuild,v 1.1 2004/05/06 05:04:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/autopsy/autopsy-2.00.ebuild,v 1.2 2004/05/06 12:11:43 fmccor Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/autopsy/${P}.tar.gz"
 HOMEPAGE="http://www.sleuthkit.org/autopsy/"
 RESTRICT="nomirror"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
