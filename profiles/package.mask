@@ -13,7 +13,7 @@
 =media-video/ati-gatos-4.2.0.11-r1
 
 # Dont work's yet BaSS 05 Jun 2002
-app-misc/gtk-theme-switch-2.0.0-r2
+=app-misc/gtk-theme-switch-2.0.0-r2
 
 # Short-term mask, will test quickly and announce. -danarmak Jun 5th
 >=kde-base/kde-3.0.1.20020604
