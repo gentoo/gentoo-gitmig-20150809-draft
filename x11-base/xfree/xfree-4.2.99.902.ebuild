@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.902.ebuild,v 1.2 2003/02/25 00:52:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.902.ebuild,v 1.3 2003/02/25 01:28:38 hannes Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -141,7 +141,7 @@ src_unpack() {
 		unpack X${MY_SV}src-{1,2,3}.tgz
 	fi
 	
-	unpack XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
+	unpack XFree86-4.2.99.4-patches-${PATCH_VER}.tar.bz2
 
 	# Install the glide3 headers for compiling the tdfx driver
 #	if [ -n "`use 3dfx`" ]
