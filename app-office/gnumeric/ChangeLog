@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.78 2005/01/26 19:15:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.79 2005/02/01 14:46:00 corsair Exp $
+
+  01 Feb 2005; Markus Rothe <corsair@gentoo.org> gnumeric-1.4.1.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   26 Jan 2005; Guy Martin <gmsoft@gentoo.org> gnumeric-1.4.1.ebuild:
   Stable on hppa.
