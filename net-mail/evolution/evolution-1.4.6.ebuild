@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.6.ebuild,v 1.1 2004/03/22 10:15:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.6.ebuild,v 1.2 2004/03/23 10:22:30 liquidx Exp $
 
 # kde before gnome2, otherwise kde_src_install will override gnome2_src_install
 use kde && inherit kde
@@ -47,7 +47,7 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.0.10
 	                ) )
 	ssl? ( !mozilla? ( >=dev-libs/openssl-0.9.5 ) )
 	ldap? ( >=net-nds/openldap-2.0 )
-	amd64? ( ) : ( kerberos? ( >=app-crypt/mit-krb5-1.2.5 ) )
+	!amd64? ( kerberos? ( >=app-crypt/mit-krb5-1.2.5 ) )
 	doc? ( >=app-text/scrollkeeper-0.3.10-r1 )"
 
 DEPEND="${RDEPEND}
@@ -125,7 +125,7 @@ src_compile() {
 		&&	myconf="${myconf} --with-openldap=yes --with-static-ldap=no" \
 		|| myconf="${myconf} --with-openldap=no"
 
-	use kerberos \
+	[ `use kerberos` -a ! `use amd64` ] \
 		&& myconf="${myconf} --with-krb5=/usr" \
 		|| myconf="${myconf} --without-krb5"
 

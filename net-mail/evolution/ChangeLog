@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.92 2004/03/22 10:15:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.93 2004/03/23 10:22:30 liquidx Exp $
+
+  23 Mar 2004; Alastair Tse <liquidx@gentoo.org> evolution-1.4.6.ebuild:
+  fix amd64 dep and also fix configure flag passing in src_compile for amd64
 
 *evolution-1.4.6 (22 Mar 2004)
 
