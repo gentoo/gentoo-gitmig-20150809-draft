@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.148 2004/06/14 13:05:04 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.149 2004/06/19 21:36:36 tgall Exp $
+
+  19 Jun 2004; Tom Gall <tgall@gentoo.org> qt-3.3.2.ebuild:
+  added ~ppc64, bug #54130
 
   14 Jun 2004; Jason Wever <weeve@gentoo.org> qt-3.3.2.ebuild:
   Stable on sparc.
