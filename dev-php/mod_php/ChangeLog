@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.77 2003/05/31 21:41:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.78 2003/05/31 22:32:49 robbat2 Exp $
+
+*mod_php-4.3.2 (31 May 2003)
+
+  26 May 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2.ebuild,
+  files/digest-mod_php-4.3.2:
+  Version bump.
+  BerkDB is disabled due to DB4 issues and changes in PHP 4.3.2 presently.
+  If you need BerkDB support, please do NOT upgrade at this time.
 
 *mod_php-4.3.1-r3 (23 Apr 2003)
 
