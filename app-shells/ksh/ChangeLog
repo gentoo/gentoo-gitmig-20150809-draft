@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/ksh
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.2 2003/07/20 18:36:48 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.3 2003/09/06 11:11:05 taviso Exp $
+
+  06 Sep 2003; Tavis Ormandy <taviso@gentoo.org> :
+  New version of ast-ksh and INIT, testing a patch that seems to 
+  stop linking errors.
+  some syntax changes.
+  make repomans whitespace checker happy.
 
   20 Jul 2003; Tavis Ormandy <taviso@gentoo.org> ksh-93.20030422.ebuild:
   save some bandwidth, and mark stable on Alpha
