@@ -1,7 +1,8 @@
-MD5 ad3184f48bb6dbfd3e0d1ce67cda6c58 ChangeLog 9612
+MD5 c1d89541ed4a2e63e1ca8c2afb3d9031 ChangeLog 9774
 MD5 e380a39924d3ab14f6b1bcffcba31030 dspam-3.2.7.ebuild 15589
-MD5 38bc389154a7b4fb417c661f7fa345cf dspam-3.4.0-r1.ebuild 19654
+MD5 96b84e7e385b9e22f65f4236edf982ab dspam-3.4.0-r1.ebuild 19673
 MD5 6556567b335a4c95782565be3fc57e3a dspam-3.4.0.ebuild 16374
+MD5 6d2c637466f69cfa7b990aaba314fad7 dspam-3.4.1.ebuild 19658
 MD5 53fa7ac719a55e42f5558b3f367be77e dspam-3.4_rc2.ebuild 16374
 MD5 82cc2a81e351669279b735fbd67f910e dspam-3.4_rc3.ebuild 16376
 MD5 dbfbe5a3bbe3347938107f5f5bd2197e metadata.xml 308
@@ -16,4 +17,5 @@ MD5 34841f2d2c9d6e057b9839bbe354e34a files/dspam.cron 3478
 MD5 e2850ede85e459ab5479b7d2e79eeb5a files/dspam.rc 1025
 MD5 2163ca41de383f09f4d754e2d35cb158 files/logrotate.dspam 156
 MD5 086d49ad3a5e289bd80de810b1f52b7f files/digest-dspam-3.4.0 129
+MD5 52a1a027d9b3a0428a7c44b352b5b16b files/digest-dspam-3.4.1 129
 MD5 7735956f416bd58bfcbeee99af43bea0 files/digest-dspam-3.2.7 63

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4.0-r1.ebuild,v 1.2 2005/03/23 10:22:48 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4.1.ebuild,v 1.1 2005/03/23 10:22:48 st_lim Exp $
 
 inherit eutils
 
@@ -452,7 +452,7 @@ pkg_config () {
 		fi
 
 		einfo "Creating DSPAM MySQL database for virtual-users users"
-		/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_virtual-users_users.sql
+		/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_virtual-users.sql
 
 		if use neural ; then
 			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_neural.sql
@@ -479,7 +479,7 @@ pkg_config () {
 
 		einfo "Creating DSPAM PostgreSQL tables"
 		PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${HOMEDIR}/pgsql_objects.sql 1>/dev/null 2>&1
-		PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${HOMEDIR}/pgsql_virtual-users_users.sql 1>/dev/null 2>&1
+		PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${HOMEDIR}/pgsql_virtual-users.sql 1>/dev/null 2>&1
 
 	elif use oci8 ; then
 		[[ -f ${HOMEDIR}/oracle.data ]] && mv -f ${HOMEDIR}/oracle.data ${HOMEDIR}
