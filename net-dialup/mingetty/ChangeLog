@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/mingetty
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.18 2004/07/01 22:08:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.19 2004/10/02 21:24:23 solar Exp $
+
+  02 Oct 2004; <solar@gentoo.org> +files/mingetty-1.00-strerror.patch,
+  mingetty-1.00.3.ebuild:
+  replaced legacy interface sys_errlist[errno] with strerror(errno)
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mingetty-1.00.3.ebuild:

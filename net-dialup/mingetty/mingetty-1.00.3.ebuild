@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.00.3.ebuild,v 1.18 2004/07/14 23:02:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/mingetty-1.00.3.ebuild,v 1.19 2004/10/02 21:24:23 solar Exp $
 
 inherit rpm eutils
 
@@ -21,6 +21,7 @@ RDEPEND="virtual/libc"
 src_unpack() {
 	rpm_src_unpack
 	epatch ${FILESDIR}/mingetty-1.00-autologin.patch
+	epatch ${FILESDIR}/mingetty-1.00-strerror.patch
 }
 
 src_compile() {
