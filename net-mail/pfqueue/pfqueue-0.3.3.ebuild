@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pfqueue/pfqueue-0.2.1.ebuild,v 1.1 2005/01/15 01:28:45 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pfqueue/pfqueue-0.3.3.ebuild,v 1.1 2005/02/25 01:45:53 ticho Exp $
 
 inherit eutils
 DESCRIPTION="pfqueue is an ncurses console-based tool for managing Postfix
@@ -17,11 +17,4 @@ RDEPEND="mail-mta/postfix"
 src_install() {
 	dosbin pfqueue
 	dodoc README ChangeLog
-}
-
-pkg_postinst() {
-	einfo "Start this program (as root) with pfqueue"
-	einfo ""
-	einfo "To delete messages from the queue press 'd' and then 'y'"
-	einfo "To quit type 'q'"
 }

@@ -6,6 +6,5 @@
   <email>ticho@gentoo.org</email>
    <name>Andrej Kacian</name>
  </maintainer>
- <longdescription>A console-based tool for handling postfix
-	 queues</longdescription>
+ <longdescription>A console-based tool for handling postfix queues</longdescription>
 </pkgmetadata>
