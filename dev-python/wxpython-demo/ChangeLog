@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/wxpython-demo
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-demo/ChangeLog,v 1.1 2003/07/08 00:49:14 liquidx Exp $
+
+*wxpython-demo-2.4.0.7 (08 Jul 2003)
+
+  08 Jul 2003; Alastair Tse <liquidx@gentoo.org> metadata.xml,
+  wxpython-demo-2.4.0.7.ebuild:
+  ebuild submitted by Rob Cakebread <robc@myrealbox.com> (#23344)
+
