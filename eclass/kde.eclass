@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.22 2001/12/23 21:35:15 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.23 2001/12/24 13:41:15 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit autoconf base || die
 ECLASS=kde
@@ -68,6 +68,11 @@ kde_src_compile() {
 	case $1 in
 		myconf)
 			debug-print-section myconf
+			if [ ! -d "$KDEDIR" ]; then
+			    # possible if portage installed a version newer than the one requested
+			    debug-print "$FUNCNAME::myconf: calling set-kdedir again"
+			    set-kdedir
+			fi
 			myconf="$myconf --host=${CHOST} --with-x --enable-mitshm --with-xinerama --prefix=/usr --with-qt-dir=${QTDIR}"
 			use qtmt 	&& myconf="$myconf --enable-mt"
 			use objprelink	&& myconf="$myconf --enable-objprelink" || myconf="$myconf --disable-objprelink"
@@ -287,13 +292,11 @@ search for it in $2"
     done
 
     if [ -z "$result" ]; then
-	# we're in serious troble
-	echo "!!! Error: $FUNCNAME could not find/select a satisfying version number!
-!!! If this surprises you, it shouldn't have happened. If you're using
-!!! the prerelease kde3 ebuilds make sure you have the latest kdelibs3
-!!! and qt3 emerged. If you do have them, or don't know what i'm talking
-!!! about, report this as a bug."
-	exit 1
+	# this is probably ok as it shuold mean portage will install the needed version
+	# hadnling code in kde_src_compile
+	debug-print "Warning: $FUNCNAME: could not find/select a satisfying version number!
+this probably means that it hasn't yet been installed, but will be."
+	result="$1"
     fi
 
     # strip all spaces
