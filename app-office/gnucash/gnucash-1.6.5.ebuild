@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.4.ebuild,v 1.2 2001/12/18 03:21:41 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.5.ebuild,v 1.1 2001/12/18 03:21:41 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A personal finance manager"
