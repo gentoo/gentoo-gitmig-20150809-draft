@@ -1,6 +1,12 @@
 # ChangeLog for app-text/gpdf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.71 2005/01/02 23:02:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.72 2005/01/20 09:02:59 obz Exp $
+
+*gpdf-2.8.2 (20 Jan 2005)
+
+  20 Jan 2005; Mike Gardiner <obz@gentoo.org>
+  +files/gpdf-xpdf-3.00pl3.patch, +gpdf-2.8.2.ebuild:
+  New version 2.8.2, including fix for security vulnerability, see bug #78128
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
