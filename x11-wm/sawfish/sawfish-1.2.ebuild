@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.2.ebuild,v 1.5 2002/11/20 22:42:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.2.ebuild,v 1.6 2002/12/04 14:16:27 foser Exp $
 
 inherit base
 
@@ -17,8 +17,7 @@ KEYWORDS="x86"
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=x11-libs/rep-gtk-0.17
-	( >=dev-libs/librep-0.16
-	  <dev-libs/librep-20020000 )
+	=dev-libs/librep-0.16*
 	>=media-libs/imlib-1.9.10-r1
 	media-libs/audiofile
 	>=x11-libs/gtk+-2.0.8
@@ -66,7 +65,7 @@ src_compile() {
 		${myconf} || die
 
 	# DO NOT USE "emake" !!! - Azarah, 24 Jun 2002
-	make || die
+	MAKEOPTS=-j1 make || die
 }
 
 src_install() {
@@ -77,6 +76,3 @@ src_install() {
 	insinto /usr/share/gnome/wm-properties
 	doins ${FILESDIR}/Sawfish.desktop
 }
-
-
-
