@@ -1,6 +1,9 @@
 # ChangeLog for games-action/d2x
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.8 2004/08/26 19:07:28 mr_bones_ Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.9 2005/01/09 10:48:13 swegener Exp $
+
+  09 Jan 2005; Sven Wegener <swegener@gentoo.org> d2x-0.2.5-r1.ebuild:
+  Added missing parentheses in SRC_URI/*DEPEND/LICENSE.
 
   26 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> d2x-0.2.5-r1.ebuild:
   typo fix from Bertram Felgenhauer via bug #61833

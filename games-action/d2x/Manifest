@@ -1,7 +1,17 @@
-MD5 b5f1b8d22c5877f170f489351fe43a67 ChangeLog 1062
-MD5 cd93d202d6e52be0b2e1819f094fc4d0 d2x-0.2.5.ebuild 1978
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e560b26a3a230cfe16b0871e80234121 d2x-0.2.5.ebuild 1978
+MD5 82ad65f111df1092db5ea9b305885feb ChangeLog 1189
+MD5 6ef14e3cb90b8f7ac2919796b42e76ac d2x-0.2.5-r1.ebuild 2647
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 e6c9dccdf1684d720ae934ed5831f1aa d2x-0.2.5-r1.ebuild 2644
 MD5 499b24f4949333a0c04d1177aa3213e5 files/0.2.5-shellscripts.patch 747
 MD5 b298d324cbce31e8cc4779c765fabc4d files/digest-d2x-0.2.5 123
 MD5 b298d324cbce31e8cc4779c765fabc4d files/digest-d2x-0.2.5-r1 123
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB4QvzI1lqEGTUzyQRAlG3AKCx8K9E99pWGZHlAvgwOnJ0AraLQACeIhX7
+w2L07lhcSPdsGtQX+7WBxEc=
+=jYq8
+-----END PGP SIGNATURE-----
