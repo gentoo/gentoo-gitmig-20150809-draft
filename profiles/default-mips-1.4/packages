@@ -39,13 +39,12 @@
 # sash - static shell for system recovery
 *app-shells/sash
 *dev-lang/perl
-*virtual/bootloader
 *virtual/editor
 #no real cost for nano, since we already have ncurses
-*net-ftp/ftp
 *net-misc/dhcpcd
 *net-misc/rsync
 *net-misc/wget
+*net-misc/iputils
 *app-shells/bash
 *sys-apps/bzip2
 *sys-apps/kbd
@@ -68,7 +67,6 @@
 *sys-apps/man-pages
 *sys-apps/modutils
 *sys-apps/net-tools
-*sys-apps/netkit-base
 *sys-apps/procps
 *sys-apps/psmisc
 *sys-apps/sed
@@ -87,19 +85,16 @@
 *sys-devel/bc
 *sys-devel/bison
 *sys-devel/flex
-*sys-devel/gettext
 *>=sys-devel/libtool-1.4.1-r9
 *sys-devel/m4
 *sys-devel/make
 *sys-devel/patch
 *sys-libs/cracklib  
 *<sys-libs/db-3.2.10
-*sys-libs/gdbm  
 *>=sys-libs/ncurses-5.2-r2
 *sys-libs/pam     
 *sys-libs/pwdb      
 *sys-libs/readline  
-*sys-libs/slang
 *sys-libs/zlib
 *net-misc/openssh
 *sys-apps/devfsd
