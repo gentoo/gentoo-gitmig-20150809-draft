@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.0-r2.ebuild,v 1.3 2003/01/13 08:54:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.0-r2.ebuild,v 1.4 2003/01/13 16:25:07 rphillips Exp $
 
 IUSE="truetype postgres tiff libwww nls jpeg readline ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
@@ -201,6 +201,12 @@ src_install() {
 	mv php.ini-dist php.ini
 	doins php.ini
 	dosym /usr/lib/php/extensions/no-debug-non-zts-20020429 /etc/php4/lib
+
+	#install scripts
+	exeinto /usr/bin
+	doexe ${S}/pear/scripts/phpize
+	doexe ${S}/pear/scripts/php-config
+	doexe ${S}/pear/scripts/phpextdist
 
 	# This fixes the permission from world writeable to the correct one.
 	# - novell@kiruna.se

@@ -1,6 +1,6 @@
 # ChangeLog for dev-php/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.27 2003/01/13 08:54:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.28 2003/01/13 16:25:07 rphillips Exp $
 
   13 Jan 2003; Daniel Ahlberg <aliz@genoto.org> php-4.3.0-r2.ebuild :
   Added ppc and sparc keyword becuse this is a security update.
@@ -8,6 +8,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *php-4.3.0-r2 (8 Jan 2003)
+
+  13 Jan 2003; Ryan Phillips <rphillips@gentoo.org> php-4.3.0-r2.ebuild :
+  Added install of 3rd party scripts (phpize, etc)
 
   8 Jan 2003; Ryan Phillips <rphillips@gentoo.org> php-4.3.0-r2.ebuild :
   Changed freetype use var to truetype
