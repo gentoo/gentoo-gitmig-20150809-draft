@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r7.ebuild,v 1.1 2005/03/13 10:29:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r7.ebuild,v 1.2 2005/03/16 10:51:27 ka0ttic Exp $
 
 inherit cron toolchain-funcs debug
 
@@ -94,5 +94,5 @@ pkg_postinst() {
 		echo
 	fi
 
-	cron-pkg_postinst
+	cron_pkg_postinst
 }
