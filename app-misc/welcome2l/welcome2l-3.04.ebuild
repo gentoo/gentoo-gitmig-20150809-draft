@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/welcome2l-3.04.ebuild,v 1.4 2004/01/20 06:47:20 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/welcome2l/welcome2l-3.04.ebuild,v 1.5 2004/04/06 23:14:31 weeve Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.chez.com/littleigloo/files/${MY_P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="x86 ppc ~amd64 ~sparc"
 
 DEPEND="virtual/glibc"
 

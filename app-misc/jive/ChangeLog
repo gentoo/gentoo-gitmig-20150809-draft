@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jive
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jive/ChangeLog,v 1.3 2003/07/11 18:30:39 brad Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jive/ChangeLog,v 1.4 2004/04/06 23:11:16 weeve Exp $
+
+  06 Apr 2004; Jason Wever <weeve@gentoo.org> jive-1.1.ebuild:
+  Added ~sparc keyword wrt bug #46840.
 
   11 Jul 2003; Brad Laue <brad@gentoo.org> jive-1.1.ebuild:
   Move the homepage and SRC_URI to dev.gentoo.org.
