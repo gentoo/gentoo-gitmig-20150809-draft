@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.5 2002/04/26 05:42:18 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.6 2002/04/28 14:40:08 azarah Exp $
+
+*util-linux-2.11o-r3 (28 Apr 2002)
+
+  28 Apr 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Removed /bin/login in favour of pam-login.
 
 *util-linux-2.11o-r2 (25 Apr 2002)
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.2-r2.ebuild,v 1.1 2002/04/03 22:25:21 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.2-r5.ebuild,v 1.1 2002/04/28 14:40:55 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities to deal with user accounts"
@@ -14,10 +14,18 @@ DEPEND=">=sys-libs/pam-0.75-r4
 RDEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3"
 
+SLOT="0"
+
+pkg_preinst() { 
+	rm -f ${ROOT}/etc/pam.d/system-auth.new
+}
+
 src_compile() {
+	libtoolize --copy --force
+
 	local myconf=""
 	use nls || myconf="${myconf} --disable-nls"
-				
+
 	./configure --disable-desrpc \
 		--with-libcrypt \
 		--with-libcrack \
@@ -28,7 +36,8 @@ src_compile() {
 		${myconf} || die "bad configure"
 		
 	# Parallel make fails sometimes
-	make LDFLAGS="" || die "compile problem"
+	make LDFLAGS="-lcrack -lcrypt" \
+		LIBS="../libmisc/nscd.o" || die "compile problem"
 }
 
 src_install() {
@@ -38,6 +47,11 @@ src_install() {
 		exec_prefix=${D} \
 		mandir=${D}/usr/share/man \
 		install || die "install problem"
+
+	#do not install this login, but rather the one from
+	#util-linux, as this one have a serious root exploit
+	#with pam_limits in use.
+	rm ${D}/bin/login
 
 	mv ${D}/lib ${D}/usr
 	dosed "s:/lib':/usr/lib':g" /usr/lib/libshadow.la
@@ -56,10 +70,12 @@ src_install() {
 	insopts -m0600 ; doins ${FILESDIR}/securetty
 	insopts -m0600 ; doins ${S}/etc/login.access
 	insopts -m0644 ; doins ${S}/etc/limits
-	insopts -m0644 ; doins ${FILESDIR}/login.defs
+# From sys-apps/pam-login now
+#	insopts -m0644 ; doins ${FILESDIR}/login.defs
 	insinto /etc/pam.d ; insopts -m0644
 	cd ${FILESDIR}/pam.d
 	doins *
+	newins system-auth system-auth.new
 	newins shadow chage
 	newins shadow chsh
 	newins shadow chfn
@@ -77,6 +93,10 @@ src_install() {
 		cp $q $dir
 	done
 	
+	#dont install the manpage, since we dont use
+	#login with shadow
+	rm ${D}/usr/share/man/man1/login.*
+	
 	cd ${S}/doc
 	dodoc ANNOUNCE INSTALL LICENSE README WISHLIST
 	docinto txt
@@ -86,13 +106,23 @@ src_install() {
 pkg_postinst() {
 	echo
 	echo "****************************************************"
-	echo "   Due to a security issue, ${ROOT}/etc/pam.d/system-auth "
+	echo "   Due to a security issue, ${ROOT}etc/pam.d/system-auth "
 	echo "   is being updated automatically. Your old "
 	echo "   system-auth will be backed up as:"
-	echo "   ${ROOT}/etc/pam.d/system-auth.bak"
+	echo "   ${ROOT}etc/pam.d/system-auth.bak"
 	echo "****************************************************"
 	echo
-	\cp -a ${ROOT}/etc/pam.d/system-auth ${ROOT}/etc/pam.d/system-auth.bak
-	\cp -a ${FILESDIR}/pam.d/system-auth ${ROOT}/etc/pam.d/system-auth
+	local CHECK1=`md5sum ${ROOT}/etc/pam.d/system-auth | cut -d ' ' -f 1`
+	local CHECK2=`md5sum ${ROOT}/etc/pam.d/system-auth.new | cut -d ' ' -f 1`
+
+	if [ "$CHECK1" != "$CHECK2" ];
+	then
+		cp -a ${ROOT}/etc/pam.d/system-auth \
+	              ${ROOT}/etc/pam.d/system-auth.bak;
+		mv -f ${ROOT}/etc/pam.d/system-auth.new \
+	              ${ROOT}/etc/pam.d/system-auth
+	else
+		rm -f ${ROOT}/etc/pam.d/system-auth.new
+	fi
 }
 

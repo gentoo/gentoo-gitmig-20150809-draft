@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3.ebuild,v 1.3 2002/04/08 14:50:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3.ebuild,v 1.4 2002/04/28 14:40:55 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities to deal with user accounts"
@@ -13,6 +13,8 @@ DEPEND=">=sys-libs/pam-0.75-r4
 	
 RDEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3"
+
+SLOT="0"
 
 pkg_preinst() { 
 	rm -f ${ROOT}/etc/pam.d/system-auth.new
@@ -68,7 +70,8 @@ src_install() {
 	insopts -m0600 ; doins ${FILESDIR}/securetty
 	insopts -m0600 ; doins ${S}/etc/login.access
 	insopts -m0644 ; doins ${S}/etc/limits
-	insopts -m0644 ; doins ${FILESDIR}/login.defs
+# From sys-apps/pam-login now
+#	insopts -m0644 ; doins ${FILESDIR}/login.defs
 	insinto /etc/pam.d ; insopts -m0644
 	cd ${FILESDIR}/pam.d
 	doins *
