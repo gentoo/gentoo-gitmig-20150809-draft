@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/kterm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.6 2003/09/08 21:19:15 usata Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.7 2004/01/06 21:45:23 usata Exp $
+
+*kterm-6.2.0-r2 (07 Jan 2004)
+
+  07 Jan 2004; <usata@gentoo.org> kterm-6.2.0-r2.ebuild,
+  files/kterm-6.2.0-Xaw3d.patch, files/kterm-ad-gentoo.diff:
+  Added wheel mouse support and Xaw3d IUSE flag.
 
 *kterm-6.2.0-r1 (20 Jun 2003)
 
