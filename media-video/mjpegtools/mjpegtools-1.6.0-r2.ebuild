@@ -2,24 +2,29 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # Heavily modified by Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0.ebuild,v 1.2 2002/05/26 13:17:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r2.ebuild,v 1.1 2002/07/08 04:20:42 spider Exp $
+
+inherit libtool
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools for MJPEG video"
 SRC_URI="http://download.sourceforge.net/mjpeg/${P}.tar.gz
 	 quicktime? ( http://download.sourceforge.net/mjpeg/quicktime4linux-1.4-patched.tar.gz )"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
+LICENSE="as-is"
+SLOT="1"
+KEYWORDS="x86"
 
-RDEPEND="media-libs/jpeg-6b
+RDEPEND="media-libs/jpeg
 	media-libs/libpng
 	=x11-libs/gtk+-1.2*
 	X? ( x11-base/xfree )
 	sdl? ( media-libs/libsdl )"
 
 DEPEND="${RDEPEND}
-	media-libs/libmovtar-0.1.2
+	media-libs/libmovtar
 	quicktime? ( media-libs/quicktime4linux )
-	mmx? ( >=media-libs/jpeg-mmx-1.1.2 )"
+	mmx? ( >=media-libs/jpeg-mmx-1.1.2-r1 )"
 
 src_unpack() {
 	
@@ -29,7 +34,7 @@ src_unpack() {
 	sed -e "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" libmjpeg.h.orig > libmjpeg.h
 	cp jpeg_old.h jpeg_old.h.orig
 	sed -e "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" jpeg_old.h.orig > jpeg_old.h
-
+	elibtoolize
 }
 
 src_compile() {
