@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.2.ebuild,v 1.3 2003/03/02 08:03:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.2.ebuild,v 1.4 2003/03/09 21:41:40 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -8,7 +8,7 @@ DESCRIPTION="Library for arithmetic on arbitrary precision integers, rational nu
 HOMEPAGE="http://www.gnu.org/software/gmp/gmp.html"
 SRC_URI="mirror://gnu/gmp/${P}.tar.gz"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc alpha"
 SLOT="0"
 LICENSE="LGPL-2"
 
