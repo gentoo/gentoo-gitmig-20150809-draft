@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod_ruby/mod_ruby-1.2.4.ebuild,v 1.4 2004/12/16 09:49:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mod_ruby/mod_ruby-1.2.4.ebuild,v 1.5 2005/03/23 16:39:06 caleb Exp $
 
 DESCRIPTION="Embeds the Ruby interpreter into Apache"
 HOMEPAGE="http://modruby.net/"
