@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/phpgroupware-0.9.14.006.ebuild,v 1.4 2003/09/08 04:45:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/phpgroupware-0.9.14.006.ebuild,v 1.5 2003/09/19 18:06:19 mholzer Exp $
 
 S=${WORKDIR}/${PN}
 HTTPD_ROOT="/home/httpd/htdocs"
@@ -39,9 +39,10 @@ src_install() {
 	cd ${D}/${HTTPD_ROOT}
 	chown -R ${HTTPD_USER}.${HTTPD_GROUP} phpgroupware
 	chmod -R 700 phpgroupware/files
+	dohtml ${PN}/doc/en_US/html/admin/*.html
 }
 
 pkg_postinst() {
-	einfo "Follow the instructions at http://docs.phpgroupware.org/12-docs/html/admin/x62.html#AEN134 "
+	einfo "Follow the instructions at /usr/share/doc/${PF}/html/x62.html#AEN134 "
 	einfo "to complete the install.  You need to add MySQL users and configure phpGroupWare"
 }
