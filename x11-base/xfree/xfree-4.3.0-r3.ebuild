@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.57 2003/10/05 23:58:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.58 2003/10/06 04:14:42 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -180,7 +180,7 @@ src_unpack() {
 
 	ebegin "Updating Savage driver"
 	cd ${S}/programs/Xserver/hw/xfree86/drivers
-	unzip -oqq ${DISTDIR}/savage-${SAVDRV_VER}.zip || die
+	unpack savage-${SAVDRV_VER}.zip > /dev/null
 	ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
 		${S}/programs/Xserver/hw/xfree86/drivers/savage
 	cd ${S}
@@ -188,7 +188,7 @@ src_unpack() {
 
 	ebegin "Updating SiS driver"
 	cd ${S}/programs/Xserver/hw/xfree86/drivers/sis
-	tar -zxf ${DISTDIR}/sis_drv_src_${SISDRV_VER}.tar.gz || die
+	unpack sis_drv_src_${SISDRV_VER}.tar.gz > /dev/null
 	ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
 		${S}/programs/Xserver/hw/xfree86/drivers/sis
 	cd ${S}
@@ -196,7 +196,7 @@ src_unpack() {
 
 	ebegin "Adding Synaptics touchpad driver"
 	cd ${WORKDIR}
-	tar -jxf ${DISTDIR}/synaptics-${SYNDRV_VER}.tar.bz2 || die
+	unpack synaptics-${SYNDRV_VER}.tar.bz2 > /dev/null
 	eend 0
 	epatch ${FILESDIR}/XFree86-synaptics-fixup-0.11.3p11.diff
 	cd ${S}
@@ -296,9 +296,6 @@ src_unpack() {
 		done
 		ebegin "Done unpacking Core Fonts"; eend 0
 	fi
-
-	# Fix broken makefiles for -fPIC problem -- see bug #23581
-	mkdir -p ${S}/exports/lib
 
 	ebegin "Setting up config/cf/host.def"
 	cd ${S}; cp ${FILESDIR}/${PV}/site.def config/cf/host.def || die
