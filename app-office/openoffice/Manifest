@@ -2,7 +2,7 @@ MD5 ec347b6753ddfc56ebf60c60d49506cf openoffice-1.0.3.ebuild 20908
 MD5 2bcfc01a7018c7309e5afe484897f1ba openoffice-1.1_beta.ebuild 16779
 MD5 460ff929624efb91c3bd1b41d72bd27d openoffice-1.0.2-r2.ebuild 20934
 MD5 3d1de45989289e7ec5223c0c8cb45868 openoffice-1.0.2.ebuild 18274
-MD5 76fb6a2a052595b8bac9be82ec57f02e ChangeLog 4815
+MD5 d2ca68167b1b1fe8b3f9e2e0535f00a6 ChangeLog 4815
 MD5 142125805450e0dff55c8797670fba2a openoffice-1.0.2-r1.ebuild 18438
 MD5 370c4f2c49610b60253acee9d14c0c33 files/digest-openoffice-1.1_beta 197
 MD5 a9630306d271d3664cf03a1931dcd287 files/digest-openoffice-1.0.2 260
