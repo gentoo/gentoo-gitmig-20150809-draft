@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.31 2003/10/01 20:01:04 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.32 2003/10/05 17:30:56 gregf Exp $
+
+*irssi-0.8.6-r4 (05 Oct 2003)
+
+  05 Oct 2003; Greg Fitzgerald <gregf@gentoo.org> irssi-0.8.6-r4.ebuild:
+  Fix for use=perl, this closes bug #30029
 
   01 Oct 2003; Tavis Ormandy <taviso@gentoo.org> irssi-0.8.6-r3.ebuild:
   Stable on alpha
