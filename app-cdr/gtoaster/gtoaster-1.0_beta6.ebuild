@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.20 2004/02/25 06:44:15 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta6.ebuild,v 1.21 2004/04/06 03:30:32 vapier Exp $
+
+inherit eutils
 
 # Fix so that updating can only be done by 'cp old.ebuild new.ebuild'
 MY_P="${P/-}"
@@ -47,12 +49,12 @@ src_compile() {
 	export WANT_AUTOMAKE=1.6
 
 	# Uhh, it loops indefinately otherwise
-		cd ${S}
-		libtoolize -c -f
-		aclocal
-		autoheader
-		automake -a -c
-		autoconf
+	cd ${S}
+	libtoolize -c -f
+	aclocal
+	autoheader
+	automake -a -c
+	autoconf
 	#end fix for indefinate loop
 
 	econf \
@@ -67,10 +69,10 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc ABOUT-NLS AUTHORS ChangeLog* COPYING INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog* INSTALL NEWS README TODO
 
 	# Install icon and .desktop for menu entry
-	if [ `use gnome` ] ; then
+	if use gnome ; then
 		insinto /usr/share/pixmaps
 		doins ${S}/icons/gtoaster.png
 		insinto /usr/share/gnome/apps/Applications
