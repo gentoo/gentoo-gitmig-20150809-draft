@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-1.2.ebuild,v 1.1 2004/06/04 04:20:49 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-1.2.ebuild,v 1.2 2004/06/04 04:37:41 rphillips Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_install() {
 pkg_postinst() {
 	echo
 	einfo "To use the rig control feature of xdx, install"
-	einfo "app-ham/hamlib and enable hamlib in the"
+	einfo "media-radio/hamlib and enable hamlib in the"
 	einfo "Preferences dialog."
 	echo
 }
