@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.39 2003/07/01 02:03:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.40 2003/07/02 23:01:08 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -673,6 +673,7 @@ make_desktop_entry() {
 			*)		type=""		;;
 		esac
 	fi
+	local desktop=${T}/${exec}.desktop
 
 echo "[Desktop Entry]
 Encoding=UTF-8
@@ -683,29 +684,28 @@ Comment=${DESCRIPTION}
 Exec=${exec}
 Path=${path}
 Icon=${icon}
-Categories=Application;${type};" > ${T}/${name}.desktop
-	name=${T}/${name}.desktop
+Categories=Application;${type};" > ${desktop}
 
 	if [ -d /usr/share/applications ] ; then
 		insinto /usr/share/applications
-		doins ${name}
+		doins ${desktop}
 	fi
 
-	if [ -d /usr/share/gnome/apps ] ; then
-		insinto /usr/share/gnome/apps/Games
-		doins ${name}
-	fi
+	#if [ -d /usr/share/gnome/apps ] ; then
+	#	insinto /usr/share/gnome/apps/Games
+	#	doins ${desktop}
+	#fi
 
-	if [ ! -z "`ls /usr/kde/* 2>/dev/null`" ] ; then
-		for ver in /usr/kde/* ; do
-			insinto ${ver}/share/applnk/Games
-			doins ${name}
-		done
-	fi
+	#if [ ! -z "`ls /usr/kde/* 2>/dev/null`" ] ; then
+	#	for ver in /usr/kde/* ; do
+	#		insinto ${ver}/share/applnk/Games
+	#		doins ${desktop}
+	#	done
+	#fi
 
 	if [ -d /usr/share/applnk ] ; then
-		insinto /usr/share/applnk
-		doins ${name}
+		insinto /usr/share/applnk/${type}
+		doins ${desktop}
 	fi
 
 	return 0
