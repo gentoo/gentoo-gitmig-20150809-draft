@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gtk2-perl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.1 2003/07/06 01:07:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.2 2003/07/20 16:05:04 mcummings Exp $
+
+*gtk2-perl-0.26 (20 Jul 2003)
+
+  20 Jul 2003; Michael Cummings <mcummings@gentoo.org> gtk2-perl-0.26.ebuild:
+  new version of gtk2, submitted by Rigo Ketelings <rigo@home.nl> in bug 24036
 
 *gtk2-perl-0.12 (05 Jul 2003)
 
