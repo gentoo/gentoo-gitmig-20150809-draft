@@ -1,9 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=PWM3
-Comment=An X11 window manager
-Exec=pwm3
-TryExec=pwm3
-# no icon yet, only the top three are currently used
-Icon=
-Type=Application
