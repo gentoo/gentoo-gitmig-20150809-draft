@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/junit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.16 2004/10/29 12:39:19 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.17 2004/11/14 14:13:55 axxo Exp $
+
+  14 Nov 2004; Thomas Matthijs <axxo@gentoo.org> junit-3.8.1-r1.ebuild:
+  add doc useflag, and jikes support 70798, patch by Jan Brinkmann
+  <lucky@the-luckyduck.de
 
   29 Oct 2004; Thomas Matthijs <axxo@gentoo.org> junit-3.8.1-r1.ebuild:
   remove nomirror
