@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/comix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix/ChangeLog,v 1.2 2005/03/08 15:53:30 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix/ChangeLog,v 1.3 2005/03/15 20:21:47 greg_g Exp $
+
+*comix-1.2.4 (15 Mar 2005)
+
+  15 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> +comix-1.2.4.ebuild:
+  New version. Add missing dependencies (#85364).
 
 *comix-1.2.3 (08 Mar 2005)
 
