@@ -1,0 +1,9 @@
+# ChangeLog for net-irc/xchat-systray
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/ChangeLog,v 1.1 2003/08/30 17:34:03 brad Exp $
+
+*xchat-systray-2.3.1 (30 Aug 2003)
+
+  30 Aug 2003; Brad Laue <brad@gentoo.org> xchat-systray-2.3.1.ebuild:
+  Added xchat-systray, a system tray control for X-Chat 2.
+
