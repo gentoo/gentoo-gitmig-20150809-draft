@@ -1,10 +1,13 @@
 # ChangeLog for media-libs/compface
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.7 2003/03/05 15:34:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.8 2003/07/06 10:47:35 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *compface-1.4 (1 Feb 2002)
+
+  06 Jul 2003; Guy martin <gmsoft@gentoo.org> compface-1.4.ebuild :
+  Added hppa to KEYWORDS.
 
   05 Mar 2003; Aron Griffis <agriffis@gentoo.org> compface-1.4.ebuild:
   Mark stable on alpha
