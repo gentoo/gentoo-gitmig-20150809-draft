@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.117 2004/08/29 12:50:08 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.118 2004/08/30 21:42:19 tgall Exp $
+
+  30 Aug 2004; Tom Gall <tgall@gentoo.org> gtk+-2.4.4.ebuild:
+  only stable version of gtk+-2.4.3 for ppc64 was removed,
+  marking 2.4.4 stable on an emergancy basis
 
 *gtk+-2.4.9 (29 Aug 2004)
 
