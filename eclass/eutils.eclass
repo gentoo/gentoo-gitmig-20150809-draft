@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.29 2003/03/11 21:50:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.30 2003/05/31 13:24:45 mholzer Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -636,6 +636,8 @@ enewgroup() {
 edos2unix() {
 	for f in $@ ; do
 		cp ${f} ${T}/edos2unix
+		rm -f ${f}
 		sed 's/\r$//' ${T}/edos2unix > ${f}
+		rm -f ${T}/edos2unix
 	done
 }
