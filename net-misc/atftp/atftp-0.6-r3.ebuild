@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/atftp-0.6-r3.ebuild,v 1.1 2003/10/30 17:11:15 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/atftp-0.6-r3.ebuild,v 1.2 2003/10/31 13:10:49 lanius Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="ftp://ftp.mamalinux.com/pub/atftp/"
 SRC_URI="ftp://ftp.mamalinux.com/pub/atftp/${P}.tar.gz"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )
