@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c187d668bf2115145def06f3bf72c622 ChangeLog 857
-MD5 f2e4b9bb763837f51603050c853c0200 tiobench-0.3.3-r1.ebuild 936
+MD5 a91c5547732f286b9168901668f0cdf0 ChangeLog 985
+MD5 0d5d6e1edfbfdb2fe002d7959a704904 tiobench-0.3.3-r1.ebuild 935
 MD5 b0e08c271d30b5da41b55be795a8773e files/digest-tiobench-0.3.3-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBVG/RI1lqEGTUzyQRAmdfAKCF5bkmxXWWYo6PukdhNVBCYM4irwCeO+Q8
-eLkq9tyrKSvNcmNvkDkL1Wo=
-=lNm5
------END PGP SIGNATURE-----
