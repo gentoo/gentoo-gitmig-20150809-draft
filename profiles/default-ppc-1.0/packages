@@ -218,7 +218,7 @@ net-misc/rsync
 ~app-emulation/basiliskII
 ~sys-apps/yard
 ~app-emulation/dosemu
-~net-www/opera
+~www-client/opera
 ~net-www/opera-static
 ~dev-util/cvsup
 ~media-video/realplayer
