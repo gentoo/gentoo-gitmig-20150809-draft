@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7334d9f9af13f500fbeb57977ad6162f smclone-0.94.1.ebuild 1483
-MD5 fb78e4412858d46c386a9602c52c8ad9 ChangeLog 339
+MD5 9b52509d98b5c339367fbd2b086bbed6 smclone-0.94.1.ebuild 1492
+MD5 d32a7160c9ef1cb450737fe200c3f82b ChangeLog 470
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 008cc27fba8111df05177f5862887eeb files/0.94.1-use-HOME.patch 3674
 MD5 73e6ede9566959233f03faa1caf91657 files/digest-smclone-0.94.1 202
 MD5 349d7f721e40c9520d0951c7de1aacb6 files/0.94.1-gentoo-paths.patch 1148
-MD5 008cc27fba8111df05177f5862887eeb files/0.94.1-use-HOME.patch 3674
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBwHJoroRuSHgZdywRAkKFAJ0fHG69EFpdKLbvhUe9Rt17QIhLpgCeL/jJ
-serHRjQOfHdNOHNU6tqr4X8=
-=pl+e
------END PGP SIGNATURE-----
