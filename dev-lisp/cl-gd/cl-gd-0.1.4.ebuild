@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/cl-gd-0.1.4.ebuild,v 1.1 2003/10/01 20:48:20 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/cl-gd-0.1.4.ebuild,v 1.2 2003/10/16 03:08:45 mkennedy Exp $
 
 inherit common-lisp
 
@@ -34,17 +34,22 @@ src_compile() {
 src_install() {
 	insinto /usr/lib
 	doins cl-gd-glue.so
-
 	common-lisp-install *.asd *.lisp
 	dodir /usr/share/common-lisp/systems
 	dosym /usr/share/common-lisp/source/cl-gd/cl-gd.asd \
 		/usr/share/common-lisp/systems/cl-gd.asd
-
 # 	dosym /usr/share/common-lisp/source/cl-gd/cl-gd-test.asd \
 # 		 /usr/share/common-lisp/systems/cl-gd.asd
 # 	insinto /usr/share/common-lisp/source/cl-gd/test
 # 	doins test/*
-
 	dodoc CHANGELOG README
 	dohtml doc/*.html
+}
+
+pkg_preinst() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
+}
+
+pkg_postrm() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 }
