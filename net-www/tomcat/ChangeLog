@@ -1,6 +1,13 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.38 2004/07/28 22:31:32 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.39 2004/07/29 13:22:16 axxo Exp $
+
+*tomcat-5.0.27-r1 (29 Jul 2004)
+
+  29 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +tomcat-4.1.30-r1.ebuild,
+  +tomcat-5.0.27-r1.ebuild:
+  revision bump to force updating, peaple that upgraded from 5.0.18 will
+  otherwise have problems
 
   29 Jul 2004; Thomas Matthijs <axxo@gentoo.org> files/4.1.30/gentoo.diff,
   +files/4.1.30/jikes.diff, files/4.1.30/tomcat.conf,
