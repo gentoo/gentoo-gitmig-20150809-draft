@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-5.0.ebuild,v 1.7 2005/02/21 14:17:51 gongloo Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-5.0.ebuild,v 1.8 2005/03/12 19:30:16 vapier Exp $
 
 inherit libtool flag-o-matic eutils gnuconfig
 
@@ -12,18 +10,19 @@ SRC_URI="ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-${PV}.tar.bz
 
 LICENSE="BSD"
 SLOT="3"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 mips ~ppc ~ppc64 ppc-macos ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ~ppc ~ppc64 ppc-macos s390 sh sparc x86"
+IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 S=${WORKDIR}/pcre-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/pcre-5.0-uclibc-tuple.patch
-	epatch ${FILESDIR}/pcre-4.2-link.patch
-	use ppc-macos && epatch ${FILESDIR}/pcre-5.0-macos.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/pcre-5.0-uclibc-tuple.patch
+	epatch "${FILESDIR}"/pcre-4.2-link.patch
+	use ppc-macos && epatch "${FILESDIR}"/pcre-5.0-macos.patch
 	# position-independent code must used for all shared objects.
 	append-flags -fPIC
 	elibtoolize
