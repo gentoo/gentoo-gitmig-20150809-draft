@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pretrace
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/ChangeLog,v 1.2 2005/04/06 12:42:00 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/ChangeLog,v 1.3 2005/04/06 17:53:54 taviso Exp $
+
+  06 Apr 2005; Tavis Ormandy <taviso@gentoo.org> pretrace-0.2.ebuild:
+  install into /lib
 
 *pretrace-0.2 (06 Apr 2005)
 

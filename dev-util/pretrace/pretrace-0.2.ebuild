@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/pretrace-0.2.ebuild,v 1.2 2005/04/06 15:43:24 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/pretrace-0.2.ebuild,v 1.3 2005/04/06 17:53:54 taviso Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -44,7 +44,7 @@ libpretrace is a preload library that allows specified (dynamically linked)
 applications to always be executed under a debugging environment. To start
 using pretrace, add libpretrace.so to your /etc/ld.so.preload.
 
-	root# echo /usr/$(get_libdir)/libpretrace.so >> /etc/ld.so.preload
+	root# echo /lib/libpretrace.so >> /etc/ld.so.preload
 
 You can now specify applications to trace in /etc/pretrace.conf, the format
 is one application per line, if you would like to specify a debugger append
@@ -72,12 +72,17 @@ EOF
 }
 
 src_install() {
-	dolib.so libpretrace.so
+	insinto /lib
+	doins libpretrace.so
+
+	dodir /usr/lib
+	dosym /lib/libpretrace.so /usr/lib/
+
 	dodoc ${T}/pretrace.conf.example ${T}/README
 	newdoc ${S}/lib${P}.c libpretrace.c
 }
 
 pkg_postinst() {
-	einfo "To use pretrace, please add /usr/$(get_libdir)/libpretrace.so to /etc/ld.so.preload."
+	einfo "To use pretrace, please add /lib/libpretrace.so to /etc/ld.so.preload."
 	einfo "See the documentation for configuration file format and more information."
 }
