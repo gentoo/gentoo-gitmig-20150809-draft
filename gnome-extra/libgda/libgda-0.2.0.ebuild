@@ -1,33 +1,37 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-office/eog/eog-0.5.ebuild,v 1.5 2000/11/25 13:03:36 achim Exp $
+# $Header
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
-DESCRIPTION="Eye of GNOME"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/eog/"${A}
-HOMEPAGE="http://www.gnome.org/gnome-office/eog.shtml"
+DESCRIPTION="gda lib"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-db/${A}"
+HOMEPAGE="http://www.gnome.org/gnome-db"
 
-DEPEND=">=gnome-base/bonobo-0.18
-	>=gnome-base/gconf-0.8"
+DEPEND=">=gnome-base/gconf-0.10
+	>=gnome-base/gnome-libs-1.2.4
+	>=dev-db/mysql-3.23.26
+	>=dev-db/unixODBC-1.8.13
+	>=net-nds/openldap-1.2.11"
+
+src_unpack() {
+  unpack ${A}
+}
 
 src_compile() {                           
   cd ${S}
   try ./configure --host=${CHOST} --prefix=/opt/gnome \
-	--with-bonobo
+	--with-mysql=/usr --with-ldap=/usr --with-odbc 
   try make
 }
 
 src_install() {                               
   cd ${S}
   try make prefix=${D}/opt/gnome install
-  dodoc AUTHORS COPYING DEPENDS ChangeLog HACKING NEWS README TODO MAINTAINERS
 
+  dodoc AUTHORS COPYING.* ChangeLog NEWS README THANKS TODO
 }
-
-
-
 
 
 
