@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/karamba-0.17-r1.ebuild,v 1.2 2003/05/04 00:11:06 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/karamba-0.17-r1.ebuild,v 1.3 2003/05/04 00:23:24 prez Exp $
 
 inherit kde-base
 
@@ -20,6 +20,8 @@ src_install () {
 	einstall
 	dodir /usr/share/doc/${P} /usr/share/karamba/themes /usr/share/karamba/bin
 	mv ${D}/usr/share/doc/* ${D}/usr/share/doc/${P}
+	> /usr/share/karamba/themes/.keep
+	> /usr/share/karamba/bin/.keep
 
 	dodir /etc/env.d
 	cp ${FILESDIR}/karamba-env ${D}/etc/env.d/99karamba
