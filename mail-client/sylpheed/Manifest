@@ -1,4 +1,4 @@
-MD5 a9b114c52404d5d99b265eb824badce1 ChangeLog 11404
+MD5 32279eecb3532c3f322c80c38c8900f7 ChangeLog 11430
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 88f0ac9b29917ac27900c5f20e168770 sylpheed-0.9.10-r1.ebuild 1617
 MD5 1fb4d97529c6fb030b6b966aa6ce34f7 sylpheed-0.9.11.ebuild 1616
@@ -6,7 +6,7 @@ MD5 ae5358a0284dcb1486a019383f878a44 sylpheed-0.9.4.ebuild 1702
 MD5 091395fdfd2a0d6773153cea894b9ca3 sylpheed-0.9.7.ebuild 1725
 MD5 16e87ad311388dad4c5a923c06e07662 sylpheed-0.9.8.ebuild 1569
 MD5 47ed51e3b3dcbb08b93c83f48c2a3f79 sylpheed-0.9.12-r1.ebuild 2017
-MD5 a6a39235f3541d8c456e2ee6403623a0 sylpheed-0.9.12-r2.ebuild 2017
+MD5 8183b67a3bb885d8e70b45064c83b01c sylpheed-0.9.12-r2.ebuild 2056
 MD5 9eafb257da3a5f96d1b0d04d301c5297 sylpheed-0.9.12.ebuild 1781
 MD5 54b7f8281a74665ddcd19c166763dda2 files/digest-sylpheed-0.9.12 69
 MD5 ce1c3d8a2d9d18309762912c51486210 files/digest-sylpheed-0.9.10-r1 69
