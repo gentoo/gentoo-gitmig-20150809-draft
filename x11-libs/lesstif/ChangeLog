@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/lesstif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.55 2005/03/07 10:43:35 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.56 2005/03/07 13:38:57 lanius Exp $
+
+  07 Mar 2005; Heinrich Wendel <lanius@gentoo.org> -lesstif-0.93.94-r1.ebuild,
+  -lesstif-0.94.0-r4.ebuild:
+  version bump for new motif-config
 
   07 Mar 2005; Heinrich Wendel <lanius@gentoo.org> lesstif-0.93.94-r1.ebuild,
   lesstif-0.94.0-r4.ebuild:
