@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r5.ebuild,v 1.11 2004/07/05 01:24:31 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r5.ebuild,v 1.12 2004/07/08 22:24:45 lv Exp $
 
 IUSE="nls pic build debug"
 
@@ -233,6 +233,10 @@ src_compile() {
 
 	# This should not be done for: ia64 s390 s390x
 #	use x86 && CFLAGS="${CFLAGS} -freorder-blocks"
+
+	# some silly people set LD_RUN_PATH and that breaks things.
+	# see bug 19043
+	unset LD_RUN_PATH
 
 	einfo "Configuring GLIBC..."
 	rm -rf buildhere

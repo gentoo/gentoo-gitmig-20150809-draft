@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420.ebuild,v 1.10 2004/07/07 09:40:18 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420.ebuild,v 1.11 2004/07/08 22:24:45 lv Exp $
 
 IUSE="nls pic build nptl erandom debug"
 
@@ -548,6 +548,10 @@ src_compile() {
 			myconf="${myconf} --enable-kernel=2.2.5"
 		fi
 	fi
+
+	# some silly people set LD_RUN_PATH and that breaks things.
+	# see bug 19043
+	unset LD_RUN_PATH
 
 	einfo "Configuring GLIBC..."
 	rm -rf ${S}/buildhere
