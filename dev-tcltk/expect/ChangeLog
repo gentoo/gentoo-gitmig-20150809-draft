@@ -1,33 +1,36 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.9 2003/02/12 06:37:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.10 2003/03/10 22:28:57 agriffis Exp $
+
+*expect-5.37.1-r1 (20 Jul 2002)
+
+  10 Mar 2003; Aron Griffis <agriffis@gentoo.org> expect-5.37.1-r1.ebuild:
+  Mark stable on alpha
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*expect-5.37.1 (08 July 2002)
 
-  27 Oct 2002; George Shapovalov <george@gentoo.org> epect-5.37.1-r1.ebuild, epect-5.37.1-r2.ebuild :
+  27 Oct 2002; George Shapovalov <george@gentoo.org> expect-5.37.1-r1.ebuild,
+  expect-5.37.1-r2.ebuild :
+  incorporated changes in -r2 into -r1 and deleted -r2 keeping -r1 unmasked.
+  Avoiding revision bump in unmasked version, since the fix will only concern
+  some users.
 
-  incorporated changes in -r2 into -r1 and deleted -r2 keeping -r1 unmasked. 
-  Avoiding revision bump in unmasked version, since the fix will only concern some users.
-
-  25 Oct 2002; George Shapovalov <george@gentoo.org> epect-5.37.1-r2.ebuild :
+  25 Oct 2002; George Shapovalov <george@gentoo.org> expect-5.37.1-r2.ebuild :
   modified src_install to add examples if doc is defined. 
   Revision bumped for testing.
 
   23 Sep 2002; Olivier Reisch <doctomoe@gentoo.org> expect-5.37.1-r1.ebuild:
   Added ppc keyword
 
-  20 Jul 2002; George Shapovalov <george@gentoo.org> epect-5.37.1-r1.ebuild :
-  
+  20 Jul 2002; George Shapovalov <george@gentoo.org> expect-5.37.1-r1.ebuild :
   modified ebuild to install shared libraries (necessary for multixterm)
   upping revision to force-update.
-    
-  08 July 2002; George Shapovalov <george@gentoo.org> epect-5.37.1.ebuild :
 
+*expect-5.37.1 (08 July 2002)
+
+  08 July 2002; George Shapovalov <george@gentoo.org> expect-5.37.1.ebuild :
   upped version, + some cleaning up.
   removed Author line, original ebuild by Tod Neidt <tneidt@fidnet.com>
-
 
 *expect-5.33.0 (1 Feb 2002)
 
