@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r2.ebuild,v 1.1 2002/08/14 19:50:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r2.ebuild,v 1.2 2002/08/16 02:13:17 mcummings Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
@@ -85,10 +85,6 @@ EOF
 		-Dd_dosuid \
 		-Dd_semctl_semun \
 		-Dusethreads \
-		--man1dir=${D}/usr/share/man/man1 \
-		--man1ext=1 \
-		--man3dir=${D}/usr/share/man/man3 \
-		--man3ext=3 \
 		${myconf} || die "Unable to configure"
 	emake || die "Unable to make"
 
