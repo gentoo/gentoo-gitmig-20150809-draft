@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.30 2004/11/09 22:22:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.31 2004/11/23 11:32:36 usata Exp $
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 DESCRIPTION="Library to handle, display and manipulate GIF images"
 HOMEPAGE="http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml"
@@ -55,5 +55,25 @@ pkg_postinst() {
 		einfo "You did not have the gif USE toggle set, so the binary from"
 		einfo "the libungif package is assumed to be your gif binary. Please"
 		einfo "make sure that you have libungif emerged."
+	fi
+}
+
+src_test() {
+	if has_version 'media-gfx/xv' ; then
+		if [ -z "$DISPLAY" ] || ! (/usr/X11R6/bin/xhost &>/dev/null) ; then
+			ewarn
+			ewarn "You are not authorised to conntect to X server to make check."
+			ewarn "Disabling make check."
+			ewarn
+			epause; ebeep; epause
+		else
+			make check || die "make check failed"
+		fi
+	else
+		ewarn
+		ewarn "You need media-gfx/xv to run the tests for this package."
+		ewarn "Disabling make check."
+		ewarn
+		epause; ebeep; epause
 	fi
 }
