@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.4.1-r1.ebuild,v 1.2 2004/08/21 01:29:01 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.4.1-r1.ebuild,v 1.3 2004/08/22 23:01:58 lv Exp $
 
 inherit gnome2 eutils
 
@@ -33,6 +33,9 @@ src_unpack() {
 	# make config file location host specific so that a 32bit and 64bit pango
 	# wont fight with each other on a multilib system
 	use amd64 && epatch ${FILESDIR}/pango-1.2.5-lib64.patch
+	# and this line is just here to make building emul-linux-x86-gtklibs a bit
+	# easier, so even this should be amd64 specific.
+	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && epatch ${FILESDIR}/pango-1.2.5-lib64.patch
 }
 
 DOCS="AUTHORS ChangeLog README INSTALL NEWS TODO*"
@@ -41,16 +44,16 @@ src_install() {
 	gnome2_src_install
 	rm ${D}/etc/pango/pango.modules
 	use amd64 && mkdir ${D}/etc/pango/${CHOST}
+	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && mkdir ${D}/etc/pango/${CHOST}
 }
 
 pkg_postinst() {
 	if [ "${ROOT}" == "/" ] ; then
 		einfo "Generating modules listing..."
-		if use amd64 ; then
-			pango-querymodules > /etc/pango/${CHOST}/pango.modules
-		else
-			pango-querymodules > /etc/pango/pango.modules
-		fi
+		use amd64 && PANGO_CONFDIR="/etc/pango/${CHOST}"
+		use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && PANGO_CONFDIR="/etc/pango/${CHOST}"
+		PANGO_CONFDIR=${PANGO_CONFDIR:=/etc/pango/}
+		pango-querymodules > /${PANGO_CONFDIR}/pango.modules
 	fi
 }
 
