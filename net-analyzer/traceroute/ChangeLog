@@ -1,8 +1,13 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.11 2003/08/16 08:32:37 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.12 2003/10/20 07:07:43 kumba Exp $
+
 
 *traceroute-1.4_p12-r1 (16 Aug 2003)
+
+  20 Oct 2003; Joshua Kinard <kumba@gentoo.org> traceroute-1.4_p12-r1.ebuild:
+  Added ~mips to KEYWORDS
+  Called eutils to invoke epatch in place of an old patch call
 
   16 Aug 2003; Tavis Ormandy <taviso@gentoo.org> traceroute-1.4_p12-r1.ebuild:
   assume linux routing table by default #26699, thanks to Peter Jones 
