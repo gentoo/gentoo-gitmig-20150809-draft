@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.45.ebuild,v 1.4 2004/04/20 07:36:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.45.ebuild,v 1.5 2004/04/26 12:33:13 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ipv6calc convert a given IPv6 address to the compressed format or to the format used by /proc/net/if_inet6."
@@ -13,7 +13,7 @@ SLOT="0"
 DEPEND="virtual/glibc"
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 

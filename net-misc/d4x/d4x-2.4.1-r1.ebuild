@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4.1-r1.ebuild,v 1.6 2004/04/04 20:23:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4.1-r1.ebuild,v 1.7 2004/04/26 12:30:10 agriffis Exp $
 
 IUSE="nls esd gnome oss kde"
 
@@ -44,7 +44,7 @@ src_compile() {
 	econf --enable-release \
 		$(use_enable oss) \
 		$(use_enable esd) \
-		$(use_enable nls)
+		$(use_enable nls) || die "econf failed"
 
 	# workaround unsupported gtk_ calls for >=x11-libs/gtk+-2.2.4
 	sed -e 's:.*GTK_DISABLE_DEPRECATED.*::' -i ${S}/config.h

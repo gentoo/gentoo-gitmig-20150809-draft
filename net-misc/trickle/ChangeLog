@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/trickle
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/trickle/ChangeLog,v 1.1 2003/08/06 19:08:04 mholzer Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/trickle/ChangeLog,v 1.2 2004/04/26 12:44:43 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> trickle-1.06.ebuild:
+  Add die following econf for bug 48950
 
 *trickle-1.06 (06 Aug 2003)
 

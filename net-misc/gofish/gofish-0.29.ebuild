@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/gofish-0.29.ebuild,v 1.1 2003/12/22 13:22:10 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/gofish-0.29.ebuild,v 1.2 2004/04/26 12:31:52 agriffis Exp $
 
 IUSE=""
 
@@ -20,7 +20,7 @@ RDEPEND=""
 
 src_compile() {
 	econf --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-		--disable-http
+		--disable-http || die "econf failed"
 	emake || die
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gofish
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/ChangeLog,v 1.1 2003/12/22 13:22:10 zul Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/ChangeLog,v 1.2 2004/04/26 12:31:52 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> gofish-0.29.ebuild:
+  Add die following econf for bug 48950
 
 *gofish-0.29 (22 Dec 2003)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.3.2.1.ebuild,v 1.2 2004/02/23 00:16:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.3.2.1.ebuild,v 1.3 2004/04/26 12:44:02 agriffis Exp $
 
 DESCRIPTION="Multipurpose relay (SOcket CAT)"
 HOMEPAGE="http://www.dest-unreach.org/socat/"
@@ -28,7 +28,7 @@ src_compile() {
 	use ipv6 || myconf="${myconf} --disable-ip6"
 
 	sed -i "s:-Wall:${CFLAGS} -Wall:" Makefile.in
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 
 	# Calculating dependencies
 	# (this seems to error out (due to gcc3?) but compiles work

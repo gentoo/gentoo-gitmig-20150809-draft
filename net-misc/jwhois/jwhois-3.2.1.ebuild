@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/jwhois-3.2.1.ebuild,v 1.5 2004/03/01 22:04:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/jwhois-3.2.1.ebuild,v 1.6 2004/04/26 12:34:30 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Advanced Internet Whois client capable of recursive queries"
@@ -23,7 +23,7 @@ src_compile() {
 
 	myconf="${myconf} --sysconfdir=/etc --localstatedir=/var/cache/ --without-cache"
 
-	econf $myconf
+	econf $myconf || die "econf failed"
 	emake || die
 }
 

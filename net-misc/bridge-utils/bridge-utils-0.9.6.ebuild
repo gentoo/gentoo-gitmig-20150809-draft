@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-0.9.6.ebuild,v 1.5 2004/03/18 11:31:04 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-0.9.6.ebuild,v 1.6 2004/04/26 12:29:30 agriffis Exp $
 
 # I think you want CONFIG_BRIDGE in your kernel to use this ;)
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="x86"
 
 src_compile() {
-	econf --prefix=/ --libdir=/usr/lib --includedir=/usr/include
+	econf --prefix=/ --libdir=/usr/lib --includedir=/usr/include || die "econf failed"
 	emake || die "make failed"
 	test -f brctl/brctl -a -f brctl/brctld || die "build not successful"
 }
