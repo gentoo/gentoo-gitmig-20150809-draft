@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.13 2004/04/08 23:00:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.14 2004/04/08 23:03:29 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -386,7 +386,7 @@ fi
 
 	ebegin "Setting up config/cf/host.def"
 		cd ${S}; cp ${FILES_DIR}/site.def config/cf/host.def || die
-		echo "#define XVendorString \"Gentoo Linux (The X.Org Foundation ${PV}, revision ${PR})\"" \
+		echo "#define XVendorString \"Gentoo Linux (The X.Org Foundation ${PV}, revision ${PR}-${PATCH_VER})\"" \
 			>> config/cf/host.def
 
 		# Makes ld bail at link time on undefined symbols
