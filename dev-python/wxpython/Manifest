@@ -1,4 +1,14 @@
-MD5 5ef948be7b020b9e3b962e6ed421eff7 ChangeLog 7808
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3b06f1e87549af51d78bb7bfa33728b5 metadata.xml 182
 MD5 c3cb3bfb2cf1eb916b0b35ba0cf47c83 wxpython-2.4.2.4.ebuild 2421
+MD5 a71acd3c709ea6b756cfdf216107500e ChangeLog 7890
 MD5 d1efabd4c6bcd5edd9e61ca070e20ff0 files/digest-wxpython-2.4.2.4 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOsOsI1lqEGTUzyQRAqKiAJoCsSa3sYCSztdpTqVu61HAAWK5CQCfSU4M
+hy6rRjmmRi++PfeX5AZJ2aI=
+=yAmP
+-----END PGP SIGNATURE-----

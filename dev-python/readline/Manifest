@@ -1,3 +1,13 @@
-MD5 a5a129c53a873ccd0e0086d36595a06d ChangeLog 658
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0f88f167848d2890f5a03c37a6220360 readline-2.3.3.ebuild 562
+MD5 d48ded8ac125df24b5bf46bb8adb2fda ChangeLog 741
 MD5 06cb89ebacdc06b393c34d4029abdfa8 files/digest-readline-2.3.3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOsMvI1lqEGTUzyQRAkzVAKC8kmNz6uG0vFTjR2AmboOAUC0IIgCfUVNy
+q/2O9LFRDtG38V7zemigESA=
+=1TaT
+-----END PGP SIGNATURE-----
