@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.39 2003/01/06 12:19:07 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.40 2003/01/13 20:11:47 danarmak Exp $
 
 inherit kde
 ECLASS=kde-i18n
@@ -40,7 +40,7 @@ case "$PV" in
 esac
 
 if [ "$PN" == "kde-i18n" ]; then
-	SRC_PATH=${SRC_PATH/kde-i18n//}
+	SRC_PATH=${SRC_PATH/src\/kde-i18n\//src\//}
 	S=${WORKDIR}/${RP}
 fi
 
