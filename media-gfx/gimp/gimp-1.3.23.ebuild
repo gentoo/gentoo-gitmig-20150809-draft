@@ -1,29 +1,31 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.21.ebuild,v 1.3 2003/10/10 17:50:06 drobbins Exp $
-
-IUSE="doc python aalib png jpeg tiff gtkhtml mmx sse X"
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.23.ebuild,v 1.1 2003/11/26 22:39:10 foser Exp $
 
 inherit debug flag-o-matic libtool
 
 SV="`echo ${PV} | cut -d'.' -f1,2`"
-DESCRIPTION="Development series of Gimp"
+
+DESCRIPTION="GNU Image Manipulation Program - Development series"
 SRC_URI="mirror://gimp/v${SV}/v${PV}/${P}.tar.bz2"
 HOMEPAGE="http://www.gimp.org/"
+
 SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~hppa ~sparc"
+IUSE="doc python aalib png jpeg tiff gtkhtml mmx sse X altivec"
 
 # protect against over optimisation (related to #21787)
-replace-flags -Os -O2
-MAKEOPTS="${MAKEOPTS} -j1"
+#replace-flags -Os -O2
+#MAKEOPTS="${MAKEOPTS} -j1"
 
 # FIXME : some more things can be (local) USE flagged
 RDEPEND=">=dev-libs/glib-2.2
 	>=x11-libs/gtk+-2.2.2
-	>=x11-libs/pango-1.2
+	>=x11-libs/pango-1.2.2
 	>=media-libs/fontconfig-2.2
 	>=media-libs/libart_lgpl-2.3.8-r1
+	sys-libs/zlib
 
 	gtkhtml? ( =gnome-extra/libgtkhtml-2* )
 
@@ -42,8 +44,8 @@ RDEPEND=">=dev-libs/glib-2.2
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	dev-util/intltool
-	sys-devel/gettext
 	doc? ( >=dev-util/gtk-doc-1 )"
+#	sys-devel/gettext
 
 src_unpack() {
 
@@ -76,6 +78,7 @@ src_compile() {
 	econf ${myconf} \
 		`use_enable mmx` \
 		`use_enable sse` \
+		`use_enable altivec` \
 		`use_enable doc gtk-doc` \
 		`use_enable python` \
 		`use_with X x` \
@@ -111,6 +114,9 @@ pkg_postinst() {
 
 	ewarn "The ${SV} Gimp series have been reslotted to SLOT 2."
 	ewarn "To clean up old ${SV} version remove all ${SV} series and recompile."
+	echo ""
+	ewarn "If you are upgrading from an earlier 1.3 release, please note that"
+	ewarn "the gimprc and sessionrc file formats changed. We suggest you remove"
+	ewarn "your personal ~/.gimp-1.3 directory and do a fresh user installation."
 
 }
-
