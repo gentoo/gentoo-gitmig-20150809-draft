@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.23 2004/12/18 09:18:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.24 2004/12/22 19:24:02 karltk Exp $
+
+*rhino-1.6.1 (22 Dec 2004)
+
+  22 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +files/rhino-1.6-gentoo.patch, +rhino-1.6.1.ebuild:
+  New upstream release. Ebuild submitted by our all-time favourite contributor
+  Jan Brinkmann <lucky@the-luckyduck.de>. Fixes #73018.
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> rhino-1.5.5.ebuild:
   added ~ppc64 to KEYWORDS
