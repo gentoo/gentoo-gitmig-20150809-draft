@@ -1,6 +1,6 @@
-# Copyright 2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/yanc/yanc-0.2.0.ebuild,v 1.3 2003/09/07 00:08:13 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/yanc/yanc-0.2.0.ebuild,v 1.4 2003/09/08 07:41:00 msterret Exp $
 
 DESCRIPTION="YanC is a GUI configuration tool for the NVIDIA Accelerated Linux Driver Set."
 HOMEPAGE="http://yanc.sourceforge.net/"
