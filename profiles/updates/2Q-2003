@@ -44,3 +44,4 @@ move net-ftp/pycurl dev-python/pycurl
 move media-libs/pyogg dev-python/pyogg
 move media-libs/pyvorbis dev-python/pyvorbis
 move app-xemacs/xemacs-eterm app-xemacs/eterm
+move gnome-extra/orbitcpp dev-cpp/orbitcpp
