@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.72 2004/06/09 21:04:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.73 2004/06/19 10:08:25 usata Exp $
+
+*ruby-1.8.1-r7 (19 Jun 2004)
+
+  19 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-1.6.8-r10.ebuild,
+  ruby-1.8.1-r2.ebuild, ruby-1.8.1-r7.ebuild:
+  Updated CVS snapshot
 
   09 Jun 2004; Guy Martin <gmsoft@gentoo.org> ruby-1.8.1-r6.ebuild:
   Marked stable on hppa.

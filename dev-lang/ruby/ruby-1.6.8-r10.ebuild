@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r10.ebuild,v 1.3 2004/06/03 15:40:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r10.ebuild,v 1.4 2004/06/19 10:08:25 usata Exp $
 
 IUSE="cjk"
 
 ONIGURUMA="onigd2_2_8"
-SNAP_DATE="20040416"
+SNAP_DATE="2004.04.16"
 
 inherit flag-o-matic alternatives eutils
 filter-flags -fomit-frame-pointer
@@ -13,7 +13,7 @@ filter-flags -fomit-frame-pointer
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
 SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
-	mirror://gentoo/${P}-${SNAP_DATE}.diff.gz
+	mirror://ruby/snapshots/${P}-${SNAP_DATE}.diff.bz2
 	cjk? ( ftp://ftp.ruby-lang.org/pub/ruby/contrib/${ONIGURUMA}.tar.gz )"
 
 LICENSE="Ruby"
