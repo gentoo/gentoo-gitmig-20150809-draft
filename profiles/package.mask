@@ -787,3 +787,7 @@ app-arch/gnorpm
 # seemant@gentoo.org 26 May 2002
 # Masked while testing
 =media-libs/libpng-1.2.3
+
+# seemant@gentoo.org 26 May 2002
+# Masked for testing
+=net-www/links-2.0_pre3
