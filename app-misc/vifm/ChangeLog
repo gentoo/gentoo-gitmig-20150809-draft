@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/vifm
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.1 2003/05/21 15:14:54 latexer Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.2 2004/01/15 19:04:48 latexer Exp $
+
+*vifm-0.2a (15 Jan 2004)
+
+  15 Jan 2004; Peter Johanson <latexer@gentoo.org> metadata.xml,
+  vifm-0.2.ebuild, vifm-0.2a.ebuild:
+  New version, added metadata.xml, and fixed the einfo in the end of vifm-0.2
 
 *vifm-0.2 (21 May 2003)
 
