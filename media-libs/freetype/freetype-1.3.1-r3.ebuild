@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.23 2004/05/11 23:57:02 randy Exp $
-
-IUSE="nls"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.24 2004/06/01 14:12:37 vapier Exp $
 
 # r3 change by me (danarmak): there's a contrib dir inside the freetype1
 # sources with important utils: ttf2bdf, ttf2pfb, ttf2pk, ttfbanner.
@@ -20,35 +18,31 @@ inherit gnuconfig
 P2=${PN}1-contrib
 S=${WORKDIR}/${P}
 DESCRIPTION="TTF-Library"
+HOMEPAGE="http://www.freetype.org/"
 SRC_URI="ftp://ftp.freetype.org/freetype/freetype1/${P}.tar.gz
 	ftp://ftp.freetype.org/freetype/freetype1/${P2}.tar.gz
 	http://ftp.sunet.se/pub/text-processing/freetype/freetype1/${P}.tar.gz
 	http://ftp.sunet.se/pub/text-processing/freetype/freetype1/${P2}.tar.gz"
-HOMEPAGE="http://www.freetype.org/"
 
-SLOT="1"
 LICENSE="FTL"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 s390"
+SLOT="1"
+KEYWORDS="x86 ppc sparc alpha arm hppa amd64 ia64 s390"
+IUSE="nls"
 
 DEPEND="virtual/glibc"
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
-
 	cd ${WORKDIR}
 	unpack ${P}.tar.gz
 	# freetype1-contrib goes under freetype-1.3.1
 	cd ${S}
 	unpack ${P2}.tar.gz
 
-	use amd64 && gnuconfig_update
-	use alpha && gnuconfig_update
-	use ia64 && gnuconfig_update
-	use s390 && gnuconfig_update
+	gnuconfig_update
 }
 
 src_compile() {
-
 	local myconf
 
 	use nls || myconf="${myconf} --disable-nls"
@@ -69,11 +63,9 @@ src_compile() {
 		econf || die
 		make || die
 	done
-
 }
 
 src_install() {
-
 	cd lib
 
 	# Seems to require a shared libintl (getetxt comes only with a static one
@@ -93,12 +85,12 @@ src_install() {
 	cd ${S}/freetype1-contrib
 	into /usr
 	dobin ttf2bdf/ttf2bdf \
-	ttf2pfb/getafm ttf2pfb/t1asm ttf2pfb/.libs/ttf2pfb \
-	ttf2pk/.libs/ttf2pk ttf2pk/.libs/ttf2tfm \
-	ttfbanner/.libs/ttfbanner
+		ttf2pfb/getafm ttf2pfb/t1asm ttf2pfb/.libs/ttf2pfb \
+		ttf2pk/.libs/ttf2pk ttf2pk/.libs/ttf2tfm \
+		ttfbanner/.libs/ttfbanner \
+		|| die
 	newman ttf2bdf/ttf2bdf.man ttf2bdf/ttf2bdf.man.1
 	doman ttf2bdf/ttf2bdf.man.1
 	docinto contrib
 	dodoc ttf2pk/ttf2pk.doc
-
 }
