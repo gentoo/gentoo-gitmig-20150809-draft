@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/fesi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/ChangeLog,v 1.10 2004/06/24 22:26:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi-bin/ChangeLog,v 1.1 2004/07/30 19:46:06 axxo Exp $
+
+*fesi-bin-1.1.5 (30 Jul 2004)
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +fesi-bin-1.1.5.ebuild:
+  move dev-java/fesi dev-java/fesi-bin
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> fesi-1.1.5.ebuild:
   Fix use invocation
