@@ -1,0 +1,11 @@
+# ChangeLog for app-pda/pilot-mailsync
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-mailsync/ChangeLog,v 1.1 2003/10/12 02:37:00 liquidx Exp $
+
+*pilot-mailsync-0.8.0.2 (12 Oct 2003)
+
+  12 Oct 2003; Alastair Tse <liquidx@gentoo.org>
+  pilot-mailsync-0.8.0.2.ebuild:
+  initial ebuild contributed by Jason Williams <jwilliams@project-lace.org>
+  (#30225)
+
