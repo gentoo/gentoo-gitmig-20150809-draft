@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/gtkcdlabel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.7 2003/10/03 19:00:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.8 2003/10/03 19:18:04 vapier Exp $
+
+*gtkcdlabel-1.0_pre3 (03 Oct 2003)
+
+  03 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage Leonardo Piacentini <piacentinileonardo@libero.it>.
 
 *gtkcdlabel-0.9.4 (03 Oct 2003)
 
