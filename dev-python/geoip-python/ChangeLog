@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/geoip-python
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.1 2003/08/30 08:08:57 liquidx Exp $
+
+*geoip-python-0.2.0 (30 Aug 2003)
+
+  30 Aug 2003; Alastair Tse <liquidx@gentoo.org> geoip-python-0.2.0.ebuild:
+  initial ebuild for python bindings to GeoIP.
+
