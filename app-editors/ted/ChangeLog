@@ -3,6 +3,9 @@
 
 *ted-2.11 (09 Jul 2002)
 
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
+
   09 Jul 2002; Phil Bordelon <sunflare@gentoo.org> ted-2.11.ebuild :
 
   New package.  Original ebuild submitted by Mark Hollomon

@@ -6,7 +6,7 @@ HOMEPAGE="http://www.nllgg.nl/Ted"
 SRC_URI="ftp://ftp.nluug.nl/pub/editors/ted/${P}.src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=x11-libs/openmotif-2.1.30
 		>=media-libs/tiff-3.5.7
