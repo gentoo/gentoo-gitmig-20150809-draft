@@ -1,8 +1,13 @@
 # ChangeLog for sys-libs/lib-compat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/ChangeLog,v 1.6 2002/12/18 13:52:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/ChangeLog,v 1.7 2002/12/19 08:16:21 seemant Exp $
 
 *lib-compat-1.1 (18 Dec 2002)
+  
+  19 Dec 2002; Seemant Kulleen <seemant@gentoo.org> lib-compat-1.1.ebuild :
+
+  granted, it's only been a day, but the tests for this have been coming in
+  very positively -- and many of them -- so moving to stable.
 
   18 Dec 2002; Seemant Kulleen <seemant@gentoo.org> lib-compat-1.1.ebuild
   files/digest-lib-compat-1.1 :
