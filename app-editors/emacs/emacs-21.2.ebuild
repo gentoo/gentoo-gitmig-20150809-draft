@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Modified by: Mark Yeun <mark@cs.columbia.edu>
-
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.2.ebuild,v 1.3 2002/07/25 19:10:59 kabau Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An incredibly powerful, extensible text editor"
@@ -20,9 +19,13 @@ DEPEND=">=sys-libs/ncurses-5.2
 		>=media-libs/libpng-1.2.1 ) 
 	motif? ( >=x11-libs/openmotif-2.1.30 ) 
 	nls? ( >=sys-devel/gettext-0.10.35 )"
-
+RDEPEND=""
 
 PROVIDE="virtual/emacs"
+
+SLOT="0"
+LICENSE="GPL"
+KEYWORDS="x86"
 
 src_compile() {
 	local myconf
