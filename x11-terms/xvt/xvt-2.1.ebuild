@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1.ebuild,v 1.4 2004/04/27 18:25:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1.ebuild,v 1.5 2004/06/12 20:04:20 kloeri Exp $
 
 inherit ccc eutils flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="ftp://ftp.x.org/R5contrib/xvt-1.0.README"
 SRC_URI="ftp://ftp.x.org/R5contrib/xvt-1.0.tar.Z"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~alpha"
+KEYWORDS="x86 alpha"
 IUSE=""
 DEPEND="virtual/x11"
 S=${WORKDIR}/${PN}-1.0

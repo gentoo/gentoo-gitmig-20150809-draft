@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.26 2004/06/11 03:48:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.27 2004/06/12 19:59:49 kloeri Exp $
+
+  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> xterm-184.ebuild:
+  Stable on alpha.
 
   10 Jun 2004; Seemant Kulleen <seemant@gentoo.org> xterm-191.ebuild:
   Apply the termcap breakage patch to fix the make install errors. Closes bug
