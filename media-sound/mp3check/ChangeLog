@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kstreamripper
 # Copyright 2004-2004 Gentoo Technologies, Inc.; Distributed under the GPL
 
+  16 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> mp3check-0.8.0.ebuild:
+  header fix; tidy
+
 *mp3check-0.8.0 (16 Sep 2004)
 
   16 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
