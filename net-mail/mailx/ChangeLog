@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/ChangeLog,v 1.9 2003/03/28 21:46:40 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/ChangeLog,v 1.10 2003/05/27 16:08:11 taviso Exp $
+
+  27 May 2003; Tavis Ormandy <taviso@gentoo.org>
+  mailx-8.1.2.20021129-r1.ebuild:
+  removing gcc hardcode for ccc users.
 
 *mailx-8.1.2.20021129-r1 (27 Mar 2003)
 

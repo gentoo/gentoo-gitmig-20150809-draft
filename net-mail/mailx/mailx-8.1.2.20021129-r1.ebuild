@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.2.20021129-r1.ebuild,v 1.3 2003/03/30 17:41:23 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/mailx-8.1.2.20021129-r1.ebuild,v 1.4 2003/05/27 16:08:11 taviso Exp $
+
+inherit ccc 
 
 MX_VER="8.1.1"
 S=${WORKDIR}/mailx-${MX_VER}.orig
@@ -29,6 +31,8 @@ src_unpack() {
 
 src_compile() {
 	
+	is-ccc && replace-cc-hardcode 
+
 	# Can't compile mailx with optimizations
 	_CFLAGS=$(echo $CFLAGS|sed 's/-O.//g')
 	
