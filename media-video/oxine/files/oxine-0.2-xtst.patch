@@ -1,0 +1,11 @@
+--- src/Makefile.in.org	2004-11-22 23:35:03.963097456 -0100
++++ src/Makefile.in	2004-11-22 23:35:26.110730504 -0100
+@@ -148,7 +148,7 @@
+ 		x11.c nox.c fb.c lirc.c
+ 
+ 
+-oxine_LDADD = @XINE_LIBS@ $(LIRC_LIBS) $(XTEST_LIBS)
++oxine_LDADD = @XINE_LIBS@ $(LIRC_LIBS) $(X_LIBS) $(XTEST_LIBS)
+ 
+ noinst_HEADERS = oxine.h odk.h odk_plugin.h otk.h event.h \
+                  utils.h list.h xmllexer.h xmlparser.h \

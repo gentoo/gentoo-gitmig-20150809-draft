@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.2.ebuild,v 1.7 2004/08/03 11:58:29 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.2.ebuild,v 1.8 2004/11/25 15:12:32 sekretarz Exp $
+
+inherit eutils
 
 DESCRIPTION="OSD frontend for xine"
 HOMEPAGE="http://oxine.sourceforge.net/"
@@ -14,9 +16,17 @@ DEPEND=">=media-libs/xine-lib-1_beta8
 IUSE="nls lirc"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 
 SRC_URI="mirror://sourceforge/oxine/${P}.tar.gz"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-gcc34.patch
+	epatch ${FILESDIR}/${P}-xtst.patch
+}
 
 src_compile() {
 
