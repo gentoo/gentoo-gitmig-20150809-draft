@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.17 2003/07/29 14:40:26 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.18 2003/08/15 11:08:37 lanius Exp $
+
+*xosd-2.2.4 (15 Aug 2003)
+
+  15 Aug 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml,
+  xosd-0.7.0.ebuild, xosd-1.0.2.ebuild, xosd-2.0.0.ebuild,
+  xosd-2.0.1-r1.ebuild, xosd-2.0.1.ebuild, xosd-2.1.0.ebuild,
+  xosd-2.1.3.ebuild, xosd-2.2.2.ebuild, xosd-2.2.4.ebuild,
+  files/Makefile-gentoo.diff, files/configure-gentoo.diff:
+  version bump, cleaned out old files
 
 *xosd-2.2.2 (29 Jul 2003)
 
