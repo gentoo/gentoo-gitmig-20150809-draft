@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.3.5.ebuild,v 1.4 2004/09/23 09:07:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.2.ebuild,v 1.1 2004/11/09 02:29:36 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -11,17 +11,18 @@ SRC_URI="mirror://sourceforge/advancemame/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="debug fbcon static svga alsa oss slang sdl"
+IUSE="alsa debug expat fbcon oss sdl slang static svga zlib"
 
 RDEPEND="virtual/libc
 	games-emulation/advancemame
-	sys-libs/zlib
-	x86? ( >=dev-lang/nasm-0.98 )
+	alsa? ( media-libs/alsa-lib )
+	expat? ( dev-libs/expat )
 	sdl? ( media-libs/libsdl )
 	slang? ( sys-libs/slang )
-	alsa? ( media-libs/alsa-lib )
-	svga? ( >=media-libs/svgalib-1.9 )"
+	svga? ( >=media-libs/svgalib-1.9 )
+	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
+	x86? ( >=dev-lang/nasm-0.98 )
 	fbcon? ( virtual/os-headers )"
 
 src_unpack() {
@@ -34,24 +35,26 @@ src_unpack() {
 src_compile() {
 	export PATH="${PATH}:${T}"
 	egamesconf \
-		$(use_enable debug) \
-		$(use_enable static) \
-		$(use_enable x86 asm) \
-		$(use_enable svga svgalib) \
-		$(use_enable fbcon fb) \
 		$(use_enable alsa) \
+		$(use_enable debug) \
+		$(use_enable expat) \
+		$(use_enable fbcon fb) \
 		$(use_enable oss) \
-		$(use_enable slang) \
 		$(use_enable sdl) \
+		$(use_enable slang) \
+		$(use_enable static) \
+		$(use_enable svga svgalib) \
+		$(use_enable x86 asm) \
+		$(use_enable zlib) \
 		|| die
 	emake || die "emake failed"
 }
 
 src_install() {
 	dogamesbin advmenu advcfg advv || die "dogamesbin failed"
-	dodoc HISTORY README RELEASE obj/doc/*.txt
-	doman obj/doc/*.1
-	dohtml obj/doc/*.html
+	dodoc HISTORY README RELEASE doc/*.txt
+	doman doc/*.1
+	dohtml doc/*.html
 	prepgamesdirs
 }
 
