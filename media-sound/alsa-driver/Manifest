@@ -6,6 +6,7 @@ MD5 a59a08871d2edfc6b30669692196fa31 alsa-driver-0.9.8.ebuild 2202
 MD5 1e3af8f6144fad86e857052c81dc39c6 alsa-driver-1.0.0_rc1.ebuild 2439
 MD5 3ef978d6f5424df9058c204e249409a1 alsa-driver-1.0.0_rc2.ebuild 2439
 MD5 e1147a642867b3b3ea43518a1376f6d2 metadata.xml 250
+MD5 ea81b68ef84a8a9dcc00bd8bab378b46 alsa-driver-1.0.1.ebuild 2438
 MD5 28ae6bb0823279c56f378d7ac6d6f607 files/alsasound 4608
 MD5 45f2cf526eaa8ff274ac6876f15302d1 files/alsa 518
 MD5 aa25f4bdd7880c4cdd0a71b1f691922d files/alsa-compile-fix 746
@@ -22,3 +23,4 @@ MD5 1db42ce7b2e44fae027840e464f71334 files/digest-alsa-driver-1.0.0_rc1 74
 MD5 9bbc6f8fa324caa54a3bfa9fa3d3d934 files/digest-alsa-driver-1.0.0_rc2 74
 MD5 27ccbe36406f145c1d63725a53517233 files/makefile.patch 1122
 MD5 b166f0d98e0935efcd1cf3dc288e875d files/wolk.patch 895
+MD5 3bac96e69ea65a73eedf9757e502466d files/digest-alsa-driver-1.0.1 71
