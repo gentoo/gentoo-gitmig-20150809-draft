@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.10 2004/12/16 07:27:45 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.11 2004/12/23 03:53:03 battousai Exp $
+
+*x11-drm-20040827-r1 (22 Dec 2004)
+
+  22 Dec 2004; Bryan D. Stine <battousai@gentoo.org>
+  +x11-drm-20040827-r1.ebuild, x11-drm-20040827.ebuild:
+  Gah, somehow forgot to bump the patchball revision. Also, ${PF} -> ${P} in
+  patchball SRC_URI.
 
   15 Dec 2004; Bryan Stine <battousai@gentoo.org>; x11-drm-20040827.ebuild:
   Add a patch to fix lockfile vulnerability (CAN-2004-1056: Insufficient
