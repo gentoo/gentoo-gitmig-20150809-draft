@@ -1,0 +1,40 @@
+# ChangeLog for app-sci/gempak
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/ChangeLog,v 1.1 2004/12/29 01:15:45 ribosome Exp $
+
+*gempak-5.6m (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/5.6m-gui.c.patch, +files/Makeinc.common, +files/gempak.env.d,
+  +gempak-5.6m.ebuild, +gempak-5.7.2_p2.ebuild, +gempak-5.7.4.ebuild:
+  Moved from app-sci/gempak to sci-geosciences/gempak.
+
+*gempak-5.7.4 (23 Dec 2004)
+
+  23 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>; +gempak-5.7.4.ebuild:
+  Version bump.
+
+  23 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  gempak-5.7.2_p2.ebuild:
+  x86.
+
+  05 Jun 2004; David Holm <dholm@gentoo.org> gempak-5.7.2_p2.ebuild:
+  Added to ~ppc.
+
+*gempak-5.7.2_p2 (03 Jun 2004)
+
+  03 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  +gempak-5.7.2_p2.ebuild:
+  Version bump (#49138).
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> gempak-5.6m.ebuild:
+  Adding IUSE
+
+*gempak-5.6m (28 Feb 2004)
+
+  28 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; gempak-5.6m.ebuild,
+  metadata.xml, files/5.6m-gui.c.patch, files/Makeinc.common,
+  files/gempak.env.d:
+  Initial commit. Submitted by Donald Giuliano <guido@ou.edu> with extensive
+  reworking by him and me.
+
