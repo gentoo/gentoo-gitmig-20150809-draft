@@ -7,8 +7,9 @@ PROG=`basename ${0}`
 
 tmp="/tmp/$$"
 
-#Get PORTDIR_OVERLAY from portage
+#Get PORTDIR and PORTDIR_OVERLAY from portage
 PORTDIR_OVERLAY="$(/usr/lib/portage/bin/portageq portdir_overlay)"
+PORTDIR="$(/usr/lib/portage/bin/portageq portdir)"
 
 rm -rf ${tmp} > /dev/null 2>&1
 mkdir ${tmp} > /dev/null 2>&1
@@ -147,7 +148,7 @@ fi
 if [ ${verb} ];then
 	echo -e "${CY}Retrieving system packages.${NO}"
 fi
-emerge system -eup | \
+emerge system -ep | \
 	sed -e "/ebuild/s:^.*] \([^ ]*\) *:\1:p;d" | \
 	sort -u \
 	> ${tmp}/system
@@ -173,18 +174,19 @@ if [ ${verb} ]; then
 fi
 
 cat ${tmp}/current | grep -f ${tmp}/world | sort > ${tmp}/world.inst
-find /usr/portage/ ${PORTDIR_OVERLAY} -iname '*.ebuild' | \
-	cut -f4,6 -d/ | sed -e 's:\.ebuild::' > ${tmp}/ebuilds
+find ${PORTDIR} ${PORTDIR_OVERLAY} -iname '*.ebuild' | \
+	awk -F'/' '{printf("%s/%s\n", $(NF-2), $NF)}' | \
+	sed -e 's:\.ebuild::' > ${tmp}/ebuilds
 grep -xf ${tmp}/world.inst ${tmp}/ebuilds >> ${tmp}/world.new
 
 if [ ${verb} ]; then
 	echo -e "${CY}"`cat ${tmp}/ebuilds | wc -l`"\tebuilds available.${NO}"
 	echo -e "${CY}"`cat ${tmp}/world.new | wc -l`"\tpackages contained in final world file.${NO}"
 	echo -e
-	echo -e "${CY}List prepared, checking dependencies with emerge -eup${NO}"
+	echo -e "${CY}List prepared, checking dependencies with emerge -ep${NO}"
 fi
 
-sort ${tmp}/world.new |sed -e 's:^:\\\=:' | uniq | xargs emerge -eup | \
+sort ${tmp}/world.new |sed -e 's:^:\\\=:' | uniq | xargs emerge -ep | \
 	tee ${tmp}/log | sed -e '/ebuild/s:^.*] \([^ ]*\) *$:\1:p;d' > ${tmp}/image.unsorted
 
 depends=`cat ${tmp}/image.unsorted|wc -l`

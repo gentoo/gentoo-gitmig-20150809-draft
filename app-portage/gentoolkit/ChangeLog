@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.14 2003/11/18 17:44:19 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.15 2003/12/14 01:32:55 genone Exp $
+
+*gentoolkit-0.1.37 (14 Dec 2003)
+
+  14 Dec 2003; Marius Mauch <genone@gentoo.org> gentoolkit-0.1.37.ebuild,
+  files/scripts/dep-clean:
+  fixed bug #34302 and #30861
 
 *gentoolkit-0.1.36 (18 Nov 2003)
 
