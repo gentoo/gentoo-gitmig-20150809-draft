@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/weex
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/ChangeLog,v 1.7 2004/09/25 21:07:26 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/ChangeLog,v 1.8 2004/11/17 23:05:26 mr_bones_ Exp $
+
+  17 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> weex-2.6.1.5.ebuild:
+  fix inherit for bug #71472; tidy
 
   25 Sep 2004; Tom Martin <slarti@gentoo.org> weex-2.6.1.5.ebuild:
   Stable on amd64.
