@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.214 2003/10/13 21:29:44 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.215 2003/10/14 01:51:34 spyderous Exp $
+
+  13 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.99.14.ebuild:
+  Pulling patch 5310, which enabled the nv driver on ppc by default, since this
+  happens without the patch now.
 
   13 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.99.12.ebuild,
   files/synaptics-makefile-fixup-0.11.3p11.patch:
