@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r3.ebuild,v 1.4 2003/11/01 00:37:36 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r3.ebuild,v 1.5 2003/11/10 15:46:56 taviso Exp $
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
@@ -64,7 +64,7 @@ src_compile() {
 	# `USE=static` support was requested in #29299
 	if use static; then
 		myconf="${myconf} --with-included-zlib"
-		LDFLAGS="${LDFLAGS} -static"
+		export LDFLAGS="${LDFLAGS} -static"
 	else
 		myconf="${myconf} --without-included-zlib"
 	fi
