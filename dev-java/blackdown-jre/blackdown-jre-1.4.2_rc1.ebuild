@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2_rc1.ebuild,v 1.6 2004/06/07 02:40:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2_rc1.ebuild,v 1.7 2004/06/07 21:50:33 agriffis Exp $
 
 IUSE="doc"
 
@@ -89,12 +89,11 @@ unpack_jars() {
 }
 
 src_install () {
-	local PLATFORM=
+	typeset platform
 
 	dodir /opt/${P}
 
 	cp -a ${S}/{bin,jre,lib,man} ${D}/opt/${P}
-
 
 	dodoc COPYRIGHT LICENSE README INSTALL
 	dohtml README.html
