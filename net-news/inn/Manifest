@@ -1,6 +1,6 @@
 MD5 34dfeac7cc55a6450d4661c37f9cad95 ChangeLog 893
 MD5 4586a7612d7b5e4842b2696c28c0afe2 inn-2.3.3.ebuild 1909
-MD5 7d20a02fb97b16f153553821fdd5ce0d inn-2.3.5.ebuild 3332
+MD5 f44cab2769320303736daa4fb2447c53 inn-2.3.5.ebuild 3332
 MD5 5e094ec9d89dc4d773f912de4d3464dc files/digest-inn-2.3.3 62
 MD5 ce3c00651e354a874cc9c60ae4f0255e files/digest-inn-2.3.5 128
 MD5 8e2a9161e43e1ef41c9ea386bbf0b944 files/innd 455
