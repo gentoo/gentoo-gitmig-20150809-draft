@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/dclib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.2 2002/10/02 23:36:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.3 2002/10/07 17:33:40 vapier Exp $
+
+*dclib-0.1 (07 Oct 2002)
+
+  02 Oct 2002; Mike Frysinger <vapier@gentoo.org> dclib-0.1.ebuild :
+  Updated to the 0.1 release, that is all #8837
 
 *dclib-0.1_rc2 (02 Oct 2002)
 
