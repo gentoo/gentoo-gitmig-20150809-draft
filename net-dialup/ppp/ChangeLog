@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.79 2004/10/14 08:08:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.80 2004/10/30 12:38:53 dragonheart Exp $
+
+*ppp-2.4.2-r7 (30 Oct 2004)
+
+  30 Oct 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/2.4.2/cbcp-dosfix.patch, +ppp-2.4.2-r7.ebuild:
+  Added patch cbcp-dosfix.patch to fix remote DOS as per bug #69152. Thanks Dan
+  Margolis <krispykringle@gentoo.org>
 
 *ppp-2.4.2-r6 (14 Oct 2004)
 
