@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.6 2003/09/02 09:25:26 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.7 2003/09/02 10:57:39 taviso Exp $
 
 inherit gnuconfig
 
@@ -9,8 +9,7 @@ IUSE="readline truetype ncurses gtk stroke gnome rplay xinerama cjk perl nls png
 S=${WORKDIR}/${P}
 DESCRIPTION="An extremely powerful ICCCM-compliant multiple virtual desktop window manager"
 SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
-		perl? ( http://users.tpg.com.au/users/scottie7/FvwmTabs 
-				http://users.tpg.com.au/users/scottie7/fvwmtabrc )"
+		perl? ( mirror://gentoo/FvwmTabs-2.0.tar.gz )"
 HOMEPAGE="http://www.fvwm.org/"
 
 SLOT="0"
@@ -208,9 +207,10 @@ src_install() {
 			# Install the very cool FvwmTabs module
 			# http://users.tpg.com.au/users/scottie7/FvwmTabs
 			einfo "Installing FvwmTabs module..."
+			
 			exeinto /usr/lib/fvwm/${PV}/
-			doexe ${DISTDIR}/FvwmTabs
-			dodoc ${DISTDIR}/fvwmtabrc
+			doexe ${WORKDIR}/FvwmTabs
+			dodoc ${WORKDIR}/fvwmtabrc ${WORKDIR}/README.fvwmtabs
 		else
 			# Remove the Tk bindings (requires perl-tk)
 			rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Tk.pm
