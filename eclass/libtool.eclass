@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.9 2002/06/26 22:38:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.10 2002/06/29 23:50:56 azarah Exp $
 # This eclass patches ltmain.sh distributed with libtoolized packages with the
 # relink and portage patch
 ECLASS=libtool
@@ -22,16 +22,24 @@ elibtoolize() {
 	local dotmp="yes"
 	local doportage="yes"
 	local portage="no"
+	local reversedeps="no"
 	local mylist=""
 
 	mylist="$(find_ltmain)"
-	# Only apply portage patch, and dont "libtoolize --copy --force"
-	# if all patches fail.
 	for x in ${*}
 	do
+		# Only apply portage patch, and dont "libtoolize --copy --force"
+		# if all patches fail.
 		if [ "${x}" = "--portage" ]
 		then
 			portage="yes"
+		fi
+		# Apply the reverse-deps patch
+		#
+		# http://bugzilla.gnome.org/show_bug.cgi?id=75635
+		if [ "${x}" = "--reverse-deps" ]
+		then
+			reversedeps="yes"
 		fi
 		# Only patch the ltmain.sh in ${S}
 		if [ "${x}" = "--shallow" ]
@@ -127,12 +135,22 @@ elibtoolize() {
 				
 				einfo "Applying libtool-${y/_patch/}.patch..."
 				eval ${y} $>${T}/libtool.foo
-			elif [ "${portage}" = "no" ]
+			elif [ "${portage}" = "no" ] && [ "${reversedeps}" = "no" ]
 			then
+				ewarn "Cannot apply any patch, running libtoolize..."
 				libtoolize --copy --force
 				break
 			fi
 		done
+
+		if [ "${reversedeps}" = "yes" ]
+		then
+			if eval reversedeps_patch --test $>${T}/libtool.foo
+			then
+				einfo "Applying libtool-reverse-deps.patch..."
+				eval reversedeps_patch $>${T}/libtool.foo
+			fi
+		fi
 	done
 
 	if [ -f libtool ]
@@ -696,6 +714,48 @@ test_patch() {
 		 	  # Hardcode the library paths
 		 	  hardcode_libdirs=
 		 	  dep_rpath=
+	ENDPATCH
+}
+
+reversedeps_patch() {
+
+	local opts=""
+
+	if [ "${1}" = "--test" ]
+	then
+		opts="--force --dry-run"
+	fi
+    
+	patch ${opts} -p0 <<-"ENDPATCH"
+		--- ltmain.sh.orig	Sat Mar 23 22:48:45 2002
+		+++ ltmain.sh	Sat Mar 23 22:45:38 2002
+		@@ -1553,6 +1553,8 @@
+		 	    convenience="$convenience $ladir/$objdir/$old_library"
+		 	    old_convenience="$old_convenience $ladir/$objdir/$old_library"
+		 	    tmp_libs=
+		+	    # PKGW 
+		+	    dependency_libs=
+		 	    for deplib in $dependency_libs; do
+		 	      deplibs="$deplib $deplibs"
+		 	      case "$tmp_libs " in
+		@@ -1668,6 +1670,8 @@
+		 	  fi
+		 
+		 	  tmp_libs=
+		+	  #PKGW
+		+	  dependency_libs=
+		 	  for deplib in $dependency_libs; do
+		 	    case $deplib in
+		 	    -L*) newlib_search_path="$newlib_search_path "`$echo "X$deplib" | $Xsed -e 's/^-L//'`;; ### testsuite: skip nested quoting test
+		@@ -2081,7 +2085,7 @@
+		 	    -L*)
+		 	      case " $tmp_libs " in
+		 	      *" $deplib "*) ;;
+		-	      *) tmp_libs="$tmp_libs $deplib" ;;
+		+	      *) tmp_libs="$deplib $tmp_libs" ;;
+		 	      esac
+		 	      ;;
+		 	    *) tmp_libs="$tmp_libs $deplib" ;;
 	ENDPATCH
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.16 2002/06/18 21:17:16 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.17 2002/06/29 23:50:55 azarah Exp $
 
 inherit libtool
 inherit debug
@@ -12,10 +12,11 @@ inherit debug
 ECLASS="gnome2"
 
 G2CONF="--enable-debug=yes"
+ELTCONF=""
 SCROLLKEEPER_UPDATE="0"
 
 gnome2_src_configure() {
-	elibtoolize
+	elibtoolize ${ELTCONF}
 	# doc keyword for gtk-doc
 	use doc && G2CONF="${G2CONF} --enable-gtk-doc" || G2CONF="${G2CONF} --disable-gtk-doc"
 
