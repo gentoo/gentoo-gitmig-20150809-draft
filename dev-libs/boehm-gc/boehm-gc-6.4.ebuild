@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.4.ebuild,v 1.2 2005/04/01 04:00:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.4.ebuild,v 1.3 2005/04/04 14:39:44 matsuu Exp $
 
 MY_P=gc${PV/_/}
 S=${WORKDIR}/${MY_P}
@@ -43,5 +43,5 @@ src_install() {
 
 	dodoc README.QUICK doc/README* doc/barrett_diagram
 	dohtml doc/*.html
-	newman doc/gc.man gc.1
+	newman doc/gc.man GC_malloc.1
 }
