@@ -1,8 +1,13 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.1 2002/02/01 21:53:00 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.2 2002/09/09 07:54:55 seemant Exp $
 
 *heimdal-0.4e-r1 (1 Feb 2002)
+
+  09 Sep 2002; Seemant Kulleen <seemant@gentoo.org> heimdal-0.4e-r1.ebuild :
+
+  emake->make. Discovery and correction by: ian@stacken.kth.se (Ian) in bug
+  #7632.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
