@@ -86,3 +86,4 @@ move media-sound/wmix x11-plugins/wmix
 move app-misc/upx app-arch/upx
 move sys-apps/sysklogd app-admin/sysklogd
 move app-office/logjam net-misc/logjam
+move x11-wm/WindowMaker x11-wm/windowmaker
