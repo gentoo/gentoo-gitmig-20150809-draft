@@ -1,8 +1,11 @@
 # ChangeLog for app-sci/xdrawchem
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.4 2002/07/10 18:08:00 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/ChangeLog,v 1.5 2002/07/25 16:18:19 aliz Exp $
 
 *xdrawchem-1.4 (10 Jul 2002)
+
+  25 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> xdrawchem-1.4.ebuild :
+  Added KEYWORDS, SLOT.
 
   10 Jul 2002; Ryan Phillips <rphillips@gentoo.org> xdrawchem-1.4.ebuild:
 

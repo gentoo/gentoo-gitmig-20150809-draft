@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kstars/kstars-0.6-r2.ebuild,v 1.3 2002/05/27 17:27:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kstars/kstars-0.6-r2.ebuild,v 1.4 2002/07/25 16:18:19 aliz Exp $
 
 inherit kde-base || die
 
@@ -8,6 +8,8 @@ need-kde 2.1
 
 DESCRIPTION="A fun and educational desktop planetarium program for KDE2"
 HOMEPAGE="http://kstars.sourceforge.net"
+KEYWORDS="x86"
+SLOT="0"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 

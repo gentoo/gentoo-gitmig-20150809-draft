@@ -1,8 +1,11 @@
 # ChangeLog for app-sci/babel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/babel/ChangeLog,v 1.1 2002/05/08 02:04:28 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/babel/ChangeLog,v 1.2 2002/07/25 16:18:19 aliz Exp $
 
 *babel-1.6 (1 Feb 2002)
+
+  25 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> babel-1.6.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

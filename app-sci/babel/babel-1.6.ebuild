@@ -9,9 +9,13 @@ DESCRIPTION="Babel is a program to interconvert file formats used in molecular m
 SRC_URI="http://smog.com/chem/babel/files/${P}.tar.Z"
 
 HOMEPAGE="http://smog.com/chem/babel/"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="as-is"
 
 #Doesn't really seem to depend on anything (?)
 DEPEND="virtual/glibc"
+RDEPEND=$DEPEND
 
 PROVIDE="app-misc/babel"
 

@@ -1,8 +1,11 @@
 # ChangeLog for app-sci/gperiodic
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gperiodic/ChangeLog,v 1.1 2002/05/07 01:35:08 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gperiodic/ChangeLog,v 1.2 2002/07/25 16:18:19 aliz Exp $
 
 *gperiodic-1.3.2 (1 Feb 2002)
+
+  25 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> gperiodic-1.3.2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   06 May 2002; G. Shapovalov <george@gentoo.org> Changelog:
 

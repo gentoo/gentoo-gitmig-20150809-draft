@@ -1,11 +1,14 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gperiodic/gperiodic-1.3.2.ebuild,v 1.4 2002/07/11 06:30:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gperiodic/gperiodic-1.3.2.ebuild,v 1.5 2002/07/25 16:18:19 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GPeriodic is a periodic table application for Linux."
 SRC_URI="ftp://ftp.seul.org/pub/gperiodic/${P}.tar.gz"
 HOMEPAGE="http://gperiodic.seul.org/"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="GPL-2"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	=x11-libs/gtk+-1.2*

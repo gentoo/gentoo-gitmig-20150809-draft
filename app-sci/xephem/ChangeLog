@@ -1,8 +1,11 @@
 # ChangeLog for app-sci/xephem
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/ChangeLog,v 1.1 2002/05/31 08:25:49 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/ChangeLog,v 1.2 2002/07/25 16:18:19 aliz Exp $
 
 *xephem-3.5.2 (31 May 2002)
+
+  25 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> xephem-3.5.2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
   
   31 May 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
 

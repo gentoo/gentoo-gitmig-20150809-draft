@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/kstars
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kstars/ChangeLog,v 1.1 2002/05/07 01:57:35 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kstars/ChangeLog,v 1.2 2002/07/25 16:18:19 aliz Exp $
+
+*kstars-0.6-r2.ebuild (25 July 2002)
+
+  25 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> kstars-0.6-r2.ebuild :
+  Added KEYWORDS, SLOT.
 
 *kstars-0.6-r1 (3 May 2002)
 

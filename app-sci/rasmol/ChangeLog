@@ -1,8 +1,11 @@
 # ChangeLog for app-sci/rasmol
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/ChangeLog,v 1.1 2002/07/01 20:00:16 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/rasmol/ChangeLog,v 1.2 2002/07/25 16:18:19 aliz Exp $
 
 *rasmol-2.6_beta2 (01 Jul 2002)
+
+  25 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> rasmol-2.6_beta2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   01 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
 

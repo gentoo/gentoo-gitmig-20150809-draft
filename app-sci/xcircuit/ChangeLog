@@ -1,8 +1,11 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/ChangeLog,v 1.1 2002/05/07 01:57:35 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/ChangeLog,v 1.2 2002/07/25 16:18:19 aliz Exp $
 
 *xcircuit-2.5.4 (5 Apr 2003)
+
+  25 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> xcircuit-2.5.4.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   06 May 2002; George Shapovalov <george@gentoo.org> all :
 
