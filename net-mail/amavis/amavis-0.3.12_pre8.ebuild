@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.3.12_pre8.ebuild,v 1.3 2002/11/15 17:14:54 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.3.12_pre8.ebuild,v 1.4 2002/11/17 22:32:30 raker Exp $
 
 DESCRIPTION="A perl module which integrates virus scanning software with your MTA"
 HOMEPAGE="http://www.amavis.org"
@@ -86,7 +86,7 @@ src_compile() {
 	elif [ "$mymta" == "exim" ]; then
 		myconf="--enable-exim"
 	elif [ "$mymta" == "sendmail" ]; then
-		mycfonf="--enable-sendmail"
+		myconf="--enable-sendmail"
 	fi
 
 	# The quarantine directory for infected emails
@@ -102,12 +102,11 @@ src_install() {
 
 	dodir /var/amavis/quarantine
 
-	if [ "$mymta" == "postfix" ]; then
-		chown -R postfix:postfix ${D}/var/amavis
-	elif [ "$mymta" == "qmail" ]; then
+	if [ "$mymta" == "qmail" ]; then
 		chown -R qmailq:qmail ${D}/var/amavis
-	fi
-		
+	else
+		chown -R amavis:amavis ${D}/var/amavis
+	fi	
 
 	chmod -R 770 ${D}/var/amavis
 
