@@ -1,0 +1,15 @@
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.conf.gentoo,v 1.1 2003/03/11 04:05:11 agriffis Exp $
+#
+# Syslog-ng default configuration file for Gentoo Linux
+# contributed by Michael Sterrett
+#
+
+options { long_hostnames(off); sync(0); };
+
+source src { unix-stream("/dev/log"); internal(); pipe("/proc/kmsg"); };
+
+destination messages { file("/var/log/messages"); };
+destination console_all { file("/dev/tty12"); };
+
+log { source(src); destination(messages); };
+log { source(src); destination(console_all); };
