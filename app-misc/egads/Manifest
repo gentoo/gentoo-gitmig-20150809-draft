@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 10adbb7dcc6bacc317e6cc7305a146f6 ChangeLog 478
+MD5 b617405865c1cd058dd16f3bbb72028d ChangeLog 564
+MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 074586c0de2cf148d81fc11b3f7abfe0 egads-0.9.5.ebuild 751
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 39f2438f924e6ee3b6079d38dfacdb0a files/digest-egads-0.9.5 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35FlHTu7gpaalycRAm3yAJ9wUOtRZnyaz/1/EuKh/XNQQ1jTaACfbPvC
-Q4oKbZKuXI4h+r9cS8jrMt8=
-=mDeg
------END PGP SIGNATURE-----
