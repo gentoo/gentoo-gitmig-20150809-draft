@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <g2boojum@gentoo.org> (27 Sep 2002)
+# useful security tool; masked while in freeze
+app-admin/logsentry
+
 # <bcowan@gentoo.org> (27 Sep 2002)
 # version bumps to many XFS utilities...need testing Thanks to Hanno
 =sys-apps/xfsprogs-2.2.2 
