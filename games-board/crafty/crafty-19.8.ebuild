@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-19.8.ebuild,v 1.3 2004/02/29 10:10:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-19.8.ebuild,v 1.4 2004/06/03 19:34:06 agriffis Exp $
 
 inherit games eutils flag-o-matic
 
@@ -28,8 +28,8 @@ src_unpack() {
 
 src_compile() {
 	local makeopts="target=LINUX"
-	if [ ! `use no-opts` ] ; then
-		if [ `use icc` ] ; then
+	if ! use no-opts ; then
+		if use icc ; then
 			makeopts="${makeopts} CC=icc CXX=gcc asm=X86.o"
 			append-flags -D_REENTRANT -tpp6 \
 				-DCOMPACT_ATTACKS -DUSE_ATTACK_FUNCTIONS \
