@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.38 2003/06/19 14:33:11 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.39 2003/06/22 19:16:39 caleb Exp $
+
+  21 Jun 2003; Caleb Tennis <caleb@gentoo.org>:
+  Removing old ebuilds: 3.0.5a, 3.1
 
   16 Jun 2003; Will Woods <wwoods@gentoo.org> kdepim-3.1.2.ebuild:
   Marked stable for alpha
