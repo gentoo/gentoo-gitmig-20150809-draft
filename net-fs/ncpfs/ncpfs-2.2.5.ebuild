@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.5.ebuild,v 1.3 2004/12/10 19:58:29 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.5.ebuild,v 1.4 2004/12/11 08:14:34 corsair Exp $
 
 inherit eutils confutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="ftp://platan.vc.cvut.cz/pub/linux/ncpfs/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc ~ppc64"
+KEYWORDS="~x86 ~amd64 ~ppc ppc64"
 
 DEPEND="nls? ( sys-devel/gettext )
 		pam? ( sys-libs/pam )
