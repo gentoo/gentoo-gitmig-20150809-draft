@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.6-r1.ebuild,v 1.4 2005/01/01 18:04:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.6-r1.ebuild,v 1.5 2005/01/19 11:00:27 kosmikus Exp $
 
-inherit base ghc-package
+inherit base check-reqs ghc-package
 
 DESCRIPTION="GTK+-2.x bindings for Haskell"
 HOMEPAGE="http://gtk2hs.sourceforge.net/"
@@ -19,6 +19,13 @@ DEPEND=">=virtual/ghc-5.04
 		gnome? ( >=gnome-base/libglade-2
 				 >=x11-libs/gtksourceview-0.6
 				 >=gnome-base/gconf-2 )"
+
+pkg_setup() {
+	# need this much memory (in MBytes) (does *not* check swap)
+	CHECKREQS_MEMORY="350"
+
+	check_reqs
+}
 
 src_compile() {
 	econf \
