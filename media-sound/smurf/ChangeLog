@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/smurf
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/smurf/ChangeLog,v 1.1 2003/06/25 09:40:10 torbenh Exp $
+
+*smurf-0.52.6 (25 Jun 2003)
+
+  25 Jun 2003; torbenh <torbenh@gentoo.org> Manifest smurf-0.52.6.ebuild :
+  Initial Version for smurf soundfont editor
+
