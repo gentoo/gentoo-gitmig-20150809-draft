@@ -2,7 +2,7 @@ MD5 cf62cc2ee2d575e8193c8d76ceb3c543 ChangeLog 2906
 MD5 00633259847518bde188d48a0bb3ecd7 joe-2.9.5.ebuild 849
 MD5 8adfaa8e8f0f139b4fce6316bff1f18d joe-2.9.8.ebuild 828
 MD5 b4ab76dfa8ad207c491c059ecec6710f joe-2.9.8_pre1.ebuild 677
-MD5 79797257e10fc6065c3240f8f9d74cc7 joe-3.0-r1.ebuild 1302
+MD5 51768a7c956f7614980ccceed6e204cb joe-3.0-r1.ebuild 1303
 MD5 2d0cff8feae94e95e4d345c184aedf2e files/digest-joe-2.9.5 58
 MD5 d69aa486eb5c743045dd6323ceede7e3 files/digest-joe-2.9.8 61
 MD5 26aed7d89377d2c69fa8915653718a0b files/digest-joe-2.9.8_pre1 63
