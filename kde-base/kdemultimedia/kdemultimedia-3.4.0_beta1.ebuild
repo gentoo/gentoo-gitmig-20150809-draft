@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0_beta1.ebuild,v 1.3 2005/01/17 17:24:29 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0_beta1.ebuild,v 1.4 2005/01/20 16:34:42 greg_g Exp $
 
-inherit kde-dist
+inherit kde-dist flag-o-matic
 
 DESCRIPTION="KDE multimedia apps: noatun, kscd, juk..."
 
