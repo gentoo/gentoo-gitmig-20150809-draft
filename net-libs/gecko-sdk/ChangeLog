@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gecko-sdk
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.2 2004/10/23 14:17:31 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.3 2004/11/09 21:36:44 agriffis Exp $
+
+*gecko-sdk-1.7.3 (09 Nov 2004)
+
+  09 Nov 2004; Aron Griffis <agriffis@gentoo.org> gecko-sdk-1.7.3.ebuild:
+  Fix IUSE
 
   24 Oct 2004; Joseph Jezak <josejx@gentoo.org> :
   Fixed manifest

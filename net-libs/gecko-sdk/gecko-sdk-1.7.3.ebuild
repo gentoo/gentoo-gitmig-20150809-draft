@@ -1,13 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.3.ebuild,v 1.1 2004/10/23 13:57:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.3.ebuild,v 1.2 2004/11/09 21:36:44 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozilla makeedit
 
-IUSE="java crypt gtk2 ssl"
-# Internal USE flags that I do not really want to advertise ...
-IUSE="${IUSE} mozcalendar moznoirc moznomail moznocompose moznoxft"
+IUSE="java"		# other IUSE setting is in mozilla.eclass
 
 EMVER="0.86.0"
 IPCVER="1.0.8"
