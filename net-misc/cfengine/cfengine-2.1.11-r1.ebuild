@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.11.ebuild,v 1.1 2004/11/01 15:24:42 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.11-r1.ebuild,v 1.1 2004/11/01 20:47:03 klieber Exp $
 
-inherit eutils
+inherit gnuconfig eutils
 
 DESCRIPTION="An agent/software robot and a high level policy language for building expert systems to administrate and configure large computer networks"
 HOMEPAGE="http://www.iu.hio.no/cfengine/"
