@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmoe
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/ChangeLog,v 1.10 2005/03/05 12:05:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/ChangeLog,v 1.11 2005/03/07 17:54:56 gustavoz Exp $
+
+  07 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> libmoe-1.5.8.ebuild:
+  Stable on sparc
 
   05 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> libmoe-1.5.8.ebuild:
   Stable on x86.

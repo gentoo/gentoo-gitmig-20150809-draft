@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/libmoe-1.5.8.ebuild,v 1.2 2005/03/05 12:05:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/libmoe-1.5.8.ebuild,v 1.3 2005/03/07 17:54:56 gustavoz Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://pub.ks-and-ks.ne.jp/prog/pub/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc -alpha"
+KEYWORDS="x86 ~ppc sparc -alpha"
 IUSE=""
 
 DEPEND="virtual/libc
