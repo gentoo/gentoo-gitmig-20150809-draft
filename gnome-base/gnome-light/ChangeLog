@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-light
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.11 2004/11/11 12:31:10 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.12 2004/12/20 17:30:38 joem Exp $
+
+*gnome-light-2.8.1 (20 Dec 2004)
+
+  20 Dec 2004; Joe McCann <joem@gentoo.org> +gnome-light-2.8.1.ebuild:
+  Bump to match stable gnome-2.8.1 metabuild
 
 *gnome-light-2.8.0 (11 Nov 2004)
 
