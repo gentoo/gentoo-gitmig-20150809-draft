@@ -1,6 +1,18 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.43 2004/09/01 12:38:32 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.44 2004/09/02 16:56:11 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  aterm-0.4.2-r7.ebuild, aterm-0.4.2-r8.ebuild, aterm-0.4.2-r9.ebuild:
+  Masked aterm-0.4.2-r9.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  aterm-0.4.2-r7.ebuild, aterm-0.4.2-r8.ebuild:
+  Masked aterm-0.4.2-r8.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  aterm-0.4.2-r7.ebuild:
+  Masked aterm-0.4.2-r7.ebuild stable for ppc
 
   01 Sep 2004; Michal Januszewski <spock@gentoo.org> aterm-0.4.2-r11.ebuild:
   Added two config options suggested by Seemant.

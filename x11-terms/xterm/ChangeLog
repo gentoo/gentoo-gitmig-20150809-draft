@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.44 2004/08/26 00:58:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.45 2004/09/02 16:56:11 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xterm-179.ebuild,
+  xterm-191.ebuild:
+  Masked xterm-191.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> xterm-179.ebuild:
+  Masked xterm-179.ebuild stable for ppc
 
   25 Aug 2004; Seemant Kulleen <seemant@gentoo.org> xterm-196.ebuild:
   change blue2 to blue in the XTerm-color definition file. closes bug #58792 by

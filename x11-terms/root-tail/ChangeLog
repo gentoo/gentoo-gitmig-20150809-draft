@@ -1,6 +1,18 @@
 # ChangeLog for x11-terms/root-tail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/ChangeLog,v 1.18 2004/08/30 09:13:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/ChangeLog,v 1.19 2004/09/02 16:56:11 pvdabeel Exp $
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  root-tail-0.9.ebuild, root-tail-1.1.ebuild, root-tail-1.2.ebuild:
+  Masked root-tail-1.2.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  root-tail-0.9.ebuild, root-tail-1.1.ebuild:
+  Masked root-tail-1.1.ebuild stable for ppc
+
+  02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  root-tail-0.9.ebuild:
+  Masked root-tail-0.9.ebuild stable for ppc
 
 *root-tail-1.2 (30 Aug 2004)
 
