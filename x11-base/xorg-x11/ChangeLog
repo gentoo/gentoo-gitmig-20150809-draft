@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.315 2005/02/03 18:41:07 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.316 2005/02/03 19:11:49 cryos Exp $
+
+  03 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org> xorg-x11-6.8.1.904.ebuild:
+  Marked ~amd64.
 
   03 Feb 2005; Ferris McCormick <fmccor@gentoo.org> xorg-x11-6.8.1.904.ebuild:
   Add ~sparc keyword.  This release is working well for me (hardened and patched
