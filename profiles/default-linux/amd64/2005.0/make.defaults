@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/make.defaults,v 1.7 2005/02/02 10:44:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/make.defaults,v 1.8 2005/02/07 20:53:21 eradicator Exp $
 
-STAGE1_USE="multislot nptl -nptlonly"
+STAGE1_USE="nptl -nptlonly"
 GRP_STAGE23_USE="${STAGE1_USE} ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses readline zlib -java"
 USE="${GRP_STAGE23_USE} bitmap-fonts truetype-fonts type1-fonts oss alsa crypt fortran f77 jpeg nls userlocales opengl png xml2 acpi gif jp2 lzw lzw-tiff png tiff truetype usb xpm xrandr xv"
 
