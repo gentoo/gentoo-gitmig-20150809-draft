@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.7.1.ebuild,v 1.1 2003/09/15 18:17:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.7.1.ebuild,v 1.2 2003/09/29 22:29:41 mholzer Exp $
 
 DESCRIPTION="Utilities and library for accessing NTFS filesystems"
 HOMEPAGE="http://linux-ntfs.sourceforge.net/"
@@ -13,6 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 amd64"
 
 src_compile() {
+	epatch ${FILESDIR}/${P}-gcc3.patch || die
 	sed -i 's:head -1:head -n 1:' configure
 	econf || die "Configure failed"
 
@@ -27,10 +28,8 @@ src_install() {
 	make DESTDIR=${D} install || die "Install failed"
 
 	# lot's of docs (a good thing :)
-	dodoc CREDITS ChangeLog NEWS README TODO.include TODO.mkntfs TODO.ntfsfix \
-		doc/attribute_definitions doc/attributes.txt doc/compression.txt \
-		doc/system_files.txt doc/system_security_descriptors.txt \
-		doc/tunable_settings
+	dodoc AUTHORS COPYING CREDITS ChangeLog NEWS README TODO.* \
+		doc/attribute_definitions doc/*.txt doc/tunable_settings
 
 	# a normal user cannot run ntfsfix
 	cd ${D}

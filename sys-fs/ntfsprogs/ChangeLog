@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.1 2003/09/15 18:17:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.2 2003/09/29 22:29:41 mholzer Exp $
+
+  30 Sep 2003; Martin Holzer <mholzer@gentoo.org> ntfsprogs-1.7.1.ebuild,
+  files/ntfsprogs-1.7.1-gcc3.patch:
+  Added gcc3 patch .Closes #27519.
 
 *ntfsprogs-1.7.1 (15 Sep 2003)
 
