@@ -1,0 +1,8 @@
+# ChangeLog for sys-kernel/hppa-sources
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources-dev/ChangeLog,v 1.1 2003/08/04 01:31:53 gmsoft Exp $
+
+*hppa-sources-dev-2.4.21_p8 (03 Aug 2003)
+
+  03 Feb 2003; Guy Martin <gmsoft@gentoo.org> hppa-sources-dev-2.4.21_p8.ebuild :
+  Initial import. Include grsec patch.
