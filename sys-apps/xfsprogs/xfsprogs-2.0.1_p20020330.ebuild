@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-2.0.1_p20020330.ebuild,v 1.3 2003/06/21 21:17:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-2.0.1_p20020330.ebuild,v 1.4 2003/09/07 00:29:33 msterret Exp $
 
 S=${WORKDIR}/cmd/${PN}
 OPV=20020330
@@ -19,7 +19,7 @@ RDEPEND="virtual/glibc"
 ebuild_die() {
 	export CFLAGS="${oldCFLAGS}"
 	export CXXFLAGS="${oldCXXFLAGS}"
-	if([ -n "$LINE" ]) then 
+	if([ -n "$LINE" ]) then
 		die "Line ${2}: ${1}"
 	else
 		die "${1}"
