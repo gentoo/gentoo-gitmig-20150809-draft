@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/mplay-0.68.ebuild,v 1.1 2004/09/02 22:42:35 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/mplay-0.68.ebuild,v 1.2 2004/09/04 06:05:11 chriswhite Exp $
 
 inherit perl-module
 
@@ -54,10 +54,13 @@ src_install() {
 
 	dobin mplay
 
-	insinto /usr/share/mplay
-	doins help_en help_de
-
 	dodoc README
+
+	cd ${S}/help
+	insinto /usr/share/mplay
+	doins help_en help_de mplayconf
+	doman mplay.1
+
 
 	cd ${AMIX_D}
 	#make install

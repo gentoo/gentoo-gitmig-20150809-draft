@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mplay
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/ChangeLog,v 1.1 2004/09/02 22:42:35 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/ChangeLog,v 1.2 2004/09/04 06:05:11 chriswhite Exp $
+
+  04 Sep 2004; Chris White <chriswhite@gentoo.org> mplay-0.68.ebuild:
+  Fixed the docs installation. mplay was looking for help_de/en in
+  /usr/share/mplay, wasn't finding them(because they weren't installed in the
+  first place :). Installed them in /usr/share/mplay, left the rest of the docs
+  installed in /usr/share/doc/ nice and gzipped to save space. This closes bug
+  #62726.
 
 *mplay-0.68 (03 Sep 2004)
 
