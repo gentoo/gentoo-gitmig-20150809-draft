@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.459 2004/06/30 23:51:45 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.460 2004/07/01 14:23:08 mattam Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -58,7 +58,9 @@ app-pda/multisync:opie - Adds support for PDAs based on the OPIE distribution (e
 app-pda/synce-kde:avantgo - Adds support for syncing Avantgo accounts.
 app-sci/aaindex:no-emboss - Do not index the database files for use with EMBOSS
 app-sci/aaindex:no-rawdb - Do not install the original database files (keep only indexed files)
+app-sci/coq:ide - Build the Coq IDE, a clone of proof general using lablgtk2.
 app-sci/coq:norealanalysis - Do not build real analysis modules (faster compilation).
+app-sci/coq:translator - Install the translator script from coq-7.4 to coq-8.0, and its documentation if doc is set too.
 app-sci/cutg:no-emboss - Do not index the database files for use with EMBOSS
 app-sci/cutg:no-rawdb - Do not install the original database files (keep only indexed files)
 app-sci/emboss:no-biodata - Do not install the biological databases used by some programs.
