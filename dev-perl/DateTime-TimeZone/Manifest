@@ -1,4 +1,6 @@
 MD5 54e72f0fcfd4323a300095238ec0fee3 ChangeLog 517
 MD5 c1df608e35fa7a2f7f72794fe0aac4a0 DateTime-TimeZone-0.2507.ebuild 599
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 c1df608e35fa7a2f7f72794fe0aac4a0 DateTime-TimeZone-0.27.ebuild 599
 MD5 3f75f1802b9e5b2e8cf4e4e0a7a0d8f7 files/digest-DateTime-TimeZone-0.2507 76
+MD5 20252c010eca6d34cf58b5a9cb303b3d files/digest-DateTime-TimeZone-0.27 74
