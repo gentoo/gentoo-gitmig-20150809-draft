@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.161 2004/06/02 09:35:44 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.162 2004/06/02 19:14:19 lv Exp $
+
+*glibc-2.3.3.20040602 (02 Jun 2004)
+
+  02 Jun 2004; Travis Tilley <lv@gentoo.org> +glibc-2.3.3.20040602.ebuild:
+  new cvs snapshot. this ebuild marks a move from using branch updates against
+  2.3.2 to using actual cvs snapshot tarballs. it also marks a move in the
+  versioning scheme for glibc... since upstream has decided to let distributions
+  choose what they want to release instead of making releases themselves, the
+  pre has been dropped from the version.
 
   02 Jun 2004; Joshua Kinard <kumba@gentoo.org>
   glibc-2.3.3_pre20040529.ebuild:
