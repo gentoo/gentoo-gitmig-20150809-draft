@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ppc-sources-crypto-2.4.20.ebuild,v 1.3 2003/03/10 17:43:32 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-crypto/ppc-sources-crypto-2.4.20.ebuild,v 1.4 2003/03/11 21:11:48 seemant Exp $
 
 IUSE="build crypt"
 
@@ -34,7 +34,7 @@ if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND=">=sys-devel/binutils-2.11.90.0.31"
-	RDEPEND=">=sys-libs/ncurses-5.2 sys-devel/perl
+	RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl
         	 >=sys-apps/modutils-2.4.2 sys-devel/make"
 fi
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.0.ebuild,v 1.9 2003/03/01 22:10:36 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.0.ebuild,v 1.10 2003/03/11 21:11:47 seemant Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -102,7 +102,7 @@ if [ "${PN}" = "libperl" ]
 then
 	# If we are installing a new version of libperl, we *have* to update perl as
 	# well, else all things linking to libperl.so will break at *build* time ..
-	PDEPEND=">=sys-devel/perl-${PV}"
+	PDEPEND=">=dev-lang/perl-${PV}"
 else
 	PDEPEND=">=dev-perl/Safe-2.09"
 fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.14.ebuild,v 1.4 2003/03/01 22:19:43 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.14.ebuild,v 1.5 2003/03/11 21:11:47 seemant Exp $
 
 IUSE="nls bootstrap static build"
 
@@ -25,11 +25,11 @@ KEYWORDS="~x86 ~ppc ~alpha  ~sparc"
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.21
 	nls? ( sys-devel/gettext )
-	|| ( sys-devel/perl 
-	     ( !build?     ( sys-devel/perl ) )
-	     ( !bootstrap? ( sys-devel/perl ) )
+	|| ( dev-lang/perl 
+	     ( !build?     ( dev-lang/perl ) )
+	     ( !bootstrap? ( dev-lang/perl ) )
 	    )"
-# This is a hairy one.  Basically depend on sys-devel/perl
+# This is a hairy one.  Basically depend on dev-lang/perl
 # if "build" or "bootstrap" not in USE.
 
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.5.64.ebuild,v 1.1 2003/03/05 16:03:08 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.5.64.ebuild,v 1.2 2003/03/11 21:11:48 seemant Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 OKV=${PV}
@@ -25,7 +25,7 @@ if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND=">=sys-devel/binutils-2.11.90.0.31"
-	RDEPEND=">=sys-libs/ncurses-5.2 sys-devel/perl
+	RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl
 		 sys-devel/make"
 fi
 

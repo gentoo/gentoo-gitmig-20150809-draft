@@ -29,7 +29,7 @@ then
 	DEPEND="!build? ( >=sys-devel/binutils-2.11.90.0.31 )"
 	RDEPEND="${RDEPEND}
 		 !build? ( >=sys-libs/ncurses-5.2
-			   sys-devel/perl
+			   dev-lang/perl
 			   >=sys-apps/modutils-2.4.2
 			   sys-devel/make )"
 fi

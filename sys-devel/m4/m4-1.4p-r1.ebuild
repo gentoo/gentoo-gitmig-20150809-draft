@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4p-r1.ebuild,v 1.5 2003/02/24 10:11:26 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4p-r1.ebuild,v 1.6 2003/03/11 21:11:47 seemant Exp $
 
 inherit gnuconfig
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa arm"
 
 DEPEND="virtual/glibc
-	sys-devel/perl
+	dev-lang/perl
 	nls? ( sys-devel/gettext )
 	>=sys-devel/libtool-1.3.5-r2"
 

@@ -49,7 +49,7 @@ HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha arm"
 
-DEPEND="sys-devel/perl
+DEPEND="dev-lang/perl
 	>=sys-devel/autoconf-2.53-r1"
 
 SLOT="1.5"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.19-r1.ebuild,v 1.9 2003/02/13 16:46:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.19-r1.ebuild,v 1.10 2003/03/11 21:11:48 seemant Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 IUSE="build"
@@ -35,7 +35,7 @@ then
 			  sys-apps/xfsprogs )"
 	RDEPEND="${DEPEND}
 		 !build? ( >=sys-libs/ncurses-5.2
-			   sys-devel/perl
+			   dev-lang/perl
 			   >=sys-apps/modutils-2.4.2
 			   sys-devel/make )"
 fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.53a.ebuild,v 1.12 2003/02/19 21:46:47 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.53a.ebuild,v 1.13 2003/03/11 21:11:47 seemant Exp $
 
 OLD_PV=2.13
 OLD_P=${PN}-${OLD_PV}
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha mips arm"
 
 DEPEND=">=sys-devel/m4-1.4p
-	sys-devel/perl"
+	dev-lang/perl"
 
 SLOT="2.5"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.16-r3.ebuild,v 1.9 2003/03/11 11:31:40 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.16-r3.ebuild,v 1.10 2003/03/11 21:11:48 seemant Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -52,7 +52,7 @@ if [ $PN = "linux-sources" ] && [ -z "`use build`" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco.
 	#binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
-	DEPEND=">=sys-devel/binutils-2.11.92.0.12.3 sys-apps/console-tools >=sys-apps/modutils-2.4.2 sys-devel/perl"
+	DEPEND=">=sys-devel/binutils-2.11.92.0.12.3 sys-apps/console-tools >=sys-apps/modutils-2.4.2 dev-lang/perl"
 	RDEPEND=">=sys-libs/ncurses-5.2"
 fi
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.54.ebuild,v 1.11 2003/02/19 21:46:47 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.54.ebuild,v 1.12 2003/03/11 21:11:47 seemant Exp $
 
 IUSE=""
 
@@ -21,7 +21,7 @@ KEYWORDS="x86 ppc sparc alpha hppa mips arm"
 
 DEPEND=">=sys-apps/texinfo-4.3
 	>=sys-devel/m4-1.4p
-	sys-devel/perl"
+	dev-lang/perl"
 
 
 src_unpack() {
