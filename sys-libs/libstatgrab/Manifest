@@ -1,8 +1,16 @@
-MD5 0a43dcbce081ac6a4373c2c04f584cfb ChangeLog 1458
-MD5 8e370e22d00550ab5c4af785a84c88cb libstatgrab-0.10.ebuild 1120
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4b28b654b8c31404e1bf44603e4767a2 ChangeLog 1675
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 a2f824d765184318a9733a598f0a113f libstatgrab-0.10.2.ebuild 965
-MD5 22dfadb4ca673f2dcd41e0f784e5345c libstatgrab-0.10.3.ebuild 966
-MD5 de876db041af220fa9dbec5f31ee01e8 files/digest-libstatgrab-0.10 68
-MD5 54a05eef77356a7ada5ebec1842f2c0a files/digest-libstatgrab-0.10.2 70
+MD5 97577bc5e6b9fec29b7c633b7e661052 libstatgrab-0.10.3.ebuild 967
+MD5 819855219663d48b16ab3cfd8b09ac02 libstatgrab-0.11.ebuild 967
+MD5 cd6c9ca0e32d060a34829d66c2a83a2a files/digest-libstatgrab-0.11 68
 MD5 ecd8e09b4add7c415c7136be9085c1a7 files/digest-libstatgrab-0.10.3 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBtbZgmdTrptrqvGERAplTAJ9HVXFKRaH+eISG8dUuMElud4ftegCfVDYM
+84QMRbmu/5IOn8+tfVfENOU=
+=rP3D
+-----END PGP SIGNATURE-----
