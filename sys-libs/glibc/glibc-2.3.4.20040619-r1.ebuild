@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.10 2004/08/17 16:44:29 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r1.ebuild,v 1.11 2004/08/27 17:03:35 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -274,27 +274,28 @@ setup_locales() {
 
 
 pkg_setup() {
+	# genone this block of code breaks things. 
 	# Check if we are going to downgrade, we don't like that
-	local old_version
+	#local old_version
 
-	old_version="`best_version glibc`"
-	old_version="${old_version/sys-libs\/glibc-/}"
-
-	if [ "$old_version" ]; then
-		if [ `python -c "import portage; print int(portage.vercmp(\"${PV}\",\"$old_version\"))"` -lt 0 ]; then
-			if [ "${FORCE_DOWNGRADE}" ]; then
-				ewarn "downgrading glibc, still not recommended, but we'll do as you wish"
-			else
-				eerror "Downgrading glibc is not supported and we strongly recommend that"
-				eerror "you don't do it as it WILL break all applications compiled against"
-				eerror "the new version (most likely including python and portage)."
-				eerror "If you are REALLY sure that you want to do it set "
-				eerror "     FORCE_DOWNGRADE=1"
-				eerror "when you try it again."
-				die "glibc downgrade"
-			fi
-		fi
-	fi
+	#old_version="`best_version glibc`"
+	#old_version="${old_version/sys-libs\/glibc-/}"
+	# 
+	#if [ "$old_version" ]; then
+	#	if [ `python -c "import portage; print int(portage.vercmp(\"${PV}\",\"$old_version\"))"` -lt 0 ]; then
+	#		if [ "${FORCE_DOWNGRADE}" ]; then
+	#			ewarn "downgrading glibc, still not recommended, but we'll do as you wish"
+	#		else
+	#			eerror "Downgrading glibc is not supported and we strongly recommend that"
+	#			eerror "you don't do it as it WILL break all applications compiled against"
+	#			eerror "the new version (most likely including python and portage)."
+	#			eerror "If you are REALLY sure that you want to do it set "
+	#			eerror "     FORCE_DOWNGRADE=1"
+	#			eerror "when you try it again."
+	#			die "glibc downgrade"
+	#		fi
+	#	fi
+	#fi
 
 	# We need gcc 3.2 or later ...
 	if [ "`gcc-major-version`" -ne "3" -o "`gcc-minor-version`" -lt "2" ]; then
@@ -452,30 +453,6 @@ do_pax_patches() {
 
 
 do_hardened_fixes() {
-	# disable binutils -as-needed
-	sed -e 's/^have-as-needed.*/have-as-needed = no/' -i ${S}/config.make.in
-
-	# disable relro usage for ld.so
-	# mandatory, if binutils supports relro and the kernel is pax/grsecurity enabled
-	# solves almost all segfaults building the locale files on grsecurity enabled kernels and
-	# Inconsistency detected by ld.so: dl-fini.c: 69: Assertion `i == _rtld_local dl_nloaded' failed!
-	# the real tested conditions, where this definitely has to be applied are for now:
-	# use build || use bootstrap || use hardened || <pax/grsec kernel>
-	sed -e 's/^LDFLAGS-rtld += $(relro.*/LDFLAGS-rtld += -Wl,-z,norelro/' -i ${S}/Makeconfig
-
-	# disables building nscd as pie ; # Why do we have to disable it at all?
-	has_hardened || sed -e 's/^have-fpie.*/have-fpie = no/' -i ${S}/config.make.in
-
-	# People really don't like this. -solar
-	# disable completely relro usage (also for ld.so)
-	#has_hardened || sed -e 's/^have-z-relro.*/have-z-relro = no/' -i ${S}/config.make.in
-	#has_hardened || sed -e 's/HAVE_Z_RELRO/USE_Z_RELRO/' -i ${S}/config.h.in
-
-	# Sanity check the forward and backward chunk pointers in the
-	# unlink() macro used by Doug Lea's implementation of malloc(3).
-	# NOTE: This is rolled into security hotfix glibc-sec-hotfix-20040804.patch
-	#epatch ${FILESDIR}/2.3.3/glibc-2.3.3-owl-malloc-unlink-sanity-check.diff
-
 	# this patch is needed to compile nptl with a hardened gcc
 	has_hardened && want_nptl && \
 		epatch ${FILESDIR}/2.3.4/glibc-2.3.4-hardened-sysdep-shared.patch
@@ -540,6 +517,8 @@ src_unpack() {
 	# PaX-related Patches
 	do_pax_patches
 
+	# disable binutils -as-needed. <-- this has nothing todo with hardened.
+	sed -e 's/^have-as-needed.*/have-as-needed = no/' -i ${S}/config.make.in
 
 	# hardened toolchain/relro/nptl/security/etc fixes
 	do_hardened_fixes
@@ -558,6 +537,8 @@ src_unpack() {
 	use sparc	&& do_arch_sparc_patches
 	use x86		&& do_arch_x86_patches
 
+	# RH bug #227
+	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-ld.so-brk-fix.patch
 
 	# Remaining patches
 	cd ${S}

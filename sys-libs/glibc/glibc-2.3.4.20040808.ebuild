@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.12 2004/08/26 12:27:00 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.13 2004/08/27 17:03:35 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -421,20 +421,6 @@ do_pax_patches() {
 
 
 do_hardened_fixes() {
-	# disable binutils -as-needed
-	sed -e 's/^have-as-needed.*/have-as-needed = no/' -i ${S}/config.make.in
-
-	# disable relro usage for ld.so
-	# mandatory, if binutils supports relro and the kernel is pax/grsecurity enabled
-	# solves almost all segfaults building the locale files on grsecurity enabled kernels and
-	# Inconsistency detected by ld.so: dl-fini.c: 69: Assertion `i == _rtld_local dl_nloaded' failed!
-	# the real tested conditions, where this definitely has to be applied are for now:
-	# use build || use bootstrap || use hardened || <pax/grsec kernel>
-	sed -e 's/^LDFLAGS-rtld += $(relro.*/LDFLAGS-rtld += -Wl,-z,norelro/' -i ${S}/Makeconfig
-
-	# disables building nscd as pie ; # Why do we have to disable it at all?
-	has_hardened || sed -e 's/^have-fpie.*/have-fpie = no/' -i ${S}/config.make.in
-
 	# this patch is needed to compile nptl with a hardened gcc
 	has_hardened && want_nptl && \
 		epatch ${FILESDIR}/2.3.4/glibc-2.3.4-hardened-sysdep-shared.patch
@@ -492,6 +478,8 @@ src_unpack() {
 	# PaX-related Patches
 	do_pax_patches
 
+	# disable binutils -as-needed
+	sed -e 's/^have-as-needed.*/have-as-needed = no/' -i ${S}/config.make.in
 
 	# hardened toolchain/relro/nptl/security/etc fixes
 	do_hardened_fixes

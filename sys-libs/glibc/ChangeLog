@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.244 2004/08/26 12:27:00 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.245 2004/08/27 17:03:35 lv Exp $
+
+  27 Aug 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.4.20040619-r1.ebuild,
+  glibc-2.3.4.20040808.ebuild:
+  removed broken downgrade check, removed unneeded hardened gcc fixes, added
+  glibc-2.3.4-ld.so-brk-fix.patch to glibc-2.3.4.20040619-r1
 
   26 Aug 2004; Tom Gall <tgall@gentoo.org> glibc-2.3.4.20040808.ebuild:
   stable on ppc64
