@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sulu/sulu-0.15.ebuild,v 1.5 2004/02/23 23:41:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sulu/sulu-0.15.ebuild,v 1.6 2004/04/01 08:26:05 eradicator Exp $
 
 DESCRIPTION="Samsung Uproar Linux Utility (sulu)"
 HOMEPAGE="http://www.cs.toronto.edu/~kal/sulu/index.html"
@@ -14,8 +14,6 @@ DEPEND=">=dev-libs/libusb-0.1.7
 		virtual/mpg123
 		=x11-libs/gtk+-1.2*
 		>=sys-apps/hotplug-20020826"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	make || die
