@@ -26,4 +26,4 @@ dev-libs/popt
 net-misc/wget
 net-misc/rsync
 app-editors/nano
-net-misc/net-tools
+sys-apps/net-tools
