@@ -1,4 +1,4 @@
-MD5 41adc84ac6cad0bee07580c916d9450f files/digest-tclcl-1.15 66
-MD5 7901e9d9f7219143048441b4491572fc ChangeLog 653
-MD5 4f159e81fbac27bcbee928c042b4d6a5 tclcl-1.15.ebuild 830
+MD5 734208904e79e0493c408bf1e5442030 tclcl-1.15.ebuild 827
+MD5 e5aa1a87f831c35af06c4fe3d4fb90a0 ChangeLog 650
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 41adc84ac6cad0bee07580c916d9450f files/digest-tclcl-1.15 66

@@ -1,4 +1,4 @@
-MD5 54e02e0ffa9e63eae6cff880c4cc01a5 tclpython-3.1.ebuild 826
+MD5 e8219fabb20d773dec712806b6eedecc tclpython-3.1.ebuild 819
+MD5 ab64b54e6a4251911e636c4df5ccb7d3 ChangeLog 320
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 b44b8510411b036aeda4324839822c07 ChangeLog 327
 MD5 5c569f146cf737cefa30e7f583b306a2 files/digest-tclpython-3.1 63

@@ -1,5 +1,5 @@
-MD5 efde1ed347811dfdcd2a38dddd466ebf ChangeLog 1920
-MD5 68f1f5397d2510e0a3be98e3d11c4231 blt-2.4z.ebuild 1106
+MD5 e3379acdde31d2a3908e03d91b739fda blt-2.4z.ebuild 1100
+MD5 e468aa7da0035ffaf64ef07ba3396010 ChangeLog 1914
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 aa8c1dfd524ccc5b50a03df01db5cde3 files/blt2.4z-install.diff 1057
 MD5 f7520f3503b4d2475a88f97378008989 files/digest-blt-2.4z 60
