@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002e-r4.ebuild,v 1.9 2005/01/03 16:06:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002e-r4.ebuild,v 1.10 2005/01/08 13:14:18 slarti Exp $
+
+inherit flag-o-matic
 
 MY_P=imap-${PV}
 S=${WORKDIR}/${MY_P}
