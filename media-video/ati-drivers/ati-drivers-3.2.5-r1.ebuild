@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5-r1.ebuild,v 1.1 2003/09/30 17:52:35 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5-r1.ebuild,v 1.2 2003/10/01 22:51:32 lu_zero Exp $
 
 IUSE="qt kde gnome"
 
 DESCRIPTION="Ati precompiled drivers for r350, r300, r250 and r200 chipsets"
 HOMEPAGE="http://www.ati.com"
-SRC_URI="http://www2.ati.com/drivers/firegl/fglrx-glc22-4.3.0-3.2.5.i586.rpm"
+SRC_URI="http://www2.ati.com/drivers/firegl/fglrx-glc22-4.3.0-${PV}.i586.rpm"
 SLOT="${KV}"
 LICENSE="ATI GPL-2 QPL-1.0"
 KEYWORDS="-* ~x86"
@@ -45,14 +45,14 @@ src_unpack() {
 	if [ "`echo ${KV}|grep 2.6`" ] ; then
 
 	cd ${WORKDIR}/lib/modules/fglrx/build_mod
-	einfo "creating Makefile for kernel 2.6"
-	patch -p1 < ${FILESDIR}/fglrx-2.6-makefile.patch
 	einfo "applying fglrx-2.6-amd-adv-spec-fix.patch"
 	patch -p1 < ${FILESDIR}/fglrx-2.6-amd-adv-spec-fix.patch
 	einfo "applying fglrx-2.6-vmalloc-vmaddr.patch"
 	patch -p1 < ${FILESDIR}/fglrx-2.6-vmalloc-vmaddr.patch
 	einfo "applying fglrx-2.6-iminor.patch"
 	patch -p1 < ${FILESDIR}/fglrx-2.6-iminor.patch
+	einfo "applying fglrx-2.6-tsk_euid.patch"
+	patch < ${FILESDIR}/3.2.5-linux-2.6.0-test6-mm.patch 
 	fi
 }
 
@@ -64,18 +64,20 @@ pkg_setup(){
 src_compile() {
 	einfo "building the glx module"
 	cd ${WORKDIR}/lib/modules/fglrx/build_mod
-	GENTOO_ARCH="${ARCH}"
-	unset ARCH
+	if [ "`echo ${KV}|grep 2.6`" ] ; then
+		GENTOO_ARCH=${ARCH} unset ARCH
+	    addwrite "/usr/src/${FK}"
+	    cp 2.6.x/Makefile .
+		make -C /usr/src/linux SUBDIRS="`pwd`" modules || \
+	    ewarn "glx module not built"
+	    ARCH=${GENTOO_ARCH}
+	else
 	#that is the dirty way to avoid the id -u check
-	sed -e "s:`id -u`:0:" make.sh >make.sh.new
-	sed -e "s:`uname -r`:${KV}:" make.sh.new >make.sh
-	if [ "`echo ${KV}|grep '2\.6.*-mm'`" ] ; then
-		patch < ${FILESDIR}/3.2.5-linux-2.6.0-test6-mm.patch || die
-	fi
+	sed -e 's:`id -u`:0:' make.sh >make.sh.new
+	sed -e 's:`uname -r`:${KV}:' make.sh.new >make.sh
 	chmod +x make.sh
-	addwrite /usr/src/linux-${KV}/
 	./make.sh || ewarn "glx module not built"
-	ARCH="${GENTOO_ARCH}"
+	fi
 
 	einfo "building the fgl_glxgears sample"
 	cd ${WORKDIR}/fglrxgears
