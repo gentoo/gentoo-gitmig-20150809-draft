@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skktools/skktools-1.1.ebuild,v 1.1 2004/05/01 11:07:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skktools/skktools-1.1.ebuild,v 1.2 2004/05/02 11:00:06 dholm Exp $
 
 inherit elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="http://openlab.ring.gr.jp/skk/tools/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="ruby emacs"
 
