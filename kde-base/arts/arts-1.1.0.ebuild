@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.0.ebuild,v 1.14 2003/02/15 20:56:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.0.ebuild,v 1.15 2003/02/28 11:26:22 hannes Exp $
 inherit kde-base flag-o-matic
 
 # this is the arts 1.1 from kde 3.1, as opposed to arts 1.1.0 from kde 3.1 beta2 and friends
@@ -19,6 +19,9 @@ if [ "${COMPILER}" == "gcc3" ]; then
 	# these.. Even starting a compile shuts down the arts server
 	filter-flags "-fomit-frame-pointer -fstrength-reduce"
 fi
+
+#fix bug 13453
+filter-flags "-foptimize-sibling-calls"
 
 SLOT="3.1"
 LICENSE="GPL-2 LGPL-2"
