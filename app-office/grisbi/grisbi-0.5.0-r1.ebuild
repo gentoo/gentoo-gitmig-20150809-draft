@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.0-r1.ebuild,v 1.2 2004/07/14 21:35:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.0-r1.ebuild,v 1.3 2004/07/14 21:48:02 mr_bones_ Exp $
 
 IUSE="print"
 
@@ -21,22 +21,22 @@ RDEPEND="${DEPEND}
 	dev-tex/latex-unicode )"
 
 pkg_setup() {
-    if ! use print; then
+	if ! use print; then
 		echo
-        einfo
-        einfo "NOTE: The USE variable 'print' is not in your USE flags."
-        einfo "For printing support in grisbi, you will need to restart"
+		einfo
+		einfo "NOTE: The USE variable 'print' is not in your USE flags."
+		einfo "For printing support in grisbi, you will need to restart"
 		einfo "the build with USE=\"print\""
-        einfo
-        echo
+		einfo
+		echo
 		for TICKER in 1 2 3 4 5; do
 			echo -ne "\a" ; sleep 1
 		done
-    fi
+	fi
 }
 
 src_unpack() {
-	
+
 	unpack ${A}
 
 	# Apply location patchs
