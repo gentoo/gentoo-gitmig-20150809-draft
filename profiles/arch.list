@@ -3,6 +3,7 @@ amd64
 arm
 hppa
 ia64
+macos
 mips
 ppc
 ppc64
