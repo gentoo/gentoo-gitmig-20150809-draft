@@ -1,6 +1,9 @@
 # ChangeLog for app-text/openjade
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.28 2003/11/24 21:31:42 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/ChangeLog,v 1.29 2004/03/04 17:55:39 kumba Exp $
+
+  04 Mar 2004; Joshua Kinard <kumba@gentoo.org> openjade-1.3.2-r1.ebuild:
+  Added ~mips to KEYWORDS to satisfy repoman deps.
 
   24 Nov 2003; Jason Wever <weeve@gentoo.org> openjade-1.3.2-r1.ebuild:
   Marked stable on sparc, fixes bug #33913.
