@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8198f707bece8b3aee577986f4c8d641 gezel-1.6b.ebuild 1048
+MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
+MD5 7def0f6c647e670f92c917050596d361 ChangeLog 421
+MD5 9223291dfdb18f6700a27062647a3085 files/digest-gezel-1.6b 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCHGTjmdTrptrqvGERAqDBAJsHzno7jau1L0KXfG7GKkT6kqPN7gCePbHu
++QvxO1UxXQKAj4tF3pDLyC4=
+=WGon
+-----END PGP SIGNATURE-----

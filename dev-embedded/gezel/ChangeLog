@@ -1,0 +1,11 @@
+# ChangeLog for dev-embedded/gezel
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gezel/ChangeLog,v 1.1 2005/02/23 11:11:24 dragonheart Exp $
+
+*gezel-1.6b (23 Feb 2005)
+
+  23 Feb 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +gezel-1.6b.ebuild:
+  Initial import as per bug #82328 thanks to Thilo Bangert
+  <fizzelpark-lists@gmx.net>.
+
