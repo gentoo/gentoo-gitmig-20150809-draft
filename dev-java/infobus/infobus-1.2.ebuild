@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus/infobus-1.2.ebuild,v 1.1 2003/05/15 05:17:28 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus/infobus-1.2.ebuild,v 1.2 2003/05/24 06:43:07 absinthe Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ DESCRIPTION="InfoBus enables dynamic exchange of data between JavaBeans componen
 SRC_URI=""
 HOMEPAGE="http://java.sun.com/products/javabeans/infobus/index.html"
 KEYWORDS="x86 ppc sparc alpha mips hppa arm"
-LICENSE="sun-bcla"
+LICENSE="sun-bcla-general"
 SLOT="0"
 DEPEND=""
 RDEPEND=">=virtual/jdk-1.2"
