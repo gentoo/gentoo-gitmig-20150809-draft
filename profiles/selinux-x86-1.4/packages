@@ -26,30 +26,32 @@
 # system profiles.
 
 # Which to use?  Use the profile-specific stuff to "lock down" specific
-# versions of ebuilds.  Gentoo Linux 1.0_rc6 uses certain known-compatible
+# versions of ebuilds.  Gentoo Linux uses certain known-compatible
 # versions of binutils, gcc and glibc, so we lock them down here.  This
 # prevents the user from shooting himself/herself in the foot by installing a
 # wacky version.
 
-!dev-lang/gpc
 *>=sys-apps/baselayout-1.7.9-r1
 *>=sys-apps/portage-2.0.25
 *>=sys-devel/binutils-2.13.90.0.4
 *>=sys-devel/gcc-3.2
 *<sys-libs/glibc-2.3.2
-=sys-kernel/linux-headers-2.4.19
->=sys-apps/sysklogd-1.4.1
 *dev-lang/python
 
+!dev-lang/gpc
+=sys-kernel/linux-headers-2.4.19
+>=sys-apps/sysklogd-1.4.1
+>=x11-base/xfree-4.1.0-r12
+
 ##############################################################################
-# SELinux patched versions, need to make sure that the selinux patches
-# stay in these packages, otherwise will need to lock down the ver/rev
+# SELinux stuff -- Need to make sure that the selinux patches stay in these
+# packages, otherwise we'll need to lock down the ver/rev
 *sys-apps/selinux-small
 *sys-apps/selinux-base-policy
 *>=sys-apps/findutils-4.1.7-r3
 *>=sys-apps/procps-3.1.8
 *>=sys-apps/shadow-4.0.3-r3
-*sys-apps/util-linux
+*>=sys-apps/util-linux-2.11z-r1
 *>=sys-apps/tar-1.13.25-r3
 *>=net-misc/openssh-3.5_p1-r1
 
@@ -65,20 +67,21 @@
 >=sys-apps/vcron-3.0.1-r1
 ##############################################################################
 
->=x11-base/xfree-4.1.0-r12
+*app-shells/bash
 # sash - static shell for system recovery
 *app-shells/sash
 *dev-lang/perl
-*virtual/editor
+*net-firewall/iptables
 *net-ftp/ftp
 *net-misc/dhcpcd
+*net-misc/iputils
 *net-misc/rsync
 *net-misc/wget
-*app-shells/bash
 *sys-apps/bzip2
 *sys-apps/kbd
 *sys-apps/cpio
 *sys-apps/debianutils
+*sys-apps/devfsd
 *sys-apps/diffutils
 *sys-apps/e2fsprogs
 *sys-apps/ed
@@ -87,18 +90,12 @@
 *sys-apps/gawk
 *sys-apps/grep
 *sys-apps/groff
-*virtual/bootloader
 *sys-apps/gzip
 *sys-apps/hdparm
 *sys-apps/less
 *sys-apps/man
 *sys-apps/man-pages
-*sys-apps/modutils
 *sys-apps/net-tools
-
-#This thing sucks, replacing with iputils
-#*sys-apps/netkit-base
-
 *sys-apps/psmisc
 *sys-apps/sed
 *sys-apps/setserial
@@ -125,4 +122,6 @@
 *sys-libs/readline  
 *sys-libs/slang
 *sys-libs/zlib
-*sys-apps/devfsd
+*virtual/bootloader
+*virtual/editor
+*virtual/modutils
