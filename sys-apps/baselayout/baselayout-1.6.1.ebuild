@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.1.ebuild,v 1.1 2001/08/29 04:58:29 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.1.ebuild,v 1.2 2001/08/31 03:55:14 drobbins Exp $
 
 SV=1.1.4
 S=${WORKDIR}/rc-scripts-${SV}
@@ -97,7 +97,9 @@ src_install()
 		#end supervise stuff
 		
 		keepdir /opt
-
+		keepdir /opt/gnome/man
+		keepdir /opt/gnome/share
+		dosym ../man /opt/gnome/share/man
 #		It makes sense to move these to the PAM package.
 #		dodir /etc/pam.d
 #		cd ${FILESDIR}/pam.d
