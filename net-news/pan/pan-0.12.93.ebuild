@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.12.93.ebuild,v 1.1 2002/08/07 18:31:25 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.12.93.ebuild,v 1.2 2002/08/17 15:06:15 gerk Exp $
 
 inherit debug
 
@@ -9,7 +9,7 @@ SRC_URI="http://pan.rebelbase.com/download/releases/${PV}/SOURCE/${P}.tar.bz2"
 HOMEPAGE="http://pan.rebelbase.com"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 SLOT="0"
 
 DEPEND=">=dev-libs/glib-2.0.4
