@@ -4,7 +4,8 @@
   <herd>java</herd>
   <maintainer>
     <email>strider@gentoo.org</email>
-    <description>Primary Maintainer</description>
+    <name>Adrian Almenar</name>
+    <description>Maintainer</description>
   </maintainer>
-  <longdescription/>
+  <longdescription>Sun Java Development Kit Package. AKA.J2SE</longdescription>
 </pkgmetadata>

@@ -1,38 +1,40 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.ebuild,v 1.1 2003/07/29 06:01:42 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.ebuild,v 1.2 2003/07/30 05:31:03 strider Exp $
 
-IUSE="doc gnome kde mozilla"
+# Since This Ebuild Has FETCH restrictions:
+# You need to download this file from 
+# http://java.sun.com/j2se/1.4.2/download.html 
+# and copy it on your distfiles directory and emerge it again
 
 inherit java nsplugins
 
-At="j2sdk-1_4_2-linux-i586.bin"
+A="j2sdk-1_4_2-linux-i586.bin"
 S="${WORKDIR}/j2sdk1.4.2"
 DESCRIPTION="Sun's J2SE Development Kit, version 1.4.2"
 HOMEPAGE="http://java.sun.com/j2se/1.4.2/download.html"
 SRC_URI=""
-SLOT="1.4"
-LICENSE="sun-bcla-java-vm"
-KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa -arm"
-
 DEPEND=">=dev-java/java-config-0.2.5
 	sys-apps/sed
 	doc? ( =dev-java/java-sdk-docs-1.4.2* )"
-
 RDEPEND="sys-libs/lib-compat"
-
 PROVIDE="virtual/jre-1.4.2
 	virtual/jdk-1.4.2
 	virtual/java-scheme-2"
+LICENSE="sun-bcla-java-vm"
+SLOT="1.4"
+KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa -arm"
+IUSE="doc gnome kde mozilla"
+RESTRICT="fetch"
 
 PACKED_JARS="lib/tools.jar jre/lib/rt.jar jre/lib/jsse.jar jre/lib/charsets.jar
 jre/lib/ext/localedata.jar jre/lib/plugin.jar jre/javaws/javaws.jar"
 
 src_unpack() {
-	if [ ! -f ${DISTDIR}/${At} ] ; then
-		die "Please download ${At} from ${HOMEPAGE} (select the \"Linux self-extracting file\" package format of the SDK) and move it to ${DISTDIR}"
+	if [ ! -f ${DISTDIR}/${A} ]; then
+		die "Please download ${A} from ${HOMEPAGE} (select the \"Linux self-extracting file\" package format of the SDK) and move it to ${DISTDIR}"
 	fi
-	tail +507 ${DISTDIR}/${At} > install.sfx
+	tail +507 ${DISTDIR}/${A} > install.sfx
 	chmod +x install.sfx
 	./install.sfx || die
 	rm install.sfx

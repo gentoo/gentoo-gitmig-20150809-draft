@@ -1,6 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.08.ebuild,v 1.1 2003/05/24 06:19:45 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.08.ebuild,v 1.2 2003/07/30 05:31:03 strider Exp $
+
+# Since This Ebuild Has FETCH restrictions:
+# You need to download this file from 
+# http://java.sun.com/j2se/1.3.1/download.html 
+# and copy it on your distfiles directory and emerge it again
 
 IUSE="doc"
 
@@ -14,13 +19,14 @@ HOMEPAGE="http://java.sun.com/j2se/1.3/download.html"
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.7
 	doc? ( =dev-java/java-sdk-docs-1.3.1* )"
-RDEPEND="$DEPEND"
+RDEPEND="sys-libs/lib-compat"
 PROVIDE="virtual/jre-1.3.1
 	virtual/jdk-1.3.1
 	virtual/java-scheme-2"
 LICENSE="sun-bcla-java-vm"
 SLOT="1.3"
 KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa -arm"
+RESTRICT="fetch"
 
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then
