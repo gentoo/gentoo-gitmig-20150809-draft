@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/imaze/imaze-1.4.ebuild,v 1.2 2004/03/21 13:45:20 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/imaze/imaze-1.4.ebuild,v 1.3 2004/05/27 03:07:19 mr_bones_ Exp $
 
 inherit games
 
-S="${WORKDIR}/${P}/source"
 DESCRIPTION="Multi player, real time, 3D, labyrinth, run & shoot game"
 HOMEPAGE="http://home.tu-clausthal.de/student/iMaze/"
 SRC_URI="http://home.tu-clausthal.de/student/iMaze/files/${P}.tar.gz"
@@ -12,7 +11,7 @@ SRC_URI="http://home.tu-clausthal.de/student/iMaze/files/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
-IUSE="X Xaw3d joystick"
+IUSE="Xaw3d joystick"
 
 RDEPEND="virtual/x11
 	virtual/glibc
@@ -22,6 +21,8 @@ RDEPEND="virtual/x11
 	)"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
+
+S="${WORKDIR}/${P}/source"
 
 src_unpack() {
 	unpack ${A}
