@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/abcde
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.9 2003/12/01 19:38:41 rphillips Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.10 2004/03/22 16:57:40 eradicator Exp $
+
+*abcde-2.1.15 (22 Mar 2004)
+
+  22 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> abcde-2.1.15.ebuild,
+  abcde-2.1.4.ebuild, abcde-2.1.6.ebuild, abcde-2.1.9.ebuild,
+  files/abcde-1.9.9-r1-gentoo.diff, files/abcde-2.1.4-gentoo.diff,
+  files/abcde-2.1.6-gentoo.diff:
+  Version bump... bump to stable x86... removing old ebuilds... Closes bug
+  #45345.
 
 *abcde-2.1.9 (01 Dec 2003)
 
