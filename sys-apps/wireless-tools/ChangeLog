@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/wireless-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/wireless-tools/ChangeLog,v 1.4 2002/07/14 19:20:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/wireless-tools/ChangeLog,v 1.5 2002/10/15 12:55:34 hanno Exp $
+
+*wireless-tools-25 ( 15 Oct 2002 )
+
+  15 Oct 2002; Hanno Boeck <hanno@gentoo.org> wireless-tools-25.ebuild :
+  New version. Changed ebuild to read the version number from the filename.
 
 *wireless-tools-24 ( 28 May 2002 )
 
