@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-pear/horde-pear-1.3-r3.ebuild,v 1.4 2005/03/12 12:34:57 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-pear/horde-pear-1.3-r3.ebuild,v 1.5 2005/03/20 06:52:02 sebastian Exp $
 
 DESCRIPTION="Meta package for the PEAR packages required by Horde."
 HOMEPAGE="http://pear.php.net/"
@@ -14,34 +14,9 @@ IUSE=""
 
 S=${WORKDIR}
 
-RDEPEND="dev-php/PEAR-Archive_Tar
-	dev-php/PEAR-Auth_SASL
-	dev-php/PEAR-Cache
-	dev-php/PEAR-Console_Getopt
-	dev-php/PEAR-Crypt_RC4
-	dev-php/PEAR-Date
-	dev-php/PEAR-DB
-	dev-php/PEAR-File
-	dev-php/PEAR-File_Find
-	dev-php/PEAR-HTML_Common
-	dev-php/PEAR-HTTP
-	dev-php/PEAR-HTTP_Request
-	dev-php/PEAR-HTTP_WebDAV_Server
-	dev-php/PEAR-Log
-	dev-php/PEAR-Mail
+RDEPEND="dev-php/PEAR-Log
 	dev-php/PEAR-Mail_Mime
-	dev-php/PEAR-Net_DIME
-	dev-php/PEAR-Net_DNS
-	dev-php/PEAR-Net_Sieve
-	dev-php/PEAR-Net_SMTP
-	dev-php/PEAR-Net_Socket
-	dev-php/PEAR-Net_URL
-	dev-php/PEAR-PEAR
-	dev-php/PEAR-Services_Weather
-	dev-php/PEAR-SOAP
-	dev-php/PEAR-Text_Wiki
-	dev-php/PEAR-Tree
-	dev-php/PEAR-XML_Parser
-	dev-php/PEAR-XML_RPC
-	dev-php/PEAR-XML_Serializer
-	dev-php/PEAR-XML_Util"
+	>=dev-php/PEAR-DB-1.6.0
+	dev-php/PEAR-File
+	dev-php/PEAR-Date
+	>=dev-php/PEAR-Services_Weather-1.3.1"
