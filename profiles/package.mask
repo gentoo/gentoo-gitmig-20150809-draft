@@ -1185,3 +1185,8 @@ app-cdr/eroaster
 # stroke@gentoo.org 19 Aug 2002
 # Anjuta 1.0-beta1 (preview). masked for testing
 >=dev-util/anjuta-0.9.99
+
+# jnelson@gentoo.org 2 Sep 2002
+# python 2.2.1-r3, filters -malign-double via flag-o-matic
+=dev-lang/python-2.2.1-r3
+
