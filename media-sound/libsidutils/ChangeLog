@@ -1,9 +1,0 @@
-# ChangeLog for media-sound/libsidutils
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/libsidutils/ChangeLog,v 1.4 2003/02/12 07:30:06 vapier Exp $
-
-*libsidutils-1.0.2.20021111 (11 Nov 2002)
-
-  11 Nov 2002; Hanno Boeck <hanno@gentoo.org> libsidutils-1.0.2.20021111.ebuild :
-  Added CVS-version of libsidutils, needed by sidplay.
-  Current release-version is unuseable, it doesn't compile in GCC 3.x.
