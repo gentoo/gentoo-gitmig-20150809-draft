@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.16.ebuild,v 1.1 2004/07/09 02:18:51 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.16.ebuild,v 1.2 2004/07/26 23:40:34 vapier Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
 
-inherit eutils gcc flag-o-matic
+inherit eutils gcc flag-o-matic gnuconfig
 
 PATCHLEVEL="2.11.1p"
 
@@ -42,6 +42,12 @@ RDEPEND="
 	)
 	) )
 	selinux? ( sec-policy/selinux-distcc )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	gnuconfig_update
+}
 
 src_compile() {
 	local myconf="--with-included-popt "

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.108 2004/07/09 02:18:51 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.109 2004/07/26 23:40:34 vapier Exp $
+
+  26 Jul 2004; Mike Frysinger <vapier@gentoo.org> distcc-2.16.ebuild:
+  gnuconfig loving for us non-mainstream users.
 
 *distcc-2.16 (08 Jul 2004)
 

@@ -1,23 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 36a78b75cdd08d055cb7fa1404296ce8 ChangeLog 19794
+MD5 5e61b6a68fa72102aa258bd22b481441 ChangeLog 19915
+MD5 3850c660443ed40379f646ea33715ffa distcc-2.14.ebuild 4805
 MD5 e410d067ffa3099f48c975b64dc98ec8 distcc-2.12.1-r1.ebuild 4627
 MD5 26994a05c40e35fed4942021cceb6e98 distcc-2.13-r1.ebuild 4695
-MD5 3850c660443ed40379f646ea33715ffa distcc-2.14.ebuild 4805
-MD5 72972f4e011251a9cff817ffaab3f03d distcc-2.16.ebuild 4807
+MD5 d85b8d2eb584a2a1b9ce6c315b5bd339 distcc-2.16.ebuild 4877
 MD5 70619e7eb5fa4fd0aa4f3588579cd50d metadata.xml 443
-MD5 9ca407ce154707a1f27485523adf943c files/digest-distcc-2.12.1-r1 66
 MD5 47a8df000e00ce5f8bff08c9342bdae4 files/digest-distcc-2.14 64
-MD5 c462167d99c154e9f8b9f94022ed2a71 files/digest-distcc-2.16 64
+MD5 9ca407ce154707a1f27485523adf943c files/digest-distcc-2.12.1-r1 66
 MD5 6ab90bfeafe27c0d276eb8b6f1257560 files/digest-distcc-2.13-r1 64
+MD5 c462167d99c154e9f8b9f94022ed2a71 files/digest-distcc-2.16 64
 MD5 0c66fbdfd3c7ad0ae07bc17bbce9b5e1 files/2.11.1p/conf 551
 MD5 0f86be5afa04088831e049957f87582a files/2.11.1p/init 642
 MD5 d4ca35b391ec7d05f6bc040e333370d2 files/2.11.1p/distcc-config 4877
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFA+gHcmdTrptrqvGERAnXoAJ4uC12yrP5vMs8ubu7uAlOsYbBAiACfXwZ9
-eo4safRBnbxu+CdpZ8TXpWs=
-=OykP
+iD8DBQFBBZZ/HTu7gpaalycRAqyXAJ46JKjeaNxLG6mzXUH3p1LBq8GczgCgryUv
+sJGhLqD4FMcy7xk8FTd6wqY=
+=ouyt
 -----END PGP SIGNATURE-----
