@@ -1,6 +1,9 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.39 2004/02/29 18:10:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.40 2004/03/09 23:13:20 agriffis Exp $
+
+  09 Mar 2004; <agriffis@gentoo.org> scrollkeeper-0.3.14.ebuild:
+  stable on alpha and ia64
 
   27 Feb 2004; Mike Gardiner <obz@gentoo.org> metadata.xml:
   Added metadata to text-markup, then gnome
