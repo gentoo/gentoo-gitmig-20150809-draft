@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmovtar/libmovtar-0.1.3-r1.ebuild,v 1.7 2003/02/13 12:49:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmovtar/libmovtar-0.1.3-r1.ebuild,v 1.8 2003/07/20 01:18:21 tester Exp $
 
 IUSE="mmx"
 
@@ -13,12 +13,12 @@ HOMEPAGE="http://mjpeg.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc amd64"
 
 DEPEND="=dev-libs/glib-1.2*
 	>=media-libs/jpeg-6b
 	>=media-libs/libsdl-1.2.2
-	mmx? ( media-libs/jpeg-mmx )"
+	x86? ( mmx? ( media-libs/jpeg-mmx ) )"
 
 src_unpack() {
 
