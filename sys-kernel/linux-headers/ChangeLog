@@ -1,9 +1,13 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.23 2003/10/01 09:16:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.24 2003/10/21 06:02:27 kumba Exp $
 
 
 *linux-headers-2.4.22 (21 Sep 2003)
+
+  21 Oct 2003; Joshua Kinard <kumba@gentoo.org> linux-headers-2.4.21.ebuild:
+  Added ~x86 to KEYWORDS
+  Removed +x mode that somehow got set on all ebuilds
 
   01 Oct 2003; Joshua Kinard <kumba@gentoo.org> linux-headers-2.4.21.ebuild,
   linux-headers-2.4.22.ebuild:
