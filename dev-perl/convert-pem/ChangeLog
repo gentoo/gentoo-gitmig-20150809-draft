@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/convert-pem
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/ChangeLog,v 1.2 2003/10/28 01:21:35 brad_mssw Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/ChangeLog,v 1.3 2004/02/26 05:20:04 kumba Exp $
+
+  25 Feb 2004; Joshua Kinard <kumba@gentoo.org> convert-pem-0.06.ebuild:
+  Added ~mips to KEYWORDS to satisfy repoman deps.
 
   27 Oct 2003; Brad House <brad_mssw@gentoo.org> convert-pem-0.06.ebuild:
   add ~amd64 flag
