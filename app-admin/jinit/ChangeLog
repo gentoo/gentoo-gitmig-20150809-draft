@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/jinit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/ChangeLog,v 1.7 2004/06/24 21:29:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/ChangeLog,v 1.8 2004/12/31 04:11:15 chriswhite Exp $
+
+*jinit-0.1.12 (31 Dec 2004)
+
+  31 Dec 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +jinit-0.1.12.ebuild:
+  Adding myself as placehold maintainer.  Bump to .12 while I was at it.
 
 *jinit-0.1.11 (24 May 2003)
 
