@@ -1,31 +1,29 @@
 #!/sbin/runscript
 
-EXEC=/usr/sbin/dictd
 EARGS="-s "
 DICTDCONF=/etc/dict/dictd.conf
+DLIBDIR=/usr/lib/dict 
 TMPCONF=/etc/dict/dictd.conf.$$
 
 prepconfig() {
 	if [ ! -e ${DICTDCONF} ]
 	then
 		eerror "dictd not started.  Config file not found."
-		exit 1
+		return 1
 	fi
 	# if no dictionaries, skip startup.
 
 	# The new way of doing this is to scan /usr/lib/dict and tweek the conf
-	DLIBDIR=/usr/lib/dict 
-
 	einfo "Scanning for dictionaries..."
 	if [ ! -d "${DLIBDIR}" ]; then
 		eerror "${DLIBDIR} doesn't exist, no dictionaries found."
-		exit 1
+		return 1
 	fi
 	pushd ${DLIBDIR} >/dev/null
 	INDEXFILES=`ls *.index`
 	if [ -z "$INDEXFILES" ]; then
 		eerror "No dictionaries installed."
-		exit 1
+		return 1
 	fi
 
 	cat $DICTDCONF | sed -e '/^#LASTLINE/,$d' > $TMPCONF
@@ -56,19 +54,18 @@ prepconfig() {
 }
 
 depend() {
-    need localmount
+	need localmount
 }
 
 start() {
-    ebegin "Starting ${SERVICE}"
-    prepconfig
-    start-stop-daemon --start --quiet --exec $EXEC -- $EARGS
-    eend $?
+	ebegin "Starting dictd"
+	prepconfig || return 1
+	start-stop-daemon --start --quiet --exec /usr/sbin/dictd -- $EARGS
+	eend $?
 }
 
 stop() {
-    ebegin "Stopping ${SERVICE}"
-    start-stop-daemon --stop --quiet --name ${SERVICE} --exec $EXEC
-    eend $?
+	ebegin "Stopping dictd"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/dictd
+	eend $?
 }
-
