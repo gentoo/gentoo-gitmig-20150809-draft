@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r2.ebuild,v 1.4 2004/06/27 22:19:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r2.ebuild,v 1.5 2004/10/16 20:17:18 vapier Exp $
 
 inherit ccc
 
@@ -17,29 +17,30 @@ SLOT="0"
 KEYWORDS="alpha x86"
 IUSE="doc"
 
-DEPEND="virtual/libc
-	sys-libs/libtermcap-compat
+RDEPEND="virtual/libc"
+DEPEND="${DEPEND}
 	>=sys-apps/sed-4"
-RDEPEND="virtual/libc
-	sys-libs/libtermcap-compat"
 PROVIDE="virtual/editor"
 
 S=${WORKDIR}
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	# Remove hardcoded compiler and CFLAGS
-	sed -i 's/CFLAGS = -O//' Makefile
+	sed -i \
+		-e 's/CFLAGS = -O//' \
+		-e 's:-ltermcap:-lncurses:' \
+		Makefile
 	replace-cc-hardcode
+}
 
+src_compile() {
 	emake || die "compilation failed"
-
-	echo
-	size te; ls -l te
-	echo
 }
 
 src_install() {
-	dobin te
+	dobin te || die
 	dodoc sample.tecorc sample.tecorc2 READ.ME MANIFEST
 	use doc && dodoc tecolore.txt tech.txt teco.doc tecoprog.doc
 	doman te.1
