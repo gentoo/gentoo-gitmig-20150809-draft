@@ -1,0 +1,49 @@
+--- rkhunter.orig	2004-12-06 06:19:55.000000000 -0500
++++ rkhunter	2004-12-07 01:47:27.596729320 -0500
+@@ -146,6 +146,11 @@
+       --createlogfile | --createlog | --create-log | --create-logfile)
+ 	  DEBUG=1
+           DEBUGLOG=1
++	  if [[ "$2" != -* ]]
++	    then
++		shift
++		LOGFILE=$1
++	    fi
+ 	  ;;
+       --dbdir)
+           shift
+@@ -225,12 +230,21 @@
+     # Through the drain...
+     DEBUGFILE="/dev/null"
+   else
+-    if [ -d "/var/log" ]
++    if [ -n "${LOGFILE}" ]
+       then
+-        DEBUGFILE="/var/log/rkhunter.log"
++	if ( [[ "${LOGFILE}" == */* ]] && [ -d "${LOGFILE%/*}" ] ) || [ -w ./ ]
++	  then
++	    DEBUGFILE="${LOGFILE}"
++	fi
++	
++      elif [ -d "/var/log" ]
++        then
++	  DEBUGFILE="/var/log/rkhunter.log"
++	  [ -n "${LOGFILE}" ] && echo \
++	    "${LOGFILE%/*} doesn't exist... trying ${DEBUGFILE}"
+       else
+         echo "/var/log doesn't exists... no log file created"
+-	DEBUGFILE="/dev/null"
++	  DEBUGFILE="/dev/null"
+     fi
+     # Clear debug file
+     if [ -f ${DEBUGFILE} ]; then
+@@ -4860,7 +4874,8 @@
+     echo $ECHOOPT ""
+     echo $ECHOOPT "Valid parameters:"
+     echo $ECHOOPT "--checkall (-c)           : Check system"
+-    echo $ECHOOPT "--createlogfile*          : Create logfile"
++    echo $ECHOOPT "--createlogfile <file>*   : Create logfile (file is optional, defaults to"
++    echo $ECHOOPT "                          : /var/log/rkhunter.log)"
+     echo $ECHOOPT "--cronjob                 : Run as cronjob (removes colored layout)"
+     echo $ECHOOPT "--display-logfile         : Show logfile at end of the output"    
+     echo $ECHOOPT "--help (-h)               : Show this help"

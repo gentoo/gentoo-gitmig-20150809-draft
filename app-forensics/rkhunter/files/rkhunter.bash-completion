@@ -1,5 +1,5 @@
-# bash-completion script for rkhunter
-# place this file in /etc/bash_completion.d
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/files/rkhunter.bash-completion,v 1.2 2004/12/07 10:33:36 ka0ttic Exp $
+# rkhunter completion
 
 _rkhunter() {
 	local cur prev opts
@@ -19,7 +19,8 @@ _rkhunter() {
 
 	case "${prev}" in
 		--createlogfile)
-			COMPREPLY=($(compgen -W "${opts/--createlogfile}" -- "${cur}"))
+			COMPREPLY=($(compgen -o filenames -A file -W "${opts/--createlogfile}" \
+			    -- "${cur}"))
 			;;
 		--display-logfile)
 			COMPREPLY=($(compgen -W "${opts/--display-logfile}" -- "${cur}"))

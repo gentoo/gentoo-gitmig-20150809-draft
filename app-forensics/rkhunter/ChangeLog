@@ -1,6 +1,17 @@
 # ChangeLog for app-forensics/rkhunter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.13 2004/11/07 02:46:48 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.14 2004/12/07 10:33:36 ka0ttic Exp $
+
+*rkhunter-1.1.8-r1 (07 Dec 2004)
+
+  07 Dec 2004; Aaron Walker <ka0ttic@gentoo.org>
+  +files/rkhunter-1.1.8-specify-logfile.patch,
+  files/rkhunter.bash-completion, files/rkhunter.cron,
+  -rkhunter-1.1.7.ebuild, +rkhunter-1.1.8-r1.ebuild, rkhunter-1.1.8.ebuild:
+  Revision bump. Added patch to allow --createlogfile to accept an opt.
+  argument (filename); rewrote cron script (super duper enhanced (x10)) for
+  bug 73432 - see the config section in files/rkhunter.cron for all the new
+  features. Cleaned up ebuild and removed 1.1.7.
 
   06 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> rkhunter-1.1.7.ebuild,
   rkhunter-1.1.8.ebuild:

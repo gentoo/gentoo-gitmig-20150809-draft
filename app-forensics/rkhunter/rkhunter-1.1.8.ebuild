@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.1.8.ebuild,v 1.6 2004/11/07 02:46:48 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.1.8.ebuild,v 1.7 2004/12/07 10:33:36 ka0ttic Exp $
 
-inherit bash-completion
+inherit eutils bash-completion
 
 DESCRIPTION="Rootkit Hunter scans for known and unknown rootkits, backdoors, and sniffers."
 HOMEPAGE="http://www.rootkit.org/"
@@ -17,6 +17,12 @@ DEPEND="app-arch/tar
 	virtual/mta"
 RDEPEND="app-shells/bash
 	dev-lang/perl"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}/files
+	epatch ${FILESDIR}/${P}-specify-logfile.patch
+}
 
 src_install() {
 	cd ${S}/files
