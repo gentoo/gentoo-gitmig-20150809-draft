@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/squirrelmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.49 2004/05/11 08:36:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.50 2004/05/11 20:31:18 mholzer Exp $
+
+  12 May 2004; Martin Holzer <mholzer@gentoo.org>
+  squirrelmail-1.4.3_rc1-r1.ebuild, squirrelmail-1.4.3_rc1.ebuild,
+  files/squirrelmail-fortune.patch:
+  adding fortune patch. closes 50776
 
 *squirrelmail-1.4.3_rc1-r1 (11 May 2004)
 *squirrelmail-1.4.3_rc1 (11 May 2004)

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.3_rc1-r1.ebuild,v 1.1 2004/05/11 08:36:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.3_rc1-r1.ebuild,v 1.2 2004/05/11 20:31:18 mholzer Exp $
 
 IUSE="crypt virus-scan ldap ssl"
 
@@ -47,6 +47,7 @@ src_unpack() {
 
 	cd ${S}
 	mv config/config_default.php config/config.php
+	epatch ${FILESDIR}/${PN}-fortune.patch
 
 	# Now do the plugins
 	cd ${S}/plugins
