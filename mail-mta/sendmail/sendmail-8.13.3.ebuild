@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.3.ebuild,v 1.1 2005/02/12 14:37:37 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.3.ebuild,v 1.2 2005/03/06 21:23:18 g2boojum Exp $
 
 inherit eutils
 
@@ -140,26 +140,26 @@ src_install () {
 	m4 ${D}/etc/mail/sendmail.mc > ${D}/etc/mail/sendmail.cf
 	echo "# local-host-names - include all aliases for your machine here" \
 		> ${D}/etc/mail/local-host-names
-	cat << EOF > ${D}/etc/mail/trusted-users
-# trusted-users - users that can send mail as others without a warning
-# apache, mailman, majordomo, uucp are good candidates
-EOF
-	cat << EOF > ${D}/etc/mail/access
-# Check the /usr/share/doc/sendmail/README.cf file for a description
-# of the format of this file. (search for access_db in that file)
-# The /usr/share/doc/sendmail/README.cf is part of the sendmail-doc
-# package.
-#
-
-EOF
-cat << EOF > ${D}/etc/conf.d/sendmail
-# Config file for /etc/init.d/sendmail
-# add start-up options here
-SENDMAIL_OPTS="-bd -q30m -L sm-mta" # default daemon mode
-CLIENTMQUEUE_OPTS="-Ac -q30m -L sm-cm" # clientmqueue
-KILL_OPTS="" # add -9/-15/your favorite evil SIG level here
-
-EOF
+	cat <<- EOF > ${D}/etc/mail/trusted-users
+		# trusted-users - users that can send mail as others without a warning
+		# apache, mailman, majordomo, uucp are good candidates
+	EOF
+	cat <<- EOF > ${D}/etc/mail/access
+		# Check the /usr/share/doc/sendmail/README.cf file for a description
+		# of the format of this file. (search for access_db in that file)
+		# The /usr/share/doc/sendmail/README.cf is part of the sendmail-doc
+		# package.
+		#
+		
+	EOF
+	cat <<- EOF > ${D}/etc/conf.d/sendmail
+		# Config file for /etc/init.d/sendmail
+		# add start-up options here
+		SENDMAIL_OPTS="-bd -q30m -L sm-mta" # default daemon mode
+		CLIENTMQUEUE_OPTS="-Ac -q30m -L sm-cm" # clientmqueue
+		KILL_OPTS="" # add -9/-15/your favorite evil SIG level here
+		
+	EOF
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/sendmail
 	keepdir /usr/adm/sm.bin
