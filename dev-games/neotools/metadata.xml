@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>games</herd>
+<maintainer>
+  <email>dholm@gentoo.org</email>
+  <name>David Holm</name>
+</maintainer>
+<longdescription>Various development tools for NeoEngine.
+ * npacmake: Create and manage npac archives
+ * nscemake: Convert various file formats to engine native scene format
+ * nsceview: View nsce scene files</longdescription>
+</pkgmetadata>
