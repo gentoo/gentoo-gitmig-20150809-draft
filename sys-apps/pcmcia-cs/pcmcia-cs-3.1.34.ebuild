@@ -1,14 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Header: $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.34.ebuild,v 1.2 2002/07/02 12:26:02 chadh Exp $
 
 # This ebuild installs ${FILESDIR}/hermes.conf, which you can get from
 # http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/hermes.conf
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
-SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz
-        http://ozlabs.org/people/dgibson/dldwd/orinoco-0.11a.tar.gz"
+SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz"
 
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
 DEPEND="sys-kernel/linux-headers"
@@ -29,11 +28,7 @@ fi
 src_unpack() {
 	unpack ${P}.tar.gz
 
-	unpack orinoco-0.11a.tar.gz
 	cd ${S}
-	mv ../orinoco-0.11a/hermes*.{c,h} \
-		../orinoco-0.11a/orinoco*.{c,h} \
-		../orinoco-0.11a/ieee802_11.h wireless/
 	cp Configure Configure.orig
 	sed -e 's:usr/man:usr/share/man:g' Configure.orig > Configure
 	#man pages will now install into /usr/share/man
