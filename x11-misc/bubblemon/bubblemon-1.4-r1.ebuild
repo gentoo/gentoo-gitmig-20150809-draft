@@ -1,11 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/bubblemon-1.4-r1.ebuild,v 1.15 2004/06/28 19:50:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bubblemon/bubblemon-1.4-r1.ebuild,v 1.16 2004/07/05 22:17:32 fvdpol Exp $
 
 DESCRIPTION="A fun monitoring applet for your desktop, complete with swimming duck"
 HOMEPAGE="http://www.ne.jp/asahi/linux/timecop"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 KEYWORDS="x86 sparc ppc"
 
 S=${WORKDIR}/${PN}-dockapp-${PV}
