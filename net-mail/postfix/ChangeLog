@@ -1,8 +1,16 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.61 2003/03/25 04:21:02 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.62 2003/04/16 15:52:13 lostlogic Exp $
 
 *postfix-2.0.7 (22 Mar 2003)
+
+  16 Apr 2003; Brandon Low <lostlogic@gentoo.org> Manifest,
+  postfix-1.1.11-r5.ebuild, postfix-1.1.11-r5.ebuild, postfix-2.0.0.ebuild,
+  postfix-2.0.0.ebuild, postfix-2.0.2-r1.ebuild, postfix-2.0.2-r1.ebuild,
+  postfix-2.0.2.ebuild, postfix-2.0.2.ebuild, postfix-2.0.7.ebuild,
+  postfix-2.0.7.ebuild, files/postfix-1.1.11-saslv2.diff,
+  files/postfix-2.0.8_patch.patch, files/postfix-2.0.0/main.cf.diff:
+  Clean up a ton of old stuff, and bump to the latest version.
 
   24 Mar 2003; Brandon Low <lostlogic@gentoo.org> postfix-2.0.7.ebuild:
   Update the TLS+IPV6 patch for this version. No need to -r bump, because this
