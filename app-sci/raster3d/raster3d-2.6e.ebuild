@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/raster3d/raster3d-2.6e.ebuild,v 1.1 2002/11/02 09:19:39 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/raster3d/raster3d-2.6e.ebuild,v 1.2 2002/11/28 04:44:49 george Exp $
+
+IUSE=""
 
 Name="Raster3D"
 S="${WORKDIR}/${Name}_${PV}"
@@ -11,8 +13,8 @@ DESCRIPTION="a set of tools for generating high quality raster images of protein
 DEPEND="virtual/x11"
 
 SLOT="0"
-LICENSE="FREE"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+LICENSE="as-is"
+KEYWORDS="x86"
 
 src_compile() {
 
@@ -22,17 +24,16 @@ src_compile() {
 
 	make linux
 	make all || die
-	
 }
 
 src_install() {
-	
+
 	dodir /usr/bin
 	dodir /usr/share/Raster3D/materials
 	dodir /usr/share/Raster3D/html
 	dodir /usr/share/Raster3D/examples
 	dodir /usr/share/man/man1
-	
+
 	emake \
 			prefix=${D}/usr \
 			bindir=${D}/usr/bin \
@@ -40,8 +41,8 @@ src_install() {
 			mandir=${D}/usr/share/man/man1 \
 			htmldir=${D}/usr/share/Raster3D/html \
 			examdir=${D}/usr/share/Raster3D/examples \
-			install || die	
-	
+			install || die
+
 	dodir /etc/env.d
 	echo -e "R3D_LIB=/usr/share/Raster3D/materials" > \
 			${D}/etc/env.d/10raster3d
