@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/guarddog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/guarddog/ChangeLog,v 1.2 2002/05/04 09:09:25 verwilst Exp $
+# Author Bart Verwilst <verwilst@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-misc/guarddog/ChangeLog,v 1.3 2002/06/28 17:59:22 bass Exp $
+
+*guarddog-1.9.16 (28 Jun 2002)
+
+  28 Jun 2002; J.Alberto Suárez L. <bass@gentoo.org> guarddog-1.9.16.ebuild:
+
+  Bumped new version.
+
 
 *guarddog-1.9.15 (4 May 2002)
 
