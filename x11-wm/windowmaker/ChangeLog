@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.4 2003/06/12 22:28:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.5 2003/06/20 02:49:21 kumba Exp $
+
+  19 Jun 2003; Joshua Kinard <kumba@gentoo.org> windowmaker-0.80.2-r2.ebuild:
+  Added ~mips to KEYWORDS.
 
   12 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
   windowmaker-0.80.2-r1.ebuild, windowmaker-0.80.2-r2.ebuild:
