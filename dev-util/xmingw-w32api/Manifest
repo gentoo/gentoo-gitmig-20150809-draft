@@ -1,3 +1,5 @@
-MD5 f185f721bc93a79d2ba985229fbb34c9 ChangeLog 468
+MD5 3c845409a459e5443dbeb860892dfd5a xmingw-w32api-2.5.ebuild 1236
 MD5 019469b5e350aef944e89552681c39f5 xmingw-w32api-2.4.ebuild 1239
+MD5 75fdc61b62b5b9cd52eff190700d5895 ChangeLog 600
 MD5 3de99c6776ed74f7cec551053ffeeb51 files/digest-xmingw-w32api-2.4 139
+MD5 70366dfb6bfcc5deef952bbc9b2c33d8 files/digest-xmingw-w32api-2.5 139
